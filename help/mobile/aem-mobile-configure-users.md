@@ -34,7 +34,7 @@ ht-degree: 2%
 
 1. 建立名為「app-authors」的使用者群組：
 
-   導覽至「使用者」Admin Console： [http://localhost:4502/libs/granite/security/content/groupadmin.html](http://localhost:4502/libs/granite/security/content/groupadmin.html)
+   瀏覽至使用者Admin Console： [http://localhost:4502/libs/granite/security/content/groupadmin.html](http://localhost:4502/libs/granite/security/content/groupadmin.html)
 
    從使用者群組主控台中，選取「+」按鈕以建立群組。
 
@@ -44,7 +44,7 @@ ht-degree: 2%
 
    ![chlimage_1-167](assets/chlimage_1-167.png)
 
-1. 現在您已建立應用程式作者使用者群組，您可以透過 [使用者Admin Console](http://localhost:4502/libs/granite/security/content/useradmin.md).
+1. 現在您已建立應用程式作者使用者群組，您可以透過[使用者Admin Console](http://localhost:4502/libs/granite/security/content/useradmin.md)將個別團隊成員新增至此新群組。
 
    ![chlimage_1-168](assets/chlimage_1-168.png)
 
@@ -59,7 +59,7 @@ ht-degree: 2%
 
 ### AEM Mobile應用程式管理員群組（app-admins群組） {#aem-mobile-application-administrators-group-app-admins-group}
 
-app-admins群組的成員可以使用與應用程式作者相同的許可權來創作應用程式內容 **和** 此外，還負責：
+app-admins群組的成員可以使用與應用程式作者&#x200B;**和**&#x200B;相同的許可權來創作應用程式內容，此外還負責：
 
 * 分段、發佈和清除應用程式ContentSync OTA更新
 
@@ -83,7 +83,7 @@ app-admins群組的成員可以使用與應用程式作者相同的許可權來�
    >
    >使用PhoneGap Build服務進行遠端建置需要工作流程使用者
 
-1. 導覽至 [許可權主控台](http://localhost:4502/useradmin) 並新增許可權以管理cloudservices
+1. 瀏覽至[許可權主控台](http://localhost:4502/useradmin)並新增許可權以管理cloudservices
 
    * （讀取、修改、建立、刪除、復寫） /etc/cloudservices/mobileservices
 

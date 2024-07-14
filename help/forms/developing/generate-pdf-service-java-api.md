@@ -30,11 +30,11 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 >[!NOTE]
 >
->使用AEM Forms進行程式設計的快速入門是根據在JBoss Application Server和Microsoft Windows作業系統上部署的Forms伺服器。 不過，如果您使用其他作業系統（例如UNIX），請將Windows特定路徑取代為適用作業系統支援的路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 另請參閱 [設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>使用AEM Forms進行程式設計的快速入門是根據在JBoss Application Server和Microsoft Windows作業系統上部署的Forms伺服器。 不過，如果您使用其他作業系統（例如UNIX），請將Windows特定路徑取代為適用作業系統支援的路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 請參閱[設定連線內容](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
 
 ## 快速入門(SOAP模式)：使用Java API將Microsoft Word檔案轉換為PDF檔案 {#quick-start-soap-mode-converting-a-microsoft-word-document-to-a-pdf-document-using-the-java-api}
 
-下列程式碼範例會轉換名為的Word檔案 *Loan.doc* 至名為的PDF檔案 *Loan.pdf*. (請參閱 [將Word檔案轉換為PDF檔案](/help/forms/developing/converting-file-formats-pdf.md#converting-word-documents-to-pdf-documents).)
+下列程式碼範例將名為&#x200B;*Loan.doc*&#x200B;的Word檔案轉換為名為&#x200B;*Loan.pdf*&#x200B;的PDF檔案。 (請參閱[將Word檔案轉換為PDF檔案](/help/forms/developing/converting-file-formats-pdf.md#converting-word-documents-to-pdf-documents)。)
 
 ```java
  /*
@@ -148,7 +148,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 ## 快速入門(SOAP模式)：使用Java API將HTML內容轉換為PDF檔案 {#quick-start-soap-mode-converting-html-content-to-a-pdf-document-using-the-java-api}
 
-以下Java程式碼範例將位於https://www.adobe.com的HTML內容轉換為名為的PDF檔案 *AdobeHTML.pdf*. (請參閱 [將HTML檔案轉換為PDF檔案](/help/forms/developing/converting-file-formats-pdf.md#converting-html-documents-to-pdf-documents).)
+下列Java程式碼範例將位於https://www.adobe.com的HTML內容轉換為名為&#x200B;*AdobeHTML.pdf*&#x200B;的PDF檔案。 (請參閱[將HTML檔案轉換為PDF檔案](/help/forms/developing/converting-file-formats-pdf.md#converting-html-documents-to-pdf-documents)。)
 
 ```java
  /*
@@ -254,7 +254,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 ## 快速入門(SOAP模式)：使用Java API (SOAP模式)將PDF檔案轉換為RTF檔案 {#quick-start-soap-mode-converting-a-pdf-document-to-an-rtf-file-using-the-java-api-soap-mode}
 
-下列程式碼範例會轉換名為的PDF檔案 *Loan.pdf* 到名為的RTF檔案 *Loan.rtf*. (請參閱 [將PDF檔案轉換為非影像格式](/help/forms/developing/converting-file-formats-pdf.md#converting-pdf-documents-to-non-image-formats).)
+下列程式碼範例將名為&#x200B;*Loan.pdf*&#x200B;的PDF檔案轉換為名為&#x200B;*Loan.rtf*&#x200B;的RTF檔案。 (請參閱[將PDF檔案轉換為非影像格式](/help/forms/developing/converting-file-formats-pdf.md#converting-pdf-documents-to-non-image-formats)。)
 
 ```java
  /*

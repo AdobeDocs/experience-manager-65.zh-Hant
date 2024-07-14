@@ -65,16 +65,16 @@ ht-degree: 1%
 ## 將Java選項新增至JBoss {#add-java-options-to-jboss}
 
 1. 停止JBoss應用程式伺服器。
-1. 開啟 *[appserver根目錄]*/bin/run.bat (Windows)或run.sh （Linux或UNIX），並視需要新增任何Java選項。
+1. 在編輯器中開啟&#x200B;*[appserver root]*/bin/run.bat (Windows)或run.sh （Linux或UNIX），並視需要新增任何Java選項。
 1. 重新啟動伺服器。
 
 ## 將Java選項新增至WebLogic {#add-java-options-to-weblogic}
 
-1. 輸入https://以啟動WebLogic管理主控台[主機名稱]： URL行的網頁瀏覽器「連線埠」/主控台。
+1. 在Web瀏覽器的URL行中輸入https://[主機名稱]：&#39;port&#39;/console，以啟動WebLogic管理主控台。
 1. 輸入您為WebLogic Server網域建立的使用者名稱和密碼，然後按一下「變更中心」下的「記錄」，再按一下「鎖定與編輯」。
 1. 在「網域結構」下，按一下「環境>伺服器」，然後在右窗格中按一下Managed伺服器名稱。
 1. 在下一個畫面中，按一下「組態」標籤>「伺服器啟動」標籤。
-1. 在「引數」方塊中，將所需的引數附加至目前內容的結尾。 例如，新增 —  `Dadobe.healthmonitor.enabled=false` 停用健康狀態監視。
+1. 在「引數」方塊中，將所需的引數附加至目前內容的結尾。 例如，新增 — `Dadobe.healthmonitor.enabled=false`會停用健康情況監視。
 1. 按一下儲存，然後按一下啟動變更。
 1. 重新啟動WebLogic管理的伺服器。
 

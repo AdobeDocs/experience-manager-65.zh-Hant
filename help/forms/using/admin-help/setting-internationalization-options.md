@@ -30,6 +30,6 @@ ht-degree: 1%
 
 1. 在「國際化」下的「字元集」清單中，選取字元集。 此設定取決於所使用的API，即renderHTMLForm或renderPDFForm。 若要指定所列字元集以外的字元集，請選取「自訂」，並在顯示的方塊中指定編碼值。
 
-   對於HTML轉換，AEM表單支援以下定義的字元編碼值： `java.nio.charset` 封裝。 如果sFormPreference為PDForm，則僅支援特定字元集。 字元集必須是有效的正式名稱。 預設值為ISO-8859-1。
+   對於HTML轉換，AEM表單支援由`java.nio.charset`封裝定義的字元編碼值。 如果sFormPreference為PDForm，則僅支援特定字元集。 字元集必須是有效的正式名稱。 預設值為ISO-8859-1。
 
 1. 按一下「儲存」。

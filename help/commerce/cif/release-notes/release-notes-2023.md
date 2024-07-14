@@ -39,7 +39,7 @@ ht-degree: 13%
 
 | 元件 | 版本 | 詳細資料 |
 |:-------|:-------------:|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-| CIF附加元件 | 2023.11.23.00 | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2023.11.23.00.zip) |
+| CIF附加元件 | 2023.11.23.00 | [軟體發佈](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2023.11.23.00.zip) |
 | CIF Venia參考網站 | 2023.11.08 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2023.11.08) |
 
 ### 錯誤修正 {#bug-fixes-november}
@@ -54,4 +54,4 @@ ht-degree: 13%
 
 ### 新增功能 {#what-is-new-july}
 
-* 中的產品篩選器鉤點 `ProductList` 元件
+* `ProductList`元件中的產品篩選器鉤點

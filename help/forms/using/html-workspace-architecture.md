@@ -1,5 +1,5 @@
 ---
-title: AEM Forms工作區架構
+title: AEM Forms Workspace架構
 description: LiveCycleAEM Forms工作區架構的概念資訊和概觀。
 contentOwner: robhagat
 content-type: reference
@@ -16,9 +16,9 @@ ht-degree: 0%
 
 ---
 
-# AEM Forms工作區架構 {#aem-forms-workspace-architecture}
+# AEM Forms Workspace架構 {#aem-forms-workspace-architecture}
 
-AEM Forms工作區是託管在CRX™上的網路應用程式。 在瀏覽器中開啟工作區時，會存取CRX資源，並將應用程式呈現為瀏覽器中的HTML頁面。
+AEM Forms工作區是託管於CRX™的網路應用程式。 在瀏覽器中開啟工作區時，會存取CRX資源，並將應用程式呈現為瀏覽器中的HTML頁面。
 
 應用程式存取REST端點上的AEM Forms伺服器以執行下列動作：
 
@@ -29,9 +29,9 @@ AEM Forms工作區是託管在CRX™上的網路應用程式。 在瀏覽器中�
 
 AEM Forms伺服器會透過JDBC存取AEM Forms資料庫。 資料庫會儲存任務、處理作業及其執行個體、使用者和相關資訊。
 
-AEM Forms工作區設計為模組化JavaScript™元件，可個別自訂並重複用於其他網頁應用程式。 這些元件以BackBone為基礎，這是JavaScript程式庫，為Web應用程式提供結構。 描述元件與BackBone互動的詳細文章為 [此處](/help/forms/using/backbone-interaction.md). CRX資料夾結構中元件的組織方式將在中討論 [此](/help/forms/using/folder-structure.md) 文章。
+AEM Forms工作區設計成模組化JavaScript™元件，可個別自訂並重複用於其他網頁應用程式。 這些元件以BackBone為基礎，這是JavaScript資料庫，提供網頁應用程式的結構。 描述元件與BackBone互動的詳細文章為[此處](/help/forms/using/backbone-interaction.md)。 [此](/help/forms/using/folder-structure.md)文章將討論CRX資料夾結構中的元件組織。
 
 為AEM Forms工作區提供的套件：
 
-* `adobe-lc-workspace-pkg-<version>.zip`：它是CRX套件，也就是說，可以使用套件管理器在CRX中部署。
+* `adobe-lc-workspace-pkg-<version>.zip`：它是CRX套件，也就是說，可以使用套件管理員在CRX中部署。
 * `adobe-lc-workspace-<version>-src.zip`：此封存包含AEM Forms工作區的完整程式碼以及建立部署套件的指令碼 — 出貨、偵錯和開發套裝。

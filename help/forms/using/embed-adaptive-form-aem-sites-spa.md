@@ -23,9 +23,9 @@ ht-degree: 4%
 
 AEM Forms可讓表單開發人員在AEM Sites單頁應用程式(SPA)中順暢地內嵌最適化表單和互動式通訊。 內嵌的最適化表單和互動式通訊功能齊全，使用者無須離開頁面即可填寫和提交表單。 它有助於使用者停留在網頁上其他元素的內容中，同時與最適化表單或互動式通訊互動。
 
-在AEM Sites單頁應用程式中，您可以使用來新增最適化表單或互動式通訊 [AEM Forms SPA容器元件](../../forms/using/embed-adaptive-form-aem-sites-spa.md#af-component)[.](../../forms/using/embed-adaptive-form-aem-sites-spa.md#af-component) 它是AEM Sites SPA的AEM Forms元件，可新增至您的網站頁面。
+在AEM Sites單頁應用程式中，您可以使用[AEM Forms SPA Container元件](../../forms/using/embed-adaptive-form-aem-sites-spa.md#af-component)[來新增最適化表單或互動式通訊。](../../forms/using/embed-adaptive-form-aem-sites-spa.md#af-component)它是AEM Sites SPA的AEM Forms元件，您可以將其新增至您的網站頁面。
 
-如需在非SPA AEM Sites中內嵌調適型表單的相關資訊，請參閱 [在AEM Sites頁面中內嵌最適化表單或互動式通訊](/help/forms/using/embed-adaptive-form-aem-sites.md).
+如需在非SPA AEM Sites中內嵌最適化表單的相關資訊，請參閱[在AEM Sites頁面中內嵌最適化表單或互動式通訊](/help/forms/using/embed-adaptive-form-aem-sites.md)。
 
 ## 先決條件 {#prerequisites}
 
@@ -34,19 +34,19 @@ AEM Forms可讓表單開發人員在AEM Sites單頁應用程式(SPA)中順暢地
 * Java SE Development Kit 8或更新版本
 * Apache Maven 3.3.1或更新版本
 * AEM作者執行個體
-* [AEM Forms 6.4.2附加元件套件](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) 在作者執行個體上
+* 製作執行個體上的[AEM Forms 6.4.2附加元件套件](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)
 
 ## 安裝AEM Forms SPA容器元件 {#install-aem-forms-spa-container-component}
 
 執行以下步驟安裝AEM Forms SPA Container元件：
 
-1. [複製或下載適用於SPA的AEM Forms元件](https://github.com/Adobe-Marketing-Cloud/aem-forms/tree/master/forms-spa).
-1. 安裝適用於SPA的AEM Forms元件。 有關安裝元件的說明，請參閱 [README.md](https://github.com/Adobe-Marketing-Cloud/aem-forms/tree/master/forms-spa#aem-form-component) 檔案。
+1. [複製或下載SPA](https://github.com/Adobe-Marketing-Cloud/aem-forms/tree/master/forms-spa)的AEM Forms元件。
+1. 安裝適用於SPA的AEM Forms元件。 安裝元件的指示可在[README.md](https://github.com/Adobe-Marketing-Cloud/aem-forms/tree/master/forms-spa#aem-form-component)檔案中取得。
 
-   元件包含 [範例React元件](https://github.com/Adobe-Marketing-Cloud/aem-forms/tree/master/forms-spa/react-component) ，可用來整合SPA容器元件與React型SPA專案。
+   此元件包含一個[範例React元件](https://github.com/Adobe-Marketing-Cloud/aem-forms/tree/master/forms-spa/react-component)，可用來整合SPA容器元件與以React為基礎的SPA專案。
 
-1. [複製或下載以React為基礎的SPA專案](https://github.com/adobe/aem-sample-we-retail-journal).
-1. 使用「 」中提供的指示，將SPA容器元件與React型SPA專案整合 [README.md](https://github.com/Adobe-Marketing-Cloud/aem-forms/tree/master/forms-spa/react-component#aem-form-react-component-for-spa---editor) 檔案。
+1. [複製或下載React型SPA專案](https://github.com/adobe/aem-sample-we-retail-journal)。
+1. 使用[README.md](https://github.com/Adobe-Marketing-Cloud/aem-forms/tree/master/forms-spa/react-component#aem-form-react-component-for-spa---editor)檔案中的可用指示，將SPA容器元件與React型SPA專案整合。
 
    安裝AEM Forms SPA Container元件並將該元件與React型SPA專案整合後，您可在AEM Sites頁面中內嵌調適型表單和互動式通訊。
 
@@ -55,30 +55,30 @@ AEM Forms可讓表單開發人員在AEM Sites單頁應用程式(SPA)中順暢地
 若要使用AEM Forms for SPA Container元件內嵌最適化表單或互動式通訊：
 
 1. 以編輯模式開啟AEM sites頁面，您要在其中內嵌最適化表單或互動式通訊。
-1. 插入 **適用於SPA的AEM表單** 元件時，可使用下列任一選項：
+1. 使用下列任何選項在頁面上插入SPA **元件的** AEM表單：
 
-   * 在網站頁面上選取版面容器，選取 **+** 並選取 **適用於SPA的AEM表單** 元件。
+   * 在[網站]頁面上選取配置容器，選取&#x200B;**+**，然後選取SPA **元件的** AEM表單。
 
-   * 在元件瀏覽器面板中，拖放 **適用於SPA的AEM表單** 元件時。
+   * 從元件瀏覽器面板中，將SPA **元件的** AEM表單拖放到頁面上。
    * 在Assets瀏覽器中搜尋最適化表單或互動式通訊，並將其拖放至Sites頁面。 它將表單內嵌在SPA元件容器的AEM Forms中。
 
    >[!NOTE]
    >
    >不支援在頁面上呈現多個AEM Forms SPA Container元件。 在一個頁面上可以有多個AEM Forms SPA Container，但一次只能轉譯一個元件。 確保頁面上僅會顯示一個元件，以避免差異。
 
-1. 在網站頁面中選取內嵌的AEM Forms SPA Container元件，然後選取「 」 ![settings_icon](assets/settings_icon.png) 於動作列上。 此 **編輯AEM Forms SPA容器** 對話方塊開啟。
-1. 在 **編輯AEM Forms容器** 對話方塊，請指定下列專案：
+1. 在網站頁面中選取內嵌的AEM Forms SPA Container元件，然後在動作列上選取![settings_icon](assets/settings_icon.png)。 **編輯AEM Forms SPA容器**&#x200B;對話方塊開啟。
+1. 在&#x200B;**編輯AEM Forms容器**&#x200B;對話方塊中，指定下列專案：
 
-   * **資產型別：** 選取要內嵌的資產型別。 選項包括 **最適化表單** 和 **互動式通訊**
+   * **資產型別：**&#x200B;選取要內嵌的資產型別。 選項為&#x200B;**最適化表單**&#x200B;和&#x200B;**互動式通訊**
 
    * **資產路徑**：瀏覽並選取要內嵌的最適化表單或互動式通訊。 如果使用Assets瀏覽器插入最適化表單或互動式通訊，則會自動填入欄位。
-   * **頻道** （僅限互動式通訊）：選取要內嵌的互動式頻道型別。 選項包括 **網頁管道** 和 **Print Channel**.
+   * **Channel** （僅限互動式通訊）：選取要內嵌的互動式頻道型別。 選項為&#x200B;**Web Channel**&#x200B;和&#x200B;**Print Channel**。
 
-   * **主題**：選取定義最適化表單或互動式通訊元件樣式的主題。 樣式包含外觀屬性，例如字型樣式、背景顏色、尺寸和對齊。
+   * **佈景主題**：選取定義最適化表單或互動式通訊元件樣式的主題。 樣式包含外觀屬性，例如字型樣式、背景顏色、尺寸和對齊。
 
-1. 選取 ![完成圖示](assets/done_icon.png) 以儲存設定。 最適化表單或互動式通訊現在內嵌在頁面中。
+1. 選取![done_icon](assets/done_icon.png)以儲存設定。 最適化表單或互動式通訊現在內嵌在頁面中。
 
-## 發佈內嵌式最適化表單和互動式通訊 {#publish-embedded-adaptive-form-and-interactive-communication}
+## Publish內嵌式最適化表單與互動式通訊 {#publish-embedded-adaptive-form-and-interactive-communication}
 
 在AEM Sites頁面上發佈內嵌資產（最適化表單或互動式通訊）時，請考量下列情況：
 
@@ -93,7 +93,7 @@ AEM網站頁面會維護對AEM Forms容器中最適化表單和互動式通訊�
 若要修改內嵌式最適化表單和互動式通訊的任何設定或屬性，請執行下列任一項作業。
 
 * 在各自的編輯器中以自適應表單或互動式通訊開啟原始表單並加以修改。
-* 在編輯模式下，從Sites頁面內選取最適化表單或互動式通訊，然後選取 **在新視窗中編輯**. 原始表單會在編輯模式中開啟。
+* 在編輯模式中，從Sites頁面內選取最適化表單或互動式通訊，然後在新視窗中選取&#x200B;**編輯**。 原始表單會在編輯模式中開啟。
 
 ## 考量事項和最佳作法 {#considerations-and-best-practices}
 

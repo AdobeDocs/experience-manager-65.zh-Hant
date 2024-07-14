@@ -18,7 +18,7 @@ ht-degree: 9%
 
 # 可重複使用元件的說明 {#description-of-reusable-components}
 
-AEM Forms工作區是由 [可重複使用](/help/forms/using/integrating-html-ws-components-web.md) 以特定方式組織的元件 [資料夾結構](/help/forms/using/folder-structure.md) 在CRX™中。 每個元件在資料夾結構中所指定的位置都有模型、檢視和範本檔案、JavaScript™對其他元件檔案的相依性、由元件監聽的事件以及在AEM Forms工作區中觸發這些事件的JavaScript物件。 此處提供包含檔案名稱和相依性的可重複使用元件的完整清單。
+AEM Forms工作區是由[可重複使用的](/help/forms/using/integrating-html-ws-components-web.md)元件組成，這些元件在CRX中以特定[資料夾結構](/help/forms/using/folder-structure.md)組織™ 每個元件在資料夾結構中所指定的位置都有模型、檢視和範本檔案、JavaScript™相依於其他元件檔案、元件監聽的事件和JavaScript物件(這些在AEM Forms工作區中觸發這些事件)。 此處提供包含檔案名稱和相依性的可重複使用元件的完整清單。
 
 ## 任務清單 {#tasklist}
 
@@ -923,7 +923,7 @@ AEM Forms工作區是由 [可重複使用](/help/forms/using/integrating-html-ws
    <td>
     <ul>
      <li>userImageUrlFetched - userinfo模型</li>
-     <li>sessionRevened - userinfo模型 <br /> </li>
+     <li>sessionRevened — 使用者資訊模型<br /> </li>
      <li>sessionExpired — 使用者資訊模型 </li>
     </ul> </td>
   </tr>
@@ -1084,7 +1084,7 @@ AEM Forms工作區是由 [可重複使用](/help/forms/using/integrating-html-ws
   </tr>
   <tr>
    <td><p>JS相依性</p> </td>
-   <td>不適用<br /> </td>
+   <td>無<br /> </td>
   </tr>
   <tr>
    <td><p>已監聽的事件（事件名稱 — 觸發器）</p> </td>

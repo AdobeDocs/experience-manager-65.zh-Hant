@@ -24,7 +24,7 @@ ht-degree: 0%
 >
 >支援的使用者影像外觀比例為1:1。
 
-1. 使用下個步驟中所述的詳細資訊，建立DSC。 如需詳細資訊，請參閱以下主題中的「為AEM Forms開發元件」： [使用AEM Forms程式設計](https://www.adobe.com/go/learn_aemforms_programming_63) 指南。
+1. 使用下個步驟中所述的詳細資訊，建立DSC。 如需詳細資訊，請參閱[使用AEM Forms程式設計](https://www.adobe.com/go/learn_aemforms_programming_63)指南中的「為AEM Forms開發元件」主題。
 1. 在DSC中，定義新的SPI，公開getCurrentUserImageUrl和getUserImageUrl方法，以取得AEM Forms使用者的影像URL。 以下是範例Java™程式碼片段：
 
    ```java
@@ -82,5 +82,5 @@ ht-degree: 0%
    </component>
    ```
 
-1. 透過Workbench部署DSC。 重新啟動 `ProcessManagementClientSessionService` 服務。
+1. 透過Workbench部署DSC。 重新啟動`ProcessManagementClientSessionService`服務。
 1. 您可能需要重新整理瀏覽器，或再次登出/登入使用者。

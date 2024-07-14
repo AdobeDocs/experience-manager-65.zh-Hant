@@ -32,7 +32,7 @@ ht-degree: 0%
   <tr>
    <td><p>SystemInfo.properties</p></td>
    <td><p>https://'[server]：[port]'/rest/services/SystemInfo.properties'</p></td>
-   <td><p>此API是以下專案的包裝函式： <a href="https://docs.oracle.com/javase/6/docs/api/java/lang/System.html#getProperties()">system.getProperties</a> Java API。 它會擷取目前工作環境的設定。 </p></td>
+   <td><p>此API是<a href="https://docs.oracle.com/javase/6/docs/api/java/lang/System.html#getProperties()">system.getProperties</a> Java API的包裝函式。 它會擷取目前工作環境的設定。 </p></td>
   </tr>
   <tr>
    <td><p>SystemInfo.envVar</p></td>

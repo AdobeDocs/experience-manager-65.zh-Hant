@@ -22,19 +22,19 @@ ht-degree: 1%
 
 ## 大量編輯器查詢引數 {#bulk-editor-query-parameters}
 
-使用「大量編輯器」時，您可以將多個查詢引數新增到URL中，以使用特定組態呼叫「大量編輯器」。 如果您希望批次編輯器一律搭配特定設定使用（例如，如在產品清單元件中使用），則必須編輯 `bulkeditor.jsp` （位於/libs/wcm/core/components/bulkeditor）或建立具有特定組態的元件。 使用查詢引數所做的變更不是永久性的。
+使用「大量編輯器」時，您可以將多個查詢引數新增到URL中，以使用特定組態呼叫「大量編輯器」。 如果您希望大量編輯器一律搭配特定組態使用（例如，例如在產品清單元件中），則必須編輯`bulkeditor.jsp` （在/libs/wcm/core/components/bulkeditor中）或建立具有特定組態的元件。 使用查詢引數所做的變更不是永久性的。
 
 例如，如果您在瀏覽器的URL中鍵入下列內容：
 
 `https://<servername><port_number>/etc/importers/bulkeditor.html?rootPath=/content/geometrixx/en&queryParams=geometrixx&initialSearch=true&hrp=true`
 
-大量編輯器顯示時沒有 **根路徑** 為hrp=true的欄位會隱藏欄位。 使用引數hrp=false，會顯示欄位（預設值）。
+大量編輯器顯示時沒有&#x200B;**根路徑**&#x200B;欄位，因為hrp=true會隱藏該欄位。 使用引數hrp=false，會顯示欄位（預設值）。
 
 以下是「大量編輯器」查詢引數的清單：
 
 >[!NOTE]
 >
->每個引數都可以有一個長名稱和短名稱。 例如，搜尋根路徑的長名稱為 `rootPath`，簡短如下 `rp`. 如果未定義長名稱，則會從請求中讀取短名稱。
+>每個引數都可以有一個長名稱和短名稱。 例如，搜尋根路徑的長名稱是`rootPath`，短名稱是`rp`。 如果未定義長名稱，則會從請求中讀取短名稱。
 
 <table>
  <tbody>
@@ -45,8 +45,8 @@ ht-degree: 1%
   </tr>
   <tr>
    <td><p> 參數</p> <p>（長名稱/短名稱）<br /> </p> </td>
-   <td> 型別 <br /> </td>
-   <td> 說明 <br /> </td>
+   <td> 型別<br /> </td>
+   <td> 描述<br /> </td>
   </tr>
   <tr>
    <td> rootPath / rp<br /> </td>
@@ -61,7 +61,7 @@ ht-degree: 1%
   <tr>
    <td> contentMode / cm<br /> </td>
    <td> 布林值</td>
-   <td> 為true時，啟用內容模式<br /> </td>
+   <td> 為true時，會啟用內容模式<br /> </td>
   </tr>
   <tr>
    <td> colsValue / cv<br /> </td>
@@ -76,7 +76,7 @@ ht-degree: 1%
   <tr>
    <td> initialSearch / is<br /> </td>
    <td> 布林值</td>
-   <td> 為true時，會在頁面載入時執行查詢<br /> </td>
+   <td> 為true時，會在頁面載入<br />時執行查詢 </td>
   </tr>
   <tr>
    <td> colsSelection / cs<br /> </td>
@@ -86,7 +86,7 @@ ht-degree: 1%
   <tr>
    <td> showGridOnly / sgo<br /> </td>
    <td> 布林值</td>
-   <td> 為true時，只顯示格線，不顯示搜尋面板 <br /> </td>
+   <td> 為true時，僅顯示格線，而不顯示搜尋面板<br /> </td>
   </tr>
   <tr>
    <td> searchPanelCollapsed / spc</td>
@@ -165,14 +165,14 @@ ht-degree: 1%
 
 本節提供如何使用大量編輯器的概觀，並說明以大量編輯器為基礎的現有Geometrixx元件：產品清單元件。
 
-產品清單元件可讓使用者顯示和編輯資料表。 例如，您可以使用產品清單元件來代表目錄中的產品。 此資訊會以標準HTML表格顯示，任何編輯作業都會在 **編輯** 對話方塊，其中包含BulkEditor Widget。 (此大量編輯器與在/etc/importers/bulkeditor.html或透過「工具」功能表存取的編輯器相同)。 產品清單元件已針對特定的有限大量編輯器功能進行設定。 可以設定批次編輯器的每個部分（或衍生自批次編輯器的元件）。
+產品清單元件可讓使用者顯示和編輯資料表。 例如，您可以使用產品清單元件來代表目錄中的產品。 此資訊會顯示在標準HTML表格中，且任何編輯都會在包含BulkEditor Widget的&#x200B;**編輯**&#x200B;對話方塊中執行。 (此大量編輯器與在/etc/importers/bulkeditor.html或透過「工具」功能表存取的編輯器相同)。 產品清單元件已針對特定的有限大量編輯器功能進行設定。 可以設定批次編輯器的每個部分（或衍生自批次編輯器的元件）。
 
 使用大量編輯器，您可以新增、修改、刪除、篩選和匯出列、儲存修改和匯入一組列。 每一列都會儲存為「產品清單」元件實體本身的節點。 每個儲存格都是每個節點的屬性。 這是設計選擇，很容易變更，例如，您可以將節點儲存在存放庫中的其他位置。 查詢servlet的角色是傳回要顯示的節點清單；搜尋路徑定義為產品清單執行個體。
 
 產品清單元件的原始程式碼可在存放庫/apps/geometrixx/components/productlist中取得，並且由幾個部分組成，例如所有Adobe Experience Manager (AEM)元件：
 
 * HTML呈現：呈現會在JSP檔案(/apps/geometrixx/components/productlist/productlist.jsp)中完成。 JSP會讀取目前「產品清單」元件的子節點，並將每個子節點顯示為HTML表格的一列。
-* 編輯對話方塊，您可在此定義大量編輯器設定。 設定對話方塊以符合元件的需求：可用的欄以及在格線或搜尋時可能執行的動作。 另請參閱 [大量編輯器設定屬性](#bulk-editor-configuration-properties) 以取得所有組態屬性的資訊。
+* 編輯對話方塊，您可在此定義大量編輯器設定。 設定對話方塊以符合元件的需求：可用的欄以及在格線或搜尋時可能執行的動作。 如需所有組態屬性的詳細資訊，請參閱[大量編輯器組態屬性](#bulk-editor-configuration-properties)。
 
 以下是對話方塊子節點的XML表示法：
 
@@ -433,7 +433,7 @@ ht-degree: 1%
   </tr>
   <tr>
    <td>colsMetadata</td>
-   <td>欄中繼資料設定。 可能的屬性包括（套用至欄的所有儲存格）： <br />
+   <td>欄中繼資料設定。 可能的屬性是（套用至欄的所有儲存格）： <br />
     <ul>
      <li>cellStyle： html樣式 </li>
      <li>cellCls： css類別 </li>
@@ -511,19 +511,19 @@ CSS和唯讀欄
 
 **核取方塊**
 
-如果核取方塊組態屬性設為true，欄中的所有儲存格都會呈現為核取方塊。 核取方塊會傳送 **true** 到伺服器儲存servlet， **false** 否則。 在頁首功能表中，您也可以 **全選** 或 **全部不選**. 如果選取的標頭是核取方塊欄的標頭，則會啟用這些選項。
+如果核取方塊組態屬性設為true，欄中的所有儲存格都會呈現為核取方塊。 核取方塊會將&#x200B;**true**&#x200B;傳送至伺服器儲存servlet，否則&#x200B;**false**。 在標題功能表中，您也可以&#x200B;**全選**&#x200B;或&#x200B;**不選**。 如果選取的標頭是核取方塊欄的標頭，則會啟用這些選項。
 
 在前一個範例中，選取欄僅包含核取方塊，如checkbox=&quot;true&quot;。
 
 **強制位置**
 
-強制位置中繼資料forcedPosition可讓您指定欄在格線中的放置位置：0是第一個位置，而 &lt;number of=&quot;&quot; columns=&quot;&quot;>-1是最後一個位置。 任何其他值都會被忽略。
+強制位置中繼資料forcedPosition可讓您指定欄在網格中的放置位置：0是第一個位置，&lt;number of columns>-1是最後一個位置。 任何其他值都會被忽略。
 
 在前一個範例中，選取欄是第一個欄，如forcedPosition=&quot;0&quot;。
 
 ### 查詢Servlet {#query-servlet}
 
-依預設，可以在以下位置找到查詢servlet： `/libs/wcm/core/components/bulkeditor/json.java`. 您可以設定其他路徑以擷取資料。
+依預設，可在`/libs/wcm/core/components/bulkeditor/json.java`找到查詢servlet。 您可以設定其他路徑以擷取資料。
 
 查詢servlet的運作方式如下：它接收GQL查詢並接收要傳回的欄、計算結果，並將結果以JSON資料流的形式傳回大量編輯器。
 
@@ -555,13 +555,13 @@ CSS和唯讀欄
 
 ### 儲存Servlet {#save-servlet}
 
-在大量編輯器的預設設定中，每一列都是一個節點，而且此節點的路徑會儲存在列記錄中。 大量編輯器會透過jcr路徑保持列與節點之間的連結。 當使用者編輯格線時，會建立所有修改的清單。 當使用者按一下 **儲存**，會傳送POST查詢至具有更新屬性值的每個路徑。 這是Sling概念的基礎，如果每個儲存格都是節點的屬性，則運作良好。 但是，如果實施查詢servlet來執行繼承計算，則此模型無法運作，因為查詢servlet傳回的屬性可以從另一個節點繼承。
+在大量編輯器的預設設定中，每一列都是一個節點，而且此節點的路徑會儲存在列記錄中。 大量編輯器會透過jcr路徑保持列與節點之間的連結。 當使用者編輯格線時，會建立所有修改的清單。 當使用者按一下&#x200B;**儲存**&#x200B;時，會傳送POST查詢給每個具有更新屬性值的路徑。 這是Sling概念的基礎，如果每個儲存格都是節點的屬性，則運作良好。 但是，如果實施查詢servlet來執行繼承計算，則此模型無法運作，因為查詢servlet傳回的屬性可以從另一個節點繼承。
 
 「儲存servlet」概念是修改不會直接發佈到每個節點，而是發佈到執行儲存作業的一個servlet。 此servlet因此可分析修改，並將屬性儲存在正確的節點上。
 
 每個更新的屬性都會以下列格式傳送至servlet：
 
-* 引數名稱： &lt;jcr path=&quot;&quot;>/&lt;property name=&quot;&quot;>
+* 引數名稱： &lt;jcr path>/&lt;property name>
 
   範例： /content/geometrixx/en/products/jcr：content/par/productlist/1258674859000/SellingSku
 
@@ -571,6 +571,6 @@ CSS和唯讀欄
 
 此servlet需要知道catalogCode屬性的儲存位置。
 
-預設的「儲存servlet」實作可在/libs/wcm/bulkeditor/save/POST.jsp取得，並用於產品清單元件中。 它會從請求中取得所有引數(使用 &lt;jcr path=&quot;&quot;>/&lt;property name=&quot;&quot;> 格式化)，並使用JCR API在節點上寫入屬性。 如果節點不存在，它也會建立節點（格線插入列）。
+預設的「儲存servlet」實作可在/libs/wcm/bulkeditor/save/POST.jsp取得，並用於產品清單元件中。 它會從請求中取得所有引數（具有&lt;jcr path>/&lt;property name>格式），並使用JCR API在節點上寫入屬性。 如果節點不存在，它也會建立節點（格線插入列）。
 
-請勿按原樣使用預設程式碼，因為它會重新實作伺服器本機的功能(POST於 &lt;jcr path=&quot;&quot;>/&lt;property name=&quot;&quot;>)，因此這只是建置可管理屬性繼承模型的「儲存」servlet的良好起點。
+請勿照原樣使用預設程式碼，因為它會重新實作伺服器原生執行的動作(&lt;jcr path>/&lt;property name>上的POST)，因此，這只是建置可管理屬性繼承模型的「儲存」servlet的良好起點。

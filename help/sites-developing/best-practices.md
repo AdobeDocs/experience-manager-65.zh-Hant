@@ -31,14 +31,14 @@ Adobe工程和顧問團隊已經為AEM開發人員發展出一組完整的最佳
 * [程式碼陷阱](/help/sites-developing/code-pitfalls.md)
 * [JCR互動](/help/sites-developing/jcr-integration.md)
 * [OSGi組合](/help/sites-developing/osgi-bundles.md)
-* [Java API最佳作法](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/understand-java-api-best-practices.html)
+* [Java API最佳實務](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/understand-java-api-best-practices.html)
 
 ### 其他最佳實務資訊 {#additional-best-practices-information}
 
 下列區域有開發最佳實務的特定檔案：
 
 * [Sites](#sites)
-* [社群](/help/sites-developing/best-practices.md#communities)
+* [Communities](/help/sites-developing/best-practices.md#communities)
 * [工具/HTL](/help/sites-developing/best-practices.md#tooling-htl)
 
 以下表格會說明並連結特定檔案。
@@ -78,15 +78,15 @@ Adobe工程和顧問團隊已經為AEM開發人員發展出一組完整的最佳
  </tbody>
 </table>
 
-## 社群 {#communities}
+## Communities {#communities}
 
-[AEM Communities](/help/communities/overview.md) 簡化內部部署社群的建立和管理。
+[AEM Communities](/help/communities/overview.md)簡化了內部部署社群的建立和管理。
 
 以下說明社群的一些最佳實務：
 
 |  |  |  |
 |---|---|---|
-| 使用使用者產生內容(UGC)的最佳實務 | [編碼准則](/help/communities/code-guide.md) | 針對以下專案開發彈性、可攜式程式碼的准則： [社交元件框架](/help/communities/scf.md) (SCF)。 |
+| 使用使用者產生內容(UGC)的最佳實務 | [編碼准則](/help/communities/code-guide.md) | 針對[社交元件架構](/help/communities/scf.md) (SCF)開發彈性、可攜式程式碼的准則。 |
 | Communities元件的使用範例 | [社群元件指南](/help/communities/components-guide.md) | 互動式開發工具。 |
 
 ## 工具/HTL {#tooling-htl}
@@ -95,10 +95,10 @@ HTML範本語言(HTL)是隨AEM 6.0推出的新HTML範本系統。它取代了JSP
 
 |  |  |  |
 |---|---|---|
-| HTL 總覽 | [HTL概述和語法](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) | 本檔案說明HTL是什麼、如何移至HTL、範例專案、語法、運算式和陳述式 |
+| HTL 總覽 | [HTL總覽和語法](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) | 本檔案說明HTL是什麼、如何移至HTL、範例專案、語法、運算式和陳述式 |
 | 在Java中使用API | [HTL Java Use-API](https://helpx.adobe.com/experience-manager/htl/using/use-api.html) | HTL Java Use-API讓HTL檔案能夠存取自訂Java類別中的helper方法。 |
 
 >[!NOTE]
 >
 >以下多部分教學課程可能會是設定新AEM專案的最佳作法，其中會詳細說明核心元件、可編輯的範本、使用者端程式庫和元件開發：
->[AEM Sites - WKND教學課程快速入門](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)
+>[開始使用AEM Sites - WKND教學課程](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)

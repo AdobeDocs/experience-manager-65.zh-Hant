@@ -20,8 +20,8 @@ ht-degree: 0%
 
 使用「受邀和本機使用者」頁面來管理您的受邀和本機使用者。 只有在符合下列要求時，才會顯示此頁面：
 
-* 您是已指派Document Security「管理受邀和本機使用者」角色和管理主控台「使用者」角色的管理員。 (請參閱 [建立和設定角色](/help/forms/using/admin-help/creating-configuring-roles.md#creating-and-configuring-roles).)
-* 已啟用受邀使用者註冊。 (請參閱 [設定受邀使用者註冊](/help/forms/using/admin-help/configuring-client-server-options.md#configuring-invited-user-registration).)
+* 您是已指派Document Security「管理受邀和本機使用者」角色和管理主控台「使用者」角色的管理員。 （請參閱[建立和設定角色](/help/forms/using/admin-help/creating-configuring-roles.md#creating-and-configuring-roles)。）
+* 已啟用受邀使用者註冊。 （請參閱[設定受邀使用者註冊](/help/forms/using/admin-help/configuring-client-server-options.md#configuring-invited-user-registration)。）
 
 「受邀和本機使用者」頁面包含兩個標籤，可用來搜尋、檢視、編輯、鎖定、解除鎖定和刪除受邀和本機使用者帳戶。
 
@@ -38,7 +38,7 @@ ht-degree: 0%
 1. 在管理控制檯中，按一下「服務> Document Security >受邀請和本機使用者」，然後按一下「邀請新使用者」。
 1. 輸入您要邀請之使用者的電子郵件地址。 在一行中輸入多個地址，以逗號分隔。
 
-   您在啟用受邀使用者註冊時所建立的訊息會傳送給使用者。 (請參閱 [設定受邀使用者註冊](/help/forms/using/admin-help/configuring-client-server-options.md#configuring-invited-user-registration).)
+   您在啟用受邀使用者註冊時所建立的訊息會傳送給使用者。 （請參閱[設定受邀使用者註冊](/help/forms/using/admin-help/configuring-client-server-options.md#configuring-invited-user-registration)。）
 
 1. 按一下「確定」。
 
@@ -63,7 +63,7 @@ ht-degree: 0%
 
 您可以為已註冊Document Security但忘記密碼的已啟動受邀使用者重設密碼。 當您重設密碼時，會產生一封電子郵件，其中包含使用者的新臨時密碼。
 
-當您啟用受邀使用者註冊程式時，您會建立電子郵件訊息，並會傳送給使用者，提示他們重設密碼。 (請參閱 [設定受邀使用者註冊](/help/forms/using/admin-help/configuring-client-server-options.md#configuring-invited-user-registration).)
+當您啟用受邀使用者註冊程式時，您會建立電子郵件訊息，並會傳送給使用者，提示他們重設密碼。 （請參閱[設定受邀使用者註冊](/help/forms/using/admin-help/configuring-client-server-options.md#configuring-invited-user-registration)。）
 
 1. 在管理控制檯中，按一下「服務」>「Document Security」>「受邀和本地使用者」，然後按一下「本地使用者」標籤。
 1. 在使用者清單中，選取適當的使用者。

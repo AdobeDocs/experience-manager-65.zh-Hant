@@ -32,7 +32,7 @@ ht-degree: 0%
 * 您可以透過套件從其他系統擷取資料
 * 或者，您也可以在暫存系統上還原備份，建立內容套件並將其部署在缺少此內容的系統上。
 
-如需詳細資訊，請參閱 [封裝備份](/help/sites-administering/backup-and-restore.md#package-backup) 底下。
+如需詳細資訊，請參閱下方的[封裝備份](/help/sites-administering/backup-and-restore.md#package-backup)。
 
 ## 時程 {#timing}
 
@@ -52,7 +52,7 @@ ht-degree: 0%
 
 ## 線上備份 {#online-backup}
 
-此備份方法會建立整個存放庫的備份，包括部署在其下的任何應用程式，例如AEM。 備份包括內容、版本記錄、設定、軟體、Hotfix、自訂應用程式、記錄檔、搜尋索引等。 如果您使用叢集，而且共用資料夾是的子目錄 `crx-quickstart` （實體上或使用軟連結），也會備份共用目錄。
+此備份方法會建立整個存放庫的備份，包括部署在其下的任何應用程式，例如AEM。 備份包括內容、版本記錄、設定、軟體、Hotfix、自訂應用程式、記錄檔、搜尋索引等。 如果您使用叢集，而且共用資料夾是`crx-quickstart`的子目錄（實體上或使用軟連結），也會備份共用目錄。
 
 您稍後可以還原整個存放庫（以及任何應用程式）。
 
@@ -67,11 +67,11 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如果在具有自訂Blobstore設定的AEM執行個體上使用AEM線上備份功能，建議將資料存放區的路徑設定為「 `crx-quickstart`」目錄和分別備份資料存放區。
+>如果在具有自訂Blobstore設定的AEM執行個體上使用AEM線上備份功能，建議將資料存放區的路徑設定為&quot; `crx-quickstart`&quot;目錄之外，並個別備份資料存放區。
 
 >[!CAUTION]
 >
->線上備份只會備份檔案系統。 如果您將儲存庫內容和/或儲存庫檔案儲存在資料庫中，則需要分別備份該資料庫。 如果您搭配使用AEM與MongoDB，請參閱有關如何使用的檔案 [MongoDB原生備份工具](https://docs.mongodb.org/manual/tutorial/backup-with-mongodump/).
+>線上備份只會備份檔案系統。 如果您將儲存庫內容和/或儲存庫檔案儲存在資料庫中，則需要分別備份該資料庫。 如果您使用AEM搭配MongoDB，請參閱有關如何使用[MongoDB原生備份工具](https://docs.mongodb.org/manual/tutorial/backup-with-mongodump/)的檔案。
 
 ### AEM線上備份 {#aem-online-backup}
 
@@ -79,13 +79,13 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
->請勿同時執行AEM Online Backup和 [資料存放區記憶體回收](/help/sites-administering/data-store-garbage-collection.md) 或 [修訂清除](/help/sites-deploying/revision-cleanup.md#how-to-run-offline-revision-cleanup). 這會對系統效能產生負面影響。
+>請勿同時執行AEM Online Backup與[資料存放區記憶體回收](/help/sites-administering/data-store-garbage-collection.md)或[修訂清除](/help/sites-deploying/revision-cleanup.md#how-to-run-offline-revision-cleanup)。 這會對系統效能產生負面影響。
 
-開始備份時，您可以指定 **目標路徑** 和/或 **延遲**.
+開始備份時，您可以指定&#x200B;**目標路徑**&#x200B;和/或&#x200B;**延遲**。
 
-**目標路徑** 備份檔案通常儲存在含有quickstart jar檔案(.jar)的資料夾的父資料夾中。 例如，如果您的AEM jar檔案位於/InstallationKits/AEM下，則會在/InstallationKits下產生備份。 您也可以指定目標至您選擇的位置。
+**目標路徑**&#x200B;備份檔案通常儲存在含有quickstart jar檔案(.jar)之資料夾的父資料夾中。 例如，如果您的AEM jar檔案位於/InstallationKits/AEM下，則會在/InstallationKits下產生備份。 您也可以指定目標至您選擇的位置。
 
-如果 **目標路徑** 是一個目錄，在此目錄中建立存放庫的影像。 如果同一目錄被多次（或一律使用）用來儲存備份，
+如果&#x200B;**TargetPath**&#x200B;是目錄，則會在此目錄中建立存放庫的影像。 如果同一目錄被多次（或一律使用）用來儲存備份，
 
 * 在TargetPath中會相應修改儲存庫中已修改的檔案
 * 存放庫中刪除的檔案會在TargetPath中刪除
@@ -93,7 +93,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如果 **目標路徑** 設為副檔名為的檔案名稱 **.zip**，存放庫會備份至暫存目錄，然後此暫存目錄的內容會壓縮並儲存在ZIP檔案中。
+>如果&#x200B;**TargetPath**&#x200B;設定為副檔名為&#x200B;**.zip**&#x200B;的檔案名稱，儲存庫會備份至暫存目錄，然後此暫存目錄的內容會壓縮並儲存在ZIP檔案中。
 >
 >不建議使用此方法，因為
 >
@@ -104,25 +104,25 @@ ht-degree: 0%
 >
 >如果您需要建立ZIP作為備份格式，您應該備份至目錄，然後使用壓縮程式來建立zip檔案。
 
-**延遲** 表示時間延遲（以毫秒為單位），因此存放庫效能不受影響。 依預設，存放庫備份會以全速執行。 您可以減慢建立線上備份的速度，以免減慢其他工作的速度。
+**Delay**&#x200B;表示時間延遲（以毫秒為單位），因此存放庫效能不受影響。 依預設，存放庫備份會以全速執行。 您可以減慢建立線上備份的速度，以免減慢其他工作的速度。
 
 如果延遲時間非常長，請確認線上備份所需時間不超過24小時。 如果是，請捨棄此備份，因為它可能不包含所有二進位檔。
 1毫秒的延遲通常會導致10%的CPU使用率，而10毫秒的延遲通常會導致3%的CPU使用率。 延遲總秒數估計如下：存放庫大小（以MB為單位），乘以延遲（以毫秒為單位），再除以2 （如果使用zip選項），或再除以4 （備份到目錄時）。 這表示備份至200 MB存放庫的目錄，且延遲達1毫秒，會將備份時間增加約50秒。
 
 >[!NOTE]
 >
->另請參閱 [AEM Online Backup如何運作](#how-aem-online-backup-works) 以取得流程的內部詳細資訊。
+>如需程式的內部詳細資訊，請參閱[AEM Online Backup的運作方式](#how-aem-online-backup-works)。
 
 若要建立備份：
 
 1. 以管理員身分登入AEM。
 
-1. 前往 **工具 — 作業 — 備份。**
+1. 移至&#x200B;**工具 — 作業 — 備份。**
 1. 按一下「**建立**」。備份主控台隨即開啟。
 
    ![chlimage_1-1](assets/chlimage_1-1a.png)
 
-1. 在備份主控台上，指定 **[目標路徑](#aem-online-backup)** 和 **[延遲](#aem-online-backup)**.
+1. 在備份主控台上，指定&#x200B;**[目標路徑](#aem-online-backup)**&#x200B;和&#x200B;**[延遲](#aem-online-backup)**。
 
    ![chlimage_1-2](assets/chlimage_1-2a.png)
 
@@ -133,11 +133,11 @@ ht-degree: 0%
    >
    >` https://<*hostname*>:<*port-number*>/libs/granite/backup/content/admin.html`
 
-1. 按一下 **儲存**，進度列會顯示備份進度。
+1. 按一下&#x200B;**儲存**，進度列會顯示備份進度。
 
    >[!NOTE]
    >
-   >您可以 **取消** 隨時執行中的備份。
+   >您可以隨時&#x200B;**取消**&#x200B;執行中的備份。
 
 1. 備份完成後，壓縮檔會列在備份視窗中。
 
@@ -145,7 +145,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >您可使用主控台移除不再需要的備份檔案。 在左窗格中選取備份檔案，然後按一下 **刪除**.
+   >您可使用主控台移除不再需要的備份檔案。 在左窗格中選取備份檔案，然後按一下[刪除]。****
 
    >[!NOTE]
    >
@@ -155,19 +155,19 @@ ht-degree: 0%
 
 如果可能的話，應該在系統負載很小時（例如在早上）執行線上備份。
 
-備份可透過以下方式自動化： `wget` 或 `curl` http使用者端。 以下是如何使用curl自動化備份的範例。
+可使用`wget`或`curl` HTTP使用者端自動進行備份。 以下是如何使用curl自動化備份的範例。
 
 #### 備份到預設的目標目錄 {#backing-up-to-the-default-target-directory}
 
 >[!CAUTION]
 >
->在下列範例中， `curl` 命令可能需要為您的執行個體進行設定；例如，主機名稱( `localhost`)，連線埠( `4502`)，管理員密碼( `xyz`)和檔案名稱( `backup.zip`)。
+>在下列範例中，`curl`命令中的各種引數可能需要針對您的執行個體進行設定；例如，主機名稱( `localhost`)、連線埠( `4502`)、管理密碼( `xyz`)和檔案名稱( `backup.zip`)。
 
 ```shell
 curl -u admin:admin -X POST http://localhost:4502/system/console/jmx/com.adobe.granite:type=Repository/op/startBackup/java.lang.String?target=backup.zip
 ```
 
-備份檔案/目錄是在伺服器上所包含的資料夾之父資料夾中建立的 `crx-quickstart` 資料夾（與使用瀏覽器建立備份時相同）。 例如，如果您在目錄中安裝了AEM `/InstallationKits/crx-quickstart/`，則會在中建立備份 `/InstallationKits` 目錄。
+備份檔案/目錄是在伺服器上包含`crx-quickstart`資料夾之資料夾的父資料夾中建立的（與使用瀏覽器建立備份時相同）。 例如，如果您已在目錄`/InstallationKits/crx-quickstart/`中安裝AEM，則備份會在`/InstallationKits`目錄中建立。
 
 curl命令會立即傳回，因此您必須監視此目錄，以檢視zip檔案何時準備就緒。 建立備份時，可以看到暫存目錄（其名稱根據最終zip檔案的名稱而定），最後會壓縮這個目錄。 例如：
 
@@ -176,11 +176,11 @@ curl命令會立即傳回，因此您必須監視此目錄，以檢視zip檔案�
 
 #### 備份到非預設的目標目錄 {#backing-up-to-a-non-default-target-directory}
 
-備份檔案/目錄通常是在伺服器上所包含的資料夾的父資料夾中建立 `crx-quickstart` 資料夾。
+通常備份檔案/目錄會建立於伺服器上包含`crx-quickstart`資料夾之資料夾的父資料夾中。
 
-如果要將備份（任何一種排序）儲存到其他位置，您可以將「至」的絕對路徑 `target` 中的引數 `curl` 命令。
+如果要將備份（任何一種排序）儲存到其他位置，您可以在`curl`命令中設定`target`引數的絕對路徑。
 
-例如，若要產生 `backupJune.zip` 在目錄中 `/Backups/2012`：
+例如，若要在目錄`/Backups/2012`中產生`backupJune.zip`：
 
 ```shell
 curl -u admin:admin -X POST http://localhost:4502/system/console/jmx/com.adobe.granite:type=Repository/op/startBackup/java.lang.String?target=/Backups/2012/backupJune.zip"
@@ -192,7 +192,7 @@ curl -u admin:admin -X POST http://localhost:4502/system/console/jmx/com.adobe.g
 
 >[!NOTE]
 >
->也可以觸發備份 [使用AEM提供的MBean](/help/sites-administering/jmx-console.md).
+>也可以使用AEM](/help/sites-administering/jmx-console.md)提供的MBean [觸發備份。
 
 ### 檔案系統快照備份 {#filesystem-snapshot-backup}
 
@@ -215,12 +215,12 @@ AEM Online Backup由一系列內部動作組成，以確保要備份的資料與
 
 1. 建立zip檔案時，第一步是建立或尋找目標目錄。
 
-   * 如果備份至zip檔案，則會建立暫存目錄。 目錄名稱開頭為 `backup.` 結束於 `.temp`；例如， `backup.f4d3.temp`.
+   * 如果備份至zip檔案，則會建立暫存目錄。 目錄名稱以`backup.`開頭並以`.temp`結尾；例如`backup.f4d3.temp`。
    * 如果備份到目錄，則會使用目標路徑中指定的名稱。 可以使用現有的目錄，否則將會建立新目錄。
 
-     名為的空白檔案 `backupInProgress.txt` 會在備份啟動時，在目標目錄中建立。 備份完成時會刪除此檔案。
+     備份開始時，會在目標目錄中建立名為`backupInProgress.txt`的空白檔案。 備份完成時會刪除此檔案。
 
-1. 檔案會從來源目錄複製到目標目錄（或建立zip檔案時的暫存目錄）。 區段存放區會在資料存放區之前複製，以避免存放庫損毀。 建立備份時，會省略索引和快取資料。 因此，資料來自 `crx-quickstart/repository/cache` 和 `crx-quickstart/repository/index` 備份中未包含。 建立zip檔案時，流程的進度列指標介於0%-70%之間，如果未建立zip檔案，則介於0%-100%之間。
+1. 檔案會從來源目錄複製到目標目錄（或建立zip檔案時的暫存目錄）。 區段存放區會在資料存放區之前複製，以避免存放庫損毀。 建立備份時，會省略索引和快取資料。 因此，備份中不包含來自`crx-quickstart/repository/cache`和`crx-quickstart/repository/index`的資料。 建立zip檔案時，流程的進度列指標介於0%-70%之間，如果未建立zip檔案，則介於0%-100%之間。
 
 1. 如果備份是在預先存在的目錄中進行，則會刪除目標目錄中的「舊」檔案。 舊檔案是來源目錄中不存在的檔案。
 
@@ -237,7 +237,7 @@ AEM Online Backup由一系列內部動作組成，以確保要備份的資料與
 1. 視目標而定：
 
    * 如果已指定zip檔案，現在會從暫存目錄建立它。 進度指示器70% - 100%。 然後刪除暫存目錄。
-   * 如果目標是目錄，則名為的空白檔案 `backupInProgress.txt` 會刪除，表示備份已完成。
+   * 如果目標為目錄，則會刪除名為`backupInProgress.txt`的空白檔案，以指出備份已完成。
 
 ## 還原備份 {#restoring-the-backup}
 
@@ -250,11 +250,11 @@ AEM Online Backup由一系列內部動作組成，以確保要備份的資料與
 
 若要備份和還原內容，您可以使用其中一個「封裝管理員」，其會使用「內容封裝」格式來備份和還原內容。 「封裝管理員」在定義和管理封裝時可提供更大的彈性。
 
-如需各個內容套件格式的功能和權衡的詳細資訊，請參閱 [如何使用套件](/help/sites-administering/package-manager.md).
+如需這些個別內容封裝格式的功能和折衷的詳細資訊，請參閱[如何使用封裝](/help/sites-administering/package-manager.md)。
 
 ### 備份範圍 {#scope-of-backup}
 
-當您使用封裝管理員或內容拉鍊備份節點時，CRX會儲存下列資訊：
+當您使用「封裝管理員」或「內容拉鍊」備份節點時，CRX會儲存下列資訊：
 
 * 您選取的樹狀結構下方的存放庫內容。
 * 用於您備份之內容的Node型別定義。

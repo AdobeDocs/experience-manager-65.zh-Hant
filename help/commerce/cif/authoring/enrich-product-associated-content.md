@@ -27,14 +27,14 @@ ht-degree: 1%
 
 >[!VIDEO](https://video.tv.adobe.com/v/333205/?quality=12&learn=on)
 
-體驗片段是Adobe Experience Manager的一項功能，可讓行銷人員建立 **非結構化** 可重複使用的內容。 體驗片段可與產品SKU或目錄ID建立關聯。 一旦建立關聯，行銷人員就可以根據頁面上顯示的產品輕鬆探索相關片段。 體驗片段也可以透過使用預留位置及關聯來動態包含在產品目錄頁面上。
+體驗片段是Adobe Experience Manager的一項功能，可讓行銷人員建立&#x200B;**非結構化**&#x200B;可重複使用的內容。 體驗片段可與產品SKU或目錄ID建立關聯。 一旦建立關聯，行銷人員就可以根據頁面上顯示的產品輕鬆探索相關片段。 體驗片段也可以透過使用預留位置及關聯來動態包含在產品目錄頁面上。
 
 ## 內容片段
 
 >[!VIDEO](https://video.tv.adobe.com/v/339182/?quality=12&learn=on)
 
-內容片段是Adobe Experience Manager的一項功能，可讓行銷人員建立 **結構化** 可重複使用的內容。 內容片段可與產品SKU或目錄ID建立關聯。 一旦建立關聯，行銷人員就可以根據頁面上顯示的產品輕鬆探索相關片段。 您也可以使用預留位置及關聯，以動態方式將內容片段納入產品目錄頁面。
+內容片段是Adobe Experience Manager的一項功能，可讓行銷人員建立&#x200B;**結構化**&#x200B;可重複使用的內容。 內容片段可與產品SKU或目錄ID建立關聯。 一旦建立關聯，行銷人員就可以根據頁面上顯示的產品輕鬆探索相關片段。 您也可以使用預留位置及關聯，以動態方式將內容片段納入產品目錄頁面。
 
 ## 相關資源 {#related}
 
-您也可以針對一組特定產品或類別自訂整個範本。 透過以下方式瞭解 [建立多個類別和產品頁面](/help/commerce/cif/configuring/multi-template-usage.md).
+您也可以針對一組特定產品或類別自訂整個範本。 透過[建立多個類別和產品頁面](/help/commerce/cif/configuring/multi-template-usage.md)瞭解如何進行。

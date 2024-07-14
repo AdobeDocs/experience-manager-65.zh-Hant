@@ -44,7 +44,7 @@ AEM模擬器架構：
 * 其外觀會透過CSS受到規範。
 * 支援外掛程式（例如行動裝置旋轉外掛程式）。
 * 僅對作者有效。
-* 其基本元件位於 `/libs/wcm/emulator/components/base`.
+* 其基底元件位於`/libs/wcm/emulator/components/base`。
 
 ### 模擬器如何轉換內容 {#how-the-emulator-transforms-the-content}
 
@@ -88,9 +88,9 @@ AEM模擬器架構：
 
 已新增兩個div標籤：
 
-* 具有id的div `cq-emulator` 保持整個模擬器並且
+* ID為`cq-emulator`的div將模擬器作為整體保留，並且
 
-* 具有id的div `cq-emulator-content` 代表頁面內容所在的裝置檢視區/畫面/內容區域。
+* 識別碼為`cq-emulator-content`的div，代表頁面內容所在的裝置檢視區/畫面/內容區域。
 
 新的CSS類別也會指派給新的模擬器div：它們代表目前模擬器的名稱。
 
@@ -111,13 +111,13 @@ AEM模擬器架構：
 
   http://localhost:4502/bin/wcm/mobile/emulators.json
 
-當頁面元件依賴行動頁面元件時( `/libs/wcm/mobile/components/page`)，則模擬器功能會透過下列機制自動整合到頁面中：
+當頁面元件需仰賴行動頁面元件( `/libs/wcm/mobile/components/page`)時，模擬器功能會透過下列機制自動整合到頁面中：
 
-* 行動頁面元件 `head.jsp` 包含裝置群組相關的模擬器初始元件（僅於製作模式中）以及裝置群組透過以下方式轉譯CSS：
+* 行動頁面元件`head.jsp`包含裝置群組相關的模擬器初始化元件（僅於作者模式下）以及裝置群組的轉譯CSS，透過：
 
   `deviceGroup.drawHead(pageContext);`
 
-* 方法 `DeviceGroup.drawHead(pageContext)` 包含模擬器的init元件，也就是呼叫 `init.html.jsp` 模擬器元件的。 如果模擬器元件沒有自己的 `init.html.jsp` 並仰賴行動裝置基礎模擬器( `wcm/mobile/components/emulators/base)`，行動基本模擬器的初始指令碼稱為( `/libs/wcm/mobile/components/emulators/base/init.html.jsp`)。
+* 方法`DeviceGroup.drawHead(pageContext)`包含模擬器的init元件，也就是呼叫模擬器元件的`init.html.jsp`。 如果模擬器元件沒有自己的`init.html.jsp`且依賴行動基底模擬器( `wcm/mobile/components/emulators/base)`)，則行動基底模擬器的init指令碼稱為( `/libs/wcm/mobile/components/emulators/base/init.html.jsp`)。
 
 * 行動基本模擬器的初始指令碼透過JavaScript定義：
 
@@ -134,22 +134,22 @@ AEM模擬器架構：
 
 若要建立自訂行動模擬器：
 
-1. 以下 `/apps/myapp/components/emulators` 建立元件 `myemulator` (節點型別： `cq:Component`)。
+1. 在`/apps/myapp/components/emulators`底下建立元件`myemulator` （節點型別： `cq:Component`）。
 
-1. 設定 `sling:resourceSuperType` 屬性至 `/libs/wcm/mobile/components/emulators/base`
+1. 將`sling:resourceSuperType`屬性設定為`/libs/wcm/mobile/components/emulators/base`
 
-1. 使用類別定義CSS使用者端資料庫 `cq.wcm.mobile.emulator` 對於模擬器外觀：名稱= `css`，節點型別= `cq:ClientLibrary`
+1. 為模擬器外觀定義類別為`cq.wcm.mobile.emulator`的CSS使用者端資料庫：名稱= `css`，節點型別= `cq:ClientLibrary`
 
-   例如，您可以參照節點 `/libs/wcm/mobile/components/emulators/iPhone/css`
+   例如，您可以參照節點`/libs/wcm/mobile/components/emulators/iPhone/css`
 
 1. 如有需要，請定義JS使用者端程式庫，以定義特定外掛程式：名稱= js，節點型別= cq：ClientLibrary
 
-   例如，您可以參照節點 `/libs/wcm/mobile/components/emulators/base/js`
+   例如，您可以參照節點`/libs/wcm/mobile/components/emulators/base/js`
 
-1. 如果模擬器支援外掛程式定義的特定功能（例如觸控捲動），請在模擬器下方建立設定節點：名稱= `cq:emulatorConfig`，節點型別= `nt:unstructured` 並新增定義外掛程式的屬性：
+1. 如果模擬器支援外掛程式定義的特定功能（例如觸控捲動），請在模擬器下方建立設定節點：名稱= `cq:emulatorConfig`、節點型別= `nt:unstructured`，然後新增定義外掛程式的屬性：
 
    * 名稱= `canRotate`，型別= `Boolean`，值= `true`：包含旋轉功能。
 
-   * 名稱= `touchScrolling`，型別= `Boolean`，值= `true`：加入觸控捲動功能。
+   * 名稱= `touchScrolling`，型別= `Boolean`，值= `true`：包含觸控捲動功能。
 
    您可以定義自己的外掛程式，以新增更多功能。

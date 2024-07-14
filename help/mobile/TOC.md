@@ -19,24 +19,24 @@ ht-degree: 11%
 # AEM 6.5 Mobile 使用指南 {#mobile}
 
 + [Mobile使用手冊概覽](home.md)
-+ AEM Mobile簡介 {#introduction}
++ AEM Mobile {#introduction}簡介
    + [AEM Mobile快速入門](getting-started-aem-mobile.md)
    + [AEM Mobile On-Demand](getting-started-aem-mobile-on-demand.md)
    + [行動應用程式](mobile-apps.md)
    + [AEM Adobe PhoneGap](getting-started-aem-mobile-phonegap.md)
    + [AEM Mobile - GDPR整備](aem-mobile-gdpr-compliance.md)
    + [開發行動應用程式](develop-mobile-apps.md)
-+ Authoring On-Demand Services應用程式 {#authoring}
++ 編寫On-Demand Services應用程式{#authoring}
    + [Mobile On-Demand](mobile-apps-ondemand.md)
    + [管理內容](mobile-apps-ondemand-manage-content-ondemand.md)
-   + [發佈取消發佈內容](mobile-on-demand-publishing-unpublishing.md)
+   + [Publish取消發佈內容](mobile-on-demand-publishing-unpublishing.md)
    + [AEM Mobile應用程式控制面板](mobile-apps-ondemand-application-dashboard.md)
    + [應用程式建立和設定動作](mobile-apps-ondemand-application-create-configure-action.md)
    + [管理文章](mobile-on-demand-managing-articles.md)
    + [上傳共用資源](mobile-on-demand-shared-resources.md)
    + [雲端設定](mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md)
    + [管理橫幅](mobile-on-demand-managing-banners.md)
-+ 開發On-Demand Services App {#developing}
++ 正在開發On-Demand Services應用程式{#developing}
    + [AEM Mobile On-Demand](aem-mobile-on-demand.md)
    + [應用程式範本和元件](app-templates-and-components1.md)
    + [內容屬性和節點](content-properties.md)
@@ -50,7 +50,7 @@ ht-degree: 11%
    + [呈現和傳遞](rendering-and-delivery.md)
    + [Content Services](developing-content-services.md)
    + [內容傳送](develop-content-as-a-service.md)
-+ 管理On-Demand Services App {#administering}
++ 管理On-Demand Services應用程式{#administering}
    + [AEM Mobile On-Demand](aem-mobile.md)
    + [AEM Mobile設定](aem-mobile-setup.md)
    + [設定使用者和使用者群組](aem-mobile-configure-users.md)
@@ -68,7 +68,7 @@ ht-degree: 11%
    + [編寫行動應用程式](phonegap-authoring-apps.md)
    + [管理應用程式動態磚](phonegap-app-details-tile.md)
    + [AEM Mobile內容個人化](phonegap-aem-mobile-content-personalization.md)
-+ 開發Adobe PhoneGap Enterprise {#developphonegap}
++ 正在開發Adobe PhoneGap Enterprise {#developphonegap}
    + [PhoneGap](developing-in-phonegap.md)
    + [建立行動應用程式](building-app-mobile-phonegap.md)
    + [推播通知](phonegap-push-notifications.md)

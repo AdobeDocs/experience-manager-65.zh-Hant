@@ -1,5 +1,5 @@
 ---
-title: AEM開發 — 指導方針與最佳作法
+title: AEM 開發 - 指導方針與最佳實務
 description: 在AEM上開發的准則和最佳實務
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,11 +12,11 @@ role: Developer
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '1083'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
-# AEM開發 — 指導方針與最佳作法{#aem-development-guidelines-and-best-practices}
+# AEM 開發 - 指導方針與最佳實務{#aem-development-guidelines-and-best-practices}
 
 ## 使用範本和元件的准則 {#guidelines-for-using-templates-and-components}
 
@@ -51,11 +51,11 @@ Adobe Experience Manager (AEM)元件和範本包含強大的工具組。 開發�
 
 建立您自己的元件或自訂現有的元件時，通常最容易（也最安全）重複使用現有的定義。 同樣的原則也適用於AEM內的其他元素，例如錯誤處理常式。
 
-這可以透過複製和覆蓋現有定義來完成。 換言之，復制定義來源 `/libs` 至 `/apps/<your-project>`. 此新定義，在 `/apps`，可根據您的需求進行更新。
+這可以透過複製和覆蓋現有定義來完成。 換言之，將定義從`/libs`複製到`/apps/<your-project>`。 此新定義（在`/apps`中）可根據您的需求更新。
 
 >[!NOTE]
 >
->另請參閱 [使用覆蓋](/help/sites-developing/overlays.md) 以取得更多詳細資料。
+>如需詳細資訊，請參閱[使用覆蓋](/help/sites-developing/overlays.md)。
 
 例如：
 
@@ -63,12 +63,12 @@ Adobe Experience Manager (AEM)元件和範本包含強大的工具組。 開發�
 
   這涉及覆蓋元件定義：
 
-   * 在中建立元件資料夾 `/apps/<website-name>/components/<MyComponent>` 透過複製現有元件：
+   * 複製現有元件以在`/apps/<website-name>/components/<MyComponent>`中建立元件資料夾：
 
       * 例如，若要自訂文字元件複製：
 
          * 從 `/libs/foundation/components/text`
-         * 至 `/apps/myProject/components/text`
+         * 至`/apps/myProject/components/text`
 
 * [自訂錯誤處理常式顯示的頁面](/help/sites-developing/customizing-errorhandler-pages.md#how-to-customize-pages-shown-by-the-error-handler)
 
@@ -77,18 +77,18 @@ Adobe Experience Manager (AEM)元件和範本包含強大的工具組。 開發�
    * 在存放庫中，複製一或多個預設指令碼：
 
       * 從 `/libs/sling/servlet/errorhandler/`
-      * 至 `/apps/sling/servlet/errorhandler/`
+      * 至`/apps/sling/servlet/errorhandler/`
 
 >[!CAUTION]
 >
->**不要** 變更 `/libs` 路徑。
+>**不要**&#x200B;變更`/libs`路徑中的任何專案。
 >
->原因是因為的內容 `/libs` 下次升級執行個體時會被覆寫（當您套用hotfix或feature pack時，很可能會被覆寫）。
+>原因是因為下次升級執行個體時，`/libs`的內容會被覆寫（當您套用Hotfix或Feature Pack時，這些內容很可能會被覆寫）。
 >
 >設定和其他變更：
 >
->1. 複製專案於 `/libs` 至 `/apps`
->1. 進行任何變更 `/apps`
+>1. 將`/libs`中的專案複製到`/apps`
+>1. 在`/apps`中進行任何變更
 
 ## 何時應使用JCR查詢以及何時不應使用 {#when-to-use-jcr-queries-and-when-not-to-use-them}
 
@@ -109,14 +109,14 @@ Adobe Experience Manager (AEM)元件和範本包含強大的工具組。 開發�
 
 >[!NOTE]
 >
->如果您使用 [查詢產生器](/help/sites-developing/querybuilder-api.md)，您會使用JCR查詢，因為查詢產生器會在幕後產生JCR查詢。
+>如果您使用[查詢產生器](/help/sites-developing/querybuilder-api.md)，您會使用JCR查詢，因為查詢產生器會在幕後產生JCR查詢。
 >
 
 ## 安全性考量 {#security-considerations}
 
 >[!NOTE]
 >
->此外，也值得一提 [安全性檢查清單](/help/sites-administering/security-checklist.md).
+>參考[安全性檢查清單](/help/sites-administering/security-checklist.md)也是值得的。
 
 ### JCR （存放庫）工作階段 {#jcr-repository-sessions}
 
@@ -132,7 +132,7 @@ slingRequest.getResourceResolver().adaptTo(Session.class);
 
 AEM會套用輸出時篩選所有使用者提供內容的原則。 在開發和測試期間，防止XSS都被給予最高優先順序。
 
-此外，Web應用程式防火牆，例如 [Apache適用的mod_security](https://modsecurity.org)，可提供部署環境安全性的可靠集中控制，並防止先前未偵測到的跨網站指令碼攻擊。
+此外，Web應用程式防火牆（例如Apache的[mod_security](https://modsecurity.org)）可提供部署環境安全性的可靠集中控制，並防止先前未偵測到的跨網站指令碼攻擊。
 
 >[!CAUTION]
 >
@@ -159,10 +159,10 @@ XSSAPI速查表。
 
 可針對AEM自訂錯誤頁面。 這是建議做法，讓執行個體不會顯示內部伺服器錯誤上的Sling追蹤。
 
-另請參閱 [自訂錯誤處理常式顯示的錯誤頁面](/help/sites-developing/customizing-errorhandler-pages.md) 以取得完整詳細資訊。
+如需完整詳細資訊，請參閱[自訂錯誤處理常式顯示的錯誤頁面](/help/sites-developing/customizing-errorhandler-pages.md)。
 
 ### 在Java™程式中開啟檔案 {#open-files-in-the-java-process}
 
-由於AEM可以存取許多檔案，因此建議將 [開啟Java™程式的檔案](/help/sites-deploying/configuring.md#open-files-in-the-java-process) 已針對AEM明確設定。
+由於AEM可以存取許多檔案，因此建議為AEM明確設定Java™處理序](/help/sites-deploying/configuring.md#open-files-in-the-java-process)的[開啟檔案數。
 
 為了將這個問題降至最低，開發應確保在（有意義的）可能時，正確關閉任何開啟的檔案。

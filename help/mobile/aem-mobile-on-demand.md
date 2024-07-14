@@ -23,15 +23,15 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->如果您沒有使用AEM作為內容管理來源，請參閱 [AEM Mobile On-demand Services說明](https://helpx.adobe.com/digital-publishing-solution/topics.html).
+>如果您未使用AEM作為內容管理來源，請參閱[AEM Mobile On-demand Services說明](https://helpx.adobe.com/digital-publishing-solution/topics.html)。
 
 >[!NOTE]
 >
->在使用AEM Mobile並按照本快速入門手冊中的步驟操作之前，使用者應該熟悉 [AEM](/help/sites-deploying/deploy.md).
+>在使用AEM Mobile並按照本快速入門手冊中的步驟操作之前，使用者應該熟悉[AEM](/help/sites-deploying/deploy.md)。
 >
->若要設定AEM Mobile On-demand Services的環境，請參閱 [AEM Mobile應用程式儀表板或控制中心](/help/mobile/mobile-apps-ondemand-application-dashboard.md).
+>若要設定AEM Mobile On-demand Services的環境，請參閱[AEM Mobile應用程式儀表板或控制中心](/help/mobile/mobile-apps-ondemand-application-dashboard.md)。
 
-一個 **AEM開發人員** 擴充及建立自訂Web範本和元件，以啟用 *AEM作者* 打造精美動人的行動體驗。 這些範本和元件不僅已針對行動應用程式世界最佳化，而且可與裝置和AEM伺服器（任何遠端伺服器）通訊，以連線全通路服務端點。 AEM內建內容編輯器用於 *AEM作者* 在應用程式中建立豐富的相關體驗，包括與Adobe Marketing Cloud其他部分的整合。
+**AEM開發人員**&#x200B;延伸並建立自訂Web範本和元件，讓&#x200B;*AEM作者*&#x200B;能夠建立美觀且吸引人的行動體驗。 這些範本和元件不僅已針對行動應用程式世界最佳化，而且可與裝置和AEM伺服器（任何遠端伺服器）通訊，以連線全通路服務端點。 *AEM作者*&#x200B;使用AEM的內建內容編輯器在應用程式中建立豐富的相關體驗，包括與Adobe Marketing Cloud其他部分的整合。
 
 使用AEM Mobile On-demand Services建立應用程式時，AEM開發人員會負責下列工作：
 
@@ -39,11 +39,11 @@ ht-degree: 1%
 * [具有內容同步功能的行動裝置](/help/mobile/mobile-ondemand-contentsync.md)
 * [內容屬性和內容匯出](/help/mobile/on-demand-content-properties-exporting.md)
 
-另請參閱 [開發AEM Mobile內容服務](/help/mobile/developing-content-services.md) 用於開發內容服務。
+請參閱[開發AEM Mobile Content Services](/help/mobile/developing-content-services.md)，以開發內容服務。
 
 >[!NOTE]
 >
->一個 *AEM開發人員的* 角色不會以範本和元件的開發開始和結束。 一個 *AEM開發人員* 可建立全新的應用程式，而不只是擴充現成的參考實作範例。
+>*AEM開發人員的*&#x200B;角色並非以範本和元件的開發開始和結束。 *AEM開發人員*&#x200B;可以建立全新的應用程式，而不只是擴充現成的參考實作範例。
 
 ## 其他資源 {#additional-resources}
 

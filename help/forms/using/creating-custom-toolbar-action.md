@@ -20,7 +20,7 @@ ht-degree: 0%
 
 ## 先決條件 {#prerequisite}
 
-在建立自訂工具列動作之前，請先熟悉 [使用使用者端資料庫](/help/sites-developing/clientlibs.md) 和 [使用CRXDE Lite開發](/help/sites-developing/developing-with-crxde-lite.md).
+在建立自訂工具列動作之前，請熟悉[使用使用者端資料庫](/help/sites-developing/clientlibs.md)和[使用CRXDE Lite開發](/help/sites-developing/developing-with-crxde-lite.md)。
 
 ## 什麼是動作 {#what-is-an-action-br}
 
@@ -34,16 +34,16 @@ ht-degree: 0%
 
 為了說明自訂工具列動作的建立，以下步驟將指導您建立按鈕，以供一般使用者在提交填寫的表單之前檢閱所有最適化表單欄位。
 
-1. 最適化表單支援的所有預設動作都會出現在 `/libs/fd/af/components/actions` 資料夾。 在CRXDE中，複製 `fileattachmentlisting` 節點來源 `/libs/fd/af/components/actions/fileattachmentlisting` 至 `/apps/customaction`.
+1. 最適化表單支援的所有預設動作都存在於`/libs/fd/af/components/actions`資料夾中。 在CRXDE中，將`fileattachmentlisting`節點從`/libs/fd/af/components/actions/fileattachmentlisting`複製到`/apps/customaction`。
 
-1. 將節點複製到之後 `apps/customaction` 資料夾，將節點名稱重新命名為 `reviewbeforesubmit`. 此外，請變更 `jcr:title` 和 `jcr:description` 節點的屬性。
+1. 將節點複製到`apps/customaction`資料夾後，將節點名稱重新命名為`reviewbeforesubmit`。 此外，請變更節點的`jcr:title`和`jcr:description`屬性。
 
-   此 `jcr:title` 屬性包含工具列對話方塊中顯示的動作名稱。 此 `jcr:description` 屬性包含當使用者將指標暫留在動作上時顯示的詳細資訊。
+   `jcr:title`屬性包含顯示在工具列對話方塊中的動作名稱。 `jcr:description`屬性包含當使用者將指標暫留在動作上時顯示的更多資訊。
 
-   ![用於自訂工具列的節點階層](assets/action3.png)
+   ![自訂工具列的節點階層](assets/action3.png)
 
-1. 選取 `cq:template` 中的節點 `reviewbeforesubmit` 節點。 確定 `guideNodeClass` 屬性為 `guideButton` 和變更 `jcr:title` 屬性。
-1. 變更中的型別屬性 `cq:Template` 節點。 對於目前的範例，將type屬性變更為button。
+1. 選取`reviewbeforesubmit`節點中的`cq:template`節點。 請確定`guideNodeClass`屬性的值為`guideButton`並相應地變更`jcr:title`屬性。
+1. 變更`cq:Template`節點中的型別屬性。 對於目前的範例，將type屬性變更為button。
 
    型別值會在產生的元件HTML中新增為CSS類別。 使用者可以使用該CSS類別來設定其動作的樣式。 行動裝置和桌上型裝置的預設樣式都會提供給按鈕、提交、重設和儲存型別值。
 
@@ -51,9 +51,9 @@ ht-degree: 0%
 
    ![自訂動作在工具列中可供使用](assets/custom_action_available_in_toolbar.png) ![顯示自訂建立的工具列動作](assets/action7.png)
 
-1. 若要為「複查」按鈕提供功能，請在init.jsp檔案中新增一些JavaScript和CSS程式碼以及伺服器端程式碼，這些程式碼會出現在內 `reviewbeforesubmit` 節點。
+1. 若要為[檢閱]按鈕提供功能，請在`reviewbeforesubmit`節點內的init.jsp檔案中新增一些JavaScript和CSS程式碼以及伺服器端程式碼。
 
-   在中新增下列程式碼 `init.jsp`.
+   在`init.jsp`中新增下列程式碼。
 
    ```jsp
    <%@include file="/libs/fd/af/components/guidesglobal.jsp" %>
@@ -111,7 +111,7 @@ ht-degree: 0%
    </div><!-- /.modal -->
    ```
 
-   將下列程式碼新增至 `ReviewBeforeSubmit.js` 檔案。
+   在`ReviewBeforeSubmit.js`檔案中新增下列程式碼。
 
    ```javascript
    /*anonymous function to handle show of review before submit view */
@@ -146,7 +146,7 @@ ht-degree: 0%
    });
    ```
 
-   將下列程式碼新增至 `ReviewBeforeSubmit.css` 檔案。
+   將下列程式碼新增至`ReviewBeforeSubmit.css`檔案。
 
    ```css
    .modal-list .reviewlabel {
@@ -179,9 +179,9 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >此 `GuideBridge` 程式庫未在編寫模式中載入。 因此，此自訂動作無法在編寫模式下運作。
+   >`GuideBridge`程式庫未以編寫模式載入。 因此，此自訂動作無法在編寫模式下運作。
 
-   ![自訂評論按鈕動作的示範](assets/action9.png)
+   ![自訂評論按鈕的動作示範](assets/action9.png)
 
 ## 範例 {#samples}
 

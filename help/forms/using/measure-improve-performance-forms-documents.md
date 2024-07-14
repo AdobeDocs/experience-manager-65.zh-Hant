@@ -32,7 +32,7 @@ ht-degree: 0%
 
 ## 解決方案 {#the-solution}
 
-AEM Forms整合 [Adobe Marketing Cloud](https://www.adobe.com/marketing-cloud.html) 解決方案 —  [Adobe Analytics](https://www.adobe.com/marketing-cloud/web-analytics.html) 和 [Adobe Target](https://www.adobe.com/marketing-cloud/testing-targeting.html)  — 可協助您監控及分析表單的執行狀況，並可讓您實驗及識別帶來更佳轉換率的體驗。
+AEM Forms與[Adobe Marketing Cloud](https://www.adobe.com/marketing-cloud.html)解決方案 — [Adobe Analytics](https://www.adobe.com/marketing-cloud/web-analytics.html)和[Adobe Target](https://www.adobe.com/marketing-cloud/testing-targeting.html)整合，可協助您監視和分析表單的執行方式，並讓您實驗及識別帶來更佳轉換率的體驗。
 
 ## 工作流程 {#the-workflow}
 
@@ -68,11 +68,11 @@ AEM Forms整合 [Adobe Marketing Cloud](https://www.adobe.com/marketing-cloud.ht
 1. 在AEM中設定AEM Forms Analytics設定服務
 1. 在AEM中對表單啟用分析
 
-如需詳細步驟，請參閱 [為最適化表單設定分析和報表](../../forms/using/configure-analytics-forms-documents.md).
+如需詳細步驟，請參閱[為最適化表單設定分析和報表](../../forms/using/configure-analytics-forms-documents.md)。
 
-**設定Target**
+**設定目標**
 
-若要針對最適化表單建立並執行A/B測試，請依照中的說明在AEM Forms中設定Target [在AEM Forms中設定並整合Target](../../forms/using/ab-testing-adaptive-forms.md#p-set-up-and-integrate-target-in-aem-forms-p).
+若要為最適化表單建立並執行A/B測試，請依照[在AEM Forms中設定並整合Target](../../forms/using/ab-testing-adaptive-forms.md#p-set-up-and-integrate-target-in-aem-forms-p)中的說明在AEM Forms中設定Target。
 
 #### 步驟2：檢視分析報表 {#step-view-analytics-report-br}
 
@@ -80,25 +80,25 @@ AEM Forms整合 [Adobe Marketing Cloud](https://www.adobe.com/marketing-cloud.ht
 
 您可以針對啟用Analytics的表單從AEM內檢視報表，並分析資料。 若要檢視報表，請執行下列動作：
 
-1. 在AEM伺服器上，導覽至 **Forms > Forms與檔案**.
+1. 在AEM伺服器上，瀏覽至&#x200B;**Forms > Forms和檔案**。
 1. 選取您要為其建立分析報表的表單。
 1. 按一下「Analytics報表」圖示。 報表隨即顯示。
 
 讓我們看看Analytics為表單收集和報告的資料點。
 
-**Forms分析報表**
+**Forms分析報告**
 
 適用性表單的分析報表可擷取表單層級的下列關鍵績效指標(KPI)：
 
-* **平均填充時間**：填寫表單所花的平均時間
-* **曝光數**：表單出現在搜尋結果中的次數
+* **平均填寫時間**：填寫表單所花費的平均時間
+* **曝光次數**：表單出現在搜尋結果中的次數
 
 * **轉譯**：表單已轉譯或開啟的次數
-* **草稿**：表單儲存為草稿的次數
+* **草稿**：表單已儲存為草稿的次數
 
-* **提交內容**：已提交表單的次數
+* **提交專案**：已提交表單的次數
 * **中止**：使用者未完成表單而離開的次數
-* **瀏覽/提交**：每次提交的造訪比率
+* **瀏覽/提交**：每次提交的瀏覽比率
 
 此外，您會取得表單中每個面板的下列詳細資料：
 
@@ -108,9 +108,9 @@ AEM Forms整合 [Adobe Marketing Cloud](https://www.adobe.com/marketing-cloud.ht
 
 * **說明**：使用者每1000個表單轉譯存取面板及其欄位內容說明的次數
 
-![最適化表單的分析報表範例](assets/summary-report.png)
+![最適化表單的分析報告範例](assets/summary-report.png)
 
-如需Forms Analytics報表的詳細資訊，請參閱 [檢視和瞭解AEM Forms analytics報表](../../forms/using/view-understand-aem-forms-analytics-reports.md).
+如需Forms Analytics報表的詳細資訊，請參閱[檢視和瞭解AEM Forms Analytics報表](../../forms/using/view-understand-aem-forms-analytics-reports.md)。
 
 >[!NOTE]
 >
@@ -134,9 +134,9 @@ AEM Forms整合 [Adobe Marketing Cloud](https://www.adobe.com/marketing-cloud.ht
 
 AEM Forms與Target的整合可建立最適化表單的A/B測試。 在A/B測試中，您會即時隨機向客戶呈現表單的不同體驗，以瞭解哪些體驗效果更好或導致更多轉換。 一旦您擁有重要資料，指出某個體驗所提供的轉換率優於另一個體驗，您就可以宣告該體驗為獲勝者，並且隨著時間推移，該體驗會成為所有客戶都可見的預設體驗。
 
-如需為最適化表單建立A/B測試的詳細資訊，請參閱 [最適化表單的A/B測試](../../forms/using/ab-testing-adaptive-forms.md).
+如需為最適化表單建立A/B測試的詳細資訊，請參閱[最適化表單的A/B測試](../../forms/using/ab-testing-adaptive-forms.md)。
 
-![最適化表單的A/B測試摘要報告範例](assets/ab-test-report-4.png)
+![最適化表單的A/B測試範例摘要報告](assets/ab-test-report-4.png)
 
 ## 最佳做法 {#best-practices}
 

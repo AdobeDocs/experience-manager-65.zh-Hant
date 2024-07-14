@@ -22,13 +22,13 @@ ht-degree: 1%
 
 若要產生語意變更的縮製程式碼，請按照下列步驟操作。
 
-1. 複製 `client-html/src/main/webapp/js` 檔案系統上的src-package。
+1. 從檔案系統上的src-package複製`client-html/src/main/webapp/js`。
 
    >[!NOTE]
    >
-   >另請參閱 [自訂AEM Forms工作區簡介](/help/forms/using/introduction-customizing-html-workspace.md) 以取得封裝的詳細資訊。
+   >如需封裝的詳細資訊，請參閱[自訂AEM Forms工作區簡介](/help/forms/using/introduction-customizing-html-workspace.md)。
 
-1. 更新中的路徑 `main.js` 位於client-html/src/main/webapp/js下方，用於新增/更新的模型/檢視。
+1. 針對新增/更新的模型/檢視，更新位於client-html/src/main/webapp/js下方的`main.js`中的路徑。
 
    例如，新增新的Sharequeue模型（例如mySharequeue）會變更：
 
@@ -42,7 +42,7 @@ ht-degree: 1%
    sharequeuemodel : pathprefix + 'runtime/myModels/mySharequeue',
    ```
 
-1. 更新 `registry-config.xml, located at client-html/src/main/webapp/js/resource_generator,` 萬一中別名變更/增加 `main.js`.
+1. 更新`registry-config.xml, located at client-html/src/main/webapp/js/resource_generator,`，以防`main.js`中別名變更/新增。
 
    例如，新增新的Sharequeue模型（例如mySharequeue）會變更：
 

@@ -22,7 +22,7 @@ ht-degree: 0%
 >
 >Adobe不打算進一步增強對AEM SMTP服務傳送的已開啟/已退回電子郵件的追蹤。
 >
->建議為 [使用Adobe Campaign及其AEM整合](/help/sites-administering/campaign.md).
+>建議您[使用Adobe Campaign及其AEM整合](/help/sites-administering/campaign.md)。
 
 當您傳送電子報給許多使用者時，清單中通常會有一些無效的電子郵件地址。 傳送電子報到這些地址會退回。 AEM可以管理這些跳出，並可在超出設定的跳出計數器後停止傳送電子報至這些地址。 依預設，跳出率設為3，但可設定。
 
@@ -34,9 +34,9 @@ ht-degree: 0%
 
 若要設定摘要匯入工具來追蹤跳出的電子郵件，請執行下列動作：
 
-1. 在 **工具**，選取摘要匯入工具。
+1. 在&#x200B;**工具**&#x200B;中，選取摘要匯入工具。
 
-1. 按一下 **新增** 以建立組態。
+1. 按一下&#x200B;**新增**&#x200B;以建立組態。
 
    ![chlimage_1](assets/chlimage_1a.png)
 
@@ -50,9 +50,9 @@ ht-degree: 0%
 
    此外，您也可以根據通訊協定來設定某些設定。
 
-   **POP3設定屬性：**
+   **POP3組態屬性：**
 
-   `pop3.leave.on.server`：定義是否要將訊息留在伺服器上。 設為true會在伺服器上留下訊息，否則則為false。 預設為true。
+   `pop3.leave.on.server`：定義是否要將郵件留在伺服器上。 設為true會在伺服器上留下訊息，否則則為false。 預設為true。
 
    **POP3範例：**
 
@@ -60,13 +60,13 @@ ht-degree: 0%
    |---|---|
    | pop3s://pop.gmail.com:995/INBOX?username=user&amp;password=secret&amp;pop3.leave.on.server=false | pop3s://pop.gmail.com:995/INBOX?username=user&amp;password=secret&amp;pop3.leave.on.server=false |
 
-   **IMAP設定屬性：**
+   **IMAP組態屬性：**
 
    可讓您設定要搜尋的標幟。
 
-   `imap.flag.SEEN`：設定新增/未檢視訊息為false，已讀取訊息為true
+   `imap.flag.SEEN`：將新/未檢視的訊息設為false，將已讀取的訊息設為true
 
-   另請參閱 [https://javaee.github.io/javamail/docs/api/index.html?javax/mail/Flags.Flag.html](https://javaee.github.io/javamail/docs/api/index.html?javax/mail/Flags.Flag.html) 以取得完整的旗標清單。
+   如需完整的旗標清單，請參閱[https://javaee.github.io/javamail/docs/api/index.html?javax/mail/Flags.Flag.html](https://javaee.github.io/javamail/docs/api/index.html?javax/mail/Flags.Flag.html)。
 
    **IMAP範例：**
 
@@ -83,7 +83,7 @@ ht-degree: 0%
 
 若要設定Newsletter服務：
 
-1. 在OSGi主控台中，位於 `<host>:<port>/system/console/configMgr`，導覽至 **MCM電子報**.
+1. 在OSGi主控台的`<host>:<port>/system/console/configMgr`中，導覽至&#x200B;**MCM Newsletter**。
 
 1. 完成時設定服務並儲存變更。
 

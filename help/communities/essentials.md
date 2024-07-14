@@ -18,9 +18,9 @@ ht-degree: 15%
 
 # 元件、功能和功能要點  {#component-function-and-feature-essentials}
 
-Adobe Experience Manager (AEM) Communities功能需要網站訪客成為成員並登入 [社群網站](overview.md#communitiessites) 之後才能發佈內容。 因此， [社群網站範本](sites.md)，社群網站會從此建立 [已建立](sites-console.md)，旨在包含登入功能和使用者設定檔、訊息、搜尋、稽核和翻譯。
+Adobe Experience Manager (AEM) Communities功能要求網站訪客成為成員並登入[社群網站](overview.md#communitiessites)，才能發佈內容。 因此，[社群網站範本](sites.md) （其中社群網站是[建立的](sites-console.md)）的設計包含登入功能和使用者設定檔、傳訊、搜尋、稽核及翻譯。
 
-社群網站支援成員在下列情況下建立社群群組： [社群群組功能](functions.md#groups-function) 包含在選取的社群網站範本中。
+當[社群群組功能](functions.md#groups-function)包含在選取的社群網站範本中時，社群網站可支援成員建立社群群組。
 
 下列是Communities元件、功能和功能之基本資訊的連結。
 
@@ -47,7 +47,7 @@ Adobe Experience Manager (AEM) Communities功能需要網站訪客成為成員�
 * [群組](essentials-groups.md)
 * [創意力](ideation.md)
 * [排行榜](leaderboard.md)
-* [問題與解答](qna-essentials.md) `(QnA)`
+* [問題與答案](qna-essentials.md) `(QnA)`
 
 ## 功能 {#features}
 
@@ -66,10 +66,10 @@ Adobe Experience Manager (AEM) Communities功能需要網站訪客成為成員�
 
 ## Javadocs {#javadocs}
 
-此 [線上javadocs](../../help/sites-developing/reference-materials.md) 反映AEM 6.3版本中可用的API。
-社群API位於 `com.adobe.cq.social.*` 封裝。
+[線上Javadocs](../../help/sites-developing/reference-materials.md)反映了AEM 6.3版本中可用的API。
+社群API位於`com.adobe.cq.social.*`套件中。
 
-針對每個 [功能套件](deploy-communities.md#latestfeaturepack)，即可使用javadoc jar。 如需詳細資訊，請造訪 [使用適用於社群的Maven](maven.md#javadocs).
+每個[功能套件](deploy-communities.md#latestfeaturepack)都提供javadoc jar。 如需詳細資訊，請造訪[使用Maven for Communities](maven.md#javadocs)。
 
 ## 其他資訊 {#additional-information}
 

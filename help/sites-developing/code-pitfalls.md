@@ -20,11 +20,11 @@ ht-degree: 0%
 
 ## 避免Java程式碼中的Sling繫結 {#avoid-sling-bindings-in-java-code}
 
-在90%的情況下，使用Sling繫結是不合適存取服務的方式。 您應該改用 *@Reference* 或 *@Inject* 註解。
+在90%的情況下，使用Sling繫結是不合適存取服務的方式。 您應該改用&#x200B;*@Reference*&#x200B;或&#x200B;*@Inject*&#x200B;註解。
 
 ## 避免Java程式碼中的Thread.interrupt {#avoid-thread-interrupt-in-java-code}
 
-*Thread.interrupt* 很危險，因為如果在錯誤的時間呼叫它，它可能會關閉檔案，包括Lucene檔案和持續快取檔案。
+*Thread.interrupt*&#x200B;很危險，因為它可以在錯誤時間呼叫時關閉檔案，包括Lucene檔案和持續快取檔案。
 
 ## 避免將Java同步與ReadWriteLocks混合 {#avoid-mixing-java-synchronization-with-readwritelocks}
 

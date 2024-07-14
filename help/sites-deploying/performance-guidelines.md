@@ -96,7 +96,7 @@ ht-degree: 5%
    <td><p>MongoDB</p> </td>
    <td><p> </p> </td>
    <td><p> </p> </td>
-   <td><p>鉻黃</p> </td>
+   <td><p>Chrome</p> </td>
    <td><p>Social</p> </td>
   </tr>
   <tr>
@@ -264,10 +264,10 @@ ht-degree: 5%
 
 請在下列情況下使用效能准則：
 
-* **首次部署**：在計畫首次部署AEM Sites或Assets時，請務必瞭解可用的選項。 尤其是在設定Micro Kernel、Node Store和Data Store時（與預設設定相比）。 例如，將TarMK的「資料存放區」預設設定變更為「檔案資料存放區」。
-* **升級至新版本**：升級至新版本時，請務必瞭解相較於執行中環境的效能差異。 例如，從AEM 6.1升級至6.2，或從AEM 6.0 CRX2升級至6.2 OAK。
-* **回應時間緩慢**：當選取的節點存放區架構不符合您的需求時，請務必瞭解與其他拓撲選項相比的效能差異。 例如，部署TarMK而非MongoMK，或使用檔案資料存放區而非Amazon S3或Microsoft® Azure資料存放區。
-* **新增更多作者**：當建議的TarMK拓撲不符合效能需求，且放大製作節點的大小已達到可用的最大容量時，請瞭解效能差異。 請和使用MongoMK搭配三個或更多作者節點比較。 例如，部署MongoMK而非TarMK。
+* **首次部署**：規劃為首次部署AEM Sites或Assets時，請務必瞭解可用的選項。 尤其是在設定Micro Kernel、Node Store和Data Store時（與預設設定相比）。 例如，將TarMK的「資料存放區」預設設定變更為「檔案資料存放區」。
+* **升級至新版本**：升級至新版本時，請務必瞭解與執行中環境相比的效能差異。 例如，從AEM 6.1升級至6.2，或從AEM 6.0 CRX2升級至6.2 OAK。
+* **回應時間緩慢**：當選取的Nodestore架構不符合您的需求時，請務必瞭解與其他拓撲選項相比的效能差異。 例如，部署TarMK而非MongoMK，或使用檔案資料存放區而非Amazon S3或Microsoft® Azure資料存放區。
+* **新增更多作者**：當建議的TarMK拓撲不符合效能需求，且將作者節點放大已達到可用的最大容量時，請瞭解效能差異。 請和使用MongoMK搭配三個或更多作者節點比較。 例如，部署MongoMK而非TarMK。
 * **新增更多內容**：當建議的資料存放區架構不符合您的需求時，請務必瞭解與其他資料存放區選項相比的效能差異。 範例：使用Amazon S3或Microsoft® Azure資料存放區，而非檔案資料存放區。
 
 ## 簡介 {#introduction}
@@ -280,31 +280,31 @@ AEM平台包含下列元件：
 
 ![chlimage_1](assets/chlimage_1a.png)
 
-如需AEM平台的詳細資訊，請參閱 [什麼是AEM](/help/sites-deploying/deploy.md#what-is-aem).
+如需AEM平台的詳細資訊，請參閱[什麼是AEM](/help/sites-deploying/deploy.md#what-is-aem)。
 
 ### AEM架構 {#the-aem-architecture}
 
-AEM部署有三個重要的建置組塊。 此 **作者例項** 內容作者、編輯者和核准者用來建立和檢閱內容。 內容獲得核准後，會發佈至名為的第二個例項型別。 **發佈執行個體** 一般使用者從何處存取它。 第三個建置區塊是 **Dispatcher** 此模組會處理快取和URL篩選，並安裝在網頁伺服器上。 如需AEM架構的其他資訊，請參閱 [典型部署案例](/help/sites-deploying/deploy.md#typical-deployment-scenarios).
+AEM部署有三個重要的建置組塊。 內容作者、編輯者和核准者用來建立和檢閱內容的&#x200B;**作者執行個體**。 內容獲得核准後，會發佈至名為&#x200B;**Publish執行個體**&#x200B;的第二個執行個體型別，以供一般使用者存取。 第三個建置區塊是&#x200B;**Dispatcher**，它是處理快取和URL篩選的模組，並安裝在網頁伺服器上。 如需AEM架構的其他資訊，請參閱[一般部署案例](/help/sites-deploying/deploy.md#typical-deployment-scenarios)。
 
 ![chlimage_1-1](assets/chlimage_1-1a.png)
 
 ### 微核心 {#micro-kernels}
 
-微核心在AEM中作為持續性管理員。 AEM使用的微核心有三種型別：TarMK、MongoDB和關聯式資料庫（受限制支援）。 選擇適合您需求的部署型別，取決於執行個體的用途以及您考慮的部署型別。 如需關於微核心的其他資訊，請參閱 [建議的部署](/help/sites-deploying/recommended-deploys.md) 頁面。
+微核心在AEM中作為持續性管理員。 AEM使用的微核心有三種型別：TarMK、MongoDB和關聯式資料庫（受限制支援）。 選擇適合您需求的部署型別，取決於執行個體的用途以及您考慮的部署型別。 如需微核心的其他資訊，請參閱[建議的部署](/help/sites-deploying/recommended-deploys.md)頁面。
 
 ![chlimage_1-2](assets/chlimage_1-2a.png)
 
 ### 節點存放區 {#nodestore}
 
-在AEM中，二進位資料可與內容節點分開儲存。 儲存二進位資料的位置稱為 **資料存放區**，而內容節點和屬性的位置稱為 **節點存放區**.
+在AEM中，二進位資料可與內容節點分開儲存。 儲存二進位資料的位置稱為&#x200B;**資料存放區**，而內容節點和屬性的位置稱為&#x200B;**節點存放區**。
 
 >[!NOTE]
 >
->Adobe建議TarMK是客戶用於AEM作者和發佈執行個體的預設持續性技術。
+>Adobe建議TarMK是客戶用於AEM作者和Publish執行個體的預設持續性技術。
 
 >[!CAUTION]
 >
->關聯式資料庫微核心受到限制支援。 連絡人 [Adobe客戶服務](https://experienceleague.adobe.com/?support-solution=General&amp;support-tab=home#support) 使用這種型別的微核心之前。
+>關聯式資料庫微核心受到限制支援。 使用此型別的微核心之前，請連絡[Adobe客戶服務](https://experienceleague.adobe.com/?support-solution=General&amp;support-tab=home#support)。
 
 ![chlimage_1-3](assets/chlimage_1-3a.png)
 
@@ -312,19 +312,19 @@ AEM部署有三個重要的建置組塊。 此 **作者例項** 內容作者、�
 
 在處理大量二進位檔時，建議您使用外部資料存放區，而非預設節點存放區，以發揮最大效能。 例如，如果您的專案需要許多媒體資產，將它們儲存在File或Azure/S3 Data Store底下，可讓您以比直接儲存在MongoDB中更快的速度存取它們。
 
-如需有關可用組態選項的詳細資訊，請參閱 [設定節點和資料存放區](/help/sites-deploying/data-store-config.md).
+如需有關可用組態選項的詳細資訊，請參閱[設定節點與資料存放區](/help/sites-deploying/data-store-config.md)。
 
 >[!NOTE]
 >
->Adobe建議您選擇使用AdobeManaged Services在Azure或Amazon Web Services (AWS)上部署AEM的選項。 客戶受益於擁有在這些雲端運算環境中部署和操作AEM的經驗和技能的團隊。 另請參閱 [有關AdobeManaged Services的其他檔案](https://business.adobe.com/products/experience-manager/managed-services.html?aemClk=t).
+>Adobe建議您選擇使用AdobeManaged Services在Azure或Amazon Web Services (AWS)上部署AEM的選項。 客戶受益於擁有在這些雲端運算環境中部署和操作AEM的經驗和技能的團隊。 請參閱有關AdobeManaged Services](https://business.adobe.com/products/experience-manager/managed-services.html?aemClk=t)的[其他檔案。
 >
 >如需如何在AdobeManaged Services以外的Azure或AWS上部署AEM的建議，Adobe建議直接與雲端提供者合作。 或者，您也可以與支援在您所選雲端環境中部署AEM的Adobe合作夥伴合作。 選取的雲端服務供應商或合作夥伴負責其支援的架構調整規格、設計和實作，以符合您的特定效能、負載、擴充性和安全性需求。
 >
->>另請參閱 [技術需求](/help/sites-deploying/technical-requirements.md#supported-platforms) 頁面。
+>>另請參閱[技術需求](/help/sites-deploying/technical-requirements.md#supported-platforms)頁面。
 
 ### 搜尋 {#search-features}
 
-本節所列為搭配AEM使用的自訂索引提供者。 若要進一步瞭解索引，請參閱 [Oak查詢和索引](/help/sites-deploying/queries-and-indexing.md).
+本節所列為搭配AEM使用的自訂索引提供者。 若要進一步瞭解建立索引，請參閱[Oak查詢與索引](/help/sites-deploying/queries-and-indexing.md)。
 
 >[!NOTE]
 >
@@ -334,7 +334,7 @@ AEM部署有三個重要的建置組塊。 此 **作者例項** 內容作者、�
 
 ### 開發指導方針 {#development-guidelines}
 
-針對AEM目標開發 **效能與擴充性**. 以下是您可以遵循的最佳實務：
+針對AEM開發，以尋求&#x200B;**效能與擴充性**。 以下是您可以遵循的最佳實務：
 
 **DO**
 
@@ -347,7 +347,7 @@ AEM部署有三個重要的建置組塊。 此 **作者例項** 內容作者、�
 * 限制JCR觀察的範圍
 * 留意非同步執行緒
 
-**不要**
+**DO NOT**
 
 * 如果可以，請勿直接使用JCR API
 * 請勿變更/libs，而是使用覆蓋
@@ -361,7 +361,7 @@ AEM部署有三個重要的建置組塊。 此 **作者例項** 內容作者、�
    * ServiceTracker
    * 直接存取OSGi服務登入
 
-如需有關在AEM上開發的詳細資訊，請閱讀 [開發 — 基本知識](/help/sites-developing/the-basics.md). 如需其他最佳實務，請參閱 [開發最佳實務](/help/sites-developing/best-practices.md).
+如需有關在AEM上開發的詳細資訊，請閱讀[開發 — 基本知識](/help/sites-developing/the-basics.md)。 如需其他最佳做法，請參閱[開發最佳做法](/help/sites-developing/best-practices.md)。
 
 ### 基準案例 {#benchmark-scenarios}
 
@@ -369,21 +369,21 @@ AEM部署有三個重要的建置組塊。 此 **作者例項** 內容作者、�
 >
 >此頁面上顯示的所有基準測試已在實驗室設定中執行。
 
-以下詳述的測試場景用於TarMK、MongoMk和TarMK與MongoMk章節的基準區段。 若要檢視特定基準測試使用了哪個案例，請從以下位置閱讀案例欄位： [技術規格](/help/sites-deploying/performance-guidelines.md#tarmk-performance-benchmark) 表格。
+以下詳述的測試場景用於TarMK、MongoMk和TarMK與MongoMk章節的基準區段。 若要檢視哪一個案例用於特定基準測試，請從[技術規格](/help/sites-deploying/performance-guidelines.md#tarmk-performance-benchmark)表格中讀取[案例]欄位。
 
-**單一產品情境**
+**單一產品案例**
 
 AEM Assets：
 
-* 使用者互動：瀏覽資產/搜尋資產/下載資產/讀取資產中繼資料/更新資產中繼資料/上傳資產/執行上傳資產工作流程
+* 使用者互動：瀏覽Assets /搜尋Assets /下載資產/讀取資產中繼資料/更新資產中繼資料/上傳資產/執行上傳資產工作流程
 * 執行模式：同時存在的使用者，每個使用者的單一互動
 
 **混合產品案例**
 
-AEM Sites +資產：
+AEM Sites + Assets：
 
 * 網站使用者互動：讀取文章頁面/讀取頁面/建立段落/編輯段落/建立內容頁面/啟動內容頁面/作者搜尋
-* 資產使用者互動：瀏覽資產/搜尋資產/下載資產/讀取資產中繼資料/更新資產中繼資料/上傳資產/執行上傳資產工作流程
+* Assets使用者互動：瀏覽Assets /搜尋Assets /下載資產/讀取資產中繼資料/更新資產中繼資料/上傳資產/執行上傳資產工作流程
 * 執行模式：並行使用者，每個使用者的混合互動
 
 **垂直使用案例情境**
@@ -397,27 +397,27 @@ AEM Sites +資產：
 
 本章提供TarMK的一般效能准則，指定最低架構需求和設定組態。 此外，也提供基準測試，以進一步釐清事實。
 
-Adobe建議將TarMK設為客戶在所有部署案例中使用的預設持續性技術，適用於AEM製作和發佈執行個體。
+Adobe建議將TarMK設為客戶在所有部署案例中使用的預設持續性技術，適用於AEM作者和Publish執行個體。
 
-如需TarMK的詳細資訊，請參閱 [部署案例](/help/sites-deploying/recommended-deploys.md#deployment-scenarios) 和 [Tar儲存](/help/sites-deploying/storage-elements-in-aem-6.md#tar-storage).
+如需TarMK的詳細資訊，請參閱[部署案例](/help/sites-deploying/recommended-deploys.md#deployment-scenarios)和[Tar儲存空間](/help/sites-deploying/storage-elements-in-aem-6.md#tar-storage)。
 
 ### TarMK最低架構指導方針 {#tarmk-minimum-architecture-guidelines}
 
 >[!NOTE]
 >
->以下是最低架構指引，適用於生產環境和高流量網站。 這些准則為 **非** 此 [最低規格](/help/sites-deploying/technical-requirements.md#prerequisites) 以執行AEM。
+>以下是最低架構指引，適用於生產環境和高流量網站。 這些准則是&#x200B;**不是**&#x200B;執行AEM的[最低規格](/help/sites-deploying/technical-requirements.md#prerequisites)。
 
 若要在使用TarMK時建立良好的效能，您應該從下列架構開始：
 
 * 一個作者執行個體
-* 兩個發佈執行個體
+* 兩個Publish執行個體
 * 兩個Dispatcher
 
 以下說明AEM sites和AEM Assets的架構指導方針。
 
 >[!NOTE]
 >
->應該開啟無二進位檔的復寫 **開啟** 如果檔案資料存放區已共用。
+>如果檔案資料存放區已共用，無二進位檔復寫應該開啟&#x200B;**ON**。
 
 **AEM Sites的Tar架構指導方針**
 
@@ -429,7 +429,7 @@ Adobe建議將TarMK設為客戶在所有部署案例中使用的預設持續性�
 
 ### TarMK設定指引 {#tarmk-settings-guideline}
 
-為了獲得良好的效能，您應該遵循以下提供的設定准則。 如需如何變更設定的說明， [請參閱此頁面](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html).
+為了獲得良好的效能，您應該遵循以下提供的設定准則。 如需如何變更設定的說明，[請參閱此頁面](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html)。
 
 <table>
  <tbody>
@@ -461,13 +461,13 @@ Adobe建議將TarMK設為客戶在所有部署案例中使用的預設持續性�
    <td>Lucene索引設定</td>
    <td><p><code>CopyOnRead</code></p> <p><code>CopyOnWrite</code></p> <p><code>Prefetch Index Files</code></p> </td>
    <td><p>已啟用</p> <p>已啟用</p> <p>已啟用</p> </td>
-   <td>如需可用引數的詳細資訊，請參閱 <a href="https://jackrabbit.apache.org/oak/docs/query/lucene.html">此頁面</a>.</td>
+   <td>如需可用引數的詳細資訊，請參閱<a href="https://jackrabbit.apache.org/oak/docs/query/lucene.html">此頁面</a>。</td>
   </tr>
   <tr>
    <td>資料存放區= S3資料存放區</td>
    <td><p><code>maxCachedBinarySize</code></p> <p><code>cacheSizeInMB</code></p> </td>
    <td><p>1048576 (1 MB)或以下</p> <p>最大棧積大小的2-10%</p> </td>
-   <td>另請參閱 <a href="/help/sites-deploying/data-store-config.md#data-store-configurations">資料存放區設定</a>.</td>
+   <td>另請參閱<a href="/help/sites-deploying/data-store-config.md#data-store-configurations">資料存放區組態</a>。</td>
   </tr>
   <tr>
    <td>DAM更新資產工作流程</td>
@@ -502,7 +502,7 @@ Adobe建議將TarMK設為客戶在所有部署案例中使用的預設持續性�
 | 產品 | AEM 6.2 |
 | 節點存放區 | tarmk |
 | 資料存放區 | 檔案DS |
-| 情境 | 單一產品：資產/ 30個同時執行緒 |
+| 情境 | 單一產品：Assets / 30個同時執行緒 |
 
 #### 效能標竿結果 {#performance-benchmark-results}
 
@@ -516,14 +516,14 @@ Adobe建議將TarMK設為客戶在所有部署案例中使用的預設持續性�
 
 選擇MongoMK持續性後端而非TarMK的主要原因是要水平縮放執行個體。 這項能力表示擁有兩個或多個始終執行中的作用中製作執行個體，並使用MongoDB做為持續性儲存系統。 通常需要執行多個製作執行個體，是因為單一伺服器的CPU和記憶體容量（支援所有並行製作活動）已無法持續。
 
-如需TarMK的詳細資訊，請參閱 [部署案例](/help/sites-deploying/recommended-deploys.md#deployment-scenarios) 和 [Mongo儲存](/help/sites-deploying/storage-elements-in-aem-6.md#mongo-storage).
+如需TarMK的詳細資訊，請參閱[部署案例](/help/sites-deploying/recommended-deploys.md#deployment-scenarios)和[Mongo儲存空間](/help/sites-deploying/storage-elements-in-aem-6.md#mongo-storage)。
 
 ### MongoMK最低架構指導方針 {#mongomk-minimum-architecture-guidelines}
 
 若要在使用MongoMK時建立良好的效能，您應該從下列架構開始：
 
 * 三個作者執行個體
-* 兩個發佈執行個體
+* 兩個Publish執行個體
 * 三個MongoDB執行個體
 * 兩個Dispatcher
 
@@ -533,13 +533,13 @@ Adobe建議將TarMK設為客戶在所有部署案例中使用的預設持續性�
 
 >[!NOTE]
 >
->應該開啟無二進位檔的復寫 **開啟** 如果檔案資料存放區已共用。
+>如果檔案資料存放區已共用，無二進位檔復寫應該開啟&#x200B;**ON**。
 
 ![chlimage_1-9](assets/chlimage_1-9a.png)
 
 ### MongoMK設定指南 {#mongomk-settings-guidelines}
 
-為了獲得良好的效能，您應該遵循以下提供的設定准則。 如需如何變更設定的說明， [請參閱此頁面](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html).
+為了獲得良好的效能，您應該遵循以下提供的設定准則。 如需如何變更設定的說明，[請參閱此頁面](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html)。
 
 <table>
  <tbody>
@@ -571,13 +571,13 @@ Adobe建議將TarMK設為客戶在所有部署案例中使用的預設持續性�
    <td>Lucene索引設定</td>
    <td><p><code>CopyOnRead</code></p> <p><code>CopyOnWrite</code></p> <p><code>Prefetch Index Files</code></p> </td>
    <td><p>已啟用</p> <p>已啟用</p> <p>已啟用</p> </td>
-   <td>如需可用引數的詳細資訊，請參閱 <a href="https://jackrabbit.apache.org/oak/docs/query/lucene.html">此頁面</a>.</td>
+   <td>如需可用引數的詳細資訊，請參閱<a href="https://jackrabbit.apache.org/oak/docs/query/lucene.html">此頁面</a>。</td>
   </tr>
   <tr>
    <td>資料存放區= S3資料存放區</td>
    <td><p><code>maxCachedBinarySize</code></p> <p><code>cacheSizeInMB</code></p> </td>
    <td><p>1048576 (1 MB)或以下</p> <p>最大棧積大小的2-10%</p> </td>
-   <td>另請參閱 <a href="/help/sites-deploying/data-store-config.md#data-store-configurations">資料存放區設定</a>.</td>
+   <td>另請參閱<a href="/help/sites-deploying/data-store-config.md#data-store-configurations">資料存放區組態</a>。</td>
   </tr>
   <tr>
    <td>DocumentNodeStoreService</td>
@@ -612,7 +612,7 @@ Adobe建議將TarMK設為客戶在所有部署案例中使用的預設持續性�
 | 產品 | AEM 6.2 | MongoDB 3.2 WiredTiger |
 | 節點存放區 | MongoMk | 不適用 |
 | 資料存放區 | 檔案DS | 不適用 |
-| 情境 | 單一產品：資產/ 30個同時執行緒 | 單一產品：資產/ 30個同時執行緒 |
+| 情境 | 單一產品：Assets / 30個同時執行緒 | 單一產品：Assets / 30個同時執行緒 |
 
 ### 效能標竿結果 {#performance-benchmark-results-1}
 
@@ -624,11 +624,11 @@ Adobe建議將TarMK設為客戶在所有部署案例中使用的預設持續性�
 
 ## TarMK與MongoMK {#tarmk-vs-mongomk}
 
-在兩者之間進行選擇時，要考慮的基本規則是，TarMK是針對效能而設計，而MongoMK則是用於擴充性。 Adobe建議將TarMK設為客戶在所有部署案例中使用的預設持續性技術，適用於AEM製作和發佈執行個體。
+在兩者之間進行選擇時，要考慮的基本規則是，TarMK是針對效能而設計，而MongoMK則是用於擴充性。 Adobe建議將TarMK設為客戶在所有部署案例中使用的預設持續性技術，適用於AEM作者和Publish執行個體。
 
 選擇MongoMK持續性後端而非TarMK的主要原因是要水平縮放執行個體。 此功能表示需永遠執行兩個或多個作用中的製作執行個體，並使用MongoDB做為持續性儲存系統。 通常需要執行多個製作執行個體，是因為單一伺服器的CPU和記憶體容量（支援所有並行製作活動）已無法持續。
 
-如需TarMK與MongoMK的詳細資訊，請參閱 [建議的部署](/help/sites-deploying/recommended-deploys.md#microkernels-which-one-to-use).
+如需TarMK與MongoMK的詳細資訊，請參閱[建議的部署](/help/sites-deploying/recommended-deploys.md#microkernels-which-one-to-use)。
 
 ### TarMK與MongoMk指南 {#tarmk-vs-mongomk-guidelines}
 
@@ -636,7 +636,7 @@ Adobe建議將TarMK設為客戶在所有部署案例中使用的預設持續性�
 
 * 專門為內容管理應用程式建置
 * 檔案始終保持一致，可以使用任何檔案式備份工具進行備份
-* 提供容錯移轉機制 — 請參閱 [冷待命](/help/sites-deploying/tarmk-cold-standby.md) 以取得更多詳細資料
+* 提供容錯移轉機制 — 如需詳細資訊，請參閱[冷待命](/help/sites-deploying/tarmk-cold-standby.md)
 * 以最低的營運開銷提供高效能和可靠的資料儲存
 * 降低總體擁有成本（總體擁有成本）
 
@@ -660,7 +660,7 @@ Adobe建議將TarMK設為客戶在所有部署案例中使用的預設持續性�
  <tbody>
   <tr>
    <td><strong> </strong></td>
-   <td><strong>作者OAK節點</strong></td>
+   <td><strong>編寫OAK節點</strong></td>
    <td><strong>MongoDB節點</strong></td>
    <td> </td>
   </tr>
@@ -726,7 +726,7 @@ Adobe建議將TarMK設為客戶在所有部署案例中使用的預設持續性�
   </tr>
   <tr>
    <td>情境</td>
-   <td><p><br /> 單一產品：資產/每次執行30個並行執行緒</p> </td>
+   <td><p><br /> 單一產品：Assets /每次執行30個並行執行緒</p> </td>
    <td> </td>
    <td> </td>
   </tr>
@@ -824,7 +824,7 @@ Adobe建議將TarMK設為客戶在所有部署案例中使用的預設持續性�
 
 ![chlimage_1-13](assets/chlimage_1-13a.png)
 
-### AEM Sites和資產的架構擴充性方針 {#architecture-scalability-guidelines-for-aem-sites-and-assets}
+### AEM Sites和Assets的架構擴充性方針 {#architecture-scalability-guidelines-for-aem-sites-and-assets}
 
 ![chlimage_1-14](assets/chlimage_1-14a.png)
 
@@ -832,27 +832,27 @@ Adobe建議將TarMK設為客戶在所有部署案例中使用的預設持續性�
 
 此頁面上呈現的准則可歸納如下：
 
-* **含有檔案資料存放區的TarMK**  — 建議大部分客戶使用的架構：
+* **TarMK與File Datastore** — 建議大部分客戶的架構：
 
-   * 最小拓撲：一個製作執行個體、兩個發佈執行個體、兩個Dispatcher
+   * 最小拓撲：一個作者例項、兩個Publish例項、兩個Dispatcher
    * 如果檔案資料存放區已共用，會開啟無二進位檔復寫
 
-* **具有檔案資料存放區的MongoMK**  — 建議用於製作層級水準擴充性的架構：
+* **具有檔案資料存放區的MongoMK** — 建議的Author層級水準擴充性架構：
 
-   * 最小拓撲：三個作者執行個體、三個MongoDB執行個體、兩個發佈執行個體、兩個Dispatcher
+   * 最小拓撲：三個作者執行個體、三個MongoDB執行個體、兩個Publish執行個體、兩個Dispatcher
    * 如果檔案資料存放區已共用，會開啟無二進位檔復寫
 
-* **節點存放區**  — 儲存在本機磁碟上，而非網路附加儲存裝置(NAS)
-* 使用時 **Amazon S3**：
+* **Nodestore** — 儲存在本機磁碟上，而非網路附加儲存裝置(NAS)
+* 使用&#x200B;**Amazon S3**&#x200B;時：
 
-   * Amazon S3資料存放區會在製作和發佈層級之間共用
+   * Amazon S3資料存放區會在作者與Publish層級之間共用
    * 必須開啟無二進位檔復寫
    * 資料存放區記憶體回收需要先在所有Author和Publish節點上執行，然後在作者上執行第二次
 
-* **除了現成可用的索引之外，也應建立自訂索引**  — 根據最常見的搜尋
+* **除了現成可用的索引之外，應該建立自訂索引** — 根據最常見的搜尋
 
    * Lucene索引應用於自訂索引
 
-* **自訂工作流程可大幅改善效能**  — 移除「更新資產」工作流程中的視訊步驟、停用未使用的接聽程式等。
+* **自訂工作流程可大幅改善效能** — 移除「更新資產」工作流程中的視訊步驟、停用未使用的接聽程式等。
 
-如需詳細資訊，請閱讀 [建議的部署](/help/sites-deploying/recommended-deploys.md) 頁面。
+如需詳細資訊，請閱讀[建議的部署](/help/sites-deploying/recommended-deploys.md)頁面。

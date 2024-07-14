@@ -28,15 +28,15 @@ ht-degree: 1%
 
 想一想線上雜誌，主要內容包括文章、廣告和封面。 在AEM中可以建立三種主要型別的Mobile On-Demand內容：
 
-* **文章**：以文字為基礎並搭配藝術以傳達資訊
-* **橫幅：** 通常為圖形促銷連結
-* **集合：** 代表已明確定義 *貯體* 填入適合封面主題的文章或橫幅等內容
+* **文章**：文字與藝術一起傳遞資訊
+* **橫幅：**&#x200B;通常是圖形促銷連結
+* **集合：**&#x200B;代表已定義好的&#x200B;*貯體*，其中已填入適合封面主題的文章或橫幅等內容
 
-* **共用資源：** 允許跨文章重複使用或共用共用共用片段
+* **共用資源：**&#x200B;可重複使用或共用文章中的共用片段
 
 >[!NOTE]
 >
->若要深入瞭解AEM Mobile應用程式的設計考量事項，請參閱 [AEM Mobile應用程式的設計考量事項](https://helpx.adobe.com/digital-publishing-solution/help/design-app.html) 線上上說明中。
+>若要深入瞭解AEM Mobile應用程式的設計考量事項，請參閱線上說明中的[AEM Mobile應用程式的設計考量事項](https://helpx.adobe.com/digital-publishing-solution/help/design-app.html)。
 
 ## 建立和管理內容 {#creating-and-managing-content}
 
@@ -46,11 +46,11 @@ ht-degree: 1%
 * [管理橫幅](/help/mobile/mobile-on-demand-managing-banners.md)
 * [管理集合](/help/mobile/mobile-on-demand-managing-collections.md)
 * [上傳共用資源](/help/mobile/mobile-on-demand-shared-resources.md)
-* [發佈取消發佈內容](/help/mobile/mobile-on-demand-publishing-unpublishing.md)
+* [Publish取消發佈內容](/help/mobile/mobile-on-demand-publishing-unpublishing.md)
 
 >[!NOTE]
 >
->一般而言，發佈內容前應先進行預檢。 另請參閱 [使用預檢預覽](/help/mobile/aem-mobile-manage-ondemand-services.md) 以取得更多詳細資料。
+>一般而言，發佈內容前應先進行預檢。 如需詳細資訊，請參閱[使用預檢](/help/mobile/aem-mobile-manage-ondemand-services.md)預覽。
 
 ### 其他資源 {#additional-resources}
 

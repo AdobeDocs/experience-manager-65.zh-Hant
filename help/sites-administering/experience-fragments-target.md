@@ -19,7 +19,7 @@ ht-degree: 1%
 
 # 將體驗片段匯出到 Adobe Target{#exporting-experience-fragments-to-adobe-target}
 
-您可以匯出 [體驗片段](/help/sites-authoring/experience-fragments.md)，在Adobe Experience Manager (AEM)中建立並移至Adobe Target (Target)。 接著，可將這些選件做為Target活動中的選件，以大規模測試並個人化體驗。
+您可以將在Adobe Experience Manager (AEM)中建立的[體驗片段](/help/sites-authoring/experience-fragments.md)匯出至Adobe Target (Target)。 接著，可將這些選件做為Target活動中的選件，以大規模測試並個人化體驗。
 
 有三個格式選項可用於將體驗片段匯出至Adobe Target：
 
@@ -27,13 +27,13 @@ ht-degree: 1%
 * JSON：支援Headless內容傳送
 * HTML 和 JSON
 
-AEM體驗片段可以匯出至Adobe Target中的預設工作區，或匯出至Adobe Target的使用者定義工作區。 這是使用Adobe Developer Console完成的，而AEM必須 [使用IMS與Adobe Target整合](/help/sites-administering/setting-up-ims-integrations-for-aem.md).
+AEM體驗片段可以匯出至Adobe Target中的預設工作區，或匯出至Adobe Target的使用者定義工作區。 這是使用Adobe Developer Console完成的，對此，AEM必須使用IMS](/help/sites-administering/setting-up-ims-integrations-for-aem.md)與Adobe Target [整合。
 
 >[!NOTE]
 >
->[IMS整合現在已透過S2S OAuth完成設定](/help/sites-administering/setting-up-ims-integrations-for-aem.md).
+>[IMS整合現在已設定為S2S OAuth](/help/sites-administering/setting-up-ims-integrations-for-aem.md)。
 >
->先前的設定是使用 [Adobe Developer Console中現在會淘汰的JWT憑證](/help/sites-administering/jwt-credentials-deprecation-in-adobe-developer-console.md).
+>先前是使用[JWT認證進行設定，而現在Adobe Developer Console](/help/sites-administering/jwt-credentials-deprecation-in-adobe-developer-console.md)已棄用。
 
 >[!NOTE]
 >
@@ -55,33 +55,33 @@ AEM體驗片段可以匯出至Adobe Target中的預設工作區，或匯出至Ad
 
 需要執行各種動作：
 
-1. 您必須 [使用IMS整合AEM與Adobe Target](/help/sites-administering/setting-up-ims-integrations-for-aem.md).
+1. 您必須使用IMS](/help/sites-administering/setting-up-ims-integrations-for-aem.md) [整合AEM與Adobe Target。
 
    >[!NOTE]
    >
-   >[IMS整合現在已使用S2S OAut設定](/help/sites-administering/setting-up-ims-integrations-for-aem.md).
+   >[IMS整合現在已設定為S2S OAut](/help/sites-administering/setting-up-ims-integrations-for-aem.md)。
    >
-   >先前的設定是使用 [Adobe Developer Console中現在會淘汰的JWT憑證](/help/sites-administering/jwt-credentials-deprecation-in-adobe-developer-console.md).
+   >先前是使用[JWT認證進行設定，而現在Adobe Developer Console](/help/sites-administering/jwt-credentials-deprecation-in-adobe-developer-console.md)已棄用。
 
-1. 體驗片段會從AEM編寫執行個體匯出，因此您必須 [設定AEM連結外部器](/help/sites-administering/target-requirements.md#configuring-the-aem-link-externalizer) 在作者執行個體上，以確保體驗片段中的任何參考資料都會外部化，以利網頁傳送。
+1. 體驗片段會從AEM編寫執行個體匯出，因此您必須在編寫執行個體上[設定AEM連結外部化程式](/help/sites-administering/target-requirements.md#configuring-the-aem-link-externalizer)，以確保體驗片段中的任何參考都會外部化以供Web傳遞。
 
    >[!NOTE]
    >
-   >對於預設未涵蓋的連結重寫， [體驗片段連結重寫器提供者](/help/sites-developing/experience-fragments.md#the-experience-fragment-link-rewriter-provider-html) 可用。 如此一來，您就可以針對執行個體開發自訂規則。
+   >對於預設未涵蓋的連結重寫，[體驗片段連結重寫器提供者](/help/sites-developing/experience-fragments.md#the-experience-fragment-link-rewriter-provider-html)可供使用。 如此一來，您就可以針對執行個體開發自訂規則。
 
 ## 新增雲端設定 {#add-the-cloud-configuration}
 
-在匯出片段之前，您必須新增 **雲端設定** 的 **Adobe Target** 至片段或資料夾。 這也可讓您：
+在匯出片段之前，您必須將&#x200B;**Adobe Target**&#x200B;的&#x200B;**雲端設定**&#x200B;新增到片段或資料夾。 這也可讓您：
 
 * 指定要用於匯出的格式選項
 * 選取Target工作區作為目的地
 * 選取外部化器網域，以重寫體驗片段中的參照（選用）
 
-您可在以下位置選取所需選項： **頁面屬性** 所需的資料夾和/或片段的URL；必要時，會繼承規格。
+可以在必要資料夾和/或片段的&#x200B;**頁面屬性**&#x200B;中選取必要選項；必要時將繼承規格。
 
-1. 導覽至 **體驗片段** 主控台。
+1. 導覽至&#x200B;**體驗片段**&#x200B;主控台。
 
-1. 開啟 **頁面屬性** 用於適當的資料夾或片段。
+1. 開啟適當資料夾或片段的&#x200B;**頁面屬性**。
 
    >[!NOTE]
    >
@@ -92,7 +92,7 @@ AEM體驗片段可以匯出至Adobe Target中的預設工作區，或匯出至Ad
 
 1. 選取「**雲端服務**」標籤。
 
-1. 在 **Cloud Service設定**，選取 **Adobe Target** 下拉式清單中的。
+1. 在&#x200B;**Cloud Service設定**&#x200B;下，從下拉式清單中選取&#x200B;**Adobe Target**。
 
    >[!NOTE]
    >
@@ -102,7 +102,7 @@ AEM體驗片段可以匯出至Adobe Target中的預設工作區，或匯出至Ad
    >
    >[核心元件 — 體驗片段](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/experience-fragment.html)
 
-   在 **Adobe Target** 選取：
+   在&#x200B;**Adobe Target**&#x200B;下選取：
 
    * 適當的設定
    * 所需的格式選項
@@ -113,7 +113,7 @@ AEM體驗片段可以匯出至Adobe Target中的預設工作區，或匯出至Ad
    >
    >Externalizer網域是選用的。
    >
-   >當您想要匯出的內容指向特定時，AEM外部化程式便會進行設定 *發佈* 網域。 如需詳細資訊，請參閱 [設定AEM連結外部器](/help/sites-administering/target-requirements.md#configuring-the-aem-link-externalizer).
+   >當您想要匯出的內容指向特定的&#x200B;*發佈*&#x200B;網域時，會設定AEM Externalizer。 如需詳細資訊，請參閱[設定AEM連結外部器](/help/sites-administering/target-requirements.md#configuring-the-aem-link-externalizer)。
    >
    >另請注意，外部化器網域僅與傳送至Target的體驗片段內容相關，與檢視選件內容之類的中繼資料無關。
 
@@ -121,7 +121,7 @@ AEM體驗片段可以匯出至Adobe Target中的預設工作區，或匯出至Ad
 
    ![資料夾 — Cloud Service](assets/xf-target-integration-01.png "資料夾 — Cloud Service")
 
-1. **儲存並關閉**.
+1. **儲存並關閉**。
 
 ## 將體驗片段匯出至Adobe Target {#exporting-an-experience-fragment-to-adobe-target}
 
@@ -140,41 +140,41 @@ AEM體驗片段可以匯出至Adobe Target中的預設工作區，或匯出至Ad
    >
    >它必須是體驗片段Web變數。
 
-1. 按一下 **匯出至Adobe Target**.
+1. 按一下&#x200B;**匯出至Adobe Target**。
 
    >[!NOTE]
    >
-   >如果體驗片段已匯出，請選取「 」 **Adobe Target中的更新**.
+   >如果體驗片段已匯出，請選取「在Adobe Target中更新」****。
 
-1. 按一下 **不發佈即匯出** 或 **發佈** 視需要。
+1. 視需要按一下&#x200B;**匯出而不發佈**&#x200B;或&#x200B;**Publish**。
 
    >[!NOTE]
    >
-   >選取 **發佈** 立即發佈體驗片段並將其傳送到Target。
+   >選取&#x200B;**Publish**&#x200B;會立即發佈體驗片段並將其傳送到Target。
 
-1. 按一下 **確定** 在確認對話方塊中。
+1. 在確認對話方塊中按一下&#x200B;**確定**。
 
    您的體驗片段現在應該在Target中。
 
    >[!NOTE]
    >
-   >[各種詳細資訊](/help/sites-authoring/experience-fragments.md#details-of-your-experience-fragment) 匯出的檔案可在下列位置檢視： **清單檢視** 主控台和 **屬性**.
+   >[匯出的各種詳細資料](/help/sites-authoring/experience-fragments.md#details-of-your-experience-fragment)可在主控台的&#x200B;**清單檢視**&#x200B;和&#x200B;**內容**&#x200B;中看見。
 
    >[!NOTE]
    >
-   >在Adobe Target中檢視體驗片段時， *上次修改時間* 看到的日期是上次在AEM中修改片段的日期，而不是上次將片段匯出至Adobe Target的日期。
+   >在Adobe Target中檢視體驗片段時，看到的&#x200B;*上次修改*&#x200B;日期是上次在AEM中修改片段的日期，而非上次將片段匯出至Adobe Target的日期。
 
 >[!NOTE]
 >
->或者，您也可以使用下列檔案中的類似命令，從頁面編輯器執行匯出 [頁面資訊](/help/sites-authoring/author-environment-tools.md#page-information) 功能表。
+>或者，您可以使用[頁面資訊](/help/sites-authoring/author-environment-tools.md#page-information)功能表中的類似命令，從頁面編輯器執行匯出。
 
 ## 在Adobe Target中使用您的體驗片段 {#using-your-experience-fragments-in-adobe-target}
 
-執行先前的工作後，體驗片段會顯示在Adobe Target的「選件」頁面中。 檢視 [特定Target檔案](https://experienceleague.adobe.com/docs/target/using/experiences/offers/aem-experience-fragments.html) 以瞭解您能達成的目標。
+執行先前的工作後，體驗片段會顯示在Adobe Target的「選件」頁面中。 檢視[特定Target檔案](https://experienceleague.adobe.com/docs/target/using/experiences/offers/aem-experience-fragments.html)以瞭解您可以達成的目標。
 
 >[!NOTE]
 >
->在Adobe Target中檢視體驗片段時， *上次修改時間* 看到的日期是上次在AEM中修改片段的日期，而不是上次將片段匯出至Adobe Target的日期。
+>在Adobe Target中檢視體驗片段時，看到的&#x200B;*上次修改*&#x200B;日期是上次在AEM中修改片段的日期，而非上次將片段匯出至Adobe Target的日期。
 
 ## 刪除已匯出至Adobe Target的體驗片段 {#deleting-an-experience-fragment-already-exported-to-adobe-target}
 
@@ -199,7 +199,7 @@ AEM體驗片段可以匯出至Adobe Target中的預設工作區，或匯出至Ad
 
 體驗片段包含完整的html標籤和所有必要的使用者端資料庫(CSS/JS)，以便呈現與體驗片段內容作者建立的片段完全相同的片段。 這是客製化設計。
 
-在AEM所傳送的頁面上搭配Adobe Target使用體驗片段選件時，「鎖定目標」頁面已包含所有必要的使用者端資料庫。 此外，也不需要在體驗片段選件中使用無關的html (請參閱 [考量事項](#considerations))。
+在AEM所傳送的頁面上搭配Adobe Target使用體驗片段選件時，「鎖定目標」頁面已包含所有必要的使用者端資料庫。 此外，體驗片段選件中也不需要多餘的html （請參閱[考量事項](#considerations)）。
 
 以下是體驗片段選件中html的偽範例：
 
@@ -217,27 +217,27 @@ AEM體驗片段可以匯出至Adobe Target中的預設工作區，或匯出至Ad
 </html>
 ```
 
-概言之，當AEM將體驗片段匯出至Adobe Target時，它會使用數個額外的Sling選取器來執行此操作。 例如，匯出的體驗片段的URL看起來可能像這樣(注意 `nocloudconfigs.atoffer`)：
+概言之，當AEM將體驗片段匯出至Adobe Target時，它會使用數個額外的Sling選取器來執行此操作。 例如，匯出的體驗片段的URL可能如下所示（注意`nocloudconfigs.atoffer`）：
 
 * http://www.your-aem-instance.com/content/experience-fragments/my-offers/my-xf-offer.nocloudconfigs.atoffer.html
 
-此 `nocloudconfigs` 選擇器是使用HTL定義的，並且可以從以下位置複製以覆蓋：
+`nocloudconfigs`選擇器是使用HTL定義的，而且可以從以下位置複製以覆蓋：
 
 * /libs/cq/experience-fragments/components/xfpage/nocloudconfigs.html
 
-此 `atoffer` 選擇器是套用的後處理，使用 [Sling重寫程式](/help/sites-developing/experience-fragments.md#the-experience-fragment-link-rewriter-provider-html). 兩者皆可用來移除使用者端程式庫。
+`atoffer`選擇器已使用[Sling重寫程式](/help/sites-developing/experience-fragments.md#the-experience-fragment-link-rewriter-provider-html)套用後續處理。 兩者皆可用來移除使用者端程式庫。
 
 ### 範例 {#example}
 
-出於此處的目的，讓我們說明如何使用完成此工作 `nocloudconfigs`.
+在此說明如何使用`nocloudconfigs`執行此操作。
 
 >[!NOTE]
 >
->另請參閱 [可編輯的範本](/help/sites-developing/templates.md#editable-templates) 以取得更多詳細資料。
+>如需詳細資訊，請參閱[可編輯的範本](/help/sites-developing/templates.md#editable-templates)。
 
 #### 覆蓋 {#overlays}
 
-在此特定範例中， [覆蓋](/help/sites-developing/overlays.md) 被包含將會移除使用者端資料庫 *和* 多餘的html。 我們假設您已建立體驗片段範本型別。 需要從中複製的必要檔案 `/libs/cq/experience-fragments/components/xfpage/` 包括：
+在此特定範例中，包含的[重疊](/help/sites-developing/overlays.md)將會移除使用者端資料庫&#x200B;*和*&#x200B;多餘的HTML。 我們假設您已建立體驗片段範本型別。 需要從`/libs/cq/experience-fragments/components/xfpage/`複製的必要檔案包括：
 
 * `nocloudconfigs.html`
 * `head.nocloudconfigs.html`
@@ -265,7 +265,7 @@ AEM體驗片段可以匯出至Adobe Target中的預設工作區，或匯出至Ad
 
 >[!NOTE]
 >
->使用 `data-sly-unwrap` 若要移除body標籤，您需要 `nocloudconfigs.html`.
+>若要使用`data-sly-unwrap`移除內文標籤，您需要`nocloudconfigs.html`。
 
 ### 考量事項 {#considerations}
 

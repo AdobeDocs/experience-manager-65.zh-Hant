@@ -24,7 +24,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->如果您沒有使用Adobe Experience Manager (AEM)作為內容管理來源，請參閱 [AEM Mobile On-demand Services說明](https://helpx.adobe.com/digital-publishing-solution/topics.html).
+>如果您未使用Adobe Experience Manager (AEM)作為內容管理來源，請參閱[AEM Mobile On-demand Services說明](https://helpx.adobe.com/digital-publishing-solution/topics.html)。
 
 ## AEM 管理員 {#aem-administrator}
 
@@ -32,17 +32,17 @@ ht-degree: 2%
 >
 >**先決條件：**
 >
->開始設定AEM Mobile On-demand Services的環境之前，請參閱 [AEM Mobile應用程式儀表板或控制中心](/help/mobile/mobile-apps-ondemand-application-dashboard.md).
+>開始設定AEM Mobile On-demand Services的環境之前，請參閱[AEM Mobile應用程式儀表板或控制中心](/help/mobile/mobile-apps-ondemand-application-dashboard.md)。
 
-一個 ***AEM管理員*** 負責使用建立精靈建立應用程式，或匯入現有應用程式，將應用程式新增至AEM Mobile目錄。 使用AEM Mobile建立應用程式的AEM管理員 *建立精靈* 通常會從Adobe現成的參考範例或（通常）建立的自訂應用程式範本，選取其中一個所需的應用程式範本 *AEM開發人員。*
+***AEM管理員***&#x200B;負責使用建立精靈建立應用程式，或匯入現有應用程式，將應用程式新增至AEM Mobile目錄。 使用AEM Mobile的&#x200B;*建立精靈*&#x200B;建立應用程式的AEM管理員通常會從Adobe現成的參考範例或（通常）由&#x200B;*AEM開發人員建立的自訂應用程式範本中，選取其中一個想要的應用程式範本。*
 
 >[!NOTE]
 >
->如需設定AEM群組和許可權的詳細資訊，請按一下 [建立使用者角色並授與存取權](https://helpx.adobe.com/digital-publishing-solution/help/account-admin-dps.html) 線上上說明中。
+>如需設定AEM群組與許可權的詳細資訊，請按一下線上說明中的[建立使用者角色並授與存取權](https://helpx.adobe.com/digital-publishing-solution/help/account-admin-dps.html)。
 
 使用AEM Mobile On-demand Services建立應用程式時，AEM管理員會負責下列工作：
 
-* [設定AEM Mobile](/help/mobile/aem-mobile-setup.md) 涵蓋
+* [設定涵蓋範圍的AEM Mobile](/help/mobile/aem-mobile-setup.md)
 
    * AEM Mobile布建
    * 建立AEM Mobile專案

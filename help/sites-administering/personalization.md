@@ -18,11 +18,11 @@ ht-degree: 2%
 
 # 個人化 {#personalization}
 
-## 什麼是個人化？ {#what-is-personalization}
+## 什麼是Personalization？ {#what-is-personalization}
 
 目前網際網路、外部網路或內部網路網站上的可用內容量不斷增加。
 
-個人化的中心是為使用者提供量身打造的環境，顯示根據其特定需求選取的動態內容；可以根據預先定義的設定檔、使用者選擇或互動式使用者行為來選取。
+Personalization的重點是提供使用者量身打造的環境，顯示根據其特定需求選取的動態內容；可以根據預先定義的設定檔、使用者選擇或互動式使用者行為來選取。
 
 個人化包含三個主要元素：
 
@@ -43,7 +43,7 @@ ht-degree: 2%
 
 * 定義個人化實際發生的方式 — 使用者可以檢視哪些內容以及何時檢視。
 
-個人化可以是：
+Personalization可以是：
 
 #### 明確 {#explicit}
 
@@ -55,9 +55,9 @@ ht-degree: 2%
 * 簡單篩選：選取是以使用者及/或群組層級的預先定義設定檔為基礎。
 * 合作/建議篩選：根據預先定義的規則註冊使用者行為。 這些規則是根據與志同道合的個人觀察到的行為。 收集的資訊可用來量身打造顯示給使用者的資訊，尤其是以建議形式顯示的資訊。
 
-## 如何使用及何時使用個人化？ {#how-and-when-can-personalization-be-used}
+## 如何使用Personalization以及何時使用？ {#how-and-when-can-personalization-be-used}
 
-個人化可用於許多情況，例如：
+Personalization可用於許多情況，例如：
 
 ### 內部網路頁面 {#intranet-pages}
 
@@ -79,12 +79,12 @@ ht-degree: 2%
 
 * 許多主要的搜尋引擎網站都有非常強大的分析工具，可以記錄使用者行為、他們使用的搜尋辭彙以及他們實際造訪的網站。 然後會用來自訂所提供的內容 — 特別是關於顯示廣告。
 
-### 個人化的長處和需要考量的要點 {#strengths-of-personalization-and-points-to-consider}
+### Personalization的優勢和需考慮的因素 {#strengths-of-personalization-and-points-to-consider}
 
 以下是應該使用個人化的理由：
 
 * 使用者可以體驗舒適、專注的網站。
-* 個人化可用於自動將存取權傳播至最新版本的內容。
+* Personalization可用來自動將存取權傳播至最新版本的內容。
 * 社交共同作業功能可供使用者互相通訊，因為它們可由他們的設定檔識別。
 * 可以為使用者提供完成特定任務所需的內容。 在公司的內部網路中，這可提供寶貴的資訊傳播工具。
 * 可為使用者提供他們需要/想要的內容，藉此減少他們執行搜尋操作所需的時間。
@@ -99,7 +99,7 @@ ht-degree: 2%
 
 #### 授權 {#authorization}
 
-* 個人化需要登入機制，因為網站必須能夠識別使用者。
+* Personalization需要登入機制，因為網站必須能夠識別使用者。
 
 #### 快取 {#caching}
 
@@ -108,32 +108,32 @@ ht-degree: 2%
 
 >[!TIP]
 >
->檔案中將進一步討論個人化對效能的影響及相關快取主題 [效能最佳化。](/help/sites-deploying/configuring-performance.md)
+>Personalization對效能的影響及相關快取主題將在檔案[效能最佳化](/help/sites-deploying/configuring-performance.md)中進一步討論。
 
 #### 規則的準確性 {#accuracy}
 
-* 透過追蹤使用者的行為或根據使用者的設定檔設定規則而實現的個人化，必須準確且符合邏輯。
+* 透過追蹤使用者的行為或根據使用者的設定檔設定規則而實現的Personalization必須準確且符合邏輯。
 * 最讓使用者感到沮喪的，莫過於因為規則的邏輯錯誤而強制或拒絕他們的內容。
 * 因此，規則必須經過深思熟慮 — 將使用者的需求放在前台。 這可能需要花很多時間，切勿低估程度；定義商業規則通常比實作個人化的技術努力更重要。
 
 #### 使用時機 {#when-to-use}
 
-* 如同網路上的許多功能，應謹慎使用個人化。 其使用真的有益於使用者嗎？ 應該永遠是首要考量事項，或者是否可以透過其他方法以更省力的方式達成所要的目標。 個人化可能會成為使用者只設定一次（以檢視其運作方式）和一次的功能，因為它並未為他們帶來實際優勢。
-* 只有當內容是動態的（以某種方式取決於使用者）時，個人化才有意義。 如果所有使用者都看到相同的內容，則個人化將是多餘的。
+* 如同網路上的許多功能，應謹慎使用個人化。 其使用真的有益於使用者嗎？ 應該永遠是首要考量事項，或者是否可以透過其他方法以更省力的方式達成所要的目標。 Personalization可能會面臨一項風險，即使用者只需設定一次（以檢視其運作方式），而只設定一次，因為它並未為使用者帶來實際優勢。
+* 只有當內容是動態的（以某種方式取決於使用者）時，Personalization才有意義。 如果所有使用者都看到相同的內容，則個人化將是多餘的。
 
 #### 機密性 {#confidentiality}
 
 * 許多使用者擔心資料保護和安全性。 尤其有關在追蹤瀏覽網路時的行為時擷取的資料。
 
-## 個人化與存取 {#personalization-and-access}
+## Personalization和Access {#personalization-and-access}
 
-個人化應與存取控制分開考慮，但它們確實相關。
+Personalization應與存取控制分開考慮，但它們確實相關。
 
-個人化本身不會建立任何形式的存取控制。 它只是控制使用者所看到內容的方法；不會限制使用者存取其他內容，並且與任何內容一樣，他們需要已指派正確的存取控制項。
+Personalization本身不會建立任何形式的存取控制。 它只是控制使用者所看到內容的方法；不會限制使用者存取其他內容，並且與任何內容一樣，他們需要已指派正確的存取控制項。
 
 不過，存取控制可用於建立個人化表單。 如果您允許或拒絕使用者存取內容，這不可避免地會影響他們可用的內容選擇，進而個人化他們的網頁體驗。
 
-## 可用於個人化的元件 {#components-available-for-personalization}
+## 適用於Personalization的元件 {#components-available-for-personalization}
 
 AEM提供各種元件供個人化使用。 有些專案可讓使用者登入並編輯其設定檔，有些專案（如「我的小工具」）則可讓使用者設定特定頁面：
 
@@ -168,11 +168,11 @@ AEM提供各種元件供個人化使用。 有些專案可讓使用者登入並�
 | 標記雲 | 標籤雲，以圖形方式顯示網站內標籤選取範圍 |
 | Teaser | 顯示在首頁面上的內容（通常是影像），用來「誘惑」使用者存取基礎內容。 |
 
-## 個人化和社群內容 {#personalization-and-community-content}
+## Personalization和社群內容 {#personalization-and-community-content}
 
-部落格、論壇和行事曆等社群功能會建立社群內容，通常稱為使用者產生的內容(UGC)。 在包含多個AEM例項的發佈環境中輸入UGC時(a [發佈陣列](/help/communities/topologies.md))，主要問題是如何同步所有執行個體的UGC。
+部落格、論壇和行事曆等社群功能會建立社群內容，通常稱為使用者產生的內容(UGC)。 在包含多個AEM執行個體（[發佈陣列](/help/communities/topologies.md)）的發佈環境中輸入UGC時，一個主要問題是如何同步所有執行個體的UGC。
 
-替換為 [AEM Communities 6.1](/help/communities/overview.md) 擴充功能，此問題可透過使用解決 [UGC的公用存放區](/help/communities/working-with-srp.md). 關於個人化，社群包括 [社交登入](/help/communities/social-login.md)  — 提供網站訪客使用Facebook和Twitter登入的選項。
+透過[AEM Communities 6.1](/help/communities/overview.md)擴充功能，使用UGC](/help/communities/working-with-srp.md)的[公用存放區即可解決此問題。 關於個人化，Communities包含[社交登入](/help/communities/social-login.md) — 提供網站訪客使用Facebook和Twitter登入的選項。
 
 如果沒有Communities擴充功能，可探索多種方法來解決UGC一致性問題，包括：
 

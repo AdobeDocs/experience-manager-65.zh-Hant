@@ -24,7 +24,7 @@ ht-degree: 5%
 
 如需建立您自己的單頁應用程式的端對端範例，這些應用程式可透過AEM從專案設定開始透過應用程式路由編輯，請參閱WKND SPATutorials：
 
-* [AEM SPA編輯器和Angular快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/angular/overview.html)
+* [開始使用AEM SPA編輯器和Angular](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/angular/overview.html)
 * [AEM SPA Editor and React快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html)
 
-不過，在您開始自己的AEM SPA專案之前，也請務必檢閱 [為AEM開發SPA](/help/sites-developing/spa-architecture.md) 檔案。
+不過，在您開始自己的AEM SPA專案之前，也請務必檢閱[開發AEM的SPA](/help/sites-developing/spa-architecture.md)檔案。

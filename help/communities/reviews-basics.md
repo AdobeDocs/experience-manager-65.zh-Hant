@@ -20,7 +20,7 @@ ht-degree: 1%
 
 此功能包含兩個共同運作的元件：稽核和稽核摘要。
 
-檢閱是以「 」為基礎的複合元件 [註解系統](essentials-comments.md) 包含一或多個 [評等](rating-basics.md) （依計數）元件。
+評論是以[評論系統](essentials-comments.md)為基礎的複合元件，包含一或多個[評等](rating-basics.md) （計分）元件。
 
 不支援評論的匿名張貼。 網站訪客必須註冊並登入才能新增評論。 登入的訪客（成員）可隨時更新其評論。
 
@@ -36,7 +36,7 @@ ht-degree: 1%
   </tr>
   <tr>
    <td> <a href="scf.md#add-or-include-a-communities-component"><strong>包含</strong></a></td>
-   <td>是 — 屬性可在以下位置編輯： <i>設計 </i>模式</td>
+   <td>是 — 屬性可在<i>設計</i>模式中編輯</td>
   </tr>
   <tr>
    <td> <a href="client-customize.md#clientlibs-for-scf"><strong>clientllibs</strong></a></td>
@@ -52,7 +52,7 @@ ht-degree: 1%
   </tr>
   <tr>
    <td><strong>屬性</strong></td>
-   <td>另請參閱 <a href="reviews.md">使用評論</a></td>
+   <td>檢視<a href="reviews.md">使用評論</a></td>
   </tr>
  </tbody>
 </table>
@@ -65,7 +65,7 @@ ht-degree: 1%
 | [**clientllibs**](client-customize.md#clientlibs-for-scf) | cq.social.hbs.reviews |
 | **範本** | /libs/social/reviews/components/hbs/summary/summary.hbs |
 | **css** | /libs/social/reviews/components/hbs/reviews/clientlibs/review.css |
-| **屬性** | 另請參閱 [使用評論](reviews.md) |
+| **屬性** | 檢視[使用評論](reviews.md) |
 
 * [使用者端自訂](client-customize.md)
 
@@ -80,15 +80,15 @@ ht-degree: 1%
 ### 存取已張貼的評論(UGC) {#accessing-posted-reviews-ugc}
 
 UGC應使用其中一種標準仲裁方法進行仲裁。
-另請參閱 [稽核使用者產生的內容](moderate-ugc.md).
+請參閱[仲裁使用者產生的內容](moderate-ugc.md)。
 
-自AEM 6.1社群起，使用 [公用存放區](working-with-srp.md) for UGC包含對UGC的程式化存取，無論選擇的儲存選項（例如ASRP、MSRP或JSRP）為何。
+截至AEM 6.1 Communities，使用UGC的[公用存放區](working-with-srp.md)時，無論選擇的存放區選項（例如ASRP、MSRP或JSRP）為何，都可程式化存取UGC。
 
-**UGC在存放庫中的位置和格式可能會有所變更，恕不另行警告**.
+**存放庫中UGC的位置和格式可能會變更，而不會出現警告**。
 
 請參閱：
 
-* [儲存資源提供者概觀](srp.md)  — 簡介和存放庫使用概述。
-* [srp和UGC Essentials](srp-and-ugc.md) - SRP公用程式方法與範例。
-* [使用SRP存取UGC](accessing-ugc-with-srp.md)  — 程式碼指南。
-* [SocialUtils重構](socialutils.md)  — 將已棄用的公用程式方法對應到目前的SRP公用程式方法。
+* [儲存資源提供者概觀](srp.md) — 簡介和存放庫使用概觀。
+* [SRP與UGC Essentials](srp-and-ugc.md) - SRP公用程式方法與範例。
+* [使用SRP存取UGC](accessing-ugc-with-srp.md) — 編碼准則。
+* [SocialUtils重構](socialutils.md) — 將已棄用的公用程式方法對應到目前的SRP公用程式方法。

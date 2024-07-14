@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # 程式報告簡介{#introduction-to-process-reporting}
 
-![process-report](assets/process-reporting.png)
+![處理報告](assets/process-reporting.png)
 
 程式報告是一種基於瀏覽器的工具，可用於建立和檢視AEM Forms程式和工作的報告。
 
@@ -26,12 +26,12 @@ ht-degree: 0%
 
 此外，「程式報告」還提供執行臨機查詢並將自訂報告檢視整合到「程式報告」使用者介面的介面。
 
-如需詳細資訊，請參閱 [AEM Forms支援的平台](/help/forms/using/aem-forms-jee-supported-platforms.md).
+如需支援的瀏覽器清單，請參閱[AEM Forms支援的平台](/help/forms/using/aem-forms-jee-supported-platforms.md)。
 
 程式報告會建置在具備下列條件的模組上：
 
 * 從AEM Forms資料庫讀取程式資料
-* 將程式資料發佈到內嵌的Process Reporting存放庫
+* Publish流程資料到內嵌的流程報表存放庫
 * 提供瀏覽器式使用者介面以檢視報表
 
 ## 主要功能 {#key-capabilities}

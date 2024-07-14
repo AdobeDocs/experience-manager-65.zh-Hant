@@ -38,7 +38,7 @@ ht-degree: 4%
 
 ## 「管理應用程式」動態磚 {#the-manage-app-tile}
 
-此 **管理應用程式** 圖磚顯示可用的應用程式資訊：
+**管理應用程式**&#x200B;圖磚會顯示可用的應用程式資訊：
 
 * 標題
 * 說明
@@ -50,7 +50,7 @@ ht-degree: 4%
 
 ## 「管理連線」圖磚 {#the-manage-connection-tile}
 
-此 **管理連線** 圖磚會顯示AEM Mobile On-demand Services連線資訊：
+**管理連線**&#x200B;圖磚會顯示AEM Mobile On-demand Services連線資訊：
 
 * 雲端設定名稱
 * 專案名稱和ID
@@ -60,7 +60,7 @@ ht-degree: 4%
 >
 >按一下右上方的齒輪，設定Mobile On-Demand雲端設定。
 >
->另請參閱 [設定Mobile On-Demand Services](/help/mobile/mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md) 以取得詳細資訊。
+>如需詳細資訊，請參閱[設定Mobile On-Demand Services](/help/mobile/mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md)。
 
 ![chlimage_1-56](assets/chlimage_1-56.png)
 
@@ -69,67 +69,67 @@ ht-degree: 4%
 這3個圖磚可提供應用程式內容狀態的概觀：
 
 * **橫幅**
-* **文章**
+* **篇文章**
 * **集合**
 
 按一下右下角的省略符號(...)，可展開每個圖磚以提供更詳細的清單檢視。 這些清單檢視提供存取常見Mobile On Demand動作（如刪除、上傳和編輯屬性）的替代方式。
 
 ### 「管理橫幅」圖磚 {#the-manage-banners-tile}
 
-此 **管理橫幅** 圖磚可讓您管理橫幅的內容。 橫幅會顯示下列資訊：
+**管理橫幅**&#x200B;圖磚可讓您管理橫幅的內容。 橫幅會顯示下列資訊：
 
 * 影像
 * **標題**：橫幅的名稱
-* **修改時間**：上次在AEM中修改
+* **已修改**：上次在AEM中修改
 * **已上傳**：上次從AEM上傳
-* **已發佈**：上次發佈的請求表單AEM
-* **來源**：來源(AEM本機或來自Mobile On Demand的遠端)
+* **已發佈**：上次發佈的要求表單AEM
+* **SOURCE**：來源(AEM本機或來自Mobile On Demand的遠端)
 
-下圖顯示 **管理橫幅** AEM Mobile應用程式儀表板中的動態磚：
+下圖顯示AEM Mobile應用程式儀表板中的&#x200B;**管理橫幅**&#x200B;圖磚：
 
 ![chlimage_1-57](assets/chlimage_1-57.png)
 
 >[!NOTE]
 >
->另請參閱 **[管理橫幅](/help/mobile/mobile-on-demand-managing-banners.md)** 用於建立、刪除或更新橫幅。
+>請參閱&#x200B;**[管理橫幅](/help/mobile/mobile-on-demand-managing-banners.md)**&#x200B;以建立、刪除或更新橫幅。
 
 ### 「管理文章」圖磚 {#the-manage-articles-tile}
 
-此 **管理文章** 圖磚可讓您管理文章的內容。 會顯示文章的下列資訊：
+**管理文章**&#x200B;圖磚可讓您管理文章的內容。 會顯示文章的下列資訊：
 
 * 影像
-* **標題**：文章名稱
-* **修改時間**：上次在AEM中修改
+* **TITLE**：文章的名稱
+* **已修改**：上次在AEM中修改
 * **已上傳**：上次從AEM上傳
-* **已發佈**：上次發佈的請求表單AEM
-* **來源**：來源(AEM本機或來自Mobile On-Demand的遠端)
+* **已發佈**：上次發佈的要求表單AEM
+* **SOURCE**：來源(AEM本機或來自Mobile On-Demand的遠端)
 
-下圖顯示 **管理文章** AEM Mobile應用程式儀表板中的動態磚：
+下圖顯示AEM Mobile應用程式儀表板中的&#x200B;**管理文章**&#x200B;動態磚：
 
 ![chlimage_1-58](assets/chlimage_1-58.png)
 
 >[!NOTE]
 >
->另請參閱 [**管理文章**](/help/mobile/mobile-on-demand-managing-articles.md) 用於建立、刪除或更新文章。
+>請參閱&#x200B;[**管理文章**](/help/mobile/mobile-on-demand-managing-articles.md)&#x200B;以建立、刪除或更新文章。
 
 ### 管理集合圖磚 {#the-manage-collections-tile}
 
-此 **管理集合** 圖磚可讓您管理集合的內容。 系統會顯示集合的下列資訊：
+**管理集合**&#x200B;圖磚可讓您管理集合的內容。 系統會顯示集合的下列資訊：
 
 * 影像
-* **標題**：集合名稱
-* **修改時間**：上次在AEM中修改
+* **TITLE**：集合的名稱
+* **已修改**：上次在AEM中修改
 * **已上傳**：上次從AEM上傳
-* **已發佈**：上次發佈的請求表單AEM
-* **來源**：來源(AEM本機或來自Mobile On-Demand的遠端)
+* **已發佈**：上次發佈的要求表單AEM
+* **SOURCE**：來源(AEM本機或來自Mobile On-Demand的遠端)
 
-下圖顯示 **管理集合** AEM Mobile應用程式儀表板中的動態磚：
+下圖顯示AEM Mobile應用程式儀表板中的&#x200B;**管理集合**&#x200B;圖磚：
 
 ![chlimage_1-59](assets/chlimage_1-59.png)
 
 >[!NOTE]
 >
->另請參閱 **[管理集合](/help/mobile/mobile-on-demand-managing-collections.md)** 用於建立、刪除或更新集合。
+>請參閱&#x200B;**[管理集合](/help/mobile/mobile-on-demand-managing-collections.md)**&#x200B;以建立、刪除或更新集合。
 
 ### 後續步驟 {#the-next-steps}
 

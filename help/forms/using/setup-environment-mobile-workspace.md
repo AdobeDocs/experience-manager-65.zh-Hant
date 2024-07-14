@@ -36,11 +36,11 @@ ht-degree: 0%
 * 用於發佈內部iOS應用程式的企業憑證
 * Apple iPad搭配iOS 8.4或更新版本
 
-## Android™裝置 {#for-android-devices}
+## 若為Android™裝置 {#for-android-devices}
 
-* Android™ Development Toolkit （ADT套件），可從以下來源下載： [https://developer.android.com/studio](https://developer.android.com/studio)
+* 可從[https://developer.android.com/studio](https://developer.android.com/studio)下載的Android™ Development Toolkit （ADT套件）
 * 若環境設定在Mac系統上，則ADT應安裝在「應用程式」資料夾中。
-* 如果ADT安裝在Mac上的任何其他位置，或環境設定在Windows系統上，則必須在以下位置更新ADT SDK路徑： `local.properties` 檔案。 此檔案位於 `src\android` 資料夾（在已擷取的來源封存檔中） `mobileworkspace-src.zip`. 在此檔案中，指向 `sdk.dir` 變數來產生ADT SDK在案頭上的位置。
+* 如果ADT安裝在Mac上的任何其他位置，或環境設定在Windows系統上，則必須在`local.properties`檔案中更新ADT SDK路徑。 此檔案位於已解壓縮來源封存檔`mobileworkspace-src.zip`的`src\android`資料夾中。 在此檔案中，將`sdk.dir`變數指向案頭上的ADT SDK位置。
 
 >[!NOTE]
 >

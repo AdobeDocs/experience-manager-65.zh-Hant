@@ -22,7 +22,7 @@ ht-degree: 0%
 
 1. 開啟網頁瀏覽器，然後輸入此URL：
 
-   http://localhost:port/ReaderExtensions (其中 *連線埠* 為您的應用程式伺服器的連線埠號碼)
+   http://localhost:port/ReaderExtensions （其中&#x200B;*連線埠*&#x200B;是您應用程式伺服器的連線埠號碼）
 
 1. 使用預設使用者名稱和密碼登入：
 

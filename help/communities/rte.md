@@ -22,15 +22,15 @@ ht-degree: 3%
 
 RTF編輯器(RTE)可讓您輸入含有標示的文字。
 
-針對Communities元件，而與 [作者環境中的RTF編輯器](../../help/sites-authoring/rich-text-editor.md)，它會影響在發佈環境中輸入的文字。
+對於Communities元件，雖然與製作環境](../../help/sites-authoring/rich-text-editor.md)中的[RTF編輯器類似，但會影響在發佈環境中輸入的文字。
 
 ![RTF編輯器](assets/rich-text-editor.png)
 
 ## 啟用RTF編輯器 {#enabling-rich-text-editor}
 
-允許使用者產生內容(UGC)的Communities元件可啟用以允許RTE。 將元件新增至頁面或包含在 [函式](functions.md)，預設情況下可能會啟用，也可能不會啟用RTE。
+允許使用者產生內容(UGC)的Communities元件可啟用以允許RTE。 如果元件已新增至頁面或包含在[函式](functions.md)中，預設可能會啟用RTE，也可能不會啟用。
 
-如果未啟用，只要輸入 [作者編輯模式](sites-console.md#authoring-site-content)，選取要編輯的元件，然後選取 `Rich Text Editor` 核取方塊。
+如果未啟用，只要輸入[作者編輯模式](sites-console.md#authoring-site-content)、選取要編輯的元件，然後選取`Rich Text Editor`核取方塊即可。
 
 RTE適用於下列Communities元件：
 
@@ -45,9 +45,9 @@ RTE適用於下列Communities元件：
 
 ## 自訂 {#customization}
 
-RTF編輯器可以自訂，因為實作是根據 [複製器](https://ckeditor.com/).
+RTF編輯器可以自訂，因為實作是以[CKEditor](https://ckeditor.com/)為基礎。
 
-Communities元件的目前設定在 `cq.social.  scf   clientlib`，在存放庫中的
+Communities元件的目前設定在`cq.social.  scf   clientlib`的存放庫中，位於
 
 `/libs/clientlibs/social/commons/scf/ckrte.js`
 
@@ -59,9 +59,9 @@ Communities元件的目前設定在 `cq.social.  scf   clientlib`，在存放庫
 
 若要將超連結選項新增至工具列：
 
-* 新增名為「」的工具列 `links`&quot;
+* 新增名為&quot; `links`&quot;的工具列
    * `{ name: 'links', items: [ 'Link','Unlink','Anchor' ] }`
-* 選取 **[!UICONTROL 全部儲存]**
+* 選取&#x200B;**[!UICONTROL 全部儲存]**
 
 #### /libs/clientlibs/social/commons/scf/ckrte.js {#libs-clientlibs-social-commons-scf-ckrte-js}
 

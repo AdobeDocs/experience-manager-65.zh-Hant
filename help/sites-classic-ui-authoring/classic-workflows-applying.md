@@ -30,13 +30,13 @@ ht-degree: 11%
 
 >[!NOTE]
 >
->AEM管理員可以使用以下專案開始工作流程： [其他幾個方法](/help/sites-administering/workflows-starting.md).
+>AEM管理員可以使用[其他幾種方法](/help/sites-administering/workflows-starting.md)來開始工作流程。
 
 ## 套用工作流程 {#applying-workflows}
 
 工作流程可從「網站」主控台啟動，或編輯頁面時，也可從「Sidekick」啟動。
 
-此 **狀態** 中的欄 **網站** 控制檯會指出工作流程是否已套用至頁面：
+**網站**&#x200B;主控台中的&#x200B;**狀態**&#x200B;資料行指出工作流程是否已套用至頁面：
 
 ![workflowstatus](assets/workflowstatus.png)
 
@@ -52,8 +52,8 @@ ht-degree: 11%
 1. 開啟網站主控台。
 1. 開啟必要頁面。
 1. 從Sidekick中選取「工作流程」標籤。
-1. 展開 **工作流程** 對話方塊，讓您選取 **工作流程** 並選擇性地輸入 **工作流程標題** 和 **註解**.
+1. 展開&#x200B;**工作流程**&#x200B;對話方塊，讓您選取&#x200B;**工作流程**，並選擇性地輸入&#x200B;**工作流程標題**&#x200B;和&#x200B;**註解**。
 
    ![workflowstartsidekick](assets/workflowstartsidekick.png)
 
-1. 按一下 **開始工作流程** ，以啟動具有您所設定屬性且目前頁面為裝載的新工作流程例項。 現在工作流程正在執行中。
+1. 按一下&#x200B;**啟動工作流程**&#x200B;以啟動新的工作流程執行個體，其中包含您設定的屬性以及目前頁面作為裝載。 現在工作流程正在執行中。

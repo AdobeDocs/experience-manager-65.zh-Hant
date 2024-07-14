@@ -27,13 +27,13 @@ ht-degree: 40%
 
 ### 手動步驟 {#manual-steps}
 
-1. 瀏覽至以下位置，開啟「使用者管理」主控台： **[!UICONTROL 設定 — 安全性 — 使用者]** 或直接瀏覽至 `https://<serveraddress>:<serverport>/libs/granite/security/content/useradmin.html`
+1. 瀏覽至&#x200B;**[!UICONTROL 設定 — 安全性 — 使用者]**&#x200B;或直接瀏覽至`https://<serveraddress>:<serverport>/libs/granite/security/content/useradmin.html`，開啟[使用者管理]主控台
 
    ![useradmin2](assets/useradmin2.png)
 
 1. 然後，透過在頁面最上方的搜尋列中輸入名稱來搜尋相關使用者：
 
-   ![usersearch](assets/usersearch.png)
+   ![使用者搜尋](assets/usersearch.png)
 
 1. 最後，透過按一下使用者個人資料以將其開啟，然後檢查「**[!UICONTROL 詳細資料]**」標籤下方。
 
@@ -91,33 +91,33 @@ curl -u user:password  'http://localhost:4502/home/users/we-retail/DSCP-athB1NYL
 
 ### 刪除使用者個人資料資訊 {#delete-user-profile-information}
 
-1. 登入CRXDE Lite，然後搜尋 `[!UICONTROL userId]`：
+1. 登入CRXDE Lite，然後搜尋`[!UICONTROL userId]`：
 
    ![image2018-2-6_1-57-11](assets/image2018-2-6_1-57-11.png)
 
-1. 開啟位於下的使用者節點 `[!UICONTROL /home/users]` 根據預設：
+1. 依預設開啟位於`[!UICONTROL /home/users]`下的使用者節點：
 
    ![image2018-2-6_1-58-25](assets/image2018-2-6_1-58-25.png)
 
 1. 刪除設定檔節點及其所有子節點。 設定檔節點有兩種格式，視AEM版本而定：
 
-   1. 下的預設私人設定檔 `[!UICONTROL /profile]`
-   1. `[!UICONTROL /profiles]`，適用於使用AEM 6.5建立的新設定檔。
+   1. `[!UICONTROL /profile]`下的預設私人設定檔
+   1. `[!UICONTROL /profiles]`，針對使用AEM 6.5建立的新設定檔。
 
    ![image2018-2-6_2-0-4](assets/image2018-2-6_2-0-4.png)
 
 ### HTTP API {#http-api-1}
 
-下列程式使用 `curl` 命令列工具，說明如何使用 **[!UICONTROL cavery]** `userId` 並刪除的設定檔 `cavery` 預設位置可用的預設值。
+下列程式使用`curl`命令列工具說明如何停用具有&#x200B;**[!UICONTROL cavery]** `userId`的使用者並刪除預設位置可用的`cavery`設定檔。
 
-* *探索使用者首頁*
+* *正在探索使用者首頁*
 
 ```shell
 curl -g -u user:password 'http://localhost:4502/libs/granite/security/search/authorizables.json?query={"condition":[{"named":"cavery"}]}'
      {"authorizables":[{"type":"user","authorizableId_xss":"cavery","authorizableId":"cavery","name_xss":"Carlene Avery","name":"Carlene Avery","home":"/home/users/we-retail/DSCP-athB1NYLBXvdTuN"}],"total":1}
 ```
 
-* *停用使用者*
+* *正在停用使用者*
 
 使用上述命令傳回的 JSON 承載的 home 屬性中的節點路徑：
 

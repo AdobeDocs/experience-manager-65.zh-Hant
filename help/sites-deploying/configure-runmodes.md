@@ -22,13 +22,13 @@ ht-degree: 1%
 
 您可以：
 
-* [定義每個執行模式的設定引數集合](#defining-configuration-properties-for-a-run-mode).
+* [定義每個執行模式的組態引數集合](#defining-configuration-properties-for-a-run-mode)。
 
   所有執行模式都會套用一組基本組態引數，然後您就可以根據特定環境的目的調整其他組。 這些會視需要套用。
 
-* [定義要針對特定模式安裝的其他組合](#defining-additional-bundles-to-be-installed-for-a-run-mode).
+* [定義要針對特定模式安裝的其他組合](#defining-additional-bundles-to-be-installed-for-a-run-mode)。
 
-所有設定和定義都儲存在一個存放庫中，並透過設定 **執行模式**.
+所有設定和定義都儲存在單一存放庫中，並透過設定&#x200B;**執行模式**&#x200B;來啟動。
 
 ## 安裝執行模式 {#installation-run-modes}
 
@@ -43,15 +43,15 @@ ht-degree: 1%
 
 這兩組執行模式互斥；例如，您可以：
 
-* 定義 `author` 或 `publish`，但不會同時停用
+* 定義`author`或`publish`，而不是同時定義
 
-* 合併 `author` 透過 `samplecontent` 或 `nosamplecontent` （但不是兩者）
+* 將`author`與`samplecontent`或`nosamplecontent`結合（但不能兩者皆結合）
 
 >[!CAUTION]
 >
->使用上述執行模式之一(author、publish、samplecontent、nosamplecontent)時，安裝時使用的值會定義 *整個存留期* 安裝完成。
+>使用上述執行模式之一(author、publish、samplecontent、nosamplecontent)時，安裝時使用的值會定義該安裝的&#x200B;*整個存留期*&#x200B;的執行模式。
 >
->對於這些執行模式，您 *無法* 安裝後變更。
+>對於這些執行模式，您&#x200B;*無法在安裝後*&#x200B;變更它們。
 
 ## 自訂的執行模式 {#customized-run-modes}
 
@@ -73,9 +73,9 @@ ht-degree: 1%
 
 這些模式可讓您控制範例內容的使用。 範例內容是在建置快速入門之前定義，可包含套件、設定等：
 
-* 此 `samplecontent` 執行模式會安裝此內容（預設模式）。
+* `samplecontent`執行模式會安裝此內容（預設模式）。
 
-* 此 `nosamplecontent` 模式不會安裝範例內容。
+* `nosamplecontent`模式未安裝範例內容。
 
 nosamplecontent執行模式是針對生產安裝所設計。
 
@@ -101,11 +101,11 @@ nosamplecontent執行模式是針對生產安裝所設計。
 
   用於適用的執行模式；例如，設定
 
-另請參閱 [存放庫中的OSGi設定](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository) 有關定義這些資料夾中的個別配置節點以及為多個執行模式的組合建立配置的更多詳細資訊。
+請參閱存放庫中的[OSGi設定](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository)，以取得有關定義這些資料夾中的個別設定節點，以及建立多個執行模式組合之設定的更多詳細資料。
 
 >[!NOTE]
 >
->的 [安裝執行模式](#installation-run-modes) （例如，作者）安裝後無法變更執行模式。 但是，個別組態屬性的變更將在重新啟動後生效。
+>對於[安裝執行模式](#installation-run-modes) （例如，作者），安裝後無法變更執行模式。 但是，個別組態屬性的變更將在重新啟動後生效。
 
 ## 定義要針對執行模式安裝的其他組合 {#defining-additional-bundles-to-be-installed-for-a-run-mode}
 
@@ -114,7 +114,7 @@ nosamplecontent執行模式是針對生產安裝所設計。
 * `install.author`
 * `install.publish`
 
-這些資料夾屬於型別 `nt:folder` 和應包含適當的套件。
+這些資料夾的型別為`nt:folder`，應該包含適當的組合。
 
 ## 以特定執行模式啟動CQ {#starting-cq-with-a-specific-run-mode}
 
@@ -125,11 +125,11 @@ nosamplecontent執行模式是針對生產安裝所設計。
 1. [](#using-the-r-option)
 1. [檔案名稱偵測](#filename-detection-renaming-the-jar-file)
 
-使用應用程式伺服器時，您也可以 [在web.xml中定義執行模式](#defining-the-run-mode-in-web-xml-with-application-server).
+當您使用應用程式伺服器時，您也可以[在web.xml](#defining-the-run-mode-in-web-xml-with-application-server)中定義執行模式。
 
 ### 使用sling.properties檔案 {#using-the-sling-properties-file}
 
-此 `sling.properties` 檔案可用來定義所需的執行模式：
+`sling.properties`檔案可用來定義必要的執行模式：
 
 1. 編輯組態檔：
 
@@ -141,7 +141,7 @@ nosamplecontent執行模式是針對生產安裝所設計。
 
 ### 使用 — r選項 {#using-the-r-option}
 
-自訂執行模式可透過使用 `-r` 選項。 例如，使用以下命令來啟動執行模式設為dev的AEM執行個體。&quot;
+啟動快速入門時，可使用`-r`選項啟動自訂執行模式。 例如，使用以下命令來啟動執行模式設為dev的AEM執行個體。&quot;
 
 ```shell
 java -jar cq-56-p4545.jar -r dev
@@ -166,7 +166,7 @@ jar檔案必須使用命名慣例：
 
 `cq5-<run-mode>-p<port-number>`
 
-例如，設定 `publish` 透過命名jar檔案來執行模式：
+例如，透過命名jar檔案來設定`publish`執行模式：
 
 `cq5-publish-p4503`
 
@@ -180,6 +180,6 @@ jar檔案必須使用命名慣例：
 
 `WEB-INF/web.xml`
 
-這是在AEM中 `war` 檔案和應在部署前更新。
+此檔案位於AEM `war`檔案中，應在部署前更新。
 
-另請參閱 [使用應用程式伺服器安裝AEM](/help/sites-deploying/application-server-install.md) 以取得更多詳細資料。
+如需詳細資訊，請參閱[使用應用程式伺服器安裝AEM](/help/sites-deploying/application-server-install.md)。

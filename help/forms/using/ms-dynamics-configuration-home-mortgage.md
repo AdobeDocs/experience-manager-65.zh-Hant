@@ -1,6 +1,6 @@
 ---
 title: 設定Microsoft Dynamics 365，以用於We.Finance參考網站的住房抵押貸款工作流程
-description: 瞭解如何透過最適化表單針對We.Finance參考網站的住房抵押貸款工作流程使用Microsoft&reg； Dynamics 365服務。
+description: 瞭解如何透過最適化表單針對We.Finance參考網站的首頁按揭工作流程使用Microsoft&amp；reg； Dynamics 365服務。
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 topic-tags: develop, Configuration
 exl-id: 2ac37dc5-d88d-4f98-8576-cd2ca6f0ea3a
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 Microsoft® Dynamics 365是客戶關係管理(CRM)和企業資源規劃(ERP)軟體，提供企業解決方案來建立和管理客戶帳戶、聯絡人、銷售機會、商機和案例。
 
-AEM Forms提供雲端服務，將Dynamics 365與整合 [Forms資料整合](/help/forms/using/data-integration.md) 模組。 您必須先設定Microsoft® Dynamics 365，以與We.Finance參考網站搭配使用，才能透過Microsoft® Dynamics案例使用Home Mortgage應用程式逐步說明。
+AEM Forms提供雲端服務，以整合Dynamics 365與[Forms資料整合](/help/forms/using/data-integration.md)模組。 您必須先設定Microsoft® Dynamics 365，以與We.Finance參考網站搭配使用，才能透過Microsoft® Dynamics案例使用Home Mortgage應用程式逐步說明。
 
 ## 先決條件 {#prerequisites}
 
@@ -44,7 +44,7 @@ AEM Forms提供雲端服務，將Dynamics 365與整合 [Forms資料整合](/help
 
    ![calculatorconfigurepanel](assets/calculatorconfigurepanel.png)
 
-1. 在「編輯AEM Forms容器」對話方塊中，瀏覽資產路徑並在以下路徑選取home-mortgage-calculator並選取 **確認**：
+1. 在「編輯AEM Forms容器」對話方塊中，瀏覽資產路徑並在以下路徑選取home-mortgage-calculator，然後選取&#x200B;**確認**：
 
    formsanddocuments/We.Finance/MS Dynamics/
 
@@ -63,7 +63,7 @@ AEM Forms提供雲端服務，將Dynamics 365與整合 [Forms資料整合](/help
 
       `https://'[server]:[port]'/content/aemforms-refsite-collaterals/we-finance/home-mortgage/ms-dynamics/AEMFormsFSIRefsite_1_0.zip`
 
-   1. 將解決方案套件匯入至Microsoft® Dynamics執行個體。 在您的Microsoft® Dynamics執行個體中，前往 **設定** > **解決方案** 然後選取 **匯入**.
+   1. 將解決方案套件匯入至Microsoft® Dynamics執行個體。 在您的Microsoft® Dynamics執行個體中，移至&#x200B;**設定** > **解決方案**，然後選取&#x200B;**匯入**。
 
 1. 若要設定重新網站中使用的使用者聯絡詳細資訊，請將Sarah Rose Contact.CSV套件匯入您的Microsoft® Dynamics執行個體：
 
@@ -71,4 +71,4 @@ AEM Forms提供雲端服務，將Dynamics 365與整合 [Forms資料整合](/help
 
       `https://'[server]:[port]'/content/aemforms-refsite-collaterals/we-finance/home-mortgage/ms-dynamics/Sarah%20Rose%20Contact.csv`
 
-   1. 將套件匯入您的Microsoft® Dynamics執行個體。 在您的Microsoft® Dynamics執行個體中，前往 **銷售** > **連絡人** 然後選取 **匯入資料**.
+   1. 將套件匯入您的Microsoft® Dynamics執行個體。 在您的Microsoft® Dynamics執行個體中，移至&#x200B;**銷售** > **連絡人**，然後選取&#x200B;**匯入資料**。

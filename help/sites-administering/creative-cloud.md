@@ -18,7 +18,7 @@ ht-degree: 1%
 
 >[!CAUTION]
 >
->AEM至Creative Cloud資料夾共用功能已過時。 建議客戶使用較新的功能，例如 [Adobe資產連結](https://helpx.adobe.com/tw/enterprise/using/adobe-asset-link.html) 或 [AEM案頭應用程式](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html). 進一步瞭解 [AEM與Creative Cloud整合最佳實務](/help/assets/aem-cc-integration-best-practices.md).
+>AEM至Creative Cloud資料夾共用功能已過時。 建議客戶使用較新的功能，例如[Adobe資產連結](https://helpx.adobe.com/tw/enterprise/using/adobe-asset-link.html)或[AEM案頭應用程式](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html)。 深入瞭解[AEM與Creative Cloud整合最佳實務](/help/assets/aem-cc-integration-best-practices.md)。
 
 <!-- TBD: This article is removed from TOC and is not published. The functionality does not exist.
 

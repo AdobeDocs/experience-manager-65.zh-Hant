@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # 在HTML5表單中建立自訂外觀{#create-custom-appearances-in-html-forms}
 
-您可以將自訂Widget插入Mobile Forms。 您可以擴充現有的jQuery Widget，或使用外觀架構開發您自己的自訂Widget。 XFA引擎使用各種Widget，請參閱 [最適化和HTML5表單的外觀架構](/help/forms/using/introduction-widgets.md) 以取得詳細資訊。
+您可以將自訂Widget插入Mobile Forms。 您可以擴充現有的jQuery Widget，或使用外觀架構開發您自己的自訂Widget。 XFA引擎使用各種Widget，如需詳細資訊，請參閱最適化和HTML5表單的[外觀架構](/help/forms/using/introduction-widgets.md)。
 
 ![預設和自訂Widget的範例](assets/custom-widgets.jpg)
 
@@ -29,11 +29,11 @@ ht-degree: 0%
 
 ### 建立設定檔  {#create-a-profile-nbsp}
 
-您可以建立設定檔或選擇現有設定檔以新增自訂Widget。 如需建立設定檔的詳細資訊，請參閱 [建立自訂設定檔](/help/forms/using/custom-profile.md).
+您可以建立設定檔或選擇現有設定檔以新增自訂Widget。 如需建立設定檔的詳細資訊，請參閱[建立自訂設定檔](/help/forms/using/custom-profile.md)。
 
 ### 建立 Widget {#create-a-widget}
 
-HTML5表單提供Widget架構的實作，您可以擴充此實作來建立新的Widget。 實作是jQuery Widget *abstractWidget* 可以延伸以撰寫新的Widget。 只有延伸/覆寫下列提及的函式，才能讓新的Widget正常運作。
+HTML5表單提供Widget架構的實作，您可以擴充此實作來建立新的Widget。 實作是jQuery Widget *abstractWidget*，可以延伸以寫入新的Widget。 只有延伸/覆寫下列提及的函式，才能讓新的Widget正常運作。
 
 <table>
  <tbody>
@@ -43,11 +43,11 @@ HTML5表單提供Widget架構的實作，您可以擴充此實作來建立新的
   </tr>
   <tr>
    <td>轉譯</td>
-   <td>轉譯器函式會傳回Widget預設HTML元素的jQuery物件。 預設HTML元素應為可聚焦型別。 例如， &lt;a&gt;， &lt;input&gt;、和 &lt;li&gt;. 傳回的元素會用作$userControl。 如果$userControl指定上述條件約束，則AbstractWidget類別的函式會如預期般運作，否則某些常見的API （焦點、點按）需要變更。 </td>
+   <td>轉譯器函式會傳回Widget預設HTML元素的jQuery物件。 預設HTML元素應為可聚焦型別。 例如，&lt;a&gt;、&lt;input&gt;和&lt;li&gt;。 傳回的元素會用作$userControl。 如果$userControl指定上述條件約束，則AbstractWidget類別的函式會如預期般運作，否則某些常見的API （焦點、點按）需要變更。 </td>
   </tr>
   <tr>
    <td>getEventMap</td>
-   <td>傳回對應以將HTML事件轉換為XFA事件。 <br /> {<br /> 模糊：XFA_EXIT_EVENT，<br /> }<br /> 此範例顯示模糊是一個HTML事件，而XFA_EXIT_EVENT則對應於XFA事件。 </td>
+   <td>傳回對應以將HTML事件轉換為XFA事件。 <br /> {<br /> blur： XFA_EXIT_EVENT，<br /> }<br />此範例顯示模糊是HTML事件，而XFA_EXIT_EVENT是相對應的XFA事件。 </td>
   </tr>
   <tr>
    <td>getOptionsMap</td>
@@ -68,7 +68,7 @@ HTML5表單提供Widget架構的實作，您可以擴充此實作來建立新的
  </tbody>
 </table>
 
-若要建立您自己的Widget，請在上述建立的設定檔中，加入JavaScript檔案的參照，其中包含覆寫函式和新新增的函式。 例如， *sliderNumericFieldWidget* 是數值欄位的Widget。 若要在標題區段的設定檔中使用Widget，請包含下列行：
+若要建立您自己的Widget，請在上述建立的設定檔中，加入JavaScript檔案的參照，此檔案包含覆寫函式和新加入的函式。 例如，*sliderNumericFieldWidget*&#x200B;是數值欄位的Widget。 若要在標題區段的設定檔中使用Widget，請包含下列行：
 
 ```javascript
 window.formBridge.registerConfig("widgetConfig" , widgetConfigObject);
@@ -76,7 +76,7 @@ window.formBridge.registerConfig("widgetConfig" , widgetConfigObject);
 
 ### 使用XFA Scripting Engine註冊自訂Widget  {#register-custom-widget-with-xfa-scripting-engine-nbsp}
 
-當自訂Widget程式碼準備就緒時，請使用以向指令碼引擎註冊Widget `registerConfig`API for [Form Bridge](/help/forms/using/form-bridge-apis.md). 它以widgetConfigObject作為輸入。
+當自訂Widget程式碼準備就緒時，請使用適用於[表單Bridge](/help/forms/using/form-bridge-apis.md)的`registerConfig`API，以指令碼引擎註冊Widget。 它以widgetConfigObject作為輸入。
 
 ```javascript
 window.formBridge.registerConfig("widgetConfig",

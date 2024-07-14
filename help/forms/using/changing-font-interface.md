@@ -21,7 +21,7 @@ ht-degree: 1%
 
 您可以變更AEM Forms工作區中顯示的字型。 在使用者介面的特定區段中使用的字型，會在樣式表的對應區段中定義。 您可以選擇性地變更使用者介面上的字型。
 
-請遵循 [AEM Forms工作區自訂的一般步驟](../../forms/using/generic-steps-html-workspace-customization.md) 並根據您的需求，遵循自訂CSS、HTML或兩者的步驟。
+請依照[AEM Forms工作區自訂的一般步驟](../../forms/using/generic-steps-html-workspace-customization.md)操作，並根據您的需求，依照自訂CSS、HTML或兩者的步驟操作。
 
 1. 在現有樣式中變更或新增字型系列。
 1. 變更或新增HTML元素的字型系列內嵌。
@@ -29,7 +29,7 @@ ht-degree: 1%
 
 例如，若要將頂端導覽列錨點文字的字型變更為Courier New，請遵循下列步驟：
 
-1. 透過存取登入CRXDE Lite `https://'[server]:[port]'/lc/crx/de/index.jsp`.
+1. 存取`https://'[server]:[port]'/lc/crx/de/index.jsp`以登入CRXDE Lite。
 1. 執行下列任一項作業：
 
    1. 若要變更現有樣式中的font-family，請在/apps/ws/css的newStyle.css檔案中新增下列專案。
@@ -40,7 +40,7 @@ ht-degree: 1%
       }
       ```
 
-   1. 若要為HTML元素新增字型系列內嵌，請複製 `/libs/ws/js/runtime/templates/appnavigation.html` 檔案到 `/apps/ws/js/runtime/templates/appnavigation.html`.
+   1. 若要為HTML元素新增字型系列內嵌，請將`/libs/ws/js/runtime/templates/appnavigation.html`檔案複製到`/apps/ws/js/runtime/templates/appnavigation.html`。
 
       更新/apps/ws/js/runtime/templates/appnavigation.html檔案，如下所示：
 
@@ -51,7 +51,7 @@ ht-degree: 1%
       <li class="preference"><a href="#/preferences" title="<%= $.t('index.header.topnav.preferences.detail')%>" style="font-family:Courier New;" ><%= $.t('index.header.topnav.preferences.name')%></a></li>
       ```
 
-      開啟/apps/ws/js/registry.js檔案進行編輯和取代 `text!/lc/libs/ws/js/runtime/templates/appnavigation.html` 替換為 `text!/lc/apps/ws/js/runtime/templates/appnavigation.html`.
+      開啟/apps/ws/js/registry.js檔案進行編輯，並將`text!/lc/libs/ws/js/runtime/templates/appnavigation.html`取代為`text!/lc/apps/ws/js/runtime/templates/appnavigation.html`。
 
    1. 若要新增定義font-family的樣式，請在/apps/ws/css的newStyle.css檔案中新增下列內容。
 

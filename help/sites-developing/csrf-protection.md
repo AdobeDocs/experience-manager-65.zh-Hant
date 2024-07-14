@@ -30,18 +30,18 @@ ht-degree: 0%
 
 ### 相依性 {#dependencies}
 
-任何依賴 `granite.jquery` 相依性可以自動受益於CSRF Protection Framework。 如果不是，則對於任何元件，您必須將相依性宣告至 `granite.csrf.standalone` 之後才能使用架構。
+任何依賴`granite.jquery`相依性的元件都可以自動受益於CSRF保護架構。 如果不是，則對於任何元件，您必須先宣告相依性給`granite.csrf.standalone`，才能使用架構。
 
 ### 復寫加密金鑰 {#replicating-crypto-keys}
 
-若要使用權杖，您需要將HMAC二進位檔復寫至部署中的所有執行個體。 另請參閱 [復寫HMAC金鑰](/help/sites-administering/encapsulated-token.md#replicating-the-hmac-key) 以取得更多詳細資料。
+若要使用權杖，您需要將HMAC二進位檔復寫至部署中的所有執行個體。 如需詳細資訊，請參閱[複製HMAC金鑰](/help/sites-administering/encapsulated-token.md#replicating-the-hmac-key)。
 
 >[!NOTE]
 >
->請務必也採取必要 [Dispatcher設定變更](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html) 以使用CSRF保護架構。
+>請務必也進行必要的[Dispatcher設定變更](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html)，以使用CSRF Protection Framework。
 
 >[!NOTE]
 >
->如果您將資訊清單快取搭配網頁應用程式使用，請務必新增&quot;**&amp;ast；**」至資訊清單，以確定權杖不會使CSRF權杖產生呼叫離線。 如需詳細資訊，請參閱此 [連結](https://www.w3.org/TR/offline-webapps/).
+>如果您將資訊清單快取與Web應用程式搭配使用，請務必將&quot;**&amp;amp；ast；**&quot;新增至資訊清單，以確定權杖不會使CSRF權杖產生呼叫離線。 如需詳細資訊，請參閱此[連結](https://www.w3.org/TR/offline-webapps/)。
 >
-如需有關CSRF攻擊和緩解其方法的詳細資訊，請參閱 [跨網站請求偽造OWASP頁面](https://owasp.org/www-community/attacks/csrf).
+如需有關CSRF攻擊和緩解其方法的詳細資訊，請參閱[跨網站請求偽造OWASP頁面](https://owasp.org/www-community/attacks/csrf)。

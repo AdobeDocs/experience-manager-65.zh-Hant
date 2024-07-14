@@ -41,22 +41,22 @@ ht-degree: 7%
 
 ### 工作流程 {#workflow}
 
-若要建立互動式通訊，請 [建置區塊](#buildingblocks) 互動式通訊就緒，然後完成下列步驟：
+若要建立互動式通訊，請準備好互動式通訊的[建置區塊](#buildingblocks)，然後完成下列步驟：
 
-1. 選擇以 [建立互動式通訊](/help/forms/using/create-interactive-communication.md).
+1. 選擇[建立互動式通訊](/help/forms/using/create-interactive-communication.md)。
 
-1. 指定 [表單資料模型](/help/forms/using/data-integration.md)，預填服務，以及 [列印和web channel範本](/help/forms/using/web-channel-print-channel.md). 您可以選擇從列印管道產生Web Channel。
+1. 指定[表單資料模型](/help/forms/using/data-integration.md)、預填服務，以及[列印與網路通道範本](/help/forms/using/web-channel-print-channel.md)。 您可以選擇從列印管道產生Web Channel。
 
-1. 使用 [拖放介面](/help/forms/using/introduction-interactive-communication-authoring.md)，視需要新增檔案片段、影像、元件以列印互動式通訊的Web管道。
+1. 使用[拖放介面](/help/forms/using/introduction-interactive-communication-authoring.md)，視需要新增檔案片段、影像、要列印的元件，以及互動式通訊的Web管道。
 1. 為插入的元件設定屬性，如下所示：
 
    1. [影像](/help/forms/using/create-interactive-communication.md#step2)
-   1. [表格](/help/forms/using/create-interactive-communication.md#tables) （包括佈局片段）
+   1. [資料表](/help/forms/using/create-interactive-communication.md#tables) （包含佈局片段）
    1. [圖表](/help/forms/using/chart-component-interactive-communications.md)
    1. [檔案片段](/help/forms/using/create-interactive-communication.md#document-fragment-properties)
 
 1. 預覽列印和Web管道，並在必要時編輯互動式通訊。
-1. 代理程式會使用Agent UI來 [準備互動式通訊](/help/forms/using/prepare-send-interactive-communication.md) 以傳送給收件者/貼文程式。
+1. 代理程式使用代理程式UI來[準備互動式通訊](/help/forms/using/prepare-send-interactive-communication.md)，以便傳送給收件者/張貼程式。
 
 ### 建置區塊 {#buildingblocks}
 
@@ -66,11 +66,11 @@ ht-degree: 7%
 - [列印和Web Channel範本](/help/forms/using/web-channel-print-channel.md)
 - [檔案片段](/help/forms/using/document-fragments.md)
 - 影像
-- [主題](/help/forms/using/themes.md) 針對Web channel
+- Web channel的[主題](/help/forms/using/themes.md)
 
 ## 互動式通訊與通訊管理 {#interactive-communications-vs-correspondence-management}
 
-互動式通訊是建立客戶通訊的預設和建議方法。 若要繼續使用在AEM 6.3 Forms和AEM 6.2 Forms中建立的字母，您需要 [安裝相容性套件](/help/forms/using/compatibility-package.md). 以下是互動式通訊與信函功能之間的比較。
+互動式通訊是建立客戶通訊的預設和建議方法。 若要繼續使用在AEM 6.3 Forms和AEM 6.2 Forms中建立的字母，您需要[安裝相容性套件](/help/forms/using/compatibility-package.md)。 以下是互動式通訊與信函功能之間的比較。
 
 <table>
  <tbody>

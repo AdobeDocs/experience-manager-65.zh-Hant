@@ -30,37 +30,37 @@ Granite標籤庫包含有用的函式。
 <%@include file="/libs/granite/ui/global.jsp"%>
 ```
 
-全域也會宣告 [Sling資料庫](/help/sites-developing/taglib.md#sling-tag-library).
+全域也會宣告[Sling程式庫](/help/sites-developing/taglib.md#sling-tag-library)。
 
 ```xml
 <%@taglib prefix="sling" uri="https://sling.apache.org/taglibs/sling" %>
 ```
 
-### &lt;ui:includeClientLib> {#ui-includeclientlib}
+### &lt;ui：includeClientLib> {#ui-includeclientlib}
 
-此 `<ui:includeClientLib>` tag包含AEM html使用者端資料庫，可以是js、css或主題資料庫。 對於不同型別的多個包含專案（例如js和css），此標籤必須在jsp中多次使用。 此標籤是便利的包裝函式，適用於 ` [com.adobe.granite.ui.clientlibs.HtmlLibraryManager](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/ui/clientlibs/HtmlLibraryManager.html)` 服務介面。
+`<ui:includeClientLib>`標籤包含AEM html使用者端資料庫，可以是js、css或主題資料庫。 對於不同型別的多個包含專案（例如js和css），此標籤必須在jsp中多次使用。 此標籤是` [com.adobe.granite.ui.clientlibs.HtmlLibraryManager](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/ui/clientlibs/HtmlLibraryManager.html)`服務介面的便利包裝函式。
 
 它具有下列屬性：
 
-**類別**  — 以逗號分隔的使用者端程式庫類別清單。 這包括指定類別的所有JavaScript和CSS資料庫。 主題名稱會從請求中擷取。
+**類別** — 逗號分隔的使用者端程式庫類別清單。 這包括指定類別的所有JavaScript和CSS資料庫。 主題名稱會從請求中擷取。
 
 相當於： `com.adobe.granite.ui.clientlibs.HtmlLibraryManager#writeIncludes`
 
-**主題**  — 以逗號分隔的使用者端程式庫類別清單。 這包括指定類別的所有主題相關資料庫（CSS和JS）。 主題名稱會從請求中擷取。
+**佈景主題** — 逗號分隔的使用者端程式庫類別清單。 這包括指定類別的所有主題相關資料庫（CSS和JS）。 主題名稱會從請求中擷取。
 
 相當於： `com.adobe.granite.ui.clientlibs.HtmlLibraryManager#writeThemeInclude`
 
-**js**  — 以逗號分隔的使用者端程式庫類別清單。 這包括指定類別的所有JavaScript程式庫。
+**js** — 逗號分隔的使用者端程式庫類別清單。 這包含指定類別的所有JavaScript資料庫。
 
 相當於： `com.adobe.granite.ui.clientlibs.HtmlLibraryManager#writeJsInclude`
 
-**css**  — 以逗號分隔的使用者端程式庫類別清單。 這包括指定類別的所有CSS資料庫。
+**css** — 以逗號分隔的使用者端程式庫類別清單。 這包括指定類別的所有CSS資料庫。
 
 相當於： `com.adobe.granite.ui.clientlibs.HtmlLibraryManager#writeCssInclude`
 
-**主題**  — 僅指示主題或非主題程式庫的標幟。 如果省略，則包含兩個集合。 僅適用於純JS或CSS includes （不適用於類別或主題包含）。
+**主題化** — 僅指示主題化或非主題化資料庫的標幟應包含在內。 如果省略，則包含兩個集合。 僅適用於純JS或CSS includes （不適用於類別或主題包含）。
 
-此 `<ui:includeClientLib>` 標籤的使用方式如下：
+`<ui:includeClientLib>`標籤可在jsp中使用，如下所示：
 
 ```xml
 <%-- all: js + theme (theme-js + css) --%>
@@ -88,7 +88,7 @@ CQ標籤庫包含有用的函式。
 
 >[!NOTE]
 >
->當 `/libs/foundation/global.jsp` 檔案包含在指令碼中，taglib會自動宣告。
+>當`/libs/foundation/global.jsp`檔案包含在指令碼中時，會自動宣告taglib。
 
 開發AEM元件的jsp指令碼時，建議在指令碼頂端包含下列程式碼：
 
@@ -96,37 +96,37 @@ CQ標籤庫包含有用的函式。
 <%@include file="/libs/foundation/global.jsp"%>
 ```
 
-它會宣告sling、CQ和jstl taglibs，並公開 [`<cq:defineObjects />`](#amp-lt-cq-defineobjects) 標籤之間。 這縮短並簡化元件的jsp程式碼。
+它會宣告sling、CQ和jstl taglibs，並公開[`<cq:defineObjects />`](#amp-lt-cq-defineobjects)標籤所定義的定期使用指令碼物件。 這縮短並簡化元件的jsp程式碼。
 
-### &lt;cq:text> {#cq-text}
+### &lt;cq：text> {#cq-text}
 
-此 `<cq:text>` 標籤是便利的標籤，可在JSP中輸出元件文字。
+`<cq:text>`標籤是便利的標籤，可在JSP中輸出元件文字。
 
 它具有下列選擇性屬性：
 
-**屬性**  — 要使用的屬性名稱。 此名稱是相對於目前資源的名稱。
+**屬性** — 要使用的屬性名稱。 此名稱是相對於目前資源的名稱。
 
-**值**  — 用於輸出的值。 如果此屬性存在，則會覆寫屬性屬性的使用。
+**value** — 要用於輸出的值。 如果此屬性存在，則會覆寫屬性屬性的使用。
 
-**舊值**  — 用於差異輸出的值。 如果此屬性存在，則會覆寫屬性屬性的使用。
+**oldValue** — 要用於diff輸出的值。 如果此屬性存在，則會覆寫屬性屬性的使用。
 
-**escapeXml**  — 定義產生的字串中的字元&lt;、>、&amp;、&#39;和&#39;&#39;是否應轉換為對應的字元實體代碼。 預設值為false。 逸出套用在選擇性格式之後。
+**escapeXml** — 定義是否應將結果字串中的字元&lt;、>、&amp;、&#39;和&#39;&#39;轉換為對應的字元實體代碼。 預設值為false。 逸出套用在選擇性格式之後。
 
-**格式**  — 選擇性的java.text.Format，用於格式化文字。
+**format** — 用於格式化文字的可選java.text.Format。
 
-**noDiff**  — 抑制差異輸出的計算，即使存在差異資訊。
+**noDiff** — 即使存在diff資訊，也會抑制差異輸出的計算。
 
-**標籤類別**  — 將包圍非空白輸出的元素的CSS類別名稱。 如果留空，則不會新增任何元素。
+**tagClass** — 將包圍非空白輸出的專案的CSS類別名稱。 如果留空，則不會新增任何元素。
 
-**tagName**  — 將包圍非空白輸出的元素名稱。 其預設值為DIV。
+**tagName** — 將包圍非空白輸出的元素名稱。 其預設值為DIV。
 
-**預留位置**  — 在編輯模式下用於空或空白文字的預設值，也就是預留位置。 預設檢查會在選擇性格式化和逸出之後執行，即依照原樣寫入輸出。 其預設值為：
+**預留位置** — 在編輯模式下用於空值或空白文字的預設值，也就是預留位置。 預設檢查會在選擇性格式化和逸出之後執行，即依照原樣寫入輸出。 其預設值為：
 
 `<div><span class="cq-text-placeholder">&para;</span></div>`
 
-**預設**  — 用於空或空白文字的預設值。 預設檢查會在選擇性格式化和逸出之後執行，也就是說，會依原樣寫入輸出。
+**預設** — 要用於Null或空白文字的預設值。 預設檢查會在選擇性格式化和逸出之後執行，也就是說，會依原樣寫入輸出。
 
-以下範例說明 `<cq:text>` 標籤可用於JSP中：
+如何在JSP中使用`<cq:text>`標籤的一些範例：
 
 ```xml
 <cq:text property="jcr:title" tagName="h2"/>
@@ -156,36 +156,36 @@ CQ標籤庫包含有用的函式。
 <cq:text property="text" tagClass="text"/>
 ```
 
-### &lt;cq:setContentBundle> {#cq-setcontentbundle}
+### &lt;cq：setContentBundle> {#cq-setcontentbundle}
 
-此 `<cq:setContentBundle>` 標籤會建立i18n本地化內容，並儲存在 `javax.servlet.jsp.jstl.fmt.localizationContext` 設定變數。
+`<cq:setContentBundle>`標籤會建立i18n本地化內容，並將其儲存在`javax.servlet.jsp.jstl.fmt.localizationContext`設定變數中。
 
 它具有下列屬性：
 
-**語言**  — 要擷取資源套件的地區設定的語言。
+**語言** — 要擷取資源套件的地區設定的語言。
 
-**來源**  — 地區設定的來源位置。 它可以設定為下列其中一個值：
+**source** — 地區設定應該取用的來源。 它可以設定為下列其中一個值：
 
-* **靜態**  — 地區設定取自 `language` 屬性（如果可用），否則從伺服器預設地區設定。
+* **靜態** — 地區設定是從`language`屬性取得（如果有的話），否則是從伺服器預設地區設定取得。
 
-* **頁面**  — 地區設定會從目前頁面或資源的語言取得（如果有的話），否則會從 `language` 屬性（如果可用），否則從伺服器預設地區設定。
+* **page** — 地區設定是取自目前頁面的語言或資源（如果有的話），否則取自`language`屬性（如果有的話），否則取自伺服器預設地區設定。
 
-* **請求**  — 地區設定是從請求地區設定( `request.getLocale()`)。
+* **要求** — 地區設定取自要求地區設定( `request.getLocale()`)。
 
-* **自動**  — 地區設定取自 `language` 屬性（若有），否則會來自目前頁面的語言或資源（若有），否則會來自請求。
+* **auto** — 地區設定會取自`language`屬性（如果有的話），否則會取自目前頁面或資源的語言（如果有的話），否則會取自要求。
 
-如果 `source` 屬性未設定：
+如果未設定`source`屬性：
 
-* 如果 `language` 屬性已設定，則 `source` 屬性預設為&quot; `static`.
+* 如果已設定`language`屬性，`source`屬性會預設為&quot; `static`。
 
-* 如果 `language` 屬性未設定， `source` 屬性預設為 `auto`.
+* 如果未設定`language`屬性，`source`屬性會預設為`auto`。
 
-「內容套件」可供標準JSTL使用 `<fmt:message>` 標籤之間。 依索引鍵查詢訊息有兩個方面：
+「內容組合」可供標準JSTL `<fmt:message>`標籤使用。 依索引鍵查詢訊息有兩個方面：
 
 1. 首先，系統搜尋轉譯之基礎資源的JCR屬性以取得翻譯。 這可讓您定義簡單元件對話方塊以編輯這些值。
-1. 如果節點不包含名稱與索引鍵完全相同的屬性，則備援是從sling請求( `SlingHttpServletRequest.getResourceBundle(Locale)`)。 此套裝的語言或地區設定是由的語言和來源屬性所定義 `<cq:setContentBundle>` 標籤之間。
+1. 如果節點未包含名稱與索引鍵完全相同的屬性，則備援是從Sling要求( `SlingHttpServletRequest.getResourceBundle(Locale)`)載入資源組合。 此組合語言或地區設定是由`<cq:setContentBundle>`標籤的語言和來源屬性所定義。
 
-此 `<cq:setContentBundle>` 標籤的使用方式如下。
+`<cq:setContentBundle>`標籤可在jsp中使用，如下所示。
 
 對於定義其語言的頁面：
 
@@ -203,9 +203,9 @@ CQ標籤庫包含有用的函式。
 </div> ...
 ```
 
-### &lt;cq:include> {#cq-include}
+### &lt;cq：include> {#cq-include}
 
-此 `<cq:include>` 標籤包含進入目前頁面的資源。
+`<cq:include>`標籤包含進入目前頁面的資源。
 
 它具有下列屬性：
 
@@ -243,45 +243,45 @@ CQ標籤庫包含有用的函式。
 </div>
 ```
 
-您是否應使用 `<%@ include file="myScript.jsp" %>` 或 `<cq:include script="myScript.jsp" %>` 是否要包含指令碼？
+您應該使用`<%@ include file="myScript.jsp" %>`或`<cq:include script="myScript.jsp" %>`來包含指令碼？
 
-* 此 `<%@ include file="myScript.jsp" %>` 指示詞會通知JSP編譯器將完整的檔案加入目前的檔案中。 就好像所包含檔案的內容直接貼到原始檔案中一樣。
-* 使用 `<cq:include script="myScript.jsp">` 標籤中，檔案會包含在執行階段中。
+* `<%@ include file="myScript.jsp" %>`指示詞會通知JSP編譯器將完整的檔案加入目前的檔案中。 就好像所包含檔案的內容直接貼到原始檔案中一樣。
+* 使用`<cq:include script="myScript.jsp">`標籤時，會在執行階段包含檔案。
 
-您是否應使用 `<cq:include>` 或 `<sling:include>`？
+您應該使用`<cq:include>`或`<sling:include>`嗎？
 
-* 開發AEM元件時，Adobe建議您使用 `<cq:include>`.
-* `<cq:include>` 可讓您在使用script屬性時直接依名稱包含指令檔。 這會將元件和資源型別繼承列入考量，且通常比使用選擇器和擴充功能嚴格遵守Sling的指令碼解析更簡單。
+* 開發AEM元件時，Adobe建議您使用`<cq:include>`。
+* `<cq:include>`可讓您在使用script屬性時，直接依名稱包含指令碼檔案。 這會將元件和資源型別繼承列入考量，且通常比使用選擇器和擴充功能嚴格遵守Sling的指令碼解析更簡單。
 
-### &lt;cq:includeClientLib> {#cq-includeclientlib}
+### &lt;cq：includeClientLib> {#cq-includeclientlib}
 
 >[!CAUTION]
 >
->`<cq:includeClientLib>` 自AEM 5.6起已棄用。 [`<ui:includeClientLib>`](/help/sites-developing/taglib.md#ui-includeclientlib) 應該改用。
+>`<cq:includeClientLib>`自AEM 5.6起已過時。應改用[`<ui:includeClientLib>`](/help/sites-developing/taglib.md#ui-includeclientlib)。
 
-此 `<cq:includeClientLib>` tag包含AEM html使用者端資料庫，可以是js、css或主題資料庫。 對於不同型別的多個包含專案（例如js和css），此標籤必須在jsp中多次使用。 此標籤是便利的包裝函式，適用於 `com.day.cq.widget.HtmlLibraryManager` 服務介面。
+`<cq:includeClientLib>`標籤包含AEM html使用者端資料庫，可以是js、css或主題資料庫。 對於不同型別的多個包含專案（例如js和css），此標籤必須在jsp中多次使用。 此標籤是`com.day.cq.widget.HtmlLibraryManager`服務介面的便利包裝函式。
 
 它具有下列屬性：
 
-**類別**  — 以逗號分隔的使用者端程式庫類別清單。 這包括指定類別的所有JavaScript和CSS資料庫。 主題名稱會從請求中擷取。
+**類別** — 逗號分隔的使用者端程式庫類別清單。 這包括指定類別的所有JavaScript和CSS資料庫。 主題名稱會從請求中擷取。
 
 相當於： `com.day.cq.widget.HtmlLibraryManager#writeIncludes`
 
-**主題**  — 以逗號分隔的使用者端程式庫類別清單。 這包括指定類別的所有主題相關資料庫（CSS和JS）。 主題名稱會從請求中擷取。
+**佈景主題** — 逗號分隔的使用者端程式庫類別清單。 這包括指定類別的所有主題相關資料庫（CSS和JS）。 主題名稱會從請求中擷取。
 
 相當於： `com.day.cq.widget.HtmlLibraryManager#`writeThemeInclude
 
-**js**  — 以逗號分隔的使用者端程式庫類別清單。 這包括指定類別的所有JavaScript程式庫。
+**js** — 逗號分隔的使用者端程式庫類別清單。 這包含指定類別的所有JavaScript資料庫。
 
 相當於： `com.day.cq.widget.HtmlLibraryManager#writeJsInclude`
 
-**css**  — 以逗號分隔的使用者端程式庫類別清單。 這包括指定類別的所有CSS資料庫。
+**css** — 以逗號分隔的使用者端程式庫類別清單。 這包括指定類別的所有CSS資料庫。
 
 相當於： `com.day.cq.widget.HtmlLibraryManager#writeCssInclude`
 
-**主題**  — 僅指示主題或非主題程式庫的標幟。 如果省略，則包含兩個集合。 僅適用於純JS或CSS includes （不適用於類別或主題包含）。
+**主題化** — 僅指示主題化或非主題化資料庫的標幟應包含在內。 如果省略，則包含兩個集合。 僅適用於純JS或CSS includes （不適用於類別或主題包含）。
 
-此 `<cq:includeClientLib>` 標籤的使用方式如下：
+`<cq:includeClientLib>`標籤可在jsp中使用，如下所示：
 
 ```xml
 <%-- all: js + theme (theme-js + css) --%>
@@ -297,9 +297,9 @@ CQ標籤庫包含有用的函式。
 <cq:includeClientLib css="cq.collab.calendar, cq.security" />
 ```
 
-### &lt;cq:defineObjects> {#cq-defineobjects}
+### &lt;cq：defineObjects> {#cq-defineobjects}
 
-此 `<cq:defineObjects>` 標籤會公開以下定期使用的指令碼物件，以供開發人員參考。 它也會公開由定義的物件 [`<sling:defineObjects>`](#amp-lt-sling-defineobjects) 標籤之間。
+`<cq:defineObjects>`標籤會公開下列定期使用的指令碼物件，以供開發人員參考。 它也會公開[`<sling:defineObjects>`](#amp-lt-sling-defineobjects)標籤所定義的物件。
 
 **componentContext**
 
@@ -313,11 +313,11 @@ CQ標籤庫包含有用的函式。
 
 * 目前頁面的目前設計物件(com.day.cq.wcm.api.designer.Design介面)。
 
-**currentpage**
+**currentPage**
 
 * 目前的AEM WCM頁面物件(com.day.cq.wcm.api.Page介面)。
 
-**目前樣式**
+**currentStyle**
 
 * 目前儲存格的目前樣式物件(com.day.cq.wcm.api.designer.Style介面)。
 
@@ -350,7 +350,7 @@ CQ標籤庫包含有用的函式。
 * 資源頁面物件(com.day.cq.wcm.api.Page介面)。
 * 它具有下列屬性：
 
-**requestname**
+**requestName**
 
 * 繼承自sling
 
@@ -382,11 +382,11 @@ CQ標籤庫包含有用的函式。
 
 * 特定於wcm
 
-**editContextname**
+**editContextName**
 
 * 特定於wcm
 
-**propertiesName**
+**屬性名稱**
 
 * 特定於wcm
 
@@ -406,7 +406,7 @@ CQ標籤庫包含有用的函式。
 
 * 特定於wcm
 
-**componentname**
+**componentName**
 
 * 特定於wcm
 
@@ -437,19 +437,19 @@ CQ標籤庫包含有用的函式。
 
 >[!NOTE]
 >
->當 `/libs/foundation/global.jsp` 檔案包含在指令碼中， `<cq:defineObjects />` 標籤會自動包含在內。
+>當`/libs/foundation/global.jsp`檔案包含在指令碼中時，會自動包含`<cq:defineObjects />`標籤。
 
-### &lt;cq:requestURL> {#cq-requesturl}
+### &lt;cq：requestURL> {#cq-requesturl}
 
-此 `<cq:requestURL>` 標籤會將目前的請求URL寫入JspWriter。 兩個標籤 [`<cq:addParam>`](#amp-lt-cq-addparam) 和 [`<cq:removeParam>`](#amp-lt-cq-removeparam) 和可用於此標籤內文中，在寫入前修改目前的請求URL。
+`<cq:requestURL>`標籤會將目前的請求URL寫入JspWriter。 兩個標籤[`<cq:addParam>`](#amp-lt-cq-addparam)和[`<cq:removeParam>`](#amp-lt-cq-removeparam)和可以在此標籤內文中使用，以便在寫入前修改目前的要求URL。
 
 它可讓您使用各種引數建立目前頁面的連結。 例如，這可讓您轉換請求：
 
-`mypage.html?mode=view&query=something` 到 `mypage.html?query=something`.
+`mypage.html?mode=view&query=something`到`mypage.html?query=something`。
 
-使用 `addParam` 或 `removeParam` 只會變更指定引數的出現位置，所有其他引數則不受影響。
+使用`addParam`或`removeParam`只會變更指定引數的發生次數，所有其他引數則不受影響。
 
-`<cq:requestURL>` 沒有任何屬性。
+`<cq:requestURL>`沒有任何屬性。
 
 範例：
 
@@ -461,9 +461,9 @@ CQ標籤庫包含有用的函式。
 <a title="filter results" href="<cq:requestURL><cq:addParam name="language" value="${bucket.value}"/></cq:requestURL>">${label} (${bucket.count})</a>
 ```
 
-### &lt;cq:addParam> {#cq-addparam}
+### &lt;cq：addParam> {#cq-addparam}
 
-此 `<cq:addParam>` 標籤會將具有給定名稱和值的請求引數新增到結尾處 [`<cq:requestURL>`](#amp-lt-cq-requesturl) 標籤之間。
+`<cq:addParam>`標籤會將具有指定名稱和值的要求引數新增至結尾的[`<cq:requestURL>`](#amp-lt-cq-requesturl)標籤。
 
 它具有下列屬性：
 
@@ -481,9 +481,9 @@ CQ標籤庫包含有用的函式。
 <a title="filter results" href="<cq:requestURL><cq:addParam name="language" value="${bucket.value}"/></cq:requestURL>">${label} (${bucket.count})</a>
 ```
 
-### &lt;cq:removeParam> {#cq-removeparam}
+### &lt;cq：removeParam> {#cq-removeparam}
 
-此 `<cq:removeParam>` 標籤會從結尾處移除具有指定名稱和值的請求引數 [`<cq:requestURL>`](#amp-lt-cq-requesturl) 標籤之間。 如果未提供值，則會移除具有指定名稱的所有引數。
+`<cq:removeParam>`標籤會從封閉[`<cq:requestURL>`](#amp-lt-cq-requesturl)標籤中移除具有指定名稱和值的要求引數。 如果未提供值，則會移除具有指定名稱的所有引數。
 
 它具有下列屬性：
 
@@ -509,11 +509,11 @@ Sling標籤資料庫包含實用的Sling函式。
 
 >[!NOTE]
 >
->當 `/libs/foundation/global.jsp` 檔案包含在指令碼中，則會自動宣告sling taglib。
+>當`/libs/foundation/global.jsp`檔案包含在指令碼中時，會自動宣告sling taglib。
 
-### &lt;sling:include> {#sling-include}
+### &lt;sling：include> {#sling-include}
 
-此 `<sling:include>` 標籤包含進入目前頁面的資源。
+`<sling:include>`標籤包含進入目前頁面的資源。
 
 它具有下列屬性：
 
@@ -521,7 +521,7 @@ Sling標籤資料庫包含實用的Sling函式。
 
 * 布林值，定義在包含目標之前是否清除輸出。
 
-**resource**
+**資源**
 
 * 要包含在目前要求處理中的資源物件。 必須指定資源或路徑。 如果同時指定兩者，則資源優先。
 
@@ -548,7 +548,7 @@ Sling標籤資料庫包含實用的Sling函式。
 
 >[!NOTE]
 >
->資源的解析度以及隨附的指令碼 `<sling:include>` 標籤與一般sling URL解析度相同。 依預設，也會將目前請求中的選取器、擴充功能等用於包含的指令碼。 可透過標籤屬性來修改它們：例如， `replaceSelectors="foo.bar"` 可讓您覆寫選擇器。
+>`<sling:include>`標籤所包含的資源與指令碼的解析度與一般的Sling URL解析度相同。 依預設，也會將目前請求中的選取器、擴充功能等用於包含的指令碼。 它們可以透過標籤屬性進行修改：例如，`replaceSelectors="foo.bar"`可讓您覆寫選取器。
 
 範例：
 
@@ -576,9 +576,9 @@ Sling標籤資料庫包含實用的Sling函式。
 <sling:include replaceSelectors="content" />
 ```
 
-### &lt;sling:defineObjects> {#sling-defineobjects}
+### &lt;sling：defineObjects> {#sling-defineobjects}
 
-此 `<sling:defineObjects>` 標籤會公開下列定期使用的指令碼物件，以供開發人員參考：
+`<sling:defineObjects>`標籤會公開下列定期使用的指令碼物件，以供開發人員參考：
 
 **slingRequest**
 
@@ -586,7 +586,7 @@ Sling標籤資料庫包含實用的Sling函式。
 
 **slingResponse**
 
-* SlingHttpServletResponse物件，可存取伺服器所建立的HTTP回應。 這與它延伸的HttpServletResponse相同。**請求**
+* SlingHttpServletResponse物件，可存取伺服器所建立的HTTP回應。 這與它延伸的HttpServletResponse相同。**要求**
 * 純HttpServletRequest的標準JSP要求物件。**回應**
 * 標準JSP回應物件，純HttpServletResponse。
 
@@ -598,11 +598,11 @@ Sling標籤資料庫包含實用的Sling函式。
 
 * SlingScriptHelper物件，包含方便使用的指令碼方法，主要是sling.include(&#39;/some/other/resource&#39;)，用於將其他資源的回應包含在此回應中（例如內嵌標題html片段）和sling.getService(foo.bar.Service.class)，以擷取Sling中可用的OSGi服務（類別標籤法取決於指令碼語言）。
 
-**resource**
+**資源**
 
 * 目前要處理的資源物件，視請求的URL而定。 它與slingRequest.getResource()相同。
 
-**目前節點**
+**currentNode**
 
 * 如果目前資源指向JCR節點（這通常是Sling中的情況），這可提供對Node物件的直接存取。 否則不會定義此物件。
 
@@ -612,7 +612,7 @@ Sling標籤資料庫包含實用的Sling函式。
 
 * 它具有下列屬性：
 
-**requestname**
+**requestName**
 
 **responseName**
 
@@ -633,7 +633,7 @@ l **ogName resourceResolverName**
 
 ## JSTL標籤庫 {#jstl-tag-library}
 
-此 [JavaServer Pages Standard Tag Library](https://www.oracle.com/java/technologies/java-server-tag-library.html) 包含許多實用的標準標籤。 核心、格式和函式taglibs是由 `/libs/foundation/global.jsp` 如下列程式碼片段所示。
+[JavaServer Pages標準標籤庫](https://www.oracle.com/java/technologies/java-server-tag-library.html)包含許多有用的標準標籤。 核心、格式和函式taglibs由`/libs/foundation/global.jsp`定義，如下列程式碼片段所示。
 
 ### /libs/foundation/global.jsp擷取 {#extract-of-libs-foundation-global-jsp}
 
@@ -643,4 +643,4 @@ l **ogName resourceResolverName**
 <%@taglib prefix="fn" uri="https://java.sun.com/jsp/jstl/functions" %>
 ```
 
-匯入 `/libs/foundation/global.jsp` 檔案（如先前所述），您可以使用 `c`， `fmt` 和 `fn` 存取這些taglibs的前置詞。 JSTL的官方檔案可在以下網址取得： [Java™ EE 5教學課程 — JavaServer Pages Standard Tag Library](https://docs.oracle.com/javaee/5/tutorial/doc/bnakc.html).
+依照之前的說明匯入`/libs/foundation/global.jsp`檔案後，您可以使用`c`、`fmt`和`fn`首碼來存取這些taglibs。 您可以在[Java™ EE 5教學課程 — JavaServer Pages Standard Tag Library](https://docs.oracle.com/javaee/5/tutorial/doc/bnakc.html)取得JSTL的官方檔案。

@@ -32,27 +32,27 @@ Adobe Experience Manager (AEM)是AEM表單不可或缺的一部分。 因此，�
 
 AEM Forms備份策略包含兩種型別的備份：
 
-**系統影像：** 完整的系統備份，可在硬碟或整部電腦停止運作時，用來還原電腦的內容。 只有在部署AEM表單之前，才需要系統映像備份。 然後，內部公司政策會規定系統影像備份的頻率。
+**系統映像：**&#x200B;完整的系統備份，可在硬碟或整部電腦停止運作時，用來還原電腦的內容。 只有在部署AEM表單之前，才需要系統映像備份。 然後，內部公司政策會規定系統影像備份的頻率。
 
-**AEM表單特定資料：** 應用程式資料存在於資料庫、全域檔案儲存(GDS)和AEM儲存庫中，而且必須即時備份。 GDS是用來儲存處理程式中所使用之長期檔案的目錄。 這些檔案可能包含PDF、原則或表單範本。
+**AEM表單特定資料：**&#x200B;應用程式資料存在於資料庫、全域檔案儲存(GDS)和AEM儲存庫中，且必須即時備份。 GDS是用來儲存處理程式中所使用之長期檔案的目錄。 這些檔案可能包含PDF、原則或表單範本。
 
 >[!NOTE]
 >
->如果已安裝Content Services （已棄用），請一併備份內容儲存根目錄。 另請參閱 [內容儲存根目錄（僅限Content Services）](/help/forms/using/admin-help/files-back-recover.md#content-storage-root-directory-content-services-only).
+>如果已安裝Content Services （已棄用），請一併備份內容儲存根目錄。 請參閱[內容儲存根目錄（僅限Content Services）](/help/forms/using/admin-help/files-back-recover.md#content-storage-root-directory-content-services-only)。
 
 資料庫可用來儲存表單成品、服務組態、處理狀態，以及GDS檔案的資料庫參考。 如果您在資料庫中啟用了檔案儲存，則GDS中的永久資料和檔案也會儲存在資料庫中。 您可以使用下列方法來備份及復原資料庫：
 
-* **快照備份** 模式表示AEM forms系統處於無限期備份模式，或在指定的分鐘數內處於備份模式，之後將不再啟用備份模式。 若要進入或離開快照備份模式，您可以使用下列其中一個選項。 在復原案例之後，不應啟用快照備份模式。
+* **快照集備份**&#x200B;模式表示AEM表單系統處於無限期備份模式，或持續指定的分鐘數，之後不再啟用備份模式。 若要進入或離開快照備份模式，您可以使用下列其中一個選項。 在復原案例之後，不應啟用快照備份模式。
 
    * 使用「管理主控台」中的「備份設定值」頁面。 若要進入快照模式，請選取「在安全備份模式下操作」核取方塊。 取消選取核取方塊以結束快照模式。
-   * 使用LCBackupMode指令碼(請參閱 [備份資料庫、GDS和內容儲存根目錄](/help/forms/using/admin-help/backing-aem-forms-data.md#back-up-the-database-gds-aem-repository-and-content-storage-root-directories))。 若要結束快照備份模式，請在指令碼引數中，設定 `continuousCoverage` 引數至 `false` 或使用 `leaveContinuousCoverage` 選項。
-   * 使用提供的Backup/Recovery API。 <!-- Fix broken link(see AEM forms API Reference section on AEM Forms Help and Tutorials page).-->
+   * 使用LCBackupMode指令碼（請參閱[備份資料庫、GDS和內容儲存根目錄](/help/forms/using/admin-help/backing-aem-forms-data.md#back-up-the-database-gds-aem-repository-and-content-storage-root-directories)）。 若要結束快照集備份模式，請在指令碼引數中，將`continuousCoverage`引數設定為`false`或使用`leaveContinuousCoverage`選項。
+   * 使用提供的備份/復原API。<!-- Fix broken link(see AEM forms API Reference section on AEM Forms Help and Tutorials page).-->
 
-* **正在捲動備份** 模式表示系統始終處於備份模式，一旦釋放上一個工作階段，就會啟動新的備份模式工作階段。 沒有與滾動備份模式相關的逾時。 呼叫LCBackupMode指令碼或API以離開滾動備份模式時，就會開始新的滾動備份模式工作階段。 此模式在支援連續備份時非常有用，但仍允許從GDS目錄中清除舊的和不需要的檔案。 不支援透過「備份與復原」頁面來捲動備份模式。 復原情況後，仍會啟用捲動備份模式。 您可以使用LCBackupMode指令碼搭配使用，離開連續備份模式（滾動備份模式）。 `leaveContinuousCoverage` 選項。
+* **正在捲動備份**&#x200B;模式表示系統一律處於備份模式，前一工作階段一經釋出就會啟動新的備份模式工作階段。 沒有與滾動備份模式相關的逾時。 呼叫LCBackupMode指令碼或API以離開滾動備份模式時，就會開始新的滾動備份模式工作階段。 此模式在支援連續備份時非常有用，但仍允許從GDS目錄中清除舊的和不需要的檔案。 不支援透過「備份與復原」頁面來捲動備份模式。 復原情況後，仍會啟用捲動備份模式。 您可以使用包含`leaveContinuousCoverage`選項的LCBackupMode指令碼，離開連續備份模式（滾動備份模式）。
 
 >[!NOTE]
 >
->離開捲動備份模式會立即開始新的備份模式工作階段。 若要完全停用滾動備份模式，請使用 `leaveContinuousCoverage` 指令碼中的選項，可覆寫現有的滾動備份工作階段。 當處於快照備份模式時，您可以像往常一樣離開備份模式。
+>離開捲動備份模式會立即開始新的備份模式工作階段。 若要完全停用滾動備份模式，請使用指令碼中的`leaveContinuousCoverage`選項，這會覆寫現有的滾動備份工作階段。 當處於快照備份模式時，您可以像往常一樣離開備份模式。
 
 為了防止資料遺失，AEM表單特定資料的備份方式必須確保GDS和內容儲存根目錄檔案與資料庫參照相互關聯。
 
@@ -81,10 +81,10 @@ AEM Forms備份策略包含兩種型別的備份：
 1. 以維護模式啟動系統。
 1. 請務必在維護模式下將表單管理員與AEM表單同步：
 
-   1. 前往https://&lt;*伺服器*>：&lt;*連線埠*>/lc/fm並使用管理員/密碼憑證登入。
+   1. 移至https://&lt;*伺服器*>：&lt;*連線埠*>/lc/fm並使用管理員/密碼認證登入。
    1. 按一下右上角的使用者名稱（此案例中為「超級管理員」）。
-   1. 按一下 **管理員選項**.
-   1. 按一下 **開始** 從存放庫同步資產。
+   1. 按一下&#x200B;**管理選項**。
+   1. 按一下&#x200B;**開始**，從存放庫同步資產。
 
 1. 在叢集環境中，主要節點(相對於AEM)應在次要節點之前。
 1. 在驗證系統的正常作業之前，請確定沒有從內部或外部來源(例如Web、SOAP或EJB處理起始器)起始任何處理。
@@ -105,10 +105,10 @@ AEM Forms備份策略包含兩種型別的備份：
 
 在叢集環境中，所有叢集節點在備份前和復原後的儲存庫檔案系統路徑設定應該相同。
 
-使用 `LCSetGDS`中的指令碼 `[*aem-forms root]*\sdk\misc\Foundation\SetGDSCommandline` 資料夾設定GDS路徑。 請參閱 `ReadMe.txt` 檔案來取得詳細資訊。 如果無法使用舊的GDS目錄路徑， `LCSetGDS` 啟動AEM表單之前，必須使用指令碼來設定GDS的新路徑。
+變更檔案系統路徑後，請使用`[*aem-forms root]*\sdk\misc\Foundation\SetGDSCommandline`資料夾中的`LCSetGDS`指令碼來設定GDS路徑。 如需詳細資訊，請參閱相同資料夾中的`ReadMe.txt`檔案。 如果無法使用舊的GDS目錄路徑，則必須使用`LCSetGDS`指令碼來設定GDS的新路徑，然後再啟動AEM表單。
 
 >[!NOTE]
 >
->只有在這種情況下，您才應該使用此指令碼來變更GDS位置。 若要在AEM表單執行時變更GDS位置，請使用管理主控台。 (請參閱 [設定一般AEM表單設定](/help/forms/using/admin-help/configure-general-aem-forms-settings.md#configure-general-aem-forms-settings)*.) *
+>只有在這種情況下，您才應該使用此指令碼來變更GDS位置。 若要在AEM表單執行時變更GDS位置，請使用管理主控台。 (請參閱[設定一般AEM表單設定](/help/forms/using/admin-help/configure-general-aem-forms-settings.md#configure-general-aem-forms-settings)*。) *
 
 設定GDS路徑後，請以維護模式啟動Forms伺服器，然後使用管理主控台更新新節點的剩餘檔案系統路徑。 確認所有必要的設定均已更新後，請重新啟動並測試AEM表單。

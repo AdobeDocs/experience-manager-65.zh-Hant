@@ -25,7 +25,7 @@ ht-degree: 39%
 
 ## Adobe Experience Manager 6.5 Forms Service Pack 19 (6.5.19.0)包含的內容
 
-Experience Manager6.5.19.0包括自2019年4月6.5首次發行以來所推出的新功能、客戶要求的重要增強功能、錯誤修正，以及效能、穩定性和安全性改善專案。 [安裝此Service Pack](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/aem-forms-current-service-pack-installation-instructions.html) 在Experience Manager6.5上。
+Experience Manager6.5.19.0包括自2019年4月6.5首次發行以來所推出的新功能、客戶要求的重要增強功能、錯誤修正，以及效能、穩定性和安全性改善專案。 [在Experience Manager6.5上安裝此Service Pack](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/aem-forms-current-service-pack-installation-instructions.html)。
 
 ### 新功能
 
@@ -37,21 +37,21 @@ Experience Manager6.5.19.0包括自2019年4月6.5首次發行以來所推出的�
 
 * **[條款與條件元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/terms-and-conditions.html)**：以核心元件為主的最適化表單現在可以包含條款與條件元件。它允許表單作者在表單中引入特定區段，向使用者顯示與使用服務、產品或平台相關的條款、條件或法律協議。此元件的設計用意是在告知使用者他們透過提交表單同意的規則、法規和義務。
 
-  ![垂直標籤、條款與條件以及核取方塊元件](/help/forms/using/assets/forms-components.png)
+  ![垂直標籤、條款與條件及核取方塊元件](/help/forms/using/assets/forms-components.png)
 
 * **[垂直標籤元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/vertical-tabs.html)**：以核心元件為主的最適化表單現在可以將表單內容組織成垂直的標籤清單，提供結構化、可導覽的版面。在表單中使用垂直標籤可以簡化導覽和改進表單內容組織，進而提升使用者整體體驗，特別是在表單包含多個部分或複雜資訊時。
 
 #### 64位元版AEM Forms Designer
 
-此 [64位元版AEM Forms Designer](/help/forms/using/installing-configuring-designer.md) 提供更優異的效能、擴充能力及記憶體管理功能，讓您擁有更優異的表單建立體驗。 透過 64 位元架構，您可以輕鬆處理更大、更複雜的專案，確保設計工作流程流暢和最佳效率。透過這最先進的版本，提升您的表單設計能力並擁抱 AEM Forms Designer 的未來。
+[64位元版本的AEM Forms Designer](/help/forms/using/installing-configuring-designer.md)提供增強的效能、擴充能力及記憶體管理，讓您能夠建立表單。 透過 64 位元架構，您可以輕鬆處理更大、更複雜的專案，確保設計工作流程流暢和最佳效率。透過這最先進的版本，提升您的表單設計能力並擁抱 AEM Forms Designer 的未來。
 
 #### 連線最適化Forms與Microsoft® SharePoint清單
 
-AEM Forms提供開箱即用的整合，以便 [直接將表單資料提交至SharePoint清單](/help/forms/using/configuring-submit-actions.md#submit-to-microsoft&reg;-sharepoint-list))，讓您使用SharePoint的清單功能。 您可以將Microsoft® SharePoint清單設定為表單資料模型的資料來源，並使用使用表單資料模型提交動作來連線最適化表單與SharePoint清單。
+AEM Forms提供立即可用的整合，可[將表單資料直接提交至SharePoint清單](/help/forms/using/configuring-submit-actions.md#submit-to-microsoft&reg;-sharepoint-list))，讓您使用SharePoint的清單功能。 您可以將Microsoft® SharePoint清單設定為表單資料模型的資料來源，並使用使用表單資料模型提交動作來連線最適化表單與SharePoint清單。
 
 #### 支援為最適化表單片段設定記錄檔案屬性
 
-您現在可以輕鬆地 [在自適應表單編輯器中自訂您的自適應表單片段及其欄位](/help/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md).
+您現在可以輕鬆[自訂最適化表單編輯器中的最適化表單片段及其欄位](/help/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md)。
 
 #### 包含64位元版本的XMLFM
 
@@ -61,12 +61,12 @@ XMLFM的64位元版帶來更優異的效能、擴充能力，以及更精細的�
 
 ## 錯誤修正
 
-此版本也包含20多個客戶回報問題的修正。 如需Service Pack所含修正的詳細清單，請參閱 [發行說明](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html?lang=zh-Hant#forms-6519)
+此版本也包含20多個客戶回報問題的修正。 如需Service Pack中包含的修正詳細清單，請參閱[發行說明](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html?lang=zh-Hant#forms-6519)
 
 
 ## 安裝服務套件
 
-此Service Pack為JEE上的AEM Forms和OSGi上的AEM Forms提供新功能和錯誤修正。 與先前的Service Pack相比，安裝指示有所變更。如需安裝指示，請參閱 [AEM Forms service pack安裝指示](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/aem-forms-current-service-pack-installation-instructions.html?lang=en).
+此Service Pack為JEE上的AEM Forms和OSGi上的AEM Forms提供新功能和錯誤修正。 與先前的Service Pack相比，安裝指示有所變更。如需安裝指示，請參閱[AEM Forms Service Pack安裝指示](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/aem-forms-current-service-pack-installation-instructions.html?lang=en)。
 
 
 

@@ -40,18 +40,18 @@ ht-degree: 0%
 
 ## 註解 {#annotations}
 
-一個特殊 [模式](/help/sites-authoring/author-environment-tools.md#page-modes) 用於建立和檢視註解。
+使用特殊的[模式](/help/sites-authoring/author-environment-tools.md#page-modes)來建立和檢視註解。
 
 >[!NOTE]
 >
->別忘了 [評論](/help/sites-authoring/basic-handling.md#timeline) 也可在頁面上提供意見回饋。
+>別忘了[評論](/help/sites-authoring/basic-handling.md#timeline)也可在頁面上提供意見回饋。
 
 >[!NOTE]
 >
 >您可以為各種資源加上註解：
 >
 >* [為資產加上註釋](/help/assets/manage-assets.md#annotating)
->* [為視訊資產加上註解](/help/assets/managing-video-assets.md#annotate-video-assets)
+>* [正在註解視訊資產](/help/assets/managing-video-assets.md#annotate-video-assets)
 >
 
 ### 為元件加上註釋 {#annotating-a-component}
@@ -60,7 +60,7 @@ ht-degree: 0%
 
 1. 編輯頁面時，您可以使用工具列（右上方）中的圖示來進入附註模式：
 
-   ![註解](do-not-localize/screen_shot_2018-03-22at110414.png)
+   ![註釋](do-not-localize/screen_shot_2018-03-22at110414.png)
 
    您現在可以檢視任何現有的註解。
 
@@ -89,11 +89,11 @@ ht-degree: 0%
 
    * 選擇/變更顏色：
 
-     ![選擇/變更顏色](do-not-localize/chlimage_1-19.png)
+     ![選擇/變更色彩](do-not-localize/chlimage_1-19.png)
 
    * 刪除註解。
 
-     ![刪除註解](do-not-localize/screen_shot_2018-03-22at110647.png)
+     ![刪除附註](do-not-localize/screen_shot_2018-03-22at110647.png)
 
 1. 您可以按一下/點選註釋對話方塊外部，以關閉該對話方塊。 隨即顯示截斷的註釋檢視（第一個字）以及任何草圖：
 
@@ -121,4 +121,4 @@ ht-degree: 0%
 
 註解不會在編輯模式中顯示，但工具列右上方的徽章會顯示目前頁面有多少注解。 徽章會取代預設的「註解」圖示，但仍可當作快速連結，切換至「註解」模式/從「註解」模式切換：
 
-![註解指示器](assets/chlimage_1-242.png)
+![註解指標](assets/chlimage_1-242.png)

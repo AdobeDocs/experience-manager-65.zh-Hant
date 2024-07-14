@@ -18,7 +18,7 @@ ht-degree: 1%
 
 # 檢查清單 — 進一步參考{#the-checklist-further-reference}
 
-本頁提供進一步詳細資訊，以詳細說明及/或擴充 [管理專案 — 最佳實務檢查清單](/help/managing/best-practices.md).
+此頁面提供進一步詳細資訊，以詳細說明及/或擴充[管理專案 — 最佳實務檢查清單](/help/managing/best-practices.md)所涵蓋的檔案和原則。
 
 ## AEM — 您要使用什麼？ {#aem-what-will-you-be-using}
 
@@ -28,7 +28,7 @@ ht-degree: 1%
 
 ### AEM的功能 {#features-within-aem}
 
-實作AEM （尤其是第一次）時，請檢閱 [AEM的功能和工作流程](https://business.adobe.com/products/experience-manager/adobe-experience-manager.html) 以確定您想要或需要的區域。
+實作AEM （特別是第一次）時，請檢閱AEM](https://business.adobe.com/products/experience-manager/adobe-experience-manager.html)的[功能和工作流程，以確定您想要或需要的區域。
 
 請考量您使用的AEM功能及其對設計的影響；例如：
 
@@ -38,15 +38,15 @@ ht-degree: 1%
 * [標記](/help/sites-administering/tags.md)
 * [多網站管理與翻譯](/help/sites-administering/msm-and-translation.md)
 * [表單](/help/forms/using/introduction-aem-forms.md)
-* [社群](/help/communities/deploy-communities.md)
+* [Communities](/help/communities/deploy-communities.md)
 
-此外，請檢視 [發行說明](/help/release-notes/release-notes.md)，以瞭解各種AEM版本何時新增了任何新功能。
+此外，若要瞭解各種AEM版本，請檢視[發行說明](/help/release-notes/release-notes.md)，以瞭解何時新增任何新功能。
 
 ### 整合 {#integrations}
 
 AEM可與其他Adobe產品、協力廠商服務或兩者整合。 這些工作流程可增加您掌握的能力和功能。
 
-另請參閱 [解決方案整合](/help/sites-administering/integration.md) 以取得完整資訊。
+如需完整資訊，請參閱[解決方案整合](/help/sites-administering/integration.md)。
 
 ## 要移轉或升級嗎？ {#migrate-or-upgrade}
 
@@ -57,8 +57,8 @@ AEM可與其他Adobe產品、協力廠商服務或兩者整合。 這些工作�
 
 從舊版移至目前版本時，有兩個選項：
 
-* 使用 [封裝管理員](/help/sites-administering/package-manager.md) 將所有內容和應用程式的程式碼從舊系統匯出至新系統。
-* [升級](/help/sites-deploying/upgrade.md) 舊系統就位。 通常建議使用此方法。
+* 使用[封裝管理員](/help/sites-administering/package-manager.md)將所有內容和應用程式程式碼從舊系統匯出到新系統。
+* [升級](/help/sites-deploying/upgrade.md)舊系統就位。 通常建議使用此方法。
 
 ## 基本基本規則 {#basic-ground-rules}
 
@@ -66,7 +66,7 @@ AEM可與其他Adobe產品、協力廠商服務或兩者整合。 這些工作�
 
 >[!NOTE]
 >
->這些點是通用的， [最佳實務檢查清單](/help/managing/best-practices.md) 處理與AEM相關的細節。
+>這些要點是一般性的，[最佳實務檢查清單](/help/managing/best-practices.md)會處理與AEM相關的具體事項。
 
 * **角色**
 
@@ -81,7 +81,7 @@ AEM可與其他Adobe產品、協力廠商服務或兩者整合。 這些工作�
 
 * **參與**
 
-  透過儘快讓利害關係人參與，您可以鼓勵他們成為 *利害關係人* 在專案中。 這麼做可提升他們對公司成功的承諾。
+  透過儘快讓相關人士參與，您可以鼓勵他們成為專案中的&#x200B;*利害關係人*。 這麼做可提升他們對公司成功的承諾。
 
    * 在客戶方面，此角色包括處理系統日常工作的作者
    * 在您自己的專案團隊中，參與的人員還包括負責品質保證的人員。 他們越瞭解客戶的需求，就越能規劃測試。
@@ -90,7 +90,7 @@ AEM可與其他Adobe產品、協力廠商服務或兩者整合。 這些工作�
 
    * 雖然溝通路徑不應過度正規化，但特定定義應確保關鍵人物始終得到通知並因而保持最新。 應特別注意與外部各方的溝通。
 
-* **程式**
+* **個處理序**
 
   定義的流程取決於您的個別專案。 再次強調，請儘量讓這些程式保持簡單，並考量以下事項：
 
@@ -99,18 +99,18 @@ AEM可與其他Adobe產品、協力廠商服務或兩者整合。 這些工作�
 
 * **追蹤工具**
 
-  有許多工具可用來追蹤有關錯誤、任務和專案其他方面的資訊 — 請參閱 [潛在工具概觀](#overview-of-potential-tools) 以取得更多詳細資料。
+  有許多工具可用來追蹤有關錯誤、任務及專案其他方面的資訊 — 如需詳細資訊，請參閱[潛在工具概觀](#overview-of-potential-tools)。
 
    * 這裡要注意的關鍵點在於僅保留一份資訊並共用資訊（因此存取所使用的工具）。 此工作流程可簡化維護作業，並有助於防止不一致情形。
 
-* **範圍**
+* **領域**
 
   清楚定義專案在不同層級的涵蓋範圍：
 
    * 個別發行（若使用反複發行程式，無論是否提供給客戶或內部測試團隊）。
    * AEM專案。
    * 整個專案；包括任何協力廠商軟體、它們對測試的影響、組織問題和其他許多問題。
-   * 對於某些方面，陳述以下內容可能也會很有用 *非* 在專案範圍內。 此想法有助於防止混淆和錯誤的假設，但應僅限於基本問題。
+   * 對於某些方面，陳述專案範圍內的&#x200B;*not*&#x200B;也很有用。 此想法有助於防止混淆和錯誤的假設，但應僅限於基本問題。
 
 * **報告**
 
@@ -150,22 +150,22 @@ AEM可與其他Adobe產品、協力廠商服務或兩者整合。 這些工作�
 
 ### 目標量度 {#target-metrics}
 
-量度可用來定義網站品質的量化度量。 基本上，這些是您要達成之效能目標的定義，並可用來定義您的 [KPI （關鍵績效指標）](#key-performance-indicators-and-target-metrics).
+量度可用來定義網站品質的量化度量。 這些基本上是您要達成之績效目標的定義，可用來定義您的[KPI （關鍵績效指標）](#key-performance-indicators-and-target-metrics)。
 
-您可以定義許多量度，但您定義的量度通常會涵蓋效能和並行度的目標。 尤其是難以量化且容易出現下列問題的因素 *情緒化* 評估：
+您可以定義許多量度，但您定義的量度通常會涵蓋效能和並行度的目標。 特別地，難以量化且通常易於&#x200B;*情緒化*&#x200B;評估的因素：
 
-* 「網站是 *太慢* 今天」 — 何時會 *慢* 符合資格？
+* 「網站&#x200B;*太慢*&#x200B;今天」 - *慢*&#x200B;何時符合資格？
 
-* 「全部 *磨得嘎嘎作響* 我的同事登入時」 — 系統可同時支援多少位使用者？
-* 「當我搜尋時，系統 *磨得嘎嘎作響* 「 — 哪些搜尋要求會影響系統？
-* 「需要 *年齡* 下載檔案」 — 可接受的下載時間是多少（在一般網路條件下）？
+* 「我的同事登入時，所有&#x200B;*都會暫停*」 — 系統可同時支援多少位使用者？
+* 「當我搜尋時，系統&#x200B;*陷入暫停* 」 — 哪些搜尋請求會影響系統？
+* 「下載檔案需要&#x200B;*個時間*」 — 可接受的下載時間為何（在一般網路條件下）？
 
 目標量度是在專案開始時定義的，用於：
 
 * 表示您可以提供之網站的預期維度
 * 指定您要達到的最低品質
 * 定義這些因子的測量方式
-* 用作 [關鍵績效指標](#key-performance-indicators-and-target-metrics)
+* 用作[關鍵績效指標](#key-performance-indicators-and-target-metrics)的基礎
 
 定義目標量度時，務必謹慎：
 
@@ -189,7 +189,7 @@ AEM可與其他Adobe產品、協力廠商服務或兩者整合。 這些工作�
 
 所有測量的量度都會受到專案設計的影響。 相反地，許多問題最好透過設計變更來解決。
 
-因此，請定義您的目標量度 *早於* 決定您的設計。 如此可讓您根據這些因素最佳化設計。 專案開發後，基本設計原則就變得富有挑戰性。
+因此，在決定您的設計之前&#x200B;*定義您的目標量度*。 如此可讓您根據這些因素最佳化設計。 專案開發後，基本設計原則就變得富有挑戰性。
 
 當您建立網站的結構時，請遵循AEM網站的建議結構。 請務必瞭解下列問題和/或原則：
 
@@ -227,7 +227,7 @@ AEM可與其他Adobe產品、協力廠商服務或兩者整合。 這些工作�
 
 * 搜尋要求的回應時間
 
-本節內容可透過以下方式閱讀： [效能最佳化](/help/sites-deploying/configuring-performance.md) 這進一步擴展了實際測量效能的技術細節。
+您可以透過[效能最佳化](/help/sites-deploying/configuring-performance.md)讀取此區段，這會擴充實際測量效能的技術細節。
 
 #### 個別頁面的回應時間 {#response-times-for-individual-pages}
 
@@ -246,7 +246,7 @@ AEM可與其他Adobe產品、協力廠商服務或兩者整合。 這些工作�
    * 適合在更新內容頁面和這些頁面上的個別元素時產生大量請求的少數使用者
    * 儘快將您的內容帶入網站，以發揮最大生產力
 
-* **發佈環境**
+* **Publish環境**
 
   此環境包含您提供給使用者使用的內容：
 
@@ -284,9 +284,9 @@ AEM可與其他Adobe產品、協力廠商服務或兩者整合。 這些工作�
 
 * **使用AEM request.log監控回應時間**
 
-  要求記錄檔是效能分析的良好起點。 除了其他資訊，您可以檢視個別請求的回應時間。 另請參閱 [效能最佳化](/help/sites-deploying/configuring-performance.md) 以取得更多詳細資料。
+  要求記錄檔是效能分析的良好起點。 除了其他資訊，您可以檢視個別請求的回應時間。 如需詳細資訊，請參閱[效能最佳化](/help/sites-deploying/configuring-performance.md)。
 
-* **使用HTML註解監控回應時間**
+* **使用HTML註解監視回應時間**
 
   HTML註解可用來在每個頁面的來源中包含回應時間資訊：
 
@@ -316,15 +316,15 @@ AEM可與其他Adobe產品、協力廠商服務或兩者整合。 這些工作�
 
 * **使用AEM request.log監控搜尋回應時間**
 
-  request.log也可用於監視搜尋請求的回應時間；請參閱 [效能最佳化](/help/sites-deploying/configuring-performance.md) 以取得更多詳細資料。
+  再次使用request.log來監視搜尋要求的回應時間；如需詳細資訊，請參閱[效能最佳化](/help/sites-deploying/configuring-performance.md)。
 
-* **用於測量搜尋回應時間的程式化機制**
+* **測量搜尋回應時間的程式化機制**
 
-  若要自訂您收集的有關搜尋要求及其效能的資訊，建議您在專案原始程式碼中包含資訊收集；請參閱 [效能最佳化](/help/sites-deploying/configuring-performance.md) 以取得更多詳細資料。
+  若要自訂您收集的有關搜尋要求及其效能的資訊，建議您在專案原始程式碼中包含資訊收集；如需詳細資訊，請參閱[效能最佳化](/help/sites-deploying/configuring-performance.md)。
 
 ### 並行 {#concurrency}
 
-在作者和發佈環境中，讓某些使用者和訪客可以使用您的網站。 這些數字通常比您測試時所使用的要多，但也可能會波動且難以預測。 設計您的網站以獲得平均數量的同時使用者和訪客，同時不會注意到效能的負面影響。 再次使用 `request.log` 以進行並行測試。 另請參閱 [效能最佳化](/help/sites-deploying/configuring-performance.md) 以取得更多詳細資料。
+在作者和發佈環境中，讓某些使用者和訪客可以使用您的網站。 這些數字通常比您測試時所使用的要多，但也可能會波動且難以預測。 設計您的網站以獲得平均數量的同時使用者和訪客，同時不會注意到效能的負面影響。 再次使用`request.log`進行並行測試。 如需詳細資訊，請參閱[效能最佳化](/help/sites-deploying/configuring-performance.md)。
 
 同時使用者人數的目標視環境型別而定：
 
@@ -332,7 +332,7 @@ AEM可與其他Adobe產品、協力廠商服務或兩者整合。 這些工作�
 
    * 通常可以準確估計同時使用者的數量。 您可以知道總共有多少位作者，但（可能）並非所有作者同時都在作用中。
 
-* **發佈環境**
+* **Publish環境**
 
    * 預測發佈環境較困難，因此您必須選取目標值。 同樣地，這應該根據您目前網站的體驗，以及您新網站的現實期望。
    * 特殊事件（例如，當您發佈新的、受歡迎的內容）可能會超過預期，甚至超過功能（當某些事件的門票可供出售時，媒體有時會回報此問題）。
@@ -341,7 +341,7 @@ AEM可與其他Adobe產品、協力廠商服務或兩者整合。 這些工作�
 
 在討論相關量度之前，請快速定義術語：
 
-* **音量**
+* **磁碟區**
 
    * 系統處理和傳遞的輸出量。
 
@@ -350,7 +350,7 @@ AEM可與其他Adobe產品、協力廠商服務或兩者整合。 這些工作�
    * 系統傳送磁碟區的能力。
    * 在每個步驟中，容量和體積的測量方式不同，如下表所示。 為獲得最佳效能，請確定容量與每個步驟的磁碟區相符，且容量和磁碟區會在所有步驟之間共用。 例如，您可以計算使用者端電腦上的導覽，或將其放在快取中，而不是在伺服器上為每個請求計算導覽。
 
-* **容量和數量**
+* **容量和磁碟區**
 
   | 什麼/哪裡 | 容量 | 音量 |
   |---|---|---|
@@ -372,9 +372,9 @@ AEM可與其他Adobe產品、協力廠商服務或兩者整合。 這些工作�
 
 ## 安全性 {#security}
 
-安全性至關重要，也是一項日益嚴峻的挑戰。 It ***必須*** 會從專案的最初階段開始考量及規劃。
+安全性至關重要，也是一項日益嚴峻的挑戰。 ***必須***&#x200B;從您專案的最早階段開始考量及規劃。
 
-此 [安全性檢查清單](/help/sites-administering/security-checklist.md) 詳細說明在部署時，您應採取的步驟以確保您的AEM安裝安全。 其他安全性方面則包含在 [安全性（開發時）](/help/sites-developing/security.md) 和 [使用者管理與安全性](/help/sites-administering/security.md).
+[安全性檢查清單](/help/sites-administering/security-checklist.md)詳細說明您應採取的步驟，以確保您的AEM安裝部署時是安全的。 其他安全性方面包含在[安全性（開發時）](/help/sites-developing/security.md)和[使用者管理與安全性](/help/sites-administering/security.md)中。
 
 ## 平行和反複任務 {#parallel-and-iterative-tasks}
 
@@ -382,18 +382,18 @@ AEM可與其他Adobe產品、協力廠商服務或兩者整合。 這些工作�
 >
 >下列專案：
 >
->* 提供與以下專案相關的概述： *第一* AEM專案的實作。
->* 旨在作為抽象概述；請參閱 [專案檢查清單](/help/managing/best-practices.md) 用於特定階段/里程碑/工作。
+>* 提供與AEM專案的&#x200B;*first*&#x200B;實作相關的總覽。
+>* 旨在作為摘要概述；如需特定階段/里程碑/任務的相關資訊，請參閱[專案檢查清單](/help/managing/best-practices.md)。
 >* 任何時間範圍都是理論上的。
 >
 
 對於標準AEM專案的新實作，請考慮以下任務：
 
 * 從銷售處理移轉。
-* 客戶應用程式的實作(**開發**)。
-* 在客戶場所安裝及設定基礎建設（及相關程式） (**基礎架構**)。
-* 建立（或移轉）內容(**內容**)。
-* 切換至作業(**維護/支援**)。
+* 客戶應用程式的實作（**開發**）。
+* 客戶站台（**基礎架構**）上基礎架構（及相關程式）的安裝及設定。
+* 建立（或移轉）內容（**內容**）。
+* 切換至作業（**維護/支援**）。
 * 後續發行。
 
 ![chlimage_1-2](assets/chlimage_1-2.png)
@@ -404,11 +404,11 @@ AEM可與其他Adobe產品、協力廠商服務或兩者整合。 這些工作�
 
 >[!NOTE]
 >
->若要在實際生產環境的條件下，允許調整、最佳化和使用者訓練，請將專案啟動分割為 **軟啟動** （可用性降低，多次反複專案）及 **硬啟動** （完整可用性 — 現場）。
+>若要允許在真實的生產環境條件下進行調整、最佳化和使用者訓練，請將專案啟動分割為&#x200B;**軟啟動** （可用性降低，多次反複專案）和&#x200B;**硬啟動** （完整可用性 — 即時）。
 
 >[!NOTE]
 >
->請參閱 [專案檢查清單](/help/managing/best-practices.md) 您應在專案生命週期中執行（或評估）的任務範例。
+>請參閱[專案檢查清單](/help/managing/best-practices.md)，以取得您應在專案生命週期中執行（或評估）的工作範例。
 
 每個類別需要注意以下幾點：
 
@@ -524,10 +524,10 @@ AEM可與其他Adobe產品、協力廠商服務或兩者整合。 這些工作�
    <td><p>AEM本身提供一系列機制，協助您監控、測試、調查應用程式及為其偵錯，包括：</p>
     <ul>
      <li><a href="/help/sites-developing/developer-mode.md">開發人員模式</a></li>
-     <li>此 <a href="/help/sites-developing/hobbes.md">測試主控台</a></li>
+     <li><a href="/help/sites-developing/hobbes.md">測試主控台</a></li>
      <li><a href="/help/sites-administering/operations-dashboard.md">操作控制面板</a></li>
      <li><a href="/help/sites-authoring/content-insights.md">內容分析</a></li>
-     <li>此 <a href="/help/sites-authoring/author-environment-tools.md#content-tree">內容樹狀結構</a></li>
+     <li><a href="/help/sites-authoring/author-environment-tools.md#content-tree">內容樹狀結構</a></li>
     </ul> </td>
   </tr>
   <tr>
@@ -536,7 +536,7 @@ AEM可與其他Adobe產品、協力廠商服務或兩者整合。 這些工作�
   </tr>
   <tr>
    <td>Selenium</td>
-   <td><a href="https://www.selenium.dev/">Selenium</a> 是開放原始碼測試工具。 測試會直接在瀏覽器中執行 — 模擬使用者的工作方式。</td>
+   <td><a href="https://www.selenium.dev/">Selenium</a>是Open Source測試工具。 測試會直接在瀏覽器中執行 — 模擬使用者的工作方式。</td>
   </tr>
   <tr>
    <td>Microsoft®專案</td>
@@ -544,23 +544,23 @@ AEM可與其他Adobe產品、協力廠商服務或兩者整合。 這些工作�
   </tr>
   <tr>
    <td>Jira</td>
-   <td><a href="https://www.atlassian.com/software/jira">Jira</a> 是開放原始碼工具，用於追蹤及管理軟體錯誤的詳細資料。 您可以視需要在錯誤詳細資料上加上工作流程。</td>
+   <td><a href="https://www.atlassian.com/software/jira">Jira</a>是用來追蹤及管理軟體錯誤詳細資訊的Open Source工具。 您可以視需要在錯誤詳細資料上加上工作流程。</td>
   </tr>
   <tr>
    <td>Git</td>
-   <td><a href="https://git-scm.com/">Git</a> 是修訂版本控制軟體。</td>
+   <td><a href="https://git-scm.com/">Git</a>是修訂控制軟體。</td>
   </tr>
   <tr>
    <td>Eclipse</td>
-   <td><p>Eclipse是一個開放原始碼IDE，由各種專案組成。 其重點在於建立由可擴充的架構、工具和執行階段組成的開放開發平台，以便在整個生命週期中建立、部署和管理軟體。</p> <p>另請參閱 <a href="/help/sites-developing/howto-projects-eclipse.md">如何使用Eclipse開發AEM專案</a> 以取得詳細資訊。</p> </td>
+   <td><p>Eclipse是一個開放式Source IDE，由各種專案組成。 其重點在於建立由可擴充的架構、工具和執行階段組成的開放開發平台，以便在整個生命週期中建立、部署和管理軟體。</p> <p>如需詳細資訊，請參閱<a href="/help/sites-developing/howto-projects-eclipse.md">如何使用Eclipse開發AEM專案</a>。</p> </td>
   </tr>
   <tr>
    <td>IntelliJ</td>
-   <td><p>專業的IDE （因此需要支付授權成本），提供全方位的功能。 </p> <p>另請參閱 <a href="/help/sites-developing/ht-intellij.md">如何使用IntelliJ IDEA開發AEM專案</a> 以取得詳細資訊。</p> </td>
+   <td><p>專業的IDE （因此需要支付授權成本），提供全方位的功能。 </p> <p>如需詳細資訊，請參閱<a href="/help/sites-developing/ht-intellij.md">如何使用IntelliJ IDEA開發AEM專案</a>。</p> </td>
   </tr>
   <tr>
    <td>Maven</td>
-   <td><a href="https://maven.apache.org/">Maven</a> 是一種軟體專案管理與理解工具，可管理專案的建置流程（軟體與檔案）。</td>
+   <td><a href="https://maven.apache.org/">Maven</a>是一種軟體專案管理與理解工具，可管理專案的建置程式（軟體與檔案）。</td>
   </tr>
  </tbody>
 </table>

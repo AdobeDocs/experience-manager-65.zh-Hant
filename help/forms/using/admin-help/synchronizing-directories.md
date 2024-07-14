@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # 同步目錄 {#synchronizing-directories}
 
-若要同步化網域，您可以選擇執行手動或排程的同步化。 A *手動同步* 同步任何選取的網域。 A *排定的同步處理* 同步所有網域。
+若要同步化網域，您可以選擇執行手動或排程的同步化。 *手動同步*&#x200B;會同步任何選取的網域。 *排定的同步處理*&#x200B;會同步處理所有網域。
 
 目錄同步處理是用來從您在目錄設定中指定的目錄伺服器提取詳細資訊至「使用者管理」資料庫。 稍後，如果目錄伺服器上發生變更或更新，您也可以執行手動同步處理。 例如，如果新增使用者和群組或變更使用者帳戶，您可以執行手動同步。
 
@@ -36,7 +36,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe® LiveCycle® Content Services ES （已淘汰）是隨LiveCycle安裝的內容管理系統。 它可讓使用者設計、管理、監控及最佳化以人為中心的流程。 內容服務（已棄用）支援將於2014年12月31日終止。 另請參閱 [Adobe產品生命週期檔案](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html).
+>Adobe® LiveCycle® Content Services ES （已淘汰）是隨LiveCycle安裝的內容管理系統。 它可讓使用者設計、管理、監控及最佳化以人為中心的流程。 內容服務（已棄用）支援將於2014年12月31日終止。 請參閱[Adobe產品生命週期檔案](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html)。
 
 ## 啟用差異目錄同步處理 {#enable-delta-directory-synchronization}
 
@@ -54,7 +54,7 @@ ht-degree: 0%
 
 1. 在管理控制檯中，按一下「設定>使用者管理>網域管理」。
 1. 在「差異同步」下，選取核取方塊並按一下「儲存」。
-1. 編輯將使用差異目錄同步處理功能的每個企業網域的目錄設定值。 在「使用者設定」和「群組設定」頁面上，找到「修改時間戳記」設定並輸入 `modify TimeStamp` 做為值。 如需有關編輯企業網域的詳細資訊，請參閱 [編輯和轉換現有網域](/help/forms/using/admin-help/editing-converting-existing-domains.md#editing-and-converting-existing-domains).
+1. 編輯將使用差異目錄同步處理功能的每個企業網域的目錄設定值。 在[使用者設定]和[群組設定]頁面上，找到[修改時間戳記]設定，並輸入`modify TimeStamp`作為值。 如需有關編輯企業網域的詳細資訊，請參閱[編輯及轉換現有網域](/help/forms/using/admin-help/editing-converting-existing-domains.md#editing-and-converting-existing-domains)。
 
 ## 在同步處理期間啟用或停用詳細記錄 {#enable-or-disable-detailed-logging-during-synchronization}
 
@@ -70,7 +70,7 @@ ht-degree: 0%
 1. 在管理控制檯中，按一下「設定」>「使用者管理」>「組態」>「設定進階系統屬性」。
 1. 在Synch Finisher Cron運算式下，輸入cron運算式，代表「使用者管理」重試同步失敗的時間間隔。 cron運算式的使用是根據Quartz開放原始碼工作排程系統1.4.0版。
 
-   預設值為0 0/13 &amp;ast； ？ &amp;ast； ，這表示每13分鐘進行一次檢查。
+   預設值為0 0/13 &amp;amp；ast； ？ &amp;amp；ast； ，這表示每13分鐘進行一次檢查。
 
 ## 手動同步目錄 {#manually-synchronize-directories}
 

@@ -37,7 +37,7 @@ ht-degree: 8%
 
 ## 幕後 {#behind-the-scenes}
 
-您可以在上層表單中新增XSD型最適化表單和片段。 上層表單的結構與 [任何最適化表單](../../forms/using/prepopulate-adaptive-form-fields.md). 將最適化表單新增為子表單時，會將其新增為父表單中的面板。 繫結子表單的資料儲存在 `data`的根目錄 `afBoundData` 上層表單的XML結構描述區段。
+您可以在上層表單中新增XSD型最適化表單和片段。 父表單的結構與[任何最適化表單](../../forms/using/prepopulate-adaptive-form-fields.md)相同。 將最適化表單新增為子表單時，會將其新增為父表單中的面板。 繫結子表單的資料儲存在父表單XML結構描述之`afBoundData`區段的`data`根下。
 
 例如，您的客戶填寫申請表。 表單的前兩個欄位是名稱和身分。 其XML為：
 
@@ -55,7 +55,7 @@ ht-degree: 8%
 </afData>
 ```
 
-您在應用程式中新增另一個表格，讓您的客戶填寫其辦公室地址。 子表單的結構描述根目錄為 `officeAddress`. 套用 `bindref` `/application/officeAddress` 或 `/officeAddress`. 如果 `bindref`未提供，則會新增子表單作為 `officeAddress` 子樹。 請參閱下列格式的XML：
+您在應用程式中新增另一個表格，讓您的客戶填寫其辦公室地址。 子表單的結構描述根目錄為`officeAddress`。 套用`bindref` `/application/officeAddress`或`/officeAddress`。 如果未提供`bindref`，則會將子表單新增為`officeAddress`子樹狀結構。 請參閱下列格式的XML：
 
 ```xml
 <afData>
@@ -75,7 +75,7 @@ ht-degree: 8%
 </afData>
 ```
 
-如果您插入另一個可讓客戶提供住址的表單，請套用 `bindref` `/application/houseAddress or /houseAddress.`XML看起來像這樣：
+如果您插入另一個可讓客戶提供住址的表格，請套用`bindref` `/application/houseAddress or /houseAddress.`XML看起來像這樣：
 
 ```xml
 <afData>
@@ -99,9 +99,9 @@ ht-degree: 8%
 </afData>
 ```
 
-如果要保留與結構描述根相同的子根名稱( `Address`在此範例中)，使用索引的bindrefs。
+如果要保留與結構描述根相同的子根名稱（在此範例中為`Address`），請使用索引的bindrefs。
 
-例如，套用bindrefs `/application/address[1]` 或 `/address[1]` 和 `/application/address[2]` 或 `/address[2]`. 表單的XML為：
+例如，套用bindrefs `/application/address[1]`或`/address[1]`以及`/application/address[2]`或`/address[2]`。 表單的XML為：
 
 ```xml
 <afData>
@@ -125,11 +125,11 @@ ht-degree: 8%
 </afData>
 ```
 
-您可以使用變更最適化表單/片段的預設子樹狀結構 `bindRef` 屬性。 此 `bindRef` 屬性可讓您指定指向XML結構描述樹狀結構中某個位置的路徑。
+您可以使用`bindRef`屬性變更最適化表單/片段的預設子樹狀結構。 `bindRef`屬性可讓您指定指向XML結構描述樹狀結構中某個位置的路徑。
 
-如果子表單未繫結，其資料會儲存在 `data`的根目錄 `afUnboundData` 上層表單的XML結構描述區段。
+如果子表單未繫結，則其資料會儲存在父表單XML結構描述之`afUnboundData`區段的`data`根下。
 
-您可以將最適化表單新增為子表單多次。 確保 `bindRef` 已適當修改，以便最適化表格的每個使用例項指向資料根下的不同子根。
+您可以將最適化表單新增為子表單多次。 請確定`bindRef`已正確修改，以便每個最適化表單所使用的執行個體指向資料根下的不同子根。
 
 >[!NOTE]
 >
@@ -140,8 +140,8 @@ ht-degree: 8%
 執行以下步驟，使用資產瀏覽器將最適化表單新增為子表單。
 
 1. 在編輯模式中開啟父表單。
-1. 在側邊欄中，按一下 **資產** ![資產 — 瀏覽器](assets/assets-browser.png). 在「資產」底下，選取 **最適化表單** 從下拉式清單。
+1. 在側邊欄中，按一下&#x200B;**Assets** ![資產 — 瀏覽器](assets/assets-browser.png)。 在Assets下方，從下拉式清單中選取&#x200B;**最適化表單**。
    [![在Assets下選取最適化表單](assets/asset.png)](assets/asset-1.png)
 
 1. 拖放您要新增為子表單的最適化表單。
-   [![將最適化表單拖放至您的網站](assets/drag-drop.png)](assets/drag-drop-1.png)您拖放的最適化表單會新增為子表單。
+   [![將最適化表單拖放到您的網站中](assets/drag-drop.png)](assets/drag-drop-1.png)您拖放的最適化表單會新增為子表單。

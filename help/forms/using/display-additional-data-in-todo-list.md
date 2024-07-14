@@ -20,22 +20,22 @@ ht-degree: 0%
 
 依預設，AEM Forms工作區的待辦事項清單會顯示任務顯示名稱和說明。 不過，您可以新增其他資訊，例如建立日期、截止日期。 您也可以新增圖示並變更顯示樣式。
 
-![檢視HTML工作區待辦事項索引標籤以顯示預設設定](assets/html-todo-list.png)
+![檢視HTMLWorkspace待辦事項索引標籤，其中顯示預設設定](assets/html-todo-list.png)
 
 本文詳細說明為ToDo清單中的每個任務新增資訊的步驟。
 
 ## 可新增內容 {#what-can-be-added}
 
-您可以新增下列專案中的可用資訊： `task.json` 由伺服器傳送。 資訊可以純文字形式新增，也可以使用樣式來格式化資訊。
+您可以新增伺服器所傳送的`task.json`中可用的資訊。 資訊可以純文字形式新增，也可以使用樣式來格式化資訊。
 
-如需JSON物件說明的詳細資訊，請參閱 [此](/help/forms/using/html-workspace-json-object-description.md) 文章。
+如需JSON物件描述的詳細資訊，請參閱[this](/help/forms/using/html-workspace-json-object-description.md)文章。
 
 ## 顯示任務的資訊 {#displaying-information-on-a-task}
 
-1. 請遵循 [AEM Forms工作區自訂的一般步驟](../../forms/using/generic-steps-html-workspace-customization.md).
-1. 若要顯示工作的其他資訊，必須在的工作區塊中新增對應的索引鍵/值組 `translation.json`.
+1. 執行[AEM Forms工作區自訂的一般步驟](../../forms/using/generic-steps-html-workspace-customization.md)。
+1. 若要顯示工作的其他資訊，必須在`translation.json`的工作區塊中新增對應的索引鍵/值組。
 
-   例如，變更 `/apps/ws/locales/en-US/translation.json` 如果是英文：
+   例如，變更英文的`/apps/ws/locales/en-US/translation.json`：
 
    ```json
    "task" : {
@@ -122,7 +122,7 @@ ht-degree: 0%
 
 ## 定義新屬性的CSS {#defining-css-for-the-new-property}
 
-1. 您可以將樣式套用至新增至工作的資訊（屬性）。 若要這麼做，您必須為新增至的新屬性新增樣式資訊 `/apps/ws/css/newStyle.css`.
+1. 您可以將樣式套用至新增至工作的資訊（屬性）。 若要這麼做，您必須為新增至`/apps/ws/css/newStyle.css`的新屬性新增樣式資訊。
 
    例如，新增：
 
@@ -138,14 +138,14 @@ ht-degree: 0%
 
 最後，您必須在開發套件中，針對您想要新增至工作的每個屬性加入專案。 若要建立工作區程式碼，請參閱建立AEM Forms工作區程式碼。
 
-1. 複製 `task.html`：
+1. 複製`task.html`：
 
    * 從： `/libs/ws/js/runtime/templates/`
    * 至： `/apps/ws/js/runtime/templates/`
 
-1. 將新資訊新增至 `/apps/ws/js/runtime/templates/task.html`.
+1. 新增資訊到`/apps/ws/js/runtime/templates/task.html`。
 
-   例如，在下新增 `div class="taskProperties"`：
+   例如，在`div class="taskProperties"`下新增：
 
    ```jsp
    <span class="stepname" alt="<%= $.t('task.stepname.value')%>" title = '<%= $.t("task.stepname.tooltip",{stepName:stepName})%>'/>

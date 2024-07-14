@@ -20,14 +20,14 @@ ht-degree: 0%
 
 安全宣告標籤語言(SAML)是您在設定企業或混合式網域的授權時可以選取的選項之一。 SAML主要用於支援跨多個網域的SSO。 當SAML設定為您的驗證提供者時，使用者會透過指定的第三方身分提供者(IDP)登入並驗證AEM Forms。
 
-如需SAML的說明，請參閱 [安全性宣告標籤語言(SAML) V2.0技術概覽](https://docs.oasis-open.org/security/saml/Post2.0/sstc-saml-tech-overview-2.0.html).
+如需SAML的說明，請參閱[安全性宣告標籤語言(SAML) V2.0技術概覽](https://docs.oasis-open.org/security/saml/Post2.0/sstc-saml-tech-overview-2.0.html)。
 
 1. 在管理控制檯中，按一下「設定>使用者管理>設定> SAML服務提供者設定」。
-1. 在「服務提供者實體ID」方塊中，輸入唯一ID以用作AEM表單服務提供者實作的識別碼。 您也可以在設定IDP時指定此唯一ID (例如 `um.lc.com`.) 您也可以使用用來存取AEM表單的URL (例如 `https://AEMformsserver`)。
-1. 在「服務提供者基本URL」方塊中，輸入您Forms伺服器的基本URL (例如 `https://AEMformsserver:8080`)。
+1. 在「服務提供者實體ID」方塊中，輸入唯一ID以用作AEM表單服務提供者實作的識別碼。 您也可以在設定IDP時指定此唯一ID （例如，`um.lc.com`）。 您也可以使用用來存取AEM表單的URL （例如，`https://AEMformsserver`）。
+1. 在服務提供者基本URL方塊中，輸入您Forms伺服器的基本URL （例如，`https://AEMformsserver:8080`）。
 1. （選擇性）若要讓AEM Forms傳送已簽署的驗證要求給IDP，請執行下列工作：
 
-   * 使用信任管理員匯入PKCS #12格式的認證，並選取檔案簽署認證作為信任存放區型別。 (請參閱 [管理本機認證](/help/forms/using/admin-help/local-credentials.md#managing-local-credentials).)
+   * 使用信任管理員匯入PKCS #12格式的認證，並選取檔案簽署認證作為信任存放區型別。 （請參閱[管理本機認證](/help/forms/using/admin-help/local-credentials.md#managing-local-credentials)。）
    * 在「服務提供者認證金鑰別名」清單中，選取您在「信任存放區」中指派給認證的別名。
    * 按一下「匯出」，將URL內容儲存至檔案，然後將該檔案匯入IDP。
 

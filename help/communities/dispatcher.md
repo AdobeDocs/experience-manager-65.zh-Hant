@@ -1,6 +1,6 @@
 ---
 title: 為社群設定Dispatcher
-description: 瞭解如何為AEM Communities設定Dispatcher，以確保社群網站正常運作。
+description: 瞭解如何設定適用於AEM Communities的Dispatcher ，以確保社群網站可正常運作。
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 content-type: reference
@@ -20,13 +20,13 @@ ht-degree: 7%
 
 ## AEM Communities {#aem-communities}
 
-對於AEM Communities，必須設定Dispatcher以確保的正常運作 [社群網站](overview.md#community-sites). 包含社交登入等功能時，需要其他設定。
+對於AEM Communities，必須設定Dispatcher以確保[社群網站](overview.md#community-sites)的正常運作。 包含社交登入等功能時，需要其他設定。
 
 瞭解您的特定部署和網站設計所需的內容
 
 * 聯絡[客戶服務](https://experienceleague.adobe.com/?support-solution=General&amp;support-tab=home#support)
 
-另請參閱主要的 [Dispatcher檔案](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html).
+另請參閱主要[Dispatcher檔案](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)。
 
 ## Dispatcher快取 {#dispatcher-caching}
 
@@ -38,44 +38,44 @@ AEM Communities適用的Dispatcher快取可讓Dispatcher提供社群網站頁面
 
 對於已登入的成員，Dispatcher會略過快取，直接將請求轉送給發佈者，以便動態產生並傳送所有頁面。
 
-在設定為支援Dispatcher快取時，會將TTL式的「最大期限」到期日新增到標頭，以確保Dispatcher快取頁面為最新版本。
+設定為支援Dispatcher快取時，標題會新增TTL型「最大期限」有效期，以確保Dispatcher快取頁面為最新版本。
 
 ### 要求 {#requirements}
 
-* Dispatcher版本4.1.2或更新版本(請參閱 [安裝Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html) （最新版本）
-* [ACS AEM Commons套件](https://adobe-consulting-services.github.io/acs-aem-commons/)
+* Dispatcher 4.1.2版或更新版本(如需最新版本，請參閱[安裝Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html))
+* [ACS AEM Commons封裝](https://adobe-consulting-services.github.io/acs-aem-commons/)
 
    * 版本3.3.2或更新版本
    * `ACS AEM Commons - Dispatcher Cache Control Header - Max Age` OSGi設定
 
 ### 設定 {#configuration}
 
-OSGi設定 **ACS AEM Commons - Dispatcher快取控制標頭 — 最長存留期** 設定出現在指定路徑下的快取頁面的到期日。
+OSGi設定&#x200B;**ACS AEM Commons - Dispatcher快取控制標頭 — Max Age**&#x200B;設定顯示在指定路徑下的快取頁面有效期。
 
-* 從 [網頁主控台](../../help/sites-deploying/configuring-osgi.md).
+* 從[網頁主控台](../../help/sites-deploying/configuring-osgi.md)。
 
-   * 例如， [http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
+   * 例如，[http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
 
-* 尋找 `ACS AEM Commons - Dispatcher Cache Control Header - Max Age`
+* 尋找`ACS AEM Commons - Dispatcher Cache Control Header - Max Age`
 * 選取「+」圖示，即可建立連線設定。
 
-  ![dispatcher](assets/dispatcher.png)
+  ![排程程式](assets/dispatcher.png)
 
 * **篩選模式**
-  *（必要）* 社群頁面的一或多個路徑。 例如，`/content/sites/engage/(.*)`。
+  *（必要）*&#x200B;一或多個社群頁面的路徑。 例如，`/content/sites/engage/(.*)`。
 
-* **Cache-Control最長使用時間**
-  *（必要）* 要新增至「快取控制」標頭的最長時間（以秒為單位）。 值必須大於零(0)。
+* **Cache-Control最大期限**
+  *（必要）*&#x200B;要新增至「快取控制項」標頭的最長時間（以秒為單位）。 值必須大於零(0)。
 
 ## Dispatcher篩選器 {#dispatcher-filters}
 
-的/filter區段 `dispatcher.any` 檔案記錄於 [設定對內容的存取權 — /filter](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html).
+`dispatcher.any`檔案的/filter區段記錄在[設定內容的存取權 — /filter](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html)中。
 
 本節說明Communities功能正常運作可能需要的專案。
 
 篩選屬性名稱遵循使用四位數字來指示套用篩選模式的順序的慣例。 將多個篩選模式套用到一個請求時，最後一個套用的篩選模式會生效。 因此，第一個篩選模式通常用於拒絕所有內容，使得以下模式用於以可控方式恢復存取。
 
-以下範例使用屬性名稱，這些名稱可能必須修改以符合任何特定要求 `dispatcher.any` 檔案。
+下列範例使用的屬性名稱可能必須修改，以符合任何特定的`dispatcher.any`檔案。
 
 另請參閱：
 
@@ -84,7 +84,7 @@ OSGi設定 **ACS AEM Commons - Dispatcher快取控制標頭 — 最長存留期*
 >[!NOTE]
 >
 >**屬性名稱範例**
->所有顯示的屬性名稱，例如 **/0050** 和 **/0170**，應加以調整以符合現有的 `dispatcher.any` 組態檔。
+>所有顯示的屬性名稱（例如&#x200B;**/0050**&#x200B;和&#x200B;**/0170**）都應調整為符合現有的`dispatcher.any`組態檔。
 >
 
 >[!CAUTION]
@@ -224,7 +224,7 @@ OSGi設定 **ACS AEM Commons - Dispatcher快取控制標頭 — 最長存留期*
 
 ## Dispatcher規則 {#dispatcher-rules}
 
-的規則區段 `dispatcher.any` 根據請求的URL定義應該快取哪些回應。 對於Communities，規則區段用於定義絕不應快取的內容。
+`dispatcher.any`的規則區段會根據請求的URL定義應該快取哪些回應。 對於Communities，規則區段用於定義絕不應快取的內容。
 
 <!-- New code wrt CQDOC-16081, changed by Vishabh on 10 Dec 2020.
 -->
@@ -278,7 +278,7 @@ OSGi設定 **ACS AEM Commons - Dispatcher快取控制標頭 — 最長存留期*
 
 ## dispatcher.any範例 {#sample-dispatcher-any}
 
-以下是範例 `dispatcher.any` 包含Communities /filters和/rules的檔案。
+以下是包含Communities /filters和/rules的範例`dispatcher.any`檔案。
 
 <!-- New code wrt CQDOC-16081, changed by Vishabh on 10 Dec 2020.
 -->

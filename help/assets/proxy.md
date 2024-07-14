@@ -1,6 +1,6 @@
 ---
-title: '"[!DNL Assets] proxy開發」'
-description: Proxy是 [!DNL Experience Manager] 使用Proxy Worker處理工作的執行個體。 瞭解如何設定 [!DNL Experience Manager] Proxy、支援的作業、Proxy元件，以及如何開發自訂Proxy背景工作。
+title: "[!DNL Assets] proxy development"
+description: Proxy是使用Proxy Worker處理工作的 [!DNL Experience Manager] 執行個體。 瞭解如何設定 [!DNL Experience Manager] Proxy、支援的作業、Proxy元件，以及如何開發自訂Proxy Worker。
 contentOwner: AG
 role: Admin, Architect
 exl-id: 42fff236-b4e1-4f42-922c-97da32a933cf
@@ -13,23 +13,23 @@ ht-degree: 0%
 
 ---
 
-# [!DNL Assets] proxy開發 {#assets-proxy-development}
+# [!DNL Assets] Proxy開發 {#assets-proxy-development}
 
-[!DNL Adobe Experience Manager Assets] 會使用Proxy來分配特定工作的處理作業。
+[!DNL Adobe Experience Manager Assets]使用Proxy來分配特定工作的處理。
 
-Proxy是一種特定（有時是獨立的）Experience Manager執行個體，它使用Proxy背景工作器作為負責處理工作和建立結果的處理器。 Proxy Worker可用於多種任務。 如果有 [!DNL Assets] proxy這可用於載入資產，以便在資產內呈現。 例如， [IDS Proxy背景工作](indesign.md) 使用 [!DNL Adobe InDesign] 處理檔案以供在資產中使用的伺服器。
+Proxy是一種特定（有時是獨立的）Experience Manager執行個體，它使用Proxy背景工作器作為負責處理工作和建立結果的處理器。 Proxy Worker可用於多種任務。 如果有[!DNL Assets] Proxy，這可用來載入資產，以便在Assets中呈現。 例如，[IDS Proxy背景工作](indesign.md)使用[!DNL Adobe InDesign]伺服器來處理檔案以用於Assets。
 
-當Proxy是獨立的 [!DNL Experience Manager] 執行個體這有助於減少 [!DNL Experience Manager] 製作執行個體。 根據預設， [!DNL Assets] 在同一JVM中執行資產處理工作（透過Proxy外部化），以減少 [!DNL Experience Manager] 製作例項。
+當Proxy是單獨的[!DNL Experience Manager]執行個體時，這有助於減少[!DNL Experience Manager]編寫執行個體的負載。 根據預設，[!DNL Assets]會在相同的JVM中執行資產處理工作（透過Proxy外部化），以減少[!DNL Experience Manager]編寫執行個體的負載。
 
 ## Proxy （HTTP存取） {#proxy-http-access}
 
-Proxy可透過HTTP Servlet使用，其設定為接受處理作業於： `/libs/dam/cloud/proxy`. 此servlet會根據發佈的引數建立Sling作業。 然後，這會新增至Proxy工作佇列，並連線至適當的Proxy背景工作。
+Proxy可透過HTTP Servlet使用，當它設定為接受處理工作於： `/libs/dam/cloud/proxy`時。 此servlet會根據發佈的引數建立Sling作業。 然後，這會新增至Proxy工作佇列，並連線至適當的Proxy背景工作。
 
 ### 支援的作業 {#supported-operations}
 
 * `job`
 
-  **需求**：引數 `jobevent` 必須設定為序列化值對應。 這可用來建立 `Event` 適用於工作處理器。
+  **需求**：引數`jobevent`必須設定為序列化值對應。 這可用來建立工作處理器的`Event`。
 
   **結果**：新增工作。 如果成功，則會傳回唯一的工作ID。
 
@@ -40,9 +40,9 @@ curl -u admin:admin -F":operation=job" -F"someproperty=xxxxxxxxxxxx"
 
 * `result`
 
-  **需求**：引數 `jobid` 必須設定。
+  **需求**：必須設定引數`jobid`。
 
-  **結果**：傳回作業處理器建立之結果節點的JSON表示法。
+  **結果**：傳回作業處理器建立之結果Node的JSON表示法。
 
 ```shell
 curl -u admin:admin -F":operation=result" -F"jobid=xxxxxxxxxxxx"
@@ -53,7 +53,7 @@ curl -u admin:admin -F":operation=result" -F"jobid=xxxxxxxxxxxx"
 
   **需求**：必須設定引數jobid。
 
-  **結果**：傳回與指定工作相關聯的資源。
+  **結果**：傳回與指定工作關聯的資源。
 
 ```shell
 curl -u admin:admin -F":operation=resource" -F"jobid=xxxxxxxxxxxx"
@@ -64,7 +64,7 @@ curl -u admin:admin -F":operation=resource" -F"jobid=xxxxxxxxxxxx"
 
   **需求**：必須設定引數jobid。
 
-  **結果**：移除找到的工作。
+  **結果**：移除工作（如果找到）。
 
 ```shell
 curl -u admin:admin -F":operation=remove" -F"jobid=xxxxxxxxxxxx"
@@ -73,15 +73,15 @@ curl -u admin:admin -F":operation=remove" -F"jobid=xxxxxxxxxxxx"
 
 ### Proxy Worker {#proxy-worker}
 
-Proxy Worker是負責處理工作和建立結果的處理器。 背景工作位於Proxy執行個體上，且必須實作 [sling JobProcessor](https://sling.apache.org/site/eventing-and-jobs.html) 將被識別為Proxy背景工作。
+Proxy Worker是負責處理工作和建立結果的處理器。 Worker位於Proxy執行個體上，必須實作[sling JobProcessor](https://sling.apache.org/site/eventing-and-jobs.html)才能辨識為Proxy Worker。
 
 >[!NOTE]
 >
->工作者必須實作 [sling JobProcessor](https://sling.apache.org/site/eventing-and-jobs.html) 將被識別為Proxy背景工作。
+>背景工作必須實作[sling JobProcessor](https://sling.apache.org/site/eventing-and-jobs.html)，才能辨識為Proxy背景工作。
 
 ### 使用者端API {#client-api}
 
-[`JobService`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html) 可作為OSGi服務使用，提供建立工作、移除工作以及從這些工作取得結果的方法。 此服務的預設實作(`JobServiceImpl`)使用HTTP使用者端與遠端Proxy servlet通訊。
+[`JobService`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html)可用作OSGi服務，提供建立工作、移除工作以及從這些工作取得結果的方法。 此服務的預設實作(`JobServiceImpl`)使用HTTP使用者端與遠端Proxy servlet通訊。
 
 以下是API使用方式的範例：
 
@@ -113,11 +113,11 @@ Proxy Worker是負責處理工作和建立結果的處理器。 背景工作位�
 >Reference documentation for the proxy API is available under [`com.day.cq.dam.api.proxy`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/dam/api/proxy/package-summary.html).
 -->
 
-Proxy和Proxy背景工作設定均可透過雲端服務設定取得，可從以下網址存取： [!DNL Assets] **工具** 主控台或底下 `/etc/cloudservices/proxy`. 每個Proxy背景工作都應在 `/etc/cloudservices/proxy` 用於背景工作的特定組態詳細資訊(例如， `/etc/cloudservices/proxy/workername`)。
+Proxy和Proxy Worker組態均可透過雲端服務組態使用，可從[!DNL Assets] **工具**&#x200B;主控台或`/etc/cloudservices/proxy`下存取。 每個Proxy背景工作應該在`/etc/cloudservices/proxy`下新增節點，以取得背景工作的特定組態詳細資料（例如，`/etc/cloudservices/proxy/workername`）。
 
 >[!NOTE]
 >
->另請參閱 [InDesign ServerProxy Worker設定](indesign.md#configuring-the-proxy-worker-for-indesign-server) 和 [Cloud Service設定](../sites-developing/extending-cloud-config.md) 以取得詳細資訊。
+>如需詳細資訊，請參閱[InDesign ServerProxy Worker設定](indesign.md#configuring-the-proxy-worker-for-indesign-server)和[Cloud Service設定](../sites-developing/extending-cloud-config.md)。
 
 以下是API使用方式的範例：
 
@@ -136,9 +136,9 @@ Proxy和Proxy背景工作設定均可透過雲端服務設定取得，可從以�
 
 ### 開發自訂的Proxy Worker {#developing-a-customized-proxy-worker}
 
-此 [IDS Proxy背景工作](indesign.md) 是 [!DNL Assets] 已提供現成可用的Proxy Worker，可將處理InDesign資產的工作委外。
+[IDS Proxy Worker](indesign.md)是[!DNL Assets] Proxy Worker的範例，已提供現成可用以委外InDesign資產的處理。
 
-您也可以開發和設定自己的 [!DNL Assets] Proxy worker，建立專業化的員工來派遣及委外您的 [!DNL Assets] 處理任務。
+您也可以開發並設定您自己的[!DNL Assets] Proxy Worker，以建立專門的Worker來分派及委外您的[!DNL Assets]處理工作。
 
 設定您自己的自訂Proxy Worker需要您：
 
@@ -162,27 +162,27 @@ Proxy和Proxy背景工作設定均可透過雲端服務設定取得，可從以�
 >
 >在下列步驟中，會以參照範例來指示對等InDesign。
 
-1. A [Sling工作](https://sling.apache.org/site/eventing-and-jobs.html) 都會使用，因此您需要為使用案例定義工作主題。
+1. 已使用[Sling工作](https://sling.apache.org/site/eventing-and-jobs.html)，因此您需要為使用案例定義工作主題。
 
-   如需範例，請參閱 `IDSJob.IDS_EXTENDSCRIPT_JOB` 用於IDS Proxy Worker。
+   例如，請參閱`IDSJob.IDS_EXTENDSCRIPT_JOB`以取得IDS Proxy背景工作。
 
 1. 外部步驟會用於觸發事件，然後等待直到完成；這是透過輪詢ID來完成。 開發您自己的步驟來實作新功能。
 
-   實作 `WorkflowExternalProcess`，然後使用JobService API和您的工作主題來準備工作事件，並將其分派給JobService （OSGi服務）。
+   實作`WorkflowExternalProcess`，然後使用JobService API和您的工作主題來準備工作事件，並將其分派到JobService （OSGi服務）。
 
-   如需範例，請參閱 `INDDMediaExtractProcess`.java用於IDS Proxy Worker。
+   例如，請參閱`INDDMediaExtractProcess`.java以取得IDS Proxy背景工作。
 
 1. 實作您主題的工作處理常式。 此處理常式需要開發，以便執行您的特定動作，並被視為背景工作實作。
 
-   如需範例，請參閱 `IDSJobProcessor.java` 用於IDS Proxy Worker。
+   例如，請參閱`IDSJobProcessor.java`以取得IDS Proxy背景工作。
 
-1. 利用 `ProxyUtil.java` 位於dam-commons。 這可讓您使用dam Proxy將工作分派給背景工作。
+1. 在dam-commons中使用`ProxyUtil.java`。 這可讓您使用dam Proxy將工作分派給背景工作。
 
 >[!NOTE]
 >
->什麼 [!DNL Assets] Proxy架構未提供現成可用的集區機制。
+>[!DNL Assets] Proxy架構未提供現成可用的是集區機制。
 >
->此 [!DNL InDesign] 整合可讓您存取以下專案的集區： [!DNL InDesign] 伺服器(IDSPool)。 此集區專屬於 [!DNL InDesign] 整合，而非部分 [!DNL Assets] Proxy框架。
+>[!DNL InDesign]整合允許存取[!DNL InDesign]部伺服器(IDSPool)的集區。 此集區專屬於[!DNL InDesign]整合，不是[!DNL Assets] Proxy架構的一部分。
 
 >[!NOTE]
 >

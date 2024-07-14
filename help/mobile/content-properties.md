@@ -70,7 +70,7 @@ ht-degree: 18%
 
 | **屬性名稱** | **類型** | **預設值或預期值** |
 |---|---|---|
-| dps-tapAction |  | 點選動作來源 {webLink} |
+| dps-tapAction |  | 來自{webLink}的TapAction |
 | dps-tapActionUrl |  |  |
 
 ### 集合 {#collections}

@@ -26,27 +26,27 @@ ht-degree: 0%
 
 ## 專案路由 {#project-routing}
 
-應用程式擁有路由，並由專案前端開發人員實作。 本檔案說明AEM伺服器傳回之模型的特定路由。 頁面模型資料結構會公開基礎資源的URL。 前端專案可以使用任何提供路由功能的自訂或第三方資料庫。 一旦路由預期到模型的片段，就會呼叫 `PageModelManager.getData()` 功能可以建立。 當模型路由已變更時，必須觸發事件，以警告聆聽程式庫，例如「頁面編輯器」。
+應用程式擁有路由，並由專案前端開發人員實作。 本檔案說明AEM伺服器傳回之模型的特定路由。 頁面模型資料結構會公開基礎資源的URL。 前端專案可以使用任何提供路由功能的自訂或第三方資料庫。 一旦路由預期模型片段，即可呼叫`PageModelManager.getData()`函式。 當模型路由已變更時，必須觸發事件，以警告聆聽程式庫，例如「頁面編輯器」。
 
 ## 架構 {#architecture}
 
-如需詳細說明，請參閱 [PageModelManager](/help/sites-developing/spa-blueprint.md#pagemodelmanager) SPA Blueprint檔案的部分。
+如需詳細說明，請參閱SPA Blueprint檔案的[PageModelManager](/help/sites-developing/spa-blueprint.md#pagemodelmanager)區段。
 
 ## 模型路由器 {#modelrouter}
 
-此 `ModelRouter`  — 啟用時 — 封裝HTML5 History API函式 `pushState` 和 `replaceState` 以確保可預先擷取及存取模型的指定片段。 然後通知註冊的前端元件模型已被修改。
+`ModelRouter` （啟用時）會封裝HTML5 History API函式`pushState`和`replaceState`，以確保預先擷取及存取模型的指定片段。 然後通知註冊的前端元件模型已被修改。
 
 ## 手動與自動模型製程 {#manual-vs-automatic-model-routing}
 
-此 `ModelRouter` 自動擷取模型的片段。 但就像任何自動化工具一樣，它也伴隨著限制。 需要時 `ModelRouter` 可停用或設定為使用中繼屬性略過路徑(請參閱 [SPA頁面元件](/help/sites-developing/spa-page-component.md) 檔案)。 前端開發人員可透過請求 `PageModelManager` 若要使用載入模型的任何給定片段 `getData()` 函式。
+`ModelRouter`會自動擷取模型的片段。 但就像任何自動化工具一樣，它也伴隨著限制。 必要時，可以停用`ModelRouter`，或將其設定為使用中繼屬性略過路徑(請參閱[SPA頁面元件](/help/sites-developing/spa-page-component.md)檔案的[中繼屬性]區段)。 前端開發人員可以透過請求`PageModelManager`使用`getData()`函式載入任何指定的模型片段，來實作他們自己的模型路由層。
 
 >[!NOTE]
 >
->此 [We.Retail日誌](https://github.com/adobe/aem-sample-we-retail-journal) 範例React專案說明了自動化方法，而Angular專案說明了手動方法。 半自動化方法也是有效的使用案例。
+>[We.Retail Journal](https://github.com/adobe/aem-sample-we-retail-journal)範例React專案說明了自動化方法，而Angular專案說明了手動方法。 半自動化方法也是有效的使用案例。
 
 >[!CAUTION]
 >
->目前版本的 `ModelRouter` 僅支援使用指向Sling模型進入點的實際資源路徑的URL。 不支援使用虛名URL或別名。
+>目前版本的`ModelRouter`僅支援使用指向Sling模型進入點實際資源路徑的URL。 不支援使用虛名URL或別名。
 
 ## 路由合約 {#routing-contract}
 
@@ -54,7 +54,7 @@ ht-degree: 0%
 
 ### 設定 {#configuration}
 
-此 `ModelRouter` 支援模型路由的概念，因為它會偵聽 `pushState` 和 `replaceState` 對預先擷取模型片段的呼叫。 在內部，它會觸發 `PageModelManager` 載入與指定URL對應的模型，並觸發 `cq-pagemodel-route-changed` 其他模組可以監聽的事件。
+`ModelRouter`在偵聽`pushState`和`replaceState`預先擷取模型片段的呼叫時，支援模型路由的概念。 在內部，它會觸發`PageModelManager`載入對應到指定URL的模型，並引發其他模組可以監聽的`cq-pagemodel-route-changed`事件。
 
 依預設，此行為會自動啟用。 若要停用，SPA應呈現以下中繼屬性：
 
@@ -62,7 +62,7 @@ ht-degree: 0%
 <meta property="cq:pagemodel_router" content="disabled"\>
 ```
 
-請注意，SPA的每個路由都應對應至AEM中可存取的資源(例如」 `/content/mysite/mypage"`)，因為 `PageModelManager` 選取路由後，將自動嘗試載入對應的頁面模型。 不過，如有需要，SPA也可定義路由的「封鎖清單」，應由 `PageModelManager`：
+請注意，SPA的每個路由都應該對應至AEM中的可存取資源（例如，&quot; `/content/mysite/mypage"`），因為一旦選取路由，`PageModelManager`將自動嘗試載入對應的頁面模型。 不過，如有需要，SPA也可以定義應被`PageModelManager`忽略的路由「封鎖清單」：
 
 ```
 <meta property="cq:pagemodel_route_filters" content="route/not/found,^(.*)(?:exclude/path)(.*)"/>

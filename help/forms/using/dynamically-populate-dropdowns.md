@@ -20,14 +20,14 @@ ht-degree: 0%
 
 ## 先決條件 {#prerequisites}
 
-* [建立OSGI套件組合](https://helpx.adobe.com/experience-manager/using/creating-osgi-bundles-digital-marketing.html)
+* [正在建立OSGI組合](https://helpx.adobe.com/experience-manager/using/creating-osgi-bundles-digital-marketing.html)
 * [開發AEM元件](/help/sites-developing/components.md)
 * [建立最適化表單](../../forms/using/creating-adaptive-form.md)
 * [製作最適化表單](../../forms/using/introduction-forms-authoring.md)
 
 ## 動態填入下拉式清單的程式 {#procedure-to-dynamically-populate-drop-down-lists}
 
-假設您想在某個案例中填入 **狀態** 下拉式清單的選取值 **國家** 下拉式清單。 如果您在「 」中選取「澳洲」 **國家** 下拉式清單， **狀態** 下拉式清單會顯示澳洲境內的州。 下列程式說明如何完成此工作。
+假設您想要根據您在&#x200B;**國家**&#x200B;下拉式清單中選取的值填入&#x200B;**國家**&#x200B;下拉式清單。 如果您在&#x200B;**國家**&#x200B;下拉式清單中選取「澳洲」，**國家**&#x200B;下拉式清單會顯示澳洲境內的國家。 下列程式說明如何完成此工作。
 
 1. 建立包含下列模組的專案：
 
@@ -145,7 +145,7 @@ ht-degree: 0%
    }
    ```
 
-1. 在應用程式中的特定資料夾階層下建立下拉式節點（例如，在/apps/myfolder/demo下建立節點）。 確保 `sling:resourceType` 節點的引數與servlet所指向的引數相同(/apps/populatedropdown)。
+1. 在應用程式中的特定資料夾階層下建立下拉式節點（例如，在/apps/myfolder/demo下建立節點）。 確定節點的`sling:resourceType`引數與servlet指向的引數相同(/apps/populatedropdown)。
 
    ![建立下拉式節點](assets/dropdown-node.png)
 
@@ -154,7 +154,7 @@ ht-degree: 0%
 
    新增要在國家/地區清單中顯示的國家/地區名稱。 在「州」清單中，新增指令碼，以根據「國家/地區」清單中的國家/地區名稱填入指令碼。
 
-   ![新增國家/地區名稱](assets/country-dropdown.png) ![新增指令碼以填入狀態名稱](assets/state-dropdown.png) ![收集國家/地區和州別下拉式清單](assets/2dropdowns.png)
+   ![正在新增國家/地區名稱](assets/country-dropdown.png) ![正在新增指令碼以填入國家名稱](assets/state-dropdown.png) ![要收集的國家/地區及國家下拉式清單](assets/2dropdowns.png)
 
    ```javascript
    JSON.parse(

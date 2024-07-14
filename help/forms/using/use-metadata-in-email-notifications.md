@@ -16,13 +16,13 @@ ht-degree: 0%
 
 # 在電子郵件通知中使用中繼資料 {#use-metadata-in-an-email-notification}
 
-您可以使用「指派工作」步驟來建立工作並指派給使用者或群組。 當任務指派給使用者或群組時，會傳送電子郵件通知給已定義的使用者或已定義群組的每個成員。 典型 [電子郵件通知](../../forms/using/use-custom-email-template-assign-task-step.md) 包含已指派任務的連結及與任務相關的資訊。
+您可以使用「指派工作」步驟來建立工作並指派給使用者或群組。 當任務指派給使用者或群組時，會傳送電子郵件通知給已定義的使用者或已定義群組的每個成員。 典型的[電子郵件通知](../../forms/using/use-custom-email-template-assign-task-step.md)包含指派工作的連結，以及與工作相關的資訊。
 
 您可以在電子郵件範本中使用中繼資料，以動態方式填入電子郵件通知中的資訊。 例如，下列電子郵件通知中的標題、說明、到期日、優先順序、工作流程和最後日期的值會在執行階段動態選取（產生電子郵件通知時）。
 
 ![預設電子郵件範本](assets/default_email_template_metadata_new.png)
 
-中繼資料會儲存在索引鍵值配對中。 您可以在電子郵件範本中指定金鑰，在執行階段時（產生電子郵件通知時）將金鑰替換為值。 例如，在以下程式碼範例中，「$」 {workitem_title} 「是索引鍵。 在執行階段會以值「Loan-Request」取代。
+中繼資料會儲存在索引鍵值配對中。 您可以在電子郵件範本中指定金鑰，在執行階段時（產生電子郵件通知時）將金鑰替換為值。 例如，在以下程式碼範例中，「$ {workitem_title}」是索引鍵。 在執行階段會以值「Loan-Request」取代。
 
 ```html
 subject=Task Assigned - ${workitem_title}
@@ -139,7 +139,7 @@ AEM Forms應用程式可立即提供數個中繼資料變數（機碼值組）�
   </tr> 
   <tr> 
    <td>host_prefix</td> 
-   <td>作者伺服器的URL。 例如， https://10.41.42.66:4502<br /> </td> 
+   <td>作者伺服器的URL。 例如，https://10.41.42.66:4502<br /> </td> 
   </tr> 
   <tr> 
    <td>publish_prefix</td> 
@@ -154,9 +154,9 @@ AEM Forms應用程式可立即提供數個中繼資料變數（機碼值組）�
 
 ### 使用ECMAScript新增自訂中繼資料  {#use-ecmascript-to-add-custom-metadata}
 
-[ECMAScript](https://en.wikipedia.org/wiki/ECMAScript) 是指令碼語言。 用於使用者端指令碼和伺服器應用程式。 執行以下步驟，使用ECMAScript為電子郵件範本新增自訂中繼資料：
+[ECMAScript](https://en.wikipedia.org/wiki/ECMAScript)是指令碼語言。 用於使用者端指令碼和伺服器應用程式。 執行以下步驟，使用ECMAScript為電子郵件範本新增自訂中繼資料：
 
-1. 使用管理帳戶登入CRX DE。 URL為https://&#39;[伺服器]：[連線埠]&#39;/crx/de/index.jsp
+1. 以管理帳戶登入CRX DE 。 URL是https://&#39;[伺服器]：[連線埠]&#39;/crx/de/index.jsp
 
 1. 導覽至/apps/fd/dashboard/scripts/metadataScripts。 建立副檔名為.ecma的檔案。 例如，usermetadata.ecma
 
@@ -184,8 +184,8 @@ AEM Forms應用程式可立即提供數個中繼資料變數（機碼值組）�
 
    如果您未指定標題，「自訂中繼資料」欄位會顯示ECMAScript檔案的完整路徑。 執行以下步驟，為指令碼指定有意義的標題：
 
-   1. 展開指令碼節點，用滑鼠右鍵按一下 **[!UICONTROL jcr：content]** 節點，然後按一下 **[!UICONTROL Mixin]**.
-   1. 在「編輯Mixin」對話方塊中輸入mix：title並按一下 **+**.
+   1. 展開指令碼節點，用滑鼠右鍵按一下&#x200B;**[!UICONTROL jcr：content]**&#x200B;節點，然後按一下&#x200B;**[!UICONTROL Mixins]**。
+   1. 在[編輯Mixin]對話方塊中輸入mix：title，然後按一下&#x200B;**+**。
    1. 新增具有以下值的屬性。
 
       | 名稱 | jcr:title |
@@ -197,7 +197,7 @@ AEM Forms應用程式可立即提供數個中繼資料變數（機碼值組）�
 
 您可以使用WorkitemUserMetadataService Java介面為電子郵件範本新增自訂中繼資料。 您可以建立使用WorkitemUserMetadataService Java介面的OSGi套件組合，並將其部署至AEM Forms伺服器。 它使中繼資料可用於指派任務步驟中的選擇。
 
-若要建立具有Java介面的OSGi套件組合，請新增 [AEM Forms使用者端SDK](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) jar和 [granite jar](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.workflow.api/1.0.2/) 檔案做為OSGi套件專案的外部相依性。 您可以使用任何Java IDE來建立OSGi套件。 下列程式提供使用Eclipse建立OSGi套件的步驟：
+若要建立具有Java介面的OSGi套件組合，請將[AEM Forms使用者端SDK](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) jar和[granite jar](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.workflow.api/1.0.2/)檔案新增為外部相依性至OSGi套件組合專案。 您可以使用任何Java IDE來建立OSGi套件。 下列程式提供使用Eclipse建立OSGi套件的步驟：
 
 1. 開啟Eclipse IDE。 導覽至「檔案>新增專案」。
 

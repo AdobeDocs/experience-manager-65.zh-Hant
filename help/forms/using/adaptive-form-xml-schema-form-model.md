@@ -26,7 +26,7 @@ ht-degree: 9%
 
 ## 使用XML結構描述作為表單模型 {#using-an-xml-schema-as-form-model}
 
-[!DNL Experience Manager Forms] 支援使用現有XML結構描述作為表單模型來建立調適型表單。 此XML結構描述代表組織中的後端系統產生或使用資料的結構。
+[!DNL Experience Manager Forms]支援使用現有的XML結構描述做為表單模型來建立最適化表單。 此XML結構描述代表組織中的後端系統產生或使用資料的結構。
 
 使用XML結構描述的主要功能如下：
 
@@ -169,7 +169,7 @@ XML結構描述包含簡單和複雜的元素型別。 元素具有將規則新�
 >* 將元素名稱的第一個字元轉換為大寫
 >* 在駝峰式大小寫邊界插入空格。
 >
->例如，如果您將 `userFirstName` 結構元素中，在最適化表單中產生的標題為 `User First Name`.
+>例如，如果您新增`userFirstName`結構描述元素，則最適化表單中產生的標題為`User First Name`。
 
 ## 限制最適化表單元件的可接受值 {#limit-acceptable-values-for-an-adaptive-form-component}
 
@@ -287,23 +287,23 @@ XML結構描述包含簡單和複雜的元素型別。 元素具有將規則新�
 
 ## 常見問題 {#frequently-asked-questions}
 
-**我如何知道樹狀結構中的哪個元素與哪個XML元素相關聯？**
+**我如何知道樹狀結構中的哪個專案與哪個XML專案相關聯？**
 
-在「內容尋找器」中按兩下元素時，快顯視窗會顯示欄位名稱和屬性，稱為 `bindRef`. 此屬性會將樹狀元素對應至結構描述中的元素或屬性。
+當您在「內容尋找器」中按兩下某個元素時，快顯視窗會顯示欄位名稱和名為`bindRef`的屬性。 此屬性會將樹狀元素對應至結構描述中的元素或屬性。
 
-![XML結構描述元素的bindref欄位](assets/dblclick.png)
+![XML結構描述專案的bindref欄位](assets/dblclick.png)
 
-此 <code>bindRef</code> 欄位顯示樹狀元素與結構描述中元素或屬性之間的關聯。
+<code>bindRef</code> 欄位顯示樹狀元素與結構描述中元素或屬性之間的關聯。
 
 >[!NOTE]
 >
->屬性具有 `@` 符號在其中 `bindRef`值，以便與元素加以區分。 例如，`/config/projectDetails/@duration`。
+>屬性的`bindRef`值中有`@`符號，以便與元素區分開來。 例如，`/config/projectDetails/@duration`。
 
-**我為何無法為可重複的子表單（minOccours或maxOccurs值大於1）拖曳子表單的個別元素（由任何複雜型別產生的結構）？**
+**為什麼我無法為可重複的子表單（minOccours或maxOccurs值大於1）拖曳子表單的個別元素（由任何複雜型別產生的結構）？**
 
 在可重複的子表單中，您必須使用「完成」子表單。 如果您只想使用選擇性欄位，請使用整個結構並刪除不需要的結構。
 
-**我在內容尋找器中有個長而複雜的結構。 如何尋找特定元素？**
+**我在內容尋找器中有長而複雜的結構。 如何找到特定專案？**
 
 您有兩個選項：
 
@@ -312,4 +312,4 @@ XML結構描述包含簡單和複雜的元素型別。 元素具有將規則新�
 
 **什麼是bindRef？**
 
-A `bindRef` 最適化表單元件與結構元素或屬性之間的連線。 它會指定 `XPath` 其中從這個元件或欄位擷取的值可在輸出XML中使用。 A `bindRef`從預先填入（預先填入）的XML預先填入欄位值時，也會使用。
+`bindRef`為最適化表單元件與結構描述元素或屬性之間的連線。 它指定從這個元件或欄位擷取的值可在輸出XML中使用的`XPath`。 從預填（預填） XML預先填入欄位值時，也會使用`bindRef`。

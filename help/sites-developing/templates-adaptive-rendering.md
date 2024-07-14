@@ -39,21 +39,21 @@ ht-degree: 2%
 
 ## 設定 {#configuration}
 
-最適化演算選擇器可針對現有裝置群組進行設定，或設定為 [您自己建立的群組。](/help/sites-developing/mobile.md#device-groups)
+您可以為現有的裝置群組或您自己建立的[群組設定最適化演算選取器。](/help/sites-developing/mobile.md#device-groups)
 
-在此範例中，您即將設定現有的裝置群組 **智慧型手機** 將最適化演算選擇器作為 **體驗頁面** We.Retail中的範本。
+在此範例中，您即將設定現有的裝置群組&#x200B;**智慧型手機**，使其具備最適化轉譯選擇器，作為We.Retail中&#x200B;**體驗頁面**&#x200B;範本的一部分。
 
-1. 編輯中需要最適化選擇器的裝置群組 `http://localhost:4502/miscadmin#/etc/mobile/groups`
+1. 在`http://localhost:4502/miscadmin#/etc/mobile/groups`中編輯需要最適化選擇器的裝置群組
 
-   設定選項 **停用模擬器** 並儲存。
+   設定選項&#x200B;**停用模擬器**&#x200B;並儲存。
 
    ![chlimage_1-157](assets/chlimage_1-157.png)
 
-1. 選擇器可用於 **BlackBerry®** 和 **IPHONE 4** 已提供裝置群組 **智慧型手機** 會新增至下列步驟中的範本和頁面結構。
+1. 選取器可用於&#x200B;**BlackBerry®**&#x200B;和&#x200B;**iPhone 4**，前提是裝置群組&#x200B;**智慧型手機**&#x200B;已新增至範本和頁面結構，請依下列步驟執行。
 
    ![chlimage_1-158](assets/chlimage_1-158.png)
 
-1. 使用CRXDE Lite，將裝置群組新增至多值字串屬性，以在範本上使用該裝置群組 `cq:deviceGroups` 在範本的結構上。
+1. 使用CRXDE Lite，將裝置群組新增至範本結構上的多值字串屬性`cq:deviceGroups`，讓裝置群組可用於範本。
 
    `/conf/<your-site>/settings/wcm/templates/<your-template>/structure/jcr:content`
 
@@ -63,19 +63,19 @@ ht-degree: 2%
 
    ![chlimage_1-159](assets/chlimage_1-159.png)
 
-1. 使用CRXDE Lite，將裝置群組新增至多值字串屬性，以在您的網站上使用該裝置群組 `cq:deviceGroups` 您的網站結構。
+1. 使用CRXDE Lite，將裝置群組新增至網站結構上的多值字串屬性`cq:deviceGroups`，允許裝置群組在您的網站上使用。
 
    `/content/<your-site>/jcr:content`
 
-   例如，如果您想要允許 **智慧型手機** 裝置群組：
+   例如，如果您要允許&#x200B;**智慧型手機**&#x200B;裝置群組：
 
    `/content/we-retail/jcr:content`
 
    ![chlimage_1-160](assets/chlimage_1-160.png)
 
-現在使用 [模擬器](/help/sites-authoring/responsive-layout.md#layout-definitions-device-emulation-and-breakpoints) (例如： [修改版面](/help/sites-authoring/responsive-layout.md))且您選擇已設定裝置群組的裝置，頁面會以URL中的選取器呈現。
+現在，在頁面編輯器中使用[模擬器](/help/sites-authoring/responsive-layout.md#layout-definitions-device-emulation-and-breakpoints)時（例如[修改版面](/help/sites-authoring/responsive-layout.md)），當您選擇已設定裝置群組的裝置時，頁面會在URL中透過選取器呈現。
 
-在此範例中，根據以下範例編輯頁面時： **體驗頁面** 範本，並在模擬器中選擇iPhone 4，則會呈現包含選取器的頁面，如下所示 `arctic-surfing-in-lofoten.smart.html` 而非 `arctic-surfing-in-lofoten.html`
+在此範例中，當根據&#x200B;**體驗頁面**&#x200B;範本編輯頁面，並在模擬器中選擇iPhone 4時，包含選取器的頁面呈現為`arctic-surfing-in-lofoten.smart.html`，而不是`arctic-surfing-in-lofoten.html`
 
 也可以使用此選取器直接呼叫頁面。
 

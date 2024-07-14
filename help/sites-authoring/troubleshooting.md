@@ -22,28 +22,28 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如果發生問題，也值得檢查清單 [已知問題](/help/release-notes/release-notes.md) 針對您的執行個體（發行版本和Service Pack）。
+>如果發生問題，也值得檢查您執行個體（發行版本和Service Pack）的[已知問題](/help/release-notes/release-notes.md)清單。
 
 >[!NOTE]
 >
->具有管理員許可權的使用者以及想要疑難排解AEM問題的使用者，可以使用中所述的疑難排解方法 [疑難排解AEM （適用於管理員）](/help/sites-administering/troubleshoot.md). 如果您沒有足夠的許可權，請聯絡您的系統管理員，瞭解如何疑難排解AEM。
+>擁有管理員許可權且想要疑難排解AEM問題的使用者，可以使用[疑難排解AEM （適用於管理員）](/help/sites-administering/troubleshoot.md)中所述的疑難排解方法。 如果您沒有足夠的許可權，請聯絡您的系統管理員，瞭解如何疑難排解AEM。
 
 ## 發佈網站上仍顯示舊的頁面版本 {#old-page-version-still-on-published-site}
 
 * **問題**：
 
-   * 您已變更頁面並將頁面復寫至發佈站台，但 *舊* 頁面版本仍顯示在發佈網站上。
+   * 您已經變更頁面，並將頁面復寫至發佈網站，但發佈網站上仍顯示&#x200B;*舊*&#x200B;版本的頁面。
 
 * **原因**：
 
-   * 這可能有多種原因，通常是快取（本機瀏覽器或Dispatcher），不過有時復寫佇列可能會發生問題。
+   * 這可能有多種原因，通常是快取(本機瀏覽器或Dispatcher)，但有時復寫佇列可能會發生問題。
 
 * **解決方案**：
 
    * 這裡有多種可能性：
    * 確認已正確復寫頁面。 檢查頁面狀態，並視需要檢查復寫佇列的狀態。
    * 清除本機瀏覽器中的快取，然後再次存取您的頁面。
-   * 新增 `?` 到頁面URL的結尾。 例如：
+   * 將`?`新增至頁面URL的結尾。 例如：
 
       * `http://localhost:4502/sites.html/content?`
       * 這會直接向AEM要求頁面，並略過Dispatcher。 如果您收到更新的頁面，表示您應清除Dispatcher快取。

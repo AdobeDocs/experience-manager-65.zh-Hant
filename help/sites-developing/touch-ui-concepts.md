@@ -19,7 +19,7 @@ ht-degree: 1%
 
 # Adobe Experience Manager觸控式UI的概念{#concepts-of-the-aem-touch-enabled-ui}
 
-Adobe Experience Manager (AEM)提供觸控式UI，搭配 [回應式設計](/help/sites-authoring/responsive-layout.md) 適用於專為觸控和桌上型裝置而設計的製作環境。
+Adobe Experience Manager (AEM)提供觸控式UI，其中[回應式設計](/help/sites-authoring/responsive-layout.md)適用於製作環境，可在觸控式和桌上型裝置上運作。
 
 >[!NOTE]
 >
@@ -32,14 +32,14 @@ Adobe Experience Manager (AEM)提供觸控式UI，搭配 [回應式設計](/help
    * 提供全域導覽的連結
    * 提供其他一般動作的連結；例如搜尋、說明、Experience Cloud解決方案、通知和使用者設定。
 * 左側邊欄（需要時顯示且可隱藏），其中可顯示：
-   * 時間軸
+   * 時間表
    * 參考
    * 篩選條件
 * 導覽標頭(同樣是內容感應式，可顯示：
    * 指出您目前正在使用哪個主控台，或您的位置，或同時使用兩者
    * 左側邊欄的選取專案
    * 導覽列
-   * 存取適當的 **建立** 動作
+   * 存取適當的&#x200B;**建立**&#x200B;動作
    * 檢視選取專案
 * 內容區域：
    * 列出內容專案（無論是頁面、資產、論壇帖子等）
@@ -51,12 +51,12 @@ Adobe Experience Manager (AEM)提供觸控式UI，搭配 [回應式設計](/help
 
 >[!NOTE]
 >
->幾乎所有的AEM功能皆已移植至觸控式UI。 但是，在某些有限的情況下，功能會回覆為傳統UI。 另請參閱 [觸控式UI功能狀態](/help/release-notes/touch-ui-features-status.md) 以取得詳細資訊。
+>幾乎所有的AEM功能皆已移植至觸控式UI。 但是，在某些有限的情況下，功能會回覆為傳統UI。 如需詳細資訊，請參閱[觸控式UI功能狀態](/help/release-notes/touch-ui-features-status.md)。
 
 Adobe將觸控式UI設計為可提供跨多個產品的一致性使用者體驗。 其依據為：
 
 * **Coral UI** (CUI)針對觸控式UI實作Adobe的視覺樣式。 Coral UI提供產品/專案/Web應用程式採用UI視覺樣式所需的一切。
-* **Granite UI** 元件是使用Coral UI建置。
+* **Granite UI**&#x200B;元件是使用Coral UI建置。
 
 觸控式UI的基本原則為：
 
@@ -68,7 +68,7 @@ Adobe將觸控式UI設計為可提供跨多個產品的一致性使用者體驗�
 * 包含內嵌測試
 * 由下而上的設計，確保這些原則套用至每個元素和元件
 
-如需觸控式UI結構的詳細概觀，請參閱 [AEM觸控式UI的結構](/help/sites-developing/touch-ui-structure.md).
+如需觸控式UI結構的詳細概觀，請參閱[AEM觸控式UI的結構](/help/sites-developing/touch-ui-structure.md)。
 
 ## AEM技術棧疊 {#aem-technology-stack}
 
@@ -92,7 +92,7 @@ Granite是Adobe的Open Web棧疊，提供各種元件，包括：
 >
 >Granite在Adobe中以開放開發專案的方式執行：對程式碼、討論和問題的貢獻來自整個公司。
 >
->不過，Granite會 **非** 開放原始碼專案。 它在很大程度上取決於幾個開放原始碼專案（尤其是Apache Sling、Felix、Jackrabbit和Lucene），但Adobe在公開和內部之間劃清了界限。
+>不過，Granite **不是**&#x200B;開放原始碼專案。 它在很大程度上取決於幾個開放原始碼專案（尤其是Apache Sling、Felix、Jackrabbit和Lucene），但Adobe在公開和內部之間劃清了界限。
 
 ## Granite UI {#granite-ui}
 
@@ -139,13 +139,13 @@ Granite UI中的使用者端 — 伺服器通訊是由超文字組成，而非�
 
 #### 使用者端 {#client-side}
 
-這會使用HTML辭彙的擴充功能，讓作者可表達建立互動式Web應用程式的意向。 這是類似的方法 [WAI-ARIA](https://www.w3.org/TR/wai-aria/) 和 [微格式](https://microformats.org/).
+這會使用HTML辭彙的擴充功能，讓作者可表達建立互動式Web應用程式的意向。 這是[WAI-ARIA](https://www.w3.org/TR/wai-aria/)和[微格式](https://microformats.org/)的類似方法。
 
 它主要由使用者端執行的JS和CSS程式碼所解譯的互動模式（例如，非同步提交表單）集合組成。 使用者端的角色是增強互動的標籤（由伺服器提供作為超媒體提供）。
 
 使用者端不受任何伺服器技術的限制。 只要伺服器提供適當的標籤，使用者端就可以履行其角色。
 
-目前JS和CSS程式碼會以Granite傳遞 [clientlibs](/help/sites-developing/clientlibs.md) 在類別下：
+目前JS和CSS程式碼會以Granite [clientlibs](/help/sites-developing/clientlibs.md)傳遞，位於類別下：
 
 `granite.ui.foundation and granite.ui.foundation.admin`
 
@@ -155,7 +155,7 @@ Granite UI中的使用者端 — 伺服器通訊是由超文字組成，而非�
 
 #### 伺服器端 {#server-side}
 
-這是由Sling元件的集合所組成，可讓作者執行以下動作： *撰寫* Webapp快速。 開發人員會開發元件，而作者會將元件組合成網頁應用程式。 伺服器端的角色是為使用者端提供超媒體可供性（標籤）。
+這是由Sling元件的集合所組成，可讓作者快速&#x200B;*撰寫*&#x200B;一個Web應用程式。 開發人員會開發元件，而作者會將元件組合成網頁應用程式。 伺服器端的角色是為使用者端提供超媒體可供性（標籤）。
 
 目前，元件位於Granite存放庫中：
 
@@ -200,7 +200,7 @@ Granite UI和ExtJS （用於傳統UI）之間的差異也令人感興趣：
 
 ### Granite UI Foundation元件 {#granite-ui-foundation-components}
 
-此 [Granite UI基礎元件](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html) 提供建置任何UI所需的基本建置區塊。 其中包括：
+[Granite UI基礎元件](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)提供建置任何UI所需的基本建置區塊。 其中包括：
 
 * 按鈕
 * 超連結
@@ -257,7 +257,7 @@ Granite UI和ExtJS （用於傳統UI）之間的差異也令人感興趣：
 
 ### Granite UI管理元件 {#granite-ui-administration-components}
 
-此 [Granite UI管理元件](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html) 建置在基礎元件上，以提供任何管理應用程式皆可實作的通用建置區塊。 其中包括：
+[Granite UI管理元件](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)建置在基礎元件上，以提供任何管理應用程式都可以實作的通用建置區塊。 其中包括：
 
 * 全域導覽列
 * 邊欄（骨架）
@@ -314,7 +314,7 @@ HTML元素提供所有基本UI元素（包括導覽列、按鈕、功能表、�
 
 在最基本的層級，HTML元素是具有專用類別名稱的HTML標籤。 更複雜的元素可由多個標籤組成，彼此巢狀內嵌（以特定方式）。
 
-CSS是用來提供實際的外觀和風格。 為了能夠輕鬆自訂外觀（例如品牌化），實際樣式值會宣告為變數，並由 [更少](https://lesscss.org/) 執行期間的前置處理器。
+CSS是用來提供實際的外觀和風格。 為了能夠輕鬆自訂外觀（例如，品牌化的情況），實際樣式值會宣告為變數，在執行階段由[LESS](https://lesscss.org/)前置處理器展開。
 
 用途：
 
@@ -323,7 +323,7 @@ CSS是用來提供實際的外觀和風格。 為了能夠輕鬆自訂外觀（�
 
 實作：
 
-* HTML標籤及其靈感來源於的樣式 [Bootstrap](https://twitter.github.com/bootstrap/)
+* 具有靈感來自[Bootstrap](https://twitter.github.com/bootstrap/)之樣式的HTML標籤
 * 類別是在LESS檔案中定義
 * 圖示定義為字型拼字
 
@@ -364,20 +364,20 @@ CSS是用來提供實際的外觀和風格。 為了能夠輕鬆自訂外觀（�
 
 外掛程式為：
 
-* 設計用於操作特定DOM元素。 例如，對話方塊外掛程式預期會找到 `DIV class=dialog`
-* 本質上是通用的。 例如，版面管理員可為任何清單提供版面 `DIV` 或 `LI` 元素
+* 設計用於操作特定DOM元素。 例如，對話方塊外掛程式預期會找到`DIV class=dialog`
+* 本質上是通用的。 例如，配置管理員會為`DIV`或`LI`個元素的任何清單提供配置
 
 若要使用引數自訂外掛程式的行為，您可以：
 
 * 以JavaScript呼叫傳遞引數
-* 使用專用的 `data-*` 與HTML標籤繫結的屬性
+* 使用與HTML標籤關聯的專用`data-*`屬性
 
 雖然開發人員可以為任何外掛程式選取最佳方法，但經驗法則是：
 
-* `data-*` 與HTML配置相關之選項的屬性。 例如，指定欄數
+* 與HTML配置相關之選項的`data-*`屬性。 例如，指定欄數
 * 與資料相關功能的API選項/類別。 例如，建構要顯示的專案清單
 
-相同的概念可用於實施表單驗證。 對於要驗證的元素，您必須指定必要的輸入表單作為自訂 `data-*` 屬性。 此屬性接著會作為驗證外掛程式的選項。
+相同的概念可用於實施表單驗證。 對於要驗證的元素，您必須指定必要的輸入表單作為自訂`data-*`屬性。 此屬性接著會作為驗證外掛程式的選項。
 
 >[!NOTE]
 >
@@ -393,9 +393,9 @@ CSS是用來提供實際的外觀和風格。 為了能夠輕鬆自訂外觀（�
 實作：
 
 * jQuery外掛程式，繫結至特定DOM元素
-* 使用 `data-*` 自訂行為的屬性
+* 使用`data-*`屬性來自訂行為
 
-範例標籤的擷取(請注意指定為資料的選項 — &#42; attributes)：
+範例標籤的擷取（請注意指定為資料 — &#42;屬性的選項）：
 
 ```xml
 <ul data-column-width="220" data-layout="card" class="cards">
@@ -429,7 +429,7 @@ $('.cards').cardlayout ();
 
 ![chlimage_1-86](assets/chlimage_1-86.png)
 
-此 `cardLayout` 外掛程式會以括住的形式 `UL` 元素會根據各自的高度並考慮父項的寬度。
+`cardLayout`外掛程式會根據元素各自的高度並考量父項的寬度，來配置括住的`UL`元素。
 
 ### HTML元素Widget {#html-elements-widgets}
 
@@ -482,7 +482,7 @@ $(".tagManager").tagsManager({
 
 ### 公用程式庫 {#utility-library}
 
-此程式庫是下列JavaScript輔助外掛程式和/或函式的集合：
+此程式庫是下列JavaScript協助程式外掛程式和/或函式的集合：
 
 * 獨立於UI
 * 然而，這對於建立完整功能的網頁應用程式至關重要

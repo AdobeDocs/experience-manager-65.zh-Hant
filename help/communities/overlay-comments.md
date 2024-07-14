@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # 覆蓋Communities元件 {#overlay-communities-components}
 
-意圖 [覆蓋](/help/communities/client-customize.md#overlays) 預設元件是全域變更元件的外觀或行為，適用於該元件的所有相對參照。 在/libs資料夾中搜尋之前，這會仰賴sling的性質解析至/apps資料夾。 因此，元件的路徑與預設元件的路徑相同，不同之處在於它位在/apps資料夾中，而非/libs資料夾中。
+[覆蓋](/help/communities/client-customize.md#overlays)預設元件的目的是針對該元件的所有相對參照，全域變更元件的外觀或行為。 在/libs資料夾中搜尋之前，這會仰賴sling的性質解析至/apps資料夾。 因此，元件的路徑與預設元件的路徑相同，不同之處在於它位在/apps資料夾中，而非/libs資料夾中。
 
 ## 範例 {#example}
 
@@ -35,9 +35,9 @@ ht-degree: 0%
 
 **覆蓋通知電子郵件**
 
-假設您要自訂電子郵件通知的訊息，您可以透過以下方式進行 [覆蓋](/help/communities/client-customize.md#overlays) 範本位於 `/libs/settings/community/templates/email/html`.
+假設您要自訂電子郵件通知的訊息，您可以透過[覆蓋](/help/communities/client-customize.md#overlays)位於`/libs/settings/community/templates/email/html`的範本來執行此操作。
 
-例如，假設您要編輯提及電子郵件通知（針對建立UGC的特定Communities元件）。 在這種情況下，請新增 **如果** 動詞的條件 **提及** 元件範本中，您已為其啟用 **@mentions** 支援。
+例如，假設您要編輯提及電子郵件通知（針對建立UGC的特定Communities元件）。 在這種情況下，請在啟用&#x200B;**@mentions**&#x200B;支援的元件範本中，新增動詞&#x200B;**提及**&#x200B;的&#x200B;**if**&#x200B;條件。
 
 ```java
 {{#equals this.verb "mention"}}\
@@ -45,4 +45,4 @@ ht-degree: 0%
 {{/equals}}\
 ```
 
-若要修改電子郵件通知範本以新@mention部落格註解，請將現成可用的範本放在： `/libs/settings/community/templates/email/html/social.journal.components.hbs.comment/en`
+若要修改部落格評論中@mention的電子郵件通知範本，請將現成範本放置在： `/libs/settings/community/templates/email/html/social.journal.components.hbs.comment/en`

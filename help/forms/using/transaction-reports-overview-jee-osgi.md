@@ -24,13 +24,13 @@ AEM Forms中的交易報告可讓您監視自AEM Forms部署上的指定日期�
 
 如需如何根據AEM Forms技術棧疊啟用交易、可計費API清單及自訂錄製器實作的完整指示，請參閱以下內容：
 
-**JEE上AEM Forms的Transaction Reporting**
+JEE上AEM Forms的&#x200B;**交易報告**
 
 * [在JEE上啟用和檢視AEM Forms的交易報告](/help/forms/using/transaction-report-overview-jee.md)
 * [適用於AEM Forms on JEE的計費API清單](/help/forms/using/transaction-reports-billable-apis-jee.md)
 * [記錄自訂元件API的交易](/help/forms/using/record-transaction-custom-component-jee.md)
 
-**在OSGi上適用於AEM Forms的Transaction Reporting**
+在OSGi上為AEM Forms建立&#x200B;**交易報告**
 
 * [OSGi上AEM Forms的交易報告](/help/forms/using/transaction-reports-overview.md)
 * [在OSGi上檢視和瞭解AEM Forms的交易報告](/help/forms/using/viewing-and-understanding-transaction-reports.md)

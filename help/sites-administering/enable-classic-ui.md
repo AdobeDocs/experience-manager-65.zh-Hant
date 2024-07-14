@@ -25,4 +25,4 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->如需與傳統UI同等功能的狀態詳細資訊，請參閱 [Touch UI功能比較](/help/release-notes/touch-ui-features-status.md) 檔案。
+>如需與傳統UI功能對等狀態的詳細資訊，請參閱[Touch UI功能對等](/help/release-notes/touch-ui-features-status.md)檔案。

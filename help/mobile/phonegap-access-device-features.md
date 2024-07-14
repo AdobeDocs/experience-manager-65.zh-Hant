@@ -24,14 +24,14 @@ ht-degree: 4%
 
 ## 建立存取裝置功能的Adobe Experience Manager (AEM)元件 {#building-aem-components-that-access-device-features}
 
-此 [AEM PhoneGap廚房水槽](https://github.com/blefebvre/aem-phonegap-kitchen-sink) GitHub存放庫為開發人員提供了一個功能性的AEM應用程式，說明如何使用數個核心Cordova API。 透過PhoneGap CLI在iOS或Android™上執行時，應用程式會開啟至下列頁面，其中包括其示範的每個裝置API連結：
+[AEM PhoneGap Kitchen Sink](https://github.com/blefebvre/aem-phonegap-kitchen-sink) GitHub存放庫為開發人員提供功能性的AEM應用程式，以說明數個核心Cordova API的使用。 透過PhoneGap CLI在iOS或Android™上執行時，應用程式會開啟至下列頁面，其中包括其示範的每個裝置API連結：
 
 ![chlimage_1-107](assets/chlimage_1-107.png)
 
-每個裝置API元件的原始碼為 [可在GitHub上取得](https://github.com/blefebvre/aem-phonegap-kitchen-sink/tree/master/content/src/main/content/jcr_root/apps/brucelefebvre/kitchen-sink/components).
+這些裝置API元件的每個原始程式碼都可在GitHub](https://github.com/blefebvre/aem-phonegap-kitchen-sink/tree/master/content/src/main/content/jcr_root/apps/brucelefebvre/kitchen-sink/components)上取得[。
 
 如需每個API使用方式的詳細資訊，請參閱Cordova外掛程式檔案(`https://docs.phonegap.com/en/4.0.0/cordova_plugins_pluginapis.md.html`)。
 
 ## 後續步驟 {#the-next-steps}
 
-另請參閱 [透過AdobeMobile Analytics追蹤應用程式效能](/help/mobile/phonegap-intro-to-app-analytics.md).
+檢視[使用AdobeMobile Analytics追蹤應用程式效能](/help/mobile/phonegap-intro-to-app-analytics.md)。

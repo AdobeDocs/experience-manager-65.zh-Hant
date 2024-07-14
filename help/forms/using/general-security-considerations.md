@@ -63,7 +63,7 @@ ht-degree: 1%
   </tr>
   <tr>
    <td>oracleLinux® 7更新3</td>
-   <td><a href="https://docs.oracle.com/en/operating-systems/oracle-linux/7/security/" target="_blank">第7發行版本的安全性指南</a><br /> </td>
+   <td>版本7</a><br />的<a href="https://docs.oracle.com/en/operating-systems/oracle-linux/7/security/" target="_blank">安全性指南 </td>
   </tr>
   <tr>
    <td>CentOS 7<sup> </sup></td>
@@ -96,7 +96,7 @@ ht-degree: 1%
  <tbody>
   <tr>
    <td><p>oracleWebLogic®</p> </td>
-   <td><p>在下列位置搜尋瞭解WebLogic安全性： <a href="https://docs.oracle.com/">https://docs.oracle.com/</a>.</p> </td>
+   <td><p>在<a href="https://docs.oracle.com/">https://docs.oracle.com/</a>搜尋瞭解WebLogic安全性。</p> </td>
   </tr>
   <tr>
    <td><p>IBM® WebSphere®</p> </td>
@@ -142,12 +142,12 @@ ht-degree: 1%
   </tr>
   <tr>
    <td><p>oracle® 12c</p> </td>
-   <td><p>請參閱安全性一章，在 <a href="https://docs.oracle.com/database/121/TDPSG/GUID-6E2F4E53-5D87-4FCD-9C9C-6792217D7014.htm#TDPSG94426" target="_blank">oracle12g檔案</a></p> </td>
+   <td><p>請參閱<a href="https://docs.oracle.com/database/121/TDPSG/GUID-6E2F4E53-5D87-4FCD-9C9C-6792217D7014.htm#TDPSG94426" target="_blank">Oracle12g檔案</a>中的「安全性」一章</p> </td>
   </tr>
  </tbody>
 </table>
 
-此表格說明在AEM Forms on JEE設定程式期間需要開啟的預設連線埠。 如果您是透過https連線，請相應地調整連線埠資訊和IP位址。 如需有關配置連線埠的詳細資訊，請參閱 *在JEE上安裝和部署AEM Forms* 應用程式伺服器的檔案。
+此表格說明在AEM Forms on JEE設定程式期間需要開啟的預設連線埠。 如果您是透過https連線，請相應地調整連線埠資訊和IP位址。 如需有關設定連線埠的詳細資訊，請參閱應用程式伺服器的&#x200B;*在JEE上安裝和部署AEM Forms*&#x200B;檔案。
 
 <table>
  <thead>
@@ -214,7 +214,7 @@ JBoss® Application Server使用8080作為預設HTTP連線埠。 JBoss®也有�
 
    叢集安裝： [JBoss® root]/domain/configuration/domain.xml
 
-1. 變更值 **連線埠** 中的屬性 **&lt;socket-binding>** 標籤到自訂連線埠號碼。 例如，下列使用連線埠8090：
+1. 將&#x200B;**&lt;socket-binding>**&#x200B;標籤中&#x200B;**連線埠**&#x200B;屬性的值變更為自訂連線埠號碼。 例如，下列使用連線埠8090：
 
    &lt;socket-binding name=&quot;http&quot; port=&quot;8090&quot;/>
 

@@ -16,9 +16,9 @@ ht-degree: 0%
 
 本節說明更新AEM for Application Server安裝所需的程式。
 
-此程式中的所有範例都使用Tomcat作為「應用程式伺服器」，並暗示您已部署AEM的工作版本。 此程式旨在記錄從執行的升級 **AEM 6.4版至6.5版**.
+此程式中的所有範例都使用Tomcat作為「應用程式伺服器」，並暗示您已部署AEM的工作版本。 此程式旨在記錄從&#x200B;**AEM 6.4版到6.5**&#x200B;所執行的升級。
 
-1. 首先，啟動TomCat。 在大多數情況下，您可以執行 `./catalina.sh` 啟動指令碼，從終端機執行此命令：
+1. 首先，啟動TomCat。 在大多數情況下，您可以透過從終端機執行此命令，執行`./catalina.sh`啟動指令碼來執行此動作：
 
    ```shell
    $CATALINA_HOME/bin/catalina.sh start
@@ -30,9 +30,9 @@ ht-degree: 0%
    https://<serveraddress:port>/cq/system/console/bundles
    ```
 
-1. 接下來，取消部署AEM 6.4。您可以從TomCat App Manager (`http://serveraddress:serverport/manager/html`)
+1. 接下來，取消部署AEM 6.4。這可以從TomCat應用程式管理員(`http://serveraddress:serverport/manager/html`)完成
 
-1. 現在，請使用crx2oak移轉工具移轉存放庫。 若要這麼做，請從下載最新版本的crx2oak [此位置](https://repo1.maven.org/maven2/com/adobe/granite/crx2oak/).
+1. 現在，請使用crx2oak移轉工具移轉存放庫。 若要這麼做，請從[此位置](https://repo1.maven.org/maven2/com/adobe/granite/crx2oak/)下載最新版本的crx2oak。
 
    ```shell
    SLING_HOME= $AEM-HOME/crx-quickstart java -Xmx4096m -jar crx2oak.jar --load-profile segment-fds
@@ -40,7 +40,7 @@ ht-degree: 0%
 
 1. 執行下列操作，刪除sling.properties檔案中的必要屬性：
 
-   1. 開啟檔案，位於 `crx-quickstart/launchpad/sling.properties`
+   1. 開啟位於`crx-quickstart/launchpad/sling.properties`的檔案
    1. 步驟文字移除下列屬性並儲存檔案：
 
       1. `sling.installer.dir`
@@ -61,15 +61,15 @@ ht-degree: 0%
 
 1. 移除不再需要的檔案和資料夾。 您需要明確移除的專案包括：
 
-   * 此 **啟動板/啟動資料夾**. 您可以在終端機中執行以下命令來刪除它： `rm -rf crx-quickstart/launchpad/startup`
+   * **啟動板/啟動資料夾**。 您可以在終端機中執行以下命令來刪除它： `rm -rf crx-quickstart/launchpad/startup`
 
-   * 此 **base.jar檔案**： `find crx-quickstart/launchpad -type f -name "org.apache.sling.launchpad.base.jar*" -exec rm -f {} \`
+   * **base.jar檔案**： `find crx-quickstart/launchpad -type f -name "org.apache.sling.launchpad.base.jar*" -exec rm -f {} \`
 
-   * 此 **BootstrapCommandFile_timestamp.txt檔案**： `rm -f crx-quickstart/launchpad/felix/bundle0/BootstrapCommandFile_timestamp.txt`
+   * **BootstrapCommandFile_timestamp.txt檔案**： `rm -f crx-quickstart/launchpad/felix/bundle0/BootstrapCommandFile_timestamp.txt`
 
-   * 移除 **sling.options.file** 藉由執行： `find crx-quickstart/launchpad -type f -name "sling.options.file" -exec rm -rf`
+   * 執行`find crx-quickstart/launchpad -type f -name "sling.options.file" -exec rm -rf`以移除&#x200B;**sling.options.file**
 
-1. 現在，建立與AEM 6.5搭配使用的節點存放區和資料存放區。您可以透過以下列名稱建立兩個檔案來執行此操作 `crx-quickstart\install`：
+1. 現在，建立與AEM 6.5搭配使用的節點存放區和資料存放區。您可以在`crx-quickstart\install`下建立兩個名稱如下的檔案，以執行此操作：
 
    * `org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.cfg`
    * `org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore.cfg`
@@ -78,30 +78,30 @@ ht-degree: 0%
 
 1. 編輯組態檔，使其可供使用。 更具體地說：
 
-   * 將下列行新增至 `org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config`：
+   * 將下列行新增至`org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config`：
 
      `customBlobStore=true`
 
-   * 然後將下列行新增至 `org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore.config`：
+   * 然後將下列行新增至`org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore.config`：
 
      ```
      path=./crx-quickstart/repository/datastore
      minRecordLength=4096
      ```
 
-1. 您現在需要變更AEM 6.5 war檔案中的執行模式。 若要這麼做，請先建立暫存資料夾，以容納AEM 6.5戰爭。 在此範例中，資料夾的名稱將是 `temp`. 複製war檔案後，從temp資料夾內執行以擷取其內容：
+1. 您現在需要變更AEM 6.5 war檔案中的執行模式。 若要這麼做，請先建立暫存資料夾，以容納AEM 6.5戰爭。 此範例中的資料夾名稱為`temp`。 複製war檔案後，從temp資料夾內執行以擷取其內容：
 
    ```
    jar xvf aem-quickstart-6.5.0.war
    ```
 
-1. 擷取內容後，請前往 **WEB-INF** 資料夾並編輯web.xml檔案以變更執行模式。 若要尋找XML中設定這些檔案的位置，請尋找 `sling.run.modes` 字串。 找到後，請變更下一行程式碼的執行模式（預設為author）：
+1. 擷取內容後，請移至&#x200B;**WEB-INF**&#x200B;資料夾並編輯web.xml檔案以變更執行模式。 若要尋找XML中設定它們的位置，請尋找`sling.run.modes`字串。 找到後，請變更下一行程式碼的執行模式（預設為author）：
 
    ```bash
    <param-value >author</param-value>
    ```
 
-1. 變更上述作者值，並將執行模式設定為： `author,crx3,crx3tar`. 程式碼的最後一個區塊看起來應該像這樣：
+1. 變更上述作者值，並將執行模式設定為： `author,crx3,crx3tar`。 程式碼的最後一個區塊看起來應該像這樣：
 
    ```
    <init-param>

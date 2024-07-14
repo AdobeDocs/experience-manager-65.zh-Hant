@@ -21,7 +21,7 @@ AEM Forms提供API，供您查詢透過Forms Portal提交的表單資料。 此�
 
 >[!NOTE]
 >
->必須依照所述將叫用API的使用者新增到稽核者群組 [將提交稽核者關聯至表單](/help/forms/using/adding-reviewers-form.md).
+>將叫用API的使用者必須新增至稽核者群組，如[將提交稽核者與表單建立關聯](/help/forms/using/adding-reviewers-form.md)中所述。
 
 ## GET/content/forms/portal/submission.review.json？func=getFormsForSubmissionReview {#get-content-forms-portal-submission-review-json-func-getformsforsubmissionreview-br}
 
@@ -45,7 +45,7 @@ AEM Forms提供API，供您查詢透過Forms Portal提交的表單資料。 此�
 
 ### 範例 {#example}
 
-**請求URL**
+**要求URL**
 
 ```http
 https://[host]:[port]/content/forms/portal/submission.review.json?func=getFormsForSubmissionReview
@@ -73,31 +73,31 @@ https://[host]:[port]/content/forms/portal/submission.review.json?func=getFormsF
   </tr>
   <tr>
    <td><code>formPath</code></td>
-   <td>指定表單所在的CRX存放庫路徑。 如果您未指定表單路徑，則會傳回空白回應。<br /> </td>
+   <td>指定表單所在的CRX存放庫路徑。 如果您未指定表單路徑，它會傳回空白回應。<br /> </td>
   </tr>
   <tr>
    <td><code>offset</code><br /> (可選)</td>
-   <td>指定結果集索引中的起點。 預設值為 <strong>0</strong>.</td>
+   <td>指定結果集索引中的起點。 預設值為<strong>0</strong>。</td>
   </tr>
   <tr>
    <td><code>limit</code><br /> (可選)</td>
-   <td>限制結果的數量。 預設值為 <strong>30</strong>.</td>
+   <td>限制結果的數量。 預設值為<strong>30</strong>。</td>
   </tr>
   <tr>
    <td><code>orderby</code> <br /> (可選)</td>
-   <td>指定排序結果的屬性。 預設值為 <strong>jcr：lastModified</strong>，會根據上次修改時間排序結果。</td>
+   <td>指定排序結果的屬性。 預設值為<strong>jcr：lastModified</strong>，會根據上次修改時間排序結果。</td>
   </tr>
   <tr>
    <td><code>sort</code> <br /> (可選)</td>
-   <td>指定排序結果的順序。 預設值為 <strong>desc</strong>，會依遞減順序排序結果。 您可以指定 <code>asc</code> 以遞增順序排序結果。</td>
+   <td>指定排序結果的順序。 預設值為<strong>desc</strong>，會依遞減順序排序結果。 您可以指定<code>asc</code>以遞增順序排序結果。</td>
   </tr>
   <tr>
    <td><code>cutPoints</code> <br /> (可選)</td>
-   <td>指定要包含在結果中的以逗號分隔的表單屬性清單。 預設屬性為：<br /> <code>formName</code>， <code>formPath</code>， <code>submitID</code>， <code>formType</code>， <code>jcr:lastModified</code>， <code>owner</code></td>
+   <td>指定要包含在結果中的以逗號分隔的表單屬性清單。 預設屬性為：<br /> <code>formName</code>、<code>formPath</code>、<code>submitID</code>、<code>formType</code>、<code>jcr:lastModified</code>， <code>owner</code></td>
   </tr>
   <tr>
    <td><code>search</code> <br /> (可選)</td>
-   <td>在表單屬性中搜尋指定的值並傳回具有相符值的表單。 預設值為 <strong>「」</strong>.</td>
+   <td>在表單屬性中搜尋指定的值並傳回具有相符值的表單。 預設值為<strong>"</strong>。</td>
   </tr>
  </tbody>
 </table>
@@ -115,7 +115,7 @@ https://[host]:[port]/content/forms/portal/submission.review.json?func=getFormsF
 
 ### 範例 {#example-1}
 
-**請求URL**
+**要求URL**
 
 ```http
 https://[host]:[port]/content/forms/portal/submission.review.json?func=getAllSubmissions&formPath=/content/dam/formsanddocuments/forms-review/form2
@@ -146,7 +146,7 @@ https://[host]:[port]/content/forms/portal/submission.review.json?func=getAllSub
 
 ### 範例 {#example-2}
 
-**請求URL**
+**要求URL**
 
 ```http
 https://[host:'port'/content/forms/portal/submission.review.json?func=addComment&submitID=1403037413508500&comment=API+test+comment
@@ -184,7 +184,7 @@ https://[host:'port'/content/forms/portal/submission.review.json?func=addComment
 
 ### 範例 {#example-3}
 
-**請求URL**
+**要求URL**
 
 ```http
 https://[host]:'port'/content/forms/portal/submission.review.json?func=getComments&submitID=1403037413508500
@@ -216,7 +216,7 @@ https://[host]:'port'/content/forms/portal/submission.review.json?func=getCommen
 
 ### 範例 {#example-4}
 
-**請求URL**
+**要求URL**
 
 ```http
 https://[host]:'port'/content/forms/portal/submission.review.json?func=updateSubmission&submitID=1403037413508500&value=sample_value&property=some_new_prop

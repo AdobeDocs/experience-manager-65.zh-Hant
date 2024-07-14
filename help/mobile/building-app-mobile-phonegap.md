@@ -24,29 +24,29 @@ ht-degree: 0%
 
 建置您的應用程式以安裝至裝置或模擬器，以進行測試或發佈至應用程式商店。 您可以使用PhoneGap命令列介面在本機建立應用程式，或使用PhoneGap Build在雲端中建立應用程式。
 
-現已提供有關如何使用GitHub提供的程式碼來建立行動應用程式的完整逐步文章 [此處](https://helpx.adobe.com/experience-manager/using/aem62_mobile.html).
+[這裡](https://helpx.adobe.com/experience-manager/using/aem62_mobile.html)提供有關如何使用GitHub提供的程式碼建置行動應用程式的完整逐步文章。
 
-## 將應用程式移至發佈執行個體 {#moving-the-application-to-the-publish-instance}
+## 將應用程式移至Publish例項 {#moving-the-application-to-the-publish-instance}
 
 將應用程式檔案移至發佈執行個體，以便您能夠為已安裝的行動應用程式執行個體提供內容更新，並使用發佈的內容建置應用程式。 應用程式包含存放庫中的兩個節點分支：
 
 * `/content/phonegap/apps/<application name>`：作者建立和啟動的網頁。
-* `/content/phonegap/content/<application name>`：應用程式設定檔案和內容同步設定。
+* `/content/phonegap/content/<application name>`：應用程式組態檔與內容同步設定。
 
 >[!NOTE]
 >
 >如果您未將應用程式檔案移至發佈例項，內容作者將無法更新Content Sync快取。
 
-您只需要移動中的檔案 `/content/phonegap/content/<application name>` 分支到發佈執行個體。 中的檔案 `/content/phonegap/apps/<application name>` 分支會在作者啟動頁面時移動。
+您只需要將`/content/phonegap/content/<application name>`分支中的檔案移至發佈執行個體。 當作者啟動頁面時，會移動`/content/phonegap/apps/<application name>`分支中的檔案。
 
 AEM提供將大量內容移至發佈執行個體的兩種方法：
 
-* [使用「啟動樹狀結構」指令](/help/sites-authoring/publishing-pages.md) 位於復寫主控台上。
-* [建立套件](/help/sites-administering/package-manager.md) 包含內容並復寫套件的套件。
+* [在復寫主控台上使用[啟動樹狀結構]命令](/help/sites-authoring/publishing-pages.md)。
+* [建立包含內容的封裝](/help/sites-administering/package-manager.md)，並復寫該封裝。
 
 例如，系統會建立名為phonegapapp的行動應用程式。 下列節點必須移至發佈執行個體： /content/phonegap/content/phonegapapp。
 
-**秘訣：** 若要將套件從製作執行個體移至發佈執行個體，請使用套件上的「復寫」命令。
+**提示：**&#x200B;若要將套件從製作執行個體移至發佈執行個體，請對套件使用Replicate命令。
 
 ![chlimage_1-16](assets/chlimage_1-16.png)
 
@@ -58,14 +58,14 @@ AEM提供將大量內容移至發佈執行個體的兩種方法：
 
 若要使用PhoneGap CLI建置，您必須安裝Node.js和PhoneGap使用者端公用程式。 您需要網際網路連線才能執行下列程式。
 
-1. 下載並安裝 [Node.js](https://nodejs.org/en).
+1. 下載並安裝[Node.js](https://nodejs.org/en)。
 1. 開啟終端機或命令提示字元並輸入下列節點命令以安裝PhoneGap公用程式：
 
    ```shell
    npm install -g phonegap
    ```
 
-   在UNIX®或Linux®系統上，您可能需要在命令的前置詞中加上 `sudo`.
+   在UNIX®或Linux®系統上，您可能需要使用`sudo`作為命令的前置詞。
 
    終端機會顯示一系列HTTPGET命令的結果。 安裝成功後，終端機會顯示程式庫的安裝位置，類似於以下範例：
 
@@ -86,8 +86,8 @@ AEM提供將大量內容移至發佈執行個體的兩種方法：
 
 1. （選用）取得您要鎖定目標之行動平台的SDK：
 
-   * 若要為iOS平台建置應用程式，請安裝最新版本的 [Xcode](https://developer.apple.com/xcode/).
-   * 若要建置Android™應用程式，請安裝 [Android™ SDK](https://developer.android.com/).
+   * 若要建置iOS平台的App，請安裝最新版本的[Xcode](https://developer.apple.com/xcode/)。
+   * 若要建置Android™ App，請安裝[Android™ SDK](https://developer.android.com/)。
 
 ### 下載內容ZIP檔案 {#downloading-the-content-zip-file}
 
@@ -102,16 +102,16 @@ AEM提供將大量內容移至發佈執行個體的兩種方法：
    >
    >快取會儲存已安裝應用程式的內容更新。 清除快取將會使所有快取的更新失效。
 
-1. 在工具列上，按一下下載CLI資產圖示。
+1. 在工具列上，按一下下載CLI Assets圖示。
 
-   ![以重疊的平板電腦符號表示的下載CLI資產圖示。](do-not-localize/chlimage_1-1.png)
+   ![下載CLI Assets圖示，以重疊的平板電腦符號表示。](do-not-localize/chlimage_1-1.png)
 
 1. 儲存ZIP檔案後，按一下「成功」對話方塊上的「關閉」 。
 1. 解壓縮ZIP檔案的內容。
 
 ### 使用PhoneGap CLI建置 {#using-the-phonegap-cli-to-build}
 
-使用PhoneGap CLI編譯及安裝應用程式。 如需有關如何使用PhoneGap CLI的資訊，請參閱PhoneGap命令列介面(`https://docs.phonegap.com/en/3.0.0/guide_cli_index.md.html`)檔案。
+使用PhoneGap CLI編譯及安裝應用程式。 如需有關如何使用PhoneGap CLI的資訊，請參閱PhoneGap Command-line Interface (`https://docs.phonegap.com/en/3.0.0/guide_cli_index.md.html`)檔案。
 
 1. 開啟終端機或命令提示字元，並將目前目錄變更為下載的應用程式ZIP檔案。 例如，下列會將目錄變更為ng-app-cli.1392137825303.zip檔案：
 
@@ -119,7 +119,7 @@ AEM提供將大量內容移至發佈執行個體的兩種方法：
    cd ~/Downloads/ng-app-cli.1392137825303
    ```
 
-1. 針對您要定位的平台輸入phonegap指令。 例如，下列命令會建置適用於Android™的應用程式：
+1. 針對您要定位的平台輸入phonegap指令。 例如，下列命令會建置Android的應用程式™：
 
    ```shell
    phonegap build android
@@ -157,13 +157,13 @@ AEM提供將大量內容移至發佈執行個體的兩種方法：
 
 1. 選取啟動顯示頁面，然後按一下「建置遠端」圖示。
 
-   ![由兩個倒圓角齒輪指示的「建置遠端」圖示。](do-not-localize/chlimage_1-3.png)
+   ![由兩個圓形齒輪指示的「建置遠端」圖示。](do-not-localize/chlimage_1-3.png)
 
-   **注意：** 建置成功完成時，Beta版的AEM Beta版不會建立收件匣通知。
+   **注意：** AEM Beta的Beta版本不會在組建成功完成時建立收件匣通知。
 
-1. 在「成功」對話方塊中，按一下PhoneGap Build以開啟Adobe PhoneGap Build頁面，位置為 `https://build.phonegap.com/apps`. 如果您正在等待應用程式出現，您可以檢視PhoneGap Build狀態，網址為 `https://status.build.phonegap.com/`.
+1. 在「成功」對話方塊中，按一下「PhoneGap Build」以開啟`https://build.phonegap.com/apps`的Adobe PhoneGap Build頁面。 如果您正在等候應用程式出現，可以在`https://status.build.phonegap.com/`檢視PhoneGap Build狀態。
 
-   如需關於安裝組建的資訊，請參閱 [PhoneGap Build檔案](https://github.com/phonegap/phonegap-docs/tree/master/docs/4-phonegap-build).
+   如需有關安裝組建的資訊，請參閱[PhoneGap Build檔案](https://github.com/phonegap/phonegap-docs/tree/master/docs/4-phonegap-build)。
 
    >[!NOTE]
    >
@@ -171,4 +171,4 @@ AEM提供將大量內容移至發佈執行個體的兩種方法：
 
 ### 後續步驟 {#the-next-steps}
 
-建置流程後的下一個步驟是瞭解 [應用程式的結構](/help/mobile/phonegap-structure-an-app.md).
+建置程式之後的下一個步驟是學習應用程式](/help/mobile/phonegap-structure-an-app.md)的[結構。

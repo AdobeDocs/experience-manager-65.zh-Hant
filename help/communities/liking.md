@@ -18,43 +18,43 @@ ht-degree: 1%
 
 # 使用連結 {#using-liking}
 
-此 `Liking` 元件是實用工具，可讓使用者對特定內容發表意見，例如論壇中的評論。 使用 `Liking` 元件，成員選取心形圖示表示正面意見。
+`Liking`元件是實用工具，可讓使用者表達對特定內容的意見，例如論壇內的評論。 使用`Liking`元件時，成員會選取心形圖示來表示正面意見。
 
 ## 新增連結至頁面 {#adding-liking-to-a-page}
 
-若要新增 `Liking` 元件至作者模式下的頁面，請使用元件瀏覽器來尋找
+若要將`Liking`元件新增至作者模式的頁面，請使用元件瀏覽器來尋找
 
 * `Communities / Liking`
 
 並將其拖曳至頁面上適當的位置，例如與功能相關的位置以供使用者點選。
 
-如需必要資訊，請造訪 [Communities元件基本知識](basics.md).
+如需必要資訊，請造訪[社群元件基本知識](basics.md)。
 
-當 [必要的使用者端程式庫](essentials-liking.md#essentials-for-client-side) 包含，這就是 `Liking` 元件出現。
+當包含[必要的使用者端資料庫](essentials-liking.md#essentials-for-client-side)時，`Liking`元件就會以這種方式顯示。
 
 ![liking-component](assets/liking-component.png)
 
 ## 設定連結 {#configuring-liking}
 
-選取已放置的 `Liking` 元件供您存取及選取 `Configure` 圖示可開啟編輯對話方塊。
+選取置入的`Liking`元件，以便您可以存取並選取開啟編輯對話方塊的`Configure`圖示。
 
-![configure-new](assets/configure-new.png)
+![設定 — 新](assets/configure-new.png)
 
-在 **[!UICONTROL 文字和標籤]** 標籤，指定用來錄製「讚」的屬性。
+在&#x200B;**[!UICONTROL 文字和標籤]**&#x200B;標籤下，指定用來錄製「讚」的內容。
 
-![configure-liking](assets/configure-liking.png)
+![設定連結](assets/configure-liking.png)
 
 * **[!UICONTROL 正面回應標籤]**
 
-  (*必填*)正面回應的屬性名稱。
+  （*必要*）正面回應的屬性名稱。
 
 * **[!UICONTROL 負面回應標籤]**
 
-  (*必填*)負面回應的屬性名稱。
+  （*必要*）負面回應的屬性名稱。
 
 * **[!UICONTROL 記帳名稱]**
 
-  (*必填*)此投票元件例項的內部可識別屬性名稱。
+  （*必要*）此投票元件執行個體的內部可識別屬性名稱。
 
 ## 網站訪客體驗 {#site-visitor-experience}
 
@@ -68,4 +68,4 @@ ht-degree: 1%
 
 ## 其他資訊 {#additional-information}
 
-如需詳細資訊，請參閱 [按一下Essentials](essentials-liking.md) 開發人員頁面。
+如需開發人員的[按一下Essentials](essentials-liking.md)頁面以取得詳細資訊。

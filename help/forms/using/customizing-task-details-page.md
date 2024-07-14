@@ -21,15 +21,15 @@ ht-degree: 0%
 
 您可以將下列資訊新增至工作詳細資訊頁面：
 
-* 任務的JSON物件中可用的資訊(任務區段位於 [AEM Forms工作區JSON物件說明](/help/forms/using/html-workspace-json-object-description.md))
-* 程式執行個體的JSON物件中可用的資訊（中的程式執行個體區段） [AEM Forms工作區JSON物件說明](/help/forms/using/html-workspace-json-object-description.md))
+* 任務的JSON物件中可用的資訊([AEM Forms工作區JSON物件說明](/help/forms/using/html-workspace-json-object-description.md)中的任務區段)
+* 處理程式執行個體的JSON物件中可用的資訊([AEM Forms工作區JSON物件說明](/help/forms/using/html-workspace-json-object-description.md)中的處理程式執行個體區段)
 
 若要自訂工作詳細資訊頁面，請執行下列動作：
 
-1. 追隨 [AEM Forms工作區自訂的一般步驟。](/help/forms/using/generic-steps-html-workspace-customization.md)
-1. 若要顯示任何其他資訊，請將對應的索引鍵/值組新增至 `translation.json` 檔案位於 `todo`區塊> `details`區塊> `app`區塊> [`required`區塊].
+1. 請依照[一般步驟進行AEM Forms工作區自訂。](/help/forms/using/generic-steps-html-workspace-customization.md)
+1. 若要顯示任何其他資訊，請在`todo`block > `details`block > `app`block > [`required`block]的`translation.json`檔案中新增對應的機碼值組。
 
-   此 [`required`區塊] 參考可用的區塊，例如工作資訊的工作區塊、處理資訊的處理區塊，以及擱置工作資訊的目前擱置工作區塊。
+   [`required`區塊]參考到可用的區塊，例如工作資訊的工作區塊、處理序資訊的處理序區塊，以及擱置工作資訊的currentpendingtask區塊。
 
    例如，若要在工作詳細資訊頁面中新增有關「需要路由選擇」的資訊，您可以在工作區塊中新增下列索引鍵/值組：
 
@@ -54,9 +54,9 @@ ht-degree: 0%
    >
    >為所有支援的語言新增對應的機碼值組。
 
-1. 複製 `/libs/ws/js/runtime/templates/taskdetails.html` 至 `/apps/ws/js/runtime/templates/taskdetails.html`.
+1. 將`/libs/ws/js/runtime/templates/taskdetails.html`複製到`/apps/ws/js/runtime/templates/taskdetails.html`。
 
-   將新資訊新增至 `/apps/ws/js/runtime/templates/taskdetails.html`. 例如：
+   新增資訊到`/apps/ws/js/runtime/templates/taskdetails.html`。 例如：
 
    ```css
    <div class="detailsContainer">
@@ -79,10 +79,10 @@ ht-degree: 0%
 
 1. 開啟/apps/ws/js/registry.js進行編輯。
 
-   搜尋和取代 `text!/lc/libs/ws/js/runtime/templates/taskdetails.html` 替換為 `text!/lc/apps/ws/js/runtime/templates/taskdetails.html`.
+   搜尋並以`text!/lc/apps/ws/js/runtime/templates/taskdetails.html`取代`text!/lc/libs/ws/js/runtime/templates/taskdetails.html`。
 
 >[!NOTE]
 >
->若要使用在中建立的任務自訂任務詳細資訊頁面 **開始程式** AEM Forms標籤，將新資訊新增至 `/apps/ws/js/runtime/templates/startprocess.html`.
+>若要使用在AEM Forms工作區的&#x200B;**開始程式**&#x200B;索引標籤中建立的任務來自訂任務詳細資訊頁面，請將新資訊新增至`/apps/ws/js/runtime/templates/startprocess.html`。
 >
->若要為新增至詳細資訊頁面的資訊新增樣式，請使用 *使用者介面變更* 中的區段 [工作區自訂](changing-locale-user-interface.md).
+>若要為新增至詳細資訊頁面的資訊新增樣式，請使用[Workspace自訂](changing-locale-user-interface.md)中的&#x200B;*使用者介面變更*&#x200B;區段來修改CSS檔案。

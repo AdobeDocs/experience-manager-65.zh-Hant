@@ -49,7 +49,7 @@ ht-degree: 4%
   </tr>
   <tr>
    <td><strong> 屬性</strong></td>
-   <td>另請參閱 <a href="featured.md">主要內容</a></td>
+   <td>檢視<a href="featured.md">主要內容</a></td>
   </tr>
  </tbody>
 </table>
@@ -58,4 +58,4 @@ ht-degree: 4%
 
 ### 檔案庫功能 {#file-library-function}
 
-社群網站結構包含 [主要內容功能](functions.md#featured-content-function)，包括已設定的 `featured content` 元件。
+包含[精選內容功能](functions.md#featured-content-function)的社群網站結構包含已設定的`featured content`元件。

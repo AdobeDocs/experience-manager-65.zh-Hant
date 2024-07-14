@@ -24,21 +24,21 @@ ht-degree: 0%
 
 AEM Mobile Dashboard可讓您建立、建置和部署行動應用程式、建立、刪除和編輯應用程式中繼資料。 一旦您的應用程式上線，您就可以分析應用程式分析，包括生命週期和使用量度，以改善客戶轉換和品牌忠誠度。
 
-若要建置AEM Mobile應用程式，請參閱 [建立行動應用程式](/help/mobile/building-app-mobile-phonegap.md) 頁面。
+若要建置您的AEM Mobile應用程式，請參閱[建置行動應用程式](/help/mobile/building-app-mobile-phonegap.md)頁面。
 
-若要設定環境並開始使用，請參閱 [管理AEM以使用AEM PhoneGap Enterprise](/help/mobile/administer-phonegap.md).
+若要設定環境並開始使用，請參閱[管理AEM以使用AEM PhoneGap Enterprise](/help/mobile/administer-phonegap.md)。
 
 ## AEM Mobile應用程式目錄 {#the-aem-mobile-apps-catalog}
 
-此 [AEM Mobile應用程式目錄](http://localhost:4502/aem/apps.html/content/phonegap) 顯示AEM中管理的所有行動應用程式。
+[AEM Mobile應用程式目錄](http://localhost:4502/aem/apps.html/content/phonegap)會顯示在AEM中管理的所有行動應用程式。
 
 將此目錄視為AEM Mobile的「登陸頁面」，管理員可依據範本建立，或上傳行動開發人員已啟動的現有應用程式，藉此啟動新的AEM Mobile應用程式。
 
 請依照下列步驟前往應用程式目錄登陸頁面：
 
-1. 瀏覽至 **導覽** 然後選擇 **行動**.
+1. 瀏覽至&#x200B;**導覽**，然後選擇&#x200B;**行動裝置**。
 
-1. 選擇 **應用程式** 以開啟應用程式目錄。
+1. 選擇&#x200B;**應用程式**&#x200B;以開啟應用程式目錄。
 
 ![AEM Mobile應用程式目錄](assets/chlimage_1-135.png)
 
@@ -54,15 +54,15 @@ AEM Mobile Dashboard可讓您建立、建置和部署行動應用程式、建立
 
 「管理應用程式動態磚」會顯示您的應用程式圖示、名稱、說明、支援的平台、呼叫總部以取得更新URL和版本資訊。 您可以鑽研至此圖磚，以編輯及維護「PhoneGap應用程式設定」(config.xml)，並準備應用程式以提交至各種應用程式存放區以供分發。
 
-按一下 [此處](/help/mobile/phonegap-app-details-tile.md) 以取得詳細資訊。
+按一下[這裡](/help/mobile/phonegap-app-details-tile.md)以取得詳細資料。
 
 ![chlimage_1-137](assets/chlimage_1-137.png)
 
 ### 「管理頁面內容」表徵圖 {#the-manage-page-content-tile}
 
-您可以在AEM Mobile中建立、更新和刪除內容，其方式與您在AEM Sites中執行相同操作的方式相同。 此 **管理頁面內容圖磚** 顯示受管理內容和上次修改的頁數。 您可以按一下圖磚中的每筆記錄，深入鑽研內容以建立、複製、移動、刪除及更新頁面。 內容更新後，您可以透過 **「管理內容封裝」圖磚。**
+您可以在AEM Mobile中建立、更新和刪除內容，其方式與您在AEM Sites中執行相同操作的方式相同。 **管理頁面內容動態磚**&#x200B;會顯示受管理內容及上次修改的頁面數量。 您可以按一下圖磚中的每筆記錄，深入鑽研內容以建立、複製、移動、刪除及更新頁面。 內容更新後，您可以透過&#x200B;**管理內容套件動態磚，將內容更新推播給您的客戶。**
 
-![內容拼貼](assets/chlimage_1-138.png)
+![內容磚](assets/chlimage_1-138.png)
 
 ### 「管理內容套件」圖磚 {#the-manage-content-packages-tile}
 
@@ -72,31 +72,31 @@ AEM Mobile Dashboard可讓您建立、建置和部署行動應用程式、建立
 
 「內容套件」會為每次更新建立ZIP檔案（視為內容發行套件）。 這些套件包含轉譯應用程式時產生的html資源和html頁面，而且具備足夠的智慧，可僅封裝自上次更新以來已修改的檔案。
 
-管理內容套件圖磚的 **型別** 欄會顯示「應用程式」以表示應用程式殼層內容，例如開發人員所管理應用程式的框架或基礎架構，或顯示「內容」（代表內容作者所管理的頁面內容）。
+「管理內容封裝」表徵圖的&#x200B;**型別**&#x200B;欄顯示「應用程式」以表示應用程式殼層內容，例如，由開發人員管理的應用程式的框架或基礎結構，或顯示「內容」，表示由內容作者管理的頁面內容。
 
 內容可以語言形式表示，或是作為應用程式使用多個內容發行套件的特定部分表示。 您如何套裝內容的選擇是有彈性的，而且完全取決於您想要如何管理應用程式的內容。
 
-此 **已修改** 欄指出最近修改頁面的時間。
+**Modified**&#x200B;欄指出最近修改頁面的時間。
 
-此 **已分段** 欄顯示上次建立內容更新的時間。 若要建立內容更新並暫存變更，請開啟圖磚中的任何記錄並建立更新。
+**已暫存**&#x200B;欄顯示上次建立內容更新的時間。 若要建立內容更新並暫存變更，請開啟圖磚中的任何記錄並建立更新。
 
-此 **已發佈** 欄會顯示上次內容更新的發佈時間，可供您的客戶使用。 若要發佈內容，您必須先暫存該內容，然後透過鑽研此圖磚並從「內容發行詳細資料」主控台發佈來發佈更新。
+**已發佈**&#x200B;欄顯示上次內容更新的發佈時間，可供您的客戶使用。 若要發佈內容，您必須先暫存該內容，然後透過鑽研此圖磚並從「內容發行詳細資料」主控台發佈來發佈更新。
 
-![內容版本動態磚](assets/chlimage_1-139.png) ![應用程式殼層的ContentSync套件](do-not-localize/chlimage_1-5.png)
+應用程式殼層](do-not-localize/chlimage_1-5.png)的![內容發行磚](assets/chlimage_1-139.png) ![ContentSync套件
 
 此圖示代表應用程式殼層的內容發行套件
 
-![內容發行套件圖示由兩個重疊的方形套件符號表示。](do-not-localize/chlimage_1-6.png)
+![內容發行套件圖示由兩個正方形重疊套件符號表示。](do-not-localize/chlimage_1-6.png)
 
 這些圖示代表應用程式內容的內容發行套件
 
 ### PhoneGap Build圖磚 {#the-phonegap-build-tile}
 
-此 **PhoneGap Build拼貼** 連線方式 `https://build.phonegap.com` 建置並託管遠端組建。 建置後，即可下載此組建版本，或直接透過二維碼將組建版本提供給您的裝置。
+**PhoneGap Build磚**&#x200B;會連線至`https://build.phonegap.com`，以建置並裝載遠端建置。 建置後，即可下載此組建版本，或直接透過二維碼將組建版本提供給您的裝置。
 
-或者，您可以下載裝置來源，透過PhoneGap CLI在本機建置(`https://docs.phonegap.com/en/3.5.0/guide_cli_index.md.html`)。
+或者，您可以下載裝置來源，透過PhoneGap CLI (`https://docs.phonegap.com/en/3.5.0/guide_cli_index.md.html`)在本機建置。
 
-![PhoneGap Build拼貼](assets/chlimage_1-140.png)
+![PhoneGap Build磚](assets/chlimage_1-140.png)
 
 ### 量度圖磚 {#the-metrics-tile}
 
@@ -104,11 +104,11 @@ AEM Mobile Dashboard可讓您建立、建置和部署行動應用程式、建立
 >
 >只有在您設定雲端服務後，才會顯示「量度」圖磚。
 >
->另請參閱 [設定您的Adobe Mobile ServicesCloud Service](/help/mobile/configure-adobe-mobile-cloud-service.md) 以取得詳細資訊。
+>如需詳細資訊，請參閱[設定您的Adobe行動服務Cloud Service](/help/mobile/configure-adobe-mobile-cloud-service.md)。
 
-AEM Mobile透過與Adobe Analytics整合 [AdobeMobile Services SDK](https://experienceleague.adobe.com/docs/mobile.html) (AMS)。
+AEM Mobile透過[Adobe Mobile Services SDK](https://experienceleague.adobe.com/docs/mobile.html) (AMS)與Adobe Analytics整合。
 
-控制中心 **量度圖磚** 顯示從AMS為您的應用程式提取的摘要分析。 您可以按一下右下方的「……」，深入分析控制面板。
+控制中心&#x200B;**量度圖磚**&#x200B;會顯示從AMS為您的應用程式提取的摘要分析。 您可以按一下右下方的「……」，深入分析控制面板。
 
 ![量度圖磚](assets/chlimage_1-141.png)
 
@@ -116,7 +116,7 @@ AEM Mobile透過與Adobe Analytics整合 [AdobeMobile Services SDK](https://expe
 
 「管理實體內容」表徵圖可讓您新增和管理應用程式定義。 應用程式定義可讓您識別哪些空間（和其他設定）適合應用程式。 如此一來，您就可以新增空間，而不必重新編譯應用程式。 應用程式定義已更新，且包含任何新空間的資訊。
 
-按一下 [此處](/help/mobile/phonegap-app-definitions.md) 以建立及管理您的應用程式定義。
+按一下[這裡](/help/mobile/phonegap-app-definitions.md)以建立和管理您的應用程式定義。
 
 您可以按一下右下角的「……」，鑽研至管理實體內容控制面板。
 

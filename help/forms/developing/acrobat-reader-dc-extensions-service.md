@@ -29,11 +29,11 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 >[!NOTE]
 >
->使用AEM Forms進行程式設計的快速入門是以Forms伺服器作業系統為基礎。 不過，如果您使用其他作業系統（例如UNIX），請將Windows特定路徑取代為適用作業系統支援的路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 另請參閱 [設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>使用AEM Forms進行程式設計的快速入門是以Forms伺服器作業系統為基礎。 不過，如果您使用其他作業系統（例如UNIX），請將Windows特定路徑取代為適用作業系統支援的路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 請參閱[設定連線內容](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
 
 ## 快速入門(SOAP模式)：使用Java API套用使用許可權 {#quick-start-soap-mode-applying-usage-rights-using-the-java-api}
 
-以下Java程式碼範例將使用許可權套用至名為的PDF檔案 *Loan.pdf*. 啟用許可權的PDF檔案會儲存為名為的PDF檔案 *LoanUsageRights.pdf*. 下列使用許可權已套用至此PDF檔案： `enabledComments`， `enabledFormFillIn`、和 `enabledDigitalSignatures`. (請參閱 [將使用許可權套用至PDF檔案](/help/forms/developing/assigning-usage-rights.md).)
+下列Java程式碼範例將使用許可權套用至名為&#x200B;*Loan.pdf*&#x200B;的PDF檔案。 啟用許可權的PDF檔案會儲存為名為&#x200B;*LoanUsageRights.pdf*&#x200B;的PDF檔案。 下列使用許可權已套用至此PDF檔案： `enabledComments`、`enabledFormFillIn`和`enabledDigitalSignatures`。 (請參閱[套用使用許可權至PDF檔案](/help/forms/developing/assigning-usage-rights.md)。)
 
 
 ```java
@@ -145,7 +145,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 ## 快速入門(SOAP模式)：使用Java API從PDF檔案中移除使用許可權 {#quick-start-soap-mode-removing-usage-rights-from-a-pdf-document-using-the-java-api}
 
-以下Java程式碼範例會從名為的許可權啟用PDF檔案中移除使用許可權 *LoanUsageRights.pdf*. (請參閱 [從PDF檔案中移除使用許可權](/help/forms/developing/assigning-usage-rights.md).)
+下列Java程式碼範例會從名為&#x200B;*LoanUsageRights.pdf*&#x200B;的許可權啟用PDF檔案中移除使用許可權。 (請參閱[從PDF檔案移除使用許可權](/help/forms/developing/assigning-usage-rights.md)。)
 
 ```java
  /* 
@@ -245,7 +245,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 ## 快速入門(SOAP模式)：使用Java API擷取認證資訊 {#quick-start-soap-mode-retrieving-credential-information-using-the-java-api}
 
-以下Java程式碼範例會擷取用來將使用許可權套用至名為的已啟用許可權之PDF檔案的認證相關資訊 *LoanUsageRights.pdf*. (請參閱 [正在擷取認證資訊](/help/forms/developing/assigning-usage-rights.md).)
+下列Java程式碼範例會擷取用來將使用許可權套用至名為&#x200B;*LoanUsageRights.pdf*&#x200B;之啟用許可權的PDF檔案的認證相關資訊。 （請參閱[擷取認證資訊](/help/forms/developing/assigning-usage-rights.md)。）
 
 ```java
  /* 

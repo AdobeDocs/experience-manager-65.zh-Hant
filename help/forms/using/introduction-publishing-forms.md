@@ -49,7 +49,7 @@ AEM Forms提供入口網站元件，可減少管理間接成本及生產延遲�
 
 ## 可用的AEM Forms Portal元件 {#available-aem-forms-portal-components}
 
-AEM Forms提供下列立即可用的入口網站元件，分組在 **檔案服務** 和 **檔案服務述詞** 元件群組：
+AEM Forms提供下列現成的入口網站元件，這些元件群組在&#x200B;**檔案服務**&#x200B;和&#x200B;**檔案服務述詞**&#x200B;元件群組下：
 
 ### 搜尋與清單製作者 {#search-amp-lister}
 
@@ -67,21 +67,21 @@ AEM Forms提供下列立即可用的入口網站元件，分組在 **檔案服�
 
 Forms入口網站可讓您將表單從表單存放庫列出到您的入口網站頁面。 它也可讓您指定搜尋條件，讓入口網站使用者在表單清單中進行搜尋。 您也可以使用草稿和提交元件來顯示儲存為草稿的表單，以供稍後完成和提交表單。 您可以在Sites頁面上提供這些功能之前，先執行特定的一組作業。 依照列出的順序執行步驟，讓元件和個別功能在網站頁面上可用：
 
-1. **啟用Forms Portal元件**：現成可用的Forms Portal元件無法使用。 [啟用來自AEM sidekick的元件](/help/forms/using/enabling-forms-portal-components.md) 適用於AEM Sites頁面。
-1. **在頁面上列出表單(建立Forms入口網站頁面)：** 您可以在AEM Sites和非AEM網站頁面上列出表單。 此清單包含發佈執行個體上可用的表單。 使用者可以開啟表單並開始填寫這些表單。 每當使用者開啟表單時，就會建立表單的新例項：
+1. **啟用Forms Portal元件**：現成可用的Forms Portal元件無法使用。 [為AEM Sites頁面啟用AEM sidekick](/help/forms/using/enabling-forms-portal-components.md)中的元件。
+1. **在頁面上列出表單(建立Forms入口網站頁面)：**&#x200B;您可以在AEM Sites和非AEM網站頁面上列出表單。 此清單包含發佈執行個體上可用的表單。 使用者可以開啟表單並開始填寫這些表單。 每當使用者開啟表單時，就會建立表單的新例項：
 
-   1. **在AEM Sites頁面上列出表單**：新增 **[搜尋與清單製作者](../../forms/using/creating-form-portal-page.md)** 元件至頁面並設定 **[清單窗格](../../forms/using/creating-form-portal-page.md#p-list-pane-p)** 在其中列出頁面上的表單。 新增並設定 **搜尋窗格** 元件至 **搜尋與清單製作者** 元件以新增搜尋功能至頁面。 具有Forms Portal元件的頁面稱為 [Forms入口網站頁面](../../forms/using/creating-form-portal-page.md).
+   1. **在AEM Sites頁面上列出表單**：將&#x200B;**[Search &amp; Lister](../../forms/using/creating-form-portal-page.md)**&#x200B;元件新增至頁面，並在其中設定&#x200B;**[List Pane](../../forms/using/creating-form-portal-page.md#p-list-pane-p)**，以列出頁面上的表單。 將&#x200B;**Search Pane**&#x200B;元件新增並設定到&#x200B;**Search &amp; Lister**&#x200B;元件，也可將搜尋功能新增到頁面。 包含Forms Portal元件的頁面稱為[Forms Portal頁面](../../forms/using/creating-form-portal-page.md)。
 
-   1. **在非AEM Sites頁面上列出表單：** 使用 [Forms入口網站搜尋API](/help/forms/using/listing-forms-webpage-using-apis.md) 在非AEM Sites頁面上查詢、擷取及列出表單。
+   1. **在非AEM Sites頁面上列出表單：**&#x200B;使用[Forms入口網站搜尋API](/help/forms/using/listing-forms-webpage-using-apis.md)在非AEM Sites頁面上查詢、擷取和列出表單。
 
-1. **在Forms入口網站頁面上列出草稿和已提交的表單**：新增草稿和提交元件並設定至Forms Portal頁面。 元件會列出處於草稿狀態的所有表單以及已提交的表單。
+1. **在Forms入口網站頁面上列出草稿和已提交的表單**：新增草稿和提交元件並設定到Forms入口網站頁面。 元件會列出處於草稿狀態的所有表單以及已提交的表單。
 
-   若要讓提交的最適化表單出現在提交索引標籤中，請設定 **提交動作** 至 **[Forms Portal提交動作](configuring-submit-actions.md).** 或者，啟用Forms入口網站提交選項。 每當使用者提交表單時，該表單都會新增到提交索引標籤。
+   若要讓提交的最適化表單出現在提交索引標籤中，請將&#x200B;**提交動作**&#x200B;設定為&#x200B;**[Forms入口網站提交動作](configuring-submit-actions.md)。**&#x200B;或者，啟用Forms入口網站提交選項。 每當使用者提交表單時，該表單都會新增到提交索引標籤。
 
-1. **設定草稿與已提交表單資料的儲存空間：** 依預設，草稿和提交資料會儲存在AEM存放庫中。 在生產環境中，建議不要將草稿或提交的表單資料儲存在AEM存放庫中。 [設定Forms Portal元件，將資料儲存至安全位置](../../forms/using/draft-submission-component.md#customizing-the-storage).
-1. **（選用）自訂Forms Portal元件：** [自訂Forms Portal頁面範本](../../forms/using/customizing-templates-forms-portal-components.md) 為元件提供獨特的外觀。
-1. **（選用）新增自訂中繼資料至表單：** [新增自訂中繼資料至表單](../../forms/using/customizing-templates-forms-portal-components.md) 以改善清單和搜尋體驗。
-1. **Publish Forms Portal頁面：** 您的Forms入口網站頁面現已準備就緒。 發佈頁面。
+1. **設定草稿與已提交表單資料的儲存空間：**&#x200B;依預設，草稿與提交資料會儲存在AEM存放庫中。 在生產環境中，建議不要將草稿或提交的表單資料儲存在AEM存放庫中。 [設定Forms Portal元件，將資料儲存至安全位置](../../forms/using/draft-submission-component.md#customizing-the-storage)。
+1. **（選用）自訂Forms Portal元件：** [自訂Forms Portal頁面範本](../../forms/using/customizing-templates-forms-portal-components.md)，為元件提供獨特的外觀。
+1. **（選擇性）新增自訂中繼資料至表單：** [新增自訂中繼資料至表單](../../forms/using/customizing-templates-forms-portal-components.md)以改善清單和搜尋體驗。
+1. **Publish Forms Portal頁面：**&#x200B;您的Forms Portal頁面現已準備就緒。 Publish頁面。
 
 ## 相關的文章 {#related-articles}
 

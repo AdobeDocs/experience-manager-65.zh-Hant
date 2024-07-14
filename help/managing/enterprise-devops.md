@@ -52,7 +52,7 @@ Adobe Experience Manager (AEM)部署通常由多個環境組成，並用於不�
 * 實現設計
 * 開發必要的服務和指令碼以實作所需功能
 
-的設定 [開發](/help/sites-developing/best-practices.md) 環境可能取決於多種因素，但包括：
+[開發](/help/sites-developing/best-practices.md)環境的組態可能取決於各種因素，但包含：
 
 * 具備版本控制、可提供整合程式碼庫的整合開發系統。這可用來合併來自每個開發人員使用之個別開發環境的程式碼。
 * 屬於每個開發人員的個人環境；通常位於他們的本機電腦上。程式碼會以適當的間隔與版本控制系統同步
@@ -61,7 +61,7 @@ Adobe Experience Manager (AEM)部署通常由多個環境組成，並用於不�
 
 ### 品質保證 {#quality-assurance}
 
-品質保證團隊會使用此環境來做全面測試 [測試](/help/sites-developing/test-plan.md) 您的新系統；設計與功能皆有。 此環境應同時具備編寫環境、發佈環境及適當的內容，並提供所有啟用完整測試套件所需的服務。
+品質保證團隊使用此環境來全面[測試](/help/sites-developing/test-plan.md)您的新系統；包括設計和功能。 此環境應同時具備編寫環境、發佈環境及適當的內容，並提供所有啟用完整測試套件所需的服務。
 
 ### 中繼 {#staging}
 
@@ -139,6 +139,6 @@ AEM專案通常會觸發程式碼部署：
 內容可以傳輸：
 
 * 在不同環境間：透過匯出和匯入套件。
-* 在不同執行個體之間 — 透過直接複製([AEM復寫](/help/sites-deploying/replication.md))、內容（使用HTTP或HTTPS連線）。
+* 在不同執行個體之間 — 透過直接複製([AEM複製](/help/sites-deploying/replication.md))內容（使用HTTP或HTTPS連線）。
 
 ![chlimage_1-1](assets/chlimage_1-1.png)

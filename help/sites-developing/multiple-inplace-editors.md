@@ -21,7 +21,7 @@ ht-degree: 1%
 
 ## 設定多個編輯器 {#configure-multiple-editors}
 
-啟用多個就地編輯器的結構 `cq:InplaceEditingConfig` 節點型別已增強，其定義為 `cq:ChildEditorConfig` 節點型別。
+若要啟用多個就地編輯器，`cq:InplaceEditingConfig`節點型別的結構已增強`cq:ChildEditorConfig`節點型別的定義。
 
 例如：
 
@@ -58,7 +58,7 @@ ht-degree: 1%
 
 若要設定多個編輯器，請遵循下列步驟：
 
-1. 在節點上 `cq:inplaceEditing` (型別 `cq:InplaceEditingConfig`)定義下列屬性：
+1. 在節點`cq:inplaceEditing` （型別為`cq:InplaceEditingConfig`）上，定義下列屬性：
 
    * 名稱：`editorType`
    * 類型：`String`
@@ -69,26 +69,26 @@ ht-degree: 1%
    * 名稱：`cq:ChildEditors`
    * 類型：`nt:unstructured`
 
-1. 在 `cq:childEditors` 節點，為每個就地編輯器建立一個節點：
+1. 在`cq:childEditors`節點下，為每個就地編輯器建立一個節點：
 
-   * 名稱：每個節點的名稱是它所代表的屬性名稱，拖放目標也是如此。 例如， `image` 和 `text`.
+   * 名稱：每個節點的名稱是它所代表的屬性名稱，拖放目標也是如此。 例如，`image`和`text`。
    * 類型：`cq:ChildEditorConfig`
 
    >[!NOTE]
    >
-   >定義的放置目標和子編輯器之間存在關聯。 的名稱 `cq:ChildEditorConfig` 會將節點視為放置目標ID，以作為所選子編輯器的引數。 如果可編輯的子區域沒有放置目標（例如在文字元件中），則子編輯器的名稱仍會被視為ID，以識別對應的可編輯區域。
+   >定義的放置目標和子編輯器之間存在關聯。 `cq:ChildEditorConfig`節點的名稱會視為放置目標ID，以作為所選子編輯器的引數。 如果可編輯的子區域沒有放置目標（例如在文字元件中），則子編輯器的名稱仍會被視為ID，以識別對應的可編輯區域。
 
-1. 在每個節點上(`cq:ChildEditorConfig`)定義屬性：
+1. 在每個節點(`cq:ChildEditorConfig`)上定義屬性：
 
-   * 名稱： `type`.
-   * 值：已登入就地編輯器的名稱；例如， `image` 和 `text`.
+   * 名稱： `type`。
+   * 值：登入就地編輯器的名稱；例如，`image`和`text`。
 
-   * 名稱： `title`.
-   * 值：在可用編輯器的元件選取範圍清單中顯示的標題。 例如， `Image` 和 `Text`.
+   * 名稱： `title`。
+   * 值：在可用編輯器的元件選取範圍清單中顯示的標題。 例如，`Image`和`Text`。
 
 ### RTF編輯器的其他設定 {#additional-configuration-for-rich-text-editors}
 
-多個RTF編輯器的設定稍有不同，因為您可以分別設定每個個別RTE執行個體。 如需詳細資訊，請參閱 [設定RTF編輯器](/help/sites-administering/rich-text-editor.md). 若要有多個RTE，請為每個就地RTE建立設定。 Adobe建議在下方建立新的設定節點 `cq:InplaceEditingConfig` 因為每個個別RTE可以有不同的設定。 在新節點下，建立每個單獨的RTE配置。
+多個RTF編輯器的設定稍有不同，因為您可以分別設定每個個別RTE執行個體。 如需詳細資訊，請參閱[設定RTF編輯器](/help/sites-administering/rich-text-editor.md)。 若要有多個RTE，請為每個就地RTE建立設定。 Adobe建議在`cq:InplaceEditingConfig`下建立新的設定節點，因為每個個別RTE都可以有不同的設定。 在新節點下，建立每個單獨的RTE配置。
 
 ```xml
     texttext
@@ -105,20 +105,20 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->但若為RTE，則 `configPath` 當元件中只有一個文字編輯器的例項（可編輯的子區域）時，支援屬性。 此用法 `configPath` 提供的目的是支援與元件的舊版使用者介面對話方塊的回溯相容性。
+>不過，對於RTE，當元件中只有一個文字編輯器的執行個體（可編輯的子區域）時，即支援`configPath`屬性。 提供此`configPath`的使用是為了支援與元件的舊版使用者介面對話方塊的回溯相容性。
 
 >[!CAUTION]
 >
->不要將RTE設定節點命名為 `config`. 否則，RTE設定僅供管理員使用，不適用於群組內的使用者 `content-author`.
+>不要將RTE設定節點命名為`config`。 否則，RTE設定僅供管理員使用，不適用於群組`content-author`中的使用者。
 
 ## 程式碼範例 {#code-samples}
 
-您可以在此頁面找到程式碼： [GitHub上的aem-authoring-hybrideditors專案](https://github.com/Adobe-Marketing-Cloud/aem-authoring-hybrideditors). 您可以將完整專案下載為 [ZIP封存](https://github.com/Adobe-Marketing-Cloud/aem-authoring-hybrideditors/archive/master.zip).
+您可以在GitHub](https://github.com/Adobe-Marketing-Cloud/aem-authoring-hybrideditors)上的[aem-authoring-hybrideditors專案中找到此頁面的程式碼。 您可以以[ZIP封存](https://github.com/Adobe-Marketing-Cloud/aem-authoring-hybrideditors/archive/master.zip)的形式下載完整專案。
 
 ## 新增就地編輯器 {#add-an-in-place-editor}
 
-如需新增就地編輯器的一般資訊，請參閱檔案 [自訂頁面製作](/help/sites-developing/customizing-page-authoring-touch.md#add-new-in-place-editor).
+如需新增就地編輯器的一般資訊，請參閱檔案[自訂頁面製作](/help/sites-developing/customizing-page-authoring-touch.md#add-new-in-place-editor)。
 
 >[!MORELIKETHIS]
 >
->* [在Experience Manager中設定RTF編輯器](/help/sites-administering/rich-text-editor.md).
+>* [在Experience Manager](/help/sites-administering/rich-text-editor.md)中設定RTF編輯器。

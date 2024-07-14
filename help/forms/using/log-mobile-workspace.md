@@ -32,7 +32,7 @@ ht-degree: 0%
    >    * 若要顯示伺服器URL清單，請按一下「伺服器URL」文字方塊右角的清單箭頭。
    >    * 選取要透過應用程式登入的AEM Forms伺服器URL。
 
-當您登入應用程式時，系統會將您導向至 [**首頁** 畫面](../../forms/using/home-screen.md).
+當您登入應用程式時，系統會將您導向至&#x200B;[**首頁**&#x200B;畫面](../../forms/using/home-screen.md)。
 
 >[!NOTE]
 >

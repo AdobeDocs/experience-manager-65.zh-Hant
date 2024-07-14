@@ -21,25 +21,25 @@ ht-degree: 0%
 
 互動式通訊作者可重複使用檔案片段和影像等資產，以建立互動式通訊的列印和網頁版本。
 
-的先決條件之一 [建立互動式通訊](../../forms/using/create-interactive-communication.md) 讓伺服器上有可供列印和/或web channel使用的範本。 當範本作者在AEM中建立網路管道範本時，列印管道範本XDP會在Forms DesignerAdobe中建立並上傳至伺服器。
+[建立互動式通訊](../../forms/using/create-interactive-communication.md)的先決條件之一，是要在伺服器上提供列印和/或Web通道的範本。 範本作者在AEM中建立網路管道範本時，列印管道範本XDP會在Forms DesignerAdobe中建立並上傳至伺服器。
 
 ## 列印管道 {#printchannel}
 
-互動式通訊的列印管道使用XFA表單範本XDP。 XDP的設計採用AdobeForms Designer。 如需建立列印管道範本的詳細資訊，請參閱 [版面設計](../../forms/using/layout-design-details.md). 若要在互動式通訊中使用列印管道範本，您必須將範本上傳至AEM Forms伺服器。
+互動式通訊的列印管道使用XFA表單範本XDP。 XDP的設計目的AdobeForms Designer。 如需建立列印管道範本的詳細資訊，請參閱[版面設計](../../forms/using/layout-design-details.md)。 若要在互動式通訊中使用列印管道範本，您必須將範本上傳至AEM Forms伺服器。
 
 ### 上傳互動式通訊列印頻道範本 {#upload-interactive-communication-print-channel-template}
 
 若要上傳範本，您必須是表單 — 使用者群組的成員。 使用以下步驟，將列印管道範本(XDP)上傳至AEM Forms：
 
-1. 選取 **[!UICONTROL Forms]** > **[!UICONTROL Forms與檔案]**.
+1. 選取&#x200B;**[!UICONTROL Forms]** > **[!UICONTROL Forms與檔案]**。
 
-1. 選取 **[!UICONTROL 建立]** > **[!UICONTROL 檔案上傳]**.
+1. 選取&#x200B;**[!UICONTROL 建立]** > **[!UICONTROL 檔案上傳]**。
 
-   瀏覽並選取適當的列印管道範本(XDP)並選取 **[!UICONTROL 開啟]**.
+   瀏覽並選取適當的列印管道範本(XDP)並選取&#x200B;**[!UICONTROL 開啟]**。
 
 ## 網路頻道 {#web-channel}
 
-範本作者和管理員可以建立、編輯及啟用網頁範本。 若要允許其他使用者撰寫網頁範本，您必須授予他們許可權。 如需詳細資訊，請參閱 [使用者、群組和存取權管理](/help/sites-administering/user-group-ac-admin.md).
+範本作者和管理員可以建立、編輯及啟用網頁範本。 若要允許其他使用者撰寫網頁範本，您必須授予他們許可權。 如需詳細資訊，請參閱[使用者、群組和存取許可權管理](/help/sites-administering/user-group-ac-admin.md)。
 
 ### 編寫Web Channel範本 {#authoring-web-channel-template}
 
@@ -47,36 +47,36 @@ ht-degree: 0%
 
 若要編寫Web Channel範本，請完成以下步驟：
 
-1. 建立「範本」資料夾以保留互動式通訊Web範本（如果尚未建立）。 如需詳細資訊，請參閱範本資料夾，位於 [頁面範本 — 可編輯](/help/sites-developing/page-templates-editable.md).
+1. 建立「範本」資料夾以保留互動式通訊Web範本（如果尚未建立）。 如需詳細資訊，請參閱[頁面範本 — 可編輯](/help/sites-developing/page-templates-editable.md)中的範本資料夾。
 
-   1. 選取 **[!UICONTROL 工具]** ![工具](assets/tools.png) > **[!UICONTROL 設定瀏覽器]**.
-      * 請參閱 [設定瀏覽器](/help/sites-administering/configurations.md) 檔案以取得詳細資訊。
-   1. 在「組態瀏覽器」頁面中，選取 **[!UICONTROL 建立]**.
-   1. 在建立設定對話方塊中，指定資料夾的標題，核取 **[!UICONTROL 可編輯的範本]**，並選取 **[!UICONTROL 建立]**.
+   1. 選取&#x200B;**[!UICONTROL 工具]** ![工具](assets/tools.png) > **[!UICONTROL 設定瀏覽器]**。
+      * 如需詳細資訊，請參閱[設定瀏覽器](/help/sites-administering/configurations.md)檔案。
+   1. 在組態瀏覽器頁面中，選取&#x200B;**[!UICONTROL 建立]**。
+   1. 在[建立組態]對話方塊中，指定資料夾的標題，核取&#x200B;**[!UICONTROL 可編輯的範本]**，然後選取&#x200B;**[!UICONTROL 建立]**。
 
       資料夾隨即建立並列在「組態瀏覽器」頁面中。
 
 1. 導覽至適當的範本資料夾並建立網站範本。
 
-   1. 選取「 」，導覽至適當的範本資料夾 **[!UICONTROL 工具]** > **[!UICONTROL 範本]** > **`[Folder]`**.
+   1. 選取&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 範本]** > **`[Folder]`**，以導覽至適當的範本資料夾。
    1. 選取「**[!UICONTROL 建立]**」。
-   1. 選取 **[!UICONTROL 互動式通訊 — Web Channel]** 並選取 **[!UICONTROL 下一個]**.
-   1. 輸入範本標題和說明，然後選取 **[!UICONTROL 建立]**.
+   1. 選取&#x200B;**[!UICONTROL 互動式通訊 — Web Channel]**&#x200B;並選取&#x200B;**[!UICONTROL 下一步]**。
+   1. 輸入範本標題和說明，然後選取&#x200B;**[!UICONTROL 建立]**。
 
       範本隨即建立，並出現一個對話方塊。
 
-   1. 選取 **[!UICONTROL 開啟]** 以開啟您在範本編輯器中建立的範本。
+   1. 選取&#x200B;**[!UICONTROL 開啟]**&#x200B;以開啟您在範本編輯器中建立的範本。
 
       「範本編輯器」即會出現。
 
       ![webchanneltemplate](assets/webchanneltemplate.png)
 
-      建立或編輯範本時，範本作者可以定義多個方面。 建立或編輯範本類似於頁面製作。 如需詳細資訊，請參閱以下的「編輯範本 — 範本作者」： [建立頁面範本](/help/sites-authoring/templates.md).
+      建立或編輯範本時，範本作者可以定義多個方面。 建立或編輯範本類似於頁面製作。 如需詳細資訊，請參閱[建立頁面範本](/help/sites-authoring/templates.md)中的「編輯範本 — 範本作者」。
 
 1. 若要允許此範本用於建立互動式通訊，請啟用範本。
 
-   1. 選取 **[!UICONTROL 工具]** ![工具](assets/tools.png) > **[!UICONTROL 範本]**.
-   1. 導覽至適當的範本，選取該範本，然後選取 **[!UICONTROL 啟用]** 在警示訊息中，選取 **[!UICONTROL 啟用]**.
+   1. 選取&#x200B;**[!UICONTROL 工具]** ![工具](assets/tools.png) > **[!UICONTROL 範本]**。
+   1. 導覽至適當的範本，選取該範本，然後選取&#x200B;**[!UICONTROL 啟用]**，並在警示訊息中選取&#x200B;**[!UICONTROL 啟用]**。
 
       範本已啟用，其狀態會顯示為「已啟用」。 現在，您可以繼續建立互動式通訊，其中您可以使用新建立的Web Channel範本。
 
@@ -84,4 +84,4 @@ ht-degree: 0%
 
 在製作互動式通訊時，作者可以選取此選項，以建立與列印管道同步的Web管道。 使用print channel做為web channel的主版，可確保從print channel衍生web channel的內容、繼承和資料繫結，並且在print channel中所做的變更可以反映在web channel中。 不過，互動式通訊作者可視需求中斷Web Channel中特定元件的繼承。
 
-![將頻道列印為主版](assets/create_ic_print_master_new.png) ![以print channel為主的Web channel](assets/create_ic_print_master_web_new.png)
+![Print channel as master](assets/create_ic_print_master_new.png) ![Web channel with print channel as master](assets/create_ic_print_master_web_new.png)

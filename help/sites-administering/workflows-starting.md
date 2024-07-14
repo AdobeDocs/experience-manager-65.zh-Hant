@@ -22,12 +22,12 @@ ht-degree: 2%
 
 * 手動：
 
-   * 從 [工作流程模型](#workflow-models).
-   * 使用工作流程封裝 [批次處理](#workflow-packages-for-batch-processing).
+   * 來自[工作流程模型](#workflow-models)。
+   * 正在使用[批次處理](#workflow-packages-for-batch-processing)的工作流程封裝。
 
 * 自動：
 
-   * 回應節點變更； [使用啟動器](#workflows-launchers).
+   * 回應節點變更；[使用啟動器](#workflows-launchers)。
 
 >[!NOTE]
 >
@@ -41,13 +41,13 @@ ht-degree: 2%
 
 ## 工作流程模型 {#workflow-models}
 
-您可以啟動工作流程 [根據其中一種模型](/help/sites-administering/workflows.md#workflow-models-and-instances) 列在「工作流程模型」控制檯上。 唯一強制資訊是裝載，但也可以新增標題和/或評論。
+您可以根據「工作流程模型」控制檯上列出的其中一個模型](/help/sites-administering/workflows.md#workflow-models-and-instances)來啟動工作流程[。 唯一強制資訊是裝載，但也可以新增標題和/或評論。
 
 ## 工作流程啟動器 {#workflows-launchers}
 
 工作流程啟動器會監控內容存放庫中的變更，以根據已變更節點的位置和資源型別啟動工作流程。
 
-使用 **啟動器** 您可以：
+使用&#x200B;**啟動器**，您可以：
 
 * 檢視已為特定節點啟動的工作流程。
 * 選取在建立/修改/移除特定節點/節點型別時要啟動的工作流程。
@@ -56,7 +56,7 @@ ht-degree: 2%
 可以為任何節點建立啟動器。 不過，變更某些節點不會啟動工作流程。 變更下列路徑下的節點不會導致工作流程啟動：
 
 * `/var/workflow/instances`
-* 位於中的任何工作流程收件匣節點 `/home/users` 分支
+* 位於`/home/users`分支中任何位置的任何工作流程收件匣節點
 * `/tmp`
 * `/var/audit`
 * `/var/classes`
@@ -65,7 +65,7 @@ ht-degree: 2%
 * `/var/mobile`
 * `/var/statistics`
 
-   * 例外：變更以下的節點 `/var/statistics/tracking` *do* 導致工作流程啟動。
+   * 例外狀況：變更`/var/statistics/tracking` *do*&#x200B;下的節點會導致工作流程啟動。
 
 標準安裝包含各種定義。 這些是用於數位資產管理和社會合作任務：
 
@@ -85,19 +85,19 @@ ht-degree: 2%
 
 ## 從模型控制檯啟動工作流程 {#starting-a-workflow-from-the-models-console}
 
-1. 導覽至 **模型** 主控台使用 **工具**， **工作流程**，然後 **模型**.
+1. 使用&#x200B;**工具**、**工作流程**，然後使用&#x200B;**模型**，瀏覽至&#x200B;**模型**&#x200B;主控台。
 1. 選取工作流程（根據主控台檢視）；如有需要，您也可以使用搜尋（左上方）：
 
    ![wf-103](assets/wf-103.png)
 
    >[!NOTE]
    >
-   >此 **[暫時性](/help/sites-developing/workflows.md#transient-workflows)** 指標顯示未保留工作流程歷史記錄的工作流程。
+   >**[暫時](/help/sites-developing/workflows.md#transient-workflows)**&#x200B;指標顯示未保留工作流程歷史記錄的工作流程。
 
-1. 選取 **開始工作流程** 工具列中的。
+1. 從工具列選取&#x200B;**啟動工作流程**。
 1. 「執行工作流程」對話方塊開啟，讓您指定：
 
-   * **裝載**
+   * **承載**
 
      這可以是頁面、節點、資產、套件和其他資源。
 
@@ -113,8 +113,8 @@ ht-degree: 2%
 
 ## 建立啟動器組態 {#creating-a-launcher-configuration}
 
-1. 導覽至 **工作流程啟動器** 主控台使用 **工具**， **工作流程**，然後 **啟動器**.
-1. 選取 **建立**，然後 **新增啟動器** 若要開啟對話方塊：
+1. 使用&#x200B;**工具**、**工作流程**，然後使用&#x200B;**啟動器**，瀏覽至&#x200B;**工作流程啟動器**&#x200B;主控台。
+1. 選取&#x200B;**建立**，然後選取&#x200B;**新增啟動器**&#x200B;以開啟對話方塊：
 
    ![wf-105](assets/wf-105.png)
 
@@ -136,7 +136,7 @@ ht-degree: 2%
 
    * **執行模式**
 
-     工作流程啟動器套用的伺服器型別。 選取 **作者**， **發佈**，或 **製作與發佈**.
+     工作流程啟動器套用的伺服器型別。 選取&#x200B;**作者**、**Publish**&#x200B;或&#x200B;**作者與Publish**。
 
    * **條件**
 
@@ -148,7 +148,7 @@ ht-degree: 2%
 
      要啟用的功能清單。 使用下拉式選取器選取所需的功能。
 
-   * **停用的功能**
+   * **已停用的功能**
 
    要停用的功能清單。 使用下拉式選取器選取所需的功能。
 
@@ -164,8 +164,8 @@ ht-degree: 2%
 
      控制是否啟動工作流程啟動器：
 
-      * 選取 **啟用** ，以在滿足組態屬性時啟動工作流程。
-      * 選取 **停用** 不應執行工作流程的時間（即使滿足設定屬性時也不行）。
+      * 選取&#x200B;**啟用**，在組態屬性滿足時啟動工作流程。
+      * 選取&#x200B;**當工作流程不應執行時停用** （即使組態屬性已滿足，也不會執行）。
 
    * **排除清單**
 
@@ -173,8 +173,8 @@ ht-degree: 2%
 
      此啟動器屬性是以逗號分隔的專案清單： &quot;
 
-      * `property-name` 忽略任何 `jcr` 在指定的屬性名稱上觸發的事件。&quot;
-      * `event-user-data:<*someValue*>` 忽略任何包含 `*<someValue*`> `user-data` 透過 [`ObservationManager` API](https://developer.adobe.com/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/observation/ObservationManager.html#setUserData(java.lang.String).
+      * `property-name`忽略在指定屬性名稱上觸發的任何`jcr`事件。&quot;
+      * `event-user-data:<*someValue*>`會忽略任何包含透過[`ObservationManager` API](https://developer.adobe.com/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/observation/ObservationManager.html#setUserData(java.lang.String))設定的`*<someValue*`> `user-data`的事件。
 
      例如：
 
@@ -184,10 +184,10 @@ ht-degree: 2%
 
      `event-user-data:changedByWorkflowProcess`
 
-1. 選取 **建立**，以建立啟動器並返回主控台。
+1. 選取&#x200B;**建立**，以建立啟動器並返回主控台。
 
    發生適當的事件時，就會觸發啟動器，並啟動工作流程。
 
 ## 管理啟動器設定 {#managing-a-launcher-configuration}
 
-建立啟動器設定後，您可以使用相同主控台選取執行個體，然後 **檢視屬性** （並加以編輯）或 **刪除**.
+建立啟動器組態之後，您可以使用相同的主控台來選取執行個體，然後&#x200B;**檢視屬性** （並加以編輯）或&#x200B;**刪除**。

@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # 組合含書籤的PDF檔案 {#assembling-pdf-documents-with-bookmarks}
 
-**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms 。**
+**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
 
 您可以組合包含書籤的PDF檔案。 例如，假設您有一份不含書籤的PDF檔案，而且您想提供書籤來修改它。 使用Assembler服務，您可以傳遞不包含書籤的PDF檔案，並取回包含書籤的PDF檔案。
 
@@ -41,9 +41,9 @@ ht-degree: 0%
  </DDX>
 ```
 
-在此DDX檔案中，請注意已將值指派給來源屬性 `Loan.pdf`. 此DDX檔案指定將單一PDF檔案傳遞至組合器服務。 當組合含有書籤的PDF檔案時，您必須指定書籤XML檔案，以說明結果檔案中的書籤。 若要指定書籤XML檔案，請確定 `Bookmarks` 元素會在DDX檔案中指定。
+在此DDX檔案中，請注意來源屬性已指派值`Loan.pdf`。 此DDX檔案指定將單一PDF檔案傳遞至組合器服務。 當組合含有書籤的PDF檔案時，您必須指定書籤XML檔案，以說明結果檔案中的書籤。 若要指定書籤XML檔案，請確定已在DDX檔案中指定`Bookmarks`專案。
 
-在此範例DDX檔案中， `Bookmarks` 元素指定 `doc2` 做為值。 此值表示傳遞給Assembler服務的輸入對應包含名為的索引鍵 `doc2`. 的值 `doc2` 索引鍵是 `com.adobe.idp.Document` 代表書籤XML檔案的值。 (請參閱 [組合器服務和DDX參考](https://www.adobe.com/go/learn_aemforms_ddx_63).)
+在此範例DDX檔案中，`Bookmarks`專案指定`doc2`為值。 此值表示傳遞至組合器服務的輸入對應包含名為`doc2`的索引鍵。 `doc2`索引鍵的值是代表書籤XML檔案的`com.adobe.idp.Document`值。 （請參閱[組合器服務和DDX參考](https://www.adobe.com/go/learn_aemforms_ddx_63)中的「書籤語言」。）
 
 本主題使用下列XML書籤語言來組合包含書籤的PDF檔案。
 
@@ -73,25 +73,25 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如需支援動作的完整詳細資訊，請參閱&quot; `Action` 元素」 [組合器服務和DDX參考](https://www.adobe.com/go/learn_aemforms_ddx_63).
+>如需支援動作的完整詳細資料，請參閱[組合器服務和DDX參考](https://www.adobe.com/go/learn_aemforms_ddx_63)中的`Action`專案。
 
 指定此區段中所指定的DDX檔案並將XML檔案加入書籤作為輸入，Assembler服務會組合包含下列書籤的PDF檔案。
 
 ![aw_aw_bmark](assets/aw_aw_bmark.png)
 
-當使用者按一下 *開啟貸款詳細資料* 書籤，LoanDetails.pdf隨即開啟。 同樣地，當使用者按一下 *啟動記事本* 書籤，便箋簿已啟動。
+當使用者按一下&#x200B;*開啟貸款詳細資料*&#x200B;書籤時，就會開啟LoanDetails.pdf。 同樣地，當使用者按一下&#x200B;*啟動NotePad*&#x200B;書籤時，NotePad就會啟動。
 
 >[!NOTE]
 >
->閱讀本節之前，建議您先熟悉使用Assembler服務組合PDF檔案。 本節不討論概念，例如建立包含輸入檔案的集合物件，或學習如何從傳回的集合物件中擷取結果。 (請參閱 [以程式設計方式組合PDF檔案](/help/forms/developing/programmatically-assembling-pdf-documents.md#programmatically-assembling-pdf-documents).)
+>閱讀本節之前，建議您先熟悉使用Assembler服務組合PDF檔案。 本節不討論概念，例如建立包含輸入檔案的集合物件，或學習如何從傳回的集合物件中擷取結果。 (請參閱[以程式設計方式組合PDF檔案](/help/forms/developing/programmatically-assembling-pdf-documents.md#programmatically-assembling-pdf-documents)。)
 
 >[!NOTE]
 >
->如需有關組合器服務的詳細資訊，請參閱 [AEM Forms服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
+>如需有關組合器服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 >[!NOTE]
 >
->如需有關DDX檔案的詳細資訊，請參閱 [組合器服務和DDX參考](https://www.adobe.com/go/learn_aemforms_ddx_63).
+>如需有關DDX檔案的詳細資訊，請參閱[組合器服務與DDX參考](https://www.adobe.com/go/learn_aemforms_ddx_63)。
 
 ## 步驟摘要 {#summary-of-steps}
 
@@ -107,7 +107,7 @@ ht-degree: 0%
 1. 組合PDF檔案。
 1. 儲存包含書籤的PDF檔案。
 
-**包含專案檔案**
+**包含專案檔**
 
 在您的開發專案中包含必要的檔案。 如果您使用Java建立使用者端應用程式，請包含必要的JAR檔案。 如果您使用Web服務，請確定您包含Proxy檔案。
 
@@ -119,7 +119,7 @@ ht-degree: 0%
 * adobe-utilities.jar (如果AEM Forms部署在JBoss上，則為必要)
 * jbossall-client.jar (如果AEM Forms部署在JBoss上，則為必要)
 
-如果將AEM Forms部署在JBoss以外的受支援J2EE應用程式伺服器上，則必須將adobe-utilities.jar和jbossall-client.jar檔案取代為特定於AEM Forms部署所在J2EE應用程式伺服器的JAR檔案。 如需有關所有AEM Forms JAR檔案位置的資訊，請參閱 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
+如果將AEM Forms部署在JBoss以外的受支援J2EE應用程式伺服器上，則必須將adobe-utilities.jar和jbossall-client.jar檔案取代為特定於AEM Forms部署所在J2EE應用程式伺服器的JAR檔案。 如需有關所有AEM Forms JAR檔案位置的資訊，請參閱[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
 **建立PDF組合器使用者端**
 
@@ -127,11 +127,11 @@ ht-degree: 0%
 
 **參考現有的DDX檔案**
 
-必須參考DDX檔案才能組裝PDF檔案。 此DDX檔案必須包含 `Bookmarks` 元素，指示Assembler服務組合包含書籤的PDF。 （如需範例，請參閱本節前面顯示的DDX檔案）。
+必須參考DDX檔案才能組裝PDF檔案。 此DDX檔案必須包含`Bookmarks`元素，這會指示組合器服務組合包含書籤的PDF。 （如需範例，請參閱本節前面顯示的DDX檔案）。
 
-**參照新增書籤的PDF檔案**
+**參考加入書籤的PDF檔案**
 
-參照新增書籤的PDF檔案。 參考的PDF檔案是否已包含書籤並不重要。 如果 `Bookmarks` 元素是PDF來源元素的子項，則書籤將會取代PDF來源中已存在的專案。 不過，如果您想要保留現有的書籤，請確定 `Bookmarks` 是PDF來源元素的同胞(sibling)。 例如，請考量下列範例：
+參照新增書籤的PDF檔案。 參考的PDF檔案是否已包含書籤並不重要。 如果`Bookmarks`元素是PDF來源元素的子項，則書籤將會取代PDF來源中已存在的專案。 不過，如果要保留現有的書籤，請確定`Bookmarks`是PDF來源元素的同層級。 例如，請考量下列範例：
 
 ```xml
  <PDF result="foo">
@@ -146,7 +146,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->請參閱下列「書籤語言」： [組合器服務和DDX參考](https://www.adobe.com/go/learn_aemforms_ddx_63).
+>請參閱[組合器服務和DDX參考](https://www.adobe.com/go/learn_aemforms_ddx_63)中的「書籤語言」。
 
 **將PDF檔案和書籤XML檔案新增至地圖集合**
 
@@ -154,15 +154,15 @@ ht-degree: 0%
 
 **設定執行階段選項**
 
-您可以設定執行階段選項，控制Assembler服務執行工作時的行為。 例如，您可以設定一個選項，在遇到錯誤時指示Assembler服務繼續處理工作。 如需您可以設定的執行階段選項相關資訊，請參閱 `AssemblerOptionSpec` 中的類別參考 [AEM Forms API參考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
+您可以設定執行階段選項，控制Assembler服務執行工作時的行為。 例如，您可以設定一個選項，在遇到錯誤時指示Assembler服務繼續處理工作。 如需您可以設定的執行階段選項相關資訊，請參閱[AEM Forms API參考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)中的`AssemblerOptionSpec`類別參考。
 
 **組合PDF檔案**
 
-若要組合包含新書籤的PDF檔案，請使用「組合器」服務的 `invokeDDX` 作業。 為什麼您必須使用 `invokeDDX` 操作而不是其他Assembler服務操作，例如 `invokeOneDocument` 是因為Assembler服務需要在Map集合物件中傳遞的書籤XML檔案。 此物件是 `invokeDDX` 作業。
+若要組合包含新書籤的PDF檔案，請使用Assembler服務的`invokeDDX`作業。 您必須使用`invokeDDX`作業而非其他Assembler服務作業（例如`invokeOneDocument`）的原因，是因為Assembler服務需要在Map集合物件中傳遞的書籤XML檔案。 此物件是`invokeDDX`作業的引數。
 
 **儲存包含書籤的PDF檔案**
 
-從傳回的地圖物件中擷取結果，並儲存對應的PDF檔案。 （請參閱中的「擷取結果」） [以程式設計方式組合PDF檔案](/help/forms/developing/programmatically-assembling-pdf-documents.md).)
+從傳回的地圖物件中擷取結果，並儲存對應的PDF檔案。 (請參閱[以程式設計方式組裝PDF檔案](/help/forms/developing/programmatically-assembling-pdf-documents.md)中的「擷取結果」。)
 
 **另請參閱**
 
@@ -182,59 +182,59 @@ ht-degree: 0%
 
 1. 建立PDF組合器使用者端。
 
-   * 建立 `ServiceClientFactory` 包含連線屬性的物件。 (請參閱 [設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).)
-   * 建立 `AssemblerServiceClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 物件。
+   * 建立包含連線屬性的`ServiceClientFactory`物件。 （請參閱[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。）
+   * 使用它的建構函式並傳遞`ServiceClientFactory`物件來建立`AssemblerServiceClient`物件。
 
 1. 參考現有的DDX檔案。
 
-   * 建立 `java.io.FileInputStream` 物件，使用它的建構函式並傳遞字串值（指定DDX檔案的位置）來代表DDX檔案。
-   * 建立 `com.adobe.idp.Document` 物件，使用它的建構函式並傳遞 `java.io.FileInputStream` 物件。
+   * 使用它的建構函式並傳遞指定DDX檔案位置的字串值，建立代表DDX檔案的`java.io.FileInputStream`物件。
+   * 使用它的建構函式並傳遞`java.io.FileInputStream`物件來建立`com.adobe.idp.Document`物件。
 
 1. 參照新增書籤的PDF檔案。
 
-   * 建立 `java.io.FileInputStream` 物件，使用它的建構函式並傳遞PDF檔案的位置。
-   * 建立 `com.adobe.idp.Document` 物件，使用它的建構函式並傳遞 `java.io.FileInputStream` 包含PDF檔案的物件。
+   * 使用物件的建構函式並傳遞PDF檔案的位置來建立`java.io.FileInputStream`物件。
+   * 使用它的建構函式建立`com.adobe.idp.Document`物件，並傳遞包含PDF檔案的`java.io.FileInputStream`物件。
 
 1. 參考書籤XML檔案。
 
-   * 建立 `java.io.FileInputStream` 物件，使用它的建構函式，並傳遞代表書籤XML檔案的XML檔案的位置。
-   * 建立 `com.adobe.idp.Document` 物件並傳遞 `java.io.FileInputStream` 包含PDF檔案的物件。
+   * 使用物件的建構函式，並傳遞代表書籤XML檔案的XML檔案位置，以建立`java.io.FileInputStream`物件。
+   * 建立`com.adobe.idp.Document`物件並傳遞包含PDF檔案的`java.io.FileInputStream`物件。
 
 1. 將PDF檔案和書籤XML檔案新增至地圖集合。
 
-   * 建立 `java.util.Map` 用來儲存輸入PDF檔案和書籤XML檔案的物件。
-   * PDF透過叫用 `java.util.Map` 物件的 `put` 方法並傳遞下列引數：
+   * 建立用來儲存輸入PDF檔案和書籤XML檔案的`java.util.Map`物件。
+   * 呼叫`java.util.Map`物件的`put`方法並傳遞下列引數，以新增輸入PDF檔案：
 
       * 代表索引鍵名稱的字串值。 此值必須符合DDX檔案中指定的PDF來源元素的值。
-      * A `com.adobe.idp.Document` 包含輸入PDF檔案的物件。
+      * 包含輸入PDF檔案的`com.adobe.idp.Document`物件。
 
-   * 透過叫用 `java.util.Map` 物件的 `put` 方法並傳遞下列引數：
+   * 呼叫`java.util.Map`物件的`put`方法並傳遞下列引數，以新增書籤XML檔案：
 
       * 代表索引鍵名稱的字串值。 此值必須符合DDX檔案中指定的書籤來源元素值。
-      * A `com.adobe.idp.Document` 包含書籤XML檔案的物件。
+      * 包含書籤XML檔案的`com.adobe.idp.Document`物件。
 
 1. 設定執行階段選項。
 
-   * 建立 `AssemblerOptionSpec` 使用建構函式來儲存執行階段選項的物件。
-   * 透過叫用屬於下列專案的方法，設定執行階段選項以符合您的業務需求 `AssemblerOptionSpec` 物件。 例如，若要指示Assembler服務在發生錯誤時繼續處理工作，請叫用 `AssemblerOptionSpec` 物件的 `setFailOnError` 方法與傳遞 `false`.
+   * 使用建構函式建立儲存執行階段選項的`AssemblerOptionSpec`物件。
+   * 透過叫用屬於`AssemblerOptionSpec`物件的方法，設定執行階段選項以符合您的業務需求。 例如，若要指示Assembler服務在發生錯誤時繼續處理工作，請叫用`AssemblerOptionSpec`物件的`setFailOnError`方法，然後傳遞`false`。
 
 1. 組合PDF檔案。
 
-   叫用 `AssemblerServiceClient` 物件的 `invokeDDX` 方法並傳遞下列必要值：
+   叫用`AssemblerServiceClient`物件的`invokeDDX`方法，並傳遞下列必要值：
 
-   * A `com.adobe.idp.Document` 代表要使用的DDX檔案的物件
-   * A `java.util.Map` 同時包含輸入PDF檔案與書籤XML檔案的物件。
-   * A `com.adobe.livecycle.assembler.client.AssemblerOptionSpec` 指定執行階段選項的物件，包括預設字型和作業記錄層級
+   * 代表要使用的DDX檔案的`com.adobe.idp.Document`物件
+   * 同時包含輸入PDF檔案與書籤XML檔案的`java.util.Map`物件。
+   * 指定執行階段選項（包括預設字型和作業記錄層級）的`com.adobe.livecycle.assembler.client.AssemblerOptionSpec`物件
 
-   此 `invokeDDX` 方法傳回 `com.adobe.livecycle.assembler.client.AssemblerResult` 包含工作結果和發生之任何例外狀況的物件。
+   `invokeDDX`方法傳回`com.adobe.livecycle.assembler.client.AssemblerResult`物件，其中包含工作的結果和發生的任何例外狀況。
 
 1. 儲存包含書籤的PDF檔案。
 
    若要取得新建立的PDF檔案，請執行下列動作：
 
-   * 叫用 `AssemblerResult` 物件的 `getDocuments` 方法。 這會傳回 `java.util.Map` 物件。
-   * 逐一檢視 `java.util.Map` 物件，直到您找到結果為止 `com.adobe.idp.Document` 物件。 (您可以使用DDX檔案中指定的PDF結果元素來取得檔案。)
-   * 叫用 `com.adobe.idp.Document` 物件的 `copyToFile` 用於擷取PDF檔案的方法。
+   * 叫用`AssemblerResult`物件的`getDocuments`方法。 這會傳回`java.util.Map`物件。
+   * 逐一檢視`java.util.Map`物件，直到找到結果`com.adobe.idp.Document`物件為止。 (您可以使用DDX檔案中指定的PDF結果元素來取得檔案。)
+   * 叫用`com.adobe.idp.Document`物件的`copyToFile`方法來擷取PDF檔案。
 
 **另請參閱**
 
@@ -250,79 +250,79 @@ ht-degree: 0%
 
 1. 包含專案檔案。
 
-   建立使用MTOM的Microsoft .NET專案。 確定您使用下列WSDL定義： `http://localhost:8080/soap/services/AssemblerService?WSDL&lc_version=9.0.1`.
+   建立使用MTOM的Microsoft .NET專案。 確定您使用下列WSDL定義： `http://localhost:8080/soap/services/AssemblerService?WSDL&lc_version=9.0.1`。
 
    >[!NOTE]
    >
-   >取代 `localhost` 搭配託管AEM Forms之伺服器的IP位址。
+   >將`localhost`取代為主控AEM Forms之伺服器的IP位址。
 
 1. 建立PDF組合器使用者端。
 
-   * 建立 `AssemblerServiceClient` 物件，使用它的預設建構函式。
-   * 建立 `AssemblerServiceClient.Endpoint.Address` 物件，使用 `System.ServiceModel.EndpointAddress` 建構函式。 將指定WSDL的字串值傳遞至AEM Forms服務(例如， `http://localhost:8080/soap/services/AssemblerService?blob=mtom`)。 您不需要使用 `lc_version` 屬性。 當您建立服務參考時，會使用此屬性。
-   * 建立 `System.ServiceModel.BasicHttpBinding` 物件，方法是取得 `AssemblerServiceClient.Endpoint.Binding` 欄位。 將傳回值轉換為 `BasicHttpBinding`.
-   * 設定 `System.ServiceModel.BasicHttpBinding` 物件的 `MessageEncoding` 欄位至 `WSMessageEncoding.Mtom`. 此值可確保使用MTOM。
+   * 使用預設建構函式建立`AssemblerServiceClient`物件。
+   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`AssemblerServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞至AEM Forms服務（例如，`http://localhost:8080/soap/services/AssemblerService?blob=mtom`）。 您不需要使用`lc_version`屬性。 當您建立服務參考時，會使用此屬性。
+   * 取得`AssemblerServiceClient.Endpoint.Binding`欄位的值，以建立`System.ServiceModel.BasicHttpBinding`物件。 將傳回值轉換為`BasicHttpBinding`。
+   * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作來啟用基本的HTTP驗證：
 
-      * 將AEM表單使用者名稱指派給欄位 `AssemblerServiceClient.ClientCredentials.UserName.UserName`.
-      * 將對應的密碼值指派給欄位 `AssemblerServiceClient.ClientCredentials.UserName.Password`.
-      * 指派常數值 `HttpClientCredentialType.Basic` 至欄位 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
-      * 指派常數值 `BasicHttpSecurityMode.TransportCredentialOnly` 至欄位 `BasicHttpBindingSecurity.Security.Mode`.
+      * 將AEM表單使用者名稱指派給欄位`AssemblerServiceClient.ClientCredentials.UserName.UserName`。
+      * 將對應的密碼值指派給欄位`AssemblerServiceClient.ClientCredentials.UserName.Password`。
+      * 將常數值`HttpClientCredentialType.Basic`指派給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+      * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`指派給欄位`BasicHttpBindingSecurity.Security.Mode`。
 
 1. 參考現有的DDX檔案。
 
-   * 建立 `BLOB` 物件（使用其建構函式）。 此 `BLOB` 物件可用來儲存DDX檔案。
-   * 建立 `System.IO.FileStream` 物件，方法是叫用其建構函式，並傳遞代表DDX檔案檔案位置及開啟檔案的模式的字串值。
-   * 建立位元組陣列，儲存 `System.IO.FileStream` 物件。 您可以取得 `System.IO.FileStream` 物件的 `Length` 屬性。
-   * 透過叫用 `System.IO.FileStream` 物件的 `Read` 方法，並傳遞位元組陣列、起始位置以及要讀取的資料流長度。
-   * 填入 `BLOB` 物件，透過指派其 `MTOM` 包含位元組陣列內容的欄位。
+   * 使用物件的建構函式建立`BLOB`物件。 `BLOB`物件是用來儲存DDX檔案。
+   * 建立`System.IO.FileStream`物件，方法為叫用其建構函式，並傳遞代表DDX檔案檔案位置及開啟檔案的模式的字串值。
+   * 建立位元組陣列以儲存`System.IO.FileStream`物件的內容。 您可以取得`System.IO.FileStream`物件的`Length`屬性來決定位元組陣列的大小。
+   * 呼叫`System.IO.FileStream`物件的`Read`方法，並傳遞要讀取的位元組陣列、起始位置和資料流長度，以資料流資料填入位元組陣列。
+   * 以位元組陣列的內容指派其`MTOM`欄位，填入`BLOB`物件。
 
 1. 參照新增書籤的PDF檔案。
 
-   * 建立 `BLOB` 物件（使用其建構函式）。 此 `BLOB` 物件是用來儲存輸入PDF。
-   * 建立 `System.IO.FileStream` 物件，方法是叫用其建構函式，並傳遞代表輸入PDF檔案的檔案位置以及開啟檔案的模式的字串值。
-   * 建立位元組陣列，儲存 `System.IO.FileStream` 物件。 您可以取得 `System.IO.FileStream` 物件的 `Length` 屬性。
-   * 透過叫用 `System.IO.FileStream` 物件的 `Read` 方法，並傳遞位元組陣列、起始位置以及要讀取的資料流長度。
-   * 填入 `BLOB` 物件，透過指派其 `MTOM` 包含位元組陣列內容的欄位。
+   * 使用物件的建構函式建立`BLOB`物件。 `BLOB`物件是用來儲存輸入PDF。
+   * 建立`System.IO.FileStream`物件，方法為叫用其建構函式，並傳遞代表輸入PDF檔案的檔案位置和開啟檔案的模式的字串值。
+   * 建立位元組陣列以儲存`System.IO.FileStream`物件的內容。 您可以取得`System.IO.FileStream`物件的`Length`屬性來決定位元組陣列的大小。
+   * 呼叫`System.IO.FileStream`物件的`Read`方法，並傳遞要讀取的位元組陣列、起始位置和資料流長度，以資料流資料填入位元組陣列。
+   * 以位元組陣列的內容指派其`MTOM`欄位，填入`BLOB`物件。
 
 1. 參考書籤XML檔案。
 
-   * 建立 `BLOB` 物件（使用其建構函式）。 此 `BLOB` 物件可用來儲存書籤XML檔案。
-   * 建立 `System.IO.FileStream` 物件，方法是叫用其建構函式，並傳遞代表輸入PDF檔案的檔案位置以及開啟檔案的模式的字串值。
-   * 建立位元組陣列，儲存 `System.IO.FileStream` 物件。 您可以取得 `System.IO.FileStream` 物件的 `Length` 屬性。
-   * 透過叫用 `System.IO.FileStream` 物件的 `Read` 方法，並傳遞位元組陣列、起始位置以及要讀取的資料流長度。
-   * 填入 `BLOB` 物件，透過指派其 `MTOM` 包含位元組陣列內容的欄位。
+   * 使用物件的建構函式建立`BLOB`物件。 `BLOB`物件是用來儲存書籤XML檔案。
+   * 建立`System.IO.FileStream`物件，方法為叫用其建構函式，並傳遞代表輸入PDF檔案的檔案位置和開啟檔案的模式的字串值。
+   * 建立位元組陣列以儲存`System.IO.FileStream`物件的內容。 您可以取得`System.IO.FileStream`物件的`Length`屬性來決定位元組陣列的大小。
+   * 呼叫`System.IO.FileStream`物件的`Read`方法，並傳遞要讀取的位元組陣列、起始位置和資料流長度，以資料流資料填入位元組陣列。
+   * 以位元組陣列的內容指派其`MTOM`欄位，填入`BLOB`物件。
 
 1. 將PDF檔案和書籤XML檔案新增至地圖集合。
 
-   * 建立 `MyMapOf_xsd_string_To_xsd_anyType` 物件。 此集合物件是用來儲存輸入PDF檔案與書籤XML檔案。
-   * 針對每個輸入PDF檔案和書籤XML檔案，建立 `MyMapOf_xsd_string_To_xsd_anyType_Item` 物件。
-   * 將代表索引鍵名稱的字串值指派給 `MyMapOf_xsd_string_To_xsd_anyType_Item` 物件的 `key` 欄位。 此值必須符合DDX檔案中指定的PDF來源元素的值。
-   * 指派 `BLOB` 將PDF檔案儲存到的物件 `MyMapOf_xsd_string_To_xsd_anyType_Item` 物件的 `value` 欄位。
-   * 新增 `MyMapOf_xsd_string_To_xsd_anyType_Item` 物件至 `MyMapOf_xsd_string_To_xsd_anyType` 物件。 叫用 `MyMapOf_xsd_string_To_xsd_anyType` 物件的 `Add` 方法並傳遞 `MyMapOf_xsd_string_To_xsd_anyType` 物件。 (針對每個輸入PDF檔案與書籤XML檔案執行此工作。)
+   * 建立`MyMapOf_xsd_string_To_xsd_anyType`物件。 此集合物件是用來儲存輸入PDF檔案與書籤XML檔案。
+   * 針對每個輸入PDF檔案和書籤XML檔案，建立`MyMapOf_xsd_string_To_xsd_anyType_Item`物件。
+   * 將代表索引鍵名稱的字串值指派給`MyMapOf_xsd_string_To_xsd_anyType_Item`物件的`key`欄位。 此值必須符合DDX檔案中指定的PDF來源元素的值。
+   * 將儲存PDF檔案的`BLOB`物件指派給`MyMapOf_xsd_string_To_xsd_anyType_Item`物件的`value`欄位。
+   * 將`MyMapOf_xsd_string_To_xsd_anyType_Item`物件新增至`MyMapOf_xsd_string_To_xsd_anyType`物件。 叫用`MyMapOf_xsd_string_To_xsd_anyType`物件的`Add`方法並傳遞`MyMapOf_xsd_string_To_xsd_anyType`物件。 (針對每個輸入PDF檔案與書籤XML檔案執行此工作。)
 
 1. 設定執行階段選項。
 
-   * 建立 `AssemblerOptionSpec` 使用建構函式來儲存執行階段選項的物件。
-   * 將值指派給屬於下列專案的資料成員，以設定執行階段選項以符合您的業務需求 `AssemblerOptionSpec` 物件。 例如，若要指示Assembler服務在發生錯誤時繼續處理工作，請指派 `false` 至 `AssemblerOptionSpec` 物件的 `failOnError` 資料成員。
+   * 使用建構函式建立儲存執行階段選項的`AssemblerOptionSpec`物件。
+   * 將值指派給屬於`AssemblerOptionSpec`物件的資料成員，設定執行階段選項以符合您的業務需求。 例如，若要指示Assembler服務在發生錯誤時繼續處理工作，請將`false`指派給`AssemblerOptionSpec`物件的`failOnError`資料成員。
 
 1. 組合PDF檔案。
 
-   叫用 `AssemblerServiceClient` 物件的 `invokeDDX` 方法並傳遞下列值：
+   叫用`AssemblerServiceClient`物件的`invokeDDX`方法，並傳遞下列值：
 
-   * A `BLOB` 代表DDX檔案的物件
-   * 此 `MyMapOf_xsd_string_To_xsd_anyType` 包含輸入檔案的陣列
-   * 一個 `AssemblerOptionSpec` 指定執行階段選項的物件
+   * 代表DDX檔案的`BLOB`物件
+   * 包含輸入檔案的`MyMapOf_xsd_string_To_xsd_anyType`陣列
+   * 指定執行階段選項的`AssemblerOptionSpec`物件
 
-   此 `invokeDDX` 方法傳回 `AssemblerResult` 包含工作結果及可能發生之任何例外狀況的物件。
+   `invokeDDX`方法傳回`AssemblerResult`物件，其中包含工作結果以及可能發生的任何例外狀況。
 
 1. 儲存包含書籤的PDF檔案。
 
    若要取得新建立的PDF檔案，請執行下列動作：
 
-   * 存取 `AssemblerResult` 物件的 `documents` 欄位，即 `Map` 包含結果PDF檔案的物件。
-   * 逐一檢視 `Map` 物件，直到您找到符合結果檔名稱的鍵為止。 然後轉換該陣列成員的 `value` 至 `BLOB`.
-   * 存取代表PDF檔案的二進位資料 `BLOB` 物件的 `MTOM` 欄位。 這會傳回您可以寫出至PDF檔案的位元組陣列。
+   * 存取`AssemblerResult`物件的`documents`欄位，這是包含結果PDF檔案的`Map`物件。
+   * 反複檢查`Map`物件，直到找到符合結果檔名稱的金鑰。 然後將該陣列成員的`value`轉換為`BLOB`。
+   * 存取其`BLOB`物件的`MTOM`欄位，擷取代表PDF檔案的二進位資料。 這會傳回您可以寫出至PDF檔案的位元組陣列。
 
 **另請參閱**
 

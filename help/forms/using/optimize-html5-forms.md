@@ -34,7 +34,7 @@ HTML5表單會以HTML5格式轉譯表單。 根據表單的表單大小和影像
 
 Apache可以使用HTTP或AJP通訊協定與JBoss通訊。
 
-1. 在中取消註解以下模組設定 *APACHE_HOME/conf/httpd.conf* 檔案。
+1. 在&#x200B;*APACHE_HOME/conf/httpd.conf*&#x200B;檔案中取消註解下列模組設定。
 
    ```java
    LoadModule proxy_balancer_module modules/mod_proxy.so
@@ -48,7 +48,7 @@ Apache可以使用HTTP或AJP通訊協定與JBoss通訊。
 
 1. 在JBoss的連線埠8080上設定Proxy。
 
-   將下列設定新增至 *APACHE_HOME/conf/httpd.conf* 組態檔。
+   將下列組態新增至&#x200B;*APACHE_HOME/conf/httpd.conf*&#x200B;組態檔。
 
    ```java
    ProxyPass / https://<server_Name>:8080/
@@ -59,13 +59,13 @@ Apache可以使用HTTP或AJP通訊協定與JBoss通訊。
    >
    >使用Proxy時，需要變更下列設定：
    >
-   >* 存取： *https://&lt;server>：&lt;port>/system/console/configMgr*
+   >* 存取： *https://&lt;伺服器>：&lt;連線埠>/system/console/configMgr*
    * 編輯Apache Sling查閱者篩選器的設定
    * 在允許主機中，新增代理主機伺服器的專案
 
 1. 啟用壓縮。
 
-   將下列設定新增至 *APACHE_HOME/conf/httpd.conf* 組態檔。
+   將下列組態新增至&#x200B;*APACHE_HOME/conf/httpd.conf*&#x200B;組態檔。
 
    ```xml
    <Location /content/xfaforms>

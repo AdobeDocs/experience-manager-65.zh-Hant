@@ -32,11 +32,11 @@ ht-degree: 5%
 >
 >開始為On-Demand應用程式設定雲端設定之前，您必須熟悉AEM Mobile布建和設定AEM Mobile On-demand Services使用者端。
 >
->如需詳細資訊，請參閱 [設定AEM Mobile On-demand Services](/help/mobile/aem-mobile-setup.md) 在管理區段中。
+>如需詳細資訊，請參閱管理一節中的[設定AEM Mobile On-demand Services](/help/mobile/aem-mobile-setup.md)。
 
-若要設定Mobile On-DemandCloud Service，請按一下 **管理連線** 從應用程式儀表板中動態磚。
+若要設定Mobile On-DemandCloud Service，請從您的應用程式儀表板按一下&#x200B;**管理連線**&#x200B;圖磚右上角的齒輪。
 
-您應熟悉應用程式控制面板和可用的圖磚。 另請參閱 [AEM Mobile應用程式控制面板](/help/mobile/mobile-apps-ondemand-application-dashboard.md) 以取得更多詳細資料。
+您應熟悉應用程式控制面板和可用的圖磚。 如需詳細資訊，請參閱[AEM Mobile應用程式控制面板](/help/mobile/mobile-apps-ondemand-application-dashboard.md)。
 
 ### 設定雲端設定的連結 {#setting-up-link-to-cloud-configuration}
 
@@ -44,26 +44,26 @@ ht-degree: 5%
 >
 >確保您有現有的隨選使用者端和雲端設定。
 >
->如需詳細資訊，請參閱 [設定AEM Mobile On-demand Services](/help/mobile/aem-mobile-setup.md) 在管理區段中。
+>如需詳細資訊，請參閱管理一節中的[設定AEM Mobile On-demand Services](/help/mobile/aem-mobile-setup.md)。
 
 下列步驟說明如何設定雲端設定的連結：
 
-1. 從 **行動**，選擇 **應用程式** 並從目錄取得您的Mobile On-Demand應用程式。
-1. 按一下 **管理連線** 圖磚。
+1. 從&#x200B;**Mobile**，選擇&#x200B;**應用程式**，然後從目錄中選擇您的Mobile On-Demand應用程式。
+1. 按一下&#x200B;**管理連線**&#x200B;圖磚上的齒輪圖示。
 
    ![chlimage_1-65](assets/chlimage_1-65.png)
 
-1. 輸入現有的組態，或輸入 **設定標題**， **裝置ID**、和 **裝置Token**.
+1. 輸入現有的設定，或輸入&#x200B;**設定標題**、**裝置識別碼**&#x200B;和&#x200B;**裝置權杖**&#x200B;來建立設定。
 
    ![chlimage_1-66](assets/chlimage_1-66.png)
 
-1. 一旦您的 **裝置ID** 和 **裝置Token** 已驗證，請從清單中選擇您的隨選專案。
+1. 驗證您的&#x200B;**裝置識別碼**&#x200B;和&#x200B;**裝置代號**&#x200B;後，請從清單中選擇您的隨選專案。
 
    按一下「**提交**」。
 
    ![chlimage_1-67](assets/chlimage_1-67.png)
 
-   此 **管理連線** 圖磚會顯示您的雲端設定。
+   **管理連線**&#x200B;圖磚會顯示您的雲端設定。
 
    ![chlimage_1-68](assets/chlimage_1-68.png)
 

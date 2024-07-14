@@ -28,24 +28,24 @@ ht-degree: 49%
 
 若要執行此程式，請使用下列步驟：
 
-1. [設定OSGi設定](/help/sites-deploying/configuring-osgi.md) 針對 **內容片段移轉工作設定**：
+1. [設定&#x200B;**內容片段移轉工作設定**&#x200B;的OSGi設定](/help/sites-deploying/configuring-osgi.md)：
 
    ![OSGi內容片段移轉工作設定](assets/cfm-graphql-update-01.png "OSGi內容片段移轉工作設定")
 
 1. 在對話方塊中，設定這兩個引數如下：
 
-   * **ContentFragmentMigration：啟用** ： `1`
+   * **ContentFragmentMigration：Enabled** ： `1`
    * **ContentFragmentMigration：強制** ： `1`
 
-1. **儲存** 規格 — 更新程式開始。
+1. **儲存**&#x200B;規格 — 更新程式開始。
 
-1. 請等候程式完成。 當屬性為 `cfGlobalVersion` 顯示於 `/content/dam` 且已設為 `1`.
+1. 請等候程式完成。 當屬性`cfGlobalVersion`出現在`/content/dam`上且設定為`1`時，程式已完成。
 
 1. 返回OSGi設定以停用程式。
 
-   在的對話方塊中 **內容片段移轉工作設定** 請依照以下方式設定這兩個引數：
+   在&#x200B;**內容片段移轉工作設定**&#x200B;的對話方塊中，設定這兩個引數如下：
 
-   * **ContentFragmentMigration：啟用** ： `0`
+   * **ContentFragmentMigration：Enabled** ： `0`
    * **ContentFragmentMigration：強制** ： `0`
 
 ## 限制 {#limitations}

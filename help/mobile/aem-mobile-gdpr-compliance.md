@@ -27,7 +27,7 @@ AEM Mobile已準備好協助客戶履行GDPR法規遵循義務。 AEM Mobile中�
 
 ## Adobe Digital Publishing Suite {#adobe-digital-publishing-suite}
 
-Adobe的數位發佈產品(在AEM Mobile之前)支援Adobe的GDPR整備計畫。 另請參閱 [https://business.adobe.com/privacy/general-data-protection-regulation.html](https://business.adobe.com/privacy/general-data-protection-regulation.html). 以下提供Digital Publishing Suite產品中GDPR相關功能支援的詳細資訊，包括如何與Adobe合作以起始GDPR請求。
+Adobe的數位發佈產品(在AEM Mobile之前)支援Adobe的GDPR整備計畫。 請參閱[https://business.adobe.com/privacy/general-data-protection-regulation.html](https://business.adobe.com/privacy/general-data-protection-regulation.html)。 以下提供Digital Publishing Suite產品中GDPR相關功能支援的詳細資訊，包括如何與Adobe合作以起始GDPR請求。
 
 為避免混淆AEM Mobile與舊版的Digital Publishing Suite產品，您可以在此處登入Digital Publishing Suite產品：
 
@@ -41,37 +41,37 @@ Adobe的數位發佈產品(在AEM Mobile之前)支援Adobe的GDPR整備計畫。
 
 強制：
 
-* 客戶的合約ID： *dpsc-contractId*
+* 客戶的合約識別碼： *dpsc-contractId*
 
 提供下列至少一項內容：
 
-* 一般使用者客戶提供的OAuth ID （用於客戶直接權益系統的ID）： *dpsc-directEntitlementId*
-* 若為Windows應用程式使用者，則為一般使用者的App Store ID： *dpsc-windowsAppStoreId*
-* 使用者用來與DPS應用程式互動的電子郵件地址： *電子郵件*
+* 一般使用者客戶提供的OAuth ID （用於客戶直接權益系統的識別碼）： *dpsc-directEntitlementId*
+* 若為Windows應用程式使用者，一般使用者的App Store識別碼： *dpsc-windowsAppStoreId*
+* 一般使用者用來與DPS應用程式互動的電子郵件地址： *電子郵件*
 
 ### 常見問題集(FAQ) {#frequently-asked-questions-faq}
 
-**起始Adobe請求時，DELETE是否會刪除我的App Store購買專案？**
+**啟動Adobe請求時，DELETE是否正在刪除我的App Store購買專案？**
 
 Adobe會刪除其擁有的應用程式商店購買次數（訂閱等）的資訊，但購買次數仍會記錄在應用程式商店中。 如果應用程式（一般使用者）登入應用程式商店，系統會再次擷取這些回條，並傳送給Adobe。 稍後，這些會視為新的購買專案，由應用程式還原，且可再次存取。
 
-**起始Adobe請求時，DELETE是否會刪除客戶提供的權益？**
+**在起始Adobe請求時，DELETE是否正在刪除客戶提供的權益？**
 
 Adobe會刪除它所擁有的客戶額外直接權益津貼資訊。 如果應用程式（一般使用者）登入客戶已使用的OAuth機制，就會傳送資訊給Adobe，而服務會再次擷取額外權益。
 
-**一般使用者的期望是什麼？**
+**一般使用者的預期是什麼？**
 
 由於指派應用程式許可權的索引鍵屬於檢視器軟體，位於裝置上，因此使用者應解除安裝應用程式。 一般使用者應瞭解，如果他們重新安裝應用程式，則現有的購買（與應用程式商店使用者相關）和直接權益津貼（與客戶的OAuth使用者相關）仍會還原。
 
-**當應用程式在裝置上的使用者之間共用時，會發生什麼事？**
+**當應用程式在裝置上的使用者之間共用時，會發生什麼情況？**
 
 Adobe具有直接與特定使用者建立關聯的最低資訊。 這會使用隨機建立的UUID來關聯資料，該UUID會保留在應用程式資料中，並在應用程式起始的每個請求中傳遞。 這表示在相同裝置上共用應用程式的一般使用者使用相同的UUID，且所有資料都被視為擁有GDPR請求的人。 對於存取和刪除請求，DPSC會將共用應用程式的使用者視為一個人。
 
-**Analytics會追蹤哪些個人資料？**
+**透過Analytics追蹤哪些個人資料？**
 
 無。 有正在追蹤的資料，但是在應用程式層級（非個人）。 這包括啟動、當機、關閉、活動、購買或Folio覆蓋等事件。 系統不會追蹤地理位置、名稱、裝置ID或IP位址。
 
-**一般使用者提供了他們的資訊，但找不到任何內容。 為什麼不呢？**
+**一般使用者已提供其資訊，但找不到任何資訊。 為什麼？**
 
 隨著Digital Publishing Suite產品的演化，服務實作也有所變更，而更多資料變得模糊不清。 如果使用使用者提供的資料找不到任何資料，則表示使用者的資料無法追蹤回該人員。
 

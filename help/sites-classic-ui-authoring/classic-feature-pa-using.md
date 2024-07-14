@@ -23,9 +23,9 @@ ht-degree: 9%
 頁面分析資料會顯示在Sites主控台中。 當網站以清單格式顯示時，預設會提供下列欄：
 
 * 頁面檢視
-* 不重複訪客
+* 獨特訪客
 * 頁面逗留時間
 
 >[!NOTE]
 >
->在主控台中直接顯示網站分析資料只能在觸控最佳化UI中使用。 另請參閱 [檢視頁面分析資料](/help/sites-authoring/page-analytics-using.md) 如需詳細資訊，請參閱標準制作檔案。
+>在主控台中直接顯示網站分析資料只能在觸控最佳化UI中使用。 如需詳細資訊，請參閱標準編寫檔案中的[檢視頁面分析資料](/help/sites-authoring/page-analytics-using.md)。

@@ -84,7 +84,7 @@ AEM 的 Headless 功能以幾個關鍵功能為基礎。這些將在歷程的後
 * GraphQL API 可讓您建立存取和傳遞內容片段的要求。
 * Assets REST API 可讓您建立及修改內容片段 (和其他資產)。
 
-您將在 AEM Headless 歷程的後續部分，了解這些 API 以及如何使用它們。或者，請參閱 [其他資源](#additional-resources) 區段以取得其他檔案。
+您將在 AEM Headless 歷程的後續部分，了解這些 API 以及如何使用它們。或者，請參閱下面的[其他資源](#additional-resources)區段以取得其他檔案。
 
 ## Headless 整合層級 {#integration-levels}
 

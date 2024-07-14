@@ -27,16 +27,16 @@ ht-degree: 1%
 
 >[!TIP]
 >
->另請參閱 [開發和頁面差異](/help/sites-developing/pagediff.md#operation-details) 以取得此功能的詳細技術資訊。
+>請參閱[開發和頁面差異](/help/sites-developing/pagediff.md#operation-details)，以取得此功能的更多技術細節。
 
 ## 使用 {#use}
 
 可以並排比較：
 
-* [版本](/help/sites-authoring/working-with-page-versions.md#comparing-a-version-with-current-page)  — 具有目前狀態的舊版頁面
-* [即時副本](/help/sites-administering/msm-livecopy.md#comparing-a-live-copy-page-with-a-blueprint-page)  — 即時副本與其Blueprint
-* [啟動](/help/sites-authoring/launches-editing.md#comparing-a-launch-page-to-its-source-page)  — 以其來源啟動
-* [語言副本](/help/sites-administering/tc-manage.md#comparing-language-copies)  — 將翻譯之前和翻譯之後（重新翻譯）的頁面進行比較
+* [版本](/help/sites-authoring/working-with-page-versions.md#comparing-a-version-with-current-page) — 具有目前狀態的舊版頁面
+* [即時副本](/help/sites-administering/msm-livecopy.md#comparing-a-live-copy-page-with-a-blueprint-page) — 即時副本與其Blueprint
+* [啟動](/help/sites-authoring/launches-editing.md#comparing-a-launch-page-to-its-source-page) — 啟動其Source
+* [語言副本](/help/sites-administering/tc-manage.md#comparing-language-copies) — 將翻譯之前和翻譯之後（重新翻譯）的頁面進行比較
 
 請參閱相關主題，瞭解如何在這些內容中開始差異。
 
@@ -51,7 +51,7 @@ ht-degree: 1%
 
 兩個頁面的來源會清楚顯示在瀏覽器視窗頂端的標題列中。
 
-![標題中顯示的來源](assets/chlimage_1-109.png)
+標題](assets/chlimage_1-109.png)中顯示![Source
 
 差異會偵測元件和HTML層級的變更。 已變更的專案會以不同的顏色反白。
 
@@ -77,7 +77,7 @@ ht-degree: 1%
 
 選取的一側會填滿整個視窗，但長條會保留在頂端，讓您在兩個頁面之間切換。
 
-![頂端列可讓您切換頁面](assets/chlimage_1-110.png)
+頂端的![長條圖可讓您切換頁面](assets/chlimage_1-110.png)
 
 您也可以選擇按一下退出全熒幕圖示來關閉全熒幕檢視。
 
@@ -93,7 +93,7 @@ ht-degree: 1%
 * 對於版本，差異不會重新建立存取控制原則與即時副本關係。
 * 如果頁面已移動，您將無法再執行與移動前所做的任何版本之間的差異。
 
-   * 如果您遇到差異問題，請檢查 [時間表](/help/sites-authoring/basic-handling.md#timeline) ，以檢視頁面是否已移動。
+   * 如果您遇到差異問題，請檢查頁面的[時間表](/help/sites-authoring/basic-handling.md#timeline)以檢視頁面是否已移動。
 
 >[!NOTE]
 >
@@ -101,4 +101,4 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->如需有關頁面差異機制的操作以及可能影響頁面差異的限制的詳細資訊，請參閱 [開發人員檔案](/help/sites-developing/pagediff.md) 此功能的設定檔。
+>如需有關頁面差異機制的操作以及可能影響頁面差異的限制的詳細資訊，請參閱此功能的[開發人員檔案](/help/sites-developing/pagediff.md)。

@@ -29,8 +29,8 @@ ht-degree: 1%
 下列支援複合元件使用案例的模型需要下列先決條件。
 
 * 您的AEM開發執行個體正在連線埠4502上以範例專案本機執行。
-* 您有一個正常運作的外部React應用程式 [已啟用以便在AEM中編輯。](spa-edit-external.md)
-* React應用程式會載入AEM編輯器中 [使用RemotePage元件。](spa-remote-page.md)
+* 您已啟用工作中的外部React應用程式[，以便在AEM中編輯。](spa-edit-external.md)
+* React應用程式已使用RemotePage元件載入AEM編輯器[中。](spa-remote-page.md)
 
 ## 將複合元件新增至SPA {#adding-composite-components}
 
@@ -47,13 +47,13 @@ ht-degree: 1%
 首先，建立構成複合元件的元件，也就是影像及其文字的元件。
 
 1. 在您的AEM專案中建立文字元件。
-1. 新增對應的 `resourceType` 從元件的專案 `editConfig` 節點。
+1. 從元件的`editConfig`節點中的專案新增對應的`resourceType`。
 
    ```text
     resourceType: 'wknd-spa/components/text' 
    ```
 
-1. 使用 `withMappable` 協助程式啟用元件的編輯。
+1. 使用`withMappable`協助程式來啟用元件的編輯。
 
    ```text
    export const AEMText = withMappable(Text, TextEditConfig); 
@@ -88,7 +88,7 @@ export const Text = ({ cqPath, richText, text }) => {
 export const AEMText = withMappable(Text, TextEditConfig);
 ```
 
-如果您以類似方式建立影像元件，可以將其與 `AEMText` 元件放入新的卡片元件中，並使用影像和文字元件作為子項。
+如果您以類似方式建立影像元件，可以將其與`AEMText`元件結合為新的卡片元件，並使用影像和文字元件作為子系。
 
 ```javascript
 import React from 'react';
@@ -121,19 +121,19 @@ function Home() {
 }
 ```
 
-這會在編輯器中顯示文字和影像的空白預留位置。 使用編輯器輸入這些的值時，它們會儲存在指定的頁面路徑中，即 `/content/wknd-spa/home`  在根層級，名稱指定於 `itemPath`.
+這會在編輯器中顯示文字和影像的空白預留位置。 使用編輯器輸入這些專案的值時，它們會儲存在指定的頁面路徑中，亦即`/content/wknd-spa/home`，位於根層級，且名稱在`itemPath`中指定。
 
-![編輯器中的複合卡元件](assets/composite-card.png)
+編輯器中的![複合卡元件](assets/composite-card.png)
 
 ### 元件存在於您的AEM專案中，但其必要的內容不存在。 {#content-does-not-exist}
 
 在此案例中，卡片元件已在包含標題和影像節點的AEM專案中建立。 子節點（文字和影像）具有對應的資源型別。
 
-![卡片元件的節點結構](assets/composite-node-structure.png)
+卡片元件的![節點結構](assets/composite-node-structure.png)
 
 然後，您可以將其新增到您的SPA並擷取其內容。
 
-1. 在SPA中為此建立對應的元件。 確保子元件對應至SPA專案中各自對應的AEM資源型別。 在此範例中，我們使用相同的 `AEMText` 和 `AEMImage` 詳細元件 [在上一個案例中。](#component-does-not-exist)
+1. 在SPA中為此建立對應的元件。 確保子元件對應至SPA專案中各自對應的AEM資源型別。 在此範例中，我們使用與先前案例中詳細[相同的`AEMText`和`AEMImage`元件。](#component-does-not-exist)
 
    ```javascript
    import React from 'react';
@@ -149,7 +149,7 @@ function Home() {
    MapTo('wknd-spa/components/image')(Image, ImageEditConfig);
    ```
 
-1. 因為沒有內容 `imagecard` 元件，將卡片新增至頁面。 在SPA中加入AEM的現有容器。
+1. 由於`imagecard`元件沒有內容，請將卡片新增至頁面。 在SPA中加入AEM的現有容器。
    * 如果AEM專案中已有容器，我們可以改為將此容器加入SPA，並改為從AEM將元件新增至容器。
    * 確認卡片元件已對應至SPA中對應的資源型別。
 
@@ -159,11 +159,11 @@ function Home() {
     itemPath='root/responsivegrid' />
    ```
 
-1. 新增已建立的 `wknd-spa/components/imagecard` 元件至容器元件允許的元件 [在頁面範本中。](/help/sites-authoring/templates.md)
+1. 將已建立的`wknd-spa/components/imagecard`元件新增至頁面範本中容器元件[的允許元件。](/help/sites-authoring/templates.md)
 
-現在 `imagecard` 元件可在AEM編輯器中直接新增至容器。
+現在可以直接將`imagecard`元件新增到AEM編輯器中的容器。
 
-![編輯器中的複合卡片](assets/composite-card.gif)
+編輯器中的![複合卡片](assets/composite-card.gif)
 
 ### 元件及其必要內容都存在於您的AEM專案中。 {#both-exist}
 
@@ -177,4 +177,4 @@ function Home() {
 
 ![節點結構中的複合路徑](assets/composite-path.png)
 
-此 `AEMCard` 元件與定義相同 [在上一個使用案例中。](#content-does-not-exist) 此處，上述位置在AEM專案中定義的內容包含在SPA中。
+`AEMCard`元件與先前使用案例中定義的[相同。](#content-does-not-exist)在這裡，在AEM專案中上述位置定義的內容包含在SPA中。

@@ -30,7 +30,7 @@ ht-degree: 1%
 
 ### 暫時性工作流程 {#transient-workflows}
 
-若要最佳化高擷取負載，您可以定義 [暫時性工作流程](/help/sites-developing/workflows.md#transient-workflows).
+若要最佳化高擷取負載，您可以將[工作流程定義為暫時性](/help/sites-developing/workflows.md#transient-workflows)。
 
 當工作流程為暫時性時，與中間工作步驟相關的執行階段資料在執行時不會儲存在JCR中（會儲存輸出轉譯）。
 
@@ -47,7 +47,7 @@ ht-degree: 1%
 
 ### 調整DAM工作流程 {#tuning-dam-workflows}
 
-如需DAM工作流程的效能調整指南，請參閱 [AEM Assets效能調整指南](/help/assets/performance-tuning-guidelines.md).
+如需DAM工作流程的效能調整指南，請參閱[AEM Assets效能調整指南](/help/assets/performance-tuning-guidelines.md)。
 
 ### 設定並行工作流程的最大數量 {#configure-the-maximum-number-of-concurrent-workflows}
 
@@ -55,19 +55,19 @@ AEM可允許同時執行多個工作流程執行緒。 根據預設，執行緒�
 
 如果正在執行的工作流程需要系統資源，這可能意味著AEM幾乎無法再用於其他工作，例如呈現編寫UI。 因此，系統在大量影像上傳等活動期間可能會變得緩慢。
 
-若要解決此問題，Adobe建議將 **最大平行作業數** 介於系統處理器核心數量的一半至四分之三之間。 這應該有足夠的容量讓系統在處理這些工作流程時保持回應。
+為了解決這個問題，Adobe建議將&#x200B;**最大平行工作**&#x200B;的數目設定為系統處理器核心數目的一半到四分之三之間。 這應該有足夠的容量讓系統在處理這些工作流程時保持回應。
 
-進行設定 **最大平行作業數**，您可以：
+若要設定&#x200B;**最大平行工作**，您可以：
 
-* 設定 **[OSGi設定](/help/sites-deploying/configuring-osgi.md)** 從AEM Web主控台； **佇列： Granite工作流程佇列** (一 **Apache Sling工作佇列設定**)。
+* 從AEM Web主控台設定&#x200B;**[OSGi設定](/help/sites-deploying/configuring-osgi.md)**；針對&#x200B;**佇列： Granite工作流程佇列** （一個&#x200B;**Apache Sling工作佇列設定**）。
 
-* 設定佇列可從以下位置： **Sling工作** 的AEM Web主控台選項； **工作佇列設定： Granite工作流程佇列**，在 `http://localhost:4502/system/console/slingevent`.
+* 從AEM Web主控台的&#x200B;**Sling工作**&#x200B;選項設定佇列功能；針對&#x200B;**工作佇列設定： Granite工作流程佇列**，位於`http://localhost:4502/system/console/slingevent`。
 
-此外，「 」還有單獨的設定 **Granite工作流程外部程式作業佇列**. 這用於啟動外部二進位檔的工作流程程式，例如 **InDesign Server** 或 **影像Magick**.
+此外，**Granite工作流程外部程式工作佇列**&#x200B;有單獨的設定。 這用於啟動外部二進位檔的工作流程程式，例如&#x200B;**InDesign Server**&#x200B;或&#x200B;**影像Magick**。
 
 ### 設定個別工作佇列 {#configure-individual-job-queues}
 
-在某些情況下，根據個別工作來設定個別工作佇列以控制並行執行緒或其他佇列選項會很有用。 您可以透過以下方式從Web主控台新增及設定個別佇列 **Apache Sling工作佇列設定** 工廠。 若要尋找要列出的適當主題，請執行工作流程的模型，並在 **Sling工作** 主控台；例如，在 `http://localhost:4502/system/console/slingevent`.
+在某些情況下，根據個別工作來設定個別工作佇列以控制並行執行緒或其他佇列選項會很有用。 您可以透過&#x200B;**Apache Sling工作佇列組態**&#x200B;處理站，從Web主控台新增及設定個別佇列。 若要尋找要列出的適當主題，請執行工作流程的模型，並在&#x200B;**Sling工作**&#x200B;主控台中尋找它；例如，在`http://localhost:4502/system/console/slingevent`。
 
 您也可以為暫時性工作流程新增個別工作佇列。
 
@@ -77,9 +77,9 @@ AEM可允許同時執行多個工作流程執行緒。 根據預設，執行緒�
 
 `http://localhost:4502/libs/granite/operations/content/maintenance.html`
 
-根據預設， **每週維護期間** 具有 **工作流程清除** 工作，但是這必須在執行前進行設定。 若要設定工作流程清除，請使用 **AdobeGranite工作流程清除設定** 必須新增至Web主控台。
+依預設，**每週維護期間**&#x200B;有&#x200B;**工作流程清除**&#x200B;工作，但是這必須在執行前進行設定。 若要設定工作流程清除，必須在Web主控台中新增新的&#x200B;**AdobeGranite工作流程清除設定**。
 
-如需AEM中維護任務的詳細資訊，請參閱 [操作控制面板](/help/sites-administering/operations-dashboard.md).
+如需AEM中維護任務的詳細資訊，請參閱[操作控制面板](/help/sites-administering/operations-dashboard.md)。
 
 ## 自訂 {#customization}
 
@@ -91,7 +91,7 @@ AEM可允許同時執行多個工作流程執行緒。 根據預設，執行緒�
 
 >[!NOTE]
 >
->另請參閱 [AEM 6.5中的存放庫重組](/help/sites-deploying/repository-restructuring.md).
+>另請參閱AEM 6.5](/help/sites-deploying/repository-restructuring.md)中的[存放庫重組。
 
 #### 位置 — 工作流程模型 {#locations-workflow-models}
 
@@ -106,7 +106,7 @@ AEM可允許同時執行多個工作流程執行緒。 根據預設，執行緒�
   >請勿：
   >
   >* 將任何自訂工作流程模型放置在此資料夾中
-  >* 編輯任何內容 `/libs`
+  >* 在`/libs`中編輯任何內容
   >
   >因為任何變更在升級或安裝修補程式、累積修補程式套件或Service Pack時都可能被覆寫。
 
@@ -126,7 +126,7 @@ AEM可允許同時執行多個工作流程執行緒。 根據預設，執行緒�
 
   >[!NOTE]
   >
-  >如果編輯這些設計 *使用AEM UI*，則會將詳細資料複製到新位置。
+  >如果這些設計是使用&#x200B;*AEM UI*&#x200B;編輯的，則詳細資料將會複製到新的位置。
 
 #### 位置 — 工作流程啟動器 {#locations-workflow-launchers}
 
@@ -141,7 +141,7 @@ AEM可允許同時執行多個工作流程執行緒。 根據預設，執行緒�
   >請勿：
   >
   >* 將您的任何自訂工作流程啟動器放置在此資料夾中
-  >* 編輯任何內容 `/libs`
+  >* 在`/libs`中編輯任何內容
   >
   >因為任何變更在升級或安裝修補程式、累積修補程式套件或Service Pack時都可能被覆寫。
 
@@ -157,7 +157,7 @@ AEM可允許同時執行多個工作流程執行緒。 根據預設，執行緒�
 
   >[!NOTE]
   >
-  >如果已編輯這些定義 *使用AEM UI*，則會將詳細資料複製到新位置。
+  >若使用AEM UI *編輯這些定義*，則詳細資料將會複製到新位置。
 
 #### 位置 — 工作流程指令碼 {#locations-workflow-scripts}
 
@@ -172,7 +172,7 @@ AEM可允許同時執行多個工作流程執行緒。 根據預設，執行緒�
   >請勿：
   >
   >* 將您的任何自訂工作流程指令碼放在此資料夾中
-  >* 編輯任何內容 `/libs`
+  >* 在`/libs`中編輯任何內容
   >
   >因為任何變更在升級或安裝修補程式、累積修補程式套件或Service Pack時都可能被覆寫。
 
@@ -199,7 +199,7 @@ AEM可允許同時執行多個工作流程執行緒。 根據預設，執行緒�
   >請勿：
   >
   >* 將任何自訂工作流程通知定義放置在此資料夾中
-  >* 編輯任何內容 `/libs`
+  >* 在`/libs`中編輯任何內容
   >
   >因為任何變更在升級或安裝修補程式、累積修補程式套件或Service Pack時都可能被覆寫。
 
@@ -244,10 +244,10 @@ public void execute(WorkItem item, WorkflowSession workflowSession, MetaDataMap 
 
 儲存工作階段：
 
-* 在工作流程內，如果 `WorkflowSession` 用來修改存放庫，然後不要明確儲存工作階段 — 工作流程完成時會儲存工作階段。
-* `Session.Save` 不應從工作流程步驟中呼叫：
+* 在工作流程程式內，如果使用`WorkflowSession`來修改存放庫，則不要明確儲存工作階段 — 工作流程將在完成時儲存工作階段。
+* 不應從工作流程步驟中呼叫`Session.Save`：
 
-   * 建議調整工作流程jcr工作階段； `save` 不需要使用，因為工作流程引擎會在工作流程執行完畢後自動儲存工作階段。
+   * 建議調整工作流程jcr工作階段；那麼`save`不是必要的，因為工作流程引擎會在工作流程執行完成後自動儲存工作階段。
    * 不建議流程步驟建立自己的jcr工作階段。
 
 * 透過消除不必要的節省，您可以減少額外負荷，進而讓工作流程更有效率。
@@ -258,7 +258,7 @@ public void execute(WorkItem item, WorkflowSession workflowSession, MetaDataMap 
 
 ### 將啟動器的數量/範圍最小化 {#minimize-the-number-scope-of-launchers}
 
-有一個監聽器負責所有 [工作流程啟動器](/help/sites-administering/workflows-starting.md#workflows-launchers) 已註冊的：
+有一個接聽程式負責所有已登入的[工作流程啟動器](/help/sites-administering/workflows-starting.md#workflows-launchers)：
 
 * 它會接聽其他啟動器萬用字元屬性中指定的所有路徑變更。
 * 傳送事件時，工作流程引擎會評估每個啟動器，以決定是否應執行。
@@ -271,7 +271,7 @@ public void execute(WorkItem item, WorkflowSession workflowSession, MetaDataMap 
 
 ### 啟動器的設定增強功能 {#configuration-enhancements-for-launchers}
 
-自訂 [啟動器設定](/help/sites-administering/workflows-starting.md#workflows-launchers) 已增強以支援下列專案：
+已增強自訂[啟動器組態](/help/sites-administering/workflows-starting.md#workflows-launchers)，以支援下列專案：
 
 * 將多個條件「AND」放在一起。
 * 在單一條件中具有OR條件。
@@ -282,7 +282,7 @@ public void execute(WorkItem item, WorkflowSession workflowSession, MetaDataMap 
 
 工作流程可能會產生大量額外負荷，例如在記憶體中建立的物件和存放庫中追蹤的節點兩方面都是如此。 因此，與其啟動其他工作流程，不如讓工作流程在內部進行其處理。
 
-此情況的範例是在一組內容上實作業務流程，然後啟用該內容的工作流程。 最好建立自訂工作流程流程來啟動每個節點，而不是啟動 **啟用內容** 需要發佈的每個內容節點的模型。 此方法需要額外的開發工作，但在執行時比為每個啟用啟動個別的工作流程例項更有效率。
+此情況的範例是在一組內容上實作業務流程，然後啟用該內容的工作流程。 最好建立自訂工作流程來啟動每個節點，而不是為每個需要發佈的內容節點啟動&#x200B;**啟動內容**&#x200B;模型。 此方法需要額外的開發工作，但在執行時比為每個啟用啟動個別的工作流程例項更有效率。
 
 另一個範例是處理數個節點的工作流程，建立工作流程封裝，然後啟動所述封裝。 與其建立封裝，然後以封裝作為裝載啟動單獨的工作流程，您可以在建立封裝的步驟中變更工作流程的裝載，然後呼叫步驟以在相同工作流程模型中啟動封裝。
 
@@ -294,13 +294,13 @@ public void execute(WorkItem item, WorkflowSession workflowSession, MetaDataMap 
 
 ### 工作流程階段 {#workflow-stages}
 
-您可以定義 [工作流程階段](/help/sites-developing/workflows.md#workflow-stages)，然後將任務/步驟指派至特定工作流程階段。
+您可以定義[工作流程階段](/help/sites-developing/workflows.md#workflow-stages)，然後將任務/步驟指派給特定工作流程階段。
 
-當您按一下 [**工作流程資訊** 工作專案的索引標籤 **收件匣**](/help/sites-authoring/workflows-participating.md#opening-a-workflow-item-to-view-details-and-take-actions). 可以編輯現有的工作流程模型以新增階段。
+當您從&#x200B;**收件匣**](/help/sites-authoring/workflows-participating.md#opening-a-workflow-item-to-view-details-and-take-actions)&#x200B;按一下工作專案的&#x200B;[**工作流程資訊**&#x200B;索引標籤時，此資訊可用來顯示工作流程的進度。 可以編輯現有的工作流程模型以新增階段。
 
 ### 啟動頁面處理步驟 {#activate-page-process-step}
 
-此 **啟動頁面程式** 步驟將為您啟用頁面，但不會自動找到任何參照的DAM資產並啟用它們。
+**啟用頁面程式**&#x200B;步驟將為您啟用頁面，但不會自動尋找任何參考的DAM資產並且啟用它們。
 
 如果您打算將此步驟作為工作流程模型的一部分，請記得這一點。
 
@@ -309,17 +309,17 @@ public void execute(WorkItem item, WorkflowSession workflowSession, MetaDataMap 
 升級執行個體時：
 
 * 在升級執行個體之前，請確定已備份任何自訂工作流程模型。
-* 確認您的自訂工作流程未儲存在 [位置](#locations)：
+* 確認您的自訂工作流程未儲存在[位置](#locations)下：
 
    * `/libs/settings/workflow/models/projects`
 
 >[!NOTE]
 >
->另請參閱 [AEM 6.5中的存放庫重組](/help/sites-deploying/repository-restructuring.md).
+>另請參閱AEM 6.5](/help/sites-deploying/repository-restructuring.md)中的[存放庫重組。
 
 ## 系統工具 {#system-tools}
 
-有許多系統工具可協助監控、維護和疑難排解工作流程。 以下所有範例URL都使用 `localhost:4502`，但應該可以在任何作者執行個體上使用( `<hostname>:<port>`)。
+有許多系統工具可協助監控、維護和疑難排解工作流程。 以下所有範例URL都使用`localhost:4502`，但應該可以在任何作者執行個體( `<hostname>:<port>`)上使用。
 
 ### Sling工作處理主控台 {#sling-job-handling-console}
 

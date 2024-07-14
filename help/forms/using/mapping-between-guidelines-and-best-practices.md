@@ -82,7 +82,7 @@ ht-degree: 1%
 
 | 優先順序2查核點 | 查核點說明 | 合規性所需LiveCycle最佳實務 | 附註 |
 |------------|------------------------|-------------------------------------------------|-------|
-| [2.2](https://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-color-contrast) | 確保當有顏色缺陷的人檢視或在黑白熒幕上檢視時，前景和背景顏色的組合能提供足夠的對比度。 [影像的優先順序2，文字的優先順序3]. | 2.8負責任地使用顏色 | |
+| [2.2](https://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-color-contrast) | 確保當有顏色缺陷的人檢視或在黑白熒幕上檢視時，前景和背景顏色的組合能提供足夠的對比度。 [影像的優先順序2，文字]的優先順序3。 | 2.8負責任地使用顏色 | |
 | [3.1](https://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-use-markup) | 如果有適當的標籤語言，請使用標籤而非影像來傳達資訊。 | <ul><li>2.1保持表單簡單易用</li><li> 2.1.1避免移動、閃爍或閃爍內容</li> <li>2.2設定表單屬性以產生協助工具資訊一律使用實際文字，而非文字影像。</li> | |
 | [3.2](https://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-identify-grammar) | 建立可驗證已發佈正式文法的檔案。 | | PDF forms必須符合已發佈的PDF規格，才能在Adobe Reader中呈現。 |
 | [3.3](https://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-style-sheets) | 使用樣式表來控制版面配置與簡報。 | 不適用 | |
@@ -98,7 +98,7 @@ ht-degree: 1%
 | [7.3](https://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-avoid-movement) | 在使用者代理允許使用者凍結移動內容之前，請避免在頁面中移動。 | 2.1保持表單簡單易用 | |
 | [7.4](https://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-no-periodic-refresh) | 在使用者代理程式提供停止重新整理的功能之前，請勿定期建立自動重新整理頁面。 | 不適用 | |
 | [7.5](https://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-no-auto-forward) | 在使用者代理程式提供停止自動重新導向的功能之前，請勿使用標示自動重新導向頁面。 請改為設定伺服器以執行重新導向。 | 不適用 | |
-| [8.1](https://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-directly-accessible) | 讓程式設計元素（例如指令碼和Applet）可直接存取或與輔助技術相容 [優先順序1 （如果功能很重要且沒有顯示於其他地方），否則優先順序2。] | 2.11避免中斷指令碼 | |
+| [8.1](https://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-directly-accessible) | 讓程式設計元素（例如指令碼和Applet）可直接存取或與輔助技術相容[優先順序1 （如果功能很重要且不會出現在其他地方），否則優先順序2.] | 2.11避免中斷指令碼 | |
 | [9.2](https://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-keyboard-operable) | 請確定任何具有自己介面的元素都可以獨立裝置的方式操作。 | 2.7確保可使用鍵盤存取表單控制項 | |
 | [9.3](https://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-device-independent-events) | 對於指令碼，請指定邏輯事件處理常式，而非裝置相依的事件處理常式。 | 2.7確保可使用鍵盤存取表單控制項 | |
 | [10.1](https://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-avoid-pop-ups) | 除非使用者代理程式允許使用者關閉衍生視窗，否則不要造成快顯視窗或其他視窗出現，也不要在未通知使用者的情況下變更目前視窗。 | 2.11避免中斷指令碼 | |
@@ -120,48 +120,48 @@ ht-degree: 1%
 | 1.1 [替代文字](https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv.html) | | |
 | 1.1.1 [非文字內容](https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html) | 2.4提供影像的對等文字 | |
 | | 2.5為表單控制項提供適當的標籤 | |
-| 1.2 [時間型媒體](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv.html) | | |
+| 1.2 [以時間為基礎的媒體](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv.html) | | |
 | 1.2.1 [純音訊和純視訊（預先錄製）](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-av-only-alt.html) | 2.12確保所有音訊與視訊內容都能存取 | |
 | 1.2.2 [註解（預先錄製）](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-captions.html) | 2.12確保所有音訊與視訊內容都能存取 | |
-| 1.2.3 [音訊說明或替代媒體（預先錄製）](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-audio-desc.html) | 2.12確保所有音訊與視訊內容都能存取 | |
+| 1.2.3 [音訊描述或替代媒體（預先錄製）](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-audio-desc.html) | 2.12確保所有音訊與視訊內容都能存取 | |
 | 1.2.4 [註解（即時）](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-real-time-captions.html) | 2.12確保所有音訊與視訊內容都能存取 | |
-| 1.2.5 [音訊說明（預先錄製）](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-audio-desc-only.html) | 2.12確保所有音訊與視訊內容都能存取 | |
+| 1.2.5 [音訊描述（預先錄製）](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-audio-desc-only.html) | 2.12確保所有音訊與視訊內容都能存取 | |
 | 1.2.6 [手語（預先錄製）](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-sign.html) | 2.12確保所有音訊與視訊內容都能存取 | |
 | 1.2.7 [延伸音訊描述（預先錄製）](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-extended-ad.html) | 2.12確保所有音訊與視訊內容都能存取 | |
 | 1.2.8 [替代媒體（預先錄製）](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-text-doc.html) | 2.12確保所有音訊與視訊內容都能存取 | |
-| 1.2.9 [僅限音訊（即時）](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-live-audio-only.html) | 2.12確保所有音訊與視訊內容都能存取 | |
+| 1.2.9 [純音訊（即時）](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-live-audio-only.html) | 2.12確保所有音訊與視訊內容都能存取 | |
 | 1.3 [可調整](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation.html) | | |
 | 1.3.1 [資訊和關係](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html) | 2.9提供表格的標題儲存格 | |
 | 1.3.2 [有意義的順序](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-sequence.html) | 2.6確定閱讀和定位鍵順序正確 | |
 | | 2.10提供可導覽的表單結構 | |
 | 1.3.3 [感官特性](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-understanding.html) | 2.8負責任地使用顏色 | |
 | 1.4 [可區分](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast.html) | | |
-| 1.4.1 [使用顏色](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-without-color.html) | 2.8負責任地使用顏色 | |
-| 1.4.2 [音訊控制](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-dis-audio.html) | 無特定LiveCycle技術 | |
+| 1.4.1 [使用色彩](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-without-color.html) | 2.8負責任地使用顏色 | |
+| 1.4.2 [音訊控制項](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-dis-audio.html) | 無特定LiveCycle技術 | |
 | 1.4.3 [對比（最小）](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html) | 2.8負責任地使用顏色 | |
 | 1.4.4 [調整文字大小](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html) | 無特定LiveCycle技術 | |
-| 1.4.5 [文字的影像](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-text-presentation.html) | 無特定LiveCycle技術 | |
+| 1.4.5 [文字影像](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-text-presentation.html) | 無特定LiveCycle技術 | |
 | 1.4.6 [對比（增強）](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast7.html) | 2.8負責任地使用顏色 | |
-| 1.4.7 [低背景音訊或無背景音訊](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-noaudio.html) | 無特定LiveCycle技術 | |
-| 1.4.9 [文字的影像（無例外）](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-text-images.html) | 無特定LiveCycle技術 | |
+| 1.4.7 [低音或無背景音訊](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-noaudio.html) | 無特定LiveCycle技術 | |
+| 1.4.9 [文字影像（無例外狀況）](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-text-images.html) | 無特定LiveCycle技術 | |
 | 2.1 [無障礙鍵盤](https://www.w3.org/TR/UNDERSTANDING-WCAG20/keyboard-operation.html) | | |
 | 2.1.1 [鍵盤](https://www.w3.org/TR/UNDERSTANDING-WCAG20/keyboard-operation-keyboard-operable.html) | 2.6確定閱讀和定位鍵順序正確 | |
 | | 2.7確保可使用鍵盤存取表單控制項 | |
-| 2.1.2 [無鍵盤陷阱](https://www.w3.org/TR/UNDERSTANDING-WCAG20/keyboard-operation-trapping.html) | 2.7確保可使用鍵盤存取表單控制項 | |
-| 2.1.3 [鍵盤（無例外）](https://www.w3.org/TR/UNDERSTANDING-WCAG20/keyboard-operation-all-funcs.html) | 2.6確定閱讀和定位鍵順序正確 | |
+| 2.1.2 [沒有鍵盤陷阱](https://www.w3.org/TR/UNDERSTANDING-WCAG20/keyboard-operation-trapping.html) | 2.7確保可使用鍵盤存取表單控制項 | |
+| 2.1.3 [鍵盤（無例外狀況）](https://www.w3.org/TR/UNDERSTANDING-WCAG20/keyboard-operation-all-funcs.html) | 2.6確定閱讀和定位鍵順序正確 | |
 | | 2.7確保可使用鍵盤存取表單控制項 | |
-| 2.2 [充足的時間](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits.html) | | |
+| 2.2 [足夠時間](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits.html) | | |
 | 2.2.1 [計時可調](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-required-behaviors.html) | 無特定LiveCycle技術 | |
-| 2.2.2 [暫停、停止、隱藏](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html) | 2.1保持表單簡單易用 | |
-| 2.2.3 [無時間](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-no-exceptions.html) | 無特定LiveCycle技術 | |
-| 2.2.4 [插斷](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-postponed.html) | 無特定LiveCycle技術 | |
-| 2.2.5 [重新驗證](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-server-timeout.html) | 無特定LiveCycle技術 | |
-| 2.3 [癲癇發作] | | |
+| 2.2.2 [暫停，停止，隱藏](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html) | 2.1保持表單簡單易用 | |
+| 2.2.3 [沒有時間](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-no-exceptions.html) | 無特定LiveCycle技術 | |
+| 2.2.4 [中斷](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-postponed.html) | 無特定LiveCycle技術 | |
+| 2.2.5 [正在重新驗證](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-server-timeout.html) | 無特定LiveCycle技術 | |
+| 2.3 [扣押次數] | | |
 | 2.3.1 [三個Flash或低於臨界值](https://www.w3.org/TR/UNDERSTANDING-WCAG20/seizure-does-not-violate.html) | 2.1保持表單簡單易用 | |
 | 2.3.2 [三個Flash](https://www.w3.org/TR/UNDERSTANDING-WCAG20/seizure-three-times.html) | 2.1保持表單簡單易用 | |
-| 2.4 [可導覽](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms.html) | | |
+| 2.4 [可瀏覽](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms.html) | | |
 | 2.4.1 [略過區塊](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html) | 2.10提供可導覽的表單結構 | |
-| 2.4.2 [頁面帶有標題](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-title.html) | 無特定LiveCycle技術 | |
+| 2.4.2 [頁面標題為](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-title.html) | 無特定LiveCycle技術 | |
 | 2.4.3 [焦點順序](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-focus-order.html) | 2.6確定閱讀和定位鍵順序正確 | |
 | 2.4.4 [連結目的（在內容中）](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-refs.html) | 無特定LiveCycle技術 | 連結目的取決於作者為連結的元素選擇有意義的文字。 |
 | 2.4.5 [多種方式](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-mult-loc.html) | 2.10提供可導覽的表單結構 | |
@@ -169,30 +169,30 @@ ht-degree: 1%
 | 2.4.7 [焦點可見](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-focus-visible.html) | 無特定LiveCycle技術 | LiveCycle表單中的預設焦點為可見。 |
 | 2.4.8 [位置](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-location.html) | 無特定LiveCycle技術 | 不適用：LiveCycle表單不需要導覽系統。 |
 | 2.4.9 [連結目的（僅限連結）](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-link.html) | 無特定LiveCycle技術 | 連結目的取決於作者為連結的元素選擇有意義的文字。 |
-| 2.4.10 [章節標題](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-headings.html) | 2.10提供可導覽的表單結構 | |
-| 3.1 [可讀](https://www.w3.org/TR/UNDERSTANDING-WCAG20/meaning.html) | | |
+| 2.4.10 [節標題](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-headings.html) | 2.10提供可導覽的表單結構 | |
+| 3.1 [可讀取](https://www.w3.org/TR/UNDERSTANDING-WCAG20/meaning.html) | | |
 | 3.1.1 [頁面語言](https://www.w3.org/TR/UNDERSTANDING-WCAG20/meaning-doc-lang-id.html) | 2.13識別自然語言和語言的任何變更 | |
-| 3.1.2 [部分語言](https://www.w3.org/TR/UNDERSTANDING-WCAG20/meaning-other-lang-id.html) | 2.13識別自然語言和語言的任何變更 | |
+| 3.1.2 [零件語言](https://www.w3.org/TR/UNDERSTANDING-WCAG20/meaning-other-lang-id.html) | 2.13識別自然語言和語言的任何變更 | |
 | 3.1.3 [不尋常字詞](https://www.w3.org/TR/UNDERSTANDING-WCAG20/meaning-idioms.html) | 無特定LiveCycle技術 | |
 | 3.1.4 [縮寫](https://www.w3.org/TR/UNDERSTANDING-WCAG20/meaning-located.html) | 無特定LiveCycle技術 | |
-| 3.1.5 [讀取層級](https://www.w3.org/TR/UNDERSTANDING-WCAG20/meaning-supplements.html) | 無特定LiveCycle技術 | |
+| 3.1.5 [正在讀取層級](https://www.w3.org/TR/UNDERSTANDING-WCAG20/meaning-supplements.html) | 無特定LiveCycle技術 | |
 | 3.1.6 [發音](https://www.w3.org/TR/UNDERSTANDING-WCAG20/meaning-pronunciation.html) | 無特定LiveCycle技術 | |
 | 3.2 [可預測](https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior.html) | | |
-| 3.2.1 [聚焦](https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-receive-focus.html) | 2.11避免中斷指令碼 | |
-| 3.2.2 [在輸入上](https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-unpredictable-change.html) | 2.11避免中斷指令碼 | |
+| 3.2.1 [焦點](https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-receive-focus.html) | 2.11避免中斷指令碼 | |
+| 3.2.2 [輸入](https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-unpredictable-change.html) | 2.11避免中斷指令碼 | |
 | 3.2.3 [一致的導覽](https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-consistent-locations.html) | 2.10提供可導覽的表單結構 | |
 | 3.2.4 [一致的識別](https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-consistent-functionality.html) | <ul><li>2.3選擇正確的控制項</li><li>2.5為表單控制項提供適當的標籤</li> | |
-| 3.2.5 [依要求變更](https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-no-extreme-changes-context.html) | 2.11避免中斷指令碼 | |
+| 3.2.5 [要求變更](https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-no-extreme-changes-context.html) | 2.11避免中斷指令碼 | |
 | 3.3 [輸入協助](https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error.html) | | |
 | 3.3.1 [錯誤識別](https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-identified.html) |  | LiveCycleDesigner提供必要工具來標籤表單欄位，以及執行表單輸入驗證。 |
 | 3.3.2 [標籤或指示](https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-cues.html) | 2.5為表單控制項提供適當的標籤 | |
 | 3.3.3 [錯誤建議](https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-suggestions.html) |  | LiveCycleDesigner提供必要工具來標籤表單欄位，以及執行表單輸入驗證。 |
-| 3.3.4 [錯誤預防（法律、金融、資料）](https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-reversible.html) | 無特定LiveCycle技術 | |
+| 3.3.4 [錯誤預防（法律、財務、資料）](https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-reversible.html) | 無特定LiveCycle技術 | |
 | 3.3.5 [說明](https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-context-help.html) | 無特定LiveCycle技術 | |
 | 3.3.6 [錯誤預防（全部）](https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-reversible-all.html) | 無特定LiveCycle技術 | |
 | 4.1 [相容](https://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat.html) | | |
 | 4.1.1 [剖析](https://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat-parses.html) | 無特定LiveCycle技術 | |
-| 4.1.2 [名稱、角色、值](https://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat-rsv.html) | <ul><li>2.3選擇正確的控制項</li> <li>2.5為表單控制項提供適當的標籤</li> | |
+| 4.1.2 [名稱，角色，值](https://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat-rsv.html) | <ul><li>2.3選擇正確的控制項</li> <li>2.5為表單控制項提供適當的標籤</li> | |
 
 
 

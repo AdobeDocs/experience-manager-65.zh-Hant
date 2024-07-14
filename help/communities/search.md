@@ -20,11 +20,11 @@ ht-degree: 1%
 
 搜尋功能可與各種其他功能（例如論壇）搭配使用，以提供搜尋內容的功能。
 
-新增搜尋由社群成員輸入的帖子(稱為使用者產生的內容(UGC))的功能時，有兩個元件： [搜尋](#search) 和 [搜尋結果](#search-results).
+新增搜尋由社群成員輸入的貼文(稱為使用者產生的內容(UGC))的功能時，有兩個元件： [搜尋](#search)和[搜尋結果](#search-results)。
 
-包含下列專案的頁面 `Search Results` 元件支援搜尋和顯示結果。
+包含`Search Results`元件的頁面同時支援搜尋和顯示結果。
 
-包含下列專案的頁面 `Search` 元件會提供位置來啟動搜尋，且搜尋結果會顯示在 `Search Results` 頁面。
+包含`Search`元件的頁面提供啟動搜尋的位置，搜尋結果會顯示在`Search Results`頁面上。
 
 搜尋功能可與任何其他可讓網站訪客和成員檢視內容的功能搭配使用。
 
@@ -32,21 +32,21 @@ ht-degree: 1%
 
 ### 將搜尋新增至頁面 {#add-search-to-a-page}
 
-若要新增 `Search` 元件至作者模式下的頁面，請使用元件瀏覽器來尋找 `Communities / Search` 並將其拖曳至頁面上的適當位置。 使用 `Search` 需要第二個頁面 `Search Results.`
+若要將`Search`元件新增至作者模式的頁面，請使用元件瀏覽器來找到`Communities / Search`並將其拖曳至頁面上的適當位置。 使用`Search`需要`Search Results.`的第二頁
 
-如需必要資訊，請造訪 [Communities元件基本知識](basics.md).
+如需必要資訊，請造訪[社群元件基本知識](basics.md)。
 
-當需要使用者端程式庫時， `cq.social.hbs.search`，包含，這就是 `Search` 元件隨即出現。
+當包含必要的使用者端程式庫`cq.social.hbs.search`時，`Search`元件的顯示方式如下。
 
-![add-search](assets/add-search.png)
+![新增搜尋](assets/add-search.png)
 
 ### 設定新增的搜尋 {#configure-the-added-search}
 
-選取已放置的 `Search` 元件以存取和選取 `Configure` 圖示可開啟編輯對話方塊。
+選取要存取的置入`Search`元件，並選取開啟編輯對話方塊的`Configure`圖示。
 
-![設定](assets/configure-new.png)
+![組態](assets/configure-new.png)
 
-在 **[!UICONTROL 搜尋設定]** 索引標籤，指定當訪客輸入查詢時如何搜尋路徑。
+在&#x200B;**[!UICONTROL 搜尋設定]**&#x200B;索引標籤下，指定當訪客輸入查詢時如何搜尋路徑。
 
 ![搜尋設定](assets/search-settings.png)
 
@@ -56,37 +56,37 @@ ht-degree: 1%
    * `/content/community-components/en/forum/jcr:content/content/forum`
 
 * **[!UICONTROL 結果頁面]**
-結果會顯示在指定的個別頁面上，此頁面是使用瀏覽器來選取包含 `Search Results` 元件。
+結果將出現在使用瀏覽器選取包含`Search Results`元件的頁面所指定的個別頁面上。
 
 ## 搜尋結果 {#search-results}
 
 ### 將搜尋結果新增至頁面 {#add-search-results-to-a-page}
 
-若要新增 `Search Results` 元件至作者模式下的頁面，請使用元件瀏覽器來尋找
+若要將`Search Results`元件新增至作者模式的頁面，請使用元件瀏覽器來尋找
 
 * `Communities / Search Results`
 
 並將其拖曳至頁面上的適當位置。 與搜尋元件不同，不需要第二個頁面，因為結果將顯示在同一頁面上。
 
-如果在網站內的其他位置使用「搜尋」，此頁面會顯示 `Search Results` 可設定為 `Result Page` 針對的任何或所有執行個體 `Search`.
+如果在網站內的其他位置使用「搜尋」，這個含有`Search Results`的頁面可設定為`Search`的任何或所有執行個體的`Result Page`。
 
-如需必要資訊，請造訪 [Communities元件基本知識](basics.md).
+如需必要資訊，請造訪[社群元件基本知識](basics.md)。
 
-當需要使用者端程式庫時， `cq.social.hbs.search`，包含，這就是 `Search Result` 元件隨即出現：
+當包含必要的使用者端程式庫`cq.social.hbs.search`時，`Search Result`元件的顯示方式如下：
 
-![search-result](assets/search-result1.png)
+![搜尋結果](assets/search-result1.png)
 
 ### 設定新增的搜尋結果 {#configure-the-added-search-result}
 
-選取已放置的 `Search Results` 元件以存取和選取 `Configure` 圖示可開啟編輯對話方塊。
+選取要存取的置入`Search Results`元件，並選取開啟編輯對話方塊的`Configure`圖示。
 
 ![設定](assets/configure-new.png)
 
-在 **[!UICONTROL 搜尋結果設定]** 索引標籤中，可指定訪客輸入查詢時，搜尋中包含哪些路徑。
+在&#x200B;**[!UICONTROL 搜尋結果設定]**&#x200B;索引標籤下，可以指定當訪客輸入查詢時，搜尋中包含哪些路徑。
 
-![search-result-settings](assets/search-result-settings.png)
+![搜尋結果設定](assets/search-result-settings.png)
 
-* **[!UICONTROL 每頁搜尋結果數]**
+* 每頁&#x200B;**[!UICONTROL 個搜尋結果]**
 
   定義每個頁面顯示的主題/帖子數。 預設值為10。
 
@@ -96,4 +96,4 @@ ht-degree: 1%
 
 ## 其他資訊 {#additional-information}
 
-如需詳細資訊，請參閱 [搜尋Essentials](search-implementation.md) 開發人員頁面。
+如需開發人員的[Search Essentials](search-implementation.md)頁面上的詳細資訊。

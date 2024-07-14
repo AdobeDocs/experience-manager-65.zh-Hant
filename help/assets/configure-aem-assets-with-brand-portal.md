@@ -27,11 +27,11 @@ ht-degree: 5%
 
 Adobe Experience Manager Assets Brand Portal可讓您將核准的品牌資產從Adobe Experience Manager Assets發佈到Brand Portal，並分發給Brand Portal使用者。
 
-AEM Assets是透過Brand Portal主控台使用Adobe Developer設定的，這可取得AdobeIdentity Management Services (IMS)帳戶Token以授權Brand Portal租使用者。
+AEM Assets是透過Adobe Developer Console以Brand Portal設定，這種方式會取得AdobeIdentity Management Services (IMS)帳戶Token以授權Brand Portal租使用者。
 
 >[!NOTE]
 >
->AEM 6.5.4.0及更高版本支援透過AEM Assets主控台使用Brand Portal設定Adobe Developer。
+>AEM 6.5.4.0及更高版本支援透過Adobe Developer Console使用Brand Portal設定AEM Assets。
 >
 <!--
 >Earlier, Brand Portal was configured via legacy OAuth Gateway, which uses the JSON Web Token (JWT) exchange to obtain an IMS Access token for authorization. 
@@ -41,9 +41,9 @@ AEM Assets是透過Brand Portal主控台使用Adobe Developer設定的，這可�
 
 >[!TIP]
 >
->***僅適用於現有客戶***
+>***僅供現有客戶使用***
 >
->Adobe建議您繼續使用現有的舊版OAuth閘道設定。 如果您遇到舊版OAuth閘道組態的問題，請刪除現有組態，並透過Adobe Developer主控台建立組態。
+>Adobe建議您繼續使用現有的舊版OAuth閘道設定。 如果您遇到舊版OAuth閘道組態的問題，請刪除現有組態，並透過Adobe Developer Console建立組態。
 
 <!--
 This help describes the following two use-cases:
@@ -73,17 +73,17 @@ This help describes the following two use-cases:
 
 建議使用AEM 6.5設定AEM Author例項。 如果您尚未啟動並執行AEM，請從下列位置下載：
 
-* 如果您是現有AEM客戶，請從下載AEM 6.5 [Adobe授權網站](https://licensing.adobe.com).
+* 如果您是AEM現有客戶，請從[Adobe授權網站](https://licensing.adobe.com)下載AEM 6.5。
 
-* 如果您是Adobe合作夥伴，請使用 [Adobe合作夥伴訓練計畫](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=82357Q) 請求AEM 6.5。
+* 如果您是Adobe合作夥伴，請使用[Adobe合作夥伴訓練計畫](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=82357Q)來要求AEM 6.5。
 
-下載AEM後，如需設定AEM Author例項的指示，請參閱 [部署和維護](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html#default-local-install).
+下載AEM之後，如需設定AEM Author執行個體的指示，請參閱[部署和維護](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html#default-local-install)。
 
 ### 下載並安裝AEM最新Service Pack {#servicepack}
 
-如需詳細指示，請參閱目前的 [AEM 6.5 Service Pack發行說明](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html?lang=zh-Hant).
+如需詳細指示，請參閱目前的[AEM 6.5 Service Pack發行說明](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html?lang=zh-Hant)。
 
-**聯絡Adobe客戶支援** 如果您找不到最新的AEM套件或Service Pack。
+如果找不到最新的AEM套件或Service Pack，請&#x200B;**聯絡Adobe客戶支援**。
 
 ## 建立設定 {#configure-new-integration-65}
 
@@ -91,9 +91,9 @@ This help describes the following two use-cases:
 >
 >從2024年6月起，您無法建立新的JWT憑證。 此後，只會建立OAuth認證。 請參閱建立OAuth設定的詳細資訊。
 
-使用Brand Portal設定AEM Assets需要在AEM Assets作者執行個體和Adobe Developer Console中進行設定。
+使用Brand Portal設定AEM Assets需要在AEM Assets Author例項和Adobe Developer Console中進行設定。
 
-1. 在Adobe Developer主控台中，為您的Brand Portal租使用者（組織）建立專案。
+1. 在Adobe Developer Console中，為您的Brand Portal租使用者（組織）建立專案。
 1. 在Experience Manager Assets中，使用IMS帳戶和Brand Portal端點（組織URL）設定Brand Portal雲端服務。
 1. 從Experience Manager Assets發佈資產到Brand Portal以測試設定。
 
@@ -117,17 +117,17 @@ This help describes the following two use-cases:
 
 以指定順序執行下列步驟，使用Brand Portal設定Experience Manager Assets。
 
-1. [在Adobe Developer主控台中設定OAuth認證](#config-oauth)
+1. [在Adobe Developer Console中設定OAuth認證](#config-oauth)
 1. [使用OAuth建立新的Adobe IMS整合](#create-ims-account-configuration)
 1. [設定雲端服務](#configure-cloud-service)
 
-#### 在Adobe Developer主控台中設定OAuth認證 {#config-oauth}
+#### 在Adobe Developer Console中設定OAuth認證 {#config-oauth}
 
-[在Adobe Developer主控台中設定OAuth認證](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/security/setting-up-ims-integrations-for-aem#credentials-in-the-developer-console)  並選取Brand Portal API。
+[在Adobe Developer Console中設定OAuth認證](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/security/setting-up-ims-integrations-for-aem#credentials-in-the-developer-console)，並選取Brand Portal API。
 
 #### 使用OAuth建立新的Adobe IMS整合 {#create-ims-account-configuration}
 
-[使用OAuth建立新的Adobe IMS整合](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/security/setting-up-ims-integrations-for-aem#creating-oauth-configuration) 並從下拉式清單中選取Brand Portal 。
+[使用OAuth建立新的Adobe IMS整合](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/security/setting-up-ims-integrations-for-aem#creating-oauth-configuration)，並從下拉式清單中選取Brand Portal。
 
 #### 設定雲端服務 {#configure-cloud-service}
 
@@ -315,19 +315,19 @@ To configure the IMS account:
 
 1. 登入您的AEM Assets Author例項。
 
-1. 從 **工具** ![工具](assets/do-not-localize/tools.png) 面板，導覽至 **[!UICONTROL Cloud Service]** > **[!UICONTROL AEM Brand Portal]**.
+1. 從&#x200B;**工具** ![工具](assets/do-not-localize/tools.png)面板，瀏覽至&#x200B;**[!UICONTROL Cloud Service]** > **[!UICONTROL AEM Brand Portal]**。
 
-1. 在Brand Portal設定頁面中，按一下 **[!UICONTROL 建立]**.
+1. 在Brand Portal設定頁面中，按一下&#x200B;**[!UICONTROL 建立]**。
 
 1. 指定設定的&#x200B;**[!UICONTROL 標題]**。
 
-   選取您建立的IMS設定，同時 [設定IMS帳戶](#create-ims-account-configuration).
+   選取您在[設定IMS帳戶](#create-ims-account-configuration)時所建立的IMS設定。
 
-   在 **[!UICONTROL 服務URL]** 欄位中，指定您的Brand Portal租使用者（組織） URL。
+   在&#x200B;**[!UICONTROL 服務URL]**&#x200B;欄位中，指定您的Brand Portal租使用者（組織） URL。
 
    ![Brand Portal設定視窗](assets/create-cloud-service.png)
 
-1. 按一下 **[!UICONTROL 儲存並關閉]**. 雲端設定已建立。
+1. 按一下&#x200B;**[!UICONTROL 儲存並關閉]**。 雲端設定已建立。
 
    您的AEM Assets Author例項現在已透過Brand Portal租使用者完成設定。
 

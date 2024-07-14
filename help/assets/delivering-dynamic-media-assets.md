@@ -28,11 +28,11 @@ Dynamic Media提供幾個選項：
 
    * 將您的影片或影像內嵌在網站上。
    * 將URL連結至您的網頁應用程式。 當您想要以快顯視窗或強制回應視窗的形式傳送視訊播放器時，請使用連結。
-   * 如果您的網站有回應，您可以 [傳遞最佳化的影像](/help/assets/responsive-site.md).
+   * 如果您的網站有回應，您可以[傳送最佳化的影像](/help/assets/responsive-site.md)。
 
 >[!NOTE]
 >
->智慧型影像可與您現有的影像預設集搭配使用，並在最後毫秒的傳送中使用智慧型功能，根據瀏覽器或網路連線速度進一步縮小影像檔案大小。 另請參閱 [智慧型影像](/help/assets/imaging-faq.md) 以取得詳細資訊。
+>智慧型影像可與您現有的影像預設集搭配使用，並在最後毫秒的傳送中使用智慧型功能，根據瀏覽器或網路連線速度進一步縮小影像檔案大小。 如需詳細資訊，請參閱[智慧型影像](/help/assets/imaging-faq.md)。
 
 如需詳細資訊，請參閱下列主題：
 
@@ -50,4 +50,4 @@ Dynamic Media提供幾個選項：
 
 Experience Manager現在支援透過HTTP/2傳送所有Dynamic Media內容（影像和視訊）。 也就是說，影像或視訊的已發佈URL或內嵌程式碼可整合至任何接受託管資產的應用程式。 該已發佈資產隨後會透過HTTP/2通訊協定傳送。 此傳送方式可改善瀏覽器和伺服器的通訊方式，讓您的所有Dynamic Media資產獲得更好的回應和載入時間。
 
-若要深入瞭解，請參閱 [HTTP/2內容傳送常見問答](/help/sites-administering/scene7-http2faq.md).
+若要深入瞭解，請參閱[HTTP/2內容傳遞常見問題](/help/sites-administering/scene7-http2faq.md)。

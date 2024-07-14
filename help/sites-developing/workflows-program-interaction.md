@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # 以程式設計方式與工作流程互動{#interacting-with-workflows-programmatically}
 
-時間 [自訂和擴充您的工作流程](/help/sites-developing/workflows-customizing-extending.md) 您可以存取工作流程物件：
+當[自訂及擴充您的工作流程](/help/sites-developing/workflows-customizing-extending.md)時，您可以存取工作流程物件：
 
 * [使用工作流程Java API](#using-the-workflow-java-api)
 * [在ECMA指令碼中取得工作流程物件](#obtaining-workflow-objects-in-ecma-scripts)
@@ -26,7 +26,7 @@ ht-degree: 0%
 
 ## 使用工作流程Java API {#using-the-workflow-java-api}
 
-工作流程Java API包含 [`com.adobe.granite.workflow`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/package-summary.html) 套件和多個子套件。 API最重要的成員為 `com.adobe.granite.workflow.WorkflowSession` 類別。 此 `WorkflowSession` 類別同時提供設計階段和執行階段工作流程物件的存取權：
+工作流程Java API包含[`com.adobe.granite.workflow`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/package-summary.html)套件和多個子套件。 API最重要的成員是`com.adobe.granite.workflow.WorkflowSession`類別。 `WorkflowSession`類別同時提供設計階段和執行階段工作流程物件的存取權：
 
 * 工作流程模型
 * 工作專案
@@ -47,9 +47,9 @@ ht-degree: 0%
 
 ## 在ECMA指令碼中取得工作流程物件 {#obtaining-workflow-objects-in-ecma-scripts}
 
-如所述 [找到指令碼](/help/sites-developing/the-basics.md#locating-the-script)， AEM （透過Apache Sling）提供可執行伺服器端ECMA指令碼的ECMA指令碼引擎。 此 [`org.apache.sling.scripting.core.ScriptHelper`](https://sling.apache.org/apidocs/sling5/org/apache/sling/scripting/core/ScriptHelper.html) 類別可立即供您的指令碼使用，作為 `sling` 變數中。
+如[尋找指令碼](/help/sites-developing/the-basics.md#locating-the-script)中所述，AEM （透過Apache Sling）提供執行伺服器端ECMA指令碼的ECMA指令碼引擎。 [`org.apache.sling.scripting.core.ScriptHelper`](https://sling.apache.org/apidocs/sling5/org/apache/sling/scripting/core/ScriptHelper.html)類別可立即供您的指令碼做為`sling`變數使用。
 
-此 `ScriptHelper` 類別可讓您存取 `SlingHttpServletRequest` 您最終可以使用以取得 `WorkflowSession` 物件；例如：
+`ScriptHelper`類別可讓您存取最終用來取得`WorkflowSession`物件的`SlingHttpServletRequest`；例如：
 
 ```
 var wfsession = sling.getRequest().getResource().getResourceResolver().adaptTo(Packages.com.adobe.granite.workflow.WorkflowSession);
@@ -72,11 +72,11 @@ REST API支援下列動作：
 
 >[!NOTE]
 >
->透過使用適用於Web開發的Firefox擴充功能Firebug，您可以在操作主控台時追蹤HTTP流量。 例如，您可以使用檢查引數及傳送至AEM伺服器的值 `POST` 要求。
+>透過使用適用於Web開發的Firefox擴充功能Firebug，您可以在操作主控台時追蹤HTTP流量。 例如，您可以透過`POST`要求檢查傳送至AEM伺服器的引數和值。
 
-在此頁面中，假設AEM會在連線埠的localhost上執行 `4502` 而且安裝內容為&quot; `/`「 （根）。 如果不是安裝，則需要相應地調整HTTP請求適用的URI。
+在此頁面中，假設AEM會在連線埠`4502`的localhost上執行，而且安裝內容是&quot; `/`&quot; （根）。 如果不是安裝，則需要相應地調整HTTP請求適用的URI。
 
-支援的轉譯 `GET` 請求是JSON轉譯。 的URL `GET` 應該具有 `.json` 副檔名，例如：
+`GET`要求支援的轉譯是JSON轉譯。 `GET`的URL應該有`.json`副檔名，例如：
 
 `http://localhost:4502/etc/workflow.json`
 
@@ -98,7 +98,7 @@ REST API支援下列動作：
   </tr>
   <tr>
    <td><code>POST</code></td>
-   <td><p>建立新的工作流程例項。 引數包括：<br /> - <code>model</code>：個別工作流程模型的ID (URI)<br /> - <code>payloadType</code>：包含裝載的型別(例如， <code>JCR_PATH</code> 或URL)。<br /> 裝載會以引數形式傳送 <code>payload</code>. A <code>201</code> (<code>CREATED</code>)回應會以包含新工作流程例項資源URL的location標頭傳回。</p> </td>
+   <td><p>建立新的工作流程例項。 引數為： <br /> - <code>model</code>：個別工作流程模型<br />的ID (URI) - <code>payloadType</code>：包含承載的型別（例如，<code>JCR_PATH</code>或URL）。<br />承載會以引數<code>payload</code>傳送。 <code>201</code> (<code>CREATED</code>)回應會傳回包含新工作流程執行個體資源URL的位置標頭。</p> </td>
   </tr>
  </tbody>
 </table>
@@ -111,7 +111,7 @@ REST API支援下列動作：
 
 | HTTP要求方法 | 動作 |
 |---|---|
-| `GET` | 列出可用的工作流程例項及其狀態( `RUNNING`， `SUSPENDED`， `ABORTED` 或 `COMPLETED`) |
+| `GET` | 列出可用的工作流程執行個體及其狀態（ `RUNNING`、`SUSPENDED`、`ABORTED`或`COMPLETED`） |
 
 #### 依其ID管理工作流程例項 {#managing-a-workflow-instance-by-its-id}
 
@@ -131,7 +131,7 @@ REST API支援下列動作：
   </tr>
   <tr>
    <td><code>POST</code></td>
-   <td>變更執行個體的狀態。 新狀態會以引數的形式傳送 <code>state</code> 和必須具有下列其中一個值： <code>RUNNING</code>， <code>SUSPENDED</code>，或 <code>ABORTED</code>.<br /> 如果無法連線到新狀態（例如，暫停已終止的執行個體時）， <code>409</code> (<code>CONFLICT</code>)回應會傳回給使用者端。</td>
+   <td>變更執行個體的狀態。 新狀態會以引數<code>state</code>傳送，而且必須有下列其中一個值： <code>RUNNING</code>、<code>SUSPENDED</code>或<code>ABORTED</code>。<br />如果無法連線到新狀態（例如，暫停已終止的執行個體時），<code>409</code> (<code>CONFLICT</code>)回應會傳回給使用者端。</td>
   </tr>
  </tbody>
 </table>
@@ -154,12 +154,12 @@ REST API支援下列動作：
   </tr>
   <tr>
    <td><code>POST</code></td>
-   <td>建立新的工作流程模型。 若引數 <code>title</code> ，則會以指定標題建立新模型。 附加JSON模型定義作為引數 <code>model</code> 根據提供的定義建立新的工作流程模型。<br /> A <code>201</code> 回應(<code>CREATED</code>)會以包含新工作流程模型資源的URL的位置標頭傳回。<br /> 當模型定義附加為名為的檔案引數時，也會發生同樣的情況 <code>modelfile</code>.<br /> 在這兩種情況下 <code>model</code> 和 <code>modelfile</code> 引數，另一個引數稱為 <code>type</code> 是定義序列化格式所必需。 可使用OSGI API整合新的序列化格式。 標準JSON序列化程式會與工作流程引擎一併傳送。 其型別為JSON。 如需格式的範例，請參閱下文。</td>
+   <td>建立新的工作流程模型。 如果傳送引數<code>title</code>，則會以指定的標題建立新模型。 附加JSON模型定義作為引數<code>model</code>時，會根據提供的定義建立新的工作流程模型。<br /> <code>201</code>回應(<code>CREATED</code>)會傳回包含新工作流程模型資源URL的位置標頭。<br />當模型定義附加為名為<code>modelfile</code>的檔案引數時，也會發生相同情況。<br />在<code>model</code>和<code>modelfile</code>引數的情況下，需要名為<code>type</code>的額外引數來定義序列化格式。 可使用OSGI API整合新的序列化格式。 標準JSON序列化程式會與工作流程引擎一併傳送。 其型別為JSON。 如需格式的範例，請參閱下文。</td>
   </tr>
  </tbody>
 </table>
 
-範例：在瀏覽器中，請求 `http://localhost:4502/etc/workflow/models.json` 會產生類似以下的json回應：
+範例：在瀏覽器中，對`http://localhost:4502/etc/workflow/models.json`的請求會產生類似以下的json回應：
 
 ```
 [
@@ -225,7 +225,7 @@ REST API支援下列動作：
 
 `http://localhost:4502*{uri}*`
 
-位置 `*{uri}*` 是存放庫中模型節點的路徑。
+其中`*{uri}*`是存放庫中模型節點的路徑。
 
 <table>
  <tbody>
@@ -235,24 +235,24 @@ REST API支援下列動作：
   </tr>
   <tr>
    <td><code>GET</code></td>
-   <td>取得 <code>HEAD</code> 模型的版本（定義和中繼資料）。</td>
+   <td>取得模型的<code>HEAD</code>版本（定義和中繼資料）。</td>
   </tr>
   <tr>
    <td><code>PUT</code></td>
-   <td>更新 <code>HEAD</code> 模型的版本（建立新版本）。<br /> 新版本模型的完整模型定義必須新增為引數，稱為 <code>model</code>. 此外， <code>type</code> 建立新模型時需要引數，而且需要值 <code>JSON</code>.<br /> </td>
+   <td>更新模型的<code>HEAD</code>版本（建立新版本）。<br />新版本模型的完整模型定義必須新增為名為<code>model</code>的引數。 此外，建立新模型時需要<code>type</code>引數，而且需要值為<code>JSON</code>.<br /> </td>
   </tr>
   <tr>
    <td><code>POST</code></td>
-   <td>與PUT的行為相同。 需要，因為AEM Widget不支援 <code>PUT</code> 操作。</td>
+   <td>與PUT的行為相同。 需要，因為AEM Widget不支援<code>PUT</code>作業。</td>
   </tr>
   <tr>
    <td><code>DELETE</code></td>
-   <td>刪除模型。 若要解決防火牆/Proxy問題， <code>POST</code> 包含 <code>X-HTTP-Method-Override</code> 含有值的標頭專案 <code>DELETE</code> 也將被接受為 <code>DELETE</code> 要求。</td>
+   <td>刪除模型。 若要解決防火牆/Proxy問題，包含值為<code>DELETE</code>的<code>X-HTTP-Method-Override</code>標頭專案的<code>POST</code>也會被接受為<code>DELETE</code>要求。</td>
   </tr>
  </tbody>
 </table>
 
-範例：在瀏覽器中，請求 `http://localhost:4502/var/workflow/models/publish_example.json` 傳回 `json` 與下列程式碼類似的回應：
+範例：在瀏覽器中，對`http://localhost:4502/var/workflow/models/publish_example.json`的請求傳回與下列程式碼類似的`json`回應：
 
 ```shell
 {
@@ -358,7 +358,7 @@ REST API支援下列動作：
   </tr>
   <tr>
    <td><code>POST</code></td>
-   <td>完成URI作為引數傳送的工作專案 <code>item</code> 和根據工作流程例項前進到下一個節點，節點由引數定義 <code>route</code> 或 <code>backroute</code> 如果有後退一步。<br /> 若引數 <code>delegatee</code> 即會傳送，而工作專案由引數識別 <code>item</code> 已委派給指定的參與者。</td>
+   <td>完成其URI作為引數<code>item</code>傳送的工作專案，並將相應的工作流程執行個體前進到下一個節點，如果回到步驟，則由引數<code>route</code>或<code>backroute</code>定義。<br />如果傳送引數<code>delegatee</code>，則引數<code>item</code>所識別的工作專案會委派給指定的參與者。</td>
   </tr>
  </tbody>
 </table>
@@ -371,7 +371,7 @@ REST API支援下列動作：
 
 | HTTP要求方法 | 動作 |
 |---|---|
-| `GET` | 取得收件匣的資料（定義和中繼資料） `WorkItem` 由其ID識別。 |
+| `GET` | 取得由其ID識別的收件匣`WorkItem`的資料（定義和中繼資料）。 |
 
 ## 範例 {#examples}
 
@@ -389,7 +389,7 @@ REST API支援下列動作：
 curl -u admin:admin http://localhost:4502/etc/workflow/instances.RUNNING.json
 ```
 
-此 `uri` 結果中顯示的，可作為例項使用 `id` 在其他命令中；例如：
+結果中顯示的`uri`可以做為其他命令的執行個體`id`；例如：
 
 ```shell
 [
@@ -399,17 +399,17 @@ curl -u admin:admin http://localhost:4502/etc/workflow/instances.RUNNING.json
 
 >[!NOTE]
 >
->這個 `curl` 命令可與任何 [工作流程狀態](/help/sites-administering/workflows.md#workflow-status-and-actions) 取代 `RUNNING`.
+>此`curl`命令可與任何[工作流程狀態](/help/sites-administering/workflows.md#workflow-status-and-actions)搭配使用，以取代`RUNNING`。
 
 ### 如何變更工作流程標題 {#how-to-change-the-workflow-title}
 
-若要變更 **工作流程標題** 顯示在 **例項** 索引標籤中，傳送 `POST` 命令：
+若要變更顯示在工作流程主控台&#x200B;**執行個體**&#x200B;索引標籤中的&#x200B;**工作流程標題**，請傳送`POST`命令：
 
 * 至： `http://localhost:4502/etc/workflow/instances/{id}`
 
 * ，並使用下列引數：
 
-   * `action`：其值必須是： `UPDATE`
+   * `action`：它的值必須是： `UPDATE`
    * `workflowTitle`：工作流程標題
 
 #### 如何使用curl變更工作流程標題 — REST {#how-to-change-the-workflow-title-rest-using-curl}
@@ -439,15 +439,15 @@ curl -u admin:admin http://localhost:4502/etc/workflow/models.json
 
 >[!NOTE]
 >
->另請參閱 [管理工作流程模型](#managing-workflow-models).
+>另請參閱[管理工作流程模型](#managing-workflow-models)。
 
 ### 取得WorkflowSession物件 {#obtaining-a-workflowsession-object}
 
-此 `com.adobe.granite.workflow.WorkflowSession` 類別可從改寫 `javax.jcr.Session` 物件或 `org.apache.sling.api.resource.ResourceResolver` 物件。
+`com.adobe.granite.workflow.WorkflowSession`類別可從`javax.jcr.Session`物件或`org.apache.sling.api.resource.ResourceResolver`物件改寫。
 
 #### 取得WorkflowSession物件 — Java {#obtaining-a-workflowsession-object-java}
 
-在JSP指令碼（或servlet類別的Java程式碼）中，使用HTTP要求物件來取得 `SlingHttpServletRequest` 物件，可讓您存取 `ResourceResolver` 物件。 調整 `ResourceResolver` 物件至 `WorkflowSession`.
+在JSP指令碼（或Servlet類別的Java程式碼）中，使用HTTP要求物件來取得`SlingHttpServletRequest`物件，以提供`ResourceResolver`物件的存取權。 將`ResourceResolver`物件調整為`WorkflowSession`。
 
 ```java
 <%
@@ -463,7 +463,7 @@ WorkflowSession wfSession = slingReq.getResourceResolver().adaptTo(WorkflowSessi
 
 #### 取得WorkflowSession物件 — ECMA指令碼 {#obtaining-a-workflowsession-object-ecma-script}
 
-使用 `sling` 變數來取得 `SlingHttpServletRequest` 您用來取得 `ResourceResolver` 物件。 調整 `ResourceResolver` 物件至 `WorkflowSession` 物件。
+使用`sling`變數來取得您用來取得`ResourceResolver`物件的`SlingHttpServletRequest`物件。 將`ResourceResolver`物件調整為`WorkflowSession`物件。
 
 ```
 var wfsession = sling.getRequest().getResource().getResourceResolver().adaptTo(Packages.com.adobe.granite.workflow.WorkflowSession);
@@ -473,36 +473,36 @@ var wfsession = sling.getRequest().getResource().getResourceResolver().adaptTo(P
 
 下列範例顯示如何存取工作流程模型：
 
-* Java和ECMA指令碼的程式碼會使用 `WorkflowSession.createNewModel` 方法。
+* Java和ECMA指令碼的程式碼使用`WorkflowSession.createNewModel`方法。
 * curl指令會使用模型的URL直接存取模型。
 
 使用的範例：
 
-1. 建立模型(使用識別碼 `/var/workflow/models/mymodel/jcr:content/model`)。
+1. 建立模型（識別碼為`/var/workflow/models/mymodel/jcr:content/model`）。
 1. 刪除模型。
 
 >[!NOTE]
 >
->刪除模型會設定 `deleted` 模型的屬性 `metaData` 子節點至 `true`.
+>刪除模型會將模型`metaData`子節點的`deleted`屬性設定為`true`。
 >
 >刪除不會移除模型節點。
 
 建立模型時：
 
-* 工作流程模型編輯器要求模型使用以下的特定節點結構 `/var/workflow/models`. 模型的父節點必須是型別 `cq:Page` 具有 `jcr:content` 具有下列屬性值的節點：
+* 工作流程模型編輯器要求模型使用`/var/workflow/models`下的特定節點結構。 模型的父節點必須是型別`cq:Page`，具有具有下列屬性值之`jcr:content`節點：
 
    * `sling:resourceType`: `cq/workflow/components/pages/model`
    * `cq:template`: `/libs/cq/workflow/templates/model`
 
-  建立模型時，必須先建立這個 `cq:Page` 節點並使用其 `jcr:content` 節點，作為模型節點的父節點。
+  建立模型時，您必須先建立此`cq:Page`節點，並使用其`jcr:content`節點作為模型節點的父節點。
 
-* 此 `id` 某些用來識別模型的方法所需的引數是存放庫中模型節點的絕對路徑：
+* 某些用來識別模型的方法所需的`id`引數是存放庫中模型節點的絕對路徑：
 
   `/var/workflow/models/<*model_name>*/jcr:content/model`
 
   >[!NOTE]
   >
-  >另請參閱 [如何列出所有工作流程模型](#how-to-list-all-workflow-models).
+  >請參閱[如何列出所有工作流程模型](#how-to-list-all-workflow-models)。
 
 #### 建立、讀取或刪除工作流程模型 — Java {#creating-reading-or-deleting-workflow-models-java}
 
@@ -558,22 +558,22 @@ curl -u admin:admin -X DELETE http://localhost:4502/etc/workflow/models/{id}
 
 ### 檢查工作流程狀態時篩選出系統工作流程 {#filtering-out-system-workflows-when-checking-workflow-status}
 
-您可以使用 [工作流程狀態API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/status/WorkflowStatus.html) 以擷取有關節點的工作流程狀態的資訊。
+您可以使用[WorkflowStatus API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/status/WorkflowStatus.html)來擷取有關節點的工作流程狀態的資訊。
 
 各種方法都有引數：
 
 `excludeSystemWorkflows`
 
-此引數可設為 `true` 表示系統工作流程應從相關結果中排除。
+此引數可設為`true`，以表示系統工作流程應從相關結果中排除。
 
-您 [可更新OSGi設定](/help/sites-deploying/configuring-osgi.md) **AdobeGranite工作流程PayloadMapCache** 指定工作流程 `Models` 視為系統工作流程。 預設（執行階段）工作流程模型為：
+您[可以更新OSGi設定](/help/sites-deploying/configuring-osgi.md) **AdobeGranite工作流程PayloadMapCache**，該設定將工作流程`Models`指定為系統工作流程。 預設（執行階段）工作流程模型為：
 
 * `/var/workflow/models/scheduled_activation/jcr:content/model`
 * `/var/workflow/models/scheduled_deactivation/jcr:content/model`
 
 ### 逾時後自動前進參與者步驟 {#auto-advance-participant-step-after-a-timeout}
 
-如果您需要自動前進 **參與者** 在預先定義的時間內尚未完成的步驟，您可以：
+如果您需要自動推進尚未在預先定義的時間內完成的&#x200B;**參與者**&#x200B;步驟，您可以：
 
 1. 實作OSGI事件接聽程式以接聽工作的建立和修改。
 1. 指定逾時（期限），然後建立排程的Sling作業，於當時引發。
@@ -623,7 +623,7 @@ wfSession.terminateWorkflow(workflow);
 
 #### 與工作流程例項互動 — 使用CURL的REST {#interacting-with-workflow-instances-rest-using-curl}
 
-* **啟動工作流程**
+* **正在啟動工作流程**
 
   ```shell
   # starting a workflow
@@ -651,9 +651,9 @@ wfSession.terminateWorkflow(workflow);
 
   >[!NOTE]
   >
-  >另請參閱 [如何取得所有執行中工作流程的清單](#how-to-get-a-list-of-all-running-workflows-with-their-ids) 具有用於列出具有特定狀態之執行個體的ID。
+  >請參閱[如何取得所有執行中工作流程的清單](#how-to-get-a-list-of-all-running-workflows-with-their-ids)及其識別碼，以列出具有特定狀態的執行個體。
 
-* **暫停工作流程**
+* **正在暫停工作流程**
 
   ```shell
   # suspending a workflow
@@ -673,7 +673,7 @@ wfSession.terminateWorkflow(workflow);
   curl -u admin:admin -d "state=RUNNING" http://localhost:4502/etc/workflow/instances/server0/2017-03-08/request_for_activation_1
   ```
 
-* **終止工作流程例項**
+* **正在終止工作流程執行個體**
 
   ```shell
   # terminating a workflow
@@ -792,9 +792,9 @@ wfSession.complete(workItem, routes.get(0));
 
   >[!NOTE]
   >
-  >此 `delegatee` 必須為工作流程步驟的有效選項。
+  >`delegatee`必須是工作流程步驟的有效選項。
 
-* **完成工作專案或將工作專案推進至下一個步驟**
+* **完成工作專案或將工作專案推進到下一個步驟**
 
   ```xml
   # retrieve the list of routes; the results will be similar to {"results":1,"routes":[{"rid":"233123169","label":"End","label_xss":"End"}]}
@@ -809,7 +809,7 @@ wfSession.complete(workItem, routes.get(0));
 
 ### 接聽工作流程事件 {#listening-for-workflow-events}
 
-使用OSGi事件架構接聽 [`com.adobe.granite.workflow.event.WorkflowEvent`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/event/WorkflowEvent.html) 類別定義。 此類別也提供幾個實用方法，用來取得有關事件主旨的資訊。 例如， `getWorkItem` 方法會傳回 `WorkItem` 與事件有關的工作專案的物件。
+使用OSGi事件架構接聽[`com.adobe.granite.workflow.event.WorkflowEvent`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/event/WorkflowEvent.html)類別定義的事件。 此類別也提供幾個實用方法，用來取得有關事件主旨的資訊。 例如，`getWorkItem`方法會傳回事件所涉及之工作專案的`WorkItem`物件。
 
 以下範常式式碼會定義一項服務，此服務會監聽工作流程事件並根據事件型別執行工作。
 

@@ -31,7 +31,7 @@ ht-degree: 14%
    * &quot;**DirectIP** `: A standard protocol for remote printing and managing print jobs. This protocol can be used locally or remotely. Print queues are not required.`
    * &quot;**LPD** `: A printing protocol named Line Printer Daemon protocol or Line Printer Remote (LPR) protocol. This protocol provides network print server functionality for UNIX-based systems.`
    * **SharedPrinter** `: A printing protocol that enables a computer to use a printer that is configured for that computer.`
-   * **CIF**：輸出服務支援通用網際網路檔案系統(CIF)列印通訊協定。
+   * **CIF**：輸出服務支援一般網際網路檔案系統(CIF)列印通訊協定。
 
 ## 使用SendToPrinter服務 {#using-sendtoprinter-service}
 
@@ -64,8 +64,8 @@ ht-degree: 14%
 
 只有CIF列印支援驗證。 若要驗證，請在PrinterSpec中提供使用者名稱/密碼/網域。 若要使用AEM Granite CyprtoSupport Service加密密碼，請執行下列步驟：
 
-1. 前往https://&lt;server>：&lt;port>/system/console。
+1. 請前往https://&lt;server>：&lt;port>/system/console。
 
-1. 前往 **[!UICONTROL 主要]** > **[!UICONTROL Crypto支援]**.
+1. 移至&#x200B;**[!UICONTROL 主要]** > **[!UICONTROL 密碼編譯支援]**。
 
-1. 輸入一些純文字，然後按一下 **[!UICONTROL Protect]**.
+1. 輸入一些純文字，然後按一下&#x200B;**[!UICONTROL Protect]**。

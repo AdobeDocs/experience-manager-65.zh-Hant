@@ -23,7 +23,7 @@ ht-degree: 15%
 | AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/forms-overview/home.html) |
 | AEM 6.5 | 本文章 |
 
-如需AEM Forms最新功能和增強功能的相關資訊，請參閱 [AEM Forms的新增功能](../../forms/using/whats-new.md).
+如需AEM Forms最新功能和增強功能的相關資訊，請參閱[AEM Forms的新功能](../../forms/using/whats-new.md)。
 
 ## 關於AEM Forms {#about-aem-forms}
 
@@ -33,13 +33,13 @@ AEM Forms結合表單製作、管理和發佈，以及通訊管理功能、檔�
 
 在大型企業中，表單通常是建立一次並透過複製到內容管理系統來重複使用。讓大型的表單資料庫保持最新狀態，並讓這些表單可供探索，是一項相當艱鉅的挑戰。 AEM提供可自訂的Forms入口網站，確保客戶可透過網頁和行動裝置管道找到並存取所需的表單。
 
-AEM Forms提供的表單管理工具不僅可讓您管理最適化表單，還可管理XFA表單、PDF forms和相關資產。 如需詳細資訊，請參閱 [管理表單簡介](../../forms/using/introduction-managing-forms.md).
+AEM Forms提供的表單管理工具不僅可讓您管理最適化表單，還可管理XFA表單、PDF forms和相關資產。 如需詳細資訊，請參閱[管理表單簡介](../../forms/using/introduction-managing-forms.md)。
 
 >[!NOTE]
 >
 >調適型表單功能 (適用於 [AEM 6.5 QuickStart](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html)) 僅用於探索和評估目的。若要供生產使用，必須獲得 AEM Forms 的有效許可；調適型表單的功能需要適當許可才可使用。
 
-![AEM forms功能](do-not-localize/4th-draft-updated.gif)
+![AEM表單功能](do-not-localize/4th-draft-updated.gif)
 
 ### 主要功能 {#key-capabilities}
 
@@ -68,7 +68,7 @@ PDF forms可以離線填寫、儲存在本機，以及下次線上上時傳送�
 
 HTML5瀏覽器表單可在行動裝置和桌上型瀏覽器上檢視。 您可以使用Scribble或eSign服務，以電子方式簽署HTML表單。
 
-**調適型表單**
+**最適化表單**
 
 調適型表單可以視需要新增或移除欄位或區段，動態調整以符合使用者回應。 AEM可讓您重複使用AdobeXML表單範本來建立調適型表單。
 
@@ -83,13 +83,13 @@ HTML5瀏覽器表單可在行動裝置和桌上型瀏覽器上檢視。 您可�
 * 協助工具設計與檢查
 * 可在伺服器端儲存表單
 * 支援檔案附件
-* 與資料擷取的HTML Workspace整合
+* 與資料擷取的WorkspaceHTML整合
 
 ## 離線資料收集 {#offline-data-collection}
 
 在提交表單資料後，Adobe Experience Manager會將表單資料與現有系統、商業規則和所需人員連結。
 
-AEM Forms提供Forms Workspace，此行動應用程式可將您的數位業務流程延伸到行動裝置。 使用Forms工作區，您甚至可以在離線時收集及記錄資料。 Forms工作區使用行動裝置的功能，可讓您擷取像片、視訊，以及收集時間戳記和其他資訊等資料。 下次連線到網路時，您可以同步收集的資料。
+AEM Forms提供Forms Workspace，此行動應用程式可將您的數位業務流程擴展到行動裝置。 使用Forms Workspace，您甚至可以在離線時收集並記錄資料。 Forms Workspace使用行動裝置的功能，可讓您擷取像片、視訊，以及收集時間戳記等資料，並提供其他資訊。 下次連線到網路時，您可以同步收集的資料。
 
 離線擷取資料並在下次您重新連線時加以同步處理，對現場人員來說特別實用。 它可以提升生產力並減少錯誤。
 
@@ -98,7 +98,7 @@ AEM Forms提供Forms Workspace，此行動應用程式可將您的數位業務�
 * 易於使用的HTML工作區應用程式，用於任務指派和追蹤
 * 拖放式工作流程設計環境
 * 企業內容管理聯結器(ECM)
-* 開放式標準支援，包括連線表單資料與企業系統的XML和SOAP
+* 開放式標準支援，包括XML和SOAP，可將表單資料與企業系統連線
 * 現成的HTML報告可監控積壓、工作佇列和關鍵績效指標(KPI)
 * 可自訂儀表板，以即時洞察業務營運
 * 用於連線協力廠商報告工具的API
@@ -122,7 +122,7 @@ AEM Forms提供Forms Workspace，此行動應用程式可將您的數位業務�
 * 支援數位簽章，以驗證內容完整性和簽署者的身分
 * AEM Forms的Document Security附加元件，包括加密、使用原則、追蹤和稽核
 
-![版面配置二](do-not-localize/layout-02.png)
+![配置二](do-not-localize/layout-02.png)
 
 簡化個人化通訊工作流程
 

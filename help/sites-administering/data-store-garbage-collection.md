@@ -28,15 +28,15 @@ AEM使用存放庫作為數個內部和內部管理活動的存放區：
 * 建置和下載的套件
 * 為發佈復寫建立的暫存檔案
 * 工作流程裝載
-* DAM呈現期間暫時建立的資產
+* DAM呈現期間暫時建立的Assets
 
-當這些暫存物件中有任何物件夠大而需要在資料存放區中儲存時，以及當物件最終不使用時，資料存放區記錄本身會保留為「垃圾」。 在典型的WCM製作/發佈應用程式中，此型別記憶體的最大來源通常是發佈啟動程式。 當資料被復寫到Publish時，如果是先以稱為「Durbo」的有效資料格式收集並儲存在下的存放庫中，則會 `/var/replication/data`. 資料組合通常大於資料存放區的關鍵大小臨界值，因此最終會儲存為資料存放區記錄。 複製完成後，中的節點 `/var/replication/data` 已刪除，但資料存放區記錄仍維持為「記憶體」。
+當這些暫存物件中有任何物件夠大而需要在資料存放區中儲存時，以及當物件最終不使用時，資料存放區記錄本身會保留為「垃圾」。 在典型的WCM製作/發佈應用程式中，此型別記憶體的最大來源通常是發佈啟動程式。 將資料復寫到Publish時，如果資料是先以稱為「Durbo」的有效資料格式收集到集合中，並儲存在`/var/replication/data`下的存放庫中，就會出現這種情況。 資料組合通常大於資料存放區的關鍵大小臨界值，因此最終會儲存為資料存放區記錄。 復寫完成時，會刪除`/var/replication/data`中的節點，但資料存放區記錄仍為「廢棄專案」。
 
 另一個可復原的記憶體來源是封裝。 封裝資料（就像其他內容一樣）會儲存在存放庫中，因此大於4KB的封裝會儲存在資料存放區中。 在開發專案的過程中，或在維護系統的過程中，可能會多次構建和重建套件，每個組建都會產生新的資料存放區記錄，孤立以前的組建記錄。
 
 ## 資料儲存廢棄專案收集如何運作？ {#how-does-data-store-garbage-collection-work}
 
-如果存放庫已設定外部資料存放區， [資料存放區記憶體回收會自動執行](/help/sites-administering/data-store-garbage-collection.md#automating-data-store-garbage-collection) 每週維護期間內。 系統管理員也可以 [手動執行資料存放區記憶體回收](#running-data-store-garbage-collection) 視需求而定。 一般而言，建議定期執行資料存放區廢棄專案收集，但在規劃資料存放區廢棄專案收集時，應考量下列因素：
+如果存放庫已設定為使用外部資料存放區，[資料存放區記憶體回收將在每週維護期間自動執行](/help/sites-administering/data-store-garbage-collection.md#automating-data-store-garbage-collection)。 系統管理員也可以視需要[手動](#running-data-store-garbage-collection)執行資料存放區記憶體回收。 一般而言，建議定期執行資料存放區廢棄專案收集，但在規劃資料存放區廢棄專案收集時，應考量下列因素：
 
 * 資料存放區記憶體回收需要時間，且可能影響效能，因此應據此規劃。
 * 移除資料存放區記憶體記錄不會影響正常效能，因此這並非效能最佳化。
@@ -61,10 +61,10 @@ AEM使用存放庫作為數個內部和內部管理活動的存放區：
 
 根據AEM執行所在的資料存放區設定，有三種方式可執行資料存放區記憶體回收：
 
-1. Via [修訂清除](/help/sites-deploying/revision-cleanup.md)  — 一種記憶體回收機制，通常用於節點存放區清理。
+1. 透過[修訂清理](/help/sites-deploying/revision-cleanup.md) — 一種通常用於節點存放區清理的記憶體收集機制。
 
-1. Via [資料存放區記憶體回收](/help/sites-administering/data-store-garbage-collection.md#running-data-store-garbage-collection-via-the-operations-dashboard)  — 作業控制面板上提供的外部資料存放區專屬記憶體回收機制。
-1. 透過 [JMX主控台](/help/sites-administering/jmx-console.md).
+1. 透過[資料存放區記憶體回收](/help/sites-administering/data-store-garbage-collection.md#running-data-store-garbage-collection-via-the-operations-dashboard) — 作業儀表板中提供的外部資料存放區專屬記憶體回收機制。
+1. 透過[JMX主控台](/help/sites-administering/jmx-console.md)。
 
 如果TarMK同時作為節點存放區和資料存放區使用，則修訂清除可用於節點存放區和資料存放區的記憶體回收。 不過，如果外部資料存放區已設定（例如檔案系統資料存放區），則資料存放區記憶體回收必須明確觸發，且獨立於修訂清除。 資料存放區記憶體回收可以透過Operations Dashboard或JMX主控台觸發。
 
@@ -102,18 +102,18 @@ AEM使用存放庫作為數個內部和內部管理活動的存放區：
 
 ### 透過操作儀表板執行資料存放區記憶體回收 {#running-data-store-garbage-collection-via-the-operations-dashboard}
 
-內建的每週維護期間，可透過以下網址取得： [操作控制面板](/help/sites-administering/operations-dashboard.md)，包含要在星期日凌晨1:00觸發資料存放區記憶體回收的內建工作。
+內建的每週維護視窗可透過[Operations Dashboard](/help/sites-administering/operations-dashboard.md)使用，其中包含要在星期日凌晨1:00觸發資料存放區垃圾收集的內建工作。
 
 如果您需要在此時間以外執行資料存放區垃圾收集，可以透過操作儀表板手動觸發。
 
 在執行資料存放區記憶體回收之前，您應該檢查當時是否沒有執行任何備份。
 
-1. 開啟操作控制面板的方法有： **導覽** > **工具** > **作業** > **維護**.
-1. 按一下 **每週維護期間**.
+1. 透過&#x200B;**導覽** > **工具** > **操作** > **維護**&#x200B;開啟操作儀表板。
+1. 按一下&#x200B;**每週維護期間**。
 
    ![chlimage_1-64](assets/chlimage_1-64.png)
 
-1. 選取 **資料存放區記憶體回收** 然後按一下 **執行** 圖示。
+1. 選取&#x200B;**資料存放區記憶體回收**&#x200B;工作，然後按一下&#x200B;**執行**&#x200B;圖示。
 
    ![chlimage_1-65](assets/chlimage_1-65.png)
 
@@ -123,11 +123,11 @@ AEM使用存放庫作為數個內部和內部管理活動的存放區：
 
 >[!NOTE]
 >
->只有在您已設定外部檔案資料存放區時，資料存放區廢棄專案收集工作才會顯示。 另請參閱 [在AEM 6中設定節點存放區和資料存放區](/help/sites-deploying/data-store-config.md#file-data-store) 有關如何設定檔案資料存放區的資訊。
+>只有在您已設定外部檔案資料存放區時，資料存放區廢棄專案收集工作才會顯示。 如需如何設定檔案資料存放區的資訊，請參閱[在AEM 6](/help/sites-deploying/data-store-config.md#file-data-store)中設定節點存放區和資料存放區。
 
 ### 透過JMX主控台執行資料存放區記憶體回收 {#running-data-store-garbage-collection-via-the-jmx-console}
 
-本節說明如何透過JMX主控台手動執行資料存放區記憶體回收。 如果您的安裝是在沒有外部資料存放區的情況下設定的，則這不適用於您的安裝。 請改為參閱底下有關如何執行修訂清除的指示 [維護存放庫](/help/sites-deploying/storage-elements-in-aem-6.md#maintaining-the-repository).
+本節說明如何透過JMX主控台手動執行資料存放區記憶體回收。 如果您的安裝是在沒有外部資料存放區的情況下設定的，則這不適用於您的安裝。 請改為參閱[維護存放庫](/help/sites-deploying/storage-elements-in-aem-6.md#maintaining-the-repository)下有關如何執行修訂清除的說明。
 
 >[!NOTE]
 >
@@ -135,16 +135,16 @@ AEM使用存放庫作為數個內部和內部管理活動的存放區：
 
 若要執行記憶體回收：
 
-1. 在Apache Felix OSGi管理主控台中，反白顯示 **主要** 標籤並選取 **JMX** （從下列功能表）。
-1. 接下來，搜尋並按一下 **存放庫管理員** MBean (或前往 `https://<host>:<port>/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3Drepository+manager%2Ctype%3DRepositoryManagement`)。
-1. 按一下 **startDataStoreGC（布林值markOnly）**.
-1. 輸入&quot;`true`的&quot; `markOnly` 引數（若有需要）：
+1. 在Apache Felix OSGi Management Console中，反白顯示&#x200B;**主要**&#x200B;索引標籤，然後從下列功能表中選取&#x200B;**JMX**。
+1. 接著，搜尋並按一下&#x200B;**存放庫管理員** MBean （或移至`https://<host>:<port>/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3Drepository+manager%2Ctype%3DRepositoryManagement`）。
+1. 按一下&#x200B;**startDataStoreGC（布林值markOnly）**。
+1. 如有必要，請為`markOnly`引數輸入&quot;`true`&quot;：
 
    | **選項** | **說明** |
    |---|---|
    | 布林值markOnly | 設定為true以僅標籤參照，而不在標籤和掃描操作中進行掃描。 當基礎BlobStore在多個不同存放庫之間共用時，將使用此模式。 對於所有其他情況，請將其設為false以執行完整的記憶體回收。 |
 
-1. 按一下 **叫用**. CRX會執行記憶體回收並指示其完成時間。
+1. 按一下&#x200B;**叫用**。 CRX會執行記憶體回收，並指出其完成時間。
 
 >[!NOTE]
 >
@@ -152,13 +152,13 @@ AEM使用存放庫作為數個內部和內部管理活動的存放區：
 
 >[!NOTE]
 >
->只有在您已設定外部檔案資料存放區時，資料存放區廢棄專案收集工作才會啟動。 如果尚未設定外部檔案資料存放區，工作將會傳回訊息 `Cannot perform operation: no service of type BlobGCMBean found` 叫用之後。 另請參閱 [在AEM 6中設定節點存放區和資料存放區](/help/sites-deploying/data-store-config.md#file-data-store) 有關如何設定檔案資料存放區的資訊。
+>只有在您已設定外部檔案資料存放區時，資料存放區廢棄專案收集工作才會啟動。 如果尚未設定外部檔案資料存放區，則工作將在叫用後傳回訊息`Cannot perform operation: no service of type BlobGCMBean found`。 如需如何設定檔案資料存放區的資訊，請參閱[在AEM 6](/help/sites-deploying/data-store-config.md#file-data-store)中設定節點存放區和資料存放區。
 
 ## 自動化資料存放區廢棄專案收集 {#automating-data-store-garbage-collection}
 
 如果可能的話，資料存放區垃圾收集應在系統負載很少時執行，例如，在早上。
 
-內建的每週維護期間，可透過以下網址取得： [操作控制面板](/help/sites-administering/operations-dashboard.md)，包含要在星期日凌晨1:00觸發資料存放區記憶體回收的內建工作。 您也應該檢查目前沒有執行任何備份。 必要時，可透過控制面板自訂維護時段的開始。
+內建的每週維護視窗可透過[Operations Dashboard](/help/sites-administering/operations-dashboard.md)使用，其中包含要在星期日凌晨1:00觸發資料存放區垃圾收集的內建工作。 您也應該檢查目前沒有執行任何備份。 必要時，可透過控制面板自訂維護時段的開始。
 
 >[!NOTE]
 >
@@ -168,7 +168,7 @@ AEM使用存放庫作為數個內部和內部管理活動的存放區：
 
 >[!CAUTION]
 >
->在以下範例中 `curl` 命令您可能需要為您的執行個體設定各種引數；例如，主機名稱( `localhost`)，連線埠( `4502`)，管理員密碼( `xyz`)和實際資料存放區垃圾收集的各種引數。
+>在下列範例中，`curl`命令可能需要為您的執行個體設定各種引數；例如，主機名稱( `localhost`)、連線埠( `4502`)、管理員密碼( `xyz`)以及實際資料存放區垃圾收集的各種引數。
 
 以下是透過命令列叫用資料存放區記憶體回收的curl命令範例：
 
@@ -182,11 +182,11 @@ curl命令會立即傳回。
 
 資料存放區一致性檢查會報告任何遺失但仍被參考的資料存放區二進位檔。 若要開始一致性檢查，請遵循下列步驟：
 
-1. 前往JMX主控台。 如需有關如何使用JMX主控台的資訊，請參閱 [本文](/help/sites-administering/jmx-console.md#using-the-jmx-console).
-1. 搜尋 **BlobGarbageCollection** Mbean，然後按一下它。
-1. 按一下 `checkConsistency()` 連結。
+1. 前往JMX主控台。 如需有關如何使用JMX主控台的資訊，請參閱[本文章](/help/sites-administering/jmx-console.md#using-the-jmx-console)。
+1. 搜尋&#x200B;**BlobGarbageCollection** Mbean並按一下它。
+1. 按一下`checkConsistency()`連結。
 
-一致性檢查完成後，訊息會顯示回報為遺失的二進位檔數目。 如果數字大於0，請檢查 `error.log` 以取得遺失二進位檔的詳細資料。
+一致性檢查完成後，訊息會顯示回報為遺失的二進位檔數目。 如果數字大於0，請檢查`error.log`以取得有關遺失二進位檔的詳細資料。
 
 在底下，您會找到如何在記錄中報告遺失的二進位檔範例：
 

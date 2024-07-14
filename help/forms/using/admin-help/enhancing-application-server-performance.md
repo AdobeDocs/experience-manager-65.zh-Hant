@@ -24,7 +24,7 @@ ht-degree: 0%
 
 AEM forms使用AEM forms存放庫作為其資料來源。 AEM表單存放庫會儲存應用程式資產，並且在執行階段，服務可以從存放庫擷取資產，作為完成自動化業務流程的一部分。
 
-存取資料來源相當重要，視您執行的AEM表單模組數目以及同時存取應用程式的使用者數目而定。 可使用連線集區來最佳化資料來源存取。 *連線集區* 這是一種技術，用來避免每次應用程式或伺服器物件需要存取資料庫時，建立新資料庫連線的額外負荷。 連線集區通常用於Web式應用程式和企業應用程式，通常由應用程式伺服器處理，但不限於應用程式伺服器。
+存取資料來源相當重要，視您執行的AEM表單模組數目以及同時存取應用程式的使用者數目而定。 可使用連線集區來最佳化資料來源存取。 *連線集區*&#x200B;是一種技術，用來避免每次應用程式或伺服器物件需要存取資料庫時，建立新資料庫連線的額外負荷。 連線集區通常用於Web式應用程式和企業應用程式，通常由應用程式伺服器處理，但不限於應用程式伺服器。
 
 請務必正確設定連線集區引數，以免連線用盡，進而導致應用程式效能降低。
 
@@ -140,7 +140,7 @@ JVM棧積大小上限增加= （內嵌檔案大小） x （處理的平均檔案
 
 JVM棧積大小上限必須增加50 MB，總計為562 MB。
 
-**考慮棧積片段**
+**正在考量棧積片段**
 
 將內嵌檔案的大小設定為較大的值，會增加OutOfMemoryError在容易產生棧積片段的系統上的風險。 若要內嵌儲存檔案，JVM棧積記憶體必須有足夠的連續空間。 某些作業系統、JVM和記憶體回收演演算法容易產生棧積片段。 片段化會減少連續棧集空間的數量，即使存在足夠的可用空間總計，也會導致OutOfMemoryError。
 
@@ -154,16 +154,16 @@ JVM棧積大小上限必須增加50 MB，總計為562 MB。
 
 ### 增加配置給JVM的最大記憶體 {#increasing-the-maximum-memory-allocated-to-the-jvm}
 
-如果您正在執行Configuration Manager，或嘗試使用命令列公用程式產生Enterprise JavaBeans (EJB)建置程式碼 *ejbdeploy* 且發生OutOfMemory錯誤，請增加配置給JVM的記憶體數量。
+如果您執行Configuration Manager或嘗試使用命令列公用程式&#x200B;*ejbdeploy*&#x200B;產生Enterprise JavaBeans (EJB)部署程式碼，但發生OutOfMemory錯誤，請增加配置給JVM的記憶體數量。
 
-1. 在中編輯ejbdeploy指令碼 *[appserver根目錄]*/deploytool/itp/目錄：
+1. 編輯&#x200B;*[appserver root]*/deploytool/itp/目錄中的ejbdeploy指令碼：
 
    * (Windows) `ejbdeploy.bat`
    * （Linux和UNIX） `ejbdeploy.sh`
 
-1. 尋找 `-Xmx256M` 引數並將其變更為較高的值，例如 `-Xmx1024M`.
+1. 尋找`-Xmx256M`引數並將其變更為較高的值，例如`-Xmx1024M`。
 1. 儲存檔案。
-1. 執行 `ejbdeploy` 命令或使用Configuration Manager重新部署。
+1. 執行`ejbdeploy`命令或使用Configuration Manager重新部署。
 
 ## 透過LDAP改善Windows Server 2003效能 {#improving-windows-server-2003-performance-with-ldap}
 
@@ -173,20 +173,20 @@ JVM棧積大小上限必須增加50 MB，總計為562 MB。
 
 ### 設定Windows Server的連線集區 {#configure-your-windows-server-for-connection-pooling}
 
-1. 按一下[開始] > [執行]以啟動登入編輯程式，並在[開啟]方塊中輸入 `regedit` 並按一下「確定」。
-1. 移至登入機碼 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters`
+1. 按一下[開始] > [執行]以啟動登入編輯程式，並在[開啟]方塊中輸入`regedit`並按一下[確定]。
+1. 移至登入機碼`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters`
 1. 在登入編輯器的右窗格中，找到TcpTimedWaitDelay值名稱。 如果名稱未出現，請從選單列中選取「編輯」>「新增」>「DWORD值」以新增名稱。
-1. 在「名稱」方塊中，輸入 `TcpTimedWaitDelay`
+1. 在[名稱]方塊中，輸入`TcpTimedWaitDelay`
 
    >[!NOTE]
    >
-   >如果您沒有看到閃爍的游標，而且 `New Value #` 在方塊內，在右側面板內按一下滑鼠右鍵，選取「重新命名」，然後在「名稱」方塊中輸入 `TcpTimedWaitDelay`*.*
+   >如果您在方塊內沒有看到閃爍的游標和`New Value #`，請在右側面板內按一下滑鼠右鍵，選取[重新命名]，然後在[名稱]方塊中輸入&#x200B;`TcpTimedWaitDelay`*。*
 
 1. 對值名稱MaxUserPort、MaxHashTableSize和MaxFreeTcbs重複步驟4。
-1. 在右窗格內連按兩下以設定TcpTimedWaitDelay值。 在「基礎」下，選取「小數」，然後在「值」方塊中鍵入 `30`.
-1. 在右窗格內連按兩下以設定MaxUserPort值。 在「基礎」下，選取「小數」，然後在「值」方塊中鍵入 `65534`.
-1. 在右窗格內連按兩下以設定MaxHashTableSize值。 在「基礎」下，選取「小數」，然後在「值」方塊中鍵入 `65536`.
-1. 在右窗格內連按兩下以設定MaxFreeTcbs值。 在「基礎」下，選取「小數」，然後在「值」方塊中鍵入 `16000`.
+1. 在右窗格內連按兩下以設定TcpTimedWaitDelay值。 在「基底」下，選取「小數」，然後在「值」方塊中輸入`30`。
+1. 在右窗格內連按兩下以設定MaxUserPort值。 在「基底」下，選取「小數」，然後在「值」方塊中輸入`65534`。
+1. 在右窗格內連按兩下以設定MaxHashTableSize值。 在「基底」下，選取「小數」，然後在「值」方塊中輸入`65536`。
+1. 在右窗格內連按兩下以設定MaxFreeTcbs值。 在「基底」下，選取「小數」，然後在「值」方塊中輸入`16000`。
 
 >[!NOTE]
 >

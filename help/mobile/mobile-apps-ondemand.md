@@ -24,28 +24,28 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->如果您沒有使用Adobe Experience Manager (AEM)作為內容管理來源，請參閱 [AEM Mobile On-demand Services說明](https://helpx.adobe.com/digital-publishing-solution/topics.html).
+>如果您未使用Adobe Experience Manager (AEM)作為內容管理來源，請參閱[AEM Mobile On-demand Services說明](https://helpx.adobe.com/digital-publishing-solution/topics.html)。
 
 >[!NOTE]
 >
 >**先決條件：**
 >
->在使用AEM Mobile On-demand Services並按照本快速入門手冊中的步驟操作之前，使用者應該熟悉 [AEM](/help/sites-deploying/deploy.md).
+>在使用AEM Mobile On-demand Services並按照本快速入門手冊中的步驟操作之前，使用者應該熟悉[AEM](/help/sites-deploying/deploy.md)。
 
 ## AEM Mobile Author {#aem-mobile-author}
 
-一個 ***AEM作者* (或 *行銷人員*)**使用自訂開發或現成可用的範本和元件來新增和編輯頁面、拖放元件，並從DAM新增所有型別的媒體，包括影像、影片和文字片段（內容片段）。 然後，會使用AEM內建的內容編輯器， *AEM作者* 在應用程式中建立豐富的相關體驗，包括與Adobe Experience Cloud其他部分的整合。
+***AEM作者* （或&#x200B;*行銷人員*）**使用自訂開發或現成可用的範本和元件來新增及編輯頁面、拖放元件，以及從DAM新增所有型別的媒體，包括影像、影片和文字片段（內容片段）。 然後&#x200B;*AEM作者*會使用AEM的內建內容編輯器在應用程式中建立豐富的相關體驗，包括與Adobe Experience Cloud其他部分的整合。
 
 使用AEM Mobile On-demand Services建立應用程式時，AEM作者會負責下列工作。
 
-**為AEM Mobile On-demand Services應用程式編寫AEM內容** 涉及下列動作：
+**為AEM Mobile On-demand Services應用程式編寫AEM內容**&#x200B;涉及下列動作：
 
 * [AEM Mobile應用程式控制面板](/help/mobile/mobile-apps-ondemand-application-dashboard.md)
 * [應用程式建立和設定動作](/help/mobile/mobile-apps-ondemand-application-create-configure-action.md)
 * [雲端設定](/help/mobile/mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md)
 * [管理內容](/help/mobile/mobile-apps-ondemand-manage-content-ondemand.md)
 
-若要瞭解 **內容服務**，請參閱 [Content Service概述](/help/mobile/develop-content-as-a-service.md) 以開始使用。
+若要瞭解&#x200B;**Content Services**，請參閱[Content Services概述](/help/mobile/develop-content-as-a-service.md)以開始使用。
 
 >[!NOTE]
 >

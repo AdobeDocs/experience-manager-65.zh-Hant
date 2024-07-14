@@ -26,19 +26,19 @@ ht-degree: 1%
 >
 >**先決條件**：
 >
->在瞭解如何建立和修改共用資源之前，請參閱 [內容同步](/help/mobile/mobile-ondemand-contentsync.md) 以瞭解基本概念。
+>在瞭解如何建立和修改共用資源之前，請參閱[Content Sync](/help/mobile/mobile-ondemand-contentsync.md)瞭解基本概念。
 
 AEM Mobile使用者會使用Content Sync將即時內容匯出至靜態內容，以供行動應用程式使用，此匯出作業會在內容從AEM Mobile上傳至Mobile On-Demand Services時發生。
 
-屬性 ***dps-exportTemplate*** 如上表所述，會定義應用程式匯出設定的路徑。 設定此屬性以建立和修改共用資源。
+上表提及的屬性&#x200B;***dps-exportTemplate***&#x200B;定義應用程式匯出設定的路徑。 設定此屬性以建立和修改共用資源。
 
 下列資源說明如何從Adobe Experience Manager (AEM)匯出內容以上傳至AEM Mobile。
 
 文章包含需要匯出和上傳的內容。 部分內容可在文章之間共用。
 
-使用 [ContentSync](/help/mobile/mobile-ondemand-contentsync.md) 將內容收集在一起並建立 ***共用資源*** 封裝。
+使用[ContentSync](/help/mobile/mobile-ondemand-contentsync.md)將內容收集在一起，並建立&#x200B;***共用資源***&#x200B;套件。
 
-ContentSync設定位於 **&lt;dps-exporttemplate>/dps-article>** 應設定為匯出裝置上屬性靜態呈現所需的所有內容和文章。
+在&#x200B;**&lt;dps-exportTemplate>/dps-article>**&#x200B;找到的ContentSync設定應設定為匯出內容與裝置上靜態呈現內容所需的文章。
 
 >[!CAUTION]
 >
@@ -52,7 +52,7 @@ ContentSync設定位於 **&lt;dps-exporttemplate>/dps-article>** 應設定為匯
 若要檢視範例共用資源，請參閱下列步驟：
 
 1. 在您的AEM伺服器上開啟CRXDE Lite。
-1. 瀏覽至此路徑 [/etc/contentsync/templates/dps-we-unlimited-app/dps-article](http://localhost:4502/crx/de/index.jsp#/etc/contentsync/templates/dps-we-unlimited-app/dps-article)，以檢視範例共用資源。
+1. 瀏覽至此路徑[/etc/contentsync/templates/dps-we-unlimited-app/dps-article](http://localhost:4502/crx/de/index.jsp#/etc/contentsync/templates/dps-we-unlimited-app/dps-article)，以檢視範例共用資源。
 
    您可以檢視建立共用資源所需的所有屬性，如下圖所示：
 

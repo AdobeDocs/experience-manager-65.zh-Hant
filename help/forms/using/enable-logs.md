@@ -25,32 +25,32 @@ ht-degree: 4%
 
 執行以下步驟來設定伺服器端記錄檔：
 
-1. 前往 `https://'[server]:[port]'/system/console/configMgr`. 找到並開啟 *Apace Sling記錄記錄器設定* 選項。 對話方塊隨即顯示：
+1. 移至`https://'[server]:[port]'/system/console/configMgr`。 找到並開啟&#x200B;*Apace Sling記錄記錄器組態*&#x200B;選項。 對話方塊隨即顯示：
 
    ![ Apace Sling記錄記錄器組態選項對話方塊](assets/logconfig.png)
 
    Apace Sling記錄記錄器設定選項
 
-1. 變更 **記錄層級** 至 **偵錯**.
+1. 將&#x200B;**記錄層級**&#x200B;變更為&#x200B;**偵錯**。
 
-1. 指定下列專案的名稱和路徑： **記錄檔**.
+1. 指定&#x200B;**記錄檔**&#x200B;的名稱和路徑。
 
    >[!NOTE]
    >
    >若要在HTML5表單記錄目錄中產生記錄，請在檔案名稱前新增……/logs/ 。
 
-1. 變更 **Logger** 至 **HTMLFormsPerfLogger**. 按一下「**儲存**」。
+1. 將&#x200B;**記錄器**&#x200B;變更為&#x200B;**HTMLFormsPerfLogger**。 按一下「**儲存**」。
 
 ## 設定使用者端記錄 {#configuring-client-logging}
 
 您可以使用下列方法在HTML5表單中啟用使用者端記錄：
 
-* 使用名為的請求引數 `log`
+* 使用名為`log`的請求引數
 * 使用CQ設定管理員
 
 ### 使用請求引數啟用記錄 {#enabling-logging-using-request-parameter}
 
-使用此方法，您可以產生特定請求的記錄。 請求引數的名稱為 `log`. 記錄URL如下：
+使用此方法，您可以產生特定請求的記錄。 要求引數的名稱為`log`。 記錄URL如下：
 
 `https://<server>:<port>/content/xfaforms/profiles/test.html?contentRoot=<path of the folder containing form xdp>&template=<name of the xdp>&log=<log configuration>.`
 
@@ -66,11 +66,11 @@ ht-degree: 4%
   </tr>
   <tr>
    <td>1</td>
-   <td>記錄檔會導向至瀏覽器 <strong>主控台</strong></td>
+   <td>記錄檔已導向瀏覽器<strong>主控台</strong></td>
   </tr>
   <tr>
    <td>2</td>
-   <td>記錄檔收集於使用者端的JavaScript物件中，並可張貼至 <strong>伺服器</strong> </td>
+   <td>記錄檔收集於使用者端的JavaScript物件中，可張貼至<strong>伺服器</strong> </td>
   </tr>
   <tr>
    <td>3</td>
@@ -136,7 +136,7 @@ ht-degree: 4%
   </tr>
   <tr>
    <td>b</td>
-   <td>xfaView （版面引擎相關記錄）<br type="_moz" /> </td>
+   <td>xfaView （佈局引擎相關記錄）<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>c</td>
@@ -177,9 +177,9 @@ ht-degree: 4%
 
 如果您使用Configuration Manager來啟用記錄，則會為每個轉譯器請求產生記錄，直到再次停用記錄為止。
 
-1. 請在登入CQ Configuration Manager `https://'[server]:[port]'/system/console/configMgr` 並使用管理員憑證登入。
-1. 搜尋並按一下 **行動Forms設定**.
-1. 在「除錯選項」文字方塊中，依照上一節所述輸入記錄組態，例如： **2-a4-b5-c6**
+1. 在`https://'[server]:[port]'/system/console/configMgr`登入CQ Configuration Manager並使用管理員認證登入。
+1. 搜尋並按一下&#x200B;**行動Forms設定**。
+1. 在[偵錯選項]文字方塊中，依照上一節所述輸入記錄組態，例如，**2-a4-b5-c6**
 
    ![Forms設定](assets/forms_configuration.png)
 
@@ -187,23 +187,23 @@ ht-degree: 4%
 
 ## 正在上傳記錄檔 {#uploading-logs}
 
-如果目的地設為1，所有使用者端指令碼記錄訊息都會導向至主控台。 如果管理員需要這些記錄以及伺服器記錄，請將目的地層級設定為2。 在此層級，所有記錄都會收集到使用者端的JS物件中，如果表單是以預設設定檔呈現，則 **傳送記錄檔** 按鈕出現在的左側 **反白顯示現有欄位** 工具列中的按鈕。 當使用者按一下連結時，所有收集的記錄都會發佈到伺服器，並記錄到伺服器上設定的錯誤記錄檔中。
+如果目的地設為1，所有使用者端指令碼記錄訊息都會導向至主控台。 如果管理員需要這些記錄以及伺服器記錄，請將目的地層級設定為2。 在此層級，所有記錄會收集到使用者端的JS物件中，如果使用預設設定檔呈現表單，則工具列中的「**醒目提示現有欄位**」按鈕左側會顯示「**傳送記錄檔**」按鈕。 當使用者按一下連結時，所有收集的記錄都會發佈到伺服器，並記錄到伺服器上設定的錯誤記錄檔中。
 
 依預設，所有資訊都會新增至/crx-repository/logs/目錄的error.log檔案中。
 
 變更記錄檔的位置和名稱：
 
-1. 以管理員身分登入Configuration Manager。 Configuration Manager的預設URL為 `https://'[server]:[port]'/system/console/configMgr`.
-1. 按一下 **Apache Sling記錄記錄器設定**. 對話方塊隨即顯示。
+1. 以管理員身分登入Configuration Manager。 Configuration Manager的預設URL為`https://'[server]:[port]'/system/console/configMgr`。
+1. 按一下&#x200B;**Apache Sling記錄記錄器組態**。 對話方塊隨即顯示。
 
    ![logconfig-1](assets/logconfig-1.png)
 
-1. 變更 **記錄層級** 進行偵錯。
+1. 將&#x200B;**記錄層級**&#x200B;變更為Debug。
 
-1. 指定路徑和名稱 **記錄檔**.
+1. 指定&#x200B;**記錄檔**&#x200B;的路徑和名稱。
 
    >[!NOTE]
    >
-   >若要在保留其他記錄檔的同一目錄中建立記錄，請指定……/logs/&lt;filename> 在「記錄檔」屬性中。
+   >若要在保留其他記錄檔的同一個目錄中建立記錄檔，請在「記錄檔」屬性中指定……/logs/&lt;filename>。
 
-1. 變更 **Logger** 至 **HTMLFormsPerfLogger** 並按一下 **儲存**.
+1. 將&#x200B;**記錄器**&#x200B;變更為&#x200B;**HTMLFormsPerfLogger**，然後按一下&#x200B;**儲存**。

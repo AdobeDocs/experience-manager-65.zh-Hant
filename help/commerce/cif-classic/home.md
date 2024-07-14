@@ -21,8 +21,8 @@ ht-degree: 5%
 >
 >CIF Classic處於維護模式。
 >
->* 新專案應使用 [AEM CIF](/help/commerce/cif/introduction.md).
->* 現有的CIF Classic應該 [移轉至AEM CIF](/help/commerce/cif/migration.md).
+>* 新專案應使用[AEM CIF](/help/commerce/cif/introduction.md)。
+>* 現有的CIF Classic應[移轉至AEM CIF](/help/commerce/cif/migration.md)。
 
 ## CIF Classic重要文章 {#key-articles}
 

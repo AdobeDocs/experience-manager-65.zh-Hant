@@ -16,13 +16,13 @@ ht-degree: 58%
 
 >[!NOTE]
 >
->套用這些最佳化建議之前，請考慮 [在GraphQL篩選中更新要分頁和排序的內容片段](/help/sites-developing/headless/graphql-api/graphql-optimized-filtering-content-update.md) 獲得最佳效能。
+>在套用這些最佳化建議之前，請考慮[在GraphQL篩選中更新您的內容片段以進行分頁和排序](/help/sites-developing/headless/graphql-api/graphql-optimized-filtering-content-update.md)以獲得最佳效能。
 
 提供這些准則是為了協助防止您的GraphQL查詢出現效能問題。
 
 ## GraphQL檢查清單 {#graphql-checklist}
 
-下列檢查清單旨在協助您在Adobe Experience Manager (AEM)as a Cloud Service中最佳化GraphQL的設定和使用。
+以下檢查清單旨在協助您在Adobe Experience Manager (AEM)as a Cloud Service中最佳化GraphQL的設定和使用。
 
 ### 首要原則 {#first-principles}
 
@@ -34,26 +34,26 @@ ht-degree: 58%
 
 持續的GraphQL查詢利用內容傳遞網路(CDN)來協助降低查詢執行效能。 使用者端應用程式要求持續查詢，而GET要求快速啟用邊緣的執行。
 
-**進一步參考資料**
+**其他參考**
 
 請參閱：
 
-* [持續的GraphQL查詢](/help/sites-developing/headless/graphql-api/persisted-queries.md).
+* [持續的GraphQL查詢](/help/sites-developing/headless/graphql-api/persisted-queries.md)。
 * [了解搭配使用 GraphQL 與 AEM - 範例內容和查詢](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md)
 
 #### 安裝GraphQL索引套件 {#install-graphql-index-package}
 
 **建議**
 
-使用GraphQL的客戶 *必須* 使用GraphQL索引封裝安裝Experience Manager內容片段。 如此一來，您就可以根據使用者實際使用的功能，新增必要的索引定義。 無法安裝此套件可能會導致GraphQL查詢變慢或失敗。
+使用GraphQL *的客戶必須*&#x200B;安裝包含GraphQL索引封裝的Experience Manager內容片段。 如此一來，您就可以根據使用者實際使用的功能，新增必要的索引定義。 無法安裝此套件可能會導致GraphQL查詢變慢或失敗。
 
-如需瞭解適合您Service Pack的版本，請參閱發行說明。 例如，如需最新的Service Pack，請參閱 [安裝Experience Manager內容片段的GraphQL索引套件](/help/release-notes/release-notes.md#install-aem-graphql-index-add-on-package) .
+如需瞭解適合您Service Pack的版本，請參閱發行說明。 例如，如需最新的Service Pack，請參閱[為Experience Manager內容片段安裝GraphQL索引套件](/help/release-notes/release-notes.md#install-aem-graphql-index-add-on-package) 。
 
 >[!NOTE]
 >
 >每個執行個體僅安裝此套件一次；不需要隨每個Service Pack重新安裝。
 
-**進一步參考資料**
+**其他參考**
 請參閱：
 
 * [安裝Experience Manager內容片段的GraphQL索引套件](/help/release-notes/release-notes.md#install-aem-graphql-index-add-on-package)
@@ -62,13 +62,13 @@ ht-degree: 58%
 
 您也可以使用各種快取方法來最佳化。
 
-#### 啟用AEM Dispatcher快 {#enable-aem-dispatcher-caching}
+#### 啟用AEM Dispatcher快取 {#enable-aem-dispatcher-caching}
 
 **建議**
 
-[AEM傳送器](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) 是AEM服務中的第一層快取，在CDN快取之前。
+[AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)是AEM服務中的第一層快取，在CDN快取之前。
 
-**進一步參考資料**
+**其他參考**
 
 請參閱：
 
@@ -78,9 +78,9 @@ ht-degree: 58%
 
 **建議**
 
-如果定位為，則可快取GraphQL查詢及其JSON回應 `GET` 使用CDN時的請求。 相反地，未快取的請求可能非常（資源）昂貴且處理緩慢，可能對來源的資源造成進一步的負面影響。
+使用CDN時，如果目標為`GET`請求，則可快取GraphQL查詢及其JSON回應。 相反地，未快取的請求可能非常（資源）昂貴且處理緩慢，可能對來源的資源造成進一步的負面影響。
 
-**進一步參考資料**
+**其他參考**
 
 請參閱：
 
@@ -92,9 +92,9 @@ ht-degree: 58%
 
 搭配CDN使用持續的GraphQL查詢時，建議設定適當的HTTP快取控制標頭。
 
-每個持續性查詢可以有自己一組特定的快取控制標頭。 標題可設定在 [GRAPHQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md).
+每個持續性查詢可以有自己一組特定的快取控制標頭。 標頭可透過[GraphQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md)設定。
 
-您也可以使用設定 **cURL** 命令列工具。 例如，使用 `PUT` 要求使用快取控制項建立包裝的簡單查詢。
+也可以使用&#x200B;**cURL**&#x200B;命令列工具來設定它們。 例如，使用`PUT`要求建立含快取控制項的包裝簡單查詢。
 
 ```shell
 $ curl -X PUT \
@@ -108,7 +108,7 @@ $ curl -X PUT \
 <!-- or the [AEM GraphiQL IDE](/help/sites-developing/headless/graphql-api/graphiql-ide.md#managing-cache). 
 -->
 
-**進一步參考資料**
+**其他參考**
 
 請參閱：
 
@@ -147,7 +147,7 @@ AEM 提供兩種方式進行 GraphQL 查詢最佳化：
 
    * [排序](#use-graphql-sorting)與最佳化沒有直接關係，而是與分頁有關
 
-每種方法都有自己的使用案例和局限性。本節提供混合式篩選和分頁的相關資訊，以及部分 [最佳實務](#best-practices) 以便用於最佳化GraphQL查詢。
+每種方法都有自己的使用案例和局限性。本節提供混合篩選和分頁的資訊，以及用來最佳化GraphQL查詢的一些[最佳實務](#best-practices)。
 
 #### 使用AEM GraphQL混合篩選 {#use-aem-graphql-hybrid-filtering}
 
@@ -167,7 +167,7 @@ AEM 提供兩種方式進行 GraphQL 查詢最佳化：
 >
 >AEM混合篩選需要更新現有的內容片段
 
-**進一步參考資料**
+**其他參考**
 
 請參閱：
 
@@ -182,8 +182,8 @@ AEM 提供兩種方式進行 GraphQL 查詢最佳化：
 
 AEM中的GraphQL支援兩種分頁型別：
 
-* [限制/以偏移量為基礎的分頁](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#list-offset-limit)
-這用於清單查詢；這些結尾為 `List`；例如， `articleList`.
+* [限制/位移型分頁](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#list-offset-limit)
+這用於清單查詢；這些查詢以`List`結尾；例如，`articleList`。
 若要使用，您必須提供第一個要返回項目的位置 (`offset`) 和要返回的項目數 (`limit`，或頁面大小)。
 
 * [游標式分頁](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#paginated-first-after) (以 `first` 和 `after` 表示)
@@ -198,7 +198,7 @@ AEM中的GraphQL支援兩種分頁型別：
   >
   >不支援向後分頁 (使用 `before`/`last` 參數)。
 
-**進一步參考資料**
+**其他參考**
 
 請參閱：
 
@@ -218,7 +218,7 @@ AEM中的GraphQL支援兩種分頁型別：
 >
 >對頂層欄位進行排序也會對效能產生 (儘管很小) 影響。
 
-**進一步參考資料**
+**其他參考**
 
 請參閱：
 
@@ -327,7 +327,7 @@ AEM中的GraphQL支援兩種分頁型別：
 
 ### 不要輸出所有格式（多行文字元素） {#do-not-output-all-formats}
 
-AEM GraphQL可傳回文字，其製作方式為 **[多行文字](/help/assets/content-fragments/content-fragments-models.md#data-types)** 資料型別，有多種格式： RTF、簡單文字和Markdown。
+AEM GraphQL可以傳回以&#x200B;**[多行文字](/help/assets/content-fragments/content-fragments-models.md#data-types)**&#x200B;資料型別撰寫的文字，其格式有多種： Rich Text、Simple Text和Markdown。
 
 輸出全部三種格式會將JSON中文字輸出的大小增加3倍。 再加上來自非常廣泛查詢的通常大型結果集，可能會產生非常大的JSON回應，因此需要很長時間才能計算。 最好將輸出限製為呈現內容所需的文字格式。
 

@@ -32,7 +32,7 @@ ht-degree: 0%
 
 1. [將元件新增至DOM](#dynamically-add-component-to-dom)
 
-1. [側載元件](#sideload-by-invoking-scf) 使用下列兩種方法之一：
+1. [使用下列兩種方法之一側載元件](#sideload-by-invoking-scf)：
 
 * [動態包含](#dynamic-inclusion)
    * 啟動所有動態新增的元件
@@ -41,7 +41,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->側載 [非現有資源](scf.md#add-or-include-a-communities-component) 不受支援。
+>不支援[非現有資源](scf.md#add-or-include-a-communities-component)的旁載作業。
 
 ## 動態新增元件至DOM {#dynamically-add-component-to-dom}
 
@@ -51,7 +51,7 @@ ht-degree: 0%
 
 無論使用何種標籤，元素至少都必須包含這兩個屬性，以符合一般的SCF根元素模式：
 
-* **data-component-id**
+* **資料元件識別碼**
 
   新增元件的有效路徑。
 
@@ -84,8 +84,8 @@ ht-degree: 0%
 
 動態載入可讓您控制載入SCF元件。
 
-您可以使用此JavaScript方法指定特定SCF元件來載入，而不需啟動載入在DOM中找到的所有SCF元件：
+您可以使用此JavaScript方法指定要載入的特定SCF元件，而不需啟動載入在DOM中找到的所有SCF元件：
 
 `SCF.addComponent(document.getElementById(*someId*));`
 
-位置 `someId` 是 `data-component-id` 屬性。
+其中`someId`是`data-component-id`屬性的值。

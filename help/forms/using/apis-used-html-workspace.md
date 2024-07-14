@@ -1,6 +1,6 @@
 ---
 title: 用於AEM Forms工作區的API
-description: 公用Java&Trade；和JavaScript API以及LiveCycleAEM Forms工作區的方法，公開用於自訂和自動化。
+description: 公開Java&amp；貿易；和JavaScript API以及LiveCycleAEM Forms工作區的方法，以供自訂和自動化使用。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
@@ -235,7 +235,7 @@ ht-degree: 1%
    <td>getAllQueues<br /> </td>
    <td>ProcessManagementQueueService<br /> </td>
    <td>getAllQueues<br /> </td>
-   <td>它可取得登入使用者可存取的所有佇列（擁有、共用和群組佇列）。<br /> </td>
+   <td>它取得登入使用者可存取的所有佇列（擁有、共用及群組佇列）。<br /> </td>
   </tr>
   <tr>
    <td>getOutOfOfficeSettings</td>
@@ -265,7 +265,7 @@ ht-degree: 1%
    <td>getProcessInstance<br /> </td>
    <td>ProcessManagementProcessService<br /> </td>
    <td>getProcessInstance<br /> </td>
-   <td>它會擷取程式執行個體的詳細資訊。<br /> </td>
+   <td>它會擷取處理序執行個體的詳細資料。<br /> </td>
   </tr>
   <tr>
    <td>getProcessInstances</td>
@@ -367,7 +367,7 @@ ht-degree: 1%
    <td>setproperty</td>
    <td>WorkspacePropertyService</td>
    <td>setproperty</td>
-   <td>它會設定使用者的Workspace屬性。</td>
+   <td>它會為使用者設定Workspace屬性。</td>
   </tr>
   <tr>
    <td>getCurrentUserImageUrl</td>
@@ -388,7 +388,7 @@ ht-degree: 1%
    <td>它會為一項任務在伺服器上傳附註。</td>
   </tr>
   <tr>
-   <td>uploadRMAToServer （也可以直接從html範本呼叫）<br /> </td>
+   <td>uploadRMAToServer （也直接從html範本呼叫）<br /> </td>
    <td>ProcessManagementDocumentHandlingService</td>
    <td>uploadAttachment</td>
    <td>它會為一項任務上傳伺服器上的附件。</td>

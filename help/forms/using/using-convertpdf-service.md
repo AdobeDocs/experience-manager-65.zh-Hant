@@ -23,12 +23,12 @@ ht-degree: 0%
 
 您可以使用轉換PDF服務來達到下列目的：
 
-* 將PDF檔案轉換為PostScript。 轉換為PostScript時，您可以使用轉換作業來指定來原始檔，以及是否要轉換成PostScript第2級或第3級。 您轉換成PostScript檔案的PDF檔案必須是非互動式的。
+* 將PDF檔案轉換為PostScript。 轉換為PostScript時，您可以使用轉換作業來指定來原始檔，以及是否要轉換為PostScript第2級或第3級。 您轉換成PostScript檔案的PDF檔案必須是非互動式的。
 * 將PDF檔案轉換為JPEG、JPEG2000、PNG和TIFF影像格式。 當轉換為任何這些影像格式時，您可以使用轉換作業來指定來原始檔和影像選項規格。 規格包含各種偏好設定，例如影像轉換格式、影像解析度和色彩轉換。
 
 ## 設定服務的屬性   {#properties}
 
-您可以使用 **AEMFD ConvertPDF服務** 在AEM Console中設定此服務的屬性。 AEM主控台的預設URL為 `https://[host]:'port'/system/console/configMgr`.
+您可以在AEM主控台中使用&#x200B;**AEMFD ConvertPDF服務**&#x200B;來設定此服務的屬性。 AEM主控台的預設URL為`https://[host]:'port'/system/console/configMgr`。
 
 ## 使用服務 {#using-the-service}
 
@@ -133,7 +133,9 @@ String documentPath = "/content/dam/formsanddocuments/ExpenseClaimFlat.pdf";
 
 從工作流程執行ConvertPDF服務類似於從JSP/Servlet執行。
 
-唯一的差別是從JSP/Servlet執行服務，檔案物件會自動從ResourceResolverHelper物件擷取ResourceResolver物件的執行個體。 從工作流程呼叫程式碼時，此自動機制無法運作。 對於工作流程，請將ResourceResolver物件的執行個體明確傳遞給Document類別建構函式。 接著，Document物件會使用提供的ResourceResolver物件來讀取存放庫中的內容。
+唯一的差別是從JSP/Servlet執行服務，檔案物件會自動從ResourceResolverHelper物件擷取ResourceResolver物件的執行個體。 此自動機制
+從工作流程呼叫程式碼時無法運作。 對於工作流程，請將ResourceResolver物件的執行個體明確傳遞給Document類別建構函式。 接著，Document物件會使用
+已提供ResourceResolver物件來讀取存放庫中的內容。
 
 下列範例工作流程程式會將輸入檔案轉換為PostScript檔案。 程式碼會以ECMAScript撰寫，而檔案會以工作流程裝載的方式傳遞：
 

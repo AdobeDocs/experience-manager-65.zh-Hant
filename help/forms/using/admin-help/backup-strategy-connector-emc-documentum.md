@@ -1,6 +1,6 @@
 ---
-title: EMC Documentum&reg；使用者的聯結器備份策略
-description: 瞭解如何為EMC Documentum&reg；使用者建立聯結器備份策略。
+title: EMC Documentum&amp；reg；使用者的聯結器備份策略
+description: 瞭解如何為EMC Documentum&amp；reg；使用者建立聯結器備份策略。
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
@@ -23,9 +23,9 @@ ht-degree: 0%
 使用ECM存放庫並執行下列工作，備份您的AEM表單環境：
 
 * 依照本檔案所述指示備份AEM表單。
-* 請依照以下說明備份您的ECM Documentum®系統： [備份EMC Documentum® Content Server](/help/forms/using/admin-help/backing-recovering-emc-documentum-repository.md#back-up-the-emc-documentum-content-server).
+* 依照[備份EMC Documentum® Content Server](/help/forms/using/admin-help/backing-recovering-emc-documentum-repository.md#back-up-the-emc-documentum-content-server)中的指示來備份您的ECM Documentum®系統。
 
 使用ECM儲存庫並執行下列工作來還原AEM表單環境：
 
-* 請依照以下說明還原個別的ECM系統： [還原EMC Documentum® Content Server](/help/forms/using/admin-help/backing-recovering-emc-documentum-repository.md#restore-the-emc-documentum-content-server).
+* 依照[還原EMC Documentum® Content Server](/help/forms/using/admin-help/backing-recovering-emc-documentum-repository.md#restore-the-emc-documentum-content-server)中的指示，還原您個別的ECM系統。
 * 依照本檔案所述的指示還原AEM表單。

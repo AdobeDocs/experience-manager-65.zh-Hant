@@ -25,10 +25,10 @@ ht-degree: 3%
 >
 >如需有關記錄的進一步資訊，請參閱：
 >
->* [AEM中的稽核記錄維護](/help/sites-administering/operations-audit-log.md)
+>* 在AEM](/help/sites-administering/operations-audit-log.md)中維護[稽核記錄
 >* [使用稽核記錄和記錄檔](/help/sites-deploying/monitoring-and-maintaining.md#working-with-audit-records-and-log-files)
 
-CRX記錄詳細記錄。 拆開包裝並啟動「快速入門」後，您可在下列位置找到記錄：
+CRX會記錄詳細的記錄。 拆開包裝並啟動「快速入門」後，您可在下列位置找到記錄：
 
 * crx-quickstart/launchpad/logs
 * crx-quickstart/server/logs
@@ -38,7 +38,7 @@ CRX記錄詳細記錄。 拆開包裝並啟動「快速入門」後，您可在�
 
 預設記錄層級為INFO，亦即，不會記錄DEBUG訊息。
 
-若要啟用DEBUG記錄層級，請使用CRX總管設定
+若要啟用DEBUG記錄層級，請使用CRX檔案總管設定
 
 ```xml
 /libs/sling/config/org.apache.sling.commons.log.LogManager/org.apache.sling.commons.log.level
@@ -56,13 +56,13 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
 
 | 0 | 嚴重錯誤 | 動作已失敗，安裝程式無法繼續。 |
 |---|---|---|
-| 1 | 錯誤 | 動作已失敗。 安裝會繼續，但部分CRX未正確安裝且將無法運作。 |
-| 2 | 警告 | 動作成功但發生問題。 CRX可能會或可能不會正常運作。 |
+| 1 | 錯誤 | 動作已失敗。 安裝會繼續，但部分CRX未正確安裝，將無法運作。 |
+| 2 | 警告 | 動作成功但發生問題。 CRX可能正常運作，也可能無法正常運作。 |
 | 3 | 資訊 | 動作已成功。 |
 
 ## 用於疑難排解的詳細選項 {#verbose-option-used-for-troubleshooting}
 
-啟動CRX時，您可以將 — v (verbose)選項新增到命令列，如下所示：
+啟動CRX時，您可以將 — v （詳細資訊）選項新增至命令列，如下所示：
 
 ` java -jar crx-<*version*>-<*edition*>.jar -v`
 

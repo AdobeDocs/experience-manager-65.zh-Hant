@@ -27,27 +27,27 @@ ht-degree: 0%
 
 AEM Forms支援個別下載這些表單型別，或是在包含一或多個受支援表單的資料夾中下載。
 
-除了這些資產外，您也可以下載 `Resource` 資產型別（如果存在於檔案夾中）。 提供此功能是為了讓您下載XFA表單與表單一起引用的資源。
+除了這些資產之外，如果資料夾中有`Resource`型別的資產，您就可以下載該資產。 提供此功能是為了讓您下載XFA表單與表單一起引用的資源。
 
 ## 下載一或多個表單 {#download-one-or-more-forms}
 
-1. 登入AEM Forms使用者介面，位於 `https://<server>:<port>/aem/forms.html`.
+1. 在`https://<server>:<port>/aem/forms.html`登入AEM Forms使用者介面。
 
 1. 導覽至您要下載的資產位置。
 
-1. 選取資產。 按一下 **[!UICONTROL 下載]** ![aem6forms_download](assets/aem6forms_download.png) 圖示加以儲存。
+1. 選取資產。 按一下工具列中的&#x200B;**[!UICONTROL 下載]** ![aem6forms_download](assets/aem6forms_download.png)圖示。
 
    >[!NOTE]
    >
    >您只能選取一個要下載的表單。 如果您想要下載多個表單，必須將其下載為資料夾。
 
-1. 在出現的對話方塊中，按一下 **[!UICONTROL 下載]**.
+1. 在出現的對話方塊中，按一下&#x200B;**[!UICONTROL 下載]**。
 
    AEM Forms會產生包含所選檔案或所選資料夾的ZIP檔案。
 
    如果您正在下載資料夾，資料夾中支援的資產會以其現有階層下載。
 
-   ZIP檔案會儲存至 `Downloads` 資料夾。
+   ZIP檔案已儲存至您系統上的`Downloads`資料夾。
 
 ## 上傳作業的相關考量事項 {#related-considerations-for-the-upload-operation}
 

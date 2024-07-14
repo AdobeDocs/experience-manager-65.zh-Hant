@@ -24,4 +24,4 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->雖然有支架 [模式](/help/sites-authoring/author-environment-tools.md#page-modes) 維護及建立支架，以及從支架建立新頁面時，都可在傳統UI中進行。 另請參閱 [支架](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md) 如需詳細資訊，請參閱傳統UI編寫檔案。
+>雖然有可用的支架[模式](/help/sites-authoring/author-environment-tools.md#page-modes)，但維護和建立支架以及從支架建立新頁面是在傳統UI中完成的。 如需詳細資訊，請參閱傳統UI編寫檔案中的[支架](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md)。

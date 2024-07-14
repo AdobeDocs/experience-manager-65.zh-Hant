@@ -63,54 +63,54 @@ Date Picture子句支援的運算式：
   </tr>
   <tr>
    <td>公厘</td>
-   <td>月份以零填入兩位數(01-12)。<br /> </td>
+   <td>以零填入兩位數(01-12)的月份。<br /> </td>
   </tr>
   <tr>
    <td>MMM</td>
-   <td>目前地區設定的月份名稱縮寫<br /> </td>
+   <td>目前地區設定<br />的月份名稱縮寫 </td>
   </tr>
   <tr>
    <td>MMMM</td>
-   <td>目前地區設定的完整月份名稱<br /> </td>
+   <td>目前地區設定<br />的完整月份名稱 </td>
   </tr>
   <tr>
    <td>EEE</td>
-   <td>目前地區設定的簡化工作日名稱<br /> </td>
+   <td>目前地區設定<br />的簡化工作日名稱 </td>
   </tr>
   <tr>
    <td>EEE</td>
-   <td>目前地區設定的完整工作日名稱<br /> </td>
+   <td>目前地區設定<br />的完整工作日名稱 </td>
   </tr>
   <tr>
    <td>YY</td>
-   <td>2位數年份，其中00 = 2000、29 = 2029、30 = 1930、99 = 1999<br /> </td>
+   <td>2位數年份，其中00 = 2000、29 = 2029、30 = 1930和99 = 1999<br /> </td>
   </tr>
   <tr>
    <td>YYYY</td>
-   <td>4位數年份<br /> </td>
+   <td>4位數的年份<br /> </td>
   </tr>
  </tbody>
 </table>
 
 >[!NOTE]
 >
-> 根據設計，HTML5 Forms中的「日期」欄位不支援 `MM-YYYY` 編輯格式的圖樣。 不過，顯示格式支援該模式。
+> 根據設計，HTML5 Forms中的「日期」欄位不支援編輯格式中的`MM-YYYY`模式。 不過，顯示格式支援該模式。
 
 ## Numeric圖片子句 {#numeric-picture-clause}
 
 HTML5表單支援數字圖片符號。 不過，PDF forms和HTMLForms之間的支援有所不同。
 
-在 **PDF forms**，數字的格式與Picture子句中的符號數目無關
+在&#x200B;**PDF forms**&#x200B;中，不論Picture子句中的符號數目為何，都會格式化數字
 
-在 **HTMLForms**，只有在數字的位數小於Picture子句中的符號數時，才會格式化數字。
+在&#x200B;**HTMLForms**&#x200B;中，只有在數字的位數小於Picture子句中的符號數時，才會格式化數字。
 
-**範例**：以Picture子句為例： num{zzz，zzz，zz9}。
+**範例**：考慮Picture子句： num{zzz，zzz，zz9}。
 
-數字 **10000** 格式為 **10,000** 在HTML和PDF forms中。
+數字&#x200B;**10000**&#x200B;的HTML和PDF forms均格式化為&#x200B;**10,000**。
 
 數字1000000PDF forms格式為1,000,000。 不過，在HTMLForms中，數字仍維持未格式化為1000000。
 
-中支援的Numeric Picture子句運算式 **HTMLForms** 為：
+**HTMLForms**&#x200B;中Numeric Picture子句支援的運算式為：
 
 * num.integer{}
 * num.decimal{}
@@ -127,22 +127,22 @@ HTML5表單支援數字圖片符號。 不過，PDF forms和HTMLForms之間的�
   </tr>
   <tr>
    <td>9</td>
-   <td><strong>輸出格式</strong>：一位數。 或者，如果輸入資料為空白或對應位置有空格，則為0位數。<br /> </td>
+   <td><strong>輸出格式</strong>：單數。 或者，如果輸入資料為空白或對應位置的空格，則為零位數。<br /> </td>
    <td>單一數字</td>
   </tr>
   <tr>
    <td>Z</td>
-   <td><strong>輸出格式</strong>：一位數。 或者，如果輸入資料是空的，則為空格，或對應位置中的零位數。<br /> </td>
+   <td><strong>輸出格式</strong>：單數。 或者，如果輸入資料是空的，則為空格，或對應位置中的零位數。<br /> </td>
    <td>單一數字或空格</td>
   </tr>
   <tr>
    <td>z</td>
-   <td><strong>輸出格式</strong>：一位數。 或者，如果輸入資料是空的、空格或對應位置中的零位數，則無意義。<br /> </td>
+   <td><strong>輸出格式</strong>：單數。 如果輸入資料是空的、空格或對應位置中的零位數，則無意義。<br /> </td>
    <td>一位數或無</td>
   </tr>
   <tr>
    <td>錯誤</td>
-   <td><strong>輸出格式</strong>：浮點數的指數部分，由指數符號(E)組成。 後面接著選用的加號或減號。 後面接著指數值。<br /> </td>
+   <td><strong>輸出格式</strong>：由指數符號(E)組成的浮點數指數部分。 後面接著選用的加號或減號。 後面接著指數值。<br /> </td>
    <td>與輸出格式設定相同</td>
   </tr>
   <tr>
@@ -152,7 +152,7 @@ HTML5表單支援數字圖片符號。 不過，PDF forms和HTMLForms之間的�
   </tr>
   <tr>
    <td>S或s<br /> </td>
-   <td>輸出格式：如果數字為負數，則為負號。 其他空格。<br /> </td>
+   <td>輸出格式：如果數字為負數，則為負號。 其他空間。<br /> </td>
    <td>如果數字為負數，則為減號。 如果數字是正數，則加上符號</td>
   </tr>
   <tr>
@@ -209,7 +209,7 @@ HTML5表單支援下列Text Picture子句運算式：
 
 * text{text Picture子句符號}
 
-| **符號** | **解譯** |
+| **符號** | **解釋** |
 |---|---|
 | A | 單一字母字元。 |
 | X | 單一字元。 |

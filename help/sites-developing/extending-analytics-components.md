@@ -20,9 +20,9 @@ ht-degree: 0%
 
 ## 在頁面元件中包含Adobe Analytics模組 {#including-the-adobe-analytics-module-in-a-page-component}
 
-頁面範本元件(例如 `head.jsp, body.jsp`)需要JSP包含才能載入ContextHub和Adobe Analytics整合(這是Cloud Service的一部分)。 全部包括載入JavaScript檔案。
+頁面範本元件（例如`head.jsp, body.jsp`）需要JSP include才能載入ContextHub和Adobe Analytics整合(這是Cloud Service的一部分)。 所有功能都包含載入JavaScript檔案。
 
-ContextHub專案應直接包含在 `<head>` 標籤中，而Cloud Service應包含在 `<head>` 並且早於 `</body>` 區段；例如：
+ContextHub專案應直接包含在`<head>`標籤下方，而Cloud Service應包含在`<head>`中及`</body>`區段之前；例如：
 
 ```xml
 <head>
@@ -37,11 +37,11 @@ ContextHub專案應直接包含在 `<head>` 標籤中，而Cloud Service應包�
 </body>
 ```
 
-此 `contexthub` 您在此之後插入的指令碼 `<head>` 元素將ContextHub功能新增至頁面。
+您在`<head>`元素之後插入的`contexthub`指令碼會將ContextHub功能新增至頁面。
 
-此 `cloudservices` 您在中新增的指令碼 `<head>` 和 `<body>` 區段會套用至新增至頁面的雲端服務設定。 (如果頁面使用多個Cloud Service組態，您只能包含一次ContextHub jsp和Cloud Service jsp)。
+您在`<head>`和`<body>`區段中新增的`cloudservices`指令碼會套用至新增至頁面的雲端服務設定。 (如果頁面使用多個Cloud Service組態，您只能包含一次ContextHub jsp和Cloud Service jsp)。
 
-將Adobe Analytics架構新增至頁面時， `cloudservices` 指令碼會產生與Adobe Analytics相關的JavaScript和對使用者端程式庫的參照，類似於以下範例：
+將Adobe Analytics架構新增至頁面時，`cloudservices`指令碼會產生與Adobe Analytics相關的JavaScript和對使用者端資料庫的參照，類似於以下範例：
 
 ```xml
 <div class="sitecatalyst cloudservice">
@@ -113,35 +113,35 @@ $CQ(function(){
 
 ### sitecatalystAfterCollect事件 {#the-sitecatalystaftercollect-event}
 
-此 `cloudservices` 指令碼觸發 `sitecatalystAfterCollect` 事件：
+`cloudservices`指令碼會觸發`sitecatalystAfterCollect`事件：
 
 ```
 $CQ(document).trigger("sitecatalystAfterCollect");
 ```
 
-觸發此事件即表示頁面追蹤已完成。 如果您在此頁面上執行其他追蹤作業，您應該監聽此事件，而不是檔案載入或檔案就緒事件。 使用 `sitecatalystAfterCollect` 事件可避免衝突或其他無法預測的行為。
+觸發此事件即表示頁面追蹤已完成。 如果您在此頁面上執行其他追蹤作業，您應該監聽此事件，而不是檔案載入或檔案就緒事件。 使用`sitecatalystAfterCollect`事件可避免衝突或其他無法預測的行為。
 
 >[!NOTE]
 >
->此 `/libs/cq/analytics/clientlibs/sitecatalyst/sitecatalyst.js` 程式庫中包含來自Adobe Analytics的程式碼 `s_code.js` 檔案。
+>`/libs/cq/analytics/clientlibs/sitecatalyst/sitecatalyst.js`資料庫包含Adobe Analytics `s_code.js`檔案的程式碼。
 
 ## 對自訂元件實作Adobe Analytics追蹤 {#implementing-adobe-analytics-tracking-for-custom-components}
 
 啟用您的AEM元件，以與Adobe Analytics架構互動。 然後，設定您的架構，讓Adobe Analytics追蹤元件資料。
 
-當您編輯框架時，與Adobe Analytics框架互動的元件會顯示在Sidekick中。 將元件拖曳至框架後，元件屬性隨即顯示，然後您就可以使用Adobe Analytics屬性加以對應。 (請參閱 [設定基本追蹤的框架](/help/sites-administering/adobeanalytics-connect.md#creating-a-adobe-analytics-framework).)
+當您編輯框架時，與Adobe Analytics框架互動的元件會顯示在Sidekick中。 將元件拖曳至框架後，元件屬性隨即顯示，然後您就可以使用Adobe Analytics屬性加以對應。 （請參閱[設定基本追蹤的架構](/help/sites-administering/adobeanalytics-connect.md#creating-a-adobe-analytics-framework)。）
 
-當元件具有名為的子節點時，元件可以與Adobe Analytics架構互動 `analytics`. 此 `analytics` 節點具有下列屬性：
+當元件具有名為`analytics`的子節點時，元件可以與Adobe Analytics架構互動。 `analytics`節點有下列屬性：
 
 * `cq:trackevents`：識別元件公開的CQ事件。 （請參閱自訂事件）。
 * `cq:trackvars`：為對應至Adobe Analytics屬性的CQ變數命名。
 * `cq:componentName`：以Sidekick顯示的元件名稱。
 * `cq:componentGroup`：Sidekick中包含元件的群組。
 
-元件JSP中的程式碼會將JavaScript新增至觸發追蹤的頁面，並定義要追蹤的資料。 JavaScript中使用的事件名稱和資料名稱必須與 `analytics` 節點屬性。
+元件JSP中的程式碼會將JavaScript新增至觸發追蹤的頁面，並定義要追蹤的資料。 JavaScript中使用的事件名稱和資料名稱必須符合`analytics`節點屬性的對應值。
 
-* 在頁面載入時，使用data-tracking屬性追蹤事件資料。 (請參閱 [追蹤頁面載入上的自訂事件](/help/sites-developing/extending-analytics.md#tracking-custom-events-on-page-load).)
-* 使用CQ_Analytics.record函式可在使用者與頁面功能互動時追蹤事件資料。 (請參閱 [頁面載入後追蹤自訂事件](/help/sites-developing/extending-analytics.md#tracking-custom-events-after-page-load).)
+* 在頁面載入時，使用data-tracking屬性追蹤事件資料。 （請參閱[追蹤頁面載入上的自訂事件](/help/sites-developing/extending-analytics.md#tracking-custom-events-on-page-load)。）
+* 使用CQ_Analytics.record函式可在使用者與頁面功能互動時追蹤事件資料。 （請參閱[在頁面載入後追蹤自訂事件](/help/sites-developing/extending-analytics.md#tracking-custom-events-after-page-load)。）
 
 使用這些資料追蹤方法時，Adobe Analytics整合模組會自動執行Adobe Analytics呼叫，以記錄事件和資料。
 
@@ -158,7 +158,7 @@ $CQ(document).trigger("sitecatalystAfterCollect");
 
 將topnav元件複製到CQ應用程式。 此程式要求您的應用程式必須以CRXDE Lite設定。
 
-1. 用滑鼠右鍵按一下 `/libs/foundation/components/topnav` 節點，然後按一下複製。
+1. 以滑鼠右鍵按一下`/libs/foundation/components/topnav`節點，然後按一下[複製]。
 1. 以滑鼠右鍵按一下應用程式資料夾下方的「元件」資料夾，然後按一下「貼上」。
 1. 按一下「儲存全部」。
 
@@ -196,7 +196,7 @@ $CQ(document).trigger("sitecatalystAfterCollect");
    * 值：一般
 
 1. 按一下「儲存全部」。
-1. 開啟 `topnav.jsp` 檔案。
+1. 開啟`topnav.jsp`檔案。
 1. 在元素中，新增下列屬性：
 
    ```xml
@@ -224,7 +224,7 @@ $CQ(document).trigger("sitecatalystAfterCollect");
 
 1. 按一下「儲存全部」。
 
-的內容 `topnav.jsp` 檔案應如下所示：
+`topnav.jsp`檔案的內容應該顯示如下：
 
 ```xml
 <%@page session="false"%><%--
@@ -288,7 +288,7 @@ $CQ(document).trigger("sitecatalystAfterCollect");
 
 >[!NOTE]
 >
->通常需要從ContextHub追蹤資料。 如需使用JavaScript來取得此資訊的詳細資訊，請參閱 [存取ContextHub中的值](/help/sites-developing/extending-analytics.md#accessing-values-in-the-contexthub).
+>通常需要從ContextHub追蹤資料。 如需有關使用JavaScript來取得此資訊的資訊，請參閱[存取ContextHub中的值](/help/sites-developing/extending-analytics.md#accessing-values-in-the-contexthub)。
 
 #### 將追蹤元件新增至Sidekick {#adding-the-tracking-component-to-sidekick}
 
@@ -297,7 +297,7 @@ $CQ(document).trigger("sitecatalystAfterCollect");
 1. 從Adobe Analytics設定開啟Adobe Analytics架構。 ([http://localhost:4502/etc/cloudservices/sitecatalyst.html](http://localhost:4502/etc/cloudservices/sitecatalyst.html))
 1. 在Sidekick上，按一下「設計」按鈕。
 
-   ![以直角方塊為特徵的「設計」按鈕。](assets/chlimage_1a.png)
+   ![設計按鈕以直角方塊為特徵。](assets/chlimage_1a.png)
 
 1. 在連結追蹤設定區域中，按一下設定繼承。
 
@@ -308,7 +308,7 @@ $CQ(document).trigger("sitecatalystAfterCollect");
 
 #### 將topnav元件新增至您的框架 {#adding-the-topnav-component-to-your-framework}
 
-將topnav元件拖曳至Adobe Analytics架構，並將元件變數和事件對應至Adobe Analytics變數和事件。 (請參閱 [設定基本追蹤的框架](/help/sites-administering/adobeanalytics-connect.md).)
+將topnav元件拖曳至Adobe Analytics架構，並將元件變數和事件對應至Adobe Analytics變數和事件。 （請參閱[設定基本追蹤的架構](/help/sites-administering/adobeanalytics-connect.md)。）
 
 ![chlimage_1-1](assets/chlimage_1-1a.png)
 
@@ -318,8 +318,8 @@ Topnav元件現在已與Adobe Analytics框架整合。 將元件新增至頁面�
 
 元件可產生傳送至Adobe Analytics之s.products變數的資料。 設計您的元件以貢獻給s.products變數：
 
-* 記錄名為的值 `product` 特定結構的URL。
-* 公開 `product` 值，以便能與Adobe Analytics框架中的Adobe Analytics變數對應。
+* 記錄特定結構的名為`product`的值。
+* 公開`product`值的資料成員，以便能夠在Adobe Analytics架構中以Adobe Analytics變數進行對應。
 
 Adobe Analytics s.products變數會使用以下語法：
 
@@ -327,7 +327,7 @@ Adobe Analytics s.products變數會使用以下語法：
 s.products="category;product;quantity;price;eventY={value}|eventZ={value};evarA={value}|evarB={value}"
 ```
 
-Adobe Analytics整合模組會建構 `s.products` 變數使用 `product` AEM元件產生的值。 此 `product` AEM元件產生的JavaScript值是一組具有以下結構的值：
+Adobe Analytics整合模組使用AEM元件產生的`product`值來建構`s.products`變數。 AEM元件在JavaScript中產生的`product`值是具有以下結構的值陣列：
 
 ```
 "product": [{
@@ -346,13 +346,13 @@ Adobe Analytics整合模組會建構 `s.products` 變數使用 `product` AEM元�
 }]
 ```
 
-當省略了資料專案時 `product` 值，會以s.products中的空字串形式傳送。
+`product`值中省略資料專案時，會在s.products中以空字串形式傳送。
 
 >[!NOTE]
 >
->當沒有任何事件與產品值相關聯時，Adobe Analytics會使用 `prodView` 事件（預設）。
+>當沒有事件與產品值相關聯時，Adobe Analytics預設會使用`prodView`事件。
 
-此 `analytics` 元件的節點必須使用下列專案公開變數名稱： `cq:trackvars` 屬性：
+元件的`analytics`節點必須使用`cq:trackvars`屬性公開變數名稱：
 
 * product.category
 * product.sku
@@ -363,7 +363,7 @@ Adobe Analytics整合模組會建構 `s.products` 變數使用 `product` AEM元�
 * product.evars.eVarName1
 * product.evars.eVarName_n
 
-電子商務模組提供數個會產生s.products變數資料的元件。 例如， `submitorder` 元件([http://localhost:4502/crx/de/index.jsp#/libs/commerce/components/submitorder/submitorder.jsp](http://localhost:4502/crx/de/index.jsp#/libs/commerce/components/submitorder/submitorder.jsp))會產生與下列範例類似的JavaScript：
+電子商務模組提供數個會產生s.products變數資料的元件。 例如，`submitorder`元件([http://localhost:4502/crx/de/index.jsp#/libs/commerce/components/submitorder/submitorder.jsp](http://localhost:4502/crx/de/index.jsp#/libs/commerce/components/submitorder/submitorder.jsp))會產生與下列範例類似的JavaScript：
 
 ```
 <script type="text/javascript">
@@ -439,6 +439,6 @@ Adobe Analytics整合模組會建構 `s.products` 變數使用 `product` AEM元�
 
 #### 限制追蹤呼叫的大小 {#limiting-the-size-of-tracking-calls}
 
-一般而言，網頁瀏覽器會限制GET要求的大小。 由於CQ產品和SKU值是存放庫路徑，因此包含多個值的產品陣列可能會超過請求大小限制。 因此，您的元件應限制 `product` 每個的陣列 `CQ_Analytics.record function`. 如果必須追蹤的專案數量可能超過限制，請建立多個函式。
+一般而言，網頁瀏覽器會限制GET要求的大小。 由於CQ產品和SKU值是存放庫路徑，因此包含多個值的產品陣列可能會超過請求大小限制。 因此，您的元件應該限制每個`CQ_Analytics.record function`之`product`陣列中的專案數。 如果必須追蹤的專案數量可能超過限制，請建立多個函式。
 
-例如，電子商務 `submitorder` 元件限制 `product` 個專案在對4的呼叫中。 當購物車包含超過四個產品時，則會產生多個 `CQ_Analytics.record` 函式。
+例如，電子商務`submitorder`元件將呼叫中`product`專案的數量限製為4。 當購物車包含四個以上的產品時，它會產生多個`CQ_Analytics.record`功能。

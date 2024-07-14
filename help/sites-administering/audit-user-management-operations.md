@@ -29,22 +29,22 @@ AEM匯入了記錄許可權變更的功能，以便您稍後稽核這些變更�
 * 正在新增至群組的使用者
 * 現有使用者或群組的許可權變更
 
-依預設，專案會寫入 `error.log` 檔案。 為了更輕鬆地進行監視，建議將它們重新導向到單獨的記錄檔。 如需如何執行此動作的詳細資訊，請參閱以下段落。
+依預設，專案會寫入`error.log`檔案。 為了更輕鬆地進行監視，建議將它們重新導向到單獨的記錄檔。 如需如何執行此動作的詳細資訊，請參閱以下段落。
 
 ## 將輸出重新導向至個別的記錄檔 {#redirecting-the-output-to-a-separate-log-file}
 
-若要將記錄輸出重新導向至個別的記錄檔，請建立 **Apache Sling記錄記錄器** 設定。 讓我們使用 `useraudit.log` 做為下方範例中個別檔案的名稱。
+若要將記錄輸出重新導向至個別的記錄檔，請建立&#x200B;**Apache Sling記錄記錄器**&#x200B;設定。 讓我們使用`useraudit.log`做為下列範例中個別檔案的名稱。
 
-1. 瀏覽至，前往Web主控台 *https://serveraddress:serverport/system/console/configMgr*
-1. 搜尋 **Apache Sling記錄記錄器設定**. 然後，按專案右側的「+」以建立工廠組態。
+1. 瀏覽至&#x200B;*https://serveraddress:serverport/system/console/configMgr*&#x200B;以移至Web主控台
+1. 搜尋&#x200B;**Apache Sling記錄記錄器組態**。 然後，按專案右側的「+」以建立工廠組態。
 1. 建立下列設定：
 
-   * **記錄層級：** 資訊
+   * **記錄層級：**&#x200B;資訊
    * **記錄檔：** logs/useraudit.log
-   * **訊息模式：** 層級預設
+   * **訊息模式：**&#x200B;層級預設
    * **記錄器：** com.adobe.granite.security.user.internal.audit， com.adobe.granite.security.user.internal.servlets.AuthorizableServlet
 
-   若要將兩個記錄器輸入到 **Logger** 欄位，您必須輸入第一個記錄器的名稱，然後按「+」按鈕並輸入第二個記錄器的名稱，以建立另一個欄位。
+   若要在&#x200B;**記錄器**&#x200B;欄位中輸入兩個記錄器，您必須輸入第一個記錄器的名稱，然後按下「+」按鈕並輸入第二個記錄器的名稱，以建立另一個欄位。
 
 ## 範例輸出 {#example-output}
 

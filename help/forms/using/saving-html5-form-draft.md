@@ -22,9 +22,9 @@ ht-degree: 5%
 
 ## 允許另存為草稿功能的自訂設定檔 {#custom-profile-to-allow-save-as-draft-feature}
 
-AEM Forms可立即提供 **另存為草稿** 設定檔。 您可以使用另存為草稿設定檔來轉譯表單，以啟用HTML5表單的草稿功能。 您可以在下列位置為表單指定HTML轉譯設定檔： [Forms Manager](/help/forms/using/introduction-managing-forms.md).
+AEM Forms可立即提供&#x200B;**另存為草稿**&#x200B;設定檔。 您可以使用另存為草稿設定檔來轉譯表單，以啟用HTML5表單的草稿功能。 您可以在[Forms管理員](/help/forms/using/introduction-managing-forms.md)中指定表單的HTML轉譯器設定檔。
 
-若要為您現有的專案啟用「另存為草稿」功能 [自訂設定檔](/help/forms/using/custom-profile.md)，新增下列屬性至您的自訂設定檔節點：
+若要對您現有的[自訂設定檔](/help/forms/using/custom-profile.md)啟用「另存為草稿」功能，請新增下列屬性至您的自訂設定檔節點：
 
 <table>
  <tbody>
@@ -51,7 +51,7 @@ AEM Forms可立即提供 **另存為草稿** 設定檔。 您可以使用另存�
 
 ## 草稿儲存和清單 {#drafts-storage-and-listing}
 
-為表單啟用「另存為草稿」功能後；儲存表單時，表單會列在 [草稿與提交元件](/help/forms/using/draft-submission-component.md). 您可以擷取並開始填寫從「草稿和提交」元件中儲存的。
+為表單啟用「另存為草稿」功能後；儲存表單時，該表單會列在[草稿和提交元件](/help/forms/using/draft-submission-component.md)中。 您可以擷取並開始填寫從「草稿和提交」元件中儲存的。
 
 若要為「草稿和提交」元件啟用表單清單，請將下列屬性新增至設定檔節點：
 
@@ -67,9 +67,9 @@ AEM Forms可立即提供 **另存為草稿** 設定檔。 您可以使用另存�
    <td>fp.enablePortalSubmit</td>
    <td>字串</td>
    <td>true</td>
-   <td>若要啟用草稿與表單以列於<br /> 提交後Forms Portal草稿和提交元件</td>
+   <td>若要讓草稿和表單在提交後列在<br /> Forms Portal草稿和提交元件中</td>
   </tr>
  </tbody>
 </table>
 
-依預設，AEM Forms會將與表單草稿和提交相關聯的使用者資料儲存在Publish執行個體上的/content/forms/fp節點中。 您可以新增自訂儲存提供者，詳情請參閱 [草稿和提交元件的自訂儲存](/help/forms/using/adding-custom-storage-provider-forms.md).
+依預設，AEM Forms會將與表單草稿和提交相關聯的使用者資料儲存在Publish執行個體上的/content/forms/fp節點中。 您可以新增自訂儲存提供者，如需詳細資訊，請參閱[草稿與提交元件的自訂儲存](/help/forms/using/adding-custom-storage-provider-forms.md)。

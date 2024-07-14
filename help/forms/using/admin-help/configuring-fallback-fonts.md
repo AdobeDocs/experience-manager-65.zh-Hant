@@ -24,12 +24,12 @@ ht-degree: 0%
 >
 >後援字型組態也適用於組合器服務。
 
-1. 導覽至adobe-livecycle-*`[appserver]`*&#x200B;中的.ear檔案 *`[aem-forms root]`*/configurationManager/export目錄，製作備份復本，然後取消封裝原始檔案。
+1. 導覽至&#x200B;*`[aem-forms root]`*/configurationManager/export目錄中的adobe-livecycle-*`[appserver]`*.ear檔案、製作備份復本，並取消封裝原始檔案。
 1. 找到adobe-fontmanager.jar檔案並將其解除封裝。
 1. 找到FontManagerResources.properties檔案，然後在文字編輯器中開啟它。
 1. 視需要修改「一般」和「後援」字型位置和名稱，並儲存檔案。
 
-   FontManagerResources.properties檔案中的字型專案是相對於 *`[aem-forms root]`*/fonts目錄。 如果您指定的字型不是預設的AEM表單字型，則必須將這些字型安裝在此目錄結構內（在現有目錄內或新建立的目錄中）。
+   FontManagerResources.properties檔案中的字型專案是相對於&#x200B;*`[aem-forms root]`*/fonts目錄。 如果您指定的字型不是預設的AEM表單字型，則必須將這些字型安裝在此目錄結構內（在現有目錄內或新建立的目錄中）。
 
    >[!NOTE]
    >
@@ -40,8 +40,8 @@ ht-degree: 0%
    * 一般字型，依遞補表格中的順序集搜尋
 
 1. 重新封裝adobe-fontmanager.jar檔案。
-1. 重新封裝adobe-livecycle-*`[appserver]`*.ear檔案，然後手動或執行Configuration Manager將其重新部署。
+1. 重新封裝adobe-livecycle-*`[appserver]`*.ear檔案，然後手動或執行Configuration Manager來重新部署。
 
 >[!NOTE]
 >
->請勿使用Configuration Manager重新封裝adobe-livecycle-`[appserver]`.ear檔案，因為它會以AEM表單預設值覆寫您的修改。
+>請勿使用Configuration Manager重新封裝adobe-livecycle-`[appserver]`.ear檔案，因為這將以AEM表單預設值覆寫您的修改。

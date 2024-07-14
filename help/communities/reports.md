@@ -29,7 +29,7 @@ ht-degree: 6%
 
   提供社群成員和網站訪客針對任何社群網站檢視內容的圖表。
 
-* [貼文報表](#posts-report)
+* [張貼報告](#posts-report)
 
   提供社群成員在任何社群網站的各種型別貼文的圖表。
 
@@ -39,15 +39,15 @@ ht-degree: 6%
 
 ### 社群網站報表 {#reports-for-community-sites}
 
-* 從全域導覽： **[!UICONTROL 導覽]** > **[!UICONTROL Communities]** >  **[!UICONTROL 報表]**
+* 從全域導覽： **[!UICONTROL 導覽]** > **[!UICONTROL 社群]** > **[!UICONTROL 報表]**
 
 * 選擇來源：
 
-   * **[!UICONTROL 指定任務報表]**
+   * **[!UICONTROL 工作分派報表]**
 
       * 為選取的社群網站、使用者或群組以及指派專案產生報告。
 
-   * **[!UICONTROL 貼文報表]**
+   * **[!UICONTROL 張貼報告]**
 
       * 針對選取的社群網站、內容型別和時段產生報表。
 
@@ -55,7 +55,7 @@ ht-degree: 6%
 
       * 針對選取的社群網站、內容型別和時段產生報表。
 
-![報表](assets/reports1.png)
+![報告](assets/reports1.png)
 
 ## 檢視報表 {#views-report}
 
@@ -73,7 +73,7 @@ ht-degree: 6%
 
   可以選擇「所有內容」或選取網站上存在的其中一個功能。
 
-* **[!UICONTROL 時間段]**
+* **[!UICONTROL 時間範圍]**
 
   選取下列其中一項：
 
@@ -82,7 +82,7 @@ ht-degree: 6%
    * 過去 90 天
    * 去年
 
-選取 **[!UICONTROL 產生]** 以建立報表。
+選取&#x200B;**[!UICONTROL 產生]**&#x200B;以建立報告。
 
 ![產生檢視](assets/generate-views.png)
 
@@ -90,7 +90,7 @@ ht-degree: 6%
 
 「貼文」主控台可讓您針對指定時段內社群功能的貼文數量產生報表。
 
-![posts-report](assets/posts-report.png)
+![個貼文報告](assets/posts-report.png)
 
 選取報告的條件：
 
@@ -102,7 +102,7 @@ ht-degree: 6%
 
   可以選擇「所有內容」或選取網站上存在的其中一個功能。
 
-* **[!UICONTROL 時間段]**
+* **[!UICONTROL 時間範圍]**
 
   選取下列其中一項：
 
@@ -111,9 +111,9 @@ ht-degree: 6%
    * 過去 90 天
    * 去年
 
-選取 **[!UICONTROL 產生]** 以建立報表。
+選取&#x200B;**[!UICONTROL 產生]**&#x200B;以建立報告。
 
-![generate-report](assets/generate-posts-report.png)
+![產生報告](assets/generate-posts-report.png)
 
 ## 疑難排解 {#troubleshooting}
 
@@ -123,6 +123,6 @@ ht-degree: 6%
 
 ### 報告未顯示在AEM編寫執行個體中 {#reports-do-not-show-in-aem-author-instance}
 
-如果報表未顯示在AEM編寫執行個體中，請檢查自訂，例如發佈執行個體上的URL對應。 如果URL對應僅在Communities網站的AEM Publish例項上完成，請確保已在的AEM Author例項中設定相同的專案。 **網站趨勢報表社交元件工廠** 設定。
+如果報表未顯示在AEM編寫執行個體中，請檢查是否有自訂，例如Publish執行個體上的URL對應。 如果只在社群網站的AEM Publish執行個體上完成URL對應，請確定已在&#x200B;**網站趨勢報表社交元件處理站**&#x200B;設定的AEM Author執行個體中設定相同專案。
 
-![AEM作者上的URL對應](assets/sitetrend.png)
+在AEM作者](assets/sitetrend.png)上的![URL對應

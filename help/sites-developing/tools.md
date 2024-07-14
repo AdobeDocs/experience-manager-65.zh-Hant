@@ -23,22 +23,22 @@ ht-degree: 0%
 
 AEM提供：
 
-* [測試元件UI的架構](/help/sites-developing/hobbes.md).
-* [用於測試和偵錯元件的機制](/help/sites-developing/developer-mode.md).
+* [測試元件UI](/help/sites-developing/hobbes.md)的架構。
+* [測試和偵錯元件的機制](/help/sites-developing/developer-mode.md)。
 
-以下是兩種開放原始碼測試工具：
+以下是兩個開啟的Source測試工具：
 
 **Selenium**
 
 Selenium可用於瀏覽器中的功能測試，每個活動有一個使用者。 測試步驟（點按）會記錄為HTML表格或Java™類別。
 
-如需詳細資訊，請參閱 [https://www.selenium.dev/](https://www.selenium.dev/).
+如需詳細資訊，請參閱[https://www.selenium.dev/](https://www.selenium.dev/)。
 
-**Jmeter**
+**JMeter**
 
 JMeter可用來追蹤要求，以及進行功能、效能和壓力測試。
 
-如需詳細資訊，請參閱 [https://jmeter.apache.org/](https://jmeter.apache.org/).
+如需詳細資訊，請參閱[https://jmeter.apache.org/](https://jmeter.apache.org/)。
 
 還有許多自動化測試和管理測試計畫的專有工具。
 
@@ -52,7 +52,7 @@ JMeter可用來追蹤要求，以及進行功能、效能和壓力測試。
 
 **試算表**
 
-雖然不是特別用於追蹤錯誤工具，但試算表通常 *mis*&#x200B;用於此目的，因為它們容易理解，且大部分使用者對其功能有體驗。
+雖然不是特別用於錯誤追蹤工具，但試算表經常會被&#x200B;*誤用*&#x200B;以用於此目的，因為這些試算表很容易理解，而且大部分使用者都有其功能的經驗。
 
 如果這些試算表用於追蹤，則：
 

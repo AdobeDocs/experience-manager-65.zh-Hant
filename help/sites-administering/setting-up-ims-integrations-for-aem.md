@@ -16,7 +16,7 @@ ht-degree: 63%
 
 >[!NOTE]
 >
->Adobe客戶使用 [Adobe Developer Console](https://developer.adobe.com/console) 以產生可存取各種API的認證。 客戶可以選擇各種憑證類型，包括 OAuth 伺服器到伺服器和單頁應用程式。認證型別服務帳戶(JWT)現在已遭取代，改用Service Pack 20的OAuth伺服器對伺服器認證。 此變更可重新移植到舊版Service Pack，從Service Pack 11到Service Pack 20，並使用您可下載的Hotfix [此處](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/ims-jwt-compatibility-package-6.5-1.0.zip).
+>Adobe客戶使用[Adobe Developer Console](https://developer.adobe.com/console)產生可存取各種API的認證。 客戶可以選擇各種憑證類型，包括 OAuth 伺服器到伺服器和單頁應用程式。認證型別服務帳戶(JWT)現在已遭取代，改用Service Pack 20的OAuth伺服器對伺服器認證。 此變更可重新移植到較舊的Service Pack，從Service Pack 11開始一直到Service Pack 20，並使用您可在[這裡](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/ims-jwt-compatibility-package-6.5-1.0.zip)下載的Hotfix。
 
 Adobe Experience Manager (AEM)可與許多其他Adobe解決方案整合。 例如 Adobe Target、Adobe Analytics 等。
 
@@ -40,9 +40,9 @@ Adobe Experience Manager (AEM)可與許多其他Adobe解決方案整合。 例�
 
 ## Developer Console 中的認證 {#credentials-in-the-developer-console}
 
-第一步，您必須在Adobe Developer主控台中設定OAuth認證。
+第一步，您必須在Adobe Developer Console中設定OAuth認證。
 
-如需如何進行此設定的詳細資訊，請參閱開發人員控制檯檔案，視您的需求而定：
+如需如何執行此設定的詳細資訊，請參閱Developer Console檔案（視您的需求而定）：
 
 * 概觀：
 
@@ -103,4 +103,4 @@ Adobe Experience Manager (AEM)可與許多其他Adobe解決方案整合。 例�
    ![完整的 OAuth 詳細資訊](assets/ims-migrate-jwt-complete-oauth-details.png)
 
 1. 使用「**儲存並關閉**」保留您的更新。
-當您返回主控台時， **JWT認證（已棄用）** 警告已消失。
+當您返回主控台時，**JWT認證（已棄用）**&#x200B;警告已消失。

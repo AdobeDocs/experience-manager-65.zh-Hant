@@ -27,7 +27,7 @@ ht-degree: 4%
 
 ## 透過指令碼使用執行個體管理員  {#using-instance-manager-via-scripts-nbsp}
 
-1. 在編輯模式中，選取面板，然後選取 ![cmppr](assets/cmppr.png). 在側邊欄中的屬性下方，啟用 **讓面板可重複**. 指定 **[!UICONTROL 最大值]** 和 **[!UICONTROL 最小值]** 欄位。
+1. 在編輯模式中，選取面板，然後選取![cmppr](assets/cmppr.png)。 在側邊欄的[內容]下，啟用&#x200B;**讓面板可重複**。 指定&#x200B;**[!UICONTROL 最大值]**&#x200B;和&#x200B;**[!UICONTROL 最小值]**&#x200B;欄位的值。
 
    「最大值」欄位會指定面板在頁面上可出現的最大次數。 您可以在「最大計數」欄位中指定–1，讓面板無限次出現。
 
@@ -39,27 +39,27 @@ ht-degree: 4%
 
 1. 面板的父項（即將重複）應包含新增和刪除按鈕，以管理可重複面板的例項。 執行以下步驟，將按鈕插入父項，並在按鈕上啟用指令碼：
 
-   1. 從側邊欄中，將按鈕元件拖放至面板的父面板。 選取元件並選取 ![edit-rules](assets/edit-rules.png). 按鈕的規則會在規則編輯器中開啟。
-   1. 在規則編輯器視窗中，按一下 **建立**.
+   1. 從側邊欄中，將按鈕元件拖放至面板的父面板。 選取元件並選取![edit-rules](assets/edit-rules.png)。 按鈕的規則會在規則編輯器中開啟。
+   1. 在[規則編輯器]視窗中，按一下[建立]。****。
 
-      選取 **視覺化編輯器** 在「表單物件與函式」列中。
+      選取[表單物件與函式]列中的&#x200B;**視覺化編輯器**。
 
-      1. 在規則區域的WHEN下，選取state **已點按**.
+      1. 在規則區域的WHEN下，選取狀態&#x200B;**已按一下**。
       1. 在THEN底下：
 
-         * 若要建立新增面板按鈕，請選取 **新增例項**，並使用拖放面板 ![切換側面板](assets/toggle-side-panel.png) 或選擇它，使用 **將物件放下或選取這裡。**
-         * 若要建立刪除面板按鈕，請選取 **移除例項**，並使用拖放面板 ![切換側面板](assets/toggle-side-panel.png) 或選擇它，使用 **將物件放下或選取這裡。**
+         * 若要建立新增面板按鈕，請選取&#x200B;**新增執行個體**，並使用![切換側面板](assets/toggle-side-panel.png)拖放面板，或使用&#x200B;**拖放物件或在這裡選取。**
+         * 若要建立刪除面板按鈕，請選取&#x200B;**移除執行個體**，然後使用![切換側面板](assets/toggle-side-panel.png)拖放面板，或使用&#x200B;**拖放物件或選取這裡。**
 
-      選取 **代碼編輯器** 在「表單物件與函式」列中。 按一下 **編輯規則** 在程式碼區域中：
+      選取[表單物件與函式]列中的&#x200B;**程式碼編輯器**。 按一下&#x200B;**編輯規則**，然後在程式碼區域中：
 
-      * 若要建立新增面板按鈕，請指定 `this.panel.instanceManager.addInstance()`
-      * 若要建立刪除面板按鈕，請指定 `this.panel.instanceManager.removeInstance(this.panel.instanceIndex)`
+      * 若要建立新增面板按鈕，請指定`this.panel.instanceManager.addInstance()`
+      * 若要建立刪除面板按鈕，請指定`this.panel.instanceManager.removeInstance(this.panel.instanceIndex)`
 
       按一下&#x200B;**「完成」**。
 
       >[!NOTE]
       >
-      >如果欄位屬於可重複面板，則無法在指令碼中使用其名稱直接存取它。 若要存取欄位，請使用 `instances` 中的API `InstanceManager`. 使用的語法 `instances` 中的API `InstanceManager` 為：
+      >如果欄位屬於可重複面板，則無法在指令碼中使用其名稱直接存取它。 若要存取欄位，請在`InstanceManager`中使用`instances` API指定欄位所屬的可重複執行個體。 在`InstanceManager`中使用`instances` API的語法為：
       >
       >
       >`<panelName>.instanceManager.instances[<instanceNumber>].<fieldname>`
@@ -89,7 +89,7 @@ ht-degree: 4%
       >`Panel1.instanceManager.instances[1].textbox.value`
       >
       >
-      >如需詳細資訊，請參閱：Class： InstanceManager#instances在 [AEM Forms Java API參考](https://adobe.com/go/learn_aemforms_documentation_63).
+      >如需詳細資訊，請參閱[AEM Forms Java API參考](https://adobe.com/go/learn_aemforms_documentation_63)中的Class： InstanceManager#instances。
 
       >[!NOTE]
       >
@@ -99,10 +99,10 @@ ht-degree: 4%
 
 面板有各種版面配置選項。 摺疊式設計的「版面配置」選項具有可重複面板的現成支援。 執行以下步驟，使用「Layout for accordian design」（摺疊式設計的配置）選項重複面板：
 
-1. 在要重複的面板的父項上，選取 ![cmppr](assets/cmppr.png). 您可以在側邊欄中檢視屬性。 在 **版面** 下拉式清單，選取 **摺疊面板**.
-1. 在要重複的面板上，選取 ![cmppr](assets/cmppr.png). 您可以在側邊欄中看到面板屬性。 啟用 **讓面板可重複** 標籤，並指定 **最大值** 和 **最小值** 欄位。
+1. 在要重複的面板父項上，選取![cmppr](assets/cmppr.png)。 您可以在側邊欄中檢視屬性。 在&#x200B;**配置**&#x200B;下拉式清單中，選取&#x200B;**收合式選單**。
+1. 在要重複的面板上，選取![cmppr](assets/cmppr.png)。 您可以在側邊欄中看到面板屬性。 啟用&#x200B;**讓面板可重複**&#x200B;索引標籤，並指定&#x200B;**最大值**&#x200B;和&#x200B;**最小值**&#x200B;欄位的值。
 
-   現在，您可以使用加號(+)並刪除( ![delete-panel](assets/delete-panel.png))按鈕以新增和移除面板。
+   現在，您可以使用加號(+)和刪除(![delete-panel](assets/delete-panel.png))按鈕來新增和移除面板。
 
 ## 使用表單範本中的重複子表單(XDP/XSD) {#using-repeating-subforms-from-form-template-xdp-xsd}
 
@@ -116,8 +116,8 @@ ht-degree: 4%
 1. 若要指定最小重複次數，請選取「最小計數」，並在相關方塊中輸入數字。 如果此選項設為0，且資料合併時沒有為子表單中的物件提供資料，則轉譯表單時不會放置子表單。
 1. 若要指定子表單重複次數的最大值，請選取「最大值」，並在相關方塊中輸入數字。 如果您未在「最大值」方塊中指定值，則子表單重複次數將無限制。
 1. 若要指定一組子表單重複次數，而不考慮資料數量，請選取「初始計數」，並在相關方塊中輸入數字。 如果選取此選項，但無可用資料或資料專案少於指定的初始計數值，則表格上仍會放置子表格的空白執行個體。
-1. 在父子表單中新增兩個按鈕 — 一個用於新增例項，另一個用於刪除可重複子表單的例項。 如需詳細步驟，請參閱 [建置動作](https://help.adobe.com/en_US/AEMForms/6.1/DesignerHelp/WS107c29ade9134a2c74572b5612a87ca2b56-8000.2.html#WS107c29ade9134a2c-1f74d86012a87d4fe55-8000.2).
-1. 現在將表單範本連結至最適化表單。 如需詳細步驟，請參閱 [根據範本建立最適化表單](/help/forms/using/creating-adaptive-form.md#create-an-adaptive-form-based-on-a-template).
+1. 在父子表單中新增兩個按鈕 — 一個用於新增例項，另一個用於刪除可重複子表單的例項。 如需詳細步驟，請參閱[建置動作](https://help.adobe.com/en_US/AEMForms/6.1/DesignerHelp/WS107c29ade9134a2c74572b5612a87ca2b56-8000.2.html#WS107c29ade9134a2c-1f74d86012a87d4fe55-8000.2)。
+1. 現在將表單範本連結至最適化表單。 如需詳細步驟，請參閱[根據範本建立最適化表單](/help/forms/using/creating-adaptive-form.md#create-an-adaptive-form-based-on-a-template)。
 1. 使用在步驟9中建立的按鈕來新增和移除子表單。
 
 附加的.zip檔案包含一個範例可重複的子表單。
@@ -126,9 +126,9 @@ ht-degree: 4%
 
 ## 使用XML結構描述(XSD)的重複設定 {#using-repeat-settings-of-an-xml-schema-xsd-br}
 
-您可以從XML結構描述以及任何複雜型別元素的minOccours &amp; maxOccurs屬性建立可重複的面板。 如需「XML綱要」的詳細資訊，請參閱 [使用XML結構描述作為表單模型建立調適型表單](/help/forms/using/adaptive-form-xml-schema-form-model.md).
+您可以從XML結構描述以及任何複雜型別元素的minOccours &amp; maxOccurs屬性建立可重複的面板。 如需XML結構描述的詳細資訊，請參閱[使用XML結構描述作為表單模型建立最適化表單](/help/forms/using/adaptive-form-xml-schema-form-model.md)。
 
-在下列程式碼中， `SampleType`面板使用minOccours &amp; maxOccurs屬性。
+在下列程式碼中，`SampleType`面板使用minOccours &amp; maxOccurs屬性。
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>

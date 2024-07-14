@@ -20,10 +20,10 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->`JAR` 和 `WAR` Adobe Experience Manager (AEM)發行的檔案型別為何。 這些格式正在進行品質保證，以符合Adobe所承諾的支援等級。
+>`JAR`和`WAR`是Adobe Experience Manager (AEM)發行所在的檔案型別。 這些格式正在進行品質保證，以符合Adobe所承諾的支援等級。
 >
 
-本節將說明如何使用應用程式伺服器安裝Adobe Experience Manager (AEM)。 請參閱 [支援平台](/help/sites-deploying/technical-requirements.md#servlet-engines-application-servers) 區段，以瞭解針對個別應用程式伺服器提供的特定支援等級。
+本節將說明如何使用應用程式伺服器安裝Adobe Experience Manager (AEM)。 請參閱[支援平台](/help/sites-deploying/technical-requirements.md#servlet-engines-application-servers)區段，瞭解個別應用程式伺服器提供的特定支援等級。
 
 以下應用程式伺服器的安裝步驟已說明：
 
@@ -36,7 +36,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如果您在WAR部署中使用Dynamic Media，請參閱 [Dynamic Media檔案](/help/assets/config-dynamic.md#enabling-dynamic-media).
+>如果您在WAR部署中使用Dynamic Media，請參閱[Dynamic Media檔案](/help/assets/config-dynamic.md#enabling-dynamic-media)。
 
 ## 一般說明 {#general-description}
 
@@ -46,22 +46,22 @@ AEM會以單一war檔案的形式進行部署。
 
 如果部署，預設將會發生下列情況：
 
-* 執行模式為 `author`
-* 執行個體（存放庫、Felix OSGI環境、套件組合等）安裝於中 `${user.dir}/crx-quickstart`位置 `${user.dir}` 是當前工作目錄，系統會呼叫crx-quickstart的此路徑 `sling.home`
+* 執行模式為`author`
+* 執行個體（存放庫、Felix OSGI環境、套件組合等）安裝在`${user.dir}/crx-quickstart`中，其中`${user.dir}`為目前的工作目錄，此crx-quickstart路徑稱為`sling.home`
 
-* 前後關聯根目錄是war檔案名稱，例如，  `aem-6`
+* 內容根目錄是war檔案名稱，例如`aem-6`
 
 #### 設定 {#configuration}
 
 您可以透過下列方式變更預設行為：
 
-* 執行模式：設定 `sling.run.modes` 中的引數 `WEB-INF/web.xml` 部署前AEM war檔案的檔案
+* 執行模式：部署前在AEM war檔案的`WEB-INF/web.xml`檔案中設定`sling.run.modes`引數
 
-* sling.home：設定 `sling.home` 中的引數 `WEB-INF/web.xml`部署前AEM war檔案的檔案
+* sling.home：在部署前設定AEM war檔案的`WEB-INF/web.xml`檔案中的`sling.home`引數
 
 * 內容根目錄：重新命名AEM war檔案
 
-#### 發佈安裝 {#publish-installation}
+#### Publish安裝 {#publish-installation}
 
 若要部署發佈執行個體，您必須將執行模式設定為發佈：
 
@@ -74,8 +74,8 @@ AEM會以單一war檔案的形式進行部署。
 
 若要檢查是否已安裝all，您可以：
 
-* 追蹤 `error.log`檔案以檢視是否已安裝所有內容
-* 檢視 `/system/console` 已安裝所有組合
+* 追蹤`error.log`檔案以檢視是否已安裝所有內容
+* 檢視`/system/console`所有套件組合均已安裝
 
 #### 同一應用程式伺服器上的兩個執行個體 {#two-instances-on-the-same-application-server}
 
@@ -87,7 +87,7 @@ AEM會以單一war檔案的形式進行部署。
 1. 將sling.run.modes變更為針對發佈執行個體發佈。
 1. 重新封裝web.xml檔案。
 1. 重新命名war檔案，使其名稱不同。 例如，一個重新命名為aemauthor.war，另一個重新命名為aempublish.war。
-1. 使用較高的記憶體設定。 例如，預設AEM執行個體使用 `-Xmx3072m`
+1. 使用較高的記憶體設定。 例如，預設AEM執行個體使用`-Xmx3072m`
 1. 部署兩個網頁應用程式。
 1. 部署後，請停止兩個Web應用程式。
 1. 在製作和發佈執行個體中，都會確保在sling.properties檔案中，屬性felix.service.urlhandlers=false設為false （預設為設為true）。
@@ -97,7 +97,7 @@ AEM會以單一war檔案的形式進行部署。
 
 ### WebSphere® 8.5 {#websphere}
 
-部署前請閱讀 [一般說明](#general-description) 以上。
+在部署之前，請閱讀上述[一般說明](#general-description)。
 
 **伺服器準備**
 
@@ -105,7 +105,7 @@ AEM會以單一war檔案的形式進行部署。
 
    * 讓AEM驗證使用者身份的一種方法是停用WebSphere®伺服器的全域管理安全性，若要這樣做：請移至[安全性] > [全域安全性]，然後取消勾選[啟用管理安全性]核取方塊，儲存並重新啟動伺服器。
 
-* 設定 `"JAVA_OPTS= -Xmx2048m"`
+* 設定`"JAVA_OPTS= -Xmx2048m"`
 * 如果您要使用內容根目錄= /安裝AEM，請變更現有預設Web應用程式的內容根目錄。
 
 **部署AEM Web應用程式**
@@ -126,15 +126,15 @@ AEM會以單一war檔案的形式進行部署。
 
 #### JBoss® EAP 6.3.0/6.4.0 {#jboss-eap}
 
-部署前請閱讀 [一般說明](#general-description) 以上。
+在部署之前，請閱讀上述[一般說明](#general-description)。
 
 **準備JBoss®伺服器**
 
-在conf檔案中設定記憶體引數(例如， `standalone.conf`)
+在您的conf檔案中設定記憶體引數（例如，`standalone.conf`）
 
 * JAVA_OPTS=&quot;-Xms64m -Xmx2048m&quot;
 
-如果您使用部署掃描器來安裝AEM Web應用程式，則增加 `deployment-timeout,` 針對該集合 `deployment-timeout` 屬性(例如： `configuration/standalone.xml)`：
+如果您使用部署 — 掃描器來安裝AEM Web應用程式，則增加執行個體xml檔案中設定`deployment-timeout`屬性的`deployment-timeout,`可能是好事(例如，`configuration/standalone.xml)`：
 
 ```xml
 <subsystem xmlns="urn:jboss:domain:deployment-scanner:1.1">
@@ -150,30 +150,30 @@ AEM會以單一war檔案的形式進行部署。
 
 #### oracleWebLogic 12.1.3/12.2 {#oracle-weblogic}
 
-部署前請閱讀 [一般說明](#general-description) 以上。
+在部署之前，請閱讀上述[一般說明](#general-description)。
 
 這會使用僅含管理伺服器的簡單伺服器配置。
 
 **WebLogic伺服器準備**
 
-* 在 `${myDomain}/config/config.xml`新增至security-configuration區段：
+* 在`${myDomain}/config/config.xml`中，新增至安全性設定區段：
 
-   * `<enforce-valid-basic-auth-credentials>false</enforce-valid-basic-auth-credentials>` 檢視於 [https://xmlns.oracle.com/weblogic/domain/1.0/domain.xsd](https://xmlns.oracle.com/weblogic/domain/1.0/domain.xsd) 正確位置（預設情況下，將其定位在截面末尾是ok）
+   * `<enforce-valid-basic-auth-credentials>false</enforce-valid-basic-auth-credentials>`在[https://xmlns.oracle.com/weblogic/domain/1.0/domain.xsd](https://xmlns.oracle.com/weblogic/domain/1.0/domain.xsd)上檢視正確的位置（根據預設，將其定位在區段結尾即可）
 
 * 增加VM記憶體設定：
 
-   * open `${myDomain}/bin/setDomainEnv.cmd` (resp .sh)搜尋WLS_MEM_ARGS，設定，例如，設定 `WLS_MEM_ARGS_64BIT=-Xms256m -Xmx2048m`
+   * 開啟`${myDomain}/bin/setDomainEnv.cmd` (resp .sh)搜尋WLS_MEM_ARGS，設定，例如，設定`WLS_MEM_ARGS_64BIT=-Xms256m -Xmx2048m`
    * 重新啟動WebLogic Server
 
-* 在中建立 `${myDomain}` 套件資料夾和cq資料夾內及Plan資料夾內
+* 在`${myDomain}`中建立套件資料夾，並在cq資料夾內和計畫資料夾中建立
 
 **部署AEM Web應用程式**
 
 * 下載AEM war檔案
 * 將AEM war檔案放入${myDomain}/packages/cq資料夾
-* 在中進行設定 `WEB-INF/web.xml` 如有需要（請參閱上述「一般說明」）
+* 如有需要，請在`WEB-INF/web.xml`中進行設定（請參閱上方的一般說明）
 
-   * 解壓縮 `WEB-INF/web.xml`檔案
+   * 解壓縮`WEB-INF/web.xml`檔案
    * 將sling.run.modes引數變更為發佈
    * 取消註解sling.home初始引數並視需要設定此路徑（請參閱一般說明）
    * 重新封裝web.xml檔案
@@ -181,22 +181,22 @@ AEM會以單一war檔案的形式進行部署。
 * 將AEM war檔案部署為應用程式（對於其他設定，請使用預設設定）
 * 安裝可能需要一些時間……
 * 檢查安裝是否已如一般說明中所述完成（例如，追蹤error.log）
-* 您可以在WebLogic中Web應用程式的「組態」標籤中變更前後關聯根目錄 `/console`
+* 您可以在WebLogic `/console`中Web應用程式的[組態]索引標籤中變更內容根目錄
 
 #### Tomcat 8/8.5 {#tomcat}
 
-部署前請閱讀 [一般說明](#general-description) 以上。
+在部署之前，請閱讀上述[一般說明](#general-description)。
 
 * **準備Tomcat伺服器**
 
    * 增加VM記憶體設定：
 
-      * 在 `bin/catalina.bat` (resp `catalina.sh` 在UNIX®上)新增下列設定：
+      * 在`bin/catalina.bat` (UNIX®上代表`catalina.sh`)中新增下列設定：
       * `set "JAVA_OPTS= -Xmx2048m`
 
-   * Tomcat在安裝時不會啟用管理員或管理員存取權。 因此，您必須手動編輯 `tomcat-users.xml` 若要允許這些帳戶的存取：
+   * Tomcat在安裝時不會啟用管理員或管理員存取權。 因此，您必須手動編輯`tomcat-users.xml`以允許這些帳戶的存取權：
 
-      * 編輯 `tomcat-users.xml` 以包含「管理員」和「管理員」的存取權。 設定看起來應該類似下列範例：
+      * 編輯`tomcat-users.xml`以包含管理員和管理員的存取權。 設定看起來應該類似下列範例：
 
         ```xml
         <?xml version='1.0' encoding='utf-8'?>
@@ -223,7 +223,7 @@ AEM會以單一war檔案的形式進行部署。
 
      `webapps/manager/WEB-INF/web.xml`
 
-     並將max-file-size和max-request-size增加到至少500MB，請參閱以下內容 `multipart-config` 此類的範例 `web.xml` 檔案。
+     並將max-file-size和max-request-size增加到至少500MB，請參閱下列`multipart-config`此類`web.xml`檔案的範例。
 
      ```xml
      <multipart-config>

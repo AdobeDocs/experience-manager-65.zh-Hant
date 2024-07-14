@@ -17,9 +17,9 @@ ht-degree: 1%
 
 # 參考自適應表單片段{#reference-adaptive-form-fragments}
 
-[最適化表單片段](../../forms/using/adaptive-form-fragments.md) 是一組欄位，或包含一組欄位的面板，您可以在建立表單時使用這些欄位。 它可讓您輕鬆快速地建立表單。 您可以使用側邊欄中的資產瀏覽器將最適化表單片段拖放到表單中，也可以在表單編輯器中編輯它。
+[最適化表單片段](../../forms/using/adaptive-form-fragments.md)是一組欄位，或是包含您建立表單時可使用的一組欄位的面板。 它可讓您輕鬆快速地建立表單。 您可以使用側邊欄中的資產瀏覽器將最適化表單片段拖放到表單中，也可以在表單編輯器中編輯它。
 
-對於適用性表單作者，參考片段提供在 [AEM Forms附加元件套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en). 其包含下列片段：
+對於適用性表單作者，[AEM Forms附加元件套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en)中提供參考片段。 其包含下列片段：
 
 * 地址
 * 連絡資訊
@@ -32,7 +32,7 @@ ht-degree: 1%
 * 條款與條件
 * 條款與條件含草稿
 
-安裝套件時，會在Forms和檔案下方建立包含參考片段的參考片段資料夾。 如需安裝套裝，請參閱 [如何使用套件](/help/sites-administering/package-manager.md).
+安裝套件時，會在Forms和檔案下方建立包含參考片段的參考片段資料夾。 若要安裝封裝，請參閱[如何使用封裝](/help/sites-administering/package-manager.md)。
 
 ![列出所有片段](assets/ootb-frags.png)
 
@@ -40,7 +40,7 @@ ht-degree: 1%
 
 包含欄位以指定郵寄地址。 可用欄位包括街道地址、郵遞區號、城市、州和國家/地區。 其中也包含預先設定的Web服務，可填入指定之美國郵遞區號的城市和州。
 
-![地址片段](assets/address.png)
+![位址片段](assets/address.png)
 
 <!--[Click to enlarge
 
@@ -50,7 +50,7 @@ ht-degree: 1%
 
 包含擷取電話號碼和電子郵件地址的欄位。
 
-![聯絡資訊片段](assets/contact-info.png)
+![連絡資訊片段](assets/contact-info.png)
 
 <!--[Click to enlarge
 
@@ -65,7 +65,7 @@ ht-degree: 1%
 
 包含擷取目前僱用詳細資料的欄位，例如僱用狀態、僱用欄位、指定、組織和加入日期。
 
-![目前就業片段](assets/current-emp.png)
+![目前的僱用片段](assets/current-emp.png)
 
 <!--[Click to enlarge
 
@@ -85,7 +85,7 @@ ht-degree: 1%
 
 包含擷取僱用歷史記錄的欄位。 可新增多個組織。
 
-![僱用歷史記錄片段](assets/emp-history.png)
+![僱用記錄片段](assets/emp-history.png)
 
 <!--[Click to enlarge
 
@@ -125,7 +125,7 @@ ht-degree: 1%
 
 指定使用者在提交表單前接受和簽署的條款與條件。
 
-![條款與條件含草稿](assets/tnc-scribble.png)
+![含草寫字的條款與條件](assets/tnc-scribble.png)
 
 <!--[Click to enlarge
 

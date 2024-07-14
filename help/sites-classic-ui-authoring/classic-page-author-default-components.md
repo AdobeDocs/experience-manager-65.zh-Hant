@@ -19,7 +19,7 @@ ht-degree: 1%
 
 # 元件{#components}
 
-Adobe Experience Manager (AEM)隨附多種現成可用的元件，提供網站作者完整的功能。 它們可用於 [編輯頁面](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md) 及會依主要功能區域（即元件群組）分組，以協助篩選。
+Adobe Experience Manager (AEM)隨附多種現成可用的元件，提供網站作者完整的功能。 在[編輯頁面](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md)時，這些元件可供使用，並且依主要功能區域（即元件群組）分組，以協助篩選。
 
 >[!CAUTION]
 >
@@ -33,12 +33,12 @@ Adobe Experience Manager (AEM)隨附多種現成可用的元件，提供網站�
 
 * [用於頁面編寫的元件](/help/sites-classic-ui-authoring/classic-page-author-edit-mode.md)
 
-  用來建立標準頁面內容的元件主要包含在群組中 **一般**， **欄** 和 **Forms**.
+  用於建立標準頁面內容的元件主要包含在群組&#x200B;**一般**、**欄**&#x200B;和&#x200B;**Forms**&#x200B;中。
 
 * [電子商務](/help/commerce/cif-classic/administering/ecommerce.md)
 
-  AEM中的電子商務功能也包含一系列元件，包含在 **商務** 群組。 實際使用情形取決於所使用的商務引擎。
+  AEM中的電子商務功能也包含一系列元件，這些元件包含在&#x200B;**Commerce**&#x200B;群組中。 實際使用情形取決於所使用的商務引擎。
 
 ## 使用設計模式設定元件 {#using-design-mode-to-configure-components}
 
-除了作者可在標準安裝中透過Sidekick存取的元件以外，您也可以使用其他各種元件。 您可以使用 [設計模式](/help/sites-classic-ui-authoring/classic-page-author-design-mode.md#enable-disable-components) 以啟用/停用這些元件及編輯特定元件的引數。
+除了作者可在標準安裝中透過Sidekick存取的元件以外，您也可以使用其他各種元件。 您可以使用[設計模式](/help/sites-classic-ui-authoring/classic-page-author-design-mode.md#enable-disable-components)來啟用/停用這些專案，並編輯特定元件的引數。

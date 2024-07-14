@@ -19,7 +19,7 @@ ht-degree: 1%
 
 AEM Forms提供REST型搜尋API，網頁開發人員可透過此API查詢及擷取符合搜尋條件的一組表單。 您可以使用API來根據各種篩選器搜尋表單。 回應物件包含表單屬性、屬性和轉譯器表單端點。
 
-若要使用REST API搜尋表單，請傳送GET要求至伺服器： `https://'[server]:[port]'/libs/fd/fm/content/manage.json` 並使用如下所述的查詢引數。
+若要使用REST API搜尋表單，請使用下述查詢引數將GET要求傳送至位於`https://'[server]:[port]'/libs/fd/fm/content/manage.json`的伺服器。
 
 ## 查詢引數 {#query-parameters}
 
@@ -30,30 +30,30 @@ AEM Forms提供REST型搜尋API，網頁開發人員可透過此API查詢及擷�
    <td><strong>說明<br /> </strong></td>
   </tr>
   <tr>
-   <td>函式<br /> </td>
-   <td><p>指定要呼叫的函式。 若要搜尋表單，請設定 <code>func </code>歸因至 <code>searchForms</code>.</p> <p>例如， <code class="code">
+   <td>func<br /> </td>
+   <td><p>指定要呼叫的函式。 若要搜尋表單，請將<code>func </code>屬性的值設定為<code>searchForms</code>。</p> <p>例如， <code class="code">
        URLParameterBuilder entityBuilder=new URLParameterBuilder ();
-       entityBuilder.add("func", "searchForms");</code></p> <p><strong>注意：</strong> <em>此引數為必要項。</em><br /> </p> </td>
+       entityBuilder.add("func", "searchForms");</code></p> <p><strong>注意：</strong> <em>此引數為必要引數。</em><br /> </p> </td>
   </tr>
   <tr>
-   <td>apppath<br /> </td>
+   <td>appPath<br /> </td>
    <td><p>指定要搜尋表單的應用程式路徑。 依預設，appPath屬性會搜尋根節點層級的所有可用應用程式。<br /> </p> <p>您可以在單一搜尋查詢中指定多個應用程式路徑。 請使用垂直號(|)分隔多個路徑。 </p> </td>
   </tr>
   <tr>
    <td>剪下點<br /> </td>
-   <td><p>指定要與資產一起擷取的屬性。 您可以使用星號(*)一次擷取所有屬性。 使用垂直號(|)運運算元指定多個屬性。 </p> <p>例如， <code>cutPoints=propertyName1|propertyName2|propertyName3</code></p> <p><strong>注意</strong>： </p>
+   <td><p>指定要與資產一起擷取的屬性。 您可以使用星號(*)一次擷取所有屬性。 使用垂直號(|)運運算元指定多個屬性。 </p> <p>例如， <code>cutPoints=propertyName1|propertyName2|propertyName3</code></p> <p><strong>附註</strong>： </p>
     <ul>
      <li><em>系統一律會擷取ID、路徑和名稱等屬性。 </em></li>
      <li><em>每個資產都有不同的屬性集。 formUrl、pdfUrl和guideUrl等屬性不依賴於cutpoints屬性。 這些屬性視資產型別而定，系統會據以擷取。 </em></li>
     </ul> </td>
   </tr>
   <tr>
-   <td>關係<br /> </td>
+   <td>關聯<br /> </td>
    <td>指定要與搜尋結果一起擷取的相關資產。 您可以選擇下列其中一個選項來擷取相關資產：
     <ul>
-     <li><strong>NO_RELATION</strong>：請勿擷取相關資產。</li>
-     <li><strong>立即</strong>：擷取與搜尋結果直接相關的資產。</li>
-     <li><strong>全部</strong>：擷取直接和間接相關的資產。</li>
+     <li><strong>NO_RELATION</strong>：不擷取相關資產。</li>
+     <li><strong>IMMEDIATE</strong>：擷取與搜尋結果直接相關的資產。</li>
+     <li><strong>ALL</strong>：擷取直接和間接相關的資產。</li>
     </ul> </td>
   </tr>
   <tr>
@@ -76,8 +76,8 @@ AEM Forms提供REST型搜尋API，網頁開發人員可透過此API查詢及擷�
        statement.put("value", "SimpleSurveyAF");
        statement.put("operator", "EQ"); statementArray.put(statement);</code></p> <p>在上述範例中， </p>
     <ul>
-     <li><strong>名稱</strong>：指定要搜尋的屬性名稱。</li>
-     <li><strong>值</strong>：指定要搜尋的屬性值。</li>
+     <li><strong>name</strong>：指定要搜尋的屬性名稱。</li>
+     <li><strong>value</strong>：指定要搜尋的屬性值。</li>
      <li><strong>運運算元</strong>：指定搜尋時要套用的運運算元。 支援下列運運算元：
       <ul>
        <li>EQ — 等於 </li>
@@ -96,7 +96,7 @@ AEM Forms提供REST型搜尋API，網頁開發人員可透過此API查詢及擷�
     </ul> </td>
   </tr>
   <tr>
-   <td>排序<br /> </td>
+   <td>訂購<br /> </td>
    <td><p>指定搜尋結果的順序條件。 條件會以JSON格式定義。 您可以在多個欄位上排序搜尋結果。 結果會依查詢中欄位的出現順序排序。</p> <p>例如，</p> <p>若要擷取依標題屬性遞增順序排序的查詢結果，請新增下列引數： </p> <p><code class="code">JSONArray orderingsArray=new JSONArray();
        JSONObject orderings=new JSONObject();
        orderings.put("name", "title");
@@ -104,8 +104,8 @@ AEM Forms提供REST型搜尋API，網頁開發人員可透過此API查詢及擷�
        orderingsArray.put(orderings);
        entityBuilder.add("orderings", orderingsArray.toString());</code></p>
     <ul>
-     <li><strong>名稱</strong>：指定用來排序搜尋結果的屬性名稱。</li>
-     <li><strong>條件</strong>：指定結果的順序。 order屬性接受下列值：
+     <li><strong>name</strong>：指定要用來排序搜尋結果的屬性名稱。</li>
+     <li><strong>criteria</strong>：指定結果的順序。 order屬性接受下列值：
       <ul>
        <li>ASC — 使用ASC以遞增順序排列結果。<br /> </li>
        <li>DES — 使用DES以遞減順序排列結果。</li>
@@ -114,7 +114,7 @@ AEM Forms提供REST型搜尋API，網頁開發人員可透過此API查詢及擷�
   </tr>
   <tr>
    <td>includeXdp</td>
-   <td>指定是否要擷取二進位內容。 此 <code>includeXdp</code> 屬性適用於以下型別的資產： <code>FORM</code>， <code>PDFFORM</code>、和 <code>PRINTFORM</code>.</td>
+   <td>指定是否要擷取二進位內容。 <code>includeXdp</code>屬性適用於<code>FORM</code>、<code>PDFFORM</code>和<code>PRINTFORM</code>型別的資產。</td>
   </tr>
   <tr>
    <td>assetType</td>

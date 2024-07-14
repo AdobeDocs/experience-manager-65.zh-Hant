@@ -18,7 +18,7 @@ ht-degree: 1%
 
 ## 何謂艱難的第2天 {#what-is-tough-day}
 
-「艱難第2天」應用程式可讓您對AEM執行個體的限制進行壓力測試。 您可以立即使用預設的測試套件執行此檔案，也可以根據您的測試需求進行設定。 您可以觀看 [此錄製](https://experienceleague.adobe.com/docs/events/experience-manager-gems-recordings/gems2017/aem-toughday2-stress-testing-benchmarking-tool.html) 以取得應用程式的簡報。
+「艱難第2天」應用程式可讓您對AEM執行個體的限制進行壓力測試。 您可以立即使用預設的測試套件執行此檔案，也可以根據您的測試需求進行設定。 您可以觀看[此錄製](https://experienceleague.adobe.com/docs/events/experience-manager-gems-recordings/gems2017/aem-toughday2-stress-testing-benchmarking-tool.html)的應用程式簡報。
 
 >[!CAUTION]
 >
@@ -26,13 +26,13 @@ ht-degree: 1%
 
 ## 如何執行艱難的第2天 {#how-to-run-tough-day}
 
-從以下網站下載最新版《艱難第2天》： [Adobe存放庫](https://repo1.maven.org/maven2/com/adobe/qe/toughday2/). 下載應用程式後，您可以提供 `host` 引數。 在以下範例中，AEM執行個體會在本機執行，因此 `localhost` 使用的值：
+從[Adobe存放庫](https://repo1.maven.org/maven2/com/adobe/qe/toughday2/)下載最新版的「困難第2天」。 下載應用程式後，您可以提供`host`引數，立即執行。 在下列範例中，AEM執行個體在本機執行，因此使用`localhost`值：
 
 ```xml
 java -jar toughday2.jar --host=localhost
 ```
 
-新增引數後執行的預設套裝命名為 `toughday`. 它包含下列使用案例：
+新增引數後執行的預設套裝名為`toughday`。 它包含下列使用案例：
 
 * 為其建立頁面和即時副本（包括轉出）
 * 取得首頁
@@ -42,7 +42,7 @@ java -jar toughday2.jar --host=localhost
 
 該套裝包含15%的寫入動作和85%的讀取動作。
 
-若要執行套裝測試，「艱難第2天」將會安裝其預設內容套件。 可藉由設定 `installsamplecontent`引數至 `false`，但請記住，您也應該變更要執行測試的預設路徑。 如果jar是在沒有引數的情況下執行，「第2天」會顯示 [說明資訊](/help/sites-developing/tough-day.md#getting-help).
+若要執行套裝測試，「艱難第2天」將會安裝其預設內容套件。 您可以將`installsamplecontent`引數設定為`false`來避免此情況，但請記住，您也應該變更要執行之測試的預設路徑。 如果jar是在沒有引數的情況下執行，「艱難第2天」會顯示[說明資訊](/help/sites-developing/tough-day.md#getting-help)。
 
 一般而言，您可以遵循此模式來使用應用程式：
 
@@ -93,22 +93,22 @@ java -jar toughday2.jar --help_full
    <td> </td>
   </tr>
   <tr>
-   <td> —help —runmode/publishmode type=&lt;mode&gt;</td>
+   <td> —help —runmode/publishmode type=&lt;Mode&gt;</td>
    <td>列出有關指定執行或發佈模式的資訊。</td>
    <td><p>Java™ -jar toughday2.jar —help —runmode type=constantload</p> <p>Java™ -jar toughday2.jar —help —publishmode type=intervals</p> </td>
   </tr>
   <tr>
-   <td>—help —suite=&lt;suitename&gt;</td>
+   <td>—help —suite=&lt;SuiteName&gt;</td>
    <td>列出指定套裝的所有測試及其各自的可設定屬性。</td>
    <td><br /> Java™ -jar toughday2.jar —help —suite=get_tests</td>
   </tr>
   <tr>
-   <td> —help —tag=&lt;tag&gt;</td>
+   <td> —help —tag=&lt;Tag&gt;</td>
    <td><br /> 列出具有指定標籤的所有專案。</td>
    <td>Java™ -jar toughday2.jar —help —tag=publish</td>
   </tr>
   <tr>
-   <td> — 說明 &lt;testclass publisherclass=""&gt;</td>
+   <td>—help &lt;TestClass/PublisherClass&gt;</td>
    <td><br /> 列出指定測試或發佈程式的所有可設定屬性。</td>
    <td><p>Java™ -jar toughday2.jar —help UploadPDFTest</p> <p>Java™ -jar toughday2.jar —help CSVPublisher</p> </td>
   </tr>
@@ -133,7 +133,7 @@ java -jar toughday2.jar --host=host --protocol=https --port=4502 --duration=30m 
 | `--port=<Val>` | 主機的連線埠。 | 4502 |  |
 | `--user=<Val>` | 執行個體的使用者名稱。 | 管理員 |  |
 | `--password=<Val>` | 指定使用者的密碼。 | 管理員 |  |
-| `--duration=<Val>` | 測試的持續時間。 可以表達為 **s**&#x200B;秒， **m**&#x200B;分鐘數， **h**&#x200B;我們的，以及 **d**&#x200B;天。 | 1d |  |
+| `--duration=<Val>` | 測試的持續時間。 可以表示為&#x200B;**秒**&#x200B;秒、**分鐘**&#x200B;分鐘、**小時**&#x200B;小時和&#x200B;**天**&#x200B;天。 | 1d |  |
 | `--timeout=<Val>` | 測試會在中斷並標籤為失敗之前執行多久。 以秒為單位表示。 | 180 |  |
 | `--suite=<Val>` | 該值可為預先定義的測試套裝的一個或清單（以逗號分隔）。 | toughday |  |
 | `--configfile=<Val>` | 目標yaml設定檔。 |  |  |
@@ -143,13 +143,13 @@ java -jar toughday2.jar --host=host --protocol=https --port=4502 --duration=30m 
 
 ## 自訂 {#customizing}
 
-可透過兩種方式實現自訂：命令列引數或yaml組態檔。 **設定檔案用於大型自訂套件，可覆寫「艱難第2天」預設引數。 命令列引數會覆寫組態檔和預設引數。**
+可透過兩種方式實現自訂：命令列引數或yaml組態檔。 **組態檔用於大型自訂套裝，且會覆寫「艱難第2天」預設引數。 命令列引數會覆寫組態檔和預設引數。**
 
 儲存測試設定的唯一方法是以yaml格式複製它。
 
 ### 新增測試 {#adding-a-new-test}
 
-如果您不想使用預設值 `toughday` 套件：您可以使用 `add` 引數。 以下範例說明如何新增 `CreateAssetTreeTest` 使用命令列引數或yaml組態檔進行測試。
+如果您不想使用預設的`toughday`套件，可以使用`add`引數新增您選擇的測試。 以下範例說明如何使用命令列引數或yaml組態檔來新增`CreateAssetTreeTest`測試。
 
 使用命令列引數：
 
@@ -192,7 +192,7 @@ tests:
 
 ### 變更測試屬性 {#changing-the-test-properties}
 
-如果您需要變更一個或多個測試屬性，可以將該屬性新增到命令列或yaml組態檔。 若要檢視所有可用的測試屬性，請新增 `--help <TestClass/PublisherClass>` 引數到命令列，例如：
+如果您需要變更一個或多個測試屬性，可以將該屬性新增到命令列或yaml組態檔。 若要檢視所有可用的測試屬性，請將`--help <TestClass/PublisherClass>`引數加入命令列，例如：
 
 ```xml
 java -jar toughday2.jar --help CreatePageTreeTest
@@ -200,7 +200,7 @@ java -jar toughday2.jar --help CreatePageTreeTest
 
 請記住，yaml組態檔將覆寫「Touch Day 2」預設引數，而命令列引數將覆寫組態檔和預設值。
 
-以下範例說明如何變更 `template` 的屬性 `CreatePageTreeTest` 使用命令列引數或yaml組態檔進行測試。
+以下範例說明如何使用命令列引數或yaml組態檔來變更`CreatePageTreeTest`測試的`template`屬性。
 
 使用命令列引數：
 
@@ -223,7 +223,7 @@ tests:
 
 以下範例說明如何將測試新增至預先定義的套裝，以及如何重新設定並從預先定義的套裝中排除現有的測試。
 
-您可以使用將測試新增至預先定義的套件 `add` 引數並指定目標預先定義的套件。
+您可以使用`add`引數並指定目標預先定義套件，來新增測試至預先定義的套件。
 
 使用命令列引數：
 
@@ -241,9 +241,9 @@ tests:
   - add : CreatePageTreeTest
 ```
 
-指定套件中的現有測試也可以使用重新設定 `config`* *引數。 同時指定套裝名稱和測試的實際名稱（而不是「測試類別」名稱）。 您可以在以下位置找到測試名稱： `name` 測試類別的屬性。 如需如何尋找測試屬性的詳細資訊，請參閱 [變更測試屬性](/help/sites-developing/tough-day.md#changing-the-test-properties) 區段。
+指定套件中的現有測試也可以使用`config`* *引數重新設定。 同時指定套裝名稱和測試的實際名稱（而不是「測試類別」名稱）。 您可以在測試類別的`name`屬性中找到測試名稱。 如需如何尋找測試屬性的詳細資訊，請閱讀[變更測試屬性](/help/sites-developing/tough-day.md#changing-the-test-properties)區段。
 
-在以下範例中，的預設資產標題 `CreatePageTreeTest` (已命名 `UploadAsset`)變更為「NewAsset」。
+在下列範例中，`CreatePageTreeTest` （名為`UploadAsset`）的預設資產標題已變更為「NewAsset」。
 
 使用命令列引數：
 
@@ -263,7 +263,7 @@ tests:
       title : NewAsset
 ```
 
-此外，您也可以使用，從預設設定中移除預先定義的套裝或發佈程式測試。 `exclude` 引數。 同時指定套裝名稱和測試的實際名稱（不是測試C） `lass` 名稱)。 您可以在以下位置找到測試名稱： `name` 測試類別的屬性。 在以下範例中， `CreatePageTreeTest` (已命名 `UploadAsset`)測試已從toughday套裝中移除。
+此外，您也可以使用`exclude`引數，從預設設定中移除預先定義的套裝或發行者測試。 同時指定套件名稱和測試的實際名稱（不是測試C `lass`名稱）。 您可以在測試類別的`name`屬性中找到測試名稱。 在下列範例中，`CreatePageTreeTest` （名為`UploadAsset`）測試已從toughday套件中移除。
 
 使用命令列引數：
 
@@ -283,13 +283,13 @@ tests:
 
 ### 執行模式 {#run-modes}
 
-強悍的第2天可以下列其中一個模式執行： **一般** 和 **恆定負載**.
+強韌第2天可以下列其中一個模式執行： **正常**&#x200B;和&#x200B;**持續負載**。
 
-此 **一般** 執行模式有兩個引數：
+**一般**&#x200B;執行模式有兩個引數：
 
 * `concurrency` - concurrency代表「艱難第2天」將為測試執行建立的對話串數目。 在這些執行緒上，將會執行測試，直到持續時間耗盡或沒有更多要執行的測試為止。
 
-* `waittime`  — 相同執行緒上兩個連續測試執行之間的等待時間。 值必須以毫秒為單位表示。
+* `waittime` — 相同執行緒上兩個連續測試執行之間的等待時間。 值必須以毫秒為單位表示。
 
 以下範例說明如何使用命令列新增引數：
 
@@ -306,13 +306,13 @@ runmode:
   concurrency : 200
 ```
 
-此 **恆定負載** 執行模式與一般執行模式不同，會產生固定數量的已啟動測試執行，而不是固定數量的執行緒。 您可以使用同名的執行模式引數來設定負載。
+**固定負載**&#x200B;執行模式與一般執行模式不同，因為它會產生固定數目的已啟動測試執行，而不是固定數目的執行緒。 您可以使用同名的執行模式引數來設定負載。
 
 ### 測試選取範圍 {#test-selection}
 
-兩種執行模式的測試選取程式都相同，如下所示：所有測試都有 `weight` 屬性，判斷執行緒中執行的可能性。 例如，如果您有兩個測試，一個具有5的權重，另一個具有10的權重，則後者比前者執行的可能性高兩倍。
+兩種執行模式的測試選取程式都相同，其順序如下：所有測試都有`weight`屬性，此屬性決定執行緒中執行的可能性。 例如，如果您有兩個測試，一個具有5的權重，另一個具有10的權重，則後者比前者執行的可能性高兩倍。
 
-此外，測試可以有 `count` 屬性，將執行次數限制在給定數字。 通過此數字後，不會再執行測試。 所有已在執行的測試執行個體都會依照設定完成執行。 下列範例說明如何在命令列或使用yaml組態檔新增這些引數。
+此外，測試可以有`count`屬性，這會將執行數量限製為給定數字。 通過此數字後，不會再執行測試。 所有已在執行的測試執行個體都會依照設定完成執行。 下列範例說明如何在命令列或使用yaml組態檔新增這些引數。
 
 ```xml
 java -jar toughday2.jar --host=localhost --add CreateAssetTreeTest weight=5 --add CreatePageTreeTest weight=10 count=100 --runmode=normal concurrency=20
@@ -333,7 +333,7 @@ java -jar toughday2.jar --host=localhost --add CreateAssetTreeTest weight=5 --ad
 
 >[!NOTE]
 >
->由於平行執行，實際測試執行次數不會完全符合中設定的數量。 `count` 引數。 預期與執行中執行緒數量成比例的偏差(由 `concurrency parameter`)。
+>由於平行執行，實際測試回合數不會完全等於`count`引數中設定的數量。 預期與執行中執行緒數目成比例的偏差（由`concurrency parameter`控制）。
 
 ### 試執行 {#dry-run}
 
@@ -349,36 +349,36 @@ java -jar toughday2.jar --host=localhost --suite=toughday --add CreatePageTreeTe
 
 ### 測試量度 {#test-metrics}
 
-「艱難第2天」目前報告九個您可以評估的測試量度。 包含的量度 **&#42;** 符號只會在成功執行後報告：
+「艱難第2天」目前報告九個您可以評估的測試量度。 具有&#x200B;**&#42;**&#x200B;符號的量度只有在成功執行後才會報告：
 
 | **名稱** | **說明** |
 |---|---|
 | 時間戳記 | 上次完成的測試回合的時間戳記。 |
 | 已通過 | 成功執行的次數。 |
 | 已失敗 | 失敗的執行次數。 |
-| 最小值&#42; | 測試執行的最短持續時間。 |
+| 最小&#42; | 測試執行的最短持續時間。 |
 | 最大&#42; | 測試執行的最長持續時間。 |
-| 中間值&#42; | 計算的所有測試執行的中位數持續時間。 |
+| 中位數&#42; | 計算的所有測試執行的中位數持續時間。 |
 | 平均&#42; | 所有測試執行的計算平均持續時間。 |
 | StdDev&#42; | 標準差。 |
 | 90p&#42; | 第90個百分位數。 |
 | 99p&#42; | 第99個百分位數。 |
-| 99.9便士&#42; | 99.9百分位數。 |
+| 99.9p&#42; | 99.9百分位數。 |
 | 實際輸送量&#42; | 執行次數除以經過的執行時間。 |
 
-這些量度是在發行者的協助下撰寫，可透過以下方式新增： `add` 引數（與新增測試類似）。 目前有兩個選項：
+這些量度是在發行者的協助下撰寫，發行者可以使用`add`引數新增（類似於新增測試）。 目前有兩個選項：
 
-* **CSVPublisher**  — 輸出為CSV檔案。
-* **ConsolePublish**  — 主控台中會顯示輸出。
+* **CSVPublisher** — 輸出為CSV檔案。
+* **ConsolePublisher** — 主控台中會顯示輸出。
 
 依預設，兩個發佈程式都會啟用。
 
 此外，有兩種模式可報告量度：
 
-* 此 **簡單** 發佈模式 — 報告從執行開始到發佈時的結果。
-* 此 **間隔** 發佈模式 — 在指定的時間範圍內報告結果。 您可以使用以下設定時間範圍 **間隔** 發佈模式引數。
+* **簡單**&#x200B;發佈模式 — 報告從執行開始到發佈時的結果。
+* **間隔**&#x200B;發佈模式 — 在指定的時間範圍內報告結果。 您可以使用&#x200B;**間隔**&#x200B;發佈模式引數來設定時間範圍。
 
-下列範例顯示如何設定 `intervals` 引數，可在命令列上使用，或使用yaml組態檔案使用。
+下列範例說明如何在命令列或使用yaml組態檔來設定`intervals`引數。
 
 使用命令列引數：
 
@@ -403,7 +403,7 @@ publishmode:
 * **toughday.log**：包含與應用程式狀態、偵錯資訊和全域訊息相關的訊息。
 * **toughday_&lt;testname>.log**：與指定測試相關的訊息。
 
-不會覆寫記錄，後續執行會將訊息附加至現有記錄。 記錄有數個層級，如需詳細資訊，請參閱 [loglevel引數。](#global-parameters).
+不會覆寫記錄，後續執行會將訊息附加至現有記錄。 記錄有數個層級，如需詳細資訊，請參閱[loglevel引數。](#global-parameters)。
 
 <!--
 #### Example Usage {#example-usage}

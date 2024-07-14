@@ -18,11 +18,11 @@ ht-degree: 0%
 
 # 建立HTML5表單的自訂設定檔 {#creating-a-custom-profile-for-html-forms}
 
-設定檔是中的資源節點 [Apache Sling](https://sling.apache.org/). 它代表HTML5表單轉譯服務的自訂版本。 您可以使用HTML5表單轉譯服務來自訂HTML5表單的外觀、行為和互動。 設定檔節點存在於中 `/content` JCR存放庫中的資料夾。 您可以將節點直接放在 `/content` 資料夾或任何子資料夾 `/content` 資料夾。
+設定檔是[Apache Sling](https://sling.apache.org/)中的資源節點。 它代表HTML5表單轉譯服務的自訂版本。 您可以使用HTML5表單轉譯服務來自訂HTML5表單的外觀、行為和互動。 設定檔節點存在於JCR存放庫的`/content`資料夾中。 您可以直接將節點放在`/content`資料夾或`/content`資料夾的任何子資料夾下。
 
-設定檔節點具有 **sling：resourceSuperType** 屬性且預設值為 **xfaforms/profile**. 節點的轉譯器指令碼位於/libs/xfaforms/profile。
+設定檔節點具有&#x200B;**sling：resourceSuperType**&#x200B;屬性，預設值為&#x200B;**xfaforms/profile**。 節點的轉譯器指令碼位於/libs/xfaforms/profile。
 
-Sling指令碼是JSP指令碼。 這些JSP指令碼可當作容器，用來將請求表單的HTML與必要的JS / CSS成品放在一起。 這些Sling指令碼也稱為 **設定檔轉譯器指令碼**. 設定檔轉譯器會呼叫Forms OSGi服務來轉譯請求的表單。
+Sling指令碼是JSP指令碼。 這些JSP指令碼可當作容器，用來將請求表單的HTML與必要的JS / CSS成品放在一起。 這些Sling指令碼也稱為&#x200B;**設定檔轉譯器指令碼**。 設定檔轉譯器會呼叫Forms OSGi服務來轉譯請求的表單。
 
 針對GET和POST要求，設定檔指令碼位於html.jsp和html.POST.jsp中。 您可以複製和修改一或多個檔案，以覆寫和新增自訂。 請勿進行任何就地變更，修補程式更新會覆寫此類變更。
 
@@ -58,28 +58,28 @@ footer.jsp模組是空的。 它可讓您新增僅用於使用者互動的指令
 
 ### 建立設定檔節點 {#create-profile-node}
 
-1. 導覽至CRX DE介面的URL： `https://'[server]:[port]'/crx/de` 並使用管理員認證登入介面。
+1. 導覽至URL為`https://'[server]:[port]'/crx/de`的CRX DE介面，並使用系統管理員認證登入介面。
 
-1. 在左窗格中，導覽至該位置 */content/xfaforms/profiles*.
+1. 在左窗格中，導覽至位置&#x200B;*/content/xfaforms/profiles*。
 
-1. 複製節點預設值，並將節點貼到不同的資料夾(*/content/profiles*)名稱 *hrform*.
+1. 複製節點預設值，並將節點貼到名稱為&#x200B;*hrform*&#x200B;的不同資料夾(*/content/profiles*)中。
 
-1. 選取新節點， *hrform*，並新增字串屬性： *sling：resourceType* 含值： *hrform/demo*.
+1. 選取新節點&#x200B;*hrform*，然後新增字串屬性： *sling：resourceType*，值為： *hrform/demo*。
 
 1. 按一下工具列功能表中的「儲存全部」以儲存變更。
 
 ### 建立設定檔轉譯器指令碼 {#create-the-profile-renderer-script}
 
-建立自訂設定檔後，將轉譯器資訊新增到此設定檔。 在收到新設定檔的請求時，CRX會驗證/apps資料夾是否存在要轉譯的JSP頁面。 在/apps資料夾中建立JSP頁面。
+建立自訂設定檔後，將轉譯器資訊新增到此設定檔。 在收到新設定檔的請求時，CRX會驗證/apps資料夾是否存在，以便JSP頁面進行轉譯。 在/apps資料夾中建立JSP頁面。
 
-1. 在左窗格中，導覽至 `/apps` 資料夾。
-1. 用滑鼠右鍵按一下 `/apps` 資料夾並選擇以名稱建立資料夾 **hrform**.
-1. 內部人員 **hrform** 資料夾建立名為的資料夾 **示範**.
-1. 按一下 **全部儲存** 按鈕。
-1. 瀏覽至 `/libs/xfaforms/profile/html.jsp` 並複製節點 **html.jsp**.
-1. 貼上 **html.jsp** 將節點移入 `/apps/hrform/demo` 上面建立的相同名稱資料夾 **html.jsp** 並按一下 **儲存**.
+1. 在左窗格中，導覽至`/apps`資料夾。
+1. 在`/apps`資料夾上按一下滑鼠右鍵，然後選擇建立名稱為&#x200B;**hrform**&#x200B;的資料夾。
+1. **hrform**&#x200B;資料夾的內部人員建立名為&#x200B;**demo**&#x200B;的資料夾。
+1. 按一下&#x200B;**儲存全部**&#x200B;按鈕。
+1. 導覽至`/libs/xfaforms/profile/html.jsp`並複製節點&#x200B;**html.jsp**。
+1. 將&#x200B;**html.jsp**&#x200B;節點貼到上面建立的`/apps/hrform/demo`資料夾中（具有相同名稱&#x200B;**html.jsp**），然後按一下&#x200B;**儲存**。
 1. 如果您有任何其他設定檔指令碼元件，請依照步驟1-6複製/apps/hrform/demo資料夾中的元件。
 
 1. 若要確認設定檔已建立，請開啟URL `https://'[server]:[port]'/content/xfaforms/profiles/hrform.html`
 
-若要驗證您的表單， [匯入您的表單](/help/forms/using/get-xdp-pdf-documents-aem.md) 從您的本機檔案系統移至AEM Forms和 [預覽表單](/help/forms/using/previewing-forms.md) 在AEM伺服器編寫執行個體上。
+若要驗證您的表單，請[將表單從本機檔案系統匯入](/help/forms/using/get-xdp-pdf-documents-aem.md)到AEM Forms，並在AEM伺服器作者執行個體上[預覽表單](/help/forms/using/previewing-forms.md)。

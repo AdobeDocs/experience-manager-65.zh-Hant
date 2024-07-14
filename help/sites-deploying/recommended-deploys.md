@@ -21,7 +21,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->本頁介紹AEM的建議拓撲。 如需有關叢集功能以及如何設定這些功能的詳細資訊，請參閱 [Apache Sling Discovery API檔案](https://sling.apache.org/documentation/bundles/discovery-api-and-impl.html).
+>本頁介紹AEM的建議拓撲。 如需叢集功能以及如何設定它們的詳細資訊，請參閱[Apache Sling Discovery API檔案](https://sling.apache.org/documentation/bundles/discovery-api-and-impl.html)。
 
 從AEM 6.2開始，MicroKernels會充當持續性管理員。選擇符合您需求的部署型別，取決於執行個體的用途以及您考慮的部署型別。
 
@@ -71,19 +71,19 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如需有關如何使用TarMK冷待命設定AEM的詳細資訊，請參閱 [此](/help/sites-deploying/tarmk-cold-standby.md) 文章。
+>如需有關如何設定AEM與TarMK冷待命的詳細資訊，請參閱[此](/help/sites-deploying/tarmk-cold-standby.md)文章。
 
 >[!NOTE]
 >
->這個TarMK範例中的「冷待命」部署要求主要執行個體和待命執行個體必須分別授權，因為容錯移轉伺服器會持續進行復寫。 如需有關授權的詳細資訊，請參閱 [Adobe一般授權條款](https://www.adobe.com/legal/terms/enterprise-licensing.html).
+>這個TarMK範例中的「冷待命」部署要求主要執行個體和待命執行個體必須分別授權，因為容錯移轉伺服器會持續進行復寫。 如需有關授權的詳細資訊，請參閱[Adobe一般授權條款](https://www.adobe.com/legal/terms/enterprise-licensing.html)。
 
 ### TarMK陣列 {#tarmk-farm}
 
-多個Oak執行個體會分別執行一個TarMK執行個體。 TarMK存放庫是獨立的，需要保持同步。
+多個Oak執行個體使用一個TarMK執行個體來執行。 TarMK存放庫是獨立的，需要保持同步。
 
-由於製作伺服器會向每個伺服器陣列成員發佈相同的內容，因此可以保持存放庫同步。 如需詳細資訊，請參閱 [復寫](/help/sites-deploying/replication.md).
+由於製作伺服器會向每個伺服器陣列成員發佈相同的內容，因此可以保持存放庫同步。 如需詳細資訊，請參閱[復寫](/help/sites-deploying/replication.md)。
 
-對於AEM Communities，絕不會復寫使用者產生的內容(UGC)。 如需在TarMK伺服器陣列上支援UGC的相關資訊，請參閱 [AEM Communities的考量事項](#considerations-for-aem-communities).
+對於AEM Communities，絕不會復寫使用者產生的內容(UGC)。 如需在TarMK伺服器陣列上支援UGC，請參閱AEM Communities的[考量事項](#considerations-for-aem-communities)。
 
 **這是發佈環境的預設部署。**
 
@@ -110,9 +110,9 @@ ht-degree: 0%
 
 * 在某些情況下，效能可能會低於使用TarMK
 
-### Oak Cluster搭配跨多個資料中心的MongoMK容錯移轉 {#oak-cluster-with-mongomk-failover-across-multiple-datacenters}
+### 在多個資料中心間執行MongoMK容錯移轉的Oak叢集 {#oak-cluster-with-mongomk-failover-across-multiple-datacenters}
 
-此方法表示多個Oak執行個體可跨多個資料中心存取MongoDB復本集，實際為AEM製作環境建立主動 — 主動式叢集。 MongoDB復寫功能擁有多個資料中心，可提供相同的高可用性和備援能力，但現已具備處理資料中心中斷的能力。
+此方法表示多個Oak執行個體可跨多個資料中心存取MongoDB復本集，實際為AEM製作環境建立主動 — 主動叢集。 MongoDB復寫功能擁有多個資料中心，可提供相同的高可用性和備援能力，但現已具備處理資料中心中斷的能力。
 
 ![oakclustermongofailover2資料中心](assets/oakclustermongofailover2datacenters.png)
 
@@ -123,11 +123,11 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->在上圖中，AEM Server 3和AEM Server 4呈現非使用中狀態，假設資料中心2的AEM伺服器與資料中心1的MongoDB主要節點之間的網路延遲高於記錄要求 [此處](/help/sites-deploying/aem-with-mongodb.md#checklists). 如果最大延遲與需求相容（例如透過使用可用性區域），則資料中心2中的AEM伺服器也可以作用中，以建立跨多個資料中心作用中的AEM叢集。
+>在上圖中，假設資料中心2的AEM伺服器與資料中心1的MongoDB主要節點之間的網路延遲高於記錄[此處](/help/sites-deploying/aem-with-mongodb.md#checklists)的需求，AEM Server 3和AEM Server 4會顯示非使用中狀態。 如果最大延遲與需求相容（例如透過使用可用性區域），則資料中心2中的AEM伺服器也可以作用中，以建立跨多個資料中心作用中的AEM叢集。
 
 >[!NOTE]
 >
->如需本節所述之MongoDB架構概念的其他資訊，請參閱 [MongoDB復寫](https://docs.mongodb.org/manual/replication/).
+>如需本節中說明的MongoDB架構概念的其他資訊，請參閱[MongoDB復寫](https://docs.mongodb.org/manual/replication/)。
 
 ## 微核心：要使用哪一個 {#microkernels-which-one-to-use}
 
@@ -135,7 +135,7 @@ ht-degree: 0%
 
 您可以使用這些決策矩陣來建立適合您需求的最佳部署型別。
 
-Adobe強烈建議TarMK作為客戶在所有部署案例(AEM製作和發佈執行個體除外)中使用的預設持續性技術。
+Adobe強烈建議TarMK作為客戶在所有部署案例(AEM Author和Publish例項除外)中使用的預設持續性技術。
 
 ### 在製作執行個體上選擇AEM MongoMK而非TarMK的例外情況 {#exceptions-for-choosing-aem-mongomk-over-tarmk-on-author-instances}
 
@@ -151,7 +151,7 @@ Adobe強烈建議TarMK作為客戶在所有部署案例(AEM製作和發佈執行
 
 >[!NOTE]
 >
->在部署硬體組態的情況下，可使用嚴苛日來評估客戶應用程式的效能。 有關此工具的詳細資訊 [此處](/help/sites-developing/tough-day.md).
+>在部署硬體組態的情況下，可使用嚴苛日來評估客戶應用程式的效能。 [此處](/help/sites-developing/tough-day.md)提供此工具的詳細資訊。
 
 使用MongoDB的最低部署通常涉及以下拓撲：
 
@@ -164,11 +164,11 @@ Adobe強烈建議TarMK作為客戶在所有部署案例(AEM製作和發佈執行
 
 如果在部署的前18個月中不符合上述標準，建議先使用TarMK部署AEM，稍後當上述標準適用時，再重新評估您的設定，最後決定是否留在TarMK上或移轉至MongoMK。
 
-### 在發佈執行個體上選擇AEM MongoMK而非TarMK的例外情況 {#exceptions-for-choosing-aem-mongomk-over-tarmk-on-publish-instances}
+### 在Publish執行個體上選擇AEM MongoMK而非TarMK的例外情況 {#exceptions-for-choosing-aem-mongomk-over-tarmk-on-publish-instances}
 
 不建議為發佈執行個體部署MongoMK。 部署的發佈層級幾乎總是部署為執行TarMK的完全獨立發佈執行個體的陣列，透過從製作執行個體複製內容來保持同步。 這種「不共用」的架構適用於發佈執行個體，可讓發佈層的部署以線性方式水準擴展。 陣列拓撲還提供以滾動方式套用任何更新或升級至發佈執行個體的優點，因此對發佈層級的任何變更不需要任何停機時間。
 
-當有多個發佈者時，這不適用於在發佈層上使用叢集的AEM Communities。 若選擇JSRP (請參閱 [社群內容儲存](/help/communities/working-with-srp.md))，則MongoMK叢集將是合適的，就像任何已選擇MK （例如MongoDB或RDB）的發佈端叢集一樣。
+當有多個發佈者時，這不適用於在發佈層上使用叢集的AEM Communities。 若選擇JSRP （請參閱[社群內容儲存體](/help/communities/working-with-srp.md)），則MongoMK叢集會很合適，不論選擇哪個MK （例如MongoDB或RDB），任何發佈端叢集都一樣。
 
 ### 使用MongoMK部署AEM時的先決條件和Recommendations {#prerequisites-and-recommendations-when-deploying-aem-with-mongomk}
 
@@ -176,27 +176,27 @@ Adobe強烈建議TarMK作為客戶在所有部署案例(AEM製作和發佈執行
 
 **MongoDB部署的必要先決條件：**
 
-1. MongoDB部署架構和規模調整必須是專案實作的一部分，並需要熟悉AEM的Adobe諮詢或MongoDB架構師的協助；
+1. 在熟悉AEM的Adobe Consulting或MongoDB架構師的協助下，MongoDB部署架構和規模調整必須是專案實作的一部分；
 1. 合作夥伴或客戶團隊必須具備MongoDB專業知識，才能有信心維持及維護現有或新的MongoDB環境；
 1. 您可以選擇部署商業或開放原始碼版本的MongoDB (AEM同時支援兩者)，但必須直接從MongoDB Inc購買MongoDB維護和支援合約；
 1. 整體AEM和MongoDB架構和基礎架構應由AdobeAEM架構師妥善定義和驗證；
 1. 檢閱包含MongoDB的AEM部署的支援模型。
 
-**MongoDB部署的強大建議：**
+**MongoDB部署的Strong建議：**
 
-* 請參閱Adobe Experience Manager的MongoDB [文章](https://www.mongodb.com/lp/contact/mongodb-adobe-experience-manager)；
-* 檢閱MongoDB生產環境 [檢查清單](https://docs.mongodb.org/manual/administration/production-checklist/)；
-* 參加線上提供的MongoDB認證課程 [此處](https://university.mongodb.com/).
+* 請參閱Adobe Experience Manager [文章](https://www.mongodb.com/lp/contact/mongodb-adobe-experience-manager)的MongoDB；
+* 檢閱MongoDB生產[檢查清單](https://docs.mongodb.org/manual/administration/production-checklist/)；
+* 在[這裡](https://university.mongodb.com/)的MongoDB上參加認證課程。
 
 >[!NOTE]
 >
->如需這些指引、必要條件和Recommendations相關的所有其他問題，請聯絡我們 [Adobe客戶服務](https://helpx.adobe.com/tw/marketing-cloud/contact-support.html).
+>如需這些准則、先決條件和建議的所有其他問題，請連絡[Adobe客戶服務](https://helpx.adobe.com/tw/marketing-cloud/contact-support.html)。
 
 ### AEM Communities的考量事項 {#considerations-for-aem-communities}
 
-針對計畫部署的網站 [AEM Communities](/help/communities/overview.md)，建議 [選擇部署](/help/communities/working-with-srp.md#characteristicsofstorageoptions) 針對處理發佈環境中社群成員張貼的UGC而最佳化。
+針對計畫部署[AEM Communities](/help/communities/overview.md)的網站，建議[選擇針對處理社群成員從發佈環境張貼的UGC而最佳化的部署](/help/communities/working-with-srp.md#characteristicsofstorageoptions)。
 
-藉由使用 [公用存放區](/help/communities/working-with-srp.md)，作者和其他發佈執行個體之間不需要復寫UGC，就能取得UGC的一致檢視。
+使用[通用存放區](/help/communities/working-with-srp.md)，就不需要在作者與其他發佈執行個體之間復寫UGC，即可取得UGC的一致檢視。
 
 以下是一組決策矩陣，可協助您為部署選擇最佳型別的持續性：
 
@@ -210,7 +210,7 @@ Adobe強烈建議TarMK作為客戶在所有部署案例(AEM製作和發佈執行
 
 >[!NOTE]
 >
->MongoDB是協力廠商軟體，不包含在AEM授權套件中。 如需詳細資訊，請參閱 [MongoDB授權原則](https://www.mongodb.org/about/licensing/) 頁面。
+>MongoDB是協力廠商軟體，不包含在AEM授權套件中。 如需詳細資訊，請參閱[MongoDB授權原則](https://www.mongodb.org/about/licensing/)頁面。
 >
 >為了充分利用AEM部署，Adobe建議授權MongoDB企業版，以享受專業支援。
 >
@@ -218,4 +218,4 @@ Adobe強烈建議TarMK作為客戶在所有部署案例(AEM製作和發佈執行
 >
 >如果您想要在MongoDB上同時執行author和publish，則需要購買兩個不同的授權。
 >
->如需詳細資訊，請參閱 [適用於Adobe Experience Manager的MongoDB頁面](https://www.mongodb.com/lp/contact/mongodb-adobe-experience-manager).
+>如需詳細資訊，請參閱[適用於Adobe Experience Manager的MongoDB頁面](https://www.mongodb.com/lp/contact/mongodb-adobe-experience-manager)。

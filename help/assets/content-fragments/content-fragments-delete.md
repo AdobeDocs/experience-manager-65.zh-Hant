@@ -22,25 +22,25 @@ ht-degree: 9%
 
 關於刪除許可權，內容片段必須考量為兩個層級：
 
-1. **作為單一實體的內容片段。**
+1. **內容片段為單一實體。**
 
-   * **使用案例**：需要編輯/更新內容片段的使用者 —  **並刪除整個片段**.
-   * **許可權**：此 [刪除](/help/sites-administering/security.md#actions) 許可權可以是 [透過使用者和/或群組管理指派](/help/sites-administering/security.md#managing-permissions).
+   * **使用案例**：需要編輯/更新內容片段的使用者 — **並刪除整個片段**。
+   * **許可權**： [Delete](/help/sites-administering/security.md#actions)許可權可以透過使用者和/或群組管理](/help/sites-administering/security.md#managing-permissions)進行[指派。
 
 2. **構成內容片段的多個子實體；例如，變化、子節點。**
 
    內容片段編輯器的基本操作需要可以刪除此類暫時性子元素。 例如，操控變數時；編輯中繼資料或管理關聯內容時，也可以。
 
-   * **使用案例**：需要編輯/更新內容片段的使用者 —  **不允許刪除整個片段**.
-   * **許可權**：請參閱 [僅編輯器功能所需的許可權](#permissions-required-for-editor-functionality-only).
+   * **使用案例**：需要編輯/更新內容片段的使用者 — **不允許刪除整個片段**。
+   * **許可權**：請參閱[僅編輯器功能所需的許可權](#permissions-required-for-editor-functionality-only)。
 
 >[!NOTE]
 >
->當使用者沒有任何 [刪除](/help/sites-administering/security.md#actions) 許可權，內容片段編輯器的運作方式 *唯讀* 模式。
+>當使用者沒有任何[刪除](/help/sites-administering/security.md#actions)許可權時，內容片段編輯器會以&#x200B;*唯讀*&#x200B;模式運作。
 
 >[!NOTE]
 >
->另請參閱 [如何在AEM中稽核使用者管理作業](/help/sites-administering/audit-user-management-operations.md).
+>另請參閱[如何在AEM](/help/sites-administering/audit-user-management-operations.md)中稽核使用者管理作業。
 
 ## 僅編輯器功能所需的許可權 {#permissions-required-for-editor-functionality-only}
 
@@ -50,9 +50,9 @@ ht-degree: 9%
 
 >[!NOTE]
 >
->編輯/更新內容片段所需的刪除許可權包含在刪除許可權中 [透過使用者和/或群組管理指派](/help/sites-administering/security.md#managing-permissions).
+>編輯/更新內容片段所需的刪除許可權包含在透過使用者和/或群組管理](/help/sites-administering/security.md#managing-permissions)指派的「刪除」許可權[中。
 
-編輯/更新片段所需的許可權需要套用至包含內容片段的節點或適當的父節點（在下的任何層級）。 `/content/dam`)。 指派給此類父節點時，許可權將套用至該分支內的所有節點。
+編輯/更新片段所需的許可權需要套用至包含內容片段的節點或適當的父節點（`/content/dam`下的任何層級）。 指派給此類父節點時，許可權將套用至該分支內的所有節點。
 
 例如，將儲存所有內容片段的資料夾，例如：
 
@@ -60,9 +60,9 @@ ht-degree: 9%
 
 >[!CAUTION]
 >
->設定許可權： `/content/dam` 也是可能的，因為所有內容片段都儲存在這裡。
+>在`/content/dam`上設定許可權也是可能的，因為所有內容片段都儲存在這裡。
 >
->不過，此動作會將相同的刪除許可權套用至 *全部* 其他資產型別。
+>不過，此動作也會將相同的刪除許可權套用至&#x200B;*所有*&#x200B;其他資產型別。
 
 允許特定使用者和/或群組編輯/更新內容片段的先決條件許可權為：
 
@@ -74,18 +74,18 @@ ht-degree: 9%
 
    * `jcr:addChildNodes`、`jcr:modifyProperties`
 
-* 對於 `jcr:content`所有內容片段的節點：
+* 針對所有內容片段的`jcr:content`節點：
 
-   * `jcr:addChildNodes`， `jcr:modifyProperties` 和 `jcr:removeChildNodes`
+   * `jcr:addChildNodes`、`jcr:modifyProperties`和`jcr:removeChildNodes`
 
-* 適用於以下所有節點 `jcr:content` 所有內容片段的：
+* 針對所有內容片段的`jcr:content`以下的所有節點：
 
-   * `jcr:addChildNodes`， `jcr:modifyProperties` 和 `jcr:removeChildNodes`， `jcr:removeNode`
+   * `jcr:addChildNodes`、`jcr:modifyProperties`和`jcr:removeChildNodes`、`jcr:removeNode`
 
-這些 `remove` 許可權必須為 [在CRXDE Lite中使用存取控制清單進行管理](/help/sites-administering/user-group-ac-admin.md#access-right-management).
+這些`remove`許可權必須由CRXDE Lite](/help/sites-administering/user-group-ac-admin.md#access-right-management)內的存取控制清單[管理。
 
-此 `add` 和 `modify` 許可權也可以在CRXDE Lite中管理，或使用「使用者管理」主控台進行管理。
+`add`和`modify`許可權也可以在CRXDE Lite中管理，或使用使用者管理主控台。
 
-例如，定義 `remove` 群組的許可權 `content-authors-no-delete`：
+例如，群組`content-authors-no-delete`的`remove`許可權定義：
 
 ![cf-delete-03](assets/cf-delete-03.png)

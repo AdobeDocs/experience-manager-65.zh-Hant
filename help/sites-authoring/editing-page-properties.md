@@ -24,7 +24,7 @@ ht-degree: 3%
 
 * **標題**
 
-  頁面的標題會顯示在各種位置。 例如， **網站** 索引標籤清單和 **網站** 卡片/清單檢視。
+  頁面的標題會顯示在各種位置。 例如，**網站**&#x200B;索引標籤清單和&#x200B;**網站**&#x200B;卡片/清單檢視。
 
   這是必要欄位。
 
@@ -41,27 +41,27 @@ ht-degree: 3%
    * 使用下拉式清單功能，您可以從現有標籤中選取。
    * 當您將滑鼠移到選取方塊中的標籤專案上時，會出現x，可用來為此頁面移除該標籤。
 
-  如需關於標籤的詳細資訊，請參閱 [使用標籤](/help/sites-authoring/tags.md).
+  如需關於標籤的詳細資訊，請參閱[使用標籤](/help/sites-authoring/tags.md)。
 
-* **隱藏導覽**
+* 在導覽中隱藏&#x200B;****
 
   指示在產生的網站頁面導覽中是顯示還是隱藏頁面。
 
-* **品牌化**
+* **品牌**
 
-  藉由將品牌概要附加至每個頁面標題，跨頁面套用一致的品牌識別。 此功能需使用2.14.0版或更新版本的頁面元件， [核心元件。](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)
+  藉由將品牌概要附加至每個頁面標題，跨頁面套用一致的品牌識別。 此功能需要使用2.14.0版或更新版本的[核心元件。](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)的頁面元件
 
-   * **覆寫**  — 勾選以在此頁面上定義品牌概要。
-      * 此值會由任何子頁面繼承，除非這些頁面同時具有 **覆寫** 值已設定。
-   * **覆寫值**  — 要附加至頁面標題的品牌概要文字。
+   * **覆寫** — 檢查以在此頁面上定義品牌概要。
+      * 此值由任何子頁面繼承，除非它們也設定了&#x200B;**覆寫**&#x200B;值。
+   * **覆寫值** — 要附加至頁面標題的品牌概要文字。
       * 此值會附加至頁面標題後的垂直號字元，例如「騎行Tuscany」 | 隨時準備使用WKND」
 * **頁面標題**
 
-  要在頁面上使用的標題。 通常由標題元件使用。 如果為空， **標題** 已使用。
+  要在頁面上使用的標題。 通常由標題元件使用。 如果空白，則使用&#x200B;**標題**。
 
 * **導覽標題**
 
-  您可以指定單獨的標題以用於導覽（例如，如果您想要更精簡的內容）。 如果為空， **標題** 已使用。
+  您可以指定單獨的標題以用於導覽（例如，如果您想要更精簡的內容）。 如果空白，則使用&#x200B;**標題**。
 
 * **子標題**
 
@@ -71,7 +71,7 @@ ht-degree: 3%
 
   頁面的說明、用途或您要新增的任何其他詳細資訊。
 
-* **準時**
+* **開啟時間**
 
   啟動已發佈頁面的日期和時間。 發佈後，此頁面在指定時間之前會一直處於休眠狀態。
 
@@ -87,7 +87,7 @@ ht-degree: 3%
 
   輸入此頁面的虛名URL，此URL可讓您使用較短和/或較具表現力的URL。
 
-  例如，如果虛名URL設為 `welcome`至路徑所識別的頁面 `/v1.0/startpage`適用於網站 `http://example.com,` 則 `http://example.com/welcome`會是虛名URL `http://example.com/content/v1.0/startpage`
+  例如，如果網站`http://example.com,`的虛名URL設定為`welcome`至由路徑`/v1.0/startpage`識別的頁面，則`http://example.com/welcome`將是`http://example.com/content/v1.0/startpage`的虛名URL
 
   >[!CAUTION]
   >
@@ -98,7 +98,7 @@ ht-degree: 3%
   >* 不應設為現有頁面。
   >
 
-  設定Dispatcher以啟用對虛名URL的存取權。 另請參閱 [啟用對虛名URL的存取權](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#enabling-access-to-vanity-urls-vanity-urls) 以取得更多詳細資料。
+  設定Dispatcher以啟用對虛名URL的存取權。 如需詳細資訊，請參閱[啟用對虛名URL的存取權](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#enabling-access-to-vanity-urls-vanity-urls)。
 
 * **重新導向虛名URL**
 
@@ -110,7 +110,7 @@ ht-degree: 3%
 
   頁面語言。
 
-* **語言根目錄**
+* **語言根**
 
   如果頁面是語言副本的根目錄，則必須選取。
 
@@ -120,16 +120,16 @@ ht-degree: 3%
 
 * **Design**
 
-  指出 [設計](/help/sites-developing/designer.md) 用於此頁面。
+  指示要用於此頁面的[設計](/help/sites-developing/designer.md)。
 
 * **別名**
 
   指定要用於此頁面的別名。
 
-   * 例如，如果您定義別名 `private` 針對頁面 `/content/wknd/us/en/magazine/members-only`，則也可以透過存取此頁面 `/content/wknd/us/en/magazine/private`
-   * 建立別名會設定 `sling:alias` 屬性，只會影響資源，不會影響存放庫路徑。
-   * 無法發佈編輯器中以別名存取的頁面。 [發佈選項](/help/sites-authoring/publishing-pages.md) 在編輯器中，僅適用於透過實際路徑存取的頁面。
-   * 如需詳細資訊，請參閱 [根據SEO和URL管理最佳實務提供的本地化頁面名稱](/help/managing/seo-and-url-management.md#localized-page-names).
+   * 例如，如果您為頁面`/content/wknd/us/en/magazine/members-only`定義別名`private`，則也可以透過`/content/wknd/us/en/magazine/private`存取此頁面
+   * 建立別名會設定頁面節點上的`sling:alias`屬性，這只會影響資源，而不會影響存放庫路徑。
+   * 無法發佈編輯器中以別名存取的頁面。 編輯器中的[Publish選項](/help/sites-authoring/publishing-pages.md)僅適用於透過實際路徑存取的頁面。
+   * 如需詳細資訊，請參閱SEO和URL管理最佳實務下的[本地化頁面名稱](/help/managing/seo-and-url-management.md#localized-page-names)。
 
 * **繼承自&lt;*路徑*>**
 
@@ -141,7 +141,7 @@ ht-degree: 3%
 
 * **允許的範本**
 
-  [定義可用的範本清單](/help/sites-authoring/templates.md#allowingatemplate) 在此支行內。
+  [定義此子分支內可用的範本清單](/help/sites-authoring/templates.md#allowingatemplate)。
 
 * **啟用** （驗證需求）
 
@@ -149,14 +149,14 @@ ht-degree: 3%
 
   >[!NOTE]
   >
-  >已關閉的使用者群組定義於 **[許可權](/help/sites-authoring/editing-page-properties.md#permissions)** 標籤。
+  >已關閉的使用者群組定義於&#x200B;**[許可權](/help/sites-authoring/editing-page-properties.md#permissions)**&#x200B;索引標籤上。
 
   >[!CAUTION]
   >
-  >此 **[許可權](/help/sites-authoring/editing-page-properties.md#main-pars-procedure-949394300)** 索引標籤可讓您根據是否存在 `granite:AuthenticationRequired` mixin。 如果頁面許可權是透過已棄用的CUG設定來設定，則會根據是否存在 `cq:cugEnabled` 屬性，下會顯示警告訊息 **驗證需求** 且選項不可編輯，也非 [許可權](/help/sites-authoring/editing-page-properties.md#permissions) 可編輯。
+  >**[許可權](/help/sites-authoring/editing-page-properties.md#main-pars-procedure-949394300)**&#x200B;索引標籤允許根據`granite:AuthenticationRequired` mixin的存在來編輯CUG設定。 如果使用過時的CUG設定來設定頁面許可權，則根據`cq:cugEnabled`屬性的存在，**驗證需求**&#x200B;下會顯示警告訊息，且選項無法編輯，也無法編輯[許可權](/help/sites-authoring/editing-page-properties.md#permissions)。
   >
   >
-  >在這種情況下，必須在中編輯CUG許可權 [傳統UI](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md).
+  >在這種情況下，必須在[傳統UI](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md)中編輯CUG許可權。
 
 * **登入頁面**
 
@@ -190,31 +190,31 @@ ht-degree: 3%
 
 * **社群媒體分享**
 
-  定義頁面上可用的共用選項。 公開可用的選項 [共用核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/sharing.html).
+  定義頁面上可用的共用選項。 公開[共用核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/sharing.html)可用的選項。
 
    * **啟用Facebook的使用者共用**
    * **啟用Pinterest的使用者共用**
-   * **偏好的XF變數**
+   * **偏好的XF變化**
 定義用來產生頁面中繼資料的體驗片段變數
 
 ### 雲端服務 {#cloud-services}
 
 * **Cloud Service**
 
-  定義屬性 [雲端服務](/help/sites-developing/extending-cloud-config.md).
+  定義[雲端服務](/help/sites-developing/extending-cloud-config.md)的屬性。
 
 ### 個人化 {#personalization}
 
 * **ContextHub設定**
 
-  選取 [ContextHub設定](/help/sites-developing/ch-configuring.md) 和 [區段路徑](/help/sites-administering/segmentation.md).
+  選取[ContextHub設定](/help/sites-developing/ch-configuring.md)和[區段路徑](/help/sites-administering/segmentation.md)。
 
-* **目標設定**
+* **目標定位組態**
 
-  選取 [品牌以指定目標定位的範圍](/help/sites-authoring/target-adobe-campaign.md).
+  選取[品牌以指定鎖定目標](/help/sites-authoring/target-adobe-campaign.md)的範圍。
 
   >[!NOTE]
-  >此選項要求使用者帳戶位於 `Target Adminstrators`群組。
+  >此選項要求使用者帳戶必須屬於`Target Adminstrators`群組。
 
 ### 權限 {#permissions}
 
@@ -225,44 +225,44 @@ ht-degree: 3%
    * [新增權限](/help/sites-administering/user-group-ac-admin.md)
    * [編輯已關閉的使用者群組](/help/sites-administering/cug.md#applying-your-closed-user-group-to-content-pages)
 
-   * 檢視 [有效許可權](/help/sites-administering/user-group-ac-admin.md)
+   * 檢視[有效許可權](/help/sites-administering/user-group-ac-admin.md)
 
   >[!CAUTION]
   >
-  >此 **許可權** 索引標籤可讓您根據是否存在 `granite:AuthenticationRequired` mixin。 如果頁面許可權是透過已棄用的CUG設定來設定，則會根據是否存在 `cq:cugEnabled` 屬性，會顯示警告訊息，且CUG許可權無法編輯，也並非上的驗證需求 [進階](/help/sites-authoring/editing-page-properties.md#advanced) 標籤可編輯。
+  >**許可權**&#x200B;索引標籤允許根據`granite:AuthenticationRequired` mixin的存在來編輯CUG設定。 如果使用過時的CUG設定來設定頁面許可權，根據`cq:cugEnabled`屬性的存在，會顯示警告訊息，且CUG許可權無法編輯，[進階](/help/sites-authoring/editing-page-properties.md#advanced)索引標籤上的驗證需求也無法編輯。
   >
   >
-  >在這種情況下，必須在中編輯CUG許可權 [傳統UI](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md).
+  >在這種情況下，必須在[傳統UI](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md)中編輯CUG許可權。
 
   >[!NOTE]
   >
-  >「許可權」標籤不允許建立空的CUG群組，這是拒絕每個使用者存取的簡單方式，十分實用。 要執行此操作，必須使用CRX Explorer。 檢視檔案 [使用者、群組和存取權管理](/help/sites-administering/user-group-ac-admin.md) 以取得詳細資訊。
+  >「許可權」標籤不允許建立空的CUG群組，這是拒絕每個使用者存取的簡單方式，十分實用。 若要這麼做，必須使用CRX Explorer。 如需詳細資訊，請參閱檔案[使用者、群組和存取許可權管理](/help/sites-administering/user-group-ac-admin.md)。
 
 ### 藍圖 {#blueprint}
 
 * **藍圖**
 
-  在中定義Blueprint頁面的屬性 [多網站管理](/help/sites-administering/msm.md). 控制將修改傳播至即時副本的情況。
+  定義[多網站管理](/help/sites-administering/msm.md)中Blueprint頁面的屬性。 控制將修改傳播至即時副本的情況。
 
 ### Live Copy {#live-copy}
 
 * **即時副本**
 
-  在中定義即時副本頁面的屬性 [多網站管理](/help/sites-administering/msm.md). 控制從Blueprint傳播修改的情況。
+  在[多網站管理](/help/sites-administering/msm.md)中定義即時副本頁面的屬性。 控制從Blueprint傳播修改的情況。
 
 ### 網站結構 {#site-structure}
 
-* 提供全網站功能頁面的連結，例如 **註冊頁面**， **離線頁面**，以及其他專案。
+* 提供提供全網站功能頁面的連結，例如&#x200B;**註冊頁面**、**離線頁面**&#x200B;等。
 
 ## 編輯頁面屬性 {#editing-page-properties-1}
 
 您可以定義頁面屬性：
 
-* 從 **網站** 主控台：
+* 從&#x200B;**網站**&#x200B;主控台：
 
    * [建立頁面](/help/sites-authoring/managing-pages.md#creating-a-new-page) （屬性的子集）
 
-   * 按一下或點選 **屬性**
+   * 按一下或點選&#x200B;**屬性**
 
       * 針對單一頁面
       * 針對多個頁面（只有屬性的子集可整體編輯）
@@ -273,11 +273,11 @@ ht-degree: 3%
 
 ### 從Sites Console — 單一頁面 {#from-the-sites-console-single-page}
 
-按一下或點選 **屬性** 若要定義頁面屬性：
+按一下或點選&#x200B;**屬性**&#x200B;以定義頁面屬性：
 
-1. 使用 **網站** 控制檯中，導覽至您要檢視及編輯屬性的頁面位置。
+1. 使用&#x200B;**網站**&#x200B;主控台，導覽至您要檢視及編輯屬性的頁面位置。
 
-1. 選取 **屬性** 選項以供需要的頁面使用：
+1. 使用以下其中一種方式，為必要頁面選取&#x200B;**屬性**&#x200B;選項：
 
    * [快速動作](/help/sites-authoring/basic-handling.md#quick-actions)
    * [選擇模式](/help/sites-authoring/basic-handling.md#selectionmode)
@@ -286,43 +286,43 @@ ht-degree: 3%
 
 1. 視需要檢視或編輯屬性。
 
-1. 然後使用 **儲存** 以儲存您的更新，接著 **關閉** 以便返回主控台。
+1. 然後使用&#x200B;**儲存**&#x200B;儲存您的更新，接著使用&#x200B;**關閉**，以便您可以返回主控台。
 
 ### 編輯頁面時 {#when-editing-a-page}
 
-編輯頁面時，您可以使用 **頁面資訊** 若要定義頁面屬性：
+編輯頁面時，您可以使用&#x200B;**頁面資訊**&#x200B;來定義頁面屬性：
 
 1. 開啟您要編輯屬性的頁面。
 
-1. 選取 **頁面資訊** 圖示以開啟選取功能表：
+1. 選取&#x200B;**頁面資訊**&#x200B;圖示以開啟選取功能表：
 
    ![screen_shot_2018-03-22at095740](assets/screen_shot_2018-03-22at095740.png)
 
-1. 選取 **開啟屬性** 而對話方塊會開啟，供您編輯屬性（依適當的索引標籤排序）。 工具列右側也提供下列按鈕：
+1. 選取&#x200B;**開啟屬性**，並開啟一個對話方塊讓您編輯屬性（依適當的索引標籤排序）。 工具列右側也提供下列按鈕：
 
    * **取消**
    * **儲存並關閉**
 
-1. 使用 **儲存並關閉** 按鈕以儲存變更。
+1. 使用&#x200B;**儲存並關閉**&#x200B;按鈕來儲存變更。
 
 ### 從Sites Console — 多個頁面 {#from-the-sites-console-multiple-pages}
 
-從 **網站** 控制檯中，您可以選取數個頁面，然後使用 **檢視屬性** 以檢視和/或編輯頁面屬性。 這稱為頁面屬性的大量編輯。
+從&#x200B;**網站**&#x200B;主控台，您可以選取數個頁面，然後使用&#x200B;**檢視屬性**&#x200B;來檢視和/或編輯頁面屬性。 這稱為頁面屬性的大量編輯。
 
 >[!NOTE]
 >
->您也可以為資產大量編輯屬性。 兩者相似，但有幾處不同。 另請參閱 [編輯多個資產的屬性](/help/assets/metadata.md) 以取得詳細資訊。
+>您也可以為Assets大量編輯屬性。 兩者相似，但有幾處不同。 如需詳細資訊，請參閱[編輯多個Assets的屬性](/help/assets/metadata.md)。
 >
->此外， [大量編輯器](/help/sites-administering/bulk-editor.md). 此編輯器可讓您使用GQL (Google查詢語言)從多個頁面搜尋內容，然後直接使用大量編輯器編輯內容，再將變更儲存到原始頁面。
+>還有[大量編輯器](/help/sites-administering/bulk-editor.md)。 此編輯器可讓您使用GQL (Google查詢語言)從多個頁面搜尋內容，然後直接使用大量編輯器編輯內容，再將變更儲存到原始頁面。
 
 您可以選取多個頁面以透過各種方法進行大量編輯，包括：
 
-* 瀏覽 **網站** 主控台
-* 使用之後 **搜尋** 尋找一組頁面
+* 瀏覽&#x200B;**網站**&#x200B;主控台時
+* 使用&#x200B;**搜尋**&#x200B;尋找一組頁面之後
 
 ![epp-01](assets/epp-01.png)
 
-選取頁面，然後按一下或點選 **屬性選項**，則會顯示大量屬性：
+選取頁面，然後按一下或點選「**屬性」選項**，就會顯示大量屬性：
 
 ![epp-02](assets/epp-02.png)
 
@@ -355,7 +355,7 @@ ht-degree: 3%
    * 具有共同值的共同屬性
 
       * 在「檢視」模式中只會顯示具有相同值的屬性。
-      * 當欄位有多個值時（例如「標籤」），只有在 *全部* 很常見。 如果只有部分相同，則僅在編輯時顯示。
+      * 當欄位有多個值時（例如Tags），只有在&#x200B;*所有*&#x200B;為通用時，才會顯示值。 如果只有部分相同，則僅在編輯時顯示。
 
   如果沒有任何具有相同值的屬性存在，則會顯示訊息。
 
@@ -365,11 +365,11 @@ ht-degree: 3%
 
    * 您可以更新可用欄位中的值。
 
-      * 當您選取時，新值會套用至所有選取的頁面 **完成**.
+      * 當您選取&#x200B;**完成**&#x200B;時，新值會套用至所有選取的頁面。
       * 當欄位有多個值時（例如「標籤」），您可以附加新值或移除通用值。
 
-   * 如果欄位很常見，但不同頁面中的值不同，則會以特殊值（例如文字）來表示 `<Mixed Entries>`.
+   * 不同頁面中通用但值不同的欄位，會以特殊值（例如文字`<Mixed Entries>`）表示。
 
 >[!NOTE]
 >
->頁面元件可設定為指定可供大量編輯的欄位。 另請參閱 [設定頁面以大量編輯頁面屬性](/help/sites-developing/bulk-editing.md).
+>頁面元件可設定為指定可供大量編輯的欄位。 請參閱[設定頁面以大量編輯頁面屬性](/help/sites-developing/bulk-editing.md)。

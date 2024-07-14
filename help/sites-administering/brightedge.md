@@ -63,10 +63,10 @@ ht-degree: 2%
 啟動BrightEdge設定以在發佈執行個體上復寫它，並啟用已發佈頁面與BrightEdge服務互動。
 
 1. 在邊欄上，按一下「網站」，然後瀏覽並選取您與BrightEdge設定相關聯的頁面。
-1. 按一下「發佈」圖示，然後按一下「發佈」。
+1. 按一下Publish圖示，然後按一下Publish。
 
    ![chlimage_1-7](assets/chlimage_1-7a.png)
 
-1. 在出現的設定清單中，確定已選取您的BrightEdge設定，然後按一下「發佈」。
+1. 在顯示的設定清單中，確定已選取您的BrightEdge設定，然後按一下Publish。
 
    ![chlimage_1-8](assets/chlimage_1-8a.png)

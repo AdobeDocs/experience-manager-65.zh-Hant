@@ -38,7 +38,7 @@ ht-degree: 21%
 
 >[!NOTE]
 >
->大量編輯也適用於Assets。 兩者非常類似，但僅有少數幾個差異點。 另請參閱 [編輯多個資產的屬性](/help/assets/metadata.md) 以取得完整資訊。 您可以使用來自訂資產的大量中繼資料編輯器中的欄位 [結構描述編輯器](/help/assets/metadata-schemas.md).
+>大量編輯也適用於Assets。 兩者非常類似，但僅有少數幾個差異點。 如需完整資訊，請參閱[編輯多個Assets的屬性](/help/assets/metadata.md)。 您可以使用[結構描述編輯器](/help/assets/metadata-schemas.md)自訂Assets的大量中繼資料編輯器中的欄位。
 
 ## 啟用欄位 {#enabling-a-field}
 
@@ -54,7 +54,7 @@ ht-degree: 21%
 >* `/libs/granite/ui/components/foundation/form/checkbox`
 >
 
-在頁面元件上啟用欄位(*非* （在範本上）：
+已在頁面元件上啟用欄位（*不在範本上啟用*）：
 
 1. 使用CRXDE Lite（或同等方法）開啟頁面元件。
 
@@ -62,7 +62,7 @@ ht-degree: 21%
 
    >[!NOTE]
    >
-   >此範例假設核心元件已安裝在例項上，若例項搭配We.Retail範例內容執行即是如此。 請參閱 [核心元件檔案](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant) 以取得詳細資訊。
+   >此範例假設核心元件已安裝在例項上，若例項搭配We.Retail範例內容執行即是如此。 如需詳細資訊，請參閱[核心元件檔案](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)。
 
 1. 導覽至 `cq:dialog` 定義內的所需欄位。
 1. 在欄位節點上定義以下屬性：
@@ -71,7 +71,7 @@ ht-degree: 21%
    * **類型**：`Boolean`
    * **值**：`true`
 
-   例如，對於標準頁面 [基礎元件](/help/sites-authoring/default-components-foundation.md)：
+   例如，對於標準頁面[foundation元件](/help/sites-authoring/default-components-foundation.md)：
 
    `/libs/foundation/components/page`
 
@@ -81,13 +81,13 @@ ht-degree: 21%
 
    >[!CAUTION]
    >
-   >您 ***必須*** 不會變更中的任何專案 `/libs` 路徑。
+   >您&#x200B;***必須***&#x200B;不要變更`/libs`路徑中的任何專案。
    >
-   >這是因為 `/libs` 下次升級執行個體時會被覆寫（當您套用hotfix或feature pack時，很可能會被覆寫）。
+   >這是因為下次升級執行個體時，`/libs`的內容會被覆寫（當您套用Hotfix或Feature Pack時，這些內容很可能會被覆寫）。
    >
    >設定和其他變更的建議方法是：
    >
-   >    1. 重新建立所需專案（即存在於中的專案） `/libs`)下 `/apps`
-   >    1. 進行任何變更 `/apps`
+   >    1. 在`/apps`下重新建立必要專案（亦即，它存在於`/libs`中）
+   >    1. 在`/apps`中進行任何變更
 
 1. 選取「**儲存全部**」即可保留您的更新。

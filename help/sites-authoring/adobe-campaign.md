@@ -32,7 +32,7 @@ Adobe Campaign這一組解決方案可讓您跨所有線上及離線管道個人
 * [在AEM中建立Adobe Campaign Forms](/help/sites-authoring/adobe-campaign-forms.md)
 * [鎖定您的Adobe Campaign](/help/sites-authoring/target-adobe-campaign.md)
 
-您之前必須已 [將AEM與Adobe Campaign整合](/help/sites-administering/campaign.md).
+您先前必須已[將AEM與Adobe Campaign](/help/sites-administering/campaign.md)整合。
 
 此外，如果您想要自訂整合，請參閱下列主題：
 

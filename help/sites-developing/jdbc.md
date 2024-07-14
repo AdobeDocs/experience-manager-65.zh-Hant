@@ -20,15 +20,15 @@ ht-degree: 0%
 
 存取外部SQL資料庫，讓您的CQ應用程式可以與資料互動：
 
-1. [建立或取得可匯出JDBC驅動程式套件的OSGi套件](#bundling-the-jdbc-database-driver).
-1. [設定JDBC資料來源集區提供者](#configuring-the-jdbc-connection-pool-service).
-1. [取得資料來源物件，並在您的程式碼中建立連線](#connecting-to-the-database).
+1. [建立或取得匯出JDBC驅動程式套件的OSGi套件](#bundling-the-jdbc-database-driver)。
+1. [設定JDBC資料來源集區提供者](#configuring-the-jdbc-connection-pool-service)。
+1. [取得資料來源物件，並在您的程式碼中建立連線](#connecting-to-the-database)。
 
 ## 整合JDBC資料庫驅動程式 {#bundling-the-jdbc-database-driver}
 
-某些資料庫廠商以OSGi套件組合提供JDBC驅動程式，例如 [MySQL](https://dev.mysql.com/downloads/connector/j/). 如果資料庫的JDBC驅動程式無法做為OSGi套件組合使用，請取得驅動程式JAR並將其包裝在OSGi套件組合中。 組合必須匯出與資料庫伺服器互動所需的套件。 組合也必須匯入它參照的套件。
+某些資料庫廠商以OSGi套件組合提供JDBC驅動程式，例如[MySQL](https://dev.mysql.com/downloads/connector/j/)。 如果資料庫的JDBC驅動程式無法做為OSGi套件組合使用，請取得驅動程式JAR並將其包裝在OSGi套件組合中。 組合必須匯出與資料庫伺服器互動所需的套件。 組合也必須匯入它參照的套件。
 
-以下範例使用 [適用於Maven的套裝外掛程式](https://felix.apache.org/documentation/subprojects/apache-felix-maven-bundle-plugin-bnd.html) 將HSQLDB驅動程式包裝在OSGi套件組合中。 POM會指示外掛程式內嵌識別為相依性的hsqldb.jar檔案。 所有org.hsqldb套裝軟體都會匯出。
+下列範例使用Maven](https://felix.apache.org/documentation/subprojects/apache-felix-maven-bundle-plugin-bnd.html)的[Bundle外掛程式將HSQLDB驅動程式包裝在OSGi套件中。 POM會指示外掛程式內嵌識別為相依性的hsqldb.jar檔案。 所有org.hsqldb套裝軟體都會匯出。
 
 外掛程式會自動決定要匯入哪些套件，並將它們列在套件組合的MANIFEST.MF檔案中。 如果CQ伺服器上沒有任何套裝軟體，安裝時就不會啟動套裝軟體。 兩種可能的解決方案如下：
 
@@ -86,47 +86,47 @@ ht-degree: 0%
 下列連結會開啟某些熱門資料庫產品的下載頁面：
 
 * [Microsoft® SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
-* [oracle](https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html)
+* [Oracle](https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html)
 * [IBM® DB2®](https://www.ibm.com/support/pages/download-db2-fix-packs-version-db2-linux-unix-and-windows)
 
 ### 設定JDBC連線集區服務 {#configuring-the-jdbc-connection-pool-service}
 
 新增使用JDBC驅動程式建立資料來源物件之「JDBC連線集區」服務的組態。 您的應用程式程式碼使用此服務來取得物件並連線到資料庫。
 
-JDBC連線集區( `com.day.commons.datasource.jdbcpool.JdbcPoolService`)為工廠服務。 如果您需要使用不同屬性（例如唯讀或讀取/寫入存取權）的連線，請建立多個組態。
+JDBC連線集區( `com.day.commons.datasource.jdbcpool.JdbcPoolService`)是工廠服務。 如果您需要使用不同屬性（例如唯讀或讀取/寫入存取權）的連線，請建立多個組態。
 
-使用CQ時，有數種方法可管理此類服務的組態設定；請參閱 [設定OSGi](/help/sites-deploying/configuring-osgi.md) 以取得完整詳細資訊。
+使用CQ時，有數種方法可管理此類服務的組態設定；如需完整詳細資訊，請參閱[設定OSGi](/help/sites-deploying/configuring-osgi.md)。
 
-下列屬性可用於設定集區連線服務。 屬性名稱會在Web主控台中顯示。 的對應名稱 `sling:OsgiConfig` 節點會顯示在括弧中。 HSQLDB伺服器和別名為 `mydb`：
+下列屬性可用於設定集區連線服務。 屬性名稱會在Web主控台中顯示。 `sling:OsgiConfig`節點的對應名稱會出現在括弧中。 顯示HSQLDB伺服器和別名為`mydb`之資料庫的範例值：
 
-* JDBC驅動程式類別( `jdbc.driver.class`)：用來實作java.sql.Driver介面的Java™類別，例如， `org.hsqldb.jdbc.JDBCDriver`. 資料型別為 `String`.
+* JDBC驅動程式類別( `jdbc.driver.class`)：用來實作java.sql.Driver介面的Java™類別，例如`org.hsqldb.jdbc.JDBCDriver`。 資料型別為`String`。
 
-* JDBC連線URI ( `jdbc.connection.uri`)：用來建立連線的資料庫URL，例如， `jdbc:hsqldb:hsql//10.36.79.223:9001/mydb`. URL的格式必須適用於java.sql.DriverManager類別的getConnection方法。 資料型別為 `String`.
+* JDBC連線URI ( `jdbc.connection.uri`)：用來建立連線的資料庫URL，例如`jdbc:hsqldb:hsql//10.36.79.223:9001/mydb`。 URL的格式必須適用於java.sql.DriverManager類別的getConnection方法。 資料型別為`String`。
 
-* 使用者名稱( `jdbc.username`)：用來向資料庫伺服器驗證的使用者名稱。 資料型別為 `String`.
+* 使用者名稱( `jdbc.username`)：用來向資料庫伺服器驗證的使用者名稱。 資料型別為`String`。
 
-* 密碼( `jdbc.password`)：用於驗證使用者的密碼。 資料型別為 `String`.
+* 密碼( `jdbc.password`)：用來驗證使用者的密碼。 資料型別為`String`。
 
-* 驗證查詢( `jdbc.validation.query`)：用來驗證連線是否成功的SQL陳述式，例如， `select 1 from INFORMATION_SCHEMA.SYSTEM_USERS`. 資料型別為 `String`.
+* 驗證查詢( `jdbc.validation.query`)：用來驗證連線是否成功的SQL陳述式，例如`select 1 from INFORMATION_SCHEMA.SYSTEM_USERS`。 資料型別為`String`。
 
-* 預設為唯讀(default.readonly)：當您希望連線提供唯讀存取權時，請選取此選項。 資料型別為 `Boolean`.
-* 依預設自動提交( `default.autocommit`)：選取此選項可針對傳送至資料庫的每個SQL命令建立個別的交易，而且會自動認可每個交易。 當您在程式碼中明確確認交易時，請勿選取此選項。 資料型別為 `Boolean`.
+* 預設為唯讀(default.readonly)：當您希望連線提供唯讀存取權時，請選取此選項。 資料型別為`Boolean`。
+* 依預設自動認可( `default.autocommit`)：選取此選項可針對傳送至資料庫的每個SQL命令建立個別交易，且每個交易都會自動認可。 當您在程式碼中明確確認交易時，請勿選取此選項。 資料型別為`Boolean`。
 
-* 集區大小( `pool.size`)：可供資料庫使用的同時連線數目。 資料型別為 `Long`.
+* 集區大小( `pool.size`)：可供資料庫使用的同時連線數目。 資料型別為`Long`。
 
-* 集區等待( `pool.max.wait.msec`)：連線要求逾時之前經過的時間量。 資料型別為 `Long`.
+* 集區等待( `pool.max.wait.msec`)：連線要求逾時之前所經過的時間量。 資料型別為`Long`。
 
-* 資料來源名稱( `datasource.name`)：此資料來源的名稱。 資料型別為 `String`.
+* 資料來源名稱( `datasource.name`)：此資料來源的名稱。 資料型別為`String`。
 
-* 其他服務屬性( `datasource.svc.properties`)：一組您要附加至連線URL的名稱/值組。 資料型別為 `String[]`.
+* 其他服務屬性( `datasource.svc.properties`)：要附加至連線URL的一組名稱/值組。 資料型別為`String[]`。
 
-JDBC連線集區服務是工廠服務。 因此，如果您使用 `sling:OsgiConfig` 節點若要設定連線服務，節點的名稱必須包含工廠服務PID，後面接著 *`-alias`*. 您使用的別名在該PID的所有設定節點中必須是唯一的。 範例節點名稱為 `com.day.commons.datasource.jdbcpool.JdbcPoolService-myhsqldbpool`.
+JDBC連線集區服務是工廠服務。 因此，如果您使用`sling:OsgiConfig`節點來設定連線服務，節點的名稱必須包含工廠服務PID，後面接著&#x200B;*`-alias`*。 您使用的別名在該PID的所有設定節點中必須是唯一的。 範例節點名稱是`com.day.commons.datasource.jdbcpool.JdbcPoolService-myhsqldbpool`。
 
 ![chlimage_1-7](assets/chlimage_1-7a.png)
 
 ### 連線到資料庫 {#connecting-to-the-database}
 
-在您的Java™程式碼中，使用DataSourcePool服務取得 `javax.sql.DataSource` 物件。 DataSourcePool服務提供 `getDataSource` 傳回 `DataSource` 物件做為指定的資料來源名稱。 作為方法引數，請使用資料來源名稱的值(或 `datasource.name`)屬性，指定給JDBC連線集區組態。
+在您的Java™程式碼中，使用DataSourcePool服務取得您建立之組態的`javax.sql.DataSource`物件。 DataSourcePool服務提供傳回指定資料來源名稱`DataSource`物件的`getDataSource`方法。 作為方法引數，請使用您為JDBC連線集區組態指定的資料來源名稱（或`datasource.name`）屬性值。
 
 下列範例JSP程式碼會取得hsqldbds資料來源的執行個體、執行簡單的SQL查詢，並顯示傳回的結果數目。
 

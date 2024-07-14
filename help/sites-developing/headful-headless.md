@@ -46,7 +46,7 @@ AEM 還可用於簡單地管理內容，允許由另一個平台管理內容的�
 
 >[!NOTE]
 >
->當然，您也可以將網路商店 SPA 重新實作為功能完整的 AEM SPA，方法是[使用 AEM SPA 編輯器框架。](/help/sites-developing/spa-walkthrough.md) 如果您已有AEM且想要建立網站商店或其他SPA，建議使用此方法，但此檔案不在此範圍內。
+>當然，您也可以將網路商店 SPA 重新實作為功能完整的 AEM SPA，方法是[使用 AEM SPA 編輯器框架。](/help/sites-developing/spa-walkthrough.md)如果您已有AEM且想要建立網站商店或其他SPA，建議使用此方法，但此檔案無法涵蓋此方法。
 
 ## SPA 整合層級 {#integration-levels}
 

@@ -20,4 +20,4 @@ ht-degree: 3%
 
 >[!CAUTION]
 >
->雖然傳統UI提供佈局容器元件，但只有觸控式UI才支援其完整功能。 另請參閱 [回應式版面](/help/sites-authoring/responsive-layout.md) 如需詳細資訊，請參閱標準制作檔案。
+>雖然傳統UI提供佈局容器元件，但只有觸控式UI才支援其完整功能。 如需詳細資訊，請參閱標準編寫檔案中的[回應式佈局](/help/sites-authoring/responsive-layout.md)。

@@ -30,17 +30,17 @@ ht-degree: 14%
 
 >[!NOTE]
 >
->如果您不熟悉撰寫環境，請前往參閱此檔案。 [基本處理](/help/sites-authoring/basic-handling.md) 和 [製作頁面的快速指南](/help/sites-authoring/qg-page-authoring.md).
+>如果不熟悉編寫環境，請檢視有關[基本處理](/help/sites-authoring/basic-handling.md)的檔案和[編寫頁面的快速指南](/help/sites-authoring/qg-page-authoring.md)。
 
 ## 可用社群元件 {#available-communities-components}
 
 下表列出在元件瀏覽器(sidekick)中啟用時，作者可見的Communities元件。
 
-另請參閱互動式 [社群元件指南](/help/communities/components-guide.md).
+另請參閱互動式[社群元件指南](/help/communities/components-guide.md)。
 
 >[!NOTE]
 >
->讀取 [Communities元件基本知識](/help/communities/basics.md) 因為它包含使用Communities元件製作所需的資訊。
+>閱讀[Communities元件基本知識](/help/communities/basics.md)，因為它包含使用Communities元件編寫所需的資訊。
 
 | **元件標題** | **功能** |
 |---|---|
@@ -48,7 +48,7 @@ ht-degree: 14%
 | 部落格 | [部落格](/help/communities/blog-feature.md) |
 | 部落格則欄 | [部落格](/help/communities/blog-feature.md) |
 | 日曆 | [行事曆](/help/communities/calendar.md) |
-| 評論 | [註解](/help/communities/comments.md) |
+| 評論 | [個註解](/help/communities/comments.md) |
 | 社群活動清單 | [活動趨勢](/help/communities/trends.md) |
 | 社群群組成員清單 | [社群群組](/help/communities/creating-groups.md) |
 | 撰寫訊息 | [傳訊](/help/communities/configure-messaging.md) |
@@ -58,19 +58,19 @@ ht-degree: 14%
 | 關注 | [社交圖](/help/communities/socialgraph.md) |
 | 論壇 | [論壇](/help/communities/forum.md) |
 | 創意力 | [構思](/help/communities/ideation-feature.md) |
-| 排行榜 | [評分和徽章](/help/communities/enabling-leaderboard.md) |
+| 排行榜 | [評分與徽章](/help/communities/enabling-leaderboard.md) |
 | 連結 | [按讚](/help/communities/liking.md) |
 | 訊息 | [傳訊](/help/communities/configure-messaging.md) |
 | 訊息清單 | [傳訊](/help/communities/configure-messaging.md) |
-| QnA | [問題與解答](/help/communities/working-with-qna.md) |
+| QnA | [問題與答案](/help/communities/working-with-qna.md) |
 | 快速搜尋 | [搜尋](/help/communities/search.md) |
 | 評等 | [評等](/help/communities/rating.md) |
-| 相關問題 | [問題與解答](/help/communities/working-with-qna.md) |
-| 評論 | [評論](/help/communities/reviews.md) |
-| 審核摘要 (顯示) | [評論](/help/communities/reviews.md) |
+| 相關問題 | [問題與答案](/help/communities/working-with-qna.md) |
+| 評論 | [個評論](/help/communities/reviews.md) |
+| 審核摘要 (顯示) | [個評論](/help/communities/reviews.md) |
 | 搜尋 | [搜尋](/help/communities/search.md) |
 | 搜尋結果 | [搜尋](/help/communities/search.md) |
-| 社交標籤雲 | [社交標籤雲](/help/communities/tagcloud.md) |
+| 社交標籤雲 | [社交標籤雲端](/help/communities/tagcloud.md) |
 | 投票 | [投票](/help/communities/voting.md) |
 
 >[!NOTE]
@@ -79,8 +79,8 @@ ht-degree: 14%
 
 ## 相關社群檔案 {#related-communities-documentation}
 
-* 造訪 [部署社群](/help/communities/deploy-communities.md) 您可在此處瞭解建議的部署。
+* 請造訪[部署社群](/help/communities/deploy-communities.md)，瞭解建議的部署。
 
-* 造訪 [管理社群網站](/help/communities/administer-landing.md) 瞭解有關建立社群網站、設定社群網站範本、仲裁社群內容、管理成員以及設定傳訊功能的資訊。
+* 請造訪[管理社群網站](/help/communities/administer-landing.md)，瞭解如何建立社群網站、設定社群網站範本、管理社群內容、管理成員，以及設定訊息。
 
-* 造訪 [開發社群](/help/communities/communities.md) 您可在其中瞭解社交元件架構(SCF)及自訂Communities元件和功能。
+* 造訪[開發Communities](/help/communities/communities.md)，瞭解社交元件架構(SCF)和自訂Communities元件和功能。

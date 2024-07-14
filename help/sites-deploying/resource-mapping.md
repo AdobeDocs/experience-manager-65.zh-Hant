@@ -23,10 +23,10 @@ ht-degree: 2%
 
 例如，您可以使用這些對應來：
 
-* 所有請求的前置詞為 `/content` 以便對網站的訪客隱藏內部結構。
-* 定義重新導向，讓所有要求至 `/content/en/gateway` 您的網站頁面會重新導向至 `https://gbiv.com/`.
+* 請在所有要求加上前置詞`/content`，使您的網站訪客無法看見內部結構。
+* 定義重新導向，將網站`/content/en/gateway`頁面的所有要求重新導向至`https://gbiv.com/`。
 
-一個可能的HTTP對應會將所有請求加上前置詞 `localhost:4503` 替換為 `/content`. 類似這樣的對應可用於對網站的訪客隱藏內部結構，因為它允許：
+一個可能的HTTP對應會為所有要求加上前置詞`localhost:4503`和`/content`。 類似這樣的對應可用於對網站的訪客隱藏內部結構，因為它允許：
 
 `localhost:4503/content/we-retail/en/products.html`
 
@@ -34,7 +34,7 @@ ht-degree: 2%
 
 `localhost:4503/we-retail/en/products.html`
 
-由於對應會自動新增前置詞 `/content` 至 `/we-retail/en/products.html`.
+因為對應會自動將前置詞`/content`新增至`/we-retail/en/products.html`。
 
 >[!CAUTION]
 >
@@ -42,17 +42,19 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->請參閱Sling檔案，以及 [資源解析的對應](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html) 和 [資源](https://sling.apache.org/documentation/the-sling-engine/resources.html) 以取得進一步資訊。
+>如需進一步資訊，請參閱Sling檔案以及資源解析](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)和[資源](https://sling.apache.org/documentation/the-sling-engine/resources.html)的[對應。
 
 ## 檢視對應定義 {#viewing-mapping-definitions}
 
 「JCR資源解析器」會評估（由上到下）以尋找相符專案的對應表單兩個清單。
 
-您可以在「 」下方檢視這些清單（連同設定資訊） **JCR ResourceResolver** Felix主控台的選項，例如， `https://<*host*>:<*port*>/system/console/jcrresolver`：
+可以在Felix主控台的&#x200B;**JCR ResourceResolver**&#x200B;選項下檢視這些清單（連同組態資訊）；例如`https://<*host*>:<*port*>/system/console/jcrresolver`：
 
-* 組態顯示目前的組態(為所定義的 [Apache Sling Resource Resolver](/help/sites-deploying/osgi-configuration-settings.md#apacheslingresourceresolver))。
+* 設定
+顯示目前的設定（如[Apache Sling Resource Resolver](/help/sites-deploying/osgi-configuration-settings.md#apacheslingresourceresolver)所定義）。
 
-* 設定測試這可讓您輸入URL或資源路徑。 按一下 **解析** 或 **地圖** 以確認系統如何轉換專案。
+* 設定測試
+這可讓您輸入URL或資源路徑。 按一下**解析**&#x200B;或&#x200B;**對應**&#x200B;以確認系統如何轉換專案。
 
 * **解析器對應專案**
 ResourceResolver.resolve方法用來將URL對應至資源的專案清單。
@@ -62,19 +64,19 @@ ResourceResolver.map方法用來將資源路徑對應至URL的專案清單。
 
 這兩個清單會顯示各種專案，包括應用程式所定義的預設專案。 這些通常旨在簡化使用者的URL。
 
-清單會配對 **圖樣**，和要求相符的規則運算式，具有 **替代方案** 定義要強制的重新導向。
+清單會以&#x200B;**Pattern** （符合要求的規則運算式）與定義要強制重新導向的&#x200B;**Replacement**&#x200B;配對。
 
 例如：
 
-**圖樣** `^[^/]+/[^/]+/welcome$`
+**模式** `^[^/]+/[^/]+/welcome$`
 
 將觸發：
 
-**替代方案** `/libs/cq/core/content/welcome.html`.
+**取代** `/libs/cq/core/content/welcome.html`。
 
 若要重新導向請求：
 
-`https://localhost:4503/welcome` &quot;
+`https://localhost:4503/welcome` »
 
 至：
 
@@ -84,7 +86,7 @@ ResourceResolver.map方法用來將資源路徑對應至URL的專案清單。
 
 >[!NOTE]
 >
->有許多資源可協助說明如何定義規則運算式。 例如， [https://www.regular-expressions.info/](https://www.regular-expressions.info/).
+>有許多資源可協助說明如何定義規則運算式。 例如，[https://www.regular-expressions.info/](https://www.regular-expressions.info/)。
 
 ### 在AEM中建立對應定義 {#creating-mapping-definitions-in-aem}
 
@@ -92,13 +94,13 @@ ResourceResolver.map方法用來將資源路徑對應至URL的專案清單。
 
 `/etc/map/http`
 
-這是定義HTTP通訊協定的對應時使用的結構。 其他資料夾( `sling:Folder`)建立於 `/etc/map` 任何其他要對應的通訊協定。
+這是定義HTTP通訊協定的對應時使用的結構。 可以在`/etc/map`下為您要對應的任何其他通訊協定建立其他資料夾(`sling:Folder`)。
 
 #### 設定內部重新導向至/content {#configuring-an-internal-redirect-to-content}
 
-建立將任何請求前置詞設為https://localhost:4503/的對應： `/content`：
+若要建立以`/content`為任何https://localhost:4503/請求前置詞的對應：
 
-1. 使用CRXDE導覽至 `/etc/map/http`.
+1. 使用CRXDE導覽至`/etc/map/http`。
 
 1. 建立節點：
 
@@ -108,7 +110,7 @@ ResourceResolver.map方法用來將資源路徑對應至URL的專案清單。
    * **名稱** `localhost_any`
 
 1. 按一下&#x200B;**「儲存全部」**。
-1. **新增** 此節點的下列屬性：
+1. **新增**&#x200B;下列屬性至此節點：
 
    * **名稱** `sling:match`
 
@@ -132,8 +134,8 @@ ResourceResolver.map方法用來將資源路徑對應至URL的專案清單。
 
 >[!NOTE]
 >
->另請參閱 [資源](https://sling.apache.org/documentation/the-sling-engine/resources.html) Sling檔案中，以取得有關可用sling屬性及其設定方式的進一步資訊。
+>請參閱Sling檔案中的[資源](https://sling.apache.org/documentation/the-sling-engine/resources.html)，以取得有關可用Sling屬性以及如何設定這些屬性的進一步資訊。
 
 >[!NOTE]
 >
->您可以使用 `/etc/map.publish` 以保留發佈環境的設定。 這些都必須複製，而且新位置( `/etc/map.publish`)設定的 **對應位置** 的 [Apache Sling Resource Resolver](/help/sites-deploying/osgi-configuration-settings.md#apacheslingresourceresolver) 發佈環境的。
+>您可以使用`/etc/map.publish`來儲存發佈環境的設定。 必須復寫這些專案，並為發佈環境的[Apache Sling Resource Resolver](/help/sites-deploying/osgi-configuration-settings.md#apacheslingresourceresolver)的&#x200B;**對應位置**&#x200B;設定新位置(`/etc/map.publish`)。

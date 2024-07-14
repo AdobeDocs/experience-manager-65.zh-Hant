@@ -16,14 +16,14 @@ ht-degree: 30%
 
 # AEM 現代化工具 {#modernization-tools}
 
-[AEM現代化工具](https://opensource.adobe.com/aem-modernize-tools/) 讓您輕鬆轉換：
+[AEM現代化工具](https://opensource.adobe.com/aem-modernize-tools/)可讓您輕鬆轉換：
 
-* [靜態範本](page-templates-static.md) 至 [可編輯的範本](page-templates-editable.md)
-* [設計組態](page-templates-static.md) 至 [原則](page-templates-editable.md)
-* [基礎元件](/help/sites-authoring/default-components-foundation.md) 至 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)
-* [傳統UI](website.md) 至 [觸控式UI](touch-ui-concepts.md)
+* [靜態範本](page-templates-static.md)到[可編輯的範本](page-templates-editable.md)
+* [設計組態](page-templates-static.md)到[原則](page-templates-editable.md)
+* [基礎元件](/help/sites-authoring/default-components-foundation.md)到[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)
+* [傳統UI](website.md)到[觸控式UI](touch-ui-concepts.md)
 
-如需這些工具使用方式的詳細資訊， [請參閱其檔案](https://opensource.adobe.com/aem-modernize-tools/).
+如需這些工具使用方式的詳細資訊，[請參閱其檔案](https://opensource.adobe.com/aem-modernize-tools/)。
 
 >[!NOTE]
 >

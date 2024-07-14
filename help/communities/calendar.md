@@ -26,35 +26,35 @@ ht-degree: 0%
 本檔案的此章節說明
 
 * 將行事曆功能新增到AEM網站
-* 的組態設定 `Calendar` 元件
+* `Calendar`元件的組態設定
 
 ## 新增行事曆至頁面 {#adding-a-calendar-to-a-page}
 
-若要新增 `Calendar` 元件至作者模式下的頁面，請使用元件瀏覽器來尋找
+若要將`Calendar`元件新增至作者模式的頁面，請使用元件瀏覽器來尋找
 
 * `Communities / Calendar`
 
 並將其拖曳到頁面上某個位置，例如與功能相對的位置以供使用者檢閱。
 
-如需必要資訊，請造訪 [Communities元件基本知識](/help/communities/basics.md).
+如需必要資訊，請造訪[社群元件基本知識](/help/communities/basics.md)。
 
-當 [必要的使用者端程式庫](/help/communities/calendar-basics-for-developers.md#essentials-for-client-side) 包含，這就是 `Calendar` 元件出現。
+當包含[必要的使用者端資料庫](/help/communities/calendar-basics-for-developers.md#essentials-for-client-side)時，`Calendar`元件就會以這種方式顯示。
 
-![calendar-component](assets/calendar-component.png)
+![行事曆元件](assets/calendar-component.png)
 
 ### 設定日曆 {#configuring-calendar}
 
-選取已放置的 `Calendar` 元件供您存取及選取 `Configure` 圖示可開啟編輯對話方塊。
+選取置入的`Calendar`元件，以便您可以存取並選取開啟編輯對話方塊的`Configure`圖示。
 
 ![設定](assets/configure-new.png)
 
-![configure-calendar](assets/configure-calendar1.png)
+![設定 — 行事曆](assets/configure-calendar1.png)
 
 #### 設定標籤 {#settings-tab}
 
-在 **設定** 標籤，指定是否允許將標籤套用至行事曆專案。
+在&#x200B;**設定**&#x200B;標籤下，指定是否允許將標籤套用至行事曆專案。
 
-* **每頁事件數**
+* 每頁&#x200B;**個事件**
 
   定義每個頁面顯示的事件數。 預設值為10。
 
@@ -72,7 +72,7 @@ ht-degree: 0%
 
 * **允許標籤**
 
-  如果勾選，則允許成員將標籤新增至他們張貼的事件(請參閱 **標籤欄位** 標籤)。 預設為已核取。
+  如果勾選，則允許成員將標籤新增至他們張貼的事件（請參閱&#x200B;**標籤欄位**&#x200B;標籤）。 預設為已核取。
 
 * **允許檔案上傳**
 
@@ -84,11 +84,11 @@ ht-degree: 0%
 
 * **檔案大小上限**
 
-  只有在 `Allow File Uploads` 已勾選。 此欄位會限制已上傳檔案的大小（以位元組為單位）。 預設值為104857600 (10 Mb)。
+  只有在勾選`Allow File Uploads`時才相關。 此欄位會限制已上傳檔案的大小（以位元組為單位）。 預設值為104857600 (10 Mb)。
 
 * **允許的檔案型別**
 
-  只有在 `Allow File Uploads` 已勾選。 以「點」分隔符號的副檔名清單（以逗號分隔）。 例如，.jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何檔案型別，則無法上傳未指定的檔案型別。 預設為「無」，因此允許所有檔案型別。
+  只有在勾選`Allow File Uploads`時才相關。 以「點」分隔符號的副檔名清單（以逗號分隔）。 例如，.jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何檔案型別，則無法上傳未指定的檔案型別。 預設為「無」，因此允許所有檔案型別。
 
 * **附加影像檔案大小上限**
 
@@ -96,7 +96,7 @@ ht-degree: 0%
 
 * **允許的封面影像型別**
 
-  以「點」分隔符號的影像副檔名清單（以逗號分隔）。 預設為 `.jpg,.jpeg,.png,.gif,.bmp`.
+  以「點」分隔符號的影像副檔名清單（以逗號分隔）。 預設值為`.jpg,.jpeg,.png,.gif,.bmp`。
 
 * **允許執行緒式回覆**
 
@@ -114,15 +114,15 @@ ht-degree: 0%
 
   在事件頁面上顯示階層連結。 預設為已核取。
 
-* **日期範圍篩選**
+* **日期範圍篩選器**
 
   定義新增至目前日期的天數，以計算列於頁面篩選之行事曆事件的「結束日期」值。 預設數字為30。
 
 * **允許主要內容**
 
-  如果勾選，該創意可識別為 [主要內容](/help/communities/featured.md). 預設為未勾選。
+  如果勾選，此想法可識別為[精選內容](/help/communities/featured.md)。 預設為未勾選。
 
-在 **使用者稽核** 索引標籤，指定如何管理張貼的主題和回覆（使用者產生的內容）。 如需詳細資訊，請參閱 [稽核使用者產生的內容](/help/communities/moderate-ugc.md).
+在&#x200B;**使用者稽核**&#x200B;標籤下，指定如何管理張貼的主題和回覆（使用者產生的內容）。 如需詳細資訊，請參閱[仲裁使用者產生的內容](/help/communities/moderate-ugc.md)。
 
 #### 「使用者稽核」標籤 {#user-moderation-tab}
 
@@ -134,7 +134,7 @@ ht-degree: 0%
 
   如果勾選，受信任的成員版主可以關閉事件以進一步編輯和註釋，也可以重新開啟事件。 預設為已核取。
 
-* **標幟帖子**
+* **標幟貼文**
 
   如果勾選，則允許成員將其他人的活動或評論標籤為不適當。 預設為已核取。
 
@@ -146,7 +146,7 @@ ht-degree: 0%
 
   如果勾選，則允許成員輸入將事件或評論標幟為不適當的原因。 預設為未勾選。
 
-* **稽核臨界值**
+* **稽核閾值**
 
   輸入通知版主前，事件或評論必須由成員標幟的次數。 預設值為1 （一次）。
 
@@ -156,11 +156,11 @@ ht-degree: 0%
 
 #### 標籤欄位索引標籤 {#tag-field-tab}
 
-在 **標籤欄位** 標籤中，如果允許的話，則會套用的標籤 **設定** 索引標籤中，會根據選取的名稱空間而有所限制。
+在&#x200B;**標籤欄位**&#x200B;標籤下，如果允許在&#x200B;**設定**&#x200B;標籤下，則可能套用的標籤會根據所選的名稱空間而受限。
 
 * **允許的名稱空間**
 
-  相關條件 `Allow Tagging` 已勾選下方的 **設定** 標籤。 可套用的標籤僅限於已核取的名稱空間類別中的標籤。 名稱空間清單包含「標準標籤」（預設名稱空間）和「包含所有標籤」。 預設為未勾選，這表示允許所有名稱空間。
+  如果已在&#x200B;**設定**&#x200B;標籤下勾選`Allow Tagging`，則為相關。 可套用的標籤僅限於已核取的名稱空間類別中的標籤。 名稱空間清單包含「標準標籤」（預設名稱空間）和「包含所有標籤」。 預設為未勾選，這表示允許所有名稱空間。
 
 * **建議限制**
 
@@ -168,11 +168,11 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->造訪 [管理標籤](/help/sites-administering/tags.md) 您可以在此處瞭解如何新增標籤名稱空間（分類法）。
+>請造訪[管理標籤](/help/sites-administering/tags.md)，瞭解如何新增標籤名稱空間（分類法）。
 
 #### 翻譯索引標籤 {#translation-tab}
 
-在 **翻譯** 索引標籤中，如果社群網站已啟用翻譯，則可將翻譯設定為翻譯整個對話串（事件和評論），而非特定貼文。
+在&#x200B;**翻譯**&#x200B;標籤下，如果社群網站已啟用翻譯，則翻譯可設為翻譯整個對話串（事件和評論），而非特定貼文。
 
 * **全部翻譯**
 
@@ -188,25 +188,25 @@ ht-degree: 0%
 
 ### 版主和管理員 {#moderators-and-administrators}
 
-當登入使用者具有版主或管理員許可權時，他們就可以執行 [稽核任務](/help/communities/moderate-ugc.md) （如元件的設定所允許）發佈至事件之所有日曆事件和評論上的事件。
+當登入使用者具有版主或管理員許可權，他們便能夠對發佈到事件的所有行事曆事件和評論執行[版主任務](/help/communities/moderate-ugc.md) （由元件的設定所允許）。
 
 ![版主 — 檢視](assets/moderators-view.png)
 
 #### 成員 {#members}
 
-當登入使用者是社群成員或 [有特殊許可權的成員](/help/communities/users.md#privileged-members-group) （視設定而定），他們可以選取 `New Event` 建立和張貼新的行事曆事件。
+當登入的使用者為社群成員或[有特殊許可權的成員](/help/communities/users.md#privileged-members-group) （視組態而定）時，他們可以選取`New Event`來建立和張貼新的行事曆事件。
 
 具體而言，他們可能：
 
 * 建立日曆事件
-* 發表評論至行事曆事件
+* Post日曆事件的評論
 * 編輯他們自己的行事曆事件或評論
 * 刪除自己的行事曆事件或評論
 * 標幟其他人的行事曆活動或評論
 
-![create-event](assets/configure-calendar2.png)
+![建立事件](assets/configure-calendar2.png)
 
-![event-post](assets/configure-calendar3.png)
+![個事件貼文](assets/configure-calendar3.png)
 
 #### 匿名 {#anonymous}
 
@@ -216,10 +216,10 @@ ht-degree: 0%
 
 ## 其他資訊 {#additional-information}
 
-如需詳細資訊，請參閱 [行事曆要點](/help/communities/calendar-basics-for-developers.md) 開發人員頁面。
+如需開發人員的[行事曆要點](/help/communities/calendar-basics-for-developers.md)頁面上的詳細資訊。
 
-如需行事曆活動和評論的稽核資訊，請參閱 [稽核使用者產生的內容](/help/communities/moderate-ugc.md).
+如需仲裁行事曆事件和註解，請參閱[仲裁使用者產生的內容](/help/communities/moderate-ugc.md)。
 
-若要標籤行事曆事件和註解，請參閱 [標籤使用者產生的內容](/help/communities/tag-ugc.md).
+若要標籤行事曆事件和註解，請參閱[標籤使用者產生的內容](/help/communities/tag-ugc.md)。
 
-如需日曆事件和註解的翻譯，請參閱 [翻譯使用者產生的內容](/help/communities/translate-ugc.md).
+如需行事曆活動和評論的翻譯，請參閱[翻譯使用者產生的內容](/help/communities/translate-ugc.md)。

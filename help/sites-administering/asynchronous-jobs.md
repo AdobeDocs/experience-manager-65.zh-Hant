@@ -24,7 +24,7 @@ ht-degree: 84%
 * 從 Experience Manager 的遠端部署作業中擷取高於臨界值限制設定的資產
 * 轉出即時副本
 
-您可以從以下網址檢視非同步作業的狀態： **[!UICONTROL 非同步工作狀態]** 儀表板位置 **全域導覽** > **工具** > **作業** > **工作**.
+您可以從&#x200B;**[!UICONTROL 非同步作業狀態]**&#x200B;儀表板的&#x200B;**全域導覽** > **工具** > **作業** > **作業**&#x200B;檢視非同步作業的狀態。
 
 >[!NOTE]
 >
@@ -58,7 +58,7 @@ AEM 以非同步方式處理操作時，您會透過[收件匣](/help/sites-auth
 
    ![停止圖示](assets/async-stop-icon.png)
 
-1. 若要檢視額外詳細資訊（例如，說明和記錄），請選取操作，然後按一下 **[!UICONTROL 開啟]** 工具列中的。
+1. 若要檢視額外詳細資訊（例如，說明和記錄），請選取操作，然後按一下工具列中的[開啟]。****
 
    ![開啟圖示](assets/async-open-icon.png)
 
@@ -132,8 +132,8 @@ AEM 每天 01:00 會執行清除作業，將超過一天的已完成非同步作
 >[!MORELIKETHIS]
 >
 >* [建立及組織頁面](/help/sites-authoring/managing-pages.md)
->* [建立和同步化即時副本](/help/sites-administering/msm-livecopy.md)
->* [在Experience Manager中設定電子郵件](/help/sites-administering/notification.md).
->* [匯入資產中繼資料](/help/assets/metadata.md#import-metadata).
->* [匯出資產中繼資料](/help/assets/metadata.md#export-metadata).
+>* [建立和同步處理即時副本](/help/sites-administering/msm-livecopy.md)
+>* [在Experience Manager](/help/sites-administering/notification.md)中設定電子郵件。
+>* [匯入資產中繼資料](/help/assets/metadata.md#import-metadata)。
+>* [匯出資產中繼資料](/help/assets/metadata.md#export-metadata)。
 >* [透過連線資產共用遠端部署的 DAM 資產](/help/assets/use-assets-across-connected-assets-instances.md)。

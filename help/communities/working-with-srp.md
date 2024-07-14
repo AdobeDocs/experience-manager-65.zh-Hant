@@ -25,19 +25,19 @@ ht-degree: 0%
 
 和先前的版本不同，AEM執行個體間沒有反向/正向復寫UGC。 SRP會改為讓UGC可從所有製作和發佈執行個體中直接存取建立、讀取、更新和刪除(CRUD)操作，但JSRP除外。
 
-以下是 [每個SRP選項的特性](#characteristics-of-srp-options)，這是選擇適當SRP和時進行決策程式的重要資訊 [基礎部署](/help/communities/topologies.md).
+以下是每個SRP選項](#characteristics-of-srp-options)的[特性，在選擇適當的SRP和[基礎部署](/help/communities/topologies.md)時，這些特性對於決策程式是至關重要的資訊。
 
-如需有關使用SRP for UGC的詳細資訊，請參閱 [儲存資源提供者概觀](/help/communities/srp.md).
+如需有關使用SRP for UGC的詳細資訊，請參閱[儲存資源提供者概觀](/help/communities/srp.md)。
 
 >[!NOTE]
 >
->SRP僅適用於社群內容。 它不會影響網站內容的儲存位置([節點存放區](/help/sites-deploying/data-store-config.md))，並且不會影響在AEM執行個體之間安全處理使用者註冊、使用者設定檔和使用者群組(另請參閱 [管理使用者資料](#managing-user-data))。
+>SRP僅適用於社群內容。 它不會影響網站內容的儲存位置（[節點存放區](/help/sites-deploying/data-store-config.md)），也不會影響AEM執行個體之間使用者註冊、使用者設定檔和使用者群組的安全處理（另請參閱[管理使用者資料](#managing-user-data)）。
 
 >[!CAUTION]
 >
->自AEM 6.1起， [從未復寫UGC](#ugc-never-replicated).
+>截至AEM 6.1，[UGC從未復寫](#ugc-never-replicated)。
 >
->當部署不包含公用存放區（例如預設存放區）時 [JSRP](/help/communities/topologies.md#jsrp) 拓朴，UGC將只會顯示在輸入它的AEM發佈或製作執行個體上。 只有當拓撲包含發佈叢集時，才會在任何發佈執行個體上顯示UGC。
+>當部署不包含通用存放區（例如預設的[JSRP](/help/communities/topologies.md#jsrp)拓撲）時，UGC將只會顯示在輸入它的AEM發佈或製作執行個體上。 只有當拓撲包含發佈叢集時，才會在任何發佈執行個體上顯示UGC。
 
 ## SRP選項的特性 {#characteristics-of-srp-options}
 
@@ -105,7 +105,7 @@ JSRP：
 
 ## 設定SRP {#configuring-srp}
 
-根據基礎部署，指定預設儲存選項是透過 [儲存設定主控台](/help/communities/srp-config.md).
+根據基礎部署指定預設儲存選項，是透過[儲存組態主控台](/help/communities/srp-config.md)進行。
 
 如需每個選項的組態詳細資訊，請參閱：
 
@@ -130,12 +130,12 @@ JSRP：
 
 ### 管理使用者資料 {#managing-user-data}
 
-社群感興趣的還有 [*使用者*， *使用者群組*、和 *使用者設定檔*](/help/communities/users.md). 當拓撲為時，在發佈環境中建立和更新此使用者相關資料時，必須可供其他發佈執行個體使用 [發佈陣列](/help/sites-deploying/recommended-deploys.md#tarmk-farm).
+CommunitIes感興趣的還有&#x200B;[*使用者*、*使用者群組*&#x200B;和&#x200B;*使用者設定檔*](/help/communities/users.md)。 當拓撲是[發佈陣列](/help/sites-deploying/recommended-deploys.md#tarmk-farm)時，在發佈環境中建立和更新此使用者相關資料時，必須讓其他發佈執行個體也能使用。
 
-自AEM Communities 6.1起，使用者相關資料會使用Sling分送（而非復寫）進行同步。 如需詳細資訊，請造訪 [使用者同步](/help/communities/sync.md).
+自AEM Communities 6.1起，使用者相關資料會使用Sling分送（而非復寫）進行同步。 如需詳細資訊，請造訪[使用者同步處理](/help/communities/sync.md)。
 
 ### 升級至AEM Communities 6.5 {#upgrading-to-aem-communities}
 
 升級至AEM 6.5 Communities時，如果需要保留既有的UGC，則應根據是AEM 5.6.1或AEM 6.0社群使用Adobe隨選儲存還是UGC的內部部署儲存來採取步驟。
 
-如需詳細資訊，請造訪 [升級至AEM Communities 6.5](/help/communities/upgrade.md).
+如需詳細資訊，請造訪[升級至AEM Communities 6.5](/help/communities/upgrade.md)。

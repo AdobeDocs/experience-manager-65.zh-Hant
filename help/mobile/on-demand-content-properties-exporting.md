@@ -22,13 +22,13 @@ ht-degree: 3%
 >
 >Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案，使用SPA編輯器。 [了解更多](/help/sites-developing/spa-overview.md)。
 
-應用程式表示為 *cq：Pages* 在AEM中。
+在AEM中，應用程式會顯示為&#x200B;*cq：Pages*。
 
-它們共用在任何網站中找到的相同共同屬性 *cq：Page* 除了下文所示的其他專案，這些專案代表支援屬性的整合。
+除了以下所示的其他表示整合支援屬性的屬性外，它們還共用在任何&#x200B;*cq：Page*&#x200B;中找到的相同一般屬性。
 
 ## 應用程式屬性 {#app-properties}
 
-下表顯示 **應用程式屬性和節點**.
+下表顯示&#x200B;**應用程式屬性和節點**。
 
 <table>
  <tbody>
@@ -45,7 +45,7 @@ ht-degree: 3%
   <tr>
    <td>dps-exportTemplate</td>
    <td>字串：路徑</td>
-   <td><p>應用程式的匯出設定路徑。 匯出設定是包含2個子ContentSync匯出設定範本的資料夾；</p> <p><i>dps-article</i>：ContentSync匯出設定以匯出文章內容</p> <p><i>dps-HTMLResources</i>：ContentSync匯出設定以匯出應用程式/文章共用資源</p> </td>
+   <td><p>應用程式的匯出設定路徑。 匯出設定是包含2個子ContentSync匯出設定範本的資料夾；</p> <p><i>dps-article</i>： ContentSync匯出設定以匯出文章內容</p> <p><i>dps-HTMLResources</i>： ContentSync匯出設定以匯出應用程式/文章共用資源</p> </td>
   </tr>
   <tr>
    <td>dps-projectId</td>
@@ -80,12 +80,12 @@ ht-degree: 3%
   <tr>
    <td>sling:resourceType</td>
    <td>字串：路徑</td>
-   <td><p>延伸或延伸的cq：Component的路徑 <i>mobileapps/core/components/instance。</i></p> <p>這會提供應用程式目錄中的顯示和轉譯。</p> </td>
+   <td><p>屬於或擴充<i>mobileapps/core/components/instance的cq：Component的路徑。</i></p> <p>這會提供應用程式目錄中的顯示和轉譯。</p> </td>
   </tr>
  </tbody>
 </table>
 
-您可以使用 ***內容屬性*** 以建立內容。 請參閱下列資源，以建立和匯出文章與共用資源：
+您可以使用&#x200B;***內容屬性***&#x200B;來建立內容。 請參閱下列資源，以建立和匯出文章與共用資源：
 
 * [內容屬性](/help/mobile/content-properties.md)
 * [建立文章匯出設定](/help/mobile/creating-article-export-configuration.md)

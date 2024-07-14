@@ -1,6 +1,6 @@
 ---
-title: 為IBM&reg； Content Manager設定聯結器
-description: 設定IBM&reg；內容管理員的聯結器，以啟用AEM表單與IBM&reg；內容管理員之間的通訊。
+title: 為IBM&amp；reg；內容管理員設定聯結器
+description: 設定IBM&amp； reg； Content Manager的聯結器，以啟用AEM表單與IBM&amp； reg； Content Manager之間的通訊。
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/connecting_to_a_content_management_system
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # 設定IBM® Content Manager的聯結器{#configuring-connector-for-ibm-content-manager}
 
-IBM® Content Manager聯結器可啟用AEM Forms與IBM® Content Manager之間的通訊。 如需其他背景資訊，請參閱下列「Connectors for ECM」： [服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
+IBM® Content Manager聯結器可啟用AEM Forms與IBM® Content Manager之間的通訊。 如需其他背景資訊，請參閱[服務參考](https://www.adobe.com/go/learn_aemforms_services_63)中的「Connectors for ECM」。
 
 ## 設定IBM®內容管理員連線 {#configure-the-ibm-content-manager-connection}
 

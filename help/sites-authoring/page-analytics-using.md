@@ -26,7 +26,7 @@ ht-degree: 4%
 
 ![spad-01](assets/spad-01.png)
 
-頁面分析資料顯示於 [清單檢視](/help/sites-authoring/basic-handling.md#list-view) Sites主控台的。 當頁面以清單格式顯示時，預設會提供下列欄：
+頁面分析資料顯示在Sites主控台的[清單檢視](/help/sites-authoring/basic-handling.md#list-view)中。 當頁面以清單格式顯示時，預設會提供下列欄：
 
 * 頁面檢視
 * 獨特訪客
@@ -36,12 +36,12 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->若要變更更新期間， [設定匯入間隔](/help/sites-administering/adobeanalytics-connect.md#configuring-the-import-interval).
+>若要變更更新期間，[設定匯入間隔](/help/sites-administering/adobeanalytics-connect.md#configuring-the-import-interval)。
 
-1. 開啟 **網站** 主控台；例如， [https://localhost:4502/sites.html/content](https://localhost:4502/sites.html/content)
-1. 在工具列的最右側（右上角），按一下圖示以選取 **清單檢視** (顯示的圖示取決於 [目前檢視](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources))。
+1. 開啟&#x200B;**網站**&#x200B;主控台；例如[https://localhost:4502/sites.html/content](https://localhost:4502/sites.html/content)
+1. 在工具列的最右側（右上角），按一下圖示以選取&#x200B;**清單檢視** （顯示的圖示將取決於[目前檢視](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)）。
 
-1. 再次按一下工具列最右側（右上角）的圖示，然後選取 **檢視設定**. 此 **設定欄** 對話方塊開啟。 進行任何必要的變更，並確認： **更新**.
+1. 再次，在工具列的最右側（右上角），按一下圖示，然後選取&#x200B;**檢視設定**。 **設定資料行**&#x200B;對話方塊開啟。 進行任何必要的變更，並透過&#x200B;**更新**&#x200B;確認。
 
    ![spad-02](assets/spad-02.png)
 
@@ -65,11 +65,11 @@ analytics-administrators使用者群組的成員可以設定Sites主控台，讓
 >
 >當頁面的樹狀結構包含與不同Adobe Analytics雲端設定相關聯的子項時，您無法為頁面設定可用的資料欄。
 
-1. 在清單檢視中，使用檢視選取器（工具列右側），選取 **檢視設定** 然後 **新增自訂Analytics資料**.
+1. 在清單檢視中，使用檢視選擇器（工具列右側），選取&#x200B;**檢視設定**，然後&#x200B;**新增自訂分析資料**。
 
    ![spad-03](assets/spad-03.png)
 
-1. 選取您要在Sites主控台中向作者公開的量度，然後按一下 **新增**.
+1. 選取您要在Sites主控台中公開給作者的量度，然後按一下[新增]。****
 
    顯示的欄是從Adobe Analytics中擷取的。
 
@@ -77,7 +77,7 @@ analytics-administrators使用者群組的成員可以設定Sites主控台，讓
 
 ### 從Sites開啟內容分析 {#opening-content-insights-from-sites}
 
-開啟 [內容分析](/help/sites-authoring/content-insights.md) ，以進一步調查頁面的成效。
+從Sites主控台開啟[內容分析](/help/sites-authoring/content-insights.md)以進一步調查頁面有效性。
 
 1. 在Sites主控台中，選取您要檢視其內容深入分析的頁面。
 1. 在工具列上，按一下Analytics和Recommendations圖示。
@@ -90,4 +90,4 @@ analytics-administrators使用者群組的成員可以設定Sites主控台，讓
 >
 >由於Adobe Analytics API中的安全性變更，AEM中包含的Activity Map版本已無法再使用。
 >
->此 [Adobe Analytics提供的ActivityMap外掛程式](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html) 現在應該使用。
+>現在應該使用Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html)提供的[ActivityMap外掛程式。

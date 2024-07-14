@@ -18,52 +18,53 @@ ht-degree: 1%
 
 # 覆蓋{#overlays}
 
-Adobe Experience Manager (AEM) （以及之前的CQ）一直使用覆蓋原則來讓您擴充及自訂 [主控台](/help/sites-developing/customizing-consoles-touch.md) 和其他功能(例如， [頁面製作](/help/sites-developing/customizing-page-authoring-touch.md))。
+Adobe Experience Manager (AEM) （以及之前的CQ）一直使用覆蓋原則來讓您延伸及自訂[主控台](/help/sites-developing/customizing-consoles-touch.md)和其他功能（例如，[頁面製作](/help/sites-developing/customizing-page-authoring-touch.md)）。
 
 覆蓋是許多內容中使用的辭彙。 在此情境中(擴充AEM)，覆蓋是指採用預先定義的功能，並將您自己的定義強加於此功能（以自訂標準功能）。
 
-在標準例項中，預先定義的功能儲存在 `/libs` 而且建議您在下定義覆蓋（自訂） `/apps` 分支。 AEM使用搜尋路徑來尋找資源，先搜尋 `/apps` 分支，然後是 `/libs` 分支( [可設定搜尋路徑](#configuring-the-search-paths))。 此機制表示您的覆蓋（以及其中定義的自訂）有優先權。
+在標準執行個體中，預先定義的功能儲存在`/libs`下，建議在`/apps`分支下定義您的覆蓋（自訂）。 AEM使用搜尋路徑來尋找資源，先搜尋`/apps`分支，然後搜尋`/libs`分支（可以設定[搜尋路徑](#configuring-the-search-paths)）。 此機制表示您的覆蓋（以及其中定義的自訂）有優先權。
 
 自AEM 6.0起，覆蓋的實作與使用方式已發生變更：
 
-* AEM 6.0及更高版本 — 適用於 [Granite](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html) — 相關覆蓋圖（即觸控式UI）
+* AEM 6.0及更高版本 — 適用於[Granite](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)相關覆蓋圖（亦即觸控式UI）
 
    * 方法
 
-      * 重新建構適當的 `/libs` 結構於 `/apps`.
+      * 在`/apps`下重新建構適當的`/libs`結構。
 
-        這不需要一對一複製， [Sling資源合併](/help/sites-developing/sling-resource-merger.md) 用於互動參照所需的原始定義。 Sling Resource Merger提供的服務可存取及合併具有不同（差異）機制的資源。
+        這不需要1:1的復本，[Sling Resource Merger](/help/sites-developing/sling-resource-merger.md)用於互動參照所需的原始定義。 Sling Resource Merger提供的服務可存取及合併具有不同（差異）機制的資源。
 
-      * 在 `/apps`，進行任何變更。
+      * 在`/apps`底下，進行任何變更。
 
    * 優點
 
-      * 對下的變更更健全 `/libs`.
+      * 對`/libs`下的變更更健全。
       * 僅重新定義必要的專案。
 
 * AEM 6.0之前的非Granite覆蓋圖和覆蓋圖
 
    * 方法
 
-      * 複製內容來源 `/libs` 至 `/apps`
+      * 將內容從`/libs`複製到`/apps`
 
         複製整個子分支，包括屬性。
 
-      * 在 `/apps`，進行任何變更。
+      * 在`/apps`底下，進行任何變更。
 
    * 缺點
 
-      * 雖然您的變更不會在下方發生變更時遺失 `/libs`，您可能必須重新建立下覆蓋圖中所發生的特定變更 `/apps`.
+      * 雖然您的變更不會在`/libs`下發生變更時遺失，但您可能必須重新建立`/apps`下覆蓋圖中所發生的特定變更。
 
 >[!CAUTION]
 >
->此 [Sling資源合併](/help/sites-developing/sling-resource-merger.md) 而相關方法只能搭配 [Granite](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html). 這表示建立具有骨架結構的覆蓋圖僅適用於標準觸控式UI。
+>[Sling Resource Merger](/help/sites-developing/sling-resource-merger.md)和相關方法只能搭配[Granite](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)使用。 這表示建立具有骨架結構的覆蓋圖僅適用於標準觸控式UI。
 >
 >其他區域（包括傳統UI）的覆蓋需要複製適當的節點和整個子結構，然後進行必要的變更。
 
-針對許多變更，建議使用覆蓋圖，例如 [設定您的主控台](/help/sites-developing/customizing-consoles-touch.md#create-a-custom-console) 或 [在側面板中的資產瀏覽器中建立您的選取範圍類別](/help/sites-developing/customizing-page-authoring-touch.md#add-new-selection-category-to-asset-browser) （用於編寫頁面）。 其需求為：
+重疊是許多變更的建議方法，例如[設定您的主控台](/help/sites-developing/customizing-consoles-touch.md#create-a-custom-console)或[在側面板中的資產瀏覽器中建立您的選取類別](/help/sites-developing/customizing-page-authoring-touch.md#add-new-selection-category-to-asset-browser) （用於編寫頁面）。 其需求為：
 
-* ***不要* 變更 `/libs` 分支&#x200B;**您所做的任何變更都可能會遺失，因為每當您：
+* ***不要*&#x200B;在`/libs`分支&#x200B;**中進行變更
+您所做的任何變更都可能會遺失，因為每當您：
 
    * 在您的執行個體上升級
    * 套用hotfix
@@ -75,10 +76,10 @@ Adobe Experience Manager (AEM) （以及之前的CQ）一直使用覆蓋原則�
 
 對於覆蓋圖，傳送的資源是擷取的資源和屬性的彙總，取決於可定義的搜尋路徑：
 
-* 資源 **解析程式搜尋路徑** 如 [OSGi設定](/help/sites-deploying/configuring-osgi.md) 針對 **Apache Sling Resource Resolver Factory**.
+* **Apache Sling Resource Resolver Factory**&#x200B;的資源&#x200B;**解析器搜尋路徑**&#x200B;定義於[OSGi設定](/help/sites-deploying/configuring-osgi.md)。
 
    * 搜尋路徑的由上而下的順序表示其各自的優先順序。
-   * 在標準安裝中，主要預設值為 `/apps`， `/libs`  — 所以內容屬於 `/apps` 的優先順序高於 `/libs` (也就是說 *覆蓋* it)。
+   * 在標準安裝中，主要預設值為`/apps`， `/libs` — 因此`/apps`的內容優先順序高於`/libs`的內容（亦即&#x200B;*覆蓋*）。
 
 * 兩位服務使用者需要有JCR：READ存取權才能存取儲存指令碼的位置。 這些使用者是： components-search-service (由com.day.cq.wcm.coreto使用)和sling-scripting （由org.apache.sling.servlets.resolver使用來尋找servlet）。
 * 下列設定也必須根據您放置指令碼的位置（此範例中位於/etc、/libs或/apps下）進行設定。

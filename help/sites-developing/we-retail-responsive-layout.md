@@ -18,7 +18,7 @@ ht-degree: 4%
 
 # 在We.Retail中試用回應式版面{#trying-out-responsive-layout-in-we-retail}
 
-所有We.Retail頁面都會使用版面容器元件，以實施回應式設計。 版面容器提供段落系統，讓您在回應式格線內放置元件。 此格線可根據裝置/視窗大小和格式重新排列版面。 此元件需與 **版面** 頁面編輯器中的模式，可讓您根據裝置建立及編輯回應式版面。
+所有We.Retail頁面都會使用版面容器元件，以實施回應式設計。 版面容器提供段落系統，讓您在回應式格線內放置元件。 此格線可根據裝置/視窗大小和格式重新排列版面。 此元件與頁面編輯器中的&#x200B;**配置**&#x200B;模式搭配使用，可讓您建立和編輯相依於裝置的回應式配置。
 
 ## 正在試用中 {#trying-it-out}
 
@@ -26,7 +26,7 @@ ht-degree: 4%
 
    http://localhost:4502/editor.html/content/we-retail/language-masters/en/experience/arctic-surfing-in-lofoten.html
 
-1. 切換至 **預覽** 以檢視轉譯給網站訪客的頁面。 向下捲動至文章內容 *挪威北部阿羅哈烈酒*.
+1. 切換至&#x200B;**預覽**，檢視呈現給網站訪客的頁面。 向下捲動至文章&#x200B;*Norther Norway的Aloha spirits*&#x200B;內容。
 
    ![chlimage_1-178](assets/chlimage_1-178.png)
 
@@ -46,4 +46,4 @@ ht-degree: 4%
 
 ## 更多資訊 {#further-information}
 
-如需詳細資訊，請參閱撰寫檔案 [回應式版面](/help/sites-authoring/responsive-layout.md) 或管理員檔案 [設定配置容器和配置模式](/help/sites-administering/configuring-responsive-layout.md) 以取得完整的技術細節。
+如需詳細資訊，請參閱撰寫檔案[回應式配置](/help/sites-authoring/responsive-layout.md)或管理員檔案[設定配置容器和配置模式](/help/sites-administering/configuring-responsive-layout.md)，以取得完整的技術細節。

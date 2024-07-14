@@ -18,13 +18,13 @@ ht-degree: 0%
 
 # 管理憑證和憑證的基本知識 {#basics-of-managing-certificates-and-credentials}
 
-A *認證* 包含您簽署或識別檔案所需的私密金鑰資訊。 A *憑證* 是您為信任而設定的公開金鑰資訊。 AEM forms將憑證和認證用於多種用途：
+*認證*&#x200B;包含簽署或識別檔案所需的私密金鑰資訊。 *憑證*&#x200B;是您設定為信任的公開金鑰資訊。 AEM forms將憑證和認證用於多種用途：
 
-* Acrobat Reader DC擴充功能會使用認證，在PDF檔案中啟用Adobe Reader使用許可權。 (請參閱 [設定用於Acrobat Reader DC擴充功能的認證](/help/forms/using/admin-help/configuring-credentials-acrobat-reader-dc.md#configuring-credentials-for-use-with-acrobat-reader-dc-extensions).)
-* 您可以設定Rights Management只顯示來自受信任發行者的憑證以用於Acrobat。 (請參閱 [配置Rights Management顯示設定](/help/forms/using/admin-help/configuring-client-server-options.md#configure-document-security-display-settings).) 一般名稱(CN)必須存在於憑證中。
-* 簽章服務會存取憑證和認證。 如需Signature服務的詳細資訊，請參閱 [服務參考](https://www.adobe.com/go/learn_aemforms_services_65).
+* Acrobat Reader DC擴充功能會使用認證，在PDF檔案中啟用Adobe Reader使用許可權。 (請參閱[設定認證以搭配Acrobat Reader DC擴充功能使用](/help/forms/using/admin-help/configuring-credentials-acrobat-reader-dc.md#configuring-credentials-for-use-with-acrobat-reader-dc-extensions)。)
+* 您可以設定Rights Management只顯示來自受信任發行者的憑證以用於Acrobat。 (請參閱[設定Rights Management顯示設定](/help/forms/using/admin-help/configuring-client-server-options.md#configure-document-security-display-settings)。) 一般名稱(CN)必須存在於憑證中。
+* 簽章服務會存取憑證和認證。 如需簽名服務的詳細資訊，請參閱[服務參考](https://www.adobe.com/go/learn_aemforms_services_65)。
 
-**產生配對金鑰**
+**正在產生配對金鑰**
 
 AEM Forms使用信任存放區來儲存和管理憑證、認證和憑證撤銷清單(CRL)。 此外，您可以使用獨立的Hardware Security Module (HSM)裝置來儲存私密金鑰。
 

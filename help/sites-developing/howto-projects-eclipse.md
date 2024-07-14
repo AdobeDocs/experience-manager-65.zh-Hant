@@ -22,7 +22,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Adobe現在提供 [Eclipse適用的AEM開發工具](/help/sites-developing/aem-eclipse.md) 可協助您使用Eclipse開發AEM解決方案。
+>Adobe現在提供Eclipse適用的[AEM開發工具](/help/sites-developing/aem-eclipse.md)，可協助您使用Eclipse開發AEM解決方案。
 
 ## 概觀 {#overview}
 
@@ -41,29 +41,29 @@ ht-degree: 1%
 
 ## 安裝Eclipse {#install-eclipse}
 
-下載「適用於Java EE開發人員的Eclipse IDE」，網址為 [Eclipse下載頁面](https://www.eclipse.org/downloads/).
+從[Eclipse下載頁面](https://www.eclipse.org/downloads/)下載「適用於Java EE開發人員的Eclipse IDE」。
 
-請依照以下說明安裝Eclipse [安裝指示](https://wiki.eclipse.org/Eclipse/Installation).
+依照[安裝指示](https://wiki.eclipse.org/Eclipse/Installation)安裝Eclipse。
 
 ## 根據Maven設定您的AEM專案 {#set-up-your-aem-project-based-on-maven}
 
-接下來，使用Maven設定您的專案，如所述 [如何使用Apache Maven建置AEM專案](/help/sites-developing/ht-projects-maven.md).
+接下來，使用Maven設定您的專案，如[使用Apache Maven建置AEM專案的方法](/help/sites-developing/ht-projects-maven.md)中所述。
 
 ## 為Eclipse準備JSP支援 {#prepare-jsp-support-for-eclipse}
 
 Eclipse也可支援使用JSP，例如
 
 * 自動完成標籤程式庫
-* 定義物件的橢圓感知 &lt;cq:defineobjects /> 和 &lt;sling:defineobjects />
+* 由&lt;cq：defineObjects />和&lt;sling：defineObjects />定義的物件的Eclipse感知
 
 為了讓此功能發揮作用：
 
-1. 請依照以下說明操作： [如何使用JSP](/help/sites-developing/ht-projects-maven.md#how-to-work-with-jsps) 在 [如何使用Apache Maven建置AEM專案](/help/sites-developing/ht-projects-maven.md).
-1. 將下列專案新增至 &lt;build /> 區段建立關聯。
+1. 遵循[使用Apache Maven建置AEM專案的方法](/help/sites-developing/ht-projects-maven.md)中[如何使用JSP](/help/sites-developing/ht-projects-maven.md#how-to-work-with-jsps)的指示。
+1. 將下列專案新增至內容模組POM中的&lt;build />區段。
 
    Eclipse的Maven支援外掛程式m2e不提供maven-jspc-plugin的支援，此設定會告知m2e忽略外掛程式和清理暫時編譯結果的相關任務。
 
-   這並非問題：如中所述 [如何使用JSP](/help/sites-developing/ht-projects-maven.md#how-to-work-with-jsps)，此設定中的maven-jspc-plugin僅用於驗證JSP是否編譯為建置流程的一部分。 Eclipse已回報JSP中的任何問題，且不依賴此Maven外掛程式來完成。
+   這不是問題：如[如何使用JSP](/help/sites-developing/ht-projects-maven.md#how-to-work-with-jsps)中所述，此設定中的maven-jspc-plugin僅用於驗證JSP是否編譯為建置流程的一部分。 Eclipse已回報JSP中的任何問題，且不依賴此Maven外掛程式來完成。
 
    **myproject/content/pom.xml**
 
@@ -132,4 +132,4 @@ Eclipse也可支援使用JSP，例如
 
    >[!NOTE]
    >
-   >若包含 `/libs/foundation/global.jsp` 或其他JSP `/libs`，您必須將其複製到專案，讓Eclipse可以解析包含檔案。 同時，您需要確保它沒有被Maven捆綁到您的內容套件中。 中會說明如何達成此目的 [如何使用Apache Maven建置AEM專案](/help/sites-developing/ht-projects-maven.md).
+   >如果您在`/libs`中包含`/libs/foundation/global.jsp`或其他JSP，則必須將其複製到專案，讓Eclipse可以解析包含。 同時，您需要確保它沒有被Maven捆綁到您的內容套件中。 如何達成此目標在[如何使用Apache Maven建置AEM專案](/help/sites-developing/ht-projects-maven.md)中說明。

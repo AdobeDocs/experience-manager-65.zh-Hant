@@ -31,7 +31,7 @@ ht-degree: 4%
 * 從所需資料來源擷取的XML資料的URL （使用cmDataUrl引數）。
 
 例如，自訂入口網站會將URL準備為\
-`https://'[server]:[port]'/[contextPath]/aem/forms/createcorrespondence.html?random=[timestamp]&cmLetterId=[letter identifier]&cmDataUrl=[data URL]`，這可能是來自入口網站連結的href。
+`https://'[server]:[port]'/[contextPath]/aem/forms/createcorrespondence.html?random=[timestamp]&cmLetterId=[letter identifier]&cmDataUrl=[data URL]`，可能是入口網站連結中的href。
 
 >[!NOTE]
 >
@@ -43,7 +43,7 @@ ht-degree: 4%
 
 ## 內嵌資料型引動過程 {#inline-data-based-invocation}
 
-呼叫建立通訊應用程式的另一個（也是更安全）方法可能是直接點選https://&#39;的URL[伺服器]：[連線埠]&#39;/[contextPath]/aem/forms/createcorrespondence.html，同時傳送引數和資料以作為POST要求呼叫建立通訊應用程式（對一般使用者隱藏它們）。 這也表示您現在可以內嵌傳遞「建立對應」應用程式的XML資料（作為相同請求的一部分，使用cmData引數），這在先前的方法中是不可能的/理想的作法。
+呼叫建立通訊應用程式的另一個（也是更安全的）方法可能是，直接點選https://&#39;[伺服器]：[連線埠]&#39;/[contextPath]/aem/forms/createcorrespondence.html的URL，同時傳送引數和資料以呼叫建立通訊應用程式作為POST要求（對一般使用者隱藏它們）。 這也表示您現在可以內嵌傳遞「建立對應」應用程式的XML資料（作為相同請求的一部分，使用cmData引數），這在先前的方法中是不可能的/理想的作法。
 
 ### 指定字母的引數 {#parameters-for-specifying-letter}
 
@@ -66,7 +66,7 @@ ht-degree: 4%
   <tr>
    <td>cmDataUrl<br /> </td> 
    <td>URL</td> 
-   <td>來自使用基本通訊協定（例如cq、ftp、http或檔案）之來源檔案的XML資料。<br /> </td> 
+   <td>使用基本通訊協定（例如cq、ftp、http或檔案）的來源檔案中的XML資料。<br /> </td> 
   </tr>
   <tr>
    <td>cmLetterInstanceId</td> 

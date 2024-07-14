@@ -32,18 +32,18 @@ ht-degree: 0%
 >
 >「控制面板」是一系列實用的圖磚，可提供應用程式內容、中繼資料及AEM Mobile隨選連線狀態的概述。
 >
->另請參閱 [AEM Mobile應用程式控制面板](/help/mobile/mobile-apps-ondemand-application-dashboard.md) 以取得詳細資訊。
+>如需詳細資訊，請參閱[AEM Mobile應用程式儀表板](/help/mobile/mobile-apps-ondemand-application-dashboard.md)。
 
 **若要建立隨選應用程式：**
 
-1. 選取 **行動** 從側邊欄移除。
-1. 選取 **應用程式** 從「導覽」。
-1. 按一下 **建立** 並選取 **應用程式** 從下拉式清單。
-1. 選擇行動應用程式範本，然後按一下 **下一個**.
-1. 輸入應用程式屬性，例如 **標題**， **名稱**， **說明**.
+1. 從側邊欄選取&#x200B;**行動裝置**。
+1. 從導覽中選取&#x200B;**應用程式**。
+1. 按一下&#x200B;**建立**，然後從下拉式清單中選取&#x200B;**應用程式**。
+1. 選擇行動應用程式範本，然後按一下&#x200B;**下一步**。
+1. 輸入應用程式屬性，例如&#x200B;**Title**、**Name**、**Description**。
 1. 按一下「**下一步**」。
-1. 如果已知，請輸入雲端設定詳細資料，否則請按一下 **建立**.
-1. 按一下 **完成** 以在目錄中檢視您新的AEM Mobile應用程式。
+1. 如果已知，請輸入雲端設定詳細資料，否則請按一下[建立]。****
+1. 按一下&#x200B;**完成**，在目錄中檢視您新的AEM Mobile App。
 
 ![chlimage_1](assets/chlimage_1.gif)
 
@@ -64,19 +64,19 @@ ht-degree: 0%
 
 從應用程式控制面板建立隨選應用程式後，下一步是將應用程式與雲端設定建立關聯。
 
-另請參閱 [將應用程式與雲端設定建立關聯](/help/mobile/mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md) 以取得更多詳細資料。
+如需詳細資訊，請參閱[將您的應用程式關聯至雲端設定](/help/mobile/mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md)。
 
 ### 快速入門 {#getting-ahead}
 
-在您熟悉建立隨選應用程式，並將該應用程式關聯至雲端設定後，請參閱 [內容管理動作](/help/mobile/mobile-apps-ondemand-manage-content-ondemand.md).
+在您熟悉建立隨選應用程式，進而將該應用程式關聯至雲端設定後，請參閱[內容管理動作](/help/mobile/mobile-apps-ondemand-manage-content-ondemand.md)。
 
-**內容管理動作** 涉及下列內容的建立和管理：
+**內容管理動作**&#x200B;涉及下列內容的建立和管理：
 
 * [管理文章](/help/mobile/mobile-on-demand-managing-articles.md)
 * [管理橫幅](/help/mobile/mobile-on-demand-managing-banners.md)
 * [管理集合](/help/mobile/mobile-on-demand-managing-collections.md)
 * [上傳共用資源](/help/mobile/mobile-on-demand-shared-resources.md)
-* [發佈取消發佈內容](/help/mobile/mobile-on-demand-publishing-unpublishing.md)
+* [Publish取消發佈內容](/help/mobile/mobile-on-demand-publishing-unpublishing.md)
 
 若要瞭解管理員和開發人員的角色和責任，請參閱以下資源：
 

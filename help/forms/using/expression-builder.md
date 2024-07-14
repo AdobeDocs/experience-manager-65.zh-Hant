@@ -22,7 +22,7 @@ ht-degree: 1%
 
 ## 使用運算式產生器建立運算式及遠端函式 {#creating-expressions-and-remote-functions-with-expression-builder}
 
-運算式產生器內部使用JSP EL程式庫，因此運算式會遵循JSPEL語法。 如需詳細資訊，請參閱 [運算式範例](#exampleexpressions).
+運算式產生器內部使用JSP EL程式庫，因此運算式會遵循JSPEL語法。 如需詳細資訊，請參閱[範例運算式](#exampleexpressions)。
 
 ![運算式產生器](assets/expressionbuilder.png)
 
@@ -38,9 +38,9 @@ ht-degree: 1%
 * 若要串連兩個字串： ${str1} ${str2}
 * 比較兩個數字： ${age &lt; 18}
 
-如需詳細資訊，請參閱 [JSP EL規格](https://download.oracle.com/otn-pub/jcp/jsp-2.1-fr-spec-oth-JSpec/jsp-2_1-fr-spec-el.pdf). 使用者端運算式管理員不支援JSP EL規格中的某些變數和函式，特別是：
+您可以在[JSP EL規格](https://download.oracle.com/otn-pub/jcp/jsp-2.1-fr-spec-oth-JSpec/jsp-2_1-fr-spec-el.pdf)中找到更多資訊。 使用者端運算式管理員不支援JSP EL規格中的某些變數和函式，特別是：
 
-* 集合索引和對應索引鍵(使用 [] 表示法)的變數名稱中不支援在使用者端評估的運算式。
+* 在使用者端評估之運算式的變數名稱中不支援集合索引和對應金鑰（使用[]標籤法）。
 * 以下是運算式中使用的引數型別或函式的傳回型別：
 
    * java.lang.String
@@ -80,8 +80,8 @@ ht-degree: 1%
 
    1. **已啟用**：判斷此方法是否已啟用。 Expression Manager會忽略停用的方法。
    1. **familyId**：指定方法的系列（群組）。 如果空白，Expression Manager會假設方法屬於預設系列。 沒有家族登入（預設家族除外），無法從中選擇函式。 Expression Manager會使用由各種組合匯出的所有函式所指定的所有系列ID的聯合，以動態建立登入。 請確定他們在此指定的ID可合理讀取，因為它也會顯示在運算式編寫使用者介面中。
-   1. **顯示名稱**：人類看得懂的函式名稱。 此名稱用於製作使用者介面中的顯示目的。 如果空白，Expression Manager會使用函式的前置詞和local-name來建構預設名稱。
-   1. **說明**：函式的詳細描述。 此說明用於製作使用者介面中的顯示目的。 如果空白，Expression Manager會使用函式的前置詞和local-name來建構預設描述。
+   1. **displayName**：可讀取的函式名稱。 此名稱用於製作使用者介面中的顯示目的。 如果空白，Expression Manager會使用函式的前置詞和local-name來建構預設名稱。
+   1. **描述**：函式的詳細描述。 此說明用於製作使用者介面中的顯示目的。 如果空白，Expression Manager會使用函式的前置詞和local-name來建構預設描述。
 
    ```java
    package mergeandfuse.com;
@@ -126,7 +126,7 @@ ht-degree: 1%
   @org.apache.felix.scr.annotations.Property(name = "exm.service", boolValue = true)})
 ```
 
-exm.service=true專案會指示Expression Manager服務包含適合在運算式中使用的遠端函式。 此 &lt;service_id> 值必須為有效的Java識別碼（英數、$、_且不含其他特殊字元）。 此值的前置詞為REMOTE_關鍵字，會構成運算式內部使用的前置詞。 例如，如果介面在服務屬性中具有已註解的方法bar()和服務ID foo，則可在使用REMOTE_foo：bar()的運算式內參照。
+exm.service=true專案會指示Expression Manager服務包含適合在運算式中使用的遠端函式。 &lt;service_id>值必須是有效的Java識別碼（英數、$、_不含其他特殊字元）。 此值的前置詞為REMOTE_關鍵字，會構成運算式內部使用的前置詞。 例如，如果介面在服務屬性中具有已註解的方法bar()和服務ID foo，則可在使用REMOTE_foo：bar()的運算式內參照。
 
 ```java
 package mergeandfuse.com;
@@ -154,8 +154,8 @@ public class RemoteFuntionImpl implements RemoteFunction {
 
 以下是要使用的範例封存：
 
-* **GoodFunctions.jar.zip** 是包含套件的jar檔案，套件包含範例遠端函式定義。 下載GoodFunctions.jar.zip檔案並將其解壓縮，以取得jar檔案。
-* **GoodFunctions.zip** 是定義自訂遠端函式並為其建立套件組合的原始程式碼套件。
+* **GoodFunctions.jar.zip**&#x200B;是包含範例遠端函式定義的套件組合的jar檔案。 下載GoodFunctions.jar.zip檔案並將其解壓縮，以取得jar檔案。
+* **GoodFunctions.zip**&#x200B;是定義自訂遠端函式及為其建立套件組合的原始程式碼套件。
 
 GoodFunctions.jar.zip
 

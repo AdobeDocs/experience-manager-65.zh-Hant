@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # 接受與簽核{#acceptance-and-sign-off}
 
-如前所述， [驗收測試](/help/sites-developing/planning.md) 是用於驗證以下專案的特殊測試類別：
+如前所述，[驗收測試](/help/sites-developing/planning.md)是用於驗證：
 
 * 專案符合客戶的要求。
 * 客戶接受專案。

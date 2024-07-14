@@ -22,17 +22,17 @@ ht-degree: 0%
 
 ## 無法安裝AEM Forms工作區套件 {#unable-to-install-aem-forms-workspace-package}
 
-安裝修補程式後，請開啟AEM Forms工作區。 如果您遇到「找不到資源」錯誤，請開啟CRX封裝管理員，然後重新安裝 `adobe-lc-workspace-pkg-<version>.zip` 封裝。
+安裝修補程式後，請開啟AEM Forms工作區。 如果您遇到「找不到資源」錯誤，請開啟CRX封裝管理員，然後重新安裝`adobe-lc-workspace-pkg-<version>.zip`封裝。
 
-安裝套件時，如果發生錯誤 `javax.jcr.nodetype.ConstraintViolationException: OakConstraint0025: Authorizable property rep:authorizableId may not be removed`，請執行下列步驟：
+安裝封裝時，如果發生錯誤`javax.jcr.nodetype.ConstraintViolationException: OakConstraint0025: Authorizable property rep:authorizableId may not be removed`，請執行下列步驟：
 
-1. 登入CRXDE Lite。 預設URL為 `https://[localhost]:'port'/lc/crx/de/index.jsp`
+1. 登入CRXDE Lite。 預設URL為`https://[localhost]:'port'/lc/crx/de/index.jsp`
 1. 刪除下列節點：
 
    `/home/groups/P/PERM_WORKSPACE_USER`
 
-1. 前往「封裝管理員」。 預設URL為 `https://[localhost]:'port'/lc/crx/packmgr/index.jsp.`
-1. 搜尋並安裝 `adobe-lc-workspace-pkg-[version].zip` 封裝。
+1. 前往「封裝管理員」。 預設URL為`https://[localhost]:'port'/lc/crx/packmgr/index.jsp.`
+1. 搜尋並安裝`adobe-lc-workspace-pkg-[version].zip`封裝。
 1. 重新啟動應用程式伺服器。
 
 >[!NOTE]
@@ -45,9 +45,9 @@ ht-degree: 0%
 
 在AEM Forms工作區中：
 
-* 若要取得特定元件檔案的記錄資訊，請附加 `/log/<ComponentFile>/<LogLevel>` 在URL中，然後按 `Enter`. 指定記錄層級之元件檔案的所有記錄資訊都會列印在主控台上。
+* 若要取得特定元件檔案的記錄資訊，請在URL中附加`/log/<ComponentFile>/<LogLevel>`，然後按`Enter`。 指定記錄層級之元件檔案的所有記錄資訊都會列印在主控台上。
 
-* 若要取得所有元件檔案的記錄資訊，請附加 `/log/all/trace` 在URL中，然後按 `Enter`.
+* 若要取得所有元件檔案的記錄資訊，請在URL中附加`/log/all/trace`，然後按`Enter`。
 
 * 記錄格式： `<Component file> <Date>:<Time>: <Log Level> : <Log Message>`
 
@@ -158,11 +158,11 @@ ht-degree: 0%
 
 指令碼和樣式可以在不同的瀏覽器中偵錯。
 
-* **在IE中進行偵錯**：若要在IE中偵錯AEM Forms工作區，請參閱： [https://learn.microsoft.com/en-us/office/dev/add-ins/testing/debug-add-ins-using-f12-tools-ie](https://learn.microsoft.com/en-us/office/dev/add-ins/testing/debug-add-ins-using-f12-tools-ie).
+* **在IE中偵錯**：若要在IE中偵錯AEM Forms工作區，請參閱： [https://learn.microsoft.com/en-us/office/dev/add-ins/testing/debug-add-ins-using-f12-tools-ie](https://learn.microsoft.com/en-us/office/dev/add-ins/testing/debug-add-ins-using-f12-tools-ie)。
 
-* **在Chrome中除錯**：若要在Chrome中開啟Debugger，請使用捷徑：Ctrl+Shift+I。如需詳細資訊，請參閱： [https://developer.chrome.com/docs/extensions/mv3/tut_debugging/](https://developer.chrome.com/docs/extensions/mv3/tut_debugging/).
+* **在Chrome中偵錯**：若要在Chrome中開啟偵錯工具，請使用捷徑： Ctrl+Shift+I。如需詳細資訊，請參閱： [https://developer.chrome.com/docs/extensions/mv3/tut_debugging/](https://developer.chrome.com/docs/extensions/mv3/tut_debugging/)。
 
-* **在Firefox中進行偵錯**：數個附加元件可用於在Firefox中除錯指令碼和樣式。 例如，Firebug就是這類偵錯公用程式([https://getfirebug.com](https://getfirebug.com))。
+* **在Firefox中偵錯**：有數個附加元件可用於在Firefox中偵錯指令碼和樣式。 例如，Firebug就是這類偵錯公用程式([https://getfirebug.com](https://getfirebug.com))。
 
 ## 常見問題 {#faqs}
 
@@ -172,7 +172,7 @@ ht-degree: 0%
    1. 在Chrome中開啟chrome://plugins ，檢視可用的外掛程式。
    1. 停用ChromePDF檢視器外掛程式，並啟用Adobe Reader外掛程式。
 
-1. Google Chrome中未轉譯SWF表單或指南。
+1. Google Chrome中未呈現SWF表單或指南。
 
    1. 在Chrome中開啟chrome://plugins ，檢視可用的外掛程式。
    1. 如需AdobeFlash®播放器外掛程式的詳細資訊，請參閱。

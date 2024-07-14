@@ -15,9 +15,9 @@ ht-degree: 1%
 
 # 翻譯資產的最佳實務 {#best-practices-for-translating-assets-efficiently}
 
-[!DNL Adobe Experience Manager Assets] 支援多語言工作流程，將數位資產的二進位檔案、中繼資料和標籤翻譯成多個區域設定，並管理翻譯的資產。 如需詳細資訊，請參閱 [多語言資產](multilingual-assets.md).
+[!DNL Adobe Experience Manager Assets]支援多語言工作流程，以將數位資產的二進位檔、中繼資料和標籤翻譯成多個地區設定，以及管理翻譯的資產。 如需詳細資訊，請參閱[多語言Assets](multilingual-assets.md)。
 
-為了有效管理資產，以確保不同的翻譯版本保持同步，請建立 [語言副本](preparing-assets-for-translation.md) 執行翻譯工作流程前的資產數量。
+為了有效管理資產，以確保不同的翻譯版本保持同步，在執行翻譯工作流程之前，請先建立資產的[語言副本](preparing-assets-for-translation.md)。
 
 資產或資產群組的語言副本是具有類似內容階層的語言同層級（或相同語言的資產版本）。
 
@@ -44,9 +44,9 @@ ht-degree: 1%
    >Disabling the [!UICONTROL DAM MetaData Writeback] workflow turns off XMP metadata write-back on asset binaries. Consequently, future metadata changes are no longer be saved within the assets. Evaluate the consequences before disabling this workflow.
 -->
 
-1. 啟用 [!UICONTROL 設定上次修改日期] 工作流程。
+1. 啟用[!UICONTROL 設定上次修改日期]工作流程。
 
-   此 [!UICONTROL DAM中繼資料回寫] 工作流程會設定資產的上次修改日期。 因為您在步驟2中停用此工作流程， [!DNL Assets] 無法再將資產的上次修改日期維持在最新狀態。 因此，請啟用 *設定上次修改日期* 工作流程，確保資產的上次修改日期為最新。 如果資產具有過時的上次修改日期，可能會導致錯誤。
+   [!UICONTROL DAM MetaData回寫]工作流程會設定資產的最後修改日期。 由於您在步驟2中停用此工作流程，[!DNL Assets]無法再將資產的上次修改日期維持在最新狀態。 因此，請啟用&#x200B;*設定上次修改日期*&#x200B;工作流程，以確保資產的上次修改日期是最新的。 Assets如果包含過時的上次修改日期，可能會導致錯誤。
 
-1. [設定翻譯整合框架](/help/sites-administering/tc-tic.md) 以停止翻譯資產二進位檔。 取消選取 **[!UICONTROL 翻譯資產]** 下的選項 [!UICONTROL 資產] 索引標籤以停止翻譯資產二進位檔案。
-1. 翻譯資產中繼資料/標籤，使用 [多語言資產工作流程](multilingual-assets.md).
+1. [設定轉譯整合架構](/help/sites-administering/tc-tic.md)以停止轉譯資產二進位檔。 取消選取[!UICONTROL Assets]標籤下的&#x200B;**[!UICONTROL 翻譯Assets]**&#x200B;選項，以停止翻譯資產二進位檔案。
+1. 使用[多語言資產工作流程](multilingual-assets.md)翻譯資產中繼資料/標籤。

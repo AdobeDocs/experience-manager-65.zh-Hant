@@ -57,12 +57,12 @@ ht-degree: 1%
  </tbody>
 </table>
 
-TarMK是專為效能而設計，而MongoMK和RDBMK則是為擴充性而設計。 Adobe強烈建議TarMK做為所有AEM Forms部署案例(製作和Publish執行個體皆適用)的預設持續性技術，但一節中概述的使用案例除外 [選擇Mongo或透過TarMK的關聯式資料庫微核心](#p-choosing-mongo-or-a-relational-database-microkernel-over-tarmk-p).
+TarMK是專為效能而設計，而MongoMK和RDBMK則是為擴充性而設計。 Adobe強烈建議將TarMK作為所有AEM Forms部署情境的預設持續性技術，適用於Author和Publish執行個體，但[選擇Mongo或關聯式資料庫Microkernel而非TarMK](#p-choosing-mongo-or-a-relational-database-microkernel-over-tarmk-p)一節中概述的使用案例除外。
 
-如需支援的微核心清單，請參閱 [根據OSGi技術要求提供AEM Forms](/help/sites-deploying/technical-requirements.md) 或 [JEE支援的AEM Forms平台組合](/help/forms/using/aem-forms-jee-supported-platforms.md) 文章。
+如需支援的微核心清單，請參閱OSGi技術需求上的[AEM Forms](/help/sites-deploying/technical-requirements.md)或JEE支援的平台組合上的[AEM Forms](/help/forms/using/aem-forms-jee-supported-platforms.md)文章。
 
 ## 選擇Mongo或透過TarMK的關聯式資料庫微核心 {#choosing-mongo-or-a-relational-database-microkernel-over-tarmk}
 
 可擴充（叢集）的AEM Forms環境是由兩個或多個水準設定的作用中製作執行個體所組成。 如果支援所有並行撰寫活動的單一伺服器無法再持續運作，您可以選擇執行多個撰寫例項。
 
-JEE環境的可擴充（叢集） AEM Forms僅支援MongoMK和RDBMK持續性型別。 伺服器數量或可擴充環境的大小因每次安裝而異。 如需考量事項和範例的清單，請參閱 [建議的部署](/help/sites-deploying/recommended-deploys.md) 和/或 [AEM Forms的架構和部署拓撲](/help/forms/using/aem-forms-architecture-deployment.md) 文章。 您也可以聯絡AEM Forms支援，以取得有關使用RDBMK和TarMK的AEM Forms容量規劃的詳細資訊。
+JEE環境的可擴充（叢集） AEM Forms僅支援MongoMK和RDBMK持續性型別。 伺服器數量或可擴充環境的大小因每次安裝而異。 如需考量事項和範例的清單，請參閱[建議的部署](/help/sites-deploying/recommended-deploys.md)和/或[AEM Forms的架構和部署拓撲](/help/forms/using/aem-forms-architecture-deployment.md)文章。 您也可以聯絡AEM Forms支援，以取得有關使用RDBMK和TarMK的AEM Forms容量規劃的詳細資訊。

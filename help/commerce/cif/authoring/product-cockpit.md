@@ -26,9 +26,9 @@ ht-degree: 1%
 
 ## 設定 {#configuration}
 
-產品目錄必須在AEM中設定。 另請參閱 [設定存放區和目錄](/help/commerce/cif/getting-started.md#catalog) 以取得詳細資訊。
+產品目錄必須在AEM中設定。 如需詳細資訊，請參閱[設定存放區和目錄](/help/commerce/cif/getting-started.md#catalog)。
 
-啟用分階段目錄功能需要驗證。 另請參閱 [快速入門](/help/commerce/cif/getting-started.md) 以取得詳細資訊。
+啟用分階段目錄功能需要驗證。 如需詳細資訊，請參閱[快速入門](/help/commerce/cif/getting-started.md)。
 
 >[!NOTE]
 >
@@ -36,7 +36,7 @@ ht-degree: 1%
 
 ## 開啟產品駕駛艙 {#opening-product-cockpit}
 
-存取產品駕駛艙的最簡單方法是透過AEM主功能表中的「商務」功能表。 您也可以使用Omnisearch (搜尋Commerce)或oping `https://<yourAEMInstance>/commerce.html`.
+存取產品駕駛艙最簡單的方式是透過AEM主要功能表中的「Commerce」功能表。 也可以使用Omnisearch (搜尋Commerce)或開啟`https://<yourAEMInstance>/commerce.html`。
 
 ![AEM功能表](/help/commerce/cif/assets/aem-menu.png)
 
@@ -68,7 +68,7 @@ ht-degree: 1%
 
 依預設，產品駕駛艙會顯示即時產品目錄資料。 使用左側篩選索引標籤中的「階段目錄」，載入任何所選日期的產品目錄。
 
-![階段目錄](/help/commerce/cif/assets/staged-cockpit.png)
+![暫存目錄](/help/commerce/cif/assets/staged-cockpit.png)
 
 ## 產品目錄屬性 {#catalog-properties}
 
@@ -82,6 +82,6 @@ ht-degree: 1%
 
 ### AEM內容標籤 {#content-tabs}
 
-這些按AEM內容型別（體驗片段、內容片段、相關資產）分組的標籤會顯示與商業物件相關聯的AEM內容。 「檢視詳細資料」動作會開啟新的瀏覽器索引標籤，其中包含選取的內容。
+這些按AEM內容型別(體驗片段、內容片段、關聯的Assets)分組的標籤會顯示與商務物件關聯的AEM內容。 「檢視詳細資料」動作會開啟新的瀏覽器索引標籤，其中包含選取的內容。
 
 ![內容屬性](/help/commerce/cif/assets/content-properties.png)

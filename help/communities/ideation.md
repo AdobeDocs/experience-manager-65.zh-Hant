@@ -46,7 +46,7 @@ ht-degree: 3%
   </tr>
   <tr>
    <td><strong> 屬性</strong></td>
-   <td>另請參閱 <a href="ideation-feature.md">創意力功能</a></td>
+   <td>請參閱<a href="ideation-feature.md">創意力功能</a></td>
   </tr>
  </tbody>
 </table>
@@ -55,4 +55,4 @@ ht-degree: 3%
 
 ### 創意力功能 {#ideation-function}
 
-社群網站結構包含 [創意力功能](functions.md#ideation-function)，包括已設定的 `ideation` 元件。
+包含[創意功能](functions.md#ideation-function)的社群網站結構包含已設定的`ideation`元件。

@@ -20,7 +20,7 @@ ht-degree: 1%
 
 社群群組功能可讓發佈和作者環境中的授權使用者在社群網站中動態建立子社群。
 
-社群起始 [feature pack 1](deploy-communities.md#latestfeaturepack)，群組可巢狀內嵌於其他群組中。
+自Communities [功能套件1](deploy-communities.md#latestfeaturepack)起，群組可巢狀內嵌於其他群組中。
 
 ## 使用者端的Essentials {#essentials-for-client-side}
 
@@ -46,7 +46,7 @@ ht-degree: 1%
   </tr>
   <tr>
    <td><strong>屬性</strong></td>
-   <td>另請參閱 <a href="creating-groups.md">社群群組</a></td>
+   <td>檢視<a href="creating-groups.md">社群群組</a></td>
   </tr>
  </tbody>
 </table>
@@ -86,15 +86,15 @@ ht-degree: 1%
 
 ### 群組功能 {#groups-function}
 
-社群網站結構包含 [群組功能](functions.md#groups-function) 支援建立新的 `community groups` 來自發佈和作者環境。 建立的社群群組包括 `community groups member list` 列出群組成員的元件。
+包含[群組函式](functions.md#groups-function)的社群網站結構支援從發佈和作者環境建立新的`community groups`。 建立的社群群組包含列出群組成員的`community groups member list`元件。
 
-一或多個 [社群群組範本](tools-groups.md)（提供社群群組頁面設計）可針對「群組」功能進行設定。 若要將函式新增至 [社群網站範本](sites.md) 或巢狀內嵌在社群群組範本中。
+一或多個[社群群組範本](tools-groups.md)提供社群群組頁面的設計，可設定為「群組」功能。 將函式新增至[社群網站範本](sites.md)或巢狀加入社群群組範本時，即屬如此。
 
-納入多個社群群組範本後即可供選擇。 亦即，在為社群網站建立社群群組時，向授權使用者呈現的設計選擇。 請參閱以下小節： [社群群組](creating-groups.md) 適用於作者。
+納入多個社群群組範本後即可供選擇。 亦即，在為社群網站建立社群群組時，向授權使用者呈現的設計選擇。 請參閱作者的[社群群組](creating-groups.md)相關章節。
 
 ### 巢狀群組 {#nested-groups}
 
-社群起始 [FP1](deploy-communities.md#latestfeaturepack)，群組功能可包含在群組範本中，以便巢狀群組（子社群）。
+從Communities [FP1](deploy-communities.md#latestfeaturepack)開始，群組功能可以包含在群組範本中，因此允許巢狀群組（子社群）。
 
 當社群網站或群組範本包含「群組」功能時，可以：
 

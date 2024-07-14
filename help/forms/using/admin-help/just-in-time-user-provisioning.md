@@ -28,11 +28,11 @@ AEM Forms支援「使用者管理」中尚未存在的使用者之即時布建�
 1. 驗證提供者會驗證認證。
 1. 驗證提供者接著會檢查使用者是否存在於使用者管理資料庫中。 可能會產生下列結果：
 
-   **存在：** 如果使用者為最新狀態且已解除鎖定，「使用者管理」會傳回驗證成功。 但是，如果使用者不是最新使用者或已鎖定，「使用者管理」會傳回驗證失敗。
+   **存在：**&#x200B;如果使用者是最新的且已解除鎖定，「使用者管理」會傳回驗證成功。 但是，如果使用者不是最新使用者或已鎖定，「使用者管理」會傳回驗證失敗。
 
    **不存在：** User Management傳回驗證失敗。
 
-   **無效：** User Management傳回驗證失敗。
+   **無效：**&#x200B;使用者管理傳回驗證失敗。
 
 1. 會評估驗證提供者傳回的結果。 如果驗證提供者傳回驗證成功，則允許使用者登入。 否則，「使用者管理」會檢查下一個驗證提供者（步驟2-3）。
 1. 如果沒有可用的驗證提供者驗證使用者認證，則會傳回驗證失敗。
@@ -82,8 +82,8 @@ public Boolean assign(User user);
 
 ### 建立即時啟用網域時的注意事項 {#considerations-while-creating-a-just-in-time-enabled-domain}
 
-* 建立自訂時 `IdentityCreator` 對於混合式網域，請確保為本機使用者指定了虛擬密碼。 請勿將此密碼欄位留空。
-* 建議：使用 `DomainSpecificAuthentication` 驗證特定網域的使用者認證。
+* 在建立混合式網域的自訂`IdentityCreator`時，請確定已指定虛擬密碼給本機使用者。 請勿將此密碼欄位留空。
+* 建議：使用`DomainSpecificAuthentication`驗證特定網域的使用者認證。
 
 ### 建立即時啟用的網域 {#create-a-just-in-time-enabled-domain}
 
@@ -92,7 +92,7 @@ public Boolean assign(User user);
 1. 建立即時啟用的網域：
 
    * 在Administration Console中，按一下「設定」>「使用者管理」>「網域管理」>「新增企業網域」。
-   * 設定網域，並選取啟用即時布建。 <!--Fix broken link (See Setting up and managing domains).-->
+   * 設定網域，並選取啟用即時布建。<!--Fix broken link (See Setting up and managing domains).-->
    * 新增驗證提供者。 新增驗證提供者時，請在[新增驗證]畫面上，選取已註冊的[識別建立者]和[指派提供者]。
 
 1. 儲存新網域。
@@ -101,12 +101,12 @@ public Boolean assign(User user);
 
 假設使用者正在嘗試登入AEM表單，而驗證提供者接受他們的使用者認證。 如果使用者尚未存在於「使用者管理」資料庫中，則使用者的識別檢查會失敗。 AEM forms現在會執行下列動作：
 
-1. 建立 `UserProvisioningBO` 物件，並將它放置在認證對應中。
-1. 根據傳回的網域資訊 `UserProvisioningBO`，擷取並叫用註冊的 `IdentityCreator` 和 `AssignmentProvider` 用於網域。
-1. 叫用 `IdentityCreator`. 如果它傳回成功 `AuthResponse`，擷取 `UserInfo` 從認證對應。 將其傳遞給 `AssignmentProvider` 用於群組/角色指派，以及建立使用者之後的任何其他後續處理。
+1. 使用驗證資料建立`UserProvisioningBO`物件，並將其放入認證對應中。
+1. 根據`UserProvisioningBO`傳回的網域資訊，擷取並叫用網域的已登入`IdentityCreator`和`AssignmentProvider`。
+1. 叫用`IdentityCreator`。 如果它傳回成功的`AuthResponse`，請從認證對應中擷取`UserInfo`。 在使用者建立後，將其傳遞給`AssignmentProvider`以進行群組/角色指派和任何其他後續處理。
 1. 如果已成功建立使用者，請將使用者的登入嘗試傳回為成功。
 1. 對於混合網域，請從提供給驗證提供者的驗證資料中提取使用者資訊。 如果成功擷取此資訊，請立即建立使用者。
 
 >[!NOTE]
 >
->即時布建功能隨附預設實作 `IdentityCreator` 可用來以動態方式建立使用者的資訊。 使用者是以與網域中目錄相關聯的資訊建立的。
+>即時布建功能隨附預設的`IdentityCreator`實作，可供您用來動態建立使用者。 使用者是以與網域中目錄相關聯的資訊建立的。

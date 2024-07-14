@@ -18,7 +18,7 @@ ht-degree: 1%
 
 # 教學課程 {#tutorials}
 
-這些範例可協助學習和使用Adobe Experience Manager (AEM) 6.1社群 [社交元件架構(SCF)](scf.md).
+這些範例可協助您學習及使用Adobe Experience Manager (AEM) 6.1 Communities [社交元件架構(SCF)](scf.md)。
 
 ## 使用者端自訂 {#client-side-customization}
 
@@ -34,9 +34,9 @@ ht-degree: 1%
 
 ## 伺服器端自訂 {#server-side-customization}
 
-另請參閱 [SCF伺服器端自訂](server-customize.md).
+另請參閱[SCF伺服器端自訂](server-customize.md)。
 
-程式碼範例位於 [Adobe Experience Cloud GitHub](https://github.com/Adobe-Marketing-Cloud) 存放庫：
+範常式式碼可在[Adobe Experience Cloud GitHub](https://github.com/Adobe-Marketing-Cloud)存放庫中取得：
 
 * [自訂SCF元件範例](https://github.com/Adobe-Marketing-Cloud/aem-scf-sample-components-customize)
 
@@ -60,11 +60,11 @@ ht-degree: 1%
 
 ## 示範使用者 {#demo-users}
 
-Geometrixx範例套件包含示範使用者。 身為訪客（未登入）或成員（已登入）的體驗通常會有差異。 而且，只要Geometrixx範例套件保持已安裝，當您使用探索時，可以使用這些使用者來模擬登入狀態 [社群元件指南](components-guide.md).
+Geometrixx範例套件包含示範使用者。 身為訪客（未登入）或成員（已登入）的體驗通常會有差異。 而且，只要仍安裝Geometrixx範例套件，您就可以使用這些使用者來模擬使用[社群元件指南](components-guide.md)探索時的登入狀態。
 
-如需示範使用者的完整清單，請使用邊欄導覽至 **[!UICONTROL 工具]** > **[!UICONTROL 作業]** > **[!UICONTROL 安全性>使用者]**. 或使用傳統UI [安全性主控台](http://localhost:4502/useradmin) 用於管理使用者和群組。
+如需示範使用者的完整清單，請使用邊欄導覽至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 作業]** > **[!UICONTROL 安全性>使用者]**。 或使用傳統UI [安全性主控台](http://localhost:4502/useradmin)來管理使用者和群組。
 
-如果 [已建立社群網站](getting-started.md)，可將示範使用者指派至其 [社群使用者群組](users.md).
+如果已建立[社群網站](getting-started.md)，則可將示範使用者指派給其[社群使用者群組](users.md)。
 
 ***使用者id* / *密碼***：
 

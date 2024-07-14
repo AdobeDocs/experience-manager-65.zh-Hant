@@ -17,9 +17,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->[API檔案](/help/commerce/cif-classic/developing/ecommerce.md#api-documentation) 也可供使用。
+>[API檔案](/help/commerce/cif-classic/developing/ecommerce.md#api-documentation)也可供使用。
 
-整合架構包含具有API的整合層。 這可讓您建置電子商務功能的AEM元件（不受特定電子商務引擎影響）。 它也可讓您使用內部CRX資料庫或插入電子商務系統，並將產品資料提取到AEM。
+整合架構包含具有API的整合層。 這可讓您建置電子商務功能的AEM元件（不受特定電子商務引擎影響）。 它也可讓您使用內部CRX資料庫或插入電子商務系統，並將產品資料提取到AEM中。
 
 提供幾個現成的AEM元件，以供使用整合層。 目前包括：
 
@@ -36,22 +36,22 @@ ht-degree: 0%
 
 電子商務架構可搭配任何電子商務解決方案使用，使用的引擎必須由AEM識別 — 即使使用AEM通用引擎亦然：
 
-* 電子商務引擎是支援的OSGi服務 `CommerceService` 介面
+* 電子商務引擎是支援`CommerceService`介面的OSGi服務
 
-   * 引擎的辨別方式為 `commerceProvider` 服務屬性
+   * 引擎可由`commerceProvider`服務屬性區分
 
-* AEM支援 `Resource.adaptTo()` 的 `CommerceService` 和 `Product`
+* AEM支援`CommerceService`和`Product`的`Resource.adaptTo()`
 
-   * 此 `adaptTo` 實施會尋找 `cq:commerceProvider` 資源階層中的屬性：
+   * `adaptTo`實作會在資源的階層中尋找`cq:commerceProvider`屬性：
 
       * 如果找到，則會使用值來篩選商務服務查閱。
       * 如果找不到，則會使用排名最高的商務服務。
 
-   * A `cq:Commerce` mixin用於 `cq:commerceProvider` 可新增至強型別資源。
+   * 已使用`cq:Commerce` mixin，以便將`cq:commerceProvider`新增到強型別資源。
 
-* 此 `cq:commerceProvider` 屬性也可用來參考適當的商務工廠定義。
+* `cq:commerceProvider`屬性也用來參考適當的商務工廠定義。
 
-   * 例如， `cq:commerceProvider` 屬性的值Geometrixx與的OSGi設定相關 **Day CQ Commerce Factory for Geometrixx-Outdoors** (`com.adobe.cq.commerce.hybris.impl.GeoCommerceServiceFactory`) — 其中引數 `commerceProvider` 還具有值 `geometrixx`.
+   * 例如，值為Geometrixx的`cq:commerceProvider`屬性與&#x200B;**Day CQ Commerce Factory for Geometrixx-Outdoors** (`com.adobe.cq.commerce.hybris.impl.GeoCommerceServiceFactory`)的OSGi設定相關，其中引數`commerceProvider`也具有值`geometrixx`。
    * 您可以在此處設定其他屬性（若適當且可提供）。
 
 在標準AEM安裝中，需要特定實施，例如：
@@ -87,55 +87,55 @@ ht-degree: 0%
 
 儲存與客戶購物車相關資訊的工作階段。
 
-此 **CommerceSession**：
+**CommerceSession**：
 
-* 擁有 **購物車**
+* 擁有&#x200B;**購物車**
 
    * 執行新增/移除/等
    * 在購物車上執行各種計算；
 
      `commerceSession.getProductPriceInfo(Product product, Predicate filter)`
 
-* 擁有的持續性 **訂購** 資料：
+* 擁有&#x200B;**訂單**&#x200B;資料的持續性：
 
   `CommerceSession.getUserContext()`
 
-* 可使用擷取/更新傳遞詳細資訊 `updateOrder(Map<String, Object> delta)`
-* 擁有 **付款** 正在處理連線
-* 擁有 **履行** 連線
+* 可使用`updateOrder(Map<String, Object> delta)`擷取/更新傳遞詳細資料
+* 擁有&#x200B;**付款**&#x200B;處理連線
+* 擁有&#x200B;**履行**&#x200B;連線
 
 ### 架構 {#architecture}
 
 #### 產品和變體的架構 {#architecture-of-product-and-variants}
 
-單一產品可以有多個變數，例如可能因顏色和/或大小而異。 產品必須定義哪些屬性會帶動變化；Adobe術語如下 *變數軸*.
+單一產品可以有多個變數，例如可能因顏色和/或大小而異。 產品必須定義哪些屬性會驅動變化；Adobe字詞這些&#x200B;*變化軸*。
 
 不過，並非所有屬性都是變數軸。 變化也可能會影響其他屬性；例如，價格可能取決於大小。 購物者無法選取這些屬性，因此不會視為變數軸。
 
 每個產品和/或變體由資源表示，因此將1:1對應到存放庫節點。 必然結果是，特定產品和/或變體可由其路徑唯一識別。
 
-任何產品資源都可以以下列專案表示： `Product API`. 產品API中的大部分呼叫都是變異專用（雖然變異可能會繼承來自祖先的共用值），但也會有列出變異集合的呼叫( `getVariantAxes()`， `getVariants()`、等等)。
+任何產品資源都可以以`Product API`表示。 產品API中的大部分呼叫都是變動專用（雖然變動可能會繼承來自上階的共用值），但也有列出變動集（`getVariantAxes()`、`getVariants()`等）的呼叫。
 
 >[!NOTE]
 >
->實際上，變體軸由任何決定 `Product.getVariantAxes()` 傳回：
+>實際上，變數座標軸是由`Product.getVariantAxes()`傳回的任何專案所決定：
 >
->* 對於一般實作，AEM會從產品資料( `cq:productVariantAxes`)
+>* 對於一般實作，AEM會從產品資料( `cq:productVariantAxes`)中的屬性讀取它
 >
 >雖然產品（一般）可以有許多變體軸，但現成可用的產品元件僅處理兩個變體：
 >
 >1. `size`
 >1. 再加一個
 >
->   若要選取此額外變體，請透過 `variationAxis` 產品參考的屬性(通常 `color` (適用於Geometrixx Outdoors)。
+>   此額外變體是透過產品參考的`variationAxis`屬性選取的(Geometrixx Outdoors通常為`color`)。
 
 #### 產品參考與PIM資料 {#product-references-and-pim-data}
 
 一般而言：
 
-* PIM資料位於 `/etc`
+* PIM資料位於`/etc`下
 
-* 下的產品參考 `/content`.
+* `/content`下的產品參考。
 
 產品變數和產品資料節點之間必須是1:1對應。
 
@@ -242,13 +242,13 @@ public class AxisFilter implements VariantFilter {
 
       * 具有儲存在其他位置的產品資料的參考：
 
-         * 產品引用包含 `productData` 屬性，指向產品資料(通常位於 `/etc/commerce/products`)。
+         * 產品參考包含`productData`屬性，指向產品資料（通常在`/etc/commerce/products`下）。
          * 產品資料為階層式；產品屬性繼承自產品資料節點的祖先。
          * 產品參考也可以包含本機屬性，這些屬性會覆寫產品資料中指定的屬性。
 
       * 產品本身：
 
-         * 不含 `productData` 屬性。
+         * 沒有`productData`屬性。
          * 在本機持有所有屬性（且不包含productData屬性）的產品節點，會直接從自己的祖先繼承產品屬性。
 
 * **AEM-generic產品結構**
@@ -304,13 +304,13 @@ public class AxisFilter implements VariantFilter {
 
 **元件**
 
-* 該購物車屬於 `CommerceSession:`
+* 購物車屬於`CommerceSession:`
 
-   * 此 `CommerceSession` 執行新增、移除等動作。
-   * 此 `CommerceSession` 也會在購物車上執行各種計算。
-   * 此 `CommerceSession` 也會將已引發的憑單和促銷活動套用至購物車。
+   * `CommerceSession`執行新增、移除等動作。
+   * `CommerceSession`也會在購物車上執行各種計算。
+   * `CommerceSession`也會套用已引發購物車的憑單和促銷活動。
 
-* 雖然並非直接與購物車相關，但 `CommerceSession` 也必須提供型錄訂價資訊（因為它擁有訂價）
+* 雖然不直接與購物車相關，但`CommerceSession`也必須提供目錄定價資訊（因為它擁有定價）
 
    * 訂價可能有數個修正因子：
 
@@ -327,14 +327,14 @@ public class AxisFilter implements VariantFilter {
 
 * 儲存空間
 
-   * 在AEM一般情況下，購物車會儲存在 [ClientContext](/help/sites-administering/client-context.md)
+   * 在AEM一般案例中，購物車儲存在[ClientContext](/help/sites-administering/client-context.md)中
 
-**個人化**
+**Personalization**
 
-* 一律透過 [ClientContext](/help/sites-administering/client-context.md).
-* ClientContext `/version/` 會在所有情況下建立的Cart中：
+* 一律透過[ClientContext](/help/sites-administering/client-context.md)推動個人化。
+* 在所有情況下都會建立購物車的ClientContext`/version/`：
 
-   * 應使用 `CommerceSession.addCartEntry()` 方法。
+   * 應該使用`CommerceSession.addCartEntry()`方法來新增產品。
 
 * 以下說明ClientContext購物車中的購物車資訊範例：
 
@@ -344,7 +344,7 @@ public class AxisFilter implements VariantFilter {
 
 **購物車與訂單資料**
 
-此 `CommerceSession` 擁有三個元素：
+`CommerceSession`擁有三個元素：
 
 1. **購物車內容**
 
@@ -371,7 +371,7 @@ public class AxisFilter implements VariantFilter {
 
 1. **訂單詳細資料**
 
-   不過，訂單詳細資料如下 *非* 由API修正：
+   但是，訂單詳細資料&#x200B;*不是*&#x200B;由API修正：
 
    ```java
        public void updateOrderDetails(Map<String, String> orderDetails);
@@ -383,10 +383,10 @@ public class AxisFilter implements VariantFilter {
 
 * 訂購單通常必須提供多種送貨選項（和價格）。
 * 價格可能會以訂單的專案和詳細資訊為依據，例如重量和/或交貨地址。
-* 此 `CommerceSession` 可存取所有相依性，因此可將其視為類似產品定價的方式：
+* `CommerceSession`具有所有相依性的存取權，因此可將其視為類似產品定價的方式：
 
-   * 此 `CommerceSession` 擁有送貨定價。
-   * 使用 `updateOrder(Map<String, Object> delta)` 以擷取/更新傳遞詳細資訊。
+   * `CommerceSession`擁有送貨定價。
+   * 使用`updateOrder(Map<String, Object> delta)`擷取/更新傳遞詳細資料。
 
 ### 搜尋定義 {#search-definition}
 
@@ -406,7 +406,7 @@ public class AxisFilter implements VariantFilter {
 
 ![chlimage_1-34](/help/sites-developing/assets/chlimage_1-34a.png)
 
-這會使用搜尋API來查詢所選的商務引擎(請參閱 [電子商務引擎選擇](#ecommerce-engine-selection))：
+這會使用搜尋API來查詢選取的商務引擎（請參閱[電子商務引擎選擇](#ecommerce-engine-selection)）：
 
 #### 搜尋API {#search-api}
 
@@ -414,13 +414,13 @@ public class AxisFilter implements VariantFilter {
 
 1. `CommerceQuery`
 
-   用於描述搜尋查詢（包含有關查詢文字、目前頁面、頁面大小、排序和所選多面的資訊）。 所有實作搜尋API的電子商務服務都會收到此類別的執行個體，以執行其搜尋。 A `CommerceQuery` 可以從請求物件具現化( `HttpServletRequest`)。
+   用於描述搜尋查詢（包含有關查詢文字、目前頁面、頁面大小、排序和所選多面的資訊）。 所有實作搜尋API的電子商務服務都會收到此類別的執行個體，以執行其搜尋。 可從要求物件( `HttpServletRequest`)具現化`CommerceQuery`。
 
 1. `FacetParamHelper`
 
-   是一個公用程式類別，提供一個靜態方法 —  `toParams`  — 用於產生 `GET` 多面清單的引數字串和一個切換值。 這在UI端相當實用，您需要顯示每個Facet之每個值的超連結，如此當使用者按一下超連結時，就會切換個別值。 也就是說，如果選取它，它會從查詢中移除，否則會新增。 這會負責處理多個/單一值Facet、覆寫值等作業的所有邏輯。
+   是一個公用程式類別，它提供一個靜態方法 — `toParams` — 用來從Facet清單和一個切換值產生`GET`引數字串。 這在UI端相當實用，您需要顯示每個Facet之每個值的超連結，如此當使用者按一下超連結時，就會切換個別值。 也就是說，如果選取它，它會從查詢中移除，否則會新增。 這會負責處理多個/單一值Facet、覆寫值等作業的所有邏輯。
 
-搜尋API的進入點為 `CommerceService#search` 傳回 `CommerceResult` 物件。 請參閱API檔案，以取得有關本主題的詳細資訊。
+搜尋API的進入點是傳回`CommerceResult`物件的`CommerceService#search`方法。 請參閱API檔案，以取得有關本主題的詳細資訊。
 
 ### 開發促銷活動和憑單 {#developing-promotions-and-vouchers}
 
@@ -440,9 +440,9 @@ public class AxisFilter implements VariantFilter {
    * 外部商務引擎也可以提供憑單；這些至少需要：
 
       * 憑單代碼
-      * 一個 `isValid()` 方法
+      * `isValid()`方法
 
-   * 此 **憑單** 元件( `/libs/commerce/components/voucher`)提供：
+   * **憑單**&#x200B;元件( `/libs/commerce/components/voucher`)提供：
 
       * 憑單管理的轉譯器；這會顯示目前購物車中的任何憑單。
       * 用於管理（新增/移除）憑單的編輯對話方塊（表單）。
@@ -469,15 +469,15 @@ public class AxisFilter implements VariantFilter {
 
    * 現成提供兩個提升處理常式：
 
-      * `DiscountPromotionHandler`，套用購物車範圍的絕對或百分比折扣
-      * `PerfectPartnerPromotionHandler`，若合作夥伴產品也在購物車中，則套用產品絕對折扣或百分比折扣
+      * `DiscountPromotionHandler`，適用於整個購物車的絕對折扣或百分比折扣
+      * `PerfectPartnerPromotionHandler`，如果合作夥伴產品也在購物車中，則套用產品絕對折扣或百分比折扣
 
-   * ClientContext `SegmentMgr` 解析區段和ClientContext `CartMgr` 解析促銷活動。 至少會引發一個已解析區段的促銷活動。
+   * ClientContext`SegmentMgr`會解析區段，而ClientContext`CartMgr`會解析促銷活動。 至少會引發一個已解析區段的促銷活動。
 
       * 已引發的促銷活動會透過AJAX呼叫傳回至伺服器，以重新計算購物車。
       * 已引發的促銷活動（以及新增的憑單）也會顯示在「ClientContext」面板中。
 
-從購物車新增/移除憑單是透過以下方式完成： `CommerceSession` API：
+新增/移除購物車的憑單是透過`CommerceSession` API完成：
 
 ```java
 /**
@@ -504,23 +504,23 @@ public void removeVoucher(String code) throws CommerceException;
 public List<Voucher> getVouchers() throws CommerceException;
 ```
 
-如此一來， `CommerceSession` 負責檢查憑單是否存在，以及是否可套用。 這可能適用於只有在符合特定條件時才能套用的憑單。 例如，當購物車總價大於$100時。 如果憑單因任何原因而無法套用，則 `addVoucher` 方法擲回例外狀況。 此外， `CommerceSession` 在新增/移除憑單後，負責更新購物車的價格。
+如此一來，`CommerceSession`便負責檢查憑單是否存在，以及憑單是否可以套用。 這可能適用於只有在符合特定條件時才能套用的憑單。 例如，當購物車總價大於$100時。 如果由於任何原因無法套用憑單，`addVoucher`方法會擲回例外狀況。 此外，新增/移除憑單後，`CommerceSession`負責更新購物車的價格。
 
-此 `Voucher` 是Bean型類別，其中包含下列欄位：
+`Voucher`是Bean型類別，包含下列欄位：
 
 * 憑單代碼
 * 簡短說明
 * 參考指出折扣型態與值的相關促銷
 
-此 `AbstractJcrCommerceSession` 提供可以申請憑單。 類別傳回的憑單 `getVouchers()` 為的例項 `cq:Page` 包含具有下列屬性（及其他）的jcr：content節點：
+提供的`AbstractJcrCommerceSession`可以套用憑單。 類別`getVouchers()`傳回的憑單是`cq:Page`的執行個體，包含具有下列屬性（等等）的jcr：content節點：
 
-* `sling:resourceType` （字串） — 這必須 `commerce/components/voucher`
+* `sling:resourceType` （字串） — 這必須是`commerce/components/voucher`
 
 * `jcr:title` （字串） — 憑單說明
 * `code` （字串） — 使用者必須輸入以套用此憑單的代碼
-* `promotion` （字串） — 要套用的促銷活動；例如， `/content/campaigns/geometrixx-outdoors/article/10-bucks-off`
+* `promotion` （字串） — 要套用的促銷活動；例如，`/content/campaigns/geometrixx-outdoors/article/10-bucks-off`
 
-促銷活動處理常式是修改購物車的OSGi服務。 購物車支援中定義的數個勾點 `PromotionHandler` 介面。
+促銷活動處理常式是修改購物車的OSGi服務。 購物車支援`PromotionHandler`介面中定義的數個勾點。
 
 ```java
 /**
@@ -570,6 +570,6 @@ public void invalidateCaches();
 
 提供三個立即可用的促銷活動處理常式：
 
-* `DiscountPromotionHandler` 套用購物車範圍的絕對或百分比折扣
-* `PerfectPartnerPromotionHandler` 如果產品合作夥伴也在購物車中，則套用產品絕對折扣或百分比折扣
-* `FreeShippingPromotionHandler` 套用免運費
+* `DiscountPromotionHandler`套用購物車範圍的絕對或百分比折扣
+* 如果產品合作夥伴也在購物車中，`PerfectPartnerPromotionHandler`會套用產品絕對折扣或百分比折扣
+* `FreeShippingPromotionHandler`套用免運費

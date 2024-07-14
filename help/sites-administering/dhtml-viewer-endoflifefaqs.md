@@ -20,7 +20,7 @@ ht-degree: 0%
 
 自2014年1月31日起，DHTML檢視器平台正式終止服務。
 
-請參閱 [Dynamic Media檢視器參考指南](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/homeviewers.html) 以取得最新支援的檢視器。
+如需最新支援的檢視器，請參閱[Dynamic Media檢視器參考指南](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/homeviewers.html)。
 
 <!-- OBSOLETE CONTENT **What is the change?**
 

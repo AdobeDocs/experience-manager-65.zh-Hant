@@ -32,14 +32,14 @@ GDS是用來儲存處理程式中所使用之長期檔案的目錄。 長效檔�
 
 非同步作業引動的輸入檔案也儲存在GDS中，並且必須可用於處理請求。 因此，您必須考量裝載GDS的檔案系統的可靠性，並採用獨立磁碟備援陣列(RAID)或其他適合您品質和服務等級需求的技術。
 
-GDS的位置是在AEM Forms安裝過程中或之後使用管理主控台確定的。 除了保留GDS的高可用性位置之外，您還可以啟用檔案的資料庫儲存。 另請參閱 [當資料庫用於檔案儲存時的備份選項](files-back-recover.md#backup-options-when-database-is-used-for-document-storage).
+GDS的位置是在AEM Forms安裝過程中或之後使用管理主控台確定的。 除了保留GDS的高可用性位置之外，您還可以啟用檔案的資料庫儲存。 當資料庫用於檔案儲存體](files-back-recover.md#backup-options-when-database-is-used-for-document-storage)時，請參閱[備份選項。
 
 ### GDS位置 {#gds-location}
 
 如果您在安裝期間將位置設定保留為空白，則該位置會預設為應用程式伺服器安裝下的目錄。 備份應用程式伺服器的下列目錄：
 
-* (JBos) `[appserver root]/server/'server'/svcnative/DocumentStorage`
-* （網頁邏輯） `[appserverdomain]/'server'/adobe/AEMformsserver/DocumentStorage`
+* (JBoss) `[appserver root]/server/'server'/svcnative/DocumentStorage`
+* (WebLogic) `[appserverdomain]/'server'/adobe/AEMformsserver/DocumentStorage`
 * (WebSphere) `[appserver root]/installedApps/adobe/'server'/DocumentStorage`
 
 如果您將GDS位置變更為非預設位置，您可以依照下列方式加以確定：
@@ -49,7 +49,7 @@ GDS的位置是在AEM Forms安裝過程中或之後使用管理主控台確定�
 
 在叢集環境中，GDS通常會指向網路上共用的目錄，而且每個叢集節點都可以讀取/寫入存取該目錄。
 
-如果原始位置不再可用，則在復原期間可能會變更GDS的位置。 (請參閱 [在復原期間變更GDS位置](/help/forms/using/admin-help/recovering-aem-forms-data.md#changing-the-gds-location-during-recovery).)
+如果原始位置不再可用，則在復原期間可能會變更GDS的位置。 （請參閱[在復原期間變更GDS位置](/help/forms/using/admin-help/recovering-aem-forms-data.md#changing-the-gds-location-during-recovery)。）
 
 ### 當資料庫用於檔案儲存時的備份選項 {#backup-options-when-database-is-used-for-document-storage}
 
@@ -59,7 +59,7 @@ GDS的位置是在AEM Forms安裝過程中或之後使用管理主控台確定�
 
 ## AEM存放庫 {#aem-repository}
 
-如果在安裝AEM表單時配置了crx-repository，則會建立AEM存放庫(crx-repository)。 crx-repository目錄的位置是在AEM表單安裝過程中確定的。 AEM儲存區域需要備份和還原，以及資料庫和GDS，才能在AEM表單中保持一致AEM表單資料。 AEM存放庫包含Correspondence Management Solution、Forms Manager和AEM Forms Workspace的資料。
+如果在安裝AEM表單時配置了crx-repository，則會建立AEM存放庫(crx-repository)。 crx-repository目錄的位置是在AEM表單安裝過程中確定的。 AEM儲存區域需要備份和還原，以及資料庫和GDS，才能在AEM表單中保持一致AEM表單資料。 AEM存放庫包含通訊管理解決方案、Forms manager和AEM Forms Workspace的資料。
 
 ### 通訊管理解決方案 {#correspondence-management-solution}
 
@@ -71,9 +71,9 @@ GDS的位置是在AEM Forms安裝過程中或之後使用管理主控台確定�
 
 forms manager可簡化更新、管理和淘汰表單的程式。
 
-### AEM Forms工作區 {#html-workspace}
+### AEM Forms Workspace {#html-workspace}
 
-AEM Forms工作區符合(JEE棄用AEM Forms) Flex工作區的功能，並新增擴充和整合工作區的功能，使其更人性化。
+AEM Forms Workspace符合(JEE上的AEM表單已棄用) Flex Workspace的功能，並新增擴充和整合Workspace的新功能，使其更人性化。
 
 >[!NOTE]
 >
@@ -91,7 +91,7 @@ AEM Forms資料庫會儲存內容，例如表單人工因素、服務組態、�
 
 >[!NOTE]
 >
->Adobe® LiveCycle® Content Services ES （已淘汰）是隨LiveCycle安裝的內容管理系統。 它可讓使用者設計、管理、監控及最佳化以人為中心的流程。 內容服務（已棄用）支援將於2014年12月31日終止。 另請參閱 [Adobe產品生命週期檔案](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html).
+>Adobe® LiveCycle® Content Services ES （已淘汰）是隨LiveCycle安裝的內容管理系統。 它可讓使用者設計、管理、監控及最佳化以人為中心的流程。 內容服務（已棄用）支援將於2014年12月31日終止。 請參閱[Adobe產品生命週期檔案](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html)。
 
 ### DB2 {#db2}
 
@@ -110,13 +110,13 @@ DB2具有將資料庫備份至Tivoli Storage Manager的內建功能。 使用Tiv
 
 ### oracle {#oracle}
 
-使用快照集備份，或設定Oracle資料庫以存檔日誌模式執行。 (請參閱 [oracle備份：簡介](https://www.databasedesign-resource.com/oracle-backup.md).) 如需有關備份和復原Oracle資料庫的詳細資訊，請前往下列網站：
+使用快照集備份，或設定Oracle資料庫以存檔日誌模式執行。 (請參閱[Oracle備份：簡介](https://www.databasedesign-resource.com/oracle-backup.md)。) 如需有關備份和復原Oracle資料庫的詳細資訊，請前往下列網站：
 
-[oracle備份與復原：](https://www.oracle.com/technetwork/database/features/availability/br-overview-097160.html) 詳細說明備份與復原的概念，以及使用Recovery Manager (RMAN)進行備份、復原與報告的最常見技術，並提供有關如何規劃備份與復原策略的詳細資訊。
+[Oracle備份與復原：](https://www.oracle.com/technetwork/database/features/availability/br-overview-097160.html)說明備份與復原的概念，以及使用Recovery Manager (RMAN)進行備份、復原與報告的最常用技術，並提供有關如何規劃備份與復原策略的詳細資訊。
 
-[oracle Database Backup and Recovery使用手冊：](https://download.oracle.com/docs/cd/E11882_01/backup.112/e10642.pdf) 提供有關RMAN架構、備份與復原概念與機制、進階復原技術（例如時間點復原與資料庫倒溯功能）以及備份與復原效能調整的深入資訊。 此外也涵蓋使用者管理的備份與復原，使用主機作業系統設施，而非RMAN。 此磁碟區對於更複雜的資料庫部署以及進階復原案例的備份與復原是必要的。
+[Oracle Database Backup and Recovery User&#39;s Guide：](https://download.oracle.com/docs/cd/E11882_01/backup.112/e10642.pdf)提供有關RMAN架構、備份與復原概念與機制、進階復原技術（例如時間點復原與資料庫倒溯功能）以及備份與復原效能調整的深入資訊。 此外也涵蓋使用者管理的備份與復原，使用主機作業系統設施，而非RMAN。 此磁碟區對於更複雜的資料庫部署以及進階復原案例的備份與復原是必要的。
 
-[oracle資料庫備份與復原參考：](https://download.oracle.com/docs/cd/E11882_01/backup.112/e10643.pdf) 提供所有RMAN指令的語法和語意的完整資訊，並描述可用來報告備份與復原活動的資料庫檢視。
+[Oracle資料庫備份與復原參考：](https://download.oracle.com/docs/cd/E11882_01/backup.112/e10643.pdf)提供所有RMAN命令的語法和語意的完整資訊，並說明可用來報告備份與復原活動的資料庫檢視。
 
 ### SQL Server {#sql-server}
 
@@ -127,19 +127,19 @@ SQL Server還提供兩種備份與復原工具：
 * SQL Server Management Studio (GUI)
 * T-SQL （命令列）
 
-如需詳細資訊，請參閱 [備份和還原](https://msdn.microsoft.com/en-us/library/ms187048(v=SQL.90).aspx).
+如需詳細資訊，請參閱[備份與還原](https://msdn.microsoft.com/en-us/library/ms187048(v=SQL.90).aspx)。
 
 ### MySQL {#mysql}
 
-使用MySQLAdmin或修改Windows中的INI檔案，設定MySQL資料庫以二進位記錄模式執行。 (請參閱 [MySQL二進位記錄](https://dev.mysql.com/doc/refman/5.1/en/binary-log.html).) InnoBase軟體也提供MySQL的熱備份工具。 (請參閱 [Innobase熱備份](https://www.innodb.com/hot-backup/features.md).)
+使用MySQLAdmin或修改Windows中的INI檔案，設定MySQL資料庫以二進位記錄模式執行。 （請參閱[MySQL二進位記錄](https://dev.mysql.com/doc/refman/5.1/en/binary-log.html)。） InnoBase軟體也提供MySQL的熱備份工具。 （請參閱[Innobase熱備份](https://www.innodb.com/hot-backup/features.md)。）
 
 >[!NOTE]
 >
 >MySQL的預設二進位記錄模式為「陳述式」，與Content Services使用的表格不相容（已棄用）。 在此預設模式下使用二進位記錄會導致Content Services （已棄用）失敗。 如果您的系統包含Content Services （已棄用），請使用「混合」記錄模式。 若要啟用「混合」記錄，請將下列引數新增至my.ini檔案： `binlog_format=mixed log-bin=logname`
 
-您可以使用mysqldump公用程式來取得完整的資料庫備份。 需要完整備份，但並不總是方便的。 它們會產生大型備份檔案，並需要時間來產生。 若要執行增量備份，請確定您啟動伺服器的方式為 —  `log-bin` 選項，如上一節所述。 每當MySQL伺服器重新啟動時，它就會停止寫入目前的二進位記錄檔，建立新的記錄檔，從那時起，新的記錄檔就會變成目前的記錄檔。 您可以使用手動強制切換 `FLUSH LOGS SQL` 命令。 第一次完整備份後，後續的增量備份會使用mysqladmin公用程式搭配 `flush-logs` 指令，可建立下一個記錄檔。
+您可以使用mysqldump公用程式來取得完整的資料庫備份。 需要完整備份，但並不總是方便的。 它們會產生大型備份檔案，並需要時間來產生。 若要執行增量備份，請確定您是使用 — `log-bin`選項啟動伺服器，如上一節所述。 每當MySQL伺服器重新啟動時，它就會停止寫入目前的二進位記錄檔，建立新的記錄檔，從那時起，新的記錄檔就會變成目前的記錄檔。 您可以使用`FLUSH LOGS SQL`命令手動強制切換。 在第一次完整備份之後，後續的增量備份會使用mysqladmin公用程式搭配`flush-logs`命令來完成，這會建立下一個記錄檔。
 
-另請參閱 [備份策略摘要](https://dev.mysql.com/doc/refman/5.5/en/backup-strategy-summary.html).
+請參閱[備份策略摘要](https://dev.mysql.com/doc/refman/5.5/en/backup-strategy-summary.html)。
 
 ```text
 binlog_format=mixed
@@ -154,7 +154,7 @@ log-bin=logname
 
 內容儲存根目錄是在安裝Content Services （已棄用）時建立。 「內容儲存根目錄」的位置是在AEM Forms安裝過程中確定的。
 
-內容儲存根目錄的預設位置為 `[aem-forms root]/lccs_data`.
+內容儲存根目錄的預設位置為`[aem-forms root]/lccs_data`。
 
 備份內容儲存根目錄中的下列目錄：
 
@@ -172,11 +172,11 @@ log-bin=logname
 
 當您在叢集環境中安裝Content Services （已棄用）時，內容儲存根目錄會分割成兩個不同的目錄：
 
-**內容儲存根目錄：** 一般而言，叢集中所有節點都可讀取/寫入存取的共用網路目錄
+**內容儲存根目錄：**&#x200B;一般而言，叢集中所有節點都可讀取/寫入存取的共用網路目錄
 
-**索引根目錄：** 在叢集中的每個節點上建立的目錄，其路徑和目錄名稱一律相同
+**索引根目錄：**&#x200B;在叢集中的每個節點上建立的目錄，路徑和目錄名稱一律相同
 
-內容儲存根目錄的預設位置為 `[GDS root]/lccs_data`，其中 `[GDS root]` 是中說明的位置 [GDS位置](files-back-recover.md#gds-location). 備份內容儲存根目錄中的下列目錄：
+內容儲存根目錄的預設位置為`[GDS root]/lccs_data`，其中`[GDS root]`是[GDS位置](files-back-recover.md#gds-location)中說明的位置。 備份內容儲存根目錄中的下列目錄：
 
 /audit.contentstore
 
@@ -188,7 +188,7 @@ log-bin=logname
 
 如果/backup-lucene-indexes目錄不存在，請備份/lucene-indexes目錄，也在「內容儲存根目錄」中。 如果/backup-lucene-indexes目錄存在，請勿備份/lucene-indexes目錄，因為它可能會導致錯誤。
 
-「索引根目錄」的預設位置為 `[aem-forms root]/lucene-indexes` 在每個節點上。
+索引根目錄的預設位置是每個節點上的`[aem-forms root]/lucene-indexes`。
 
 ## 客戶安裝的字型 {#customer-installed-fonts}
 
@@ -196,6 +196,6 @@ log-bin=logname
 
 >[!NOTE]
 >
->依預設，隨AEM表單安裝的Adobe字型位於 `[aem-forms root]/fonts` 目錄。
+>依預設，隨AEM表單安裝的Adobe字型在`[aem-forms root]/fonts`目錄中。
 
 如果您正在重新初始化主機電腦上的作業系統，並且想要使用先前作業系統的字型，則系統字型目錄的內容也應進行備份。 （如需特定指示，請參閱作業系統的檔案）。

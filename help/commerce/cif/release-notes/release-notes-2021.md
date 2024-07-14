@@ -28,7 +28,7 @@ ht-degree: 9%
 
 | 元件 | 版本 | 詳細資料 |
 |:-------|:-----:|---------------------:|
-| CIF附加元件 | 2021.11.18.00 | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.11.18.00.zip) |
+| CIF附加元件 | 2021.11.18.00 | [軟體發佈](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.11.18.00.zip) |
 | CIF Core Components | 2.4.2 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.4.2) |
 | CIF Venia參考網站 | 2021.12.01 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2021.12.01) |
 
@@ -36,7 +36,7 @@ ht-degree: 9%
 
 * 以Commerce的可擴充Peregrine元件為基礎的擴充myAccount元件
 
-![延伸的myAccount元件](/help/assets/CIF/extended-myAccount-components.png)
+![延伸myAccount元件](/help/assets/CIF/extended-myAccount-components.png)
 
 * 作者可使用其他建議型別來建立臨機Commerce產品Recommendations
 
@@ -46,7 +46,7 @@ ht-degree: 9%
 
 | 元件 | 版本 | 詳細資料 |
 |:-------|:-----:|---------------------:|
-| CIF附加元件 | 2021.10.20.02 | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.10.20.02.zip) |
+| CIF附加元件 | 2021.10.20.02 | [軟體發佈](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.10.20.02.zip) |
 | CIF Core Components | 2.4.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.4.0) |
 | CIF Venia參考網站 | 2021.11.01 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2021.11.01) |
 
@@ -66,7 +66,7 @@ ht-degree: 9%
 
 | 元件 | 版本 | 詳細資料 |
 |:-------|:-----:|---------------------:|
-| CIF附加元件 | 2021.09.27 | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.09.27.zip) |
+| CIF附加元件 | 2021.09.27 | [軟體發佈](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.09.27.zip) |
 | CIF Core Components | 2.2.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.2.0) |
 | CIF Venia參考網站 | 2021.09.23 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2021.09.23) |
 
@@ -94,7 +94,7 @@ ht-degree: 9%
 
 | 元件 | 版本 | 詳細資料 |
 |:-------|:-----:|---------------------:|
-| CIF附加元件 | 2021.09.02 | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.09.02.zip) |
+| CIF附加元件 | 2021.09.02 | [軟體發佈](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.09.02.zip) |
 | CIF Core Components | 2.1.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.1.0) |
 | CIF Venia參考網站 | 2021.08.27 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2021.08.27) |
 
@@ -102,7 +102,7 @@ ht-degree: 9%
 
 * 新的類別選擇器UI可改善使用者體驗、提高效率，以及更好地支援複雜的產品目錄
 
-  ![新增類別選取器](/help/assets/CIF/category-picker.png)
+  ![新類別選擇器](/help/assets/CIF/category-picker.png)
 
 * CIF核心元件更好的A11Y支援
 
@@ -120,7 +120,7 @@ ht-degree: 9%
 
 | 元件 | 版本 | 詳細資料 |
 |:-------|:-----:|---------------------:|
-| CIF附加元件 | 2021.07.21 | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.07.21.zip) |
+| CIF附加元件 | 2021.07.21 | [軟體發佈](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.07.21.zip) |
 | CIF Core Components | 2.0.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.0.0) |
 | CIF Venia參考網站 | 2021.07.22 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2021.07.22) |
 
@@ -131,13 +131,13 @@ ht-degree: 9%
    * 在製作模式下分階段產品資料的視覺指示器，可更清楚顯示即將發生的變更
    * 內容和商務頁面的新Sitemap元件
 
-* 支援 [Adobe Commerce Sensei產品推薦，由Adobe Sensei提供技術支援](https://business.adobe.com/products/magento/product-recommendations.html) 在AEM Storefront中使用預先定義或即時建立的建議
+* 支援[Adobe Commerce Sensei產品建議，由AEM Storefront中的Adobe Sensei](https://business.adobe.com/products/magento/product-recommendations.html)提供技術支援，使用預先定義或即時建立的建議
 
 ## 發行日期： 2021年6月
 
 | 元件 | 版本 | 詳細資料 |
 |:-------|:-----:|---------------------:|
-| CIF附加元件 | 2021.06.18 | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.06.18.zip) |
+| CIF附加元件 | 2021.06.18 | [軟體發佈](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.06.18.zip) |
 | CIF Core Components | 1.12.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-1.12.0) |
 | CIF Venia參考網站 | 2021.06.12 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2021.06.17) |
 
@@ -154,7 +154,7 @@ ht-degree: 9%
 
 | 元件 | 版本 | 詳細資料 |
 |:-------|:-----:|---------------------:|
-| CIF附加元件 | 2021.05.26 | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.05.26.zip) |
+| CIF附加元件 | 2021.05.26 | [軟體發佈](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.05.26.zip) |
 | CIF Core Components | 1.11.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-1.11.0) |
 | CIF Venia參考網站 | 2021.05.24 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2021.05.24) |
 
@@ -172,7 +172,7 @@ ht-degree: 9%
 
 | 元件 | 版本 | 詳細資料 |
 |:-------|:-----:|---------------------:|
-| CIF附加元件 | 2021.04.22 | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.04.22.zip) |
+| CIF附加元件 | 2021.04.22 | [軟體發佈](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.04.22.zip) |
 | CIF Core Components | 1.10.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases) |
 | CIF Venia參考網站 | 2021.04.22 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases) |
 
@@ -220,7 +220,7 @@ ht-degree: 9%
 
 * 產品體驗管理：使用體驗片段個別豐富產品目錄頁面。
 
-* 擴充產品主控台屬性，以顯示連結的資產和體驗片段，包括快速導覽至關聯內容的動作。
+* 擴充產品主控台屬性，以顯示連結的Assets和體驗片段，包括快速導覽至關聯內容的動作。
 
 ### 功能改善  {#what-is-improved-february}
 
@@ -238,7 +238,7 @@ ht-degree: 9%
 
 ### 新增功能 {#what-is-new-january}
 
-* 產品體驗管理：資產和體驗片段的新「Commerce」屬性標籤。 此索引標籤可讓您將資產和體驗片段連結到產品和類別。 此索引標籤也會顯示連結的商務物件的即時資料，以及在產品主控台中顯示詳細資訊的連結。
+* 產品體驗管理：Assets和體驗片段的新增「Commerce」屬性標籤。 此索引標籤可讓您將Assets和體驗片段連結至產品和類別。 此索引標籤也會顯示連結的商務物件的即時資料，以及在產品主控台中顯示詳細資訊的連結。
 
 ### 功能改善  {#what-is-improved-january}
 

@@ -123,15 +123,15 @@ AEM eCommerce可協助行銷人員跨網路、行動及社交接觸點，提供�
 
 >[!NOTE]
 >
->若要搭配外部電子商務提供者使用整合架構，您必須先安裝所需的套件。 如需詳細資訊，請參閱 [部署電子商務](/help/commerce/cif-classic/deploying/ecommerce.md).
+>若要搭配外部電子商務提供者使用整合架構，您必須先安裝所需的套件。 如需詳細資訊，請參閱[部署eCommerce](/help/commerce/cif-classic/deploying/ecommerce.md)。
 >
->如需有關擴充電子商務功能的資訊，請參閱 [開發電子商務](/help/commerce/cif-classic/developing/ecommerce.md).
+>如需有關擴充電子商務功能的資訊，請參閱[開發電子商務](/help/commerce/cif-classic/developing/ecommerce.md)。
 
 ## 主要功能 {#main-features}
 
 AEM eCommerce提供：
 
-* 數量 **現成可用的AEM元件** 若要說明專案可達成的目的：
+* 許多&#x200B;**現成可用的AEM元件**，以說明您的專案可達成的目標：
 
    * 產品顯示
    * 購物車
@@ -146,7 +146,7 @@ AEM eCommerce提供：
   >
   >AEM提供的整合架構也可讓您為商業功能建立其他AEM元件，不受特定電子商務引擎影響。
 
-* **搜尋**  — 使用：
+* **搜尋** — 使用：
 
    * AEM搜尋
    * 搜尋電子商務系統
@@ -155,15 +155,15 @@ AEM eCommerce提供：
 
   ![搜尋範例](/help/sites-administering/assets/chlimage_1-131.png)
 
-* 使用AEM功能來 **在多個管道上展示您的內容**、完整瀏覽器視窗或行動裝置。 這樣會以訪客所需的格式提供您的內容。
+* 使用AEM功能，在多個管道&#x200B;**（完整瀏覽器視窗或行動裝置）上**&#x200B;展示您的內容。 這樣會以訪客所需的格式提供您的內容。
 
   ![行動檢視範例](/help/sites-administering/assets/chlimage_1-132.png)
 
-* 能夠 **根據以下內容開發您自己的整合實作 [AEM電子商務架構](#the-framework)**.
+* 能夠根據[AEM電子商務架構&#x200B;](#the-framework)****&#x200B;開發您自己的整合實作。
 
   目前可用的兩個實作都是以相同為基礎(在一般API （框架）之上)建置。 實作新的整合只需要實作您整合所需的功能即可。 前端元件可供任何新實作使用，因為它們使用介面（因此獨立於實作）。
 
-* 開發的可能性 **根據購物者資料和活動的體驗導向型商務**. 這可讓您瞭解許多案例：
+* 根據購物者資料和活動&#x200B;**來開發**&#x200B;體驗導向商務的可能性。 這可讓您瞭解許多案例：
 
    * 例如，當訂單總額超過特定金額時，可減少運費。
    * 另一種方式可讓您提供使用設定檔資料的季節性選件（例如位置）。 然後可反白顯示這些專案，在必要時會根據其他因素再次反白顯示。
@@ -184,7 +184,7 @@ AEM eCommerce提供：
 
 ## 框架 {#the-framework}
 
-此 [概念](/help/commerce/cif-classic/administering/concepts.md) 一節會更詳細地涵蓋架構，但下列內容提供架構的高階、高速檢視：
+「[概念](/help/commerce/cif-classic/administering/concepts.md)」部分更詳細地涵蓋架構，但下列內容提供架構的高階高速檢視：
 
 ### 什麼？ {#what}
 

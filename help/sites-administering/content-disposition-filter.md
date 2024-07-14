@@ -24,12 +24,12 @@ ht-degree: 0%
 
 ## 設定內容處置篩選 {#configure-content-disposition-filter}
 
-您可以檢視 [GitHub中的Apache Sling內容處置篩選器](https://github.com/apache/sling-org-apache-sling-security/blob/master/src/main/java/org/apache/sling/security/impl/ContentDispositionFilterConfiguration.java).
+您可以在GitHub](https://github.com/apache/sling-org-apache-sling-security/blob/master/src/main/java/org/apache/sling/security/impl/ContentDispositionFilterConfiguration.java)中檢視[Apache Sling內容配置篩選器。
 
 「內容配置篩選」選項提供下列功能：
 
-* **內容處置路徑：** 套用篩選的路徑清單，後面接著要排除在該路徑上的mime型別清單。 此路徑必須是絕對路徑，並且可以包含萬用字元(`*`)，以比對每個資源路徑與指定路徑首碼。 例如： `/content/*:image/jpeg,image/svg+xml` 將篩選器套用至中的每個節點 `/content?` JPG和SVG影像除外。
+* **內容處置路徑：**&#x200B;套用篩選的路徑清單，後面接著要排除在該路徑上的mime型別清單。 此路徑必須是絕對路徑，且結尾可包含萬用字元(`*`)，以比對每個資源路徑與指定的路徑前置詞。 例如： `/content/*:image/jpeg,image/svg+xml`將篩選器套用至`/content?`中除了JPG和SVG影像之外的每個節點。
 
-* **排除的資源路徑：** 排除的資源的清單，每個資源路徑都必須提供為絕對和完全限定的路徑。 不支援字首比對/萬用字元。
+* **排除的資源路徑：**&#x200B;排除的資源清單，每個資源路徑都必須以絕對和完全合格的路徑提供。 不支援字首比對/萬用字元。
 
-* **為所有資源路徑啟用：** 此旗標可控制是否針對所有路徑（排除的資源路徑所定義的排除路徑除外）啟用此篩選。 將此標幟設為「true」會導致忽略內容處置路徑。 與設定無關，只涵蓋包含下列屬性的資源路徑： `jcr:data` 或 `jcr:content/jcr:data`.
+* **為所有資源路徑啟用：**&#x200B;此旗標控制是否為所有路徑啟用此篩選，排除的資源路徑所定義的排除路徑除外。 將此標幟設為「true」會導致忽略內容處置路徑。 與組態無關，只涵蓋包含名為`jcr:data`或`jcr:content/jcr:data`之屬性的資源路徑。

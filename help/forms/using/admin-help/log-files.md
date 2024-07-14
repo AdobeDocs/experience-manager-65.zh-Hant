@@ -20,19 +20,19 @@ ht-degree: 0%
 
 執行階段或啟動錯誤等事件會記錄到應用程式伺服器記錄檔中。 如果部署到應用程式伺服器時發生任何問題，您可以使用記錄檔來協助您尋找問題。 您可以使用任何文字編輯器開啟記錄檔。
 
-(JBoss)以下記錄檔位於 `[appserver root]/server/'server'/log` 目錄：
+(JBoss)下列記錄檔位於`[appserver root]/server/'server'/log`目錄中：
 
 * boot.log
 * server.log.*[yyyy-mm-dd]*
 * server.log
 
-(WebLogic)網域記錄檔位於 `[appserverdomain]` 目錄和伺服器記錄檔位於 `[appserverdomain]/servers/[appserver name]/logs` 目錄：
+(WebLogic)網域記錄檔位於`[appserverdomain]`目錄中，而伺服器記錄檔位於`[appserverdomain]/servers/[appserver name]/logs`目錄中：
 
 * `access.log`
 * `[appserver name].log`
 * `[appserver name].out.[incremental number]`
 
-(WebSphere)下列記錄檔位於 `[appserver root]/profiles/default/logs/[appserver name]` 目錄：
+(WebSphere)下列記錄檔位於`[appserver root]/profiles/default/logs/[appserver name]`目錄中：
 
 * SystemErr.log
 * SystemOut.log

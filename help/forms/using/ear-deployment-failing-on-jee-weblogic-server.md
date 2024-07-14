@@ -13,7 +13,7 @@ ht-degree: 7%
 
 ## 問題 {#issue}
 
-當使用者嘗試部署 `adobe-livecycle-weblogic.ear`，則 `Null Pointer` 發生例外狀況。
+當使用者嘗試部署`adobe-livecycle-weblogic.ear`時，會發生`Null Pointer`例外狀況。
 
 ## 套用至 {#applies-to}
 
@@ -25,12 +25,12 @@ ht-degree: 7%
 
 若要解決問題，請依照下列步驟進行：
 
-1. 前往 `<domain_home>\bin` 已安裝的WebLogic JEE伺服器目錄。
+1. 移至已安裝的WebLogic JEE伺服器的`<domain_home>\bin`目錄。
 
-1. 編輯 `setDomainEnv.cmd` 或 `setDomainEnv.sh` 檔案，如 `applicable`.
+1. 編輯`setDomainEnv.cmd`或`setDomainEnv.sh`檔案，做為`applicable`。
 
-1. 搜尋最後出現的 `JAVA_OPTS` 並新增 `-DANTLR_USE_DIRECT_CLASS_LOADING=true` 轉換至此。 例如，更新的字串會顯示為：
+1. 搜尋`JAVA_OPTS`的最後一個專案，並新增`-DANTLR_USE_DIRECT_CLASS_LOADING=true`。 例如，更新的字串會顯示為：
 
-       set &#39;JAVA_OPTIONS=%JAVA_OPTIONS% -DANTLR_USE_DIRECT_CLASS_LOADING=true&#39;
+       設定&#39;JAVA_OPTIONS=%JAVA_OPTIONS% -DANTLR_USE_DIRECT_CLASS_LOADING=true&#39;
    
 1. 儲存變更。

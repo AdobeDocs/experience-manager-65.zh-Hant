@@ -23,7 +23,7 @@ ht-degree: 3%
 >
 >從AEM 6.5開始，不建議使用hobbes.js UI測試架構。 Adobe不打算進一步增強功能，因此建議客戶使用Selenium自動化。
 >
->另請參閱 [已棄用及已移除的功能](/help/release-notes/deprecated-removed-features.md).
+>請參閱[已過時和已移除的功能](/help/release-notes/deprecated-removed-features.md)。
 
 AEM為AEM UI提供自動化測試框架。 使用框架，您可以直接在網頁瀏覽器中編寫和執行UI測試。 此架構提供用來建立測試的JavaScript API。
 
@@ -31,16 +31,16 @@ AEM測試架構使用Hobbes.js，這是以JavaScript撰寫的測試程式庫。 
 
 >[!NOTE]
 >
->請參閱Hobbes.js [檔案](https://developer.adobe.com/experience-manager/reference-materials/6-5/test-api/index.html) 以取得API的完整細節。
+>如需API的完整詳細資訊，請參閱Hobbes.js [檔案](https://developer.adobe.com/experience-manager/reference-materials/6-5/test-api/index.html)。
 
 ## 測試結構 {#structure-of-tests}
 
 在AEM中使用自動化測試時，請務必瞭解下列詞語：
 
-| 動作 | 一個 **動作** 是網頁上的特定活動，例如按一下連結或按鈕。 |
+| 動作 | **動作**&#x200B;是網頁上的特定活動，例如按一下連結或按鈕。 |
 |---|---|
-| 測試案例 | A **測試案例** 是一種特定情況，可以由一或多個組成 **動作**. |
-| 測試套裝 | A **測試套裝** 是一組相關 **測試案例** 一起測試特定使用案例。 |
+| 測試案例 | **測試案例**&#x200B;是一種特定情況，可由一或多個&#x200B;**動作**&#x200B;組成。 |
+| 測試套裝 | **測試套裝**&#x200B;是一組相關的&#x200B;**測試案例**，它們共同測試特定使用案例。 |
 
 ## 執行測試 {#executing-tests}
 
@@ -48,7 +48,7 @@ AEM測試架構使用Hobbes.js，這是以JavaScript撰寫的測試程式庫。 
 
 開啟「測試主控台」以檢視已註冊的測試套裝。 「測試」面板包含測試套裝及其測試案例的清單。
 
-透過以下方式導覽至「工具」主控台： **全域導覽>工具>操作>測試**.
+透過&#x200B;**全域導覽>工具>作業>測試**&#x200B;來瀏覽工具主控台。
 
 ![chlimage_1-63](assets/chlimage_1-63.png)
 
@@ -62,11 +62,11 @@ AEM測試架構使用Hobbes.js，這是以JavaScript撰寫的測試程式庫。 
 
 核取記號圖示表示測試通過：
 
-![勾選圖示。](do-not-localize/chlimage_1-2.png)
+![核取記號圖示。](do-not-localize/chlimage_1-2.png)
 
 「X」圖示表示測試失敗：
 
-![圓圈內以X表示的失敗測試圖示。](do-not-localize/chlimage_1-3.png)
+![圓環內的X所指示的失敗測試圖示。](do-not-localize/chlimage_1-3.png)
 
 若要執行測試套裝：
 
@@ -74,7 +74,7 @@ AEM測試架構使用Hobbes.js，這是以JavaScript撰寫的測試程式庫。 
 
    ![chlimage_1-65](assets/chlimage_1-65.png)
 
-1. 按一下 **執行測試**.
+1. 按一下&#x200B;**執行測試**。
 
    ![「執行測試」按鈕的影像，以圓圈內面向右的指標表示。](do-not-localize/chlimage_1-4.png)
 
@@ -82,7 +82,7 @@ AEM測試架構使用Hobbes.js，這是以JavaScript撰寫的測試程式庫。 
 
    ![chlimage_1-66](assets/chlimage_1-66.png)
 
-1. 點選或按一下說明以開啟 **結果** 面板。 在中點選或按一下測試案例的名稱 **結果** 面板會顯示所有詳細資料。
+1. 點選或按一下說明以開啟&#x200B;**結果**&#x200B;面板，以檢閱測試案例的結果。 在&#x200B;**結果**&#x200B;面板中，點選或按一下測試案例的名稱會顯示所有詳細資料。
 
    ![chlimage_1-67](assets/chlimage_1-67.png)
 
@@ -92,23 +92,23 @@ AEM測試架構使用Hobbes.js，這是以JavaScript撰寫的測試程式庫。 
 
 ![chlimage_1-68](assets/chlimage_1-68.png)
 
-1. 在測試面板上，按一下 **執行所有測試** 按鈕或 **執行測試** 按鈕位於您要執行之測試套裝標題下方。
+1. 在[測試]面板上，按一下[執行所有測試] **按鈕或您要執行之測試套裝標題下方的[執行測試]** [執行測試] **按鈕。**
 
-   ![「執行所有測試」按鈕和「執行測試」按鈕的影像，由圓圈內面向右的指標表示。](do-not-localize/chlimage_1-5.png)
+   ![[執行全部測試]按鈕和[執行測試]按鈕的影像，以圓圈內面向右側的指標表示。](do-not-localize/chlimage_1-5.png)
 
-1. 若要檢視每個測試案例的結果，請按一下測試案例的標題。 按一下中您的測試名稱 **結果** 面板會顯示所有詳細資料。
+1. 若要檢視每個測試案例的結果，請按一下測試案例的標題。 在&#x200B;**結果**&#x200B;面板中按一下測試名稱會顯示所有詳細資料。
 
    ![chlimage_1-69](assets/chlimage_1-69.png)
 
 ## 建立和使用簡單測試套裝 {#creating-and-using-a-simple-test-suite}
 
-下列程式會逐步引導您使用建立及執行測試套裝 [We.Retail內容](/help/sites-developing/we-retail.md)，但您可以輕鬆修改測試，以使用不同的網頁。
+下列程式會逐步引導您使用[We.Retail內容](/help/sites-developing/we-retail.md)建立並執行測試套裝，但您可以輕鬆修改測試，以使用不同的網頁。
 
-如需建立您自己的測試套裝的完整詳細資訊，請參閱 [Hobbes.js API檔案](https://developer.adobe.com/experience-manager/reference-materials/6-5/test-api/index.html).
+如需建立您自己的測試套裝的完整詳細資訊，請參閱[Hobbes.js API檔案](https://developer.adobe.com/experience-manager/reference-materials/6-5/test-api/index.html)。
 
 1. 開啟CRXDE Lite。 ([https://localhost:4502/crx/de](https://localhost:4502/crx/de))
-1. 用滑鼠右鍵按一下 `/etc/clientlibs` 資料夾並按一下 **「建立」>「建立資料夾」**. 型別 `myTests` ，然後按一下 **確定**.
-1. 用滑鼠右鍵按一下 `/etc/clientlibs/myTests` 資料夾並按一下 **建立>建立節點**. 使用以下屬性值，然後按一下 **確定**：
+1. 用滑鼠右鍵按一下`/etc/clientlibs`資料夾，然後按一下&#x200B;**建立>建立資料夾**。 輸入名稱`myTests`並按一下&#x200B;**確定**。
+1. 以滑鼠右鍵按一下`/etc/clientlibs/myTests`資料夾，然後按一下&#x200B;**建立>建立節點**。 使用以下屬性值，然後按一下&#x200B;**確定**：
 
    * 名稱：`myFirstTest`
    * 類型：`cq:ClientLibraryFolder`
@@ -134,17 +134,17 @@ AEM測試架構使用Hobbes.js，這是以JavaScript撰寫的測試程式庫。 
    >**相依性**： `granite.testing.hobbes.testrunner, granite.testing.hobbes.af`
 
 1. 按一下&#x200B;**「儲存全部」**。
-1. 用滑鼠右鍵按一下 `myFirstTest` 節點並按一下 **「建立」>「建立檔案」**. 為檔案命名 `js.txt` 並按一下 **確定**.
-1. 在 `js.txt` 檔案中，輸入下列文字：
+1. 以滑鼠右鍵按一下`myFirstTest`節點，然後按一下&#x200B;**建立>建立檔案**。 將檔案命名為`js.txt`並按一下&#x200B;**確定**。
+1. 在`js.txt`檔案中，輸入下列文字：
 
    ```
    #base=.
    myTestSuite.js
    ```
 
-1. 按一下 **全部儲存** 然後關閉 `js.txt` 檔案。
-1. 用滑鼠右鍵按一下 `myFirstTest` 節點並按一下 **「建立」>「建立檔案」**. 為檔案命名 `myTestSuite.js` 並按一下 **確定**.
-1. 將下列程式碼複製到 `myTestSuite.js` 檔案，然後儲存檔案：
+1. 按一下[儲存全部]****，然後關閉`js.txt`檔案。
+1. 以滑鼠右鍵按一下`myFirstTest`節點，然後按一下&#x200B;**建立>建立檔案**。 將檔案命名為`myTestSuite.js`並按一下&#x200B;**確定**。
+1. 將下列程式碼複製到`myTestSuite.js`檔案，然後儲存檔案：
 
    ```
    new hobs.TestSuite("Experience Content Test Suite", {path:"/etc/clientlibs/myTests/myFirstTest/myTestSuite.js"})
@@ -159,4 +159,4 @@ AEM測試架構使用Hobbes.js，這是以JavaScript撰寫的測試程式庫。 
    );
    ```
 
-1. 導覽至 **測試** 主控台以試用您的測試套裝。
+1. 導覽至&#x200B;**測試**&#x200B;主控台，嘗試您的測試套裝。

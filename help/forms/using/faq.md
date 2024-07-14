@@ -26,7 +26,7 @@ ht-degree: 0%
 
 1. 中的條碼和簽名欄位為何沒有出現在我的表單中？
 
-   答案：條碼和簽名欄位在HTML或行動情況中並不相關。 這些欄位會顯示為非互動區域。 不過，AEM Forms Designer提供新的簽名草寫欄位，可用來取代簽名欄位。 您也可以新增 [自訂Widget](../../forms/using/custom-widgets.md) 並加以整合。
+   答案：條碼和簽名欄位在HTML或行動情況中並不相關。 這些欄位會顯示為非互動區域。 不過，AEM Forms Designer提供新的簽名手寫欄位，可用來取代簽名欄位。 您也可以新增條碼的[自訂Widget](../../forms/using/custom-widgets.md)並加以整合。
 
 1. XFA文字欄位是否支援RTF格式？
 
@@ -90,15 +90,15 @@ ht-degree: 0%
 
 1. 為什麼某些文字被截斷或在HTML5中顯示不正確？
 
-   回答：如果Draw或Caption文字元素沒有足夠的空間顯示內容，行動表單轉譯中的文字會顯示為截斷。 AEM Forms Designer的「設計」檢視中也會顯示此截斷。 雖然此截斷可在PDF中處理，但無法在HTML5表單中處理。 若要避免此問題，請為繪製或標題文字提供足夠的空間，使其在AEM Forms Designer的設計模式中不會截斷。
+   回答：當Draw或標題文字元素沒有獲得足夠空間以顯示內容時，行動表單轉譯中的文字會顯示為截斷。 AEM Forms Designer的「設計」檢視中也會顯示此截斷操作。 雖然此截斷可在PDF中處理，但無法在HTML5表單中處理。 為避免此問題，請為Draw或標題文字提供足夠的空間，使其在AEM Forms Designer的設計模式中不會截斷。
 
 1. 我觀察到與缺少內容或重疊內容相關的版面配置問題。 原因是什麼？
 
-   回答：如果在相同位置有「繪製文字」或「繪製影像」元素以及其他重疊元素（例如「矩形」），如果「繪製文字」內容在檔案順序中較晚出現(在「AEM Forms Designer階層」檢視中)，則不會顯示「繪製文字」內容。 PDF支援透明分層，但HTML/瀏覽器不支援透明分層。
+   回答：如果在相同位置有Draw文字或Draw影像元素與其他重疊元素（例如矩形），如果Draw文字內容在檔案順序中較晚出現(在AEM Forms Designer階層檢視中)，則不會顯示。 PDF支援透明分層，但HTML/瀏覽器不支援透明分層。
 
 1. 為什麼在HTML表單中顯示的某些字型與設計表單時使用的字型不同？
 
-   回答：HTML5 Forms不允許內嵌字型(與將字型內嵌在表單中的PDF forms相反)。 為了讓表單的HTML版本如預期般呈現，請確定AEM Forms伺服器的CRX存放庫(AEM內容存放庫)中以及安裝AEM Designer的電腦上都有這些字型。 當AEM Forms伺服器的CRX存放庫或AEM Designer安裝位置中無法使用字型時，表單會以備援字型呈現。
+   回答：HTML5 Forms不允許內嵌字型(與將字型內嵌在表單中的PDF forms相反)。 若要讓表單的HTML版本如預期般呈現，請確定這些字型在AEM Forms伺服器的CRX存放庫(AEM內容存放庫)中以及安裝AEM Designer的電腦上皆可使用。 當AEM Forms伺服器的CRX存放庫或AEM Designer安裝位置中無法使用這些字型時，表單會以備援字型呈現。
 
 1. HTML表單中是否支援vAlign和hAlign屬性？
 
@@ -118,7 +118,7 @@ ht-degree: 0%
 
    對於PDF forms，Adobe Acrobat有內建的XTG引擎可建立中繼資料結構和物件。 Acrobat也會處理版面和指令碼。
 
-   對於HTML5表單，瀏覽器沒有內建的XTG引擎來從原始XDP位元組建立中間資料結構和物件。 因此，對於HTML5表單，會在伺服器上產生中間結構並傳送給使用者端。 在使用者端，以JavaScript為基礎的指令碼和版面引擎會使用這些中間結構。
+   對於HTML5表單，瀏覽器沒有內建的XTG引擎來從原始XDP位元組建立中間資料結構和物件。 因此，對於HTML5表單，會在伺服器上產生中間結構並傳送給使用者端。 在使用者端，JavaScript型指令碼和版面引擎會使用這些中間結構。
 
    中間結構的大小取決於原始XDP和與XDP合併的資料的大小。
 
@@ -135,7 +135,7 @@ ht-degree: 0%
 
    * 不支援表格內的巢狀表格和子表單。
    * 只有表格的頂端列或左側欄支援標題。 中間表格元素不支援標題。 如果所有列和欄與表格最上層的列或最左邊的欄一起使用，則可將標題套用至多個支援的列和欄標題。
-   * `Rowspan`和 `colspan`不支援來自表格內的隨機位置。
+   * 不支援來自資料表內隨機位置的`Rowspan`和`colspan`。
 
    * 您無法動態新增或移除包含rowspan值大於1之元素的資料列例項。
 
@@ -147,15 +147,15 @@ ht-degree: 0%
 
 1. 當您將滑鼠懸停在欄位上時，會顯示工具提示。 如何加以停用？
 
-   回答：若要在游標停留時停用工具提示，請在「設計工具」的協助工具面板中選取「無」。
+   回答：若要在游標暫留時停用工具提示，請在Designer的協助工具面板中選取「無」 。
 
 1. 在Designer中，使用者可以設定選項按鈕和核取方塊的自訂外觀屬性。 轉譯表單時，HTML5表單會將此類自訂外觀屬性納入考量嗎？
 
    回答：HTML5表單忽略選項按鈕和核取方塊的自訂外觀屬性。 選項按鈕和核取方塊會根據基礎瀏覽器的規格顯示。
 
-1. 在支援的瀏覽器中開啟HTML5表單時，相鄰放置欄位的邊框未正確對齊，或子表單出現重疊。 在Forms Designer中預覽相同的HTML5表單時，欄位和版面不會出現未對齊的情況，而子表單會出現在正確位置。 如何修正問題？
+1. 在支援的瀏覽器中開啟HTML5表單時，相鄰放置欄位的邊框未正確對齊，或子表單出現重疊。 在Forms Designer中預覽相同的HTML5表單時，欄位和版面配置不會出現錯位，而子表單會出現在正確位置。 如何修正問題？
 
-   回答：當子表單設定為流程內容且子表單有隱藏的邊框元素時，相鄰放置欄位的邊框未正確對齊或子表單出現重疊。 若要解決此問題，您可以移除或註解隱藏的 &lt;border> 元素。 例如，下列專案 &lt;border> 元素會標示為註解：
+   回答：當子表單設定為流程內容且子表單有隱藏的邊框元素時，相鄰放置欄位的邊框未正確對齊或子表單出現重疊。 若要解決此問題，您可以從對應的XDP中移除或註解隱藏的&lt;border>元素。 例如，下列&lt;border>元素標示為註解：
 
    ```xml
                <!--<border>
@@ -177,23 +177,23 @@ ht-degree: 0%
 
 ### 指令碼 {#scripting}
 
-1. HTML Forms的JavaScript實施是否有任何限制？
+1. JavaScript實作中針對HTMLForms是否有任何限制？
 
    回答：
 
-   * xfa.connectionSet指令碼的支援有限。 對於connectionSet，僅支援伺服器端對Web服務的呼叫。 如需詳細資訊，請參閱 [指令碼支援](/help/forms/using/scripting-support.md).
+   * xfa.connectionSet指令碼的支援有限。 對於connectionSet，僅支援伺服器端對Web服務的呼叫。 如需詳細資訊，請參閱[指令碼支援](/help/forms/using/scripting-support.md)。
    * 使用者端指令碼中不支援$record和$data。 不過，如果指令碼是以formReady， layoutReady區塊撰寫，則這些指令碼仍然有效，因為這些事件會在伺服器端執行。
-   * 不支援XFA Draw元素特定的指令碼，例如變更Draw文字（如果有欄位，則為標題文字）。
+   * 不支援XFA Draw元素特定的指令碼，例如變更Draw文字（或標題文字，如果有欄位）。
 
 1. 使用formCalc是否有任何限制？
 
-   回答：目前僅實作formCalc指令碼的子集。 如需詳細資訊，請參閱 [指令碼支援](/help/forms/using/scripting-support.md).
+   回答：目前僅實作formCalc指令碼的子集。 如需詳細資訊，請參閱[指令碼支援](/help/forms/using/scripting-support.md)。
 
 1. 是否有任何建議的命名慣例，以及任何要避免的保留關鍵字？
 
    回答：
-   * 在AEM Forms Designer中，建議不要以底線(_)。 若要在名稱開頭使用底線，請在底線後加上首碼，_&lt;prefix>&lt;objectname>.
-   * 所有HTML5 Forms API都是保留關鍵字。 對於自訂API/函式，請使用與不同的名稱 [HTML5 forms API](/help/forms/using/scripting-support.md).
+   * 在AEM Forms Designer中，建議不要以底線(_)作為物件名稱（例如子表單或文字欄位）的開頭。 若要在名稱開頭使用底線，請在底線，_&lt;prefix>&lt;objectname>後加上首碼。
+   * 所有HTML5 Forms API都是保留關鍵字。 對於自訂API/函式，請使用與[HTML5 Forms API](/help/forms/using/scripting-support.md)不同的名稱。
 
 1. HTML5表單是否支援浮動欄位？
 
@@ -203,9 +203,9 @@ ht-degree: 0%
    >
    >依預設，這些欄位不會啟用浮動功能。 您可以使用Forms Designer來設定欄位的浮動屬性。
 
-   1. 開啟CRXde Lite並導覽至 `/content/xfaforms/profiles/default` 節點。
-   1. 新增屬性 `mfDataDependentFloatingField`字串型別的屬性，並將屬性的值設為 `true`.
-   1. 按一下 **全部儲存**. 現在已使用更新後的轉譯設定檔，為HTMLForms啟用浮動欄位。
+   1. 開啟CRXde Lite並導覽至`/content/xfaforms/profiles/default`節點。
+   1. 新增字串型別的屬性`mfDataDependentFloatingField`並將屬性的值設定為`true`。
+   1. 按一下&#x200B;**全部儲存**。 現在已使用更新後的轉譯設定檔，為HTMLForms啟用浮動欄位。
 
       >[!NOTE]
       >
@@ -219,4 +219,4 @@ ht-degree: 0%
 
 1. HTML5表單中是否有任何保留關鍵字？
 
-   回答：所有HTML5 Forms API都是保留關鍵字。 對於自訂API/函式，請使用與不同的名稱 [HTML5 forms API](/help/forms/using/scripting-support.md). 除了保留的關鍵字之外，如果您使用以底線(_)開頭的物件名稱，建議在底線後新增唯一的前置詞。 新增首碼有助於避免與HTML5表單內部API發生任何可能的衝突。 例如 `_fpField1`
+   回答：所有HTML5 Forms API都是保留關鍵字。 對於自訂API/函式，請使用與[HTML5 Forms API](/help/forms/using/scripting-support.md)不同的名稱。 除了保留的關鍵字之外，如果您使用以底線(_)開頭的物件名稱，建議在底線後新增唯一的前置詞。 新增首碼有助於避免與HTML5表單內部API發生任何可能的衝突。 例如 `_fpField1`

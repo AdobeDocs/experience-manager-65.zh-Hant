@@ -18,9 +18,9 @@ ht-degree: 0%
 
 # 在Dynamic Media中啟用快速連結保護 {#activating-hotlink-protection-in-dynamic-media}
 
-熱連結是指第三方網站使用HTML程式碼顯示您網站中的影像時。 每次要求圖片時，他們都會使用您的頻寬，因為訪客的瀏覽器會直接從您的伺服器存取圖片。 直接連結 *保護* 是防止其他網站直接連結至您網頁上的圖片、CSS或JavaScript的方法。 這種遮蔽有助於減少Dynamic Media帳戶下不必要的頻寬使用量。
+熱連結是指第三方網站使用HTML程式碼顯示您網站中的影像時。 每次要求圖片時，他們都會使用您的頻寬，因為訪客的瀏覽器會直接從您的伺服器存取圖片。 直接連結&#x200B;*保護*&#x200B;是防止其他網站直接連結至您網頁上的圖片、CSS或JavaScript的方法。 這種遮蔽有助於減少Dynamic Media帳戶下不必要的頻寬使用量。
 
-[Experience Manager客戶支援](https://experienceleague.adobe.com/?support-solution=Experience+Manager#support) 您可以在CDN （內容傳遞網路）層級設定反向連結篩選器，如此一來，系統只會將Dynamic Media內容提供至您網域許可網站清單上的網站。
+[Experience Manager客戶支援](https://experienceleague.adobe.com/?support-solution=Experience+Manager#support)可以在CDN （內容傳遞網路）層級設定反向連結篩選器，以便Dynamic Media內容僅會提供給您網域所允許網站清單上的網站。
 
 >[!NOTE]
 >

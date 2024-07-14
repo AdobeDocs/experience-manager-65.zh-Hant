@@ -18,7 +18,7 @@ ht-degree: 4%
 
 # 建立內容片段的翻譯專案 {#creating-translation-projects-for-content-fragments}
 
-除了資產之外，Adobe Experience Manager (AEM) Assets還支援的語言複製工作流程 [內容片段](/help/assets/content-fragments/content-fragments.md) （包括變數）。 對內容片段執行語言複製工作流程不需要其他最佳化。 在每個工作流程中，會傳送整個內容片段以供翻譯。
+除了資產之外，Adobe Experience Manager (AEM) Assets還支援[內容片段](/help/assets/content-fragments/content-fragments.md) （包括變數）的語言複製工作流程。 對內容片段執行語言複製工作流程不需要其他最佳化。 在每個工作流程中，會傳送整個內容片段以供翻譯。
 
 您可以在內容片段上執行的工作流程型別與您為資產執行的工作流程型別完全類似。 此外，每個工作流程型別中可用的選項，都與資產之對應工作流程型別下可用的選項相符。
 
@@ -36,18 +36,18 @@ ht-degree: 4%
 
 建立與翻譯工作流程包含下列選項。 與每個選項相關的程式步驟與資產相應選項相關的程式步驟類似。
 
-* 僅建立結構：如需程式步驟，請參閱 [僅建立資產的結構](translation-projects.md#create-structure-only).
-* 建立翻譯專案：如需程式步驟，請參閱 [建立資產的翻譯專案](translation-projects.md#create-a-new-translation-project).
-* 新增至現有翻譯專案：如需程式步驟，請參閱 [新增至資產的現有翻譯專案](translation-projects.md#add-to-existing-translation-project).
+* 僅建立結構：如需程式步驟，請參閱[僅建立資產的結構](translation-projects.md#create-structure-only)。
+* 建立翻譯專案：如需程式步驟，請參閱[建立資產的翻譯專案](translation-projects.md#create-a-new-translation-project)。
+* 新增至現有的翻譯專案：如需程式步驟，請參閱[新增至資產的現有翻譯專案](translation-projects.md#add-to-existing-translation-project)。
 
 ## 更新語言副本工作流程 {#update-language-copies-workflow}
 
 更新語言副本工作流程包含以下選項。 與每個選項相關的程式步驟與資產相應選項相關的程式步驟類似。
 
-* 建立翻譯專案：如需程式步驟，請參閱 [建立資產的翻譯專案](translation-projects.md#create-a-new-translation-project) （更新工作流程）。
-* 新增至現有翻譯專案：如需程式步驟，請參閱 [新增至資產的現有翻譯專案](translation-projects.md#add-to-existing-translation-project) （更新工作流程）。
+* 建立翻譯專案：如需程式步驟，請參閱[建立資產的翻譯專案](translation-projects.md#create-a-new-translation-project) （更新工作流程）。
+* 新增至現有翻譯專案：如需程式步驟，請參閱[新增至資產的現有翻譯專案](translation-projects.md#add-to-existing-translation-project) （更新工作流程）。
 
-您也可以建立片段的臨時語言副本，其方式類似於建立資產的臨時副本。 如需詳細資訊，請參閱 [建立資產的暫時語言副本](translation-projects.md#creating-temporary-language-copies).
+您也可以建立片段的臨時語言副本，其方式類似於建立資產的臨時副本。 如需詳細資訊，請參閱[建立資產的暫存語言復本](translation-projects.md#creating-temporary-language-copies)。
 
 ## 翻譯混合媒體片段 {#translating-mixed-media-fragments}
 
@@ -57,20 +57,20 @@ AEM可讓您翻譯包含各種媒體資產和集合型別的內容片段。 如�
 
 為了能夠翻譯包含混合媒體的內容片段，請先編輯預設翻譯框架以啟用與內容片段關聯的內嵌資產和集合的翻譯。
 
-1. 按一下AEM標誌，並導覽至 **[!UICONTROL 「工具>部署>Cloud Service」]**.
-1. 尋找 **[!UICONTROL 翻譯整合]** 在 **[!UICONTROL Adobe Marketing Cloud]**，然後按一下 **[!UICONTROL 顯示設定]**.
+1. 按一下AEM標誌，並導覽至&#x200B;**[!UICONTROL 工具>部署>Cloud Service]**。
+1. 在&#x200B;**[!UICONTROL Adobe Marketing Cloud]**&#x200B;下找到&#x200B;**[!UICONTROL 翻譯整合]**，然後按一下&#x200B;**[!UICONTROL 顯示設定]**。
 
    ![chlimage_1-444](assets/chlimage_1-444.png)
 
-1. 在可用組態清單中，按一下 **[!UICONTROL 預設設定（翻譯整合設定）]** 以開啟 **[!UICONTROL 預設設定]** 頁面。
+1. 從可用組態清單中，按一下&#x200B;**[!UICONTROL 預設組態（翻譯整合組態）]**&#x200B;以開啟&#x200B;**[!UICONTROL 預設組態]**&#x200B;頁面。
 
    ![chlimage_1-445](assets/chlimage_1-445.png)
 
-1. 按一下 **[!UICONTROL 編輯]** 以顯示 **[!UICONTROL 翻譯設定]** 對話方塊。
+1. 按一下工具列中的&#x200B;**[!UICONTROL 編輯]**&#x200B;以顯示&#x200B;**[!UICONTROL 翻譯設定]**&#x200B;對話方塊。
 
    ![chlimage_1-446](assets/chlimage_1-446.png)
 
-1. 導覽至 **[!UICONTROL 資產]** 標籤，然後選擇 **[!UICONTROL 內嵌媒體資產和相關的集合]** 從 **[!UICONTROL 翻譯內容片段資產]** 清單。 按一下 **[!UICONTROL 確定]** 以儲存變更。
+1. 導覽至&#x200B;**[!UICONTROL Assets]**&#x200B;標籤，然後從&#x200B;**[!UICONTROL 翻譯內容片段Assets]**&#x200B;清單中選擇&#x200B;**[!UICONTROL 內嵌媒體Assets和相關集合]**。 按一下&#x200B;**[!UICONTROL 確定]**&#x200B;以儲存變更。
 
    ![chlimage_1-447](assets/chlimage_1-447.png)
 
@@ -78,7 +78,7 @@ AEM可讓您翻譯包含各種媒體資產和集合型別的內容片段。 如�
 
    ![chlimage_1-448](assets/chlimage_1-448.png)
 
-1. 按一下 **[!UICONTROL 插入資產]** 圖示。
+1. 按一下&#x200B;**[!UICONTROL 插入資產]**&#x200B;圖示。
 
    ![chlimage_1-449](assets/chlimage_1-449.png)
 
@@ -86,11 +86,11 @@ AEM可讓您翻譯包含各種媒體資產和集合型別的內容片段。 如�
 
    ![將資產插入內容片段](assets/column-view.png)
 
-1. 按一下 **[!UICONTROL 關聯內容]** 圖示。
+1. 按一下&#x200B;**[!UICONTROL 關聯內容]**&#x200B;圖示。
 
    ![chlimage_1-451](assets/chlimage_1-451.png)
 
-1. 按一下 **[!UICONTROL 關聯內容]**.
+1. 按一下&#x200B;**[!UICONTROL 關聯內容]**。
 
    ![chlimage_1-452](assets/chlimage_1-452.png)
 
@@ -98,32 +98,32 @@ AEM可讓您翻譯包含各種媒體資產和集合型別的內容片段。 如�
 
    ![chlimage_1-453](assets/chlimage_1-453.png)
 
-1. 選取內容片段，然後按一下 **[!UICONTROL GlobalNav]** 圖示。
-1. 選取 **[!UICONTROL 引用]** 以顯示 **[!UICONTROL 引用]** 窗格。
+1. 選取內容片段，然後按一下&#x200B;**[!UICONTROL GlobalNav]**&#x200B;圖示。
+1. 從功能表選取&#x200B;**[!UICONTROL 參考]**&#x200B;以顯示&#x200B;**[!UICONTROL 參考]**&#x200B;窗格。
 
    ![chlimage_1-454](assets/chlimage_1-454.png)
 
-1. 按一下 **[!UICONTROL 語言副本]** 在 **[!UICONTROL 份數]** 以顯示語言副本。
+1. 按一下&#x200B;**[!UICONTROL 復本]**&#x200B;下的&#x200B;**[!UICONTROL 語言復本]**&#x200B;以顯示語言復本。
 
    ![chlimage_1-455](assets/chlimage_1-455.png)
 
-1. 按一下 **[!UICONTROL 建立並翻譯]** 從面板底部以顯示 **[!UICONTROL 建立並翻譯]** 對話方塊。
+1. 從面板底部按一下&#x200B;**[!UICONTROL 建立並翻譯]**&#x200B;以顯示&#x200B;**[!UICONTROL 建立並翻譯]**&#x200B;對話方塊。
 
    ![chlimage_1-456](assets/chlimage_1-456.png)
 
-1. 從中選擇目標語言 **[!UICONTROL 目標語言]** 清單。
+1. 從&#x200B;**[!UICONTROL 目標語言]**&#x200B;清單中選取目標語言。
 
    ![chlimage_1-457](assets/chlimage_1-457.png)
 
-1. 從中選擇翻譯專案型別 **[!UICONTROL 專案]** 清單。
+1. 從&#x200B;**[!UICONTROL 專案]**&#x200B;清單中選取翻譯專案型別。
 
    ![chlimage_1-458](assets/chlimage_1-458.png)
 
-1. 在中指定專案標題 **[!UICONTROL 專案標題]** 方塊，然後按一下 **建立**.
+1. 在&#x200B;**[!UICONTROL 專案標題]**&#x200B;方塊中指定專案標題，然後按一下&#x200B;**建立**。
 
    ![chlimage_1-459](assets/chlimage_1-459.png)
 
-1. 導覽至 **[!UICONTROL 專案]** 控制檯中，並開啟您建立之翻譯專案的專案資料夾。
+1. 導覽至&#x200B;**[!UICONTROL 專案]**&#x200B;主控台，並開啟您建立之翻譯專案的專案資料夾。
 
    ![chlimage_1-460](assets/chlimage_1-460.png)
 
@@ -132,7 +132,7 @@ AEM可讓您翻譯包含各種媒體資產和集合型別的內容片段。 如�
    ![chlimage_1-461](assets/chlimage_1-461.png)
 
 1. 在「翻譯工作」方塊中，驗證要翻譯的資產數量。
-1. 從 **[!UICONTROL 翻譯工作]** 圖磚，開始翻譯工作。
+1. 從&#x200B;**[!UICONTROL 翻譯工作]**&#x200B;圖磚，開始翻譯工作。
 
    ![chlimage_1-462](assets/chlimage_1-462.png)
 

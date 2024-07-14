@@ -241,4 +241,4 @@ ht-degree: 26%
  </tbody>
 </table>
 
-除了上面列出的關鍵字外，請避免使用類似下列的名稱 [調適型表單JavaScript API](https://adobe.com/go/learn_aemforms_javascript_api_63).
+除了上述關鍵字，請避免使用類似於[最適化表單JavaScript API](https://adobe.com/go/learn_aemforms_javascript_api_63)的名稱。

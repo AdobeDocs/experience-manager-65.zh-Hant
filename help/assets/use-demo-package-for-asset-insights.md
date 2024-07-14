@@ -1,6 +1,6 @@
 ---
-title: 使用資產分析示範套件
-description: 使用示範套件來啟用Adobe Assets Insights，從網頁擷取資料並產生網頁的深入分析。
+title: 使用Assets Insights的示範套件
+description: 使用示範套件來啟用AdobeAssets Insights，從網頁擷取資料並產生網頁的深入分析。
 contentOwner: AG
 role: User, Admin
 feature: Asset Insights,Asset Reports
@@ -13,14 +13,14 @@ ht-degree: 2%
 
 ---
 
-# 使用資產分析示範套件 {#using-demo-package-for-asset-insights}
+# 使用Assets Insights的示範套件 {#using-demo-package-for-asset-insights}
 
-使用示範套件，您可以啟用Adobe資產深入分析，以擷取範例網頁的資料並產生深入分析。
+使用示範套件，您可以啟用AdobeAssets Insights，從範例網頁擷取資料並產生見解。
 
-## [!DNL Use Experience Manager Assets] 包含範例網頁的深入分析  {#using-aem-assets-insights-with-sample-web-page}
+## [!DNL Use Experience Manager Assets]個包含範例網頁的深入分析  {#using-aem-assets-insights-with-sample-web-page}
 
-1. 使用中的指示設定Assets Insights [設定Assets Insights](configure-asset-insights.md).
-1. 從下方下載範例資產套件，並從CRXDE封裝管理員安裝套件。
+1. 使用[設定Assets Insights](configure-asset-insights.md)中的指示設定Assets Insights。
+1. 從下方下載範例Assets套件，並從CRXDE封裝管理員安裝套件。
 
 [取得檔案](assets/insightsdemo.zip)
 
@@ -36,4 +36,4 @@ ht-degree: 2%
 
    >[!NOTE]
    >
-   >外部網頁位於 [!DNL Experience Manager] 本身。
+   >外部網頁可以位於[!DNL Experience Manager]本身中。

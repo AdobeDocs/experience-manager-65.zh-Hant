@@ -22,7 +22,7 @@ ht-degree: 3%
 
 依預設，從編輯器切換到傳統UI的功能已停用。
 
-若要重新啟用選項 **在傳統UI中開啟** 在 **頁面資訊** 功能表，請按照以下步驟操作。
+若要在&#x200B;**頁面資訊**&#x200B;功能表中重新啟用&#x200B;**在傳統UI中開啟**&#x200B;選項，請遵循下列步驟。
 
 1. 使用CRXDE Lite尋找下列節點：
 
@@ -32,7 +32,7 @@ ht-degree: 3%
 
    ` [https://localhost:4502/crx/de/index.jsp#/libs/wcm/core/content/editor/jcr%3Acontent/content/items/content/header/items/headerbar/items/pageinfopopover/items/list/items/classicui](https://localhost:4502/crx/de/index.jsp#/libs/wcm/core/content/editor/jcr%3Acontent/content/items/content/header/items/headerbar/items/pageinfopopover/items/list/items/classicui)`
 
-1. 使用建立覆蓋 **覆蓋節點** 選項；例如：
+1. 使用&#x200B;**覆蓋節點**&#x200B;選項建立覆蓋；例如：
 
    * **路徑**： `/apps/wcm/core/content/editor/jcr:content/content/items/content/header/items/headerbar/items/pageinfopopover/items/list/items/classicui`
    * **覆蓋位置**： `/apps/`
@@ -42,6 +42,6 @@ ht-degree: 3%
 
    `sling:hideProperties = ["granite:hidden"]`
 
-1. 此 **在傳統UI中開啟** 選項在中再次可用 **頁面資訊** 功能表。
+1. 編輯頁面時，**頁面資訊**&#x200B;功能表中再次提供&#x200B;**在傳統UI中開啟**&#x200B;選項。
 
-   ![在傳統UI中開啟選項來自頁面資訊](assets/syui-03-2019-02-27-15-19-48.png)
+   從頁面資訊![在傳統UI中開啟選項](assets/syui-03-2019-02-27-15-19-48.png)

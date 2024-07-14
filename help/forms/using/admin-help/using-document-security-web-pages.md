@@ -22,7 +22,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->您也可以使用使用者登入帳戶，透過Acrobat和其他使用者端應用程式登入Document Security。 (請參閱 [從使用者端應用程式設定檔案安全性的存取權](using-document-security-web-pages.md#setting-up-access-to-document-security-from-client-applications).)
+>您也可以使用使用者登入帳戶，透過Acrobat和其他使用者端應用程式登入Document Security。 （請參閱[設定從使用者端應用程式](using-document-security-web-pages.md#setting-up-access-to-document-security-from-client-applications)存取Document Security。）
 
 若要開啟網頁，您需要瀏覽器和URL，以及您的Document Security登入資訊。 使用者的URL與管理員的URL不同。
 
@@ -34,9 +34,9 @@ ht-degree: 0%
 
 若要使用瀏覽器登入網頁，您需要Document Security URL和帳戶。 使用者的URL與管理員的URL不同。 管理員也可以登入使用者頁面來建立原則。
 
-如果您擁有多個Document Security安裝的存取權，則需要您想要存取的Document Security執行個體的URL。 如果您沒有此資訊，請洽詢管理員。 使用者頁面的預設URL `https://[host]:[port]/edc`. 某些情況下可能不需要連線埠號碼。 請詢問您的管理員以取得詳細資料。
+如果您擁有多個Document Security安裝的存取權，則需要您想要存取的Document Security執行個體的URL。 如果您沒有此資訊，請洽詢管理員。 使用者頁面的預設URL為`https://[host]:[port]/edc`。 某些情況下可能不需要連線埠號碼。 請詢問您的管理員以取得詳細資料。
 
-管理員的預設URL為 `https://[host]:[port]/adminui`.
+管理員的預設URL為`https://[host]:[port]/adminui`。
 
 對於管理員，會在安裝期間建立預設的超級管理員帳戶。 第一次安裝Document Security時，您可以使用此帳戶登入。
 
@@ -83,7 +83,7 @@ ht-degree: 0%
 
 ## 從使用者端應用程式設定檔案安全性的存取權 {#setting-up-access-to-document-security-from-client-applications}
 
-使用者端應用程式必須設定為連線至Document Security以保護檔案、開啟受原則保護的檔案，以及連線至Document Security網頁。 另請參閱 *Acrobat說明* 或 *RightsManagementExtension說明* 以取得有關在使用者端應用程式內設定連線的資訊。
+使用者端應用程式必須設定為連線至Document Security以保護檔案、開啟受原則保護的檔案，以及連線至Document Security網頁。 如需在使用者端應用程式內設定連線的相關資訊，請參閱&#x200B;*Acrobat說明*&#x200B;或適當的&#x200B;*RightsManagementExtension說明*。
 
 可透過安全通訊端層(SSL)存取Document Security。 在憑證存放區中安裝網站的憑證，以便您可以透過使用者端應用程式存取Document Security。
 
@@ -93,7 +93,7 @@ ht-degree: 0%
 
 **使用Internet Explorer安裝伺服器憑證**
 
-1. 開啟網頁瀏覽器，並在「位址」方塊中輸入Document Security的基本URL。 例如，輸入 `https://[host]:[port]`. 便會顯示「安全性警示」對話方塊。
+1. 開啟網頁瀏覽器，並在「位址」方塊中輸入Document Security的基本URL。 例如，型別`https://[host]:[port]`。 便會顯示「安全性警示」對話方塊。
 1. 按一下檢視憑證，然後按一下安裝憑證，並選取安裝的預設值。 憑證必須安裝在受信任的根憑證授權單位中。
 1. 關閉您的瀏覽器工作階段。
 1. 開啟另一個瀏覽器視窗，並在「位址」方塊中輸入相同的URL。 不應出現安全性警示對話方塊。 此測試會確認憑證是否已正確安裝。

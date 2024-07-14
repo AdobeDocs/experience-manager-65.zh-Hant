@@ -38,11 +38,11 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 >[!NOTE]
 >
->如果使用Unix等其他作業系統，請將Windows特定路徑取代為適用作業系統支援的路徑，則「使用AEM表單進行程式設計」中的快速入門會以檔案為基礎。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 另請參閱 [設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>如果使用Unix等其他作業系統，請將Windows特定路徑取代為適用作業系統支援的路徑，則「使用AEM表單進行程式設計」中的快速入門會以檔案為基礎。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 請參閱[設定連線內容](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
 
 ## 快速入門(SOAP模式)：使用Java API新增使用者 {#quick-start-soap-mode-adding-users-using-the-java-api}
 
-下列程式碼範例將名為Wendy Blue的使用者新增至AEM Forms。 (請參閱 [新增使用者](/help/forms/developing/users.md#adding-users).)
+下列程式碼範例將名為Wendy Blue的使用者新增至AEM Forms。 （請參閱[新增使用者](/help/forms/developing/users.md#adding-users)。）
 
 ```java
  /*
@@ -160,7 +160,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 ## 快速入門(SOAP模式)：使用Java API刪除使用者 {#quick-start-soap-mode-deleting-users-using-the-java-api}
 
-以下程式碼範例會從AEM Forms中刪除名為Wendy Blue的使用者。 (請參閱 [刪除使用者](/help/forms/developing/users.md#deleting-users).)
+以下程式碼範例會從AEM Forms中刪除名為Wendy Blue的使用者。 （請參閱[刪除使用者](/help/forms/developing/users.md#deleting-users)。）
 
 ```java
  /*
@@ -256,7 +256,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 ## 快速入門(SOAP模式)：使用Java API管理使用者和群組 {#quick-start-soap-mode-managing-users-and-groups-using-the-java-api}
 
-下列程式碼範例會尋找本機使用者和使用者所屬的本機群組。 (請參閱 [管理使用者和群組](/help/forms/developing/users.md#managing-users-and-groups).)
+下列程式碼範例會尋找本機使用者和使用者所屬的本機群組。 （請參閱[管理使用者和群組](/help/forms/developing/users.md#managing-users-and-groups)。）
 
 ```java
  /*
@@ -380,7 +380,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 ## 快速入門(SOAP模式)：使用Java API管理角色和許可權 {#quick-start-soap-mode-managing-roles-and-permissions-using-the-java-api}
 
-下列程式碼範例將Services使用者角色指派給主參與者，列印主參與者具有的角色，然後移除主參與者中的角色。 此快速啟動會叫用兩個服務：DirectoryManager服務和AuthorizationManager服務。(請參閱 [管理角色和許可權](/help/forms/developing/users.md#managing-roles-and-permissions).)
+下列程式碼範例將Services使用者角色指派給主參與者，列印主參與者具有的角色，然後移除主參與者中的角色。 此快速啟動會叫用兩個服務：DirectoryManager服務和AuthorizationManager服務。（請參閱[管理角色和許可權](/help/forms/developing/users.md#managing-roles-and-permissions)。）
 
 ```java
  /*
@@ -523,7 +523,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 ## 快速入門(SOAP模式)：使用Java API以程式設計方式同步使用者 {#quick-start-soap-mode-programmatically-synchronizing-users-using-the-java-api}
 
-以下Java程式碼範例使用使用者管理API來同步使用者。 (請參閱 [以程式設計方式同步使用者](/help/forms/developing/users.md#programmatically-synchronizing-users).)
+以下Java程式碼範例使用使用者管理API來同步使用者。 （請參閱[以程式設計方式同步使用者](/help/forms/developing/users.md#programmatically-synchronizing-users)。）
 
 ```java
  /*
@@ -632,7 +632,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 ## 快速入門(SOAP模式)：使用Java API新增使用者 {#quick_start_soap_mode_adding_users_using_the_java_api-1}
 
-下列程式碼範例將名為Wendy Blue的使用者新增至AEM Forms。 (請參閱 [新增使用者](/help/forms/developing/users.md#adding-users).)
+下列程式碼範例將名為Wendy Blue的使用者新增至AEM Forms。 （請參閱[新增使用者](/help/forms/developing/users.md#adding-users)。）
 
 ```java
  /*
@@ -750,7 +750,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 ## 快速入門(SOAP模式)：使用Java API建立群組 {#quick-start-soap-mode-creating-groups-using-the-java-api}
 
-下列程式碼範例會在AEM Forms中建立一個名為AdobeGroup的群組。 (請參閱 [建立群組](/help/forms/developing/users.md#creating-groups).)
+下列程式碼範例會在AEM Forms中建立一個名為AdobeGroup的群組。 （請參閱[建立群組](/help/forms/developing/users.md#creating-groups)。）
 
 ```java
  /*
@@ -902,7 +902,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 ## 快速入門(SOAP模式)管理偏好設定節點 {#quick-start-soap-mode-managing-preferences-nodes}
 
-以下Java程式碼模型使用使用者管理API來管理偏好設定節點。 (請參閱 [以程式設計方式管理偏好設定節點](/help/forms/developing/programmatically-preferences-nodes.md#programmatically-managing-the-preferences-nodes))
+以下Java程式碼模型使用使用者管理API來管理偏好設定節點。 （請參閱[以程式設計方式管理喜好設定節點](/help/forms/developing/programmatically-preferences-nodes.md#programmatically-managing-the-preferences-nodes)）
 
 ```java
 /*
@@ -1005,7 +1005,7 @@ public class ManagePreferences {
 
 ## 快速入門(SOAP模式)：使用Java API以程式設計方式管理偏好設定節點 {#quick-start-soap-mode-programmatically-managing-the-preferences-nodes-using-the-java-api}
 
-以下Java程式碼模型使用使用者管理API來管理偏好設定節點(請參閱 [以程式設計方式管理偏好設定節點](/help/forms/developing/programmatically-preferences-nodes.md#programmatically-managing-the-preferences-nodes))
+下列Java程式碼模型使用使用者管理API來管理偏好設定節點（請參閱[以程式設計方式管理偏好設定節點](/help/forms/developing/programmatically-preferences-nodes.md#programmatically-managing-the-preferences-nodes)）
 
 ```java
 /*

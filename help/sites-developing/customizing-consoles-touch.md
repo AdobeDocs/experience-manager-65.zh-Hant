@@ -23,11 +23,13 @@ ht-degree: 22%
 >
 >本檔案說明如何在現代、觸控式UI中自訂主控台，且不套用至傳統UI。
 
-AEM提供多種機制，讓您能夠自訂主控台(以及 [頁面製作功能](/help/sites-developing/customizing-page-authoring-touch.md))。
+AEM提供各種機制，可讓您自訂編寫執行個體的主控台（以及[頁面編寫功能](/help/sites-developing/customizing-page-authoring-touch.md)）。
 
-* Clientlibs Clientlibs可讓您擴充預設實作以實現新功能，同時重複使用標準函式、物件和方法。 自訂時，您可以在下建立自己的clientlib `/apps.` 例如，它可以儲存自訂元件所需的程式碼。
+* Clientlibs
+Clientlibs可讓您擴充預設實作以實現新功能，同時重複使用標準函式、物件和方法。 自訂時，您可以在`/apps.`下建立您自己的clientlib。例如，它可以儲存您自訂元件所需的程式碼。
 
-* 覆蓋以節點定義為基礎，可讓您覆蓋標準功能(在 `/libs`)搭配您自己的自訂功能(在 `/apps`)。 建立覆蓋時不需要原始的1:1副本，因為Sling資源合併器允許繼承。
+* 覆蓋
+覆蓋是以節點定義為基礎，可讓您以您自己的自訂功能（在`/apps`中）覆蓋標準功能（在`/libs`中）。 建立覆蓋時不需要原始的1:1副本，因為Sling資源合併器允許繼承。
 
 您可以透過多種方式使用這些來擴充AEM主控台。 以下會涵蓋小範圍選區（高階）。
 
@@ -35,26 +37,26 @@ AEM提供多種機制，讓您能夠自訂主控台(以及 [頁面製作功能](
 >
 >如需進一步詳細資訊，請參閱：
 >
->* 使用和建立 [clientlibs](/help/sites-developing/clientlibs.md).
->* 使用和建立 [覆蓋](/help/sites-developing/overlays.md).
+>* 正在使用和建立[clientlibs](/help/sites-developing/clientlibs.md)。
+>* 使用和建立[重疊](/help/sites-developing/overlays.md)。
 >* [Granite](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html)
 >
 
 
 >[!CAUTION]
 >
->您 ***必須*** 不會變更中的任何專案 `/libs` 路徑。
+>您&#x200B;***必須***&#x200B;不要變更`/libs`路徑中的任何專案。
 >
->這是因為 `/libs` 下次升級執行個體時會被覆寫（當您套用hotfix或feature pack時，很可能會被覆寫）。
+>這是因為下次升級執行個體時，`/libs`的內容會被覆寫（當您套用Hotfix或Feature Pack時，這些內容很可能會被覆寫）。
 >
 >設定和其他變更的建議方法是：
 >
->1. 重新建立所需專案（即存在於中的專案） `/libs`)下 `/apps`
+>1. 在`/apps`下重新建立必要專案（亦即，它存在於`/libs`中）
 >
->1. 進行任何變更 `/apps`
+>1. 在`/apps`中進行任何變更
 >
 
-例如，下列位置位於 `/libs` 結構可以重疊：
+例如，`/libs`結構內的下列位置可以重疊：
 
 * 主控台（任何以Granite UI頁面為基礎的控制檯）；例如：
 
@@ -62,7 +64,7 @@ AEM提供多種機制，讓您能夠自訂主控台(以及 [頁面製作功能](
 
 >[!NOTE]
 >
->請參閱知識庫文章， [疑難排解AEM TouchUI問題](https://helpx.adobe.com/experience-manager/kb/troubleshooting-aem-touchui-issues.html)，以取得進一步的提示和工具。
+>請參閱知識庫文章[AEM TouchUI問題疑難排解](https://helpx.adobe.com/experience-manager/kb/troubleshooting-aem-touchui-issues.html)，以取得進一步的秘訣和工具。
 
 ## 自訂主控台的預設檢視 {#customizing-the-default-view-for-a-console}
 
@@ -92,7 +94,7 @@ AEM提供多種機制，讓您能夠自訂主控台(以及 [頁面製作功能](
 
 ### 將動作新增至工具列 {#add-new-action-to-the-toolbar}
 
-1. 您可以建置自己的元件，並包含自訂動作對應的使用者端程式庫。 例如， **提升至Twitter** 動作時間：
+1. 您可以建置自己的元件，並包含自訂動作對應的使用者端程式庫。 例如，在下列位置執行&#x200B;**提升為Twitter**&#x200B;動作：
 
    `/apps/wcm/core/clientlibs/sites/js/twitter.js`
 
@@ -130,7 +132,7 @@ AEM提供多種機制，讓您能夠自訂主控台(以及 [頁面製作功能](
 
 >[!NOTE]
 >
->此功能已針對文字欄位欄位進行最佳化；對於其他資料型別，可以覆蓋 `cq/gui/components/siteadmin/admin/listview/columns/analyticscolumnrenderer` 在 `/apps`.
+>此功能已針對文字欄位欄位進行最佳化；對於其他資料型別，可在`/apps`中覆蓋`cq/gui/components/siteadmin/admin/listview/columns/analyticscolumnrenderer`。
 
 若要自訂清單檢視中的欄：
 
@@ -144,12 +146,12 @@ AEM提供多種機制，讓您能夠自訂主控台(以及 [頁面製作功能](
 
    * 新增欄 — 或移除現有欄。
 
-   另請參閱 [使用覆蓋（以及Sling Resource Merger）](/help/sites-developing/overlays.md) 以取得詳細資訊。
+   如需詳細資訊，請參閱[使用覆蓋（以及Sling資源合併）](/help/sites-developing/overlays.md)。
 
 1. 選擇性：
 
-   * 如果您想要插入其他資料，則需撰寫 [paginforProvider](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageInfoProvider.html) 與
-     `pageInfoProviderType` 屬性。
+   * 如果您想要插入其他資料，您必須使用撰寫[PageInforProvider](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageInfoProvider.html)
+     `pageInfoProviderType`屬性。
 
    例如，請參閱底下的附加類別/套件（來自GitHub）。
 
@@ -159,4 +161,4 @@ AEM提供多種機制，讓您能夠自訂主控台(以及 [頁面製作功能](
 
 使用主控台時，常見的使用案例是使用者必須從資源（例如頁面、元件、資產等）中進行選取時。 例如，這可以採用清單的形式，作者必須從中選擇專案。
 
-若要將清單保持為合理的大小並且和使用案例相關，可以以自訂述詞的形式實作篩選器。另請參閱 [本文](/help/sites-developing/customizing-page-authoring-touch.md#filtering-resources) 以取得詳細資訊。
+若要將清單保持為合理的大小並且和使用案例相關，可以以自訂述詞的形式實作篩選器。請參閱[本文章](/help/sites-developing/customizing-page-authoring-touch.md#filtering-resources)以取得詳細資料。

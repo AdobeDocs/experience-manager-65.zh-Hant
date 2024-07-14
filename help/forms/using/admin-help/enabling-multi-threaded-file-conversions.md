@@ -43,7 +43,7 @@ OpenOffice或PDFMaker的每個例項都是使用個別的使用者帳戶啟動�
 在Windows作業系統上，用於PDF轉換的管理員使用者帳戶（PDFG使用者）必須取代處理序層級權杖許可權。 您可以使用群組原則編輯器來新增此權利：
 
 1. 在Windows「開始」功能表中，按一下「執行」，然後輸入gpedit.msc。
-1. 按一下[本機電腦原則] > [電腦組態] > [Windows設定] > [安全性設定] > [本機原則] > [使用者許可權指派]。 編輯 *取代程式層級權杖* 包含Administrators群組的原則。
+1. 按一下[本機電腦原則] > [電腦組態] > [Windows設定] > [安全性設定] > [本機原則] > [使用者許可權指派]。 編輯&#x200B;*取代處理序層級權杖*&#x200B;原則以包含Administrators群組。
 1. 將使用者新增至「取代程式層級權杖」專案。
 
 ### Windows Server 2008上的OpenOffice、Microsoft®Word和Microsoft®PowerPoint需要其他設定 {#additional-configuration-required-for-openoffice-microsoft-word-and-microsoft-powerpoint-on-windows-server-2008}
@@ -56,7 +56,7 @@ OpenOffice或PDFMaker的每個例項都是使用個別的使用者帳戶啟動�
 
 ### Linux®或Solaris™上的OpenOffice需要其他設定 {#additional-configuration-required-for-openoffice-on-linux-or-solaris}
 
-1. 新增使用者帳戶。 (請參閱 [新增使用者帳戶](enabling-multi-threaded-file-conversions.md#add-a-user-account).)
+1. 新增使用者帳戶。 （請參閱[新增使用者帳戶](enabling-multi-threaded-file-conversions.md#add-a-user-account)。）
 1. 接下來，您必須變更/etc/sudoers檔案。 此檔案的預設許可權為440。 將此檔案的許可權變更為可寫入。
 1. 在/etc/sudoers檔案中新增其他使用者(除了執行Forms伺服器的管理員之外)的專案。 例如，如果您以名為lcadm的使用者和名為myhost的伺服器身分執行AEM表單，並且想要模擬user1和user2，請將下列專案新增到/etc/sudoers：
 
@@ -69,7 +69,7 @@ OpenOffice或PDFMaker的每個例項都是使用個別的使用者帳戶啟動�
 
    >[!NOTE]
    >
-   >確保您已為「user1」和「user2」指派系統使用者和PDFG使用者角色。 若要將PDFG角色指派給使用者，請參閱 [新增使用者帳戶](enabling-multi-threaded-file-conversions.md#add-a-user-account)
+   >確保您已為「user1」和「user2」指派系統使用者和PDFG使用者角色。 若要將PDFG角色指派給使用者，請參閱[新增使用者帳戶](enabling-multi-threaded-file-conversions.md#add-a-user-account)
 
 1. 同樣在/etc/sudoers檔案中，找到並註解此行，方式是在行首新增數字元號(#)：
 
@@ -80,7 +80,7 @@ OpenOffice或PDFMaker的每個例項都是使用個別的使用者帳戶啟動�
    這可讓您新增Linux®使用者。
 
 1. 將etc/sudoers檔案的許可權變更回440。
-1. 允許您透過新增的所有使用者 [新增使用者帳戶](enabling-multi-threaded-file-conversions.md#add-a-user-account) 以連線至Forms伺服器。 例如，若要授予名為user1的本機使用者連線Forms伺服器的許可權，請使用以下命令
+1. 允許透過[新增使用者帳戶](enabling-multi-threaded-file-conversions.md#add-a-user-account)新增的所有使用者與Forms伺服器建立連線。 例如，若要授予名為user1的本機使用者連線Forms伺服器的許可權，請使用以下命令
 
    `xhost +local:user1@`
 

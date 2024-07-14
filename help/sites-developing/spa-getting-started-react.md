@@ -25,7 +25,7 @@ SPA編寫功能提供全方位的解決方案，可支援AEM中的SPA。 本文�
 
 >[!NOTE]
 >
->本文章內容以React架構為基礎。 有關Angular架構的對應檔案，請參閱 [AEM中的SPA快速入門 — Angular](/help/sites-developing/spa-getting-started-angular.md).
+>本文章內容以React架構為基礎。 有關Angular架構的對應檔案，請參閱[AEM中的SPA快速入門 — Angular](/help/sites-developing/spa-getting-started-angular.md)。
 
 >[!NOTE]
 >
@@ -55,7 +55,7 @@ SPA編寫功能提供全方位的解決方案，可支援AEM中的SPA。 本文�
 
 ### 相依性 {#dependencies}
 
-此 `package.json` 檔案定義整體SPA套件的需求。 此處列出運作中AEM的最小SPA相依性。
+`package.json`檔案定義整體SPA封裝的需求。 此處列出運作中AEM的最小SPA相依性。
 
 ```
   "dependencies": {
@@ -65,24 +65,24 @@ SPA編寫功能提供全方位的解決方案，可支援AEM中的SPA。 本文�
   }
 ```
 
-由於此範例是以React架構為基礎，因此中有兩個React專用相依性是此架構中的必備專案： `package.json` 檔案：
+由於此範例是以React架構為基礎，因此`package.json`檔案中有兩個React特定相依性：
 
 ```
 react
  react-dom
 ```
 
-此 `aem-clientlib-generator` 用於在建置流程中自動建立使用者端程式庫。
+`aem-clientlib-generator`是用來在建置程式中自動建立使用者端程式庫。
 
 `"aem-clientlib-generator": "^1.4.1",`
 
-可找到更多相關詳細資訊 [在此填入GitHub](https://github.com/wcm-io-frontend/aem-clientlib-generator).
+您可以在[GitHub的此處](https://github.com/wcm-io-frontend/aem-clientlib-generator)找到更多相關詳細資料。
 
 >[!CAUTION]
 >
->的最低版本 `aem-clientlib-generator` 「必要」為1.4.1。
+>所需`aem-clientlib-generator`的最低版本為1.4.1。
 
-此 `aem-clientlib-generator` 的設定位置： `clientlib.config.js` 檔案如下所示。
+`aem-clientlib-generator`在`clientlib.config.js`檔案中的設定如下。
 
 ```
 module.exports = {
@@ -113,7 +113,7 @@ module.exports = {
 
 ### 建置 {#building}
 
-實際建立應用程式使用 [Webpack](https://webpack.js.org/) 用於整合，以及自動建立使用者端程式庫的aem-clientlib-generator。 因此， build指令將類似於：
+實際建立應用程式時，除了使用aem-clientlib-generator自動建立使用者端程式庫之外，還使用[Webpack](https://webpack.js.org/)進行翻譯。 因此， build指令將類似於：
 
 `"build": "webpack && clientlib --verbose"`
 
@@ -133,7 +133,7 @@ module.exports = {
 
 ### index.js {#index-js}
 
-SPA的進入點為 `index.js` 此處顯示的檔案已簡化，以專注於重要內容。
+此處顯示的`index.js`檔案是SPA的進入點，其內容經過簡化，聚焦於重要內容。
 
 ```
 import ReactDOM from 'react-dom';
@@ -150,7 +150,7 @@ ReactDOM.render(
 });
 ```
 
-的主要功能 `index.js` 是使用 `ReactDOM.render` 函式，可判斷DOM中要插入應用程式的位置。
+`index.js`的主要函式是使用`ReactDOM.render`函式來判斷DOM中要插入應用程式的位置。
 
 這是此函式的標準用法，並非此範例應用程式所特有。
 
@@ -160,7 +160,7 @@ ReactDOM.render(
 
 ### App.js {#app-js}
 
-透過轉譯應用程式， `index.js` 呼叫 `App.js`，此處以簡化版顯示，著重於重要內容。
+透過轉譯應用程式，`index.js`會呼叫`App.js`，此處以簡化版顯示，以著重於重要內容。
 
 ```
 import {Page, withModel } from '@adobe/aem-react-editable-components';
@@ -174,11 +174,11 @@ class App extends Page {
 export default withModel(App);
 ```
 
-`App.js` 主要用途是包裝構成應用程式的根元件。 任何應用程式的進入點是頁面。
+`App.js`主要用於將構成應用程式的根元件換行。 任何應用程式的進入點是頁面。
 
 ### Page.js {#page-js}
 
-轉譯頁面時， `App.js` 呼叫 `Page.js` 此處以簡化版列出。
+透過轉譯頁面，`App.js`會呼叫此處以簡化版本列出的`Page.js`。
 
 ```
 import {Page, MapTo, withComponentMappingContext } from "@adobe/aem-react-editable-components";
@@ -192,13 +192,13 @@ class AppPage extends Page {
 MapTo('my-react-app/components/structure/page')(withComponentMappingContext(AppPage));
 ```
 
-在此範例中 `AppPage` 類別擴充 `Page`，其中包含後續可使用的內部內容方法。
+在此範例中，`AppPage`類別會擴充`Page`，其中包含之後可以使用的內部內容方法。
 
-此 `Page` 擷取頁面模型的JSON表示法，並處理內容以包裝/裝飾頁面的每個元素。 進一步詳細資訊，請參閱 `Page` 可以在檔案中找到 [SPA Blueprint](/help/sites-developing/spa-blueprint.md#main-pars-header-1694932501).
+`Page`會擷取頁面模型的JSON表示法，並處理內容以包裝/裝飾頁面的每個元素。 在[SPA Blueprint](/help/sites-developing/spa-blueprint.md#main-pars-header-1694932501)檔案中可以找到`Page`的更多詳細資料。
 
 ### Image.js {#image-js}
 
-呈現頁面時，元件(例如 `Image.js` 如此處所示，皆可呈現。
+轉譯頁面後，可以轉譯如`Image.js`等元件。
 
 ```
 import React, {Component} from 'react';
@@ -225,13 +225,13 @@ class Image extends Component {
 MapTo('my-react-app/components/content/image')(Image, ImageEditConfig);
 ```
 
-AEM中SPA的核心構想是將該SPA元件對應至AEM元件，並在修改內容時更新元件（反之亦然）。 檢視檔案 [SPA編輯器概觀](/help/sites-developing/spa-overview.md) 以取得此通訊模式的摘要。
+AEM中SPA的核心構想是將該SPA元件對應至AEM元件，並在修改內容時更新元件（反之亦然）。 如需此通訊模式的摘要，請參閱檔案[SPA編輯器概觀](/help/sites-developing/spa-overview.md)。
 
 `MapTo('my-react-app/components/content/image')(Image, ImageEditConfig);`
 
-此 `MapTo` 方法將SPA元件對應至AEM元件。 它支援使用單一字串或字串陣列。
+`MapTo`方法將該SPA元件對應到該AEM元件。 它支援使用單一字串或字串陣列。
 
-`ImageEditConfig` 是組態物件，可為編輯器提供產生預留位置所需的中繼資料，有助於啟用元件的製作功能
+`ImageEditConfig`是組態物件，可透過為編輯器提供產生預留位置所需的中繼資料，來協助啟用元件的製作功能
 
 如果沒有內容，則會提供標籤做為預留位置，以代表空白內容。
 
@@ -258,30 +258,30 @@ class PageClass extends Component {...};
 export default MapTo('my-react-app/react/components/structure/page')(PageClass, EditConfig);
 ```
 
-此 `MapTo` 函式傳回 `Component` 這是延伸所提供的構成的結果 `PageClass` 類別名稱和屬性啟用編寫功能。 此元件可匯出以供稍後在應用程式的標籤中具現化。
+`MapTo`函式傳回`Component`，這是使用啟用編寫的類別名稱和屬性來擴充所提供的`PageClass`的構成結果。 此元件可匯出以供稍後在應用程式的標籤中具現化。
 
-使用匯出時 `MapTo` 或 `withModel` 函式， `Page` 元件，以 `ModelProvider` 可讓標準元件存取最新版本頁面模型或該頁面模型中的精確位置的元件。
+使用`MapTo`或`withModel`函式匯出時，`Page`元件會以`ModelProvider`元件包住，此元件可提供存取最新版頁面模型或該頁面模型中精確位置的標準元件。
 
-如需詳細資訊，請參閱 [SPA Blueprint檔案](/help/sites-developing/spa-blueprint.md#main-pars-header-329251743).
+如需詳細資訊，請參閱[SPA藍圖檔案](/help/sites-developing/spa-blueprint.md#main-pars-header-329251743)。
 
 >[!NOTE]
 >
->依預設，使用時您會收到元件的整個模型 `withModel` 函式。
+>依預設，您會在使用`withModel`函式時收到元件的整個模型。
 
 ## 在SPA元件之間共用資訊 {#sharing-information-between-spa-components}
 
 單頁應用程式內的元件定期需要共用資訊。 有幾種建議的方法可以達成此目的，依複雜度遞增的順序列示如下。
 
-* **選項1：** 集中邏輯並廣播至必要的元件，例如，透過使用React Context。
-* **選項2：** 使用狀態庫（例如Redux）共用元件狀態。
-* **選項3：** 透過自訂和擴充容器元件來利用物件階層。
+* **選項1：**&#x200B;集中邏輯並廣播至必要的元件，例如，使用React Context。
+* **選項2：**&#x200B;使用狀態庫（例如Redux）共用元件狀態。
+* **選項3：**&#x200B;藉由自訂及擴充容器元件來運用物件階層。
 
 ## 後續步驟 {#next-steps}
 
-如需建立您自己的SPA的逐步指南，請參閱 [AEM SPA編輯器快速入門 — WKND事件教學課程](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-spa-wknd-tutorial-develop.html).
+如需建立您自己的SPA的逐步指南，請參閱[AEM SPA編輯器快速入門 — WKND事件教學課程](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-spa-wknd-tutorial-develop.html)。
 
-如需有關如何組織自己以開發適用於AEM的SPA的詳細資訊，請參閱文章 [為AEM開發SPA](/help/sites-developing/spa-architecture.md).
+如需如何組織自己以開發適用於AEM的SPA的詳細資訊，請參閱文章[開發適用於AEM的SPA](/help/sites-developing/spa-architecture.md)。
 
-如需有關動態模型到元件對應的更多詳細資訊，以及它如何在AEM的SPA中運作，請參閱文章 [SPA的動態模型至元件對應](/help/sites-developing/spa-dynamic-model-to-component-mapping.md).
+如需有關動態模型到元件對應以及它在AEM中SPA內運作方式的詳細資訊，請參閱文章[SPA的動態模型到元件對應](/help/sites-developing/spa-dynamic-model-to-component-mapping.md)。
 
-如果您想在AEM中為React或Angular以外的框架實作SPA，或只是想深入瞭解適用於AEM的SPA SDK的運作方式，請參閱 [SPA Blueprint](/help/sites-developing/spa-blueprint.md) 文章。
+如果您想要在AEM中為React或Angular以外的框架實作SPA，或只是想深入瞭解適用於AEM的SPA SDK的運作方式，請參閱[SPA Blueprint](/help/sites-developing/spa-blueprint.md)文章。

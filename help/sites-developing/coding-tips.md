@@ -33,10 +33,10 @@ ht-degree: 0%
 在AEM程式碼基底中，使用下列慣例：
 
 
-* 介面的單一實作命名為 `<Interface>Impl`，也就是 `ReaderImpl`.
-* 介面的多個實作已命名 `<Variant><Interface>`，也就是 `JcrReader` 和 `FileSystemReader`.
-* 抽象基底類別已命名 `Abstract<Interface>` 或 `Abstract<Variant><Interface>`.
-* 封裝已命名 `com.adobe.product.module`. 每個Maven成品或OSGi套件組合都必須有自己的套件。
+* 介面的單一實作名為`<Interface>Impl`，也就是`ReaderImpl`。
+* 介面的多個實作名為`<Variant><Interface>`，也就是`JcrReader`和`FileSystemReader`。
+* 抽象基底類別名稱為`Abstract<Interface>`或`Abstract<Variant><Interface>`。
+* 封裝名稱為`com.adobe.product.module`。 每個Maven成品或OSGi套件組合都必須有自己的套件。
 * Java™實作會放置在其API下方的實作套件中。
 
 
@@ -55,7 +55,7 @@ ht-degree: 0%
    <td><p>int elapsedTimeInDays；</p> </td>
   </tr>
   <tr>
-   <td><p>//取得標籤的影像<br /> 公用清單getItems() {}</p> </td>
+   <td><p>//get標籤的影像<br />公用清單getItems() {}</p> </td>
    <td><p>公用清單getTaggedImages() {}</p> </td>
   </tr>
  </tbody>
@@ -67,7 +67,7 @@ DRY表示同一組程式碼絕不應重複。 這也適用於字串常值等。 
 
 ### 避免使用裸露的CSS規則 {#avoid-naked-css-rules}
 
-CSS規則應為應用程式內容中目標元素的特定規則。 例如，套用至 *.content .center* 過於廣泛，最終可能會影響您系統中的許多內容，導致其他人日後需要覆寫此風格。 然而， *.myapp-centertext* 將會是更明確的規則，因為它會指定「置中」 *文字* （在應用程式的內容中）。
+CSS規則應為應用程式內容中目標元素的特定規則。 例如，套用至&#x200B;*.content .center*&#x200B;的CSS規則可能會過於廣泛，最終可能會影響您系統中的許多內容，導致未來需要其他使用者覆寫此樣式。 而&#x200B;*.myapp-centertext*&#x200B;則是更具體的規則，因為它會在應用程式內容中指定置中的&#x200B;*text*。
 
 ### 避免使用過時的API {#eliminate-usage-of-deprecated-apis}
 
@@ -75,27 +75,27 @@ API一經棄用，最好尋找新的建議方法，而非依賴已棄用的API�
 
 ### 撰寫可當地語系化的程式碼 {#write-localizable-code}
 
-任何不是由作者提供的字串，都應包裝在AEM i18n字典的呼叫中，透過 *I18n.get()* 在JSP/Java和 *CQ.I18n.get()* 在JavaScript中。 如果找不到實作，此實作會傳回傳遞至它的字串，因此在使用主要語言實作功能後，如此可提供實作本地化的彈性。
+任何不是由作者提供的字串，都應透過JSP/Java中的&#x200B;*I18n.get()*&#x200B;和JavaScript中的&#x200B;*CQ.I18n.get()*，包裝在對AEM i18n字典的呼叫中。 如果找不到實作，此實作會傳回傳遞至它的字串，因此在使用主要語言實作功能後，如此可提供實作本地化的彈性。
 
 ### 為安全逸出資源路徑 {#escape-resource-paths-for-safety}
 
-雖然JCR中的路徑不應包含空格，但它們的存在不應導致程式碼中斷。 Jackrabbit提供的文字公用程式類別包含 *escape()* 和 *escapePath()* 方法。 若為JSP，Granite UI會公開 *granite：encodeURIPath() EL* 函式。
+雖然JCR中的路徑不應包含空格，但它們的存在不應導致程式碼中斷。 Jackrabbit提供&#x200B;*escape()*&#x200B;和&#x200B;*escapePath()*&#x200B;方法的文字公用程式類別。 針對JSP，Granite UI會公開&#x200B;*granite：encodeURIPath() EL*&#x200B;函式。
 
 ### 使用XSS API和/或HTL來抵禦跨網站指令碼攻擊 {#use-the-xss-api-and-or-htl-to-protect-against-cross-site-scripting-attacks}
 
-AEM提供的XSS API可輕鬆清除引數，並確保安全性不受跨網站指令碼攻擊。 此外，HTL也將這些保護功能直接內建在範本語言中。 API速查表可於以下網址下載： [開發 — 指導方針與最佳作法](/help/sites-developing/dev-guidelines-bestpractices.md).
+AEM提供的XSS API可輕鬆清除引數，並確保安全性不受跨網站指令碼攻擊。 此外，HTL也將這些保護功能直接內建在範本語言中。 API速查表可在[開發 — 指導方針與最佳實務](/help/sites-developing/dev-guidelines-bestpractices.md)下載。
 
 ### 實作適當的記錄 {#implement-appropriate-logging}
 
 對於Java™程式碼，AEM支援slf4j作為記錄訊息的標準API，並且應該與透過OSGi主控台提供的設定一起使用，以確保管理的一致性。 Slf4j會公開五個不同的記錄層級。 Adobe建議在選擇要在哪個層級記錄訊息時遵循下列准則：
 
 * 錯誤：當程式碼中的某些專案中斷時，處理無法繼續。 這通常會發生於非預期的例外狀況。 在這些情況下包含棧疊追蹤會很有幫助。
-* 警告：當某些專案未正常運作，但處理作業可以繼續進行。 這通常是我們所預期的例外狀況的結果，例如 *PathNotFoundException*.
+* 警告：當某些專案未正常運作，但處理作業可以繼續進行。 這通常是我們所預期的例外狀況的結果，例如&#x200B;*PathNotFoundException*。
 * INFO：監視系統時有用的資訊。 請記住，這是預設值，並且大多數客戶會在他們的環境中保留此設定。 因此，請勿過度使用。
 * DEBUG：處理的低階資訊。 對具有支援的問題進行偵錯時很有用。
 * TRACE：最低層級的資訊，例如輸入/結束方法。 這通常僅供開發人員使用。
 
-如果有JavaScript， *console.log* 應僅在開發期間使用，且應在發行之前移除所有記錄陳述式。
+如果有JavaScript，則只應在開發期間使用&#x200B;*console.log*，並且應在發行之前移除所有記錄陳述式。
 
 ### 避免狂熱的貨運程式設計 {#avoid-cargo-cult-programming}
 

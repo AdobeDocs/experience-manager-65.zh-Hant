@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # 使用CustomToolbars呈現HTMLForms {#rendering-html-forms-with-customtoolbars}
 
-**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms 。**
+**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
 
 ## 使用自訂工具列呈現HTMLForms {#rendering-html-forms-with-custom-toolbars}
 
@@ -40,21 +40,21 @@ Forms服務可讓您自訂以HTML表單呈現的工具列。 您可以自訂工�
 * fscmenu-ie.css
 * fscdialog.css
 
-fscJS是與每個節點相關聯的Java指令碼。 必須為以下專案提供一個 `div#fscmenu` 節點和（選擇性）的 `ul#fscmenuItem` 節點。 JS檔案實作核心工具列功能，而預設檔案則可運作。
+fscJS是與每個節點相關聯的Java指令碼。 必須為`div#fscmenu`節點提供一個節點，也可選擇為`ul#fscmenuItem`節點提供。 JS檔案實作核心工具列功能，而預設檔案則可運作。
 
-fscCSS是與特定節點關聯的樣式表。 CSS檔案中的樣式會指定工具列外觀。 *fscVCSS* 是垂直工具列的樣式表，顯示在已轉譯HTML表單的左側。 *fscIECSS* 是樣式表，用於HTML在Internet Explorer中轉譯的表單。
+fscCSS是與特定節點關聯的樣式表。 CSS檔案中的樣式會指定工具列外觀。 *fscVCSS*&#x200B;是垂直工具列的樣式表，顯示在已轉譯HTML表單的左側。 *fscIECSS*&#x200B;是樣式表，用於HTML在Internet Explorer中轉譯的表單。
 
-確定上述所有檔案都在fscmenu.xml檔案中參照。 也就是說，在fscmenu.xml檔案中，指定指向這些檔案的URI位置，讓Forms服務可以找到它們。 依預設，這些檔案可在以內部關鍵字開頭的URI位置取得 `FSWebRoot` 或 `ApplicationWebRoot`.
+確定上述所有檔案都在fscmenu.xml檔案中參照。 也就是說，在fscmenu.xml檔案中，指定指向這些檔案的URI位置，讓Forms服務可以找到它們。 依預設，這些檔案可在以內部關鍵字`FSWebRoot`或`ApplicationWebRoot`開頭的URI位置取得。
 
-若要自訂工具列，請使用外部關鍵字取代關鍵字 `FSToolBarURI`. 此關鍵字代表在執行階段傳遞至Forms服務的URI （本節稍後將說明此方法）。
+若要自訂工具列，請使用外部關鍵字`FSToolBarURI`取代關鍵字。 此關鍵字代表在執行階段傳遞至Forms服務的URI （本節稍後將說明此方法）。
 
-您也可以指定這些JS和CSS檔案的絕對位置，例如https://www.mycompany.com/scripts/misc/fscmenu.js。 在此情況下，您不需要使用 `FSToolBarURI` 關鍵字。
+您也可以指定這些JS和CSS檔案的絕對位置，例如https://www.mycompany.com/scripts/misc/fscmenu.js。 在此情況下，您不需要使用`FSToolBarURI`關鍵字。
 
 >[!NOTE]
 >
->不建議您混合參照這些檔案的方式。 也就是說，所有URI都應該透過以下任一方式參照： `FSToolBarURI` 關鍵字或絕對位置。
+>不建議您混合參照這些檔案的方式。 也就是說，應該使用`FSToolBarURI`關鍵字或絕對位置來參照所有URI。
 
-您可以開啟adobe-forms以取得JS和CSS檔案。&lt;appserver>.ear檔案。 在此檔案中，開啟adobe-forms-res.war。 所有這些檔案都在WAR檔案中。 Adobe-forms-&lt;appserver>.ear檔案位於AEM forms安裝資料夾中(C:\是安裝目錄)。 您可以開啟Adobe Forms-&lt;appserver>.ear使用檔案擷取工具，例如WinRAR。
+您可以開啟adobe-forms-&lt;appserver>.ear檔案來取得JS和CSS檔案。 在此檔案中，開啟adobe-forms-res.war。 所有這些檔案都在WAR檔案中。 adobe-forms-&lt;appserver>.ear檔案位於AEM forms安裝資料夾中(C:\為安裝目錄)。 您可以使用檔案擷取工具（例如WinRAR）開啟adobe-forms-&lt;appserver>.ear。
 
 下列XML語法顯示範例fscmenu.xml檔案。
 
@@ -97,12 +97,12 @@ fscCSS是與特定節點關聯的樣式表。 CSS檔案中的樣式會指定工�
 
 下列專案說明如何自訂工具列：
 
-* 變更值 `fscJS`， `fscCSS`， `fscVCSS`， `fscIECSS` 屬性（在fscmenu.xml檔案中），使用本節中說明的其中一種方法(例如， `fscJS="FSToolBarURI/scripts/fscmenu.js"`)。
+* 變更`fscJS`、`fscCSS`、`fscVCSS`、`fscIECSS`屬性的值（在fscmenu.xml檔案中），以使用本節中說明的其中一個方法（例如，`fscJS="FSToolBarURI/scripts/fscmenu.js"`）來反映參考檔案的自訂位置。
 * 必須指定所有CSS和JS檔案。 如果未修改任何檔案，請在自訂位置提供預設檔案。 您可以依照本節所述開啟各種檔案來取得預設檔案。
 * 允許為任何檔案提供絕對參照(例如，https://www.example.com/scripts/custom-vertical-fscmenu.css)。
-* JS和CSS檔案可以 `div#fscmenu` 節點需要工具列功能的必要專案。 個人 `ul#fscmenuItem` 節點可能有或沒有支援的JS或CSS檔案。
+* `div#fscmenu`節點所需的JS和CSS檔案對於工具列功能是必要的。 個別`ul#fscmenuItem`節點可能有或沒有支援的JS或CSS檔案。
 
-**變更本機值**
+**正在變更本機值**
 
 在自訂工具列時，您可以變更工具列的地區設定值。 也就是說，您可以用其他語言顯示它。 下圖顯示以法文顯示的自訂工具列。
 
@@ -149,13 +149,13 @@ fscCSS是與特定節點關聯的樣式表。 CSS檔案中的樣式會指定工�
 >
 >與此區段相關聯的「快速入門」會使用此XML檔案來顯示法文自訂工具列，如上圖所示。
 
-此外，請叫用 `HTMLRenderSpec` 物件的 `setLocale` 方法並傳遞字串值，該值會指定地區設定值。 例如，通過 `fr_FR` 以指定法文。 Forms服務隨附本地化工具列。
+此外，請叫用`HTMLRenderSpec`物件的`setLocale`方法，並傳遞指定地區設定值的字串值，以指定有效的地區設定值。 例如，傳遞`fr_FR`以指定法文。 Forms服務隨附本地化工具列。
 
 >[!NOTE]
 >
->您必須先瞭解HTML表單的呈現方式，才能呈現使用自訂工具列的HTML表單。 (請參閱 [將Forms轉譯為HTML](/help/forms/developing/rendering-forms-html.md).)
+>您必須先瞭解HTML表單的呈現方式，才能呈現使用自訂工具列的HTML表單。 (請參閱[將Forms轉譯為HTML](/help/forms/developing/rendering-forms-html.md)。)
 
-如需Forms服務的詳細資訊，請參閱 [AEM Forms服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
+如需Forms服務的詳細資訊，請參閱[AEM Forms服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 ### 步驟摘要 {#summary-of-steps}
 
@@ -167,7 +167,7 @@ fscCSS是與特定節點關聯的樣式表。 CSS檔案中的樣式會指定工�
 1. 呈現HTML表單。
 1. 將表單資料流寫入使用者端網頁瀏覽器。
 
-**包含專案檔案**
+**包含專案檔**
 
 在您的開發專案中包含必要的檔案。 如果您使用Java建立使用者端應用程式，請包含必要的JAR檔案。 如果您使用Web服務，請包含Proxy檔案。
 
@@ -177,9 +177,9 @@ fscCSS是與特定節點關聯的樣式表。 CSS檔案中的樣式會指定工�
 
 **參考自訂fscmenu XML檔案**
 
-若要呈現包含自訂工具列的HTML表單，請參照描述工具列的fscmenu XML檔案。 （本節提供fscmenu XML檔案的兩個範例。） 此外，請確定fscmenu.xml檔案正確指定所有參照檔案的位置。 如本節先前所述，請確定所有檔案已被 `FSToolBarURI` 關鍵字或其絕對位置。
+若要呈現包含自訂工具列的HTML表單，請參照描述工具列的fscmenu XML檔案。 （本節提供fscmenu XML檔案的兩個範例。） 此外，請確定fscmenu.xml檔案正確指定所有參照檔案的位置。 如本節先前所述，請確定所有檔案都以`FSToolBarURI`關鍵字或其絕對位置參照。
 
-**呈現HTML表單**
+**轉譯HTML表單**
 
 若要呈現HTML表單，請指定在Designer中建立並儲存為XDP檔案的表單設計。 同時選取HTML轉換型別。 例如，您可以指定轉譯Internet Explorer 5.0或更新版本動態HTML的HTML轉換型別。
 
@@ -217,43 +217,43 @@ Forms服務轉譯HTML表單時，會傳回您必須寫入使用者端網頁瀏�
 
 1. 建立Forms Java API物件
 
-   * 建立 `ServiceClientFactory` 包含連線屬性的物件。
-   * 建立 `FormsServiceClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 物件。
+   * 建立包含連線屬性的`ServiceClientFactory`物件。
+   * 使用它的建構函式並傳遞`ServiceClientFactory`物件來建立`FormsServiceClient`物件。
 
 1. 參考自訂fscmenu XML檔案
 
-   * 建立 `HTMLRenderSpec` 物件（使用其建構函式）。
-   * 若要使用工具列呈現HTML表單，請叫用 `HTMLRenderSpec` 物件的 `setHTMLToolbar` 方法並傳遞 `HTMLToolbar` 列舉值。 例如，若要顯示垂直HTML工具列，請傳遞 `HTMLToolbar.Vertical`.
-   * 透過叫用 `HTMLRenderSpec` 物件的 `setToolbarURI` 方法並傳遞字串值，該值會指定XML檔案的URI位置。
-   * 如果適用，請叫用 `HTMLRenderSpec` 物件的 `setLocale` 方法並傳遞字串值，該值會指定地區設定值。 預設值為英文。
+   * 使用物件的建構函式建立`HTMLRenderSpec`物件。
+   * 若要使用工具列轉譯HTML表單，請叫用`HTMLRenderSpec`物件的`setHTMLToolbar`方法，並傳遞`HTMLToolbar`列舉值。 例如，若要顯示垂直HTML工具列，請傳遞`HTMLToolbar.Vertical`。
+   * 透過叫用`HTMLRenderSpec`物件的`setToolbarURI`方法並傳遞指定XML檔案URI位置的字串值，來指定fscmenu XML檔案的位置。
+   * 如果適用，請叫用`HTMLRenderSpec`物件的`setLocale`方法，並傳遞指定地區設定值的字串值來設定地區設定值。 預設值為英文。
 
    >[!NOTE]
    >
-   >與此區段關聯的「快速入門」會將此值設為 `fr_FR`*.*
+   >與此區段關聯的快速入門將此值設定為&#x200B;`fr_FR`*.*
 
 1. 呈現HTML表單
 
-   叫用 `FormsServiceClient` 物件的 `renderHTMLForm` 方法並傳遞下列值：
+   叫用`FormsServiceClient`物件的`renderHTMLForm`方法，並傳遞下列值：
 
-   * 字串值，指定表單設計名稱，包括副檔名。 如果您參照的表單設計屬於Forms應用程式的一部分，請務必指定完整路徑，例如 `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`.
-   * A `TransformTo` 指定HTML偏好設定型別的列舉值。 例如，若要呈現與Internet Explorer 5.0或更新版本的動態HTML相容的HTML表單，請指定 `TransformTo.MSDHTML`.
-   * A `com.adobe.idp.Document` 包含要與表單合併之資料的物件。 如果您不想合併資料，請傳遞空白字元 `com.adobe.idp.Document` 物件。
-   * 此 `HTMLRenderSpec` 儲存HTML執行階段選項的物件。
-   * 字串值，指定 `HTTP_USER_AGENT` 標頭值，例如 `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`.
-   * A `URLSpec` 此物件儲存轉譯HTML表單所需的URI值。
-   * A `java.util.HashMap` 儲存檔案附件的物件。 這是選用引數，您可以指定 `null` 如果您不想將檔案附加至表單。
+   * 字串值，指定表單設計名稱，包括副檔名。 如果您參照的表單設計屬於Forms應用程式的一部分，請確定您指定完整路徑，例如`Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`。
+   * 指定HTML喜好設定型別的`TransformTo`列舉值。 例如，若要呈現與Internet Explorer 5.0或更新版本的動態HTML相容的HTML表單，請指定`TransformTo.MSDHTML`。
+   * 包含要與表單合併之資料的`com.adobe.idp.Document`物件。 如果您不想合併資料，請傳遞空的`com.adobe.idp.Document`物件。
+   * 儲存HTML執行階段選項的`HTMLRenderSpec`物件。
+   * 字串值，指定`HTTP_USER_AGENT`標頭值，例如`Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`。
+   * 儲存轉譯HTML表單所需URI值的`URLSpec`物件。
+   * 儲存檔案附件的`java.util.HashMap`物件。 這是選用引數，如果您不想將檔案附加至表單，可以指定`null`。
 
-   此 `renderHTMLForm` 方法傳回 `FormsResult` 包含必須寫入使用者端Web瀏覽器的表單資料流的物件。
+   `renderHTMLForm`方法傳回`FormsResult`物件，其中包含必須寫入使用者端網頁瀏覽器的表單資料流。
 
 1. 將表單資料流寫入使用者端網頁瀏覽器
 
-   * 建立 `com.adobe.idp.Document` 物件(透過叫用 `FormsResult` 物件 `getOutputContent` 方法。
-   * 取得 `com.adobe.idp.Document` 物件(透過叫用其 `getContentType` 方法。
-   * 設定 `javax.servlet.http.HttpServletResponse` 物件的內容型別，透過叫用其 `setContentType` 方法並傳遞的內容型別 `com.adobe.idp.Document` 物件。
-   * 建立 `javax.servlet.ServletOutputStream` 用來將表單資料流寫入使用者端網頁瀏覽器的物件，方法是叫用 `javax.servlet.http.HttpServletResponse` 物件的 `getOutputStream` 方法。
-   * 建立 `java.io.InputStream` 物件(透過叫用 `com.adobe.idp.Document` 物件的 `getInputStream` 方法。
-   * 建立位元組陣列，並叫用 `InputStream` 物件的 `read` 方法，並將位元組陣列作為引數傳遞。
-   * 叫用 `javax.servlet.ServletOutputStream` 物件的 `write` 將表單資料流傳送至使用者端web瀏覽器的方法。 將位元組陣列傳遞至 `write` 方法。
+   * 呼叫`FormsResult`物件的`getOutputContent`方法，以建立`com.adobe.idp.Document`物件。
+   * 透過叫用物件的`getContentType`方法，取得`com.adobe.idp.Document`物件的內容型別。
+   * 透過叫用其`setContentType`方法並傳遞`com.adobe.idp.Document`物件的內容型別來設定`javax.servlet.http.HttpServletResponse`物件的內容型別。
+   * 呼叫`javax.servlet.http.HttpServletResponse`物件的`getOutputStream`方法，建立用來將表單資料流寫入使用者端網頁瀏覽器的`javax.servlet.ServletOutputStream`物件。
+   * 呼叫`com.adobe.idp.Document`物件的`getInputStream`方法，以建立`java.io.InputStream`物件。
+   * 呼叫`InputStream`物件的`read`方法，並將位元組陣列作為引數傳遞，以建立位元組陣列並以表單資料串流填入。
+   * 叫用`javax.servlet.ServletOutputStream`物件的`write`方法，將表單資料流傳送至使用者端網頁瀏覽器。 將位元組陣列傳遞至`write`方法。
 
 **另請參閱**
 
@@ -274,48 +274,48 @@ Forms服務轉譯HTML表單時，會傳回您必須寫入使用者端網頁瀏�
 
 1. 建立Forms Java API物件
 
-   建立 `FormsService` 物件並設定驗證值。
+   建立`FormsService`物件並設定驗證值。
 
 1. 參考自訂fscmenu XML檔案
 
-   * 建立 `HTMLRenderSpec` 物件（使用其建構函式）。
-   * 若要使用工具列呈現HTML表單，請叫用 `HTMLRenderSpec` 物件的 `setHTMLToolbar` 方法並傳遞 `HTMLToolbar` 列舉值。 例如，若要顯示垂直HTML工具列，請傳遞 `HTMLToolbar.Vertical`.
-   * 透過叫用 `HTMLRenderSpec` 物件的 `setToolbarURI` 方法並傳遞字串值，該值會指定XML檔案的URI位置。
-   * 如果適用，請叫用 `HTMLRenderSpec` 物件的 `setLocale` 方法並傳遞字串值，該值會指定地區設定值。 預設值為英文。
+   * 使用物件的建構函式建立`HTMLRenderSpec`物件。
+   * 若要使用工具列轉譯HTML表單，請叫用`HTMLRenderSpec`物件的`setHTMLToolbar`方法，並傳遞`HTMLToolbar`列舉值。 例如，若要顯示垂直HTML工具列，請傳遞`HTMLToolbar.Vertical`。
+   * 透過叫用`HTMLRenderSpec`物件的`setToolbarURI`方法並傳遞指定XML檔案URI位置的字串值，來指定fscmenu XML檔案的位置。
+   * 如果適用，請叫用`HTMLRenderSpec`物件的`setLocale`方法，並傳遞指定地區設定值的字串值來設定地區設定值。 預設值為英文。
 
    >[!NOTE]
    >
-   >與此區段關聯的「快速入門」會將此值設為 `fr_FR`*.*
+   >與此區段關聯的快速入門將此值設定為&#x200B;`fr_FR`*.*
 
 1. 呈現HTML表單
 
-   叫用 `FormsService` 物件的 `renderHTMLForm` 方法並傳遞下列值：
+   叫用`FormsService`物件的`renderHTMLForm`方法，並傳遞下列值：
 
-   * 字串值，指定表單設計名稱，包括副檔名。 如果您參照的表單設計屬於Forms應用程式的一部分，請務必指定完整路徑，例如 `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`.
-   * A `TransformTo` 指定HTML偏好設定型別的列舉值。 例如，若要呈現與Internet Explorer 5.0或更新版本的動態HTML相容的HTML表單，請指定 `TransformTo.MSDHTML`.
-   * A `BLOB` 包含要與表單合併之資料的物件。 如果您不想合併資料，請傳遞 `null`.
-   * 此 `HTMLRenderSpec` 儲存HTML執行階段選項的物件。
-   * 字串值，指定 `HTTP_USER_AGENT` 標頭值，例如 `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322`)。 如果您不想設定此值，可以傳遞空字串。
-   * A `URLSpec` 此物件儲存轉譯HTML表單所需的URI值。
-   * A `java.util.HashMap` 儲存檔案附件的物件。 此引數為選用引數，您可以指定 `null` 如果您不打算將檔案附加至表單。
-   * 空白 `com.adobe.idp.services.holders.BLOBHolder` 由填入的物件 `renderHTMLForm` 方法。 此引數值會儲存演算後的表單。
-   * 空白 `com.adobe.idp.services.holders.BLOBHolder` 由填入的物件 `renderHTMLForm` 方法。 此引數會儲存輸出XML資料。
-   * 空白 `javax.xml.rpc.holders.LongHolder` 由填入的物件 `renderHTMLForm` 方法。 此引數會儲存表單中的頁數。
-   * 空白 `javax.xml.rpc.holders.StringHolder` 由填入的物件 `renderHTMLForm` 方法。 此引數會儲存地區設定值。
-   * 空白 `javax.xml.rpc.holders.StringHolder` 由填入的物件 `renderHTMLForm` 方法。 此引數會儲存所使用的HTML演算值。
-   * 空白 `com.adobe.idp.services.holders.FormsResultHolder` 將包含此作業結果的物件。
+   * 字串值，指定表單設計名稱，包括副檔名。 如果您參照的表單設計屬於Forms應用程式的一部分，請確定您指定完整路徑，例如`Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`。
+   * 指定HTML喜好設定型別的`TransformTo`列舉值。 例如，若要呈現與Internet Explorer 5.0或更新版本的動態HTML相容的HTML表單，請指定`TransformTo.MSDHTML`。
+   * 包含要與表單合併之資料的`BLOB`物件。 如果您不想合併資料，請傳遞`null`。
+   * 儲存HTML執行階段選項的`HTMLRenderSpec`物件。
+   * 字串值，指定`HTTP_USER_AGENT`標頭值，例如`Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322`。 如果您不想設定此值，可以傳遞空字串。
+   * 儲存轉譯HTML表單所需URI值的`URLSpec`物件。
+   * 儲存檔案附件的`java.util.HashMap`物件。 此引數為選用引數，如果您不打算將檔案附加至表單，則可指定`null`。
+   * 由`renderHTMLForm`方法填入的空白`com.adobe.idp.services.holders.BLOBHolder`物件。 此引數值會儲存演算後的表單。
+   * 由`renderHTMLForm`方法填入的空白`com.adobe.idp.services.holders.BLOBHolder`物件。 此引數會儲存輸出XML資料。
+   * 由`renderHTMLForm`方法填入的空白`javax.xml.rpc.holders.LongHolder`物件。 此引數會儲存表單中的頁數。
+   * 由`renderHTMLForm`方法填入的空白`javax.xml.rpc.holders.StringHolder`物件。 此引數會儲存地區設定值。
+   * 由`renderHTMLForm`方法填入的空白`javax.xml.rpc.holders.StringHolder`物件。 此引數會儲存所使用的HTML演算值。
+   * 包含此作業結果的空白`com.adobe.idp.services.holders.FormsResultHolder`物件。
 
-   此 `renderHTMLForm` 方法填入 `com.adobe.idp.services.holders.FormsResultHolder` 以表單資料流傳遞作為最後一個引數值的物件，必須寫入使用者端Web瀏覽器。
+   `renderHTMLForm`方法會將必須寫入使用者端網頁瀏覽器的表單資料流，填入作為最後一個引數值傳遞的`com.adobe.idp.services.holders.FormsResultHolder`物件。
 
 1. 將表單資料流寫入使用者端網頁瀏覽器
 
-   * 建立 `FormResult` 物件，方法是取得 `com.adobe.idp.services.holders.FormsResultHolder` 物件的 `value` 資料成員。
-   * 建立 `BLOB` 包含表單資料的物件(透過叫用 `FormsResult` 物件的 `getOutputContent` 方法。
-   * 取得 `BLOB` 物件(透過叫用其 `getContentType` 方法。
-   * 設定 `javax.servlet.http.HttpServletResponse` 物件的內容型別，透過叫用其 `setContentType` 方法並傳遞的內容型別 `BLOB` 物件。
-   * 建立 `javax.servlet.ServletOutputStream` 用來將表單資料流寫入使用者端網頁瀏覽器的物件，方法是叫用 `javax.servlet.http.HttpServletResponse` 物件的 `getOutputStream` 方法。
-   * 建立位元組陣列，並透過叫用 `BLOB` 物件的 `getBinaryData` 方法。 此任務會指派 `FormsResult` 物件至位元組陣列。
-   * 叫用 `javax.servlet.http.HttpServletResponse` 物件的 `write` 將表單資料流傳送至使用者端web瀏覽器的方法。 將位元組陣列傳遞至 `write` 方法。
+   * 取得`com.adobe.idp.services.holders.FormsResultHolder`物件之`value`資料成員的值，以建立`FormResult`物件。
+   * 呼叫`FormsResult`物件的`getOutputContent`方法，建立包含表單資料的`BLOB`物件。
+   * 透過叫用物件的`getContentType`方法，取得`BLOB`物件的內容型別。
+   * 透過叫用其`setContentType`方法並傳遞`BLOB`物件的內容型別來設定`javax.servlet.http.HttpServletResponse`物件的內容型別。
+   * 呼叫`javax.servlet.http.HttpServletResponse`物件的`getOutputStream`方法，建立用來將表單資料流寫入使用者端網頁瀏覽器的`javax.servlet.ServletOutputStream`物件。
+   * 建立位元組陣列，並透過叫用`BLOB`物件的`getBinaryData`方法來填入該陣列。 此工作會將`FormsResult`物件的內容指派給位元組陣列。
+   * 叫用`javax.servlet.http.HttpServletResponse`物件的`write`方法，將表單資料流傳送至使用者端網頁瀏覽器。 將位元組陣列傳遞至`write`方法。
 
 **另請參閱**
 

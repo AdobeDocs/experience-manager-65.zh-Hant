@@ -25,8 +25,8 @@ Adobe Experience Manager提供使用者介面，可搜尋和找出儲存在AEM�
 ## 開始之前 {#before-you-start}
 
 * 安裝及設定AEM Forms Document Security。
-* 將套裝程式sun.util.calendar新增至 **還原序列化防火牆設定。** 此設定列於 `https://'[server]:[port]'/system/console/configMgr`.
-* 確認所有AEM套件組合皆已啟動且執行中。 這些套件組合列於 `https://'[server]:[port]'/system/console/bundles`. 如果所有套件組合並非作用中，請稍候片刻，然後在片刻後檢查套件組合的狀態。
+* 將套件sun.util.calendar新增至&#x200B;**還原序列化防火牆設定的允許清單。**&#x200B;組態列在`https://'[server]:[port]'/system/console/configMgr`。
+* 確認所有AEM套件組合皆已啟動且執行中。 這些組合列在`https://'[server]:[port]'/system/console/bundles`。 如果所有套件組合並非作用中，請稍候片刻，然後在片刻後檢查套件組合的狀態。
 
 ## 在AEM Forms工作流程中建立安全連線(JEE上的AEM Forms) {#establish-a-secure-connection-within-aem-forms-workflow-aem-forms-on-jee}
 
@@ -37,29 +37,29 @@ Adobe Experience Manager提供使用者介面，可搜尋和找出儲存在AEM�
 
 ### 使用AEM Forms在JEE管理員憑證上設定AEM Forms使用者端SDK套件組合 {#configure-aem-forms-client-sdk-bundle-with-aem-forms-on-jee-admin-credentials}
 
-1. 開啟AEM設定管理員，並以管理員身分登入。 預設URL為https://&lt;servername>：&lt;port>/lc/system/console/configMgr。
+1. 開啟AEM設定管理員，並以管理員身分登入。 預設URL為https://&lt;serverName>：&lt;port>/lc/system/console/configMgr。
 1. 搜尋並開啟AEM Forms使用者端SDK套件組合。 指定下列屬性的值：
 
-   * **伺服器URL：** 指定JEE伺服器上AEM Forms的HTTP URL。 若要啟用透過https的通訊，請使用-Djavax.net.ssl.trustStore=重新啟動JEE伺服器上的AEM Forms&lt;path of=&quot;&quot; aem=&quot;&quot; forms=&quot;&quot; on=&quot;&quot; jee=&quot;&quot; keystore=&quot;&quot; file=&quot;&quot;> 引數。
-   * **服務名稱**：將RightsManagementService新增至指定服務的清單。
-   * **使用者名稱：** 指定JEE伺服器上AEM Forms的使用者名稱，以用來起始從JEE伺服器AEM Forms的呼叫。 指定的帳戶必須有權在JEE伺服器上的AEM Forms上叫用檔案服務。
-   * **密碼**：指定使用者名稱欄位中提及的JEE帳戶AEM Forms密碼。
+   * **伺服器URL：**&#x200B;指定JEE伺服器上AEM Forms的HTTP URL。 若要啟用透過https的通訊，請使用-Djavax.net.ssl.trustStore=&lt;path of AEM Forms on JEE keystore file>引數，重新啟動JEE伺服器上的AEM Forms。
+   * **服務名稱**：將RightsManagementService新增至指定的服務清單。
+   * **使用者名稱：**&#x200B;指定JEE伺服器上AEM Forms帳戶的使用者名稱，以用來起始從JEE伺服器AEM Forms的呼叫。 指定的帳戶必須有權在JEE伺服器上的AEM Forms上叫用檔案服務。
+   * **密碼**：指定使用者名稱欄位中提及的AEM Forms on JEE帳戶密碼。
 
    按一下「**儲存**」。AEM已啟用來搜尋受Document Security保護的PDF和Microsoft Office檔案。
 
 ### 使用相互驗證設定AEM Forms使用者端SDK套件組合 {#configure-aem-forms-client-sdk-bundle-using-mutual-authentication}
 
-1. 啟用JEE上AEM Forms的相互驗證。 如需詳細資訊，請參閱 [CAC和相互驗證](https://helpx.adobe.com/livecycle/kb/cac-mutual-authentication.html).
-1. 開啟AEM設定管理員，並以管理員身分登入。 預設URL為https://&lt;servername>：&lt;port>/lc/system/console/configMgr。
+1. 啟用JEE上AEM Forms的相互驗證。 如需詳細資訊，請參閱[CAC和相互驗證](https://helpx.adobe.com/livecycle/kb/cac-mutual-authentication.html)。
+1. 開啟AEM設定管理員，並以管理員身分登入。 預設URL為https://&lt;serverName>：&lt;port>/lc/system/console/configMgr。
 1. 搜尋並開啟AEM Forms使用者端SDK套件組合。 指定下列屬性的值：
 
-   * **伺服器URL：** 指定JEE伺服器上AEM Forms的HTTPS URL。 若要啟用透過https的通訊，請使用-Djavax.net.ssl.trustStore=重新啟動JEE伺服器上的AEM Forms&lt;path of=&quot;&quot; aem=&quot;&quot; forms=&quot;&quot; on=&quot;&quot; jee=&quot;&quot; keystore=&quot;&quot; file=&quot;&quot;> 引數。
+   * **伺服器URL：**&#x200B;指定JEE伺服器上AEM Forms的HTTPS URL。 若要啟用透過https的通訊，請使用-Djavax.net.ssl.trustStore=&lt;path of AEM Forms on JEE keystore file>引數，重新啟動JEE伺服器上的AEM Forms。
    * **啟用雙向SSL**：啟用「啟用雙向SSL」選項。
    * **KeyStore檔案URL**：指定Keystore檔案的URL。
-   * **TrustStore檔案網址**：指定信任庫檔案的URL。
-   * **KeyStore密碼**：指定Keystore檔案的密碼。
-   * **TrustStPassword**：指定Truststore檔案的密碼。
-   * **服務名稱**：將RightsManagementService新增至指定服務的清單。
+   * **TrustStore檔案URL**：指定truststore檔案的URL。
+   * **KeyStore密碼**：指定金鑰存放區檔案的密碼。
+   * **TrustStorePassword**：指定truststore檔案的密碼。
+   * **服務名稱**：將RightsManagementService新增至指定的服務清單。
 
    按一下「**儲存**」。AEM已啟用以搜尋受Document Security保護的PDF和Microsoft Office檔案
 

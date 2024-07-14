@@ -32,11 +32,11 @@ ht-degree: 1%
 
 當您被指派工作項目時(例如「核准內 **容**」)，會出現各種警報和/或通知：
 
-* 您的 [通知](/help/sites-authoring/inbox.md) 指示器（工具列）將會增加：
+* 您的[通知](/help/sites-authoring/inbox.md)指標（工具列）將會增加：
 
   ![通知指示器](do-not-localize/wf-57.png)
 
-* 此專案將列在您的通知中 [收件匣](/help/sites-authoring/inbox.md)：
+* 此專案將列在您的通知[收件匣](/help/sites-authoring/inbox.md)中：
 
   ![wf-58](assets/wf-58.png)
 
@@ -53,12 +53,12 @@ ht-degree: 1%
 
   >[!NOTE]
   >
-  >只有具有工作流程許可權的使用者才能看到狀態列；例如， `workflow-users` 群組。
+  >只有具有工作流程許可權的使用者才能看到狀態列；例如，`workflow-users`群組的成員。
   >
   >
   >當目前使用者直接參與工作流程的目前步驟時，會顯示動作。
 
-* 時間 **時間表** 會針對資源開啟，且會顯示工作流程步驟。 當您按一下警示橫幅時，畫面也會顯示可用的動作：
+* 當資源的&#x200B;**時間表**&#x200B;開啟時，會顯示工作流程步驟。 當您按一下警示橫幅時，畫面也會顯示可用的動作：
 
   ![screen-shot_2019-03-05at120453](assets/screen-shot_2019-03-05at120453.png)
 
@@ -75,37 +75,37 @@ ht-degree: 1%
 
 * [收件匣](#completing-a-participant-step-inbox)
 * [頁面編輯器](#completing-a-participant-step-page-editor)
-* [時間軸](#completing-a-participant-step-timeline)
-* 當 [開啟工作流程專案以檢視詳細資料](#opening-a-workflow-item-to-view-details-and-take-actions).
+* [時間表](#completing-a-participant-step-timeline)
+* [開啟工作流程專案以檢視詳細資料](#opening-a-workflow-item-to-view-details-and-take-actions)時。
 
 #### 完成參與者步驟 — 收件匣 {#completing-a-participant-step-inbox}
 
 請使用下列步驟完成工作專案：
 
-1. 開啟 **[AEM收件匣](/help/sites-authoring/inbox.md)**.
+1. 開啟&#x200B;**[AEM收件匣](/help/sites-authoring/inbox.md)**。
 1. 選取您要對其執行動作的工作流程專案（按一下縮圖）。
-1. 選取 **完成** 工具列中的。
-1. 此 **完成工作專案** 對話方塊開啟。 選取 **下一步** 從下拉式選擇器新增 **註解** 如有需要。
-1. 使用 **確定** 完成步驟(或 **取消** 以中止動作)。
+1. 從工具列選取&#x200B;**完成**。
+1. **完成工作專案**&#x200B;對話方塊開啟。 從下拉式選取器中選取&#x200B;**下一步**，並視需要新增&#x200B;**註解**。
+1. 使用&#x200B;**確定**&#x200B;完成步驟（或使用&#x200B;**取消**&#x200B;中止動作）。
 
 #### 完成參與者步驟 — 頁面編輯器 {#completing-a-participant-step-page-editor}
 
 請使用下列步驟完成工作專案：
 
-1. 開啟 [編輯頁面](/help/sites-authoring/managing-pages.md#opening-a-page-for-editing).
-1. 選取 **完成** 從頂部的狀態列開啟。
-1. 此 **完成工作專案** 對話方塊開啟。 選取 **下一步** 從下拉式選擇器新增 **註解** 如有需要。
-1. 使用 **確定** 完成步驟(或 **取消** 以中止動作)。
+1. 開啟[頁面進行編輯](/help/sites-authoring/managing-pages.md#opening-a-page-for-editing)。
+1. 從頂端的狀態列選取&#x200B;**完成**。
+1. **完成工作專案**&#x200B;對話方塊開啟。 從下拉式選取器中選取&#x200B;**下一步**，並視需要新增&#x200B;**註解**。
+1. 使用&#x200B;**確定**&#x200B;完成步驟（或使用&#x200B;**取消**&#x200B;中止動作）。
 
 #### 完成參與者步驟 — 時間表 {#completing-a-participant-step-timeline}
 
 您也可以使用時間表來完成並推進步驟：
 
-1. 選取所需頁面並開啟 **時間表** (或開啟 **時間表** 並選取頁面)：
+1. 選取必要頁面並開啟&#x200B;**時間表** （或開啟&#x200B;**時間表**&#x200B;並選取頁面）：
 
    ![screen-shot_2019-03-05at120744](assets/screen-shot_2019-03-05at120744.png)
 
-1. 按一下警報橫幅以顯示可用動作。 選取 **前進**：
+1. 按一下警報橫幅以顯示可用動作。 選取&#x200B;**前進**：
 
    ![screen-shot_2019-03-05at120453-1](assets/screen-shot_2019-03-05at120453-1.png)
 
@@ -113,7 +113,7 @@ ht-degree: 1%
 
    ![screen-shot_2019-03-05at120905](assets/screen-shot_2019-03-05at120905.png)
 
-1. 選取 **前進** 以確認動作。
+1. 選取&#x200B;**前進**&#x200B;以確認動作。
 
 ### 委派參與者步驟 {#delegating-a-participant-step}
 
@@ -134,34 +134,34 @@ ht-degree: 1%
 
 * [收件匣](#delegating-a-participant-step-inbox)
 * [頁面編輯器](#delegating-a-participant-step-page-editor)
-* [時間軸](#delegating-a-participant-step-timeline)
-* 當 [開啟工作流程專案以檢視詳細資料](#opening-a-workflow-item-to-view-details-and-take-actions).
+* [時間表](#delegating-a-participant-step-timeline)
+* [開啟工作流程專案以檢視詳細資料](#opening-a-workflow-item-to-view-details-and-take-actions)時。
 
 #### 委派參與者步驟 — 收件匣 {#delegating-a-participant-step-inbox}
 
 請使用下列步驟委派工作專案：
 
-1. 開啟 **[AEM收件匣](/help/sites-authoring/inbox.md)**.
+1. 開啟&#x200B;**[AEM收件匣](/help/sites-authoring/inbox.md)**。
 1. 選取您要對其執行動作的工作流程專案（按一下縮圖）。
-1. 選取 **委派** 工具列中的。
-1. 對話方塊開啟。 指定 **使用者** 從下拉式選取器（也可以是群組）中新增 **註解** 如有需要。
-1. 使用 **確定** 完成步驟(或 **取消** 以中止動作)。
+1. 從工具列選取&#x200B;**委派**。
+1. 對話方塊開啟。 從下拉式選取器中指定&#x200B;**使用者** （也可以是群組），並視需要新增&#x200B;**註解**。
+1. 使用&#x200B;**確定**&#x200B;完成步驟（或使用&#x200B;**取消**&#x200B;中止動作）。
 
 #### 委派參與者步驟 — 頁面編輯器 {#delegating-a-participant-step-page-editor}
 
 請使用下列步驟委派工作專案：
 
-1. 開啟 [編輯頁面](/help/sites-authoring/managing-pages.md#opening-a-page-for-editing).
-1. 選取 **委派** 從頂部的狀態列開啟。
-1. 對話方塊開啟。 指定 **使用者** 從下拉式選取器（也可以是群組）中新增 **註解** 如有需要。
-1. 使用 **確定** 完成步驟(或 **取消** 以中止動作)。
+1. 開啟[頁面進行編輯](/help/sites-authoring/managing-pages.md#opening-a-page-for-editing)。
+1. 從頂端的狀態列選取&#x200B;**委派**。
+1. 對話方塊開啟。 從下拉式選取器中指定&#x200B;**使用者** （也可以是群組），並視需要新增&#x200B;**註解**。
+1. 使用&#x200B;**確定**&#x200B;完成步驟（或使用&#x200B;**取消**&#x200B;中止動作）。
 
 #### 委派參與者步驟 — 時間表 {#delegating-a-participant-step-timeline}
 
 您也可以使用時間表來委派及/或指派步驟：
 
-1. 選取所需頁面並開啟 **時間表** (或開啟 **時間表** 並選取頁面)。
-1. 按一下警報橫幅以顯示可用動作。 選取 **變更被指定者**：
+1. 選取必要頁面，然後開啟&#x200B;**時間表** （或開啟&#x200B;**時間表**&#x200B;並選取頁面）。
+1. 按一下警報橫幅以顯示可用動作。 選取&#x200B;**變更被指定者**：
 
    ![screen-shot_2019-03-05at120453-2](assets/screen-shot_2019-03-05at120453-2.png)
 
@@ -169,7 +169,7 @@ ht-degree: 1%
 
    ![screen-shot_2019-03-05at121025](assets/screen-shot_2019-03-05at121025.png)
 
-1. 選取 **指派** 以確認動作。
+1. 選取&#x200B;**指派**&#x200B;以確認動作。
 
 ### 對參與者步驟執行後退 {#performing-step-back-on-a-participant-step}
 
@@ -184,35 +184,35 @@ ht-degree: 1%
 
 * [收件匣](#performing-step-back-on-a-participant-step-inbox)
 * [頁面編輯器](#performing-step-back-on-a-participant-step-page-editor)
-* [時間軸](#performing-step-back-on-a-participant-step-timeline)
-* 當 [開啟工作流程專案以檢視詳細資料](#opening-a-workflow-item-to-view-details-and-take-actions).
+* [時間表](#performing-step-back-on-a-participant-step-timeline)
+* [開啟工作流程專案以檢視詳細資料](#opening-a-workflow-item-to-view-details-and-take-actions)時。
 
 #### 對參與者步驟執行後退 — 收件匣 {#performing-step-back-on-a-participant-step-inbox}
 
 請使用下列步驟來後退：
 
-1. 開啟 **[AEM收件匣](/help/sites-authoring/inbox.md)**.
+1. 開啟&#x200B;**[AEM收件匣](/help/sites-authoring/inbox.md)**。
 1. 選取您要對其執行動作的工作流程專案（按一下縮圖）。
-1. 選取 **後退** 以開啟對話方塊。
+1. 選取&#x200B;**後退**&#x200B;以開啟對話方塊。
 
-1. 指定 **上一步** 並新增 **註解** 如有需要。
-1. 使用 **確定** 完成步驟(或 **取消** 以中止動作)。
+1. 指定&#x200B;**上一步**，並視需要新增&#x200B;**註解**。
+1. 使用&#x200B;**確定**&#x200B;完成步驟（或使用&#x200B;**取消**&#x200B;中止動作）。
 
 #### 對參與者步驟執行後退 — 頁面編輯器 {#performing-step-back-on-a-participant-step-page-editor}
 
 請使用下列步驟來後退：
 
-1. 開啟 [編輯頁面](/help/sites-authoring/managing-pages.md#opening-a-page-for-editing).
-1. 選取 **後退** 從頂部的狀態列開啟。
-1. 指定 **上一步** 並新增 **註解** 如有需要。
-1. 使用 **確定** 完成步驟(或 **取消** 以中止動作)。
+1. 開啟[頁面進行編輯](/help/sites-authoring/managing-pages.md#opening-a-page-for-editing)。
+1. 從頂端的狀態列選取&#x200B;**後退**。
+1. 指定&#x200B;**上一步**，並視需要新增&#x200B;**註解**。
+1. 使用&#x200B;**確定**&#x200B;完成步驟（或使用&#x200B;**取消**&#x200B;中止動作）。
 
 #### 對參與者步驟執行後退 — 時間表 {#performing-step-back-on-a-participant-step-timeline}
 
 您也可以使用時間軸來回滾（回退）至上一步：
 
-1. 選取所需頁面並開啟 **時間表** (或開啟 **時間表** 並選取頁面)。
-1. 按一下警報橫幅以顯示可用動作。 選取 **回覆**：
+1. 選取必要頁面，然後開啟&#x200B;**時間表** （或開啟&#x200B;**時間表**&#x200B;並選取頁面）。
+1. 按一下警報橫幅以顯示可用動作。 選取&#x200B;**回覆**：
 
    ![screen-shot_2019-03-05at121131](assets/screen-shot_2019-03-05at121131.png)
 
@@ -220,7 +220,7 @@ ht-degree: 1%
 
    ![screen-shot_2019-03-05at121158](assets/screen-shot_2019-03-05at121158.png)
 
-1. 選取 **回覆** 以確認動作。
+1. 選取&#x200B;**回覆**&#x200B;以確認動作。
 
 ### 開啟工作流程專案以檢視詳細資訊（並執行動作） {#opening-a-workflow-item-to-view-details-and-take-actions}
 
@@ -228,19 +228,19 @@ ht-degree: 1%
 
 工作流程詳細資訊會顯示在標籤中，而工具列中有適當的動作：
 
-* **工作專案** 標籤：
+* **工作專案**&#x200B;索引標籤：
 
   ![wf-72](assets/wf-72.png)
 
-* **工作流程資訊** 標籤：
+* **工作流程資訊**&#x200B;標籤：
 
   ![wf-73](assets/wf-73.png)
 
-  如果 [工作流程階段](/help/sites-developing/workflows.md#workflow-stages) 已針對模型配置，您可以根據以下內容檢視進度：
+  如果已經為模型設定了[工作流程階段](/help/sites-developing/workflows.md#workflow-stages)，您可以根據下列專案檢視進度：
 
   ![wf-107](assets/wf-107.png)
 
-* **評論** 標籤：
+* **評論**&#x200B;標籤：
 
   ![wf-75](assets/wf-75.png)
 
@@ -253,22 +253,22 @@ ht-degree: 1%
 
 若要開啟工作流程專案並檢視詳細資訊，請執行下列動作：
 
-1. 開啟 **[AEM收件匣](/help/sites-authoring/inbox.md)**.
+1. 開啟&#x200B;**[AEM收件匣](/help/sites-authoring/inbox.md)**。
 1. 選取您要對其執行動作的工作流程專案（按一下縮圖）。
-1. 選取 **開啟** 以開啟資訊標籤。
+1. 選取&#x200B;**開啟**&#x200B;以開啟資訊標籤。
 
-1. 如有必要，請選取適當的動作，提供任何詳細資訊，然後確認 **確定** (或 **取消**)。
-1. 使用 **儲存** 或 **取消** 以結束。
+1. 如有必要，請選取適當的動作，提供任何詳細資料，並透過&#x200B;**確定** （或&#x200B;**取消**）確認。
+1. 使用&#x200B;**儲存**&#x200B;或&#x200B;**取消**&#x200B;結束。
 
 #### 開啟工作流程詳細資料 — 頁面編輯器 {#opening-workflow-details-page-editor}
 
 若要開啟工作流程專案並檢視詳細資訊，請執行下列動作：
 
-1. 開啟 [編輯頁面](/help/sites-authoring/managing-pages.md#opening-a-page-for-editing).
-1. 選取 **檢視詳細資料** 以開啟資訊標籤。
+1. 開啟[頁面進行編輯](/help/sites-authoring/managing-pages.md#opening-a-page-for-editing)。
+1. 從狀態列選取&#x200B;**檢視詳細資料**&#x200B;以開啟資訊標籤。
 
-1. 如有必要，請選取適當的動作，提供任何詳細資訊，然後確認 **確定** (或 **取消**)。
-1. 使用 **儲存** 或 **取消** 以結束。
+1. 如有必要，請選取適當的動作，提供任何詳細資料，並透過&#x200B;**確定** （或&#x200B;**取消**）確認。
+1. 使用&#x200B;**儲存**&#x200B;或&#x200B;**取消**&#x200B;結束。
 
 ### 檢視工作流程裝載（多個資源） {#viewing-the-workflow-payload-multiple-resources}
 
@@ -276,11 +276,11 @@ ht-degree: 1%
 
 若要檢視工作流程例項的裝載和資源：
 
-1. 開啟 **[AEM收件匣](/help/sites-authoring/inbox.md)**.
+1. 開啟&#x200B;**[AEM收件匣](/help/sites-authoring/inbox.md)**。
 1. 選取您要對其執行動作的工作流程專案（按一下縮圖）。
-1. 選取 **檢視裝載** 以開啟對話方塊。
+1. 從工具列選取&#x200B;**檢視裝載**&#x200B;以開啟對話方塊。
 
-   由於Workflow封裝只是存放庫內路徑的指標集合，因此您可以在此處新增/移除/修改專案，以調整Workflow封裝所參照的專案。 使用 **資源定義** 元件以新增專案。
+   由於Workflow封裝只是存放庫內路徑的指標集合，因此您可以在此處新增/移除/修改專案，以調整Workflow封裝所參照的專案。 使用&#x200B;**資源定義**&#x200B;元件來新增專案。
 
    ![wf-78](assets/wf-78.png)
 

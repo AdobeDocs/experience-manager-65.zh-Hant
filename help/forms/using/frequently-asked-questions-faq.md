@@ -17,4 +17,4 @@ ht-degree: 0%
 
 1. 中的條碼和簽名欄位為何沒有出現在我的HTML5表單中？
 
-   答案：條碼和簽名欄位在HTML或行動情況中並不相關。 這些欄位會顯示為非互動區域。 不過，AEM Forms Designer提供新的簽名草寫欄位，可用來取代簽名欄位。 您也可以新增 [自訂Widget](../../forms/using/custom-widgets.md) 並加以整合。
+   答案：條碼和簽名欄位在HTML或行動情況中並不相關。 這些欄位會顯示為非互動區域。 不過，AEM Forms Designer提供新的簽名手寫欄位，可用來取代簽名欄位。 您也可以新增條碼的[自訂Widget](../../forms/using/custom-widgets.md)並加以整合。

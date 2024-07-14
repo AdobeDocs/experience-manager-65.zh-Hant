@@ -1,6 +1,6 @@
 ---
 title: AEM Forms工作區中不提供Flex工作區功能
-description: AEM Forms工作區在Flex工作區之外進行創新。 閱讀特性和功能的差異。
+description: AEM Forms工作區在Flex型Workspace之外進行創新。 閱讀特性和功能的差異。
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS

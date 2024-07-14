@@ -24,15 +24,15 @@ ht-degree: 0%
 
 Forms Portal可減少管理開銷和生產延遲。 它為網頁開發人員配備元件，以便在使用Forms (AEM)編寫的網站上建立和自訂Adobe Experience Manager入口網站。
 
-如需Forms入口網站及其功能的詳細資訊，請參閱 [在入口網站上發佈表單簡介](/help/forms/using/introduction-publishing-forms.md).
+如需Forms入口網站及其功能的詳細資訊，請參閱[在入口網站上發佈表單簡介](/help/forms/using/introduction-publishing-forms.md)。
 
 ## Forms Portal快速入門 {#getting-started-with-forms-portal}
 
-導覽至已發佈的Forms Portal頁面。 如需建立Forms入口網站頁面的詳細資訊，請參閱 [建立Forms入口網站頁面](../../forms/using/creating-form-portal-page.md).
+導覽至已發佈的Forms Portal頁面。 如需建立Forms入口網站頁面的詳細資訊，請參閱[建立Forms入口網站頁面](../../forms/using/creating-form-portal-page.md)。
 
 Forms Portal的搜尋與清單元件會顯示AEM伺服器的Publish執行個體上可用的表單。 此清單包含在編寫Forms入口網站頁面時，篩選條件中定義的所有表單或表單。 Forms入口網站頁面看起來類似於，如下圖所示：
 
-![範例表單入口網站頁面 ](assets/forms-portal-page.png)
+![範例表單入口網站頁面](assets/forms-portal-page.png)
 
 Forms Portal頁面範例
 
@@ -75,7 +75,7 @@ Forms Portal頁面範例
 
 #### 草稿及提交 {#drafts-and-submission}
 
-使用者可選擇按一下「 」，儲存表單草稿 **儲存**. 這可讓使用者在提交表單之前的一段時間內處理表單。
+使用者可以按一下&#x200B;**儲存**，選擇儲存表單草稿。 這可讓使用者在提交表單之前的一段時間內處理表單。
 
 在表單中填入的資料（包括附件）會儲存為伺服器上的草稿。 表單的草稿可以儲存任意次數。 已儲存的表單會顯示在頁面「草稿與提交」元件的「草稿」標籤中。
 
@@ -83,7 +83,7 @@ Forms Portal頁面範例
 
 >[!NOTE]
 >
->只有當最適化表單的提交動作設定為Forms Portal提交動作時，提交的表單才會顯示在已提交的Forms標籤中。 如需有關提交動作的詳細資訊，請參閱 [設定提交動作](../../forms/using/configuring-submit-actions.md).
+>只有當最適化表單的提交動作設定為Forms Portal提交動作時，提交的表單才會顯示在已提交的Forms標籤中。 如需提交動作的詳細資訊，請參閱[設定提交動作](../../forms/using/configuring-submit-actions.md)。
 
 ![草稿和提交元件](assets/draft-submission.png)
 
@@ -93,8 +93,8 @@ Forms Portal頁面範例
 
 有些表格您必須經常填寫和提交。 例如，每年都會提交個人報稅表。 在這種情況下，雖然有些資訊會在您每次填寫表單時變更，但大部分像是個人和家庭詳細資料不會變更。 不過，您仍須從頭開始再次填寫整個表單。
 
-AEM Forms可協助最佳化表單填寫體驗，並大幅縮短再次填寫和提交表單的時間。 一般使用者可使用提交的表單中的資料來開始新表單。 此功能內建於 [草稿與提交元件](../../forms/using/draft-submission-component.md). 當您將「草稿和提交」元件新增到Forms Portal頁面並發佈時，一般使用者會在已提交的Forms和「草稿Forms」標籤中看到一個選項。 選項可讓您使用已提交表單中的資料開始新表單。 下圖會醒目提示該選項。
+AEM Forms可協助最佳化表單填寫體驗，並大幅縮短再次填寫和提交表單的時間。 一般使用者可使用提交的表單中的資料來開始新表單。 此功能內建在[草稿和提交元件](../../forms/using/draft-submission-component.md)中。 當您將「草稿和提交」元件新增到Forms Portal頁面並發佈時，一般使用者會在已提交的Forms和「草稿Forms」標籤中看到一個選項。 選項可讓您使用已提交表單中的資料開始新表單。 下圖會醒目提示該選項。
 
-![開始新表單](assets/start-a-new-form.png)
+![開始 — 新表單](assets/start-a-new-form.png)
 
 當您按一下按鈕以啟動新表單時，它會開啟一個新表單，其中包含來自相應提交表單的資料。 您現在可以根據需要檢閱和更新資訊，並提交表單。

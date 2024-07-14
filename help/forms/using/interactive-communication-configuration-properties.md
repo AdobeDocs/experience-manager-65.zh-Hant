@@ -19,9 +19,9 @@ ht-degree: 6%
 
 # 互動式通訊設定屬性{#interactive-communications-configuration-properties}
 
-互動式通訊包含安裝後自動設定的屬性 [AEM Forms附加元件](../../forms/using/installing-configuring-aem-forms-osgi.md) 封裝。 互動式通訊作者可使用下列工具來編輯這些預設設定屬性： **Adobe Experience Manager Web主控台設定** 頁面。
+互動式通訊包含安裝[AEM Forms附加元件](../../forms/using/installing-configuring-aem-forms-osgi.md)套件後自動設定的屬性。 互動式通訊作者可以使用&#x200B;**Adobe Experience Manager Web主控台組態**&#x200B;頁面編輯這些預設組態屬性。
 
-開啟 **Adobe Experience Manager Web主控台設定** 頁面使用下列URL：
+使用下列URL開啟&#x200B;**Adobe Experience Manager Web主控台組態**&#x200B;頁面：
 
 `https:/[server]:[port]/<contextPath>/system/console/configMgr`
 
@@ -34,7 +34,7 @@ ht-degree: 6%
 
 ## 檔案片段設定 {#document-fragments-configuration}
 
-選取 **檔案片段設定** 於 **Adobe Experience Manager Web主控台設定** 頁面以檢視檔案片段的設定屬性。
+在&#x200B;**Adobe Experience Manager Web主控台組態**&#x200B;頁面上選取&#x200B;**檔案片段組態**，以檢視檔案片段的組態屬性。
 
 <table>
  <tbody> 
@@ -80,7 +80,7 @@ ht-degree: 6%
 
 ## 建立通訊設定 {#create-correspondence-configuration}
 
-選取 **建立通訊設定** 於 **Adobe Experience Manager Web主控台設定** 頁面以檢視Agent UI的組態特性。
+在&#x200B;**Adobe Experience Manager Web主控台組態**&#x200B;頁面上選取&#x200B;**建立通訊組態**，以檢視Agent UI的組態屬性。
 
 <table>
  <tbody> 
@@ -104,7 +104,7 @@ ht-degree: 6%
   </tr> 
   <tr> 
    <td>在PDF中啟用字型內嵌</td> 
-   <td><p>選取核取方塊以啟用在PDF檔案中嵌入字型。 選取此選項後，您可在使用Agent UI產生或預覽PDF檔案後內嵌新字型。 使用互動式通訊的列印通道來產生和預覽PDF檔案。</p> <p>如果用於產生PDF的機器上有字型，而存取PDF的使用者端機器上沒有字型，則在PDF檔案中嵌入字型會很有用。</p> <p>如需內嵌字型的詳細資訊，請參閱 <a href="../../forms/using/customize-text-editor.md" target="_blank">自訂文字編輯器</a>.</p> </td> 
+   <td><p>選取核取方塊以啟用在PDF檔案中嵌入字型。 選取此選項後，您可在使用Agent UI產生或預覽PDF檔案後內嵌新字型。 使用互動式通訊的列印通道來產生和預覽PDF檔案。</p> <p>如果用於產生PDF的機器上有字型，而存取PDF的使用者端機器上沒有字型，則在PDF檔案中嵌入字型會很有用。</p> <p>如需內嵌字型的詳細資訊，請參閱<a href="../../forms/using/customize-text-editor.md" target="_blank">自訂文字編輯器</a>。</p> </td> 
    <td>未選取</td> 
    <td>不適用</td> 
   </tr> 
@@ -113,7 +113,7 @@ ht-degree: 6%
 
 ## 最適化表單和互動式通訊Web頻道設定 {#adaptive-form-and-interactive-communication-web-channel-configuration}
 
-選取 **最適化表單和互動式通訊Web頻道設定** 於 **Adobe Experience Manager Web主控台設定** 頁面以檢視最適化Forms和互動式通訊Web通道的設定屬性。 下表說明互動式通訊的相關特性：
+在&#x200B;**Adobe Experience Manager Web主控台設定**&#x200B;頁面上選取&#x200B;**最適化表單和互動式通訊Web通道設定**，以檢視最適化Forms和互動式通訊Web通道的設定屬性。 下表說明互動式通訊的相關特性：
 
 | 屬性 | 說明 | 預設 | 可接受的值 |
 |---|---|---|---|
@@ -123,7 +123,7 @@ ht-degree: 6%
 
 ## 最適化表單和互動式通訊Web Channel主題設定 {#adaptive-form-and-interactive-communication-web-channel-theme-configuration}
 
-選取 **最適化表單和互動式通訊Web Channel主題設定** 於 **Adobe Experience Manager Web主控台設定** 頁面以檢視最適化Forms和互動式通訊Web頻道主題的設定屬性。
+在&#x200B;**Adobe Experience Manager Web主控台設定**&#x200B;頁面上選取&#x200B;**最適化表單和互動式通訊Web頻道主題設定**，以檢視最適化Forms和互動式通訊Web頻道主題的設定屬性。
 
 <table>
  <tbody> 

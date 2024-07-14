@@ -21,9 +21,9 @@ ht-degree: 0%
 
 透過AEM Forms，您可以儲存：
 
-* **草稿**：一般使用者正在填寫並儲存以供稍後使用，以及之後提交的工作中表單。
+* **草稿**：一般使用者填寫並儲存以供稍後使用，以及之後提交的工作中表單。
 
-* **提交內容**：提交的表單，包含使用者提供的資料。
+* **提交專案**：提交的表單包含使用者提供的資料。
 
 AEM Forms入口網站資料和中繼資料服務提供草稿和提交方式的支援。 依預設，資料會儲存在發佈執行個體中，然後反向復寫至已設定的製作執行個體，以供滲透至其他發佈執行個體。
 
@@ -35,11 +35,11 @@ AEM Forms入口網站資料和中繼資料服務提供草稿和提交方式的�
 >
 >當您使用Forms Portal提交動作或啟用最適化表單中的將資料儲存在Forms Portal選項時，表單資料會儲存在AEM存放庫中。 在生產環境中，建議不要將草稿或提交的表單資料儲存在AEM存放庫中。 相反地，您必須將草稿和提交元件與安全的儲存裝置（例如企業資料庫）整合，以儲存草稿和提交的表單資料。
 >
->如需詳細資訊，請參閱 [將草稿和提交元件與資料庫整合的範例](/help/forms/using/integrate-draft-submission-database.md).
+>如需詳細資訊，請參閱[將草稿與提交元件與資料庫整合的範例](/help/forms/using/integrate-draft-submission-database.md)。
 
 ## 設定Forms Portal草稿和提交服務 {#configuring-forms-portal-drafts-and-submissions-services}
 
-在AEM Web主控台設定中( `https://[host]:'port'/system/console/configMgr`)，按一下以開啟 **Forms入口網站草稿和提交設定** 在編輯模式中。
+在AEM Web主控台設定( `https://[host]:'port'/system/console/configMgr`)中，按一下以在編輯模式中開啟&#x200B;**Forms入口網站草稿和提交設定**。
 
 根據您的需求指定屬性的值，如下所述：
 
@@ -103,8 +103,8 @@ AEM Forms入口網站資料和中繼資料服務提供草稿和提交方式的�
 
 除了上述指定的設定之外，請提供已設定遠端處理執行個體的相關資訊。
 
-在AEM Web主控台設定中( `https://[host]:'port'/system/console/configMgr`)，按一下以開啟 **AEM DS設定服務** 在編輯模式中。 在AEM DS設定服務對話方塊中，提供處理伺服器URL、處理伺服器使用者名稱及密碼的相關資訊。
+在AEM Web主控台組態( `https://[host]:'port'/system/console/configMgr`)中，按一下以編輯模式開啟&#x200B;**AEM DS設定服務**。 在AEM DS設定服務對話方塊中，提供處理伺服器URL、處理伺服器使用者名稱及密碼的相關資訊。
 
 >[!NOTE]
 >
->也提供將使用者資料儲存在資料庫中的範例實作。 若要瞭解如何設定資料和中繼資料服務，以將使用者資料儲存在外部資料庫中，請參閱 [將草稿和提交元件與資料庫整合的範例](/help/forms/using/integrate-draft-submission-database.md).
+>也提供將使用者資料儲存在資料庫中的範例實作。 若要瞭解如何設定資料和中繼資料服務，以將使用者資料儲存在外部資料庫中，請參閱[將草稿和提交元件與資料庫整合的範例](/help/forms/using/integrate-draft-submission-database.md)。

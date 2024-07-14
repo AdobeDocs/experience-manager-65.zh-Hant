@@ -19,15 +19,15 @@ ht-degree: 11%
 # Adobe Experience Manager 6.5 Communities指南 {#communities}
 
 + [Communities 指南](home.md)
-+ AEM Communities簡介 {#introduction}
++ AEM Communities {#introduction}簡介
    + [社群網站](administer-landing.md)
    + [AEM Communities概觀](overview.md)
-   + [AEM Communities快速入門](getting-started.md)
+   + [開始使用AEM Communities](getting-started.md)
    + [初始設定](setup.md)
    + [編寫新社群網站](create-site.md)
    + [體驗已發佈的網站](published-site.md)
-   + [製作巢狀群組](nested-groups.md)
-+ 部署 {#deploy}
+   + [編寫巢狀群組](nested-groups.md)
++ 正在部署{#deploy}
    + [部署社群](deploy-communities.md)
    + [升級至AEM 6.5社群](upgrade.md)
    + [社群適用的建議拓撲](topologies.md)
@@ -53,7 +53,7 @@ ht-degree: 11%
    + [網站範本](sites.md)
    + [群組範本](tools-groups.md)
    + [社群功能](functions.md)
-   + [儲存設定](srp-config.md)
+   + [儲存體設定](srp-config.md)
    + [徽章主控台](badges.md)
    + [報表主控台](reports.md)
    + [適用於社群的FFmpeg](ffmpeg.md)
@@ -65,7 +65,7 @@ ht-degree: 11%
    + [DSRP — 關聯式資料庫儲存資源提供者](dsrp.md)
    + [DSRP的MySQL組態](dsrp-mysql.md)
    + [JSRP - JCR儲存資源提供者](jsrp.md)
-   + [SRP的Solr設定](solr.md)
+   + SRP](solr.md)的[Solr組態
    + [標籤使用者產生的內容](tag-ugc.md)
    + [翻譯使用者產生的內容](translate-ugc.md)
    + [Communities使用者同步](sync.md)
@@ -83,7 +83,7 @@ ht-degree: 11%
    + [SCF Handlebars協助程式](handlebars-helpers.md)
    + [儲存資源提供者概觀](srp.md)
    + [社群網站要點](sites-for-developers.md)
-   + [Activity Stream Essentials](essentials-activities.md)
+   + [活動資料流要點](essentials-activities.md)
    + [部落格要點](blog-developer-basics.md)
    + [行事曆要點](calendar-basics-for-developers.md)
    + [適用於社群元件的Clientlibs](clientlibs.md)

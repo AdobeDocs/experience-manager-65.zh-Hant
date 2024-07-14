@@ -19,15 +19,15 @@ ht-degree: 0%
 
 # 使用Adobe Analytics屬性對應元件資料{#mapping-component-data-with-adobe-analytics-properties}
 
-將元件新增至框架，以收集要傳送至Adobe Analytics的資料。 收集分析資料的元件會將資料儲存在適當的位置 **CQ變數**. 當您將這類元件新增到框架時，該框架會顯示CQ變數清單，以便您將每個變數新增到適當的 **Analytics變數**.
+將元件新增至框架，以收集要傳送至Adobe Analytics的資料。 設計用來收集分析資料的元件，會將資料儲存在適當的&#x200B;**CQ變數**&#x200B;中。 當您將這類元件新增到框架時，該框架會顯示CQ變數清單，以便您可以將每個變數新增到適當的&#x200B;**Analytics變數**。
 
 ![aa-11](assets/aa-11.png)
 
-當 **AEM檢視** 開啟，Analytics變數會出現在內容尋找器中。
+當&#x200B;**AEM檢視**&#x200B;開啟時，Analytics變數會出現在內容尋找器中。
 
 ![aa-12](assets/aa-12.png)
 
-您可以使用相同來對應多個Analytics變數 **CQ變數**.
+您可以使用相同的&#x200B;**CQ變數**&#x200B;對應多個Analytics變數。
 
 ![chlimage_1-68](assets/chlimage_1-68.png)
 
@@ -38,13 +38,13 @@ ht-degree: 0%
 
 使用以下程式，將CQ元件變數與Adobe Analytics報表屬性對應。
 
-1. 在 **AEM檢視**，將追蹤元件從sidekick拖曳至架構。 例如，拖曳 **頁面** 元件來自 **一般** 類別。
+1. 在&#x200B;**AEM檢視**&#x200B;中，將追蹤元件從sidekick拖曳到架構上。 例如，從&#x200B;**一般**&#x200B;類別拖曳&#x200B;**頁面**&#x200B;元件。
 
    ![aa-13](assets/aa-13.png)
 
-   有多個預設元件群組： **一般**， **商務**， **Communities**、和 **其他**. 您的AEM執行個體可設定為顯示不同的群組和元件。
+   有幾個預設元件群組： **一般**、**Commerce**、**社群**&#x200B;和&#x200B;**其他**。 您的AEM執行個體可設定為顯示不同的群組和元件。
 
-1. 若要使用元件中定義的變數對應Adobe Analytics變數，請拖曳 **Analytics變數** 從內容尋找器移至追蹤元件上的欄位。 例如，拖曳 `Page Name (pageName)` 至 `pagedata.title`.
+1. 若要使用元件中定義的變數對應Adobe Analytics變數，請從內容尋找器將&#x200B;**Analytics變數**&#x200B;拖曳至追蹤元件上的欄位。 例如，將`Page Name (pageName)`拖曳至`pagedata.title`。
 
    ![aa-14](assets/aa-14.png)
 
@@ -56,16 +56,16 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >您可以對應多個Analytics變數(例如 `props`， `eVars`， `events`)至相同的CQ變數(例如， `pagedata.title`)
+   >您可以將多個Analytics變數（例如`props`、`eVars`、`events`）對應到相同的CQ變數（例如`pagedata.title`）
 
    >[!CAUTION]
    >
    >強烈建議：
    >
-   >* `eVars` 和 `props` 都會對應至CQ變數，開頭為 `pagedata.X` 或 `eventdata.X`
-   >* 而事件應對應至變數，開頭為 `eventdata.events.X`
+   >* `eVars`和`props`對應到以`pagedata.X`或`eventdata.X`開頭的CQ變數
+   >* 而事件應該對應到以`eventdata.events.X`開頭的變數
 
-1. 若要讓架構可用於網站的發佈執行個體，請開啟 **頁面** sidekick標籤，然後按一下 **啟動框架。**
+1. 若要讓架構可在您網站的發佈執行個體上使用，請開啟sidekick的&#x200B;**頁面**&#x200B;標籤，然後按一下&#x200B;**啟動架構**。
 
 ## 對應產品相關變數 {#mapping-product-related-variables}
 
@@ -77,8 +77,8 @@ AEM使用慣例來命名產品相關變數和事件，這些變數和事件會�
 | `product.sku` | `product.sku` （轉換變數） | 產品sku。 |
 | `product.quantity` | `product.quantity` （轉換變數） | 正在購買的產品數量。 |
 | `product.price` | `product.price` （轉換變數） | 產品價格。 |
-| `product.events.<eventName>` | 與報表中的產品建立關聯的成功事件。 | `product.events` 是事件的前置詞，命名為 *eventName。* |
-| `product.evars.<eVarName>` | 轉換變數( `eVar`)，以與產品建立關聯。 | `product.evars` 是以下名稱的eVar變數首碼： *eVarName。* |
+| `product.events.<eventName>` | 與報表中的產品建立關聯的成功事件。 | `product.events`是名為&#x200B;*eventName.*&#x200B;之事件的前置詞 |
+| `product.evars.<eVarName>` | 要與產品產生關聯的轉換變數( `eVar`)。 | `product.evars`是名為&#x200B;*eVarName.*&#x200B;之eVar變數的前置詞 |
 
 有幾個AEM Commerce元件會使用這些變數名稱。
 
@@ -90,7 +90,7 @@ AEM使用慣例來命名產品相關變數和事件，這些變數和事件會�
 
 1. 使用提供給AEM的相同憑證登入Adobe Analytics網站。
 1. 請確定選取的RSID是先前步驟中所使用的RSID。
-1. 在 **報表** （在頁面左側）選取 **自訂轉換**，然後 **自訂轉換1-10** 並選取對應的變數 `eVar7`
+1. 在&#x200B;**報表** （頁面左側）中，選取&#x200B;**自訂轉換**，然後選取&#x200B;**自訂轉換1-10**，並選取與`eVar7`相對應的變數
 
 1. 根據您使用的Adobe Analytics版本，您平均需要等待45分鐘，報表才會更新為使用的搜尋字詞；例如，範例中的eggplant
 
@@ -103,18 +103,18 @@ AEM使用慣例來命名產品相關變數和事件，這些變數和事件會�
 * 事件
 
 選取RSID時，屬於該RSID的所有變數都會新增到清單中。\
-此 `cf#` 需要將Analytics變數對應到出現在不同追蹤元件上的CQ變數。 請參閱設定基本追蹤的框架。
+需要`cf#`才能將Analytics變數對應到出現在不同追蹤元件上的CQ變數。 請參閱設定基本追蹤的框架。
 
 根據為框架選取的檢視，內容尋找器將由Analytics變數(在AEM檢視中)或CQ變數（在Analytics檢視中）填入。
 
 清單可透過下列方式操作：
 
-1. 當在 **AEM檢視**，您可使用下列三個篩選按鈕，根據選取的變數型別篩選清單：
+1. 在&#x200B;**AEM檢視**&#x200B;中，可以使用三個篩選按鈕，根據選取的變數型別來篩選清單：
 
-   * 如果 *無按鈕* 選取時，清單會顯示完整清單。
-   * 如果 **流量** 按鈕已選取，清單將僅顯示屬於流量區段的變數。
-   * 如果 **轉換** 按鈕已選取，清單將僅顯示屬於轉換區段的變數。
-   * 如果 **活動** 按鈕已選取，清單只會顯示屬於事件區段的變數。
+   * 如果未選取&#x200B;*按鈕*，清單會顯示完整清單。
+   * 如果選取&#x200B;**流量**&#x200B;按鈕，清單將僅顯示屬於流量區段的變數。
+   * 如果選取&#x200B;**轉換**&#x200B;按鈕，清單將僅顯示屬於轉換區段的變數。
+   * 如果選取&#x200B;**事件**&#x200B;按鈕，清單只會顯示屬於事件區段的變數。
 
    >[!NOTE]
    >
@@ -127,11 +127,11 @@ AEM使用慣例來命名產品相關變數和事件，這些變數和事件會�
 
 1. 在Adobe Analytics檢視中，內容尋找器會顯示屬於CQ檢視中拖曳之追蹤元件的所有CQ變數。
 
-   * 例如，如果 **下載元件** 是 *僅拖曳一個* 在CQ檢視（有兩個可對應的變數）中 *eventdata.downloadLink* 和 *eventdata.events.startDownload*)，內容尋找器在切換至Adobe Analytics檢視時會如下所示：
+   * 例如，如果&#x200B;**Download元件**&#x200B;是CQ檢視中唯一拖曳的&#x200B;*元件* （有兩個可對應的變數&#x200B;*eventdata.downloadLink*&#x200B;和&#x200B;*eventdata.events.startDownload*），當切換至Adobe Analytics檢視時，內容尋找器會變成這樣：
 
    ![aa-22](assets/aa-22.png)
 
-   * Adobe Analytics變數可拖放至屬於三個變數區段(**流量**， **轉換** 和 **活動**)。
+   * 可將變數拖放至屬於三個變數區段（**流量**、**轉換**&#x200B;和&#x200B;**事件**）其中之一的任何Adobe Analytics變數上。
 
    * 將新的追蹤元件拖曳至CQ檢視的框架時，屬於該元件的CQ變數會自動新增至Adobe Analytics檢視的內容尋找器(cf#)。
 
@@ -147,11 +147,11 @@ AEM使用慣例來命名產品相關變數和事件，這些變數和事件會�
 
 ![aa-23](assets/aa-23.png)
 
-以上圖為例， **AEM檢視** 具有以下屬性：
+以上圖為例，**AEM檢視**&#x200B;有下列屬性：
 
 1. 這是框架開啟時的預設檢視。
 1. 左側：內容尋找器(cf#)會由Adobe Analytics變數根據所選的RSID填入。
-1. 索引標籤標題(**AEM檢視** 和 **Analytics檢視**)：使用這些選項可在兩個檢視之間切換。
+1. Tab標頭(**AEM檢視**&#x200B;和&#x200B;**Analytics檢視**)：使用這些標頭在兩個檢視之間切換。
 
 1. **AEM檢視**：
 
@@ -161,7 +161,7 @@ AEM使用慣例來命名產品相關變數和事件，這些變數和事件會�
       1. 若要解除鎖定繼承的元件，請連按兩下元件名稱旁的掛鎖
       1. 若要還原繼承，請刪除已解鎖的元件；之後會重新獲得其鎖定狀態。
 
-   1. **將元件拖曳到此處以包括在分析框架中**：元件可從Sidekick拖曳並放置於此處。
+   1. **將元件拖曳到此處以包括在Analytics架構中**：可以從Sidekick將元件拖曳到這裡。
    1. 您可以找到目前包含在分析框架中的所有元件：
 
       1. 若要新增元件，請從sidekick的「元件」標籤中拖曳一個元件
@@ -172,23 +172,23 @@ AEM使用慣例來命名產品相關變數和事件，這些變數和事件會�
 
 ![aa-24](assets/aa-24.png)
 
-1. 您可以切換至 **Analytics檢視** 標籤進行標籤。
+1. 切換至架構上的&#x200B;**Analytics檢視**&#x200B;索引標籤，即可存取此檢視。
 1. 左側：內容尋找器(cf#)由CQ變數填入，該變數會根據CQ檢視中拖曳至框架的元件而定。
-1. 索引標籤標題(**AEM檢視** 和 **Analytics檢視**)：使用這些選項可在兩個檢視之間切換。
+1. Tab標頭(**AEM檢視**&#x200B;和&#x200B;**Analytics檢視**)：使用這些標頭在兩個檢視之間切換。
 
 1. 三個表格（流量、轉換、事件）列出所有可用的Adobe Analytics變數。 屬於選取的RSID。 此處顯示的對應應與AEM檢視中的對應相同：
 
    * **流量**：
 
-      * 流量變數( `prop1`)對應至CQ變數( `eventdata.downloadLink`)
+      * 流量變數( `prop1`)對應到CQ變數( `eventdata.downloadLink`)
 
       * 當元件旁邊有掛鎖時，這表示它繼承自父框架，因此無法編輯
 
    * **轉換**：
 
-      * 轉換變數( `eVar1`)對應至CQ變數( `pagedata.title`)
+      * 轉換變數( `eVar1`)對應到CQ變數( `pagedata.title`)
 
-      * 轉換變數( `eVar3`)對應至JavaScript運算式，方法是按兩下CQ變數欄位，然後手動輸入程式碼
+      * 在CQ變數欄位上連按兩下，並手動輸入程式碼，轉換變數(`eVar3`)對應到內嵌新增的JavaScript運算式
 
    * **事件**：
 
@@ -198,9 +198,9 @@ AEM使用慣例來命名產品相關變數和事件，這些變數和事件會�
 >
 >您也可以連按兩下欄位並在其中新增文字，以內嵌填入任何表格的CQ變數欄。 這些欄位接受JavaScript作為輸入。
 >
->例如，在 `prop3` 您可以新增：
+>例如，您可以在`prop3`旁邊新增：
 >     `'`* `Adobe:'+pagedata.title+':'+pagedata.sitesection`\
->以傳送 *標題* ，位於與其串連的頁面 *sitesection* 使用 *：* （冒號）和前置詞 *Adobe* 作為 `prop3`
+>若要傳送與其&#x200B;*sitesection*&#x200B;串連之頁面的&#x200B;*title*，請使用&#x200B;*：* （冒號），並以&#x200B;*Adobe*&#x200B;做為`prop3`
 >
 
 >[!CAUTION]

@@ -28,7 +28,7 @@ ht-degree: 0%
 
 雜湊函式會以任何長度的長字串（或訊息）作為輸入，並產生固定長度的字串作為輸出，有時稱為訊息摘要或數位指紋。
 
-JEE Designer上的AEM Forms可讓您以JavaScript的身分在指令碼物件中實作不同的雜湊函式，並在動態PDF檔案中執行。 本文範例檔案包含的範例PDF會使用下列雜湊函式的開放原始碼實作：
+JEE Designer上的AEM Forms可讓您在JavaScript之類的指令碼物件中實作不同的雜湊函式，並在動態PDF檔案中執行。 本文範例檔案包含的範例PDF會使用下列雜湊函式的開放原始碼實作：
 
 * MD4和MD5 — 由Ronald Rivest設計
 
@@ -38,7 +38,7 @@ JEE Designer上的AEM Forms可讓您以JavaScript的身分在指令碼物件中�
 
 >[!NOTE]
 >
->MD4或MD5有一些眾所周知的安全性問題（稱為雜湊碰撞）。 由於這些雜湊碰撞和其他SHA-1攻擊（包括彩虹表格），我決定在第二個範例中集中使用SHA-256雜湊函式。 如需詳細資訊，請參閱 [衝突](https://en.wikipedia.org/wiki/Hash_collision) 和 [彩虹表](https://en.wikipedia.org/wiki/Rainbow_table) 來自Wikipedia的頁面。
+>MD4或MD5有一些眾所周知的安全性問題（稱為雜湊碰撞）。 由於這些雜湊碰撞和其他SHA-1攻擊（包括彩虹表格），我決定在第二個範例中集中使用SHA-256雜湊函式。 如需詳細資訊，請參閱Wikipedia的[碰撞](https://en.wikipedia.org/wiki/Hash_collision)和[彩虹表](https://en.wikipedia.org/wiki/Rainbow_table)頁。
 
 ## 檢查指令碼物件 {#examining-script-objects}
 
@@ -46,7 +46,7 @@ JEE Designer上的AEM Forms可讓您以JavaScript的身分在指令碼物件中�
 
 ![變數](assets/variables.jpg)
 
-若要檢視這些指令碼物件中雜湊函式的JavaScript實作，請選取指令碼物件，然後在指令碼編輯器中探索程式碼。 您可以看到下列每個雜湊函式的實作方式：
+若要檢視在這些指令碼物件中雜湊函式的JavaScript實作，請選取指令碼物件，然後在指令碼編輯器中探索程式碼。 您可以看到下列每個雜湊函式的實作方式：
 
 * soHASHING_MD4.hex_md4()
 * soHASHING_MD4.b64_md4()
@@ -61,7 +61,7 @@ JEE Designer上的AEM Forms可讓您以JavaScript的身分在指令碼物件中�
 * soHASHING_SHA256.b64_sha256()
 * soHASHING_SHA256.str_sha256()
 
-從這個清單中可以看到，不同的雜湊輸出型別有不同的可用函式。 您可以選擇 `hex_` 十六進位數字， `b64_` 針對Base64編碼輸出，或 `str_` 用於簡單字串編碼。
+從這個清單中可以看到，不同的雜湊輸出型別有不同的可用函式。 您可以選擇十六進位數字`hex_`、Base64編碼輸出`b64_`或簡單字串編碼`str_`。
 
 雜湊的長度視您選擇的雜湊函式而定：
 
@@ -79,10 +79,10 @@ JEE Designer上的AEM Forms可讓您以JavaScript的身分在指令碼物件中�
 請依照下列步驟嘗試第一個範例：
 
 1. 下載並解壓縮範例檔案後，在JEE Designer上使用AEM Forms開啟hashing_forms_sample1.pdf。 或者，您可以使用Adobe Reader或Adobe Acrobat Professional開啟和檢視範例，但無法看到原始程式碼。
-1. 在標示為的文字欄位中 [!UICONTROL 清除文字] 輸入密碼或您要雜湊的任何其他訊息。
+1. 在標示為[!UICONTROL 純文字]的文字欄位中，輸入您要雜湊的密碼或任何其他訊息。
 1. 按一下四個按鈕之一，產生MD4、MD5、SHA-1或SHA-256雜湊。 根據您按下的按鈕，系統會呼叫產生十六進位輸出的四個雜湊函式之一，並對字串或訊息進行雜湊處理。
 
-雜湊作業的結果會顯示在標示為的欄位中 [!UICONTROL 雜湊]. 雜湊長度視您選擇的雜湊函式而定。
+雜湊作業的結果顯示在標示為[!UICONTROL 雜湊]的欄位中。 雜湊長度視您選擇的雜湊函式而定。
 
 所有範例都使用十六進位數字作為輸出型別。 您可以使用指令碼編輯器來修改範例，並將輸出型別變更為Base64或簡單字串。
 
@@ -92,11 +92,11 @@ JEE Designer上的AEM Forms可讓您以JavaScript的身分在指令碼物件中�
 
 請依照下列步驟，嘗試第二個範例：
 
-1. 開啟 `hashing_forms_sample2.pdf` JEE Designer上的AEM Forms。 或者，您可以使用Adobe Reader或Adobe Acrobat Professional開啟和檢視範例，但無法看到原始程式碼。
-1. 從兩個標示為的密碼欄位中選擇一個 [!UICONTROL 密碼手冊] 或 [!UICONTROL 密碼女人] 並輸入密碼：
-   1. 此人的密碼是 `bob`
-   1. 該女人的密碼為 `alice`
-1. 當您將焦點移出密碼欄位或按下Enter鍵時，系統會自動產生您輸入的密碼雜湊，並和背景中儲存的正確密碼雜湊進行比較。 正確的雜湊密碼會儲存在標示為的隱藏文字欄位中 `passwd_man_hashed` 和 `passwd_woman_hashed`. 如果您為使用者輸入正確的密碼，則標示為的文字欄位 `Man 1` 和 `Man 2` 設為可存取，以便您在其中輸入文字。 女性的欄位也存在相同行為。
+1. 在JEE Designer中使用AEM Forms開啟`hashing_forms_sample2.pdf`。 或者，您可以使用Adobe Reader或Adobe Acrobat Professional開啟和檢視範例，但無法看到原始程式碼。
+1. 選擇兩個標示為[!UICONTROL Password MAN]或[!UICONTROL Password WOMAN]的密碼欄位之一，並輸入密碼：
+   1. 此人的密碼是`bob`
+   1. 該女人的密碼是`alice`
+1. 當您將焦點移出密碼欄位或按下Enter鍵時，系統會自動產生您輸入的密碼雜湊，並和背景中儲存的正確密碼雜湊進行比較。 正確的雜湊密碼儲存在標示為`passwd_man_hashed`和`passwd_woman_hashed`的隱藏文字欄位中。 如果您輸入正確的人員密碼，則標示為`Man 1`和`Man 2`的文字欄位將可存取，因此您可以在這些欄位中輸入文字。 女性的欄位也存在相同行為。
 1. 您可以選擇按一下標示為「刪除密碼」的按鈕，以停用文字欄位並變更其邊框。
 
 比較兩個雜湊值並啟用文字欄位的程式碼很簡單：
@@ -114,13 +114,13 @@ if (soHASHING_SHA256.hex_sha256(this.rawValue) == passwd_man_hashed.rawValue){
 
 在哪裡需要這樣的內容？ 假設有一個PDF表單，其中包含只有授權人員才應填寫的欄位。 透過使用密碼保護這些欄位（在檔案中任何位置都無法以Sample_2.pdf中的明文顯示），您可以確保只有知道密碼的使用者才能存取這些欄位。
 
-我鼓勵您繼續探索這兩個範例PDF檔案。  您可以使用Sample_1.pdf產生新的雜湊值，並使用產生的值來變更Sample_2.pdf中使用的密碼或雜湊函式。  「歸因」區段中列出的資源也提供雜湊和本文中所使用之特定JavaScript實作的額外資訊。
+我鼓勵您繼續探索這兩個範例PDF檔案。  您可以使用Sample_1.pdf產生新的雜湊值，並使用產生的值來變更Sample_2.pdf中使用的密碼或雜湊函式。  「歸因」區段中列出的資源也提供雜湊和本文中所使用之特定JavaScript實作的相關額外資訊。
 
 ## 歸因 {#attributions}
 
-* [羅納德·里韋斯特](https://en.wikipedia.org/wiki/Ron_Rivest)
+* [Ronald Rivest](https://en.wikipedia.org/wiki/Ron_Rivest)
 * [NIST](https://csrc.nist.gov/projects/cryptographic-standards-and-guidelines)
-* [雜湊碰撞](https://en.wikipedia.org/wiki/Hash_collision)
-* [彩虹表](https://en.wikipedia.org/wiki/Rainbow_table)
-* [javascript MD5專案首頁](https://pajhome.org.uk/crypt/md5/)
-* [jssha2專案首頁](https://anmar.eu.org/projects/jssha2/)
+* [雜湊衝突](https://en.wikipedia.org/wiki/Hash_collision)
+* [彩虹資料表](https://en.wikipedia.org/wiki/Rainbow_table)
+* [JavaScript MD5專案首頁](https://pajhome.org.uk/crypt/md5/)
+* [jsSHA2專案首頁](https://anmar.eu.org/projects/jssha2/)

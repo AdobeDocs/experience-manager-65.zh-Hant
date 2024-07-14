@@ -32,4 +32,4 @@ ht-degree: 0%
 >
 >建立SSL安全性憑證和認證時，請使用您用來執行應用程式伺服器的相同使用者帳戶許可權。 如果使用其他使用者許可權執行應用程式伺服器，當ContentRootURI指向https時，表單可能無法正確轉譯為PDFForm轉譯。
 
-如果您有啟用SSL的LDAP伺服器，請設定「使用者管理」以搭配使用。 (請參閱 [設定啟用SSL之LDAP伺服器的使用者管理](/help/forms/using/admin-help/configure-user-management-ssl-enabled.md#configure-user-management-for-an-ssl-enabled-ldap-server).)
+如果您有啟用SSL的LDAP伺服器，請設定「使用者管理」以搭配使用。 （請參閱[為啟用SSL的LDAP伺服器設定使用者管理](/help/forms/using/admin-help/configure-user-management-ssl-enabled.md#configure-user-management-for-an-ssl-enabled-ldap-server)。）

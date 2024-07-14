@@ -20,7 +20,7 @@ AEM提供工具架構，用於製作目標內容及呈現個人化體驗。
 
 ## 目標定位模式 {#targeting-mode}
 
-[作者目標內容](/help/sites-authoring/content-targeting-touch.md) 使用AEM的鎖定目標模式。 目標定位模式和目標元件提供用於建立行銷活動體驗內容的工具。
+[使用AEM的定位模式製作目標內容](/help/sites-authoring/content-targeting-touch.md)。 目標定位模式和目標元件提供用於建立行銷活動體驗內容的工具。
 
 ## 活動 {#activities}
 
@@ -28,9 +28,9 @@ AEM提供工具架構，用於製作目標內容及呈現個人化體驗。
 
 例如，We.Retail產品目錄包含著重季節性產品的Teaser。 夏季運動活動會定義Teaser在夏季月份中鎖定的行銷區段。
 
-活動也會識別 [目標定位引擎](/help/sites-authoring/personalization.md#targeting-engine) 您的頁面所使用的屬性。
+活動也會識別您的頁面所使用的[目標定位引擎](/help/sites-authoring/personalization.md#targeting-engine)。
 
-使用 [活動主控台](/help/sites-authoring/activitylib.md) 以建立和管理您品牌的活動。 您也可以在建立活動時進行 [作者目標內容](/help/sites-authoring/content-targeting-touch.md).
+使用[活動主控台](/help/sites-authoring/activitylib.md)來建立和管理您品牌的活動。 您也可以[創作目標內容](/help/sites-authoring/content-targeting-touch.md)時建立活動。
 
 ## 體驗 {#experiences}
 
@@ -40,7 +40,7 @@ AEM提供工具架構，用於製作目標內容及呈現個人化體驗。
 
 例如，活動會為兩個不同對象定義體驗：30歲以上的女性和30歲以下的女性。 We.Retail網站的「女性」頁面針對每個體驗顯示不同的產品。
 
-您可以為活動定義體驗。 您可以使用 [活動主控台](/help/sites-authoring/activitylib.md#adding-editing-an-activity-using-the-activities-console) 或 [目標定位模式](/help/sites-authoring/content-targeting-touch.md#adding-and-removing-experiences-using-targeting-mode) 以新增體驗至活動。
+您可以為活動定義體驗。 您可以使用[活動主控台](/help/sites-authoring/activitylib.md#adding-editing-an-activity-using-the-activities-console)或[目標定位模式](/help/sites-authoring/content-targeting-touch.md#adding-and-removing-experiences-using-targeting-mode)來新增體驗至活動。
 
 ## 優惠 {#offers}
 
@@ -48,7 +48,7 @@ AEM提供工具架構，用於製作目標內容及呈現個人化體驗。
 
 例如，We.Retail範例網站的女性頁面可以使用選件作為出現在頁面頂端的Teaser影像。 不同的選件會用作30歲以上女性體驗和30歲以下女性體驗的Teaser。
 
-使用 [選件主控台](/help/sites-authoring/offerlib.md) 以建立可在多個體驗中使用的選件。 發生下列情況時，建立單一使用優惠方案或從優惠方案庫中新增優惠方案： [製作目標內容](/help/sites-authoring/content-targeting-touch.md).
+使用[選件主控台](/help/sites-authoring/offerlib.md)建立您可在多個體驗中使用的選件。 在[編寫目標內容](/help/sites-authoring/content-targeting-touch.md)時，建立單一使用選件或從選件資料庫新增選件。
 
 ## 目標定位引擎 {#targeting-engine}
 

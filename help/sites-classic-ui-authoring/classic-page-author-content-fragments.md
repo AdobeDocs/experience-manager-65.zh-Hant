@@ -25,6 +25,6 @@ Adobe Experience Manager(AEM)內容片段會建 [立並管理為不受頁面影�
 
 >[!CAUTION]
 >
->傳統UI中沒有內容片段管理的完整功能。 另請參閱 [使用內容片段編寫頁面](/help/sites-authoring/content-fragments.md) 在標準撰寫檔案中。
+>傳統UI中沒有內容片段管理的完整功能。 請參閱標準編寫檔案中的[使用內容片段編寫頁面](/help/sites-authoring/content-fragments.md)。
 >
 >您可以在傳統UI Sidekick中看到內容片段元件，但無法使用其他功能。

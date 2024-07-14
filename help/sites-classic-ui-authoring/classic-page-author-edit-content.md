@@ -21,11 +21,11 @@ ht-degree: 2%
 
 建立頁面後（新頁面或作為啟動項或即時副本的一部分），您可以編輯內容以進行所需的更新。
 
-內容新增方式： [元件](/help/sites-classic-ui-authoring/classic-page-author-default-components.md) （適用於內容型別）可拖曳至頁面上的物件。 接著，您就可以就地編輯、移動或刪除這些專案。
+使用可拖曳至頁面的[元件](/help/sites-classic-ui-authoring/classic-page-author-default-components.md) （適合內容型別）新增內容。 接著，您就可以就地編輯、移動或刪除這些專案。
 
 >[!NOTE]
 >
->您的帳戶需要 [適當的存取許可權](/help/sites-administering/security.md) 和 [許可權](/help/sites-administering/security.md#permissions) 編輯頁面；例如，新增、編輯或刪除元件、註釋、解除鎖定。
+>您的帳戶需要[適當的存取權](/help/sites-administering/security.md)和[許可權](/help/sites-administering/security.md#permissions)才能編輯頁面；例如，新增、編輯或刪除元件、加上註解、解除鎖定。
 >
 >如果您遇到任何問題，我們建議您連絡系統管理員。
 
@@ -53,9 +53,9 @@ sidekick是編寫頁面時的關鍵工具。 它會在編寫頁面時浮動，�
 * [顯示引用](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#showing-references)
 * [存取稽核記錄](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#audit-log)
 * [切換模式](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#page-modes)
-* [建立](/help/sites-classic-ui-authoring/classic-page-author-work-with-versions.md#creating-a-new-version)， [還原](/help/sites-classic-ui-authoring/classic-page-author-work-with-versions.md#restoring-a-page-version-from-sidekick) 和 [比較](/help/sites-classic-ui-authoring/classic-page-author-work-with-versions.md#comparing-with-a-previous-version) 版本
+* [正在建立](/help/sites-classic-ui-authoring/classic-page-author-work-with-versions.md#creating-a-new-version)，[正在還原](/help/sites-classic-ui-authoring/classic-page-author-work-with-versions.md#restoring-a-page-version-from-sidekick)和[比較](/help/sites-classic-ui-authoring/classic-page-author-work-with-versions.md#comparing-with-a-previous-version)個版本
 
-* [發佈](/help/sites-classic-ui-authoring/classic-page-author-publish-pages.md#publishing-a-page)， [取消發佈](/help/sites-classic-ui-authoring/classic-page-author-publish-pages.md#unpublishing-a-page) 頁面
+* [發佈](/help/sites-classic-ui-authoring/classic-page-author-publish-pages.md#publishing-a-page)，[取消發佈](/help/sites-classic-ui-authoring/classic-page-author-publish-pages.md#unpublishing-a-page)頁面
 
 * [編輯頁面屬性](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md)
 
@@ -73,22 +73,22 @@ sidekick是編寫頁面時的關鍵工具。 它會在編寫頁面時浮動，�
 
 1. 選取要插入的段落型別的方法有幾種：
 
-   * 連按兩下標示為的區域 **將元件或資產拖曳到這裡……** - **插入新元件** 工具列隨即開啟。 選取元件並按一下 **確定**.
+   * 按兩下標示為&#x200B;**將元件或資產拖曳到這裡……**&#x200B;的區域 — **插入新元件**&#x200B;工具列開啟。 選取元件並按一下&#x200B;**確定**。
 
    * 從浮動工具列拖曳元件（稱為sidekick）以插入新段落。
-   * 在現有段落上按一下滑鼠右鍵，然後選取 **新增……**  — 插入新元件工具列開啟。 選取元件並按一下 **確定**.
+   * 以滑鼠右鍵按一下現有段落並選取&#x200B;**新增……** — 「插入新元件」工具列開啟。 選取元件並按一下&#x200B;**確定**。
 
    ![screen_shot_2012-02-15at115605am](assets/screen_shot_2012-02-15at115605am.png)
 
-1. 在副手和 **插入新元件** 工具列會顯示可用元件的清單（段落型別）。 這些區段可以分成不同的區段（例如，「一般」、「欄」等），可視需要加以展開。
+1. 在sidekick和&#x200B;**插入新元件**&#x200B;工具列中您會看到可用元件（段落型別）的清單。 這些區段可以分成不同的區段（例如，「一般」、「欄」等），可視需要加以展開。
 
-   視您的生產環境而定，這些選項可能會有所不同。 如需有關元件的完整詳細資訊，請參閱 [預設元件](/help/sites-classic-ui-authoring/classic-page-author-default-components.md).
+   視您的生產環境而定，這些選項可能會有所不同。 如需元件的完整詳細資訊，請參閱[預設元件](/help/sites-classic-ui-authoring/classic-page-author-default-components.md)。
 
 1. 在頁面上插入您想要的元件。 然後按兩下段落，就會開啟一個視窗，讓您設定段落並新增內容。
 
 ### 使用內容尋找器插入元件 {#inserting-a-component-using-the-content-finder}
 
-您也可以拖曳以下專案的資產，將新元件新增至頁面： [內容尋找器](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#the-content-finder). 這樣會自動建立包含資產的適當型別的元件。
+您也可以從[內容尋找器](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#the-content-finder)拖曳資產，將新元件新增至頁面。 這樣會自動建立包含資產的適當型別的元件。
 
 這適用於下列資產型別（部分將取決於頁面/段落系統）：
 
@@ -101,27 +101,27 @@ sidekick是編寫頁面時的關鍵工具。 它會在編寫頁面時浮動，�
 
 >[!NOTE]
 >
->您可針對您的安裝設定此行為。 另請參閱 [設定段落系統以便拖曳資產建立元件例項](/help/sites-developing/developing-components.md#configuring-a-paragraph-system-so-that-dragging-an-asset-creates-a-component-instance) 以取得更多詳細資料。
+>您可針對您的安裝設定此行為。 如需詳細資訊，請參閱[設定段落系統，以便拖曳資產建立元件執行個體](/help/sites-developing/developing-components.md#configuring-a-paragraph-system-so-that-dragging-an-asset-creates-a-component-instance)。
 
 若要拖曳上述任一資產型別來建立元件：
 
-1. 確定您的頁面位於 [**編輯** 模式](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#page-modes).
-1. 開啟 [內容尋找器](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#the-content-finder).
-1. 將所需的資產拖曳至所需的位置。 此 [元件預留位置](#componentplaceholder) 顯示元件將放置的位置。
+1. 確定您的頁面處於&#x200B;[**編輯**&#x200B;模式](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#page-modes)。
+1. 開啟[內容尋找器](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#the-content-finder)。
+1. 將所需的資產拖曳至所需的位置。 [元件預留位置](#componentplaceholder)顯示元件將放置的位置。
 
    適合資產型別的元件將在所需位置建立 — 它將包含所選資產。
 
-1. [編輯](#editmovecopypastedelete) 元件（若有需要）。
+1. 如有必要，請[編輯](#editmovecopypastedelete)元件。
 
 ## 編輯元件（內容和屬性） {#editing-a-component-content-and-properties}
 
 若要編輯現有段落，請執行下列任一項動作：
 
-* **按兩下** 段落以開啟它。 您會看到與使用現有內容建立段落時相同的視窗。 進行變更並按一下 **確定**.
+* **按兩下**&#x200B;該段落以開啟。 您會看到與使用現有內容建立段落時相同的視窗。 進行變更，然後按一下[確定]。****
 
-* **按一下右鍵** 段落並按一下 **編輯**.
+* **在段落上按一下滑鼠右鍵**，然後按一下&#x200B;**編輯**。
 
-* **按一下** 在段落上按兩下（緩慢連按兩下）以進入就地編輯模式。 您將能夠直接編輯頁面上的文字，而不是在對話方塊視窗內。 在此模式中，頁面頂端會提供工具列。 只需進行變更，系統就會自動儲存變更。
+* **在段落上按兩下**&#x200B;兩次（緩慢連按兩下）以進入就地編輯模式。 您將能夠直接編輯頁面上的文字，而不是在對話方塊視窗內。 在此模式中，頁面頂端會提供工具列。 只需進行變更，系統就會自動儲存變更。
 
 ## 移動元件 {#moving-a-component}
 
@@ -129,7 +129,7 @@ sidekick是編寫頁面時的關鍵工具。 它會在編寫頁面時浮動，�
 
 >[!NOTE]
 >
->您也可以使用 [剪下並貼上](#cut-copy-paste-a-component) 以移動元件。
+>您也可以使用[剪下並貼上](#cut-copy-paste-a-component)來移動元件。
 
 1. 選取要移動的段落：
 
@@ -144,28 +144,28 @@ sidekick是編寫頁面時的關鍵工具。 它會在編寫頁面時浮動，�
 
 若要刪除段落：
 
-1. 選取段落並 **按一下右鍵**：
+1. 選取段落並&#x200B;**按一下滑鼠右鍵**：
 
    ![screen_shot_2012-02-15at120220pm](assets/screen_shot_2012-02-15at120220pm.png)
 
-1. 選取 **刪除** 功能表中。 AEM WCM會要求確認您要刪除段落，因為此動作無法復原。
+1. 從功能表中選取&#x200B;**刪除**。 AEM WCM會要求確認您要刪除段落，因為此動作無法復原。
 1. 按一下&#x200B;**「確定」**。
 
 >[!NOTE]
 >
->如果您已設定 [顯示全域編輯工具列的使用者屬性](/help/sites-classic-ui-authoring/author-env-user-props.md) 您也可以使用對段落執行某些動作 **複製**， **剪下**， **貼上**， **刪除** 按鈕可供使用。
+>如果您已將[使用者屬性設定為顯示全域編輯工具列](/help/sites-classic-ui-authoring/author-env-user-props.md)，您也可使用可用的&#x200B;**複製**、**剪下**、**貼上**、**刪除**&#x200B;按鈕，對段落執行某些動作。
 >
->各種 [鍵盤快速鍵](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md) 也可供使用。
+>也提供各種[鍵盤快速鍵](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md)。
 
 ## 剪下/複製/貼上元件 {#cut-copy-paste-a-component}
 
-當 [刪除元件](#deleting-a-component) 您可以使用快顯選單來複製、剪下及/或貼上元件
+如同在[刪除元件](#deleting-a-component)時一樣，您可以使用內容功能表來複製、剪下和/或貼上元件
 
 >[!NOTE]
 >
->如果您已設定 [顯示全域編輯工具列的使用者屬性](/help/sites-classic-ui-authoring/author-env-user-props.md) 您也可以使用對段落執行某些動作 **複製**， **剪下**， **貼上**， **刪除** 按鈕可供使用。
+>如果您已將[使用者屬性設定為顯示全域編輯工具列](/help/sites-classic-ui-authoring/author-env-user-props.md)，您也可使用可用的&#x200B;**複製**、**剪下**、**貼上**、**刪除**&#x200B;按鈕，對段落執行某些動作。
 >
->各種 [鍵盤快速鍵](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md) 也可供使用。
+>也提供各種[鍵盤快速鍵](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md)。
 
 >[!NOTE]
 >
@@ -175,9 +175,9 @@ sidekick是編寫頁面時的關鍵工具。 它會在編寫頁面時浮動，�
 
 繼承的元件可能是各種情況的產物，包括：
 
-* [多網站管理](/help/sites-administering/msm.md)；也與 [支架](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md#scaffolding-with-msm-inheritance).
+* [多網站管理](/help/sites-administering/msm.md)；同時搭配[支架](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md#scaffolding-with-msm-inheritance)。
 
-* [啟動](/help/sites-classic-ui-authoring/classic-launches.md) （當以livecopy為基礎時）。
+* [啟動](/help/sites-classic-ui-authoring/classic-launches.md) （當以Livecopy為基礎時）。
 * 特定元件；例如Geometrixx中的繼承段落系統。
 
 您可以取消（然後重新啟用）繼承。 此功能可從以下來源取得（視元件而定）：
@@ -202,13 +202,13 @@ sidekick是編寫頁面時的關鍵工具。 它會在編寫頁面時浮動，�
 
 ## 新增註解 {#adding-annotations}
 
-[註解](/help/sites-classic-ui-authoring/classic-page-author-annotations.md) 允許其他作者對您的內容提供意見回饋。 這通常用於稽核和驗證目的。
+[註解](/help/sites-classic-ui-authoring/classic-page-author-annotations.md)可讓其他作者針對您的內容提供意見回饋。 這通常用於稽核和驗證目的。
 
 ## 預覽頁面 {#previewing-pages}
 
 Sidekick的底部邊框中有兩個圖示對預覽頁面很重要：
 
-![Sidekick的底部邊框，水準列有7個圖示。 列開頭的兩個圖示（編輯圖示和預覽模式圖示）分別以鉛筆符號和放大鏡符號表示。](do-not-localize/chlimage_1-5.png)
+![Sidekick的下框線，水準列有7個圖示。 列開頭的兩個圖示（編輯圖示和預覽模式圖示）分別以鉛筆符號和放大鏡符號表示。](do-not-localize/chlimage_1-5.png)
 
 * 鉛筆圖示會顯示您目前處於編輯模式，您可以在此新增、修改、移動或刪除內容。
 
@@ -220,11 +220,11 @@ Sidekick的底部邊框中有兩個圖示對預覽頁面很重要：
 
   在預覽模式中，sidekick將會減少，按一下向下箭頭圖示以返回編輯模式：
 
-  ![以AEM為標題的橫條，在標題右側以向下箭頭符號表示的編輯模式圖示。](do-not-localize/chlimage_1-8.png)
+  ![以AEM為標題的列，在標題右邊有一個編輯模式圖示，以向下箭頭符號表示。](do-not-localize/chlimage_1-8.png)
 
 ## 尋找和取代 {#find-replace}
 
-如需更大規模編輯相同片語a **[尋找和取代](/help/sites-classic-ui-authoring/author-env-search.md#find-and-replace)** 功能表選項可讓您在網站的某個區段中搜尋及取代字串的多個執行個體。
+若要對相同片語進行更大規模的編輯，**[尋找和取代](/help/sites-classic-ui-authoring/author-env-search.md#find-and-replace)**&#x200B;功能表選項可讓您在網站的某個區段中搜尋和取代字串的多個執行個體。
 
 ## 鎖定頁面 {#locking-a-page}
 
@@ -236,13 +236,13 @@ AEM可讓您鎖定頁面，不讓其他人變更內容。 當您對某個特定�
 
 若要鎖定頁面：
 
-1. 在 **網站** 頁簽中，選取要鎖定的頁面。
+1. 在&#x200B;**網站**&#x200B;索引標籤中，選取您要鎖定的頁面。
 1. 連按兩下頁面以開啟頁面進行編輯。
-1. 在 **頁面** sidekick的索引標籤，選擇 **鎖定頁面**：
+1. 在sidekick的&#x200B;**頁面**&#x200B;標籤中，選取&#x200B;**鎖定頁面**：
 
    ![screen_shot_2012-02-08at15750pm](assets/screen_shot_2012-02-08at15750pm.png)
 
-   訊息會顯示您的頁面已鎖定給其他使用者。 此外，在 **網站** 主控台， AEM WCM會將頁面顯示為已鎖定，並指出已鎖定頁面的使用者。
+   訊息會顯示您的頁面已鎖定給其他使用者。 此外，在&#x200B;**網站**&#x200B;主控台的右窗格中，AEM WCM會將頁面顯示為已鎖定，並指出已鎖定頁面的使用者。
 
    ![screen_shot_2012-02-08at20657pm](assets/screen_shot_2012-02-08at20657pm.png)
 
@@ -250,9 +250,9 @@ AEM可讓您鎖定頁面，不讓其他人變更內容。 當您對某個特定�
 
 若要解除鎖定頁面：
 
-1. 在 **網站** 索引標籤中，選取您要解除鎖定的頁面。
+1. 在&#x200B;**網站**&#x200B;索引標籤中，選取您要解除鎖定的頁面。
 1. 連按兩下頁面以開啟。
-1. 在 **頁面** sidekick的索引標籤，選擇 **解鎖頁面**.
+1. 在sidekick的&#x200B;**頁面**&#x200B;索引標籤中，選取&#x200B;**解鎖頁面**。
 
 ## 復原和重做頁面編輯 {#undoing-and-redoing-page-edits}
 
@@ -265,13 +265,13 @@ AEM可讓您鎖定頁面，不讓其他人變更內容。 當您對某個特定�
 
 >[!NOTE]
 >
->另請參閱 [還原和重做頁面編輯 — 理論](#undoing-and-redoing-page-edits-the-theory) 以取得復原和重做頁面編輯時可行功能的完整細節。
+>如需復原和重做頁面編輯時可行方法的完整詳細資訊，請參閱[復原和重做頁面編輯 — 理論](#undoing-and-redoing-page-edits-the-theory)。
 
 ## 還原和重做頁面編輯 — 理論 {#undoing-and-redoing-page-edits-the-theory}
 
 >[!NOTE]
 >
->您的系統管理員可以 [設定「復原/重做」功能的各個層面](/help/sites-administering/config-undo.md) 根據您執行個體的需求。
+>您的系統管理員可以根據您執行個體的需求[設定復原/重做功能的各個方面](/help/sites-administering/config-undo.md)。
 
 AEM會儲存您執行之動作的歷史記錄，以及您執行動作的順序。 因此，您可以依照執行順序復原數個動作。 接著，您可以使用重做來重新套用一或多個動作。
 
@@ -285,7 +285,7 @@ AEM會儲存您執行之動作的歷史記錄，以及您執行動作的順序�
 >
 >* 只要您使用復原後尚未進行頁面編輯，就可以重做動作。
 >* 最多可復原20個編輯動作（預設設定）。
->* 也使用 [鍵盤快速鍵](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md) 用於還原和重做。
+>* 也使用[鍵盤快速鍵](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md)進行還原和重做。
 >
 
 您可以對下列型別的頁面變更使用還原和重做：

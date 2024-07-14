@@ -20,7 +20,7 @@ Adobe 已採用 Adobe Commerce 的 GraphQL API 作為其所有商務相關資料
 
 ## 2. 產品資產 (影像) 是否可以透過 Adobe Commerce 管理員從 AEM 儲存和參考？如何使用 Dynamic Media 中的資產？
 
-無官方AEM Assets — 提供Adobe Commerce整合。 上有可用的合作夥伴聯結器 [marketplace](https://marketplace.magento.com/partner/bounteous_ecomm).
+無官方AEM Assets — 提供Adobe Commerce整合。 [市集](https://marketplace.magento.com/partner/bounteous_ecomm)上有可用的合作夥伴聯結器。
 
 或者，作為因應措施，您可以在AEM Assets中儲存產品資產（影像），但您必須在Adobe Commerce中手動儲存資產URL。 Dynamic Media是AEM Assets的一部分，且運作方式相同。
 
@@ -50,7 +50,7 @@ PIM資料會透過GraphQL要求向AEM和使用者端公開。 Adobe的建議是�
 
 ## 9. AEM Dispatcher 的快取失效如何與 AEM 和 Commerce 搭配使用？
 
-Adobe 建議為 Dispatcher 上快取的頁面設定 TTL 型快取失效。若是價格或庫存等動態資訊，Adobe建議在使用者端轉譯日期。 如需有關TTL型快取失效的詳細資訊，請參閱 [AEM傳送器](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17458.html)
+Adobe 建議為 Dispatcher 上快取的頁面設定 TTL 型快取失效。若是價格或庫存等動態資訊，Adobe建議在使用者端轉譯日期。 如需TTL型快取失效的詳細資訊，請參閱[AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17458.html)
 
 ## 10. 對於使用 Commerce 跨 AEM 內容進行整合搜尋有什麼建議嗎？
 
@@ -70,7 +70,7 @@ Adobe建議在AEM中管理與行銷相關的資料和內容。 使用內容片�
 
 ## 14.公司在整個簡報層使用AEM時，如何確保PCI相容性？
 
-Adobe 建議使用抽象的付款方式。這麼做會讓瀏覽器使用者端與支付閘道提供者直接通訊，讓Adobe不會保留或傳遞持卡人日期，或商務解決方案。 此方法僅需要 3 級 PCI 合規性。然而，要完全符合 PCI 標準還需要考慮其他事項，例如員工如何與系統和資料互動。如需Adobe Commerce PCI法規遵循的詳細資訊，請參閱 [PCI法規遵循](https://business.adobe.com/products/magento/pci-compliance.html)
+Adobe 建議使用抽象的付款方式。這麼做會讓瀏覽器使用者端與支付閘道提供者直接通訊，讓Adobe不會保留或傳遞持卡人日期，或商務解決方案。 此方法僅需要 3 級 PCI 合規性。然而，要完全符合 PCI 標準還需要考慮其他事項，例如員工如何與系統和資料互動。如需Adobe Commerce PCI法規遵循的詳細資訊，請參閱[PCI法規遵循](https://business.adobe.com/products/magento/pci-compliance.html)
 
 ## 15. 如果我使用 AEM 和 Adobe Commerce 雲端版本，此聯合解決方案是否符合 PCI 要求？
 

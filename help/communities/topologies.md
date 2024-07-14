@@ -24,26 +24,26 @@ ht-degree: 1%
 
 AEM平台使用節點存放區，將網站內容從製作者複製到發佈者，而AEM Communities則使用單一UGC通用存放區，永不複製。
 
-對於常見的UGC存放區，必須選擇 [儲存資源提供者(SRP)](working-with-srp.md). 建議的選項包括：
+對於一般UGC存放區，必須選擇[儲存資源提供者(SRP)](working-with-srp.md)。 建議的選項包括：
 
 * [DSRP — 關聯式資料庫儲存資源提供者](dsrp.md)
 * [MSRP - MongoDB儲存資源提供者](msrp.md)
 * [ASRP -Adobe儲存資源提供者](asrp.md)
 
-一個其他SRP選項， [JSRP - JCR儲存資源提供者](jsrp.md)不支援作者和發佈環境共同的UGC存放區存取。
+另一個SRP選項[JSRP - JCR儲存資源提供者](jsrp.md)不支援作者和發佈環境同時存取的通用UGC存放區。
 
 需要共用存放區會產生下列建議拓撲。
 
 >[!NOTE]
 >
->若為AEM Communities， [從未復寫UGC](working-with-srp.md#ugc-never-replicated).
+>對於AEM Communities，[UGC從未復寫](working-with-srp.md#ugc-never-replicated)。
 >
->當部署不包含 [公用存放區](working-with-srp.md)，UGC將只會顯示在輸入它的AEM發佈或作者執行個體上。
+>當部署不包含[公用存放區](working-with-srp.md)時，UGC將只會顯示在輸入它的AEM發佈或作者執行個體上。
 >
 
 >[!NOTE]
 >
->如需AEM平台的詳細資訊，請參閱 [建議的部署](../../help/sites-deploying/recommended-deploys.md) 和 [AEM平台簡介](../../help/sites-deploying/data-store-config.md).
+>如需AEM平台的詳細資訊，請參閱[建議的部署](../../help/sites-deploying/recommended-deploys.md)和[AEM平台簡介](../../help/sites-deploying/data-store-config.md)。
 
 ## 用於生產 {#for-production}
 
@@ -51,17 +51,17 @@ AEM平台使用節點存放區，將網站內容從製作者複製到發佈者�
 
 兩個範例：
 
-1. 如果UGC的預期容量很高，而且可以有本機MongoDB執行個體，那麼選項會是 [MSRP](msrp.md).
+1. 如果UGC的預期磁碟區很高，而且可能有本機MongoDB執行個體，則選擇是[MSRP](msrp.md)。
 
-1. 為獲得頁面內容的最佳效能，請選擇 [發佈陣列](../../help/sites-deploying/recommended-deploys.md#tarmk-farm) 和 [ASRP](asrp.md) 會透過相對簡單的操作，提供最佳的UGC規模調整。
+1. 為了達到頁面內容的最佳效能，選擇[發佈伺服器陣列](../../help/sites-deploying/recommended-deploys.md#tarmk-farm)和[ASRP](asrp.md)會透過相對直接的操作，提供最佳的UGC縮放。
 
 對於這兩者，部署可能基於任何OAK微核心。
 
-若要選擇適當的常用存放區，請仔細考慮唯一的 [特性](working-with-srp.md#characteristics-of-srp-options) 每個。
+若要選擇適當的通用存放區，請仔細考慮每個存放區的唯一[特性](working-with-srp.md#characteristics-of-srp-options)。
 
-如需Oak微核心的詳細資訊，請造訪 [建議的部署](../../help/sites-deploying/recommended-deploys.md).
+如需Oak微核心的詳細資訊，請造訪[建議的部署](../../help/sites-deploying/recommended-deploys.md)。
 
-### TarMK發佈陣列 {#tarmk-publish-farm}
+### TarMK Publish農場 {#tarmk-publish-farm}
 
 當拓撲為發佈伺服器陣列時，重要的相關主題為：
 
@@ -86,9 +86,9 @@ AEM平台使用節點存放區，將網站內容從製作者複製到發佈者�
 
 ## 適用於開發 {#for-development}
 
-對於非生產環境， [JSRP](jsrp.md) 提供簡易功能，讓您輕鬆設定具有一個製作例項和一個發佈例項的開發環境。
+對於非生產環境，[JSRP](jsrp.md)可簡化建立一個開發環境，包括一個製作執行個體和一個發佈執行個體。
 
-若選擇 [ASRP](asrp.md)， [DSRP](dsrp.md) 或 [MSRP](msrp.md) 對於生產環境，也可以使用Adobe隨選儲存或MongoDB來設定類似的開發環境。 如需範例，請參閱 [如何設定MongoDB以進行示範](demo-mongo.md).
+如果為生產選擇[ASRP](asrp.md)、[DSRP](dsrp.md)或[MSRP](msrp.md)，也可以使用Adobe隨選儲存或MongoDB來設定類似的開發環境。 如需範例，請參閱[HowTo設定MongoDB for Demo](demo-mongo.md)。
 
 ## 參考 {#references}
 
@@ -106,7 +106,7 @@ AEM平台使用節點存放區，將網站內容從製作者複製到發佈者�
 
 * [節點存放區和資料存放區](../../help/sites-deploying/data-store-config.md)
 
-  網站內容基本上會儲存在節點存放區中。 對於資產，資料存放區可設定為儲存二進位資料。 對於Communities，必須設定通用存放區以選取SRP。
+  網站內容基本上會儲存在節點存放區中。 對於Assets，資料存放區可設定為儲存二進位資料。 對於Communities，必須設定通用存放區以選取SRP。
 
 * [儲存元素](../../help/sites-deploying/storage-elements-in-aem-6.md)
 

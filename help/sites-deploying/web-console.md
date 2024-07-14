@@ -18,7 +18,7 @@ ht-degree: 1%
 
 # Web 控制台{#web-console}
 
-Adobe Experience Manager (AEM)中的Web主控台是根據 [Apache Felix Web管理主控台](https://felix.apache.org/documentation/subprojects/apache-felix-web-console.html). Apache Felix是社群努力實施OSGi R4服務平台，其中包括OSGi架構和標準服務。
+Adobe Experience Manager (AEM)中的Web主控台是以[Apache Felix Web管理主控台](https://felix.apache.org/documentation/subprojects/apache-felix-web-console.html)為基礎。 Apache Felix是社群努力實施OSGi R4服務平台，其中包括OSGi架構和標準服務。
 
 >[!NOTE]
 >
@@ -28,25 +28,25 @@ Adobe Experience Manager (AEM)中的Web主控台是根據 [Apache Felix Web管�
 
 Web主控台提供一系列用於維護OSGi套裝的標籤，包括：
 
-* [設定](#configuration)：用於設定OSGi套件組合，因此是設定AEM系統引數的基礎機制
-* [組合](#bundles)：用於安裝套件組合
+* [組態](#configuration)：用於設定OSGi組合，因此是設定AEM系統引數的基礎機制
+* [組合](#bundles)：用於安裝組合
 * [元件](#components)：用於控制AEM所需元件的狀態
 
 所做的任何變更都會立即套用至執行中的系統。 不需要重新啟動。
 
-主控台可從下列位置存取： `../system/console`；例如：
+可以從`../system/console`存取主控台；例如：
 
 `http://localhost:4502/system/console/components`
 
 ## 設定 {#configuration}
 
-此 **設定** tab可用來設定OSGi組合，因此是設定AEM系統引數的基礎機制。
+**Configuration**&#x200B;索引標籤是用來設定OSGi組合，因此是設定AEM系統引數的基礎機制。
 
 >[!NOTE]
 >
->另請參閱 [使用Web主控台進行OSGi設定](/help/sites-deploying/configuring-osgi.md) 以取得更多詳細資料。
+>如需詳細資訊，請參閱使用Web主控台[OSGi設定](/help/sites-deploying/configuring-osgi.md)。
 
-此 **設定** 索引標籤可透過以下任一方式存取：
+**組態**&#x200B;索引標籤可由以下任一方式存取：
 
 * 下拉式功能表：
 
@@ -62,7 +62,7 @@ Web主控台提供一系列用於維護OSGi套裝的標籤，包括：
 
 此畫面上的下拉式清單提供兩種型別的設定：
 
-* **設定**
+* **組態**
 可讓您更新現有的組態。 這些具有持續性身分(PID)，可以是：
 
    * 標準及為AEM不可或缺的一部分；若刪除這些值，則會傳回預設設定。
@@ -103,7 +103,7 @@ Web主控台提供一系列用於維護OSGi套裝的標籤，包括：
 
 ## 組合 {#bundles}
 
-此 **組合** tab是安裝AEM所需的OSGi套件組合的機制。 可透過下列任一方法來存取標籤：
+**組合**&#x200B;索引標籤是安裝AEM所需的OSGi組合的機制。 可透過下列任一方法來存取標籤：
 
 * 下拉式功能表：
 
@@ -121,7 +121,7 @@ Web主控台提供一系列用於維護OSGi套裝的標籤，包括：
 
 * **安裝或更新**
 
-  您可以 **瀏覽** 以尋找包含您的套件組合的檔案，並指定它是否應 **開始** 立即且 **開始層級**.
+  您可以&#x200B;**瀏覽**&#x200B;以尋找包含您的套件組合的檔案，並指定它是否應該立即&#x200B;**啟動**，以及應該從哪個&#x200B;**啟動層級**。
 
 * **重新載入**
 
@@ -151,11 +151,11 @@ Web主控台提供一系列用於維護OSGi套裝的標籤，包括：
 
 >[!NOTE]
 >
->晚於 **更新**，Adobe建議您執行 **重新整理封裝**.
+>在&#x200B;**更新**&#x200B;之後，Adobe建議您執行&#x200B;**重新整理封裝**。
 
 ## 元件 {#components}
 
-此 **元件** 索引標籤可讓您啟用和/或停用各種元件。 您可透過以下任一方式存取該區域：
+**元件**&#x200B;索引標籤可讓您啟用和/或停用各種元件。 您可透過以下任一方式存取該區域：
 
 * 下拉式功能表：
 

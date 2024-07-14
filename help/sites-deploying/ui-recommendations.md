@@ -68,66 +68,66 @@ Classic UI已透過AEM 6.4棄用，Adobe不打算進一步增強Classic UI。 �
    <td>使用預設的UI。</td>
   </tr>
   <tr>
-   <td><p>已使用AEM一段時間。</p> <p>使用現成可用的產品UI，並為網站開發自訂元件。<br /> </p> </td>
+   <td><p>已使用AEM一段時間。</p> <p>已使用現成可用的產品UI，並為網站開發自訂元件。<br /> </p> </td>
    <td>
     <ol>
      <li>更新至6.5</li>
-     <li>使用預設UI進行網站管理、資產…… 等等。<br /> </li>
-     <li>設定「編輯頁面」動作以開啟傳統UI頁面編輯器。 另請參閱 <a href="#selecting-your-ui">選取您的UI</a>.</li>
+     <li>使用預設UI進行網站管理、資產…… etc.<br /> </li>
+     <li>設定「編輯頁面」動作以開啟傳統UI頁面編輯器。 檢視<a href="#selecting-your-ui">選取您的UI</a>。</li>
     </ol> <p>然後，在第二階段：</p>
     <ol>
-     <li>更新您的元件對話方塊，以使用Coral 3對話方塊格式。 Adobe建議使用 <a href="/help/sites-developing/modernization-tools.md">AEM現代化工具</a> 以更新元件。</li>
+     <li>更新您的元件對話方塊，以使用Coral 3對話方塊格式。 Adobe建議使用<a href="/help/sites-developing/modernization-tools.md">AEM現代化工具</a>來更新元件。</li>
     </ol> </td>
   </tr>
   <tr>
-   <td>已建立一個使用ClientContext與整合的網站。<br /> </td>
+   <td>已建置使用ClientContext與整合的網站。<br /> </td>
    <td>
     <ol>
      <li>更新至6.5</li>
      <li>使用預設UI進行網站管理、資產…… 等等。</li>
-     <li>設定「編輯頁面」動作以開啟傳統UI頁面編輯器。 另請參閱 <a href="#selecting-your-ui">選取您的UI</a>.</li>
+     <li>設定「編輯頁面」動作以開啟傳統UI頁面編輯器。 檢視<a href="#selecting-your-ui">選取您的UI</a>。</li>
     </ol> <p>然後，在第二階段：</p>
     <ol>
-     <li>更新您的元件對話方塊，以使用Coral 3對話方塊格式。 Adobe建議使用 <a href="/help/sites-developing/modernization-tools.md">AEM現代化工具</a> 以更新元件。</li>
+     <li>更新您的元件對話方塊，以使用Coral 3對話方塊格式。 Adobe建議使用<a href="/help/sites-developing/modernization-tools.md">AEM現代化工具</a>來更新元件。</li>
      <li>設定ContextHub (取代ClientContext)並更新頁面範本，以使用ContextHub。 ContextHub的相容性模式允許載入自訂ClientContext存放區。</li>
     </ol> </td>
   </tr>
   <tr>
    <td><p>已使用CQ/AEM許多年。</p> <p>已擴充產品UI （例如網站管理員），並建立具有大量編輯對話方塊的元件。</p> </td>
-   <td><p>更新至6.5，並將傳統UI設定為所有使用者的頁面編寫預設值。 另請參閱 <a href="#selecting-your-ui">選取您的UI</a>.</p> <p>然後啟動專案以套用自訂並最佳化Coral 3格式的元件對話方塊。 另請參閱 <a href="#resources-to-help">需要說明的資源</a>.<br /> </p> </td>
+   <td><p>更新至6.5，並將傳統UI設定為所有使用者的頁面編寫預設值。 檢視<a href="#selecting-your-ui">選取您的UI</a>。</p> <p>然後啟動專案以套用自訂並最佳化Coral 3格式的元件對話方塊。 檢視<a href="#resources-to-help">可協助的資源</a>.<br /> </p> </td>
   </tr>
  </tbody>
 </table>
 
 ### 常見問題集 {#faq}
 
-請參閱知識庫文章， [Touch UI編寫常見問題集](https://helpx.adobe.com/experience-manager/kb/index/touchui_faq.html)，以取得詳細資訊；包括傳統UI淘汰排程的任何相關資訊。
+請參閱知識庫文章[Touch UI編寫常見問題集](https://helpx.adobe.com/experience-manager/kb/index/touchui_faq.html)，以取得詳細資料；包括任何有關傳統UI淘汰排程的資訊。
 
 ### 選取您的UI {#selecting-your-ui}
 
-另請參閱 [選取您的UI](/help/sites-authoring/select-ui.md) 以取得視需要設定系統的相關資訊。
+如需視需要設定系統的相關資訊，請參閱[選取您的UI](/help/sites-authoring/select-ui.md)。
 
 ### 觸控式UI狀態 {#touch-enabled-ui-status}
 
-如需AEM 6.5觸控式UI增強功能的詳細資訊，請參閱 [新增功能](/help/release-notes/release-notes.md#what-s-new) 發行說明中的。
+如需AEM 6.5觸控式UI增強功能的詳細資訊，請參閱發行說明中的[新增功能](/help/release-notes/release-notes.md#what-s-new)。
 
-完整的概觀請參閱 [觸控式UI功能狀態](/help/release-notes/touch-ui-features-status.md) 頁面
+完整的概覽請參閱[觸控式UI功能狀態](/help/release-notes/touch-ui-features-status.md)頁面
 
 ### 需要說明的資源 {#resources-to-help}
 
 如需基本處理的背景資訊：
 
-* [製作頁面](/help/sites-authoring/page-authoring.md).
+* [編寫頁面](/help/sites-authoring/page-authoring.md)。
 
 如需詳細的開發資訊：
 
-* [觸控式UI架構](/help/sites-developing/touch-ui-concepts.md).
-* 使用 [AEM現代化工具](/help/sites-developing/modernization-tools.md) 將元件「編輯」對話方塊從傳統UI轉換為觸控式UI。
+* [觸控式UI架構](/help/sites-developing/touch-ui-concepts.md)。
+* 使用[AEM現代化工具](/help/sites-developing/modernization-tools.md)將元件「編輯」對話方塊從傳統UI轉換為觸控式UI。
 
-* [觸控式UI的結構](/help/sites-developing/touch-ui-structure.md).
+* [觸控式UI的結構](/help/sites-developing/touch-ui-structure.md)。
 
 * [在觸控式UI中自訂主控台](/help/sites-developing/customizing-consoles-touch.md) （包含範常式式碼）。
 
 * [在觸控式UI中自訂頁面編寫](/help/sites-developing/customizing-page-authoring-touch.md) （包含範常式式碼）。
 
-* [Granite UI檔案](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html).
+* [Granite UI檔案](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html)。

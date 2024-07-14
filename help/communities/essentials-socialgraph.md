@@ -18,11 +18,11 @@ ht-degree: 2%
 
 # 社交圖基本資訊  {#social-graph-essentials}
 
-社群成員可關注的功能 [活動](essentials-activities.md) 並遵循透過兩個元件建立：
+社群成員追蹤[活動](essentials-activities.md)及被追蹤的能力是透過兩個元件建立的：
 
-此 `following` 元件必須與另一個資源相關聯，而且此關聯已針對中的現有Communities成員和功能建立 [社群網站](overview.md#communitiessites).
+`following`元件必須與其他資源關聯，而且此關聯已針對[社群網站](overview.md#communitiessites)中的現有Communities成員和功能建立。
 
-此 `following` 元件會列出目前成員之後的成員，或目前成員之後的成員。 此成員間關係的社交圖表包含在為社群網站建立的使用者個人資料中。
+`following`元件列出目前成員之後的成員，或目前成員之後的成員。 此成員間關係的社交圖表包含在為社群網站建立的使用者個人資料中。
 
 ## 使用者端的Essentials {#essentials-for-client-side}
 
@@ -52,20 +52,20 @@ ht-degree: 2%
   </tr>
   <tr>
    <td><strong> 屬性</strong></td>
-   <td>另請參閱 <a href="socialgraph.md">使用社交圖</a></td>
+   <td>檢視<a href="socialgraph.md">使用社交圖</a></td>
   </tr>
   <tr>
-   <td><strong> 可選<br /> 屬性</strong></td>
+   <td><strong> 選用的<br />屬性</strong></td>
    <td>
     <ul>
      <li>名稱: <strong><code>outgoing</code></strong></li>
      <li>型別：布林值</li>
-     <li>值：<br />
+     <li>值： <br />
       <ul>
-       <li><i>真 </i>- <code>following</code> 元件會列出登入的成員 <code>follows</code></li>
-       <li><i>假 </i>- <code>following</code> 元件會列出符合以下條件的成員 <code>follow </code>登入會員</li>
+       <li><i>True </i>- <code>following</code>元件列出登入成員的成員 <code>follows</code></li>
+       <li><i>False </i>- <code>following</code>元件列出<code>follow </code>登入成員的成員</li>
       </ul> </li>
-    </ul> <p>預設為 <i>true</i> 如果屬性遺失。 無法在作者模式中使用編輯對話方塊設定此屬性。 必須將屬性新增至 <code>following</code> 節點，使用 <a href="../../help/sites-developing/developing-with-crxde-lite.md">CRXDE|Lite</a>.</p> </td>
+    </ul> <p>如果屬性遺失，則預設為<i>true</i>。 無法在作者模式中使用編輯對話方塊設定此屬性。 必須使用<a href="../../help/sites-developing/developing-with-crxde-lite.md">CRXDE|Lite</a>將屬性新增到<code>following</code>節點的執行個體。</p> </td>
   </tr>
  </tbody>
 </table>

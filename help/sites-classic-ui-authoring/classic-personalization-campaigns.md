@@ -36,16 +36,16 @@ ht-degree: 0%
 行銷活動管理由各種元素組成：
 
 * **品牌**
-在Adobe Experience Manager (AEM)中，品牌是頂層單位，並形成集合 **行銷活動**.
+在Adobe Experience Manager (AEM)中，品牌是頂層單位，並構成**行銷活動**&#x200B;的集合。
 
 * **行銷活動**
-行銷活動是個人的集合 **體驗**.
+行銷活動是個別**體驗**&#x200B;的集合。
 
 * **體驗**
-焦點內容會形成各種體驗，並在呈現給訪客的 **接觸點**. 有數種體驗可供使用：
+焦點內容會形成各種體驗，在**接觸點**&#x200B;呈現給訪客。 有數種體驗可供使用：
 
-   * **Teasers**
-     [Teaser頁面/段落](#teasers) 用於引導特定訪客 **區段** 專注於客戶興趣的內容。
+   * **預告**
+     [Teaser頁面/段落](#teasers)用於引導特定訪客&#x200B;**區段**&#x200B;前往關注其興趣的內容。
 
      Teaser頁面可以：
 
@@ -56,7 +56,7 @@ ht-degree: 0%
 
    * **電子報**
 
-     [電子郵件通訊](#emailmarketing) 用於吸引使用者並鼓勵他們造訪您的網站。 這些通常採用電子報的形式，傳送給您的 **銷售機會** (已分組到 **清單**)。 **注意：** Adobe不打算進一步增強此功能。 建議為 [使用Adobe Campaign以及與AEM的整合](/help/sites-administering/campaign.md).
+     [電子郵件通訊](#emailmarketing)用於與使用者互動，並鼓勵他們造訪您的網站。 這些通常採用電子報的形式，傳送給您的&#x200B;**銷售機會** （這些銷售機會已分組為&#x200B;**清單**）。 **注意：** Adobe不打算進一步增強此功能。 建議您[使用Adobe Campaign並整合至AEM](/help/sites-administering/campaign.md)。
 
    * **Adobe Target**
 
@@ -68,17 +68,17 @@ ht-degree: 0%
 
   例如，對於Teaser，這是Teaser段落所在的內容頁面；對於電子報而言，這是郵寄清單。
 
-* **銷售機會**
+* **個銷售機會**
 
   您收集到的訪客相關資訊以及如何聯絡這些資訊構成了潛在客戶的基礎。 **注意：** Adobe不打算進一步增強此功能。
 
-  建議為 [使用Adobe Campaign以及與AEM的整合](/help/sites-administering/campaign.md).
+  建議您[使用Adobe Campaign並整合至AEM](/help/sites-administering/campaign.md)。
 
 * **清單**
 
   潛在客戶會分組到清單中，以便您對其採取集體行動。 注意： **注意：** Adobe不打算進一步增強此功能。
 
-  建議為 [使用Adobe Campaign以及與AEM的整合。](/help/sites-administering/campaign.md)
+  建議您[使用Adobe Campaign並整合至AEM。](/help/sites-administering/campaign.md)
 
 * **區段**
 
@@ -88,6 +88,6 @@ ht-degree: 0%
 
   行銷活動管理員(MCM)是一個主控台，可讓您存取建立和控制行銷活動、品牌、體驗、接觸點、銷售機會、清單、區段和報表所需的所有功能。
 
-  它可從各種位置存取(標示為 **行銷活動**)，或以URL為例：
+  可從各種位置（標示為&#x200B;**行銷活動**）存取，或是使用URL存取：
 
   `http://localhost:4502/libs/mcm/content/admin.html`

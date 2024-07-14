@@ -26,18 +26,18 @@ ht-degree: 0%
 
 您的使用者是否存取所有內容？ 他們是否正在放棄應用程式？如果是，在哪裡放棄？ 他們會在應用程式中停留的頻率，以及回訪使用應用程式的頻率？ 您可以引入哪些變更，然後測量增加保留率的程度？ 當機率如何呢？您的應用程式會針對使用者當機嗎？
 
-充分運用 [行動應用程式分析](https://business.adobe.com/products/analytics/mobile-marketing.html) 在您的Adobe Experience Manager (AEM)應用程式中，透過與整合 [Adobe行動服務](https://business.adobe.com/products/campaign/mobile-marketing.html).
+透過與[Analytics Mobile Services](https://business.adobe.com/products/campaign/mobile-marketing.html)整合，在您的Adobe Experience Manager (AEM) Apps中善用[Adobe應用程式Analytics](https://business.adobe.com/products/analytics/mobile-marketing.html)。
 
 檢測您的AEM應用程式，以追蹤、報告並瞭解使用者如何與您的行動應用程式和內容互動，並測量關鍵生命週期量度，例如啟動次數、應用程式內時間和當機率。
 
-本節說明AEM如何執行 *開發人員* 可以：
+本節說明AEM *開發人員*&#x200B;如何：
 
 * 將Mobile Analytics整合至行動應用程式
 * 使用Bloodhound測試您的Analytics追蹤
 
 ## 先決條件 {#prerequisties}
 
-AEM Mobile需要Adobe Analytics帳戶，才能在您的應用程式中收集和報告追蹤資料。 在設定過程中， AEM *管理員* 必須首先：
+AEM Mobile需要Adobe Analytics帳戶，才能在您的應用程式中收集和報告追蹤資料。 在設定過程中，AEM *系統管理員*&#x200B;必須先：
 
 * 設定Adobe Analytics帳戶，並在Mobile Services中為您的應用程式建立報表套裝。
 * 在Adobe Experience Manager (AEM)中設定AMSCloud Service。
@@ -48,7 +48,7 @@ AEM Mobile需要Adobe Analytics帳戶，才能在您的應用程式中收集和�
 
 設定Analytics帳戶後，請建立Content Sync設定，將內容提取至您的行動應用程式。
 
-如需其他詳細資訊，請參閱「設定內容同步內容」。 設定必須指示Content Sync將ADBMobileConfig放入/www目錄。 例如，在Geometrixx Outdoors應用程式中，內容同步設定為： */content/phonegap/geometrixx-outdoors/shell/jcr：content/pge-app/app-config/ams-ADBMobileConfig*. 也有開發設定。 不過，如果有Geometrixx Outdoors，則與非開發設定相同。
+如需其他詳細資訊，請參閱「設定內容同步內容」。 設定必須指示Content Sync將ADBMobileConfig放入/www目錄。 例如，在Geometrixx Outdoors應用程式中，內容同步設定為： */content/phonegap/geometrixx-outdoors/shell/jcr：content/pge-app/app-config/ams-ADBMobileConfig*。 也有開發設定。 不過，如果有Geometrixx Outdoors，則與非開發設定相同。
 
 如需如何從行動應用程式AEM應用程式儀表板下載ADBMobileConfig的詳細資訊，請參閱Analytics - Mobile Services -AdobeMobile Services SDK設定檔案。
 
@@ -64,9 +64,9 @@ AEM Mobile需要Adobe Analytics帳戶，才能在您的應用程式中收集和�
 
 每個平台都需要將ADBMobileConfig複製到特定位置。
 
-如果使用PhoneGap CLI建置，則可使用cordova建置勾點指令碼來完成。 您可以在Geometrixx Outdoors應用程式中看到以下內容：*content/phonegap/geometrixx-outdoors/shell/_jcr_content/pge-app/app-content/phonegap/scripts/restore_plugins.js.*
+如果使用PhoneGap CLI建置，則可使用cordova建置勾點指令碼來完成。 您可以在Geometrixx Outdoors應用程式中看到此訊息： *content/phonegap/geometrixx-outdoors/shell/_jcr_content/pge-app/app-content/phonegap/scripts/restore_plugins.js.*
 
-針對iOS，檔案必須複製到XCode專案的 **資源** 目錄(例如「platforms/ios/Geometrixx/Resources/ADBMobileConfig.json」)。 如果應用程式的目標為Android™，則複製的目的地路徑為「platforms/android/assets/ADBMobileConfig.json」。 如需在PhoneGap CLI建置期間使用鉤點的詳細資訊，請參閱 [勾選您的Cordova/PhoneGap專案需求](https://gist.github.com/jlcarvalho/22402d013bc72f795d45a01836ce735c).
+若為iOS，必須將檔案複製到XCode專案的&#x200B;**資源**&#x200B;目錄(例如&quot;platforms/ios/Geometrixx/Resources/ADBMobileConfig.json&quot;)。 如果應用程式是以Android™為目標，則複製的目的地路徑為「platforms/android/assets/ADBMobileConfig.json」。 如需在PhoneGap CLI建置期間使用鉤點的詳細資訊，請參閱[您的Cordova/PhoneGap專案需要的三個鉤點](https://gist.github.com/jlcarvalho/22402d013bc72f795d45a01836ce735c)。
 
 ```xml
 ///////////////////////////
@@ -97,13 +97,13 @@ AEM Mobile需要Adobe Analytics帳戶，才能在您的應用程式中收集和�
 </feature>
 ```
 
-Geometrixx Outdoors App config.xml位於 */content/phonegap/geometrixx-outdoors/shell/jcr：content/pge-app/app-content/phonegap/www/config.xml*. 上述範例會要求使用特定版本的外掛程式，方法是新增「#」，然後在外掛程式URL後面加上標籤值。 此為遵循的良好做法，可確保不會因在建置期間新增未經測試的外掛程式而出現未預期的問題。
+Geometrixx Outdoors App config.xml位於&#x200B;*/content/phonegap/geometrixx-outdoors/shell/jcr：content/pge-app/app-content/phonegap/www/config.xml*。 上述範例會要求使用特定版本的外掛程式，方法是新增「#」，然後在外掛程式URL後面加上標籤值。 此為遵循的良好做法，可確保不會因在建置期間新增未經測試的外掛程式而出現未預期的問題。
 
 執行這些步驟後，您的應用程式將可報告Adobe Analytics提供的所有生命週期量度。 這包括啟動、當機和安裝等資料。 如果這是您唯一關心的資料，則表示您已完成。 如果您想要收集自訂資料，則您必須檢測程式碼。
 
 ### 檢測您的程式碼以進行完整應用程式追蹤 {#instrument-your-code-for-full-app-tracking}
 
-中提供數個追蹤API [AMS Phonegap外掛程式API。](https://github.com/Adobe-Marketing-Cloud/mobile-services/blob/master/docs/ios/phonegap/phonegap-methods.md)
+[AMS Phonegap外掛程式API中提供了數個追蹤API。](https://github.com/Adobe-Marketing-Cloud/mobile-services/blob/master/docs/ios/phonegap/phonegap-methods.md)
 
 這些功能可讓您追蹤狀態和動作，例如使用者在應用程式中導覽至的頁面、最常使用哪些控制項。 要檢測應用程式以進行追蹤，最簡單的方式是使用AMS外掛程式提供的Analytics API。
 
@@ -116,7 +116,7 @@ Geometrixx Outdoors App config.xml位於 */content/phonegap/geometrixx-outdoors/
 
 #### 連線至AMS的屬性 {#properties-for-connecting-to-ams}
 
-*com.adobe.cq.mobile.mobileservices.impl.service.MobileServicesHttpClientImp*&#x200B;我公開下列屬性以連線至AMS：
+*com.adobe.cq.mobile.mobileservices.impl.service.MobileServicesHttpClientImp* l公開下列連線至AMS的屬性：
 
 | **標籤** | **說明** | **預設** |
 |---|---|---|

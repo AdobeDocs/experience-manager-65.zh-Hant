@@ -22,7 +22,7 @@ ht-degree: 0%
 
 依預設，透過Admin Console切換至傳統UI的功能會停用。 因此，將滑鼠懸停在特定主控台圖示上時看到的快顯視窗圖示將不再顯示，這些圖示可讓您存取傳統UI。
 
-每個在中有Classic UI版本的主控台 `/libs/cq/core/content/nav` 可個別重新啟用，以便 **傳統UI** 當選項滑過時，控制檯圖示上方會再次彈出該選項。
+每個在`/libs/cq/core/content/nav`中有傳統UI版本的主控台都可以個別重新啟用，以便&#x200B;**傳統UI**&#x200B;選項在滑鼠移過時再次彈到主控台圖示上。
 
 在此範例中，您正在為Sites主控台重新啟用Classic UI 。
 
@@ -38,7 +38,7 @@ ht-degree: 0%
 
    `/libs/cq/core/content/nav/sites`
 
-1. 使用建立覆蓋 **覆蓋節點** 選項；例如：
+1. 使用&#x200B;**覆蓋節點**&#x200B;選項建立覆蓋；例如：
 
    * **路徑**： `/apps/cq/core/content/nav/sites`
    * **覆蓋位置**： `/apps/`
@@ -48,8 +48,8 @@ ht-degree: 0%
 
    `enableDesktopOnly = {Boolean}true`
 
-1. 此 **傳統UI** 選項在Admin Console中再次作為彈出視窗選項提供。
+1. **傳統UI**&#x200B;選項再次在Admin Console中作為彈出視窗選項提供。
 
-   ![傳統UI彈出式選項](assets/syui-01-2019-02-27-15-16-55.png)
+   ![傳統UI彈出視窗選項](assets/syui-01-2019-02-27-15-16-55.png)
 
 針對您想要重新啟用Classic UI版本存取權的每個主控台，重複這些步驟。

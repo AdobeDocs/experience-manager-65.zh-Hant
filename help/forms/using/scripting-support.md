@@ -1,6 +1,6 @@
 ---
 title: HTML5表單的指令碼支援
-description: HTML5 Forms支援的JavaScript、FormCalc屬性及其他方法。
+description: JavaScript、FormCalc屬性，以及HTML5 Forms支援的其他方法。
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -18,7 +18,7 @@ ht-degree: 6%
 
 # HTML5表單的指令碼支援 {#scripting-support-for-html-forms}
 
-HTML5表單中支援的JavaScript、FormCalc屬性和方法如下所示：
+JavaScript、FormCalc屬性以及HTML5表單支援的方法如下所列：
 
 ## $event {#event}
 
@@ -26,7 +26,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法如下所示：
  <tbody>
   <tr>
    <th>屬性 </th>
-   <th>說明<br /> </th>
+   <th>描述<br /> </th>
    <th>例外</th>
   </tr>
   <tr>
@@ -46,7 +46,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法如下所示：
   <tr>
    <td><code>newtext</code></td>
    <td>指定欄位在回應使用者動作而變更後的內容。</td>
-   <td><p>此 <code>newText</code> 屬性在下列情況下無法正常運作：</p>
+   <td><p><code>newText</code>屬性在下列情況下無法正常運作：</p>
     <ul>
      <li>在選取 — 取代文字時</li>
      <li>在刪除、複製和貼上文字時。</li>
@@ -95,7 +95,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法如下所示：
   <tr>
    <td><code>apptype</code></td>
    <td>傳回主機的應用程式型別。 僅適用於使用者端應用程式。</td>
-   <td>傳回 <code>HTML 5</code>.</td>
+   <td>傳回<code>HTML 5</code>。</td>
   </tr>
   <tr>
    <td><code>name</code></td>
@@ -124,7 +124,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法如下所示：
   </tr>
   <tr>
    <td><code>calculationsEnabled</code></td>
-   <td>指定是否執行計算指令碼。<br /> </td>
+   <td>指定是否要執行計算指令碼。<br /> </td>
    <td>無</td>
   </tr>
   <tr>
@@ -182,7 +182,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法如下所示：
   <tr>
    <td><code>access</code></td>
    <td>控制內容的使用者存取權。</td>
-   <td>不適用於排除群組。 此外，HTML5表單對非互動和受保護物件也提供相同的處理方式。<br /> </td>
+   <td>不適用於排除群組。 此外，HTML5表單對非互動和受保護物件給予相同的處理。<br /> </td>
   </tr>
   <tr>
    <td><code>name</code></td>
@@ -202,17 +202,17 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法如下所示：
   <tr>
    <td><code>formattedValue</code></td>
    <td>指定此欄位的格式化值。</td>
-   <td>設定 <code>formattedValue</code> 不支援透過指令碼。</td>
+   <td>不支援透過指令碼設定<code>formattedValue</code>。</td>
   </tr>
   <tr>
    <td><code>editValue</code></td>
    <td>指定此欄位的編輯值。</td>
-   <td>設定 <code>editValue </code>不支援透過指令碼。</td>
+   <td>不支援透過指令碼設定<code>editValue </code>。</td>
   </tr>
   <tr>
    <td><code>formatMessage</code></td>
    <td>指定此欄位的格式驗證訊息字串。</td>
-   <td>設定 <code>formatMessage </code>不支援透過指令碼。</td>
+   <td>不支援透過指令碼設定<code>formatMessage </code>。</td>
   </tr>
   <tr>
    <td><code>fillcolor</code></td>
@@ -326,7 +326,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法如下所示：
   </tr>
   <tr>
    <td>註解</td>
-   <td>註解物件說明與表單設計物件關聯的描述性標籤。<br /> </td>
+   <td>標題物件描述與表單設計物件關聯的描述性標籤。<br /> </td>
    <td>無</td>
   </tr>
   <tr>
@@ -337,7 +337,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法如下所示：
   <tr>
    <td>parentSubform</td>
    <td>指定此欄位的父子表單（頁面）。</td>
-   <td>一律會傳回父項子表單，而非傳回第一個非領域化的父項子表單。<br /> </td>
+   <td>一律會傳回父項子表單，而非傳回第一個非領域設定父項子表單。<br /> </td>
   </tr>
   <tr>
    <td>選定索引</td>
@@ -349,7 +349,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法如下所示：
 
 ## 表單 {#form}
 
-| **屬性** | **說明** | **例外** |
+| **屬性** | **說明** | **例外狀況** |
 |---|---|---|
 | formNodes | 傳回繫結至指定資料物件的所有表單模型物件清單。 |  |
 
@@ -479,7 +479,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法如下所示：
   </tr>
   <tr>
    <td>instanceManager</td>
-   <td>instanceManager物件可管理表單模型物件的建立、移除和移動。<br /> </td>
+   <td>instanceManager物件管理執行個體的建立、移除和表單模型物件的移動。<br /> </td>
    <td>無</td>
   </tr>
  </tbody>
@@ -550,13 +550,13 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法如下所示：
 
 ## content {#content}
 
-| **屬性** | **說明** | **例外** |
+| **屬性** | **說明** | **例外狀況** |
 |---|---|---|
 | isNull | 指出目前的資料值是否為null值。 |  |
 
 ## 資料值 {#datavalue}
 
-| **屬性** | **說明** | **例外** |
+| **屬性** | **說明** | **例外狀況** |
 |---|---|---|
 | isNull | 指出目前的資料值是否為null值。 |  |
 
@@ -634,7 +634,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法如下所示：
   </tr>
   <tr>
    <td>edge</td>
-   <td>edge物件會描述圓弧、直線或邊框或矩形的一側。<br /> </td>
+   <td>Edge物件描述圓弧、直線或框線或矩形的一側。<br /> </td>
    <td>不支援顏色、端點等屬性。<br /> </td>
   </tr>
  </tbody>
@@ -714,7 +714,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法如下所示：
   </tr>
   <tr>
    <td>ui</td>
-   <td>ui物件會包含表單物件的使用者介面說明。<br /> </td>
+   <td>ui物件包含表單物件的使用者介面描述。<br /> </td>
    <td> </td>
   </tr>
   <tr>
@@ -734,7 +734,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法如下所示：
   </tr>
   <tr>
    <td>值</td>
-   <td>value物件會包含單一資料內容單位。<br /> </td>
+   <td>值物件包含單一資料內容單位。<br /> </td>
    <td> </td>
   </tr>
  </tbody>
@@ -797,7 +797,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法如下所示：
 
 ## dateTimeEdit {#datetimeedit}
 
-| **屬性** | **說明** | **例外** |
+| **屬性** | **說明** | **例外狀況** |
 |---|---|---|
 | 邊框 | border物件說明圍繞dateTimeEdit物件的邊框。 |  |
 
@@ -825,13 +825,13 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法如下所示：
 
 ## imageEdit {#imageedit}
 
-| **屬性** | **說明** | **例外** |
+| **屬性** | **說明** | **例外狀況** |
 |---|---|---|
 | 邊框 | border物件說明imageEdit物件周圍的邊框。 |  |
 
 ## numericEdit {#numericedit}
 
-| **屬性** | **說明** | **例外** |
+| **屬性** | **說明** | **例外狀況** |
 |---|---|---|
 | 邊框 | border物件描述物件周圍的邊框。 | 無 |
 
@@ -863,7 +863,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法如下所示：
   </tr>
   <tr>
    <td>edge</td>
-   <td>edge物件會描述圓弧、直線或邊框或矩形的一側。<br /> </td>
+   <td>Edge物件描述圓弧、直線或框線或矩形的一側。<br /> </td>
    <td>不支援顏色、端點等屬性。</td>
   </tr>
  </tbody>
@@ -880,7 +880,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法如下所示：
   </tr>
   <tr>
    <td>邊框</td>
-   <td>border物件描述物件周圍的邊框。<br /> </td>
+   <td>邊框物件描述物件周圍的邊框。<br /> </td>
    <td>無</td>
   </tr>
  </tbody>
@@ -947,7 +947,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法如下所示：
   </tr>
   <tr>
    <td>註解</td>
-   <td>註解物件說明與表單設計物件關聯的描述性標籤。<br /> </td>
+   <td>標題物件描述與表單設計物件關聯的描述性標籤。<br /> </td>
    <td>無</td>
   </tr>
   <tr>
@@ -1009,7 +1009,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法如下所示：
   </tr>
   <tr>
    <td>edge</td>
-   <td>edge物件會描述圓弧、直線或邊框或矩形的一側。<br /> </td>
+   <td>Edge物件描述圓弧、直線或框線或矩形的一側。<br /> </td>
    <td>不支援顏色、端點等屬性。 </td>
   </tr>
  </tbody>
@@ -1026,7 +1026,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法如下所示：
   </tr>
   <tr>
    <td>edge</td>
-   <td>edge物件會描述圓弧、直線或邊框或矩形的一側。<br /> </td>
+   <td>Edge物件描述圓弧、直線或框線或矩形的一側。<br /> </td>
    <td>不支援顏色、端點等屬性。 </td>
   </tr>
  </tbody>
@@ -1043,7 +1043,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法如下所示：
   </tr>
   <tr>
    <td>h</td>
-   <td>決定給定表單設計物件的高度。<br /> </td>
+   <td>決定指定表單設計物件的高度。<br /> </td>
    <td>
     <ul>
      <li>頁面區域和內容區域不支援Height (h)屬性。 </li>
@@ -1083,7 +1083,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法如下所示：
    <td>
     <ul>
      <li>layout.pageCount()方法會為PDF和HTML表單傳回不同的值。</li>
-     <li>藉由隱藏物件來減少頁數時，abspagecount方法傳回不正確的值。<br /> </li>
+     <li>透過隱藏物件來減少頁數時，abspagecount方法傳回不正確的值。<br /> </li>
     </ul> </td>
   </tr>
   <tr>
@@ -1105,7 +1105,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法如下所示：
 
 ## 項目 {#items}
 
-| **屬性** | **說明** | **例外** |
+| **屬性** | **說明** | **例外狀況** |
 |---|---|---|
 | 是否存在 | 指定物件的可見性。 | 無 |
 
@@ -1132,7 +1132,7 @@ FormCalc是XFA專屬的語言，用於建立以電子錶單為中心的邏輯和
   <tr>
    <td>變數宣告</td>
    <td>定義變數</td>
-   <td>變數a<br /> var a=3<br /> a=3</td>
+   <td>var a<br /> var a=3<br /> a=3</td>
   </tr>
   <tr>
    <td>邏輯運算式</td>
@@ -1156,12 +1156,12 @@ FormCalc是XFA專屬的語言，用於建立以電子錶單為中心的邏輯和
   <tr>
    <td>的</td>
    <td><br type="_moz" /> </td>
-   <td>針對i = 100，向下至1 <br /> do s = s + i endfor</td>
+   <td>針對i = 100向下至1 <br /> do s = s + i endfor</td>
   </tr>
   <tr>
    <td>針對每個</td>
    <td><br type="_moz" /> </td>
-   <td>每個i (1， 2， 3) <br /> do s = s + i endfor</td>
+   <td>對(1， 2， 3)中的每個i <br /> do s = s + i endfor</td>
   </tr>
   <tr>
    <td>函式宣告</td>
@@ -1271,7 +1271,7 @@ FormCalc是XFA專屬的語言，用於建立以電子錶單為中心的邏輯和
   <tr>
    <td>app.execDialog()</td>
    <td>向使用者顯示模型對話方塊。 必須先關閉強制回應對話方塊，使用者才能再次直接使用主機應用程式。</td>
-   <td>不會執行任何動作。<br /> </td>
+   <td>未執行任何動作。<br /> </td>
   </tr>
   <tr>
    <td>app.launchURL()</td>
@@ -1285,7 +1285,7 @@ FormCalc是XFA專屬的語言，用於建立以電子錶單為中心的邏輯和
   </tr>
   <tr>
    <td>app.setTimeOut()</td>
-   <td>指定JavaScript指令碼和時段。 指令碼只會在經過期間後執行一次。此方法的傳回值必須儲存在JavaScript變數中。 否則，逾時物件會接受記憶體回收，這會導致時鐘停止。 若要取消逾時事件，請將傳回的逾時物件傳遞給clearTimeOut。</td>
+   <td>指定JavaScript指令碼和時段。 指令碼僅會在經過句點後執行一次。此方法的傳回值必須儲存在JavaScript變數中。 否則，逾時物件會接受記憶體回收，這會導致時鐘停止。 若要取消逾時事件，請將傳回的逾時物件傳遞給clearTimeOut。</td>
    <td> </td>
   </tr>
   <tr>
@@ -1305,7 +1305,7 @@ FormCalc是XFA專屬的語言，用於建立以電子錶單為中心的邏輯和
   </tr>
   <tr>
    <td>app.activeDocs</td>
-   <td>包含每個使用中檔案的Doc物件的陣列。 如果沒有使用中的檔案，activeDocs不會傳回任何內容；也就是說，它具有與d =核心JavaScript中的new Array(0)相同的行為。</td>
+   <td>包含每個使用中檔案的Doc物件的陣列。 如果沒有使用中的檔案，activeDocs不會傳回任何內容；也就是說，它具有與d =核心JavaScript中的新陣列(0)相同的行為。</td>
    <td>傳回HTMl5表單的空白陣列。</td>
   </tr>
   <tr>
@@ -1351,4 +1351,4 @@ FormCalc是XFA專屬的語言，用於建立以電子錶單為中心的邏輯和
 
 >[!NOTE]
 >
->HTML5表單會在使用者端（瀏覽器）上呈現。 使用使用者端 **驗證** 和 **計算** 指令碼而非伺服器端指令碼。
+>HTML5表單會在使用者端（瀏覽器）上呈現。 使用使用者端&#x200B;**驗證**&#x200B;和&#x200B;**計算**&#x200B;指令碼，而非伺服器端指令碼。

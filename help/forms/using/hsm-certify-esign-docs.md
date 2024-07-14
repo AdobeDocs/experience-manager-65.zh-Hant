@@ -22,13 +22,13 @@ ht-degree: 0%
 
 Adobe Experience Manager Forms可使用儲存在HSM上的憑證或eSign，或將伺服器端數位簽名套用至檔案。 若要搭配AEM Forms使用HSM或etoken裝置：
 
-1. [啟用DocAssurance服務](#configuredocassurance).
-1. [在AEM Web主控台中建立HSM或Etoken裝置的別名](#configuredeviceinaemconsole).
-1. [使用DocAssurance Service API，以儲存在裝置上的數位金鑰簽署或認證檔案](#programatically).
+1. [啟用DocAssurance服務](#configuredocassurance)。
+1. [在AEM Web主控台中建立HSM或etoken裝置的別名](#configuredeviceinaemconsole)。
+1. [使用DocAssurance Service API，以儲存在裝置](#programatically)上的數位金鑰簽署或認證檔案。
 
 ## 使用AEM Forms設定HSM或etoken裝置之前 {#configurehsmetoken}
 
-* 安裝 [AEM Forms附加元件](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) 封裝。
+* 安裝[AEM Forms附加元件](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)套件。
 * 在與AEM伺服器相同的電腦上安裝並設定HSM或etoken使用者端軟體。 使用者端軟體必須與HSM和Etoken裝置通訊。
 
 ## 啟用DocAssurance服務 {#configuredocassurance}
@@ -37,11 +37,11 @@ Adobe Experience Manager Forms可使用儲存在HSM上的憑證或eSign，或將
 
 1. 停止AEM Forms環境的Author例項。
 
-1. 開啟 [AEM_root]要編輯的\crx-quickstart\conf\sling.properties檔案。
+1. 開啟[AEM_root]\crx-quickstart\conf\sling.properties檔案以進行編輯。
 
    >[!NOTE]
    >
-   >如果您已使用 [AEM_root]\crx-quickstart\bin\start.bat檔案以啟動AEM執行個體，然後開啟 [AEM_root]\crx-quickstart\sling.properties檔案進行編輯。
+   >如果您已使用[AEM_root]\crx-quickstart\bin\start.bat檔案啟動AEM執行個體，請開啟[AEM_root]\crx-quickstart\sling.properties檔案進行編輯。
 
 1. 在sling.properties檔案中新增或取代以下屬性：
 
@@ -100,12 +100,12 @@ Perform the following steps to setup certificates:
 別名包含HSM或etoken所需的所有引數。 執行以下指示，為eSign或Digital Signatures使用的每個HSM或etoken認證建立別名：
 
 1. 開啟AEM主控台。 AEM主控台的預設URL為https://&lt;host>：&lt;port>/system/console/configMgr
-1. 開啟 **HSM認證組態服務** 並指定下列欄位的值：
+1. 開啟&#x200B;**HSM認證設定服務**，並指定下列欄位的值：
 
    * **認證別名**：指定用來識別別名的字串。 此值會用作某些數位簽名作業（例如「簽名欄位」作業）的屬性。
-   * **DLL路徑**：指定伺服器上HSM或Etoken使用者端程式庫的路徑。 例如 `C:\Program Files\LunaSA\cryptoki.dll`。在叢集環境中，您必須確定叢集中的所有伺服器都必須使用相同的路徑。
+   * **DLL路徑**：指定伺服器上HSM或etoken使用者端程式庫的路徑。 例如 `C:\Program Files\LunaSA\cryptoki.dll`。在叢集環境中，您必須確定叢集中的所有伺服器都必須使用相同的路徑。
    * **HSM Pin**：指定存取裝置金鑰所需的密碼。
-   * **HSM插槽識別碼**：指定整數型別的位置識別碼。 插槽ID是依使用者端而設定。 用於識別HSM上包含簽署/認證私密金鑰的插槽。
+   * **HSM插槽識別碼**：指定整數型別的插槽識別碼。 插槽ID是依使用者端而設定。 用於識別HSM上包含簽署/認證私密金鑰的插槽。
 
    >[!NOTE]
    >
@@ -415,4 +415,4 @@ public class Sign{
  public CredentialContext(String credentialAlias, ResourceResolver resourceResolver, boolean isHSMCredential);
 ```
 
-如需API的詳細資訊和DocAssurance服務的範常式式碼，請參閱 [以程式設計方式使用AEM檔案服務](/help/forms/using/aem-document-services-programmatically.md).
+如需DocAssurance服務的API和範常式式碼詳細資訊，請參閱[以程式設計方式使用AEM Document Services](/help/forms/using/aem-document-services-programmatically.md)。

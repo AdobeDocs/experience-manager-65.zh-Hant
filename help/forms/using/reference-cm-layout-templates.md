@@ -19,7 +19,7 @@ ht-degree: 0%
 
 在「通訊管理」中，信函範本包含典型的表單欄位、版面配置功能（如頁首和頁尾）以及用於置入內容的空白「目標區域」。
 
-「通訊管理」提供以下專案的信件範本： [AEM Forms附加元件套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en). 您可以根據品牌和業務需求在Designer中自訂範本。 此套件包含下列範本：
+通訊管理在[AEM Forms附加元件套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en)中提供信件範本。 您可以根據品牌和業務需求在Designer中自訂範本。 此套件包含下列範本：
 
 * Classic
 * Classic簡單
@@ -48,7 +48,7 @@ ht-degree: 0%
 
 Classic範本的頂端有標誌，適合使用簡單的專業字母。
 
-![classic](assets/classic.png)
+![傳統](assets/classic.png)
 
 使用傳統範本建立的信函的PDF預覽
 
@@ -56,7 +56,7 @@ Classic範本的頂端有標誌，適合使用簡單的專業字母。
 
 包含擷取電話號碼和電子郵件地址的欄位。 Classic Simple範本類似於Classic範本，但前者沒有您可輸入收件者地址的欄位。
 
-![聯絡資訊片段](assets/classicsimple.png)
+![連絡資訊片段](assets/classicsimple.png)
 
 使用Classic Simple範本建立的字母的PDF預覽
 
@@ -64,7 +64,7 @@ Classic範本的頂端有標誌，適合使用簡單的專業字母。
 
 「平衡左側」範本在信函左側包含標誌。
 
-![向左平衡](assets/balancedleft.png)
+![balancedleft](assets/balancedleft.png)
 
 使用「左方平衡」範本建立之信件的PDF預覽
 

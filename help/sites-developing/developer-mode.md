@@ -19,11 +19,11 @@ ht-degree: 3%
 
 # 開發人員模式{#developer-mode}
 
-在Adobe Experience Manager (AEM)中編輯頁面時，有數個 [模式](/help/sites-authoring/author-environment-tools.md#modestouchoptimizedui) 都可使用，包括開發人員模式。 這會開啟一個側面板，內含數個標籤，為開發人員提供目前頁面的相關資訊。 這三個索引標籤為：
+在Adobe Experience Manager (AEM)中編輯頁面時，有數種[模式](/help/sites-authoring/author-environment-tools.md#modestouchoptimizedui)可供使用，包括開發人員模式。 這會開啟一個側面板，內含數個標籤，為開發人員提供目前頁面的相關資訊。 這三個索引標籤為：
 
-* **[元件](#components)** 以檢視結構和效能資訊。
-* **[測試](#tests)** 以執行測試和分析結果。
-* **[錯誤](#errors)** 檢視發生的任何問題。
+* **[元件](#components)**&#x200B;以檢視結構和效能資訊。
+* **[測試](#tests)**&#x200B;以執行測試並分析結果。
+* **[錯誤](#errors)**，檢視發生的任何問題。
 
 這些功能可協助開發人員：
 
@@ -39,7 +39,7 @@ ht-degree: 3%
 >* 在行動裝置或桌上型電腦的小型視窗上無法使用（由於空間限制）。
 >
 >   * 當寬度小於1024畫素時，就會發生這種情況。
->* 僅適用於屬於下列成員的使用者： `administrators` 群組。
+>* 僅適用於`administrators`群組成員的使用者。
 
 >[!CAUTION]
 >
@@ -56,21 +56,21 @@ ht-degree: 3%
 >
 >請參閱：
 >
->* 知識庫文章， [疑難排解AEM TouchUI問題](https://helpx.adobe.com/experience-manager/kb/troubleshooting-aem-touchui-issues.html)，以取得進一步的提示和工具。
->* AEM Gems課程關於 [AEM 6.0開發人員模式](https://experienceleague.adobe.com/docs/events/experience-manager-gems-recordings/gems2014/aem-developer-mode.html).
+>* 知識庫文章，[疑難排解AEM TouchUI問題](https://helpx.adobe.com/experience-manager/kb/troubleshooting-aem-touchui-issues.html)，以取得進一步的提示和工具。
+>* 關於[AEM 6.0 Developer Mode](https://experienceleague.adobe.com/docs/events/experience-manager-gems-recordings/gems2014/aem-developer-mode.html)的AEM Gems工作階段。
 >
 
 ## 開啟開發人員模式 {#opening-developer-mode}
 
-開發人員模式會實作為頁面編輯器的側面板。 若要開啟面板，請選取 **開發人員** 從頁面編輯器工具列的模式選取器：
+開發人員模式會實作為頁面編輯器的側面板。 若要開啟面板，請從頁面編輯器工具列的模式選取器中選取&#x200B;**開發人員**：
 
 ![chlimage_1-11](assets/chlimage_1-11.png)
 
 面板分為兩個標籤：
 
-* **[元件](/help/sites-developing/developer-mode.md#components)**  — 這個選項會顯示元件樹，類似於 [內容樹狀結構](/help/sites-authoring/author-environment-tools.md#content-tree) 作者
+* **[元件](/help/sites-developing/developer-mode.md#components)** — 這會顯示元件樹狀結構，類似於作者的[內容樹狀結構](/help/sites-authoring/author-environment-tools.md#content-tree)
 
-* **[錯誤](/help/sites-developing/developer-mode.md#errors)**  — 發生問題時，會顯示每個元件的詳細資料。
+* **[錯誤](/help/sites-developing/developer-mode.md#errors)** — 發生問題時，會顯示每個元件的詳細資料。
 
 ### 元件 {#components}
 
@@ -97,7 +97,7 @@ ht-degree: 3%
 
 ![chlimage_1-13](assets/chlimage_1-13.png)
 
-* **檢視詳細資料**：清單的連結，其中顯示：
+* **檢視詳細資料**：顯示下列專案的清單連結：
 
    * 用於呈現元件的所有元件指令碼。
    * 此特定元件的存放庫內容路徑。
@@ -117,18 +117,18 @@ ht-degree: 3%
 
 >[!CAUTION]
 >
->有些連結會指向底下的指令碼 `/libs`. 不過，這些僅供參考，您 **不得** 編輯下的任何專案 `/libs`，因為您所做的任何變更都可能遺失。 這是因為每當您升級或套用Hotfix或Feature Pack時，此分支很容易發生變更。 進行您需要的變更(在 `/apps`. 另請參閱 [覆蓋和覆寫](/help/sites-developing/overlays.md).
+>部分連結指向`/libs`下的指令碼。 不過，這些僅供參考，您&#x200B;**不得**&#x200B;編輯`/libs`下的任何專案，因為您所做的任何變更可能會遺失。 這是因為每當您升級或套用Hotfix或Feature Pack時，此分支很容易發生變更。 進行您在`/apps`下所需的任何變更。 請參閱[覆蓋和覆寫](/help/sites-developing/overlays.md)。
 
 ### 錯誤次數 {#errors}
 
 ![chlimage_1-16](assets/chlimage_1-16.png)
 
-希望 **錯誤** 索引標籤一律空白（如上所述），但如果發生問題，則會為每個元件顯示以下詳細資訊：
+希望&#x200B;**錯誤**&#x200B;索引標籤永遠是空的（如上所述），但是當問題發生時，會顯示每個元件的下列詳細資料：
 
 * 如果元件將專案寫入錯誤記錄檔，連同錯誤的詳細資訊以及指向CRXDE Lite內適當程式碼的直接連結，會出現警告。
 * 如果元件開啟管理員工作階段，會出現警告。
 
-例如，在呼叫未定義的方法的情況下，產生的錯誤會顯示在 **錯誤** 標籤：
+例如，在呼叫未定義的方法的情況下，產生的錯誤會顯示在&#x200B;**錯誤**&#x200B;索引標籤中：
 
 ![chlimage_1-17](assets/chlimage_1-17.png)
 
@@ -140,4 +140,4 @@ ht-degree: 3%
 >
 >在AEM 6.2中，開發人員模式的測試功能已重新實作為獨立的工具應用程式。
 >
->如需完整詳細資訊，請參閱 [測試您的UI](/help/sites-developing/hobbes.md).
+>如需完整詳細資訊，請參閱[測試您的UI](/help/sites-developing/hobbes.md)。

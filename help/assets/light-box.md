@@ -17,18 +17,18 @@ ht-degree: 0%
 
 Lightbox是一種特殊型別的集合，可讓您輕鬆存取資產。 您可以快速存取Lightbox以新增或刪除資產。 它可作為您的個人影像收藏館。
 
-如果您是 [!DNL Adobe Experience Manager Assets] Lightbox會在您首次登入應用程式時自動建立。 這是您登入的唯一許可權。 其他使用者無法存取您的Lightbox。
+如果您是[!DNL Adobe Experience Manager Assets]使用者，Lightbox會在您首次登入應用程式時自動建立。 這是您登入的唯一許可權。 其他使用者無法存取您的Lightbox。
 
 ## 將資產新增至Lightbox {#adding-assets-to-lightbox}
 
-1. 從 [!DNL Assets] 使用者介面，選取您要新增至Lightbox的資產。
-1. 將資產拖曳至 **[!UICONTROL 放入Lightbox]** 區域。 當拖放區域啟動且其標籤變更為時釋放 **[!UICONTROL 放置以新增]**.
+1. 從[!DNL Assets]使用者介面中，選取您要新增至Lightbox的資產。
+1. 將資產拖曳至Lightbox ]**區域中的**[!UICONTROL &#x200B;拖放。 當拖放區域變成使用中，且標籤變更為&#x200B;**[!UICONTROL 拖放以新增]**&#x200B;時釋放。
 
    ![add_to_lightbox](assets/add_to_lightbox.png)
 
-1. 在對話方塊中，按一下 **[!UICONTROL 新增]**，然後關閉以完成程式。 選取的資產會新增至Lightbox。
+1. 在對話方塊中，按一下&#x200B;**[!UICONTROL 新增]**，然後關閉它以完成程式。 選取的資產會新增至Lightbox。
 1. 若要檢視Lightbox，請前往「系列」主控台。
-1. 按一下 **[!UICONTROL Lightbox]** 以檢視其中的資產。
+1. 按一下&#x200B;**[!UICONTROL Lightbox]**&#x200B;以檢視其中的資產。
 
    >[!NOTE]
    >
@@ -38,5 +38,5 @@ Lightbox是一種特殊型別的集合，可讓您輕鬆存取資產。 您可�
 
 1. 導覽至「系列」主控台，按一下Lightbox以檢視其資產。
 1. 選取您要移除的資產。
-1. 在工具列中按一下 **[!UICONTROL 移除]**.
-1. 在對話方塊中，按一下 **[!UICONTROL 移除]** 以確認刪除動作。 資產會從Lightbox中刪除。
+1. 在工具列中按一下&#x200B;**[!UICONTROL 移除]**。
+1. 在對話方塊中，按一下&#x200B;**[!UICONTROL 移除]**&#x200B;以確認刪除動作。 資產會從Lightbox中刪除。

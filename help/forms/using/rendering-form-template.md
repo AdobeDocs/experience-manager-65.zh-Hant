@@ -20,9 +20,9 @@ ht-degree: 1%
 
 ## 轉譯端點 {#render-endpoint}
 
-HTML5表單的概念 **設定檔** 這些模組會公開為REST端點，以啟用表單範本的行動轉譯。 這些設定檔已 **設定檔轉譯器**. 這些是JSP頁面，負責呼叫Forms OSGi服務來產生表單的HTML表示。 「設定檔」節點的JCR路徑會決定轉譯器端點的URL。 指向「預設」設定檔之表單的預設轉譯端點看起來如下所示：
+HTML5表單具有&#x200B;**設定檔**&#x200B;的概念，這些設定檔會公開為REST端點，以啟用表單範本的行動轉譯。 這些設定檔已關聯&#x200B;**設定檔轉譯器**。 這些是JSP頁面，負責呼叫Forms OSGi服務來產生表單的HTML表示。 「設定檔」節點的JCR路徑會決定轉譯器端點的URL。 指向「預設」設定檔之表單的預設轉譯端點看起來如下所示：
 
-https://&lt;*主機*>：&lt;*連線埠*>/content/xfaforms/profiles/default.html？contentRoot=&lt;*包含表單xdp的資料夾路徑*>&amp;template=&lt;*xdp的名稱*>
+https://&lt;*主機*>：&lt;*連線埠*>/content/xfaforms/profiles/default.html？contentRoot=&lt;*包含表單xdp*>&amp;template=&lt;*xdp*>的資料夾路徑
 
 例如 `http://localhost:4502/content/xfaforms/profiles/default.html?contentRoot=c:/xdps&template=sampleForm.xdp`
 
@@ -58,7 +58,7 @@ http://localhost:4502/content/xfaforms/profiles/default.html?
   </tr>
   <tr>
    <td>submitUrl<br /> </td>
-   <td>此引數會指定表單資料xml張貼到的URL。<br /> </td>
+   <td>此引數指定表單資料xml張貼到的URL。<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -67,7 +67,7 @@ http://localhost:4502/content/xfaforms/profiles/default.html?
 
 | 參數 | 說明 |
 |---|---|
-| dataRef | 此引數會指定 **絕對路徑** 與範本合併的資料檔案的預設值。 此引數可以是Rest服務的URL，會以xml格式傳回資料。 |
+| dataRef | 此引數指定與範本合併之資料檔案的&#x200B;**絕對路徑**。 此引數可以是Rest服務的URL，會以xml格式傳回資料。 |
 | 資料 | 此引數會指定與範本合併的UTF-8編碼資料位元組。 如果指定此引數，HTML5表單會忽略dataRef引數。 |
 
 ### 傳遞轉譯器引數 {#passing-the-render-parameter}
@@ -76,10 +76,10 @@ HTML5表單支援三種傳遞轉譯器引數的方法。 您可以透過URL、�
 
 * **URL要求引數**：您可以在URL中指定轉譯器引數。 一般使用者可以在URL要求引數中看到引數。 例如，下列提交URL在URL中包含範本引數： `http://localhost:4502/content/xfaforms/profiles/default.html?contentRoot=/Applications/FormSubmission/1.0&template=sampleForm.xdp`
 
-* **SetAttribute要求引數**：您可以將轉譯器引數指定為機碼值組。 在SetAttribute要求引數中，一般使用者看不到這些引數。 您可以從任何其他JSP將請求轉送到HTML5表單設定檔轉譯器JSP並使用 *setAttribute* 請求物件以傳遞所有轉譯器引數。 此方法的優先順序最高。
+* **SetAttribute要求引數**：您可以將轉譯器引數指定為機碼值組。 在SetAttribute要求引數中，一般使用者看不到這些引數。 您可以從任何其他JSP轉送要求至HTML5表單設定檔轉譯器JSP，並在要求物件上使用&#x200B;*setAttribute*&#x200B;以傳遞所有轉譯器引數。 此方法的優先順序最高。
 
-* **設定檔節點請求引數：** 您可以將轉譯器引數指定為設定檔節點的節點屬性。 一般使用者在設定檔節點請求引數中看不到引數。 設定檔節點是傳送請求的節點。 若要將引數指定為節點屬性，請使用CRXDE lite。
+* **設定檔節點要求引數：**&#x200B;您可以將轉譯器引數指定為設定檔節點的節點屬性。 一般使用者在設定檔節點請求引數中看不到引數。 設定檔節點是傳送請求的節點。 若要將引數指定為節點屬性，請使用CRXDE lite。
 
 ### 提交引數 {#submit-parameters}
 
-HTML5表單提交資料；在AEM伺服器上執行伺服器端指令碼和網頁服務。 如需有關在AEM伺服器上執行伺服器端指令碼和Web服務的引數的詳細資訊，請參閱 [HTML5 Forms服務Proxy](/help/forms/using/service-proxy.md).
+HTML5表單提交資料；在AEM伺服器上執行伺服器端指令碼和網頁服務。 如需在AEM伺服器上執行伺服器端指令碼和Web服務的引數詳細資訊，請參閱[HTML5表單服務Proxy](/help/forms/using/service-proxy.md)。

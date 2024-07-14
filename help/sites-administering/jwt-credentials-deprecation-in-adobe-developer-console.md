@@ -15,7 +15,7 @@ ht-degree: 73%
 # Adobe Developer Console 中的 JWT 憑證已被取代 {#jwt-credentials-deprecation-in-adobe-developer-console}
 
 >[!NOTE]
-> AEM as a Cloud Service應參考 [本文](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/jwt-credentials-deprecation-in-adobe-developer-console.html) 以取得詳細資訊。
+> 如需詳細資訊，AEM as a Cloud Service應該參考[本文章](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/jwt-credentials-deprecation-in-adobe-developer-console.html)。
 
 Adobe 客戶使用 [Adobe Developer Console](https://developer.adobe.com/console) 來產生可存取各種 API 的憑證。客戶可以選擇各種憑證類型，包括 OAuth 伺服器到伺服器和單頁應用程式。其中一種憑證類型 (服務帳戶 (JWT) 憑證) 已被已取代，取而代之的是 OAuth 伺服器到伺服器憑證。2024 年 6 月 3 日或之後無法建立新的服務帳戶 (JWT) 憑證，現有的 JWT 憑證自 2025 年 1 月 27 日起將無法再使用。您可以[閱讀已取代項目的資訊](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/)。
 
@@ -29,13 +29,13 @@ Adobe 客戶使用 [Adobe Developer Console](https://developer.adobe.com/console
 
 **動作**：移轉您的設定，因為 AEM 現在支援 OAuth 認證。
 
-**相關AEM版本**：AdobeManaged Services （Service Pack 21及更新版本）。
+**相關的AEM版本**：AdobeManaged Services （Service Pack 21及更新版本）。
 
 AEM客戶可使用AEM來設定與所有其他Adobe解決方案的整合。 例如 Adobe Target、Adobe Analytics 等。
 
 ![將 AEM 與其他解決方案整合](/help/sites-administering/assets/jwt-deprecation.png)
 
-另請參閱 [設定AEM的IMS整合](/help/sites-administering/setting-up-ims-integrations-for-aem.md) 操作方式的詳細資訊：
+請參閱[設定AEM的IMS整合](/help/sites-administering/setting-up-ims-integrations-for-aem.md)，以取得以下操作的詳細資訊：
 
 * 使用 OAuth 認證建立設定
 * 將之前使用 JWT 認證建立的設定，移轉成使用 OAuth 認證
@@ -44,6 +44,6 @@ AEM客戶可使用AEM來設定與所有其他Adobe解決方案的整合。 例�
 
 **動作**：確認何時可以將這些設定從 JWT 移轉到 OAuth 憑證。
 
-**相關AEM版本**：AdobeManaged Services （Service Pack 21及更新版本）。
+**相關的AEM版本**：AdobeManaged Services （Service Pack 21及更新版本）。
 
 客戶可建立 Adobe Developer Console 專案，以便叫用 [Cloud Manager API](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/create-api-integration/)。在已過時的 JWT 憑證於 2025 年 1 月到期之前，應將 Adobe Developer 專案中的憑證應移轉到 OAuth 伺服器到伺服器憑證類型。

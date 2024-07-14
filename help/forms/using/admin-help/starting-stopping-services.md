@@ -31,24 +31,24 @@ AEM表單模組(例如Forms、Rights Management、輸出)可作為服務運作�
 >
 > 建議您使用&#39;Ctrl + C&#39;命令重新啟動SDK。 使用替代方法重新啟動AEM SDK （例如停止Java程式）可能會導致AEM開發環境不一致。
 
-1. 在管理主控台中按一下 **服務** > **應用程式和服務** > **服務管理**.
+1. 在管理主控台中，按一下&#x200B;**服務** > **應用程式及服務** > **服務管理**。
 1. 在「服務管理」頁面中，選取要停止或啟動之服務旁的核取方塊，然後按一下停止或啟動。
 
 ## 啟動或停止應用程式伺服器和資料庫的服務 {#start-or-stop-services-for-the-application-server-and-database}
 
 AEM表單的完整實作包括應用程式伺服器和資料庫服務：
 
-* *`[application server]`* 適用於AEM表單
-* *`[database]`* 適用於AEM表單
+* AEM表單的&#x200B;*`[application server]`*
+* AEM表單的&#x200B;*`[database]`*
 
-在Windows上，這些服務可透過 **管理工具** > **服務面板**. 例如，如果您使用turnkey方法在JBoss上安裝AEM表單，則您的系統上可以使用以下服務：
+在Windows上，這些服務可透過&#x200B;**系統管理工具** > **服務面板**&#x200B;存取。 例如，如果您使用turnkey方法在JBoss上安裝AEM表單，則您的系統上可以使用以下服務：
 
 * 適用於Adobe Experience Manager表單的JBoss
 * 適用於Adobe Experience Manager的MySQL表單
 
 從「服務」面板的清單中選取這些服務，然後按一下面板上的適當動作按鈕，即可啟動或停止這些服務。
 
-在UNIX®或Linux上，從命令列輸入下列文字，其中 *`[service name]`* 是您正在驗證的服務名稱：
+在UNIX®或Linux上，從命令列輸入下列文字，其中&#x200B;*`[service name]`*&#x200B;是您正在驗證的服務名稱：
 
 ```java
      ps -A | grep [service name]

@@ -42,21 +42,21 @@ ht-degree: 0%
 >
 >使用[檔案詳細資訊]頁面上的[原則名稱]連結，存取在Microsoft Outlook中為附加至電子郵件訊息之檔案的收件者自動產生的原則。 這些原則不會出現在原則頁面上。
 
-**檔名稱：** 所選檔案的名稱。
+**檔名稱：**&#x200B;選取檔案的名稱。
 
-**檔案ID：** 當原則套用至檔案時，Document Security會指派的唯一識別碼。 document security會使用此編號來追蹤檔案。
+**檔案識別碼：**&#x200B;當原則套用至檔案時，Document Security會指派的唯一識別碼。 document security會使用此編號來追蹤檔案。
 
-**檔案狀態：** 檔案的狀態（例如，作用中或已撤銷）。
+**檔案狀態：**&#x200B;檔案的狀態（例如，使用中或撤銷）。
 
-**發行者：** 將原則附加至檔案的使用者名稱。
+**發佈者：**&#x200B;附加原則至檔案的使用者名稱。
 
-**原則名稱：** 用來保護檔案的原則名稱。 您可以按一下名稱以開啟原則。 使用此連結來存取Acrobat為Outlook中附加至電子郵件訊息之檔案的收件者產生的原則。 這些原則不會顯示在「原則」頁面上。
+**原則名稱：**&#x200B;用來保護檔案的原則名稱。 您可以按一下名稱以開啟原則。 使用此連結來存取Acrobat為Outlook中附加至電子郵件訊息之檔案的收件者產生的原則。 這些原則不會顯示在「原則」頁面上。
 
-**原則型別：** 套用至檔案的原則型別。
+**原則型別：**&#x200B;套用至檔案的原則型別。
 
-**發佈日期：** 將原則套用至檔案的日期。
+**發佈日期：**&#x200B;將原則套用至檔案的日期。
 
-**相關反複專案：** 如果檔案有相關的版序，此專案也會出現在清單中。 按一下連結可檢視檔案的相關版序清單。
+**相關反複專案：**&#x200B;如果檔案有相關反複專案，此專案也會出現在清單中。 按一下連結可檢視檔案的相關版序清單。
 
 使用者可以檢視有關受保護檔案的資訊。 管理員可檢視任何使用者已受原則保護之檔案的相關資訊。 原則組專員可檢視受原則保護之檔案的相關資訊，而不受其原則組的保護。
 
@@ -71,14 +71,14 @@ ht-degree: 0%
 
 如果啟用此功能，您可以從「檔案」頁面檢視檔案的相關版序。
 
-1. 檢視檔案的檔案詳細資訊頁面。 (請參閱 [檢視檔案的相關資訊](controlling-access-policy-protected-documents.md#view-information-about-a-document).)
+1. 檢視檔案的檔案詳細資訊頁面。 （請參閱[檢視檔案](controlling-access-policy-protected-documents.md#view-information-about-a-document)的相關資訊。）
 1. 按一下「檢視相關版序」。 只有在啟用特徵時，才能使用選項。 相關版序清單隨即顯示。 對於每個版序，您可以檢視下列資訊：
 
-   * **反複專案：** 檔案名稱。 檔案名稱可能與原始檔案名稱不同，其結尾會附加一個版本號碼。
-   * **發行者：** 原始檔案的發行者。
-   * **建立者：** 儲存反複專案的使用者。
-   * **建立日期：** 儲存反複專案的日期和時間。
-   * **原則：** 保護反複專案的原則。 不同的反複專案可能受不同的原則保護。
+   * **反複專案：**&#x200B;檔案名稱。 檔案名稱可能與原始檔案名稱不同，其結尾會附加一個版本號碼。
+   * **發行者：**&#x200B;原始檔案的發行者。
+   * **建立者：**&#x200B;儲存反複專案的使用者。
+   * **建立日期：**&#x200B;儲存反複專案的日期和時間。
+   * **原則：**&#x200B;保護反複專案的原則。 不同的反複專案可能受不同的原則保護。
 
 1. 若要顯示該版序的「檔案詳細資訊」頁面，請按一下版序的檔案名稱。
 
@@ -86,11 +86,11 @@ ht-degree: 0%
 
 您可以撤銷並恢復受原則保護檔案的存取權：
 
-**使用者：** 可以撤銷或恢復使用個人原則或共用原則保護之檔案的存取權，這些原則為套用原則的使用者啟用撤銷功能。 無法撤銷檔案存取權或切換原則的使用者需要連絡管理員。
+**使用者：**&#x200B;可以撤銷或恢復使用個人原則或共用原則保護之檔案的存取權，這些原則為套用原則的使用者啟用撤銷功能。 無法撤銷檔案存取權或切換原則的使用者需要連絡管理員。
 
-**管理員：** 可以撤銷或恢復任何受原則保護檔案的存取許可權，包括受個人或共用原則保護的檔案。 如果管理員撤銷對受共用原則保護的檔案的存取權，則只有管理員可以恢復該檔案的存取許可權。
+**管理員：**&#x200B;可以撤銷或恢復任何受原則保護檔案的存取許可權，包括受個人或共用原則保護的檔案。 如果管理員撤銷對受共用原則保護的檔案的存取權，則只有管理員可以恢復該檔案的存取許可權。
 
-**原則集協調員：** 可以撤銷或恢復原則保護之檔案的存取許可權。
+**原則組協調員：**&#x200B;可以撤銷或恢復原則組所保護之檔案的存取許可權。
 
 當您撤銷或恢復檔案存取許可權時，變更會在下列時間生效：
 
@@ -104,14 +104,14 @@ ht-degree: 0%
 1. 選取適當檔案旁的核取方塊，然後按一下撤銷。 您可以一次撤銷多個檔案的存取權。
 1. 選取要在檔案撤銷後向嘗試開啟檔案的使用者顯示的訊息：
 
-   * **一般訊息：** 指出作者已撤銷檔案
-   * **檔案已終止：** 表示作者已終止檔案
-   * **檔案已修訂**：指出作者已修訂檔案
+   * **一般訊息：**&#x200B;指出作者已撤銷檔案
+   * **檔案已終止：**&#x200B;表示作者已終止檔案
+   * **已修訂的檔案**：表示作者已修訂檔案
 
 1. （選擇性）如果有較新版本的檔案可用，請輸入URL並按一下測試以驗證URL。
 1. 按一下「確定」，然後再次按一下「確定」以返回「檔案」頁面。
 
-**恢復檔案存取許可權**
+**復原檔案存取許可權**
 
 1. 在Document Security頁面上，按一下「檔案」。
 1. 在檔案清單中，按一下適當的檔案。
@@ -144,17 +144,17 @@ ht-degree: 0%
 
 其他搜尋選項僅供管理員使用：
 
-**檔案ID：** 在套用原則時，Document Security指派給檔案的唯一ID號碼。
+**檔案識別碼：** Document Security在套用原則時指派給檔案的唯一識別碼。
 
-**檔名稱：** 檔案的名稱。
+**檔名稱：**&#x200B;檔名稱。
 
-**發行者名稱：** 將原則附加至檔案的使用者名稱。 您可以從所有網域或指定的網域中選取使用者。
+**發行者名稱：**&#x200B;附加原則至檔案的使用者名稱。 您可以從所有網域或指定的網域中選取使用者。
 
-**原則ID：** 附加至檔案的原則識別碼。
+**原則識別碼：**&#x200B;附加至檔案的原則識別碼。
 
-**原則名稱：** 附加至檔案的原則名稱。
+**原則名稱：**&#x200B;附加至檔案的原則名稱。
 
-**所有檔案：** 所有受管理員和使用者保護的檔案。 使用「所有檔案」選項進行搜尋可能會傳回一長串檔案。
+**所有檔案：**&#x200B;所有受系統管理員和使用者保護的檔案。 使用「所有檔案」選項進行搜尋可能會傳回一長串檔案。
 
 1. 在Document Security頁面上，按一下「檔案」。
 1. 在「尋找」清單中，選取所需的搜尋條件。
@@ -194,12 +194,13 @@ ht-degree: 0%
 
 在Workbench中使用下列處理：
 
-**包含封面頁的Protect檔案：** 使用指定的原則保護PDF檔案，並將封面頁新增至檔案
+**Protect
+具有封面頁的檔案：**&#x200B;使用指定的原則保護PDF檔案，並將封面頁新增至檔案
 
-**擷取受保護檔案：** 從含有封面頁的PDF檔案中擷取受原則保護的PDF檔案
+**擷取受保護的檔案：**&#x200B;從含有封面頁的PDF檔案中擷取受原則保護的PDF檔案
 
 使用下列Document Security API：
 
-**protectDocumentWithCoverPage：** 使用指定的原則保護指定PDF的安全，並傳回包含封面頁的檔案，以及將受保護檔案作為附件
-`//Create a ServiceClientFactory instance ServiceClientFactory factory = ServiceClientFactory.createInstance(connectionProps); //Create a RightsManagementClient object RightsManagementClient rightsClient = new RightsManagementClient(factory); //Reference a PDF document to which a policy is applied FileInputStream fileInputStream = new FileInputStream("C:\\testFile.pdf"); Document inPDF = new Document(fileInputStream); //Reference a Cover Page document FileInputStream coverPageInputStream = new FileInputStream("C:\\CoverPage.pdf"); Document inCoverDoc = new Document(coverPageInputStream); //Create a Document Manager object DocumentManager documentManager = rightsClient.getDocumentManager(); //Apply a policy to the PDF document RMSecureDocumentResult rmSecureDocument = documentManager.protectDocumentWithCoverPage( inPDF, "ProtectedPDF.pdf", "PolicySetName", "PolicyName", null, null, inCoverDoc, true); //Retrieve the policy-protected PDF document Document protectPDF = rmSecureDocument.getProtectedDoc(); //Save the policy-protected PDF document File myFile = new File("C:\\PolicyProtectedDoc.pdf"); protectPDF.copyToFile(myFile);` **extractProtectedDocument：** 擷取受保護的檔案，該檔案是封面頁檔案的附件。 可以使用protectDocumentWithCoverPage方法建立具有封面頁的檔案
+**protectDocumentWithCoverPage：**使用指定的原則保護指定PDF，並傳回封面頁和受保護檔案作為附件的檔案
+`//Create a ServiceClientFactory instance ServiceClientFactory factory = ServiceClientFactory.createInstance(connectionProps); //Create a RightsManagementClient object RightsManagementClient rightsClient = new RightsManagementClient(factory); //Reference a PDF document to which a policy is applied FileInputStream fileInputStream = new FileInputStream("C:\\testFile.pdf"); Document inPDF = new Document(fileInputStream); //Reference a Cover Page document FileInputStream coverPageInputStream = new FileInputStream("C:\\CoverPage.pdf"); Document inCoverDoc = new Document(coverPageInputStream); //Create a Document Manager object DocumentManager documentManager = rightsClient.getDocumentManager(); //Apply a policy to the PDF document RMSecureDocumentResult rmSecureDocument = documentManager.protectDocumentWithCoverPage( inPDF, "ProtectedPDF.pdf", "PolicySetName", "PolicyName", null, null, inCoverDoc, true); //Retrieve the policy-protected PDF document Document protectPDF = rmSecureDocument.getProtectedDoc(); //Save the policy-protected PDF document File myFile = new File("C:\\PolicyProtectedDoc.pdf"); protectPDF.copyToFile(myFile);` **extractProtectedDocument：**擷取封面檔案中所含受保護檔案的附件。 可以使用protectDocumentWithCoverPage方法建立具有封面頁的檔案
 `//Create a ServiceClientFactory instance ServiceClientFactory factory = ServiceClientFactory.createInstance(connectionProps); //Create a RightsManagementClient object RightsManagementClient rightsClient = new RightsManagementClient(factory); //Reference a protected PDF document with a Cover Page FileInputStream fileInputStream = new FileInputStream("C:\\policyProtectedDocWithCoverPage.pdf"); Document inPDF = new Document(fileInputStream); //Create a Document Manager object DocumentManager documentManager = rightsClient.getDocumentManager(); //Apply a policy to the PDF document Document extractedDoc = documentManager.extractProtectedDocument(inPDF); //Save the policy-protected PDF document File myFile = new File("C:\\PolicyProtectedDoc.pdf"); extractedDoc.copyToFile(myFile);`

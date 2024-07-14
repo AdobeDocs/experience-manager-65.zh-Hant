@@ -18,7 +18,7 @@ ht-degree: 25%
 
 # Live Copy 概觀主控台{#live-copy-overview-console}
 
-此 **即時副本概觀** 可讓您：
+**即時副本綜覽**&#x200B;可讓您：
 
 * 檢視/管理網站上的繼承：
 
@@ -39,16 +39,16 @@ ht-degree: 25%
 
 **Live Copy 概觀**&#x200B;可以從 **Sites** 主控台的&#x200B;**參考**&#x200B;側面板開啟：
 
-1. 在 **網站** 主控台， [導覽至您的Blueprint頁面並加以選取](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources).
-1. 開啟 **[引用](/help/sites-authoring/basic-handling.md#references)** 面板並選取 **即時副本**.
+1. 在&#x200B;**網站**&#x200B;主控台中，[導覽至您的Blueprint頁面並加以選取](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)。
+1. 開啟&#x200B;**[參考](/help/sites-authoring/basic-handling.md#references)**&#x200B;面板並選取&#x200B;**即時副本**。
 
-   ![「參考」面板 — 即時副本](assets/chlimage_1-359.png)
+   ![參考面板 — 即時副本](assets/chlimage_1-359.png)
 
    >[!NOTE]
    >
    >您也可以先開啟參照，然後選取Blueprint。
 
-1. 選取 **即時副本概觀** 以顯示及使用與所選Blueprint相關之所有即時副本的概觀。
+1. 選取「**即時副本總覽**」以顯示及使用與所選Blueprint相關的所有即時副本總覽。
 1. 使用&#x200B;**關閉**&#x200B;以退出並返回 **Sites** 主控台。
 
 ### 開啟即時副本概觀 — Blueprint頁面的屬性 {#opening-live-copy-overview-properties-of-a-blueprint-page}
@@ -56,30 +56,30 @@ ht-degree: 25%
 **Live Copy 概觀**&#x200B;可以在檢視藍圖頁面的屬性時開啟：
 
 1. 開啟相關藍圖頁面的&#x200B;**屬性**。
-1. 開啟 **Blueprint** 標籤 —  **即時副本概觀** 選項會顯示在頂端工具列中：
+1. 開啟&#x200B;**Blueprint**&#x200B;標籤 — **即時副本總覽**&#x200B;選項會顯示在頂端工具列中：
 
-   ![Blueprint標籤 — 即時副本概觀](assets/chlimage_1-360.png)
+   ![Blueprint索引標籤 — 即時副本概觀](assets/chlimage_1-360.png)
 
-1. 選取 **即時副本概觀** 以顯示及使用與目前Blueprint相關之所有即時副本的概觀。
+1. 選取「**即時副本總覽**」以顯示及使用與目前Blueprint相關的所有即時副本總覽。
 
    >[!NOTE]
    >
-   >如需詳細資訊，另請參閱知識庫文章 [即時副本狀態訊息 — 最新/綠色/同步中](https://helpx.adobe.com/experience-manager/kb/livecopy-status-message---up-to-date-green-in-sync.html).
+   >如需詳細資訊，另請參閱知識庫文章[即時副本狀態訊息 — 最新/綠色/同步](https://helpx.adobe.com/experience-manager/kb/livecopy-status-message---up-to-date-green-in-sync.html)。
 
 1. 使用&#x200B;**關閉**&#x200B;以退出並返回 **Sites** 主控台。
 
 ## 使用 Live Copy 概觀 {#using-the-live-copy-overview}
 
-此 **即時副本概觀** 也可用於對即時副本執行動作：
+**即時副本綜覽**&#x200B;也可用來在即時副本上執行動作：
 
 1. 開啟 **Live Copy 概觀**。
-1. 選取所需的Blueprint或即時副本頁面 — 工具列將更新以顯示可用操作。 此 [動作](/help/sites-administering/msm.md#terms-used) 是否可用取決於您是否選取 [Blueprint](#actions-for-a-blueprint-page) 或 [即時副本](#actions-for-a-live-copy-page) 頁面：
+1. 選取所需的Blueprint或即時副本頁面 — 工具列將更新以顯示可用操作。 可用的[動作](/help/sites-administering/msm.md#terms-used)取決於您選取的是[Blueprint](#actions-for-a-blueprint-page)或[即時副本](#actions-for-a-live-copy-page)頁面：
 
 ### 藍圖頁面的動作 {#actions-for-a-blueprint-page}
 
 選擇藍圖頁面時，可以執行以下動作：
 
-![已選取Blueprint — 可用動作](assets/chlimage_1-361.png)
+![已選取Blueprint — 可用的動作](assets/chlimage_1-361.png)
 
 * 編輯
 
@@ -93,7 +93,7 @@ ht-degree: 25%
 
 選取即時副本頁面時，以下動作可供使用：
 
-![即時副本頁面已選取 — 動作可用](assets/chlimage_1-362.png)
+![已選取即時副本頁面 — 有可用的動作](assets/chlimage_1-362.png)
 
 * 編輯
 
@@ -125,7 +125,7 @@ ht-degree: 25%
 
 ## 關係狀態 {#relationship-status}
 
-此 **關係狀態** 主控台有兩個標籤，提供了一系列功能：
+**關聯性狀態**&#x200B;主控台有兩個索引標籤，提供一系列功能：
 
 * [關係狀態資訊](#relationship-status-information)
 * [即時副本資訊](#live-copy-information)

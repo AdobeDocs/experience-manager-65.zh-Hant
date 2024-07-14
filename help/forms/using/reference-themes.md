@@ -17,7 +17,7 @@ ht-degree: 0%
 
 # 參考主題{#reference-themes}
 
-[主題](../../forms/using/themes.md) 讓您不具備CSS的深入知識，也能設定表單樣式。 除了預設主題之外，您還可以透過安裝 [AEM Forms附加元件套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en)：
+[佈景主題](../../forms/using/themes.md)可讓您在不深入瞭解CSS的情況下設定表單樣式。 除了預設佈景主題之外，您可以安裝[AEM Forms附加元件套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en)以取得下列佈景主題：
 
 * 貝瑞爾
 * 執行者
@@ -34,13 +34,13 @@ ht-degree: 0%
 
 此套裝中包含的主題為回應式主題，這些主題中的樣式是為行動裝置和桌上型顯示器所定義。 各種裝置上的大部分現代化瀏覽器都能輕鬆轉譯套用這些主題之一的表單。
 
-如需安裝套件的詳細資訊，請參閱 [如何使用套件](/help/sites-administering/package-manager.md).
+如需安裝套件的詳細資訊，請參閱[如何使用套件](/help/sites-administering/package-manager.md)。
 
 ## 貝瑞爾 {#beryl}
 
 We.Gov最適化表單使用Beryl佈景主題，並強調使用背景影像、透明度及大型平面圖示。 在下方熒幕擷圖中，您可以看到Beryl佈景主題的外觀，以及如何增強表單的樣式。
 
-![柏瑞爾主題](assets/beryl.png)
+![貝瑞爾佈景主題](assets/beryl.png)
 
 <!--[Click to enlarge
 
@@ -50,7 +50,7 @@ We.Gov最適化表單使用Beryl佈景主題，並強調使用背景影像、透
 
 執行主題可避免使用純色背景填色來強調表單元件。 選取並按一下元件會變更字型顏色。 與預設的「畫布」主題相比，所選索引標籤中文字的字型顏色會變更為深藍色。 請注意導覽和提交按鈕與Beryl主題有何不同。
 
-![執行主題](assets/exec.png)
+![執行佈景主題](assets/exec.png)
 
 <!--[Click to enlarge
 
@@ -60,7 +60,7 @@ We.Gov最適化表單使用Beryl佈景主題，並強調使用背景影像、透
 
 Exec Light主題使用空白字元來建立順暢的體驗。 「下一個」和「提交」按鈕會獲得實心填色和3D陰影。 在左側選取的標籤會取得箭頭，而非雙勾號。
 
-![執行淺色主題](assets/exec-light.png)
+![執行燈光佈景主題](assets/exec-light.png)
 
 <!--[Click to enlarge
 
@@ -80,7 +80,7 @@ Liberty主題使用極簡主義方法來強調重要事項。 例如，瀏覽過
 
 寧靜的佈景主題提供寧靜色彩配置的明暗陰影，以突顯表單的不同元件。 例如，單選按鈕、面板和標籤會以不同的綠色顯示。
 
-![寧靜的主題](assets/tranquil.png)
+![寧靜主題](assets/tranquil.png)
 
 <!--[Click to enlarge
 
@@ -90,7 +90,7 @@ Liberty主題使用極簡主義方法來強調重要事項。 例如，瀏覽過
 
 Ultraminary主題使用深藍色陰影來反白標示元件，例如定位點、面板、文字方塊和按鈕。
 
-![超海洋主題](assets/ultramarine.png)
+![超海洋佈景主題](assets/ultramarine.png)
 
 <!--[Click to enlarge](assets/ultramarine-1.png)-->
 

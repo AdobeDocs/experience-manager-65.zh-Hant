@@ -23,19 +23,19 @@ ht-degree: 2%
 | AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-forms-portal.html) |
 | AEM 6.5 | 本文章 |
 
-Forms入口網站元件可讓網頁開發人員在利用Adobe Experience Manager (AEM)編寫的網站上建立及自訂表單入口網站。 如需表單入口網站的快速概覽，請參閱 [在入口網站上發佈表單簡介](../../forms/using/introduction-publishing-forms.md).
+Forms入口網站元件可讓網頁開發人員在利用Adobe Experience Manager (AEM)編寫的網站上建立及自訂表單入口網站。 如需快速瞭解表單入口網站，請參閱[在入口網站上發佈表單的簡介](../../forms/using/introduction-publishing-forms.md)。
 
 ## 先決條件 {#prerequisites}
 
-Forms入口網站元件預設無法使用。 請確認下列Forms Portal元件類別已啟用，如所述 [啟用表單入口網站元件](/help/forms/using/enabling-forms-portal-components.md).
+Forms入口網站元件預設無法使用。 請確定下清單單入口網站元件類別已啟用，如[啟用表單入口網站元件](/help/forms/using/enabling-forms-portal-components.md)中所述。
 
-**檔案服務** 包含搜尋與清單製作者、連結，以及草稿與提交元件。
+**Document Services**&#x200B;包含搜尋與清單製作程式、連結、草稿與提交元件。
 
-**檔案服務述詞** 包括日期述詞、全文檢索述詞、屬性述詞和標籤述詞元件。 這些元件可用來設定「搜尋和製表器」元件中的搜尋。
+**檔案服務述詞**&#x200B;包含日期述詞、全文檢索述詞、屬性述詞和標籤述詞元件。 這些元件可用來設定「搜尋和製表器」元件中的搜尋。
 
 在AEM網站頁面上啟用這些元件類別後，就可在元件瀏覽器中使用。
 
-![元件瀏覽器中的AEM Forms入口網站元件](assets/component-categories.png)
+元件瀏覽器中的![AEM Forms入口網站元件](assets/component-categories.png)
 
 Forms入口網站元件類別
 
@@ -56,13 +56,13 @@ Document Services元件類別底下提供的Search &amp; Lister元件可用來�
 
 「清單」窗格是列出表單的區域。 Search &amp; Lister元件提供各種組態選項，可用來控制List窗格中表單的顯示。
 
-若要設定「清單」窗格，請選取「搜尋並製表器」元件，然後選取 ![settings_icon](assets/settings_icon.png). 此 **[!UICONTROL 編輯元件]** 對話方塊開啟。
+若要設定[清單]窗格，請選取[搜尋並列出程式]元件，然後選取![settings_icon](assets/settings_icon.png)。 **[!UICONTROL 編輯元件]**&#x200B;對話方塊開啟。
 
-![編輯模式中的清單窗格](assets/edit-list.png)
+![在編輯模式中的清單窗格](assets/edit-list.png)
 
 編輯模式中的清單窗格
 
-此 **編輯** 對話方塊包含數個提供設定選項的標籤，如下表所述。 選取 **確定** 以儲存組態（完成時）。
+**編輯**&#x200B;對話方塊包含數個索引標籤，提供下表所述的設定選項。 完成時，選取&#x200B;**確定**&#x200B;以儲存設定。
 
 <table>
  <tbody>
@@ -74,12 +74,12 @@ Document Services元件類別底下提供的Search &amp; Lister元件可用來�
   <tr>
    <td><span class="uicontrol"><strong>資產檔案夾</strong></code></td>
    <td>新增項目</td>
-   <td>設定使用AEM Forms UI上傳資產的資料夾。 預設情況下，其中會列出所有上傳的資產。 如需AEM Forms UI的詳細資訊，請參閱 <a href="../../forms/using/introduction-managing-forms.md" target="_blank">管理表單簡介</a>.</td>
+   <td>設定使用AEM Forms UI上傳資產的資料夾。 預設情況下，其中會列出所有上傳的資產。 如需AEM Forms UI的詳細資訊，請參閱<a href="../../forms/using/introduction-managing-forms.md" target="_blank">管理表單簡介</a>。</td>
   </tr>
   <tr>
    <td><p><span class="uicontrol"><strong>顯示區</strong></code></p> </td>
    <td>標題文字</td>
-   <td>搜尋與清單元件的標題。 預設標題為 <strong>Forms入口網站。</strong></td>
+   <td>搜尋與清單元件的標題。 預設標題為<strong>Forms入口網站。</strong></td>
   </tr>
   <tr>
    <td> </td>
@@ -104,17 +104,17 @@ Document Services元件類別底下提供的Search &amp; Lister元件可用來�
   <tr>
    <td> </td>
    <td>結果文字</td>
-   <td><p>設定結果文字（例如，601的1-12） <strong>結果</strong>)。 預設值為 <strong>結果</strong>.</p> <p>例如，如果您指定 <strong>Forms </strong>在此欄位中，共有601個表單，結果文字會變更為1-12 / 601 <strong>Forms。</strong></p> </td>
+   <td><p>設定結果文字（例如，601 <strong>個結果</strong>中的1-12）。 預設值為<strong>結果</strong>。</p> <p>例如，若您在此欄位中指定<strong>Forms </strong>，且共有601個表單，則結果文字會變更為1-12個(共601個<strong>Forms。</strong></p> </td>
   </tr>
   <tr>
    <td> </td>
    <td>頁面文字</td>
-   <td><p>設定頁面文字(例如， <strong>頁面 </strong>1/51)。 預設值為 <strong>頁面</strong>.</p> <p>例如，如果您指定 <strong>申請表單 </strong>在此欄位中有51頁，頁面文字會變更為 <strong>申請表單 </strong>1/51。</p> </td>
+   <td><p>設定頁面文字（例如，<strong>第</strong>頁，共51頁）。 預設值為<strong>頁面</strong>。</p> <p>例如，如果您在此欄位中指定<strong>應用程式表單</strong>，且有51頁，則頁面文字會變更為<strong>應用程式表單</strong>1 / 51。</p> </td>
   </tr>
   <tr>
    <td> </td>
    <td>Of 文字</td>
-   <td><p>取代單字 <strong>之</strong> 包含指定文字（第1頁） <strong>之 </strong>51)。 預設值為 <strong>之</strong>.</p> <p>例如，如果您指定 <strong>/ </strong>在此欄位中，文字會變更為第1頁 <strong>/ </strong>51.</p> </td>
+   <td><p>以指定的文字（第1 <strong>頁，共</strong>51頁）取代</strong>的<strong>字。 預設值為<strong>個，共</strong>個。</p> <p>例如，如果您在此欄位中指定<strong> / </strong>，文字會變更為第1頁<strong> / </strong>51。</p> </td>
   </tr>
   <tr>
    <td><span class="uicontrol"><strong>表單連結</strong></code></td>
@@ -129,7 +129,7 @@ Document Services元件類別底下提供的Search &amp; Lister元件可用來�
   <tr>
    <td> </td>
    <td>提交URL</td>
-   <td><p>設定表單資料提交所在的servlet。</p> <p><strong>注意：</strong> <em>表單的提交URL可在數個位置指定，其優先順序如下：</em></p>
+   <td><p>設定表單資料提交所在的servlet。</p> <p><strong>注意：</strong> <em>表單的送出URL可以在數個位置指定，其優先順序如下：</em></p>
     <ol>
      <li><em>表單中內嵌的提交URL （在提交按鈕中）具有最高優先順序。</em></li>
      <li><em>AEM Forms UI中提到的提交URL具有第二高優先順序。</em></li>
@@ -139,17 +139,17 @@ Document Services元件類別底下提供的Search &amp; Lister元件可用來�
   <tr>
    <td> </td>
    <td>HTML演算動作工具提示</td>
-   <td>設定工具提示的文字，當游標懸停於上方時，會顯示此文字 <img height="16" src="assets/aem6forms_panel-html.png" width="13" /> (HTML5圖示)。</td>
+   <td>設定工具提示的文字，當游標停留在<img height="16" src="assets/aem6forms_panel-html.png" width="13" />上時，會顯示工具提示(HTML5圖示)。</td>
   </tr>
   <tr>
    <td> </td>
    <td>PDF演算動作工具提示</td>
-   <td>設定工具提示的文字，當游標懸停於上方時，會顯示此文字 <img height="16" src="assets/aem6forms_panel-pdf.png" width="14" /> (PDF圖示)。</td>
+   <td>設定工具提示的文字，當游標停留在<img height="16" src="assets/aem6forms_panel-pdf.png" width="14" />上時，會顯示工具提示(PDF圖示)。</td>
   </tr>
   <tr>
    <td><span class="uicontrol"><strong>樣式</strong></code></td>
    <td>樣式型別</td>
-   <td>可讓您指定 <strong>無樣式，預設樣式</strong>，或 <strong>自訂樣式 </strong>以列出表格。</td>
+   <td>可讓您指定列出表單的<strong>無樣式、預設樣式</strong>或<strong>自訂樣式</strong>。</td>
   </tr>
   <tr>
    <td> </td>
@@ -163,9 +163,9 @@ Document Services元件類別底下提供的Search &amp; Lister元件可用來�
 
 「搜尋」窗格可讓您從AEM Sidekick的檔案服務述詞類別中新增日期述詞、全文檢索述詞、屬性述詞和標籤述詞元件。 這些元件實施搜尋功能，讓使用者對列出的表單執行搜尋。
 
-**秘訣：** *您可以根據預設條件控制表單入口網站上顯示的表單清單，並隱藏一般使用者的搜尋功能。 若要控制表單清單，請使用述詞元件來套用搜尋篩選器。 您也可以指定預設篩選值，並從「編輯元件」對話方塊的「顯示」標籤中停用搜尋。*
+**秘訣：** *您可以根據預設條件控制表單入口網站上顯示的表單清單，並隱藏一般使用者的搜尋功能。 若要控制表單清單，請使用述詞元件來套用搜尋篩選器。 您也可以指定預設篩選值，並從[編輯元件]對話方塊的[顯示]索引標籤停用搜尋。*
 
-![包含日期、全文、屬性和標籤述詞的搜尋面板](assets/search-with-predicates.png)
+![搜尋包含日期、全文、屬性和標籤述詞的面板](assets/search-with-predicates.png)
 
 包含日期、全文、屬性和標籤述詞的搜尋面板
 
@@ -175,18 +175,18 @@ Document Services元件類別底下提供的Search &amp; Lister元件可用來�
 
 若要設定日期述詞元件：
 
-1. 選取元件，然後選取 ![settings_icon](assets/settings_icon.png). 「編輯」對話方塊開啟。
+1. 選取元件，然後選取![settings_icon](assets/settings_icon.png)。 「編輯」對話方塊開啟。
 1. 指定下列專案：
 
-   * **型別：** 唯一可用的選項是 **上次修改日期**
+   * **型別：**&#x200B;唯一可用的選項是&#x200B;**上次修改日期**
 
-   * **文字：** 日期述詞元件的標籤或標題。 預設值為 **上次修改日期。**
+   * 日期述詞元件的&#x200B;**文字：**&#x200B;標籤或標題。 預設值為&#x200B;**上次修改日期。**
 
-   * **開始日期標籤：** 開始日期欄位的標籤或標題
-   * **結束日期標籤：** 結束日期欄位的標籤或標題
-   * **隱藏：** 若要強制預設日期篩選器以列出表單
+   * **開始日期標籤：**&#x200B;開始日期欄位的標籤或標題
+   * **結束日期標籤：**&#x200B;結束日期欄位的標籤或標題
+   * **隱藏：**&#x200B;若要對清單表單強制執行預設日期篩選
 
-1. 選取 **確定**
+1. 選取&#x200B;**確定**
 
 #### 全文檢索述詞 {#full-text-predicate}
 
@@ -194,9 +194,9 @@ Document Services元件類別底下提供的Search &amp; Lister元件可用來�
 
 設定全文檢索述詞元件：
 
-1. 選取元件，然後選取 ![settings_icon](assets/settings_icon.png). 「編輯」對話方塊開啟。
-1. 在中指定標題 **主要標題** 欄位。
-1. 選取 **確定**
+1. 選取元件，然後選取![settings_icon](assets/settings_icon.png)。 「編輯」對話方塊開啟。
+1. 在&#x200B;**主要標題**&#x200B;欄位中指定標題。
+1. 選取&#x200B;**確定**
 
 #### 屬性述詞 {#properties-predicate}
 
@@ -204,15 +204,15 @@ Document Services元件類別底下提供的Search &amp; Lister元件可用來�
 
 若要設定「屬性述詞」元件：
 
-1. 選取元件，然後選取 ![settings_icon](assets/settings_icon.png). 「編輯」對話方塊開啟。
-1. 在「一般」標籤中，指定搜尋標籤。 預設值為 **屬性**
+1. 選取元件，然後選取![settings_icon](assets/settings_icon.png)。 「編輯」對話方塊開啟。
+1. 在「一般」標籤中，指定搜尋標籤。 預設值為&#x200B;**屬性**
 
-1. 在「選項」標籤中，選取 **新增專案。**
+1. 在[選項]索引標籤中，選取&#x200B;**新增專案。**
 1. 從下拉式清單中選取屬性，並在下拉式清單下方的欄位中指定其搜尋標籤。
 1. 重複步驟4以新增更多屬性。 您也可以指定預設篩選值，以根據指定的條件列出表單，並隱藏屬性以供一般使用者搜尋。 選取屬性的「隱藏」核取方塊，並指定預設篩選值。
 例如，如果您想要顯示標題中包含「Travel」的表單，請選取「標題」屬性旁的「隱藏」。 此外，在預設篩選值文字方塊中指定「行進」。
 
-1. 選取 **確定**
+1. 選取&#x200B;**確定**
 
 #### 標記述詞 {#tags-predicate}
 
@@ -220,20 +220,20 @@ Document Services元件類別底下提供的Search &amp; Lister元件可用來�
 
 若要設定「標籤述詞」元件：
 
-1. 選取元件，然後選取 ![settings_icon](assets/settings_icon.png). 「編輯」對話方塊開啟。
+1. 選取元件，然後選取![settings_icon](assets/settings_icon.png)。 「編輯」對話方塊開啟。
 1. 選取「標籤」欄位旁的向下箭頭按鈕。
 1. 選取適當的標籤
-1. 選取 **確定**
+1. 選取&#x200B;**確定**
 
 選取的標籤會與選取的核取方塊一起出現在「搜尋」窗格中。 使用者現在可以根據標籤縮小搜尋範圍。
 
 ## 在頁面上列出表單 {#list-forms-on-a-page-br}
 
-若要在頁面上列出表單，請新增 **[!UICONTROL 搜尋與清單製作者]** 元件至頁面並設定 **[!UICONTROL 清單窗格]**. 若要讓一般使用者搜尋包含日期、文字和標籤的表單，請新增 **[!UICONTROL 搜尋窗格]** 元件。
+若要在頁面上列出表單，請新增&#x200B;**[!UICONTROL Search &amp; Lister]**&#x200B;元件至頁面，並設定&#x200B;**[!UICONTROL 清單窗格]**。 若要讓一般使用者搜尋包含日期、文字和標籤的表單，請新增&#x200B;**[!UICONTROL 搜尋窗格]**&#x200B;元件。
 
-若要從頁面上的任何位置連結表單，請使用連結元件。 如需連結元件的詳細資訊，請參閱 [將連結元件內嵌在頁面中](../../forms/using/embedding-link-component-page.md).
+若要從頁面上的任何位置連結表單，請使用連結元件。 如需連結元件的詳細資訊，請參閱[在頁面](../../forms/using/embedding-link-component-page.md)中嵌入連結元件。
 
-若要列出處於草稿狀態的表單以及已提交的表單，請使用 **[!UICONTROL 草稿與提交]** 元件。 如需詳細資訊，請參閱 [自訂草稿與提交元件](../../forms/using/draft-submission-component.md).
+若要列出處於草稿狀態的表單和已提交的表單，請使用&#x200B;**[!UICONTROL 草稿和提交]**&#x200B;元件。 如需詳細資訊，請參閱[自訂草稿和提交元件](../../forms/using/draft-submission-component.md)。
 
 ## 行動裝置便利性 {#mobile-device-friendliness}
 
@@ -241,17 +241,17 @@ Forms Portal搜尋與清單元件適合行動裝置使用，且可據此調整�
 
 下圖說明在行動裝置上開啟搜尋與清單元件時：
 
-![Search and Lister元件的熒幕擷圖](assets/search_lister.png)
+![搜尋與清單程式元件的熒幕擷圖](assets/search_lister.png)
 
 搜尋與清單元件
 
 ## 自訂表單入口網站頁面 {#customizing-a-forms-portal-page-br}
 
-您可以自訂表單入口網站頁面，為頁面提供獨特的外觀。 您也可以新增中繼資料以改善搜尋體驗、變更頁面版面以及新增自訂CSS樣式。 如需詳細資訊，請參閱 [為Forms Portal元件自訂範本](../../forms/using/customizing-templates-forms-portal-components.md).
+您可以自訂表單入口網站頁面，為頁面提供獨特的外觀。 您也可以新增中繼資料以改善搜尋體驗、變更頁面版面以及新增自訂CSS樣式。 如需詳細資訊，請參閱[自訂Forms入口網站元件的範本](../../forms/using/customizing-templates-forms-portal-components.md)。
 
-AEM Forms UI可讓您將自訂中繼資料新增至表單。 自訂中繼資料適用於為一般使用者提供清單和搜尋表單體驗。 如需自訂中繼資料的詳細資訊，請參閱 [為Forms Portal元件自訂範本](../../forms/using/customizing-templates-forms-portal-components.md).
+AEM Forms UI可讓您將自訂中繼資料新增至表單。 自訂中繼資料適用於為一般使用者提供清單和搜尋表單體驗。 如需自訂中繼資料的詳細資訊，請參閱[自訂Forms入口網站元件的範本](../../forms/using/customizing-templates-forms-portal-components.md)。
 
-Forms Portal可立即提供轉譯動作。 您可以自訂表單入口網站以新增更多動作。 如需詳細資訊，請參閱 [正在表單製表器專案上新增自訂動作。](../../forms/using/add-custom-action-form-lister.md)
+Forms Portal可立即提供轉譯動作。 您可以自訂表單入口網站以新增更多動作。 如需詳細資訊，請參閱[新增表單製表器專案的自訂動作。](../../forms/using/add-custom-action-form-lister.md)
 
 ## 相關文章
 

@@ -36,7 +36,7 @@ AEM forms （及舊版）使用JMS佇列來非同步執行操作。 AEM Forms會
 1. Work Manager會將工作專案儲存在資料庫表格中，並將唯一識別碼指派給工作專案。 資料庫記錄包含執行工作專案所需的所有資訊。
 1. 當執行緒變成可用狀態時，工作管理員執行緒會拉入工作專案。 提取工作專案之前，執行緒可以檢查需要的服務是否已啟動、是否有足夠的棧積大小可提取下一個工作專案，以及是否有足夠的CPU週期可處理工作專案。 Work Manager也會在排程其執行時評估工作專案的屬性（例如其優先順序）。
 
-AEM Forms管理員可以使用「健康情況監視」來檢查Work Manager統計資料，例如佇列中的工作專案數量及其狀態。 您也可以使用「健全狀態監視器」來暫停、繼續、重試或刪除工作專案。 (請參閱 [檢視與工作管理員相關的統計資料](/help/forms/using/admin-help/view-statistics-related-manager.md#view-statistics-related-to-work-manager).)
+AEM Forms管理員可以使用「健康情況監視」來檢查Work Manager統計資料，例如佇列中的工作專案數量及其狀態。 您也可以使用「健全狀態監視器」來暫停、繼續、重試或刪除工作專案。 （請參閱[檢視與工作管理員相關的統計資料](/help/forms/using/admin-help/view-statistics-related-manager.md#view-statistics-related-to-work-manager)。）
 
 ## 設定Work Manager節流選項 {#configuring-work-manager-throttling-options}
 
@@ -52,23 +52,23 @@ AEM Forms管理員可以使用「健康情況監視」來檢查Work Manager統�
  <tbody>
   <tr>
    <td><code> adobe.work-manager.queue-refill-interval</code></td>
-   <td><p>指定Work Manager檢查其佇列中新專案時使用的時間間隔（毫秒）。</p><p>此選項的值是整數。 預設值為 <code>1000</code> 毫秒（1秒）。 </p><p>如果非同步叫用的數量很低，您可以增加此值。 例如，您可以將其增加到2000到5000 （2-5秒）之間的某個值。 </p><p>如果非同步叫用的數量很高，預設值應該就足夠了，但您可以視需要使用較低的值。 過多地減少這個值（例如，低於50，會導致輪詢頻率為每秒20次）會導致系統產生大量的額外負荷。</p></td>
+   <td><p>指定Work Manager檢查其佇列中新專案時使用的時間間隔（毫秒）。</p><p>此選項的值是整數。 預設值為<code>1000</code>毫秒（1秒）。 </p><p>如果非同步叫用的數量很低，您可以增加此值。 例如，您可以將其增加到2000到5000 （2-5秒）之間的某個值。 </p><p>如果非同步叫用的數量很高，預設值應該就足夠了，但您可以視需要使用較低的值。 過多地減少這個值（例如，低於50，會導致輪詢頻率為每秒20次）會導致系統產生大量的額外負荷。</p></td>
   </tr>
   <tr>
    <td><code> adobe.workmanager.debug-mode-enabled</code></td>
-   <td><p>將此選項設為 <code>true</code> 啟用偵錯模式，或設為false停用偵錯模式。 </p><p>在偵錯模式中，會記錄關於Work Manager原則違規和Work Manager暫停/恢復動作的訊息。 只有在疑難排解時才會將此選項設定為true。</p></td>
+   <td><p>將此選項設為<code>true</code>以啟用偵錯模式，或設為false以停用它。 </p><p>在偵錯模式中，會記錄關於Work Manager原則違規和Work Manager暫停/恢復動作的訊息。 只有在疑難排解時才會將此選項設定為true。</p></td>
   </tr>
   <tr>
    <td><code> adobe.workmanager.memory-control.enabled</code></td>
-   <td><p>將此選項設為 <code>true</code> 根據下列的記憶體控制設定來啟用節流，或 <code>false</code> 以停用節流。</p></td>
+   <td><p>將此選項設為<code>true</code>以根據下列所述的記憶體控制設定啟用節流，或設為<code>false</code>以停用節流。</p></td>
   </tr>
   <tr>
    <td><code> adobe.workmanager.memory-control.high-limit</code></td>
-   <td><p>指定工作管理員限制內送工作之前，可以使用的最大記憶體百分比。</p><p>此選項的預設值為 <code>95</code>. 這個值在大部分的系統上應該都可以。 只有在您的系統需要推進到其最大容量時才增加它。 但請注意，隨著您增加此值，記憶體不足問題的風險也會增加。</p><p>如果您在叢集環境中執行AEM表單，您可能想要在叢集的不同節點上以不同方式設定記憶體控制限制設定。 例如，節點A和B的上限可能較低，這些節點會在您的負載平衡器中程式設計以用於互動式工作。 而且，您可以在節點C和D上設定較高的上限，負載平衡器不會使用這些上限，但會將其保留給非同步工作。</p></td>
+   <td><p>指定工作管理員限制內送工作之前，可以使用的最大記憶體百分比。</p><p>此選項的預設值為<code>95</code>。 這個值在大部分的系統上應該都可以。 只有在您的系統需要推進到其最大容量時才增加它。 但請注意，隨著您增加此值，記憶體不足問題的風險也會增加。</p><p>如果您在叢集環境中執行AEM表單，您可能想要在叢集的不同節點上以不同方式設定記憶體控制限制設定。 例如，節點A和B的上限可能較低，這些節點會在您的負載平衡器中程式設計以用於互動式工作。 而且，您可以在節點C和D上設定較高的上限，負載平衡器不會使用這些上限，但會將其保留給非同步工作。</p></td>
   </tr>
   <tr>
    <td><code> adobe.workmanager.memory-control.low-limit</code></td>
-   <td><p>指定工作管理員停止限制內送工作之前，可以使用的最大記憶體百分比。</p><p>此選項的預設值為 <code>20</code>. 這個值在大部分的系統上應該都可以。</p></td>
+   <td><p>指定工作管理員停止限制內送工作之前，可以使用的最大記憶體百分比。</p><p>此選項的預設值為<code>20</code>。 這個值在大部分的系統上應該都可以。</p></td>
   </tr>
   <tr>
    <td><code>Dadobe.workmanager.allocate.max-batch-size</code></td>
@@ -77,26 +77,26 @@ AEM Forms管理員可以使用「健康情況監視」來檢查Work Manager統�
  </tbody>
 </table>
 
-**將Java選項新增至JBoss**
+**新增Java選項至JBoss**
 
 1. 停止JBoss應用程式伺服器。
-1. 開啟 *[appserver根目錄]*/bin/run.bat (Windows)或run.sh （Linux或UNIX），並視需要以格式新增任何Java選項 `-Dproperty=value`.
+1. 在編輯器中開啟&#x200B;*[appserver root]*/bin/run.bat (Windows)或run.sh （Linux或UNIX），並視需要新增任何Java選項，格式為`-Dproperty=value`。
 1. 重新啟動伺服器。
 
-**將Java選項新增至WebLogic**
+**新增Java選項至WebLogic**
 
-1. 輸入WebLogic管理主控台以啟動 `https://[host name]:[port]/console` 在網頁瀏覽器中。
+1. 在網頁瀏覽器中輸入`https://[host name]:[port]/console`，啟動WebLogic管理主控台。
 1. 輸入您為WebLogic Server網域建立的使用者名稱和密碼，然後按一下「變更中心」下的「記錄」，再按一下「鎖定與編輯」。
 1. 在「網域結構」下，按一下「環境>伺服器」，然後在右窗格中按一下Managed伺服器名稱。
 1. 在下一個畫面中，按一下「組態」標籤>「伺服器啟動」標籤。
 1. 在「引數」方塊中，將所需的引數附加至目前內容的結尾。 例如，若要停用健康情況監視，請新增：
 
-   `-Dadobe.healthmonitor.enabled=false` 停用健康狀態監視。
+   `-Dadobe.healthmonitor.enabled=false`停用健康狀態監視。
 
 1. 按一下儲存，然後按一下啟動變更。
 1. 重新啟動WebLogic管理的伺服器。
 
-**將Java選項新增至WebSphere**
+**新增Java選項至WebSphere**
 
 1. 在「WebSphere管理主控台」導覽樹狀結構中，按一下「伺服器」>「伺服器型別」>「WebSphere應用程式伺服器」。
 1. 在右窗格中，按一下伺服器名稱。

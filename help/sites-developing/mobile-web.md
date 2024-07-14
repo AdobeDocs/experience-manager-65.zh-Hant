@@ -25,7 +25,7 @@ ht-degree: 1%
 
 AEM提供數種工具，可讓您為行動裝置開發網站，並將您的內容整合到行動應用程式中。
 
-本頁應結合 [作者適用的行動頁面](/help/sites-authoring/mobile.md).
+此頁面應與作者的[行動頁面](/help/sites-authoring/mobile.md)一起閱讀。
 
 ## 為行動裝置開發網站 {#developing-web-sites-for-mobile}
 
@@ -38,4 +38,4 @@ AEM提供數種工具，可讓您為行動裝置開發網站，並將您的內�
 
 ## 開發行動應用程式 {#developing-mobile-apps}
 
-開發使用AEM頁面作為應用程式介面的行動應用程式。 AEM已與PhoneGap整合，因此您可以使用AEM頁面輕鬆建立應用程式。 「內容同步」可讓您建立頁面的版本化封存，以便與應用程式整合。 若要深入瞭解Content Sync，請按一下 [此處](/help/mobile/phonegap-contentsync.md).
+開發使用AEM頁面作為應用程式介面的行動應用程式。 AEM已與PhoneGap整合，因此您可以使用AEM頁面輕鬆建立應用程式。 「內容同步」可讓您建立頁面的版本化封存，以便與應用程式整合。 若要進一步瞭解Content Sync，請按一下[這裡](/help/mobile/phonegap-contentsync.md)。

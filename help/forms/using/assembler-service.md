@@ -18,7 +18,7 @@ ht-degree: 6%
 
 # 使用組合器服務{#using-assembler-service}
 
-組合器服務可讓您組合、重新排列和增加PDF和XDP檔案，並取得有關PDF檔案的資訊。 提交至組合器服務的每個工作都包含檔案描述XML (DDX)檔案、來原始檔及外部資源（字串與圖形）。 如需有關組合器服務的詳細資訊，請參閱 [組合器服務概述](../../forms/using/overview-aem-document-services.md#p-assembler-service-p).
+組合器服務可讓您組合、重新排列和增加PDF和XDP檔案，並取得有關PDF檔案的資訊。 提交至組合器服務的每個工作都包含檔案描述XML (DDX)檔案、來原始檔及外部資源（字串與圖形）。 如需有關組合器服務的詳細資訊，請參閱[組合器服務概述](../../forms/using/overview-aem-document-services.md#p-assembler-service-p)。
 
 您可以使用組裝服務進行下列操作：
 
@@ -30,7 +30,7 @@ ht-degree: 6%
 
 下圖顯示三個來原始檔正在合併為單一結果檔案。
 
-![從多個PDF檔案組合簡單PDF檔案](assets/as_document_assembly.png)
+![從多個PDF檔案組合一個簡單的PDF檔案](assets/as_document_assembly.png)
 
 從多個PDF檔案組合簡單PDF檔案
 
@@ -87,7 +87,7 @@ Assembler服務可建立包含檔案集合和自含使用者介面的PDFPortfoli
 
 下圖顯示的PDF檔案在檔案標題中包含唯一識別碼。
 
-![在檔案標題中包含唯一識別碼的PDF檔案](do-not-localize/as_batesnumber.png)
+![在檔案的標頭中包含唯一識別碼的PDF檔案](do-not-localize/as_batesnumber.png)
 
 在檔案標題中包含唯一識別碼的PDF檔案
 
@@ -149,11 +149,11 @@ Assembler服務可建立包含檔案集合和自含使用者介面的PDFPortfoli
   </tr> 
   <tr> 
    <td>相對值</td> 
-   <td>在來源XDP中嵌入透過相對參照參照的所有影像<br /> 檔案。</td> 
+   <td>在來源XDP<br />檔案中嵌入透過相對參照參照的所有影像。</td> 
   </tr> 
   <tr> 
    <td>絕對值</td> 
-   <td>在來源XDP中嵌入透過絕對參照參照的所有影像<br /> 檔案。</td> 
+   <td>在來源XDP<br />檔案中嵌入透過絕對參照參照的所有影像。</td> 
   </tr> 
  </tbody> 
 </table>
@@ -223,11 +223,11 @@ fragment="myFragment"/>
 
 對表單片段動態插入的支援支援支援單一原始碼控制。 您可維護常用元件的單一來源。 例如，您可以為公司橫幅建立片段。 如果橫幅變更，您只需修改片段。 包含片段的其他表單不會變更。
 
-表單設計人員使用LiveCycle設計人員來建立表單片段。 這些片段在XFA表單中具有獨特的名稱子表單。 表單設計人員也使用Designer來建立具有唯一名稱插入點的XFA表單。 您（程式設計人員）撰寫DDX檔案，指定片段插入XFA表單的方式。
+表單設計人員使用LiveCycleDesigner來建立表單片段。 這些片段在XFA表單中具有獨特的名稱子表單。 表單設計人員也可以使用Designer來建立具有唯一名稱插入點的XFA表單。 您（程式設計人員）撰寫DDX檔案，指定片段插入XFA表單的方式。
 
 下圖顯示兩個XML表單（XFA範本）。 左邊的表單包含一個名為myInsertionPoint的插入點。 右邊的表單包含一個名為myFragment的片段。
 
-![將表單片段插入到XFA表單中](assets/as_assembler_fragment_assy_assembled.png)
+![將表單片段插入XFA表單](assets/as_assembler_fragment_assy_assembled.png)
 
 將表單片段插入到XFA表單中
 
@@ -283,7 +283,7 @@ source="myFragmentSource"/>
 
 在下圖中，DocA會分成多個產生的檔案。 頁面上的第一個第1層書籤會識別新結果檔案的開頭。
 
-![根據書籤將來原始檔分割為多個檔案](assets/as_intro_pdfsfrombookmarks.png)
+![根據書籤將來原始檔分割成多份檔案](assets/as_intro_pdfsfrombookmarks.png)
 
 根據書籤將來原始檔分割為多個檔案
 
@@ -326,7 +326,7 @@ source="myFragmentSource"/>
 
 您可以使用DDX檔案，讓Assembler服務呼叫下列LiveC循環服務。 組合器服務只能呼叫隨LiveCycle安裝的那些服務。
 
-**Reader延伸模組服務**：讓Adobe Reader使用者得以數位簽署產生的PDF檔案。
+**Reader延伸模組服務**：讓Adobe Reader使用者能以數位方式簽署產生的PDF檔案。
 
 **Forms服務**：合併XDP檔案和XML資料檔案，以產生包含已填互動式表單的PDF檔案。
 

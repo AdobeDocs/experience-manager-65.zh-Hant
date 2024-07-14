@@ -24,15 +24,15 @@ ht-degree: 0%
 
 AEM已與PhoneGap整合，因此您可以使用AEM頁面輕鬆建立應用程式。 PhoneGap可讓使用者建立公用程式應用程式，讓使用者處理內容。 「內容同步」可讓您建立頁面的版本化封存，以便與應用程式整合。
 
-通常 ***AEM管理員*** 負責使用建立精靈建立應用程式，或匯入現有應用程式，將新應用程式新增至AEM Mobile目錄。
+通常，***AEM管理員***&#x200B;會使用建立精靈建立應用程式，或匯入現有應用程式，負責將新應用程式新增至AEM Mobile目錄。
 
-從這裡開始 ***AEM作者*** (或 *行銷人員*)現在可以使用現成的範本和元件來新增和編輯頁面、拖放元件，以及從DAM新增所有型別的媒體，包括影像、影片和文字片段（內容片段）。
+從這裡，***AEM作者*** （或&#x200B;*行銷人員*）現在可以使用現成的範本和元件來新增和編輯頁面、拖放元件，以及從DAM新增所有型別的媒體，包括影像、影片和文字片段（內容片段）。
 
-AEM Mobile的真正優勢在於 *精明* ***AEM開發人員*** 可擴充及建立自訂Web範本和元件，以啟用 *AEM作者* 打造美觀且吸引人的行動體驗。 這些範本和元件不僅已針對行動應用程式世界最佳化，而且可與裝置和AEM伺服器（任何遠端伺服器）通訊，以連線全通路服務端點。
+AEM Mobile的真正力量是&#x200B;*精明的* ***AEM Developer***&#x200B;可以擴充及建立自訂Web範本和元件，讓&#x200B;*AEM Author*&#x200B;能夠建立美妙且吸引人的行動體驗。 這些範本和元件不僅已針對行動應用程式世界最佳化，而且可與裝置和AEM伺服器（任何遠端伺服器）通訊，以連線全通路服務端點。
 
 >[!NOTE]
 >
->當 *AEM作者* 相信應用程式已就緒，他們可以先讓利害關係人透過下載應用程式 **[Adobe驗證](/help/mobile/phonegap-mobile-quickstart.md)** （可在AppStore和PlayStore中使用）以供檢閱和核准。 收到綠燈後，他們就能透過AEM Mobile ContentSync內容發行管理控制面板，直接發行這項新內容或更新內容給使用者。 可由一個人擔任任意數量的角色，具體取決於您和您的治理政策。
+>當&#x200B;*AEM作者*&#x200B;認為應用程式已就緒時，他們可以先讓利害關係人下載具有&#x200B;**[Adobe驗證](/help/mobile/phonegap-mobile-quickstart.md)** （可在AppStore和PlayStore中使用）的應用程式以進行檢閱和核准。 收到綠燈後，他們就能透過AEM Mobile ContentSync內容發行管理控制面板，直接發行這項新內容或更新內容給使用者。 可由一個人擔任任意數量的角色，具體取決於您和您的治理政策。
 
 ## 先決條件 {#prerequisites}
 
@@ -46,18 +46,18 @@ AEM Mobile只是構成完整AEM平台的支柱之一。
 
 ## 作者的快速連結 {#quicklinks-for-authors}
 
-另請參閱 [在AEM中為Adobe PhoneGap Enterprise製作](/help/mobile/phonegap.md) 以瞭解作者的角色和責任。
+請參閱[在AEM](/help/mobile/phonegap.md)中為Adobe PhoneGap Enterprise製作，瞭解作者的角色和責任。
 
 ## 開發人員快速連結 {#quicklinks-for-developers}
 
-有些範例應用程式會與AEM Mobile整合，並可由開發人員自訂。 按一下 [使用AEM開發Adobe PhoneGap Enterprise](/help/mobile/developing-in-phonegap.md).
+有些範例應用程式會與AEM Mobile整合，並可由開發人員自訂。 按一下[使用AEM](/help/mobile/developing-in-phonegap.md)開發Adobe PhoneGap Enterprise。
 
 在後續章節中，您將瞭解如白色標籤、您的應用程式、本地化、國際化、ContentSync、目標定位、分析等進階概念。
 
 ## 管理員快速連結 {#quicklinks-for-administrators}
 
-另請參閱 [使用AEM管理Adobe PhoneGap Enterprise的內容](/help/mobile/administer-phonegap.md) 以設定及管理您的行動應用程式。
+請參閱[使用AEM管理Adobe PhoneGap Enterprise的內容](/help/mobile/administer-phonegap.md)，以設定和管理您的行動應用程式。
 
 >[!NOTE]
 >
->使用混合行動技術，您可以建立豐富的行動應用程式， *離線和線上執行* 事實上，透過AEM Mobile，許多客戶會選擇建立應用程式，檢查他們何時線上上或離線，並據此做出行為。
+>使用混合式行動技術，您可以建立使用AEM Mobile *離線和線上執行*&#x200B;的豐富行動應用程式，事實上，許多客戶選擇建立應用程式，以檢查他們線上上或離線時的狀態，並據此採取相應的行動。

@@ -24,14 +24,14 @@ ht-degree: 13%
 | AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-layout-of-an-adaptive-form/inline-style-adaptive-forms.html) |
 | AEM 6.5 | 本文章 |
 
-您可使用以下方式指定樣式，以定義最適化表單的整體外觀和樣式 [主題編輯器](../../forms/using/themes.md). 此外，您也可以將CSS內嵌樣式套用至個別的最適化表單元件，並即時預覽變更。 內嵌樣式會覆寫主題中提供的樣式。
+您可以使用[主題編輯器](../../forms/using/themes.md)來指定樣式，以定義最適化表單的整體外觀和樣式。 此外，您也可以將CSS內嵌樣式套用至個別的最適化表單元件，並即時預覽變更。 內嵌樣式會覆寫主題中提供的樣式。
 
 ## 套用內嵌CSS屬性 {#apply-inline-css-properties}
 
 若要將內嵌樣式新增至元件：
 
-1. 在表單編輯器中開啟您的表單，並將模式變更為樣式模式。 若要將模式變更為樣式模式，請在頁面工具列中，選取 ![畫佈下拉式清單](assets/canvas-drop-down.png) > **樣式**.
-1. 在頁面中選取元件，然後選取編輯按鈕 ![編輯按鈕](assets/edit-button.png). 在側邊欄中開啟樣式屬性。
+1. 在表單編輯器中開啟您的表單，並將模式變更為樣式模式。 若要將模式變更為樣式模式，請在頁面工具列中選取![畫佈下拉式清單](assets/canvas-drop-down.png) > **樣式**。
+1. 在頁面中選取元件，然後選取編輯按鈕![edit-button](assets/edit-button.png)。 在側邊欄中開啟樣式屬性。
 
    您也可以從側欄中的表單階層樹狀結構中選取元件。 表單階層樹狀結構可在側邊欄中做為表單物件使用。
 
@@ -49,13 +49,13 @@ ht-degree: 13%
    * 進階（讓您為元件編寫自訂CSS）
 
 1. 同樣地，您可以為元件的其他部分（例如Widget、標題和說明）套用樣式。
-1. 選取 **完成** 確認變更或 **取消** 以捨棄變更。
+1. 選取&#x200B;**完成**&#x200B;以確認變更，或選取&#x200B;**取消**&#x200B;以捨棄變更。
 
 ## 範例：欄位元件的內嵌樣式 {#example-inline-styles-for-a-field-component}
 
 下列影像說明套用內嵌樣式之前和之後的文字欄位。
 
-![套用內嵌樣式之前的文字方塊元件](assets/no-style.png)
+套用內嵌樣式之前的![文字方塊元件](assets/no-style.png)
 
 套用內嵌樣式屬性前的文字方塊元件
 
@@ -102,7 +102,7 @@ ht-degree: 13%
  </tbody>
 </table>
 
-![套用內嵌樣式後的文字方塊樣式](assets/applied-style.png)
+套用內嵌樣式後的![文字方塊樣式](assets/applied-style.png)
 
 套用內嵌樣式屬性後的文字方塊元件
 

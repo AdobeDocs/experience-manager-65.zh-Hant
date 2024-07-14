@@ -38,13 +38,13 @@ Process Reporting使用內嵌的Process Reporting存放庫來發佈Forms資料�
 
 ProcessDataPublisher伺服器會定期在AEM Forms資料庫上執行，並擷取上次執行服務後變更的資料。 然後會將資料發佈至「程式資料儲存」服務。
 
-如需設定服務的詳細資訊，請參閱 [設定ProcessDataPublisher服務](/help/forms/using/process-reporting/install-start-process-reporting.md#p-reportconfiguration-service-p).
+如需設定服務的詳細資訊，請參閱[設定ProcessDataPublisher服務](/help/forms/using/process-reporting/install-start-process-reporting.md#p-reportconfiguration-service-p)。
 
 ### ProcessDataStorageProvider服務 {#processdatastorageprovider-service-br}
 
 ProcessDataStorageProvider服務會從ProcessDataPublisher服務接收處理作業資料，並將資料儲存到Process Reporting儲存庫。
 
-如需設定服務的詳細資訊，請參閱 [設定ProcessDataStorageProvider服務](/help/forms/using/process-reporting/install-start-process-reporting.md#p-to-configure-the-process-reporting-repository-locations-p).
+如需設定服務的詳細資訊，請參閱[設定ProcessDataStorageProvider服務](/help/forms/using/process-reporting/install-start-process-reporting.md#p-to-configure-the-process-reporting-repository-locations-p)。
 
 ### OSGi服務 {#osgi-service-br}
 
@@ -70,4 +70,4 @@ QueryDataServlet服務接受來自Process Reporting使用者介面的查詢。
 
 您可以建立自己的自訂報表，並在「流程報表」使用者介面的「自訂報表」標籤中顯示這些報表。
 
-如需建立自訂報表的步驟，請參閱文章中的若要建立自訂報表 [自訂報告進行中報告](/help/forms/using/process-reporting/process-reporting-custom-reports.md).
+如需建立自訂報表的步驟，請參閱文章[程式報表中的自訂報表](/help/forms/using/process-reporting/process-reporting-custom-reports.md)中的「建立自訂報表」。

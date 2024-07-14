@@ -1,6 +1,6 @@
 ---
 title: 處理支援的檔案格式的最佳實務
-description: 使用處理各種支援檔案型別的最佳實務 [!DNL Experience Manager Assets].
+description: 使用 [!DNL Experience Manager Assets]處理各種支援的檔案型別的最佳實務。
 contentOwner: AG
 role: Admin
 feature: Asset Management,Developer Tools
@@ -15,21 +15,21 @@ ht-degree: 0%
 
 # Assets檔案格式最佳實務 {#assets-file-format-best-practices}
 
-[!DNL Adobe Experience Manager Assets] 支援許多專屬和協力廠商檔案格式程式庫，以迎合使用者的不同檔案支援需求。 支援的Adobe庫包括 [!DNL Adobe Camera Raw]、吉布森、Adobe PDF模擬轉譯器和 [!DNL Adobe InDesign Server]. 此外， [!DNL Experience Manager Assets] 支援協力廠商程式庫，包括 [!DNL ImageMagick]， [!DNL TwelveMonkeys]、等等。
+[!DNL Adobe Experience Manager Assets]支援許多專屬和協力廠商檔案格式資料庫，以符合使用者的不同檔案支援需求。 支援的Adobe資料庫包括[!DNL Adobe Camera Raw]、Gibson、Adobe PDF模擬轉譯器和[!DNL Adobe InDesign Server]。 此外，[!DNL Experience Manager Assets]支援協力廠商程式庫，包括[!DNL ImageMagick]、[!DNL TwelveMonkeys]等。
 
-如需支援的檔案格式，請參閱 [資產支援的格式](/help/assets/assets-formats.md).
+如需支援的檔案格式，請參閱[Assets支援的格式](/help/assets/assets-formats.md)。
 
 >[!TIP]
 >
->如果您使用 [!DNL Experience Manager] 如果您打算處理大量大型PSD或PSB檔案，請在AdobeManaged Services (AMS)時聯絡Adobe客戶支援。 與Adobe客戶支援代表合作，針對您的AMS部署實作這些最佳實務，並針對Adobe的專有格式選擇最佳可行的工具和模型。 [!DNL Experience Manager] 可能無法處理超過30000 x 23000畫素的高解析度PSB檔案。
+>如果您正在AdobeManaged Services (AMS)上使用[!DNL Experience Manager]，如果您計畫處理大量大型PSD或PSB檔案，請聯絡Adobe客戶支援。 與Adobe客戶支援代表合作，針對您的AMS部署實作這些最佳實務，並針對Adobe的專有格式選擇最佳可行的工具和模型。 [!DNL Experience Manager]可能無法處理超過30000 x 23000畫素的高解析度PSB檔案。
 
-## [!DNL Adobe Camera Raw] 資料庫 {#adobe-camera-raw-library}
+## [!DNL Adobe Camera Raw]資料庫 {#adobe-camera-raw-library}
 
-為獲得最佳效能，Adobe建議使用 [!DNL Adobe Camera Raw] RAW和DNG檔案的程式庫。
+為獲得最佳效能，Adobe建議針對RAW和DNG檔案使用[!DNL Adobe Camera Raw]資料庫。
 
-[!DNL Adobe Camera Raw] 資料庫支援CMYK色彩設定檔作為輸入。 但是，它會產生RGB色域的輸出，並且僅支援JPEG格式的輸出。 它不會保留縮圖中的來源檔案色域（例如CMYK）。
+[!DNL Adobe Camera Raw]資料庫支援CMYK色彩設定檔作為輸入。 但是，它會產生RGB色域的輸出，並且僅支援JPEG格式的輸出。 它不會保留縮圖中的來源檔案色域（例如CMYK）。
 
-如需詳細資訊，請參閱 [Camera Raw支援](/help/assets/camera-raw.md).
+如需詳細資訊，請參閱[Camera Raw支援](/help/assets/camera-raw.md)。
 
 ## Adobe PDF模擬轉譯器程式庫 {#adobe-pdf-rasterizer-library}
 
@@ -43,13 +43,13 @@ ht-degree: 0%
 
 ## [!DNL Adobe InDesign Server] {#adobe-indesign-server}
 
-Adobe建議您使用 [!DNL Adobe InDesign Server] 要擷取 [!DNL Adobe InDesign] — 特定轉譯，例如IDML和HTML。 如需詳細資訊，請參閱 [在Adobe InDesign中新增Experience Manager資產作為參考](/help/assets/managing-linked-subassets.md#refai).
+Adobe建議您使用[!DNL Adobe InDesign Server]來擷取特定於[!DNL Adobe InDesign]的轉譯，例如IDML和HTML。 如需詳細資訊，請參閱[在Adobe InDesign中新增Experience Manager資產作為參考](/help/assets/managing-linked-subassets.md#refai)。
 
 ## [!DNL Dynamic Media] {#dynamic-media}
 
-[!DNL Dynamic Media] 透過其全球性、可擴充且效能最佳化的網路，即時產生並傳送多種多樣的豐富內容。 它提供互動式檢視體驗，並簡化數位行銷活動管理程式。 以取得有關啟用的詳細資訊 [!DNL Dynamic Media]，請參閱 [設定Dynamic Media](/help/assets/config-dynamic.md).
+[!DNL Dynamic Media]透過其全域、可擴充且效能最佳化的網路，即時產生並傳送多種豐富內容的變體。 它提供互動式檢視體驗，並簡化數位行銷活動管理程式。 如需有關啟用[!DNL Dynamic Media]的詳細資訊，請參閱[設定Dynamic Media](/help/assets/config-dynamic.md)。
 
-目前， [!DNL Dynamic Media] 每個檔案最多可支援15 GB的視訊內容。
+目前，[!DNL Dynamic Media]可支援每個檔案最多15 GB內容的視訊。
 
 ## ImageMagick資料庫 {#imagemagick-library}
 
@@ -60,7 +60,7 @@ Adobe建議在下列情況下使用ImageMagick資料庫：
 * 保留透明度。
 * 處理PSD和PSB檔案。
 
-若要瞭解如何設定 [!DNL ImageMagick] 中的資料庫 [!DNL Experience Manager]，請參閱 [使用ImageMagick](/help/assets/media-handlers.md#an-example-using-imagemagick). 如需最佳使用方式，請參閱 [設定ImageMagick的最佳作法](/help/assets/best-practices-for-imagemagick.md).
+若要瞭解如何在[!DNL Experience Manager]中設定[!DNL ImageMagick]資料庫，請參閱[使用ImageMagick](/help/assets/media-handlers.md#an-example-using-imagemagick)。 如需最佳使用方式，請參閱[設定ImageMagick的最佳實務](/help/assets/best-practices-for-imagemagick.md)。
 
 ## 影像轉碼程式庫 {#image-transcoding-library}
 
@@ -76,4 +76,4 @@ Adobe影像轉碼資料庫是影像處理解決方案，可執行核心影像處
 * ICO
 * ICN
 
-如需詳細資訊，請參閱 [影像轉碼程式庫](/help/assets/imaging-transcoding-library.md).
+如需詳細資訊，請參閱[影像轉碼程式庫](/help/assets/imaging-transcoding-library.md)。

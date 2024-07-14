@@ -23,7 +23,7 @@ ht-degree: 4%
 下列區域已有關於部署及維護最佳實務和建議的可用檔案：
 
 * [Oak](#oak)
-* [社群](#communities)
+* [Communities](#communities)
 * [UI](#ui)
 * [效能](#performance)
 
@@ -37,7 +37,7 @@ ht-degree: 4%
 
 ## Oak {#oak}
 
-[Oak](/help/sites-deploying/platform.md) 是可擴充且高效能的階層式內容存放庫，是AEM的基礎。
+[Oak](/help/sites-deploying/platform.md)是可擴充且高效能的分層式內容存放庫，是AEM的基礎。
 
 <table>
  <tbody>
@@ -62,20 +62,20 @@ ht-degree: 4%
    <td>本檔案說明有關儲存二進位資料和內容節點的最佳實務。 包含使用Amazon S3資料存放區的相關資訊。</td>
   </tr>
   <tr>
-   <td>在Oak中搜尋</td>
+   <td>Oak中的搜尋</td>
    <td><a href="/help/sites-deploying/best-practices-for-queries-and-indexing.md">查詢和建立索引的最佳實務</a><br /> </td>
    <td>說明如何為內容建立索引的最佳實務。</td>
   </tr>
  </tbody>
 </table>
 
-## 社群 {#communities}
+## Communities {#communities}
 
 AEM Communities可簡化內部部署社群的建立和管理。 AEM Communities的最佳實務說明如下：
 
-[社群內容存放區](/help/communities/working-with-srp.md)  — 討論使用者產生內容(UGC)的新共用儲存功能，以及選擇基礎內容的考量事項 [拓撲](/help/communities/topologies.md).
+[社群內容存放區](/help/communities/working-with-srp.md) — 討論使用者產生內容(UGC)的新共用存放區功能，以及選擇基礎[拓撲](/help/communities/topologies.md)的考量事項。
 
-[社群的建議部署](/help/sites-deploying/recommended-deploys.md#considerations-for-aem-communities)  — 說明社群的建議部署。 |
+[社群的建議部署](/help/sites-deploying/recommended-deploys.md#considerations-for-aem-communities) — 說明社群的建議部署。 |
 
 ## UI {#ui}
 
@@ -94,7 +94,7 @@ AEM目前有兩個UI：同版中的傳統和觸控最佳化UI。 因此，客戶
   <tr>
    <td>品質保證的最佳實務</td>
    <td><a href="/help/sites-deploying/configuring-performance.md#best-practices-for-quality-assurance">品質保證的最佳實務</a></td>
-   <td>對定義測試概念相關問題的標準化概觀，專用於您的電腦上的效能測試 <em>發佈</em> 環境。 這主要是QA工程師、專案經理和系統管理員的興趣。</td>
+   <td>針對在您的<em>發佈</em>環境中進行效能測試時，定義測試概念所涉及問題的標準化概觀。 這主要是QA工程師、專案經理和系統管理員的興趣。</td>
   </tr>
   <tr>
    <td>搭配 CDN 使用 Dispatcher</td>

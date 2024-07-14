@@ -18,9 +18,9 @@ ht-degree: 0%
 
 # 伺服器端自訂 {#server-side-customization}
 
-| **[⇐功能要點](essentials.md)** | **[使用者端自訂⇒](client-customize.md)** |
+| **[⇐ Feature Essentials](essentials.md)** | **[使用者端自訂⇒](client-customize.md)** |
 |---|---|
-|   | **[SCF Handlebars Helpers ⇒](handlebars-helpers.md)** |
+|   | **[SCF Handlebars協助程式⇒](handlebars-helpers.md)** |
 
 ## Java™ API {#java-apis}
 
@@ -32,9 +32,9 @@ ht-degree: 0%
 
 SocialComponents是POJO，代表AEM Communities功能的資源。 理想情況下，每個SocialComponent代表特定的resourceType，其中包含公開的GETters，可提供資料給使用者端，以便準確表示資源。 所有業務和檢視邏輯都會封裝在SocialComponent中，包括網站訪客的工作階段資訊（如有必要）。
 
-介面定義了一組代表資源所需的基本GETter。 重要的是，介面中指定了&lt;string object=&quot;&quot;> 呈現Handlebars範本及公開資源的GETJSON端點所需的getAsMap()和String toJSONString()方法。
+介面定義了一組代表資源所需的基本GETter。 重要的是，介面會規定Map&lt;String， Object> getAsMap()和String toJSONString()方法，這些方法對於呈現Handlebars範本及公開資源的GETJSON端點很有必要。
 
-所有SocialComponent類別都必須實作介面 `com.adobe.cq.social.scf.SocialComponent`
+所有SocialComponent類別都必須實作介面`com.adobe.cq.social.scf.SocialComponent`
 
 ### SocialCollectionComponent介面 {#socialcollectioncomponent-interface}
 
@@ -50,7 +50,7 @@ SocialComponentFactory負責建立所選SocialComponent的執行個體，以便�
 
 SocialComponentFactory是OSGi服務，可存取其他OSGi服務，這些服務可透過建構函式傳遞給SocialComponent。
 
-所有SocialComponentFactory類別都必須實作介面 `com.adobe.cq.social.scf.SocialComponentFactory`
+所有SocialComponentFactory類別都必須實作介面`com.adobe.cq.social.scf.SocialComponentFactory`
 
 SocialComponentFactory.getPriority()方法的實作應傳回getResourceType()傳回之指定resourceType所用工廠的最高值。
 
@@ -60,33 +60,33 @@ SocialComponentFactoryManager （管理員）會管理在架構中註冊的所�
 
 SocialComponentFactoryManager是一項OSGi服務，可存取其他OSGi服務，這些服務可透過建構函式傳遞給SocialComponent。
 
-OSGi服務的控制代碼是透過叫用取得 `com.adobe.cq.social.scf.SocialComponentFactoryManager`
+透過叫用`com.adobe.cq.social.scf.SocialComponentFactoryManager`取得OSGi服務的控制代碼
 
 ### HTTP API -POST要求 {#http-api-post-requests}
 
 #### PostOperation類別 {#postoperation-class}
 
-HTTP APIPOST端點是由實作 `SlingPostOperation` 介面（套件） `org.apache.sling.servlets.post`)。
+HTTP APIPOST端點是由實作`SlingPostOperation`介面（封裝`org.apache.sling.servlets.post`）定義的PostOperation類別。
 
-此 `PostOperation` 端點實作集 `sling.post.operation` 操作回應的值。 所有POST請求的：operation引數都設為該值，這些請求都會委派給此實作類別。
+`PostOperation`端點實作將`sling.post.operation`設定為作業回應的值。 所有POST請求的：operation引數都設為該值，這些請求都會委派給此實作類別。
 
-此 `PostOperation` 叫用 `SocialOperation` 會執行作業所需的動作。
+`PostOperation`會叫用`SocialOperation`，以執行作業所需的動作。
 
-此 `PostOperation` 接收來自的結果 `SocialOperation` 並傳回適當的回應給使用者端。
+`PostOperation`從`SocialOperation`接收結果，並傳回適當的回應給使用者端。
 
 #### SocialOperation類別 {#socialoperation-class}
 
-每個 `SocialOperation` 端點延伸AbstractSocialOperation類別並覆寫方法 `performOperation()`. 此方法會執行完成作業所需的所有動作，並傳回 `SocialOperationResult` 否則會擲回 `OperationException`. 在這種情況下，會傳回包含訊息的HTTP錯誤狀態（如果可用），以取代一般JSON回應或成功HTTP狀態代碼。
+每個`SocialOperation`端點都會擴充AbstractSocialOperation類別並覆寫方法`performOperation()`。 此方法會執行完成作業所需的所有動作，並傳回`SocialOperationResult`或擲回`OperationException`。 在這種情況下，會傳回包含訊息的HTTP錯誤狀態（如果可用），以取代一般JSON回應或成功HTTP狀態代碼。
 
-延伸 `AbstractSocialOperation` 使得重複使用 `SocialComponents` 以傳送JSON回應。
+延伸`AbstractSocialOperation`可重複使用`SocialComponents`來傳送JSON回應。
 
 #### SocialOperationResult類別 {#socialoperationresult-class}
 
-此 `SocialOperationResult` 類別會傳回為 `SocialOperation` 並且由 `SocialComponent`、HTTP狀態代碼和HTTP狀態訊息。
+`SocialOperationResult`類別是以`SocialOperation`的結果傳回，並由`SocialComponent`、HTTP狀態碼和HTTP狀態訊息組成。
 
-此 `SocialComponent` 代表受作業影響的資源。
+`SocialComponent`代表受作業影響的資源。
 
-對於「建立」作業， `SocialComponent` 包含在 `SocialOperationResult` 代表已建立的資源，而針對「更新」作業，則代表作業變更的資源。 否 `SocialComponent` 針對「刪除」作業傳回。
+對於Create作業，`SocialOperationResult`中包含的`SocialComponent`代表已建立的資源，而對於Update作業，它代表作業變更的資源。 刪除作業未傳回任何`SocialComponent`。
 
 使用的成功HTTP狀態代碼為：
 
@@ -96,13 +96,13 @@ HTTP APIPOST端點是由實作 `SlingPostOperation` 介面（套件） `org.apac
 
 #### OperationException類別 {#operationexception-class}
 
-一個 `OperationExcepton` 如果要求無效或發生其他錯誤，執行作業時會擲回。 例如，內部錯誤、引數值錯誤或不適當的許可權。 一個 `OperationException` 由HTTP狀態代碼和錯誤訊息組成，這些會作為對 `PostOperatoin`.
+如果要求無效或發生其他錯誤，執行作業時會擲回`OperationExcepton`。 例如，內部錯誤、引數值錯誤或不適當的許可權。 `OperationException`由HTTP狀態碼和錯誤訊息組成，這些會作為對`PostOperatoin`的回應傳回給使用者端。
 
 #### OperationService類別 {#operationservice-class}
 
-社交元件架構建議負責執行作業的商業邏輯不要在 `SocialOperation` 類別，而是委派給OSGi服務。 將OSGi服務用於商業邏輯可允許 `SocialComponent`，由 `SocialOperation` 端點，以與其他程式碼整合併套用不同的商業邏輯。
+社交元件架構建議不要在`SocialOperation`類別內實作負責執行作業的商業邏輯，而是委派給OSGi服務。 將OSGi服務用於商業邏輯可讓`SocialOperation`端點執行的`SocialComponent`與其他程式碼整合，並套用不同的商業邏輯。
 
-全部 `OperationService` 類別擴充 `AbstractOperationService`，允許連結至正在執行之作業的其他擴充功能。 服務中的每個作業都由 `SocialOperation` 類別。 此 `OperationExtensions` 類別可在作業執行期間透過呼叫方法叫用
+所有`OperationService`類別都會延伸`AbstractOperationService`，允許可連結至正在執行之作業的其他延伸。 服務中的每個作業都由`SocialOperation`類別表示。 可在作業執行期間呼叫方法，以叫用`OperationExtensions`類別
 
 * `performBeforeActions()`
 
@@ -113,18 +113,18 @@ HTTP APIPOST端點是由實作 `SlingPostOperation` 介面（套件） `org.apac
 
 #### OperationExtension類別 {#operationextension-class}
 
-此 `OperationExtension` 類別是可插入至作業的自訂程式碼片段，允許自訂作業以符合業務需求。 元件的取用者可以動態地並遞增方式為元件新增功能。 擴充功能/掛接模式可讓開發人員專注於擴充功能本身，且無須複製及覆寫整個作業和元件。
+`OperationExtension`類別是可插入作業的自訂程式碼片段，允許自訂作業以符合業務需求。 元件的取用者可以動態地並遞增方式為元件新增功能。 擴充功能/掛接模式可讓開發人員專注於擴充功能本身，且無須複製及覆寫整個作業和元件。
 
 ## 程式碼範例 {#sample-code}
 
-程式碼範例位於 [Adobe Experience Cloud GitHub](https://github.com/Adobe-Marketing-Cloud) 存放庫。 搜尋前置詞為的專案 `aem-communities` 或 `aem-scf`.
+範常式式碼可在[Adobe Experience Cloud GitHub](https://github.com/Adobe-Marketing-Cloud)存放庫中取得。 搜尋帶有`aem-communities`或`aem-scf`首碼的專案。
 
 ## 最佳做法 {#best-practices}
 
-檢視 [編碼准則](code-guide.md) 一節，瞭解AEM Communities開發人員的各種程式碼准則和最佳作法。
+檢視[編碼准則](code-guide.md)區段，瞭解AEM Communities開發人員的各種編碼准則與最佳作法。
 
-另請參閱 [UGC的儲存資源提供者(SRP)](srp.md) 以瞭解關於存取使用者產生的內容。
+另請參閱UGC](srp.md)的[儲存資源提供者(SRP)，瞭解如何存取使用者產生的內容。
 
-| **[⇐功能要點](essentials.md)** | **[使用者端自訂⇒](client-customize.md)** |
+| **[⇐ Feature Essentials](essentials.md)** | **[使用者端自訂⇒](client-customize.md)** |
 |---|---|
-|   | **[SCF Handlebars Helpers ⇒](handlebars-helpers.md)** |
+|   | **[SCF Handlebars協助程式⇒](handlebars-helpers.md)** |

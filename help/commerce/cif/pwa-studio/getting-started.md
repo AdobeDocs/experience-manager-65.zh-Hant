@@ -27,9 +27,9 @@ ht-degree: 0%
 
 ## 設定PWA Studio {#setup-pwa}
 
-若要設定您的PWA Studio應用程式，請依照Adobe Commerce操作 [PWA Studio檔案](https://developer.adobe.com/commerce/pwa-studio/tutorials/).
+若要設定您的PWA Studio應用程式，請依照Adobe Commerce [PWA Studio檔案](https://developer.adobe.com/commerce/pwa-studio/tutorials/)操作。
 
-若要將PWA Studio連線至AEM的GraphQL端點，您可以使用 [PWA Studio的AEM擴充功能](https://github.com/adobe/aem-pwa-studio-extensions).
+若要將PWA Studio連線至AEM的GraphQL端點，您可以為PWA Studio](https://github.com/adobe/aem-pwa-studio-extensions)使用[AEM擴充功能。
 
 1. 簽出存放庫
 
@@ -49,7 +49,7 @@ ht-degree: 0%
    <Adapter apiBase={apiBase} apollo={{ link: linkWrapper(apolloLink) }} store={store}>
    ```
 
-   有關Apollo使用者端自訂的詳細資訊，請參閱 [linkWrapper.js](https://github.com/adobe/aem-pwa-studio-extensions/blob/master/aem-cfm-blog-extension/extension/src/linkWrapper.js).
+   您可以在[linkWrapper.js](https://github.com/adobe/aem-pwa-studio-extensions/blob/master/aem-cfm-blog-extension/extension/src/linkWrapper.js)中找到更多有關Apollo使用者端自訂的詳細資料。
 
 1. 若要使用Blog專案擴充導覽元件，請在pwa-root/local-intercept.js中新增下列改寫專案：
 
@@ -61,9 +61,10 @@ ht-degree: 0%
    }    
    ```
 
-   有關導覽元件自訂的詳細資訊，請參閱 [addBlogToNavigation.js](https://github.com/adobe/aem-pwa-studio-extensions/blob/master/aem-cfm-blog-extension/extension/src/addBlogToNavigation.js) 和 [擴充性框架](https://developer.adobe.com/commerce/pwa-studio/guides/general-concepts/extensibility/) PWA Studio檔案。
+   您可以在[addBlogToNavigation.js](https://github.com/adobe/aem-pwa-studio-extensions/blob/master/aem-cfm-blog-extension/extension/src/addBlogToNavigation.js)和[Extensibility Framework](https://developer.adobe.com/commerce/pwa-studio/guides/general-concepts/extensibility/)PWA Studio檔案中找到更多有關自訂導覽元件的詳細資訊。
 
-1. Apollo使用者端預期的AEM GraphQL端點位於 `<https://pwa-studio/endpoint.js>`. 若要將端點對應至此位置，請自訂PWA Studio應用程式的UPPER設定： a.至 `pwa-root/.env`，新增AEM_CFM_GRAPHQL變數，並將其調整為指向您的AEM內容片段GraphQL端點。
+1. Apollo使用者端預期位於`<https://pwa-studio/endpoint.js>`的AEM GraphQL端點。 若要將端點對應至此位置，請自訂PWA Studio應用程式的「向上」設定：
+a.至`pwa-root/.env`，新增AEM_CFM_GRAPHQL變數，並將其調整為指向您的AEM內容片段GraphQL端點。
 
    範例： AEM_CFM_GRAPHQL=<http://localhost:4503/content/graphql/global>
 
@@ -94,9 +95,9 @@ ht-degree: 0%
 
 * AdobeGranite跨原始資源共用原則(com.adobe.granite.cors.impl.CORSPolicyImpl)
 
-  設定 `allowedorigin` 屬性至您的PWA應用程式完整主機名稱。
+  將`allowedorigin`屬性設定為PWA應用程式的完整主機名稱。
 
-  範例：  `<https://pwa-studio-test-vflyn.local.pwadev:9366>`
+  範例： `<https://pwa-studio-test-vflyn.local.pwadev:9366>`
 
 * Apache Sling反向連結篩選器(org.apache.sling.security.impl.ReferrerFilter.cfg.json)
 
@@ -104,7 +105,7 @@ ht-degree: 0%
 
   範例： pwa-studio-test-vflyn.local.pwadev
 
-您可以在這裡找到這兩個設定的完整範例： <https://github.com/adobe/aem-pwa-studio-extensions/tree/master/aem-cfm-blog-extension/aem/config/src/main/content/jcr_root/apps/blog-demo/config>.
+您可以在這裡找到兩個設定的完整範例： <https://github.com/adobe/aem-pwa-studio-extensions/tree/master/aem-cfm-blog-extension/aem/config/src/main/content/jcr_root/apps/blog-demo/config>。
 
 為了展示GraphQL端點，Adobe透過內容套件準備了一些範例內容片段模型和資料。 這些元件可與PWA Studio擴充功能隨附的React元件搭配使用。
 
@@ -124,8 +125,8 @@ ht-degree: 0%
 
 ### 部落格 {#blog}
 
-根據某些內容片段模型顯示部落格。 此外，它包含如何設定Apollo使用者端以搭配AEM GraphQL端點使用，以及如何在PWA Studio中擴充導覽元件的範例。 另請參閱 [GitHub](https://github.com/adobe/aem-pwa-studio-extensions/tree/master/aem-cfm-blog-extension) 以取得更多詳細資料。
+根據某些內容片段模型顯示部落格。 此外，它包含如何設定Apollo使用者端以搭配AEM GraphQL端點使用，以及如何在PWA Studio中擴充導覽元件的範例。 如需詳細資訊，請參閱[GitHub](https://github.com/adobe/aem-pwa-studio-extensions/tree/master/aem-cfm-blog-extension)。
 
 ### PDP擴充 {#pdp-enrichment}
 
-可讓行銷人員透過作為內容片段管理的其他內容輕鬆擴充PDP。 另請參閱 [GitHub](https://github.com/adobe/aem-pwa-studio-extensions/tree/master/aem-cif-product-page-extension) 以取得更多詳細資料。
+可讓行銷人員透過作為內容片段管理的其他內容輕鬆擴充PDP。 如需詳細資訊，請參閱[GitHub](https://github.com/adobe/aem-pwa-studio-extensions/tree/master/aem-cif-product-page-extension)。

@@ -21,19 +21,19 @@ ht-degree: 9%
 
 執行任何自訂的一般步驟為：
 
-1. 透過存取登入CRXDE Lite `https://'[server]:[port]'/lc/crx/de/index.jsp`.
-1. 建立 `sling:Folder` 已命名的資料夾 `ws` 在 `/apps`，如果它不存在。 若要建立 `sling:Folder` 資料夾，用滑鼠右鍵按一下 `apps` 資料夾並選取 **[!UICONTROL 建立]** > **[!UICONTROL 建立節點]**. 將名稱指定為 `ws`，選擇型別 `sling:Folder`，然後按一下 **[!UICONTROL 確定]**. 按一下&#x200B;**[!UICONTROL 「儲存全部」]**。
-1. 瀏覽至 `/apps/ws`，並導覽至 **[!UICONTROL 存取控制]** 標籤。
-1. 選取 **[!UICONTROL 存放庫]** 選項。 在 **[!UICONTROL 存取控制]** 清單，按一下 **[!UICONTROL +]** 以新增專案。 按一下 **[!UICONTROL +]** 再來一次。
-1. 搜尋並選取 **PERM_WORKSPACE_USER** 主體。
+1. 存取`https://'[server]:[port]'/lc/crx/de/index.jsp`以登入CRXDE Lite。
+1. 在`/apps`建立名為`ws`的`sling:Folder`資料夾（如果不存在）。 若要建立`sling:Folder`資料夾，請在`apps`資料夾上按一下滑鼠右鍵，然後選取&#x200B;**[!UICONTROL 建立]** > **[!UICONTROL 建立節點]**。 將名稱指定為`ws`，選取型別為`sling:Folder`，然後按一下&#x200B;**[!UICONTROL 確定]**。 按一下&#x200B;**[!UICONTROL 「儲存全部」]**。
+1. 瀏覽至`/apps/ws`，並瀏覽至&#x200B;**[!UICONTROL 存取控制]**&#x200B;標籤。
+1. 選取&#x200B;**[!UICONTROL 存放庫]**&#x200B;選項。 在&#x200B;**[!UICONTROL 存取控制]**&#x200B;清單中，按一下&#x200B;**[!UICONTROL +]**&#x200B;以新增專案。 再按一下&#x200B;**[!UICONTROL +]**。
+1. 搜尋並選取&#x200B;**PERM_WORKSPACE_USER**&#x200B;主體。
 
-   ![選取PERM_WORKSPACE_USER主體作為自訂HTML工作區的一般步驟的一部分](assets/perm_workspace_user.png)
+   ![選取PERM_WORKSPACE_USER主體作為自訂HTMLWorkspace的一般步驟的一部分](assets/perm_workspace_user.png)
 
-1. 授予 `jcr:read` 主體許可權。
+1. 將`jcr:read`許可權授與主體。
 1. 按一下&#x200B;**[!UICONTROL 「儲存全部」]**。
-1. 複製 `GET.jsp`， `index`、和 `html.jsp` 檔案來自 `/libs/ws` 資料夾至 `/apps/ws` 資料夾。
-1. 複製 `/libs/ws/locales` 中的資料夾 `/apps/ws` 資料夾。 按一下&#x200B;**[!UICONTROL 「儲存全部」]**。
-1. 更新中的參照和相對路徑 `GET.jsp` 檔案，如下所示，然後按一下 **[!UICONTROL 全部儲存]**.
+1. 將`GET.jsp`、`index`和`html.jsp`檔案從`/libs/ws`資料夾複製到`/apps/ws`資料夾。
+1. 複製`/apps/ws`資料夾中的`/libs/ws/locales`資料夾。 按一下&#x200B;**[!UICONTROL 「儲存全部」]**。
+1. 更新`GET.jsp`檔案中的參照和相對路徑，如下所示，然後按一下[儲存全部]。****
 
    ```javascript
    <meta http-equiv="refresh" content="0;URL='/lc/apps/ws/index.html'" />
@@ -41,11 +41,11 @@ ht-degree: 9%
 
 1. 請對CSS自訂執行下列動作：
 
-   1. 導覽至 `/apps/ws` 資料夾並建立資料夾： `css`.
+   1. 瀏覽至`/apps/ws`資料夾，並建立名為`css`的資料夾。
 
-   1. 在 `css` 資料夾，建立名為的檔案 `newStyle.css`.
+   1. 在`css`資料夾中，建立名為`newStyle.css`的檔案。
 
-   1. 開啟 `/apps/ws/html`.jsp和變更自
+   1. 開啟`/apps/ws/html`.jsp並變更來源
 
    ```javascript
    <link lang="en" rel="stylesheet" type="text/css" href="css/style.css" />
@@ -78,22 +78,22 @@ ht-degree: 9%
 
 1. 請執行下列動作：
 
-   1. 建立名為的資料夾 `js` 在 `/apps/ws`. 按一下&#x200B;**[!UICONTROL 「儲存全部」]**。
+   1. 在`/apps/ws`建立名為`js`的資料夾。 按一下&#x200B;**[!UICONTROL 「儲存全部」]**。
 
-   1. 建立名為的資料夾 `libs` 在 `/apps/ws/js`. 按一下&#x200B;**[!UICONTROL 「儲存全部」]**。
+   1. 在`/apps/ws/js`建立名為`libs`的資料夾。 按一下&#x200B;**[!UICONTROL 「儲存全部」]**。
 
-   1. 複製 `/libs/ws/js/libs/jqueryui` 資料夾至 `/apps/ws/js/libs`. 按一下&#x200B;**[!UICONTROL 「儲存全部」]**。
+   1. 將`/libs/ws/js/libs/jqueryui`資料夾複製到`/apps/ws/js/libs`。 按一下&#x200B;**[!UICONTROL 「儲存全部」]**。
 
 1. 請針對HTML自訂執行以下動作：
 
-   1. 在 `/apps/ws/js`，建立名為的資料夾 `runtime`. 按一下&#x200B;**[!UICONTROL 「儲存全部」]**。
+   1. 在`/apps/ws/js`下，建立名為`runtime`的資料夾。 按一下&#x200B;**[!UICONTROL 「儲存全部」]**。
 
-   1. 在 `/apps/ws/js/runtime`，建立名為的資料夾 `templates`. 按一下&#x200B;**[!UICONTROL 「儲存全部」]**。
+   1. 在`/apps/ws/js/runtime`下，建立名為`templates`的資料夾。 按一下&#x200B;**[!UICONTROL 「儲存全部」]**。
 
-   1. 複製 `/libs/ws/js/main.js` 至 `/apps/ws/js/main.js`.
+   1. 將`/libs/ws/js/main.js`複製到`/apps/ws/js/main.js`。
 
-   1. 將/libs/ws/js/registry.js複製到 `/apps/ws/js/registry.js`.
+   1. 將/libs/ws/js/registry.js複製到`/apps/ws/js/registry.js`。
 
-1. 按一下 **[!UICONTROL 全部儲存]**，清除快取，然後重新整理AEM Forms工作區。
+1. 按一下「儲存全部&#x200B;**[!UICONTROL 」]**，清除快取，然後重新整理AEM Forms工作區。
 
-   存取URL `https://'[server]:[port]'/lc/ws` 並使用管理員/密碼認證登入。 瀏覽器會重新導向至 `https://'[server]:[port]'/lc/apps/ws/index.html`.
+   存取URL `https://'[server]:[port]'/lc/ws`並使用管理員/密碼認證登入。 瀏覽器重新導向至`https://'[server]:[port]'/lc/apps/ws/index.html`。

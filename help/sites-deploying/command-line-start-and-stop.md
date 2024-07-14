@@ -20,7 +20,7 @@ ht-degree: 0%
 
 ## 從命令列啟動Adobe Experience Manager {#starting-adobe-experience-manager-from-the-command-line}
 
-此 `start` 指令碼位於 *此 &lt;cq-installation>/bin* 目錄。 同時提供UNIX®和Windows版本。 指令碼會啟動安裝在中的執行個體 *&lt;cq-installation>* 目錄。
+`start`指令碼可在&#x200B;*&lt;cq-installation>/bin*&#x200B;目錄下使用。 同時提供UNIX®和Windows版本。 指令碼會啟動安裝在&#x200B;*&lt;cq-installation>*&#x200B;目錄中的執行個體。
 
 這兩個版本支援可用於啟動和調整Adobe Experience Manager (AEM)執行個體的環境變數清單。
 
@@ -40,7 +40,7 @@ ht-degree: 0%
   </tr>
   <tr>
    <td>CQ_INTERFACE</td>
-   <td>此伺服器應監聽的介面<br /> </td>
+   <td>此伺服器應接聽<br />的介面 </td>
   </tr>
   <tr>
    <td>CQ_RUNMODE</td>
@@ -48,7 +48,7 @@ ht-degree: 0%
   </tr>
   <tr>
    <td>CQ_JARFILE</td>
-   <td>Jarfile的名稱<br /> </td>
+   <td>Jarfile<br />的名稱 </td>
   </tr>
   <tr>
    <td>CQ_USE_JAAS</td>
@@ -56,7 +56,7 @@ ht-degree: 0%
   </tr>
   <tr>
    <td>CQ_JAAS_CONFIG</td>
-   <td>JAAS設定的路徑<br /> </td>
+   <td>JAAS組態的路徑<br /> </td>
   </tr>
   <tr>
    <td>CQ_JVM_OPTS</td>
@@ -67,7 +67,7 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
->某些執行模式（包括製作和發佈）必須在首次啟動AEM之前設定，且之後不能變更。 在設定用於生產環境的AEM執行個體之前，請參閱 [執行模式檔案](/help/sites-deploying/configure-runmodes.md) 以取得詳細資訊。
+>某些執行模式（包括製作和發佈）必須在首次啟動AEM之前設定，且之後不能變更。 在設定用於生產環境的AEM執行個體之前，請參閱[執行模式檔案](/help/sites-deploying/configure-runmodes.md)以取得詳細資料。
 
 ### Windows平台start.bat指令碼範例 {#windows-platform-start-bat-script-example}
 
@@ -83,7 +83,7 @@ CQ_PORT=1234 ./start
 
 >[!NOTE]
 >
->啟動指令碼會啟動安裝在以下位置的AEM快速入門： *此 &lt;cq-installation>/app* 資料夾。
+>啟動指令碼會啟動安裝在&#x200B;*&lt;cq-installation>/app*&#x200B;資料夾下的AEM Quickstart。
 
 ## 停止Adobe Experience Manager {#stopping-adobe-experience-manager}
 
@@ -91,16 +91,16 @@ CQ_PORT=1234 ./start
 
 * 根據您使用的平台：
 
-   * 如果您是從指令碼或命令列啟動AEM，請按下 **Ctrl+C** 關閉伺服器。
+   * 如果您從指令碼或命令列啟動AEM，請按&#x200B;**Ctrl+C**&#x200B;關閉伺服器。
    * 如果您已在UNIX®上使用啟動指令碼，則必須使用停止指令碼來停止AEM。
 
-* 如果您是透過按兩下jar檔案來啟動AEM，請按一下 **開啟** 啟動視窗上的按鈕(按鈕會變更為 **關閉**)關閉伺服器。
+* 如果您是透過連按兩下jar檔案來啟動AEM，請按一下啟動視窗上的&#x200B;**開啟**&#x200B;按鈕（按鈕會變成&#x200B;**關閉**）來關閉伺服器。
 
   ![chlimage_1-63](assets/chlimage_1-63.png)
 
 ## 從命令列停止Adobe Experience Manager {#stopping-adobe-experience-manager-from-the-command-line}
 
-此 `stop` 指令碼位於 *此 &lt;cq-installation>/bin* 目錄。 同時提供UNIX®和Windows版本。 指令碼會停止在中安裝的執行中執行個體 *&lt;cq-installation>* 目錄。
+`stop`指令碼可在&#x200B;*&lt;cq-installation>/bin*&#x200B;目錄下使用。 同時提供UNIX®和Windows版本。 指令碼會停止安裝在&#x200B;*&lt;cq-installation>*&#x200B;目錄中的執行中執行個體。
 
 ### UNIX®平台停止指令碼範例 {#unix-platform-stop-script-example}
 
@@ -116,10 +116,10 @@ CQ_PORT=1234 ./start
 
 如果您只想預先設定存放庫（而不想重新定位），您只需：
 
-* Extract `repository.xml` 至所需位置
+* 將`repository.xml`擷取至所需位置
 
-* 更新 `repository.xml` 視需要
+* 視需要更新`repository.xml`
 
-* 建立 `bootstrap.properties` 並定義 `repository.config`
+* 建立`bootstrap.properties`並定義`repository.config`
 
 同樣地，在開始實際安裝之前。

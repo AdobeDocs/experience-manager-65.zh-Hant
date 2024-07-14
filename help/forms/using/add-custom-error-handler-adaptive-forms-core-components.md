@@ -67,7 +67,7 @@ AEM Forms 為表單提交提供現成可用的成功和錯誤處理常式。這�
 其中：
 
 * `errorCausedBy` 說明失敗的原因。
-* `errors` 提及未通過驗證條件的欄位之合格欄位名稱以及驗證錯誤訊息。
+* `errors`提及未通過驗證准則的欄位之合格欄位名稱以及驗證錯誤訊息。
 * `originCode` 由 AEM 新增的欄位，並包含外部服務傳回的 http 狀態代碼。
 * `originMessage`由 AEM 新增的欄位，並包含外部服務傳回的原始錯誤資料。
 
@@ -169,9 +169,9 @@ AEM Forms 為表單提交提供現成可用的成功和錯誤處理常式。這�
 
 在最適化Forms中使用錯誤處理常式之前：
 
-* [為您的環境啟用最適化Forms核心元件](enable-adaptive-forms-core-components.md).
-* 基本知識給 [建立自訂函式](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/custom-functions-aem-forms.html?lang=en#:~:text=AEM%20Forms%206.5%20introduced%20the,use%20them%20across%20multiple%20forms.).
-* 安裝最新版本的 [Apache Maven](https://maven.apache.org/download.cgi).
+* [為您的環境啟用最適化Forms核心元件](enable-adaptive-forms-core-components.md)。
+* [建立自訂函式](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/custom-functions-aem-forms.html?lang=en#:~:text=AEM%20Forms%206.5%20introduced%20the,use%20them%20across%20multiple%20forms.)的基本知識。
+* 安裝最新版的[Apache Maven](https://maven.apache.org/download.cgi)。
 
 ## 使用規則編輯器新增錯誤處理常式 {#add-error-handler-using-rule-editor}
 
@@ -193,7 +193,7 @@ AEM Forms 為表單提交提供現成可用的成功和錯誤處理常式。這�
 如果錯誤回應是在標準結構描述中或是伺服器端驗證失敗，則系統會支援預設錯誤處理常式以顯示欄位的錯誤訊息。
 若要了解如何使用採用[規則編輯器調用服務](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/rule-editor.html?lang=en#invoke)動作的預設錯誤處理常式，請以含有兩個欄位的簡單最適化表單為例 (**寵物 ID** 和&#x200B;**寵物名稱**)，並在「**寵物 ID**」欄位使用預設的錯誤處理常式，查看為調用外部服務所設定 REST 端點傳回的各種錯誤，例如 `200 - OK`、`404 - Not Found`、`400 - Bad Request`。要使用規則編輯器的調用服務操作添加默認錯誤處理程序，請執行以下步驟：
 
-1. 在撰寫模式中開啟最適化表單，選取表單元件，然後選取 **[!UICONTROL 規則編輯器]** 以開啟規則編輯器。
+1. 以編寫模式開啟最適化表單，選取表單元件，然後選取&#x200B;**[!UICONTROL 規則編輯器]**&#x200B;以開啟規則編輯器。
 1. 選取「**[!UICONTROL 建立]**」。
 1. 在「**何時**」規則部分中建立條件。例如，[寵物 ID 欄位名稱&#x200B;]****&#x200B;何時變更。「選取」從「**選取狀態**」下拉式清單變更「選取」。
 1. 在「**然後**」部分，從「**選取動作**」下拉式清單中選取「**[!UICONTROL 調用服務]**」。
@@ -218,7 +218,7 @@ AEM Forms 為表單提交提供現成可用的成功和錯誤處理常式。這�
 
 除了上述動作，還可使用自訂錯誤處理常式來執行符合特定使用者需求的自訂函式。
 
-自訂錯誤處理常式是一個函數 (用戶端資料庫)，旨在回應外部服務傳回的錯誤並向一般使用者提供自訂回應。任何有附註 `@errorHandler` 的用戶端資料庫會被視為是自訂錯誤處理常式函數。此註解有助於識別 `.js` 檔案。
+自訂錯誤處理常式是一個函數 (用戶端資料庫)，旨在回應外部服務傳回的錯誤並向一般使用者提供自訂回應。任何有附註 `@errorHandler` 的用戶端資料庫會被視為是自訂錯誤處理常式函數。此註解有助於識別`.js`檔案中指定的錯誤處理常式函式。
 
 若要了解如何建立和使用採用[規則編輯器調用服務](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/rule-editor.html?lang=en#invoke)動作的自訂錯誤處理常式，讓我們以含有兩個欄位的簡單最適化表單為例 (**寵物 ID** 和&#x200B;**寵物名稱**)，並在「**寵物 ID**」欄位使用自訂的錯誤處理程式，查看為調用外部服務所設定 REST 端點傳回的各種錯誤，例如 `200 - OK`、`404 - Not Found`、`400 - Bad Request`。
 
@@ -231,28 +231,28 @@ AEM Forms 為表單提交提供現成可用的成功和錯誤處理常式。這�
 
 若要建立自訂錯誤函數，請執行以下步驟：
 
-1. 登入 `http://server:port/crx/de/index.jsp#`.
-1. 在 `/apps` 檔案夾中建立一個檔案夾。例如，建立名為的資料夾 `experience-league`.
+1. 登入`http://server:port/crx/de/index.jsp#`。
+1. 在 `/apps` 檔案夾中建立一個檔案夾。例如，建立名為`experience-league`的資料夾。
 1. 儲存您的變更。
-1. 導覽至建立的資料夾並建立型別節點 `cq:ClientLibraryFolder` 作為 `clientlibs`.
-1. 導覽至新建立的 `clientlibs` 資料夾並新增 `allowProxy` 和 `categories` 屬性：
+1. 導覽至建立的資料夾，並建立型別為`cq:ClientLibraryFolder`的節點作為`clientlibs`。
+1. 導覽至新建立的`clientlibs`資料夾並新增`allowProxy`和`categories`屬性：
 
    ![自訂程式庫節點屬性](/help/forms/using/assets/customlibrary-properties.png)
 
    >[!NOTE]
    >
-   > 您可以提供任何名稱來取代 `customfunctionsdemo`.
+   > 您可以提供任何名稱來取代`customfunctionsdemo`。
 
 1. 儲存您的變更。
 
-1. 建立名為的資料夾 `js` 在 `clientlibs` 資料夾。
-1. 建立名為的JavaScript檔案 `functions.js` 在 `js` 資料夾
-1. 建立名為的檔案 `js.txt` 在 `clientlibs` 資料夾。
+1. 在`clientlibs`資料夾下建立名為`js`的資料夾。
+1. 在`js`資料夾下建立名為`functions.js`的JavaScript檔案
+1. 在`clientlibs`資料夾下建立名為`js.txt`的檔案。
 1. 儲存您的變更。
 已建立的檔案夾結構如下所示：
 
    ![已建立的用戶端資料庫檔案夾結構](/help/forms/using/assets/customclientlibrary_folderstructure.png)
-1. 按兩下 `functions.js` 檔案以開啟編輯器。 該檔案包含自訂錯誤處理常式的代碼。
+1. 連按兩下`functions.js`檔案以開啟編輯器。 該檔案包含自訂錯誤處理常式的代碼。
 讓我們將以下代碼新增至 JavaScript 檔案中，以便在瀏覽器主控台中顯示從 REST 服務端點接收到的回應和標頭。
 
    ```javascript
@@ -275,8 +275,8 @@ AEM Forms 為表單提交提供現成可用的成功和錯誤處理常式。這�
    若要從自訂錯誤處理常式調用預設的錯誤處理常式，請使用以下範例代碼行：
    `globals.invoke('defaultErrorHandler',response, headers) `
 
-1. 儲存 `function.js`.
-1. 瀏覽至 `js.txt` 並新增下列程式碼：
+1. 儲存`function.js`。
+1. 瀏覽至`js.txt`並新增下列程式碼：
 
    ```javascript
        #base=js
@@ -293,11 +293,11 @@ AEM Forms 為表單提交提供現成可用的成功和錯誤處理常式。這�
 
 ![在最適化表單容器設定中新增用戶端資料庫的名稱](/help/forms/using/assets/client-library-category-name-core-component.png)
 
-在此情況下，使用者端程式庫名稱提供為 `customfunctionsdemo` 在 `.content.xml` 檔案。
+在此情況下，使用者端資料庫名稱會在`.content.xml`檔案中以`customfunctionsdemo`的形式提供。
 
 若要使用自訂錯誤處理常式，請使用&#x200B;**[!UICONTROL 規則編輯器調用服務]**&#x200B;行動：
 
-1. 在撰寫模式中開啟最適化表單，選取表單元件，然後選取 **[!UICONTROL 規則編輯器]** 以開啟規則編輯器。
+1. 以編寫模式開啟最適化表單，選取表單元件，然後選取&#x200B;**[!UICONTROL 規則編輯器]**&#x200B;以開啟規則編輯器。
 1. 選取「**[!UICONTROL 建立]**」。
 1. 在「**何時**」規則部分中建立條件。例如，當&#x200B;**[寵物 ID 欄位名稱]**&#x200B;已變更，請從「**選擇狀態**」下拉式清單選取「**已變更**」。
 1. 在「**然後**」部分，從「**選取動作**」下拉式清單中選取「**[!UICONTROL 調用服務]**」。

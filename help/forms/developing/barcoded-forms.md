@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # 使用條碼式表單 {#working-with-barcoded-forms}
 
-**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms 。**
+**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
 
 ## 關於條碼式Forms服務 {#about-the-barcoded-forms-service}
 
@@ -26,7 +26,7 @@ ht-degree: 0%
 
 使用條碼式表單服務，您可以將一維與二維條碼新增至互動式PDF forms。 然後，您可以將條碼式表單發佈至網站，或透過電子郵件或CD分發。 當使用者使用Adobe Reader、Acrobat Professional或Acrobat Standard填寫條碼表單時，條碼會自動更新以編碼使用者提供的表單資料。 使用者可以電子方式提交表單，或列印為紙張，並以郵件、傳真或手遞方式提交。 您稍後可以擷取使用者提供的資料，做為自動化工作流程的一部分，在核准程式和業務系統之間路由傳送資料。
 
-如需條碼式表單服務的詳細資訊，請參閱 [AEM Forms服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
+如需條碼式表單服務的詳細資訊，請參閱[AEM Forms服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 ## 解碼條碼式表單資料 {#decoding-barcoded-form-data}
 
@@ -34,7 +34,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如需條碼式表單服務的詳細資訊，請參閱 [AEM Forms服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
+>如需條碼式表單服務的詳細資訊，請參閱[AEM Forms服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 ### 步驟摘要 {#summary-of-steps}
 
@@ -47,7 +47,7 @@ ht-degree: 0%
 1. 將資料轉換為XML資料來源。
 1. 處理解碼的資料。
 
-**包含專案檔案**
+**包含專案檔**
 
 將必要的檔案納入您的開發專案中。 如果您使用Java建立使用者端應用程式，則請包含必要的JAR檔案。 如果您使用Web服務，請務必包含Proxy檔案。
 
@@ -58,19 +58,19 @@ ht-degree: 0%
 * adobe-barcodedforms-client.jar
 * adobe-utilities.jar (如果AEM Forms部署在JBoss上，則為必要)
 * jbossall-client.jar (如果AEM Forms部署在JBoss上，則為必要)
-* xercesImpl.jar (位於 &lt;install directory=&quot;&quot;>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs\thirdparty)
+* xercesImpl.jar (位於&lt;安裝目錄>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs\thirdparty)
 
-如果將AEM Forms部署在受支援的J2EE應用程式伺服器（不是JBOSS）上，則您必須將adobe-utilities.jar和jbossall-client.jar取代為特定於已部署AEM Forms之J2EE應用程式伺服器的JAR檔案。 如需有關所有AEM Forms JAR檔案位置的資訊，請參閱 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
+如果將AEM Forms部署在受支援的J2EE應用程式伺服器（不是JBOSS）上，則您必須將adobe-utilities.jar和jbossall-client.jar取代為特定於已部署AEM Forms之J2EE應用程式伺服器的JAR檔案。 如需有關所有AEM Forms JAR檔案位置的資訊，請參閱[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
 **建立條碼式表單使用者端API物件**
 
-您必須先建立條碼式Forms服務使用者端，才能以程式設計方式執行條碼式表單服務作業。 如果您使用Java API，請建立 `BarcodedFormsServiceClient` 物件。 如果您使用條碼式表單Web服務API，請建立 `BarcodedFormsServiceService` 物件。
+您必須先建立條碼式Forms服務使用者端，才能以程式設計方式執行條碼式表單服務作業。 如果您使用Java API，請建立`BarcodedFormsServiceClient`物件。 如果您使用條碼式表單Web服務API，請建立`BarcodedFormsServiceService`物件。
 
 **取得包含條碼資料的PDF表單**
 
 取得內含已填入使用者資料之條碼的PDF表單。
 
-**解碼PDF表單中的資料**
+**從PDF表單解碼資料**
 
 取得包含條碼的PDF表單（或影像）後，您就可以將資料解碼。 條碼Forms服務支援下列型別的條碼：
 
@@ -83,11 +83,11 @@ ht-degree: 0%
 * ean-13條碼。
 * EAN-8條碼
 
-在解碼API中將字元集輸入設為十六進位表示，條碼的內容會編碼為十六進位字串。 例如，如果在表單中將UTF-8指定為字元編碼，並在解碼操作中指定十六進位，則條碼的內容會在&lt;中編碼為十六進位字串 `xb:content`>已解碼輸出中的element。 您可以在使用者端應用程式中建立應用程式邏輯，轉換此十六進位值以取得原始內容。
+在解碼API中將字元集輸入設為十六進位表示，條碼的內容會編碼為十六進位字串。 例如，如果在表單中將UTF-8指定為字元編碼，並在解碼作業中指定Hex，則條碼的內容會在解碼輸出中編碼為&lt; `xb:content`>專案中的Hex字串。 您可以在使用者端應用程式中建立應用程式邏輯，轉換此十六進位值以取得原始內容。
 
 **將資料轉換為XML資料來源**
 
-將表單資料解碼後，可將其轉換為XDP或XFDF資料。 例如，假設您要將資料匯入另一個表單。 若要將資料匯入XFA表單，您必須將資料轉換為XDP資料。 如需詳細資訊，請參閱 [匯入表單資料](/help/forms/developing/importing-exporting-data.md#importing-form-data).
+將表單資料解碼後，可將其轉換為XDP或XFDF資料。 例如，假設您要將資料匯入另一個表單。 若要將資料匯入XFA表單，您必須將資料轉換為XDP資料。 如需詳細資訊，請參閱[匯入表單資料](/help/forms/developing/importing-exporting-data.md#importing-form-data)。
 
 **處理解碼的資料**
 
@@ -117,50 +117,50 @@ ht-degree: 0%
 
 1. 建立條碼式表單使用者端API物件
 
-   建立 `BarcodedFormsServiceClient` 物件，使用它的建構函式傳遞 `ServiceClientFactory` 包含連線屬性的物件。
+   使用它的建構函式並傳遞包含連線屬性的`ServiceClientFactory`物件來建立`BarcodedFormsServiceClient`物件。
 
 1. 取得包含條碼資料的PDF表單
 
-   * 建立 `java.io.FileInputStream` 物件，使用它的建構函式，並傳遞指定PDF檔案位置的字串值，來代表包含條碼式資料的PDF表單。
-   * 建立 `com.adobe.idp.Document` 物件，使用它的建構函式並傳遞 `java.io.FileInputStream` 物件。
+   * 使用它的建構函式，並傳遞指定PDF檔案位置的字串值，來建立代表包含條碼式資料的PDF表單的`java.io.FileInputStream`物件。
+   * 使用它的建構函式並傳遞`java.io.FileInputStream`物件來建立`com.adobe.idp.Document`物件。
 
 1. 解碼PDF表單中的資料
 
-   透過叫用 `BarcodedFormsServiceClient` 物件的 `decode` 方法並傳遞下列值：
+   透過叫用`BarcodedFormsServiceClient`物件的`decode`方法並傳遞下列值來解碼表單資料：
 
-   * 此 `com.adobe.idp.Document` 包含PDF表單的物件。
-   * A `java.lang.Boolean` 物件，指定是否要解碼PDF417條碼。
-   * A `java.lang.Boolean` 指定是否要解碼資料矩陣條碼的物件。
-   * A `java.lang.Boolean` 指定是否要解碼QR碼條碼的物件。
-   * A `java.lang.Boolean` 指定是否要解碼程式碼標籤條碼的物件。
-   * A `java.lang.Boolean` 物件，指定是否要解碼程式碼128條碼。
-   * A `java.lang.Boolean` 物件，指定是否要解碼程式碼39條碼。
-   * A `java.lang.Boolean` 物件，指定是否要解碼EAN-13條碼。
-   * A `java.lang.Boolean` 物件，指定是否要解碼EAN-8條碼。
-   * A `com.adobe.livecycle.barcodedforms.CharSet` 列舉值，指定條碼中使用的字元集編碼值。
+   * 包含PDF表單的`com.adobe.idp.Document`物件。
+   * `java.lang.Boolean`物件，指定是否要解碼PDF417條碼。
+   * 指定是否要解碼資料矩陣條碼的`java.lang.Boolean`物件。
+   * 指定是否要解碼QR碼條碼的`java.lang.Boolean`物件。
+   * 指定是否要解碼程式碼標籤條碼的`java.lang.Boolean`物件。
+   * `java.lang.Boolean`物件，指定是否要解碼代碼128條碼。
+   * `java.lang.Boolean`物件，指定是否要解碼代碼39條碼。
+   * 指定是否要解碼EAN-13條碼的`java.lang.Boolean`物件。
+   * 指定是否要解碼EAN-8條碼的`java.lang.Boolean`物件。
+   * 指定條碼中所使用字元集編碼值的`com.adobe.livecycle.barcodedforms.CharSet`列舉值。
 
-   此 `decode` 方法傳回 `org.w3c.dom.Document` 包含已解碼表單資料的物件。
+   `decode`方法傳回包含已解碼表單資料的`org.w3c.dom.Document`物件。
 
 1. 將資料轉換為XML資料來源
 
-   透過叫用 `BarcodedFormsServiceClient` 物件的 `extractToXML` 方法並傳遞下列值：
+   呼叫`BarcodedFormsServiceClient`物件的`extractToXML`方法並傳遞下列值，將解碼的資料轉換為XDP或XFDF資料：
 
-   * 此 `org.w3c.dom.Document` 包含已解碼資料的物件(請確定您使用 `decode` 方法的傳回值)。
-   * A `com.adobe.livecycle.barcodedforms.Delimiter` 指定行分隔字元的列舉值。 建議您指定 `Delimiter.Carriage_Return`.
-   * A `com.adobe.livecycle.barcodedforms.Delimiter` 指定欄位分隔字元的列舉值。 例如，指定 `Delimiter.Tab`.
-   * A `com.adobe.livecycle.barcodedforms.XMLFormat` 指定要將條碼資料轉換為XDP或XFDF XML資料的列舉值。 例如，指定 `XMLFormat.XDP` 將資料轉換為XDP資料。
+   * 包含已解碼資料的`org.w3c.dom.Document`物件（請確定您使用`decode`方法的傳回值）。
+   * 指定行分隔符號的`com.adobe.livecycle.barcodedforms.Delimiter`列舉值。 建議您指定`Delimiter.Carriage_Return`。
+   * 指定欄位分隔符號的`com.adobe.livecycle.barcodedforms.Delimiter`列舉值。 例如，指定`Delimiter.Tab`。
+   * `com.adobe.livecycle.barcodedforms.XMLFormat`列舉值，指定要將條碼資料轉換為XDP或XFDF XML資料。 例如，指定`XMLFormat.XDP`將資料轉換為XDP資料。
 
    >[!NOTE]
    >
    >請勿為行分隔符號和欄位分隔符號引數指定相同的值。
 
-   此 `extractToXML` 方法傳回 `java.util.List` 每個元素為的物件 `org.w3c.dom.Document` 物件。 位於表單上的每個條碼都有個別的元素。 也就是說，如果表單上有四個條碼，則傳回的元素有四個 `java.util.List` 物件。
+   `extractToXML`方法傳回`java.util.List`物件，其中每個元素都是`org.w3c.dom.Document`物件。 位於表單上的每個條碼都有個別的元素。 也就是說，如果表單上有四個條碼，則傳回的`java.util.List`物件中有四個元素。
 
 1. 處理解碼的資料
 
-   * 逐一檢視 `java.util.List` 物件以取得每個 `org.w3c.dom.Document` 清單中的物件。
-   * 針對清單中的每個元素，將 `org.w3c.dom.Document` 物件至 `com.adobe.idp.Document` 物件。 (可轉換 `org.w3c.dom.Document` 將物件放入 `com.adobe.idp.Document` 物件在使用Java API範例解碼條碼式表單資料中顯示)。
-   * 透過呼叫 `com.adobe.idp.Document` 物件的 `copyToFile`，並傳遞代表XML檔案的File物件。
+   * 逐一檢視`java.util.List`物件，以取得清單中的每個`org.w3c.dom.Document`物件。
+   * 針對清單中的每個元素，將`org.w3c.dom.Document`物件轉換為`com.adobe.idp.Document`物件。 （將`org.w3c.dom.Document`物件轉換為`com.adobe.idp.Document`物件的應用程式邏輯會顯示在使用Java API範例解碼條碼式表單資料中）。
+   * 呼叫`com.adobe.idp.Document`物件的`copyToFile`，並傳遞代表XML檔案的File物件，將XML資料儲存為XML檔案。
 
 **另請參閱**
 
@@ -176,59 +176,59 @@ ht-degree: 0%
 
 1. 包含專案檔案
 
-   * 建立使用條碼式表單服務WSDL的Microsoft .NET使用者端元件。 如需詳細資訊，請參閱 [使用Base64編碼叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding).
-   * 參考Microsoft .NET使用者端元件。 如需詳細資訊，請參閱以下的「參照.NET使用者端元件」： [使用Base64編碼叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding).
+   * 建立使用條碼式表單服務WSDL的Microsoft .NET使用者端元件。 如需詳細資訊，請參閱[使用Base64編碼叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)。
+   * 參考Microsoft .NET使用者端元件。 如需詳細資訊，請參閱[使用Base64編碼叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)中的「參考.NET使用者端元件」。
 
 1. 建立條碼式表單使用者端API物件
 
-   使用使用條碼式表單服務WSDL的Microsoft .NET使用者端元件，建立 `BarcodedFormsServiceService` 物件（透過叫用其預設建構函式）。
+   使用使用條碼式表單服務WSDL的Microsoft .NET使用者端元件，透過叫用其預設建構函式來建立`BarcodedFormsServiceService`物件。
 
 1. 取得包含條碼資料的PDF表單
 
-   * 建立 `BLOB` 物件（使用其建構函式）。 此 `BLOB` 物件可用來儲存包含條碼的PDF檔案。
-   * 建立 `System.IO.FileStream` 物件，方法是叫用其建構函式，並傳遞代表PDF檔案檔案位置及開啟檔案的模式的字串值。
-   * 建立位元組陣列，儲存 `System.IO.FileStream` 物件。 您可以取得 `System.IO.FileStream` 物件的 `Length` 屬性。
-   * 透過叫用 `System.IO.FileStream` 物件的 `Read` 方法，並傳遞位元組陣列、起始位置以及要讀取的資料流長度。
-   * 填入 `BLOB` 物件，透過指派其 `binaryData` 包含位元組陣列內容的屬性。
+   * 使用物件的建構函式建立`BLOB`物件。 `BLOB`物件是用來儲存包含條碼的PDF檔案。
+   * 建立`System.IO.FileStream`物件，方法為叫用其建構函式，並傳遞代表PDF檔案檔案位置和開啟檔案的模式的字串值。
+   * 建立位元組陣列以儲存`System.IO.FileStream`物件的內容。 您可以取得`System.IO.FileStream`物件的`Length`屬性來決定位元組陣列的大小。
+   * 呼叫`System.IO.FileStream`物件的`Read`方法，並傳遞要讀取的位元組陣列、起始位置和資料流長度，以資料流資料填入位元組陣列。
+   * 以位元組陣列的內容指派物件的`binaryData`屬性，填入`BLOB`物件。
 
 1. 解碼PDF表單中的資料
 
-   透過叫用 `BarcodedFormsServiceService` 物件的 `decode` 方法並傳遞下列值：
+   透過叫用`BarcodedFormsServiceService`物件的`decode`方法並傳遞下列值來解碼表單資料：
 
-   * 此 `BLOB` 包含PDF表單的物件。
-   * A `Boolean` 物件，指定是否要解碼PDF417條碼。
-   * A `Boolean` 指定是否要解碼資料矩陣條碼的物件。
-   * A `Boolean` 指定是否要解碼QR碼條碼的物件。
-   * A `Boolean` 指定是否要解碼程式碼標籤條碼的物件。
-   * A `Boolean` 物件，指定是否要解碼程式碼128條碼。
-   * A `Bolean` 物件，指定是否要解碼程式碼39條碼。
-   * A `Boolean` 物件，指定是否要解碼EAN-13條碼。
-   * A `Boolean` 物件，指定是否要解碼EAN-8條碼。
-   * A `CharSet` 列舉值，指定條碼中使用的字元集編碼值。
+   * 包含PDF表單的`BLOB`物件。
+   * `Boolean`物件，指定是否要解碼PDF417條碼。
+   * 指定是否要解碼資料矩陣條碼的`Boolean`物件。
+   * 指定是否要解碼QR碼條碼的`Boolean`物件。
+   * 指定是否要解碼程式碼標籤條碼的`Boolean`物件。
+   * `Boolean`物件，指定是否要解碼代碼128條碼。
+   * `Bolean`物件，指定是否要解碼代碼39條碼。
+   * 指定是否要解碼EAN-13條碼的`Boolean`物件。
+   * 指定是否要解碼EAN-8條碼的`Boolean`物件。
+   * 指定條碼中所使用字元集編碼值的`CharSet`列舉值。
 
-   此 `decode` 方法會傳回包含已解碼表單資料的字串值。
+   `decode`方法傳回包含已解碼表單資料的字串值。
 
 1. 將資料轉換為XML資料來源
 
-   透過叫用 `BarcodedFormsServiceService` 物件的 `extractToXML` 方法並傳遞下列值：
+   呼叫`BarcodedFormsServiceService`物件的`extractToXML`方法並傳遞下列值，將解碼的資料轉換為XDP或XFDF資料：
 
-   * 包含已解碼資料的字串值(務必使用 `decode` 方法的傳回值)。
-   * A `Delimiter` 指定行分隔字元的列舉值。 建議您指定 `Delimiter.Carriage_Return`.
-   * A `Delimiter` 指定欄位分隔字元的列舉值。 例如，指定 `Delimiter.Tab`.
-   * A `XMLFormat` 指定要將條碼資料轉換為XDP或XFDF XML資料的列舉值。 例如，指定 `XMLFormat.XDP` 將資料轉換為XDP資料。
+   * 包含已解碼資料的字串值（請確定您使用`decode`方法的傳回值）。
+   * 指定行分隔符號的`Delimiter`列舉值。 建議您指定`Delimiter.Carriage_Return`。
+   * 指定欄位分隔符號的`Delimiter`列舉值。 例如，指定`Delimiter.Tab`。
+   * `XMLFormat`列舉值，指定要將條碼資料轉換為XDP或XFDF XML資料。 例如，指定`XMLFormat.XDP`將資料轉換為XDP資料。
 
    >[!NOTE]
    >
    >請勿為行分隔符號和欄位分隔符號引數指定相同的值。
 
-   此 `extractToXML` 方法傳回 `Object` 陣列，其中每個元素為 `BLOB` 執行個體。 位於表單上的每個條碼都有個別的元素。 也就是說，如果表單上有四個條碼，則傳回的元素有四個 `Object` 陣列。
+   `extractToXML`方法傳回`Object`陣列，其中每個元素都是`BLOB`執行個體。 位於表單上的每個條碼都有個別的元素。 也就是說，如果表單上有四個條碼，則傳回的`Object`陣列中有四個元素。
 
 1. 處理解碼的資料
 
-   * 建立 `System.IO.FileStream` 物件，方法是叫用其建構函式，並傳遞代表受保護PDF檔案之檔案位置的字串值。
-   * 建立位元組陣列，儲存 `BLOB` 物件，由 `encryptPDFUsingPassword` 方法。 透過取得 `BLOB` 物件的 `binaryData` 資料成員。
-   * 建立 `System.IO.BinaryWriter` 物件，方法是叫用其建構函式，然後傳遞 `System.IO.FileStream` 物件。
-   * 透過叫用將位元組陣列的內容寫入PDF檔案 `System.IO.BinaryWriter` 物件的 `Write` 方法並傳遞位元組陣列。
+   * 建立`System.IO.FileStream`物件，方法為叫用其建構函式，並傳遞代表受保護PDF檔案檔案位置的字串值。
+   * 建立位元組陣列，儲存`encryptPDFUsingPassword`方法傳回的`BLOB`物件的資料內容。 取得`BLOB`物件的`binaryData`資料成員的值，以填入位元組陣列。
+   * 透過叫用它的建構函式並傳遞`System.IO.FileStream`物件來建立`System.IO.BinaryWriter`物件。
+   * 呼叫`System.IO.BinaryWriter`物件的`Write`方法並傳遞位元組陣列，將位元組陣列的內容寫入PDF檔案。
 
 **另請參閱**
 

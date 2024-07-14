@@ -38,26 +38,26 @@ MCM可從AEM中的不同位置存取；例如，「歡迎」畫面，使用「�
 
    * [清單](#lists)
 此窗格會顯示您已建立的清單，以及該清單中的潛在客戶數目。 您可以從此窗格直接建立清單，或匯入銷售機會以建立清單。
-選取特定清單後，您將會前往 [清單](#lists) 區段會顯示您清單的詳細資訊。
+選取特定清單後，您將會前往[清單](#lists)區段，顯示清單的詳細資料。
 
    * [區段](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#anoverviewofsegmentation)
 此窗格會顯示您已定義的區段。 區段可讓您為共用特定特徵的訪客集合設定特徵。
 選取特定區段會開啟區段定義頁面。
 
-   * [報表](/help/sites-administering/reporting.md)
+   * [報告](/help/sites-administering/reporting.md)
 AEM提供不同的報表，協助您分析及監控執行個體的狀態。 此MCM窗格會列出報告。
 選取報告會開啟報告頁面。
 
    * [行銷活動](#campaigns)
-此窗格會列出您的行銷活動體驗，例如 [電子報](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#newsletters) 和 [Teasers](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#teasers).
+此窗格會列出您的行銷活動體驗，例如[電子報](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#newsletters)和[Teasers](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#teasers)。
 
-* **[銷售機會](#leads)**
-您可以在此處管理您的銷售機會。 您可以建立或匯入銷售機會、編輯個別銷售機會的特定詳細資訊，或在不再需要時刪除。 您也可以將潛在客戶放入不同的群組中，稱為「清單」。 **注意：** Adobe不打算進一步增強此功能。
-建議使用 [Adobe Campaign與AEM的整合](/help/sites-administering/campaign.md).
+* **[個銷售機會](#leads)**
+您可以在此處管理您的銷售機會。 您可以建立或匯入銷售機會、編輯個別銷售機會的特定詳細資訊，或在不再需要時刪除。 您也可以將潛在客戶放入不同的群組中，稱為「清單」。 **注意：**Adobe不打算進一步增強此功能。
+建議使用[Adobe Campaign以及與AEM](/help/sites-administering/campaign.md)的整合。
 
 * **[清單](#lists)**
-您可以在此處管理您的（潛在客戶）清單。**注意：** Adobe不打算進一步增強此功能。
-建議使用 [Adobe Campaign與AEM的整合](/help/sites-administering/campaign.md).
+您可以在此處管理您的（潛在客戶）清單。**注意：**Adobe不打算進一步增強此功能。
+建議使用[Adobe Campaign以及與AEM](/help/sites-administering/campaign.md)的整合。
 
 * **[行銷活動](#campaigns)**
 您可以在此處管理您的品牌、行銷活動和體驗。
@@ -73,15 +73,15 @@ AEM提供不同的報表，協助您分析及監控執行個體的狀態。 此M
 >[!NOTE]
 >
 >Adobe不打算進一步增強此功能（管理銷售機會）。
->建議使用 [Adobe Campaign與AEM的整合](/help/sites-administering/campaign.md).
+>建議使用[Adobe Campaign以及與AEM](/help/sites-administering/campaign.md)的整合。
 
 在AEM MCM中，您可以手動輸入潛在客戶或匯入以逗號分隔的清單（例如郵寄清單）來整理和新增潛在客戶。 產生銷售機會的其他方法來自電子報註冊或社群註冊（如果設定，這些可能會觸發工作流程填入銷售機會）。 潛在客戶通常會分類並放入清單中，以便您稍後可以對整個清單執行動作；例如，傳送自訂電子郵件給特定清單。
 
-在 **銷售機會** 在左窗格中，您可以建立、匯入、編輯及刪除銷售機會，然後視需要啟用或停用。 您可以將銷售機會新增至清單，或檢視其已屬於哪些清單。
+在左窗格的&#x200B;**銷售機會**&#x200B;下，您可以建立、匯入、編輯和刪除銷售機會，然後視需要啟用或停用。 您可以將銷售機會新增至清單，或檢視其已屬於哪些清單。
 
 >[!NOTE]
 >
->另請參閱 [使用銷售機會](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#workingwithleads) 以取得特定工作的詳細資訊。
+>請參閱[使用銷售機會](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#workingwithleads)，以取得特定工作的詳細資訊。
 
 ![screen_shot_2012-02-21at114748am-1](assets/screen_shot_2012-02-21at114748am-1.png)
 
@@ -90,15 +90,15 @@ AEM提供不同的報表，協助您分析及監控執行個體的狀態。 此M
 >[!NOTE]
 >
 >Adobe不打算進一步增強此功能（管理清單）。
->建議使用 [Adobe Campaign與AEM的整合](/help/sites-administering/campaign.md).
+>建議使用[Adobe Campaign以及與AEM](/help/sites-administering/campaign.md)的整合。
 
 清單可讓您將銷售機會整理到群組中。 透過清單，您可以將行銷活動定位至特定一群人員；例如，您可以傳送目標定位電子報至清單。
 
-在 **清單**，您可以建立、匯入、編輯、合併及刪除清單，然後視需要啟用或停用這些清單，以管理您的清單。 您也可以檢視該清單中的銷售機會、檢視清單是否為其他清單的成員，或檢視說明。
+在&#x200B;**清單**&#x200B;下，您可以透過建立、匯入、編輯、合併及刪除清單來管理清單，然後視需要加以啟用或停用。 您也可以檢視該清單中的銷售機會、檢視清單是否為其他清單的成員，或檢視說明。
 
 >[!NOTE]
 >
->另請參閱 [使用清單](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#workingwithlists) 以取得特定工作的詳細資訊。
+>請參閱[使用清單](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#workingwithlists)以取得特定工作的詳細資訊。
 
 ![screen_shot_2012-02-21at124828pm-1](assets/screen_shot_2012-02-21at124828pm-1.png)
 
@@ -106,16 +106,18 @@ AEM提供不同的報表，協助您分析及監控執行個體的狀態。 此M
 
 >[!NOTE]
 >
->另請參閱 [Teaser和策略](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#workingwithlists)， [設定您的行銷活動](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#settingupyourcampaign) 和 [電子報](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#newsletters) 以取得特定工作的詳細資訊。
+>如需特定工作的詳細資訊，請參閱[Teasers和策略](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#workingwithlists)、[設定您的行銷活動](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#settingupyourcampaign)和[電子報](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#newsletters)。
 
-若要存取現有的行銷活動，請在MCM中按一下 **行銷活動**.
+若要存取現有的行銷活動，請在MCM中按一下&#x200B;**行銷活動**。
 
 ![screen_shot_2012-02-21at11106pm](assets/screen_shot_2012-02-21at11106pm.png)
 
-* **在左窗格中**：此清單包含所有品牌和促銷活動。
+* **在左窗格**：
+這裡有所有品牌和行銷活動的清單。
 按一下品牌可展開清單，以在左側窗格中顯示所有相關行銷活動；此清單也會顯示每個行銷活動中存在的體驗數量。 它也會在右窗格中開啟品牌概觀。
 
-* **在右窗格中**：會為每個品牌顯示圖示（不會顯示歷史行銷活動）。
+* **在右窗格**：
+系統會為每個品牌顯示圖示（不會顯示歷史行銷活動）。
 您可以連按兩下以開啟品牌概觀。
 
 #### 品牌概觀 {#brand-overview}
@@ -125,14 +127,14 @@ AEM提供不同的報表，協助您分析及監控執行個體的狀態。 此M
 從這裡，您可以：
 
 * 檢視此品牌現有的行銷活動和體驗數量（顯示在左窗格中的數量）。
-* 建立 **新增……** 此品牌的行銷活動。
+* 建立此品牌的&#x200B;**新……**&#x200B;行銷活動。
 
-* 變更檢視的時間範圍；選取 **周**， **月** 或 **季度**，使用箭頭來選取特定期間或返回 **今天**.
+* 變更檢視的時間範圍；選取&#x200B;**周**、**月**&#x200B;或&#x200B;**季**，使用箭頭選取特定期間或返回&#x200B;**今天**。
 
 * 選取行銷活動（在右窗格中）以：
 
-   * 編輯 **屬性……**
-   * **刪除** 行銷活動。
+   * 編輯&#x200B;**屬性……**
+   * **刪除**&#x200B;行銷活動。
 
 * 開啟行銷活動概覽（在右窗格中按兩下行銷活動，或在左窗格中按一下）。
 
@@ -152,11 +154,11 @@ AEM提供不同的報表，協助您分析及監控執行個體的狀態。 此M
 
    從這裡，您可以：
 
-   * 使用箭頭變更您檢視的時間長度，或返回 **今天**.
+   * 使用箭頭變更您檢視的時間範圍，或返回&#x200B;**Today**。
 
-   * 使用 **新增接觸點……** 為現有體驗新增接觸點。
+   * 使用&#x200B;**新增接觸點……**&#x200B;為現有體驗新增接觸點。
 
-   * 按一下Teaser （在右窗格中）以設定 **準時** 和 **關閉時間**.
+   * 按一下Teaser （在右窗格中）以設定&#x200B;**開啟時間**&#x200B;和&#x200B;**關閉時間**。
 
 1. **清單檢視**
 
@@ -170,21 +172,21 @@ AEM提供不同的報表，協助您分析及監控執行個體的狀態。 此M
 
    從這裡，您可以：
 
-   * 建立 **新增……** 體驗；例如Adobe Target選件、Teaser和電子報。
-   * **編輯** 特定Teaser頁面或電子報（也可以使用按兩下）的詳細資料。
-   * 定義 **屬性……** 特定的Teaser頁面或電子報。
-   * **模擬** 體驗（Teaser頁面或電子報）的外觀和風格。
+   * 建立&#x200B;**新的……**&#x200B;體驗；例如Adobe Target選件、Teaser和電子報。
+   * **編輯**&#x200B;特定Teaser頁面或電子報的詳細資料（也可以使用連按兩下）。
+   * 為特定的Teaser頁面或電子報定義&#x200B;**屬性……**。
+   * **模擬**體驗（Teaser頁面或電子報）的外觀與風格。
 當模擬頁面開啟時，您可以接著開啟Sidekick以切換至該頁面的編輯模式。
 
-   * **分析……** 為頁面產生的曝光數。
+   * **分析……**&#x200B;為頁面產生的曝光數。
 
-   * **刪除** 不再需要的專案。
-   * **搜尋** （將會搜尋體驗的「標題」欄位）。
-   * 使用 **進階** 搜尋以將篩選器套用至搜尋。
+   * **刪除**&#x200B;個不再需要的專案。
+   * **搜尋**&#x200B;您的文字（將會搜尋體驗的標題欄位）。
+   * 使用&#x200B;**進階**&#x200B;搜尋將篩選套用至搜尋。
 
 ### 模擬您的行銷活動體驗 {#simulating-your-campaign-experiences}
 
-在MCM中，按一下 **行銷活動**. 確認清單檢視為作用中，然後選取必要的行銷活動體驗並按一下 **模擬**. 即將開啟接觸點（Teaser或電子報頁面），以顯示您選取的體驗，因為訪客會看到該體驗。
+在MCM中，按一下&#x200B;**行銷活動**。 確定清單檢視為使用中，然後選取必要的行銷活動體驗並按一下&#x200B;**模擬**。 即將開啟接觸點（Teaser或電子報頁面），以顯示您選取的體驗，因為訪客會看到該體驗。
 
 ![mcm_simulateexperience](assets/mcm_simulateexperience.png)
 
@@ -192,6 +194,6 @@ AEM提供不同的報表，協助您分析及監控執行個體的狀態。 此M
 
 ### 分析您的行銷活動體驗 {#analyzing-your-campaign-experiences}
 
-在MCM中，按一下 **行銷活動**. 確認清單檢視為作用中，然後選取所需的行銷活動體驗並選取「 」 **分析……**. 畫面會顯示一段時間的頁面曝光圖。
+在MCM中，按一下&#x200B;**行銷活動**。 確定清單檢視為使用中，然後選取必要的行銷活動體驗並選取&#x200B;**分析……**。 畫面會顯示一段時間的頁面曝光圖。
 
 ![mcm_campaignanalyze](assets/mcm_campaignanalyze.png)

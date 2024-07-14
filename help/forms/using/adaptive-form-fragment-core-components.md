@@ -31,15 +31,15 @@ ht-degree: 3%
 
 >[!NOTE]
 >
-> 您可以使用輕鬆為使用者自訂片段體驗 [表單片段元件的「設定」對話方塊和「設計」對話方塊](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/form-fragment.html).
+> 您可以使用[表單片段元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/form-fragment.html)的「設定」對話方塊和「設計」對話方塊，輕鬆自訂使用者的片段體驗。
 
 
 ## 建立表單片段 {#create-a-fragment}
 
 您可以從頭開始建立最適化表單片段，或將現有最適化表單中的面板儲存為片段。 若要建立表單片段：
 
-1. 在https://登入您的AEM Forms執行個體&#x200B;[*主機名稱*]：[*連線埠*]/aem/forms.html.
-1. 按一下 **建立>自適應表單片段**.
+1. 在https://[*主機名稱*]：[*連線埠*]/aem/forms.html登入您的AEM Forms執行個體。
+1. 按一下&#x200B;**建立>最適化表單片段**。
 1. 指定片段的標題、名稱、說明和標籤。 請確定您為片段指定唯一的名稱。 如果存在具有相同名稱的其他片段，則無法建立片段。
 1. 選取表單範本。 您可以為以核心元件為基礎的Adaptive Forms或基礎元件為基礎的Adaptive Forms建立表單片段。
    * 若要建立核心元件型表單的表單片段，請選取核心元件型範本。
@@ -47,9 +47,9 @@ ht-degree: 3%
 
    當您建立核心元件型表單的表單片段時，請使用選取表單主題選項來選取核心元件型主題。
 
-1. 按一下以開啟 **表單模型** 標籤，並從 **選取自** 下拉式選單，為片段選取以下其中一個模型：
+1. 按一下以開啟&#x200B;**表單模型**&#x200B;標籤，然後從&#x200B;**選取自**&#x200B;下拉式功能表中，為片段選取下列其中一個模型：
 
-   ![在表單模型標籤中顯示模型型別](assets/create-af-1-1.png)
+   ![在表單模型索引標籤中顯示模型型別](assets/create-af-1-1.png)
 
    * **無**：指定從頭開始建立片段，而不使用任何表單模型。
 
@@ -57,7 +57,7 @@ ht-degree: 3%
      >
      > 在 Adaptive Forms 中，您可以多次使用單一窗體片段 （基於核心元件）。 它支援無型和結構描述型表單片段。
 
-   * **架構**：指定使用上傳至 AEM Forms 的 XML 或 JSON 綱要建立片段。 您可以上傳或從可用的XML或JSON結構描述中選取作為片段的表單模型。 選取XML結構描述時，您也可以從以下專案選取所選結構描述中存在的complexType，以建立最適化表單片段： **[!UICONTROL XML結構描述複雜型別]** 下拉式方塊。 選取JSON結構描述時，您也可以從以下專案選取所選結構描述中存在的結構描述定義，以建立調適型表單片段： **[!UICONTROL json結構描述定義]** 下拉式方塊。
+   * **架構**：指定使用上傳至 AEM Forms 的 XML 或 JSON 綱要建立片段。 您可以上傳或從可用的XML或JSON結構描述中選取作為片段的表單模型。 選取XML結構描述時，您也可以從&#x200B;**[!UICONTROL XML結構描述複雜型別]**&#x200B;下拉式方塊中選取所選結構描述中存在的complexType，以建立最適化表單片段。 選取JSON結構描述時，您也可以從&#x200B;**[!UICONTROL JSON結構描述定義]**&#x200B;下拉式方塊中選取所選結構描述中存在的結構描述定義，以建立調適型表單片段。
    * **表單資料模型**：指定使用表單資料模型建立片段。 您可以根據表單資料模型中只有一個資料模型物件來建立最適化表單片段。 展開表單資料模型定義下拉式清單。 它會列出指定表單資料模型中的所有資料模型物件。 從清單中選取資料模型物件。
 
    ![表單資料模型](assets/create-af-3.png)
@@ -76,12 +76,12 @@ ht-degree: 3%
 若要將最適化表單片段新增至最適化表單：
 
 1. 在編輯模式中開啟最適化表單。
-1. 新增 **最適化表單片段** 元件至表單。
-1. 按一下 **資產** 內容瀏覽器側欄。 在資產瀏覽器的路徑下，選取 **最適化表單片段** 選項。 您的表單可用的所有Adaptive Forms片段（視表單的模型而定）都會出現。
+1. 將&#x200B;**最適化表單片段**&#x200B;元件新增至表單。
+1. 在側邊欄按一下&#x200B;**Assets**&#x200B;內容瀏覽器。 在資產瀏覽器的路徑下，選取&#x200B;**最適化表單片段**&#x200B;選項。 您的表單可用的所有Adaptive Forms片段（視表單的模型而定）都會出現。
 
    ![選取最適化表單片段選項](assets/adaptive-forms-fragments.png)
 
-1. 將最適化表單片段拖放至 **最適化表單片段** 最適化表單上的元件。
+1. 將最適化表單片段拖放至最適化表單上的&#x200B;**最適化表單片段**&#x200B;元件上。
 
    >[!NOTE]
    >
@@ -133,7 +133,7 @@ Perform the following steps to show complete fragments in forms:
 
 1. 前往 `https://[hostname]/aem/forms.html`。
 
-1. 按一下 **選取** 在AEM Forms UI工具列中選取最適化表單片段。 工具列會顯示您對選取的Adaptive Form片段可以執行的下列操作。
+1. 按一下AEM Forms UI工具列中的&#x200B;**選取**，然後選取最適化表單片段。 工具列會顯示您對選取的Adaptive Form片段可以執行的下列操作。
 
 <table>
  <tbody>
@@ -143,11 +143,11 @@ Perform the following steps to show complete fragments in forms:
   </tr>
   <tr>
    <td><p>編輯</p> </td>
-   <td><p>在編輯模式中開啟選取的Adaptive Form片段。<br /> <br /> </p> </td>
+   <td><p>在編輯模式中開啟選取的最適化表單片段。<br /> <br /> </p> </td>
   </tr>
   <tr>
    <td><p>屬性</p> </td>
-   <td><p>開啟屬性面板。 從「屬性」面板中，您可以檢視和編輯屬性、產生預覽，以及上傳所選片段的縮圖影像。 如需詳細資訊，請參閱 <a>管理中繼資料</a>.<br /> <br /> </p> </td>
+   <td><p>開啟屬性面板。 從「屬性」面板中，您可以檢視和編輯屬性、產生預覽，以及上傳所選片段的縮圖影像。 如需詳細資訊，請參閱<a>管理中繼資料</a>.<br /> <br /> </p> </td>
   </tr>
   <tr>
    <td><p>複製</p> </td>
@@ -159,18 +159,18 @@ Perform the following steps to show complete fragments in forms:
   </tr>
   <tr>
    <td><p>預覽</p> </td>
-   <td><p>提供以HTML預覽片段的選項，或透過將XML檔案的資料與片段合併來預覽自訂預覽。 如需詳細資訊，請參閱 <a>預覽表單</a>.<br /> <br /> </p> </td>
+   <td><p>提供以HTML預覽片段的選項，或透過將XML檔案的資料與片段合併來預覽自訂預覽。 如需詳細資訊，請參閱<a>預覽表單</a>。<br /> <br /> </p> </td>
   </tr>
   <tr>
    <td><p>開始檢閱/管理檢閱</p> </td>
-   <td><p>允許啟動和管理所選片段的審查。 如需詳細資訊，請參閱 <a>建立和管理稽核</a>.<br /> <br /> </p> </td>
+   <td><p>允許啟動和管理所選片段的審查。 如需詳細資訊，請參閱<a>建立和管理評論</a>。<br /> <br /> </p> </td>
   </tr>
   <tr>
    <td><p>新增字典</p> </td>
-   <td><p>產生字典以將選取的片段本地化。 如需詳細資訊，請參閱 <a>將最適化Forms本地化</a>.<br /> <br /> </p> </td>
+   <td><p>產生字典以將選取的片段本地化。 如需詳細資訊，請參閱<a>本地化最適化Forms</a>。<br /> <br /> </p> </td>
   </tr>
   <tr>
-   <td><p>發佈/取消發佈</p> </td>
+   <td><p>Publish /取消發佈</p> </td>
    <td><p>發佈/取消發佈選取的片段。<br /> <br /> </p> </td>
   </tr>
   <tr>
@@ -193,7 +193,7 @@ Perform the following steps to show complete fragments in forms:
 * 當您重新發佈更新的Adaptive Form片段時，變更會反映在使用片段的Adaptive Form的已發佈例項中。
 * 包含Verify元件的調適型表單不支援匿名使用者。 此外，不建議在自適應表單片段中使用驗證元件。
 * （**僅限** Mac）為了確保表單片段功能在所有場景中都能完美運行，請將以下內容添加到 /private/etc/hosts 檔中：
-  `127.0.0.1 <Host machine>` **主機**：部署AEM Forms的Apple Mac電腦。
+  `127.0.0.1 <Host machine>` **主機電腦**：部署AEM Forms的Apple Mac電腦。
 
 ## 參考片段 {#reference-fragments}
 

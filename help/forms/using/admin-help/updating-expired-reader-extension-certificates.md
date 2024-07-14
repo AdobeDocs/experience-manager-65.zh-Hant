@@ -17,67 +17,67 @@ ht-degree: 0%
 
 擁有Adobe Managed Services或內部部署企業基本授權的Adobe Experience Manager Forms (AEM Forms)客戶有權使用Acrobat Reader DC擴充功能服務。 此服務可讓組織透過擴充具有其他使用許可權的Acrobat Reader功能，輕鬆共用互動式PDF檔案。 此服務會將使用許可權新增至PDF檔案，並啟動使用Adobe Acrobat Reader開啟PDF檔案時無法使用的功能，例如新增註解至檔案、填寫表單及儲存檔案。 協力廠商使用者不需要其他軟體或外掛程式即可使用啟用許可權的檔案。 已新增使用許可權的PDF檔案稱為許可權啟用檔案。 在Acrobat Reader中開啟許可權啟用PDF檔案的使用者可執行為該檔案啟用的操作。
 
-Adobe使用公開金鑰基礎架構(PKI)來核發數位憑證，以用於授權和功能啟用。 Adobe一直在憑證授權單位下發行憑證 **Adobe根CA**，此專案的到期日設定為2023年1月7日。 憑證到期不會影響使用由簽發的生產憑證擴充的PDF檔案。 **Adobe根CA** 基礎憑證（舊憑證）。 所有PDF檔案(在2023年1月7日之前使用舊憑證擴充的Reader，包括客戶下載的檔案)將繼續使用套用至這些檔案的所有使用權利，不需要任何更新。
+Adobe使用公開金鑰基礎架構(PKI)來核發數位憑證，以用於授權和功能啟用。 Adobe已在憑證授權單位&#x200B;**Adobe根CA**&#x200B;下發行憑證，該憑證設定於2023年1月7日到期。 憑證到期不會影響使用由&#x200B;**PDF根CA**&#x200B;型憑證（舊憑證）所發行的生產憑證所延伸的Adobe檔案。 所有PDF檔案(在2023年1月7日之前使用舊憑證擴充的Reader，包括客戶下載的檔案)將繼續使用套用至這些檔案的所有使用權利，不需要任何更新。
 
-新的憑證授權單位， **Adobe根CA G2**&#x200B;現在可以使用基於新憑證授權單位的、和憑證。 在2023年1月7日或之前，開始使用新憑證 — 這些憑證基於 **Adobe根CA G2** —Reader擴充新的PDF檔案。  您可以 [從Adobe授權網站取得新憑證](https://licensing.adobe.com/) 或Adobe支援。
+現在可以使用新的憑證授權單位&#x200B;**Adobe根CA G2**&#x200B;以及基於新憑證授權單位的憑證。 在2023年1月7日或之前，開始使用新憑證(以&#x200B;**Adobe根CA G2**&#x200B;為基礎的憑證)來Reader擴充您的新PDF檔案。  您可以[從Adobe授權網站](https://licensing.adobe.com/)或Adobe支援取得新憑證。
 
 ## 常見問題
 
-**問：Adobe根憑證與Acrobat Reader擴充功能憑證有何不同？ Adobe根憑證是否依存於Acrobat Reader擴充功能憑證？ 這兩個憑證都會在2023年1月到期嗎？**
+**Q.Adobe根憑證與Acrobat Reader擴充功能憑證有何不同？ Adobe根憑證是否依存於Acrobat Reader擴充功能憑證？ 這兩個憑證都會在2023年1月到期嗎？**
 
 A.Adobe根CA是核發Acrobat Reader擴充功能憑證的憑證授權單位。 2023年1月7日，「Adobe根CA」和它發行的所有憑證都將到期。
 
-**問：Adobe先前曾就憑證過期及對使用/開啟PDF檔案的影響進行過通訊。 應該忽略該通訊嗎？**
+**Q.Adobe先前曾就憑證過期及對使用/開啟PDF檔案的影響進行過通訊。 應該忽略該通訊嗎？**
 
 A.根據對情況的重新評估，所有使用舊版「PDF根CA」在2023年1月7日之前發行的生產憑證延長的Adobe檔案，在2023年1月7日之後仍可繼續運作，且無任何變更。 如果您已更新PDF檔案，則體驗不會有任何變更。
 
-**問：如果我有其他問題，應該聯絡誰？**
+**Q.如果我有其他問題，應該聯絡誰？**
 
-A.您可以聯絡 [Adobe支援](https://experienceleague.adobe.com/?support-solution=Experience+Manager#support) 或提出支援票證。
+A.您可以聯絡[Adobe支援](https://experienceleague.adobe.com/?support-solution=Experience+Manager#support)或提出支援票證。
 
-**問：如果我在2023年1月7日之前未更新憑證，會發生什麼事？**
+**Q.如果在2023年1月7日之前未更新憑證，會發生什麼情況？**
 
 A.所有使用舊版「PDF根CA」在2023年1月7日之前發行的生產憑證擴充的Adobe檔案，在2023年1月7日之後仍可繼續運作，無任何變更。 使用評估憑證擴充的PDF在到期日之後無法運作。
 
-**問：新憑證的描述是否與舊憑證有所差異？**
+**Q.新憑證的描述是否與舊憑證有所差異？**
 
-A.提及的新Acrobat Reader擴充功能憑證說明 **G3-P24** 作為計畫名稱。 在舊憑證的說明中(以「Adobe根CA」為基礎的憑證)， **P24** 計畫名稱會出現。
+A.新Acrobat Reader擴充功能憑證的說明將&#x200B;**G3-P24**&#x200B;稱為程式名稱。 在舊憑證的描述(以「Adobe根CA」為基礎的憑證)中，**P24**&#x200B;被提為程式名稱。
 
-**問：如何取得最新的憑證？**
+**Q.如何取得最新的憑證？**
 
-A.所有有權存取的Forms客戶（具有使用中授權）皆可從以下網站下載新憑證(以「Adobe根CA G2」為基礎的憑證)： [Adobe授權網站](https://licensing.adobe.com/). 如果您在Adobe授權網站上找不到憑證，請連絡 [Adobe支援](https://experienceleague.adobe.com/?support-solution=Experience+Manager&amp;lang=en#support) 或提出支援票證。
+A.所有已授權的Forms客戶（具有使用中授權）都可以從[Adobe授權網站](https://licensing.adobe.com/)下載新憑證(以「Adobe根CA G2」為基礎的憑證)。 如果您在Adobe授權網站上找不到憑證，請連絡[Adobe支援](https://experienceleague.adobe.com/?support-solution=Experience+Manager&amp;lang=en#support)或提出支援票證。
 
-**問：使用由「PDF根CA」（舊憑證授權單位）發出的憑證擴充的Adobe檔案，在2023年1月7日之後是否繼續運作？**
+**Q.使用由「PDF根CA」（舊憑證授權單位）發行的憑證擴充的Adobe檔案在2023年1月7日之後是否繼續運作？**
 
 A.是，所有使用在2023年1月7日之前從「PDF根CA」（舊憑證授權單位）簽發的生產憑證擴充的Adobe檔案，在2023年1月7日後仍可繼續運作，且不會有任何變更。 使用評估憑證延長的PDF檔案在到期日之後將無法使用。
 
-**問：要繼續使用由「PDF根CA」（舊的憑證授權單位）發出的憑證所延伸的Adobe檔案，需要哪個Adobe Acrobat Reader版本？**
+**Q.使用由「PDF根CA」（舊憑證授權單位）發行的憑證所延伸的Adobe檔案，需要哪個Adobe Acrobat Reader版本？**
 
-A. Adobe Acrobat Reader 2020或更新版本必須使用擴充了「PDF根CA」（舊憑證授權單位）的Adobe檔案。 此檔案發佈時，它是支援的Acrobat Reader版本。 如果您使用 [不支援的Adobe Acrobat版本](https://helpx.adobe.com/tw/support/programs/eol-matrix.html)，Adobe建議您 [下載並安裝最新版Adobe Acrobat Reader](https://get.adobe.com/reader/).
+A. Adobe Acrobat Reader 2020或更新版本必須使用擴充了「PDF根CA」（舊憑證授權單位）的Adobe檔案。 此檔案發佈時，它是支援的Acrobat Reader版本。 如果您使用[不支援的Adobe Acrobat](https://helpx.adobe.com/tw/support/programs/eol-matrix.html)版本，Adobe建議您[下載並安裝最新版的Adobe Acrobat Reader](https://get.adobe.com/reader/)。
 
-**問：要使用由「PDF根CA 2」（新的憑證授權單位）發出的憑證，以繼續使用Adobe檔案，需要哪個Adobe Acrobat Reader版本？**
+**Q.使用由「PDF根CA 2」（新的憑證授權單位）發行的憑證所延伸的Adobe檔案時，需要哪個Adobe Acrobat Reader版本？**
 
-A. Adobe Acrobat Reader 2020或更新版本必須使用擴充了「PDF根CA 2」（新憑證授權單位）的Adobe檔案。 如果您使用 [不支援的Adobe Acrobat Reader版本](https://helpx.adobe.com/tw/support/programs/eol-matrix.html)，Adobe建議您 [下載並安裝最新版Adobe Acrobat Reader](https://get.adobe.com/reader/).
+A. Adobe Acrobat Reader 2020或更新版本必須使用擴充了「PDF根CA 2」（新憑證授權單位）的Adobe檔案。 如果您使用[不支援的Adobe Acrobat Reader](https://helpx.adobe.com/tw/support/programs/eol-matrix.html)版本，Adobe建議您[下載並安裝最新版的Adobe Acrobat Reader](https://get.adobe.com/reader/)。
 
-**問：我可以在繼續使用現有別名的同時，刪除舊的Acrobat Reader擴充功能憑證，並在Adobe Experience Manager Forms伺服器上新增新的憑證嗎？**
+**Q.我可以刪除舊的Acrobat Reader擴充功能憑證，並在Adobe Experience Manager Forms伺服器上新增憑證，同時繼續使用現有的別名嗎？**
 
 答：是，您可以刪除舊的Acrobat Reader擴充功能憑證，並使用現有別名新增憑證至Adobe Experience Manager Forms伺服器。
 
-**問：我可以在Adobe Experience Manager Forms伺服器上同時保留新舊的Acrobat Reader擴充功能憑證嗎？**
+**Q.我可以在Adobe Experience Manager Forms伺服器上同時保留新舊的Acrobat Reader擴充功能憑證嗎？**
 
-A.是，您可以在Adobe Experience Manager Forms伺服器上保留兩個憑證，但使用不同的別名。 自2023年1月7日起，您只能使用新憑證來Reader擴充PDF檔案。
+A.是，您可以在Adobe Experience Manager Forms伺服器上保留兩個憑證，但使用不同的別名。 Post 2023年1月7日，您只能使用新憑證來Reader擴充PDF檔案。
 
-**問：我可以將相同的Acrobat Reader擴充功能憑證匯入所有Adobe Experience Manager Forms環境嗎？**
+**Q.我可以將相同的Acrobat Reader擴充功能憑證匯入所有Adobe Experience Manager Forms環境嗎？**
 
 答：是，相同的Acrobat Reader擴充功能憑證可用於多個環境。
 
-**問：如何檢查套用至PDF檔案的使用許可權？**
+**Q.如何檢查套用至PDF檔案的使用許可權？**
 
-A.您可以使用 [getDocumentUsageRights](https://experienceleague.adobe.com/docs/experience-manager-65/forms/developer-reference/programming-aem-forms-jee/java-api-quick-start-code-examples/acrobat-reader-dc-extensions-service.html?lang=en#quick-start-soap-mode-retrieving-credential-information-using-the-java-api) API可擷取套用至PDF檔案之使用許可權的資訊。
+A.您可以使用[getDocumentUsageRights](https://experienceleague.adobe.com/docs/experience-manager-65/forms/developer-reference/programming-aem-forms-jee/java-api-quick-start-code-examples/acrobat-reader-dc-extensions-service.html?lang=en#quick-start-soap-mode-retrieving-credential-information-using-the-java-api) API來擷取套用至PDF檔案之使用許可權的資訊。
 
-**問：如何變更Acrobat Reader擴充功能憑證檔案的密碼？**
+**Q.如何變更Acrobat Reader擴充功能憑證檔案的密碼？**
 
-A.在Microsoft Windows上，若要變更憑證密碼，請使用Microsoft管理主控台(MMC)安裝憑證，然後選取 **將金鑰標示為可匯出**. 安裝後，使用私密金鑰匯出憑證，然後為PFX檔案使用另一個密碼。
+A.在Microsoft Windows上，若要變更憑證密碼，請使用Microsoft管理主控台(MMC)安裝憑證，並選取&#x200B;**將金鑰標示為可匯出**。 安裝後，使用私密金鑰匯出憑證，然後為PFX檔案使用另一個密碼。
 
 
 <!-- 

@@ -28,7 +28,7 @@ ht-degree: 3%
 
 * **標題**
 
-  頁面的標題會顯示在各種位置。 例如， **網站** 索引標籤清單和 **網站** 卡片/清單檢視。
+  頁面的標題會顯示在各種位置。 例如，**網站**&#x200B;索引標籤清單和&#x200B;**網站**&#x200B;卡片/清單檢視。
 
   這是必要欄位。
 
@@ -44,7 +44,7 @@ ht-degree: 3%
    * 使用下拉式功能，您可以從現有標籤中選取。
    * 當您將滑鼠移到選取方塊中的標籤專案上時，會出現x；這可用來為此頁面移除該標籤。
 
-* **隱藏導覽**
+* 在導覽中隱藏&#x200B;****
 
   切換開關可指出頁面在頁面導覽中顯示或隱藏。
 
@@ -54,7 +54,7 @@ ht-degree: 3%
 
 * **導覽標題**
 
-  您可以指定單獨的標題以用於導覽（例如，如果您想要更精簡的內容）。 如果為空， **標題** 已使用。
+  您可以指定單獨的標題以用於導覽（例如，如果您想要更精簡的內容）。 如果空白，則使用&#x200B;**標題**。
 
 * **子標題**
 
@@ -64,7 +64,7 @@ ht-degree: 3%
 
   頁面的說明、用途或您要新增的任何其他詳細資訊。
 
-* **準時**
+* **開啟時間**
 
   啟動已發佈頁面的日期和時間。 發佈後，此頁面將保持休眠狀態，直到指定的時間。
 
@@ -80,7 +80,7 @@ ht-degree: 3%
 
   可讓您輸入此頁面的虛名URL。 如此可讓您擁有更短且更能表達需知的URL。
 
-  例如，如果虛名URL設為w `elcome`至路徑/所識別的頁面 `v1.0/startpage`針對網站h `ttp://example.com,` 然後h `ttp://example.com/welcome`會是h的虛名URL `ttp://example.com/content/v1.0/startpage`
+  例如，如果網站h `ttp://example.com,`的虛名URL設定為w `elcome`至路徑/ `v1.0/startpage`所識別的頁面，則h `ttp://example.com/welcome`會是h `ttp://example.com/content/v1.0/startpage`的虛名URL
 
   >[!CAUTION]
   >
@@ -105,7 +105,7 @@ ht-degree: 3%
 
 * **Design**
 
-  指出 [設計](/help/sites-developing/designer.md) 用於此頁面。
+  指示要用於此頁面的[設計](/help/sites-developing/designer.md)。
 
 * **別名**
 
@@ -113,13 +113,13 @@ ht-degree: 3%
 
 * **啟用已關閉的使用者群組**
 
-  啟用（或停用）使用 [封閉式使用者群組](/help/sites-administering/cug.md) (CUG)。
+  啟用（或停用）使用[封閉使用者群組](/help/sites-administering/cug.md) (CUG)。
 
 * **登入頁面**
 
   用於登入的頁面。
 
-* **公認群組**
+* **公認的群組**
 
   有資格登入CUG的群組。
 
@@ -149,35 +149,35 @@ ht-degree: 3%
 
 * **Cloud Service**
 
-  定義屬性 [雲端服務](/help/sites-developing/extending-cloud-config.md).
+  定義[雲端服務](/help/sites-developing/extending-cloud-config.md)的屬性。
 
 ### 個人化 {#personalization}
 
-* **個人化**
+* **Personalization**
 
-  選取 [品牌以指定目標定位的範圍](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md).
+  選取[品牌以指定鎖定目標](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md)的範圍。
 
 ### 權限 {#permissions}
 
-* **許可權** （觸控最佳化的UI）
+* **許可權** （觸控最佳化UI）
 
-  檢視 [有效許可權和新增許可權](/help/sites-administering/user-group-ac-admin.md).
+  檢視[有效許可權並新增新許可權](/help/sites-administering/user-group-ac-admin.md)。
 
 ### 藍圖 {#blueprint}
 
 * **藍圖**
 
-  在中定義Blueprint頁面的屬性 [多網站管理](/help/sites-administering/msm.md). 控制將修改傳播至即時副本的情況。
+  定義[多網站管理](/help/sites-administering/msm.md)中Blueprint頁面的屬性。 控制將修改傳播至即時副本的情況。
 
 ### Live Copy {#live-copy}
 
 * **即時副本**
 
-  在中定義即時副本頁面的屬性 [多網站管理](/help/sites-administering/msm.md). 控制從Blueprint傳播修改的情況。
+  在[多網站管理](/help/sites-administering/msm.md)中定義即時副本頁面的屬性。 控制從Blueprint傳播修改的情況。
 
 ### 網站結構 {#site-structure}
 
-* 提供全網站功能頁面的連結，例如 **註冊頁面**， **離線頁面**，以及其他專案。
+* 提供提供全網站功能頁面的連結，例如&#x200B;**註冊頁面**、**離線頁面**&#x200B;等。
 
 ## 編輯頁面屬性 {#editing-page-properties-2}
 
@@ -187,8 +187,8 @@ ht-degree: 3%
 
 1. 開啟您要編輯的頁面。
 
-1. 在sidekick中開啟 **頁面** 索引標籤，然後選取 **頁面屬性……**
+1. 在Sidekick中，開啟&#x200B;**頁面**&#x200B;標籤，然後選取&#x200B;**頁面屬性……**
 
    這會開啟含有多個索引標籤的對話方塊。
 
-1. 進行您需要的變更，然後按一下 **確定** 以儲存。
+1. 進行您需要的變更，然後按一下[確定] **儲存。**

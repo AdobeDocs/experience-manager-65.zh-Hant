@@ -25,17 +25,17 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->資產共用可用於開放原始碼參考實作。 另請參閱 [Asset Share Commons](https://adobe-marketing-cloud.github.io/asset-share-commons/). 未正式支援。
+>資產共用可用於開放原始碼參考實作。 請參閱[資產共用公用](https://adobe-marketing-cloud.github.io/asset-share-commons/)。 未正式支援。
 
 ## 為何要建立和設定Asset Editor頁面？ {#why-create-and-configure-asset-editor-pages}
 
-數位資產管理正在更多案例中使用。 從專為受過專業訓練的使用者（例如攝影師或分類學家）而打造的小型解決方案，轉移至更大、更多元化的使用者群組（例如商務使用者、WCM作者和記者）時，具備下列強大使用者介面： [!DNL Adobe Experience Manager Assets] 可能會提供太多資訊。 利害關係人開始請求特定的使用者介面或應用程式存取與他們相關的數位資產。
+數位資產管理正在更多案例中使用。 從專為受過專業訓練的使用者（例如攝影師或分類學家）而打造的小型解決方案，轉移至更大且更多樣化的使用者群組（例如商務使用者、WCM作者和記者）時，[!DNL Adobe Experience Manager Assets]的強大使用者介面可提供太多資訊。 利害關係人開始請求特定的使用者介面或應用程式存取與他們相關的數位資產。
 
 這些以資產為中心的應用程式，可以是內部網路中的簡易像片收藏館，員工可透過貿易展造訪或公開網站上的新聞中心上傳像片。 以資產為中心的應用程式也可以延伸至完整的解決方案，包括購物車、結帳和驗證程式。
 
-建立以資產為中心的應用程式會變成一種設定程式，不需要編碼，只需要使用者群組及其需求的相關知識，以及所使用中繼資料的知識。 以資產為中心的應用程式，建立於 [!DNL Assets] 可擴充：利用適度的編碼力度，可建立可重複使用的元件，以搜尋、檢視和修改資產。
+建立以資產為中心的應用程式會變成一種設定程式，不需要編碼，只需要使用者群組及其需求的相關知識，以及所使用中繼資料的知識。 使用[!DNL Assets]建立的以資產為中心的應用程式是可擴充的：使用中等的編碼工作可重複使用的元件，以搜尋、檢視和修改資產。
 
-中的資產導向應用程式 [!DNL Experience Manager] 包含Asset Editor頁面，可供您取得特定資產的詳細檢視。 如果存取資產的使用者擁有必要許可權，資產編輯器頁面也允許編輯中繼資料。
+[!DNL Experience Manager]中以資產為中心的應用程式包含Asset Editor頁面，可用來取得特定資產的詳細檢視。 如果存取資產的使用者擁有必要許可權，資產編輯器頁面也允許編輯中繼資料。
 
 <!--
 ## Create and configure an Asset Share page {#creating-and-configuring-an-asset-share-page}
@@ -197,7 +197,7 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 
 >[!NOTE]
 >
->如果您想要將自訂欄位新增到DAM Asset Editor，請新增 `cq:Widget` 節點至 `/apps/dam/content/asseteditors.`
+>如果您想要新增自訂欄位到DAM Asset Editor，請新增`cq:Widget`節點到`/apps/dam/content/asseteditors.`
 
 ### 建立資產編輯器頁面 {#creating-the-asset-editor-page}
 
@@ -205,8 +205,8 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 
 若要建立Asset Editor頁面：
 
-1. 在 **[!UICONTROL 網站]** 標籤，導覽至您要建立Asset Editor頁面的位置，然後按一下 **新增**.
-1. 選取 **Geometrixx資產編輯器** 並按一下 **建立**. 新頁面隨即建立，且頁面會列於 **網站** 標籤。
+1. 在&#x200B;**[!UICONTROL 網站]**&#x200B;索引標籤中，導覽至您要建立Asset Editor頁面的位置，然後按一下&#x200B;**新增**。
+1. 選取&#x200B;**GeometrixxAsset Editor**&#x200B;並按一下&#x200B;**建立**。 已建立新頁面，且頁面列在&#x200B;**網站**&#x200B;索引標籤中。
 
 ![screen_shot_2012-04-23at15858pm](assets/screen_shot_2012-04-23at15858pm.png)
 
@@ -214,9 +214,9 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 
 ![assetshare5](assets/assetshare5.png)
 
-若要自訂您的Asset Editor頁面，請使用sidekick中的元素。 可從存取的Asset Editor頁面 **Geometrixx新聞中心** 是根據此範本自訂的頁面版本：
+若要自訂您的Asset Editor頁面，請使用sidekick中的元素。 從&#x200B;**Geometrixx出版中心**&#x200B;存取的Asset Editor頁面是根據此範本自訂的頁面版本：
 
-![資產共用6](assets/assetshare6.png)
+![assetshare6](assets/assetshare6.png)
 
 #### 設定Asset Editor以從Asset Share頁面開啟 {#setting-which-asset-editor-opens-from-an-asset-share-page}
 
@@ -224,13 +224,13 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 
 若要設定Asset Editor頁面：
 
-1. 在資產共用頁面中，按一下 **編輯** ，位於查詢產生器旁。
+1. 在「資產共用」頁面中，按一下「查詢產生器」旁的&#x200B;**編輯**。
 
 ![screen_shot_2012-04-23at20123pm](assets/screen_shot_2012-04-23at20123pm.png)
 
-1. 按一下 **一般** 標籤（如果尚未選取）。
+1. 如果尚未選取&#x200B;**一般**&#x200B;標籤，請按一下該標籤。
 
-1. 在 **Asset Editor路徑** 欄位，輸入您要資產共用頁面開啟資產的Asset Editor路徑，然後按一下 **確定**.
+1. 在&#x200B;**Path of Asset Editor**&#x200B;欄位中，輸入您希望Asset Share頁面開啟中資產的資產編輯器路徑，然後按一下&#x200B;**確定**。
 
 ![screen_shot_2012-04-23at21653pm](assets/screen_shot_2012-04-23at21653pm.png)
 
@@ -240,7 +240,7 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 
 若要新增Asset Editor元件：
 
-1. 在要自訂的Asset Editor頁面中，選取 **資產編輯器** 在sidekick。 所有可用的Asset Editor元件都會顯示。
+1. 在您想要自訂的Asset Editor頁面中，選取sidekick中的&#x200B;**Asset Editor**。 所有可用的Asset Editor元件都會顯示。
 
 >[!NOTE]
 >
@@ -254,8 +254,8 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 
 | 元件 | 說明 |
 |---|---|
-| **[!UICONTROL 中繼資料表單] 和 [!UICONTROL 中繼資料文字欄位]** | 可讓您新增其他中繼資料至資產，以及對該資產執行動作，例如提交。 |
-| **[!UICONTROL 子資產]** | 可讓您自訂子資產。 |
+| **[!UICONTROL 中繼資料表單]和[!UICONTROL 中繼資料文字欄位]** | 可讓您新增其他中繼資料至資產，以及對該資產執行動作，例如提交。 |
+| **[!UICONTROL 子Assets]** | 可讓您自訂子資產。 |
 | **標籤** | 可讓使用者選取標籤並將其新增至資產。 |
 | **[!UICONTROL 縮圖]** | 顯示資產的縮圖及其檔案名稱，並可讓您新增替代文字。 您也可以在這裡新增Asset Editor動作。 |
 | **[!UICONTROL 標題]** | 顯示可自訂的資產標題。 |
@@ -264,29 +264,29 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 
 #### 中繼資料表單和文字欄位 — 設定檢視中繼資料元件 {#metadata-form-and-text-field-configuring-the-view-metadata-component}
 
-中繼資料表單是包含開始和結束動作的表單。 在兩者之間，輸入 **文字** 欄位。 另請參閱 [Forms](/help/sites-authoring/default-components-foundation.md#form-component) 以取得使用表單的詳細資訊。
+中繼資料表單是包含開始和結束動作的表單。 在中間輸入&#x200B;**文字**&#x200B;欄位。 如需使用表單的詳細資訊，請參閱[Forms](/help/sites-authoring/default-components-foundation.md#form-component)。
 
-1. 按一下「 」以建立開始動作 **編輯** 在表單的「開始」區域中。 如有需要，您可以輸入Box標題。 依預設，方塊標題為 **中繼資料**. 如果您要產生用於驗證的JavaScript使用者端代碼，請選取「使用者端驗證」核取方塊。
+1. 按一下表單開始區域中的&#x200B;**編輯**，建立開始動作。 如有需要，您可以輸入Box標題。 根據預設，方塊標題為&#x200B;**中繼資料**。 如果您要產生用於驗證的JavaScript使用者端代碼，請選取「使用者端驗證」核取方塊。
 
 ![screen_shot_2012-04-23at22911pm](assets/screen_shot_2012-04-23at22911pm.png)
 
-1. 按一下以建立「結束」動作 **編輯** 在表單的「結束」區域中。 例如，您可能想要建立 **[!UICONTROL 提交]** 允許使用者提交其中繼資料變更的選項。 或者，您也可以新增 **重設** 將中繼資料重設為原始狀態的選項。
+1. 按一下表單結束區域中的&#x200B;**編輯**，建立「結束」動作。 例如，您可能想要建立&#x200B;**[!UICONTROL 提交]**&#x200B;選項，讓使用者提交他們的中繼資料變更。 您可以選擇新增&#x200B;**重設**&#x200B;選項，將中繼資料重設回其原始狀態。
 
 ![screen_shot_2012-04-23at23138pm](assets/screen_shot_2012-04-23at23138pm.png)
 
-1. 介於 **表單開始** 和 **表單結尾**，將中繼資料文字欄位拖曳至表單。 使用者會將中繼資料填入這些文字欄位中，以便提交或完成其他動作。
+1. 在&#x200B;**表單開始**&#x200B;和&#x200B;**表單結束**&#x200B;之間，拖曳中繼資料文字欄位至表單。 使用者會將中繼資料填入這些文字欄位中，以便提交或完成其他動作。
 
-1. 連按兩下欄位名稱，例如， **標題** 以開啟中繼資料欄位並進行變更。 在 **一般** 的標籤 **編輯元件** 視窗，您可以定義名稱空間和欄位標籤並鍵入，例如 `dc:title`.
+1. 連按兩下欄位名稱，例如&#x200B;**Title**，以開啟中繼資料欄位並進行變更。 在&#x200B;**編輯元件**&#x200B;視窗的&#x200B;**一般**&#x200B;標籤中，您定義了名稱空間、欄位標籤和型別，例如`dc:title`。
 
 ![screen_shot_2012-04-23at23305pm](assets/screen_shot_2012-04-23at23305pm.png)
 
-另請參閱 [自訂和擴充資產](/help/assets/extending-assets.md) 以取得有關修改中繼資料表單中可用名稱空間的資訊。
+如需修改中繼資料表單中可用名稱空間的資訊，請參閱[自訂和擴充Assets](/help/assets/extending-assets.md)。
 
-1. 按一下 **限制** 標籤。 您可以在此選取是否需要欄位，並視需要新增任何限制。
+1. 按一下&#x200B;**限制**&#x200B;標籤。 您可以在此選取是否需要欄位，並視需要新增任何限制。
 
 ![screen_shot_2012-04-23at23435pm](assets/screen_shot_2012-04-23at23435pm.png)
 
-1. 按一下 **顯示** 標籤。 在這裡，您可以為中繼資料欄位輸入新的寬度和列數。 選取 **欄位為唯讀** 核取方塊可讓使用者編輯中繼資料。
+1. 按一下「**顯示**」標籤。 在這裡，您可以為中繼資料欄位輸入新的寬度和列數。 選取&#x200B;**欄位為唯讀**&#x200B;核取方塊，讓使用者編輯中繼資料。
 
 ![screen_shot_2012-04-23at23446pm](assets/screen_shot_2012-04-23at23446pm.png)
 
@@ -298,17 +298,17 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 
 #### 子資產 {#sub-assets}
 
-子資產元件是您檢視和選取子資產的地方。 您可以決定 [主要資產](/help/assets/assets.md#what-are-digital-assets) 和子資產。
+子Assets元件是您檢視和選取子資產的地方。 您可以決定在[主要資產](/help/assets/assets.md#what-are-digital-assets)和子資產下會顯示哪些名稱。
 
-連按兩下Sub Assets元件，以便開啟Sub Assets對話方塊，您可以在此變更主要資產和任何子資產的標題。 預設值會顯示在對應欄位下方。
+連按兩下Sub Assets元件，以開啟Sub Assets對話方塊，在其中變更主要資產和任何子資產的標題。 預設值會顯示在對應欄位下方。
 
 ![screen_shot_2012-04-23at23907pm](assets/screen_shot_2012-04-23at23907pm.png)
 
-以下是已填入子資產元件的範例：
+以下是填入子Assets元件的範例：
 
 ![screen_shot_2012-04-23at24442pm](assets/screen_shot_2012-04-23at24442pm.png)
 
-例如，如果您選取子資產，請注意元件如何顯示適當的頁面，以及「方塊」標題如何從「子資產」變更為「同層級」。
+例如，如果您選取子資產，請注意元件如何顯示適當的頁面，以及「方塊」標題如何從「子Assets」變更為「同層級」。
 
 ![screen_shot_2012-04-23at24552pm](assets/screen_shot_2012-04-23at24552pm.png)
 
@@ -318,7 +318,7 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 
 ![screen_shot_2012-04-23at25031pm](assets/screen_shot_2012-04-23at25031pm.png)
 
-按兩下Tags元件，以便開啟Tags對話方塊，您可以視需要從Tags變更標題，以及選取配置的名稱空間。 若要讓此欄位可編輯，請清除 **[!UICONTROL 隱藏編輯]** 核取方塊。 依預設，標籤是可編輯的。
+按兩下Tags元件，以便開啟Tags對話方塊，您可以視需要從Tags變更標題，以及選取配置的名稱空間。 若要讓此欄位可編輯，請清除&#x200B;**[!UICONTROL 隱藏編輯]**&#x200B;核取方塊。 依預設，標籤是可編輯的。
 
 ![screen_shot_2012-04-23at24731pm](assets/screen_shot_2012-04-23at24731pm.png)
 
@@ -332,11 +332,11 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 
 #### 縮圖 {#thumbnail}
 
-縮圖元件是資產顯示所選縮圖的地方（對於許多格式，縮圖都是自動擷取的）。 此外，元件會顯示檔案名稱，以及 [您可以修改的動作](/help/assets/assets-finder-editor.md#adding-asset-editor-actions).
+縮圖元件是資產顯示所選縮圖的地方（對於許多格式，縮圖都是自動擷取的）。 此外，元件會顯示檔案名稱，以及您可以修改的[動作](/help/assets/assets-finder-editor.md#adding-asset-editor-actions)。
 
 ![screen_shot_2012-04-23at25452pm](assets/screen_shot_2012-04-23at25452pm.png)
 
-按兩下縮圖元件，以開啟縮圖對話方塊，在其中變更替代文字。 根據預設，縮圖替代文字預設為 **按一下以下載** 資產。
+按兩下縮圖元件，以開啟縮圖對話方塊，在其中變更替代文字。 根據預設，縮圖替代文字預設為&#x200B;**按一下即可下載**&#x200B;資產。
 
 ![screen_shot_2012-04-23at25604pm](assets/screen_shot_2012-04-23at25604pm.png)
 
@@ -348,13 +348,13 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 
 標題元件會顯示資產的標題和說明。
 
-依預設，其處於唯讀模式，因此使用者無法編輯它。 若要使其可編輯，請連按兩下元件並清除 **隱藏編輯按鈕** 核取方塊。 此外，輸入多個資產的標題。
+依預設，其處於唯讀模式，因此使用者無法編輯它。 若要使其可編輯，請連按兩下元件並清除&#x200B;**隱藏編輯按鈕**&#x200B;核取方塊。 此外，輸入多個資產的標題。
 
 ![screen_shot_2012-04-23at35100pm](assets/screen_shot_2012-04-23at35100pm.png)
 
-如果可以編輯「標題」，您可以按一下「鉛筆」以開啟 **資產屬性** 視窗。 此外，您可以選取日期和時間，以開啟或關閉資產。
+如果可以編輯標題，您可以按一下鉛筆開啟&#x200B;**資產屬性**&#x200B;視窗，以新增標題和說明。 此外，您可以選取日期和時間，以開啟或關閉資產。
 
-編輯 [!UICONTROL 標題]，使用者可變更 **標題**， **說明**，並輸入 **開啟** 和 **關閉時間** 以開啟和關閉資產。
+編輯[!UICONTROL 標題]時，使用者可以變更&#x200B;**標題**、**描述**，並輸入&#x200B;**開啟**&#x200B;和&#x200B;**關閉時間**&#x200B;來開啟和關閉資產。
 
 ![screen_shot_2012-04-23at35241pm](assets/screen_shot_2012-04-23at35241pm.png)
 
@@ -368,7 +368,7 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 
 若要將動作新增至Asset Editor頁面：
 
-1. 在要自訂的Asset Editor頁面中，按一下 **資產編輯器** 在sidekick。
+1. 在您想要自訂的Asset Editor頁面中，按一下sidekick中的&#x200B;**Asset Editor**。
 
 ![screen_shot_2012-04-23at35515pm](assets/screen_shot_2012-04-23at35515pm.png)
 
@@ -377,52 +377,52 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 | 動作 | 說明 |
 |---|---|
 | [!UICONTROL 下載] | 可讓使用者將選取的資產下載至其電腦。 |
-| [!UICONTROL 編輯] | 可讓使用者編輯影像（互動式編輯） |
-| [!UICONTROL Lightbox] | 將資產儲存至「燈箱」，讓您在其中執行其他動作。 這項功能可在處理多個頁面的資產時方便使用。 |
+| [!UICONTROL 編輯器] | 可讓使用者編輯影像（互動式編輯） |
+| [!UICONTROL 燈箱] | 將資產儲存至「燈箱」，讓您在其中執行其他動作。 這項功能可在處理多個頁面的資產時方便使用。 |
 | [!UICONTROL 鎖定] | 可讓使用者鎖定資產。 預設不會啟用此功能，且必須在元件清單中啟用。 |
-| [!UICONTROL 引用] | 按一下此以在使用資產的頁面上顯示。 |
+| [!UICONTROL 個參考] | 按一下此以在使用資產的頁面上顯示。 |
 | [!UICONTROL 版本設定] | 可讓您建立和還原資產的版本。 |
 
-1. 將適當的動作拖曳至 **動作** 區域。 這會建立一個選項，用來執行在頁面上拖曳的動作。
+1. 將適當的動作拖曳至頁面上的&#x200B;**動作**&#x200B;區域。 這會建立一個選項，用來執行在頁面上拖曳的動作。
 
 ![chlimage_1-165](assets/chlimage_1-393.png)
 
 ## 使用Asset Editor頁面多重編輯資產 {#multi-editing-assets-with-the-asset-editor-page}
 
-替換為 [!DNL Experience Manager Assets]，您可以一次變更多個資產。 選取資產後，您可以同時變更標籤和中繼資料。
+透過[!DNL Experience Manager Assets]，您可以一次變更數個資產。 選取資產後，您可以同時變更標籤和中繼資料。
 
 若要使用「資產編輯器」頁面多重編輯資產：
 
-1. 開啟Geometrixx **新聞中心** 頁面：
+1. 開啟Geometrixx **Press Center**頁面：
    `https://localhost:4502/content/geometrixx/en/company/press.html`
 
 1. 選取資產：
 
-   * 在Windows上： `Ctrl + click` 每個資產。
-   * 在Mac上： `Cmd + click` 每個資產。
+   * 在Windows上：每個資產`Ctrl + click`。
+   * 在Mac上：每個資產`Cmd + click`。
 
-   若要選取資產範圍：按一下第一個資產，然後 `Shift + click` 最後一個資產。
+   若要選取資產範圍：按一下第一個資產，然後`Shift + click`最後一個資產。
 
-1. 按一下 **編輯中繼資料** 在 **動作** 欄位（頁面左側）。
-1. Geometrixx **按下Center Asset Editor** 頁面會在新標籤中開啟。 資產的中繼資料顯示如下：
+1. 按一下&#x200B;**動作**&#x200B;欄位（頁面左側）中的&#x200B;**編輯中繼資料**。
+1. Geometrixx **Press Center Asset Editor**&#x200B;頁面會在新索引標籤中開啟。 資產的中繼資料顯示如下：
 
    * 並非適用於所有資產（但僅適用於少數資產）的標籤會以斜體顯示。
    * 套用至所有資產的標籤會以一般字型顯示。
    * 標籤以外的中繼資料：只有在所有選定資產的欄位值相同時，才會顯示欄位值。
 
-1. 按一下 **下載** 以下載包含資產原始轉譯的ZIP檔案。
-1. 按一下旁邊的「編輯標籤」選項， **標籤** 欄位。
+1. 按一下&#x200B;**下載**&#x200B;以下載包含資產原始轉譯的ZIP檔案。
+1. 按一下&#x200B;**標籤**&#x200B;欄位旁的編輯標籤選項。
 
    * 標籤不適用於所有資產，但只有少數資產具有灰色背景。
    * 套用至所有資產的標籤都具有白色背景。
 
    您可以：
 
-   * 按一下 `x` 以移除所有資產的標籤。
-   * 按一下 `+` 將標籤新增至所有資產。
-   * 按一下 **箭頭** 並選取標籤，以將新標籤新增至所有資產。
+   * 按一下`x`以移除所有資產的標籤。
+   * 按一下`+`以新增標籤至所有資產。
+   * 按一下&#x200B;**箭頭**&#x200B;並選取標籤，以將新標籤新增至所有資產。
 
-   按一下 **確定** 將變更寫入表單。 旁的方塊 **標籤** 欄位會自動勾選。
+   按一下&#x200B;**確定**&#x200B;將變更寫入表單。 **標籤**&#x200B;欄位旁的方塊會自動勾選。
 
 1. 編輯說明欄位。 例如，將其設為：
 
@@ -432,6 +432,6 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 
    附註：編輯欄位時，會自動勾選欄位旁邊的方塊。
 
-1. 按一下 **更新中繼資料** 以提交表單並儲存所有資產的變更。
+1. 按一下&#x200B;**更新中繼資料**&#x200B;以提交表單並儲存所有資產的變更。
 
    注意：只會修改已核取的中繼資料。

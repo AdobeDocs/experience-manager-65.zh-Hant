@@ -46,13 +46,13 @@ ht-degree: 1%
 
 1. HTML開發人員會針對每個視覺變數實作對應的CSS程式碼（以及選用的JS程式碼），使其外觀與定義一致。
 
-1. AEM開發人員將提供的CSS （和選用的JS）放在 [客戶庫](/help/sites-developing/clientlibs.md) 並進行部署。
+1. AEM開發人員將提供的CSS （和選用的JS）放置在[使用者端資料庫](/help/sites-developing/clientlibs.md)中並進行部署。
 
 1. AEM開發人員或範本作者會設定頁面範本，並編輯每個已設定樣式元件的原則，新增定義的CSS類別、為每種樣式提供好記的名稱，並指示哪些樣式可以合併。
 
 1. AEM頁面作者接著可以透過元件工具列的樣式選單，在頁面編輯器中選擇設計的樣式。
 
-請注意，AEM中實際只執行最後三個步驟。 這表示所有必要的CSS和JavaScript開發都可以不使用AEM完成。
+請注意，AEM中實際只執行最後三個步驟。 這表示所有必要的CSS和JavaScript開發都可以不使用AEM來完成。
 
 實際實作樣式只需要在AEM上部署，以及在所需範本的元件中選取即可。
 
@@ -62,38 +62,38 @@ ht-degree: 1%
 
 ## 使用 {#use}
 
-為了示範此功能，我們將使用 [WKND](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)核心元件的實施 [標題元件](https://www.adobe.com/go/aem_cmp_title_v2) 以為例。
+為了示範此功能，我們將使用核心元件的[標題元件](https://www.adobe.com/go/aem_cmp_title_v2)的[WKND](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)實作作為範例。
 
-下列章節 [作為內容作者](#as-a-content-author) 和 [作為範本作者](#as-a-template-author) 說明如何使用WKND的樣式系統來測試樣式系統的功能。
+下列章節[As a Content Author](#as-a-content-author)及[As a Template Author](#as-a-template-author)說明如何使用WKND的樣式系統測試樣式系統的功能。
 
 如果您希望對自己的元件使用「樣式系統」，請執行下列動作：
 
-1. 依照一節所述以使用者端程式庫形式安裝CSS [概觀](#overview).
-1. 依照一節中的說明，設定您想要讓內容作者使用的CSS類別 [作為範本作者](#as-a-template-author).
-1. 然後，內容作者就可以使用區段所述的樣式 [作為內容作者](#as-a-content-author).
+1. 將CSS安裝為使用者端程式庫，如[概觀](#overview)一節中所述。
+1. 依照[As a Template Author](#as-a-template-author)一節中的說明，設定您想要可供內容作者使用的CSS類別。
+1. 然後，內容作者就可以使用如[As a Content Author](#as-a-content-author)一節中所述的樣式。
 
 ### 作為內容作者 {#as-a-content-author}
 
-1. 安裝WKND專案後，導覽至WKND的英文主版首頁： `http://<host>:<port>/sites.html/content/wknd/language-masters/en` 並編輯頁面。
-1. 選取 **標題** 頁面下方的元件
+1. 安裝WKND專案後，導覽至WKND的英文主版首頁`http://<host>:<port>/sites.html/content/wknd/language-masters/en`並編輯該頁面。
+1. 選取頁面下方的&#x200B;**Title**&#x200B;元件
 
-   ![作者的樣式系統](assets/style-system-author.png)
+   作者的![樣式系統](assets/style-system-author.png)
 
-1. 按一下 **樣式** 「 」工具列上的按鈕 **清單** 元件以開啟樣式選單並變更元件的外觀。
+1. 按一下&#x200B;**清單**&#x200B;元件工具列上的&#x200B;**樣式**&#x200B;按鈕，開啟樣式功能表並變更元件的外觀。
 
    ![選取樣式](assets/style-system-author2.png)
 
    >[!NOTE]
    >
-   >在此範例中， **顏色** 樣式(**黑色**， **白色**、和 **灰色**)互斥，而 **樣式** 選項(**底線**， **靠右對齊**、和 **最小間距**)可合併。 這可在范 [本中設定為範本作者](#as-a-template-author)。
+   >在此範例中，**色彩**&#x200B;樣式（**黑色**、**白色**&#x200B;和&#x200B;**灰色**）是互斥的，而&#x200B;**樣式**&#x200B;選項（**底線**、**靠右對齊**&#x200B;和&#x200B;**最小間距**）可以合併。 這可在范 [本中設定為範本作者](#as-a-template-author)。
 
 ### 作為範本作者 {#as-a-template-author}
 
-1. 編輯WKND的英文主版首頁時 `http://<host>:<port>/sites.html/content/wknd/language-masters/en`，透過編輯頁面的範本 **頁面資訊>編輯範本**.
+1. 在`http://<host>:<port>/sites.html/content/wknd/language-masters/en`編輯WKND的英文主版首頁時，請透過&#x200B;**頁面資訊>編輯範本**&#x200B;編輯頁面的範本。
 
    ![編輯範本](assets/style-system-edit-template.png)
 
-1. 編輯的原則 **標題** 點選或按一下 **原則** 元件的按鈕。
+1. 點選或按一下元件的&#x200B;**原則**&#x200B;按鈕，編輯&#x200B;**Title**&#x200B;元件的原則。
 
    ![編輯原則](assets/style-system-edit-policy.png)
 
@@ -101,26 +101,26 @@ ht-degree: 1%
 
    ![編輯屬性](assets/style-system-properties.png)
 
-   * **群組名稱：** 樣式可在樣式選單中分組，內容作者在設定元件樣式時會看到該選單。
-   * **可組合樣式：** 允許同時選取該群組中的多個樣式。
-   * **樣式名稱：** 設定元件樣式時，內容作者會看到的樣式說明。
-   * **CSS類別：** 與樣式關聯的CSS類別的實際名稱。
+   * **群組名稱：**&#x200B;樣式可在樣式選單中組成群組，內容作者在設定元件樣式時會看到該樣式選單。
+   * **可組合樣式：**&#x200B;允許同時選取該群組中的多個樣式。
+   * **樣式名稱：**&#x200B;設定元件樣式時，內容作者會看到的樣式說明。
+   * **CSS類別：**&#x200B;與樣式關聯的CSS類別的實際名稱。
 
    使用拖曳操作框來排列群組的順序以及群組內的樣式。 使用新增或刪除圖示來新增或移除群組內的群組或樣式。
 
 >[!CAUTION]
 >
->設定為元件原則的樣式屬性的CSS類別（以及任何必要的JavaScript）必須部署為 [使用者端資料庫](/help/sites-developing/clientlibs.md) 才能運作。
+>設定為元件原則的樣式屬性的CSS類別(以及任何必要的JavaScript)必須部署為[使用者端資料庫](/help/sites-developing/clientlibs.md)才能運作。
 
 ## 設定 {#setup}
 
 核心元件2版和更新版本已完全啟用，以運用樣式系統，無需額外設定。
 
-若要為您自己的自訂元件或啟用樣式系統，下列步驟只是必要的 [在「編輯」對話方塊中啟用選用的樣式索引標籤。](#enable-styles-tab-edit)
+若要為您自己的自訂元件啟用樣式系統，或[在「編輯」對話方塊中啟用選用的「樣式」索引標籤，則只需執行下列步驟。](#enable-styles-tab-edit)
 
 ### 在設計對話方塊中啟用樣式標籤 {#enable-styles-tab-design}
 
-為了使元件能與AEM樣式系統搭配使用並在其設計對話方塊中顯示樣式標籤，元件開發人員必須包含樣式標籤，且元件上有下列設定：
+為了使元件能與AEM的樣式系統搭配使用並在其設計對話方塊中顯示樣式標籤，元件開發人員必須包含樣式標籤，且元件上有下列設定：
 
 * `path = "/mnt/overlay/cq/gui/components/authoring/dialog/style/tab_design/styletab"`
 * `sling:resourceType = "granite/ui/components/coral/foundation/include"`
@@ -142,9 +142,9 @@ ht-degree: 1%
 
 ### 具有元素名稱的樣式 {#styles-with-element-names}
 
-開發人員也可以使用為元件上的樣式設定允許的元素名稱清單 `cq:styleElements` 字串陣列屬性。 然後在設計對話方塊中原則的「樣式」索引標籤中，範本作者也可以選擇要為每個樣式設定的元素名稱。 這會設定包裝函式元素的元素名稱。
+開發人員也可以使用`cq:styleElements`字串陣列屬性，為元件上的樣式設定允許的元素名稱清單。 然後在設計對話方塊中原則的「樣式」索引標籤中，範本作者也可以選擇要為每個樣式設定的元素名稱。 這會設定包裝函式元素的元素名稱。
 
-此屬性設定在 `cq:Component` 節點。 例如：
+此屬性設定在`cq:Component`節點上。 例如：
 
 * `/apps/<yoursite>/components/content/list@cq:styleElements=[div,section,span]`
 
@@ -152,11 +152,11 @@ ht-degree: 1%
 >
 >避免為可組合的樣式定義元素名稱。 定義多個元素名稱時，優先順序為：
 >
->1. HTL優先於所有內容： `data-sly-resource="${'path/to/resource' @ decorationTagName='span'}`
+>1. HTL優先於所有專案： `data-sly-resource="${'path/to/resource' @ decorationTagName='span'}`
 >1. 然後，在多個作用中樣式中，會採用元件原則中設定的樣式清單中的第一個樣式。
->1. 最後，元件 `cq:htmlTag`/ `cq:tagName` 將被視為遞補值。
+>1. 最後，元件的`cq:htmlTag`/ `cq:tagName`將被視為遞補值。
 >
 
 這種定義樣式名稱的功能對於非常一般的元件（例如佈局容器或內容片段元件）非常有用，可為其提供額外的含義。
 
-例如，這可讓配置容器獲得如之類的語意 `<main>`， `<aside>`， `<nav>`、等等。
+例如，它允許配置容器具有如`<main>`、`<aside>`、`<nav>`等語意。

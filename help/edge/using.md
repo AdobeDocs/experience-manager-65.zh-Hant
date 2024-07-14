@@ -60,4 +60,4 @@ AEM Assets 的 Sidekick 外掛程式支援存取：
 * 有關如何開始使用 Edge Delivery 詳細資訊，請參閱 Edge Delivery 文件中的「[建置](https://www.hlx.live/docs/#build)」部份。 
 * 若要了解如何使用 Edge Delivery 編寫和發佈內容，請參閱[「發佈」部份](https://www.hlx.live/docs/authoring)。
 * 若要了解如何使用 Sidekick 擴充功能，請參閱「[使用 Sidekick](https://www.hlx.live/docs/sidekick)」頁面。
-* 如需AEM編寫的相關資訊，請參閱 [製作概念頁面](/help/sites-authoring/author.md))
+* 如需AEM編寫的相關資訊，請參閱[編寫概念頁面](/help/sites-authoring/author.md)

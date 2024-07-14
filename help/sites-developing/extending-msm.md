@@ -29,10 +29,10 @@ ht-degree: 53%
 
 >[!NOTE]
 >
->本頁應與 [重複使用內容：多網站管理員](/help/sites-administering/msm.md).
+>此頁面應與[重複使用內容：多網站管理員](/help/sites-administering/msm.md)一起閱讀。
 >
 >下列網站存放庫重組的章節可能也會有意義：
->* [多站點管理員藍圖設定](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/restructuring/sites-repository-restructuring-in-aem-6-5.html#multi-site-manager-blueprint-configurations)
+>* [多網站管理員藍圖設定](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/restructuring/sites-repository-restructuring-in-aem-6-5.html#multi-site-manager-blueprint-configurations)
 >* [多網站管理員轉出設定](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/restructuring/sites-repository-restructuring-in-aem-6-5.html#multi-site-manager-rollout-configurations)
 
 >[!CAUTION]
@@ -46,25 +46,25 @@ ht-degree: 53%
 * [com.day.cq.wcm.msm.api](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/msm/api/package-frame.html)
 * [com.day.cq.wcm.msm.commons](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/msm/commons/package-frame.html)
 
-主要MSM API物件的互動如下(另請參閱 [使用的辭彙](/help/sites-administering/msm.md#terms-used))：
+主要MSM API物件的互動方式如下（另請參閱[使用的術語](/help/sites-administering/msm.md#terms-used)）：
 
 ![主要 MSM API 物件](assets/chlimage_1-73.png)
 
 * **`Blueprint`**
 
-  A `Blueprint` （如所示） [Blueprint設定](/help/sites-administering/msm.md#source-blueprints-and-blueprint-configurations))指定即時副本可以繼承內容的頁面。
+  `Blueprint` （如在[Blueprint設定](/help/sites-administering/msm.md#source-blueprints-and-blueprint-configurations)中一樣）會指定即時副本可以繼承內容的頁面。
 
   ![藍圖](assets/chlimage_1-74.png)
 
    * 藍圖設定 (`Blueprint`) 的使用為選用，但是：
 
-      * 允許作者使用 **轉出** 來源上的選項(以（明確）推送修改至繼承自此來源的即時副本)。
-      * 允許作者使用 **建立網站**；這可讓使用者輕鬆選取語言並設定即時副本的結構。
+      * 允許作者在來源上使用&#x200B;**轉出**&#x200B;選項(以（明確）推送修改至從此來源繼承的即時副本)。
+      * 允許作者使用&#x200B;**建立網站**；這可讓使用者輕鬆選取語言並設定即時副本的結構。
       * 為任何產生的即時副本定義預設轉出設定。
 
 * **`LiveRelationship`**
 
-  此 `LiveRelationship` 指定即時副本分支中的資源與其對等來源/Blueprint資源之間的連線（關係）。
+  `LiveRelationship`指定即時副本分支中的資源與其對等來源/Blueprint資源之間的連線（關係）。
 
    * 實現繼承和推出時會使用此關係。
    * `LiveRelationship` 物件會針對和該關係相關之推出設定 (`RolloutConfig`)、`LiveCopy` 以及 `LiveStatus` 物件提供存取 (參照)。
@@ -73,7 +73,7 @@ ht-degree: 53%
 
 * **`LiveCopy`**
 
-  `LiveCopy` 保留關係的設定詳細資料( `LiveRelationship`)，位於即時副本資源及其來源/Blueprint資源之間。
+  `LiveCopy`保留即時副本資源與其來源/Blueprint資源之間關係( `LiveRelationship`)的設定詳細資料。
 
    * 使用 `LiveCopy` 類別存取頁面的路徑、來源/藍圖頁面的路徑、推出設定，而子頁面是否也包含在 `LiveCopy` 中。
 
@@ -81,45 +81,45 @@ ht-degree: 53%
 
 * **`LiveStatus`**
 
-  `LiveStatus` 物件可讓您存取的執行階段狀態 `LiveRelationship`. 用於查詢 Live Copy 的同步狀態。
+  `LiveStatus`物件提供`LiveRelationship`執行階段狀態的存取權。 用於查詢 Live Copy 的同步狀態。
 
 * **`LiveAction`**
 
-  A `LiveAction` 是在轉出涉及的每個資源上執行的動作。
+  `LiveAction`是在轉出涉及的每個資源上執行的動作。
 
    * LiveActions僅由RolloutConfigs產生。
 
 * **`LiveActionFactory`**
 
-  建立 `LiveAction` 物件已指定 `LiveAction` 設定。 設定會在存放庫中儲存為資源。
+  建立`LiveAction`物件（已指定`LiveAction`組態）。 設定會在存放庫中儲存為資源。
 
 * **`RolloutConfig`**
 
-  此 `RolloutConfig` 儲存清單 `LiveActions`，以便在觸發時使用。 `LiveCopy` 會繼承 `RolloutConfig`，而結果會在 `LiveRelationship` 中顯示。
+  `RolloutConfig`包含`LiveActions`的清單，將於觸發時使用。 `LiveCopy` 會繼承 `RolloutConfig`，而結果會在 `LiveRelationship` 中顯示。
 
    * 第一次設定即時副本時，也會使用RolloutConfig （這會觸發LiveActions）。
 
 ## 建立新的同步動作 {#creating-a-new-synchronization-action}
 
-建立自訂同步操作以與您的轉出設定一起使用。 建立同步化動作，當 [已安裝的動作](/help/sites-administering/msm-sync.md#installed-synchronization-actions) 不符合您特定的應用程式需求。 為此，請建立兩個類別：
+建立自訂同步操作以與您的轉出設定一起使用。 當[安裝的動作](/help/sites-administering/msm-sync.md#installed-synchronization-actions)不符合您的特定應用程式需求時，請建立同步化動作。 為此，請建立兩個類別：
 
 * 執行動作的 [`com.day.cq.wcm.msm.api.LiveAction`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/msm/api/LiveAction.html) 介面的實作。
-* 實作的OSGI元件 [`com.day.cq.wcm.msm.api.LiveActionFactory`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/msm/api/LiveActionFactory.html) 介面並建立您的執行個體 `LiveAction` 類別。
+* 實作[`com.day.cq.wcm.msm.api.LiveActionFactory`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/msm/api/LiveActionFactory.html)介面並建立`LiveAction`類別之執行個體的OSGI元件。
 
 `LiveActionFactory` 會針對以下特定設定建立 `LiveAction` 類別的執行個體：
 
 * `LiveAction` 類別會包括以下方法：
 
    * `getName`：傳回動作名稱。 此名稱是用來參照動作，例如在轉出設定中。
-   * `execute`：執行動作的任務。
+   * `execute`：執行動作的工作。
 
 * `LiveActionFactory` 類別會包括以下項目：
 
-   * `LIVE_ACTION_NAME`：包含關聯欄位名稱的欄位 `LiveAction`. 此名稱必須和由 `getName` 方法 (屬於 `LiveAction` 類別) 傳回的值相符。
+   * `LIVE_ACTION_NAME`：包含關聯`LiveAction`之名稱的欄位。 此名稱必須和由 `getName` 方法 (屬於 `LiveAction` 類別) 傳回的值相符。
 
-   * `createAction`：建立例項 `LiveAction`. 選用的 `Resource` 參數可用於提供設定資訊。
+   * `createAction`：建立`LiveAction`的執行個體。 選用的 `Resource` 參數可用於提供設定資訊。
 
-   * `createsAction`：傳回關聯專案的名稱 `LiveAction`.
+   * `createsAction`：傳回關聯`LiveAction`的名稱。
 
 ### 存取 LiveAction 設定節點 {#accessing-the-liveaction-configuration-node}
 
@@ -127,7 +127,7 @@ ht-degree: 53%
 
 例如，`LiveAction` 需要儲存藍圖作者的名稱。設定節點的屬性包括儲存該資訊的藍圖頁面屬性名稱。在執行階段時，`LiveAction` 會從設定中擷取屬性名稱，然後獲取屬性值。
 
-[`LiveActionFactory.createAction`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/msm/api/LiveActionFactory.html) 方法的參數是一種 `Resource` 物件。這個 `Resource` 物件代表 `cq:LiveSyncAction` 轉出設定中此即時動作的節點；請參閱 [建立轉出設定](/help/sites-administering/msm-sync.md#creating-a-rollout-configuration). 和平常一樣，使用設定節點時，您應該將其調整為 `ValueMap` 物件：
+[`LiveActionFactory.createAction`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/msm/api/LiveActionFactory.html) 方法的參數是一種 `Resource` 物件。此`Resource`物件代表轉出設定中此即時動作的`cq:LiveSyncAction`節點；請參閱[建立轉出設定](/help/sites-administering/msm-sync.md#creating-a-rollout-configuration)。 和平常一樣，使用設定節點時，您應該將其調整為 `ValueMap` 物件：
 
 ```java
 public LiveAction createAction(Resource resource) throws WCMException {
@@ -145,14 +145,14 @@ public LiveAction createAction(Resource resource) throws WCMException {
 
 下列物件會以 `LiveAction` 物件之 `execute` 方法的參數提供：
 
-* A [`Resource`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/org/apache/sling/api/resource/Resource.html) 代表即時副本來源的物件。
-* A `Resource` 代表即時副本目標的物件。
-* 此 [`LiveRelationship`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/msm/api/LiveRelationship.html) 物件作為即時副本。
-* 此 `autoSave` 值會指出您的 `LiveAction` 應儲存對存放庫進行的變更。
+* 代表即時副本來源的[`Resource`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/org/apache/sling/api/resource/Resource.html)物件。
+* 代表即時副本目標的`Resource`物件。
+* 即時副本的[`LiveRelationship`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/msm/api/LiveRelationship.html)物件。
+* `autoSave`值指出您的`LiveAction`是否應該儲存對存放庫所做的變更。
 
 * 重設值表示轉出重設模式。
 
-您可以透過這些物件取得 `LiveCopy`. 您還可以使用 `Resource` 物件獲取 `ResourceResolver`、`Session` 和 `Node` 物件。這些物件對於操作存放庫內容非常有用：
+您可以從這些物件取得有關`LiveCopy`的所有資訊。 您還可以使用 `Resource` 物件獲取 `ResourceResolver`、`Session` 和 `Node` 物件。這些物件對於操作存放庫內容非常有用：
 
 在以下程式碼的第一行中，來源是指來源頁面的 `Resource` 物件：
 
@@ -171,7 +171,7 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
 當安裝的轉出設定不符合您的應用程式需求時，建立轉出設定：
 
 * [建立推出設定](#create-the-rollout-configuration)。
-* [將同步動作新增到轉出設定](#add-synchronization-actions-to-the-rollout-configuration).
+* [將同步處理動作新增至轉出設定](#add-synchronization-actions-to-the-rollout-configuration)。
 
 然後，在藍圖或 Live Copy 頁面上設定推出設定時，您即可使用新的推出設定。
 
@@ -194,28 +194,28 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
 
    >[!NOTE]
    >
-   >請勿變更中的任何專案 `/libs` 路徑。
-   >這是因為 `/libs` 下次升級執行個體時會被覆寫（當您套用hotfix或feature pack時，很可能會被覆寫）。
+   >請勿變更`/libs`路徑中的任何專案。
+   >這是因為下次升級執行個體時，`/libs`的內容會被覆寫（當您套用Hotfix或Feature Pack時，這些內容很可能會被覆寫）。
    >設定和其他變更的建議方法是：
    >
-   >* 重新建立所需專案（即存在於中的專案） `/libs`)下 `/apps`
-   >* 進行任何變更 `/apps`
+   >* 在`/apps`下重新建立必要專案（亦即，它存在於`/libs`中）
+   >* 在`/apps`中進行任何變更
 
-1. 在此底下 **建立** 具有下列屬性的節點：
+1. 在此&#x200B;**建立**&#x200B;具有下列屬性的節點：
 
-   * **名稱**：轉出設定的節點名稱。 md#installed-synchronization-actions)，例如： `contentCopy` 或 `workflow`.
+   * **名稱**：轉出設定的節點名稱。 md#installed-synchronization-actions)，例如`contentCopy`或`workflow`。
    * **類型**：`cq:RolloutConfig`
 
 1. 將以下屬性新增至此節點：
    * **名稱**：`jcr:title`
      **類型**：`String`
-     **值**：將顯示在UI中的識別標題。
+     **值**：將在UI中顯示的識別標題。
    * **名稱**：`jcr:description`
      **類型**：`String`
      **值**：選用的說明。
    * **名稱**：`cq:trigger`
      **類型**：`String`
-     **值**：此 [轉出觸發器](/help/sites-administering/msm-sync.md#rollout-triggers) 以利使用。 選取自：
+     **值**：要使用的[轉出觸發程式](/help/sites-administering/msm-sync.md#rollout-triggers)。 選取自：
       * `rollout`
       * `modification`
       * `publish`
@@ -225,19 +225,19 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
 
 ### 將「同步動作」新增到「推出設定」中 {#add-synchronization-actions-to-the-rollout-configuration}
 
-轉出設定儲存在 [轉出設定節點](#create-the-rollout-configuration) 您已在「 」下建立的 `/apps/msm/<your-project>/rolloutconfigs` 節點。
+轉出設定儲存在您已在`/apps/msm/<your-project>/rolloutconfigs`節點下建立的[轉出設定節點](#create-the-rollout-configuration)下方。
 
 新增類型 `cq:LiveSyncAction` 的子節點，以將同步動作新增到推出設定中。同步動作節點的順序會決定動作發生的順序。
 
-1. 仍然在CRXDE Lite中，選擇您的 [轉出設定](#create-the-rollout-configuration) 節點。
+1. 仍在CRXDE Lite中，請選取您的[轉出設定](#create-the-rollout-configuration)節點。
 
    例如：
    `/apps/msm/myproject/rolloutconfigs/myrolloutconfig`
 
-1. **建立** 具有下列節點屬性的節點：
+1. **建立**&#x200B;具有下列節點屬性的節點：
 
-   * **名稱**：同步動作的節點名稱。
-名稱必須與 **動作名稱** 在表格中的 [同步化動作](/help/sites-administering/msm-sync.md#installed-synchronization-actions)例如， `contentCopy` 或 `workflow`.
+   * **名稱**：同步化動作的節點名稱。
+名稱必須與[同步化動作](/help/sites-administering/msm-sync.md#installed-synchronization-actions)下資料表中的&#x200B;**動作名稱**&#x200B;相同，例如`contentCopy`或`workflow`。
    * **類型**：`cq:LiveSyncAction`
 
 1. 新增並設定您所需的同步化動作節點數目。 重新排列動作節點，使其順序符合您要動作節點發生的順序。 最頂端的動作節點會先出現。
@@ -248,7 +248,7 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
 
 1. [建立 maven 專案](#create-the-maven-project)並將其匯入到 Eclipse 中。
 1. [新增相依性](#add-dependencies-to-the-pom-file)到 POM 檔案。
-1. [實作 `LiveActionFactory` 介面](#implement-liveactionfactory) 並部署OSGi套件組合。
+1. [實作`LiveActionFactory`介面](#implement-liveactionfactory)並部署OSGi套件。
 1. [建立推出設定](#create-the-example-rollout-configuration)。
 1. [建立 Live Copy](#create-the-live-copy)。
 
@@ -258,8 +258,8 @@ GITHUB上的程式碼
 
 您可以在GitHub上找到此頁面的程式碼
 
-* [在GitHub上開啟experiencemanager-java-msmrollout專案](https://github.com/Adobe-Marketing-Cloud/experiencemanager-java-msmrollout)
-* 將專案下載為 [ZIP檔案](https://github.com/Adobe-Marketing-Cloud/experiencemanager-java-msmrollout/archive/master.zip)
+* 在GitHub上[開啟experiencemanager-java-msmrollout專案](https://github.com/Adobe-Marketing-Cloud/experiencemanager-java-msmrollout)
+* 將專案下載為[ZIP檔](https://github.com/Adobe-Marketing-Cloud/experiencemanager-java-msmrollout/archive/master.zip)
 
 ### 建立 Maven 專案 {#create-the-maven-project}
 
@@ -285,7 +285,7 @@ GITHUB上的程式碼
    * `artifactName`: `MyLiveActionFactory package`
    * `packageGroup`: `myPackages`
 
-1. 啟動Eclipse和 [匯入Maven專案](/help/sites-developing/howto-projects-eclipse.md#import-the-maven-project-into-eclipse).
+1. 啟動Eclipse並[匯入Maven專案](/help/sites-developing/howto-projects-eclipse.md#import-the-maven-project-into-eclipse)。
 
 ### 新增相依性到 POM 檔案 {#add-dependencies-to-the-pom-file}
 
@@ -381,7 +381,7 @@ GITHUB上的程式碼
 
 以下 `LiveActionFactory` 類別會實作一項 `LiveAction`，這會記錄來源和目標頁面的訊息，並將 `cq:lastModifiedBy` 屬性從來源節點複製到目標節點。即時動作的名稱為 `exampleLiveAction`。
 
-1. 在Eclipse專案總管中，以滑鼠右鍵按一下 `MyLiveActionFactory-bundle/src/main/java/com.adobe.example.msm` 封裝並按一下 **新增** > **類別**. 對於&#x200B;**名稱**，請輸入 `ExampleLiveActionFactory` 然後按一下「**完成**」。
+1. 在Eclipse專案總管中，用滑鼠右鍵按一下`MyLiveActionFactory-bundle/src/main/java/com.adobe.example.msm`封裝，然後按一下&#x200B;**新增** > **類別**。 對於&#x200B;**名稱**，請輸入 `ExampleLiveActionFactory` 然後按一下「**完成**」。
 1. 開啟 `ExampleLiveActionFactory.java` 檔案，將內容更換為以下程式碼，然後儲存檔案。
 
    ```java
@@ -532,9 +532,9 @@ GITHUB上的程式碼
    mvn -PautoInstallPackage clean install
    ```
 
-   AEM `error.log` 檔案應指示該套件組合已啟動。
+   AEM `error.log`檔案應該指出組合已啟動。
 
-   例如， [https://localhost:4502/system/console/status-slinglogs](https://localhost:4502/system/console/status-slinglogs).
+   例如，[https://localhost:4502/system/console/status-slinglogs](https://localhost:4502/system/console/status-slinglogs)。
 
    ```xml
    13.08.2013 14:34:55.450 *INFO* [OsgiInstallerImpl] com.adobe.example.msm.MyLiveActionFactory-bundle BundleEvent RESOLVED
@@ -548,7 +548,7 @@ GITHUB上的程式碼
 
 建立使用您所建立 `LiveActionFactory` 的 MSM 推出設定：
 
-1. 建立和設定 [使用標準程式轉出組態](/help/sites-administering/msm-sync.md#creating-a-rollout-configuration)  — 並使用屬性：
+1. 使用標準程式](/help/sites-administering/msm-sync.md#creating-a-rollout-configuration)建立並設定[轉出設定 — 並使用屬性：
 
    * **標題**：推出設定範例
    * **名稱**：examplerolloutconfig
@@ -558,26 +558,26 @@ GITHUB上的程式碼
 
 設定您在前一個程序中建立的推出設定，以便該設定使用 `ExampleLiveActionFactory` 類別。
 
-1. 開啟CRXDE Lite；例如， [https://localhost:4502/crx/de](https://localhost:4502/crx/de).
+1. 開啟CRXDE Lite；例如，[https://localhost:4502/crx/de](https://localhost:4502/crx/de)。
 1. 在 `/apps/msm/rolloutconfigs/examplerolloutconfig/jcr:content` 下面建立以下節點：
 
    * **名稱**：`exampleLiveAction`
    * **類型**：`cq:LiveSyncAction`
 
 1. 按一下&#x200B;**「儲存全部」**。
-1. 選取 `exampleLiveAction` 節點並新增下列屬性：
+1. 選取`exampleLiveAction`節點並新增下列屬性：
 
    * **名稱**：`repLastModBy`
    * **類型**：`Boolean`
    * **值**：`true`
 
-   此屬性會指示 `ExampleLiveAction` 類別 `cq:LastModifiedBy` 屬性應該從來源復寫到目標節點。
+   此屬性向`ExampleLiveAction`類別指出`cq:LastModifiedBy`屬性應該從來源復寫到目標節點。
 
 1. 按一下&#x200B;**「儲存全部」**。
 
 ### 建立 Live Copy {#create-the-live-copy}
 
-[建立即時副本](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-page) ，位於We.Retail參考網站的英文/產品分支，使用您的轉出設定：
+[使用您的轉出設定，建立We.Retail參考網站的英文/產品分支的即時副本](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-page)：
 
 * **來源**：`/content/we-retail/language-masters/en/products`
 
@@ -622,11 +622,11 @@ MSM 會使用儲存的語言和國家/地區代碼清單來確定和頁面語言
 
 * 語言標題
 * 國家/地區名稱
-* 語言預設國家/地區（適用於下列程式碼） `en`， `de`，等等)
+* 語言預設國家（適用於`en`、`de`等程式碼）
 
 語言清單會儲存在 `/libs/wcm/core/resources/languages` 節點下方。每個子節點即代表一種語言或一種語言國家：
 
-* 節點的名稱是語言代碼(例如 `en` 或 `de`)或language_country程式碼(例如 `en_us` 或 `de_ch`)。
+* 節點的名稱是語言代碼（例如`en`或`de`）或language_country代碼（例如`en_us`或`de_ch`）。
 
 * 節點的 `language` 屬性會儲存代碼語言的完整名稱。
 * 節點的 `country` 屬性會儲存代碼國家/地區的完整名稱。
@@ -636,12 +636,12 @@ MSM 會使用儲存的語言和國家/地區代碼清單來確定和頁面語言
 
 若要修改語言：
 
-1. 在網頁瀏覽器中開啟CRXDE Lite；例如， [https://localhost:4502/crx/de](https://localhost:4502/crx/de)
+1. 在網頁瀏覽器中開啟CRXDE Lite；例如，[https://localhost:4502/crx/de](https://localhost:4502/crx/de)
 1. 選取 `/apps` 資料夾並按一下&#x200B;**「建立」**，然後再按一下&#x200B;**「建立資料夾」。**
 
    命名新資料夾`wcm`。
 
-1. 重複上一個步驟以建立 `/apps/wcm/core` 資料夾樹狀結構。建立型別節點 `sling:Folder` 在 `core` 已呼叫 `resources`. <!-- ![Resources](assets/chlimage_1-77.png) -->
+1. 重複上一個步驟以建立 `/apps/wcm/core` 資料夾樹狀結構。在`core`中建立名稱為`resources`的型別為`sling:Folder`的節點。<!-- ![Resources](assets/chlimage_1-77.png) -->
 
 1. 在 `/libs/wcm/core/resources/languages` 節點上按一下右鍵，然後按一下「**複製**」。
 1. 在 `/apps/wcm/core/resources` 資料夾上按一下右鍵，然後按一下「**貼上**」。根據需要修改子節點。
@@ -669,7 +669,7 @@ MSM 會使用儲存的語言和國家/地區代碼清單來確定和頁面語言
 
 * 連絡人電子郵件：
 
-* 會從轉出屬性中排除；請參閱 [從同步處理排除屬性和節點型別](/help/sites-administering/msm-sync.md#excluding-properties-and-node-types-from-synchronization).
+* 已從轉出屬性中排除；請參閱[從同步處理排除屬性和節點型別](/help/sites-administering/msm-sync.md#excluding-properties-and-node-types-from-synchronization)。
 
 * 索引鍵視覺樣式：
 
@@ -685,20 +685,20 @@ MSM 會使用儲存的語言和國家/地區代碼清單來確定和頁面語言
    * 僅適用於資源的第一個子層級
       * **類型**：`String`
 
-      * **值**：保留考量中屬性的名稱(且可比較屬性的值 `name`；例如，請參閱
+      * **Value**：保留所考慮屬性的名稱(可與屬性`name`的值比較；例如，請參閱
         `/libs/foundation/components/page/cq:dialog/content/items/tabs/items/basic/items/column/items/title/items/title`
 
 若已定義 `cq-msm-lockable`，則毀損/關閉鏈會以下列方式和 MSM 互動：
 
-* 如果值 `cq-msm-lockable` 為：
+* 如果`cq-msm-lockable`的值為：
 
    * **相對值** (例如，`myProperty` 或是 `./myProperty`)
 
-      * 它會從新增和移除屬性 `cq:propertyInheritanceCancelled`.
+      * 它會從`cq:propertyInheritanceCancelled`新增及移除屬性。
 
    * **絕對值** (例如，`/image`)
 
-      * 中斷鏈結將會透過新增 `cq:LiveSyncCancelled` mixin至 `./image` 和設定 `cq:isCancelledForChildren` 至 `true`.
+      * 中斷鏈結將會透過將`cq:LiveSyncCancelled` mixin新增到`./image`並將`cq:isCancelledForChildren`設定為`true`來取消繼承。
 
       * 關閉鏈結將會回覆繼承。
 

@@ -46,7 +46,7 @@ ht-degree: 2%
   </tr>
   <tr>
    <td><strong> 屬性</strong></td>
-   <td>另請參閱 <a href="file-library.md">檔案庫功能</a></td>
+   <td>請參閱<a href="file-library.md">檔案庫功能</a></td>
   </tr>
  </tbody>
 </table>
@@ -63,20 +63,20 @@ ht-degree: 2%
 
 ### 檔案庫功能 {#file-library-function}
 
-社群網站結構包含 [檔案庫功能](functions.md#file-library-function)，包括已設定的 `file library` 元件。
+包含[檔案庫函式](functions.md#file-library-function)的社群網站結構包含已設定的`file library`元件。
 
 ### 存取針對檔案庫(UGC)張貼的評論 {#accessing-comments-posted-for-file-libraries-ugc}
 
 UGC應使用其中一種標準仲裁方法進行仲裁。
-另請參閱 [稽核使用者產生的內容](moderate-ugc.md).
+請參閱[仲裁使用者產生的內容](moderate-ugc.md)。
 
-自AEM 6.1社群起，使用 [公用存放區](working-with-srp.md) for UGC包含對UGC的程式化存取，無論選擇的儲存選項（例如ASRP、MSRP或JSRP）為何。
+截至AEM 6.1 Communities，使用UGC的[公用存放區](working-with-srp.md)時，無論選擇的存放區選項（例如ASRP、MSRP或JSRP）為何，都可程式化存取UGC。
 
-**UGC在存放庫中的位置和格式可能會有所變更，恕不另行警告**.
+**存放庫中UGC的位置和格式可能會變更，而不會出現警告**。
 
 請參閱：
 
-* [儲存資源提供者概觀](srp.md)  — 簡介和存放庫使用概述。
-* [srp和UGC Essentials](srp-and-ugc.md) - SRP公用程式方法與範例。
-* [使用SRP存取UGC](accessing-ugc-with-srp.md)  — 程式碼指南。
-* [SocialUtils重構](socialutils.md)  — 將已棄用的公用程式方法對應到目前的SRP公用程式方法。
+* [儲存資源提供者概觀](srp.md) — 簡介和存放庫使用概觀。
+* [SRP與UGC Essentials](srp-and-ugc.md) - SRP公用程式方法與範例。
+* [使用SRP存取UGC](accessing-ugc-with-srp.md) — 編碼准則。
+* [SocialUtils重構](socialutils.md) — 將已棄用的公用程式方法對應到目前的SRP公用程式方法。

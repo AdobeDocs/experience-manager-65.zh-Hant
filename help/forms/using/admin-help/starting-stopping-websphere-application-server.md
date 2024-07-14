@@ -22,24 +22,24 @@ ht-degree: 0%
 
 ## 檢視WebSphere應用程式伺服器的狀態 {#view-the-status-of-websphere-application-server}
 
-1. 在命令提示字元中，移至 `[appserver root]/bin` 目錄。
-1. 輸入以下命令，取代 *server_name* WebSphere Application Server的名稱：
+1. 從命令提示字元移至`[appserver root]/bin`目錄。
+1. 輸入以下命令，將&#x200B;*server_name*&#x200B;取代為WebSphere Application Server的名稱：
 
-   * (Windows) `serverStatus.bat`*server_name*
-   * (Linux、UNIX) 。/ `serverStatus.sh`*server_name*
+   * (Windows) `serverStatus.bat`*伺服器名稱*
+   * (Linux、UNIX) 。/ `serverStatus.sh`*伺服器名稱*
 
 ## 啟動WebSphere Application Server {#start-websphere-application-server}
 
-1. 在命令提示字元中，移至 `[appserver root]/bin` 目錄。
-1. 輸入以下命令，取代 *server_name* WebSphere Application Server的名稱：
+1. 從命令提示字元移至`[appserver root]/bin`目錄。
+1. 輸入以下命令，將&#x200B;*server_name*&#x200B;取代為WebSphere Application Server的名稱：
 
-   * (Windows) `startServer.bat`*server_name*
-   * (Linux、UNIX) 。/ `startServer.sh`*server_name*
+   * (Windows) `startServer.bat`*伺服器名稱*
+   * (Linux、UNIX) 。/ `startServer.sh`*伺服器名稱*
 
 ## 停止WebSphere Application Server {#stop-websphere-application-server}
 
-1. 在命令提示字元中，移至 `[appserver root]/bin` 目錄。
-1. 輸入以下命令，取代 *server_name* WebSphere Application Server的名稱：
+1. 從命令提示字元移至`[appserver root]/bin`目錄。
+1. 輸入以下命令，將&#x200B;*server_name*&#x200B;取代為WebSphere Application Server的名稱：
 
-   * (Windows) `stopServer.bat`*server_name*
-   * (Linux、UNIX) 。/ `stopServer.sh`*server_name*
+   * (Windows) `stopServer.bat`*伺服器名稱*
+   * (Linux、UNIX) 。/ `stopServer.sh`*伺服器名稱*

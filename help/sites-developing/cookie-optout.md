@@ -21,7 +21,7 @@ ht-degree: 0%
 AEM提供的服務可讓您設定和控制Cookie在網頁中的使用方式：
 
 * 可設定的伺服器端服務會維護可用的Cookie清單。
-* JavaScript API可讓您的JavaScript程式碼確認可以使用Cookie。
+* JavaScript API可讓您的JavaScript程式碼驗證是否可使用Cookie。
 
 使用此功能可確保您的頁面符合使用者對Cookie使用方式的同意。
 
@@ -29,7 +29,7 @@ AEM提供的服務可讓您設定和控制Cookie在網頁中的使用方式：
 
 設定AdobeGranite選擇退出服務，指定如何在您的網頁上使用Cookie。 下表說明您可以設定的特性。
 
-若要設定服務，您可以使用 [網頁主控台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) 或 [將OSGi設定新增到存放庫](/help/sites-deploying/configuring-osgi.md#adding-a-new-configuration-to-the-repository). 下表說明任一方法所需的特性。 若為OSGi設定，服務PID為 `com.adobe.granite.optout`.
+若要設定服務，您可以使用[網頁主控台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)或[新增OSGi設定到存放庫](/help/sites-deploying/configuring-osgi.md#adding-a-new-configuration-to-the-repository)。 下表說明任一方法所需的特性。 對於OSGi設定，服務PID為`com.adobe.granite.optout`。
 
 | 屬性名稱（Web主控台） | OSGi屬性名稱 | 說明 |
 |---|---|---|
@@ -46,7 +46,7 @@ AEM提供的服務可讓您設定和控制Cookie在網頁中的使用方式：
 * 判斷網頁瀏覽器是否包含Cookie，指出使用者不同意使用Cookie進行追蹤。
 * 決定是否可使用特定Cookie。
 
-granite.utils [使用者端資料庫資料夾](/help/sites-developing/clientlibs.md#referencing-client-side-libraries) 提供Granite.OptOutUtil物件。 將下列程式碼新增至您的頁面標題JSP，加入JavaScript程式庫的連結：
+granite.utils [使用者端資料庫資料夾](/help/sites-developing/clientlibs.md#referencing-client-side-libraries)提供Granite.OptOutUtil物件。 將下列程式碼新增至您的頁面標題JSP，加入JavaScript程式庫的連結：
 
 `<ui:includeClientLib categories="granite.utils" />`
 
@@ -101,11 +101,11 @@ Cookie名稱陣列。
 
 **傳回**
 
-布林值 `true` 如果找到表示不同意的Cookie，且值為 `false` 如果沒有Cookie表示不同意。
+如果找到表示不同意的Cookie，則布林值為`true`；如果沒有Cookie表示不同意，則值為`false`。
 
 ### maySetCookie(cookieName)函式 {#maysetcookie-cookiename-function}
 
-決定特定Cookie是否可用於使用者的瀏覽器。 此函式等同於使用 `isOptedOut` 函式，可判斷指定的Cookie是否包含在要 `getWhitelistCookieNames` 函式傳回。
+決定特定Cookie是否可用於使用者的瀏覽器。 此函式等同於使用`isOptedOut`函式來判斷指定的Cookie是否包含在`getWhitelistCookieNames`函式傳回的清單中。
 
 **引數**
 
@@ -113,4 +113,4 @@ Cookie名稱陣列。
 
 **傳回**
 
-布林值 `true` 如果 `cookieName` 可使用，或的值 `false` 如果 `cookieName` 無法使用。
+如果可以使用`cookieName`，則布林值為`true`；如果無法使用`cookieName`，則值為`false`。

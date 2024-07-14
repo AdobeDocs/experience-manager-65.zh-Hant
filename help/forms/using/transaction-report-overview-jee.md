@@ -26,15 +26,15 @@ For more information on what is considered a transaction, see [Billable APIs](..
 
 依預設，會停用交易記錄。 若要啟用交易報告，請執行下列步驟：
 
-1. 導覽至 `/adminui` 例如，在您JEE上的AEM Forms上， `http://10.14.18.10:8080/adminui`.
-1. 登入身份 **管理員**.
-1. 前往 **設定** > **核心系統設定** > **設定**.
-1. 按一下核取方塊，以 **啟用交易報告** 和 **儲存** 設定。
+1. 導覽至JEE版AEM Forms上的`/adminui`，例如`http://10.14.18.10:8080/adminui`。
+1. 以&#x200B;**系統管理員**&#x200B;登入。
+1. 移至&#x200B;**設定** > **核心系統設定** > **設定**。
+1. 按一下核取方塊以&#x200B;**啟用交易報告**&#x200B;並&#x200B;**儲存**&#x200B;設定。
 
    ![sample-transaction-report-jee](assets/enable-transaction-jee.png)
 
 1. 重新啟動伺服器。
-1. 除了伺服器上的變更以外，您必須在使用者端更新 `adobe-livecycle-client.jar` 檔案（如果您使用相同的檔案）。
+1. 除了伺服器上的變更之外，如果您使用相同的檔案，您必須在使用者端更新專案中的`adobe-livecycle-client.jar`檔案。
 
 <!--
 * You can [enable transaction recording](../../forms/using/viewing-and-understanding-transaction-reports.md#setting-up-transaction-reports) from AEM Web Console. view transaction reports on author, processing, or publish instances. View transaction reports on author or processing instances for an aggregated sum of all transactions. View transaction reports on the publish instances for a count of all transactions that take place only on that publish instance from where the report is run.
@@ -44,23 +44,23 @@ For more information on what is considered a transaction, see [Billable APIs](..
 
 ## 檢視交易報告 {#view-transaction-report}
 
-當您啟用交易報告時，交易計數的相關資訊可透過 [透過控制面板的交易報告](#transaction-report-dashboard) 和詳細的 [透過記錄檔傳遞異動報告](#transaction-report-logfile). 兩者皆說明如下：
+當您啟用交易報告時，有關交易計數的資訊會透過[交易報告（透過儀表板](#transaction-report-dashboard)）和詳細的[交易報告（透過記錄檔](#transaction-report-logfile)）存取。 兩者皆說明如下：
 
 ### 透過控制面板的交易報告 {#transaction-report-dashboard}
 
 透過控制面板的交易報表可提供每種交易型別的交易總數。 例如，您會獲得如影像所示的已呈現、已轉換及已提交表單總數的相關資訊。 若要取得交易報表，請執行下列動作：
 
-1. 導覽至 `/adminui` 例如，在您的AEM Forms on JEE上： `http://10.13.15.08:8080/adminui`.
-1. 登入身份 **管理員**.
+1. 導覽至JEE版AEM Forms上的`/adminui`，例如： `http://10.13.15.08:8080/adminui`。
+1. 以&#x200B;**系統管理員**&#x200B;登入。
 1. 按一下「健康狀態監視」。
-1. 瀏覽至 **交易報告器** 標籤，按一下 **計算交易總數**，現在您會看到圓形圖代表已提交、已演算或已轉換的PDF forms數量。
+1. 導覽至&#x200B;**交易報告器**&#x200B;標籤，按一下&#x200B;**計算交易總數**，現在您看到圓形圖代表PDF forms數目 — 已提交、已演算或已轉換。
 
 ![sample-transaction-report-jee](assets/transaction-piechart.png)
 
 
 ### 透過記錄檔的交易報告 {#transaction-report-logfile}
 
-透過記錄檔進行的交易報告提供了有關每個交易的詳細資訊。 若要存取交易記錄，請遵循相對於伺服器啟動的內容路徑。 交易會擷取到單獨的記錄檔中 `transaction_log.log` 依預設。 此 **檔案路徑** 相對於伺服器啟動內容。 不同伺服器的預設路徑如下：
+透過記錄檔進行的交易報告提供了有關每個交易的詳細資訊。 若要存取交易記錄，請遵循相對於伺服器啟動的內容路徑。 依預設，會將交易擷取到個別的記錄檔`transaction_log.log`中。 **檔案路徑**&#x200B;是相對於伺服器啟動內容的。 不同伺服器的預設路徑如下：
 
 ```
 For Jboss Turnkey:
@@ -98,15 +98,15 @@ TransactionRecord
 ```
 
 * **服務**：服務的名稱。
-* **操作**：作業名稱。
+* **作業**：作業名稱。
 * **internalService**：如果有內部呼叫，則為被呼叫者的名稱，否則與服務名稱相同。
-* **internalOperation**：有內部呼叫中被呼叫者的名稱，其他名稱則與作業名稱相同。
-* **transactionOperationType**：交易型別（提交、轉譯、轉換）。
-* **transactioncount**：交易總數。
-* **經過的時間**：呼叫起始與收到回應之間的時間。
-* **transactiondate**：指出服務何時叫用的時間戳記。
+* **internalOperation**：有內部呼叫的被呼叫者名稱，否則與作業名稱相同。
+* **transactionOperationType**：交易的型別（提交、轉譯、轉換）。
+* **transactionCount**：交易總數。
+* **elapsedTime**：呼叫起始與收到回應之間的時間。
+* **transactionDate**：表示服務何時叫用的時間戳記。
 
-**交易記錄範例**：
+**交易記錄檔範例**：
 
 ```
 [2024-02-14 14:23:25] [INFO] TransactionRecord
@@ -128,9 +128,9 @@ TransactionRecord
 
 記錄交易的頻率取決於伺服器上針對成功提交、演算或轉換的每個表單進行的更新操作。
 
-* 在 **儀表板**，交易計數會定期更新，預設為1分鐘。 您可以在下列位置設定系統屬性以更新頻率 `"com.adobe.idp.dsc.transaction.recordFrequency"`. 例如，在JBoss®上適用於JEE的AEM Forms上，新增 `-Dcom.adobe.idp.dsc.transaction.recordFrequency=5` 在 `JAVA_OPTS` 將更新頻率設為5分鐘。
+* 在&#x200B;**儀表板**&#x200B;中，交易計數會定期更新，預設值為1分鐘。 您可以在`"com.adobe.idp.dsc.transaction.recordFrequency"`設定系統屬性來更新頻率。 例如，在JBoss®上適用於JEE的AEM Forms上，在`JAVA_OPTS`中新增`-Dcom.adobe.idp.dsc.transaction.recordFrequency=5`以將更新頻率設為5分鐘。
 
-* 在 **交易記錄**，則當表單成功提交、演算或轉換時，每個交易的更新都會立即發生。
+* 在&#x200B;**交易記錄**&#x200B;中，當表單成功提交、轉譯或轉換時，每個交易的更新會立即發生。
 
 <!-- A transaction remains in the buffer for a specified period (Flush Buffer time + Reverse replication time). By default, it takes approximately 90 seconds for the transaction count to reflect in the transaction report.
 

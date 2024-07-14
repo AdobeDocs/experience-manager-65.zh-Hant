@@ -40,7 +40,7 @@ Correspondence Management會公開API，以透過LetterInstanceService服務擷�
 
 ### 使用getAllLetterInstances {#using-nbsp-getallletterinstances}
 
-以下API會根據查詢物件（已提交和草稿）來尋找信件例項。 如果查詢物件為Null，則會傳回所有信件例項。 此API傳回以下清單 [LetterInstanceVO](https://helpx.adobe.com/aem-forms/6-2/javadocs/com/adobe/icc/dbforms/obj/LetterInstanceVO.html) 物件，可用來擷取信件例項的其他資訊。
+以下API會根據查詢物件（已提交和草稿）來尋找信件例項。 如果查詢物件為Null，則會傳回所有信件例項。 此API傳回[LetterInstanceVO](https://helpx.adobe.com/aem-forms/6-2/javadocs/com/adobe/icc/dbforms/obj/LetterInstanceVO.html)物件的清單，這些物件可用於擷取信件執行個體的其他資訊。
 
 **語法**： `List getAllLetterInstances(Query query) throws ICCException;`
 
@@ -52,14 +52,14 @@ Correspondence Management會公開API，以透過LetterInstanceService服務擷�
   </tr>
   <tr>
    <td>查詢</td>
-   <td>查詢引數是用來尋找/篩選信件例項。 在此，查詢僅支援物件的頂層屬性/屬性。 查詢由陳述式組成，Statement物件中使用的「attributeName」應為Letter實體物件中屬性的名稱。<br /> </td>
+   <td>查詢引數是用來尋找/篩選信件例項。 在此，查詢僅支援物件的頂層屬性/屬性。 查詢由陳述式組成，而且在Statement物件中使用的"attributeName"應該是Letter執行個體物件中的屬性名稱。<br /> </td>
   </tr>
  </tbody>
 </table>
 
 #### 範例1：擷取型別為SUBMITTED的所有字母例項 {#example-fetch-all-the-letter-instances-of-type-submitted}
 
-下列程式碼會傳回已提交信件例項的清單。 若要只取得草稿，請變更 `LetterInstanceType.COMPLETE.name()` 至 `LetterInstanceType.DRAFT.name().`
+下列程式碼會傳回已提交信件例項的清單。 若要只取得草稿，請將`LetterInstanceType.COMPLETE.name()`變更為`LetterInstanceType.DRAFT.name().`
 
 ```java
 @Reference

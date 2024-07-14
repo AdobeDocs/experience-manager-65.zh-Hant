@@ -21,7 +21,7 @@ ht-degree: 2%
 
 AEM Communities可讓公司從網站範本資料庫中建立專屬品牌社群體驗。 論壇、群組、部落格、檔案共用、行事曆、活動摘要和擴充的使用者設定檔可以整合至您的網站，以推動專案、客戶和公司之間的互動。
 
-以下是有關快速設定 [參與社群](/help/communities/overview.md#engagement-community) 用於示範或開發目的。
+以下是有關快速設定[參與社群](/help/communities/overview.md#engagement-community)以用於示範或開發的教學課程。
 
 * [初始設定](/help/communities/setup.md)
 

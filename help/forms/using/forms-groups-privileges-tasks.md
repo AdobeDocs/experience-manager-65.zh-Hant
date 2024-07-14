@@ -24,9 +24,9 @@ ht-degree: 6%
 | AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/setup-configure-migrate/forms-groups-privileges-tasks.html) |
 | AEM 6.5 | 本文章 |
 
-您可以 [建立群組](/help/sites-administering/user-group-ac-admin.md#group-administration) 並指派原則和 [使用者](/help/sites-administering/user-group-ac-admin.md#user-administration) Adobe Experience Manager (AEM)中的群組。 這些原則控制屬於群組之使用者的許可權。
+您可以[建立群組](/help/sites-administering/user-group-ac-admin.md#group-administration)，並將原則和[使用者](/help/sites-administering/user-group-ac-admin.md#user-administration)指派給Adobe Experience Manager (AEM)中的群組。 這些原則控制屬於群組之使用者的許可權。
 
-安裝之後 [AEM Forms附加元件套件](../../forms/using/installing-configuring-aem-forms-osgi.md)，本文中提到的群組（例如forms-users和forms-power-user）可自動用於指派。 下表列出使用者可以根據群組指派在OSGi上執行AEM Forms的工作：
+安裝[AEM Forms附加元件套件](../../forms/using/installing-configuring-aem-forms-osgi.md)之後，本文中提到的群組（例如forms-users和forms-power-user）會自動可供指派。 下表列出使用者可以根據群組指派在OSGi上執行AEM Forms的工作：
 
 <table>
  <tbody>
@@ -65,7 +65,7 @@ ht-degree: 6%
     </ul> </td> 
   </tr>
   <tr>
-   <td>範本 — 作者 <sup>[2]</sup></td> 
+   <td>範本作者<sup>[2]</sup></td> 
    <td>
     <ul> 
      <li>建立及預覽最適化表單或互動式通訊範本</li> 

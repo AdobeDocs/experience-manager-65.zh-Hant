@@ -17,7 +17,7 @@ ht-degree: 2%
 
 # 建立無障礙的最適化表單{#creating-accessible-adaptive-forms}
 
-<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/introduction)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。本文介紹使用基礎元件製作最適化Forms的舊方法。 </span>
+<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/introduction)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。本文介紹使用基礎元件製作最適化Forms的舊方法。</span>
 
 ## 簡介 {#introduction}
 
@@ -33,7 +33,7 @@ ht-degree: 2%
 
 ## 必備條件
 
-您需要協助工具例如 **可存取的名稱和說明檢測器(ANDI)** 和 **為解決協助工具相關問題而開發的調適型表單主題** 建立無障礙的最適化表單。
+您需要協助工具工具，例如&#x200B;**可存取的名稱和說明檢測器(ANDI)**，以及為解決協助工具相關問題而開發的&#x200B;**最適化表單主題**，以建立可存取的最適化表單。
 
 ### 下載並安裝協助工具測試工具
 
@@ -44,15 +44,15 @@ ht-degree: 2%
 * 偵測鍵盤協助工具及色彩對比問題
 * 清楚識別符合標準的熒幕助讀程式內容
 
-ANDI可與所有主要的網際網路瀏覽器搭配使用。 另請參閱 [ANDI的檔案](https://www.ssa.gov/accessibility/andi/help/install.html) 以取得如何設定及使用此工具的詳細指示。
+ANDI可與所有主要的網際網路瀏覽器搭配使用。 請參閱[ANDI檔案](https://www.ssa.gov/accessibility/andi/help/install.html)，以取得如何設定及使用此工具的詳細指示。
 
 ### 下載並安裝Ultraminary-Access主題
 
 Ultraminary-Accessible主題是參考主題。 它有助於示範如何以最適化表單修正色彩對比和其他協助工具相關問題。 Adobe建議您根據組織核准的樣式來建立生產環境的自訂主題。 執行以下步驟，將主題上傳至您的AEM執行個體：
 
 1. 下載主題套件。
-1. 瀏覽至 **[!UICONTROL Experience Manager]** > **[!UICONTROL 導覽]** ![導覽](assets/Smock_Compass_18_N.svg) > **[!UICONTROL Forms]** 在您的AEM執行個體上。
-1. 選取 **[!UICONTROL 建立]** > **[!UICONTROL 檔案上傳]**. 選取並上傳x Ultramarine-Accessible-Theme.zip檔案。 它會上傳主題到您的AEM執行個體。
+1. 在您的AEM執行個體上導覽至&#x200B;**[!UICONTROL Experience Manager]** > **[!UICONTROL 導覽]** ![導覽](assets/Smock_Compass_18_N.svg) > **[!UICONTROL Forms]**。
+1. 選取&#x200B;**[!UICONTROL 建立]** > **[!UICONTROL 檔案上傳]**。 選取並上傳x Ultramarine-Accessible-Theme.zip檔案。 它會上傳主題到您的AEM執行個體。
 
 ## 讓最適化表單可供存取
 
@@ -63,8 +63,8 @@ Ultraminary-Accessible主題是參考主題。 它有助於示範如何以最適
 將Ultraminary-Accessible主題套用至您現有的最適化表單。 若要套用主題：
 
 1. 開啟最適化表單進行編輯。
-1. 選取元件並選取父項圖示。 在內容功能表中，選取 **[!UICONTROL 最適化表單容器]** 然後選取「設定」圖示。
-1. 在屬性瀏覽器中選取Ultramarine-Accessible主題，然後選取 **[!UICONTROL 儲存]** 圖示。
+1. 選取元件並選取父項圖示。 在內容功能表中，選取&#x200B;**[!UICONTROL 最適化表單容器]**，然後選取[設定]圖示。
+1. 在屬性瀏覽器中選取Ultraminary-Accessible主題，然後選取&#x200B;**[!UICONTROL 儲存]**&#x200B;圖示。
 1. 重新整理瀏覽器視窗。 主題會套用至最適化表單。
 
 套用無障礙主題後，請執行以下列出的其他修正。 除了協助工具主題中涵蓋的協助工具修正之外，這些修正也包括：
@@ -105,22 +105,22 @@ Ultraminary-Accessible主題是參考主題。 它有助於示範如何以最適
 
 若要使用「協助工具」選項，請遵循下列步驟：
 
-1. 選取元件並選取 ![cmppr](assets/cmppr.png).
-1. 按一下 **[!UICONTROL 協助工具]** 在側邊欄中，選擇所需的協助工具選項。
+1. 選取元件並選取![cmppr](assets/cmppr.png)。
+1. 按一下側邊欄中的&#x200B;**[!UICONTROL 協助工具]**，選擇所需的協助工具選項。
 
 ### 表單元件中的協助工具選項 {#accessibility-options-in-form-components}
 
 ![表單元件中的協助工具選項](assets/accessibility-options.png)
 
-**自訂文字** 表單作者在協助工具選項自訂文字欄位中提供內容。 熒幕助讀程式等輔助技術會使用此自訂文字。 在大部分的案例中，使用「標題」設定是最佳選項。 只有在無法使用標題或簡短說明時，才考慮建立自訂熒幕Reader文字。
+**自訂文字**&#x200B;表單作者在協助工具選項[自訂文字]欄位中提供內容。 熒幕助讀程式等輔助技術會使用此自訂文字。 在大部分的案例中，使用「標題」設定是最佳選項。 只有在無法使用標題或簡短說明時，才考慮建立自訂熒幕Reader文字。
 
-**簡短說明** 對於大多數元件，當使用者將指標停留在元件上時，會在執行階段顯示簡短說明。 您可以在說明內容選項下方的簡短說明欄位中設定此選項。
+**簡短描述**&#x200B;對於大多數元件，當使用者將指標暫留在元件上時，簡短描述會在執行階段顯示。 您可以在說明內容選項下方的簡短說明欄位中設定此選項。
 
-**標題** 使用此選項可讓AEM Forms使用與表單欄位相關聯的視覺標籤作為熒幕助讀程式文字。
+**標題**&#x200B;使用此選項可讓AEM Forms使用與表單欄位相關聯的視覺標籤做為熒幕助讀程式文字。
 
-**名稱** 您可以在「繫結」標籤的「名稱」欄位中指定值。 名稱不能包含任何空格。
+**名稱**&#x200B;您可以在[繫結]索引標籤的[名稱]欄位中指定值。 名稱不能包含任何空格。
 
-**無** 選取「無」會導致表單物件在已發佈的表單中沒有名稱。 不建議對表單控制項使用「無」設定。
+**無**&#x200B;選取「無」會導致表單物件在已發佈的表單中沒有名稱。 不建議對表單控制項使用「無」設定。
 
 >[!NOTE]
 >
@@ -133,7 +133,7 @@ Ultraminary-Accessible主題是參考主題。 它有助於示範如何以最適
 
 確定文字在表單中說明了物件及其用途。 熒幕助讀程式會在遇到影像時讀取此替代文字。 影像必須一律指定替代文字。
 
-選取影像元件並選取 ![cmppr](assets/cmppr.png). 在側邊欄中的「屬性」下方，指定影像的替代文字。
+選取影像元件並選取![cmppr](assets/cmppr.png)。 在側邊欄中的「屬性」下方，指定影像的替代文字。
 
 ![影像的替代文字](assets/image-properties.png)
 
@@ -145,7 +145,7 @@ Ultraminary-Accessible主題是參考主題。 它有助於示範如何以最適
 
 建議您使用預設字型和背景顏色 — 白色背景上的黑色內容。 如果您變更預設顏色，請在淺色背景顏色上選擇深色前景顏色，或反之。
 
-另請參閱 [建立最適化表單的自訂主題](/help/forms/using/creating-custom-adaptive-form-themes.md)，以取得有關變更最適化表單的顏色對比和主題的詳細資訊。
+請參閱[建立最適化表單的自訂主題](/help/forms/using/creating-custom-adaptive-form-themes.md)，以取得變更最適化表單色彩對比和主題的詳細資訊。
 
 ### 5.確認可使用鍵盤存取表單控制項 {#ensure-that-form-controls-are-keyboard-accessible}
 
@@ -162,7 +162,7 @@ AEM Forms提供下列鍵盤快速鍵。
 | 重設表單中的填入資料 | Alt+R |
 | 提交表單 | Alt+S |
 
-此外，還有各種鍵盤快速鍵可供您使用 **[!UICONTROL 日期選取器]** 最適化Forms中的元件。 若要啟用快速鍵，請選取 **[!UICONTROL 日期選取器]** 元件並選取 ![設定](assets/configure-icon.svg) 以開啟屬性。 在 **[!UICONTROL 模式]** 區段，使用 **[!UICONTROL 型別]** 和 **[!UICONTROL 圖樣]** 下拉式清單。 儲存屬性以啟用快捷鍵用於 **[!UICONTROL 日期選取器]** 元件。
+此外，自適應Forms中的&#x200B;**[!UICONTROL 日期選擇器]**&#x200B;元件有各種可用的鍵盤快速鍵。 若要啟用快速鍵，請選取&#x200B;**[!UICONTROL 日期選擇器]**&#x200B;元件，然後選取![設定](assets/configure-icon.svg)以開啟屬性。 在&#x200B;**[!UICONTROL 模式]**&#x200B;區段中，使用&#x200B;**[!UICONTROL 型別]**&#x200B;和&#x200B;**[!UICONTROL 模式]**&#x200B;下拉式清單來選取顯示模式。 儲存屬性以啟用&#x200B;**[!UICONTROL 日期選擇器]**&#x200B;元件的快速鍵。
 
 下列鍵盤快速鍵適用於Adaptive Forms中的日期選擇器元件：
 
@@ -177,13 +177,13 @@ AEM Forms提供下列鍵盤快速鍵。
 | 在日期選擇器元件中可用的行事曆中，將游標向後移動 | 向左鍵 |
 | 在日期選擇器元件中可用的行事曆中向前移動游標 | 向右鍵 |
 | 針對行事曆中左右導覽箭頭之間可用的標題執行動作 | Shift +向上鍵 |
-| 執行向右導覽箭頭圖示的動作 ![向右鍵](assets/right-navigation-icon.svg) 在行事曆中可用 | Shift +向左鍵 |
-| 執行向左導覽箭頭圖示的動作 ![向左鍵](assets/left-navigation-icon.svg) 在行事曆中可用 | Shift +向右鍵 |
+| 針對行事曆中可用的右導覽箭頭圖示![右箭頭](assets/right-navigation-icon.svg)執行動作 | Shift +向左鍵 |
+| 執行行事曆中可用的向左導覽箭頭圖示![向左箭頭](assets/left-navigation-icon.svg)的動作 | Shift +向右鍵 |
 
 ## 使用協助工具來尋找剩餘的協助工具問題
 
 可存取的名稱和說明檢查器(ANDI)可協助您在最適化表單中識別及修正可存取性法規遵循相關問題。 使用ANDI工具尋找最適化表單中的協助工具問題：
 
 1. 在預覽模式中開啟最適化表單。
-1. 按一下已建立書籤的ANDI工具圖示。 ANDI工具會分析最適化表單並顯示協助工具的問題。 如需有關如何使用此工具的詳細資訊，請參閱 [ANDI的檔案](https://www.ssa.gov/accessibility/andi/help/howtouse.html).
+1. 按一下已建立書籤的ANDI工具圖示。 ANDI工具會分析最適化表單並顯示協助工具的問題。 如需有關如何使用工具的詳細資訊，請參閱[ANDI的檔案](https://www.ssa.gov/accessibility/andi/help/howtouse.html)。
 1. 檢閱並修正ANDI回報的問題。

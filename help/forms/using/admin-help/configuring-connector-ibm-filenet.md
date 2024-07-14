@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # 設定IBM FileNet的聯結器 {#configuring-connector-for-ibm-filenet}
 
-IBM FileNet聯結器可啟用AEM Forms與IBM FileNet之間的通訊。 如需其他背景資訊，請參閱下列「Connectors for ECM」： [服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
+IBM FileNet聯結器可啟用AEM Forms與IBM FileNet之間的通訊。 如需其他背景資訊，請參閱[服務參考](https://www.adobe.com/go/learn_aemforms_services_63)中的「Connectors for ECM」。
 
 >[!NOTE]
 >
@@ -41,8 +41,8 @@ IBM FileNet P8 Content Engine提供軟體服務，用於管理FileNet內容儲�
 
 1. 在Credential Protection Scheme清單中，選取下列其中一個保護等級：
 
-   * **清除：** 以無保護模式透過網路傳送認證
-   * **對稱：** 透過網路傳送加密的認證
+   * **清除：**&#x200B;以無保護模式傳送網路上的認證
+   * **對稱式：**&#x200B;透過網路傳送加密的認證
 
 1. 在「加密檔案位置」方塊中，輸入加密檔案的路徑：
 
@@ -79,15 +79,15 @@ IBM FileNet的聯結器包含IBM FileNet服務的Process Engine Connector ，可
 
 下列選項可供使用：
 
-**目前的存放庫提供者名稱：** 目前存放庫服務提供者的名稱
+**目前的存放庫提供者名稱：**&#x200B;目前存放庫服務提供者的名稱
 
-**IBM FileNet存放庫提供者：** 讓FileNet儲存區域提供者成為儲存區域的提供者。 此選項已過時。
+**IBM FileNet存放庫提供者：**&#x200B;讓FileNet存放庫提供者成為存放庫的提供者。 此選項已過時。
 
-**存放庫提供者：** 讓原生存放庫提供者成為存放庫的提供者
+**存放庫提供者：**&#x200B;讓原生存放庫提供者成為存放庫的提供者
 
 >[!NOTE]
 >
->若要選取列出的儲存區域服務提供者以外的儲存區域服務提供者，請在「應用程式和服務」中設定RepositoryService。 <!-- Fix broken link(See Managing Services) -->
+>若要選取列出的儲存區域服務提供者以外的儲存區域服務提供者，請在「應用程式和服務」中設定RepositoryService。<!-- Fix broken link(See Managing Services) -->
 
 1. 在管理控制檯中，按一下「服務」>「IBM FileNet的聯結器」。
 1. 在「存放庫服務提供者資訊」區域中，選取替代的存放庫服務提供者，然後按一下「儲存」。

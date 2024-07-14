@@ -20,4 +20,4 @@ ht-degree: 0%
 
 **[新增Clientlibs](add-clientlibs.md)**
 
-此時，您可以連同使用探索沙箱中的社群功能 [We-Retail社群](../../help/sites-developing/we-retail.md)，則 [社群元件指南](components-guide.md)、和 [功能要點](essentials.md) 以供參考。
+此時，可以搭配使用[We-Retail Community](../../help/sites-developing/we-retail.md)、[Community Components Guide](components-guide.md)和[Feature Essentials](essentials.md)來探索沙箱中的社群功能，以供參考。

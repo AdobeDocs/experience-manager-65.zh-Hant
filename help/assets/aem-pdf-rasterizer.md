@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # 使用PDF模擬轉譯器 {#using-pdf-rasterizer}
 
-上傳大型內容密集型PDF或AI檔案至 [!DNL Adobe Experience Manager Assets]，預設程式庫可能不會產生準確的輸出。 與預設程式庫的輸出相比，Adobe的PDF模擬轉譯器程式庫可產生更可靠且精確的輸出。 Adobe建議在下列情況下使用PDF模擬轉譯器資料庫：
+當您上傳大型且需要大量內容的PDF或AI檔案至[!DNL Adobe Experience Manager Assets]時，預設程式庫可能無法產生準確的輸出。 與預設程式庫的輸出相比，Adobe的PDF模擬轉譯器程式庫可產生更可靠且精確的輸出。 Adobe建議在下列情況下使用PDF模擬轉譯器資料庫：
 
 Adobe建議針對下列專案使用PDF模擬轉譯器資料庫：
 
@@ -25,40 +25,40 @@ Adobe建議針對下列專案使用PDF模擬轉譯器資料庫：
 
 使用PDF模擬轉譯器產生的縮圖和預覽，其品質優於現成可用的輸出，因此可提供跨裝置的一致檢視體驗。 Adobe PDF模擬轉譯器資料庫不支援任何色域轉換。 無論來源檔案的色域為何，一律會輸出為RGB。
 
-1. 將PDF模擬轉譯器套件安裝在您的 [!DNL Adobe Experience Manager] 部署來源 [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/product/assets/aem-assets-pdf-rasterizer-pkg-4.6.zip).
+1. 從[Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/product/assets/aem-assets-pdf-rasterizer-pkg-4.6.zip)在您的[!DNL Adobe Experience Manager]PDF上安裝模擬轉譯器套件。
 
    >[!NOTE]
    >
    >PDF模擬轉譯器程式庫僅適用於Windows和Linux®。
 
-1. 存取 [!DNL Assets] 工作流程控制檯位於 `https://[aem_server]:[port]/workflow`. 開啟 [!UICONTROL DAM更新資產] 工作流程。
+1. 存取位於`https://[aem_server]:[port]/workflow`的[!DNL Assets]工作流程主控台。 開啟[!UICONTROL DAM更新資產]工作流程。
 
 1. 若要防止使用預設方法為PDF檔案和AI檔案產生縮圖和網頁轉譯，請遵循下列步驟：
 
-   * 開啟 **[!UICONTROL 程式縮圖]** 步驟，然後新增 `application/pdf` 或 `application/postscript` 在 **[!UICONTROL 略過MIME型別]** 欄位位於 **[!UICONTROL 縮圖]** 標籤。
+   * 開啟&#x200B;**[!UICONTROL 處理縮圖]**&#x200B;步驟，並視需要在&#x200B;**[!UICONTROL 縮圖]**&#x200B;標籤下的&#x200B;**[!UICONTROL 略過MIME型別]**&#x200B;欄位中新增`application/pdf`或`application/postscript`。
 
    ![skip_mime_types-2](assets/skip_mime_types-2.png)
 
-   * 在 **[!UICONTROL 啟用Web的影像]** 標籤，新增 `application/pdf` 或 `application/postscript` 在 **[!UICONTROL 略過清單]** 視您的需求而定。
+   * 在&#x200B;**[!UICONTROL 啟用網頁的影像]**&#x200B;標籤中，根據您的需求，在&#x200B;**[!UICONTROL 略過清單]**&#x200B;下新增`application/pdf`或`application/postscript`。
 
-   ![跳過影像格式縮圖處理的設定](assets/web_enabled_imageskiplist.png)
+   ![略過影像格式縮圖處理的設定](assets/web_enabled_imageskiplist.png)
 
-1. 開啟 **[!UICONTROL 點陣化PDF/AI影像預覽轉譯]** 步驟，並移除要略過預設產生預覽影像轉譯的MIME型別。 例如，移除MIME型別 `application/pdf`， `application/postscript`，或 `application/illustrator` 從 **[!UICONTROL MIME型別]** 清單。
+1. 開啟&#x200B;**[!UICONTROL 點陣化PDF/AI影像預覽轉譯]**&#x200B;步驟，並移除您要略過預設產生預覽影像轉譯的MIME型別。 例如，從&#x200B;**[!UICONTROL MIME型別]**&#x200B;清單中移除MIME型別`application/pdf`、`application/postscript`或`application/illustrator`。
 
    ![process_arguments](assets/process_arguments.png)
 
-1. 拖曳 **[!UICONTROL PDF模擬轉譯器處理常式]** 從側面板到下方的步驟 **[!UICONTROL 程式縮圖]** 步驟。
-1. 設定以下引數 **[!UICONTROL PDF模擬轉譯器處理常式]** 步驟：
+1. 將&#x200B;**[!UICONTROL PDF模擬轉譯器處理常式]**&#x200B;步驟從側面板拖曳到&#x200B;**[!UICONTROL 處理縮圖]**&#x200B;步驟下方。
+1. 為&#x200B;**[!UICONTROL PDF模擬轉譯器處理常式]**&#x200B;步驟設定下列引數：
 
-   * MIME型別： `application/pdf` 或 `application/postscript`
+   * MIME型別： `application/pdf`或`application/postscript`
    * 命令： `PDFRasterizer -d -s 1280 -t PNG -i ${file}`
    * 新增縮圖大小：319:319、140:100、48:48。 如有必要，請新增自訂縮圖設定。
 
-   的命令列引數 `PDFRasterizer` 命令可以包括下列內容：
+   `PDFRasterizer`命令的命令列引數可以包含下列專案：
 
-   * `-d`：此旗標可啟用文字、向量圖稿和影像的平滑轉譯。 建立品質更好的影像。 但是，包含此引數會導致命令執行速度緩慢並增加影像大小。
+   * `-d`：啟用平滑呈現文字、向量圖稿和影像的旗標。 建立品質更好的影像。 但是，包含此引數會導致命令執行速度緩慢並增加影像大小。
 
-   * `-s`：影像尺寸上限（高度或寬度）。 這會轉換為每一頁的DPI。 如果頁面大小不同，則每個頁面可能會以不同的量縮放。 預設為實際頁面大小。
+   * `-s`：影像維度上限（高度或寬度）。 這會轉換為每一頁的DPI。 如果頁面大小不同，則每個頁面可能會以不同的量縮放。 預設為實際頁面大小。
 
    * `-t`：輸出影像型別。 有效型別為JPEG、PNG、GIF和BMP。 預設值為JPEG。
 
@@ -66,29 +66,29 @@ Adobe建議針對下列專案使用PDF模擬轉譯器資料庫：
 
    * `-h`：說明
 
-1. 若要刪除中繼轉譯，請選取 **[!UICONTROL 刪除產生的轉譯]**.
-1. 若要讓PDF模擬轉譯器產生網頁轉譯，請選取「 」 **[!UICONTROL 產生Web轉譯]**.
+1. 若要刪除中繼轉譯，請選取&#x200B;**[!UICONTROL 刪除產生的轉譯]**。
+1. 若要讓PDF模擬轉譯器產生Web轉譯，請選取&#x200B;**[!UICONTROL 產生Web轉譯]**。
 
    ![generate_web_renditions1](assets/generate_web_renditions1.png)
 
-1. 在「 」中指定設定 **[!UICONTROL 啟用Web的影像]** 標籤。
+1. 在&#x200B;**[!UICONTROL 啟用網頁的影像]**&#x200B;索引標籤中指定設定。
 
    ![web_enabled_image1](assets/web_enabled_image1.png)
 
 1. 儲存工作流程。
-1. 若要啟用PDF模擬轉譯器以使用PDF資料庫處理PDF頁面，請開啟 **[!UICONTROL DAM流程子資產]** 模型來自 [!UICONTROL 工作流程] 主控台。
-1. 從側面板，將「PDF模擬轉譯器處理常式」步驟拖曳至 **[!UICONTROL 建立可支援Web的影像轉譯]** 步驟。
-1. 設定以下引數 **[!UICONTROL PDF模擬轉譯器處理常式]** 步驟：
+1. 若要啟用PDF模擬轉譯器以使用PDF資料庫處理PDF頁面，請從[!UICONTROL 工作流程]主控台開啟&#x200B;**[!UICONTROL DAM處理子資產]**&#x200B;模型。
+1. 從側面板，將PDF模擬轉譯器處理常式步驟拖曳至&#x200B;**[!UICONTROL 建立啟用Web的影像轉譯]**&#x200B;步驟下。
+1. 為&#x200B;**[!UICONTROL PDF模擬轉譯器處理常式]**&#x200B;步驟設定下列引數：
 
-   * MIME型別： `application/pdf` 或 `application/postscript`
+   * MIME型別： `application/pdf`或`application/postscript`
    * 命令： `PDFRasterizer -d -s 1280 -t PNG -i ${file}`
-   * 新增縮圖大小： `319:319`， `140:100`， `48:48`. 視需要新增自訂縮圖設定。
+   * 新增縮圖大小： `319:319`、`140:100`、`48:48`。 視需要新增自訂縮圖設定。
 
-   的命令列引數 `PDFRasterizer` 命令可以包括下列內容：
+   `PDFRasterizer`命令的命令列引數可以包含下列專案：
 
-   * `-d`：此旗標可啟用文字、向量圖稿和影像的平滑轉譯。 建立品質更好的影像。 但是，包含此引數會導致命令執行速度緩慢並增加影像大小。
+   * `-d`：啟用平滑呈現文字、向量圖稿和影像的旗標。 建立品質更好的影像。 但是，包含此引數會導致命令執行速度緩慢並增加影像大小。
 
-   * `-s`：影像尺寸上限（高度或寬度）。 這會轉換為每一頁的DPI。 如果頁面大小不同，則每個頁面可能會以不同的量縮放。 預設為實際頁面大小。
+   * `-s`：影像維度上限（高度或寬度）。 這會轉換為每一頁的DPI。 如果頁面大小不同，則每個頁面可能會以不同的量縮放。 預設為實際頁面大小。
 
    * `-t`：輸出影像型別。 有效型別為JPEG、PNG、GIF和BMP。 預設值為JPEG。
 
@@ -96,14 +96,14 @@ Adobe建議針對下列專案使用PDF模擬轉譯器資料庫：
 
    * `-h`：說明
 
-1. 若要刪除中繼轉譯，請選取 **[!UICONTROL 刪除產生的轉譯]**.
-1. 若要讓PDF模擬轉譯器產生網頁轉譯，請選取「 」 **[!UICONTROL 產生Web轉譯]**.
+1. 若要刪除中繼轉譯，請選取&#x200B;**[!UICONTROL 刪除產生的轉譯]**。
+1. 若要讓PDF模擬轉譯器產生Web轉譯，請選取&#x200B;**[!UICONTROL 產生Web轉譯]**。
 
    ![generate_web_renditions](assets/generate_web_renditions.png)
 
-1. 在「 」中指定設定 **[!UICONTROL 啟用Web的影像]** 標籤。
+1. 在&#x200B;**[!UICONTROL 啟用網頁的影像]**&#x200B;索引標籤中指定設定。
 
    ![web_enabled_image-1](assets/web_enabled_image-1.png)
 
 1. 儲存工作流程。
-1. 上傳PDF檔案或AI檔案至 [!DNL Experience Manager Assets]. PDF模擬轉譯器會產生檔案的縮圖和Web轉譯。
+1. 將PDF檔案或AI檔案上傳至[!DNL Experience Manager Assets]。 PDF模擬轉譯器會產生檔案的縮圖和Web轉譯。

@@ -22,13 +22,13 @@ ht-degree: 2%
 
 發佈環境中套用標籤的基礎基礎結構與製作環境中套用至內容（例如頁面和資產）的標籤基礎基礎結構相同：
 
-* 另請參閱 [管理標籤](../../help/sites-administering/tags.md) 和 [標籤使用者產生的內容](tag-ugc.md) (UGC)，以取得建立和管理標籤的相關資訊。
+* 如需建立和管理標籤的相關資訊，請參閱[管理標籤](../../help/sites-administering/tags.md)和[標籤使用者產生的內容](tag-ugc.md) (UGC)。
 
-* 另請參閱 [為開發人員加上標籤](../../help/sites-developing/tags.md) 以取得關於 [標籤框架](../../help/sites-developing/framework.md) 以及在中包含和擴充標籤 [自訂應用程式](../../help/sites-developing/building.md).
+* 如需[標籤架構](../../help/sites-developing/framework.md)以及在[自訂應用程式](../../help/sites-developing/building.md)中包含和擴充標籤的詳細資訊，請參閱[開發人員標籤](../../help/sites-developing/tags.md)。
 
-* 另請參閱 [使用社交標籤雲](tagcloud.md) 供作者瞭解如何新增 `social tag cloud` 元件至頁面，以反白顯示發佈環境中套用至UGC的標籤。
+* 請參閱[使用Social Tag Cloud](tagcloud.md)，瞭解作者的相關資訊，瞭解如何將`social tag cloud`元件新增至頁面，以反白標示發佈環境中套用至UGC的標籤。
 
-設定時可啟用UGC的標籤 [社群網站](sites-console.md#tagging) 或下列其中一項功能：
+設定[社群網站](sites-console.md#tagging)或下列其中一項功能時，可以啟用UGC標籤：
 
 * [部落格](blog-feature.md)
 * [日曆](calendar.md)
@@ -64,7 +64,7 @@ ht-degree: 2%
   </tr>
   <tr>
    <td><strong>屬性</strong></td>
-   <td>另請參閱 <a href="tagcloud.md">使用社交標籤雲</a></td>
+   <td>請參閱<a href="tagcloud.md">使用社交標籤雲端</a></td>
   </tr>
  </tbody>
 </table>
@@ -73,7 +73,7 @@ ht-degree: 2%
 
 ## 伺服器端的Essentials {#essentials-for-server-side}
 
-* [社交標籤雲API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/commons/tagcloud/api/package-summary.html)
+* [社交標籤雲端API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/commons/tagcloud/api/package-summary.html)
 
 * [社交標籤管理員](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/commons/tagging/package-summary.html)
 
@@ -81,6 +81,6 @@ ht-degree: 2%
 
 ## 標籤搜尋 {#tag-searching}
 
-截至 [feature pack 1](deploy-communities.md#latestfeaturepack) (FP1)，使用執行標籤搜尋 [標籤標題](../../help/sites-developing/framework.md#tag-characteristics).
+自[Feature Pack 1](deploy-communities.md#latestfeaturepack) (FP1)起，已使用[標籤標題](../../help/sites-developing/framework.md#tag-characteristics)執行標籤搜尋。
 
-在FP1之前，搜尋是使用 [標籤id](../../help/sites-developing/framework.md#tagid).
+在FP1之前，使用[標籤ID](../../help/sites-developing/framework.md#tagid)執行搜尋。

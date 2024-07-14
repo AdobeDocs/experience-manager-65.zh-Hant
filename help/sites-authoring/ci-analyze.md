@@ -19,18 +19,18 @@ ht-degree: 1%
 
 # 分析頁面效能{#analyzing-page-performance}
 
-開啟 [內容分析](/help/sites-authoring/content-insights.md) 頁面，分析您編寫之頁面的效能。 設定報告期間，以集中進行分析。
+開啟[內容分析](/help/sites-authoring/content-insights.md)頁面以分析您正在編寫的頁面的效能。 設定報告期間，以集中進行分析。
 
 ## 開啟頁面的Analytics和Recommendations {#opening-analytics-and-recommendations-for-a-page}
 
 使用以下程式檢視頁面的Analytics和Recommendations：
 
 1. 導覽至您要分析的頁面。
-1. 在工具列中，按一下 **Analytics與Recommendations**.
+1. 在工具列中按一下&#x200B;**Analytics和Recommendations**。
 
    >[!NOTE]
    >
-   >只有在您已將AEM設定為的情況下，才會顯示頁面的Analytics和Recommendations [與Adobe Analytics整合](/help/sites-administering/adobeanalytics-connect.md).
+   >只有在您已將AEM設定為[與Adobe Analytics](/help/sites-administering/adobeanalytics-connect.md)整合時，才會顯示頁面的Analytics和Recommendations。
 
    ![screen-shot_2019-03-05at115319](assets/screen-shot_2019-03-05at115319.png)
 
@@ -85,7 +85,7 @@ SEO建議的狀態會指出工作已建立但尚未完成的時間。
 
 ![chlimage_1-130](assets/chlimage_1-130.png)
 
-建立後，任務會出現在使用者的任務清單中。 如需有關工作的資訊，請參閱 [使用任務](/help/sites-authoring/task-content.md).
+建立後，任務會出現在使用者的任務清單中。 如需工作的相關資訊，請參閱[使用工作](/help/sites-authoring/task-content.md)。
 
 請使用下列程式來建立SEO建議的工作。
 
@@ -106,6 +106,6 @@ SEO建議的狀態會指出工作已建立但尚未完成的時間。
    * 任務優先順序：任務的優先順序。
    * 到期日：作業應完成的截止日期。
 
-   **注意：** 建立的工作也包含SEO建議套用之頁面的路徑。
+   **注意：**&#x200B;建立的工作也包含SEO建議適用的頁面路徑。
 
 1. 按一下完成以關閉「建立的工作」訊息。

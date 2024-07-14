@@ -28,19 +28,19 @@ Forms Portal元件是現成可用的元件。 若要讓元件出現在AEM sideki
 
 1. 對於使用靜態範本的頁面，請執行下列步驟：
 
-   1. 在頁首中，選取 ![畫佈下拉式清單](assets/canvas-drop-down.png) > **設計** 以在設計模式中開啟頁面。
-   1. 選取任何元件（具有藍色邊框），然後選取 ![欄位層級](assets/field-level.png) 以選取包含目前元件的段落系統。
-   1. 在段落系統中，選取 ![settings_icon](assets/settings_icon.png) 以開啟段落系統的「編輯」對話方塊。
-   1. 從清單 **[!UICONTROL 允許的元件]**，啟用核取方塊 **[!UICONTROL 檔案服務]** 和 **[!UICONTROL 檔案服務述詞]** 元件。 選取 **[!UICONTROL 確定]**.
+   1. 在頁面標頭中，選取![畫佈下拉式清單](assets/canvas-drop-down.png) > **設計**，以設計模式開啟頁面。
+   1. 選取任何元件（使用藍色邊框），然後選取![欄位層級](assets/field-level.png)，以選取包含目前元件的段落系統。
+   1. 在段落系統中，選取![settings_icon](assets/settings_icon.png)以開啟段落系統的編輯對話方塊。
+   1. 從&#x200B;**[!UICONTROL 允許的元件]**&#x200B;清單中，啟用&#x200B;**[!UICONTROL 檔案服務]**&#x200B;和&#x200B;**[!UICONTROL 檔案服務述詞]**&#x200B;元件的核取方塊。 選取&#x200B;**[!UICONTROL 確定]**。
 
 1. 對於使用動態範本的頁面，請執行下列步驟：
 
-   1. 在頁首中，選取 ![屬性](assets/properties.png) > **編輯範本** 以開啟頁面的範本。
-   1. 選取 **配置容器** 並選取 ![摘要管理](/help/forms/using/assets/feedmanagement.png). 在 **允許的元件** 標籤，啟用 **Document Services和Document Services述詞** 選項，然後選取 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+   1. 在頁面標頭中，選取![屬性](assets/properties.png) > **編輯範本**&#x200B;以開啟頁面的範本。
+   1. 選取&#x200B;**配置容器**&#x200B;並選取![FeedManagement](/help/forms/using/assets/feedmanagement.png)。 在&#x200B;**允許的元件**&#x200B;索引標籤中，啟用&#x200B;**Document Services和Document Services述詞**&#x200B;選項，並選取![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)。
 
 >[!NOTE]
 >
->您也可以選取元件，以啟用這些類別中的特定元件。 如需有關元件及其使用方式的詳細資訊，請參閱 [建立表單入口網站頁面](/help/forms/using/creating-form-portal-page.md) 和 [將連結元件內嵌在頁面中](/help/forms/using/embedding-link-component-page.md).
+>您也可以選取元件，以啟用這些類別中的特定元件。 如需有關元件及其使用方式的詳細資訊，請參閱[建立表單入口網站頁面](/help/forms/using/creating-form-portal-page.md)以及[在頁面中嵌入連結元件](/help/forms/using/embedding-link-component-page.md)。
 
 現在，元件瀏覽器中提供Document Services和Document Services述詞元件類別。 這些元件會針對使用相同範本的所有頁面啟用。
 

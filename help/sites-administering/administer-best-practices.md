@@ -35,14 +35,14 @@ ht-degree: 6%
 
 ## Assets {#assets}
 
-有關資產的最佳實務，包括Dynamic Media功能和Dynamic Media Classic整合，請參閱下列主題：
+Assets的最佳實務，包括Dynamic Media功能和Dynamic Media Classic整合，請參閱下列主題：
 
 <table>
  <tbody>
   <tr>
    <td>Assets周圍不同區域的最佳實務，可增強負載時的系統穩定性和效能</td>
    <td><a href="/help/assets/best-practices-for-assets.md">Assets 最佳實務</a></td>
-   <td>包含資產周圍不同區域最佳實務指南的連結。 檢閱這些文章後，您將擁有建置和管理企業資產管理系統的知識和工具。</td>
+   <td>包含Assets相關最佳實務指南的連結。 檢閱這些文章後，您將擁有建置和管理企業資產管理系統的知識和工具。</td>
   </tr>
   <tr>
    <td>如何組織您的內容（資料夾階層）</td>
@@ -56,8 +56,8 @@ ht-degree: 6%
   </tr>
   <tr>
    <td>影像預設集選項</td>
-   <td>瞭解 <a href="/help/assets/managing-image-presets.md#understanding-image-presets">影像預設集</a> 和 <a href="/help/assets/managing-image-presets.md#image-preset-options">影像預設集最佳作法</a></td>
-   <td>作為的相關檔案的一部分， <a href="/help/assets/managing-image-presets.md">管理影像預設集</a>，這些主題說明什麼是影像預設集，以及選取影像預設集選項的最佳作法。</td>
+   <td>瞭解<a href="/help/assets/managing-image-presets.md#understanding-image-presets">影像預設集</a>和<a href="/help/assets/managing-image-presets.md#image-preset-options">影像預設集最佳實務</a></td>
+   <td>在<a href="/help/assets/managing-image-presets.md">管理影像預設集</a>的檔案中，這些主題會說明什麼是影像預設集，以及選取影像預設集選項的最佳作法。</td>
   </tr>
   <tr>
    <td>Dynamic Media與Scene7直接整合的比較</td>

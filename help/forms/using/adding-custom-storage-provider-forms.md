@@ -21,18 +21,18 @@ ht-degree: 0%
 
 AEM Forms可讓您將表單儲存為草稿。 草稿功能可讓您維護進行中表單，您可稍後從任何裝置完成並提交此表單。
 
-依預設，AEM Forms會將與表單草稿和提交相關聯的使用者資料儲存在 `/content/forms/fp` 節點。 此外，AEM Forms Portal元件也提供資料服務，供您自訂儲存草稿及提交之使用者資料的實作。 例如，您可以將使用者資料儲存在資料存放區中。
+依預設，AEM Forms會將與表單草稿和提交相關聯的使用者資料儲存在Publish執行個體上的`/content/forms/fp`節點中。 此外，AEM Forms Portal元件也提供資料服務，供您自訂儲存草稿及提交之使用者資料的實作。 例如，您可以將使用者資料儲存在資料存放區中。
 
 ## 先決條件  {#prerequisites}
 
-* 啟用 [Forms Portal元件](/help/forms/using/enabling-forms-portal-components.md)
-* 建立 [Forms入口網站頁面](/help/forms/using/creating-form-portal-page.md)
-* 啟用 [適用於Forms入口網站的最適化表單](/help/forms/using/draft-submission-component.md)
-* 瞭解 [自訂儲存的實作詳細資料](/help/forms/using/draft-submission-component.md#customizing-the-storage)
+* 啟用[Forms Portal元件](/help/forms/using/enabling-forms-portal-components.md)
+* 建立[Forms入口網站頁面](/help/forms/using/creating-form-portal-page.md)
+* 為Forms入口網站啟用[最適化表單](/help/forms/using/draft-submission-component.md)
+* 瞭解自訂儲存體的[實作詳細資料](/help/forms/using/draft-submission-component.md#customizing-the-storage)
 
 ## 草稿資料服務 {#draft-data-service}
 
-若要自訂草稿的使用者資料儲存，您必須實作 `DraftDataService` 介面。 下列程式碼範例說明方法和引數。
+若要自訂草稿的使用者資料儲存，您必須實作`DraftDataService`介面的所有方法。 下列程式碼範例說明方法和引數。
 
 ```java
 /**
@@ -101,7 +101,7 @@ public interface DraftDataService {
 
 ## 提交資料服務 {#submission-data-service}
 
-若要自訂提交時之使用者資料的儲存，您必須實作 `SubmitDataService` 介面。 下列程式碼範例說明方法和引數。
+若要自訂提交之使用者資料的儲存，您必須實作`SubmitDataService`介面的所有方法。 下列程式碼範例說明方法和引數。
 
 ```java
 /**

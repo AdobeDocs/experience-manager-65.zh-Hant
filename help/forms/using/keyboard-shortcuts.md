@@ -17,34 +17,34 @@ ht-degree: 4%
 
 # AEM Forms鍵盤快速鍵 {#aem-forms-keyboard-shortcuts}
 
-<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。本文介紹使用基礎元件製作最適化Forms的舊方法。 </span>
+<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。本文介紹使用基礎元件製作最適化Forms的舊方法。</span>
 
 本文列出可與Windows和Macintosh作業系統的最適化表單編輯器、主題編輯器、內容瀏覽器及通訊管理搭配使用的鍵盤快速鍵。
 
 ## 最適化表單編輯器 {#adaptiveformeditor}
 
-| **動作** | **Windows上的捷徑** | **macOS上的捷徑** |
+| **動作** | Windows上的&#x200B;**捷徑** | macOS上的&#x200B;**捷徑** |
 |---|---|---|
 | 開啟所選最適化表單元件的「屬性」瀏覽器 | Alt+Enter | Alt+Return |
 | 關閉所選最適化表單元件的屬性瀏覽器 | Ctrl+Alt+W | Command+Alt+W |
 | 在屬性瀏覽器中儲存所選最適化表單元件的變更 | Ctrl+S | Command+S |
 | 編輯所選最適化表單元件的規則 | Ctrl+Alt+Enter | Command+Alt+Return |
-| 在預覽和目前選取的模式（例如，編輯和支架）之間切換 | Ctrl+Shift+M | Ctrl+Shift+M&amp;ast； |
-| 復原上次變更 | Ctrl+Z | Ctrl+Z&amp;ast； |
-| 重做最後一次變更 | Ctrl+Y | Ctrl+Y&amp;ast； |
+| 在預覽和目前選取的模式（例如，編輯和支架）之間切換 | Ctrl+Shift+M | Ctrl+Shift+M&amp;amp；ast； |
+| 復原上次變更 | Ctrl+Z | Ctrl+Z&amp;amp；ast； |
+| 重做最後一次變更 | Ctrl+Y | Ctrl+Y&amp;amp；ast； |
 | 選取多個元件 | Shift+Click | Shift+Click |
-| 複製所選的元件 | Ctrl-C | Ctrl-C&amp;ast； |
-| 剪下所選的元件。 剪下的元件在貼到新位置之前不會消失。 | Ctrl-X | Ctrl-X&amp;ast； |
+| 複製所選的元件 | Ctrl-C | Ctrl-C&amp;amp；ast； |
+| 剪下所選的元件。 剪下的元件在貼到新位置之前不會消失。 | Ctrl-X | Ctrl-X&amp;amp；ast； |
 | 貼上元件 | Ctrl+V | Ctrl+V |
-| 刪除選取的元件 | Ctrl+Del | Ctrl+Del&amp;ast； |
-| 刪除選取的元件 | Ctrl+退格鍵 | Ctrl+退格鍵&amp;ast； |
-| 在預覽模式下使用RTF編輯器元件時將文字設為粗體 | Ctrl+B | Ctrl+B&amp;ast； |
-| 在預覽模式下使用RTF編輯器元件時使文字變為斜體 | Ctrl+I | Ctrl+儲存(&amp;A)； |
-| 在預覽模式下使用RTF編輯器元件時將文字設為粗體 | Ctrl+U | Ctrl+U&amp;Ast； |
+| 刪除選取的元件 | Ctrl+Del | Ctrl+Del&amp;amp；ast； |
+| 刪除選取的元件 | Ctrl+退格鍵 | Ctrl+退格鍵&amp;amp；ast； |
+| 在預覽模式下使用RTF編輯器元件時將文字設為粗體 | Ctrl+B | Ctrl+B&amp;amp；ast； |
+| 在預覽模式下使用RTF編輯器元件時使文字變為斜體 | Ctrl+I | Ctrl+I&amp;amp；ast； |
+| 在預覽模式下使用RTF編輯器元件時將文字設為粗體 | Ctrl+U | Ctrl+U&amp;amp；ast； |
 
 >[!NOTE]
 >
->標示為&#39;&amp;ast；&#39;的捷徑可與macOS上的Ctrl和Command鍵搭配使用。
+>標示「&amp;amp；ast；」的捷徑可同時使用macOS上的Ctrl和Command鍵。
 
 >[!NOTE]
 >
@@ -56,21 +56,21 @@ ht-degree: 4%
 
 ## 主題編輯器  {#themeeditor}
 
-| **動作** | **Windows上的捷徑** | **macOS上的捷徑** |
+| **動作** | Windows上的&#x200B;**捷徑** | macOS上的&#x200B;**捷徑** |
 |---|---|---|
 | 開啟主題中所選元件的「屬性」瀏覽器 | Alt+Enter | Alt+Return |
 | 關閉主題中所選元件的「屬性」瀏覽器 | Ctrl+Alt+W | Command+Alt+W |
-| 復原上次變更 | Ctrl+Z | Ctrl+Z&amp;ast； |
-| 重做最後一次變更 | Ctrl+Y | Ctrl+Y&amp;ast； |
-| 在「屬性」瀏覽器中，儲存主題中所選元件的變更 | Ctrl+S | Ctrl+S&amp;ast； |
+| 復原上次變更 | Ctrl+Z | Ctrl+Z&amp;amp；ast； |
+| 重做最後一次變更 | Ctrl+Y | Ctrl+Y&amp;amp；ast； |
+| 在「屬性」瀏覽器中，儲存主題中所選元件的變更 | Ctrl+S | Ctrl+S&amp;amp；ast； |
 
 >[!NOTE]
 >
-標示為&#39;&amp;ast；&#39;的捷徑可與macOS上的Ctrl和Command鍵搭配使用。
+標示「&amp;amp；ast；」的捷徑可同時使用macOS上的Ctrl和Command鍵。
 
 ## 內容瀏覽器  {#contentbrowser}
 
-| **動作** | **Windows上的捷徑** | **macOS上的捷徑** |
+| **動作** | Windows上的&#x200B;**捷徑** | macOS上的&#x200B;**捷徑** |
 |---|---|---|
 | 觀看中時展開內容瀏覽器的「表單物件」樹狀結構中的所有摺疊式功能表 | Ctrl+A可選取所有摺疊式功能表，接著按向右鍵可展開 | Command+A可選取所有摺疊面板，接著按向右鍵可展開 |
 | 聚焦時，摺疊內容瀏覽器表單物件樹狀結構中的所有摺疊式功能表 | Ctrl+A可選取所有摺疊式功能表，接著按向左鍵可摺疊 | Command+A可選取所有摺疊式功能表，接著按向左鍵可摺疊 |
@@ -79,15 +79,15 @@ ht-degree: 4%
 | 在Forms物件樹狀結構中選取下一個專案 | 向下鍵 | 向下鍵 |
 | 選取Forms物件樹狀結構中的上一個專案 | 向上鍵 | 向上鍵 |
 
-[1] 取代Windows的Ctrl +向右鍵，以及macOS的Command +向右鍵。\
-[2] 取代Windows的Ctrl +向左鍵，以及macOS的Command +向左鍵。
+[1]取代Windows的Ctrl +向右鍵，以及macOS的Command +向右鍵。\
+[2]取代Windows的Ctrl +向左鍵，以及macOS的Command +向左鍵。
 
 ## 通信管理 {#correspondence-management}
 
 本節列出您可以在「通訊管理」文字編輯器中使用的各種鍵盤和協助工具捷徑。 您可以在下列情況下使用這些捷徑：
 
-* 建立或編輯 [文字](texts-interactive-communications.md) 資產
-* 點選相關的「編輯」圖示後編輯文字模組( ![edittextmodule](assets/edittextmodule.png))條件 [建立通訊](/help/forms/using/create-correspondence.md).
+* 正在建立或編輯[文字](texts-interactive-communications.md)資產
+* 在[建立通訊](/help/forms/using/create-correspondence.md)時，點選相關的「編輯」圖示(![edittextmodule](assets/edittextmodule.png))之後編輯文字模組。
 
 ### 文字選取範圍及移動游標 {#text-selection-and-moving-the-cursor-around}
 
@@ -96,7 +96,7 @@ ht-degree: 4%
   <tr>
    <th><strong>操作</strong></th> 
    <th><strong>Windows上的捷徑</strong></th> 
-   <th><strong>macOS上的捷徑</strong><br /> </th> 
+   <th>macOS上的<strong>捷徑</strong><br /> </th> 
   </tr>
   <tr>
    <td><p>選取目前文字</p> </td> 
@@ -126,7 +126,7 @@ ht-degree: 4%
   <tr>
    <td><p>將游標移到下一個字的開頭</p> </td> 
    <td><p>Ctrl+向右鍵</p> </td> 
-   <td>Option+向右鍵 <em><sup>[1]</sup></em></td> 
+   <td>Option+向右鍵<em><sup>[1]</sup></em></td> 
   </tr>
   <tr>
    <td><p>將游標移到上一個單字的開頭</p> </td> 
@@ -246,7 +246,7 @@ ht-degree: 4%
   <tr>
    <th><strong>操作</strong></th> 
    <th><strong>Windows上的捷徑 </strong></th> 
-   <th><strong>macOS上的捷徑</strong><br /> </th> 
+   <th>macOS上的<strong>捷徑</strong><br /> </th> 
   </tr>
   <tr>
    <td><p>還原 </p> </td> 

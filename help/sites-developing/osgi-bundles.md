@@ -20,11 +20,11 @@ ht-degree: 0%
 
 ## 使用語意版本設定 {#use-semantic-versioning}
 
-語意版本編號的公認最佳實務可在 [https://semver.org/](https://semver.org/).
+您可以在[https://semver.org/](https://semver.org/)找到語意版本編號的公認最佳實務。
 
 ## 請勿內嵌超過OSGi套件組合嚴格需要的類別和jar {#do-not-embed-more-classes-and-jars-than-strictly-needed-in-osgi-bundles}
 
-通用程式庫應分解為單獨的套件組合。 這可讓您在套件組合中重複使用它們。 包裝時 *JAR* 在OSGi套件組合中，請務必檢查線上來源，以檢視是否有人之前已執行此動作。 尋找現有套裝包裝函式的一些常見位置包括：Apache Felix、Apache Sling、Apache Geronimo、Apache ServiceMix、Eclipse套裝配方和SpringSource企業套裝存放庫。
+通用程式庫應分解為單獨的套件組合。 這可讓您在套件組合中重複使用它們。 在OSGi套件組合中包裝&#x200B;*JAR*&#x200B;時，請務必檢查線上來源，以檢視是否有人之前已執行此動作。 尋找現有套裝包裝函式的一些常見位置包括：Apache Felix、Apache Sling、Apache Geronimo、Apache ServiceMix、Eclipse套裝配方和SpringSource企業套裝存放庫。
 
 ## 取決於所需的最低套件組合版本 {#depend-on-the-lowest-needed-bundle-versions}
 
@@ -34,7 +34,7 @@ ht-degree: 0%
 
 當套件已匯出時，已建立供其他人相依的API。 請務必儘可能減少匯出次數，並確認要匯出的內容為API。 取得私用方法/類別並設為公用會比取得先前已匯出的內容並設為私用要容易得多。
 
-一律將實作放置在不同位置 *實作* 封裝。 根據預設， *maven-bundle-plugin* 匯出專案中沒有 *實作* 在其名稱中。
+一律將實作放在單獨的&#x200B;*impl*&#x200B;套件中。 根據預設，*maven-bundle-plugin*&#x200B;會匯出專案中名稱沒有&#x200B;*impl*&#x200B;的任何專案。
 
 ## 一律明確定義每個匯出套件的語意版本 {#always-explicitly-define-a-semantic-version-for-each-package-exported}
 
@@ -42,4 +42,4 @@ ht-degree: 0%
 
 ## 在公開處包含中繼型別資訊 {#include-metatype-information-where-exposed}
 
-藉由指定有意義的中繼型別資訊，讓您的服務和元件在Felix主控台中更容易理解。 SCR註釋和屬性清單可在以下網址找到： [https://felix.apache.org/documentation/subprojects/apache-felix-maven-scr-plugin/scr-annotations.html](https://felix.apache.org/documentation/subprojects/apache-felix-maven-scr-plugin/scr-annotations.html).
+藉由指定有意義的中繼型別資訊，讓您的服務和元件在Felix主控台中更容易理解。 您可以在[https://felix.apache.org/documentation/subprojects/apache-felix-maven-scr-plugin/scr-annotations.html](https://felix.apache.org/documentation/subprojects/apache-felix-maven-scr-plugin/scr-annotations.html)找到SCR註解和屬性的清單。

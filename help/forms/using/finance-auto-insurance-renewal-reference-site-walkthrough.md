@@ -37,23 +37,23 @@ We.Finance自動保險應用程式案例是針對使用者的視覺敘述，其�
 
 ### Gloria傳送來自We.Finance的保單續約通訊 {#gloria-sends-an-insurance-policy-renewal-communication-from-we-finance}
 
-Gloria登入AEM執行個體，按一下 **汽車保險續約，** 然後按一下 **開啟Agent UI**. 按一下即可使用Sarah Rose的保單詳細資料預先填入保險檔案。 Gloria點按次數 **提交** 而訊息會顯示在「已起始提交」畫面上，並在數秒後顯示「已成功提交」。
+Gloria登入AEM執行個體，按一下&#x200B;**自動保險續約**，然後按一下&#x200B;**開啟代理程式UI**。 按一下即可使用Sarah Rose的保單詳細資料預先填入保險檔案。 Gloria按一下&#x200B;**提交**，熒幕上會顯示訊息「已起始提交」，然後在幾秒鐘後顯示「已成功提交」。
 
 Sarah收到一封電子郵件，主旨為「您的汽車保險續約」。
 
-![Agent UI](assets/agent_ui_email_new.png)
+![代理程式UI](assets/agent_ui_email_new.png)
 
 #### 親眼看看 {#see-it-yourself}
 
-前往 **Adobe Experience Manager** > **Forms** > **Forms與檔案** > **We.Finance** > **汽車保險**. 選取自動保險續約 **互動式通訊** 並按一下 **開啟Agent UI**. 互動式通訊會在Agent UI中開啟。 輸入有效的電子郵件地址，這樣他們就可以收到附加原則檔案的電子郵件，然後按一下[提交]。
+移至&#x200B;**Adobe Experience Manager** > **Forms** > **Forms與檔案** > **We.Finance** > **汽車保險**。 選取自動保險續約&#x200B;**互動式通訊**&#x200B;並按一下&#x200B;**開啟代理程式UI**。 互動式通訊會在Agent UI中開啟。 輸入有效的電子郵件地址，這樣他們就可以收到附加原則檔案的電子郵件，然後按一下[提交]。
 
-您可以直接從存取及檢視「汽車保險續約」互動式通訊 `https://[authorHost]: authorPort]/aem/formdetails.html/content/dam/formsanddocuments/we-finance/autoinsurance/auto-insurance-renewal.`
+您可以直接從`https://[authorHost]: authorPort]/aem/formdetails.html/content/dam/formsanddocuments/we-finance/autoinsurance/auto-insurance-renewal.`存取及檢視「汽車保險續約」互動式通訊
 
 ### Sarah收到We.Finance的保單續約通訊，並決定續約 {#sarah-receives-an-insurance-policy-renewal-communication-from-we-finance-and-decides-to-renew}
 
 Sarah收到一封包含We.Finance附件的電子郵件，提醒Sarah她的汽車保險單即將到期。 附件為Sarah汽車保險信函的列印版本。
 
-Sarah點按次數 **立即續約** 並導向至其汽車保險信件的網頁版本。 在此信件的頂端，Sarah會尋找原則到期前的剩餘時間。 此頁面為Sarah提供其保單詳細資料的基本概觀，例如保單編號、到期金額以及其他資訊，例如折扣優惠和忠誠獎勵等。 Sarah再按一下 **立即續約** 位於原則底部。
+Sarah按一下&#x200B;**立即續約**，並導向至其汽車保險信函的網頁版本。 在此信件的頂端，Sarah會尋找原則到期前的剩餘時間。 此頁面為Sarah提供其保單詳細資料的基本概觀，例如保單編號、到期金額以及其他資訊，例如折扣優惠和忠誠獎勵等。 Sarah再次按一下原則底部的&#x200B;**立即續約**。
 
 ![ref1](assets/ref1.png)
 
@@ -65,13 +65,13 @@ Sarah點按次數 **立即續約** 並導向至其汽車保險信件的網頁版
 
 #### 親眼看看 {#see-it-yourself-1}
 
-您必須已收到附有PDF的電子郵件。 此PDF是車險信函的列印版本。 按一下 **立即續約** 以存取原則的網頁版本。 檢查您的個人資訊和原則詳細資料，然後按一下 **立即續約** 這會將您帶往另一個互動式通訊。
+您必須已收到附有PDF的電子郵件。 此PDF是車險信函的列印版本。 按一下[立即續約] ****&#x200B;以存取原則的Web版本。 檢查您的個人資訊和原則詳細資料，然後按一下[立即續約]****，即可進入另一個互動式通訊。
 
-此 **立即續約** 電子郵件中的按鈕會將Sarah導向網頁上的原則。 您可以造訪下列URL：
+電子郵件中的「**立即續約**」按鈕會將Sarah導向網頁上的原則。 您可以造訪下列URL：
 
 `https://[authorServer]:[authorPort]/content/document.html?schema=fdm&documentId=/content/forms/af/we-finance/autoinsurance/auto-insurance-renewal/channels/web.html&customerId=1`
 
-您可以檢視車險續約的詳細摘要，然後按一下 **立即續約** ，位於頁面底部。
+您可以檢視車險續約的詳細摘要，然後按一下頁面底部的&#x200B;**立即續約**。
 
 ### Sarah到達付款頁面 {#sarah-reaches-the-payment-page}
 
@@ -83,7 +83,7 @@ We.Finance會將Sarah帶往「付款」頁面。 Sarah會用記錄重新檢查�
 
 #### 親眼看看 {#see-it-yourself-2}
 
-按一下 **立即續約** 以存取「付款」頁面。 填寫您的信用卡資訊，然後按一下 **進行付款**.
+按一下[立即續約] ****&#x200B;以存取付款頁面。 填寫您的信用卡資訊，然後按一下&#x200B;**付款**。
 
 您可以在撰寫執行個體中前往付款頁面
 
@@ -91,7 +91,7 @@ We.Finance會將Sarah帶往「付款」頁面。 Sarah會用記錄重新檢查�
 
 ### Sarah進行付款並完成程式 {#sarah-makes-the-payment-and-completes-the-process}
 
-Sarah填寫她的信用卡詳細資料，並按一下 **進行付款**.
+Sarah填寫信用卡詳細資料，然後按一下&#x200B;**付款**。
 
 #### 運作方式 {#how-it-works-2}
 

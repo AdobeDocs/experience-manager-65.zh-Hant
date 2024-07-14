@@ -25,8 +25,8 @@ ht-degree: 0%
 1. 在管理控制檯中，按一下「設定>使用者管理>網域管理」。
 1. 按一下要編輯的網域名稱。
 1. 若要變更網域名稱，請變更「名稱」方塊中的文字。
-1. 若要變更企業或混合式網域的驗證資訊，請按一下頁面底部適當的驗證名稱。 在「編輯驗證」頁面上，視需要變更設定。 (請參閱 [驗證設定](/help/forms/using/admin-help/configuring-authentication-providers.md#authentication-settings).)
-1. 若要變更企業網域的目錄資訊，請按一下頁面底端的適當目錄名稱。 在「編輯目錄」頁面中，視需要變更設定。 (請參閱 [新增目錄或自訂SPI](/help/forms/using/admin-help/configuring-directories.md#adding-directories-or-custom-spis).)
+1. 若要變更企業或混合式網域的驗證資訊，請按一下頁面底部適當的驗證名稱。 在「編輯驗證」頁面上，視需要變更設定。 （請參閱[驗證設定](/help/forms/using/admin-help/configuring-authentication-providers.md#authentication-settings)。）
+1. 若要變更企業網域的目錄資訊，請按一下頁面底端的適當目錄名稱。 在「編輯目錄」頁面中，視需要變更設定。 （請參閱[新增目錄或自訂SPI](/help/forms/using/admin-help/configuring-directories.md#adding-directories-or-custom-spis)。）
 1. 完成變更後，按一下「確定」。
 
 ## 將企業網域轉換為混合網域 {#convert-an-enterprise-domain-to-a-hybrid-domain}
@@ -47,4 +47,4 @@ ht-degree: 0%
 1. 按一下要轉換的混合網域名稱。
 1. 按一下「轉換為企業網域」。
 1. 檢閱所顯示有關使用者和群組資料以及使用者認證的資訊，然後按一下確定。
-1. 按一下「新增目錄」並設定必要的目錄資訊。 (請參閱 [新增目錄或自訂SPI](/help/forms/using/admin-help/configuring-directories.md#adding-directories-or-custom-spis).)
+1. 按一下「新增目錄」並設定必要的目錄資訊。 （請參閱[新增目錄或自訂SPI](/help/forms/using/admin-help/configuring-directories.md#adding-directories-or-custom-spis)。）

@@ -30,7 +30,7 @@ ht-degree: 1%
 
 ## 設定方法 {#how-to-set-up}
 
-模式偵測器會單獨發行，做為 [一個套件](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/compatpack/pd-all-aem65) 正在處理目標為AEM 6.5升級的任何來源AEM版本（從6.1到6.5）。 可使用進行安裝 [封裝管理員](/help/sites-administering/package-manager.md).
+模式偵測器會以[一個封裝](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/compatpack/pd-all-aem65)的形式單獨發行，用於從6.1到6.5的任何來源AEM版本，目標為AEM 6.5升級。 可使用[封裝管理員](/help/sites-administering/package-manager.md)進行安裝。
 
 ## 使用方式 {#how-to-use}
 
@@ -41,18 +41,18 @@ ht-degree: 1%
 >* 增加偵測率
 >* 避免業務關鍵執行個體速度變慢
 >
->建議同時執行 **在中繼環境中** 儘可能接近使用者應用程式、內容和設定領域的生產環境。
+>建議兩者同時在儘可能接近使用者應用程式、內容和設定領域的生產環境&#x200B;**上執行它**。
 
 您可以使用數種方法來檢查「模式偵測器」輸出：
 
-* **透過Felix詳細目錄主控台：**
+* 透過Felix詳細目錄主控台&#x200B;**：**
 
-1. 瀏覽至，前往AEM Web Console *https://serveraddress:serverport/system/console/configMgr*
-1. 選取 **狀態 — 模式偵測器** 如下圖所示：
+1. 瀏覽至&#x200B;*https://serveraddress:serverport/system/console/configMgr*&#x200B;以移至AEM Web Console
+1. 選取&#x200B;**狀態 — 模式偵測器**，如下圖所示：
 
-   ![screenshot-2018-2-5pattern-detector](assets/screenshot-2018-2-5pattern-detector.png)
+   ![熒幕擷圖–2018-2-5pattern-detector](assets/screenshot-2018-2-5pattern-detector.png)
 
-* **透過互動式文字型或一般JSON介面**
+* **透過互動式文字或一般JSON介面**
 * **透過反應式JSON行介面，**可在每行產生個別的JSON檔案。
 
 以下詳細說明了這兩種方法：
@@ -82,7 +82,7 @@ curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-det
 2018-02-13T14:18:32.071+01:00 [SUSPICION] The pattern=ECU/extraneous.content.usage was found by detector=ContentAccessDetector with id=a07fd94318f12312c165e06d890cbd3c2c8b8dad0c030663db8b4c800dd7c33f message="Cross-boundary overlay of internal marked path /libs/granite/operations/components/commons/commons.jsp/jcr:content referenced at /apps/granite/operations/components/commons/commons.jsp/jcr:content with properties redefined: jcr:lastModifiedBy, jcr:mimeType, jcr:data, jcr:lastModified, jcr:uuid". More info at=https://www.adobe.com/go/aem6_EC
 ```
 
-您可以使用以下專案篩選進度 `grep` 命令：
+可以使用`grep`命令篩選進度：
 
 ```shell
 curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-detector.txt | tee patterns-report.log | grep PROGRESS
@@ -98,7 +98,7 @@ curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-det
 
 ## 處理JSON介面 {#handling-the-json-interface}
 
-同樣地，JSON也可使用 [jq工具](https://stedolan.github.io/jq/) 一經發佈。
+同樣地，JSON一經發佈即可使用[jq工具](https://stedolan.github.io/jq/)進行處理。
 
 ```shell
 curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-detector.json | tee patterns-report.json | jq --unbuffered -C 'select(.suspicion == true)'
@@ -208,7 +208,7 @@ curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-det
 
 >[!NOTE]
 >
->建議的方法是將curl的整個輸出儲存到檔案中，然後透過處理 `jq` 或 `grep` 以篩選資訊型別。
+>建議的方法是將curl的整個輸出儲存到檔案中，然後透過`jq`或`grep`加以處理以篩選資訊型別。
 
 ## 偵測範圍 {#scope}
 

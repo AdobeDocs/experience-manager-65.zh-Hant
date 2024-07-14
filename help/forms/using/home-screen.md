@@ -26,23 +26,23 @@ ht-degree: 0%
 
 下圖會在預設的Home畫面上以重要元件的標註進行註解。
 
-![Forms應用程式首頁](assets/home-screen-1.png)
+![Forms應用程式主畫面](assets/home-screen-1.png)
 
 <!--Click to enlarge
 
 ![home-screen-1-1](assets/home-screen-1-1.png)-->
 
-1. **功能表按鈕**：選取 **選單** 按鈕以瀏覽至「工作」、「Forms」、「寄件匣」和「設定」。 如果您的AEM Forms應用程式已連線至AEM Forms JEE伺服器，您會看到「工作」選項。 「工作」選項也會儲存從處理序中的工作建立的草稿。 若為AEM Forms OSGi伺服器，會隱藏工作選項。 Outbox會在與伺服器同步之前儲存已儲存的表單和草稿。 應用程式啟用時，「寄件匣」中所有儲存的表單和草稿都會上傳至AEM Forms伺服器 [與伺服器同步](../../forms/using/sync-app.md). 如需有關設定的詳細資訊，請參閱 [更新一般設定](../../forms/using/update-general-settings.md).
-1. **任務或表單**：選取列出的工作或您要使用的表單。
-1. **水準省略符號**：表示動作可用於表單。 點選省略符號會顯示作者提供的動作和說明。 此 **刪除草稿** 和 **完成** 當您選取省略符號時，選項是可見的。
-1. **重新整理圖示**：選取重新整理圖示，即可將應用程式與AEM Forms伺服器同步。
+1. **功能表按鈕**：選取&#x200B;**功能表**&#x200B;按鈕以瀏覽至[工作]、[Forms]、[寄件匣]和[設定]。 如果您的AEM Forms應用程式已連線至AEM Forms JEE伺服器，您會看到「工作」選項。 「工作」選項也會儲存從處理序中的工作建立的草稿。 若為AEM Forms OSGi伺服器，會隱藏工作選項。 Outbox會在與伺服器同步之前儲存已儲存的表單和草稿。 當應用程式與伺服器](../../forms/using/sync-app.md)進行[同步處理時，「寄件匣」中所有儲存的表單和草稿都會上傳至AEM Forms伺服器。 如需設定的詳細資訊，請參閱[更新一般設定](../../forms/using/update-general-settings.md)。
+1. **任務或表單**：選取您想要使用的列出任務或表單。
+1. **水準省略符號**：表示表單有可用的動作。 點選省略符號會顯示作者提供的動作和說明。 當您選取省略符號時，**刪除草稿**&#x200B;和&#x200B;**完成**&#x200B;選項會顯示。
+1. **重新整理圖示**：選取重新整理圖示，即可將您的應用程式與AEM Forms伺服器同步。
 
 ### 自訂首頁畫面 {#customizing-the-home-screen}
 
 ![一般設定](assets/gen-settings.png)
 
-您可以從以下位置變更應用程式的預設主畫面： **[一般設定](../../forms/using/update-general-settings.md)** ，或來自應用程式的 **偏好設定** 索引標籤中的「HTML工作區」。
+您可以從應用程式的&#x200B;**[一般設定](../../forms/using/update-general-settings.md)**&#x200B;或HTMLWorkspace上的&#x200B;**偏好設定**&#x200B;標籤變更應用程式的預設主畫面。
 
 對應用程式上首頁畫面設定所做的變更，會影響到目前登入使用者或目前行動裝置上使用者的首頁畫面。
 
-不過，在HTML Workspace中進行的變更會影響所有登入AEM Forms伺服器的AEM Forms應用程式使用者。
+不過，HTMLWorkspace中所做的變更會影響所有登入AEM Forms伺服器的AEM Forms應用程式使用者。

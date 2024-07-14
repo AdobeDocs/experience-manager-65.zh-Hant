@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # 正在設定[外出]設定 {#configuring-out-of-office-settings}
 
-「不在辦公室」功能可讓使用者或管理員指定使用者何時不在辦公室，且無法完成AEM表單所指派的工作。 當使用者設定為「不在辦公室」時，其任務會指派給一個或多個指定使用者。 使用者可以在Workspace中變更其「外出」設定，或管理員可以代表使用者在Forms Workflow中變更設定。
+「不在辦公室」功能可讓使用者或管理員指定使用者何時不在辦公室，且無法完成AEM表單所指派的工作。 當使用者設定為「不在辦公室」時，其任務會指派給一個或多個指定使用者。 使用者可以在Workspace中變更其「休假中」設定，或管理員可以代表使用者在Forms Workflow中變更設定。
 
 建立處理作業時，Workbench使用者可以指定是否可因「外出」設定而重新導向作業。
 
@@ -39,14 +39,14 @@ ht-degree: 0%
 
 ## 變更使用者的休假狀態 {#change-a-user-s-out-of-office-status}
 
-1. 尋找使用者，如所述 [檢視使用者的休假資訊](configuring-out-office-settings.md#view-a-user-s-out-of-office-information).
+1. 如[檢視使用者外出資訊](configuring-out-office-settings.md#view-a-user-s-out-of-office-information)中所述，尋找使用者。
 1. 按一下您要變更的使用者名稱。
-1. 從 *使用者名稱* 目前為清單，請選取[在辦公室中]或[不在辦公室]。
+1. 從&#x200B;*使用者名稱*&#x200B;目前的清單中，選取[在辦公室中]或[不在辦公室]。
 1. 按一下「儲存」。
 
 ## 新增使用者的「不在辦公室」日期範圍 {#add-an-out-of-office-date-range-for-a-user}
 
-1. 尋找使用者，如所述 [檢視使用者的休假資訊](configuring-out-office-settings.md#view-a-user-s-out-of-office-information).
+1. 如[檢視使用者外出資訊](configuring-out-office-settings.md#view-a-user-s-out-of-office-information)中所述，尋找使用者。
 1. 按一下您要變更的使用者名稱。
 1. 按一下「新增日期範圍」。
 1. 輸入開始時間和結束時間。 您可以按一下「行事曆」圖示以選取日期。 如果您未指定結束時間，使用者將會無限期設為不在辦公室。
@@ -61,7 +61,7 @@ ht-degree: 0%
 * 指派將接收大部分使用者任務的預設使用者，但指定將來自特定流程的任務重新指派給其他使用者，或繼續指派給不在辦公室的使用者。
 * 不要指派預設使用者，而是將特定程式中的特定工作指派給特定使用者。
 
-   1. 尋找使用者，如所述 [檢視使用者的休假資訊](configuring-out-office-settings.md#view-a-user-s-out-of-office-information).
+   1. 如[檢視使用者外出資訊](configuring-out-office-settings.md#view-a-user-s-out-of-office-information)中所述，尋找使用者。
    1. 按一下您要變更的使用者名稱。
    1. 在「外出工作的預設使用者」清單中，從清單中選取使用者。 如果您不想指定預設使用者來接收重新指派的專案，請選取「不要指派」。
 

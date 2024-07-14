@@ -8,7 +8,7 @@ role: Admin,Architect,Data Architect,Developer
 source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
 workflow-type: tm+mt
 source-wordcount: '295'
-ht-degree: 57%
+ht-degree: 58%
 
 ---
 
@@ -30,22 +30,22 @@ ht-degree: 57%
 
 系統管理員一次只需建立一個設定，或者在需要新工作區來組織內容模型時建立，這個情況很少發生。出於本快速入門指南的目的，我們只需要建立一個設定。
 
-1. 登入AEM，從主功能表選取 **「工具」>「一般」>「設定瀏覽器」**.
-1. 提供 **標題** 以取得設定的。
-   * 系統會根據標題自動產生名稱，並依據以下專案進行調整： [AEM命名慣例。](/help/sites-developing/naming-conventions.md)。它會成為存放庫中的節點名稱。
+1. 登入AEM，從主功能表選取&#x200B;**工具>一般>設定瀏覽器**。
+1. 提供設定的&#x200B;**標題**。
+   * 名稱將根據標題自動產生，並根據[AEM命名慣例進行調整。](/help/sites-developing/naming-conventions.md)。它會成為存放庫中的節點名稱。
 1. 檢查以下選項：
    * **內容片段模型**
    * **GraphQL持續查詢**
 
    ![建立設定](assets/create-configuration.png)
 
-1. 按一下 **建立**
+1. 按一下「**建立**」。
 
 您可以視需要建立多個組態。 設定也可以是巢狀。
 
 >[!NOTE]
 >
->組態選項以及 **內容片段模型** 和 **GraphQL持續查詢** 視您的實作需求而定。
+>根據您的實作需求，除了&#x200B;**內容片段模型**&#x200B;和&#x200B;**GraphQL持續查詢**&#x200B;之外，可能還需要設定選項。
 
 ## 後續步驟 {#next-steps}
 

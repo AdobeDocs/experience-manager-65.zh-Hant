@@ -31,34 +31,34 @@ ht-degree: 2%
   </tr>
   <tr>
    <td><p>建立WebLogic受管理伺服器</p></td>
-   <td><p>正在執行</p></td>
+   <td><p>執行中</p></td>
   </tr>
   <tr>
    <td><p>增加伺服器執行緒計數</p></td>
-   <td><p>正在執行</p></td>
+   <td><p>執行中</p></td>
   </tr>
   <tr>
    <td><p>部署AEM表單產品</p></td>
-   <td><p>正在執行</p></td>
+   <td><p>執行中</p></td>
   </tr>
  </tbody>
 </table>
 
 >[!NOTE]
 >
->如果您在Red Hat® Enterprise Linux Advanced Server 4.0上執行WebLogic Server，請設定 `LD_ASSUME_KERNEL` 環境變數變更為2.4.19，需使用 `export LD_ASSUME_KERNEL=2.4.19` 命令。 然後，從您設定此環境變數的相同殼層執行WebLogic Server。
+>如果您正在Red Hat® Enterprise Linux Advanced Server 4.0上執行WebLogic Server，請使用`export LD_ASSUME_KERNEL=2.4.19`命令將`LD_ASSUME_KERNEL`環境變數設定為2.4.19。 然後，從您設定此環境變數的相同殼層執行WebLogic Server。
 
 ## 啟動WebLogic Server {#start-weblogic-server}
 
-1. 在命令提示字元中，移至 *[appserver根目錄]*/user_projects/domains/*[appserverdomain]*.
+1. 從命令提示字元移至&#x200B;*[appserver root]*/user_projects/domains/*[appserverdomain]*。
 1. 輸入以下命令：
 
    * (Windows) `startWebLogic.cmd`
-   * (Linux、UNIX) ./ `startWebLogic.sh`
+   * (Linux， UNIX) ./ `startWebLogic.sh`
 
 ## 停止WebLogic Server {#stop-weblogic-server}
 
-1. 輸入「 」以啟動WebLogic Server管理主控台 `https://[host name]:7001/console` 在網頁瀏覽器的URL行中。
+1. 在網頁瀏覽器的URL行中輸入`https://[host name]:7001/console`，啟動WebLogic Server管理主控台。
 1. 輸入建立此WebLogic組態時使用的使用者名稱和密碼來登入，然後按一下[登入]。
 1. 在「變更中心」下，按一下「鎖定與編輯」。
 1. 在「網域結構」下，按一下「環境」>「伺服器」。
@@ -71,22 +71,22 @@ WebLogic伺服器管理主控台已無法使用，而且您執行start命令的�
 
 ## 啟動WebLogic管理主控台 {#start-weblogic-administration-console}
 
-1. 如果WebLogic Admin Server尚未執行，請從命令提示字元移至 *[appserver根目錄]\user_projects\domains\[domainname]* 目錄，並輸入下列指令：
+1. 如果WebLogic Admin Server尚未執行，請從命令提示字元移至&#x200B;*[appserver root]\user_projects\domains\[domainname]*&#x200B;目錄，然後輸入下列命令：
 
    * (Windows) `startWebLogic.cmd`
-   * (Linux、UNIX) ./ `startWebLogic.sh`
+   * (Linux， UNIX) ./ `startWebLogic.sh`
 
-1. 透過輸入 `https://[host name]:[port]/console` 在網頁瀏覽器的URL行中，其中 *[連線埠]* 是不安全的接聽連線埠。 依預設，此連線埠值為7001。
+1. 在網頁瀏覽器的URL行中輸入`https://[host name]:[port]/console`，存取WebLogic伺服器管理主控台，其中&#x200B;*[連線埠]*&#x200B;是不安全的接聽連線埠。 依預設，此連線埠值為7001。
 1. 在登入畫面上，輸入您的管理員使用者名稱和密碼，然後按一下「登入」。
 
 ## 啟動節點管理員 {#start-node-manager}
 
 1. 請確定WebLogic Server正在執行。
-1. 在新的命令提示字元中，移至 *[appserver根目錄]*/server/bin。
+1. 從新的命令提示字元，移至&#x200B;*[appserver root]*/server/bin。
 1. 輸入以下命令：
 
    * (Windows) `startNodeManager.cmd`
-   * (Linux、UNIX) `./startNodeManager.sh`
+   * (Linux， UNIX) `./startNodeManager.sh`
 
 ## 停止節點管理員 {#stop-node-manager}
 
@@ -99,7 +99,7 @@ WebLogic伺服器管理主控台已無法使用，而且您執行start命令的�
 >只有在建立WebLogic網域和受管理伺服器之後，才能執行此工作。
 
 1. 請確定WebLogic伺服器和節點管理員正在執行。
-1. 輸入「 」以啟動WebLogic Server管理主控台 `https://host name]:[port]/console` 在網頁瀏覽器的URL行中。
+1. 在網頁瀏覽器的URL行中輸入`https://host name]:[port]/console`，啟動WebLogic Server管理主控台。
 1. 在「網域結構」下，按一下「環境」>「伺服器」。
 1. 在右窗格中，按一下[控制]索引標籤。
 1. 選取您要啟動的受管理伺服器。
@@ -107,7 +107,7 @@ WebLogic伺服器管理主控台已無法使用，而且您執行start命令的�
 
 ## 停止WebLogic管理的伺服器 {#stop-a-weblogic-managed-server}
 
-1. 輸入「 」以啟動WebLogic Server管理主控台 `https://`*[主機名稱]：[連線埠&#x200B;]*`/console` 在網頁瀏覽器的URL行中。
+1. 在網頁瀏覽器的URL行中輸入`https://`*[主機名稱]：[連線埠&#x200B;]*`/console`，以啟動WebLogic Server管理主控台。
 1. 在「網域結構」下，按一下「環境」>「伺服器」。
 1. 在右窗格中，按一下[控制]索引標籤。
 1. 選取您要停止的受管理伺服器。

@@ -20,7 +20,7 @@ ht-degree: 0%
 
 ## SPA JavaScript API參考{#spa-javascript-api-references}
 
-以下是AEM SPA Editor SDK架構的NPM模組可用JavaScript API參考。
+以下是AEM SPA Editor SDK架構之NPM模組的可用JavaScript API參考。
 
 >[!NOTE]
 >
@@ -29,14 +29,14 @@ ht-degree: 0%
 * [元件對應](https://www.npmjs.com/package/@adobe/aem-spa-component-mapping)
 * [頁面模型管理員](https://www.npmjs.com/package/@adobe/aem-spa-model-manager)
 * [React可編輯元件](https://www.npmjs.com/package/@adobe/aem-react-editable-components)
-* [angular可編輯元件](https://www.npmjs.com/package/@adobe/aem-angular-editable-components)
+* [Angular可編輯元件](https://www.npmjs.com/package/@adobe/aem-angular-editable-components)
 
-## 開放原始碼GitHub存放庫 {#github-repositories}
+## 開啟Source GitHub存放庫 {#github-repositories}
 
 以下是GitHub上SPA程式庫的開放原始碼存放庫。
 
 * [元件對應](https://github.com/adobe/aem-spa-component-mapping)
 * [頁面模型管理員](https://github.com/adobe/aem-spa-page-model-manager)
 * [React可編輯元件](https://github.com/adobe/aem-react-editable-components)
-* [angular可編輯元件](https://github.com/adobe/aem-angular-editable-components)
+* [Angular可編輯元件](https://github.com/adobe/aem-angular-editable-components)
 * [SPA專案核心](https://github.com/adobe/aem-spa-project-core)

@@ -19,34 +19,34 @@ ht-degree: 1%
 
 ## 範例概述 {#sample-overview}
 
-AEM Forms入口網站草稿和提交元件可讓使用者將其表單儲存為草稿，並於稍後從任何裝置提交。 此外，使用者還可以在入口網站上檢視他們提交的表單。 為了啟用此功能，AEM Forms提供資料和中繼資料服務，以儲存使用者在表單中填入的資料，以及與草稿和已提交表單關聯的表單中繼資料。 依預設，此資料儲存在CRX存放庫中。 不過，當使用者透過AEM發佈執行個體（通常位於企業防火牆之外）與表單互動時，組織可能會想要自訂資料儲存，使其更安全可靠。
+AEM Forms入口網站草稿和提交元件可讓使用者將其表單儲存為草稿，並於稍後從任何裝置提交。 此外，使用者還可以在入口網站上檢視他們提交的表單。 為了啟用此功能，AEM Forms提供資料和中繼資料服務，以儲存使用者在表單中填入的資料，以及與草稿和已提交表單關聯的表單中繼資料。 依預設，此資料會儲存在CRX存放庫中。 不過，當使用者透過AEM發佈執行個體（通常位於企業防火牆之外）與表單互動時，組織可能會想要自訂資料儲存，使其更安全可靠。
 
-本檔案中討論的範例是自訂資料和中繼資料服務的參考實作，以將草稿和提交元件與資料庫整合。 範例實作中使用的資料庫為 **MySQL 5.6.24**. 不過，您可以將草稿和提交元件與所選的任何資料庫整合。
+本檔案中討論的範例是自訂資料和中繼資料服務的參考實作，以將草稿和提交元件與資料庫整合。 範例實作中使用的資料庫是&#x200B;**MySQL 5.6.24**。 不過，您可以將草稿和提交元件與所選的任何資料庫整合。
 
 >[!NOTE]
 >
 >* 本檔案中說明的範例和設定是根據MySQL 5.6.24，您必須適當地取代它們來取代資料庫系統。
->* 確保您已安裝最新版的AEM Forms附加元件套件。 如需可用套件的清單，請參閱 [AEM Forms發行版本](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) 文章。
+>* 確保您已安裝最新版的AEM Forms附加元件套件。 如需可用封裝的清單，請參閱[AEM Forms發行版本](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)文章。
 >* 範例套件僅適用於Adaptive Forms提交動作。
 
 ## 設定範例 {#set-up-and-configure-the-sample}
 
 在所有作者和發佈執行個體上執行以下步驟，以安裝和設定範例：
 
-1. 下載下列專案 **aem-fp-db-integration-sample-pkg-6.1.2.zip** 封裝至您的檔案系統。
+1. 將下列&#x200B;**aem-fp-db-integration-sample-pkg-6.1.2.zip**&#x200B;封裝下載至您的檔案系統。
 
    資料庫整合的範例套件
 
 [取得檔案](assets/aem-fp-db-integration-sample-pkg-6.1.2.zip)
 
-1. 前往AEM封裝管理員，網址為https://[*主機*]：[*連線埠*]/crx/packmgr/。
-1. 按一下 **[!UICONTROL 上傳套裝]**.
+1. 移至https://[*host*]：[*連線埠*]/crx/packmgr/的AEM封裝管理員。
+1. 按一下&#x200B;**[!UICONTROL 上傳封裝]**。
 
-1. 瀏覽以選取 **aem-fp-db-integration-sample-pkg-6.1.2.zip** 封裝並按一下 **[!UICONTROL 確定]**.
-1. 按一下 **[!UICONTROL 安裝]** 至封裝旁邊，以安裝封裝。
-1. 前往 **[!UICONTROL AEM Web主控台設定]**
-頁面位於https://[*主機*]：[*連線埠*]/system/console/configMgr。
-1. 按一下以開啟 **[!UICONTROL Forms入口網站草稿和提交設定]** 在編輯模式中。
+1. 瀏覽以選取&#x200B;**aem-fp-db-integration-sample-pkg-6.1.2.zip**&#x200B;封裝，然後按一下&#x200B;**[!UICONTROL 確定]**。
+1. 按一下封裝旁的&#x200B;**[!UICONTROL 安裝]**&#x200B;以安裝封裝。
+1. 移至&#x200B;**[!UICONTROL AEM Web主控台組態]**
+頁面位於https://[*host*]：[*連線埠*]/system/console/configMgr。
+1. 按一下以在編輯模式中開啟&#x200B;**[!UICONTROL Forms入口網站草稿和提交設定]**。
 
 1. 指定特性值，如下表所述：
 
@@ -61,7 +61,7 @@ AEM Forms入口網站草稿和提交元件可讓使用者將其表單儲存為�
 
    >[!NOTE]
    >
-   >服務的解析方式是將其名稱作為 `aem.formsportal.impl.prop` 鍵值如下：
+   >服務的名稱會解析為`aem.formsportal.impl.prop`索引鍵的值，如下所示：
 
    ```java
    @Service(value = {SubmitDataService.class, DraftDataService.class})
@@ -84,10 +84,10 @@ AEM Forms入口網站草稿和提交元件可讓使用者將其表單儲存為�
    >
    >如果您變更表格名稱，請在Form Portal設定中提供它們。
 
-1. 將其他設定維持原狀，然後按一下 **[!UICONTROL 儲存]**.
+1. 將其他組態維持原狀，然後按一下[儲存]。****
 
 1. 資料庫連線可透過Apache Sling Connection Pooled Data Source完成。
-1. 若為Apache Sling連線，請尋找並按一下以開啟 **[!UICONTROL Apache Sling連線集區資料來源]** 在「Web主控台設定」的編輯模式中。 指定特性值，如下表所述：
+1. 若為Apache Sling連線，請在Web主控台設定中尋找並按一下，以編輯模式開啟&#x200B;**[!UICONTROL Apache Sling Connection Pooled DataSource]**。 指定特性值，如下表所述：
 
 <table>
  <tbody>
@@ -97,7 +97,7 @@ AEM Forms入口網站草稿和提交元件可讓使用者將其表單儲存為�
   </tr>
   <tr>
    <td>資料來源名稱</td>
-   <td><p>從資料來源集區篩選驅動程式的資料來源名稱</p> <p><strong>注意： </strong><em>範例實作使用FormsPortal作為資料來源名稱。</em></p> </td>
+   <td><p>從資料來源集區篩選驅動程式的資料來源名稱</p> <p><strong>注意： </strong><em>範例實作使用FormsPortal做為資料來源名稱。</em></p> </td>
   </tr>
   <tr>
    <td>JDBC驅動程式類別</td>
@@ -105,7 +105,7 @@ AEM Forms入口網站草稿和提交元件可讓使用者將其表單儲存為�
   </tr>
   <tr>
    <td>JDBC連線URI<br /> </td>
-   <td>jdbc:mysql://[<em>主機</em>]：[<em>連線埠</em>]/[<em>schema_name</em>]</td>
+   <td>jdbc:mysql://[<em>主機</em>]：[<em>連線埠</em>]/[<em>結構描述名稱</em>]</td>
   </tr>
   <tr>
    <td>使用者名稱</td>
@@ -163,7 +163,7 @@ AEM Forms入口網站草稿和提交元件可讓使用者將其表單儲存為�
 >* 範例未提供適用於MySQL的JDBC驅動程式。 請確定您已布建此資料庫，並提供設定JDBC連線集區所需的資訊。
 >* 將您的作者和發佈執行個體指向使用相同的資料庫。 所有製作和發佈執行個體的JDBC連線URI欄位值必須相同。
 
-1. 將其他設定維持原狀，然後按一下 **[!UICONTROL 儲存]**.
+1. 將其他組態維持原狀，然後按一下[儲存]。****
 
 1. 如果資料庫綱要中已經有表格，請跳至下一個步驟。
 
@@ -173,7 +173,7 @@ AEM Forms入口網站草稿和提交元件可讓使用者將其表單儲存為�
    >
    >製作和發佈執行個體不需要不同的資料庫。 在所有作者和發佈執行個體上使用相同的資料庫。
 
-   **資料表的SQL陳述式**
+   資料表&#x200B;**的** SQL陳述式
 
    ```sql
    CREATE TABLE `data` (
@@ -185,7 +185,7 @@ AEM Forms入口網站草稿和提交元件可讓使用者將其表單儲存為�
    ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
    ```
 
-   **中繼資料表格的SQL陳述式**
+   中繼資料資料表&#x200B;**的** SQL陳述式
 
    ```sql
    CREATE TABLE `metadata` (
@@ -225,7 +225,7 @@ AEM Forms入口網站草稿和提交元件可讓使用者將其表單儲存為�
    ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
    ```
 
-   **SQL陳述式，用於可新增的**
+   適用於additionalmetadatatable **的** SQL陳述式
 
    ```sql
    CREATE TABLE `additionalmetadatatable` (
@@ -237,7 +237,7 @@ AEM Forms入口網站草稿和提交元件可讓使用者將其表單儲存為�
    ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
    ```
 
-   **註解表格的SQL陳述式**
+   註解資料表的&#x200B;**SQL陳述式**
 
    ```sql
    CREATE TABLE `commenttable` (
@@ -250,13 +250,13 @@ AEM Forms入口網站草稿和提交元件可讓使用者將其表單儲存為�
 
 1. 如果您在資料庫綱要中已經有表格（資料、中繼資料和additionalmetadatable），請執行以下變更表格查詢：
 
-   **變更資料表的SQL敘述句**
+   變更資料表的&#x200B;**SQL陳述式**
 
    ```sql
    ALTER TABLE `data` CHANGE `owner` `owner` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL;
    ```
 
-   **變更中繼資料表格的SQL敘述句**
+   變更中繼資料資料表的&#x200B;**SQL陳述式**
 
    ```sql
    ALTER TABLE metadata add markedForDeletion varchar(45) DEFAULT NULL
@@ -291,7 +291,7 @@ AEM Forms入口網站草稿和提交元件可讓使用者將其表單儲存為�
    CHANGE `xdpRef` `xdpRef` VARCHAR(1000) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL;
    ```
 
-   **用於變更其他可描述資料表的SQL陳述式**
+   用於變更additionalmetadatable資料表的&#x200B;**SQL陳述式**
 
    ```sql
    ALTER TABLE `additionalmetadatatable` CHANGE `value` `value` TEXT CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL, CHANGE `key` `key` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL;
@@ -303,15 +303,15 @@ AEM Forms入口網站草稿和提交元件可讓使用者將其表單儲存為�
 
 在所有作者和發佈執行個體上執行以下步驟，以安裝mysql-connector-java-5.1.39-bin.jar檔案：
 
-1. 瀏覽至 `https://'[server]:[port]'/system/console/depfinder` 和搜尋com.mysql.jdbc套件。
+1. 瀏覽至`https://'[server]:[port]'/system/console/depfinder`並搜尋com.mysql.jdbc套件。
 1. 在「匯出者」欄中，檢查封裝是否由任何束匯出。
 
    如果套件未由任何套件組合匯出，請繼續。
 
-1. 瀏覽至 `https://'[server]:[port]'/system/console/bundles` 並按一下 **[!UICONTROL 安裝/更新]**.
-1. 按一下 **[!UICONTROL 選擇檔案]** 並瀏覽以選取mysql-connector-java-5.1.39-bin.jar檔案。 另外，選取 **[!UICONTROL 開始套件組合]** 和 **[!UICONTROL 重新整理封裝]** 核取方塊。
-1. 按一下 **[!UICONTROL 安裝或更新]**. 完成後，請重新啟動伺服器。
-1. (*僅限Windows*)關閉作業系統的系統防火牆。
+1. 瀏覽至`https://'[server]:[port]'/system/console/bundles`並按一下&#x200B;**[!UICONTROL 安裝/更新]**。
+1. 按一下&#x200B;**[!UICONTROL 選擇檔案]**&#x200B;並瀏覽以選取mysql-connector-java-5.1.39-bin.jar檔案。 此外，選取&#x200B;**[!UICONTROL 開始套件]**&#x200B;和&#x200B;**[!UICONTROL 重新整理套件]**&#x200B;核取方塊。
+1. 按一下&#x200B;**[!UICONTROL 安裝或更新]**。 完成後，請重新啟動伺服器。
+1. （*僅限Windows*）關閉作業系統的系統防火牆。
 
 >[!NOTE]
 >
@@ -319,7 +319,7 @@ AEM Forms入口網站草稿和提交元件可讓使用者將其表單儲存為�
 
 ## 表單入口網站資料和中繼資料服務的範常式式碼 {#sample-code-for-forms-portal-data-and-metadata-service}
 
-以下zip包含 `FormsPortalSampleDataServiceImpl` 和 `FormsPortalSampleMetadataServiceImpl` （實作類別），用於資料和中繼資料服務介面。 此外，它包含編譯上述實作類別所需的所有類別。
+下列zip包含資料和中繼資料服務介面的`FormsPortalSampleDataServiceImpl`和`FormsPortalSampleMetadataServiceImpl` （實作類別）。 此外，它包含編譯上述實作類別所需的所有類別。
 
 [取得檔案](assets/sample_package.zip)
 
@@ -327,25 +327,25 @@ AEM Forms入口網站草稿和提交元件可讓使用者將其表單儲存為�
 
 Forms Portal的資料庫實作會使用其他中繼資料表格。 表格具有以表格的「索引鍵」和ID欄為基礎的複合主索引鍵。 MySQL允許主鍵長度不超過255個字元。 您可以使用以下使用者端驗證指令碼來驗證附加至檔案Widget的檔案名稱長度。 驗證會在附加檔案時執行。 當檔案名稱大於150 （包括副檔名）時，下列程式中提供的指令碼會顯示訊息。 您可以修改指令碼以檢查是否有不同的字元數。
 
-執行以下步驟以建立 [客戶庫](/help/sites-developing/clientlibs.md) 並使用指令碼：
+執行以下步驟來建立[使用者端程式庫](/help/sites-developing/clientlibs.md)並使用指令碼：
 
 1. 登入CRXDE並導覽至/etc/clientlibs/
-1. 建立型別節點 **cq：ClientLibraryFolder** 並提供節點的名稱。 例如，`validation`。
+1. 建立&#x200B;**cq：ClientLibraryFolder**&#x200B;型別的節點，並提供節點的名稱。 例如，`validation`。
 
    按一下&#x200B;**[!UICONTROL 「儲存全部」]**。
 
-1. 以滑鼠右鍵按一下節點，然後按一下 **[!UICONTROL 建立新檔案]**，並建立副檔名為.txt的檔案。 例如， `js.txt`將下列程式碼新增至新建立的.txt檔案，然後按一下 **[!UICONTROL 全部儲存]**.
+1. 以滑鼠右鍵按一下節點，按一下&#x200B;**[!UICONTROL 建立新檔案]**，然後建立副檔名為.txt的檔案。 例如，`js.txt`將下列程式碼新增至新建立的.txt檔案，然後按一下&#x200B;**[!UICONTROL 全部儲存]**。
 
    ```javascript
    #base=util
     util.js
    ```
 
-   在上述程式碼中， `util` 是資料夾的名稱，並且 `util.js` 中的檔案名稱 `util` 資料夾。 此 `util` 資料夾和 `util.js` 會在後續步驟中建立檔案。
+   在上述程式碼中，`util`是資料夾的名稱和`util`資料夾中檔案的`util.js`名稱。 `util`資料夾和`util.js`檔案是在後續步驟中建立的。
 
-1. 用滑鼠右鍵按一下 `cq:ClientLibraryFolder` 在步驟2中建立的節點，選取建立>建立資料夾。 建立名為的資料夾 `util`. 按一下 **[!UICONTROL 全部儲存]**. 用滑鼠右鍵按一下 `util` 資料夾中，選取「建立>建立檔案」。 建立名為的檔案 `util.js`. 按一下&#x200B;**[!UICONTROL 「儲存全部」]**。
+1. 以滑鼠右鍵按一下在步驟2中建立的`cq:ClientLibraryFolder`節點，選取建立>建立資料夾。 建立名為`util`的資料夾。 按一下&#x200B;**[!UICONTROL 全部儲存]**。 在`util`資料夾上按一下滑鼠右鍵，選取「建立>建立檔案」。 建立名為`util.js`的檔案。 按一下&#x200B;**[!UICONTROL 「儲存全部」]**。
 
-1. 將下列程式碼新增至util.js檔案，然後按一下 **[!UICONTROL 全部儲存]**. 程式碼會驗證檔案名稱的長度。
+1. 將下列程式碼新增至util.js檔案，然後按一下[儲存全部]。**** 程式碼會驗證檔案名稱的長度。
 
    ```javascript
    /*
@@ -402,22 +402,22 @@ Forms Portal的資料庫實作會使用其他中繼資料表格。 表格具有�
    >
    >此指令碼適用於現成可用的附件Widget元件。 如果您已自訂立即可用的附件Widget，請變更上述指令碼以納入個別變更。
 
-1. 將下列屬性新增至步驟2中建立的資料夾，然後按一下 **[!UICONTROL 全部儲存]**.
+1. 將下列屬性新增至步驟2中建立的資料夾，然後按一下[儲存全部]。****
 
-   * **[!UICONTROL 名稱：]** 類別
+   * **[!UICONTROL 名稱：]**&#x200B;類別
 
-   * **[!UICONTROL 型別：]** 字串
+   * **[!UICONTROL 型別：]**&#x200B;字串
 
    * **[!UICONTROL 值：]** fp.validation
 
-   * **[!UICONTROL 多選項：]** 已啟用
+   * **[!UICONTROL 多重選項：]**&#x200B;已啟用
 
-1. 瀏覽至 `/libs/fd/af/runtime/clientlibs/guideRuntime`並附加 `fp.validation` 內嵌屬性的值。
+1. 導覽至`/libs/fd/af/runtime/clientlibs/guideRuntime`並將`fp.validation`值附加至內嵌屬性。
 
-1. 導覽至/libs/fd/af/runtime/clientlibs/guideRuntimeWithXFA並附加 `fp.validation` 值至內嵌屬性。
+1. 導覽至/libs/fd/af/runtime/clientlibs/guideRuntimeWithXFA並將`fp.validation`值附加至內嵌屬性。
 
    >[!NOTE]
    >
    >如果您使用自訂使用者端程式庫，而不是guideRuntime和guideRuntimeWithXfa使用者端程式庫，請使用類別名稱，將在此程式中建立的使用者端程式庫內嵌到在執行階段載入的自訂程式庫中。
 
-1. 按一下 **[!UICONTROL 全部儲存。]** 現在，當檔案名稱大於150 （包括副檔名）字元時，會顯示訊息。
+1. 按一下「**[!UICONTROL 儲存全部」。]**&#x200B;現在，當檔案名稱大於150 （包括副檔名）字元時，會顯示訊息。

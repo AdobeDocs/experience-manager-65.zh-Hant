@@ -24,12 +24,12 @@ ht-degree: 35%
 
 >[!NOTE]
 >
->有關啟動背後的理論的詳細說明，請參閱 [啟動](/help/sites-authoring/launches.md) 在標準撰寫檔案中。
+>啟動背後的理論在標準編寫檔案中的[啟動](/help/sites-authoring/launches.md)下有詳細說明。
 >
->您可以在下列檔案中找到在傳統UI中使用啟動的特定資訊，以及 [建立啟動](/help/sites-classic-ui-authoring/classic-launches-creating.md)， [編輯啟動](/help/sites-classic-ui-authoring/classic-launches-editing.md)、和 [提升啟動](/help/sites-classic-ui-authoring/classic-launches-promoting.md).
+>在傳統UI中使用啟動的特定資訊，可在下列檔案連同[建立啟動](/help/sites-classic-ui-authoring/classic-launches-creating.md)、[編輯啟動](/help/sites-classic-ui-authoring/classic-launches-editing.md)和[提升啟動](/help/sites-classic-ui-authoring/classic-launches-promoting.md)中找到。
 
 >[!CAUTION]
 >
 >傳統UI中無法提供啟動的多個來源分支。
 
-您可以透過以下方式直接存取「啟動」主控台： [http://localhost:4502/libs/launches/content/admin.html](http://localhost:4502/libs/launches/content/admin.html)
+您可以透過[http://localhost:4502/libs/launches/content/admin.html](http://localhost:4502/libs/launches/content/admin.html)直接存取啟動主控台

@@ -21,18 +21,18 @@ ht-degree: 0%
 
 若要存取Communities工具主控台，請登入您的Author例項：
 
-* 從全域導覽： **[!UICONTROL 工具]** > **[!UICONTROL Communities]**.
+* 從全域導覽： **[!UICONTROL 工具]** > **[!UICONTROL 社群]**。
 
   ![社群](assets/communities-home.png)
 
-* [網站範本](sites.md)  — 用於建立和管理網站範本的控制檯。
+* [網站範本](sites.md) — 建立和管理網站範本的主控台。
 
-* [群組範本](tools-groups.md)  — 群組範本建立與管理的主控台。
+* [群組範本](tools-groups.md) — 用於建立和管理群組範本的主控台。
 
-* [社群功能](functions.md)  — 社群功能建立與管理的主控台。
+* [社群功能](functions.md) — 社群功能建立與管理的主控台。
 
-* [儲存設定](srp-config.md)  — 用於設定和選擇的控制檯 [預設SRP](working-with-srp.md).
+* [儲存設定](srp-config.md) — 設定和選取[預設SRP](working-with-srp.md)的主控台。
 
-* [元件指南](components-guide.md)  — 開啟互動式網站，讓您實驗SCF元件的運作方式以及其設定或自訂方式。
+* [元件指南](components-guide.md) — 開啟互動式網站，讓您嘗試使用SCF元件運作方式以及設定或自訂方式。
 
-* [徽章](badges.md)  — 主控台，您可在此新增自訂徽章，以便用於 [評分和徽章規則](implementing-scoring.md)
+* [徽章](badges.md) — 可在主控台新增自訂徽章，以用於[評分和徽章規則](implementing-scoring.md)

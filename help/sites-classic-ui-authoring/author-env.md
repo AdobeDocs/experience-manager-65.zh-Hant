@@ -20,13 +20,13 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->以下檔案著重於傳統UI。 如需有關使用新型觸控式UI編寫的資訊，請參閱 [標準制作檔案](/help/assets/assets.md).
+>以下檔案著重於傳統UI。 如需有關使用現代化觸控式UI進行編寫的資訊，請參閱[標準編寫檔案](/help/assets/assets.md)。
 
 製作環境可讓您執行與下列專案相關的工作：
 
-* [製作](/help/sites-authoring/author.md) (包括 [頁面製作](/help/sites-authoring/qg-page-authoring.md) 和 [管理資產](/help/assets/assets.md))
+* [製作](/help/sites-authoring/author.md) （包括[頁面製作](/help/sites-authoring/qg-page-authoring.md)和[管理資產](/help/assets/assets.md)）
 
-* [管理](/help/sites-administering/administer-best-practices.md) 產生及維護網站內容時所需的工作
+* [管理您在網站上產生和維護內容時所需的](/help/sites-administering/administer-best-practices.md)工作
 
 我們提供兩種圖形化使用者介面來達成此目的，這些介面可透過任何新型瀏覽器存取：
 
@@ -36,7 +36,7 @@ ht-degree: 3%
    * 它主要是綠色的。
    * 它是專為桌上型電腦裝置所設計。
    * 已不再進行維護。
-   * 以下檔案著重於此傳統UI。 如需使用新型觸控式UI編寫的相關資訊，請參閱 [標準制作檔案](/help/sites-authoring/author.md).
+   * 以下檔案著重於此傳統UI。 如需有關使用現代觸控式UI編寫的資訊，請參閱[標準編寫檔案](/help/sites-authoring/author.md)。
 
    ![chlimage_1-149](assets/chlimage_1-149.png)
 
@@ -44,8 +44,8 @@ ht-degree: 3%
 
    * 這是最新的標準AEM UI。
    * 其顏色以灰色為主，介面整潔平整。
-   * 專為觸控和桌上型裝置所設計（針對觸控最佳化）。 不過，所有裝置上的外觀和感覺都相同 [檢視及選取您的資源](/help/sites-authoring/basic-handling.md) 稍微不同（點選與點按）。
-   * 請參閱 [標準制作檔案](/help/sites-authoring/author.md) 以進一步瞭解如何使用觸控式UI進行撰寫。 以下檔案著重於傳統UI。
+   * 專為觸控和桌上型裝置所設計（針對觸控最佳化）。 所有裝置上的外觀和感覺都相同，不過[檢視和選取您的資源](/help/sites-authoring/basic-handling.md)稍有不同（點選與點按）。
+   * 如需如何使用觸控式UI編寫的詳細資訊，請參閱[標準編寫檔案](/help/sites-authoring/author.md)。 以下檔案著重於傳統UI。
 
    * 案頭：
 

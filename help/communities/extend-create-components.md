@@ -33,72 +33,72 @@ ht-degree: 0%
 
 ## 建立註解元件 {#create-the-comments-component}
 
-這些方向會指定 **群組** 以外的值 `.hidden` 因此，元件可從元件瀏覽器(sidekick)取得。
+這些指示會指定`.hidden`以外的&#x200B;**群組**&#x200B;值，以便元件可以從元件瀏覽器(sidekick)使用。
 
 刪除自動建立的JSP檔案是因為會改用預設的HBS檔案。
 
-1. 瀏覽至 **CRXDE|Lite** ([http://localhost:4502/crx/de/index.jsp](http://localhost:4502/crx/de/index.jsp))
+1. 瀏覽至&#x200B;**CRXDE|Lite** ([http://localhost:4502/crx/de/index.jsp](http://localhost:4502/crx/de/index.jsp))
 
 1. 建立自訂應用程式的位置：
 
-   * 選取 `/apps` 節點
+   * 選取`/apps`節點
 
-      * **建立資料夾** 已命名 **[!UICONTROL 自訂]**
+      * **建立名為**[!UICONTROL &#x200B;自訂&#x200B;]**的資料夾**
 
-   * 選取 `/apps/custom` 節點
+   * 選取`/apps/custom`節點
 
-      * **建立資料夾** 已命名 **[!UICONTROL 元件]**
+      * **建立名為**[!UICONTROL &#x200B;元件&#x200B;]**的資料夾**
 
-1. 選取 `/apps/custom/components` 節點
+1. 選取`/apps/custom/components`節點
 
    * **[!UICONTROL 建立>元件……]**
 
-      * **標籤**： *評論*
+      * **標籤**： *註解*
       * **標題**： *替代註解*
-      * **說明**： *替代註解樣式*
+      * **描述**： *替代註解樣式*
       * **超級型別**： *social/commons/components/hbs/comments*
       * **群組**： *自訂*
 
-   * 選取 **[!UICONTROL 下一個]**
-   * 選取 **[!UICONTROL 下一個]**
-   * 選取 **[!UICONTROL 下一個]**
-   * 選取 **[!UICONTROL 確定]**
+   * 選取&#x200B;**[!UICONTROL 下一步]**
+   * 選取&#x200B;**[!UICONTROL 下一步]**
+   * 選取&#x200B;**[!UICONTROL 下一步]**
+   * 選取&#x200B;**[!UICONTROL 確定]**
 
 1. 展開已建立的節點： `/apps/custom/components/comments`
-1. 選取 **[!UICONTROL 全部儲存]**
-1. 按一下右鍵 `comments.jsp`
-1. 選取 **[!UICONTROL 刪除]**
-1. 選取 **[!UICONTROL 全部儲存]**
+1. 選取&#x200B;**[!UICONTROL 全部儲存]**
+1. 用滑鼠右鍵按一下`comments.jsp`
+1. 選取&#x200B;**[!UICONTROL 刪除]**
+1. 選取&#x200B;**[!UICONTROL 全部儲存]**
 
 ![create-component](assets/create-component.png)
 
 ### 建立子註解元件 {#create-the-child-comment-component}
 
-這些方向已設定 **群組** 至 `.hidden` 因為頁面中僅應包含父元件。
+這些方向將&#x200B;**群組**&#x200B;設定為`.hidden`，因為只有父元件應包含在頁面中。
 
 刪除自動建立的JSP檔案是因為會改用預設的HBS檔案。
 
-1. 導覽至 `/apps/custom/components/comments` 節點
+1. 導覽至`/apps/custom/components/comments`節點
 1. 以滑鼠右鍵按一下節點
 
-   * 選取 **[!UICONTROL 建立]** > **[!UICONTROL 元件……]**
+   * 選取&#x200B;**[!UICONTROL 建立]** > **[!UICONTROL 元件……]**
 
-      * **標籤**： *評論*
+      * **標籤**： *註解*
       * **標題**： *替代註解*
-      * **說明**： *替代註解樣式*
+      * **描述**： *替代註解樣式*
       * **超級型別**： *social/commons/components/hbs/comments/comment*
       * **群組**： `*.hidden*`
 
-   * 選取 **[!UICONTROL 下一個]**
-   * 選取 **[!UICONTROL 下一個]**
-   * 選取 **[!UICONTROL 下一個]**
-   * 選取 **[!UICONTROL 確定]**
+   * 選取&#x200B;**[!UICONTROL 下一步]**
+   * 選取&#x200B;**[!UICONTROL 下一步]**
+   * 選取&#x200B;**[!UICONTROL 下一步]**
+   * 選取&#x200B;**[!UICONTROL 確定]**
 
 1. 展開已建立的節點： `/apps/custom/components/comments/comment`
-1. 選取 **[!UICONTROL 全部儲存]**
-1. 按一下右鍵 `comment.jsp`
-1. 選取 **[!UICONTROL 刪除]**
-1. 選取 **[!UICONTROL 全部儲存]**
+1. 選取&#x200B;**[!UICONTROL 全部儲存]**
+1. 用滑鼠右鍵按一下`comment.jsp`
+1. 選取&#x200B;**[!UICONTROL 刪除]**
+1. 選取&#x200B;**[!UICONTROL 全部儲存]**
 
 ![create-child-component](assets/create-child-component.png)
 
@@ -106,73 +106,73 @@ ht-degree: 0%
 
 ### 複製及修改預設HBS指令碼 {#copy-and-modify-the-default-hbs-scripts}
 
-使用 [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md)：
+使用[CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md)：
 
-* 複製 `comments.hbs`
+* 複製`comments.hbs`
 
-   * 從 [/libs/social/commons/components/hbs/comments](http://localhost:4502/crx/de/index.jsp#/libs/social/commons/components/hbs/comments)
-   * 至 [/apps/custom/components/comments](http://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments)
+   * 來自[/libs/social/commons/components/hbs/comments](http://localhost:4502/crx/de/index.jsp#/libs/social/commons/components/hbs/comments)
+   * 至[/apps/custom/components/comments](http://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments)
 
-* 編輯 `comments.hbs` 至：
+* 編輯`comments.hbs`至：
 
-   * 變更 `data-scf-component` 屬性（~第20行）：
+   * 變更`data-scf-component`屬性的值（~第20行）：
 
-      * 從 `social/commons/components/hbs/comments`
-      * 至 `/apps/custom/components/comments`
+      * 來自`social/commons/components/hbs/comments`
+      * 至`/apps/custom/components/comments`
 
    * 修改以包含自訂註解元件（第75行）：
 
-      * 取代 `{{include this resourceType='social/commons/components/hbs/comments/comment'}}`
-      * 替換為 `{{include this resourceType='/apps/custom/components/comments/comment'}}`
+      * 取代`{{include this resourceType='social/commons/components/hbs/comments/comment'}}`
+      * 與`{{include this resourceType='/apps/custom/components/comments/comment'}}`
 
-* 複製 `comment.hbs`
+* 複製`comment.hbs`
 
-   * 從 [/libs/social/commons/components/hbs/comments/comment](http://localhost:4502/crx/de/index.jsp#/libs/social/commons/components/hbs/comments/comment)
-   * 至 [/apps/custom/components/comments/comment](http://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comment)
+   * 從[/libs/social/commons/components/hbs/comments/comment](http://localhost:4502/crx/de/index.jsp#/libs/social/commons/components/hbs/comments/comment)
+   * 至[/apps/custom/components/comments/comment](http://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comment)
 
-* 編輯 `comment.hbs` 至：
+* 編輯`comment.hbs`至：
 
    * 變更data-scf-component屬性的值（~第19行）
 
-      * 從 `social/commons/components/hbs/comments/comment`
-      * 至 `/apps/custom/components/comments/comment`
+      * 來自`social/commons/components/hbs/comments/comment`
+      * 至`/apps/custom/components/comments/comment`
 
-* 選取 `/apps/custom` 節點
-* 選取 **[!UICONTROL 全部儲存]**
+* 選取`/apps/custom`節點
+* 選取&#x200B;**[!UICONTROL 全部儲存]**
 
 ## 建立使用者端資源庫資料夾 {#create-a-client-library-folder}
 
 若要避免包含此使用者端程式庫，可以使用預設註解系統clientlib的類別值( `cq.social.author.hbs.comments`)。 不過，此clientlib隨後也必須包含在預設元件的所有執行個體中。
 
-使用 [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md)：
+使用[CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md)：
 
-* 選取 `/apps/custom/components/comments` 節點
-* 選取 **[!UICONTROL 建立節點]**
+* 選取`/apps/custom/components/comments`節點
+* 選取&#x200B;**[!UICONTROL 建立節點]**
 
    * **名稱**：`clientlibs`
    * **類型**：`cq:ClientLibraryFolder`
-   * 新增至 **[!UICONTROL 屬性]** 標籤：
+   * 新增至&#x200B;**[!UICONTROL 屬性]**&#x200B;標籤：
 
       * **名稱** `categories` **型別** `String` **值** `cq.social.author.hbs.comments` `Multi`
       * **名稱** `dependencies` **型別** `String` **值** `cq.social.scf` `Multi`
 
-* 選取 **[!UICONTROL 全部儲存]**
-* 替換為 `/apps/custom/components/comments/clientlib`s節點已選取，請建立三個檔案：
+* 選取&#x200B;**[!UICONTROL 全部儲存]**
+* 選取`/apps/custom/components/comments/clientlib`節點後，建立三個檔案：
 
    * **名稱**：`css.txt`
    * **名稱**：`js.txt`
    * **名稱**： customcommentsystem.js
 
-* 輸入&#39;customcommentsystem.js&#39;作為的內容 `js.txt`
-* 選取 **[!UICONTROL 全部儲存]**
+* 輸入&#39;customcommentsystem.js&#39;作為`js.txt`的內容
+* 選取&#x200B;**[!UICONTROL 全部儲存]**
 
 ![comments-clientlibs](assets/comments-clientlibs.png)
 
 ## 註冊SCF模型與檢視 {#register-the-scf-model-view}
 
-延伸（覆寫） SCF元件時，resourceType會不同（覆寫使用搜尋範圍的相關搜尋機制） `/apps` 早於 `/libs` 以使resourceType保持相同)。 這就是為什麼需要編寫JavaScript （在使用者端程式庫中）來註冊SCF JS模型和檢視自訂resourceType的原因。
+延伸（覆寫） SCF元件時，resourceType不同（覆寫使用相對搜尋機制，在`/libs`前搜尋`/apps`，使resourceType保持相同）。 這就是為什麼需要編寫JavaScript （在使用者端程式庫中）來註冊SCF JS模型和檢視自訂resourceType的原因。
 
-輸入下列文字作為 `customcommentsystem.js`：
+輸入下列文字作為`customcommentsystem.js`的內容：
 
 ### customcommentsystem.js {#customcommentsystem-js}
 
@@ -192,9 +192,9 @@ ht-degree: 0%
 })($CQ, _, Backbone, SCF);
 ```
 
-* 選取 **[!UICONTROL 全部儲存]**
+* 選取&#x200B;**[!UICONTROL 全部儲存]**
 
-## 發佈應用程式 {#publish-the-app}
+## 應用程式Publish {#publish-the-app}
 
 若要在發佈環境中體驗擴充元件，必須複製自訂元件。
 
@@ -202,8 +202,8 @@ ht-degree: 0%
 
 * 從全域導覽，
 
-   * 選取 **[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL 復寫]**
-   * 選取 **[!UICONTROL 啟動樹狀結構]**
-   * 設定 `Start Path` 至 `/apps/custom`
-   * 取消核取 **[!UICONTROL 僅限已修改的專案]**
-   * 選取 **[!UICONTROL 啟動]** 按鈕
+   * 選取&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL 復寫]**
+   * 選取&#x200B;**[!UICONTROL 啟動樹狀結構]**
+   * 將`Start Path`設為`/apps/custom`
+   * 取消核取&#x200B;**[!UICONTROL Only Modified]**
+   * 選取&#x200B;**[!UICONTROL 啟動]**&#x200B;按鈕

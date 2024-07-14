@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # 使用已提交的XML資料建立PDF檔案 {#creating-pdf-documents-with-submittedxml-data}
 
-**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms 。**
+**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
 
 ## 使用已提交的XML資料建立PDF檔案 {#creating-pdf-documents-with-submitted-xml-data}
 
@@ -54,7 +54,7 @@ ht-degree: 0%
 1. 使用Output服務建立非互動式PDF檔案。
 1. 使用檔案管理服務將PDF表單儲存在內容服務（已棄用）中。
 
-**包含專案檔案**
+**包含專案檔**
 
 將必要的檔案納入您的開發專案中。 如果您使用Java建立使用者端應用程式，請包含必要的JAR檔案。 如果您使用Web服務，請確定您包含Proxy檔案。
 
@@ -70,7 +70,7 @@ ht-degree: 0%
 
 使用Output服務建立以表單設計和XML表單資料為基礎的非互動式PDF檔案。 在工作流程中，會從Forms服務擷取表單資料。
 
-**使用檔案管理服務將PDF表單儲存在內容服務（已棄用）中**
+**使用Document Management服務將PDF表單儲存在Content Services （已棄用）**
 
 使用檔案管理服務API將PDF檔案儲存在內容服務（已棄用）中。
 
@@ -92,58 +92,58 @@ ht-degree: 0%
 
 1. 建立Forms、輸出和檔案管理物件
 
-   * 建立 `ServiceClientFactory` 包含連線屬性的物件。
-   * 建立 `FormsServiceClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 物件。
-   * 建立 `OutputClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 物件。
-   * 建立 `DocumentManagementServiceClientImpl` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 物件。
+   * 建立包含連線屬性的`ServiceClientFactory`物件。
+   * 使用它的建構函式並傳遞`ServiceClientFactory`物件來建立`FormsServiceClient`物件。
+   * 使用它的建構函式並傳遞`ServiceClientFactory`物件來建立`OutputClient`物件。
+   * 使用它的建構函式並傳遞`ServiceClientFactory`物件來建立`DocumentManagementServiceClientImpl`物件。
 
 1. 使用Forms服務擷取表單資料
 
-   * 叫用 `FormsServiceClient` 物件的 `processFormSubmission` 方法並傳遞下列值：
+   * 叫用`FormsServiceClient`物件的`processFormSubmission`方法，並傳遞下列值：
 
-      * 此 `com.adobe.idp.Document` 包含表單資料的物件。
-      * 字串值，指定環境變數，包括所有相關的HTTP標題。 指定一或多個值，以指定要處理的內容型別 `CONTENT_TYPE` 環境變數。 例如，若要處理XML資料，請為此引數指定下列字串值： `CONTENT_TYPE=text/xml`.
-      * 字串值，指定 `HTTP_USER_AGENT` 標頭值，例如 `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`.
-      * A `RenderOptionsSpec` 儲存執行階段選項的物件。
+      * 包含表單資料的`com.adobe.idp.Document`物件。
+      * 字串值，指定環境變數，包括所有相關的HTTP標題。 為`CONTENT_TYPE`環境變數指定一或多個值，以指定要處理的內容型別。 例如，若要處理XML資料，請為此引數指定下列字串值： `CONTENT_TYPE=text/xml`。
+      * 字串值，指定`HTTP_USER_AGENT`標頭值，例如`Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`。
+      * 儲存執行階段選項的`RenderOptionsSpec`物件。
 
-     此 `processFormSubmission` 方法傳回 `FormsResult` 包含表單提交結果的物件。
+     `processFormSubmission`方法傳回包含表單提交結果的`FormsResult`物件。
 
-   * 判斷Forms服務是否已透過叫用 `FormsResult` 物件的 `getAction` 方法。 如果此方法傳回值 `0`，資料已準備好處理。
-   * 透過建立 `com.adobe.idp.Document` 物件(透過叫用 `FormsResult` 物件的 `getOutputContent` 方法。 （此物件包含可傳送至Output服務的表單資料。）
-   * 建立 `java.io.InputStream` 物件(透過叫用 `java.io.DataInputStream` 建構函式並傳遞 `com.adobe.idp.Document` 物件。
-   * 建立 `org.w3c.dom.DocumentBuilderFactory` 物件，方法是呼叫靜態 `org.w3c.dom.DocumentBuilderFactory` 物件的 `newInstance` 方法。
-   * 建立 `org.w3c.dom.DocumentBuilder` 物件(透過叫用 `org.w3c.dom.DocumentBuilderFactory` 物件的 `newDocumentBuilder` 方法。
-   * 建立 `org.w3c.dom.Document` 物件(透過叫用 `org.w3c.dom.DocumentBuilder` 物件的 `parse` 方法並傳遞 `java.io.InputStream` 物件。
-   * 擷取XML檔案中每個節點的值。 完成此工作的一種方式是建立接受兩個引數的自訂方法： `org.w3c.dom.Document` 物件以及您要擷取其值的節點名稱。 此方法會傳回代表節點值的字串值。 在此程式之後的程式碼範例中，會呼叫此自訂方法 `getNodeText`. 會顯示此方法的內文。
+   * 判斷Forms服務是否已透過叫用`FormsResult`物件的`getAction`方法來完成表單資料的處理。 如果此方法傳回值`0`，資料即可處理。
+   * 透過呼叫`FormsResult`物件的`getOutputContent`方法建立`com.adobe.idp.Document`物件來擷取表單資料。 （此物件包含可傳送至Output服務的表單資料。）
+   * 呼叫`java.io.DataInputStream`建構函式並傳遞`com.adobe.idp.Document`物件以建立`java.io.InputStream`物件。
+   * 呼叫靜態`org.w3c.dom.DocumentBuilderFactory`物件的`newInstance`方法，以建立`org.w3c.dom.DocumentBuilderFactory`物件。
+   * 呼叫`org.w3c.dom.DocumentBuilderFactory`物件的`newDocumentBuilder`方法，以建立`org.w3c.dom.DocumentBuilder`物件。
+   * 呼叫`org.w3c.dom.DocumentBuilder`物件的`parse`方法並傳遞`java.io.InputStream`物件，以建立`org.w3c.dom.Document`物件。
+   * 擷取XML檔案中每個節點的值。 完成此工作的一種方式是建立接受兩個引數的自訂方法： `org.w3c.dom.Document`物件以及您要擷取其值的節點名稱。 此方法會傳回代表節點值的字串值。 在此程式之後的程式碼範例中，此自訂方法稱為`getNodeText`。 會顯示此方法的內文。
 
 1. 使用Output服務建立非互動式PDF檔案。
 
-   透過叫用建立PDF檔案 `OutputClient` 物件的 `generatePDFOutput` 方法並傳遞下列值：
+   呼叫`OutputClient`物件的`generatePDFOutput`方法並傳遞下列值，以建立PDF檔案：
 
-   * A `TransformationFormat` 列舉值。 若要產生PDF檔案，請指定 `TransformationFormat.PDF`.
+   * `TransformationFormat`列舉值。 若要產生PDF檔案，請指定`TransformationFormat.PDF`。
    * 字串值，指定表單設計的名稱。 確認表單設計與從Forms服務擷取的表單資料相容。
    * 字串值，指定表單設計所在的內容根。
-   * A `PDFOutputOptionsSpec` 包含PDF執行階段選項的物件。
-   * A `RenderOptionsSpec` 包含演算執行階段選項的物件。
-   * 此 `com.adobe.idp.Document` 包含要與表單設計合併之資料的XML資料來源的物件。 確定此物件是由 `FormsResult` 物件的 `getOutputContent` 方法。
-   * 此 `generatePDFOutput` 方法傳回 `OutputResult` 包含作業結果的物件。
-   * 透過叫用非互動式PDF檔案 `OutputResult` 物件的 `getGeneratedDoc` 方法。 此方法會傳回 `com.adobe.idp.Document` 代表非互動式PDF檔案的例項。
+   * 包含PDF執行階段選項的`PDFOutputOptionsSpec`物件。
+   * 包含轉譯執行階段選項的`RenderOptionsSpec`物件。
+   * 包含要與表單設計合併之資料的XML資料來源的`com.adobe.idp.Document`物件。 請確定`FormsResult`物件的`getOutputContent`方法已傳回此物件。
+   * `generatePDFOutput`方法傳回包含作業結果的`OutputResult`物件。
+   * 叫用`OutputResult`物件的`getGeneratedDoc`方法，擷取非互動式PDF檔案。 此方法會傳回代表非互動式PDF檔案的`com.adobe.idp.Document`執行個體。
 
 1. 使用檔案管理服務將PDF表單儲存在內容服務（已棄用）中
 
-   透過叫用 `DocumentManagementServiceClientImpl` 物件的 `storeContent` 方法並傳遞下列值：
+   叫用`DocumentManagementServiceClientImpl`物件的`storeContent`方法並傳遞下列值以新增內容：
 
-   * 字串值，指定新增內容的存放區。 預設存放區為 `SpacesStore`. 此值為必要引數。
-   * 字串值，指定新增內容的空間完整路徑(例如 `/Company Home/Test Directory`)。 此值為必要引數。
-   * 代表新內容的節點名稱(例如， `MortgageForm.pdf`)。 此值為必要引數。
-   * 字串值，指定節點型別。 若要新增內容(例如PDF檔案)，請指定 `{https://www.alfresco.org/model/content/1.0}content`. 此值為必要引數。
-   * A `com.adobe.idp.Document` 代表內容的物件。 此值為必要引數。
-   * 字串值，指定編碼值(例如 `UTF-8`)。 此值為必要引數。
-   * 一個 `UpdateVersionType` 指定如何處理版本資訊的列舉值(例如， `UpdateVersionType.INCREMENT_MAJOR_VERSION` 增加內容版本。 )此值是必要引數。
-   * A `java.util.List` 指定與內容相關之方面的例項。 此值為選用引數，您可以指定 `null`.
-   * A `java.util.Map` 儲存內容屬性的物件。
+   * 字串值，指定新增內容的存放區。 預設存放區為`SpacesStore`。 此值為必要引數。
+   * 字串值，指定新增內容的空間完整路徑（例如`/Company Home/Test Directory`）。 此值為必要引數。
+   * 代表新內容的節點名稱（例如，`MortgageForm.pdf`）。 此值為必要引數。
+   * 字串值，指定節點型別。 若要新增內容(例如PDF檔案)，請指定`{https://www.alfresco.org/model/content/1.0}content`。 此值為必要引數。
+   * 代表內容的`com.adobe.idp.Document`物件。 此值為必要引數。
+   * 字串值，指定編碼值（例如，`UTF-8`）。 此值為必要引數。
+   * 指定如何處理版本資訊的`UpdateVersionType`列舉值(例如，`UpdateVersionType.INCREMENT_MAJOR_VERSION`以遞增內容版本。 )此值是必要引數。
+   * 指定內容相關方面的`java.util.List`執行個體。 此值是選用引數，您可以指定`null`。
+   * 儲存內容屬性的`java.util.Map`物件。
 
-   此 `storeContent` 方法傳回 `CRCResult` 說明內容的物件。 使用 `CRCResult` 物件時，您可以取得內容的唯一識別碼值等。 若要執行此工作，請叫用 `CRCResult` 物件的 `getNodeUuid` 方法。
+   `storeContent`方法傳回描述內容的`CRCResult`物件。 例如，您可以使用`CRCResult`物件來取得內容的唯一識別碼值。 若要執行此工作，請叫用`CRCResult`物件的`getNodeUuid`方法。
 
 **另請參閱**
 

@@ -32,17 +32,17 @@ ht-degree: 1%
 
 | 發行 | 目前版本 | 使用者動作 |
 |---|---|---|
-| 在JEE上Experience Manager6.5 Forms | 6.5.19.0 | [安裝最新Service Pack](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/aem-forms-current-service-pack-installation-instructions.html?lang=en) |
-| 在JEE上Experience Manager6.5 Forms | 6.5.13.0 - 6.5.18.0 | 使用下列其中一種方法： <ul><li>  <a href="https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/aem-forms-current-service-pack-installation-instructions.html?lang=en"> 安裝最新Service Pack </a> </li> <li> <a href ="#use-manual-mitigation-steps"> 使用手動緩解步驟 </a> |
-| 在JEE上Experience Manager6.5 Forms | 6.5 - 6.5.12.0 | [安裝最新Service Pack](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/aem-forms-current-service-pack-installation-instructions.html?lang=en)  </br> </br> **注意：** AEM Forms目前支援6.5.13.0版到6.5.19.0版。如果您使用舊版，建議升級至6.5.13.0或更新版本。 如需安裝AEM 6.5.13.0或更新版本的指示，請參閱發行說明。 |
+| 在JEE上Experience Manager6.5 Forms | 6.5.19.0 | [安裝最新的Service Pack](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/aem-forms-current-service-pack-installation-instructions.html?lang=en) |
+| 在JEE上Experience Manager6.5 Forms | 6.5.13.0 - 6.5.18.0 | 使用下列其中一種方法： <ul><li>  <a href="https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/aem-forms-current-service-pack-installation-instructions.html?lang=en">安裝最新的Service Pack </a> </li> <li> <a href ="#use-manual-mitigation-steps">使用手動緩解步驟</a> |
+| 在JEE上Experience Manager6.5 Forms | 6.5 - 6.5.12.0 | [安裝最新的Service Pack](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/aem-forms-current-service-pack-installation-instructions.html?lang=en) </br> </br> **注意：** AEM Forms目前支援6.5.13.0到6.5.19.0版本。如果您使用舊版，建議升級至6.5.13.0或更新版本。 如需安裝AEM 6.5.13.0或更新版本的指示，請參閱發行說明。 |
 
 ### 使用手動緩解步驟 {#use-manual-mitigation-steps}
 
 您可以使用手動緩解步驟來解決執行Service Pack 13的AEM 6.5表單伺服器到執行Service Pack 18 (6.5.13.0 - 6.5.18.0)的AEM 6.5表單伺服器上的問題：
 
-1. 下載 [struts-core 2.5.33 jar](https://repo1.maven.org/maven2/org/apache/struts/struts2-core/2.5.33/struts2-core-2.5.33.jar) 至本機資料夾。 例如，C:\Users\labuser\Desktop\struts2-core-2.5.33.jar。
-1. 從下載AEM Forms on JEE手動修補工具 [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/patch_utility/archive-patcher-1.0.0.zip).
-1. 解壓縮手動修補工具封存。 例如，將擷取至 `/Users/labuser/Desktop/archive-patcher-1.0.0 folder`. 下列檔案已解壓縮：
+1. 將[struts-core 2.5.33 jar](https://repo1.maven.org/maven2/org/apache/struts/struts2-core/2.5.33/struts2-core-2.5.33.jar)下載至本機資料夾。 例如，C:\Users\labuser\Desktop\struts2-core-2.5.33.jar。
+1. 從[Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/patch_utility/archive-patcher-1.0.0.zip)下載AEM Forms on JEE手動修補工具。
+1. 解壓縮手動修補工具封存。 例如，擷取至`/Users/labuser/Desktop/archive-patcher-1.0.0 folder`。 下列檔案已解壓縮：
    * archive-patcher-1.0.0.jar
    * patch-archive.bat
    * patch-archive.sh
@@ -67,7 +67,7 @@ ht-degree: 1%
    >
    >工具需要網際網路連線，因為它在執行階段下載相依性。 因此，在執行工具之前，請確定您已連線至網際網路。
 
-1. 以列出的順序執行下列命令，以遞回就地取代。 在執行命令之前，請將命令中的路徑取代為AEM Forms伺服器的路徑，並 `struts2-core-2.5.33.jar` 檔案。
+1. 以列出的順序執行下列命令，以遞回就地取代。 在執行命令之前，請將命令中的路徑取代為AEM Forms伺服器的路徑和`struts2-core-2.5.33.jar`檔案。
 
 
 
@@ -99,7 +99,7 @@ ht-degree: 1%
    >
    >工具需要網際網路連線，因為它在執行階段下載相依性。 因此，在執行工具之前，請確定您已連線至網際網路。
 
-1. 以列出的順序執行下列命令，以遞回就地取代。 在執行命令之前，請將命令中的路徑取代為AEM Forms伺服器的路徑，並 `struts2-core-2.5.33.jar` 檔案。
+1. 以列出的順序執行下列命令，以遞回就地取代。 在執行命令之前，請將命令中的路徑取代為AEM Forms伺服器的路徑和`struts2-core-2.5.33.jar`檔案。
 
 
 

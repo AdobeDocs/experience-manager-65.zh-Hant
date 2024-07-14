@@ -1,6 +1,6 @@
 ---
-title: 整合 [!DNL Assets] 使用活動資料流
-description: 說明的錄製功能 [!DNL Experience Manager] 以及如何設定以記錄特定事件。
+title: 將 [!DNL Assets] 與活動資料流整合
+description: 說明 [!DNL Experience Manager] 的錄製功能，以及如何設定它以錄製特定事件。
 contentOwner: AG
 role: Developer
 feature: Asset Management
@@ -13,13 +13,13 @@ ht-degree: 0%
 
 ---
 
-# 整合 [!DNL Assets] 使用活動資料流 {#integrating-assets-with-activity-stream}
+# 將[!DNL Assets]與活動資料流整合 {#integrating-assets-with-activity-stream}
 
-[!DNL Adobe Experience Manager Assets] 使用者可執行許多動作，例如建立、上傳和刪除資產。 這些動作可以記錄下來，這樣您就可以提供使用者所做動作的歷史記錄。 本節說明的錄製功能 [!DNL Experience Manager] 以及如何設定 [!DNL Experience Manager] 以記錄特定事件。
+[!DNL Adobe Experience Manager Assets]使用者可執行許多動作，例如建立、上傳和刪除Assets。 這些動作可以記錄下來，這樣您就可以提供使用者所做動作的歷史記錄。 本節說明[!DNL Experience Manager]的錄製功能，以及如何設定[!DNL Experience Manager]來錄製特定事件。
 
 ## 效能考量事項和預設行為 {#performance-considerations-and-default-behavior}
 
-例如，執行大量匯入時，這項整合可能會耗用CPU和磁碟空間。 基於這些原因， [!DNL Assets] 預設會停用與活動資料流的整合。
+例如，執行大量匯入時，這項整合可能會耗用CPU和磁碟空間。 基於這些原因，[!DNL Assets]與活動資料流的整合預設為停用。
 
 ## 支援的動作事件 {#supported-action-events}
 
@@ -41,22 +41,22 @@ ht-degree: 0%
 * 子資產已更新(SUBASSET_UPDATED)
 * 子資產已移除(SUBASSET_REMOVED)
 
-## 設定 [!DNL Assets] 事件記錄 {#configuring-aem-assets-events-recording}
+## 設定[!DNL Assets]個事件記錄 {#configuring-aem-assets-events-recording}
 
-此 [網頁主控台](/help/sites-deploying/configuring-osgi.md) 提供「Assets事件記錄器」調整的存取權。 若要設定「Assets事件記錄器」，請依照下列步驟進行：
+[Web主控台](/help/sites-deploying/configuring-osgi.md)提供存取Assets事件記錄器調整的許可權。 若要設定「Assets事件記錄器」，請依照下列步驟進行：
 
-1. 導覽至 **[!UICONTROL 網頁主控台]**
+1. 瀏覽至&#x200B;**[!UICONTROL 網頁主控台]**
 
-1. 按一下 **[!UICONTROL 設定]**.
+1. 按一下&#x200B;**[!UICONTROL 組態]**。
 
-1. 按兩下 **[!UICONTROL Day CQ DAM事件記錄器]**.
+1. 連按兩下&#x200B;**[!UICONTROL Day CQ DAM Event Recorder]**。
 
-1. 檢查 **[!UICONTROL 啟用此服務]**.
+1. 檢查&#x200B;**[!UICONTROL 啟用此服務]**。
 
-1. 檢查哪個 **[!UICONTROL 事件型別]** 您想要記錄在使用者活動資料流中的資訊。
+1. 檢查您要在使用者活動資料流中記錄哪些&#x200B;**[!UICONTROL 事件型別]**。
 
 1. 按一下「**[!UICONTROL 儲存]**」。
 
 ## 讀取錄製的事件 {#reading-recorded-events}
 
-記錄的事件會儲存為活動。 您可以使用以下程式設計方式閱讀它們： [ActivityManager API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/granite/activitystreams/ActivityManager.html).
+記錄的事件會儲存為活動。 您可以使用[ActivityManager API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/granite/activitystreams/ActivityManager.html)以程式設計方式讀取它們。

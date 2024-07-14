@@ -31,11 +31,11 @@ ht-degree: 0%
 >[!NOTE]
 >
 >Adobe不打算進一步增強此功能（管理銷售機會和清單）。
->建議使用 [Adobe Campaign與AEM的整合](/help/sites-administering/campaign.md).
+>建議使用[Adobe Campaign以及與AEM](/help/sites-administering/campaign.md)的整合。
 
 ## 建立Newsletter的清單 {#creating-a-list-for-the-newsletter}
 
-建立清單，例如， **Geometrixx電子報**，在MCM中供人員訂閱的電子報使用。 建立清單的說明請參閱 [建立清單](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatingnewlists).
+在MCM中建立人員應訂閱之電子報的清單，例如&#x200B;**Geometrixx電子報**。 建立清單的說明請參閱[建立清單](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatingnewlists)。
 
 以下顯示清單的範例：
 
@@ -45,7 +45,7 @@ ht-degree: 0%
 
 建立電子報登錄檔單，讓使用者訂閱標籤。 範例Geometrixx網站在Geometrixx工具列中提供一個新聞稿頁面，您可以在其中建立表單。
 
-若要建立您自己的Newsletter表單，請參閱 [Forms檔案](/help/sites-authoring/default-components.md#form). Newsletter使用標籤庫中的標籤。 若要新增其他標籤，請參閱 [標籤管理](/help/sites-authoring/tags.md#tagadministration).
+若要建立您自己的Newsletter表單，請參閱[Forms檔案](/help/sites-authoring/default-components.md#form)中有關建立表單的資訊。 Newsletter使用標籤庫中的標籤。 若要新增其他標籤，請參閱[標籤管理](/help/sites-authoring/tags.md#tagadministration)。
 
 下列範例中的隱藏欄位提供最低限度的資訊量（電子郵件）；此外，您可以稍後新增更多欄位，但這會影響轉換率。
 
@@ -55,7 +55,7 @@ ht-degree: 0%
 
    ![mcm_newsletterpage](assets/mcm_newsletterpage.png)
 
-1. 按一下 **編輯** ，將表單設定為前往感謝頁面(請參閱 [建立感謝頁面](#creating-a-thank-you-page))。
+1. 按一下表單元件中的&#x200B;**編輯**，將表單設定為移至感謝頁面（請參閱[建立感謝頁面](#creating-a-thank-you-page)）。
 
    ![dc_formstart_thankyou](assets/dc_formstart_thankyou.png)
 
@@ -65,23 +65,23 @@ ht-degree: 0%
 
 ### 建立感謝頁面 {#creating-a-thank-you-page}
 
-當使用者按一下 **立即訂閱**，您想要自動開啟「感謝您」頁面。 在Geometrixx電子報頁面中建立「感謝您」頁面。 建立Newsletter表單後，請編輯表單元件並新增感謝頁面的路徑。
+當使用者按一下&#x200B;**立即訂閱**&#x200B;時，您想要自動開啟[感謝您]頁面。 在Geometrixx電子報頁面中建立「感謝您」頁面。 建立Newsletter表單後，請編輯表單元件並新增感謝頁面的路徑。
 
-提交請求會將使用者帶到 **感謝您** 頁面，使用者會在頁面之後收到電子郵件。 此感謝頁面建立於/content/geometrixx/en/toolbar/newsletter/thank_you。
+提交要求會將使用者帶往&#x200B;**感謝您**&#x200B;頁面，使用者將在頁面之後收到電子郵件。 此感謝頁面建立於/content/geometrixx/en/toolbar/newsletter/thank_you。
 
 ![mcm_newsletter_thankyoupage](assets/mcm_newsletter_thankyoupage.png)
 
 ### 新增Teaser {#adding-teasers}
 
-新增 [Teasers](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#teasers) 以鎖定特定對象。 例如，您可以將Teaser新增至「感謝您」頁面和Newsletter註冊頁面。
+新增[Teaser](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#teasers)以鎖定特定對象。 例如，您可以將Teaser新增至「感謝您」頁面和Newsletter註冊頁面。
 
 若要新增Teaser以產生有效的Newsletter登陸頁面：
 
-1. 為註冊禮物建立Teaser段落。 選取 **第一** 作為策略，並包含通知他們將會收到什麼禮物的文字。
+1. 為註冊禮物建立Teaser段落。 選取&#x200B;**第一個**&#x200B;作為策略，並包含通知他們將會收到哪些禮品的文字。
 
    ![dc_teaser_thankyou](assets/dc_teaser_thankyou.png)
 
-1. 為感謝頁面建立Teaser段落。 選取 **第一** 作為策略，並包含表示禮物即將送出的文字。
+1. 為感謝頁面建立Teaser段落。 選取&#x200B;**First**&#x200B;作為策略，並包含表示禮物即將送出的文字。
 
    ![chlimage_1-103](assets/chlimage_1-103.png)
 
@@ -91,4 +91,4 @@ ht-degree: 0%
 
 透過MCM中的Newsletter功能推送任何頁面變更。 接著，您可將更新內容推送至訂閱者。
 
-另請參閱 [傳送電子報](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#newsletters).
+請參閱[傳送電子報](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#newsletters)。

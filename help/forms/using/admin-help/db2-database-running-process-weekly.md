@@ -1,6 +1,6 @@
 ---
-title: 「DB2&reg；資料庫：每週執行處理作業」
-description: 瞭解如何改善AEM Forms DB2&reg；資料庫的效能。
+title: 「DB2&amp；reg；資料庫：每週執行處理序」
+description: 瞭解如何改善AEM Forms DB2&amp； reg；資料庫的效能。
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/maintaining_the_aem_forms_database
@@ -24,7 +24,7 @@ ht-degree: 0%
 
    (Windows)選取「開始>程式> IBM® DB2® >一般管理工具>控制中心」。
 
-   (Linux®和UNIX®)在命令提示字元中，輸入 `db2jcc` 命令。
+   (Linux®和UNIX®)在命令提示字元中，輸入`db2jcc`命令。
 
 1. 在DB2® Control Center物件樹狀結構中，按一下所有資料庫。
 1. 按一下您為AEM Forms建立的資料庫，然後按一下「表格」資料夾。

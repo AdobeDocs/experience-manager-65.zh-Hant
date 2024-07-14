@@ -20,8 +20,8 @@ ht-degree: 1%
 
 標籤是一種將網站內容分類的快速輕鬆方法。 標籤可視為可以附加至頁面、資產或其他內容的關鍵字或標籤，以啟用搜尋來尋找該內容和相關內容。
 
-* 另請參閱 [管理標籤](/help/sites-administering/tags.md) 以取得關於建立和管理標籤，以及已對哪些內容標籤套用的資訊。
-* 另請參閱 [為開發人員加上標籤](/help/sites-developing/tags.md) 以取得標籤架構的相關資訊，以及在自訂應用程式中包含和擴充標籤。
+* 請參閱[管理標籤](/help/sites-administering/tags.md)，以取得建立和管理標籤以及已套用至哪些內容標籤的資訊。
+* 如需有關標籤架構以及在自訂應用程式中包含和擴充標籤的資訊，請參閱[開發人員標籤](/help/sites-developing/tags.md)。
 
 ## 使用標籤的十大理由 {#ten-reasons-to-use-tagging}
 
@@ -40,9 +40,9 @@ ht-degree: 1%
 
 ## 套用標籤 {#applying-tags}
 
-在作者環境中，作者可透過存取頁面屬性並在中輸入一或多個標籤來套用標籤 **標籤/關鍵字** 欄位。
+在作者環境中，作者可以透過存取頁面屬性並在&#x200B;**標籤/關鍵字**&#x200B;欄位中輸入一或多個標籤來套用標籤。
 
-要套用 [預先定義的標籤](/help/sites-administering/tags.md)，在 **頁面屬性** 視窗使用 `Tags/Keywords` 欄位下拉式清單，從頁面允許的標籤清單中選取。 此 **標準標籤** tab是預設的名稱空間，這表示沒有 `namespace-string:` 在分類前面加上前置詞。
+若要套用[預先定義的標籤](/help/sites-administering/tags.md)，請在&#x200B;**頁面屬性**&#x200B;視窗中使用`Tags/Keywords`欄位下拉式清單，從允許用於頁面的標籤清單中選取。 **標準標籤**&#x200B;索引標籤是預設的名稱空間，這表示分類沒有前置詞`namespace-string:`。
 
 ![chlimage_1-2](assets/chlimage_1-2a.png)
 
@@ -68,7 +68,7 @@ ht-degree: 1%
 
 標籤雲會顯示目前頁面、整個網站或最常存取之網站的標籤雲端。 標籤雲是強調使用者感興趣之問題（一直）的方法。 用於顯示標籤的文字大小會因使用而有所不同。
 
-此 [標籤雲](/help/sites-classic-ui-authoring/classic-page-author-edit-mode.md#tag-cloud) 元件（一般元件群組）可用來將標籤雲新增至頁面。
+[標籤雲](/help/sites-classic-ui-authoring/classic-page-author-edit-mode.md#tag-cloud)元件（一般元件群組）用於將標籤雲新增至頁面。
 
 ## 在標籤上搜尋 {#searching-on-tags}
 
@@ -76,6 +76,6 @@ ht-degree: 1%
 
 ### 使用搜尋元件 {#using-search-component}
 
-新增 [搜尋元件](/help/sites-classic-ui-authoring/classic-page-author-edit-mode.md#search) 至頁面提供搜尋功能，其中包含標籤，且可用於製作和發佈環境。
+將[搜尋元件](/help/sites-classic-ui-authoring/classic-page-author-edit-mode.md#search)新增至頁面可提供搜尋功能，該功能包含標籤，且可用於製作和發佈環境。
 
 ![chlimage_1-3](assets/chlimage_1-3a.png)

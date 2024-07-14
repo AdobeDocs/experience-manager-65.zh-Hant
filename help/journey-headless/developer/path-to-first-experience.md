@@ -18,7 +18,7 @@ ht-degree: 91%
 
 ## 目前進度 {#story-so-far}
 
-在AEM Headless歷程的上一個檔案中， [AEM Headless快速入門](getting-started.md) 您已瞭解什麼是Headless CMS的基本理論，現在應：
+在AEM Headless歷程的上一份檔案[AEM Headless快速入門](getting-started.md)中，您已瞭解什麼是Headless CMS的基本理論，您現在應：
 
 * 了解 AEM Headless 功能的基本概念。
 * 了解 AEM Headless 功能的使用先決條件。
@@ -38,7 +38,7 @@ ht-degree: 91%
 
 ## 要求 {#requirements}
 
-在繼續本檔案之前，請確保您已檢閱AEM Headless開發人員歷程中的上一個檔案， [AEM Headless快速入門](getting-started.md) 請確定您：
+在繼續本檔案之前，請確定您已檢閱AEM Headless開發人員歷程中的先前檔案[AEM Headless快速入門](getting-started.md)，確定您：
 
 * 符合列出的要求。
 * 已考慮您自己的專案定義，包括範圍、角色和效能。
@@ -79,7 +79,7 @@ Headless 專案的中繼環境用於在新的 AEM 產品版本推送到生產環
 
 在 AEM 中開始使用 Headless 技術之前，您需要確保已啟用所有必要的功能。本章節概述相關要求。完成這些步驟的實際步驟將在 [AEM Headless 開發人員歷程](#overview.md)的後續部分詳細說明。
 
-您也可以選擇檢視 [其他資源](#additional-resources) 以取得個別主題的詳細資訊。
+您也可以選擇檢視[其他資源](#additional-resources)，以取得個別主題的詳細資訊。
 
 ### 設定 {#configuration}
 
@@ -146,11 +146,11 @@ Headless 專案的中繼環境用於在新的 AEM 產品版本推送到生產環
 雖然建議您查閱文件[如何為您的內容建立 AEM 內容模型](model-your-content.md)來繼續 Headless 開發歷程的下個部分，以下也有一些其他選擇性資源，在深入探究本文件提到的一些概念，但不是繼續 Headless 歷程的必要條件。
 
 * [AEM Headless 翻譯歷程](/help/journey-headless/translation/overview.md) - 此文件歷程讓您對 Headless 技術、AEM 如何提供 Headless 內容以及如何翻譯它，有廣泛的了解。
-* [AEM Sites的Headless開發](/help/sites-developing/headless/introduction.md)  — 快速瞭解如何引導AEM Headless開發人員具備必要功能
+* [AEM Sites的Headless開發](/help/sites-developing/headless/introduction.md) — 快速介紹AEM Headless開發人員如何使用必要的功能
 * [AEM Headless 教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html) - 利用這些實作教學課程來探索如何運用各種不同方式使用 AEM 將內容傳遞到 Headless 端點，並選擇適合您的方式。
 * [使用 GraphQL API 進行 Headless 內容管理](https://experienceleague.adobe.com/?Solution=Experience+Manager&amp;Solution=Experience+Manager+Sites&amp;Solution=Experience+Manager+Forms&amp;Solution=Experience+Manager+Screens&amp;Launch=ExperienceManager-D-1-2020.1.headless#courses) - 按照本課程說明對 AEM 中實作的 GraphQL API 有概略的了解。必須透過 AdobeID 進行驗證。
 * [AEM Guides WKND - GraphQL](https://github.com/adobe/aem-guides-wknd-graphql) - 此 GitHub 專案包含以 AEM GraphQL API 為重點的範例應用程式。
-* [Headless快速入門手冊](/help/sites-developing/headless/introduction.md#getting-started)  — 向已瞭解AEM的使用者快速介紹AEM Headless功能。
+* [Headless快速入門手冊](/help/sites-developing/headless/introduction.md#getting-started) — 向已瞭解AEM的使用者快速介紹AEM的Headless功能。
 * [建立內容片段模型](/help/assets/content-fragments/content-fragments-models.md) - 內容片段模型的技術文件
 * [建立內容片段](/help/assets/content-fragments/content-fragments.md) - 內容片段的技術文件
 * [使用 GraphQL 查詢內容](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md) - GraphQL API 的技術文件

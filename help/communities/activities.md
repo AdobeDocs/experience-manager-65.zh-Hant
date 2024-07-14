@@ -21,7 +21,7 @@ ht-degree: 0%
 
 ## 簡介 {#introduction}
 
-已登入社群成員的活動（例如張貼至論壇或部落格）會收集到資料流中，您可透過設定 `Activity Streams` 元件。
+已登入社群成員的活動（例如張貼至論壇或部落格）會收集到資料流中，可透過`Activity Streams`元件的設定以各種方式篩選及顯示。
 
 當社群成員關注感興趣的張貼或關注其他社群成員的活動時，關注功能會新增另一個活動檢視。
 
@@ -32,29 +32,29 @@ ht-degree: 0%
 
 ### 新增活動資料流至頁面 {#adding-activity-streams-to-a-page}
 
-如果想要新增 `Activity Streams` 元件至作者模式下的頁面，請使用元件瀏覽器來尋找
+如果想要將`Activity Streams`元件新增至作者模式的頁面，請使用元件瀏覽器來尋找
 
 * `Communities / Activity Streams`
 
 並將其拖曳至應該顯示活動資料流的頁面上。
 
-如需必要資訊，請造訪 [Communities元件基本知識](/help/communities/basics.md).
+如需必要資訊，請造訪[社群元件基本知識](/help/communities/basics.md)。
 
-當 [必要的使用者端程式庫](/help/communities/essentials-activities.md#essentials-for-client-side) 包含，這就是 `Activity Streams` 元件出現：
+納入[必要的使用者端資料庫](/help/communities/essentials-activities.md#essentials-for-client-side)時，`Activity Streams`元件的顯示方式如下：
 
 ![活動資料流](assets/activity-component.png)
 
 ### 設定活動資料流 {#configuring-activity-streams}
 
-選取已放置的 `Activity Streams` 元件供您存取及選取 `Configure` 圖示可開啟編輯對話方塊。
+選取置入的`Activity Streams`元件，以便您可以存取並選取開啟編輯對話方塊的`Configure`圖示。
 
 ![設定](assets/configure-new.png)
 
-在 **使用者活動** 索引標籤中，指定要顯示的活動：
+在&#x200B;**使用者活動**&#x200B;索引標籤下，指定要顯示的活動：
 
 ![使用者活動](assets/user-activities.png)
 
-* **活動最大數量**
+* **最大活動數**
 
   要顯示的活動數
 
@@ -76,15 +76,15 @@ ht-degree: 0%
 
 ### 下列檢視 {#following-view}
 
-元件必須設定為啟用下列專案。 允許追蹤的功能包括 [部落格](/help/communities/blog-feature.md)， [論壇](/help/communities/forum.md)， [QnA](/help/communities/working-with-qna.md)， [行事曆](/help/communities/calendar.md)， [檔案庫](/help/communities/file-library.md)、和 [評論](/help/communities/comments.md).
+元件必須設定為啟用下列專案。 允許追蹤的功能包括[部落格](/help/communities/blog-feature.md)、[論壇](/help/communities/forum.md)、[QnA](/help/communities/working-with-qna.md)、[行事曆](/help/communities/calendar.md)、[檔案庫](/help/communities/file-library.md)和[註解](/help/communities/comments.md)。
 
-![follow-view](assets/following-activities.png)
+![正在關注 — 檢視](assets/following-activities.png)
 
-此 **追隨** 按鈕提供將專案視為活動來追蹤的方法， [通知](/help/communities/notifications.md)，或 [訂閱](/help/communities/subscriptions.md). 每次 **追隨** 按鈕已選取，可開啟或關閉選取專案。 此 `Email Subscriptions` 選取專案只有在設定後才出現。
+**關注**&#x200B;按鈕提供將專案作為活動、[通知](/help/communities/notifications.md)或[訂閱](/help/communities/subscriptions.md)來關注的方法。 每次選取&#x200B;**追隨**&#x200B;按鈕時，都可以開啟或關閉選取專案。 `Email Subscriptions`選取專案只有在設定後才出現。
 
-如果選取了任何追蹤方法，按鈕的文字會變更為 **關注**. 為方便起見，您可以選取 `Unfollow All` 以關閉所有方法。
+如果選取任何追蹤方法，按鈕的文字會變更為&#x200B;**追蹤**。 為方便起見，可以選取`Unfollow All`以關閉所有方法。
 
-此 **追隨** 按鈕出現：
+**追隨**&#x200B;按鈕出現：
 
 * 檢視其他成員的設定檔時。
 * 在主要功能頁面上，例如論壇、QnA和部落格。
@@ -97,4 +97,4 @@ ht-degree: 0%
 
 ### 其他資訊 {#additional-information}
 
-如需詳細資訊，請參閱 [活動串流基本資訊](/help/communities/essentials-activities.md) 開發人員頁面。
+如需開發人員的[Activity Streams Essentials](/help/communities/essentials-activities.md)頁面的詳細資訊。

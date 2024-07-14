@@ -43,55 +43,55 @@ ht-degree: 4%
 
 * 在資料夾中重新排序頁面
 
-   * 您可以在中完成此作業 [清單檢視](/help/sites-authoring/basic-handling.md#list-view). 變更會套用並顯示在其他檢視中。
+   * 這可以在[清單檢視](/help/sites-authoring/basic-handling.md#list-view)中完成。 變更會套用並顯示在其他檢視中。
 
 #### 頁面製作 {#page-authoring}
 
 * 導覽連結
 
-   * ***連結無法用於導覽*** 當您在 **編輯** 模式。 若要使用連結導覽，您必須 [預覽頁面](/help/sites-authoring/editing-content.md#previewing-pages) 使用：
+   * 當您處於&#x200B;**編輯**&#x200B;模式時，***連結無法用於導覽***。 若要使用連結導覽，您需要[使用以下其中一種方式預覽頁面](/help/sites-authoring/editing-content.md#previewing-pages)：
 
       * [預覽模式](/help/sites-authoring/editing-content.md#preview-mode)
       * [以已發佈狀態檢視](/help/sites-authoring/editing-content.md#view-as-published)
 
-* 無法從頁面編輯器啟動/建立版本；現在，可以從網站主控台完成(透過 **建立** 或 [時間表](/help/sites-authoring/basic-handling.md#timeline) （針對選取的資源）。
+* 無法從頁面編輯器啟動/建立版本；現在可以從網站主控台完成（針對選取的資源透過&#x200B;**建立**&#x200B;或[時間表](/help/sites-authoring/basic-handling.md#timeline)）。
 
 >[!NOTE]
 >
 >有數種鍵盤快速鍵可讓您更輕鬆進行撰寫體驗。
 >
->* [編輯頁面時的鍵盤快速鍵](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)
->* [主控台的鍵盤快速鍵](/help/sites-authoring/keyboard-shortcuts.md)
+>* 編輯頁面時[鍵盤快速鍵](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)
+>* 主控台的[鍵盤快速鍵](/help/sites-authoring/keyboard-shortcuts.md)
 >
 
 ### 尋找您的頁面 {#finding-your-page}
 
 尋找頁面有許多方面；您可以導覽及/或搜尋：
 
-1. 開啟 **網站** 主控台(使用 **網站** 中的選項 [全域導覽](/help/sites-authoring/basic-handling.md#global-navigation)) — 這會在您選取Adobe Experience Manager連結（左上方）時觸發（下拉式清單）。
+1. 開啟&#x200B;**網站**&#x200B;主控台（使用[全域導覽](/help/sites-authoring/basic-handling.md#global-navigation)中的&#x200B;**網站**&#x200B;選項） — 這會在您選取Adobe Experience Manager連結（左上方）時觸發（下拉式清單）。
 
-1. 點選/按一下適當的頁面，在樹狀結構中向下導覽。 頁面資源的呈現方式取決於您使用的檢視 —  [卡片、清單或欄](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)：
+1. 點選/按一下適當的頁面，在樹狀結構中向下導覽。 頁面資源的呈現方式取決於您使用的檢視 — [卡片、清單或欄](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)：
 
    ![screen_shot_2018-03-21at160214](assets/screen_shot_2018-03-21at160214.png)
 
-1. 瀏覽樹狀結構，使用 [標頭中的階層連結](/help/sites-authoring/basic-handling.md#theheaderwithbreadcrumbs)，可讓您返回所選位置：
+1. 使用[標頭](/help/sites-authoring/basic-handling.md#theheaderwithbreadcrumbs)中的階層連結來向上導覽樹狀結構，可讓您返回選取的位置：
 
    ![qgtap-01](assets/qgtap-01.png)
 
-1. 您也可以 [搜尋](/help/sites-authoring/search.md) 用於頁面。 您可以從顯示的結果中選取您的頁面。
+1. 您也可以[搜尋](/help/sites-authoring/search.md)頁面。 您可以從顯示的結果中選取您的頁面。
 
    ![qgtap-03](assets/qgtap-03.png)
 
 ### 建立新頁面 {#creating-a-new-page}
 
-至 [建立頁面](/help/sites-authoring/managing-pages.md#creating-a-new-page)：
+若要[建立頁面](/help/sites-authoring/managing-pages.md#creating-a-new-page)：
 
-1. [導覽至該位置](#finding-your-page) 建立頁面的位置。
-1. 使用 **建立** 圖示，然後選取 **頁面** 從清單：
+1. [導覽至您要建立頁面的位置](#finding-your-page)。
+1. 使用&#x200B;**建立**&#x200B;圖示，然後從清單中選取&#x200B;**頁面**：
 
    ![qgtap-02](assets/qgtap-02.png)
 
-1. 這會開啟精靈，引導您收集以下專案所需的資訊： [建立您的新頁面](/help/sites-authoring/managing-pages.md#creating-a-new-page). 請依照熒幕上的指示操作。
+1. 這會開啟精靈，引導您收集在[建立新頁面](/help/sites-authoring/managing-pages.md#creating-a-new-page)時所需的資訊。 請依照熒幕上的指示操作。
 
 ### 選取您的頁面以採取進一步動作 {#selecting-your-page-for-further-action}
 
@@ -109,10 +109,10 @@ ht-degree: 4%
 
 1. 卡片檢視：
 
-   * 進入選擇模式的方法有： [選取所需的資源](/help/sites-authoring/basic-handling.md#viewingandselectingyourresources) 替換為：
+   * 透過[選取所需資源](/help/sites-authoring/basic-handling.md#viewingandselectingyourresources)進入選擇模式，其包含：
 
       * 行動裝置：選取並保留
-      * 桌上型電腦： [快速動作](/help/sites-authoring/basic-handling.md#quick-actions)  — 勾選圖示：
+      * 案頭： [快速動作](/help/sites-authoring/basic-handling.md#quick-actions) — 勾選圖示：
 
    ![screen_shot_2018-03-21at160503](assets/screen_shot_2018-03-21at160503.png)
 
@@ -120,44 +120,44 @@ ht-degree: 4%
 
    >[!NOTE]
    >
-   >在選擇模式中 **選取** 圖示（勾號）將變更為 **取消選取** 圖示（十字形）。
+   >進入選取模式後，**選取**&#x200B;圖示（勾號）將變更為&#x200B;**取消選取**&#x200B;圖示（十字形）。
 
 ### 快速動作（僅限卡片檢視/案頭） {#quick-actions-card-view-desktop-only}
 
-[快速動作](/help/sites-authoring/basic-handling.md#quick-actions) 可用：
+[快速動作](/help/sites-authoring/basic-handling.md#quick-actions)可用：
 
-1. [導覽至頁面](#finding-your-page) 您要對其執行動作。
+1. [瀏覽至您要採取動作的頁面](#finding-your-page)。
 1. 將滑鼠指標停留在代表所需資源的卡片上；會顯示快速動作：
 
    ![screen_shot_2018-03-21at160503-1](assets/screen_shot_2018-03-21at160503-1.png)
 
 ### 編輯您的頁面內容 {#editing-your-page-content}
 
-1. [導覽至頁面](#finding-your-page) 您想要編輯。
-1. [開啟您的頁面以進行編輯](/help/sites-authoring/managing-pages.md#opening-a-page-for-editing) 使用編輯（鉛筆）圖示：
+1. [瀏覽至您要編輯的頁面](#finding-your-page)。
+1. [使用「編輯」（鉛筆）圖示開啟頁面以進行編輯](/help/sites-authoring/managing-pages.md#opening-a-page-for-editing)：
 
    ![screen_shot_2018-03-21at160607](assets/screen_shot_2018-03-21at160607.png)
 
    您可透過下列任一方式存取此專案：
 
-   * [快速動作（僅限卡片檢視/案頭）](#quick-actions-card-view-desktop-only) 以取得適當的資源。
-   * 工具列，當 [已選取頁面](#selectiingyourpageforfurtheraction).
+   * 適當資源的[快速動作（僅限卡片檢視/案頭）](#quick-actions-card-view-desktop-only)。
+   * 選取[頁面時的工具列](#selectiingyourpageforfurtheraction)。
 
 1. 編輯器開啟時，您可以：
 
-   * [新增元件至您的頁面](/help/sites-authoring/editing-content.md#inserting-a-component) 作者：
+   * [新增元件至您的頁面](/help/sites-authoring/editing-content.md#inserting-a-component)，方法如下：
 
       * 開啟側面板
-      * 選取「元件」標籤( [元件瀏覽器](/help/sites-authoring/author-environment-tools.md#components-browser))
+      * 選取[元件]索引標籤（[元件瀏覽器](/help/sites-authoring/author-environment-tools.md#components-browser)）
       * 將必要的元件拖曳到頁面上。
 
      側面板的開啟（和關閉）方式：
 
      ![開啟側面板](do-not-localize/screen_shot_2018-03-21at160738.png)
 
-   * [編輯現有元件的內容](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste) 在頁面上：
+   * [編輯頁面上現有元件](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste)的內容：
 
-      * 按一下以開啟元件工具列。 使用 **編輯** （鉛筆）圖示以開啟對話方塊。
+      * 按一下以開啟元件工具列。 使用&#x200B;**編輯** （鉛筆）圖示開啟對話方塊。
       * 使用select-and-hold或按兩下滑鼠鍵開啟元件的就地編輯器。 會顯示可用的動作（對於某些元件而言，為有限的選取範圍）。
       * 若要檢視所有可用動作，請使用以下方法進入全熒幕模式：
 
@@ -165,102 +165,102 @@ ht-degree: 4%
 
    * [設定現有元件的屬性](/help/sites-authoring/editing-content.md#component-edit-dialog)
 
-      * 按一下以開啟元件工具列。 使用 **設定** （扳手）圖示以開啟對話方塊。
+      * 按一下以開啟元件工具列。 使用&#x200B;**設定** （扳手）圖示開啟對話方塊。
 
-   * [移動元件](/help/sites-authoring/editing-content.md#moving-a-component) 兩者之一：
+   * [移動元件](/help/sites-authoring/editing-content.md#moving-a-component)：
 
       * 將所需元件拖曳至其新位置。
-      * 按一下以開啟元件工具列。 使用 **剪下** 則 **貼上** 圖示視需要顯示。
+      * 按一下以開啟元件工具列。 必要時使用&#x200B;**剪下**&#x200B;再使用&#x200B;**貼上**&#x200B;圖示。
 
-   * [複製（和貼上）](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste) 元件：
+   * [複製（並貼上）](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste)元件：
 
-      * 按一下以開啟元件工具列。 使用 **複製** 則 **貼上** 圖示視需要。
-
-   >[!NOTE]
-   >
-   >您可以 **貼上** 元件至相同頁面或不同頁面。 如果貼上至剪下/復製作業前已開啟的其他頁面，則需要重新整理該頁面。
-
-   * [刪除](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste) 元件：
-
-      * 按一下以開啟元件工具列，然後使用 **刪除** 圖示。
-
-   * [新增註解](/help/sites-authoring/annotations.md#annotations) 移至頁面：
-
-      * 選取 **註解** 模式（語音泡泡圖示）。 使用新增附註 **新增註解** （加號）圖示。 使用右上方的X退出附註模式。
-
-     ![註解](do-not-localize/screen_shot_2018-03-21at160813.png)
-
-   * [預覽頁面](/help/sites-authoring/editing-content.md#preview-mode) （檢視其顯示在發佈環境中的方式）
-
-      * 選取 **預覽** 工具列中的。
-
-   * 使用返回編輯模式（或選取其他模式） **編輯** 下拉式選取器。
+      * 按一下以開啟元件工具列。 視需要使用&#x200B;**複製**&#x200B;然後&#x200B;**貼上**&#x200B;圖示。
 
    >[!NOTE]
    >
-   >若要使用內容中的連結導覽，您必須使用 [預覽模式](/help/sites-authoring/editing-content.md#preview-mode).
+   >您可以&#x200B;**貼上**&#x200B;元件至相同頁面或其他頁面。 如果貼上至剪下/復製作業前已開啟的其他頁面，則需要重新整理該頁面。
+
+   * [刪除](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste)元件：
+
+      * 按一下以開啟元件工具列，然後使用&#x200B;**刪除**&#x200B;圖示。
+
+   * [新增註解](/help/sites-authoring/annotations.md#annotations)至頁面：
+
+      * 選取&#x200B;**註釋**&#x200B;模式（語音泡泡圖示）。 使用&#x200B;**新增註釋** （加號）圖示新增註釋。 使用右上方的X退出附註模式。
+
+     ![註釋](do-not-localize/screen_shot_2018-03-21at160813.png)
+
+   * [預覽頁面](/help/sites-authoring/editing-content.md#preview-mode) （檢視該頁面在發佈環境中的顯示方式）
+
+      * 從工具列選取&#x200B;**預覽**。
+
+   * 使用&#x200B;**編輯**&#x200B;下拉式選取器返回編輯模式（或選取其他模式）。
+
+   >[!NOTE]
+   >
+   >若要使用內容中的連結來瀏覽，您必須使用[預覽模式](/help/sites-authoring/editing-content.md#preview-mode)。
 
 ### 編輯頁面屬性 {#editing-the-page-properties}
 
-有兩種（主要）方法 [編輯頁面屬性](/help/sites-authoring/editing-page-properties.md)：
+有兩個（主要）方法[編輯頁面屬性](/help/sites-authoring/editing-page-properties.md)：
 
-* 從 **網站** 主控台：
+* 從&#x200B;**網站**&#x200B;主控台：
 
-   1. [導覽至頁面](#finding-your-page) 您要發佈。
-   1. 選取 **屬性** 圖示來自：
+   1. [瀏覽至您要發佈的頁面](#finding-your-page)。
+   1. 選取&#x200B;**屬性**&#x200B;圖示，其來源為：
 
-      * [快速動作（僅限卡片檢視/案頭）](#quick-actions-card-view-desktop-only) 以取得適當的資源。
-      * 工具列，當 [已選取頁面](#selectiingyourpageforfurtheraction).
+      * 適當資源的[快速動作（僅限卡片檢視/案頭）](#quick-actions-card-view-desktop-only)。
+      * 選取[頁面時的工具列](#selectiingyourpageforfurtheraction)。
 
   ![screen_shot_2018-03-21at160850](assets/screen_shot_2018-03-21at160850.png)
 
    1. 畫面隨即顯示頁面屬性。 您可以視需要進行更新，然後使用「儲存」來儲存這些專案
 
-* 時間 [編輯您的頁面](#editing-your-page-content)：
+* 當[編輯您的頁面](#editing-your-page-content)時：
 
-   1. 開啟 **頁面資訊** 功能表。
-   1. 選取 **開啟屬性** 以開啟對話方塊來編輯屬性。
+   1. 開啟&#x200B;**頁面資訊**&#x200B;功能表。
+   1. 選取&#x200B;**開啟屬性**&#x200B;以開啟用於編輯屬性的對話方塊。
 
   ![screen_shot_2018-03-21at160920](assets/screen_shot_2018-03-21at160920.png)
 
 ### 發佈頁面（或取消發佈） {#publishing-your-page-or-unpublishing}
 
-有兩種主要方法 [發佈您的頁面](/help/sites-authoring/publishing-pages.md) （以及取消發佈）：
+有兩種主要方法[發佈您的頁面](/help/sites-authoring/publishing-pages.md) （以及取消發佈）：
 
-* 從 **網站** 主控台：
+* 從&#x200B;**網站**&#x200B;主控台：
 
-   1. [導覽至頁面](#finding-your-page) 您要發佈。
-   1. 選取 **快速發佈** 圖示來自：
+   1. [瀏覽至您要發佈的頁面](#finding-your-page)。
+   1. 從下列任一位置選取&#x200B;**快速Publish**&#x200B;圖示：
 
-      * [快速動作（僅限卡片檢視/案頭）](#quick-actions-card-view-desktop-only) 以取得適當的資源。
-      * 工具列，當 [已選取頁面](#selectiingyourpageforfurtheraction) (也可讓您存取 [稍後發佈](/help/sites-authoring/publishing-pages.md#main-pars-title-12))。
+      * 適當資源的[快速動作（僅限卡片檢視/案頭）](#quick-actions-card-view-desktop-only)。
+      * 已選取您的[頁面時的工具列](#selectiingyourpageforfurtheraction) (也可讓您稍後存取[Publish](/help/sites-authoring/publishing-pages.md#main-pars-title-12))。
 
   ![screen_shot_2018-03-21at160957](assets/screen_shot_2018-03-21at160957.png)
 
-* 時間 [編輯您的頁面](#editing-your-page-content)：
+* 當[編輯您的頁面](#editing-your-page-content)時：
 
-   1. 開啟 **頁面資訊** 功能表。
-   1. 選取 **發佈頁面**.
+   1. 開啟&#x200B;**頁面資訊**&#x200B;功能表。
+   1. 選取&#x200B;**Publish頁面**。
 
   ![screen_shot_2018-03-21at161026](assets/screen_shot_2018-03-21at161026.png)
 
 * 從主控台取消發佈頁面只能透過「管理出版物 **** 」選項完成，此選項只能在工具列上使用 (不能透過快速動作)。
 
-  此 **取消發佈頁面** 選項仍可透過 **頁面資訊** 功能表。
+  編輯器中仍可透過&#x200B;**頁面資訊**&#x200B;功能表使用&#x200B;**取消發佈頁面**&#x200B;選項。
 
   ![screen_shot_2018-03-21at161059](assets/screen_shot_2018-03-21at161059.png)
 
-  另請參閱 [發佈頁面](/help/sites-authoring/publishing-pages.md#unpublishing-pages) 以取得詳細資訊。
+  如需詳細資訊，請參閱[發佈頁面](/help/sites-authoring/publishing-pages.md#unpublishing-pages)。
 
 ### 移動、複製並貼上或刪除您的頁面 {#move-copy-and-paste-or-delete-your-page}
 
 這些動作都可由以下動作觸發：
 
-1. [導覽至頁面](#finding-your-page) 您想要移動、複製和貼上或刪除。
+1. [瀏覽至您要移動、複製和貼上或刪除的頁面](#finding-your-page)。
 1. 選擇複製 (然後貼上) 、移動或刪除圖示 (視需要)，使用下列任一項：
 
-   * [快速動作（僅限卡片檢視/案頭）](#quick-actions-card-view-desktop-only) 以取得所需資源。
-   * 工具列，當 [已選取頁面](#selecting-your-page-for-further-action).
+   * 所需資源的[快速動作（僅限卡片檢視/案頭）](#quick-actions-card-view-desktop-only)。
+   * 選取[頁面時的工具列](#selecting-your-page-for-further-action)。
 
    接著，視您的動作而定：
 
@@ -284,8 +284,8 @@ ht-degree: 4%
 
 [鎖定頁面](/help/sites-authoring/editing-content.md#locking-a-page) ，會使其他作者無法在您執行時使用頁面。您可以找到「鎖定 (和解除鎖定) 」圖示/按鈕：
 
-* 工具列，當 [已選取頁面](#selecting-your-page-for-further-action).
-* 此 [頁面資訊下拉式功能表](#editing-the-page-properties) 編輯頁面時。
+* 選取[頁面時的工具列](#selecting-your-page-for-further-action)。
+* 編輯頁面時，[頁面資訊下拉式功能表](#editing-the-page-properties)。
 * 編輯頁面（頁面已鎖定）時的頁面工具列
 
 例如，鎖定圖示看起來像這樣：
@@ -294,9 +294,9 @@ ht-degree: 4%
 
 ### 存取頁面參照 {#accessing-page-references}
 
-[快速存取引用](/help/sites-authoring/author-environment-tools.md#references) 至某個頁面或從某個頁面可在參考邊欄中使用。
+[在「參考」邊欄中，可以快速存取頁面或頁面的參考](/help/sites-authoring/author-environment-tools.md#references)。
 
-1. 選取 **引用** 使用工具列圖示（在之前或之後） [選取您的頁面](#selecting-your-page-for-further-action))：
+1. 使用工具列圖示選取&#x200B;**參考** （在[選取您的頁面](#selecting-your-page-for-further-action)之前或之後）：
 
    ![screen_shot_2018-03-21at161210](assets/screen_shot_2018-03-21at161210.png)
 
@@ -308,23 +308,23 @@ ht-degree: 4%
 
 ### 建立頁面的版本 {#creating-a-version-of-your-page}
 
-若要建立 [版本](/help/sites-authoring/working-with-page-versions.md) ，共頁：
+若要建立頁面的[版本](/help/sites-authoring/working-with-page-versions.md)：
 
-1. 若要開啟「時間軸」邊欄，請選取 **[時間表](/help/sites-authoring/basic-handling.md#timeline)** 使用工具列圖示（在之前或之後） [選取您的頁面](#selecting-your-page-for-further-action))：
+1. 若要開啟[時間表]邊欄，請使用工具列圖示選取&#x200B;**[時間表](/help/sites-authoring/basic-handling.md#timeline)** （在[選取您的頁面](#selecting-your-page-for-further-action)之前或之後）：
 
    ![screen_shot_2018-03-21at161355](assets/screen_shot_2018-03-21at161355.png)
 
-1. 按一下「時間軸」欄右下方的向上箭頭以顯示其他按鈕，包括 **另存為版本**.
+1. 按一下「時間軸」欄右下方的向上箭頭以顯示其他按鈕，包括&#x200B;**另存為版本**。
 
    ![screen-shot_2019-03-05at114600](assets/screen-shot_2019-03-05at114600.png)
 
-1. 選取 **另存為版本**，然後 **建立**.
+1. 選取&#x200B;**另存為版本**，然後選取&#x200B;**建立**。
 
 ### 還原/比較頁面版本 {#restoring-comparing-a-version-of-your-page}
 
 還原及/或比較頁面版本時，會使用相同的基本機制：
 
-1. 選取 **[時間表](/help/sites-authoring/basic-handling.md#timeline)** 使用工具列圖示（在之前或之後） [選取您的頁面](#selecting-your-page-for-further-action))：
+1. 使用工具列圖示選取&#x200B;**[時間表](/help/sites-authoring/basic-handling.md#timeline)** （在[選取您的頁面](#selecting-your-page-for-further-action)之前或之後）：
 
    ![screen_shot_2018-03-21at161355-1](assets/screen_shot_2018-03-21at161355-1.png)
 

@@ -1,5 +1,5 @@
 ---
-title: AEM Content and Commerce 2022年發行說明
+title: AEM內容與Commerce 2022年發行說明
 description: Adobe Experience Manager內容和Commerce 2022年發行說明。
 exl-id: d0a66e70-c4f1-4051-8161-11f07dad0612
 solution: Experience Manager,Commerce
@@ -28,7 +28,7 @@ ht-degree: 8%
 
 | 元件 | 版本 | 詳細資料 |
 |:-------|:-----:|---------------------:|
-| CIF附加元件 | 2022.09.20.00 | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2022.09.20.00.zip) |
+| CIF附加元件 | 2022.09.20.00 | [軟體發佈](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2022.09.20.00.zip) |
 | CIF Core Components | 2.11.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.11.0) |
 | CIF Venia參考網站 | 2022.09.02 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2022.09.02) |
 
@@ -43,7 +43,7 @@ ht-degree: 8%
 
 | 元件 | 版本 | 詳細資料 |
 |:-------|:-----:|---------------------:|
-| CIF附加元件 | 2022.08.02.00 | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2022.08.02.00.zip) |
+| CIF附加元件 | 2022.08.02.00 | [軟體發佈](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2022.08.02.00.zip) |
 
 ### 新增功能 {#what-is-new-july}
 
@@ -54,7 +54,7 @@ ht-degree: 8%
 
 | 元件 | 版本 | 詳細資料 |
 |:-------|:-----:|---------------------:|
-| CIF附加元件 | 2022.07.05.00 | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2022.07.05.00.zip) |
+| CIF附加元件 | 2022.07.05.00 | [軟體發佈](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2022.07.05.00.zip) |
 | CIF Core Components | 2.10.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.10.0) |
 | CIF Venia參考網站 | 2022.07.04 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2022.07.04) |
 
@@ -74,7 +74,7 @@ ht-degree: 8%
 
 | 元件 | 版本 | 詳細資料 |
 |:-------|:-----:|---------------------:|
-| CIF附加元件 | 2022.05.31.00 | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2022.05.31.00.zip) |
+| CIF附加元件 | 2022.05.31.00 | [軟體發佈](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2022.05.31.00.zip) |
 | CIF Core Components | 2.9.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.9.0) |
 | CIF Venia參考網站 | 2022.05.30 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2022.05.30) |
 
@@ -82,7 +82,7 @@ ht-degree: 8%
 
 * 新產品駕駛艙屬性頁面，提供更好、更簡化的概覽
 
-![產品駕駛艙屬性概觀](/help/assets/CIF/product_cockpit_properties_overview.png)
+![產品駕駛艙屬性總覽](/help/assets/CIF/product_cockpit_properties_overview.png)
 
 * 改善I/O Runtime上協力廠商聯結器的相容性和健全性
 
@@ -98,7 +98,7 @@ ht-degree: 8%
 
 | 元件 | 版本 | 詳細資料 |
 |:-------|:-----:|---------------------:|
-| CIF附加元件 | 2022.04.28.00 | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2022.04.28.00.zip) |
+| CIF附加元件 | 2022.04.28.00 | [軟體發佈](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2022.04.28.00.zip) |
 | CIF Core Components | 2.8.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.8.0) |
 | CIF Venia參考網站 | 2022.04.28 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2022.04.28) |
 
@@ -116,7 +116,7 @@ ht-degree: 8%
 
 | 元件 | 版本 | 詳細資料 |
 |:-------|:-----:|---------------------:|
-| CIF附加元件 | 2022.02.24.00 | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2022.02.24.00.zip) |
+| CIF附加元件 | 2022.02.24.00 | [軟體發佈](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2022.02.24.00.zip) |
 | CIF Core Components | 2.6.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.6.0) |
 | CIF Venia參考網站 | 2022.02.24 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2022.02.24) |
 
@@ -132,7 +132,7 @@ ht-degree: 8%
 
 | 元件 | 版本 | 詳細資料 |
 |:-------|:-----:|---------------------:|
-| CIF附加元件 | 2022.01.20.00 | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2022.01.20.00.zip) |
+| CIF附加元件 | 2022.01.20.00 | [軟體發佈](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2022.01.20.00.zip) |
 | CIF Core Components | 2.5.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.5.0) |
 | CIF Venia參考網站 | 2022.01.27 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2022.01.27) |
 

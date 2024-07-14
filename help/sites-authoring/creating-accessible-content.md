@@ -14,45 +14,45 @@ ht-degree: 2%
 
 # 建立可存取的內容 (符合 WCAG 2.1) {#creating-accessible-content-wcag-conformance}
 
-此 [網頁內容可及性指引(WCAG) 2.1](https://www.w3.org/TR/WCAG/)，由下列人員撰寫： [全球資訊網協會的工作小組](https://www.w3.org/groups/#Accessibility_Guidelines_Working_Group)，包含一系列技術獨立指引和成功標準，協助身心障礙人士存取及使用網路內容。
+[網頁內容可及性指引(WCAG) 2.1](https://www.w3.org/TR/WCAG/)由[全球資訊網協會](https://www.w3.org/groups/#Accessibility_Guidelines_Working_Group)的工作小組所制定，包含一系列技術獨立的指引和成功標準，可讓身心障礙人士存取及使用網頁內容。
 
 作為介紹，聯盟提供了一系列區段和支援檔案：
 
 * [WCAG 2.1的新功能](https://www.w3.org/TR/WCAG/#new-features-in-wcag-2-1)
 * [如何滿足WCAG 2.1](https://www.w3.org/WAI/WCAG21/quickref/)
 * [瞭解WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/)
-* [適用於WCAG 2.1的技術](https://www.w3.org/WAI/WCAG21/Techniques/)
+* [用於WCAG 2.1的技術](https://www.w3.org/WAI/WCAG21/Techniques/)
 * [WCAG檔案](https://www.w3.org/WAI/standards-guidelines/wcag/docs/)
 
 此外，請參閱：
-* 此 [WCAG 2.1快速指南](/help/managing/qg-wcag.md).
-* 此 [Adobe解決方案的無障礙合規報告](https://www.adobe.com/accessibility/compliance.html).
+* [WCAG 2.1](/help/managing/qg-wcag.md)快速指南。
+* Adobe解決方案](https://www.adobe.com/accessibility/compliance.html)的[協助工具符合性報告。
 * [設定RTF編輯器以產生無障礙內容](/help/sites-administering/rte-accessible-content.md)
 
 指引會根據三個一致性層級進行分級：A級（最低）、AA級和AAA級（最高）。 簡而言之，層級的定義如下：
 
 * **** A級：您的網站達到基本的最低協助功能等級。要達到此級別，將滿足所有A級成功標準。
-* **AA級：** 這是您努力追求的最佳無障礙環境支援等級，其中您的網站可達到基本無障礙環境支援等級，因此大部分使用者都可使用大部分的技術。 要達到此級別，將滿足所有A級和A級成功標準。
-* **AAA級：** 您的網站可達到高水準的協助工具。 要達到此級別，將滿足所有A級、AA級和AAA級成功標準。
+* **AA級：**&#x200B;這是您努力追求的最佳無障礙環境支援等級，其中您的網站可達到基本無障礙環境支援等級，因此大部分使用者都可使用大部分的技術。 要達到此級別，將滿足所有A級和A級成功標準。
+* **等級AAA：**&#x200B;您的網站達到高水準的協助工具。 要達到此級別，將滿足所有A級、AA級和AAA級成功標準。
 
 建立網站時，您必須決定要讓網站遵循的整體等級。
 
-以下小節會顯示 [WCAG 2.1指引圖層](https://www.w3.org/TR/WCAG/#wcag-2-layers-of-guidance) 具有A級和AA級的相關成功標準 [一致性層級](https://www.w3.org/TR/WCAG/#conformance-to-wcag-2-1).
+以下章節介紹WCAG 2.1指引的[層](https://www.w3.org/TR/WCAG/#wcag-2-layers-of-guidance)，以及A級和AA級[一致性層級](https://www.w3.org/TR/WCAG/#conformance-to-wcag-2-1)的相關成功標準。
 
 >[!NOTE]
 >
 >本檔案將使用下列專案：
 >
->* 此 [WCAG 2.1指引的簡稱](https://www.w3.org/TR/WCAG/#wcag-2-layers-of-guidance).
->* 此 [WCAG 2.1指引中使用的編號](https://www.w3.org/TR/WCAG/#numbering-in-wcag-2-1) 以便與WCAG網站進行交叉參照。
+>* WCAG 2.1指引](https://www.w3.org/TR/WCAG/#wcag-2-layers-of-guidance)的[簡短名稱。
+>* WCAG 2.1指引](https://www.w3.org/TR/WCAG/#numbering-in-wcag-2-1)中使用的[編號，可協助與WCAG網站交叉參照。
 
 ## 准則1：可感知 {#principle-perceivable}
 
-[准則1：可感知 — 資訊和使用者介面元件必須以使用者可感知的方式呈現給使用者。](https://www.w3.org/TR/WCAG/#perceivable)
+[原則1：可感知 — 資訊和使用者介面元件必須以使用者可感知的方式呈現給使用者。](https://www.w3.org/TR/WCAG/#perceivable)
 
 ### 替代文字(1.1) {#text-alternatives}
 
-[指引1.1替代文字：為任何非文字內容提供替代文字，以便可以變更為人們需要的其他形式，例如大字型、盲文、語音、符號或更簡單的語言。](https://www.w3.org/TR/WCAG/#text-alternatives)
+[指南1.1替代文字：為任何非文字內容提供替代文字，以便將其變更為人們需要的其他形式，例如大字型、盲文、語音、符號或更簡單的語言。](https://www.w3.org/TR/WCAG/#text-alternatives)
 
 ### 非文字內容(1.1.1) {#non-text-content}
 
@@ -68,15 +68,15 @@ ht-degree: 2%
 
 #### 如何達到標準 — 非文字內容(1.1.1) {#how-to-meet-non-text-content}
 
-對於靜態圖形，基本要求是為圖形提供對等文字替代文字。 這可以在以下位置完成： **替代文字** 欄位。 例如，請參閱核心元件 **[影像](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/image.html)**.
+對於靜態圖形，基本要求是為圖形提供對等文字替代文字。 您可以在&#x200B;**替代文字**&#x200B;欄位中完成此作業。 檢視核心元件&#x200B;**[影像](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/image.html)**。
 
 >[!NOTE]
 >
->部分現成可用的核心元件，例如 **[輪播](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/carousel.html)** 不提供 **替代文字** 用於新增替代文字說明至個別影像的欄位，不過 **標籤** 欄位(**[協助工具](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/carousel.html#accessibility-tab)** 標籤)。
+>某些現成可用的核心元件（例如&#x200B;**[轉盤](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/carousel.html)**）不提供用於新增替代文字說明至個別影像的&#x200B;**替代文字**&#x200B;欄位，儘管整個元件有&#x200B;**標籤**&#x200B;欄位（**[協助工具](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/carousel.html#accessibility-tab)**&#x200B;標籤）。
 >
->當針對您的AEM例項實作這些版本時，您的開發團隊必須設定這些元件以支援 `alt` 屬性，讓作者可以將其新增至內容(請參閱 [新增對其他HTML元素和屬性的支援](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes))。
+>當針對您的AEM執行個體實作這些版本時，您的開發團隊必須設定這些元件以支援`alt`屬性，讓作者可以將其新增至內容(請參閱[新增對其他HTML元素和屬性的支援](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes))。
 
-AEM需要 **替代文字** 預設要填寫的欄位。 如果影像是純粹的裝飾且不需要替代文字，則 **影像為裝飾性** 選項時可核取。
+AEM預設需要填入&#x200B;**替代文字**&#x200B;欄位。 如果影像是純粹的裝飾且不需要替代文字，則可以核取&#x200B;**影像為裝飾性**&#x200B;選項。
 
 #### 建立良好的替代文字 {#creating-good-text-alternatives}
 
@@ -97,11 +97,11 @@ The [W3C draft: HTML5 Techniques for providing useful text alternatives](https:/
 
 需要替代文字的特定非文字內容型別可能包括：
 
-* 說明性像片：指人物、物件或地點的影像。 請務必思考像片在頁面中的角色，並描述影像內容，因為輔助技術將會朗讀元素型別(例如 `graphic` 或 `image`)；使用可增加清晰度 `screenshot` 或 `illustration` 以替代文字說明，但這取決於內容。 一致性是一個重要因素，整個撰寫團隊都必須做出決定，且此決定應套用至整個使用者體驗。
+* 說明性像片：指人物、物件或地點的影像。 請務必考慮像片在頁面中的角色，並描述影像內容，因為輔助技術將會宣告元素型別（例如，`graphic`或`image`）；在替代文字描述中使用`screenshot`或`illustration`可以提高清晰度，但這取決於內容。 一致性是一個重要因素，整個撰寫團隊都必須做出決定，且此決定應套用至整個使用者體驗。
 * 圖示：這些是傳達特定資訊的小圖形符號（圖形）。 每個頁面和網站都必須使用一致的量度。 圖示在頁面或網站上的所有例項都應使用相同的簡短替代文字，除非這樣做會造成相鄰文字不必要的重複。
-* 圖表和圖形：這些通常表示數值資料。 因此，提供替代文字的一個選項可能是包含圖表或圖形中顯示的主要趨勢的簡短摘要。 如有需要，也可在文字中使用 **說明** 中的欄位 **進階** 影像屬性索引標籤。 此外，您也可以在頁面或網站的其他位置，以表格形式提供來源資料。
-* 地圖、圖表、流程圖：對於提供空間資料的圖形（例如，支援描述物件或程式之間的關係），請確定關鍵訊息是以文字格式提供，並且此文字資訊位於每個關聯資料點附近。 對於地圖，提供等同全文的地圖可能不切實際，但如果提供地圖以幫助人們找到特定位置的方式，則地圖影像的替代文字可以簡短地指出 *X的地圖*，接著在頁面其他位置的文字中或透過 **說明** 中的欄位 **進階** 的標籤 **影像** 元件。
-* 驗證碼：驗證碼是 *完全自動化的公用圖靈測試，將電腦和人類區分開來*. 這是用於網頁的安全性檢查，可區分人類與惡意軟體，但可能會造成協助工具障礙。 這些影像會要求使用者描述他們所看到的內容，以便通過安全性測試。 無法提供影像的替代文字，因此您必須考慮替代非圖形解決方案。 W3C提供一些建議，例如：
+* 圖表和圖形：這些通常表示數值資料。 因此，提供替代文字的一個選項可能是包含圖表或圖形中顯示的主要趨勢的簡短摘要。 如有必要，請使用&#x200B;**進階**&#x200B;影像屬性標籤中的&#x200B;**描述**&#x200B;欄位，以文字提供更詳細的描述。 此外，您也可以在頁面或網站的其他位置，以表格形式提供來源資料。
+* 地圖、圖表、流程圖：對於提供空間資料的圖形（例如，支援描述物件或程式之間的關係），請確定關鍵訊息是以文字格式提供，並且此文字資訊位於每個關聯資料點附近。 對於地圖，提供等同全文的地圖可能不切實際，但如果提供地圖以幫助人們找到特定位置的方式，則地圖影像的替代文字可以簡短地標示X *的*&#x200B;地圖，然後在頁面其他位置的文字中或透過&#x200B;**Image**&#x200B;元件的&#x200B;**進階**&#x200B;索引標籤中的&#x200B;**Description**&#x200B;欄位，提供指向該位置的指示。
+* 驗證碼： CAPTCHA是&#x200B;*完全自動化的公用圖靈測試，用於區分電腦和人類*。 這是用於網頁的安全性檢查，可區分人類與惡意軟體，但可能會造成協助工具障礙。 這些影像會要求使用者描述他們所看到的內容，以便通過安全性測試。 無法提供影像的替代文字，因此您必須考慮替代非圖形解決方案。 W3C提供一些建議，例如：
    * 邏輯謎題
    * 使用聲音輸出而非影像
    * 限制使用帳戶和垃圾郵件篩選器。
@@ -109,7 +109,7 @@ The [W3C draft: HTML5 Techniques for providing useful text alternatives](https:/
 
 >[!NOTE]
 >
->背景和前景文字之間應該有適當等級的對比；這部分將詳加討論 [對比（最小） (1.4.3)](#contrast-minimum).
+>背景和前景文字之間應該有適當等級的對比；將在[對比（最小值） (1.4.3)](#contrast-minimum)中更詳細地討論。
 
 #### 更多資訊 — 非文字內容(1.1.1) {#more-information-non-text-content}
 
@@ -123,9 +123,9 @@ The [W3C draft: HTML5 Techniques for providing useful text alternatives](https:/
 
 ### 時間型媒體(1.2) {#time-based-media}
 
-[准則1.2以時間為主的媒體：提供以時間為主的媒體替代方案。](https://www.w3.org/TR/WCAG/#time-based-media)
+[指南1.2以時間為基礎的媒體：為以時間為基礎的媒體提供替代方案。](https://www.w3.org/TR/WCAG/#time-based-media)
 
-此准則所處理的網路內容為 *基於時間*. 這涵蓋使用者可播放的內容（例如視訊、音訊和動畫內容），並可預先錄製或即時資料流。
+此專案處理&#x200B;*以時間為基礎*&#x200B;的網頁內容。 這涵蓋使用者可播放的內容（例如視訊、音訊和動畫內容），並可預先錄製或即時資料流。
 
 ### 純音訊和純視訊（預先錄製）(1.2.1) {#audio-only-and-video-only-prerecorded}
 
@@ -159,7 +159,7 @@ The [W3C draft: HTML5 Techniques for providing useful text alternatives](https:/
 >
 >如果音訊或視訊內容是作為相同網頁上其他格式內容的替代內容提供，則可能不需要額外的替代內容。
 >
->准則， [瞭解WCAG 1.2.1](https://www.w3.org/WAI/WCAG21/Understanding/audio-only-and-video-only-prerecorded.html)，提供進一步資訊。
+>准則[瞭解WCAG 1.2.1](https://www.w3.org/WAI/WCAG21/Understanding/audio-only-and-video-only-prerecorded.html)提供進一步資訊。
 
 在AEM網頁中插入多媒體的方式與插入影像類似。 不過，由於多媒體內容遠不止是靜態影像，因此控制多媒體播放的方式有各種不同的設定和選項。
 
@@ -191,7 +191,7 @@ The [W3C draft: HTML5 Techniques for providing useful text alternatives](https:/
 
 儘可能使用隱藏式字幕，因為使用者可以選擇是否檢視字幕。
 
-對於隱藏式字幕，請以適當的格式建立並提供同步化的字幕檔案(例如 [SMIL](https://www.w3.org/AudioVideo/))以及視訊檔案(如何操作的詳細資訊不在本指南的涵蓋範圍內，但我們提供了一些教學課程的連結，位於 [更多資訊 — 字幕（預先錄製）(1.2.2)](#more-information-captions-prerecorded))。 請務必提供註解或在視訊播放器中啟用註解功能，讓使用者知道視訊有註解可以使用。
+對於隱藏式字幕，請以適當的格式（例如[SMIL](https://www.w3.org/AudioVideo/)）與視訊檔案一起建立並提供同步化的字幕檔案(如何執行此作業的詳細資訊不在本指南的涵蓋範圍內，但我們已在[更多資訊 — 字幕（預先錄製） (1.2.2)](#more-information-captions-prerecorded)下提供了某些教學課程的連結。 請務必提供註解或在視訊播放器中啟用註解功能，讓使用者知道視訊有註解可以使用。
 
 如果您必須使用開啟的註解，請將文字內嵌到視訊曲目中。 您可以使用視訊編輯應用程式來達到此目的，該應用程式允許將標題重疊在視訊上。
 
@@ -222,7 +222,7 @@ The [W3C draft: HTML5 Techniques for providing useful text alternatives](https:/
 1. 為視訊內容加入其他音訊說明。 有三種方法可達成此目的：
    * 在現有對話方塊中暫停期間，提供未顯示在現有音軌中的場景變更資訊；
    * 提供包含原始音軌的全新、額外和選購音軌，但也包含有關場景變更的額外音訊資訊。
-      * 使用者可以在現有的音軌之間切換(這項 *不會* 包含音訊說明)和新的音軌(可 *會* 包含音訊說明)。
+      * 使用者可以在現有的音軌（*不*&#x200B;包含音訊描述）和新音軌（*不*&#x200B;包含音訊描述）之間切換。
       * 這可防止不需要額外說明的使用者中斷。
    * 建立視訊內容的第二個版本，以允許擴充音訊說明。 這可藉由在適當位置暫時暫停音訊和視訊，減少在現有對話方塊之間提供詳細音訊說明的困難。 因此，在動作再次開始之前，可以輸入更長的音訊說明。 如同上一個範例，最好將此作為選用的額外音訊曲目提供，以防止對不需要額外說明的使用者造成中斷。
 1. 提供文字稿，其為視訊或動畫的音訊與視覺元素的適當對等文字。 這應包括（在適當情況下）指出講話者、設定說明、任何事件，或視覺上顯示的資訊和語音表述內容。 視其長度而定，您可以將文字記錄放在與視訊或動畫相同的頁面上，或放在另一個頁面上；如果您選擇後一個選項，請在視訊或動畫旁提供文字記錄的連結。
@@ -246,11 +246,11 @@ The [W3C draft: HTML5 Techniques for providing useful text alternatives](https:/
 
 #### 用途 — 註解（即時） (1.2.4) {#purpose-captions-live}
 
-此成功標準與 [註解（預先錄製）](#captions-prerecorded) 因為除了此成功標準需要處理網路直播等即時簡報之外，此標準還能解決耳聾或聽力缺佳使用者遇到的協助工具問題。
+此成功標準與[字幕（預先錄製）](#captions-prerecorded)的標準完全相同，因為其用途在於解決耳聾或聽力缺佳的人遇到的協助工具問題，唯一不同之處在於此成功標準需要處理網路直播等即時簡報。
 
 #### 如何達到標準 — 字幕（即時）(1.2.4) {#how-to-meet-captions-live}
 
-遵循提供的指引 [註解（預先錄製）](#captions-prerecorded) 以上。 然而，由於媒體的即時性質，提供註解必須儘快建立，並對正在發生的事情做出回應。 因此，您應該考慮使用即時字幕或語音轉文字工具。
+遵循以上[字幕（預先錄製）](#captions-prerecorded)所提供的指引。 然而，由於媒體的即時性質，提供註解必須儘快建立，並對正在發生的事情做出回應。 因此，您應該考慮使用即時字幕或語音轉文字工具。
 
 詳細指示不在本檔案的涵蓋範圍內，但下列資源提供有用的資訊：
 
@@ -271,11 +271,11 @@ The [W3C draft: HTML5 Techniques for providing useful text alternatives](https:/
 
 #### 用途 — 音訊說明（預先錄製） (1.2.5) {#purpose-audio-description-prerecorded}
 
-此成功標準與 [音訊說明或替代媒體（預先錄製）](#audio-description-or-media-alternative-prerecorded)但作者必須提供更詳細的音訊說明才能符合AA級標準。
+此成功標準與[音訊描述或替代媒體（預先錄製）](#audio-description-or-media-alternative-prerecorded)相同，唯一例外是作者必須提供更詳細的音訊描述才能符合AA級。
 
 #### 如何達到標準 — 音訊說明（預先錄製） (1.2.5) {#how-to-meet-audio-description-prerecorded}
 
-遵循提供的指引 [音訊說明或替代媒體（預先錄製）](#audio-description-or-media-alternative-prerecorded).
+遵循[音訊描述或替代媒體（預先錄製）](#audio-description-or-media-alternative-prerecorded)所提供的指引。
 
 #### 更多資訊 — 音訊說明（預先錄製） (1.2.5) {#more-information-audio-description-prerecorded}
 
@@ -284,7 +284,7 @@ The [W3C draft: HTML5 Techniques for providing useful text alternatives](https:/
 
 ### 可調整(1.3) {#adaptable}
 
-[指南1.3可調整：建立能以不同方式呈現的內容（例如更簡單的版面），而不會遺失資訊或結構。](https://www.w3.org/TR/WCAG/#adaptable)
+[建議1.3可調整：建立可以不同方式呈現的內容（例如，更簡單的版面），而不會遺失資訊或結構。](https://www.w3.org/TR/WCAG/#adaptable)
 
 本指引涵蓋支援以下人員所需的需求：
 
@@ -300,52 +300,52 @@ The [W3C draft: HTML5 Techniques for providing useful text alternatives](https:/
 
 #### 用途 — 資訊和關係(1.3.1) {#purpose-info-and-relationships}
 
-殘障人士使用的許多輔助技術都仰賴結構性資訊來有效顯示或 *瞭解* 內容。 此結構資訊可以採用頁面標題、表格列與欄標題，以及清單型別的形式。 例如，熒幕助讀程式可讓使用者在頁面中從標題導覽至標題。 但是，當頁面內容似乎只有透過視覺樣式而非基礎HTML的結構時，則沒有可用於輔助技術的結構資訊，限制其支援更輕鬆瀏覽的能力。
+殘障人士使用的許多輔助技術都仰賴結構資訊來有效顯示或&#x200B;*瞭解*&#x200B;內容。 此結構資訊可以採用頁面標題、表格列與欄標題，以及清單型別的形式。 例如，熒幕助讀程式可讓使用者在頁面中從標題導覽至標題。 但是，當頁面內容似乎只有透過視覺樣式而非基礎HTML的結構時，則沒有可用於輔助技術的結構資訊，限制其支援更輕鬆瀏覽的能力。
 
 此成功標準旨在確保透過HTML或其他編碼技術以程式設計方式提供此類結構資訊，以便瀏覽器和輔助技術可存取並利用這些資訊。
 
 #### 如何達到標準 — 資訊和關係(1.3.1) {#how-to-meet-info-and-relationships}
 
-AEM可讓您使用適當的HTML元素，輕鬆建構語義上有意義的網頁內容。 在RTE （文字元件）中開啟頁面內容，並使用 **引數格式** 選單（段落符號），指定適當的結構元素（例如，段落和標題）。
+AEM可讓您使用適當的HTML元素，輕鬆建構語義上有意義的網頁內容。 在RTE （文字元件）中開啟您的頁面內容，然後使用&#x200B;**段落格式**&#x200B;功能表（段落符號）來指定適當的結構元素（例如，段落和標題）。
 
 在適用的情況下，您可以使用下列元素，確定您的網頁指定了適當的結構：
 
-* **標題：** 只要您已啟用RTE的協助工具功能，AEM就會提供三個層級的頁面標題。 您可以使用這些項目來識別內容的區段和子區段。標題1是標題的最高級別，標題3是最低級別。系統管理員可以配置系統以允許使用更多標題級別。
+* **標題：**&#x200B;只要您已啟用RTE的協助工具功能，AEM就會提供三層頁面標題。 您可以使用這些項目來識別內容的區段和子區段。標題1是標題的最高級別，標題3是最低級別。系統管理員可以配置系統以允許使用更多標題級別。
 
-* **清單**：您可以使用HTML來指定三種不同型別的清單：
-   * 元素 `<ul>` 用於無序 *列*  (項目符號) 清單。識別個別清單專案時會使用 `<li>` 元素。 在RTE中，使用 **專案符號清單** 圖示。
-   * 此 `<ol>` 元素用於 *編號* 清單。 識別個別清單專案時會使用 `<li>` 元素。 在RTE中，使用 **編號清單** 圖示。
+* **清單**：您可以使用HTML指定三種不同型別的清單：
+   * 元素 `<ul>` 用於無序 *列*  (項目符號) 清單。使用`<li>`元素識別個別清單專案。 在RTE中，使用&#x200B;**專案符號清單**&#x200B;圖示。
+   * `<ol>`專案用於&#x200B;*編號的*&#x200B;清單。 使用`<li>`元素識別個別清單專案。 在RTE中，使用編號清單&#x200B;**圖示。**
 
   如果要將現有內容變更為特定清單型別，請反白適當的文字並選取適當的清單型別。 如前一個顯示段落文字輸入方式的範例一樣，適當的清單元素會自動新增至您的HTML。
 
   在全螢幕模式中，會顯示個別 **的「項目符號清單** 」和「 **** 編號清單」圖示。當未處於全螢幕模式時，單一「清單」圖示後面會提供這兩個 **選項** 。
 
-* **表格**：資料表格必須使用HTML表格元素來識別：
-   * 一 `<table>` 元素
-   * a `<tr>` 表格每一列的元素
-   * a `<th>` 每個列和欄標題的元素
-   * a `<td>` 每個資料儲存格的元素
+* **資料表**：必須使用HTML資料表元素識別資料表：
+   * 一個`<table>`元素
+   * 資料表每一列的`<tr>`專案
+   * 每個列和欄標題的`<th>`元素
+   * 每個資料儲存格的`<td>`元素
 
   此外，可存取的表格會使用下列元素和屬性：
 
-   * 此 `<caption>` 元素可用來提供表格的可見標題。 字幕預設會顯示在表格上方，但可以使用CSS適當地放置字幕。 註解會以程式設計方式與表格相關聯，因此是一種提供內容簡介的實用方法。
-   * 此 `<summary>` 元素透過提供視力正常使用者看見的摘要，協助失明使用者更輕鬆地瞭解表格中呈現的資訊。 這在使用了複雜或非常規表格佈局的情況下很有用（此屬性不會顯示在瀏覽器中，只會由輔助型技術讀取）。
-   * 此 `scope` 的屬性 `<th>` 元素是用來指出儲存格是否代表特定列的標題，或代表特定欄的標題。 在複雜的表格中使用標題和id屬性也是類似的方法，其中資料儲存格可能會與一個或多個標題相關聯。
+   * `<caption>`專案是用來為資料表提供可見的標題。 字幕預設會顯示在表格上方，但可以使用CSS適當地放置字幕。 註解會以程式設計方式與表格相關聯，因此是一種提供內容簡介的實用方法。
+   * `<summary>`元素透過提供視力正常使用者可看到的摘要資訊，協助失明使用者更輕鬆地瞭解表格中呈現的資訊。 這在使用了複雜或非常規表格佈局的情況下很有用（此屬性不會顯示在瀏覽器中，只會由輔助型技術讀取）。
+   * `<th>`專案的`scope`屬性是用來指出儲存格代表特定列的標題，還是代表特定欄的標題。 在複雜的表格中使用標題和id屬性也是類似的方法，其中資料儲存格可能會與一個或多個標題相關聯。
 
   >[!NOTE]
   >
-  >依預設，這些元素和屬性不直接可用，但系統管理員可以在以下位置新增對這些值的支援： **表格屬性** 對話方塊(請參閱 [新增對其他HTML元素和屬性的支援](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes).
+  >預設情況下，這些元素和屬性不直接可用，但系統管理員可以在&#x200B;**表格屬性**&#x200B;對話方塊中新增對這些值的支援(請參閱[新增對其他HTML元素和屬性的支援](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes))。
 
-  若要開啟 **表格** 對話方塊，您可在其中選取 **表格屬性** 標籤：
+  若要開啟&#x200B;**表格**&#x200B;對話方塊，您可以在此選取&#x200B;**表格屬性**&#x200B;索引標籤：
 
-   * 定義適當的 **註解**.
+   * 定義適當的&#x200B;**標題**。
    * 理想情況下，請移除「寬 **度」、「邊框高度」、「邊框高度」、「邊框高度**」、「單元格間距」、「單元格間距 **」、「單元格**************&#x200B;間距」的預設值。因為這些屬性可以在全局樣式表中設定。
 
-  然後，您可以使用 **儲存格屬性** 若要選擇儲存格是資料或標題儲存格：
+  然後，您可以使用&#x200B;**儲存格屬性**&#x200B;來選擇儲存格是資料或標題儲存格：
 
-* **強調**：使用 `<strong>` 或 `<em>` 表示強調的元素。 請勿使用標題來反白標示段落中的文字。
+* **Emphasis**：使用`<strong>`或`<em>`元素來指示強調。 請勿使用標題來反白標示段落中的文字。
    * 反白您要強調的文字；
-   * 按一下 **B** 圖示(for `<strong>`)或 **I** 圖示(for `<em>`)中顯示 **屬性** 面板(請確定已選取HTML)。
+   * 按一下&#x200B;**屬性**&#x200B;面板中顯示的&#x200B;**B**&#x200B;圖示(`<strong>`)或&#x200B;**I**&#x200B;圖示(`<em>`)(請確定已選取HTML)。
 
      >[!NOTE]
      >
@@ -354,9 +354,9 @@ AEM可讓您使用適當的HTML元素，輕鬆建構語義上有意義的網頁�
      >* `<b>` 代表 `<strong>`
      >* `<i>` 代表 `<em>`
      >
-     >實際上相同，但 `<strong>` 和 `<em>` 偏好使用，因為它們的語意正確html。 您的開發團隊可以設定要使用的RTE `<strong>` 和 `<em>` (而非 `<b>` 和 `<i>`)時，退出連結逾時。
+     >它們實際上是相同的，但`<strong>`和`<em>`是較好的，因為它們在語義上是正確的HTML。 您的開發團隊在開發您的專案執行個體時，可以設定RTE使用`<strong>`和`<em>` （而不是`<b>`和`<i>`）。
 
-* **複雜資料表**：有時候，如果有具有兩個或多個標題級別的複雜表格，則基本表格屬性可能不足以提供所有必要的結構資訊。 對於這些型別的複雜表格，必須使用標題與其相關儲存格建立直接關係 **頁首** 和 **id** 屬性。
+* **複雜資料表**：有時候，如果有具有兩個或多個標題層級的複雜表，則基本的「資料表屬性」可能不足以提供所有必要的結構資訊。 對於這些型別的複雜資料表，必須使用&#x200B;**標題**&#x200B;和&#x200B;**id**&#x200B;屬性，在標題及其相關儲存格之間建立直接關係。
 
   >[!NOTE]
   >
@@ -414,7 +414,7 @@ AEM可讓您使用適當的HTML元素，輕鬆建構語義上有意義的網頁�
 
 #### 如何達到標準 — 有意義的順序(1.3.2) {#how-to-meet-meaningful-sequence}
 
-請遵循以下准則： [如何達到成功標準1.3.2](https://www.w3.org/WAI/WCAG21/quickref/#meaningful-sequence).
+遵循[如何達到成功標準1.3.2](https://www.w3.org/WAI/WCAG21/quickref/#meaningful-sequence)中的准則。
 
 #### 更多資訊 — 有意義的順序(1.3.2) {#more-information-meaningful-sequence}
 
@@ -435,18 +435,18 @@ AEM可讓您使用適當的HTML元素，輕鬆建構語義上有意義的網頁�
 
 >[!NOTE]
 >
->如需有關替代色彩的需求，請參閱 [使用顏色](#use-of-color).
+>如需有關替代色彩的需求，請參閱[使用色彩](#use-of-color)。
 
 #### 如何達到標準 — 感官特性(1.3.3) {#how-to-meet-sensory-characteristics}
 
 請確定任何依賴頁面內容視覺特性的資訊也會以替代格式呈現。
 
-* 不要依賴視覺位置來提供資訊。 例如，如果您想讓使用者參閱頁面右側的功能表以存取進一步資訊，請勿參閱 *右側的功能表*；請改為命名選單（例如，透過標題），並在文字中參照該名稱。
+* 不要依賴視覺位置來提供資訊。 例如，如果您想讓使用者參照頁面右側的功能表以存取進一步資訊，請勿參照右側&#x200B;*的*&#x200B;功能表；請改為命名功能表（例如，透過標題），並在文字中參照該名稱。
 * 請勿依賴文字樣式（例如粗體或斜體文字）作為傳達資訊的唯一方式。
 
 >[!NOTE]
 >
->如果在非視覺內容中理解描述性字詞的含義，則可以使用描述性字詞。 例如，使用 *以上* 和 *以下* 通常可以接受，因為它們分別表示特定內容專案之前和之後的內容；當朗讀內容時，這仍然是合理的。
+>如果在非視覺內容中理解描述性字詞的含義，則可以使用描述性字詞。 例如，使用&#x200B;*以上*&#x200B;和&#x200B;*以下*&#x200B;通常是可以接受的，因為它們分別表示特定內容專案之前和之後的內容；當朗讀內容時，這還是有意義的。
 
 #### 更多資訊 — 感官特性(1.3.3) {#more-information-sensory-characteristics}
 
@@ -465,7 +465,7 @@ AEM可讓您使用適當的HTML元素，輕鬆建構語義上有意義的網頁�
 
 >[!NOTE]
 >
->此成功標準特別針對色彩感知。 其他形式的認知包含在 [可調整(1.3)](#adaptable)；包括程式化存取色彩和其他視覺簡報編碼。
+>此成功標準特別針對色彩感知。 [可改寫(1.3)](#adaptable)中涵蓋了其他形式的感知；包括程式化存取色彩和其他視覺簡報編碼。
 
 #### 用途 — 使用顏色(1.4.1) {#purpose-use-of-color}
 
@@ -475,7 +475,7 @@ AEM可讓您使用適當的HTML元素，輕鬆建構語義上有意義的網頁�
 
 此外，使用純文字瀏覽器、單色顯示裝置或檢視頁面黑白列印成品的人無法察覺顏色。
 
-進一步考慮因素為 *已選取* 介面元素的狀態（例如索引標籤、切換按鈕等），這些元素必須以顏色和視覺呈現方式以外的其他某種方式傳遞。 對於這類元素，當建立不依賴特定感官的全包容式使用者體驗時，額外使用圖案、形狀和程式化資訊會很有幫助。
+另一個考量是介面元素（例如標籤、切換按鈕等）的&#x200B;*selected*&#x200B;狀態，除了使用顏色和視覺呈現方式外，這些狀態必須以其他某種方式傳遞。 對於這類元素，當建立不依賴特定感官的全包容式使用者體驗時，額外使用圖案、形狀和程式化資訊會很有幫助。
 
 #### 如何達到標準 — 使用顏色(1.4.1) {#how-to-meet-use-of-color}
 
@@ -483,7 +483,7 @@ AEM可讓您使用適當的HTML元素，輕鬆建構語義上有意義的網頁�
 
 例如，請確定色彩提供的資訊也明確地以文字提供。
 
-如果使用顏色作為提供資訊的提示，您應該提供額外的視覺提示，例如變更樣式（例如粗體、斜體）或字型。 這有助於視力缺佳或色覺辨認障礙的人識別資訊。 然而，這並不能完全依賴，因為這對於完全看不到頁面的使用者而言並無助益。 因此，提供隱藏文字或使用程式化解決方案(例如 [可存取的網頁標準多樣化網際網路應用程式(ARIA)套件](https://www.w3.org/WAI/standards-guidelines/aria/)，將此資訊傳達給失明的使用者。
+如果使用顏色作為提供資訊的提示，您應該提供額外的視覺提示，例如變更樣式（例如粗體、斜體）或字型。 這有助於視力缺佳或色覺辨認障礙的人識別資訊。 然而，這並不能完全依賴，因為這對於完全看不到頁面的使用者而言並無助益。 因此，提供隱藏文字或使用程式化解決方案(例如[網頁標準的Rich Internet Applications (ARIA)套件](https://www.w3.org/WAI/standards-guidelines/aria/))，將此資訊傳達給失明使用者會很有用。
 
 #### 更多資訊 — 使用顏色(1.4.1) {#more-information-use-of-color}
 
@@ -508,7 +508,7 @@ AEM可讓您使用適當的HTML元素，輕鬆建構語義上有意義的網頁�
 
 #### 如何達到標準 — 音訊控制(1.4.2) {#how-to-meet-audio-control}
 
-請遵循以下准則： [如何達到成功標準1.4.2](https://www.w3.org/WAI/WCAG21/quickref/#audio-control).
+遵循[如何達到成功標準1.4.2](https://www.w3.org/WAI/WCAG21/quickref/#audio-control)中的准則。
 
 #### 更多資訊 — 音訊控制(1.4.2) {#more-information-audio-control}
 
@@ -521,12 +521,12 @@ AEM可讓您使用適當的HTML元素，輕鬆建構語義上有意義的網頁�
 * AA級
 * 對比度（最小）：文字的視覺呈現和影像的對比度至少為4.5:1，以下除外：
    * 大型文字：大型文字和影像的對比率至少為3:1。
-   * 附帶：文字或文字的影像，屬於非使用中使用者介面元件的一部分， [純裝飾](https://www.w3.org/TR/WCAG/#dfn-pure-decoration)，任何人都看不到，或是包含其他重要視覺內容的圖片的一部分，不需要對比度。
+   * 附屬專案：文字或文字影像屬於非使用中使用者介面元件的一部分，[純粹裝飾](https://www.w3.org/TR/WCAG/#dfn-pure-decoration)，任何人都看不到，或是包含其他重要視覺內容的圖片的一部分，因此沒有對比度要求。
    * 圖志型別：屬於圖志或品牌名稱的文字沒有最低對比要求。
 
   >[!NOTE]
   >
-  >另請參閱 [瞭解非文字對比](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html) 如需詳細資訊，以協助確保內容作者瞭解非文字元素（包括圖示、介面元素等）的其他需求。
+  >如需進一步資訊，請參閱[瞭解非文字對比](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html)，以協助確保內容作者瞭解有關非文字元素（包括圖示、介面元素等）的其他需求。
 
 #### 用途 — 對比（最小） (1.4.3) {#purpose-contrast-minimum}
 
@@ -558,10 +558,10 @@ AEM可讓您使用適當的HTML元素，輕鬆建構語義上有意義的網頁�
 >下列網站可協助您轉換至其他單位：
 >
 >* [Px到Em電腦 — Omni](https://www.omnicalculator.com/conversion/px-to-em)
->* 請參閱「Font size conversion： pixel-point-em-rem-percent」，網址為 `https://websemantics.uk/tools/font-size-conversion-pixel-point-em-rem-percent/`
->* 請參閱PMtoEM.com：PX到EM的簡單轉換，網址為 `http://pxtoem.com/`
+>* 請參閱`https://websemantics.uk/tools/font-size-conversion-pixel-point-em-rem-percent/`處的「字型大小轉換：pixel-point-em-rem-percent」
+>* 請參閱PMtoEM.com：在`http://pxtoem.com/`將PX轉換為EM
 
-若要檢查對比率，請使用色彩對比工具，例如 [Paciello Group色彩對比分析器](https://www.paciellogroup.com/resources/contrast-analyser.html) 或 [WebAIM色彩對比檢查程式](https://webaim.org/resources/contrastchecker/). 這些工具可讓您檢查顏色配對，並報告任何對比問題。
+若要檢查對比率，請使用色彩對比工具，例如[Paciello Group色彩對比分析器](https://www.paciellogroup.com/resources/contrast-analyser.html)或[WebAIM色彩對比檢查器](https://webaim.org/resources/contrastchecker/)。 這些工具可讓您檢查顏色配對，並報告任何對比問題。
 
 或者，如果您不太在意頁面外觀的指定，則可以選擇不指定背景和前景文字顏色。 不需要檢查對比，因為使用者的瀏覽器會決定文字和背景的顏色。
 
@@ -580,11 +580,11 @@ AEM可讓您使用適當的HTML元素，輕鬆建構語義上有意義的網頁�
 
 #### 用途 — 調整文字大小(1.4.4) {#purpose-resize-text}
 
-此成功標準旨在確保視覺呈現的文字，包括文字型控制項（已顯示以便顯示的文字字元） [與仍在資料表單（例如ASCII）中的文字字元比較])可成功縮放，因此具有輕微視覺障礙的人士可直接讀取，而不需要使用熒幕放大鏡等輔助技術。 縮放網頁上的所有內容可能會讓使用者受益，但文字是最關鍵的。
+此成功標準旨在確保視覺呈現的文字，包括文字型控制項（已顯示文字字元以便看見，[與仍以ASCII]等資料形式存在的文字字元）均能成功縮放，以供有輕微視覺障礙的人直接閱讀，而不需要使用熒幕放大鏡等輔助技術。 縮放網頁上的所有內容可能會讓使用者受益，但文字是最關鍵的。
 
 #### 如何達到標準 — 調整文字大小(1.4.4) {#how-to-meet-resize-text}
 
-除了遵循底下的指引 [如何達到成功標準1.4.4](https://www.w3.org/WAI/WCAG21/quickref/#resize-text) 您可以鼓勵內容作者在其頁面設計和字型大小（例如回應式網頁設計）中使用不固定、彈性的寬度和高度，讓讀者可以調整文字大小。
+除了遵循[如何達到成功標準1.4.4](https://www.w3.org/WAI/WCAG21/quickref/#resize-text)中的准則以外，您還可以鼓勵內容作者在其頁面設計和字型大小（例如回應式網頁設計）中使用不固定、彈性的寬度和高度，讓讀者可以調整文字大小。
 
 #### 更多資訊 — 調整文字大小(1.4.4) {#more-information-resize-text}
 
@@ -609,7 +609,7 @@ AEM可讓您使用適當的HTML元素，輕鬆建構語義上有意義的網頁�
 
 #### 如何達到標準 — 文字影像(1.4.5) {#how-to-meet-images-of-text}
 
-如果必須使用文字的影像，請使用CSS將文字的影像取代為HTML的對等文字，以便可自訂文字使用。 如需範例，請參閱 [C30：使用CSS將文字取代為文字的影像，並提供使用者介面控制項以進行切換](https://www.w3.org/TR/2008/NOTE-WCAG20-TECHS-20081211/C30).
+如果必須使用文字的影像，請使用CSS將文字的影像取代為HTML的對等文字，以便可自訂文字使用。 如需範例，請參閱[C30：使用CSS以文字的影像取代文字，並提供使用者介面控制項以切換](https://www.w3.org/TR/2008/NOTE-WCAG20-TECHS-20081211/C30)。
 
 #### 更多資訊 — 文字影像(1.4.5) {#more-information-images-of-text}
 
@@ -618,11 +618,11 @@ AEM可讓您使用適當的HTML元素，輕鬆建構語義上有意義的網頁�
 
 ## 准則2：可操作 {#principle-operable}
 
-[准則2：可操作 — 使用者介面元件和導覽必須可操作。](https://www.w3.org/TR/WCAG/#operable)
+[原則2：可操作 — 使用者介面元件和導覽必須可操作。](https://www.w3.org/TR/WCAG/#operable)
 
 ### 無障礙鍵盤(2.1) {#keyboard-accessible}
 
-[Guidelinate 2.1無障礙鍵盤：讓所有功能都可使用鍵盤。](https://www.w3.org/TR/WCAG/#keyboard-accessible)
+[無障礙鍵盤2.1：讓所有功能都可使用鍵盤。](https://www.w3.org/TR/WCAG/#keyboard-accessible)
 
 此准則涉及的是，確保使用者可以使用鍵盤存取所有功能。
 
@@ -638,7 +638,7 @@ AEM可讓您使用適當的HTML元素，輕鬆建構語義上有意義的網頁�
 
 #### 如何達到標準 — 鍵盤(2.1.1) {#how-to-meet-keyboard}
 
-請遵循以下准則： [如何達到成功標準2.1.1](https://www.w3.org/WAI/WCAG21/quickref/#keyboard).
+遵循[如何達到成功標準2.1.1](https://www.w3.org/WAI/WCAG21/quickref/#keyboard)中的准則。
 
 #### 更多資訊 — 鍵盤(2.1.1) {#more-information-keyboard}
 
@@ -653,13 +653,13 @@ AEM可讓您使用適當的HTML元素，輕鬆建構語義上有意義的網頁�
 
 #### 用途 — 無鍵盤陷阱(2.1.2) {#purpose-no-keyboard-trap}
 
-此成功標準旨在確保內容不會 *補漏白* 網頁內容子區段中的鍵盤焦點。 當一個頁面結合了多種格式並使用外掛程式或內嵌應用程式呈現時，這是一個常見問題。
+此成功標準旨在確保內容不會在網頁內容的子區段中&#x200B;*設陷*&#x200B;鍵盤焦點。 當一個頁面結合了多種格式並使用外掛程式或內嵌應用程式呈現時，這是一個常見問題。
 
 有時候，網頁的功能會將焦點限制在內容的子區段（例如強制回應對話方塊）。 在這種情況下，您應該提供讓使用者能夠退出該內容子區段的方法（例如，按ESC鍵關閉模組對話方塊，或按「關閉」按鈕關閉模組對話方塊）。
 
 #### 如何達到標準 — 無鍵盤陷阱(2.1.2) {#how-to-meet-no-keyboard-trap}
 
-請遵循以下准則： [如何達到成功標準2.1.2](https://www.w3.org/WAI/WCAG21/quickref/#no-keyboard-trap).
+遵循[如何達到成功標準2.1.2](https://www.w3.org/WAI/WCAG21/quickref/#no-keyboard-trap)中的准則。
 
 #### 更多資訊 — 無鍵盤陷阱(2.1.2) {#more-information-no-keyboard-trap}
 
@@ -668,7 +668,7 @@ AEM可讓您使用適當的HTML元素，輕鬆建構語義上有意義的網頁�
 
 ### 充足的時間(2.2) {#enough-time}
 
-[指引2.2充足時間：為使用者提供充足的時間來閱讀及使用內容。](https://www.w3.org/TR/WCAG/#enough-time)
+[指引2.2充足的時間：為使用者提供充足的時間來閱讀及使用內容。](https://www.w3.org/TR/WCAG/#enough-time)
 
 此准則涉及的是，確保使用者有足夠的時間來閱讀內容並採取動作。
 
@@ -684,7 +684,7 @@ AEM可讓您使用適當的HTML元素，輕鬆建構語義上有意義的網頁�
 
 #### 如何達到標準 — 計時可調(2.2.1) {#how-to-meet-timing-adjustable}
 
-請遵循以下准則： [如何達到成功標準2.2.1](https://www.w3.org/WAI/WCAG21/quickref/#timing-adjustable).
+遵循[如何達到成功標準2.2.1](https://www.w3.org/WAI/WCAG21/quickref/#timing-adjustable)中的准則。
 
 #### 更多資訊 — 計時可調(2.2.1) {#more-information-timing-adjustable}
 
@@ -699,15 +699,17 @@ AEM可讓您使用適當的HTML元素，輕鬆建構語義上有意義的網頁�
    * 移動、閃爍、捲動：適用於任何移動、閃爍或捲動資訊，
       * (a)自動啟動，
       * (b)持續超過五秒，而
-      * (C)與其他內容同時呈現，使用者有一個機制可暫停、停止或隱藏內容，除非移動、閃爍或捲動屬於必要活動的一部分；
+      * (C)與其他內容同時呈現，
+使用者有一種機制可以暫停、停止或隱藏該動作，除非該動作、閃爍或捲動屬於必要活動的一部分；
    * 自動更新：適用於任何自動更新資訊，
       * (a)自動啟動，並且
-      * (b)與其他內容同時顯示，除非自動更新是重要活動的一部分，否則使用者會有暫停、停止或隱藏內容的機制，或控制更新的頻率。
+      * (b)與其他內容同時呈現
+除非自動更新屬於重要活動的一部分，否則使用者有暫停、停止、隱藏或控制更新頻率的機制。
 
 需要注意的要點包括：
 
 1. 如需與閃爍或閃爍內容相關的需求，請參閱請勿設計會導致癲癇發作的內容(2.3)。
-1. 由於任何不符合此成功標準的內容都可能干擾使用者使用整個頁面的能力，網頁上的所有內容（無論是否用於滿足其他成功標準）都必須符合此成功標準。 另請參閱 [一致性需求5：不干擾](https://www.w3.org/TR/WCAG20/#cc5).
+1. 由於任何不符合此成功標準的內容都可能干擾使用者使用整個頁面的能力，網頁上的所有內容（無論是否用於滿足其他成功標準）都必須符合此成功標準。 請參閱[符合需求5：不干擾](https://www.w3.org/TR/WCAG20/#cc5)。
 1. 軟體定期更新或串流至使用者代理程式的內容，不必保留或呈現暫停起始與繼續簡報之間產生或接收的資訊，因為這在技術上可能行不通，且在許多情況下這麼做可能會產生誤導。
 1. 如果在此階段中無法對所有使用者進行互動，而且如果未指出進度，可能會讓使用者感到困惑或導致他們認為內容已凍結或中斷，則作為預先載入階段的一部分或類似情況發生的動畫可視為必要。
 
@@ -742,7 +744,7 @@ AEM可讓您使用適當的HTML元素，輕鬆建構語義上有意義的網頁�
 
 >[!NOTE]
 >
->由於任何不符合此成功標準的內容都可能干擾使用者使用整個頁面的能力，因此網頁上的所有內容（無論是否用於符合其他成功標準）都必須符合此成功標準。 另請參閱 [一致性需求5：不干擾](https://www.w3.org/TR/WCAG/#cc5).
+>由於任何不符合此成功標準的內容都可能干擾使用者使用整個頁面的能力，因此網頁上的所有內容（無論是否用於符合其他成功標準）都必須符合此成功標準。 請參閱[符合需求5：不干擾](https://www.w3.org/TR/WCAG/#cc5)。
 
 #### 用途 — 三個Flash或低於臨界值(2.3.1) {#purpose-three-flashes-or-below-threshold}
 
@@ -753,7 +755,7 @@ AEM可讓您使用適當的HTML元素，輕鬆建構語義上有意義的網頁�
 採取步驟以確保套用下列技術：
 
 * 請確定在任何一秒的時間段內，元件的閃爍次數不會超過三次；
-* 如果無法滿足上述條件，則會在內顯示閃爍的內容 *小安全區域* 以畫面的畫素為單位。 此區域是使用複雜的公式來計算，詳見 [G176：讓閃爍區域保持足夠小](https://www.w3.org/TR/2008/NOTE-WCAG20-TECHS-20081211/G176)，因此只有在需要*閃爍的內容時，才應使用此技巧。
+* 如果無法滿足上述條件，則會在熒幕上顯示閃爍的內容於&#x200B;*小型安全區域*&#x200B;畫素內。 此區域的計算使用複雜的公式，涵蓋在[G176：讓閃爍區域保持足夠小](https://www.w3.org/TR/2008/NOTE-WCAG20-TECHS-20081211/G176)，因此，只有在需要*必須閃爍內容時，才應遵循此技巧。
 
 #### 更多資訊 — 三個Flash或低於臨界值(2.3.1) {#more-information-three-flashes-or-below-threshold}
 
@@ -762,7 +764,7 @@ AEM可讓您使用適當的HTML元素，輕鬆建構語義上有意義的網頁�
 
 ### 可導覽(2.4) {#navigable}
 
-[指引2.4可導覽：提供可協助使用者導覽、尋找內容及判斷其所在位置的方法。](https://www.w3.org/TR/WCAG/#navigable)
+[指引2.4可導覽：提供協助使用者導覽、尋找內容及判斷其所在位置的方法。](https://www.w3.org/TR/WCAG/#navigable)
 
 此准則涉及的是，確保內容簡單明瞭，讓使用者導覽。
 
@@ -778,7 +780,7 @@ AEM可讓您使用適當的HTML元素，輕鬆建構語義上有意義的網頁�
 
 #### 如何達到標準 — 略過區塊(2.4.1) {#how-to-meet-bypass-blocks}
 
-請遵循以下准則： [如何達到成功標準2.4.1](https://www.w3.org/WAI/WCAG21/quickref/#bypass-blocks).
+遵循[如何達到成功標準2.4.1](https://www.w3.org/WAI/WCAG21/quickref/#bypass-blocks)中的准則。
 
 #### 更多資訊 — 略過區塊(2.4.1) {#more-information-bypass-blocks}
 
@@ -818,7 +820,7 @@ AEM可讓您使用適當的HTML元素，輕鬆建構語義上有意義的網頁�
 
 #### 如何達到標準 — 焦點順序(2.4.3) {#how-to-meet-focus-order}
 
-請遵循以下准則： [如何達到成功標準2.4.3](https://www.w3.org/WAI/WCAG21/quickref/#focus-order).
+遵循[如何達到成功標準2.4.3](https://www.w3.org/WAI/WCAG21/quickref/#focus-order)中的准則。
 
 #### 更多資訊 — 焦點順序(2.4.3) {#more-information-focus-order}
 
@@ -846,7 +848,7 @@ AEM可讓您使用適當的HTML元素，輕鬆建構語義上有意義的網頁�
    * 文字：2010年秋季晚間課程 — 詳細資料。
    * 原因：只要稍微調整文字和連結元素的位置，就能改善連結文字：
 
-連結的用語在各個頁面中應保持一致，尤其是導覽列。 例如，如果特定頁面的連結已命名為 **出版物** 請在一個頁面上使用其他頁面上的文字，以確保一致性。
+連結的用語在各個頁面中應保持一致，尤其是導覽列。 例如，如果特定頁面的連結在某個頁面上名為&#x200B;**出版物**，請在其他頁面上使用該文字來確保一致性。
 
 在撰寫時，在使用標題屬性以確保頁面上呈現的類似連結提供有關目的地的唯一資訊方面還存在一些問題（例如，「閱讀更多」通常是指一系列的不同目的地）：
 
@@ -856,7 +858,7 @@ AEM可讓您使用適當的HTML元素，輕鬆建構語義上有意義的網頁�
 
 因此，雖然title屬性可用於為連結提供額外內容，請注意其限制，且請勿將其用作適當連結文字的替代方案。
 
-如果連結是由影像所組成，請確定影像的替代文字描述了連結的目的地。 例如，如果書架影像設定為個人出版物的連結，則替代文字應該寫成 **約翰·史密斯的出版物** 而非 **書架**.
+如果連結是由影像所組成，請確定影像的替代文字描述了連結的目的地。 例如，如果書架的影像設定為某人出版物的連結，則替代文字應該寫成&#x200B;**John Smith的出版物**，而不是&#x200B;**書架**。
 
 或者，如果連結錨點包含描述連結用途以及影像元素的文字（因此文字會出現在影像旁），請為影像使用空的alt屬性：
 
@@ -869,19 +871,19 @@ John Smith's publications
 
 >[!NOTE]
 >
->以上程式碼片段僅供說明之用，建議您使用 **影像** 元件。
+>上圖為上述程式碼片段，建議您使用&#x200B;**Image**&#x200B;元件。
 
-雖然建議您直接提供連結文字來識別連結目的，而不需要其他內容，但您不一定要承認這一點。 與內容無關的連結可用於下列情況，其HTML範例可在下列位置找到： [如何達到成功標準2.4.4](https://www.w3.org/WAI/WCAG21/quickref/#link-purpose-in-context).
+雖然建議您直接提供連結文字來識別連結目的，而不需要其他內容，但您不一定要承認這一點。 上下文無關連結可用於下列情況，其HTML範例可在[如何達到成功標準2.4.4](https://www.w3.org/WAI/WCAG21/quickref/#link-purpose-in-context)中找到。
 
 * 連結文字是緊密相關連結清單的一部分，當連結周圍的清單專案提供了足夠的內容時。
-* 連結的用途可由 *之前* （非下列）段落文字。
+* 從&#x200B;*之前* （不是之後）的段落文字可以清楚識別連結的用途。
 * 連結包含在資料表中，因此可從相關標題中清楚識別用途。
 * 連結清單包含在一組標題中，標題本身會提供適當的上下文。
 * 連結清單包含在巢狀連結中，且巢狀連結上方的父清單專案會提供適當的內容。
 
 有時候，當一個頁面上有數個連結（每個連結都會提供複雜但必要的詳細資訊中的連結方向）時，最好提供其他版本的網頁，此網頁會顯示完全相同的內容，但連結文字的詳細資訊並不多。
 
-或者，使用指令碼，讓連結本身提供的文字量最小。 在啟動位於頁面頂端的適當控制項時，連結文字會 *已展開* 以取得更詳細的資料。 類似的方法是使用CSS來 *隱藏* 視力正常的使用者提供的完整連結，但還是會以全熒幕方式輸出給熒幕助讀程式使用者。 這不屬於本檔案的範圍，但如需如何達成此目標的詳細資訊，請參閱 [更多資訊 — 連結目的（在內容中） (2.4.4)](#more-information-link-purpose-in-context) 區段。
+或者，使用指令碼，讓連結本身提供的文字量最小。 啟動位於頁面頂端的適當控制項時，連結文字會&#x200B;*展開*&#x200B;以取得進一步的詳細資料。 類似的方法是使用CSS *隱藏*&#x200B;視力正常的使用者的完整連結，但還是以全熒幕閱讀器使用者的形式將其輸出。 這不屬於本檔案的範圍，但如需如何達成此目標的詳細資訊，請參閱[詳細資訊 — 連結目的（在內容中） (2.4.4)](#more-information-link-purpose-in-context)區段。
 
 #### 更多資訊 — 連結目的（在內容中） (2.4.4) {#more-information-link-purpose-in-context}
 
@@ -906,7 +908,7 @@ John Smith's publications
 
 #### 如何達到標準 — 多種方式(2.4.5) {#how-to-meet-multiple-ways}
 
-請遵循以下准則： [如何達到成功標準2.4.5](https://www.w3.org/WAI/WCAG21/quickref/#multiple-ways).
+遵循[如何達到成功標準2.4.5](https://www.w3.org/WAI/WCAG21/quickref/#multiple-ways)中的准則。
 
 #### 更多資訊 — 多種方式(2.4.5) {#more-information-multiple-ways}
 
@@ -925,7 +927,7 @@ John Smith's publications
 
 #### 如何達到標準 — 標題和標籤(2.4.6) {#how-to-meet-headings-and-labels}
 
-請遵循以下准則： [如何達到成功標準2.4.6](https://www.w3.org/WAI/WCAG21/quickref/#headings-and-labels).
+遵循[如何達到成功標準2.4.6](https://www.w3.org/WAI/WCAG21/quickref/#headings-and-labels)中的准則。
 
 #### 更多資訊 — 標題和標籤(2.4.6) {#more-information-headings-and-labels}
 
@@ -948,7 +950,7 @@ John Smith's publications
 
 #### 如何達到標準 — 焦點可見(2.4.7) {#how-to-meet-focus-visible}
 
-請遵循以下准則： [如何達到成功標準2.4.7](https://www.w3.org/WAI/WCAG21/quickref/#focus-visible).
+遵循[如何達到成功標準2.4.7](https://www.w3.org/WAI/WCAG21/quickref/#focus-visible)中的准則。
 
 #### 更多資訊 — 焦點可見(2.4.7) {#more-information-focus-visible}
 
@@ -957,7 +959,7 @@ John Smith's publications
 
 ## 准則3：可理解 {#principle-understandable}
 
-[准則3：可理解 — 使用者介面的資訊和操作必須是可理解的。](https://www.w3.org/TR/WCAG/#understandable)
+[原則3：可理解 — 使用者介面的資訊和操作必須是可理解的。](https://www.w3.org/TR/WCAG/#understandable)
 
 ### 讓文字內容可讀取及理解(3.1) {#make-text-content-readable-and-understandable}
 
@@ -975,15 +977,15 @@ John Smith's publications
 
 #### 如何達到標準 — 頁面語言(3.1.1) {#how-to-meet-language-of-page}
 
-為達到此成功標準，可使用以下識別網頁的預設語言 `lang` 中的屬性 `<html>` 頁面頂端的元素。 例如：
+若要符合此成功標準，可以使用頁面頂端`<html>`元素中的`lang`屬性來識別網頁的預設語言。 例如：
 
-* 如果頁面以英文撰寫，則 `<html>` 元素應為：
+* 如果頁面是以英文撰寫，`<html>`元素應該寫成：
   `<html lang = "en">`
 
 * 而要以西班牙文轉譯的頁面應採用下列標準：
   `<html lang = "es">`
 
-在AEM中，您的頁面預設語言是在建立頁面時設定，但在編輯時也可以變更 [頁面屬性](/help/sites-authoring/editing-page-properties.md).
+在AEM中，您的頁面預設語言是在建立頁面時設定，但在編輯[頁面屬性](/help/sites-authoring/editing-page-properties.md)時也可以變更。
 
 >[!NOTE]
 >
@@ -993,7 +995,7 @@ John Smith's publications
 
 * [瞭解成功標準3.1.1](https://www.w3.org/WAI/WCAG21/Understanding/language-of-page.html)
 * [如何達到成功標準3.1.1](https://www.w3.org/WAI/WCAG21/quickref/#language-of-page)
-* 這些程式碼以ISO 639-1為基礎。 如需每種語言的程式碼清單，請參閱 [W3學校網站](https://www.w3schools.com/tags/ref_language_codes.asp).
+* 這些程式碼以ISO 639-1為基礎。 您可以在[W3 Schools網站](https://www.w3schools.com/tags/ref_language_codes.asp)找到各語言的更詳盡的程式碼清單。
 
 ### 區域性語言(3.1.2)  {#language-of-parts}
 
@@ -1003,7 +1005,7 @@ John Smith's publications
 
 #### 用途 — 區域性語言(3.1.2) {#purpose-language-of-parts}
 
-此成功標準的用途與成功標準類似 [頁面語言](#language-of-page)，但適用於單一頁面上包含多種語言內容的網頁（例如，由於引號或不常見的借出文字）。
+此成功標準的用途與成功標準[頁面語言](#language-of-page)類似，不同之處在於此標準適用於單一頁面上包含多種語言內容的網頁（例如，由於引號或不常見的借出文字）。
 
 套用此成功標準的頁面允許：
 
@@ -1013,7 +1015,7 @@ John Smith's publications
 
 #### 如何達到標準 — 零件語言(3.1.2) {#how-to-meet-language-of-parts}
 
-此 `lang` attribute可用來識別內容語言的變更。 例如，德文引號（ISO 639-1程式碼「de」）可顯示如下：
+`lang`屬性可用來識別內容語言的變更。 例如，德文引號（ISO 639-1程式碼「de」）可顯示如下：
 
 ```xml
 <blockquote cite = "John F. Kennedy" lang = "de">
@@ -1025,7 +1027,7 @@ John Smith's publications
 >
 >現成可用的執行個體不支援區塊引號。 可開發自訂元件以支援此功能。
 
-同樣地，如果 `span` 元素的使用方式如下：
+同樣地，如果依照下列方式使用`span`元素，瀏覽器可以正確轉譯不常見的外來字詞或片語：
 
 ```xml
 <p>The only French phrase I know is <span lang = "fr">je ne sais quoi</code>.</p>
@@ -1033,9 +1035,9 @@ John Smith's publications
 
 >[!NOTE]
 >
->納入不同語言的人名或城市時，不必遵循此成功標準。 或者，使用預設語言中常見的借出字詞或短語時，例如 *幸災樂禍* 英文版。
+>納入不同語言的人名或城市時，不必遵循此成功標準。 或者，使用預設語言中常見的借用字詞或短語時，例如英文中的&#x200B;*schadenfreude*。
 
-若要使用適當的語言新增span元素，您可以在RTE的來源編輯模式中手動編輯HTML標示，使其顯示如上。 或者 `lang` 屬性可由系統管理員包含在RTE中(請參閱 [新增對其他HTML元素和屬性的支援](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes))。
+若要使用適當的語言新增span元素，您可以在RTE的來源編輯模式中手動編輯HTML標示，使其顯示如上。 或者，系統管理員可以將`lang`屬性包含在RTE中(請參閱[新增對其他HTML元素和屬性的支援](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes))。
 
 #### 更多資訊 — 區域性語言(3.1.2) {#more-information-language-of-parts}
 
@@ -1066,7 +1068,7 @@ John Smith's publications
 
 #### 如何達到標準 — 焦點(3.2.1) {#how-to-meet-on-focus}
 
-請遵循以下准則： [如何達到成功標準3.2.1](https://www.w3.org/WAI/WCAG21/quickref/#on-focus).
+遵循[如何達到成功標準3.2.1](https://www.w3.org/WAI/WCAG21/quickref/#on-focus)中的准則。
 
 #### 更多資訊 — 聚焦(3.2.1) {#more-information-on-focus}
 
@@ -1085,7 +1087,7 @@ John Smith's publications
 
 #### 如何達到標準 — 輸入(3.2.2) {#how-to-meet-on-input}
 
-請遵循以下准則： [如何達到成功標準3.2.2](https://www.w3.org/WAI/WCAG21/quickref/#on-input).
+遵循[如何達到成功標準3.2.2](https://www.w3.org/WAI/WCAG21/quickref/#on-input)中的准則。
 
 #### 更多資訊 — 輸入(3.2.2) {#more-information-on-input}
 
@@ -1108,7 +1110,7 @@ John Smith's publications
 
 #### 如何達到標準 — 一致的導覽(3.2.3) {#how-to-meet-consistent-navigation}
 
-請遵循以下准則： [如何達到成功標準3.2.3](https://www.w3.org/WAI/WCAG21/quickref/#consistent-navigation).
+遵循[如何達到成功標準3.2.3](https://www.w3.org/WAI/WCAG21/quickref/#consistent-navigation)中的准則。
 
 #### 更多資訊 — 一致的導覽(3.2.3) {#more-information-consistent-navigation}
 
@@ -1133,7 +1135,7 @@ John Smith's publications
 
 #### 如何達到標準 — 一致的身分識別(3.2.4) {#how-to-meet-consistent-identification}
 
-請遵循以下准則： [如何達到成功標準3.2.4](https://www.w3.org/WAI/WCAG21/quickref/#consistent-identification).
+遵循[如何達到成功標準3.2.4](https://www.w3.org/WAI/WCAG21/quickref/#consistent-identification)中的准則。
 
 #### 更多資訊 — 一致的識別(3.2.4) {#more-information-consistent-identification}
 
@@ -1142,7 +1144,7 @@ John Smith's publications
 
 ### 輸入協助(3.3) {#input-assistance}
 
-[准則3.3輸入協助：協助使用者避免和更正錯誤。](https://www.w3.org/TR/WCAG/#input-assistance)
+[建議3.3輸入協助：協助使用者避免和更正錯誤。](https://www.w3.org/TR/WCAG/#input-assistance)
 
 ### 錯誤識別(3.3.1)  {#error-identification}
 
@@ -1152,7 +1154,7 @@ John Smith's publications
 
 #### 用途 — 錯誤識別(3.3.1) {#purpose-error-identification}
 
-此成功標準旨在確保使用者知道已發生錯誤，並可判斷錯誤內容。 錯誤訊息應儘可能具體。 如果表單提交失敗，則重新顯示表單並指示錯誤欄位不足以讓某些使用者感知已發生錯誤。 例如，熒幕助讀程式的使用者在遇到其中一個指標之前，不會知道有錯誤發生。 他們可能會在遇到錯誤指標之前完全放棄表單，認為頁面根本無法運作。 根據WCAG中的定義， [輸入錯誤](https://www.w3.org/TR/WCAG/#dfn-input-error) 是使用者提供的資訊，但不被接受。 這包含下列專案。
+此成功標準旨在確保使用者知道已發生錯誤，並可判斷錯誤內容。 錯誤訊息應儘可能具體。 如果表單提交失敗，則重新顯示表單並指示錯誤欄位不足以讓某些使用者感知已發生錯誤。 例如，熒幕助讀程式的使用者在遇到其中一個指標之前，不會知道有錯誤發生。 他們可能會在遇到錯誤指標之前完全放棄表單，認為頁面根本無法運作。 根據WCAG中的定義，[輸入錯誤](https://www.w3.org/TR/WCAG/#dfn-input-error)是使用者提供的資訊，但無法接受。 這包含下列專案。
 
 網頁需要但使用者忽略的資訊，或使用者提供但超出所需資料格式或允許值的資訊。
 例如：
@@ -1166,7 +1168,7 @@ John Smith's publications
 
 #### 如何達到標準 — 錯誤識別(3.3.1) {#how-to-meet-error-identification}
 
-請遵循以下准則： [如何達到成功標準3.3.1](https://www.w3.org/WAI/WCAG21/quickref/#error-identification).
+遵循[如何達到成功標準3.3.1](https://www.w3.org/WAI/WCAG21/quickref/#error-identification)中的准則。
 
 #### 更多資訊 — 錯誤識別(3.3.1) {#more-information-error-identification}
 
@@ -1185,34 +1187,36 @@ John Smith's publications
 
 ##### 表單
 
-在AEM WKND示範專案中，當您新增表單元件(例如 **文字欄位**，移至頁面。 此預設標題取決於元件型別。 您可在下列欄位新增自己的標題： **標題與文字** 該欄位之「編輯」對話方塊的「 」索引標籤。 請務必確保標籤可協助使用者瞭解與每個表單元件相關聯的資料。
+在AEM WKND示範專案中，當您新增表單元件（例如&#x200B;**文字欄位**）至頁面時，會新增預設標籤。 此預設標題取決於元件型別。 您可以在該欄位編輯對話方塊的&#x200B;**標題與文字**&#x200B;索引標籤中新增自己的標題。 請務必確保標籤可協助使用者瞭解與每個表單元件相關聯的資料。
 
-這個 **標題** 欄位必須用於欄位元素，因為它提供了可用於輔助技術的標籤。 僅在該欄位旁的文字中寫入標籤是不夠的。
+此&#x200B;**Title**&#x200B;欄位必須用於欄位元素，因為它提供可用於輔助技術的標籤。 僅在該欄位旁的文字中寫入標籤是不夠的。
 
-對於某些表單元件，您也可以使用 **隱藏標題** 核取方塊。 以此方式隱藏的標籤仍適用於輔助技術，但無法顯示在螢幕上。雖然這在某些情況下是個好方法，但最好儘可能加入視覺標籤，因為有些使用者可能會看到畫面的一小部分（一次看一個欄位），並需要標籤才能正確識別欄位。
+對於某些表單元件，也可以使用&#x200B;**隱藏標題**&#x200B;核取方塊以視覺化方式隱藏標籤。 以此方式隱藏的標籤仍適用於輔助技術，但無法顯示在螢幕上。雖然這在某些情況下是個好方法，但最好儘可能加入視覺標籤，因為有些使用者可能會看到畫面的一小部分（一次看一個欄位），並需要標籤才能正確識別欄位。
 
 ###### 影像按鈕 {#image-buttons}
 
-其中使用影像按鈕(例如 **影像按鈕** 元件)、 **標題** 中的欄位 **標題與文字** 「編輯」對話方塊的標籤實際上會提供影像的替代文字，而非標籤。 因此，在以下範例中，包含文字的影像 `Submit` 的alt文字為 `Submit`，使用編輯對話方塊中的 **Title** 欄位新增。
+其中使用影像按鈕（例如WKND專案的&#x200B;**影像按鈕**&#x200B;元件），編輯對話方塊的&#x200B;**標題與文字**&#x200B;索引標籤中的&#x200B;**標題**&#x200B;欄位實際上會提供影像的替代文字，而非標籤。 因此，在以下範例中，包含文字的影像 `Submit` 的alt文字為 `Submit`，使用編輯對話方塊中的 **Title** 欄位新增。
 
 ###### 表單欄位群組 {#groups-of-form-fields}
 
-在WKND專案中，有一組相關控制項，例如 **選項按鈕群組**，群組和個別控制項可能需要標題。 在AEM中新增一組選項按鈕時，「標題 **」欄位會提供此群組標題，而個別標題會指定為選項按鈕(** Items ****)。
+在WKND專案中，如果有一組相關控制項，例如&#x200B;**無線電群組**，則可能需要群組的標題和個別控制項。 在AEM中新增一組選項按鈕時，「標題 **」欄位會提供此群組標題，而個別標題會指定為選項按鈕(** Items ****)。
 
-不過，群組標題和選項按鈕本身之間沒有程式化關聯。範本編輯器必須將標題包住必要 `fieldset` 和 `legend` 標籤來建立此關聯，而這只能透過編輯頁面原始碼來完成。 或者，系統管理員可以新增對這些元素的支援，使這些元素顯示在 **欄位屬性** 對話方塊(請參閱 [新增對其他HTML元素和屬性的支援](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes))。
+不過，群組標題和選項按鈕本身之間沒有程式化關聯。範本編輯器必須將標題包住必要的`fieldset`和`legend`標籤以建立此關聯，而這只能透過編輯頁面原始碼來完成。 或者，系統管理員可以新增對這些元素的支援，以便這些元素出現在&#x200B;**欄位屬性**&#x200B;對話方塊中(請參閱[新增對其他HTML元素和屬性的支援](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes))。
 
 ###### Forms的其他注意事項 {#additional-considerations-for-forms}
 
-如果要以特定格式輸入資料，請在標籤文字中清楚說明。 例如，如果日期必須輸入在 `DD-MM-YYYY` 格式，請在標籤中特別指明這一點。 這表示當熒幕助讀程式的使用者遇到該欄位時，會自動公告標籤，以及關於格式的其他資訊。
+如果要以特定格式輸入資料，請在標籤文字中清楚說明。 例如，如果日期必須以`DD-MM-YYYY`格式輸入，請在標籤中特別指明這一點。 這表示當熒幕助讀程式的使用者遇到該欄位時，會自動公告標籤，以及關於格式的其他資訊。
 
 如果表單欄位的輸入是必填的，請使用標籤中的必要字詞來清楚說明。AEM在需要欄位時新增星號，但最好將字詞加入標 `required`簽本身(在編輯對話方塊的「 **Title** 」欄位中)。
 
 標籤的位置也很重要，因為它有助於他們找到適當的欄位。 當使用者面對複雜表單時，這尤其重要。 遵循以下慣例：
 
-* 核取方塊或選項按鈕：標籤會放置在緊鄰欄位右側的位置。
-* 所有其他表單元件（例如文字方塊、下拉式方塊）：標籤會放置在欄位上方或左側。
+* 核取方塊或選項按鈕：
+標籤會放在緊鄰欄位右側的位置。
+* 所有其他表單元件（例如文字方塊、下拉式方塊）：
+標籤會放置在欄位正上方或左側。
 
-在功能有限的簡單表單中，適當地標示 `Submit` 按鈕可作為相鄰欄位的標籤(例如， `Search`)。 當尋找標籤文字的空間可能困難時，這個用法很有用。
+在功能有限的簡單表單中，適當地標示`Submit`按鈕可作為相鄰欄位的標籤（例如，`Search`）。 當尋找標籤文字的空間可能困難時，這個用法很有用。
 
 #### 更多資訊 — 標籤或指示(3.3.2) {#more-information-labels-or-instructions}
 
@@ -1227,7 +1231,7 @@ John Smith's publications
 
 #### 用途 — 錯誤建議(3.3.3) {#purpose-error-suggestion}
 
-此成功標準旨在儘可能確保使用者收到更正輸入錯誤的適當建議。 WCAG定義 [輸入錯誤](https://www.w3.org/TR/WCAG/#dfn-input-error) 表示這是「系統不接受的使用者提供的資訊」。 部分不被接受的資訊範例包括使用者需要但省略的資訊，以及使用者提供但超出所需資料格式或允許值的資訊。
+此成功標準旨在儘可能確保使用者收到更正輸入錯誤的適當建議。 [輸入錯誤](https://www.w3.org/TR/WCAG/#dfn-input-error)的WCAG定義指出它是系統「不接受的使用者提供的資訊」。 部分不被接受的資訊範例包括使用者需要但省略的資訊，以及使用者提供但超出所需資料格式或允許值的資訊。
 
 成功標準3.3.1會提供錯誤通知。 然而，認知困難的人士可能很難理解如何更正錯誤。 視障人士可能無法明白到底該如何更正錯誤。 如果表單提交失敗，使用者可能會放棄表單，因為他們可能不確定如何更正錯誤，即使他們知道已經發生錯誤。
 
@@ -1235,7 +1239,7 @@ John Smith's publications
 
 #### 如何達到標準 — 錯誤建議(3.3.3) {#how-to-meet-error-suggestion}
 
-請遵循以下准則： [如何達到成功標準3.3.3](https://www.w3.org/WAI/WCAG21/quickref/#error-suggestion).
+遵循[如何達到成功標準3.3.3](https://www.w3.org/WAI/WCAG21/quickref/#error-suggestion)中的准則。
 
 #### 更多資訊 — 錯誤建議(3.3.3) {#more-information-error-suggestion}
 
@@ -1248,9 +1252,12 @@ John Smith's publications
 * AA級
 * 錯誤預防（法律、財務、資料）：對於造成使用者發生法律承諾或財務交易的網頁、在資料儲存系統中修改或刪除使用者可控資料的網頁，或提交使用者測試回應的網頁，以下至少一項為真：
 
-   * 可還原的提交內容。
-   * 已檢查檢查使用者輸入的資料是否有輸入錯誤，並為使用者提供更正錯誤的機會。
-   * 已確認提供一種機制，可在完成提交前複查、確認及更正資訊。
+   * 可反轉
+提交內容可回覆。
+   * 已核取
+系統會檢查使用者輸入的資料是否有輸入錯誤，並為使用者提供更正錯誤的機會。
+   * 已確認
+在最終提交前，可使用一種機制來複查、確認及更正資訊。
 
 #### 用途 — 錯誤預防（法律、金融、資料） (3.3.4) {#purpose-error-prevention-legal-financial-data}
 
@@ -1262,7 +1269,7 @@ John Smith's publications
 
 #### 如何達到標準 — 錯誤預防（法律、金融、資料） (3.3.4) {#how-to-meet-error-prevention-legal-financial-data}
 
-請遵循以下准則： [如何達到成功標準3.3.4](https://www.w3.org/WAI/WCAG21/quickref/#error-prevention-legal-financial-data).
+遵循[如何達到成功標準3.3.4](https://www.w3.org/WAI/WCAG21/quickref/#error-prevention-legal-financial-data)中的准則。
 
 #### 更多資訊 — 錯誤預防（法律、金融、資料） (3.3.4) {#more-information-error-prevention-legal-financial-data}
 
@@ -1271,11 +1278,11 @@ John Smith's publications
 
 ## 原則4：強健 {#principle-robust}
 
-[原則4：強健 — 內容必須足夠強健，以供包括輔助技術在內的各種使用者代理程式解讀。](https://www.w3.org/TR/WCAG/#robust)
+[原則4：強健 — 內容必須足夠強健，以供包括輔助技術在內的各種使用者代理程式解譯。](https://www.w3.org/TR/WCAG/#robust)
 
 ### 相容(4.1) {#compatible}
 
-[准則4.1相容：儘可能與目前和未來的使用者代理程式（包括輔助技術）相容。](https://www.w3.org/TR/WCAG/#compatible)
+[指南4.1相容性：儘可能與目前和未來的使用者代理程式相容，包括輔助技術。](https://www.w3.org/TR/WCAG/#compatible)
 
 儘可能與目前和未來的使用者代理程式相容，包括輔助技術。
 
@@ -1293,7 +1300,7 @@ John Smith's publications
 
 #### 如何達到標準 — 剖析(4.1.1) {#how-to-meet-parsing}
 
-請遵循以下准則： [如何達到成功標準4.1.1](https://www.w3.org/WAI/WCAG21/quickref/#parsing).
+遵循[如何達到成功標準4.1.1](https://www.w3.org/WAI/WCAG21/quickref/#parsing)中的准則。
 
 #### 更多資訊 — 剖析(4.1.1) {#more-information-parsing}
 
@@ -1318,7 +1325,7 @@ John Smith's publications
 
 #### 如何達到標準 — 名稱、角色、值(4.1.2) {#how-to-meet-ame-role-value}
 
-請遵循以下准則： [如何達到成功標準4.1.2](https://www.w3.org/WAI/WCAG21/quickref/#name-role-value).
+遵循[如何達到成功標準4.1.2](https://www.w3.org/WAI/WCAG21/quickref/#name-role-value)中的准則。
 
 #### 更多資訊 — 名稱、角色、值(4.1.2) {#more-information-ame-role-value}
 

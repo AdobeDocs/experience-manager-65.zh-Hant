@@ -23,8 +23,8 @@ ht-degree: 0%
 
 ## 如何刪除表單 {#how-to-delete-a-form}
 
-1. 登入AEM Forms使用者介面，方法是存取 `https://[hostname]:'port'/aem/forms.html.`
-1. 導覽至並選取您要刪除的表單。 按一下刪除 ![aem6forms_delete2](assets/aem6forms_delete2.png) 工具列並確認刪除操作。
+1. 透過存取`https://[hostname]:'port'/aem/forms.html.`登入AEM Forms使用者介面
+1. 導覽至並選取您要刪除的表單。 按一下工具列中的「刪除![aem6forms_delete2](assets/aem6forms_delete2.png)」並確認刪除作業。
 
    >[!NOTE]
    >
@@ -44,6 +44,6 @@ ht-degree: 0%
 
 在AEM Forms中，XFA表單範本可由最適化表單或其他XFA表單範本參照。 此外，範本可以參照資源或其他XFA範本。
 
-不建議刪除最適化表單參考的XFA表單，因為這樣可能會損毀最適化表單。 當最適化表單參考XFA表單時，其欄位會受到限制。 刪除XFA後，最適化表單無法將其欄位與XFA欄位同步，並顯示此類欄位的錯誤訊息。 若要進一步瞭解參照的XFA刪除的影響以及已修改的AF，請參閱 [更新參考的XFA表單](/help/forms/using/get-xdp-pdf-documents-aem.md#p-updating-referenced-xfa-forms-p).
+不建議刪除最適化表單參考的XFA表單，因為這樣可能會損毀最適化表單。 當最適化表單參考XFA表單時，其欄位會受到限制。 刪除XFA後，最適化表單無法將其欄位與XFA欄位同步，並顯示此類欄位的錯誤訊息。 若要進一步瞭解參考XFA刪除的影響以及已修改的AF，請參閱[更新參考的XFA表單](/help/forms/using/get-xdp-pdf-documents-aem.md#p-updating-referenced-xfa-forms-p)。
 
 若要刪除這類XFA表單，請更新最適化表單並移除與XFA欄位的繫結。

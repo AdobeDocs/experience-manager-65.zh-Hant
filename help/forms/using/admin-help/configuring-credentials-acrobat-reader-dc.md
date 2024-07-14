@@ -22,7 +22,7 @@ ht-degree: 0%
 
 如果您使用評估認證，請在移至生產環境時，以生產認證取代。 若要更新過期的或評估認證，請先刪除舊的Acrobat Reader DC擴充功能認證。
 
-如需有關取得認證的資訊，請參閱 [準備安裝AEM表單（單一伺服器）](https://helpx.adobe.com/pdf/aem-forms/6-3/prepare-install-single-server.pdf).
+如需取得認證的相關資訊，請參閱[準備安裝AEM表單（單一伺服器）](https://helpx.adobe.com/pdf/aem-forms/6-3/prepare-install-single-server.pdf)。
 
 信任存放區可能包含多個Acrobat Reader DC擴充功能認證。 指定其中一個認證作為預設Reader延伸模組認證。 當Workbench使用者無法判斷要在流程建立期間使用哪個認證時，就會使用預設認證。 這些規則套用至預設認證：
 
@@ -33,7 +33,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->您也可以以程式設計方式匯入和刪除認證。 (請參閱 [使用AEM表單進行程式設計](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html).)
+>您也可以以程式設計方式匯入和刪除認證。 (請參閱[使用AEM表單進行程式設計](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html)。)
 
 ## 匯入Acrobat Reader DC擴充功能認證 {#import-a-acrobat-reader-dc-extensions-credential}
 

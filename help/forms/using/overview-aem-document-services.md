@@ -28,7 +28,7 @@ AEM Document Services是一組OSGi服務，用於建立、彙編和保護PDF檔�
 
 ## 輸出服務 {#output-service}
 
-「輸出」服務可讓您建立不同格式的檔案，包括PDF、雷射印表機格式及標籤印表機格式。 雷射印表機格式為PostScript和Printer Control Language (PCL)。 下列清單指定標籤印表機格式：
+「輸出」服務可讓您建立不同格式的檔案，包括PDF、雷射印表機格式及標籤印表機格式。 雷射印表機格式為PostScript和印表機控制語言(PCL)。 下列清單指定標籤印表機格式：
 
 * 斑馬(ZPL)
 * Intermec (IPL)
@@ -45,11 +45,11 @@ AEM Document Services是一組OSGi服務，用於建立、彙編和保護PDF檔�
 
 下列四個Output服務作業可供使用：
 
-* **generatePDFOuput**：合併表單設計與資料以產生PDF檔案
-* **generatePrintedOutput**：將表單設計與表單資料合併，以產生檔案以傳送至雷射或標籤網路印表機
+* **generatePDFOuput**：將表單設計與資料合併，以產生PDF檔案
+* **generatePrintedOutput**：將表單設計與表單資料合併，以產生要傳送至雷射或標籤網路印表機的檔案
 
-* **generatePDFOutputBatch**：以單一叫用合併具有多個資料記錄的多個範本，以產生一批PDF檔案。 您也可以選擇合併所有PDF，以產生單一PDF
-* **generatePrintedOutputBatch**：在單一叫用中將多個範本與多個資料記錄合併，以產生一批列印檔案(PS、PCL、ZPL、DPL、IPL、TPCL)。 也可以選擇產生單一列印檔案。
+* **generatePDFOutputBatch**：在單一叫用中合併具有多個資料記錄的多個範本，以產生一批PDF檔案。 您也可以選擇合併所有PDF，以產生單一PDF
+* **generatePrintedOutputBatch**：在單一呼叫中合併含有多個資料記錄的多個範本，以產生一整批列印檔案(PS、PCL、ZPL、DPL、IPL、TPCL)。 也可以選擇產生單一列印檔案。
 
 ## 組合器服務 {#assembler-service}
 
@@ -133,7 +133,7 @@ Reader擴充功能可透過擴充具有其他使用許可權的Adobe Reader功�
 
 在Adobe Reader中開啟許可權啟用的PDF檔案時，會自動啟用這些特殊使用者功能。 當使用者完成使用已啟用許可權的檔案時，這些功能在Adobe Reader中會再次停用。 除非使用者收到其他已啟用許可權的PDF檔案，否則這些功能會維持停用狀態。
 
-開箱即用的DocAssurance服務無法使用。 若要設定DocAssurance服務，請參閱 [安裝和配置配置檔案服務](../../forms/using/install-configure-document-services.md).
+開箱即用的DocAssurance服務無法使用。 若要設定DocAssurance服務，請參閱[安裝和設定檔案服務](../../forms/using/install-configure-document-services.md)。
 
 ## 傳送至印表機服務 {#send-to-printer-service}
 

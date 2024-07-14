@@ -29,9 +29,9 @@ Tar微核心的冷待命容量可讓一或多個待命Adobe Experience Manager (
 
 >[!NOTE]
 >
->冷待命功能旨在保護需要高可用性的情況 **作者** 執行個體。 適用於在上需要高可用性的情況。 **發佈** 使用Tar Micro Kernel的執行個體，Adobe建議使用發佈陣列。
+>「冷待命」功能旨在保護&#x200B;**作者**&#x200B;執行個體上需要高可用性的情況。 對於使用Tar Micro Kernel的&#x200B;**Publish**&#x200B;執行個體需要高可用性的情況，Adobe建議使用發佈陣列。
 >
->如需更多可用部署的詳細資訊，請參閱 [建議的部署](/help/sites-deploying/recommended-deploys.md) 頁面。
+>如需更多可用部署的資訊，請參閱[建議的部署](/help/sites-deploying/recommended-deploys.md)頁面。
 
 >[!NOTE]
 >
@@ -78,7 +78,7 @@ Tar微核心的冷待命容量可讓一或多個待命Adobe Experience Manager (
 
 >[!NOTE]
 >
->建議在Dispatcher和冷待命設定中的伺服器之間新增負載平衡器。 負載平衡器應設定為僅將使用者流量導向至 **主要** 執行個體。 這是確保一致性，並防止透過冷待命機制以外的方式在待命執行個體上複製內容所必需的。
+>建議在Dispatcher與冷待命設定中的伺服器之間新增負載平衡器。 負載平衡器應設定為僅將使用者流量導向至&#x200B;**主要**&#x200B;執行個體。 這是確保一致性，並防止透過冷待命機制以外的方式在待命執行個體上複製內容所必需的。
 
 ## 建立AEM TarMK冷待命設定 {#creating-an-aem-tarmk-cold-standby-setup}
 
@@ -86,30 +86,30 @@ Tar微核心的冷待命容量可讓一或多個待命Adobe Experience Manager (
 >
 >與先前版本相比，AEM 6.3中區段節點存放區和待命存放區服務的PID已變更，如下所示：
 >
->* 從org.apache.jackrabbit.oak.**外掛程式**.segment.standby.standby.standbyStoreService重新命名為org.apache.jackrabbit.oak.segment.standby.standby.store.StandbyStoreService
->* 從org.apache.jackrabbit.oak.**外掛程式**.segment.SegmentNodeStoreService重新命名為org.apache.jackrabbit.oak.segment.SegmentNodeStoreService
+>* 從org.apache.jackrabbit.oak.將&#x200B;**plugins**.segment.standby.standby.store.StandbyStoreService新增至org.apache.jackrabbit.oak.segment.standby.store.StandbyStoreService
+>* 從org.apache.jackrabbit.oak.將&#x200B;**plugins**.segment.SegmentNodeStoreService新增至org.apache.jackrabbit.oak.segment.SegmentNodeStoreService
 >
 >進行必要的設定調整，以反映此變更。
 
-若要建立TarMK冷待命設定，請先執行主要安裝資料夾的整個檔案系統複製到新位置，以建立待命執行處理。 然後，您可以使用指定其角色的執行模式來啟動每個執行個體( `primary` 或 `standby`)。
+若要建立TarMK冷待命設定，請先執行主要安裝資料夾的整個檔案系統複製到新位置，以建立待命執行處理。 然後，您可以使用指定其角色（ `primary`或`standby`）的執行模式來啟動每個執行個體。
 
 以下是建立具有一個主要執行個體和一個待命執行個體的設定所必須遵循的程式：
 
 1. 安裝AEM。
 
-1. 關閉執行個體，並將其安裝資料夾複製到執行冷待命執行個體的位置。 即使您是從不同的電腦執行，請務必為每個資料夾提供描述性名稱(例如 *aem-primary* 或 *aem — 待命*)以區分執行個體。
+1. 關閉執行個體，並將其安裝資料夾複製到執行冷待命執行個體的位置。 即使您是從不同的電腦執行，請務必為每個資料夾指定描述性名稱（例如&#x200B;*aem-primary*&#x200B;或&#x200B;*aem-standby*），以區別執行個體。
 1. 移至主要執行個體的安裝資料夾，並：
 
-   1. 檢查並刪除您之前可能擁有的任何OSGi設定 `aem-primary/crx-quickstart/install`
+   1. 檢查並刪除任何您在`aem-primary/crx-quickstart/install`下可能有的先前OSGi設定
 
-   1. 建立名為的資料夾 `install.primary` 在 `aem-primary/crx-quickstart/install`
+   1. 在`aem-primary/crx-quickstart/install`下建立名為`install.primary`的資料夾
 
-   1. 為下的偏好節點存放區和資料存放區建立所需設定 `aem-primary/crx-quickstart/install/install.primary`
-   1. 建立名為的檔案 `org.apache.jackrabbit.oak.segment.standby.store.StandbyStoreService.config` 在相同位置並據此進行設定。 如需有關組態選項的詳細資訊，請參閱 [設定](/help/sites-deploying/tarmk-cold-standby.md#configuration).
+   1. 為`aem-primary/crx-quickstart/install/install.primary`下偏好的節點存放區和資料存放區建立必要的設定
+   1. 在相同位置建立名為`org.apache.jackrabbit.oak.segment.standby.store.StandbyStoreService.config`的檔案，並加以設定。 如需組態選項的詳細資訊，請參閱[組態](/help/sites-deploying/tarmk-cold-standby.md#configuration)。
 
-   1. 如果您搭配外部資料存放區使用AEM TarMK執行個體，請建立名為的資料夾 `crx3` 在 `aem-primary/crx-quickstart/install` 已命名 `crx3`
+   1. 如果您搭配外部資料存放區使用AEM TarMK執行個體，請在`aem-primary/crx-quickstart/install`下建立名為`crx3`的資料夾`crx3`
 
-   1. 將資料存放區設定檔案置於 `crx3` 資料夾。
+   1. 將資料存放區組態檔放在`crx3`資料夾中。
 
    例如，如果您使用外部檔案資料存放區來執行AEM TarMK執行個體，則需要下列組態檔：
 
@@ -119,7 +119,7 @@ Tar微核心的冷待命容量可讓一或多個待命Adobe Experience Manager (
 
    在下方尋找主要執行個體的設定範例：
 
-   **範例：** **org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config**
+   ****&#x200B;的範例&#x200B;**org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config**
 
    ```xml
    org.apache.sling.installer.configuration.persist=B"false"
@@ -127,7 +127,7 @@ Tar微核心的冷待命容量可讓一或多個待命Adobe Experience Manager (
    standby=B"false"
    ```
 
-   **org.apache.jackrabbit.oak.segment.standby.store.StandbyStoreService.config範例**
+   **org.apache.jackrabbit.oak.segment.standby.store.StandbyStoreService.config的範例**
 
    ```xml
    org.apache.sling.installer.configuration.persist=B"false"
@@ -135,7 +135,7 @@ Tar微核心的冷待命容量可讓一或多個待命Adobe Experience Manager (
    port=I"8023"
    ```
 
-   **org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore.config範例**
+   **org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore.config的範例**
 
    ```xml
    org.apache.sling.installer.configuration.persist=B"false"
@@ -149,22 +149,22 @@ Tar微核心的冷待命容量可讓一或多個待命Adobe Experience Manager (
    java -jar quickstart.jar -r primary,crx3,crx3tar
    ```
 
-1. 為以下專案建立Apache Sling記錄記錄器 **org.apache.jackrabbit.oak.segment** 封裝。 將記錄層級設為「Debug」，並將其記錄輸出指向個別的記錄檔，例如 */logs/tarmk-coldstandby.log*. 如需詳細資訊，請參閱 [記錄](/help/sites-deploying/configure-logging.md).
-1. 前往的位置 **待命** 執行個體並透過執行jar來啟動它。
+1. 為&#x200B;**org.apache.jackrabbit.oak.segment**&#x200B;封裝建立Apache Sling記錄記錄記錄器。 將記錄層級設為[偵錯]，並將其記錄輸出指向個別的記錄檔，例如&#x200B;*/logs/tarmk-coldstandby.log*。 如需詳細資訊，請參閱[記錄](/help/sites-deploying/configure-logging.md)。
+1. 移至&#x200B;**待命**&#x200B;執行個體的位置，然後執行jar來啟動它。
 1. 建立與主要記錄檔相同的記錄設定。 接著，停止執行個體。
 1. 接下來，準備待命執行個體。 您可以透過執行與主要執行處理相同的步驟來執行此操作：
 
-   1. 刪除下可能有的任何檔案 `aem-standby/crx-quickstart/install`.
-   1. 建立名為的資料夾 `install.standby` 在 `aem-standby/crx-quickstart/install`
+   1. 刪除您在`aem-standby/crx-quickstart/install`下可能有的任何檔案。
+   1. 在`aem-standby/crx-quickstart/install`下建立名為`install.standby`的資料夾
 
    1. 建立兩個組態檔，稱為：
 
       * `org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config`
       * `org.apache.jackrabbit.oak.segment.standby.store.StandbyStoreService.config`
 
-   1. 建立名為的資料夾 `crx3` 在 `aem-standby/crx-quickstart/install`
+   1. 在`aem-standby/crx-quickstart/install`下建立名為`crx3`的資料夾
 
-   1. 建立資料存放區設定，並將其放在 `aem-standby/crx-quickstart/install/crx3`. 在此範例中，您必須建立的檔案為：
+   1. 建立資料存放區組態，並將其放在`aem-standby/crx-quickstart/install/crx3`下。 在此範例中，您必須建立的檔案為：
 
       * org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore.config
 
@@ -172,7 +172,7 @@ Tar微核心的冷待命容量可讓一或多個待命Adobe Experience Manager (
 
    以下是典型待命執行個體的組態檔範例：
 
-   **org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config範例**
+   **org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config的範例**
 
    ```xml
    org.apache.sling.installer.configuration.persist=B"false"
@@ -182,7 +182,7 @@ Tar微核心的冷待命容量可讓一或多個待命Adobe Experience Manager (
    customBlobStore=B"true"
    ```
 
-   **org.apache.jackrabbit.oak.segment.standby.store.StandbyStoreService.config範例**
+   **org.apache.jackrabbit.oak.segment.standby.store.StandbyStoreService.config的範例**
 
    ```xml
    org.apache.sling.installer.configuration.persist=B"false"
@@ -194,7 +194,7 @@ Tar微核心的冷待命容量可讓一或多個待命Adobe Experience Manager (
    standby.autoclean=B"true"
    ```
 
-   **org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore.config範例**
+   **org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore.config的範例**
 
    ```xml
    org.apache.sling.installer.configuration.persist=B"false"
@@ -202,7 +202,7 @@ Tar微核心的冷待命容量可讓一或多個待命Adobe Experience Manager (
    minRecordLength=I"16384"
    ```
 
-1. 開始 **待命** 使用待命執行模式的執行個體：
+1. 使用待命執行模式啟動&#x200B;**待命**&#x200B;執行個體：
 
    ```xml
    java -jar quickstart.jar -r standby,crx3,crx3tar
@@ -211,20 +211,20 @@ Tar微核心的冷待命容量可讓一或多個待命Adobe Experience Manager (
 您也可以透過Web主控台以下列方式設定服務：
 
 1. 前往網頁主控台： *https://serveraddress:serverport/system/console/configMgr*
-1. 正在尋找名為的服務 **Apache Jackrabbit Oak區段Tar冷待命服務** 並連按兩下以編輯設定。
+1. 正在尋找名為&#x200B;**Apache Jackrabbit Oak Segment Tar Cold Standby Service**&#x200B;的服務，並連按兩下以編輯設定。
 1. 儲存設定，然後重新啟動執行個體，新設定即可生效。
 
 >[!NOTE]
 >
->您可以隨時檢查執行個體的角色 **主要** 或 **待命** 在Sling設定Web主控台中執行模式。
+>您可以隨時檢查Sling設定Web主控台中&#x200B;**主要**&#x200B;或&#x200B;**待命**&#x200B;執行模式是否存在，以檢查執行個體的角色。
 >
->您可以前往 *https://localhost:4502/system/console/status-slingsettings* 並檢查 **「執行模式」** 行。
+>您可以前往&#x200B;*https://localhost:4502/system/console/status-slingsettings*&#x200B;並檢查&#x200B;**「執行模式」**&#x200B;行來完成此操作。
 
 ## 首次同步處理 {#first-time-synchronization}
 
 準備完成且首次啟動待命後，當待命到主要位置為止時，執行個體之間會存在大量網路流量。 您可以參閱記錄檔來觀察同步化的狀態。
 
-待命 *tarmk-coldstandby.log*，您會看到類似以下的專案：
+在待命&#x200B;*tarmk-coldstandby.log*&#x200B;中，您可以看到下列專案：
 
 ```xml
     *DEBUG* [defaultEventExecutorGroup-2-1] org.apache.jackrabbit.oak.segment.standby.store.StandbyStore trying to read segment ec1f739c-0e3c-41b8-be2e-5417efc05266
@@ -236,15 +236,15 @@ Tar微核心的冷待命容量可讓一或多個待命Adobe Experience Manager (
     *DEBUG* [defaultEventExecutorGroup-2-1] org.apache.jackrabbit.oak.segment.file.TarWriter Writing segment ec1f739c-0e3c-41b8-be2e-5417efc05266 to /mnt/crx/author/crx-quickstart/repository/segmentstore/data00016a.tar
 ```
 
-待命中 *error.log*，您應該會看到類似以下的專案：
+在待命的&#x200B;*error.log*&#x200B;中，您應該會看到類似以下的專案：
 
 ```xml
 *INFO* [FelixStartLevel] org.apache.jackrabbit.oak.segment.standby.store.StandbyStoreService started standby sync with 10.20.30.40:8023 at 5 sec.
 ```
 
-在上述記錄片段中， *10.20.30.4* 是主要播放器的IP位址。
+在上述記錄檔片段中，*10.20.30.40*&#x200B;是主要的IP位址。
 
-在 **主要** *tarmk-coldstandby.log*，您會看到類似以下的專案：
+在&#x200B;**primary** *tarmk-coldstandby.log*&#x200B;中，您會看到下列專案：
 
 ```xml
     *DEBUG* [nioEventLoopGroup-3-2] org.apache.jackrabbit.oak.segment.standby.store.CommunicationObserver got message 's.d45f53e4-0c33-4d4d-b3d0-7c552c8e3bbd' from client c7a7ce9b-1e16-488a-976e-627100ddd8cd
@@ -256,7 +256,7 @@ Tar微核心的冷待命容量可讓一或多個待命Adobe Experience Manager (
     *DEBUG* [nioEventLoopGroup-3-2] org.apache.jackrabbit.oak.segment.standby.store.CommunicationObserver did send segment with 262144 bytes to client c7a7ce9b-1e16-488a-976e-627100ddd8cd
 ```
 
-在此案例中，記錄檔中提到的「使用者端」為 **待命** 執行個體。
+在這種情況下，記錄檔中提到的「使用者端」是&#x200B;**待命**&#x200B;執行個體。
 
 一旦這些專案停止顯示在記錄中，您就可以安全地假設同步程式已完成。
 
@@ -266,7 +266,7 @@ Tar微核心的冷待命容量可讓一或多個待命Adobe Experience Manager (
 *DEBUG* [defaultEventExecutorGroup-156-1] org.apache.jackrabbit.oak.segment.file.TarWriter Writing segment 3a03fafc-d1f9-4a8f-a67a-d0849d5a36d5 to /<<CQROOTDIRECTORY>>/crx-quickstart/repository/segmentstore/data00014a.tar
 ```
 
-此外，以非共用專案執行時 `FileDataStore`，則類似下列的訊息會確認二進位檔案是否正確傳輸：
+此外，以非共用的`FileDataStore`執行時，類似下列的訊息會確認二進位檔案已正確傳輸：
 
 ```xml
 *DEBUG* [nioEventLoopGroup-228-1] org.apache.jackrabbit.oak.segment.standby.codec.ReplyDecoder received blob with id eb26faeaca7f6f5b636f0ececc592f1fd97ea1a9#169102 and size 169102
@@ -276,26 +276,26 @@ Tar微核心的冷待命容量可讓一或多個待命Adobe Experience Manager (
 
 下列OSGi設定適用於「冷待命」服務：
 
-* **保留設定：** 如果啟用，這會將設定儲存在存放庫中，而非傳統的OSGi設定檔案。 Adobe建議您將此設定保留在生產系統上停用，這樣待命狀態就不會提取主要設定。
+* **保留組態：**&#x200B;如果啟用，這會將此組態儲存在存放庫中，而非傳統的OSGi組態檔。 Adobe建議您將此設定保留在生產系統上停用，這樣待命狀態就不會提取主要設定。
 
-* **模式(`mode`)：** 這會選擇執行個體的執行模式。
+* **模式(`mode`)：**&#x200B;這會選擇執行個體的執行模式。
 
-* **連線埠（連線埠）：** 用於通訊的連線埠。 預設為 `8023`。
+* **連線埠（連線埠）：**&#x200B;用於通訊的連線埠。 預設為 `8023`。
 
-* **主要主機(`primary.host`)：**  — 主要執行個體的主機。 此設定僅適用於待命。
-* **同步間隔(`interval`)：**  — 此設定會決定同步處理要求之間的間隔，且僅適用於待命執行個體。
+* **主要主機(`primary.host`)：** — 主要執行個體的主機。 此設定僅適用於待命。
+* **同步間隔(`interval`)：** — 此設定會決定同步要求之間的間隔，而且僅適用於待命執行個體。
 
-* **允許的IP範圍(`primary.allowed-client-ip-ranges`)：**  — 主要允許連線的IP範圍。
-* **安全(`secure`)：** 啟用SSL加密。 若要使用此設定，必須在所有執行個體上啟用它。
-* **待命讀取逾時(`standby.readtimeout`)：** 從待命執行個體發出的要求逾時（毫秒）。 使用的預設值為60000 （一分鐘）。
+* **允許的IP範圍(`primary.allowed-client-ip-ranges`)：** — 主要允許連線的IP範圍。
+* **安全(`secure`)：**&#x200B;啟用SSL加密。 若要使用此設定，必須在所有執行個體上啟用它。
+* **待命讀取逾時(`standby.readtimeout`)：**&#x200B;從待命執行個體發出的要求逾時（毫秒）。 使用的預設值為60000 （一分鐘）。
 
-* **待命自動清除(`standby.autoclean`)：** 如果存放區的大小在同步處理週期中增加，請呼叫清除方法。
+* **待命自動清除(`standby.autoclean`)：**&#x200B;如果存放區的大小在同步處理週期中增加，請呼叫清除方法。
 
 >[!NOTE]
 >
 >Adobe建議主要和待命資料庫採用不同的存放庫ID，以便可分別識別解除安裝等服務的身分。
 >
->確保涵蓋此問題的最佳方式是刪除 *sling.id* 待命時重新啟動執行個體。
+>若要確保涵蓋此範圍，最好的方式是刪除待命環境上的&#x200B;*sling.id*，然後重新啟動執行個體。
 
 ## 容錯移轉程式 {#failover-procedures}
 
@@ -308,16 +308,16 @@ Tar微核心的冷待命容量可讓一或多個待命Adobe Experience Manager (
 1. 移至待命執行個體的安裝位置，然後停止。
 
 1. 如果您有使用設定設定的負載平衡器，此時您可以從負載平衡器的設定中移除主要負載平衡器。
-1. 備份 `crx-quickstart` 來自待命安裝資料夾的資料夾。 當設定新的待命時，它可以作為起點。
+1. 從待命安裝資料夾備份`crx-quickstart`資料夾。 當設定新的待命時，它可以作為起點。
 
-1. 使用重新啟動執行個體 `primary` 執行模式：
+1. 使用`primary`執行模式重新啟動執行個體：
 
    ```shell
    java -jar quickstart.jar -r primary,crx3,crx3tar
    ```
 
 1. 將新的主要專案新增到負載平衡器。
-1. 建立並啟動新的待命執行個體。 如需詳細資訊，請參閱上方的程式 [建立AEM TarMK冷待命設定](/help/sites-deploying/tarmk-cold-standby.md#creating-an-aem-tarmk-cold-standby-setup).
+1. 建立並啟動新的待命執行個體。 如需詳細資訊，請參閱上文[建立AEM TarMK冷待命安裝程式](/help/sites-deploying/tarmk-cold-standby.md#creating-an-aem-tarmk-cold-standby-setup)的程式。
 
 ## 將Hotfix套用至冷待命設定 {#applying-hotfixes-to-a-cold-standby-setup}
 
@@ -325,18 +325,18 @@ Tar微核心的冷待命容量可讓一或多個待命Adobe Experience Manager (
 
 您可以依照下列步驟執行此操作：
 
-1. 前往JMX主控台並使用**org.apache.jackrabbit.oak： Status (&quot;Standby&quot;)**bean，停止冷待命執行個體上的同步化程式。 如需如何執行此動作的詳細資訊，請參閱以下小節： [監視](#monitoring).
+1. 前往JMX主控台並使用**org.apache.jackrabbit.oak： Status (&quot;Standby&quot;)**bean，停止冷待命執行個體上的同步化程式。 如需如何執行此動作的詳細資訊，請參閱[監視](#monitoring)一節。
 1. 停止冷待命執行個體。
-1. 在主要執行個體上安裝Hotfix。 如需如何安裝Hotfix的詳細資訊，請參閱 [如何使用套件](/help/sites-administering/package-manager.md).
+1. 在主要執行個體上安裝Hotfix。 如需如何安裝Hotfix的詳細資訊，請參閱[如何使用套件](/help/sites-administering/package-manager.md)。
 1. 測試執行個體安裝後是否有問題。
 1. 透過刪除其安裝資料夾來移除冷待命執行個體。
 1. 停止主要執行個體並複製它，方法是執行其整個安裝資料夾的檔案系統復本，複製到冷待命的位置。
-1. 重新設定新建立的翻制，使其作為冷待命執行處理。 另請參閱 [建立AEM TarMK冷待命設定。](/help/sites-deploying/tarmk-cold-standby.md#creating-an-aem-tarmk-cold-standby-setup)
+1. 重新設定新建立的翻制，使其作為冷待命執行處理。 請參閱[建立AEM TarMK冷待命安裝程式。](/help/sites-deploying/tarmk-cold-standby.md#creating-an-aem-tarmk-cold-standby-setup)
 1. 啟動主要和冷待命執行處理。
 
 ## 監控 {#monitoring}
 
-此功能會使用JMX或MBean公開資訊。 如此一來，您就可以使用 [JMX主控台](/help/sites-administering/jmx-console.md). 此資訊可在以下的MBean中找到： `type org.apache.jackrabbit.oak:type="Standby"`已命名 `Status`.
+此功能會使用JMX或MBean公開資訊。 如此一來，您就可以使用[JMX主控台](/help/sites-administering/jmx-console.md)來檢查待命和主裝置的目前狀態。 可以在`type org.apache.jackrabbit.oak:type="Standby"`的MBean （名為`Status`）中找到該資訊。
 
 **待命**
 
@@ -344,35 +344,35 @@ Tar微核心的冷待命容量可讓一或多個待命Adobe Experience Manager (
 
 此節點有五個唯讀屬性：
 
-* `Running:` 表示同步處理是否執行中的布林值。
+* `Running:`布林值，指出同步處理是否正在執行。
 
-* `Mode:` 使用者端：後面接著UUID，用來識別執行個體。 每次更新設定時，此UUID都會變更。
+* `Mode:`使用者端：後面接著用來識別執行個體的UUID。 每次更新設定時，此UUID都會變更。
 
-* `Status:` 目前狀態的文字表示(例如 `running` 或 `stopped`)。
+* `Status:`目前狀態的文字表示法（如`running`或`stopped`）。
 
 * `FailedRequests:`連續錯誤數。
-* `SecondsSinceLastSuccess:` 自上次與伺服器成功通訊以來的秒數。 它顯示 `-1` 若尚未進行任何成功的通訊。
+* `SecondsSinceLastSuccess:`自上次與伺服器成功通訊以來的秒數。 如果未成功通訊，則會顯示`-1`。
 
 此外還有三種可叫用方法：
 
-* `start():` 啟動同步處理作業。
-* `stop():` 停止同步處理作業。
-* `cleanup():` 在待命系統上執行清除作業。
+* `start():`開始同步處理作業。
+* `stop():`停止同步處理作業。
+* `cleanup():`在待命系統上執行清除作業。
 
 **主要**
 
 觀察主要主機會透過MBean （其ID值是TarMK待命服務正在使用的連線埠號碼，預設為8023）公開某些一般資訊。 大部分的方法和屬性與待命的相同，但有些則不同：
 
-* `Mode:` 一律顯示值 `primary`.
+* `Mode:`一律顯示值`primary`。
 
 此外，最多可以擷取十個連線至主版的使用者端（待命執行處理）的資訊。 MBean ID是執行個體的UUID。 這些MBean沒有可叫用的方法，但有一些有用的唯讀屬性：
 
-* `Name:` 使用者端的ID。
-* `LastSeenTimestamp:` 文字表示中最後一個請求的時間戳記。
-* `LastRequest:` 使用者端的最後一個要求。
-* `RemoteAddress:` 使用者端的IP位址。
-* `RemotePort:` 使用者端用於上次要求的連線埠。
-* `TransferredSegments:` 傳輸到此使用者端的區段總數。
+* `Name:`使用者端識別碼。
+* `LastSeenTimestamp:`文字表示中最後一個請求的時間戳記。
+* `LastRequest:`使用者端的最後一個要求。
+* `RemoteAddress:`使用者端的IP位址。
+* `RemotePort:`使用者端用於上次要求的連線埠。
+* `TransferredSegments:`傳輸至此使用者端的區段總數。
 * `TransferredSegmentBytes:`傳輸至此使用者端的位元組總數。
 
 ## 冷待命存放庫維護 {#cold-standby-repository-maintenance}
@@ -381,7 +381,7 @@ Tar微核心的冷待命容量可讓一或多個待命Adobe Experience Manager (
 
 >[!NOTE]
 >
->如果您執行 [線上修訂清除](/help/sites-deploying/revision-cleanup.md) 在主要執行個體上，不需要以下顯示的手動程式。 此外，如果您使用「線上修訂清除」，則 `cleanup ()` 待命執行個體的作業會自動執行。
+>如果您在主要執行個體上執行[線上修訂清除](/help/sites-deploying/revision-cleanup.md)，則不需要以下顯示的手動程式。 此外，如果您使用線上修訂清除，待命執行個體上的`cleanup ()`作業會自動執行。
 
 >[!NOTE]
 >
@@ -389,14 +389,14 @@ Tar微核心的冷待命容量可讓一或多個待命Adobe Experience Manager (
 
 Adobe建議定期執行維護作業，以防止隨著時間推移存放庫過度成長。 若要手動執行冷待命存放庫維護，請遵循下列步驟：
 
-1. 前往JMX主控台並使用 **org.apache.jackrabbit.oak：狀態（「待命」）** 豆子。 如需如何執行此動作的詳細資訊，請參閱上述章節： [監視](/help/sites-deploying/tarmk-cold-standby.md#monitoring).
+1. 前往JMX主控台並使用&#x200B;**org.apache.jackrabbit.oak： Status (&quot;Standby&quot;)** bean，停止待命執行個體的待命程式。 如需如何執行此動作的詳細資訊，請參閱上文[監視](/help/sites-deploying/tarmk-cold-standby.md#monitoring)一節。
 
 1. 停止主要AEM執行個體。
-1. 在主要執行個體上執行Oak壓縮工具。 如需詳細資訊，請參閱 [維護存放庫](/help/sites-deploying/storage-elements-in-aem-6.md#maintaining-the-repository).
+1. 在主要執行個體上執行Oak壓縮工具。 如需詳細資訊，請參閱[維護存放庫](/help/sites-deploying/storage-elements-in-aem-6.md#maintaining-the-repository)。
 1. 啟動主要執行個體。
 1. 使用第一個步驟中所述的相同JMX Bean在待命執行處理上啟動待命處理作業。
 1. 觀察記錄並等待同步完成。 目前待命存放庫可能會大幅增加。
-1. 執行 `cleanup()` 在待命執行個體上操作，使用第一步中所述的相同JMX Bean。
+1. 使用第一個步驟中所述的相同JMX Bean，在待命執行個體上執行`cleanup()`作業。
 
 待命執行個體完成與主要執行個體的同步化可能需要比平常更長的時間，因為離線壓縮會有效重寫存放庫歷史記錄，因此計算存放庫中的變更需要更多時間。 此程式完成後，待命資料庫的大小與主要資料庫的大小大致相同。
 
@@ -406,11 +406,11 @@ Adobe建議定期執行維護作業，以防止隨著時間推移存放庫過度
 
 請務必不時對檔案資料存放區執行個體執行記憶體回收，否則，刪除的二進位檔會保留在檔案系統上，最終會填滿磁碟機。 若要執行記憶體回收，請遵循下列程式：
 
-1. 依照一節所述執行冷待命存放庫維護 [以上](/help/sites-deploying/tarmk-cold-standby.md#cold-standby-repository-maintenance).
+1. 執行冷待命存放庫維護，如上節[所述](/help/sites-deploying/tarmk-cold-standby.md#cold-standby-repository-maintenance)。
 1. 維護程式完成且執行個體重新啟動後：
 
-   * 在主要上，透過相關JMX Bean執行資料存放區記憶體回收，如中所述 [本文](/help/sites-administering/data-store-garbage-collection.md#running-data-store-garbage-collection-via-the-jmx-console).
-   * 在待命狀態下，資料存放區廢棄專案收集只能透過 **BlobGarbageCollection** MBean - `startBlobGC()`. 此 **存放庫管理** 待命時無法使用MBean。
+   * 在主要上，透過[本文章](/help/sites-administering/data-store-garbage-collection.md#running-data-store-garbage-collection-via-the-jmx-console)中所述的相關JMX Bean執行資料存放區記憶體回收。
+   * 待命時，只能透過&#x200B;**BlobGarbageCollection** MBean - `startBlobGC()`使用資料存放區記憶體回收。 **RepositoryManagement** MBean在待命狀態中無法使用。
 
    >[!NOTE]
    >

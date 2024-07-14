@@ -26,23 +26,23 @@ ht-degree: 1%
 
 ## 位置設定 {#locations-settings}
 
-**內容根URI：** 從中擷取表單的存放庫的URI或絕對位置。 此值會與sForm引數（透過API指定）結合，以建構擷取之表單的絕對路徑。 此值可參考可使用HTTP存取的目錄或Web位置。
+**內容根URI：**&#x200B;從中擷取表單之存放庫的URI或絕對位置。 此值會與sForm引數（透過API指定）結合，以建構擷取之表單的絕對路徑。 此值可參考可使用HTTP存取的目錄或Web位置。
 
 預設值為空字串。
 
-**XCI設定檔：** 輸出服務用於呈現的XCI組態檔的相對或絕對位置。 若為相對值，則假設XCI檔案位在AEM表單可部署EAR檔案中。
+**XCI組態檔：**&#x200B;輸出服務用於轉譯之XCI組態檔的相對或絕對位置。 若為相對值，則假設XCI檔案位在AEM表單可部署EAR檔案中。
 
 預設值為 `com/adobe/formServer/PA/pa_output.xci`。
 
-**快取位置：** 指定輸出磁碟快取的位置。 當您變更此設定時，會重設目前位置的所有現有快取資訊，並在新位置建立新的快取。 選取下列其中一個選項：
+**快取位置：**&#x200B;指定輸出磁碟快取的位置。 當您變更此設定時，會重設目前位置的所有現有快取資訊，並在新位置建立新的快取。 選取下列其中一個選項：
 
-**預設位置：** 這是預設選取範圍。 選取此選項時，會在從屬於您正在使用的應用程式伺服器的位置建立快取：
+**預設位置：**&#x200B;這是預設選取範圍。 選取此選項時，會在從屬於您正在使用的應用程式伺服器的位置建立快取：
 
 * **JBoss：** `[JBoss Home]\server\[install type]\svcdata\Output\Cache`
 * **WebLogic：** `[WebLogic Home]\user_projects\domains\[aem-forms domain Name]\adobe\[Forms Server name]\Output\Cache`
 * **WebSphere：** `[IBM Home]\WebSphere\AppServer\installedApps\adobe\server1\Output\Cache`
 
-**LC暫存目錄：** 快取是在AEM forms暫存目錄的子目錄中建立的，該子目錄在「設定」>「核心系統設定」>「設定」>「暫存目錄位置」下的管理控制檯中指定。 子目錄已命名 `adobeoutput_[servername]`.
+**LC Temp Directory：**&#x200B;快取是在AEM Forms暫存目錄的子目錄中建立的，該目錄是在管理主控台的[設定] > [核心系統設定] > [設定] > [暫存目錄位置]下指定的。 子目錄名為`adobeoutput_[servername]`。
 
 >[!NOTE]
 >

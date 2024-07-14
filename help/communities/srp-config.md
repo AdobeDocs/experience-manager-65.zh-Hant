@@ -29,31 +29,31 @@ ht-degree: 3%
 
 ## 儲存設定主控台 {#storage-configuration-console}
 
-![jsrp設定](assets/jsrp-configuration.png)
+![jsrp-configuration](assets/jsrp-configuration.png)
 
 在Author環境中，存取儲存設定主控台。
 
-* 在全域導覽中選取 **[!UICONTROL 工具]** > **[!UICONTROL Communities]** > **[!UICONTROL 儲存設定]**
+* 從全域導覽中，選取&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 社群]** > **[!UICONTROL 儲存設定]**
 
 若要選取預設JCR以外的儲存選項：
 
 * 選取一個選項
 * 正確設定
 
-   * 檢視詳細資訊 [選取MSRP](msrp.md#select-msrp)
-   * 檢視詳細資訊 [選取DSRP](dsrp.md#select-dsrp)
-   * 檢視詳細資訊 [選取ASRP](asrp.md#select-asrp)
+   * 檢視[選取MSRP](msrp.md#select-msrp)的詳細資料
+   * 檢視[選取DSRP](dsrp.md#select-dsrp)的詳細資料
+   * 檢視[選取ASRP](asrp.md#select-asrp)的詳細資料
 
-* 選取 **[!UICONTROL 提交]**.
+* 選取&#x200B;**[!UICONTROL 提交]**。
 
 ### 關於JCR儲存 {#about-jcr-storage}
 
 如果未選取任何專案，預設值為AEM存放庫JCR。
 
-JCR為 *非* 作者和發佈環境共用的公用存放區。 社群內容只會從建立該社群內容的作者或發佈環境中顯示。
+JCR是&#x200B;*不是*&#x200B;作者和Publish環境共用的公用存放區。 社群內容只會從建立該社群的Author或Publish環境中顯示。
 
-造訪 [JCR存放區](jsrp.md) 以取得其他資訊。
+如需其他資訊，請造訪[JCR存放區](jsrp.md)。
 
 >[!NOTE]
 >
->節點不存在 `srpc` 在 `/etc/socialconfig` 表示預設 [JCR存放區](jsrp.md).
+>`/etc/socialconfig`下缺少節點`srpc`表示預設的[JCR存放區](jsrp.md)。

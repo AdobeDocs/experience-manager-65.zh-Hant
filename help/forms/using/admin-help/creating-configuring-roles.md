@@ -22,9 +22,9 @@ ht-degree: 0%
 
 「使用者管理」有兩種角色：
 
-**可變角色：** 您可以編輯和刪除此類角色，也可以從這些角色型別新增和刪除角色許可權。 您建立的任何角色都視為可變角色。 您可以新增或移除指派給可變角色的使用者和群組。
+**可變動角色：**&#x200B;此角色型別可以編輯和刪除，角色許可權可以從這些角色型別新增和刪除。 您建立的任何角色都視為可變角色。 您可以新增或移除指派給可變角色的使用者和群組。
 
-**不可變角色：** 「使用者管理」隨附的預設角色為不可變角色。 無法編輯或刪除這些角色。 但是，您可以新增或移除指派給不可變角色的使用者和群組。
+**不可變角色：**&#x200B;使用者管理隨附的預設角色為不可變角色。 無法編輯或刪除這些角色。 但是，您可以新增或移除指派給不可變角色的使用者和群組。
 
 可變和不可變角色也可以透過AEM Forms API建立。
 
@@ -32,67 +32,67 @@ ht-degree: 0%
 
 下列預設角色包含在「使用者管理」資料庫中。
 
-**Administration Console使用者：** 可以存取管理主控台。
+**管理主控台使用者：**&#x200B;可以存取管理主控台。
 
-**應用程式管理員：** 可使用所有Workbench功能。 可以使用Administration Console中的「應用程式和服務」頁面來設定服務執行階段特性、端點和安全性。
+**應用程式管理員：**&#x200B;可以使用所有Workbench功能。 可以使用Administration Console中的「應用程式和服務」頁面來設定服務執行階段特性、端點和安全性。
 
-**AEM表單管理員：** 可以執行所有已安裝服務的所有工作。
+**AEM表單管理員：**&#x200B;可以執行所有已安裝服務的所有工作。
 
-**安全管理員：** 控制使用者管理設定，並管理與任何使用者管理員網域相關聯的使用者和群組
+**安全管理員：**&#x200B;控制使用者管理設定，並管理與任何使用者管理員網域關聯的使用者和群組
 
-**服務使用者：** 可以檢視及叫用任何服務
+**服務使用者：**&#x200B;可以檢視及叫用任何服務
 
-**超級管理員：** 可存取系統中的所有管理功能，包括服務
+**超級管理員：**&#x200B;存取系統中的所有管理功能，包括服務
 
-**信任管理員：** 可以管理從管理主控台的「信任存放區管理」頁面管理的PKI信任設定值和PKI證明資料
+**信任管理員：**&#x200B;可以管理從管理主控台的[信任存放區管理]頁面管理的PKI信任設定值和PKI認證
 
 ### 其他預設角色 {#additional-default-roles}
 
 根據您安裝的AEM Forms元件，可能包括以下其他預設角色
 
-**檔案上載應用程式使用者：** 可使用Flex Remoting上傳檔案。
+**檔案上載應用程式使用者：**&#x200B;可以使用Flex遠端功能上載檔案。
 
-**Forms管理員：** 可以從Administration Console的Forms頁面檢視及修改設定
+**Forms管理員：**&#x200B;可以從Administration Console的Forms頁面檢視及修改設定
 
-**AEM Forms內容空間管理員：** 可以從Administration Console的Content Services (Deprecated)頁面檢視及修改設定
+**AEM Forms Contentspace系統管理員：**&#x200B;可以從管理主控台的Content Services （已棄用）頁面檢視及修改設定
 
-**AEM Forms Contentspace使用者：** 可登入Contentspace （已棄用）網頁
+**AEM Forms Contentspace使用者：**&#x200B;可以登入Contentspace （已棄用）網頁
 
-**Documentum聯結器管理員：** 可以從Administration console的Connector for EMC Documentum頁面檢視及修改設定
+**Documentum Connector Administrator：**&#x200B;可以從Administration console的Connector for EMC Documentum頁面檢視及修改設定
 
-**AEM Forms FileNet聯結器管理員：** 您可以在管理主控台的IBM FileNet聯結器頁面檢視及修改設定
+**AEM Forms FileNet Connector管理員：**&#x200B;可以從Administration Console中的IBM FileNet聯結器頁面檢視及修改設定
 
-**AEM forms IBM CM聯結器管理員：** 可以從管理控制檯的IBM Content Manager聯結器頁面檢視和修改設定
+**AEM forms IBM CM聯結器管理員：**&#x200B;可以從管理控制檯中的IBM Content Manager聯結器頁面檢視及修改設定
 
-**Rights Management管理員：** 執行相關Rights Management頁面上所有伺服器設定所需的所有工作
+**Rights Management管理員：**&#x200B;執行相關Rights Management頁面上所有伺服器設定所需的所有工作
 
-**Rights Management一般使用者：** 可存取Rights Management一般使用者網頁
+**Rights Management一般使用者：**&#x200B;可以存取Rights Management一般使用者網頁
 
-**Rights Management邀請使用者：** 可以邀請使用者
+**Rights Management邀請使用者：**&#x200B;可以邀請使用者
 
-**Rights Management管理受邀和本機使用者：** 可以執行管理相關Rights Management頁面上所有受邀和本機使用者所需的工作
+**Rights Management管理受邀和本機使用者：**&#x200B;可以執行管理相關Rights Management頁面上所有受邀和本機使用者所需的工作
 
-**Rights Management原則集管理員：** 執行相關Rights Management頁面上所有原則集所需的所有工作
+**Rights Management原則集管理員：**&#x200B;執行相關Rights Management頁面上所有原則集所需的所有工作
 
-**Rights Management超級管理員：** 執行Rights Management頁面所需的所有工作
+**Rights Management超級管理員：**&#x200B;執行Rights Management頁面所需的所有工作
 
-**AEM Forms工作區管理員：** 可以從「管理主控台」的「工作區」頁面檢視及修改設定
+**AEM forms Workspace管理員：**&#x200B;可以從Administration Console的Workspace頁面檢視及修改設定
 
-***注意&#x200B;**：AEM Forms版本已棄用Flex工作區。*
+***注意&#x200B;**： AEM Forms版本已棄用Flex Workspace。*
 
-**工作區使用者：** 可登入Workspace一般使用者應用程式
+**Workspace使用者：**&#x200B;可以登入Workspace使用者應用程式
 
-**輸出管理員：** 可以從Administration Console的[輸出]頁面檢視及修改設定
+**輸出系統管理員：**&#x200B;可以從[管理主控台]的[輸出]頁面檢視及修改設定
 
-**PDFG管理員：** 可以從管理主控台的PDF Generator頁面檢視及修改設定
+**PDFG系統管理員：**&#x200B;可以從管理主控台的PDF Generator頁面檢視及修改設定
 
-**PDFG使用者：** 可以存取PDF Generator的所有非管理功能
+**PDFG使用者：**&#x200B;可以存取PDF Generator的所有非系統管理功能
 
-**Acrobat Reader DC擴充功能Web應用程式：** 可以使用Acrobat Reader DC擴充功能網頁應用程式
+**Acrobat Reader DC擴充功能網頁應用程式：**&#x200B;可以使用Acrobat Reader DC擴充功能網頁應用程式
 
 >[!NOTE]
 >
->出於安全原因，具有特定管理員許可權型別的使用者無法存取Workspace一般使用者網頁。 因為這些頁面可能存在於防火牆之外，允許管理層級的工作可能會帶來安全性風險。 只有具有AEM Forms Workspace管理員或AEM Forms Workspace使用者許可權的使用者才能存取Workspace一般使用者網頁。
+>基於安全理由，具有特定管理員許可權型別的使用者無法存取Workspace一般使用者網頁。 因為這些頁面可能存在於防火牆之外，允許管理層級的工作可能會帶來安全性風險。 只有具有AEM forms Workspace管理員或AEM forms Workspace使用者許可權的使用者才能存取Workspace一般使用者網頁。
 
 >[!NOTE]
 >
@@ -178,65 +178,65 @@ ht-degree: 0%
 
 ### AEM forms許可權 {#aem-forms-permissions}
 
-**ADD_REMOVE_ENDPOINT_PERM：** 新增、移除及修改服務的端點
+**ADD_REMOVE_ENDPOINT_PERM：**&#x200B;新增、移除及修改服務的端點
 
-**Admin Console登入：** 檢視管理主控台
+**Admin Console登入：**&#x200B;檢視管理主控台
 
-**憑證修改：** 修改信任存放區中任何憑證的信任設定
+**憑證修改：**&#x200B;修改信任存放區中任何憑證的信任設定
 
-**憑證讀取：** 讀取信任存放區中的任何憑證
+**憑證讀取：**&#x200B;讀取信任存放區中的任何憑證
 
-**憑證寫入：** 新增憑證至信任存放區
+**憑證寫入：**&#x200B;新增憑證至信任存放區
 
-**元件新增：** 在系統中安裝新元件
+**元件新增：**&#x200B;在系統中安裝新元件
 
-**元件刪除：** 刪除系統中的任何元件
+**元件刪除：**&#x200B;刪除系統中的任何元件
 
-**元件讀取：** 讀取系統中的任何元件
+**元件讀取：**&#x200B;讀取系統中的任何元件
 
-**Contentspace管理員：** Contentspace管理員的許可權（已棄用）
+**Contentspace管理員：** Contentspace （已棄用）管理員的許可權
 
 **Contentspace主控台登入：** Contentspace （已棄用）主控台登入的許可權
 
-**核心設定控制：** 在管理控制檯中管理核心系統設定頁面上的設定
+**核心設定控制：**&#x200B;管理主控台中[核心系統設定]頁面的設定
 
-**CREATE_VERSION_PERM：** 建立服務的版本
+**CREATE_VERSION_PERM：**&#x200B;建立服務的版本
 
-**認證修改：** 修改信任存放區中的任何簽署認證
+**認證修改：**&#x200B;修改信任存放區中的任何簽署認證
 
-**已讀取的認證：** 讀取信任存放區中的任何簽署認證
+**認證讀取：**&#x200B;讀取信任存放區中的任何簽署認證
 
-**認證寫入：** 將簽署認證新增至信任存放區
+**認證寫入：**&#x200B;新增簽署認證至信任存放區
 
-**CRL修改：** 修改信任存放區中的任何CRL （憑證撤銷清單）
+**CRL修改：**&#x200B;修改信任存放區中的任何CRL （憑證撤銷清單）
 
-**CRL讀取：** 讀取信任存放區中的任何CRL
+**CRL讀取：**&#x200B;讀取信任存放區中的任何CRL
 
-**CRL寫入：** 新增CRL至信任存放區
+**CRL寫入：**&#x200B;新增CRL至信任存放區
 
-**委派：** 在資源上設定ACL
+**委派：**&#x200B;在資源上設定ACL
 
-**DELETE_版本_PERM：** 刪除服務的版本
+**DELETE_版本_PERM：**&#x200B;刪除服務的版本
 
-**檔案上傳：** 在AEM表單中上傳檔案
+**檔案上傳：**&#x200B;在AEM Forms中上傳檔案
 
-**網域控制：** 建立、刪除或修改任何使用者管理網域的設定，包括其驗證和目錄提供者
+**網域控制：**&#x200B;建立、刪除或修改任何使用者管理網域的設定，包括其驗證和目錄提供者
 
-**事件型別編輯：** 編輯事件型別
+**事件型別編輯：**&#x200B;編輯事件型別
 
-**身分模擬控制：** 在使用者管理員中模擬身分
+**身分模擬控制：**&#x200B;在使用者管理員中模擬身分
 
-**INVOKE_PERM：** 叫用服務上的所有作業
+**INVOKE_PERM：**&#x200B;叫用服務上的所有作業
 
-**LCDS資料模型控制：** 讀取和部署資料服務中的資料模型
+**LCDS資料模型控制：**&#x200B;讀取及部署資料服務中的資料模型
 
-**License Manager更新：** 更新授權資訊
+**授權管理員更新：**&#x200B;更新授權資訊
 
-**修改_組態_永久性：** 修改服務的設定
+**MODIFY_CONFIG_PERM：**&#x200B;修改服務的設定
 
-**詞語** 修改服務的版本
+**TERM**&#x200B;修改服務的版本
 
-**PDFGAdminPermission：** PDFG管理員
+**PDFGAdminPermission：** PDFG系統管理員
 
 **PDFGUserPermission：** PDFG使用者
 
@@ -248,95 +248,95 @@ ht-degree: 0%
 
 **PERM_IBMCM_ADMIN：** IBM CM聯結器管理員
 
-**PERM_OUTPUT_ADMIN：** 輸出管理員
+**PERM_OUTPUT_ADMIN：**&#x200B;輸出系統管理員
 
-**PERM_EXTENSIONS_WEB_APPLICATIONREADER：** 使用Acrobat Reader DC擴充功能Web應用程式
+**PERM_READER_延伸_WEB_APPLICATION：**&#x200B;使用Acrobat Reader DC延伸Web應用程式
 
-**PERM_SP_ADMIN：** 管理SharePoint聯結器設定
+**PERM_SP_ADMIN：**&#x200B;管理SharePoint聯結器設定
 
-**PERM_WORKSPACE_ADMIN：** 管理工作區設定
+**PERM_WORKSPACE_ADMIN：**&#x200B;管理Workspace設定
 
-**PERM_WORKSPACE_USER：** 登入Workspace使用者應用程式
+**PERM_WORKSPACE_USER：**&#x200B;登入Workspace使用者應用程式
 
-**主體控制：** 管理任何網域的使用者和群組，以及管理任何網域中所有使用者和群組的角色指派
+**主要控制項：**&#x200B;管理任何網域的使用者和群組，以及管理任何網域中所有使用者和群組的角色指派
 
-**處理記錄讀取/刪除：** 列出及擷取工作流程稽核例項
+**處理記錄讀取/刪除：**&#x200B;清單並擷取工作流程稽核例項
 
-**PROCESS_OWNER_PERM：** 檢視趨勢資料，並對從處理序建立的服務執行管理動作
+**PROCESS_OWNER_PERM：**&#x200B;檢視趨勢資料，並對從處理序建立的服務執行管理動作
 
-**讀取：** 讀取資源的內容
+**讀取：**&#x200B;讀取資源的內容
 
-**讀取_PERM：** 讀取或檢視服務
+**讀取_PERM：**&#x200B;讀取或檢視服務
 
-**更新宣告：** 在「使用者管理」中更新判斷提示
+**更新宣告：**&#x200B;在使用者管理中更新宣告
 
-**存放庫委派：** 在資源上設定ACL
+**存放庫委派：**&#x200B;在資源上設定ACL
 
-**存放庫讀取：** 讀取資源的內容
+**儲存庫讀取：**&#x200B;讀取資源的內容
 
-**存放庫周遊：** 在清單資源要求中包含資源或讀取資源的中繼資料
+**存放庫周遊：**&#x200B;在清單資源要求中包含資源或讀取資源的中繼資料
 
-**存放庫寫入：** 寫入存放庫中繼資料和內容
+**儲存機制寫入：**&#x200B;寫入儲存機制中繼資料和內容
 
-**Rights Management變更原則擁有者：** 變更原則擁有者
+**Rights Management變更原則擁有者：**&#x200B;變更原則擁有者
 
-**Rights Management一般使用者控制檯登入：** 登入Rights Management一般使用者UI
+**Rights Management一般使用者主控台登入：**&#x200B;登入Rights Management一般使用者UI
 
-**Rights Management管理設定：** 管理伺服器設定
+**Rights Management管理組態：**&#x200B;管理伺服器組態
 
-**Rights Management管理受邀和本機使用者：** 管理受邀和本機使用者
+**Rights Management管理受邀和本機使用者：**&#x200B;管理受邀和本機使用者
 
-**Rights Management管理原則集：** 管理任何原則集內的所有原則與檔案
+**Rights Management管理原則集：**&#x200B;管理任何原則集內的所有原則與檔案
 
-**Rights Management原則集新增協調器：** 新增、移除和變更原則集協調員的許可權
+**Rights Management原則集新增協調員：**&#x200B;新增、移除和變更原則集協調員的許可權
 
-**Rights Management原則集建立原則：** 為原則集建立原則
+**Rights Management原則集建立原則：**&#x200B;為原則集建立原則
 
-**Rights Management原則集刪除原則：** 從原則集移除原則
+**Rights Management原則集刪除原則：**&#x200B;從原則集移除原則
 
-**Rights Management原則集編輯原則：** 編輯原則集中的原則
+**Rights Management原則集編輯原則：**&#x200B;編輯原則集中的原則
 
-**Rights Management原則集管理檔案發行者：** 當您建立原則集時，您會將檔案發佈者的角色指派給使用者。 檔案發佈者是使用原則保護檔案的使用者。
+**Rights Management原則集管理檔案發行者：**&#x200B;當您建立原則集時，您會將檔案發行者的角色指派給使用者。 檔案發佈者是使用原則保護檔案的使用者。
 
-**Rights Management原則集移除協調器：** 從原則集中移除原則集協調器
+**Rights Management原則集移除協調器：**&#x200B;從原則集移除原則集協調器
 
-**Rights Management原則集撤銷檔案：** 撤銷原則集中檔案的存取權
+**Rights Management原則集撤銷檔案：**&#x200B;撤銷原則集中檔案的存取權
 
-**Rights Management原則集切換原則：** 切換檔案的原則
+**Rights Management原則集切換原則：**&#x200B;檔案的切換原則
 
-**Rights Management原則設定取消撤銷檔案：** 取消撤銷檔案
+**Rights Management原則集解除撤銷檔案：**&#x200B;解除撤銷檔案
 
-**Rights Management原則集檢視事件：** 檢視原則集內任何原則或檔案的原則和檔案事件
+**Rights Management原則集檢視事件：**&#x200B;檢視原則集內任何原則或檔案的原則與檔案事件
 
-**Rights Management檢視伺服器事件：** 搜尋並檢視所有稽核事件
+**Rights Management檢視伺服器事件：**&#x200B;搜尋並檢視所有稽核事件
 
-**角色控制：** 在User Management中建立、刪除及修改角色
+**角色控制：**&#x200B;在[使用者管理]中建立、刪除及修改角色
 
-**服務啟動：** 啟動任何服務，使其可用於呼叫
+**服務啟動：**&#x200B;啟動任何服務，使其可用於引動
 
-**服務新增：** 將新服務部署至服務登入。 這包括新增新程式與程式變體
+**服務新增：**&#x200B;將新服務部署至服務登入。 這包括新增新程式與程式變體
 
-**服務停用：** 停止系統中的任何服務
+**服務停用：**&#x200B;停止系統中的任何服務
 
-**服務刪除：** 刪除系統中的任何服務，包括流程和流程變體
+**服務刪除：**&#x200B;刪除系統中的任何服務，包括處理序與處理序變體
 
-**服務叫用：** 在執行階段可叫用服務登入中的任何服務
+**服務叫用：**&#x200B;叫用執行階段可用的服務登入中的任何服務
 
-**服務修改：** 修改系統中任何服務的組態特性。 這包括鎖定和解鎖IDE中的服務，以及從服務新增或移除端點
+**服務修改：**&#x200B;修改系統中任何服務的組態屬性。 這包括鎖定和解鎖IDE中的服務，以及從服務新增或移除端點
 
-**服務讀取：** 讀取系統中的任何服務。 這包括所有流程和流程變體
+**服務讀取：**&#x200B;讀取系統中的任何服務。 這包括所有流程和流程變體
 
-**SERVICE_AGENT_PERM：** 針對從程式建立的服務，檢視資料並與程式執行個體互動
+**SERVICE_AGENT_PERM：**&#x200B;針對從處理序建立的服務，檢視資料並與處理序執行個體互動
 
-**SERVICE_MANAGER_PERM：** 對從處理序建立的服務執行負載平衡和其他管理動作
+**SERVICE_MANAGER_PERM：**&#x200B;對從處理序建立的服務執行負載平衡和其他管理動作
 
-**START_STOP_PERM：** 啟動或停止服務
+**START_STOP_PERM：**&#x200B;啟動或停止服務
 
-**監督員_PERM：** 檢視從程式建立的服務的程式執行處理資料
+**SUPERVISOR_PERM：**&#x200B;檢視從處理序建立之服務的處理序執行個體資料
 
-**周遊：** 在清單資源要求中包含資源或讀取資源的中繼資料
+**周遊：**&#x200B;在清單資源要求中包含資源或讀取資源的中繼資料
 
-**寫入：** 寫入存放庫中繼資料和內容
+**寫入：**&#x200B;寫入存放庫中繼資料和內容
 
 **在Workbench中開啟檔案**
 

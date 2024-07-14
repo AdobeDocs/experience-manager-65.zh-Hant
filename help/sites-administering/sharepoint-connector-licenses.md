@@ -59,7 +59,7 @@ ht-degree: 1%
 | wstx-asl | [Apache](#apache) |
 | xalan | [Apache](#apache) |
 | xbean | [Apache](#apache) |
-| xml-api | [Apache](#apache) （包含公共網域和W3C軟體授權所涵蓋的部分） |
+| xml-api | [Apache](#apache) （包含由公用網域和W3C軟體授權所涵蓋的部分） |
 | XmlSchema | [Apache](#apache) |
 
 ## CRX第三方程式庫概觀 {#overview-of-crx-rd-party-libraries}

@@ -18,9 +18,9 @@ ht-degree: 2%
 
 # 整合Adobe Dynamic Tag Management {#integrating-with-adobe-dynamic-tag-management}
 
-整合 [AdobeDynamic Tag Management](https://business.adobe.com/products/experience-platform/adobe-experience-platform.html) AEM，讓您能夠使用Dynamic Tag Management網頁屬性來追蹤AEM網站。 Dynamic Tag Management可讓行銷人員管理用於收集資料的標籤，並在所有數位行銷系統間散發資料。 例如，使用Dynamic Tag Management來收集AEM網站的使用量資料，並散發資料，以便在Adobe Analytics或Adobe Target中進行分析。
+將[AdobeDynamic Tag Management](https://business.adobe.com/products/experience-platform/adobe-experience-platform.html)與AEM整合，以便您可以使用您的Dynamic Tag Management Web屬性追蹤AEM網站。 Dynamic Tag Management可讓行銷人員管理用於收集資料的標籤，並在所有數位行銷系統間散發資料。 例如，使用Dynamic Tag Management來收集AEM網站的使用量資料，並散發資料，以便在Adobe Analytics或Adobe Target中進行分析。
 
-整合之前，請先建立動態Tag Management [Web屬性](https://microsite.omniture.com/t2/help/en_US/dtm/#Web_Properties) 追蹤AEM網站網域的資訊。 此 [託管選項](https://microsite.omniture.com/t2/help/en_US/dtm/#Hosting__Embed_Tab) 的Web屬性，如此您才能設定AEM以存取Dynamic Tag Management程式庫。
+整合之前，請先建立追蹤AEM網站網域的Dynamic Tag Management [Web屬性](https://microsite.omniture.com/t2/help/en_US/dtm/#Web_Properties)。 必須設定Web屬性的[託管選項](https://microsite.omniture.com/t2/help/en_US/dtm/#Hosting__Embed_Tab)，以便您可以設定AEM來存取Dynamic Tag Management程式庫。
 
 設定整合後，對動態Tag Management部署工具和規則的變更不需要您在AEM中變更動態Tag Management設定。 AEM會自動使用這些變更。
 
@@ -28,8 +28,8 @@ ht-degree: 2%
 >
 >如果您使用DTM搭配自訂Proxy設定，請同時設定HTTP使用者端Proxy設定，因為AEM的某些功能使用3.x API，而其他部分則使用4.x API：
 >
->* 3.x已設定為 [http://localhost:4502/system/console/configMgr/com.day.commons.httpclient](http://localhost:4502/system/console/configMgr/com.day.commons.httpclient)
->* 4.x已設定為 [http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator](http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator)
+>* 3.x已使用[http://localhost:4502/system/console/configMgr/com.day.commons.httpclient](http://localhost:4502/system/console/configMgr/com.day.commons.httpclient)設定
+>* 4.x已使用[http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator](http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator)設定
 >
 
 ## 部署選項 {#deployment-options}
@@ -40,10 +40,10 @@ ht-degree: 2%
 
 AEM支援在雲端中託管或在AEM上託管的動態Tag Management。
 
-* 雲端託管：動態Tag Management JavaScript程式庫儲存在雲端中，您的AEM頁面會直接參照這些程式庫。
+* 雲端託管： Dynamic Tag Management JavaScript程式庫儲存在雲端中，您的AEM頁面會直接參照這些程式庫。
 * AEM託管：動態Tag Management產生JavaScript程式庫。 AEM使用工作流程模型來取得及安裝程式庫。
 
-您的實施作業使用的託管型別會決定您執行的一些設定與實施作業。 如需託管選項的相關資訊，請參閱 [託管 — 內嵌標籤](https://microsite.omniture.com/t2/help/en_US/dtm/#Hosting__Embed_Tab) (在動態Tag Management說明中)。
+您的實施作業使用的託管型別會決定您執行的一些設定與實施作業。 如需託管選項的相關資訊，請參閱Dynamic Tag Management說明中的[託管 — 內嵌標籤](https://microsite.omniture.com/t2/help/en_US/dtm/#Hosting__Embed_Tab)。
 
 ### 測試和生產程式庫 {#staging-and-production-library}
 
@@ -57,7 +57,7 @@ AEM支援在雲端中託管或在AEM上託管的動態Tag Management。
 
 當AEM代管Dynamic Tag Management程式庫時，您可以使用Dynamic Tag Management部署勾點服務，自動將程式庫更新推播至AEM。 若對程式庫進行變更(例如編輯Dynamic Tag Management Web屬性屬性)，則會推送程式庫更新。
 
-若要使用部署勾點，動態Tag Management必須能夠連線至託管程式庫的AEM執行個體。 [啟用對AEM的存取權](/help/sites-administering/dtm.md#enabling-access-for-the-deployment-hook-service) 用於動態Tag Management伺服器。
+若要使用部署勾點，動態Tag Management必須能夠連線至託管程式庫的AEM執行個體。 [啟用Dynamic Tag Management伺服器的AEM](/help/sites-administering/dtm.md#enabling-access-for-the-deployment-hook-service)存取權。
 
 在某些情況下，無法連線AEM，例如當AEM位於防火牆後面時。 在這些情況下，您可以使用AEM輪詢匯入工具選項，定期擷取程式庫。 cron作業運算式會指定程式庫下載的排程。
 
@@ -65,13 +65,13 @@ AEM支援在雲端中託管或在AEM上託管的動態Tag Management。
 
 啟用Dynamic Tag Management部署勾點服務以存取AEM，讓該服務可以更新AEM託管的程式庫。 指定視需要更新中繼及生產程式庫的動態Tag Management伺服器的IP位址：
 
-* 分段： `107.21.99.31`
-* 生產： `23.23.225.112` 和 `204.236.240.48`
+* 正在暫存： `107.21.99.31`
+* 生產： `23.23.225.112`和`204.236.240.48`
 
-使用下列任一專案執行設定： [網頁主控台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) 或 [`sling:OsgiConfig`](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository) 節點：
+使用[網頁主控台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)或[`sling:OsgiConfig`](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository)節點執行設定：
 
 * 在Web主控台中，使用設定頁面上的AdobeDTM部署勾點設定專案。
-* 若為OSGi設定，服務PID為 `com.adobe.cq.dtm.impl.servlets.DTMDeployHookServlet`.
+* 對於OSGi設定，服務PID為`com.adobe.cq.dtm.impl.servlets.DTMDeployHookServlet`。
 
 下表說明要設定的特性。
 
@@ -86,7 +86,7 @@ AEM支援在雲端中託管或在AEM上託管的動態Tag Management。
 
 >[!NOTE]
 >
->當您的DTM網頁屬性包含Adobe Analytics工具，而且您也在使用時，請避免在頁面上包含兩個Adobe Analytics追蹤程式碼 [內容分析](/help/sites-authoring/content-insights.md). 在您的 [Adobe Analytics Cloud設定](/help/sites-administering/adobeanalytics-connect.md#configuring-the-connection-to-adobe-analytics)，選取不包含追蹤程式碼選項。
+>當您的DTM Web屬性包含Adobe Analytics工具，而且您也使用[Content Insight](/help/sites-authoring/content-insights.md)時，請避免在頁面上包含兩個Adobe Analytics追蹤程式碼。 在您的[Adobe Analytics Cloud設定](/help/sites-administering/adobeanalytics-connect.md#configuring-the-connection-to-adobe-analytics)中，選取「不要包含追蹤代碼」選項。
 
 ### 一般設定 {#general-settings}
 
@@ -119,7 +119,7 @@ AEM支援在雲端中託管或在AEM上託管的動態Tag Management。
 
 下列動態Tag Management設定的屬性可讓AEM主控動態Tag Management程式庫。 屬性可讓AEM下載及安裝程式庫。 您可以視需要自動更新程式庫，以確保其能反映動態Tag Management管理應用程式中所做的任何變更。
 
-有些屬性會使用您從Dynamic Tag Management Web屬性「內嵌」標籤的「程式庫下載」區段取得的值。 如需詳細資訊，請參閱 [程式庫下載](https://microsite.omniture.com/t2/help/en_US/dtm/#Library_Download) (在動態Tag Management說明中)。
+有些屬性會使用您從Dynamic Tag Management Web屬性「內嵌」標籤的「程式庫下載」區段取得的值。 如需詳細資訊，請參閱Dynamic Tag Management說明中的[程式庫下載](https://microsite.omniture.com/t2/help/en_US/dtm/#Library_Download)。
 
 >[!NOTE]
 >
@@ -147,15 +147,15 @@ AEM支援在雲端中託管或在AEM上託管的動態Tag Management。
   </tr>
   <tr>
    <td>網域提示</td>
-   <td><p>（選用）代管Dynamic Tag Management程式庫的AEM伺服器網域。 指定一個值，以便您可以覆寫為設定的預設網域 <a href="/help/sites-developing/externalizer.md">Day CQ Link Externalizer service</a>.</p> <p>當連線至動態Tag Management時，AEM會使用此值來設定動態Tag Management Web屬性的測試HTTP路徑或程式庫下載屬性的生產HTTP路徑。</p> </td>
+   <td><p>（選用）代管Dynamic Tag Management程式庫的AEM伺服器網域。 指定一個值，以便您可以覆寫為<a href="/help/sites-developing/externalizer.md">Day CQ Link Externalizer服務</a>設定的預設網域。</p> <p>當連線至動態Tag Management時，AEM會使用此值來設定動態Tag Management Web屬性的測試HTTP路徑或程式庫下載屬性的生產HTTP路徑。</p> </td>
   </tr>
   <tr>
    <td>安全網域提示</td>
-   <td><p>（選用）透過HTTPS託管Dynamic Tag Management程式庫的AEM伺服器網域。 指定一個值，以便您可以覆寫為設定的預設網域 <a href="/help/sites-developing/externalizer.md">Day CQ Link Externalizer service</a>.</p> <p>當連線至動態Tag Management時，AEM會使用此值來設定動態Tag Management Web屬性的測試HTTPS路徑或程式庫下載屬性的生產HTTPS路徑。</p> </td>
+   <td><p>（選用）透過HTTPS託管Dynamic Tag Management程式庫的AEM伺服器網域。 指定一個值，以便您可以覆寫為<a href="/help/sites-developing/externalizer.md">Day CQ Link Externalizer服務</a>設定的預設網域。</p> <p>當連線至動態Tag Management時，AEM會使用此值來設定動態Tag Management Web屬性的測試HTTPS路徑或程式庫下載屬性的生產HTTPS路徑。</p> </td>
   </tr>
   <tr>
    <td>共用機密</td>
-   <td><p>（選用）用來解密下載的共用機密。 從Dynamic Tag Management之「程式庫下載」頁面的「共用機密」欄位取得此值。</p> <p><strong>注意：</strong> 您必須在安裝AEM的電腦上安裝OpenSSL程式庫，以便AEM解密下載的程式庫。</p> </td>
+   <td><p>（選用）用來解密下載的共用機密。 從Dynamic Tag Management之「程式庫下載」頁面的「共用機密」欄位取得此值。</p> <p><strong>注意：</strong>您必須在安裝AEM的電腦上安裝OpenSSL程式庫，讓AEM可以解密下載的程式庫。</p> </td>
   </tr>
   <tr>
    <td>啟用 Polling Importer</td>
@@ -235,9 +235,9 @@ AEM支援在雲端中託管或在AEM上託管的動態Tag Management。
 
 >[!NOTE]
 >
->下載的檔案儲存在 `/etc/clientlibs/dtm/my config/companyID/propertyID/servertype`.
+>下載的檔案儲存在`/etc/clientlibs/dtm/my config/companyID/propertyID/servertype`下。
 >
->以下內容直接取自您的 [DTM設定](#creating-the-dynamic-tag-management-configuration).
+>下列專案是直接從您的[DTM組態](#creating-the-dynamic-tag-management-configuration)中取得。
 >
 >* `myconfig`
 >* `companyID`

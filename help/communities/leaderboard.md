@@ -20,9 +20,9 @@ ht-degree: 4%
 
 本頁提供使用排行榜功能的基本資訊。
 
-在頁面上加入排行榜元件之前，必須先設定 [社群評分和預算](implementing-scoring.md).
+在頁面上加入排行榜元件之前，必須設定[社群評分和徽章](implementing-scoring.md)。
 
-另請參閱 [評分和徽章要點](configure-scoring.md).
+檢視[評分和徽章要點](configure-scoring.md)。
 
 ## 使用者端的Essentials {#essentials-for-client-side}
 
@@ -50,7 +50,7 @@ ht-degree: 4%
   </tr>
   <tr>
    <td><strong> 屬性</strong></td>
-   <td>另請參閱 <a href="enabling-leaderboard.md">排行榜功能</a></td>
+   <td>請參閱<a href="enabling-leaderboard.md">排行榜功能</a></td>
   </tr>
  </tbody>
 </table>
@@ -59,4 +59,4 @@ ht-degree: 4%
 
 ### 檔案庫功能 {#file-library-function}
 
-社群網站結構包含 [排行榜功能](functions.md#leaderboard-function)，包括已設定的 `leaderboard` 元件。
+包含[排行榜函式](functions.md#leaderboard-function)的社群網站結構包含已設定的`leaderboard`元件。

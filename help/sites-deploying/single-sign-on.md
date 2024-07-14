@@ -20,7 +20,7 @@ ht-degree: 0%
 
 單一登入(SSO)可讓使用者在提供一次驗證認證（例如使用者名稱和密碼）之後存取多個系統。 另一個系統（稱為受信任的驗證者）會執行驗證並提供使用者認證的Experience Manager。 Experience Manager會檢查並強制使用者的存取許可權（即決定允許使用者存取哪些資源）。
 
-SSO驗證處理常式服務( `com.adobe.granite.auth.sso.impl.SsoAuthenticationHandler`)處理受信任的驗證器所提供的驗證結果。 SSO驗證處理常式會依此順序在下列位置搜尋SSO識別碼(SSID)作為特殊屬性的值：
+SSO驗證處理常式服務( `com.adobe.granite.auth.sso.impl.SsoAuthenticationHandler`)會處理受信任的驗證器所提供的驗證結果。 SSO驗證處理常式會依此順序在下列位置搜尋SSO識別碼(SSID)作為特殊屬性的值：
 
 1. 請求標頭
 1. Cookie
@@ -33,33 +33,33 @@ SSO驗證處理常式服務( `com.adobe.granite.auth.sso.impl.SsoAuthenticationH
 * 登入模組。
 * SSO驗證服務。
 
-為兩個服務指定相同的屬性名稱。 屬性包含在 `SimpleCredentials` 提供給 `Repository.login`. 屬性的值不相關且會被忽略，只要存在就很重要且經過驗證。
+為兩個服務指定相同的屬性名稱。 屬性包含在提供給`Repository.login`的`SimpleCredentials`中。 屬性的值不相關且會被忽略，只要存在就很重要且經過驗證。
 
 ## 設定SSO {#configuring-sso}
 
-若要為AEM執行個體設定SSO，請設定 [SSO驗證處理常式](/help/sites-deploying/osgi-configuration-settings.md#adobegranitessoauthenticationhandler)：
+若要設定AEM執行個體的SSO，請設定[SSO驗證處理常式](/help/sites-deploying/osgi-configuration-settings.md#adobegranitessoauthenticationhandler)：
 
-1. 使用AEM時，有數種方法可管理此類服務的組態設定；請參閱 [設定OSGi](/help/sites-deploying/configuring-osgi.md) 以取得詳細資訊和建議作法。
+1. 使用AEM時，有數種方法可管理此類服務的組態設定；請參閱[設定OSGi](/help/sites-deploying/configuring-osgi.md)以取得詳細資訊和建議的作法。
 
    例如，對於NTLM集：
 
-   * **路徑：** 視需要；例如 `/`
-   * **頁首名稱**： `LOGON_USER`
+   * **路徑：**&#x200B;為必要；例如，`/`
+   * **標頭名稱**： `LOGON_USER`
    * **ID格式**： `^<DOMAIN>\\(.+)$`
 
-     位置 `<*DOMAIN*>` 會以您自己的網域名稱取代。
+     其中`<*DOMAIN*>`會由您自己的網域名稱取代。
 
    對於CoSign：
 
-   * **路徑：** 視需要；例如 `/`
-   * **頁首名稱**： remote_user
-   * **ID格式：** 原樣
+   * **路徑：**&#x200B;為必要；例如，`/`
+   * **標頭名稱**： remote_user
+   * **ID格式：** AsIs
 
    對於SiteMinder：
 
-   * **路徑：** 視需要；例如 `/`
+   * **路徑：**&#x200B;為必要；例如，`/`
    * **標頭名稱：** SM_USER
-   * **ID格式**：原樣
+   * **ID格式**： AsIs
 
 1. 確認單一登入已視需要運作；包括授權。
 
@@ -76,39 +76,39 @@ SSO驗證處理常式服務( `com.adobe.granite.auth.sso.impl.SsoAuthenticationH
 
 >[!NOTE]
 >
->單一登入通常用於 [LDAP](/help/sites-administering/ldap-config.md).
+>單一登入常搭配[LDAP](/help/sites-administering/ldap-config.md)使用。
 
 >[!NOTE]
 >
->如果您也使用 [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) 若使用Microsoft® Internet Information Server (IIS)，則需要在中進行其他設定：
+>如果您也使用[Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)搭配Microsoft® Internet Information Server (IIS)，則需要在下列專案中進行其他設定：
 >
 >* `disp_iis.ini`
 >* IIS
 >
->在 `disp_iis.ini` 設定：
->(請參閱 [使用Microsoft® Internet Information Server安裝Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html#microsoft-internet-information-server) 以取得完整詳細資訊)
+>在`disp_iis.ini`集合中：
+>(如需完整詳細資訊，請參閱[使用Microsoft® Internet Information Server安裝Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html#microsoft-internet-information-server))
 >
->* `servervariables=1` （將IIS伺服器變數作為請求標頭轉送給遠端執行個體）
->* `replaceauthorization=1` (將任何名為「Authorization」的標頭（「Basic」除外）取代為其「Basic」同等標頭)
+>* `servervariables=1` （將IIS伺服器變數作為要求標頭轉送給遠端執行個體）
+>* `replaceauthorization=1` (將任何名為「Authorization」的標頭（「Basic」以外的標頭取代為「Basic」的對等標頭）
 >
 >在IIS中：
 >
->* disable **匿名存取**
+>* 停用&#x200B;**匿名存取**
 >
->* 啟用 **整合式Windows驗證**
+>* 啟用&#x200B;**整合式Windows驗證**
 >
 
-您可以使用來檢視將哪個驗證處理常式套用到內容樹的任何區段。 **驗證者** Felix主控台選項；例如：
+您可以使用Felix主控台的&#x200B;**Authenticator**&#x200B;選項，檢視哪個驗證處理常式正在套用至內容樹狀結構的任何區段；例如：
 
 `http://localhost:4502/system/console/slingauth`
 
-系統會先查詢最符合路徑的處理常式。 例如，如果您為路徑設定處理常式A `/` 和路徑的處理常式B `/content`，然後要求傳送至 `/content/mypage.html` 會先查詢處理常式B。
+系統會先查詢最符合路徑的處理常式。 例如，如果您為路徑`/`設定處理常式A，為路徑`/content`設定處理常式B，則對`/content/mypage.html`的請求將先查詢處理常式B。
 
 ![screen_shot_2012-02-15at21006pm](assets/screen_shot_2012-02-15at21006pm.png)
 
 ### 範例 {#example}
 
-針對Cookie請求（使用URL） `http://localhost:4502/libs/wcm/content/siteadmin.html`)：
+針對Cookie要求（使用URL `http://localhost:4502/libs/wcm/content/siteadmin.html`）：
 
 ```xml
 GET /libs/cq/core/content/welcome.html HTTP/1.1
@@ -120,7 +120,7 @@ Cookie: TestCookie=admin
 
 * **路徑**： `/`
 
-* **頁首名稱**： `TestHeader`
+* **標頭名稱**： `TestHeader`
 
 * **Cookie名稱**： `TestCookie`
 
@@ -149,7 +149,7 @@ Transfer-Encoding: chunked
 如果您請求：
 `http://localhost:4502/libs/cq/core/content/welcome.html?TestParameter=admin`
 
-或者，您可以使用以下curl指令來傳送 `TestHeader` 頁首至 `admin:`
+或者，您可以使用以下curl命令將`TestHeader`標頭傳送至`admin:`
 `curl -D - -H "TestHeader: admin" http://localhost:4502/libs/cq/core/content/welcome.html`
 
 >[!NOTE]
@@ -158,18 +158,18 @@ Transfer-Encoding: chunked
 
 ## 移除AEM登出連結 {#removing-aem-sign-out-links}
 
-使用SSO時，登入和登出會在外部處理，因此AEM自己的登出連結不再適用，應該移除。
+使用SSO時，登入和登出會在外部處理，因此AEM自己的登出連結已不再適用且應移除。
 
 您可使用下列步驟移除歡迎畫面上的登出連結。
 
-1. 覆蓋 `/libs/cq/core/components/welcome/welcome.jsp` 至 `/apps/cq/core/components/welcome/welcome.jsp`
+1. 覆蓋`/libs/cq/core/components/welcome/welcome.jsp`到`/apps/cq/core/components/welcome/welcome.jsp`
 1. 從jsp中移除下列零件。
 
    `<a href="#" onclick="signout('<%= request.getContextPath() %>');" class="signout"><%= i18n.get("sign out", "welcome screen") %>`
 
 若要移除使用者右上角個人功能表中可用的登出連結，請執行下列步驟：
 
-1. 覆蓋 `/libs/cq/ui/widgets/source/widgets/UserInfo.js` 至 `/apps/cq/ui/widgets/source/widgets/UserInfo.js`
+1. 覆蓋`/libs/cq/ui/widgets/source/widgets/UserInfo.js`到`/apps/cq/ui/widgets/source/widgets/UserInfo.js`
 
 1. 從檔案中移除下列部分：
 

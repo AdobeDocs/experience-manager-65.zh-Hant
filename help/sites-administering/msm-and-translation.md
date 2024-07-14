@@ -28,15 +28,15 @@ ht-degree: 3%
 
    * [翻譯多語言網站的內容](/help/sites-administering/translation.md)
 
-* 這兩個功能可結合使用，以符合以下兩種情況的網站 [跨國及多語言](#multinational-and-multilingual-sites).
+* 這兩個功能可以結合，以滿足[跨國和多語言](#multinational-and-multilingual-sites)網站的需求。
 
 ## 跨國及多語言網站 {#multinational-and-multilingual-sites}
 
 您可以透過結合使用多網站管理員和翻譯工作流程，有效率地建立跨國和多語言網站的內容。 針對特定國家/地區，以一種語言建立主要網站，然後將該內容當作其他網站的基礎，並視需要使用翻譯：
 
-* [Translate](/help/sites-administering/translation.md) 將主場地翻譯成不同的語言。
+* [將](/help/sites-administering/translation.md)主要網站翻譯成其他語言。
 
-* 使用 [多站點管理員](/help/sites-administering/msm.md) 至：
+* 使用[多網站管理員](/help/sites-administering/msm.md)來：
 
    * 重複使用主要網站的內容和翻譯，為其他國家/地區和文化建立網站。
    * 請務必將多網站管理員的使用限製為使用單一語言的內容，例如，國定網站中的英文主版>英文分支，國定網站中的法文主版>法文分支。
@@ -50,8 +50,8 @@ ht-degree: 3%
 >
 >在此情況以及可供比較的情況下，MSM不會據此管理不同的語言版本。
 >
->* [MSM](/help/sites-administering/msm.md) 管理語言範圍內從Blueprint （例如全域主版）到即時副本（例如本機站台）的翻譯內容部署。
->* 此 [翻譯](/help/sites-administering/translation.md) AEM的整合功能以及協力廠商翻譯管理服務，可管理語言，並將內容翻譯成這些不同的語言。
+>* [MSM](/help/sites-administering/msm.md)會管理語言範圍內從Blueprint （例如全域主版）到即時復本（例如本機站台）的翻譯內容部署。
+>* AEM的[翻譯](/help/sites-administering/translation.md)整合功能與協力廠商翻譯管理服務相結合，可管理語言並將內容翻譯成這些不同的語言。
 >
 >如需更進階的使用案例，您也可以跨語言主版使用MSM。
 
@@ -59,7 +59,7 @@ ht-degree: 3%
 >
 >對於所有使用案例，建議閱讀以下最佳實務：
 >
->* [MSM的最佳作法](/help/sites-administering/msm-best-practices.md)；尤其是：
+>* [MSM的最佳實務](/help/sites-administering/msm-best-practices.md)；特別是：
 >
 >   * [建立網站](/help/sites-administering/msm-best-practices.md#create-site)
 >   * [MSM和多語言網站](/help/sites-administering/msm-best-practices.md#msm-and-multilingual-websites)

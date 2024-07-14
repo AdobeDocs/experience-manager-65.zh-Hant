@@ -14,7 +14,7 @@ ht-degree: 76%
 
 # 如何使用 AEM 建立單頁應用程式 (SPA) {#create-spa}
 
-在此選擇性延續 [AEM Headless開發人員歷程，](overview.md) 您瞭解Adobe Experience Manager (AEM)如何將Headless傳送與傳統全棧疊CMS功能結合，以及如何使用AEM SPA Editor架構建立可編輯的SPA，並整合外部SPA，以視需要啟用編輯功能。
+在[AEM Headless開發人員歷程](overview.md)的選擇性延續，您將瞭解Adobe Experience Manager (AEM)如何將Headless傳遞與傳統的全棧疊CMS功能結合，以及如何使用AEM SPA Editor架構建立可編輯的SPA，以及整合外部SPA，以視需要啟用編輯功能。
 
 ## 到目前為止 {#story-so-far}
 
@@ -29,7 +29,7 @@ ht-degree: 76%
 
 因此，您現在不是使用您的第一個AEM Headless專案，就是已經知道要這樣做。 恭喜！
 
-那麼你為什麼要閱讀這個額外的、選擇性的歷程延續部分呢？您可能會回想起 [快速入門](getting-started.md#integration-levels)，會上簡要討論AEM如何不僅支援headless傳送和傳統的全棧疊模型，而且支援結合了兩者優勢的混合模型。 雖然不是傳統的 Headless 模型，但這類混合模型可以為特定專案提供前所未有的靈活性。
+那麼你為什麼要閱讀這個額外的、選擇性的歷程延續部分呢？您可能會記得，在[快速入門](getting-started.md#integration-levels)中，曾短暫討論AEM如何不僅支援Headless傳送和傳統的全棧疊模型，而且支援結合兩者優勢的混合模型。 雖然不是傳統的 Headless 模型，但這類混合模型可以為特定專案提供前所未有的靈活性。
 
 本文章以您對 AEM Headless 的了解為基礎，深入探討如何建立您自己的單頁應用程式 (SPA)，這些應用程式可在 AEM 中編輯。如此一來，您就可以建立內容，並將內容無周邊地傳送至SPA，但SPA在AEM中仍可編輯。
 
@@ -50,7 +50,7 @@ ht-degree: 76%
 
 * 使用 React 或 Angular 框架建立 SPA 的開發經驗
 * 建立內容片段和使用編輯器的基本 AEM 技能
-* 請務必檢閱檔案 [AEM中的Headful和Headless](/help/sites-developing/headful-headless.md) 以儘可能瞭解各種層級的SPA整合。
+* 請務必檢閱檔案[AEM](/help/sites-developing/headful-headless.md)中的Headful和Headless，以瞭解SPA整合的各個可能層級。
 
 ### 工具 {#tools}
 

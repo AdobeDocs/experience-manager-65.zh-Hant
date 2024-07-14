@@ -30,7 +30,7 @@ ht-degree: 79%
 
 * [範例內容片段結構](#content-fragment-structure-graphql)
 
-* 以及部分 [範例GraphQL查詢](#graphql-sample-queries)，根據範例內容片段結構（內容片段模型及相關內容片段）。
+* 以及部分[範例GraphQL查詢](#graphql-sample-queries)，根據範例內容片段結構（內容片段模型及相關內容片段）。
 
 
 ## GraphQL - 使用範例內容片段結構的範例查詢 {#graphql-sample-queries-sample-content-fragment-structure}
@@ -49,7 +49,7 @@ ht-degree: 79%
 
 ### 範例查詢 - 所有可用的綱要和資料類型 {#sample-all-schemes-datatypes}
 
-此範例查詢傳回所有 `types` 用於所有可用的結構描述。
+此範例查詢傳回所有可用結構描述的所有`types`。
 
 **範例查詢**
 
@@ -225,7 +225,7 @@ ht-degree: 79%
 
 ### 範例查詢 - 所有城市的名稱 {#sample-names-all-cities}
 
-此範例查詢是直接查詢，可傳回 `name`中所有專案的 `city`綱要。
+此範例查詢是直接查詢，可傳回`city`結構描述中所有專案的`name`。
 
 **範例查詢**
 
@@ -316,7 +316,7 @@ query {
 
 ### 範例查詢 - 所有具有名稱變化的城市 {#sample-cities-named-variation}
 
-如果您建立名為「柏林中心」的變數(`berlin_centre`)，針對 `city` 柏林，您可以使用查詢傳回變數的詳細資訊。
+如果您建立名為「柏林中心」(`berlin_centre`)的變數，則對於`city`柏林，您可以使用查詢來傳回變數的詳細資料。
 
 **範例查詢**
 
@@ -362,7 +362,7 @@ query {
 如果您：
 
 * 建立各種標記，名稱為 `Tourism`：`Business`、`City Break`、`Holiday`
-* 並將這些標籤指派給各種變數的主變數 `City` 執行個體
+* 並將這些標籤指派給各種`City`執行個體的主要變數
 
 接著您可以使用查詢傳回在 `city` 綱要中標記為「City Breaks」之所有項目的 `name` 和 `tags` 的詳細資料。
 
@@ -539,7 +539,7 @@ query {
 
 ### 範例查詢 - 所有名稱為「Jobs」或「Smith」的所有人員 {#sample-all-persons-jobs-smith}
 
-此範例查詢會篩選所有 `persons` ，適用於任何擁有名稱的 `Jobs`或 `Smith`.
+此範例查詢會篩選名稱為`Jobs`或`Smith`之任何專案的所有`persons`。
 
 **範例查詢**
 
@@ -593,7 +593,7 @@ query {
 
 ### 範例查詢 - 所有名稱不為「Jobs」的人員 {#sample-all-persons-not-jobs}
 
-此範例查詢會篩選所有 `persons` ，適用於任何擁有名稱的 `Jobs`或 `Smith`.
+此範例查詢會篩選名稱為`Jobs`或`Smith`之任何專案的所有`persons`。
 
 **範例查詢**
 
@@ -1164,7 +1164,7 @@ query {
 此範例查詢會質詢：
 
 * 類型為 `article` 的所有內容片段
-* 使用 `path`和 `author` 屬性。
+* 具有`path`和`author`屬性。
 
 **範例查詢**
 
@@ -1333,7 +1333,7 @@ query {
 
 >[!NOTE]
 >
->`fragments` 欄位的資料類型為 `fragment-reference`，且已選取 `Article` 模型。查詢傳遞次數 `fragments` 作為陣列 `[Article]`.
+>`fragments` 欄位的資料類型為 `fragment-reference`，且已選取 `Article` 模型。查詢以`[Article]`的陣列傳送`fragments`。
 
 ```graphql
 {

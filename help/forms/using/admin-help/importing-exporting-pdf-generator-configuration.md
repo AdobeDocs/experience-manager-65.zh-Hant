@@ -22,7 +22,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->您無法匯入自訂native2pdfconfig.xml檔案來變更PDF Generator逾時設定。 該檔案中的逾時設定僅供參考，以PDF Generator顯示目前的設定。 若要變更逾時設定，請參閱以下的「設定PDF Generator效能引數」： [安裝和部署AEM表單](https://www.adobe.com/go/learn_aemforms_installJBoss_63).
+>您無法匯入自訂native2pdfconfig.xml檔案來變更PDF Generator逾時設定。 該檔案中的逾時設定僅供參考，以PDF Generator顯示目前的設定。 若要變更逾時設定，請參閱[安裝和部署AEM表單](https://www.adobe.com/go/learn_aemforms_installJBoss_63)中的「設定PDF Generator效能引數」。
 
 ## 匯出您目前的組態檔 {#export-your-current-configuration-file}
 
@@ -44,7 +44,7 @@ ht-degree: 0%
 
 1. 在Administration Console中，按一下「服務>PDF Generator>組態檔>匯入組態」。
 1. 選取「匯入現有的組態檔」。
-1. 若要在「組態檔案」方塊中指定檔案位置，請按一下「瀏覽」來尋找並選取檔案，然後按一下 **匯入**.
+1. 若要在[組態檔]方塊中指定檔案位置，請按一下[瀏覽]尋找並選取檔案，然後按一下[匯入]。****
 
 ## 轉換AutoCAD檔案中的所有圖層 {#convert-all-layers-within-autocad-files}
 
@@ -52,7 +52,7 @@ ht-degree: 0%
 
 1. 在Administration Console中，按一下「服務>PDF Generator>組態檔>匯出組態」。
 1. 選取「下載整個設定」，然後按一下「下載」。
-1. 在文字編輯器中，開啟已下載的檔案，並在 `AutoCAD` 標籤內 `PDFMaker` 標籤，新增文字 `convertAllPages="true"`.
+1. 在文字編輯器中，開啟下載的檔案，並在`PDFMaker`標籤內的`AutoCAD`標籤下新增文字`convertAllPages="true"`。
 1. 在Administration Console中，按一下「服務>PDF Generator>組態檔>匯入組態」。
 1. 選取「匯入現有的組態檔案」，指定更新的檔案，然後按一下「匯入」。
 

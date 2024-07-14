@@ -17,9 +17,9 @@ ht-degree: 3%
 
 # Adobe Experience Manager 6.5中的Dynamic Media存放庫重組 {#dynamic-media-repository-restructuring-in-aem}
 
-如父項所述 [Adobe Experience Manager 6.5中的存放庫重新架構](/help/sites-deploying/repository-restructuring.md) 頁面，升級至Experience Manager6.5的客戶應使用此頁面來評估與影響Dynamic Media的存放庫變更相關的工作量。 有些變更需要在Experience Manager6.5升級流程中進行大量工作，而其他變更則可能延遲到未來升級完成。
+如Adobe Experience Manager 6.5](/help/sites-deploying/repository-restructuring.md)頁面的上層[存放庫重新調整中所述，升級至Experience Manager 6.5的客戶應使用此頁面評估與影響Dynamic Media的存放庫變更相關的工作量。 有些變更需要在Experience Manager6.5升級流程中進行大量工作，而其他變更則可能延遲到未來升級完成。
 
-**在日後升級之前**
+**未來升級之前**
 
 * [自訂最適化視訊編碼設定](/help/sites-deploying/dynamicmedia-repository-restructuring-in-aem-6-5.md#custom-adaptive-video-encoding-configurations)
 * [Dynamic Media (DMS7)雲端設定](/help/sites-deploying/dynamicmedia-repository-restructuring-in-aem-6-5.md#dynamic-media-dms-cloud-configuration)
@@ -66,7 +66,7 @@ ht-degree: 3%
   </tr>
   <tr>
    <td><strong>重組指南</strong></td>
-   <td><p>客戶可在此位置執行移轉指令碼：<br /> </p>
+   <td><p>客戶可以在此位置執行移轉指令碼： <br /> </p>
     <ul>
      <li><em>https://serveraddress:serverport/libs/settings/dam/dm/presets.migratedmcontent.json</em></li>
      <li>重新啟動Dynamic Media OSGi套件組合。</li>
@@ -116,7 +116,7 @@ ht-degree: 3%
   </tr>
   <tr>
    <td><strong>重組指南</strong></td>
-   <td><p>1.從YouTube取消發佈所有影片<br /> 2. 使用新的TouchUI建立YouTube設定(從 <code>/conf</code>)包括從舊位置複製所有色版<br /> 3. 將所有影片發佈回YouTube。</p> <p>此工作流程會產生新的YouTube URL。 如果您在建立TouchUI YouTube設定之前未取消發佈，則您在「屬性」下列出多個YouTube URL，因為重新建立的管道會再次發佈（如果有機會的話）。 此功能表示您有「屬性」底下所列出的無用URL。</p> </td>
+   <td><p>1.從YouTube<br />取消發佈所有視訊2. 使用新的TouchUI （從<code>/conf</code>）建立YouTube設定，包括從舊位置<br /> 3複製所有頻道。 Publish所有影片回到YouTube。</p> <p>此工作流程會產生新的YouTube URL。 如果您在建立TouchUI YouTube設定之前未取消發佈，則您在「屬性」下列出多個YouTube URL，因為重新建立的管道會再次發佈（如果有機會的話）。 此功能表示您有「屬性」底下所列出的無用URL。</p> </td>
   </tr>
   <tr>
    <td><strong>附註</strong></td>

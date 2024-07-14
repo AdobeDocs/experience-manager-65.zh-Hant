@@ -21,7 +21,7 @@ ht-degree: 3%
 
 >[!CAUTION]
 >
->[內容片段模型](/help/assets/content-fragments/content-fragments-models.md) 建議用於建立所有新的內容片段。
+>建議使用[內容片段模型](/help/assets/content-fragments/content-fragments-models.md)來建立所有新的內容片段。
 >
 >內容片段模型用於WKND中的所有範例。
 
@@ -45,19 +45,19 @@ ht-degree: 3%
 * `/conf/global/settings/dam/cfm/templates`
 必須在執行階段變更的執行個體範圍客戶特定範本的位置。
 
-優先順序為（遞減順序） `/conf`， `/apps`， `/libs`.
+優先順序為（以遞減順序） `/conf`、`/apps`、`/libs`。
 
 >[!CAUTION]
 >
->您 ***必須*** 不會變更中的任何專案 `/libs` 路徑。
+>您&#x200B;***必須***&#x200B;不要變更`/libs`路徑中的任何專案。
 >
->這是因為 `/libs` 下次升級執行個體時會被覆寫（當您套用hotfix或feature pack時，很可能會被覆寫）。
+>這是因為下次升級執行個體時，`/libs`的內容會被覆寫（當您套用Hotfix或Feature Pack時，這些內容很可能會被覆寫）。
 >
 >設定和其他變更的建議方法是：
 >
->1. 重新建立所需專案（即存在於中的專案） `/libs`)下 `/apps`
+>1. 在`/apps`下重新建立必要專案（亦即，它存在於`/libs`中）
 >
->1. 進行任何變更 `/apps`
+>1. 在`/apps`中進行任何變更
 >
 
 範本的基本結構儲存在下方：
@@ -120,13 +120,13 @@ conf
     </tr>
     <tr>
      <td><code>jcr:title</code></td>
-     <td><p><code>String</code></p> <p>必填<br /> </p> </td>
-     <td>範本的標題(顯示在 <strong>建立片段</strong> 精靈)。</td>
+     <td><p><code>String</code></p> <p>必要<br /> </p> </td>
+     <td>範本的標題（顯示在<strong>建立片段</strong>精靈中）。</td>
     </tr>
     <tr>
      <td><code>jcr:description</code></td>
      <td><p><code>String</code></p> <p>可選</p> </td>
-     <td>說明範本用途的文字(顯示在 <strong>建立片段</strong> 精靈)。</td>
+     <td>說明範本用途的文字（顯示在<strong>建立片段</strong>精靈中）。</td>
     </tr>
     <tr>
      <td><code>initialAssociatedContent</code></td>
@@ -136,12 +136,12 @@ conf
     <tr>
      <td><code>precreateElements</code></td>
      <td><p><code>Boolean</code></p> <p>必要</p> </td>
-     <td><p><code>true</code>，表示內容片段元素（主元素除外）的子資產是否應在建立內容片段時建立； <em>false</em> 是否應「即時」建立。</p> <p><strong>注意</strong>：此引數目前必須設為 <code>true</code>.</p> </td>
+     <td><p><code>true</code>，表示內容片段之元素（主要元素除外）的子資產是否應在內容片段建立時建立；<em>false</em>表示這些子資產是否應「即時」建立。</p> <p><strong>附註</strong>：此引數目前必須設定為<code>true</code>。</p> </td>
     </tr>
     <tr>
      <td><code>version</code></td>
      <td><p><code>Long</code></p> <p>必要</p> </td>
-     <td><p>內容結構的版本；目前支援：</p> <p><strong>注意</strong>：此引數目前必須設為 <code>2</code>.<br /> </p> </td>
+     <td><p>內容結構的版本；目前支援：</p> <p><strong>附註</strong>：此引數目前必須設定為<code>2</code>。<br /> </p> </td>
     </tr>
    </tbody>
   </table>
@@ -158,7 +158,7 @@ conf
     <tr>
      <td><code>elements</code><br /> </td>
      <td><p><code>nt:unstructured</code></p> <p>必要</p> </td>
-     <td><p>包含內容片段元素定義的節點。 這是強制性的，而且至少需要包含一個子節點 <strong>主要</strong> 元素，但可以包含[1..n]個子節點。</p> <p>使用範本時，元素子分支會複製到片段的模型子分支。</p> <p>第一個元素(在CRXDE Lite中檢視時)會自動視為 <i>主要</i> 元素；節點名稱不相關，且節點本身除了由主要資產表示外，沒有特殊意義；其他元素會作為子資產處理。</p> </td>
+     <td><p>包含內容片段元素定義的節點。 它是強制性的，而且至少必須包含<strong>Main</strong>專案的子節點，但可以包含[1.n]個子節點。</p> <p>使用範本時，元素子分支會複製到片段的模型子分支。</p> <p>系統會自動將第一個元素(在CRXDE Lite中檢視)視為<i>主要</i>元素；節點名稱不相關，且節點本身除了由主要資產表示外，並無特殊意義；其他元素則會處理為子資產。</p> </td>
     </tr>
    </tbody>
   </table>
@@ -185,12 +185,12 @@ conf
     <tr>
      <td><code>defaultContent</code></td>
      <td><p><code>String</code></p> <p>可選</p> <p>預設值：「」</p> </td>
-     <td>元素的初始內容；僅用於 <code>precreateElements</code><i> = </i><code>true</code></td>
+     <td>元素的初始內容；僅在<code>precreateElements</code><i> = </i><code>true</code>時使用</td>
     </tr>
     <tr>
      <td><code>initialContentType</code></td>
      <td><p><code>String</code></p> <p>可選</p> <p>預設： <code>text/html</code></p> </td>
-     <td><p>元素的初始內容型別；僅用於 <code>precreateElements</code><i> = </i><code>true</code>；目前支援：</p>
+     <td><p>專案的初始內容型別；僅在<code>precreateElements</code><i> = </i><code>true</code>時使用；目前支援：</p>
       <ul>
        <li><code>text/html</code></li>
        <li><code>text/plain</code></li>
@@ -234,18 +234,18 @@ conf
     <tr>
      <td><code>&lt;<i>variation-name</i>&gt;</code><br /> </td>
      <td><p><code>nt:unstructured</code></p> <p>如果有變數節點，則必須填寫此項</p> </td>
-     <td><p>定義初始變數。<br /> 依預設，變數會新增至內容片段的所有元素。</p> <p>變數會有與個別元素相同的初始內容(請參閱 <code class="code">defaultContent/
-       initialContentType</code>)</p> </td>
+     <td><p>定義初始變數。<br />依預設，此變數會新增至內容片段的所有元素。</p> <p>變數將與個別元素有相同的初始內容（請參閱<code class="code">defaultContent/
+       initialContentType</code>）</p> </td>
     </tr>
     <tr>
      <td><code>jcr:title</code></td>
      <td><p><code>String</code></p> <p>必要</p> </td>
-     <td>變數的標題(顯示在片段編輯器的 <strong>變數</strong> 標籤（左側邊欄）。</td>
+     <td>變數的標題(顯示在片段編輯器的<strong>變數</strong>索引標籤（左側邊欄）中)。</td>
     </tr>
     <tr>
      <td><code>jcr:desciption</code></td>
      <td><p><code>String</code></p> <p>可選</p> <p>預設值：「」</p> </td>
-     <td>提供變化描述的文字 <span>(顯示在片段編輯器的 <strong>變數</strong> 標籤（左側邊欄）。</code></td>
+     <td>提供變數<span>說明的文字(顯示在片段編輯器的<strong>變數</strong>索引標籤（左側欄）中)。</code></td>
     </tr>
    </tbody>
   </table>

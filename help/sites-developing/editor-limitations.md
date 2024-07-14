@@ -26,13 +26,13 @@ ht-degree: 6%
 
 ### 連結未啟用 {#links-not-active}
 
-時間 [編輯頁面](/help/sites-authoring/editing-content.md)，連結未啟用。
+當[編輯頁面](/help/sites-authoring/editing-content.md)時，連結未啟用。
 
-* [切換至 **預覽** 模式](/help/sites-authoring/editing-content.md#preview-mode) 以使用內容中的連結進行導覽。
+* [切換到&#x200B;**預覽**&#x200B;模式](/help/sites-authoring/editing-content.md#preview-mode)以使用內容中的連結進行瀏覽。
 
 ### 結構頁面 {#structure-pages}
 
-無法命名頁面 `structure`. 已命名的頁面 `structure` 在頁面編輯器中無法編輯。
+頁面不能命名為`structure`。 名稱為`structure`的頁面無法在頁面編輯器中編輯。
 
 ## CSS限制 {#css-limitations}
 
@@ -46,13 +46,13 @@ ht-degree: 6%
 
 ### vh單位 {#vh-units}
 
-`vh` 不支援單位，因為iframe高度必須由Adobe Experience Manager (AEM)自動調整。
+不支援`vh`個單位，因為iframe高度必須由Adobe Experience Manager (AEM)自動調整。
 
 ### 固定背景影像 {#fixed-background-images}
 
 固定背景影像可能無法在捲動時顯示為固定影像，因為它內嵌於iframe中。
 
-* 選取 **以發佈的形式檢視頁面** 在標題列中，動作會正確顯示頁面。
+* 在標題列動作中選取&#x200B;**以發佈的形式檢視頁面**&#x200B;可正確顯示頁面。
 
 ### 100%高度 {#height}
 

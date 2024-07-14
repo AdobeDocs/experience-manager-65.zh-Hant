@@ -17,7 +17,7 @@ ht-degree: 2%
 
 # 最適化和HTML5表單的外觀架構 {#appearance-framework-for-adaptive-and-html-forms}
 
-Forms (適用性表單和HTML5表單)使用 [j查詢](https://jquery.com/)， [Backbone.js](https://backbonejs.org/) 和 [Underscore.js](https://underscorejs.org/) 用於外觀和指令碼的程式庫。 這些表單也使用 [jQuery UI](https://jqueryui.com/) **Widget** 表單中所有互動式元素（例如欄位和按鈕）的架構。 此架構可讓Form開發人員在Forms中使用一組豐富的可用jQuery Widget和外掛程式。 您也可以從使用者擷取資料（如leadDigits/trailDigits限制或實作圖片子句）時實作表單特定邏輯。 表單開發人員可以建立並使用自訂外觀，以改善資料擷取體驗，使其更人性化。
+Forms (適用性表單和HTML5表單)使用[jQuery](https://jquery.com/)、[Backbone.js](https://backbonejs.org/)和[Underscore.js](https://underscorejs.org/)資料庫的外觀和指令碼。 表單也針對表單中的所有互動式元素（例如欄位和按鈕）使用[jQuery UI](https://jqueryui.com/) **Widget**&#x200B;架構。 此架構可讓Form開發人員在Forms中使用一組豐富的可用jQuery Widget和外掛程式。 您也可以從使用者擷取資料（如leadDigits/trailDigits限制或實作圖片子句）時實作表單特定邏輯。 表單開發人員可以建立並使用自訂外觀，以改善資料擷取體驗，使其更人性化。
 
 本文內容適用於對jQuery和jQuery Widget有足夠瞭解的開發人員。 它提供外觀架構的深入分析，並可讓開發人員為表單欄位建立替代外觀。
 
@@ -51,7 +51,7 @@ Forms (適用性表單和HTML5表單)使用 [j查詢](https://jquery.com/)， [B
   </tr>
   <tr>
    <td>screenReaderText</td>
-   <td>熒幕Reader會使用此值提供欄位相關資訊的旁白。 此表單會提供值，而且您可以覆寫值。<br /> </td>
+   <td>熒幕Reader會使用此值提供欄位相關資訊的旁白。 表單提供值，您可以覆寫值。<br /> </td>
   </tr>
   <tr>
    <td>tabIndex</td>
@@ -100,19 +100,19 @@ Forms (適用性表單和HTML5表單)使用 [j查詢](https://jquery.com/)， [B
   </tr>
   <tr>
    <td>XFA_ENTER_EVENT</td>
-   <td>每當欄位成為焦點時，就會觸發此事件。 它可讓「enter」指令碼在欄位上執行。 觸發事件的語法為<br /> (Widget)。_trigger(xfalib.ut.XfaUtil.prototype.XFA_ENTER_EVENT)<br /> </td>
+   <td>每當欄位成為焦點時，就會觸發此事件。 它可讓「enter」指令碼在欄位上執行。 觸發事件的語法是<br /> (Widget)。_trigger(xfalib.ut.XfaUtil.prototype.XFA_ENTER_EVENT)<br /> </td>
   </tr>
   <tr>
    <td>XFA_EXIT_EVENT</td>
-   <td>只要使用者離開欄位，就會觸發此事件。 它可讓引擎設定欄位的值，並執行其「退出」指令碼。 觸發事件的語法為<br /> (Widget)。_trigger(xfalib.ut.XfaUtil.prototype.XFA_EXIT_EVENT)<br /> </td>
+   <td>只要使用者離開欄位，就會觸發此事件。 它可讓引擎設定欄位的值，並執行其「退出」指令碼。 觸發事件的語法是<br /> (Widget)。_trigger(xfalib.ut.XfaUtil.prototype.XFA_EXIT_EVENT)<br /> </td>
   </tr>
   <tr>
    <td>XFA_CHANGE_EVENT</td>
-   <td>此事件會觸發，以允許引擎執行在欄位上寫入的「變更」指令碼。 觸發事件的語法為<br /> (Widget)。_trigger(xfalib.ut.XfaUtil.prototype.XFA_CHANGE_EVENT)<br /> </td>
+   <td>此事件會觸發，以允許引擎執行在欄位上寫入的「變更」指令碼。 觸發事件的語法是<br /> (Widget)。_trigger(xfalib.ut.XfaUtil.prototype.XFA_CHANGE_EVENT)<br /> </td>
   </tr>
   <tr>
    <td>XFA_CLICK_EVENT</td>
-   <td>此事件在每次按一下欄位時觸發。 它可讓引擎執行在欄位上撰寫的「click」指令碼。 觸發事件的語法為<br /> (Widget)。_trigger(xfalib.ut.XfaUtil.prototype.XFA_CLICK_EVENT)<br /> </td>
+   <td>此事件在每次按一下欄位時觸發。 它可讓引擎執行在欄位上撰寫的「click」指令碼。 觸發事件的語法是<br /> (Widget)。_trigger(xfalib.ut.XfaUtil.prototype.XFA_CLICK_EVENT)<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -136,11 +136,11 @@ Forms (適用性表單和HTML5表單)使用 [j查詢](https://jquery.com/)， [B
    <td>將焦點放在欄位上並呼叫XFA_CLICK_EVENT。</td>
   </tr>
   <tr>
-   <td><p>markError：function(errorMessage， errorType)<br /> <br /> <em>errorMessage：字串 </em>代表錯誤<br /> <em>errorType：字串("warning"/"error")</em></p> <p><strong>注意</strong>：僅適用於HTML5表單。</p> </td>
+   <td><p>markError：function(errorMessage， errorType)<br /> <br /> <em>erorrMessage：代表錯誤的字串</em> <br /> <em>errorType：字串("warning"/"error")</em></p> <p><strong>附註</strong>：僅適用於HTML5表單。</p> </td>
    <td>傳送錯誤訊息和錯誤型別至Widget。 Widget會顯示錯誤。</td>
   </tr>
   <tr>
-   <td><p>clearError：函式()</p> <p><strong>注意</strong>：僅適用於HTML5表單。</p> </td>
+   <td><p>clearError：函式()</p> <p><strong>附註</strong>：僅適用於HTML5表單。</p> </td>
    <td>若欄位中的錯誤已修正，則呼叫。 Widget會隱藏錯誤。</td>
   </tr>
  </tbody>
@@ -167,7 +167,7 @@ Forms (適用性表單和HTML5表單)使用 [j查詢](https://jquery.com/)， [B
    <td>可在欄位中輸入的最大字元數。</td>
   </tr>
   <tr>
-   <td><p>limitLengthToVisibleArea</p> <p><strong>注意</strong>：僅適用於HTML5表單</p> </td>
+   <td><p>limitLengthToVisibleArea</p> <p><strong>附註</strong>：僅適用於HTML5表單</p> </td>
    <td>指定文字寬度超過Widget寬度時文字欄位的行為。</td>
   </tr>
  </tbody>
@@ -183,22 +183,22 @@ Forms (適用性表單和HTML5表單)使用 [j查詢](https://jquery.com/)， [B
   </tr>
   <tr>
    <td>值<br /> </td>
-   <td>所選值的陣列。<br /> </td>
+   <td>選取值的陣列。<br /> </td>
   </tr>
   <tr>
-   <td>個專案<br /> </td>
-   <td>要顯示為選項的物件陣列。 每個物件包含兩個屬性 — <br /> 儲存：要儲存的值，顯示：要顯示的值<br /> <br /> </td>
+   <td>專案<br /> </td>
+   <td>要顯示為選項的物件陣列。 每個物件包含兩個屬性 — <br />儲存：要儲存的值，顯示：要顯示的值。<br /> <br /> </td>
   </tr>
   <tr>
-   <td><p>可編輯</p> <p><strong>注意</strong>：僅適用於HTML5表單。<br /> </p> </td>
+   <td><p>可編輯</p> <p><strong>附註</strong>：僅適用於HTML5表單。<br /> </p> </td>
    <td>如果值為true，則在Widget中啟用自訂文字輸入。<br /> </td>
   </tr>
   <tr>
-   <td>displayvalue<br /> </td>
+   <td>displayValue<br /> </td>
    <td>要顯示的值陣列。<br /> </td>
   </tr>
   <tr>
-   <td>多選<br /> </td>
+   <td>多重選取<br /> </td>
    <td>如果允許多重選取，則為True，否則為false。<br /> </td>
   </tr>
  </tbody>
@@ -213,11 +213,11 @@ Forms (適用性表單和HTML5表單)使用 [j查詢](https://jquery.com/)， [B
    <th>說明</th>
   </tr>
   <tr>
-   <td><p>addItem：<em> 函式(itemValues)<br /> itemvalues：包含顯示和儲存值的物件 <br /> {sDisplayVal： &lt;displayvalue&gt;，sSaveVal： &lt;save value=""&gt;}</em></p> </td>
+   <td><p>addItem：<em>函式(itemValues)<br /> itemValues：包含顯示和儲存值<br />的物件{sDisplayVal： &lt;displayValue&gt;， sSaveVal： &lt;save Value&gt;}</em></p> </td>
    <td>將專案新增至清單。</td>
   </tr>
   <tr>
-   <td>deleteItem<em>：函式(nIndex)<br /> nIndex：要從清單中移除之專案的索引<br /> </em><br /> <br /> </td>
+   <td>deleteItem<em>：函式(nIndex)<br /> nIndex：要從清單移除之專案的索引<br /> </em><br /> <br /> </td>
    <td>從清單中刪除選項。</td>
   </tr>
   <tr>
@@ -247,7 +247,7 @@ Forms (適用性表單和HTML5表單)使用 [j查詢](https://jquery.com/)， [B
   </tr>
   <tr>
    <td>值</td>
-   <td><p>值的陣列（開啟/關閉/中性）。</p> <p>這是checkButton不同狀態的值陣列。 values[0]是狀態為開啟時的值，values[1]是狀態為關閉時的值，<br /> values[2]是狀態為NEUTRAL的值。 值陣列的長度等於狀態選項的值。<br /> </p> </td>
+   <td><p>值的陣列（開啟/關閉/中性）。</p> <p>這是checkButton不同狀態的值陣列。 values[0]是狀態為開啟時的值，values[1]是狀態為關閉時的值，而<br />值[2]是狀態為中立時的值。 值陣列的長度等於狀態選項的值。<br /> </p> </td>
   </tr>
   <tr>
    <td>狀態</td>

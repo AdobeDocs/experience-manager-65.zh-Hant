@@ -24,14 +24,14 @@ ht-degree: 1%
 
 在新增任何自訂報表之前，請執行以下範本程式：
 
-1. 自訂報表中使用的資料必須可在程式報表中使用。 為確保資料可用性，請排程cron作業或使用 **[同步](https://helpx.adobe.com/livecycle/help/process-reporting/install-start-process-reporting.html#Process%20Reporting%20Home%20screen)** 「程式報表」UI上的選項。
-1. URL要求（封裝所要的查詢）必須傳回適當的查詢結果物件。 若要建立查詢，您可以使用REST介面 [Querybuilder](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/search/query-builder-api.html?lang=en) 使用QueryBuilder API建立OSGi服務。 您可以建立動態或靜態查詢。
+1. 自訂報表中使用的資料必須可在程式報表中使用。 若要確保資料可用性，請排程cron工作或使用[程式報告]UI上的[同步] ](https://helpx.adobe.com/livecycle/help/process-reporting/install-start-process-reporting.html#Process%20Reporting%20Home%20screen)**選項。**[
+1. URL要求（封裝所要的查詢）必須傳回適當的查詢結果物件。 若要建立查詢，您可以使用[QueryBuilder](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/search/query-builder-api.html?lang=en)的REST介面，使用QueryBuilder API建立OSGi服務。 您可以建立動態或靜態查詢。
 
 1. 建立自訂使用者介面以顯示結果。 您可以建立獨立的使用者介面，或將結果與現有的程式報告UI整合。
 
 ## 使用QueryBuilder的REST介面 {#using-the-rest-interface-of-the-querybuilder}
 
-CRX QueryBuilder REST介面透過Java API和REST API公開資產共用查詢產生器的功能。 瞭解如何使用 [CRX QueryBuilder REST介面](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/search/query-builder-api.html?lang=en)，然後執行下列步驟：
+CRX QueryBuilder REST介面透過Java API和REST API公開Asset Share Query Builder的功能。 在執行下列步驟之前，瞭解如何使用[CRX QueryBuilder REST介面](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/search/query-builder-api.html?lang=en)：
 
 1. 瀏覽至URL `https://'[server]:[port]'/lc/bin/querybuilder.json`
 1. 根據Process Reporting儲存節點結構和節點屬性建立查詢。
@@ -48,7 +48,7 @@ CRX QueryBuilder REST介面透過Java API和REST API公開資產共用查詢產�
 
 ## 使用Query Builder API建立服務  {#creating-a-service-using-query-builder-api-nbsp}
 
-使用查詢產生器API建立服務的先決條件為 [建立和部署CQ OSGI套件組合](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hant) 和 [使用查詢產生器API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/search/query-builder-api.html?lang=en).
+使用Query Builder API建立服務的先決條件是[使用Query Builder API建立和部署CQ OSGI組合](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hant)和[](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/search/query-builder-api.html?lang=en)。
 
 1. 建立包含適當註解的OSGi服務。 若要存取QueryBuilder，請使用：
 
@@ -64,7 +64,7 @@ CRX QueryBuilder REST介面透過Java API和REST API公開資產共用查詢產�
     predicateGroup.setAllRequired(true);
    ```
 
-1. 新增述詞至新建立的predicateGroup。 一些有用的述詞建構包括 [JcrBoolPropertyPredicateEvaluator （5.3版）](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hant)， [JcrPropertyPredicateEvaluator （5.3版）](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hant)， [RangePropertyPredicateEvaluator （5.3版）](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hant)， [DateRangePredicateEvaluator （5.3版）](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hant)、和 [5.3中的TypePredicateEvaluator](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hant).
+1. 新增述詞至新建立的predicateGroup。 幾個有用的述詞結構是： 5.3](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hant)中的[JcrBoolPropertyPredicateEvaluator、5.3](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hant)中的[JcrPropertyPredicateEvaluator、5.3](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hant)中的[RangePropertyPredicateEvaluator、5.3](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hant)中的[DateRangePredicateEvaluator和5.3](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hant)中的[TypePredicateEvaluator。
 
    對於靜態報表，則是以硬式編碼撰寫述詞，而對於動態報表，則是從請求擷取述詞。
 
@@ -135,13 +135,13 @@ CRX QueryBuilder REST介面透過Java API和REST API公開資產共用查詢產�
                        out.write(row.toString().getBytes());
    ```
 
-1. 使用 `org.apache.felix maven-bundle-plugin` 為servlet建立OSGi套件組合。
+1. 使用`org.apache.felix maven-bundle-plugin`為servlet建立OSGi套件。
 
-1. 在CRX伺服器上部署套件組合。
+1. 將套件組合部署在CRX伺服器上。
 
 ### 服務範例 {#service-example}
 
-以下服務範例會計算執行中的處理序執行個體 **執行中** 和 **完成** 在每個月、季和年的結束時陳述。
+以下服務範例計算每個月、季和年的月底處於&#x200B;**RUNNING**&#x200B;和&#x200B;**COMPLETE**&#x200B;狀態的程式執行個體。
 
 ```java
 package custom.reporting.service;
@@ -339,7 +339,7 @@ public class PeriodicProcessVolume {
 }
 ```
 
-範例 `pom.xml`要在此服務上建置的檔案為：
+要建置在服務上方的範例`pom.xml`檔案為：
 
 ```xml
 <project xmlns="https://maven.apache.org/POM/4.0.0" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
@@ -423,13 +423,13 @@ public class PeriodicProcessVolume {
 
 ## 建立單獨的UI  {#creating-a-separate-ui-nbsp}
 
-建立顯示結果的個別UI的先決條件為 [5.6.1中的Sling基本概念](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hant)， [建立CRX節點](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hant) 並提供適當的 [存取許可權](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hant).
+建立顯示結果的獨立UI的先決條件是： [5.6.1](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hant)中的Sling基本知識[建立CRX節點](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hant)並提供適當的[存取許可權](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hant)。
 
-1. 在建立CRX節點 `/apps` 節點並授與適當的存取許可權。 (PERM_PROCESS_REPORTING_USER)
-1. 在定義轉譯器 `/content` 節點。
+1. 在`/apps`節點建立CRX節點並授與適當的存取許可權。 (PERM_PROCESS_REPORTING_USER)
+1. 在`/content`節點定義轉譯器。
 1. 將JSP或HTML檔案新增至步驟1中建立的節點。 您也可以新增CSS檔案。
 
-   ![包含JSP和CSS檔案的範例節點](assets/nodewith_jsp_css_new.png)
+   ![具有JSP和CSS檔案的範例節點](assets/nodewith_jsp_css_new.png)
 
    包含JSP和CSS檔案的範例節點
 
@@ -631,33 +631,33 @@ response.setCharacterEncoding("utf-8");
 
 ## 將報表UI整合至現有的程式報表UI  {#integrating-report-ui-in-existing-process-reporting-ui-nbsp}
 
-建立顯示結果的個別UI的先決條件為 [Sling基本需知](https://wem.help.adobe.com/enterprise/en_US/10-0/wem/developing/the_basics.html)， [建立CRX節點](/help/sites-developing/developing-with-crxde-lite.md#creating-a-node) 並提供適當的 [存取許可權](/help/sites-developing/developing-with-crxde-lite.md#access-control).
+建立顯示結果的獨立UI的先決條件是[Sling基本知識](https://wem.help.adobe.com/enterprise/en_US/10-0/wem/developing/the_basics.html)、[建立CRX節點](/help/sites-developing/developing-with-crxde-lite.md#creating-a-node)並提供適當的[存取許可權](/help/sites-developing/developing-with-crxde-lite.md#access-control)。
 
 1. 建立個別的UI。
-1. 建立子項 `nt:unstructured` 節點在 `/content/process-reporting-runtime/custom-reports` 每個可插入報表的節點。
+1. 在每個可插入報告的`/content/process-reporting-runtime/custom-reports`節點處建立子`nt:unstructured`節點。
 
    * **id** — 指定報表的唯一識別碼。
    * **名稱** — 指定報表的名稱。 名稱會顯示在UI中。
-   * **連結** — 指定個別UI轉譯器的相對連結。 連結會在步驟1建立。
-   * **說明** — 指定報表的一行說明。 您可以將說明欄位保留空白。
-   * **圖示** — 指定要以圖形化方式呈現報表的影像。 您可以將圖示欄位保留空白。
+   * **連結** — 指定個別使用者介面轉譯器的相對連結。 連結會在步驟1建立。
+   * **description** — 指定報告的一行說明。 您可以將說明欄位保留空白。
+   * **圖示** — 指定要以圖形方式呈現報表的影像。 您可以將圖示欄位保留空白。
 
-   ![節點屬性 ](assets/node_properties_new.png)
+   ![節點](assets/node_properties_new.png)的屬性
 
    節點屬性
 
 1. 報表UI已整合至程式報表UI。 整合UI後，更新的UI看起來會類似於以下影像：
 
-   ![新新增自訂報表的使用者介面](assets/sampleui_screenshot_new.png)
+   ![新新增自訂報告的使用者介面](assets/sampleui_screenshot_new.png)
 
    新新增自訂報表的使用者介面
 
-   ![自訂報表的結果畫面](assets/jsp_display_new.png)
+   ![自訂報告的結果畫面](assets/jsp_display_new.png)
 
    自訂報表的結果畫面
 
 ## 範例套件 {#sample-package}
 
-匯入 `sample-report-pkg-1.zip` 將文章中討論的自訂報表和UI整合到流程管理UI的套件。
+將`sample-report-pkg-1.zip`套件匯入，以將文章中討論的自訂報表和UI整合到處理程式管理UI。
 
 [取得檔案](assets/sample-report-pkg-1.zip)

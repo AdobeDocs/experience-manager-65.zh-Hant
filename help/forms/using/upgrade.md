@@ -24,7 +24,7 @@ ht-degree: 6%
 | AEM 6.5 | 本文章 |
 
 
-AEM 6.5 Forms包含數項新功能和增強功能，可簡化表單和對應項的建立、管理和使用者體驗。 若要瞭解AEM 6.5 Forms的所有新功能和增強功能，請參閱 [新功能摘要檔案](../../forms/using/whats-new.md).
+AEM 6.5 Forms包含數項新功能和增強功能，可簡化表單和對應項的建立、管理和使用者體驗。 若要瞭解AEM 6.5 Forms的所有新功能和增強功能，請參閱[新功能摘要檔案](../../forms/using/whats-new.md)。
 
 您可以升級現有的LiveCycle或AEM Forms安裝，以取得AEM 6.5 Forms中提供的新功能和增強功能，同時完整保留現有的資料、流程和資產。 升級時，也會保留處理序的中繼資料和狀態。 您可以選擇升級路徑以開始升級。
 
@@ -61,7 +61,7 @@ AEM 6.5 Forms包含數項新功能和增強功能，可簡化表單和對應項�
 * JEE上的AEM 6.1 Forms
 * JEE上的AEM 6.2 Forms
 
-JEE上的AEM 6.5.18.0 Forms提供兩種型別的安裝程式： [完整安裝程式](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) 和 [修補程式安裝程式](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html).
+JEE上的AEM 6.5.18.0 Forms提供兩種型別的安裝程式： [完整安裝程式](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)和[修補安裝程式](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)。
 
 **完整安裝程式**：您可以使用完整安裝程式來設定新的AEM Forms執行個體，或從JEE上的AEM 6.5.x.x Forms升級至JEE上的AEM 6.5.18.0 Forms。
 
@@ -71,7 +71,7 @@ JEE上的AEM 6.5.18.0 Forms提供兩種型別的安裝程式： [完整安裝程
 
 ![完整安裝程式和修補程式安裝程式](/help/forms/using/assets/full-and-patch-installer.png)
 
-請參閱 [AEM 6.5 Forms Service Pack安裝指示](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/aem-forms-current-service-pack-installation-instructions.html) 文章以安裝適用於JEE環境的最新Service Pack。
+請參閱[AEM 6.5 Forms Service Pack安裝指示](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/aem-forms-current-service-pack-installation-instructions.html)文章，安裝JEE環境適用的最新Service Pack。
 
 <!--
 [Work in Progress]

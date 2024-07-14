@@ -18,11 +18,11 @@ ht-degree: 0%
 
 # 準備AEM Forms以進行備份 {#preparing-aem-forms-for-backup}
 
-**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms 。**
+**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
 
 ## 關於備份與還原服務 {#about-the-backup-and-restore-service}
 
-備份和還原服務可讓您將AEM Forms放入 *備份模式*，即可執行熱備份。 備份和還原服務實際上並不會執行AEM Forms的備份或還原您的系統。 而是讓伺服器處於穩定可靠的備份狀態，同時允許伺服器繼續執行。 您負責備份全域檔案儲存(GDS)和連線至Forms伺服器的資料庫的動作。 GDS是用來儲存長期處理程式中所使用檔案的目錄。
+備份與還原服務可讓您將AEM Forms置於&#x200B;*備份模式*，以便執行熱備份。 備份和還原服務實際上並不會執行AEM Forms的備份或還原您的系統。 而是讓伺服器處於穩定可靠的備份狀態，同時允許伺服器繼續執行。 您負責備份全域檔案儲存(GDS)和連線至Forms伺服器的資料庫的動作。 GDS是用來儲存長期處理程式中所使用檔案的目錄。
 
 備份模式是伺服器進入的狀態，這樣在執行備份程式時就不會清除GDS中的檔案。 而是在GDS目錄下建立子目錄，以在儲存備份模式結束後維護要清除的檔案記錄。 檔案可在系統重新啟動後繼續儲存，可能持續數天甚至數年。 這些檔案是Forms伺服器整體狀態的重要部分，可能包含PDF檔案、原則或表單範本。 若這些檔案中有任何遺失或損毀，Forms伺服器上的程式可能會變得不穩定，且可能會遺失資料。
 
@@ -43,11 +43,11 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如需為AEM Forms執行備份時考量哪些事項的詳細資訊，請參閱 [管理說明](https://www.adobe.com/go/learn_aemforms_admin_63).
+>如需執行AEM Forms備份時考量哪些專案的詳細資訊，請參閱[管理說明](https://www.adobe.com/go/learn_aemforms_admin_63)。
 
 >[!NOTE]
 >
->如需有關備份和還原服務的詳細資訊，請參閱 [AEM Forms服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
+>如需有關備份和還原服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 ## 在Forms伺服器上進入備份模式 {#entering-backup-mode-on-the-forms-server}
 
@@ -57,11 +57,11 @@ ht-degree: 0%
 * 備份程式的完成時間。
 * 表示是否處於連續備份模式的旗標，只有在執行滾動備份時才有用。
 
-在寫入應用程式以進入備份模式之前，建議您先瞭解將Forms伺服器置於備份模式後所使用的備份程式。 如需為AEM Forms執行備份時考量哪些事項的詳細資訊，請參閱 [管理說明](https://www.adobe.com/go/learn_aemforms_admin_63).
+在寫入應用程式以進入備份模式之前，建議您先瞭解將Forms伺服器置於備份模式後所使用的備份程式。 如需執行AEM Forms備份時考量哪些專案的詳細資訊，請參閱[管理說明](https://www.adobe.com/go/learn_aemforms_admin_63)。
 
 >[!NOTE]
 >
->如需有關備份和還原服務的詳細資訊，請參閱 [AEM Forms服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
+>如需有關備份和還原服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 ### 步驟摘要 {#summary-of-steps}
 
@@ -74,19 +74,19 @@ ht-degree: 0%
 1. （選擇性）擷取伺服器上備份模式工作階段的相關資訊。
 1. 執行GDS （全域資料存放區）和資料庫的備份。
 
-**包含專案檔案**
+**包含專案檔**
 
 在您的開發專案中包含必要的檔案。 這些檔案必須包含在您的專案中，以便正確編譯您的程式碼並使用備份和還原服務API。
 
-如需有關這些檔案位置的資訊，請參閱 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
+如需這些檔案位置的相關資訊，請參閱[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
 **建立BackupService使用者端API物件**
 
 若要以程式設計方式離開備份模式，請建立BackupService使用者端物件，以使用備份和還原服務API。
 
-**決定唯一的標籤、決定執行備份的時間長度，以及決定是否處於連續備份模式**
+**決定唯一標籤、決定執行備份的時間長度，以及決定是否處於連續備份模式**
 
-在進入備份模式之前，您應該先決定唯一的標籤、決定要配置執行備份的時間長度，以及是否要讓Forms伺服器維持備份模式。 這些考量事項對於整合貴組織建立的備份程式非常重要。 (請參閱 [管理說明](https://www.adobe.com/go/learn_aemforms_admin_63).)
+在進入備份模式之前，您應該先決定唯一的標籤、決定要配置執行備份的時間長度，以及是否要讓Forms伺服器維持備份模式。 這些考量事項對於整合貴組織建立的備份程式非常重要。 （請參閱[管理說明](https://www.adobe.com/go/learn_aemforms_admin_63)。）
 
 **進入備份模式**
 
@@ -116,10 +116,10 @@ ht-degree: 0%
 
 1. 建立BackupService使用者端API物件
 
-   您使用 `ServiceClientFactory` 物件和BackupService使用者端API物件。
+   您同時使用`ServiceClientFactory`物件和BackupService使用者端API物件。
 
-   * 建立 `ServiceClientFactory` 包含連線屬性的物件。 (請參閱 [設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).)
-   * 建立 `BackupService` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 物件。
+   * 建立包含連線屬性的`ServiceClientFactory`物件。 （請參閱[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。）
+   * 使用它的建構函式並傳遞`ServiceClientFactory`物件來建立`BackupService`物件。
 
 1. 決定唯一的標籤、決定執行備份的時間長度，以及決定是否處於連續備份模式
 
@@ -127,17 +127,17 @@ ht-degree: 0%
 
 1. 進入備份模式
 
-   透過叫用 `enterBackupMode` 方法搭配下列引數：
+   使用下列引數叫用`enterBackupMode`方法，以進入備份模式：
 
-   * A `String` 值，指定可識別備份模式工作階段的唯一可讀取標籤。 建議您不要使用無法編碼為XML格式的空格或字元。
-   * 一個 `int` 指定保留在備份模式的分鐘數的值。 您可以指定下列專案的值： `1` 至 `10080` （一週的分鐘數）。 使用連續備份模式時，會忽略此值。
-   * A `Boolean` 指定是否處於連續備份模式的值。 值 `True` 指定處於連續備份模式。 當處於連續備份模式時，您為保留在備份模式的分鐘數指定的值會被忽略。
+   * `String`值，指定可識別備份模式工作階段的唯一可讀取標籤。 建議您不要使用無法編碼為XML格式的空格或字元。
+   * `int`值，指定保留在備份模式的分鐘數。 您可以指定從`1`到`10080`的值（一週的分鐘數）。 使用連續備份模式時，會忽略此值。
+   * 指定是否處於連續備份模式的`Boolean`值。 `True`的值指定處於連續備份模式。 當處於連續備份模式時，您為保留在備份模式的分鐘數指定的值會被忽略。
 
-     連續備份模式表示新的備份模式工作階段會在目前工作階段完成後啟動。 值 `False` 表示不使用連續備份模式，而且在離開備份模式後，會從GDS繼續清除檔案。
+     連續備份模式表示新的備份模式工作階段會在目前工作階段完成後啟動。 值為`False`表示未使用連續備份模式，離開備份模式後，會從GDS繼續清除檔案。
 
 1. 擷取伺服器上備份模式工作階段的相關資訊
 
-   使用擷取資訊 `BackupModeEntryResult` 叫用後傳回的物件 `enterBackupMode` 方法。 在進入備份模式後，您可以擷取的資訊對於與備份程式整合而言可能很有用。 例如，標籤、備份ID和開始時間可能很適合用來作為備份程式檔案名稱的輸入。
+   使用叫用`enterBackupMode`方法後傳回的`BackupModeEntryResult`物件擷取資訊。 在進入備份模式後，您可以擷取的資訊對於與備份程式整合而言可能很有用。 例如，標籤、備份ID和開始時間可能很適合用來作為備份程式檔案名稱的輸入。
 
 1. 執行GDS和資料庫的備份
 
@@ -154,7 +154,7 @@ ht-degree: 0%
 
 1. 建立BackupService使用者端API物件
 
-   使用Microsoft .NET使用者端元件，建立 `BackupServiceService` 物件，方法是叫用其預設建構函式，並使用 `Credentials` 方法。
+   使用Microsoft .NET使用者端元件，透過叫用其預設建構函式來建立`BackupServiceService`物件，並使用`Credentials`方法指定認證。
 
 1. 決定唯一的標籤、決定執行備份的時間長度，以及決定是否處於連續備份模式
 
@@ -164,11 +164,11 @@ ht-degree: 0%
 
    若要進入備份模式，請叫用enterBackupMode方法並傳遞下列值：
 
-   * A `String` 值，指定可識別備份模式工作階段的唯一可讀取標籤。 建議您不要使用無法編碼為XML格式的空格或字元。
-   * A `Uint32` 指定保留在備份模式的分鐘數的值。 您可以指定下列專案的值： `1` 至 `10080` （一週內的分鐘數）。 使用連續備份模式時，會忽略此值。
-   * A `Boolean` 指定是否處於連續備份模式的值。 值 `True` 指定處於連續備份模式。 當處於連續備份模式時，您為保留在備份模式的分鐘數指定的值會被忽略。 連續備份模式表示新的備份模式工作階段會在目前工作階段完成後啟動。
+   * `String`值，指定可識別備份模式工作階段的唯一可讀取標籤。 建議您不要使用無法編碼為XML格式的空格或字元。
+   * `Uint32`值，指定保留在備份模式的分鐘數。 您可以指定從`1`到`10080`的值（一週的分鐘數）。 使用連續備份模式時，會忽略此值。
+   * 指定是否處於連續備份模式的`Boolean`值。 `True`的值指定處於連續備份模式。 當處於連續備份模式時，您為保留在備份模式的分鐘數指定的值會被忽略。 連續備份模式表示新的備份模式工作階段會在目前工作階段完成後啟動。
 
-     值 `False` 表示不使用連續備份模式，而且在離開備份模式後，會從GDS繼續清除檔案。
+     值為`False`表示未使用連續備份模式，離開備份模式後，會從GDS繼續清除檔案。
 
 1. 擷取伺服器上備份模式工作階段的相關資訊
 
@@ -182,11 +182,11 @@ ht-degree: 0%
 
 您離開備份模式，讓Forms伺服器繼續從Forms伺服器上的GDS （全域檔案儲存）中清除檔案。
 
-將應用程式寫入離開模式之前，建議您先瞭解與AEM Forms搭配使用的備份程式。 如需為AEM Forms執行備份時考量哪些事項的詳細資訊，請參閱 [管理說明](https://www.adobe.com/go/learn_aemforms_admin_63).
+將應用程式寫入離開模式之前，建議您先瞭解與AEM Forms搭配使用的備份程式。 如需執行AEM Forms備份時考量哪些專案的詳細資訊，請參閱[管理說明](https://www.adobe.com/go/learn_aemforms_admin_63)。
 
 >[!NOTE]
 >
->如需有關備份和還原服務的詳細資訊，請參閱 [AEM Forms服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
+>如需有關備份和還原服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 ### 步驟摘要 {#summary_of_steps-1}
 
@@ -197,11 +197,11 @@ ht-degree: 0%
 1. 離開備份模式。
 1. （選用）擷取在Forms伺服器上執行之備份模式工作階段的相關資訊。
 
-**包含專案檔案**
+**包含專案檔**
 
 在您的開發專案中包含所有必要的檔案。 這些檔案對於正確編譯程式碼及使用備份與還原服務API非常重要。
 
-如需有關這些檔案位置的資訊，請參閱 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
+如需這些檔案位置的相關資訊，請參閱[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
 **建立BackupService使用者端API物件**
 
@@ -231,18 +231,18 @@ ht-degree: 0%
 
 1. 建立BackupService使用者端API物件
 
-   您使用 `ServiceClientFactory` 物件和BackupService使用者端API物件。
+   您同時使用`ServiceClientFactory`物件和BackupService使用者端API物件。
 
-   * 建立 `ServiceClientFactory` 包含連線屬性的物件。 (請參閱 [設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).)
-   * 建立 `BackupService` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 物件做為引數。
+   * 建立包含連線屬性的`ServiceClientFactory`物件。 （請參閱[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。）
+   * 使用物件的建構函式建立`BackupService`物件，並將`ServiceClientFactory`物件作為引數傳遞。
 
 1. 進入備份模式
 
-   叫用以離開備份模式 `leaveBackupMode` 方法。
+   叫用`leaveBackupMode`方法以離開備份模式。
 
 1. 擷取伺服器上備份模式工作階段的相關資訊
 
-   使用擷取操作的相關資訊 `BackupModeResult` 物件。 在進入備份模式後，您可以擷取的資訊對於與備份程式整合而言可能很有用。 例如，標籤、備份ID和開始時間可能很適合用來作為備份程式檔案名稱的輸入。
+   使用傳回的`BackupModeResult`物件擷取作業的相關資訊。 在進入備份模式後，您可以擷取的資訊對於與備份程式整合而言可能很有用。 例如，標籤、備份ID和開始時間可能很適合用來作為備份程式檔案名稱的輸入。
 
 ### 使用Web服務API離開備份模式 {#leave-backup-mode-using-the-web-service-api}
 
@@ -257,11 +257,11 @@ ht-degree: 0%
 
 1. 建立BackupService使用者端API物件
 
-   使用Microsoft .NET使用者端元件，建立 `BackupServiceService` 物件（透過叫用其預設建構函式）。
+   使用Microsoft .NET使用者端元件，透過叫用其預設建構函式來建立`BackupServiceService`物件。
 
 1. 進入備份模式
 
-   叫用以離開備份模式 `leaveBackupMode` Web服務作業。
+   叫用`leaveBackupMode` Web服務作業以離開備份模式。
 
 1. 擷取伺服器上備份模式工作階段的相關資訊
 

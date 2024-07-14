@@ -36,7 +36,7 @@ AEM CIF附加元件套件會隨AEM Package Manager安裝及更新。
 
 ## 部署CIF Venia專案
 
-可用的專案日期 [GitHub AEM Guides - CIF Venia專案](https://github.com/adobe/aem-cif-guides-venia) 和透過AEM封裝管理員完成部署。
+[GitHub AEM Guides - CIF Venia專案](https://github.com/adobe/aem-cif-guides-venia)上可用的專案，並透過AEM封裝管理員完成部署。
 
 **舊版CIF**
 
@@ -48,7 +48,7 @@ AEM CIF附加元件套件會隨AEM Package Manager安裝及更新。
 
 **舊版CIF**
 
-* CIF Classic：透過完整或差異產品匯入，即時和階段產品資料會匯入並儲存在AEM Author上的JCR中。 即時產品資料會復寫到AEM Publish。
+* CIF Classic：透過完整或差異產品匯入，即時和階段產品資料會匯入並儲存在AEM Author上的JCR中。 即時產品資料會複製到AEM Publish。
 
 ## 具有AEM轉譯的產品目錄體驗
 
@@ -60,4 +60,4 @@ AEM會使用已指派給產品和類別的AEM目錄範本，即時呈現產品�
 
 >[!NOTE]
 >
->如需如何搭配AEM Managed Service或AEM On-Premise使用CIF的其他檔案，請參閱 [Commerce integration framework](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/getting-started.html)
+>如需如何搭配使用CIF與AEM Managed Service或AEM On-Premise的其他檔案，請參閱[Commerce integration framework](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/getting-started.html)

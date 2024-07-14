@@ -18,7 +18,7 @@ ht-degree: 86%
 
 # SAML 2.0 驗證處理常式{#saml-authentication-handler}
 
-AEM 隨附 [SAML](https://saml.xml.org/saml-specifications) 驗證處理常式。此處理常式支援 [SAML](https://saml.xml.org/saml-specifications) 2.0驗證請求通訊協定（Web-SSO設定檔）使用 `HTTP POST` 繫結。
+AEM 隨附 [SAML](https://saml.xml.org/saml-specifications) 驗證處理常式。此處理常式支援使用`HTTP POST`繫結的[SAML](https://saml.xml.org/saml-specifications) 2.0驗證要求通訊協定（Web-SSO設定檔）。
 
 它支援：
 
@@ -123,7 +123,7 @@ SAML 聲明已經過簽署，並可選擇進行加密。為了使其運作，您
 
    `openssl pkcs8 -topk8 -inform PEM -outform DER -in key.pem -out key.der -nocrypt`
 
-1. 按一下以上傳私密金鑰檔案 **選取私密金鑰檔案**.
+1. 按一下&#x200B;**選取私密金鑰檔案**，上傳私密金鑰檔案。
 1. 按一下「**選擇證書鏈檔案**」，上傳憑證檔案。
 1. 指派別名，如下所示：
 
@@ -134,7 +134,7 @@ SAML 聲明已經過簽署，並可選擇進行加密。為了使其運作，您
 您可以設定記錄器來偵錯任何可能因錯誤設定SAML而產生的問題。 您可以透過以下方式進行：
 
 1. 前往網頁主控台：*http://localhost:4502/system/console/configMgr*
-1. 搜尋並按一下以下專案： **Apache Sling記錄記錄器設定**
+1. 搜尋並按一下名為&#x200B;**Apache Sling記錄記錄器組態**&#x200B;的專案
 1. 使用下列設定來建立記錄器：
 
    * **記錄層級：** Debug

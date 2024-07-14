@@ -62,7 +62,7 @@ CIF 附加元件將產品情境帶入 Experience Manager 並提供編寫工具 (
 
 ### 實現價值時間 (TTV)
 
-加速專案開發，使用 [AEM Core Components](https://www.aemcomponents.dev/)， [AEM Venia參考店面](https://github.com/adobe/aem-cif-guides-venia)， [AEM專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hant)和PWA的整合模式(Headless內容和Commerce)。
+加速專案開發，使用[AEM核心元件](https://www.aemcomponents.dev/)、[AEM Venia參考店面](https://github.com/adobe/aem-cif-guides-venia)、[AEM專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hant)以及PWA的整合模式(Headless內容和Commerce)。
 
 CIF 旨在透過始終保持最新的附加元件不斷創新，使客戶能夠存取新的和改進的功能。
 

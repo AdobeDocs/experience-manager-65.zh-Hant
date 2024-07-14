@@ -1,6 +1,6 @@
 ---
 title: 支援的檔案格式和MIME型別
-description: 支援的檔案格式和MIME型別 [!DNL Assets] 和 [!DNL Dynamic Media] 以及每種格式支援的功能。
+description: ' [!DNL Assets] 和 [!DNL Dynamic Media] 支援的檔案格式和MIME型別，以及每種格式支援的功能。'
 contentOwner: AG
 mini-toc-levels: 1
 role: User, Admin
@@ -15,9 +15,9 @@ ht-degree: 25%
 
 ---
 
-# 支援的格式 [!DNL Adobe Experience Manager Assets] {#assets-supported-formats}
+# [!DNL Adobe Experience Manager Assets]支援的格式 {#assets-supported-formats}
 
-[!DNL Experience Manager Assets] 支援各式各樣的檔案格式，而且每種功能對於不同的MIME型別都有不同的支援。 若要整合 [!DNL Assets] 搭配其他符合標準的數位資產管理(DAM)解決方案和案頭軟體，使用Adobe的 [!DNL Extensible Metadata Platform] (XMP)。
+[!DNL Experience Manager Assets]支援廣泛的檔案格式，而且每種功能對於不同的MIME型別都有不同的支援。 若要將[!DNL Assets]與其他符合標準的數位資產管理(DAM)解決方案和案頭軟體整合，請使用Adobe的[!DNL Extensible Metadata Platform] (XMP)。
 
 請參閱圖例以了解支援程度。
 
@@ -27,9 +27,9 @@ ht-degree: 25%
 | &#42; | 支援附加功能 |
 | − | 不適用 |
 
-## 中支援的光柵影像格式 [!DNL Experience Manager] {#supported-raster-image-formats}
+## [!DNL Experience Manager]中支援的光柵影像格式 {#supported-raster-image-formats}
 
-中支援的點陣影像格式 [!DNL Assets] 為：
+[!DNL Assets]中支援的光柵影像格式為：
 
 | 格式 | 儲存空間 | 中繼資料管理 | 中繼資料擷取 | 產生縮圖 | 編輯 | 中繼資料回寫 | Insights |
 | ------------ | :------: | :-----------------: | :-----------------: | :------------------: | :------: | :----------------: | :------: |
@@ -51,17 +51,17 @@ ht-degree: 25%
 
 除了上述資訊之外，請考量下列事項：
 
-* EPS檔案支援僅適用於點陣影像。 例如，預設不支援EPS向量影像的縮圖產生。 若要新增支援， [設定ImageMagick](best-practices-for-imagemagick.md). 若要整合協力廠商工具以啟用其他功能，請參閱 [以命令列為基礎的媒體處理常式](media-handlers.md#command-line-based-media-handler).
+* EPS檔案支援僅適用於點陣影像。 例如，預設不支援EPS向量影像的縮圖產生。 若要新增支援，[設定ImageMagick](best-practices-for-imagemagick.md)。 若要整合協力廠商工具以啟用其他功能，請參閱[命令列式媒體處理常式](media-handlers.md#command-line-based-media-handler)。
 
-* 將中繼資料回寫新增至PSB時，可適用於該檔案格式 `NComm` 處理常式。
+* 當中繼資料回寫新增至`NComm`處理常式時，可適用於PSB檔案格式。
 
-* 對於EPS檔案，PostScript Document Structuring Convention (PS-Adobe) 3.0或更新版本支援中繼資料回寫。
+* 對於EPS檔案，PostScript檔案結構慣例(PS-Adobe) 3.0版或更新版本支援中繼資料回寫。
 
 ## 支援的3D格式 {#support-3d-formats}
 
 支援下列3D格式清單。
 
-另請參閱 [在Dynamic Media中使用3D資產。](/help/assets/assets-3d.md)
+另請參閱[在Dynamic Media中使用3D資產。](/help/assets/assets-3d.md)
 
 | 格式 | 儲存空間 | 版本設定 | 工作流程 | 發佈 | 存取控制 | 縮圖預覽 | 3D預覽 | Dynamic Media傳遞 |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -74,13 +74,13 @@ ht-degree: 25%
 
 ## 支援的PDF模擬轉譯器程式庫 {#supported-pdf-rasterizer-library}
 
-Adobe PDF模擬轉譯器程式庫可為大型且內容密集型專案產生高品質的縮圖和預覽 [!DNL Adobe Illustrator] 和PDF檔案。 Adobe建議針對下列專案使用PDF模擬轉譯器資料庫：
+Adobe PDF模擬轉譯器程式庫為大型且內容密集的[!DNL Adobe Illustrator]和PDF檔案產生高品質的縮圖和預覽。 Adobe建議針對下列專案使用PDF模擬轉譯器資料庫：
 
 * 需要處理大量資源的內容密集型AI/PDF檔案。
 * 預設不會為其產生縮圖的AI/PDF檔案。
 * 具有Pantone比對系統(PMS)顏色的AI檔案。
 
-另請參閱 [使用PDF模擬轉譯器](aem-pdf-rasterizer.md).
+請參閱[使用PDF模擬器](aem-pdf-rasterizer.md)。
 
 ## 支援的影像轉碼程式庫 {#supported-image-transcoding-library}
 
@@ -88,17 +88,17 @@ Adobe影像轉碼資料庫是影像處理解決方案，可執行核心影像處
 
 影像轉碼程式庫支援JPG/JPEG、PNG （8位元和16位元）、GIF、BMP、TIFF/壓縮TIFF(32位元TIFF檔案和PTIFF檔案除外)、ICO和ICN MIME型別。
 
-另請參閱 [影像轉碼程式庫](imaging-transcoding-library.md).
+請參閱[影像轉碼程式庫](imaging-transcoding-library.md)。
 
 ## 支援的Camera Raw {#supported-camera-raw}
 
-此 [!DNL Adobe Camera Raw] 資料庫啟用 [!DNL Assets] 以擷取原始影像。 另請參閱 [Camera Raw支援](camera-raw.md).
+[!DNL Adobe Camera Raw]資料庫可讓[!DNL Assets]擷取原始影像。 請參閱[Camera Raw支援](camera-raw.md)。
 
-## 支援 [!DNL Assets] 檔案格式 {#supported-document-formats}
+## 支援的[!DNL Assets]檔案格式 {#supported-document-formats}
 
 資產管理功能支援的檔案格式如下：
 
-| 格式 | 儲存空間 | [中繼資料管理](metadata.md) | 全文<br> 摘取 | [中繼資料擷取](metadata.md) | 縮圖<br> 層代 | [子資產擷取](managing-linked-subassets.md) | [中繼資料回寫](xmp-writeback.md) | [連線資產](use-assets-across-connected-assets-instances.md) |
+| 格式 | 儲存空間 | [中繼資料管理](metadata.md) | 全文檢索<br>擷取 | [中繼資料擷取](metadata.md) | 產生縮圖<br> | [子資產擷取](managing-linked-subassets.md) | [中繼資料回寫](xmp-writeback.md) | [連線資產](use-assets-across-connected-assets-instances.md) |
 |---|---|---|---|---|---|---|---|---|
 | [AI](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | − | ✓ | ✓ | ✓ | ✓ | − |
 | DOC | ✓ | ✓ | ✓ | ✓ | − | − | − | ✓ |
@@ -172,9 +172,9 @@ Adobe影像轉碼資料庫是影像處理解決方案，可執行核心影像處
 
 ## 支援的MIME型別 {#supported-mime-types}
 
-根據預設， [!DNL Experience Manager] 會使用副檔名偵測檔案型別。 [!DNL Experience Manager] 可以從檔案內容偵測到它。 對於後者，請選取 [!UICONTROL 從內容中偵測MIME] 中的選項 [!UICONTROL Day CQ DAM Mime型別服務] 在 [!DNL Experience Manager] 網頁主控台。
+根據預設，[!DNL Experience Manager]會使用副檔名偵測檔案型別。 [!DNL Experience Manager]可以從檔案內容偵測到它。 對於後者，請在[!DNL Experience Manager] Web主控台中選取[!UICONTROL Day CQ DAM Mime Type Service]中的[!UICONTROL 從內容偵測MIME]選項。
 
-CRXDE Lite中有提供支援的MIME型別清單，請參閱 `/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`.
+在`/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`有受支援的MIME型別清單，以CRXDE Lite顯示。
 
 | 副檔名 | MIME型別/網際網路媒體型別 | 預設jobParam值 | 允許的jobparam值 |
 |---|---|---|---|
@@ -254,11 +254,11 @@ CRXDE Lite中有提供支援的MIME型別清單，請參閱 `/conf/global/settin
 
 ## Dynamic Media — 支援的檔案格式 {#supported-document-formats-dynamic-media}
 
-| 格式 | 上傳<br> （輸入格式） | 建立<br> 影像<br> 預設集<br> （輸出格式） | 預覽<br> 動態<br> 轉譯 | 傳遞<br> 動態<br> 轉譯 | 下載<br> 動態<br> 轉譯 |
+| 格式 | 上傳<br> （輸入格式） | 建立<br>影像<br>預設集<br> （輸出格式） | 預覽<br>動態<br>轉譯 | 傳遞<br>動態<br>轉譯 | 下載<br>動態<br>轉譯 |
 |---|:---:|:---:|:---:|:---:|:---:|
 | [AI](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | − | − | − | − |
 | [INDD](managing-image-presets.md#indesign-indd-file-format) | ✓ | − | − | − | − |
-| [PDF](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) （請參閱下方的「附註」） | ✓ | ✓ | ✓ | ✓ | ✓ |
+| [PDF](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) （請參閱下面的備註） | ✓ | ✓ | ✓ | ✓ | ✓ |
 
 >[!NOTE]
 >
@@ -266,42 +266,42 @@ CRXDE Lite中有提供支援的MIME型別清單，請參閱 `/conf/global/settin
 
 除了上述功能以外，請考量下列事項：
 
-* 若要使用Dynamic Media產生PDF檔案的動態轉譯，請參閱 [Adobe Illustrator (AI)、Postscript (EPS)和PDF檔案格式。](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
+* 若要使用Dynamic Media來產生PDF檔案的動態轉譯，請參閱[Adobe Illustrator (AI)、Postscript (EPS)和PDF檔案格式。](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
 
-* 若要使用Dynamic Media來預覽和產生AI檔案的動態轉譯，請參閱 [Adobe Illustrator (AI)、Postscript (EPS)和PDF檔案格式。](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
+* 若要使用Dynamic Media來預覽和產生AI檔案的動態轉譯，請參閱[Adobe Illustrator (AI)、Postscript (EPS)和PDF檔案格式。](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
 
-* 若要使用Dynamic Media產生INDD檔案的動態轉譯，請參閱 [InDesign(INDD)檔案格式](../assets/managing-image-presets.md#indesign-indd-file-format).
+* 若要使用Dynamic Media來產生INDD檔案的動態轉譯，請參閱[InDesign(INDD)檔案格式](../assets/managing-image-presets.md#indesign-indd-file-format)。
 
 ## Dynamic Media — 支援的點陣影像格式 {#supported-raster-image-formats-dynamic-media}
 
 | 格式 | 上傳（輸入格式） | 建立影像預設集（輸出格式） | 預覽動態轉譯 | 傳遞動態轉譯 | 下載動態轉譯 | 設定支援此格式的型別 |
 |---|:---:|:---:|:---:|:---:|:---:| --- |
 | AVIF | − | − | − | ✓ | − | − |
-| BMP | ✓ | − | − | − | − | [影像](/help/assets/image-sets.md)， [混合媒體](/help/assets/mixed-media-sets.md)、和 [迴轉](/help/assets/spin-sets.md) |
+| BMP | ✓ | − | − | − | − | [影像](/help/assets/image-sets.md)、[混合媒體](/help/assets/mixed-media-sets.md)和[迴轉](/help/assets/spin-sets.md) |
 | [EPS](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ | ✓ | − |
 | GIF | ✓ | ✓ | ✓ | ✓ | ✓ | − |
 | HEIC | − | − | − | ✓ | − | − |
-| JPEG | ✓ | ✓ | ✓ | ✓ | ✓ | [影像](/help/assets/image-sets.md)， [混合媒體](/help/assets/mixed-media-sets.md)、和 [迴轉](/help/assets/spin-sets.md) |
+| JPEG | ✓ | ✓ | ✓ | ✓ | ✓ | [影像](/help/assets/image-sets.md)、[混合媒體](/help/assets/mixed-media-sets.md)和[迴轉](/help/assets/spin-sets.md) |
 | PICT | ✓ | − | − | − | − | − |
-| PNG | ✓ | ✓ | ✓ | ✓ | ✓ | [影像](/help/assets/image-sets.md)， [混合媒體](/help/assets/mixed-media-sets.md)、和 [迴轉](/help/assets/spin-sets.md) |
+| PNG | ✓ | ✓ | ✓ | ✓ | ✓ | [影像](/help/assets/image-sets.md)、[混合媒體](/help/assets/mixed-media-sets.md)和[迴轉](/help/assets/spin-sets.md) |
 | PSD‡ | ✓ | − | − | − | − | − |
-| TIFF | ✓ | ✓ | ✓ | ✓ | ✓ | [影像](/help/assets/image-sets.md)， [混合媒體](/help/assets/mixed-media-sets.md)、和 [迴轉](/help/assets/spin-sets.md) |
+| TIFF | ✓ | ✓ | ✓ | ✓ | ✓ | [影像](/help/assets/image-sets.md)、[混合媒體](/help/assets/mixed-media-sets.md)和[迴轉](/help/assets/spin-sets.md) |
 | WEBP | − | − | − | ✓ | − | − |
 <!-- AVIF, HEIC, and WebP added to table above on March 4, 2024 based on CQDOC-21294 -->
 
 ‡合併的影像會從PSD檔案中擷取。 這是由Adobe Photoshop產生的影像，並包含在PSD檔案中。 視設定而定，合併的影像不一定是實際影像。
 
-* EPS檔案支援僅適用於點陣影像。 例如，預設不支援EPS向量影像的縮圖產生。 若要新增支援， [設定ImageMagick](best-practices-for-imagemagick.md). 若要整合協力廠商工具以啟用其他功能，請參閱 [以命令列為基礎的媒體處理常式](media-handlers.md#command-line-based-media-handler).
+* EPS檔案支援僅適用於點陣影像。 例如，預設不支援EPS向量影像的縮圖產生。 若要新增支援，[設定ImageMagick](best-practices-for-imagemagick.md)。 若要整合協力廠商工具以啟用其他功能，請參閱[命令列式媒體處理常式](media-handlers.md#command-line-based-media-handler)。
 
-* 使用 [!DNL Dynamic Media] 若要預覽和產生EPS檔案的動態轉譯，請參閱 [Adobe Illustrator (AI)、Postscript (EPS)和PDF檔案格式。](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
+* 若要使用[!DNL Dynamic Media]來預覽和產生EPS檔案的動態轉譯，請參閱[Adobe Illustrator (AI)、Postscript (EPS)和PDF檔案格式。](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
 
-* 對於EPS檔案，PostScript Document Structuring Convention (PS-Adobe) 3.0或更新版本支援中繼資料回寫。
+* 對於EPS檔案，PostScript檔案結構慣例(PS-Adobe) 3.0版或更新版本支援中繼資料回寫。
 
 ## Dynamic Media — 不支援的點陣影像格式 {#unsupported-image-formats-dynamic-media}
 
-下列清單說明點陣影像檔案格式的子型別 *非* 在Dynamic Media中支援。
+下列清單說明Dynamic Media *不*&#x200B;支援點陣影像檔案格式的子型別。
 
-另請參閱 [偵測Dynamic Media不支援的檔案格式](https://helpx.adobe.com/experience-manager/kb/detect-unsupported-assets-for-dynamic-media.html) 知識庫文章。
+另請參閱[偵測Dynamic Media](https://helpx.adobe.com/experience-manager/kb/detect-unsupported-assets-for-dynamic-media.html)知識庫文章不支援的檔案格式。
 
 * IDAT區塊大小大於100 MB的PNG檔案。
 * PSB檔案。
@@ -332,16 +332,16 @@ The following table describes the sub-types of raster image formats that are *no
 
 Dynamic Media支援下列3D格式。
 
-另請參閱 [在Dynamic Media中使用3D資產](/help/assets/assets-3d.md).
+另請參閱[在Dynamic Media](/help/assets/assets-3d.md)中使用3D資產。
 
 | 3D副檔名 | 檔案格式 | MIME型別 | 附註 |
 |---|---|---|---|
 | GLB | 二進位GL傳輸 | model/gltf-binary | 將材質和紋理納入為單一資產。 |
 | 物件 | WaveFront 3D物件檔案 | application/x-tgif |  |
 | STL | 立體成型 | application/vnd.ms-pki.stl |  |
-| USDZ | Universal Scene說明Zip封存 | model/vnd.usdz+zip | *僅支援擷取；不提供檢視或互動。* USDZ是專屬的3D格式，可供Safari和iOS裝置原生檢視。 |
+| USDZ | Universal Scene說明Zip封存 | model/vnd.usdz+zip | *僅支援擷取；不提供檢視或互動。* USDZ是專有的3D格式，可由Safari和iOS裝置以原生方式檢視。 |
 
 >[!MORELIKETHIS]
 >
->* [啟用MIME型別型資產和Dynamic Media Classic上傳工作引數支援](/help/sites-administering/scene7.md#enabling-mime-type-based-assets-scene-upload-job-parameter-support).
->* [為上載工作引數支援設定MIME型別型](config-dynamic.md).
+>* [啟用以MIME型別為基礎的Assets和Dynamic Media Classic上傳工作引數支援](/help/sites-administering/scene7.md#enabling-mime-type-based-assets-scene-upload-job-parameter-support)。
+>* [針對上載工作引數支援，設定MIME型別型](config-dynamic.md)。

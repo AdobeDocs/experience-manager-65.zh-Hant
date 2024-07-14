@@ -18,17 +18,17 @@ ht-degree: 0%
 
 使用者管理是AEM Forms JEE元件，可建立、管理和授權AEM Forms使用者存取AEM Forms。 使用者管理使用網域作為取得使用者資訊的目錄。 支援的網域型別如下：
 
-**本機網域**：此型別的網域未連線至協力廠商儲存系統。 而是由本機建立使用者與群組，並存放於「使用者管理」資料庫中。 密碼儲存在本機，驗證使用本機資料庫完成。
+**本機網域**：此型別的網域未連線到協力廠商儲存系統。 而是由本機建立使用者與群組，並存放於「使用者管理」資料庫中。 密碼儲存在本機，驗證使用本機資料庫完成。
 
-**混合式網域**：此型別的網域未連線至協力廠商儲存系統。 而是由本機建立使用者與群組，並存放於「使用者管理」資料庫中。 與本機網域不同，混合網域使用外部驗證提供者，可以是LDAP、Kerberos、SAML或自訂驗證提供者。
+**混合式網域**：此型別的網域未連線到協力廠商儲存系統。 而是由本機建立使用者與群組，並存放於「使用者管理」資料庫中。 與本機網域不同，混合網域使用外部驗證提供者，可以是LDAP、Kerberos、SAML或自訂驗證提供者。
 
-**企業網域**：由位於協力廠商儲存系統（例如LDAP目錄）中的使用者和群組所組成。 「使用者管理」不會寫入協力廠商儲存系統。 相反地，「使用者管理」會將使用者和群組資訊與「使用者管理」資料庫同步。 企業網域也使用外部驗證提供者，可以是LDAP、Kerberos、SAML或自訂驗證提供者。
+**企業網域**：包含位於協力廠商儲存系統（例如LDAP目錄）的使用者和群組。 「使用者管理」不會寫入協力廠商儲存系統。 相反地，「使用者管理」會將使用者和群組資訊與「使用者管理」資料庫同步。 企業網域也使用外部驗證提供者，可以是LDAP、Kerberos、SAML或自訂驗證提供者。
 
 <!-- Fix broken links For more information about how user management works and configured, see AEM Forms JEE administration help. -->
 
 ## 使用者資料和資料存放區 {#user-data-and-data-stores}
 
-使用者管理會將使用者資料儲存在資料庫中，例如My Sql、Oracle、MS® SQL Server和IBM® DB2®。 此外，任何至少在AEM作者的Forms應用程式中登入一次的使用者， `https://'[server]:[port]'lc`，即會在AEM存放庫中建立使用者。 因此，使用者管理會儲存在下列資料存放區中：
+使用者管理會將使用者資料儲存在資料庫中，例如My Sql、Oracle、MS® SQL Server和IBM® DB2®。 此外，任何至少在AEM作者於`https://'[server]:[port]'lc`登入Forms應用程式一次的使用者，都會在AEM存放庫中建立該使用者。 因此，使用者管理會儲存在下列資料存放區中：
 
 * 資料庫
 * AEM存放庫
@@ -87,7 +87,7 @@ ht-degree: 0%
 
 ### AEM存放庫 {#aem-repository}
 
-存取下Forms應用程式至少一次的使用者的使用者管理資料 `https://'[server]:[port]'lc` 也會儲存在AEM存放庫中。
+至少曾存取`https://'[server]:[port]'lc`底下的Forms應用程式的使用者管理資料也會儲存在AEM存放庫中。
 
 ## 存取和刪除使用者資料 {#access-and-delete-user-data}
 
@@ -95,9 +95,9 @@ ht-degree: 0%
 
 ### 資料庫 {#database-1}
 
-若要從使用者管理資料庫匯出或刪除使用者資料，您必須使用資料庫從屬端連線到資料庫，並根據使用者的部分PII找出主參與者ID。 例如，若要使用登入ID擷取使用者的主體ID，請執行下列動作 `select` 資料庫上的命令。
+若要從使用者管理資料庫匯出或刪除使用者資料，您必須使用資料庫從屬端連線到資料庫，並根據使用者的部分PII找出主參與者ID。 例如，若要使用登入ID擷取使用者的主體ID，請在資料庫上執行下列`select`命令。
 
-在 `select` 指令，取代 `<user_login_id>` 其主體ID您要擷取之使用者的登入ID。
+在`select`命令中，將`<user_login_id>`取代為您要擷取其主體ID之使用者的登入ID。
 
 ```sql
 select refprincipalid from EdcPrincipalUserEntity where uidstring = <user_login_id>
@@ -107,19 +107,19 @@ select refprincipalid from EdcPrincipalUserEntity where uidstring = <user_login_
 
 #### 匯出使用者資料 {#export-user-data}
 
-執行下列資料庫命令，以便您從資料庫表格匯出主參與者ID的使用者管理資料。 在 `select` 命令，取代 `<principal_id>` 其主體ID為要匯出其資料之使用者的主體ID。
+執行下列資料庫命令，以便您從資料庫表格匯出主參與者ID的使用者管理資料。 在`select`命令中，將`<principal_id>`取代為您要匯出其資料之使用者的主體ID。
 
 >[!NOTE]
 >
 >下列命令使用My SQL和IBM® DB2®資料庫中的資料庫表格名稱。 在Oracle和MS® SQL資料庫上執行這些命令時，請在命令中取代下清單格名稱：
 >
->* 取代 `EdcPrincipalLocalAccountEntity` 替換為 `EdcPrincipalLocalAccount`
+>* 以`EdcPrincipalLocalAccount`取代`EdcPrincipalLocalAccountEntity`
 >
->* 取代 `EdcPrincipalEmailAliasEntity` 替換為 `EdcPrincipalEmailAliasEn`
+>* 以`EdcPrincipalEmailAliasEn`取代`EdcPrincipalEmailAliasEntity`
 >
->* 取代 `EdcPrincipalMappingEntity` 替換為 `EdcPrincipalMappingEntit`
+>* 以`EdcPrincipalMappingEntit`取代`EdcPrincipalMappingEntity`
 >
->* 取代 `EdcPrincipalGrpCtmntEntity` 替換為 `EdcPrincipalGrpCtmntEnti`
+>* 以`EdcPrincipalGrpCtmntEnti`取代`EdcPrincipalGrpCtmntEntity`
 >
 
 ```sql
@@ -144,9 +144,9 @@ Select * from EdcPrincipalEntity where id='<principal_id>';
 
 執行下列動作，從資料庫表格中刪除主體ID的使用者管理資料。
 
-1. 從AEM存放庫刪除使用者資料（如適用），如所述 [刪除使用者資料](/help/forms/using/user-management-handling-user-data.md#delete-aem).
+1. 從AEM儲存庫刪除使用者資料（如果適用），如[刪除使用者資料](/help/forms/using/user-management-handling-user-data.md#delete-aem)中所述。
 1. 關閉AEM Forms伺服器。
-1. 執行下列資料庫命令，以便從資料庫表格中刪除主體ID的使用者管理資料。 在 `Delete` 命令，取代 `<principal_id>` ，其中包含您要刪除其資料之使用者的主體ID。
+1. 執行下列資料庫命令，以便從資料庫表格中刪除主體ID的使用者管理資料。 在`Delete`命令中，將`<principal_id>`取代為您要刪除其資料之使用者的主體ID。
 
    ```sql
    Delete from EdcPrincipalLocalAccountEntity where refuserprincipalid in (Select id from EdcPrincipalUserEntity where refprincipalid in (select id from EdcPrincipalEntity where id='<principal_id>'));
@@ -174,13 +174,13 @@ Select * from EdcPrincipalEntity where id='<principal_id>';
 
 #### 存取使用者資料 {#access-user-data}
 
-若要檢視在AEM儲存庫中建立的使用者，請登入 `https://'[server]:[port]'/lc/useradmin` 具有AEM管理員認證。 請注意 `server` 和 `port` 在URL中是AEM編寫執行個體的URL。 在這裡，您可以使用使用者名稱來搜尋使用者。 按兩下使用者，即可檢視該使用者的屬性、許可權和群組等資訊。 此 `Path` 使用者的屬性會指定在AEM存放庫中建立之使用者節點的路徑。
+若要檢視在AEM儲存庫中建立的使用者，請使用AEM系統管理員認證登入`https://'[server]:[port]'/lc/useradmin`。 請注意，URL中的`server`和`port`是AEM作者執行個體的專案。 在這裡，您可以使用使用者名稱來搜尋使用者。 按兩下使用者，即可檢視該使用者的屬性、許可權和群組等資訊。 使用者的`Path`屬性會指定在AEM存放庫中建立之使用者節點的路徑。
 
 #### 刪除使用者資料 {#delete-aem}
 
 若要刪除使用者：
 
-1. 前往 `https://'[server]:[port]'/lc/useradmin` 具有AEM管理員認證。
-1. 搜尋使用者並連按兩下使用者名稱以開啟使用者屬性。 複製 `Path` 屬性。
-1. 前往AEMCRXDE Lite，位於 `https://'[server]:[port]'/lc/crx/de/index.jsp` 和導覽或搜尋使用者路徑。
-1. 刪除路徑並按一下 **[!UICONTROL 全部儲存]** 以從AEM存放庫中永久刪除使用者。
+1. 使用AEM系統管理員認證移至`https://'[server]:[port]'/lc/useradmin`。
+1. 搜尋使用者並連按兩下使用者名稱以開啟使用者屬性。 複製`Path`屬性。
+1. 前往`https://'[server]:[port]'/lc/crx/de/index.jsp`的AEMCRXDE Lite，並導覽或搜尋使用者路徑。
+1. 刪除路徑，然後按一下[儲存全部] ****，從AEM存放庫中永久刪除使用者。

@@ -78,7 +78,7 @@ ht-degree: 5%
 
 **說明**
 
-定義 `commentattachment` 節點
+定義`commentattachment`節點的節點型別
 
 **定義**
 
@@ -109,8 +109,8 @@ ht-degree: 5%
 
 以小數位數(DD)定義地理位置的Mixin
 
-* `@prop latitude`  — 使用小數位數編碼為雙精度的latitude
-* `@prop longitude`  — 使用小數位數編碼為雙倍的經度
+* `@prop latitude` — 使用小數位數將緯度編碼為雙精度
+* `@prop longitude` — 使用小數位數編碼為雙精度經度
 
 **定義**
 
@@ -136,7 +136,7 @@ ht-degree: 5%
 
 定義預設CQ頁面。
 
-* `@node jcr:content`  — 頁面的主要內容。
+* `@node jcr:content` — 頁面的主要內容。
 
 **定義**
 
@@ -160,18 +160,18 @@ ht-degree: 5%
 
 定義頁面內容的預設節點，具有WCM使用的最小屬性。
 
-* `@prop jcr:title`  — 頁面標題。
-* `@prop jcr:description`  — 此頁面的說明。
-* `@prop cq:template`  — 用來建立頁面的範本路徑。
-* `@prop cq:allowedTemplates`  — 用來決定允許範本之路徑的規則運算式清單。
-* `@prop pageTitle`  — 標題顯示在 `<title>` 標籤之間。
-* `@prop navTitle`  — 導覽中使用的標題。
-* `@prop hideInNav`  — 指定是否要在導覽中隱藏頁面。
-* `@prop onTime`  — 此頁面生效的時間。
-* `@prop offTime`  — 此頁面失效的時間。
-* `@prop cq:lastModified`  — 上次修改頁面（或其段落）的日期。
-* `@prop cq:lastModifiedBy`  — 最後一個變更頁面（或其段落）的使用者。
-* `@prop jcr:language`  — 頁面內容的語言。
+* `@prop jcr:title` — 頁面的標題。
+* `@prop jcr:description` — 此頁面的描述。
+* `@prop cq:template` — 用來建立頁面的範本路徑。
+* `@prop cq:allowedTemplates` — 用來決定允許範本之路徑的規則運算式清單。
+* `@prop pageTitle` - `<title>`標籤中顯示的標題。
+* `@prop navTitle` — 導覽中使用的標題。
+* `@prop hideInNav` — 指定是否要在導覽中隱藏頁面。
+* `@prop onTime` — 此頁面生效的時間。
+* `@prop offTime` — 此頁面變成無效的時間。
+* `@prop cq:lastModified` — 上次修改頁面（或其段落）的日期。
+* `@prop cq:lastModifiedBy` — 上次變更頁面（或其段落）的使用者。
+* `@prop jcr:language` — 頁面內容的語言。
 
 >[!NOTE]
 >
@@ -197,17 +197,17 @@ ht-degree: 5%
 
 定義CQ範本。
 
-* `@node jcr:content`  — 新頁面的預設內容。
-* `@node icon.png`  — 包含特性圖示的檔案。
-* `@node thumbnail.png`  — 儲存特徵縮圖影像的檔案。
-* `@node workflows`  — 自動指派工作流程設定。 設定遵循下列結構：
+* `@node jcr:content` — 新頁面的預設內容。
+* `@node icon.png` — 儲存特徵圖示的檔案。
+* `@node thumbnail.png` — 儲存特徵縮圖影像的檔案。
+* `@node workflows` — 自動指派工作流程設定。 設定遵循下列結構：
    * `+ workflows`
       * `+ name1`
          * `- cq:path`
             * `- cq:workflowName`
-* `@prop allowedParents`  — 規則運算式模式，用於決定允許做為父範本的範本路徑。
-* `@prop allowedChildren`  — 規則運算式模式，可決定允許做為子範本的範本路徑。
-* `@prop ranking`  — 在建立頁面對話方塊的範本清單中的位置。
+* `@prop allowedParents` — 規則運算式模式，可決定允許做為父範本的範本路徑。
+* `@prop allowedChildren` — 規則運算式模式，可決定允許做為子範本的範本路徑。
+* `@prop ranking` — 在建立頁面對話方塊的範本清單中的位置。
 
 **定義**
 
@@ -229,24 +229,24 @@ ht-degree: 5%
 
 定義CQ元件。
 
-* `@prop jcr:title`  — 元件的標題。
-* `@prop jcr:description`  — 元件的說明。
-* `@node dialog`  — 主要對話方塊。
-* `@prop dialogPath`  — 主要對話方塊路徑（對話方塊的替代方式）。
-* `@node design_dialog`  — 設計對話方塊。
-* `@prop cq:cellName`  — 設計儲存格的名稱。
-* `@prop cq:isContainer`  — 指出是否為容器元件。 強制使用子元件的儲存格名稱，而非路徑名稱。 例如， `parsys` 是容器元件。 如果未定義此值，則會根據是否存在 `cq:childEditConfig`.
-* `@prop cq:noDecoration`  — 如果為True，則無裝飾 `div` 包含此元件時會繪製標籤。
-* `@node cq:editConfig`  — 定義編輯列引數的設定。
-* `@node cq:childEditConfig`  — 子元件繼承的編輯設定。
-* `@node cq:htmlTag`  — 定義新增至「周圍」的其他標籤屬性 `div` 標籤。
-* `@node icon.png` — 包含特性圖示的檔案。
-* `@node thumbnail.png`  — 儲存特徵縮圖影像的檔案。
-* `@prop allowedParents`  — 規則運算式模式，用於決定允許做為父元件的元件路徑。
-* `@prop allowedChildren`  — 規則運算式模式，可決定允許做為子元件的元件路徑。
-* `@node virtual`  — 包含反映用於元件拖放之虛擬元件的子節點。
-* `@prop componentGroup`  — 元件群組的名稱，用於元件拖放。
-* `@node cq:infoProviders`  — 包含子節點，每個子節點都有屬性 `className` 這指的是 `PageInfoProvider`.
+* `@prop jcr:title` — 元件的標題。
+* `@prop jcr:description` — 元件的說明。
+* `@node dialog` — 主要對話方塊。
+* `@prop dialogPath` — 主要對話方塊路徑（對話方塊的替代方式）。
+* `@node design_dialog` — 設計對話方塊。
+* `@prop cq:cellName` — 設計儲存格的名稱。
+* `@prop cq:isContainer` — 指出它是否為容器元件。 強制使用子元件的儲存格名稱，而非路徑名稱。 例如，`parsys`是容器元件。 如果未定義此值，則會根據`cq:childEditConfig`的存在性來進行檢查。
+* `@prop cq:noDecoration` — 如果為true，則加入此元件時不會繪製任何裝飾`div`標籤。
+* `@node cq:editConfig` — 定義編輯列引數的設定。
+* `@node cq:childEditConfig` — 子元件繼承的編輯設定。
+* `@node cq:htmlTag` — 定義當包含元件時新增到「周圍」`div`標籤的其他標籤屬性。
+* `@node icon.png` — 儲存特徵圖示的檔案。
+* `@node thumbnail.png` — 儲存特徵縮圖影像的檔案。
+* `@prop allowedParents` — 規則運算式模式，用來決定允許做為父系元件的元件路徑。
+* `@prop allowedChildren` — 規則運算式模式，用來決定允許做為子元件的元件路徑。
+* `@node virtual` — 包含反映用於元件拖放之虛擬元件的子節點。
+* `@prop componentGroup` — 元件群組的名稱，用於元件拖放。
+* `@node cq:infoProviders` — 包含子節點，每個子節點都有參照`PageInfoProvider`的屬性`className`。
 
 **定義**
 
@@ -287,20 +287,20 @@ ht-degree: 5%
 
 定義「編輯列」的設定。
 
-* `@prop cq:dialogMode`  — 對話方塊模式：
-   * `floating`  — 用於一般浮動對話方塊
-   * `inline`  — 內嵌編輯
-   * `auto`  — 自動偵測（視可用空間而定）
-* `@node cq:inplaceEditing`  — 為此元件就地編輯設定。
+* `@prop cq:dialogMode` — 對話方塊模式：
+   * `floating` — 適用於一般浮動對話方塊
+   * `inline` — 內嵌編輯
+   * `auto` — 自動偵測（視可用空間而定）
+* `@node cq:inplaceEditing` — 為此元件就地編輯設定。
 * `@prop cq:layout` — 編輯列的配置：
-   * `editbar`  — 編輯列
-   * `rollover`  — 滑鼠指向影格
-   * `auto`  — 自動偵測
+   * `editbar` — 編輯列
+   * `rollover` — 滑鼠指向影格
+   * `auto` — 自動偵測
 * `@node cq:formParameters` — 要新增至對話方塊表單的其他引數。
 * `@prop cq:actions` — 動作清單（編輯列按鈕或功能表專案）。
-* `@node cq:actionConfigs`  — 編輯列或功能表專案的Widget設定。
-* `@prop cq:emptyText`  — 沒有視覺內容時所顯示的文字。
-* `@node cq:dropTargets`  — 集合 `{@link cq:DropTargetConfig}` 節點。
+* `@node cq:actionConfigs` — 編輯列或功能表專案的Widget設定。
+* `@prop cq:emptyText` — 沒有視覺內容時顯示的文字。
+* `@node cq:dropTargets` - `{@link cq:DropTargetConfig}`節點的集合。
 
 **定義**
 
@@ -319,9 +319,9 @@ ht-degree: 5%
 
 設定元件的一個放置目標。 此節點的名稱會作為用於拖放的ID。
 
-* `@prop accept`  — 此放置目標接受的MIME型別清單；例如， `["image/*"]`
-* `@prop groups`  — 接受來源的拖放群組清單。
-* `@prop propertyName`  — 用來儲存參考的屬性名稱。
+* `@prop accept` — 此放置目標接受的mime型別清單；例如`["image/*"]`
+* `@prop groups` — 接受來源的拖放群組清單。
+* `@prop propertyName` — 用來儲存參考的屬性名稱。
 
 **定義**
 
@@ -337,15 +337,15 @@ ht-degree: 5%
 
 定義虛擬CQ元件。 目前僅用於新元件拖放精靈。
 
-* `@prop jcr:title`  — 此元件的標題。
-* `@prop jcr:description`  — 此元件的說明。
-* `@node cq:editConfig`  — 編輯定義編輯列引數的設定。
+* `@prop jcr:title` — 此元件的標題。
+* `@prop jcr:description` — 此元件的描述。
+* `@node cq:editConfig` — 編輯定義編輯列引數的設定。
 * `@node cq:childEditConfig` — 編輯子元件繼承的設定。
-* `@node icon.png`  — 包含特性圖示的檔案。
-* `@node thumbnail.png`  — 儲存特徵縮圖影像的檔案。
-* `@prop allowedParents`  — 規則運算式模式，用於決定允許做為父元件的元件路徑。
-* `@prop allowedChildren`  — 規則運算式模式，可決定允許做為子元件的元件路徑。
-* `@prop componentGroup`  — 元件拖放的元件群組名稱。
+* `@node icon.png` — 儲存特徵圖示的檔案。
+* `@node thumbnail.png` — 儲存特徵縮圖影像的檔案。
+* `@prop allowedParents` — 規則運算式模式，用來決定允許做為父系元件的元件路徑。
+* `@prop allowedChildren` — 規則運算式模式，用來決定允許做為子元件的元件路徑。
+* `@prop componentGroup` — 元件拖放的元件群組名稱。
 
 **定義**
 
@@ -370,12 +370,12 @@ ht-degree: 5%
 * `REFRESH_SELF`
 * `REFRESH_PARENT`
 
-* `@prop aftercreate`  — 在建立元件後引發。
-* `@prop afteredit`  — 在編輯（修改）元件後引發。
-* `@prop afterdelete`  — 在刪除元件後引發。
-* `@prop afterinsert`  — 將元件新增至此容器後引發。
-* `@prop afterremove`  — 從此容器移除元件後引發。
-* `@prop aftermove`  — 在此容器中移動元件後引發。
+* `@prop aftercreate` — 在建立元件後引發。
+* `@prop afteredit` — 在編輯（修改）元件之後引發。
+* `@prop afterdelete` — 在刪除元件後引發。
+* `@prop afterinsert` — 將元件新增至此容器後引發。
+* `@prop afterremove` — 將元件從此容器移除後引發。
+* `@prop aftermove` — 在此容器中移動元件後引發。
 
 **定義**
 
@@ -447,12 +447,12 @@ DAM資產。
 
 **說明**
 
-節點型別 `cq:attributes` 用於ContentBus版本標籤。 此節點只有一系列屬性；其中三個為預先定義的「已建立」、「csd」和「時間戳記」。
+節點型別`cq:attributes`適用於ContentBus版本標籤。 此節點只有一系列屬性；其中三個為預先定義的「已建立」、「csd」和「時間戳記」。
 
-* `@prop created (long) mandatory copy`  — 版本資訊的建立時間戳記，通常為上一版本的簽入時間或頁面建立時間。
+* `@prop created (long) mandatory copy` — 建立版本資訊的時間戳記，通常是舊版簽入的時間或建立頁面的時間。
 * `@prop csd (string) mandatory copy` - csd標準屬性，頁面節點的cq：csd屬性副本
-* `@prop timestamp (long) mandatory copy`  — 上次版本修改的時間戳記，通常為簽到時間。
-* `@prop * (string) copy`  — 其他屬性，以父節點建立版本。
+* `@prop timestamp (long) mandatory copy` — 上次版本修改的時間戳記，通常為簽入時間。
+* `@prop * (string) copy` — 其他屬性，以父節點建立版本。
 
 **定義**
 
@@ -466,13 +466,13 @@ DAM資產。
 
 **說明**
 
-節點型別 `cq:contentPage` 包含ContentBus內容頁面的屬性和子節點定義。 只有當此mixin型別新增到型別的節點時 `cq:page`，節點會變成ContentBus內容頁面。
+節點型別`cq:contentPage`包含ContentBus內容頁面的屬性和子節點定義。 只有當此mixin型別新增到型別為`cq:page`的節點時，節點才會變成ContentBus內容頁面。
 
-中的專案 `cq:Cq4ContentPage` 為：
+`cq:Cq4ContentPage`中的專案為：
 
-* `@prop cq:csd`  — 頁面的ContentBusCSD。
-* `@node cq:content`  — 頁面內容。 如果頁面節點處於「現有但不含內容」或「已刪除」狀態，則此子節點不存在。
-* `@node cq:attributes`  — 頁面屬性清單（先前稱為版本標籤）。 cq：contentPage型別必須有此節點。 當頁面為節點建立版本時，就會建立屬性節點的版本。
+* `@prop cq:csd` — 頁面的ContentBusCSD。
+* `@node cq:content` — 頁面的內容。 如果頁面節點處於「現有但不含內容」或「已刪除」狀態，則此子節點不存在。
+* `@node cq:attributes` — 頁面屬性的清單，以前稱為版本標籤。 cq：contentPage型別必須有此節點。 當頁面為節點建立版本時，就會建立屬性節點的版本。
 
 **定義**
 
@@ -488,9 +488,9 @@ DAM資產。
 
 輪詢設定。
 
-* `@prop source (String) mandatory`  — 資料來源URI。 必要項，且不得空白。
-* `@prop target (String)`  — 儲存從資料來源擷取之資料的目標位置。 選用且預設為cq：PollConfig節點。
-* `@prop interval (Long)`  — 輪詢資料來源中新資料或更新資料的間隔（秒）。 選填，預設為30分鐘（1800秒）。
+* `@prop source (String) mandatory` — 資料來源URI。 必要項，且不得空白。
+* `@prop target (String)` — 儲存從資料來源擷取的資料的目標位置。 選用且預設為cq：PollConfig節點。
+* `@prop interval (Long)` — 輪詢資料來源中新資料或更新資料的間隔（秒）。 選填，預設為30分鐘（1800秒）。
 * [建立Adobe Experience Manager的自訂資料匯入工具服務](https://helpx.adobe.com/experience-manager/using/polling.html)
 
 **定義**
@@ -519,8 +519,8 @@ DAM資產。
 
 以小數位數(DD)定義地理位置的Mixin。
 
-* `@prop latitude`  — 使用小數位數編碼為雙精度的Latitude。
-* `@prop longitude`  — 使用小數位數編碼為雙倍的經度。
+* `@prop latitude` — 使用小數位數將緯度編碼為雙精度。
+* `@prop longitude` — 使用小數位數編碼為雙倍的經度。
 
 **定義**
 
@@ -566,10 +566,10 @@ MailerService節點型別。 郵件程式會使用具有此mixin的節點作為�
 
 定義LiveSync Mixin。 如果節點與主要來源（控制）節點和即時副本（控制）節點有關聯，則會標示為LiveSync。
 
-* `@prop cq:master` - LiveRelationship的主要來源（控制）路徑。
-* `@prop cq:isDeep`  — 定義關係是否適用於子系。
-* `@prop cq:syncTrigger`  — 定義同步何時觸發。
-* `@node * LiveSyncAction`  — 要在同步時執行的動作
+* `@prop cq:master` - LiveRelationship的主要來源（控制）的路徑。
+* `@prop cq:isDeep` — 定義關聯性是否適用於子系。
+* `@prop cq:syncTrigger` — 定義何時觸發同步。
+* `@node * LiveSyncAction` — 要在同步時執行的動作
 
 **定義**
 
@@ -583,7 +583,7 @@ MailerService節點型別。 郵件程式會使用具有此mixin的節點作為�
 
 定義LiveSyncCanceled mixin。 取消即時副本（受控）節點的LiveSync行為，該節點可能因其父系之一而與LiveRelationship有關。
 
-* `@prop cq:isCancelledForChildren`  — 定義是否已取消LiveSync；也適用於子系。
+* `@prop cq:isCancelledForChildren` — 定義是否已取消LiveSync；也適用於子系。
 
 **定義**
 
@@ -596,8 +596,8 @@ MailerService節點型別。 郵件程式會使用具有此mixin的節點作為�
 
 定義附加至LiveSync的LiveSyncAction。
 
-* `@prop name`  — 動作名稱
-* `@prop value`  — 動作值
+* `@prop name` — 動作名稱
+* `@prop value` — 動作值
 
 **定義**
 
@@ -653,10 +653,10 @@ Blueprint動作
 
 * `@prop cq:lastPublished` — 上次發佈頁面的日期（不再使用）。
 * `@prop cq:lastPublishedBy` — 上次發佈頁面的使用者（不再使用）。
-* `@prop cq:lastReplicated`  — 上次復寫頁面的日期。
-* `@prop cq:lastReplicatedBy`  — 上次復寫頁面的使用者。
-* `@prop cq:lastReplicationAction`  — 復寫動作：啟動或停用。
-* `@prop cq:lastReplicationStatus`  — 復寫狀態（已不再使用）。
+* `@prop cq:lastReplicated` — 上次復寫頁面的日期。
+* `@prop cq:lastReplicatedBy` — 上次復寫頁面的使用者。
+* `@prop cq:lastReplicationAction` — 復寫動作：啟用或停用。
+* `@prop cq:lastReplicationStatus` — 復寫狀態（已不再使用）。
 
 **定義**
 
@@ -817,7 +817,7 @@ Blueprint動作
 
 **說明**
 
-新增 `cq:userContent` 使用者可修改的子節點。 每個使用者都有自己的 `cq:userContent/<userid>` 子節點，通常具有mixin `cq:UserTaggable`.
+新增可由使用者修改的`cq:userContent`子節點。 每個使用者都有自己的`cq:userContent/<userid>`子節點，這些子節點通常有mixin `cq:UserTaggable`。
 
 **定義**
 
@@ -825,7 +825,7 @@ Blueprint動作
    * `mixin`
    * `+ cq:userContent (nt:unstructured)`
 
-擴充變體，更明確地定義 `cq:userContent` 樹
+延伸變體，更明確地定義`cq:userContent`樹狀結構
 
 * `[cq:AllowsUserContent]`
    * `mixin`

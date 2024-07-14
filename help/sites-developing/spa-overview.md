@@ -38,7 +38,7 @@ AEM 中的 SPA 支援帶入一個薄 JS 層，在頁面編輯器中載入內容�
 如需有關 AEM 中 SPA 的更多詳細資訊，請參閱以下文件：
 
 * [SPA 藍圖](/help/sites-developing/spa-blueprint.md)：說明 SPA 的技術要求
-* [AEM SPA快速入門](/help/sites-developing/spa-getting-started-react.md) 以快速瀏覽簡單的SPA
+* [AEM中的SPA快速入門](/help/sites-developing/spa-getting-started-react.md)，快速瀏覽簡單的SPA
 
 ## 設計 {#design}
 
@@ -46,7 +46,7 @@ SPA 的頁面元件不會透過 JSP 或 HTL 檔案提供其子元件的 HTML 元
 
 ### 頁面模型管理 {#page-model-management}
 
-頁面模型的解析和管理委派給提供的 `PageModel` 庫。SPA必須使用頁面模型程式庫來初始化，並由SPA編輯器編寫。 頁面模型庫透過 `aem-react-editable-components` npm 間接提供給 AEM 頁面元件。頁面模型是 AEM 和 SPA 之間的解譯器，因此必須存在。編寫頁面時，會新增一個程式庫 `cq.authoring.pagemodel.messaging` 必須新增以啟用與頁面編輯器的通訊。
+頁面模型的解析和管理委派給提供的 `PageModel` 庫。SPA必須使用頁面模型程式庫來初始化，並由SPA編輯器編寫。 頁面模型庫透過 `aem-react-editable-components` npm 間接提供給 AEM 頁面元件。頁面模型是 AEM 和 SPA 之間的解譯器，因此必須存在。編寫頁面時，必須新增其他程式庫`cq.authoring.pagemodel.messaging`，才能啟用與頁面編輯器的通訊。
 
 如果 SPA 頁面元件從頁面核心元件繼承，則有兩個方式可以使 `cq.authoring.pagemodel.messaging` 用戶端程式庫類別可用：
 
@@ -158,7 +158,7 @@ SPA 的頁面元件不會透過 JSP 或 HTL 檔案提供其子元件的 HTML 元
 
 ## 要求和限制 {#requirements-limitations}
 
-若要使作者能夠使用頁面編輯器編輯 SPA 的內容，必須實作 SPA 應用程式以與 AEM SPA Editor SDK 互動。另請參閱 [AEM SPA快速入門](/help/sites-developing/spa-getting-started-react.md) 以最少的需求協助您執行工作。
+若要使作者能夠使用頁面編輯器編輯 SPA 的內容，必須實作 SPA 應用程式以與 AEM SPA Editor SDK 互動。請參閱[在AEM中開始使用SPA](/help/sites-developing/spa-getting-started-react.md)，瞭解您需要知道的最少資訊，才能讓您的系統正常運作。
 
 ### 支援的框架 {#supported-frameworks}
 
@@ -171,20 +171,20 @@ SPA Editor SDK 支援以下最低版本：
 
 ### 其他的框架 {#additional-frameworks}
 
-可以實作其他 SPA 框架以與 AEM SPA Editor SDK 搭配運作。請參閱 [SPA Blueprint](/help/sites-developing/spa-blueprint.md) 適用於架構必須滿足的需求，才能建立架構特定層，其中包含可與AEM SPA編輯器搭配使用的模組、元件和服務。
+可以實作其他 SPA 框架以與 AEM SPA Editor SDK 搭配運作。請參閱[SPA Blueprint](/help/sites-developing/spa-blueprint.md)，瞭解架構必須滿足的需求，才能建立包含模組、元件和服務的Framework特定層，以使用AEM SPA編輯器。
 
 ### 使用多個選擇器 {#multiple-selectors}
 
-可以定義其他自訂選擇器，並將其納入為 AEM SPA SDK 開發的 SPA 中。然而，這項支援需要 `model` 選擇器是第一個選擇器，擴充功能是 `.json` 作為 [JSON匯出工具的要求。](json-exporter-components.md#multiple-selectors)
+可以定義其他自訂選擇器，並將其納入為 AEM SPA SDK 開發的 SPA 中。不過，此支援要求`model`選取器是第一個選取器，而擴充功能必須是`.json`，因為JSON匯出工具需要[。](json-exporter-components.md#multiple-selectors)
 
 ### 文字編輯器要求 {#text-editor-requirements}
 
 如果您想使用在 SPA 中建立之文字元件的就地編輯器，則需要額外的設定。
 
-1. 在包含文本 HTML 的容器包裝函式元素上設定一個屬性 (可以是任何屬性)。如果有WKND日誌範例內容，則是 `<div>` 元素和已使用的選取器為 `data-rte-editelement`.
+1. 在包含文本 HTML 的容器包裝函式元素上設定一個屬性 (可以是任何屬性)。如果有WKND日誌範例內容，則是`<div>`元素，且已使用的選取器為`data-rte-editelement`。
 1. 在指向該選擇器的對應 AEM 文字元件的 `cq:InplaceEditingConfig` 上建立設定 `editElementQuery`，例如 `data-rte-editelement`。這讓編輯器知道哪個 HTML 元素包裝 HTML 文字。
 
-如需如何執行此動作的範例，請參閱 [WKND日誌範例內容。](https://github.com/adobe/aem-sample-we-retail-journal/pull/16/files)
+如需如何執行此作業的範例，請參閱[WKND日誌範例內容。](https://github.com/adobe/aem-sample-we-retail-journal/pull/16/files)
 
 如需關於 `editElementQuery` 屬性和 RTF 文字編輯器設定的其他資訊，請參閱[設定 RTF 文字編輯器](/help/sites-administering/rich-text-editor.md)
 

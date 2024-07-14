@@ -29,26 +29,26 @@ ht-degree: 1%
 >
 >`Geometrixx Outdoors Site English (US)`
 
-部署 [必要的電子商務套件](#packages-needed-for-ecommerce-with-hybris) 提供eCommerce架構的完整功能，以及hybris實作（包括示範目錄）隨附的電子商務功能參考實作
+部署[必要的電子商務套件](#packages-needed-for-ecommerce-with-hybris)可提供電子商務架構的完整功能，以及隨附於Hybris實作（包括示範目錄）之電子商務功能的參考實作
 
-這可在英文（美國）分支下取得( `/content/geometrixx-outdoors/en_US`)的Geometrixx Outdoors網站：
+這可在Geometrixx Outdoors網站的英文（美國）分支( `/content/geometrixx-outdoors/en_US`)下取得：
 
-* [產品資訊](#productinformationwithcolorvariants) （在適當時搭配顏色變體）
+* [產品資訊](#productinformationwithcolorvariants) （在適當時包含顏色變化）
 
 * [購物車內容總覽](#shoppingcartcontentoverview)
-* [客戶註冊](#customersignup) 和 [客戶登入](#customersignin)
+* [客戶註冊](#customersignup)和[客戶登入](#customersignin)
 
 * [Hybris管理主控台的存取權](#accesstothehybrismanagementconsole)
 
 ### 技術需求 — hybris Server {#technical-requirements-hybris-server}
 
-已更新eCommerce Integration Framework的hybris擴充功能，以支援Hybris 5 （作為預設值），同時維持與的回溯相容性 [Hybris 4](/help/commerce/cif-classic/developing/sap-commerce-cloud.md#developing-for-hybris).
+已更新eCommerce Integration Framework的hybris延伸模組，以支援Hybris 5 （預設值），同時保持與[Hybris 4](/help/commerce/cif-classic/developing/sap-commerce-cloud.md#developing-for-hybris)的回溯相容性。
 
 >[!NOTE]
 >
 >* 支援18.11版及更新版本。
->* 您需要Java™ 7才能執行 [hybris 5伺服器。](https://www.sap.com/products/crm.html)
->* hybris附加元件， [Telco加速器](https://www.sap.com/products/crm.html)AEM擴充功能不支援。
+>* 您需要Java™ 7才能執行[hybris 5伺服器。](https://www.sap.com/products/crm.html)
+>* AEM擴充功能不支援hybris附加元件[Telco加速器](https://www.sap.com/products/crm.html)。
 >
 
 ### 具有hybris的電子商務所需的套件 {#packages-needed-for-ecommerce-with-hybris}
@@ -69,28 +69,28 @@ ht-degree: 1%
    * `cq-hybris-content-6.3.2`
    * hybris專屬的API實作
    * `cq-geometrixx-hybris-content-6.3.2`
-   * 說明使用hybris ( `geometrixx-outdoors/en_US`)
+   * 說明使用hybris ( `geometrixx-outdoors/en_US`)的參考實作
 
 ### 使用Hybris安裝電子商務 {#installation-of-ecommerce-with-hybris}
 
 若要安裝完整的組態(使用示範目錄、Geometrixx Outdoors)，基本步驟如下：
 
-1. [安裝AEM](/help/sites-deploying/deploy.md).
+1. [安裝AEM](/help/sites-deploying/deploy.md)。
 1. 安裝全Geometrixx套件
 
    1. ` [cq-geometrixx-all-pkg](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq60/product/cq-geometrixx-all-pkg)`
 
-1. 使用安裝示範內容套件 [封裝管理員](/help/sites-administering/package-manager.md)：
+1. 使用[封裝管理員](/help/sites-administering/package-manager.md)安裝示範內容封裝：
 
    1. ` [cq-hybris-content-6.3.2](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/cq-hybris-content)`
    1. ` [cq-geometrixx-hybris-content-6.3.2](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/cq-geometrixx-hybris-content)`
 
-1. [下載並建置您的hybris伺服器](#download-and-build-your-hybris-server).
+1. [下載並建置您的hybris伺服器](#download-and-build-your-hybris-server)。
 1. 在電子商務引擎中建構您的目錄：
 
-   1. [設定Geometrixx戶外商店](#setup-the-geometrixx-outdoors-store).
+   1. [設定Geometrixx戶外商店](#setup-the-geometrixx-outdoors-store)。
 
-1. [作者](/help/sites-authoring/qg-page-authoring.md) 您在AEM中所需的任何補充頁面。
+1. [作者](/help/sites-authoring/qg-page-authoring.md)您在AEM中需要的任何補充頁面。
 
 >[!CAUTION]
 >
@@ -98,7 +98,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->對於開發人員而言， [API檔案](/help/commerce/cif-classic/developing/ecommerce.md#api-documentation) 也可下載。
+>開發人員也可下載[API檔案](/help/commerce/cif-classic/developing/ecommerce.md#api-documentation)。
 
 ### 下載並建置您的hybris伺服器 {#download-and-build-your-hybris-server}
 
@@ -110,15 +110,15 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->若要完成此作業，您需要 [Groovy](https://groovy-lang.org/) 已安裝在您的系統上。
+>若要完成此作業，您的系統上必須安裝[Groovy](https://groovy-lang.org/)。
 
-1. 下載 **hybris Commerce Suite** 從hybris下載網站發佈。
+1. 從Hybris下載網站下載&#x200B;**Hybris Commerce Suite**&#x200B;發佈。
 
    >[!CAUTION]
    >
    >您需要帳戶（來自hybris）才能存取此專案。
 
-1. 將發佈檔案解壓縮至所需的位置(稱為 &lt;hybris-root-directory>)。
+1. 將散發檔案解壓縮至所需的位置（稱為&lt;hybris-root-directory>）。
 1. 從命令列，執行下列動作：
 
    ```shell
@@ -134,7 +134,7 @@ ht-degree: 1%
    >
    >`ant clean all`
    >
-   >按下 `Return` 必要時。
+   >必要時，按`Return`。
 
 1. 將下列檔案下載到解壓縮的hybris散髮根資料夾，
 
@@ -170,13 +170,13 @@ ht-degree: 1%
    >
    >視您的系統而定，其中數個步驟可能需要幾分鐘才能完成。
 
-1. 在您的瀏覽器中，導覽至 **hybris管理主控台** 於：
+1. 在您的瀏覽器中，瀏覽至&#x200B;**hybris管理主控台**，網址為：
 
    [http://localhost:9002](http://localhost:9002)
 
-1. 按一下 **初始化** 然後確認初始化動作（因為它會刪除現有資料）。
+1. 按一下&#x200B;**初始化**，然後確認初始化動作（因為它會刪除現有的資料）。
 
-   進度會顯示在主控台上，包含 `FINISHED` 指示完成。
+   進度會顯示在主控台上，`FINISHED`表示完成。
 
    >[!NOTE]
    >
@@ -193,7 +193,7 @@ ht-degree: 1%
    sh hybrisserver.sh
    ```
 
-1. 在您的瀏覽器中，導覽至 **hybris管理主控台** 於：
+1. 在您的瀏覽器中，瀏覽至&#x200B;**hybris管理主控台**，網址為：
 
    [https://localhost:9002/backoffice](https://localhost:9002/backoffice)
 
@@ -201,27 +201,27 @@ ht-degree: 1%
    * 使用者名稱：admin
    * 密碼： nimda
 
-1. 在側邊欄導覽中，展開 **系統** 和 **工具**. 然後選取 **匯入** 以開啟 **精靈：CSV匯入** 視窗。
-1. 在 **設定** 標籤， **上傳** 下列專案 **匯入檔案**：
+1. 從側欄導覽中，展開&#x200B;**系統**&#x200B;和&#x200B;**工具**。 然後選取&#x200B;**匯入**&#x200B;以開啟&#x200B;**精靈：CSV匯入**&#x200B;視窗。
+1. 在&#x200B;**組態**&#x200B;索引標籤中，**上傳**&#x200B;下列&#x200B;**匯入檔案**：
 
 [取得檔案](/help/sites-deploying/assets/geometrixx-outdoors-export.csv)
 
-1. 設定 **地區設定** 至：
+1. 將&#x200B;**地區設定**&#x200B;設為：
 
    `en_US - English (United States)`
 
-1. 開啟 **資源** 標籤。
-1. **上傳** 下列專案 **Media-Zip**：
+1. 開啟&#x200B;**資源**&#x200B;標籤。
+1. **上傳**&#x200B;下列&#x200B;**Media-Zip**：
 
 [取得檔案](/help/sites-deploying/assets/geometrixx-outdoors-images.zip)
 
-1. 按一下 **開始** 以匯入指定的檔案。 此 **結果** 索引標籤會顯示任何記錄專案。
+1. 按一下&#x200B;**開始**&#x200B;匯入指定的檔案。 **結果**&#x200B;索引標籤會顯示任何記錄專案。
 
-1. 按一下 **完成** 以關閉匯入視窗。
+1. 按一下&#x200B;**完成**&#x200B;以關閉匯入視窗。
 
-1. 在側邊欄中，選取 **系統**，然後 **工具**，然後 **匯入**.
+1. 從側邊欄選取&#x200B;**系統**、**工具**、**匯入**。
 
-1. **上傳** 下列專案 **匯入檔案**：
+1. **上傳**&#x200B;下列&#x200B;**匯入檔案**：
 
 [取得檔案](/help/sites-deploying/assets/base-store.csv)
 
@@ -229,13 +229,13 @@ ht-degree: 1%
 
 [取得檔案](/help/sites-deploying/assets/base-store-5_7.csv)
 
-1. 設定 **地區設定** 至：
+1. 將&#x200B;**地區設定**&#x200B;設為：
 
    `en_US - English (United States)`
 
-1. 按一下 **開始** 以匯入指定的檔案。 此 **結果** 索引標籤會顯示任何記錄專案。
+1. 按一下&#x200B;**開始**&#x200B;匯入指定的檔案。 **結果**&#x200B;索引標籤會顯示任何記錄專案。
 
-1. 按一下 **完成** 以關閉匯入視窗。
+1. 按一下&#x200B;**完成**&#x200B;以關閉匯入視窗。
 
 1. 您現在可以使用產品駕駛艙來檢視匯入的目錄和產品：
 

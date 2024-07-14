@@ -24,13 +24,13 @@ David&#39;s Model是David Nuescheler多年前所寫的，但今天仍然適用�
 
 * 先取得資料，再建構。 也許吧。
 * 推動內容階層，不要讓它發生。
-* 工作區用於 `clone()`， `merge()`、和 `update()`.
+* 工作區適用於`clone()`、`merge()`和`update()`。
 * 注意同名的同層級。
 * 參照會被視為有害。
 * 檔案是檔案。
 * ID是邪惡的。
 
-David的模型可在Jackrabbit wiki上找到，網址為 [https://wiki.apache.org/jackrabbit/DavidsModel](https://wiki.apache.org/jackrabbit/DavidsModel).
+您可以在Jackrabbit wiki的[https://wiki.apache.org/jackrabbit/DavidsModel](https://wiki.apache.org/jackrabbit/DavidsModel)找到David的模型。
 
 ### 一切都是內容 {#everything-is-content}
 

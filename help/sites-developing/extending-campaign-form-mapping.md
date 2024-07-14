@@ -29,14 +29,14 @@ ht-degree: 3%
 * Adobe Experience Manager
 * Adobe Campaign Classic
 
-另請參閱 [將AEM與Adobe Campaign Classic整合](/help/sites-administering/campaignonpremise.md) 以取得詳細資訊。
+如需詳細資訊，請參閱[整合AEM與Adobe Campaign Classic](/help/sites-administering/campaignonpremise.md)。
 
 ## 建立自訂表單對應 {#creating-custom-form-mappings-2}
 
 若要建立自訂表單對應，您必須依照以下各節中詳細說明的這些高階步驟操作：
 
 1. 建立自訂表格。
-1. 擴充 **種子** 表格。
+1. 擴充&#x200B;**seed**&#x200B;資料表。
 1. 建立自訂對應。
 1. 根據自訂對應建立傳遞。
 1. 在AEM中建立表單，此表單將使用建立的傳遞。
@@ -55,15 +55,15 @@ ht-degree: 3%
 </element>
 ```
 
-建立事件表格之後，請執行 **更新資料庫結構精靈** 以建立表格。
+建立事件資料表之後，請執行&#x200B;**更新資料庫結構精靈**&#x200B;以建立資料表。
 
 ### 擴充種子表格 {#extending-the-seed-table}
 
-在Adobe Campaign中，選取 **新增** 若要建立 **種子地址(nms)** 表格。
+在Adobe Campaign中，選取「**新增**」以建立&#x200B;**種子地址(nms)**&#x200B;表格的延伸模組。
 
 ![chlimage_1-194](assets/chlimage_1-194.png)
 
-現在，使用 **事件** 表格以擴充 **種子** 表格：
+現在，請使用&#x200B;**event**&#x200B;資料表中的欄位來擴充&#x200B;**seed**&#x200B;資料表：
 
 ```xml
 <element label="Event" name="custom_cus_event">
@@ -74,31 +74,31 @@ ht-degree: 3%
  </element>
 ```
 
-之後，執行 **更新資料庫精靈** 以套用變更。
+之後，執行&#x200B;**更新資料庫精靈**&#x200B;以套用變更。
 
 ### 建立自訂目標對應 {#creating-custom-target-mapping}
 
-在 **管理/行銷活動管理** t，前往 **目標對應** 並新增一個T **目標對應。**
+在&#x200B;**管理/行銷活動管理** t中，移至&#x200B;**目標對應**&#x200B;並新增新的T **目標對應。**
 
 >[!NOTE]
 >
->請務必使用有意義的名稱 **內部名稱**.
+>請確定您對&#x200B;**內部名稱**&#x200B;使用有意義的名稱。
 
 ![chlimage_1-195](assets/chlimage_1-195.png)
 
 ### 建立自訂傳遞範本 {#creating-a-custom-delivery-template}
 
-在此步驟中，您會新增使用建立的傳遞範本 **目標對應**.
+在此步驟中，您正在新增使用已建立&#x200B;**目標對應**&#x200B;的傳遞範本。
 
-在 **資源/範本**，導覽至傳遞範本並複製現有的AEM傳遞。 當您按一下 **至**，選取建立事件 **目標對應**.
+在&#x200B;**資源/範本**&#x200B;中，導覽至傳遞範本並複製現有的AEM傳遞。 當您按一下&#x200B;**到**，選取建立事件&#x200B;**目標對應**。
 
 ![chlimage_1-196](assets/chlimage_1-196.png)
 
 ### 在AEM中建立表單 {#building-the-form-in-aem}
 
-在AEMCloud Service中，確定您已在 **頁面屬性**.
+在AEM中，確定您已在&#x200B;**頁面屬性**&#x200B;中設定Cloud Service。
 
-然後，在 **Adobe Campaign** 索引標籤中，選取在中建立的傳遞 [建立自訂傳遞範本](#creating-a-custom-delivery-template).
+然後，在&#x200B;**Adobe Campaign**&#x200B;索引標籤中，選取在[建立自訂傳遞範本](#creating-a-custom-delivery-template)中建立的傳遞。
 
 ![chlimage_1-197](assets/chlimage_1-197.png)
 
@@ -106,7 +106,7 @@ ht-degree: 3%
 
 設定欄位後，您需要手動變更對應。
 
-在CRXDE-LITE中，移至 **jcr：content** （頁面的）節點並變更 **acMapping** 的內部名稱的value **目標對應**.
+在CRXDE-LITE中，移至&#x200B;**jcr：content** （頁面的）節點，並將&#x200B;**acMapping**&#x200B;值變更為&#x200B;**目標對應**&#x200B;的內部名稱。
 
 ![chlimage_1-198](assets/chlimage_1-198.png)
 
@@ -122,8 +122,8 @@ ht-degree: 3%
 
 ## 疑難排解 {#troubleshooting}
 
-**「元素&#39;@eventdate&#39;的值&#39;02/02/2015&#39;的型別無效(型別為&#39;Event ([adb：event])&#39;)」**
+**「元素&#39;@eventdate&#39;的值&#39;02/02/2015&#39;的型別無效(型別為&#39;Event ([adb：event])&#39;的檔案)」**
 
-提交表單時，此錯誤會記錄在 **error.log** 在AEM中。
+提交表單時，此錯誤記錄在AEM的&#x200B;**error.log**&#x200B;中。
 
-這是由於日期欄位的格式無效。 因應措施是提供 **yyyy-mm-dd** 做為值。
+這是由於日期欄位的格式無效。 因應措施是提供&#x200B;**yyyy-mm-dd**&#x200B;作為值。

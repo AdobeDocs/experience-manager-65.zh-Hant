@@ -18,9 +18,9 @@ ht-degree: 0%
 
 在JEE程式管理、基本Java™程式設計和建立自訂元件方面使用AEM Forms的體驗。
 
-**其他必要其他產品**
+**其他必要的其他產品**
 
-Java™編輯器，例如 [Eclipse](https://www.eclipse.org/) 或 [Netbeans IDE](https://netbeans.apache.org/)
+Java™編輯器，例如[Eclipse](https://www.eclipse.org/)或[Netbeans IDE](https://netbeans.apache.org/)
 
 ## 使用者層級 {#user-level}
 
@@ -196,7 +196,7 @@ component.xml檔案顯示於此處：
 1. 透過Workbench在JEE執行階段將元件（.JAR檔案）部署至AEM Forms。
 1. 從Workbench啟動服務（請參閱下圖）。
 
-![流程設計](assets/process-design.jpg)
+![程式設計](assets/process-design.jpg)
 
 ## 在工作流程中使用壓縮服務 {#using-zip-service-in-workflows}
 
@@ -210,7 +210,7 @@ component.xml檔案顯示於此處：
 
 下列工作流程協調流程說明如何解壓縮指定的ZIP檔案、將其壓縮回另一個ZIP檔案並傳回輸出（請參閱下圖）。
 
-![解壓縮壓縮壓縮工作流程](assets/unzip-zip-process.jpg)
+![解壓縮Zip工作流程](assets/unzip-zip-process.jpg)
 
 ## 部分業務使用案例 {#business-use-cases}
 

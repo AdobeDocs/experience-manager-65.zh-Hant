@@ -29,9 +29,9 @@ ht-degree: 0%
 
 ## 修改HBS指令碼 {#modify-the-hbs-scripts}
 
-使用 [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md)：
+使用[CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md)：
 
-* 開啟 [/apps/custom/components/comments/comment/**comment.hbs**](https://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comment/comment.hbs)
+* 開啟[/apps/custom/components/comments/comment/**comment.hbs**](https://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comment/comment.hbs)
 
    * 註解標籤，其中包含註解貼文的人物化身（~第21行）：
 
@@ -41,7 +41,7 @@ ht-degree: 0%
         -->
      ```
 
-* 開啟 [/apps/custom/components/comments/**comments.hbs**](https://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comments.hbs)
+* 開啟[/apps/custom/components/comments/**comments.hbs**](https://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comments.hbs)
 
    * 將包含下一個註解專案（~第44行）頭像的標籤註釋掉：
 
@@ -51,7 +51,7 @@ ht-degree: 0%
         -->
      ```
 
-* 選取 **全部儲存**
+* 選取&#x200B;**全部儲存**
 
 ### 復寫自訂應用程式 {#replicate-custom-app}
 
@@ -61,17 +61,17 @@ ht-degree: 0%
 
 * 從主功能表
 
-   * 選取 **[!UICONTROL 工具]** > **[!UICONTROL 作業]** > **[!UICONTROL 復寫]**.
-   * 選取 **[!UICONTROL 啟動樹狀結構]**.
-   * 設定 `Start Path` 至 `/apps/custom`.
-   * 取消選取 **[!UICONTROL 僅限已修改的專案]**.
-   * 選取 **[!UICONTROL 啟動]** 按鈕。
+   * 選取&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 作業]** > **[!UICONTROL 復寫]**。
+   * 選取&#x200B;**[!UICONTROL 啟動樹狀結構]**。
+   * 將`Start Path`設為`/apps/custom`。
+   * 取消選取&#x200B;**[!UICONTROL 僅修改]**。
+   * 選取&#x200B;**[!UICONTROL 啟動]**&#x200B;按鈕。
 
 ### 在發佈的範例頁面上檢視修改的註解 {#view-modified-comment-on-published-sample-page}
 
-[繼續體驗](/help/communities/extend-sample-page.md#publish-sample-page) 在仍以相同使用者身分登入的發佈執行個體上，現在可以重新整理發布環境中的頁面以檢視移除頭像的修改：
+[在仍以相同使用者身分登入的發佈執行個體上繼續使用體驗](/help/communities/extend-sample-page.md#publish-sample-page)，現在可以在發佈環境中重新整理頁面，以檢視移除頭像的修改：
 
-![view-modified-content](assets/view-modified-content.png)
+![檢視 — 修改 — 內容](assets/view-modified-content.png)
 
 ### 範例註解擴充功能套件 {#sample-comment-extension-package}
 

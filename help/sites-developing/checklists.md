@@ -35,4 +35,4 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->您也可以看到 [管理專案 — 最佳實務檢查清單](/help/managing/best-practices.md) 以取得與整個專案相關的進一步核取清單。
+>您也可以參閱[管理專案 — 最佳實務檢查清單](/help/managing/best-practices.md)，以取得與整個專案相關的進一步檢查清單。

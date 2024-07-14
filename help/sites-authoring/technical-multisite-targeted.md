@@ -20,7 +20,7 @@ ht-degree: 11%
 
 下圖顯示如何架構目標內容的多網站支援。
 
-區域會顯示在下方 **/content/campaigns/&lt;brand>** 依預設，每個品牌都有自動建立的主版區域。 每個區域都包含自身的一組活動、體驗和選件。
+**/content/campaigns/&lt;brand>**&#x200B;下方會顯示區域，依預設，每個品牌都有自動建立的主區域。 每個區域都包含自身的一組活動、體驗和選件。
 
 ![chlimage_1-268](assets/chlimage_1-268.png)
 

@@ -19,12 +19,12 @@ ht-degree: 0%
 
 另存為草稿選項可儲存任務或表單的快照以及在相關表單中填寫的資料。 您也可以從範本建立草稿。 草稿會儲存在行動裝置內，並與Adobe Experience Manager Forms伺服器同步，以供稍後擷取。
 
-您可以 [更新表單](/help/forms/using/working-with-form.md)， [加上註釋](/help/forms/using/add-attachments.md) 包含像片與手寫筆記。 當您繼續更新表單時，建議將其儲存為草稿。 若您決定稍後再提交已填寫的表單，則將其儲存為草稿會很有幫助。
+您可以[更新表單](/help/forms/using/working-with-form.md)，[加上註釋](/help/forms/using/add-attachments.md)，並附上像片與手寫筆記。 當您繼續更新表單時，建議將其儲存為草稿。 若您決定稍後再提交已填寫的表單，則將其儲存為草稿會很有幫助。
 
-若要為儲存在表單入口網站上的表單啟用另存為草稿功能，請參閱 [將HTML5表單儲存為草稿](/help/forms/using/saving-html5-form-draft.md).
-若要設定最適化表單的提交方式，請參閱 [草稿和提交元件](/help/forms/using/draft-submission-component.md). (對與AEM Forms JEE伺服器同步的表單無效。)
+若要針對儲存在表單入口網站上的表單啟用儲存為草稿功能，請參閱[將HTML5表單儲存為草稿](/help/forms/using/saving-html5-form-draft.md)。
+若要設定最適化表單的提交，請參閱[草稿和提交元件](/help/forms/using/draft-submission-component.md)。 (對與AEM Forms JEE伺服器同步的表單無效。)
 
-若要建立草稿，請開啟表單並選取 **另存為草稿** ![另存為草稿](assets/save-as-draft.png). 提供草稿的名稱並選取 **儲存**. 草稿會儲存在「草稿」資料夾中，並與伺服器同步。 如果應用程式離線，則會將其儲存在Outbox資料夾中。
+若要建立草稿，請開啟表單並選取&#x200B;**另存為草稿** ![另存為草稿](assets/save-as-draft.png)。 提供草稿的名稱，並選取&#x200B;**儲存**。 草稿會儲存在「草稿」資料夾中，並與伺服器同步。 如果應用程式離線，則會將其儲存在Outbox資料夾中。
 
 如果您在之後更新對應的表單，變更會立即反映出來。 將AEM Forms應用程式與AEM Forms伺服器同步時，草稿會上傳至AEM Forms伺服器。 此外，草稿會從「寄件匣」移至「工作」或「草稿」資料夾。 其旁邊會顯示編輯圖示。
 
@@ -40,7 +40,7 @@ ht-degree: 0%
 
 執行以下步驟來刪除草稿：
 
-1. 在AEM Forms應用程式中，導覽至 **Forms。**
-1. 選取 **草稿** 從「搜尋」旁的下拉式清單。
-1. 具有編輯圖示的表單 ![edit-draft-app](assets/edit-draft-app.png) 表示草稿。 選取拔模旁邊的水準省略符號。
-1. 在您選取水準省略符號時顯示的選項中，選取 **刪除草稿**.
+1. 在AEM Forms應用程式中，導覽至&#x200B;**Forms。**
+1. 從[搜尋]旁的下拉式清單中選取&#x200B;**草稿**。
+1. 具有編輯圖示![edit-draft-app](assets/edit-draft-app.png)的表單表示草稿。 選取拔模旁邊的水準省略符號。
+1. 在您選取水準省略符號時出現的選項中，選取&#x200B;**刪除草稿**。

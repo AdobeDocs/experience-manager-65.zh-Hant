@@ -19,13 +19,13 @@ ht-degree: 1%
 
 安裝後，您可以設定執行個體：
 
-1. [設定Geometrixx Outdoors的多面搜尋](#configure-the-facetted-search-for-geometrixx-outdoors).
-1. [設定目錄版本](#configure-the-catalog-version).
-1. [設定匯入結構](#configure-the-import-structure).
-1. [設定產品屬性以載入](#configure-the-product-attributes-to-load).
-1. [匯入產品資料](#importing-the-product-data).
-1. [設定目錄匯入工具](#configure-the-catalog-importer).
-1. 使用 [匯入工具匯入目錄](#catalog-import) 到AEM中的特定位置。
+1. [設定Geometrixx Outdoors的多面搜尋](#configure-the-facetted-search-for-geometrixx-outdoors)。
+1. [設定目錄版本](#configure-the-catalog-version)。
+1. [設定匯入結構](#configure-the-import-structure)。
+1. [設定要載入的產品屬性](#configure-the-product-attributes-to-load)。
+1. [正在匯入產品資料](#importing-the-product-data)。
+1. [設定目錄匯入工具](#configure-the-catalog-importer)。
+1. 使用[匯入工具將目錄](#catalog-import)匯入至AEM中的特定位置。
 
 ## 設定Geometrixx Outdoors的多面搜尋 {#configure-the-facetted-search-for-geometrixx-outdoors}
 
@@ -33,16 +33,16 @@ ht-degree: 1%
 >
 >hybris 5.3.0.1和更新版本不需要此設定。
 
-1. 在您的瀏覽器中，導覽至 **hybris管理主控台** 於：
+1. 在您的瀏覽器中，瀏覽至&#x200B;**hybris管理主控台**，網址為：
 
    [http://localhost:9001/hmc/hybris](http://localhost:9001/hmc/hybris)
 
-1. 在側邊欄中，選取 **系統**，然後 **Facet搜尋**，然後 **Facet搜尋設定**.
-1. **開啟編輯器** 針對 **clothescatalog的Solr設定範例**.
+1. 從側邊欄選取&#x200B;**系統**、**Facet搜尋**、**Facet搜尋設定**。
+1. **開啟Clothescatalog**&#x200B;之&#x200B;**範例Solr組態的編輯器**。
 
-1. 在 **目錄版本** 使用 **新增目錄版本** 以新增 `outdoors-Staged` 和 `outdoors-Online` 至清單。
-1. **儲存** 設定。
-1. 開啟 **SOLR專案型別** 以新增 **SOLR排序** 至 `ClothesVariantProduct`：
+1. 在&#x200B;**目錄版本**&#x200B;下，使用&#x200B;**新增目錄版本**&#x200B;將`outdoors-Staged`和`outdoors-Online`新增至清單。
+1. **儲存**&#x200B;設定。
+1. 開啟&#x200B;**SOLR專案型別**&#x200B;以新增&#x200B;**SOLR排序**&#x200B;至`ClothesVariantProduct`：
 
    * 關聯性（「關聯性」，分數）
    * name-asc (&quot;Name (ascending)&quot;， name)
@@ -52,67 +52,67 @@ ht-degree: 1%
 
    >[!NOTE]
    >
-   >使用內容功能表（通常是按一下滑鼠右鍵）來選取 `Create Solr sort`.
+   >使用內容功能表（通常是按一下滑鼠右鍵）來選取`Create Solr sort`。
    >
-   >若為Hybris 5.0.0，請開啟 `Indexed Types` 標籤，按兩下 `ClothesVariantProduct`，然後標籤 `SOLR Sort`.
+   >若為Hybris 5.0.0，請開啟`Indexed Types`標籤，連按兩下`ClothesVariantProduct`，然後按標籤`SOLR Sort`。
 
    ![chlimage_1-36](/help/sites-administering/assets/chlimage_1-36a.png)
 
-1. 在 **索引型別** 標籤，設定 **撰寫型別** 至：
+1. 在&#x200B;**索引型別**&#x200B;索引標籤中，將&#x200B;**構成型別**&#x200B;設定為：
 
    `Product - Product`
 
-1. 在 **索引型別** 標籤，調整 **索引子查詢** 的 `full`：
+1. 在&#x200B;**索引型別**&#x200B;索引標籤中，調整`full`的&#x200B;**索引子查詢**：
 
    ```shell
    SELECT {pk} FROM {Product} WHERE {pk} NOT IN ({{SELECT {baseProductpk} FROM {variantproduct}}})
    ```
 
-1. 在 **索引型別** 標籤，調整 **索引子查詢** 的 `incremental`：
+1. 在&#x200B;**索引型別**&#x200B;索引標籤中，調整`incremental`的&#x200B;**索引子查詢**：
 
    ```shell
    SELECT {pk} FROM {Product} WHERE {pk} NOT IN ({{SELECT {baseProductpk} FROM {variantproduct}}}) AND {modifiedtime} <= ?lastIndexTime
    ```
 
-1. 在 **索引型別** 標籤，調整 `category` Facet. 連按兩下類別清單中的最後一個專案，以開啟 **索引屬性** 標籤：
+1. 在&#x200B;**索引型別**&#x200B;索引標籤中，調整`category`面向。 連按兩下類別清單中的最後一個專案，以開啟&#x200B;**索引屬性**&#x200B;標籤：
 
    >[!NOTE]
    >
-   >對於hybris 5.2，請確定 `Facet` 根據下列熒幕擷圖，選取「屬性」表格中的attribute：
+   >對於hybris 5.2，請確定已根據下列熒幕擷圖選取Properties表格中的`Facet`屬性：
 
    ![chlimage_1-37](/help/sites-administering/assets/chlimage_1-37a.png) ![chlimage_1-38](/help/sites-administering/assets/chlimage_1-38a.png)
 
-1. 開啟 **Facet設定** 標籤並調整欄位值：
+1. 開啟&#x200B;**Facet設定**&#x200B;索引標籤並調整欄位值：
 
    ![chlimage_1-39](/help/sites-administering/assets/chlimage_1-39a.png)
 
-1. **儲存** 變更。
-1. 再次從 **SOLR專案型別**，調整 `price` facet根據下列熒幕擷取畫面。 如同 `category`，按兩下 `price` 以開啟 **索引屬性** 標籤：
+1. **儲存**&#x200B;變更。
+1. 再次從&#x200B;**SOLR專案型別**，根據下列熒幕擷取畫面調整`price`面向。 和`category`一樣，按兩下`price`以開啟&#x200B;**索引屬性**&#x200B;標籤：
 
    ![chlimage_1-40](/help/sites-administering/assets/chlimage_1-40a.png)
 
-1. 開啟 **Facet設定** 標籤並調整欄位值：
+1. 開啟&#x200B;**Facet設定**&#x200B;索引標籤並調整欄位值：
 
    ![chlimage_1-41](/help/sites-administering/assets/chlimage_1-41a.png)
 
-1. **儲存** 變更。
-1. 開啟 **系統**， **Facet搜尋**，然後 **索引器操作精靈**. 啟動cronjob：
+1. **儲存**&#x200B;變更。
+1. 開啟&#x200B;**系統**、**Facet搜尋**，然後開啟&#x200B;**索引器操作精靈**。 啟動cronjob：
 
-   * **索引器作業**： `full`
-   * **Solr設定**： `Sample Solr Config for Clothes`
+   * **索引子作業**： `full`
+   * **Solr組態**： `Sample Solr Config for Clothes`
 
 ## 設定目錄版本 {#configure-the-catalog-version}
 
-此 **目錄版本** ( `hybris.catalog.version`)可針對OSGi服務設定匯入的：
+匯入的&#x200B;**目錄版本** ( `hybris.catalog.version`)可以設定為OSGi服務：
 
 **Day CQ Commerce Hybris設定**
 ( `com.adobe.cq.commerce.hybris.common.DefaultHybrisConfigurationService`)
 
-**目錄版本** 設為 `Online` 或 `Staged` （預設）。
+**目錄版本**&#x200B;已設定為`Online`或`Staged` （預設值）。
 
 >[!NOTE]
 >
->使用AEM時，有數種方法可管理此類服務的組態設定；請參閱 [設定OSGi](/help/sites-deploying/configuring-osgi.md) 以取得完整詳細資訊。 如需可設定引數及其預設值的完整清單，另請參閱主控台。
+>使用AEM時，有數種方法可管理此類服務的組態設定；請參閱[設定OSGi](/help/sites-deploying/configuring-osgi.md)以取得完整詳細資訊。 如需可設定引數及其預設值的完整清單，另請參閱主控台。
 
 記錄輸出提供已建立頁面和元件的意見回饋，並報告潛在錯誤。
 
@@ -153,18 +153,18 @@ ht-degree: 1%
               + ...
 ```
 
-這類結構是由OSGi服務所建立 `DefaultImportHandler` 實作 `ImportHandler` 介面。 實際匯入工具會呼叫匯入處理常式，以建立產品、產品變化、類別、資產等。
+這種結構是由實作`ImportHandler`介面的OSGi服務`DefaultImportHandler`所建立。 實際匯入工具會呼叫匯入處理常式，以建立產品、產品變化、類別、資產等。
 
 >[!NOTE]
 >
->您可以 [實作您自己的匯入處理常式，以自訂此程式](#configure-the-import-structure).
+>您可以[實作自己的匯入處理常式](#configure-the-import-structure)來自訂此程式。
 
 匯入時要產生的結構可以設定為：
 
-&quot;**Day CQ Commerce Hybris預設匯入處理常式**
+**Day CQ Commerce Hybris預設匯入處理常式**
 `(com.adobe.cq.commerce.hybris.importer.DefaultImportHandler`)
 
-使用AEM時，有數種方法可管理此類服務的組態設定；請參閱 [設定OSGi](/help/sites-deploying/configuring-osgi.md) 以取得完整詳細資訊。 如需可設定引數及其預設值的完整清單，另請參閱主控台。
+使用AEM時，有數種方法可管理此類服務的組態設定；請參閱[設定OSGi](/help/sites-deploying/configuring-osgi.md)以取得完整詳細資訊。 如需可設定引數及其預設值的完整清單，另請參閱主控台。
 
 ## 設定產品屬性以載入 {#configure-the-product-attributes-to-load}
 
@@ -179,7 +179,7 @@ ht-degree: 1%
 
    >[!NOTE]
    >
-   >使用AEM時，有數種方法可管理此類服務的組態設定；請參閱 [設定OSGi](/help/sites-deploying/configuring-osgi.md) 以取得完整詳細資訊。 如需可設定引數及其預設值的完整清單，另請參閱主控台。
+   >使用AEM時，有數種方法可管理此類服務的組態設定；請參閱[設定OSGi](/help/sites-deploying/configuring-osgi.md)以取得完整詳細資訊。 如需可設定引數及其預設值的完整清單，另請參閱主控台。
 
 ## 匯入產品資料 {#importing-the-product-data}
 
@@ -201,7 +201,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->hybris實作(即 `geometrixx-outdoors/en_US`)只會將產品ID和其他基本資訊儲存在 `/etc/commerce`.
+>hybris實作（即`geometrixx-outdoors/en_US`）只會在`/etc/commerce`下儲存產品ID和其他基本資訊。
 >
 >每次請求產品的相關資訊時，都會參考Hybris伺服器。
 
@@ -217,8 +217,8 @@ ht-degree: 1%
 
       [`http://localhost:4502/crx/de/index.jsp#/etc/commerce/products`](http://localhost:4502/crx/de/index.jsp#/etc/commerce/products)
 
-   1. 刪除儲存產品資料的節點；例如， `outdoors`.
-   1. **全部儲存** 以保留變更。
+   1. 刪除儲存您產品資料的節點；例如，`outdoors`。
+   1. **全部儲存**&#x200B;以保留變更。
 
 1. 在AEM中開啟hybris匯入工具：
 
@@ -232,7 +232,7 @@ ht-degree: 1%
 
    ![chlimage_1-42](/help/sites-administering/assets/chlimage_1-42a.png)
 
-1. 按一下 **匯入目錄** 以開始匯入。
+1. 按一下&#x200B;**匯入目錄**&#x200B;以開始匯入。
 
    完成後，您可以驗證匯入的資料：
 
@@ -264,8 +264,8 @@ ht-degree: 1%
 
    [http://localhost:4502/etc/importers/hybris.html](http://localhost:4502/etc/importers/hybris.html)
 
-1. 選取核取方塊 **增量匯入**.
-1. 按一下 **匯入目錄** 以開始匯入。
+1. 選取核取方塊&#x200B;**增量匯入**。
+1. 按一下&#x200B;**匯入目錄**&#x200B;以開始匯入。
 
    完成後，您可以驗證下AEM中更新的資料：
 
@@ -300,8 +300,8 @@ ht-degree: 1%
 
    [http://localhost:4502/etc/importers/hybris.html](http://localhost:4502/etc/importers/hybris.html)
 
-1. 選取核取方塊 **快速更新**.
-1. 按一下 **匯入目錄** 以開始匯入。
+1. 選取核取方塊&#x200B;**快速更新**。
+1. 按一下&#x200B;**匯入目錄**&#x200B;以開始匯入。
 
    完成後，您可以驗證下AEM中更新的資料：
 
@@ -318,7 +318,7 @@ Hybris目錄可以使用Hybris目錄、類別和產品的批次匯入工具，�
 **Day CQ Commerce Hybris目錄匯入工具**
 ( `com.adobe.cq.commerce.hybris.impl.importer.DefaultHybrisImporter`)
 
-使用AEM時，有數種方法可管理此類服務的組態設定；請參閱 [設定OSGi](/help/sites-deploying/configuring-osgi.md) 以取得完整詳細資訊。 如需可設定引數及其預設值的完整清單，另請參閱主控台。
+使用AEM時，有數種方法可管理此類服務的組態設定；請參閱[設定OSGi](/help/sites-deploying/configuring-osgi.md)以取得完整詳細資訊。 如需可設定引數及其預設值的完整清單，另請參閱主控台。
 
 ## 目錄匯入 {#catalog-import}
 
@@ -332,7 +332,7 @@ hybris套件隨附有目錄匯入工具，可用於設定初始頁面結構。
 
 必須提供下列資訊：
 
-* **基礎存放區**
+* **基底存放區**
 在Hybris中設定的基礎存放區的識別碼。
 
 * **目錄**
@@ -345,7 +345,7 @@ hybris套件隨附有目錄匯入工具，可用於設定初始頁面結構。
 
 若要從目錄中移除一或多個產品：
 
-1. [為OSGi服務設定](/help/sites-deploying/configuring-osgi.md) **Day CQ Commerce Hybris目錄匯入工具**；另請參閱 [設定目錄匯入工具](#configure-the-catalog-importer).
+1. [設定OSGi服務的](/help/sites-deploying/configuring-osgi.md) **Day CQ Commerce Hybris Catalog Importer**；另請參閱[設定目錄匯入工具](#configure-the-catalog-importer)。
 
    啟動下列屬性：
 
@@ -354,9 +354,9 @@ hybris套件隨附有目錄匯入工具，可用於設定初始頁面結構。
 
    >[!NOTE]
    >
-   >使用AEM時，有數種方法可管理此類服務的組態設定；請參閱 [設定OSGi](/help/sites-deploying/configuring-osgi.md) 以取得完整詳細資訊。 如需可設定引數及其預設值的完整清單，另請參閱主控台。
+   >使用AEM時，有數種方法可管理此類服務的組態設定；請參閱[設定OSGi](/help/sites-deploying/configuring-osgi.md)以取得完整詳細資訊。 如需可設定引數及其預設值的完整清單，另請參閱主控台。
 
-1. 執行兩次增量更新來初始化Importer (請參閱 [目錄匯入](#catalog-import))：
+1. 執行兩個累加更新，初始化匯入工具（請參閱[目錄匯入](#catalog-import)）：
 
    * 第一次執行會產生一組已變更的產品 — 如記錄清單中所示。
    * 這是第一次不應更新任何產品。
@@ -371,17 +371,17 @@ hybris套件隨附有目錄匯入工具，可用於設定初始頁面結構。
 
    [http://localhost:4502/editor.html/content/geometrixx-outdoors/en_US/equipment/biking.html](http://localhost:4502/editor.html/content/geometrixx-outdoors/en_US/equipment/biking.html)
 
-1. 移除hybris主控台中的產品。 使用選項 **變更核准狀態** 若要將狀態設為 `unapproved`. 產品會從即時摘要中移除。
+1. 移除hybris主控台中的產品。 使用選項&#x200B;**變更核准狀態**&#x200B;將狀態設定為`unapproved`。 產品會從即時摘要中移除。
 
    例如：
 
-   * 開啟頁面 [http://localhost:9001/productcockpit](http://localhost:9001/productcockpit)
-   * 選取目錄 `Outdoors Staged`
-   * 搜尋 `Cajamara`
-   * 選取此產品並將核准狀態變更為 `unapproved`
+   * 開啟頁面[http://localhost:9001/productcockpit](http://localhost:9001/productcockpit)
+   * 選取目錄`Outdoors Staged`
+   * 搜尋`Cajamara`
+   * 選取此產品並將核准狀態變更為`unapproved`
 
-1. 執行另一次增量更新(請參閱 [目錄匯入](#catalog-import))。 記錄會列出已刪除的產品。
-1. [轉出](/help/commerce/cif-classic/administering/generic.md#rolling-out-a-catalog) 適當的目錄。 產品和產品頁面已從AEM中移除。
+1. 執行另一個增量更新（請參閱[目錄匯入](#catalog-import)）。 記錄會列出已刪除的產品。
+1. [轉出](/help/commerce/cif-classic/administering/generic.md#rolling-out-a-catalog)適當的目錄。 產品和產品頁面已從AEM中移除。
 
    例如：
 
@@ -389,16 +389,16 @@ hybris套件隨附有目錄匯入工具，可用於設定初始頁面結構。
 
      [http://localhost:4502/aem/catalogs.html/content/catalogs/geometrixx-outdoors-hybris](http://localhost:4502/aem/catalogs.html/content/catalogs/geometrixx-outdoors-hybris)
 
-   * 轉出 `Hybris Base` 目錄
+   * 轉出`Hybris Base`目錄
    * 開啟：
 
      [http://localhost:4502/editor.html/content/geometrixx-outdoors/en_US/equipment/biking.html](http://localhost:4502/editor.html/content/geometrixx-outdoors/en_US/equipment/biking.html)
 
-   * 此 `Cajamara` 產品已從中移除 `Bike` 類別
+   * 已從`Bike`類別中移除`Cajamara`產品
 
 1. 若要復原產品：
 
-   1. 在Hybris中，將核准狀態設回 **已核准**
+   1. 在Hybris中，將核准狀態設定回&#x200B;**已核准**
    1. 在AEM中：
 
       1. 執行增量更新
@@ -407,17 +407,17 @@ hybris套件隨附有目錄匯入工具，可用於設定初始頁面結構。
 
 ## 將訂單歷史記錄特徵新增至使用者端內容 {#add-order-history-trait-to-the-client-context}
 
-若要新增訂單歷史記錄至 [使用者端內容](/help/sites-developing/client-context.md)：
+若要將訂單歷史記錄新增至[使用者端內容](/help/sites-developing/client-context.md)：
 
-1. 開啟 [使用者端內容設計頁面](/help/sites-administering/client-context.md)，方法是：
+1. 以下列任一方式開啟[使用者端內容設計頁面](/help/sites-administering/client-context.md)：
 
-   * 開啟頁面進行編輯，然後使用開啟使用者端內容 **Ctrl-Alt-c** (windows)或 **control-option-c** (Mac)。 使用使用者端內容左上角的鉛筆圖示可以 **開啟ClientContext設計頁面**.
-   * 直接導覽至 [http://localhost:4502/etc/clientcontext/default/content.html](http://localhost:4502/etc/clientcontext/default/content.html)
+   * 開啟頁面進行編輯，然後使用&#x200B;**Ctrl-Alt-c** (windows)或&#x200B;**control-option-c** (Mac)開啟使用者端內容。 使用使用者端內容左上角的鉛筆圖示來&#x200B;**開啟ClientContext設計頁面**。
+   * 直接導覽至[http://localhost:4502/etc/clientcontext/default/content.html](http://localhost:4502/etc/clientcontext/default/content.html)
 
-1. [新增 **訂單歷史記錄** 元件](/help/sites-administering/client-context.md#adding-a-property-component) 至 **購物車**&#x200B;使用者端內容的t元件。
+1. [將&#x200B;**訂單歷史記錄**&#x200B;元件](/help/sites-administering/client-context.md#adding-a-property-component)新增至使用者端內容的&#x200B;**購物車** t元件。
 1. 您可以確認使用者端內容顯示訂單歷程記錄的詳細資料。 例如：
 
-   1. 開啟 [使用者端內容](/help/sites-administering/client-context.md).
+   1. 開啟[使用者端內容](/help/sites-administering/client-context.md)。
    1. 新增專案至購物車。
    1. 完成簽出。
    1. 檢查使用者端內容。
@@ -431,10 +431,10 @@ hybris套件隨附有目錄匯入工具，可用於設定初始頁面結構。
    >
    >此訊息的實現方式：
    >
-   >* 瀏覽至 [http://localhost:4502/content/campaigns/geometrixx-outdoors/hybris-returning-customer.html](http://localhost:4502/content/campaigns/geometrixx-outdoors/hybris-returning-customer.html)
+   >* 導覽至[http://localhost:4502/content/campaigns/geometrixx-outdoors/hybris-returning-customer.html](http://localhost:4502/content/campaigns/geometrixx-outdoors/hybris-returning-customer.html)
    >
    >  行銷活動包含一個體驗。
    >
    >* 按一下區段([http://localhost:4502/etc/segmentation/geometrixx-outdoors/returning-customer.html](http://localhost:4502/etc/segmentation/geometrixx-outdoors/returning-customer.html))
    >
-   >* 區段是使用 **訂單歷程記錄屬性** 特徵。
+   >* 區段是使用&#x200B;**訂單歷程記錄屬性**&#x200B;特徵所建置。

@@ -34,13 +34,13 @@ ht-degree: 1%
 >電子商務架構可搭配下列專案使用：
 >
 >* [Adobe Commerce](/help/commerce/cif/integrating/magento.md)
->* [SAPCOMMERCE CLOUD](/help/commerce/cif-classic/administering/sap-commerce-cloud.md)
+>* [SAPCommerce Cloud](/help/commerce/cif-classic/administering/sap-commerce-cloud.md)
 >* [SalesforceCommerce Cloud](https://github.com/adobe/commerce-salesforce)
 >
 
 >[!CAUTION]
 >
->此 [電子商務整合框架](https://business.adobe.com/products/experience-manager/sites/ecommerce-integrations.html) 是AEM附加元件。
+>[電子商務整合架構](https://business.adobe.com/products/experience-manager/sites/ecommerce-integrations.html)是AEM附加元件。
 >
 >您的銷售代表可以根據適當的引擎提供完整詳細資訊。
 
@@ -126,9 +126,9 @@ AEM eCommerce是使用電子商務引擎實施：
 >
 >在AEM中使用根據JCR的一般開發來實作的AEM電子商務是：
 >
->* 獨立AEM原生電子商務範例，說明如何使用API。 這可用來透過現有的資料顯示和行銷活動，控制產品資料、購物車和結帳。 在這種情況下，產品資料庫會儲存在AEM原生儲存庫中(Adobe的 [JCR](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/2.0/index.html))。
+>* 獨立AEM原生電子商務範例，說明如何使用API。 這可用來透過現有的資料顯示和行銷活動，控制產品資料、購物車和結帳。 在此案例中，產品資料庫儲存在AEM原生儲存機制中(Adobe的[JCR](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/2.0/index.html)實作)。
 >
->  標準AEM安裝包含 [通用電子商務實施](/help/commerce/cif-classic/administering/generic.md).
+>  標準AEM安裝包含[一般電子商務實作](/help/commerce/cif-classic/administering/generic.md)的基本知識。
 
 ### Commerce提供者 {#commerce-providers}
 
@@ -150,14 +150,14 @@ AEM目前提供兩個範例商業提供者：
 >
 >Geometrixx匯入工具使用CSV檔案；在其實作上方的註解中有接受的結構描述（允許自訂屬性）。
 
-此 [產品服務管理員](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/commerce/pim/api/ProductServicesManager.html) 維護(透過 [osgi](/help/sites-deploying/configuring.md#osgi-configuration-settings))的實施清單 [ProductImporter](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/commerce/pim/api/ProductImporter.html) 和 [CatalogBlueprintImporter](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/commerce/pim/api/CatalogBlueprintImporter.html) 介面。 這些專案會列於 **匯入工具/Commerce提供者** 匯入工具精靈的下拉式欄位(使用 `commerceProvider` 屬性作為名稱)。
+[ProductServicesManager](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/commerce/pim/api/ProductServicesManager.html) （透過[OSGi](/help/sites-deploying/configuring.md#osgi-configuration-settings)）維護[ProductImporter](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/commerce/pim/api/ProductImporter.html)與[CatalogBlueprintImporter](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/commerce/pim/api/CatalogBlueprintImporter.html)介面的實作清單。 這些列在Importer精靈的&#x200B;**Importer/Commerce提供者**&#x200B;下拉式欄位中（使用`commerceProvider`屬性當作名稱）。
 
 當下拉式清單中提供特定的匯入工具/商務提供者時，您必須在以下任一位置定義所需的任何補充資料（視匯入工具型別而定）：
 
 * `/apps/commerce/gui/content/catalogs/importblueprintswizard/importers`
 * `/apps/commerce/gui/content/products/importproductswizard/importers`
 
-位於適當下方的資料夾 `importers` 資料夾必須符合匯入工具名稱；例如：
+適當`importers`資料夾下的資料夾必須符合匯入工具名稱；例如：
 
 * `.../importproductswizard/importers/geometrixx/.content.xml`
 
@@ -198,17 +198,17 @@ AEM目前提供兩個範例商業提供者：
 
 #### 結構性與行銷類別 {#structural-versus-marketing-categories}
 
-如果您可以區分以下兩個類別，這可以讓您以有意義的結構來清楚顯示URL (樹狀結構： `cq:Page` 節點)，因此與經典的AEM內容管理非常接近)：
+如果可以區分以下兩個類別，這可讓您以有意義的結構（包含`cq:Page`個節點的樹狀結構）清楚顯示URL，因此非常接近經典的AEM內容管理：
 
 * *結構*類別
 
-  類別樹狀結構定義 *什麼是產品*；例如：
+  類別樹狀結構定義&#x200B;*什麼是產品*；例如：
 
   `/products/mens/shoes/sneakers`
 
-* *行銷* 類別
+* *行銷*&#x200B;類別
 
-  所有其他類別 *產品可屬於*；例如：
+  *產品可屬於*&#x200B;的所有其他類別；例如：
 
   `/special-offers/christmas/shoes`)
 
@@ -221,9 +221,9 @@ AEM目前提供兩個範例商業提供者：
 * 直接在AEM中維護（一般）。
 * 在電子商務引擎中維護，並在AEM中提供。
 
-  視資料型別而定 [已同步](#catalog-maintenance-data-synchronization) 必要時，或直接存取；例如，產品價格等極不穩定和關鍵資料會從每個頁面請求的電子商務引擎中擷取，以確保其隨時保持最新。
+  視資料型別而定，它會在必要時進行[同步處理](#catalog-maintenance-data-synchronization)，或直接存取；例如，會從每個頁面請求的電子商務引擎擷取高度不穩定和關鍵資料（例如產品價格），以確保這些資料永遠是最新的。
 
-無論是哪種情況，當產品資料已輸入/匯入AEM時，都可以從 **產品** 主控台。 在此處，產品的卡片和清單檢視會顯示如下資訊：
+不論是哪種情況，當產品資料已輸入/匯入AEM時，都可以從&#x200B;**Products**&#x200B;主控台看到它。 在此處，產品的卡片和清單檢視會顯示如下資訊：
 
 * 影像
 * SKU代碼
@@ -269,7 +269,7 @@ AEM目前提供兩個範例商業提供者：
 
      庫存單位(SKU)資訊。
 
-   * **顏色**
+   * **色彩**
    * **大小**
    * **價格**
 
@@ -283,7 +283,7 @@ AEM目前提供兩個範例商業提供者：
 
   更完整的產品功能細節。
 
-### 產品資產 {#product-assets}
+### 產品Assets {#product-assets}
 
 您可以為個別產品保留一系列資產。 其中通常包括影像和影片。
 
@@ -295,9 +295,9 @@ AEM目前提供兩個範例商業提供者：
 
 #### 多國語言的目錄 {#catalogs-in-multiple-languages}
 
-AEM支援多種語言的產品內容。 請求資料時，整合架構會從目前的樹狀結構中擷取語言(例如 `en_US` 對於下的頁面 `/content/geometrixx-outdoors/en_US`)。
+AEM支援多種語言的產品內容。 請求資料時，整合架構會從目前的樹狀結構中擷取語言（例如，`/content/geometrixx-outdoors/en_US`下的頁面為`en_US`）。
 
-若為多語言存放區，您可以個別匯入每個語言樹狀結構的目錄（或透過以下方式複製） [MSM](/help/sites-administering/msm.md))。
+若為多語言存放區，您可以個別匯入每個語言樹狀結構的目錄（或使用[MSM](/help/sites-administering/msm.md)複製）。
 
 #### 多個品牌的目錄 {#catalogs-for-multiple-brands}
 
@@ -318,8 +318,8 @@ AEM支援多種語言的產品內容。 請求資料時，整合架構會從目�
 
 產品資料不可避免地會有進一步的變更：
 
-* 對於一般實作，可透過以下方式管理 [產品編輯器](/help/commerce/cif-classic/administering/generic.md#editing-product-information)
-* 使用 [電子商務引擎必須同步變更](#data-synchronization-with-an-ecommerce-engine-ongoing)
+* 對於一般實作，可使用[產品編輯器](/help/commerce/cif-classic/administering/generic.md#editing-product-information)來管理這些實作
+* 使用[電子商務引擎時，必須同步處理變更](#data-synchronization-with-an-ecommerce-engine-ongoing)
 
 #### 與電子商務引擎進行資料同步（進行中） {#data-synchronization-with-an-ecommerce-engine-ongoing}
 
@@ -329,7 +329,7 @@ AEM支援多種語言的產品內容。 請求資料時，整合架構會從目�
 
 這可能取決於資料型別：
 
-* A [定期同步會與變更的資料摘要一起使用](/help/commerce/cif-classic/developing/sap-commerce-cloud.md#product-synchronization-and-publishing).
+* [定期同步處理會與變更](/help/commerce/cif-classic/developing/sap-commerce-cloud.md#product-synchronization-and-publishing)的資料摘要一起使用。
 
   除此之外，您還可以為快速更新選取特定更新。
 
@@ -341,7 +341,7 @@ AEM支援多種語言的產品內容。 請求資料時，整合架構會從目�
 
 您可選擇使用多種策略來解決這些問題：
 
-* [分段](#bucketing)  — 滿足大量節點的需求
+* [分段](#bucketing) — 滿足大量節點的需求
 * [將資產後處理解除安裝到專用執行個體](#offload-asset-post-processing-to-a-dedicated-instance)
 * [僅匯入產品資料](#only-import-product-data)
 * [匯入節流和批次儲存](#import-throttling-and-batch-saves)
@@ -440,7 +440,7 @@ AEM支援多種語言的產品內容。 請求資料時，整合架構會從目�
 * 在您的技術棧疊中，計劃分解式內容存取模式與服務。 此為一般最佳實務，但此處更重要，因為您可以在最佳化階段為經常讀取的資料（且您不想使用填入套件快取的）新增應用程式快取。
 
   例如，屬性管理通常是快取的良好候選專案，因為它與透過產品匯入更新的資料有關。
-* 考慮使用 [Proxy頁面](#proxy-pages).
+* 請考慮使用[Proxy頁面](#proxy-pages)。
 
 ### 目錄區段頁面 {#catalog-section-pages}
 
@@ -450,15 +450,15 @@ AEM支援多種語言的產品內容。 請求資料時，整合架構會從目�
 * 該類別中個別產品的連結
 * 其他類別的連結
 
-![e-commerce_categoryrunning](/help/sites-administering/assets/ecommerce_categoryrunning.png)
+![eCommerce_categoryrunning](/help/sites-administering/assets/ecommerce_categoryrunning.png)
 
 ### 產品頁面 {#product-pages}
 
 產品頁面提供個別產品的完整資訊。 來自的動態更新也會反映出來；例如，在電子商務引擎上註冊的價格變更。
 
-產品頁面為使用下列專案的AEM頁面： **產品** 元件；例如 **Commerce產品** 範本：
+產品頁面是使用&#x200B;**Product**&#x200B;元件的AEM頁面；例如，在&#x200B;**Commerce產品**&#x200B;範本中：
 
-![e-commerce_nairobirunnersgreen](/help/sites-administering/assets/ecommerce_nairobirunnersgreen.png)
+![電子商務_nairobirunnersgreen](/help/sites-administering/assets/ecommerce_nairobirunnersgreen.png)
 
 「產品」元件提供：
 
@@ -477,9 +477,9 @@ AEM支援多種語言的產品內容。 請求資料時，整合架構會從目�
 
 ### 產品元件 {#product-component}
 
-此 **產品** 元件可新增至具有提供所需中繼資料(亦即 `cartPage` 和 `cartObject`)。 在示範網站Geometrixx Outdoors中，這由以下專案提供 `UserInfo.jsp`.
+可以將&#x200B;**Product**&#x200B;元件新增至任何具有提供必要中繼資料（亦即`cartPage`和`cartObject`的路徑）之父頁面的頁面。 在展示網站Geometrixx Outdoors中，這由`UserInfo.jsp`提供。
 
-此 **產品** 元件亦可根據您的個別需求進行自訂。
+**Product**&#x200B;元件也可以根據您的個別需求進行自訂。
 
 ### Proxy頁面 {#proxy-pages}
 
@@ -487,7 +487,7 @@ Proxy頁面可用來簡化存放庫結構，以及將大型目錄的儲存空間
 
 建立目錄時，每個產品會使用十個節點，因為目錄會針對您可以在AEM中更新和自訂的每個產品提供個別元件。 如果您的目錄包含數百甚至數千種產品，那麼如此大量的節點可能會成為一個問題。 若要避免發生任何問題，您可以使用Proxy頁面建立您的目錄。
 
-Proxy頁面使用雙節點結構( `cq:Page` 和 `jcr:content`)，不包含任何實際產品內容。 內容是在請求時透過參考產品資料和範本頁面產生的。
+Proxy頁面使用不包含任何實際產品內容的雙節點結構（`cq:Page`和`jcr:content`）。 內容是在請求時透過參考產品資料和範本頁面產生的。
 
 不過，還是需要權衡取捨。 您將無法在AEM內自訂您的產品資訊，將使用標準範本（為您的網站定義）。
 
@@ -514,7 +514,7 @@ Proxy頁面使用雙節點結構( `cq:Page` 和 `jcr:content`)，不包含任何
 在AEM中：
 
 * 憑單是使用「網站」主控台建立/編輯的頁面型元件。
-* 此 **憑單** 元件提供：
+* **憑單**&#x200B;元件提供：
 
    * 憑單管理的轉譯器；這會顯示目前購物車中的任何憑單。
    * 用於管理（新增/移除）憑單的編輯對話方塊（表單）。
@@ -524,7 +524,7 @@ Proxy頁面使用雙節點結構( `cq:Page` 和 `jcr:content`)，不包含任何
 
 >[!NOTE]
 >
->AEM使用術語 **憑單**，這是辭彙的同義字 **抵用券**.
+>AEM使用字詞&#x200B;**憑單**，這是字詞&#x200B;**抵用券**&#x200B;的同義字。
 
 ### 促銷活動 {#promotions}
 
@@ -534,7 +534,7 @@ Proxy頁面使用雙節點結構( `cq:Page` 和 `jcr:content`)，不包含任何
 * 長期客戶會收到所有訂單的折扣。
 * 在定義明確的時段內提供的銷售價格。
 * 當客戶先前的訂單超過特定金額時，客戶會收到憑單。
-* 購買產品的客戶 *product-X* 在此提供折扣： *product-Y* （配對產品）。
+* 購買&#x200B;*product-X*&#x200B;的客戶可享有&#x200B;*product-Y* （配對產品）的折扣。
 
 促銷活動並非由產品資訊管理員維護，而是由行銷管理員維護：
 
@@ -552,10 +552,10 @@ Proxy頁面使用雙節點結構( `cq:Page` 和 `jcr:content`)，不包含任何
    * 推進管理的轉譯器和對話方塊
    * 用於呈現和編輯升級處理常式專屬之組態引數的子元件
 
-在AEM中，促銷活動也會整合至 [Campaign Management](/help/sites-authoring/personalization.md)：
+在AEM中，促銷活動也整合至[Campaign Management](/help/sites-authoring/personalization.md)：
 
-* a [行銷活動](/help/sites-authoring/personalization.md) 指定開啟/關閉時間
-* [體驗](/help/sites-authoring/personalization.md) *範圍* 促銷活動用於根據資產（Teaser頁面、促銷活動等）對應的受眾區隔將其分組
+* [行銷活動](/help/sites-authoring/personalization.md)指定了開啟/關閉時間
+* [體驗](/help/sites-authoring/personalization.md) *在*&#x200B;行銷活動內，用於根據其對應的對象區段將資產（Teaser頁面、促銷活動等）分組
 
 促銷活動可在體驗中或直接在行銷活動中進行：
 
@@ -565,7 +565,7 @@ Proxy頁面使用雙節點結構( `cq:Page` 和 `jcr:content`)，不包含任何
 
   `/content/campaigns/geometrixx-outdoors/big-spender/ordervalueover100/free-shipping`
 
-  位在體驗中，因此每當區段( `ordervalueover100`)解析。
+  在體驗中，因此每當區段( `ordervalueover100`)解析時，就會自動引發。
 
 * 如果促銷活動未出現在體驗中（僅在行銷活動中），則無法自動套用至對象。 但是，如果購物者將憑單輸入購物車中，且該憑單參考促銷活動，則仍可引發促銷活動。
 
@@ -577,7 +577,7 @@ Proxy頁面使用雙節點結構( `cq:Page` 和 `jcr:content`)，不包含任何
 
 >[!NOTE]
 >
->[hybris促銷活動](https://www.hybris.com/modules/promotion) 和 [hybris憑單](https://www.hybris.com/en/modules/voucher) 涵蓋所有影響購物車及與定價相關的專案。 促銷特定行銷內容（例如橫幅等）。 不是hybris促銷活動的一部分。
+>[hybris促銷活動](https://www.hybris.com/modules/promotion)與[hybris憑單](https://www.hybris.com/en/modules/voucher)涵蓋所有影響購物車並與定價相關的專案。 促銷特定行銷內容（例如橫幅等）。 不是hybris促銷活動的一部分。
 
 ## 個人化 {#personalization}
 
@@ -608,7 +608,7 @@ Proxy頁面使用雙節點結構( `cq:Page` 和 `jcr:content`)，不包含任何
 >
 >使用電子商務引擎時，您必須確保將為登入AEM執行個體之使用者建立的帳戶，會復寫（例如，透過工作流程）至與該引擎通訊的任何其他AEM執行個體。
 >
->否則，這些其他AEM執行個體也會嘗試為引擎中的相同使用者建立帳戶。 這些動作會因 `DuplicateUidException` 來自引擎。
+>否則，這些其他AEM執行個體也會嘗試為引擎中的相同使用者建立帳戶。 這些動作因來自引擎的`DuplicateUidException`而失敗。
 
 ### 客戶註冊 {#customer-sign-up}
 
@@ -634,7 +634,7 @@ Proxy頁面使用雙節點結構( `cq:Page` 和 `jcr:content`)，不包含任何
 
 來自電子商務引擎的交易資料會與購物者的個人資訊結合。 AEM會使用部分資料作為設定檔資料。 AEM中的表單動作會將資訊寫回電子商務引擎。
 
-有一個頁面可讓您輕鬆管理帳戶資訊。 您可以按一下 **我的帳戶** ，或導覽至「 」頁面Geometrixx `/content/geometrixx-outdoors/en/user/account.html`.
+有一個頁面可讓您輕鬆管理帳戶資訊。 您可以按一下Geometrixx頁面頂端的&#x200B;**我的帳戶**&#x200B;或瀏覽至`/content/geometrixx-outdoors/en/user/account.html`來存取它。
 
 ![chlimage_1-13](/help/sites-administering/assets/chlimage_1-13.png)
 
@@ -650,11 +650,11 @@ Proxy頁面使用雙節點結構( `cq:Page` 和 `jcr:content`)，不包含任何
 
 您可以選擇預設地址。
 
-通訊錄元件可從 **我的帳戶** 按一下以建立頁面 **通訊錄** 或瀏覽至 `/content/geometrixx-outdoors/en/user/account/address-book.html`.
+按一下&#x200B;**通訊錄**&#x200B;或瀏覽至`/content/geometrixx-outdoors/en/user/account/address-book.html`，即可從&#x200B;**我的帳戶**&#x200B;頁面存取通訊錄元件。
 
 ![chlimage_1-14](/help/sites-administering/assets/chlimage_1-14.png)
 
-您可以按一下 **新增地址……** 在通訊錄中新增地址。 它會開啟一個您可以填寫的表單，然後按一下 **新增地址**.
+您可以按一下&#x200B;**新增地址……**，在您的通訊錄中新增地址。 它會開啟您可以填寫的表單，然後按一下&#x200B;**新增地址**。
 
 >[!NOTE]
 >
@@ -664,10 +664,10 @@ Proxy頁面使用雙節點結構( `cq:Page` 和 `jcr:content`)，不包含任何
 
 ![chlimage_1-15](/help/sites-administering/assets/chlimage_1-15.png)
 
-位址持續顯示如下 `user_home/profile/addresses`.
+位址持續存在於`user_home/profile/addresses`下方。
 例如，對於Alison Parker，其位於/home/users/geometrixx/aparker@geometrixx.info/profile/addresses下
 
-您可以選擇預設的地址，此資訊會保留在購物者的設定檔中，而不是地址中。 設定檔屬性 `address.default` 以選取之值的位址的路徑設定。
+您可以選擇預設的地址，此資訊會保留在購物者的設定檔中，而不是地址中。 設定檔屬性`address.default`設定為值所選地址的路徑。
 
 ### 客戶特定定價 {#customer-specific-pricing}
 
@@ -710,7 +710,7 @@ Proxy頁面使用雙節點結構( `cq:Page` 和 `jcr:content`)，不包含任何
    * 更新個別料號的數目/數量
    * 移除個別專案
 
-![e-commerce_shoppingcart](/help/sites-administering/assets/ecommerce_shoppingcart.png)
+![電子商務_購物車](/help/sites-administering/assets/ecommerce_shoppingcart.png)
 
 購物車會根據使用的引擎儲存：
 
@@ -719,12 +719,12 @@ Proxy頁面使用雙節點結構( `cq:Page` 和 `jcr:content`)，不包含任何
 
 無論哪種情況，專案都會在登入/登出期間保留在購物車中（且可以還原） （但僅限在相同的電腦/瀏覽器上）。 例如：
 
-* 瀏覽為 `anonymous` 並將產品新增至購物車
-* 登入身份 `Allison Parker` - Allison的購物車是空的
+* 以`anonymous`瀏覽並將產品加入購物車
+* 以`Allison Parker`登入 — Allison的購物車是空的
 * 新增產品至Allison的購物車
-* 登出 — 購物車顯示產品 `anonymous`
+* 登出 — 購物車顯示`anonymous`的產品
 
-* 再次登入身份 `Allison Parker` - Allison的產品已還原
+* 以`Allison Parker`身分再次登入 — Allison的產品已還原
 
 >[!NOTE]
 >
@@ -732,7 +732,7 @@ Proxy頁面使用雙節點結構( `cq:Page` 和 `jcr:content`)，不包含任何
 
 >[!NOTE]
 >
->不建議使用測試還原購物車內容 `admin` 帳戶，因為這可能與 `admin` 電子商務引擎的帳戶（例如，hybris）。
+>不建議使用`admin`帳戶測試還原購物車內容，因為這可能與電子商務引擎的`admin`帳戶（例如hybris）衝突。
 
 >[!NOTE]
 >
@@ -750,7 +750,7 @@ Proxy頁面使用雙節點結構( `cq:Page` 和 `jcr:content`)，不包含任何
 
   訂單的參考編號。
 
-* **已下單**
+* **已放置**
 
   下訂單的日期。
 
@@ -770,7 +770,7 @@ Proxy頁面使用雙節點結構( `cq:Page` 和 `jcr:content`)，不包含任何
 
   訂購料號的總成本。
 
-* **稅金**
+* **稅捐**
 
   訂單上任何應付稅款的金額。
 
@@ -802,7 +802,7 @@ Proxy頁面使用雙節點結構( `cq:Page` 和 `jcr:content`)，不包含任何
 
   運輸方法；例如，陸運、海運或空運。
 
-* **追蹤編號**
+* **追蹤號碼**
 
   航運公司使用的任何追蹤編號。
 
@@ -852,7 +852,7 @@ Proxy頁面使用雙節點結構( `cq:Page` 和 `jcr:content`)，不包含任何
 
 ### 訂單確認 {#confirmation-of-order}
 
-訂單會在熒幕上確認，並可使用進行追蹤 [訂單追蹤](#order-tracking).
+已在熒幕上確認訂單，並可使用[訂單追蹤](#order-tracking)進行追蹤。
 
 ## 搜尋 {#search-features}
 
@@ -863,6 +863,6 @@ Proxy頁面使用雙節點結構( `cq:Page` 和 `jcr:content`)，不包含任何
 如果您需要更徹底的實施，您可以：
 
 * 以您需要的功能擴充預設搜尋元件。
-* 在您的中實作搜尋方法 `CommerceService` 然後使用搜尋頁面上的電子商務搜尋元件。
+* 在您的`CommerceService`中實作搜尋方法，然後在您的搜尋頁面上使用電子商務搜尋元件。
 
 使用電子商務引擎時，電子商務搜尋API可以在電子商務引擎解決方案中完全實作，因此您可以使用現成提供的電子商務搜尋元件。 多面向搜尋可讓您搜尋JCR和/或引擎：

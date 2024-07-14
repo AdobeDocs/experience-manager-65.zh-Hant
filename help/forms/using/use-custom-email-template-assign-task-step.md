@@ -18,11 +18,11 @@ ht-degree: 1%
 
 您可以使用「指派工作」步驟來建立工作並指派給使用者或群組。 當任務指派給使用者或群組時，會傳送電子郵件通知給已定義的使用者或已定義群組的每個成員。 典型的電子郵件通知包含指派任務的連結以及與任務相關的資訊。 下列影像顯示範例電子郵件通知：
 
-![使用現成可用範本的電子郵件通知](do-not-localize/default_email_template_new.png)
+![使用現成範本的電子郵件通知](do-not-localize/default_email_template_new.png)
 
 您可以自訂外觀，並在電子郵件通知中使用自訂中繼資料。 AEM Forms提供立即可用的電子郵件通知範本。 您可以自訂現成可用的範本，或從頭開始建立範本。
 
-電子郵件通知範本是根據 [HTML電子郵件](https://en.wikipedia.org/wiki/HTML_email). 這些電子郵件會因應不同的電子郵件使用者端和熒幕大小。 此外，電子郵件的樣式會在範本中定義。
+電子郵件通知範本是以[HTML電子郵件](https://en.wikipedia.org/wiki/HTML_email)為基礎。 這些電子郵件會因應不同的電子郵件使用者端和熒幕大小。 此外，電子郵件的樣式會在範本中定義。
 
 下列影像顯示自訂的電子郵件通知：
 
@@ -40,7 +40,7 @@ AEM Forms提供立即可用的電子郵件通知範本。 範本提供指派任�
 
 1. 將htmlEmailTemplate.txt檔案的內容取代為自訂內容。
 
-   電子郵件通知範本是 [HTML電子郵件](https://en.wikipedia.org/wiki/HTML_email). 您可以使用自訂程式碼取代現有的html程式碼，以變更範本的外觀。
+   電子郵件通知範本是[HTML電子郵件](https://en.wikipedia.org/wiki/HTML_email)。 您可以使用自訂程式碼取代現有的html程式碼，以變更範本的外觀。
 
 1. 儲存檔案。現在，自訂範本已可供使用。
 
@@ -56,7 +56,7 @@ AEM Forms提供立即可用的電子郵件通知範本。 範本提供指派任�
 
 1. 將自訂HTML程式碼新增至檔案。
 
-   電子郵件通知範本是 [HTML電子郵件](https://en.wikipedia.org/wiki/HTML_email). 您可以將自訂HTML程式碼新增到檔案中來建立範本。
+   電子郵件通知範本是[HTML電子郵件](https://en.wikipedia.org/wiki/HTML_email)。 您可以將自訂HTML程式碼新增到檔案中來建立範本。
 
 1. 儲存檔案。範本已準備好用於指派工作步驟。
 
@@ -72,4 +72,4 @@ AEM Forms提供立即可用的電子郵件通知範本。 範本提供指派任�
 
 1. 按一下「確定」。 範本已變更。
 
-電子郵件通知也會使用 [中繼資料](../../forms/using/use-metadata-in-email-notifications.md). 例如，到期日、優先順序、工作流程名稱等。 您也可以設定範本以使用 [自訂中繼資料](../../forms/using/use-metadata-in-email-notifications.md#using-custom-metadata-in-an-email-notification).
+電子郵件通知也使用[中繼資料](../../forms/using/use-metadata-in-email-notifications.md)。 例如，到期日、優先順序、工作流程名稱等。 您也可以設定範本使用[自訂中繼資料](../../forms/using/use-metadata-in-email-notifications.md#using-custom-metadata-in-an-email-notification)。

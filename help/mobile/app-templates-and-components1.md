@@ -26,16 +26,16 @@ ht-degree: 1%
 
 每個範本都會提供您一系列可供使用的元件。
 
-* 範本的建置方式 [元件](/help/sites-developing/components.md)；
+* 範本是由[元件](/help/sites-developing/components.md)所建置；
 * 元件使用並允許存取Widget，這些用於呈現內容。
 
 >[!NOTE]
 >
->若要瞭解如何使用CRXDE Lite開發您的Adobe Experience Manager (AEM)應用程式，請參閱 [使用CRXDE Lite開發](/help/sites-developing/developing-with-crxde-lite.md).
+>若要瞭解如何使用CRXDE Lite開發您的Adobe Experience Manager (AEM)應用程式，請參閱[使用CRXDE Lite開發](/help/sites-developing/developing-with-crxde-lite.md)。
 
 範本是頁面的基礎。
 
-若要建立頁面，必須複製範本（節點樹） **/apps/&lt;myapp>/templates/&lt;mytemplate>**)中的對應位置：如果頁面是使用 **網站** 標籤。
+若要建立頁面，必須將範本（節點樹狀結構&#x200B;**/apps/&lt;myapp>/templates/&lt;mytemplate>**）複製到網站樹狀結構中的對應位置：如果使用&#x200B;**網站**&#x200B;索引標籤建立頁面，就會發生這種情況。
 
 此複製動作也會提供頁面的初始內容（通常是僅限最上層內容）和屬性sling：resourceType，也就是用來呈現頁面的頁面元件路徑（子節點jcr：content中的所有專案）。
 
@@ -46,14 +46,14 @@ ht-degree: 1%
 * 範本本身的結構
 * 使用範本時產生的內容結構
 
-範本建立於型別節點下 **cq：Template**.
+範本是在型別&#x200B;**cq：Template**&#x200B;的節點下建立。
 
 您可以設定各種屬性，特別是：
 
-* **jcr：title**  — 範本的標題；建立頁面時顯示在對話方塊中。
-* **jcr：description**  — 範本的說明；建立頁面時顯示在對話方塊中。
+* **jcr：title** — 範本的標題；建立頁面時顯示在對話方塊中。
+* **jcr：description** — 範本的說明；建立頁面時顯示在對話方塊中。
 
-此節點包含 *jcr：content (cq：PageContent)* 用作結果頁面內容節點基礎的節點。 此參考資料，使用 *sling：resourceType*，此元件用於轉譯新頁面的實際內容。
+此節點包含&#x200B;*jcr：content (cq：PageContent)*&#x200B;節點，此節點是作為結果頁面之內容節點的基礎。 此參考使用&#x200B;*sling：resourceType*&#x200B;呈現新頁面實際內容的元件。
 
 >[!NOTE]
 >

@@ -22,7 +22,7 @@ ht-degree: 0%
 
 除此之外，Adobe Experience Manager (AEM) Communities檔案的本節還有：
 
-* [使用Apache Maven建置AEM專案](../../help/sites-developing/ht-projects-maven.md).
+* [使用Apache Maven建置AEM專案](../../help/sites-developing/ht-projects-maven.md)。
 
 只有一個「uber」成品會取代個別成品：
 
@@ -34,7 +34,7 @@ ht-degree: 0%
 >
 >與最新的Communities版本保持同步。
 >
->請參閱 [最新版本](deploy-communities.md#latest-releases) 您可從中識別最新版本的區段。
+>請參閱[最新版本](deploy-communities.md#latest-releases)區段，您可在此區段中識別最新版本。
 
 ## Maven相依性範例 {#maven-dependency-example}
 
@@ -49,7 +49,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->請參閱 [AEM Uber jar存放庫](https://mvnrepository.com/artifact/com.adobe.aem/uber-jar) 您可在此識別最新的Uber jar成品。
+>檢視[AEM Uber jar存放庫](https://mvnrepository.com/artifact/com.adobe.aem/uber-jar)，您可在此識別最新的Uber jar成品。
 
 <!--
 There are now two "uber" artifacts that replace individual artifacts:

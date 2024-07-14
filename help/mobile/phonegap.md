@@ -31,7 +31,7 @@ Adobe Experience Manager (AEM) Mobile只是組成AEM完整平台的支柱之一�
 
 ## 編寫PhoneGap應用程式 {#authoring-phonegap-applications}
 
-一個 ***AEM作者* (或 *行銷人員*)**能夠使用現成可用的範本和元件來新增及編輯頁面。 您可以拖放元件，並從DAM新增所有型別的媒體，包括影像、影片和文字片段（內容片段）。
+***AEM作者* （或&#x200B;*行銷人員*）**可以使用現成的範本和元件來新增和編輯頁面。 您可以拖放元件，並從DAM新增所有型別的媒體，包括影像、影片和文字片段（內容片段）。
 
 請參閱下列資源：
 
@@ -43,7 +43,7 @@ Adobe Experience Manager (AEM) Mobile只是組成AEM完整平台的支柱之一�
 * [使用建立精靈建立AEM Mobile應用程式](/help/mobile/phonegap-create-new-app.md)
 * [匯入現有的混合式應用程式](/help/mobile/phonegap-adding-content-to-imported-app.md)
 
-若要瞭解 **內容服務**，請參閱 [Content Service概述](/help/mobile/develop-content-as-a-service.md) 以開始使用。
+若要瞭解&#x200B;**Content Services**，請參閱[Content Services概述](/help/mobile/develop-content-as-a-service.md)以開始使用。
 
 ## 其他資源 {#additional-resources}
 

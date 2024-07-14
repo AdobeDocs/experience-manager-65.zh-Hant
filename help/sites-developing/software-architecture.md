@@ -35,9 +35,9 @@ ht-degree: 0%
 SOLID是縮寫，說明應遵守的五個架構原則：
 
 * **S**&#x200B;單一職責原則 — 每個模組、類別、方法等只能有一個職責。
-* **O**&#x200B;開啟/關閉原則 — 模組應該開啟以供延伸，並關閉以供修改。
+* **O**&#x200B;畫筆/關閉原則 — 模組應該開啟以供延伸，並關閉以供修改。
 * **L** iskov Substitution Principal — 型別應該由其子型別取代。
-* **I**&#x200B;介面分隔原則 — 不應強制任何使用者端依賴其未使用的方法。
+* **I**&#x200B;介面分隔原則 — 任何使用者端都不應強制依賴未使用的方法。
 * **D**&#x200B;相依性反轉原則 — 高階模組不應依賴低階模組。 兩者都應該依賴抽象。 抽象不應該依賴細節。 詳細資訊應取決於抽象概念。
 
 努力遵守這五項原則應該會導致系統有嚴格的分開考量。
@@ -62,4 +62,4 @@ SOLID是縮寫，說明應遵守的五個架構原則：
 
 ### 遵循POM檔案中已發佈的Maven慣例 {#follow-published-maven-conventions-in-pom-files}
 
-Apache已發佈樣式慣例，位於 [https://maven.apache.org/developers/conventions/code.html](https://maven.apache.org/developers/conventions/code.html). 最好遵循這些慣例，因為這樣可讓新資源更易於快速上線。
+Apache已在[https://maven.apache.org/developers/conventions/code.html](https://maven.apache.org/developers/conventions/code.html)發佈樣式慣例。 最好遵循這些慣例，因為這樣可讓新資源更易於快速上線。

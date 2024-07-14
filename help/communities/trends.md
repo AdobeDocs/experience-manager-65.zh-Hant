@@ -21,25 +21,25 @@ ht-degree: 0%
 
 ## 簡介 {#introduction}
 
-此 `Community Activity List` 元件可讓您新增成員貼文和檢視的趨勢資訊，以及內容的貼文和檢視。
+`Community Activity List`元件可讓您新增成員貼文和檢視的趨勢資訊，以及內容的貼文和檢視。
 
 本檔案說明：
 
-* 新增 `Community Activity List` 元件至 [社群網站](/help/communities/overview.md#community-sites).
+* 正在將`Community Activity List`元件新增至[社群網站](/help/communities/overview.md#community-sites)。
 
-* 的組態設定 `Community Activity List` 元件。
+* `Community Activity List`元件的組態設定。
 
 ### 需求 {#requirement}
 
-以下專案的資料 `Community Activity List` 只有當Adobe Analytics獲得授權並設定用於社群網站時，才可使用。
+`Community Activity List`的資料只有在針對社群網站授權並設定Adobe Analytics時才能使用。
 
-另請參閱 [社群功能的Analytics設定](/help/communities/analytics.md).
+請參閱[社群功能的Analytics設定](/help/communities/analytics.md)。
 
 ### 將社群活動清單新增至頁面 {#adding-a-community-activity-list-to-a-page}
 
-若要新增 `Community Activity List` 元件至作者模式下的頁面，找到元件 `Communities / Community Activity List` 並將其拖曳至頁面上的適當位置。
+若要將`Community Activity List`元件新增至作者模式的頁面，請找到元件`Communities / Community Activity List`並將其拖曳至頁面上的適當位置。
 
-如需必要資訊，請造訪 [Communities元件基本知識](/help/communities/basics.md).
+如需必要資訊，請造訪[社群元件基本知識](/help/communities/basics.md)。
 
 當元件首次置於社群網站頁面時，以下是元件的顯示方式：
 
@@ -47,11 +47,11 @@ ht-degree: 0%
 
 ### 設定社群活動清單  {#configuring-community-activity-list}
 
-選取已放置的 `Community Activity List` 元件，然後選取 `Configure` 圖示以開啟「編輯」對話方塊。
+選取置入的`Community Activity List`元件，然後選取`Configure`圖示以開啟「編輯」對話方塊。
 
 ![設定](assets/configure-new.png)
 
-在 **註解** 索引標籤中，指定是否及如何顯示已上傳檔案的註解：
+在&#x200B;**註解**&#x200B;標籤下，指定是否及如何顯示已上傳檔案的註解：
 
 ![屬性](assets/activity-list-properties.png)
 
@@ -64,11 +64,11 @@ ht-degree: 0%
    * `Members`
    * `Content`
 
-  預設為 `Members`.
+  預設值為`Members`。
 
 * **顯示標題**
 
-  要顯示在資料上方的描述性標題，例如 `Trending Content`.
+  要在資料上方顯示的描述性標題，例如`Trending Content`。
 預設為無標題。
 
 * **顯示計數**
@@ -80,8 +80,8 @@ ht-degree: 0%
 
   選取下列其中一項：
 
-   * `Views`（頁面瀏覽數）
-   * `Posts`（建立UGC）
+   * `Views`（頁面瀏覽次數）
+   * `Posts`（正在建立UGC）
    * `Follows`
    * `Likes`
 
@@ -98,26 +98,26 @@ ht-degree: 0%
    * `This year (since Jan 1)`
    * `Total`
 
-  預設為 `Total`.
+  預設值為`Total`。
 
 * **內容路徑**
 
   這可讓您將活動範圍設定為網站的子集，例如特定部落格。
 預設為整個社群網站。
 
-* **成員人數彙總**
+* **成員計數彙總**
 
-  取消選取（關閉）時，只會計算最上層的貼文。 例如，如果內容是根頁面（預設），則 `Activity Type` 之 `Posts` 絕不顯示任何活動，因為無法將內容張貼至根頁面。 如果勾選，則會包含所有下級頁面上的計數。
+  取消選取（關閉）時，只會計算最上層的貼文。 例如，如果內容是根頁面（預設值），則`Posts`的`Activity Type`絕不會顯示任何活動，因為沒有能力將內容發佈到根頁面。 如果勾選，則會包含所有下級頁面上的計數。
 預設為已核取。
 
 ### 包含四個元件的範例頁面 {#example-page-with-components}
 
-**排名在前的訪客** config：型別=成員，活動型別=檢視
+**熱門訪客**&#x200B;設定：型別=成員，活動型別=檢視
 
-**主要參與者** 設定：型別=成員，活動型別=貼文
+**主要參與者**&#x200B;設定：型別=成員，活動型別=貼文
 
-**熱門內容** 設定：型別=內容，活動型別=檢視，
+**最上層內容**&#x200B;設定：型別=內容，活動型別=檢視，
 
-**趨勢內容** 設定：型別=內容，活動型別=貼文
+**趨勢內容**&#x200B;設定：型別=內容，活動型別=貼文
 
 ![元件](assets/activity-list-components.png)

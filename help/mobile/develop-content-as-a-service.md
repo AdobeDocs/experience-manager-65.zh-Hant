@@ -27,13 +27,13 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->**無線內容** 可以透過ContentSync處理常式來自上述任何一項。 它可用來透過ZIP將封裝和傳送分批以及維護這些封裝的更新。
+>**無線內容**&#x200B;可以透過ContentSync處理常式來自以上任何一項。 它可用來透過ZIP將封裝和傳送分批以及維護這些封裝的更新。
 
 Content Services提供三種主要型別的資料：
 
-1. **資產**
+1. **Assets**
 1. **封裝的HTML內容(HTML/CSS/JS)**
-1. **獨立於管道的內容**
+1. **頻道獨立內容**
 
 ![chlimage_1-154](assets/chlimage_1-154.png)
 
@@ -41,7 +41,7 @@ Content Services提供三種主要型別的資料：
 
 資產集合是包含其他集合參考的AEM建構。
 
-資產集合可以透過Content Services公開。 呼叫請求中的資產集合時，會傳回資產清單中的物件，包括其URL。 資產可透過URL存取。 URL是在物件中提供的。 例如：
+資產集合可以透過Content Services公開。 呼叫請求中的資產集合時，會傳回資產清單中的物件，包括其URL。 可透過URL存取Assets。 URL是在物件中提供的。 例如：
 
 * 頁面實體會傳回包含影像參考的JSON（頁面物件）。 影像參考是用來取得影像資產二進位檔的URL。
 * 對資料夾中資產清單的請求會傳回JSON以及該資料夾中所有實體的詳細資訊。 該清單是一個物件。 JSON的URL參照用來取得該資料夾中每個資產的二進位檔案。
@@ -52,7 +52,7 @@ Content Services的重要價值在於可傳回已針對裝置最佳化的資產�
 
 資產最佳化是一種伺服器端函式，根據API請求中提供的資訊。 應儘可能快取資產轉譯，使類似的請求不需要重新產生資產轉譯。
 
-### 資產工作流程 {#assets-workflow}
+### Assets工作流程 {#assets-workflow}
 
 資產工作流程如下：
 
@@ -63,19 +63,19 @@ Content Services的重要價值在於可傳回已針對裝置最佳化的資產�
    1. 挑選資產或資產集合
    1. 自訂JSON演算
 
-下圖顯示 **資產參考工作流程**：
+下圖顯示&#x200B;**Assets參考工作流程**：
 
 ![chlimage_1-155](assets/chlimage_1-155.png)
 
-### 管理資產 {#managing-assets}
+### 管理Assets {#managing-assets}
 
 Content Services可讓您存取無法透過其他AEM內容參考的AEM管理的資產。
 
-#### 現有的受管理資產 {#existing-managed-assets}
+#### 現有的Managed Assets {#existing-managed-assets}
 
-AEM Sites和Assets的使用者正使用AEM Assets來管理其所有頻道的所有數位資料。 他們正在開發原生行動應用程式，且必須使用AEM Assets管理的數個資產。 例如，標誌、背景影像和按鈕圖示。
+AEM Sites和Assets的使用者正在使用AEM Assets來管理其所有頻道的所有數位資料。 他們正在開發原生行動應用程式，且必須使用AEM Assets管理的數個資產。 例如，標誌、背景影像和按鈕圖示。
 
-目前，這些功能會分散在資產存放庫中。 應用程式必須參考的檔案如下：
+目前，這些分佈在Assets存放庫中。 應用程式必須參考的檔案如下：
 
 * /content/dam/geometrixx-outdoors/brand/logo_light.png
 * /content/dam/geometrixx-outdoors/brand/logo_dark.png
@@ -115,8 +115,8 @@ AEM Content Services會透過API將HTML內容提供給行動應用程式。 想�
 
 考量到下列選項：
 
-* **Zip檔案：** 為了儘可能在裝置上正確顯示，頁面參考的資料 — css、JavaScript、資產等會包含在含有回應的單一壓縮檔案中。 可以調整「HTML」頁面中的參照，以使用這些檔案的相對路徑。
-* **串流：** 從AEM取得必要檔案的資訊清單。 然後使用該資訊清單來要求所有具有後續要求的檔案(HTML、CSS、JS等)。
+* **Zip檔案：**&#x200B;為了有在裝置上正確顯示的最佳機會，頁面參考的資料(css、JavaScript、資產等)會包含在含有回應的單一壓縮檔案中。 可以調整「HTML」頁面中的參照，以使用這些檔案的相對路徑。
+* **串流：**&#x200B;從AEM取得必要檔案的資訊清單。 然後使用該資訊清單來要求所有具有後續要求的檔案(HTML、CSS、JS等)。
 
 ![chlimage_1-157](assets/chlimage_1-157.png)
 

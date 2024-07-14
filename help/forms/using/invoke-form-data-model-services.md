@@ -21,19 +21,19 @@ ht-degree: 10%
 
 ## 概觀 {#overview}
 
-AEM Forms可讓表單作者從最適化表單欄位叫用表單資料模型中設定的服務，進一步簡化及增強表單填寫體驗。 若要叫用資料模型服務，您可以在視覺化編輯器中建立規則，或使用 `guidelib.dataIntegrationUtils.executeOperation` 的程式碼編輯器中的API [規則編輯器](/help/forms/using/rule-editor.md).
+AEM Forms可讓表單作者從最適化表單欄位叫用表單資料模型中設定的服務，進一步簡化及增強表單填寫體驗。 若要叫用資料模型服務，您可以在視覺化編輯器中建立規則，或在[規則編輯器](/help/forms/using/rule-editor.md)的程式碼編輯器中使用`guidelib.dataIntegrationUtils.executeOperation` API指定JavaScript。
 
-本檔案著重於使用編寫JavaScript `guidelib.dataIntegrationUtils.executeOperation` 用於叫用服務的API。
+本檔案著重於使用`guidelib.dataIntegrationUtils.executeOperation` API來撰寫JavaScript以叫用服務。
 
 ## 使用API {#using-the-api}
 
-此 `guidelib.dataIntegrationUtils.executeOperation` API會從最適化表單欄位中叫用服務。 API語法如下：
+`guidelib.dataIntegrationUtils.executeOperation` API會從最適化表單欄位中叫用服務。 API語法如下：
 
 ```javascript
 guidelib.dataIntegrationUtils.executeOperation(operationInfo, inputs, outputs)
 ```
 
-的結構 `guidelib.dataIntegrationUtils.executeOperation` API會指定服務作業的相關詳細資訊。 結構的語法如下。
+`guidelib.dataIntegrationUtils.executeOperation` API的結構指定了服務操作的詳細資訊。 結構的語法如下。
 
 ```javascript
 var operationInfo = {
@@ -77,24 +77,24 @@ API結構會指定下列有關服務操作的詳細資訊。
   </tr>
   <tr>
    <td><code>Outputs</code></td>
-   <td>將一或多個表單物件對應至服務作業的輸出值，以填入表單欄位<br /> </td>
+   <td>將一或多個表單物件對應到服務作業的輸出值，以填入表單欄位<br /> </td>
   </tr>
   <tr>
    <td><code>success</code></td>
-   <td>根據服務操作的輸入引數傳回值。 此為選用引數，可作為回呼函式使用。<br /> </td>
+   <td>根據服務操作的輸入引數傳回值。 這是選用引數，用來做為回呼函式。<br /> </td>
   </tr>
   <tr>
    <td><code>failure</code></td>
-   <td>如果success回呼函式無法根據輸入引數顯示輸出值，則顯示錯誤訊息。 此為選用引數，可作為回呼函式使用。<br /> </td>
+   <td>如果success回呼函式無法根據輸入引數顯示輸出值，則顯示錯誤訊息。 這是選用引數，用來做為回呼函式。<br /> </td>
   </tr>
  </tbody>
 </table>
 
 ## 用於叫用服務的範例指令碼 {#sample-script-to-invoke-a-service}
 
-以下範例指令碼使用 `guidelib.dataIntegrationUtils.executeOperation` 用於叫用的API `getAccountById` 服務作業設定於 `employeeAccount` 表單資料模型。
+下列範例指令碼使用`guidelib.dataIntegrationUtils.executeOperation` API來叫用在`employeeAccount`表單資料模型中設定的`getAccountById`服務作業。
 
-此 `getAccountById` 操作取得的值位於 `employeeID` 表單欄位作為 `empId` 引數並傳回對應員工的員工名稱、帳號及帳戶餘額。 輸出值會填入指定的表單欄位中。 例如，中的值 `name` 引數會填入 `fullName` 表單元素和值 `accountNumber` 中的引數 `account` 表單元素。
+`getAccountById`作業將`employeeID`表單欄位中的值當作`empId`引數的輸入，並傳回對應員工的員工姓名、帳號及帳戶餘額。 輸出值會填入指定的表單欄位中。 例如，`name`引數中的值已填入`fullName`表單元素中，`account`表單元素中`accountNumber`引數的值。
 
 ```javascript
 var operationInfo = {
@@ -114,23 +114,23 @@ guidelib.dataIntegrationUtils.executeOperation(operationInfo, inputs, outputs);
 
 ## 搭配回呼函式使用API {#using-the-api-callback}
 
-您也可以使用呼叫表單資料模型服務 `guidelib.dataIntegrationUtils.executeOperation` 具有回呼函式的API。 API語法如下：
+您也可以使用`guidelib.dataIntegrationUtils.executeOperation` API搭配回呼函式來叫用表單資料模型服務。 API語法如下：
 
 ```javascript
 guidelib.dataIntegrationUtils.executeOperation(operationInfo, inputs, outputs, callbackFunction)
 ```
 
-回呼函式可以具有 `success` 和 `failure` 回呼函式。
+回呼函式可以有`success`和`failure`回呼函式。
 
 ### 包含成功和失敗回呼函式的範例指令碼 {#callback-function-success-failure}
 
-以下範例指令碼使用 `guidelib.dataIntegrationUtils.executeOperation` 用於叫用的API `GETOrder` 服務作業設定於 `employeeOrder` 表單資料模型。
+下列範例指令碼使用`guidelib.dataIntegrationUtils.executeOperation` API來叫用在`employeeOrder`表單資料模型中設定的`GETOrder`服務作業。
 
-此 `GETOrder` 操作取得的值位於 `Order ID` 表單欄位作為 `orderId` 引數並傳回訂單數量值 `success` 回呼函式。  如果 `success` 回撥函式不會傳回訂單數量，而 `failure` 回呼函式會顯示 `Error occured` 訊息。
+`GETOrder`作業將`Order ID`表單欄位中的值當作`orderId`引數的輸入，並傳回`success`回呼函式中的訂單數量值。  如果`success`回呼函式未傳回訂單數量，`failure`回呼函式會顯示`Error occured`訊息。
 
 >[!NOTE]
 >
->如果您使用 `success` 回呼函式，則輸出值不會填入指定的表單欄位中。
+>如果您使用`success`回呼函式，則輸出值不會填入指定的表單欄位中。
 
 ```javascript
 var operationInfo = {

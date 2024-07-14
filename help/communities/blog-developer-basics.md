@@ -31,7 +31,7 @@ ht-degree: 1%
 
 ## 使用者端的Essentials {#essentials-for-client-side}
 
-部落格功能由兩個主要元件組成，這些元件可透過新增 [部落格功能](/help/communities/functions.md#blog-function) 或透過在作者編輯模式下將元件新增至頁面。
+部落格功能由兩個主要元件組成，這些元件可透過新增[部落格功能](/help/communities/functions.md#blog-function)或在作者編輯模式中將元件新增到頁面來使用。
 
 ### 部落格 {#blog}
 
@@ -59,7 +59,7 @@ ht-degree: 1%
   </tr>
   <tr>
    <td><strong> 屬性</strong></td>
-   <td>另請參閱 <a href="/help/communities/blog-feature.md">部落格功能</a></td>
+   <td>檢視<a href="/help/communities/blog-feature.md">部落格功能</a></td>
   </tr>
  </tbody>
 </table>
@@ -72,7 +72,7 @@ ht-degree: 1%
 | [**clientllibs**](/help/communities/clientlibs.md) | cq.social.hbs.journal_sidebar |
 | **範本** | /libs/social/journal/components/hbs/sidebar/sidebar.hbs |
 | **css** | /libs/social/journal/components/hbs/sidebar/clientlibs/sidebar.css |
-| **屬性** | 另請參閱 [部落格功能](/help/communities/blog-feature.md) |
+| **屬性** | 檢視[部落格功能](/help/communities/blog-feature.md) |
 
 * [使用者端自訂](/help/communities/client-customize.md)
 
@@ -86,29 +86,29 @@ ht-degree: 1%
 
 ### 部落格功能 {#blog-function}
 
-社群網站結構包含 [部落格功能](/help/communities/functions.md#blog-function) 有 `Blog` 和 `Blog Sidebar` 元件已設定。 Blog功能支援識別 [有特殊許可權的成員使用者群組](/help/communities/users.md#privileged-members-group).
+包含[部落格功能](/help/communities/functions.md#blog-function)的社群網站結構已設定`Blog`和`Blog Sidebar`元件。 部落格功能支援識別[有特殊許可權的成員使用者群組](/help/communities/users.md#privileged-members-group)。
 
 ### 存取部落格專案(UGC) {#accessing-blog-entries-ugc}
 
 UGC應使用其中一種標準仲裁方法進行仲裁。
-另請參閱 [稽核使用者產生的內容](/help/communities/moderate-ugc.md).
+請參閱[仲裁使用者產生的內容](/help/communities/moderate-ugc.md)。
 
-自AEM 6.1社群起，使用 [公用存放區](/help/communities/working-with-srp.md) for UGC包含對UGC的程式化存取，無論選擇的儲存選項（例如ASRP、MSRP或JSRP）為何。
+截至AEM 6.1 Communities，使用UGC的[公用存放區](/help/communities/working-with-srp.md)時，無論選擇的存放區選項（例如ASRP、MSRP或JSRP）為何，都可程式化存取UGC。
 
-**UGC在存放庫中的位置和格式可能會有所變更，恕不另行警告**.
+**存放庫中UGC的位置和格式可能會變更，而不會出現警告**。
 
 請參閱：
 
-* [儲存資源提供者概觀](/help/communities/srp.md)  — 簡介和存放庫使用概述。
-* [srp和UGC Essentials](/help/communities/srp-and-ugc.md) - SRP公用程式方法與範例。
-* [使用SRP存取UGC](/help/communities/accessing-ugc-with-srp.md)  — 程式碼指南。
-* [SocialUtils重構](/help/communities/socialutils.md)  — 將已棄用的公用程式方法對應到目前的SRP公用程式方法。
+* [儲存資源提供者概觀](/help/communities/srp.md) — 簡介和存放庫使用概觀。
+* [SRP與UGC Essentials](/help/communities/srp-and-ugc.md) - SRP公用程式方法與範例。
+* [使用SRP存取UGC](/help/communities/accessing-ugc-with-srp.md) — 編碼准則。
+* [SocialUtils重構](/help/communities/socialutils.md) — 將已棄用的公用程式方法對應到目前的SRP公用程式方法。
 
 ## 主要發行者 {#primary-publisher}
 
 當部署為發佈伺服器陣列時，必須識別輪詢排定發佈之文章的主要發佈者。
 
-另請參閱 [主要發行者](/help/communities/deploy-communities.md#primary-publisher) 以取得更多詳細資料。
+如需詳細資訊，請參閱[主要發行者](/help/communities/deploy-communities.md#primary-publisher)。
 
 ## 允許多媒體 {#allowing-rich-media}
 
@@ -118,6 +118,6 @@ AEM平台會封鎖其他網站的連結，以防止XSS攻擊，如所述
 
 自AEM 6.2起，先前需要手動進行的修改會包含在預設的AntiSamy設定檔案中。
 
-透過選取 `Embed Media from External Sites` 圖示：
+透過選取`Embed Media from External Sites`圖示，豐富媒體已內嵌在部落格中：
 
 ![媒體](assets/media-icon.png)

@@ -18,13 +18,13 @@ ht-degree: 0%
 
 # 在檔案格式和PDF之間轉換 {#converting-between-file-formatsand-pdf}
 
-**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms 。**
+**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
 
 **關於產生PDF服務**
 
 「產生PDF」服務會將原生檔案格式轉換為PDF。 它也會將PDF轉換為其他檔案格式，並最佳化PDF檔案的大小。
 
-「產生PDF」服務使用原生應用程式將下列檔案格式轉換為PDF。 除非另有指示，否則僅支援這些應用程式的德文、法文、英文和日文版。 *僅限Windows* 表示僅支援Windows Server® 2003和Windows Server 2008。
+「產生PDF」服務使用原生應用程式將下列檔案格式轉換為PDF。 除非另有指示，否則僅支援這些應用程式的德文、法文、英文和日文版。 *僅限Windows*&#x200B;表示只支援Windows Server® 2003和Windows Server 2008。
 
 * Microsoft Office 2003和2007可轉換DOC、DOCX、RTF、TXT、XLS、XLSX、PPT、PPTX、VSD、MPP、MPPX、XPS和PUB （僅限Windows）
 
@@ -84,7 +84,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如需有關產生PDF服務的詳細資訊，請參閱 [AEM Forms服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
+>如需有關產生PDF服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 ## 將Word檔案轉換為PDF檔案 {#converting-word-documents-to-pdf-documents}
 
@@ -92,11 +92,11 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如需其他檔案格式的詳細資訊，請參閱 [新增對其他原生檔案格式的支援](converting-file-formats-pdf.md#adding-support-for-additional-native-file-formats).
+>如需其他檔案格式的詳細資訊，請參閱[新增其他原生檔案格式的支援](converting-file-formats-pdf.md#adding-support-for-additional-native-file-formats)。
 
 >[!NOTE]
 >
->如需有關產生PDF服務的詳細資訊，請參閱 [AEM Forms服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
+>如需有關產生PDF服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 ### 步驟摘要 {#summary-of-steps}
 
@@ -108,21 +108,21 @@ ht-degree: 0%
 1. 將檔案轉換為PDF檔案。
 1. 擷取結果。
 
-**包含專案檔案**
+**包含專案檔**
 
 將必要的檔案納入您的開發專案中。 如果您使用Java建立使用者端應用程式，請包含必要的JAR檔案。 如果您使用Web服務，請確定您包含Proxy檔案。
 
 **建立產生PDF使用者端**
 
-在您以程式設計方式執行產生PDF作業之前，請先建立產生PDF服務使用者端。 如果您使用Java API，請建立 `GeneratePdfServiceClient` 物件。 如果您使用網站服務API，請建立 `GeneratePDFServiceService` 物件。
+在您以程式設計方式執行產生PDF作業之前，請先建立產生PDF服務使用者端。 如果您使用Java API，請建立`GeneratePdfServiceClient`物件。 如果您使用網站服務API，請建立`GeneratePDFServiceService`物件。
 
-**擷取檔案以轉換為PDF檔案**
+**擷取要轉換成PDF檔案的檔案**
 
 擷取Microsoft Word檔案以轉換為PDF檔案。
 
 **將檔案轉換為PDF檔案**
 
-建立「產生PDF」服務使用者端後，您可以叫用 `createPDF2` 方法。 此方法需要轉換檔案的相關資訊，包括副檔名。
+建立GeneratePDF服務使用者端後，您可以叫用`createPDF2`方法。 此方法需要轉換檔案的相關資訊，包括副檔名。
 
 **擷取結果**
 
@@ -150,39 +150,39 @@ ht-degree: 0%
 
 1. 建立產生PDF使用者端。
 
-   * 建立 `ServiceClientFactory` 包含連線屬性的物件。
-   * 建立 `GeneratePdfServiceClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 物件。
+   * 建立包含連線屬性的`ServiceClientFactory`物件。
+   * 使用它的建構函式並傳遞`ServiceClientFactory`物件來建立`GeneratePdfServiceClient`物件。
 
 1. 擷取檔案以轉換為PDF檔案。
 
-   * 建立 `java.io.FileInputStream` 物件，代表要透過其建構函式轉換的Word檔案。 傳遞字串值，指定檔案位置。
-   * 建立 `com.adobe.idp.Document` 物件，使用它的建構函式並傳遞 `java.io.FileInputStream` 物件。
+   * 使用建構函式建立代表要轉換之Word檔案的`java.io.FileInputStream`物件。 傳遞字串值，指定檔案位置。
+   * 使用它的建構函式並傳遞`java.io.FileInputStream`物件來建立`com.adobe.idp.Document`物件。
 
 1. 將檔案轉換為PDF檔案。
 
-   PDF透過叫用 `GeneratePdfServiceClient` 物件的 `createPDF2` 方法並傳遞下列值：
+   呼叫`GeneratePdfServiceClient`物件的`createPDF2`方法並傳遞下列值，以將檔案轉換為PDF檔案：
 
-   * A `com.adobe.idp.Document` 物件，代表要轉換的檔案。
-   * A `java.lang.String` 包含副檔名的物件。
-   * A `java.lang.String` 包含轉換中所要使用的檔案型別設定的物件。 檔案型別設定提供不同檔案型別（例如.doc或.xls）的轉換設定。
-   * A `java.lang.String` 包含要使用的PDF設定名稱的物件。 例如，您可以指定 `Standard`.
-   * A `java.lang.String` 包含要使用的安全性設定名稱的物件。
-   * 選填 `com.adobe.idp.Document` 包含產生PDF檔案時要套用之設定的物件。
-   * 選填 `com.adobe.idp.Document` 包含要套用至PDF檔案之中繼資料資訊的物件。
+   * 代表要轉換之檔案的`com.adobe.idp.Document`物件。
+   * 包含副檔名的`java.lang.String`物件。
+   * 包含要用於轉換之檔案型別設定的`java.lang.String`物件。 檔案型別設定提供不同檔案型別（例如.doc或.xls）的轉換設定。
+   * 包含要使用的PDF設定名稱的`java.lang.String`物件。 例如，您可以指定`Standard`。
+   * 包含要使用的安全性設定名稱的`java.lang.String`物件。
+   * 選擇性的`com.adobe.idp.Document`物件，其中包含產生PDF檔案時要套用的設定。
+   * 包含要套用至PDF檔案之中繼資料資訊的可選`com.adobe.idp.Document`物件。
 
-   此 `createPDF2` 方法傳回 `CreatePDFResult` 包含新PDF檔案和記錄資訊的物件。 記錄檔通常包含轉換請求產生的錯誤或警告訊息。
+   `createPDF2`方法傳回包含新PDF檔案和記錄檔資訊的`CreatePDFResult`物件。 記錄檔通常包含轉換請求產生的錯誤或警告訊息。
 
 1. 擷取結果。
 
    若要取得PDF檔案，請執行下列動作：
 
-   * 叫用 `CreatePDFResult` 物件的 `getCreatedDocument` 方法，會傳回 `com.adobe.idp.Document` 物件。
-   * 叫用 `com.adobe.idp.Document` 物件的 `copyToFile` 從上一步建立的物件中擷取PDF檔案的方法。
+   * 叫用`CreatePDFResult`物件的`getCreatedDocument`方法，此方法會傳回`com.adobe.idp.Document`物件。
+   * 叫用`com.adobe.idp.Document`物件的`copyToFile`方法，從上一步建立的物件中擷取PDF檔案。
 
-   如果您使用 `createPDF2` 取得日誌檔案的方法(不適用於HTML轉換)，請執行下列動作：
+   如果您使用`createPDF2`方法取得記錄檔案(不適用於HTML轉換)，請執行下列動作：
 
-   * 叫用 `CreatePDFResult` 物件的 `getLogDocument` 方法。 這會傳回 `com.adobe.idp.Document` 物件。
-   * 叫用 `com.adobe.idp.Document` 物件的 `copyToFile` 擷取記錄檔案的方法。
+   * 叫用`CreatePDFResult`物件的`getLogDocument`方法。 這會傳回`com.adobe.idp.Document`物件。
+   * 叫用`com.adobe.idp.Document`物件的`copyToFile`方法來擷取記錄檔案。
 
 **另請參閱**
 
@@ -200,53 +200,53 @@ ht-degree: 0%
 
 1. 包含專案檔案。
 
-   建立使用MTOM的Microsoft .NET專案。 確定您使用下列WSDL定義： `http://localhost:8080/soap/services/GeneratePDFService?WSDL&lc_version=9.0.1`.
+   建立使用MTOM的Microsoft .NET專案。 確定您使用下列WSDL定義： `http://localhost:8080/soap/services/GeneratePDFService?WSDL&lc_version=9.0.1`。
 
    >[!NOTE]
    >
-   >取代 `localhost` 搭配託管AEM Forms之伺服器的IP位址。
+   >將`localhost`取代為主控AEM Forms之伺服器的IP位址。
 
 1. 建立產生PDF使用者端。
 
-   * 建立 `GeneratePDFServiceClient` 物件，使用它的預設建構函式。
-   * 建立 `GeneratePDFServiceClient.Endpoint.Address` 物件，使用 `System.ServiceModel.EndpointAddress` 建構函式。 將指定WSDL的字串值傳遞至AEM Forms服務(例如， `http://localhost:8080/soap/services/GeneratePDFService?blob=mtom`.) 您不需要使用 `lc_version` 屬性。 不過，請指定 `?blob=mtom`.
-   * 建立 `System.ServiceModel.BasicHttpBinding` 物件，方法是取得 `GeneratePDFServiceClient.Endpoint.Binding` 欄位。 將傳回值轉換為 `BasicHttpBinding`.
-   * 設定 `System.ServiceModel.BasicHttpBinding` 物件的 `MessageEncoding` 欄位至 `WSMessageEncoding.Mtom`. 此值可確保使用MTOM。
+   * 使用預設建構函式建立`GeneratePDFServiceClient`物件。
+   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`GeneratePDFServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞至AEM Forms服務（例如，`http://localhost:8080/soap/services/GeneratePDFService?blob=mtom`）。 您不需要使用`lc_version`屬性。 但是，請指定`?blob=mtom`。
+   * 取得`GeneratePDFServiceClient.Endpoint.Binding`欄位的值，以建立`System.ServiceModel.BasicHttpBinding`物件。 將傳回值轉換為`BasicHttpBinding`。
+   * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作來啟用基本的HTTP驗證：
 
-      * 將AEM表單使用者名稱指派給欄位 `GeneratePDFServiceClient.ClientCredentials.UserName.UserName`.
-      * 將對應的密碼值指派給欄位 `GeneratePDFServiceClient.ClientCredentials.UserName.Password`.
-      * 指派常數值 `HttpClientCredentialType.Basic` 至欄位 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
-      * 指派常數值 `BasicHttpSecurityMode.TransportCredentialOnly` 至欄位 `BasicHttpBindingSecurity.Security.Mode`.
+      * 將AEM表單使用者名稱指派給欄位`GeneratePDFServiceClient.ClientCredentials.UserName.UserName`。
+      * 將對應的密碼值指派給欄位`GeneratePDFServiceClient.ClientCredentials.UserName.Password`。
+      * 將常數值`HttpClientCredentialType.Basic`指派給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+      * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`指派給欄位`BasicHttpBindingSecurity.Security.Mode`。
 
 1. 擷取檔案以轉換為PDF檔案。
 
-   * 建立 `BLOB` 物件（使用其建構函式）。 此 `BLOB` 物件可用來儲存您要轉換成PDF檔案的檔案。
-   * 建立 `System.IO.FileStream` 物件，透過叫用它的建構函式。 傳遞字串值，該值代表要轉換的檔案位置以及開啟檔案的模式。
-   * 建立位元組陣列，儲存 `System.IO.FileStream` 物件。 您可以取得 `System.IO.FileStream` 物件的 `Length` 屬性。
-   * 透過叫用 `System.IO.FileStream` 物件的 `Read` 方法，並傳遞位元組陣列、起始位置以及要讀取的資料流長度。
-   * 填入 `BLOB` 物件，透過指派給其 `MTOM` 屬性位元組陣列的內容。
+   * 使用物件的建構函式建立`BLOB`物件。 `BLOB`物件是用來儲存您要轉換成PDF檔案的檔案。
+   * 透過叫用它的建構函式來建立`System.IO.FileStream`物件。 傳遞字串值，該值代表要轉換的檔案位置以及開啟檔案的模式。
+   * 建立位元組陣列以儲存`System.IO.FileStream`物件的內容。 您可以取得`System.IO.FileStream`物件的`Length`屬性來決定位元組陣列的大小。
+   * 呼叫`System.IO.FileStream`物件的`Read`方法，並傳遞要讀取的位元組陣列、起始位置和資料流長度，以資料流資料填入位元組陣列。
+   * 將位元組陣列的內容指派給其`MTOM`屬性，以填入`BLOB`物件。
 
 1. 將檔案轉換為PDF檔案。
 
-   PDF透過叫用 `GeneratePDFServiceService` 物件的 `CreatePDF2` 方法並傳遞下列值：
+   呼叫`GeneratePDFServiceService`物件的`CreatePDF2`方法並傳遞下列值，以將檔案轉換為PDF檔案：
 
-   * A `BLOB` 物件，代表要轉換的檔案。
+   * 代表要轉換之檔案的`BLOB`物件。
    * 包含副檔名的字串。
-   * A `java.lang.String` 包含轉換中所要使用的檔案型別設定的物件。 檔案型別設定提供不同檔案型別（例如.doc或.xls）的轉換設定。
-   * 字串物件，包含要使用的PDF設定。 您可以指定 `Standard`.
-   * 字串物件，包含要使用的安全性設定。 您可以指定 `No Security`.
-   * 選填 `BLOB` 包含產生PDF檔案時要套用之設定的物件。
-   * 選填 `BLOB` 包含要套用至PDF檔案之中繼資料資訊的物件。
-   * 型別的輸出引數 `BLOB` 由填入的 `CreatePDF2` 方法。 此 `CreatePDF2` 方法會將轉換後的檔案填入此物件中。 （只有Web服務呼叫才需要此引數值）。
-   * 型別的輸出引數 `BLOB` 由填入的 `CreatePDF2` 方法。 此 `CreatePDF2` 方法會以記錄檔案填入此物件。 （只有Web服務呼叫才需要此引數值）。
+   * 包含要用於轉換之檔案型別設定的`java.lang.String`物件。 檔案型別設定提供不同檔案型別（例如.doc或.xls）的轉換設定。
+   * 字串物件，包含要使用的PDF設定。 您可以指定`Standard`。
+   * 字串物件，包含要使用的安全性設定。 您可以指定`No Security`。
+   * 選擇性的`BLOB`物件，其中包含產生PDF檔案時要套用的設定。
+   * 包含要套用至PDF檔案之中繼資料資訊的可選`BLOB`物件。
+   * 由`CreatePDF2`方法填入的型別`BLOB`的輸出引數。 `CreatePDF2`方法會將轉換的檔案填入此物件中。 （只有Web服務呼叫才需要此引數值）。
+   * 由`CreatePDF2`方法填入的型別`BLOB`的輸出引數。 `CreatePDF2`方法會將記錄檔案填入此物件。 （只有Web服務呼叫才需要此引數值）。
 
 1. 擷取結果。
 
-   * 透過指派以擷取轉換的PDF檔案 `BLOB` 物件的 `MTOM` 欄位至位元組陣列。 位元組陣列代表轉換的PDF檔案。 請確定您使用 `BLOB` 物件，當做輸出引數 `createPDF2` 方法。
-   * 建立 `System.IO.FileStream` 物件，方法是叫用其建構函式，並傳遞代表轉換PDF檔案之檔案位置的字串值。
-   * 建立 `System.IO.BinaryWriter` 物件，方法是叫用其建構函式，然後傳遞 `System.IO.FileStream` 物件。
-   * 透過叫用將位元組陣列的內容寫入PDF檔案 `System.IO.BinaryWriter` 物件的 `Write` 方法並傳遞位元組陣列。
+   * 將`BLOB`物件的`MTOM`欄位指派給位元組陣列，以擷取轉換的PDF檔案。 位元組陣列代表轉換的PDF檔案。 請確定您使用用作`createPDF2`方法之輸出引數的`BLOB`物件。
+   * 建立`System.IO.FileStream`物件，方法為叫用其建構函式，並傳遞代表轉換PDF檔案檔案位置的字串值。
+   * 透過叫用它的建構函式並傳遞`System.IO.FileStream`物件來建立`System.IO.BinaryWriter`物件。
+   * 呼叫`System.IO.BinaryWriter`物件的`Write`方法並傳遞位元組陣列，將位元組陣列的內容寫入PDF檔案。
 
 **另請參閱**
 
@@ -262,7 +262,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如需有關產生PDF服務的詳細資訊，請參閱 [AEM Forms服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
+>如需有關產生PDF服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 ### 步驟摘要 {#summary_of_steps-1}
 
@@ -274,13 +274,13 @@ ht-degree: 0%
 1. 將HTML內容轉換為PDF檔案。
 1. 擷取結果。
 
-**包含專案檔案**
+**包含專案檔**
 
 將必要的檔案納入您的開發專案中。 如果您使用Java建立使用者端應用程式，請包含必要的JAR檔案。 如果您使用Web服務，請確定您包含Proxy檔案。
 
 **建立產生PDF使用者端**
 
-您必須先建立產生PDF服務使用者端，才能以程式設計方式執行產生PDF作業。 如果您使用Java API，請建立 `GeneratePdfServiceClient` 物件。 如果您使用網站服務API，請建立 `GeneratePDFServiceService`.
+您必須先建立產生PDF服務使用者端，才能以程式設計方式執行產生PDF作業。 如果您使用Java API，請建立`GeneratePdfServiceClient`物件。 如果您使用網站服務API，請建立`GeneratePDFServiceService`。
 
 **擷取HTML內容以轉換為PDF檔案**
 
@@ -316,7 +316,7 @@ ht-degree: 0%
 
 1. 建立產生PDF使用者端。
 
-   建立 `GeneratePdfServiceClient` 物件，使用它的建構函式傳遞 `ServiceClientFactory` 包含連線屬性的物件。
+   使用它的建構函式並傳遞包含連線屬性的`ServiceClientFactory`物件來建立`GeneratePdfServiceClient`物件。
 
 1. 擷取HTML內容以轉換為PDF檔案。
 
@@ -324,20 +324,20 @@ ht-degree: 0%
 
 1. 將HTML內容轉換為PDF檔案。
 
-   叫用 `GeneratePdfServiceClient` 物件的 `htmlToPDF2` 方法並傳遞下列值：
+   叫用`GeneratePdfServiceClient`物件的`htmlToPDF2`方法，並傳遞下列值：
 
-   * A `java.lang.String` 包含要轉換之HTML檔案URL的物件。
-   * A `java.lang.String` 包含轉換中所要使用的檔案型別設定的物件。 檔案型別設定可包含串流層級。
-   * A `java.lang.String` 包含要使用的安全性設定名稱的物件。
-   * 選填 `com.adobe.idp.Document` 包含產生PDF檔案時要套用之設定的物件。 如果未提供此資訊，則會根據前三個引數自動選擇設定。
-   * 選填 `com.adobe.idp.Document` 包含要套用至PDF檔案之中繼資料資訊的物件。
+   * 包含要轉換之HTML檔案URL的`java.lang.String`物件。
+   * 包含要用於轉換之檔案型別設定的`java.lang.String`物件。 檔案型別設定可包含串流層級。
+   * 包含要使用的安全性設定名稱的`java.lang.String`物件。
+   * 選擇性的`com.adobe.idp.Document`物件，其中包含產生PDF檔案時要套用的設定。 如果未提供此資訊，則會根據前三個引數自動選擇設定。
+   * 包含要套用至PDF檔案之中繼資料資訊的可選`com.adobe.idp.Document`物件。
 
 1. 擷取結果。
 
-   此 `htmlToPDF2` 方法傳回 `HtmlToPdfResult` 包含已產生新PDF檔案的物件。 若要取得新建立的PDF檔案，請執行下列動作：
+   `htmlToPDF2`方法傳回`HtmlToPdfResult`物件，其中包含已產生的新PDF檔案。 若要取得新建立的PDF檔案，請執行下列動作：
 
-   * 叫用 `HtmlToPdfResult` 物件的 `getCreatedDocument` 方法。 這會傳回 `com.adobe.idp.Document` 物件。
-   * 叫用 `com.adobe.idp.Document` 物件的 `copyToFile` 從上一步建立的物件中擷取PDF檔案的方法。
+   * 叫用`HtmlToPdfResult`物件的`getCreatedDocument`方法。 這會傳回`com.adobe.idp.Document`物件。
+   * 叫用`com.adobe.idp.Document`物件的`copyToFile`方法，從上一步建立的物件中擷取PDF檔案。
 
 **另請參閱**
 
@@ -357,24 +357,24 @@ ht-degree: 0%
 
 1. 包含專案檔案。
 
-   建立使用MTOM的Microsoft .NET專案。 確定您使用下列WSDL定義： `http://localhost:8080/soap/services/GeneratePDFService?WSDL&lc_version=9.0.1`.
+   建立使用MTOM的Microsoft .NET專案。 確定您使用下列WSDL定義： `http://localhost:8080/soap/services/GeneratePDFService?WSDL&lc_version=9.0.1`。
 
    >[!NOTE]
    >
-   >取代 `localhost` 搭配託管AEM Forms之伺服器的IP位址。
+   >將`localhost`取代為主控AEM Forms之伺服器的IP位址。
 
 1. 建立產生PDF使用者端。
 
-   * 建立 `GeneratePDFServiceClient` 物件，使用它的預設建構函式。
-   * 建立 `GeneratePDFServiceClient.Endpoint.Address` 物件，使用 `System.ServiceModel.EndpointAddress` 建構函式。 將指定WSDL的字串值傳遞至AEM Forms服務(例如， `http://localhost:8080/soap/services/GeneratePDFService?blob=mtom`.) 您不需要使用 `lc_version` 屬性。 不過，請指定 `?blob=mtom`.
-   * 建立 `System.ServiceModel.BasicHttpBinding` 物件，方法是取得 `GeneratePDFServiceClient.Endpoint.Binding` 欄位。 將傳回值轉換為 `BasicHttpBinding`.
-   * 設定 `System.ServiceModel.BasicHttpBinding` 物件的 `MessageEncoding` 欄位至 `WSMessageEncoding.Mtom`. 此值可確保使用MTOM。
+   * 使用預設建構函式建立`GeneratePDFServiceClient`物件。
+   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`GeneratePDFServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞至AEM Forms服務（例如，`http://localhost:8080/soap/services/GeneratePDFService?blob=mtom`）。 您不需要使用`lc_version`屬性。 但是，請指定`?blob=mtom`。
+   * 取得`GeneratePDFServiceClient.Endpoint.Binding`欄位的值，以建立`System.ServiceModel.BasicHttpBinding`物件。 將傳回值轉換為`BasicHttpBinding`。
+   * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作來啟用基本的HTTP驗證：
 
-      * 將AEM表單使用者名稱指派給欄位 `GeneratePDFServiceClient.ClientCredentials.UserName.UserName`.
-      * 將對應的密碼值指派給欄位 `GeneratePDFServiceClient.ClientCredentials.UserName.Password`.
-      * 指派常數值 `HttpClientCredentialType.Basic` 至欄位 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
-      * 指派常數值 `BasicHttpSecurityMode.TransportCredentialOnly` 至欄位 `BasicHttpBindingSecurity.Security.Mode`.
+      * 將AEM表單使用者名稱指派給欄位`GeneratePDFServiceClient.ClientCredentials.UserName.UserName`。
+      * 將對應的密碼值指派給欄位`GeneratePDFServiceClient.ClientCredentials.UserName.Password`。
+      * 將常數值`HttpClientCredentialType.Basic`指派給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+      * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`指派給欄位`BasicHttpBindingSecurity.Security.Mode`。
 
 1. 擷取HTML內容以轉換為PDF檔案。
 
@@ -382,21 +382,21 @@ ht-degree: 0%
 
 1. 將HTML內容轉換為PDF檔案。
 
-   透過叫用「 」，將HTML內容轉換為PDF檔案 `GeneratePDFServiceService` 物件的 `HtmlToPDF2` 方法並傳遞下列值：
+   呼叫`GeneratePDFServiceService`物件的`HtmlToPDF2`方法，將HTML內容轉換為PDF檔案，並傳遞下列值：
 
    * 包含要轉換之HTML內容的字串。
-   * A `java.lang.String` 包含轉換中所要使用的檔案型別設定的物件。
+   * 包含要用於轉換之檔案型別設定的`java.lang.String`物件。
    * 字串物件，包含要使用的安全性設定。
-   * 選填 `BLOB` 包含產生PDF檔案時要套用之設定的物件。
-   * 選填 `BLOB` 包含要套用至PDF檔案之中繼資料資訊的物件。
-   * 型別的輸出引數 `BLOB` 由填入的 `CreatePDF2` 方法。 此 `CreatePDF2` 方法會將轉換後的檔案填入此物件中。 （只有Web服務呼叫才需要此引數值）。
+   * 選擇性的`BLOB`物件，其中包含產生PDF檔案時要套用的設定。
+   * 包含要套用至PDF檔案之中繼資料資訊的可選`BLOB`物件。
+   * 由`CreatePDF2`方法填入的型別`BLOB`的輸出引數。 `CreatePDF2`方法會將轉換的檔案填入此物件中。 （只有Web服務呼叫才需要此引數值）。
 
 1. 擷取結果。
 
-   * 透過指派以擷取轉換的PDF檔案 `BLOB` 物件的 `MTOM` 欄位至位元組陣列。 位元組陣列代表轉換的PDF檔案。 請確定您使用 `BLOB` 物件，當做輸出引數 `HtmlToPDF2` 方法。
-   * 建立 `System.IO.FileStream` 物件，方法是叫用其建構函式，並傳遞代表轉換PDF檔案之檔案位置的字串值。
-   * 建立 `System.IO.BinaryWriter` 物件，方法是叫用其建構函式，然後傳遞 `System.IO.FileStream` 物件。
-   * 透過叫用將位元組陣列的內容寫入PDF檔案 `System.IO.BinaryWriter` 物件的 `Write` 方法並傳遞位元組陣列。
+   * 將`BLOB`物件的`MTOM`欄位指派給位元組陣列，以擷取轉換的PDF檔案。 位元組陣列代表轉換的PDF檔案。 請確定您使用用作`HtmlToPDF2`方法之輸出引數的`BLOB`物件。
+   * 建立`System.IO.FileStream`物件，方法為叫用其建構函式，並傳遞代表轉換PDF檔案檔案位置的字串值。
+   * 透過叫用它的建構函式並傳遞`System.IO.FileStream`物件來建立`System.IO.BinaryWriter`物件。
+   * 呼叫`System.IO.BinaryWriter`物件的`Write`方法並傳遞位元組陣列，將位元組陣列的內容寫入PDF檔案。
 
 **另請參閱**
 
@@ -412,7 +412,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如需有關產生PDF服務的詳細資訊，請參閱 [AEM Forms服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
+>如需有關產生PDF服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 ### 步驟摘要 {#summary_of_steps-2}
 
@@ -424,13 +424,13 @@ ht-degree: 0%
 1. 轉換PDF檔案。
 1. 儲存轉換的檔案。
 
-**包含專案檔案**
+**包含專案檔**
 
 將必要的檔案納入您的開發專案中。 如果您使用Java建立使用者端應用程式，請包含必要的JAR檔案。 如果您使用Web服務，請確定您包含Proxy檔案。
 
 **建立產生PDF使用者端**
 
-您必須先建立產生PDF服務使用者端，才能以程式設計方式執行產生PDF作業。 如果您使用Java API，請建立 `GeneratePdfServiceClient` 物件。 如果您使用網站服務API，請建立 `GeneratePDFServiceService` 物件。
+您必須先建立產生PDF服務使用者端，才能以程式設計方式執行產生PDF作業。 如果您使用Java API，請建立`GeneratePdfServiceClient`物件。 如果您使用網站服務API，請建立`GeneratePDFServiceService`物件。
 
 **擷取要轉換的PDF檔案**
 
@@ -466,31 +466,31 @@ ht-degree: 0%
 
 1. 建立產生PDF使用者端。
 
-   建立 `GeneratePdfServiceClient` 物件，使用它的建構函式傳遞 `ServiceClientFactory` 包含連線屬性的物件。
+   使用它的建構函式並傳遞包含連線屬性的`ServiceClientFactory`物件來建立`GeneratePdfServiceClient`物件。
 
 1. 擷取要轉換的PDF檔案。
 
-   * 建立 `java.io.FileInputStream` 物件，代表使用建構函式轉換的PDF檔案。 傳遞字串值，指定PDF檔案的位置。
-   * 建立 `com.adobe.idp.Document` 物件，使用它的建構函式並傳遞 `java.io.FileInputStream` 物件。
+   * 使用建構函式建立代表要轉換之PDF檔案的`java.io.FileInputStream`物件。 傳遞字串值，指定PDF檔案的位置。
+   * 使用它的建構函式並傳遞`java.io.FileInputStream`物件來建立`com.adobe.idp.Document`物件。
 
 1. 轉換PDF檔案。
 
-   叫用 `GeneratePdfServiceClient` 物件的 `exportPDF2` 方法並傳遞下列值：
+   叫用`GeneratePdfServiceClient`物件的`exportPDF2`方法，並傳遞下列值：
 
-   * A `com.adobe.idp.Document` 代表要轉換之PDF檔案的物件。
-   * A `java.lang.String` 包含要轉換之檔案名稱的物件。
-   * A `java.lang.String` 包含Adobe PDF設定名稱的物件。
-   * A `ConvertPDFFormatType` 指定轉換目標檔案型別的物件。
-   * 選填 `com.adobe.idp.Document` 包含產生PDF檔案時要套用之設定的物件。
+   * 代表要轉換之PDF檔案的`com.adobe.idp.Document`物件。
+   * 包含要轉換之檔案名稱的`java.lang.String`物件。
+   * 包含Adobe PDF設定名稱的`java.lang.String`物件。
+   * 指定轉換目標檔案型別的`ConvertPDFFormatType`物件。
+   * 選擇性的`com.adobe.idp.Document`物件，其中包含產生PDF檔案時要套用的設定。
 
-   此 `exportPDF2` 方法傳回 `ExportPDFResult` 包含轉換檔案的物件。
+   `exportPDF2`方法傳回包含轉換檔案的`ExportPDFResult`物件。
 
 1. 轉換PDF檔案。
 
    若要取得新建立的檔案，請執行下列動作：
 
-   * 叫用 `ExportPDFResult` 物件的 `getConvertedDocument` 方法。 這會傳回 `com.adobe.idp.Document` 物件。
-   * 叫用 `com.adobe.idp.Document` 物件的 `copyToFile` 擷取新檔案的方法。
+   * 叫用`ExportPDFResult`物件的`getConvertedDocument`方法。 這會傳回`com.adobe.idp.Document`物件。
+   * 叫用`com.adobe.idp.Document`物件的`copyToFile`方法來擷取新檔案。
 
 **另請參閱**
 
@@ -508,50 +508,50 @@ ht-degree: 0%
 
 1. 包含專案檔案。
 
-   建立使用MTOM的Microsoft .NET專案。 確定您使用下列WSDL定義： `http://localhost:8080/soap/services/GeneratePDFService?WSDL&lc_version=9.0.1`.
+   建立使用MTOM的Microsoft .NET專案。 確定您使用下列WSDL定義： `http://localhost:8080/soap/services/GeneratePDFService?WSDL&lc_version=9.0.1`。
 
    >[!NOTE]
    >
-   >取代 `localhost` 搭配託管AEM Forms之伺服器的IP位址。
+   >將`localhost`取代為主控AEM Forms之伺服器的IP位址。
 
 1. 建立「產生PDf」使用者端。
 
-   * 建立 `GeneratePDFServiceClient` 物件，使用它的預設建構函式。
-   * 建立 `GeneratePDFServiceClient.Endpoint.Address` 物件，使用 `System.ServiceModel.EndpointAddress` 建構函式。 將指定WSDL的字串值傳遞至AEM Forms服務(例如， `http://localhost:8080/soap/services/GeneratePDFService?blob=mtom`.) 您不需要使用 `lc_version` 屬性。 不過，請指定 `?blob=mtom`.
-   * 建立 `System.ServiceModel.BasicHttpBinding` 物件，方法是取得 `GeneratePDFServiceClient.Endpoint.Binding` 欄位。 將傳回值轉換為 `BasicHttpBinding`.
-   * 設定 `System.ServiceModel.BasicHttpBinding` 物件的 `MessageEncoding` 欄位至 `WSMessageEncoding.Mtom`. 此值可確保使用MTOM。
+   * 使用預設建構函式建立`GeneratePDFServiceClient`物件。
+   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`GeneratePDFServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞至AEM Forms服務（例如，`http://localhost:8080/soap/services/GeneratePDFService?blob=mtom`）。 您不需要使用`lc_version`屬性。 但是，請指定`?blob=mtom`。
+   * 取得`GeneratePDFServiceClient.Endpoint.Binding`欄位的值，以建立`System.ServiceModel.BasicHttpBinding`物件。 將傳回值轉換為`BasicHttpBinding`。
+   * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作來啟用基本的HTTP驗證：
 
-      * 將AEM表單使用者名稱指派給欄位 `GeneratePDFServiceClient.ClientCredentials.UserName.UserName`.
-      * 將對應的密碼值指派給欄位 `GeneratePDFServiceClient.ClientCredentials.UserName.Password`.
-      * 指派常數值 `HttpClientCredentialType.Basic` 至欄位 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
-      * 指派常數值 `BasicHttpSecurityMode.TransportCredentialOnly` 至欄位 `BasicHttpBindingSecurity.Security.Mode`.
+      * 將AEM表單使用者名稱指派給欄位`GeneratePDFServiceClient.ClientCredentials.UserName.UserName`。
+      * 將對應的密碼值指派給欄位`GeneratePDFServiceClient.ClientCredentials.UserName.Password`。
+      * 將常數值`HttpClientCredentialType.Basic`指派給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+      * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`指派給欄位`BasicHttpBindingSecurity.Security.Mode`。
 
 1. 擷取要轉換的PDF檔案。
 
-   * 建立 `BLOB` 物件（使用其建構函式）。 此 `BLOB` 物件可用來儲存已轉換的PDF檔案。
-   * 建立 `System.IO.FileStream` 物件，方法是叫用其建構函式，並傳遞代表PDF檔案檔案位置及開啟檔案的模式的字串值。
-   * 建立位元組陣列，儲存 `System.IO.FileStream` 物件。 您可以取得 `System.IO.FileStream` 物件的 `Length` 屬性。
-   * 透過叫用 `System.IO.FileStream` 物件的 `Read` 方法，並傳遞位元組陣列、起始位置以及要讀取的資料流長度。
-   * 填入 `BLOB` 物件，透過指派給其 `MTOM` 屬性位元組陣列的內容。
+   * 使用物件的建構函式建立`BLOB`物件。 `BLOB`物件是用來儲存已轉換的PDF檔案。
+   * 建立`System.IO.FileStream`物件，方法為叫用其建構函式，並傳遞代表PDF檔案檔案位置和開啟檔案的模式的字串值。
+   * 建立位元組陣列以儲存`System.IO.FileStream`物件的內容。 您可以取得`System.IO.FileStream`物件的`Length`屬性來決定位元組陣列的大小。
+   * 呼叫`System.IO.FileStream`物件的`Read`方法，並傳遞要讀取的位元組陣列、起始位置和資料流長度，以資料流資料填入位元組陣列。
+   * 將位元組陣列的內容指派給其`MTOM`屬性，以填入`BLOB`物件。
 
 1. 轉換PDF檔案。
 
-   叫用 `GeneratePDFServiceServiceWse` 物件的 `ExportPDF2` 方法並傳遞下列值：
+   叫用`GeneratePDFServiceServiceWse`物件的`ExportPDF2`方法，並傳遞下列值：
 
-   * A `BLOB` 代表要轉換之PDF檔案的物件。
+   * 代表要轉換之PDF檔案的`BLOB`物件。
    * 包含要轉換之檔案的路徑名稱的字串。
-   * A `java.lang.String` 指定檔案位置的物件。
-   * 字串物件，指定轉換的目標檔案型別。 指定 `RTF`.
-   * 選填 `BLOB` 包含產生PDF檔案時要套用之設定的物件。
-   * 型別的輸出引數 `BLOB` 由填入的 `ExportPDF2` 方法。 此 `ExportPDF2` 方法會將轉換後的檔案填入此物件中。 （只有Web服務呼叫才需要此引數值）。
+   * 指定檔案位置的`java.lang.String`物件。
+   * 字串物件，指定轉換的目標檔案型別。 指定`RTF`。
+   * 選擇性的`BLOB`物件，其中包含產生PDF檔案時要套用的設定。
+   * 由`ExportPDF2`方法填入的型別`BLOB`的輸出引數。 `ExportPDF2`方法會將轉換的檔案填入此物件中。 （只有Web服務呼叫才需要此引數值）。
 
 1. 儲存轉換的檔案。
 
-   * 透過指派以下專案來擷取轉換的RTF檔案： `BLOB` 物件的 `MTOM` 欄位至位元組陣列。 位元組陣列代表轉換的RTF檔案。 請確定您使用 `BLOB` 物件，當做輸出引數 `ExportPDF2` 方法。
-   * 建立 `System.IO.FileStream` 物件，透過叫用它的建構函式。 傳遞代表RTF檔案位置的字串值。
-   * 建立 `System.IO.BinaryWriter` 物件，方法是叫用其建構函式，然後傳遞 `System.IO.FileStream` 物件。
-   * 透過叫用 `System.IO.BinaryWriter` 物件的 `Write` 方法並傳遞位元組陣列。
+   * 將`BLOB`物件的`MTOM`欄位指派給位元組陣列，以擷取轉換的RTF檔案。 位元組陣列代表轉換的RTF檔案。 請確定您使用用作`ExportPDF2`方法之輸出引數的`BLOB`物件。
+   * 透過叫用它的建構函式來建立`System.IO.FileStream`物件。 傳遞代表RTF檔案位置的字串值。
+   * 透過叫用它的建構函式並傳遞`System.IO.FileStream`物件來建立`System.IO.BinaryWriter`物件。
+   * 呼叫`System.IO.BinaryWriter`物件的`Write`方法並傳遞位元組陣列，將位元組陣列的內容寫入RTF檔案。
 
 **另請參閱**
 
@@ -579,9 +579,9 @@ ht-degree: 0%
 
 原生檔案轉換的元件互動
 
-本檔案使用術語 *原生應用程式* 表示用於產生原生檔案格式的應用程式，例如Microsoft Word。
+此檔案使用術語&#x200B;*原生應用程式*&#x200B;來表示用於產生原生檔案格式的應用程式，例如Microsoft Word。
 
-*AppMon* 是企業元件，會以使用者導覽至該應用程式顯示的對話方塊的方式，與原生應用程式互動。 AppMon用來指示應用程式(例如Microsoft Word)開啟和列印檔案的XML文法，包括下列循序工作：
+*AppMon*&#x200B;是企業元件，會以使用者瀏覽該應用程式顯示的對話方塊的方式與原生應用程式互動。 AppMon用來指示應用程式(例如Microsoft Word)開啟和列印檔案的XML文法，包括下列循序工作：
 
 1. 透過選取「檔案」>「開啟」來開啟檔案
 1. 確定出現「開啟」對話方塊；如果沒有，則處理錯誤
@@ -594,7 +594,7 @@ AppMon使用標準的Win32 API與協力廠商應用程式互動，以傳輸UI事
 
 由於這些Win32 API的限制，AppMon無法將這些UI事件分派到某些特定型別的視窗，例如浮動選單列（可在某些應用程式如TextPad中找到）以及某些型別的對話方塊，無法使用Win32 API擷取其內容。
 
-透過視覺化檢查可輕鬆識別浮動功能表列；但僅透過視覺化檢查可能無法識別特殊對話方塊型別。 您需要協力廠商應用程式，例如Microsoft Spy++ (Microsoft Visual C++開發環境的一部分)或其同等的WinID (可從以下網址免費下載： [https://www.dennisbabkin.com/php/download.php?what=WinID](https://www.dennisbabkin.com/php/download.php?what=WinID))，檢查對話方塊，以判斷AppMon是否能夠使用標準Win32 API與其互動。
+透過視覺化檢查可輕鬆識別浮動功能表列；但僅透過視覺化檢查可能無法識別特殊對話方塊型別。 您需要協力廠商應用程式，例如Microsoft Spy++ (Microsoft Visual C++開發環境的一部分)或其同等的WinID (可從[https://www.dennisbabkin.com/php/download.php?what=WinID](https://www.dennisbabkin.com/php/download.php?what=WinID)免費下載)，來檢查對話方塊，以判斷AppMon是否能夠使用標準Win32 API與其互動。
 
 如果WinID能夠擷取對話方塊內容（例如文字、子視窗、視窗類別ID等），則AppMon也能夠執行相同的動作。
 
@@ -612,12 +612,12 @@ AppMon使用標準的Win32 API與協力廠商應用程式互動，以傳輸UI事
   <tr>
    <td><p>管理設定 </p></td>
    <td><p>包括PDF設定、安全性設定和檔案型別設定。 </p><p>檔案型別設定會將副檔名與對應的原生應用程式相關聯。 檔案型別設定也指定用於列印原生檔案的原生應用程式設定。 </p></td>
-   <td><p>若要變更已支援原生應用程式的設定，系統管理員會在管理主控台中設定「檔案型別設定」。 </p><p>若要新增對新的原生檔案格式的支援，您必須手動編輯檔案。 (請參閱 <a href="converting-file-formats-pdf.md#adding-or-modifying-support-for-a-native-file-format">新增或修改對原生檔案格式的支援</a>.) </p></td>
+   <td><p>若要變更已支援原生應用程式的設定，系統管理員會在管理主控台中設定「檔案型別設定」。 </p><p>若要新增對新的原生檔案格式的支援，您必須手動編輯檔案。 （請參閱<a href="converting-file-formats-pdf.md#adding-or-modifying-support-for-a-native-file-format">新增或修改原生檔案格式的支援</a>。） </p></td>
   </tr>
   <tr>
    <td><p>指令碼 </p></td>
    <td><p>指定產生PDF服務與原生應用程式之間的互動。 這類互動通常會引導應用程式將檔案列印至Adobe PDF驅動程式。 </p><p>指令碼包含指示原生應用程式開啟特定對話方塊，以及針對這些對話方塊中的欄位和按鈕提供特定回應的指示。 </p></td>
-   <td><p>產生PDF服務包含所有支援原生應用程式的指令碼檔案。 您可以使用XML編輯應用程式來修改這些檔案。</p><p>若要新增新原生應用程式的支援，您必須建立指令碼檔案。 (請參閱 <a href="converting-file-formats-pdf.md#creating-or-modifying-an-additional-dialog-xml-file-for-a-native-application">為原生應用程式建立或修改其他對話方塊XML檔案</a>.) </p></td>
+   <td><p>產生PDF服務包含所有支援原生應用程式的指令碼檔案。 您可以使用XML編輯應用程式來修改這些檔案。</p><p>若要新增新原生應用程式的支援，您必須建立指令碼檔案。 （請參閱<a href="converting-file-formats-pdf.md#creating-or-modifying-an-additional-dialog-xml-file-for-a-native-application">為原生應用程式建立或修改其他對話方塊XML檔案</a>。） </p></td>
   </tr>
   <tr>
    <td><p>一般對話方塊指示 </p></td>
@@ -627,12 +627,12 @@ AppMon使用標準的Win32 API與協力廠商應用程式互動，以傳輸UI事
   <tr>
    <td><p>應用程式專用對話方塊指示</p></td>
    <td><p>指定如何回應應用程式專用的對話方塊。 </p><p>包含此資訊的檔案為appmon。<i>'[appname]'</i>.dialog。<i>'[locale]'</i>.xml （例如appmon.word.en_US.xml）。</p></td>
-   <td><p>請勿修改此檔案。 </p><p>若要新增新原生應用程式的對話方塊指示，請參閱 <a href="converting-file-formats-pdf.md#creating_or_modifying_an_additional_dialog_xml_file_for_a_native_application">為原生應用程式建立或修改其他對話方塊XML檔案</a>.</p></td>
+   <td><p>請勿修改此檔案。 </p><p>若要新增原生應用程式的對話方塊指示，請參閱<a href="converting-file-formats-pdf.md#creating_or_modifying_an_additional_dialog_xml_file_for_a_native_application">建立或修改原生應用程式的其他對話方塊XML檔案</a>。</p></td>
   </tr>
   <tr>
    <td><p>其他應用程式專用對話方塊指示 </p></td>
    <td><p>指定應用程式特定對話方塊指示的覆寫和新增專案。 區段會提供這類資訊的範例。 </p><p>包含此資訊的檔案為appmon。<i>'[appname]'</i>.addition.<i>'[locale]'</i>.xml。 例如appmon.addition.en_US.xml。</p></td>
-   <td><p>可以使用XML編輯應用程式來建立及修改此型別的檔案。 (請參閱 <a href="converting-file-formats-pdf.md#creating-or-modifying-an-additional-dialog-xml-file-for-a-native-application">為原生應用程式建立或修改其他對話方塊XML檔案</a>.) </p><p><strong>重要</strong>：針對伺服器將支援的每個原生應用程式，建立其他應用程式專屬對話方塊指示。 </p></td>
+   <td><p>可以使用XML編輯應用程式來建立及修改此型別的檔案。 （請參閱<a href="converting-file-formats-pdf.md#creating-or-modifying-an-additional-dialog-xml-file-for-a-native-application">為原生應用程式建立或修改其他對話方塊XML檔案</a>。） </p><p><strong>重要</strong>：針對伺服器將支援的每個原生應用程式，建立其他應用程式專屬對話方塊指示。 </p></td>
   </tr>
  </tbody>
 </table>
@@ -647,13 +647,13 @@ AppMon使用標準的Win32 API與協力廠商應用程式互動，以傳輸UI事
 
 本節和下一節會根據所說明的透視使用不同術語來表示對話方塊及其包含的元件。 對話方塊元件是按鈕、欄位和組合方塊等專案。
 
-當本節和下一節從使用者的角度描述對話方塊及其元件時，例如 *對話方塊*， *按鈕*， *欄位*、和 *下拉式方塊* 都會使用。
+當本節和下一節從使用者的角度描述對話方塊及其元件時，會使用&#x200B;*對話方塊*、*按鈕*、*欄位*&#x200B;和&#x200B;*組合方塊*&#x200B;等詞語。
 
-當本節和下一節從內部表示的角度描述對話方塊及其元件時，術語 *視窗元素* 已使用。 視窗元素的內部表示是一種階層，其中每個視窗元素例項都由標籤標識。 視窗元素例項也描述其實體特性和行為。
+當本節和下一節從內部表示的角度描述對話方塊及其元件時，會使用術語&#x200B;*視窗元素*。 視窗元素的內部表示是一種階層，其中每個視窗元素例項都由標籤標識。 視窗元素例項也描述其實體特性和行為。
 
 從使用者的角度來看，對話方塊及其元件會顯示不同的行為，其中某些對話方塊元素會隱藏直到啟動。 從內部表示的觀點來看，不存在這樣的行為問題。 例如，對話方塊的內部表示看起來與其所包含元件的表示類似，但元件會巢狀化於對話方塊內。
 
-本節說明為AppMon提供指示的XML元素。 這些元素的名稱如下 `dialog` 元素和 `window` 元素。 本檔案使用等寬字型來區分XML元素。 此 `dialog` element會識別XML指令碼檔案可能導致顯示（有意或無意地）的對話方塊。 此 `window` element可識別視窗元素（對話方塊或對話方塊的元件）。
+本節說明為AppMon提供指示的XML元素。 這些元素具有`dialog`元素和`window`元素之類的名稱。 本檔案使用等寬字型來區分XML元素。 `dialog`專案會識別XML指令碼檔案可能導致的對話方塊，無論是有意還是無意的顯示。 `window`元素識別視窗元素（對話方塊或對話方塊的元件）。
 
 #### 階層 {#hierarchy}
 
@@ -665,7 +665,7 @@ AppMon使用標準的Win32 API與協力廠商應用程式互動，以傳輸UI事
 
 #### 指令碼XML檔案 {#script-xml-files}
 
-A *指令碼XML檔案* 指定一系列步驟，指示原生應用程式瀏覽至特定視窗元素，然後提供這些元素的回應。 大多數回應是文字或按鍵，對應到使用者提供給對應對話方塊中的欄位、下拉式方塊或按鈕的輸入。
+*指令碼XML檔案*&#x200B;指定了一系列步驟，指示原生應用程式瀏覽至特定視窗元素，然後提供這些元素的回應。 大多數回應是文字或按鍵，對應到使用者提供給對應對話方塊中的欄位、下拉式方塊或按鈕的輸入。
 
 產生PDF服務支援指令碼XML檔案的目的是指示原生應用程式列印原生檔案。 不過，指令碼XML檔案可用於完成使用者在與原生應用程式的對話方塊互動時可執行的任何工作。
 
@@ -679,15 +679,15 @@ A *指令碼XML檔案* 指定一系列步驟，指示原生應用程式瀏覽至
 
 執行原生應用程式會顯示不同的對話方塊，無論原生應用程式是處於可見模式還是隱藏模式，都會顯示這些對話方塊。 對話方塊可由作業系統或應用程式本身產生。 當原生應用程式在產生PDF服務的控制下執行時，系統和原生應用程式對話方塊會顯示在隱藏的視窗中。
 
-A *對話方塊XML檔案* 指定產生PDF服務如何回應系統或原生應用程式對話方塊。 對話方塊XML檔案允許「產生PDF」服務以有助於轉換過程的方式回應未提示的對話方塊。
+*對話方塊XML檔案*&#x200B;指定產生PDF服務如何回應系統或原生應用程式對話方塊。 對話方塊XML檔案允許「產生PDF」服務以有助於轉換過程的方式回應未提示的對話方塊。
 
 當系統或原生應用程式顯示目前執行的指令碼XML檔案未處理的對話方塊時，產生PDF服務會依此順序搜尋對話方塊XML檔案，並在找到相符專案時停止：
 
-* appmon。`[appname]`其他……`[locale]`.xml
+* appmon。`[appname]`.其他。`[locale]`.xml
 * appmon。`[appname]`。`[locale]`.xml （請勿修改此檔案。）
 * appmon.global.`[locale]`.xml （請勿修改此檔案。）
 
-如果「產生PDF」服務找到對話方塊的相符專案，會透過傳送按鍵或對話方塊指定的其他動作來解除該專案。 如果對話方塊的指示指定了中止訊息，則產生PDF服務會終止目前執行的工作並產生錯誤訊息。 此類中止訊息將會指定於 `abortMessage` 指令碼XML語法中的元素。
+如果「產生PDF」服務找到對話方塊的相符專案，會透過傳送按鍵或對話方塊指定的其他動作來解除該專案。 如果對話方塊的指示指定了中止訊息，則產生PDF服務會終止目前執行的工作並產生錯誤訊息。 在指令碼XML文法的`abortMessage`元素中會指定此類中止訊息。
 
 如果「產生PDF」服務遇到的對話方塊未在先前列出的任何檔案中說明，則「產生PDF」服務會將該對話方塊的註解併入日誌檔專案中。 目前執行的工作最終逾時。 然後，您可以使用日誌檔案中的資訊，在原生應用程式的額外對話方塊XML檔案中撰寫新指示。
 
@@ -709,13 +709,13 @@ A *對話方塊XML檔案* 指定產生PDF服務如何回應系統或原生應用
 
 您可以使用這三個屬性的任一或組合來識別視窗。
 
-如果屬性無法識別註解，您可以改為使用相對於其父項的索引來識別視窗元素。 一個 *索引* 指定視窗元素相對於其同層級視窗元素的位置。 通常，索引是識別組合方塊的唯一方法。
+如果屬性無法識別註解，您可以改為使用相對於其父項的索引來識別視窗元素。 *index*&#x200B;指定視窗元素相對於其同層級視窗元素的位置。 通常，索引是識別組合方塊的唯一方法。
 
 請注意下列問題：
 
-* Microsoft Spy++會使用&amp;符號來識別註解的熱鍵，以顯示註解。 例如，Spy++會將一個「列印」對話方塊的標題顯示為 `Pri&nt`，表示快速鍵為 *n*. 指令碼和對話方塊XML檔案中的標題必須省略&amp;符號。
-* 部分註解包含分行符號。 「產生PDF」服務無法識別分行符號。 如果註解包含分行符號，請包含足夠的註解以與其他選單專案區分開來，然後對省略的零件使用規則運算式。 範例為( `^Long caption title$`)。 (請參閱 [在註解屬性中使用規則運算式](converting-file-formats-pdf.md#using-regular-expressions-in-caption-attributes).)
-* 針對保留的XML字元使用字元實體（也稱為逸出序列）。 例如，使用 `&` 對於&amp;符號， `<` 和 `>` 對於小於和大於符號， `&apos;` 撇號，和 `&quot;` （對於引號）。
+* Microsoft Spy++會使用&amp;符號來識別註解的熱鍵，以顯示註解。 例如，Spy++將一個「列印」對話方塊的標題顯示為`Pri&nt`，表示快速鍵是&#x200B;*n*。 指令碼和對話方塊XML檔案中的標題必須省略&amp;符號。
+* 部分註解包含分行符號。 「產生PDF」服務無法識別分行符號。 如果註解包含分行符號，請包含足夠的註解以與其他選單專案區分開來，然後對省略的零件使用規則運算式。 範例為( `^Long caption title$`)。 （請參閱[在註解屬性中使用規則運算式](converting-file-formats-pdf.md#using-regular-expressions-in-caption-attributes)。）
+* 針對保留的XML字元使用字元實體（也稱為逸出序列）。 例如，使用`&`代表&amp;符號，`<`和`>`代表小於和大於符號，`&apos;`代表單引號，`&quot;`代表雙引號。
 
 如果您打算使用對話方塊或指令碼XML檔案，則應安裝應用程式Microsoft Spy++。
 
@@ -723,24 +723,24 @@ A *對話方塊XML檔案* 指定產生PDF服務如何回應系統或原生應用
 
 對話方塊和指令碼檔案位於appmondata.jar檔案中。 您必須先取消封裝這個JAR檔案，才能修改這些檔案中的任何一個，或是加入新的指令碼或對話方塊檔案。 例如，假設您要新增對EditPlus應用程式的支援。 您可以建立兩個XML檔案，名為appmon.editplus.script.en_US.xml和appmon.editplus.script.addition.en_US.xml。 這些XML指令碼必須新增至adobe-appmondata.jar檔案的兩個位置，如下所示：
 
-* adobe-livecycle-native-jboss-x86_win32.ear > adobe-Native2PDFSvc.war\WEB-INF\lib > adobe-native.jar > Native2PDFSvc-native.jar\bin > adobe-appmondata.jar\com\adobe\appmon。 adobe-livecycle-native-jboss-x86_win32.ear檔案位於匯出資料夾： `[AEM forms install directory]\configurationManager`. (如果將AEM Forms部署在其他J2EE應用程式伺服器上，請將adobe-livecycle-native-jboss-x86_win32.ear檔案取代為對應至J2EE應用程式伺服器的EAR檔案。)
-* adobe-generatepdf-dsc.jar > adobe-appmondata.jar\com\adobe\appmon （adobe-appmondata.jar檔案位於adobe-generatepdf-dsc.jar檔案中）。 adobe-generatepdf-dsc.jar檔案位於 `[AEM forms install directory]\deploy` 資料夾。
+* adobe-livecycle-native-jboss-x86_win32.ear > adobe-Native2PDFSvc.war\WEB-INF\lib > adobe-native.jar > Native2PDFSvc-native.jar\bin > adobe-appmondata.jar\com\adobe\appmon。 adobe-livecycle-native-jboss-x86_win32.ear檔案位於匯出資料夾`[AEM forms install directory]\configurationManager`。 (如果將AEM Forms部署在其他J2EE應用程式伺服器上，請將adobe-livecycle-native-jboss-x86_win32.ear檔案取代為對應至J2EE應用程式伺服器的EAR檔案。)
+* adobe-generatepdf-dsc.jar > adobe-appmondata.jar\com\adobe\appmon （adobe-appmondata.jar檔案位於adobe-generatepdf-dsc.jar檔案中）。 adobe-generatepdf-dsc.jar檔案位於`[AEM forms install directory]\deploy`資料夾中。
 
 將這些XML檔案新增至adobe-appmondata.jar檔案後，您必須重新部署GeneratePDF元件。 若要將對話方塊和指令碼XML檔案新增至adobe-appmondata.jar檔案，請執行下列工作：
 
 1. 使用WinZip或WinRAR之類的工具，開啟adobe-livecycle-native-jboss-x86_win32.earfile > adobe-Native2PDFSvc.war\WEB-INF\lib > adobe-native.jar > Native2PDFSvc-native.jar\bin > adobe-appmondata.jar檔案。
-1. 將對話方塊和指令碼XML檔案新增至appmondata.jar檔案，或修改此檔案中現有的XML檔案。 (請參閱 [建立或修改原生應用程式的指令碼XML檔案](converting-file-formats-pdf.md#creating-or-modifying-a-script-xml-file-for-a-native-application)和 [為原生應用程式建立或修改其他對話方塊XML檔案](converting-file-formats-pdf.md#creating-or-modifying-an-additional-dialog-xml-file-for-a-native-application).)
+1. 將對話方塊和指令碼XML檔案新增至appmondata.jar檔案，或修改此檔案中現有的XML檔案。 （請參閱[建立或修改原生應用程式的指令碼XML檔案](converting-file-formats-pdf.md#creating-or-modifying-a-script-xml-file-for-a-native-application)和[建立或修改原生應用程式的額外對話方塊XML檔案](converting-file-formats-pdf.md#creating-or-modifying-an-additional-dialog-xml-file-for-a-native-application)。）
 1. 使用WinZip或WinRAR等工具，開啟adobe-generatepdf-dsc.jar > adobe-appmondata.jar。
-1. 將對話方塊和指令碼XML檔案新增至appmondata.jar檔案，或修改此檔案中現有的XML檔案。 (請參閱 [建立或修改原生應用程式的指令碼XML檔案](converting-file-formats-pdf.md#creating-or-modifying-a-script-xml-file-for-a-native-application)和 [為原生應用程式建立或修改其他對話方塊XML檔案](converting-file-formats-pdf.md#creating-or-modifying-an-additional-dialog-xml-file-for-a-native-application).) 將XML檔案新增至adobe-appmondata.jar檔案後，請將新的adobe-appmondata.jar檔案置於adobe-generatepdf-dsc.jar檔案中。
-1. 如果您新增其他原生檔案格式的支援，請建立提供應用程式路徑的系統環境變數(請參閱 [建立環境變數以找出原生應用程式](converting-file-formats-pdf.md#creating-an-environment-variable-to-locate-the-native-application).)
+1. 將對話方塊和指令碼XML檔案新增至appmondata.jar檔案，或修改此檔案中現有的XML檔案。 （請參閱[建立或修改原生應用程式的指令碼XML檔案](converting-file-formats-pdf.md#creating-or-modifying-a-script-xml-file-for-a-native-application)和[建立或修改原生應用程式的額外對話方塊XML檔案](converting-file-formats-pdf.md#creating-or-modifying-an-additional-dialog-xml-file-for-a-native-application)。） 將XML檔案新增至adobe-appmondata.jar檔案後，請將新的adobe-appmondata.jar檔案置於adobe-generatepdf-dsc.jar檔案中。
+1. 如果您新增其他原生檔案格式的支援，請建立提供應用程式路徑的系統環境變數（請參閱[建立環境變數以找出原生應用程式](converting-file-formats-pdf.md#creating-an-environment-variable-to-locate-the-native-application)）。
 
 **重新部署GeneratePDF元件**
 
 1. 登入Workbench。
-1. 選取 **視窗** > **顯示檢視** > **元件**. 此動作會將「元件」檢視新增至Workbench。
-1. 以滑鼠右鍵按一下GeneratePDF元件，然後選取 **停止元件**.
+1. 選取&#x200B;**視窗** > **顯示檢視** > **元件**。 此動作會將「元件」檢視新增至Workbench。
+1. 用滑鼠右鍵按一下GeneratePDF元件，然後選取&#x200B;**停止元件**。
 1. 當元件停止時，按一下滑鼠右鍵並選取「解除安裝元件」來移除元件。
-1. 用滑鼠右鍵按一下 **元件** 圖示並選取 **安裝元件**.
+1. 在&#x200B;**元件**&#x200B;圖示上按一下滑鼠右鍵，然後選取&#x200B;**安裝元件**。
 1. 瀏覽並選取修改過的adobe-generatepdf-dsc.jar檔案，然後按一下「開啟」。 請注意，GeneratePDF元件旁會出現紅色方塊。
 1. 展開GeneratePDF元件，選取「服務描述元」，然後以滑鼠右鍵按一下「產生PDF服務」，並選取「啟動服務」。
 1. 在出現的組態對話方塊中，輸入適用的組態值。 如果您將這些值留白，則會使用預設的設定值。
@@ -752,7 +752,7 @@ A *對話方塊XML檔案* 指定產生PDF服務如何回應系統或原生應用
 
 如果要將檔案導向新的原生應用程式，則必須為該應用程式建立指令碼XML檔案。 如果您要修改「產生PDF」服務與已受支援的原生應用程式互動的方式，則必須修改該應用程式的指令碼。
 
-指令碼包含瀏覽原生應用程式的視窗元素以及提供這些元素特定回應的指示。 包含此資訊的檔案為 `appmon.`[appname]&quot; `.script.`[地區設定]`.xml`. 例如appmon.notepad.script.en_US.xml。
+指令碼包含瀏覽原生應用程式的視窗元素以及提供這些元素特定回應的指示。 包含此資訊的檔案是`appmon.`[appname]&quot; `.script.`[地區設定]`.xml`。 例如appmon.notepad.script.en_US.xml。
 
 #### 識別指令碼必須執行的步驟 {#identifying-steps-the-script-must-execute}
 
@@ -770,9 +770,9 @@ A *對話方塊XML檔案* 指定產生PDF服務如何回應系統或原生應用
 
 #### 在註解屬性中使用規則運算式 {#using-regular-expressions-in-caption-attributes}
 
-您可以在註解規格中使用規則運算式。 「產生PDF」服務使用 `java.util.regex.Matcher` 類別以支援規則運算式。 該公用程式支援中說明的規則運算式 `java.util.regex.Pattern`.
+您可以在註解規格中使用規則運算式。 產生PDF服務使用`java.util.regex.Matcher`類別來支援規則運算式。 該公用程式支援`java.util.regex.Pattern`中描述的規則運算式。
 
-**規則運算式，用於容納記事本橫幅中記事本前面的檔案名稱**
+**包含記事本橫幅中記事本前置檔案名稱的規則運算式**
 
 ```xml
  <!-- The regular expression ".*Notepad" means any number of non-terminating characters followed by Notepad. -->
@@ -794,12 +794,12 @@ A *對話方塊XML檔案* 指定產生PDF服務如何回應系統或原生應用
 
 #### 排序視窗和windowList元素 {#ordering-the-window-and-windowlist-elements}
 
-訂購 `window` 和 `windowList` 元素如下所示：
+將`window`和`windowList`元素排序如下：
 
-* 當多個 `window` 元素會顯示為中的子項 `windowList` 或 `dialog` 元素，對其排序 `window` 元素以遞減順序排列，長度為 `caption` 表示位置在順序中的名稱。
-* 當多個 `windowList` 元素會出現在 `window` 元素，對其排序 `windowList` 元素以遞減順序排列，長度為 `caption` 第一個屬性 `indexes/`指示順序中位置的元素。
+* 當多個`window`元素在`windowList`或`dialog`元素中顯示為子系時，請以遞減順序來排序這`window`個元素，其中`caption`個名稱的長度表示順序中的位置。
+* 當多個`windowList`元素出現在`window`元素中時，請以遞減順序將這些`windowList`元素排序，並使用第一個`indexes/`元素的`caption`屬性長度指示順序中的位置。
 
-**排序對話方塊檔案中的視窗元素**
+**排序對話方塊檔案中的視窗專案**
 
 ```xml
  <!-- The caption attribute in the following window element is 40 characters long. It is the longest caption in this example, so its parent window element appears before the others. -->
@@ -843,26 +843,26 @@ A *對話方塊XML檔案* 指定產生PDF服務如何回應系統或原生應用
 
 ### 為原生應用程式建立或修改其他對話方塊XML檔案 {#creating-or-modifying-an-additional-dialog-xml-file-for-a-native-application}
 
-如果您為先前不支援的原生應用程式建立指令碼，則還必須為該應用程式建立額外的對話方塊XML檔案。 AppMon使用的每個原生應用程式只能有一個額外的對話方塊XML檔案。 即使沒有不需要的對話方塊，也需要其他對話方塊XML檔案。 其他對話方塊必須至少有一個 `window` 元素，即使該 `window` 元素只是預留位置。
+如果您為先前不支援的原生應用程式建立指令碼，則還必須為該應用程式建立額外的對話方塊XML檔案。 AppMon使用的每個原生應用程式只能有一個額外的對話方塊XML檔案。 即使沒有不需要的對話方塊，也需要其他對話方塊XML檔案。 其他對話方塊必須至少有一個`window`元素，即使該`window`元素只是預留位置。
 
 >[!NOTE]
 >
->在此上下文中，其他一詞指的是 `appmon.[applicationname].addition.[locale].xml` 檔案。 這類檔案會指定對話方塊XML檔案的覆寫和新增專案。
+>在此內容中，額外一詞表示`appmon.[applicationname].addition.[locale].xml`檔案的內容。 這類檔案會指定對話方塊XML檔案的覆寫和新增專案。
 
 您也可以針對下列用途修改原生應用程式的其他對話方塊XML檔案：
 
 * 覆寫具有不同回應的應用程式之對話方塊XML檔案
 * 若要將回應加入到該應用程式的對話方塊XML檔案中未指定的對話方塊
 
-識別其他dialogXML檔案的檔案名稱是 `appmon.[appname].addition.[locale].xml`. 例如appmon.excel.addition.en_US.xml。
+識別其他dialogXML檔案的檔案名稱為`appmon.[appname].addition.[locale].xml`。 例如appmon.excel.addition.en_US.xml。
 
-其他對話方塊XML檔案的名稱必須使用格式 `appmon.[applicationname].addition.[locale].xml`，其中 *applicationname* 必須與XML組態檔和指令碼中使用的應用程式名稱完全相符。
+其他對話方塊XML檔案的名稱必須使用格式`appmon.[applicationname].addition.[locale].xml`，其中&#x200B;*applicationname*&#x200B;必須完全符合XML組態檔和指令碼中使用的應用程式名稱。
 
 >[!NOTE]
 >
->native2pdfconfig.xml組態檔中指定的泛型應用程式都沒有主要對話方塊XML檔案。 區段 [新增或修改對原生檔案格式的支援](converting-file-formats-pdf.md#adding-or-modifying-support-for-a-native-file-format) 說明這些規格。
+>native2pdfconfig.xml組態檔中指定的泛型應用程式都沒有主要對話方塊XML檔案。 [新增或修改原生檔案格式支援](converting-file-formats-pdf.md#adding-or-modifying-support-for-a-native-file-format)一節說明這類規格。
 
-訂購 `windowList` 在中顯示為子項的元素 `window` 元素。 (請參閱 [排序視窗和windowList元素](converting-file-formats-pdf.md#ordering-the-window-and-windowlist-elements).)
+排序在`window`元素中顯示為子系的`windowList`元素。 （請參閱[排序視窗和windowList專案](converting-file-formats-pdf.md#ordering-the-window-and-windowlist-elements)。）
 
 ### 修改一般對話方塊XML檔案 {#modifying-the-general-dialog-xml-file}
 
@@ -874,13 +874,13 @@ A *對話方塊XML檔案* 指定產生PDF服務如何回應系統或原生應用
 
 **更新產生PDF服務組態檔**
 
-1. 選取 **首頁** > **服務** > **Adobe PDF Generator** > **組態檔**，然後選取 **匯出設定**.
-1. 修改 `filetype-settings` 元素。
-1. 選取 **首頁** > **服務** > **Adobe PDF Generator** >**組態檔**，然後選取 **匯入設定**. 組態資料會匯入產生PDF服務，取代先前的設定。
+1. 選取&#x200B;**首頁** > **服務** > **Adobe PDF Generator** > **組態檔**，然後選取&#x200B;**匯出組態**。
+1. 視需要修改native2pdfconfig.xml檔案中的`filetype-settings`專案。
+1. 選取&#x200B;**首頁** > **服務** > **Adobe PDF產生器** >**組態檔**，然後選取&#x200B;**匯入組態**。 組態資料會匯入產生PDF服務，取代先前的設定。
 
 >[!NOTE]
 >
->應用程式的名稱指定為 `GenericApp` 元素的 `name` 屬性。 此值必須與您為該應用程式開發的指令碼中指定的對應名稱完全相符。 同樣地， `GenericApp` 元素的 `displayName` 屬性應該完全符合對應指令碼的 `expectedWindow` 視窗註解。 在解析中出現的任何規則運算式之後，會評估這種等同性 `displayName` 或 `caption` 屬性。
+>應用程式的名稱指定為`GenericApp`專案的`name`屬性值。 此值必須與您為該應用程式開發的指令碼中指定的對應名稱完全相符。 同樣地，`GenericApp`專案的`displayName`屬性應該完全符合對應指令碼的`expectedWindow`視窗標題。 在解析`displayName`或`caption`屬性中出現的任何規則運算式之後，會評估這種等同性。
 
 在此範例中，已修改產生PDF服務所提供的預設設定資料，以指定應使用記事本(而非Microsoft Word)來處理副檔名為.txt的檔案。 在此修改之前，Microsoft Word被指定為應該處理此類檔案的原生應用程式。
 
@@ -909,7 +909,7 @@ A *對話方塊XML檔案* 指定產生PDF服務如何回應系統或原生應用
 
 #### 建立環境變數以找出原生應用程式 {#creating-an-environment-variable-to-locate-the-native-application}
 
-建立環境變數，指定原生應用程式可執行檔的位置。 變數必須使用格式 `[applicationname]_PATH`，其中 *applicationname* 必須與XML組態檔和指令碼中使用的應用程式名稱完全相符，而且路徑中包含以雙引號括住可執行檔的路徑。 此類環境變數的範例為 `Photoshop_PATH`.
+建立環境變數，指定原生應用程式可執行檔的位置。 變數必須使用格式`[applicationname]_PATH`，其中&#x200B;*applicationname*&#x200B;必須完全符合XML組態檔和指令碼中使用的應用程式名稱，而且路徑包含以雙引號表示的可執行檔路徑。 此類環境變數的範例為`Photoshop_PATH`。
 
 建立新的環境變數後，您必須重新啟動部署產生PDF服務的伺服器。
 
@@ -919,12 +919,12 @@ A *對話方塊XML檔案* 指定產生PDF服務如何回應系統或原生應用
 
 **在Windows XP環境中建立系統變數**
 
-1. 選取 **「控制面板」>「系統」**.
-1. 在「系統屬性」對話方塊中，按一下 **進階** 標籤，然後按一下 **環境變數**.
-1. 在「環境變數」對話方塊的「系統變數」下，按一下 **新增**.
-1. 在「新增系統變數」對話方塊的 **變數名稱** 方塊中，輸入使用格式的名稱 `[applicationname]_PATH`.
-1. 在 **變數值** 方塊中，輸入應用程式可執行檔的完整路徑和檔案名稱，然後按一下 **確定**. 例如，輸入： `c:\windows\Notepad.exe`
-1. 在「環境變數」對話方塊中，按一下 **確定**.
+1. 選取&#x200B;**控制檯>系統**。
+1. 在[系統內容]對話方塊中，按一下[進階]索引標籤&#x200B;****，然後按一下[環境變數]****。
+1. 在「環境變數」對話方塊的「系統變數」下，按一下「**新增**」。
+1. 在「新增系統變數」對話方塊的&#x200B;**變數名稱**&#x200B;方塊中，輸入使用格式`[applicationname]_PATH`的名稱。
+1. 在&#x200B;**變數值**&#x200B;方塊中，輸入應用程式可執行檔的完整路徑與檔案名稱，然後按一下&#x200B;**確定**。 例如，型別： `c:\windows\Notepad.exe`
+1. 在[環境變數]對話方塊中，按一下[確定]。****
 
 **從命令列建立系統變數**
 
@@ -934,7 +934,7 @@ A *對話方塊XML檔案* 指定產生PDF服務如何回應系統或原生應用
             [applicationname]_PATH=[Full path name]
    ```
 
-   例如，輸入： `NotePad_PATH=C:\WINDOWS\NOTEPAD.EXE`
+   例如，型別： `NotePad_PATH=C:\WINDOWS\NOTEPAD.EXE`
 
 1. 啟動新的命令列提示讓系統變數生效。
 

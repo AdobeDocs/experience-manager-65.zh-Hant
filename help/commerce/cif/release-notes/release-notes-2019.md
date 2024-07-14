@@ -52,7 +52,7 @@ ht-degree: 6%
 
 * 產品詳細資料頁面和產品清單頁面的完全可編寫範本。 作者現在可以建立範本，並將產品清單和產品詳細資料元件拖放至這些範本上。 除了新增其他元件外，作者現在也可以變更這些範本的版面，為他們提供無限制的自由，以建立結合行銷和商務內容的令人驚豔體驗。
 
-* 所有對作者友善的CIF核心元件均已增強以支援 [AEM樣式系統](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html). 已為產品清單元件提供範例樣式。
+* 已增強所有作者友善的CIF核心元件，以支援[AEM樣式系統](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html)。 已為產品清單元件提供範例樣式。
 
 * 用於帳戶管理的React型使用者端元件。 此版本支援下列功能：登入、忘記密碼和建立帳戶。
 

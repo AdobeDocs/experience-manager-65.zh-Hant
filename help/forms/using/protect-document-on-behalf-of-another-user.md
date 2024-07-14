@@ -1,6 +1,6 @@
 ---
 title: 代表其他使用者Protect檔案
-description: 瞭解AEM Forms Document Security Java&trade； SDK如何為使用者帳戶提供API，以代表其他使用者保護檔案。
+description: 瞭解AEM Forms Document Security Java&amp；trade； SDK如何為使用者帳戶提供API，以代表其他使用者保護檔案。
 geptopics: SG_AEMFORMS/categories/working_with_document_security
 feature: Document Security
 exl-id: e5c80569-d3c0-4358-9b91-b98a64d1c004
@@ -17,12 +17,12 @@ ht-degree: 0%
 
 AEM Forms Document Security Java™ SDK提供的API可允許使用者帳戶代表其他使用者保護檔案，而不會獲得編輯檔案的許可權。 您可以在工作流程流程中使用API，或以程式設計方式將其用作檔案服務。 新的API包括：
 
-* **protectDocumentUse** ProtectDocument API可讓您代表以下人員將原則套用至檔案
+* **protectDocumentUse** ProtectDocument API讓您可以代表檔案套用原則
 
   另一個使用者帳戶。 用於套用原則的使用者帳戶的許可權仍限於保護檔案。 無法取得開啟和檢視檔案的許可權。 RMSecureDocumentResult protectDocument(Document inDoc， String documentName， String policySetName， String policyName， RMLocale locale， boolean bExactMatchForNames)
 
-* **createLicenseUse** CreateLicense API讓您能代表其他使用者帳戶為原則建立授權。 PublishLicenseDTO createLicense(String policyId， String documentName， boolean logSecureDocEvent)
-* **protectDocumentWithCoverPageUse** ProtectDocumentWithCoverPage API可讓您套用原則，並代表其他使用者將封面頁新增至檔案。 用於套用原則的使用者帳戶的許可權仍限於保護檔案。 無法取得開啟和檢視檔案的許可權。 RMSecureDocumentResult protectDocumentWithCoverPage（檔案inDoc，字串documentName，字串policySetName，字串policyName，檔案封面doc，布林值bExactMatchForNames）
+* **createLicenseUse** CreateLicense API讓您能夠代表其他使用者帳戶建立原則的授權。 PublishLicenseDTO createLicense(String policyId， String documentName， boolean logSecureDocEvent)
+* **protectDocumentWithCoverPageUse** ProtectDocumentWithCoverPage API，您可以套用原則並代表其他使用者新增封面頁至檔案。 用於套用原則的使用者帳戶的許可權仍限於保護檔案。 無法取得開啟和檢視檔案的許可權。 RMSecureDocumentResult protectDocumentWithCoverPage（檔案inDoc，字串documentName，字串policySetName，字串policyName，檔案封面doc，布林值bExactMatchForNames）
 
 ## 使用API代表其他使用者保護檔案 {#using-the-apis-to-protect-a-document-on-behalf-of-another-user}
 

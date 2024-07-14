@@ -66,10 +66,10 @@ UI同時適用於行動裝置和桌上型裝置，不過Adobe已決定使用適�
 您可以視需要開啟/隱藏左側邊欄，以顯示：
 
 * **時間表**
-* **引用**
-* **篩選**
+* **個參考**
+* **篩選器**
 
-預設值為 **僅限內容** （邊欄已隱藏）。
+預設值為&#x200B;**僅內容** （隱藏邊欄）。
 
 ![chlimage_1-147](assets/chlimage_1-147.png)
 
@@ -89,7 +89,7 @@ UI同時適用於行動裝置和桌上型裝置，不過Adobe已決定使用適�
 
 編輯器框架會實現編輯功能。
 
-編輯器框架是所有 *頁面製作元素*. 它位在內容框架頂端，包括：
+編輯器框架是所有&#x200B;*頁面編寫元素*&#x200B;的容器（抽象）。 它位在內容框架頂端，包括：
 
 * 頂端工具列
 * 側面板
@@ -106,9 +106,9 @@ UI同時適用於行動裝置和桌上型裝置，不過Adobe已決定使用適�
 
 ![chlimage_1-150](assets/chlimage_1-150.png)
 
-### 側面板 — 資產 {#side-panel-assets}
+### 側面板 — Assets {#side-panel-assets}
 
-在「資產」標籤中，您可以從資產範圍中選取。 您也可以篩選特定辭彙，或選取群組。
+在Assets標籤中，您可以從資產範圍中選取。 您也可以篩選特定辭彙，或選取群組。
 
 ![chlimage_1-151](assets/chlimage_1-151.png)
 
@@ -126,7 +126,7 @@ UI同時適用於行動裝置和桌上型裝置，不過Adobe已決定使用適�
 
 ### 覆蓋 {#overlays}
 
-這些會覆蓋內容框架，並由 [圖層](#layer) 以瞭解（透明）與元件及其內容互動的機制。
+這些元件覆蓋內容框架，並由[圖層](#layer)使用，以達成與元件及其內容互動的機制（透明）。
 
 這些覆蓋圖會在編輯器框架中呈現（包含所有其他頁面製作元素），不過實際上會在內容框架中覆蓋適當的元件。
 
@@ -165,6 +165,6 @@ AEM隨附數個已針對頁面製作實作的圖層；包括例如，編輯、�
 
 ## 更多資訊 {#further-information}
 
-如需有關觸控式UI概念的詳細資訊，請閱讀 [AEM觸控式UI的概念](/help/sites-developing/touch-ui-concepts.md).
+如需有關觸控式UI概念的詳細資訊，請參閱[AEM觸控式UI的概念](/help/sites-developing/touch-ui-concepts.md)。
 
-如需詳細技術資訊，請參閱 [JS檔案集](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html) 用於觸控式頁面編輯器。
+如需更多技術資訊，請參閱觸控式頁面編輯器的[JS檔案集](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html)。

@@ -22,7 +22,7 @@ ht-degree: 0%
 
 Classic UI是從CQ5 (AEM的前身)起就提供的案頭導向使用者介面。 以下有關編寫的檔案聚焦於此UI。
 
-觸控式UI是適用於AEM的全新標準使用者介面，專為觸控和桌上型裝置而設計。 請參閱 [標準撰寫檔案](/help/sites-authoring/author.md) 以取得詳細資訊。
+觸控式UI是適用於AEM的全新標準使用者介面，專為觸控和桌上型裝置而設計。 如需詳細資訊，請參閱[標準撰寫檔案](/help/sites-authoring/author.md)。
 
 >[!NOTE]
 >
@@ -30,4 +30,4 @@ Classic UI是從CQ5 (AEM的前身)起就提供的案頭導向使用者介面。 
 
 ## 製作（和發佈）的概念 {#concept-of-authoring-and-publishing}
 
-無論UI如何選擇，製作都有某些共同的概念和構想，這些概念和構想都經過了詳盡的描述 [這裡是標準撰寫檔案](/help/sites-authoring/author.md#concept-of-authoring-and-publishing).
+無論UI選擇為何，製作都有某些共同的概念和概念，這些概念和概念在標準制作檔案](/help/sites-authoring/author.md#concept-of-authoring-and-publishing)的[中都有詳細說明。

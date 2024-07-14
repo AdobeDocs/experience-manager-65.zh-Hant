@@ -48,7 +48,7 @@ ht-degree: 8%
 
 * 已新增類別輪播元件，讓業務使用者可將此元件拖放至AEM內容頁面，以透過商業資料擴充內容頁面。
 
-* CIF核心元件已擴充為透過傳送商務資料將Adobe使用者端資料層水合化。 Adobe使用者端資料層是收集資料並將資料通訊至Digital Analytics和報表伺服器的標準化方法。 如需詳細資訊，請參閱 [Adobe使用者端資料層](https://github.com/adobe/adobe-client-data-layer/wiki).
+* CIF核心元件已擴充為透過傳送商務資料將Adobe使用者端資料層水合化。 Adobe使用者端資料層是收集資料並將資料通訊至Digital Analytics和報表伺服器的標準化方法。 如需詳細資訊，請參閱[Adobe使用者端資料層](https://github.com/adobe/adobe-client-data-layer/wiki)。
 
 * 產品詳細資料和產品清單頁面已擴充，可自動填入Adobe Commerce管理UI中設定的SEO中繼資料（例如標題、中繼說明、中繼關鍵字）
 
@@ -116,7 +116,7 @@ ht-degree: 8%
 
 * CIF Venia參考網站是從CIF Archetype存放庫擷取，現在是獨立的GitHub存放庫。
 
-* CIF原型與AEM專案原型合併。 若為新專案，請使用 [AEM專案原型](https://github.com/adobe/aem-project-archetype) 作為起點。
+* CIF原型與AEM專案原型合併。 若為新專案，請使用[AEM專案原型](https://github.com/adobe/aem-project-archetype)作為起點。
 
 * 新增通訊錄管理，讓登入的使用者可以管理其地址。
 
@@ -172,7 +172,7 @@ ht-degree: 8%
 
 * 「搜尋頁面」和「產品清單頁面」新增多面向搜尋支援，可讓購物者根據產品多面向篩選搜尋結果。
 
-* 新增新的OSGi服務，可針對SEO用途自訂PDP/PLP URL。 如需詳細資訊，請參閱 [檔案](https://github.com/adobe/aem-core-cif-components).
+* 新增新的OSGi服務，可針對SEO用途自訂PDP/PLP URL。 如需詳細資訊，請參閱[檔案](https://github.com/adobe/aem-core-cif-components)。
 
 * 建立雲端設定時會自動建立產品繫結。
 
@@ -192,7 +192,7 @@ ht-degree: 8%
 
 ### 新增功能 {#what-is-new-april}
 
-* CIF Connector的組態設定已統一並簡化。 如需詳細資訊，請結帳 [快速入門](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/home.html) 或 [新增AEM CIF專案設定](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/home.html)
+* CIF Connector的組態設定已統一並簡化。 如需詳細資訊，請結帳[開始使用](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/home.html)或[新的AEM CIF專案安裝程式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/home.html)
 
 ### 功能改善 {#what-is-improved-april}
 

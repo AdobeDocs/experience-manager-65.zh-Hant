@@ -31,12 +31,12 @@ ht-degree: 0%
   <tr>
    <td><p>屬性：cq：cugEnabled</p> <p>宣告節點型別： N/A、剩餘屬性</p> </td>
    <td><p>授權：</p> <p>節點：節點型別rep：CugPolicy的rep：cugPolicy</p> <p>宣告節點型別： rep：CugMixin</p> <p> </p> <p> </p> <p> </p> 驗證：</p> <p>Mixin型別： granite：AuthenticationRequired</p> </td>
-   <td><p>為了限制讀取存取權，會將專用的CUG原則套用至目標節點。</p> <p>注意：原則只能套用在已設定的支援路徑。</p> <p>名稱rep：cugPolicy和型別rep：CugPolicy的節點受到保護，且無法使用一般JCR API呼叫進行寫入；請改用JCR存取控制管理。</p> <p>另請參閱 <a href="https://jackrabbit.apache.org/oak/docs/security/authorization/cug.html">此頁面</a> 以取得更多資訊。</p> <p>若要在節點上強制實施驗證要求，只需新增mixin型別granite：AuthenticationRequired即可。</p> <p>注意：僅在設定的支援路徑下方執行。</p> </td>
+   <td><p>為了限制讀取存取權，會將專用的CUG原則套用至目標節點。</p> <p>注意：原則只能套用在已設定的支援路徑。</p> <p>名稱rep：cugPolicy和型別rep：CugPolicy的節點受到保護，且無法使用一般JCR API呼叫進行寫入；請改用JCR存取控制管理。</p> <p>如需詳細資訊，請參閱<a href="https://jackrabbit.apache.org/oak/docs/security/authorization/cug.html">此頁面</a>。</p> <p>若要在節點上強制實施驗證要求，只需新增mixin型別granite：AuthenticationRequired即可。</p> <p>注意：僅在設定的支援路徑下方執行。</p> </td>
   </tr>
   <tr>
    <td><p>屬性：cq：cugPrincipals</p> <p>宣告節點型別： NA，剩餘屬性</p> </td>
    <td><p>屬性： rep：principalNames</p> <p>宣告節點型別： rep：CugPolicy</p> </td>
-   <td><p>包含允許讀取受限CUG下方內容之主體名稱的屬性受到保護，且無法使用一般JCR API呼叫進行寫入，請改用JCR存取控制管理。</p> <p>另請參閱 <a href="https://jackrabbit.apache.org/api/2.12/org/apache/jackrabbit/api/security/authorization/PrincipalSetPolicy.html">此頁面</a> 以取得實作的詳細資訊。</p> </td>
+   <td><p>包含允許讀取受限CUG下方內容之主體名稱的屬性受到保護，且無法使用一般JCR API呼叫進行寫入，請改用JCR存取控制管理。</p> <p>如需實作的詳細資訊，請參閱<a href="https://jackrabbit.apache.org/api/2.12/org/apache/jackrabbit/api/security/authorization/PrincipalSetPolicy.html">此頁面</a>。</p> </td>
   </tr>
   <tr>
    <td><p>屬性：cq：cugLoginPage</p> <p>宣告節點型別： NA，剩餘屬性</p> </td>
@@ -53,7 +53,7 @@ ht-degree: 0%
 
 ## OSGi服務的比較 {#comparison-of-osgi-services}
 
-**舊版AEM**
+**較舊的AEM版本**
 
 標籤：Adobe Granite封閉使用者群組(CUG)支援
 
@@ -80,14 +80,14 @@ ht-degree: 0%
 
   ConfigurationPolicy =必要
 
-**註解**
+**個註解**
 
 * 設定CUG授權及啟用/停用評估。
 此服務可設定不應受CUG授權影響的主參與者排除清單。
 
   >[!NOTE]
   > 
-  >如果 `CugExcludeImpl` 未設定，則 `CugConfiguration` 會回覆為預設值。
+  >如果未設定`CugExcludeImpl`，則`CugConfiguration`會回覆為預設值。
 
   如有特殊需求，可插入自訂CugExclude實作。
 

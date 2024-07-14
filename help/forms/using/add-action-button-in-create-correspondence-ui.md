@@ -28,7 +28,7 @@ ht-degree: 2%
 
 若要完成此案例，您需要下列專案：
 
-* CRX和JavaScript知識
+* CRX和JavaScript的相關知識
 * LiveCycle伺服器
 
 ## 案例：在「建立通訊使用者介面」中建立按鈕，以傳送信件以供複查 {#scenario-create-the-button-in-the-create-correspondence-user-interface-to-send-a-letter-for-review}
@@ -41,14 +41,14 @@ ht-degree: 2%
 
 ### 將按鈕新增至「建立通訊」使用者介面 {#add-the-button-to-the-create-correspondence-user-interface}
 
-1. 前往 `https://'[server]:[port]'/[ContextPath]/crx/de` 並以管理員身分登入。
-1. 在應用程式資料夾中，建立名為的資料夾 `defaultApp` 路徑/結構類似於defaultApp資料夾（在config資料夾中）。 使用下列步驟建立資料夾：
+1. 前往`https://'[server]:[port]'/[ContextPath]/crx/de`並以管理員身分登入。
+1. 在apps資料夾中，建立名為`defaultApp`的資料夾，其路徑/結構類似於defaultApp資料夾（在config資料夾中）。 使用下列步驟建立資料夾：
 
-   1. 用滑鼠右鍵按一下 **defaultApp** 資料夾並選取「 」 **覆蓋節點**：
+   1. 在下列路徑的&#x200B;**defaultApp**&#x200B;資料夾上按一下滑鼠右鍵，然後選取&#x200B;**覆蓋節點**：
 
       /libs/fd/cm/config/defaultApp/
 
-      ![覆蓋節點](assets/1_defaultapp.png)
+      ![重疊節點](assets/1_defaultapp.png)
 
    1. 請確定「覆蓋節點」對話方塊是否具備下列值：
 
@@ -56,9 +56,9 @@ ht-degree: 2%
 
       **覆蓋位置：** /apps/
 
-      **符合節點型別：** 已核取
+      **符合節點型別：**&#x200B;已核取
 
-      ![覆蓋節點](assets/2_defaultappoverlaynode.png)
+      ![重疊節點](assets/2_defaultappoverlaynode.png)
 
    1. 按一下&#x200B;**「確定」**。
    1. 按一下&#x200B;**「儲存全部」**。
@@ -67,11 +67,11 @@ ht-degree: 2%
 
    1. 前往「/libs/fd/cm/config/defaultApp/acmExtensionsConfig.xml」
 
-   1. 以滑鼠右鍵按一下acmExtensionsConfig.xml檔案，然後選取 **複製**.
+   1. 以滑鼠右鍵按一下acmExtensionsConfig.xml檔案，然後選取&#x200B;**複製**。
 
       ![複製acmExtensionsConfig.xml](assets/3_acmextensionsconfig_xml_copy.png)
 
-   1. 用滑鼠右鍵按一下 **defaultApp** 資料夾「/apps/fd/cm/config/defaultApp/」，然後選取 **貼上**.
+   1. 以滑鼠右鍵按一下位於&quot;/apps/fd/cm/config/defaultApp/&quot;的&#x200B;**defaultApp**&#x200B;資料夾，然後選取&#x200B;**貼上**。
    1. 按一下&#x200B;**「儲存全部」**。
 
 1. 連按兩下您在apps資料夾中新建立的acmExtentionsConfig.xml復本。 檔案會開啟以進行編輯。
@@ -109,7 +109,7 @@ ht-degree: 2%
    | 標籤 | 要顯示在動作按鈕上的標籤 |
    | 工具提示 | 按鈕的工具提示文字，當使用者將滑鼠懸停在按鈕上時顯示。 |
    | 樣式名稱 | 套用至動作按鈕的自訂樣式名稱。 |
-   | permissionName | 只有當使用者具有permissionName所指定的許可權時，才會顯示對應的動作。 當您指定permissionName為 `forms-users`，所有使用者都可存取此選項。 |
+   | permissionName | 只有當使用者具有permissionName所指定的許可權時，才會顯示對應的動作。 當您指定permissionName為`forms-users`時，所有使用者都能存取此選項。 |
    | actionHandler | 使用者按一下按鈕時所呼叫之ActionHandler類別的完整名稱。 |
 
    除了上述引數之外，還可以有其他與customAction相關聯的設定。 這些額外的設定可透過CustomAction物件供處理常式使用。
@@ -117,7 +117,7 @@ ht-degree: 2%
    | **名稱** | **說明** |
    |---|---|
    | serviceName | 如果customAction包含名為serviceName的子標籤，則按一下相關按鈕/連結時，會以由serviceName標籤代表的名稱呼叫程式。 確定此程式與信件PostProcess具有相同的簽章。 在服務名稱中新增「Forms Workflow->」首碼。 |
-   | 標籤名稱中包含cm_首碼的引數 | 如果customAction包含以名稱cm_開頭的子標籤，則在後置處理中（無論是信件後置處理或由serviceName標籤表示的特殊處理），這些引數可在相關標籤下方的輸入XML程式碼中使用，並會移除cm_前置詞。 |
+   | 標籤名稱中包含cm_首碼的引數 | 如果customAction包含以名稱cm_開頭的子標籤，則在後續程式(無論是字母Post Process或由serviceName標籤表示的特殊程式)中，這些引數可在相關標籤（已移除cm_前置詞）下的輸入XML程式碼中使用。 |
    | actionName | 每當因點按而造成後處理時，提交的XML都會在標籤下包含具有名稱的特殊標籤，其名稱為使用者動作的名稱。 |
 
 1. 按一下&#x200B;**「儲存全部」**。
@@ -126,7 +126,7 @@ ht-degree: 2%
 
 ACMExtensionsMessages.properties檔案包含「建立通訊」使用者介面中各種欄位的標籤和工具提示訊息。 若要讓自訂動作/按鈕運作，請在/apps分支中製作此檔案的復本。
 
-1. 用滑鼠右鍵按一下 **地區設定** 資料夾並選取「 」 **覆蓋節點**：
+1. 用滑鼠右鍵按一下下列路徑的&#x200B;**地區設定**&#x200B;資料夾，然後選取&#x200B;**覆蓋節點**：
 
    /libs/fd/cm/config/defaultApp/locale
 
@@ -136,21 +136,21 @@ ACMExtensionsMessages.properties檔案包含「建立通訊」使用者介面中
 
    **覆蓋位置：** /apps/
 
-   **符合節點型別：** 已核取
+   **符合節點型別：**&#x200B;已核取
 
 1. 按一下&#x200B;**「確定」**。
 1. 按一下&#x200B;**「儲存全部」**。
-1. 用滑鼠右鍵按一下以下檔案並選取 **複製**：
+1. 用滑鼠右鍵按一下下列檔案，然後選取&#x200B;**複製**：
 
    `/libs/fd/cm/config/defaultApp/locale/ACMExtensionsMessages.properties`
 
-1. 用滑鼠右鍵按一下 **地區設定** 資料夾並選取「 」 **貼上**：
+1. 用滑鼠右鍵按一下下列路徑的&#x200B;**地區設定**&#x200B;資料夾，然後選取&#x200B;**貼上**：
 
    `/apps/fd/cm/config/defaultApp/locale/`
 
    ACMExtensionsMessages.properties檔案會複製到地區設定資料夾中。
 
-1. 若要將新加入的自訂動作/按鈕的標籤當地語系化，請在中建立相關地區設定的ACMExtensionsMessages.properties檔案 `/apps/fd/cm/config/defaultApp/locale/`.
+1. 若要將新增的自訂動作/按鈕的標籤當地語系化，請在`/apps/fd/cm/config/defaultApp/locale/`中建立相關地區設定的ACMExtensionsMessages.properties檔案。
 
    例如，若要當地語系化本文中建立的自訂動作/按鈕，請使用下列專案建立名為ACMExtensionsMessages_fr.properties的檔案：
 
@@ -168,7 +168,7 @@ ACMExtensionsMessages.properties檔案包含「建立通訊」使用者介面中
 >
 >您可能需要清除瀏覽器快取。
 
-1. 前往 `https://[host]:'port'/system/console/bundles`. 如有必要，請以管理員身分登入。
+1. 移至`https://[host]:'port'/system/console/bundles`。 如有必要，請以管理員身分登入。
 
 1. 找出Adobe資產撰寫器建置區塊套件。 重新啟動套件：按一下[停止]，然後按一下[啟動]。
 
@@ -182,7 +182,7 @@ ACMExtensionsMessages.properties檔案包含「建立通訊」使用者介面中
 
 /libs/fd/cm/ccr/gui/components/admin/clientlibs/ccr/js/cm.domain.js
 
-如需自訂動作處理，請在CRX的/apps分支中建立cm.domain.js檔案的覆蓋圖。
+若要自訂動作處理，請在CRX的/apps分支中建立cm.domain.js檔案的覆蓋圖。
 
 處理按一下動作/按鈕時的動作/按鈕包含下列邏輯：
 
@@ -190,15 +190,15 @@ ACMExtensionsMessages.properties檔案包含「建立通訊」使用者介面中
 * 啟用/停用新增的動作：覆寫actionEnabled()函式來完成。
 * 使用者按一下按鈕時實際處理動作：覆寫handleAction()函式的實作來完成。
 
-1. 前往 `https://'[server]:[port]'/[ContextPath]/crx/de`. 如有必要，請以管理員身分登入。
+1. 移至`https://'[server]:[port]'/[ContextPath]/crx/de`。 如有必要，請以管理員身分登入。
 
-1. 在應用程式資料夾中，建立名為的資料夾 `js` 在CRX的/apps分支中，結構與以下資料夾類似：
+1. 在apps資料夾中，在CRX的/apps分支中建立名為`js`的資料夾，其結構與下列資料夾類似：
 
    `/libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/js`
 
    使用下列步驟建立資料夾：
 
-   1. 用滑鼠右鍵按一下 **js** 資料夾並選取「 」 **覆蓋節點**：
+   1. 在下列路徑的&#x200B;**js**&#x200B;資料夾上按一下滑鼠右鍵，然後選取&#x200B;**覆蓋節點**：
 
       `/libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/js`
 
@@ -208,21 +208,21 @@ ACMExtensionsMessages.properties檔案包含「建立通訊」使用者介面中
 
       **覆蓋位置：** /apps/
 
-      **符合節點型別：** 已核取
+      **符合節點型別：**&#x200B;已核取
 
    1. 按一下&#x200B;**「確定」**。
    1. 按一下&#x200B;**「儲存全部」**。
 
 1. 在js資料夾中，使用按鈕的動作處理程式碼，建立名為ccrcustomization.js的檔案，步驟如下：
 
-   1. 用滑鼠右鍵按一下 **js** 資料夾並選取「 」 **「建立」>「建立檔案」**：
+   1. 在下列路徑的&#x200B;**js**&#x200B;資料夾上按一下滑鼠右鍵，然後選取&#x200B;**建立>建立檔案**：
 
       `/apps/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/js`
 
       將檔案命名為ccrcustomization.js。
 
    1. 連按兩下ccrcustomization.js檔案，以在CRX中開啟。
-   1. 在檔案中貼上下列程式碼，然後按一下 **全部儲存**：
+   1. 在檔案中貼上下列程式碼，然後按一下[儲存全部] ****：
 
       ```javascript
       /* for adding and handling custom actions in Extensible Toolbar.
@@ -321,7 +321,7 @@ ACMExtensionsMessages.properties檔案包含「建立通訊」使用者介面中
       '</div>';
       ```
 
-### 新增LiveCycle程式以啟用動作 <span class="acrolinxCursorMarker"></code>處理 {#add-the-livecycle-process-to-enable-action-span-class-acrolinxcursormarker-span-handling}
+### 新增LiveCycle處理以啟用動作<span class="acrolinxCursorMarker"></code>處理 {#add-the-livecycle-process-to-enable-action-span-class-acrolinxcursormarker-span-handling}
 
 在此案例中，請啟用下列元件，這些元件是附加的components.zip檔案的一部分：
 
@@ -339,16 +339,16 @@ ACMExtensionsMessages.properties檔案包含「建立通訊」使用者介面中
 
 LCA程式會在LiveCycle伺服器上執行，而且需要伺服器位址和登入認證。
 
-1. 前往 `https://'[server]:[port]'/system/console/configMgr` 並以管理員身分登入。
-1. 找到AdobeLiveCycle使用者端SDK設定，然後按一下 **編輯** （編輯圖示）。 「組態」面板隨即開啟。
+1. 前往`https://'[server]:[port]'/system/console/configMgr`並以管理員身分登入。
+1. 找到AdobeLiveCycle使用者端SDK設定，然後按一下&#x200B;**編輯** （編輯圖示）。 「組態」面板隨即開啟。
 
-1. 輸入下列詳細資料，然後按一下 **儲存**：
+1. 輸入下列詳細資料，然後按一下&#x200B;**儲存**：
 
-   * **伺服器Url**：動作處理常式程式碼使用傳送以供檢閱服務的LC伺服器URL。
-   * **使用者名稱**：LC伺服器的管理員使用者名稱
+   * **伺服器URL**：動作處理常式程式碼所使用之「傳送以供檢閱」服務的LC伺服器URL。
+   * **使用者名稱**： LC伺服器的管理員使用者名稱
    * **密碼**：管理員使用者名稱的密碼
 
-   ![AdobeLiveCycle使用者端SDK設定](assets/3_clientsdkconfiguration.png)
+   ![AdobeLiveCycle使用者端SDK組態](assets/3_clientsdkconfiguration.png)
 
 #### 安裝LiveCycle封存(LCA) {#install-livecycle-archive-lca}
 
@@ -358,34 +358,34 @@ LCA程式會在LiveCycle伺服器上執行，而且需要伺服器位址和登�
 >
 >若要檢視此處理的功用或建立您自己的類似處理，您需要Workbench。
 
-1. 以管理員身分登入LiveCycle®伺服器adminui，位於 `https:/[lc server]/:[lc port]/adminui`.
+1. 以系統管理員身分登入`https:/[lc server]/:[lc port]/adminui`的LiveCycle®伺服器adminui。
 
-1. 瀏覽至 **首頁>服務>應用程式與服務>應用程式管理**.
+1. 瀏覽至&#x200B;**首頁>服務>應用程式及服務>應用程式管理**。
 
 1. 如果SendLetterForReview應用程式已經存在，請略過此程式中的其餘步驟，否則繼續後續步驟。
 
-   ![UI中的SendLetterForReview應用程式](assets/12_applicationmanagementlc.png)
+   在UI中![SendLetterForReview應用程式](assets/12_applicationmanagementlc.png)
 
-1. 按一下 **匯入**.
+1. 按一下&#x200B;**匯入**。
 
-1. 按一下 **選擇檔案** 並選取SendLetterForReview.lca。
+1. 按一下&#x200B;**選擇檔案**&#x200B;並選取SendLetterForReview.lca。
 
    ![選取SendLetterForReview.lca檔案](assets/14_sendletterforreview_lca.png)
 
-1. 按一下 **預覽**.
+1. 按一下&#x200B;**預覽**。
 
-1. 選取 **匯入完成時將資產部署到執行階段**.
+1. 選取&#x200B;**當匯入完成時將資產部署到執行階段**。
 
-1. 按一下 **匯入**.
+1. 按一下&#x200B;**匯入**。
 
 #### 正在新增ServiceName至允許清單服務清單 {#adding-servicename-to-the-allowlist-service-list}
 
 在Experience Manager伺服器中提及您要存取Experience Manager伺服器的LiveCycle服務。
 
-1. 以管理員身分登入 `https:/[host]:'port'/system/console/configMgr`.
+1. 以系統管理員身分登入`https:/[host]:'port'/system/console/configMgr`。
 
-1. 找到並按一下 **AdobeLiveCycle使用者端SDK設定**. 「AdobeLiveCycle使用者端SDK設定」面板隨即顯示。
-1. 在服務名稱清單中，按一下+圖示並新增serviceName **SendLetterForReview/SendLetterForReviewProcess**.
+1. 找到並按一下&#x200B;**AdobeLiveCycle使用者端SDK組態**。 「AdobeLiveCycle使用者端SDK設定」面板隨即顯示。
+1. 在服務名稱清單中，按一下+圖示並新增serviceName **SendLetterForReview/SendLetterForReviewProcess**。
 
 1. 按一下「**儲存**」。
 
@@ -393,13 +393,13 @@ LCA程式會在LiveCycle伺服器上執行，而且需要伺服器位址和登�
 
 在此案例中，若要讓「通訊管理」能夠傳送電子郵件，請在LiveCycle伺服器中設定電子郵件服務。
 
-1. 使用管理員憑證登入以LiveCycle伺服器管理員UI，網址為 `https:/[lc server]:[lc port]/adminui`.
+1. 使用管理員認證登入，在`https:/[lc server]:[lc port]/adminui`LiveCycleServer Adminui。
 
-1. 瀏覽至 **首頁>服務>應用程式與服務>服務管理**.
+1. 導覽至&#x200B;**首頁>服務>應用程式及服務>服務管理**。
 
-1. 找到並按一下 **電子郵件服務**.
+1. 找到並按一下&#x200B;**電子郵件服務**。
 
-1. 在 **SMTP主機**，設定電子郵件服務。
+1. 在&#x200B;**SMTP主機**&#x200B;中設定電子郵件服務。
 
 1. 按一下「**儲存**」。
 
@@ -407,7 +407,7 @@ LCA程式會在LiveCycle伺服器上執行，而且需要伺服器位址和登�
 
 若要使用「通訊管理API」，請下載DSCSample.jar （在本檔案中附加為components.zip的一部分）並將其上傳到LiveCycle伺服器。 將DSCSample.jar檔案上傳至LiveCycle伺服器後，Experience Manager伺服器會使用DSCSample.jar檔案來存取renderLetter API。
 
-如需詳細資訊，請參閱 [將AEM Forms與AdobeLiveCycle連線](/help/forms/using/aem-livecycle-connector.md).
+如需詳細資訊，請參閱[使用AdobeLiveCycle連線AEM Forms](/help/forms/using/aem-livecycle-connector.md)。
 
 1. 在DSCSample.jar的cmsa.properties中更新位於以下位置的Experience Manager伺服器URL：
 
@@ -424,19 +424,19 @@ LCA程式會在LiveCycle伺服器上執行，而且需要伺服器位址和登�
    >
    >每次在伺服器端進行變更時，請重新啟動LiveCycle伺服器。
 
-   DSCSample.jar檔案使用renderLetter API。 如需renderLetter API的詳細資訊，請參閱 [介面LetterRenderService](https://www.adobe.io/experience-manager/reference-materials/6-5/forms/javadocs/index.html?com/adobe/icc/ddg/api/LetterRenderService.html).
+   DSCSample.jar檔案使用renderLetter API。 如需有關renderLetter API的詳細資訊，請參閱[介面LetterRenderService](https://www.adobe.io/experience-manager/reference-materials/6-5/forms/javadocs/index.html?com/adobe/icc/ddg/api/LetterRenderService.html)。
 
 #### 將DSC匯入LiveCycle {#import-dsc-to-livecyle}
 
-DSCSample.jar檔案使用renderLetter API從DSC提供作為輸入的XML資料將信函轉譯為PDF位元組。 如需有關renderLetter和其他API的詳細資訊，請參閱 [信件轉譯服務](https://www.adobe.io/experience-manager/reference-materials/6-5/forms/javadocs/index.html?com/adobe/icc/ddg/api/LetterRenderService.html).
+DSCSample.jar檔案使用renderLetter API從DSC提供作為輸入的XML資料將信函轉譯為PDF位元組。 如需有關renderLetter和其他API的詳細資訊，請參閱[信函轉譯服務](https://www.adobe.io/experience-manager/reference-materials/6-5/forms/javadocs/index.html?com/adobe/icc/ddg/api/LetterRenderService.html)。
 
 1. 啟動Workbench並登入。
-1. 選取 **「視窗>顯示檢視>元件」**. 「元件」檢視會新增至Workbench ES2。
+1. 選取&#x200B;**視窗>顯示檢視>元件**。 「元件」檢視會新增至Workbench ES2。
 
-1. 按一下右鍵 **元件** 並選取 **安裝元件**.
+1. 用滑鼠右鍵按一下&#x200B;**元件**&#x200B;並選取&#x200B;**安裝元件**。
 
-1. 選取 **DSCSample.jar** 透過檔案瀏覽器建立檔案，然後按一下 **開啟**.
-1. 按一下右鍵 **RenderWrapper** 並選取 **啟動元件**. 如果元件啟動，元件名稱旁會出現綠色箭頭。
+1. 透過檔案瀏覽器選取&#x200B;**DSCSample.jar**&#x200B;檔案，然後按一下&#x200B;**開啟**。
+1. 用滑鼠右鍵按一下&#x200B;**RenderWrapper**，然後選取&#x200B;**啟動元件**。 如果元件啟動，元件名稱旁會出現綠色箭頭。
 
 ## 傳送信件以供檢閱 {#send-letter-for-review}
 
@@ -444,7 +444,7 @@ DSCSample.jar檔案使用renderLetter API從DSC提供作為輸入的XML資料將
 
 1. 清除瀏覽器快取。
 
-1. 在建立通訊UI中，按一下 **信件評論** 並指定稽核者的電子郵件ID。
+1. 在建立通訊UI中，按一下&#x200B;**信件稽核**&#x200B;並指定稽核者的電子郵件識別碼。
 
 1. 按一下「**提交**」。
 

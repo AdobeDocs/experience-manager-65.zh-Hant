@@ -24,18 +24,18 @@ ht-degree: 1%
 
 為防止未經授權使用此資料，組織可以對預覽PDF加上浮水印。 預設浮水印為「PREVIEW」，會在PDF上顯示。
 
-若要在預覽PDF中啟用浮水印，請選取 **[!UICONTROL 套用浮水印]** 中的預覽期間」選項 **[!UICONTROL 通訊管理設定]** 在https://&#39;[伺服器]：[連線埠]&#39;/system/console/configMgr.
+若要在預覽PDF中啟用浮水印，請在&#x200B;**[!UICONTROL 通訊管理設定]** (位於https://&#39;[伺服器]：[連線埠]&#39;/system/console/configMgr)中選取&#x200B;**[!UICONTROL 預覽期間套用浮水印]**。
 
-![default-watermark](assets/default-watermark.png)
+![預設浮水印](assets/default-watermark.png)
 
 您可以使用下列步驟來自訂浮水印的文字和外觀：
 
 ## 在建立通訊UI中在PDF預覽中自訂浮水印 {#customizewatermark-}
 
-1. 前往 `https://'[server]:[port]'/[ContextPath]/crx/de` 並以管理員身分登入。
-1. 在應用程式資料夾中，建立名為的資料夾 **[!UICONTROL 預覽浮水印]** 路徑/結構類似於libs資料夾中的previewwatermark資料夾：
+1. 前往`https://'[server]:[port]'/[ContextPath]/crx/de`並以管理員身分登入。
+1. 在apps資料夾中，建立名為&#x200B;**[!UICONTROL previewwatermark]**&#x200B;的資料夾，其路徑/結構類似於libs資料夾中的previewwatermark資料夾：
 
-   1. 用滑鼠右鍵按一下 **預覽浮水印** 資料夾並選取「 」 **覆蓋節點**：
+   1. 在下列路徑的&#x200B;**previewwatermark**&#x200B;資料夾上按一下滑鼠右鍵，然後選取&#x200B;**覆蓋節點**：
 
       `/libs/fd/cm/configFiles/previewwatermark`
 
@@ -45,7 +45,7 @@ ht-degree: 1%
 
       **覆蓋位置：** /apps/
 
-      **符合節點型別：** 已核取
+      **符合節點型別：**&#x200B;已核取
 
       >[!NOTE]
       >
@@ -59,9 +59,9 @@ ht-degree: 1%
       >    
       >
 
-   1. 按一下 **確定** 然後按一下 **全部儲存**. 此 **[!UICONTROL 預覽浮水印]** 資料夾會在指定的路徑中建立。
+   1. 按一下[確定]****，然後按一下[儲存全部]****。 **[!UICONTROL previewwatermark]**&#x200B;資料夾是在指定的路徑中建立的。
 
-1. 將ddx檔案從「/libs/fd/cm/configFiles/previewwatermark」資料夾複製並貼到「/apps/fd/cm/configFiles/previewwatermark」資料夾，然後按一下 **[!UICONTROL 全部儲存]**.
+1. 將ddx檔案從「/libs/fd/cm/configFiles/previewwatermark」資料夾複製並貼到「/apps/fd/cm/configFiles/previewwatermark」資料夾，然後按一下&#x200B;**[!UICONTROL 全部儲存]**。
 1. 在/apps/fd/cm/configFiles/previewwatermark/底下的ddx檔案中進行所需的變更。
 
    ```xml
@@ -79,7 +79,7 @@ ht-degree: 1%
    </DDX>
    ```
 
-   如需有關自訂浮水印外觀、文字和對齊的資訊，請參閱新增和移除浮水印和背景 [組合器服務和DDX參考](https://help.adobe.com/en_US/livecycle/11.0/ddxRef.pdf) 檔案。
+   如需自訂浮水印外觀、文字和對齊方式的資訊，請參閱[組合器服務和DDX參考](https://help.adobe.com/en_US/livecycle/11.0/ddxRef.pdf)檔案中的新增和移除浮水印和背景。
 
    >[!NOTE]
    >

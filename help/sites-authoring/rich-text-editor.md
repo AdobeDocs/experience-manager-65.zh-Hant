@@ -22,7 +22,7 @@ RTF編輯器(RTE)是將文字內容插入AEM的基本建置區塊。 它構成�
 
 ## 就地編輯 {#in-place-editing}
 
-只要按一下即可選取文字型元件，畫面就會顯示 [元件工具列](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste) 與任何元件一樣。
+只要按一下選取文字型元件，就會顯示[元件工具列](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste)，就像任何元件一樣。
 
 ![screen_shot_2018-03-21at163054](assets/screen_shot_2018-03-21at163054.png)
 
@@ -33,7 +33,7 @@ RTF編輯器(RTE)是將文字內容插入AEM的基本建置區塊。 它構成�
 此工具列提供下列選項：
 
 * **格式**：這可讓您設定粗體、斜體和底線。
-* **清單**：您可以使用此功能建立專案符號或編號清單，或設定縮排。
+* **清單**：您可以建立專案符號或編號清單，或設定縮排。
 * **超連結**
 * **取消連結**
 * **全熒幕**
@@ -42,18 +42,18 @@ RTF編輯器(RTE)是將文字內容插入AEM的基本建置區塊。 它構成�
 
 ## 全熒幕編輯 {#full-screen-editing}
 
-對於文字型元件，從工具列點選全熒幕模式 ![全熒幕編輯模式](do-not-localize/screen_shot_2018-03-21at163236.png) 開啟RTF編輯器，並隱藏頁面內容的其餘部分。
+對於文字型元件，從工具列點選全熒幕模式![全熒幕編輯模式](do-not-localize/screen_shot_2018-03-21at163236.png)會開啟RTF編輯器，並隱藏頁面內容的其餘部分。
 
-全熒幕模式會顯示所有可用於編寫的已設定選項。 可用性為選項 [取決於設定](/help/sites-administering/rich-text-editor.md).
+全熒幕模式會顯示所有可用於編寫的已設定選項。 可用性是選項[取決於組態](/help/sites-administering/rich-text-editor.md)。
 
 ![screen_shot_2018-03-21at163248](assets/screen_shot_2018-03-21at163248.png)
 
 其他RTF編輯器選項包括：
 
-* **錨點**：在文字中建立錨點，以便稍後連結或參照。
-* **靠左對齊文字**
+* **錨點**：在文字中建立您稍後可以連結/參照的錨點。
+* **文字靠左對齊**
 * **文字置中**
-* **向右對齊文字**
+* **文字靠右對齊**
 
 按一下最小化圖示可關閉全熒幕模式。
 

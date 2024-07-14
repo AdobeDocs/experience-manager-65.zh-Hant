@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ## 在Microsoft Windows 7的Internet Explorer 9上建立篩選器時遇到的問題 {#issues-faced-in-creating-filters-on-internet-explorer-on-microsoft-windows}
 
-如果您為預先定義的報表建立篩選器，則下列問題會間歇性地發生在 **Internet Explorer 9** 的 **Microsoft Windows 7** 環境：
+如果您為預先定義的報表建立篩選器，下列問題會間歇性地在&#x200B;**Microsoft Windows 7**&#x200B;環境的&#x200B;**Internet Explorer 9**&#x200B;上發生：
 
 * 「值」欄位中的下拉式清單會顯示唯一識別碼，而非值。
 * 「值」欄位中的「行事曆」控制項會顯示日文字元。

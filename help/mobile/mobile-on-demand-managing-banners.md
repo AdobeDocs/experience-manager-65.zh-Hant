@@ -32,21 +32,21 @@ ht-degree: 1%
 >
 >請參閱線上說明中的下列資源，以瞭解AEM Mobile應用程式中的下列主題：
 >
->* [設計考量事項](https://helpx.adobe.com/digital-publishing-solution/help/design-app.html)
+>* [設計考量](https://helpx.adobe.com/digital-publishing-solution/help/design-app.html)
 >
->* [建立橫幅](https://helpx.adobe.com/digital-publishing-solution/help/creating-banners.html)
+>* [正在建立橫幅](https://helpx.adobe.com/digital-publishing-solution/help/creating-banners.html)
 >
 
 ## 建立橫幅 {#creating-a-banner}
 
 建立文章的一般工作流程如下：
 
-1. 選取 **行動** 從側邊欄移除。
+1. 從側邊欄選取&#x200B;**行動裝置**。
 1. 在Mobile中，從目錄選擇您的Mobile On-Demand應用程式。
-1. 按一下右上角的向下箭頭 **管理橫幅** 圖磚。
+1. 按一下&#x200B;**管理橫幅**&#x200B;圖磚右上角的向下箭頭。
 1. 完成精靈的每個步驟，以繼續建立新的橫幅。
-1. 準備就緒後，按一下 **建立**.
-1. 您的新橫幅會出現在 **管理橫幅** 圖磚。
+1. 準備就緒後，按一下&#x200B;**建立**。
+1. 您的新橫幅會出現在&#x200B;**管理橫幅**&#x200B;圖磚中。
 
 ![chlimage_1-6](assets/chlimage_1-6.gif)
 
@@ -61,9 +61,9 @@ ht-degree: 1%
 匯入新文章的工作流程
 
 1. 在Mobile中，從目錄選擇您的Mobile On-Demand應用程式。
-1. 按一下右上角的向下箭頭 **管理橫幅** 並選取匯入橫幅。
-1. 按一下 **匯入橫幅** 在對話方塊上，然後按一下「關閉」。
-1. 您的Mobile On-Demand文章現在會出現在 **管理橫幅** 圖磚。
+1. 按一下&#x200B;**管理橫幅**&#x200B;圖磚右上角的向下箭頭，然後選取「匯入橫幅」。
+1. 在對話方塊上按一下&#x200B;**匯入橫幅**，然後按一下[關閉]。
+1. 您的Mobile On-Demand文章現在會顯示在&#x200B;**管理橫幅**&#x200B;圖磚中。
 
 >[!CAUTION]
 >
@@ -71,7 +71,7 @@ ht-degree: 1%
 
 ## 編輯橫幅 {#editing-a-banner}
 
-使用內建的AEM拖放編輯器來新增或變更文章。 可以新增/移除文字和影像等元件。 可以插入DAM資產的影像。
+使用內建的AEM拖放編輯器來新增或變更文章。 可以新增/移除文字和影像等元件。 可以插入來自DAM Assets的影像。
 
 >[!CAUTION]
 >
@@ -91,11 +91,11 @@ ht-degree: 1%
 檢視/編輯文章的一般工作流程：
 
 1. 在Mobile中，從目錄選擇您的Mobile On-Demand應用程式。
-1. 從中選擇橫幅 **管理橫幅** 圖磚。
+1. 從&#x200B;**管理橫幅**&#x200B;圖磚中選擇橫幅。
 
-1. 選取 **屬性** 從動作列移除。
+1. 從動作列中選取&#x200B;**屬性**。
 1. 檢視該文章的所有可用中繼資料。
-1. 視需要編輯中繼資料，然後按一下 **儲存** 完成時。
+1. 如有需要，請編輯中繼資料，完成時請按一下&#x200B;**儲存**。
 1. 或者，您可以立即將變更上傳至Mobile On-Demand。
 
 ## 上傳橫幅 {#uploading-a-banner}
@@ -104,10 +104,10 @@ ht-degree: 1%
 
 上傳橫幅的一般工作流程：
 
-1. 從 **行動**，從目錄中選擇您的Mobile On-Demand應用程式。
-1. 在 **管理橫幅** 圖磚，選取橫幅以上傳至Mobile On-Demand。
+1. 從&#x200B;**Mobile**，從目錄中選擇您的Mobile On-Demand應用程式。
+1. 在&#x200B;**管理橫幅**&#x200B;圖磚中，選取橫幅以上傳至Mobile On-Demand。
 1. 如有需要，從清單檢視新增更多橫幅。
-1. 選取 **上傳** 從動作列，然後按一下對話方塊中的「上傳」 。
+1. 從動作列選取&#x200B;**上傳**，然後按一下對話方塊中的[上傳]。
 1. 您的橫幅現在已上傳至Mobile On-Demand。
 
 ![chlimage_1-7](assets/chlimage_1-7.gif)
@@ -119,9 +119,9 @@ ht-degree: 1%
 刪除橫幅的一般工作流程：
 
 1. 在Mobile中，從目錄選擇您的Mobile On-Demand應用程式。
-1. 選取要刪除的橫幅 **管理橫幅** 圖磚。
+1. 在&#x200B;**管理橫幅**&#x200B;圖磚中選取要刪除的橫幅。
 1. 確定已在清單中選取它（視需要選取要刪除的其他專案）。
-1. 按一下 **刪除** 從動作列移除。
+1. 按一下動作列中的&#x200B;**刪除**。
 1. 檢查您是否要從AEM和Mobile On-Demand中刪除。
 1. 按一下&#x200B;**刪除**。
 1. 您的橫幅現在已從清單中移除。

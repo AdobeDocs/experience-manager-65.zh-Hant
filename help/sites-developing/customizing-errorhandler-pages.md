@@ -22,37 +22,37 @@ Adobe Experience Manager (AEM)隨附處理HTTP錯誤的標準錯誤處理常式�
 
 ![chlimage_1-67](assets/chlimage_1-67a.png)
 
-系統提供的指令碼存在(在 `/libs/sling/servlet/errorhandler`)以回應錯誤代碼，標準CQ例項預設提供下列內容：
+系統提供的指令碼存在（在`/libs/sling/servlet/errorhandler`下）以回應錯誤碼，依預設，標準CQ執行個體可使用下列專案：
 
 * 403.jsp
 * 404.jsp
 
 >[!NOTE]
 >
->AEM是以Apache Sling為基礎。 因此，請參閱 [錯誤處理](https://sling.apache.org/documentation/the-sling-engine/errorhandling.html) 以取得有關Sling錯誤處理的詳細資訊。
+>AEM是以Apache Sling為基礎。 因此，請參閱[錯誤處理](https://sling.apache.org/documentation/the-sling-engine/errorhandling.html)以取得Sling錯誤處理的詳細資訊。
 
 >[!NOTE]
 >
->在作者執行個體上， [CQ WCM偵錯篩選器](/help/sites-deploying/osgi-configuration-settings.md) 預設為啟用。 這會一律產生回應代碼200。 預設錯誤處理常式會透過將完整棧疊追蹤寫入回應來回應。
+>在作者執行個體上，預設會啟用[CQ WCM偵錯篩選器](/help/sites-deploying/osgi-configuration-settings.md)。 這會一律產生回應代碼200。 預設錯誤處理常式會透過將完整棧疊追蹤寫入回應來回應。
 >
->在發佈執行個體上，CQ WCM偵錯篩選器為 *一直* 已停用（即使設定為已啟用）。
+>在發佈執行個體上，CQ WCM偵錯篩選器是&#x200B;*一律*&#x200B;停用（即使設定為已啟用）。
 
 ## 如何自訂錯誤處理常式顯示的頁面 {#how-to-customize-pages-shown-by-the-error-handler}
 
-您可以開發自己的指令碼，以在發生錯誤時自訂錯誤處理常式顯示的頁面。 您的自訂頁面建立於 `/apps` 和覆蓋預設頁面（位於底下） `/libs`)。
+您可以開發自己的指令碼，以在發生錯誤時自訂錯誤處理常式顯示的頁面。 您的自訂頁面是在`/apps`下建立並覆蓋預設頁面（在`/libs`下）。
 
 >[!NOTE]
 >
->另請參閱 [使用覆蓋](/help/sites-developing/overlays.md) 以取得更多詳細資料。
+>如需詳細資訊，請參閱[使用覆蓋](/help/sites-developing/overlays.md)。
 
 1. 在存放庫中，複製預設指令碼：
 
    * 從 `/libs/sling/servlet/errorhandler/`
-   * 至 `/apps/sling/servlet/errorhandler/`
+   * 至`/apps/sling/servlet/errorhandler/`
 
    由於預設不存在目的地路徑，因此您必須在第一次執行此動作時建立該路徑。
 
-1. 瀏覽至 `/apps/sling/servlet/errorhandler` 並執行下列任一項作業：
+1. 導覽至`/apps/sling/servlet/errorhandler`並執行下列任一項作業：
 
    * 編輯適當的現有指令碼，以便提供所需的資訊。
    * 建立和編輯所需程式碼的新指令碼。
@@ -82,16 +82,16 @@ HTTP 500錯誤是由伺服器端例外狀況所造成。
 
   在回應內文中。
 
-作者： [自訂錯誤處理常式顯示的頁面](#how-to-customize-pages-shown-by-the-error-handler) a `500.jsp` 指令碼。 但是，它僅用於 `HttpServletResponse.sendError(500)` 會明確執行，也就是從例外狀況擷取器。
+透過[自訂錯誤處理常式所顯示的頁面](#how-to-customize-pages-shown-by-the-error-handler)，即可建立`500.jsp`指令碼。 但是，只有在`HttpServletResponse.sendError(500)`明確執行時才使用它；也就是說，從例外狀況收集器執行。
 
-否則，回應代碼會設為500，但 `500.jsp` 指令碼不會執行。
+否則，回應程式碼會設為500，但不會執行`500.jsp`指令碼。
 
-若要處理500個錯誤，錯誤處理常式指令碼的檔案名稱必須與exception類別（或超級類別）相同。 若要處理所有此類例外，您可以建立指令碼 `/apps/sling/servlet/errorhandler/Throwable.js`p或 `/apps/sling/servlet/errorhandler/Exception.jsp`.
+若要處理500個錯誤，錯誤處理常式指令碼的檔案名稱必須與exception類別（或超級類別）相同。 若要處理所有此類例外，您可以建立指令碼`/apps/sling/servlet/errorhandler/Throwable.js`p或`/apps/sling/servlet/errorhandler/Exception.jsp`。
 
 >[!CAUTION]
 >
->在作者執行個體上， [CQ WCM偵錯篩選器](/help/sites-deploying/osgi-configuration-settings.md) 預設為啟用。 這會一律產生回應代碼200。 預設錯誤處理常式會透過將完整棧疊追蹤寫入回應來回應。
+>在作者執行個體上，預設會啟用[CQ WCM偵錯篩選器](/help/sites-deploying/osgi-configuration-settings.md)。 這會一律產生回應代碼200。 預設錯誤處理常式會透過將完整棧疊追蹤寫入回應來回應。
 >
->對於自訂錯誤處理常式，需要具備程式碼500的回應，因此 [必須停用CQ WCM偵錯篩選器](/help/sites-deploying/osgi-configuration-settings.md). 這可確保傳回回應代碼500，這隨之會觸發正確的Sling錯誤處理常式。
+>自訂錯誤處理常式需要程式碼為500的回應，因此必須停用[CQ WCM偵錯篩選器](/help/sites-deploying/osgi-configuration-settings.md)。 這可確保傳回回應代碼500，這隨之會觸發正確的Sling錯誤處理常式。
 >
->在發佈執行個體上，CQ WCM偵錯篩選器為 *一直* 已停用（即使設定為已啟用）。
+>在發佈執行個體上，CQ WCM偵錯篩選器是&#x200B;*一律*&#x200B;停用（即使設定為已啟用）。

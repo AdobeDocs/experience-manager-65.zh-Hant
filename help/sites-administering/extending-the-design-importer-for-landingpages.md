@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # 擴充和設定登入頁面的Design Importer{#extending-and-configuring-the-design-importer-for-landing-pages}
 
-本節說明如何設定，以及視需要擴充登入頁面的設計匯入工具。 有關匯入後使用登陸頁面的資訊，請參閱 [登陸頁面。](/help/sites-classic-ui-authoring/classic-personalization-campaigns-landingpage.md)
+本節說明如何設定，以及視需要擴充登入頁面的設計匯入工具。 匯入後使用登入頁面包含在[登入頁面中。](/help/sites-classic-ui-authoring/classic-personalization-campaigns-landingpage.md)
 
 **讓設計匯入工具提取您的自訂元件**
 
@@ -27,21 +27,21 @@ ht-degree: 0%
 
 1. 建立TagHandler
 
-   * 標籤處理常式是處理特定型別HTML標籤的POJO。 您的TagHandler可以處理的HTML標籤「種類」是透過TagHandlerFactory的OSGi屬性「tagpattern.name」來定義。 此OSGi屬性基本上是規則運算式，應該符合您要處理的輸入html標籤。 所有巢狀標籤都會擲回標籤處理常式進行處理。 例如，如果您註冊的div包含巢狀 &lt;p> 標籤， &lt;p> 標籤也會擲回至您的TagHandler，而由您自行決定該如何處理。
+   * 標籤處理常式是處理特定型別HTML標籤的POJO。 您的TagHandler可以處理的HTML標籤「種類」是透過TagHandlerFactory的OSGi屬性「tagpattern.name」來定義。 此OSGi屬性基本上是規則運算式，應該符合您要處理的輸入html標籤。 所有巢狀標籤都會擲回標籤處理常式進行處理。 例如，如果您註冊包含巢狀&lt;p>標籤的div，&lt;p>標籤也會擲回至TagHandler，而由您自行決定如何處理。
    * 標籤處理常式介面類似於SAX內容處理常式介面。 它會接收每個html標籤的SAX事件。 作為標籤處理常式提供者，您需要實作設計匯入工具架構自動呼叫的特定生命週期方法。
 
 1. 建立其對應的TagHandlerFactory。
 
    * 標籤處理常式工廠是OSGi元件(singleton)，負責產生標籤處理常式的例項。
    * 您的標籤處理常式工廠必須公開名為「tagpattern.name」的OSGi屬性，該屬性的值與輸入html標籤相符。
-   * 如果有多個標籤處理常式符合輸入html標籤，則會挑選排名較高的處理常式。 排名本身會顯示為OSGi屬性 **service.ranking**.
+   * 如果有多個標籤處理常式符合輸入html標籤，則會挑選排名較高的處理常式。 排名本身會顯示為OSGi屬性&#x200B;**service.ranking**。
    * TagHandlerFactory是OSGi元件。 您要提供給TagHandler的任何參考都必須透過此工廠提供。
 
 1. 如果您想要覆寫預設值，請確定TagHandlerFactory的排名較好。
 
 >[!CAUTION]
 >
->Design Importer，用於匯入登入頁面， [已由AEM 6.5取代](/help/release-notes/deprecated-removed-features.md#deprecated-features).
+>AEM 6.5](/help/release-notes/deprecated-removed-features.md#deprecated-features)已棄用用來匯入登入頁面的Design Importer [。
 
 ## 準備匯入的HTML {#preparing-the-html-for-import}
 
@@ -66,17 +66,17 @@ ht-degree: 0%
 * /img >所有影像和資產
 * /js >新增至JS clientlib
 
-此配置是根據HTML5樣板最佳實務配置。 如需詳細資訊，請參閱 [https://html5boilerplate.com/](https://html5boilerplate.com/)
+此配置是根據HTML5樣板最佳實務配置。 如需詳細資訊，請參閱[https://html5boilerplate.com/](https://html5boilerplate.com/)
 
 >[!NOTE]
 >
->至少，設計封裝 **必須** 包含 **index.html** 根層級的檔案。 如果要匯入的登入頁面也有行動版本，則zip檔案必須包含 **mobile.index.html** 以及 **index.html** 在根層級。
+>設計封裝&#x200B;**至少必須**&#x200B;在根層級包含&#x200B;**index.html**&#x200B;檔案。 如果要匯入的登入頁面也有行動版本，則zip在根層級必須包含&#x200B;**mobile.index.html**&#x200B;以及&#x200B;**index.html**。
 
 ### 準備登入頁面HTML {#preparing-the-landing-page-html}
 
 為了能夠匯入HTML，您需要將畫布div新增到登陸頁面HTML。
 
-畫布div是html **div** 替換為 `id="cqcanvas"` 必須插入至HTML中的物件 `<body>` 標籤，且必須包住要進行轉換的內容。
+Canvas div是具有`id="cqcanvas"`的html **div**，必須插入HTML`<body>`標籤中，且必須包裝要轉換的內容。
 
 新增畫布div後登入頁面HTML的範例片段如下：
 
@@ -102,9 +102,9 @@ ht-degree: 0%
 
 在匯入登入頁面之前，您可能需要轉換登入頁面的某些部分，使其成為可編輯的AEM元件。 這可讓您快速編輯登入頁面的部分，即使登入頁面設計已匯入亦然。
 
-若要這麼做，請新增 `data-cq-component` 至您匯入之HTML檔案中的適當元件。
+若要這麼做，請將`data-cq-component`新增至您匯入之HTML檔案中的適當元件。
 
-下節將說明如何編輯HTML檔案，以便將登入頁面的某些部分轉換為其他可編輯的AEM元件。 如需元件的詳細說明，請參閱 [登陸頁面元件](/help/sites-classic-ui-authoring/classic-personalization-campaigns-landingpage.md).
+下節將說明如何編輯HTML檔案，以便將登入頁面的某些部分轉換為其他可編輯的AEM元件。 在[登入頁面元件](/help/sites-classic-ui-authoring/classic-personalization-campaigns-landingpage.md)中詳細說明元件。
 
 >[!NOTE]
 >
@@ -114,9 +114,9 @@ ht-degree: 0%
 
 匯入之前，請注意下列限制：
 
-### 不會保留套用至&amp;lt；body>標籤的任何屬性，例如類別或id {#any-attribute-like-class-or-id-applied-on-the-amp-lt-body-tag-is-not-preserved}
+### 不會保留套用至&amp;amp；lt；body>標籤的任何屬性，例如類別或id {#any-attribute-like-class-or-id-applied-on-the-amp-lt-body-tag-is-not-preserved}
 
-例如，如果有任何屬性（如id或類別）套用至body標籤， `<body id="container">` 則在匯入後不會保留。 因此，匯入的設計不應與套用至 `<body>` 標籤之間。
+如果有任何屬性（例如id或類別）套用至body標籤（例如`<body id="container">`），則匯入後不會保留。 因此，匯入的設計不應與套用至`<body>`標籤的屬性有任何相依性。
 
 ### 拖放zip {#drag-and-drop-zip}
 
@@ -126,7 +126,7 @@ Internet Explorer和Firefox 3.6版及舊版不支援拖放zip上傳。 若要在
 
 ### 不支援Modernizer {#modernizr-is-not-supported}
 
-`Modernizr.js` 是以JavaScript為基礎的工具，可偵測瀏覽器的原生功能，並偵測這些功能是否適用於html5元素。 使用Modernizer來增強支援舊版不同瀏覽器的設計，可能會導致登陸頁面解決方案中出現匯入問題。 `Modernizr.js` Design Importer不支援指令碼。
+`Modernizr.js`是以JavaScript為基礎的工具，可偵測瀏覽器的原生功能，並偵測這些功能是否適用於html5元素。 使用Modernizer來增強支援舊版不同瀏覽器的設計，可能會導致登陸頁面解決方案中出現匯入問題。 Design Importer不支援`Modernizr.js`指令碼。
 
 ### 匯入設計封裝時未保留頁面屬性 {#page-properties-are-not-preserved-at-the-time-of-importing-design-package}
 
@@ -138,7 +138,7 @@ Internet Explorer和Firefox 3.6版及舊版不支援拖放zip上傳。 若要在
 
 ### 文字 {#text}
 
-HTML標示以插入文字元件( `foundation/components/text`)在設計封裝內的HTML中：
+HTML標示，可在設計封裝內的HTML中插入文字元件( `foundation/components/text`)：
 
 ```xml
 <div data-cq-component="text"> <p>This is some editable text</p> </div>
@@ -146,8 +146,8 @@ HTML標示以插入文字元件( `foundation/components/text`)在設計封裝內
 
 在HTML中包含上述標籤，會執行下列動作：
 
-* 建立可編輯的AEM文字元件( `sling:resourceType=foundation/components/text`)時，不會顯示於匯入設計套件後建立的登入頁面中。
-* 設定 `text` 所建立文字元件的屬性對應到內含的HTML `div`.
+* 在匯入設計封裝後建立的登入頁面中建立可編輯的AEM文字元件(`sling:resourceType=foundation/components/text`)。
+* 將已建立文字元件的`text`屬性設定為`div`內所包含的HTML。
 
 **速記元件標籤宣告**：
 
@@ -168,7 +168,7 @@ HTML標示以插入文字元件( `foundation/components/text`)在設計封裝內
 <div data-cq-component="text"><p>This is text with a list:</p><ul><li>1st</li><li>2nd</li></ul><p>It can be edited with the RTE editor</p></div>
 ```
 
-**含顏色的文字**
+**文字色彩**
 
 若要新增可在RTE編輯器中編輯的文字顏色（粉紅色）：
 
@@ -178,7 +178,7 @@ HTML標示以插入文字元件( `foundation/components/text`)在設計封裝內
 
 ### 標題 {#title}
 
-HTML標示以插入標題元件( `wcm/landingpage/components/title`)在設計封裝內的HTML中：
+HTML標示，可在設計封裝內的HTML中插入標題元件( `wcm/landingpage/components/title`)：
 
 ```xml
 <div data-cq-component="title"> <h1>This is some editable title text</h1> </div>
@@ -186,11 +186,11 @@ HTML標示以插入標題元件( `wcm/landingpage/components/title`)在設計封
 
 在HTML中包含上述標籤，會執行下列動作：
 
-* 建立可編輯的AEM標題元件( `sling:resourceType=wcm/landingpage/components/title`)時，不會顯示於匯入設計套件後建立的登入頁面中。
-* 設定 `jcr:title` 將建立的標題元件屬性對應到包在div中的標題標籤內的文字。
-* 設定 `type` 屬性新增至標題標籤，在此案例中為 `h1`.
+* 在匯入設計封裝後建立的登入頁面中建立可編輯的AEM標題元件( `sling:resourceType=wcm/landingpage/components/title`)。
+* 將已建立標題元件的`jcr:title`屬性設定為包在div內的標題標籤內的文字。
+* 將`type`屬性設定為標題標籤，在此案例中為`h1`。
 
-標題元件支援七種型別 —  `h1, h2, h3, h4, h5, h6` 和 `default`.
+標題元件支援七種型別 — `h1, h2, h3, h4, h5, h6`和`default`。
 
 **速記元件標籤宣告**：
 
@@ -210,12 +210,12 @@ HTML標示，可在設計封裝內的HTML中插入影像元件(foundation/compon
 
 在HTML中包含上述標籤，會執行下列動作：
 
-* 建立可編輯的AEM影像元件( `sling:resourceType=foundation/components/image`)時，不會顯示於匯入設計套件後建立的登入頁面中。
-* 設定 `fileReference` 建立之影像元件的屬性，指向src屬性中指定的影像匯入的路徑。
-* 設定 `alt` 屬性對應至img標籤中alt屬性的值。
-* 設定 `title` 屬性對應至img標籤中title屬性的值。
-* 設定 `width` 屬性對應至img標籤中width屬性的值。
-* 設定 `height` 屬性前往img標籤中height屬性的值。
+* 在匯入設計封裝後建立的登入頁面中建立可編輯的AEM影像元件( `sling:resourceType=foundation/components/image`)。
+* 將建立的影像元件的`fileReference`屬性設定為src屬性中指定的影像匯入路徑。
+* 將`alt`屬性設定為img標籤中alt屬性的值。
+* 將`title`屬性設定為img標籤中title屬性的值。
+* 將`width`屬性設定為img標籤中width屬性的值。
+* 將`height`屬性設定為img標籤中height屬性的值。
 
 **速記元件標籤宣告：**
 
@@ -225,7 +225,7 @@ HTML標示，可在設計封裝內的HTML中插入影像元件(foundation/compon
 
 #### 影像元件Div中不支援絕對URL img src {#absolute-url-img-src-not-supported-within-image-component-div}
 
-如果 `<img>` 已嘗試使用絕對url src的標籤進行元件轉換（適當的） **UnsupportedTagContentException** 引發。 例如，不支援下列專案：
+如果嘗試使用具有絕對URL src的`<img>`標籤進行元件轉換，則會引發適當的&#x200B;**UnsupportedTagContentException**。 例如，不支援下列專案：
 
 `<div data-cq-component="image">`
 
@@ -301,7 +301,7 @@ HTML標籤，在匯入的zip檔案中包含圖形連結元件。 此處href對�
 
 >[!NOTE]
 >
->若要建立點進圖形連結，您必須將錨點標籤和影像標籤包住在div中，並使用 `data-cq-component="clickthroughgraphicallink"` 屬性。
+>若要建立點進圖形連結，您必須將錨點標籤和影像標籤包裝在具有`data-cq-component="clickthroughgraphicallink"`屬性的div中。
 >
 >例如 `<div data-cq-component="clickthroughlink"> <a href="https://myURLhere/"><img src="image source here"></a> </div>`
 >
@@ -313,7 +313,7 @@ HTML標籤，在匯入的zip檔案中包含圖形連結元件。 此處href對�
 >
 >`</div>`
 >
->與相關聯的 `css .hasbackground { background-image: pathtoimage }`
+>與相關聯的`css .hasbackground { background-image: pathtoimage }`
 >
 
 ### 銷售機會表單 {#lead-form}
@@ -372,7 +372,7 @@ AEM Parsys元件是可包含其他AEM元件的容器元件。 可以在匯入的
 
 段落系統讓使用者能夠使用Sidekick新增元件。
 
-插入Parsys元件的HTML標示( `foundation/components/parsys`)在設計封裝內的HTML中：
+HTML標示，可在設計封裝內的HTML中插入Parsys元件( `foundation/components/parsys`)：
 
 ```xml
 <div data-cq-component="parsys">
@@ -421,7 +421,7 @@ AEM Parsys元件是可包含其他AEM元件的容器元件。 可以在匯入的
 
 設計匯入工具應擷取並保留在匯入HTML標題中宣告的以下中繼資料，作為屬性「jcr：description」：
 
-* &lt;meta name=&quot;description&quot; content=&quot;&quot;>
+* &lt;meta name=&quot;description&quot; content=&quot;>
 
 在HTML標籤中設定的Lang屬性應由設計匯入工具擷取並保留為屬性&quot;jcr：language&quot;
 
@@ -441,13 +441,13 @@ AEM Parsys元件是可包含其他AEM元件的容器元件。 可以在匯入的
 
 ### 覆蓋範本 {#overlaying-template}
 
-您可以在下列位置建立「空白登陸頁面」範本，以將其覆蓋： `/apps/<appName>/designimporter/templates/<templateName>`
+您可以在`/apps/<appName>/designimporter/templates/<templateName>`建立空白登入頁面範本，以將其覆蓋
 
-說明在AEM中建立範本的步驟 [此處](/help/sites-developing/templates.md).
+在AEM中建立範本的步驟在[此處](/help/sites-developing/templates.md)說明。
 
 ### 從登入頁面反向連結元件 {#referring-a-component-from-landing-page}
 
-假設您有一個元件，且您要使用data-cq-component屬性在HTML中參照該元件，如此設計匯入工具就會在此呈現一個元件包含。 例如，您想要參照表元件( `resourceType = /libs/foundation/components/table`)。 需要在HTML中新增下列專案：
+假設您有一個元件，且您要使用data-cq-component屬性在HTML中參照該元件，如此設計匯入工具就會在此呈現一個元件包含。 例如，您想要參考資料表元件( `resourceType = /libs/foundation/components/table`)。 需要在HTML中新增下列專案：
 
 `<div data-cq-component="/libs/foundation/components/table">foundation table</div>`
 
@@ -459,7 +459,7 @@ data-cq-component中的路徑應為元件的resourceType。
 
 | E > F | E元素的F元素子項 | [子組合器](https://www.w3.org/TR/css3-selectors/#child-combinators) |
 |---|---|---|
-| E + F | 緊接在E元素前面的F元素 | [相鄰同層級組合器](https://www.w3.org/TR/css3-selectors/#adjacent-sibling-combinators) |
+| E + F | 緊接在E元素前面的F元素 | [相鄰的同層級組合器](https://www.w3.org/TR/css3-selectors/#adjacent-sibling-combinators) |
 | E ~ F | F元素前面加上E元素 | [一般同層級組合器](https://www.w3.org/TR/css3-selectors/#general-sibling-combinators) |
 | E：root | E元素，檔案的根 | [結構化的虛擬類別](https://www.w3.org/TR/css3-selectors/#structural-pseudos) |
 | E：nth-child(n) | E元素，其父項的第n個子項 | [結構化的虛擬類別](https://www.w3.org/TR/css3-selectors/#structural-pseudos) |
@@ -467,11 +467,11 @@ data-cq-component中的路徑應為元件的resourceType。
 | E：nth-of-type(n) | E元素，其型別的第n個同層級 | [結構化的虛擬類別](https://www.w3.org/TR/css3-selectors/#structural-pseudos) |
 | E：nth-last-of-type(n) | E元素，其型別的第n個同層級，從最後一個專案開始計數 | [結構化的虛擬類別](https://www.w3.org/TR/css3-selectors/#structural-pseudos) |
 
-這是因為其他html元素，例如 &lt;div> 標籤會新增至匯入後產生的Html。
+這是因為其他html元素（例如&lt;div>標籤）會在匯入後新增至產生的Html。
 
 * 此外，不建議將依賴上述結構的指令碼與標示為要轉換至AEM元件的元素搭配使用。
-* 在標籤標籤上使用樣式以進行元件轉換，例如 &lt;div data-cq-component=&quot;&amp;ast;&quot;> 不建議使用。
-* 設計配置應遵循HTML5 Boilerplate的最佳實務。 深入瞭解： [https://html5boilerplate.com/](https://html5boilerplate.com/).
+* 不建議在標籤標籤上使用樣式來轉換元件，例如&lt;div data-cq-component=&quot;&amp;amp；ast；&quot;>。
+* 設計配置應遵循HTML5 Boilerplate的最佳實務。 閱讀更多資訊： [https://html5boilerplate.com/](https://html5boilerplate.com/)。
 
 ## 設定OSGI模組 {#configuring-osgi-modules}
 
@@ -494,7 +494,7 @@ data-cq-component中的路徑應為元件的resourceType。
   <tr>
    <td>登陸頁面設計匯入工具</td>
    <td>擷取篩選器</td>
-   <td>用於篩選擷取中檔案的規則運算式清單。 <br /> 符合任何指定模式的壓縮專案會從擷取中排除</td>
+   <td>用於篩選擷取中檔案的規則運算式清單。 從擷取中排除符合任何指定模式的<br />個Zip專案</td>
   </tr>
   <tr>
    <td>登陸頁面產生器</td>
@@ -514,26 +514,26 @@ data-cq-component中的路徑應為元件的resourceType。
   <tr>
    <td>登陸頁面登入前置處理器</td>
    <td>搜尋模式 </td>
-   <td>要在封存專案內容中搜尋的模式。 此規則運算式與專案內容逐行比對。 相符時，相符的文字會以指定的取代模式取代。<br /> <br /> 請參閱下方關於登陸頁面登入前置處理器目前限制的附註。</td>
+   <td>要在封存專案內容中搜尋的模式。 此規則運算式與專案內容逐行比對。 相符時，相符的文字會以指定的取代模式取代。<br /> <br />請參閱下方關於登陸頁面專案前置處理器目前限制的附註。</td>
   </tr>
   <tr>
    <td> </td>
    <td>取代圖樣</td>
-   <td>取代找到的相符項的模式。 您可以使用$1、$2之類的規則運算式群組參考。 此外，此模式支援的關鍵字如 {designPath} 會在匯入期間以實際值來解析。</td>
+   <td>取代找到的相符項的模式。 您可以使用$1、$2之類的規則運算式群組參考。 此外，此模式支援在匯入期間以實際值解析的關鍵字，例如{designPath}。</td>
   </tr>
  </tbody>
 </table>
 
 >[!NOTE]
 >
->**登陸頁面登入前置處理器目前的限制：**
+>**登陸頁面專案前置處理器的目前限制：**
 >如果您需要對搜尋模式進行任何變更，在開啟felix屬性編輯器時，您需要手動新增反斜線字元以逸出規則運算式中繼字元。 如果您未手動新增反斜線字元，則規則運算式會被視為無效，且不會取代舊的。
 >
 >例如，如果預設設定為
 >
 >>`/\* *CQ_DESIGN_PATH *\*/ *(['"])`
 >
->而且您需要取代 `CQ_DESIGN_PATH` 替換為 `VIPURL` 在搜尋模式中，您的搜尋模式應該如下所示：
+>而且您必須將`CQ_DESIGN_PATH`取代為搜尋模式中的`VIPURL`，則您的搜尋模式應該如下所示：
 >
 >`/\* *VIPURL *\*/ *(['"])`
 
@@ -566,7 +566,7 @@ data-cq-component中的路徑應為元件的resourceType。
 
 `/etc/designs/default/canvas/content/campaigns/<name of brand>/<name of campaign>/<name of landing page>`
 
-假設登入頁面是在行銷活動底下建立 `We.Retail` 而登入頁面的名稱為 **myBlankLandingPage** 則Zip檔案的儲存位置如下：
+假設登入頁面是在行銷活動`We.Retail`下建立，且登入頁面的名稱為&#x200B;**myBlankLandingPage**，則Zip檔案的儲存位置如下：
 
 `/etc/designs/default/canvas/content/campaigns/geometrixx/myBlankLandingPage`
 
@@ -583,7 +583,7 @@ height="116" /></div>Some Text </p>
 </div>
 ```
 
-在類別上套用CSS `box` 如下所示：
+類`box`上套用CSS，如下所示：
 
 ```xml
 .box
@@ -591,7 +591,7 @@ height="116" /></div>Some Text </p>
 { width: 450px; padding:10px; border: 1px #C5DBE7 solid; margin: 0px auto 0 auto; background-image:url(assets/box.gif); background-repeat:repeat-x,y; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px; color:#6D6D6D; }
 ```
 
-則 `box img` 是用於design importer，因此產生的登陸頁面似乎並未保留格式。 為了解決這個問題，AEM在CSS中新增div標籤，並據此重寫程式碼。 否則，某些CSS規則將無效。
+然後在設計匯入工具中使用`box img`，產生的登陸頁面似乎沒有保留格式。 為了解決這個問題，AEM在CSS中新增div標籤，並據此重寫程式碼。 否則，某些CSS規則將無效。
 
 ```xml
 .box img
@@ -601,4 +601,4 @@ height="116" /></div>Some Text </p>
 
 >[!NOTE]
 >
->設計人員應該只在 **id=cqcanvas** 標籤會由匯入工具識別，否則不會保留設計。
+>設計工具應該只將&#x200B;**id=cqcanvas**&#x200B;標籤內的程式碼由匯入工具識別，否則不會保留設計。

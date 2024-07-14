@@ -49,7 +49,7 @@ ht-degree: 4%
   </tr>
   <tr>
    <td>processinstancestatus</td>
-   <td>0 =已啟動<br /> 1 =執行中<br /> 2 =完成<br /> 3 =完成<br /> 4 =已終止<br /> 5 =終止<br /> 6 =已暫停<br /> 7 =暫停<br /> 8 =取消暫停</td>
+   <td>0 =已起始<br /> 1 =正在執行<br /> 2 =完成<br /> 3 =正在完成<br /> 4 =已終止<br /> 5 =正在終止<br /> 6 =已暫停<br /> 7 =正在暫停<br /> 8 =正在取消暫停</td>
   </tr>
   <tr>
    <td>processName</td>
@@ -61,16 +61,16 @@ ht-degree: 4%
   </tr>
   <tr>
    <td>processVariables</td>
-   <td>程式變數的物件陣列。 每個流程變數物件包含 <strong>名稱</strong> （程式變數的名稱）、 <strong>值</strong> （流程變數的值），以及<strong> type</strong> （程式變數的型別）。</td>
+   <td>程式變數的物件陣列。 每個處理序變數物件都包含<strong>name</strong> （處理序變數的名稱）、<strong>value</strong> （處理序變數的值）和<strong>型別</strong> （處理序變數的型別）。</td>
   </tr>
  </tbody>
 </table>
 
 **範例：**
 
-若要顯示 `description` 屬性（位於流程執行個體卡片中），請執行以下步驟。
+若要在程式執行個體卡片中顯示程式執行個體的`description`屬性，請執行下列步驟。
 
-1. 請遵循 [AEM Forms工作區自訂的一般步驟](/help/forms/using/generic-steps-html-workspace-customization.md).
+1. 執行[AEM Forms工作區自訂的一般步驟](/help/forms/using/generic-steps-html-workspace-customization.md)。
 1. 請執行下列動作：
 
    1. 將/libs/ws/js/runtime/templates/processinstance.html複製到/apps/ws/js/runtime/templates/ （如果它不存在）。 按一下&#x200B;**「儲存全部」**。
@@ -83,7 +83,7 @@ ht-degree: 4%
 1. 請執行下列動作：
 
    1. 開啟/apps/ws/js/registry.js進行編輯。
-   1. 搜尋和取代 `text!/lc/libs/ws/js/runtime/templates/processinstance.html`替換為 `text!/lc/`**應用程式**/ws/js/runtime/templates/processinstance.html.
+   1. 搜尋並以&#x200B;`text!/lc/`**應用程式**/ws/js/runtime/templates/processinstance.html取代`text!/lc/libs/ws/js/runtime/templates/processinstance.html`。
 
 1. 若要進行上述變更，請以下列方式在樣式表/apps/ws/css/newStyle.css中新增專案，以更新CSS檔案：
 

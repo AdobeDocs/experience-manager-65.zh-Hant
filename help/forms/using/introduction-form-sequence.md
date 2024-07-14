@@ -18,7 +18,7 @@ ht-degree: 32%
 
 # 多步驟表單序列簡介{#introduction-to-multi-step-form-sequence}
 
-<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。本文介紹使用基礎元件製作最適化Forms的舊方法。 </span>
+<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。本文介紹使用基礎元件製作最適化Forms的舊方法。</span>
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
@@ -26,7 +26,7 @@ ht-degree: 32%
 | AEM 6.5 | 本文章 |
 
 
-最適化表單可讓表單作者輕鬆建立多步驟資料擷取體驗。 它隨附內建支援，可建立多個面板並將每個面板與不同的導覽模式建立關聯。表單作者可以在邏輯區段將表單欄位分組，並以面板來代表群組。面板之間的整體導覽是使用面板版面來控制。作者可以選擇以不同的版面配置來排列面板，例如，使用「精靈」版面配置以循序方式放置，或使用「索引標籤」版面配置以臨機操作方式放置。 如需面板配置的相關資訊，請參閱 [調適型表單的版面配置功能](../../forms/using/layout-capabilities-adaptive-forms.md).
+最適化表單可讓表單作者輕鬆建立多步驟資料擷取體驗。 它隨附內建支援，可建立多個面板並將每個面板與不同的導覽模式建立關聯。表單作者可以在邏輯區段將表單欄位分組，並以面板來代表群組。面板之間的整體導覽是使用面板版面來控制。作者可以選擇以不同的版面配置來排列面板，例如，使用「精靈」版面配置以循序方式放置，或使用「索引標籤」版面配置以臨機操作方式放置。 如需面板配置的相關資訊，請參閱[最適化表單的配置功能](../../forms/using/layout-capabilities-adaptive-forms.md)。
 
 在典型的表單填寫體驗中，除了擷取資料以外，還有更多步驟需要完成。 完整的表單提交可能包括其他步驟，例如以數位方式簽署表單、驗證表單中填寫的資訊，以及處理付款。 具體情況因案例而異。
 
@@ -42,9 +42,9 @@ ht-degree: 32%
 
    * **填寫**：包含用來擷取資料的表單欄位。您可以在此加入巢狀子面板，為不同型別的資訊（例如個人、家庭和財務）建立區段。
 
-   * **驗證**：此變數包含 **驗證** 可用於XFA型最適化表單的元件。 它以唯讀模式顯示「填充」面板中擷取的資訊以進行驗證。
+   * **驗證**：它包含可用於XFA型最適化表單中的&#x200B;**驗證**&#x200B;元件。 它以唯讀模式顯示「填充」面板中擷取的資訊以進行驗證。
 
-   * **電子簽章**：此變數包含 **簽署** 可用於XFA型最適化表單的元件。 它提供下列簽署服務：
+   * **電子簽章**：它包含可用於XFA型最適化表單中的&#x200B;**Sign**&#x200B;元件。 它提供下列簽署服務：
 
       * Adobe Document Cloud 電子簽署服務
       * 手寫簽名
@@ -52,6 +52,6 @@ ht-degree: 32%
    * **確認**：包含「**摘要**」元件，會在使用者簽署表單並到達序列中的「確認 (摘要)」步驟後，顯示確認表單提交的訊息。作者可以設定「摘要」元件的文字、顯示感謝訊息、顯示產生PDF的連結等。
 
 1. 選取根面板的版面做為「**[!UICONTROL 精靈]**」。
-1. 完成其餘步驟，以便建立表單範本。 另請參閱 [建立自訂最適化表單範本](../../forms/using/custom-adaptive-forms-templates.md).
+1. 完成其餘步驟，以便建立表單範本。 請參閱[建立自訂最適化表單範本](../../forms/using/custom-adaptive-forms-templates.md)。
 
 在表單範本中定義表單序列後，您可以使用它來建立具有定義為現有序列的基本結構的表單。 您可以隨時根據需求自訂表格。

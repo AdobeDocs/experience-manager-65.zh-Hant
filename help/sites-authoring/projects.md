@@ -27,9 +27,9 @@ ht-degree: 27%
 
 專案標準AEM功能，不需要任何其他設定。
 
-不過，若使用者在專案中使用專案（如當建立專案、建立任務/工作流程或檢視和管理團隊時）時檢視其他使用者/群組，這些使用者需要擁有讀取許可權 `/home/users` 和 `/home/groups`.
+不過，若使用者在專案中使用專案（例如當建立專案、建立任務/工作流程或檢視及管理團隊時）時檢視其他使用者/群組，這些使用者需要擁有`/home/users`和`/home/groups`的讀取存取權。
 
-最簡單的方法是提供 **projects-users** 群組讀取存取權至 `/home/users` 和 `/home/groups`.
+最簡單的方法是授予&#x200B;**專案 — 使用者**&#x200B;群組對`/home/users`和`/home/groups`的讀取存取權。
 
 ## 專案主控台 {#projects-console}
 
@@ -49,23 +49,23 @@ ht-degree: 27%
 
 開啟主控台時，預設模式為僅內容。 它會顯示您的所有專案。
 
-#### 時間軸 {#timeline}
+#### 時間表 {#timeline}
 
-時間表檢視可讓您選取個別專案並檢視其上的活動。 使用邊欄選擇器或快速鍵 `alt+1` 以變更此檢視。
+時間表檢視可讓您選取個別專案並檢視其上的活動。 使用邊欄選擇器或快速鍵`alt+1`來變更此檢視。
 
-![時間軸模式](assets/project-timeline.png)
+![時間表模式](assets/project-timeline.png)
 
 ### 切換檢視 {#views}
 
 您可以使用檢視選擇器，在以大型圖磚檢視專案（預設）、以清單或行事曆檢視專案之間變更。
 
-![檢視](assets/projects-views.png)
+![個檢視](assets/projects-views.png)
 
 ### 篩選您的檢視 {#filter}
 
 您可以使用篩選器在所有專案與僅限作用中的專案之間切換。
 
-![篩選](assets/projects-filter.png)
+![篩選器](assets/projects-filter.png)
 
 ### 選取和檢視專案 {#selecting}
 
@@ -75,11 +75,11 @@ ht-degree: 27%
 
 ### 建立新專案 {#creating}
 
-按一下 **建立** 以新增專案。
+按一下&#x200B;**建立**&#x200B;以新增專案。
 
 ## 專案圖磚 {#project-tiles}
 
-專案由您想要一起管理的不同資訊型別組成。 此資訊由不同的專案表示 **圖磚**.
+專案由您想要一起管理的不同資訊型別組成。 此資訊由不同的&#x200B;**圖磚**&#x200B;表示。
 
 您可以擁有下列與專案關聯的圖磚。
 
@@ -111,15 +111,15 @@ ht-degree: 27%
 
 與資產類似，您可以將[資產集合](/help/assets/manage-collections.md)直接新增到您的專案中。您在 Assets 中定義集合。
 
-![資產集合圖磚](assets/project-tile-asset-collection.png)
+![資產集合拼貼](assets/project-tile-asset-collection.png)
 
 按一下&#x200B;**新增系列**，並從清單中選取適當的系列，即可新增系列。
 
 ### 體驗 {#experiences}
 
-此 **體驗** 圖磚可讓您將行動應用程式、網站或出版物新增至專案。
+**體驗**&#x200B;圖磚可讓您新增行動應用程式、網站或出版物至專案。
 
-![體驗圖磚](assets/project-tile-experiences.png)
+![體驗拼貼](assets/project-tile-experiences.png)
 
 這些圖示會指出所代表的體驗型別。
 
@@ -128,7 +128,7 @@ ht-degree: 27%
 
 ### 連結 {#links}
 
-此 **連結** 圖磚可讓您將外部連結與專案建立關聯。
+**連結**&#x200B;圖磚可讓您將外部連結與專案建立關聯。
 
 ![連結圖磚](assets/project-tile-links.png)
 
@@ -136,17 +136,17 @@ ht-degree: 27%
 
 ### 專案資訊 {#project-info}
 
-此 **專案資訊** 圖磚提供專案的一般資訊，包括說明、專案狀態（非作用中或作用中）、到期日和成員。 此外，您可以加入專案縮圖，它顯示在主要專案頁面上。
+**專案資訊**&#x200B;圖磚提供專案的一般資訊，包括描述、專案狀態（非作用中或作用中）、到期日和成員。 此外，您可以加入專案縮圖，它顯示在主要專案頁面上。
 
 ![專案資訊拼貼](assets/project-tile-info.png)
 
 ### 翻譯工作 {#translation-job}
 
-此 **翻譯工作** 圖磚是您開始翻譯的位置，也是您檢視翻譯狀態的位置。
+**翻譯工作**&#x200B;圖磚是您開始翻譯的位置，也是您檢視翻譯狀態的位置。
 
 ![翻譯工作拼貼](assets/project-tile-translation.png)
 
-若要設定翻譯，請參閱檔案 [正在建立翻譯專案。](/help/assets/translation-projects.md)
+若要設定翻譯，請參閱檔案[建立翻譯專案。](/help/assets/translation-projects.md)
 
 ### 團隊 {#team}
 
@@ -158,23 +158,23 @@ ht-degree: 27%
 
 ### 登陸頁面 {#landing-pages}
 
-此 **登陸頁面** 圖磚可讓您請求新的登陸頁面。
+**登陸頁面**&#x200B;圖磚可讓您請求新的登陸頁面。
 
-![登陸頁面圖磚](assets/project-tile-landing.png)
+![登陸頁面動態磚](assets/project-tile-landing.png)
 
-本檔案將說明此工作流程[建立登入頁面工作流程。](/help/sites-authoring/projects-with-workflows.md#request-landing-page-workflow)
+此工作流程已在檔案[建立登入頁面工作流程中說明。](/help/sites-authoring/projects-with-workflows.md#request-landing-page-workflow)
 
 ### 電子郵件 {#emails}
 
-此 **電子郵件** 圖磚可協助您管理電子郵件請求。 它會開始 **要求電子郵件** 工作流程。
+**電子郵件**&#x200B;圖磚可協助您管理電子郵件請求。 它會啟動&#x200B;**電子郵件**&#x200B;要求工作流程。
 
 ![電子郵件動態磚](assets/project-tile-email.png)
 
-如需詳細資訊，請參閱 [請求電子郵件工作流程。](/help/sites-authoring/projects-with-workflows.md#request-email-workflow)
+如需詳細資訊，請參閱[要求電子郵件工作流程。](/help/sites-authoring/projects-with-workflows.md#request-email-workflow)
 
 ### 工作流程 {#workflows}
 
-您可以開始專案的工作流程。 如果有任何工作流程在執行中，其狀態會顯示在 **工作流程** 圖磚。
+您可以開始專案的工作流程。 如果有任何工作流程正在執行，其狀態會顯示在&#x200B;**工作流程**&#x200B;動態磚中。
 
 ![工作流程動態磚](assets/project-tile-workflows.png)
 
@@ -184,24 +184,24 @@ ht-degree: 27%
 
 ### Launch {#launches}
 
-此 **啟動** 圖磚會顯示「 」要求的任何啟動， [請求啟動工作流程。](/help/sites-authoring/projects-with-workflows.md)
+**啟動**&#x200B;圖磚會顯示[請求啟動工作流程所要求的任何啟動。](/help/sites-authoring/projects-with-workflows.md)
 
-![「啟動」圖磚](assets/project-tile-launches.png)
+![啟動圖磚](assets/project-tile-launches.png)
 
 ### 任務 {#tasks}
 
 任務可讓您監控任何專案相關任務的狀態，包括工作流程。如需任務的詳細資訊，請參閱[使用任務](/help/sites-authoring/task-content.md)。
 
-![「任務」圖磚](assets/project-tile-tasks.png)
+![任務拼貼](assets/project-tile-tasks.png)
 
 ## 專案範本 {#project-templates}
 
 範本是啟動專案的基礎。 AEM提供這些標準專案範本。
 
-* **媒體專案**  — 此為媒體相關活動的參考範例專案。 其中包含數個與媒體相關的專案角色，也包括與媒體內容相關的工作流程。
-* **[產品拍照專案](/help/sites-authoring/managing-product-information.md)**  — 此為管理電子商務相關產品攝影的參考範例。
-* **[翻譯專案](/help/sites-administering/translation.md)**  — 此為管理翻譯相關活動的參考範例。 其中包含基本角色，並包含管理翻譯的工作流程。
-* **簡單專案**  — 這是任何不符合其他類別的專案的參考範例。 其中包含三個基本角色和四個一般AEM工作流程。
+* **媒體專案** — 此為媒體相關活動的參考範例專案。 其中包含數個與媒體相關的專案角色，也包括與媒體內容相關的工作流程。
+* **[產品拍照專案](/help/sites-authoring/managing-product-information.md)** — 此為管理電子商務相關產品攝影的參考範例。
+* **[翻譯專案](/help/sites-administering/translation.md)** — 此為管理翻譯相關活動的參考範例。 其中包含基本角色，並包含管理翻譯的工作流程。
+* **簡單專案** — 這是任何不符合其他類別的專案的參考範例。 其中包含三個基本角色和四個一般AEM工作流程。
 
 根據您選取的範本，專案中提供了不同的可用選項，例如使用者角色和工作流程。
 
@@ -217,8 +217,8 @@ ht-degree: 27%
 | 角色 | 說明 | 權限 | 群組會籍 |
 |---|---|---|---|
 | 觀察者 | 擁有此角色的使用者可以檢視專案詳細資料，包括專案狀態。 | 專案的唯讀權限 | `workflow-users` 群組 |
-| 編輯者 | 擁有此角色的使用者可以上傳和編輯專案的內容。 | 對專案、關聯中繼資料和相關資產的讀寫存取權<br>上傳快照清單、拍照以及檢閱和核准資產的許可權<br>的寫入許可權 `/etc/commerce`<br>修改特定專案的許可權 | `workflow-users` 群組 |
-| 所有者 | 具有此角色的使用者可以建立專案、在專案中起始工作，並將核准的資產移至生產資料夾。 擁有者也可以檢視及執行專案中的所有其他任務。 | `/etc/commerce` 的寫入權限 | `dam-users` 群組以建立專案<br>`projects-administrators` 群組，以便建立專案和移動資產 |
+| 編輯者 | 擁有此角色的使用者可以上傳和編輯專案的內容。 | 對專案、相關中繼資料和相關資產的讀寫存取權<br>上傳快照清單、拍照以及檢閱和核准資產的許可權<br>對特定專案的`/etc/commerce`<br>修改許可權的寫入許可權 | `workflow-users` 群組 |
+| 所有者 | 具有此角色的使用者可以建立專案、在專案中起始工作，並將核准的資產移至生產資料夾。 擁有者也可以檢視及執行專案中的所有其他任務。 | `/etc/commerce` 的寫入權限 | `dam-users`群組，能夠建立專案<br>`projects-administrators`群組，能夠建立專案和移動資產 |
 
 對於創意專案，也會提供其他角色，例如攝影師。 您可以使用這些角色來衍生特定專案的自訂角色。
 
@@ -226,9 +226,9 @@ ht-degree: 27%
 
 當您建立專案並將使用者新增至各種角色時，系統會自動建立與專案關聯的群組以管理關聯的許可權。
 
-例如，名為Myproject的專案將包含三個群組 **Myproject所有者**， **Myproject編輯器**， **Myproject觀察員**.
+例如，名為Myproject的專案將有三個群組&#x200B;**Myproject擁有者**、**Myproject編輯者**、**Myproject觀察者**。
 
-如果刪除專案，則只有在您選取適當的選項時，才會刪除這些群組 [刪除專案時。](/help/sites-authoring/touch-ui-managing-projects.md#deleting-a-project) 管理員也可以手動刪除中的群組 **工具** > **安全性** > **群組**.
+如果刪除專案，則在刪除專案時，只有選取適當的選項[，才會刪除這些群組。](/help/sites-authoring/touch-ui-managing-projects.md#deleting-a-project)管理員也可以手動刪除&#x200B;**工具** > **安全性** > **群組**&#x200B;中的群組。
 
 ## 其他資源 {#additional-resources}
 

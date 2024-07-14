@@ -43,46 +43,46 @@ ht-degree: 0%
 
 ### 離線備份與停機時間 {#offline-backup-with-downtime}
 
-1. 關閉整個叢集及相關服務。 (請參閱 [啟動和停止服務](/help/forms/using/admin-help/starting-stopping-services.md#starting-and-stopping-services))
-1. 在任何節點上，備份資料庫、GDS和聯結器。 (請參閱 [要備份和復原的檔案](/help/forms/using/admin-help/files-back-recover.md#files-to-back-up-and-recover))
+1. 關閉整個叢集及相關服務。 （請參閱[啟動和停止服務](/help/forms/using/admin-help/starting-stopping-services.md#starting-and-stopping-services)）
+1. 在任何節點上，備份資料庫、GDS和聯結器。 （請參閱[要備份和復原的檔案](/help/forms/using/admin-help/files-back-recover.md#files-to-back-up-and-recover)）
 1. 若要離線備份AEM存放庫，請執行下列步驟：
 
    1. 針對每個叢集節點，備份包含叢集節點ID的檔案。
    1. 備份任何次要叢集節點的所有檔案，包括子目錄。
    1. 分別備份每個叢集節點的儲存庫/系統ID。
 
-   如需詳細步驟，請參閱 [備份和還原](https://helpx.adobe.com/experience-manager/kb/CRXBackupAndRestoreProcedure.html).
+   如需詳細步驟，請參閱[備份與還原](https://helpx.adobe.com/experience-manager/kb/CRXBackupAndRestoreProcedure.html)。
 
 1. 備份任何其他資料，例如客戶字型。
 1. 再次啟動叢集。
 
 ### 離線備份，無停機時間 {#offline-backup-with-no-downtime}
 
-1. 進入滾動備份模式。 (請參閱 [進入備份模式](/help/forms/using/admin-help/backing-aem-forms-data.md#entering-the-backup-modes))
+1. 進入滾動備份模式。 （請參閱[進入備份模式](/help/forms/using/admin-help/backing-aem-forms-data.md#entering-the-backup-modes)）
 
    復原後，請離開滾動備份模式。
 
-1. 關閉叢集中與AEM有關的任何次要節點。 (請參閱 [啟動和停止服務](/help/forms/using/admin-help/starting-stopping-services.md#starting-and-stopping-services))
-1. 在任何節點上，備份資料庫、GDS和聯結器。 (請參閱 [要備份和復原的檔案](/help/forms/using/admin-help/files-back-recover.md#files-to-back-up-and-recover))
+1. 關閉叢集中與AEM有關的任何次要節點。 （請參閱[啟動和停止服務](/help/forms/using/admin-help/starting-stopping-services.md#starting-and-stopping-services)）
+1. 在任何節點上，備份資料庫、GDS和聯結器。 （請參閱[要備份和復原的檔案](/help/forms/using/admin-help/files-back-recover.md#files-to-back-up-and-recover)）
 1. 若要離線備份AEM存放庫，請執行下列步驟：
 
    1. 針對每個叢集節點，備份包含叢集節點ID的檔案。
    1. 備份任何次要叢集節點的所有檔案，包括子目錄。
    1. 分別備份每個叢集節點的repository/system.id 。
 
-   如需詳細步驟，請參閱 [備份和還原](https://helpx.adobe.com/experience-manager/kb/CRXBackupAndRestoreProcedure.html).
+   如需詳細步驟，請參閱[備份與還原](https://helpx.adobe.com/experience-manager/kb/CRXBackupAndRestoreProcedure.html)。
 
 1. 備份任何其他資料，例如客戶字型。
 1. 再次啟動叢集。
 
 ### 線上備份沒有停機時間，但回應延遲 {#online-backup-with-no-downtime-but-delay-in-response}
 
-1. 進入滾動備份模式。 (請參閱 [進入備份模式](/help/forms/using/admin-help/backing-aem-forms-data.md#entering-the-backup-modes))
+1. 進入滾動備份模式。 （請參閱[進入備份模式](/help/forms/using/admin-help/backing-aem-forms-data.md#entering-the-backup-modes)）
 
    復原後，請離開滾動備份模式。
 
-1. 關閉叢集中與AEM有關的任何次要節點。 (請參閱 [啟動和停止服務](/help/forms/using/admin-help/starting-stopping-services.md#starting-and-stopping-services))
-1. 在任何節點上，備份資料庫、GDS和聯結器。 (請參閱 [要備份和復原的檔案](/help/forms/using/admin-help/files-back-recover.md#files-to-back-up-and-recover))
+1. 關閉叢集中與AEM有關的任何次要節點。 （請參閱[啟動和停止服務](/help/forms/using/admin-help/starting-stopping-services.md#starting-and-stopping-services)）
+1. 在任何節點上，備份資料庫、GDS和聯結器。 （請參閱[要備份和復原的檔案](/help/forms/using/admin-help/files-back-recover.md#files-to-back-up-and-recover)）
 1. 若要線上備份AEM存放庫，請執行下列步驟：
 
    1. 針對每個叢集節點，備份包含cluster_node.id的檔案。
@@ -120,7 +120,7 @@ ht-degree: 0%
 
 1. 從系統映像重新建立實體系統。
 1. 套用修補程式或更新至影像建立後套用的AEM表單。 備份程式期間會記錄此資訊。 AEM表單必須復原到與系統備份時相同的修補程式層級。
-1. (*可選*)如果所有其他節點運作正常，則AEM存放庫也可能會損毀。 在此情況下，您會在AEM存放庫的error.log檔案中看到一個存放庫取消同步訊息。
+1. （*選擇性*）如果所有其他節點都正常運作，AEM存放庫也有可能已損毀。 在此情況下，您會在AEM存放庫的error.log檔案中看到一個存放庫取消同步訊息。
 
    若要還原存放庫，請執行下列步驟。
 
@@ -133,7 +133,7 @@ ht-degree: 0%
    1. 刪除節點上的檔案clusterNode/revision.log 。
    1. 刪除節點上的.lock （如果存在）。
    1. 刪除節點上的repository/system.id （如果存在）。
-   1. 刪除節點上的檔案&amp;ast；&amp;ast；/listener.properties （如果存在）。
+   1. 刪除節點上的檔案&amp;amp；&amp;amp；&amp;ast；/listener.properties （如果存在）。
    1. 還原個別叢集節點的repository/cluster_node.id。
 
 >[!NOTE]
@@ -163,7 +163,7 @@ ht-degree: 0%
    1. 刪除所有叢集節點上的檔案clusterNode/revision.log 。
    1. 刪除所有叢集節點上的.lock （如果存在）。
    1. 刪除repository/system.id所有叢集節點（如果存在）。
-   1. 刪除所有叢集節點上的檔案&amp;ast；&amp;ast；/listener.properties （如果存在）。
+   1. 刪除所有叢集節點上的檔案&amp;amp；&amp;amp；&amp;ast；/listener.properties （如果存在）。
    1. 還原個別叢集節點的repository/cluster_node.id。
 
 >[!NOTE]
@@ -176,15 +176,15 @@ ht-degree: 0%
 
 ## 備份和還原Correspondence Management Solution發佈節點 {#back-up-and-restore-correspondence-management-solution-publish-node}
 
-發行者節點在叢集環境中沒有任何主要 — 次要關係。 您可以透過下列步驟備份任何發佈者節點 [備份和還原](https://helpx.adobe.com/experience-manager/kb/CRXBackupAndRestoreProcedure.html).
+發行者節點在叢集環境中沒有任何主要 — 次要關係。 您可以執行[備份與還原](https://helpx.adobe.com/experience-manager/kb/CRXBackupAndRestoreProcedure.html)，以備份任何發行者節點。
 
 ### 復原單一發行者節點 {#recover-a-single-publisher-node}
 
 1. 關閉必須復原的節點，在節點再次啟動之前不要進行任何發佈活動。
-1. 使用還原Publish節點 [還原備份](https://helpx.adobe.com/experience-manager/kb/CRXBackupAndRestoreProcedure.html).
+1. 使用[還原備份](https://helpx.adobe.com/experience-manager/kb/CRXBackupAndRestoreProcedure.html)來還原Publish節點。
 
 ### 復原叢集 {#recover-a-cluster}
 
 1. 關閉叢集。
-1. 使用還原Publish節點 [還原備份](https://helpx.adobe.com/experience-manager/kb/CRXBackupAndRestoreProcedure.html).
+1. 使用[還原備份](https://helpx.adobe.com/experience-manager/kb/CRXBackupAndRestoreProcedure.html)來還原Publish節點。
 1. 啟動主要節點，接著啟動製作叢集的次要節點。

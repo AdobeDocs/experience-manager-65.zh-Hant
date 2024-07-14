@@ -26,6 +26,6 @@ ht-degree: 1%
 
 如果您不打算使用「應用程式檢視器」來檢閱處於開發和測試狀態的應用程式，則不需要變更反向連結篩選器的預設設定。
 
-在您執行中的AEM作者例項中，導覽至： [http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr) 和搜尋「Apache Sling反向連結篩選器」。 按一下以編輯反向連結篩選條件，並勾選「允許空白」核取方塊（請參閱下圖）。 接著，按一下儲存按鈕，並關閉瀏覽器頁面。
+在您正在執行的AEM製作執行個體中，導覽至： [http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr)並搜尋「Apache Sling反向連結篩選器」。 按一下以編輯反向連結篩選條件，並勾選「允許空白」核取方塊（請參閱下圖）。 接著，按一下儲存按鈕，並關閉瀏覽器頁面。
 
 ![反向連結篩選設定](assets/chlimage_1-106.png)

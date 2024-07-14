@@ -14,7 +14,7 @@ ht-degree: 87%
 
 # 使用 AEM 進行 Headless 製作 - 簡介 {#author-headless-introduction}
 
-在這部分中 [AEM Headless內容作者歷程](overview.md)，您可以瞭解使用Adobe Experience Manager (AEM)傳送headless內容所需的（基本）概念和術語，以瞭解製作內容。
+在[AEM Headless內容作者歷程](overview.md)的這一部分，您可以學習必要的（基本）概念和術語，以瞭解Adobe Experience Manager (AEM)的Headless內容傳遞的作者內容。
 
 ## 目標 {#objective}
 

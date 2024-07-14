@@ -20,7 +20,7 @@ ht-degree: 0%
 
 Apache Sling Discovery功能提供Java API，可讓您建立使用JobManager作業和JobConsumer服務。
 
-如需有關建立解除安裝拓撲和設定主題沖銷的資訊，請參閱 [正在解除安裝工作](/help/sites-deploying/offloading.md).
+如需有關建立解除安裝拓撲和設定主題耗用的資訊，請參閱[解除安裝工作](/help/sites-deploying/offloading.md)。
 
 ## 處理工作承載 {#handling-job-payloads}
 
@@ -29,7 +29,7 @@ Apache Sling Discovery功能提供Java API，可讓您建立使用JobManager作�
 * `offloading.job.input.payload`：以逗號分隔的內容路徑清單。 內容會復寫到執行工作的執行處理。
 * `offloading.job.output.payload`：以逗號分隔的內容路徑清單。 當作業執行完成時，會將作業裝載復寫到建立作業的執行處理上的這些路徑。
 
-使用 `OffloadingJobProperties` 列舉以參照屬性名稱：
+使用`OffloadingJobProperties`列舉來參照屬性名稱：
 
 * `OffloadingJobProperties.INPUT_PAYLOAD.propertyName()`
 * `OffloadingJobProperties.OUTPUT_PAYLOAD.propetyName()`
@@ -42,7 +42,7 @@ Apache Sling Discovery功能提供Java API，可讓您建立使用JobManager作�
 
 * 主題：工作主題。
 * 名稱： （選擇性）
-* 屬性對應： A `Map<String, Object>` 包含任何數量屬性的物件，例如輸入裝載路徑和輸出裝載路徑。 執行工作的JobConsumer物件可以使用這個Map物件。
+* 屬性對應：包含任何數量屬性的`Map<String, Object>`物件，例如輸入承載路徑和輸出承載路徑。 執行工作的JobConsumer物件可以使用這個Map物件。
 
 以下範例服務會為給定主題和輸入裝載路徑建立作業。
 
@@ -92,7 +92,7 @@ public class JobGeneratorImpl implements JobGenerator  {
 }
 ```
 
-為呼叫JobGeneratorImpl.createJob時，記錄會包含以下訊息 `com/adobe/example/offloading` 主題與 `/content/geometrixx/de/services` 裝載：
+當為`com/adobe/example/offloading`主題和`/content/geometrixx/de/services`裝載呼叫JobGeneratorImpl.createJob時，記錄檔包含下列訊息：
 
 ```shell
 10.06.2013 15:43:33.868 *INFO* [JobHandler: /etc/workflow/instances/2013-06-10/model_1554418768647484:/content/geometrixx/en/company] com.adobe.example.offloading.JobGeneratorImpl Received request to make job for topic com/adobe/example/offloading and payload /content/geometrixx/de/services
@@ -100,9 +100,9 @@ public class JobGeneratorImpl implements JobGenerator  {
 
 ## 開發工作消費者 {#developing-a-job-consumer}
 
-若要使用工作，請開發實作的OSGi服務 `org.apache.sling.event.jobs.consumer.JobConsumer` 介面。 使用以要使用的主題來識別 `JobConsumer.PROPERTY_TOPICS` 屬性。
+若要使用工作，請開發實作`org.apache.sling.event.jobs.consumer.JobConsumer`介面的OSGi服務。 使用`JobConsumer.PROPERTY_TOPICS`屬性識別要使用的主題。
 
-以下範例JobConsumer實作會註冊 `com/adobe/example/offloading` 主題。 取用者只會將裝載內容節點的Consumed屬性設定為true。
+下列範例JobConsumer實作向`com/adobe/example/offloading`主題註冊。 取用者只會將裝載內容節點的Consumed屬性設定為true。
 
 ```java
 package com.adobe.example.offloading;

@@ -28,4 +28,4 @@ Document Security也支援抽象原則。 抽象原則是包含所有原則屬�
 
 僅支援透過Document Security Java SDK建立抽象原則。 但是，您可以管理從Document Security網頁的抽象原則建立的原則。 使用此方法建立的原則，其行為與從Document Security網頁建立的原則相同。
 
-另請參閱 [使用AEM表單進行程式設計](https://www.adobe.com/go/learn_aemforms_programming_63) 以取得詳細資訊。
+如需詳細資訊，請參閱[使用AEM表單](https://www.adobe.com/go/learn_aemforms_programming_63)程式設計。

@@ -20,13 +20,13 @@ ht-degree: 2%
 
 ## 下載 {#download}
 
-編寫此指令碼是為了便於分析 `access.log` 產生可讀報告以供日後處理的檔案。
+編寫此指令碼是為了方便分析`access.log`個檔案，產生可讀報告以供日後處理。
 
 [取得檔案](assets/analyse-access.sh)
 
 ## 說明 {#description}
 
-編寫此指令碼是為了便於分析 `access.log` 產生可讀報告以供日後處理的檔案。
+編寫此指令碼是為了方便分析`access.log`個檔案，產生可讀報告以供日後處理。
 
 這會產生整體請求數量、GET與POST、隨時間變化的請求分佈等等。
 
@@ -36,7 +36,7 @@ ht-degree: 2%
 
 從檔案內告訴您如何執行的註解取得：
 
-分析CQ `access.log` 推斷各種資訊並產生Markdown輸出 `stdout`.
+分析CQ `access.log`推斷各種資訊，並在`stdout`上產生Markdown輸出。
 
 ## 使用情況 {#usage}
 

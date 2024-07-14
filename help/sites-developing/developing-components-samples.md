@@ -26,14 +26,14 @@ ht-degree: 5%
 * [AEM元件 — 基本需知](/help/sites-developing/components-basics.md)
 * [開發AEM元件](/help/sites-developing/developing-components.md)
 
-如需傳統UI的詳細資訊，請參閱 [傳統UI的AEM元件](/help/sites-developing/developing-components-classic.md).
+如需傳統UI的相關資訊，請參閱傳統UI的[AEM元件](/help/sites-developing/developing-components-classic.md)。
 
 >[!NOTE]
 >
 >為協助您分析、測試及偵錯元件，AEM提供：
 >
 >* [開發人員模式](/help/sites-developing/developer-mode.md)
->* a [自動化測試的架構，以Hobbes.js資料庫為基礎](/help/sites-developing/hobbes.md)
+>* 自動化測試的[架構，以Hobbes.js資料庫](/help/sites-developing/hobbes.md)為基礎
 >
 
 ## 程式碼範例 — 如何自訂對話方塊欄位 {#code-sample-how-to-customize-dialog-fields}
@@ -42,12 +42,12 @@ GITHUB上的程式碼
 
 您可以在GitHub上找到此頁面的程式碼
 
-* [在GitHub上開啟aem-authoring-dialog-fields-customization專案](https://github.com/Adobe-Marketing-Cloud/aem-authoring-dialog-fields-customization)
-* 將專案下載為 [ZIP檔案](https://codeload.github.com/Adobe-Marketing-Cloud/aem-authoring-dialog-fields-customization/zip/refs/heads/master)
+* 在GitHub上[開啟aem-authoring-dialog-fields-customization專案](https://github.com/Adobe-Marketing-Cloud/aem-authoring-dialog-fields-customization)
+* 將專案下載為[ZIP檔](https://codeload.github.com/Adobe-Marketing-Cloud/aem-authoring-dialog-fields-customization/zip/refs/heads/master)
 
 >[!NOTE]
 >
->此程式碼範例與上的AEM Gems工作階段有關 [自訂對話方塊欄位](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-customizing-dialog-fields-in-touch-ui.html).
+>此程式碼範例與[自訂對話方塊欄位](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-customizing-dialog-fields-in-touch-ui.html)上的AEM Gems工作階段有關。
 
 ## 相關資源 {#related-resources}
 
@@ -55,10 +55,10 @@ GITHUB上的程式碼
 
 可以使用頁面編輯器的編輯層將新動作新增到元件工具列中。
 
-詳細資訊，以及程式碼範例的連結位於 [將動作新增至元件工具列](/help/sites-developing/customizing-page-authoring-touch.md#add-new-action-to-a-component-toolbar).
+詳細資訊以及程式碼範例的連結位於[新增動作至元件工具列](/help/sites-developing/customizing-page-authoring-touch.md#add-new-action-to-a-component-toolbar)下。
 
 ### 自訂和擴充內容片段 {#customizing-and-extending-content-fragments}
 
 您可能想要擴充標準內容片段元件以新增功能。
 
-詳細資料位於 [自訂和擴充內容片段](/help/sites-developing/customizing-content-fragments.md).
+詳細資料位於[自訂及擴充內容片段](/help/sites-developing/customizing-content-fragments.md)下。

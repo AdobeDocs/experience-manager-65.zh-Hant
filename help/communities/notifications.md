@@ -23,7 +23,7 @@ ht-degree: 0%
 
 AEM Communities提供通知區段，顯示已登入社群成員感興趣的事件。
 
-通知類似於 [活動](/help/communities/essentials-activities.md) 和 [訂閱](/help/communities/subscriptions.md) 原因可能是：
+通知類似於[活動](/help/communities/essentials-activities.md)和[訂閱](/help/communities/subscriptions.md)，因為它們可能來自：
 
 * 成員張貼內容。
 * 選擇跟隨其他成員的成員。
@@ -34,17 +34,17 @@ AEM Communities提供通知區段，顯示已登入社群成員感興趣的事�
 
 * 通知區段的連結一律會顯示在社群網站的標題中：
 
-   * 活動需要 [活動資料流函式](/help/communities/functions.md#activity-stream-function) 會包含在社群網站的結構中。
-   * 訂閱需要 [電子郵件的設定](/help/communities/email.md).
+   * 活動需要將[活動資料流函式](/help/communities/functions.md#activity-stream-function)包含在社群網站的結構中。
+   * 訂閱需要[設定電子郵件](/help/communities/email.md)。
 
 * 通知的實作透過可擴充和可插拔的管道進行：
 
    * 活動只能在Web上使用。
    * 訂閱只能透過電子郵件取得。
 
-社群起始 [FP1](/help/communities/deploy-communities.md#latestfeaturepack)，可用的通知通道包括：
+截至Communities [FP1](/help/communities/deploy-communities.md#latestfeaturepack)，可用的通知通道為：
 
-* 網路管道，使用下列專案存取： `Notifications` 連結。
+* 使用`Notifications`連結存取的Web管道。
 * 電子郵件頻道，在正確設定電子郵件時可用。
 
 未來的頻道包括行動裝置和桌上型電腦。
@@ -55,15 +55,15 @@ AEM Communities提供通知區段，顯示已登入社群成員感興趣的事�
 
 必須設定電子郵件，通知的電子郵件通道才能正常運作。
 
-如需設定電子郵件的指示，請參閱 [設定電子郵件](/help/communities/analytics.md).
+如需設定電子郵件的說明，請參閱[設定電子郵件](/help/communities/analytics.md)。
 
-**啟用追隨**
+**啟用Follow**
 
-元件必須設定為啟用下列專案。 允許追蹤的功能包括 [部落格](/help/communities/blog-feature.md)， [論壇](/help/communities/forum.md)， [QnA](/help/communities/working-with-qna.md)， [行事曆](/help/communities/calendar.md)， [檔案庫](/help/communities/file-library.md)、和 [評論](/help/communities/comments.md).
+元件必須設定為啟用下列專案。 允許追蹤的功能包括[部落格](/help/communities/blog-feature.md)、[論壇](/help/communities/forum.md)、[QnA](/help/communities/working-with-qna.md)、[行事曆](/help/communities/calendar.md)、[檔案庫](/help/communities/file-library.md)和[註解](/help/communities/comments.md)。
 
-**注意**：
+**附註**：
 
-* 社群內使用的元件 [網站範本](/help/communities/sites.md) 和 [群組範本](/help/communities/tools-groups.md) 可能已設定為遵循。
+* 社群[網站範本](/help/communities/sites.md)和[群組範本](/help/communities/tools-groups.md)中使用的元件可能已設定為要遵循。
 
 * 成員設定檔已設定為允許其他成員跟隨。
 
@@ -71,11 +71,11 @@ AEM Communities提供通知區段，顯示已登入社群成員感興趣的事�
 
 ![通知](assets/notifications.png)
 
-此 **[!UICONTROL 追隨]** button提供追蹤作為活動、訂閱和/或通知之專案的方法。 每次 **[!UICONTROL 追隨]** 按鈕已選取，可開啟或關閉選取專案。 此 `Email Subscriptions` 選取專案只有在設定後才出現。
+**[!UICONTROL 追隨]**&#x200B;按鈕提供將專案作為活動、訂閱和/或通知進行追蹤的方法。 每次選取&#x200B;**[!UICONTROL 追隨]**&#x200B;按鈕時，都可以開啟或關閉選取專案。 `Email Subscriptions`選取專案只有在設定後才出現。
 
-如果選取了任何追蹤方法，按鈕的文字會變更為 **[!UICONTROL 關注]**. 為方便起見，您可以選取 `Unfollow All` 以關閉所有方法。
+如果選取任何追蹤方法，按鈕的文字會變更為&#x200B;**[!UICONTROL 追蹤]**。 為方便起見，可以選取`Unfollow All`以關閉所有方法。
 
-此 **[!UICONTROL 追隨]** 按鈕隨即出現：
+**[!UICONTROL 追隨]**&#x200B;按鈕將會出現：
 
 * 檢視其他成員的設定檔時。
 * 在主要功能頁面（例如論壇、QnA和部落格）上：
@@ -94,7 +94,7 @@ Web Channel一律啟用。
 
 ![通知14](assets/notifications1.png)
 
-電子郵件管道，需仰賴適當的 [電子郵件的設定](/help/communities/email.md)，提供與網頁管道相同的設定。
+電子郵件通道依賴電子郵件](/help/communities/email.md)的正確[設定，提供與網頁通道相同的設定。
 
 電子郵件通道預設為關閉。
 
@@ -108,9 +108,9 @@ Web Channel一律啟用。
 
 ### Web通知 {#web-notifications}
 
-A [精靈已建立的社群網站](/help/communities/sites-console.md) 現在包含連至 `Notifications` 在橫幅上方的網站標題列功能。 與訊息不同，會為每個社群網站建立通知，而訊息必須在網站建立過程中啟用。
+[精靈建立的社群網站](/help/communities/sites-console.md)現在在橫幅上方的網站標題列中包含指向`Notifications`功能的連結。 與訊息不同，會為每個社群網站建立通知，而訊息必須在網站建立過程中啟用。
 
-造訪已發佈的網站時，選取 `Notifications` 連結會顯示該成員的所有通知。
+造訪已發佈的網站時，選取`Notifications`連結將會顯示該成員的所有通知。
 
 ![通知4](assets/notifications4.png)
 
@@ -122,11 +122,11 @@ A [精靈已建立的社群網站](/help/communities/sites-console.md) 現在包
 
 ## 自訂電子郵件通知 {#customize-email-notifications}
 
-組織可以透過以下方式自訂電子郵件通知 [覆蓋](/help/communities/client-customize.md#overlays) 範本位於 **/libs/settings/community/templates/email/html**.
+組織可以透過[覆蓋](/help/communities/client-customize.md#overlays)位於&#x200B;**/libs/settings/community/templates/email/html**&#x200B;的範本來自訂電子郵件通知。
 
-例如，若要修改提及電子郵件通知（針對社群元件），請新增 **如果** 動詞的條件 **提及** 元件範本中，您已為其啟用 **@mentions** 支援。
+例如，若要修改提及電子郵件通知（適用於社群元件），請在啟用&#x200B;**@mentions**&#x200B;支援之元件的範本中，新增動詞&#x200B;**提及**&#x200B;的&#x200B;**if**&#x200B;條件。
 
-若要修改電子郵件通知範本以新@mention部落格註解，請將現成可用的範本放在： **/libs/settings/community/templates/email/html/social.journal.components.hbs.comment/en**
+若要修改部落格評論中@mention的電子郵件通知範本，請將現成範本放置於： **/libs/settings/community/templates/email/html/social.journal.components.hbs.comment/en**
 
 ```java
 {{#equals this.verb "mention"}}\

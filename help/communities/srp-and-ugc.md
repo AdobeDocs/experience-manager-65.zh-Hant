@@ -20,7 +20,7 @@ ht-degree: 0%
 
 ## 簡介 {#introduction}
 
-如果不熟悉儲存資源提供者(SRP)及其和使用者產生內容(UGC)的關係，請造訪 [社群內容儲存](working-with-srp.md) 和 [儲存資源提供者概觀](srp.md).
+若不熟悉儲存資源提供者(SRP)及其與使用者產生內容(UGC)的關係，請造訪[社群內容儲存](working-with-srp.md)和[儲存資源提供者概觀](srp.md)。
 
 本檔案的這個區段提供有關SRP和UGC的一些基本資訊。
 
@@ -36,13 +36,13 @@ SRP API不是抽象類別，而是介面。 自訂實施不應輕易進行，因
 
 使用SRP API的方法是透過提供的公用程式，例如SocialResourceUtilities套件中的公用程式。
 
-從AEM 6.0或更舊版本升級時，必須移轉所有SRP （有開放原始碼工具可用）的UGC。 另請參閱 [升級至AEM Communities 6.3](upgrade.md).
+從AEM 6.0或更舊版本升級時，必須移轉所有SRP (有開放式Source工具可用)的UGC。 請參閱[升級至AEM Communities 6.3](upgrade.md)。
 
 >[!NOTE]
 >
 >過去，用於存取UGC的公用程式已存在於SocialUtils套件中，該套件已不存在。
 >
->有關替代公用程式，請參閱 [SocialUtils重構](socialutils.md).
+>如需取代公用程式，請參閱[SocialUtils重構](socialutils.md)。
 
 ## 存取UGC的公用程式方法 {#utility-method-to-access-ugc}
 
@@ -63,13 +63,13 @@ protected void doGet(final SlingHttpServletRequest request, final SlingHttpServl
 }
 ```
 
-如需其他SocialUtils取代專案，請參閱 [SocialUtils重構](socialutils.md).
+如需其他SocialUtils取代，請參閱[SocialUtils重構](socialutils.md)。
 
-如需程式碼指南，請造訪 [使用SRP存取UGC](accessing-ugc-with-srp.md).
+如需編碼准則，請造訪[使用SRP存取UGC](accessing-ugc-with-srp.md)。
 
 >[!CAUTION]
 >
->resourceToUGCStoragePath()傳回的路徑為 *非* 適合 [ACL檢查](srp.md#for-access-control-acls).
+>傳回的路徑resourceToUGCStoragePath()為&#x200B;*不適用於[ACL檢查](srp.md#for-access-control-acls)的*。
 
 ## 存取ACL的公用程式方法 {#utility-method-to-access-acls}
 
@@ -96,38 +96,38 @@ protected void doGet(final SlingHttpServletRequest request, final SlingHttpServl
 
 >[!CAUTION]
 >
->resourceToACLPath()傳回的路徑為 *非* 適合 [存取UGC](#utility-method-to-access-acls) 本身。
+>resourceToACLPath()傳回的路徑為&#x200B;*不適合[存取UGC](#utility-method-to-access-acls)本身*。
 
 ## UGC相關的儲存位置 {#ugc-related-storage-locations}
 
-以下儲存位置的說明在使用JSRP或是MSRP進行開發時可能會有所幫助。 目前沒有UI可存取ASRP中儲存的UGC，因為JSRP有([CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md))和MSRP （MongoDB工具）。
+以下儲存位置的說明在使用JSRP或是MSRP進行開發時可能會有所幫助。 目前沒有存取ASRP中儲存之UGC的UI，因為有JSRP ([CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md))和MSRP （MongoDB工具）。
 
 **元件位置**
 
 當成員在發佈環境中進入UGC時，他們與AEM網站中的元件互動。
 
-以下是這類元件的範例： [comments元件](http://localhost:4502/content/community-components/en/comments.html) 中存在於 [社群元件指南](components-guide.md) 網站。 本機存放庫中註解節點的路徑為：
+此類元件的範例是存在於[社群元件指南](components-guide.md)網站中的[comments元件](http://localhost:4502/content/community-components/en/comments.html)。 本機存放庫中註解節點的路徑為：
 
 * 元件路徑= `/content/community-components/en/comments/jcr:content/content/includable/comments`
 
 **陰影節點位置**
 
-建立UGC也會建立 [陰影節點](srp.md#about-shadow-nodes-in-jcr) 將必要的ACL套用到其中。 本機存放庫中對應陰影節點的路徑是在元件路徑前加上陰影節點根路徑的結果：
+建立UGC也會建立套用必要ACL的[陰影節點](srp.md#about-shadow-nodes-in-jcr)。 本機存放庫中對應陰影節點的路徑是在元件路徑前加上陰影節點根路徑的結果：
 
 * 根路徑= `/content/usergenerated`
 * 註解陰影節點= `/content/usergenerated/content/community-components/en/comments/jcr:content/content/includable/comments`
 
 **UGC位置**
 
-UGC不會在這兩個位置中建立，且僅能使用 [公用程式方法](#utility-method-to-access-ugc) 會叫用SRP API。
+UGC不會在這兩個位置中建立，而且只能使用叫用SRP API的[公用程式方法](#utility-method-to-access-ugc)來存取。
 
 * 根路徑= `/content/usergenerated/asi/srp-choice`
 * JSRP的UGC節點= `/content/usergenerated/asi/jcr/content/community-components/en/comments/jcr:content/content/includable/comments/srzd-let_it_be_`
 
-*注意*，針對JSRP，UGC節點將 *僅限* 出現在輸入它的AEM例項（製作或發佈）上。 如果在發佈執行個體上輸入，就無法在作者上的稽核控制檯中進行稽核。
+*注意*，對於JSRP，UGC節點將&#x200B;*僅*&#x200B;出現在輸入它的AEM執行個體（製作或發佈）上。 如果在發佈執行個體上輸入，就無法在作者上的稽核控制檯中進行稽核。
 
 ## 相關資訊 {#related-information}
 
-* [儲存資源提供者概觀](srp.md)  — 簡介和存放庫使用概述。
-* [使用SRP存取UGC](accessing-ugc-with-srp.md)  — 程式碼指南。
-* [SocialUtils重構](socialutils.md)  — 將已棄用的公用程式方法對應到目前的SRP公用程式方法。
+* [儲存資源提供者概觀](srp.md) — 簡介和存放庫使用概觀。
+* [使用SRP存取UGC](accessing-ugc-with-srp.md) — 編碼准則。
+* [SocialUtils重構](socialutils.md) — 將已棄用的公用程式方法對應到目前的SRP公用程式方法。

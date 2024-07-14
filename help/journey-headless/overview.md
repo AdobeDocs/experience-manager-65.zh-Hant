@@ -14,7 +14,7 @@ ht-degree: 63%
 
 # AEM Headless 歷程 {#aem-headless-journeys}
 
-從這裡開始，概略瞭解引導式歷程，讓您瞭解AEM強大的Headless功能。
+從這裡開始概略介紹引導式歷程，讓您瞭解AEM強大的Headless功能。
 
 ## 簡介 {#introduction}
 
@@ -22,7 +22,7 @@ Headless 實作對於將體驗傳遞給您的對象而言越來越重要，無�
 
 Headless 實作放棄了全堆疊解決方案中的傳統頁面和元件管理，專注於建立管道中立、可重複使用的內容片段及其跨管道傳遞。它是實作數位體驗的現代動態開發模式。
 
-如果您是AEM和/或Headless的新手，AEM Headless歷程是一個絕佳的起點，可讓您透過敘述來開始了解理論和技術，從而以Headless方式解決各種業務問題。
+如果您是AEM和/或Headless的新手，AEM Headless歷程是您開始透過敘述來了解理論和技術的好地方，以便以Headless方式解決各種業務問題。
 
 ## AEM 文件歷程 {#documentation-journeys}
 

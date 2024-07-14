@@ -20,7 +20,7 @@ ht-degree: 0%
 
 如果您安裝AEM Forms的使用者使用Content Services的資料擷取功能（已棄用），建議您為這些使用者建立具有唯讀存取權的角色。
 
-***注意&#x200B;**：Adobe®LiveCycle® Content Services ES （已淘汰）是隨LiveCycle安裝的內容管理系統。 它可讓使用者設計、管理、監控及最佳化以人為中心的流程。 內容服務（已棄用）支援將於2014年12月31日終止。 另請參閱 [Adobe產品生命週期檔案](https://helpx.adobe.com/tw/support/programs/eol-matrix.html).*
+***注意&#x200B;**： Adobe® LiveCycle® Content Services ES （已棄用）是隨LiveCycle安裝的內容管理系統。 它可讓使用者設計、管理、監控及最佳化以人為中心的流程。 內容服務（已棄用）支援將於2014年12月31日終止。 請參閱[Adobe產品生命週期檔案](https://helpx.adobe.com/tw/support/programs/eol-matrix.html).*
 
 資料擷取需要您指派使用者角色來存取SampleReaderExtensionsCredential。 您可以指派標準的「信任管理員」角色。 但是，請考慮這個角色會提供一般的非管理使用者管理員許可權，這些許可權可控制「PKI信任」設定值並管理「PKI認證」，這可能會危及您在生產環境中安裝AEM表單的安全性。 建議AEM表單系統管理員建立只授與信任存放區唯讀存取權的角色，並將此新角色指派給使用資料擷取的非管理員使用者。
 

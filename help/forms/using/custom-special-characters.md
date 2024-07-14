@@ -30,8 +30,8 @@ ht-degree: 1%
 
 您可以在字母中插入特殊字元：
 
-* 在 [文字編輯器](/help/forms/using/document-fragments.md#createtext)
-* 在 [通訊中的可編輯、內嵌模組](../../forms/using/create-correspondence.md#managecontent)
+* 在[文字編輯器](/help/forms/using/document-fragments.md#createtext)中
+* 在[可編輯的通訊模組](../../forms/using/create-correspondence.md#managecontent)中
 
 ![specialcharactersinlinemodule](assets/specialcharactersinlinemodule.png)
 
@@ -41,10 +41,10 @@ ht-degree: 1%
 
 使用下列步驟新增自訂特殊字元的支援：
 
-1. 前往 `https://'[server]:[port]'/[ContextPath]/crx/de` 並以管理員身分登入。
-1. 在應用程式資料夾中，建立名為的資料夾 **[!UICONTROL 特殊字元]** 路徑/結構類似於specialcharacters資料夾（在libs底下的textEditorConfig資料夾中）：
+1. 前往`https://'[server]:[port]'/[ContextPath]/crx/de`並以管理員身分登入。
+1. 在apps資料夾中，建立名為&#x200B;**[!UICONTROL specialcharacters]**&#x200B;的資料夾，其路徑/結構類似於specialcharacters資料夾（在libs底下的textEditorConfig資料夾中）：
 
-   1. 用滑鼠右鍵按一下 **特殊字元** 資料夾並選取「 」 **覆蓋節點**：
+   1. 在下列路徑的&#x200B;**specialcharacters**&#x200B;資料夾上按一下滑鼠右鍵，然後選取&#x200B;**覆蓋節點**：
 
       `/libs/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters`
 
@@ -54,7 +54,7 @@ ht-degree: 1%
 
       **覆蓋位置：** /apps/
 
-      **符合節點型別：** 已核取
+      **符合節點型別：**&#x200B;已核取
 
       >[!NOTE]
       >
@@ -68,20 +68,20 @@ ht-degree: 1%
       >
       >
 
-   1. 按一下 **確定** 然後按一下 **全部儲存**. specialcharacters資料夾是在指定的路徑中建立的。
+   1. 按一下[確定]****，然後按一下[儲存全部]****。 specialcharacters資料夾是在指定的路徑中建立的。
 
       建立覆蓋圖後，請驗證節點結構標籤。 使用覆蓋在/apps中建立的每個節點，都應與該節點的/libs中定義的類別和屬性相同。 如果/apps位置下方的節點結構中缺少任何屬性或標籤，請將其標籤與/libs中的對應節點同步。
 
-1. 確保 **[!UICONTROL textEditorConfig]** 節點具有下列屬性和值：
+1. 請確定&#x200B;**[!UICONTROL textEditorConfig]**&#x200B;節點具有下列屬性和值：
 
    | 名稱 | 類型 | 值 |
    |---|---|---|
    | cmConfigurationtype | 字串 | cmTextEditorConfiguration |
    | cssPath | 字串 | /libs/fd/cm/ma/gui/components/admin/createasset/textcontrol/clientlibs/textcontrol |
 
-1. 用滑鼠右鍵按一下 **[!UICONTROL 特殊字元]** 資料夾並選取「 」 **建立>子節點** 然後按一下 **全部儲存**：
+1. 在下列路徑的&#x200B;**[!UICONTROL specialcharacters]**&#x200B;資料夾上按一下滑鼠右鍵，並選取&#x200B;**建立>子節點**，然後按一下&#x200B;**儲存全部**：
 
-   /apps/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters/&lt;yourchildnode>
+   /apps/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters/&lt;YourChildNode>
 
 1. 重新整理文字編輯器\建立通訊UI頁面。 您新增的節點是UI中特殊字元清單的最後一個節點。
 1. 按一下&#x200B;**「儲存全部」**。

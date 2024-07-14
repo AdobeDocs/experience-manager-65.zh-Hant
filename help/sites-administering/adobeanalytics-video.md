@@ -23,23 +23,23 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->在繼續之前，請確定您已擁有 **可播放的視訊** 已在AEM中上傳。
+>繼續之前，請確定您已在AEM中上傳&#x200B;**可播放的視訊**。
 >
->為確保您的影片在頁面上播放，請參閱 **[本教學課程](/help/sites-authoring/default-components-foundation.md#video)** 有關如何在AEM中轉碼視訊檔案的資訊。
+>若要確保您的視訊在頁面上播放，請參閱&#x200B;**[本教學課程](/help/sites-authoring/default-components-foundation.md#video)**，以瞭解如何在AEM中轉碼視訊檔案。
 
 使用下列程式，以使用每種方法設定視訊追蹤的架構。
 
 >[!NOTE]
 >
->若為新實作，建議您 **不要使用** 視訊追蹤的舊版選項。 使用 **里程碑** 方法。
+>若是新的實作，建議您&#x200B;**不要使用**&#x200B;舊版選項進行視訊追蹤。 請改用&#x200B;**里程碑**&#x200B;方法。
 
 ## 常見步驟 {#common-steps}
 
-1. 透過拖曳設定網頁 **視訊元件** 從sidekick加入可玩的 **視訊作為資產** 適用於元件
+1. 從Sidekick拖曳&#x200B;**視訊元件**&#x200B;並將可播放的&#x200B;**視訊新增為該元件的資產**，以設定網頁
 
-1. [建立Adobe Analytics設定和框架](/help/sites-administering/adobeanalytics.md).
+1. [建立Adobe Analytics組態和架構](/help/sites-administering/adobeanalytics.md)。
 
-   * 後面章節的範例使用名稱 **my-sc-configuration** 設定和 **videofw** 用於框架。
+   * 後續章節中的範例使用名稱&#x200B;**my-sc-configuration**&#x200B;作為組態，使用&#x200B;**videofw**&#x200B;作為架構。
 
 1. 在Framework頁面上，選取RSID並將使用設定為all。 ([https://localhost:4502/cf#/etc/cloudservices/sitecatalyst/videoconf/videofw.html](https://localhost:4502/cf#/etc/cloudservices/sitecatalyst/videoconf/videofw.html))
 1. 從Sidekick的「一般」元件類別中，將「視訊」元件拖曳至架構。
@@ -80,7 +80,7 @@ XX尾碼是定義里程碑的軌跡位移。 例如，指定4、8、16、20和28
   </tr>
   <tr>
    <td>eventdata.videoName </td>
-   <td>對應至此的變數將包含 <strong>使用者易記</strong> 名稱(<strong>標題</strong>)中，若已在DAM中設定；若未設定，則視訊的 <strong>檔案名稱</strong> 將改為傳送。 只傳送一次，在播放視訊開始時傳送。</td>
+   <td>對應至此的變數將包含視訊的<strong>使用者易記的</strong>名稱（<strong>標題</strong>），若在DAM中設定；若未設定，將改為傳送視訊的<strong>檔案名稱</strong>。 只傳送一次，在播放視訊開始時傳送。</td>
   </tr>
   <tr>
    <td>eventdata.videoFileName </td>
@@ -96,7 +96,7 @@ XX尾碼是定義里程碑的軌跡位移。 例如，指定4、8、16、20和28
   </tr>
   <tr>
    <td>eventdata.events.a.media.timePlayed</td>
-   <td>每次觸發里程碑時都會傳送，使用者觀看指定區段所花費的秒數也會與此事件一併傳送。 例如， eventX=21<br /> </td>
+   <td>每次觸發里程碑時都會傳送，使用者觀看指定區段所花費的秒數也會與此事件一併傳送。 例如，eventX=21<br /> </td>
   </tr>
   <tr>
    <td>eventdata.events.a.media.view </td>
@@ -108,11 +108,11 @@ XX尾碼是定義里程碑的軌跡位移。 例如，指定4、8、16、20和28
   </tr>
   <tr>
    <td>eventdata.events.milestoneX </td>
-   <td>當指定的里程碑通過時傳送，X代表里程碑觸發的第二個<br /> </td>
+   <td>當指定的里程碑通過時傳送，X代表里程碑在<br />觸發的秒數 </td>
   </tr>
   <tr>
    <td>eventdata.a.contentType </td>
-   <td>在每個里程碑傳送；在Adobe Analytics呼叫中顯示為pev3，通常傳送為「視訊」<br /> </td>
+   <td>在每個里程碑上傳送；在Adobe Analytics呼叫中顯示為pev3，通常傳送為「視訊」<br /> </td>
   </tr>
   <tr>
    <td>eventdata.a.media.name </td>
@@ -120,14 +120,14 @@ XX尾碼是定義里程碑的軌跡位移。 例如，指定4、8、16、20和28
   </tr>
   <tr>
    <td>eventdata.a.media.segment </td>
-   <td>包含已檢視區段的相關資訊，例如， <code>2:O:4-8</code> </td>
+   <td>包含已檢視區段的資訊，例如，<code>2:O:4-8</code> </td>
   </tr>
  </tbody>
 </table>
 
 >[!NOTE]
 >
->您可以設定視訊的 **使用者易記** 透過開啟影片以在DAM中編輯並設定 **標題** 中繼資料欄位重新命名為。
+>您可以開啟視訊以在DAM中編輯，並將&#x200B;**Title**&#x200B;中繼資料欄位設定為所要的名稱，藉此設定視訊的&#x200B;**好記的**&#x200B;名稱。
 
 1. 選取「里程碑」作為追蹤方法後，在「追蹤位移」方塊中，輸入以逗號分隔的追蹤位移清單（以秒為單位）。 例如，下列值會定義里程碑在視訊開始後的4、8、16、20和28秒：
 
@@ -139,10 +139,10 @@ XX尾碼是定義里程碑的軌跡位移。 例如，指定4、8、16、20和28
 
 1. 若要將CQ變數對應至Adobe Analytics屬性，請將Adobe Analytics屬性從ContentFinder拖曳至元件上CQ變數旁邊。
 
-   如需最佳化對應的詳細資訊，請參閱 [在Adobe Analytics中測量視訊](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html) 指南。
+   如需最佳化對應的詳細資訊，請參閱[在Adobe Analytics中測量視訊](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html)指南。
 
-1. [新增框架](/help/sites-administering/adobeanalytics.md) 移至頁面。
-1. 若要在中測試設定 **預覽模式**，播放視訊以觸發Adobe Analytics呼叫。
+1. [將架構](/help/sites-administering/adobeanalytics.md)新增至頁面。
+1. 若要在&#x200B;**預覽模式**&#x200B;中測試設定，請播放視訊以讓Adobe Analytics呼叫觸發。
 
 以下的Adobe Analytics追蹤資料範例適用於使用4、8、16、20和24的追蹤位移，以及CQ變數的下列對應的里程碑追蹤：
 
@@ -217,7 +217,7 @@ XX尾碼是定義里程碑的軌跡位移。 例如，指定4、8、16、20和28
 
 在此範例中，視訊元件在架構頁面上如下所示：
 
-![video1](assets/video1.png)
+![視訊1](assets/video1.png)
 
 >[!NOTE]
 >
@@ -227,15 +227,15 @@ XX尾碼是定義里程碑的軌跡位移。 例如，指定4、8、16、20和28
 
 ![chlimage_1-128](assets/chlimage_1-128.png)
 
-*這是&#x200B;**第一次呼叫**向Adobe Analytics發出包含以下值的通知：*
+*這是對Adobe Analytics發出的&#x200B;**第一個呼叫**，包含下列值：*
 
-* *eventdata.a.media.name的prop1和eVar1，*
-* *props2-4，以及包含contentType （影片）和segment (1)的eVar2和eVar3:O:1-4)*
-* *已對應至eventdata.events.a.media.view的event3。*
+* eventdata.a.media.name的&#x200B;*prop1和eVar1，*
+* *props2-4，以及包含contentType （視訊）和區段(1:O:1-4)*&#x200B;的eVar2和eVar3
+* 已對應至eventdata.events.a.media.view.*的* event3
 
 ![chlimage_1-129](assets/chlimage_1-129.png)
 
-*這是&#x200B;**第三個呼叫**對Adobe Analytics做出：*
+*這是對Adobe Analytics發出的&#x200B;**第三次呼叫**：*
 
 * *prop1和eVar1包含a.media.name；*
 * *event1，因為已檢視區段*
@@ -248,7 +248,7 @@ XX尾碼是定義里程碑的軌跡位移。 例如，指定4、8、16、20和28
 「非舊版里程碑」方法類似於「里程碑」方法，但里程碑是使用追蹤長度的百分比定義。 共同之處如下：
 
 * 當視訊播放超過里程碑時，頁面會呼叫Adobe Analytics以追蹤事件。
-* 此 [CQ變數的靜態集合](#cqvars) 為與Adobe Analytics屬性對應而定義。
+* 定義為與Adobe Analytics屬性對應之CQ變數的[靜態集合](#cqvars)。
 * 元件會為您定義的每個里程碑建立CQ變數，供您對應至Adobe Analytics屬性。
 
 這些CQ變數的名稱會使用以下格式：
@@ -274,14 +274,14 @@ eventdata.events.milestoneXX
 
 1. 若要將CQ變數對應至Adobe Analytics屬性，請將Adobe Analytics屬性從ContentFinder拖曳至元件上CQ變數旁邊。
 
-   如需最佳化對應的詳細資訊，請參閱 [在Adobe Analytics中測量視訊](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html) 指南。
+   如需最佳化對應的詳細資訊，請參閱[在Adobe Analytics中測量視訊](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html)指南。
 
-1. [新增框架](/help/sites-administering/adobeanalytics.md) 移至頁面。
-1. 若要在中測試設定 **預覽模式**，播放視訊以觸發Adobe Analytics呼叫。
+1. [將架構](/help/sites-administering/adobeanalytics.md)新增至頁面。
+1. 若要在&#x200B;**預覽模式**&#x200B;中測試設定，請播放視訊以讓Adobe Analytics呼叫觸發。
 
 ## 舊版里程碑 {#legacy-milestones}
 
-此方法類似於Milestones方法，不同之處在於 *追蹤位移* 欄位是百分比而不是視訊中的設定點。
+此方法類似於Milestones方法，不同之處在於&#x200B;*追蹤位移*&#x200B;欄位中指定的里程碑是百分比，而不是視訊中的設定點。
 
 >[!NOTE]
 >
@@ -296,8 +296,8 @@ eventdata.events.milestoneXX
 <table>
  <tbody>
   <tr>
-   <td>事件資料。視訊名稱 <br /> </td>
-   <td>對應至此的變數將包含 <strong>使用者易記</strong> 名稱(<strong>標題</strong>)中，若已在DAM中設定；若未設定「標題」，則視訊的 <strong>檔案名稱</strong> 將改為傳送。 只傳送一次，在播放視訊開始時傳送。<br /> </td>
+   <td>eventdata.videoName <br /> </td>
+   <td>對應至此的變數將包含視訊的<strong>使用者易記的</strong>名稱（<strong>標題</strong>），如果在DAM中設定；如果未設定標題，將改為傳送視訊的<strong>檔案名稱</strong>。 只傳送一次，在播放視訊開始時傳送。<br /> </td>
   </tr>
   <tr>
    <td>eventdata.videoFileName </td>
@@ -312,29 +312,29 @@ eventdata.events.milestoneXX
 
 >[!NOTE]
 >
->您可以設定視訊的 **使用者易記** 透過開啟影片以在DAM中編輯並設定 **標題** 中繼資料欄位重新命名為。 完成時，您還需要儲存所做的變更。
+>您可以開啟視訊以在DAM中編輯，並將&#x200B;**Title**&#x200B;中繼資料欄位設定為所要的名稱，藉此設定視訊的&#x200B;**好記的**&#x200B;名稱。 完成時，您還需要儲存所做的變更。
 
 1. 將這些變數對應至prop 1至3
 
-   此 **其他相關資訊** 在呼叫中將串連傳送到 **一** 變數已命名 **pev3**.
+   呼叫中的&#x200B;**其餘相關資訊**&#x200B;將串連傳送至名為&#x200B;**pev3**&#x200B;的&#x200B;**one**&#x200B;變數。
 
-   **呼叫範例** 使用提供的範例前往Adobe Analytics，在使用DigitalPulse Debugger檢視時應該如下所示：
+   使用提供的範例對Adobe Analytics進行&#x200B;**範例呼叫**&#x200B;在透過DigitalPulse Debugger檢視時，看起來應該像這樣：
 
    ![里程碑1](assets/lmilestones1.png)
 
-   *此&#x200B;**pev3**呼叫中傳送的變數包含下列資訊：*
+   *呼叫中傳送的&#x200B;**pev3**變數包含下列資訊：*
 
-   * *名稱*  — 視訊檔案的名稱(*film.avi*)
+   * *名稱* — 視訊檔的名稱(*film.avi*)
 
-   * *長度*  — 視訊檔案的長度，以秒為單位(*100*)
+   * *Length* — 視訊檔案的長度（以秒為單位） (*100*)
 
-   * *播放器名稱*  — 用來播放視訊檔案的視訊播放器(*HTML5視訊*)
+   * *播放器名稱* — 用來播放視訊檔案的視訊播放器(*HTML5視訊*)
 
-   * *總播放秒數*  — 影片播放的總秒數(*25*)
+   * *播放的總秒數* — 播放視訊的總秒數(*25*)
 
-   * *開始時間戳記*  — 識別視訊播放開始時間的時間戳記(*1331035567*)
+   * *開始時間戳記* — 識別視訊播放開始的時間戳記(*1331035567*)
 
-   * *播放工作階段*  — 播放工作階段的詳細資料。 此欄位指出使用者與視訊的互動方式。 這可能包括他們開始播放視訊的位置、他們是否使用視訊滑桿來推進視訊，以及他們停止播放視訊的位置(*L10E24S58L58 — 視訊停止於秒。 L10區段的25個，然後略過到秒。 48*)
+   * *播放工作階段* — 播放工作階段的詳細資料。 此欄位指出使用者與視訊的互動方式。 這可能包括開始播放視訊的位置、是否使用視訊滑桿來推進視訊，以及停止播放視訊的位置(*L10E24S58L58 — 視訊在秒後停止。 L10區段的25個，然後略過到秒。 48*)
 
 ## 舊版秒數 {#legacy-seconds}
 
@@ -353,8 +353,8 @@ eventdata.events.milestoneXX
 <table>
  <tbody>
   <tr>
-   <td>事件資料。視訊名稱 <br /> </td>
-   <td>對應至此的變數將包含 <strong>使用者易記</strong> 名稱(<strong>標題</strong>)中，若已在DAM中設定；若未設定「標題」，則視訊的 <strong>檔案名稱</strong> 將改為傳送。 只傳送一次，在播放視訊開始時傳送。<br /> </td>
+   <td>eventdata.videoName <br /> </td>
+   <td>對應至此的變數將包含視訊的<strong>使用者易記的</strong>名稱（<strong>標題</strong>），如果在DAM中設定；如果未設定標題，將改為傳送視訊的<strong>檔案名稱</strong>。 只傳送一次，在播放視訊開始時傳送。<br /> </td>
   </tr>
   <tr>
    <td>eventdata.videoFileName </td>
@@ -369,18 +369,18 @@ eventdata.events.milestoneXX
 
 >[!NOTE]
 >
->您可以設定視訊的 **使用者易記** 透過開啟影片以在DAM中編輯並設定 **標題** 中繼資料欄位重新命名為。 完成時，您還需要儲存所做的變更。
+>您可以開啟視訊以在DAM中編輯，並將&#x200B;**Title**&#x200B;中繼資料欄位設定為所要的名稱，藉此設定視訊的&#x200B;**好記的**&#x200B;名稱。 完成時，您還需要儲存所做的變更。
 
 1. 將這些變數對應至prop1、prop2和prop3
 
-   此 **其他相關資訊** 在呼叫中，將會以串連方式傳送至 **一** 變數已命名 **pev3**.
+   呼叫中的&#x200B;**其餘相關資訊**&#x200B;將會連線傳送至名為&#x200B;**pev3**&#x200B;的&#x200B;**one**&#x200B;變數中。
 
    使用DigitalPulse Debugger檢視時，使用所提供範例呼叫Adobe Analytics時看起來會像這樣：
 
-   ![秒](assets/lseconds.png)
+   ![lseconds](assets/lseconds.png)
 
-   *此呼叫類似於上述舊版里程碑呼叫。 請參閱pev3的相關資訊&#x200B;**[提供於此處](/help/sites-administering/adobeanalytics.md)**.*
+   *此呼叫類似於上述舊版里程碑呼叫。 檢視此處提供的pev3 **[相關資訊](/help/sites-administering/adobeanalytics.md)**.*
 
-**本教學課程中使用的參考：**
+此教學課程中使用的&#x200B;**參考：**
 
 [0] [https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html)

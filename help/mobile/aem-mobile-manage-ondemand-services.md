@@ -35,16 +35,16 @@ ht-degree: 2%
 ## 使用預檢預覽 {#previewing-with-preflight-1}
 
 1. 在Mobile中，從目錄選擇您的Mobile On-Demand應用程式。
-1. 按一下中的省略符號(...) **管理文章** （或橫幅/集合）圖磚。
-1. 選取 **預檢** 從動作列移除。
-1. 按一下 **啟動預檢** 從對話方塊。
+1. 按一下&#x200B;**管理文章** （或橫幅/集合）圖磚中的省略符號(...)。
+1. 從動作列中選取&#x200B;**預檢**。
+1. 從對話方塊按一下&#x200B;**啟動預檢**。
 1. 您的應用程式現在已準備好在Mobile On-Demand Preflight應用程式上預覽。
 
 ![chlimage_1-8](assets/chlimage_1-8.gif)
 
 >[!NOTE]
 >
->AEM Preflight應用程式用於預覽內容和瀏覽頁面。 若要深入瞭解預檢應用程式，請按一下 [此處](https://helpx.adobe.com/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html).
+>AEM Preflight應用程式用於預覽內容和瀏覽頁面。 若要深入瞭解預檢應用程式，請按一下[這裡](https://helpx.adobe.com/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html)。
 >
 
 ### 快速入門 {#getting-ahead}

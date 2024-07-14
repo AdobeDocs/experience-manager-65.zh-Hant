@@ -25,8 +25,8 @@ ht-degree: 8%
 
    ![清單檢視](do-not-localize/chlimage_1-11.png)
 
-1. 按一下 **新增……**
-1. 您可以指定 **標題**， **名稱** 和要建立的體驗型別；在此案例中為Test&amp;Target選件。
+1. 按一下&#x200B;**新增……**
+1. 您可以指定要建立的&#x200B;**Title**、**Name**&#x200B;和體驗型別；在此案例中為Test&amp;Target選件。
 
    ![chlimage_1-139](assets/chlimage_1-139.png)
 
@@ -34,8 +34,8 @@ ht-degree: 8%
 
    >[!NOTE]
    >
-   >Test&amp;Target體驗目前未列於MCM中。 這些區段可從以下位置存取： **網站** 主控台，在「促銷活動」底下。
+   >Test&amp;Target體驗目前未列於MCM中。 可從「促銷活動」底下的&#x200B;**網站**&#x200B;主控台存取。
 
 ## 整合 Adobe Target {#integrating-with-adobe-target}
 
-另請參閱 [與Adobe整合](/help/sites-administering/target.md) [Target](/help/sites-administering/target.md) 以取得完整詳細資訊。
+如需完整詳細資訊，請參閱[與Adobe](/help/sites-administering/target.md) [Target](/help/sites-administering/target.md)整合。

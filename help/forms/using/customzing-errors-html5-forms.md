@@ -34,10 +34,10 @@ ht-degree: 3%
 
 ### 自訂錯誤訊息的位置  {#customizing-the-position-of-error-messages-nbsp}
 
-若要自訂錯誤訊息的位置，請新增 &lt;div> 標籤每個錯誤和警告欄位，放置 &lt;div> 標籤進行標籤，並將css樣式套用至 &lt;div> 標籤之間。 如需詳細步驟，請參閱下列程式：
+若要自訂錯誤訊息的位置，請為每個錯誤和警告欄位新增&lt;div>標籤，將&lt;div>標籤放置在左側或右側，並在&lt;div>標籤上套用css樣式。 如需詳細步驟，請參閱下列程式：
 
-1. 導覽至 `CustomErrorManager-1.0-SNAPSHOT`資料夾並開啟 `etc\clientlibs\mf-custom-error-manager\CustomErrorManager\javascript` 資料夾。
-1. 開啟 `customErrorManager.js` 檔案進行編輯。 此 `markError` 函式接受下列引數：
+1. 導覽至`CustomErrorManager-1.0-SNAPSHOT`資料夾並開啟`etc\clientlibs\mf-custom-error-manager\CustomErrorManager\javascript`資料夾。
+1. 開啟 `customErrorManager.js` 檔案進行編輯。 檔案中的`markError`函式接受下列引數：
 
    |   |  |
    |---|---|
@@ -75,7 +75,7 @@ ht-degree: 3%
    ```
 
 1. 儲存並關閉檔案。
-1. 導覽至 `CustomErrorManager-1.0-SNAPSHOT` 資料夾並建立jcr_root和META-INF資料夾的封存。 將封存重新命名為CustomErrorManager-1.0-SNAPSHOT.zip。
+1. 導覽至`CustomErrorManager-1.0-SNAPSHOT`資料夾，並建立jcr_root和META-INF資料夾的封存。 將封存重新命名為CustomErrorManager-1.0-SNAPSHOT.zip。
 1. 使用封裝管理員來上傳及安裝封裝。
 
 ## 顯示多個欄位的錯誤訊息  {#display-error-messages-for-multiple-fields-nbsp}
@@ -118,7 +118,7 @@ ht-degree: 3%
 
 ## 使用新設定檔轉譯表單。  {#render-the-form-with-the-new-profile-nbsp}
 
-html5表單現成可使用預設設定檔： `https://&lt;server&gt;/content/xfaforms/profiles/default.html?contentRoot=&lt;xdp location&gt;&template=&lt;name of the xdp&gt;`
+html5表單現成使用預設設定檔： `https://&lt;server&gt;/content/xfaforms/profiles/default.html?contentRoot=&lt;xdp location&gt;&template=&lt;name of the xdp&gt;`
 
 若要檢視含有自訂錯誤訊息的表單，請使用錯誤設定檔轉譯表單： `https://&lt;server&gt;/content/xfaforms/profiles/error.html?contentRoot=&lt;xdp location&gt;&template=&lt;name of the xdp&gt;`
 

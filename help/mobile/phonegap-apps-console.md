@@ -40,7 +40,7 @@ AEM Mobile提供Phonegap應用程式藍圖，供您建立行動應用程式。 �
 
 您在AEM中建立的行動應用程式根頁面，會顯示在應用程式主控台中。
 
-根頁面儲存在建立應用程式時所指定之應用程式的「目的地路徑」屬性下方（預設路徑為/content/phonegap/apps）。 頁面名稱是應用程式的Name屬性。 例如，網站根頁面的預設URL命名為 `myphonegapapp` 是 `http://localhost:4502/content/phonegap/apps/myphonegapapp.html`.
+根頁面儲存在建立應用程式時所指定之應用程式的「目的地路徑」屬性下方（預設路徑為/content/phonegap/apps）。 頁面名稱是應用程式的Name屬性。 例如，名為`myphonegapapp`的網站根頁面的預設URL為`http://localhost:4502/content/phonegap/apps/myphonegapapp.html`。
 
 ![chlimage_1-146](assets/chlimage_1-146.png)
 
@@ -48,7 +48,7 @@ AEM Mobile提供Phonegap應用程式藍圖，供您建立行動應用程式。 �
 
 根頁面的第一個子頁面是應用程式的語言變體。 每個頁面的名稱是建立應用程式的語言。 例如，English是應用程式的英文變數名稱。
 
-**注意：** 預設的PhoneGap Blueprint只會建立英文應用程式。 您的開發人員可以修改Blueprint，以便建立更多語言變體。
+**注意：**&#x200B;預設的PhoneGap Blueprint只會建立英文應用程式。 您的開發人員可以修改Blueprint，以便建立更多語言變體。
 
 ![chlimage_1-147](assets/chlimage_1-147.png)
 
@@ -67,19 +67,19 @@ AEM Mobile提供Phonegap應用程式藍圖，供您建立行動應用程式。 �
 
 行動應用程式以定義頁面結構和屬性的Blueprint為基礎。 您可以設定下列應用程式屬性：
 
-* **標題：** 應用程式標題。
-* **目的地路徑：** 儲存應用程式的存放庫位置。 保留預設值，以根據應用程式名稱建立路徑。
+* **標題：**&#x200B;應用程式標題。
+* **目的地路徑：**&#x200B;儲存應用程式的存放庫位置。 保留預設值，以根據應用程式名稱建立路徑。
 
-* **名稱：** 預設值為移除空白字元的Title屬性值。 CQ會使用名稱來參照應用程式，例如代表應用程式的儲存庫節點。
-* **說明：** 應用程式的說明。
-* **伺服器URL：** 為應用程式提供無線內容(OTA)更新的URL。 預設值是用來建立應用程式（取自外部器服務）之執行個體的發佈伺服器URL。 請注意，這必須是發佈伺服器執行個體，而非作者（需要驗證）。
+* **名稱：**&#x200B;預設值是移除空格字元的Title屬性值。 CQ會使用名稱來參照應用程式，例如代表應用程式的儲存庫節點。
+* **描述：**&#x200B;應用程式的描述。
+* **伺服器URL：**&#x200B;為應用程式提供Over-The-Air (OTA)內容更新的網址。 預設值是用來建立應用程式（取自外部器服務）之執行個體的發佈伺服器URL。 請注意，這必須是發佈伺服器執行個體，而非作者（需要驗證）。
 
 您也可以提供影像檔案，以用作應用程式縮圖、選取要使用的PhoneGap Build設定，並選取要使用的行動應用程式分析設定。 此影像僅會作為縮圖，在Experience Manager的行動應用程式主控台內代表您的行動應用程式。
 
 其他（和選用）標籤可用於建立雲端服務，以及將Adobe Mobile Services SDK外掛程式整合至您的應用程式。
 
 * 組建：按一下這裡的管理設定並設定您的build.phonegap.com組建服務。 然後從下拉式清單，選取新建立的PhoneGap Build雲端服務。
-* Analytics：按一下管理設定並設定您的 [AdobeMobile Services SDK](https://experienceleague.adobe.com/docs/mobile-services/using/home.html) 雲端服務。 然後從下拉式清單，選取新建立的行動服務以整合至行動應用程式。
+* Analytics：按一下管理設定，然後設定您的[Adobe Mobile Services SDK](https://experienceleague.adobe.com/docs/mobile-services/using/home.html)雲端服務。 然後從下拉式清單，選取新建立的行動服務以整合至行動應用程式。
 
 >[!NOTE]
 >
@@ -90,7 +90,7 @@ AEM Mobile提供Phonegap應用程式藍圖，供您建立行動應用程式。 �
 1. 在邊欄上，按一下「應用程式」 。
 1. 按一下建立圖示。
 
-   ![正方形內由加號指示的「建立」圖示。](do-not-localize/chlimage_1-7.png)
+   ![正方形內加號所指示的「建立」圖示。](do-not-localize/chlimage_1-7.png)
 
 1. （可選）在進階標籤上，提供應用程式的說明，並視需要變更伺服器URL。
 1. （選擇性）如果您使用PhoneGap Build編譯應用程式，請在「建置」標籤上選取要使用的組態。
@@ -113,30 +113,30 @@ AEM Mobile提供Phonegap應用程式藍圖，供您建立行動應用程式。 �
 1. 在邊欄上，按一下「應用程式」 。
 1. 選取要設定的應用程式，然後按一下「檢視頁面屬性」圖示。
 
-   ![圓形內以字母I表示的「檢視頁面屬性」圖示。](do-not-localize/chlimage_1-8.png)
+   ![圓形內以字母I表示的檢視頁面屬性圖示。](do-not-localize/chlimage_1-8.png)
 
 1. 若要變更屬性值，請按一下「編輯」圖示。
 
-   ![鉛筆所指示的編輯圖示。](do-not-localize/chlimage_1-9.png)
+   ![鉛筆所指示的「編輯」圖示。](do-not-localize/chlimage_1-9.png)
 
 1. 設定「基本」和「進階」屬性，然後按一下「完成」圖示。
 
-   ![以核取記號符號表示的「完成」圖示。](do-not-localize/chlimage_1-10.png)
+   ![以核取記號符號表示的[完成]圖示。](do-not-localize/chlimage_1-10.png)
 
 #### 設定應用程式的語言變化 {#configure-a-language-variation-of-the-application}
 
 1. 在邊欄上，按一下「應用程式」 。
 1. 按一下以深入探究您要在應用程式Admin Console中編輯的行動應用程式。 選取要設定的應用程式語言版本，然後按一下「檢視應用程式屬性」圖示。
 
-   ![在圓圈內以字母I表示的「檢視應用程式屬性」圖示。](do-not-localize/chlimage_1-11.png)
+   ![圓形內以字母I表示的檢視應用程式屬性圖示。](do-not-localize/chlimage_1-11.png)
 
 1. 若要變更屬性值，請按一下「編輯」圖示。
 
-   ![鉛筆所指示的編輯圖示。](do-not-localize/chlimage_1-12.png)
+   ![鉛筆所指示的「編輯」圖示。](do-not-localize/chlimage_1-12.png)
 
 1. 在「基本」、「進階」、「建置」和「Analytics」標籤上設定屬性，然後按一下「完成」圖示。
 
-   ![以核取記號符號表示的「完成」圖示。](do-not-localize/chlimage_1-13.png)
+   ![以核取記號符號表示的[完成]圖示。](do-not-localize/chlimage_1-13.png)
 
 ### 編寫行動應用程式的內容 {#authoring-the-content-of-a-mobile-application}
 
@@ -166,7 +166,7 @@ Content Sync也會追蹤更新何時發生。 有了這些資訊，Content Sync�
 1. 在邊欄上，按一下應用程式，然後按一下您的應用程式。
 1. 選取啟動顯示頁面，然後按一下「更新快取」圖示。
 
-   ![更新快取圖示以帶有回收符號的條狀橫條圖示表示。](do-not-localize/chlimage_1-14.png)
+   ![更新快取圖示由帶有回收符號的條狀旗杆所指示。](do-not-localize/chlimage_1-14.png)
 
 ### 使用應用程式範本 {#using-app-templates}
 
@@ -290,7 +290,7 @@ Geometrixx Outdoors應用程式是範例PhoneGap應用程式，示範預設Phone
 
 ![chlimage_1-151](assets/chlimage_1-151.png)
 
-**轉盤屬性索引標籤**
+**轉盤屬性標籤**
 
 設定輪播的行為：
 
@@ -333,7 +333,7 @@ Order By屬性不會影響固定清單的順序。
 
 **進階搜尋**
 
-使用填入清單 [Querybuilder](/help/sites-developing/querybuilder-api.md) 查詢。
+使用[Querybuilder](/help/sites-developing/querybuilder-api.md)查詢填入清單。
 
 ### 影像 {#image}
 

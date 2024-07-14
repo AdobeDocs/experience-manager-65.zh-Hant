@@ -20,15 +20,15 @@ ht-degree: 0%
 
 ## 概觀 {#overview}
 
-條碼Forms服務會從條碼的電子影像中擷取資料。 此服務接受包含一或多個條碼作為輸入的TIFF和PDF檔案，並擷取條碼資料。 條碼資料可以透過各種方式進行格式化，包括XML、分隔字串或任何使用JavaScript建立的自訂格式。
+條碼Forms服務會從條碼的電子影像中擷取資料。 此服務接受包含一或多個條碼作為輸入的TIFF和PDF檔案，並擷取條碼資料。 條碼資料可以透過多種方式格式化，包括XML、分隔字串或任何使用JavaScript建立的自訂格式。
 
-條碼式Forms服務支援下列專案 **2D** 作為掃描的TIFF或PDF檔案提供的符號：
+條碼式Forms服務支援下列&#x200B;**二維(2D)**&#x200B;符號，這些符號是以掃描的TIFF或PDF檔案形式提供：
 
 * PDF417
 * 資料矩陣
 * QR碼
 
-此服務也支援下列專案 **一維** 作為掃描的TIFF或PDF檔案提供的符號：
+此服務也支援下列&#x200B;**一維的**&#x200B;符號，這些符號是以掃描的TIFF或PDF檔案形式提供：
 
 * Codabar
 * Code128
@@ -94,7 +94,7 @@ ht-degree: 0%
 
 ### 使用條碼式表單的工作流程 {#workflows-that-use-barcoded-forms}
 
-表單作者可使用Designer建立互動式條碼式表單。 (請參閱 [Designer說明](https://www.adobe.com/go/learn_aemforms_designer_63).) 當使用者使用Adobe Reader或Acrobat填寫條碼表單時，條碼會自動更新以編碼表單資料。
+表單作者可使用Designer建立互動式條碼式表單。 (請參閱[Designer說明](https://www.adobe.com/go/learn_aemforms_designer_63)。) 當使用者使用Adobe Reader或Acrobat填寫條碼表單時，條碼會自動更新以編碼表單資料。
 
 條碼式Forms服務適合將紙張上的資料轉換為電子格式。 例如，當條碼式表單填寫並列印時，可掃描列印的復本並用作條碼式Forms服務的輸入。
 
@@ -102,7 +102,7 @@ Watched資料夾端點通常用於啟動使用條碼Forms服務的應用程式�
 
 ### 建議的編碼和解碼格式 {#recommended-encoding-and-decoding-formats}
 
-條碼格式的作者在編碼條碼中的資料時，建議使用簡易的分隔格式（例如以Tab分隔）。 此外，請避免使用歸位作為欄位分隔符號。 Designer提供一系列分隔編碼，會自動產生JavaScript指令碼來編碼條碼。 解碼的資料在第一行上有欄位名稱，在第二行上有其值，每個欄位之間有索引標籤。
+條碼格式的作者在編碼條碼中的資料時，建議使用簡易的分隔格式（例如以Tab分隔）。 此外，請避免使用歸位作為欄位分隔符號。 Designer提供分隔編碼選項，可自動產生JavaScript指令碼來編碼條碼。 解碼的資料在第一行上有欄位名稱，在第二行上有其值，每個欄位之間有索引標籤。
 
 解碼條碼時，請指定用來分隔欄位的字元。 為解碼指定的字元必須與用來編碼條碼的字元相同。 例如，在使用建議的Tab字元分隔格式時，「擷取至XML」作業必須使用欄位分隔符號的預設值Tab。
 
@@ -127,17 +127,17 @@ Watched資料夾端點通常用於啟動使用條碼Forms服務的應用程式�
 * 此服務完全支援AcroForms和靜態表單，其中包含使用Adobe Reader或Acrobat儲存的2D條碼。 不過，對於1D條碼，可以平面化表單，或將其提供為掃描的PDF或TIFF檔案。
 * 尚未完全支援動態XFA表單。 若要正確解碼動態表單中的1D與2D條碼，請將表單平面化，或將其提供為掃描的PDF或TIFF檔案。
 
-此外，如果符合上述限制，該服務可解碼任何使用支援符號的條碼。 如需如何建立互動式條碼式表單的詳細資訊，請參閱 [Designer說明](https://www.adobe.com/go/learn_aemforms_designer_63).
+此外，如果符合上述限制，該服務可解碼任何使用支援符號的條碼。 如需如何建立互動式條碼式表單的詳細資訊，請參閱[Designer說明](https://www.adobe.com/go/learn_aemforms_designer_63)。
 
 ## 設定服務的屬性   {#configureproperties}
 
-您可以使用 **AEMFD條碼式Forms服務** 在AEM Console中設定此服務的屬性。 AEM主控台的預設URL為 `https://[host]:'port'/system/console/configMgr`.
+您可以在AEM主控台中使用&#x200B;**AEMFD條碼式Forms服務**&#x200B;來設定此服務的屬性。 AEM主控台的預設URL為`https://[host]:'port'/system/console/configMgr`。
 
 ## 使用服務 {#using}
 
 條碼式Forms服務提供下列兩個API：
 
-* **[解碼](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/bcf/api/BarcodedFormsService.html#decode)**：解碼輸入PDF檔案或tiff影像中所有可用的條碼。 它會傳回另一個XML檔案，其中包含從輸入檔案或影像中可用的所有條碼擷取的資料。
+* **[解碼](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/bcf/api/BarcodedFormsService.html#decode)**：解碼輸入PDF檔案或tiff影像中可用的所有條碼。 它會傳回另一個XML檔案，其中包含從輸入檔案或影像中可用的所有條碼擷取的資料。
 
 * **[extractToXML](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/bcf/api/BarcodedFormsService.html#decode)**：將使用解碼API解碼的資料轉換為XML資料。 此XML資料可與XFA表單合併。 它會傳回XML檔案清單，每個條碼各一個。
 

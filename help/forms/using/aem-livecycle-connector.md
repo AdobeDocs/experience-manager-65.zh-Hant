@@ -21,15 +21,15 @@ Adobe Experience Manager (AEM) LiveCycle聯結器可讓您從AEM網頁應用程�
 
 ## 正在將AEM伺服器連線到AdobeLiveCycle {#connecting-aem-server-to-adobe-livecycle}
 
-AEMLiveCycle聯結器屬於 [AEM Forms附加元件套件](/help/forms/using/installing-configuring-aem-forms-osgi.md). 安裝AEM Forms附加元件套件後，請執行以下步驟，好讓LiveCycle伺服器的詳細資訊新增至AEM Web Console。
+AEMLiveCycle聯結器是[AEM Forms附加元件套件](/help/forms/using/installing-configuring-aem-forms-osgi.md)的一部分。 安裝AEM Forms附加元件套件後，請執行以下步驟，好讓LiveCycle伺服器的詳細資訊新增至AEM Web Console。
 
 1. 在AEM Web主控台設定管理員中，找出AdobeLiveCycle使用者端SDK設定元件。
 1. 按一下元件，即可編輯組態伺服器URL、使用者名稱和密碼。
-1. 檢閱設定並按一下 **儲存**.
+1. 檢閱設定並按一下&#x200B;**儲存**。
 
 雖然屬性含義一目瞭然，但重要的部分如下：
 
-* **伺服器URL**  — 指定LiveCycle伺服器的URL。 如果您希望LiveCycle和AEM透過https通訊，請使用以下JVM啟動AEM
+* **伺服器URL** — 指定LiveCycle伺服器的URL。 如果您希望LiveCycle和AEM透過https通訊，請使用以下JVM啟動AEM
 
   ```java
   argument
@@ -38,9 +38,9 @@ AEMLiveCycle聯結器屬於 [AEM Forms附加元件套件](/help/forms/using/inst
 
   選項。
 
-* **使用者名稱** — 指定用來建立AEM與LiveCycle之間通訊之帳戶的使用者名稱。 帳戶是有權啟動Acrobat服務的LiveCycle使用者帳戶。
+* **使用者名稱** — 指定用來建立AEM與LiveCycle之間通訊的帳戶使用者名稱。 帳戶是有權啟動Acrobat服務的LiveCycle使用者帳戶。
 * **密碼** — 指定密碼。
-* **服務名稱**  — 指定使用[使用者名稱]和[密碼]欄位中提供的使用者認證啟動的服務。 依預設，啟動LiveCycle服務時不會傳遞任何認證。
+* **服務名稱** — 指定使用[使用者名稱]和[密碼]欄位中提供的使用者認證啟動的服務。 依預設，啟動LiveCycle服務時不會傳遞任何認證。
 
 ## 啟動檔案服務 {#starting-document-services}
 
@@ -52,7 +52,7 @@ AEMLiveCycle聯結器屬於 [AEM Forms附加元件套件](/help/forms/using/inst
 
 AEMLiveCycle聯結器透過將這些使用者端執行個體公開為OSGi服務（可使用標準OSGi方式存取）來簡化流程。 LiveCycle聯結器提供下列功能：
 
-* OSGi服務形式的使用者端執行個體：封裝為OSGI套裝的使用者端會列在 [Acrobat服務清單](/help/forms/using/aem-livecycle-connector.md#p-document-services-list-p) 區段。 每個使用者端jar都會向OSGi服務登入將使用者端執行個體註冊為OSGi服務。
+* 作為OSGi服務的使用者端執行個體：封裝為OSGI套裝的使用者端列在[Acrobat服務清單](/help/forms/using/aem-livecycle-connector.md#p-document-services-list-p)區段中。 每個使用者端jar都會向OSGi服務登入將使用者端執行個體註冊為OSGi服務。
 * 使用者證明資料傳輸：連線至LiveCycle伺服器所需的連線詳細資訊是在中央位置管理的。
 * ServiceClientFactory服務：若要啟動程式，使用者端應用程式可以存取ServiceClientFactory執行個體。
 
@@ -80,7 +80,7 @@ AEMLiveCycle聯結器透過將這些使用者端執行個體公開為OSGi服務�
    </dependency>
    ```
 
-   若要啟動服務，請為該服務新增對應的Maven相依性。 如需相依性的清單，請參閱 [Acrobat服務清單](/help/forms/using/aem-livecycle-connector.md#p-document-services-list-p). 例如，對於「產生PDF」服務，新增下列相依性：
+   若要啟動服務，請為該服務新增對應的Maven相依性。 如需相依性清單，請參閱[Acrobat服務清單](/help/forms/using/aem-livecycle-connector.md#p-document-services-list-p)。 例如，對於「產生PDF」服務，新增下列相依性：
 
    ```xml
    <dependency>

@@ -34,7 +34,7 @@ AEM提供您兩個環境：
 
 ### 作者環境 {#author-environment}
 
-作者的工作方式稱為 **作者環境**. 這提供了建立內容時易於使用的介面(圖形使用者介面（GUI或UI）)。 它位於提供完整保護的公司防火牆後面，並要求作者使用已指派適當存取許可權的帳戶登入。
+作者在稱為&#x200B;**作者環境**&#x200B;的環境中工作。 這提供了建立內容時易於使用的介面(圖形使用者介面（GUI或UI）)。 它位於提供完整保護的公司防火牆後面，並要求作者使用已指派適當存取許可權的帳戶登入。
 
 >[!NOTE]
 >
@@ -58,30 +58,30 @@ AEM提供您兩個環境：
 
 >[!NOTE]
 >
->AEM也是 [已管理](/help/sites-administering/home.md) （適用於大部分工作）來自製作環境。
+>AEM也是來自製作環境的[已管理](/help/sites-administering/home.md) （針對大部分工作）。
 
-#### 發佈環境 {#publish-environment}
+#### Publish環境 {#publish-environment}
 
-準備就緒後，AEM網站的內容會發佈至 **發佈環境**. 在此處，根據設計介面的外觀，可將網站頁面提供給目標對象。
+準備就緒後，AEM網站的內容會發佈至&#x200B;**發佈環境**。 在此處，根據設計介面的外觀，可將網站頁面提供給目標對象。
 
 通常，發佈環境位於非軍事區內；換言之，可供網際網路使用，但不再受內部網路的完全保護。
 
-當AEM網站為 [社群網站](/help/communities/overview.md)，或包含 [Communities元件](/help/communities/author-communities.md)，登入的網站訪客（成員）可與Communities功能互動。 例如，他們可能會張貼至論壇、張貼評論或追蹤其他成員。 可以授予成員執行通常僅限於作者環境的活動的許可權，例如建立新頁面（社群群組）、部落格和稽核其他成員的文章。
+當AEM網站是[社群網站](/help/communities/overview.md)，或包含[社群元件](/help/communities/author-communities.md)時，登入網站訪客（成員）可能會與Communities功能互動。 例如，他們可能會張貼至論壇、張貼評論或追蹤其他成員。 可以授予成員執行通常僅限於作者環境的活動的許可權，例如建立新頁面（社群群組）、部落格和稽核其他成員的文章。
 
 >[!NOTE]
 >
 >不幸的是，使用的術語有時會出現重疊。 這可能發生在以下情況中：
 >
->* **發佈/取消發佈**
+>* **Publish /取消發佈**
 >  這些是讓您的內容在發佈環境中公開使用（或不公開使用）的動作主要詞語。
 >
 >* **啟用/停用**
 >  這些辭彙與發佈/取消發佈同義。
 >
->* **復寫/複製**
+>* **復寫/復寫**
 >  這些是技術術語，用於表示資料（例如頁面內容、檔案、程式碼、使用者註解）從一個環境移動到另一個環境；即在發佈或反向複製使用者註解時。
 >
 
 #### Dispatcher {#dispatcher}
 
-若要最佳化網站訪客的效能， **[Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)** 實作負載平衡和快取。
+為了最佳化網站訪客的效能，**[Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)**&#x200B;實作負載平衡和快取。

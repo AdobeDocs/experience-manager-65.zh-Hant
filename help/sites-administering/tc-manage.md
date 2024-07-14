@@ -16,7 +16,7 @@ ht-degree: 3%
 
 在準備要翻譯的內容後，您需要透過建立遺漏的語言副本來完成語言結構，並建立翻譯專案。
 
-翻譯專案使您能夠管理 AEM 內容的翻譯。翻譯專案是AEM的型別 [專案](/help/sites-authoring/projects.md) 包含要翻譯成其他語言的資源。 這些資源是 [語言副本](/help/sites-administering/tc-prep.md) 從語言母版建立的。
+翻譯專案使您能夠管理 AEM 內容的翻譯。翻譯專案是AEM [專案](/help/sites-authoring/projects.md)的型別，其中包含要翻譯成其他語言的資源。 這些資源是從語言主版建立的[語言副本](/help/sites-administering/tc-prep.md)的頁面和資產。
 
 將資源新增至翻譯專案時，系統會為其建立翻譯工作。 工作會提供相關命令和狀態資訊，您可用來管理在資源上執行的人工翻譯和機器翻譯工作流程。
 
@@ -40,8 +40,8 @@ ht-degree: 3%
 
 AEM會偵測是否正在為內容的初始翻譯建立翻譯專案，或更新已翻譯的語言副本。 當您為頁面建立翻譯專案並指示您要翻譯的語言副本時，AEM會偵測來源頁面是否已存在於目標語言副本中：
 
-* **語言副本不包含頁面：** AEM會將此情況視為初始翻譯。 頁面會立即複製到語言副本，並包含在專案中。 將翻譯頁面匯入AEM時，AEM會直接將其複製到語言副本。
-* **語言副本已包含頁面：** AEM會將此情況視為更新後的翻譯。 系統隨即會建立啟動項，並將頁面副本新增至啟動項，並包含在專案中。 啟動可讓您在將更新的翻譯送交語言副本之前，先檢閱這些翻譯：
+* **語言副本不包含頁面：** AEM將此情況視為初始翻譯。 頁面會立即複製到語言副本，並包含在專案中。 將翻譯頁面匯入AEM時，AEM會直接將其複製到語言副本。
+* **語言副本已包含頁面：** AEM將此情況視為更新的翻譯。 系統隨即會建立啟動項，並將頁面副本新增至啟動項，並包含在專案中。 啟動可讓您在將更新的翻譯送交語言副本之前，先檢閱這些翻譯：
 
    * 將翻譯頁面匯入AEM時，會覆寫啟動中的頁面。
    * 只有在提升啟動項時，翻譯的頁面才會覆寫語言副本。
@@ -61,19 +61,19 @@ AEM會偵測是否正在為內容的初始翻譯建立翻譯專案，或更新�
 
 您可以指定也選取所選頁面的子頁面。 在這種情況下，子頁面的副本也會新增到每個專案中，以便進行翻譯。 當任何子頁面與不同的翻譯整合框架設定相關聯時，AEM會建立其他專案。
 
-您也可以 [手動建立翻譯專案](#creating-a-translation-project-using-the-projects-console).
+您也可以[手動建立翻譯專案](#creating-a-translation-project-using-the-projects-console)。
 
 >[!NOTE]
 >
->若要建立專案，您的帳戶必須是 `project-administrators` 群組。
+>若要建立專案，您的帳戶必須是`project-administrators`群組的成員。
 
-**初始翻譯和更新翻譯**
+**初始翻譯與更新翻譯**
 
 「參照」面板會指出您是要更新現有的語言副本，還是要建立語言副本的第一個版本。 當所選頁面存在語言副本時，會出現「更新語言副本」索引標籤，以提供對專案相關命令的存取。
 
 ![chlimage_1-239](assets/chlimage_1-239.png)
 
-翻譯之後，您可以 [檢閱翻譯](#reviewing-and-promoting-updated-content) 之後再用它覆寫語言副本。 當所選頁面不存在語言副本時，建立和翻譯索引標籤會出現，以提供對專案相關命令的存取。
+翻譯之後，您可以[先檢閱翻譯](#reviewing-and-promoting-updated-content)，然後再用它覆寫語言副本。 當所選頁面不存在語言副本時，建立和翻譯索引標籤會出現，以提供對專案相關命令的存取。
 
 ![chlimage_1-240](assets/chlimage_1-240.png)
 
@@ -90,7 +90,7 @@ AEM會偵測是否正在為內容的初始翻譯建立翻譯專案，或更新�
 1. 選取「語言副本」，然後選取您要翻譯來源頁面的語言副本。
 1. 按一下「建立並翻譯」 ，然後設定翻譯工作：
 
-   * 使用「語言」下拉式清單，選取您要翻譯的語言副本。 視需要選取其他語言。 清單中顯示的語言對應至 [您已建立的語言根](/help/sites-administering/tc-prep.md#creating-a-language-root).
+   * 使用「語言」下拉式清單，選取您要翻譯的語言副本。 視需要選取其他語言。 出現在清單中的語言與您建立的[語言根對應](/help/sites-administering/tc-prep.md#creating-a-language-root)。
    * 若要翻譯您選取的頁面和所有子頁面，請選取「選取所有子頁面」。 若只要翻譯您所選取的頁面，請清除選項。
    * 針對「專案」，選取「建立新翻譯專案」。
    * 輸入專案名稱。
@@ -124,9 +124,9 @@ AEM會偵測是否正在為內容的初始翻譯建立翻譯專案，或更新�
 
 建立翻譯專案後，您可以使用「資源」窗格將頁面新增至專案。 當您將來自不同分支的頁面納入同一個專案時，新增頁面會很有用。
 
-當您將頁面新增到翻譯專案時，這些頁面會包含在新的翻譯工作中。 您也可以 [將頁面新增至現有工作](#adding-pages-assets-to-a-translation-job).
+當您將頁面新增到翻譯專案時，這些頁面會包含在新的翻譯工作中。 您也可以[將頁面新增至現有工作](#adding-pages-assets-to-a-translation-job)。
 
-如同建立專案一樣，新增頁面時，頁面副本會在必要時新增至啟動項，以避免覆寫現有語言副本。 (請參閱 [建立現有語言副本的翻譯專案](#performing-initial-translations-and-updating-existing-translations).)
+如同建立專案一樣，新增頁面時，頁面副本會在必要時新增至啟動項，以避免覆寫現有語言副本。 （請參閱[建立現有語言副本的翻譯專案](#performing-initial-translations-and-updating-existing-translations)。）
 
 1. 使用Sites Console來選取您要新增至翻譯專案的頁面。
 
@@ -154,7 +154,7 @@ AEM會偵測是否正在為內容的初始翻譯建立翻譯專案，或更新�
 
 1. 按一下「開始」。
 
-## 新增頁面/資產至翻譯工作 {#adding-pages-assets-to-a-translation-job}
+## 新增頁面/Assets至翻譯工作 {#adding-pages-assets-to-a-translation-job}
 
 您可以將頁面、資產、標籤或i18n字典新增至翻譯專案的翻譯工作。 若要新增頁面或資產：
 
@@ -162,7 +162,7 @@ AEM會偵測是否正在為內容的初始翻譯建立翻譯專案，或更新�
 
    ![chlimage_1-246](assets/chlimage_1-246.png)
 
-1. 按一下「新增」和「頁面/資產」 。
+1. 按一下「新增」和「頁面/Assets」 。
 
    ![chlimage_1-247](assets/chlimage_1-247.png)
 
@@ -198,7 +198,7 @@ AEM會偵測是否正在為內容的初始翻譯建立翻譯專案，或更新�
 
 >[!NOTE]
 >
->如需i18n字典的詳細資訊，請閱讀 [使用Translator管理字典](/help/sites-developing/i18n-translator.md).
+>如需i18n字典的詳細資訊，請閱讀[使用翻譯工具管理字典](/help/sites-developing/i18n-translator.md)。
 
 ## 新增標籤至翻譯工作 {#adding-tags-to-a-translation-job}
 
@@ -222,9 +222,9 @@ AEM會偵測是否正在為內容的初始翻譯建立翻譯專案，或更新�
 
 ## 檢視翻譯專案詳細資料 {#seeing-translation-project-details}
 
-「翻譯摘要」表徵圖包含為翻譯專案設定的屬性。 除了泛型之外 [專案資訊](/help/sites-authoring/projects.md#project-info)，翻譯標籤會包含翻譯專用屬性：
+「翻譯摘要」表徵圖包含為翻譯專案設定的屬性。 除了一般[專案資訊](/help/sites-authoring/projects.md#project-info)之外，「翻譯」索引標籤還包含翻譯特定的屬性：
 
-* 來源語言：正在翻譯的頁面的語言。
+* Source語言：正在翻譯的頁面語言。
 * 目標語言：頁面將翻譯成何種語言。
 * 翻譯方法：翻譯工作流程。 支援人工翻譯或機器翻譯。
 * 翻譯提供者：執行翻譯的翻譯服務提供者。
@@ -264,8 +264,8 @@ AEM會偵測是否正在為內容的初始翻譯建立翻譯專案，或更新�
 
 指定翻譯廠商必須傳回已翻譯檔案的日期。 您可以設定專案或特定工作的到期日：
 
-* **專案：** 專案中的翻譯工作會繼承到期日期。
-* **工作：** 您為工作設定的到期日會覆寫為專案設定的到期日。
+* **專案：**&#x200B;專案中的翻譯工作會繼承到期日。
+* **工作：**&#x200B;您為工作設定的到期日會覆寫為專案設定的到期日。
 
 只有在您使用的翻譯廠商支援此功能時，才能正確設定到期日。
 
@@ -301,7 +301,7 @@ AEM會偵測是否正在為內容的初始翻譯建立翻譯專案，或更新�
 >
 >範圍設定為選用。 您可以在不設定範圍的情況下開始翻譯工作。
 
-設定翻譯工作的範圍時，工作的狀態為 `Scope Requested`. 當翻譯供應商傳回範圍時，狀態會變更為 `Scope Completed`. 範圍設定完成後，您可以使用「顯示範圍」指令來檢閱範圍設定結果。
+當您設定翻譯工作的範圍時，工作的狀態為`Scope Requested`。 當翻譯廠商傳回範圍時，狀態會變更為`Scope Completed`。 範圍設定完成後，您可以使用「顯示範圍」指令來檢閱範圍設定結果。
 
 只有在您使用的翻譯供應商支援此功能時，範圍設定才會正確運作。
 
@@ -329,7 +329,7 @@ AEM會偵測是否正在為內容的初始翻譯建立翻譯專案，或更新�
 
 ## 取消翻譯工作 {#canceling-a-translation-job}
 
-取消翻譯工作以停止翻譯程式並阻止翻譯供應商執行任何進一步的翻譯。 當工作具有下列條件時，您可以取消工作 `Committed For Translation` 或 `Translation In Progress` 狀態。
+取消翻譯工作以停止翻譯程式並阻止翻譯供應商執行任何進一步的翻譯。 當工作狀態為`Committed For Translation`或`Translation In Progress`時，您可以取消工作。
 
 1. 在「專案」主控台中，開啟翻譯專案。
 1. 在「翻譯工作」圖磚上，按一下命令功能表，然後按一下「取消」。
@@ -370,16 +370,16 @@ AEM會偵測是否正在為內容的初始翻譯建立翻譯專案，或更新�
 
 若要將語言副本與語言主要版本進行比較：
 
-1. 在 **網站** 主控台，導覽至您要比較的語言副本。
-1. 開啟 **[引用](/help/sites-authoring/basic-handling.md#references)** 面板。
-1. 在 **份數** 標題選取 **語言副本。**
+1. 在&#x200B;**網站**&#x200B;主控台中，導覽至您要比較的語言副本。
+1. 開啟&#x200B;**[參考](/help/sites-authoring/basic-handling.md#references)**&#x200B;面板。
+1. 在&#x200B;**復本**&#x200B;標題下，選取&#x200B;**語言復本。**
 1. 選取您的特定語言副本，然後您可以按一下**與主版比較**或**與上一個比較**（如果適用）。
 
    ![chlimage_1-37](assets/chlimage_1-37.jpeg)
 
 1. 兩個頁面（啟動項和來源）將並排開啟。
 
-   如需有關使用此功能的完整資訊，請參閱 [頁面差異](/help/sites-authoring/page-diff.md).
+   如需有關使用此功能的完整資訊，請參閱[頁面差異](/help/sites-authoring/page-diff.md)。
 
 ## 完成並封存翻譯工作 {#completing-and-archiving-translation-jobs}
 
@@ -393,7 +393,7 @@ AEM會偵測是否正在為內容的初始翻譯建立翻譯專案，或更新�
 
 ## 建立語言副本的結構 {#creating-the-structure-of-a-language-copy}
 
-填入您的語言副本，使其包含您正在翻譯之主要語言的內容。 填入語言副本前，您必須擁有 [已建立語言根](/help/sites-administering/tc-prep.md#creating-a-language-root) 語言副本的。
+填入您的語言副本，使其包含您正在翻譯之主要語言的內容。 您必須先[建立語言副本的語言根](/help/sites-administering/tc-prep.md#creating-a-language-root)，才能填入語言副本。
 
 1. 使用Sites Console來選取您用來作為來源的主要語言的語言根。 例如，若要翻譯Geometrixx示範網站的英文頁面，請選取「內容>Geometrixx示範網站>英文」。
 1. 在工具列上，按一下「參照」。
@@ -413,26 +413,26 @@ AEM會偵測是否正在為內容的初始翻譯建立翻譯專案，或更新�
 
 1. 按一下「開始」。
 
-## 移動或重新命名來源頁面 {#move-source}
+## 移動或重新命名Source頁面 {#move-source}
 
-如果需要已翻譯的來源頁面 [已重新命名或已移動](/help/sites-authoring/managing-pages.md#moving-or-renaming-a-page)，在移動後再次翻譯頁面時，會根據新頁面名稱/位置建立語言副本。 根據先前名稱/位置的舊語言副本仍然存在。 為避免此問題，您可以在移動後使用更新語言複製功能：
+如果已經翻譯的來源頁面需要[重新命名或移動](/help/sites-authoring/managing-pages.md#moving-or-renaming-a-page)，請在移動後根據新的頁面名稱/位置重新翻譯頁面，以建立語言副本。 根據先前名稱/位置的舊語言副本仍然存在。 為避免此問題，您可以在移動後使用更新語言複製功能：
 
 1. 移動有語言副本的頁面。
 1. 選取語言副本根目錄。
-1. 開啟 **引用** 面板。
-1. 選取 **語言副本**.
+1. 開啟&#x200B;**參考**&#x200B;面板。
+1. 選取&#x200B;**語言副本**。
 1. 選取您要更新的目標語言。
-1. 選取 **更新語言副本**.
+1. 選取&#x200B;**更新語言副本**。
 
-   ![updating-language-copies](assets/translation-move-to.png)
+   ![正在更新語言副本](assets/translation-move-to.png)
 
-1. 按一下 **更新**. A [Launch](/help/sites-authoring/launches-promoting.md) 將會建立。
+1. 按一下&#x200B;**更新**。 將建立[啟動](/help/sites-authoring/launches-promoting.md)。
 1. 導覽至所需的語言根並加以選取。
-1. 使用 **引用** 面板，選取 **啟動**.
+1. 使用&#x200B;**參考**&#x200B;面板，選取&#x200B;**啟動**。
 
    ![promote-launch-translation](assets/promote-launch-translation.png)
 
-1. 按一下已建立的Launch，然後按一下 **提升啟動**.
+1. 按一下已建立的啟動項，然後按一下&#x200B;**提升啟動項**。
 
 現在，來源頁面已移動，且相關的語言副本也已移動。
 
@@ -442,14 +442,14 @@ AEM會偵測是否正在為內容的初始翻譯建立翻譯專案，或更新�
 
 >[!NOTE]
 >
->若要建立專案，您的帳戶必須是 `projects-administrators` 群組。
+>若要建立專案，您的帳戶必須是`projects-administrators`群組的成員。
 
-手動建立翻譯專案時，除了下列翻譯相關屬性外，您還必須提供下列翻譯相關屬性的值 [基本屬性](/help/sites-authoring/touch-ui-managing-projects.md#creating-a-project)：
+當您手動建立翻譯專案時，除了[基本屬性](/help/sites-authoring/touch-ui-managing-projects.md#creating-a-project)之外，還必須提供下列翻譯相關屬性的值：
 
-* **名稱：** 專案名稱。
-* **來源語言：** 來源內容的語言。
-* **目標語言：** 內容將翻譯成何種語言。
-* **翻譯方法：** 選取「人工翻譯」以指示要手動執行翻譯。
+* **名稱：**&#x200B;專案名稱。
+* **Source語言：**&#x200B;來源內容的語言。
+* **目標語言：**&#x200B;內容將翻譯成何種語言。
+* **翻譯方法：**&#x200B;選取「人工翻譯」以指示要手動執行翻譯。
 
 1. 在「專案」控制檯的工具列上，按一下「建立」。
 1. 選取翻譯專案範本，然後按「下一步」。

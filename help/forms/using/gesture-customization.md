@@ -26,27 +26,27 @@ ht-degree: 0%
 
 1. 開啟您的專案。
 
-   * 針對iOS，請開啟 `Capture.xcodeproj` 在Xcode中
-   * 若是Android，請在Eclipse中開啟Android專案。
-   * 若是Windows，請開啟 `MWSWindows.sln` 在Visual Studio中。
+   * 若為iOS，請在Xcode中開啟`Capture.xcodeproj`
+   * 針對Android，請在Eclipse中開啟Android專案。
+   * 若是Windows，請在Visual Studio中開啟`MWSWindows.sln`。
 
-1. 導覽至檢視資料夾，並開啟 `task.js` 檔案進行編輯。
+1. 導覽至檢視資料夾，並開啟`task.js`檔案進行編輯。
 
-   * 在Xcode中，導覽至 **擷取> www > wsmobile > js >執行階段>檢視** 資料夾。
-   * 在Eclipse中，導覽至 **資產> www > wsmobile > js >執行階段>檢視** 資料夾。
-   * 在Visual Studio中，導覽至 **MWSWindows > www > wsmobile > js > runtime >檢視** 資料夾。
+   * 在Xcode中，導覽至&#x200B;**Capture > www > wsmobile > js > runtime > views**&#x200B;資料夾。
+   * 在Eclipse中，導覽至&#x200B;**資產> www > wsmobile > js > runtime >檢視**&#x200B;資料夾。
+   * 在Visual Studio中，瀏覽至&#x200B;**MWSWindows > www > wsmobile > js > runtime > views**&#x200B;資料夾。
 
    >[!NOTE]
    >
    >task.js檔案包含與任務或「起點」清單中列出的每個任務或「起點」相關聯的骨幹檢視。
 
-1. 在 `task.js` 檔案中，搜尋檢視表的events屬性。
+1. 在`task.js`檔案中，搜尋檢視的events屬性。
 
    events屬性是一個對應，每個專案的格式為：
 
    `"EventName Selector": "Function"`
 
-   當您觸發名為的JavaScript事件時 `EventName`於指定的HTML元素上，指定者： `Selector`，則 `Function`稱為。
+   當您在`Selector`所指定的HTML專案上觸發名為`EventName`的JavaScript事件時，會呼叫`Function`。
 
 1. 尋找
 
@@ -68,7 +68,7 @@ ht-degree: 0%
 
      &quot;swipe .last_empty_div&quot; ： &quot;onTaskClick&quot;，
 
-1. 儲存並關閉 `task.js` 檔案。
+1. 儲存並關閉`task.js`檔案。
 1. 建置並執行AEM Forms應用程式。 現在您可以使用向左撥動和向右撥動來開啟。
 
 同樣地，您可以針對各種手勢、HTML元素和函式的組合，在其他檢視中進行變更。

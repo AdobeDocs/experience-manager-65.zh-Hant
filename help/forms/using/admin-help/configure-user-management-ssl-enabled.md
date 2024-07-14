@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # 設定啟用SSL之LDAP伺服器的使用者管理 {#configure-user-management-for-an-ssl-enabled-ldap-server}
 
-為了使同步能夠透過LDAPS正常運作，憑證授權單位(CA)簽發的LDAP憑證必須存在於應用程式伺服器的Java執行階段環境(JRE)中。 將憑證匯入應用程式伺服器的JRE cacerts檔案，該檔案通常位於 *[JAVA_HOME]*/jre/lib/security/cacerts目錄。
+為了使同步能夠透過LDAPS正常運作，憑證授權單位(CA)簽發的LDAP憑證必須存在於應用程式伺服器的Java執行階段環境(JRE)中。 將憑證匯入應用程式伺服器的JRE cacerts檔案，該檔案通常位於&#x200B;*[JAVA_HOME]*/jre/lib/security/cacerts目錄中。
 
 1. 在目錄伺服器上啟用SSL。 如需詳細資訊，請參閱目錄廠商提供的檔案。
 1. 從目錄伺服器匯出使用者端憑證。
@@ -26,8 +26,8 @@ ht-degree: 0%
 
    `keytool -import -alias`*別名* `-file certificatename -keystore C:\bea\jdk15_04\jre\lib\security\cacerts`
 
-1. 出現提示時，輸入密碼。 (Java的預設密碼為 `changeit`.) 系統會顯示訊息，指出憑證已成功匯入。
-1. 出現提示時，鍵入 `Yes` 以信任憑證。
+1. 出現提示時，輸入密碼。 （Java的預設密碼為`changeit`。） 系統會顯示訊息，指出憑證已成功匯入。
+1. 出現提示時，請輸入`Yes`以信任憑證。
 1. 在「使用者管理」中啟用SSL，並在設定目錄設定時，為SSL選項選取「是」，然後相應地變更連線埠設定。 預設連線埠號碼為636。
 
 >[!NOTE]

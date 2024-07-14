@@ -20,13 +20,13 @@ ht-degree: 1%
 
 在大型組織中，需要動態選取流程的使用者。 例如，根據代理商與客戶的鄰近程度，選取欄位代理商以提供客戶服務。 在這種情況下，代理程式會以動態方式選取。
 
-指派任務和Adobe Sign步驟 [OSGi上以Forms為中心的工作流程](/help/forms/using/aem-forms-workflow.md) 提供可動態選取使用者的選項。 您可以使用ECMAScript或OSGi套件組合來動態選取「指派工作」步驟的被指定者，或選取「簽署檔案」步驟的簽署者。
+在OSGi](/help/forms/using/aem-forms-workflow.md)上指派[以Forms為中心的工作流程的任務和Adobe Sign步驟，提供可動態選取使用者的選項。 您可以使用ECMAScript或OSGi套件組合來動態選取「指派工作」步驟的被指定者，或選取「簽署檔案」步驟的簽署者。
 
 ## 使用ECMAScript動態選取使用者或群組 {#use-ecmascript-to-dynamically-select-a-user-or-group}
 
 ECMAScript是一種指令碼語言。 用於使用者端指令碼和伺服器應用程式。 執行下列步驟，使用ECMAScript動態選取使用者或群組：
 
-1. 開啟CRXDE Lite。 URL為 `https://'[server]:[port]'/crx/de/index.jsp`
+1. 開啟CRXDE Lite。 URL是`https://'[server]:[port]'/crx/de/index.jsp`
 1. 在下列路徑建立副檔名為.ecma的檔案。 如果路徑（節點結構）不存在，請建立它：
 
    * （指派工作步驟的路徑） `/apps/fd/dashboard/scripts/participantChooser`
@@ -34,19 +34,19 @@ ECMAScript是一種指令碼語言。 用於使用者端指令碼和伺服器應
 
 1. 將具有動態選取使用者邏輯的ECMAScript新增至.ecma檔案。 按一下&#x200B;**[!UICONTROL 「儲存全部」]**。
 
-   如需範例指令碼，請參閱 [動態選取使用者或群組的ECMAScript範例](/help/forms/using/dynamically-select-a-user-or-group-for-aem-workflow.md#sample-ecmascripts-to-dynamically-choose-a-user-or-a-group).
+   如需範例指令碼，請參閱[動態選取使用者或群組的範例ECMAScripts](/help/forms/using/dynamically-select-a-user-or-group-for-aem-workflow.md#sample-ecmascripts-to-dynamically-choose-a-user-or-a-group)。
 
 1. 新增指令碼的顯示名稱。 此名稱會顯示在工作流程步驟中。 若要指定名稱，請執行下列動作：
 
-   1. 展開指令碼節點，用滑鼠右鍵按一下 **[!UICONTROL jcr：content]** 節點，然後按一下 **[!UICONTROL Mixin]**.
-   1. 新增 `mix:title` 屬性，並按一下 **確定**.
+   1. 展開指令碼節點，用滑鼠右鍵按一下&#x200B;**[!UICONTROL jcr：content]**&#x200B;節點，然後按一下&#x200B;**[!UICONTROL Mixins]**。
+   1. 在[編輯Mixin]對話方塊中新增`mix:title`屬性，然後按一下[確定]。****
    1. 將以下屬性新增到指令碼的jcr：content節點中：
 
       | 名稱 | 類型 | 值 |
       |--- |--- |--- |
       | jcr:title | 字串 | 指定指令碼的名稱。 例如，選擇最近的欄位代理。 此名稱會顯示在指派任務和簽署檔案步驟中。 |
 
-   1. 按一下 **全部儲存**. 指令碼將可以在AEM Workflow的元件中選擇。
+   1. 按一下&#x200B;**全部儲存**。 指令碼將可以在AEM Workflow的元件中選擇。
 
       ![指令碼](assets/script.png)
 
@@ -115,13 +115,13 @@ function getAdobeSignRecipients() {
 
 ## 使用Java介面動態選擇使用者或群組 {#use-java-interface-to-dynamically-choose-a-user-or-group}
 
-您可以使用 [RecipientInfoSpecifier](https://www.adobe.io/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/workflow/adobesign/api/RecipientInfoSpecifier.html) Java介面可動態選擇Adobe Sign的使用者或群組，以及指派工作步驟。 您可以建立一個OSGi套件組合，該套件組合使用 [RecipientInfoSpecifier](https://www.adobe.io/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/workflow/adobesign/api/RecipientInfoSpecifier.html) Java介面並將其部署至AEM Forms伺服器。 這可讓您在AEM Workflow的指派任務和Adobe Sign元件中選取選項。
+您可以使用[RecipientInfoSpecificer](https://www.adobe.io/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/workflow/adobesign/api/RecipientInfoSpecifier.html) Java介面動態選擇Adobe Sign的使用者或群組，以及指派工作步驟。 您可以建立使用[RecipientInfoSpecificer](https://www.adobe.io/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/workflow/adobesign/api/RecipientInfoSpecifier.html) Java介面的OSGi套件組合，並將其部署至AEM Forms伺服器。 這可讓您在AEM Workflow的指派任務和Adobe Sign元件中選取選項。
 
-您需要 [AEM Forms使用者端SDK](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) jar和 [granite jar](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.workflow.api/1.0.2/) 編譯下列程式碼範例的檔案。 將這些jar檔案新增為外部相依性至OSGi套件專案。 您可以使用任何Java IDE來建立OSGi套件。 下列程式提供使用Eclipse建立OSGi套件的步驟：
+您需要[AEM Forms使用者端SDK](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) jar和[granite jar](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.workflow.api/1.0.2/)檔案，才能編譯下列的程式碼範例。 將這些jar檔案新增為外部相依性至OSGi套件專案。 您可以使用任何Java IDE來建立OSGi套件。 下列程式提供使用Eclipse建立OSGi套件的步驟：
 
-1. 開啟Eclipse IDE。 瀏覽至 **[!UICONTROL 檔案]**> **[!UICONTROL 新增專案]**.
-1. 在「選取精靈」畫面上，選取 **[!UICONTROL Maven專案]**，然後按一下 **[!UICONTROL 下一個]**.
-1. 在新Maven專案上，保留預設值，然後按一下 **[!UICONTROL 下一個]**. 選取原型並按一下 **[!UICONTROL 下一個]**. 例如，maven-archetype-quickstart。 指定 **[!UICONTROL 群組ID]**， **[!UICONTROL 成品ID]**， **[!UICONTROL 版本]**、和 **[!UICONTROL 封裝]** ，然後按一下 **[!UICONTROL 完成]**. 專案已建立。
+1. 開啟Eclipse IDE。 瀏覽至&#x200B;**[!UICONTROL 檔案]**> **[!UICONTROL 新專案]**。
+1. 在[選取精靈]畫面上，選取&#x200B;**[!UICONTROL Maven專案]**，然後按一下[下一步] ]**。**[!UICONTROL 
+1. 在新的Maven專案中，保留預設值，然後按一下&#x200B;**[!UICONTROL 下一步]**。 選取原型並按一下&#x200B;**[!UICONTROL 下一步]**。 例如，maven-archetype-quickstart。 指定專案的&#x200B;**[!UICONTROL 群組識別碼]**、**[!UICONTROL 成品識別碼]**、**[!UICONTROL 版本]**&#x200B;和&#x200B;**[!UICONTROL 封裝]**，然後按一下&#x200B;**[!UICONTROL 完成]**。 專案已建立。
 1. 開啟pom.xml檔案進行編輯，並將檔案的所有內容取代為下列內容：
 
    ```xml
@@ -224,7 +224,7 @@ function getAdobeSignRecipients() {
    </project>
    ```
 
-1. 新增使用的原始程式碼 [RecipientInfoSpecifier](https://www.adobe.io/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/workflow/adobesign/api/RecipientInfoSpecifier.html) Java介面可動態選擇使用者或群組以用於指派工作步驟。 如需程式碼範例，請參閱 [使用Java介面動態選擇使用者或群組的範例](#-sample-scripts-for).
+1. 新增使用[RecipientInfoSpecificer](https://www.adobe.io/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/workflow/adobesign/api/RecipientInfoSpecifier.html) Java介面來動態選擇指派工作步驟的使用者或群組的原始程式碼。 如需程式碼範例，請參閱[使用Java介面動態選擇使用者或群組的範例](#-sample-scripts-for)。
 1. 開啟命令提示字元並導覽至包含OSGi套件專案的目錄。 使用以下命令來建立OSGi套件：
 
    `mvn clean install`

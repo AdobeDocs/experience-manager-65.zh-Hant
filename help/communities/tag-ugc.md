@@ -38,11 +38,11 @@ ht-degree: 4%
 
 ## 管理標記 {#administering-tags}
 
-另請參閱 [管理標籤](../../help/sites-administering/tags.md#tagging-console) 用於建立和管理標籤名稱空間和分類。
+請參閱[管理標籤](../../help/sites-administering/tags.md#tagging-console)，以建立和管理標籤名稱空間和分類。
 
-另請參閱 [標籤Essentials](tag.md) 以取得開發人員資訊。
+如需開發人員資訊，請參閱[Tag Essentials](tag.md)。
 
-另請參閱 [使用社交標籤雲](tagcloud.md) 將社交標籤雲元件新增至頁面，以方便使用套用的標籤搜尋已張貼的UGC。
+請參閱[使用Social Tag Cloud](tagcloud.md)，將Social Tag Cloud元件新增至頁面，以方便使用套用的標籤搜尋已張貼的UGC。
 
 ### 標籤許可權 {#tag-permissions}
 
@@ -50,8 +50,8 @@ ht-degree: 4%
 
 由於標籤已套用至發佈環境中的UGC，因此社群成員需要啟用讀取許可權，才能選取標籤以套用。
 
-另請參閱 [設定標籤許可權](../../help/sites-administering/tags.md#setting-tag-permissions).
+請參閱[設定標籤許可權](../../help/sites-administering/tags.md#setting-tag-permissions)。
 
-以下為管理員將讀取許可權套用至 `/etc/tag/discussions` 適用於群組 `Community Engage Members`.
+下列是管理員對群組`Community Engage Members`的`/etc/tag/discussions`套用讀取許可權時，它在CRXDE中的顯示方式。
 
-![tag-permissions](assets/tag-permissions.png)
+![標籤許可權](assets/tag-permissions.png)

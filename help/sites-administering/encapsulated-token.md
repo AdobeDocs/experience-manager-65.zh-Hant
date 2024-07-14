@@ -58,7 +58,7 @@ ht-degree: 1%
 >
 >* 粘性工作階段已啟用，或
 >
->* 同步開始時，使用者已在AEM中建立。 這表示在處理常式的情況下，將不支援封裝的權杖 **建立** 同步處理期間的使用者。
+>* 同步開始時，使用者已在AEM中建立。 這表示在同步處理期間，處理常式&#x200B;**建立**&#x200B;個使用者的情況下，將不支援封裝的權杖。
 
 設定封裝Token時，您需要考慮一些事項：
 
@@ -70,11 +70,11 @@ ht-degree: 1%
 若要跨執行個體復寫金鑰，您需要：
 
 1. 存取AEM例項，通常是包含要複製之關鍵素材的製作例項；
-1. 找到 `com.adobe.granite.crypto.file` 本機檔案系統中的組合。 例如，在此路徑下：
+1. 在本機檔案系統中找到`com.adobe.granite.crypto.file`套件。 例如，在此路徑下：
 
    * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle25`
 
-   此 `bundle.info` 每個資料夾內的檔案將識別該套件組合名稱。
+   每個資料夾內的`bundle.info`檔案將識別組合名稱。
 
 1. 導覽至資料夾。 例如：
 
@@ -86,7 +86,7 @@ ht-degree: 1%
    * `<publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle25/data`
 
 1. 貼上您先前複製的兩個檔案。
-1. [重新整理加密套件組合](/help/communities/deploy-communities.md#refresh-the-granite-crypto-bundle) 如果目標執行個體已在執行中。
+1. 如果目標執行個體已在執行中，請[重新整理加密套件組合](/help/communities/deploy-communities.md#refresh-the-granite-crypto-bundle)。
 
 1. 對您要複製金鑰的所有執行個體重複上述步驟。
 
@@ -94,6 +94,6 @@ ht-degree: 1%
 
 複製HMAC金鑰後，您可以透過Web主控台啟用封裝權杖：
 
-1. 將瀏覽器指向 `https://serveraddress:port/system/console/configMgr`
-1. 尋找名為的專案 **AdobeGranite權杖驗證處理常式** 並按一下。
-1. 在下列視窗中，勾選 **啟用封裝權杖支援** 方塊並按 **儲存**.
+1. 將瀏覽器指向`https://serveraddress:port/system/console/configMgr`
+1. 尋找名為&#x200B;**AdobeGranite權杖驗證處理常式**&#x200B;的專案，然後按一下它。
+1. 在下列視窗中，勾選&#x200B;**啟用封裝權杖支援**&#x200B;方塊，然後按&#x200B;**儲存**。

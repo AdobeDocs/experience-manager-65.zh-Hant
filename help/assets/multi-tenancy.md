@@ -1,6 +1,6 @@
 ---
 title: 收藏集、代碼片段和代碼片段範本的多重租用
-description: 瞭解多租使用者功能如何讓您根據客戶組織在CRX存放庫中分隔內容，以防止未經授權的存取。
+description: 瞭解多租使用者功能如何讓您根據客戶組織在CRX存放庫中區隔內容，以防止未經授權的存取。
 contentOwner: AG
 role: Architect, Admin, Leader
 feature: Collections
@@ -17,13 +17,14 @@ ht-degree: 0%
 
 多租使用者功能可讓您根據組織首碼和組織ID在CRX中分隔內容，以防止其他組織的使用者未經授權存取內容。
 
-[!DNL Adobe Experience Manager Assets] 以不同的路徑儲存每個組織的資料。 每個組織專屬路徑由組織首碼和組織ID識別，組織ID包含在傳統位置，不同型別的資產會儲存在CRX中。
+[!DNL Adobe Experience Manager Assets]會以不同路徑儲存每個組織的資料。 每個組織特定的路徑由組織首碼和組織識別碼來識別
+包括在傳統位置，不同型別的資產會儲存在CRX中。
 
-例如，如果您建立名為 `Demo`， [!DNL Experience Manager] 資產傳統上會將資料夾儲存在 `../content/dam/Demo`. 啟用多租使用者功能後，您現在可以將資料儲存在 `../content/dam/<organization prefix>/<organization id>Demo`
+例如，如果您建立名為`Demo`的資料夾，[!DNL Experience Manager]資產傳統上會將資料夾儲存在`../content/dam/Demo`。 啟用多租使用者後，您現在可以將資料儲存在`../content/dam/<organization prefix>/<organization id>Demo`
 
-例如，如果 [!DNL Adobe Marketing Cloud] 使用者 [!DNL Assets] （隨選）指派給 `aodpremium` 組織，您可以使用多租使用者功能來設定 `../content/dam/<mac>/<aodpremium>Demo` 分隔其內容的路徑。 在此範例中， `mac` 是組織首碼和 `aodpremium` 是組織ID。
+例如，如果針對指派給`aodpremium`組織的[!DNL Assets] （隨選）的[!DNL Adobe Marketing Cloud]位使用者，您可以使用多租使用者功能來設定`../content/dam/<mac>/<aodpremium>Demo`路徑以分隔其內容。 在此範例中，`mac`是組織首碼，`aodpremium`是組織識別碼。
 
-根據使用者的組織和ID，此合格路徑會顯示在 [!DNL Assets] 介面和各種精靈，包括「移動」與「程式碼片段」建立精靈，以強制實行隔離。
+根據使用者的組織和ID，此合格路徑會顯示在[!DNL Assets]介面和各種精靈中，包括強制隔離的「移動」和「程式碼片段」建立精靈。
 
 多租使用者功能可讓您分隔下列資產和元件型別：
 

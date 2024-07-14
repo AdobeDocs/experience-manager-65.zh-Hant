@@ -20,7 +20,7 @@ ht-degree: 1%
 
 ## 必備條件 {#prerequisite}
 
-配置圖知識，可讓您建立/使用自訂配置。 另請參閱 [變更面板配置](../../forms/using/layout-capabilities-adaptive-forms.md).
+配置圖知識，可讓您建立/使用自訂配置。 請參閱[變更面板配置](../../forms/using/layout-capabilities-adaptive-forms.md)。
 
 ## 最適化表單面板佈局元件 {#adaptive-form-panel-layout-component}
 
@@ -28,9 +28,9 @@ ht-degree: 1%
 
 ## 建立自訂面板配置 {#creating-a-custom-panel-layout}
 
-1. 導覽至該位置 `/crx/de`.
-1. 從位置複製面板配置 `/libs/fd/af/layouts/panel` (例如， `tabbedPanelLayout`)至 `/apps` (例如， `/apps/af-custom-layout`)。
-1. 重新命名您複製到的版面 `customPanelLayout`. 變更節點的屬性 `qtip` 和 `jcr:description`. 例如，將其變更為 `Custom layout - Toggle tabs`.
+1. 導覽至位置`/crx/de`。
+1. 將面板配置從位置`/libs/fd/af/layouts/panel` （例如`tabbedPanelLayout`）複製到`/apps` （例如`/apps/af-custom-layout`）。
+1. 將您複製的佈局重新命名為`customPanelLayout`。 變更節點`qtip`和`jcr:description`的屬性。 例如，將其變更為`Custom layout - Toggle tabs`。
 
 qtip
 
@@ -38,10 +38,10 @@ qtip
 
 >[!NOTE]
 >
->設定屬性 `guideComponentType`至值 `fd/af/layouts/panel` 判斷配置是面板配置。
+>將屬性`guideComponentType`設定為值`fd/af/layouts/panel`可判斷配置是面板配置。
 
-1. 重新命名檔案 `tabbedPanelLayout.jsp` 在customPanelLayout.jsp的新佈局下。
-1. 若要引進新樣式和行為，請在 `etc` 節點。 例如，在/etc/af-custom-layout-clientlib位置，建立節點client-library。 讓節點具有categories屬性af.panel.custom。 它有下列.css和.js檔案：
+1. 將新配置下的檔案`tabbedPanelLayout.jsp`重新命名為customPanelLayout.jsp。
+1. 若要引入新樣式和行為，請在`etc`節點下建立使用者端程式庫。 例如，在/etc/af-custom-layout-clientlib位置，建立節點client-library。 讓節點具有categories屬性af.panel.custom。 它有下列.css和.js檔案：
 
    ```css
    /** CSS defining new styles used by custom layout **/
@@ -113,9 +113,9 @@ qtip
    });
    ```
 
-1. 若要增強外觀和行為，您可以包括 `client library`.
+1. 若要增強外觀和行為，您可以包含`client library`。
 
-   此外，請更新.jsp檔案中所包含指令碼的路徑。 例如，更新 `customPanelLayout.jsp` 檔案如下所示：
+   此外，請更新.jsp檔案中所包含指令碼的路徑。 例如，更新`customPanelLayout.jsp`檔案，如下所示：
 
    ```html
    <%-- jsp encapsulating navigator container and panel container divs --%>
@@ -144,7 +144,7 @@ qtip
    </div>
    ```
 
-   此 `/apps/af-custom-layout/customPanelLayout/defaultNavigatorLayout.jsp` 檔案：
+   `/apps/af-custom-layout/customPanelLayout/defaultNavigatorLayout.jsp`檔案：
 
    ```html
    <%-- jsp governing the navigation part --%>
@@ -173,7 +173,7 @@ qtip
    </ul>
    ```
 
-   更新的 `/apps/af-custom-layout/customPanelLayout/panelContainer.jsp`：
+   更新的`/apps/af-custom-layout/customPanelLayout/panelContainer.jsp`：
 
    ```html
    <%-- jsp governing the panel content --%>
@@ -202,7 +202,7 @@ qtip
 
 1. 在撰寫模式中開啟最適化表單。 您定義的面板配置圖會加入至配置面板配置圖的清單中。
 
-   ![自訂面板配置會顯示在面板配置清單中](assets/auth-layt.png) ![最適化表單的熒幕擷取畫面，使用自訂面板佈局](assets/s1.png) ![熒幕擷圖示範自訂配置的切換功能](assets/s2.png)
+   ![自訂面板配置會顯示在面板配置清單中](assets/auth-layt.png) ![使用自訂面板配置的最適化表單熒幕擷圖](assets/s1.png) ![示範自訂配置切換功能的熒幕擷圖](assets/s2.png)
 
 自訂面板配置的範例ZIP以及使用此範例的最適化表單。
 

@@ -47,7 +47,7 @@ ht-degree: 2%
   </tr>
   <tr>
    <td><strong> 屬性</strong></td>
-   <td>另請參閱 <a href="calendar.md">使用行事曆</a></td>
+   <td>檢視<a href="calendar.md">使用行事曆</a></td>
   </tr>
  </tbody>
 </table>
@@ -64,17 +64,17 @@ ht-degree: 2%
 
 ### 日曆功能 {#calendar-function}
 
-社群網站結構包含 [行事曆功能](functions.md#calendar-function) 具有 `calendar` 元件已設定。 「行事曆」功能支援識別 [有特殊許可權的成員使用者群組](users.md#privileged-members-group).
+包含[行事曆函式](functions.md#calendar-function)的社群網站結構已設定`calendar`元件。 行事曆功能支援識別[有特殊許可權的成員使用者群組](users.md#privileged-members-group)。
 
 ### 存取行事曆文章(UGC) {#accessing-calendar-posts-ugc}
 
-自AEM 6.1社群起，使用 [公用存放區](working-with-srp.md) for UGC包含對UGC的程式化存取，無論選擇的儲存選項（例如ASRP、MSRP或JSRP）為何。
+截至AEM 6.1 Communities，使用UGC的[公用存放區](working-with-srp.md)時，無論選擇的存放區選項（例如ASRP、MSRP或JSRP）為何，都可程式化存取UGC。
 
-**UGC在存放庫中的位置和格式可能會有所變更，恕不另行警告**.
+**存放庫中UGC的位置和格式可能會變更，而不會出現警告**。
 
 請參閱：
 
-* [儲存資源提供者概觀](srp.md)  — 簡介和存放庫使用概述
-* [srp和UGC Essentials](srp-and-ugc.md) - SRP公用程式方法與範例
-* [使用SRP存取UGC](accessing-ugc-with-srp.md)  — 程式碼指南
-* [SocialUtils重構](socialutils.md)  — 將已棄用的公用程式方法對應到目前的SRP公用程式方法
+* [儲存資源提供者概觀](srp.md) — 簡介和存放庫使用概觀
+* [SRP與UGC Essentials](srp-and-ugc.md) - SRP公用程式方法與範例
+* [使用SRP存取UGC](accessing-ugc-with-srp.md) — 編碼准則
+* [SocialUtils重構](socialutils.md) — 將已棄用的公用程式方法對應到目前的SRP公用程式方法

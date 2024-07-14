@@ -24,7 +24,7 @@ ht-degree: 4%
 
 ![aa-10](assets/aa-10.png)
 
-頁面分析資料顯示於 [清單檢視](/help/sites-authoring/basic-handling.md#list-view) Sites主控台的。 當頁面以清單格式顯示時，預設會提供下列欄：
+頁面分析資料顯示在Sites主控台的[清單檢視](/help/sites-authoring/basic-handling.md#list-view)中。 當頁面以清單格式顯示時，預設會提供下列欄：
 
 * 頁面檢視
 * 獨特訪客
@@ -34,12 +34,12 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->若要變更更新期間， [設定匯入間隔](/help/sites-administering/adobeanalytics-connect.md#configuring-the-import-interval).
+>若要變更更新期間，[設定匯入間隔](/help/sites-administering/adobeanalytics-connect.md#configuring-the-import-interval)。
 
-1. 開啟 **網站** 主控台；例如， [http://localhost:4502/sites.html/content](http://localhost:4502/sites.html/content)
-1. 在工具列的最右側（右上角），按一下圖示以選取 **清單檢視** (顯示的圖示取決於 [目前檢視](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources))。
+1. 開啟&#x200B;**網站**&#x200B;主控台；例如[http://localhost:4502/sites.html/content](http://localhost:4502/sites.html/content)
+1. 在工具列的最右側（右上角），按一下圖示以選取&#x200B;**清單檢視** （顯示的圖示將取決於[目前檢視](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)）。
 
-1. 再次按一下工具列最右側（右上角）的圖示，然後選取 **檢視設定**. 此 **設定欄** 對話方塊開啟。 進行任何必要的變更，並確認： **更新**.
+1. 再次，在工具列的最右側（右上角），按一下圖示，然後選取&#x200B;**檢視設定**。 **設定資料行**&#x200B;對話方塊開啟。 進行任何必要的變更，並透過&#x200B;**更新**&#x200B;確認。
 
    ![aa-04](assets/aa-04.png)
 
@@ -62,11 +62,11 @@ analytics-administrators使用者群組的成員可以設定Sites主控台，讓
 >
 >當頁面的樹狀結構包含與不同Adobe Analytics雲端設定相關聯的子項時，您無法為頁面設定可用的資料欄。
 
-1. 在清單檢視中，使用檢視選取器（工具列右側），選取 **檢視設定** 然後 **新增自訂Analytics資料**.
+1. 在清單檢視中，使用檢視選擇器（工具列右側），選取&#x200B;**檢視設定**，然後&#x200B;**新增自訂分析資料**。
 
    ![aa-15](assets/aa-15.png)
 
-1. 選取您要在Sites主控台中向作者公開的量度，然後按一下 **新增**.
+1. 選取您要在Sites主控台中公開給作者的量度，然後按一下[新增]。****
 
    顯示的欄是從Adobe Analytics中擷取的。
 
@@ -74,7 +74,7 @@ analytics-administrators使用者群組的成員可以設定Sites主控台，讓
 
 ### 從Sites開啟內容分析 {#opening-content-insights-from-sites}
 
-開啟 [內容分析](/help/sites-authoring/content-insights.md) ，以進一步調查頁面的成效。
+從Sites主控台開啟[內容分析](/help/sites-authoring/content-insights.md)以進一步調查頁面有效性。
 
 1. 在Sites主控台中，選取您要檢視其內容深入分析的頁面。
 1. 在工具列上，按一下Analytics和Recommendations圖示。
@@ -85,25 +85,25 @@ analytics-administrators使用者群組的成員可以設定Sites主控台，讓
 
 >[!NOTE]
 >
->如果符合下列條件，則會顯示此方法： [已設定Activity Map](/help/sites-administering/adobeanalytics-connect.md#configuring-for-the-activity-map) 您的網站。
+>如果您的網站已設定[Activity Map](/help/sites-administering/adobeanalytics-connect.md#configuring-for-the-activity-map)，便會顯示此專案。
 
 >[!NOTE]
 >
 >Activity Map的資料擷取自Adobe Analytics。
 
-當您的網站已 [已針對Adobe Analytics設定](/help/sites-administering/adobeanalytics-connect.md)，您可以使用 [模式Activity Map](/help/sites-authoring/author-environment-tools.md#page-modes) 以檢視相關資料。 例如：
+當您的網站已[設定為Adobe Analytics](/help/sites-administering/adobeanalytics-connect.md)時，您可以使用[模式Activity Map](/help/sites-authoring/author-environment-tools.md#page-modes)來檢視相關資料。 例如：
 
 ![aa-07](assets/aa-07.png)
 
 ### 存取Activity Map {#accessing-the-activity-map}
 
-選取 [Activity Map](/help/sites-authoring/author-environment-tools.md#page-modes) 模式，將會要求您輸入您的Adobe Analytics認證。
+選取[Activity Map](/help/sites-authoring/author-environment-tools.md#page-modes)模式後，系統會要求您輸入Adobe Analytics認證。
 
 ![aa-03](assets/aa-03.png)
 
-此 **Analytics** 浮動工具列隨即顯示；您可以：
+顯示&#x200B;**Analytics**&#x200B;浮動工具列；您可以：
 
-* 使用雙箭頭(**>>**)
+* 使用雙箭號(**>**)變更工具列格式
 * 切換頁面詳細資料（眼睛圖示）
 * 配置Activity Map設定（cog圖示）
 * 選取要顯示的分析（各種下拉式選取器）
@@ -119,7 +119,7 @@ analytics-administrators使用者群組的成員可以設定Sites主控台，讓
 
 * 事件型別
 * 使用者群組
-* **泡泡**/**漸層**/**獲益者和損失者**/**關閉**
+* **泡泡圖**/**漸層**/**獲益者和損失者**/**關閉**
 
 * 要顯示的期間
 
@@ -127,11 +127,11 @@ analytics-administrators使用者群組的成員可以設定Sites主控台，讓
 
 ### 設定Activity Map {#configuring-the-activity-map}
 
-使用 **顯示設定** 圖示以開啟 **Activity Map設定** 對話方塊。
+使用&#x200B;**顯示設定**&#x200B;圖示開啟&#x200B;**Activity Map設定**&#x200B;對話方塊。
 
 ![aa-04-1](assets/aa-04-1.png)
 
-此 **Activity Map設定** 對話方塊在三個索引標籤上提供一系列選項：
+**Activity Map設定**&#x200B;對話方塊在三個索引標籤上提供一系列選項：
 
 ![aa-06](assets/aa-06.png)
 

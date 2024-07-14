@@ -17,7 +17,7 @@ ht-degree: 3%
 
 # 通訊管理設定屬性 {#correspondence-management-configuration-properties}
 
-若要設定這些屬性，請在瀏覽器中開啟下列URL： `https://<server>:<port>/<contextPath>/system/console/configMgr` 並選取 **通訊管理設定**.
+若要設定這些屬性，請在瀏覽器中開啟下列URL： `https://<server>:<port>/<contextPath>/system/console/configMgr`並選取&#x200B;**通訊管理設定**。
 
 「通訊管理」有下列設定屬性：
 
@@ -162,8 +162,8 @@ ht-degree: 3%
    <td>—<p> </p> </td>
   </tr>
   <tr>
-   <td><p>管理發布時的信件例項</p> </td>
-   <td><p>啟用/停用管理信函功能（僅適用於發佈伺服器）</p> </td>
+   <td><p>在Publish上管理字母例項</p> </td>
+   <td><p>啟用/停用「管理信件」功能(僅適用於Publish伺服器)</p> </td>
    <td><p>false</p> </td>
    <td><p>true / false</p> </td>
   </tr>
@@ -198,7 +198,7 @@ ht-degree: 3%
    <td><p>true / false</p> </td>
   </tr>
   <tr>
-   <td><p>啟用發佈稽核</p> </td>
+   <td><p>啟用Publish稽核</p> </td>
    <td><p>啟用/停用資產發佈的稽核功能</p> </td>
    <td><p>false</p> </td>
    <td><p>true / false</p> </td>
@@ -247,13 +247,13 @@ ht-degree: 3%
   </tr>
   <tr>
    <td><p>字母快取大小</p> </td>
-   <td><p>指定快取中要保留的最大字母數。</p> <p>變更此值將導致清理 <code>in-memory</code> 快取。</p> </td>
+   <td><p>指定快取中要保留的最大字母數。</p> <p>變更此值將導致<code>in-memory</code>快取清除。</p> </td>
    <td><p>100</p> </td>
    <td><p>任何數值</p> </td>
   </tr>
   <tr>
    <td><p>啟用字母快取</p> </td>
-   <td><p>啟用/停用字母快取。</p> <p>變更此值將導致清理 <code>in-memory </code> 快取。</p> </td>
+   <td><p>啟用/停用字母快取。</p> <p>變更此值將導致<code>in-memory </code>快取清除。</p> </td>
    <td><p>true</p> </td>
    <td><p>true / false</p> </td>
   </tr>
@@ -289,7 +289,7 @@ ht-degree: 3%
   </tr>
   <tr>
    <td><p>偵錯目錄 </p> <p> </p> </td>
-   <td>用於偵錯的檔案系統資料夾位置。 如果目錄沒有 <code>exists</code>，不會產生任何偵錯傾印。</td>
+   <td>用於偵錯的檔案系統資料夾位置。 如果目錄沒有<code>exists</code>，將不會產生偵錯傾印。</td>
    <td>acm.debugDirectory</td>
    <td> </td>
   </tr>

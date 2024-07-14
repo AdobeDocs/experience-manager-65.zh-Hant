@@ -32,21 +32,21 @@ ht-degree: 1%
 
 這些步驟顯示如何加密Mail服務的SMTP密碼。 您可以針對要加密的OSGI屬性完成這些步驟。
 
-1. 前往AEM Web主控台，位於 *https://&lt;serveraddress>：&lt;serverport>/system/console/configMgr*
-1. 在左上角，前往 **主要 — 加密支援**
+1. 移至AEM Web Console，位於&#x200B;*https://&lt;serveraddress>：&lt;serverport>/system/console/configMgr*
+1. 在左上角，前往&#x200B;**Main - Crypto Support**
 
    ![chlimage_1-325](assets/chlimage_1-325.png)
 
-1. 此 **Adobe Experience Manager Web主控台Crypto支援** 頁面隨即顯示。
+1. 顯示&#x200B;**Adobe Experience Manager Web Console Crypto Support**&#x200B;頁面。
 
    ![screen_shot_2018-08-01at113417am](assets/screen_shot_2018-08-01at113417am.png)
 
-1. 在 **純文字** 欄位中，輸入要保護的敏感資料文字。
-1. 選取 **Protect**. 受保護文字會顯示為加密文字。
+1. 在&#x200B;**純文字**&#x200B;欄位中，輸入要保護的敏感資料文字。
+1. 選取&#x200B;**Protect**。 受保護文字會顯示為加密文字。
 
    ![screen_shot_2018-08-01at113844am](assets/screen_shot_2018-08-01at113844am.png)
 
-1. 從Step#5複製受保護的文字並貼到OSGI表單值中。 在此範例中，已解密的 **SMTP密碼** 新增至 *Day CQ郵件服務*.
+1. 從Step#5複製受保護的文字並貼到OSGI表單值中。 在此範例中，加密的&#x200B;**SMTP密碼**&#x200B;已新增至&#x200B;*Day CQ Mail Service*。
 
    ![screen_shot_2016-12-18at105809pm](assets/screen_shot_2016-12-18at105809pm.png)
 

@@ -20,9 +20,9 @@ ht-degree: 1%
 
 熟悉Document Security、Reader Extension和Java程式語言的概念，以便透過Reader對Document Security受原則保護的PDF檔案進行擴展。
 
-您可以使用Document Security，將特定PDF檔案的存取許可權製為僅供授權使用者存取。 您也可以決定收件者如何使用受保護檔案。 例如，您可以指定收件人是否可以列印、複製或編輯受Document Security原則保護檔案的文字。 若要深入瞭解Document Security，請參閱 [關於document security](/help/forms/using/admin-help/document-security.md).
+您可以使用Document Security，將特定PDF檔案的存取許可權製為僅供授權使用者存取。 您也可以決定收件者如何使用受保護檔案。 例如，您可以指定收件人是否可以列印、複製或編輯受Document Security原則保護檔案的文字。 若要深入瞭解Document Security，請參閱[關於Document Security](/help/forms/using/admin-help/document-security.md)。
 
-您可以使用Reader延伸模組，透過Acrobat Reader啟用Adobe PDF檔案中的互動功能。 這些互動式功能通常只能透過Adobe Acrobat Professional和Standard使用。 若要瞭解Reader擴充功能可啟用的互動功能，請參閱 [Adobe Experience Manager Forms DocAssurance服務&#x200B;](/help/forms/using/overview-aem-document-services.md)**.**
+您可以使用Reader延伸模組，透過Acrobat Reader啟用Adobe PDF檔案中的互動功能。 這些互動式功能通常只能透過Adobe Acrobat Professional和Standard使用。 若要瞭解Reader延伸模組可啟用的互動功能，請參閱[Adobe Experience Manager Forms DocAssurance服務&#x200B;](/help/forms/using/overview-aem-document-services.md)**。**
 
 您可以使用可攜式保護程式庫在檔案上套用原則，而不需要透過網路傳輸檔案。 只有安全性認證和保護原則詳細資料會透過網路傳遞。 實際檔案永遠不會離開使用者端，而保護原則會套用至使用者端的本機。
 
@@ -44,7 +44,7 @@ Reader延伸功能服務完全支援以PDF標準1.6和更新版本為基礎的PD
 
 ### 將使用許可權套用至受Document Security原則保護的PDF檔案 {#apply-usage-rights-to-a-document-security-policy-protected-pdf-document}
 
-您可以使用 `applyUsageRights`Java API可將使用許可權套用至受原則保護的PDF檔案。 使用許可權與Acrobat中預設提供的功能有關，但不適用於Adobe Reader，例如新增註解至表單或填寫表單欄位及儲存表單的功能。 已套用使用許可權的PDF檔案稱為許可權啟用檔案。 在Adobe Reader中開啟許可權啟用檔案的使用者可執行針對該特定檔案啟用的操作。
+您可以使用`applyUsageRights`Java API將使用許可權套用至受原則保護的PDF檔案。 使用許可權與Acrobat中預設提供的功能有關，但不適用於Adobe Reader，例如新增註解至表單或填寫表單欄位及儲存表單的功能。 已套用使用許可權的PDF檔案稱為許可權啟用檔案。 在Adobe Reader中開啟許可權啟用檔案的使用者可執行針對該特定檔案啟用的操作。
 
 **語法：** `InputStream applyUsageRights(InputStream inputFile, File certFile, String credentialPassword, UsageRights usageRights)`
 
@@ -68,14 +68,14 @@ Reader延伸功能服務完全支援以PDF標準1.6和更新版本為基礎的PD
   </tr>
   <tr>
    <td><p>usageRights</p> </td>
-   <td><p>指定物件型別 <a href="https://help.adobe.com/en_US/livecycle/11.0/ProgramLC/javadoc/com/adobe/livecycle/readerextensions/client/UsageRights.html" target="_blank">使用許可權</a>. usageRights物件代表可套用至受原則保護之PDF檔案的個別權利。</p> </td>
+   <td><p>指定型別<a href="https://help.adobe.com/en_US/livecycle/11.0/ProgramLC/javadoc/com/adobe/livecycle/readerextensions/client/UsageRights.html" target="_blank">UsageRights</a>的物件。 usageRights物件代表可套用至受原則保護之PDF檔案的個別權利。</p> </td>
   </tr>
  </tbody>
 </table>
 
 ### 擷取套用到受原則保護的PDF檔案的使用許可權。   {#retrieve-usage-rights-applied-to-a-policy-protected-pdf-document-nbsp}
 
-您可以使用 `getDocumentUsageRights`Java API可擷取套用到受原則保護之PDF檔案的Reader擴充功能使用許可權。 透過擷取使用許可權的相關資訊，您可以瞭解為受原則保護的PDF檔案啟用的Reader擴充功能。
+您可以使用`getDocumentUsageRights`Java API來擷取套用到受原則保護之PDF檔案的Reader延伸使用許可權。 透過擷取使用許可權的相關資訊，您可以瞭解為受原則保護的PDF檔案啟用的Reader擴充功能。
 
 **語法：** `public GetUsageRightsResult getDocumentUsageRights(InputStream inDoc)`
 
@@ -140,7 +140,7 @@ System.out.println("RE rights for the file are :\n"+right1);
 
 ### 移除受原則保護的PDF檔案的使用許可權 {#remove-usage-rights-of-a-policy-protected-pdf-document}
 
-您可以使用 `removeUsageRights`Java API可從受原則保護的檔案中移除使用許可權。 若要在檔案上執行其他AEM Forms操作，必須從受原則保護的PDF檔案中移除使用許可權。 例如，在設定使用許可權之前，您必須以數位方式簽署（或認證）PDF檔案。 因此，如果要在受原則保護的檔案上執行操作，您必須從PDF檔案中移除使用許可權，執行其他操作，例如以數位方式簽署檔案，然後重新將使用許可權套用至檔案。
+您可以使用`removeUsageRights`Java API從受原則保護的檔案中移除使用許可權。 若要在檔案上執行其他AEM Forms操作，必須從受原則保護的PDF檔案中移除使用許可權。 例如，在設定使用許可權之前，您必須以數位方式簽署（或認證）PDF檔案。 因此，如果要在受原則保護的檔案上執行操作，您必須從PDF檔案中移除使用許可權，執行其他操作，例如以數位方式簽署檔案，然後重新將使用許可權套用至檔案。
 
 **語法：** `InputStream removeUsageRights(InputStream inputFile)`
 
@@ -152,7 +152,7 @@ System.out.println("RE rights for the file are :\n"+right1);
   </tr>
   <tr>
    <td><p> </p> <p>輸入檔案</p> </td>
-   <td>指定代表使用方式之PDF檔案的InputStream<br /> 許可權將被移除。 您可以使用LiveCycleRights Management或AEM Forms Document Security保護的檔案。</td>
+   <td>指定代表要從中移除使用<br />許可權之PDF檔案的InputStream。 您可以使用LiveCycleRights Management或AEM Forms Document Security保護的檔案。</td>
   </tr>
  </tbody>
 </table>

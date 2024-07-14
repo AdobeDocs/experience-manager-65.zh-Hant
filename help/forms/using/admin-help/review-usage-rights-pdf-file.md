@@ -20,7 +20,7 @@ ht-degree: 0%
 
 將PDF檔案上傳至Acrobat Reader DC擴充功能Web應用程式時，您可以檢視此資訊，以檢視其是否為Reader擴充功能、任何套用的使用許可權及其到期日。
 
-1. 請在登入Acrobat Reader DC擴充功能網頁應用程式 `http://[localhost]:[port]/ReaderExtensions` (其中 *[連線埠]* 是應用程式伺服器的連線埠號碼)。
+1. 在`http://[localhost]:[port]/ReaderExtensions`登入Acrobat Reader DC Extensions Web應用程式（其中&#x200B;*[連線埠]*&#x200B;為您的應用程式伺服器的連線埠號碼）。
 1. 按一下「瀏覽」上傳PDF檔案，然後按一下「資訊」。 該資訊會顯示在檔案名稱下方。
 
    如需有關修改檔案使用許可權的詳細資訊，請參閱Acrobat Reader DC擴充功能說明。

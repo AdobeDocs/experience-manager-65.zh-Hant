@@ -24,8 +24,8 @@ Forms服務可讓您建立互動式資料擷取使用者端應用程式，以驗
 * 做為各種瀏覽器環境中的HTML，包括相容的XHTML 1.0轉譯
 * 在支援AdobeFlash Player的各種瀏覽器環境中作為表單指南。
 
-如需Forms服務的詳細資訊，請參閱 [服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
+如需Forms服務的詳細資訊，請參閱[服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 使用Administration Console中的Forms頁面，您可以設定Forms服務的行為。 這些設定會套用至服務的所有呼叫。 任何透過AEM Forms SDK傳送的引數都會覆寫在管理控制檯中設定的設定；但是，這些引數只會影響該特定引動。
 
-在管理主控台中變更Forms設定後，按一下儲存。 您不需要重新啟動伺服器即可讓變更生效。 不過，在設定快取模式設定時，您可能需要停止並重新啟動Forms服務。 (請參閱 [啟動和停止服務](/help/forms/using/admin-help/starting-stopping-services.md#starting-and-stopping-services).)
+在管理主控台中變更Forms設定後，按一下儲存。 您不需要重新啟動伺服器即可讓變更生效。 不過，在設定快取模式設定時，您可能需要停止並重新啟動Forms服務。 （請參閱[啟動和停止服務](/help/forms/using/admin-help/starting-stopping-services.md#starting-and-stopping-services)。）

@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # 組裝PDF檔案 {#assembling-pdf-documents}
 
-**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms 。**
+**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
 
 **關於組合器服務**
 
@@ -29,4 +29,4 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如需有關組合器服務的詳細資訊，請參閱 [AEM Forms服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
+>如需有關組合器服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。

@@ -19,22 +19,22 @@ ht-degree: 1%
 
 # 在AEM Forms工作區中使用表單集{#working-with-formsets-in-aem-forms-workspace}
 
-表單集是一組HTML5表單，以單一表單集形式提供給一般使用者。 使用者開始填寫表單集時，會順暢地從一個表單轉換為另一個表單。 然後，您只需按一下即可提交該組表單。 有關表單集以及如何設定表單集的詳細資訊，請參閱 [AEM Forms中的表單集](../../forms/using/formset-in-aem-forms.md).
+表單集是一組HTML5表單，以單一表單集形式提供給一般使用者。 使用者開始填寫表單集時，會順暢地從一個表單轉換為另一個表單。 然後，您只需按一下即可提交該組表單。 如需表單集及其設定方式的詳細資訊，請參閱AEM Forms中的[表單集](../../forms/using/formset-in-aem-forms.md)。
 
 AEM Forms工作區支援表單集。 使用表單集，可以分組與服務或流程相關的多個表單，以自動化業務流程並向終端使用者呈現。 在這種情況下，使用者可以完整填寫整個集，無需檔案、提交和追蹤個別表單或流程。
 
 ## 將表單集附加到AEM Forms工作區應用程式中的起點 {#attaching-a-formset-to-startpoint-in-an-aem-forms-workspace-app-br}
 
-1. 在「維護作業」中建立業務處理工作流程。 如需詳細資訊，請參閱 [Workbench說明](https://www.adobe.com/go/learn_aemforms_workbench_63).
-1. 從起點的流程屬性中，選取 **使用CRX資產** 在簡報與資料中。
+1. 在「維護作業」中建立業務處理工作流程。 如需詳細資訊，請參閱[Workbench說明](https://www.adobe.com/go/learn_aemforms_workbench_63)。
+1. 從起點的程式屬性中，選取&#x200B;**在簡報與資料中使用CRX資產**。
 
    ![1-3](assets/1-3.png)
 
-1. 按一下 ![瀏覽](assets/browse.png) （瀏覽）。 選取表單資產對話方塊隨即顯示。
+1. 按一下CRX資產路徑旁的![瀏覽](assets/browse.png) （瀏覽）。 選取表單資產對話方塊隨即顯示。
 
    ![2-1](assets/2-1.png)
 
-1. 按一下 **表單集** 標籤，從清單中選取相關的表單集，然後按一下 **確定**.
+1. 按一下&#x200B;**表單集**&#x200B;標籤，從清單中選取相關的表單集，然後按一下&#x200B;**確定**。
 
 1. 在更新其他相關程式屬性之後部署應用程式。
 

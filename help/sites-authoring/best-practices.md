@@ -36,7 +36,7 @@ ht-degree: 5%
 
 ## Assets {#assets}
 
-有關資產的最佳實務，包括Dynamic Media功能和Dynamic Media Classic整合，請參閱下列主題：
+以下主題說明Assets的最佳實務，包括Dynamic Media功能和Dynamic Media Classic整合：
 
 <table>
  <tbody>
@@ -56,7 +56,7 @@ ht-degree: 5%
    <td><p>說明如何在使用Dynamic Media功能或與Dynamic Media Classic整合時銳利化影像以獲得最佳結果，以及最佳化影像品質的方法。 </p> </td>
   </tr>
   <tr>
-   <td>多語言資產</td>
+   <td>多語系Assets</td>
    <td><a href="/help/assets/best-practices-for-translating-assets-efficiently.md">翻譯最佳實務</a></td>
    <td>說明有效翻譯AEM資產的最佳實務。</td>
   </tr>
@@ -69,12 +69,12 @@ ht-degree: 5%
 
 |  |  |  |
 |---|---|---|
-| 製作工具 | [製作環境和工具](/help/sites-authoring/author-environment-tools.md) | 提供用於編寫頁面的工具概覽。 |
+| 製作工具 | [作者環境和工具](/help/sites-authoring/author-environment-tools.md) | 提供用於編寫頁面的工具概覽。 |
 | 組織頁面 | [建立及組織頁面](/help/sites-authoring/managing-pages.md) | 提供如何最佳組織頁面的概觀，包括命名慣例。 |
 
 ## 表單 {#forms}
 
 |  |  |  |
 |---|---|---|
-| 調適型表單 | [使用最適化表單的最佳作法](/help/forms/using/adaptive-forms-best-practices.md) | 說明設定、編寫和自訂最適化表單的最佳作法。 |
+| 調適型表單 | [使用最適化表單的最佳實務](/help/forms/using/adaptive-forms-best-practices.md) | 說明設定、編寫和自訂最適化表單的最佳作法。 |
 | HTML5表單 | [設計HTML5表單的最佳實務](/help/forms/using/best-practices-for-html5-forms.md) | 說明處理HTML5表單版面配置和設計的最佳實務。 |

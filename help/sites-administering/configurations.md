@@ -20,8 +20,8 @@ AEM設定可管理AEM中的設定，並作為工作區使用。
 
 可以從兩個不同的觀點來考慮設定。
 
-* [管理員](#configurations-administrator) 使用設定作為AEM內的工作區來定義和管理設定群組。
-* [開發人員](#configurations-developer) 使用實作設定的基礎設定機制，以在AEM中儲存和查詢設定。
+* [管理員](#configurations-administrator)使用設定作為AEM內的工作區，以定義和管理設定群組。
+* [開發人員](#configurations-developer)使用實作設定的基礎設定機制，以便在AEM中儲存和查詢設定。
 
 簡而言之：從管理員的觀點來看，組態是您建立工作區以管理AEM中設定的方式，而開發人員應瞭解AEM如何使用及管理存放庫中的這些組態。
 
@@ -65,13 +65,13 @@ AEM管理員和作者可以將設定視為工作區。 藉由實作這些功能�
 
 >[!NOTE]
 >
->只有在您的使用者擁有 `admin` 權利。 管理員許可權也是指派存取權給設定或修改設定所必需的。
+>只有當您的使用者具有`admin`許可權時，才能使用設定瀏覽器建立設定。 管理員許可權也是指派存取權給設定或修改設定所必需的。
 
 #### 建立設定 {#creating-a-configuration}
 
 使用設定瀏覽器，即可在AEM中輕鬆建立設定。
 
-1. 登入AEMas a Cloud Service，並從主功能表選取 **工具** > **一般** > **設定瀏覽器**.
+1. 登入AEM as a Cloud Service，從主功能表選取&#x200B;**工具** > **一般** > **設定瀏覽器**。
 1. 按一下&#x200B;**建立**。
 1. 提供設定的&#x200B;**標題**&#x200B;和&#x200B;**名稱**。
 
@@ -79,7 +79,7 @@ AEM管理員和作者可以將設定視為工作區。 藉由實作這些功能�
 
    * **標題** 應該是描述性的。
    * **名稱**&#x200B;會成為存放庫中的節點名稱。
-      * 系統會根據標題自動產生，並依據下列專案進行調整 [AEM命名慣例。](/help/sites-developing/naming-conventions.md)
+      * 它會根據標題自動產生，並根據[AEM命名慣例進行調整。](/help/sites-developing/naming-conventions.md)
       * 如有需要，可加以調整。
 1. 檢查您要允許的設定型別。
    * [雲端設定](/help/sites-administering/configurations.md)
@@ -96,37 +96,37 @@ AEM管理員和作者可以將設定視為工作區。 藉由實作這些功能�
 
 如果您將設定視為工作區，則可以在這些設定上設定存取權，以強制實行誰可以存取這些工作區，誰不可以存取。
 
-1. 登入AEMas a Cloud Service，並從主功能表選取 **工具** > **一般** > **設定瀏覽器**.
-1. 選取您要修改的組態，然後按一下 **屬性** 工具列中的。
+1. 登入AEM as a Cloud Service，從主功能表選取&#x200B;**工具** > **一般** > **設定瀏覽器**。
+1. 選取您要修改的組態，然後按一下工具列中的&#x200B;**屬性**。
 1. 選取您要新增至設定的任何其他功能。
 
    >[!NOTE]
    >
    >建立設定後，就無法取消選取功能。
 
-1. 使用 **有效許可權** 按鈕以檢視角色及其目前授予設定的許可權矩陣。
+1. 使用&#x200B;**有效許可權**按鈕來檢視角色矩陣，以及這些角色目前授與組態哪些許可權。
    ![有效許可權視窗](assets/configuration-effective-permissions.png)
-1. 若要指派新許可權，請在 **選取使用者或群組** 中的欄位 **新增許可權** 區段。
-   * 此  **選取使用者或群組** 欄位會根據現有使用者和角色提供自動完成功能。
+1. 若要指派新許可權，請在&#x200B;**新增許可權**&#x200B;區段的&#x200B;**選取使用者或群組**&#x200B;欄位中輸入使用者或群組名稱。
+   * **選取使用者或群組**&#x200B;欄位會根據現有的使用者和角色提供自動完成功能。
 1. 從自動完成結果中選取適當的使用者或角色。
    * 您可以選取多個使用者或角色。
-1. 核取選取的使用者或角色應具有的存取選項，然後按一下 **新增**.
-   ![將存取權新增至設定](assets/configuration-edit.png)
+1. 檢查選取的使用者或角色應該擁有的存取選項，然後按一下[新增]。****
+   ![新增存取許可權至設定](assets/configuration-edit.png)
 1. 重複這些步驟，您就可以選取使用者或角色，並視需要指派其他存取許可權。
-1. 選取 **儲存並關閉** 完成後。
+1. 完成時選取&#x200B;**儲存並關閉**。
 
 ## 開發人員設定 {#configurations-developer}
 
-作為開發人員，請務必瞭解AEMas a Cloud Service如何處理設定，以及如何處理設定解析。
+作為開發人員，請務必瞭解AEM as a Cloud Service如何處理設定，以及如何處理設定解析。
 
 ### 設定與內容分離 {#separation-of-config-and-content}
 
-雖然 [管理員和使用者可能會將設定視為工作區](#configurations-administrator) 若要管理不同的設定和內容，請務必瞭解設定和內容會由AEM在存放庫中個別儲存和管理。
+雖然[管理員和使用者可能會將設定視為工作區](#configurations-administrator)，以管理不同的設定和內容，但請務必瞭解設定和內容是由AEM在存放庫中分別儲存和管理。
 
-* `/content` 是所有內容的首頁。
-* `/conf` 是所有設定的首頁。
+* `/content`是所有內容的首頁。
+* `/conf`是所有設定的主目錄。
 
-內容透過參考其關聯設定 `cq:conf` 屬性。 AEM會根據內容及其內容相關資訊來執行查詢 `cq:conf` 屬性以尋找適當的設定。
+內容透過`cq:conf`屬性參考其關聯組態。 AEM會根據內容及其內容`cq:conf`屬性執行查詢，以尋找適當的組態。
 
 ### 範例 {#developer-example}
 
@@ -138,9 +138,9 @@ ValueMap imageServerSettings = conf.getItem("dam/imageserver");
 String bgkcolor = imageServerSettings.get("bgkcolor", "FFFFFF");
 ```
 
-所有設定查詢的起點是下的內容資源 `/content`. 這可能是頁面、頁面內的元件、資產或DAM資料夾。 這是您要尋找適用於此內容的正確設定的實際內容。
+所有組態查詢的起點是內容資源，位於`/content`之下。 這可能是頁面、頁面內的元件、資產或DAM資料夾。 這是您要尋找適用於此內容的正確設定的實際內容。
 
-現在使用 `Conf` 您可以擷取您感興趣的特定組態專案。 在此案例中，它是 `dam/imageserver`，此為與相關的設定集合。 `imageserver`. 此 `getItem` 呼叫傳回 `ValueMap`. 接著閱讀 `bgkcolor` 字串屬性，並提供「FFFFFF」預設值，以防屬性（或整個設定專案）不存在。
+現在擁有`Conf`物件，您可以擷取您感興趣的特定設定專案。 在此案例中，它是`dam/imageserver`，這是與`imageserver`相關的設定集合。 `getItem`呼叫傳回`ValueMap`。 接著您會讀取`bgkcolor`字串屬性，並提供「FFFFFF」的預設值，以防屬性（或整個設定專案）不存在。
 
 現在來看看對應的JCR內容：
 
@@ -158,13 +158,13 @@ String bgkcolor = imageServerSettings.get("bgkcolor", "FFFFFF");
             - bgkcolor = "FF0000"
 ```
 
-在此範例中，您可以在此處假設WKND特定的DAM資料夾以及對應的設定。 從該資料夾開始 `/content/dam/wknd`，您會看到有一個名為的字串屬性 `cq:conf` 會參照應該套用至子樹狀結構的組態。 屬性設定在 `jcr:content` 資產資料夾或頁面的。 這些 `conf` 連結是明確的，因此只要檢視CRXDE中的內容即可輕鬆追蹤。
+在此範例中，您可以在此處假設WKND特定的DAM資料夾以及對應的設定。 從該資料夾`/content/dam/wknd`開始，您可以看到名為`cq:conf`的字串屬性參考了應該套用至子樹狀結構的組態。 屬性設定在資產資料夾或頁面的`jcr:content`上。 這`conf`個連結是明確的，因此只要檢視CRXDE中的內容，就能輕鬆追蹤連結。
 
-跳入 `/conf`，您可以依照參考資料檢視 `/conf/wknd` 節點。 此為設定。 其查詢對應用程式程式碼而言是透明的。 範常式式碼從未有專屬的參考，而是隱藏在 `Conf` 物件。 要套用哪個設定，需透過JCR內容控制。
+在`/conf`內部跳轉，您可以追蹤參考並檢視是否有`/conf/wknd`節點。 此為設定。 其查詢對應用程式程式碼而言是透明的。 範常式式碼從未有專屬參考，而是隱藏在`Conf`物件之後。 要套用哪個設定，需透過JCR內容控制。
 
-您可以看到設定包含固定名稱 `settings` 包含實際專案的節點，包括 `dam/imageserver` 您在此案例中需要的功能。 此類專案可視為「設定檔案」，並以 `cq:Page` 包含 `jcr:content` 儲存實際內容。
+您可以看到組態包含固定名稱的`settings`節點，其中包含實際專案，包括您在此情況下所需的`dam/imageserver`。 此類專案可視為「設定檔案」，並由包含實際內容的`jcr:content`的`cq:Page`表示。
 
-最後，您可以檢視屬性 `bgkcolor` 該範常式式碼需要。 此 `ValueMap` 您從回來 `getItem` 根據頁面的 `jcr:content` 節點。
+最後，您可以看到範常式式碼需要的屬性`bgkcolor`。 您從`getItem`回訪的`ValueMap`是以頁面的`jcr:content`節點為基礎。
 
 ### 設定解析度 {#configuration-resolution}
 
@@ -173,7 +173,7 @@ String bgkcolor = imageServerSettings.get("bgkcolor", "FFFFFF");
 為了支援此功能，AEM中的組態查詢具有繼承和遞補機制，其偏好設定順序如下：
 
 1. `/conf/<siteconfig>/<parentconfig>/<myconfig>`
-   * 參考自的特定設定 `cq:conf` 中的某處 `/content`
+   * 從`/content`中某處`cq:conf`參考的特定設定
    * 階層是任意的，而且可以像您的網站結構一樣設計，知道這一點並非應用程式程式碼的業務
    * 可由具有設定許可權的使用者在執行階段變更
 1. `/conf/<siteconfig>/<parentconfig>`
@@ -185,7 +185,7 @@ String bgkcolor = imageServerSettings.get("bgkcolor", "FFFFFF");
 1. `/conf/global`
    * 系統全域設定
    * 您安裝的全域預設值
-   * 由設定 `admin` 角色
+   * 由`admin`角色設定
    * 可由具有設定許可權的使用者在執行階段變更
 1. `/apps`
    * 應用程式預設值
@@ -199,13 +199,13 @@ String bgkcolor = imageServerSettings.get("bgkcolor", "FFFFFF");
 
 ### 使用設定 {#using-configurations}
 
-AEM中的設定是根據Sling內容感知設定。 Sling套件組合提供的服務API可用於取得內容感知設定。 內容感知組態是與內容資源或資源樹狀結構相關的組態 [如上一個範例所述。](#developer-example)
+AEM中的設定是根據Sling內容感知設定。 Sling套件組合提供的服務API可用於取得內容感知設定。 內容感知組態是與內容資源或資源樹狀結構相關的組態，如上一個範例所述[。](#developer-example)
 
-如需內容感知設定、範例及使用方式的詳細資訊， [請參閱Sling檔案。](https://sling.apache.org/documentation/bundles/context-aware-configuration/context-aware-configuration.html)
+如需內容感知設定、範例及使用方式的詳細資訊，[請參閱Sling檔案。](https://sling.apache.org/documentation/bundles/context-aware-configuration/context-aware-configuration.html)
 
 ### ConfMgr Web主控台 {#confmgr-web-console}
 
-為了進行偵錯和測試，我們提供 **ConfMgr** Web主控台： `https://<host>:<port>/system/console/conf`，可顯示指定路徑/專案的設定。
+為了偵錯和測試目的，`https://<host>:<port>/system/console/conf`有一個&#x200B;**ConfMgr**&#x200B;網頁主控台，可顯示指定路徑/專案的設定。
 
 ![ConfMgr](assets/configuration-confmgr.png)
 
@@ -215,17 +215,17 @@ AEM中的設定是根據Sling內容感知設定。 Sling套件組合提供的服
 * **專案**
 * **使用者**
 
-若要檢視已解析哪些設定並接收解析這些設定的範常式式碼，請選取 **解析**.
+若要檢視已解析的組態並接收解析這些組態的範常式式碼，請選取&#x200B;**解析**。
 
 ### 內容感知設定Web主控台 {#context-aware-web-console}
 
-為了進行偵錯和測試，我們提供 **內容感知設定** Web主控台： `https://<host>:<port>/system/console/slingcaconfig`，可查詢存放庫中的內容感知設定並檢視其屬性。
+為了偵錯和測試目的，`https://<host>:<port>/system/console/slingcaconfig`有一個&#x200B;**內容感知設定**&#x200B;網頁主控台，可讓您查詢存放庫中的內容感知設定並檢視其屬性。
 
-![內容感知設定Web控制檯](assets/configuration-context-aware-console.png)
+![內容感知設定Web主控台](assets/configuration-context-aware-console.png)
 
 只需提供：
 
 * **內容路徑**
 * **設定名稱**
 
-若要擷取所選組態的關聯內容路徑與屬性，請選取 **解析**.
+若要擷取所選組態的關聯內容路徑與屬性，請選取&#x200B;**解析**。

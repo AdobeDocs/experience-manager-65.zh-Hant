@@ -29,14 +29,14 @@ We.Finance是一個組織，可讓應徵者透過參考網站入口網站來申�
 
 >[!NOTE]
 >
->We.Finance和We.Gov參考網站均提供員工招募使用案例。 逐步說明中使用的範例、影像和說明使用We.Finance參考網站。 不過，您也可以執行這些使用案例，並使用We.Gov檢閱成品。 若要這麼做，請取代 **we-finance** 替換為 **we-gov** 在提及的URL中。
+>We.Finance和We.Gov參考網站均提供員工招募使用案例。 逐步說明中使用的範例、影像和說明使用We.Finance參考網站。 不過，您也可以執行這些使用案例，並使用We.Gov檢閱成品。 若要這麼做，請在提及的URL中將&#x200B;**we-finance**&#x200B;取代為&#x200B;**we-gov**。
 
 ### 涉及的工作流程模型 {#workflow-models-involved}
 
 員工招聘使用案例涉及兩個工作流程：
 
 * 面試前 — 我們財務員工招募工作流程
-* 面試之後 — 我們財務員工招聘貼文面試工作流程
+* 面試之後 — 我們財務員工招聘Post面試工作流程
 
 這些工作流程是在AEM中建立的，可在以下網址找到：
 
@@ -46,13 +46,13 @@ We.Finance是一個組織，可讓應徵者透過參考網站入口網站來申�
 
 以下是本檔案所遵循的「我們財務員工招聘」工作流程模型。
 
-![we-finance-employee-recruitment-workflow](assets/we-finance-employee-recruiting-workflow.png)
+![we-finance-employee-recruiting-workflow](assets/we-finance-employee-recruiting-workflow.png)
 
-#### 我們財務員工招聘面試工作流程 {#we-finance-employee-recruiting-post-interview-workflow}
+#### 我們財務員工招聘Post面試工作流程 {#we-finance-employee-recruiting-post-interview-workflow}
 
-以下是本檔案中遵循的「我們財務員工面試後招聘」工作流程模型。
+以下是本檔案遵循的「我們財務員工Post面試招聘」工作流程模型。
 
-![we-finance-employee-recruitment-post-interview-workflow](assets/we-finance-employee-recruiting-post-interview-workflow.png)
+![we-finance-employee-recruiting-post-interview-workflow](assets/we-finance-employee-recruiting-post-interview-workflow.png)
 
 ### 角色 {#personas}
 
@@ -67,11 +67,11 @@ We.Finance是一個組織，可讓應徵者透過參考網站入口網站來申�
 
 Sarah Rose正在組織中尋找工作機會。 她瀏覽他們的入口網站，並探索「職業」頁面上列出的職缺職位。 她找到相符的工作清單並申請。
 
-![home-page](assets/home-page.png)
+![首頁](assets/home-page.png)
 
 We.Finance首頁
 
-![career-page](assets/career-page.png)
+![職涯頁面](assets/career-page.png)
 
 We.Finance職涯頁面
 
@@ -81,11 +81,11 @@ Sarah在職缺公告上按一下「套用」 。 工作應用程式表單隨即�
 
 ### 運作方式 {#how-it-works}
 
-We.Finance首頁和職涯頁面均為AEM Sites頁面。 職涯頁面內嵌最適化表單，此表單使用可重複的面板，以使用服務擷取職缺並將它們列在頁面上。 您可以造訪以下網址查閱最適化表單： `https://[authorHost]:[authorPort]/editor.html/content/forms/af/we-finance/employee/recruitment/jobs.html`.
+We.Finance首頁和職涯頁面均為AEM Sites頁面。 職涯頁面內嵌最適化表單，此表單使用可重複的面板，以使用服務擷取職缺並將它們列在頁面上。 您可以在`https://[authorHost]:[authorPort]/editor.html/content/forms/af/we-finance/employee/recruitment/jobs.html`檢閱最適化表單。
 
 ### 親眼看看 {#see-it-yourself}
 
-前往 `https://[publishHost]:[publishPort]/content/we-finance/global/en.html` 並按一下 **[!UICONTROL 職業]**. 按一下 **[!UICONTROL 搜尋]** 以便您填入工作清單，然後按一下 **[!UICONTROL 套用]** 以取得工作。 填寫表單的詳細資料並提交申請。
+移至`https://[publishHost]:[publishPort]/content/we-finance/global/en.html`並按一下&#x200B;**[!UICONTROL 職業]**。 按一下&#x200B;**[!UICONTROL 搜尋]**&#x200B;以填入工作清單，然後按一下&#x200B;**[!UICONTROL 套用]**&#x200B;以取得工作。 填寫表單的詳細資料並提交申請。
 
 請確保您在應用程式中指定有效的電子郵件ID，因為透過此逐步說明的任何通訊都會傳送到指定的電子郵件ID。
 
@@ -97,7 +97,7 @@ We.Finance首頁和職涯頁面均為AEM Sites頁面。 職涯頁面內嵌最適
 
 John的AEM收件匣
 
-![candidate-shortlist](assets/candidate-shortlist.png)
+![候選者短清單](assets/candidate-shortlist.png)
 
 John Jacobs將Sarah Rose的設定檔列入篩選名單
 
@@ -107,7 +107,7 @@ John Jacobs將Sarah Rose的設定檔列入篩選名單
 
 ### 親眼看看 {#see-it-yourself-1}
 
-前往 `https://[publishHost]:[publishPort]/content/we-finance/global/en/login.html?resource=/aem/inbox.html`並使用jjacobs/password作為John Jacobs的使用者名稱/密碼登入。 開啟「應徵者設定檔複查」作業，並將應徵者加入候選清單。
+移至`https://[publishHost]:[publishPort]/content/we-finance/global/en/login.html?resource=/aem/inbox.html`並使用jjacobs/密碼作為John Jacobs的使用者名稱/密碼登入。 開啟「應徵者設定檔複查」作業，並將應徵者加入候選清單。
 
 ## Gloria會複查申請並核准面試的申請人 {#gloria-reviews-the-application-and-approves-the-applicant-for-an-interview}
 
@@ -127,9 +127,9 @@ Gloria核准Sarah Rose接受訪談
 
 ### 親眼看看 {#see-it-yourself-2}
 
-前往 `https://[publishHost]:[publishPort]/content/we-finance/global/en/login.html?resource=/aem/inbox.html` 並使用jjacobs/password作為John Jacobs的使用者名稱/密碼登入。 開啟「應徵者設定檔複查」作業，並將應徵者加入候選清單。
+移至`https://[publishHost]:[publishPort]/content/we-finance/global/en/login.html?resource=/aem/inbox.html`並使用jjacobs/密碼作為John Jacobs的使用者名稱/密碼登入。 開啟「應徵者設定檔複查」作業，並將應徵者加入候選清單。
 
-前往 `https://[publishHost]:[publishPort]/content/we-finance/global/en/login.html?resource=/aem/inbox.html` 並使用grios/password作為Gloria Rios的使用者名稱/密碼登入。 開啟「應徵者設定檔複查」作業，然後按一下「排程面試」。
+移至`https://[publishHost]:[publishPort]/content/we-finance/global/en/login.html?resource=/aem/inbox.html`並使用grios/密碼作為Gloria Rios的使用者名稱/密碼登入。 開啟「應徵者設定檔複查」作業，然後按一下「排程面試」。
 
 ## John Doe安排面試 {#john-doe-schedules-an-interview}
 
@@ -159,7 +159,7 @@ Sarah Rose收到面試排程
 
 Gloria的AEM收件匣
 
-![gloriariosselectcidate](assets/gloriariosselectcandidate.png)
+![gloriariosselectcandidate](assets/gloriariosselectcandidate.png)
 
 Gloria Rios在面試後選擇Sarah Rose
 
@@ -167,7 +167,7 @@ Gloria Rios在面試後選擇Sarah Rose
 
 要求候選人加入組織前，必須先檢查Sarah的背景。 John Doe會開啟並檢閱選取的應徵者詳細資料，並發現其部分僱用與教育詳細資料尚未填入。 John Doe點按需要更多資訊。
 
-![Johndoeinbox](assets/johndoeinbox.png) ![johndoeneedmoreinformation](assets/johndoeneedmoreinformation.png)
+![johndoeinbox](assets/johndoeinbox.png) ![johndoeneedmoreinformation](assets/johndoeneedmoreinformation.png)
 
 John Doe向Sarah Rose索取更多教育與工作經驗的相關資訊
 
@@ -175,7 +175,7 @@ John Doe向Sarah Rose索取更多教育與工作經驗的相關資訊
 
 Sarah Rose收到一封電子郵件，通知她需要進一步的資訊才能處理她的就業申請。 電子郵件包含填寫所需資訊之表單的連結。
 
-![sarahroseemailmoredetails](assets/sarahroseemailmoredetails.png)
+![sarahrosemailmoredetails](assets/sarahroseemailmoredetails.png)
 
 Sarah Rose收到一封電子郵件，通知她需要進一步的資訊才能處理其僱用申請
 
@@ -193,11 +193,11 @@ Sarah會根據John Doe的要求填寫其他資訊，然後按一下提交
 
 John Doe會選取候選者稽核要求並開啟它。 John Doe發現Sarah已填妥所有必要資訊。 檢閱應用程式後，John Doe按一下「核准」。 在John Doe核准後，系統會將對Sarah Rose執行背景檢查的請求轉寄給John Jacobs。
 
-![johndoeditionainformationinbox](assets/johndoeadditionainformationinbox.png)
+![johndoeadditionainformationinbox](assets/johndoeadditionainformationinbox.png)
 
 John Doe的AEM收件匣
 
-![johndoeditionalinformationreview-copy](assets/johndoeadditionalinformationreview-copy.png)
+![johndoeadditionalinformationreview-copy](assets/johndoeadditionalinformationreview-copy.png)
 
 John Doe會檢閱Sarah提供的其他資訊並加以核准
 

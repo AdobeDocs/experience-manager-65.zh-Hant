@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # 使用AEM 6設定LDAP {#configuring-ldap-with-aem}
 
-LDAP (此 **L** hightweight **D**&#x200B;目錄 **A**&#x200B;存取 **P** rotocol)用於存取集中式目錄服務。 它有助於減少管理使用者帳戶所需的工作量，因為使用者帳戶可由多個應用程式存取。 Active Directory就是這類LDAP伺服器。 LDAP通常用於實現單一登入，可讓使用者在登入一次後存取多個應用程式。
+LDAP （**L** ightweight **D**&#x200B;目錄&#x200B;**A**&#x200B;存取&#x200B;**P** rotocol）用於存取集中式目錄服務。 它有助於減少管理使用者帳戶所需的工作量，因為使用者帳戶可由多個應用程式存取。 Active Directory就是這類LDAP伺服器。 LDAP通常用於實現單一登入，可讓使用者在登入一次後存取多個應用程式。
 
 使用者帳戶可以在LDAP伺服器和存放庫之間同步，而LDAP帳戶詳細資料會儲存在存放庫中。 此功能允許將帳戶指派給儲存庫群組，以配置所需的許可權和許可權。
 
@@ -41,15 +41,15 @@ LDAP (此 **L** hightweight **D**&#x200B;目錄 **A**&#x200B;存取 **P** rotoco
 
 >[!NOTE]
 >
->觀看 [Oak的外部登入模組 — 使用LDAP及其他進行驗證](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-oak-external-login-module-authenticating-with-ldap-and-beyond.html) 以深入探究外部登入模組。
+>觀看[Oak的外部登入模組 — 使用LDAP及Beyond](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-oak-external-login-module-authenticating-with-ldap-and-beyond.html)進行驗證，以深入探索外部登入模組。
 >
->若要閱讀使用Apache DS設定Experience Manager的範例，請參閱 [正在設定Adobe Experience Manager 6.5以使用Apache目錄服務。](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/configuring-adobe-experience-manager-6-to-use-apache-directory/m-p/183805)
+>若要閱讀使用Apache DS設定Experience Manager的範例，請參閱[設定Adobe Experience Manager 6.5使用Apache目錄服務。](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/configuring-adobe-experience-manager-6-to-use-apache-directory/m-p/183805)
 
 ## 設定LDAP識別提供者 {#configuring-the-ldap-identity-provider}
 
 「LDAP識別提供者」用於定義如何從LDAP伺服器擷取使用者。
 
-您可以在管理主控台底下的 **Apache Jackrabbit Oak LDAP身分提供者** 名稱。
+您可以在管理主控台中的&#x200B;**Apache Jackrabbit Oak LDAP身分提供者**&#x200B;名稱下找到它。
 
 下列組態選項適用於「LDAP識別提供者」：
 
@@ -60,7 +60,7 @@ LDAP (此 **L** hightweight **D**&#x200B;目錄 **A**&#x200B;存取 **P** rotoco
    <td>此LDAP提供者設定的名稱。</td>
   </tr>
   <tr>
-   <td><strong>ldap伺服器主機名稱</strong><br /> </td>
+   <td><strong>LDAP伺服器主機名稱</strong><br /> </td>
    <td>LDAP伺服器的主機名稱</td>
   </tr>
   <tr>
@@ -113,7 +113,7 @@ LDAP (此 **L** hightweight **D**&#x200B;目錄 **A**&#x200B;存取 **P** rotoco
   </tr>
   <tr>
    <td><strong>使用者額外篩選器</strong></td>
-   <td>搜尋使用者時要使用的額外LDAP篩選器。 最終篩選的格式如下： '(&amp;(&lt;idattr&gt;=&lt;userid&gt;)(objectclass=&lt;objectclass&gt;)&lt;extrafilter&gt;)' (user.extraFilter)</td>
+   <td>搜尋使用者時要使用的額外LDAP篩選器。 最終篩選的格式如下：'(&amp;(&lt;idAttr&gt;=&lt;userId&gt;)(objectclass=&lt;objectclass&gt;)&lt;extraFilter&gt;)' (user.extraFilter)</td>
   </tr>
   <tr>
    <td><strong>使用者DN路徑</strong></td>
@@ -133,7 +133,7 @@ LDAP (此 **L** hightweight **D**&#x200B;目錄 **A**&#x200B;存取 **P** rotoco
   </tr>
   <tr>
    <td><strong>群組額外篩選器</strong></td>
-   <td>搜尋群組時要使用的額外LDAP篩選器。 最終篩選的格式如下： '(&amp;(&lt;nameattr&gt;=&lt;groupname&gt;)(objectclass=&lt;objectclass&gt;)&lt;extrafilter&gt;)'</td>
+   <td>搜尋群組時要使用的額外LDAP篩選器。 最終篩選的格式如下：'(&amp;(&lt;nameAttr&gt;=&lt;groupName&gt;)(objectclass=&lt;objectclass&gt;)&lt;extraFilter&gt;)'</td>
   </tr>
   <tr>
    <td><strong>群組DN路徑</strong></td>
@@ -150,7 +150,7 @@ LDAP (此 **L** hightweight **D**&#x200B;目錄 **A**&#x200B;存取 **P** rotoco
 
 同步處理常式會定義識別提供者使用者和群組與存放庫同步的方式。
 
-它位在 **Apache Jackrabbit Oak預設同步處理常式** 管理主控台中的名稱。
+它位於管理控制檯中的&#x200B;**Apache Jackrabbit Oak Default Sync Handler**&#x200B;名稱下。
 
 同步處理常式可用的組態選項如下：
 
@@ -178,7 +178,7 @@ LDAP (此 **L** hightweight **D**&#x200B;目錄 **A**&#x200B;存取 **P** rotoco
   </tr>
   <tr>
    <td><strong>使用者成員資格到期</strong></td>
-   <td>成員資格過期的時間。<br /> </td>
+   <td>成員資格到期的時間。<br /> </td>
   </tr>
   <tr>
    <td><strong>使用者成員資格巢狀深度</strong></td>
@@ -205,17 +205,17 @@ LDAP (此 **L** hightweight **D**&#x200B;目錄 **A**&#x200B;存取 **P** rotoco
 
 ## 外部登入模組 {#the-external-login-module}
 
-外部登入模組位於 **Apache Jackrabbit Oak外部登入模組** 管理主控台底下。
+外部登入模組位於管理控制檯下的&#x200B;**Apache Jackrabbit Oak外部登入模組**&#x200B;下。
 
 >[!NOTE]
 >
->Apache Jackrabbit Oak外部登入模組實作Java™驗證和授權服務(JAAS)規格。 請參閱 [官方OracleJava™安全性參考指南](https://docs.oracle.com/javase/8/docs/technotes/guides/security/jaas/JAASRefGuide.html) 以取得詳細資訊。
+>Apache Jackrabbit Oak外部登入模組會實作Java™驗證與授權服務(JAAS)規格。 如需詳細資訊，請參閱[官方OracleJava™安全性參考指南](https://docs.oracle.com/javase/8/docs/technotes/guides/security/jaas/JAASRefGuide.html)。
 
 其工作是定義要使用的身分提供者和同步處理常式，有效地連結兩個模組。
 
 下列組態選項可供使用：
 
-| **jaas排名** | 指定此登入模組專案的排名（即排序順序）。 專案會依遞減順序排序（也就是說，較高的值排名組態排在首位）。 |
+| **JAAS排名** | 指定此登入模組專案的排名（即排序順序）。 專案會依遞減順序排序（也就是說，較高的值排名組態排在首位）。 |
 |---|---|
 | **JAAS控制旗標** | 指定LoginModule為REQUIRED、REQUISITE、SUFFICIENT或OPTIONAL的屬性。 如需這些標幟涵義的詳細資訊，請參閱JAAS設定檔案。 |
 | **JAAS領域** | LoginModule登入的領域名稱（或應用程式名稱）。 如果未提供領域名稱，則LoginModule會以Felix JAAS組態中設定的預設領域註冊。 |
@@ -230,7 +230,7 @@ LDAP (此 **L** hightweight **D**&#x200B;目錄 **A**&#x200B;存取 **P** rotoco
 
 AEM 6可以設定為透過SSL使用LDAP進行驗證，其程式如下：
 
-1. 檢查 **使用SSL** 或 **使用TLS** 核取方塊 [LDAP身分提供者](#configuring-the-ldap-identity-provider).
+1. 設定[LDAP識別提供者](#configuring-the-ldap-identity-provider)時，請勾選&#x200B;**使用SSL**&#x200B;或&#x200B;**使用TLS**&#x200B;核取方塊。
 1. 根據您的設定，設定同步處理常式和外部登入模組。
 1. 如有需要，請在Java™ VM中安裝SSL憑證。 您可以使用keytool完成此安裝：
 
@@ -244,7 +244,7 @@ AEM 6可以設定為透過SSL使用LDAP進行驗證，其程式如下：
 
 1. 請確定您已安裝SSL程式庫且正常運作。 此程式使用OpenSSL作為範例。
 
-1. 建立自訂的OpenSSL設定(cnf)檔案。 此設定可以透過複製預設**openssl.cnf**設定檔案並自訂它來完成。 在UNIX®系統上，它位於 `/usr/lib/ssl/openssl.cnf`
+1. 建立自訂的OpenSSL設定(cnf)檔案。 此設定可以透過複製預設**openssl.cnf**設定檔案並自訂它來完成。 在UNIX®系統上，它位於`/usr/lib/ssl/openssl.cnf`
 
 1. 在終端機中執行以下命令，繼續建立CA根金鑰：
 
@@ -280,12 +280,12 @@ LDAP Identity Provider和外部登入模組皆可啟用除錯記錄，以疑難�
 
 * 記錄層級： Debug
 * 記錄檔logs/ldap.log
-* 訊息模式： {0，日期，`dd.MM.yyyy` `HH:mm:ss.SSS`} &amp;ast；{4}&amp;ast； {2} {3} {5}
+* 訊息模式： {0，date，`dd.MM.yyyy` `HH:mm:ss.SSS`} &amp;amp；ast；{4}&amp;amp；ast； {2} {3} {5}
 * 記錄器：org.apache.jackrabbit.oak.security.authentication.ldap
 
 * 記錄層級： Debug
 * 記錄檔：logs/external.log
-* 訊息模式： {0，日期，`dd.MM.yyyy` `HH:mm:ss.SSS`} &amp;ast；{4}&amp;ast； {2} {3} {5}
+* 訊息模式： {0，date，`dd.MM.yyyy` `HH:mm:ss.SSS`} &amp;amp；ast；{4}&amp;amp；ast； {2} {3} {5}
 * 記錄器： org.apache.jackrabbit.oak.spi.security.authentication.external
 
 ## 關於群組隸屬關係的一句話 {#a-word-on-group-affiliation}
@@ -296,9 +296,9 @@ LDAP Identity Provider和外部登入模組皆可啟用除錯記錄，以疑難�
 
 如果從LDAP伺服器上的群組中移除使用者，則同步處理時變更會反映在AEM端。 但是，使用者未由LDAP新增的所有其他群組關聯仍會保留。
 
-AEM會使用，偵測並處理使用者從外部群組中清除作業。 `rep:externalId` 屬性。 此屬性會自動新增至同步處理常式同步的任何使用者或群組，且包含原始身分提供者的相關資訊。
+AEM會使用`rep:externalId`屬性來偵測並處理外部群組中的使用者清除。 此屬性會自動新增至同步處理常式同步的任何使用者或群組，且包含原始身分提供者的相關資訊。
 
-請參閱Apache Oak檔案，於 [使用者和群組同步](https://jackrabbit.apache.org/oak/docs/security/authentication/usersync.html).
+請參閱有關[使用者和群組同步](https://jackrabbit.apache.org/oak/docs/security/authentication/usersync.html)的Apache Oak檔案。
 
 ## 已知問題 {#known-issues}
 

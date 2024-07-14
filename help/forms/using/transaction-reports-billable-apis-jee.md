@@ -30,7 +30,7 @@ JEE上的AEM Forms提供數個API來提交、處理和轉譯檔案。 有些API�
 
 -->
 
-以下是JEE計費API清單。 尋找以下清單： [在OSGi上適用於AEM Forms的可記帳API](/help/forms/using/transaction-reports-billable-apis.md).
+以下是JEE計費API清單。 在OSGi](/help/forms/using/transaction-reports-billable-apis.md)上尋找AEM Forms的[可記帳API清單。
 
 ## 可記帳檔案服務API {#billable-document-services-apis}
 
@@ -64,12 +64,12 @@ JEE上的AEM Forms提供數個API來提交、處理和轉譯檔案。 有些API�
    <td>轉換<br /> </td>
   </tr>
   <tr>
-   <td><a>ExportPDF2</a></td>
+   <td><a>EXPORTPDF2</a></td>
    <td><p>將PDF匯出至支援的檔案型別。</p> </td>
    <td>轉換<br /> </td>
   </tr>
   <tr>
-   <td><a>ExportPDF3</a></td>
+   <td><a>EXPORTPDF3</a></td>
    <td>將PDF匯出至支援的檔案型別。</td>
    <td>轉換<br /> </td>
   </tr>
@@ -240,7 +240,7 @@ JEE上的AEM Forms提供數個API來提交、處理和轉譯檔案。 有些API�
   </tr>
   <tr>
    <td><a>toPS2</a></td>
-   <td>使用選項規格中指定的選項將FlatPDF檔案轉換為PostScript格式。</td>
+   <td>使用選項規格中指定的選項，將「平坦PDF」檔案轉換為PostScript格式。</td>
    <td>檔案轉換</td>
   </tr>
   <tr>
@@ -312,8 +312,8 @@ JEE上的AEM Forms提供數個API來提交、處理和轉譯檔案。 有些API�
 
 >[!NOTE]
 >
->* 組合器服務的叫用API可以在內部根據輸入呼叫另一個服務的計費的API。 因此， `invoke API` 可計為無、單一或多重交易。 計算交易數取決於輸入和叫用的內部API。
->* 使用組裝程式服務產生的單一PDF檔案，例如 `invoke` 和 `invokeDDX`，可計為無、單一或多個交易。 計算的交易數取決於提供的 <!--DDX--> 程式碼。
+>* 組合器服務的叫用API可以在內部根據輸入呼叫另一個服務的計費的API。 因此，`invoke API`可計為無、單一或多個交易。 計算交易數取決於輸入和叫用的內部API。
+>* 使用組合器服務（例如`invoke`和`invokeDDX`）產生的單一PDF檔案可計為無、單一或多個交易。 計算的交易數目取決於提供的<!--DDX-->代碼。
 
 <!--
 ### PDF Utility Service  {#pdf-utility-service}

@@ -28,37 +28,37 @@ AEM使用Adobe PhoneGap和Adobe發佈解決方案，可讓您建立並管理內�
 * 檢閱開發和測試環境中的應用程式，而不需要複雜的布建設定檔，以及額外努力建置和上傳應用程式以進行共用。
 * 使用AEM編寫環境為您的應用程式建立和管理豐富的內容。
 * 搭配使用HTML5與Adobe PhoneGap，以裝置原生功能建立豐富的體驗。
-* 將HTML5 Webviews介紹給新的或預先存在的 **原生** Cordova WebViews的應用程式。
+* 透過Cordova WebViews將HTML5 Web檢視引進新的或預先存在的&#x200B;**原生**&#x200B;應用程式。
 * 跨所有傳遞管道（包括網頁、行動網頁、行動應用程式和印刷品）建立、組織和分享豐富的多媒體內容。
 
-AEM與Adobe PhoneGap Build服務(`https://build.phonegap.com/`)以簡化應用程式的建置和部署程式。
+AEM與Adobe PhoneGap Build服務(`https://build.phonegap.com/`)整合，以簡化應用程式建置和部署程式。
 
-**AdobeContentSync** 可讓使用者輕鬆將Over-The-Air (OTA)頁面和內容更新下載至其裝置，而不需重新安裝應用程式，或從appStore、Google Play或其他應用程式來源下載。
+**AdobeContentSync**&#x200B;可讓使用者輕鬆將Over-The-Air (OTA)頁面和內容更新下載到他們的裝置，而不需要重新安裝應用程式，或是從appStore、Google Play或其他應用程式來源下載。
 
-**Adobe Analytics** 已完全整合至AEM應用程式，允許詳細追蹤分佈、地理位置、作業系統、裝置、點選串流、iBeacon追蹤等。
+**Adobe Analytics**&#x200B;已完全整合至AEM應用程式，並允許詳細的散佈、地理位置、作業系統、裝置、點選串流、iBeacon追蹤等追蹤。
 
 ## 建立應用程式 {#creating-apps}
 
-開發人員可以使用 [AEM PhoneGap入門套件](https://github.com/Adobe-Marketing-Cloud/aem-phonegap-starter-kit) 以及中找到的其他資源 [https://github.com/adobe-marketing-cloud-apps](https://github.com/adobe-marketing-cloud-apps) 使用PhoneGap啟動AEM應用程式，包括執行Cordova Webviews的參考原生應用程式。
+開發人員可以使用[AEM PhoneGap Starter Kit](https://github.com/Adobe-Marketing-Cloud/aem-phonegap-starter-kit)以及[https://github.com/adobe-marketing-cloud-apps](https://github.com/adobe-marketing-cloud-apps)中的其他資源，透過PhoneGap啟動AEM應用程式，包括執行Cordova Webviews的參考原生應用程式。
 
 Starter Kit Git存放庫的Readme包含使用入門套件的教學課程：
 
 * 自訂品牌
 * Maven範例建置和部署目標
-* 原始檔控制存放庫設定
+* Source控制項存放庫設定
 * 安裝並部署到本機或遠端AEM執行個體
 * 從AEM解除安裝
 
 >[!NOTE]
 >
->您可在GitHub上找到其他參考實作來源，包括Labs [此處](https://github.com/adobe-marketing-cloud-apps) 以及「廚房水槽」來源 [此處](https://github.com/blefebvre/aem-phonegap-kitchen-sink).
+>其他參考實作來源（包括Labs）可以在GitHub [這裡](https://github.com/adobe-marketing-cloud-apps)和「廚房 — 水槽」來源[這裡](https://github.com/blefebvre/aem-phonegap-kitchen-sink)找到。
 
 ## 針對IOS 9和HTTP主機開發 {#developing-for-ios-and-http-hosts}
 
-iOS開發人員應留意在iOS 9上執行Cordova應用程式的未完成問題。 此問題會導致系統無法向不安全的主機發出請求(例如 *http://localhost:4502*)。 此問題將在即將發行的cordova-ios版本中解決（由Cordova CLI使用），但與此同時，有兩個可用的因應措施：
+iOS開發人員應留意在iOS 9上執行Cordova應用程式的未完成問題。 此問題會防止對不安全的主機(例如&#x200B;*http://localhost:4502*)發出請求。 此問題將在即將發行的cordova-ios版本中解決（由Cordova CLI使用），但與此同時，有兩個可用的因應措施：
 
 1. 作為立即的因應措施，您仍然可以使用任何iOS 8模擬器，而不會出現問題。
-1. 如果您必須使用iOS 9，您的應用程式 — Info.plist （在執行後找到） `cordova platform add ios` 在&quot;&lt;app root=&quot;&quot;>/platforms/ios/&lt;app name=&quot;&quot;>/&lt;app name=&quot;&quot;>-Info.plist&quot;)檔案可以手動編輯以包含以下屬性：
+1. 如果您必須使用iOS 9，可以手動編輯您的apps -Info.plist （在「&lt;app root>/platforms/ios/&lt;app name>/&lt;app name>-Info.plist」）檔案中執行`cordova platform add ios`後找到)以包含下列屬性：
 
 ```
 <key>NSAppTransportSecurity</key>
@@ -72,7 +72,7 @@ iOS開發人員應留意在iOS 9上執行Cordova應用程式的未完成問題�
 
 >[!NOTE]
 >
->如需「App Transport Security」的詳細資訊，請參閱 [Apple的iOS9發行前檔案](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html#//apple_ref/doc/uid/TP40016198-SW14) 以及這個 [棧疊溢位討論](https://stackoverflow.com/questions/30751053/ios9-ats-what-about-html5-based-apps/).
+>如需「App Transport Security」的詳細資訊，請參閱[Apple的iOS9發行前檔案](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html#//apple_ref/doc/uid/TP40016198-SW14)的下列章節和此[棧疊溢位討論](https://stackoverflow.com/questions/30751053/ios9-ats-what-about-html5-based-apps/)。
 
 ## 在AEM中開發行動應用程式 {#developing-mobile-applications-in-aem-1}
 

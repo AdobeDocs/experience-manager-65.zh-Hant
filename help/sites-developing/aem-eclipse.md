@@ -18,11 +18,11 @@ ht-degree: 4%
 
 # Eclipse 適用的 AEM 開發人員工具{#aem-developer-tools-for-eclipse}
 
-![適用於Eclipse的AEM開發人員工具的圓形影像主題。](do-not-localize/chlimage_1-9.png)
+![適用於Eclipse之AEM Developer Tools的圓形影像模組。](do-not-localize/chlimage_1-9.png)
 
 ## 概觀 {#overview}
 
-「AEM Developer Tools」是一個以 [Apache Sling的Eclipse外掛程式](https://sling.apache.org/documentation/development/ide-tooling.html) 以Apache授權2發行。
+「AEM Developer Tools」是以Apache授權2所發行適用於Apache Sling](https://sling.apache.org/documentation/development/ide-tooling.html)的[Eclipse外掛程式為基礎的Eclipse外掛程式。
 
 它提供數項功能，讓AEM開發更容易：
 
@@ -36,42 +36,42 @@ ht-degree: 4%
 
 使用AEM開發人員工具之前，請先執行下列動作：
 
-* 下載並安裝 [適用於Java™ EE開發人員的Eclipse IDE](https://www.eclipse.org/downloads/packages/release/luna/r/eclipse-ide-java-ee-developers). AEM開發人員工具目前支援Eclipse Kepler或更新版本
+* 下載並安裝適用於Java™ EE開發人員的[Eclipse IDE](https://www.eclipse.org/downloads/packages/release/luna/r/eclipse-ide-java-ee-developers)。 AEM開發人員工具目前支援Eclipse Kepler或更新版本
 
 * 可搭配AEM 5.6.1或更新版本使用
-* 設定eclipse安裝，透過編輯您的檔案，確保您至少有1 GB的棧積記憶體 `eclipse.ini` 組態檔，如 [Eclipse常見問題集](https://wiki.eclipse.org/FAQ_How_do_I_increase_the_heap_size_available_to_Eclipse%3F).
+* 依照[Eclipse常見問答集](https://wiki.eclipse.org/FAQ_How_do_I_increase_the_heap_size_available_to_Eclipse%3F)所述，編輯您的`eclipse.ini`設定檔，設定Eclipse安裝，確保您至少有1 GB的棧積記憶體。
 
 >[!NOTE]
 >
->在macOS上按一下右鍵 **Eclipse.app**，然後選取 **顯示封裝內容** 以尋找您的 `eclipse.ini`.
+>在macOS上按一下滑鼠右鍵&#x200B;**Eclipse.app**，然後選取&#x200B;**顯示封裝內容**&#x200B;以尋找您的`eclipse.ini`。
 
 ## 如何安裝適用於Eclipse的AEM開發人員工具 {#how-to-install-the-aem-developer-tools-for-eclipse}
 
-當您完成 [需求](#requirements) 如上所示，您可以安裝外掛程式：
+當您符合上述[需求](#requirements)後，您可以依照下列方式安裝外掛程式：
 
-1. 瀏覽 **AEM Developer Tools** 網站位置 `https://eclipse.adobe.com/aem/dev-tools/`.
+1. 瀏覽`https://eclipse.adobe.com/aem/dev-tools/`的&#x200B;**AEM Developer Tools**&#x200B;網站。
 
-1. 複製 **安裝連結**.
+1. 複製&#x200B;**安裝連結**。
 
    或者，您也可以下載封存，而不使用安裝連結。 這樣做允許離線安裝，但您會遺漏自動更新通知。
 
-1. 在Eclipse中，開啟 **說明** 功能表。
-1. 按一下 **安裝新軟體**.
-1. 按一下 **新增……**.
-1. 在 **名稱** 輸入AEM Developer Tools。
-1. 在 **位置** 複製安裝URL
-1. 按一下 **確定**.
-1. 檢查兩者 **AEM** 和 **Sling** 外掛程式。
+1. 在Eclipse中，開啟&#x200B;**說明**&#x200B;功能表。
+1. 按一下&#x200B;**安裝新軟體**。
+1. 按一下&#x200B;**新增……**。
+1. 在&#x200B;**名稱**&#x200B;中，輸入AEM Developer Tools。
+1. 在&#x200B;**位置**&#x200B;中，複製安裝URL。
+1. 按一下&#x200B;**確定**。
+1. 檢查&#x200B;**AEM**&#x200B;和&#x200B;**Sling**&#x200B;外掛程式。
 1. 按一下「**下一步**」。
 1. 按一下「**下一步**」。
-1. 接受線上合約，然後按一下 **完成**.
-1. 按一下 **是** 以重新啟動Eclipse。
+1. 接受Lincese合約，然後按一下&#x200B;**完成**。
+1. 按一下&#x200B;**是**&#x200B;重新啟動Eclipse。
 
 ## 如何匯入現有的專案 {#how-to-import-existing-projects}
 
 >[!NOTE]
 >
->另請參閱 [如何在Eclipse中使用從AEM下載的套件組合](https://stackoverflow.com/questions/29699726/how-to-work-with-a-bundle-in-eclipse-when-it-was-downloaded-from-aem/29705407#29705407).
+>請參閱[如何在Eclipse中使用從AEM](https://stackoverflow.com/questions/29699726/how-to-work-with-a-bundle-in-eclipse-when-it-was-downloaded-from-aem/29705407#29705407)下載的套件。
 
 ## AEM觀點 {#the-aem-perspective}
 
@@ -81,11 +81,11 @@ Eclipse適用的AEM開發工具隨附的透視功能可讓您完全控制AEM專�
 
 ## 多模組專案範例 {#sample-multi-module-project}
 
-「AEM開發人員工具」包含範例、多模組專案，可幫助您在Eclipse中快速完成專案設定。 它也是幾項AEM功能的最佳實務指南。 [進一步瞭解專案原型](https://github.com/adobe/aem-project-archetype).
+「AEM開發人員工具」包含範例、多模組專案，可幫助您在Eclipse中快速完成專案設定。 它也是幾項AEM功能的最佳實務指南。 [進一步瞭解專案原型](https://github.com/adobe/aem-project-archetype)。
 
 若要建立範例專案，請完成以下步驟：
 
-1. 在 **檔案** > **新增** > **專案** 功能表，瀏覽至 **AEM** 區段並選取 **AEM範例多模組專案**.
+1. 在&#x200B;**檔案** > **新增** > **專案**&#x200B;功能表中，瀏覽至&#x200B;**AEM**&#x200B;區段並選取&#x200B;**AEM範例多模組專案**。
 
    ![chlimage_1-69](assets/chlimage_1-69a.png)
 
@@ -97,11 +97,11 @@ Eclipse適用的AEM開發工具隨附的透視功能可讓您完全控制AEM專�
 
    ![chlimage_1-70](assets/chlimage_1-70a.png)
 
-1. 選擇 **com.adobe.granite.archetypes ： sample-project-archetype ： （最高數字）** 在功能表中，然後按一下 **下一個**.
+1. 從功能表選擇&#x200B;**com.adobe.granite.archetypes ： sample-project-archetype ： （最高編號）**，然後按一下&#x200B;**下一步**。
 
    ![chlimage_1-71](assets/chlimage_1-71a.png)
 
-1. 填入 **名稱**， **群組ID**，以及 **成品ID** 以取得範例專案。 您也可以選擇設定一些進階屬性。
+1. 填寫範例專案的&#x200B;**名稱**、**群組識別碼**&#x200B;和&#x200B;**成品ID**。 您也可以選擇設定一些進階屬性。
 
    ![chlimage_1-72](assets/chlimage_1-72a.png)
 
@@ -115,11 +115,11 @@ Eclipse適用的AEM開發工具隨附的透視功能可讓您完全控制AEM專�
 
    ![chlimage_1-73](assets/chlimage_1-73a.png)
 
-1. 按一下 **完成**. 專案結構隨即建立。
+1. 按一下&#x200B;**完成**。 專案結構隨即建立。
 
    >[!NOTE]
    >
-   >在全新安裝中（更具體地說：從未下載過maven相依性時），您可能會收到建立專案的錯誤。 在這種情況下，請遵循中所述的程式 [解析無效的專案定義](#resolving-invalid-project-definition).
+   >在全新安裝中（更具體地說：從未下載過maven相依性時），您可能會收到建立專案的錯誤。 在此情況下，請依照[解決無效的專案定義](#resolving-invalid-project-definition)中說明的程式進行。
 
 ## 疑難排解 {#troubleshooting}
 
@@ -128,9 +128,9 @@ Eclipse適用的AEM開發工具隨附的透視功能可讓您完全控制AEM專�
 若要解決無效的相依性和專案定義，請依照下列步驟進行：
 
 1. 選取所有已建立的專案。
-1. 按一下滑鼠右鍵。 在功能表中 **Maven**，選取 **更新專案**.
-1. 檢查 **強制更新快照/版本**.
-1. 按一下 **確定**. Eclipse會嘗試下載必要的相依性。
+1. 按一下滑鼠右鍵。 在功能表&#x200B;**Maven**&#x200B;中，選取&#x200B;**更新專案**。
+1. 檢查&#x200B;**強制更新快照/版本**。
+1. 按一下&#x200B;**確定**。 Eclipse會嘗試下載必要的相依性。
 
 ### 在JSP檔案中啟用標籤庫自動完成 {#enabling-tag-library-autocompletion-in-jsp-files}
 
@@ -152,12 +152,12 @@ Eclipse適用的AEM開發工具隨附的透視功能可讓您完全控制AEM專�
 
 Eclipse網站的官方Apache Sling IDE工具提供您實用資訊：
 
-* 此 [**適用於Eclipse的Apache Sling IDE工具** 使用手冊](https://sling.apache.org/documentation/development/ide-tooling.html)，本檔案會引導您瞭解AEM開發工具支援的整體概念、伺服器整合和部署功能。
-* 此 [疑難排解章節](https://sling.apache.org/documentation/development/ide-tooling.html#troubleshooting).
-* 此 [已知問題清單](https://sling.apache.org/documentation/development/ide-tooling.html#known-issues).
+* 適用於Eclipse **的[** Apache Sling IDE工具使用手冊](https://sling.apache.org/documentation/development/ide-tooling.html)，此檔案會引導您瞭解AEM開發工具支援的整體概念、伺服器整合和部署功能。
+* [疑難排解區段](https://sling.apache.org/documentation/development/ide-tooling.html#troubleshooting)。
+* [已知問題清單](https://sling.apache.org/documentation/development/ide-tooling.html#known-issues)。
 
-下列官方 [Eclipse](https://www.eclipse.org/) 說明檔案有助於設定您的環境：
+下列正式[Eclipse](https://www.eclipse.org/)檔案可協助您設定環境：
 
-* [Eclipse快速入門](https://eclipseide.org/getting-started/)
+* [開始使用Eclipse](https://eclipseide.org/getting-started/)
 * [Eclipse Luna說明系統](https://help.eclipse.org/latest/index.jsp)
 * [Maven整合(m2eclipse)](https://www.eclipse.org/m2e/)

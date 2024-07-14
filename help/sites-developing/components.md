@@ -31,7 +31,7 @@ ht-degree: 44%
 * 具有標準化的使用者介面。
 * 具有可以設定的編輯行為。
 * 使用根據Granite UI元件的子元素建置的對話方塊
-* 使用開發 [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) （建議）或JSP。
+* 使用[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) （建議）或JSP開發。
 * 可以開發以建立擴充預設功能的自訂元件。
 
 因為元件是模組化的，所以您可以：
@@ -45,19 +45,19 @@ ht-degree: 44%
 
 * 是資源類型。
 * 是完整實現特定功能的指令碼集合。
-* 可以在中運作 *隔離*，表示在AEM或入口網站中。
+* 可在&#x200B;*隔離*&#x200B;中運作，亦即在AEM或入口網站中運作。
 
 ## AEM中的現成元件 {#out-of-the-box-components-within-aem}
 
-AEM隨附多種多樣的 [現成可用的元件](/help/sites-authoring/default-components.md) 功能齊全，包括：
+AEM隨附各種[現成可用的元件](/help/sites-authoring/default-components.md)，提供完整的功能，包括：
 
 * 段落系統( `parsys`)
-* 頁面( `responsivegrid`  — 僅限觸控式UI)
+* 頁面（`responsivegrid` — 僅限觸控式UI）
 * 文字
 * 影像，含隨附文字
 * 工具列
 
-提供的元件及其在 [範例We.Retail網站](/help/sites-developing/we-retail.md) 已提供如何實作和使用元件的說明。 這些元件隨附所有原始程式碼，可以按原狀使用，也可以做為修改或擴充元件的起點。
+提供的元件及其在[範例We.Retail網站](/help/sites-developing/we-retail.md)中的使用說明如何實作和使用元件。 這些元件隨附所有原始程式碼，可以按原狀使用，也可以做為修改或擴充元件的起點。
 
 ### 核心元件與基礎元件 {#core-components-and-foundation-components}
 
@@ -66,19 +66,19 @@ AEM隨附多種多樣的 [現成可用的元件](/help/sites-authoring/default-c
 * [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
 * [基礎元件](/help/sites-authoring/default-components-foundation.md)
 
-**核心元件** 推出AEM 6.3，提供有彈性且功能豐富的撰寫功能。 此 [We.Retail參考網站](/help/sites-developing/we-retail.md) 說明如何使用核心元件，並代表元件開發的目前最佳實務。
+**核心元件**&#x200B;已與AEM 6.3搭配使用，並提供有彈性且功能豐富的編寫功能。 [We.Retail參考網站](/help/sites-developing/we-retail.md)說明如何使用核心元件，並代表目前元件開發的最佳實務。
 
-**基礎元件** 已經在AEM許多版本中提供，並且可在標準AEM安裝中立即使用。 雖然仍受支援，但大部分的功能已過時、不再強化，而且以舊版技術為基礎。
+**Foundation元件**&#x200B;已與AEM一起提供許多版本，並可在標準AEM安裝中立即使用。 雖然仍受支援，但大部分的功能已過時、不再強化，而且以舊版技術為基礎。
 
 >[!NOTE]
 >
->[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant) 代表元件設計和開發的目前最佳實務，並作為參考實作。
+>[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)代表目前元件設計與開發的最佳實務，可作為參考實作。
 >
->[AEM現代化工具](modernization-tools.md) 可協助移轉至核心元件。
+>[AEM現代化工具](modernization-tools.md)可協助移轉至核心元件。
 
 ### 檢視可用元件 {#viewing-available-components}
 
-如需AEM執行個體中所有可用元件的總覽，請使用 [元件主控台](/help/sites-authoring/default-components-console.md).
+如需AEM執行個體中所有可用元件的總覽，請使用[元件主控台](/help/sites-authoring/default-components-console.md)。
 
 或者，您也可以使用 CRXDE Lite 取得存放庫中所有可用元件的清單。
 

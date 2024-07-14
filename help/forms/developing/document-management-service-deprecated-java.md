@@ -44,11 +44,11 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 >[!NOTE]
 >
->使用AEM表單進行程式設計的快速入門是根據在JBoss和Windows作業系統上部署的Forms Server。 不過，如果您使用其他作業系統（例如UNIX），請以適用作業系統支援的路徑取代windows特定路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 另請參閱 [設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>使用AEM表單進行程式設計的快速入門是根據在JBoss和Windows作業系統上部署的Forms Server。 不過，如果您使用其他作業系統（例如UNIX），請以適用作業系統支援的路徑取代windows特定路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 請參閱[設定連線內容](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
 
 ## 快速入門(SOAP模式)：使用Java API建立Content Services空間（已過時） {#quick-start-soap-mode-create-content-services-spaces-using-the-java-api-deprecated}
 
-以下Java程式碼範例會建立名為的新空間 *測試目錄* 位於公司首頁。 新空間的識別值會寫入主控台。
+下列Java程式碼範例會在公司首頁建立名為&#x200B;*測試目錄*&#x200B;的新空間。 新空間的識別值會寫入主控台。
 
 ```java
  /*
@@ -244,7 +244,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 ## 快速入門(SOAP模式)：使用Java API將內容新增至內容服務（已棄用） {#quick-start-soap-mode-add-content-to-content-services-using-the-java-api-deprecated}
 
-以下Java程式碼範例新增名為的PDF檔案 *MortgageForm.pdf* 至名為/Company Home/Test Directory的資料夾。 建立者和說明屬性已設定。 新內容的識別值會寫入主控台。
+下列Java程式碼範例將名為&#x200B;*MortgageForm.pdf*&#x200B;的PDF檔案新增至名為/Company Home/Test Directory的資料夾。 建立者和說明屬性已設定。 新內容的識別值會寫入主控台。
 
 ```java
  /*
@@ -367,7 +367,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 ## 快速入門(SOAP模式)：使用Java API從內容服務擷取內容（已棄用） {#quick-start-soap-mode-retrieve-content-from-content-services-using-the-java-api-deprecated}
 
-以下Java程式碼範例會擷取名為的PDF檔案 *MortgageForm.pdf* 從/Company首頁。 PDF檔案會儲存至本機檔案系統，並命名為 *UpdatedMortgageForm.pdf*.
+下列Java程式碼範例會從/Company Home擷取名為&#x200B;*MortgageForm.pdf*&#x200B;的PDF檔案。 PDF檔案已儲存至本機檔案系統，並命名為&#x200B;*UpdatedMortgageForm.pdf*。
 
 ```java
  /*
@@ -473,7 +473,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 ## 快速入門(SOAP模式)：使用Java API移動內容服務（已棄用） {#quick-start-soap-mode-move-content-services-content-using-the-java-api-deprecated}
 
-以下Java程式碼範例移動名為的PDF檔案 *MortgageForm.pdf* 從/Company Home/Test Directory到/Company Home。 已移動內容的識別值會寫入主控台。
+下列Java程式碼範例將名為&#x200B;*MortgageForm.pdf*&#x200B;的PDF檔案從/Company Home/Test Directory移至/Company Home。 已移動內容的識別值會寫入主控台。
 
 ```java
  /*
@@ -797,7 +797,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 ## 快速入門(SOAP模式)：使用Java API設定內容服務許可權（已棄用） {#quick-start-soap-mode-setting-content-services-permissions-using-the-java-api-deprecated}
 
-以下Java程式碼範例會為名為tony blue的使用者設定許可權。 指定的網域是預設網域。 已指定消費者許可權，且節點為 `/Company Home/Test Directory`.
+以下Java程式碼範例會為名為tony blue的使用者設定許可權。 指定的網域是預設網域。 已指定消費者許可權，節點為`/Company Home/Test Directory`。
 
 ```java
  /*

@@ -14,7 +14,7 @@ ht-degree: 83%
 
 # 使用 AEM 建立 Headless 的內容模型 - 簡介 {#architect-headless-introduction}
 
-在這部分中 [AEM Headless內容架構者歷程](overview.md)，您可以瞭解必要的（基本）概念和術語，以瞭解Adobe Experience Manager (AEM)的headless內容傳送的內容模型。
+在[AEM Headless內容架構者歷程](overview.md)的這一部分，您可以瞭解必要的（基本）概念和術語，以瞭解Adobe Experience Manager (AEM)的Headless內容傳送內容模型。
 
 此文件可協助您了解 Headless 內容傳遞、AEM 如何支援 Headless 以及如何建立 Headless 內容模型。閱讀本文件後，您應該：
 

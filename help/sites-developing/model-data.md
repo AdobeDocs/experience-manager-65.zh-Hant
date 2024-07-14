@@ -24,7 +24,7 @@ ht-degree: 0%
 
 David是Day Software AG的聯合創始人和CTO，該公司是全球內容管理和內容基礎架構軟體的領先供應商，於2010年被Adobe收購。 David現在是Adobe的企業技術副總裁，同時也領導JSR-170的開發工作，這是Java™ Content Repository (JCR)應用程式設計介面(API)，這是內容管理的技術標準。
 
-您也可以在以下網址檢視進一步更新： [https://cwiki.apache.org/confluence/display/jackrabbit/DavidsModel](https://cwiki.apache.org/confluence/display/jackrabbit/DavidsModel).
+您也可以在[https://cwiki.apache.org/confluence/display/jackrabbit/DavidsModel](https://cwiki.apache.org/confluence/display/jackrabbit/DavidsModel)上看到進一步的更新。
 
 ## 來自David的簡介 {#introduction-from-david}
 
@@ -56,7 +56,7 @@ David是Day Software AG的聯合創始人和CTO，該公司是全球內容管理
 
 #### 範例 {#example-1}
 
-上述使用 `lastModified` 日期屬性（例如「部落格」節點）並不表示需要特殊的節點型別。 我一定會使用 `nt:unstructured` 至少剛開始是針對我的部落格節點。 由於在我的部落格應用程式中，我只要顯示lastModified日期即可（可能會「排序依據」），因此我一點也不在乎它是否為Date。 由於我隱含信任我的部落格撰寫應用程式，所以不需要宣告存在 `lastModified` 日期，採用節點型別的形式。
+上述在例如「部落格」節點上使用`lastModified` Date屬性的範例並不表示需要特殊的節點型別。 我一定會使用`nt:unstructured`做為我的部落格節點，至少一開始是這樣。 由於在我的部落格應用程式中，我只要顯示lastModified日期即可（可能會「排序依據」），因此我一點也不在乎它是否為Date。 由於我隱含信任我的部落格撰寫應用程式會將「日期」放在該處，因此確實不需要以節點型別的形式宣告`lastModified`日期的存在。
 
 ### 規則#2：驅動內容階層；不要讓它發生。 {#rule-drive-the-content-hierarchy-don-t-let-it-happen}
 
@@ -74,7 +74,7 @@ David是Day Software AG的聯合創始人和CTO，該公司是全球內容管理
 >
 >內容存放庫的結構方式也會影響效能。 為獲得最佳效能，附加至內容存放庫中個別節點的子節點數量不應超過1,000個。
 >
->另請參閱 [CRX可以處理多少資料？](https://helpx.adobe.com/experience-manager/kb/CrxLimitation.html)
+>請參閱[ CRX可以處理多少資料？](https://helpx.adobe.com/experience-manager/kb/CrxLimitation.html)
 
 #### 範例 {#example-2}
 
@@ -100,7 +100,7 @@ David是Day Software AG的聯合創始人和CTO，該公司是全球內容管理
 
 #### 解釋 {#explanation-3}
 
-如果您不使用 `clone()`， `merge()` 或 `update()` 在您的應用程式中，單一工作區可能是可行的方式。
+如果您在應用程式中未使用`clone()`、`merge()`或`update()`方法，單一工作區可能是可行的方式。
 
 「對應節點」是JCR規格中定義的概念。 基本上，它會歸結為代表不同所謂工作區中相同內容的節點。
 
@@ -173,13 +173,13 @@ JCR引進了工作區的抽象概念，讓許多開發人員不知道如何處�
 
 #### 解釋 {#explanation-6}
 
-如果內容模型揭露的東西甚至在遠端都聞起來像檔案或資料夾，我就會嘗試使用（或延伸） `nt:file`， `nt:folder`、和 `nt:resource`.
+如果內容模型揭露某些連遠端都聞起來像檔案或資料夾的東西，我就會嘗試使用（或延伸） `nt:file`、`nt:folder`和`nt:resource`。
 
 根據我的經驗，許多通用應用程式允許與nt：folder和nt：files進行隱含的互動，而且如果事件富含其他中繼資訊，它們也能知道如何處理和顯示這些事件。 例如，與JCR上方的檔案伺服器實作(如CIF或WebDAV)的直接互動會變成隱含。
 
-我認為根據經驗法則，您可以使用以下內容：如果您必須儲存檔案名稱和mime型別，則 `nt:file`/ `nt:resource` 非常符合。 如果您可以有多個「檔案」，則nt：folder是儲存這些檔案的好地方。
+我認為根據經驗法則，您可以使用下列專案：如果您必須儲存檔案名稱和mime型別，則`nt:file`/ `nt:resource`是很好的相符專案。 如果您可以有多個「檔案」，則nt：folder是儲存這些檔案的好地方。
 
-如果您必須為資源新增中繼資訊，可以說「作者」或「說明」屬性，請擴展 `nt:resource` 不是 `nt:file`. 我很少擴充nt：file，而且經常擴充 `nt:resource`.
+如果您必須為資源新增中繼資訊，可以說「作者」或「說明」屬性，請延伸`nt:resource`而非`nt:file`。 我很少擴充nt：file，而且經常擴充`nt:resource`。
 
 #### 範例 {#example-6}
 
@@ -207,13 +207,13 @@ JCR引進了工作區的抽象概念，讓許多開發人員不知道如何處�
 
 如果內容模型中有許多以「Id」結尾的屬性，表示您可能未正確使用階層。
 
-誠然，某些節點在其整個即時週期中都需要穩定的身分識別，實際數量可能比您想象的還少。 但是 `mix:referenceable` 存放庫中內建了此類機制，因此無需提供額外方法來以穩定方式識別節點。
+誠然，某些節點在其整個即時週期中都需要穩定的身分識別，實際數量可能比您想象的還少。 但是`mix:referenceable`在存放庫中內建了這類機制，因此不需要另外想出以穩定方式識別節點的方法。
 
 也請記住，專案可透過路徑識別。 此外，由於「symlink」對於大多數使用者來說比UNIX®檔案系統中的硬連結更合理，因此對於大多數應用程式而言，路徑是指向目標節點也是合理的。
 
-更重要的是 **mix**：referenceable，表示它可以在您實際必須參考節點的時間點套用至節點。
+更重要的是，它是&#x200B;**mix**：referenceable，這表示它可以在您實際必須參考它的時間點套用至節點。
 
-因此，僅僅因為您想要可能參考「檔案」型別的節點並不表示您的「檔案」節點型別必須從擴充 `mix:referenceable` 以靜態方式。 這是因為可將其動態新增至「檔案」的任何執行個體。
+因此，您想要可能參考「檔案」型別的節點並不表示您的「檔案」節點型別必須從`mix:referenceable`以靜態方式延伸。 這是因為可將其動態新增至「檔案」的任何執行個體。
 
 #### 範例 {#example-7}
 

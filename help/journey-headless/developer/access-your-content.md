@@ -245,7 +245,7 @@ It provides features such as syntax-highlighting, auto-complete, auto-suggest, t
 在開始對您的內容進行查詢之前，您需要：
 
 * 啟用您的端點
-   * 使用「工具>資產> GraphQL」
+   * 使用「工具> Assets > GraphQL」
    * [啟用 GraphQL 端點](/help/sites-developing/headless/graphql-api/graphql-endpoint.md#enabling-graphql-endpoint)
 
 * 存取GraphiQL （如有必要）
@@ -272,7 +272,7 @@ It provides features such as syntax-highlighting, auto-complete, auto-suggest, t
 
 ### 在哪裡測試您的查詢 {#where-to-test-your-queries}
 
-查詢可在 [GraphiQL介面](/help/sites-developing/headless/graphql-api/graphiql-ide.md)，例如：
+可在[GraphiQL介面](/help/sites-developing/headless/graphql-api/graphiql-ide.md)中輸入查詢，例如：
 
 * `http://localhost:4502/aem/graphiql.html`
 

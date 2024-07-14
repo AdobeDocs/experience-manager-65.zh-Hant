@@ -27,9 +27,9 @@ ht-degree: 48%
 
 ## 提交動作簡介 {#introduction-to-submit-actions}
 
-當使用者按一下最適化表單上的提交按鈕時，就會觸發提交動作。 您可以在最適化表單上設定提交動作。 調適型表單提供一些立即可用的提交動作。 您可以複製並擴充預設提交動作，以建立您自己的提交動作。 不過，您可以根據自己的需求，編寫並註冊自己的提交動作，以處理提交表單中的資料。 提交動作可使用 [同步或非同步提交](../../forms/using/asynchronous-submissions-adaptive-forms.md).
+當使用者按一下最適化表單上的提交按鈕時，就會觸發提交動作。 您可以在最適化表單上設定提交動作。 調適型表單提供一些立即可用的提交動作。 您可以複製並擴充預設提交動作，以建立您自己的提交動作。 不過，您可以根據自己的需求，編寫並註冊自己的提交動作，以處理提交表單中的資料。 提交動作可以使用[同步或非同步提交](../../forms/using/asynchronous-submissions-adaptive-forms.md)。
 
-您可在以下位置設定提交動作： **提交** 側邊欄中的最適化表單容器屬性的區段。
+您可以在側邊欄的最適化表單容器屬性的&#x200B;**提交**&#x200B;區段中設定提交動作。
 
 ![設定提交動作](assets/thank-you-setting.png)
 
@@ -52,22 +52,22 @@ ht-degree: 48%
 
 >[!NOTE]
 >
->確保 [AEM_Installation_Directory]\crx-quickstart\temp\datamanager\ASM資料夾
+>請確定[AEM_Installation_Directory]\crx-quickstart\temp\datamanager\ASM資料夾
 >「 」已存在。 需要目錄才能暫時儲存附件。 如果目錄不存在，請建立目錄。
 
 >[!CAUTION]
 >
->如果您 [預填](../../forms/using/prepopulate-adaptive-form-fields.md) 表單範本、表單資料模型或結構描述型調適型表單針對不含資料的結構描述（XML結構描述、JSON結構描述、表單範本或表單資料模型）提出XML或JSON資料投訴 &lt;afdata>， &lt;afbounddata>、和 &lt;/afunbounddata> 標籤，則無限制欄位的資料(無限制欄位是自適應表單欄位，無 [bindref](../../forms/using/prepopulate-adaptive-form-fields.md) 屬性)。
+>如果您[預填](../../forms/using/prepopulate-adaptive-form-fields.md)包含XML或JSON資料投訴的表單範本、表單資料模型或結構描述型調適型表單，其資料的結構描述（XML結構描述、JSON結構描述、表單範本或表單資料模型）不包含&lt;afData>、&lt;afBoundData>和&lt;/afUnboundData>標籤，則調適型表單未繫結欄位的資料（未繫結欄位是沒有[bindref](../../forms/using/prepopulate-adaptive-form-fields.md)屬性的調適型表單欄位）會遺失。
 
-您可以撰寫最適化表單的自訂提交動作，以符合您的使用案例。 如需詳細資訊，請參閱 [撰寫最適化表單的自訂提交動作](../../forms/using/custom-submit-action-form.md).
+您可以撰寫最適化表單的自訂提交動作，以符合您的使用案例。 如需詳細資訊，請參閱[撰寫最適化表單的自訂提交動作](../../forms/using/custom-submit-action-form.md)。
 
 ## 提交到 REST 端點 {#submit-to-rest-endpoint}
 
-此 **提交至REST端點** 提交選項會將表單中填寫的資料傳遞至已設定的確認頁面，作為HTTPGET請求的一部分。 您可以新增要求的欄位名稱。要求的格式為：
+**提交至REST端點**&#x200B;提交選項會將表單中填入的資料傳遞至已設定的確認頁面，作為HTTPGET要求的一部分。 您可以新增要求的欄位名稱。要求的格式為：
 
 `{fieldName}={request parameter name}`
 
-如下圖所示， `param1` 和 `param2` 是以引數傳遞，其值複製自 **文字方塊** 和 **數值方塊** 下一個動作的欄位。
+如下圖所示，`param1`和`param2`會以引數形式傳遞，其值複製自下一個動作的&#x200B;**文字方塊**&#x200B;和&#x200B;**數值方塊**&#x200B;欄位。
 
 您也可以「**啟用 POST 要求**」並提供用於發佈要求的 URL。若要將資料提交至託管表單的Experience Manager伺服器，請使用與Experience Manager伺服器根路徑對應的相對路徑。 例如， /content/forms/af/SampleForm.html。 若要將資料提交到任何其他伺服器，請使用絕對路徑。
 
@@ -79,7 +79,7 @@ ht-degree: 48%
 >
 若要將欄位做為 REST URL 的參數傳遞，所有欄位都必須具有不同的元素名稱，即使這些欄位位於不同面板上也是如此。
 
-### 將提交的資料發佈到資源或外部Rest端點  {#post-submitted-data-to-a-resource-or-external-rest-end-point-nbsp}
+### Post將資料提交至資源或外部rest端點  {#post-submitted-data-to-a-resource-or-external-rest-end-point-nbsp}
 
 使用「**提交到 REST 端點**」動作會將提交的資料發佈到 REST URL。該 URL 可以是內部伺服器 (呈現表單的伺服器) 或外部伺服器。
 
@@ -104,7 +104,7 @@ ht-degree: 48%
 
 ## 寄送電子郵件 {#send-email}
 
-此 **傳送電子郵件** 提交動作會在成功提交表單時傳送電子郵件給一或多個收件者。 產生的電子郵件可以包含預先定義的格式表單資料。
+**傳送電子郵件**&#x200B;提交動作會在成功提交表單時，傳送電子郵件給一或多個收件者。 產生的電子郵件可以包含預先定義的格式表單資料。
 
 >[!NOTE]
 >
@@ -112,7 +112,7 @@ ht-degree: 48%
 
 ## 透過電子郵件傳送PDF {#send-pdf-via-email}
 
-此 **透過電子郵件傳送PDF** 提交動作會在成功提交表單時，傳送內含表單資料PDF的電子郵件給一或多個收件者。
+**透過電子郵件傳送PDF**&#x200B;提交動作會在成功提交表單時，傳送內含表單資料PDF的電子郵件給一或多個收件者。
 
 >[!NOTE]
 >
@@ -120,29 +120,29 @@ ht-degree: 48%
 
 ## 叫用Forms Workflow {#invoke-a-forms-workflow}
 
-此 **提交至Forms Workflow** 提交選項會將資料xml和檔案附件（如果有的話）傳送至現有的AdobeLiveCycle或JEE程式上的AEM Forms。
+**提交至Forms Workflow**&#x200B;提交選項會將資料xml和檔案附件（如果有的話）傳送至現有的AdobeLiveCycle或JEE程式上的AEM Forms。
 
-如需有關如何設定「提交至Forms Workflow」提交動作的資訊，請參閱 [使用表單工作流程提交和處理您的表單資料](../../forms/using/submit-form-data-livecycle-process.md).
+如需有關如何設定提交至Forms Workflow提交動作的資訊，請參閱[使用表單工作流程提交及處理您的表單資料](../../forms/using/submit-form-data-livecycle-process.md)。
 
 ## 使用表單資料模型提交 {#submit-using-form-data-model}
 
-此 **使用表單資料模型提交** 提交動作會將表單資料模型中指定資料模型物件的已提交最適化表單資料寫入其資料來源。 設定提交動作時，您可以選擇資料模型物件，將其提交的資料寫入其資料來源。
+使用表單資料模型的&#x200B;**提交**&#x200B;提交動作會將表單資料模型中指定資料模型物件的已提交最適化表單資料寫入其資料來源。 設定提交動作時，您可以選擇資料模型物件，將其提交的資料寫入其資料來源。
 
 此外，您可以使用表單資料模型和記錄檔案(DoR)將表單附件提交至資料來源。
 
-如需表單資料模型的相關資訊，請參閱 [AEM Forms資料整合](../../forms/using/data-integration.md).
+如需表單資料模型的相關資訊，請參閱[AEM Forms資料整合](../../forms/using/data-integration.md)。
 
 ## Forms Portal提交動作 {#forms-portal-submit-action}
 
-此 **Forms Portal提交動作** 選項可透過AEM Forms入口網站提供表單資料。
+**Forms入口網站提交動作**&#x200B;選項可透過AEM Forms入口網站提供表單資料。
 
-如需Forms入口網站與提交動作的詳細資訊，請參閱 [草稿和提交元件](../../forms/using/draft-submission-component.md).
+如需Forms入口網站與提交動作的詳細資訊，請參閱[草稿與提交元件](../../forms/using/draft-submission-component.md)。
 
 ## 叫用 AEM 工作流程 {#invoke-an-aem-workflow}
 
 「**[!UICONTROL 叫用 AEM 工作流程]**」提交動作會將最適化表單與 [AEM 工作流程](/help/sites-developing/workflows-models.md)建立關聯。提交表單後，相關聯的工作流程就會在作者執行個體上自動開始。您可以將資料檔案、附件和記錄檔案儲存至相對資料夾，或工作流程裝載下的資料夾，或儲存至變數。 如果工作流程標示為外部資料儲存，則變數選項可用，而不是裝載選項。 您可以從可用於工作流程模型的變數清單中選取。如果工作流程是在後續階段標記為外部資料儲存空間，而不是在建立工作流程時標記，則請確保已經具備所需的變數設定。
 
-使用之前 **叫用AEM工作流程** 提交動作， [設定Experience ManagerDS設定](../../forms/using/configuring-the-processing-server-url.md). 如需建立AEM工作流程的詳細資訊，請參閱 [OSGi上以表單為中心的工作流程](../../forms/using/aem-forms-workflow.md).
+在使用&#x200B;**叫用AEM工作流程**&#x200B;提交動作之前，[設定Experience ManagerDS設定](../../forms/using/configuring-the-processing-server-url.md)。 如需有關建立AEM工作流程的資訊，請參閱[OSGi](../../forms/using/aem-forms-workflow.md)上以表單為中心的工作流程。
 
 提交動作會將下列專案置於工作流程的裝載位置。 但請注意，如果工作流程模型標示為外部資料儲存，則只會顯示「變數」選項，而不會顯示「裝載」選項。
 
@@ -165,7 +165,7 @@ ht-degree: 48%
 * 對擷取的資料執行複雜的計算
 * 按預定義的排程將最適化表單資料儲存到儲存系統
 
-最適化表單編輯器提供&#x200B;**叫用 Microsoft® Power Automate 流程**&#x200B;提交動作，將最適化表單資料、附件和記錄文件發送到 Power Automate Cloud Flow。若要使用提交動作將擷取的資料傳送至Microsoft®Power Automate， [連線您的AEM Forms執行個體與Microsoft® Power Automate](/help/forms/using/forms-microsoft-power-automate-integration.md)
+最適化表單編輯器提供&#x200B;**叫用 Microsoft® Power Automate 流程**&#x200B;提交動作，將最適化表單資料、附件和記錄文件發送到 Power Automate Cloud Flow。若要使用「提交」動作將擷取的資料傳送至Microsoft® Power Automate，[將您的AEM Forms執行個體連線至Microsoft® Power Automate](/help/forms/using/forms-microsoft-power-automate-integration.md)
 
 在設定成功之後，使用[叫用 Microsoft® Power Automate 流程](/help/forms/using/forms-microsoft-power-automate-integration.md#use-the-invoke-a-microsoft&reg;-power-automate-flow-submit-action-to-send-data-to-a-power-automate-flow-use-the-invoke-microsoft-power-automate-flow-submit-action)提交動作，將資料傳送到 Power Automate Flow。
 
@@ -175,26 +175,26 @@ ht-degree: 48%
 >
 提交至Microsoft® SharePoint清單功能是在AEM 6.5 Forms Service Pack 19 (6.5.19.0)中引入。
 
-此 **[!UICONTROL 提交至SharePoint]** 提交動作將最適化表單與Microsoft® SharePoint儲存空間連線起來。 您可以將表單資料檔案、附件或記錄檔案提交至連線的Microsoft® Sharepoint儲存體。
+**[!UICONTROL 提交至SharePoint]**&#x200B;提交動作會將最適化表單與Microsoft® SharePoint儲存體連線。 您可以將表單資料檔案、附件或記錄檔案提交至連線的Microsoft® Sharepoint儲存體。
 
 ### 將最適化表單連線至Microsoft® SharePoint清單 {#connect-af-sharepoint-list}
 
 若要將最適化表單連線至Microsoft® SharePoint清單：
 
-1. [建立SharePoint清單設定](#create-sharepoint-list-configuration)：它會將AEM Forms連線至您的Microsoft® Sharepoint清單儲存空間。
-1. [使用 **使用表單資料模型提交** 在最適化表單中提交動作](#use-submit-using-fdm)：它會傳送您的最適化表單資料至已設定的Microsoft® SharePoint。
+1. [建立SharePoint清單設定](#create-sharepoint-list-configuration)：它會將AEM Forms連線至您的Microsoft® Sharepoint清單儲存體。
+1. [在最適化表單中使用表單資料模型的&#x200B;**提交**&#x200B;提交動作](#use-submit-using-fdm)：它會將您的最適化表單資料傳送至已設定的Microsoft® SharePoint。
 
 #### 建立SharePoint清單設定 {#create-sharepoint-list-configuration}
 
 若要將AEM Forms連線至您的Microsoft®Sharepoint清單：
 
-1. 前往 **[!UICONTROL 工具]** > **[!UICONTROL Cloud Service]** >  **[!UICONTROL Microsoft® SharePoint]**.
+1. 移至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Cloud Service]** > **[!UICONTROL Microsoft® SharePoint]**。
 1. 選取一個&#x200B;**設定容器**。設定會儲存在選取的設定容器中。
-1. 按一下 **[!UICONTROL 建立]** > **[!UICONTROL SharePoint清單]** 下拉式清單中的。 此時會顯示 SharePoint 設定精靈。
+1. 從下拉式清單中按一下&#x200B;**[!UICONTROL 建立]** > **[!UICONTROL SharePoint清單]**。 此時會顯示 SharePoint 設定精靈。
 1. 指定「**[!UICONTROL 標題]**」、「**[!UICONTROL 用戶端 ID]**」、「**[!UICONTROL 用戶端密碼]**」和「**[!UICONTROL OAuth URL]**」。如需有關如何擷取 OAuth URL 之用戶端 ID、用戶端密碼、租用戶 ID 的資訊，請參閱 [Microsoft® 文件](https://learn.microsoft.com/en-us/graph/auth-register-app-v2)。
    * 您可以從 Microsoft® Azure 入口網站擷取應用程式的 `Client ID` 和 `Client Secret`。
    * 在 Microsoft® Azure 入口網站中，將重新導向 URI 新增為 `https://[author-instance]/libs/cq/sharepointlist/content/configurations/wizard.html`。以作者執行個體的 URL 取代 `[author-instance]`。
-   * 新增API許可權 `offline_access` 和 `Sites.Manage.All` 在 **Microsoft® Graph** 索引標籤以提供讀取/寫入許可權。 新增 `AllSites.Manage` 中的許可權 **Sharepoint** 索引標籤以與SharePoint資料進行遠端互動。
+   * 在&#x200B;**Microsoft® Graph**&#x200B;索引標籤中新增API許可權`offline_access`和`Sites.Manage.All`以提供讀取/寫入許可權。 在&#x200B;**Sharepoint**&#x200B;索引標籤中新增`AllSites.Manage`許可權，以便從遠端與SharePoint資料互動。
    * 使用 OAuth URL：`https://login.microsoftonline.com/tenant-id/oauth2/v2.0/authorize`。從 Microsoft® Azure 入口網站，以應用程式的 `tenant-id` 取代 `<tenant-id>`。
 
      >[!NOTE]
@@ -202,8 +202,8 @@ ht-degree: 48%
      **用戶端密碼**&#x200B;欄位為必填或選用，取決於您的 Azure Active Directory 應用程式設定。如果您的應用程式設定為使用用戶端密碼，就必須提供用戶端密碼。
 
 1. 按一下「**[!UICONTROL 連結]**」。連結成功後，就會顯示 `Connection Successful` 訊息。
-1. 選取 **[!UICONTROL SharePoint網站]** 和 **[!UICONTROL SharePoint清單]** 下拉式清單中的。
-1. 點選 **[!UICONTROL 建立]** 以建立Microsoft® SharePointList的雲端設定。
+1. 從下拉式清單中選取&#x200B;**[!UICONTROL SharePoint網站]**&#x200B;和&#x200B;**[!UICONTROL SharePoint清單]**。
+1. 點選&#x200B;**[!UICONTROL 建立]**&#x200B;以建立Microsoft® SharePointList的雲端設定。
 
 #### 在最適化表單中使用表單資料模型提交 {#use-submit-using-fdm}
 
@@ -211,7 +211,7 @@ ht-degree: 48%
 
 1. [使用Microsoft建立表單資料模型](/help/forms/using/create-form-data-model.md)
 1. [設定表單資料模型以擷取及傳送資料](/help/forms/using/work-with-form-data-model.md#configure-services)
-1. [建立最適化表單](/help/forms/using/create-adaptive-form.md).
+1. [建立最適化表單](/help/forms/using/create-adaptive-form.md)。
 1. [使用表單資料模型設定提交動作](/help/forms/using/configuring-submit-actions.md#submit-using-form-data-model-submit)
 
 提交表單時，資料會儲存在指定的Microsoft® Sharepoint清單儲存空間中。
@@ -271,4 +271,4 @@ Microsoft® SharePoint清單不支援下列欄型別：
 
 在Experience Manager安全性和強化准則中，請設定自訂錯誤頁面，例如404.jsp和500.jsp。 提交表單時出現404或500錯誤時，會呼叫這些處理常式。 在Publish節點上觸發這些錯誤碼時，也會呼叫處理常式。
 
-如需詳細資訊，請參閱 [自訂錯誤處理常式顯示的頁面](/help/sites-developing/customizing-errorhandler-pages.md).
+如需詳細資訊，請參閱[自訂錯誤處理常式顯示的頁面](/help/sites-developing/customizing-errorhandler-pages.md)。

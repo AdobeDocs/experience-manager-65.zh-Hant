@@ -18,7 +18,7 @@ ht-degree: 1%
 
 # 指定XCI設定選項 {#specify-xci-configuration-options}
 
-輸出可讓您指定其用於呈現的自訂XCI檔案。 另請參閱 [指定輸出的檔案位置](/help/forms/using/admin-help/specify-file-locations-output.md#specify-file-locations-for-output).
+輸出可讓您指定其用於呈現的自訂XCI檔案。 請參閱[指定輸出](/help/forms/using/admin-help/specify-file-locations-output.md#specify-file-locations-for-output)的檔案位置。
 
 依預設，「輸出」會覆寫XCI檔案中指定的某些選項，包括：
 
@@ -29,6 +29,6 @@ ht-degree: 1%
 
 您可以選取取消上述選項覆寫的選項，在這種情況下「輸出」會使用自訂XCI檔案中指定的值。
 
-1. 在管理控制檯中，按一下 **服務** >輸出。
+1. 在管理主控台中，按一下&#x200B;**服務** >輸出。
 1. 選取或取消選取使用系統預設XCI選項核取方塊。 選取此選項時，Output會使用封包、建立者、製作者和compressObjectStream設定的預設值。 取消選取此選項時，輸出使用自訂XCI檔案中指定的值。
 1. 按一下「**儲存**」。

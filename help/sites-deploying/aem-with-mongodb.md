@@ -21,7 +21,7 @@ ht-degree: 0%
 
 本文旨在進一步瞭解成功使用MongoDB部署AEM (Adobe Experience Manager)所需的任務和考量事項。
 
-如需與部署相關的詳細資訊，請參閱 [部署和維護](/help/sites-deploying/deploy.md) 一節。
+如需部署相關詳細資訊，請參閱檔案的[部署和維護](/help/sites-deploying/deploy.md)區段。
 
 ## 何時搭配AEM使用MongoDB {#when-to-use-mongodb-with-aem}
 
@@ -38,7 +38,7 @@ MongoDB通常用於支援符合下列其中一項條件的AEM作者部署：
 
 >[!NOTE]
 >
->有關作者執行個體規模及同時使用者定義的其他資訊，請參閱 [硬體大小調整准則](/help/managing/hardware-sizing-guidelines.md#authors-working-in-parallel).
+>您可以在[硬體大小調整指南](/help/managing/hardware-sizing-guidelines.md#authors-working-in-parallel)中找到有關製作執行個體大小和同時使用者定義的額外資訊。
 
 ### 針對AEM的最小MongoDB部署 {#minimal-mongodb-deployment-for-aem}
 
@@ -46,15 +46,15 @@ MongoDB通常用於支援符合下列其中一項條件的AEM作者部署：
 
 ![chlimage_1-4](assets/chlimage_1-4.png)
 
-最低的部署需要三個 `mongod` 設定為復本集的執行個體。 一個執行個體被選為主要執行個體，而其他執行個體是次要執行個體，並由管理該選擇 `mongod`. 附加到每個執行個體是本機磁碟。 因此，叢集可以支援負載，建議使用至少每秒12 MB的輸送量，以及超過每秒3000個I/O作業(IOPS)。
+最低部署需要三個`mongod`執行個體設定為復本集。 一個執行個體被選為主要執行個體，而其他執行個體是次要執行個體，選舉由`mongod`管理。 附加到每個執行個體是本機磁碟。 因此，叢集可以支援負載，建議使用至少每秒12 MB的輸送量，以及超過每秒3000個I/O作業(IOPS)。
 
-AEM作者已連線至 `mongod` 例項，讓每個AEM作者連線到全部三個 `mongod` 執行個體。 寫入操作會傳送到主要執行個體，而讀取操作可從任何執行個體讀取。 流量會根據Dispatcher的負載分配至任何一個使用中的AEM編寫執行個體。 Oak資料存放區是 `FileDataStore`和MongoDB監控由MMS或MongoDB Ops Manager提供，視部署位置而定。 作業系統層級和記錄檔監控由第三方解決方案提供，例如Splunk或Ganglia。
+AEM作者已連線至`mongod`執行個體，每個AEM作者均連線至所有三個`mongod`執行個體。 寫入操作會傳送到主要執行個體，而讀取操作可從任何執行個體讀取。 流量會根據Dispatcher的負載分配至任何一個作用中的AEM編寫執行個體。 Oak資料存放區是`FileDataStore`，MongoDB監視會根據部署位置由MMS或MongoDB Ops Manager提供。 作業系統層級和記錄檔監控由第三方解決方案提供，例如Splunk或Ganglia。
 
 在此部署中，成功實施需要所有元件。 任何缺少的元件都會讓實作無法運作。
 
 ### 作業系統 {#operating-systems}
 
-如需AEM 6支援的作業系統清單，請參閱 [技術需求頁面](/help/sites-deploying/technical-requirements.md).
+如需AEM 6支援的作業系統清單，請參閱[技術需求頁面](/help/sites-deploying/technical-requirements.md)。
 
 ### 環境 {#environments}
 
@@ -91,35 +91,35 @@ RAM不足會導致效能大幅降低。 工作集和資料庫的大小與應用�
 
 ### 資料存放區 {#data-store}
 
-由於MongoDB工作集限制，建議獨立於MongoDB維護資料存放區。 在大多數環境中， `FileDataStore` 應該使用適用於所有AEM執行個體的NAS。 若是使用Amazon Web Services的情況，也有 `S3 DataStore`. 如果由於任何原因，資料存放區是在MongoDB中維護，資料存放區的大小應新增到資料庫總大小，並且工作集計算應適當調整。 這種大小調整可能意味著提供更多RAM來維持效能，而不會造成頁面錯誤。
+由於MongoDB工作集限制，建議獨立於MongoDB維護資料存放區。 在大多數環境中，應該使用使用可用於所有AEM執行個體的NAS的`FileDataStore`。 若是使用Amazon Web Services的情況，也會有`S3 DataStore`。 如果由於任何原因，資料存放區是在MongoDB中維護，資料存放區的大小應新增到資料庫總大小，並且工作集計算應適當調整。 這種大小調整可能意味著提供更多RAM來維持效能，而不會造成頁面錯誤。
 
 ## 監控 {#monitoring}
 
 監視是成功實作專案的重要條件。 只要掌握足夠的知識，便可在MongoDB上執行AEM而不進行監視。 不過，這些知識通常是由專長於部署每個區段的工程師所掌握。
 
-這些專門知識通常包括處理Apache Oak Core的研發工程師和MongoDB專家。
+這些專門知識通常涉及使用Apache Oak Core的研發工程師和MongoDB專家。
 
 若未在所有層級進行監視，則需要程式碼庫的詳細知識才能診斷問題。 監控功能就緒且針對主要統計資料提供適當指引，實作團隊即可對異常狀況做出適當反應。
 
-雖然可以使用命令列工具來取得叢集操作的快速快照，但要在許多主機上即時執行此作業幾乎是不可能的。 命令列工具很少會在幾分鐘後提供歷史資訊，也絕不允許不同型別量度之間的交叉關聯。 一段短暫的慢速背景 `mongod` 同步作業需要大量手動操作，才能與顯然未連線的虛擬機器器的I/O等待或共用儲存資源的過度寫入層級建立關聯。
+雖然可以使用命令列工具來取得叢集操作的快速快照，但要在許多主機上即時執行此作業幾乎是不可能的。 命令列工具很少會在幾分鐘後提供歷史資訊，也絕不允許不同型別量度之間的交叉關聯。 短期的慢速背景`mongod`同步處理需要大量手動操作，以針對I/O等待或來自顯然未連線之虛擬機器器的共用儲存資源過度寫入層級建立關聯。
 
 ### MongoDB Cloud Manager {#mongodb-cloud-manager}
 
-MongoDB Cloud Manager是MongoDB提供的免費服務，可監控和管理MongoDB執行個體。 它可即時檢視MongoDB叢集的效能和健康狀況。 它同時管理雲端和私人託管的執行個體，前提是執行個體可以存取Cloud Manager監控伺服器。
+MongoDB Cloud Manager是MongoDB提供的免費服務，可監控和管理MongoDB執行個體。 它可即時檢視MongoDB叢集的效能和健康狀況。 它同時管理雲端和私人主控的執行個體，前提是執行個體可以連線Cloud Manager監控伺服器。
 
 它需要在MongoDB執行個體上安裝代理程式，以連線至監控伺服器。 代理程式有三個層級：
 
 * 自動化代理程式，可完全自動化MongoDB伺服器上的所有專案，
-* 可監視的監視代理程式 `mongod` 例項，
+* 可監視`mongod`執行個體的監視代理程式，
 * 備份代理程式，可執行資料的排程備份。
 
-雖然使用Cloud Manager來自動維護MongoDB叢集可讓許多例行工作變得更輕鬆，但這並非必要，而且也不會將其用於備份。 選擇監視Cloud Manager時，需要監視。
+雖然使用Cloud Manager來自動維護MongoDB叢集可讓許多例行工作變得更輕鬆，但這並非必要，而且也不會將其用於備份。 選擇Cloud Manager進行監視時，仍需要監視。
 
-如需MongoDB Cloud Manager的詳細資訊，請參閱 [MongoDB檔案](https://docs.cloud.mongodb.com/).
+如需MongoDB Cloud Manager的詳細資訊，請參閱[MongoDB檔案](https://docs.cloud.mongodb.com/)。
 
 ### MongoDB作業管理員 {#mongodb-ops-manager}
 
-MongoDB Ops Manager與MongoDB Cloud Manager是相同的軟體。 註冊後，Ops Manager即可下載並安裝在本機私人資料中心或任何其他筆記型電腦或桌上型電腦上。 它使用本機MongoDB資料庫來儲存資料，並以與Cloud Manager相同的方式與受管理的伺服器通訊。 如果您的安全性原則禁止監控代理程式，則應使用MongoDB Ops Manager。
+MongoDB Ops Manager與MongoDB Cloud Manager是相同的軟體。 註冊後，Ops Manager即可下載並安裝在本機私人資料中心或任何其他筆記型電腦或桌上型電腦上。 它使用本機MongoDB資料庫來儲存資料，並以與Cloud Manager相同的方式與受管理伺服器通訊。 如果您的安全性原則禁止監控代理程式，則應使用MongoDB Ops Manager。
 
 ### 作業系統監視 {#operating-system-monitoring}
 
@@ -154,7 +154,7 @@ Ganglia就是這類系統的好例子，它提供了超越基本健康狀態量�
 
 AEM執行個體必須設定為搭配MongoMK使用AEM。 AEM中MongoMK實作的基礎是檔案節點存放區。
 
-如需如何設定節點存放區的詳細資訊，請參閱 [在AEM中設定節點存放區和資料存放區](/help/sites-deploying/data-store-config.md).
+如需如何設定節點存放區的詳細資訊，請參閱[在AEM中設定節點存放區和資料存放區](/help/sites-deploying/data-store-config.md)。
 
 以下是最小MongoDB部署的檔案節點存放區設定範例：
 
@@ -176,23 +176,23 @@ blobCacheSize=1024
 其中：
 
 * `mongodburi`
-MongoDB伺服器AEM必須連線到。 與預設復本集的所有已知成員建立連線。 如果使用MongoDB Cloud Manager，則會啟用伺服器安全性。 因此，連線字串必須包含合適的使用者名稱和密碼。 非企業版本的MongoDB僅支援使用者名稱和密碼驗證。 如需連線字串語法的詳細資訊，請參閱 [檔案](https://docs.mongodb.org/manual/reference/connection-string/).
+MongoDB伺服器AEM必須連線到。 與預設復本集的所有已知成員建立連線。 如果使用MongoDB Cloud Manager，則會啟用伺服器安全性。 因此，連線字串必須包含合適的使用者名稱和密碼。 非企業版本的MongoDB僅支援使用者名稱和密碼驗證。 如需連線字串語法的詳細資訊，請參閱[檔案](https://docs.mongodb.org/manual/reference/connection-string/)。
 
 * `db`
-資料庫的名稱。 AEM的預設值為 `aem-author`.
+資料庫的名稱。 AEM的預設值為`aem-author`。
 
 * `customBlobStore`
-如果部署將二進位檔儲存在資料庫中，則二進位檔會成為工作集的一部分。 因此，請勿在MongoDB內儲存二進位檔案，偏好使用替代資料存放區，例如 `FileSystem` nas上的資料存放區。
+如果部署將二進位檔儲存在資料庫中，則二進位檔會成為工作集的一部分。 因此，建議您不要在MongoDB中儲存二進位檔案，偏好使用NAS上的替代資料存放區，例如`FileSystem`資料存放區。
 
 * `cache`
-快取大小(MB)。 此空間分佈於 `DocumentNodeStore`. 預設值為256 MB。 不過，Oak的讀取效能受益於較大的快取記憶體。
+快取大小(MB)。 此空間分佈於`DocumentNodeStore`中使用的各種快取中。 預設值為256 MB。 不過，Oak的讀取效能受益於較大的快取記憶體。
 
 * `blobCacheSize`
 AEM可能會快取經常使用的Blob，以避免從資料存放區重新擷取它們。 這樣做對效能的影響更大，尤其是在MongoDB資料庫中儲存Blob時。 所有以檔案系統為基礎的資料存放區，都受益於作業系統層級的磁碟快取。
 
 #### 資料存放區設定 {#data-store-configuration}
 
-資料存放區是用來儲存大小大於臨界值的檔案。 低於該臨界值時，檔案會儲存為檔案節點存放區中的屬性。 如果 `MongoBlobStore` ，會在MongoDB中建立專用集合以儲存blob。 此集合對 `mongod` 執行個體，並需要 `mongod` 擁有更多RAM以避免效能問題。 因此，建議的設定是避免 `MongoBlobStore` 用於生產部署與使用 `FileDataStore` 由所有AEM執行個體共用的NAS作為後盾。 因為作業系統層級快取在管理檔案時很有效率，所以磁碟上的檔案大小下限應該設定為接近磁碟的區塊大小。 如此可確保檔案系統有效率地使用，而且許多小檔案不會對 `mongod` 執行個體。
+資料存放區是用來儲存大小大於臨界值的檔案。 低於該臨界值時，檔案會儲存為檔案節點存放區中的屬性。 如果使用`MongoBlobStore`，則會在MongoDB中建立專用集合以儲存Blob。 此集合貢獻了`mongod`執行個體的工作集，並要求`mongod`擁有更多的RAM以避免效能問題。 因此，建議的設定是為生產部署避免`MongoBlobStore`，並使用由所有AEM執行個體共用的NAS支援的`FileDataStore`。 因為作業系統層級快取在管理檔案時很有效率，所以磁碟上的檔案大小下限應該設定為接近磁碟的區塊大小。 如此可確保檔案系統有效率地使用，而且許多小檔案不會對`mongod`執行個體的工作集產生過多的影響。
 
 以下是使用MongoDB進行最低AEM部署的典型資料存放區設定：
 
@@ -208,54 +208,54 @@ cacheSizeInMB=128
 其中：
 
 * `minRecordLength`
-位元組大小。 小於或等於此大小的二進位檔會與檔案節點存放區一起儲存。 會儲存二進位檔案的內容，而非儲存blob的ID。 對於大於此大小的二進位檔，二進位檔的ID會儲存為節點集合中檔案的屬性。 而且，二進位檔案的主體會儲存在 `FileDataStore` 在磁碟上。 4096位元組是典型的檔案系統區塊大小。
+位元組大小。 小於或等於此大小的二進位檔會與檔案節點存放區一起儲存。 會儲存二進位檔案的內容，而非儲存blob的ID。 對於大於此大小的二進位檔，二進位檔的ID會儲存為節點集合中檔案的屬性。 而且，二進位檔的主體儲存在磁碟上的`FileDataStore`中。 4096位元組是典型的檔案系統區塊大小。
 
 * `path`
-資料存放區根的路徑。 對於MongoMK部署，此路徑必須是所有AEM執行個體都可用的共用檔案系統。 通常使用網路附加儲存(NAS)伺服器。 對於類似Amazon Web Services的雲端部署， `S3DataFileStore` 也可供使用。
+資料存放區根的路徑。 對於MongoMK部署，此路徑必須是所有AEM執行個體都可用的共用檔案系統。 通常使用網路附加儲存(NAS)伺服器。 對於類似Amazon Web Services的雲端部署，`S3DataFileStore`也可供使用。
 
 * `cacheSizeInMB`
-二進位快取的大小總計(MB)。 它可用來快取小於下列值的二進位檔： `maxCacheBinarySize` 設定。
+二進位快取的大小總計(MB)。 用來快取小於`maxCacheBinarySize`設定的二進位檔。
 
 * `maxCachedBinarySize`
 在二進位快取中快取的二進位檔案大小上限（位元組）。 若使用檔案系統型資料存放區，不建議對資料存放區快取使用高值，因為作業系統已快取二進位檔案。
 
 #### 停用查詢提示 {#disabling-the-query-hint}
 
-建議您新增屬性，以停用與所有查詢一併傳送的查詢提示 `-Doak.mongo.disableIndexHint=true` 當您啟動AEM時。 如此可確保MongoDB會根據內部統計資料，計算最適合使用的索引。
+當您啟動AEM時，建議您新增屬性`-Doak.mongo.disableIndexHint=true`，以停用與所有查詢一併傳送的查詢提示。 如此可確保MongoDB會根據內部統計資料，計算最適合使用的索引。
 
 如果未停用查詢提示，則索引的任何效能調整都不會影響AEM的效能。
 
 #### 啟用MongoMK的永久性快取 {#enable-persistent-cache-for-mongomk}
 
-建議為MongoDB部署啟用持續快取設定，以針對具有高I/O讀取效能的環境最大化速度。 如需詳細資訊，請參閱 [Jackrabbit Oak檔案](https://jackrabbit.apache.org/oak/docs/nodestore/persistent-cache.html).
+建議為MongoDB部署啟用持續快取設定，以針對具有高I/O讀取效能的環境最大化速度。 如需詳細資訊，請參閱[Jackrabbit Oak檔案](https://jackrabbit.apache.org/oak/docs/nodestore/persistent-cache.html)。
 
 ## MongoDB作業系統最佳化 {#mongodb-operating-system-optimizations}
 
 ### 作業系統支援 {#operating-system-support}
 
-MongoDB 2.6使用記憶體對應儲存引擎，對RAM和磁碟之間作業系統層級管理的某些方面很敏感。 MongoDB執行個體的查詢和讀取效能取決於避免或消除通常稱為頁面錯誤的緩慢I/O作業。 這些問題為套用至 `mongod` 特別處理。 請勿將此與作業系統層級的頁面錯誤混為一談。
+MongoDB 2.6使用記憶體對應儲存引擎，對RAM和磁碟之間作業系統層級管理的某些方面很敏感。 MongoDB執行個體的查詢和讀取效能取決於避免或消除通常稱為頁面錯誤的緩慢I/O作業。 這些問題特別適用於`mongod`處理序的頁面錯誤。 請勿將此與作業系統層級的頁面錯誤混為一談。
 
 為了快速作業，MongoDB資料庫應該只存取已經在RAM中的資料。 它必須存取的資料是由索引和資料所組成。 這個索引和資料的集合稱為工作集。 當工作集大於可用的RAM時，MongoDB必須從磁碟中分頁該資料，這會產生I/O成本，並逐出已在記憶體中的其他資料。 如果逐出造成資料從磁碟重新載入，頁面錯誤會占主導地位，效能會降低。 如果工作集是動態和可變的，則會產生更多頁面錯誤以支援操作。
 
-MongoDB可在數種作業系統上執行，包括各種Linux®風格、Windows和macOS。 另請參閱 [https://docs.mongodb.com/manual/installation/#supported-platforms](https://docs.mongodb.com/manual/installation/#supported-platforms) 以取得其他詳細資訊。 根據您的作業系統選擇，MongoDB有不同的作業系統層級建議。 記錄在 [https://docs.mongodb.com/manual/administration/production-checklist-operations/#operating-system-configuration](https://docs.mongodb.com/manual/administration/production-checklist-operations/#operating-system-configuration) 為了方便起見，請參閱此處摘要。
+MongoDB可在數種作業系統上執行，包括各種Linux®風格、Windows和macOS。 如需其他詳細資訊，請參閱[https://docs.mongodb.com/manual/installation/#supported-platforms](https://docs.mongodb.com/manual/installation/#supported-platforms)。 根據您的作業系統選擇，MongoDB有不同的作業系統層級建議。 本文記錄於[https://docs.mongodb.com/manual/administration/production-checklist-operations/#operating-system-configuration](https://docs.mongodb.com/manual/administration/production-checklist-operations/#operating-system-configuration)，並摘要至此處，以方便您參考。
 
 #### Linux® {#linux}
 
-* 關閉透明的hugpage和磁碟重組。 另請參閱 [透明的大型頁面設定](https://docs.mongodb.com/manual/tutorial/transparent-huge-pages/) 以取得詳細資訊。
-* [調整預讀設定](https://docs.mongodb.com/manual/administration/production-notes/#readahead) 在儲存資料庫檔案的裝置上，以符合您的使用案例。
+* 關閉透明的hugpage和磁碟重組。 如需詳細資訊，請參閱[透明大型頁面設定](https://docs.mongodb.com/manual/tutorial/transparent-huge-pages/)。
+* [調整儲存資料庫檔案之裝置上的預讀設定](https://docs.mongodb.com/manual/administration/production-notes/#readahead)，以符合您的使用案例。
 
    * 對於MMAPv1儲存引擎，如果您的工作集大於可用的RAM，而且檔案存取模式是隨機的，請考慮將讀取提前數降低到32或16。 評估不同的設定，以便找出最佳值，最大化常駐記憶體並降低頁面錯誤數目。
-   * 對於WiredTiger儲存引擎，無論儲存媒體型別為何（旋轉、SSD等），都請將讀取前設定為0。 一般而言，除非測試顯示可測量、可重複及可靠的好處，以獲得更高的預先讀取值，否則請使用建議的預先讀取設定。 [MongoDB Professional支援](https://docs.mongodb.com/manual/administration/production-notes/#readahead) 可針對非零預先讀取設定提供建議和指引。
+   * 對於WiredTiger儲存引擎，無論儲存媒體型別為何（旋轉、SSD等），都請將讀取前設定為0。 一般而言，除非測試顯示可測量、可重複及可靠的好處，以獲得更高的預先讀取值，否則請使用建議的預先讀取設定。 [MongoDB Professional Support](https://docs.mongodb.com/manual/administration/production-notes/#readahead)可提供非零預讀組態的建議與指引。
 
 * 如果您在虛擬環境中執行RHEL 7 / CentOS 7，請停用調整工具。
 * 當RHEL 7/CentOS 7在虛擬環境中執行時，調整工具會自動叫用從效能輸送量衍生的效能設定檔，這會自動將預先讀取設定設為4 MB。 此設定可能會對效能造成負面影響。
 * 使用SSD磁碟機的空檔或截止日期磁碟排程器。
 * 使用客體VM中虛擬化磁碟機的Noop磁碟排程器。
-* 停用NUMA或設定 `vm.zone_reclaim_mode` 至0並執行 [mongod](https://docs.mongodb.com/manual/administration/production-notes/#readahead) 具有節點交錯的例項。 請參閱： [MongoDB與NUMA硬體](https://docs.mongodb.com/manual/administration/production-notes/#readahead) 以取得詳細資訊。
+* 停用NUMA或將`vm.zone_reclaim_mode`設為0，並執行具有節點交錯的[mongod](https://docs.mongodb.com/manual/administration/production-notes/#readahead)執行個體。 如需詳細資訊，請參閱： [MongoDB與NUMA硬體](https://docs.mongodb.com/manual/administration/production-notes/#readahead)。
 
-* 調整硬體上的限制值，使其符合您的使用案例。 若為多個 [mongod](https://docs.mongodb.com/manual/reference/program/mongod/#bin.mongod) 或 [蒙古文](https://docs.mongodb.com/manual/reference/program/mongos/#bin.mongos) 例證在相同使用者下執行，請相應地縮放極限值。 請參閱： [UNIX® ulimit設定](https://docs.mongodb.com/manual/reference/ulimit/) 以取得詳細資訊。
+* 調整硬體上的限制值，使其符合您的使用案例。 若有多個[mongod](https://docs.mongodb.com/manual/reference/program/mongod/#bin.mongod)或[mongos](https://docs.mongodb.com/manual/reference/program/mongos/#bin.mongos)執行個體正在同一個使用者下執行，請相應地調整ulimit值。 如需詳細資訊，請參閱： [UNIX® ulimit設定](https://docs.mongodb.com/manual/reference/ulimit/)。
 
-* 使用noatime進行 [dbPath](https://docs.mongodb.com/manual/reference/configuration-options/#storage.dbPath) 掛接點。
+* [dbPath](https://docs.mongodb.com/manual/reference/configuration-options/#storage.dbPath)掛接點使用noatime。
 * 針對您的部署，設定足夠的檔案控制代碼(fs.file-max)、核心pid限制(kernel.pid_max)以及每個處理序的最大執行緒數(kernel.threads-max)。 對於大型系統，下列值可提供良好的起點：
 
    * fs.file-max值98000，
@@ -263,7 +263,7 @@ MongoDB可在數種作業系統上執行，包括各種Linux®風格、Windows�
    * andkernel.threads-64000的最大值
 
 * 確定系統已設定交換空間。 如需適當大小的詳細資訊，請參閱作業系統的檔案。
-* 請確定系統預設的TCP keepalive已正確設定。 300的值通常可為復本集和共用叢集提供更好的效能。 請參閱： [TCP keepalive時間是否會影響MongoDB部署？](https://docs.mongodb.com/manual/faq/diagnostics/#faq-keepalive) ，以取得詳細資訊。
+* 請確定系統預設的TCP keepalive已正確設定。 300的值通常可為復本集和共用叢集提供更好的效能。 請參閱： [TCP keepalive時間是否會影響MongoDB部署？常見問題集中的](https://docs.mongodb.com/manual/faq/diagnostics/#faq-keepalive)以取得詳細資訊。
 
 #### Windows {#windows}
 
@@ -285,7 +285,7 @@ WiredTiger使用檔案層級的並行控制來進行寫入作業。 因此，多
 
 WiredTiger使用MultiVersion Concurrency Control (MVCC)。 作業開始時，WiredTiger會提供資料到交易的時間點快照。 快照可呈現記憶體中資料的一致檢視。
 
-寫入磁碟時，WiredTiger會以一致的方式將快照中的所有資料寫入磁碟。 現在 —  [經久耐用](https://docs.mongodb.com/manual/reference/glossary/#term-durable) 資料在資料檔案中充當查核點。 查核點可確保資料檔案與上一個查核點一致（含上一個查核點）。 也就是說，查核點可作為復原點。
+寫入磁碟時，WiredTiger會以一致的方式將快照中的所有資料寫入磁碟。 現在 — [持久](https://docs.mongodb.com/manual/reference/glossary/#term-durable)資料做為資料檔中的查核點。 查核點可確保資料檔案與上一個查核點一致（含上一個查核點）。 也就是說，查核點可作為復原點。
 
 MongoDB會設定WiredTiger以60秒或2 GB日誌資料的間隔建立檢查點（即將快照資料寫入磁碟）。
 
@@ -293,41 +293,41 @@ MongoDB會設定WiredTiger以60秒或2 GB日誌資料的間隔建立檢查點（
 
 當WiredTiger的中繼資料表自動更新以參考新查核點時，新查核點將變為可存取且永久性。 存取新查核點後，WiredTiger會從舊查核點釋放頁面。
 
-使用WiredTiger，即使不使用 [日誌](https://docs.mongodb.com/manual/reference/glossary/#term-durable)，MongoDB可從最後一個查核點復原；不過，若要復原最後一個查核點之後所做的變更，請使用執行 [日誌](https://docs.mongodb.com/manual/core/wiredtiger/#storage-wiredtiger-journal).
+使用WiredTiger，即使沒有[日誌](https://docs.mongodb.com/manual/reference/glossary/#term-durable)，MongoDB也可以從最後一個查核點復原；不過，若要復原最後一個查核點之後所做的變更，請使用[日誌](https://docs.mongodb.com/manual/core/wiredtiger/#storage-wiredtiger-journal)執行。
 
 #### 日誌 {#journal}
 
-WiredTiger使用預先寫入交易登入組合，搭配 [查核點](https://docs.mongodb.com/manual/core/wiredtiger/#storage-wiredtiger-checkpoints) 以確保資料耐久性。
+WiredTiger使用預先寫入交易登入組合搭配[查核點](https://docs.mongodb.com/manual/core/wiredtiger/#storage-wiredtiger-checkpoints)，以確保資料持續性。
 
-WiredTiger日誌會在查核點之間儲存所有資料修改。 如果MongoDB在查核點之間結束，它會使用日誌來重播自上次查核點以來修改的所有資料。 有關MongoDB將日誌資料寫入磁碟的頻率的資訊，請參閱 [日誌程式](https://docs.mongodb.com/manual/core/journaling/#journal-process).
+WiredTiger日誌會在查核點之間儲存所有資料修改。 如果MongoDB在查核點之間結束，它會使用日誌來重播自上次查核點以來修改的所有資料。 如需MongoDB將日誌資料寫入磁碟的頻率資訊，請參閱[日誌處理程式](https://docs.mongodb.com/manual/core/journaling/#journal-process)。
 
-WiredTiger日誌是使用 [貼齊](https://docs.mongodb.com/manual/core/journaling/#journal-process) 壓縮程式庫。 若要指定替代壓縮演演算法或不壓縮，請使用 [storage.wiredTiger.engineConfig.journalCompressor](https://docs.mongodb.com/manual/reference/configuration-options/#storage.wiredTiger.engineConfig.journalCompressor) 設定。
+WiredTiger日誌是使用[snappy](https://docs.mongodb.com/manual/core/journaling/#journal-process)壓縮程式庫壓縮。 若要指定替代壓縮演演算法或不壓縮，請使用[storage.wiredTiger.engineConfig.journalCompressor](https://docs.mongodb.com/manual/reference/configuration-options/#storage.wiredTiger.engineConfig.journalCompressor)設定。
 
-另請參閱 [使用WiredTiger進行日誌](https://docs.mongodb.com/manual/core/journaling/#journaling-wiredtiger).
+請參閱[使用WiredTiger](https://docs.mongodb.com/manual/core/journaling/#journaling-wiredtiger)進行日記。
 
 >[!NOTE]
 >
 >WiredTiger的最小記錄大小為128位元組。 如果記錄檔記錄為128位元組或更小，WiredTiger不會壓縮該記錄。
 >
->您可以透過設定來停用日誌 [storage.journal.enabled](https://docs.mongodb.com/manual/reference/configuration-options/#storage.journal.enabled) 設為false，這會減少維護日誌的額外負荷。
+>您可以將[storage.journal.enabled](https://docs.mongodb.com/manual/reference/configuration-options/#storage.journal.enabled)設定為false來停用日誌，這樣可以減少維護日誌的額外負荷。
 >
->的 [獨立](https://docs.mongodb.com/manual/reference/glossary/#term-standalone) 執行個體，不使用日誌表示當MongoDB在查核點之間意外退出時，您會遺失一些資料修改。 針對成員 [復本集](https://docs.mongodb.com/manual/reference/glossary/#term-replica-set)，復寫程式可提供足夠的耐用性保證。
+>對於[獨立](https://docs.mongodb.com/manual/reference/glossary/#term-standalone)執行個體，不使用日誌表示當MongoDB在查核點之間意外退出時，您會遺失一些資料修改。 對於[復本集](https://docs.mongodb.com/manual/reference/glossary/#term-replica-set)的成員，復寫程式可提供足夠的耐用性保證。
 
 #### 壓縮 {#compression}
 
 使用WiredTiger時，MongoDB支援所有集合和索引的壓縮。 壓縮可儘量減少儲存裝置的使用，但需額外的CPU。
 
-根據預設，WiredTiger使用區塊壓縮 [貼齊](https://docs.mongodb.com/manual/reference/glossary/#term-snappy) 所有集合和的壓縮程式庫 [字首壓縮](https://docs.mongodb.com/manual/reference/glossary/#term-prefix-compression) 用於所有索引。
+根據預設，WiredTiger使用區塊壓縮，針對所有集合使用[snappy](https://docs.mongodb.com/manual/reference/glossary/#term-snappy)壓縮程式庫，針對所有索引使用[首碼壓縮](https://docs.mongodb.com/manual/reference/glossary/#term-prefix-compression)。
 
-若為集合，則使用區塊壓縮 [zlib](https://docs.mongodb.com/manual/reference/glossary/#term-zlib) 也可供使用。 若要指定替代壓縮演演算法或不壓縮，請使用 [storage.wiredTiger.collectionConfig.blockCompressor](https://docs.mongodb.com/manual/reference/glossary/#term-zlib) 設定。
+集合也可使用[zlib](https://docs.mongodb.com/manual/reference/glossary/#term-zlib)的區塊壓縮。 若要指定替代壓縮演演算法或不壓縮，請使用[storage.wiredTiger.collectionConfig.blockCompressor](https://docs.mongodb.com/manual/reference/glossary/#term-zlib)設定。
 
-對於索引，為停用 [字首壓縮](https://docs.mongodb.com/manual/reference/glossary/#term-prefix-compression)，使用 [storage.wiredTiger.indexConfig.prefixCompression](https://docs.mongodb.com/manual/reference/configuration-options/#storage.wiredTiger.indexConfig.prefixCompression) 設定。
+對於索引，若要停用[首碼壓縮](https://docs.mongodb.com/manual/reference/glossary/#term-prefix-compression)，請使用[storage.wiredTiger.indexConfig.prefixCompression](https://docs.mongodb.com/manual/reference/configuration-options/#storage.wiredTiger.indexConfig.prefixCompression)設定。
 
-壓縮設定也可以在集合和索引建立期間根據每個集合和每個索引進行配置。 另請參閱 [指定儲存引擎選項](https://docs.mongodb.com/manual/reference/method/db.createCollection/#create-collection-storage-engine-options) 和 [db.collection.createIndex() storageEngine](https://docs.mongodb.com/manual/reference/method/db.collection.createIndex/#createindex-options) 選項。
+壓縮設定也可以在集合和索引建立期間根據每個集合和每個索引進行配置。 請參閱[指定儲存引擎選項](https://docs.mongodb.com/manual/reference/method/db.createCollection/#create-collection-storage-engine-options)和[db.collection.createIndex() storageEngine](https://docs.mongodb.com/manual/reference/method/db.collection.createIndex/#createindex-options)選項。
 
 對於大部分的工作負載，預設的壓縮設定可平衡儲存效率與處理需求。
 
-預設也會壓縮WiredTiger日誌。 如需有關日誌壓縮的資訊，請參閱 [日誌](https://docs.mongodb.com/manual/core/wiredtiger/#storage-wiredtiger-journal).
+預設也會壓縮WiredTiger日誌。 如需日誌壓縮的資訊，請參閱[日誌](https://docs.mongodb.com/manual/core/wiredtiger/#storage-wiredtiger-journal)。
 
 #### 記憶體使用率 {#memory-use}
 
@@ -352,29 +352,29 @@ WiredTiger內部快取中的集合資料會解壓縮，並使用與磁碟格式�
 
 透過檔案系統快取，MongoDB會自動使用WiredTiger快取或其他處理程式未使用的所有可用記憶體。
 
-若要調整WiredTiger內部快取的大小，請參閱 [storage.wiredTiger.engineConfig.cacheSizeGB](https://docs.mongodb.com/manual/reference/configuration-options/#storage.wiredTiger.engineConfig.cacheSizeGB) 和 [—wiredTigerCacheSizeGB](https://docs.mongodb.com/manual/reference/program/mongod/#cmdoption-wiredtigercachesizegb). 請避免增加WiredTiger內部快取大小，使其超過預設值。
+若要調整WiredTiger內部快取的大小，請參閱[storage.wiredTiger.engineConfig.cacheSizeGB](https://docs.mongodb.com/manual/reference/configuration-options/#storage.wiredTiger.engineConfig.cacheSizeGB)和[—wiredTigerCacheSizeGB](https://docs.mongodb.com/manual/reference/program/mongod/#cmdoption-wiredtigercachesizegb)。 請避免增加WiredTiger內部快取大小，使其超過預設值。
 
 ### NUMA {#numa}
 
-NUMA （非統一記憶體存取）可讓核心管理記憶體對應到處理器核心的方式。 雖然此程式會嘗試讓核心的記憶體存取速度更快，以確保他們能夠存取所需的資料，但NUMA會干擾MMAP，導致無法預測讀取的額外延遲。 因此，必須針對以下專案停用NUMA `mongod` 處理所有支援的作業系統。
+NUMA （非統一記憶體存取）可讓核心管理記憶體對應到處理器核心的方式。 雖然此程式會嘗試讓核心的記憶體存取速度更快，以確保他們能夠存取所需的資料，但NUMA會干擾MMAP，導致無法預測讀取的額外延遲。 因此，必須在所有支援的作業系統上為`mongod`處理序停用NUMA。
 
 實質上，在NUMA架構中，記憶體會連線至CPU，而CPU會連線至匯流排。 在SMP或UMA架構中，記憶體會連線至匯流排並由CPU共用。 當執行緒在NUMA CPU上分配記憶體時，會根據原則進行分配。 預設值是配置連線到執行緒本機CPU的記憶體，除非沒有可用的記憶體，否則會使用可用CPU的記憶體，但成本較高。 配置之後，記憶體不會在CPU之間移動。 配置是由從父系對話串繼承的原則執行，該對話串最終是啟動程式的對話串。
 
-在許多將電腦視為多核心統一記憶體架構的資料庫中，此情況會導致先讓初始CPU滿滿，之後讓次要CPU滿滿。 如果中央執行緒負責配置記憶體緩衝區，就特別正確。 解決方案是變更用來啟動 `mongod` 執行下列命令來處理：
+在許多將電腦視為多核心統一記憶體架構的資料庫中，此情況會導致先讓初始CPU滿滿，之後讓次要CPU滿滿。 如果中央執行緒負責配置記憶體緩衝區，就特別正確。 解決方案是執行下列命令，變更用來啟動`mongod`處理序之主要執行緒的NUMA原則：
 
 ```shell
 numactl --interleaved=all <mongod> -f config
 ```
 
-此原則會以循環配置方式為所有CPU節點配置記憶體，以確保所有節點上的均分分佈。 它不會產生記憶體的最高效能存取，如同具有多個CPU硬體的系統。 大約一半的記憶體操作速度較慢，而且會透過匯流排，但是 `mongod` 並未以最佳方式寫入NUMA目標，因此這是合理的折衷方案。
+此原則會以循環配置方式為所有CPU節點配置記憶體，以確保所有節點上的均分分佈。 它不會產生記憶體的最高效能存取，如同具有多個CPU硬體的系統。 大約一半的記憶體操作速度較慢，而且會超出匯流排，但`mongod`並未以最佳方式寫入目標NUMA，所以這是合理的折衷方式。
 
 ### NUMA問題 {#numa-issues}
 
-如果 `mongod` 處理序是從以外的位置啟動 `/etc/init.d` 資料夾，可能尚未以正確的NUMA原則開始。 依預設原則而定，可能會出現問題。 原因是因為適用於MongoDB的各種Linux® Package Manager安裝程式也安裝了包含組態檔的服務 `/etc/init.d` ，會執行上述步驟。 如果您直接從封存安裝並執行MongoDB ( `.tar.gz`)，您必須手動執行 `numactl` 程式。
+如果`mongod`處理序是從`/etc/init.d`資料夾以外的位置啟動，則可能尚未以正確的NUMA原則啟動。 依預設原則而定，可能會出現問題。 原因是因為適用於MongoDB的各種Linux® Package Manager安裝程式也安裝了包含在`/etc/init.d`中組態檔的服務，這些安裝程式會執行上述步驟。 如果您直接從封存( `.tar.gz`)安裝並執行MongoDB，則必須在`numactl`程式下手動執行mongod。
 
 >[!NOTE]
 >
->如需有關可用NUMA原則的詳細資訊，請參閱 [numactl檔案](https://linux.die.net/man/8/numactl).
+>如需有關可用NUMA原則的詳細資訊，請參閱[numactl檔案](https://linux.die.net/man/8/numactl)。
 
 MongoDB程式在不同配置原則下的行為不同：
 
@@ -397,7 +397,7 @@ MongoDB程式在不同配置原則下的行為不同：
 * `--preferred=<node>`
 偏好配置至節點，但如果偏好節點已滿，則會退回給其他節點。 可以使用定義節點的相對記號。 此外，執行緒會在所有節點上執行。
 
-某些原則可能會造成提供給的可用記憶體不足 `mongod` 程式。 與MySQL不同，MongoDB主動避免作業系統層級分頁，因此 `mongod` 處理序可能會取得較少的可用記憶體。
+某些原則可能會造成提供給`mongod`處理序的所有可用RAM不足。 與MySQL不同，MongoDB主動避免作業系統層級分頁，因此`mongod`處理序可能會取得較少的可用記憶體。
 
 #### 交換 {#swapping}
 
@@ -405,7 +405,7 @@ MongoDB程式在不同配置原則下的行為不同：
 
 #### 遠端檔案系統 {#remote-filesystems}
 
-不建議將NFS等遠端檔案系統用於MongoDB的內部資料檔案（Mongod處理資料庫檔案），因為它們會引入太多延遲。 請勿混淆Oak Blob (FileDataStore)儲存（建議使用NFS）所需的共用檔案系統。
+不建議將NFS等遠端檔案系統用於MongoDB的內部資料檔案（Mongod處理資料庫檔案），因為它們會引入太多延遲。 請勿與儲存Oak Blob (FileDataStore) （建議使用NFS）時所需的共用檔案系統混淆。
 
 #### 預先閱讀 {#read-ahead}
 
@@ -415,15 +415,15 @@ MongoDB程式在不同配置原則下的行為不同：
 
 #### 最低核心版本 {#minimum-kernel-versions}
 
-* **2.6.23** 的 `ext4` 檔案系統
+* `ext4`檔案系統的&#x200B;**2.6.23**
 
-* **2.6.25** 的 `xfs` 檔案系統
+* `xfs`檔案系統的&#x200B;**2.6.25**
 
 #### 資料庫磁碟的建議設定 {#recommended-settings-for-database-disks}
 
-**關閉時間**
+**關閉atime**
 
-建議您 `atime` 會針對包含資料庫的磁碟關閉。
+建議為包含資料庫的磁碟關閉`atime`。
 
 **設定NOOP磁碟排程器**
 
@@ -435,7 +435,7 @@ MongoDB程式在不同配置原則下的行為不同：
 cat /sys/block/sdg/queue/scheduler
 ```
 
-如果回應為 `noop`，您只需執行其他作業。
+如果回應為`noop`，則您無需執行其他動作。
 
 如果NOOP不是已設定的I/O排程器，您可以執行以變更它：
 
@@ -467,7 +467,7 @@ Red Hat® Linux®使用稱為Transparent Great Pages (THP)的記憶體管理演�
 
 您可以依照以下程式將其停用：
 
-1. 開啟 `/etc/grub.conf` 檔案於您選擇的文字編輯器中。
+1. 在您選擇的文字編輯器中開啟`/etc/grub.conf`檔案。
 1. 將下列行加入grub.conf檔案：
 
    ```xml
@@ -488,11 +488,11 @@ Red Hat® Linux®使用稱為Transparent Great Pages (THP)的記憶體管理演�
 
 >[!NOTE]
 >
->如需透明大型頁面的詳細資訊，請參閱此 [文章](https://access.redhat.com/solutions/46111).
+>如需透明大型頁面的詳細資訊，請參閱此[文章](https://access.redhat.com/solutions/46111)。
 
 #### 停用NUMA {#disable-numa}
 
-在啟用NUMA的大多數安裝中，MongoDB精靈會在透過以服務方式執行時，自動停用它。 `/etc/init.d` 資料夾。
+在啟用NUMA的大多數安裝中，如果從`/etc/init.d`資料夾以服務方式執行，MongoDB精靈會自動停用它。
 
 如果不是這種情況，您可以對每個處理序層級停用NUMA。 若要停用，請執行以下命令：
 
@@ -500,7 +500,7 @@ Red Hat® Linux®使用稱為Transparent Great Pages (THP)的記憶體管理演�
 numactl --interleave=all <path_to_process>
 ```
 
-位置 `<path_to_process>` 是mongod流程的路徑。
+其中`<path_to_process>`是mongod處理序的路徑。
 
 接著，執行下列動作來停用區域回收：
 
@@ -510,25 +510,25 @@ echo 0 > /proc/sys/vm/zone_reclaim_mode
 
 #### 調整mongod程式的ulimit設定 {#tweak-the-ulimit-settings-for-the-mongod-process}
 
-Linux®可讓您設定資源配置的控制權，其方式為 `ulimit` 命令。 此設定可由使用者或每個程式來完成。
+Linux®允許透過`ulimit`命令對資源配置進行可設定的控制。 此設定可由使用者或每個程式來完成。
 
-建議您根據以下規則來設定mongod程式的ulimit [MongoDB建議的ulimit設定](https://docs.mongodb.org/manual/reference/ulimit/#recommended-ulimit-settings).
+建議您根據[MongoDB建議的ulimit設定](https://docs.mongodb.org/manual/reference/ulimit/#recommended-ulimit-settings)，設定mongod處理程式的ulimit。
 
 #### 測試MongoDB I/O效能 {#test-mongodb-i-o-performance}
 
-MongoDB提供了一個工具，稱為 `mongoperf` 這是為了測試I/O效能。 建議您使用它來測試組成您基礎建設的所有MongoDB執行個體的效能。
+MongoDB提供名為`mongoperf`的工具，用來測試I/O效能。 建議您使用它來測試組成您基礎建設的所有MongoDB執行個體的效能。
 
-使用方式的詳細資訊 `mongoperf`，檢視 [MongoDB檔案](https://docs.mongodb.org/manual/reference/program/mongoperf/).
+如需如何使用`mongoperf`的資訊，請檢視[MongoDB檔案](https://docs.mongodb.org/manual/reference/program/mongoperf/)。
 
 >[!NOTE]
 >
->此 `mongoperf` 是在其執行平台上之MongoDB效能的指標。 因此，不應將結果視為生產系統效能的最終結果。
+>`mongoperf`是執行它的平台上的MongoDB效能指標。 因此，不應將結果視為生產系統效能的最終結果。
 >
->如需更精確的效能結果，您可以使用 `fio` Linux®工具。
+>如需更精確的效能結果，您可以使用`fio` Linux®工具執行補充測試。
 
 **在組成您部署的虛擬機器器上測試讀取效能**
 
-安裝工具之後，切換至MongoDB資料庫目錄以執行測試。 接著，執行以開始第一個測試 `mongoperf`使用此設定：
+安裝工具之後，切換至MongoDB資料庫目錄以執行測試。 然後，使用此組態執行`mongoperf`以開始第一個測試：
 
 ```shell
 echo "{nThreads:32,fileSizeMB:1000,r:true}" | mongoperf
@@ -536,7 +536,7 @@ echo "{nThreads:32,fileSizeMB:1000,r:true}" | mongoperf
 
 對於所有MongoDB執行個體，所需的輸出應高達每秒2 GB (2 GB/s)以及以32個執行緒執行的500.000 IOPS。
 
-執行第二次測試，這次使用記憶體對應檔案，透過設定 `mmf:true` 引數：
+透過設定`mmf:true`引數，執行第二次測試，這次使用記憶體對應檔案：
 
 ```shell
 echo "{nThreads:32,fileSizeMB:1000,r:true,mmf:true}" | mongoperf
@@ -550,7 +550,7 @@ echo "{nThreads:32,fileSizeMB:1000,r:true,mmf:true}" | mongoperf
 
 **測試主要MongoDB執行個體的寫入效能**
 
-接下來，執行以檢查主要MongoDB執行個體的I/O寫入效能 `mongoperf` 從MongoDB資料庫目錄，使用相同的設定：
+接著，使用相同的設定從MongoDB資料庫目錄執行`mongoperf`，檢查主要MongoDB執行個體的I/O寫入效能：
 
 ```shell
 echo "{nThreads:32,fileSizeMB:1000,w:true}" | mongoperf
@@ -566,24 +566,24 @@ echo "{nThreads:32,fileSizeMB:1000,w:true}" | mongoperf
 
 1. 關閉記憶體膨脹
 1. 為裝載MongoDB資料庫的虛擬機器器預先配置及保留記憶體
-1. 使用儲存I/O控制將足夠的I/O配置給 `mongod` 程式。
-1. 透過設定來保證主控MongoDB之機器的CPU資源 [CPU保留](https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.hostclient.doc/GUID-6C9023B2-3A8F-48EB-8A36-44E3D14958F6.html?hWord=N4IghgNiBc4RB7AxmALgUwAQGEAKBVTAJ3QGcEBXIpMkAXyA)
+1. 使用儲存體I/O控制將足夠的I/O配置給`mongod`處理序。
+1. 透過設定[CPU保留區](https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.hostclient.doc/GUID-6C9023B2-3A8F-48EB-8A36-44E3D14958F6.html?hWord=N4IghgNiBc4RB7AxmALgUwAQGEAKBVTAJ3QGcEBXIpMkAXyA)，保證主控MongoDB之機器的CPU資源
 
-1. 請考慮使用ParaVirtual I/O驅動程式。 <!-- URL is a 404 See [knowledgebase article](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1010398).-->
+1. 請考慮使用ParaVirtual I/O驅動程式。<!-- URL is a 404 See [knowledgebase article](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1010398).-->
 
 ### Amazon Web Services {#amazon-web-services}
 
-如需有關如何使用Amazon Web Services設定MongoDB的檔案，請檢視 [設定AWS整合](https://www.mongodb.com/docs/cloud-manager/tutorial/configure-aws-integration/) MongoDB網站上的文章。
+如需有關如何使用Amazon Web Services設定MongoDB的檔案，請參閱MongoDB網站上的[設定AWS整合](https://www.mongodb.com/docs/cloud-manager/tutorial/configure-aws-integration/)文章。
 
 ## 部署前保護MongoDB {#securing-mongodb-before-deployment}
 
-檢視此文章於 [安全部署MongoDB](https://blogs.adobe.com/security/2015/07/securely-deploying-mongodb-3-0.html) 瞭解部署前如何保護資料庫組態安全的建議。
+請參閱[上這篇文章以安全地部署MongoDB](https://blogs.adobe.com/security/2015/07/securely-deploying-mongodb-3-0.html)，取得部署前如何保護資料庫組態安全的建議。
 
 ## Dispatcher {#dispatcher}
 
-### 為Dispatcher選擇作業系統 {#choosing-the-operating-system-for-the-dispatcher}
+### 選擇Dispatcher的作業系統 {#choosing-the-operating-system-for-the-dispatcher}
 
-為了適當地為您的MongoDB部署提供服務，託管Dispatcher的作業系統必須正在執行 **Apache httpd** **版本2.4或更新版本。**
+若要正確為您的MongoDB部署提供服務，主控Dispatcher的作業系統必須執行&#x200B;**Apache httpd** **版本2.4或更新版本。**
 
 此外，請確定您組建中使用的所有程式庫都是最新的，以將安全性影響降至最低。
 
@@ -595,7 +595,7 @@ echo "{nThreads:32,fileSizeMB:1000,w:true}" | mongoperf
 
 在沒有Dispatcher的情況下執行AEM需要由其他應用程式執行SSL終止和負載平衡。 這是必要操作，因為工作階段必須和建立工作階段的AEM執行個體有相關性，這個概念稱為粘性連線。 原因是為了確保內容的更新顯示最小的延遲。
 
-檢查 [Dispatcher檔案](https://experienceleague.adobe.com/en/docs/experience-manager-dispatcher/using/dispatcher) 以取得如何設定的詳細資訊。
+如需如何設定的詳細資訊，請參閱[Dispatcher檔案](https://experienceleague.adobe.com/en/docs/experience-manager-dispatcher/using/dispatcher)。
 
 ### 其他設定 {#additional-configuration}
 
@@ -607,13 +607,13 @@ echo "{nThreads:32,fileSizeMB:1000,w:true}" | mongoperf
 
 #### 過期時間過長 {#long-expires}
 
-依預設，從AEM Dispatcher傳送的內容具有Last-Modified和Etag標頭，沒有內容到期的指示。 此流程可確保使用者介面一律取得最新版本的資源。 這也表示瀏覽器會執行GET作業，檢視資源是否已變更。 因此，它可能會產生HTTP回應為304 （未修改）的多個請求，端視頁面載入而定。 對於未過期的資源，設定Expires標頭並移除Last-Modified和ETag標頭會導致快取內容。 而且，在符合Expires標頭中的日期之前，不會提出進一步的更新請求。
+依預設，從AEM Dispatcher傳送的內容具有Last-Modified和Etag標題，且沒有內容到期的指示。 此流程可確保使用者介面一律取得最新版本的資源。 這也表示瀏覽器會執行GET作業，檢視資源是否已變更。 因此，它可能會產生HTTP回應為304 （未修改）的多個請求，端視頁面載入而定。 對於未過期的資源，設定Expires標頭並移除Last-Modified和ETag標頭會導致快取內容。 而且，在符合Expires標頭中的日期之前，不會提出進一步的更新請求。
 
 不過，使用此方法表示沒有合理的方式可讓資源在Expires標頭過期之前在瀏覽器中過期。 若要緩解此工作流程，可以將HtmlClientLibraryManager設定為使用者端程式庫使用不可變URL。
 
 這些URL保證不會變更。 當URL中包含的資源內文變更時，這些變更會在URL中反映，以確保瀏覽器要求正確版本的資源。
 
-預設設定會將選取器新增至HtmlClientLibraryManager。 作為選擇器，資源會在Dispatcher中快取，且選擇器保持不變。 此外，此選取器也可用來確保正確的到期行為。 預設選取器會遵循 `lc-.*?-lc` 模式。 以下Apache httpd設定指令可確保符合該模式的所有請求都以適當的到期時間提供。
+預設設定會將選取器新增至HtmlClientLibraryManager。 作為選擇器，資源會在Dispatcher中快取，且選擇器保持不變。 此外，此選取器也可用來確保正確的到期行為。 預設選擇器遵循`lc-.*?-lc`模式。 以下Apache httpd設定指令可確保符合該模式的所有請求都以適當的到期時間提供。
 
 ```xml
 Header set Expires "Tue, 20 Jan 2037 04:20:42 GMT" "expr=(%{REQUEST_STATUS} -eq 200) && (%{REQUEST_URI} =~ /.*lc-.*?-lc.*/)"
@@ -627,7 +627,7 @@ Header unset Pragma "expr=(%{REQUEST_STATUS} -eq 200) && (%{REQUEST_URI} =~ /.*l
 
 其中傳送的內容不含內容型別，許多瀏覽器會嘗試透過讀取內容的前幾個位元組來猜測內容型別。 此方法稱為「探查」。 嗅探會開啟安全性弱點，因為可以寫入存放庫的使用者可能會上傳沒有內容型別的惡意內容。
 
-因此，建議您新增 `no-sniff` 標頭給Dispatcher提供的資源。 不過，Dispatcher不會快取標頭。 因此，這表示任何從本機檔案系統提供的內容都會由其擴充功能決定其內容型別，而非使用來自其原始AEM伺服器的原始內容型別標頭。
+因此，建議您將`no-sniff`標題新增至Dispatcher所提供的資源。 不過，Dispatcher不會快取標頭。 因此，這表示任何從本機檔案系統提供的內容都會由其擴充功能決定其內容型別，而非使用來自其原始AEM伺服器的原始內容型別標頭。
 
 如果已知網頁應用程式從未提供沒有檔案型別的快取資源，則無法安全地啟用嗅探。
 
@@ -657,15 +657,15 @@ CSP可讓您微調原則。 不過，在複雜的應用程式中，開發CSP標�
 
 >[!NOTE]
 >
->如需此運作方式的詳細資訊，請參閱 [內容安全性原則的OWASP頁面](https://owasp.deteact.com/cheat/cheatsheets/Content_Security_Policy_Cheat_Sheet.html).
+>如需此運作方式的詳細資訊，請參閱內容安全性原則](https://owasp.deteact.com/cheat/cheatsheets/Content_Security_Policy_Cheat_Sheet.html)上的[OWASP頁面。
 
 ### 大小調整 {#sizing}
 
-如需有關大小調整的詳細資訊，請參閱 [硬體大小調整准則](/help/managing/hardware-sizing-guidelines.md).
+如需調整大小的詳細資訊，請參閱[硬體調整指南](/help/managing/hardware-sizing-guidelines.md)。
 
 ### MongoDB效能最佳化 {#mongodb-performance-optimization}
 
-如需MongoDB效能的一般資訊，請參閱 [分析MongoDB效能](https://docs.mongodb.org/manual/administration/analyzing-mongodb-performance/).
+如需MongoDB效能的一般資訊，請參閱[分析MongoDB效能](https://docs.mongodb.org/manual/administration/analyzing-mongodb-performance/)。
 
 ## 已知限制 {#known-limitations}
 
@@ -677,8 +677,8 @@ CSP可讓您微調原則。 不過，在複雜的應用程式中，開發CSP標�
 
 ### 頁面名稱長度 {#page-name-length}
 
-如果AEM在MongoMK持續性管理員部署中執行， [頁面名稱長度上限為150個字元。](/help/sites-authoring/managing-pages.md)
+如果AEM在MongoMK持續性管理員部署上執行，[頁面名稱限製為150個字元。](/help/sites-authoring/managing-pages.md)
 
 >[!NOTE]
 >
->請參閱 [MongoDB檔案](https://docs.mongodb.com/manual/reference/limits/) 以便熟悉MongoDB的已知限制和臨界值。
+>請參閱[MongoDB檔案](https://docs.mongodb.com/manual/reference/limits/)，以熟悉MongoDB的已知限制和臨界值。

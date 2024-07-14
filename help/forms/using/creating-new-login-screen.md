@@ -22,10 +22,10 @@ ht-degree: 3%
 
 ## 必備條件 {#prerequisite}
 
-1. 登入： `/lc/crx/de` 具有管理員許可權。
+1. 以系統管理員許可權在`/lc/crx/de`登入。
 1. 執行下列動作：
 
-   1. 複製下列的階層結構： `/libs/livecycle/core/content` 在 `/apps/livecycle/core/content`.
+   1. 在`/apps/livecycle/core/content`復寫`/libs/livecycle/core/content`的階層結構。
 
       維護相同的（節點/資料夾）屬性和存取控制。
 
@@ -33,43 +33,43 @@ ht-degree: 3%
 
       從： `/libs/livecycle/core`
 
-      至： `/apps/livecycle/core`.
+      至： `/apps/livecycle/core`。
 
-   1. 刪除內容 `/apps/livecycle/core` 資料夾。
+   1. 刪除`/apps/livecycle/core`資料夾的內容。
 
 1. 執行下列動作：
 
-   1. 複製下列的階層結構： `/libs/livecycle/core/components/login` 在 `/apps/livecycle/core/components/login`. 維護相同的（節點/資料夾）屬性和存取控制。
+   1. 在`/apps/livecycle/core/components/login`復寫`/libs/livecycle/core/components/login`的階層結構。 維護相同的（節點/資料夾）屬性和存取控制。
 
-   1. 複製元件資料夾：從 `/libs/livecycle/core` 至 `/apps/livecycle/core`.
+   1. 將元件資料夾：從`/libs/livecycle/core`複製到`/apps/livecycle/core`。
 
-   1. 刪除資料夾的內容： `/apps/livecycle/core/components/login`.
+   1. 刪除資料夾的內容： `/apps/livecycle/core/components/login`。
 
 ### 新增地區設定 {#adding-a-new-locale}
 
-1. 複製 `i18n` 資料夾：
+1. 複製`i18n`資料夾：
 
    * 從 `/libs/livecycle/core/components/login`
-   * 至 `/apps/livecycle/core/components/login`
+   * 至`/apps/livecycle/core/components/login`
 
-1. 刪除裡面的所有資料夾 `i18n` 除了一項，例如 `en`.
+1. 刪除`i18n`中的所有資料夾，但其中一個除外，例如`en`。
 
-1. 在資料夾上 `en`，請執行下列動作：
+1. 在資料夾`en`上，執行下列動作：
 
    1. 將資料夾重新命名為您要支援的區域設定名稱。 例如，`ar`。
 
-   1. 變更屬性 `jcr:language` 值至 `ar`(適用於 `ar` 資料夾)。
+   1. 將屬性`jcr:language`值變更為`ar` （針對`ar`資料夾）。
 
    >[!NOTE]
    >
-   >如果locale是語言 — 國家/地區的代碼組合，例如， `ar-DZ`，然後將資料夾名稱和屬性值變更為 `ar-DZ`.
+   >如果地區設定是語言 — 國家/地區代碼組合，例如`ar-DZ`，則將資料夾名稱和屬性值變更為`ar-DZ`。
 
-1. 複製 `login.jsp`：
+1. 複製`login.jsp`：
 
    * 從 `/libs/livecycle/core/components/login`
-   * 至 `/apps/livecycle/core/components/login`
+   * 至`/apps/livecycle/core/components/login`
 
-1. 修改下列程式碼片段 `/apps/livecycle/core/components/login/login.jsp`：
+1. 修改`/apps/livecycle/core/components/login/login.jsp`的下列程式碼片段：
 
 ***地區設定為語言代碼***
 
@@ -183,7 +183,7 @@ String browserLocale = "en";
     }
 ```
 
-***變更預設地區設定***
+***若要變更預設地區設定***
 
 ```jsp
    String browserLocale = "en";
@@ -197,23 +197,23 @@ String browserLocale = "en";
 
 ### 新增文字或修改現有文字 {#adding-new-text-or-modifying-existing-text}
 
-1. 複製 `i18n` 資料夾：
+1. 複製`i18n`資料夾：
 
    * 從 `/libs/livecycle/core/components/login`
-   * 至 `/apps/livecycle/core/components/login`
+   * 至`/apps/livecycle/core/components/login`
 
-1. 現在修改屬性的值 `sling:message` 節點（位於所需的地區設定代碼資料夾下）中，您想要變更其文字的。 翻譯會透過下列值中提及的索引鍵完成： `sling:key` 節點的屬性。
+1. 現在修改您想要變更文字之節點（在所需的地區設定代碼資料夾下）的屬性`sling:message`的值。 透過在節點的`sling:key`屬性值中提及的索引鍵完成轉譯。
 
 1. 若要新增索引鍵/值組，請執行下列動作。 請檢視下列熒幕擷圖中的範例。
 
-   1. 建立型別節點 `sling:MessageEntry`，或複製現有節點並重新命名（在所有地區設定資料夾下）。
-   1. 複製 `login.jsp` ：
+   1. 建立型別`sling:MessageEntry`的節點，或複製現有的節點，並在所有地區設定資料夾下重新命名它。
+   1. 複製`login.jsp` ：
 
       * 從 `/libs/livecycle/core/components/login`
 
-      * 至 `/apps/livecycle/core/components/login`
+      * 至`/apps/livecycle/core/components/login`
 
-   1. 修改 `/apps/livecycle/core/components/login/login.jsp` 以合併新加入的文字。
+   1. 修改`/apps/livecycle/core/components/login/login.jsp`以合併新加入的文字。
 
    ![新增索引鍵/值組](assets/capture_new.png)
 
@@ -240,28 +240,28 @@ String browserLocale = "en";
 
 ### 新增樣式或修改現有樣式 {#adding-new-style-or-modifying-existing-style}
 
-1. 複製 `login` 節點：
+1. 複製`login`節點：
 
    * 從 `/libs/livecycle/core/content`
-   * 至 `/apps/livecycle/core/content`
+   * 至`/apps/livecycle/core/content`
 
-1. 刪除檔案 `login.js` 和 `jquery-1.8.0.min.js`，從節點 `/apps/livecycle/core/content/login.`
+1. 從節點`/apps/livecycle/core/content/login.`刪除檔案`login.js`和`jquery-1.8.0.min.js`
 1. 修改CSS檔案中的樣式。
 1. 若要新增樣式：
 
-   1. 新增樣式至 `/apps/livecycle/core/content/login/login.css`
-   1. 複製 `login.jsp`
+   1. 新增樣式至`/apps/livecycle/core/content/login/login.css`
+   1. 複製`login.jsp`
 
       * 從 `/libs/livecycle/core/components/login`
 
-      * 至 `/apps/livecycle/core/components/login`
+      * 至`/apps/livecycle/core/components/login`
 
-   1. 修改 `/apps/livecycle/core/components/login/login.jsp` 以合併新加入的樣式。
+   1. 修改`/apps/livecycle/core/components/login/login.jsp`以合併新加入的樣式。
 
 
 例如：
 
-* 將下列專案新增至 `/apps/livecycle/core/content/login/login.css`.
+* 新增下列至`/apps/livecycle/core/content/login/login.css`。
 
 ```
 css.newLoginContentArea {
@@ -270,7 +270,7 @@ css.newLoginContentArea {
    }
 ```
 
-* 在中修改下列專案 `/apps/livecycle/core/components/login.jsp`.
+* 在`/apps/livecycle/core/components/login.jsp`中修改下列專案。
 
 
   ```jsp
@@ -285,20 +285,20 @@ css.newLoginContentArea {
 
 >[!NOTE]
 >
->如果影像位於 `/apps/livecycle/core/content/login` (複製自 `/libs/livecycle/core/content/login`)，然後在CSS中移除對應的參照。
+>如果`/apps/livecycle/core/content/login`中的現有影像（複製自`/libs/livecycle/core/content/login`）已移除，則移除CSS中對應的參考。
 
 ### 新增影像 {#add-new-images}
 
 1. 請依照新增樣式或修改現有樣式的步驟（如上所述）操作。
-1. 在中新增影像 `/apps/livecycle/core/content/login`. 若要新增影像：
+1. 在`/apps/livecycle/core/content/login`中新增影像。 若要新增影像：
 
    1. 安裝WebDAV使用者端。
-   1. 瀏覽至 `/apps/livecycle/core/content/login` 資料夾，使用webDAV使用者端。 如需詳細資訊，請參閱 [WebDAV存取](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/webdav-access.html?lang=en).
+   1. 使用webDAV使用者端導覽至`/apps/livecycle/core/content/login`資料夾。 如需詳細資訊，請參閱[WebDAV存取](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/webdav-access.html?lang=en)。
 
    1. 新增影像。
 
-1. 在中新增樣式 `/apps/livecycle/core/content/login/login.css,` 對應至中新增的新影像 `/apps/livecycle/core/content/login`.
-1. 在中使用新樣式 `login.jsp` 在 `/apps/livecycle/core/components`.
+1. 在`/apps/livecycle/core/content/login/login.css,`中新增與在`/apps/livecycle/core/content/login`中新增的新影像對應的樣式。
+1. 在`login.jsp`的`/apps/livecycle/core/components`使用新樣式。
 
 例如：
 

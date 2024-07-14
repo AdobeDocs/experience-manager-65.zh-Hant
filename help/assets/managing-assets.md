@@ -20,13 +20,13 @@ ht-degree: 7%
 
 管理Dynamic Media資產（影像、影片和互動式資產）上傳後，就會牽涉許多工作，包括預覽、下載或發佈。
 
-預覽時，您也可以套用影像預設集（僅適用於影像）或檢視器預設集（適用於視訊和影像）。 您無法將兩者都套用至資產。 另請參閱 [套用檢視器預設集](/help/assets/viewer-presets.md) 和 [套用影像預設集](/help/assets/image-sets.md).
+預覽時，您也可以套用影像預設集（僅適用於影像）或檢視器預設集（適用於視訊和影像）。 您無法將兩者都套用至資產。 請參閱[套用檢視器預設集](/help/assets/viewer-presets.md)和[套用影像預設集](/help/assets/image-sets.md)。
 
-有關管理資產的一般資訊，請參閱 [管理資產](/help/assets/manage-assets.md).
+在[管理資產](/help/assets/manage-assets.md)中找到管理資產的一般資訊。
 
 下列主題說明如何管理Dynamic Media資產：
 
 * [影像品質最佳化的最佳做法](/help/assets/best-practices-for-optimizing-the-quality-of-your-images.md)
 * [預覽Dynamic Media資產](/help/assets/previewing-assets.md)
-* [發佈Dynamic Media資產](/help/assets/publishing-dynamicmedia-assets.md)
+* [發佈Dynamic Media Assets](/help/assets/publishing-dynamicmedia-assets.md)
 * [使用選取器](/help/assets/working-with-selectors.md)

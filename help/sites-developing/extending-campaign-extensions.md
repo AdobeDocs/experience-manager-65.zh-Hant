@@ -27,25 +27,25 @@ ht-degree: 2%
 * Adobe Experience Manager
 * Adobe Campaign 6.1
 
-另請參閱 [將AEM與Adobe Campaign 6.1整合](/help/sites-administering/campaignonpremise.md) 以取得詳細資訊。
+如需詳細資訊，請參閱[整合AEM與Adobe Campaign 6.1](/help/sites-administering/campaignonpremise.md)。
 
 ## 範例1：AEM至Adobe Campaign {#example-aem-to-adobe-campaign}
 
-AEM與Campaign之間的標準整合是以JSON和JSSP （JavaScript伺服器頁面）為基礎。 這些JSSP檔案可在Campaign主控台中找到，且全都以開頭 **aec** (Adobe Experience Cloud)。
+AEM與Campaign之間的標準整合是以JSON和JSSP (JavaScript伺服器頁面)為基礎。 這些JSSP檔案可在Campaign主控台中找到，且全部以&#x200B;**aec** (Adobe Experience Cloud)開頭。
 
 ![chlimage_1-15](assets/chlimage_1-15a.png)
 
 >[!NOTE]
 >
->[如需此範例，請參閱Geometrixx](/help/sites-developing/we-retail.md)，可在「封裝共用」中取得。
+>[如需此範例，請參閱[封裝共用]中的Geometrixx](/help/sites-developing/we-retail.md)。
 
 在此範例中，已建立新的自訂JSSP檔案，並從AEM端呼叫該檔案來擷取結果。 例如，它可用來從Adobe Campaign擷取資料，或將資料儲存至Adobe Campaign。
 
-1. 在Adobe Campaign中，若要建立JSSP檔案，請按一下 **新增** 圖示。
+1. 若要在Adobe Campaign中建立JSSP檔案，請按一下&#x200B;**新增**&#x200B;圖示。
 
-   ![「新增」圖示，如左上角附近有星號的頁面所指示。](do-not-localize/chlimage_1-4a.png)
+   ![左上角附近有星號的頁面所指示的新圖示。](do-not-localize/chlimage_1-4a.png)
 
-1. 輸入此JSSP檔案的名稱。 在此範例中， **cus：custom.jssp** 已使用(表示它位於 **cus** 名稱空間)。
+1. 輸入此JSSP檔案的名稱。 在此範例中，使用了&#x200B;**cus：custom.jssp** （表示它位於&#x200B;**cus**&#x200B;名稱空間）。
 
    ![chlimage_1-16](assets/chlimage_1-16a.png)
 
@@ -62,9 +62,9 @@ AEM與Campaign之間的標準整合是以JSON和JSSP （JavaScript伺服器頁�
 1. 在AEM端建立簡單的servlet，以便呼叫此JSSP。 在此範例中，您可以假設以下情況：
 
    * 您的連線在AEM和Campaign之間正常運作
-   * campaign雲端服務設定於 **/content/geometrixx-outdoors**
+   * 已在&#x200B;**/content/geometrixx-outdoors**&#x200B;上設定Campaign雲端服務
 
-   此範例中最重要的物件是 **GenericCampaignConnector**，可讓您在Adobe Campaign端呼叫（取得和發佈） jssp檔案。
+   此範例中最重要的物件是&#x200B;**GenericCampaignConnector**，其可讓您在Adobe Campaign端呼叫（取得和發佈） jssp檔案。
 
    以下是一個小的程式碼片段：
 
@@ -169,7 +169,7 @@ AEM提供立即可用的API，可擷取Siteadmin Explorer檢視中任何位置�
 
 >[!NOTE]
 >
->[如需此範例，請參閱Geometrixx](/help/sites-developing/we-retail.md)，可在「封裝共用」中取得。
+>[如需此範例，請參閱[封裝共用]中的Geometrixx](/help/sites-developing/we-retail.md)。
 
 對於總管中的每個節點，都有一個API連結至該節點。 例如，對於節點：
 
@@ -179,13 +179,13 @@ API是：
 
 * [http://localhost:4502/content/campaigns/geometrixx/scott-recommends.1.json](http://localhost:4502/content/campaigns/geometrixx/scott-recommends.2.json)
 
-URL的結尾 **.1.json** 可以取代為 **.2.json**， **.3.json**，根據您感興趣的子層級數目。 若要取得所有關鍵字， **無限** 可使用：
+URL **.1.json**&#x200B;的結尾可以根據您想要取得的子層級數目由&#x200B;**.2.json**、**.3.json**&#x200B;取代。 若要取得所有關鍵字，可使用&#x200B;**無限**：
 
 * [http://localhost:4502/content/campaigns/geometrixx/scott-recommends.infinity.json](http://localhost:4502/content/campaigns/geometrixx/scott-recommends.2.json)
 
 為了使用API，AEM預設會使用基本驗證。
 
-名為的JS程式庫 **amcIntegration.js** 提供於6.1.1 （版本編號8624及更新版本）中，可在其他數個版本中實作該邏輯。
+名為&#x200B;**amcIntegration.js**&#x200B;的JS程式庫可在6.1.1 （build 8624及更新版本）中使用，該程式庫會在其他數個程式庫中實作該邏輯。
 
 ### AEM API呼叫 {#aem-api-call}
 

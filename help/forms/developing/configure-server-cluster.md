@@ -38,7 +38,7 @@ JEE叢集上的AEM Forms需仰賴基礎應用程式伺服器的叢集功能。 �
 
 ### GemFire快取 {#gemfire-cache}
 
-GemFire快取是在每個叢集節點中實作的分散式快取機制。 節點會尋找彼此，並建立單一邏輯快取，以維持節點間的一致性。 找到彼此的節點會聯結，以維持在圖1中顯示為雲端的單一概念快取。 與GDS和資料庫不同，快取是純概念實體。 實際的快取內容儲存在記憶體和 `LC_TEMP` 每個叢集節點的目錄。
+GemFire快取是在每個叢集節點中實作的分散式快取機制。 節點會尋找彼此，並建立單一邏輯快取，以維持節點間的一致性。 找到彼此的節點會聯結，以維持在圖1中顯示為雲端的單一概念快取。 與GDS和資料庫不同，快取是純概念實體。 實際的快取內容儲存在記憶體中，並儲存在每個叢集節點的`LC_TEMP`目錄中。
 
 ### 資料庫 {#database}
 
@@ -74,7 +74,7 @@ Gemfire快取可能會發生一些問題。 兩種典型情況是：
 
 自動探索的一個常見問題是多點傳送訊息可能會由網路篩選。 這可能是網路原則的一部分，或由於軟體防火牆規則，或因為它們無法透過存在於節點之間的網路進行路由。 由於讓UDP自動探索在複雜網路中運作的一般困難，生產部署通常使用替代探索方法：TCP定位器。 有關TCP定位器的一般討論可在參考資料中找到。
 
-**我如何知道我使用的是定位器或UDP？**
+**我如何知道我是使用定位器或UDP？**
 
 下列JVM屬性可控制GemFire快取用來尋找其他節點的方法。
 
@@ -120,7 +120,7 @@ GemFire會產生記錄資訊，可用來診斷GemFire快取已找到並採用的
 
 `.../LC_TEMP/adobeZZ__123456/Caching/Gemfire.log`
 
-之後的數值字串 `adobeZZ_` 是伺服器節點所獨有的，因此您必須搜尋暫存目錄的實際內容。 之後的兩個字元 `adobe` 視應用程式伺服器型別而定： `wl`， `jb`，或 `ws`.
+`adobeZZ_`之後的數字字串對於伺服器節點而言是唯一的，因此您必須搜尋暫存目錄的實際內容。 `adobe`之後的兩個字元取決於應用程式伺服器型別： `wl`、`jb`或`ws`。
 
 下列範例記錄檔顯示雙節點叢集找到自身時所發生的情況。
 
@@ -150,7 +150,7 @@ GemFire會產生記錄資訊，可用來診斷GemFire快取已找到並採用的
 [info 2011/08/05 09:28:10.128 EDT GemfireCacheAdapter <server.startup : 0> tid=0x64] DistributionManager ap-hp7(2821)<v1>:19498/59136 started on 239.192.81.1[33456]. There were 1 other DMs. others: [ap-hp8(4268)<v0>:18763/56449]
 ```
 
-**如果GemFire找到不該找到的節點，該怎麼辦？**
+**如果GemFire找到不應該找到的節點怎麼辦？**
 
 共用公司網路的每個不同叢集應該使用單獨的TCP位置集合（如果使用TCP位置），或使用單獨的UDP連線埠號碼（如果使用多點傳送UDP組態）。 由於UDP自動探索是JEE上AEM Forms的預設設定，而且多個叢集使用相同的預設連線埠33456，因此不嘗試通訊的叢集可能會意外地這樣做。 例如，生產和QA叢集應該保持獨立，但可以透過UDP多點傳送相互連線。
 
@@ -170,7 +170,7 @@ Caused by: com.ibm.ejs.container.UnknownLocalException: nested exception is: com
 
 雖然在Bootstrap期間經常會明顯出現重複的連線埠，但此情況有可能在稍後出現。 當叢集在關閉之後重新啟動，而發生其他叢集的Bootstrap時，就會發生這種情況。 或者，當網路組態變更時，使先前為多點傳送目的而隔離的叢集彼此可見。
 
-若要診斷這些情況，請檢視GemFire記錄檔，並仔細考慮是否只找到預期的節點。 若要修正問題，必須變更 `adobe.cache.multicast-port` 屬性變更為叢集之一或兩個上的不同值。
+若要診斷這些情況，請檢視GemFire記錄檔，並仔細考慮是否只找到預期的節點。 若要修正問題，必須將`adobe.cache.multicast-port`屬性變更為叢集之一或兩個叢集上的不同值。
 
 ### 2) GDS共用 {#gds-sharing}
 
@@ -178,7 +178,7 @@ Caused by: com.ibm.ejs.container.UnknownLocalException: nested exception is: com
 
 叢集可能的失敗模式是這個遠端檔案共用變得無法使用，或有細微的問題。 遠端掛載可能會因為網路問題、安全性設定或不正確設定而失敗。 系統重新開機可能會使數天或數週前進行的設定變更生效，這可能會造成意外。
 
-**如果NFS共用無法掛載，會發生什麼情況？**
+**如果NFS共用無法掛載會發生什麼情況？**
 
 在UNIX®上，即使掛載失敗，NFS掛載對應到目錄結構的方式也可以讓看似可用的GDS目錄可用。 考慮：
 
@@ -188,7 +188,7 @@ Caused by: com.ibm.ejs.container.UnknownLocalException: nested exception is: com
 
 * LCES指定GDS的路徑： /u01/iapply/livecycle_gds
 
-如果節點1上的掛載失敗，目錄結構仍包含路徑 `/u01/iapply/livecycle_gds` 到空的掛載點，節點就會正確執行。 但由於GDS內容實際上並未與其他節點共用，因此叢集無法正常運作。 這種情況可能也會發生，而且確實會發生，其結果是叢集會以神秘的方式失敗。
+如果節點1上的掛載失敗，目錄結構仍包含到空掛載點的路徑`/u01/iapply/livecycle_gds`，而且節點似乎已正確執行。 但由於GDS內容實際上並未與其他節點共用，因此叢集無法正常運作。 這種情況可能也會發生，而且確實會發生，其結果是叢集會以神秘的方式失敗。
 
 最佳作法是排列好順序，讓Linux®掛載點不作為GDS的根目錄，而是將其中的某些目錄當作GDS根目錄：
 
@@ -224,9 +224,9 @@ Caused by: com.ibm.ejs.container.UnknownLocalException: nested exception is: com
 
 引用：
 
-* [透過JBoss®叢集提供高可用性企業服務](https://docs.jboss.org/jbossas/jboss4guide/r4/html/cluster.chapt.html)
+* [透過JBoss®叢集的高可用性企業服務](https://docs.jboss.org/jbossas/jboss4guide/r4/html/cluster.chapt.html)
 
-* [oracleWebLogic Server-Using叢集](https://docs.oracle.com/cd/E12840_01/wls/docs103/pdf/cluster.pdf)
+* [OracleWebLogic伺服器使用叢集](https://docs.oracle.com/cd/E12840_01/wls/docs103/pdf/cluster.pdf)
 
 ### 如何檢查JBoss®是否正確叢集？ {#check-jboss-clustering}
 
@@ -263,11 +263,12 @@ and ones like:
 
 若要判斷Quartz的設定方式，您必須檢視啟動期間AEM Forms on JEE排程器服務產生的訊息。 這些訊息會以INFO嚴重性產生，可能需要調整記錄層級並重新啟動以取得訊息。 在JEE啟動序列的AEM Forms中，Quartz初始化會以下列行開始：
 
-資訊  `[com.adobe.idp.scheduler.SchedulerServiceImpl]` IDPchedulerService onLoad在記錄中找出這第一行是很重要的。 原因是因為有些應用程式伺服器也使用Quartz，且其Quartz執行個體不應與AEM Forms on JEE排程器服務所使用的執行個體混淆。 這表示「排程器」服務正在啟動，其後面的行會告訴您它是否以叢集模式正確啟動。 數個訊息會顯示在此順序中，而最後一個「已啟動」訊息會顯示如何設定Quartz：
+資訊`[com.adobe.idp.scheduler.SchedulerServiceImpl]` IDPchedulerService onLoad
+在記錄中找出這第一行很重要。 原因是因為有些應用程式伺服器也使用Quartz，且其Quartz執行個體不應與AEM Forms on JEE排程器服務所使用的執行個體混淆。 這表示「排程器」服務正在啟動，其後面的行會告訴您它是否以叢集模式正確啟動。 數個訊息會顯示在此順序中，而最後一個「已啟動」訊息會顯示如何設定Quartz：
 
-以下是Quartz例項的名稱： `IDPSchedulerService_$_ap-hp8.ottperflab.adobe.com1312883903975`. 排程器的Quartz執行個體名稱一律以字串開頭 `IDPSchedulerService_$_`. 附加至此結尾的字串可告訴您Quartz是否以叢集模式執行。 從節點的主機名稱及長數字串產生的長唯一識別碼，如下所述 `ap-hp8.ottperflab.adobe.com1312883903975`，表示它在叢集中運作。 如果以單一節點運作，則識別碼為兩位數：「20」：
+在此提供Quartz執行個體的名稱： `IDPSchedulerService_$_ap-hp8.ottperflab.adobe.com1312883903975`。 排程器的Quartz執行個體名稱一律以字串`IDPSchedulerService_$_`開頭。 附加至此結尾的字串可告訴您Quartz是否以叢集模式執行。 從節點的主機名稱及長字串（此處為`ap-hp8.ottperflab.adobe.com1312883903975`）產生的長唯一識別碼，表示它在叢集中運作。 如果以單一節點運作，則識別碼為兩位數：「20」：
 
-資訊  `[org.quartz.core.QuartzScheduler]` 排程器 `IDPSchedulerService_$_20` 已開始。
+INFO `[org.quartz.core.QuartzScheduler]`排程器`IDPSchedulerService_$_20`已啟動。
 此檢查必須個別在所有叢集節點上完成，因為每個節點的排程器會獨立決定是否以叢集模式操作。
 
 ### 如果Quartz以錯誤的模式執行，會產生哪些問題？ {#quartz-running-in-wrong-mode}
@@ -324,7 +325,7 @@ JEE版AEM Forms中的某些檔案路徑設定會在整個叢集內建立，且�
 1. System Fonts目錄的位置
 1. 資料服務組態檔的位置
 
-叢集對於這些組態設定中的每一個只有一個路徑設定。 例如，您的Temp目錄位置可能是 `/home/project/QA2/LC_TEMP`. 在叢集中，每個節點都必須可實際存取這個特定路徑。 如果一個節點具有預期的暫存檔案路徑，而另一個節點沒有，則沒有的節點會運作不正確。
+叢集對於這些組態設定中的每一個只有一個路徑設定。 例如，您的Temp目錄位置可能是`/home/project/QA2/LC_TEMP`。 在叢集中，每個節點都必須可實際存取這個特定路徑。 如果一個節點具有預期的暫存檔案路徑，而另一個節點沒有，則沒有的節點會運作不正確。
 
 雖然這些檔案和路徑可以在節點之間共用，或分開放置，或位於遠端檔案系統上，但最佳實務是將這些檔案和路徑作為本機節點磁碟儲存裝置上的本機復本。
 

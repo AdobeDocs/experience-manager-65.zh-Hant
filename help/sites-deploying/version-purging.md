@@ -25,16 +25,17 @@ ht-degree: 0%
 >
 >如果未進行任何內容變更，則會看到一則訊息，指出頁面已啟動，但未建立新版本。
 
-您可以使用來依請求建立其他版本 **版本設定** 索引標籤。 這些版本儲存在存放庫中，可視需要還原。
+您可以使用sidekick的&#x200B;**版本設定**&#x200B;索引標籤，依請求建立其他版本。 這些版本儲存在存放庫中，可視需要還原。
 
 這些版本永遠不會清除，因此存放庫大小會隨著時間增長，因此必須加以管理。
 
 AEM隨附多種機制，可協助您管理存放庫：
 
-* 此 [版本管理員](#version-manager)
+* [版本管理員](#version-manager)
 這可設定為在建立新版本時清除舊版本。
 
-* 此 [清除版本](/help/sites-deploying/monitoring-and-maintaining.md#purgeversionstool) 工具這是用來監視和維護存放庫的一部分。
+* [清除版本](/help/sites-deploying/monitoring-and-maintaining.md#purgeversionstool)工具
+這可用來當作監控和維護存放庫的一部分。
 它可讓您根據下列引數，介入以移除舊版本的節點或節點階層：
 
    * 要保留在存放庫中的版本最大數量。
@@ -43,7 +44,7 @@ AEM隨附多種機制，可協助您管理存放庫：
    * 任何版本保留在存放庫中的最大期限。
 當版本的使用期限超過此值時，就會從存放庫中清除該版本。
 
-* 此 [版本清除維護任務](/help/sites-administering/operations-dashboard.md#automated-maintenance-tasks). 您可以排定「版本永久刪除」維護作業，以自動刪除舊版本。 如此一來，手動使用「版本清除」工具的需求便降至最低。
+* [版本清除維護任務](/help/sites-administering/operations-dashboard.md#automated-maintenance-tasks)。 您可以排定「版本永久刪除」維護作業，以自動刪除舊版本。 如此一來，手動使用「版本清除」工具的需求便降至最低。
 
 >[!CAUTION]
 >
@@ -53,27 +54,34 @@ AEM隨附多種機制，可協助您管理存放庫：
 
 除了使用清除工具來明確清除外，也可以將「版本管理員」設定為在建立新版本時清除舊版本。
 
-若要設定「版本管理員」， [建立設定](/help/sites-deploying/configuring-osgi.md) 針對：
+若要設定版本管理員，請[為下列專案建立設定](/help/sites-deploying/configuring-osgi.md)：
 
 `PID com.day.cq.wcm.core.impl.VersionManagerImpl`
 
 下列選項可供使用：
 
-* `versionmanager.createVersionOnActivation` （布林值，預設值： true）指定是否要在啟動頁面時建立版本。
+* `versionmanager.createVersionOnActivation` （布林值，預設： true）
+指定啟動頁面時是否要建立版本。
 除非將復寫代理設定為抑製版本的建立，否則會建立版本，而版本管理員會遵循此設定。
-只有當啟動發生在包含的路徑上時，才會建立版本 `versionmanager.ivPaths` （請參閱下文）。
+只有當啟動發生在`versionmanager.ivPaths`中包含的路徑上時，才會建立版本（請參閱下文）。
 
-* `versionmanager.ivPaths`(字串[]，預設： `{"/"}`)指定在下列情況下，會在哪一個路徑上以隱含方式建立版本： `versionmanager.createVersionOnActivation` 設為true。
+* `versionmanager.ivPaths`（字串[]，預設： `{"/"}`）
+指定當`versionmanager.createVersionOnActivation`設定為true時，會在哪一個路徑上以隱含方式建立版本。
 
-* `versionmanager.purgingEnabled` （布林值，預設值： false）定義在建立新版本時是否啟用清除。
+* `versionmanager.purgingEnabled` （布林值，預設： false）
+定義在建立新版本時是否啟用永久刪除。
 
-* `versionmanager.purgePaths` (字串[]，預設值： {&quot;/content&quot;})指定建立新版本時清除版本的路徑。
+* `versionmanager.purgePaths` （字串[]，預設： {&quot;/content&quot;}）
+指定建立新版本時要在哪些路徑上清除版本。
 
-* `versionmanager.maxAgeDays` （int，預設值： 30）在版本清除時，會移除設定值之前的任何版本。 如果值小於1，則不會根據版本的期限執行永久刪除。
+* `versionmanager.maxAgeDays` （int，預設值： 30）
+在版本清除時，會移除設定值之前的任何版本。 如果值小於1，則不會根據版本的期限執行永久刪除。
 
-* `versionmanager.maxNumberVersions` （int，預設值5）在版本清除時，會移除任何早於第n個最新版本的版本。 如果值小於1，則不會根據版本數執行永久刪除。
+* `versionmanager.maxNumberVersions` （int，預設5）
+在版本清除時，會移除任何早於第n個最新版本的版本。 如果值小於1，則不會根據版本數執行永久刪除。
 
-* `versionmanager.minNumberVersions` （int，預設0）保留的最低版本數，無論保留時間長短。 如果該值設定為小於1的值，則不會保留版本的最小數量。
+* `versionmanager.minNumberVersions` （int，預設0）
+無論年齡為何，保留的最低版本數量。 如果該值設定為小於1的值，則不會保留版本的最小數量。
 
 >[!NOTE]
 >
@@ -81,7 +89,7 @@ AEM隨附多種機制，可協助您管理存放庫：
 
 ### 結合保留選項 {#combining-retention-options}
 
-定義應如何保留哪些版本的選項( `maxAgeDays`， `maxNumberVersions`， `minNumberVersions`)，可根據您的需求進行組合。
+定義應如何保留哪些版本(`maxAgeDays`、`maxNumberVersions`、`minNumberVersions`)的選項可以根據您的要求合併。
 
 例如，在定義要保留的版本數目上限以及要保留的最舊版本時：
 
@@ -118,4 +126,4 @@ AEM隨附多種機制，可協助您管理存放庫：
 
 ## 清除版本工具 {#purge-versions-tool}
 
-此 [清除版本](/help/sites-deploying/monitoring-and-maintaining.md#purgeversionstool) 工具旨在永久刪除存放庫中節點的版本或節點階層。 其主要用途是協助您移除舊版節點，以縮小存放庫的大小。
+[清除版本](/help/sites-deploying/monitoring-and-maintaining.md#purgeversionstool)工具旨在清除存放庫中節點或節點階層的版本。 其主要用途是協助您移除舊版節點，以縮小存放庫的大小。

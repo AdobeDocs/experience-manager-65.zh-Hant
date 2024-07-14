@@ -22,13 +22,13 @@ ht-degree: 1%
 >
 >Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案，使用SPA編輯器。 [了解更多](/help/sites-developing/spa-overview.md)。
 
-一個 ***AEM管理員*** 負責使用建立精靈建立應用程式，或匯入現有應用程式，將新應用程式新增至AEM Mobile目錄。 使用AEM Mobile建立應用程式的AEM管理員 *建立精靈*，通常會從Adobe現成的參考範例或（通常）建立的自訂應用程式範本中，選取其中一個所需的應用程式範本 *AEM開發人員。*
+***AEM管理員***&#x200B;負責使用建立精靈建立應用程式，或匯入現有應用程式，將新應用程式新增至AEM Mobile目錄。 使用AEM Mobile的&#x200B;*建立精靈*&#x200B;建立應用程式的AEM管理員，通常會從Adobe的現成參考範例或（通常）由&#x200B;*AEM開發人員建立的自訂應用程式範本中，選取所需的應用程式範本之一。*
 
 使用HTML5和PhoneGap建立行動應用程式後，您便可在指揮中心管理該應用程式。 您也可以使用Cordova網頁檢視在命令中心管理原生應用程式的HTML5內容（允許PhoneGap外掛程式存取原生功能）。
 
 AEM Apps控制中心可讓您建置及部署行動應用程式、建立及編輯應用程式中繼資料，再發佈行動應用程式、合作組織並經常發佈新內容及相關內容，而不需重新造訪應用程式商店提交程式，以及分析應用程式生命週期和使用量度，以改善客戶轉換及品牌忠誠度。
 
-若要建置AEM Mobile應用程式，請參閱 [建立行動應用程式](/help/mobile/building-app-mobile-phonegap.md) 頁面，在開發人員區段中。
+若要建置AEM Mobile應用程式，請參閱「開發人員」區段中的[建置行動應用程式](/help/mobile/building-app-mobile-phonegap.md)頁面。
 
 若要設定您的環境並開始使用控制中心，
 
@@ -37,11 +37,11 @@ AEM Apps控制中心可讓您建置及部署行動應用程式、建立及編輯
 1. [設定您的Adobe PhoneGap BuildCloud Service](/help/mobile/configure-phonegap-build-cloud.md)
 1. [設定您的Adobe Analytics Cloud服務](/help/mobile/configure-adobe-mobile-cloud-service.md)
 
-若要瞭解內容服務Content Services，請參閱 [管理內容服務](/help/mobile/developing-content-services.md).
+若要瞭解內容服務Content Services，請參閱[管理Content Services](/help/mobile/developing-content-services.md)。
 
 >[!NOTE]
 >
->此 *AEM驗證* 是在任何iOS或Android™行動裝置上執行AEM行動應用程式的快速且簡單的方法。 此 *AEM驗證* 是行動應用程式，在您裝置上，然後將其連線至執行「快速入門」的伺服器，以取得要檢視的應用程式清單。 按一下 [此處](/help/mobile/phonegap-mobile-quickstart.md) 以檢視詳細資訊。
+>*AEM Verify*&#x200B;是在任何iOS或Android™行動裝置上執行AEM行動應用程式的快速且簡單的方法。 *AEM Verify*&#x200B;是行動應用程式，在您的裝置上，並且您將其連線至執行快速入門的伺服器，以取得要檢視的應用程式清單。 按一下[這裡](/help/mobile/phonegap-mobile-quickstart.md)以檢視詳細資料。
 
 ## 其他資源 {#additional-resources}
 

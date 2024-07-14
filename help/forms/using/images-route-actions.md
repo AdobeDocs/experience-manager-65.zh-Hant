@@ -17,7 +17,7 @@ ht-degree: 0%
 
 # 自訂路由動作中使用的影像 {#customize-images-used-in-route-actions}
 
-若要自訂路由動作中使用的影像，請執行中所述的步驟 [自訂的一般步驟](/help/forms/using/generic-steps-html-workspace-customization.md) 然後進行本文所述的步驟。
+若要自訂路由動作中使用的影像，請執行[自訂的一般步驟](/help/forms/using/generic-steps-html-workspace-customization.md)中所述的步驟，接著執行本文中所述的步驟。
 
 ## 路由動作的影像 {#images-for-route-actions}
 
@@ -25,11 +25,11 @@ ht-degree: 0%
 
    `/apps/ws/css/newStyle.css`
 
-   例如：新增名為的新樣式 `myStyle1`如下所示，並上傳影像檔案 `myStyleIcon1.png` 至 `/apps/ws/image`s資料夾使用WebDAV使用者端。
+   例如：新增名為`myStyle1`的新樣式，如下所示，並使用WebDAV使用者端將影像檔案`myStyleIcon1.png`上傳至`/apps/ws/image`的資料夾。
 
    >[!NOTE]
    >
-   >如需詳細資訊，請參閱 [WebDAV存取](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/webdav-access.html?lang=en).
+   >如需詳細資訊，請參閱[WebDAV存取](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/webdav-access.html?lang=en)。
 
    >[!NOTE]
    >
@@ -45,11 +45,11 @@ ht-degree: 0%
 
 ## 工作清單工作動作快顯功能表 {#task-list-task-action-popup}
 
-1. 建立工作清單動作快顯功能表，請參閱 [建立AEM Forms工作區程式碼](introduction-customizing-html-workspace.md#building-html-workspace-code). 它需要使用開發套件。
+1. 建立工作清單動作快顯功能表，請參閱[建立AEM Forms工作區程式碼](introduction-customizing-html-workspace.md#building-html-workspace-code)。 它需要使用開發套件。
 
-1. 複製 `/libs/ws/js/runtime/templates/task.html` 至 `/apps/ws/js/runtime/templates/task.html`.
+1. 將`/libs/ws/js/runtime/templates/task.html`複製到`/apps/ws/js/runtime/templates/task.html`。
 
-1. 如果CSS樣式的名稱與來自伺服器的路由動作名稱相同，請修改下列程式碼： `/apps/ws/js/runtime/templates/task.html`：
+1. 如果CSS樣式的名稱與來自伺服器的路由動作名稱相同，請在`/apps/ws/js/runtime/templates/task.html`中修改下列程式碼：
 
    ```jsp
    <%if(routeList == null){%>
@@ -79,7 +79,7 @@ ht-degree: 0%
                <%}%>
    ```
 
-1. 如果CSS樣式的名稱與來自伺服器的路由動作名稱不同，請修改下列程式碼： `/apps/ws/js/runtime/templates/task.html`. 它會新增 `if-else` servlet條件以對應具有路由動作名稱的樣式。
+1. 如果CSS樣式的名稱與來自伺服器的路由動作名稱不同，請在`/apps/ws/js/runtime/templates/task.html`中修改下列程式碼。 它會新增`if-else` servlet條件的棧疊，以對應具有路由動作名稱的樣式。
 
 ```jsp
 <%if(routeList == null){%>
@@ -117,9 +117,9 @@ To
 
 ## 工作詳細資料工作動作快顯功能表 {#task-details-task-action-popup}
 
-1. 複製 `/libs/ws/js/runtime/templates/taskdetails.html` 至 `/apps/ws/js/runtime/templates/taskdetails.html`.
+1. 將`/libs/ws/js/runtime/templates/taskdetails.html`複製到`/apps/ws/js/runtime/templates/taskdetails.html`。
 
-1. 如果CSS樣式的名稱與來自伺服器的路由動作名稱相同，請修改下列程式碼： `/apps/ws/js/runtime/templates/taskdetails.html`：
+1. 如果CSS樣式的名稱與來自伺服器的路由動作名稱相同，請在`/apps/ws/js/runtime/templates/taskdetails.html`中修改下列程式碼：
 
    ```jsp
    <%for (var i = 0; i < availableCommands.directCommands.length; i++) {%>
@@ -139,7 +139,7 @@ To
                        <%}%>
    ```
 
-1. 如果CSS樣式的名稱與來自伺服器的路由動作名稱不同，請修改下列程式碼： `/apps/ws/js/runtime/templates/taskdetails.html`. 它會新增一個棧疊 `if-else` servlet條件以對應具有路由動作名稱的樣式。
+1. 如果CSS樣式的名稱與來自伺服器的路由動作名稱不同，請在`/apps/ws/js/runtime/templates/taskdetails.html`中修改下列程式碼。 它會新增一個`if-else`個servlet條件的棧疊，以對應具有路由動作名稱的樣式。
 
    ```jsp
    <%for (var i = 0; i < availableCommands.directCommands.length; i++) {%>
@@ -167,7 +167,7 @@ To
                <%}%>
    ```
 
-1. 開啟 `/apps/ws/js/registry.js` 進行編輯並尋找下列文字：
+1. 開啟`/apps/ws/js/registry.js`進行編輯，並尋找下列文字：
    `"text!/lc/libs/ws/js/runtime/templates/taskdetails.html"`
 
 1. 將文字取代為下列內容：

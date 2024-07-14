@@ -32,7 +32,7 @@ ht-degree: 12%
 * [簡短說明](../../forms/using/authoring-in-field-help.md#p-short-description-p)
 * [詳細說明](../../forms/using/authoring-in-field-help.md#p-long-description-p)
 
-![表單欄位的內容中說明](assets/descriptions.png)
+![表單欄位的內容內說明](assets/descriptions.png)
 
 >[!NOTE]
 >
@@ -42,13 +42,13 @@ ht-degree: 12%
 
 「簡短說明」欄位可提供有關填寫表單欄位的快速簡短提示。 將滑鼠懸停在簡短說明欄位中時，該欄位中指定的文字會顯示為工具提示。
 
-![為表單欄位新增內容內說明的簡短說明](assets/tooltip.png)
+![新增表單欄位內容說明的簡短說明](assets/tooltip.png)
 
 >[!NOTE]
 >
->選取 **一律顯示簡短說明** 以永久顯示欄位下方的說明文字。
+>選取&#x200B;**永遠顯示簡短描述**&#x200B;以永久顯示欄位下方的說明文字。
 
-![欄位下方的永久簡短內容說明](assets/short1.png)
+![欄位](assets/short1.png)下方的永久簡短內容說明
 
 ### 詳細說明 {#long-description}
 
@@ -56,7 +56,7 @@ ht-degree: 12%
 
 ![新增多媒體作為表單欄位的內容內說明](assets/long-descriptions.png)
 
-新增完整說明會顯示 **？** 圖示加以存取。 按一下圖示會顯示新增至詳細說明區段的內容。
+新增完整說明會顯示&#x200B;**嗎？欄位旁的**&#x200B;圖示。 按一下圖示會顯示新增至詳細說明區段的內容。
 
 ![多媒體內容說明範例](assets/photoshop.png)
 
@@ -64,8 +64,8 @@ ht-degree: 12%
 
 除了表單欄位的內容中說明之外，您還可以在面板編輯對話方塊的「說明內容」標籤中，指定面板層級的說明。
 
-![新增表單面板的內容內說明](assets/panel-level-help.png)
+![正在新增表單面板的內容內說明](assets/panel-level-help.png)
 
-新增面板的說明顯示 **？** 圖示加以存取（位於面板說明旁）。 按一下圖示會顯示新增在面板編輯對話方塊的「說明內容」區段中的內容。
+新增面板的說明會顯示&#x200B;**嗎？面板說明旁的**&#x200B;圖示。 按一下圖示會顯示新增在面板編輯對話方塊的「說明內容」區段中的內容。
 
-![表單面板層級的內容中說明範例](assets/photoshop-1.png)
+![表單面板層級](assets/photoshop-1.png)的內容內說明範例

@@ -54,7 +54,7 @@ keytool指令通常位於Java jre/bin目錄中，而且必須包含下表所列�
    <td><p>金鑰存放區檔案的位置和名稱。</p><p>位置可包含檔案的絕對路徑。 或者，它可以相對於命令提示字元目前的目錄，也就是輸入keytool命令的位置。</p></td>
    <td>
     <ul>
-     <li><p>自訂身分金鑰存放區： <code>[</code><i>appserverdomain<code>]</code></i><code>/adobe/</code><i>[伺服器名稱]</i><code>/ads-ssl.jks</code></p></li>
+     <li><p>自訂識別金鑰存放區： <code>[</code><i>appserverdomain<code>]</code></i><code>/adobe/</code><i>[伺服器名稱]</i><code>/ads-ssl.jks</code></p></li>
      <li><p>自訂信任金鑰存放區： <code>[</code><i>appserverdomain<code>]</code></i><code>/adobe/</code><i>[伺服器名稱]</i><code>/ads-ca.jks</code></p></li>
     </ul></td>
   </tr>
@@ -80,7 +80,7 @@ keytool指令通常位於Java jre/bin目錄中，而且必須包含下表所列�
   <tr>
    <td><p>-keypass</p></td>
    <td><p>保護金鑰組私密金鑰的密碼。</p></td>
-   <td><p>使用您用於的相同密碼 <code>-storepass</code> 選項。 金鑰密碼必須至少為六個字元。</p></td>
+   <td><p>使用您用於<code>-storepass</code>選項的相同密碼。 金鑰密碼必須至少為六個字元。</p></td>
   </tr>
   <tr>
    <td><p>-dname</p></td>
@@ -102,14 +102,14 @@ keytool指令通常位於Java jre/bin目錄中，而且必須包含下表所列�
 
 ## 建立自訂身分和信任金鑰存放區 {#create-the-custom-identity-and-trust-keystores}
 
-1. 在命令提示字元中，瀏覽至 *[appserverdomain]*/adobe/*[伺服器名稱]*.
+1. 從命令提示字元瀏覽至&#x200B;*[appserverdomain]*/adobe/*[伺服器名稱]*。
 1. 輸入以下命令：
 
    `[JAVA_HOME]/bin/keytool -genkey -v -alias ads-credentials -keyalg RSA -keystore "ads-credentials.jks" -validity 3650 -storepass store_password -keypass key_password -dname "CN=Hostname, OU=Group Name, O=Company Name, L=City Name, S=State,C=Country Code`
 
    >[!NOTE]
    >
-   >取代 `[JAVA_HOME]`*使用安裝JDK的目錄，並將斜體文字取代為與您的環境相對應的值。*
+   >將&#x200B;`[JAVA_HOME]`*取代為安裝JDK的目錄，並將斜體文字取代為與您的環境相對應的值。*
 
    例如：
 
@@ -117,7 +117,7 @@ keytool指令通常位於Java jre/bin目錄中，而且必須包含下表所列�
    C:\Program Files\Java\jrockit-jdk1.6.0_24-R28\bin\keytool" -genkey -v -alias ads-credentials -keyalg RSA -keystore "ads-credentials.jks" -validity 3650 -storepass P@ssw0rd -keypass P@ssw0rd -dname "CN=wasnode01, OU=LC, O=Adobe, L=Noida, S=UP,C=91
    ```
 
-   名為「ads-credentials.jks」的自訂身分識別金鑰存放區檔案會建立於 [appserverdomain]/adobe/[伺服器名稱] 目錄。
+   名為「ads-credentials.jks」的自訂身分金鑰儲存區檔案是在[appserverdomain]/adobe/[伺服器名稱]目錄中建立。
 
 1. 輸入以下命令，從ads-credentials金鑰儲存區擷取憑證：
 
@@ -129,7 +129,7 @@ keytool指令通常位於Java jre/bin目錄中，而且必須包含下表所列�
 
    >[!NOTE]
    >
-   >取代 `[JAVA_HOME]` ，並使用安裝JDK的目錄取代 `store`*_* `password`*使用自訂身分金鑰儲存庫的密碼。*
+   >將`[JAVA_HOME]`取代為安裝JDK的目錄，並將&#x200B;`store`*_* `password`*取代為自訂識別金鑰儲存區的密碼。*
 
    例如：
 
@@ -137,7 +137,7 @@ keytool指令通常位於Java jre/bin目錄中，而且必須包含下表所列�
    C:\Program Files\Java\jrockit-jdk1.6.0_24-R28\bin\keytool" -export -v -alias ads-credentials -file "ads-ca.cer" -keystore "ads-credentials.jks" -storepass P@ssw0rd
    ```
 
-   名為「ads-ca.cer」的憑證檔案建立於 [appserverdomain]/adobe/[*伺服器名稱*] 目錄。
+   名稱為「ads-ca.cer」的憑證檔案是在[appserverdomain]/adobe/[*伺服器名稱*]&#x200B;目錄中建立。
 
 1. 將ads-ca.cer檔案複製到任何需要與應用程式伺服器安全通訊的主機電腦。
 1. 輸入下列命令，將憑證插入新的金鑰儲存庫檔案（自訂信任金鑰儲存庫）：
@@ -146,7 +146,7 @@ keytool指令通常位於Java jre/bin目錄中，而且必須包含下表所列�
 
    >[!NOTE]
    >
-   >取代 `[JAVA_HOME]` ，並使用安裝JDK的目錄取代 `store`*_* `password` 和 `key`*_* `password` *使用您自己的密碼。*
+   >將`[JAVA_HOME]`取代為安裝JDK的目錄，並將&#x200B;`store`*_* `password`和&#x200B;`key`*_* `password` *取代為您自己的密碼。*
 
    例如：
 
@@ -154,50 +154,50 @@ keytool指令通常位於Java jre/bin目錄中，而且必須包含下表所列�
    C:\Program Files\Java\jrockit-jdk1.6.0_24-R28\bin\keytool" -import -v -noprompt -alias bedrock -file "ads-ca.cer" -keystore "ads-ca.jks" -storepass Password1 -keypass Password1
    ```
 
-名為「ads-ca.jks」的自訂信任金鑰存放區檔案會建立於 [appserverdomain]/adobe/&#39;server&#39;目錄。
+名為「ads-ca.jks」的自訂信任金鑰存放區檔案是在[appserverdomain]/adobe/&#39;server&#39;目錄中建立。
 
 設定WebLogic，使其使用您建立的自訂身分金鑰儲存庫和自訂信任金鑰儲存庫。 此外，請停用「WebLogic主機名稱驗證」功能，因為用來建立金鑰存放區檔案的辨別名稱不包含裝載WebLogic Server的電腦名稱。
 
 ## 設定WebLogic以使用SSL {#configure-weblogic-to-use-ssl}
 
-1. 輸入WebLogic伺服器管理主控台，以啟動 `https://`*[主機名稱&#x200B;]*`:7001/console` 在網頁瀏覽器的URL行中。
-1. 在「環境」下的「網域設定」中，選取 **伺服器> &#39;伺服器&#39; >設定>一般**.
-1. 在「一般」底下的「組態」中，確認 **監聽連線埠已啟用** 和 **已啟用SSL監聽連線埠** 已選取。 如果未啟用，請執行下列動作：
+1. 在網頁瀏覽器的URL行中輸入`https://`*[主機名稱&#x200B;]*`:7001/console`，啟動WebLogic Server管理主控台。
+1. 在「環境」下的「網域設定」中，選取&#x200B;**伺服器>「伺服器」>設定>一般**。
+1. 在[一般]的[組態]中，確定已選取&#x200B;**啟用監聽連線埠**&#x200B;和&#x200B;**啟用的SSL監聽連線埠**。 如果未啟用，請執行下列動作：
 
-   1. 在「變更中心」下，按一下 **鎖定和編輯** 修改選取範圍和值。
-   1. 檢查 **監聽連線埠已啟用** 和 **已啟用SSL監聽連線埠** 核取方塊。
+   1. 在「變更中心」下，按一下&#x200B;**鎖定與編輯**&#x200B;以修改選取專案和值。
+   1. 勾選&#x200B;**啟用接聽連線埠**&#x200B;和&#x200B;**啟用SSL接聽連線埠**&#x200B;核取方塊。
 
 1. 如果此伺服器是受管理的伺服器，請將監聽連線埠變更為未使用的連線埠值（例如8001），並將SSL監聽連線埠變更為未使用的連線埠值（例如8002）。 在獨立伺服器上，預設的SSL連線埠為7002。
-1. 按一下 **發行設定**.
-1. 在環境底下的網域設定中，按一下 **伺服器> [*受管理的伺服器*] >設定>一般**.
-1. 在一般底下的組態中，選取 **金鑰存放區**.
-1. 在「變更中心」下，按一下 **鎖定和編輯** 修改選取範圍和值。
-1. 按一下 **變更** 若要以下拉式清單形式取得金鑰存放區清單，請選取 **自訂身分和自訂信任**.
+1. 按一下&#x200B;**發行組態**。
+1. 在[環境]下，在[網域設定]中，按一下[伺服器] > [受管理伺服器] [*> [組態] > [一般]**。***]
+1. 在「一般」底下的「組態」中，選取&#x200B;**金鑰存放區**。
+1. 在「變更中心」下，按一下&#x200B;**鎖定與編輯**&#x200B;以修改選取專案和值。
+1. 按一下&#x200B;**變更**，以下拉式清單形式取得金鑰存放區清單，並選取&#x200B;**自訂身分和自訂信任**。
 1. 在「識別」下，指定下列值：
 
-   **自訂身分識別金鑰存放區**： *[appserverdomain]*/adobe/*[伺服器名稱]*/ads-credentials.jks，其中*[appserverdomain] *是實際路徑，且 *[伺服器名稱]* 是應用程式伺服器的名稱。
+   **自訂身分金鑰存放區**： *[appserverdomain]*/adobe/*[伺服器名稱]*/ads-credentials.jks，其中*[appserverdomain] *為實際路徑，*[伺服器名稱]*&#x200B;為應用程式伺服器的名稱。
 
-   **自訂身分金鑰存放區型別**：JKS
+   **自訂身分識別金鑰存放區型別**： JKS
 
-   **自訂身分金鑰庫密碼**： *我的密碼* （自訂身分金鑰庫密碼）
+   **自訂識別金鑰庫密碼**： *mypassword* （自訂識別金鑰庫密碼）
 
 1. 在「信任」底下，指定下列值：
 
-   **自訂信任Keystore檔案名稱**： `*[appserverdomain]*/adobe/*'server'*/ads-ca.jks`，其中 `*[appserverdomain]*` 是實際路徑
+   **自訂信任金鑰存放區檔案名稱**： `*[appserverdomain]*/adobe/*'server'*/ads-ca.jks`，其中`*[appserverdomain]*`是實際路徑
 
-   **自訂信任金鑰存放區型別**：JKS
+   **自訂信任金鑰存放區型別**： JKS
 
-   **自訂信任金鑰庫密語**： *我的密碼* （自訂信任金鑰密碼）
+   **自訂信任金鑰存放區密語**： *mypassword* （自訂信任金鑰密碼）
 
-1. 在一般底下的組態中，選取 **SSL**.
+1. 在「一般」底下的「組態」中，選取&#x200B;**SSL**。
 1. 依預設，會針對識別與信任位置選取Keystore。 如果沒有，請將其變更為Keystore。
 1. 在「識別」下，指定下列值：
 
    **私密金鑰別名**： ads-credentials
 
-   **複雜密碼**： *我的密碼*
+   **密碼短語**： *我的密碼*
 
-1. 按一下 **發行設定**.
+1. 按一下&#x200B;**發行組態**。
 
 ## 停用主機名稱驗證功能 {#disable-the-hostname-verification-feature}
 

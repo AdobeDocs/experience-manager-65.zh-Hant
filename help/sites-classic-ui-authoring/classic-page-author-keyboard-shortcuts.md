@@ -18,11 +18,11 @@ ht-degree: 3%
 
 # 編輯頁面時的鍵盤快速鍵{#keyboard-shortcuts-when-editing-pages}
 
-AEM提供各種鍵盤快速鍵。 有些適用於編輯頁面，有些則適用於 [使用主控台](/help/sites-classic-ui-authoring/author-env-keyboard-shortcuts.md).
+AEM提供各種鍵盤快速鍵。 有些適用於編輯頁面，有些則適用於[使用主控台](/help/sites-classic-ui-authoring/author-env-keyboard-shortcuts.md)。
 
 >[!NOTE]
 >
->在下清單格中，針對 **捷徑** 欄，Ctrl和Command鍵都能在macOS上運作。
+>在下清單格中，針對&#x200B;**捷徑**&#x200B;欄中的按鍵組合，Ctrl和Command鍵都能在macOS上運作。
 
 >[!NOTE]
 >
@@ -69,7 +69,7 @@ AEM提供各種鍵盤快速鍵。 有些適用於編輯頁面，有些則適用�
   <tr>
    <td> </td>
    <td><strong><code>Ctrl-X</code></strong></td>
-   <td>剪下選取的段落。<strong><br /> 注意：</strong> 剪下的段落在貼到新位置之前不會消失。</td>
+   <td>剪下選取的段落。<strong><br />注意：</strong>剪下的段落在貼到新位置之前不會消失。</td>
   </tr>
   <tr>
    <td> </td>
@@ -94,12 +94,12 @@ AEM提供各種鍵盤快速鍵。 有些適用於編輯頁面，有些則適用�
   <tr>
    <td> </td>
    <td><strong><code>Alt-right-click</code></strong></td>
-   <td>強制預設（瀏覽器）內容功能表。<br /> <strong>注意：</strong> AEM內容功能表只會出現在傳統UI中。</td>
+   <td>強制預設（瀏覽器）內容功能表。<br /> <strong>注意：</strong> AEM內容功能表只出現在傳統UI中。</td>
   </tr>
   <tr>
    <td> </td>
    <td><strong><code>Ctrl-Alt-c</code></strong></td>
-   <td>顯示 <a href="/help/sites-administering/client-context.md">使用者端內容</a>.</td>
+   <td>顯示<a href="/help/sites-administering/client-context.md">使用者端內容</a>。</td>
   </tr>
   <tr>
    <td>RTF 編輯器<br /> </td>
@@ -149,7 +149,7 @@ AEM提供各種鍵盤快速鍵。 有些適用於編輯頁面，有些則適用�
  </tbody>
 </table>
 
-案頭使用者在使用時，也可使用各種鍵盤快速鍵 [主控台](/help/sites-classic-ui-authoring/author-env-keyboard-shortcuts.md).
+使用[主控台](/help/sites-classic-ui-authoring/author-env-keyboard-shortcuts.md)時，案頭使用者也可以使用各種鍵盤快速鍵。
 
 ## 用於開發的鍵盤快速鍵 {#keyboard-shortcuts-for-development}
 
@@ -164,7 +164,7 @@ AEM提供各種鍵盤快速鍵。 有些適用於編輯頁面，有些則適用�
   </tr>
   <tr>
    <td>編輯模式</td>
-   <td>在URL中設定下列尾碼：<br /> <code>?debugClientLibs=true</code><br /> 然後使用：<br /> <strong><code>Ctrl-Shift-U</code></strong></td>
+   <td>在URL中設定下列尾碼： <br /> <code>?debugClientLibs=true</code><br />然後使用：<br /> <strong><code>Ctrl-Shift-U</code></strong></td>
    <td>若要檢視頁面載入的時間統計資料。</td>
   </tr>
  </tbody>

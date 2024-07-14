@@ -24,13 +24,13 @@ ht-degree: 0%
 
 **伺服器端轉譯的應用程式**
 
-1. 載入Service Worker初始(`srvinit.js`)在HTML頁面的標頭區段中加入下列指令碼：
+1. 在HTML頁面的標頭區段中加入下列指令碼，載入Service Worker初始(`srvinit.js`)：
 
    ```javascript
    <script type="text/javascript" src="srvinit.js"></script>
    ```
 
-   Adobe建議您載入此指令碼 _早於_ 任何其他指令碼，以便service worker立即開始初始化。
+   Adobe建議您在&#x200B;_前載入此指令碼_&#x200B;任何其他指令碼，以便service worker立即開始初始化。
 
 1. 在HTML頁面內文區段頂端加入下列DPR影像標籤程式碼：
 
@@ -43,7 +43,7 @@ ht-degree: 0%
        aem_dm_dpr_5x.jpg 5x">
    ```
 
-   您必須包含此DPR影像標籤代碼 _早於_ HTML頁面中的所有靜態影像。
+   您必須在HTML頁面中包含此DPR影像標籤代碼&#x200B;_before_。
 
 **使用者端轉譯的應用程式**
 
@@ -56,8 +56,8 @@ ht-degree: 0%
 
    您可以將兩個DPR指令碼合併為一個，以避免多個網路請求。
 
-   Adobe建議您載入這些指令碼 _早於_ 「HTML」頁面中的任何其他指令碼。
-Adobe也建議您將應用程式Bootstrap在不同HTML標籤下，而非使用內文元素。 原因如下 `dprImageInjection.js` 動態插入HTML頁面內文區段上方的影像標籤。
+   Adobe建議您在HTML頁面的&#x200B;_前載入這些指令碼_。
+Adobe也建議您將應用程式Bootstrap在不同HTML標籤下，而非使用內文元素。 原因在於`dprImageInjection.js`會在HTML頁面內文區段頂端動態地插入影像標籤。
 
 ## JavaScript檔案下載 {#client-side-dpr-script}
 

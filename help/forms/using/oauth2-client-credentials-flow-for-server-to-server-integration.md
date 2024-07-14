@@ -12,7 +12,7 @@ ht-degree: 68%
 
 ---
 
-# 使用OAuth 2.0使用者端憑證流程整合Salesforce  {#configure-salesforce-with-ouath-2.0-client-credential}
+# 使用OAuth 2.0使用者端認證流程{#configure-salesforce-with-ouath-2.0-client-credential}整合Salesforce
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
@@ -58,7 +58,7 @@ AEM Forms會交換在Salesforce連線應用程式中定義的使用者端憑證�
 
 1. 按一下「**[!UICONTROL 瀏覽]**」，即可從您的本機電腦上傳已建立的 swagger 檔案。
 1. 選取&#x200B;**[!UICONTROL 驗證類型]**&#x200B;作為&#x200B;**[!UICONTROL OAuth 2.0]**，**[!UICONTROL 驗證設定]**&#x200B;面板會隨即顯示。
-1. 選取 **[!UICONTROL 授權型別]** 作為 **[!UICONTROL 使用者端認證]**.
+1. 選取&#x200B;**[!UICONTROL 授權型別]**&#x200B;做為&#x200B;**[!UICONTROL 使用者端認證]**。
 1. 指定&#x200B;**[!UICONTROL 用戶端 ID]**&#x200B;以及從 Salesforce 連線的應用程式獲取的&#x200B;**[!UICONTROL 用戶端密碼]**。
 1. 指定&#x200B;**[!UICONTROL 存取權杖 URL]** 格式
    `https://[MyDomainName].my.salesforce.com/services/oauth2/token`。
@@ -70,4 +70,4 @@ AEM Forms會交換在Salesforce連線應用程式中定義的使用者端憑證�
 1. 按一下「**[!UICONTROL 測試連線]**」。
 1. 如果連線成功，按一下「**[!UICONTROL 建立]**」按鈕。
 
-現在，您可以 [建立表單資料模型](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html?lang=en) 將設定的資料來源與您的Adaptive Forms整合。
+現在您可以[建立表單資料模型](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html?lang=en)，將已設定的資料來源與您的Adaptive Forms整合。

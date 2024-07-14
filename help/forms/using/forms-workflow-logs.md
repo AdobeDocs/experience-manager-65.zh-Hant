@@ -20,7 +20,7 @@ ht-degree: 5%
 
 Forms Workflow步驟提供詳細的記錄檔，以便您輕鬆偵錯工作流程相關問題。 啟用AEM Forms工作流程的偵錯記錄以檢視記錄。
 
-依預設，所有記錄資訊都可在 **error.log** 檔案位於 */crx-repository/logs/* 目錄。
+依預設，所有記錄資訊都可在&#x200B;**error.log**&#x200B;檔案的&#x200B;*/crx-repository/logs/*&#x200B;目錄中取得。
 
 表單工作流程的偵錯記錄包括：
 
@@ -83,13 +83,13 @@ Forms Workflow步驟提供詳細的記錄檔，以便您輕鬆偵錯工作流程
 
    https://&#39;[伺服器]：[連線埠]&#39;/system/console/configMgr
 
-1. 選取 **[!UICONTROL Sling]** > **[!UICONTROL 記錄檔支援]**.
-1. 選取 **[!UICONTROL 新增記錄器。]**
-1. 選取 **[!UICONTROL 偵錯]** 作為 **[!UICONTROL 記錄層級]**.
+1. 選取&#x200B;**[!UICONTROL Sling]** > **[!UICONTROL 記錄檔支援]**。
+1. 選取&#x200B;**[!UICONTROL 新增記錄器。]**
+1. 選取&#x200B;**[!UICONTROL Debug]**&#x200B;做為&#x200B;**[!UICONTROL 記錄層級]**。
 1. 指定記錄檔的位置。 記錄檔的預設位置為： *logs\error.log*
-1. 將封裝的名稱指定為 **com.adobe.granite.workflow.core** 在 **[!UICONTROL Logger]** 欄。
+1. 在&#x200B;**[!UICONTROL 記錄器]**&#x200B;欄中指定封裝名稱為&#x200B;**com.adobe.granite.workflow.core**。
 
-   執行這些步驟可讓儲存的偵錯記錄 **com.adobe.granite.workflow.core** 封裝。 選取 **[!UICONTROL +]** 並將下列封裝名稱新增至清單：
+   執行這些步驟可儲存&#x200B;**com.adobe.granite.workflow.core**&#x200B;封裝的偵錯記錄檔。 選取&#x200B;**[!UICONTROL +]**&#x200B;並將下列封裝名稱新增至清單：
 
    * com.adobe.fd.workflow
    * com.adobe.fd.workspace

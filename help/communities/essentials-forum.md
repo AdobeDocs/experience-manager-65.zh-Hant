@@ -25,11 +25,11 @@ ht-degree: 2%
 <table>
  <tbody>
   <tr>
-   <td> <strong>resourceType</strong></td>
+   <td> <strong>資源型別</strong></td>
    <td>social/forum/components/hbs/forum<br /> social/forum/components/hbs/topic<br /> social/forum/components/hbs/post</td>
   </tr>
   <tr>
-   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>可包含</strong></a></td>
+   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>不可包含</strong></a></td>
    <td>否</td>
   </tr>
   <tr>
@@ -46,7 +46,7 @@ ht-degree: 2%
   </tr>
   <tr>
    <td><strong> 屬性</strong></td>
-   <td>另請參閱 <a href="forum.md">論壇功能</a></td>
+   <td>檢視<a href="forum.md">論壇功能</a></td>
   </tr>
  </tbody>
 </table>
@@ -63,20 +63,20 @@ ht-degree: 2%
 
 ### 論壇功能 {#forum-function}
 
-社群網站結構包含 [論壇功能](functions.md#forum-function)，包括已設定的 `forum` 影響稽核、標籤和翻譯的元件和設定。
+包含[論壇功能](functions.md#forum-function)的社群網站結構包含已設定的`forum`元件，以及影響調節、標籤和翻譯的設定。
 
 ### 存取論壇貼文(UGC) {#accessing-forum-posts-ugc}
 
 UGC應使用其中一種標準仲裁方法進行仲裁。
-另請參閱 [稽核使用者產生的內容](moderate-ugc.md).
+請參閱[仲裁使用者產生的內容](moderate-ugc.md)。
 
-截至Adobe Experience Manager 6.1社群，使用 [公用存放區](working-with-srp.md) for UGC包含對UGC的程式化存取，無論選擇的儲存選項（例如ASRP、MSRP或JSRP）為何。
+截至Adobe Experience Manager 6.1 Communities，無論選擇的儲存選項（例如ASRP、MSRP或JSRP）為何，使用UGC的[公用存放區](working-with-srp.md)都能以程式設計方式存取UGC。
 
-**UGC在存放庫中的位置和格式可能會有所變更，恕不另行警告**.
+**存放庫中UGC的位置和格式可能會變更，而不會出現警告**。
 
 請參閱：
 
-* [儲存資源提供者概觀](srp.md)  — 簡介和存放庫使用概述。
-* [srp和UGC Essentials](srp-and-ugc.md) - SRP公用程式方法與範例。
-* [使用SRP存取UGC](accessing-ugc-with-srp.md)  — 程式碼指南。
-* [SocialUtils重構](socialutils.md)  — 將已棄用的公用程式方法對應到目前的SRP公用程式方法。
+* [儲存資源提供者概觀](srp.md) — 簡介和存放庫使用概觀。
+* [SRP與UGC Essentials](srp-and-ugc.md) - SRP公用程式方法與範例。
+* [使用SRP存取UGC](accessing-ugc-with-srp.md) — 編碼准則。
+* [SocialUtils重構](socialutils.md) — 將已棄用的公用程式方法對應到目前的SRP公用程式方法。

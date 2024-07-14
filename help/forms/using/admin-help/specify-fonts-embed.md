@@ -22,7 +22,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如果您已經為輸出指定了自訂XCI檔案，則XCI檔案中的內嵌字型選項會覆寫這些設定。 (請參閱 [指定輸出的檔案位置](/help/forms/using/admin-help/specify-file-locations-output.md#specify-file-locations-for-output).)
+>如果您已經為輸出指定了自訂XCI檔案，則XCI檔案中的內嵌字型選項會覆寫這些設定。 （請參閱[指定輸出](/help/forms/using/admin-help/specify-file-locations-output.md#specify-file-locations-for-output)的檔案位置。）
 
 1. 在Administration Console中，按一下「服務>輸出」。
 1. 在「字型嵌入設定」下的「永遠嵌入字型」方塊中，輸入要嵌入表單的字型名稱，並以逗號分隔。 您指定的字型只有在用於表單時，才會內嵌在產生的表單中。 如果在傳遞給服務的XCI檔案中開啟了內嵌字型選項，則會忽略此設定。 在這種情況下，PDF中使用的所有字型一律會內嵌。

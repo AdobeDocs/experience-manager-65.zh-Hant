@@ -22,7 +22,7 @@ ht-degree: 0%
 
 AEM Forms工作區可讓您在「工作摘要」窗格中顯示您所選擇的網頁。 您可以使用Workbench建立處理以顯示「工作摘要」窗格。
 
-1. 在Workbench中建立「指定作業」處理。 如需有關「指派工作」作業的詳細資訊，請參閱下列主題中的服務參考： [Workbench說明](https://help.adobe.com/en_US/AEMForms/6.1/WorkbenchHelp/).
+1. 在Workbench中建立「指定作業」處理。 如需指派工作作業的詳細資訊，請參閱[Workbench說明](https://help.adobe.com/en_US/AEMForms/6.1/WorkbenchHelp/)中的服務參考主題。
 
    >[!NOTE]
    >
@@ -31,9 +31,9 @@ AEM Forms工作區可讓您在「工作摘要」窗格中顯示您所選擇的�
 1. 設定[工作摘要URL]欄位。 您可以指定常值、範本、變數或XPath運算式。
 1. 以下是「工作摘要」頁面上顯示資訊的範例。
 
-   * 登入CRXDE Lite環境： `https://'[server]:[port]'/lc/crx/de`.
-   * `Create a node`**範例摘要** ` under `/content` with type `nt：unstructured`. In the properties of this node, add `sling：resourceType` of type String and value `範例摘要`. In the Access Control List of this node, add an entry for `PERM_WORKSPACE_USER` allowing `jcr：read` privileges.`
-   * `Create a folder`**範例摘要** 在 `/apps`. 在存取控制清單中 `/apps/SampleSummary`，新增專案 `PERM_WORKSPACE_USER` 允許 `jcr:readprivileges`.
+   * 在`https://'[server]:[port]'/lc/crx/de`登入CRXDE Lite環境。
+   * `Create a node`**SampleSummary** ` under `/content` with type `nt：unstructured`. In the properties of this node, add `sling：resourceType` of type String and value `SampleSummary`. In the Access Control List of this node, add an entry for `PERM_WORKSPACE_USER` allowing `jcr：read` privileges.`
+   * `/apps`下的&#x200B;`Create a folder`**SampleSummary**。 在`/apps/SampleSummary`的存取控制清單中，新增允許`jcr:readprivileges`的`PERM_WORKSPACE_USER`專案。
    * `Create a file `html.esp` at `/apps/SampleSummary`. For example, add the following lines in `html.esp`.`
 
    ```html
@@ -49,5 +49,5 @@ AEM Forms工作區可讓您在「工作摘要」窗格中顯示您所選擇的�
    </html>
    ```
 
-   * 將任務摘要URL的值設為 `/lc/content/SampleSummary.html` 在指派工作步驟中。
-   * 在AEM Forms工作區中開啟與此指派工作步驟相關聯的工作時， `html.esp` 在 `/apps/SampleSummary` 會在工作摘要窗格中呈現。
+   * 在指派工作步驟中將工作摘要URL的值設定為`/lc/content/SampleSummary.html`。
+   * 在AEM Forms工作區中開啟與此指派工作步驟相關聯的工作時，`/apps/SampleSummary`的`html.esp`會在工作摘要窗格中呈現。

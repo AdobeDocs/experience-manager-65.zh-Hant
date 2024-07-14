@@ -14,7 +14,7 @@ ht-degree: 53%
 
 # 如何將 Headless 應用程式上線 {#go-live}
 
-在這部分中 [AEM Headless開發人員歷程](overview.md)，瞭解如何即時部署Headless應用程式。
+在[AEM Headless開發人員歷程](overview.md)的這一部分，瞭解如何即時部署Headless應用程式。
 
 ## 到目前為止 {#story-so-far}
 
@@ -39,7 +39,7 @@ ht-degree: 53%
 AEM SDK 用於建置和部署自訂程式碼。這是您在啟用Headless應用程式之前，必須開發和測試的主要工具。 它都包含下列成品：
 
 * Quickstart jar - 這是可執行的 jar 檔案，可用於設定編寫和發佈執行個體
-* Dispatcher工具 — 適用於Windows和UNIX系統的Dispatcher模組及其相依性
+* Dispatcher工具 — Windows和UNIX系統的Dispatcher模組及其相依性
 * Java™ API Jar - Java™ Jar/Maven 相依性公開了所有允許的 Java™ API，其可用於針對 AEM 進行開發
 * Javadoc jar - Java™ API jar 的 javadoc
 
@@ -53,13 +53,13 @@ AEM SDK 用於建置和部署自訂程式碼。這是您在啟用Headless應用�
 * Node.js 程式庫
 * 您選擇的 IDE
 
-由於AEM是Java™應用程式，因此您必須安裝Java™和Java™ SDK以支援AEMas a Cloud Service的開發。
+由於AEM是Java™應用程式，因此您必須安裝Java™和Java™ SDK以支援AEM as a Cloud Service的開發。
 
 Git 是您用來管理原始檔控制系統和簽入對 Cloud Manager 的變更，然後將它們部署到生產執行個體的工具。
 
 AEM 使用 Apache Maven 建置從 AEM Maven 專案原型產生的專案。所有主要的 IDE 都提供對 Maven 的整合支援。
 
-Node.js是JavaScript執行階段環境，用來處理AEM專案的 `ui.frontend` 子專案。 Node.js隨npm分佈，後者是實際的Node.js Package Manager，用於管理JavaScript相依性。
+Node.js是JavaScript執行階段環境，用來處理AEM專案`ui.frontend`子專案的前端資產。 Node.js隨npm分佈，後者是實際的Node.js Package Manager，用於管理JavaScript相依性。
 
 ## AEM 系統元件一覽 {#components-of-an-aem-system-at-a-glance}
 
@@ -69,7 +69,7 @@ Node.js是JavaScript執行階段環境，用來處理AEM專案的 `ui.frontend` 
 
 * **編寫服務**&#x200B;是內部使用者建立、管理和預覽內容的地方。
 
-* **發佈服務** 視為「即時」環境，通常是使用者與之互動的對象。 在Author服務上編輯和核准後的內容會分發（復寫）到Publish服務。 AEM Headless 應用程式最常見的部署模式是讓應用程式的生產版本連接到 AEM Publish 服務。
+* **Publish服務**&#x200B;被視為「即時」環境，通常是使用者互動的對象。 在Author服務上編輯及核准後的內容，會分配（復寫）至Publish服務。 AEM Headless 應用程式最常見的部署模式是讓應用程式的生產版本連接到 AEM Publish 服務。
 
 * **Dispatcher** 是靜態 Web 伺服器，增加了 AEM Dispatcher 模組。它快取發佈執行個體產生的網頁以提升效能。
 
@@ -97,7 +97,7 @@ Node.js是JavaScript執行階段環境，用來處理AEM專案的 `ui.frontend` 
 
 設定本機開發環境後，您可以透過在本機部署靜態Node伺服器來模擬提供給React應用程式的內容。
 
-若要更深入地瞭解如何設定本機開發環境以及內容預覽所需的所有相依性，請參閱 [生產部署檔案](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/overview.html).
+若要更深入瞭解如何設定本機開發環境以及內容預覽所需的所有相依性，請參閱[生產部署檔案](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/overview.html)。
 
 ## 準備您的AEM Headless應用程式以供上線 {#prepare-your-aem-headless-application-for-golive}
 
@@ -107,7 +107,7 @@ Node.js是JavaScript執行階段環境，用來處理AEM專案的 `ui.frontend` 
 
 ### 啟動前保護您的Headless應用程式 {#secure-and-scale-before-launch}
 
-1. 準備 [驗證](/help/sites-developing/headless/graphql-api/graphql-authentication-content-fragments.md) (適用於您的GraphQL請求)
+1. 為您的GraphQL請求準備[驗證](/help/sites-developing/headless/graphql-api/graphql-authentication-content-fragments.md)
 
 ### 模型結構與 GraphQL 輸出 {#structure-vs-output}
 
@@ -126,31 +126,31 @@ Node.js是JavaScript執行階段環境，用來處理AEM專案的 `ui.frontend` 
 
 >[!NOTE]
 >
->另請參閱 [其他資源](#additional-resources) 以取得有關CDN和快取的詳細資訊。
+>如需有關CDN和快取的詳細資訊，請參閱[其他資源](#additional-resources)。
 
 ### 縮短下載 Headless 內容的時間 {#improve-download-time}
 
 * 確保 HTTP 用戶端使用 HTTP/2。
 * 確保 HTTP 用戶端接受標頭要求 gzip。
 * 盡量減少用於裝載 JSON 和參考成品的網域數量。
-* 使用 `Last-modified-since` 以重新整理資源。
+* 使用`Last-modified-since`重新整理資源。
 * 使用 JSON 檔案中的 `_reference` 輸出開始下載資產，而無需解析完整的 JSON 檔案。
 
 <!-- End of CDN Review -->
 
 ## 部署至生產環境 {#deploy-to-production}
 
-部署到生產環境取決於您是否擁有 *傳統* 使用Maven部署的AEM執行個體，或在AdobeManaged Services (AMS)上因此使用Cloud Manager。
+部署到生產環境取決於您是使用Maven部署的&#x200B;*傳統* AEM執行個體，還是使用Managed Services (AMS)Adobe並因此使用Cloud Manager。
 
 ## 使用Maven部署至生產環境 {#deploy-to-production-maven}
 
-針對 *傳統* 使用Maven部署（非AMS），請參閱 [WKND教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup.html#build) 以取得概覽。
+如需使用Maven的&#x200B;*傳統*&#x200B;部署（非AMS），請參閱[WKND教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup.html#build)以取得概覽。
 
-## 使用Cloud Manager部署到生產 {#deploy-to-production-cloud-manager}
+## 使用Cloud Manager部署至生產環境 {#deploy-to-production-cloud-manager}
 
-如果您是使用Cloud Manager的AMS客戶，在確保一切經過測試且正常運作後，您可以將程式碼更新推送至 [Cloud Manager中的集中式Git存放庫](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/managing-code/git-integration.html).
+如果您是使用Cloud Manager的AMS客戶，在確認一切都經過測試且正常運作後，您可以將程式碼更新推送到Cloud Manager中的[集中式Git存放庫](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/managing-code/git-integration.html)。
 
-將更新上傳到Cloud Manager後，使用將它們部署到AEM [Cloud Manager的CI/CD管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-deployment.html).
+將更新上傳到Cloud Manager後，使用[Cloud Manager的CI/CD管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-deployment.html)將它們部署到AEM。
 
 <!-- Cannot find a parallel link -->
 <!--
@@ -211,23 +211,23 @@ You can start deploying your code by using the Cloud Manager CI/CD pipeline, whi
 
 ### 探索單頁應用程式 {#explore-spa}
 
-不過，不需要停止AEM中的Headless商店。 在 [歷程的快速入門部分](getting-started.md#integration-levels)，其中探討AEM如何不僅支援headless傳送和傳統的全棧疊模式，也支援結合兩者優勢的混合模式。
+不過，不需要停止AEM中的Headless商店。 在歷程](getting-started.md#integration-levels)的[快速入門部分中，它討論了AEM如何不僅支援Headless傳送和傳統的全棧疊模型，還支援結合兩者優勢的混合模型。
 
-如果專案需要這種彈性，請繼續進行歷程的額外部分（選填）， [如何使用AEM建立單頁應用程式(SPA)。](create-spa.md)
+如果您的專案需要這種彈性，請繼續進行[如何使用AEM建立單頁應用程式(SPA) ](create-spa.md)歷程的其他選擇性部分。
 
 ## 其他資源 {#additional-resources}
 
-* [AEM Developing指南](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/the-basics.html)
+* [AEM開發指南](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/the-basics.html)
 
 * [WKND教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
 
-* [適用於AEM的Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html)
+* 適用於AEM的[Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html)
 
 * CDN快取
 
    * [控制CDN快取](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html#controlling-a-cdn-cache)
 
-   * 設定 [CDN重寫程式](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/osgi-configuration-settings.html) (*搜尋CDN重寫程式*)
+   * 正在設定[CDN重寫程式](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/osgi-configuration-settings.html) （*搜尋CDN重寫程式*）
 
 * [AEM as a Headless CMS 簡介](/help/sites-developing/headless/introduction.md)
 * [AEM 開發人員入口網站](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)

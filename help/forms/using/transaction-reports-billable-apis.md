@@ -35,9 +35,9 @@ AEM Forms提供多個API來提交表單、處理檔案和轉譯檔案。 有些A
 
 帳單API不考慮頁數、檔案或表單的長度，或轉譯檔案的最終格式。 交易報告將交易分為兩個類別：已呈現的檔案和Forms已提交。
 
-* **Forms已提交：** 若從使用AEM Forms建立的任何型別的表單提交資料，且資料已提交至任何資料儲存庫或資料庫，則視為表單提交。 例如，提交最適化表單、HTML5表單、PDF forms和表單集都會計為已提交的表單。 表單集中的每個表單都視為提交。 例如，如果表單集有5個表單，在提交表單集時，交易報告服務將其計為5個提交。
+* **Forms已提交：**&#x200B;從使用AEM Forms建立的任何型別的表單提交資料，且資料已提交至任何資料儲存庫或資料庫時，即視為表單提交。 例如，提交最適化表單、HTML5表單、PDF forms和表單集都會計為已提交的表單。 表單集中的每個表單都視為提交。 例如，如果表單集有5個表單，在提交表單集時，交易報告服務將其計為5個提交。
 
-* **已轉譯的檔案：** 透過結合範本和資料來產生檔案、以數位方式簽署或認證檔案、使用用於檔案服務的計費檔案服務API，或將檔案從一種格式轉換為另一種格式，均被視為檔案已呈現。
+* **已轉譯的檔案：**&#x200B;透過結合範本和資料來產生檔案、以數位方式簽署或認證檔案、使用檔案服務的計費檔案服務API，或將檔案從一種格式轉換為另一種格式，均被視為已轉譯的檔案。
 
 >[!NOTE]
 >
@@ -202,7 +202,7 @@ AEM Forms提供多個API來提交表單、處理檔案和轉譯檔案。 有些A
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/OutputService.html#generatePDFOutputBatch-java.util.Map-java.util.Map-com.adobe.fd.output.api.PDFOutputOptions-com.adobe.fd.output.api.BatchOptions-" target="_blank">generatePDFOutputBatch</a></td>
    <td>合併資料和範本以建立一組PDF檔案。</td>
    <td>已處理的文件</td>
-   <td> generatePDFOutputBatch API將表單範本與記錄結合，並產生PDF。 當您處理記錄批次時，交易報告服務會將每個記錄計為個別的PDF轉譯。 <br> 您可以使用 <a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/BatchOptions.html#getGenerateManyFiles--">getGenerateManyFile</a> 此旗標可結合多個轉譯為單一PDF檔案。 無論標幟的狀態為何，服務都會將每筆記錄計為個別的PDF轉譯。 </td>
+   <td> generatePDFOutputBatch API將表單範本與記錄結合，並產生PDF。 當您處理記錄批次時，交易報告服務會將每個記錄計為個別的PDF轉譯。 <br>您可以使用<a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/BatchOptions.html#getGenerateManyFiles--">getGenerateManyFiles</a>旗標，將多個轉譯合併為單一PDF檔案。 無論標幟的狀態為何，服務都會將每筆記錄計為個別的PDF轉譯。 </td>
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/OutputService.html#generatePrintedOutput-com.adobe.aemfd.docmanager.Document-com.adobe.aemfd.docmanager.Document-com.adobe.fd.output.api.PrintedOutputOptions-" target="_blank">generatePrintedOutput</a></td>
@@ -220,7 +220,7 @@ AEM Forms提供多個API來提交表單、處理檔案和轉譯檔案。 有些A
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/OutputService.html#generatePrintedOutputBatch-java.util.Map-java.util.Map-com.adobe.fd.output.api.PrintedOutputOptions-com.adobe.fd.output.api.BatchOptions-" target="_blank">generatePrintedOutputBatch</a></td>
    <td>將一組XDP和PDF檔案轉換為一組PostScript (PS)、印表機命令語言(PCL)和ZPL檔案格式。 </td>
    <td>已處理的文件</td>
-   <td> generatePDFOutputBatch API將表單範本與記錄結合，並產生PDF。 當您處理記錄批次時，交易報告服務會將每個記錄計為個別的PDF轉譯。 <br> 您可以使用 <a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/BatchOptions.html#getGenerateManyFiles--">getGenerateManyFile</a> 此旗標可結合多個轉譯為單一PDF檔案。 無論標幟的狀態為何，服務都會將每筆記錄計為個別的PDF轉譯。 </td>
+   <td> generatePDFOutputBatch API將表單範本與記錄結合，並產生PDF。 當您處理記錄批次時，交易報告服務會將每個記錄計為個別的PDF轉譯。 <br>您可以使用<a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/BatchOptions.html#getGenerateManyFiles--">getGenerateManyFiles</a>旗標，將多個轉譯合併為單一PDF檔案。 無論標幟的狀態為何，服務都會將每筆記錄計為個別的PDF轉譯。 </td>
   </tr>
  </tbody>
 </table>
@@ -268,7 +268,7 @@ AEM Forms提供多個API來提交表單、處理檔案和轉譯檔案。 有些A
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/cpdf/api/ConvertPdfService.html#toImage-com.adobe.aemfd.docmanager.Document-com.adobe.fd.cpdf.api.ToImageOptionsSpec-" target="_blank">toPS</a></td>
-   <td>使用選項規格中指定的選項將FlatPDF檔案轉換為PostScript格式。</td>
+   <td>使用選項規格中指定的選項，將「平坦PDF」檔案轉換為PostScript格式。</td>
    <td>已處理的文件</td>
    <td> </td>
   </tr>
@@ -306,7 +306,7 @@ AEM Forms提供多個API來提交表單、處理檔案和轉譯檔案。 有些A
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/assembler/service/AssemblerService.html#invoke-com.adobe.aemfd.docmanager.Document-java.util.Map-com.adobe.fd.assembler.client.AssemblerOptionSpec-">叫用</a></td>
-   <td>執行指定的DDX檔案並傳回 <a href="https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/assembler/client/AssemblerResult.html">組合器結果</a> 包含結果檔案的物件。 </td>
+   <td>執行指定的DDX檔案並傳回包含結果檔案的<a href="https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/assembler/client/AssemblerResult.html">AssemblerResult</a>物件。 </td>
    <td>已處理的文件</td>
    <td>下列作業不會作為交易入帳：
     <ul>
@@ -316,7 +316,7 @@ AEM Forms提供多個API來提交表單、處理檔案和轉譯檔案。 有些A
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/assembler/service/AssemblerService.html#invoke-com.adobe.aemfd.docmanager.Document-java.util.Map-com.adobe.fd.assembler.client.AssemblerOptionSpec-" target="_blank">叫用</a></td>
-   <td>執行指定的DDX檔案並傳回 <a href="https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/assembler/client/AssemblerResult.html">組合器結果</a> 包含結果檔案的物件。 </td>
+   <td>執行指定的DDX檔案並傳回包含結果檔案的<a href="https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/assembler/client/AssemblerResult.html">AssemblerResult</a>物件。 </td>
    <td>已處理的文件</td>
    <td>PDF Generator、Forms和輸出服務支援的所有輸入檔案格式，組合器服務都支援所有這些格式作為輸出檔案格式。 </td>
   </tr>
@@ -360,7 +360,7 @@ AEM Forms提供多個API來提交表單、處理檔案和轉譯檔案。 有些A
 
 ## 可記帳資料擷取API {#billable-data-capture-apis}
 
-調適型表單、HTML5 Forms和表單集的所有提交事件都會計為交易。 依預設，PDF表單的提交不會作為交易入帳。 使用提供的 [交易錄製器API](record-transaction-custom-implementation.md) 將PDF forms提交記錄為交易。
+調適型表單、HTML5 Forms和表單集的所有提交事件都會計為交易。 依預設，PDF表單的提交不會作為交易入帳。 使用提供的[交易錄製器API](record-transaction-custom-implementation.md)，將PDF forms提交記錄為交易。
 
 ### 最適化表單 {#adaptive-forms}
 
@@ -504,7 +504,7 @@ AEM Forms提供多個API來提交表單、處理檔案和轉譯檔案。 有些A
 
 ## 將可記帳API記錄為自訂程式碼的交易 {#recording-billable-apis-as-transactions-for-custom-code}
 
-提交PDF表單、使用代理程式UI預覽互動式通訊、使用非標準表單提交和自訂實施等動作不會計為交易。 AEM Forms提供API來記錄此類動作，例如交易。 您可以從自訂實施呼叫API至 [記錄交易](/help/forms/using/record-transaction-custom-implementation.md).
+提交PDF表單、使用代理程式UI預覽互動式通訊、使用非標準表單提交和自訂實施等動作不會計為交易。 AEM Forms提供API來記錄此類動作，例如交易。 您可以從自訂實作呼叫API以[記錄交易](/help/forms/using/record-transaction-custom-implementation.md)。
 
 ## 相關文章 {#related-articles}
 

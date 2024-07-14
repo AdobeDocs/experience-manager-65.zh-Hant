@@ -26,7 +26,7 @@ We.Gov是國家營運的組織，如果養父母領養孩子，可讓他們註�
 * 海軍部
 * 環境保護局
 
-如需資訊自由法案的詳細資訊，請參閱 [https://www.foia.gov/](https://www.foia.gov).
+如需資訊自由法的詳細資訊，請參閱[https://www.foia.gov/](https://www.foia.gov)。
 
 此案例涉及以下角色：
 
@@ -42,26 +42,26 @@ We.Gov是國家營運的組織，如果養父母領養孩子，可讓他們註�
 
 ### 親眼看看 {#see-it-yourself}
 
-在您的瀏覽器中，開啟 `https://<hostname>:<PublishPort>/wegov`. 在We.Gov網站中，選取「應用程式」>「所有應用程式」。 在「所有應用程式」頁面中，選取「FOIA要求的應用程式」下的「套用」。
+在您的瀏覽器中，開啟`https://<hostname>:<PublishPort>/wegov`。 在We.Gov網站中，選取「應用程式」>「所有應用程式」。 在「所有應用程式」頁面中，選取「FOIA要求的應用程式」下的「套用」。
 
 ## Sarah開始申請FOIA下的資訊 {#sarah-starts-her-application-for-information-under-foia}
 
-Sarah點按次數 **套用** 而在資訊自由法案申請表頁面中，Sarah會輸入以下資訊：
+Sarah按一下「**套用**」，在「資訊自由法案申請表」頁面中，Sarah輸入以下資訊：
 
-* **代理商：** Sarah指定要求所處理的機構為司法部 — 資訊政策辦公室。
+* **代理商：** Sarah指定要求所處理的代理商為司法部 — 資訊局政策。
 
-* **將支付最高至**：Sarah指定她準備支付高達100美元的列印和郵資費用。
-* **詳細說明請求**：Sarah指定「要求2013至2016會計年度的『兒童與家庭管理』個案記錄副本」。
+* **將支付最多**： Sarah指定她準備支付最多100美元的列印和郵資費用。
+* **詳細說明要求**： Sarah指定「要求2013至2016會計年度兒童及家庭管理個案記錄副本」。
 
-![索取2013至2016會計年度「兒童與家庭管理」個案記錄的復本](assets/sarahfiosform.png)
+![要求2013至2016會計年度的「兒童與家庭管理」個案記錄復本](assets/sarahfiosform.png)
 
 索取2013至2016會計年度「兒童與家庭管理」個案記錄的復本
 
-Sarah隨時可以選擇 **儲存** 以儲存表單草稿，稍後再回來填寫表單並提交它。 Sarah提交表單。
+Sarah可隨時選取&#x200B;**儲存**&#x200B;以儲存表單草稿，稍後再回來填寫表單並提交表單。 Sarah提交表單。
 
 >[!NOTE]
 >
->從電子郵件恢復工作流程僅適用於登入的使用者。 在參考網站案例中，確定已新增使用者Sarah Rose。 Sarah的登入憑證有 `srose/password`.
+>從電子郵件恢復工作流程僅適用於登入的使用者。 在參考網站案例中，確定已新增使用者Sarah Rose。 Sarah的登入認證是`srose/password`。
 
 ## John Jacobs收到並核准該申請 {#john-jacobs-receives-and-approves-the-application}
 
@@ -73,9 +73,9 @@ John Jacobs會收到要求，並導向給合適的人。 AEM收件匣可讓John�
 
 ### 親眼看看 {#see-it-yourself-1}
 
-您可以在https://存取AEM收件匣&lt;***主機名稱***>：&lt;***Publishport***>/content/we-finance/global/en/login.html？resource=/aem/inbox.html. 使用jjacobs/password作為John Jacobs的使用者名稱/密碼登入AEM收件匣，並檢視FOIA應用程式。 如需有關使用AEM收件匣執行以表單為中心的工作流程任務的資訊，請參閱 [管理AEM收件匣中的Forms應用程式和工作](/help/forms/using/manage-applications-inbox.md).
+您可以在https://&lt;***主機名稱***>：&lt;***PublishPort***>/content/we-finance/global/en/login.html？resource=/aem/inbox.html存取AEM收件匣。 使用jjacobs/password作為John Jacobs的使用者名稱/密碼登入AEM收件匣，並檢視FOIA應用程式。 如需有關使用AEM收件匣進行以表單為中心的工作流程工作的資訊，請參閱[在AEM收件匣中管理Forms應用程式和工作](/help/forms/using/manage-applications-inbox.md)。
 
-![約翰雅各布](assets/johnjacobs.png)
+![johnjacobs](assets/johnjacobs.png)
 
 John Jacobs可以從應用程式儀表板檢視、核准或拒絕應用程式。 John Jacobs會選取並開啟請求詳細資料，並在檢閱請求後核准請求。
 
@@ -85,7 +85,7 @@ John Jacobs可以從應用程式儀表板檢視、核准或拒絕應用程式。
 
 在John Jacobs核准申請後，Sarah會收到We.Gov網站的認可電子郵件。 系統會通知Sarah處理申請所需的費用和時間。 電子郵件也包含Sarah可以聯絡以取得應用程式更新的電子郵件和電話詳細資訊。
 
-![薩拉赫羅塞梅爾](assets/sarahroseemail.png)
+![sarahroseemail](assets/sarahroseemail.png)
 
 ## Gloria會收到FOIA的第二層核准請求 {#gloria-receives-the-foia-request-for-second-level-approval}
 
@@ -99,11 +99,11 @@ John Jacobs可以從應用程式儀表板檢視、核准或拒絕應用程式。
 
 ### 親自檢視 {#see-for-yourself}
 
-您可以在https://存取AEM收件匣&lt;***主機名稱***>：&lt;***Publishport***>/content/we-finance/global/en/login.html？resource=/aem/inbox.html. 使用grios/密碼作為Gloria Rios的使用者名稱/密碼登入AEM收件匣，並檢視FOIS要求。
+您可以在https://&lt;***主機名稱***>：&lt;***PublishPort***>/content/we-finance/global/en/login.html？resource=/aem/inbox.html存取AEM收件匣。 使用grios/密碼作為Gloria Rios的使用者名稱/密碼登入AEM收件匣，並檢視FOIS要求。
 
 Gloria會開啟要求，並檢查FOIA要求的詳細資料。 在檢閱請求的詳細資訊並檢查提供所需檔案的可行性後，Gloria核准了請求。
 
-![gloriariosapens](assets/gloriariosapproves.png)
+![榮譽](assets/gloriariosapproves.png)
 
 ## Sarah收到請求獲得核准的通知 {#sarah-receives-notification-that-her-request-is-approved}
 

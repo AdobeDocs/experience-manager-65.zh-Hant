@@ -21,9 +21,9 @@ ht-degree: 0%
 
 JMX主控台可讓您監視和管理CRX伺服器上的服務。 接下來的章節會概述透過JMX架構公開的屬性和作業。
 
-如需有關如何使用主控台控制項的資訊，請參閱 [使用JMX主控台](#using-the-jmx-console). 如需JMX的背景資訊，請參閱 [Java管理擴充功能(JMX)技術](https://www.oracle.com/technetwork/java/javase/tech/javamanagement-140525.html) oracle網站的頁面。
+如需有關如何使用主控台控制項的資訊，請參閱[使用JMX主控台](#using-the-jmx-console)。 如需JMX的背景資訊，請參閱Oracle網站上的[Java Management Extensions (JMX) Technology](https://www.oracle.com/technetwork/java/javase/tech/javamanagement-140525.html)頁面。
 
-如需有關建立MBean以使用JMX主控台管理服務的資訊，請參閱 [將服務與JMX主控台整合](/help/sites-developing/jmx-integration.md).
+如需有關建立MBean以使用JMX主控台管理服務的資訊，請參閱[將服務與JMX主控台整合](/help/sites-developing/jmx-integration.md)。
 
 ## 工作流程維護 {#workflow-maintenance}
 
@@ -34,21 +34,21 @@ JMX主控台可讓您監視和管理CRX伺服器上的服務。 接下來的章�
 
 >[!NOTE]
 >
->請參閱 [工作流程主控台](/help/sites-administering/workflows-administering.md) 以取得其他工作流程管理工具及可能的工作流程例項狀態說明。
+>檢視[工作流程主控台](/help/sites-administering/workflows-administering.md)，以取得其他工作流程管理工具，以及可能的工作流程執行個體狀態的說明。
 
 ### 運作 {#operations}
 
-**listRunningWorkflowsPerModel** 列出針對每個工作流程模型執行的工作流程例項數目。
+**listRunningWorkflowsPerModel**&#x200B;列出針對每個工作流程模型執行的工作流程執行個體數目。
 
 * 引數：無
 * 傳回值：包含Count和ModelId欄的表格資料。
 
-**listCompletedWorkflowsPerModel** 列出每個工作流程模型的已完成工作流程例項數目。
+**listCompletedWorkflowsPerModel**&#x200B;列出每個工作流程模型的已完成工作流程執行個體數目。
 
 * 引數：無
 * 傳回值：包含Count和ModelId欄的表格資料。
 
-**returnWorkflowQueueInfo** 列出已處理且已排入處理佇列之工作流程專案的相關資訊。
+**returnWorkflowQueueInfo**&#x200B;列出已處理且已排入處理佇列之工作流程專案的相關資訊。
 
 * 引數：無
 * 傳回值：包含下列資料行的表格資料：
@@ -64,7 +64,7 @@ JMX主控台可讓您監視和管理CRX伺服器上的服務。 接下來的章�
    * 已處理工作
    * 已排入佇列的工作
 
-**returnWorkflowJobTopicInfo** 列出工作流程工作的處理資訊，依主題組織。
+**returnWorkflowJobTopicInfo**&#x200B;列出工作流程工作的處理資訊，依主題組織。
 
 * 引數：無
 * 傳回值：包含下列資料行的表格資料：
@@ -77,7 +77,7 @@ JMX主控台可讓您監視和管理CRX伺服器上的服務。 接下來的章�
    * 完成的工作
    * 已處理工作
 
-**returnFailedWorkflowCount** 顯示失敗的工作流程執行個體數目。 您可以指定工作流程模型，以查詢或擷取所有工作流程模型的資訊。
+**returnFailedWorkflowCount**&#x200B;顯示失敗的工作流程執行個體數目。 您可以指定工作流程模型，以查詢或擷取所有工作流程模型的資訊。
 
 * 引數：
 
@@ -87,17 +87,17 @@ JMX主控台可讓您監視和管理CRX伺服器上的服務。 接下來的章�
 
 * 傳回值：失敗的工作流程例項數目。
 
-**returnFailedWorkflowCountPerModel** 顯示每個工作流程模型失敗的工作流程例項數目。
+**returnFailedWorkflowCountPerModel**&#x200B;顯示每個工作流程模型失敗的工作流程執行個體數目。
 
 * 引數：無。
 * 傳回值：包含「計數」和「模型ID」欄的表格資料。
 
-**terminateFailedInstances** 終止失敗的工作流程執行個體。 您可以終止所有失敗的執行個體或僅終止特定模型的失敗執行個體。 您可以選擇在執行個體終止後重新啟動執行個體。 您也可以測試作業以檢視結果，而無需實際執行作業。
+**terminateFailedInstances**&#x200B;終止失敗的工作流程執行個體。 您可以終止所有失敗的執行個體或僅終止特定模型的失敗執行個體。 您可以選擇在執行個體終止後重新啟動執行個體。 您也可以測試作業以檢視結果，而無需實際執行作業。
 
 * 引數：
 
-   * 重新啟動執行個體： （選擇性）指定值 `true` 在終止執行個體後重新啟動執行個體。 預設值 `false` 不會重新啟動已終止的工作流程例項。
-   * 試執行： （選擇性）指定值 `true` 以檢視作業結果，而不實際執行作業。 預設值 `false` 導致執行作業。
+   * 重新啟動執行個體： （選擇性）指定值`true`可在執行個體終止後重新啟動執行個體。 預設值`false`不會重新啟動已終止的工作流程執行個體。
+   * 試執行： （選擇性）指定值`true`以檢視作業的結果，而不實際執行作業。 預設值`false`會導致執行作業。
    * 模型： （選用）套用作業的模型識別碼。 指定沒有模型可將操作套用至所有工作流程模型的失敗執行個體。 ID是模型節點的路徑，例如：
 
      `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
@@ -111,11 +111,11 @@ JMX主控台可讓您監視和管理CRX伺服器上的服務。 接下來的章�
    * StartComment
    * 工作流程標題
 
-**retryFailedWorkItems** 嘗試執行失敗的工作專案步驟。 您可以針對特定工作流程模型重試所有失敗的工作專案，或僅重試失敗的工作專案。 您可以選擇性地測試作業以檢視結果，而不實際執行作業。
+**retryFailedWorkItems**&#x200B;嘗試執行工作專案步驟失敗。 您可以針對特定工作流程模型重試所有失敗的工作專案，或僅重試失敗的工作專案。 您可以選擇性地測試作業以檢視結果，而不實際執行作業。
 
 * 引數：
 
-   * 試執行： （選擇性）指定值 `true` 以檢視作業結果，而不實際執行作業。 預設值 `false` 導致執行作業。
+   * 試執行： （選擇性）指定值`true`以檢視作業的結果，而不實際執行作業。 預設值`false`會導致執行作業。
    * 模型： （選用）套用作業的模型識別碼。 指定沒有模型可將操作套用至所有工作流程模型的失敗工作專案。 ID是模型節點的路徑，例如：
 
      `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
@@ -129,7 +129,7 @@ JMX主控台可讓您監視和管理CRX伺服器上的服務。 接下來的章�
    * StartComment
    * 工作流程標題
 
-**PurgeActive** 移除特定頁面的作用中工作流程例項。 您可以清除所有模型的作用中例證，或僅清除特定模型的例證。 您可以選擇性地測試作業以檢視結果，而無需實際執行作業。
+**PurgeActive**&#x200B;移除特定頁面的作用中工作流程執行個體。 您可以清除所有模型的作用中例證，或僅清除特定模型的例證。 您可以選擇性地測試作業以檢視結果，而無需實際執行作業。
 
 * 引數：
 
@@ -137,7 +137,7 @@ JMX主控台可讓您監視和管理CRX伺服器上的服務。 接下來的章�
 
      `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
    * 自工作流程開始以來的天數：要永久刪除的工作流程執行處理的存留期（以天為單位）。
-   * 試執行： （選擇性）指定值 `true` 以檢視作業結果，而不實際執行作業。 預設值 `false` 導致執行作業。
+   * 試執行： （選擇性）指定值`true`以檢視作業的結果，而不實際執行作業。 預設值`false`會導致執行作業。
 
 * 傳回值：關於已清除之作用中工作流程執行處理的表格資料，包括下列欄：
 
@@ -148,7 +148,7 @@ JMX主控台可讓您監視和管理CRX伺服器上的服務。 接下來的章�
    * StartComment
    * 工作流程標題
 
-**countStaleWorkflows** 傳回過期的工作流程例項數目。 您可以擷取所有工作流程模型或特定模型的過時例項數。
+**countStaleWorkflows**&#x200B;傳回過時的工作流程執行個體數目。 您可以擷取所有工作流程模型或特定模型的過時例項數。
 
 * 引數：
 
@@ -158,23 +158,23 @@ JMX主控台可讓您監視和管理CRX伺服器上的服務。 接下來的章�
 
 * 傳回值：過時的工作流程例項數目。
 
-**restartStaleWorkflows** 重新啟動過時的工作流程例項。 您可以重新啟動所有過時例項，或僅重新啟動特定模型的過時例項。 您也可以測試作業以檢視結果，而無需實際執行作業。
+**restartStaleWorkflows**&#x200B;重新啟動過時的工作流程執行個體。 您可以重新啟動所有過時例項，或僅重新啟動特定模型的過時例項。 您也可以測試作業以檢視結果，而無需實際執行作業。
 
 * 引數：
 
    * 模型： （選用）套用作業的模型識別碼。 不指定任何模型以將此作業套用至所有工作流程模型的過時執行個體。 ID是模型節點的路徑，例如：
 
      `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
-   * 試執行： （選擇性）指定值 `true` 以檢視作業結果，而不實際執行作業。 預設值 `false` 導致執行作業。
+   * 試執行： （選擇性）指定值`true`以檢視作業的結果，而不實際執行作業。 預設值`false`會導致執行作業。
 
 * 傳回的值：重新啟動的工作流程執行個體清單。
 
-**fetchModelList** 列出所有工作流程模型。
+**fetchModelList**&#x200B;列出所有工作流程模型。
 
 * 引數：無
 * 傳回值：可識別工作流程模型（包括ModelId和ModelName欄）的表格式資料。
 
-**countRunningWorkflows** 傳回正在執行的工作流程例項數目。 您可以擷取所有工作流程模型或特定模型的執行中例證數目。
+**countRunningWorkflows**&#x200B;傳回正在執行的工作流程執行個體數目。 您可以擷取所有工作流程模型或特定模型的執行中例證數目。
 
 * 引數：
 
@@ -184,7 +184,7 @@ JMX主控台可讓您監視和管理CRX伺服器上的服務。 接下來的章�
 
 * 傳回值：執行中的工作流程例項數目。
 
-**countCompletedWorkflows** 傳回已完成的工作流程例項數目。 您可以擷取所有工作流程模型或特定模型的已完成例證數目。
+**countCompletedWorkflows**&#x200B;傳回已完成的工作流程執行個體數目。 您可以擷取所有工作流程模型或特定模型的已完成例證數目。
 
 * 引數：
 
@@ -194,7 +194,7 @@ JMX主控台可讓您監視和管理CRX伺服器上的服務。 接下來的章�
 
 * 傳回值：已完成的工作流程例項數目。
 
-**purgeCompleted** 從存放庫移除特定年齡的已完成工作流程記錄。 當您大量使用工作流程時，請定期使用此作業以最小化存放庫的大小。 您可以清除所有模型的已完成例證，或僅清除特定模型的例證。 您可以選擇性地測試作業以檢視結果，而無需實際執行作業。
+**purgeCompleted**&#x200B;從存放庫中移除已完成的特定時期工作流程記錄。 當您大量使用工作流程時，請定期使用此作業以最小化存放庫的大小。 您可以清除所有模型的已完成例證，或僅清除特定模型的例證。 您可以選擇性地測試作業以檢視結果，而無需實際執行作業。
 
 * 引數：
 
@@ -202,7 +202,7 @@ JMX主控台可讓您監視和管理CRX伺服器上的服務。 接下來的章�
 
      `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
    * 自工作流程完成以來的天數：工作流程執行個體處於已完成狀態的天數。
-   * 試執行： （選擇性）指定值 `true` 以檢視作業結果，而不實際執行作業。 預設值 `false` 導致執行作業。
+   * 試執行： （選擇性）指定值`true`以檢視作業的結果，而不實際執行作業。 預設值`false`會導致執行作業。
 
 * 傳回值：已清除之已完成工作流程執行處理的表格資料，包括下列欄：
 
@@ -224,26 +224,26 @@ CRX存放庫的相關資訊
 
 **名稱** JCR存放庫實作的名稱。 唯讀。
 
-**版本** 存放庫實施版本。 唯讀。
+**版本**&#x200B;存放庫實作版本。 唯讀。
 
-**HomeDir** 存放庫所在的目錄。 預設位置為 &lt;quickstart_jar_location>/crx-quickstart/repository。 唯讀。
+**HomeDir**&#x200B;存放庫所在的目錄。 預設位置為&lt;QuickStart_Jar_Location>/crx-quickstart/repository。 唯讀。
 
-**客戶名稱** 軟體授權所核發之客戶的名稱。 唯讀。
+**CustomerName**&#x200B;軟體授權所核發之客戶的名稱。 唯讀。
 
-**授權金鑰** 此安裝存放庫的唯一授權金鑰。 唯讀。
+**LicenseKey**&#x200B;此存放庫安裝的唯一授權金鑰。 唯讀。
 
-**可用磁碟空間** 儲存區域的這個執行個體可用的磁碟空間（以MB為單位）。 唯讀。
+**AvailableDiskSpace**&#x200B;儲存庫執行個體可用的磁碟空間（以MB為單位）。 唯讀。
 
-**MaximumNumberOfOpenFiles** 可一次開啟的檔案數。 唯讀。
+**MaximumNumberOfOpenFiles**&#x200B;一次可開啟的檔案數。 唯讀。
 
 **SessionTracker** crx.debug.sessions系統變數的值。 true表示偵錯工作階段。 false表示正常工作階段。 讀取/寫入。
 
-**描述項** 代表存放庫屬性的一組索引鍵/值組。 所有屬性都是唯讀的。
+**描述項**&#x200B;代表存放庫屬性的機碼值組集合。 所有屬性都是唯讀的。
 
 <table>
  <tbody>
   <tr>
-   <th>關鍵</th>
+   <th>索引鍵</th>
    <th>值</th>
   </tr>
   <tr>
@@ -488,21 +488,21 @@ CRX存放庫的相關資訊
  </tbody>
 </table>
 
-**工作區名稱** 存放庫中的工作區名稱。 唯讀。
+**WorkspaceNames**&#x200B;存放庫中的工作區名稱。 唯讀。
 
-**DataStoreGarbageCollectionDelay** 掃描每10個節點後記憶體回收休眠的時間長度（以毫秒為單位）。 讀取/寫入。
+**DataStoreGarbageCollectionDelay**&#x200B;掃描每10個節點之後，記憶體回收休眠的時間量（毫秒）。 讀取/寫入。
 
-**BackupDelay** 備份程式在備份的每個步驟之間休眠的時間（毫秒）。 讀取/寫入。
+**BackupDelay**&#x200B;備份程式在備份的每個步驟之間休眠的時間量（毫秒）。 讀取/寫入。
 
-**BackupInProgress** 值為true表示備份程式正在執行。 唯讀。
+**BackupInProgress** True值表示正在執行備份程式。 唯讀。
 
-**備份進度** 對於目前的備份，所有已備份檔案的百分比。 唯讀。
+**BackupProgress**&#x200B;對於目前的備份，所有已備份檔案的百分比。 唯讀。
 
-**目前備份目標** 對於目前的備份，為儲存備份檔案的ZIP檔案。 備份不在進行中時，不會顯示任何值。 唯讀。
+**CurrentBackupTarget**&#x200B;對於目前的備份，為儲存備份檔案的ZIP檔案。 備份不在進行中時，不會顯示任何值。 唯讀。
 
-**BackupWasSuccessful** 值為true表示目前的備份期間沒有發生錯誤，或沒有進行中的備份。 false表示目前備份期間發生錯誤。 唯讀。
+**BackupWasSuccessful** true值表示目前的備份期間沒有發生錯誤，或沒有進行中的備份。 false表示目前備份期間發生錯誤。 唯讀。
 
-**BackupResult** 目前備份的狀態。 可能的值如下：
+**BackupResult**&#x200B;目前備份的狀態。 可能的值如下：
 
 * 備份進行中：備份目前正在執行中。
 * 已取消備份：已取消備份。
@@ -512,23 +512,23 @@ CRX存放庫的相關資訊
 
 唯讀。
 
-**TarOptimizationRunningSince** 目前的TAR檔案最佳化程式開始的時間。 唯讀。
+**TarOptimizationRunningSince**&#x200B;目前TAR檔案最佳化程式開始的時間。 唯讀。
 
-**TarOptimizationDelay** TAR最佳化程式在程式每個步驟之間休眠的時間量（毫秒）。 讀取/寫入。
+**TarOptimizationDelay** TAR最佳化處理序在每個處理序步驟之間休眠的時間量（毫秒）。 讀取/寫入。
 
-**叢集屬性** 代表叢集屬性和值的一組機碼值組。 表格中的每一列代表叢集屬性。 唯讀。
+**ClusterProperties**&#x200B;代表叢集屬性和值的一組機碼值組。 表格中的每一列代表叢集屬性。 唯讀。
 
-**叢集節點** 存放庫叢集的成員。
+**ClusterNodes**&#x200B;存放庫叢集的成員。
 
-**叢集ID** 此存放庫叢集的識別碼。 唯讀。
+**ClusterId**&#x200B;此存放庫叢集的識別碼。 唯讀。
 
-**ClusterMasterId** 此存放庫叢集之主要節點的識別碼。 唯讀。
+**ClusterMasterId**&#x200B;此存放庫叢集之主節點的識別碼。 唯讀。
 
-**ClusterNodeId** 存放庫叢集的這個節點的識別碼。 唯讀。
+**ClusterNodeId**&#x200B;存放庫叢集此節點的識別碼。 唯讀。
 
 ### 運作 {#operations-1}
 
-**createWorkspace** 在此存放庫中建立工作區。
+**createWorkspace**&#x200B;在此存放庫中建立工作區。
 
 * 引數：
 
@@ -536,7 +536,7 @@ CRX存放庫的相關資訊
 
 * 傳回值：無
 
-**runDataStoreGarbageCollection** 在存放庫節點上執行記憶體回收。
+**runDataStoreGarbageCollection**&#x200B;在存放庫節點上執行記憶體回收。
 
 * 引數：
 
@@ -544,84 +544,84 @@ CRX存放庫的相關資訊
 
 * 傳回值：無
 
-**stopDataStoreGarbageCollection** 停止執行中的資料存放區記憶體回收。
+**stopDataStoreGarbageCollection**&#x200B;停止執行中的資料存放區垃圾回收。
 
 * 引數：無
 * 傳回值：目前狀態的字串表示
 
-**startBackup** 備份ZIP檔案中的存放庫資料。
+**startBackup**&#x200B;備份ZIP檔案中的儲存庫資料。
 
 * 引數：
 
-   * `target`：（選用） A `String` 值，代表要封存存放庫資料的ZIP檔案或目錄的名稱。 若要使用ZIP檔案，請包含ZIP副檔名。 若要使用目錄，請勿包含副檔名。
+   * `target`： （選用）代表要封存存放庫資料的ZIP檔案或目錄名稱的`String`值。 若要使用ZIP檔案，請包含ZIP副檔名。 若要使用目錄，請勿包含副檔名。
 
      若要執行增量備份，請指定先前用於備份的目錄。
 
      您可以指定絕對或相對路徑。 相對路徑相對於crx-quickstart目錄的父項。
 
-     若您未指定任何值，預設值為 `backup-currentdate.zip` 使用，其中 `currentdate` 為格式 `yyyyMMdd-HHmm`.
+     若未指定任何值，則使用`backup-currentdate.zip`的預設值，其中`currentdate`的格式為`yyyyMMdd-HHmm`。
 
 * 傳回值：無
 
-**取消備份** 停止目前的備份程式，並刪除程式為封存資料所建立的暫時封存。
+**cancelBackup**&#x200B;停止目前的備份程式，並刪除程式為封存資料所建立的暫時封存。
 
 * 引數：無
 * 傳回值：無
 
-**blockRepositoryWrites** 封鎖對存放庫資料的變更。 所有存放庫備份接聽程式都會收到區塊的通知。
+**blockRepositoryWrites**&#x200B;封鎖對存放庫資料的變更。 所有存放庫備份接聽程式都會收到區塊的通知。
 
 * 引數：無
 * 傳回值：無
 
-**unblockRepositoryWrites** 從存放庫移除區塊。 所有存放庫備份接聽程式都會收到區塊移除的通知。
+**unblockRepositoryWrites**&#x200B;從存放庫移除區塊。 所有存放庫備份接聽程式都會收到區塊移除的通知。
 
 * 引數：無
 * 傳回值：無
 
-**startTarOptimization** 使用tarOptimizationDelay的預設值啟動TAR檔案最佳化程式。
+**startTarOptimization**&#x200B;使用tarOptimizationDelay的預設值啟動TAR檔案最佳化程式。
 
 * 引數：無
 * 傳回值：無
 
-**stopTarOptimization** 停止TAR檔案最佳化。
+**stopTarOptimization**&#x200B;停止TAR檔案最佳化。
 
 * 引數：無
 * 傳回值：無
 
-**tarIndexMerge** 合併所有TAR集的頂層索引檔案。 最上層索引檔案是主要版本不同的檔案。 例如，下列檔案會合併至index_3_1.tar檔案： index_1_1.tar、index_2_0.tar、index_3_0.tar。 已合併的檔案會被刪除（在前一個範例中，會刪除index_1_1.tar、index_2_0.tar和index_3_0.tar）。
+**tarIndexMerge**&#x200B;合併所有TAR集的頂層索引檔案。 最上層索引檔案是主要版本不同的檔案。 例如，下列檔案會合併至index_3_1.tar檔案： index_1_1.tar、index_2_0.tar、index_3_0.tar。 已合併的檔案會被刪除（在前一個範例中，會刪除index_1_1.tar、index_2_0.tar和index_3_0.tar）。
 
 * 引數：
 
-   * `background`：Boolean值，指出是否要在背景執行作業，以便在執行期間使用Web主控台。 值為true會在背景中執行作業。
+   * `background`：布林值，指出是否要在背景執行作業，以便Web主控台在執行期間可以使用。 值為true會在背景中執行作業。
 
 * 傳回值：無
 
-**beforeClusterMaster** 將此存放庫節點設定為叢集的主節點。 如果不是master，這個命令會停止目前主要執行處理的監聽器，並在目前節點上啟動主要監聽器。 然後，此節點會設定為主節點，並重新啟動，導致叢集中的所有其他節點（即由主節點控制的節點）連線至此執行處理。
+**becomeClusterMaster**&#x200B;將此存放庫節點設為叢集的主節點。 如果不是master，這個命令會停止目前主要執行處理的監聽器，並在目前節點上啟動主要監聽器。 然後，此節點會設定為主節點，並重新啟動，導致叢集中的所有其他節點（即由主節點控制的節點）連線至此執行處理。
 
 * 引數：無
 * 傳回值：無
 
-**joinCluster** 將此儲存區域新增至叢集，作為叢集主要控制節點。 提供用於驗證的使用者名稱和密碼。 連線使用基本驗證。 安全性認證在傳送到伺服器之前是以base-64編碼。
+**joinCluster**&#x200B;將此存放庫新增至叢集，作為叢集主節點所控制的節點。 提供用於驗證的使用者名稱和密碼。 連線使用基本驗證。 安全性認證在傳送到伺服器之前是以base-64編碼。
 
 * 引數：
 
-   * `master`：代表執行主要存放庫節點之電腦的IP位址或電腦名稱的字串值。
-   * `username`：用來向叢集進行驗證的名稱。
+   * `master`：字串值，代表執行主要存放庫節點之電腦的IP位址或電腦名稱。
+   * `username`：用來驗證叢集的名稱。
    * `password`：用於驗證的密碼。
 
 * 傳回值：無
 
-**traversalcheck** 從特定節點開始遍歷並選擇性修正子樹狀結構中的不一致。 有關持續性管理員的檔案將對此進行完整詳細說明。
+**周遊檢查**&#x200B;從特定節點開始周遊並選擇性修正子樹狀結構中的不一致。 有關持續性管理員的檔案將對此進行完整詳細說明。
 
-**consistencyCheck** 檢查並選擇性地修正資料存放區中的一致性。 如需詳細資訊，請參閱資料存放區檔案。
+**consistencyCheck**&#x200B;檢查並選擇性修正資料存放區的一致性。 如需詳細資訊，請參閱資料存放區檔案。
 
 ## 存放庫統計資料（時間序列） {#repository-statistics-timeseries}
 
-每個統計資料型別的「時間序列」欄位值， `org.apache.jackrabbit.api.stats.RepositoryStatistics` 會定義。
+`org.apache.jackrabbit.api.stats.RepositoryStatistics`定義的每個統計型別的TimeSeries欄位值。
 
 * 網域： `com.adobe.granite`
 * 類型：`TimeSeries`
-* 名稱：下列其中一個值，來自 `org.apache.jackrabbit.api.stats.RepositoryStatistics.Type` 列舉類別：
+* 名稱： `org.apache.jackrabbit.api.stats.RepositoryStatistics.Type` Enum類別的下列值之一：
 
    * BUNDLE_CACHE_ACCESS_COUNTER
    * BUNDLE_CACHE_MISS_AVERAGE
@@ -664,22 +664,22 @@ CRX存放庫的相關資訊
 
 ### 屬性 {#attributes-2}
 
-**緩慢查詢** 完成時間最長的存放庫查詢相關資訊。 唯讀。
+**SlowQueries**&#x200B;完成時間最長的存放庫查詢相關資訊。 唯讀。
 
-**SlowQueriesQueueSize** 要包含在SlowQueries清單中的最大查詢數。 讀寫。
+**SlowQueriesQueueSize**&#x200B;要包含在SlowQueries清單中的查詢數目上限。 讀寫。
 
-**PopularQueries** 有關發生次數最多的存放庫查詢的資訊。 唯讀。
+**PopularQueries**&#x200B;發生次數最多的存放庫查詢相關資訊。 唯讀。
 
-**PopularQueriesQueueSize** PopularQueries清單中的最大查詢數。 讀寫。
+**PopularQueriesQueueSize** PopularQueries清單中的查詢數目上限。 讀寫。
 
 ### 運作 {#operations-2}
 
-**clearSlowQueriesQueue** 從SlowQueries清單移除所有查詢。
+**clearSlowQueriesQueue**&#x200B;從SlowQueries清單移除所有查詢。
 
 * 引數：無
 * 傳回值：無
 
-**clearPopularQueriesQueue** 從PopularQueries清單移除所有查詢。
+**clearPopularQueriesQueue**&#x200B;從PopularQueries清單移除所有查詢。
 
 * 引數：無
 * 傳回值：無
@@ -689,58 +689,58 @@ CRX存放庫的相關資訊
 監視每個復寫代理程式的服務。 當您建立復寫代理程式時，服務會自動出現在JMX主控台中。
 
 * **網域：** com.adobe.granite.replication
-* **型別：** 代理程式
-* **名稱：** 無值
-* **屬性：** {id=&quot;*名稱*「}，其中 *名稱* 是代理程式名稱屬性的值。
+* **型別：**&#x200B;代理程式
+* **名稱：**&#x200B;沒有值
+* **屬性：** {id=&quot;*Name*&quot;}，其中&#x200B;*Name*&#x200B;是代理程式Name屬性的值。
 
 ### 屬性 {#attributes-3}
 
-**Id** 代表復寫代理程式組態識別碼的字串值。 多個代理程式可以使用相同的設定。 唯讀。
+**Id**&#x200B;代表復寫代理程式組態識別碼的字串值。 多個代理程式可以使用相同的設定。 唯讀。
 
-**有效** 表示代理程式設定是否正確的布林值：
+**有效**&#x200B;表示代理程式設定是否正確的布林值：
 
 * `true`：有效的設定。
 * `false` ：設定包含錯誤。
 
 唯讀。
 
-**已啟用** 表示代理程式是否已啟用的布林值：
+**已啟用**&#x200B;指示代理程式是否已啟用的布林值：
 
 * `true`：已啟用。
 * `false`：已停用。
 
-**佇列已封鎖** 表示佇列是否存在且已封鎖的布林值：
+**QueueBlocked**&#x200B;指示佇列是否存在且已封鎖的布林值：
 
 * `true`：已封鎖。 正在等候自動重試。
 * `false`：未封鎖或不存在。
 
 唯讀。
 
-**QueuePaused** 表示工作佇列是否已暫停的布林值：
+**QueuePaused**&#x200B;指示工作佇列是否已暫停的布林值：
 
 * `true`：已暫停（已暫停）
 * `false`：未暫停或不存在。
 
 讀寫。
 
-**QueueNumEntries** int值，代表代理程式佇列中的工作數目。 唯讀。
+**QueueNumEntries**&#x200B;代表代理程式佇列中工作數量的int值。 唯讀。
 
-**QueueStatusTime** 日期值，表示取得顯示的狀態值時伺服器上的時間。 該值對應至頁面載入的時間。 唯讀。
+**QueueStatusTime**&#x200B;日期值，表示取得顯示的狀態值時伺服器上的時間。 該值對應至頁面載入的時間。 唯讀。
 
-**QueueNextRetryTime** 對於已封鎖的佇列，指出下次自動重試發生的日期值。 若未顯示時間，則不會封鎖佇列。 唯讀。
+**QueueNextRetryTime**&#x200B;對於已封鎖的佇列，會顯示表示下次自動重試發生時間的日期值。 若未顯示時間，則不會封鎖佇列。 唯讀。
 
-**QueueProcessingSince** 指出目前工作開始處理的日期值。 若未顯示時間，佇列會遭到封鎖或閒置。 唯讀。
+**QueueProcessingSince**&#x200B;指出目前工作開始處理的日期值。 若未顯示時間，佇列會遭到封鎖或閒置。 唯讀。
 
-**QueueLastProcessTime** 指出前一個作業完成時間的日期值。 唯讀。
+**QueueLastProcessTime**&#x200B;指出前一個作業完成時間的日期值。 唯讀。
 
 ### 運作 {#operations-3}
 
-**queueForceRetry** 針對封鎖的佇列，發出重試命令至佇列。
+**queueForceRetry**&#x200B;針對封鎖的佇列，向佇列發出重試命令。
 
 * 引數：無
 * 傳回值：無
 
-**queueClear** 從佇列中移除所有工作。
+**queueClear**&#x200B;從佇列中移除所有工作。
 
 * 引數：無
 * 傳回值：無
@@ -755,35 +755,35 @@ CRX存放庫的相關資訊
 
 ### 屬性 {#attributes-4}
 
-**請求計數** 自上次重設統計資料後發生的要求數目。
+**RequestsCount**&#x200B;自上次重設統計資料後發生的要求數目。
 
-**MinRequestDurationMsec** 自上次重設統計資料以來，處理要求所需的最短時間（毫秒）。
+**MinRequestDurationMsec**&#x200B;自上次重設統計資料後，處理要求所需的最短時間（毫秒）。
 
-**MaxRequestDurationMsec** 自上次重設統計資料以來，處理要求所需的最長時間（以毫秒為單位）。
+**MaxRequestDuratioMsec**&#x200B;自上次重設統計資料以來，處理要求所需的最長時間（毫秒）。
 
-**StandardViezationDurationMsec** 處理請求所需時間的標準差。 自上次重設統計資料以來，使用所有要求來計算標準差。
+**StandardViewerDurationMsec**&#x200B;處理要求所需時間的標準差。 自上次重設統計資料以來，使用所有要求來計算標準差。
 
-**MeanRequestDurationMsec** 處理請求所需的平均時間。 平均數是自上次重設統計資料後，使用所有要求計算的
+**MeanRequestDurationMsec**&#x200B;處理要求所需的平均時間量。 平均數是自上次重設統計資料後，使用所有要求計算的
 
 ### 運作 {#operations-4}
 
-**resetStatistics** 將所有統計值設為零。 當您需要分析特定時間範圍內的請求處理效能時，請重設統計資料。
+**resetStatistics**&#x200B;將所有統計值設為零。 當您需要分析特定時間範圍內的請求處理效能時，請重設統計資料。
 
 * 引數：無
 * 傳回值：無
 
-**id** 套件ID的字串表示法。
+**id**&#x200B;套件ID的字串表示。
 
-**已安裝** 表示是否已安裝套件的布林值：
+**已安裝**&#x200B;指示是否已安裝封裝的布林值：
 
 * `true`：已安裝。
 * `false`：未安裝。
 
-**installedBy** 上次安裝套裝軟體之使用者的識別碼。
+**installedBy**&#x200B;上次安裝封裝的使用者識別碼。
 
-**installedDate** 上次安裝套件的日期。
+**installedDate**&#x200B;上次安裝套件的日期。
 
-**大小** 儲存封裝大小（位元組）的長數值。
+**size**&#x200B;儲存封裝大小（位元組）的長數值。
 
 
 ## 快速入門啟動器 {#quickstart-launcher}
@@ -801,7 +801,7 @@ CRX存放庫的相關資訊
 
 引數：
 
-* p1：A `String` 表示要顯示的訊息的值。
+* p1：代表要顯示之訊息的`String`值。
 * 傳回值：無
 
 **startupFinished**
@@ -854,7 +854,7 @@ CRX存放庫的相關資訊
      <li>執行階段</li>
      <li>執行緒</li>
     </ul> </td>
-   <td><a href="https://docs.oracle.com/javase/8/docs/api/javax/management/package-summary.html">javax.management</a> 封裝</td>
+   <td><a href="https://docs.oracle.com/javase/8/docs/api/javax/management/package-summary.html">javax.management</a>封裝</td>
   </tr>
   <tr>
    <td>java.util.logging</td>
@@ -870,7 +870,7 @@ CRX存放庫的相關資訊
      <li>packageState</li>
      <li>serviceState</li>
     </ul> </td>
-   <td><a href="https://osgi.org/specification/osgi.enterprise/7.0.0/service.jmx.html#d0e42567">org.osgi.jmx.framework</a> 封裝</td>
+   <td><a href="https://osgi.org/specification/osgi.enterprise/7.0.0/service.jmx.html#d0e42567">org.osgi.jmx.framework</a>封裝</td>
   </tr>
  </tbody>
 </table>
@@ -893,7 +893,7 @@ JMX主控台的首頁包含服務表格。 表格中的每一列代表由MBean�
 
 ## 使用外部JMX應用程式進行監視 {#using-external-jmx-applications-for-monitoring}
 
-CRX可讓外部應用程式透過與Managed Bean (MBean)互動 [Java管理擴充功能(JMX)](https://docs.oracle.com/javase/6/docs/technotes/guides/management/overview.html). 使用一般主控台，例如 [JConsole](https://java.sun.com/developer/technicalArticles/J2SE/jconsole.html) 或網域專用監視應用程式，可取得和設定CRX設定和屬性，以及監視效能和資源使用情況。
+CRX可讓外部應用程式透過[Java管理延伸模組(JMX)](https://docs.oracle.com/javase/6/docs/technotes/guides/management/overview.html)與Managed Bean (MBean)互動。 使用一般主控台（例如[JConsole](https://java.sun.com/developer/technicalArticles/J2SE/jconsole.html)或網域特定的監視應用程式）可取得和設定CRX組態和屬性，以及監視效能和資源使用狀況。
 
 ### 使用JConsole連線至CRX {#using-jconsole-to-connect-to-crx}
 
@@ -906,7 +906,7 @@ CRX可讓外部應用程式透過與Managed Bean (MBean)互動 [Java管理擴充
 
 JConsole將啟動，並出現JConsole視窗。
 
-### 連線到本機CRX處理序 {#connecting-to-a-local-crx-process}
+### 連線到本機CRX程式 {#connecting-to-a-local-crx-process}
 
 JConsole將顯示本機Java虛擬機器器處理程式的清單。 此清單將包含兩個快速入門流程。 從本機處理作業（通常是PID較高的處理作業）清單中選取快速入門「子項」處理作業。
 
@@ -920,13 +920,13 @@ JConsole將顯示本機Java虛擬機器器處理程式的清單。 此清單將�
 
 `com.sun.management.jmxremote.port=portNum`
 
-在上述屬性中， `portNum` 是要啟用JMX RMI連線的連線埠號碼。 請務必指定未使用的連線埠號碼。 除了發佈RMI聯結器以供本機存取外，設定此屬性會在指定連線埠的私人唯讀登入中，使用已知名稱「jmxrmi」發佈其他RMI聯結器。
+在上述屬性中，`portNum`是您要啟用JMX RMI連線的連線埠號碼。 請務必指定未使用的連線埠號碼。 除了發佈RMI聯結器以供本機存取外，設定此屬性會在指定連線埠的私人唯讀登入中，使用已知名稱「jmxrmi」發佈其他RMI聯結器。
 
 依預設，當您啟用JMX代理程式進行遠端監視時，它會根據密碼檔案使用密碼驗證，在啟動Java VM時，需要使用下列系統屬性來指定密碼檔案：
 
 `com.sun.management.jmxremote.password.file=pwFilePath`
 
-請參閱 [相關JMX檔案](https://docs.oracle.com/javase/6/docs/technotes/guides/management/agent.html) 以取得設定密碼檔的詳細說明。
+如需設定密碼檔的詳細說明，請參閱[相關JMX檔案](https://docs.oracle.com/javase/6/docs/technotes/guides/management/agent.html)。
 
 範例：
 
@@ -943,7 +943,7 @@ $ java
 
 ![screen_shot_2012-03-26at115056am](assets/screen_shot_2012-03-26at115056am.png)
 
-若要存取CRX的內部監控和設定選項，請移至MBeans標籤，然後從左側的階層式內容樹狀結構中，選取您感興趣的「屬性」或「作業」區段。 例如，com.adobe.granite/Repository/Operations區段。
+若要存取CRX的內部監控和組態選項，請移至MBeans標籤，然後從左側的階層式內容樹狀結構中，選取您感興趣的「屬性」或「作業」區段。 例如，com.adobe.granite/Repository/Operations區段。
 
 在該區段中，在左窗格中選取所需的屬性或作業。
 

@@ -91,23 +91,23 @@ Adobe提供各項程式，用於處理與Adobe Experience Manager的存取、刪
 
 ## AEM Foundation {#aem-foundation}
 
-另請參閱 [處理AEM Foundation的資料保護和隱私權請求](/help/sites-administering/handling-gdpr-requests-for-aem-platform.md).
+請參閱[處理AEM Foundation的資料保護和隱私權要求](/help/sites-administering/handling-gdpr-requests-for-aem-platform.md)。
 
 ## AEM選擇加入彙總使用狀況統計資料的收集 {#aem-opting-into-aggregate-usage-statistics-collection}
 
-另請參閱 [彙總的使用狀況統計資料集合](/help/sites-deploying/opt-in-aggregated-usage-statistics.md).
+請參閱[彙總的使用狀況統計資料集合](/help/sites-deploying/opt-in-aggregated-usage-statistics.md)。
 
 ## AEM Sites {#aem-sites}
 
-另請參閱 [AEM Sites — 資料保護和隱私權整備。](/help/sites-administering/gdpr-compliance-sites.md)
+請參閱[AEM Sites — 資料保護和隱私權整備。](/help/sites-administering/gdpr-compliance-sites.md)
 
 ## AEM Commerce {#aem-commerce}
 
-另請參閱 [AEM Commerce — 資料保護和隱私權整備](/help/sites-administering/gdpr-compliance-commerce.md).
+請參閱[AEM Commerce — 資料保護和隱私權整備](/help/sites-administering/gdpr-compliance-commerce.md)。
 
 ## AEM Mobile {#aem-mobile}
 
-另請參閱 [AEM Mobile — 資料保護和隱私權整備](/help/mobile/aem-mobile-gdpr-compliance.md).
+請參閱[AEM Mobile — 資料保護和隱私權整備](/help/mobile/aem-mobile-gdpr-compliance.md)。
 
 ## AEM與Adobe Target和Adobe Analytics的整合 {#aem-integration-with-adobe-target-adobe-analytics}
 
@@ -121,7 +121,7 @@ Adobe提供各項程式，用於處理與Adobe Experience Manager的存取、刪
 
 ## AEM Communities {#aem-communities}
 
-AEM Communities賦予資料主體資料可攜性、存取許可權及被遺忘的權利 [現成可用的API](/help/communities/user-ugc-management-service.md). 這些API允許大量刪除和大量匯出使用者產生的內容，並停用透過其可授權ID識別的使用者帳戶。 不過，透過刪除CRXDE Lite中的使用者節點，即可永久刪除使用者帳戶，滿足輕鬆選擇退出系統的需求。
+AEM Communities賦予資料主體資料可攜性、存取許可權及[現成API](/help/communities/user-ugc-management-service.md)的遺忘權。 這些API允許大量刪除和大量匯出使用者產生的內容，並停用透過其可授權ID識別的使用者帳戶。 不過，透過刪除CRXDE Lite中的使用者節點，即可永久刪除使用者帳戶，滿足輕鬆選擇退出系統的需求。
 
 此外，AEM Communities的「大量調節」主控台可讓有特殊許可權的成員尋找和刪除使用者的貢獻和詳細資訊，因此在設計上提供隱私權。 「成員」管理主控台可限制在禁止投稿人的程度。 此外，它可授權資料主體刪除其所撰寫的貢獻。
 
@@ -135,4 +135,4 @@ AEM Forms包含可擷取、處理和儲存資料的元件和工作流程，以�
 * [OSGi上以Forms為中心的工作流程](/help/forms/using/forms-workflow-osgi-handling-user-data.md)
 * [Forms JEE工作流程](/help/forms/using/forms-workflow-jee-handling-user-data.md) (僅限AEM Forms JEE)
 * [Document Security](/help/forms/using/document-security-handling-user-data.md) (僅限AEM Forms JEE)
-* [User Management](/help/forms/using/user-management-handling-user-data.md) (僅限AEM Forms JEE)
+* [使用者管理](/help/forms/using/user-management-handling-user-data.md) (僅限AEM Forms JEE)

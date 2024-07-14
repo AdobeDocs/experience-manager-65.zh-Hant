@@ -32,15 +32,15 @@ ht-degree: 2%
 
 iOS：若要開發iPhone和iPad，您需要使用Apple的Xcode IDE。
 
-* 免費下載 [此處](https://idmsa.apple.com/IDMSWebAuth/signin?appIdKey=891bd3417a7776362562d2197f89480a8547b108fd934911bcbea0110d07f757&amp;path=%2Fdownload%2F&amp;rv=1).
+* 免費下載[這裡](https://idmsa.apple.com/IDMSWebAuth/signin?appIdKey=891bd3417a7776362562d2197f89480a8547b108fd934911bcbea0110d07f757&amp;path=%2Fdownload%2F&amp;rv=1)。
 * PhoneGap iOS平台指南(`https://docs.phonegap.com/en/4.0.0/guide_platforms_ios_index.md.html#iOS%20Platform%20Guide`)
 
 Android™：若要開發iPhone和iPad，您需要使用Google的Android™ Stuido IDE。
 
-* 免費下載 [此處](https://developer.android.com/studio).
+* 免費下載[這裡](https://developer.android.com/studio)。
 * PhoneGap Android™平台指南(`https://docs.phonegap.com/en/4.0.0/guide_platforms_android_index.md.html#Android%20Platform%20Guide`)
 
-## 下載來源 {#download-the-source}
+## 下載Source {#download-the-source}
 
 當您成功啟動您的開發環境時，請從AEM App Build動態磚下載來源：
 
@@ -48,8 +48,8 @@ Android™：若要開發iPhone和iPad，您需要使用Google的Android™ Stui
 
 ![chlimage_1-45](assets/chlimage_1-45.png)
 
-* 按一下「下載來源」。
-* 從下載來源強制回應視窗中選取所需的來源。
+* 按一下「下載Source」 。
+* 從下載Source強制回應視窗中選取所需的來源。
 
 ![chlimage_1-46](assets/chlimage_1-46.png)
 
@@ -88,16 +88,16 @@ phonegap run ios
 >
 >1. 建立資料夾（mkdir測試）
 >1. 瀏覽至這個新資料夾（光碟測試）
->1. 執行 `phonegap create helloWorld`
+>1. 執行`phonegap create helloWorld`
 >1. 導覽至helloWorld (cd helloWorld)
->1. 執行 `phonegap run android` (或以上述iOS取代Android™)。
->1. 模擬器會開啟執行您新建立的PhoneGap應用程式，如果JavaScript Bridge to native運作正常，系統會顯示「裝置就緒」。
+>1. 執行`phonegap run android` (或將Android™取代為上述iOS)。
+>1. 執行您新建立的PhoneGap應用程式時，模擬器會開啟，並顯示「裝置就緒」(如果JavaScript Bridge to native正常運作)。
 >
 >此疑難排解會驗證您的PhoneGap CLI開發環境是否正確執行。
 
-## 使用Safari和IOS除錯功能除錯JavaScript {#debug-javascripts-with-safari-and-ios-debug}
+## 使用Safari和IOS Debug除錯JavaScript {#debug-javascripts-with-safari-and-ios-debug}
 
-您可以像使用Web應用程式一樣，使用Safari的開發人員工具對應用程式的JavaScript進行除錯。
+您可以使用Safari的開發人員工具對應用程式的JavaScript進行除錯，就像對網頁應用程式進行除錯一樣。
 
 ## 啟用Safari開發人員工具 {#enable-safari-developer-tools}
 
@@ -150,7 +150,7 @@ phonegap run <platform> --emulator
 
 * 使用控制按鈕來繼續執行、跳過、逐步執行及跳出方法：
 
-![五個功能不同的控制按鈕在水準列對齊。](do-not-localize/chlimage_1-4.png)
+![五個功能不同的控制項按鈕在水準列對齊。](do-not-localize/chlimage_1-4.png)
 
 >[!NOTE]
 >
@@ -158,4 +158,4 @@ phonegap run <platform> --emulator
 
 ## 後續步驟 {#the-next-steps}
 
-瞭解使用PhoneGap CLI開發應用程式後，請參閱 [存取裝置功能](/help/mobile/phonegap-access-device-features.md).
+瞭解使用PhoneGap CLI開發應用程式後，請參閱[存取裝置功能](/help/mobile/phonegap-access-device-features.md)。

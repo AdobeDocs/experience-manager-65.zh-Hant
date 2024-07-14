@@ -25,4 +25,4 @@ ht-degree: 1%
 
 * [效能調整秘訣](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html)
 * [如何從歡迎畫面移除功能](/help/sites-developing/customizing-the-welcome-console.md)
-* [如何關閉位置追蹤器功能](https://helpx.adobe.com/experience-manager/kb/turn-off-geolocation.html)
+* [如何關閉位置追蹤功能](https://helpx.adobe.com/experience-manager/kb/turn-off-geolocation.html)

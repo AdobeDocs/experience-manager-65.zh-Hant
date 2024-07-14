@@ -1,5 +1,5 @@
 ---
-title: 工作區概觀
+title: Workspace概觀
 description: 工作區可讓使用者開始、參與及追蹤業務流程。 讓我們進一步瞭解工作區。
 contentOwner: admin
 content-type: reference
@@ -16,13 +16,13 @@ ht-degree: 0%
 
 ---
 
-# 工作區概觀 {#overview-of-workspace}
+# Workspace概觀 {#overview-of-workspace}
 
-工作區可讓使用者開始、參與及追蹤業務流程。
+Workspace可讓使用者開始、參與及追蹤業務流程。
 
 在管理控制檯的Workspace頁面上，您可以執行下列工作：
 
-* 設定要在工作區使用者介面的「歡迎」頁面上顯示的訊息
+* 設定要在Workspace使用者介面的歡迎頁面上顯示的訊息
 * 設定要在Workspace中使用的搜尋範本，以搜尋流程和任務
 * 匯入和匯出搜尋範本和全域設定
 

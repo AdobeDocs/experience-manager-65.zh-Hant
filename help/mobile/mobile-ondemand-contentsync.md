@@ -39,27 +39,27 @@ Content Sync架構會建立包含網頁內容的封存檔案。 內容可以是�
 
 開發內容同步處理常式的部分准則如下：
 
-* 處理常式必須實施 *com.day.cq.contentsync.handler.ContentUpdateHandler* （直接或擴充有此功能的類別）
-* 處理常式可以擴充 *com.adobe.cq.mobile.platform.impl.contentsync.handler.AbstractSlingResourceUpdateHandler*
+* 處理常式必須實作&#x200B;*com.day.cq.contentsync.handler.ContentUpdateHandler* （直接或擴充有此功能的類別）
+* 處理常式可擴充&#x200B;*com.adobe.cq.mobile.platform.impl.contentsync.handler.AbstractSlingResourceUpdateHandler*
 * 如果處理常式更新ContentSync快取，則只能報告true。 錯誤報告true會讓AEM在實際上並未發生更新時建立更新。
 * 處理常式只應在內容變更時更新快取。 如果不需要白色，請勿寫入快取。 這會導致建立不必要的更新。
 
 >[!NOTE]
 >
->啟用 *ContentSync偵錯記錄* 透過封裝上的OSGI記錄器設定 *com.day.cq.contentsync*. 這可讓您追蹤哪些處理常式已執行，以及它們是否更新快取並回報更新快取。
+>透過封裝&#x200B;*com.day.cq.contentsync*&#x200B;上的OSGI記錄器設定，啟用&#x200B;*ContentSync偵錯記錄*。 這可讓您追蹤哪些處理常式已執行，以及它們是否更新快取並回報更新快取。
 
 ## 設定內容同步內容 {#configuring-the-content-sync-content}
 
 建立Content Sync設定，以指定傳遞至使用者端的ZIP檔案內容。 您可以建立任意數量的Content Sync設定。 每個設定都有名稱用於識別。
 
-若要建立Content Sync設定，請新增 `cq:ContentSyncConfig` 節點到存放庫，使用 `sling:resourceType` 屬性設定為 `contentsync/config`. 此 `cq:ContentSyncConfig` 節點可以位於存放庫中的任何位置，但AEM發佈執行個體上的使用者必須能夠存取節點。 因此，您應該在下方新增節點 `/content`.
+若要建立Content Sync設定，請將`cq:ContentSyncConfig`節點新增至存放庫，並將`sling:resourceType`屬性設定為`contentsync/config`。 `cq:ContentSyncConfig`節點可以位於存放庫中的任何位置，但AEM發佈執行個體上的使用者必須可以存取該節點。 因此，您應該在`/content`底下新增節點。
 
 若要指定Content Sync ZIP檔案的內容，請將子節點新增至cq：ContentSyncConfig節點。 每個子節點的下列屬性會識別要包含的內容專案，以及新增內容專案時的處理方式：
 
 * `path`：內容的位置。
-* `type`：用於處理內容的設定型別名稱。 有數種型別可供使用，並在一節中說明 *設定型別*.
+* `type`：用於處理內容的設定型別名稱。 有幾種型別可供使用，在&#x200B;*組態型別*&#x200B;一節中有所說明。
 
-另請參閱 *Content Sync設定範例* 以取得詳細資訊。
+如需詳細資訊，請參閱&#x200B;*範例內容同步設定*。
 
 建立Content Sync設定後，該設定會顯示在Content Sync主控台中。
 
@@ -77,24 +77,24 @@ Content Sync架構會建立包含網頁內容的封存檔案。 內容可以是�
 
 Day CQ Content Sync Manager服務可控制Content Sync的存取權。 設定此服務，以指定預設可從Content Sync下載的使用者或群組。
 
-如果您是 [使用Web主控台設定服務](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)，輸入使用者或群組的名稱，作為「可授權遞補快取」屬性的值。
+如果您正在[使用Web主控台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)設定服務，請鍵入使用者或群組的名稱，作為Fallback Cache Authorizable屬性值。
 
-如果您是 [在存放庫中設定](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository)，請使用下列服務的相關資訊：
+如果您正在[設定存放庫](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository)，請使用下列服務相關資訊：
 
 * PID： com.day.cq.contentsync.impl.ContentSyncManagerImpl
 * 屬性名稱： contentsync.fallback.authorizable
 
 #### 覆寫內容同步快取的下載存取權 {#overriding-download-access-for-a-content-sync-cache}
 
-若要設定特定內容同步設定的下載存取權，請將下列屬性新增至 `cq:ContentSyncConfig` 節點：
+若要設定特定Content Sync設定的下載存取權，請將下列屬性新增至`cq:ContentSyncConfig`節點：
 
 * 名稱：可授權
 * 型別：字串
 * 值：可下載的使用者或群組名稱。
 
-例如，您的應用程式可讓使用者直接從Content Sync安裝更新。 若要讓所有使用者都能下載更新，您可以將可授權屬性的值設為 `everyone`.
+例如，您的應用程式可讓使用者直接從Content Sync安裝更新。 若要讓所有使用者下載更新，請將可授權屬性的值設為`everyone`。
 
-如果 `cq:ContentSyncConfig` 節點沒有可授權屬性，為Day CQ Content Sync Manager服務的Fallback Cache Authorizable屬性設定的預設使用者或群組會決定誰可以下載。
+如果`cq:ContentSyncConfig`節點沒有可授權屬性，為Day CQ Content Sync Manager服務的Fallback Cache Authorizable屬性設定的預設使用者或群組會決定誰可以下載。
 
 ### 設定使用者以更新內容同步快取 {#configuring-the-user-for-updating-a-content-sync-cache}
 
@@ -108,58 +108,58 @@ Day CQ Content Sync Manager服務可控制Content Sync的存取權。 設定此�
 * 類型：`String`
 * 值：可執行更新的使用者或群組名稱。
 
-如果 `cq:ContentSyncConfig` 節點沒有 `updateuser` 屬性，預設 `anonymous` 使用者更新快取。
+如果`cq:ContentSyncConfig`節點沒有`updateuser`屬性，則預設的`anonymous`使用者會更新快取。
 
 ### 設定型別 {#configuration-types}
 
 處理範圍包括從呈現簡單的JSON到完全呈現頁面（包括其參考資產）。 本節列出可用的組態型別及其特定引數：
 
-**複製**  — 複製檔案和資料夾。
+**複製** — 複製檔案和資料夾。
 
-* **路徑**  — 如果路徑指向單一檔案，則只會複製檔案。 如果它指向資料夾（這包含頁面節點），則會複製下面的所有檔案和資料夾。
+* **path** — 如果路徑指向單一檔案，則只會複製檔案。 如果它指向資料夾（這包含頁面節點），則會複製下面的所有檔案和資料夾。
 
-**內容** 使用標準呈現內容 [Sling請求處理](/help/sites-developing/the-basics.md#sling-request-processing).
+**內容**&#x200B;使用標準[Sling要求處理](/help/sites-developing/the-basics.md#sling-request-processing)的轉譯器內容。
 
-* **路徑**  — 應輸出的資源路徑。
-* **副檔名**  — 請求中應使用的擴充功能。 常見範例為 *html* 和 *json*，但任何其他擴充功能皆可。
+* **path** — 應輸出的資源路徑。
+* **延伸模組** — 應該用於要求中的延伸模組。 常見的範例是&#x200B;*html*&#x200B;和&#x200B;*json*，但任何其他擴充功能都是可能的。
 
-* **選擇器**  — 選用的選取器，以點分隔。 常見範例為 *觸控* 用於轉譯行動版頁面或 *無限* 用於JSON輸出。
+* **選取器** — 選用的選取器（以點分隔）。 常見的範例是&#x200B;*觸控式* （用於轉譯頁面的行動版本）或&#x200B;*無限* （用於JSON輸出）。
 
-**clientlib**  — 封裝JavaScript或CSS使用者端程式庫。
+**clientlib** — 封裝JavaScript或CSS使用者端資料庫。
 
-* **路徑**  — 使用者端資料庫根目錄的路徑。
-* **副檔名**  — 使用者端程式庫的型別。 這應該設定為 *js* 或 *css* 目前。
+* **path** — 使用者端資料庫根目錄的路徑。
+* **延伸模組** — 使用者端資料庫的型別。 目前應將此專案設定為&#x200B;*js*&#x200B;或&#x200B;*css*。
 
-**資產**
+**個資產**
 
 收集資產的原始轉譯。
 
-* **路徑** - /content/dam下的資產資料夾路徑。
+* **path** - /content/dam下的資產資料夾路徑。
 
-**影像**  — 收集影像。
+**映像** — 收集映像。
 
-* **路徑**  — 影像資源的路徑。
+* **path** — 影像資源的路徑。
 
 影像型別用於在zip檔案中包含We Retail標誌。
 
-**頁面**  — 呈現AEM頁面並收集引用的資產。
+**頁面** — 轉譯AEM頁面並收集參考的資產。
 
-* **路徑**  — 頁面的路徑。
-* **副檔名**  — 請求中應使用的擴充功能。 對於頁面，這幾乎永遠都是 *html*，但仍可使用其他方法。
+* **path** — 頁面的路徑。
+* **延伸模組** — 應該用於要求中的延伸模組。 對於頁面，這幾乎總是&#x200B;*html*，但其他仍然可能。
 
-* **選擇器**  — 選用的選取器，以點分隔。 常見範例為 *觸控* 用於轉譯頁面的行動版本。
+* **選取器** — 選用的選取器（以點分隔）。 轉譯頁面行動版本的常見範例為&#x200B;*touch*。
 
-* **深入**  — 決定是否應包含子頁面的選用布林屬性。 預設值為 *true.*
+* **deep** — 決定是否也應該包含子頁面的選用布林屬性。 預設值為&#x200B;*true。*
 
-* **includeImages**  — 決定是否應包含影像的選用布林屬性。 預設值為 *true*.
+* **includeImages** — 決定是否應包含影像的選用布林屬性。 預設值為&#x200B;*true*。
 
-  依預設，只有資源型別為foundation/components/image的影像元件才會被視為包含。 您可以透過設定 **Day CQ WCM頁面更新處理常式** 在Web主控台中。
+  依預設，只有資源型別為foundation/components/image的影像元件才會被視為包含。 您可以在Web主控台中設定&#x200B;**Day CQ WCM Pages更新處理常式**，以新增更多資源型別。
 
-**重寫**  — 重新寫入節點會定義在匯出頁面中重新寫入連結的方式。 重寫的連結可以指向zip檔案中包含的檔案或伺服器上的資源。
+**rewrite** — 重寫節點會定義如何在匯出的頁面中重寫連結。 重寫的連結可以指向zip檔案中包含的檔案或伺服器上的資源。
 
-此 `rewrite` 節點必須位於 `page` 節點。
+`rewrite`節點必須位於`page`節點下方。
 
-此 `rewrite` 節點可以有一或多個下列屬性：
+`rewrite`節點可以有一或多個下列屬性：
 
 * `clientlibs`：重寫clientlibs路徑。
 
@@ -168,11 +168,11 @@ Day CQ Content Sync Manager服務可控制Content Sync的存取權。 設定此�
 
 每個屬性可以有下列其中一個值：
 
-* `REWRITE_RELATIVE`：以檔案系統上頁面.html檔案的相對位置重寫路徑。
+* `REWRITE_RELATIVE`：以相對檔案系統上頁面.html檔案的位置重寫路徑。
 
-* `REWRITE_EXTERNAL`：使用AEM指向伺服器上的資源來重寫路徑 [外部化器服務](/help/sites-developing/externalizer.md).
+* `REWRITE_EXTERNAL`：使用AEM [Externalizer服務](/help/sites-developing/externalizer.md)，指向伺服器上的資源來重寫路徑。
 
-AEM服務已呼叫 **PathRewriterTransformerFactory** 可讓您設定將重寫的特定html屬性。 此服務可在Web主控台中設定，且每個屬性的設定都為 `rewrite` 節點： `clientlibs`， `images`、和 `links`.
+名為&#x200B;**PathRewriterTransformerFactory**&#x200B;的AEM服務可讓您設定要重寫的特定html屬性。 服務可以在Web主控台中設定，而且具有`rewrite`節點的每個屬性的組態： `clientlibs`、`images`和`links`。
 
 AEM 5.5已新增此功能。
 
@@ -214,23 +214,23 @@ AEM 5.5已新增此功能。
   + ...
 ```
 
-**etc.designs.default和etc.designs.mobile**  — 設定的前兩個專案顯而易見。 由於您即將包含數個行動頁面，因此您需要在/etc/designs底下建立相關設計檔案。 由於不需要額外處理，因此只需複製即可。
+**etc.designs.default和etc.designs.mobile** — 組態的前兩個專案顯而易見。 由於您即將包含數個行動頁面，因此您需要在/etc/designs底下建立相關設計檔案。 由於不需要額外處理，因此只需複製即可。
 
-**events.plist**  — 此專案有些特殊。 如簡介中所述，應用程式應提供包含事件位置標籤的地圖檢視。 必要的位置資訊將以PLIST格式作為單獨的檔案提供。 為了使此功能發揮作用，索引頁面上使用的事件清單元件具有一個名為plist.jsp的指令碼。 當以請求元件的資源時，執行此指令碼 `.plist` 副檔名。 和往常一樣，元件路徑在path屬性中給出，而型別設定為content，因為您想要使用 [Sling請求處理](/help/sites-developing/the-basics.md#sling-request-processing).
+**events.plist** — 此專案是特別的。 如簡介中所述，應用程式應提供包含事件位置標籤的地圖檢視。 必要的位置資訊將以PLIST格式作為單獨的檔案提供。 為了使此功能發揮作用，索引頁面上使用的事件清單元件具有一個名為plist.jsp的指令碼。 當以`.plist`副檔名請求元件的資源時，就會執行此指令碼。 如往常一樣，在path屬性中指定元件路徑，並且型別設定為內容，因為您想要使用[Sling要求處理](/help/sites-developing/the-basics.md#sling-request-processing)。
 
-**events.touch.html**  — 接下來是應用程式中顯示的實際頁面。 path屬性會設定為事件的根頁面。 該頁面下方的所有事件頁面也會包括在內，因為深層屬性預設為true。 您使用頁面作為設定型別，以便納入任何可從頁面上的影像或下載元件參照的影像或其他檔案。 此外，設定觸控選擇器也會提供頁面的行動版本。 Feature Pack中的設定包含更多此類專案，但為了簡單起見，這裡沒有包含這些專案。
+**events.touch.html** — 接下來是應用程式中顯示的實際頁面。 path屬性會設定為事件的根頁面。 該頁面下方的所有事件頁面也會包括在內，因為深層屬性預設為true。 您使用頁面作為設定型別，以便納入任何可從頁面上的影像或下載元件參照的影像或其他檔案。 此外，設定觸控選擇器也會提供頁面的行動版本。 Feature Pack中的設定包含更多此類專案，但為了簡單起見，這裡沒有包含這些專案。
 
-**標誌**  — 目前尚未提及標誌設定型別，因此不屬於任何內建型別。 不過，Content Sync架構在某種程度上可以擴充，以下章節將說明相關範例。
+**logo** — 目前尚未提及標誌組態型別，而且不是任何內建型別。 不過，Content Sync架構在某種程度上可以擴充，以下章節將說明相關範例。
 
-**資訊清單**  — 我們通常希望在zip檔案中加入某種中繼資料，例如內容的起始頁面。 不過，以硬式編碼撰寫這類資訊，可防止您日後輕易加以變更。 內容同步架構支援此使用案例，方法是尋找設定中的資訊清單節點（以名稱識別，不需要設定型別）。 該特定節點上定義的每個屬性都會新增至檔案（也稱為資訊清單），並位於zip檔案的根目錄中。
+**資訊清單** — 通常需要在zip檔案中包含某種中繼資料，例如內容的起始頁面。 不過，以硬式編碼撰寫這類資訊，可防止您日後輕易加以變更。 內容同步架構支援此使用案例，方法是尋找設定中的資訊清單節點（以名稱識別，不需要設定型別）。 該特定節點上定義的每個屬性都會新增至檔案（也稱為資訊清單），並位於zip檔案的根目錄中。
 
-在此範例中，事件清單頁面應該是初始頁面。 此資訊提供於 **indexPage** 屬性，因此隨時都可以輕鬆變更。 第二個屬性會定義 *events.plist* 檔案。 如您稍後所見，使用者端應用程式現在可以讀取資訊清單並根據資訊清單採取行動。
+在此範例中，事件清單頁面應該是初始頁面。 此資訊是在&#x200B;**indexPage**&#x200B;屬性中提供，因此可以隨時輕鬆變更。 第二個屬性會定義&#x200B;*events.plist*&#x200B;檔案的路徑。 如您稍後所見，使用者端應用程式現在可以讀取資訊清單並根據資訊清單採取行動。
 
-設定好設定後，內容可使用瀏覽器或任何其他HTTP使用者端下載，或者，如果您是針對iOS開發，則可以使用專用的WAppKitSync使用者端程式庫。 下載位置由設定的路徑和 *.zip* 擴充功能，例如，使用本機AEM例項時： *http://localhost:4502/content/weretail_go.zip*
+設定好設定後，內容可使用瀏覽器或任何其他HTTP使用者端下載，或者，如果您是針對iOS開發，則可以使用專用的WAppKitSync使用者端程式庫。 下載位置由設定的路徑和&#x200B;*.zip*&#x200B;副檔名組成，例如，使用本機AEM執行個體時： *http://localhost:4502/content/weretail_go.zip*
 
 ### 內容同步主控台 {#the-content-sync-console}
 
-Content Sync主控台會列出存放庫中的所有內容同步設定（所有型別的節點） `cq:ContentSyncConfig`)並針對每個設定，執行下列動作：
+Content Sync主控台會列出存放庫中的所有Content Sync設定（所有型別為`cq:ContentSyncConfig`的節點），而針對每個設定，您可以執行下列動作：
 
 * 更新快取。
 * 清除快取。
@@ -251,12 +251,12 @@ Content Sync主控台會列出存放庫中的所有內容同步設定（所有�
 
 雖然設定選項的數量已經相當龐大，但可能未涵蓋您特定使用案例的所有需求。 本節說明Content Sync架構的擴充點，以及如何建立自訂組態型別。
 
-每種設定型別都有 *內容更新處理常式*，此元件工廠是為該特定型別註冊的OSGi元件工廠。 這些處理常式會收集內容、處理內容，並將其新增至Content Sync架構所維護的快取。 實作下列介面或抽象基底類別：
+每個組態型別都有&#x200B;*內容更新處理常式*，這是針對該特定型別註冊的OSGi元件處理常式。 這些處理常式會收集內容、處理內容，並將其新增至Content Sync架構所維護的快取。 實作下列介面或抽象基底類別：
 
-* `com.day.cq.contentsync.handler.ContentUpdateHandler`  — 所有更新處理常式都必須實作的介面
-* `com.day.cq.contentsync.handler.AbstractSlingResourceUpdateHandler`  — 抽象類別，使用Sling簡化資源的呈現
+* `com.day.cq.contentsync.handler.ContentUpdateHandler` — 所有更新處理常式都必須實作的介面
+* `com.day.cq.contentsync.handler.AbstractSlingResourceUpdateHandler` — 使用Sling簡化資源轉譯的抽象類別
 
-將類別註冊為OSGi元件工廠，並將其部署在套件組合的OSGi容器中。 這項操作可透過以下方式完成： [Maven SCR外掛程式](https://felix.apache.org/documentation/subprojects/apache-felix-maven-scr-plugin/apache-felix-maven-scr-plugin-use.html) 使用JavaDoc標籤或註解。 下列範例顯示JavaDoc版本：
+將類別註冊為OSGi元件工廠，並將其部署在套件組合的OSGi容器中。 您可以使用[Maven SCR外掛程式](https://felix.apache.org/documentation/subprojects/apache-felix-maven-scr-plugin/apache-felix-maven-scr-plugin-use.html)使用JavaDoc標籤或註解來完成此操作。 下列範例顯示JavaDoc版本：
 
 ```java
 /*
@@ -276,15 +276,15 @@ public class OtherTypeUpdateHandler extends AbstractSlingResourceUpdateHandler {
 }
 ```
 
-請注意 *工廠* 定義包含公用介面和以斜線分隔的自訂型別。 此策略可讓內容同步架構在辨識設定專案中的自訂型別時，尋找並建立自訂類別的執行個體。 下一節提供自訂更新處理常式的具體範例。
+請注意，*factory*&#x200B;定義包含公用介面和以斜線分隔的自訂型別。 此策略可讓內容同步架構在辨識設定專案中的自訂型別時，尋找並建立自訂類別的執行個體。 下一節提供自訂更新處理常式的具體範例。
 
 >[!CAUTION]
 >
->以AbstractSlingResourceUpdateHandler基底類別為基礎建立時，您必須新增 *繼承* 定義。 否則，OSGi容器不會設定在基底類別中宣告的必要參考。
+>以AbstractSlingResourceUpdateHandler基底類別建置時，您必須新增&#x200B;*inherit*&#x200B;定義。 否則，OSGi容器不會設定在基底類別中宣告的必要參考。
 
 ### 實作自訂更新處理常式 {#implementing-a-custom-update-handler}
 
-每個We.Retail Mobile頁面的左上角都有一個標誌，應包含在zip檔案中。 不過，針對快取最佳化，AEM不會參考影像檔案在存放庫中的實際位置，這可防止我們單純使用 **複製** 設定型別。 而您必須提供我們自己的服務 **標誌** 設定型別，可在AEM要求的位置使用影像。 下列程式碼清單顯示完整實施的標誌更新處理常式：
+每個We.Retail Mobile頁面的左上角都有一個標誌，應包含在zip檔案中。 但是，針對快取最佳化，AEM不會參考影像檔案在存放庫中的實際位置，這會防止我們單純使用&#x200B;**副本**&#x200B;設定型別。 您必須改為提供我們自己的&#x200B;**標誌**&#x200B;設定型別，以便在AEM要求的位置提供影像。 下列程式碼清單顯示完整實施的標誌更新處理常式：
 
 #### LogoUpdateHandler.java {#logoupdatehandler-java}
 
@@ -350,17 +350,17 @@ public class LogoUpdateHandler implements ContentUpdateHandler {
 }
 ```
 
-此 `LogoUpdateHandler` 類別實作 `ContentUpdateHandler` 介面的 `updateCacheEntry(ConfigEntry, Long, String, Session, Session)` 方法，此方法會採用數個引數：
+`LogoUpdateHandler`類別實作`ContentUpdateHandler`介面的`updateCacheEntry(ConfigEntry, Long, String, Session, Session)`方法，此方法會採用數個引數：
 
-* A `ConfigEntry` 提供組態專案（呼叫此處理常式）及其屬性存取權的執行個體。
-* A `lastUpdated` 時間戳記，指出Content Sync上次更新其快取的時間。 處理常式不應更新在該時間戳記之後未修改的內容。
-* A `configCacheRoot` 指定快取根路徑的引數。 所有更新的檔案都必須儲存在此路徑下方，才能新增至zip檔案。
+* `ConfigEntry`執行個體，提供組態專案（呼叫此處理常式）及其屬性的存取權。
+* `lastUpdated`時間戳記，指出Content Sync上次更新其快取的時間。 處理常式不應更新在該時間戳記之後未修改的內容。
+* 指定快取根路徑的`configCacheRoot`引數。 所有更新的檔案都必須儲存在此路徑下方，才能新增至zip檔案。
 * 適用於所有快取相關存放庫作業的管理工作階段。
 * 可用於更新特定使用者內容並因此提供個人化內容的使用者工作階段。
 
 若要實作自訂處理常式，請先根據設定專案中指定的資源建立Image類別的執行個體。 此程式與頁面上實際標誌元件執行的程式相同。 它會確保影像的目標路徑與頁面參照的路徑相同。
 
-接下來，檢查自上次更新後資源是否被修改。 自訂實施應避免快取不必要的更新，若沒有變更則傳回false。 如果資源已修改，請將影像複製到相對於快取根目錄的預期目標位置。 最後， `true` 會傳回，向架構指出快取已更新。
+接下來，檢查自上次更新後資源是否被修改。 自訂實施應避免快取不必要的更新，若沒有變更則傳回false。 如果資源已修改，請將影像複製到相對於快取根目錄的預期目標位置。 最後，會傳回`true`以向架構指出快取已更新。
 
 ## 在使用者端上使用內容 {#using-the-content-on-the-client}
 

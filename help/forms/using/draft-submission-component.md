@@ -24,18 +24,18 @@ ht-degree: 0%
 
 草稿和提交元件有兩個標籤：草稿和提交。
 
-若要啟用最適化表單的提交功能，使其顯示在提交索引標籤中，請設定 **提交動作** 至 **[Forms Portal提交動作](../../forms/using/configuring-submit-actions.md). 或者，** 啟用Forms入口網站提交選項。 每當使用者提交表單時，該表單就會新增到提交索引標籤。
+若要啟用最適化表單的提交功能以顯示於提交索引標籤，請將&#x200B;**提交動作**&#x200B;設定為&#x200B;**[Forms入口網站提交動作](../../forms/using/configuring-submit-actions.md)。 或者，**&#x200B;啟用Forms入口網站提交選項。 每當使用者提交表單時，該表單就會新增到提交索引標籤。
 
-草稿功能是現成啟用的。 當使用者按一下 **儲存** 在最適化表單上，該表單會新增到草稿索引標籤中。
+草稿功能是現成啟用的。 當使用者按一下最適化表單上的&#x200B;**儲存**&#x200B;時，該表單會新增到草稿索引標籤。
 
 執行以下步驟來新增及設定草稿和提交元件：
 
-1. 拖放 **草稿和提交** 在頁面上元件瀏覽器中的「檔案服務」類別下的元件。
-1. 選取元件，然後選取 ![settings_icon](assets/settings_icon.png) 以開啟元件的「編輯」對話方塊。
+1. 將元件瀏覽器中Document Services類別下的&#x200B;**草稿和提交**&#x200B;元件拖放到您的頁面上。
+1. 選取元件，然後選取![settings_icon](assets/settings_icon.png)以開啟元件的[編輯]對話方塊。
 
-   ![草稿和提交元件](assets/drafts-submissions-edit.png)
+   ![草稿與提交元件](assets/drafts-submissions-edit.png)
 
-1. 在「編輯」對話方塊中，指定下列詳細資料並選取 **完成** 以儲存設定。
+1. 在[編輯]對話方塊中，指定下列詳細資料，並選取&#x200B;**完成**&#x200B;以儲存設定。
 
 <table>
  <tbody>
@@ -47,32 +47,32 @@ ht-degree: 0%
   <tr>
    <td>一般</td>
    <td>總結果</td>
-   <td>指定要顯示的最大結果數量。 如果結果計數增加「結果總計」限制，則 <strong>更多 </strong>連結會出現在元件底部。 按一下 <strong>更多 </strong>顯示所有表格。 </td>
+   <td>指定要顯示的最大結果數量。 如果結果計數增加「結果總計」限制，元件底部會顯示<strong>更多</strong>連結。 按一下<strong>更多</strong>顯示所有表格。 </td>
   </tr>
   <tr>
    <td> </td>
    <td>樣式型別</td>
-   <td>指定元件的樣式。 您可以指定 <strong>無樣式</strong>， <strong>預設樣式</strong>，或 <strong>自訂樣式</strong> 以列出表格。 對於「自訂樣式選項」，您可以在下列位置指定自訂CSS檔案的路徑： <strong>自訂樣式路徑 </strong>欄位<strong>.</strong></td>
+   <td>指定元件的樣式。 您可以指定<strong>無樣式</strong>、<strong>預設樣式</strong>或<strong>自訂樣式</strong>來列出表單。 對於自訂樣式選項，您可以在<strong>自訂樣式路徑</strong>欄位<strong>.</strong>中指定自訂CSS檔案的路徑</td>
   </tr>
   <tr>
    <td> </td>
    <td>自訂樣式路徑</td>
-   <td>如果您選擇 <strong>自訂樣式</strong> 中的選項 <strong>樣式型別</strong> 欄位，使用 <strong>自訂樣式路徑</strong> 欄位以指定自訂CSS檔案的路徑。 </td>
+   <td>如果您在<strong>樣式型別</strong>欄位中選擇<strong>自訂樣式</strong>選項，請使用<strong>自訂樣式路徑</strong>欄位來指定自訂CSS檔案的路徑。 </td>
   </tr>
   <tr>
    <td> </td>
    <td>顯示選項</td>
-   <td><p>指定要顯示的標籤。 您可以選擇顯示草稿表單、已提交表單或兩者。 </p> <p><strong>注意</strong>：<em> 的 <strong>顯示選項</strong>，如果您選取 <strong>兩者</strong>，則 <strong>預設標籤</strong> 未使用欄位選項。</em></p> </td>
+   <td><p>指定要顯示的標籤。 您可以選擇顯示草稿表單、已提交表單或兩者。 </p> <p><strong>備註</strong>：<em>若為<strong>顯示選項</strong>，若您選取<strong>Both</strong>以外的選項，則不會使用<strong>預設標籤</strong>欄位選項。</em></p> </td>
   </tr>
   <tr>
    <td> </td>
    <td>預設標籤</td>
-   <td>指定載入表單入口網站頁面時顯示的標籤。 您可以選擇 <strong>草稿Forms索引標籤</strong> 和 <strong>已提交Forms索引標籤</strong>.</td>
+   <td>指定載入表單入口網站頁面時顯示的標籤。 您可以選擇<strong>草稿Forms標籤</strong>和<strong>已提交的Forms標籤</strong>。</td>
   </tr>
   <tr>
    <td>草稿Forms索引標籤設定</td>
    <td>自訂標題</td>
-   <td>指定標題 <strong>草稿Forms</strong> 標籤。 預設值為 <strong>草稿Forms。</strong></td>
+   <td>指定<strong>草稿Forms</strong>索引標籤的標題。 預設值為<strong>草稿Forms。</strong></td>
   </tr>
   <tr>
    <td> </td>
@@ -82,12 +82,12 @@ ht-degree: 0%
   <tr>
    <td>已提交Forms索引標籤設定</td>
    <td>自訂標題 </td>
-   <td>指定標題 <strong>已提交Forms </strong>標籤。 預設值為 <strong>已提交Forms。</strong></td>
+   <td>指定<strong>已提交的Forms </strong>索引標籤的標題。 預設值為<strong>已提交的Forms。</strong></td>
   </tr>
   <tr>
    <td> </td>
    <td>版面配置範本</td>
-   <td>指定用於已提交Forms的版面<strong> </strong>清單。 </td>
+   <td>指定用於已提交Forms<strong> </strong>清單的配置。 </td>
   </tr>
  </tbody>
 </table>
@@ -98,9 +98,9 @@ ht-degree: 0%
 
 Forms入口網站可讓您將資料儲存在本機AEM存放庫、遠端AEM存放庫或資料庫。 AEM Forms可讓您自訂儲存草稿及提交之使用者資料的實作。 您可以覆寫預設方法，以指定草稿和提交資料如何儲存在您選擇的儲存體中。 例如，您可以將資料儲存在組織目前實作的資料存放區中。
 
-Forms入口網站提供立即可用的服務(API)，將資料儲存在本機與遠端AEM Forms發佈執行個體的crx存放庫上。 您可以取代預設實施，如所述 [為草稿和提交設定儲存服務](/help/forms/using/configuring-draft-submission-storage.md) 文章，使用自訂實施來取代預設功能。 如需自訂實施中所需方法在安全位置儲存內容的詳細資訊，請參閱 [自訂草稿和提交資料服務](/help/forms/using/custom-draft-submission-data-services.md) 和 [草稿和提交元件的自訂儲存空間。](/help/forms/using/adding-custom-storage-provider-forms.md)
+Forms入口網站提供立即可用的服務(API)，將資料儲存在本機與遠端AEM Forms發佈執行個體的crx存放庫上。 您可以用自訂實作來取代預設功能，如[為草稿和提交設定儲存服務](/help/forms/using/configuring-draft-submission-storage.md)文章中所述。 如需自訂實作中所需方法在安全位置儲存內容的詳細資訊，請參閱[自訂草稿和提交資料服務](/help/forms/using/custom-draft-submission-data-services.md)以及[草稿和提交元件的自訂儲存](/help/forms/using/adding-custom-storage-provider-forms.md)。
 
-AEM Forms檔案提供 [將草稿和提交元件與資料庫整合的範例](integrate-draft-submission-database.md). 您可以使用範例實作來開發自己的自訂實作。
+AEM Forms檔案提供將草稿與提交元件與資料庫](integrate-draft-submission-database.md)整合的[範例。 您可以使用範例實作來開發自己的自訂實作。
 
 ## 相關文章
 

@@ -22,7 +22,7 @@ ht-degree: 0%
 
 1. 在管理控制檯中，按一下「設定」>「使用者管理」>「組態」>「匯入和匯出組態檔」。
 1. 若要將目前的組態設定匯出至檔案，請按一下「匯出」並將組態檔案儲存在其他位置。
-1. 在檔案中，找出 `Domains` > *[您的網域名稱]* > `DirectoryConfigs` > `LDAPGroupConfig` 節點。 範例如下：
+1. 在檔案中，找到`Domains` > *[您的網域名稱]* > `DirectoryConfigs` > `LDAPGroupConfig`節點。 範例如下：
 
    ```xml
     <node name="LDAPGroupConfig">
@@ -35,9 +35,9 @@ ht-degree: 0%
         </map>
    ```
 
-   輸入值 `bindpassword` 並儲存您的變更。
+   輸入`bindpassword`的值並儲存變更。
 
-1. 在檔案中，找出 `Domains` > *[您的網域名稱]* > `DirectoryConfigs` > `LDAPGroupConfig` > `LDAPUserConfig` 節點。 範例如下：
+1. 在檔案中，找到`Domains` > *[您的網域名稱]* > `DirectoryConfigs` > `LDAPGroupConfig` > `LDAPUserConfig`節點。 範例如下：
 
    ```xml
     <node name="LDAPUserConfig">
@@ -50,7 +50,7 @@ ht-degree: 0%
         </map>
    ```
 
-   輸入值 `bindpassword` 並儲存您的變更。
+   輸入`bindpassword`的值並儲存變更。
 
 1. 若要匯入更新的檔案，請在「使用者管理」中按一下「組態」>「匯入及匯出組態檔」。
 1. 按一下「瀏覽」尋找檔案，按一下「匯入」，然後按一下「確定」。

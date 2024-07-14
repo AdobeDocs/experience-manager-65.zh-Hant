@@ -29,14 +29,14 @@ SPA編寫功能提供全方位的解決方案，可支援AEM中的SPA。 本文�
 
 ## 簡介 {#introduction}
 
-由於AEM需要簡易且輕量的合約，且在SPA與SPA編輯器之間建立，採用現有的JavaScript應用程式並將其調整為可與AEM中的SPA搭配使用，是一件簡單明瞭的事。
+由於AEM需要簡易且輕量的合約，且在SPA與SPA編輯器之間建立，因此採用現有的JavaScript應用程式並將其調整為可與AEM中的SPA搭配使用，是一件簡單明瞭的事。
 
 本文說明We.Retail Journal範例SPA上的天氣元件範例。
 
-您應熟悉 [適用於AEM的SPA應用程式結構](/help/sites-developing/spa-getting-started-react.md) 閱讀本文之前。
+閱讀本文之前，您應該先熟悉AEM](/help/sites-developing/spa-getting-started-react.md)的SPA應用程式的[結構。
 
 >[!CAUTION]
->本檔案使用 [We.Retail日誌應用程式](https://github.com/adobe/aem-sample-we-retail-journal) 僅供示範之用。 請勿用於任何專案工作。
+>本檔案僅將[We.Retail Journal應用程式](https://github.com/adobe/aem-sample-we-retail-journal)用於示範用途。 請勿用於任何專案工作。
 >
 >任何 AEM 專案都應使用 [AEM 專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)，它支援使用 React 或 Angular 的 SPA 專案並使用 SPA SDK。
 
@@ -62,20 +62,20 @@ SPA編寫功能提供全方位的解決方案，可支援AEM中的SPA。 本文�
 
 ### 天氣元件實施 {#weather-component-implementation}
 
-天氣元件以公開可用的React元件為基礎，稱為 [React Open Weather](https://www.npmjs.com/package/react-open-weather). 它已調整為可在We.Retail Journal範例SPA應用程式中作為元件使用。
+天氣元件是以公開可用的React元件為基礎，稱為[React Open Weather](https://www.npmjs.com/package/react-open-weather)。 它已調整為可在We.Retail Journal範例SPA應用程式中作為元件使用。
 
 以下是React Open Weather元件用途的NPM檔案片段。
 
 ![screen_shot_2018-06-08at144723](assets/screen_shot_2018-06-08at144723.png) ![screen_shot_2018-06-08at144215](assets/screen_shot_2018-06-08at144215.png)
 
-檢閱自訂天氣元件的程式碼( `Weather.js`)在We.Retail日誌應用程式中：
+檢閱We.Retail Journal應用程式中自訂天氣元件( `Weather.js`)的程式碼：
 
-* **第16行**：React Open Weather Widget會視需要載入。
-* **第46行**：此 `MapTo` 函式將此React元件與對應的AEM元件建立關聯，以便在SPA編輯器中編輯它。
+* **第16**&#x200B;行： React Open Weather Widget已視需要載入。
+* **第46**&#x200B;行： `MapTo`函式將此React元件與對應的AEM元件建立關聯，以便在SPA編輯器中編輯它。
 
-* **第22-29行**：此 `EditConfig` 定義，檢查是否已填入城市，如果空白，則定義值。
+* **行22-29**：已定義`EditConfig`，正在檢查是否已填入城市，如果空白，則定義值。
 
-* **第31-44行**：天氣元件會延伸 `Component` 類別並針對React Open Weather元件提供NPM使用檔案中定義的必要資料，然後轉譯該元件。
+* **行31-44**： Weather元件會擴充`Component`類別，並提供React Open Weather元件之NPM使用檔案中所定義的必要資料，以及呈現元件。
 
 ```javascript
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -130,4 +130,4 @@ MapTo('we-retail-journal/global/components/weather')(Weather, WeatherEditConfig)
 
 ## 下一步 {#next-step}
 
-如需有關為AEM開發SPA的詳細資訊，請參閱文章 [為AEM開發SPA](/help/sites-developing/spa-architecture.md).
+如需有關為AEM開發SPA的詳細資訊，請參閱文章[為AEM開發SPA](/help/sites-developing/spa-architecture.md)。

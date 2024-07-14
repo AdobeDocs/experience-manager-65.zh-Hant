@@ -21,15 +21,15 @@ ht-degree: 0%
 
 ## 概觀 {#overview}
 
-在AEM中取得管理工作階段或資源解析程式的主要方式是使用 `SlingRepository.loginAdministrative()` 和 `ResourceResolverFactory.getAdministrativeResourceResolver()` Sling提供的方法。
+在AEM中取得管理工作階段或資源解析程式的主要方式是使用Sling提供的`SlingRepository.loginAdministrative()`和`ResourceResolverFactory.getAdministrativeResourceResolver()`方法。
 
-然而，這兩種方法都不是圍繞 [最低許可權原則](https://en.wikipedia.org/wiki/Principle_of_least_privilege). 如此一來，開發人員就很容易無法及早針對內容規劃適當的結構和對應的存取控制層級(ACL)。 如果此類服務中存在漏洞，則通常會導致許可權提升至 `admin` 使用者，即使程式碼本身不需要管理許可權即可運作。
+但是，這兩種方法都不是依照最低許可權的[原則](https://en.wikipedia.org/wiki/Principle_of_least_privilege)設計的。 如此一來，開發人員就很容易無法及早針對內容規劃適當的結構和對應的存取控制層級(ACL)。 如果此類服務中存在漏洞，即使程式碼本身不需要系統管理許可權即可運作，也經常會導致許可權升級至`admin`使用者。
 
 ## 如何逐步淘汰管理員工作階段 {#how-to-phase-out-admin-sessions}
 
 ### 優先順序0：功能是否啟用/需要/已棄用？ {#priority-is-the-feature-active-needed-derelict}
 
-某些情況下可能未使用管理員工作階段，或功能完全停用。 若是如此，請在實施時確認您已完全移除該功能，或符合 [NOP代碼](https://en.wikipedia.org/wiki/NOP).
+某些情況下可能未使用管理員工作階段，或功能完全停用。 若您的實作是如此，請確定您完全移除該功能，或使用[NOP程式碼](https://en.wikipedia.org/wiki/NOP)來配合。
 
 ### 優先順序1：使用請求工作階段 {#priority-use-the-request-session}
 
@@ -48,13 +48,13 @@ ht-degree: 0%
    * 將其移至其他位置，例如，存取控制與可用的請求工作階段相符的位置；
    * 變更內容粒度；
 
-* **重構您的程式碼以成為適當的服務**
+* **將您的程式碼重構為適當的服務**
 
    * 將商業邏輯從JSP程式碼移至服務。 這允許不同的內容模式。
 
 此外，請確定您開發的任何新功能都遵守以下原則：
 
-* **安全性需求應驅動內容結構**
+* **安全性需求應該驅動內容結構**
 
    * 管理存取控制應該感覺很自然
    * 存取控制必須由存放庫執行，而非應用程式
@@ -65,20 +65,20 @@ ht-degree: 0%
 
 * **尊重隱私權設定**
 
-   * 如果有私人設定檔，範例就是不要公開私人設定檔的圖片、電子郵件或全名 `/profile` 節點。
+   * 如果有私人設定檔，其中一個範例就是不要公開在私人`/profile`節點上找到的設定檔圖片、電子郵件或全名。
 
 ## 嚴格存取控制 {#strict-access-control}
 
 無論您在重新建構內容時套用存取控制，還是為新的服務使用者執行此動作時，都必須儘可能套用最嚴格的ACL。 使用所有可能的存取控制工具：
 
-* 例如，不要套用 `jcr:read` 於 `/apps`，僅將其套用至 `/apps/*/components/*/analytics`
+* 例如，不要在`/apps`上套用`jcr:read`，而只將其套用至`/apps/*/components/*/analytics`
 
-* 使用 [限制](https://jackrabbit.apache.org/oak/docs/security/authorization/restriction.html)
+* 使用[限制](https://jackrabbit.apache.org/oak/docs/security/authorization/restriction.html)
 
 * 為節點型別套用ACL
-* 限制許可權
+* 限制權限
 
-   * 例如，當只需要編寫屬性時，不要將 `jcr:write` 許可權；使用 `jcr:modifyProperties` 而非
+   * 例如，當只需要寫入內容時，不要授予`jcr:write`許可權；請改用`jcr:modifyProperties`
 
 ## 服務使用者與對應 {#service-users-and-mappings}
 
@@ -91,11 +91,11 @@ ht-degree: 0%
 
 * 它們允許對應服務到使用者
 * 它們可讓您定義子服務使用者
-* 中央配置點為： `org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl`
-* `service-id` = `service-name` [「：」子服務名稱]
+* 中央組態點為： `org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl`
+* `service-id` = `service-name` [&quot;：&quot;subservice-name]
 
-* `service-id` 對應到資源解析程式和/或JCR存放庫使用者ID以進行驗證
-* `service-name` 是提供服務的套件組合的符號名稱
+* `service-id`對應到資源解析程式和/或JCR存放庫使用者ID以進行驗證
+* `service-name`是提供服務的套件組合之符號名稱
 
 ## 其他Recommendations {#other-recommendations}
 
@@ -110,25 +110,25 @@ ht-degree: 0%
 1. 識別您服務的必要許可權，牢記最小許可權原則。
 1. 檢查是否有使用者可以使用您所需的確切許可權設定。 如果沒有任何現有使用者符合您的需求，請建立系統服務使用者。 需要RTC才能建立服務使用者。 有時候，建立多個子服務使用者（例如，一個用於寫入，一個用於讀取）以進一步劃分存取權是有意義的。
 1. 為您的使用者設定及測試ACE。
-1. 新增 `service-user` 對應您的服務和 `user/sub-users`
+1. 為您的服務和`user/sub-users`新增`service-user`對應
 
-1. 讓服務使用者sling功能可供您的套件使用：更新至最新版本的 `org.apache.sling.api`.
+1. 讓您的套件組合可以使用服務使用者sling功能：更新至`org.apache.sling.api`的最新版本。
 
-1. 取代 `admin-session` 在您的程式碼中使用 `loginService` 或 `getServiceResourceResolver` API。
+1. 以`loginService`或`getServiceResourceResolver` API取代程式碼中的`admin-session`。
 
 ## 建立服務使用者 {#creating-a-new-service-user}
 
 在您確認AEM服務使用者清單中的任何使用者都不適用於您的使用案例，且對應的RTC問題已核准之後，請將新使用者新增至預設內容。
 
-建議的方法是建立服務使用者，以在處使用存放庫總管 *https://&lt;server>：&lt;port>/crx/explorer/index.jsp*
+建議的方法是建立服務使用者，以使用位於&#x200B;*https://&lt;server>：&lt;port>/crx/explorer/index.jsp*&#x200B;的存放庫總管
 
-目標是取得有效的 `jcr:uuid` 屬性，透過內容套件安裝建立使用者時強制使用。
+目標是取得有效的`jcr:uuid`屬性，這是透過內容套件安裝建立使用者的必要屬性。
 
 您可以透過下列方式建立服務使用者：
 
-1. 前往存放庫總管： *https://&lt;server>：&lt;port>/crx/explorer/index.jsp*
-1. 按下「 」以管理員身分登入 **登入** 畫面左上角的連結。
-1. 接下來，建立您的系統使用者並為其命名。 若要將使用者建立為系統使用者，請將中間路徑設定為 `system` 並根據您的需求新增可選的子檔案夾：
+1. 前往位於&#x200B;*https://&lt;server>：&lt;port>/crx/explorer/index.jsp*&#x200B;的存放庫總管
+1. 按一下畫面左上角的&#x200B;**登入**&#x200B;連結，以管理員身分登入。
+1. 接下來，建立您的系統使用者並為其命名。 若要將使用者建立為系統使用者，請將中繼路徑設為`system`並根據您的需求新增可選的子資料夾：
 
    ![chlimage_1-102](assets/chlimage_1-102a.png)
 
@@ -140,7 +140,7 @@ ht-degree: 0%
    >
    >沒有與服務使用者相關聯的mixin型別。 這表示系統使用者沒有存取控制原則。
 
-將對應的.content.xml新增至套件組合的內容時，請確定您已設定 `rep:authorizableId` 並且主要型別為 `rep:SystemUser`. 它應如下所示：
+將對應的.content.xml新增至套件組合的內容時，請確定您已設定`rep:authorizableId`，且主要型別為`rep:SystemUser`。 它應如下所示：
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -153,15 +153,15 @@ ht-degree: 0%
 
 ## 正在新增組態修正至ServiceUserMapper組態 {#adding-a-configuration-amendment-to-the-serviceusermapper-configuration}
 
-若要將服務對映新增至對應的系統使用者，請建立 [`ServiceUserMapper`](https://sling.apache.org/apidocs/sling7/org/apache/sling/serviceusermapping/ServiceUserMapper.html) 服務。 若要保持此模組化，可以使用 [Sling修正機制](https://issues.apache.org/jira/browse/SLING-3578). 建議使用下列方式將這類設定與您的套件一起安裝：使用 [Sling初始內容載入](https://sling.apache.org/documentation/bundles/content-loading-jcr-contentloader.html)：
+若要將對應從您的服務新增至對應的系統使用者，請建立[`ServiceUserMapper`](https://sling.apache.org/apidocs/sling7/org/apache/sling/serviceusermapping/ServiceUserMapper.html)服務的工廠組態。 若要保持此模組化，可以使用[Sling修正機制](https://issues.apache.org/jira/browse/SLING-3578)提供此組態。 建議您使用[Sling初始內容載入](https://sling.apache.org/documentation/bundles/content-loading-jcr-contentloader.html)，將此組態與您的套件一起安裝：
 
 1. 在套件的src/main/resources資料夾下方建立子資料夾SLING-INF/content
-1. 在此資料夾中，建立名為org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.modified-&lt;some unique=&quot;&quot; name=&quot;&quot; for=&quot;&quot; your=&quot;&quot; factory=&quot;&quot; configuration=&quot;&quot;>.xml包含您工廠設定的內容（包括所有子服務使用者對應）。 範例：
+1. 在此資料夾中，建立名為org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.modified-&lt;您工廠設定的某些唯一名稱>.xml的檔案，其中包含您工廠設定的內容（包括所有子服務使用者對應）。 範例：
 
-1. 建立 `SLING-INF/content` 資料夾位於 `src/main/resources` 套件組合中的資料夾；
-1. 在此資料夾中建立檔案 `named org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended-<a unique name for your factory configuration>.xml` 包含您工廠設定的內容，包括所有子服務使用者對應。
+1. 在您的套件組合的`src/main/resources`資料夾底下建立`SLING-INF/content`資料夾；
+1. 在此資料夾中，建立包含您工廠組態內容的檔案`named org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended-<a unique name for your factory configuration>.xml`，包含所有子服務使用者對應。
 
-   為了方便說明，請取用下列檔案： `org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended-com.adobe.granite.auth.saml.xml`：
+   為了方便說明，請取得名為`org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended-com.adobe.granite.auth.saml.xml`的檔案：
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -180,7 +180,7 @@ ht-degree: 0%
    </node>
    ```
 
-1. 在的設定中參考Sling初始內容 `maven-bundle-plugin` 在 `pom.xml` 您的套件組合。 範例：
+1. 參考您套件組合`pom.xml`中`maven-bundle-plugin`的組態中的Sling初始內容。 範例：
 
    ```xml
    <Sling-Initial-Content>
@@ -190,24 +190,24 @@ ht-degree: 0%
 
 1. 安裝您的套件組合，並確定已安裝工廠組態。 您可以透過以下方式進行：
 
-   * 前往位於Web主控台 *https://serverhost:serveraddress/system/console/configMgr*
-   * 搜尋 **Apache Sling Service使用者對應程式服務修正**
+   * 前往位於&#x200B;*https://serverhost:serveraddress/system/console/configMgr*&#x200B;的Web主控台
+   * 搜尋&#x200B;**Apache Sling Service使用者對應程式服務修正**
    * 按一下連結，您就能檢視是否有正確的設定。
 
 ## 在服務中處理共用工作階段 {#dealing-with-shared-sessions-in-services}
 
-呼叫目標 `loginAdministrative()` 經常與共用工作階段一起出現。 這些工作階段會在服務啟動時取得，並只會在服務停止後登出。 雖然這是常見做法，但會導致兩個問題：
+對`loginAdministrative()`的呼叫通常與共用工作階段一起出現。 這些工作階段會在服務啟動時取得，並只會在服務停止後登出。 雖然這是常見做法，但會導致兩個問題：
 
-* **安全性：** 此類管理工作階段用於快取及傳回繫結至共用工作階段的資源或其他物件。 稍後在呼叫棧疊中，這些物件可以適應具有更高許可權的工作階段或資源解析器。 呼叫者通常無法得知這是他們運作的管理員工作階段。
-* **效能：** 在Oak中，共用工作階段可能會導致效能問題，建議您不要使用。
+* **安全性：**&#x200B;此類管理工作階段用於快取及傳回繫結至共用工作階段的資源或其他物件。 稍後在呼叫棧疊中，這些物件可以適應具有更高許可權的工作階段或資源解析器。 呼叫者通常無法得知這是他們運作的管理員工作階段。
+* **效能：**&#x200B;在Oak中，共用工作階段可能會導致效能問題，不建議您使用它們。
 
-針對安全性風險，最顯而易見的解決方案是直接取代 `loginAdministrative()` 使用呼叫 `loginService()` 一對一給具有受限制許可權的使用者。 但是，這不會對任何潛在的效能降級造成任何影響。 降低這種問題的可能方式是，將所有要求的資訊包裝在與工作階段無關聯的物件中。 然後，隨選建立（或銷毀）工作階段。
+針對安全性風險，最顯而易見的解決方案是將`loginAdministrative()`呼叫取代為`loginService()`呼叫，以提供給具有受限制許可權的使用者。 但是，這不會對任何潛在的效能降級造成任何影響。 降低這種問題的可能方式是，將所有要求的資訊包裝在與工作階段無關聯的物件中。 然後，隨選建立（或銷毀）工作階段。
 
 建議的方法是重構服務的API，讓呼叫者能夠控制工作階段的建立/破壞。
 
 ## JSP中的管理階段作業 {#administrative-sessions-in-jsps}
 
-JSP無法使用 `loginService()`，因為沒有關聯的服務。 不過，JSP中的管理階段作業通常是違反MVC範例的標誌。
+JSP無法使用`loginService()`，因為沒有關聯的服務。 不過，JSP中的管理階段作業通常是違反MVC範例的標誌。
 
 此問題可透過兩種方式修正：
 
@@ -220,23 +220,23 @@ JSP無法使用 `loginService()`，因為沒有關聯的服務。 不過，JSP�
 
 處理事件或工作（有時是工作流程）時，觸發事件的對應工作階段會遺失。 這會導致事件處理常式和工作處理常式使用管理工作階段來執行其工作。 有不同可行的方法可解決此問題，各有其優缺點：
 
-1. 傳遞 `user-id` 在事件裝載中，並使用模擬。
+1. 傳遞事件裝載中的`user-id`並使用模擬。
 
-   **優點：** 使用方便。
+   **優點：**&#x200B;使用簡單。
 
-   **缺點：** 仍使用 `loginAdministrative()`. 它會重新驗證已驗證的請求。
+   **缺點：**&#x200B;仍使用`loginAdministrative()`。 它會重新驗證已驗證的請求。
 
 1. 建立或重複使用可存取資料的服務使用者。
 
-   **優點：** 與目前的設計一致。 只需要最少的變更。
+   **優點：**&#x200B;與目前的設計一致。 只需要最少的變更。
 
-   **缺點：** 需要功能強大的服務使用者具有彈性，這可以輕鬆導致許可權提升。 規避安全性模式。
+   **缺點：**&#x200B;需要強大的服務使用者彈性化，這很容易導致許可權提升。 規避安全性模式。
 
-1. 傳遞序列化 `Subject` ，並建立 `ResourceResolver` 根據那個主旨。 其中一個範例就是使用JAAS `doAsPrivileged` 在 `ResourceResolverFactory`.
+1. 傳遞事件裝載中`Subject`的序列化，並根據該主題建立`ResourceResolver`。 其中一個範例是在`ResourceResolverFactory`中使用JAAS `doAsPrivileged`。
 
-   **優點：** 從安全性觀點來重新定義實作。 它可避免重新驗證，並以原始許可權操作。 安全性相關程式碼對事件的取用者而言是透明的。
+   **優點：**&#x200B;從安全性觀點來清除實作。 它可避免重新驗證，並以原始許可權操作。 安全性相關程式碼對事件的取用者而言是透明的。
 
-   **缺點：** 需要重構。 安全性相關程式碼對事件的取用者而言是透明的，這也可能造成問題。
+   **缺點：**&#x200B;需要重構。 安全性相關程式碼對事件的取用者而言是透明的，這也可能造成問題。
 
 第三種方法是慣用的處理技術。
 
@@ -244,7 +244,7 @@ JSP無法使用 `loginService()`，因為沒有關聯的服務。 不過，JSP�
 
 在工作流程實作中，觸發工作流程的對應使用者工作階段會遺失。 這會導致工作流程處理經常使用管理階段來執行其工作。
 
-若要修正這些問題，建議使用中提到的相同方法 [處理事件、複製前置處理器和作業](/help/sites-administering/security-service-users.md#processing-events-replication-preprocessors-and-jobs) 使用。
+若要修正這些問題，建議使用[處理事件、復寫前置處理器和工作](/help/sites-administering/security-service-users.md#processing-events-replication-preprocessors-and-jobs)中提到的相同方法。
 
 ## SlingPOST處理器與已刪除頁面 {#sling-post-processors-and-deleted-pages}
 

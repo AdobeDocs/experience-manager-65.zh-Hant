@@ -20,7 +20,7 @@ ht-degree: 1%
 
 ## 概觀 {#overview}
 
-您可以在「管理資產」和「建立通訊UI」中自訂文字編輯器，以新增更多字型和字型大小。 這些字型包括英文和非英文（例如日文）字型。
+您可以在「管理Assets」和「建立通訊UI」中自訂文字編輯器，以新增更多字型和字型大小。 這些字型包括英文和非英文（例如日文）字型。
 
 您可以自訂來變更下列字型設定：
 
@@ -38,14 +38,14 @@ ht-degree: 1%
 
 若要透過編輯tbxeditor-config.xml檔案來自訂字型，請執行下列動作：
 
-1. 前往 `https://'[server]:[port]'/[ContextPath]/crx/de` 並以管理員身分登入。
+1. 前往`https://'[server]:[port]'/[ContextPath]/crx/de`並以管理員身分登入。
 1. 在apps資料夾中，使用類似於config資料夾（位於libs/fd/cm/config）的路徑/結構建立名為config的資料夾，包括以下步驟：
 
-   1. 以滑鼠右鍵按一下下列路徑的專案資料夾，然後選取 **覆蓋節點**：
+   1. 用滑鼠右鍵按一下下列路徑的專案資料夾，然後選取&#x200B;**覆蓋節點**：
 
       `/libs/fd/cm/config`
 
-      ![覆蓋節點](assets/1-1.png)
+      ![重疊節點](assets/1-1.png)
 
    1. 請確定「覆蓋節點」對話方塊是否具備下列值：
 
@@ -53,22 +53,22 @@ ht-degree: 1%
 
       **位置：** /apps/
 
-      **符合節點型別：** 已選取
+      **符合節點型別：已選取**
 
-      ![覆蓋節點](assets/2.png)
+      ![重疊節點](assets/2.png)
 
-   1. 按一下 **確定**. 資料夾結構會在apps資料夾中建立。
+   1. 按一下&#x200B;**確定**。 資料夾結構會在apps資料夾中建立。
 
    1. 按一下&#x200B;**「儲存全部」**。
 
 1. 使用下列步驟，在新建立的設定資料夾中建立tbxeditor-config.xml檔案的復本：
 
-   1. 以滑鼠右鍵按一下位於libs/fd/cm/config的tbxeditor-config.xml檔案，然後選取 **複製**.
-   1. 用滑鼠右鍵按一下下列資料夾並選取 **貼上：**
+   1. 在libs/fd/cm/config的tbxeditor-config.xml檔案上按一下滑鼠右鍵，然後選取&#x200B;**複製**。
+   1. 用滑鼠右鍵按一下下列資料夾，然後選取&#x200B;**貼上：**
 
       `apps/fd/cm/config`
 
-   1. 依預設，貼上的檔案名稱為 `copy of tbxeditor-config.xml.` 將檔案重新命名為 `tbxeditor-config.xml` 並按一下 **全部儲存**.
+   1. 依預設，貼上的檔案名稱為`copy of tbxeditor-config.xml.`。請將檔案重新命名為`tbxeditor-config.xml`，然後按一下&#x200B;**儲存全部**。
 
 1. 在apps/fd/cm/config開啟tbxeditor-config.xml檔案，然後進行必要的變更。
 
@@ -166,7 +166,7 @@ ht-degree: 1%
       * 字型系列與大小、高度、字母間距及日期格式的預設值
       * 專案符號縮排
 
-      例如，若要新增名為Sazanami Mincho Medium的日文字型，您必須在XML檔案中建立下列專案： `<font>Sazanami Mincho Medium</font>`. 您也必須將此字型安裝在使用者端電腦上，以用來存取及使用字型自訂。 如需詳細資訊，請參閱 [新增自訂字型至使用者端電腦](#addcustomfonts).
+      例如，若要新增名為Sazanami Mincho Medium的日文字型，您必須在XML檔案中建立下列專案： `<font>Sazanami Mincho Medium</font>`。 您也必須將此字型安裝在使用者端電腦上，以用來存取及使用字型自訂。 如需詳細資訊，請參閱[新增自訂字型到使用者端電腦](#addcustomfonts)。
 
       您也可以變更文字各方面的預設值，並藉由移除專案，從文字編輯器中移除字型。
 
@@ -183,9 +183,9 @@ ht-degree: 1%
 
 ## 存取字型自訂 {#access-font-customizations}
 
-在您變更中的字型之後 `tbxeditor-config.xml` 在CRX中建立檔案並在用來存取AEM Forms的使用者端電腦上安裝所需字型，則變更會顯示在文字編輯器中。
+當您在CRX中變更`tbxeditor-config.xml`檔案的字型，並在用來存取AEM Forms的使用者端電腦上安裝所需的字型後，變更就會顯示在文字編輯器中。
 
-例如，Sazanami Mincho Medium字型已新增至 [在CRX中編輯tbxeditor-config.xml檔案來自訂字型](#customizefonts) 文字編輯器UI中顯示的程式如下：
+例如，Sazanami Mincho Medium字型新增至[在CRX](#customizefonts)程式中編輯tbxeditor-config.xml檔案來自訂字型，文字編輯器UI中會顯示如下：
 
 ![sazanamiminchointext](assets/sazanamiminchointext.png)
 

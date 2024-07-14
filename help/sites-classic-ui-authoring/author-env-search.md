@@ -23,24 +23,24 @@ AEM的製作環境提供多種搜尋內容的機制，視資源型別而定。
 
 >[!NOTE]
 >
->在製作環境之外，也提供其他機制可供搜尋，例如 [查詢產生器](/help/sites-developing/querybuilder-api.md) 和 [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md).
+>在作者環境之外，也可以使用其他機制來搜尋，例如[查詢產生器](/help/sites-developing/querybuilder-api.md)和[CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md)。
 
 ## 搜尋基本資訊 {#search-basics}
 
-若要存取搜尋面板，請按一下 **搜尋** 標籤顯示在適當主控台的左窗格頂端。
+若要存取搜尋面板，請按一下適當主控台左窗格頂端的&#x200B;**搜尋**&#x200B;標籤。
 
 ![chlimage_1-101](assets/chlimage_1-101.png)
 
 搜尋面板可讓您搜尋所有網站頁面。 它包含下列欄位和Widget：
 
 * **全文**：搜尋指定的文字
-* **修改於以下日期之後/之前**：僅搜尋在特定日期之間變更的頁面
-* **範本**：僅根據指定的範本搜尋這些頁面
+* **修改於**&#x200B;之後/之前：僅搜尋在特定日期之間變更的頁面
+* **範本**：僅搜尋那些以指定範本為基礎的頁面
 * **標籤**：僅搜尋具有指定標籤的頁面
 
 >[!NOTE]
 >
->當您的執行個體設定為 [Lucene搜尋](/help/sites-deploying/queries-and-indexing.md) 您可在以下中使用 **全文**：
+>當您的執行個體設定為[Lucene搜尋](/help/sites-deploying/queries-and-indexing.md)時，您可以在&#x200B;**全文**&#x200B;中使用下列專案：
 >
 >* [萬用字元](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Wildcard_Searches)
 >* [布林運運算元](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Boolean_operators)
@@ -50,7 +50,7 @@ AEM的製作環境提供多種搜尋內容的機制，視資源型別而定。
 >* [提升](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Boosting_a_Term)
 >
 
-按一下以執行搜尋 **搜尋** 位於窗格底部。 按一下 **重設** 以清除搜尋條件。
+按一下窗格底部的&#x200B;**搜尋**&#x200B;以執行搜尋。 按一下&#x200B;**重設**&#x200B;以清除搜尋條件。
 
 ## 篩選條件 {#filter}
 
@@ -60,14 +60,14 @@ AEM的製作環境提供多種搜尋內容的機制，視資源型別而定。
 
 ## 尋找並取代 {#find-and-replace}
 
-在 **網站** 主控台a **尋找和取代** 功能表選項可讓您在網站的某個區段中搜尋及取代字串的多個執行個體。
+在&#x200B;**網站**&#x200B;主控台中，**尋找和取代**&#x200B;功能表選項可讓您搜尋和取代網站某區段中字串的多個執行個體。
 
 1. 選取您要執行尋找和取代動作的根頁面或資料夾。
-1. 選取 **工具** 則 **尋找和取代**：
+1. 選取&#x200B;**工具**&#x200B;然後&#x200B;**尋找與取代**：
 
    ![screen_shot_2012-02-15at120346pm](assets/screen_shot_2012-02-15at120346pm.png)
 
-1. 此 **尋找和取代** 對話方塊會執行下列動作：
+1. **尋找和取代**&#x200B;對話方塊會執行下列動作：
 
    * 確認尋找動作應該開始的根路徑
    * 定義要找到的字詞
@@ -75,11 +75,11 @@ AEM的製作環境提供多種搜尋內容的機制，視資源型別而定。
    * 指出搜尋是否應區分大小寫
    * 指示是否只應找到全字（否則也會找到子字串）
 
-   按一下 **預覽** 列出辭彙的發現位置。 您可以選取/清除要取代的特定執行個體：
+   按一下&#x200B;**預覽**&#x200B;列出找到辭彙的清單。 您可以選取/清除要取代的特定執行個體：
 
    ![screen_shot_2012-02-15at120719pm](assets/screen_shot_2012-02-15at120719pm.png)
 
-1. 按一下 **取代** 以實際取代所有例項。 系統會要求您確認此動作。
+1. 按一下[取代]以實際取代所有執行個體。 ****&#x200B;系統會要求您確認此動作。
 
 尋找和取代servlet的預設範圍涵蓋下列屬性：
 
@@ -88,7 +88,7 @@ AEM的製作環境提供多種搜尋內容的機制，視資源型別而定。
 * `jcr:text`
 * `text`
 
-可使用Apache Felix Web管理主控台(例如 `https://localhost:4502/system/console/configMgr`)。 選取 `CQ WCM Find Replace Servlet (com.day.cq.wcm.core.impl.servlets.FindReplaceServlet)` 並視需要設定範圍。
+可以使用Apache Felix Web管理主控台（例如，`https://localhost:4502/system/console/configMgr`）變更範圍。 選取`CQ WCM Find Replace Servlet (com.day.cq.wcm.core.impl.servlets.FindReplaceServlet)`並視需要設定範圍。
 
 >[!NOTE]
 >

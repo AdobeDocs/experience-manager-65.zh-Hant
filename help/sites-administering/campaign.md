@@ -27,31 +27,31 @@ Adobe Campaign這一組解決方案可讓您跨所有線上及離線管道個人
 >
 >本檔案說明如何將Adobe Campaign與AEM 6.5、內部部署或AMS託管的AEM解決方案整合。
 >
->如需整合Adobe Campaign與雲端原生AEM解決方案AEMas a Cloud Service的詳細資訊， [請參閱此檔案。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/campaign.html)
+>如需整合Adobe Campaign與雲端原生AEM解決方案AEM as a Cloud Service的詳細資訊，[請參閱此檔案。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/campaign.html)
 
 ## 與Adobe Campaign Classic整合 {#acc}
 
 有數個Adobe Campaign Classic (ACC)版本。 與AEM整合的支援取決於您已實作的ACC版本，以及AEM是否安裝在Adobe管理服務(AMS)的內部部署中。
 
-| ACC版本 | 與AEM 6.5整合 <br>內部部署 | 與AEM 6.5整合<br>AMS |
+| ACC版本 | 與AEM 6.5 <br>內部部署整合 | 與AEM 6.5<br>AMS整合 |
 |---|---|---|
 | [v7](https://experienceleague.adobe.com/docs/campaign-classic.html) | 支援 | 支援 |
 | [v8使用者端主控台](https://experienceleague.adobe.com/docs/campaign-v8.html) | 支援 | 支援 |
 
 以下檔案說明如何將AEM與Adobe Campaign Classic整合。
 
-* [與Adobe Campaign Classic整合](/help/sites-administering/campaignonpremise.md)  — 瞭解設定整合的逐步詳細資訊。
+* [與Adobe Campaign Classic整合](/help/sites-administering/campaignonpremise.md) — 瞭解設定整合的逐步詳細資料。
 
 下列其他檔案將說明如何使用整合。
 
-* [電子郵件核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/email/introduction.html)  — 瞭解在AEM中可用來編寫Campaign內容的標準電子郵件元件。
-* [疑難排解您的Adobe Campaign Classic整合](/help/sites-administering/troubleshooting-campaignintegration.md)  — 瞭解如何修正AEM-ACC整合最常見的問題。
+* [電子郵件核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/email/introduction.html) — 瞭解在AEM中可用來編寫Campaign內容的標準電子郵件元件。
+* [疑難排解您的Adobe Campaign Classic整合](/help/sites-administering/troubleshooting-campaignintegration.md) — 瞭解如何修正AEM-ACC整合最常見的問題。
 
 ## 與Adobe Campaign Standard整合 {#acs}
 
-整合 [Adobe Campaign Standard](https://experienceleague.adobe.com/docs/campaign-standard.html) 具有AEM的(ACS)取決於AEM是否安裝在Adobe管理服務(AMS)的內部部署中。
+[Adobe Campaign Standard](https://experienceleague.adobe.com/docs/campaign-standard.html) (ACS)與AEM的整合取決於AEM是否安裝在Adobe管理服務(AMS)的內部部署上。
 
-| 與AEM 6.5整合 <br>內部部署 | 與AEM 6.5整合<br>AMS |
+| 與AEM 6.5 <br>內部部署整合 | 與AEM 6.5<br>AMS整合 |
 |---|---|
 | 支援 | 支援 |
 | 支援 | 支援 |

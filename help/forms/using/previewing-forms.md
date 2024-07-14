@@ -39,7 +39,7 @@ ht-degree: 17%
   </tr>
   <tr>
    <td>PDF表單</td>
-   <td>包含資料的PDF預覽和預覽<br /> </td>
+   <td>PDF預覽和預覽資料<br /> </td>
   </tr>
   <tr>
    <td>最適化表單</td>
@@ -54,11 +54,11 @@ ht-degree: 17%
 
 ## 預覽表單 {#previewing-a-form-1}
 
-1. 選取您要預覽的資產，然後按一下預覽 ![aem6forms_preview](assets/aem6forms_preview.png) （在動作工具列中）。
+1. 選取您要預覽的資產，然後按一下動作工具列中的[預覽![aem6forms_preview](assets/aem6forms_preview.png)]。
 
    >[!NOTE]
    >
-   >若要選取資產，請從預設的「卡片」檢視切換至「清單」檢視。 按一下 ![aem6forms_viewlist](assets/aem6forms_viewlist.png) 或 ![aem6forms_viewcard](assets/aem6forms_viewcard.png) 以切換檢視。
+   >若要選取資產，請從預設的「卡片」檢視切換至「清單」檢視。 按一下![aem6forms_viewlist](assets/aem6forms_viewlist.png)或![aem6forms_viewcard](assets/aem6forms_viewcard.png)以切換檢視。
 
 1. 按一下「預覽」會列出適用於所選資產型別的可能預覽選項。 按一下所需的選項，在新索引標籤中呈現選取的資產。
 
@@ -70,7 +70,7 @@ ht-degree: 17%
 
 ## 以資料預覽 {#preview-with-data}
 
-當您選取 **使用資料預覽**，您可以看到表單輸入真實資料後的外觀。 使用資料預覽選項可讓您上傳包含範例使用者資料的XML。 範例使用者資料可用來以您選擇的格式填入預覽表單。
+選取&#x200B;**使用資料預覽**&#x200B;時，您可以看到表單在輸入真實資料時的外觀。 使用資料預覽選項可讓您上傳包含範例使用者資料的XML。 範例使用者資料可用來以您選擇的格式填入預覽表單。
 
-1. 選取資產，按一下預覽 ![aem6forms_preview](assets/aem6forms_preview.png)，並選取 **使用資料預覽**.
+1. 選取資產，按一下「預覽![aem6forms_preview](assets/aem6forms_preview.png)」，然後選取「**使用資料預覽**」。
 1. 在「預覽表單」對話方塊中，以XML檔案形式提供FormData。 按一下「預覽」，使用合併的來自XML的資料來呈現表單。

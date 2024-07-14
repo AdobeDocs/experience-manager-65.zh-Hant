@@ -48,9 +48,9 @@ ht-degree: 0%
 ## 先決條件 {#prerequisites}
 
 * 設定AEM編寫執行個體。
-* 安裝 [AEM Forms附加元件](/help/forms/using/installing-configuring-aem-forms-osgi.md) 在作者執行個體上
+* 在作者執行個體上安裝[AEM Forms附加元件](/help/forms/using/installing-configuring-aem-forms-osgi.md)
 * 設定MYSQL資料庫
-* 從資料庫提供者取得JDBC資料庫驅動程式（JAR檔案）。 教學課程中的範例是以MySQL資料庫為基礎，並使用Oracle的 [Mysql JDBC資料庫驅動程式](https://dev.mysql.com/downloads/connector/j/5.1.html).
+* 從資料庫提供者取得JDBC資料庫驅動程式（JAR檔案）。 教學課程中的範例以MySQL資料庫為基礎，並使用Oracle的[MySQL JDBC資料庫驅動程式](https://dev.mysql.com/downloads/connector/j/5.1.html)。
 
 ## 步驟1：規劃互動式通訊 {#step-plan-the-interactive-communication}
 
@@ -74,7 +74,7 @@ ht-degree: 0%
 
 ![03-create-adaptive-form-main-image_small](assets/03-create-adaptive-form-main-image_small.png)
 
-表單資料模型可讓您將互動式通訊連線到不同的資料來源。 例如，AEM使用者設定檔、RESTful Web服務、以SOAP為基礎的Web服務、OData服務和關聯式資料庫。 表單資料模型是連線資料來源中可用的企業實體和服務的統一資料表示架構。 您可以使用具有互動式通訊的表單資料模型，從連線的資料來源擷取資料。 如需表單資料模型的詳細資訊，請參閱 [AEM Forms資料整合](/help/forms/using/data-integration.md).
+表單資料模型可讓您將互動式通訊連線到不同的資料來源。 例如，AEM使用者設定檔、RESTful Web服務、SOAP型Web服務、OData服務和關聯式資料庫。 表單資料模型是連線資料來源中可用的企業實體和服務的統一資料表示架構。 您可以使用具有互動式通訊的表單資料模型，從連線的資料來源擷取資料。 如需表單資料模型的詳細資訊，請參閱[AEM Forms資料整合](/help/forms/using/data-integration.md)。
 
 **目標：**
 
@@ -109,13 +109,13 @@ ht-degree: 0%
 
 若要建立互動式通訊，您必須在AEM伺服器上為「列印」和「Web管道」提供範本。
 
-列印頻道的範本是在Forms Designer的Adobe中建立，並上傳至AEM伺服器。 然後，這些範本便可在建立互動式通訊時使用。
+列印管道的範本是在AdobeForms Designer中建立並上傳至AEM伺服器。 然後，這些範本便可在建立互動式通訊時使用。
 
 Web channel的範本是在AEM中建立。 範本作者和管理員可以建立、編輯及啟用網頁範本。 建立並啟用後，這些範本便可在建立互動式通訊時使用。
 
 **目標：**
 
-* 使用AdobeForms Designer建立列印管道的XDP範本
+* 使用AdobeForms Designer為列印頻道建立XDP範本
 * 將XDP範本上傳至AEM Forms伺服器
 * 建立和啟用網頁管道的範本
 
@@ -140,7 +140,7 @@ Web channel的範本是在AEM中建立。 範本作者和管理員可以建立�
 
 [](/help/forms/using/create-interactive-communication0.md)
 
-## 步驟6：發佈互動式通訊 {#step-publish-your-interactive-communication}
+## 步驟6：Publish您的互動式通訊 {#step-publish-your-interactive-communication}
 
 ![12-publish-your-adaptive-form-_small](assets/12-publish-your-adaptive-form-_small.png)
 

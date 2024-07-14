@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # 變更介面的色彩配置 {#changing-the-color-scheme-of-the-interface}
 
-您可以修改AEM Forms工作區使用者介面部分的色彩配置以符合您的需求。 以下是一些代表性色彩配置自訂的範例。 除了本文章中討論的步驟之外，請參閱 [AEM Forms工作區自訂的一般步驟](/help/forms/using/generic-steps-html-workspace-customization.md).
+您可以修改AEM Forms工作區使用者介面部分的色彩配置以符合您的需求。 以下是一些代表性色彩配置自訂的範例。 除了本文中討論的步驟之外，請參閱[AEM Forms工作區自訂的一般步驟](/help/forms/using/generic-steps-html-workspace-customization.md)。
 
 ## 頂端導覽列 {#top-navigation-bar}
 
@@ -31,7 +31,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >如需詳細資訊，請參閱 [WebDAV存取](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/webdav-access.html?lang=en).
+   >如需詳細資訊，請參閱[WebDAV存取](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/webdav-access.html?lang=en)。
 
 1. 新增下列樣式，以參照/apps/ws/css/newStyle.css中的新背景影像。
 
@@ -54,7 +54,7 @@ ht-degree: 0%
 
 ## 類別元件 {#category-component}
 
-類別元件會在左側面板中顯示您工作的各種類別。 若要變更其顏色，請在下列位置定義背景顏色： `.category` CSS檔案的元素。
+類別元件會在左側面板中顯示您工作的各種類別。 若要變更其顏色，請在CSS檔案的`.category`元素中定義背景顏色。
 
 ## 任務元件 {#task-component}
 

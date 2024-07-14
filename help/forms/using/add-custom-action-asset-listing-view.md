@@ -20,7 +20,7 @@ ht-degree: 3%
 
 ## 概觀 {#overview}
 
-通訊管理解決方案可讓您將自訂動作新增到「管理資產」使用者介面。
+通訊管理解決方案可讓您將自訂動作新增到管理Assets使用者介面。
 
 您可以將自訂動作新增到資產清單檢視中：
 
@@ -43,11 +43,11 @@ ht-degree: 3%
 
 若要自訂「通訊管理」，讓您的使用者下載平面信件PDF，請完成下列步驟：
 
-1. 前往 `https://'[server]:[port]'/[ContextPath]/crx/de` 並以管理員身分登入。
+1. 前往`https://'[server]:[port]'/[ContextPath]/crx/de`並以管理員身分登入。
 
 1. 在apps資料夾中，使用下列步驟建立名為items的資料夾，其路徑/結構類似於selection資料夾中的items資料夾：
 
-   1. 用滑鼠右鍵按一下 **個專案** 資料夾並選取「 」 **覆蓋節點**：
+   1. 在下列路徑的&#x200B;**專案**&#x200B;資料夾上按一下滑鼠右鍵，然後選取&#x200B;**覆蓋節點**：
 
       `/libs/fd/cm/ma/gui/content/cmassets/jcr:content/body/content/header/items/selection/items`
 
@@ -66,27 +66,27 @@ ht-degree: 3%
 
       **位置：** /apps/
 
-      **符合節點型別：** 已選取
+      **符合節點型別：已選取**
 
-      ![覆蓋節點](assets/2_createnodedownloadflatpdf.png)
+      ![重疊節點](assets/2_createnodedownloadflatpdf.png)
 
-   1. 按一下 **確定**. 資料夾結構會在apps資料夾中建立。
+   1. 按一下&#x200B;**確定**。 資料夾結構會在apps資料夾中建立。
 
       按一下&#x200B;**「儲存全部」**。
 
 1. 在新建立的專案資料夾下，使用下列步驟為特定資產（範例：downloadFlatPDF）中的自訂按鈕/動作新增節點：
 
-   1. 用滑鼠右鍵按一下 **個專案** 資料夾並選取 **建立** > **建立節點**.
+   1. 用滑鼠右鍵按一下&#x200B;**專案**&#x200B;資料夾，然後選取&#x200B;**建立** > **建立節點**。
 
-   1. 確定「建立節點」對話方塊具有下列值，然後按一下 **確定**：
+   1. 確定[建立節點]對話方塊具有下列值，然後按一下[確定] ****：
 
-      **名稱：** downloadFlatPDF （或您要為此屬性指定的名稱）
+      **名稱：** downloadFlatPDF （或您要指定給此屬性的名稱）
 
       **型別：** nt：unstructured
 
    1. 按一下您已建立的新節點（此處downloadFlatPDF）。 CRX會顯示節點的屬性。
 
-   1. 將下列屬性新增至節點（此處downloadFlatPDF），然後按一下 **全部儲存**：
+   1. 將下列屬性新增至節點（此處downloadFlatPDF），然後按一下&#x200B;**儲存全部**：
 
       <table>
         <tbody>
@@ -103,12 +103,12 @@ ht-degree: 3%
         <tr>
         <td>foundation-collection-action</td>
         <td>字串</td>
-        <td><p>{"target"： "。cq-manageasset-admin-childpages"， "activeSelectionCount"： "single"，"type"： "LETTER"}<br /> <br /> <br /> <strong>activeSelectionCount</strong> 可以是單一或多個，以允許選擇執行自訂動作的單一或多個資產。</p> <p><strong>type</strong> 可以是下列專案的一或多個（以逗號分隔多個專案）：LETTER，TEXT，LIST，CONDITION，DATADICTIONARY</p> </td>
+        <td><p>{"target"： "。cq-manageasset-admin-childpages"， "activeSelectionCount"： "single"，"type"： "LETTER"}<br /> <br /> <br /> <strong>activeSelectionCount</strong>可以單一或多重，以允許選擇執行自訂動作的單一或多個資產。</p> <p><strong>型別</strong>可以是下列之一或多個（以逗號分隔多個專案）： LETTER，TEXT，LIST，CONDITION，DATADICTIONARY</p> </td>
         </tr>
         <tr>
         <td>圖示</td>
         <td>字串</td>
-        <td>圖示 — 下載<br /> <br /> 「通訊管理」顯示在指令/功能表左側的圖示。 如需不同的可用圖示和設定，請參閱 <a href="https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html" target="_blank">CoralUI圖示檔案</a>.<br /> </td>
+        <td>icon-download<br /> <br /> Correspondence Management顯示在命令/功能表左側的圖示。 如需其他可用的圖示和設定，請參閱<a href="https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html" target="_blank">CoralUI圖示檔案</a>。<br /> </td>
         </tr>
         <tr>
         <td>jcr:primaryType</td>
@@ -128,19 +128,19 @@ ht-degree: 3%
         <tr>
         <td>text</td>
         <td>字串</td>
-        <td>下載一般PDF（或任何其他標籤）<br /> <br /> 顯示在「資產清單」介面中的命令</td>
+        <td>下載一般PDF（或任何其他標籤）<br /> <br />出現在「資產清單」介面中的命令</td>
         </tr>
         <tr>
         <td>標題</td>
         <td>字串</td>
-        <td>下載選取字母的平面PDF（或任何其他標籤/替代文字）<br /> <br /> 標題是當使用者將游標停留在自訂命令上時，「通訊管理」顯示的替代文字。</td>
+        <td>下載所選信件的平面PDF（或任何其他標籤/替代文字）<br /> <br />標題是當使用者將滑鼠懸停在自訂命令上時，「通訊管理」所顯示的替代文字。</td>
         </tr>
         </tbody>
        </table>
 
 1. 在apps資料夾中，使用下列步驟建立名為js的資料夾，其路徑/結構類似於admin資料夾中的items資料夾：
 
-   1. 用滑鼠右鍵按一下 **js** 資料夾並選取「 」 **覆蓋節點**：
+   1. 在下列路徑的&#x200B;**js**&#x200B;資料夾上按一下滑鼠右鍵，然後選取&#x200B;**覆蓋節點**：
 
       `/libs/fd/cm/ma/gui/components/admin/clientlibs/admin/js`
 
@@ -150,13 +150,13 @@ ht-degree: 3%
 
       **位置：** /apps/
 
-      **符合節點型別：** 已選取
+      **符合節點型別：已選取**
 
-   1. 按一下 **確定**. 資料夾結構會在apps資料夾中建立。 按一下&#x200B;**「儲存全部」**。
+   1. 按一下&#x200B;**確定**。 資料夾結構會在apps資料夾中建立。 按一下&#x200B;**「儲存全部」**。
 
 1. 在js資料夾中，建立名為formaction.js的檔案，其中包含按鈕的動作處理程式碼，使用下列步驟：
 
-   1. 用滑鼠右鍵按一下 **js** 資料夾並選取「 」 **「建立」>「建立檔案」**：
+   1. 在下列路徑的&#x200B;**js**&#x200B;資料夾上按一下滑鼠右鍵，然後選取&#x200B;**建立>建立檔案**：
 
       `/apps/fd/cm/ma/gui/components/admin/clientlibs/admin/js`
 
@@ -167,7 +167,7 @@ ht-degree: 3%
 
       `/libs/fd/cm/ma/gui/components/admin/clientlibs/admin/js/formaction.js`
 
-      然後將下列程式碼附加至formaction.js檔案的結尾（在/apps分支下），然後按一下 **全部儲存**：
+      然後在formaction.js檔案的結尾處附加下列程式碼（在/apps分支下），然後按一下&#x200B;**全部儲存**：
 
       ```javascript
       /* Action url for xml file to be added.*/
@@ -230,7 +230,7 @@ ht-degree: 3%
 
 1. 在apps資料夾中，使用下列步驟建立名為items的資料夾，其路徑/結構類似於actionhandlers資料夾中的items資料夾：
 
-   1. 用滑鼠右鍵按一下 **個專案** 資料夾並選取「 」 **覆蓋節點**：
+   1. 在下列路徑的&#x200B;**專案**&#x200B;資料夾上按一下滑鼠右鍵，然後選取&#x200B;**覆蓋節點**：
 
       `/libs/fd/cm/ma/gui/content/commons/actionhandlers/items/`
 
@@ -240,17 +240,17 @@ ht-degree: 3%
 
       **位置：** /apps/
 
-      **符合節點型別：** 已選取
+      **符合節點型別：已選取**
 
-   1. 按一下 **確定**. 資料夾結構會在apps資料夾中建立。
+   1. 按一下&#x200B;**確定**。 資料夾結構會在apps資料夾中建立。
 
    1. 按一下&#x200B;**「儲存全部」**。
 
 1. 在新建立的專案節點下，使用下列步驟新增特定資產（例如：letterpdfdownloader）中自訂按鈕/動作的節點：
 
-   1. 以滑鼠右鍵按一下專案資料夾並選取 **建立>建立節點**.
+   1. 用滑鼠右鍵按一下專案資料夾，然後選取&#x200B;**建立>建立節點**。
 
-   1. 確定「建立節點」對話方塊具有下列值，然後按一下 **確定**：
+   1. 確定[建立節點]對話方塊具有下列值，然後按一下[確定] ****：
 
       **名稱：** letterpdfdownloader (或您要指定給此屬性的名稱 — 必須是唯一的。 如果您在此處使用不同的名稱，請在formaction.js檔案的ACTION_URL變數中指定相同的名稱。)
 
@@ -258,7 +258,7 @@ ht-degree: 3%
 
    1. 按一下您已建立的新節點（此處downloadFlatPDF）。 CRX會顯示節點的屬性。
 
-   1. 將下列屬性新增至節點（此處為letterpdfdownloader），然後按一下 **全部儲存**：
+   1. 將下列屬性新增至節點（此處為letterpdfdownloader），然後按一下&#x200B;**全部儲存**：
 
       | **名稱** | **類型** | **值** |
       |---|---|---|
@@ -268,18 +268,18 @@ ht-degree: 3%
 
    /apps/fd/cm/ma/gui/components/admin/clientlibs/admin
 
-   1. 用滑鼠右鍵按一下 **管理員** 資料夾並選取「 」 **「建立」>「建立檔案」**：
+   1. 用滑鼠右鍵按一下下列路徑的&#x200B;**管理員**&#x200B;資料夾，然後選取&#x200B;**建立>建立檔案**：
 
       /apps/fd/cm/ma/gui/components/admin/clientlibs/admin
 
       將檔案命名為POST.jsp。 (檔案名稱僅需為POST.jsp。)
 
-   1. 按兩下 **POST.jsp** 檔案以在CRX中開啟。
-   1. 將下列程式碼新增至POST.jsp檔案，然後按一下 **全部儲存**：
+   1. 連按兩下&#x200B;**POST.jsp**&#x200B;檔案，以在CRX中開啟。
+   1. 將下列程式碼新增至POST.jsp檔案，然後按一下[儲存全部] ****：
 
-      此程式碼專用於字母轉譯服務。 若是其他資產，請將該資產的Java™程式庫新增至此程式碼。 如需AEM Forms API的詳細資訊，請參閱 [AEM FORMS API](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html).
+      此程式碼專用於字母轉譯服務。 若是其他資產，請將該資產的Java™程式庫新增至此程式碼。 如需AEM Forms API的詳細資訊，請參閱[AEM Forms API](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html)。
 
-      如需AEM資料庫的詳細資訊，請參閱AEM [元件](/help/sites-developing/components.md).
+      如需AEM資料庫的詳細資訊，請參閱AEM [元件](/help/sites-developing/components.md)。
 
       ```xml
       /*Import libraries. Here we are downloading letter flat pdf with input xml data so we require letterRender Api. For any other Module functionality we need to first import that library. */
@@ -350,22 +350,22 @@ ht-degree: 3%
 
 新增自訂功能來下載信函的平面PDF後，您可以使用下列步驟來下載所選信函的平面PDF版本：
 
-1. 前往 `https://'[server]:[port]'/[ContextPath]/projects.html` 並登入。
+1. 前往`https://'[server]:[port]'/[ContextPath]/projects.html`並登入。
 
-1. 選取 **Forms >字母**. 「通訊管理」會列出系統中可用的信件。
-1. 按一下 **選取** 然後按一下字母加以選取。
-1. 選取 **更多** > **&lt;download flat=&quot;&quot; pdf=&quot;&quot;>** （使用本文指示建立的自訂功能）。 將字母下載為PDF對話方塊出現。
+1. 選取&#x200B;**Forms >信件**。 「通訊管理」會列出系統中可用的信件。
+1. 按一下&#x200B;**選取**，然後按一下字母以選取它。
+1. 選取&#x200B;**更多** > **&lt;下載一般PDF>** （使用本文說明建立的自訂功能）。 將字母下載為PDF對話方塊出現。
 
-   功能表專案名稱、功能和替代文字是根據在中建立的自訂 [案例：將命令新增至「信件」清單使用者介面，以下載信件的平面PDF版本。](#addcommandtoletters)
+   功能表專案名稱、功能和alt-text是根據[中建立的自訂來設定。案例：新增命令至信函清單使用者介面來下載信函的平面PDF版本。](#addcommandtoletters)
 
-   ![自訂功能：下載平面PDF](assets/5_downloadflatpdf.png)
+   ![自訂功能：下載一般PDF](assets/5_downloadflatpdf.png)
 
 1. 在「以PDF形式下載信件」對話方塊中，選取要用來在PDF中填入資料的相關XML。
 
    >[!NOTE]
    >
-   >在將信函下載為平面PDF之前，您可以使用 **建立報告** 選項。
+   >以一般PDF下載信函之前，您可以使用&#x200B;**建立報告**&#x200B;選項來建立包含信函資料的XML檔案。
 
-   ![將字母下載為PDF](assets/6_downloadflatpdf.png)
+   ![下載信件為PDF](assets/6_downloadflatpdf.png)
 
    信函會以一般PDF下載到您的電腦。

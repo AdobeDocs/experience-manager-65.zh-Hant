@@ -21,7 +21,7 @@ ht-degree: 1%
 
 ## 簡介 {#introduction}
 
-論壇功能為發佈環境中的登入網站訪客（社群成員）提供一個區域，以：
+論壇功能為Publish環境中的登入網站訪客（社群成員）提供一個區域，以：
 
 * 建立主題
 * 檢視和回覆主題
@@ -33,48 +33,48 @@ ht-degree: 1%
 本檔案的這一節將說明：
 
 * 將論壇功能新增至AEM網站。
-* 的組態設定 `Forum` 元件。
+* `Forum`元件的組態設定。
 
 ### 新增論壇至頁面 {#adding-a-forum-to-a-page}
 
-若要新增 `Forum` 元件至作者模式下的頁面，請使用元件瀏覽器來尋找
+若要將`Forum`元件新增至作者模式的頁面，請使用元件瀏覽器來尋找
 
 * `Communities / Forum`
 
 並將其拖曳至論壇應出現的頁面上。
 
-如需必要資訊，請造訪 [Communities元件基本知識](/help/communities/basics.md).
+如需必要資訊，請造訪[社群元件基本知識](/help/communities/basics.md)。
 
-當 [必要的使用者端程式庫](/help/communities/essentials-forum.md#essentials-for-client-side) 包含，這就是 `Forum` 元件出現：
+納入[必要的使用者端資料庫](/help/communities/essentials-forum.md#essentials-for-client-side)時，`Forum`元件的顯示方式如下：
 
-![論壇 — 元件](assets/forum-component.png)
+![論壇元件](assets/forum-component.png)
 
 ### 設定論壇 {#configuring-a-forum}
 
-選取已放置的 `Forum` 元件供您存取及選取 `Configure` 圖示可開啟編輯對話方塊。
+選取置入的`Forum`元件，以便您可以存取並選取開啟編輯對話方塊的`Configure`圖示。
 
-![configure-new](assets/configure-new.png)
+![設定 — 新](assets/configure-new.png)
 
-![forum-config](assets/forum-config.png)
+![論壇設定](assets/forum-config.png)
 
 #### 設定標籤 {#settings-tab}
 
-在 **設定** 索引標籤，指定主題和回覆的設定：
+在&#x200B;**設定**&#x200B;標籤下，指定主題和回覆的設定：
 
 * **允許附件縮圖**
 
   如果勾選，則會建立附加影像的縮圖。
 
-* **附加縮圖最大尺寸**
+* **附加縮圖大小上限**
 
   附件縮圖影像的最大尺寸（畫素）。 預設值為800 x 800。
 
-* **最小縮圖影像大小**
+* 縮圖的最小影像大小&#x200B;**分鐘**
 * **最大縮圖尺寸**
 
   內嵌影像的最大縮圖影像大小（畫素）。 預設值為800 x 800。
 
-* **每頁主題**
+* 每頁&#x200B;**個主題**
 
   定義每個頁面顯示的主題/帖子數。預設為 10。
 
@@ -92,7 +92,7 @@ ht-degree: 1%
 
 * **允許標籤**
 
-  如果勾選，則允許成員將標籤新增至他們的貼文(請參閱 **標籤欄位** 標籤)。 預設為未勾選。
+  如果勾選，則允許成員將標籤新增至他們的貼文（請參閱&#x200B;**標籤欄位**&#x200B;標籤）。 預設為未勾選。
 
 * **允許檔案上傳**
 
@@ -100,7 +100,7 @@ ht-degree: 1%
 
 * **允許關注**
 
-  如果勾選，則為論壇貼文納入以下功能，可讓成員成為 [已通知](/help/communities/notifications.md) 新貼文的。 預設為未勾選。
+  如果勾選，則為論壇貼文納入下列功能，此功能可讓成員收到[新貼文的通知](/help/communities/notifications.md)。 預設為未勾選。
 
 * **允許釘選**
 
@@ -108,19 +108,19 @@ ht-degree: 1%
 
 * **允許主要內容**
 
-  如果勾選，該創意可識別為 [主要內容](/help/communities/featured.md). 預設為未勾選。
+  如果勾選，此想法可識別為[精選內容](/help/communities/featured.md)。 預設為未勾選。
 
 * **允許電子郵件訂閱**
 
-  如果勾選，允許成員透過電子郵件接收新貼文的通知([訂閱](/help/communities/subscriptions.md))。 需要 `Allow Following` 待核取及 [電子郵件已設定](/help/communities/email.md). 預設為未勾選。
+  如果勾選，允許成員透過電子郵件（[訂閱](/help/communities/subscriptions.md)）接收新貼文的通知。 需要檢查`Allow Following`，並設定[電子郵件](/help/communities/email.md)。 預設為未勾選。
 
 * **檔案大小上限**
 
-  只有在 `Allow File Uploads` 已勾選。 此欄位會限制已上傳檔案的大小（以位元組為單位）。 預設值為104857600 (10 Mb)。
+  只有在勾選`Allow File Uploads`時才相關。 此欄位會限制已上傳檔案的大小（以位元組為單位）。 預設值為104857600 (10 Mb)。
 
 * **允許的檔案型別**
 
-  只有在 `Allow File Uploads` 已勾選。 以「點」分隔符號的副檔名清單（以逗號分隔）。 例如，.jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何檔案型別，則無法上傳未指定的檔案型別。 預設為「無」，因此允許所有檔案型別。
+  只有在勾選`Allow File Uploads`時才相關。 以「點」分隔符號的副檔名清單（以逗號分隔）。 例如，.jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何檔案型別，則無法上傳未指定的檔案型別。 預設為「無」，因此允許所有檔案型別。
 
 * **附加影像檔案大小上限**
 只有在勾選「允許檔案上傳」時才相關。 已上傳影像檔案的最大位元組數。 預設值為2097152 (2 Mb)。
@@ -143,13 +143,13 @@ ht-degree: 1%
 
 * **顯示徽章**
 
-  如果勾選，則顯示已習得和已指派 [徽章](/help/communities/implementing-scoring.md) 使用成員的部落格專案。 預設為未勾選。
+  如果勾選，則顯示已取得及指派的[徽章](/help/communities/implementing-scoring.md)與成員的部落格專案。 預設為未勾選。
 
 * **允許有特殊許可權的成員**
 
   如果勾選，則僅允許擁有特殊許可權的成員建立內容。
 
-* **允許擁有特殊許可權的成員**
+* **允許的有特殊許可權的成員**
 
   新增允許建立內容的特殊許可權成員。
 
@@ -171,11 +171,11 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->可能有必要同時檢查兩者 `AllowThreaded Replies` 和 `Allow users to Delete Comments and Topics` 啟用主題上的註解。
+>可能需要同時檢查`AllowThreaded Replies`和`Allow users to Delete Comments and Topics`以啟用主題評論。
 
 #### 「使用者稽核」標籤 {#user-moderation-tab}
 
-在 **使用者稽核** 索引標籤，指定如何管理張貼的主題和回覆（使用者產生的內容）。 如需詳細資訊，請參閱 [稽核使用者產生的內容](/help/communities/moderate-ugc.md).
+在&#x200B;**使用者稽核**&#x200B;標籤下，指定如何管理張貼的主題和回覆（使用者產生的內容）。 如需詳細資訊，請參閱[仲裁使用者產生的內容](/help/communities/moderate-ugc.md)。
 
 * **拒絕貼文**
 
@@ -189,7 +189,7 @@ ht-degree: 1%
 
   如果勾選，允許發佈端的版主移動主題。 預設為已核取。
 
-* **標幟帖子**
+* **標幟貼文**
 
   如果勾選，則允許成員將其他人的主題或評論標籤為不適當。 預設為未勾選。
 
@@ -201,7 +201,7 @@ ht-degree: 1%
 
   如果勾選，則允許成員輸入將主題或評論標幟為不適當的原因。 預設為未勾選。
 
-* **稽核臨界值**
+* **稽核閾值**
 
   輸入在通知版主前，主題或評論必須由成員標幟的次數。 預設值為1 （一次）。
 
@@ -211,11 +211,11 @@ ht-degree: 1%
 
 #### 標籤欄位索引標籤 {#tag-field-tab}
 
-在 **標籤欄位** 標籤中，如果允許的話，則會套用的標籤 **設定** 索引標籤中，會根據選取的名稱空間而有所限制。
+在&#x200B;**標籤欄位**&#x200B;標籤下，如果允許在&#x200B;**設定**&#x200B;標籤下，則可能套用的標籤會根據所選的名稱空間而受限。
 
 * **允許的名稱空間**
 
-  相關條件 `Allow Tagging` 已勾選下方的 **設定** 標籤。 可套用的標籤僅限於已核取的名稱空間類別中的標籤。 名稱空間清單包含「標準標籤」（預設名稱空間）和「包含所有標籤」。 預設為未勾選，這表示允許所有名稱空間。
+  如果已在&#x200B;**設定**&#x200B;標籤下勾選`Allow Tagging`，則為相關。 可套用的標籤僅限於已核取的名稱空間類別中的標籤。 名稱空間清單包含「標準標籤」（預設名稱空間）和「包含所有標籤」。 預設為未勾選，這表示允許所有名稱空間。
 
 * **建議限制**
 
@@ -223,7 +223,7 @@ ht-degree: 1%
 
 #### 翻譯索引標籤 {#translation-tab}
 
-在 **翻譯** 索引標籤中，如果社群網站已啟用翻譯，則可將翻譯設定為翻譯整個主題或選取的貼文。
+在&#x200B;**翻譯**&#x200B;標籤下，如果社群網站已啟用翻譯，則翻譯可設為翻譯整個主題或選取的帖子。
 
 * **全部翻譯**
 
@@ -231,28 +231,28 @@ ht-degree: 1%
 
 #### 排序設定索引標籤 {#sort-settings-tab}
 
-在 **排序設定** 索引標籤，指定張貼的評論在顯示時的排序方式。
+在&#x200B;**排序設定**&#x200B;標籤下，指定張貼的評論在顯示時的排序方式。
 
-* **排序方式**
+* **排序依據**
 
-  檢查所有允許的排序選取專案： `Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked`. 預設為 `Newest, Oldest, Last Updated`.
+  檢查所有允許的排序選取專案： `Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked`。 預設值為`Newest, Oldest, Last Updated`。
 
-* **設定為預設**
+* **設定為預設值**
 
-  下拉式選單，選取其中一個核取的排序選項，以顯示為預設值。 預設為 `Newest`.
+  下拉式選單，選取其中一個核取的排序選項，以顯示為預設值。 預設值為`Newest`。
 
 * **選取Analytics排序的時間選項**
 
-  下拉式選單以選取下列其中一個選項： `All, Last 24 Hours, Last 7 Days, Last 30 Days`.
+  下拉以選取下列其中一個選項： `All, Last 24 Hours, Last 7 Days, Last 30 Days`。
 
-  預設為 `All`.
+  預設值為`All`。
 
 ### 其他資訊 {#additional-information}
 
-如需詳細資訊，請參閱 [論壇要點](/help/communities/essentials-forum.md) 開發人員頁面。
+如需開發人員的[Forum Essentials](/help/communities/essentials-forum.md)頁面上的詳細資訊。
 
-有關張貼主題和評論的稽核，請參閱 [稽核使用者產生的內容](/help/communities/moderate-ugc.md).
+如需稽核張貼的主題和評論，請參閱[稽核使用者產生的內容](/help/communities/moderate-ugc.md)。
 
-若要標籤張貼的主題和評論，請參閱 [標籤使用者產生的內容](/help/communities/tag-ugc.md).
+若要標籤張貼的主題和評論，請參閱[標籤使用者產生的內容](/help/communities/tag-ugc.md)。
 
-如需已張貼主題和評論的翻譯，請參閱 [翻譯使用者產生的內容](/help/communities/translate-ugc.md).
+如需已張貼主題和評論的翻譯，請參閱[翻譯使用者產生的內容](/help/communities/translate-ugc.md)。

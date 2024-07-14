@@ -35,7 +35,7 @@ ht-degree: 81%
 * 為多個根分支建立。雖然您可以為整個網站建立啟動 (並在其中進行變更)，但這可能是不切實際的，因為需要複製整個網站。當涉及數百甚至數千頁時，複製動作和之後提升工作所需的比較作業，會影響系統要求和效能。
 * 巢狀 (啟動中有啟動) 可讓您在現有啟動中建立啟動，如此作者可以利用已完成的變更，而不用對每個啟動重複進行相同的變更。
 
-本節說明如何建立、編輯和提升（以及如有需要） [刪除](/help/sites-authoring/launches-creating.md#deleting-a-launch))從Sites主控台內啟動頁面，或 [啟動主控台](#the-launches-console)：
+本節說明如何從Sites主控台或[Launches主控台](#the-launches-console)內建立、編輯和提升（以及在必要時[刪除](/help/sites-authoring/launches-creating.md#deleting-a-launch)）啟動頁面：
 
 * [建立啟動](/help/sites-authoring/launches-creating.md)
 * [編輯啟動](/help/sites-authoring/launches-editing.md)
@@ -82,14 +82,14 @@ ht-degree: 81%
    * 對來源頁面的變更會自動實作在啟動副本 (如果設定為繼承，即為 Live Copy)。
    * 可以在不中斷這些自動更新或來源頁面的情況下，對啟動副本進行變更。
 
-  ![更新概觀](assets/chlimage_1-112.png)
+  ![更新總覽](assets/chlimage_1-112.png)
 
 * [建立巢狀啟動](/help/sites-authoring/launches-creating.md#creating-a-nested-launch) - 啟動中的啟動：
 
    * 來源是現有的啟動。
    * 您可以[將巢狀啟動](/help/sites-authoring/launches-promoting.md#promoting-a-nested-launch)提升到任何目標，這可以是父啟動或頂層來源頁面 (生產)。
 
-  ![巢狀啟動概述](assets/chlimage_1-113.png)
+  ![巢狀啟動項概觀](assets/chlimage_1-113.png)
 
   >[!CAUTION]
   >
@@ -114,16 +114,16 @@ ht-degree: 81%
 
 * **工具**&#x200B;主控台：**工具**、**Sites**、**啟動**。
 
-* 或直接使用 [https://localhost:4502/libs/launches/content/launches.html](https://localhost:4502/libs/launches/content/launches.html)
+* 或直接使用[https://localhost:4502/libs/launches/content/launches.html](https://localhost:4502/libs/launches/content/launches.html)
 
 ## 啟動在在參考內 (Sites 主控台) {#launches-in-references-sites-console}
 
 1. 在 **Sites** 主控台中，導覽至啟動來源。
 1. 開啟&#x200B;**參考**&#x200B;邊欄並選取來源頁面。
-1. 選取 **啟動**，則會列出現有的啟動：
+1. 選取&#x200B;**啟動**，就會列出現有的啟動：
 
    ![參考標籤 — 啟動](assets/screen-shot_2019-03-05at121901-1.png)
 
 1. 按一下適當的啟動，畫面會顯示可執行的動作清單：
 
-   ![選取啟動以顯示可能的動作](assets/screen-shot_2019-03-05at121952-1.png)
+   ![選取啟動項以顯示可能的動作](assets/screen-shot_2019-03-05at121952-1.png)

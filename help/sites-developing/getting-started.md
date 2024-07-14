@@ -46,4 +46,4 @@ ht-degree: 80%
 
 ## 後續步驟 {#next-steps}
 
-當您完成 [教學課程](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)，考慮檢閱檔案 [AEM核心概念](/help/sites-developing/the-basics.md) 以更深入瞭解AEM的一些基礎技術和開發範例。
+完成[教學課程](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)後，請考慮檢閱檔案[AEM Core Concepts](/help/sites-developing/the-basics.md)，以更深入瞭解AEM的一些基礎技術和開發範例。

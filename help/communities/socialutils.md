@@ -20,9 +20,9 @@ ht-degree: 1%
 
 ## 已棄用SocialUtils套件 {#socialutils-package-deprecated}
 
-套件 `com.adobe.cq.social.ugcbase.SocialUtils` 在AEM 6.1中已過時。
+AEM 6.1已棄用套件`com.adobe.cq.social.ugcbase.SocialUtils`。
 
-下表列出用來取代的方法 `SocialUtils` 方法。
+下表列出取代`SocialUtils`方法要使用的方法。
 
 ## SocialResourceUtilities套件  {#socialresourceutilities-package}
 
@@ -42,13 +42,13 @@ ht-degree: 1%
 | 字串UGCToResourcePath（字串ugcPath） | 方法簽章已變更 |
 | 字串UGCToResourcePath（字串ugcPath， ResourceResolver resolver） | 新 |
 
-| 中的方法 `com.adobe.cq.social.`utilities.resource.api.SocialResourceUtilities |
+| `com.adobe.cq.social.`utilities.resource.api.SocialResourceUtilities中的方法 |
 |---|
 | SocialResourceProvider getSocialResourceProvider(Resource) | 取代SocialResourceProvider getConfiguredProvider(Resource) |
 
 ## SCFUtilities套件 {#scfutilities-package}
 
-| 中的方法 `com.adobe.cq.social.`utilities.scf.api.SCFUtitles |
+| `com.adobe.cq.social.`utilities.scf.api.SCFUtilites中的方法 |
 |---|
 | 字串getAvatar(UserProperties userProperties) |
 | 字串getAvatar(UserProperties userProperties， int size) |

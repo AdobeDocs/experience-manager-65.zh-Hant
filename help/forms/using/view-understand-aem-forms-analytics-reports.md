@@ -22,11 +22,11 @@ Adobe Experience Manager Forms與Adobe Analytics整合，可讓您擷取及追�
 
 ## 設定分析 {#setting-up-analytics}
 
-AEM Forms中的分析功能屬於AEM Forms附加元件套件的一部分。 如需有關安裝附加元件套件的資訊，請參閱 [安裝和設定AEM Forms](../../forms/using/installing-configuring-aem-forms-osgi.md).
+AEM Forms中的分析功能屬於AEM Forms附加元件套件的一部分。 如需有關安裝附加元件套件的資訊，請參閱[安裝和設定AEM Forms](../../forms/using/installing-configuring-aem-forms-osgi.md)。
 
-除了附加元件套件之外，您還需要Adobe Analytics帳戶。 如需解決方案的相關資訊，請參閱 [Adobe Analytics](https://www.adobe.com/solutions/digital-analytics.html).
+除了附加元件套件之外，您還需要Adobe Analytics帳戶。 如需解決方案的詳細資訊，請參閱[Adobe Analytics](https://www.adobe.com/solutions/digital-analytics.html)。
 
-取得AEM Forms附加元件套件和Adobe Analytics帳戶後，請將Adobe Analytics帳戶與AEM Forms整合，並對您的表單或檔案啟用追蹤，如中所述 [設定分析和報表](../../forms/using/configure-analytics-forms-documents.md).
+取得AEM Forms附加元件套件和Adobe Analytics帳戶後，請將Adobe Analytics帳戶與AEM Forms整合，並如[設定分析和報表](../../forms/using/configure-analytics-forms-documents.md)中所述，啟用表單或檔案上的追蹤。
 
 ### 如何記錄使用者互動資訊 {#how-user-interaction-information-is-recorded}
 
@@ -50,20 +50,20 @@ AEM Forms中的分析功能屬於AEM Forms附加元件套件的一部分。 如�
 
 執行以下步驟以檢視分析報表：
 
-1. 登入AEM入口網站： `https://[hostname]:'port'`
-1. 按一下 **Forms > Forms與檔案**.
+1. 在`https://[hostname]:'port'`登入AEM入口網站
+1. 按一下「**Forms > Forms與檔案**」。
 1. 選取您要檢視其分析報表的表單。
-1. 選取 **更多> Analytics報表**.
+1. 選取&#x200B;**更多> Analytics報表**。
 
-![分析報告](assets/analyticsreport.png)
+![analyticsreport](assets/analyticsreport.png)
 
-**答：** Analytics報表命令
+**A.**&#x200B;分析報告命令
 
 AEM Forms會顯示表單及表單中每個面板的analytics報表，如下所示。
 
-![最適化表單的摘要報表](assets/analyticsdashboard_callout.png)
+![最適化表單的摘要報告](assets/analyticsdashboard_callout.png)
 
-**答：** 轉換 **B.** 表單層級摘要 **C.** 面板層級摘要 **D.** 訪客瀏覽器 — 篩選器 **E.** 訪客的作業系統 — 篩選器 **F.** 訪客語言 — 篩選器
+**A.**&#x200B;轉換&#x200B;**B.**&#x200B;表單層級摘要&#x200B;**C.**&#x200B;面板層級摘要&#x200B;**D.**&#x200B;訪客瀏覽器 — 篩選訪客的&#x200B;**E.**&#x200B;作業系統 — 篩選&#x200B;**F.**&#x200B;訪客的語言 — 篩選
 
 依預設，會顯示過去七天的分析報表。 您可以檢視最近15天、最近一個月等的報告，或指定日期範圍。
 
@@ -71,38 +71,38 @@ AEM Forms會顯示表單及表單中每個面板的analytics報表，如下所�
 >
 >「最近7天」和「最近15天」等選項不包含您產生分析報表當天的資料。 若要包含當天的資料，您必須指定包含當天的日期範圍，然後執行報表。
 
-![date-range](assets/date-range.png)
+![日期範圍](assets/date-range.png)
 
 ### 最適化和HTML5表單的轉換圖 {#conversions-graph-for-adaptive-and-html-forms}
 
 表單層級轉換圖表可讓您深入瞭解表單在下列關鍵績效指標(KPI)上的執行情形：
 
 * **轉譯**：表單開啟的次數
-* **訪客**：表單的訪客數
-* **提交內容**：表單提交次數
+* **訪客**：表單的訪客數量
+* **提交專案**：提交表單的次數
 
-![轉換圖](assets/conversion-graph.png)
+![轉換圖形](assets/conversion-graph.png)
 
 ### 最適化和HTML5表單的Analytics報表 {#analytics-report-for-adaptive-and-html-forms}
 
 表單層級摘要區段可讓您深入瞭解表單在下列關鍵績效指標(KPI)上的執行情形：
 
-* **平均填充時間**：填寫表單所花的平均時間。 當使用者在表單上花費時間但未提交時，該時間未包含在此計算中。
+* **平均填寫時間**：填寫表單所花費的平均時間。 當使用者在表單上花費時間但未提交時，該時間未包含在此計算中。
 * **轉譯**：表單已轉譯或開啟的次數
-* **草稿**：表單儲存為草稿的次數
-* **提交內容**：已提交表單的次數
-* **中止**：使用者開始填寫表單然後離開而未完成表單的次數
-* **不重複訪客**：表單由不重複訪客轉譯的次數。 如需不重複訪客的詳細資訊，請參閱 [不重複訪客、造訪和客戶行為](https://helpx.adobe.com/analytics/kb/unique-visitors-visitor-behavior.html).
+* **草稿**：表單已儲存為草稿的次數
+* **提交專案**：已提交表單的次數
+* **中止**：使用者開始填寫表單後離開而未完成表單的次數
+* **不重複訪客**：表單由不重複訪客轉譯的次數。 如需不重複訪客的詳細資訊，請參閱[不重複訪客、造訪和客戶行為](https://helpx.adobe.com/analytics/kb/unique-visitors-visitor-behavior.html)。
 
-![展開的表單層級摘要分析報告](assets/analytics-report.png)
+![已展開的表單層級摘要分析報告](assets/analytics-report.png)
 
 ### 面板報告 {#bottom-summary-report}
 
 面板層級摘要區段提供表單中每個面板的下列相關資訊：
 
-* **平均填充時間**：面板平均逗留時間，無論表單是否提交
-* **已遭遇錯誤**：使用者在面板中的欄位遇到的平均錯誤數。 將欄位中的錯誤總數除以表單的轉譯數目，即可得出遇到的錯誤。
-* **已存取說明**：使用者存取面板中欄位內容說明的平均次數。 已存取說明的到達方式是將欄位已存取說明的總次數除以表單轉譯次數。
+* **平均填滿時間**：在面板上的平均逗留時間，無論表單是否提交
+* **發生錯誤**：使用者在面板的欄位上遇到的平均錯誤數。 將欄位中的錯誤總數除以表單的轉譯數目，即可得出遇到的錯誤。
+* **已存取說明**：使用者存取面板中欄位之內容中說明的平均次數。 已存取說明的到達方式是將欄位已存取說明的總次數除以表單轉譯次數。
 
 #### 詳細面板報告 {#detailed-panel-report}
 
@@ -114,9 +114,9 @@ AEM Forms會顯示表單及表單中每個面板的analytics報表，如下所�
 
 面板報告有三個索引標籤：
 
-* **時間報表**（預設）：顯示填寫面板中每個欄位所花費的秒數
-* **錯誤報告**：顯示使用者在填寫欄位時遇到的錯誤數量
-* **說明報表**：存取特定欄位說明的次數
+* **時間報表**（預設）：顯示填滿面板中每個欄位所花費的時間（以秒為單位）
+* **錯誤報告**：顯示使用者在填寫欄位時遇到的錯誤數目
+* **說明報告**：存取特定欄位說明的次數
 
 如果有多個面板可供使用，您可在面板之間導覽。
 
@@ -124,9 +124,9 @@ AEM Forms會顯示表單及表單中每個面板的analytics報表，如下所�
 
 「瀏覽器分送」、「OS分送」和「語言分送」表格會依瀏覽器、作業系統和表單使用者的語言顯示轉譯、訪客和提交。 預設情況下，這些表格最多會顯示五個專案。 您可以按一下「顯示更多」來顯示更多專案，然後按一下「顯示更少」來返回一般五個或更少專案。
 
-若要進一步篩選分析資料，您可以按一下任何表格中的專案。 例如，如果您按一下「瀏覽器分送」表格中的Google Chrome ，報表會再次呈現並包含與Google Chrome瀏覽器相關的資料，如下所示：
+若要進一步篩選分析資料，您可以按一下任何表格中的專案。 例如，如果您按一下「瀏覽器散佈」表格中的Google Chrome ，報表會再次呈現並包含與Google Chrome瀏覽器相關的資料，如下所示：
 
-![套用至Analytics報表的篩選器 — Google Chrome ](assets/filter-1.png)
+![套用至Analytics報告的篩選器 — Google Chrome ](assets/filter-1.png)
 
 如果您在套用篩選器後檢視面板報表，面板報表資料也會根據套用的篩選器顯示。
 
@@ -142,4 +142,4 @@ AEM Forms會顯示表單及表單中每個面板的analytics報表，如下所�
 
 如果您已啟用並設定表單的A/B測試，報表頁面會有一個下拉式清單，可用來顯示A/B測試報表。 A/B測試報告會顯示您已設定的兩個表單版本的比較效能。
 
-如需A/B測試的詳細資訊，請參閱 [建立和管理最適化表單的A/B測試](../../forms/using/ab-testing-adaptive-forms.md).
+如需A/B測試的詳細資訊，請參閱[建立和管理最適化表單的A/B測試](../../forms/using/ab-testing-adaptive-forms.md)。

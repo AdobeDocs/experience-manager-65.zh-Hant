@@ -44,11 +44,11 @@ AEM Forms JEE作業可使用AEM Forms強型別API執行，且連線模式應設�
 
 >[!NOTE]
 >
->「使用AEM Forms進行程式設計」中的「快速入門」是以部署在JBoss Application Server和Microsoft Windows作業系統上的Forms伺服器為基礎。 不過，如果您使用其他作業系統（例如UNIX），請將Windows特定路徑取代為適用作業系統支援的路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 另請參閱 [設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>「使用AEM Forms進行程式設計」中的「快速入門」是以部署在JBoss Application Server和Microsoft Windows作業系統上的Forms伺服器為基礎。 不過，如果您使用其他作業系統（例如UNIX），請將Windows特定路徑取代為適用作業系統支援的路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 請參閱[設定連線內容](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
 
 ## 快速入門(SOAP模式)：使用Java API將簽名欄位新增到PDF檔案 {#quick-start-soap-mode-adding-a-signature-field-to-a-pdf-document-using-the-java-api}
 
-以下Java程式碼範例新增名為的簽名欄位 *SignatureField1* 至以名為的PDF檔案為基礎的PDF檔案&#x200B;*Loan.pdf*. 包含新簽名欄位的PDF檔案會儲存為名為的PDF檔案 *LoanSig.pdf*. (請參閱 [新增簽名欄位](/help/forms/developing/digitally-signing-certifying-documents.md#adding-signature-fields).)
+下列Java程式碼範例將名為&#x200B;*SignatureField1*&#x200B;的簽章欄位新增至以名為&#x200B;*Loan.pdf*&#x200B;的PDF檔案為基礎的PDF檔案。 包含新簽章欄位的PDF檔案會儲存為名為&#x200B;*LoanSig.pdf*&#x200B;的PDF檔案。 （請參閱[新增簽章欄位](/help/forms/developing/digitally-signing-certifying-documents.md#adding-signature-fields)。）
 
 ```java
  /*
@@ -164,7 +164,7 @@ AEM Forms JEE作業可使用AEM Forms強型別API執行，且連線模式應設�
 
 ## 快速入門(SOAP模式)：使用Java API擷取簽名欄位名稱 {#quick-start-soap-mode-retrieving-signature-field-names-using-the-java-api}
 
-以下Java程式碼範例會擷取名為的PDF檔案中簽名欄位的名稱 *LoanSig.pdf*. (請參閱 [正在擷取簽章欄位名稱](/help/forms/developing/digitally-signing-certifying-documents.md#retrieving-signature-field-names).)
+下列Java程式碼範例會擷取名為&#x200B;*LoanSig.pdf*&#x200B;的PDF檔案中簽名欄位的名稱。 （請參閱[擷取簽章欄位名稱](/help/forms/developing/digitally-signing-certifying-documents.md#retrieving-signature-field-names)。）
 
 ```java
  /*
@@ -270,7 +270,7 @@ AEM Forms JEE作業可使用AEM Forms強型別API執行，且連線模式應設�
 
 ## 快速入門(SOAP模式)：使用Java API修改簽名欄位 {#quick-start-soap-mode-modifying-a-signature-field-using-the-java-api}
 
-下列Java程式碼範例修改名為SignatureField1的簽章欄位，方法是在簽章套用至簽章欄位時，鎖定表單中的所有欄位，並確保不允許任何變更。 在簽名服務傳回包含已修改簽名欄位的PDF檔案後，PDF檔案會儲存為名為LoanSig.pdf的PDF檔案。 (此範例會覆寫傳遞至Signature service的PDF檔案。) (請參閱 [修改簽章欄位](/help/forms/developing/digitally-signing-certifying-documents.md#modifying-signature-fields).)
+下列Java程式碼範例修改名為SignatureField1的簽章欄位，方法是在簽章套用至簽章欄位時，鎖定表單中的所有欄位，並確保不允許任何變更。 在簽名服務傳回包含已修改簽名欄位的PDF檔案後，PDF檔案會儲存為名為LoanSig.pdf的PDF檔案。 (此範例會覆寫傳遞至Signature service的PDF檔案。) （請參閱[修改簽章欄位](/help/forms/developing/digitally-signing-certifying-documents.md#modifying-signature-fields)。）
 
 ```java
  /*
@@ -398,7 +398,7 @@ AEM Forms JEE作業可使用AEM Forms強型別API執行，且連線模式應設�
 
 ## 快速入門(SOAP模式)：使用Java API數位簽署PDF檔案 {#quick-start-soap-mode-digitally-signing-a-pdf-document-using-the-java-api}
 
-以下Java程式碼範例會以數位簽署以名為的PDF檔案為基礎的PDF檔案 *LoanSig.pdf*. 為安全性認證指定的別名是安全的，並且會執行撤銷檢查。 因為未指定CRL或OCSP伺服器資訊，所以伺服器資訊會從用來數位簽署PDF檔案的憑證取得。 已簽署的檔案會儲存為名為的PDF檔案 *LoanSigned.pdf*. (請參閱 [數位簽署PDF檔案](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-pdf-documents).)
+以下Java程式碼範例以數位簽署以名為&#x200B;*LoanSig.pdf*&#x200B;的PDF檔案為基礎的PDF檔案。 為安全性認證指定的別名是安全的，並且會執行撤銷檢查。 因為未指定CRL或OCSP伺服器資訊，所以伺服器資訊會從用來數位簽署PDF檔案的憑證取得。 已簽署的檔案會儲存為名為&#x200B;*LoanSigned.pdf*&#x200B;的PDF檔案。 (請參閱[數位簽署PDF檔案](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-pdf-documents)。)
 
 ```java
  /*
@@ -547,7 +547,7 @@ AEM Forms JEE作業可使用AEM Forms強型別API執行，且連線模式應設�
 
 ## 快速入門(SOAP模式)：使用Java API以數位方式簽署XFA式表單 {#quick-start-soap-mode-digitally-signing-a-xfa-based-form-using-the-java-api}
 
-以下Java程式碼範例對Forms服務轉譯的互動式表單加上簽名。 此 `com.adobe.idp.Document` Forms服務傳回的執行個體會傳遞至簽名服務。 已簽署的互動式表單會儲存為名為的PDF檔案 *LoanXFASigned.pdf*.
+以下Java程式碼範例對Forms服務轉譯的互動式表單加上簽名。 Forms服務傳回的`com.adobe.idp.Document`執行個體已傳遞至簽章服務。 已簽署的互動式表單會儲存為名為&#x200B;*LoanXFASigned.pdf*&#x200B;的PDF檔案。
 
 ```java
  /*
@@ -759,7 +759,7 @@ AEM Forms JEE作業可使用AEM Forms強型別API執行，且連線模式應設�
 
 ## 快速入門(SOAP模式)：使用Java API認證PDF檔案 {#quick-start-soap-mode-certifying-a-pdf-document-using-the-java-api}
 
-以下Java程式碼範例會根據名為的PDF檔案來認證PDF檔案 *LoanSig.pdf*. 為安全性認證指定的別名是安全的，不會執行撤銷檢查。 已驗證的檔案會儲存為名為的PDF檔案 *LoanCertified.pdf*. (請參閱 [認證PDF檔案](/help/forms/developing/digitally-signing-certifying-documents.md#certifying-pdf-documents).)
+以下Java程式碼範例會根據名為&#x200B;*LoanSig.pdf*&#x200B;的PDF檔案來認證PDF檔案。 為安全性認證指定的別名是安全的，不會執行撤銷檢查。 已驗證的檔案會儲存為名為&#x200B;*LoanCertified.pdf*&#x200B;的PDF檔案。 (請參閱[認證PDF檔案](/help/forms/developing/digitally-signing-certifying-documents.md#certifying-pdf-documents)。)
 
 ```java
  /*
@@ -908,7 +908,7 @@ AEM Forms JEE作業可使用AEM Forms強型別API執行，且連線模式應設�
 
 ## 快速入門(SOAP模式)：使用Java API驗證數位簽名 {#quick-start-soap-mode-verifying-a-digital-signature-using-the-java-api}
 
-以下Java程式碼範例會驗證已簽署PDF檔案中的數位簽名，該簽名以名為LoanSigned.pdf的PDF檔案為基礎。 驗證時間設定為目前時間，撤銷檢查選項設定為盡最大努力。 (請參閱 [驗證數位簽章](#verifying-digital-signatures).)
+以下Java程式碼範例會驗證已簽署PDF檔案中的數位簽名，該簽名以名為LoanSigned.pdf的PDF檔案為基礎。 驗證時間設定為目前時間，撤銷檢查選項設定為盡最大努力。 （請參閱[驗證數位簽章](#verifying-digital-signatures)。）
 
 ```java
  /*
@@ -1072,7 +1072,7 @@ AEM Forms JEE作業可使用AEM Forms強型別API執行，且連線模式應設�
 
 ## 快速入門(SOAP模式)：使用Java API驗證多個數位簽名 {#quick-start-soap-mode-verifying-multiple-digital-signatures-using-the-java-api}
 
-以下Java程式碼範例會根據名為LoanAllSigs.pdf的PDF檔案，驗證已簽署PDF檔案中的多個數位簽名。 驗證時間設定為目前時間，撤銷檢查選項設定為盡最大努力。 (請參閱 [驗證多個數位簽名](signature-service-java-api-quick.md#quick-start-soap-mode-verifying-multiple-digital-signatures-using-the-java-api).)
+以下Java程式碼範例會根據名為LoanAllSigs.pdf的PDF檔案，驗證已簽署PDF檔案中的多個數位簽名。 驗證時間設定為目前時間，撤銷檢查選項設定為盡最大努力。 （請參閱[驗證多個數位簽章](signature-service-java-api-quick.md#quick-start-soap-mode-verifying-multiple-digital-signatures-using-the-java-api)。）
 
 ```java
  /*
@@ -1234,7 +1234,7 @@ AEM Forms JEE作業可使用AEM Forms強型別API執行，且連線模式應設�
 
 ## 快速入門(SOAP模式)：使用Java API移除數位簽名 {#quick-start-soap-mode-removing-a-digital-signature-using-the-java-api}
 
-以下Java程式碼範例會從名為的簽名欄位中移除數位簽名 *SignatureField1*. 包含簽名欄位的PDF檔案名稱為 *LoanSigned.pdf*. (請參閱 [移除數位簽章](/help/forms/developing/digitally-signing-certifying-documents.md#removing-digital-signatures).)
+下列Java程式碼範例從名為&#x200B;*SignatureField1*&#x200B;的簽章欄位中移除數位簽章。 包含簽章欄位的PDF檔案名稱為&#x200B;*LoanSigned.pdf*。 （請參閱[移除數位簽章](/help/forms/developing/digitally-signing-certifying-documents.md#removing-digital-signatures)。）
 
 ```java
  /*

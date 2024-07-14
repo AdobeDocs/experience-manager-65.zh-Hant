@@ -19,11 +19,11 @@ ht-degree: 0%
 
 # 偵錯HTML5表單 {#debugging-html-forms}
 
-本檔案包含數個疑難排解案例。 對於每種情況，都提供了疑難排解問題的一些步驟。 請按照以下步驟操作，如果問題仍然存在，請設定記錄器以取得並檢閱記錄檔中的錯誤/警告。 如需HTML5表單記錄的詳細資訊，請參閱 [產生HTML5表單的記錄](/help/forms/using/enable-logs.md).
+本檔案包含數個疑難排解案例。 對於每種情況，都提供了疑難排解問題的一些步驟。 請按照以下步驟操作，如果問題仍然存在，請設定記錄器以取得並檢閱記錄檔中的錯誤/警告。 如需有關HTML5表單記錄的詳細資訊，請參閱[產生HTML5表單的記錄](/help/forms/using/enable-logs.md)。
 
 ## 問題：轉譯表單時，我看到org.apache.sling.api.SlingException例外狀況頁面 {#problem-when-rendering-the-form-i-see-org-apache-sling-api-slingexception-exception-page}
 
-在例外狀況詳細資訊中，搜尋單字 **原因為**.
+在例外狀況詳細資訊中，搜尋由&#x200B;**引起的單字**。
 
 可能的原因是URL中的一個或多個引數不正確。
 
@@ -45,7 +45,7 @@ ht-degree: 0%
   </tr>
   <tr>
    <td>dataRef</td>
-   <td>與範本合併之資料檔案的絕對路徑。<br /> 注意：路徑會定義資料檔案的絕對路徑。</td>
+   <td>與範本合併之資料檔案的絕對路徑。<br />注意：路徑定義了資料檔案的絕對路徑。</td>
   </tr>
   <tr>
    <td>資料</td>
@@ -56,13 +56,13 @@ ht-degree: 0%
 
 ## 問題：無法轉譯表單（顯示錯誤訊息） {#problem-unable-to-render-form}
 
-1. 請確定指定的引數正確無誤。 如需引數的詳細資訊，請參閱 [演算引數](#problem-when-rendering-the-form-i-see-org-apache-sling-api-slingexception-exception-page).
-1. 登入CRX封裝管理員(在https://)&lt;server>：&lt;port>/crx/packmgr/index.jsp)，並檢查是否已正確安裝下列套件：
+1. 請確定指定的引數正確無誤。 如需引數的詳細資訊，請參閱[轉譯引數](#problem-when-rendering-the-form-i-see-org-apache-sling-api-slingexception-exception-page)。
+1. 登入CRX Package Manager(位於https://&lt;server>：&lt;port>/crx/packmgr/index.jsp)，然後檢查是否已正確安裝下列套件：
 
    * adobe-lc-forms-content-pkg-&lt;version>.zip
    * adobe-lc-forms-runtime-pkg-&lt;version>.zip
 
-1. 在https://登入CQ網頁主控台（Felix主控台）&lt;server>：&lt;port>/system/console/bundles.
+1. 在https://&lt;server>：&lt;port>/system/console/bundles登入CQ網頁主控台（Felix主控台）。
 
    確認下列套件組合的狀態為「作用中」：
 
@@ -80,8 +80,8 @@ ht-degree: 0%
 
 ## 問題：表單轉譯器沒有樣式 {#problem-form-renders-without-styles}
 
-1. 在您的瀏覽器中，開啟 **開發人員工具**. 確保profile.css可供使用。
-1. 如果profile.css檔案無法使用，請在https://登入CRX DE&lt;server>：&lt;port>/crx/de.
+1. 在瀏覽器中，開啟&#x200B;**開發人員工具**。 確保profile.css可供使用。
+1. 如果profile.css檔案無法使用，請登入CRX DE https://&lt;server>：&lt;port>/crx/de。
 1. 在左側的資料夾階層中，導覽至/etc/clientlibs/fd/xfaforms/。 開啟資料夾中列出的css.txt檔案。
 
    * 側面像
@@ -101,13 +101,13 @@ ht-degree: 0%
    listboxwidget.css
    ```
 
-1. 如果上述檔案無法使用，請安裝adobe-lc-forms-runtime-pkg-&lt;version>.zip封裝。
+1. 如果上述檔案無法使用，請再次安裝adobe-lc-forms-runtime-pkg-&lt;version>.zip套件。
 
 ### 問題：發生非預期的錯誤 {#problem-unexpected-error-encountered}
 
-1. 在表單URL中，新增查詢引數debugClientLibs並將其值設為true (例如：https://&lt;server>：&lt;port>/content/xfaforms/profiles/test.html？contentRoot=&lt;some path=&quot;&quot;>&amp;template=&lt;name of=&quot;&quot; xdp=&quot;&quot; file=&quot;&quot;>&amp;log=1-a9-b9-c9&amp;debugClientLibs=true)
+1. 在表單URL中，新增查詢引數debugClientLibs並將其值設為true (例如： https://&lt;server>：&lt;port>/content/xfaforms/profiles/test.html？contentRoot=&lt;some path>&amp;template=&lt;name of xdp file>&amp;log=1-a9-b9-c9&amp;debugClientLibs=true)
 1. 在案頭瀏覽器（如Chrome）中，前往「開發人員工具」 > 「主控台」 。
-1. 開啟記錄檔以識別錯誤型別。 如需有關記錄的詳細資訊，請參閱 [HTML5表單的記錄檔](/help/forms/using/enable-logs.md).
+1. 開啟記錄檔以識別錯誤型別。 如需有關記錄的詳細資訊，請參閱HTML5表單](/help/forms/using/enable-logs.md)的[記錄。
 1. 前往「開發人員工具>主控台」。 使用棧疊追蹤來找出導致錯誤的程式碼。 對錯誤進行偵錯以解決問題。
 
    >[!NOTE]
@@ -118,20 +118,20 @@ ht-degree: 0%
 
 1. 確定您有權存取AEM伺服器，且已連線至伺服器。
 1. 檢查引數submitUrl是否正確。
-1. 啟用使用者端記錄檔，如中所述： [HTML5表單的記錄](/help/forms/using/enable-logs.md) 將偵錯選項用作 **1-a5-b5-c5**. 然後轉譯表單並按一下提交。 開啟瀏覽器偵錯主控台並檢查是否有錯誤。
-1. 找到伺服器記錄檔，如中所述： [HTML5表單的記錄](/help/forms/using/enable-logs.md). 檢查在提交期間伺服器記錄中是否有任何錯誤。
+1. 使用偵錯選項作為&#x200B;**1-a5-b5-c5**，啟用HTML5表單](/help/forms/using/enable-logs.md)的[記錄檔中提及的使用者端記錄檔。 然後轉譯表單並按一下提交。 開啟瀏覽器偵錯主控台並檢查是否有錯誤。
+1. 尋找[HTML5表單](/help/forms/using/enable-logs.md)的記錄檔中提及的伺服器記錄檔。 檢查在提交期間伺服器記錄中是否有任何錯誤。
 
 ## 問題：未顯示本地化的錯誤訊息 {#problem-localized-error-messages-do-not-display}
 
-1. 使用其他查詢引數轉譯表單 **debugClientLibs=true** 在案頭瀏覽器中，然後前往「開發人員工具>資源」並檢查檔案I18N.css。
-1. 如果檔案無法使用，請在https://登入CRX DE&lt;server>：&lt;port>/crx/de.
+1. 在案頭瀏覽器中使用其他查詢引數&#x200B;**debugClientLibs=true**&#x200B;來轉譯表單，然後前往「開發人員工具>資源」並檢查檔案I18N.css。
+1. 如果檔案無法使用，請在https://&lt;server>：&lt;port>/crx/de登入CRX DE。
 1. 在左側的資料夾階層中，導覽至/libs/fd/xfaforms/clientlibs/I18N，並確認下列檔案和資料夾存在：
 
    * Namespace.js
    * LogMessages.js
    * 語言資料夾
 
-1. 如果以上任何檔案或資料夾不存在，請安裝 **adobe-lc-forms-runtime-pkg-&lt;version>.zip** 再次封裝。
+1. 如果以上任何檔案或資料夾不存在，請再次安裝&#x200B;**adobe-lc-forms-runtime-pkg-&lt;version>.zip**&#x200B;套件。
 1. 瀏覽到與地區設定名稱相同的資料夾，並檢查其內容。 資料夾必須包含下列檔案：
 
    * I18N.js
@@ -149,11 +149,12 @@ ht-degree: 0%
 
 1. 請確定影像URL正確無誤。
 1. 檢查您的瀏覽器是否支援此型別的影像。
-1. 在例外狀況詳細資訊中，搜尋單字 **原因為**.
+1. 在例外狀況詳細資訊中，搜尋由&#x200B;**引起的單字**。
 
    可能的原因是URL中的一個或多個引數不正確。
 
-   檢查下列引數：步驟文字
+   檢查下列引數：
+步驟文字
 
 <table>
  <tbody>
@@ -171,7 +172,7 @@ ht-degree: 0%
   </tr>
   <tr>
    <td>dataRef</td>
-   <td>與範本合併之資料檔案的絕對路徑。<br /> 注意：路徑會定義資料檔案的絕對路徑。</td>
+   <td>與範本合併之資料檔案的絕對路徑。<br />注意：路徑定義了資料檔案的絕對路徑。</td>
   </tr>
   <tr>
    <td>資料</td>

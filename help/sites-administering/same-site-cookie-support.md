@@ -19,7 +19,7 @@ ht-degree: 81%
 
 此設定的預設值 (`SameSite=Lax`) 可能會導致 AEM 執行個體或服務之間的驗證無法運作。這是因為這些服務的網域或 URL 結構可能不受此 cookie 原則的約束。
 
-若要解決此問題，您需要將 `SameSite` Cookie屬性至 `None` 用於登入權杖。
+若要解決此問題，您必須將登入權杖的`SameSite` Cookie屬性設定為`None`。
 
 >[!CAUTION]
 >

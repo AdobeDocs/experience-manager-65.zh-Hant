@@ -24,9 +24,9 @@ ht-degree: 9%
 
 使用TransactionRecorder API來記錄未自動計入交易的動作
 
-您可以使用自訂程式碼來提交PDF表單，或傳送代理程式UI預覽URL給一般使用者，以預覽互動式通訊。 或者，您也可使用自訂方法來提交表單，而不使用AEM Forms隨附的提交方法。 AEM Forms API前面提到的所有動作和自訂實作都不會計為交易。 AEM Forms提供API、 [TransactionRecorder](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/aem/transaction/core/ITransactionRecorder.html)，將這類動作記錄為交易。
+您可以使用自訂程式碼來提交PDF表單，或傳送代理程式UI預覽URL給一般使用者，以預覽互動式通訊。 或者，您也可使用自訂方法來提交表單，而不使用AEM Forms隨附的提交方法。 AEM Forms API前面提到的所有動作和自訂實作都不會計為交易。 AEM Forms提供API [TransactionRecorder](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/aem/transaction/core/ITransactionRecorder.html)，將這類動作記錄為交易。
 
-若要記錄交易，請寫入 [標準sling servlet](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/store-and-retrieve-af-with-2fa/create-servlet.html?lang=en) 並從使用者端呼叫servlet來記錄交易。 您可以使用AJAX或任何其他標準方法呼叫servlet。
+若要記錄交易，請撰寫[標準Sling servlet](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/store-and-retrieve-af-with-2fa/create-servlet.html?lang=en)，並從使用者端呼叫servlet以記錄交易。 您可以使用AJAX或任何其他標準方法呼叫servlet。
 
 ## 伺服器端程式碼範例 {#sample-server-sided-code}
 
@@ -78,7 +78,7 @@ private TransactionRecord extractTxRecordFromRequest(SlingHttpServletRequest req
 
 ## 使用者端代碼範例 {#sample-client-side-code}
 
-您可以使用以下範常式式碼來呼叫具有下列專案的servlet： `TransactionRecorder`API。
+您可以使用下列範常式式碼來呼叫具有`TransactionRecorder`API的servlet。
 
 ```javascript
 $.ajax({

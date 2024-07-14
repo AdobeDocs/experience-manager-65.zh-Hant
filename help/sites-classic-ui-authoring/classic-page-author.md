@@ -20,11 +20,11 @@ ht-degree: 0%
 
 以下提供使用AEM撰寫的概觀：
 
-* [作者的首要步驟](/help/sites-classic-ui-authoring/classic-page-author-first-steps.md)  — 新作者的簡介
+* [作者的第一步](/help/sites-classic-ui-authoring/classic-page-author-first-steps.md) — 新作者的簡介
 
 >[!NOTE]
 >
->本節說明編寫內容頁面時涉及的作業。 <!-- There are many additional features closely related to page authoring, these are covered under [Site and Page Features](/sites-classic-ui-authoring/classic-feature.md). -->
+>本節說明編寫內容頁面時涉及的作業。<!-- There are many additional features closely related to page authoring, these are covered under [Site and Page Features](/sites-classic-ui-authoring/classic-feature.md). -->
 
 ## 製作頁面時所使用的功能快速概覽 {#quick-overview-of-features-used-for-authoring-pages}
 
@@ -33,7 +33,7 @@ ht-degree: 0%
 * **拖放**
 只要將元件（例如文字、影像）和數位資產（例如影像）拖放至所需位置，即可將其放置在頁面上。
 
-* **編輯**
+* **正在編輯**
 一旦定位在頁面上，元件專用對話方塊即可開啟，以輸入內容及/或設定該元件的特性（例如影像大小）。
 
 * **就地編輯**
@@ -48,5 +48,5 @@ ht-degree: 0%
 * **內容功能表**
 以滑鼠右鍵按一下大部分的熒幕元素（例如頁面上的段落），可顯示含有適當動作選項的內容功能表。
 
-* **依輸入內容搜尋**
+* **在您輸入時搜尋**
 在某些情況下（例如，編輯對話方塊中的路徑選擇），透過AEM介面搜尋內容，會在您輸入查詢時顯示動態比對。

@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # 為EMC Documentum設定聯結器 {#configuring-connector-for-emc-documentum}
 
-Connector for EMC Documentum可讓AEM Forms與EMC Documentum通訊。 如需其他背景資訊，請參閱下列「Connectors for ECM」： [服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
+Connector for EMC Documentum可讓AEM Forms與EMC Documentum通訊。 如需其他背景資訊，請參閱[服務參考](https://www.adobe.com/go/learn_aemforms_services_63)中的「Connectors for ECM」。
 
 為EMC Documentum設定聯結器涉及設定伺服器連線和存放庫憑證。
 
@@ -60,15 +60,15 @@ Connector for EMC Documentum可讓AEM Forms與EMC Documentum通訊。 如需其�
 
 您可以設定要與Documentum搭配使用的存放庫服務提供者。 存放庫服務呼叫會委派給您設定的提供者。 下列選項可供使用：
 
-**目前的存放庫服務提供者名稱：** 目前存放庫服務提供者的名稱
+**目前的存放庫服務提供者名稱：**&#x200B;目前存放庫服務提供者的名稱
 
-**ECM Documentum儲存庫提供者：** 讓Documentum儲存庫提供者成為儲存庫的提供者。 此選項已過時
+**ECM Documentum儲存庫提供者：**&#x200B;讓Documentum儲存庫提供者成為儲存庫的提供者。 此選項已過時
 
-**存放庫提供者：** 讓原生存放庫提供者成為存放庫的提供者
+**存放庫提供者：**&#x200B;讓原生存放庫提供者成為存放庫的提供者
 
 >[!NOTE]
 >
->若要選取列出的儲存區域服務提供者以外的儲存區域服務提供者，請在「應用程式與服務>服務管理」中設定RepositoryService。 <!-- Fix broken link (See Managing Services) -->.
+>若要選取列出的儲存區域服務提供者以外的儲存區域服務提供者，請在「應用程式與服務>服務管理」中設定RepositoryService。<!-- Fix broken link (See Managing Services) -->。
 
 1. 在管理控制檯中，按一下「服務」>「EMC Documentum聯結器」>「組態設定」。
 1. 在「存放庫服務提供者資訊」區域中，選取替代的存放庫服務提供者。
@@ -102,7 +102,7 @@ Documentum認證資訊用於AEM表單系統內容。 存放庫認證專屬於Doc
 
 如果EMC Documentum的Content Repository Connector服務和/或EMC Documentum的Repository Service正在執行，則認證資訊會在儲存到資料庫之前，針對指定的儲存庫進行驗證。 如果認證無效或存在，則會顯示錯誤訊息。
 
-## 啟用共用工作區工作佇列的請求 {#enable-the-request-for-sharing-of-workspace-task-queues}
+## 啟用共用Workspace工作佇列的請求 {#enable-the-request-for-sharing-of-workspace-task-queues}
 
 需要一些手動步驟，以確保Workspace中的「請求共用工作佇列」功能可與EMC Documentum聯結器正常運作。
 

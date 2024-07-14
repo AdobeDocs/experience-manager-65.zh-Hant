@@ -66,10 +66,10 @@ i18n.any檔案的/filter區段會識別xgettext-maven-plugin工具剖析的檔�
 | 前綴 | 效果 |
 |---|---|
 | / | 表示JCR路徑。 因此，此首碼會比對jcr_root目錄下的檔案。 |
-| &amp;ast； | 表示檔案系統上的一般檔案。 |
+| &amp;amp；ast； | 表示檔案系統上的一般檔案。 |
 | 無 | 沒有字首或以資料夾或檔案名稱開頭的模式，表示檔案系統上的一般檔案。 |
 
-當在模式中使用時，/字元表示子目錄，而&amp;ast；字元符合所有。 下表列出數個規則範例。
+當在模式中使用時，/字元表示子目錄，而&amp;amp；ast；字元符合所有。 下表列出數個規則範例。
 
 <table>
  <tbody>
@@ -135,9 +135,9 @@ mvn xgettext:extract
 ### 輸出檔案 {#output-files}
 
 * `raw.xliff`：擷取的字串
-* `warn.log`：警告（如果有的話） `CQ.I18n.getMessage()` API使用不正確。 這些一律需要修正，然後再重新執行。
+* `warn.log`：如果`CQ.I18n.getMessage()` API使用不正確，則會出現警告（若有的話）。 這些一律需要修正，然後再重新執行。
 
 * `parserwarn.log`：剖析器警告（如果有的話），例如js剖析器問題
-* `potentials.xliff`：未擷取的「潛在」候選項，但可能是需要翻譯的可讀取字串（可以忽略，仍會產生大量誤判）
-* `strings.xliff`：平面化xliff檔案，將匯入ALF
-* `backrefs.txt`：可讓您快速查詢指定字串的原始程式碼位置
+* `potentials.xliff`：未擷取的「潛在」候選項，但可能是需要翻譯的人類可讀字串（可以忽略，仍會產生大量的誤判）
+* `strings.xliff`：平面化的xliff檔案，將匯入ALF
+* `backrefs.txt`：允許快速查詢指定字串的原始程式碼位置

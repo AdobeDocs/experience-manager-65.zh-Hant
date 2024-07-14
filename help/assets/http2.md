@@ -30,7 +30,7 @@ HTTP/2可改善瀏覽器和伺服器的通訊方式，實現更快的資訊傳�
 
 以下網站以簡單扼要的方式說明HTTP/2及其優點：
 
-[關於HTTP/2您必須知道的事項](https://www.engadget.com/2015-02-24-what-you-need-to-know-about-http-2.html)
+[關於HTTP/2](https://www.engadget.com/2015-02-24-what-you-need-to-know-about-http-2.html)的須知事項
 
 ## 改用HTTP/2進行內容傳送的主要優點為何？ {#what-are-the-key-benefits-of-moving-to-http-for-content-delivery}
 
@@ -61,7 +61,7 @@ Adobe自己的測試產生以下結果：
 
 您起始切換至HTTP/2的要求；不會自動為您完成。
 
-1. 若要切換至HTTP/2，請啟動Adobe客戶支援請求。 另請參閱 [開啟支援票證](https://experienceleague.adobe.com/?support-solution=General&amp;lang=en&amp;support-tab=home#support).
+1. 若要切換至HTTP/2，請啟動Adobe客戶支援請求。 請參閱[開啟支援票證](https://experienceleague.adobe.com/?support-solution=General&amp;lang=en&amp;support-tab=home#support)。
 
    1. 在您的支援要求中提供下列資訊：
 
@@ -97,4 +97,4 @@ Adobe自己的測試產生以下結果：
 
 由於瀏覽器未說明此事實，因此必須下載擴充功能。
 
-Firefox和Chrome有一個擴充功能，稱為「HTTP/2和SPDY Indicator」。 瀏覽器僅安全地支援http/2，因此有必要呼叫具有https的URL以進行驗證。 如果支援http/2，則會以藍色Flash符號和標頭的形式由擴充功能表示 `X-Firefox-Spdy` ： `h2`.
+Firefox和Chrome有一個擴充功能，稱為「HTTP/2和SPDY Indicator」。 瀏覽器僅安全地支援http/2，因此有必要呼叫具有https的URL以進行驗證。 如果支援http/2，則會以藍色Flash符號和標頭`X-Firefox-Spdy`的形式，以副檔名表示： `h2`。

@@ -18,14 +18,14 @@ ht-degree: 3%
 
 # 使用 ContextHub 資料預覽頁面{#previewing-pages-using-contexthub-data}
 
-此 [ContextHub](/help/sites-developing/contexthub.md) 工具列會顯示ContextHub存放區中的資料，並可讓您變更存放區資料。 ContextHub工具列可用於預覽由ContextHub存放區中的資料所決定的內容。
+[ContextHub](/help/sites-developing/contexthub.md)工具列會顯示ContextHub存放區的資料，並可讓您變更存放區資料。 ContextHub工具列可用於預覽由ContextHub存放區中的資料所決定的內容。
 
 工具列包含一系列UI模式，其中包含一或多個UI模組。
 
 * UI模式是出現在工具列左側的圖示。 按一下圖示時，工具列會顯示其中的UI模組。
 * UI模組會顯示一或多個ContextHub存放區的資料。 有些UI模組也可讓您操控存放區資料。
 
-ContextHub會安裝數個UI模式和UI模組。 您的管理員可能會 [已設定的ContextHub](/help/sites-developing/ch-configuring.md) 以顯示不同的值。
+ContextHub會安裝數個UI模式和UI模組。 您的管理員可能已[設定ContextHub](/help/sites-developing/ch-configuring.md)以顯示不同的設定檔。
 
 ![screen_shot_2018-03-23at093446](assets/screen_shot_2018-03-23at093446.png)
 

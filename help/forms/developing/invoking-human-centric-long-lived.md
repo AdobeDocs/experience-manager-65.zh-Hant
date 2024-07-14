@@ -20,15 +20,15 @@ ht-degree: 0%
 
 您可以程式設計方式叫用在Workbench中使用以下使用者端應用程式建立的以人為中心的長期流程：
 
-* 使用引動API的Java Web型使用者端應用程式。 (請參閱 [使用Java API叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-java.md)(/help/forms/developing/invoking-aem-forms-using-java.md#invoking-aem-forms-using-the-java-api)。)
-* 使用Web服務的ASP.NET應用程式。 (請參閱 [使用網站服務叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-web-services).)
-* 使用Remoting以Flex建置的使用者端應用程式。 (請參閱 [使用(AEM表單已棄用) AEM Forms遠端功能叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting).)
+* 使用引動API的Java Web型使用者端應用程式。 (請參閱[使用Java API叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-java.md)(/help/forms/developing/invoking-aem-forms-using-java.md#invoking-aem-forms-using-the-java-api)。)
+* 使用Web服務的ASP.NET應用程式。 (請參閱[使用Web服務叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-web-services)。)
+* 使用Remoting以Flex建置的使用者端應用程式。 (請參閱[使用(AEM表單已棄用) AEM Forms Remoting](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting)叫用AEM Forms。)
 
-叫用的長期程式名為 *FirstAppSolution/PreLoanProcess*. 您可以依照中指定的教學課程來建立此程式 [建立您的第一個AEM Forms應用程式](https://www.adobe.com/go/learn_aemforms_firstapp_ds_63).
+叫用的長期處理程式名為&#x200B;*FirstAppSolution/PreLoanProcess*。 您可以依照[建立您的第一個AEM Forms應用程式](https://www.adobe.com/go/learn_aemforms_firstapp_ds_63)中指定的教學課程來建立此程式。
 
-以人為中心的流程涉及使用者可以使用「工作區」來回應的一項任務。 例如，使用Workbench，您可以建立可讓銀行經理核准或拒絕貸款申請的流程。 下圖顯示了該程式 *FirstAppSolution/PreLoanProcess*.
+以人為中心的流程涉及使用者可以使用Workspace來回應的一項任務。 例如，使用Workbench，您可以建立可讓銀行經理核准或拒絕貸款申請的流程。 下圖顯示程式&#x200B;*FirstAppSolution/PreLoanProcess*。
 
-此 *FirstAppSolution/PreLoanProcess* 處理程式接受名為的輸入引數 *formData* 其資料型別為XML。 XML資料會與名為的表單設計合併 *PreLoanForm.xdp*. 下圖顯示一個表格，代表指派給使用者的任務，以核准或拒絕貸款申請。 使用者使用Workspace核准或拒絕應用程式。 工作區使用者可以按一下下圖所示的「核准」按鈕，核准貸款請求。 同樣地，使用者可以按一下拒絕按鈕來拒絕貸款請求。
+*FirstAppSolution/PreLoanProcess*&#x200B;處理序接受資料型別為XML且名稱為&#x200B;*formData*&#x200B;的輸入引數。 XML資料與名為&#x200B;*PreLoanForm.xdp*&#x200B;的表單設計合併。 下圖顯示一個表格，代表指派給使用者的任務，以核准或拒絕貸款申請。 使用者使用Workspace核准或拒絕應用程式。 Workspace使用者可以按一下下圖所示的「核准」按鈕，核准貸款請求。 同樣地，使用者可以按一下拒絕按鈕來拒絕貸款請求。
 
 系統會以非同步方式叫用長期程式，且由於下列因素而無法同步叫用：
 
@@ -42,7 +42,7 @@ ht-degree: 0%
 >
 >叫用短期程式時，AEM Forms不會建立叫用識別碼值或記錄。
 
-此 `FirstAppSolution/PreLoanProcess` 當應徵者提交以XML資料表示的申請時，會叫用處理。 輸入程式變數的名稱為 `formData` 且其資料型別為XML。 為了進行此討論，假設下列XML資料已用作 `FirstAppSolution/PreLoanProcess` 程式。
+當申請人提交以XML資料表示的應用程式時，會叫用`FirstAppSolution/PreLoanProcess`處理。 輸入處理序變數的名稱是`formData`，其資料型別為XML。 就本討論而言，假設下列XML資料已用作`FirstAppSolution/PreLoanProcess`處理程式的輸入。
 
 ```xml
  <?xml version="1.0" encoding="UTF-8"?>
@@ -54,9 +54,9 @@ ht-degree: 0%
  </LoanApp>
 ```
 
-傳遞至程式的XML資料必須符合程式中所使用表單中的欄位。 否則，資料不會顯示在表單中。 所有叫用 `FirstAppSolution/PreLoanProcess` 處理程式必須傳遞此XML資料來源。 在中建立的應用程式 *叫用以人為中心的長期流程* 動態地從使用者輸入到Web使用者端的值建立XML資料來源。
+傳遞至程式的XML資料必須符合程式中所使用表單中的欄位。 否則，資料不會顯示在表單中。 所有呼叫`FirstAppSolution/PreLoanProcess`處理序的應用程式都必須傳遞此XML資料來源。 在&#x200B;*叫用以人為中心的長期處理作業*&#x200B;中建立的應用程式，會根據使用者輸入到Web使用者端的值動態建立XML資料來源。
 
-使用使用者端應用程式，您可以傳送 *FirstAppSolution/PreLoanProcess* 處理必要的XML資料。 長效程式會傳回引動識別碼值作為其傳回值。 下圖顯示叫用*FirstAppSolution/PreLoanProcess長期處理序的使用者端應用程式。 使用者端應用程式會傳送XML資料，並取得代表引動識別碼值的字串值。
+您可以使用使用者端應用程式，傳送&#x200B;*FirstAppSolution/PreLoanProcess*&#x200B;處理必要的XML資料。 長效程式會傳回引動識別碼值作為其傳回值。 下圖顯示叫用*FirstAppSolution/PreLoanProcess長期處理序的使用者端應用程式。 使用者端應用程式會傳送XML資料，並取得代表引動識別碼值的字串值。
 
 **另請參閱**
 
@@ -68,27 +68,27 @@ ht-degree: 0%
 
 ## 建立可叫用以人為中心的長期流程的Java網頁應用程式 {#creating-a-java-web-application-that-invokes-a-human-centric-long-lived-process}
 
-您可以建立使用Java servlet呼叫的網頁型應用程式。 `FirstAppSolution/PreLoanProcess` 程式。 若要從Java servlet叫用此程式，請使用Java servlet內的「叫用API」 。 (請參閱 [使用Java API叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-java.md#invoking-aem-forms-using-the-java-api).)
+您可以建立使用Java servlet來呼叫`FirstAppSolution/PreLoanProcess`處理程式的網頁式應用程式。 若要從Java servlet叫用此程式，請使用Java servlet內的「叫用API」 。 (請參閱[使用Java API叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-java.md#invoking-aem-forms-using-the-java-api)。)
 
 下圖顯示一個網頁型使用者端應用程式，它會張貼姓名、電話（或電子郵件）和金額值。 當使用者按一下提交應用程式按鈕時，這些值會傳送到Java servlet。
 
 Java servlet會執行下列工作：
 
 * 擷取從HTML頁面發佈至Java servlet的值。
-* 動態建立XML資料來源以傳遞至 *FirstAppSolution/PreLoanProcess* 程式。 名稱、電話（或電子郵件）和金額值是在XML資料來源中指定的。
-* 叫用 *FirstAppSolution/PreLoanProcess* 使用AEM Forms Invocation API進行處理。
+* 動態建立XML資料來源，以傳遞至&#x200B;*FirstAppSolution/PreLoanProcess*&#x200B;處理序。 名稱、電話（或電子郵件）和金額值是在XML資料來源中指定的。
+* 使用AEM Forms Invocation API叫用&#x200B;*FirstAppSolution/PreLoanProcess*&#x200B;程式。
 * 傳回呼叫識別碼值給使用者端Web瀏覽器。
 
 ### 步驟摘要 {#summary-of-steps}
 
-若要建立叫用 `FirstAppSolution/PreLoanProcess` 處理時，請執行下列步驟：
+若要建立叫用`FirstAppSolution/PreLoanProcess`處理序的Java網頁式應用程式，請執行下列步驟：
 
-1. [建立網站專案](invoking-human-centric-long-lived.md#create-a-web-project).
-1. [為servlet建立Java應用程式邏輯](invoking-human-centric-long-lived.md#create-java-application-logic-for-the-servlet).
+1. [建立網站專案](invoking-human-centric-long-lived.md#create-a-web-project)。
+1. [為servlet](invoking-human-centric-long-lived.md#create-java-application-logic-for-the-servlet)建立Java應用程式邏輯。
 1. [建立網頁應用程式的網頁](invoking-human-centric-long-lived.md#create-the-web-page-for-the-web-application)
-1. [將網頁應用程式封裝成WAR檔案](invoking-human-centric-long-lived.md#package-the-web-application-to-a-war-file).
-1. [將WAR檔案部署至裝載AEM Forms的J2EE應用程式伺服器](invoking-human-centric-long-lived.md#deploy-the-war-file-to-the-j2ee-application-server-hosting-aem-forms).
-1. [測試您的網頁應用程式](invoking-human-centric-long-lived.md#test-your-web-application).
+1. [將Web應用程式封裝成WAR檔案](invoking-human-centric-long-lived.md#package-the-web-application-to-a-war-file)。
+1. [將WAR檔案部署至裝載AEM Forms](invoking-human-centric-long-lived.md#deploy-the-war-file-to-the-j2ee-application-server-hosting-aem-forms)的J2EE應用程式伺服器。
+1. [測試您的網頁應用程式](invoking-human-centric-long-lived.md#test-your-web-application)。
 
 >[!NOTE]
 >
@@ -96,7 +96,7 @@ Java servlet會執行下列工作：
 
 ### 建立網站專案 {#create-a-web-project}
 
-建立Web應用程式的第一個步驟是建立Web專案。 此檔案所根據的Java IDE為Eclipse 3.3。使用Eclipse IDE建立Web專案，並將必要的JAR檔案新增至專案。 新增名為的HTML頁面 *index.html*  和專案的Java servlet。
+建立Web應用程式的第一個步驟是建立Web專案。 此檔案所根據的Java IDE為Eclipse 3.3。使用Eclipse IDE建立Web專案，並將必要的JAR檔案新增至專案。 將名為&#x200B;*index.html*&#x200B;的HTML頁面和Java servlet新增至專案。
 
 下列清單指定要包含在Web專案中的JAR檔案：
 
@@ -104,43 +104,43 @@ Java servlet會執行下列工作：
 * adobe-usermanager-client.jar
 * J2EE.jar
 
-有關這些JAR檔案的位置，請參見 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
+如需這些JAR檔案的位置，請參閱[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
 >[!NOTE]
 >
 >J2EE.jar檔案定義Java servlet使用的資料型別。 您可以從部署AEM Forms的J2EE應用程式伺服器取得此JAR檔案。
 
-**建立網站專案**
+**建立Web專案**
 
-1. 啟動Eclipse並按一下 **檔案** >  **新增專案**.
-1. 在 **新增專案** 對話方塊，選取 **Web** > **動態網站專案**.
-1. 型別 `InvokePreLoanProcess` 取得專案名稱，然後按一下 **完成**.
+1. 啟動Eclipse並按一下&#x200B;**檔案** > **新增專案**。
+1. 在&#x200B;**新專案**&#x200B;對話方塊中，選取&#x200B;**Web** > **動態Web專案**。
+1. 輸入專案名稱`InvokePreLoanProcess`，然後按一下&#x200B;**完成**。
 
 **將必要的JAR檔案新增至專案**
 
-1. 在「專案總管」視窗中，用滑鼠右鍵按一下 `InvokePreLoanProcess` 專案並選取 **屬性**.
-1. 按一下 **Java建置路徑** 然後按一下 **資料庫** 標籤。
-1. 按一下 **新增外部JAR** 按鈕並瀏覽到要包含的JAR檔案。
+1. 在[專案總管]視窗中，用滑鼠右鍵按一下`InvokePreLoanProcess`專案並選取&#x200B;**屬性**。
+1. 按一下&#x200B;**Java組建路徑**，然後按一下&#x200B;**資料庫**&#x200B;標籤。
+1. 按一下&#x200B;**新增外部JAR**&#x200B;按鈕，並瀏覽至要包含的JAR檔案。
 
 **新增Java servlet至您的專案**
 
-1. 在「專案總管」視窗中，用滑鼠右鍵按一下 `InvokePreLoanProcess` 專案並選取 **新增** >  **其他**.
-1. 展開 **Web** 資料夾，選取 **Servlet**，然後按一下 **下一個**.
-1. 在「建立Servlet」對話方塊中，輸入 `SubmitXML` 以取得servlet的名稱，然後按一下 **完成**.
+1. 在[專案總管]視窗中，用滑鼠右鍵按一下`InvokePreLoanProcess`專案，然後選取&#x200B;**新增** > **其他**。
+1. 展開&#x200B;**Web**&#x200B;資料夾，選取&#x200B;**Servlet**，然後按一下&#x200B;**下一步**。
+1. 在[建立Servlet]對話方塊中，輸入`SubmitXML`作為Servlet的名稱，然後按一下[完成]。****
 
-**將HTML頁面新增至專案**
+**新增HTML頁面至您的專案**
 
-1. 在「專案總管」視窗中，用滑鼠右鍵按一下 `InvokePreLoanProcess` 專案並選取 **新增** > **其他**.
-1. 展開 **Web** 資料夾，選取 **HTML**，然後按一下 **下一個**.
-1. 在「新HTML」對話方塊中，輸入 `index.html` 檔案名稱，然後按一下 **完成**.
+1. 在[專案總管]視窗中，用滑鼠右鍵按一下`InvokePreLoanProcess`專案，然後選取&#x200B;**新增** > **其他**。
+1. 展開&#x200B;**Web**&#x200B;資料夾，選取&#x200B;**HTML**，然後按一下&#x200B;**下一步**。
+1. 在[新增HTML]對話方塊中，輸入檔案名稱`index.html`，然後按一下[完成]。****
 
 >[!NOTE]
 >
->如需有關建立叫用SubmitXML Java Servlet的HTML內容的資訊，請參閱 [建立網頁應用程式的網頁](invoking-human-centric-long-lived.md#create-the-web-page-for-the-web-application).
+>如需有關建立叫用SubmitXML Java Servlet的HTML內容的資訊，請參閱[建立網頁應用程式的網頁](invoking-human-centric-long-lived.md#create-the-web-page-for-the-web-application)。
 
 ### 為servlet建立Java應用程式邏輯 {#create-java-application-logic-for-the-servlet}
 
-建立叫用的Java應用程式邏輯 `FirstAppSolution/PreLoanProcess` 從Java servlet中處理。 下列程式碼顯示 `SubmitXML` Java Servlet：
+建立從Java Servlet內叫用`FirstAppSolution/PreLoanProcess`處理序的Java應用程式邏輯。 下列程式碼顯示`SubmitXML` Java Servlet的語法：
 
 ```java
      public class SubmitXML extends HttpServlet implements Servlet {
@@ -155,16 +155,16 @@ Java servlet會執行下列工作：
              }
 ```
 
-通常情況下，您不會將使用者端代碼放在Java servlet的 `doGet` 或 `doPost` 方法。 較好的程式設計實務是將此程式碼放在另一個類別中。 然後從內例項化類別 `doPost` 方法(或 `doGet` 方法)，並呼叫適當的方法。 不過，為了程式碼簡潔，程式碼範例會保持在最小值，並放在 `doPost` 方法。
+一般而言，您不會將使用者端代碼放在Java servlet的`doGet`或`doPost`方法中。 較好的程式設計實務是將此程式碼放在另一個類別中。 然後從`doPost`方法（或`doGet`方法）內例項化類別，並呼叫適當的方法。 不過，為了程式碼簡潔，程式碼範例會保持在最小值，並放在`doPost`方法中。
 
-叫用 `FirstAppSolution/PreLoanProcess` 使用「呼叫API」處理，執行下列工作：
+若要使用叫用API叫用`FirstAppSolution/PreLoanProcess`處理序，請執行下列工作：
 
-1. 在您的Java專案的類別路徑中包含使用者端JAR檔案，例如adobe-livecycle-client.jar。 如需有關這些檔案位置的資訊，請參閱 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
-1. 擷取從HTML頁面提交的名稱、電話和金額值。 使用這些值來動態建立傳送至 `FirstAppSolution/PreLoanProcess` 程式。 您可以使用 `org.w3c.dom` 類別來建立XML資料來源（此應用程式邏輯如下列程式碼範例所示）。
-1. 建立 `ServiceClientFactory` 包含連線屬性的物件。 (請參閱 [設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).)
-1. 建立 `ServiceClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 物件。 A `ServiceClient` 物件可讓您叫用服務作業。 它會處理如尋找、分派及路由呼叫要求等工作。
-1. 建立 `java.util.HashMap` 物件（使用其建構函式）。
-1. 叫用 `java.util.HashMap` 物件的 `put` 每個輸入引數傳遞至長期程式的方法。 請確定您指定處理序輸入引數的名稱。 因為 `FirstAppSolution/PreLoanProcess` 處理序需要一個輸入引數，其型別為 `XML` (已命名 `formData`)，您只需叫用 `put` 方法一次。
+1. 在您的Java專案的類別路徑中包含使用者端JAR檔案，例如adobe-livecycle-client.jar。 如需這些檔案位置的相關資訊，請參閱[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
+1. 擷取從HTML頁面提交的名稱、電話和金額值。 使用這些值動態建立傳送至`FirstAppSolution/PreLoanProcess`處理序的XML資料來源。 您可以使用`org.w3c.dom`類別來建立XML資料來源（此應用程式邏輯如下列程式碼範例所示）。
+1. 建立包含連線屬性的`ServiceClientFactory`物件。 （請參閱[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。）
+1. 使用它的建構函式並傳遞`ServiceClientFactory`物件來建立`ServiceClient`物件。 `ServiceClient`物件可讓您叫用服務作業。 它會處理如尋找、分派及路由呼叫要求等工作。
+1. 使用物件的建構函式建立`java.util.HashMap`物件。
+1. 叫用每個輸入引數的`java.util.HashMap`物件的`put`方法，以傳遞至長效處理序。 請確定您指定處理序輸入引數的名稱。 由於`FirstAppSolution/PreLoanProcess`處理序需要一個型別`XML` （名為`formData`）的輸入引數，因此您只需要叫用`put`方法一次。
 
    ```java
     //Get the XML to pass to the FirstAppSolution/PreLoanProcess process
@@ -175,19 +175,19 @@ Java servlet會執行下列工作：
     params.put("formData", inXML);
    ```
 
-1. 建立 `InvocationRequest` 物件(透過叫用 `ServiceClientFactory` 物件的 `createInvocationRequest` 方法並傳遞下列值：
+1. 呼叫`ServiceClientFactory`物件的`createInvocationRequest`方法，並傳遞下列值以建立`InvocationRequest`物件：
 
-   * 字串值，指定要叫用的長效處理序名稱。 叫用 `FirstAppSolution/PreLoanProcess` 程式，指定 `FirstAppSolution/PreLoanProcess`.
-   * 代表處理作業名稱的字串值。 長期程式操作的名稱為 `invoke`.
-   * 此 `java.util.HashMap` 包含服務作業所需引數值的物件。
-   * 布林值，指定 `false`，會建立非同步要求（此值適用於叫用長期程式）。
+   * 字串值，指定要叫用的長效處理序名稱。 若要叫用`FirstAppSolution/PreLoanProcess`處理序，請指定`FirstAppSolution/PreLoanProcess`。
+   * 代表處理作業名稱的字串值。 長效處理作業名稱是`invoke`。
+   * 包含服務作業所需之引數值的`java.util.HashMap`物件。
+   * 指定`false`的布林值，會建立非同步要求（此值適用於叫用長效處理序）。
 
    >[!NOTE]
    >
-   >*將值true傳遞為createInvocationRequest方法的第四個引數，即可叫用短期處理序。 傳遞值true會建立同步要求。*
+   >*您可以傳遞值true作為createInvocationRequest方法的第四個引數，以叫用短期程式。 傳遞值true會建立同步要求。*
 
-1. 透過叫用將叫用請求傳送給AEM Forms `ServiceClient` 物件的 `invoke` 方法並傳遞 `InvocationRequest` 物件。 此 `invoke` 方法傳回 `InvocationReponse` 物件。
-1. 長效處理會傳回代表呼叫識別值的字串值。 叫用「 」以擷取此值 `InvocationReponse` 物件的 `getInvocationId` 方法。
+1. 叫用`ServiceClient`物件的`invoke`方法並傳遞`InvocationRequest`物件，以傳送叫用要求給AEM Forms。 `invoke`方法傳回`InvocationReponse`物件。
+1. 長效處理會傳回代表呼叫識別值的字串值。 透過叫用`InvocationReponse`物件的`getInvocationId`方法擷取此值。
 
    ```java
     //Send the invocation request to the long-lived process and
@@ -196,11 +196,11 @@ Java servlet會執行下列工作：
     String invocationId = lcResponse.getInvocationId();
    ```
 
-1. 將叫用識別值寫入使用者端Web瀏覽器。 您可以使用 `java.io.PrintWriter` 執行個體以將此值寫入使用者端Web瀏覽器。
+1. 將叫用識別值寫入使用者端Web瀏覽器。 您可以使用`java.io.PrintWriter`執行個體將此值寫入使用者端網頁瀏覽器。
 
 ### 快速入門：使用叫用API叫用長效程式 {#quick-start-invoking-a-long-lived-process-using-the-invocation-api}
 
-以下Java程式碼範例代表叫用 `FirstAppSolution/PreLoanProcess` 程式。
+下列Java程式碼範例代表叫用`FirstAppSolution/PreLoanProcess`處理序的Java servlet。
 
 ```java
  /*
@@ -357,7 +357,7 @@ Java servlet會執行下列工作：
 
 ### 建立網頁應用程式的網頁 {#create-the-web-page-for-the-web-application}
 
-此 *index.html* 網頁會提供進入點來叫用 `FirstAppSolution/PreLoanProcess` 程式。 此網頁是基本HTML表單，包含HTML表單和提交按鈕。 當使用者按一下提交按鈕時，表單資料會張貼到 `SubmitXML` Java servlet。
+*index.html*&#x200B;網頁會提供一個進入點，指向叫用`FirstAppSolution/PreLoanProcess`處理序的Java servlet。 此網頁是基本HTML表單，包含HTML表單和提交按鈕。 當使用者按一下提交按鈕時，表單資料會張貼到`SubmitXML` Java servlet。
 
 Java servlet會使用下列Java程式碼來擷取從HTML頁面張貼的資料：
 
@@ -368,7 +368,7 @@ Java servlet會使用下列Java程式碼來擷取從HTML頁面張貼的資料：
  String amount = request.getParameter("amount");
 ```
 
-下列HTML程式碼代表在設定開發環境期間建立的index.html檔案。 (請參閱 [建立網站專案](invoking-human-centric-long-lived.md#create-a-web-project).)
+下列HTML程式碼代表在設定開發環境期間建立的index.html檔案。 （請參閱[建立Web專案](invoking-human-centric-long-lived.md#create-a-web-project)。）
 
 ```xml
  <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "https://www.w3.org/TR/html4/loose.dtd">
@@ -417,7 +417,7 @@ Java servlet會使用下列Java程式碼來擷取從HTML頁面張貼的資料：
 
 ### 將網頁應用程式封裝成WAR檔案 {#package-the-web-application-to-a-war-file}
 
-部署叫用 `FirstAppSolution/PreLoanProcess` 程式，將您的Web應用程式封裝成WAR檔案。 確定元件的商業邏輯所依賴的外部JAR檔案（例如adobe-livecycle-client.jar和adobe-usermanager-client.jar）也包含在WAR檔案中。
+若要部署叫用`FirstAppSolution/PreLoanProcess`處理序的Java servlet，請將您的Web應用程式封裝成WAR檔案。 確定元件的商業邏輯所依賴的外部JAR檔案（例如adobe-livecycle-client.jar和adobe-usermanager-client.jar）也包含在WAR檔案中。
 
 下圖顯示Eclipse專案的內容，此內容已封裝成WAR檔案。
 
@@ -425,15 +425,15 @@ Java servlet會使用下列Java程式碼來擷取從HTML頁面張貼的資料：
 >
 >在上圖中，JPG檔案可由任何JPG影像檔案取代。
 
-**將Web應用程式封裝成WAR檔案：**
+**將Web應用程式封裝到WAR檔案：**
 
-1. 從 **專案總管** 視窗，用滑鼠右鍵按一下 `InvokePreLoanProcess` 專案並選取 **匯出** > **WAR檔案**.
-1. 在 **網頁模組** 文字方塊，輸入 `InvokePreLoanProcess` Java專案的名稱。
-1. 在 **目的地** 文字方塊，輸入 `PreLoanProcess.war`**針對**&#x200B;檔案名稱，指定WAR檔案的位置，然後按一下完成。
+1. 在&#x200B;**專案總管**&#x200B;視窗中，用滑鼠右鍵按一下`InvokePreLoanProcess`專案，然後選取&#x200B;**匯出** > **WAR檔案**。
+1. 在&#x200B;**Web模組**&#x200B;文字方塊中，輸入Java專案名稱的`InvokePreLoanProcess`。
+1. 在&#x200B;**目的地**&#x200B;文字方塊中，輸入&#x200B;**檔案名稱的`PreLoanProcess.war`**，指定WAR檔案的位置，然後按一下[完成]。
 
 ### 將WAR檔案部署至裝載AEM Forms的J2EE應用程式伺服器 {#deploy-the-war-file-to-the-j2ee-application-server-hosting-aem-forms}
 
-將WAR檔案部署到部署AEM Forms的J2EE應用程式伺服器。 若要將WAR檔案部署至J2EE應用程式伺服器，請從匯出路徑將WAR檔案複製到 `[AEM Forms Install]\Adobe\Adobe Experience Manager Forms\jboss\server\lc_turnkey\deploy`.
+將WAR檔案部署到部署AEM Forms的J2EE應用程式伺服器。 若要將WAR檔案部署至J2EE應用程式伺服器，請將WAR檔案從匯出路徑複製到`[AEM Forms Install]\Adobe\Adobe Experience Manager Forms\jboss\server\lc_turnkey\deploy`。
 
 >[!NOTE]
 >
@@ -453,9 +453,9 @@ Java servlet會使用下列Java程式碼來擷取從HTML頁面張貼的資料：
 
 ## 建立ASP.NET網頁應用程式，叫用以人為中心的長期流程 {#creating-an-asp-net-web-application-that-invokes-a-human-centric-long-lived-process}
 
-您可以建立ASP.NET應用程式來叫用 `FirstAppSolution/PreLoanProcess` 程式。 若要從ASP.NET應用程式叫用此程式，請使用Web服務。 (請參閱 [使用網站服務叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-web-services).)
+您可以建立叫用`FirstAppSolution/PreLoanProcess`程式的ASP.NET應用程式。 若要從ASP.NET應用程式叫用此程式，請使用Web服務。 (請參閱[使用Web服務叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-web-services)。)
 
-下圖顯示ASP.NET使用者端應用程式從一般使用者取得資料。 資料會放入XML資料來源並傳送至 `FirstAppSolution/PreLoanProcess` 處理使用者按一下「提交應用程式」按鈕。
+下圖顯示ASP.NET使用者端應用程式從一般使用者取得資料。 當使用者按一下[提交應用程式]按鈕時，資料會放入XML資料來源並傳送到`FirstAppSolution/PreLoanProcess`程式。
 
 請注意，叫用處理之後，會顯示叫用識別碼值。 引動識別碼值是建立為記錄的一部分，以追蹤長效處理序的狀態。
 
@@ -470,53 +470,53 @@ ASP.NET應用程式會執行下列工作：
 
 若要建立能夠叫用FirstAppSolution/PreLoanProcess程式的ASP.NET應用程式，請執行下列步驟：
 
-1. [建立ASP.NET網頁應用程式](invoking-human-centric-long-lived.md#create-an-asp-net-web-application).
-1. [建立叫用FirstAppSolution/PreLoanProcess的ASP頁面](invoking-human-centric-long-lived.md#create-an-asp-page-that-invokes-firstappsolution-preloanprocess).
-1. [執行ASP.NET應用程式](invoking-human-centric-long-lived.md#run-the-asp-net-application).
+1. [建立ASP.NET Web應用程式](invoking-human-centric-long-lived.md#create-an-asp-net-web-application)。
+1. [建立叫用FirstAppSolution/PreLoanProcess](invoking-human-centric-long-lived.md#create-an-asp-page-that-invokes-firstappsolution-preloanprocess)的ASP頁面。
+1. [執行ASP.NET應用程式](invoking-human-centric-long-lived.md#run-the-asp-net-application)。
 
 ### 建立ASP.NET網頁應用程式 {#create-an-asp-net-web-application}
 
-建立Microsoft .NET C# ASP.NET Web應用程式。 下圖顯示名為的ASP.NET專案內容 *InvokePreLoanProcess*.
+建立Microsoft .NET C# ASP.NET Web應用程式。 下圖顯示名為&#x200B;*InvokePreLoanProcess*&#x200B;的ASP.NET專案內容。
 
-請注意，在「服務參考」下，有兩個專案。 第一個專案名為* JobManager*。 此參考可讓ASP.NET應用程式呼叫「工作管理員」服務。 此服務會傳回長效處理程式的狀態相關資訊。 例如，如果處理序目前正在執行，則此服務會傳回一個數值，指定處理序目前正在執行。 第二個參照已命名&#x200B;*PreLoanProcess*. 此服務參考代表對* FirstAppSolution/PreLoanProcess *流程的參考。 建立「服務參考」後，與AEM Forms服務相關的資料型別便可在.NET專案中使用。
+請注意，在「服務參考」下，有兩個專案。 第一個專案名為* JobManager*。 此參考可讓ASP.NET應用程式呼叫「工作管理員」服務。 此服務會傳回長效處理程式的狀態相關資訊。 例如，如果處理序目前正在執行，則此服務會傳回一個數值，指定處理序目前正在執行。 第二個參考名為&#x200B;*PreLoanProcess*。 此服務參考代表對* FirstAppSolution/PreLoanProcess *流程的參考。 建立「服務參考」後，與AEM Forms服務相關的資料型別便可在.NET專案中使用。
 
 **建立ASP.NET專案：**
 
 1. 啟動Microsoft Visual Studio 2008。
-1. 從 **檔案** 功能表，選取 **新增**， **網站**.
-1. 在 **範本** 清單，選取 **ASP.NET網站**.
-1. 在 **位置** 方塊中，選取專案的位置。 為您的專案命名 *InvokePreLoanProcess*.
-1. 在 **語言** 方塊中，選取Visual C#
+1. 從&#x200B;**檔案**&#x200B;功能表，選取&#x200B;**新增**，**網站**。
+1. 在&#x200B;**範本**&#x200B;清單中，選取&#x200B;**ASP.NET網站**。
+1. 在&#x200B;**位置**&#x200B;方塊中，選取專案的位置。 將專案命名為&#x200B;*InvokePreLoanProcess*。
+1. 在&#x200B;**語言**&#x200B;方塊中，選取Visual C#
 1. 按一下「確定」。
 
 **新增服務參考：**
 
-1. 在「專案」功能表中，選取 **新增服務參考**.
-1. 在 **地址** 對話方塊中，指定「工作管理員」服務的WSDL。
+1. 在[專案]功能表中，選取[**新增服務參考**]。
+1. 在&#x200B;**位址**&#x200B;對話方塊中，指定工作管理員服務的WSDL。
 
    ```java
     https://hiro-xp:8080/soap/services/JobManager?WSDL&lc_version=9.0.1
    ```
 
-1. 在「名稱空間」欄位中，輸入 `JobManager`.
-1. 按一下 **前往**&#x200B;然後按一下&#x200B;**確定**.
-1. 在 **專案** 功能表，選取 **新增服務參考**.
-1. 在 **地址** 對話方塊中，指定FirstAppSolution/PreLoanProcess程式的WSDL。
+1. 在名稱空間欄位中，輸入`JobManager`。
+1. 按一下&#x200B;**[執行**]，然後按一下&#x200B;**[確定]**。
+1. 在&#x200B;**專案**&#x200B;功能表中，選取&#x200B;**新增服務參考**。
+1. 在&#x200B;**位址**&#x200B;對話方塊中，指定FirstAppSolution/PreLoanProcess程式的WSDL。
 
    ```java
     https://hiro-xp:8080/soap/services/FirstAppSolution/PreLoanProcess?WSDL&lc_version=9.0.1
    ```
 
-1. 在「名稱空間」欄位中，輸入 `PreLoanProcess`.
-1. 按一下 **前往**&#x200B;然後按一下&#x200B;**確定**.
+1. 在名稱空間欄位中，輸入`PreLoanProcess`。
+1. 按一下&#x200B;**[執行**]，然後按一下&#x200B;**[確定]**。
 
 >[!NOTE]
 >
->取代 `hiro-xp` IP位址設定為託管AEM Forms的J2EE應用程式伺服器。 此 `lc_version` 選項可確保AEM Forms功能（例如MTOM）可供使用。 不指定 `lc_version`選項，您無法使用MTOM叫用AEM Forms。 (請參閱 [使用MTOM叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom).)
+>將`hiro-xp`取代為裝載AEM Forms之J2EE應用程式伺服器的IP位址。 `lc_version`選項可確保AEM Forms功能（例如MTOM）可供使用。 若未指定`lc_version`選項，您就無法使用MTOM叫用AEM Forms。 (請參閱[使用MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)叫用AEM Forms。)
 
 ### 建立叫用FirstAppSolution/PreLoanProcess的ASP頁面 {#create-an-asp-page-that-invokes-firstappsolution-preloanprocess}
 
-在ASP.NET專案中，新增負責向貸款申請人顯示HTML頁面的網頁表單（ASPX檔案）。 網頁表單是以衍生自的類別為基礎 `System.Web.UI.Page`. 叫用的C#應用程式邏輯 `FirstAppSolution/PreLoanProcess` 位於 `Button1_Click` 方法（此按鈕代表「提交應用程式」按鈕）。
+在ASP.NET專案中，新增負責向貸款申請人顯示HTML頁面的網頁表單（ASPX檔案）。 網頁表單是以衍生自`System.Web.UI.Page`的類別為基礎。 叫用`FirstAppSolution/PreLoanProcess`的C#應用程式邏輯位於`Button1_Click`方法中（此按鈕代表[送出應用程式]按鈕）。
 
 下圖顯示ASP.NET應用程式
 
@@ -557,9 +557,9 @@ ASP.NET應用程式會執行下列工作：
  </tbody>
 </table>
 
-屬於ASP.NET應用程式一部分的應用程式邏輯必須動態建立XML資料來源以傳遞至 `FirstAppSolution/PreLoanProcess` 程式。 應徵者在HTML頁面輸入的值必須在XML資料來源中指定。 在Workspace中檢視表單時，這些資料值會合併至表單中。 中的類別 `System.Xml` 名稱空間可用來建立XML資料來源。
+屬於ASP.NET應用程式一部分的應用程式邏輯必須動態建立XML資料來源，以傳遞至`FirstAppSolution/PreLoanProcess`處理序。 應徵者在HTML頁面輸入的值必須在XML資料來源中指定。 在Workspace中檢視表單時，這些資料值會合併至表單中。 `System.Xml`名稱空間中的類別是用來建立XML資料來源。
 
-當叫用需要來自ASP.NET應用程式的XML資料的程式時，您可以使用XML資料型別。 也就是說，您無法傳遞 `System.Xml.XmlDocument` 執行個體到處理序。 要傳遞給處理程式的此XML執行個體的完整名稱是 `InvokePreLoanProcess.PreLoanProcess.XML`. 轉換 `System.Xml.XmlDocument` 執行個體至 `InvokePreLoanProcess.PreLoanProcess.XML`. 您可以使用下列程式碼來執行此工作。
+當叫用需要來自ASP.NET應用程式的XML資料的程式時，您可以使用XML資料型別。 也就是說，您無法將`System.Xml.XmlDocument`執行個體傳遞至處理序。 此XML執行個體的完整限定名稱要傳遞至處理序，其名稱為`InvokePreLoanProcess.PreLoanProcess.XML`。 將`System.Xml.XmlDocument`執行個體轉換為`InvokePreLoanProcess.PreLoanProcess.XML`。 您可以使用下列程式碼來執行此工作。
 
 ```java
  //Create the XML to pass to the FirstAppSolution/PreLoanProcess process
@@ -574,29 +574,29 @@ ASP.NET應用程式會執行下列工作：
  inXML.document = sw.ToString();
 ```
 
-若要建立叫用 `FirstAppSolution/PreLoanProcess` 流&#39;b5&#39;7b中，執行下列工作 `Button1_Click` 方法：
+若要建立叫用`FirstAppSolution/PreLoanProcess`處理序的ASP頁面，請在`Button1_Click`方法中執行下列工作：
 
-1. 建立 `FirstAppSolution_PreLoanProcessClient` 物件，使用它的預設建構函式。
-1. 建立 `FirstAppSolution_PreLoanProcessClient.Endpoint.Address` 物件，使用 `System.ServiceModel.EndpointAddress` 建構函式。 將指定WSDL的字串值傳遞至AEM Forms服務與編碼型別：
+1. 使用預設建構函式建立`FirstAppSolution_PreLoanProcessClient`物件。
+1. 使用`System.ServiceModel.EndpointAddress`建構函式建立`FirstAppSolution_PreLoanProcessClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞至AEM Forms服務與編碼型別：
 
    ```java
     https://hiro-xp:8080/soap/services/FirstAppSolution/PreLoanProcess?blob=mtom
    ```
 
-   您不需要使用 `lc_version` 屬性。 當您建立服務參考時，會使用此屬性。 不過，請務必指定 `?blob=mtom`.
+   您不需要使用`lc_version`屬性。 當您建立服務參考時，會使用此屬性。 不過，請確定您指定了`?blob=mtom`。
 
    >[!NOTE]
    >
-   >取代 `hiro-xp`*搭配裝載AEM Forms之J2EE應用程式伺服器的IP位址。*
+   >將`hiro-xp`*取代為裝載AEM Forms之J2EE應用程式伺服器的IP位址。*
 
-1. 建立 `System.ServiceModel.BasicHttpBinding` 物件，方法是取得 `FirstAppSolution_PreLoanProcessClient.Endpoint.Binding` 資料成員。 將傳回值轉換為 `BasicHttpBinding`.
-1. 設定 `System.ServiceModel.BasicHttpBinding` 物件的 `MessageEncoding` 資料成員至 `WSMessageEncoding.Mtom`. 此值可確保使用MTOM。
+1. 取得`FirstAppSolution_PreLoanProcessClient.Endpoint.Binding`資料成員的值，以建立`System.ServiceModel.BasicHttpBinding`物件。 將傳回值轉換為`BasicHttpBinding`。
+1. 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`資料成員設定為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
 1. 執行下列工作來啟用基本的HTTP驗證：
 
-   * 將AEM表單使用者名稱指派給資料成員 `FirstAppSolution_PreLoanProcessClient.ClientCredentials.UserName.UserName`.
-   * 將對應的密碼值指派給資料成員 `FirstAppSolution_PreLoanProcessClient.ClientCredentials.UserName.Password`.
-   * 指派常數值 `HttpClientCredentialType.Basic` 至資料成員 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
-   * 指派常數值 `BasicHttpSecurityMode.TransportCredentialOnly` 至資料成員 `BasicHttpBindingSecurity.Security.Mode`.
+   * 將AEM表單使用者名稱指派給資料成員`FirstAppSolution_PreLoanProcessClient.ClientCredentials.UserName.UserName`。
+   * 將對應的密碼值指派給資料成員`FirstAppSolution_PreLoanProcessClient.ClientCredentials.UserName.Password`。
+   * 將常數值`HttpClientCredentialType.Basic`指派給資料成員`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+   * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`指派給資料成員`BasicHttpBindingSecurity.Security.Mode`。
 
    下列程式碼範例顯示這些工作。
 
@@ -613,22 +613,22 @@ ASP.NET應用程式會執行下列工作：
     b.ReaderQuotas.MaxArrayLength = 2000000;
    ```
 
-1. 擷取使用者輸入網頁的名稱、電話和金額值。 使用這些值來動態建立傳送至 `FirstAppSolution/PreLoanProcess` 程式。 建立 `System.Xml.XmlDocument` 代表要傳遞至程式的XML資料來源（此應用程式邏輯如下列程式碼範例所示）。
-1. 轉換 `System.Xml.XmlDocument` 執行個體至 `InvokePreLoanProcess.PreLoanProcess.XML` （此應用程式邏輯如下列程式碼範例所示）。
-1. 叫用 `FirstAppSolution/PreLoanProcess` 透過叫用 `FirstAppSolution_PreLoanProcessClient` 物件的 `invoke_Async` 方法。 此方法會傳回代表長效處理序之呼叫識別碼值的字串值。
-1. 建立 `JobManagerClient` 使用is建構函式。 （請確定您已設定作業管理員服務的服務參考。）
-1. 重複步驟1-5。 為步驟2指定下列URL： `https://hiro-xp:8080/soap/services/JobManager?blob=mtom`.
-1. 建立 `JobId` 物件（使用其建構函式）。
-1. 設定 `JobId` 物件的 `id` 傳回值的資料成員 `FirstAppSolution_PreLoanProcessClient` 物件的 `invoke_Async` 方法。
-1. 指派 `value` 對 `JobId` 物件的 `persistent` 資料成員。
-1. 建立 `JobStatus` 物件(透過叫用 `JobManagerService` 物件 `getStatus` 方法並傳遞 `JobId` 物件。
-1. 透過擷取的值來取得狀態值 `JobStatus` 物件的 `statusCode` 資料成員。
-1. 將叫用識別碼值指派給 `LabelJobID.Text` 欄位。
-1. 將狀態值指派給 `LabelStatus.Text` 欄位。
+1. 擷取使用者輸入網頁的名稱、電話和金額值。 使用這些值動態建立傳送至`FirstAppSolution/PreLoanProcess`處理序的XML資料來源。 建立`System.Xml.XmlDocument`，代表要傳遞至程式的XML資料來源（此應用程式邏輯如下列程式碼範例所示）。
+1. 將`System.Xml.XmlDocument`執行個體轉換為`InvokePreLoanProcess.PreLoanProcess.XML` （此應用程式邏輯如下列程式碼範例所示）。
+1. 叫用`FirstAppSolution_PreLoanProcessClient`物件的`invoke_Async`方法，以叫用`FirstAppSolution/PreLoanProcess`處理序。 此方法會傳回代表長效處理序之呼叫識別碼值的字串值。
+1. 使用is建構函式建立`JobManagerClient`。 （請確定您已設定作業管理員服務的服務參考。）
+1. 重複步驟1-5。 為步驟2指定下列URL： `https://hiro-xp:8080/soap/services/JobManager?blob=mtom`。
+1. 使用物件的建構函式建立`JobId`物件。
+1. 使用`FirstAppSolution_PreLoanProcessClient`物件的`invoke_Async`方法的傳回值設定`JobId`物件的`id`資料成員。
+1. 將`value` True指派給`JobId`物件的`persistent`資料成員。
+1. 叫用`JobManagerService`物件的`getStatus`方法並傳遞`JobId`物件以建立`JobStatus`物件。
+1. 擷取`JobStatus`物件的`statusCode`資料成員的值，以取得狀態值。
+1. 將引動識別碼值指派給`LabelJobID.Text`欄位。
+1. 將狀態值指派給`LabelStatus.Text`欄位。
 
 ### 快速入門：使用Web服務API叫用長期程式 {#quick-start-invoking-a-long-lived-process-using-the-web-service-api}
 
-以下C#程式碼範例會叫用 `FirstAppSolution/PreLoanProcess`程式。
+下列C#程式碼範例會叫用`FirstAppSolution/PreLoanProcess`處理序。
 
 ```csharp
  ???/**
@@ -817,7 +817,7 @@ ASP.NET應用程式會執行下列工作：
 
 ### 執行ASP.NET應用程式 {#run-the-asp-net-application}
 
-編譯和部署ASP.NET應用程式後，您可以使用網頁瀏覽器執行它。 假設ASP.NET專案名稱為 *InvokePreLoanProcess*，請在網頁瀏覽器中指定下列URL：
+編譯和部署ASP.NET應用程式後，您可以使用網頁瀏覽器執行它。 假設ASP.NET專案名稱為&#x200B;*InvokePreLoanProcess*，請在網頁瀏覽器中指定下列URL：
 
 *http://localhost:1629/InvokePreLoanProcess/*Default.aspx
 
@@ -829,7 +829,7 @@ ASP.NET應用程式會執行下列工作：
 
 ## 建立以Flex建置的使用者端應用程式，叫用以人為中心的長期流程 {#creating-a-client-application-built-with-flex-that-invokes-a-human-centric-long-lived-process}
 
-您可以建立以Flex建置的使用者端應用程式，以叫用 *FirstAppSolution/PreLoanProcess* 程式。 此應用程式使用遠端來叫用 *FirstAppSolution/PreLoanProcess* 程式。 (請參閱 [使用(AEM表單已棄用) AEM Forms遠端功能叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting).)
+您可以建立以Flex建置的使用者端應用程式，以叫用&#x200B;*FirstAppSolution/PreLoanProcess*&#x200B;程式。 此應用程式使用Remoting來叫用&#x200B;*FirstAppSolution/PreLoanProcess*&#x200B;處理序。 (請參閱[使用(AEM表單已棄用) AEM Forms Remoting](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting)叫用AEM Forms。)
 
 下圖顯示使用Flex建置的使用者端應用程式，可從一般使用者收集資料。 資料會放入XML資料來源中，並傳送至程式。
 
@@ -838,8 +838,8 @@ ASP.NET應用程式會執行下列工作：
 使用Flex建立的使用者端應用程式會執行下列工作：
 
 * 擷取使用者在網頁中輸入的值。
-* 動態建立傳遞至的XML資料來源 *FirstAppSolution/PreLoanProcess* 程式。 這三個值在XML資料來源中指定。
-* 叫用 *FirstAppSolution/PreLoanProcess* 使用Remoting進行處理。
+* 動態建立傳遞至&#x200B;*FirstAppSolution/PreLoanProcess*&#x200B;處理序的XML資料來源。 這三個值在XML資料來源中指定。
+* 使用Remoting叫用&#x200B;*FirstAppSolution/PreLoanProcess*&#x200B;程式。
 * 傳回長效處理序的引動識別碼值。
 
 ### 步驟摘要 {#summary_of_steps-2}
@@ -847,11 +847,11 @@ ASP.NET應用程式會執行下列工作：
 若要建立以Flex建置且能叫用FirstAppSolution/PreLoanProcess流程的使用者端應用程式，請執行下列步驟：
 
 1. 開始新的Flex專案。
-1. 將adobe-remoting-provider.swc檔案納入專案的類別路徑中。 (請參閱 [包含AEM Forms Flex程式庫檔案](/help/forms/developing/invoking-aem-forms-using-remoting.md#including-the-aem-forms-flex-library-file).)
-1. 建立 `mx:RemoteObject` 透過ActionScript或MXML執行個體。 (請參閱 [建立mx：RemoteObject執行個體](/help/forms/developing/invoking-aem-forms-using-remoting.md))
-1. 設定 `ChannelSet` 執行個體以與AEM Forms通訊，並將其與 `mx:RemoteObject` 執行個體。 (請參閱 [建立AEM Forms的管道](/help/forms/developing/invoking-aem-forms-using-remoting.md).)
-1. 呼叫ChannelSet `login` 方法或服務的 `setCredentials` 指定使用者識別碼值和密碼的方法。 (請參閱 [使用單一登入](/help/forms/developing/invoking-aem-forms-using-remoting.md#using-single-sign-on).)
-1. 建立XML資料來源以傳遞至 `FirstAppSolution/PreLoanProcess` 建立XML執行個體來進行處理。 （此應用程式邏輯如下列程式碼範例所示。）
+1. 將adobe-remoting-provider.swc檔案納入專案的類別路徑中。 (請參閱[包含AEM Forms Flex程式庫檔案](/help/forms/developing/invoking-aem-forms-using-remoting.md#including-the-aem-forms-flex-library-file)。)
+1. 透過ActionScript或MXML建立`mx:RemoteObject`執行個體。 （請參閱[建立mx：RemoteObject執行個體](/help/forms/developing/invoking-aem-forms-using-remoting.md)）
+1. 設定`ChannelSet`執行個體以與AEM Forms通訊，並將其與`mx:RemoteObject`執行個體建立關聯。 (請參閱[建立AEM Forms的管道](/help/forms/developing/invoking-aem-forms-using-remoting.md)。)
+1. 呼叫ChannelSet的`login`方法或服務的`setCredentials`方法以指定使用者識別碼值和密碼。 （請參閱[使用單一登入](/help/forms/developing/invoking-aem-forms-using-remoting.md#using-single-sign-on)。）
+1. 建立XML執行個體，建立XML資料來源以傳遞至`FirstAppSolution/PreLoanProcess`處理序。 （此應用程式邏輯如下列程式碼範例所示。）
 1. 使用物件的建構函式建立物件型別。 指定處理序的輸入引數名稱，將XML指定給物件，如下列程式碼所示：
 
    ```csharp
@@ -861,7 +861,7 @@ ASP.NET應用程式會執行下列工作：
     params["formData"]=xml;
    ```
 
-1. 叫用 `FirstAppSolution/PreLoanProcess` 透過呼叫 `mx:RemoteObject` 執行個體的 `invoke_Async` 方法。 傳遞 `Object` 包含輸入引數的變數。 (請參閱 [傳遞輸入值](/help/forms/developing/invoking-aem-forms-using-remoting.md).)
+1. 呼叫`mx:RemoteObject`執行個體的`invoke_Async`方法，以叫用`FirstAppSolution/PreLoanProcess`處理序。 傳遞包含輸入引數的`Object`。 （請參閱[傳遞輸入值](/help/forms/developing/invoking-aem-forms-using-remoting.md)。）
 1. 擷取從長期處理程式傳回的呼叫識別值，如下列程式碼所示：
 
    ```csharp
@@ -875,7 +875,7 @@ ASP.NET應用程式會執行下列工作：
 
 ### 使用Remoting叫用長效處理序 {#invoking-a-long-lived-process-using-remoting}
 
-以下Flex程式碼範例會叫用 `FirstAppSolution/PreLoanProcess` 程式。
+下列Flex程式碼範例會叫用`FirstAppSolution/PreLoanProcess`處理序。
 
 ```java
  <?xml version="1.0" encoding="utf-8"?>
