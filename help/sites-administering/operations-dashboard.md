@@ -10,9 +10,9 @@ exl-id: f9a88156-91a2-4c85-9bc9-8f23700c2cbd
 feature: Operations
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: eae057caed533ef16bb541b4ad41b8edd7aaa1c7
+source-git-commit: e4c8901ab9484d91a1f5ced285efe60613984aeb
 workflow-type: tm+mt
-source-wordcount: '5868'
+source-wordcount: '5686'
 ht-degree: 2%
 
 ---
@@ -331,74 +331,9 @@ AEM 6中有兩種健康狀態檢查型別：
 
 您可以使用[OSGi組態](/help/sites-deploying/configuring-osgi.md) **查詢健康狀態檢查組態** (com.adobe.granite.queries.impl.hc.QueryHealthCheckMetrics)來設定&#x200B;**期間**。
 
-## 使用Nagios進行監視 {#monitoring-with-nagios}
+## 使用外部服務進行監視 {#monitoring-with-external-services}
 
-健康情況檢查儀表板可以透過Granite JMX Mbeans與Nagios整合。 以下範例說明如何新增一項檢查，顯示執行AEM之伺服器上已使用的記憶體。
-
-1. 在監視伺服器上設定並安裝Nagios。
-1. 接著，安裝Nagios遠端外掛程式執行程式(NRPE)。
-
-   >[!NOTE]
-   >
-   >如需如何在系統上安裝Nagios和NRPE的詳細資訊，請參閱[Nagios檔案](https://library.nagios.com/library/products/nagios-core/manuals//)。
-
-1. 新增AEM伺服器的主機定義。 您可以透過Nagios XI Web Interface，使用Configuration Manager來完成這項工作：
-
-   1. 開啟瀏覽器並指向Nagios伺服器。
-   1. 按頂端功能表中的&#x200B;**設定**&#x200B;按鈕。
-   1. 在左窗格中，按&#x200B;**進階設定**&#x200B;下的&#x200B;**核心設定管理員**。
-   1. 按&#x200B;**監視**&#x200B;區段下的&#x200B;**主機**&#x200B;連結。
-   1. 新增主機定義：
-
-   ![chlimage_1-118](assets/chlimage_1-118.png)
-
-   以下是主機設定檔案的範例，以備您使用Nagios Core時使用：
-
-   ```xml
-   define host {
-      address 192.168.0.5
-      max_check_attempts 3
-      check_period 24x7
-      check-command check-host-alive
-      contacts admin
-      notification_interval 60
-      notification_period 24x7
-   }
-   ```
-
-1. 在AEM伺服器上安裝Nagios和NRPE。
-1. 在兩個伺服器上安裝[check_http_json](https://github.com/phrawzty/check_http_json)外掛程式。
-1. 在兩個伺服器上定義一般JSON檢查命令：
-
-   ```xml
-   define command{
-   
-       command_name    check_http_json-int
-   
-       command_line    /usr/lib/nagios/plugins/check_http_json --user "$ARG1$" --pass "$ARG2$" -u 'https://$HOSTNAME$:$ARG3$/$ARG4$' -e '$ARG5$' -w '$ARG6$' -c '$ARG7$'
-   
-   }
-   ```
-
-1. 新增AEM伺服器上已使用記憶體的服務：
-
-   ```xml
-   define service {
-   
-       use generic-service
-   
-       host_name my.remote.host
-   
-       service_description AEM Author Used Memory
-   
-       check_command  check_http_json-int!<cq-user>!<cq-password>!<cq-port>!system/sling/monitoring/mbeans/java/lang/Memory.infinity.json!{noname}.mbean:attributes.HeapMemoryUsage.mbean:attributes.used.mbean:value!<warn-threshold-in-bytes>!<critical-threshold-in-bytes>
-   
-       }
-   ```
-
-1. 檢查您的Nagios儀表板是否有新建立的服務：
-
-   ![chlimage_1-119](assets/chlimage_1-119.png)
+可與外部技術或廠商整合。 如需相關詳細資訊，請參閱其檔案。
 
 ## 診斷工具 {#diagnosis-tools}
 

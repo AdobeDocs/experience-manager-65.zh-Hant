@@ -9,9 +9,9 @@ feature: Administering
 exl-id: e53c4c81-f62e-4b6d-929a-6649c8ced23c
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+source-git-commit: a2d7d82e0d6729e08b464d3843a9b44bcabd154b
 workflow-type: tm+mt
-source-wordcount: '5753'
+source-wordcount: '5696'
 ht-degree: 0%
 
 ---
@@ -385,7 +385,7 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
    <td><strong>我們可以在哪裡找到上次線上修訂清除執行的統計資料？</strong></td>
-   <td><p>透過JMX (<code>SegmentRevisionGarbageCollection</code> MBean)公開狀態、進度和統計資料。 如需<code>SegmentRevisionGarbageCollection</code> MBean的詳細資訊，請閱讀段落</a>後面的<a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#monitoring-via-jmx" target="_blank">。</p> <p>可透過<code>EstimatedRevisionGCCompletion</code> <code>SegmentRevisionGarbageCollection MBean.</code></p> <p>您可以使用<code>ObjectName org.apache.jackrabbit.oak:name="Segment node store revision garbage collection",type="SegmentRevisionGarbageCollection"</code>取得MBean的參考。</p> <p>統計資料僅自上次系統啟動後提供。 外部監控工具可用來讓資料超出AEM運作時間。 請參閱<a href="/help/sites-administering/operations-dashboard.md#monitoring-with-nagios" target="_blank">AEM檔案，將健康情況檢查附加至Nagios，作為外部監視工具的範例</a>。</p> </td>
+   <td><p>透過JMX (<code>SegmentRevisionGarbageCollection</code> MBean)公開狀態、進度和統計資料。 如需<code>SegmentRevisionGarbageCollection</code> MBean的詳細資訊，請閱讀段落</a>後面的<a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#monitoring-via-jmx" target="_blank">。</p> <p>可透過<code>EstimatedRevisionGCCompletion</code> <code>SegmentRevisionGarbageCollection MBean.</code></p> <p>您可以使用<code>ObjectName org.apache.jackrabbit.oak:name="Segment node store revision garbage collection",type="SegmentRevisionGarbageCollection"</code>取得MBean的參考。</p> <p>統計資料僅自上次系統啟動後提供。 <a href="/help/sites-administering/operations-dashboard.md#monitoring-with-external-services" target="_blank">外部監視工具可用來保留超過AEM運作時間</a>的資料。</p> </td>
    <td> </td>
   </tr>
   <tr>
@@ -428,12 +428,12 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
    <td><strong>修訂清理健康狀態檢查中會公開哪些資訊？ 它們如何以及何時對顏色編碼狀態層級作出貢獻？ </strong></td>
-   <td><p>修訂清理健康狀態檢查是<a href="/help/sites-administering/operations-dashboard.md#health-reports" target="_blank">操作儀表板</a>.<br />的一部分 </p> <p>如果上次執行線上修訂清除維護工作已順利完成，則狀態為<strong>綠色</strong>。</p> <p>如果線上修訂清除維護工作取消一次，則為<strong>黃色</strong>。<br /> </p> <p>如果線上修訂清除維護工作連續取消三次，則為<strong>RED</strong>。 <strong>在此情況下需要手動互動</strong>，否則線上修訂清除可能會再次失敗。 如需詳細資訊，請閱讀下面的<a href="/help/sites-deploying/revision-cleanup.md#troubleshooting-online-revision-cleanup">疑難排解</a>區段。<br /> </p> <p>此外，系統重新啟動後，也會重設健康狀態檢查狀態。 因此，新重新啟動的執行個體會在修訂清理健康情況檢查中顯示綠色狀態。 外部監控工具可用來讓資料超出AEM運作時間。 請參閱<a href="/help/sites-administering/operations-dashboard.md#monitoring-with-nagios">AEM檔案，將健康情況檢查附加至Nagios，作為外部監視工具的範例</a>。</p> </td>
+   <td><p>修訂清理健康狀態檢查是<a href="/help/sites-administering/operations-dashboard.md#health-reports" target="_blank">操作儀表板</a>.<br />的一部分 </p> <p>如果上次執行線上修訂清除維護工作已順利完成，則狀態為<strong>綠色</strong>。</p> <p>如果線上修訂清除維護工作取消一次，則為<strong>黃色</strong>。<br /> </p> <p>如果線上修訂清除維護工作連續取消三次，則為<strong>RED</strong>。 <strong>在此情況下需要手動互動</strong>，否則線上修訂清除可能會再次失敗。 如需詳細資訊，請閱讀下面的<a href="/help/sites-deploying/revision-cleanup.md#troubleshooting-online-revision-cleanup">疑難排解</a>區段。<br /> </p> <p>此外，系統重新啟動後，也會重設健康狀態檢查狀態。 因此，新重新啟動的執行個體會在修訂清理健康情況檢查中顯示綠色狀態。  <a href="/help/sites-administering/operations-dashboard.md#monitoring-with-external-services" target="_blank">外部監視工具可用來保留超過AEM運作時間</a>的資料。</p> </td>
    <td> </td>
   </tr>
   <tr>
    <td><p><strong>如何在待命執行個體上監視自動清除？</strong></p> </td>
-   <td><p>使用<code>SegmentRevisionGarbageCollection</code> MBean透過JMX公開狀態、進度和統計資料。 另請參閱下列<a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#monitoring-via-jmx" target="_blank">Oak檔案</a>。 </p> <p>您可以使用<code>ObjectName org.apache.jackrabbit.oak:name="Segment node store revision garbage collection",type="SegmentRevisionGarbageCollection"</code>取得MBean的參考。</p> <p>統計資料只能從上次系統啟動後使用。 外部監控工具可用於在AEM運作時間以外保留資料。 另請參閱<a href="/help/sites-administering/operations-dashboard.md#monitoring-with-nagios" target="_blank">AEM檔案，以附加健康情況檢查至Nagios作為外部監視工具的範例</a>。</p> <p>記錄檔也可用來檢查自動清理的狀態、進度和統計資料。</p> </td>
+   <td><p>使用<code>SegmentRevisionGarbageCollection</code> MBean透過JMX公開狀態、進度和統計資料。 另請參閱下列<a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#monitoring-via-jmx" target="_blank">Oak檔案</a>。 </p> <p>您可以使用<code>ObjectName org.apache.jackrabbit.oak:name="Segment node store revision garbage collection",type="SegmentRevisionGarbageCollection"</code>取得MBean的參考。</p> <p>統計資料只能從上次系統啟動後使用。  <a href="/help/sites-administering/operations-dashboard.md#monitoring-with-external-services" target="_blank">外部監視工具可用來保留超過AEM運作時間</a>的資料。</p> <p>記錄檔也可用來檢查自動清理的狀態、進度和統計資料。</p> </td>
    <td> </td>
   </tr>
   <tr>
