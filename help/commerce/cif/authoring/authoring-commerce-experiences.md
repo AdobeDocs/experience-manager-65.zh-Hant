@@ -5,9 +5,9 @@ exl-id: 2db51bd7-8fc7-4ae8-8d6f-e5035fbe954d
 solution: Experience Manager,Commerce
 feature: Commerce Integration Framework
 role: Admin, Developer
-source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
+source-git-commit: a02724597338ee2451448c6c4188fc349dd47d01
 workflow-type: tm+mt
-source-wordcount: '713'
+source-wordcount: '711'
 ht-degree: 0%
 
 ---
@@ -72,9 +72,9 @@ CIF產品目錄頁面是即時轉譯的虛擬頁面。 因此，不可能內嵌�
 
 ![RTE](/help/commerce/cif/assets/authoring/RTE.png)
 
-    >[！NOTE]
-    >
-    >如果同時選取類別和產品，則會採用產品。
+>[!NOTE]
+>
+>如果同時選取類別和產品，則會採用產品。
 
 這會建立預留位置連結，在頁面轉譯時以實際連結取代。
 
@@ -102,6 +102,6 @@ CIF產品目錄頁面是即時轉譯的虛擬頁面。 因此，不可能內嵌�
 
 結果會依型別分組。
 
-在Omnisearch中的    >[！NOTE]
-    >
-    >全文檢索搜尋不支援相關的內容片段。 使用SKU或UID尋找關聯的內容片段。
+>[!NOTE]
+>
+>Omnisearch中的全文檢索搜尋不支援相關聯的內容片段。 使用SKU或UID來尋找相關聯的內容片段。
