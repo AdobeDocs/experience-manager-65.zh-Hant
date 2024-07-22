@@ -10,9 +10,9 @@ exl-id: f9a88156-91a2-4c85-9bc9-8f23700c2cbd
 feature: Operations
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: e4c8901ab9484d91a1f5ced285efe60613984aeb
+source-git-commit: eef7849464540fa3d7bb705e1be9f6e0cf1c8cff
 workflow-type: tm+mt
-source-wordcount: '5686'
+source-wordcount: '5744'
 ht-degree: 2%
 
 ---
@@ -492,6 +492,8 @@ UI可用來篩選表格中的索引，方法是在畫面左上角的搜尋方塊
 1. **資料存放區記憶體回收**&#x200B;工作，位於&#x200B;**每週維護期間**&#x200B;功能表下方。
 1. **稽核記錄維護**&#x200B;工作，位於&#x200B;**每週維護期間**&#x200B;功能表下方。
 1. **版本清除維護**&#x200B;工作，位於&#x200B;**每週維護期間**&#x200B;功能表下方。
+1. **專案清除**&#x200B;維護任務，位於&#x200B;**每週維護期間**&#x200B;功能表下；使用&#x200B;**新增**&#x200B;選項。
+1. **清除臨機任務**&#x200B;維護任務，位於&#x200B;**每週維護期間**&#x200B;功能表下；使用&#x200B;**新增**&#x200B;選項。
 
 每日維護期間的預設時間為凌晨2:00至下午5:00。設定在每週維護期間執行的工作，會在星期六上午1:00到凌晨2:00之間執行。
 
@@ -562,6 +564,26 @@ UI可用來篩選表格中的索引，方法是在畫面左上角的搜尋方塊
 >[!CAUTION]
 >
 >最佳化您應經常執行版本清除工作的存放庫大小。 當流量有限時，應該將任務排程在營業時間以外。
+
+### 專案清除 {#project-purge}
+
+<!--
+Override the out-of-the-box Maintenance window configuration node under `/libs` by creating properties under the folder `/apps/settings/granite/operations/maintenance/granite_weekly`, `granite_daily` or `granite_monthly`. See the Maintenance Window table below for additional configuration details.
+
+Enable the maintenance task by adding another node under the node above (name it `granite_ProjectPurgeTask`) with the appropriate properties. 
+-->
+
+在&#x200B;**Adobe專案清除設定** (com.adobe.cq.projects.purge.Scheduler)下設定OSGI屬性。
+
+### 清除臨機任務 {#purge-of-ad-hoc-tasks}
+
+<!--
+Override the out-of-the-box Maintenance window configuration node under `/libs` by creating properties under the folder `/apps/settings/granite/operations/maintenance/granite_weekly`, `granite_daily` or `granite_monthly`.
+
+See the Maintenance Window table below for additional configuration details. Enable the maintenance task by adding another node under the node above. Name it `granite_TaskPurgeTask`, with attribute `sling:resourceType` set to `granite/operations/components/maintenance/task` and attribute `granite.maintenance.name` set to `TaskPurge`. 
+-->
+
+設定&#x200B;**臨機工作清除** (`com.adobe.granite.taskmanagement.impl.purge.TaskPurgeMaintenanceTask`)下的OSGI屬性。
 
 ## 自訂維護任務 {#custom-maintenance-tasks}
 
