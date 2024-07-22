@@ -9,7 +9,7 @@ feature: Configuring
 exl-id: 5b0c9a8c-0f5f-46ee-a455-adb9b9d27270
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2d6caa10e8f1cf3d0811280e31c2f40bceac20ee
 workflow-type: tm+mt
 source-wordcount: '6470'
 ht-degree: 13%
@@ -24,7 +24,7 @@ ht-degree: 13%
 >
 >如需疑難排解和修正效能問題的詳細資訊，請參閱[效能樹狀結構](/help/sites-deploying/performance-tree.md)。
 >
->您也可以檢閱[效能調整秘訣](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html)的知識庫文章。
+>您也可以檢閱[效能調整秘訣](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-17466)的知識庫文章。
 
 關鍵問題是您的網站回應訪客要求所需的時間。 雖然此值會因每個請求而有所不同，但您可以定義平均目標值。 一旦這個值被證實既可達到又可維持，就可用來監視網站的效能並指示潛在問題的發展。
 
@@ -41,7 +41,7 @@ ht-degree: 13%
 >[!NOTE]
 >
 >* 設定效能最佳化之後，請依照[艱難日](/help/sites-developing/tough-day.md)中的程式來測試負載繁重的環境。
->* 另請參閱[效能調整提示。](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html)
+>* 另請參閱[效能調整提示。](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-17466)
 
 ## 效能最佳化方法 {#performance-optimization-methodology}
 
