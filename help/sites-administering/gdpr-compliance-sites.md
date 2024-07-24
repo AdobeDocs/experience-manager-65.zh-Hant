@@ -9,9 +9,9 @@ exl-id: 8c1ea483-7319-4e5c-be4c-d43a2b67d316
 solution: Experience Manager, Experience Manager Sites
 feature: Compliance
 role: Admin, Architect, Developer, Leader, User, Data Architect, Data Engineer
-source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
+source-git-commit: 5c1eda486e31be01f614a3a7ada71563fd996656
 workflow-type: tm+mt
-source-wordcount: '823'
+source-wordcount: '837'
 ht-degree: 54%
 
 ---
@@ -66,9 +66,9 @@ AEM提供具有[ContextHub](/help/sites-developing/contexthub.md)的可選資料
 
 >[!NOTE]
 >
->在Adobe CQ 5.6之前，ClientContext（舊版ContextHub）確實將資料傳送至伺服器，但並未儲存。
+>在AdobeAEM(CQ) 5.6之前，ClientContext（舊版ContextHub）確實將資料傳送至伺服器，但並未儲存資料。
 >
->Adobe CQ 5.5及舊版現已終止服務，本檔案未涵蓋該服務。
+>Adobe AEM 6.4及舊版現已終止服務，本檔案未涵蓋該版本。 請參閱[舊版Adobe Experience Manager、CQ和CRX檔案](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions)。
 
 ### 實作選擇加入/選擇退出 {#implementing-opt-in-opt-out}
 
@@ -85,19 +85,19 @@ AEM提供具有[ContextHub](/help/sites-developing/contexthub.md)的可選資料
 
 * 如果網站訪客接受網站的條款與條件，則應移除 ContextHub 選擇退出 cookie：
 
-  ```
+  ```java
   ContextHub.Utils.Cookie.removeItem('cq-opt-out');
   ```
 
 * 如果網站訪客不接受網站的條款與條件，則應設定 ContextHub 選擇退出 cookie：
 
-  ```
+  ```java
   ContextHub.Utils.Cookie.setItem('cq-opt-out', 1);
   ```
 
 * 要檢查 ContextHub 是否以選擇退出模式執行，應在瀏覽器的主控台中進行以下呼叫：
 
-  ```
+  ```java
   var isOptedOut = ContextHub.isOptedOut(true) === true;
   // if isOptedOut is true, ContextHub is running in opt-out mode
   ```
@@ -183,7 +183,7 @@ AEM提供具有[ContextHub](/help/sites-developing/contexthub.md)的可選資料
 
 例如，檢視儲存在 localStorage 中的資料：
 
-```
+```java
 var storage = new ContextHub.Utils.Persistence({ mode: ContextHub.Utils.Persistence.Modes.LOCAL });
 console.log(storage.getTree());
 ```
@@ -194,7 +194,7 @@ console.log(storage.getTree());
 
 * 要清除目前載入之存放區的持續性：
 
-  ```
+  ```java
   // to be able to fully access persistence layer, Opt-Out must be turned off
   ContextHub.Utils.Cookie.removeItem('cq-opt-out');
   
@@ -207,7 +207,7 @@ console.log(storage.getTree());
 
 * 要清除特定的持續層；例如，sessionStorage：
 
-  ```
+  ```java
   var storage = new ContextHub.Utils.Persistence({ mode: ContextHub.Utils.Persistence.Modes.SESSION });
   storage.setItem('/store', null);
   storage.setItem('/_', null);
