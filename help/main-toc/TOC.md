@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: 使用Adobe Experience Manager 6.5檔案瞭解其運作方式，以及軟體可為您做哪些事。
 breadcrumb-title: 使用手冊
 user-guide-title: AEM 6.5
-source-git-commit: 721837590521aeaa82ab8a960098eba87c0ffb43
+source-git-commit: d5d1c3909a135de61d777c39ba60fbb897722e8e
 workflow-type: tm+mt
-source-wordcount: '7456'
+source-wordcount: '7445'
 ht-degree: 18%
 
 ---
@@ -809,7 +809,7 @@ ht-degree: 18%
       + [建立對應](/help/forms/using/create-correspondence.md)
       + [運算式產生器中的遠端函式](/help/forms/using/expression-builder.md)
       + [管理代理程式簽名影像](/help/forms/using/manage-agent-signature-images.md)
-      + [Post處理信函和互動式通訊](/help/forms/using/submit-letter-topostprocess.md)
+      + [信函和互動式通訊的後處理](/help/forms/using/submit-letter-topostprocess.md)
       + [將自訂動作新增至資產清單檢視](/help/forms/using/add-custom-action-asset-listing-view.md)
       + [在建立通訊UI中新增自訂動作/按鈕](/help/forms/using/add-action-button-in-create-correspondence-ui.md)
       + [將自訂屬性新增至Correspondence Management資產](/help/forms/using/add-custom-properties-cm-assets.md)
@@ -1260,9 +1260,6 @@ ht-degree: 18%
          + [電子商務](/help/commerce/cif-classic/developing/ecommerce.md)
          + [開發（一般）](/help/commerce/cif-classic/developing/generic.md)
          + [使用SAPCommerce Cloud開發](/help/commerce/cif-classic/developing/sap-commerce-cloud.md)
-+ Edge Delivery Services {#edge-delivery-services}
-   + [開始使用 Edge Delivery](/help/edge/overview.md)
-   + [使用 Edge Delivery](/help/edge/using.md)
 + Headless {#headless}
    + [AEM Headless 歷程](/help/journey-headless/overview.md)
    + AEM Headless開發人員歷程{#developer}
@@ -1603,7 +1600,7 @@ ht-degree: 18%
          + [緩慢的內容移轉](/help/sites-deploying/lazy-content-migration.md)
          + [使用CRX2Oak移轉工具](/help/sites-deploying/using-crx2oak.md)
          + [升級前維護任務](/help/sites-deploying/pre-upgrade-maintenance-tasks.md)
-         + [Post升級檢查與疑難排解](/help/sites-deploying/post-upgrade-checks-and-troubleshooting.md)
+         + [升級後檢查及疑難排解](/help/sites-deploying/post-upgrade-checks-and-troubleshooting.md)
          + [升級自訂搜尋Forms](/help/sites-deploying/upgrading-custom-search-forms.md)
          + [永續升級](/help/sites-deploying/sustainable-upgrades.md)
          + [升級程式碼和自訂](/help/sites-deploying/upgrading-code-and-customizations.md)
