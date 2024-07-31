@@ -6,7 +6,8 @@ solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 hide: true
 hidefromtoc: true
-source-git-commit: 6b86212a2b3a86b2205714c802dc1581d30e7441
+exl-id: 3a9d7943-2c34-4e0a-9803-7ce1ef40f676
+source-git-commit: 0d491be4fb2605220b1558c8c877151ab4405978
 workflow-type: tm+mt
 source-wordcount: '11687'
 ht-degree: 0%
@@ -154,7 +155,9 @@ LiveCycleDesigner可讓您建置豐富的表單內容，並符合Section 508准�
 
 熒幕助讀程式的使用者所察覺的標籤，未必會與視覺註解相同。 在某些情況下，您可能會想要更明確地說明控制項的用途。
 對於表單中的每個欄位物件，「協助工具」浮動視窗（請參閱圖3）可用於指定熒幕助讀程式會朗讀什麼來識別特定表單欄位。
+
 若要使用「協助工具」浮動視窗，請遵循下列步驟：
+
 1. 選擇「視窗>協助工具」或按Shift+F6來顯示「協助工具」調色盤。
 1. 選取表單中的物件。 浮動視窗會顯示物件的協助工具屬性。
 

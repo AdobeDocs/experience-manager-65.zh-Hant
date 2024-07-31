@@ -8,7 +8,7 @@ feature: Asset Management,Renditions
 exl-id: a4bcf67b-54f4-4681-9e42-fd4753acde1a
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 0d491be4fb2605220b1558c8c877151ab4405978
 workflow-type: tm+mt
 source-wordcount: '1872'
 ht-degree: 25%
@@ -287,6 +287,7 @@ Adobe影像轉碼資料庫是影像處理解決方案，可執行核心影像處
 | PSD‡ | ✓ | − | − | − | − | − |
 | TIFF | ✓ | ✓ | ✓ | ✓ | ✓ | [影像](/help/assets/image-sets.md)、[混合媒體](/help/assets/mixed-media-sets.md)和[迴轉](/help/assets/spin-sets.md) |
 | WEBP | − | − | − | ✓ | − | − |
+
 <!-- AVIF, HEIC, and WebP added to table above on March 4, 2024 based on CQDOC-21294 -->
 
 ‡合併的影像會從PSD檔案中擷取。 這是由Adobe Photoshop產生的影像，並包含在PSD檔案中。 視設定而定，合併的影像不一定是實際影像。

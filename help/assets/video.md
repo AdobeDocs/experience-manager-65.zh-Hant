@@ -11,7 +11,7 @@ feature: Asset Management
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 7e0f1225d5bf4de095c4a8cc042517997898a44c
+source-git-commit: 0d491be4fb2605220b1558c8c877151ab4405978
 workflow-type: tm+mt
 source-wordcount: '11203'
 ht-degree: 2%
@@ -840,6 +840,7 @@ Dynamic Media支援透過URL修飾元在視訊中新增單一標題。 請參閱
    | 為每個資產建立個別的資料夾 | 為您選取要下載的每個註解檔或音訊追蹤檔建立一個資料夾。 |
    | 電子郵件 | 使用您的預設電子郵件程式，將.zip檔案傳送至指定的電子郵件地址。 |
    | Assets | 指定正在下載的檔案數以及所有選取檔案的組合總大小。 取消選取此選項會使&#x200B;**[!UICONTROL 下載]**&#x200B;按鈕變暗（關閉），使您無法下載任何檔案。 |
+
 1. 選取&#x200B;**[!UICONTROL 下載]**。
 1. Publish影片。 檢視[Publish資產](publishing-dynamicmedia-assets.md)。
 
@@ -1265,7 +1266,7 @@ public class ManifestServlet extends HttpServlet {
 
 +++
 
->[!TAB servlet的回應類別]
+>servlet]的[!TAB 回應類別
 
 +++servlet **的**&#x200B;回應類別
 
@@ -1295,7 +1296,7 @@ public abstract class VideoResponse {
 
 +++
 
->[!TAB 在servlet中參考的常數檔案]
+>在servlet]中參考的[!TAB 常數檔案
 
 +++在servlet **中參考的**&#x200B;常數檔案
 

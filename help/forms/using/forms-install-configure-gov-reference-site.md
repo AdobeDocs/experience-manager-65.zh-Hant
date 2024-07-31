@@ -7,7 +7,7 @@ exl-id: 1fee474e-7da5-4ab2-881a-34b8e055aa29
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Foundation Components
 role: Admin, User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+source-git-commit: 0d491be4fb2605220b1558c8c877151ab4405978
 workflow-type: tm+mt
 source-wordcount: '4534'
 ht-degree: 1%
@@ -35,6 +35,7 @@ ht-degree: 1%
 | Adobe Sign | v5 API | **支援** |
 | Microsoft® Dynamics 365 | 1710 (9.1.0.3020) | **支援** |
 | Adobe Analytics | v1.4 Rest API | **支援** |
+
 **封裝安裝考量事項：**
 
 * 將套件安裝在乾淨的伺服器上，無需其他示範套件或較舊的示範套件版本。
