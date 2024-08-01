@@ -6,9 +6,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: a52311b9-ed7a-432e-8f35-d045c0d8ea4c
-source-git-commit: fb689e86deaabcc4033ed75f615086b630a9a525
+source-git-commit: 447ff116c822c7ab0d5826103d6485e7d4ed13ce
 workflow-type: tm+mt
-source-wordcount: '4332'
+source-wordcount: '4390'
 ht-degree: 2%
 
 ---
@@ -64,7 +64,7 @@ ht-degree: 2%
 
 以下是此版本中包含的增強功能清單：
 
-* IPTC索引標籤現在支援[!UICONTROL 替代文字]和[!UICONTROL 延伸描述]文字欄位。 (ASSETS-34918)
+* IPTC索引標籤現在支援[!UICONTROL 替代文字]和[!UICONTROL 延伸說明]文字欄位。 (ASSETS-34918)
 
 #### 協助工具修正
 
@@ -249,7 +249,7 @@ Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on
 
 * AEM 6.5 Service Pack 19 (SP19)的升級問題，其中在SP19安裝後，對Apache Felix發出的未經授權請求遺失應用程式伺服器內容根路徑。 Apache Felix Web Management Console 4.9.8的更新。 (NPR-41933)
 
-#### 行銷活動{#foundation-campaign-6521}
+#### Campaign{#foundation-campaign-6521}
 
 * AEM 6.5 Service Pack 15會產生持續性錯誤記錄，其中包含重要的專案。 已報告下列問題：
    * 路徑`/libs/granite/ui/content/shell/start.html`上缺少資源時出現404 INFO錯誤
@@ -302,7 +302,7 @@ Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on
 
 * T -->
 
-#### 轉換{#foundation-translation-6521}
+#### 翻譯{#foundation-translation-6521}
 
 * AEM 6.5.19現成可用翻譯狀態未依啟動預期更新的問題。 將翻譯檔案匯入與AEM啟動關聯的翻譯工作後，狀態應該是`Approved`。 相反地，狀態變成`Ready for Review`，這不是預期行為。 (NPR-41756)
 * 建立多個設定並前往翻譯Cloud Service設定時，並非所有元素都會顯示在UI中。 僅顯示前40個元素/資料夾；會觸發延遲載入，但不會新增更多內容。 (NPR-41829)
@@ -550,6 +550,8 @@ Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on
    1. 導覽至CRXDE中的目錄`/libs/fd/aemforms/install/`。
    1. 刪除名稱為`com.adobe.granite.ui.commons-5.10.26.jar`的組合。
    1. 重新啟動AEM伺服器。
+
+* 當使用者更新至安裝有Forms附加元件的AEM Forms Service Pack 20 (6.5.20.0)時，使用Adobe Analytics舊版雲端服務及使用者認證型驗證的設定無法正常運作，導致分析規則無法執行。 若要下載及安裝Hotfix，請參閱[Adobe Experience Manager Forms Hotfix](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)文章。 (FORMS-15428)
 
 * 當使用者在JEE伺服器上更新至AEM Forms Service Pack 20 (6.5.20.0)，並使用輸出服務產生PDF時，PDF會出現協助工具問題。 若要下載及安裝Hotfix，請參閱[Adobe Experience Manager Forms Hotfix](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)文章。 (LC-3922112)
 * 當使用者使用JEE上的輸出服務產生標籤PDF時，會顯示「不適當的結構警告」。 若要下載及安裝Hotfix，請參閱[Adobe Experience Manager Forms Hotfix](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)文章。 (LC-3922038)
