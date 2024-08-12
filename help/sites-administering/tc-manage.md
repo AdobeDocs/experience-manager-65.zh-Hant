@@ -5,9 +5,9 @@ exl-id: 968bba02-98fe-4eaf-9937-ce5cfdf5b413
 solution: Experience Manager, Experience Manager Sites
 feature: Language Copy
 role: Admin
-source-git-commit: eae057caed533ef16bb541b4ad41b8edd7aaa1c7
+source-git-commit: 26ac50aa27501fe6a80b38a474e9811338c4fb56
 workflow-type: tm+mt
-source-wordcount: '3506'
+source-wordcount: '3519'
 ht-degree: 3%
 
 ---
@@ -188,9 +188,13 @@ AEM會偵測是否正在為內容的初始翻譯建立翻譯專案，或更新�
 
    ![chlimage_1-251](assets/chlimage_1-251.png)
 
-1. 選取您要新增的字典，然後按一下「新增」按鈕。
+1. 選取要新增的&#x200B;**根目錄**&#x200B;和字典（如有必要），然後選取&#x200B;**新增**。
 
-   ![chlimage_1-252](assets/chlimage_1-252.png)
+   ![i18N字典](assets/tc-manage-i18n-dictionary.png)
+
+1. 如有要求，請選取更新的性質：
+
+   ![翻譯](assets/tc-manage-translate.png)
 
 您的字典現在正在翻譯工作中。
 
