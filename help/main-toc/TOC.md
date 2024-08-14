@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: 使用Adobe Experience Manager 6.5檔案瞭解其運作方式，以及軟體可為您做哪些事。
 breadcrumb-title: 使用手冊
 user-guide-title: AEM 6.5
-source-git-commit: 7dc864a044e73e855fe08bcf8418b0349cd0d3bd
+source-git-commit: ab8248e9d0df67bed3c2d5ad3fadce08db2e9ba0
 workflow-type: tm+mt
-source-wordcount: '7443'
+source-wordcount: '7448'
 ht-degree: 18%
 
 ---
@@ -77,7 +77,7 @@ ht-degree: 18%
    + [Adobe Developer Console 中的 JWT 憑證已被取代](/help/sites-administering/jwt-credentials-deprecation-in-adobe-developer-console.md)
    + [設定AEM的IMS整合](/help/sites-administering/setting-up-ims-integrations-for-aem.md)
 + Sites {#sites}
-   + 製作 {#authoring}
+   + 製作{#authoring}
       + AEM Authoring {#essentials}的基本工作、工具和概念
          + [作者的首要步驟](/help/sites-authoring/first-steps.md)
          + [頁面製作](/help/sites-authoring/page-authoring.md)
@@ -89,7 +89,7 @@ ht-degree: 18%
          + [您的收件匣](/help/sites-authoring/inbox.md)
          + [主控台的鍵盤快速鍵](/help/sites-authoring/keyboard-shortcuts.md)
          + [選取您的UI](/help/sites-authoring/select-ui.md)
-      + 製作 {#authoring}
+      + 製作{#authoring}
          + [製作環境和工具](/help/sites-authoring/author-environment-tools.md)
          + [編輯頁面時的註解](/help/sites-authoring/annotations.md)
          + [建立及組織頁面](/help/sites-authoring/managing-pages.md)
@@ -281,7 +281,7 @@ ht-degree: 18%
          + [搜尋](/help/sites-classic-ui-authoring/author-env-search.md)
          + [您的收件匣](/help/sites-classic-ui-authoring/author-env-inbox.md)
          + [主控台的鍵盤快速鍵](/help/sites-classic-ui-authoring/author-env-keyboard-shortcuts.md)
-      + 製作 {#authoring}
+      + 製作{#authoring}
          + [製作頁面](/help/sites-classic-ui-authoring/classic-page-author.md)
          + [製作 — 環境與工具](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md)
          + [建立及組織頁面](/help/sites-classic-ui-authoring/classic-page-author-manage-pages.md)
@@ -512,7 +512,7 @@ ht-degree: 18%
       + [製作調適型表單簡介](/help/forms/using/introduction-forms-authoring.md)
       + [互動式通訊簡介](/help/forms/using/interactive-communications-overview.md)
       + [管理表單簡介](/help/forms/using/introduction-managing-forms.md)
-      + [自動表單轉換服務簡介](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/introduction.html?lang=zh-Hant)
+      + [自動表單轉換服務簡介](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/introduction.html?lang=zh-hant)
       + 教學課程：建立第一個最適化表單{#create-first-adaptive-form}
          + [教學課程：建立第一個最適化表單](/help/forms/using/create-your-first-adaptive-form.md)
          + [教學課程：建立最適化表單](/help/forms/using/create-adaptive-form.md)
@@ -1231,6 +1231,7 @@ ht-degree: 18%
          + [為 SEO 設定 URL](/help/commerce/cif/configuring/advanced-url-configuration.md)
          + [快取選項](/help/commerce/cif/configuring/caching.md)
          + [自訂 HTTP 標頭](/help/commerce/cif/configuring/custom-http-headers.md)
+         + [購物車和Dispatcher設定](/help/commerce/cif/configuring/shopping-cart-dispatcher.md)
       + 開發 {#developing}
          + [使用AEM開發](/help/commerce/cif/develop.md)
          + [設定 CIF 元件樣式](/help/commerce/cif/customizing/style-cif-component.md)
@@ -1346,7 +1347,7 @@ ht-degree: 18%
          + [開發大量編輯器](/help/sites-developing/dev-bulk-editor.md)
          + [開發報表](/help/sites-developing/dev-reports.md)
       + 元件{#components}
-         + [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)
+         + [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-hant)
          + [樣式系統](https://experienceleague.adobe.com/docs/experience-manager-65/content/sites/authoring/siteandpage/style-system.html)
          + [元件概觀](/help/sites-developing/components.md)
          + [AEM元件 — 基本需知](/help/sites-developing/components-basics.md)
