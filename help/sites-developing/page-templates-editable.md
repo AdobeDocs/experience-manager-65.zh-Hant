@@ -10,9 +10,9 @@ exl-id: dcb66b6d-d731-493e-8936-12d529f6cbde
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
 workflow-type: tm+mt
-source-wordcount: '3186'
+source-wordcount: '3187'
 ht-degree: 1%
 
 ---
@@ -434,7 +434,7 @@ ht-degree: 1%
 
 如果您已建立可作為其他範本基礎的範本，則可以複製此範本作為範本型別。
 
-1. 建立範本，就像您在此處記錄的任何可編輯範本[一樣](/help/sites-authoring/templates.md#creating-a-new-template-template-author)，可作為範本型別的基礎。
+1. 建立範本，就像建立任何可編輯的範本一樣。 請參閱[建立頁面範本](/help/sites-authoring/templates.md#creating-a-new-template-template-author)。 這可作為範本型別的基礎。
 1. 使用CRXDE Lite，將新建立的範本從`templates`節點複製到[範本資料夾](/help/sites-developing/page-templates-editable.md#template-folders)下的`template-types`節點。
 1. 從[範本資料夾](/help/sites-developing/page-templates-editable.md#template-folders)下的`templates`節點中刪除範本。
 1. 在`template-types`節點下的範本復本中，從所有`jcr:content`節點刪除所有`cq:template`和`cq:templateType`屬性。

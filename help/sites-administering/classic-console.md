@@ -10,9 +10,9 @@ exl-id: 8c6ba22f-5555-4e3c-998a-9353bd44715b
 solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
 workflow-type: tm+mt
-source-wordcount: '887'
+source-wordcount: '891'
 ht-degree: 2%
 
 ---
@@ -22,7 +22,9 @@ ht-degree: 2%
 
 本節內容適用於傳統UI標籤主控台。
 
-觸控最佳化的UI標籤控制檯是[這裡](/help/sites-administering/tags.md#tagging-console)。
+>[!NOTE]
+>
+>請參閱[管理標籤](/help/sites-administering/tags.md#tagging-console)，以取得觸控最佳化UI標籤主控台的詳細資料。
 
 若要存取傳統UI標籤主控台：
 

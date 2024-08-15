@@ -10,9 +10,9 @@ exl-id: baec7fc8-d48c-4bc6-b12b-4bf4eff695ea
 solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
 workflow-type: tm+mt
-source-wordcount: '1758'
+source-wordcount: '1756'
 ht-degree: 0%
 
 ---
@@ -123,7 +123,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->在上圖中，假設資料中心2的AEM伺服器與資料中心1的MongoDB主要節點之間的網路延遲高於記錄[此處](/help/sites-deploying/aem-with-mongodb.md#checklists)的需求，AEM Server 3和AEM Server 4會顯示非使用中狀態。 如果最大延遲與需求相容（例如透過使用可用性區域），則資料中心2中的AEM伺服器也可以作用中，以建立跨多個資料中心作用中的AEM叢集。
+>在上圖中，假設資料中心2的AEM伺服器與資料中心1的MongoDB主要節點之間的網路延遲，高於[具有MongoDB — 檢查清單](/help/sites-deploying/aem-with-mongodb.md#checklists)的Adobe Experience Manager下記錄的要求，AEM Server 3和AEM Server 4會顯示非使用中狀態。 如果最大延遲與需求相容（例如透過使用可用性區域），則資料中心2中的AEM伺服器也可以作用中，以建立跨多個資料中心作用中的AEM叢集。
 
 >[!NOTE]
 >
@@ -151,7 +151,7 @@ Adobe強烈建議TarMK作為客戶在所有部署案例(AEM Author和Publish例�
 
 >[!NOTE]
 >
->在部署硬體組態的情況下，可使用嚴苛日來評估客戶應用程式的效能。 [此處](/help/sites-developing/tough-day.md)提供此工具的詳細資訊。
+>[嚴苛日](/help/sites-developing/tough-day.md)可用來評估客戶應用程式在已部署硬體組態內容中的效能。
 
 使用MongoDB的最低部署通常涉及以下拓撲：
 
@@ -184,9 +184,9 @@ Adobe強烈建議TarMK作為客戶在所有部署案例(AEM Author和Publish例�
 
 **MongoDB部署的Strong建議：**
 
-* 請參閱Adobe Experience Manager [文章](https://www.mongodb.com/lp/contact/mongodb-adobe-experience-manager)的MongoDB；
-* 檢閱MongoDB生產[檢查清單](https://docs.mongodb.org/manual/administration/production-checklist/)；
-* 在[這裡](https://university.mongodb.com/)的MongoDB上參加認證課程。
+* 請參閱Adobe Experience Manager的[MongoDB部署檢閱](https://www.mongodb.com/lp/contact/mongodb-adobe-experience-manager)；
+* 檢閱[MongoDB作業檢查清單](https://docs.mongodb.org/manual/administration/production-checklist/)；
+* 參加MongoDB上的[認證課程 — 可在](https://university.mongodb.com/)線上取得。
 
 >[!NOTE]
 >

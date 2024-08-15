@@ -10,9 +10,9 @@ exl-id: 52437eb5-f9fb-4945-9950-5a1562fe878d
 solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+source-git-commit: db7830895c8a2d1b7228dc4780296d43f15776df
 workflow-type: tm+mt
-source-wordcount: '706'
+source-wordcount: '729'
 ht-degree: 0%
 
 ---
@@ -118,8 +118,8 @@ Red Hat® Linux®使用稱為Transparent Great Pages (THP)的記憶體管理演�
 >
 >請參閱下列資源：
 >
->* 如需Red Hat® Linux®上透明大型頁面的詳細資訊，請參閱此[文章](https://access.redhat.com/solutions/46111)。
->* 如需Linux®調整秘訣，請參閱此[文章](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html)。
+>* 如需Red Hat® Linux®上透明大型頁面的詳細資訊，請參閱Red Hat®客戶入口網站的下列文章： [如何在Red Hat Enterprise Linux 6、7和8中使用、監視和停用透明大型頁面？](https://access.redhat.com/solutions/46111)
+>* 如需Linux®調整秘訣，請參閱[效能最佳化](/help/sites-deploying/configuring-performance.md)。
 >
 
 ## 維護存放庫 {#maintaining-the-repository}

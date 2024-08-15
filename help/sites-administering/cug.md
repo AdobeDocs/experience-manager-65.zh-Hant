@@ -10,9 +10,9 @@ exl-id: 9efba91d-45e8-42e1-9db6-490d21bf7412
 solution: Experience Manager, Experience Manager Sites
 feature: Security
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+source-git-commit: 6f3c4f4aa4183552492c6ce5039816896bd67495
 workflow-type: tm+mt
-source-wordcount: '706'
+source-wordcount: '710'
 ht-degree: 0%
 
 ---
@@ -93,7 +93,7 @@ ht-degree: 0%
    >
    >許可權索引標籤中的CUG無法從Blueprint轉出至即時副本。 設定即時副本時，請對此進行規劃。
    >
-   >如需詳細資訊，請參閱[此頁面](closed-user-groups.md#aem-livecopy)。
+   >如需詳細資訊，請參閱[AEM中的已關閉使用者群組 — Livecopy](closed-user-groups.md#aem-livecopy)。
 
 1. **編輯已關閉的使用者群組**&#x200B;對話方塊開啟。 您可以在這裡搜尋並選取您的CUG，然後使用&#x200B;**儲存**&#x200B;確認群組選擇。
 

@@ -10,9 +10,9 @@ feature: Administering
 exl-id: dadde3ee-d60c-4b87-9af0-a12697148161
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+source-git-commit: 3aa55b88f589749fb49d5ff46340b0912d490157
 workflow-type: tm+mt
-source-wordcount: '2666'
+source-wordcount: '2673'
 ht-degree: 0%
 
 ---
@@ -409,7 +409,7 @@ Adobe建議定期執行維護作業，以防止隨著時間推移存放庫過度
 1. 執行冷待命存放庫維護，如上節[所述](/help/sites-deploying/tarmk-cold-standby.md#cold-standby-repository-maintenance)。
 1. 維護程式完成且執行個體重新啟動後：
 
-   * 在主要上，透過[本文章](/help/sites-administering/data-store-garbage-collection.md#running-data-store-garbage-collection-via-the-jmx-console)中所述的相關JMX Bean執行資料存放區記憶體回收。
+   * 在主要上，透過[透過JMX主控台執行資料存放區廢棄專案收集](/help/sites-administering/data-store-garbage-collection.md#running-data-store-garbage-collection-via-the-jmx-console)中所述的相關JMX Bean來執行資料存放區廢棄專案收集。
    * 待命時，只能透過&#x200B;**BlobGarbageCollection** MBean - `startBlobGC()`使用資料存放區記憶體回收。 **RepositoryManagement** MBean在待命狀態中無法使用。
 
    >[!NOTE]

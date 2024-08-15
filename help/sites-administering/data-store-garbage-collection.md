@@ -10,9 +10,9 @@ exl-id: 0dc4a8ce-5b0e-4bc9-a6f5-df2a67149e22
 solution: Experience Manager, Experience Manager Sites
 feature: Operations
 role: Admin
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: 3aa55b88f589749fb49d5ff46340b0912d490157
 workflow-type: tm+mt
-source-wordcount: '1892'
+source-wordcount: '1897'
 ht-degree: 0%
 
 ---
@@ -182,7 +182,7 @@ curl命令會立即傳回。
 
 資料存放區一致性檢查會報告任何遺失但仍被參考的資料存放區二進位檔。 若要開始一致性檢查，請遵循下列步驟：
 
-1. 前往JMX主控台。 如需有關如何使用JMX主控台的資訊，請參閱[本文章](/help/sites-administering/jmx-console.md#using-the-jmx-console)。
+1. 前往JMX主控台。 如需有關如何使用JMX主控台的資訊，請參閱[使用JMX主控台監視伺服器資源](/help/sites-administering/jmx-console.md#using-the-jmx-console)。
 1. 搜尋&#x200B;**BlobGarbageCollection** Mbean並按一下它。
 1. 按一下`checkConsistency()`連結。
 

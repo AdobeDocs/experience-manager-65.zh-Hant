@@ -10,9 +10,9 @@ exl-id: 39e35a07-140f-4853-8f0d-8275bce27a65
 feature: Security
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+source-git-commit: 6f3c4f4aa4183552492c6ce5039816896bd67495
 workflow-type: tm+mt
-source-wordcount: '6650'
+source-wordcount: '6662'
 ht-degree: 0%
 
 ---
@@ -78,7 +78,7 @@ CUG的主要功能是限制內容存放庫中指定樹狀結構的讀取存取�
 
 除了CUG的專用存取控制管理外，新的授權模型可讓您有條件地啟用其原則的許可權評估。 這可讓您在中繼環境中設定CUG原則，並且只允許在複製到生產環境後評估有效許可權。
 
-CUG原則的許可權評估以及與預設或任何其他授權模型的互動，遵循為Apache Jackrabbit Oak中的多個授權機制設計的模式。 也就是說，若且唯若所有模型都授予存取權時，才授予一組特定許可權。 如需詳細資訊，請參閱[此頁面](https://jackrabbit.apache.org/oak/docs/security/authorization/composite.html)。
+CUG原則的許可權評估以及與預設或任何其他授權模型的互動，遵循為Apache Jackrabbit Oak中的多個授權機制設計的模式。 也就是說，若且唯若所有模型都授予存取權時，才授予一組特定許可權。 如需詳細資訊，請參閱[Jackrabbit Oak檔案](https://jackrabbit.apache.org/oak/docs/security/authorization/composite.html)。
 
 下列特性適用於與授權模型相關的許可權評估，這些授權模型設計用來處理和評估CUG原則：
 
@@ -129,7 +129,7 @@ CUG功能的認證相關部分可讓您標籤需要認證的樹狀結構，並�
 
 由於此型別的驗證需求應限製為某些執行模式，以及內容存放庫中的一小部分樹狀結構，因此追蹤需求mixin型別和登入路徑屬性是有條件的。 而且，它繫結到定義受支援路徑的對應配置（請參閱下面的配置選項）。 因此，只有這些支援路徑範圍內的變更才會觸發OSGi註冊的更新，其他地方mixin型別和屬性都會被忽略。
 
-預設AEM設定現在會使用此設定，允許以製作執行模式設定mixin，但只有在複製到發佈執行個體時才會生效。 請參閱[此頁面](https://sling.apache.org/documentation/the-sling-engine/authentication/authenticationframework.html)以瞭解Sling如何強制驗證要求的詳細資訊。
+預設AEM設定現在會使用此設定，允許以製作執行模式設定mixin，但只有在複製到發佈執行個體時才會生效。 請參閱[Sling驗證 — 架構](https://sling.apache.org/documentation/the-sling-engine/authentication/authentication-framework.html)檔案，以瞭解Sling如何強制執行驗證要求的詳細資訊。
 
 在設定的支援路徑中新增`granite:AuthenticationRequired` mixin型別，會導致負責處理常式的OSGi註冊被更新，包含具有`sling.auth.requirements`屬性的新增、其他專案。 如果指定的驗證需求指定了選用的`granite:loginPath`屬性，則值也會向驗證器註冊，且具有&#39;-&#39;前置詞，以排除驗證需求。
 
@@ -187,7 +187,7 @@ Apache Sling驗證需求會透過頁面或節點階層繼承。 繼承和評估�
 
 ### 存放庫中的CUG原則表示 {#cug-policy-representation-in-the-repository}
 
-Oak檔案說明新的CUG政策在存放庫內容中的反映方式。 如需詳細資訊，請參閱[此頁面](https://jackrabbit.apache.org/oak/docs/security/authorization/cug.html#Representation_in_the_Repository)。
+Oak檔案說明新的CUG政策在存放庫內容中的反映方式。 如需詳細資訊，請參閱有關使用CUG管理存取許可權的[Jackrabbit Oak檔案](https://jackrabbit.apache.org/oak/docs/security/authorization/cug.html#Representation_in_the_Repository)。
 
 ### 存放庫中的驗證需求 {#authentication-requirement-in-the-repository}
 

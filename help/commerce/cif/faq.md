@@ -5,10 +5,10 @@ exl-id: d541607f-c4c9-4dd5-aadf-64d4cb5f9f2a
 solution: Experience Manager,Commerce
 feature: Commerce Integration Framework
 role: Admin, Developer
-source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
+source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
 workflow-type: tm+mt
-source-wordcount: '956'
-ht-degree: 66%
+source-wordcount: '958'
+ht-degree: 65%
 
 ---
 
@@ -78,4 +78,4 @@ Adobe 建議使用抽象的付款方式。這麼做會讓瀏覽器使用者端�
 
 ## 16. 如何申請 I/O 執行階段試用版授權？
 
-您可以在「[這裡](https://adobeio.typeform.com/to/obqgRm)」申請使用 I/O 執行階段的試用版授權。
+如需請求使用I/O執行階段的試用授權詳細資訊，請參閱[取得存取權](https://developer.adobe.com/runtime/docs/guides/overview/getting_access/)。

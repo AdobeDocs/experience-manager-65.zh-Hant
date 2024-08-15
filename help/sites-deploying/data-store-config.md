@@ -8,9 +8,9 @@ feature: Configuring
 exl-id: c1c90d6a-ee5a-487d-9a8a-741b407c8c06
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
 workflow-type: tm+mt
-source-wordcount: '3476'
+source-wordcount: '3461'
 ht-degree: 1%
 
 ---
@@ -46,11 +46,9 @@ ht-degree: 1%
 
 >[!CAUTION]
 >
->較新版本的Oak採用新的命名方案和格式用於OSGi設定檔案。 新的命名配置需要名稱為&#x200B;**.config**&#x200B;的組態檔，而新格式需要輸入值，且已在此處記錄[](https://sling.apache.org/documentation/development/slingstart.html#default-configuration-format)。
+>較新版本的Oak採用新的命名方案和格式用於OSGi設定檔案。 新的命名配置需要名稱為&#x200B;**.config**&#x200B;的組態檔，而新格式需要輸入值。 如需詳細資訊，請參閱[Apache Sling布建模型和Apache SlingStart — 預設設定格式](https://sling.apache.org/documentation/development/slingstart.html#default-configuration-format)。
 >
 >如果您從舊版Oak升級，請務必先備份`crx-quickstart/install`資料夾。 升級之後，將資料夾的內容還原至升級後的安裝，並將組態檔的副檔名從&#x200B;**.cfg**&#x200B;修改為&#x200B;**.config**。
->
->如果您正在閱讀本文以準備從&#x200B;**AEM 5.x**&#x200B;安裝升級，請務必先參閱[升級](https://experienceleague.adobe.com/docs/)檔案。
 
 ### 區段節點存放區 {#segment-node-store}
 
@@ -372,7 +370,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 
    * 如果使用S3做為資料存放區，請在`<aem-install>/crx-quickstart/install`資料夾中建立名為`rg.apache.jackrabbit.oak.plugins.blob.datastore.S3DataStore.config`的檔案，如上所述。
 
-1. 修改每個執行個體上的資料存放區組態檔，使其指向相同的資料存放區。 如需詳細資訊，請參閱[本文章](/help/sites-deploying/data-store-config.md#data-store-configurations)。
+1. 修改每個執行個體上的資料存放區組態檔，使其指向相同的資料存放區。 如需詳細資訊，請參閱[資料存放區組態](/help/sites-deploying/data-store-config.md#data-store-configurations)。
 1. 如果執行個體是從現有的伺服器複製的，您必須在存放庫離線時使用最新的Oak-run工具移除新執行個體的`clusterId`。 您必須執行的命令為：
 
    ```xml

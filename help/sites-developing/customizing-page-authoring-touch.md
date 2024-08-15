@@ -9,10 +9,10 @@ exl-id: 90594588-db8e-4d4c-a208-22c1c6ea2a2d
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: 3aa55b88f589749fb49d5ff46340b0912d490157
 workflow-type: tm+mt
-source-wordcount: '1257'
-ht-degree: 39%
+source-wordcount: '1264'
+ht-degree: 38%
 
 ---
 
@@ -112,7 +112,7 @@ GITHUB上的程式碼
 * 透過實作 [`com.day.cq.commons.predicate.AbstractNodePredicate`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/predicate/package-summary.html) 介面實作自訂述詞。
 * 指定述詞的名稱，並在使用 `pathbrowser` 時參照該名稱。
 
-如需建立自訂述詞的詳細資訊，請參閱[本文章](/help/sites-developing/implementing-custom-predicate-evaluator.md)。
+如需建立自訂述詞的詳細資訊，請參閱[為查詢產生器實作自訂述詞評估器](/help/sites-developing/implementing-custom-predicate-evaluator.md)。
 
 >[!NOTE]
 >

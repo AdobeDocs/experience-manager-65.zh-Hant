@@ -5,9 +5,9 @@ exl-id: 834aadac-c3be-4e7a-a3cb-349608810b40
 solution: Experience Manager,Commerce
 feature: Commerce Integration Framework
 role: Admin, Developer
-source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
+source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
 workflow-type: tm+mt
-source-wordcount: '267'
+source-wordcount: '272'
 ht-degree: 3%
 
 ---
@@ -37,7 +37,7 @@ ht-degree: 3%
 
 ## 限制 {#restrictions}
 
-雖然此服務可定義任何標頭名稱，包括標準名稱，但無法加以設定。 換言之，您無法使用此功能覆寫標準HTTP標頭。 [這裡](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers)有受限制的標頭名稱清單。 除了這些以外，還有兩個標頭無法使用：
+雖然此服務可定義任何標頭名稱，包括標準名稱，但無法加以設定。 換言之，您無法使用此功能覆寫標準HTTP標頭。 在[mdn網頁檔案 — HTTP標題](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers)下可找到限制的標題名稱清單。 除了這些以外，還有兩個標頭無法使用：
 
 * &quot;Store&quot; - CIF用來識別Adobe Commerce存放區
 * &quot;Preview-Version&quot; — 由CIF用於擷取分階段產品

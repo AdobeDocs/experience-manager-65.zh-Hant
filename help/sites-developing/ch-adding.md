@@ -5,9 +5,9 @@ exl-id: ae745af9-b49f-46b9-ab48-2fd256e9a681
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,Personalization
 role: Developer
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
 workflow-type: tm+mt
-source-wordcount: '902'
+source-wordcount: '901'
 ht-degree: 0%
 
 ---
@@ -112,7 +112,7 @@ ContextHub提供[`ContextHub.Utils.JSON.tree`](contexthub-api.md#contexthub-util
 >
 >ContextHub預設不會知道發佈伺服器上目前使用的登入，並且ContextHub會將此類使用者視為「匿名」。
 >
->您可以載入設定檔存放區，讓ContextHub知道登入的使用者。 請參閱這裡](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/blob/master/ui.apps/src/main/content/jcr_root/apps/weretail/components/structure/header/clientlib/js/utilities.js)的GitHub上的[範常式式碼。
+>您可以載入設定檔存放區，讓ContextHub知道登入的使用者。 請參閱GitHub](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/blob/master/ui.apps/src/main/content/jcr_root/apps/weretail/components/structure/header/clientlib/js/utilities.js)上的[範常式式碼。
 
 ### ContextHub事件 {#contexthub-eventing}
 

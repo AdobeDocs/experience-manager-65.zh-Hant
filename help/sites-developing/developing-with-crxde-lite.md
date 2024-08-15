@@ -10,9 +10,9 @@ exl-id: 9e88ca55-ac3d-4857-b6b2-aeb732562664
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,Developer Tools
 role: Developer
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
 workflow-type: tm+mt
-source-wordcount: '2118'
+source-wordcount: '2114'
 ht-degree: 1%
 
 ---
@@ -219,7 +219,7 @@ CRXDE Lite提供下列功能：
 
 您現在可以修改屬性或建立節點，讓對話方塊符合您的需求。
 
-您也可以使用對話方塊編輯器來編輯對話方塊。 在CRXDE Lite中的對話方塊節點上按兩下會開啟編輯器。 有關對話方塊編輯器的詳細資訊可在[這裡](/help/sites-developing/dialog-editor.md)找到。
+您也可以使用對話方塊編輯器來編輯對話方塊。 在CRXDE Lite中的對話方塊節點上按兩下會開啟編輯器。 如需詳細資訊，請參閱[對話方塊編輯器](/help/sites-developing/dialog-editor.md)。
 
 ## 建立節點 {#creating-a-node}
 

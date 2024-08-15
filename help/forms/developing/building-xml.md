@@ -5,9 +5,9 @@ exl-id: 2ec57cd4-f41b-4e5c-849d-88ca3d2cfe19
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
 workflow-type: tm+mt
-source-wordcount: '983'
+source-wordcount: '981'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,7 @@ JEE流程管理工作流程中的AEM Forms涉及許多XML，例如：XML資訊�
 
 **關於執行指令碼服務的技術**
 
-若要瞭解Execute Script服務的功能和限制，必須瞭解服務的技術基礎。 JEE上的AEM Forms使用Apache Xerces檔案物件模型(DOM)剖析器，在程式中建立和儲存XML變數。 Xerces是W3C檔案物件模型規格的Java™實作；定義於[此處](https://dom.spec.whatwg.org/)。 DOM規格是操作XML的標準方法，自1998年以來就已存在。 Xerces的Java™實作Xerces-J支援DOM Level 2 1.0版。
+若要瞭解Execute Script服務的功能和限制，必須瞭解服務的技術基礎。 JEE上的AEM Forms使用Apache Xerces檔案物件模型(DOM)剖析器，在程式中建立和儲存XML變數。 Xerces是W3C的[檔案物件模型規格](https://dom.spec.whatwg.org/)的Java™實作。 DOM規格是操作XML的標準方法，自1998年以來就已存在。 Xerces的Java™實作Xerces-J支援DOM Level 2 1.0版。
 
 用來儲存XML變數的Java™類別為：
 
@@ -58,7 +58,7 @@ JEE流程管理工作流程中的AEM Forms涉及許多XML，例如：XML資訊�
 
 * org.apache.xerces.dom.DocumentImpl
 
-DocumentImpl是NodeImpl的子類別，因此可以假設任何XML處理變數都是NodeImpl衍生。 您可以在[這裡](https://xerces.apache.org/xerces-j/apiDocs/org/apache/xerces/dom/NodeImpl.html)找到NodeImpl的檔案。
+DocumentImpl是NodeImpl的子類別，因此可以假設任何XML處理變數都是NodeImpl衍生。 如需詳細資訊，請參閱[NodeImpl](https://xerces.apache.org/xerces-j/apiDocs/org/apache/xerces/dom/NodeImpl.html)的檔案。
 
 **使用執行指令碼服務建立範例XML**
 

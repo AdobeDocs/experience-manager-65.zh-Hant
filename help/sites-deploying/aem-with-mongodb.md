@@ -10,9 +10,9 @@ exl-id: 70a39462-8584-4c76-a097-05ee436247b7
 solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
-source-git-commit: a8203a6bccff821dd6ca3f63c196829379aabe55
+source-git-commit: db7830895c8a2d1b7228dc4780296d43f15776df
 workflow-type: tm+mt
-source-wordcount: '6192'
+source-wordcount: '6216'
 ht-degree: 0%
 
 ---
@@ -488,7 +488,7 @@ Red Hat® Linux®使用稱為Transparent Great Pages (THP)的記憶體管理演�
 
 >[!NOTE]
 >
->如需透明大型頁面的詳細資訊，請參閱此[文章](https://access.redhat.com/solutions/46111)。
+>如需透明巨集頁面的詳細資訊，請參閱Red Hat®客戶入口網站的下列文章： [如何在Red Hat Enterprise Linux 6、7和8？](https://access.redhat.com/solutions/46111)中使用、監視和停用透明巨集頁面。
 
 #### 停用NUMA {#disable-numa}
 
@@ -595,7 +595,7 @@ echo "{nThreads:32,fileSizeMB:1000,w:true}" | mongoperf
 
 在沒有Dispatcher的情況下執行AEM需要由其他應用程式執行SSL終止和負載平衡。 這是必要操作，因為工作階段必須和建立工作階段的AEM執行個體有相關性，這個概念稱為粘性連線。 原因是為了確保內容的更新顯示最小的延遲。
 
-如需如何設定的詳細資訊，請參閱[Dispatcher檔案](https://experienceleague.adobe.com/en/docs/experience-manager-dispatcher/using/dispatcher)。
+如需如何設定的詳細資訊，請參閱[Dispatcher檔案](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-dispatcher/using/dispatcher)。
 
 ### 其他設定 {#additional-configuration}
 

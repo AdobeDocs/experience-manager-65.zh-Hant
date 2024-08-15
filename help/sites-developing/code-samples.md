@@ -9,9 +9,9 @@ exl-id: d77e9e39-6117-4d09-b34b-a97ab347397e
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
 workflow-type: tm+mt
-source-wordcount: '140'
+source-wordcount: '147'
 ht-degree: 4%
 
 ---
@@ -22,9 +22,9 @@ Adobe Consulting服務團隊已產生一系列Adobe Experience Manager (AEM)程�
 
 專為AEM的新手開發人員設計的多部分教學課程，涵蓋專案設定、核心元件、可編輯的範本、使用者端資料庫和元件開發等基本主題： [AEM Sites快速入門 — WKND教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
 
-建立AEM專案作為開發您自己的功能起點的Maven範本可在[此處](https://github.com/adobe/aem-project-archetype)取得。
+GitHub [上提供建立AEM專案作為開發您自己的功能起點的Maven範本 — AEM專案原型](https://github.com/adobe/aem-project-archetype)。
 
-標準觸控式UI程式碼範例可在[這裡](/help/sites-developing/developing-components.md)取得。
+標準觸控式UI程式碼範例可從[開發AEM元件](/help/sites-developing/developing-components.md)取得。
 
 >[!NOTE]
 >

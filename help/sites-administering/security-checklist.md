@@ -10,7 +10,7 @@ exl-id: 314a6409-398c-470b-8799-0c4e6f745141
 feature: Security
 solution: Experience Manager, Experience Manager Sites
 role: Admin,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
 workflow-type: tm+mt
 source-wordcount: '2959'
 ht-degree: 1%
@@ -339,7 +339,7 @@ Sling是&#x200B;*以內容為中心*。 處理著重於內容，因為每個(HTT
 
 預設的資產下載servlet可讓已驗證身分的使用者發出任意大型的並行下載請求，以建立資產的ZIP檔案。 建立大型ZIP封存可能會導致伺服器和網路過載。 為了降低此行為所導致的潛在拒絕服務(DoS)風險，[!DNL Experience Manager]發佈執行個體上的`AssetDownloadServlet` OSGi元件預設為停用。 預設會在[!DNL Experience Manager]作者執行個體上啟用。
 
-如果您不需要下載功能，請在製作和發佈部署上停用servlet。 如果您的設定需要啟用資產下載功能，請參閱[本文章](/help/assets/download-assets-from-aem.md)以取得詳細資訊。 此外，您可以定義部署可支援的最大下載限制。
+如果您不需要下載功能，請在製作和發佈部署上停用servlet。 如果您的設定需要啟用資產下載功能，請參閱[從AdobeExperience Manager下載資產](/help/assets/download-assets-from-aem.md)以取得詳細資訊。 此外，您可以定義部署可支援的最大下載限制。
 
 ### 停用WebDAV {#disable-webdav}
 
@@ -395,7 +395,7 @@ Sling是&#x200B;*以內容為中心*。 處理著重於內容，因為每個(HTT
 
 就像所有存放庫資料一樣，這些屬性由Oak授權棧疊中介。 應根據最低許可權原則限制存取這些許可權。
 
-為了支援此功能，Adobe提供許可權強化套件，作為客戶進行建置的基礎。 其運作方式是在存放庫根目錄安裝「拒絕」存取控制專案，限制對常用系統屬性的匿名存取。 封裝可在[這裡](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/helper/anonymous-permissions-pkg-0.1.2.zip)下載，並可安裝在所有支援的AEM版本上。
+為了支援此功能，Adobe提供許可權強化套件，作為客戶進行建置的基礎。 其運作方式是在存放庫根目錄安裝「拒絕」存取控制專案，限制對常用系統屬性的匿名存取。 套件可以[下載](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/helper/anonymous-permissions-pkg-0.1.2.zip)並安裝在所有支援的AEM版本上。
 
 為了說明變更，我們可以在安裝套件之前比較可以匿名檢視的節點屬性：
 

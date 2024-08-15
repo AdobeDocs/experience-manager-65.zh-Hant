@@ -10,9 +10,9 @@ exl-id: 53d8c654-8017-4528-a44e-e362d8b59f82
 feature: Security
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 84979bbb49d47ec47c898a6747f64048b577c365
+source-git-commit: 6f3c4f4aa4183552492c6ce5039816896bd67495
 workflow-type: tm+mt
-source-wordcount: '5409'
+source-wordcount: '5412'
 ht-degree: 1%
 
 ---
@@ -610,7 +610,7 @@ AEM提供三種不同的方式，讓您從群組移除使用者或群組：
 
 >[!NOTE]
 >
->Adobe已推出新的觸控式UI型許可權管理主體檢視。 如需使用方式的詳細資訊，請參閱[此頁面](/help/sites-administering/touch-ui-principal-view.md)。
+>Adobe已推出新的觸控式UI型許可權管理主體檢視。 如需有關如何使用它的詳細資訊，請參閱[許可權管理的主體檢視](/help/sites-administering/touch-ui-principal-view.md)。
 
 本節說明如何設定許可權，包括復寫許可權。
 

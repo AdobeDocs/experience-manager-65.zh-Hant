@@ -9,9 +9,9 @@ feature: Configuring
 exl-id: 5a305a5b-0c3d-413b-88c1-1f5abf7e1579
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 6f3c4f4aa4183552492c6ce5039816896bd67495
 workflow-type: tm+mt
-source-wordcount: '2939'
+source-wordcount: '2937'
 ht-degree: 5%
 
 ---
@@ -83,7 +83,7 @@ ht-degree: 5%
    <td><p>Solr</p> </td>
    <td><p>iPlanet</p> </td>
    <td><p>FireFox</p> </td>
-   <td><p>行銷活動</p> </td>
+   <td><p>Campaign</p> </td>
   </tr>
   <tr>
    <td><p>表單</p> </td>
@@ -111,7 +111,7 @@ ht-degree: 5%
    <td><p> </p> </td>
    <td><p> </p> </td>
    <td><p>Safari</p> </td>
-   <td><p>對象</p> </td>
+   <td><p>客群</p> </td>
   </tr>
   <tr>
    <td><p>多網站</p> </td>
@@ -128,7 +128,7 @@ ht-degree: 5%
    <td><p>Assets</p> </td>
   </tr>
   <tr>
-   <td><p>商務</p> </td>
+   <td><p>Commerce</p> </td>
    <td><p>MSRP</p> </td>
    <td><p>Apple作業系統</p> </td>
    <td><p> </p> </td>
@@ -429,7 +429,7 @@ Adobe建議將TarMK設為客戶在所有部署案例中使用的預設持續性�
 
 ### TarMK設定指引 {#tarmk-settings-guideline}
 
-為了獲得良好的效能，您應該遵循以下提供的設定准則。 如需如何變更設定的說明，[請參閱此頁面](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html)。
+為了獲得良好的效能，您應該遵循以下提供的設定准則。 如需如何變更設定的說明，請參閱[效能最佳化](/help/sites-deploying/configuring-performance.md)。
 
 <table>
  <tbody>
@@ -539,7 +539,7 @@ Adobe建議將TarMK設為客戶在所有部署案例中使用的預設持續性�
 
 ### MongoMK設定指南 {#mongomk-settings-guidelines}
 
-為了獲得良好的效能，您應該遵循以下提供的設定准則。 如需如何變更設定的說明，[請參閱此頁面](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html)。
+為了獲得良好的效能，您應該遵循以下提供的設定准則。 如需如何變更設定的說明，請參閱[效能最佳化](/help/sites-deploying/configuring-performance.md)。
 
 <table>
  <tbody>

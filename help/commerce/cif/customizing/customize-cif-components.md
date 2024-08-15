@@ -5,9 +5,9 @@ exl-id: 8933942e-be49-49d3-bf0a-7225257e2803
 feature: Commerce Integration Framework
 solution: Experience Manager,Commerce
 role: Admin, Developer
-source-git-commit: ddd411a5dde57cf66cbcb458578b0aa32139b649
+source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
 workflow-type: tm+mt
-source-wordcount: '2302'
+source-wordcount: '2305'
 ht-degree: 0%
 
 ---
@@ -176,7 +176,7 @@ AEM中顯示的產品和產品資料儲存在Adobe Commerce中。 接下來，�
 
 >[!TIP]
 >
->如需[Adobe Commerce GraphQL的詳細檔案，請參閱此處](https://devdocs.magento.com/guides/v2.4/graphql/index.html)。
+>如需Adobe Commerce GraphQL的詳細檔案，請參閱下列[GraphQL概觀](https://devdocs.magento.com/guides/v2.4/graphql/index.html)。
 
 ## 更新產品Teaser的Sling模型 {#updating-sling-model-product-teaser}
 
@@ -386,7 +386,7 @@ AEM元件的常見擴充功能是修改元件產生的標籤。 覆寫元件用�
 
    在HTL中呼叫Sling模型方法時，會捨棄方法的`get`和`is`部分，且第一個字母會變成小寫。 因此，`isShowBadge()`會變成`.showBadge`，`isEcoFriendly`會變成`.ecoFriendly`。 根據從`.isEcoFriendly()`傳回的布林值，決定是否顯示`<span>Eco Friendly</span>`。
 
-   如需`data-sly-test`和其他[HTL區塊陳述式的詳細資訊，請參閱此處](https://experienceleague.adobe.com/docs/experience-manager-htl/content/specification.html)。
+   如需`data-sly-test`和其他HTL區塊陳述式的詳細資訊，請參閱[HTL規格](https://experienceleague.adobe.com/docs/experience-manager-htl/content/specification.html)。
 
 1. 從命令列終端機，使用Maven技能儲存變更並將更新部署到AEM：
 

@@ -1,5 +1,5 @@
 ---
-title: Post升級檢查與疑難排解
+title: 升級後檢查及疑難排解
 description: 瞭解如何疑難排解升級後可能出現的問題。
 contentOwner: sarchiz
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,16 +10,16 @@ feature: Upgrading
 exl-id: ceac2b52-6885-496d-9517-5fc7291ad070
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
 workflow-type: tm+mt
-source-wordcount: '1793'
+source-wordcount: '1798'
 ht-degree: 0%
 
 ---
 
-# Post升級檢查與疑難排解{#post-upgrade-checks-and-troubleshooting}
+# 升級後檢查及疑難排解{#post-upgrade-checks-and-troubleshooting}
 
-## Post升級檢查 {#post-upgrade-checks}
+## 升級後檢查 {#post-upgrade-checks}
 
 在[就地升級](/help/sites-deploying/in-place-upgrade.md)之後，應執行下列活動以完成升級。 我們假設AEM已使用6.5 jar啟動，而且已部署升級的程式碼基底。
 
@@ -103,7 +103,7 @@ ht-degree: 0%
 
 #### 啟用資料存放區記憶體回收 {#enable-data-store-garbage-collection}
 
-如果使用檔案資料存放區，請確定資料存放區記憶體回收工作已啟用，並已新增到每週維護清單中。 [此處](/help/sites-administering/data-store-garbage-collection.md)列出指示。
+如果使用檔案資料存放區，請確定資料存放區記憶體回收工作已啟用，並已新增到每週維護清單中。 說明概述在[修訂清理](/help/sites-administering/data-store-garbage-collection.md)下。
 
 >[!NOTE]
 >
@@ -111,7 +111,7 @@ ht-degree: 0%
 
 #### 啟用線上修訂清除 {#enable-online-revision-cleanup}
 
-如果使用MongoMK或新的TarMK區段格式，請確保已啟用「修訂清除」任務並將其新增到「每日維護」清單中。 [此處](/help/sites-deploying/revision-cleanup.md)概述的指示。
+如果使用MongoMK或新的TarMK區段格式，請確保已啟用「修訂清除」任務並將其新增到「每日維護」清單中。 說明概述在[修訂清理](/help/sites-deploying/revision-cleanup.md)下。
 
 ### 執行測試計畫 {#execute-test-plan}
 

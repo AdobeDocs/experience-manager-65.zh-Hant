@@ -5,10 +5,10 @@ exl-id: b3d4a527-44ca-4eb6-b393-f3e8117cf1a6
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
-source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
+source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
 workflow-type: tm+mt
-source-wordcount: '4484'
-ht-degree: 2%
+source-wordcount: '4493'
+ht-degree: 3%
 
 ---
 
@@ -211,7 +211,7 @@ AEM能以各種格式和從棧疊的不同層級提供內容。 有些從2008年
 * 已改善[體驗片段](/help/sites-authoring/experience-fragments.md)的索引，因此可在搜尋使用這些體驗片段的頁面中找到其內容。
 * [匯出至Target](/help/sites-administering/experience-fragments-target.md)選項現在可讓您以JSON (預設為HTML)或兩者來傳送體驗片段。
 
-#### 轉換 {#translation}
+#### 翻譯 {#translation}
 
 * 使用主要專案簡化建立翻譯專案的流程。
 * 將翻譯工作設定為預設的已核准狀態，以簡化執行翻譯專案。
@@ -255,7 +255,7 @@ AEM能以各種格式和從棧疊的不同層級提供內容。 有些從2008年
 
 #### AEM和Commerce {#aem-commerce}
 
-自AEM 6.4以來，Commerce integration framework的改良功能發行週期較快。[在這裡瞭解更多](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/integrations/magento.html)。
+自AEM 6.4起，Commerce integration framework的改良版週期較快。使用Commerce integration framework](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/integrations/magento.html)從[AEM和Adobe Commerce整合瞭解更多資訊。
 
 #### Communities附加元件 {#communities-add-on}
 

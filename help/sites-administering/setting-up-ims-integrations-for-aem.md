@@ -4,9 +4,9 @@ description: 瞭解如何設定AEM的IMS整合
 feature: Security
 role: Admin
 exl-id: 3c6dbb7e-847f-407b-ac9c-4676dba671a5
-source-git-commit: c2d996586d2ec7299e856a97ae1b744245c730bb
+source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
 workflow-type: tm+mt
-source-wordcount: '433'
+source-wordcount: '432'
 ht-degree: 63%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 63%
 
 >[!NOTE]
 >
->Adobe客戶使用[Adobe Developer Console](https://developer.adobe.com/console)產生可存取各種API的認證。 客戶可以選擇各種憑證類型，包括 OAuth 伺服器到伺服器和單頁應用程式。認證型別服務帳戶(JWT)現在已遭取代，改用Service Pack 20的OAuth伺服器對伺服器認證。 此變更可重新移植到較舊的Service Pack，從Service Pack 11開始一直到Service Pack 20，並使用您可在[這裡](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/ims-jwt-compatibility-package-6.5-1.0.zip)下載的Hotfix。
+>Adobe客戶使用[Adobe Developer Console](https://developer.adobe.com/console)產生可存取各種API的認證。 客戶可以選擇各種憑證類型，包括 OAuth 伺服器到伺服器和單頁應用程式。認證型別服務帳戶(JWT)現在已遭取代，改用Service Pack 20的OAuth伺服器對伺服器認證。 此變更可重新移植到較舊的Service Pack，從Service Pack 11到Service Pack 20，並使用您可以[下載](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/ims-jwt-compatibility-package-6.5-1.0.zip)的Hotfix。
 
 Adobe Experience Manager (AEM)可與許多其他Adobe解決方案整合。 例如 Adobe Target、Adobe Analytics 等。
 

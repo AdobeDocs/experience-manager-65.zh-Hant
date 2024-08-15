@@ -5,9 +5,9 @@ feature: Multi Site Manager
 role: Admin
 exl-id: 23f3391b-5ce3-48e1-ab27-a37737778089
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 3aa55b88f589749fb49d5ff46340b0912d490157
 workflow-type: tm+mt
-source-wordcount: '761'
+source-wordcount: '762'
 ht-degree: 0%
 
 ---
@@ -69,7 +69,7 @@ MSM會在資源URL上向選取器註冊數個可請求的servlet。 這些可供
 
 MSM同步動作是高度可設定的。 轉出期間會修改哪些屬性或元件，直接取決於這些設定的屬性。
 
-請參閱[此文章](msm-best-practices.md)，以取得此主題的詳細資訊。
+請參閱[MSM最佳實務](msm-best-practices.md)以取得此主題的詳細資訊。
 
 ### 如何移除一組作者的轉出許可權？ {#remove-rollout-permissions}
 

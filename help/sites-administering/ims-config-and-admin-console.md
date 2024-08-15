@@ -9,9 +9,9 @@ exl-id: 95eae97c-01c2-4f5c-8068-f504eab7c49e
 feature: Security
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 55bf7104dbd9b9fadf6cb37efa28084fe43393c3
+source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
 workflow-type: tm+mt
-source-wordcount: '1603'
+source-wordcount: '1602'
 ht-degree: 5%
 
 ---
@@ -70,9 +70,9 @@ AEM Managed Services客戶應先布建組織，而在IMS布建過程中，[!DNL 
 
 >[!NOTE]
 >
->如需有關AdobeIdentity Management基本知識（包括IDP設定）的詳細資訊，請參閱文章[此頁面。](https://helpx.adobe.com/tw/enterprise/using/set-up-identity.html)
+>如需有關AdobeIdentity Management基本知識（包括IDP設定）的詳細資訊，請參閱有關[設定身分和單一登入](https://helpx.adobe.com/tw/enterprise/using/set-up-identity.html)的文章。
 >
->如需有關企業管理和[!DNL Admin Console]的詳細資訊，請參閱文章[此頁面](https://helpx.adobe.com/tw/enterprise/managing/user-guide.html)。
+>如需有關企業管理和[!DNL Admin Console]的詳細資訊，請參閱[歡迎使用企業和團隊管理指南](https://helpx.adobe.com/tw/enterprise/managing/user-guide.html)。
 
 ### 將使用者上線到[!DNL Admin Console] {#onboarding-users-to-the-admin-console}
 
@@ -122,15 +122,16 @@ AEM Managed Services客戶應先布建組織，而在IMS布建過程中，[!DNL 
 
 >[!NOTE]
 >
->如需有關使用者同步工具的詳細資訊，請參閱[檔案頁面](https://adobe-apiplatform.github.io/user-sync.py/en/)。
+>如需詳細資訊，請參閱：
 >
+>* [使用者同步工具 — Adobe使用者同步](https://adobe-apiplatform.github.io/user-sync.py/en/)
 >
->使用者同步工具必須使用[這裡](https://adobe-apiplatform.github.io/umapi-documentation/en/UM_Authentication.html)說明的程式，註冊為Adobe I/O使用者端UMAPI。
+>* 使用者同步工具必須使用[API存取驗證](https://adobe-apiplatform.github.io/umapi-documentation/en/UM_Authentication.html)中所述的程式註冊為Adobe I/O使用者端UMAPI
 >
->您可以在[這裡](https://developer.adobe.com/developer-console/docs/guides/)找到Adobe Developer Console檔案。
+>* [Adobe Developer Console檔案](https://developer.adobe.com/developer-console/docs/guides/)。
 >
+>* [使用者管理API檔案](https://adobe-apiplatform.github.io/umapi-documentation/en/)。
 >
->此[位置](https://adobe-apiplatform.github.io/umapi-documentation/en/)包含使用者同步工具使用的[!DNL User Management] API。
 
 >[!NOTE]
 >

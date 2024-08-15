@@ -5,9 +5,9 @@ exl-id: 61144bbe-6710-4cae-a63e-e708936ff360
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+source-git-commit: 6f3c4f4aa4183552492c6ce5039816896bd67495
 workflow-type: tm+mt
-source-wordcount: '1673'
+source-wordcount: '1669'
 ht-degree: 7%
 
 ---
@@ -32,16 +32,14 @@ ht-degree: 7%
 >
 >* **復寫/復寫**
 >  這些是技術術語，說明資料（例如頁面內容、檔案、程式碼、使用者註解）從一個環境移動到另一個環境，例如發佈或反向複製使用者註解時。
->
 
->[!NOTE]
->
->如果您沒有發佈特定頁面所需的許可權：
->
->* 系統會觸發工作流程，將您要發佈的請求通知適當人員。
->* 您的開發團隊可能已自訂此[工作流程](/help/sites-developing/workflows-models.md#main-pars-procedure-6fe6)。
->* 系統會顯示簡短的訊息，通知您工作流程已觸發。
->
+## 許可權不足 {#insufficient-privileges}
+
+如果您沒有發佈特定頁面所需的許可權：
+
+* 系統會觸發工作流程，將您要發佈的請求通知適當人員。
+* 您的開發團隊可能已自訂此[工作流程](/help/sites-developing/workflows-models.md#main-pars-procedure-6fe6)。
+* 系統會顯示簡短的訊息，通知您工作流程已觸發。
 
 ## 發佈頁面 {#publishing-pages-1}
 
@@ -185,7 +183,9 @@ ht-degree: 7%
 
    >[!NOTE]
    >
-   >根據使用者可能擁有也可能沒有的許可權，顯示&#x200B;**工作流程**&#x200B;步驟。 如需詳細資訊，請參閱此頁面](/help/sites-authoring/publishing-pages.md#main-pars-note-0-ejsjqg-refd)上的[上一頁關於發佈許可權和[管理工作流程的存取權](/help/sites-administering/workflows-managing.md)以及[將工作流程套用至頁面](/help/sites-authoring/workflows-applying.md#main-pars-text-5-bvhbkh-refd)的備註。
+   >根據使用者可能擁有也可能沒有的許可權，顯示&#x200B;**工作流程**&#x200B;步驟。
+   >
+   >如需詳細資訊，請參閱[許可權不足](/help/sites-authoring/publishing-pages.md#insufficient-privileges)、[管理工作流程存取權](/help/sites-administering/workflows-managing.md)和[將工作流程套用至頁面](/help/sites-authoring/workflows-applying.md#main-pars-text-5-bvhbkh-refd)等章節。
 
    資源會依觸發的工作流程分組，每個指定選項用於：
 

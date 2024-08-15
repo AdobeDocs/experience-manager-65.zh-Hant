@@ -9,7 +9,7 @@ exl-id: eb5ce76a-bf28-4540-bc2d-3b5ecb8286f2
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
 workflow-type: tm+mt
 source-wordcount: '360'
 ht-degree: 1%
@@ -28,7 +28,7 @@ ht-degree: 1%
 
 編寫頁面內容時，如果基礎範本允許變更頁面設計，則有可能啟用元件瀏覽器中尚未提供的元件，做為網站設計的一部分。
 
-可用的Communities元件在[這裡](author-communities.md#available-communities-components)列出。
+檢視[可用社群元件](author-communities.md#available-communities-components)下的清單。
 
 >[!NOTE]
 >

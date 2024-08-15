@@ -10,9 +10,9 @@ feature: Developing,Tagging
 exl-id: 53a37449-ef87-4fa6-82de-88fdc24cf988
 solution: Experience Manager, Experience Manager Sites
 role: Developer
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
 workflow-type: tm+mt
-source-wordcount: '1638'
+source-wordcount: '1637'
 ht-degree: 0%
 
 ---
@@ -145,7 +145,7 @@ TagID包含[名稱空間](#tag-namespace)，後面接著本機TagID。 [容器�
 
 ### 節點型別標籤法(CND) {#node-type-notation-cnd}
 
-節點型別定義以CND檔案的形式存在於存放庫中。 CND標籤法定義為[此處](https://jackrabbit.apache.org/jcr/node-type-notation.html)之JCR檔案的一部分。
+節點型別定義以CND檔案的形式存在於存放庫中。 CND標籤法定義為[Jackrabbit檔案](https://jackrabbit.apache.org/jcr/node-type-notation.html)的一部分。
 
 AEM中包含的「節點型別」的基本定義如下：
 

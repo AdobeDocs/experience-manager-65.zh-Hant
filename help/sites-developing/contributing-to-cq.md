@@ -9,9 +9,9 @@ exl-id: 43fb4fa3-269a-4635-b055-4b7d787da21f
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
 workflow-type: tm+mt
-source-wordcount: '2635'
+source-wordcount: '2642'
 ht-degree: 0%
 
 ---
@@ -120,7 +120,7 @@ REST (REpresentational State Transfer)是指全球資訊網所依據的軟體架
 
 **作者執行個體** — 通常基於安全性、控管和其他原因，生產網站會將AEM的執行個體劃分為作者執行個體和Publish執行個體。 如需部署架構(包括作者/Publish執行個體)的詳細資訊，請參閱AEM執行個體相關檔案。
 
-**快取、油炸與烘烤** — 傳統上，烘烤與油炸的概念是不同網頁內容管理系統之間的重要區別。 在CMS行話中，「烘烤」是指在發佈時間將資料提交到靜態檔案的概念，而「油炸」是指在請求時間處理資料以供最終簡報（即及時）的概念。
+**快取、油炸與烘烤** — 傳統上，烘烤與油炸的概念是不同網頁內容管理系統之間的重要區別。 在CMS行話中，「烘烤」是指在發佈時提交資料給靜態檔案的概念，而「油炸」是指在請求時處理資料以供最終展示（即即及時）的概念。
 
 **叢集和負載平衡** — 為了增加可用性並改善生產環境的效能，通常會合併多個Author和/或Publish執行個體（放入叢集），方法是讓不同的使用者群組都可以使用它們，或在Dispatcher設定之後對其進行負載平衡。
 
@@ -142,7 +142,7 @@ REST (REpresentational State Transfer)是指全球資訊網所依據的軟體架
 
 JCR有多種預先定義的節點型別和屬性型別，但一般而言，輸入系統相當靈活，（事實上） JCR的其中一項優勢就是允許以同樣簡便的方式儲存/管理結構化和非結構化內容。 也就是說，JCR可以容納高度結構化的資料，但它也可以容納任意的動態資料結構，而不受結構描述限制。
 
-JCR的Java™ API的JavaDoc是[這裡](https://jackrabbit.apache.org/jcr/jcr-api.html)。
+[Apache Software Foundation - JCR API](https://jackrabbit.apache.org/jcr/jcr-api.html)提供JCR的JavaDoc Java™ API。
 
 在嘗試讀取JavaDoc或JCR規格本身之前，您可能會想要檢視由Adobe Experience Services實作的[這個JCR高階說明](/help/sites-developing/the-basics.md#java-content-repository)。
 

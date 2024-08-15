@@ -10,9 +10,9 @@ exl-id: f9a88156-91a2-4c85-9bc9-8f23700c2cbd
 feature: Operations
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: eef7849464540fa3d7bb705e1be9f6e0cf1c8cff
+source-git-commit: db7830895c8a2d1b7228dc4780296d43f15776df
 workflow-type: tm+mt
-source-wordcount: '5744'
+source-wordcount: '5743'
 ht-degree: 2%
 
 ---
@@ -507,7 +507,7 @@ UI可用來篩選表格中的索引，方法是在畫面左上角的搜尋方塊
 
 ### 修訂清理 {#revision-clean-up}
 
-如需有關執行修訂清除的詳細資訊，[請參閱此專屬文章](/help/sites-deploying/revision-cleanup.md)。
+如需詳細資訊，請參閱[修訂清除](/help/sites-deploying/revision-cleanup.md)。
 
 ### Lucene 二進位清理 {#lucene-binaries-cleanup}
 
@@ -522,7 +522,7 @@ UI可用來篩選表格中的索引，方法是在畫面左上角的搜尋方塊
 
 ### 資料存放庫廢棄項目收集 {#data-store-garbage-collection}
 
-如需資料存放區記憶體回收的詳細資訊，請參閱專屬的[檔案頁面](/help/sites-administering/data-store-garbage-collection.md)。
+如需資料存放區記憶體回收的詳細資訊，請參閱專用的[資料存放區記憶體回收](/help/sites-administering/data-store-garbage-collection.md)檔案頁面。
 
 ### 工作流程清除 {#workflow-purge}
 
@@ -533,7 +533,7 @@ UI可用來篩選表格中的索引，方法是在畫面左上角的搜尋方塊
 
 >[!NOTE]
 >
->如需工作流程維護的詳細資訊，請參閱[此頁面](/help/sites-administering/workflows-administering.md#regular-purging-of-workflow-instances)。
+>如需工作流程維護的詳細資訊，請參閱[管理工作流程執行個體](/help/sites-administering/workflows-administering.md#regular-purging-of-workflow-instances)。
 
 ### 稽核記錄維護 {#audit-log-maintenance}
 

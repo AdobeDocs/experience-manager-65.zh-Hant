@@ -10,9 +10,9 @@ exl-id: 6e67f2b3-78b9-45f2-b496-61776b9fd9cc
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: 3aa55b88f589749fb49d5ff46340b0912d490157
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '649'
 ht-degree: 22%
 
 ---
@@ -161,4 +161,4 @@ Clientlibs可讓您擴充預設實作以實現新功能，同時重複使用標�
 
 使用主控台時，常見的使用案例是使用者必須從資源（例如頁面、元件、資產等）中進行選取時。 例如，這可以採用清單的形式，作者必須從中選擇專案。
 
-若要將清單保持為合理的大小並且和使用案例相關，可以以自訂述詞的形式實作篩選器。請參閱[本文章](/help/sites-developing/customizing-page-authoring-touch.md#filtering-resources)以取得詳細資料。
+若要將清單保持為合理的大小並且和使用案例相關，可以以自訂述詞的形式實作篩選器。如需詳細資訊，請參閱[自訂頁面編寫 — 篩選資源](/help/sites-developing/customizing-page-authoring-touch.md#filtering-resources)。

@@ -6,16 +6,16 @@ exl-id: e1616385-0855-4f70-b787-b01701929bbc
 solution: Experience Manager, Experience Manager Sites
 feature: Security
 role: Admin
-source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
+source-git-commit: db7830895c8a2d1b7228dc4780296d43f15776df
 workflow-type: tm+mt
-source-wordcount: '221'
-ht-degree: 81%
+source-wordcount: '225'
+ht-degree: 77%
 
 ---
 
 # AEM 6.5的同網站Cookie支援 {#same-site-cookie-support-for-aem-65}
 
-從 80 版本開始，Chrome 和之後的 Safari 引入了一種新的 cookie 安全性模型。此模式旨在透過稱為 `SameSite` 的設定在第三方網站的 Cookie 可用性方面引入安全性控制項。如需詳細資訊，請參閱本[文章](https://web.dev/samesite-cookies-explained/)。
+從 80 版本開始，Chrome 和之後的 Safari 引入了一種新的 cookie 安全性模型。此模式旨在透過稱為 `SameSite` 的設定在第三方網站的 Cookie 可用性方面引入安全性控制項。如需詳細資訊，請參閱此[web.dev - SameSite Cookie說明](https://web.dev/samesite-cookies-explained/)文章。
 
 此設定的預設值 (`SameSite=Lax`) 可能會導致 AEM 執行個體或服務之間的驗證無法運作。這是因為這些服務的網域或 URL 結構可能不受此 cookie 原則的約束。
 
