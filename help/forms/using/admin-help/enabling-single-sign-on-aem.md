@@ -9,20 +9,24 @@ exl-id: 89561ed0-d094-4ef7-9bc1-bde11f3c5bc3
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Security
 role: User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+source-git-commit: c941de0b069b5bea9edb822eca0ebbb5483ae9ed
 workflow-type: tm+mt
-source-wordcount: '1520'
+source-wordcount: '1704'
 ht-degree: 0%
 
 ---
 
 # 在AEM表單中啟用單一登入{#enabling-single-sign-on-in-aem-forms}
 
-AEM forms提供兩種啟用單一登入(SSO)的方式 — HTTP標題和SPNEGO。
+AEM表單提供兩種啟用單一登入(SSO)的方式 — HTTP標題和SPNEGO。
 
 實作SSO時，AEM Forms使用者登入頁面不是必要頁面，且若使用者已透過其公司入口網站驗證，也不會顯示。
 
 如果AEM Forms無法使用其中一種方法來驗證使用者，系統會將使用者重新導向至登入頁面。
+
+* [使用HTTP標頭啟用SSO](#enable-sso-using-http-headers)
+* [使用SPNEGO啟用SSO](#enable-sso-using-spnego)
+* [指派角色給使用者和群組](#assign-roles-to-users-groups)
 
 ## 使用HTTP標頭啟用SSO {#enable-sso-using-http-headers}
 
@@ -51,6 +55,10 @@ AEM forms提供兩種啟用單一登入(SSO)的方式 — HTTP標題和SPNEGO。
 ### 設定允許的反向連結 {#configure-allowed-referers}
 
 如需設定允許的反向連結的步驟，請參閱[設定允許的反向連結](/help/forms/using/admin-help/preventing-csrf-attacks.md#configure-allowed-referers)。
+
+### 指派角色給使用者和群組
+
+按一下以瞭解[將角色指派給使用者和群組](/help/forms/using/admin-help/enabling-single-sign-on-aem.md#assign-roles-to-users-and-groups-assign-roles-to-users-groups)的步驟。
 
 ## 使用SPNEGO啟用SSO {#enable-sso-using-spnego}
 
@@ -141,7 +149,7 @@ ktpass -princ HTTP/lcserver.um.lc.com@UM.LC.COM -mapuser spnegodemo
 
 ### 正在設定SPNEGO使用者端瀏覽器設定 {#configuring-spnego-client-browser-settings}
 
-若要讓SPNEGO式驗證能夠運作，使用者端電腦必須是建立使用者帳戶的網域的一部分。 您也必須設定使用者端瀏覽器以允許以SPNEGO為基礎的驗證。 此外，需要以SPNEGO為基礎的驗證的網站必須是受信任的網站。
+若要讓SPNEGO式驗證能夠運作，使用者端電腦必須是建立使用者帳戶的網域的一部分。 您也必須設定使用者端瀏覽器以允許以SPNEGO為基礎的驗證。 此外，需要SPNEGO式驗證的網站必須是受信任的網站。
 
 如果使用電腦名稱(例如https://lcserver:8080)存取伺服器，則Internet Explorer不需要任何設定。 如果您輸入的URL不含任何點(「。」)，Internet Explorer會將網站視為近端內部網路網站。 如果您使用網站的完整名稱，則必須將網站新增為信任的網站。
 
@@ -167,3 +175,21 @@ ktpass -princ HTTP/lcserver.um.lc.com@UM.LC.COM -mapuser spnegodemo
    `lcserver.um.lc.com` — 將Firefox設定為僅允許特定伺服器使用SPNEGO。 請勿以點(「。」)作為此值開頭。
 
 1. 存取應用程式以測試設定。 目標應用程式的歡迎頁面應該會出現。
+
+按一下以瞭解[將角色指派給使用者和群組](/help/forms/using/admin-help/enabling-single-sign-on-aem.md#assign-roles-to-users-and-groups-assign-roles-to-users-groups)的步驟。
+
+## 指派角色給使用者和群組 {#assign-roles-to-users-groups}
+
+1. 在JEE環境中登入您的AEM Forms 。
+1. 在管理控制檯中，按一下「設定」>「使用者管理」>「網域管理」。
+1. 選取您的網域設定，例如LDAP，然後按一下它。 您可以在「目錄」中找到所有已建立的使用者和群組。 如有需要，您可以建立新的使用者或群組。
+   ![網域管理頁面](/help/forms/using/assets/domain-mgmt-page.png)
+1. 按一下「驗證」，在新頁面上選取「驗證提供者」，例如LDAP。
+1. 瀏覽至「網域管理」頁面，選取LDAP，然後按一下[立即同步] **，將目錄與您設定的驗證配置同步處理，以進行AEM存取。**
+   ![同步LDAP](/help/forms/using/assets/sync-ldap.png)
+1. 前往使用者管理，然後按一下使用者和群組。
+1. 搜尋具有其名稱的使用者或群組，如下圖所示。
+   ![搜尋使用者群組](/help/forms/using/assets/search-user-group.png)
+1. 視需要指派角色給使用者或群組。
+   ![使用者角色指派](/help/forms/using/assets/user-role-assign.png)
+
