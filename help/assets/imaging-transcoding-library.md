@@ -6,9 +6,9 @@ role: Admin
 feature: Renditions,Developer Tools,Asset Processing
 exl-id: b67465f9-177c-49c4-b4eb-a1d6e09ac9a2
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 9014a7dd3c9279a4da3944c1b095fd60352fdbeb
 workflow-type: tm+mt
-source-wordcount: '975'
+source-wordcount: '977'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Adobe的Imaging Transcoding Library是專屬的影像處理解決方案，可執
 
 ## 支援平台 {#supported-platforms}
 
-影像轉碼資料庫僅適用於RHEL 7和CentOS 7發行版本。
+影像轉碼資料庫僅適用於RHEL 8、RHEL 7和CentOS 7發行版本。
 
 >[!NOTE]
 >
