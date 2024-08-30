@@ -6,9 +6,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: a52311b9-ed7a-432e-8f35-d045c0d8ea4c
-source-git-commit: 447ff116c822c7ab0d5826103d6485e7d4ed13ce
+source-git-commit: 1fa3a56d2868cad0e1b54bf3fe1b018061b4b7a8
 workflow-type: tm+mt
-source-wordcount: '4390'
+source-wordcount: '4394'
 ht-degree: 2%
 
 ---
@@ -384,7 +384,7 @@ Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on
 
 >[!NOTE]
 >
->調適型表單功能 (適用於 [AEM 6.5 QuickStart](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65/content/implementing/deploying/deploying/deploy)) 僅用於探索和評估目的。若要供生產使用，必須獲得 AEM Forms 的有效許可；調適型表單的功能需要適當許可才可使用。
+>調適型表單功能 (適用於 [AEM 6.5 QuickStart](https://experienceleague.adobe.com/zh-hant/docs/ experience-manager-65/content/implementing/deploying/deploying/deploy)) 僅用於探索和評估目的。若要供生產使用，必須獲得 AEM Forms 的有效許可；調適型表單的功能需要適當許可才可使用。
 
 ### 安裝Experience Manager內容片段的GraphQL索引套件{#install-aem-graphql-index-add-on-package}
 
@@ -544,7 +544,7 @@ Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on
 
 * 升級至AEM Forms Service Pack 6.5.21.0後，`PaperCapture`服務無法在PDF上執行OCR （光學字元辨識）作業。 此服務不會產生PDF或記錄檔形式的輸出。 若要下載及安裝Hotfix，請參閱[Adobe Experience Manager Forms Hotfix](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)文章。 (CQDOC-21680)
 
-* 當使用者從AEM 6.5 Forms Service Pack 18 (6.5.18.0)或AEM 6.5 Forms Service Pack 19 (6.5.19.0)更新為AEM 6.5 Forms Service Pack 20 (6.5.20.0)或AEM 6.5 Forms Service Pack 21 (6.5.21.0)時，使用者會遇到JSP編譯錯誤，這會阻止他們開啟或建立調適型表單，也會導致其他AEM介面(例如頁面編輯器、AEM Forms UI和AEM工作流程編輯器)發生錯誤。 (FORMS-15256)
+* 當使用者從AEM 6.5 Forms Service Pack 18 (6.5.18.0)或AEM 6.5 Forms Service Pack 19 (6.5.19.0)更新為AEM 6.5 Forms Service Pack 20 (6.5.20.0)或AEM 6.5 Forms Service Pack 21 (6.5.21.0)時，使用者會遇到JSP編譯錯誤，這會阻止他們開啟或建立調適型表單，也會導致其他AEM介面(例如頁面編輯器、AEM Forms UI、AEMAEM工作流程編輯器和系統概覽UI)發生錯誤。 (FORMS-15256)
 
   如果您遇到這類問題，請執行以下步驟來解決問題：
    1. 導覽至CRXDE中的目錄`/libs/fd/aemforms/install/`。
