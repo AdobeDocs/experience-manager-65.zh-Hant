@@ -6,7 +6,7 @@ solution-title: Experience Cloud
 user-guide-description: 使用Adobe Experience Manager 6.5檔案瞭解其運作方式，以及軟體可為您做哪些事。
 breadcrumb-title: 使用手冊
 user-guide-title: AEM 6.5
-source-git-commit: ab8248e9d0df67bed3c2d5ad3fadce08db2e9ba0
+source-git-commit: ca896466072225cc57d7c0c4f008294cc60f7b94
 workflow-type: tm+mt
 source-wordcount: '7448'
 ht-degree: 18%
@@ -145,7 +145,7 @@ ht-degree: 18%
          + [在多個網站中使用目標內容](/help/sites-authoring/multisite-support-targeted-content.md)
          + [如何架構目標內容的多網站管理](/help/sites-authoring/technical-multisite-targeted.md)
          + [管理活動](/help/sites-authoring/activitylib.md)
-         + [管理對象](/help/sites-authoring/managing-audiences.md)
+         + [管理客群](/help/sites-authoring/managing-audiences.md)
          + [建立和管理選件](/help/sites-authoring/offerlib.md)
          + [了解分段](/help/sites-authoring/segmentation-overview.md)
       + AEM與Adobe Campaign {#aem-adobe-campaign}
@@ -620,7 +620,6 @@ ht-degree: 18%
       + [建立以核心元件為基礎的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)
       + [在最適化表單中建立和使用最適化Forms片段](/help/forms/using/adaptive-form-fragment-core-components.md)
       + [建立核心元件型最適化Forms的主題](/help/forms/using/create-or-customize-themes-for-adaptive-forms-core-components.md)
-      + [在最適化表單中建立和使用自訂函式](/help/forms/using/create-and-use-custom-functions.md)
       + [規則編輯器](/help/forms/using/rule-editor-core-components.md)
       + [在最適化表單核心元件中建立和使用自訂函式](/help/forms/using/create-and-use-custom-functions-core-components.md)
       + [針對以核心元件為基礎的最適化Forms建立並使用自訂錯誤處理常式](/help/forms/using/add-custom-error-handler-adaptive-forms-core-components.md)
@@ -677,6 +676,7 @@ ht-degree: 18%
       + [將Adobe Sign與AEM Forms整合](/help/forms/using/adobe-sign-integration-adaptive-forms.md)
       + [建立和管理表單中資產的稽核](/help/forms/using/create-reviews-forms.md)
       + [在AEM Sites單頁應用程式中內嵌最適化表單或互動式通訊](/help/forms/using/embed-adaptive-form-aem-sites-spa.md)
+      + [在最適化表單中建立和使用自訂函式](/help/forms/using/create-and-use-custom-functions.md)
       + [建立並使用最適化Forms的自訂錯誤處理常式](/help/forms/using/standard-validation-error-messages-adaptive-forms.md)
    + 互動式通訊{#interactive-communications}
       + [互動式通訊編寫UI簡介](/help/forms/using/introduction-interactive-communication-authoring.md)
@@ -1019,7 +1019,7 @@ ht-degree: 18%
          + [指定XCI設定選項](/help/forms/using/admin-help/specify-xci-configuration-options.md)
          + [設定輸出的快取](/help/forms/using/admin-help/configuring-caching-output.md)
          + [指定輸出的檔案位置](/help/forms/using/admin-help/specify-file-locations-output.md)
-         + [讓字型可供使用](/help/forms/using/admin-help/make-fonts-available.md)
+         + [將字體設為可用](/help/forms/using/admin-help/make-fonts-available.md)
          + [指定要嵌入的字型](/help/forms/using/admin-help/specify-fonts-embed.md)
          + [指定安全性設定](/help/forms/using/admin-help/specify-security-settings.md)
          + [變更字元集](/help/forms/using/admin-help/change-character-set.md)
@@ -1231,7 +1231,7 @@ ht-degree: 18%
          + [為 SEO 設定 URL](/help/commerce/cif/configuring/advanced-url-configuration.md)
          + [快取選項](/help/commerce/cif/configuring/caching.md)
          + [自訂 HTTP 標頭](/help/commerce/cif/configuring/custom-http-headers.md)
-         + [購物車和Dispatcher設定](/help/commerce/cif/configuring/shopping-cart-dispatcher.md)
+         + [購物車和 Dispatcher 設定](/help/commerce/cif/configuring/shopping-cart-dispatcher.md)
       + 開發 {#developing}
          + [使用AEM開發](/help/commerce/cif/develop.md)
          + [設定 CIF 元件樣式](/help/commerce/cif/customizing/style-cif-component.md)
@@ -1241,7 +1241,7 @@ ht-degree: 18%
    + [移轉](/help/commerce/cif/migration.md)
    + 發行說明 {#release-notes}
       + [2024](/help/commerce/cif/release-notes/release-notes-2024.md)
-      + [2023](/help/commerce/cif/release-notes/release-notes-2023.md)
+      + [2023年](/help/commerce/cif/release-notes/release-notes-2023.md)
       + [2022](/help/commerce/cif/release-notes/release-notes-2022.md)
       + [2021](/help/commerce/cif/release-notes/release-notes-2021.md)
       + [2020](/help/commerce/cif/release-notes/release-notes-2020.md)
