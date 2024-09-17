@@ -5,9 +5,9 @@ exl-id: 5837ef4f-d4e0-49d7-a671-87d5547e0d98
 solution: Experience Manager, Experience Manager 6.5
 feature: Compliance
 role: Developer,Leader
-source-git-commit: 9eeba0532a9eddb668b8488218c0570ca2241439
+source-git-commit: 658e1f6e07fb1219ba186137eb8403bf85383723
 workflow-type: tm+mt
-source-wordcount: '1367'
+source-wordcount: '1351'
 ht-degree: 0%
 
 ---
@@ -89,8 +89,6 @@ ht-degree: 0%
 * 一段時間內內容的整體成長
 
 線上上和離線修訂清除期間，會持續監視磁碟空間。 如果可用磁碟空間下降到臨界值以下，則會取消此程式。 關鍵值是存放庫目前磁碟空間的25%，且無法設定。 Adobe建議將磁碟大小調整為存放庫大小（包括預估成長量）至少兩到三倍。
-
-請考慮設定獨立磁碟的備援陣列（例如RAID10）以取得資料備援。
 
 ### 虛擬化 {#virtualization}
 
