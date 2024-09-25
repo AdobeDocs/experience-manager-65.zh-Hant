@@ -1,59 +1,17 @@
 ---
-title: 本文包括使用Forms套件管理器解除安裝CRX附加元件套件的指示。
-description: 瞭解使用CRX Package Manager解除安裝Forms附加元件套件的步驟。
+title: 這是測試內容
+description: 這是測試內容
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
 hide: true
 hidefromtoc: true
-source-git-commit: 2755e414ea23ebc1472e9c08d832eca93f28311b
+exl-id: a42095b5-1791-4854-90d1-2d4a332673c1
+source-git-commit: b6ee29958f46dbd3284dc616e176d28473331bdb
 workflow-type: tm+mt
-source-wordcount: '228'
-ht-degree: 1%
+source-wordcount: '12'
+ht-degree: 0%
 
 ---
 
-
-# 從AEM執行個體解除安裝AEM Forms附加元件套件
-
-本文概述從AEM Forms SDK執行個體正確解除安裝AEM Forms附加元件套件所需的步驟。 請依照這些步驟操作，以確保移除Forms附加元件套件，防止您的AEM環境發生潛在問題。
-
-## 先決條件
-
-請務必進行備份，以避免任何資料遺失。
-
-## 若要解除安裝AEM Forms附加元件套件
-
-若要解除安裝AEM Forms附加元件套件，請執行以下步驟：
-
-1. **解除安裝AEM Forms附加元件套件：**
-   1. 導覽至`http://[host]:[port]/crx/de/index.jsp`。
-   1. 找到並解除安裝`AEM Forms add-on package`。
-
-   ![解除安裝封裝](/help/forms/using/assets/uninstall-aem-forms-package.png)
-
-1. **從CRXDE刪除原生資料夾：**
-   1. 導覽至`http://[host]:[port]/crx/de/index.jsp`。
-   1. 移至`/libs/fd/native/install`並刪除CRXDE中的`native`資料夾。
-
-      ![從CRX/de](/help/forms/using/assets/native-install-folder-crxde.png)刪除原生節點
-   1. 儲存變更。
-
-1. **停止AEM Forms SDK：**
-   1. 使用「Ctrl + C」命令停止AEM Forms SDK執行個體。
-
-1. **檢查crx-quickstart資料夾的基座並安裝資料夾**
-   1. 導覽至AEM Forms SDK執行個體中的`..author\crx-quickstart`資料夾。
-   1. 搜尋名為`bedrock`和`install`的資料夾。
-如果找到，請確定已從AEM Forms SDK執行個體的`crx-quickstart`資料夾中刪除這些專案。
-
-   >[!NOTE]
-   >
-   > 當您重新啟動AEM Forms SDK執行個體時，`bedrock`資料夾會再次自動建立。
-
-1. **重新啟動AEM執行個體：**
-   1. 完成所有先前的步驟後，[重新啟動AEM Forms SDK執行個體](/help/forms/using/restart-aem-sdk.md)。
-
-
-
-
+# 這是測試內容
