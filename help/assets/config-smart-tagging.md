@@ -5,7 +5,7 @@ role: Admin
 feature: Tagging,Smart Tags
 exl-id: 9f68804f-ba15-4f83-ab1b-c249424b1396
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 110636c0208a23e0b088e19fe47c38f28adb9bdd
+source-git-commit: fed35f2b90e2b8fd9e7240abf3b25e3650fa31c2
 workflow-type: tm+mt
 source-wordcount: '1980'
 ht-degree: 18%
@@ -14,7 +14,7 @@ ht-degree: 18%
 
 # 準備[!DNL Assets]以進行智慧標籤 {#configure-asset-tagging-using-the-smart-content-service}
 
-開始使用Smart Content Services標籤資產之前，請先將[!DNL Experience Manager Assets]與Adobe Developer Console整合，以使用[!DNL Adobe Sensei]的Smart Service。 設定好後，請使用一些影像和標籤來訓練服務。
+開始使用Smart Content Services標籤資產之前，請先將[!DNL Experience Manager Assets]與Adobe Developer Console整合，以使用[!DNL Adobe Sensei]的Smart Service。 設定之後，請使用一些影像和標籤來訓練服務。
 
 >[!NOTE]
 >
