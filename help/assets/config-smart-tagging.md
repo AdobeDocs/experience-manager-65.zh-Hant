@@ -5,7 +5,7 @@ role: Admin
 feature: Tagging,Smart Tags
 exl-id: 9f68804f-ba15-4f83-ab1b-c249424b1396
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: fed35f2b90e2b8fd9e7240abf3b25e3650fa31c2
+source-git-commit: 6729a2dbd8c761eb1bba84d8efba7393ac686190
 workflow-type: tm+mt
 source-wordcount: '1980'
 ht-degree: 18%
@@ -21,7 +21,7 @@ ht-degree: 18%
 >* 新的[!DNL Experience Manager Assets]內部部署客戶無法再使用智慧內容服務。 已啟用此功能的現有內部部署客戶可以繼續使用智慧內容服務。
 >* 智慧內容服務適用於已啟用此功能的現有[!DNL Experience Manager Assets]個Managed Services客戶。
 >* 新的Experience Manager Assets Managed Services客戶可以依照本文所述的指示，設定智慧內容服務。
->* 若是Service Pack 20和舊版，您需要針對SCS執行因應步驟，以支援Oauth整合。 請參閱[疑難排解OAuth憑證的智慧標籤](#config-smart-tagging.md)。
+>* 若是Service Pack 20和舊版，您需要針對SCS執行因應步驟，以支援Oauth整合。 請參閱[疑難排解OAuth憑證的智慧標籤](config-oauth.md)。
 >* 若要支援Service Pack 21上的Oauth整合，您必須安裝SP 21](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fproduct%2Fassets%2Fcq-6.5.0-hotfix-40772-1.2.zip)的[Hotfix。
 >* 對於現有SCS設定，程式與設定新的OAuth整合相同。 系統會自動清理任何舊組態。
 
