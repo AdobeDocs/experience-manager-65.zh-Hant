@@ -9,9 +9,9 @@ exl-id: 918fcbbc-a78a-4fab-a933-f183ce6a907f
 solution: Experience Manager, Experience Manager Sites
 feature: Configuring
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+source-git-commit: aa91b0f84929affb527c57cf92d7b4714c98ba74
 workflow-type: tm+mt
-source-wordcount: '2037'
+source-wordcount: '2141'
 ht-degree: 9%
 
 ---
@@ -299,8 +299,15 @@ AEM為其整合的郵件程式服務提供OAuth2支援，以允許組織遵守�
 
 接下來，請依照下列程式設定您的SMTP OAuth提供者：
 
+>[!WARNING]
+>
+>完成此設定後，如果您曾變更OSGi設定&#x200B;**CQ Mailer SMTP OAuth2 Provide**&#x200B;中的&#x200B;*任何*&#x200B;值，則您必須依照這些步驟再次重新授權。
+>
+>如果未執行這些動作，則儲存在`/conf/global/settings/mailer/oauth`的存取權杖將會無效，且OAuth2與SMTP伺服器的連線將會失敗。
+
 1. 前往`http://serveraddress:serverport/system/console/configMgr`開啟AEM Web Console
 1. 尋找，然後按一下&#x200B;**CQ Mailer SMTP OAuth2 Provider**
+
 1. 請依照以下說明填寫必要資訊：
    * 授權URL： `https://accounts.google.com/o/oauth2/auth`
    * 權杖URL： `https://accounts.google.com/o/oauth2/token`
@@ -371,6 +378,12 @@ AEM為其整合的郵件程式服務提供OAuth2支援，以允許組織遵守�
 **AEM端組態**
 
 接下來，將您的OAuth2設定與AEM整合：
+
+>[!WARNING]
+>
+>完成此設定後，如果您曾變更OSGi設定&#x200B;**CQ Mailer SMTP OAuth2 Provide**&#x200B;中的&#x200B;*任何*&#x200B;值，則您必須依照這些步驟再次重新授權。
+>
+>如果未執行這些動作，則儲存在`/conf/global/settings/mailer/oauth`的存取權杖將會無效，且OAuth2與SMTP伺服器的連線將會失敗。
 
 1. 瀏覽至`http://serveraddress:serverport/system/console/configMgr`，移至您本機執行個體的Web主控台
 1. 尋找並按一下&#x200B;**Day CQ郵件服務**
