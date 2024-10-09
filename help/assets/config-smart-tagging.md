@@ -5,10 +5,10 @@ role: Admin
 feature: Tagging,Smart Tags
 exl-id: 9f68804f-ba15-4f83-ab1b-c249424b1396
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 6729a2dbd8c761eb1bba84d8efba7393ac686190
+source-git-commit: 7cc1722617b463fa5da5b965215cd91cc8ea8fb0
 workflow-type: tm+mt
-source-wordcount: '1980'
-ht-degree: 18%
+source-wordcount: '2193'
+ht-degree: 16%
 
 ---
 
@@ -31,6 +31,35 @@ ht-degree: 18%
 * [訓練智慧內容服務](#training-the-smart-content-service)。
 
 * 安裝最新的[[!DNL Experience Manager] Service Pack](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html)。
+
+## SCS升級以支援OauthAdobeManaged Services {#scs-upgrade-oauth-managed-services}
+
+**新使用者**
+
+安裝Service Pack 21。 若要在Service Pack 21上支援Oauth整合，您必須安裝SP 21](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fproduct%2Fassets%2Fcq-6.5.0-hotfix-40772-1.2.zip)的[Hotfix。
+
+請依照本文所述指示來設定智慧內容服務。
+
+**現有使用者**
+
+如果您已升級至Service Pack 21，請安裝SP 21](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fproduct%2Fassets%2Fcq-6.5.0-hotfix-40772-1.2.zip)的[Hotfix以支援Oauth整合。 任何現有設定都會自動刪除。 請依照本文所述指示來設定智慧內容服務。
+
+若是Service Pack 20和舊版，您需要針對SCS執行因應步驟，以支援Oauth整合。 請參閱[疑難排解OAuth憑證的智慧標籤](config-oauth.md)。
+
+## SCS升級以支援內部部署使用者的Oauth {#scs-upgrade-oauth-on-premise}
+
+**新使用者**
+
+新的[!DNL Experience Manager Assets]內部部署使用者無法再使用智慧內容服務。
+
+**現有使用者**
+
+已啟用此功能的現有內部部署使用者可以繼續使用智慧內容服務。
+
+如果您已升級至Service Pack 21，請安裝SP 21](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fproduct%2Fassets%2Fcq-6.5.0-hotfix-40772-1.2.zip)的[Hotfix以支援Oauth整合。 任何現有設定都會自動刪除。 請依照本文所述指示來設定智慧內容服務。
+
+若是Service Pack 20和舊版，您需要針對SCS執行因應步驟，以支援Oauth整合。 請參閱[疑難排解OAuth憑證的智慧標籤](config-oauth.md)。
+
 
 ## 整合Adobe Developer Console {#integrate-adobe-io}
 
