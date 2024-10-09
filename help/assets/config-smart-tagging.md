@@ -5,10 +5,10 @@ role: Admin
 feature: Tagging,Smart Tags
 exl-id: 9f68804f-ba15-4f83-ab1b-c249424b1396
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 7cc1722617b463fa5da5b965215cd91cc8ea8fb0
+source-git-commit: 09f7cf283c67adcc0a14d6a3a75bfdeafc37d151
 workflow-type: tm+mt
-source-wordcount: '2193'
-ht-degree: 16%
+source-wordcount: '2061'
+ht-degree: 17%
 
 ---
 
@@ -16,14 +16,16 @@ ht-degree: 16%
 
 開始使用Smart Content Services標籤資產之前，請先將[!DNL Experience Manager Assets]與Adobe Developer Console整合，以使用[!DNL Adobe Sensei]的Smart Service。 設定之後，請使用一些影像和標籤來訓練服務。
 
+<!--
 >[!NOTE]
 >
->* 新的[!DNL Experience Manager Assets]內部部署客戶無法再使用智慧內容服務。 已啟用此功能的現有內部部署客戶可以繼續使用智慧內容服務。
->* 智慧內容服務適用於已啟用此功能的現有[!DNL Experience Manager Assets]個Managed Services客戶。
->* 新的Experience Manager Assets Managed Services客戶可以依照本文所述的指示，設定智慧內容服務。
->* 若是Service Pack 20和舊版，您需要針對SCS執行因應步驟，以支援Oauth整合。 請參閱[疑難排解OAuth憑證的智慧標籤](config-oauth.md)。
->* 若要支援Service Pack 21上的Oauth整合，您必須安裝SP 21](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fproduct%2Fassets%2Fcq-6.5.0-hotfix-40772-1.2.zip)的[Hotfix。
->* 對於現有SCS設定，程式與設定新的OAuth整合相同。 系統會自動清理任何舊組態。
+>* Smart Content Services is no longer available to new [!DNL Experience Manager Assets] On-Premise customers. Existing On-Premise customers, who already have this capability enabled, can continue using Smart Content Services.
+>* Smart Content Services is available for existing [!DNL Experience Manager Assets] Managed Services customers, who already have this capability enabled.
+>* New Experience Manager Assets Managed Services customers can follow the instructions mentioned in this article to set up Smart Content Services.
+>* For Service Pack 20 and older, you need to perform the workaround steps for SCS to support Oauth integration. See [Troubleshooting smart tags for OAuth credentials](config-oauth.md).
+>* To support the Oauth integration on Service Pack 21, you need to install the [Hotfix for SP 21](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fproduct%2Fassets%2Fcq-6.5.0-hotfix-40772-1.2.zip). 
+>* For Existing SCS configuration, the process is the same as setting up a new OAuth integration. Any legacy configuration will be automatically cleaned up.
+-->
 
 在使用智慧內容服務之前，請先確定下列事項：
 
