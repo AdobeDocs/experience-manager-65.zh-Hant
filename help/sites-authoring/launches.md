@@ -10,7 +10,7 @@ exl-id: b25d3f8e-5687-49ab-95e1-19ec75c87f6e
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Launches
 role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+source-git-commit: 82597d52ed774f08ce7136d271148e720b56fcf1
 workflow-type: tm+mt
 source-wordcount: '831'
 ht-degree: 81%
@@ -107,8 +107,7 @@ ht-degree: 81%
 >
 >頁面升級時，將會反映任何內容變更，但元件位置不會變更。
 
-
-### 啟動主控台 {#the-launches-console}
+## 啟動主控台 {#the-launches-console}
 
 啟動主控台可提供對您的啟動的概觀，並讓您對清單上的執行動作。主控台可透過以下方式存取：
 

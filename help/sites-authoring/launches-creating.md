@@ -10,10 +10,10 @@ exl-id: bc7897da-15f6-4de4-a9fd-9dd84e6c7eed
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Launches
 role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+source-git-commit: 82597d52ed774f08ce7136d271148e720b56fcf1
 workflow-type: tm+mt
-source-wordcount: '1039'
-ht-degree: 14%
+source-wordcount: '1097'
+ht-degree: 13%
 
 ---
 
@@ -158,7 +158,16 @@ ht-degree: 14%
 
    如果您選 **取「完成**」，則會返回至Sites ******** Console的「參考」邊欄，如果您選取適當的頁面，則會顯示您的新啟動。
 
-### 刪除啟動項 {#deleting-a-launch}
+### 複製啟動項 {#cloning-a-launch}
+
+您可以從[啟動主控台](/help/sites-authoring/launches.md#the-launches-console)複製啟動項：
+
+* 點選/按一下縮圖，以選取啟動。
+* 工具列隨即顯示 — 選取「原地複製」。
+   * 複製將會建立並顯示在主控台中。
+   * **啟動項標題**&#x200B;會指出其為翻制。 您可以編輯[啟動設定](/help/sites-authoring/launches-editing.md#editing-a-launch-configuration) （**屬性**）來更新標題。
+
+## 刪除啟動項 {#deleting-a-launch}
 
 您可以從[啟動主控台](/help/sites-authoring/launches.md#the-launches-console)刪除啟動項：
 
