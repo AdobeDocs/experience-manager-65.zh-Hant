@@ -9,7 +9,7 @@ feature: Asset Management,Renditions
 role: User, Admin
 exl-id: e427d4ee-d5c8-421b-9739-f3cf2de36e41
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 93e9f9318f71a0fd1004c49cc9b1b3d349a4c9ed
+source-git-commit: 2d6b0129d28dba954f9854c641386c4c2ad32765
 workflow-type: tm+mt
 source-wordcount: '3323'
 ht-degree: 0%
@@ -138,7 +138,7 @@ DPR和網路頻寬值是根據偵測到的套件式CDN使用者端值。 這些�
 
 ## 常見問題 {#fag}
 
-+++智慧型影像是否有任何授權成本？{#are-there-any-licensing-costs-associated-with-smart-imaging}
++++智慧型影像是否有任何授權成本？
 
 否。智慧型影像包含於您現有的授權中。 此規則適用於Dynamic Media Classic或Experience Manager - Dynamic Media (內部部署、AMS和Experience Manageras a Cloud Service)。
 
@@ -148,7 +148,7 @@ DPR和網路頻寬值是根據偵測到的套件式CDN使用者端值。 這些�
 
 +++
 
-+++智慧型影像如何運作？{#how-does-smart-imaging-work}
++++智慧型影像如何運作？
 
 當消費者要求影像時，「智慧型影像」會分析使用者特性，並根據瀏覽器將其轉換為適當的格式。 這些格式轉換的進行方式不會降低視覺的逼真度。 智慧型影像會根據瀏覽器功能，以下列方式自動將影像轉換為不同格式。
 
@@ -170,7 +170,7 @@ DPR和網路頻寬值是根據偵測到的套件式CDN使用者端值。 這些�
 
 +++
 
-+++支援哪些影像格式？{#what-image-formats-are-supported}
++++支援哪些影像格式？
 
 智慧型影像支援下列影像格式：
 
@@ -183,7 +183,7 @@ DPR和網路頻寬值是根據偵測到的套件式CDN使用者端值。 這些�
 
 +++
 
-+++智慧型影像如何處理我已在使用的現有影像預設集？{#how-does-smart-imaging-work-with-our-existing-image-presets-that-are-already-in-use}
++++智慧型影像如何處理我已在使用的現有影像預設集？
 
 智慧型影像可順暢整合您現有的影像預設集，並符合您所有的影像設定。
 
@@ -195,7 +195,7 @@ DPR和網路頻寬值是根據偵測到的套件式CDN使用者端值。 這些�
 
 <!--
 
-### Do I have to change any URLs, image presets, or deploy any new code on my site for Smart Imaging? {#will-i-have-to-change-any-urls-image-presets-or-deploy-any-new-code-on-my-site-for-smart-imaging}
+### Do I have to change any URLs, image presets, or deploy any new code on my site for Smart Imaging? 
 
 No. Smart Imaging works seamlessly with your existing image URLs and image presets. In addition, Smart Imaging does not require you to add code to your website to detect a user's browser. All of this functionality is handled automatically.
 
@@ -207,13 +207,13 @@ To understand pre-requisites for Smart Imaging, see [Am I eligible to use Smart 
 
 <!-- OLD As mentioned earlier, Smart Imaging supports only JPEG and PNG image formats. For other formats, you need to append the `bfc=off` modifier to the URL as described earlier. -->
 
-+++智慧型影像處理是否適用於HTTPS？ HTTP/2呢？{#does-smart-imaging-working-with-https-how-about-http}
++++智慧型影像處理是否適用於HTTPS？ HTTP/2呢？
 
 智慧型影像處理透過HTTP或HTTPS傳送的影像。 此外，它也適用於HTTP/2。
 
 +++
 
-+++我是否符合使用智慧型影像處理的資格？{#am-i-eligible-to-use-smart-imaging}
++++我是否符合使用智慧型影像處理的資格？
 
 智慧型影像處理可立即供所有客戶使用。 若要開始享受其優點，只需將`bfc=on`、`dpr=on,dprValue`、`network=on`或所有三個引數設定新增至您現有的URL或預設集。
 
@@ -221,7 +221,7 @@ To understand pre-requisites for Smart Imaging, see [Am I eligible to use Smart 
 
 +++
 
-+++為帳戶啟用智慧影像的程式為何？{#what-is-the-process-for-enabling-smart-imaging-for-my-account}
++++為帳戶啟用智慧影像的程式為何？
 
 若要開始使用智慧型影像，請附加`bfc=on`、`dpr=on,dprValue`、`network=on`或全部三個引數設定到您現有的URL或預設集。 如果您不想手動進行這些變更，您可以建立支援案例來依預設啟用「智慧型影像」。
 
@@ -278,7 +278,7 @@ To understand pre-requisites for Smart Imaging, see [Am I eligible to use Smart 
 
 +++
 
-+++我何時可以預期帳戶會啟用「智慧型影像」？{#when-can-i-expect-my-account-to-be-enabled-with-smart-imaging}
++++我何時可以預期帳戶會啟用「智慧型影像」？
 
 「客戶支援」會依接收順序處理請求，並遵循「等待清單」處理。
 
@@ -288,7 +288,7 @@ To understand pre-requisites for Smart Imaging, see [Am I eligible to use Smart 
 
 +++
 
-+++切換至使用智慧型影像有什麼風險？{#what-are-the-risks-with-switching-over-to-use-smart-imaging}
++++切換至使用智慧型影像有什麼風險？
 
 客戶網頁沒有風險。 不過，轉換至智慧型影像處理會清除CDN快取。 此作業涉及在Experience Manager上移至Dynamic Media Classic或Dynamic Media的新設定。
 
@@ -296,7 +296,7 @@ To understand pre-requisites for Smart Imaging, see [Am I eligible to use Smart 
 
 +++
 
-+++如何確認智慧型影像處理是否如預期運作？{#how-can-i-verify-whether-smart-imaging-is-working-as-expected}
++++如何確認智慧型影像處理是否如預期運作？
 
 1. 帳戶設定智慧型影像之後，請在瀏覽器中載入Dynamic Media Classic或Adobe Experience Manager - Dynamic Media影像URL。
 1. 在瀏覽器中前往&#x200B;**[!UICONTROL 檢視]** > **[!UICONTROL 開發人員]** > **[!UICONTROL 開發人員工具]**，開啟Chrome開發人員窗格。 或者，選擇您選擇的任何瀏覽器開發人員工具。
@@ -317,7 +317,7 @@ To understand pre-requisites for Smart Imaging, see [Am I eligible to use Smart 
 
 +++
 
-+++我如何知道效能的提升？ 您是否有辦法瞭解智慧型影像技術的優點？{#benefits}
++++我如何知道效能的提升？ 您是否有辦法瞭解智慧型影像技術的優點？
 
 智慧型影像標題決定智慧型影像的優點。 啟用智慧型影像時，當您要求影像之後，在&#x200B;**[!UICONTROL 回應標題]**&#x200B;標題下，您可以看到`-X-Adobe-Smart-Imaging`，如下列醒目提示的範例所示：
 
@@ -342,13 +342,13 @@ To understand pre-requisites for Smart Imaging, see [Am I eligible to use Smart 
 
 +++
 
-+++如何在智慧型影像中停用AVIF最佳化？{#disable-avif}
++++如何在智慧型影像中停用AVIF最佳化？
 
 如果您想要依預設切換回提供WebP，請為相同專案建立支援案例。 如同往常，您可以新增引數`bfc=off`至影像的URL來關閉智慧型影像。 不過，您無法在智慧型影像的URL修飾元中選取WebP或AVIF。 此能力在您的公司帳戶層級進行維護。
 
 +++
 
-+++智慧型影像處理是否可以針對任何要求關閉？{#turning-off-smart-imaging}
++++智慧型影像處理是否可因任何要求而關閉？
 
 可以。您可以新增下列任何修飾元來關閉智慧型影像：
 
@@ -358,7 +358,7 @@ To understand pre-requisites for Smart Imaging, see [Am I eligible to use Smart 
 
 +++
 
-+++有哪些「調整」可用？ 是否有任何可定義的設定或行為？{#tuning-settings}
++++有哪些「調整」可用？ 是否有任何可定義的設定或行為？
 
 智慧型影像有三個可啟用或停用的選項。
 
@@ -368,7 +368,7 @@ To understand pre-requisites for Smart Imaging, see [Am I eligible to use Smart 
 
 +++
 
-+++我在Chrome網頁瀏覽器上有一個包含fmt=tif的URL。 但我的要求失敗，並出現ImageServer錯誤。 為什麼？{#fmt-tif}
++++我在Chrome網頁瀏覽器上有一個包含fmt=tif的URL。 但我的要求失敗，並出現ImageServer錯誤。 原因為何？
 
 如果您的帳戶未啟用智慧型影像處理，就不會發生這個錯誤。 智慧型影像僅適用於JPEG或PNG格式。
 
@@ -380,7 +380,7 @@ To understand pre-requisites for Smart Imaging, see [Am I eligible to use Smart 
 
 +++
 
-+++我想從影像的URL下載TIFF影像。 我應該怎麼做？{#download-tif}
++++我想從影像的URL下載TIFF影像。 我應該怎麼做？
 
 將`fmt=tif`和`bfc=off`新增至影像的URL路徑。
 
@@ -392,43 +392,43 @@ To understand pre-requisites for Smart Imaging, see [Am I eligible to use Smart 
 
 +++
 
-+++如果智慧型影像處理確實能管理品質設定，我可以設定最小值和最大值嗎？ 換句話說，品質不小於60且不大於80？{#quality-setting}
++++如果智慧型影像處理確實能管理品質設定，我可以設定最小值和最大值嗎？ 換句話說，品質不小於60且不大於80？
 
 目前沒有這類布建。
 
 +++
 
-+++智慧型影像處理會自動調整百分比品質輸出設定，還是手動調整的設定，且套用至所有影像？ 在哪個範圍內？{#percent-quality}
++++智慧型影像處理會自動調整百分比品質輸出設定，還是手動調整的設定，且套用至所有影像？ 在哪個範圍內？
 
 智慧型影像會自動調整品質百分比。 此品質是由Adobe開發的機器學習演演算法所決定。 此百分比不限範圍。
 
 +++
 
-+++使用智慧型影像時，哪些影像伺服命令受到支援或忽略？{#support-ignore}
++++使用智慧型影像時，哪些影像伺服命令受到支援或忽略？
 
 唯一被忽略的命令是`fmt`和`qlt`。 支援所有剩餘的命令。
 
 +++
 
-+++只有JPEG影像會被智慧型影像取代嗎？ 如果我請求WebP、PNG或其他什麼怎麼辦？{#replace-request}
++++只有JPEG影像會被智慧型影像取代嗎？ 如果我請求WebP、PNG或其他什麼怎麼辦？
 
 此功能僅適用於JPEG和PNG。
 
 +++
 
-+++為何JPEG影像有時會傳回Chrome而非WebP？{#jpeg-returned}
++++為何JPEG影像有時會傳回Chrome而非WebP？
 
 智慧型影像可判斷轉換是否有效。 它只會傳迴轉換有利的新影像。
 
 +++
 
-+++為何裝置畫素比(dpr)功能無法如預期運用於複合影像？{#composite-images}
++++為何裝置畫素比(dpr)功能無法如預期運用於複合影像？
 
 如果複合影像涉及太多圖層，則使用position修飾元時，dpr功能可能會受到影響。 此問題已知，且應在未來版本的「智慧型影像」中修正。 如果其他智慧型影像功能無法如預期運作，您可以建立支援案例來報告問題。
 
 +++
 
-+++為何智慧型影像處理PNG仍會轉換為不失真WebP/AVIF？{#convert-to-lossless}
++++為何智慧型影像處理PNG仍會轉換為不失真WebP/AVIF？
 
 由於PNG是無損格式，因此先前傳送的WebP和AVIF是無損的，因此產生的大小比預期大。 智慧型影像處理現在支援有損轉換。 您可以在影像要求中使用修飾元`cache=update` （僅限一次）來修正此問題。 使用此修飾元的範例：
 
@@ -438,7 +438,7 @@ To understand pre-requisites for Smart Imaging, see [Am I eligible to use Smart 
 
 +++
 
-+++如何在智慧型影像中繼續使用PNG進行無損轉換？{#continue-using}
++++如何在智慧型影像中繼續使用PNG進行無損轉換？
 
 智慧型影像處理現在支援根據品質等級進行有損轉換。 您可以透過您公司的設定或將`qlt=100`新增至影像的URL路徑，將品質設定為100，以繼續使用無損轉換。
 
