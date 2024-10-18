@@ -9,9 +9,9 @@ feature: Asset Management,Renditions
 role: User, Admin
 exl-id: e427d4ee-d5c8-421b-9739-f3cf2de36e41
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 2d6b0129d28dba954f9854c641386c4c2ad32765
+source-git-commit: 7fb3ec9654b56605321f0d12a4c1e23d2e18dab9
 workflow-type: tm+mt
-source-wordcount: '3323'
+source-wordcount: '3322'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 智慧型影像可套用每位使用者獨特的檢視特性，以針對其體驗自動最佳化的正確影像，進而提供更優異的效能和參與度。
 
-## 什麼是「智慧型影像」？ {#what-is-smart-imaging}
+## 關於智慧型影像 {#what-is-smart-imaging}
 
 智慧型影像技術可套用Adobe Sensei AI功能，並與現有的「影像預設集」搭配使用。 它會根據使用者端瀏覽器功能自動最佳化影像格式、大小和品質，藉此增強影像傳送效能。
 
@@ -136,7 +136,7 @@ DPR和網路頻寬值是根據偵測到的套件式CDN使用者端值。 這些�
 * 先前，原始和衍生影像都會經過快取，而且是使快取失效的兩步驟程式。 在最新的智慧型影像處理中，只會快取衍生專案，進行單一步驟的快取失效程式。
 * 在規則集中使用自訂標題的客戶可受益於最新的智慧型影像，因為這些標題不會遭到封鎖，不像舊版的智慧型影像。 例如，如[新增自訂標頭值至影像回應|Dynamic Media Classic](https://helpx.adobe.com/experience-manager/scene7/kb/base/scene7-rulesets/add-custom-header-val-image.html)中建議的「計時允許來源」和「X-Robot」。
 
-## 常見問題 {#fag}
+## 常見問題
 
 +++智慧型影像是否有任何授權成本？
 
