@@ -5,10 +5,10 @@ exl-id: 372e6a46-72bb-4db4-ad01-534ca723ae58
 solution: Experience Manager,Commerce
 feature: Commerce Integration Framework
 role: Admin, Developer
-source-git-commit: 573057b8e4c01b1c14f8c66b3da7b44e9d857760
+source-git-commit: 1788e5f77d4c46a548710361e9e5dae3c6daab28
 workflow-type: tm+mt
-source-wordcount: '148'
-ht-degree: 10%
+source-wordcount: '221'
+ht-degree: 25%
 
 ---
 
@@ -34,6 +34,24 @@ ht-degree: 10%
 
 * 修正UI測試，使其可正確搭配核心CIF元件運作。
 * 已解決類別URL格式在雲端例項中無法如預期運作的問題。
+
+## 發行日期： 2024年9月
+
+| 元件 | 版本 | 詳細資料 |
+|:-------|:-------:|-----------------------------------------------------------------------------------------------------------:|
+| CIF Core Components | 2.14.2 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.14.2) |
+
+### 改善功能 {#improvements-September}
+
+* 將類別限制設為可自訂。
+
+### 錯誤修正 {#bug-fixes-September}
+
+* Commerce 的欄位未與資產中繼資料結構編輯器妥善整合。
+* 輪播產品多欄位供拖放的問題。
+* 拖放的輪播類別多欄位問題
+* 在類別和產品編輯器頁面的頁面資訊中，按一下無法用於功能表。
+* 訂單號碼不會顯示在訂單確認頁面內。
 
 ## 發行日期： 2024年1月
 
