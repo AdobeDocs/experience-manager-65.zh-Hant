@@ -6,7 +6,7 @@ exl-id: 6bfd6caa-a68a-40ba-9826-4ba02cd1dbfb
 solution: Experience Manager, Experience Manager Sites
 feature: Configuring
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+source-git-commit: f64a1014dfd1155bcf815e75a27102244ef6c6de
 workflow-type: tm+mt
 source-wordcount: '4391'
 ht-degree: 1%
@@ -721,7 +721,7 @@ RTE可讓作者還原或重做幾項最後的編輯。 依預設，50項編輯�
       * 指定目標模式：
 
          * **名稱** `mode`
-         * **型別** `String`)
+         * **型別** `String`
          * **值**
 
             * `auto`：表示已選擇自動目標
