@@ -6,10 +6,10 @@ solution-title: Experience Cloud
 user-guide-description: 使用Adobe Experience Manager 6.5檔案瞭解其運作方式，以及軟體可為您做哪些事。
 breadcrumb-title: 使用手冊
 user-guide-title: AEM 6.5
-source-git-commit: caf2d5b4f03823e57c579eafdd47b52ef9357493
+source-git-commit: 717c9ae2d6b0552ca5c6386247ef7504dc9785e9
 workflow-type: tm+mt
-source-wordcount: '7448'
-ht-degree: 18%
+source-wordcount: '7450'
+ht-degree: 19%
 
 ---
 
@@ -19,6 +19,7 @@ ht-degree: 18%
 + 發行說明 {#release-notes}
    + [發行說明](/help/release-notes/release-notes.md)
    + 舊版發行說明{#service-pack}
+      + [6.5.21](/help/release-notes/previous/6-5-21.md)
       + [6.5.20](/help/release-notes/previous/6-5-20.md)
       + [6.5.19](/help/release-notes/previous/6-5-19.md)
       + [6.5.18](/help/release-notes/previous/6-5-18.md)
@@ -536,7 +537,7 @@ ht-degree: 18%
          + [參考自適應表單片段](/help/forms/using/reference-adaptive-form-fragments.md)
          + [參考主題](/help/forms/using/reference-themes.md)
          + [參考字母範本](/help/forms/using/reference-cm-layout-templates.md)
-         + [設定Microsoft Dynamics 365，以用於We.Finance參考網站的住房抵押貸款工作流程](/help/forms/using/ms-dynamics-configuration-home-mortgage.md)
+         + [為We.Finance參考網站的住房抵押貸款工作流程設定Microsoft Dynamics 365](/help/forms/using/ms-dynamics-configuration-home-mortgage.md)
    + 安裝及設定AEM Forms {#install-aem-forms}
       + [AEM Forms的架構和部署拓撲](/help/forms/using/aem-forms-architecture-deployment.md)
       + [為AEM Forms安裝選擇持續性型別](/help/forms/using/choosing-persistence-type-for-aem-forms.md)
@@ -598,7 +599,7 @@ ht-degree: 18%
          + [OSGi上以Forms為中心的工作流程](/help/forms/using/forms-workflow-osgi-handling-user-data.md)
          + [Forms使用者管理](/help/forms/using/user-management-handling-user-data.md)
          + [Forms JEE工作流程](/help/forms/using/forms-workflow-jee-handling-user-data.md)
-         + [Forms入口網站](/help/forms/using/forms-portal-handling-user-data.md)
+         + [Forms Portal](/help/forms/using/forms-portal-handling-user-data.md)
          + [通信管理](/help/forms/using/correspondence-management-handling-user-data.md)
          + [與Adobe Sign整合](/help/forms/using/integration-adobe-sign-handling-user-data.md)
          + [文件安全性](/help/forms/using/document-security-handling-user-data.md)
@@ -649,7 +650,7 @@ ht-degree: 18%
       + [使用手寫簽名將電子簽章套用至表單](/help/forms/using/signing-forms-using-scribble.md)
       + [AEM Forms鍵盤快速鍵](/help/forms/using/keyboard-shortcuts.md)
       + [將提交稽核者與表單建立關聯](/help/forms/using/adding-reviewers-form.md)
-      + [為表單欄位編寫內容內說明](/help/forms/using/authoring-in-field-help.md)
+      + [製作表單欄位的內容內說明](/help/forms/using/authoring-in-field-help.md)
       + [使用版面模式調整元件大小](/help/forms/using/resize-using-layout-mode.md)
       + [連線最適化表單資料並將其提交至Microsoft](/help/forms/using/forms-microsoft-power-automate-integration.md)
    + 最適化Forms — 進階製作{#adaptive-forms-advanced-authoring}
@@ -669,10 +670,10 @@ ht-degree: 18%
       + [在最適化表單中使用SOM運算式](/help/forms/using/using-som-expressions-adaptive-forms.md)
       + [將使用者資料中的資訊新增至表單提交中繼資料](/help/forms/using/form-submission-metadata.md)
       + [XDP型最適化表單中的XFA支援](/help/forms/using/xfa-api-supported-in-adaptive-form.md)
-      + [將規則編輯器存取權授予給所選的使用者群組](/help/forms/using/rule-editor-access-user-groups.md)
+      + [將規則編輯器存取權授予所選的使用者群組](/help/forms/using/rule-editor-access-user-groups.md)
       + [使用AEM翻譯工作流程將最適化表單和記錄檔案本地化](/help/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.md)
       + [調適型表單的樣式建構](/help/forms/using/styling-constructs-adaptive-forms.md)
-      + [同步最適化Forms與XFA表單範本](/help/forms/using/synchronizing-adaptive-forms-xfa.md)
+      + [將最適化 Forms 與 XFA Form 範本同步](/help/forms/using/synchronizing-adaptive-forms-xfa.md)
       + [將Adobe Sign與AEM Forms整合](/help/forms/using/adobe-sign-integration-adaptive-forms.md)
       + [建立和管理表單中資產的稽核](/help/forms/using/create-reviews-forms.md)
       + [在AEM Sites單頁應用程式中內嵌最適化表單或互動式通訊](/help/forms/using/embed-adaptive-form-aem-sites-spa.md)
@@ -835,11 +836,11 @@ ht-degree: 18%
       + [在入口網站上發佈表單簡介](/help/forms/using/introduction-publishing-forms.md)
       + [將草稿和提交元件與資料庫整合的範例](/help/forms/using/integrate-draft-submission-database.md)
       + [為草稿和提交設定儲存服務](/help/forms/using/configuring-draft-submission-storage.md)
-      + [管理AEM收件匣中的Forms應用程式和工作](/help/forms/using/manage-applications-inbox.md)
+      + [在 AEM 收件匣管理 Forms 應用程式和任務](/help/forms/using/manage-applications-inbox.md)
       + [AEM Forms中的Watched資料夾](/help/forms/using/watched-folder-in-aem-forms.md)
       + [草稿和提交元件](/help/forms/using/draft-submission-component.md)
       + [將連結元件內嵌在頁面中](/help/forms/using/embedding-link-component-page.md)
-      + [發佈和取消發佈表單和檔案](/help/forms/using/publishing-unpublishing-forms.md)
+      + [發佈和取消發佈表單和文件](/help/forms/using/publishing-unpublishing-forms.md)
       + [使用API在網頁上列出表單](/help/forms/using/listing-forms-webpage-using-apis.md)
       + [存取和填寫已發佈的表單](/help/forms/using/accessing-filling-published-forms.md)
       + [透過電子郵件傳送表單提交通知](/help/forms/using/form-submission-receipt-via-email.md)
@@ -877,7 +878,7 @@ ht-degree: 18%
       + [Designer指令碼參考](https://www.adobe.com/go/learn_aemforms_scriptingReference_65)
       + [Designer FormCalc參考](https://www.adobe.com/go/learn_aemforms_formCalc_65)
       + [在HTML5表單中使用手寫簽名](/help/forms/using/scribble-signature.md)
-      + [在Designer中變更零頁內容](/help/forms/using/changing-page-zero-content-designer.md)
+      + [在 Designer 中變更頁面零內容](/help/forms/using/changing-page-zero-content-designer.md)
       + [協助工具最佳實務]{#accessibility-best-practices}
          + [簡介](/help/forms/using/introduction-accessibility-forms-designer.md)
          + [建立表單的最佳實務](/help/forms/using/best-practices-for-creating-forms-in-designer.md)
@@ -1365,9 +1366,9 @@ ht-degree: 18%
          + [取得JSON格式的頁面資訊](/help/sites-developing/pageinfo.md)
          + 國際化{#internationalization}
             + [國際化元件](/help/sites-developing/i18n.md)
-            + [國際化UI字串](/help/sites-developing/i18n-dev.md)
+            + [國際化使用者介面字串](/help/sites-developing/i18n-dev.md)
             + [使用Translator管理字典](/help/sites-developing/i18n-translator.md)
-            + [擷取要轉譯的字串](/help/sites-developing/i18n-extract.md)
+            + [擷取字串進行翻譯](/help/sites-developing/i18n-extract.md)
          + 傳統UI元件{#classic-ui-components}
             + [開發AEM元件（傳統UI）](/help/sites-developing/developing-components-classic.md)
             + [使用和擴充Widget （傳統UI）](/help/sites-developing/widgets.md)
