@@ -5,16 +5,16 @@ feature: Content Fragments
 role: User
 exl-id: 6316ef72-7647-4e85-b8cf-152557b26540
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 3648662306bb1e7ea27a9d74f42bfa321bf5b91f
 workflow-type: tm+mt
-source-wordcount: '222'
+source-wordcount: '228'
 ht-degree: 4%
 
 ---
 
 # 中繼資料 - 片段屬性 {#metadata-fragment-properties}
 
-瞭解如何在AEM中檢視和編輯內容片段的中繼資料屬性，以調整您的Headless內容。
+瞭解如何使用內容片段編輯器在AEM中檢視和編輯內容片段的中繼資料屬性，以調整您的Headless內容。
 
 ## 編輯屬性/中繼資料 {#editing-properties-meta-data}
 

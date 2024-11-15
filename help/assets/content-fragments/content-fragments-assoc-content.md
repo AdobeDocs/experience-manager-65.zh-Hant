@@ -5,16 +5,16 @@ feature: Content Fragments
 role: User
 exl-id: 8b93fd6e-47d1-46fd-901b-621caa25be7b
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 3648662306bb1e7ea27a9d74f42bfa321bf5b91f
 workflow-type: tm+mt
-source-wordcount: '246'
+source-wordcount: '257'
 ht-degree: 6%
 
 ---
 
 # 相關聯的內容{#associated-content}
 
-AEM的相關內容功能提供連線，如此一來，在將資產新增至內容頁面時，便可選擇將資產與片段搭配使用。 這可讓[在頁面上使用內容片段時，提供一系列可存取的資產，](/help/sites-authoring/content-fragments.md#using-associated-content)讓您靈活地傳送Headless內容，同時還有助於減少搜尋適當資產所需的時間。
+AEM的關聯內容功能提供連線，以便在將資產新增到內容頁面時，可以（選擇性）與片段搭配使用資產。 這可讓[在頁面上使用內容片段時，提供一系列可存取的資產，](/help/sites-authoring/content-fragments.md#using-associated-content)讓您靈活地傳送Headless內容，同時還有助於減少搜尋適當資產所需的時間。 可使用內容片段編輯器設定任何關聯內容。
 
 ## 新增關聯內容 {#adding-associated-content}
 
