@@ -6,9 +6,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: a52311b9-ed7a-432e-8f35-d045c0d8ea4c
-source-git-commit: 83bebdd7b4813c4b0dea1e237b73a51d68699646
+source-git-commit: 28f8cbca33d8174d937da12d1854783cf75413c1
 workflow-type: tm+mt
-source-wordcount: '4514'
+source-wordcount: '4521'
 ht-degree: 2%
 
 ---
@@ -43,7 +43,7 @@ ht-degree: 2%
 
 ### Sites {#sites}
 
-[Universal Editor](/help/sites-developing/universal-editor/introduction.md)現在可在AEM 6.5上用於Headless使用案例。
+[AEM 6.5現已針對套用Feature Pack的Headless使用案例提供通用編輯器](/help/sites-developing/universal-editor/introduction.md)。
 
 ### [!DNL Forms]
 
