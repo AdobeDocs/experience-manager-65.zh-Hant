@@ -3,9 +3,10 @@ title: 通用編輯器
 description: 瞭解通用編輯器的彈性，以及如何協助您使用AEM 6.5強化Headless體驗。
 feature: Developing
 role: Developer
-source-git-commit: a088fcb3069fae7e63c7238710534d817a308eff
+exl-id: 7bdf1fcc-02b9-40bc-8605-e6508a84d249
+source-git-commit: 6301f0fdba9f7a6fa8fa998759b9ebad6b4fa9a6
 workflow-type: tm+mt
-source-wordcount: '1082'
+source-wordcount: '1087'
 ht-degree: 1%
 
 ---
@@ -46,17 +47,17 @@ Universal Editor是一項與AEM搭配使用的服務，可讓您無頭製作內�
 
 ### 更新AEM {#update-aem}
 
-若要搭配AEM 6.5使用通用編輯器，需使用AEM的Service Pack 21和Feature Pack。
+若想搭配AEM 6.5使用通用編輯器，需要AEM的Service Pack 21或22以及Feature Pack。
 
 #### 套用最新Service Pack {#latest}
 
-請確定您至少正在執行AEM 6.5適用的Service Pack 21。您可以從[軟體發佈](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html)下載最新的Service Pack。
+請確定您至少執行AEM 6.5適用的Service Pack 21或22。您可以從[軟體發佈](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html)下載最新的Service Pack。
 
 #### 安裝通用編輯器Feature Pack {#feature-pack}
 
 安裝Software Distribution上提供的AEM 6.5 **[適用的**&#x200B;通用編輯器功能套件。](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/cq-6.5.21-universal-editor-1.0.0.zip)
 
-如果您已執行Service Pack 23或更新版本，則不需要執行此步驟。
+如果您已執行Service Pack 23或更新版本，就不需要使用Feature Pack。
 
 ### 設定服務 {#configure-services}
 
