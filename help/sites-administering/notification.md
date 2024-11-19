@@ -9,10 +9,10 @@ exl-id: 918fcbbc-a78a-4fab-a933-f183ce6a907f
 solution: Experience Manager, Experience Manager Sites
 feature: Configuring
 role: Admin
-source-git-commit: aa91b0f84929affb527c57cf92d7b4714c98ba74
+source-git-commit: bbd2bc3fa2ebdca111084450941439a37f79cd73
 workflow-type: tm+mt
-source-wordcount: '2141'
-ht-degree: 9%
+source-wordcount: '2149'
+ht-degree: 8%
 
 ---
 
@@ -119,9 +119,11 @@ This is an automatically generated message. Please do not reply.
 
 若要自訂頁面通知的英文電子郵件範本：
 
-1. 在CRXDE中，開啟檔案：
+1. 建立[頁面通知](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#page-event-notification-e-mail-template)的覆蓋
 
-   `/libs/settings/notification-templates/com.day.cq.wcm.core.page/en.txt`
+1. 開啟檔案：
+
+   `en.txt`
 
 1. 視需要修改檔案。
 1. 儲存變更。
@@ -181,9 +183,11 @@ This is an automatically generated message. Please do not reply.
 
 若要自訂工作流程事件通知的英文電子郵件範本：
 
-1. 在CRXDE中，開啟檔案：
+1. 建立[工作流程通知](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#workflow-notification-email-templates)的覆蓋
 
-   `/libs/settings/workflow/notification/email/default/en.txt`
+1. 開啟檔案：
+
+   `en.txt`
 
 1. 視需要修改檔案。
 1. 儲存變更。
@@ -239,11 +243,12 @@ subject=<text_1>
 
 新增新語言的範本：
 
-1. 在CRXDE中，在下方新增檔案`<language-code>.txt`：
+1. 視需要建立[覆蓋](/help/sites-developing/overlays.md)。
 
-   * `/libs/settings/notification-templates/com.day.cq.wcm.core.page` ：用於頁面通知
-   * `/libs/settings/workflow/notification/email/default` ：用於工作流程通知
+   * [頁面通知](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#page-event-notification-e-mail-template)
+   * [工作流程通知](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#workflow-notification-email-templates)
 
+1. 新增檔案`<language-code>.txt`。
 1. 將檔案調整成語言。
 1. 儲存變更。
 
