@@ -9,9 +9,9 @@ role: Developer
 exl-id: 966c3554-25df-4467-866e-11c43cc15b58
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Services,APIs & Integrations
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+source-git-commit: 4df88fc37b86b6ff3b3a9b788c91b61e2aa7b07f
 workflow-type: tm+mt
-source-wordcount: '2331'
+source-wordcount: '2347'
 ht-degree: 1%
 
 ---
@@ -36,6 +36,8 @@ DocConverter服務可以將PDF檔案轉換為PDA/A檔案。 您可以使用此�
 PDF/A-1規格包含兩個一致性層次，即A與B。兩者之間的主要差異在於邏輯結構（協助工具）支援，這是符合性層級B所不需要的。無論符合性層級為何，PDF/A-1會指定所有字型都內嵌在產生的PDF/A檔案中。 目前，驗證（和轉換）僅支援PDF/A-1b。
 
 雖然PDF/A是封存PDF檔案的標準，但如果標準PDF檔案符合貴公司的要求，則不強制使用PDF/A進行封存。 PDF/A標準的目的是建立適合長期封存和檔案儲存需求的PDF檔案。
+
+支援的PDF/A合規性標準包括PDF/A-1a、1b、2a、2b、3a和3b。
 
 >[!NOTE]
 >

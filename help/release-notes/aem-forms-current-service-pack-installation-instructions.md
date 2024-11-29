@@ -5,7 +5,7 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: ae4c7e9d-9af8-4288-a6f9-e3bcbe7d153d
-source-git-commit: f2f6f7efe67efdfc88863593844cc172a4815622
+source-git-commit: 3fa791c50b79a5d8f68dcc8414e14b59ca831d61
 workflow-type: tm+mt
 source-wordcount: '1697'
 ht-degree: 6%
@@ -18,9 +18,9 @@ ht-degree: 6%
 
 | 產品 | Adobe Experience Manager 6.5 Forms |
 |---|---|
-| 版本 | 6.5.21.0 |
+| 版本 | 6.5.22.0 |
 | 類型 | Service Pack發行 |
-| 日期 | 2024年5月29日 |
+| 日期 | 2024 年 11 月 29 日 |
 | 下載 URL | [最新AEM Forms版本](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) |
 
 >[!NOTE]
@@ -192,7 +192,7 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
 +++7. 安裝AEM Experience Manager Forms附加元件套件
 
 1. 確定您已安裝[!DNL Experience Manager] Service Pack。
-1. 下載適用於您作業系統的 [AEM Forms 發行版本](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)所列出的對應 Forms 附加套件。
+1. 下載適用於您作業系統的 [AEM Forms 發行版本](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)所列出的對應 Forms 附加元件套件。
 1. 依照[安裝Forms附加元件套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)中的說明安裝AEM Forms附加元件套件。
 1. 如果您在Experience Manager6.5 Forms中使用字母，請安裝[最新的AEMFD相容性套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)。
 
@@ -266,7 +266,7 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
 +++5. 安裝Adobe Experience Manager Forms (AEM)附加元件套件
 
 1. 確定您已安裝[!DNL Experience Manager] Service Pack。
-1. 下載適用於您作業系統的 [AEM Forms 發行版本](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)所列出的對應 Forms 附加套件。
+1. 下載適用於您作業系統的 [AEM Forms 發行版本](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)所列出的對應 Forms 附加元件套件。
 1. 依照[安裝Forms附加元件套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)中的說明安裝AEM Forms附加元件套件。
 1. 如果您在Experience Manager6.5 Forms中使用字母，請安裝[最新的AEMFD相容性套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)。
 

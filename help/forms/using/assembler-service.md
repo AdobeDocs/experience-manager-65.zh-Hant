@@ -9,9 +9,9 @@ feature: Document Services
 exl-id: 84c8125d-0f16-432a-9567-63b868667537
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: 2eac9acd8b92582424557222b673211b29a15185
 workflow-type: tm+mt
-source-wordcount: '2118'
+source-wordcount: '2159'
 ht-degree: 6%
 
 ---
@@ -204,6 +204,22 @@ fragment="myFragment"/>
 </DDX>
 ```
 
+#### 解析CRX存放庫上的參考 {#resolve-references-on-crx-repository}
+
+您可以指定來源參照來解析來源參照，方法是
+XDP來源中的片段參考。 在以下提供的範例中，也包含片段
+已解決。
+
+```xml
+<DDX xmlns="http://ns.adobe.com/DDX/1.0/"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://ns.adobe.com/DDX/1.0/ coldfusion_ddx.xsd">
+<XDP result="stitched.xdp">
+<XDP source="crx:///content/dam/formsanddocuments/test-xdp/sample.xdp" />
+</XDP>
+</DDX>
+```
+
 #### 選擇性地解析絕對或相對參照 {#selectively-resolve-absolute-or-relative-references}
 
 您可以選擇性地解析所有或部分來原始檔中的絕對或相對參照，如下列範例所示：
@@ -345,4 +361,4 @@ digitalSignatures="true"/>
 </DDX>
 ```
 
-使用DDX和Assembler服務呼叫其他LiveC週期服務可簡化您的程式圖。 這甚至可以減少您自訂工作流程所花費的時間。 (另請參閱
+使用DDX和Assembler服務呼叫其他LiveC週期服務可簡化您的程式圖。 這甚至可以減少您自訂工作流程所花費的時間。 （另請參閱）

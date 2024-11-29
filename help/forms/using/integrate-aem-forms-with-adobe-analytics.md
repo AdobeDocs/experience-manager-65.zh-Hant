@@ -6,9 +6,9 @@ exl-id: 030fe9f2-cd41-4290-b8a6-2f9ade6b5789
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 feature: Adaptive Forms
-source-git-commit: 9f59606bb58b9e90f07bd22e89f3213afb54a697
+source-git-commit: 38e3439b5b9f3b4bc56bb1618d33e570ca0603f5
 workflow-type: tm+mt
-source-wordcount: '1762'
+source-wordcount: '1810'
 ht-degree: 0%
 
 ---
@@ -220,6 +220,11 @@ AEM Forms與[Adobe Analytics](https://experienceleague.adobe.com/docs/analytics-
 1. 選取「**[!UICONTROL 儲存並關閉]**」。
 
 1. Publish設定。
+
+>[!NOTE]
+>
+> 當您[將AEM Forms內嵌於AEM Sites頁面](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/adaptive-forms-basic-authoring/embed-adaptive-form-aem-sites)時，最適化表單的iFrame中不支援Adobe Launch設定。 若要解決此問題，請直接在Sites頁面上設定Adobe啟動規則，或將現有Adobe啟動設定從AEM Forms移轉至Sites頁面。
+
 
 ### 為最適化表單啟用[!DNL Adobe Analytics] {#enable-analytics-adaptive-form}
 

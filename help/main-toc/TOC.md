@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: 使用Adobe Experience Manager 6.5檔案瞭解其運作方式，以及軟體可為您做哪些事。
 breadcrumb-title: 使用手冊
 user-guide-title: AEM 6.5
-source-git-commit: f3dda5271c0d3bdd9d23bc26f3b5abe50fc1b90a
+source-git-commit: bf750ddc14ce083a949c57322e0bc45594e66311
 workflow-type: tm+mt
-source-wordcount: '7454'
+source-wordcount: '7477'
 ht-degree: 19%
 
 ---
@@ -624,6 +624,8 @@ ht-degree: 19%
       + [規則編輯器](/help/forms/using/rule-editor-core-components.md)
       + [在最適化表單核心元件中建立和使用自訂函式](/help/forms/using/create-and-use-custom-functions-core-components.md)
       + [針對以核心元件為基礎的最適化Forms建立並使用自訂錯誤處理常式](/help/forms/using/add-custom-error-handler-adaptive-forms-core-components.md)
+      + [在最適化表單中新增版本設定、評論和附註](/help/forms/using/add-versioning-reviews-comments.md)
+      + [比較最適化表單](/help/forms/using/compare-forms-core-components.md)
    + 最適化Forms — 基本製作{#adaptive-forms-basic-authoring}
       + [使用最適化表單的最佳作法](/help/forms/using/adaptive-forms-best-practices.md)
       + [建立最適化表單](/help/forms/using/creating-adaptive-form.md)
@@ -631,6 +633,8 @@ ht-degree: 19%
       + [最適化表單片段](/help/forms/using/adaptive-form-fragments.md)
       + [設定提交動作](/help/forms/using/configuring-submit-actions.md)
       + [在最適化表單中使用驗證碼](/help/forms/using/captcha-adaptive-forms.md)
+      + [在最適化表單中使用驗證碼](/help/forms/using/integrate-adaptive-forms-hcaptcha.md)
+      + [在最適化表單中使用Turnstile驗證碼](/help/forms/using/integrate-adaptive-forms-turnstile.md)
       + [最適化表單關鍵字](/help/forms/using/adaptive-forms-keywords.md)
       + [調適型表單中的表格](/help/forms/using/adaptive-forms-tables.md)
       + [調適型表單中的圖表](/help/forms/using/adaptive-form-charts.md)
