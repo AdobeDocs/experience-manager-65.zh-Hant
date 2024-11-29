@@ -10,7 +10,7 @@ role: Admin, User, Developer
 feature: Forms Designer,Designer
 exl-id: 90503d29-e079-43f4-a5dc-ce90ed7844c6
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 4ce52d90f9d3300e543563ce3dc242f28e00912e
+source-git-commit: 89f807e1d31c5588d86e50160b0149e00422b78c
 workflow-type: tm+mt
 source-wordcount: '811'
 ht-degree: 0%
@@ -124,3 +124,4 @@ msiexec /i "<absolute path>\Designer.msi" /quiet SERIALNUMBER=****-****-****-***
       1. 開啟Designer，前往說明，按一下關於設計工具，您會看到設計工具版本資訊以及位元資訊，例如，您會看到64位元寫入版本結尾處，如下所示：
          `6.5.21.20240522.1.161 | 64 bit`
       1. 開啟Designer，左上角會出現一個品牌圖示，其中包含產品名稱的64位元資訊。
+
