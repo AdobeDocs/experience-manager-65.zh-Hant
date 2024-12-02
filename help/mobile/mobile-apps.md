@@ -1,6 +1,6 @@
 ---
 title: 行動應用程式
-description: "Mobile-Apps"
+description: 行動應用程式
 contentOwner: msm-service
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE

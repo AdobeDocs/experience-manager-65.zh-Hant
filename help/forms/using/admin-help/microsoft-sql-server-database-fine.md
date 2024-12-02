@@ -1,5 +1,5 @@
 ---
-title: 「Microsoft SQL Server資料庫：微調組態」
+title: Microsoft SQL Server資料庫：微調組態
 description: 瞭解如何微調Microsoft SQL Server資料庫的設定。
 contentOwner: admin
 content-type: reference

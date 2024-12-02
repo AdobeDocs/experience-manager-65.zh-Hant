@@ -1,5 +1,5 @@
 ---
-title: 「IBM DB2資料庫：執行命令以進行定期維護」
+title: IBM DB2資料庫：執行命令以進行定期維護
 description: 本檔案列出定期維護AEM表單資料庫所建議的IBM DB2命令。
 contentOwner: admin
 content-type: reference

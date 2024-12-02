@@ -1,5 +1,5 @@
 ---
-title: "[!DNL Assets] proxy development"
+title: '[!DNL Assets] Proxy開發'
 description: Proxy是使用Proxy Worker處理工作的 [!DNL Experience Manager] 執行個體。 瞭解如何設定 [!DNL Experience Manager] Proxy、支援的作業、Proxy元件，以及如何開發自訂Proxy Worker。
 contentOwner: AG
 role: Admin, Architect

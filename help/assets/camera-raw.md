@@ -1,5 +1,5 @@
 ---
-title: '[!DNL Adobe Camera Raw]支援處理數位資產」'
+title: '[!DNL Adobe Camera Raw]支援處理數位資產'
 description: 瞭解如何啟用 [!DNL Adobe Experience Manager Assets]中的 [!DNL Adobe Camera Raw] 支援
 contentOwner: AG
 role: Admin

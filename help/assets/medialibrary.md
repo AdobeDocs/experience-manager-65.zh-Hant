@@ -1,6 +1,6 @@
 ---
 title: 使用Media Library進行基本的數位資產管理
-description: "[!DNL Experience Manager Assets]和Media Library的資產管理。"
+description: 用於資產管理的[!DNL Experience Manager Assets]和Media Library。
 contentOwner: AG
 role: Architect, Leader
 feature: Asset Management

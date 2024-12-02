@@ -1,5 +1,5 @@
 ---
-title: 「教學課程：在AEM Forms中建立表單資料模型」
+title: 教學課程：在AEM Forms中建立表單資料模型
 description: 建立互動式通訊的表單資料模型
 contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.5/FORMS

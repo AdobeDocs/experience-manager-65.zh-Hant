@@ -1,6 +1,6 @@
 ---
 title: ' [!DNL Adobe Experience Manager] 6.5的一般發行說明'
-description: "[!DNL Adobe Experience Manager] 6.5說明概述了發行資訊、新增功能、安裝方法和詳細變更清單。"
+description: '[!DNL Adobe Experience Manager] 6.5說明列出發行資訊、新增功能、安裝方法以及詳細的變更清單。'
 exl-id: b3d4a527-44ca-4eb6-b393-f3e8117cf1a6
 solution: Experience Manager
 feature: Release Information
@@ -65,7 +65,7 @@ UI已進行各種增強功能，使其更有效率且更易於使用。
 
 >[!CAUTION]
 >
->Adobe不打算進一步增強傳統UI。 AEM 6.5包含傳統UI，而從舊版升級的客戶可以繼續使用。 傳統UI在被取代時仍完全支援。 [瞭解詳情](/help/sites-deploying/ui-recommendations.md)。
+>Adobe不打算進一步增強傳統UI。 AEM 6.5包含傳統UI，而從舊版升級的客戶可以繼續使用。 傳統UI在被取代時仍完全支援。 [閱讀更多](/help/sites-deploying/ui-recommendations.md)。
 
 #### 搜尋和建立索引 {#indexing-and-search}
 
@@ -362,7 +362,7 @@ AEM 6.5引進以下功能和增強功能，以提高AEM使用者、DAM角色和�
 
 如需詳細資訊，請參閱[Brand Portal的新功能](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/introduction/whats-new.html)。
 
-#### 連接的資產 {#connectedassets}
+#### 已連線資產 {#connectedassets}
 
 在大型企業中，可以分發建立網站所需的基礎架構。 有時，網站建立功能和所需的數位資產位於不同的獨立單位。
 
@@ -561,7 +561,7 @@ org.osgi.framework.bootdelegation=sun.*,com.sun.*,jdk.internal.reflect,jdk.inter
 * **資料夾中繼資料結構描述**：新增選擇按鈕後，ID和Value欄位未如預期般呈現，且刪除功能無法運作。 (CQ-4261144)
 * 重新命名資產時，資產名稱中不可使用空白字元。 (CQ-4266403)
 
-### 表單 {#forms}
+### Forms {#forms}
 
 * 在Linux®作業系統上安裝AEM Forms時，使用硬體安全性模組的數位簽名無法運作。 (CQ-4266721)
 * (僅適用於WebSphere上的AEM Forms®)如果您搜尋以&#x200B;**使用者名稱**&#x200B;作為搜尋條件的&#x200B;**系統管理員**，則&#x200B;**Forms Workflow** > **任務搜尋**&#x200B;選項不會傳回任何結果。 (CQ-4266457)

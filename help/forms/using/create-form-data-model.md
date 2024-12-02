@@ -1,5 +1,5 @@
 ---
-title: 「教學課程：建立表單資料模型」
+title: '教學課程：建立表單資料模型 '
 description: 瞭解如何設定MySQL作為資料來源、建立表單資料模型(FDM)、設定它，以及測試AEM Forms。
 contentOwner: khsingh
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
@@ -175,7 +175,7 @@ AEM [!DNL Forms]提供直覺式使用者介面，可讓您從已設定的資料�
 1. 移至&#x200B;**[!UICONTROL 服務]**&#x200B;索引標籤並設定&#x200B;**[!UICONTROL get]**&#x200B;和&#x200B;**[!UICONTROL 更新]**&#x200B;服務。
 
    1. 選取&#x200B;**[!UICONTROL get]**&#x200B;服務並選取&#x200B;**[!UICONTROL 編輯屬性]**。 將打開屬性對話框。
-   1. 在編輯 屬性對話框中指定以下内容：
+   1. 在「編輯屬性」對話框中指定以下內容：
 
       * **標題**：指定服務的標題。 例如：檢索送貨位址。
       * **描述**：指定包含服務詳細功能的描述。 例如：

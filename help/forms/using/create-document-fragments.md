@@ -1,5 +1,5 @@
 ---
-title: 「教學課程：建立檔案片段」
+title: 教學課程：建立檔案片段
 description: 建立互動式通訊的檔案片段
 contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.5/FORMS

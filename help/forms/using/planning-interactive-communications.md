@@ -1,5 +1,5 @@
 ---
-title: 「教學課程：規劃互動式通訊」
+title: 教學課程：規劃互動式通訊
 description: 規劃互動式通訊的結構
 contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.5/FORMS

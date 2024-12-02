@@ -1,5 +1,5 @@
 ---
-title: 「教學課程：建立互動式通訊」
+title: '教學課程：建立互動式通訊 '
 description: 使用所有建置區塊建立互動式通訊
 contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.5/FORMS

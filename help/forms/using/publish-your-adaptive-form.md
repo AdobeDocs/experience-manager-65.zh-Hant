@@ -1,5 +1,5 @@
 ---
-title: 「教學課程：Publish您的最適化表單」
+title: 教學課程：Publish您的最適化表單
 description: 將最適化表單作為AEM頁面Publish、將表單內嵌到AEM Sites頁面，或將最適化表單內嵌到外部網頁中
 contentOwner: khsingh
 topic-tags: introduction

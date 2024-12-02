@@ -1,5 +1,5 @@
 ---
-title: 「DB2&amp；reg；資料庫：每週執行處理序」
+title: DB2&amp；reg；資料庫：每週執行處理序
 description: 瞭解如何改善AEM Forms DB2&amp； reg；資料庫的效能。
 contentOwner: admin
 content-type: reference

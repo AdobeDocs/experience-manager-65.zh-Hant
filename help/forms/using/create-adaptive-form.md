@@ -1,5 +1,5 @@
 ---
-title: 「教學課程：建立最適化表單」
+title: 教學課程：建立最適化表單
 description: 瞭解如何建立、佈局和預覽最適化表單。 另外，瞭解如何設定提交動作。
 feature: Adaptive Forms
 exl-id: c0a2adcd-528a-41af-99b5-d8b423cd6605
@@ -8,7 +8,7 @@ role: Admin, User, Developer
 source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '1314'
-ht-degree: 8%
+ht-degree: 9%
 
 ---
 
@@ -95,7 +95,7 @@ AEM [!DNL Forms]提供許多元件，以便在最適化表單上顯示資訊。 
       <td>customer_state</td> 
      </tr> 
      <tr> 
-      <td>必填欄位</td> 
+      <td>必要欄位</td> 
       <td>已啟用</td> 
       <td>已啟用</td> 
       <td>已啟用</td> 
@@ -116,7 +116,7 @@ AEM [!DNL Forms]提供許多元件，以便在最適化表單上顯示資訊。 
    | 標題 | 郵遞區號 |
    | 元素名稱 | customer_ZIPCode |
    | 數字數量上限 | 6 |
-   | 必填欄位 | 已啟用 |
+   | 必要欄位 | 已啟用 |
    | 顯示圖樣型別 | 無模式 |
 
 1. 將&#x200B;**[!UICONTROL 電子郵件]**&#x200B;元件拖曳到頁尾元件之前。 開啟元件的屬性，設定下表所列值，然後選取![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)。
@@ -125,7 +125,7 @@ AEM [!DNL Forms]提供許多元件，以便在最適化表單上顯示資訊。 
    |---|---|
    | 標題 | 電子郵件 |
    | 元素名稱 | customer_Email |
-   | 必填欄位 | 已啟用 |
+   | 必要欄位 | 已啟用 |
 
 1. 將&#x200B;**[!UICONTROL File Attachment]**&#x200B;元件拖曳到頁尾元件之前。 開啟元件的屬性，設定下表所列值，然後選取![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)。
 
@@ -144,7 +144,7 @@ AEM [!DNL Forms]提供許多元件，以便在最適化表單上顯示資訊。 
       <td>customer_Address_Proof</td> 
      </tr> 
      <tr> 
-      <td>必填欄位</td> 
+      <td>必要欄位</td> 
       <td>已啟用</td> 
      </tr> 
     </tbody> 

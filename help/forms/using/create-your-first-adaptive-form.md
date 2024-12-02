@@ -1,5 +1,5 @@
 ---
-title: 「教學課程：建立第一個最適化表單」
+title: 教學課程：建立第一個最適化表單
 description: 瞭解如何建立商務級、互動式和回應式表單。
 topic-tags: introduction
 docset: aem65
@@ -57,7 +57,7 @@ ht-degree: 6%
 
 ![03-create-adaptive-form-main-image_small](assets/03-create-adaptive-form-main-image_small.png)
 
-調適型表單本質上是新一代的、吸引人的、回應式的、動態的和調適型。 使用調適型表單，您可以提供個人化和目標性的體驗。 AEM [!DNL Forms]提供拖放WYSIWYG編輯器以建立最適化表單。 如需最適化表單的詳細資訊，請參閱[製作最適化表單簡介](../../forms/using/introduction-forms-authoring.md)。
+調適型表單本質上是新一代的、吸引人的、回應式的、動態的和調適型。 使用調適型表單，您可以提供個人化和目標性的體驗。 AEM [!DNL Forms]提供拖放WYSIWYG編輯器，以建立最適化表單。 如需最適化表單的詳細資訊，請參閱[製作最適化表單簡介](../../forms/using/introduction-forms-authoring.md)。
 
 目標：
 

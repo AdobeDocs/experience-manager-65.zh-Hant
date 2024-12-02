@@ -1,5 +1,5 @@
 ---
-title: 「通訊管理：疑難排解」
+title: 通訊管理：疑難排解
 description: 瞭解如何處理在AEM Forms環境中儲存信函的過程中發生的錯誤。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS

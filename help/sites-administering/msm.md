@@ -1,5 +1,5 @@
 ---
-title: 「重複使用內容：多網站管理員和即時副本」
+title: 重複使用內容：多網站管理員和 Live Copy
 description: 瞭解如何透過即時副本和多網站管理員來重複使用內容。
 contentOwner: AEM Docs
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -310,7 +310,7 @@ MSM即時副本是特定網站內容的副本，其維持與原始來源的即�
 
 #### 含非 Live Copy 頁面的 Live Copy {#live-copy-with-non-live-copy-pages}
 
-在AEM中建立即時副本時，您可以檢視和瀏覽即時副本分支，並在即時副本分支上使用一般AEM功能。 這表示您（或程式）可以在即時副本分支內建立資源（頁面、段落或兩者）。 例如，`myCanadaOnlyProduct`。
+在AEM中建立即時副本時，您可以檢視和瀏覽即時副本分支，並在即時副本分支上使用一般AEM功能。 這表示您（或程式）可以在即時副本分支內建立資源（頁面、段落或兩者）。 例如 `myCanadaOnlyProduct`。
 
 * 這類資源與來源/藍圖頁面沒有即時關係，並且不同步。
 * 可能會發生MSM以特殊情況處理的案例。 例如，當您（或程式）在來源/Blueprint和即時副本分支中建立具有相同位置和名稱的頁面時。 對於這類情況，請參閱[MSM轉出衝突](/help/sites-administering/msm-rollout-conflicts.md)以取得詳細資訊。
