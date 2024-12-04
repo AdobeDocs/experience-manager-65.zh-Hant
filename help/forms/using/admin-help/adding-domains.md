@@ -9,21 +9,23 @@ exl-id: c708936d-7aa7-4b92-be2d-d97008f187d2
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+source-git-commit: eac8a82c78d7f209512d32e7fcd7083bbebf1cb5
 workflow-type: tm+mt
-source-wordcount: '929'
+source-wordcount: '941'
 ht-degree: 0%
 
 ---
 
 # 新增網域 {#adding-domains}
 
+確保使用者具有存取管理員控制檯的管理員許可權。
+
 ## 新增企業網域 {#add-an-enterprise-domain}
 
 1. 在管理控制檯中，按一下「設定>使用者管理>網域管理」。
 1. 按一下新增企業網域。
 1. 在ID方塊中，輸入網域的唯一識別碼，並在Name方塊中，輸入網域的描述性名稱。 （請參閱[網域名稱和ID的重要考量](adding-domains.md#important-considerations-for-domain-names-and-ids)。）
-1. 指定是否啟用帳戶鎖定。 （請參閱[設定帳戶鎖定設定](/help/forms/using/admin-help/configure-account-locking-settings.md#configure-account-locking-settings)。） 依預設，會選取[啟用帳戶鎖定]。
+1. 指定是否啟用帳戶鎖定。 （請參閱[設定帳戶鎖定設定](/help/forms/using/admin-help/configure-account-locking-settings.md#configure-account-locking-settings)。）依預設，會選取[啟用帳戶鎖定]。
 1. 按一下「新增驗證」，然後在「驗證提供者」清單中選取提供者，視您的組織所使用的驗證機制而定。 可能的值包括LDAP、Kerberos、SAML或自訂驗證提供者。
 
    如果您選取LDAP，則可以使用目錄組態中指定的LDAP伺服器，也可以選擇不同的LDAP伺服器來用於驗證。 如果您選擇不同的伺服器，您的使用者必須存在於兩個LDAP伺服器上。
@@ -39,7 +41,7 @@ ht-degree: 0%
 1. 在管理控制檯中，按一下「設定>使用者管理>網域管理」。
 1. 按一下「新增本機網域」。
 1. 在ID方塊中，輸入網域的唯一識別碼，並在Name方塊中，輸入網域的描述性名稱。 （請參閱[網域名稱和ID的重要考量](adding-domains.md#important-considerations-for-domain-names-and-ids)。）
-1. 指定是否啟用帳戶鎖定，然後按一下[確定]。 （請參閱[設定帳戶鎖定設定](/help/forms/using/admin-help/configure-account-locking-settings.md#configure-account-locking-settings)。） 依預設，會選取[啟用帳戶鎖定]。
+1. 指定是否啟用帳戶鎖定，然後按一下[確定]。 （請參閱[設定帳戶鎖定設定](/help/forms/using/admin-help/configure-account-locking-settings.md#configure-account-locking-settings)。）依預設，會選取[啟用帳戶鎖定]。
 
 ## 新增混合式網域 {#add-a-hybrid-domain}
 
