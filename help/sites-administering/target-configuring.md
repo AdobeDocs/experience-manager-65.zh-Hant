@@ -9,9 +9,9 @@ exl-id: 0f710685-dc4f-4333-9847-d002b2637d08
 solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
-source-git-commit: eae057caed533ef16bb541b4ad41b8edd7aaa1c7
+source-git-commit: d2623c78e8c779b20303865d4bb40effd1e5fe59
 workflow-type: tm+mt
-source-wordcount: '2122'
+source-wordcount: '2125'
 ht-degree: 1%
 
 ---
@@ -140,7 +140,10 @@ AT.js對mbox.js資料庫提供數項改善專案：
 
    1. 為設定提供&#x200B;**標題**。
    1. 選取&#x200B;**Adobe Target設定**&#x200B;範本。
-   1. 按一下&#x200B;**建立**。
+
+      ![Adobe Target設定](assets/adobe-target-create-configuration.png)
+
+1. 按一下&#x200B;**建立**。
 
    編輯對話方塊隨即開啟。
 
@@ -243,7 +246,7 @@ AT.js對mbox.js資料庫提供數項改善專案：
 1. 在&#x200B;**網站**&#x200B;主控台中，導覽至您要設定的網站。
 1. 使用[快速動作](/help/sites-authoring/basic-handling.md#quick-actions)或[選取模式](/help/sites-authoring/basic-handling.md)，選取&#x200B;**檢視內容。**
 1. 選取「**雲端服務**」標籤。
-1. 按一下&#x200B;**編輯**。
+1. 按一下「**編輯**」。
 1. 按一下&#x200B;**Cloud Service組態**&#x200B;下的&#x200B;**新增組態**，然後選取&#x200B;**Adobe Target**。
 
    ![新增設定](assets/chlimage_1-165.png)
