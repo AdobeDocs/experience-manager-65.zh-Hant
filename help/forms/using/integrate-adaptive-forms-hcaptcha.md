@@ -3,9 +3,10 @@ title: 如何在AEM 6.5 Forms中使用hCaptcha&amp； reg；？
 description: 使用hCaptcha&amp；reg；服務輕鬆增強表單安全性。 內的逐步指南！
 feature: Adaptive Forms, Foundation Components
 role: User, Developer
-source-git-commit: a4e155de8a4f60d3746cecea110466b1d5d44dbb
+exl-id: 6aa7a0a5-bd45-4628-abd0-312a9e6cf6fe
+source-git-commit: 25dfe85048184e34cc3afb5e7b08cc0e2f054a01
 workflow-type: tm+mt
-source-wordcount: '878'
+source-wordcount: '846'
 ht-degree: 2%
 
 ---
@@ -13,12 +14,8 @@ ht-degree: 2%
 # 使用hCaptcha連線您的AEM Forms環境® {#connect-your-forms-environment-with-hcaptcha-service}
 
 <!--
-
-<span class="preview"> This feature is under the Early Adopter Program. You can write to aem-forms-ea@adobe.com from your official email id to join the early adopter program and request access to the capability. </span>
-
+<span class="preview"> This feature is under the early adopter program. If you’re interested in joining our early access program for this feature, send an email from your official address to aem-forms-ea@adobe.com to request access </span>
 -->
-
-<span class="preview">此功能在早期採用者計畫下。 如果您有興趣加入我們對此功能的搶先存取計畫，請從您的官方地址傳送電子郵件至aem-forms-ea@adobe.com以要求存取</span>
 
 CAPTCHA （完全自動化公用圖靈測試來區分電腦和人之間的差異）是一種常用於線上交易的程式，以區分人和自動化程式或機器人。 這會帶來挑戰，並評估使用者的回應，以判斷其是否為人類或機器人與網站互動。 它可防止使用者在測試失敗時繼續進行，並透過防止機器人張貼垃圾郵件或惡意目的來確保線上交易的安全。
 
