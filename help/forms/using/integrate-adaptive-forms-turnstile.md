@@ -4,9 +4,9 @@ description: 透過Turnstile服務輕鬆增強表單安全性。 內的逐步指
 feature: Adaptive Forms, Foundation Components
 role: User, Developer
 exl-id: bed93ce3-89db-477a-8316-7598275e4bca
-source-git-commit: 65425a4a779c6e7adffb1174c0076e03cbc54ac1
+source-git-commit: 4a0e8def5bafd4d90f50bf4b34a537c51e09ce27
 workflow-type: tm+mt
-source-wordcount: '846'
+source-wordcount: '842'
 ht-degree: 2%
 
 ---
@@ -77,13 +77,13 @@ Cloudflare的Turnstile驗證碼是一種安全性措施，旨在保護表單和�
 1. 選取最適化表單，然後按一下&#x200B;**[!UICONTROL 屬性]**。 在&#x200B;**[!UICONTROL 設定容器]**&#x200B;中，選取Turnstile®的雲端設定。
 1. 按一下「**[!UICONTROL 儲存並關閉]**」。
 
-   如果您沒有這類設定容器，請參閱區段[使用Turnstile連線您的AEM Forms環境](#connect-your-forms-environment-with-turnstile-service)以瞭解如何建立設定容器。
+   如果您沒有組態容器可設定Captcha服務，請參閱[設定Turnstile](#configure-turnstile-steps-to-configure-hcaptcha)一節，以瞭解如何建立組態容器。
 
    ![選取設定容器](assets/captcha-properties.png)
 
 1. 選取最適化表單，然後按一下&#x200B;**[!UICONTROL 編輯]**，在編輯器中開啟最適化表單。
 1. 從元件瀏覽器中，將&#x200B;**[!UICONTROL 驗證碼]**&#x200B;元件拖放至最適化表單上。
-1. 選取&#x200B;**[!UICONTROL Adaptive Form Turnstile]**&#x200B;元件，然後按一下屬性![屬性圖示](assets/configure-icon.svg)圖示。 它會開啟屬性對話方塊。 指定下列屬性：
+1. 選取&#x200B;**[!UICONTROL 驗證碼]**&#x200B;元件，然後按一下屬性![屬性圖示](assets/configure-icon.svg)圖示。 它會開啟屬性對話方塊。 指定下列屬性：
 
    <!--![Turnstile v2](assets/turnstile-settings-v2.png)-->
    ![Cloudfare Turnstile v1](assets/turnstile-setting-v1.png)
@@ -95,7 +95,8 @@ Cloudflare的Turnstile驗證碼是一種安全性措施，旨在保護表單和�
    * **[!UICONTROL 組態設定]：**&#x200B;選取您為Turnstile®設定的雲端組態。
      >[!NOTE]
      >基於類似目的，您的環境中可以有多個雲端設定。 因此，請謹慎選擇服務。 如果未列出任何服務，請參閱[將您的AEM Forms環境與Turnstile連線](#connect-your-forms-environment-with-turnstile-service)，以瞭解如何建立將AEM Forms環境與Turnstile服務連結的Cloud Service。
-   * **錯誤訊息：**&#x200B;提供驗證碼提交失敗時向使用者顯示的錯誤訊息。
+
+   * **[!UICONTROL 錯誤訊息]：**&#x200B;提供驗證碼提交失敗時向使用者顯示的錯誤訊息。
    * **驗證碼大小：**&#x200B;您可以選取hCaptcha®挑戰對話方塊的顯示大小。 使用&#x200B;**[!UICONTROL Compact]**&#x200B;選項可顯示小尺寸，使用&#x200B;**[!UICONTROL Normal]**&#x200B;可顯示相對大尺寸的hCaptcha®挑戰對話方塊。
 
 1. 選取「**[!UICONTROL 完成]**」。

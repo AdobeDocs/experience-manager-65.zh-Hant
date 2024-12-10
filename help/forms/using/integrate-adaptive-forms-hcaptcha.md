@@ -3,9 +3,10 @@ title: 如何在AEM 6.5 Forms中使用hCaptcha&amp； reg；？
 description: 使用hCaptcha&amp；reg；服務輕鬆增強表單安全性。 內的逐步指南！
 feature: Adaptive Forms, Foundation Components
 role: User, Developer
-source-git-commit: 65425a4a779c6e7adffb1174c0076e03cbc54ac1
+exl-id: 6aa7a0a5-bd45-4628-abd0-312a9e6cf6fe
+source-git-commit: 96e6705349fc6969ab0c40c8c770c9a0d1967619
 workflow-type: tm+mt
-source-wordcount: '864'
+source-wordcount: '863'
 ht-degree: 2%
 
 ---
@@ -75,13 +76,13 @@ AEM 6.5最適化Forms支援hCaptcha&amp;reg。 您可以用它來在表單提交
 1. 在&#x200B;**[!UICONTROL 設定容器]**&#x200B;中，選取您的hCaptcha®雲端設定。
 1. 按一下「**[!UICONTROL 儲存並關閉]**」。
 
-   如果您沒有這類設定容器，請參閱[使用hCaptcha®](#connect-your-forms-environment-with-hcaptcha-service)連線您的AEM Forms環境一節，以瞭解如何建立設定容器。
+   如果您沒有hCaptcha的設定容器，請參閱[使用hCaptcha®連線您的AEM Forms環境](#configure-hcaptcha-steps-to-configure-hcaptcha)一節，以瞭解如何建立設定容器。
 
    ![選取設定容器](/help/forms/using/assets/captcha-properties.png)
 
 1. 選取最適化表單，然後按一下&#x200B;**[!UICONTROL 編輯]**&#x200B;以在編輯器中開啟表單。
 1. 從元件瀏覽器中，將&#x200B;**[!UICONTROL 驗證碼]**&#x200B;元件拖放至最適化表單上。
-1. 選取&#x200B;**[!UICONTROL 最適化表單hCaptcha®]**&#x200B;元件，然後按一下屬性![屬性圖示](assets/configure-icon.svg)以開啟屬性對話方塊。 指定下列屬性：
+1. 選取&#x200B;**[!UICONTROL 驗證碼]**&#x200B;元件，然後按一下屬性![屬性圖示](assets/configure-icon.svg)以開啟屬性對話方塊。 指定下列屬性：
 
    ![hCaptcha® v1](assets/config-hcaptcha-v1-img.png)
 
@@ -91,13 +92,14 @@ AEM 6.5最適化Forms支援hCaptcha&amp;reg。 您可以用它來在表單提交
    * **[!UICONTROL 組態設定]：**&#x200B;選取您為hCaptcha®設定的雲端組態。
      >[!NOTE]
      >基於類似目的，您的環境中可以有多個雲端設定。 因此，請謹慎選擇服務。 如果未列出任何服務，請參閱[使用hCaptcha®](#connect-your-forms-environment-with-hcaptcha-service)連線您的AEM Forms環境，以瞭解如何建立將AEM Forms環境與hCaptcha®服務連線的Cloud Service。
-   * **錯誤訊息：**&#x200B;提供驗證碼提交失敗時向使用者顯示的錯誤訊息。
-   * **驗證碼大小：**&#x200B;您可以選取hCaptcha®挑戰對話方塊的顯示大小。 使用&#x200B;**[!UICONTROL Compact]**&#x200B;選項可顯示較小的大小，使用&#x200B;**[!UICONTROL Normal]**&#x200B;可顯示相對較大的hCaptcha®挑戰對話方塊，或使用&#x200B;**[!UICONTROL Invisible]**&#x200B;驗證hCaptcha®而不需在使用者介面上明確轉譯核取方塊Widget。
+
+   * **[!UICONTROL 錯誤訊息]：**&#x200B;提供驗證碼提交失敗時向使用者顯示的錯誤訊息。
+   * **[!UICONTROL 驗證碼大小]：**&#x200B;您可以選取hCaptcha®挑戰對話方塊的顯示大小。 使用&#x200B;**[!UICONTROL Compact]**&#x200B;選項可顯示較小的大小，使用&#x200B;**[!UICONTROL Normal]**&#x200B;可顯示相對較大的hCaptcha®挑戰對話方塊，或使用&#x200B;**[!UICONTROL Invisible]**&#x200B;驗證hCaptcha®而不需在使用者介面上明確轉譯核取方塊Widget。
 
 1. 選取「**[!UICONTROL 完成]**」。
 
 
-現在，只有合法的表單，表單填寫者才能成功清除hCaptcha®服務帶來的挑戰，才能用於表單提交。 hCaptcha®
+現在，只有合法的表單，表單填寫者才能成功清除hCaptcha®服務帶來的挑戰，才能用於表單提交。
 
 **hCaptcha®是Intuition Machines， Inc.的註冊商標。**
 
