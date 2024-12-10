@@ -4,18 +4,16 @@ description: 透過Turnstile服務輕鬆增強表單安全性。 內的逐步指
 feature: Adaptive Forms, Foundation Components
 role: User, Developer
 exl-id: bed93ce3-89db-477a-8316-7598275e4bca
-source-git-commit: ab92f0a4c89f6c523539ccc048ea2d88b930936c
+source-git-commit: 65425a4a779c6e7adffb1174c0076e03cbc54ac1
 workflow-type: tm+mt
-source-wordcount: '828'
+source-wordcount: '846'
 ht-degree: 2%
 
 ---
 
 # 使用Turnstile連線您的AEM Forms環境 {#connect-your-forms-environment-with-turnstile-service}
 
-<!--
-<span class="preview"> This feature is under the early adopter program. If you’re interested in joining our early access program for this feature, send an email from your official address to aem-forms-ea@adobe.com to request access </span>
--->
+<span class="preview">此功能是以功能切換ID `FT_FORMS-12407`為基礎。 若要啟用功能，請依照[啟用功能切換](/help/forms/using/enable-feature-toggle.md)文章中提供的步驟操作。</span>
 
 CAPTCHA （完全自動化公用圖靈測試來區分電腦和人之間的差異）是一種常用於線上交易的程式，以區分人和自動化程式或機器人。 這會帶來挑戰，並評估使用者的回應，以判斷其是否為人類或機器人與網站互動。 它可防止使用者在測試失敗時繼續進行，並透過防止機器人張貼垃圾郵件或惡意目的來確保線上交易的安全。
 
@@ -84,7 +82,7 @@ Cloudflare的Turnstile驗證碼是一種安全性措施，旨在保護表單和�
    ![選取設定容器](assets/captcha-properties.png)
 
 1. 選取最適化表單，然後按一下&#x200B;**[!UICONTROL 編輯]**，在編輯器中開啟最適化表單。
-1. 從元件瀏覽器中，拖放或新增&#x200B;**[!UICONTROL 調適型表單Turnstile]**&#x200B;元件至調適型表單。
+1. 從元件瀏覽器中，將&#x200B;**[!UICONTROL 驗證碼]**&#x200B;元件拖放至最適化表單上。
 1. 選取&#x200B;**[!UICONTROL Adaptive Form Turnstile]**&#x200B;元件，然後按一下屬性![屬性圖示](assets/configure-icon.svg)圖示。 它會開啟屬性對話方塊。 指定下列屬性：
 
    <!--![Turnstile v2](assets/turnstile-settings-v2.png)-->

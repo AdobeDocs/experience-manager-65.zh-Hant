@@ -6,9 +6,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
-source-git-commit: 167d897cc5f44a2302a4ba932e238e6ba973635d
+source-git-commit: 26c1fe9d032729dd8d1737c922c4b2fab55f2d48
 workflow-type: tm+mt
-source-wordcount: '6030'
+source-wordcount: '6085'
 ht-degree: 1%
 
 ---
@@ -614,8 +614,16 @@ Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on
 * 在互動式通訊代理程式UI的列印預覽中，所有欄位值都會不一致地顯示貨幣符號（例如美元符號$）。 對於最多999的值會顯示它，但對於1000或以上的值則遺失。 (FORMS-16557)
 * 互動式通訊中巢狀配置片段XDP的任何修改都不會反映在IC編輯器中。 (FORMS-16575)
 * 在互動式通訊代理程式UI的列印預覽中，部分計算值無法正確顯示。 (FORMS-16603)
-* 在「列印預覽」中檢視信函時，內容會變更。 也就是說，某些空格會消失，而某些字母會以`x`取代。 (FORMS-15681)
-* 當使用者設定WebLogic 14c執行個體時，在JBoss®上執行的JEE上的AEM Forms Service Pack 21 (6.5.21.0)中的PDFG服務會因涉及SLF4J程式庫的類別載入器衝突而失敗。 錯誤顯示如下(CQDOC-22178)：
+* 在「列印預覽」中檢視信函時，內容會變更。 也就是說，有些空格會消失，而某些字母會取代為「x」。 (FORMS-15681)
+* 從AEM Forms OSGi 6.5.22開始，Forms服務的renderPDFForm作業不會在伺服器上執行僅使用者端(runAt=client)指令碼，只有標示為runAt=server或runAt=both的指令碼才會執行，如下表所述。 (FORMS-16564)
+
+  | 標示為runAt的指令碼 | 在伺服器上執行 |
+  |---------------------|-------------------------|
+  | 伺服器 | 是 |
+  | 兩者 | 是 |
+  | 使用者端 | 否 |
+
+* 當使用者設定WebLogic 14c執行個體時，在JBoss上執行的JEE上的AEM Forms Service Pack 21 (6.5.21.0)中的PDFG服務會失敗，因為類別載入器衝突涉及SLF4J程式庫。 錯誤顯示如下(CQDOC-22178)：
 
   ```java
   Caused by: java.lang.LinkageError: loader constraint violation: when resolving method "org.slf4j.impl.StaticLoggerBinder.getLoggerFactory()Lorg/slf4j/ILoggerFactory;"

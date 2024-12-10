@@ -3,9 +3,9 @@ title: 在AEM 6.5最適化表單中新增版本設定、評論和註解。
 description: 使用AEM 6.5最適化表單核心元件，為最適化表單新增註解、註解和版本設定。
 feature: Adaptive Forms, Core Components
 role: User, Developer, Admin
-source-git-commit: a4e155de8a4f60d3746cecea110466b1d5d44dbb
+source-git-commit: 794d93d890ba752f9036a85831f7cbc8391fb545
 workflow-type: tm+mt
-source-wordcount: '625'
+source-wordcount: '593'
 ht-degree: 0%
 
 ---
@@ -13,10 +13,11 @@ ht-degree: 0%
 # 最適化表單的版本設定、稽核和註解
 
 <!--
-<span class="preview"> This feature is under the Early Adopter Program. You can write to aem-forms-ea@adobe.com from your official email id to join the early adopter program and request access to the capability. </span>
+
+<span class="preview"> This feature is under the early adopter program. If you’re interested in joining our early access program for this feature, send an email from your official address to aem-forms-ea@adobe.com to request access </span>
+
 -->
 
-<span class="preview">此功能在早期採用者計畫下。 如果您有興趣加入我們對此功能的搶先存取計畫，請從您的官方地址傳送電子郵件至aem-forms-ea@adobe.com以要求存取</span>
 
 最適化表單核心元件可讓表單作者在表單中新增版本設定、註釋和註解。 這些功能可讓使用者建立並管理多個版本、透過註釋共同作業，以及將附註新增至特定表單區段，藉此簡化表單開發，進而增強表單建置體驗。
 

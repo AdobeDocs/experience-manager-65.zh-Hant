@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: 使用Adobe Experience Manager 6.5檔案瞭解其運作方式，以及軟體可為您做哪些事。
 breadcrumb-title: 使用手冊
 user-guide-title: AEM 6.5
-source-git-commit: bf750ddc14ce083a949c57322e0bc45594e66311
+source-git-commit: 5827cf69222962243cfebdc9c41eb73f90ac950a
 workflow-type: tm+mt
-source-wordcount: '7477'
+source-wordcount: '7480'
 ht-degree: 19%
 
 ---
@@ -626,6 +626,7 @@ ht-degree: 19%
       + [針對以核心元件為基礎的最適化Forms建立並使用自訂錯誤處理常式](/help/forms/using/add-custom-error-handler-adaptive-forms-core-components.md)
       + [在最適化表單中新增版本設定、評論和附註](/help/forms/using/add-versioning-reviews-comments.md)
       + [比較最適化表單](/help/forms/using/compare-forms-core-components.md)
+      + [啟用功能切換](/help/forms/using/enable-feature-toggle.md)
    + 最適化Forms — 基本製作{#adaptive-forms-basic-authoring}
       + [使用最適化表單的最佳作法](/help/forms/using/adaptive-forms-best-practices.md)
       + [建立最適化表單](/help/forms/using/creating-adaptive-form.md)

@@ -3,16 +3,18 @@ title: 比較兩個不同的調適型表單。
 description: 根據欄位、內容和表單元件比較兩個不同的表單。
 feature: Adaptive Forms, Core Components
 role: User, Developer, Admin
-source-git-commit: a4e155de8a4f60d3746cecea110466b1d5d44dbb
+source-git-commit: 794d93d890ba752f9036a85831f7cbc8391fb545
 workflow-type: tm+mt
-source-wordcount: '212'
-ht-degree: 7%
+source-wordcount: '180'
+ht-degree: 8%
 
 ---
 
 # 比較最適化表單 {#compare-two-forms}
 
-<span class="preview">此功能在早期採用者計畫下。 如果您有興趣加入我們對此功能的搶先存取計畫，請從您的官方地址傳送電子郵件至aem-forms-ea@adobe.com以要求存取</span>
+<!--
+<span class="preview"> This feature is under the early adopter program. If you’re interested in joining our early access program for this feature, send an email from your official address to aem-forms-ea@adobe.com to request access </span>
+-->
 
 最適化Forms核心元件中的比較功能可協助表單作者分析欄位、內容和元件，找出兩個表單之間的差異。
 
