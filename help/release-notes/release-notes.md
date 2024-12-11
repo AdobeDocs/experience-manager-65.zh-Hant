@@ -6,9 +6,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
-source-git-commit: 9c58545406bc539dbd0c224b3c88365d3851deb8
+source-git-commit: 64bc2ecbb2b5ef5847af4449562240a7c1ec45e9
 workflow-type: tm+mt
-source-wordcount: '6085'
+source-wordcount: '6146'
 ht-degree: 1%
 
 ---
@@ -43,13 +43,7 @@ ht-degree: 1%
 
 此版本中的主要功能和增強功能包括：
 
-* [驗證碼](/help/forms/using/integrate-adaptive-forms-hcaptcha.md)和[Cloudflare Turnstile驗證碼服務](/help/forms/using/integrate-adaptive-forms-turnstile.md)： AEM Forms支援下列Captcha服務：
-   * 驗證碼會使用核取方塊Widget來挑戰使用者，以保護表單免受機器人、垃圾訊息和自動化濫用。 這樣可確保只有人類使用者才能進行，進而增強線上交易的安全性。
-   * Cloudflare Turnstile提供安全性措施，旨在保護表單免受自動化機器人、惡意攻擊、垃圾郵件以及不需要的自動化流量的侵害。 在允許提交表單前，它會在表單提交上顯示核取方塊，以驗證使用者是否為人類。
-
-* 最適化表單版本設定：
-   * [建立多個版本的最適化表單](/help/forms/using/add-versioning-reviews-comments.md) — 現在，使用者可以輕鬆管理現有表單的變化。 此程式可簡化版本控制，並有助於表單最佳化的比較，而這一切都可在單一、簡化的工作流程中完成。
-   * [比較最適化Forms](/help/forms/using/compare-forms-core-components.md)：使用者現在可以輕鬆比較兩種表單以找出差異。 這可方便團隊成員有效地比較修訂版本並討論變更，進而讓成員可順利協作。
+#### AEM Forms中的新GA功能 {#ga-aem-forms-sp22}
 
 * 新增在[互動式通訊批次API](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/interactive-communications/create-interactive-communication#output-format-print-channel)中啟用字型內嵌的支援 — 互動式通訊現在支援在透過批次API產生的PDF中內嵌Adobe Ming和Adobe Myungjo字型。 此增強功能可確保產生的檔案中能精確呈現文字，即使使用字型子集亦然，進而改善對PDF輸出中的多語言內容的支援。
 
@@ -60,6 +54,18 @@ ht-degree: 1%
 * [PDF/A相容性增強功能](/help/forms/developing/pdf-a-documents.md#converting-documents-to-pdfa-documents-converting-documents-to-pdf-a-documents) — 現在，使用者可以將PDF轉換為PDF/A格式(1a、2a、3a)以進行封存，同時確保可存取性並驗證是否符合這些標準。
 
 * **支援靜態PDF檔案的自動調整字型大小** - AEM Forms Designer、OutputService和FormsService現在支援靜態PDF的自動調整字型大小。 如果使用者將文字、數值、密碼或日期時間欄位的字型大小設為0，則字型大小會自動調整這些欄位中的字型大小，而不會改變欄位的整體大小。 若要使用此功能，使用者會在自訂XCI中傳遞旗標： `<behaviorOverride>patch-LC-3921991:1</behaviorOverride>`。
+
+#### AEM Forms的Beta新功能 {#beta-aem-forms-sp22}
+
+Beta版功能為您提供獨一無二的機會，讓您以獨家方式存取尖端的創新技術，並幫助打造其開發藍圖。 有興趣為您的環境啟用Beta版功能嗎？ 從您的正式地址傳送電子郵件至aem-forms-ea@adobe.com ，其中包含您感興趣的功能清單。
+
+* [驗證碼](/help/forms/using/integrate-adaptive-forms-hcaptcha.md)和[Cloudflare Turnstile驗證碼服務](/help/forms/using/integrate-adaptive-forms-turnstile.md)： AEM Forms支援下列Captcha服務：
+   * 驗證碼會使用核取方塊Widget來挑戰使用者，以保護表單免受機器人、垃圾訊息和自動化濫用。 這樣可確保只有人類使用者才能進行，進而增強線上交易的安全性。
+   * Cloudflare Turnstile提供安全性措施，旨在保護表單免受自動化機器人、惡意攻擊、垃圾郵件以及不需要的自動化流量的侵害。 在允許提交表單前，它會在表單提交上顯示核取方塊，以驗證使用者是否為人類。
+
+* 最適化表單版本設定：
+   * [建立多個版本的最適化表單](/help/forms/using/add-versioning-reviews-comments.md) — 現在，使用者可以輕鬆管理現有表單的變化。 此程式可簡化版本控制，並有助於表單最佳化的比較，而這一切都可在單一、簡化的工作流程中完成。
+   * [比較最適化Forms](/help/forms/using/compare-forms-core-components.md)：使用者現在可以輕鬆比較兩種表單以找出差異。 這可方便團隊成員有效地比較修訂版本並討論變更，進而讓成員可順利協作。
 
 <!-- * _6.5.21.0 REVIEWERS: WHAT ARE THE KEY FEATURES AND ENHANCEMENTS THAT YOU WANT TO HIGHLIGHT IN THIS RELEASE?_ -->
 
@@ -621,7 +627,7 @@ Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on
 * 互動式通訊中巢狀配置片段XDP的任何修改都不會反映在IC編輯器中。 (FORMS-16575)
 * 在互動式通訊代理程式UI的列印預覽中，部分計算值無法正確顯示。 (FORMS-16603)
 * 在「列印預覽」中檢視信函時，內容會變更。 也就是說，有些空格會消失，而某些字母會取代為「x」。 (FORMS-15681)
-* 當使用者設定WebLogic 14c執行個體時，在JBoss上執行的JEE上的AEM Forms Service Pack 21 (6.5.21.0)中的PDFG服務會失敗，因為類別載入器衝突涉及SLF4J程式庫。 錯誤顯示如下(CQDOC-22178)：
+* 當使用者設定WebLogic 14c執行個體時，在JBoss®上執行的JEE上的AEM Forms Service Pack 21 (6.5.21.0)中的PDFG服務會因涉及SLF4J程式庫的類別載入器衝突而失敗。 錯誤顯示如下(CQDOC-22178)：
 
   ```java
   Caused by: java.lang.LinkageError: loader constraint violation: when resolving method "org.slf4j.impl.StaticLoggerBinder.getLoggerFactory()Lorg/slf4j/ILoggerFactory;"

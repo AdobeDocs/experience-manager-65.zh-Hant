@@ -4,16 +4,20 @@ description: 透過Turnstile服務輕鬆增強表單安全性。 內的逐步指
 feature: Adaptive Forms, Foundation Components
 role: User, Developer
 exl-id: bed93ce3-89db-477a-8316-7598275e4bca
-source-git-commit: 4a0e8def5bafd4d90f50bf4b34a537c51e09ce27
+source-git-commit: 94a9f4087e36bfe5701ad9aafd4e8446ca643ddf
 workflow-type: tm+mt
-source-wordcount: '842'
+source-wordcount: '851'
 ht-degree: 2%
 
 ---
 
 # 使用Turnstile連線您的AEM Forms環境 {#connect-your-forms-environment-with-turnstile-service}
 
-<span class="preview">此功能是以功能切換ID `FT_FORMS-12407`為基礎。 若要啟用功能，請依照[啟用功能切換](/help/forms/using/enable-feature-toggle.md)文章中提供的步驟操作。</span>
+<!--
+<span class="preview">This feature is based on Feature Toggle id `FT_FORMS-12407`. To enable the feature, follow the steps given in the [Enable Feature Toggle](/help/forms/using/enable-feature-toggle.md) article. </span>
+-->
+
+<span class="preview">預設不會啟用此功能。 您可以從您的官方地址寫信到aem-forms-ea@adobe.com，以要求存取此功能。</span>
 
 CAPTCHA （完全自動化公用圖靈測試來區分電腦和人之間的差異）是一種常用於線上交易的程式，以區分人和自動化程式或機器人。 這會帶來挑戰，並評估使用者的回應，以判斷其是否為人類或機器人與網站互動。 它可防止使用者在測試失敗時繼續進行，並透過防止機器人張貼垃圾郵件或惡意目的來確保線上交易的安全。
 
@@ -74,7 +78,7 @@ Cloudflare的Turnstile驗證碼是一種安全性措施，旨在保護表單和�
 
 1. 開啟您的AEM Forms環境。
 1. 移至&#x200B;**[!UICONTROL Forms]** > **[!UICONTROL Forms和檔案]**。
-1. 選取最適化表單，然後按一下&#x200B;**[!UICONTROL 屬性]**。 在&#x200B;**[!UICONTROL 設定容器]**&#x200B;中，選取Turnstile®的雲端設定。
+1. 選取最適化表單，然後按一下&#x200B;**[!UICONTROL 屬性]**。 在&#x200B;**[!UICONTROL 設定容器]**&#x200B;中，選取包含連線AEM Forms與Turnstile的雲端設定的設定容器。
 1. 按一下「**[!UICONTROL 儲存並關閉]**」。
 
    如果您沒有組態容器可設定Captcha服務，請參閱[設定Turnstile](#configure-turnstile-steps-to-configure-hcaptcha)一節，以瞭解如何建立組態容器。
