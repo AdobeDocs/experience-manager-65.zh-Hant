@@ -4,9 +4,9 @@ description: 瞭解通用編輯器的彈性，以及如何協助您使用AEM 6.5
 feature: Developing
 role: Developer
 exl-id: 7bdf1fcc-02b9-40bc-8605-e6508a84d249
-source-git-commit: c3af0befce5534891d45c2507684a2017f9363f8
+source-git-commit: 773e398af5247a0de12143334ecfa44955ebbbcd
 workflow-type: tm+mt
-source-wordcount: '1087'
+source-wordcount: '1178'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 1%
 通用編輯器是多功能的視覺化編輯器，屬於Adobe Experience Manager Sites的一部分。 它可讓作者對任何Headless體驗進行即席即得(WYSIWYG)編輯。
 
 * 由於通用編輯器支援對所有形式的AEM Headless內容進行相同一致的視覺編輯，因此作者可受益於通用編輯器的彈性。
-* 開發人員可受益於Universal Editor的多功能性，因為它也支援實作的真正分離。 它可讓開發人員運用幾乎任何他們選擇的架構或架構，而不需要施加任何SDK或技術限制。
+* 開發人員可受益於Universal Editor的多功能性，因為它也支援實作的真正分離。 它可讓開發人員利用他們選擇的任何架構或架構，而不受任何SDK或技術限制。
 
 如需詳細資訊，請參閱通用編輯器](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/introduction)上的[AEM as a Cloud Service檔案。
 
@@ -178,3 +178,11 @@ AEM會根據此設定開啟頁面的通用編輯器。
 >[!TIP]
 >
 >如需開發人員通用編輯器快速入門的完整指南，請參閱AEM as a Cloud Service檔案中的檔案[AEM開發人員的通用編輯器概述](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/developer-overview)，同時牢記本節所述的AEM 6.5支援所需的必要變更。
+
+## AEM 6.5與AEM as a Cloud Service之間的差異 {#differences}
+
+AEM 6.5中的通用編輯器的運作方式與AEM as a Cloud Service大致相同，包括UI和大部分設定。 不過，請注意其中的差異。
+
+* 6.5中的通用編輯器僅支援Headless使用案例。
+* 通用編輯器的設定對6.5稍有不同（[如目前檔案所述](#setup)）。
+* 6.5中的Universal Editor使用與AEM as a Cloud Service不同的資產選擇器和內容片段選擇器。
