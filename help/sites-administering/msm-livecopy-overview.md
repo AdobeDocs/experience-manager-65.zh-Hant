@@ -9,9 +9,9 @@ feature: Multi Site Manager
 exl-id: 0c3488bd-5f32-4956-882c-93326a45b379
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: eae057caed533ef16bb541b4ad41b8edd7aaa1c7
+source-git-commit: d5fb67933676c9ea5fdbeafe592960403e78af79
 workflow-type: tm+mt
-source-wordcount: '546'
+source-wordcount: '529'
 ht-degree: 25%
 
 ---
@@ -61,10 +61,6 @@ ht-degree: 25%
    ![Blueprint索引標籤 — 即時副本概觀](assets/chlimage_1-360.png)
 
 1. 選取「**即時副本總覽**」以顯示及使用與目前Blueprint相關的所有即時副本總覽。
-
-   >[!NOTE]
-   >
-   >如需詳細資訊，另請參閱知識庫文章[即時副本狀態訊息 — 最新/綠色/同步](https://helpx.adobe.com/experience-manager/kb/livecopy-status-message---up-to-date-green-in-sync.html)。
 
 1. 使用&#x200B;**關閉**&#x200B;以退出並返回 **Sites** 主控台。
 

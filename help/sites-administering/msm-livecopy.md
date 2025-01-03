@@ -5,9 +5,9 @@ feature: Multi Site Manager
 exl-id: 896b35dd-4510-4c94-8615-03d9649c2f64
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: eae057caed533ef16bb541b4ad41b8edd7aaa1c7
+source-git-commit: d5fb67933676c9ea5fdbeafe592960403e78af79
 workflow-type: tm+mt
-source-wordcount: '4194'
+source-wordcount: '4177'
 ht-degree: 2%
 
 ---
@@ -193,10 +193,6 @@ Blueprint設定會識別您要當作一或多個即時副本頁面來源的現�
    例如：
 
    ![選取即時副本](assets/chlimage_1-218.png)
-
-   >[!NOTE]
-   >
-   >如需詳細資訊，另請參閱知識庫文章[即時副本狀態訊息 — 最新/綠色/同步](https://helpx.adobe.com/experience-manager/kb/livecopy-status-message---up-to-date-green-in-sync.html)。
 
 ### 檢視Blueprint頁面的即時副本 {#seeing-the-live-copies-of-a-blueprint-page}
 
