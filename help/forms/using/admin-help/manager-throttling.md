@@ -9,14 +9,18 @@ exl-id: 1f765de2-1362-4318-9302-c5036e6fa7d6
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '1030'
+source-wordcount: '1042'
 ht-degree: 0%
 
 ---
 
 # 工作管理員和節流{#work-manager-and-throttling}
+
+>[!NOTE]
+> 
+> 確保使用者具有存取管理員控制檯的管理員許可權。
 
 AEM forms （及舊版）使用JMS佇列來非同步執行操作。 在AEM表單中，JMS佇列已由工作管理員取代。 本檔案提供Work Manager的背景資訊，以及設定Work Manager節流選項的說明。
 
@@ -34,7 +38,7 @@ AEM forms （及舊版）使用JMS佇列來非同步執行操作。 AEM Forms會
 
 1. 工作管理員接收要執行的工作專案。
 1. Work Manager會將工作專案儲存在資料庫表格中，並將唯一識別碼指派給工作專案。 資料庫記錄包含執行工作專案所需的所有資訊。
-1. 當執行緒變成可用狀態時，工作管理員執行緒會拉入工作專案。 提取工作專案之前，執行緒可以檢查需要的服務是否已啟動、是否有足夠的棧積大小可提取下一個工作專案，以及是否有足夠的CPU週期可處理工作專案。 Work Manager也會在排程其執行時評估工作專案的屬性（例如其優先順序）。
+1. 當執行緒變成可用狀態時，工作管理員執行緒會拉入工作專案。 提取工作專案之前，執行緒可以檢查所需的服務是否已啟動、是否有足夠的棧積大小可提取下一個工作專案，以及是否有足夠的CPU週期可處理工作專案。 Work Manager也會在排程其執行時評估工作專案的屬性（例如其優先順序）。
 
 AEM Forms管理員可以使用「健康情況監視」來檢查Work Manager統計資料，例如佇列中的工作專案數量及其狀態。 您也可以使用「健全狀態監視器」來暫停、繼續、重試或刪除工作專案。 （請參閱[檢視與工作管理員相關的統計資料](/help/forms/using/admin-help/view-statistics-related-manager.md#view-statistics-related-to-work-manager)。）
 

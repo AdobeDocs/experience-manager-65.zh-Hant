@@ -9,14 +9,18 @@ exl-id: 0da59dbe-f050-4ee5-b74c-4380b3543b97
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '187'
+source-wordcount: '199'
 ht-degree: 0%
 
 ---
 
 # 清除程式資料 {#purging-process-data}
+
+>[!NOTE]
+> 
+> 確保使用者具有存取管理員控制檯的管理員許可權。
 
 叫用長期處理程式時所產生的處理程式資料可能會變得太大，導致AEM表單效能降低及不必要的磁碟空間浪費。 當不再需要記錄時，清除處理資料是很好的做法。 AEM forms提供數種清除流程資料的方法：
 

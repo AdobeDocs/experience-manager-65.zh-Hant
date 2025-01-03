@@ -9,14 +9,18 @@ feature: PDF Generator
 exl-id: b363b23a-29bb-4ea4-a8f2-5ba9fe3c7b27
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '372'
+source-wordcount: '384'
 ht-degree: 0%
 
 ---
 
 # 匯入和匯出PDF Generator組態檔 {#importing-and-exporting-pdf-generator-configuration-files}
+
+>[!NOTE]
+> 
+> 確保使用者具有存取管理員控制檯的管理員許可權。
 
 組態檔包含PDF Generator轉換資訊，包括PDF、檔案型別和安全性設定。
 

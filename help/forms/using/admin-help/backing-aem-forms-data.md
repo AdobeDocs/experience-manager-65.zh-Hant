@@ -9,9 +9,9 @@ exl-id: 536615a4-ab42-4b72-83b1-fad110b011ee
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '1515'
+source-wordcount: '1527'
 ht-degree: 0%
 
 ---
@@ -120,6 +120,10 @@ GDS位置的備份頻率取決於AEM Forms的使用方式以及可用的備份�
    如需有關備份模式之命令列介面的詳細資訊，請參閱BackupRestoreCommandline目錄中的Readme檔案。
 
 ### 離開備份模式 {#leaving-backup-modes}
+
+>[!NOTE]
+> 
+> 確保使用者具有存取管理員控制檯的管理員許可權。
 
 您可以使用管理主控台或命令列選項來離開備份模式。
 

@@ -9,14 +9,18 @@ exl-id: c72794f5-8767-409e-a1df-91a8fdc54d18
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '183'
+source-wordcount: '195'
 ht-degree: 0%
 
 ---
 
 # 設定LDAP繫結密碼{#configure-the-ldap-bind-password}
+
+>[!NOTE]
+> 
+> 確保使用者具有存取管理員控制檯的管理員許可權。
 
 為避免安全風險，未設定匯出的組態檔(config.xml)中的繫結密碼欄位。 在將組態檔案匯入其他系統之前，請確定您設定此密碼。 此密碼會覆寫儲存在資料庫中的現有密碼。 Null密碼不會覆寫現有的非Null密碼值。
 

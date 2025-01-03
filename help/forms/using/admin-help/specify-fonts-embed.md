@@ -9,14 +9,18 @@ exl-id: 02c28b2c-0cab-4431-9fab-fa332c96e092
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '271'
+source-wordcount: '283'
 ht-degree: 0%
 
 ---
 
 # 指定要嵌入的字型{#specify-fonts-to-embed}
+
+>[!NOTE]
+> 
+> 確保使用者具有存取管理員控制檯的管理員許可權。
 
 您可以指定哪些字型永遠會嵌入或絕不會嵌入至「輸出」使用的表單。 嵌入字型會增加表單的檔案大小。 嵌入使用者不太可能在其系統上擁有的異常字型，並且不要嵌入他們將會安裝的常見字型。
 

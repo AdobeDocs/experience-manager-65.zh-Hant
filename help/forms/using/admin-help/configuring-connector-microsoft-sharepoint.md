@@ -9,19 +9,24 @@ exl-id: a8be58f1-1961-4bf5-aaad-feb4489fb389
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 feature: Adaptive Forms
-source-git-commit: 9f59606bb58b9e90f07bd22e89f3213afb54a697
+source-git-commit: 98cbaaf64c0268be1afe7196a7bbbf5c93f02148
 workflow-type: tm+mt
-source-wordcount: '202'
+source-wordcount: '214'
 ht-degree: 1%
 
 ---
 
-# 設定Microsoft SharePoint的聯結器 {#configuring-connector-for-microsoft-sharepoint}
+
+# 設定Microsoft SharePoint的聯結器
+
+>[!NOTE]
+> 
+> 確保使用者具有存取管理員控制檯的管理員許可權。
 
 Microsoft SharePoint的聯結器可啟用AEM表單與Microsoft SharePoint之間的通訊。 如需其他背景資訊，請參閱[服務參考](https://www.adobe.com/go/learn_aemforms_services_63)中的「Connectors for ECM」。
 
 1. 在管理控制檯中，按一下「服務」 > 「Microsoft SharePoint的聯結器」 。
-1. 為您的SharePoint伺服器指定下列設定：
+2. 為您的SharePoint伺服器指定下列設定：
 
    **SharePoint伺服器主機名稱：** SharePoint伺服器上Web應用程式的主機名稱連線埠號碼，格式為`[hostname]:'port'`。
 
@@ -31,7 +36,7 @@ Microsoft SharePoint的聯結器可啟用AEM表單與Microsoft SharePoint之間�
 
    **網域名稱：** SharePoint伺服器所在的網域。
 
-1. 按一下「儲存」。
+3. 按一下「儲存」。
 
 ## Microsoft SharePoint設定服務 {#microsoft-sharepoint-configuration-service}
 

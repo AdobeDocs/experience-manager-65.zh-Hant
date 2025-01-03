@@ -9,14 +9,18 @@ exl-id: 6b975aa1-9270-4098-9af5-c5cc67cb7b5d
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '270'
+source-wordcount: '282'
 ht-degree: 0%
 
 ---
 
 # 更新部署的授權型別 {#update-the-license-type-for-the-deployment}
+
+>[!NOTE]
+> 
+> 確保使用者具有存取管理員控制檯的管理員許可權。
 
 在AEM表單安裝過程中，您使用Configuration Manager來設定及部署所需的AEM表單模組。 預設情況下，這些模組會設定60天的評估授權。 使用管理主控台中的「變更授權」頁面來變更部署的授權型別。 目前部署的模組會顯示在「變更許可證」頁面上。
 

@@ -9,14 +9,18 @@ exl-id: d2dd381d-a7d2-4fec-a8ba-7ca037fd9dc1
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '2017'
+source-wordcount: '2029'
 ht-degree: 0%
 
 ---
 
 # 要備份和復原的檔案 {#files-to-back-up-and-recover}
+
+>[!NOTE]
+> 
+> 確保使用者具有存取管理員控制檯的管理員許可權。
 
 以下各節將更詳細地說明必須備份的應用程式和資料檔案。
 
@@ -108,9 +112,9 @@ IBM有一套工具和協助系統，可協助資料庫管理員管理其備份�
 
 DB2具有將資料庫備份至Tivoli Storage Manager的內建功能。 使用Tivoli Storage Manager，DB2備份可以儲存在其他媒體或本機硬碟上。
 
-### oracle {#oracle}
+### Oracle {#oracle}
 
-使用快照集備份，或設定Oracle資料庫以存檔日誌模式執行。 (請參閱[Oracle備份：簡介](https://www.databasedesign-resource.com/oracle-backup.md)。) 如需有關備份和復原Oracle資料庫的詳細資訊，請前往下列網站：
+使用快照集備份，或設定Oracle資料庫以存檔日誌模式執行。 (請參閱[Oracle備份：簡介](https://www.databasedesign-resource.com/oracle-backup.md)。)如需有關備份和復原Oracle資料庫的詳細資訊，請前往下列網站：
 
 [Oracle備份與復原：](https://www.oracle.com/technetwork/database/features/availability/br-overview-097160.html)說明備份與復原的概念，以及使用Recovery Manager (RMAN)進行備份、復原與報告的最常用技術，並提供有關如何規劃備份與復原策略的詳細資訊。
 
@@ -131,7 +135,7 @@ SQL Server還提供兩種備份與復原工具：
 
 ### MySQL {#mysql}
 
-使用MySQLAdmin或修改Windows中的INI檔案，設定MySQL資料庫以二進位記錄模式執行。 （請參閱[MySQL二進位記錄](https://dev.mysql.com/doc/refman/5.1/en/binary-log.html)。） InnoBase軟體也提供MySQL的熱備份工具。 （請參閱[Innobase熱備份](https://www.innodb.com/hot-backup/features.md)。）
+使用MySQLAdmin或修改Windows中的INI檔案，設定MySQL資料庫以二進位記錄模式執行。 （請參閱[MySQL二進位記錄](https://dev.mysql.com/doc/refman/5.1/en/binary-log.html)。）InnoBase軟體也提供MySQL的熱備份工具。 （請參閱[Innobase熱備份](https://www.innodb.com/hot-backup/features.md)。）
 
 >[!NOTE]
 >

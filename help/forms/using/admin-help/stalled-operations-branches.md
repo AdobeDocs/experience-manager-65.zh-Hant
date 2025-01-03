@@ -9,14 +9,18 @@ exl-id: c96faae0-2b0f-4334-b61c-f13b2d1ec179
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '707'
+source-wordcount: '719'
 ht-degree: 0%
 
 ---
 
 # 使用停止的操作和分支 {#working-with-stalled-operations-and-branches}
+
+>[!NOTE]
+> 
+> 確保使用者具有存取管理員控制檯的管理員許可權。
 
 「停止的操作」頁面和「停止的分支」頁面會顯示停止的程式。 當作業執行期間或之後發生錯誤時，或由於處理序中有意的延遲作業時，處理序可能會延遲：
 

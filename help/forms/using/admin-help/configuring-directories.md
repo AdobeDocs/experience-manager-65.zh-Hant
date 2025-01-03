@@ -9,12 +9,13 @@ exl-id: 30edcef2-e8fa-403a-9850-b8dfeeb9ac65
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: e9afc12af78140ae0ec12cc2ee95fc9e175f8d94
 workflow-type: tm+mt
-source-wordcount: '3229'
+source-wordcount: '3241'
 ht-degree: 0%
 
 ---
+
 
 # 設定目錄 {#configuring-directories}
 
@@ -25,6 +26,10 @@ ht-degree: 0%
 針對您設定的每個企業網域，指定驗證提供者查詢使用者資訊的目錄。 您可以將目錄新增至現有的企業網域或您正在新增的新企業網域。 您可以為一個網域設定多個目錄。 您也可以設定網域以使用自訂服務提供者介面(SPI)進行同步化。
 
 ### 新增目錄 {#add-a-directory}
+
+>[!NOTE]
+>
+> 確保使用者具有存取管理員控制檯的管理員許可權。
 
 1. 在管理控制檯中，按一下「設定>使用者管理>網域管理」。
 1. 按一下「新增企業網域」或選取現有的企業網域。

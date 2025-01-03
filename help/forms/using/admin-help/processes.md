@@ -9,9 +9,9 @@ exl-id: 21a2317d-3542-4ccb-98db-3cedf20c89ea
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '1631'
+source-wordcount: '1643'
 ht-degree: 0%
 
 ---
@@ -183,6 +183,10 @@ ht-degree: 0%
 1. 選取操作，然後按一下「重試」。
 
 ## 使用作業 {#working-with-operations}
+
+>[!NOTE]
+> 
+> 確保使用者具有存取管理員控制檯的管理員許可權。
 
 「作業詳細資訊」頁面會顯示處理中的一個作業及其目前使用者指派的摘要。
 

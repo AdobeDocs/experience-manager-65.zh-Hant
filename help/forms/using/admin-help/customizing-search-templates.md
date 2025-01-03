@@ -9,14 +9,18 @@ exl-id: bf69de86-2ca6-4d21-936c-07c1debacfa0
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '855'
+source-wordcount: '867'
 ht-degree: 0%
 
 ---
 
 # 自訂搜尋範本 {#customizing-search-templates}
+
+>[!NOTE]
+> 
+> 確保使用者具有存取管理員控制檯的管理員許可權。
 
 您可以建立搜尋範本，以便在Workspace中使用，從待辦事項和追蹤頁面搜尋流程例項。 您也可以編輯或刪除現有的搜尋範本。
 

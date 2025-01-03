@@ -9,9 +9,9 @@ exl-id: 362b7b91-c58b-4e47-a6ef-56a4b54a100c
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '2631'
+source-wordcount: '2643'
 ht-degree: 0%
 
 ---
@@ -35,6 +35,10 @@ ht-degree: 0%
 如果您的流程在設計及實作時不需要電子郵件，則您不需要在「電子郵件設定」頁面上設定任何選項。
 
 ### 設定外寄電子郵件設定 {#configure-outgoing-email-settings}
+
+>[!NOTE]
+> 
+> 確保使用者具有存取管理員控制檯的管理員許可權。
 
 1. 在管理控制檯中，按一下「服務>表單工作流程>伺服器設定>電子郵件設定」。
 1. 選取啟用外寄郵件。

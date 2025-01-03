@@ -9,12 +9,13 @@ exl-id: cb642289-4137-4ba7-8bde-0e458c8c94fe
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: 0835dca60d8011ce8660f1e7fdefb2b14ccd6129
 workflow-type: tm+mt
-source-wordcount: '1003'
+source-wordcount: '1015'
 ht-degree: 0%
 
 ---
+
 
 # 同步目錄 {#synchronizing-directories}
 
@@ -50,11 +51,13 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->在您執行完整的目錄同步處理之前，不會從「使用者管理」資料庫中刪除從目錄移除的使用者和群組。
+> * 在您執行完整的目錄同步處理之前，不會從「使用者管理」資料庫中刪除從目錄移除的使用者和群組。
+> * 確保使用者具有存取管理員控制檯的管理員許可權。
+
 
 1. 在管理控制檯中，按一下「設定>使用者管理>網域管理」。
-1. 在「差異同步」下，選取核取方塊並按一下「儲存」。
-1. 編輯將使用差異目錄同步處理功能的每個企業網域的目錄設定值。 在[使用者設定]和[群組設定]頁面上，找到[修改時間戳記]設定，並輸入`modify TimeStamp`作為值。 如需有關編輯企業網域的詳細資訊，請參閱[編輯及轉換現有網域](/help/forms/using/admin-help/editing-converting-existing-domains.md#editing-and-converting-existing-domains)。
+2. 在「差異同步」下，選取核取方塊並按一下「儲存」。
+3. 編輯將使用差異目錄同步處理功能的每個企業網域的目錄設定值。 在[使用者設定]和[群組設定]頁面上，找到[修改時間戳記]設定，並輸入`modify TimeStamp`作為值。 如需有關編輯企業網域的詳細資訊，請參閱[編輯及轉換現有網域](/help/forms/using/admin-help/editing-converting-existing-domains.md#editing-and-converting-existing-domains)。
 
 ## 在同步處理期間啟用或停用詳細記錄 {#enable-or-disable-detailed-logging-during-synchronization}
 

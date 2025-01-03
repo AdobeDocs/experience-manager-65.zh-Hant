@@ -9,14 +9,18 @@ exl-id: 14314383-5228-4904-98c1-586f48a1142c
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '352'
+source-wordcount: '364'
 ht-degree: 3%
 
 ---
 
 # 設定驗證訊息 {#configuring-validation-messages}
+
+>[!NOTE]
+> 
+> 確保使用者具有存取管理員控制檯的管理員許可權。
 
 對於轉譯為HTML的表單，會為使用者顯示發生的表單驗證錯誤。 您可以自訂驗證訊息的顯示方式。 視驗證訊息的顯示位置而定，您也可以控制訊息在表單中的位置以及框架邊框的大小。
 

@@ -9,14 +9,18 @@ exl-id: 1e2b82d6-ca1f-4421-9a51-ec97fdc315d3
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 feature: Adaptive Forms
-source-git-commit: 9f59606bb58b9e90f07bd22e89f3213afb54a697
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '150'
+source-wordcount: '162'
 ht-degree: 0%
 
 ---
 
 # 新增和移除使用者名稱和密碼認證 {#adding-and-removing-user-name-and-password-credentials}
+
+>[!NOTE]
+> 
+> 確保使用者具有存取管理員控制檯的管理員許可權。
 
 從「信任存放區管理」頁面，您可以新增和移除Forms服務在收到具有SOAP層級安全性的請求時所使用的使用者名稱和密碼認證。
 

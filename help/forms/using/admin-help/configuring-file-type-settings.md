@@ -8,14 +8,18 @@ feature: PDF Generator
 exl-id: 1a6640cc-22ef-41d5-a0c6-7a2c2dabcef1
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '6188'
+source-wordcount: '6200'
 ht-degree: 0%
 
 ---
 
 # 正在設定檔案型別設定 {#configuring-file-type-settings}
+
+>[!NOTE]
+> 
+> 確保使用者具有存取管理員控制檯的管理員許可權。
 
 在PDF Generator中，您可以為支援的檔案型別設定應用程式設定。 在Windows上，您可以為每個支援的檔案型別設定應用程式設定。 在UNIX和Linux上，您可以為HTML到PDF和OpenOffice設定應用程式設定。
 

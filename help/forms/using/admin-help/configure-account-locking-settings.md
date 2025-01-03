@@ -9,14 +9,18 @@ exl-id: eb8c748d-51d9-4684-97c5-e982ad84ba9f
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '196'
-ht-degree: 6%
+source-wordcount: '208'
+ht-degree: 5%
 
 ---
 
 # 設定帳戶鎖定設定 {#configure-account-locking-settings}
+
+>[!NOTE]
+> 
+> 確保使用者具有存取管理員控制檯的管理員許可權。
 
 當您新增網域時，請指定是否啟用帳戶鎖定。 當選取啟用帳戶鎖定選項時，使用者帳戶會在指定次數的連續驗證失敗後鎖定。 在指定的時間長度後，使用者可以嘗試再次驗證。 此功能可防止使用者嘗試各種認證組合來存取系統。
 

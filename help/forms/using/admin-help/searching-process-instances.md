@@ -9,14 +9,18 @@ exl-id: 35f9acbf-7a82-43b1-9e17-9be4de666212
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '449'
+source-wordcount: '461'
 ht-degree: 0%
 
 ---
 
 # 搜尋程式執行個體{#searching-for-process-instances}
+
+>[!NOTE]
+> 
+> 確保使用者具有存取管理員控制檯的管理員許可權。
 
 您可以在「程式搜尋」頁面輸入搜尋條件，以尋找程式執行處理。 您可以從表單工作流程頁面存取「程式搜尋」頁面，或按一下「程式執行個體」頁面上的「搜尋」來存取。
 

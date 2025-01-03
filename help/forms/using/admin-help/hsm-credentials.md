@@ -9,9 +9,9 @@ exl-id: facbeab2-de95-4778-894c-faa771d3391e
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Security
 role: User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '1322'
+source-wordcount: '1334'
 ht-degree: 0%
 
 ---
@@ -29,6 +29,10 @@ AEM Forms數位簽名可使用儲存在HSM上的憑證來套用伺服器端數�
 >變更HSM組態後，請重新啟動AEM Forms伺服器。
 
 ## 當HSM裝置上線時，建立HSM認證的別名 {#create-an-alias-for-an-hsm-credential-when-the-hsm-device-is-online}
+
+>[!NOTE]
+> 
+> 確保使用者具有存取管理員控制檯的管理員許可權。
 
 1. 在管理控制檯中，按一下「設定」>「信任存放區管理」>「HSM認證」，然後按一下「新增」。
 1. 在「設定檔名稱」方塊中，輸入用於識別別名的字串。 此值會用作某些數位簽名作業（例如「簽名欄位」作業）的屬性。
@@ -103,4 +107,4 @@ AEM Forms使用Web服務式IPC/RPC機制。 此機制可讓AEM表單使用安裝
 此機制不支援線上建立HSM設定檔或狀態檢查。 但是，有兩種方法可建立HSM設定檔並執行狀態檢查：
 
 * 透過傳遞簽署者的憑證來建立AEM Forms使用者端認證。 請依照[在Windows 64位元平台上，使用Sun JDK為AEM Forms ES設定HSM支援](https://kb2.adobe.com/cps/808/cpsid_80835.html)中的步驟操作。 Web服務位置會以Credential屬性的形式傳入。 也支援使用憑證或憑證SHA-1十六進位來建立離線HSM設定檔。 不過，如果您已從舊版AEM表單升級至AEM表單，請進行使用者端變更，因為認證包含憑證和Web服務資訊。
-* 在Signature服務的管理主控台中指定Web服務位置。 （請參閱[簽章服務設定](/help/forms/using/admin-help/configure-service-settings.md#signature-service-settings)。） 在此處，使用者端僅攜帶信任存放區中HSM設定檔的別名。 即使您從舊版AEM表單升級至AEM表單，您仍可順暢地使用此選項，不需進行任何使用者端變更。 此選項不支援使用憑證SHA-1的HSM設定檔。
+* 在Signature服務的管理主控台中指定Web服務位置。 （請參閱[簽章服務設定](/help/forms/using/admin-help/configure-service-settings.md#signature-service-settings)。）在此處，使用者端僅攜帶信任存放區中HSM設定檔的別名。 即使您從舊版AEM表單升級至AEM表單，您仍可順暢地使用此選項，不需進行任何使用者端變更。 此選項不支援使用憑證SHA-1的HSM設定檔。

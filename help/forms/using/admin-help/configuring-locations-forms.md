@@ -9,14 +9,18 @@ exl-id: 0d9eb7fe-28a6-444e-957d-023687158c61
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '822'
+source-wordcount: '834'
 ht-degree: 1%
 
 ---
 
 # 設定Forms的位置 {#configuring-locations-for-forms}
+
+>[!NOTE]
+> 
+> 確保使用者具有存取管理員控制檯的管理員許可權。
 
 您可以指定屬性的URL、URI和檔案位置，例如Web根目錄、要擷取之表單的位置、PDForm轉換中使用的種子PDF檔案，以及快取位置。
 
@@ -52,7 +56,7 @@ ht-degree: 1%
 
 預設值為空字串。
 
-**網頁根URI：**&#x200B;應用程式的網頁根。 此值會與透過AEM Forms SDK指定的sTargetURL引數（以相對形式提供sTargetURL時）結合，以建構絕對URL來存取應用程式專屬的網頁內容。
+**網頁根URI：**&#x200B;應用程式的網頁根。 此值會與sTargetURL引數（當sTargetURL以相對形式提供時）結合(透過AEM Forms SDK指定)，以建構絕對URL來存取應用程式專屬的網頁內容。
 
 預設值為空字串。
 

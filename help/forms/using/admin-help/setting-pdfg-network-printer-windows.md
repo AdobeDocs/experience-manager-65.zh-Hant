@@ -9,14 +9,18 @@ feature: PDF Generator
 exl-id: c3fc159e-2677-4b71-b0b2-2feaf69e1a32
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '604'
+source-wordcount: '616'
 ht-degree: 0%
 
 ---
 
 # 設定PDFG網路印表機（僅限Windows） {#setting-up-a-pdfg-network-printer-windows-only}
+
+>[!NOTE]
+> 
+> 確保使用者具有存取管理員控制檯的管理員許可權。
 
 PDFG網路印表機可讓使用者從任何支援列印的應用程式產生PDF檔案。 使用者安裝PDFG網路印表機後，名為&#x200B;*PDF產生器*&#x200B;的新印表機會出現在Windows控制檯的「印表機」區段中。 如果已有同名的印表機存在，系統會提示使用者提供其他名稱。
 

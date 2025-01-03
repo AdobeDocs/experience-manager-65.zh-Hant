@@ -9,14 +9,18 @@ exl-id: 62621fe9-f69f-4bc0-aecc-d7bcc3064516
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '482'
+source-wordcount: '494'
 ht-degree: 0%
 
 ---
 
 # 管理Workspace中顯示的類別 {#managing-the-categories-displayed-in-workspace}
+
+>[!NOTE]
+> 
+> 確保使用者具有存取管理員控制檯的管理員許可權。
 
 在Workspace中，使用者可啟動的流程會以類別顯示在左側導覽窗格中。 您可以在管理主控台中設定類別，或流程設計人員可以在Workbench中設定類別。 流程設計人員建立流程時，會將流程指派給類別。
 

@@ -9,14 +9,18 @@ exl-id: 9cbea8c8-4d42-446b-b98d-c090709624d7
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Security
 role: User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '730'
 ht-degree: 0%
 
 ---
 
 # 設定憑證式驗證 {#configuring-certificate-based-authentication}
+
+>[!NOTE]
+> 
+> 確保使用者具有存取管理員控制檯的管理員許可權。
 
 「使用者管理」通常使用使用者名稱和密碼來執行驗證。 「使用者管理」也支援憑證式驗證，您可以透過Acrobat用來驗證使用者，或以程式設計方式驗證使用者。 如需以程式設計方式驗證使用者的詳細資訊，請參閱[使用AEM表單進行程式設計](https://www.adobe.com/go/learn_aemforms_programming_63)。
 
@@ -47,7 +51,7 @@ ht-degree: 0%
 1. 按一下「新增憑證對應」，然後在「發行者」清單中，選取在「信任存放區管理」中設定的憑證別名。
 1. 將憑證的其中一個屬性對應到使用者的屬性。 例如，您可以將憑證的一般名稱對應到使用者的登入ID。
 
-   如果憑證中屬性的內容與「使用者管理」資料庫中使用者屬性的內容不同，您可以使用Java規則運算式(regex)來比對這兩個屬性。 例如，如果憑證的一般名稱是&#x200B;*Alex Pink （驗證）*&#x200B;和&#x200B;*Alex Pink （簽署）*&#x200B;之類的名稱，而「使用者管理」資料庫中的一般名稱是&#x200B;*Alex Pink*，則您會使用Regex來擷取憑證屬性的必要部分（在此範例中為&#x200B;*Alex Pink*）。 您指定的規則運算式必須符合Java規則運算式規格。
+   如果憑證中屬性的內容與「使用者管理」資料庫中使用者屬性的內容不同，您可以使用Java規則運算式(regex)來比對這兩個屬性。 例如，如果憑證的一般名稱是&#x200B;*Alex Pink （驗證）*&#x200B;和&#x200B;*Alex Pink （簽署）*&#x200B;之類的名稱，而「使用者管理」資料庫中的一般名稱是&#x200B;*Alex Pink*，則您會使用規則運算式來擷取憑證屬性的必要部分（在此範例中為&#x200B;*Alex Pink*）。您指定的規則運算式必須符合Java規則運算式規格。
 
    您可以在「自訂順序」方塊中指定群組的順序，以轉換運算式。 自訂順序與`java.util.regex.Matcher.replaceAll()`方法搭配使用。 看到的行為會對應至該方法的行為，且必須相應地指定輸入字串（自訂順序）。
 

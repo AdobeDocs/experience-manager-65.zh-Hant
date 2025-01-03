@@ -9,16 +9,20 @@ exl-id: 7cd10389-63e6-41f2-a132-92fd9e40a9b7
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '149'
+source-wordcount: '161'
 ht-degree: 1%
 
 ---
 
 # 指定XCI組態選項 {#specifying-xci-configuration-options}
 
-Forms可讓您指定其可用於轉譯的自訂XCI檔案。 (請參閱[設定Forms的位置](/help/forms/using/admin-help/configuring-locations-forms.md#configuring-locations-for-forms)。) 依預設，Forms會覆寫XCI檔案中指定的某些選項，包括下列專案：
+>[!NOTE]
+> 
+> 確保使用者具有存取管理員控制檯的管理員許可權。
+
+Forms可讓您指定其可用於轉譯的自訂XCI檔案。 (請參閱[為Forms設定位置](/help/forms/using/admin-help/configuring-locations-forms.md#configuring-locations-for-forms)。)依預設，Forms會覆寫XCI檔案中指定的某些選項，包括下列專案：
 
 * `config/present/xdp/packets`
 * `config/present/pdf/creator`

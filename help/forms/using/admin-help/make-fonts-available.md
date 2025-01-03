@@ -1,5 +1,5 @@
 ---
-title: 讓字型可供使用
+title: 將字體設為可用
 description: 請確定表單內使用的字型可用於裝載AEM表單的J2EE應用程式伺服器。
 contentOwner: admin
 content-type: reference
@@ -9,14 +9,18 @@ exl-id: e9eae896-b1e4-4caa-b466-ac8c9e7416a4
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '216'
-ht-degree: 0%
+source-wordcount: '228'
+ht-degree: 2%
 
 ---
 
-# 讓字型可供使用 {#make-fonts-available}
+# 將字體設為可用 {#make-fonts-available}
+
+>[!NOTE]
+> 
+> 確保使用者具有存取管理員控制檯的管理員許可權。
 
 請確定表單內使用的字型可用於裝載AEM表單的J2EE應用程式伺服器。 例如，請考量下列情況。 表單設計人員將字型新增到Designer使用的字型目錄中，並建立在不同電腦上使用該字型的表單。 為了讓Output服務使用字型，請將其放置在Customer fonts目錄中。 如果Customer fonts目錄不存在，請在主控AEM表單的J2EE應用程式伺服器上建立目錄。
 

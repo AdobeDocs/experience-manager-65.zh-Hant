@@ -9,9 +9,9 @@ exl-id: b447e545-f73e-4fde-a001-86e0e1cf4a12
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 feature: Adaptive Forms
-source-git-commit: 9f59606bb58b9e90f07bd22e89f3213afb54a697
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '2483'
+source-wordcount: '2495'
 ht-degree: 0%
 
 ---
@@ -99,6 +99,10 @@ ht-degree: 0%
 >AEM Forms版本已棄用Flex工作區。
 
 ## 建立角色 {#create-a-role}
+
+>[!NOTE]
+> 
+> 確保使用者具有存取管理員控制檯的管理員許可權。
 
 1. 在管理控制檯中，按一下「設定」>「使用者管理」>「角色管理」，然後按一下「新增角色」。
 1. 在「角色名稱」方塊中，輸入角色名稱，並選擇性地輸入角色描述，然後按下一步。

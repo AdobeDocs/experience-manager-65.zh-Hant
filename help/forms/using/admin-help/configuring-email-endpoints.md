@@ -9,14 +9,18 @@ exl-id: 33583a12-4f20-4146-baa4-c9854e454bbf
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '3796'
+source-wordcount: '3808'
 ht-degree: 0%
 
 ---
 
 # 設定電子郵件端點 {#configuring-email-endpoints}
+
+>[!NOTE]
+> 
+> 確保使用者具有存取管理員控制檯的管理員許可權。
 
 電子郵件端點可讓使用者透過傳送一或多個檔案（作為電子郵件附件）至指定的電子郵件帳戶來叫用服務。 電子郵件收件匣可作為附件的收集點。 此服務會監視收件匣並處理附件。 轉換的結果會轉送給端點中定義的使用者。
 
@@ -32,7 +36,7 @@ ht-degree: 0%
 
 如果您的使用者在檔案和轉換路徑名稱中傳送含有西歐語言字元的檔案，則他們必須使用支援所需編碼型別的電子郵件應用程式（Latin1 [ISO-8859-1]、西歐[Windows]或UTF-8）。 如需詳細資訊，請參閱應用程式伺服器的&#x200B;*安裝和部署AEM表單*&#x200B;檔案。
 
-在設定電子郵件端點之前，請先設定電子郵件服務。 （請參閱[設定預設電子郵件端點設定](configuring-email-endpoints.md#configure-default-email-endpoint-settings)。） 電子郵件服務的設定引數有兩個用途：
+在設定電子郵件端點之前，請先設定電子郵件服務。 （請參閱[設定預設電子郵件端點設定](configuring-email-endpoints.md#configure-default-email-endpoint-settings)。）電子郵件服務的設定引數有兩個用途：
 
 * 設定所有電子郵件端點的共同屬性
 * 為所有電子郵件端點提供預設值

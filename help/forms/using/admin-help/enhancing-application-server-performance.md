@@ -9,9 +9,9 @@ exl-id: 6e2f3d4c-2ead-45b3-98e7-32cacc7e2985
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '1870'
+source-wordcount: '1882'
 ht-degree: 0%
 
 ---
@@ -100,6 +100,10 @@ AEM forms使用AEM forms存放庫作為其資料來源。 AEM表單存放庫會�
 當檔案內容內聯（即小於最大內聯大小）時，內容會作為檔案序列化裝載的一部分儲存在資料庫中。 因此，增加最大內嵌大小可能會影響資料庫大小。
 
 **變更最大內嵌大小**
+
+>[!NOTE]
+> 
+> 確保使用者具有存取管理員控制檯的管理員許可權。
 
 1. 在管理控制檯中，按一下設定>核心系統設定>設定。
 1. 在「預設檔案最大內嵌大小」方塊中輸入值，然後按一下「確定」。

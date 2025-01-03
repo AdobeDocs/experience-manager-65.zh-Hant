@@ -9,14 +9,18 @@ exl-id: 1f544485-5a01-4a4a-ab0f-dcee67e1a38b
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Security
 role: User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '89'
-ht-degree: 2%
+source-wordcount: '101'
+ht-degree: 1%
 
 ---
 
 # 指定安全性設定 {#specify-security-settings}
+
+>[!NOTE]
+> 
+> 確保使用者具有存取管理員控制檯的管理員許可權。
 
 輸出可讓您控制是否解析XML輸入中的外部圖元。 預設會解決這些問題，但您可以變更此行為以提高AEM表單系統的安全性。
 

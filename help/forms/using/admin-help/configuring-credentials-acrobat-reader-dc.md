@@ -9,9 +9,9 @@ exl-id: e8015d59-7587-46dc-a672-e0f1108102ad
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '546'
+source-wordcount: '558'
 ht-degree: 0%
 
 ---
@@ -37,10 +37,14 @@ ht-degree: 0%
 
 ## 匯入Acrobat Reader DC擴充功能認證 {#import-a-acrobat-reader-dc-extensions-credential}
 
+>[!NOTE]
+> 
+> 確保使用者具有存取管理員控制檯的管理員許可權。
+
 1. 在管理控制檯中，按一下「設定」>「信任存放區管理」>「本機認證」。
 1. 按一下匯入，然後在「信任存放區型別」下方選取「Acrobat Reader DC擴充功能認證」。
 1. （選用）若要指出此認證是搭配Acrobat Reader DC擴充功能使用的預設認證，請選取「預設」。
-1. 在「別名」方塊中，輸入認證的識別碼。 此識別碼會用作Acrobat Reader DC擴充功能中認證的顯示名稱。 此別名也可用來透過AEM Forms SDK以程式設計方式存取認證。
+1. 在「別名」方塊中，輸入認證的識別碼。 此識別碼會用作Acrobat Reader DC擴充功能中認證的顯示名稱。 此別名也會用來透過AEM表單SDK以程式設計方式存取認證。
 
    >[!NOTE]
    >

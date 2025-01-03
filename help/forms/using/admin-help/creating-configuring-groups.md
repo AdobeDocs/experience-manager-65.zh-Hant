@@ -9,14 +9,18 @@ exl-id: 72edd8d1-8573-4942-8ced-1a100af58d78
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 feature: Adaptive Forms
-source-git-commit: 9f59606bb58b9e90f07bd22e89f3213afb54a697
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '1573'
+source-wordcount: '1585'
 ht-degree: 0%
 
 ---
 
 # 建立和設定群組{#creating-and-configuring-groups}
+
+>[!NOTE]
+> 
+> 確保使用者具有存取管理員控制檯的管理員許可權。
 
 建立使用者群組可讓您將角色指派給群組，而非個別使用者。
 

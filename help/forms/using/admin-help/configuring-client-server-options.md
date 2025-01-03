@@ -9,14 +9,18 @@ feature: Document Security
 exl-id: fe132f13-5f9a-4c86-a385-0a0026c812e2
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '10266'
+source-wordcount: '10278'
 ht-degree: 0%
 
 ---
 
 # 設定Document Security伺服器 {#configure-the-document-security-server}
+
+>[!NOTE]
+> 
+> 確保使用者具有存取管理員控制檯的管理員許可權。
 
 1. 在Administration Console中，按一下「服務> Document Security >設定>伺服器設定」 。
 1. 設定設定並按一下「確定」。
@@ -308,9 +312,9 @@ Document Security可稽核並記錄與受原則保護檔案、原則、管理員
 
 **切換檔案：**&#x200B;使用者或管理員切換附加到檔案的原則。
 
-**Publish Document As：**&#x200B;已在伺服器上登入其documentName和授權與現有檔案相同的新檔案，且檔案沒有父子關係。 此事件可使用AEM Forms SDK觸發。
+**Publish Document As：**&#x200B;已在伺服器上登入其documentName和授權與現有檔案相同的新檔案，且檔案沒有父子關係。 此事件可使用AEM表單SDK觸發。
 
-**重複檔案：**&#x200B;在伺服器上註冊的documentName和授權與現有檔案完全相同的新檔案，且檔案具有父子關係。 此事件可使用AEM Forms SDK觸發。
+**重複檔案：**&#x200B;在伺服器上註冊的documentName和授權與現有檔案完全相同的新檔案，且檔案具有父子關係。 此事件可使用AEM表單SDK觸發。
 
 **原則事件**
 
@@ -366,7 +370,7 @@ Document Security可稽核並記錄與受原則保護檔案、原則、管理員
 
 **已同步的使用者端**&#x200B;使用者端應用程式必須與伺服器同步處理資訊，以允許離線存取。
 
-**版本不符：**&#x200B;嘗試連線到伺服器的AEM Forms SDK版本與伺服器不相容。
+**版本不符：**&#x200B;與伺服器不相容的AEM Forms SDK版本嘗試連線至伺服器。
 
 **目錄同步處理資訊：**&#x200B;無法從[事件]頁面取得此資訊。 目前的目錄同步處理資訊，包括目前的同步處理狀態和上次同步處理的時間，會顯示在「網域管理」頁面上。 若要存取管理控制檯中的「網域管理」頁面，請按一下「設定>使用者管理>網域管理」。
 
@@ -555,7 +559,7 @@ Document Security可追蹤在受保護檔案上可能執行的各種自訂事件
 
 註冊電子郵件包含「註冊」頁面的連結，以及有關如何註冊的資訊。 受邀使用者註冊後，Document Security會發出一封包含啟動頁面連結的啟動電子郵件。 啟用後，帳戶將維持有效，直到您停用或刪除帳戶為止。
 
-如果您啟用內建註冊，您只需指定一次SMTP伺服器、註冊電子郵件詳細資訊、存取功能以及重設密碼電子郵件資訊。 啟用內建註冊之前，請確保您已在「使用者管理」中建立本機網域，並將「Document Security邀請使用者」角色指派給組織中的適當使用者和群組。 （請參閱[新增本機網域](/help/forms/using/admin-help/adding-domains.md#add-a-local-domain)和[建立和設定角色](/help/forms/using/admin-help/creating-configuring-roles.md#creating-and-configuring-roles)。） 如果您未使用內建註冊，則必須使用AEM Forms SDK建立您自己的使用者註冊系統。 請參閱[使用AEM forms程式設計](/help/forms/developing/introducing-java-api-soap-quick.md)中「為AEM表單開發SPI」的說明。 如果您未使用「內建註冊」選項，建議您在啟動電子郵件及使用者端登入畫面中設定訊息，通知使用者如何連絡管理員以取得新密碼或其他資訊。
+如果您啟用內建註冊，您只需指定一次SMTP伺服器、註冊電子郵件詳細資訊、存取功能以及重設密碼電子郵件資訊。 啟用內建註冊之前，請確保您已在「使用者管理」中建立本機網域，並將「Document Security邀請使用者」角色指派給組織中的適當使用者和群組。 （請參閱[新增本機網域](/help/forms/using/admin-help/adding-domains.md#add-a-local-domain)和[建立和設定角色](/help/forms/using/admin-help/creating-configuring-roles.md#creating-and-configuring-roles)。）如果您不使用內建註冊，則必須使用AEM forms SDK建立您自己的使用者註冊系統。 請參閱[使用AEM forms程式設計](/help/forms/developing/introducing-java-api-soap-quick.md)中「為AEM表單開發SPI」的說明。 如果您未使用「內建註冊」選項，建議您在啟動電子郵件及使用者端登入畫面中設定訊息，通知使用者如何連絡管理員以取得新密碼或其他資訊。
 
 **啟用並設定受邀使用者註冊**
 

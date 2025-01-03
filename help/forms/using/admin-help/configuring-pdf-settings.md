@@ -9,9 +9,9 @@ feature: PDF Generator
 exl-id: 1bcb8429-c06e-4bd3-b422-4c512084dd09
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '7403'
+source-wordcount: '7415'
 ht-degree: 0%
 
 ---
@@ -82,6 +82,10 @@ PDF Generator提供數個預先定義的PDF設定供您使用。 您無法修改
 **標準：**&#x200B;建立PDF檔案，以列印至桌上型印表機或數位影印機、在CD上發行，或傳送給使用者端作為發行校訂。 這組選項使用壓縮和縮減取樣來縮減檔案大小。 它也會嵌入檔案中使用的所有字型子集，將所有顏色轉換為sRGB，並列印成中等解析度，以建立原始檔案的相當精確的轉譯。 請注意，Microsoft Windows字型子集預設不會內嵌。 這些PDF檔案可在Acrobat 5和Acrobat Reader 5.0及更高版本中開啟。
 
 ## 新增或編輯PDF設定 {#add-or-edit-pdf-settings}
+
+>[!NOTE]
+> 
+> 確保使用者具有存取管理員控制檯的管理員許可權。
 
 PDF設定精確地決定檔案的轉換方式及其產生的PDF結構和功能。 定義新的PDF設定或編輯您先前建立的設定。 您無法修改預先定義的設定，但可以編輯設定並以新名稱儲存它，根據現有設定來建立設定。
 

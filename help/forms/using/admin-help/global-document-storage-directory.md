@@ -9,9 +9,9 @@ exl-id: 7a64a643-808b-4644-8fd3-0dafe83e8dd9
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '672'
+source-wordcount: '684'
 ht-degree: 1%
 
 ---
@@ -82,13 +82,15 @@ AEM表單安裝完成後，您可以在管理主控台中變更GDS位置。 手�
 
 >[!NOTE]
 >
->請以下列方式移轉資料，否則資料將會遺失。
+> * 請以下列方式移轉資料，否則資料將會遺失。
+> * 確保使用者具有存取管理員控制檯的管理員許可權。
+
 
 1. 登入管理主控台，然後按一下設定>核心系統設定>設定。
-1. 在「全域檔案儲存目錄」方塊中，輸入新GDS目錄的完整路徑，然後按一下「確定」。
-1. 立即關閉應用程式伺服器。
-1. 將所有檔案從舊的GDS目錄移至新的位置，保留內部目錄結構。
-1. 重新啟動應用程式伺服器。
+2. 在「全域檔案儲存目錄」方塊中，輸入新GDS目錄的完整路徑，然後按一下「確定」。
+3. 立即關閉應用程式伺服器。
+4. 將所有檔案從舊的GDS目錄移至新的位置，保留內部目錄結構。
+5. 重新啟動應用程式伺服器。
 
 ## 關於部署檔案 {#about-deployment-files}
 

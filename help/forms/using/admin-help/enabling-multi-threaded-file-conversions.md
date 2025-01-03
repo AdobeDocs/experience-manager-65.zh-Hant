@@ -9,9 +9,9 @@ feature: PDF Generator
 exl-id: 402c1fd4-c6c8-494e-b452-b56a91c4a397
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '884'
+source-wordcount: '896'
 ht-degree: 0%
 
 ---
@@ -93,6 +93,10 @@ OpenOffice或PDFMaker的每個例項都是使用個別的使用者帳戶啟動�
 >OpenOffice必須安裝在所有PDFG使用者都能存取的目錄位置。 您可以以PDFG使用者身分登入，並檢查您是否可以在沒有問題的情況下啟動OpenOffice，以確認這點。
 
 ### 新增使用者帳戶 {#add-a-user-account}
+
+>[!NOTE]
+> 
+> 確保使用者具有存取管理員控制檯的管理員許可權。
 
 1. 在管理控制檯中，按一下「服務>PDF Generator>使用者帳戶」。
 1. 按一下新增，然後輸入在Forms伺服器上擁有管理許可權的使用者的使用者名稱和密碼。 如果您正在設定OpenOffice的使用者，請關閉初始OpenOffice啟用對話方塊。

@@ -9,14 +9,18 @@ exl-id: c5905272-7d09-47e4-8b35-4cc25a148477
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Security
 role: User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '521'
+source-wordcount: '533'
 ht-degree: 0%
 
 ---
 
 # 管理本機認證 {#managing-local-credentials}
+
+>[!NOTE]
+> 
+> 確保使用者具有存取管理員控制檯的管理員許可權。
 
 本機認證是在信任存放區管理中託管的私密金鑰認證。 *本機認證*&#x200B;可識別使用者DES認證的儲存位置。 使用「信任存放區管理」，您可以匯入和管理本機認證，例如使用現有的PFX檔案，以便您可以匯入、編輯和刪除本機認證。
 
@@ -37,7 +41,7 @@ AEM forms支援標準PKCS12格式（.pfx和.p12檔案）中最多4096位元的RS
 
    如需取得認證的相關資訊，請參閱[準備安裝AEM表單](https://helpx.adobe.com/pdf/aem-forms/6-3/prepare-install-single-server.pdf)。
 
-1. 在「別名」方塊中，輸入認證的識別碼。 此識別碼會用作Acrobat Reader DC擴充功能及簽名服務中認證的顯示名稱。 此別名也可用來透過AEM Forms SDK以程式設計方式存取認證。
+1. 在「別名」方塊中，輸入認證的識別碼。 此識別碼會用作Acrobat Reader DC擴充功能及簽名服務中認證的顯示名稱。 此別名也會用來透過AEM表單SDK以程式設計方式存取認證。
 
    >[!NOTE]
    >

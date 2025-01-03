@@ -7,14 +7,18 @@ exl-id: 50eea35d-d844-4f4b-9cbe-7d84bd6b1e3b
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 feature: Adaptive Forms
-source-git-commit: 9f59606bb58b9e90f07bd22e89f3213afb54a697
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '1727'
+source-wordcount: '1739'
 ht-degree: 0%
 
 ---
 
 # 新增和設定使用者 {#adding-and-configuring-users}
+
+>[!NOTE]
+> 
+> 確保使用者具有存取管理員控制檯的管理員許可權。
 
 使用者和群組資訊會儲存在協力廠商儲存系統中，例如LDAP目錄。 「使用者管理」不會寫入協力廠商儲存系統。 而是由「使用者管理」將使用者和群組資訊與其自己的資料庫同步
 

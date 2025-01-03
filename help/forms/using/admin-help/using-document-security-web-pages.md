@@ -9,14 +9,18 @@ feature: Document Security
 exl-id: caa31752-a02d-4d20-b7d9-c4aad5d0fae6
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '921'
+source-wordcount: '933'
 ht-degree: 0%
 
 ---
 
 # 使用Document Security網頁 {#using-the-document-security-webpages}
+
+>[!NOTE]
+> 
+> 確保使用者具有存取管理員控制檯的管理員許可權。
 
 使用者和管理員可使用Document Security網頁來建立和管理原則、管理受原則保護的檔案，以及監控與受原則保護檔案關聯的事件。 管理員也可以使用這些網頁來建立原則集並指定原則集協調員、設定Document Security預設設定、管理受邀使用者註冊和帳戶，以及監視和管理伺服器、原則、使用者和檔案相關事件。
 

@@ -9,14 +9,18 @@ exl-id: 8944cbae-865d-4b1c-b3bf-00c3a247d776
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '175'
+source-wordcount: '187'
 ht-degree: 0%
 
 ---
 
 # 關於管理與程式術語 {#about-administration-and-process-terminology}
+
+>[!NOTE]
+> 
+> 確保使用者具有存取管理員控制檯的管理員許可權。
 
 若要有效管理表單工作流程，您應該瞭解下列辭彙和元素的階層：
 

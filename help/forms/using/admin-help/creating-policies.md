@@ -9,14 +9,18 @@ feature: Document Security
 exl-id: 5e57451c-1a89-442c-8404-841e95d5ceff
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '4713'
+source-wordcount: '4725'
 ht-degree: 0%
 
 ---
 
 # 建立和管理原則 {#creating-and-managing-policies}
+
+>[!NOTE]
+> 
+> 確保使用者具有存取管理員控制檯的管理員許可權。
 
 *原則*&#x200B;定義了一組機密性設定，以及可以存取套用原則之檔案的使用者。 *原則集*&#x200B;用於將具有共同業務目的的一組原則分組。 然後，這些原則集將可供系統中的部分使用者使用。 如需有關原則的詳細資訊，請參閱[原則及受原則保護的檔案](/help/forms/using/admin-help/document-security.md#policies-and-policy-protected-documents)。
 

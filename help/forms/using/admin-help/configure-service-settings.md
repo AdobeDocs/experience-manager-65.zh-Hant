@@ -9,14 +9,18 @@ exl-id: a6a10ff0-6f4d-42df-9b4e-f98a53cf1806
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Workbench
 role: User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '10824'
+source-wordcount: '10836'
 ht-degree: 0%
 
 ---
 
 # 設定服務設定 {#configure-service-settings}
+
+>[!NOTE]
+> 
+> 確保使用者具有存取管理員控制檯的管理員許可權。
 
 您可以使用「服務管理」頁面來設定AEM表單中每個服務的設定值。 可用的設定會依所設定的服務而有所不同。
 
@@ -38,7 +42,7 @@ ht-degree: 0%
 
 ## 稽核工作流程服務設定 {#audit-workflow-service-settings}
 
-Workbench提供在執行階段執行處理序執行個體時加以記錄，然後播放它們以觀察處理序行為的功能。 （請參閱[Workbench說明](https://www.adobe.com/go/learn_aemforms_workbench_63)。） 為了節省Forms伺服器檔案系統的空間，您可以限制儲存的程式記錄資料量。 您可以設定Audit Workflow Service ( `AuditWorkflowService`)的下列屬性：
+Workbench提供在執行階段執行處理序執行個體時加以記錄，然後播放它們以觀察處理序行為的功能。 （請參閱[Workbench說明](https://www.adobe.com/go/learn_aemforms_workbench_63)。）若要節省Forms伺服器的檔案系統空間，您可以限制儲存的處理程式記錄資料量。 您可以設定Audit Workflow Service ( `AuditWorkflowService`)的下列屬性：
 
 **maxNumberOfRecordingInstances：**&#x200B;儲存的錄製數目上限。 當儲存最大記錄數時，建立新記錄時將從檔案系統中移除最舊的記錄。 如果您想要建立許多錄製，而且您想要自動移除舊的錄製，則此屬性很有用。 預設值為 50。
 
@@ -692,7 +696,7 @@ Adobe產品：**&#x200B;選取此選項時，使用Adobe產品發行前版本建
 
 ## Watched資料夾服務設定 {#watched-folder-service-settings}
 
-Watched資料夾服務(`WatchedFolder`)會設定所有watched資料夾端點通用的屬性。 它也會提供watched資料夾端點的預設值。 （請參閱[設定watched資料夾端點](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md#configuring-watched-folder-endpoints)。） 外部使用者端應用程式不會叫用它，也不會用於Workbench中建立的程式。
+Watched資料夾服務(`WatchedFolder`)會設定所有watched資料夾端點通用的屬性。 它也會提供watched資料夾端點的預設值。 （請參閱[設定Watched資料夾端點](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md#configuring-watched-folder-endpoints)。）外部使用者端應用程式不會叫用它，或在Workbench中建立的程式中使用它。
 
 下列設定適用於Watched資料夾服務。
 

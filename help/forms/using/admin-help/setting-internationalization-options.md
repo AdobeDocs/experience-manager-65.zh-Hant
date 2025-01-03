@@ -9,14 +9,18 @@ exl-id: 6cf82c2b-29f0-49d5-a138-99d7801d5a28
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '224'
+source-wordcount: '236'
 ht-degree: 1%
 
 ---
 
 # 設定國際化選項{#setting-internationalization-options}
+
+>[!NOTE]
+> 
+> 確保使用者具有存取管理員控制檯的管理員許可權。
 
 ## 指定用於呈現表單的地區設定 {#specify-the-locale-used-to-render-forms}
 
