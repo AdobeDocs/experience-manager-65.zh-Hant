@@ -9,18 +9,16 @@ exl-id: dc7ba6ad-9df9-4312-a82f-5f3405dea684
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '133'
-ht-degree: 3%
+source-wordcount: '112'
+ht-degree: 1%
 
 ---
 
 # 行動應用程式{#mobile-apps}
 
->[!NOTE]
->
->Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案，使用SPA編輯器。 [了解更多](/help/sites-developing/spa-overview.md)。
+{{ue-over-mobile}}
 
 Adobe Experience Manager (AEM) Mobile是Adobe Experience Manager多頻道數位平台的一部分，也使用AEM Assets、Sites、Screens、Workflow、User Manager、Commerce和Forms。 AEM Mobile提供絕佳的部署彈性，讓企業能夠使用各種內容來源。
 

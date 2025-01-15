@@ -9,18 +9,16 @@ exl-id: 05c8c846-69cc-4075-9149-33890b3d1e08
 solution: Experience Manager
 feature: Mobile
 role: User
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '354'
-ht-degree: 18%
+source-wordcount: '333'
+ht-degree: 19%
 
 ---
 
 # 內容屬性和節點 {#content-properties-and-nodes}
 
->[!NOTE]
->
->Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案，使用SPA編輯器。 [了解更多](/help/sites-developing/spa-overview.md)。
+{{ue-over-mobile}}
 
 在AEM中，文章、橫幅和集合以cq：Pages表示。
 

@@ -8,18 +8,16 @@ exl-id: 9a97e11b-a683-490a-ab7b-158de32984ef
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '248'
-ht-degree: 2%
+source-wordcount: '227'
+ht-degree: 1%
 
 ---
 
 # PhoneGap{#phonegap}
 
->[!NOTE]
->
->Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案，使用SPA編輯器。 [了解更多](/help/sites-developing/spa-overview.md)。
+{{ue-over-mobile}}
 
 AEM已與PhoneGap整合，因此您可以使用AEM頁面輕鬆建立應用程式。 PhoneGap可讓使用者建立公用程式應用程式，讓使用者使用內容。 「內容同步」可讓您建立頁面的版本化封存，以便與應用程式整合。
 

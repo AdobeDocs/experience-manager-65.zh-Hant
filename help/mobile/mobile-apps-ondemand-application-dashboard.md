@@ -9,18 +9,16 @@ exl-id: daafc8b8-3c01-4c97-a14b-f1b706600249
 solution: Experience Manager
 feature: Mobile
 role: User
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '603'
+source-wordcount: '582'
 ht-degree: 4%
 
 ---
 
 # AEM Mobile應用程式控制面板 {#aem-mobile-application-dashboard}
 
->[!NOTE]
->
->Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案，使用SPA編輯器。 [了解更多](/help/sites-developing/spa-overview.md)。
+{{ue-over-mobile}}
 
 您可以從AEM Mobile Application Dashboard或Control Center管理應用程式和行動應用程式內容。
 

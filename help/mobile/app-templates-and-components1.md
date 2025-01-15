@@ -9,18 +9,16 @@ exl-id: 58d95325-7cb1-4204-842d-17add70e1fbf
 solution: Experience Manager
 feature: Mobile
 role: User
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '408'
+source-wordcount: '387'
 ht-degree: 1%
 
 ---
 
 # 應用程式範本和元件{#app-templates-and-components}
 
->[!NOTE]
->
->Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案，使用SPA編輯器。 [了解更多](/help/sites-developing/spa-overview.md)。
+{{ue-over-mobile}}
 
 範本可用來建立頁面，並定義哪些元件可以在選取的範圍中使用。 範本是節點的階層，其結構與要建立的頁面相同，但沒有任何實際內容。
 

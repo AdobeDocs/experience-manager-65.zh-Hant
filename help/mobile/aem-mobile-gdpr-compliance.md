@@ -6,7 +6,7 @@ exl-id: d06e675f-fb61-47da-85de-e0b50dd44153
 solution: Experience Manager
 feature: Mobile
 role: User
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
 source-wordcount: '683'
 ht-degree: 0%
@@ -18,6 +18,8 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 >以下各節以GDPR為例，但說明的詳細資料適用於所有資料保護和隱私權法規，例如GDPR和CCPA。
+
+{{ue-over-mobile}}
 
 ## AEM Mobile GDPR支援 {#aem-mobile-gdpr-support}
 

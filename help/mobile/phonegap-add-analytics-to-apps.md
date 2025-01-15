@@ -9,20 +9,18 @@ exl-id: 8d965e94-c368-481d-b000-6e22456c34db
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '904'
+source-wordcount: '883'
 ht-degree: 0%
 
 ---
 
 # 將Adobe Analytics新增至您的行動應用程式{#add-adobe-analytics-to-your-mobile-application}
 
->[!NOTE]
->
->Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案，使用SPA編輯器。 [了解更多](/help/sites-developing/spa-overview.md)。
+{{ue-over-mobile}}
 
-想要為您的行動應用程式使用者建立吸引人且相關的體驗嗎？ 如果您沒有使用AdobeMobile Services SDK來監控和測量應用程式的生命週期和使用量，那麼您的決策依據是什麼？ 您最忠實的客戶在哪？ 如何保證您保持相關度並最佳化轉換？
+想要為您的行動應用程式使用者建立吸引人且相關的體驗嗎？ 如果您沒有使用AdobeMobile Services SDK來監控和測量應用程式的生命週期和使用情況，那麼您的決策依據是什麼？ 您最忠實的客戶在哪？ 如何保證您保持相關度並最佳化轉換？
 
 您的使用者是否存取所有內容？ 他們是否正在放棄應用程式？如果是，在哪裡放棄？ 他們會在應用程式中停留的頻率，以及回訪使用應用程式的頻率？ 您可以引入哪些變更，然後測量增加保留率的程度？ 當機率如何呢？您的應用程式會針對使用者當機嗎？
 

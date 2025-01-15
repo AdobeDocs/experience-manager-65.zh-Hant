@@ -10,18 +10,16 @@ exl-id: 009b7e2c-ac37-4acc-a656-0a34d3853dfd
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '630'
+source-wordcount: '609'
 ht-degree: 0%
 
 ---
 
 # 模擬器{#emulators}
 
->[!NOTE]
->
->Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案，使用SPA編輯器。 [了解更多](/help/sites-developing/spa-overview.md)。
+{{ue-over-mobile}}
 
 Adobe Experience Manager (AEM)可讓作者在模擬一般使用者檢視頁面環境的模擬器中，檢視頁面，例如在行動裝置或電子郵件使用者端中。
 

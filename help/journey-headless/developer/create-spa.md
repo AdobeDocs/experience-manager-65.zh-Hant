@@ -5,16 +5,16 @@ exl-id: 91eadda2-b881-4e4a-867f-8c5c54e8f8b4
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments
 role: Admin, Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+source-git-commit: 984c0a25ea84588b430b3d82ef26d747d4ae5a14
 workflow-type: tm+mt
-source-wordcount: '1257'
+source-wordcount: '1248'
 ht-degree: 76%
 
 ---
 
 # 如何使用 AEM 建立單頁應用程式 (SPA) {#create-spa}
 
-在[AEM Headless開發人員歷程](overview.md)的選擇性延續，您將瞭解Adobe Experience Manager (AEM)如何將Headless傳遞與傳統的全棧疊CMS功能結合，以及如何使用AEM SPA Editor架構建立可編輯的SPA，以及整合外部SPA，以視需要啟用編輯功能。
+在[AEM Headless開發人員歷程](overview.md)的選擇性延續，您將瞭解Adobe Experience Manager (AEM)如何將Headless傳遞與傳統全棧疊CMS功能結合，以及如何使用AEM SPA Editor架構建立可編輯的SPA，以及整合外部SPA，以視需要啟用編輯功能。
 
 ## 到目前為止 {#story-so-far}
 
@@ -127,7 +127,6 @@ RemotePage 元件允許在 AEM 中呈現外部 SPA。
 * [SPA 簡介和逐步解說。](/help/sites-developing/spa-walkthrough.md)- 對 AEM 中的 SPA 有很好的介紹
 * [開發 SPA 以在 AEM 中使用](/help/sites-developing/spa-architecture.md) - 說明如何開發 SPA 以在 AEM 中使用
 * [SPA 編輯器概述](/help/sites-developing/spa-overview.md) - 詳細說明 SPA 編輯器的運作原理
-* [伺服器端呈現作業](/help/sites-developing/spa-ssr.md) - 如何為 AEM SPA 設定 SSR
 * [SPA 參考文件](/help/sites-developing/spa-reference-materials.md) - 開放原始碼 AEM SPA GitHub 專案的 JavaScript API 參考和連結
 * [內容片段](/help/assets/content-fragments/content-fragments.md) - 如何建立內容片段
 * [AEM 專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) - 一種 Maven 範本，其依照最佳做法建立簡化的 Adobe Experience Manager (AEM) 專案，作為您網站的起點。

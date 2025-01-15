@@ -9,18 +9,16 @@ exl-id: be093025-b19f-4499-a7b5-aae5ab74f966
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '625'
+source-wordcount: '604'
 ht-degree: 2%
 
 ---
 
 # 使用建立精靈建立AEM Mobile應用程式{#creating-a-new-aem-mobile-app-using-create-wizard}
 
->[!NOTE]
->
->Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案，使用SPA編輯器。 [了解更多](/help/sites-developing/spa-overview.md)。
+{{ue-over-mobile}}
 
 AEM Mobile應用程式以定義頁面結構和屬性的Blueprint為基礎。 您可以設定下列應用程式屬性：
 

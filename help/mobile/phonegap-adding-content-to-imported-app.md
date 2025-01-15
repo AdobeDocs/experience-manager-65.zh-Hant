@@ -10,18 +10,16 @@ exl-id: 4625890c-2b76-4c78-88e8-23741bc09f5b
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '697'
 ht-degree: 1%
 
 ---
 
 # 您的混合式應用程式是否已準備好使用Adobe Experience Manager Mobile？{#is-your-hybrid-app-ready-for-aem-mobile}
 
->[!NOTE]
->
->Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案，使用SPA編輯器。 [了解更多](/help/sites-developing/spa-overview.md)。
+{{ue-over-mobile}}
 
 您已將混合式PhoneGap或Cordova應用程式匯入AEM，現在該怎麼做？ 您可能會想要將可編寫的內容新增至應用程式。 若要完成此工作，您必須大致瞭解AEM應用程式的結構。 AEM中的應用程式通常分為兩個部分。 「殼層」和「內容」。 「殼層」包含應用程式的靜態部分；例如PhoneGap設定檔案、應用程式架構和導覽控制項。 您匯入的歸檔內容會儲存為殼的一部分。 在此檔案的內容中，殼層是應用程式開發人員建立的混合PhoneGap應用程式的所有非AEM編寫內容。
 

@@ -5,9 +5,9 @@ exl-id: 25236af4-405a-4152-8308-34d983977e9a
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
-source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
+source-git-commit: 984c0a25ea84588b430b3d82ef26d747d4ae5a14
 workflow-type: tm+mt
-source-wordcount: '2391'
+source-wordcount: '2387'
 ht-degree: 0%
 
 ---
@@ -80,7 +80,7 @@ npm install --save @adobe/aem-spa-component-mapping @adobe/aem-spa-page-model-ma
 
 * `path` — 初始化時，會擷取定義路徑上的模型並儲存在`ModelStore`中。 如有需要，這可用於在初始化時擷取`rootModel`。
 * `modelClient` — 允許提供負責擷取模型的自訂使用者端。
-* `model` — 作為引數傳遞的`model`物件通常在使用SSR [時填入。](spa-ssr.md)
+* `model` — 使用SSR時，通常會填入作為引數傳遞的`model`物件。
 
 ### AEM Authorable Leaf元件 {#authorable-leaf-components}
 
@@ -375,4 +375,3 @@ RemotePage元件預期實作會提供資產資訊清單，例如GitHub](https://
 * [SPA參考資料（API參考）](spa-reference-materials.md)
 * [SPA Blueprint和PageModelManager](spa-blueprint.md#pagemodelmanager)
 * [SPA模型路由](spa-routing.md)
-* [SPA和伺服器端轉譯](spa-ssr.md)

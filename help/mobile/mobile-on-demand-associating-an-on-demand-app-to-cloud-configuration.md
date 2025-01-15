@@ -9,18 +9,16 @@ exl-id: 37428543-c310-4712-a4ec-1f482579fb4b
 solution: Experience Manager
 feature: Mobile
 role: User
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '412'
-ht-degree: 5%
+source-wordcount: '391'
+ht-degree: 4%
 
 ---
 
 # 雲端設定{#cloud-configuration}
 
->[!NOTE]
->
->Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案，使用SPA編輯器。 [了解更多](/help/sites-developing/spa-overview.md)。
+{{ue-over-mobile}}
 
 將隨選應用程式關聯至雲端設定，可讓Adobe Experience Manager (AEM)建立雙向連結，直接與Mobile On-Demand代管專案通訊。 將應用程式連結至Mobile On-Demand專案後，您就能在AEM內建立內容（例如文章、橫幅和集合），並將內容提供至Mobile On-Demand。
 

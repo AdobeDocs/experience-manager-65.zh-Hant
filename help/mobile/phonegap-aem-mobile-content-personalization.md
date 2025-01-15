@@ -9,18 +9,16 @@ exl-id: 70d7ee0d-2f6d-4f97-a6e2-b02d84a0ca42
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '2571'
+source-wordcount: '2550'
 ht-degree: 1%
 
 ---
 
 # AEM Mobile內容個人化{#aem-mobile-content-personalization}
 
->[!NOTE]
->
->Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案，使用SPA編輯器。 [了解更多](/help/sites-developing/spa-overview.md)。
+{{ue-over-mobile}}
 
 >[!NOTE]
 >
@@ -82,7 +80,7 @@ AEM Mobile內容個人化功能可讓[AEM作者](#author)使用[Adobe Target](ht
 
 ### 用戶端代碼 {#client-code}
 
-若要登入AMS服務，請造訪[https://mobilemarketing.adobe.com](https://mobilemarketing.adobe.com/)，選取行動應用程式並按一下設定。 找出「SDK目標選項」欄位，並將使用者端代碼置於欄位中，然後按一下「儲存」。
+若要登入AMS服務，請造訪[https://mobilemarketing.adobe.com](https://mobilemarketing.adobe.com/)，選取行動應用程式並按一下設定。 找到SDK Target選項欄位，並將使用者端代碼放入欄位中，然後按一下儲存。
 
 ![chlimage_1-41](assets/chlimage_1-41.png)
 
@@ -276,7 +274,7 @@ Mobileappoffers處理常式的設定方式與發佈和開發設定不同。 對�
 
 為協助轉譯行動應用程式專屬的內容，AEM Mobile使用mobileapps/components/target元件。 行動目標元件會擴充cq/personalization/components/target元件，並覆寫engine_tnt.jsp指令碼。 藉由覆寫engine_tnt.jsp，AEM Mobile可控制為行動應用程式使用案例產生的HTML。 對於內容作者鎖定的每個元件，都會由engine_tnt.jsp建立關聯的mbox。
 
-針對每個mbox，新增&#x200B;**cq-targeting**&#x200B;的屬性，讓應用程式開發人員可以撰寫自訂程式碼，以使用和使用他們想要的方式。 [AEM Mobile混合參考應用程式](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference)有一個使用cq-targeting屬性的Angular指示詞範例。 內容取代的概念（何時及如何進行）由行動應用程式開發人員決定。 有一個透過AEM /etc/clientlibs/mobileapps/js/mobileapps.js傳遞的行動SDK，其提供呼叫Adobe鎖定目標服務的API。 應用程式開發人員可自行指定何時應根據應用程式的設計進行呼叫。
+針對每個mbox，新增&#x200B;**cq-targeting**&#x200B;的屬性，讓應用程式開發人員可以撰寫自訂程式碼，以使用和使用他們想要的方式。 [AEM Mobile混合參考應用程式](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference)有一個使用cq-targeting屬性的Angular指示詞範例。 內容取代的概念（何時及如何進行）由行動應用程式開發人員決定。 有一個透過AEM /etc/clientlibs/mobileapps/js/mobileapps.js提供的行動SDK，提供呼叫Adobe鎖定目標服務的API。 應用程式開發人員可自行指定何時應根據應用程式的設計進行呼叫。
 
 ## 接下來呢？ {#what-s-next}
 

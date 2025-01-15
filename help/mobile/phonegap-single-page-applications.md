@@ -9,18 +9,16 @@ exl-id: daf7bf39-a105-46eb-ab7b-1c59484949e2
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '951'
-ht-degree: 1%
+source-wordcount: '930'
+ht-degree: 0%
 
 ---
 
 # 單頁應用程式{#single-page-applications}
 
->[!NOTE]
->
->Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案，使用SPA編輯器。 [了解更多](/help/sites-developing/spa-overview.md)。
+{{ue-over-mobile}}
 
 [單頁應用程式](https://en.wikipedia.org/wiki/Single-page_application) (SPA)已達臨界品質，被廣泛視為使用Web技術建立順暢體驗的最有效模式。 遵循SPA模式，您可以建立與案頭或行動應用程式具有相同執行效果的應用程式，但因其以開放式Web標準為基礎，而可觸及多種裝置平台與外型規格。
 

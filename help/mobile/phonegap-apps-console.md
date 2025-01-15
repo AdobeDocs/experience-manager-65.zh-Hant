@@ -9,18 +9,16 @@ exl-id: 49e0b3f6-7ac7-4417-9c31-cc3d3c2305f3
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '2675'
+source-wordcount: '2654'
 ht-degree: 1%
 
 ---
 
 # 使用應用程式控制檯建立和編輯應用程式{#creating-and-editing-apps-using-the-apps-console}
 
->[!NOTE]
->
->Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案，使用SPA編輯器。 [了解更多](/help/sites-developing/spa-overview.md)。
+{{ue-over-mobile}}
 
 AEM行動應用程式開發程式認可了擁有不同專業知識的使用者對行動應用程式開發的貢獻。 下列程式圖說明內容作者和應用程式開發人員執行工作的一般順序。
 

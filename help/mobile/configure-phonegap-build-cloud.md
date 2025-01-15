@@ -9,18 +9,16 @@ exl-id: d91a00d1-12fa-4c84-a426-49413f61c126
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '647'
-ht-degree: 2%
+source-wordcount: '626'
+ht-degree: 1%
 
 ---
 
 # 設定您的Adobe PhoneGap BuildCloud Service {#configure-your-adobe-phonegap-build-cloud-service}
 
->[!NOTE]
->
->Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案，使用SPA編輯器。 [了解更多](/help/sites-developing/spa-overview.md)。
+{{ue-over-mobile}}
 
 應用程式儀表板上的&#x200B;**PhoneGap Build磚**&#x200B;可讓您透過Adobe PhoneGap Build Service建置及發佈PhoneGap行動應用程式。
 
@@ -82,7 +80,7 @@ PhoneGap提供命令列介面，可在本機建置您的應用程式。
 
 若要利用PhoneGap的CLI，您必須設定本機環境，以包含：
 
-1. Platform SDK (iOS、Android™、WindowsPhone...)和
+1. 平台SDK (iOS、Android™、WindowsPhone...)和
 1. PhoneGap CLI
 
 您可以在`https://docs.phonegap.com/references/phonegap-cli/`閱讀更多資訊。

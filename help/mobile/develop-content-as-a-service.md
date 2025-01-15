@@ -8,18 +8,16 @@ exl-id: 85e73679-684e-402f-8186-8b56d8bd9372
 solution: Experience Manager
 feature: Mobile
 role: User
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '976'
+source-wordcount: '955'
 ht-degree: 1%
 
 ---
 
 # 內容傳送{#content-delivery}
 
->[!NOTE]
->
->Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案，使用SPA編輯器。 [了解更多](/help/sites-developing/spa-overview.md)。
+{{ue-over-mobile}}
 
 行動應用程式應該能夠視需要使用AEM中的所有內容，以提供鎖定目標的應用程式體驗。
 
@@ -95,7 +93,7 @@ AEM Sites和Assets的使用者正在使用AEM Assets來管理其所有頻道的�
 
 #### 取得可用資產實體清單 {#getting-a-list-of-available-asset-entities}
 
-應用程式開發人員可透過擷取資產實體來取得可用資產清單。 內容服務空間端點可透過網站服務API SDK提供該資訊。
+應用程式開發人員可透過擷取資產實體來取得可用資產清單。 內容服務空間端點可以透過網站服務API SDK提供該資訊。
 
 結果會是JSON格式的物件，提供「圖示」資料夾中的資產清單。
 

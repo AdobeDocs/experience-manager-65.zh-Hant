@@ -9,18 +9,16 @@ exl-id: 58b7d1b9-a851-442a-9d02-212cad8abbed
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '494'
-ht-degree: 2%
+source-wordcount: '473'
+ht-degree: 1%
 
 ---
 
 # 設定使用者和使用者群組 {#configure-your-users-and-user-groups}
 
->[!NOTE]
->
->Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案，使用SPA編輯器。 [了解更多](/help/sites-developing/spa-overview.md)。
+{{ue-over-mobile}}
 
 本章說明使用者角色，以及如何設定使用者和群組，以支援行動應用程式的製作和管理。
 

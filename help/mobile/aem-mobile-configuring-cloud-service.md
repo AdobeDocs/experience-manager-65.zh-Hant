@@ -9,18 +9,16 @@ exl-id: d370d772-ef4d-4f38-826c-e90d07735822
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '1254'
+source-wordcount: '1233'
 ht-degree: 1%
 
 ---
 
 # 設定Adobe TargetCloud Service {#configuring-adobe-target-cloud-service}
 
->[!NOTE]
->
->Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案，使用SPA編輯器。 [了解更多](/help/sites-developing/spa-overview.md)。
+{{ue-over-mobile}}
 
 >[!NOTE]
 >
@@ -64,7 +62,7 @@ ht-degree: 1%
 
 ### 用戶端代碼 {#client-code}
 
-若要登入AMS服務，請造訪[https://mobilemarketing.adobe.com](https://mobilemarketing.adobe.com/)，選取行動應用程式，然後按一下設定。 找出「SDK目標選項」欄位，並將使用者端代碼置於欄位中，然後按一下「儲存」。
+若要登入AMS服務，請造訪[https://mobilemarketing.adobe.com](https://mobilemarketing.adobe.com/)，選取行動應用程式，然後按一下設定。 找到SDK Target選項欄位，並將使用者端代碼放入欄位中，然後按一下儲存。
 
 ![chlimage_1-11](assets/chlimage_1-11.png)
 

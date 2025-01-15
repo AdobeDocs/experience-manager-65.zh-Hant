@@ -9,18 +9,16 @@ exl-id: cf8ba05c-6dcd-4880-b8bf-72382118cd80
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '531'
 ht-degree: 1%
 
 ---
 
 # 在AEM中開發行動應用程式 {#developing-mobile-applications-in-aem}
 
->[!NOTE]
->
->Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案，使用SPA編輯器。 [了解更多](/help/sites-developing/spa-overview.md)。
+{{ue-over-mobile}}
 
 AEM使用Adobe PhoneGap和Adobe發佈解決方案，可讓您建立並管理內容豐富且以公用程式為基礎的跨平台行動應用程式：
 

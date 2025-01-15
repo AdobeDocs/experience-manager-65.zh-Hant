@@ -9,18 +9,16 @@ exl-id: 7e358660-bc2f-4d8f-8d74-6cdb6c1ea7b5
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '1054'
+source-wordcount: '1033'
 ht-degree: 1%
 
 ---
 
 # 透過AdobeMobile Analytics追蹤應用程式效能{#track-app-performance-with-adobe-mobile-analytics}
 
->[!NOTE]
->
->Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案，使用SPA編輯器。 [了解更多](/help/sites-developing/spa-overview.md)。
+{{ue-over-mobile}}
 
 您希望提高客戶轉換率和忠誠度。
 
@@ -32,7 +30,7 @@ ht-degree: 1%
 
 透過AdobeMobile Services，您可以追蹤使用情形、應用程式當機、裝置詳細資訊，以及其他許多行動應用程式的關鍵量度，深入瞭解使用者如何使用行動應用程式。
 
-Adobe Experience Manager Mobile可讓您直接從AEM Mobile應用程式控制面板，快速瞭解行動分析的詳細資訊。 控制面板中的&#x200B;**行動量度磚**&#x200B;為您的行動應用程式提供Real-Time Analytics，讓開發人員、作者和管理員快速瞭解您的行動應用程式的運作狀況。 在封面底下，為Analytics提供支援的是[Adobe Mobile Analytics](https://business.adobe.com/products/analytics/mobile-marketing.html) SDK。 AdobeMobile Analytics SDK可以原生或透過PhoneGap Bridge外掛程式插入您的應用程式以進行網頁檢視。 系統會收集量度並在裝置上快取，直到裝置連線為止；資料會推送至AdobeMobile Services雲端，以便進行報表和分析。
+Adobe Experience Manager Mobile可讓您直接從AEM Mobile應用程式控制面板，快速瞭解行動分析的詳細資訊。 控制面板中的&#x200B;**行動量度磚**&#x200B;為您的行動應用程式提供Real-Time Analytics，讓開發人員、作者和管理員快速瞭解您的行動應用程式的運作狀況。 在封面底下，支援Analytics的是[Adobe行動裝置分析](https://business.adobe.com/products/analytics/mobile-marketing.html) SDK。 AdobeMobile Analytics SDK可以原生或透過網頁檢視的PhoneGap Bridge外掛程式插入您的應用程式。 系統會收集量度並在裝置上快取，直到裝置連線為止；資料會推送至AdobeMobile Services雲端，以便進行報表和分析。
 
 Adobe Mobile Analytics SDK提供下列功能：
 
@@ -91,7 +89,7 @@ Adobe Mobile Analytics SDK提供下列功能：
 
 ![chlimage_1-129](assets/chlimage_1-129.png)
 
-### AdobeMobile Services SDK設定檔案 {#adobe-mobile-services-sdk-config-file}
+### AdobeMobile Services SDK設定檔 {#adobe-mobile-services-sdk-config-file}
 
 此時，您的行動應用程式已與雲端服務相關聯，但行動應用程式還不知道如何將收集到的行動量度傳回Adobe Analytics。 若要將行動應用程式連線至Adobe Analytics，必須將Adobe Mobile Services SDK設定檔案新增至Adobe Experience Manager。
 

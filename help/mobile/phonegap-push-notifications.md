@@ -9,18 +9,16 @@ exl-id: 375f2f40-1b98-4e21-adee-cbea274e6a2a
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '3156'
+source-wordcount: '3135'
 ht-degree: 1%
 
 ---
 
 # 推播通知{#push-notifications}
 
->[!NOTE]
->
->Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案，使用SPA編輯器。 [了解更多](/help/sites-developing/spa-overview.md)。
+{{ue-over-mobile}}
 
 能夠立即以重要通知提醒您的Adobe Experience Manager (AEM)行動應用程式使用者，對行動應用程式的價值及其行銷活動至關重要。 以下說明讓應用程式接收推播通知所必須採取的步驟。 您也會瞭解如何設定推送，並從AEM Mobile傳送至手機上安裝的應用程式。 此外，本節也說明如何設定推播通知的[深層連結](#deeplinking)功能。
 
