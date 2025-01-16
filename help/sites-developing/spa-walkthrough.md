@@ -7,7 +7,7 @@ exl-id: 95990112-2afc-420a-a7c7-9613f40d4c4a
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+source-git-commit: d28019efcead89cb66edfa672d6b928cbb7bcc25
 workflow-type: tm+mt
 source-wordcount: '1945'
 ht-degree: 64%
@@ -49,7 +49,7 @@ SPA 編輯器提供了一個全面的解決方案來支援在 AEM 中使用 SPA�
 >
 >此檔案僅將[WKND Spa Project應用程式](https://github.com/adobe/aem-guides-wknd-spa)用於示範用途。 請勿用於任何專案工作。
 >
->任何AEM專案都應該使用[AEM專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hant)，該原型支援使用React或Angular的SPA專案並使用SPA SDK。
+>任何AEM專案都應該使用[AEM專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hant)，該原型支援使用React或Angular的SPA專案，並使用SPA SDK。
 
 ### 什麼是 SPA？ {#what-is-a-spa}
 
@@ -256,3 +256,4 @@ SPA的主要構想是減少伺服器呼叫和相依性，以將伺服器呼叫�
 * [AEM中的SPA快速入門](/help/sites-developing/spa-getting-started-react.md)顯示如何建置基本SPA以在AEM中使用SPA編輯器
 * [SPA 編輯器概述](/help/sites-developing/spa-overview.md)更深入地介紹 AEM 和 SPA 之間的通訊模型。
 * [為 AEM 開發 SPA](/help/sites-developing/spa-architecture.md) 介紹如何讓前端開發人員為 AEM 開發 SPA，以及 SPA 如何與 AEM 架構互動。
+
