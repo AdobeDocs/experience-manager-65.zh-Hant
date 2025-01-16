@@ -10,20 +10,19 @@ exl-id: ca4c3161-90a8-4c02-8554-125eac62dff7
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+source-git-commit: 6d961456e0e1f7a26121da9be493308a62c53e04
 workflow-type: tm+mt
-source-wordcount: '184'
+source-wordcount: '164'
 ht-degree: 0%
 
 ---
+
 
 # SPA與Adobe Experience Platform Launch整合{#spa-and-adobe-experience-platform-launch-integration}
 
 Adobe Experience Platform Launch是在單頁應用程式(SPA)中實作Analytics、Target和Audience Manager的建議方式。
 
->[!NOTE]
->
->對於需要以SPA框架為基礎的使用者端轉譯(例如React或Angular)專案，建議使用SPA編輯器解決方案。
+{{ue-over-spa}}
 
 ## 教學課程 {#tutorial}
 

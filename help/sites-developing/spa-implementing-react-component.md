@@ -10,12 +10,13 @@ exl-id: f4959c12-54c5-403a-9973-7a4ab5f16bed
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+source-git-commit: 6d961456e0e1f7a26121da9be493308a62c53e04
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '523'
 ht-degree: 9%
 
 ---
+
 
 # 針對 SPA 實作 React元件{#implementing-a-react-component-for-spa}
 
@@ -23,9 +24,7 @@ ht-degree: 9%
 
 SPA編寫功能提供全方位的解決方案，可支援AEM中的SPA。 本文將以範例說明如何改寫簡單的現有React元件來與AEM SPA編輯器搭配使用。
 
->[!NOTE]
->
->對於需要以SPA框架為基礎的使用者端轉譯(例如React或Angular)專案，建議使用SPA編輯器解決方案。
+{{ue-over-spa}}
 
 ## 簡介 {#introduction}
 

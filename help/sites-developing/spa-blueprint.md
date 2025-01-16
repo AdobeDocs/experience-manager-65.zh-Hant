@@ -9,20 +9,19 @@ exl-id: 383f84fd-455c-49a4-9e2b-1c4757cc188b
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+source-git-commit: 6d961456e0e1f7a26121da9be493308a62c53e04
 workflow-type: tm+mt
-source-wordcount: '2043'
+source-wordcount: '2023'
 ht-degree: 0%
 
 ---
+
 
 # SPA 藍圖{#spa-blueprint}
 
 若要讓作者能使用AEM SPA編輯器編輯SPA的內容，SPA必須滿足以下需求：本檔案將說明這些需求。
 
->[!NOTE]
->
->對於需要以SPA框架為基礎的使用者端轉譯(例如React或Angular)專案，建議使用SPA編輯器解決方案。
+{{ue-over-spa}}
 
 ## 簡介 {#introduction}
 
@@ -60,7 +59,7 @@ ht-degree: 0%
 
 #### 動態模型到元件對應 {#dynamic-model-to-component-mapping}
 
-如需如何在AEM的JavaScript SPA SDK中發生動態模型到元件對應的詳細資訊，請參閱文章[SPA的動態模型到元件對應](/help/sites-developing/spa-dynamic-model-to-component-mapping.md)。
+如需有關在AEM的JavaScript SPA SDK中如何發生動態模型到元件對應的詳細資訊，請參閱文章[SPA的動態模型到元件對應](/help/sites-developing/spa-dynamic-model-to-component-mapping.md)。
 
 ### 框架特定層 {#framework-specific-layer}
 

@@ -10,12 +10,13 @@ exl-id: 7b34be66-bb61-4697-8cc8-428f7c63a887
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+source-git-commit: 6d961456e0e1f7a26121da9be493308a62c53e04
 workflow-type: tm+mt
-source-wordcount: '1646'
-ht-degree: 84%
+source-wordcount: '1626'
+ht-degree: 85%
 
 ---
+
 
 # SPA 編輯器概觀{#spa-editor-overview}
 
@@ -23,9 +24,7 @@ ht-degree: 84%
 
 SPA 編輯器提供了一個全面的解決方案來支援在 AEM 中使用 SPA。此頁面概述了在 AEM 中 SPA 支援結構、SPA 編輯器的運作原理以及 SPA 框架和 AEM 如何保持同步。
 
->[!NOTE]
->
->對於需要以SPA框架為基礎的使用者端轉譯(例如React或Angular)專案，建議使用SPA編輯器解決方案。
+{{ue-over-spa}}
 
 ## 簡介 {#introduction}
 
@@ -190,7 +189,7 @@ SPA Editor SDK 支援以下最低版本：
 
 ### 限制 {#limitations}
 
-AEM SPA Editor SDK是隨AEM 6.4 Service Pack 2推出的。 Adobe完全支援此功能，且功能會持續增強和擴充。 SPA 編輯器尚未支援以下 AEM 功能：
+AEM SPA Editor SDK是在AEM 6.4 Service Pack 2中推出。 Adobe完全支援此功能，且功能會持續增強和擴充。 SPA 編輯器尚未支援以下 AEM 功能：
 
 * 目標模式
 * ContextHub

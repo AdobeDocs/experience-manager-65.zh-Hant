@@ -1,6 +1,6 @@
 ---
 title: SPA的動態模型至元件對應
-description: 瞭解適用於Adobe Experience Manager的JavaScript SPA SDK中如何發生元件對應的動態模型。
+description: 瞭解在Adobe Experience Manager的JavaScript SPA SDK中如何發生元件對應的動態模型。
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: spa
@@ -9,20 +9,19 @@ exl-id: 5b2ccac0-bf1d-4f06-8743-7fce6fb68378
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+source-git-commit: 6d961456e0e1f7a26121da9be493308a62c53e04
 workflow-type: tm+mt
-source-wordcount: '333'
+source-wordcount: '313'
 ht-degree: 0%
 
 ---
 
+
 # SPA的動態模型至元件對應{#dynamic-model-to-component-mapping-for-spas}
 
-本檔案說明適用於Adobe Experience Manager (AEM)的JavaScript SPA SDK中元件對映的動態模型如何發生。
+本檔案說明適用於Adobe Experience Manager (AEM)的JavaScript SPA SDK中如何產生動態模型與元件的對應。
 
->[!NOTE]
->
->對於需要以SPA框架為基礎的使用者端轉譯(例如React或Angular)專案，建議使用SPA編輯器解決方案。
+{{ue-over-spa}}
 
 ## 元件對應模組 {#componentmapping-module}
 

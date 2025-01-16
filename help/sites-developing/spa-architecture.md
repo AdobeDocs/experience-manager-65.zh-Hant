@@ -10,12 +10,13 @@ exl-id: c1429889-e2ed-4e2f-a45f-33f8a6a52745
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+source-git-commit: 6d961456e0e1f7a26121da9be493308a62c53e04
 workflow-type: tm+mt
-source-wordcount: '2038'
+source-wordcount: '2018'
 ht-degree: 5%
 
 ---
+
 
 # 針對 AEM 開發 SPA{#developing-spas-for-aem}
 
@@ -23,9 +24,7 @@ ht-degree: 5%
 
 本文介紹當請前端開發人員為AEM開發SPA時應考慮的重要問題，並概述有關在AEM上部署SPA的AEM架構。
 
->[!NOTE]
->
->對於需要以SPA框架為基礎的使用者端轉譯(例如React或Angular)專案，建議使用SPA編輯器解決方案。
+{{ue-over-spa}}
 
 ## AEM的SPA開發原則 {#spa-development-principles-for-aem}
 
@@ -82,7 +81,7 @@ SPA應該僅依賴內容的動態呈現。 這是AEM擷取並轉譯內容結構�
    <th><strong>缺點</strong></th>
   </tr>
   <tr>
-   <td>使用AEM做為Headless CMS，而不使用<a href="/help/sites-developing/spa-reference-materials.md">SPA Editor SDK架構。</a></td>
+   <td>AEM用作Headless CMS，而不使用<a href="/help/sites-developing/spa-reference-materials.md">SPA Editor SDK架構。</a></td>
    <td>前端開發人員可完全控制應用程式。</td>
    <td><p>內容作者無法使用AEM的內容製作體驗。</p> <p>如果程式碼包含靜態參照或路由，就無法移植或重複使用。</p> <p>不允許使用範本編輯器，因此前端開發人員必須透過JCR維護可編輯的範本。</p> </td>
   </tr>
@@ -92,7 +91,7 @@ SPA應該僅依賴內容的動態呈現。 這是AEM擷取並轉譯內容結構�
    <td><p>內容作者受限於有限的AEM內容製作體驗。</p> <p>如果程式碼包含靜態參考或路由，則可能無法移植或重複使用。</p> <p>不允許使用範本編輯器，因此前端開發人員必須透過JCR維護可編輯的範本。</p> </td>
   </tr>
   <tr>
-   <td>專案會完全使用SPA編輯器SDK，而前端元件會開發為程式庫，而應用程式的內容結構會委派給AEM。</td>
+   <td>專案會完全使用SPA編輯器SDK，前端元件會開發為程式庫，而應用程式的內容結構會委派給AEM。</td>
    <td><p>應用程式可重複使用且可移植。</p> <p>內容作者可以使用AEM的內容製作體驗來編輯應用程式。<br /> </p> <p>SPA與範本編輯器相容。</p> </td>
    <td><p>開發人員無法控制應用程式的結構和委派給AEM的內容部分。</p> <p>開發人員仍可保留應用程式的區域，以供不應使用AEM編寫的內容使用。</p> </td>
   </tr>
@@ -230,4 +229,4 @@ AEM的一般架構（包括開發、編寫和發佈環境）在使用SPA時不�
 
 如需有關動態模型到元件對應以及它在AEM中SPA內運作方式的詳細資訊，請參閱文章[SPA的動態模型到元件對應](/help/sites-developing/spa-dynamic-model-to-component-mapping.md)。
 
-如果您想要在AEM中為React或Angular以外的框架實作SPA，或只是想深入瞭解適用於AEM的SPA SDK的運作方式，請參閱[SPA Blueprint](/help/sites-developing/spa-blueprint.md)文章。
+如果您想在AEM中為React或Angular以外的框架實作SPA，或只是想深入瞭解適用於AEM的SPA SDK的運作方式，請參閱[SPA Blueprint](/help/sites-developing/spa-blueprint.md)文章。

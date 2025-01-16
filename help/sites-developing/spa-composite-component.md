@@ -5,12 +5,13 @@ exl-id: 02b6c698-d169-467a-9168-9fa6181bed6c
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+source-git-commit: 6d961456e0e1f7a26121da9be493308a62c53e04
 workflow-type: tm+mt
 source-wordcount: '783'
 ht-degree: 1%
 
 ---
+
 
 # SPA 中的複合元件 {#composite-components-in-spas}
 
@@ -19,6 +20,8 @@ ht-degree: 1%
 當在AEM單頁應用程式(SPA)編輯器架構中正確實作複合元件時，內容作者可以像拖放任何其他元件一樣拖放此類元件，但還是可以個別編輯組成複合元件的每個元件。
 
 本文示範如何將複合元件新增至單頁應用程式，以便順暢地與AEM SPA編輯器搭配運作。
+
+{{ue-over-spa}}
 
 ## 使用案例 {#use-case}
 
