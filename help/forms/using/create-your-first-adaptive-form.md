@@ -7,10 +7,10 @@ feature: Adaptive Forms
 exl-id: 77a05f83-ac9a-4221-85ac-439e82623a28
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: f941782f9a4201e7bff898853d3fc18954418500
 workflow-type: tm+mt
-source-wordcount: '913'
-ht-degree: 6%
+source-wordcount: '908'
+ht-degree: 3%
 
 ---
 
@@ -66,7 +66,7 @@ ht-degree: 6%
 * 建立提交動作，以傳送包含表單內容的電子郵件。
 * 預覽並提交最適化表單。
 
-[![請參閱指南](https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png)](create-adaptive-form.md)
+[![檢視指南](assets/see-the-guide-sm.png)](create-adaptive-form.md)
 
 ## 步驟2：建立表單資料模型 {#step-create-form-data-model}
 
@@ -82,7 +82,7 @@ ht-degree: 6%
 * 設定表單資料模型的讀寫服務。
 * 測試表單資料模型和已設定服務的測試資料。
 
-[![請參閱指南](https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png)](create-form-data-model.md)
+[![檢視指南](assets/see-the-guide-sm.png)](create-form-data-model.md)
 
 ## 步驟3：將規則套用至最適化表單欄位 {#step-apply-rules-to-adaptive-form-fields}
 
@@ -95,7 +95,7 @@ ht-degree: 6%
 * 建立規則並套用至最適化表單欄位。
 * 使用規則來觸發表單資料模型服務，以將資料更新至資料庫。
 
-[![請參閱指南](https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png)](apply-rules-to-adaptive-form-fields.md)
+[![檢視指南](assets/see-the-guide-sm.png)](apply-rules-to-adaptive-form-fields.md)
 
 ## 步驟4：設計最適化表單的樣式 {#step-style-your-adaptive-form}
 
@@ -109,7 +109,7 @@ ht-degree: 6%
 * 使用主題編輯器建立最適化表單的主題。
 * 在自訂主題中使用Web Fonts。
 
-[![請參閱指南](https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png)](style-your-adaptive-form.md)
+[![檢視指南](assets/see-the-guide-sm.png)](style-your-adaptive-form.md)
 
 ## 步驟5：將您的最適化表單Publish {#step-publish-your-adaptive-form}
 
@@ -123,4 +123,4 @@ ht-degree: 6%
 * 將最適化表單內嵌到AEM [!DNL Sites]頁面中。
 * 將最適化表單內嵌於外部網頁(託管在AEM外部的非AEM網頁)中。
 
-[![請參閱指南](https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png)](publish-your-adaptive-form.md)
+[![檢視指南](assets/see-the-guide-sm.png)](publish-your-adaptive-form.md)
