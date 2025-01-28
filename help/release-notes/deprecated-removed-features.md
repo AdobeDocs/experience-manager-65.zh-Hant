@@ -5,9 +5,9 @@ exl-id: d9b6140a-c37d-4b90-a60c-01f471d65621
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
-source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
+source-git-commit: 191c4b02274ca7e3e9d4622b72cd585870581f47
 workflow-type: tm+mt
-source-wordcount: '1715'
+source-wordcount: '1747'
 ht-degree: 10%
 
 ---
@@ -46,7 +46,7 @@ Adobe 持續評估產品功能，以更新或替代的方式來改善或取代�
 | 動態標籤管理員(DTM) | 不建議使用DTM整合。 | 切換以使用Adobe Experience Platform Launch作為標籤管理員。 |   |
 | Adobe Target | 由於新增AEM在AEM 6.5中使用[!DNL Adobe I/O]型Adobe Target Standard API (Rest API)連線Adobe Target服務的功能，Target Classic API (XML)方式已過時。 | 重新設定整合以[使用新的API](/help/sites-administering/target.md)。 |  |
 | Adobe Target | 不建議在AEM中使用`mbox.js`型與Adobe Target的整合。 | 切換為使用`at.js` 1.x。 |  |
-| 商務 | [CIF REST](https://github.com/adobe/commerce-cif-api)在2018年提供為一組微服務，以啟用AEM與商務引擎之間的整合。 在Adobe於2018年年中收購Adobe Commerce (前身為Magento)後，Adobe決定變更其作法，原因有二。 Commerce有自己的Commerce API集(REST和GraphQL)，維護兩組API是不好的做法。 市場趨勢顯示客戶正轉向GraphQL，因為這是查詢資料的更有效率。 2019年，Adobe已使用Commerce的GraphQL API作為真相來源發佈新Commerce integration framework。 Adobe不打算進一步投資CIF REST。 建議客戶使用替代解決方案。 | 若為AEM-Commerce整合，請切換至[AEM CIF Archetype](https://github.com/adobe/aem-cif-project-archetype)和[AEM CIF核心元件](https://github.com/adobe/aem-core-cif-components)。 使用Commerce integration framework](/help/commerce/cif/integrating/magento.md)檢視AEM與Adobe Commerce整合[。 Adobe的藍圖支援第三方(Commerce除外)與新方法整合。 |  |
+| Commerce | [CIF REST](https://github.com/adobe/commerce-cif-api)在2018年提供為一組微服務，以啟用AEM與商務引擎之間的整合。 在Adobe於2018年年中收購Adobe Commerce (前身為Magento)後，Adobe決定變更其作法，原因有二。 Commerce有自己的Commerce API集(REST和GraphQL)，維護兩組API是不好的做法。 市場趨勢顯示客戶正轉向GraphQL，因為這是查詢資料的更有效率。 2019年，Adobe已使用Commerce的GraphQL API作為真相來源發佈新Commerce integration framework。 Adobe不打算進一步投資CIF REST。 建議客戶使用替代解決方案。 | 若為AEM-Commerce整合，請切換至[AEM CIF Archetype](https://github.com/adobe/aem-cif-project-archetype)和[AEM CIF核心元件](https://github.com/adobe/aem-core-cif-components)。 使用Commerce integration framework](/help/commerce/cif/integrating/magento.md)檢視AEM與Adobe Commerce整合[。 Adobe的藍圖支援第三方(Commerce除外)與新方法整合。 |  |
 | 元件(AEM Sites) | Adobe不打算進一步增強儲存在`/libs/foundation/components`中的大部分Foundation元件。 在元件資料夾中尋找`cq:deprecated`和`cq:deprecatedReason`屬性。 AEM 6.5包含基礎元件，而從舊版升級的客戶可繼續依原樣使用。 此外，即使已棄用，亦支援基礎元件。 | Adobe建議將核心元件用於未來的專案。 現有網站可以維持原狀，或使用[AEM Modernize Tools Suite](https://github.com/adobe/aem-modernize-tools)來重構網站以使用核心元件。 |  |
 | 元件(AEM Sites) | 從6.5版開始，Design Importer元件`/libs/wcm/designimporter/components`已標示為已棄用。Adobe不打算進一步增強「設計匯入工具」的實作。 | Adobe計畫在未來版本中提供使用案例的替代實施。 |  |
 | Foundation | Granite解除安裝架構。 Adobe不打算進一步增強CQ 5.6.1中匯入的解除安裝架構，以將資產處理外部化。 | Adobe正在開發新一代的雲端原生解除安裝架構。 |  |
@@ -58,7 +58,7 @@ Adobe 持續評估產品功能，以更新或替代的方式來改善或取代�
 | 開發人員 | `Granite.Sling.js`使用者端資料庫。 Adobe不打算進一步增強做為發佈(Quickstart)一部分所提供的Granite.Sling.js使用者端資料庫。 | Adobe建議依賴程式庫功能的客戶將其程式碼重構為不再使用。 |  |
 | 開發人員 | 使用YUI壓縮/縮制JavaScript使用者端程式庫。 Adobe不打算進一步更新YUI資料庫。 直到AEM 6.4之前，YUI預設為透過切換至JavaScript Closure Compiler (GCC)的選項來縮制Google。 從AEM 6.5開始，預設為GCC。 | Adobe建議客戶升級至AEM 6.5，以切換至GCC進行實作 |  |
 | 開發人員 | CRXDE Lite中的傳統UI對話方塊編輯器。 Adobe不打算進一步增強傳統UI對話方塊編輯器(隨附於分送（快速入門）) | 沒有可用的替代專案。 |  |
-| 表單 | AEM Forms與AEM Mobile的整合已過時。 | 沒有可用的替代專案。 |
+| Forms | AEM Forms與AEM Mobile的整合已過時。 | 沒有可用的替代專案。 |
 | 開發人員 | CRXDE Lite中的傳統UI對話方塊編輯器。 Adobe不打算進一步增強傳統UI對話方塊編輯器(隨附於分送（快速入門）) | 沒有可用的替代專案。 |  |
 | 開發人員 | Lodash/underscore使用者端資源庫。 Adobe不打算進一步維護和更新隨分送（快速入門）提供的Lodash/underscore使用者端程式庫。 | Adobe建議仍需將程式碼加到底線的客戶，將其新增至專案程式碼基底。 |  |
 
@@ -68,15 +68,16 @@ Adobe 持續評估產品功能，以更新或替代的方式來改善或取代�
 
 | 區域 | 功能 | 替代方案 | 版本(SP) |
 |--- |--- |--- |--- |
+| Commerce | AEM CIF Classic已移除。 | 您應該移轉至[AEM CIF](/help/commerce/cif/migration.md)。 如果您仍然需要CIF Classic，已建立相容性套件，請[連絡Adobe客戶支援](https://experienceleague.adobe.com/?support-solution=General#support)。 | 6.5.22.0 |
 | 與[!DNL Experience Cloud]整合 | 您可以透過[!DNL Adobe I/O]使用設定，將您的資產與[!DNL Experience Cloud]同步化。 [!DNL Adobe Experience Cloud]先前稱為[!DNL Adobe Experience Cloud]。 | 若您有任何疑問，請[聯絡Adobe客戶支援](https://experienceleague.adobe.com/?support-solution=General#support)。 |  |
 | AnalyticsActivity Map | AEM中包含的Activity Map版本。 | 由於 Adobe Analytics API 中的安全性變更，AEM 中包含的 Activity Map 版本已無法再使用。使用Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html)提供的[ActivityMap外掛程式。 |  |
 | 整合 | ExactTarget整合已從預設分送（快速入門）中移除，且不再提供。 | 沒有替代專案。 |  |
-| 整合 | Salesforce Api整合已從預設發佈(Quickstart)中移除，現在是一個要從[軟體發佈](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)安裝的額外套件。 | 此功能仍可使用。 |
-| 表單 | 已移除對Adobe Central Migration Bridge服務的支援，因為已不再支援Adobe Central產品。 | 沒有替代專案。 |  |
-| 表單 | `com.adobe.fd.df.fdinternal.model.ConfigurationInstance` | 沒有替代專案。 |  |
-| 表單 | `com.adobe.fd.ccm.channels.print.fdinternal.api.service.PrintDataTransformer` | 無替代專案 |  |
-| 表單 | JEE版不提供從LiveCycleES4 SP1到AEM 6.5 Forms的單點躍點升級 | 請參閱AEM Forms升級檔案中的[可用升級路徑](../forms/using/upgrade.md)。 |  |
-| 表單 | 移除JEE版AEM Forms中的UPD型叢集支援 | 在JEE上的AEM Forms中，您只能使用TCP型叢集。 如果您將UDP多點傳送伺服器從舊版升級至JEE上的AEM 5.5 Forms，請執行手動設定，以切換至以TCP為基礎的Gemfire叢集。 如需詳細指示，請參閱[在JEE上升級至AEM 6.5表單](../forms/using/upgrade-forms-jee.md) |  |
+| 整合 | Salesforce Force API整合已從預設發佈(Quickstart)中移除，現在是一個要從[軟體發佈](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)安裝的額外套件。 | 此功能仍可使用。 |
+| Forms | 已移除對Adobe Central Migration Bridge服務的支援，因為已不再支援Adobe Central產品。 | 沒有替代專案。 |  |
+| Forms | `com.adobe.fd.df.fdinternal.model.ConfigurationInstance` | 沒有替代專案。 |  |
+| Forms | `com.adobe.fd.ccm.channels.print.fdinternal.api.service.PrintDataTransformer` | 無替代專案 |  |
+| Forms | JEE版不提供從LiveCycleES4 SP1到AEM 6.5 Forms的單點躍點升級 | 請參閱AEM Forms升級檔案中的[可用升級路徑](../forms/using/upgrade.md)。 |  |
+| Forms | 移除JEE版AEM Forms中的UPD型叢集支援 | 在JEE上的AEM Forms中，您只能使用TCP型叢集。 如果您將UDP多點傳送伺服器從舊版升級至JEE上的AEM 5.5 Forms，請執行手動設定，以切換至以TCP為基礎的Gemfire叢集。 如需詳細指示，請參閱[在JEE上升級至AEM 6.5表單](../forms/using/upgrade-forms-jee.md) |  |
 | 開發人員 | Firebug Lite已從預設散發中移除（快速入門） | 使用瀏覽器內建的開發人員主控台 |
 | 開發人員 | 移除HTML使用者端程式庫管理員中的`customJavaScriptPath`支援。 | 無替代專案 |  |
 | [!DNL Assets] | 資產解除安裝功能已在[!DNL Adobe Experience Manager] 6.5中移除。 | 沒有可用的替代專案。 |  |
