@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: 使用Adobe Experience Manager 6.5檔案瞭解其運作方式，以及軟體可為您做哪些事。
 breadcrumb-title: 使用手冊
 user-guide-title: AEM 6.5
-source-git-commit: 984c0a25ea84588b430b3d82ef26d747d4ae5a14
+source-git-commit: b5a87404435758d660f136d2e236de699ecad541
 workflow-type: tm+mt
-source-wordcount: '7471'
+source-wordcount: '7475'
 ht-degree: 19%
 
 ---
@@ -678,7 +678,7 @@ ht-degree: 19%
       + [將規則編輯器存取權授予所選的使用者群組](/help/forms/using/rule-editor-access-user-groups.md)
       + [使用AEM翻譯工作流程將最適化表單和記錄檔案本地化](/help/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.md)
       + [調適型表單的樣式建構](/help/forms/using/styling-constructs-adaptive-forms.md)
-      + [將最適化 Forms 與 XFA Form 範本同步](/help/forms/using/synchronizing-adaptive-forms-xfa.md)
+      + [將最適化表單與 XFA Form 範本同步](/help/forms/using/synchronizing-adaptive-forms-xfa.md)
       + [將Adobe Sign與AEM Forms整合](/help/forms/using/adobe-sign-integration-adaptive-forms.md)
       + [建立和管理表單中資產的稽核](/help/forms/using/create-reviews-forms.md)
       + [在AEM Sites單頁應用程式中內嵌最適化表單或互動式通訊](/help/forms/using/embed-adaptive-form-aem-sites-spa.md)
@@ -1217,6 +1217,8 @@ ht-degree: 19%
       + [在JEE伺服器叢集上設定和疑難排解AEM Forms](/help/forms/developing/configure-server-cluster.md)
       + [在動態PDF forms中產生及使用雜湊](/help/forms/developing/hashing-forms.md)
       + [使用WS-Security標頭傳遞認證](/help/forms/developing/passing-credentials.md)
+   + 字彙表{#aem-forms-glossary}
++[AEM Forms字彙表](/help/forms/using/aem-forms-glossary.md)
 + Content and Commerce {#commerce}
    + [簡介和概觀](/help/commerce/cif/introduction.md)
    + [AEM內容和Commerce重大變更](/help/commerce/cif/changes.md)
