@@ -30,15 +30,15 @@ ht-degree: 1%
 
 以套件形式部署至Adobe Experience Manager (AEM)的應用程式，包含由AEM Sling架構管理的服務（API提供者）和servlet或JSP。
 
-## JEE上的[AEM Forms](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/install-aem-forms/jee-installation/aem-forms-jee-supported-platforms)
+## [JEE上的AEM Forms](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/install-aem-forms/jee-installation/aem-forms-jee-supported-platforms)
 
 AEM Forms的部署選項，可運用Java Enterprise Edition (JEE)伺服器，提供企業級擴充性、交易管理，以及複雜企業工作流程的支援。
 
-## OSGi](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65/content/implementing/deploying/introduction/technical-requirements)上的[AEM Forms
+## [上的AEM Forms OSGi](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65/content/implementing/deploying/introduction/technical-requirements)
 
 OSGi環境上的AEM Forms是標準的AEM Author或部署了AEM Forms套件的AEM Publish 。 您可以在單一伺服器環境、伺服陣列和叢集設定中，在OSGi上執行AEM Forms。 叢集設定僅適用於AEM編寫執行個體。
 
-## AEM Forms中的[Adobe Sign](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/adaptive-forms-advanced-authoring/adobe-sign-integration-adaptive-forms)
+## [AEM Forms中的Adobe Sign](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/adaptive-forms-advanced-authoring/adobe-sign-integration-adaptive-forms)
 
 RESTful服務，提供安全無縫的數位簽名工作流程。 它使用OAuth型驗證與AEM Forms整合，實現自動簽名收集和即時追蹤。
 
@@ -177,7 +177,7 @@ AEM Forms中一組管理業務流程的自動化或手動步驟，例如檔案�
 
 利用AEM Forms檔案服務產生客戶通訊。 信件是使用XDP範本、資料模型和可重複使用的片段組合所建立，以確保在高容量情況下可擴充性。
 
-## AEM Forms中的[中繼資料](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/manage-administer-aem-forms/manage-form-metadata)
+## [AEM Forms中的中繼資料](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/manage-administer-aem-forms/manage-form-metadata)
 
 中繼資料可讓您有效率地分類及擷取資產。 AEM Forms包含每種資產型別的預先定義中繼資料，並可進行自訂。 它還提供工具，讓您順暢地建立、管理和交換中繼資料。
 
@@ -197,7 +197,7 @@ AEM中向一般使用者提供即時內容的環境。 它以最佳化的效能�
 
 AEM Forms中的一項功能，可讓使用者使用滑鼠或觸控式裝置，直接在表單上繪製簽名，以電子方式簽署表單。
 
-## 在AEM Forms中[提交動作](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/adaptive-forms-basic-authoring/configuring-submit-actions)
+## [在AEM Forms中提交動作](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/adaptive-forms-basic-authoring/configuring-submit-actions)
 
 在表單提交時執行的伺服器端或使用者端動作。 例如REST API呼叫、叫用工作流程，或將資料寫入JCR （Java內容存放庫）。
 
