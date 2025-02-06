@@ -7,9 +7,9 @@ feature: Adaptive Forms,Foundation Components,Core Components
 exl-id: 5c75ce70-983e-4431-a13f-2c4c219e8dde
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+source-git-commit: c55c959123f7feaa6571835974f1ce6fe3ead22b
 workflow-type: tm+mt
-source-wordcount: '5538'
+source-wordcount: '5597'
 ht-degree: 1%
 
 ---
@@ -210,6 +210,7 @@ AEM Forms提供[規則編輯器](/help/forms/using/rule-editor.md)，可讓您�
 * 僅包含最適化表單中從使用者擷取資訊的欄位和面板。 請考慮將靜態內容維持在最小值，或使用URL在個別視窗中開啟。
 * 雖然每個表單都是為特定目的而設計，但在大多數表單中都有一些常見的區段。 例如，個人詳細資料、地址、僱用詳細資料等。 為通用表單元素和區段建立[最適化表單片段](/help/forms/using/adaptive-form-fragments.md)，並在各個表單中使用它們。 您也可以將現有表單中的面板儲存為片段。 片段中的任何變更會反映在所有關聯的調適型表單中。 它促進了合作創作，因為多位作者可以同時處理構成表單的不同片段。
 
+   * 請考慮在表單製作期間為不可重複使用的區段建立表單片段。 隨著表單的大小和複雜度增加，將其細分為片段可大幅簡化編寫流程，並讓表單更易於維護。 此方法可讓您專注在較小且更容易管理的表單上，而非一次處理整個表單。
    * 與調適型表單類似，建議使用片段容器對話方塊，在使用者端資料庫中定義所有片段特定的樣式和自訂指令碼。 此外，請嘗試建立不依賴外部物件的自給自足片段。
    * 避免使用跨片段指令碼。 如果片段外有任何您必須參照的物件，請嘗試將該物件設為父表單的一部分。 如果物件仍必須位於另一個片段中，請在指令碼中依其名稱參照。
 
