@@ -9,10 +9,10 @@ role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,AEM Forms on JEE,Platform Matrix
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+source-git-commit: 7b0f1c79a019e01e5814d00d5a3de0861999b7fd
 workflow-type: tm+mt
-source-wordcount: '4010'
-ht-degree: 0%
+source-wordcount: '4098'
+ht-degree: 1%
 
 ---
 
@@ -232,7 +232,7 @@ Adobe Experience Manager Forms需要由Java™開發套件(JDK)散發提供的Ja
    <td><p>從Microsoft®網站下載。</p> </td>
   </tr>
   <tr>
-   <td>oracle</td>
+   <td>Oracle</td>
    <td><p>oracle資料庫19.3.0.0.0 JDBC驅動程式</p> <p>ojdbc8.jar （版本19.3.0.0.0）<br /> </p> </td>
    <td><p>從<a href="https://www.oracle.com/database/technologies/appdev/jdbc-ucp-19c-downloads.html">Oracle網站</a>下載。</p> </td>
   </tr>
@@ -486,7 +486,9 @@ AEM Forms應用程式現在支援Apache Cordova。 以下是支援的平台特�
 >
 >此外：
 >
->- PDF Generator僅支援32位元零售版的Microsoft® Office Professional Plus，以及其他轉換所需的軟體。
+>- PDF Generator僅支援32位元版本的Microsoft® Office Professional Plus及其他轉換所需的軟體。
+>- Microsoft® Office Professional Plus安裝可能會使用零售或MAK/KMS/AD型大量授權。
+>- 如果Microsoft® Office安裝由於任何原因（例如磁碟區授權安裝無法在指定期間內找到KMS主機）而停用或取消授權，轉換可能會失敗，直到安裝重新授權並重新啟用。
 >- PDF Generator不支援Microsoft® Office 365。
 >- 只有Windows和Linux®才支援OpenOffice的PDF Generator轉換。
 >- 只有Windows支援OCRPDF、Optimize PDF和Export PDF功能。
@@ -494,7 +496,12 @@ AEM Forms應用程式現在支援Apache Cordova。 以下是支援的平台特�
 >- PDF Generator服務不支援Microsoft® Windows 10。
 >- PDF Generator無法使用Microsoft® Visio 2019轉換檔案。
 >- PDF Generator無法使用Microsoft® Project 2019轉換檔案。
->- 如果Microsoft® Office安裝由於任何原因（例如磁碟區授權安裝無法在指定期間內找到KMS主機）而停用或取消授權，轉換可能會失敗，直到安裝重新授權並重新啟用。
+
+PDF Generator僅支援32位元版本的Microsoft® Office Professional Plus及其他轉換所需的軟體。
+
+Microsoft® Office Professional Plus安裝可能會使用零售或MAK/KMS/AD型大量授權。
+
+如果Microsoft® Office安裝由於任何原因（例如磁碟區授權安裝無法在指定期間內找到KMS主機）而停用或取消授權，轉換可能會失敗，直到安裝重新授權並重新啟用。
 
 <!-- Removed lines: >- PDF Generator fails to convert files using Microsoft&reg; Visio 2019. You can continue to use Microsoft&reg; Visio 2016 to convert .VSD and .VSDX files.
 >- PDF Generator fails to convert files using Microsoft&reg; Project 2019. You can continue to use Microsoft&reg; Project 2016 to convert .MPP files.-->
@@ -895,7 +902,7 @@ The following platforms are marked as deprecated with AEM Forms 6.5.10.0 release
 
 | 新增的支援 | 移除的支援 | 已棄用的支援 |
 | -------------- | --------------- | ------------------- |
-| oracle應用程式伺服器JBoss™ EAP 7.4的Java® SE 11 （64位元） SDK。 | | [Adobe Acrobat 2017 - Adobe Acrobat 2017的核心支援將於2022年6月6日終止。](https://helpx.adobe.com/tw/support/programs/eol-matrix.html) |
+| 針對應用程式伺服器JBoss™ EAP 7.4OracleJava® SE 11 （64位元） SDK。 | | [Adobe Acrobat 2017 - Adobe Acrobat 2017的核心支援將於2022年6月6日終止。](https://helpx.adobe.com/tw/support/programs/eol-matrix.html) |
 |  | | Red Hat® Enterprise Linux® 7 （核心3.x） （64位元） |
 |  | | Microsoft® Windows Server 2016 （64位元） |
 |  | | Microsoft® Office 2016 |
