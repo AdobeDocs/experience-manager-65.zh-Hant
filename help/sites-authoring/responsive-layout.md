@@ -1,6 +1,6 @@
 ---
 title: 內容頁面的回應式佈局
-description: Adobe Experience Manager可讓您實現頁面的回應式版面。
+description: Adobe Experience Manager可讓您使用版面容器元件，為您的頁面實現回應式版面。
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
@@ -9,18 +9,27 @@ exl-id: 760b8419-5cf8-49c5-8d4f-6691f5256c53
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+source-git-commit: 41da3aef16e650d8dc33e96991d0a997564c9224
 workflow-type: tm+mt
-source-wordcount: '1798'
-ht-degree: 6%
+source-wordcount: '1853'
+ht-degree: 5%
 
 ---
 
+
 # 回應式版面{#responsive-layout}
 
-AEM可讓您使用&#x200B;**配置容器**&#x200B;元件，為您的頁面設定回應式配置。
+Adobe Experience Manager可讓您使用&#x200B;**配置容器**&#x200B;元件，為您的頁面實現回應式配置。
 
-如此可提供段落系統，讓您在回應式格線內放置元件。 此格線可根據裝置/視窗大小和格式重新排列版面。 此元件可搭配&#x200B;[**配置**&#x200B;模式](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode)使用，讓您建立和編輯相依於裝置的回應式配置。
+>[!TIP]
+>
+>本檔案提供內容作者可用的配置容器功能概觀。
+>
+>對於網站管理員和開發人員，有關如何設定網站配置容器的詳細資訊，請參閱檔案[設定配置容器和配置模式。](/help/sites-authoring/responsive-layout.md)
+
+## 概觀 {#overview}
+
+**配置容器**&#x200B;元件提供段落系統，讓您在回應式格線中放置元件。 此格線可根據裝置/視窗大小和格式重新排列版面。 此元件可搭配&#x200B;[**配置**&#x200B;模式](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode)使用，讓您建立和編輯相依於裝置的回應式配置。
 
 配置容器：
 
