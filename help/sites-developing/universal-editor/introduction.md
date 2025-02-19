@@ -4,9 +4,9 @@ description: 瞭解通用編輯器的彈性，以及如何協助您使用AEM 6.5
 feature: Developing
 role: Developer
 exl-id: 7bdf1fcc-02b9-40bc-8605-e6508a84d249
-source-git-commit: 773e398af5247a0de12143334ecfa44955ebbbcd
+source-git-commit: bf9dc1695be7f7a10cb76160b531c9adbbfc8c34
 workflow-type: tm+mt
-source-wordcount: '1178'
+source-wordcount: '1207'
 ht-degree: 1%
 
 ---
@@ -30,8 +30,8 @@ ht-degree: 1%
 Universal Editor是一項與AEM搭配使用的服務，可讓您無頭製作內容。
 
 * Universal Editor託管於`https://experience.adobe.com/#/aem/editor/canvas`，可編輯AEM 6.5轉譯的頁面。
-* Universal Editor會透過AEM編寫執行個體中的Dispatcher讀取AEM頁面。
-* 與Dispatcher在相同主機上執行的Universal Editor服務會將變更寫回AEM編寫執行個體。
+* Universal Editor會透過AEM作者例項中的Dispatcher讀取AEM頁面。
+* 與Dispatcher在相同主機上執行的Universal Editor服務會將變更寫回AEM作者例項。
 
 ![使用通用編輯器的作者流程](assets/author-flow.png)
 
@@ -47,17 +47,17 @@ Universal Editor是一項與AEM搭配使用的服務，可讓您無頭製作內�
 
 ### 更新AEM {#update-aem}
 
-若想搭配AEM 6.5使用通用編輯器，需要AEM的Service Pack 21或22以及Feature Pack。
+若要搭配AEM 6.5使用通用編輯器，需要AEM的Service Pack 21或22以及Feature Pack。
 
 #### 套用最新Service Pack {#latest}
 
-請確定您至少執行AEM 6.5適用的Service Pack 21或22。您可以從[軟體發佈](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html)下載最新的Service Pack。
+請確定您至少正在執行AEM 6.5適用的Service Pack 21或22。您可以從[軟體發佈](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html)下載最新的Service Pack。
 
 #### 安裝通用編輯器Feature Pack {#feature-pack}
 
-安裝Software Distribution上提供的AEM 6.5 **[適用的**&#x200B;通用編輯器功能套件。](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/cq-6.5.21-universal-editor-1.0.0.zip)
+安裝Software Distribution提供的AEM 6.5 **[適用的** Universal Editor Feature Pack。](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/cq-6.5.21-universal-editor-1.0.0.zip)
 
-如果您已執行Service Pack 23或更新版本，就不需要使用Feature Pack。
+如果您已執行Service Pack 23或更新版本，則不需要此Feature Pack。
 
 ### 設定服務 {#configure-services}
 
@@ -67,7 +67,7 @@ Universal Editor是一項與AEM搭配使用的服務，可讓您無頭製作內�
 
 1. 開啟Configuration Manager。
    * `http://<host>:<port>/system/console/configMgr`
-1. 在清單中找到&#x200B;**AdobeGranite權杖驗證處理常式**，然後按一下&#x200B;**變更組態值**。
+1. 在清單中找到&#x200B;**Adobe Granite Token Authentication Handler**，然後按一下&#x200B;**變更組態值**。
 1. 在對話方塊中，將登入權杖cookie **(`token.samesite.cookie.attr`)值的** SameSite屬性變更為`Partitioned`。
 1. 按一下「**儲存**」。
 
@@ -79,11 +79,11 @@ Universal Editor是一項與AEM搭配使用的服務，可讓您無頭製作內�
 1. 刪除&#x200B;**其他回應標頭**&#x200B;屬性(`sling.additional.response.headers`)中的`X-Frame-Options=SAMEORIGIN`值（如果存在）。
 1. 按一下「**儲存**」。
 
-#### 設定AdobeGranite查詢引數驗證處理常式。 {#query-parameter}
+#### 設定Adobe Granite查詢引數驗證處理常式。 {#query-parameter}
 
 1. 開啟Configuration Manager。
    * `http://<host>:<port>/system/console/configMgr`
-1. 在清單中找到&#x200B;**AdobeGranite查詢引數驗證處理常式**，然後按一下&#x200B;**編輯組態值**。
+1. 在清單中找到&#x200B;**Adobe Granite查詢引數驗證處理常式**，然後按一下&#x200B;**編輯組態值**。
 1. 在&#x200B;**路徑**&#x200B;欄位(`path`)中新增`/`以啟用。
    * 空值會停用驗證處理常式。
 1. 按一下「**儲存**」。
@@ -97,11 +97,18 @@ Universal Editor是一項與AEM搭配使用的服務，可讓您無頭製作內�
    * 在&#x200B;**Universal Editor Opening Mapping**&#x200B;欄位中，提供開啟Universal Editor的路徑。
    * 在應由通用編輯器開啟的&#x200B;**Sling：resourceTypes**&#x200B;欄位中，提供由通用編輯器直接開啟的資源清單。
 1. 按一下「**儲存**」。
+1. 檢查您的[外部化程式組態](/help/sites-developing/externalizer.md)，並確定您至少有本機、作者和發佈環境設定，如下列範例所示。
 
-AEM會根據此設定開啟頁面的通用編輯器。
+   ```text
+   "local $[env:AEM_EXTERNALIZER_LOCAL;default=http://localhost:4502]",
+   "author $[env:AEM_EXTERNALIZER_AUTHOR;default=http://localhost:4502]",
+   "publish $[env:AEM_EXTERNALIZER_PUBLISH;default=http://localhost:4503]"
+   ```
 
-1. AEM將會檢查`Universal Editor Opening Mapping`底下的對應，如果內容位於此處定義的任何路徑下，則會為其開啟Universal Editor。
-1. 對於不在`Universal Editor Opening Mapping`中定義的路徑下的內容，AEM會檢查內容的`resourceType`是否與&#x200B;**Sling：resourceTypes中定義的內容相符（應由通用編輯器**&#x200B;開啟），如果內容符合其中一個型別，則在`${author}${path}.html`為其開啟通用編輯器。
+完成這些設定步驟後，AEM將依下列順序開啟頁面的通用編輯器。
+
+1. AEM將檢查`Universal Editor Opening Mapping`底下的對應，如果內容位於該處定義的任何路徑下，則會為其開啟通用編輯器。
+1. 對於不在`Universal Editor Opening Mapping`中定義的路徑下的內容，AEM會檢查內容的`resourceType`是否與&#x200B;**Sling：resourceTypes （應由通用編輯器**&#x200B;開啟）中定義的內容相符，如果內容符合其中一個型別，則在`${author}${path}.html`為其開啟通用編輯器。
 1. 否則，AEM會開啟頁面編輯器。
 
 下列變數可用來定義`Universal Editor Opening Mapping`下的對應。
@@ -125,7 +132,7 @@ AEM會根據此設定開啟頁面的通用編輯器。
 
 ### 設定通用編輯器服務 {#set-up-ue}
 
-更新並設定AEM後，您可以設定本機通用編輯器服務，以供您自己的本機開發和測試使用。
+更新並設定AEM後，您就可以設定本機通用編輯器服務，以供您自己的本機開發和測試使用。
 
 1. 安裝Node.js version >=20。
 1. 從[Software Distribution](https://experienceleague.adobe.com/en/docs/experience-cloud/software-distribution/home)下載並解除封裝最新的Universal Editor服務
@@ -159,7 +166,7 @@ AEM會根據此設定開啟頁面的通用編輯器。
 
 不過，您的應用程式必須檢測為使用通用編輯器。 這涉及包括中繼標籤，以指示編輯器如何以及在何處保留內容。 此檢測的詳細資訊可在AEM as a Cloud Service的[通用編輯器檔案中取得。](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/getting-started#instrument-page)
 
-請注意，在針對AEM as a Cloud Service通用編輯器編寫以下檔案時，將其與AEM 6.5搭配使用時會套用以下變更。
+請注意，在針對AEM as a Cloud Service通用編輯器編寫以下檔案時，將其與AEM 6.5搭配使用時將套用以下變更。
 
 * 中繼標籤中的通訊協定必須是`aem65`而非`aem`。
 
@@ -177,7 +184,7 @@ AEM會根據此設定開啟頁面的通用編輯器。
 
 >[!TIP]
 >
->如需開發人員通用編輯器快速入門的完整指南，請參閱AEM as a Cloud Service檔案中的檔案[AEM開發人員的通用編輯器概述](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/developer-overview)，同時牢記本節所述的AEM 6.5支援所需的必要變更。
+>如需開發人員快速入門通用編輯器的完整指南，請參閱AEM as a Cloud Service檔案中的檔案[AEM開發人員的通用編輯器概述](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/developer-overview)，同時牢記本節所述的AEM 6.5支援所需的必要變更。
 
 ## AEM 6.5與AEM as a Cloud Service之間的差異 {#differences}
 
