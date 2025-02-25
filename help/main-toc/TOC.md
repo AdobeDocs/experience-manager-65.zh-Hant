@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: 使用Adobe Experience Manager 6.5檔案瞭解其運作方式，以及軟體可為您做哪些事。
 breadcrumb-title: 使用手冊
 user-guide-title: AEM 6.5
-source-git-commit: 236dac79430bc974b9cc95299a566283a748476a
+source-git-commit: 0109abf51045224912d130ee29f67d7274cfc4f4
 workflow-type: tm+mt
-source-wordcount: '7474'
+source-wordcount: '7471'
 ht-degree: 19%
 
 ---
@@ -506,7 +506,7 @@ ht-degree: 19%
       + [設定 [!DNL enhanced connector] for [!DNL Workfront]](/help/assets/workfront-connector-configure.md)
 + Forms {#forms}
    + 發行說明 {#release-notes-new-features}
-      + [新增功能](/help/forms/using/whats-new.md)
+      + [最新資訊](/help/forms/using/whats-new.md)
       + [常見問題](/help/forms/using/frequently-asked-questions-faq.md)
    + 快速入門 {#getting-started}
       + [AEM Forms簡介](/help/forms/using/introduction-aem-forms.md)
@@ -884,7 +884,7 @@ ht-degree: 19%
       + [Designer FormCalc參考](https://www.adobe.com/go/learn_aemforms_formCalc_65)
       + [在HTML5 Forms中使用手寫簽名](/help/forms/using/scribble-signature.md)
       + [在 Designer 中變更頁面零內容](/help/forms/using/changing-page-zero-content-designer.md)
-      + [協助工具最佳實務]{#accessibility-best-practices}
+      + 協助工具最佳實務{#accessibility-best-practices}
          + [簡介](/help/forms/using/introduction-accessibility-forms-designer.md)
          + [建立表單的最佳實務](/help/forms/using/best-practices-for-creating-forms-in-designer.md)
          + [測試表單協助工具的技術](/help/forms/using/techniques-for-testing-form-accessibility.md)
@@ -1202,12 +1202,12 @@ ht-degree: 19%
       + [無法在Windows Server上將Word或Excel檔案轉換為PDF](/help/forms/using/disable-uac-for-pdfgconfiguration.md)
       + [無法在Google Chrome、Firefox、Microsoft Edge、Microsoft Internet Explorer或Apple Safari中開啟XFA型PDF forms](/help/forms/using/xfa-based-forms-in-chrome-firefox-ie-internet-explorter-safari-edge.md)
       + [無法還原CRX存放庫](/help/forms/using/restore-crx-repository.md)
-      + [安裝AEM 6.5.15.0 Service Pack後發生服務無法使用錯誤](/help/forms/using/aem-service-pack-installation-solution.md)
+      + [安裝AEM 6.5.15.0 Service Pack後發生服務無法使用的錯誤](/help/forms/using/aem-service-pack-installation-solution.md)
       + [JBoss Linux環境上的AEM Forms JEE 6.5.15.0 Service Pack安裝問題](/help/forms/using/linux-jboss-installation-issue-on-sp15.md)
       + [即使AEM Forms伺服器未完全啟動且執行中，仍會處理檔案](/help/forms/using/processing-documents-even-if-aem-forms-server-not-fully-up.md)
       + [無法使用輸出服務、Forms服務或記錄檔案(DoR)服務](/help/forms/using/connection-issues-with-output-forms-and-document-of-record-dor-services.md)
       + [緩解Experience Manager Forms的Struts 2 RCE漏洞](/help/forms/using/mitigating-struts-2-rce-vulnerabilities-for-experience-manager-manager-form.md)
-      + [升級至MySQL適用的6.5.12.0期間無法備份資料庫](/help/forms/using/failed-to-back-up-the-database-on-upgrading-to-aem-forms-service-pack-6-5-12-0.md)
+      + [在升級為MySQL的6.5.12.0期間無法備份資料庫](/help/forms/using/failed-to-back-up-the-database-on-upgrading-to-aem-forms-service-pack-6-5-12-0.md)
       + [PDF產生無法在WorkBench上列印大量PDF](/help/forms/using/pdf-generation-service-fails-to-print-a-large-number-of-pdfs-on-workbench.md)
       + [如何正確重新啟動AEM SDK](/help/forms/using/restart-aem-sdk.md)
       + [PaperCapture服務無法對PDF執行OCR](/help/forms/using/papercapture-service-resolution.md)
@@ -1373,7 +1373,7 @@ ht-degree: 19%
          + 國際化{#internationalization}
             + [國際化元件](/help/sites-developing/i18n.md)
             + [國際化使用者介面字串](/help/sites-developing/i18n-dev.md)
-            + [使用Translator管理字典](/help/sites-developing/i18n-translator.md)
+            + [使用翻譯工具來管理字典](/help/sites-developing/i18n-translator.md)
             + [擷取字串進行翻譯](/help/sites-developing/i18n-extract.md)
          + 傳統UI元件{#classic-ui-components}
             + [開發AEM元件（傳統UI）](/help/sites-developing/developing-components-classic.md)
