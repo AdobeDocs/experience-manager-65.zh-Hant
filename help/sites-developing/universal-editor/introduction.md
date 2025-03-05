@@ -4,9 +4,9 @@ description: 瞭解通用編輯器的彈性，以及如何協助您使用AEM 6.5
 feature: Developing
 role: Developer
 exl-id: 7bdf1fcc-02b9-40bc-8605-e6508a84d249
-source-git-commit: bf9dc1695be7f7a10cb76160b531c9adbbfc8c34
+source-git-commit: d3dd827e93549c558284be1c1991b4e003c9e0e8
 workflow-type: tm+mt
-source-wordcount: '1207'
+source-wordcount: '1252'
 ht-degree: 1%
 
 ---
@@ -34,6 +34,16 @@ Universal Editor是一項與AEM搭配使用的服務，可讓您無頭製作內�
 * 與Dispatcher在相同主機上執行的Universal Editor服務會將變更寫回AEM作者例項。
 
 ![使用通用編輯器的作者流程](assets/author-flow.png)
+
+## 要求 {#requirements}
+
+下列專案支援通用編輯器：
+
+* AEM 6.5 （service pack 21或22 plus a feature pack）
+   * 同時支援內部部署和AMS託管。
+* [AEM as a Cloud Service](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/introduction) （版本`2023.8.13099`或更新版本）
+
+本檔案著重於通用編輯器的AEM 6.5支援。
 
 ## 設定 {#setup}
 
