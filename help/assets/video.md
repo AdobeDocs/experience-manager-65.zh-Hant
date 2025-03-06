@@ -11,9 +11,9 @@ feature: Asset Management
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 13c495b8b7e9824c5de8469df96bec00c74c8dbc
+source-git-commit: 54b508809733ed86798558aee50f8c7b5de00af9
 workflow-type: tm+mt
-source-wordcount: '10517'
+source-wordcount: '10488'
 ht-degree: 2%
 
 ---
@@ -553,8 +553,6 @@ Dynamic Media建議使用MP4 H.264視訊編碼預設集。 由於MP4檔案使用
 |  | 描述性音訊 |
 
 Dynamic Media ](/help/assets/assets-formats.md)和所有Dynamic Media視訊檢視器支援的所有[視訊格式（Dynamic Media *Video_360*&#x200B;檢視器除外）都支援搭配多個註解和音軌使用。
-
-透過必須由Adobe客戶支援啟用（開啟）的功能切換，您的Dynamic Media帳戶可使用多字幕和音訊追蹤功能。
 
 ### 在視訊中新增多個標題和音軌 {#add-msma}
 
@@ -1389,7 +1387,7 @@ public class DMSampleApiHttpContext extends ServletContextHelper {
 | `manifestType` | 選擇性。引數可以是DASH或HLS。 如果未傳遞，則預設為DASH。 |
 | `onlyIfPublished` | 選擇性。如果通過，則只有在已發佈視訊時才傳回`manifestUrl`。 |
 
-在此範例中，我們假設進行下列設定：
+在此範例中，假設進行下列設定：
 
 * 公司是`samplecompany`。
 * 編寫執行個體是`http://sample-aem-author.com`。

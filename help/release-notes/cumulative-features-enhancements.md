@@ -7,9 +7,9 @@ feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: 01fe5b53-2244-445f-a4d0-bd58ea38b611
 solution: Experience Manager
-source-git-commit: a49af471c5fc2f799687173bff6cdcb21505740a
+source-git-commit: 54b508809733ed86798558aee50f8c7b5de00af9
 workflow-type: tm+mt
-source-wordcount: '2335'
+source-wordcount: '2308'
 ht-degree: 25%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 25%
 
 ## AEM 6.5， Service Pack 18—2023年12月7日
 
-* 啟用Sites頁面編輯器/影像元件使用者從遠端AssetsCloud Service參照資產。 (SITES-13448， SITES-13433)
+* 啟用Sites頁面編輯器/影像元件使用者，以參照遠端Assets Cloud Service的資產。 (SITES-13448， SITES-13433)
 * AEM現在支援伺服器端排序，以便在「清單」檢視中更快速地導覽專案。 專案節點會在出現在介面之前，根據使用者選取的欄排序。
 
 ### [!DNL Forms]
@@ -46,11 +46,11 @@ ht-degree: 25%
 
 ## AEM 6.5， Service Pack 18—2023年8月24日
 
-* Assets、Dynamic Media - [Dynamic Media中視訊的多重字幕與音軌支援](/help/assets/video.md#about-msma) — 您現在可以輕鬆地將多重字幕與多重音軌新增到主要視訊。 此功能表示全球對象都可以存取您的影片。您可以以多種語言向全球對象自訂單一已發佈的主要影片，並遵守不同地理區域的輔助功能指南。作者還可以從使用者介面中的單個標籤管理字幕和音訊。
+* Assets、Dynamic Media - [Dynamic Media中視訊的多重字幕與音軌支援](/help/assets/video.md#about-msma) — 您現在可以輕鬆地將多重字幕與多重音軌新增到主要視訊。 此功能表示全球觀眾都可以存取您的影片。您可以以多種語言向全球客群自訂單一已發佈的主要影片，並遵守不同地理區域的輔助功能指南。作者還可以從使用者介面中的單個標籤管理字幕和音訊。
 * Assets — 您現在可以從搜尋結果導覽至包含資產的檔案夾位置，讓您執行各種資產管理任務。
 * 內容片段中的Sites Polaris選取器已改善效能。
-* 啟用Sites頁面編輯器/影像元件使用者從遠端AssetsCloud Service參照資產。
-* 若要在清單檢視中快速找到系統中可能有多個專案的專案，Adobe現在支援伺服器端排序。 專案節點會在使用者介面中呈現之前，根據使用者選取的欄在後端排序。
+* 啟用Sites頁面編輯器/影像元件使用者，以參照遠端Assets Cloud Service的資產。
+* 為了在清單檢視中快速尋找您可能有許多專案的專案，Adobe現在支援伺服器端排序。 專案節點會在使用者介面中呈現之前，根據使用者選取的欄在後端排序。
 * AEM 6.5.18.0支援MongoDB 5.0至6.0。
 
 ### [!DNL Forms]
@@ -61,7 +61,7 @@ ht-degree: 25%
 
    * **Adobe Sign的政府ID型驗證強化安全性** - Adobe Acrobat Sign的政府ID型驗證提供額外的驗證層。 它可讓使用者使用政府頒發的ID （駕照、國民身分證、護照）來驗證身分。 此增強功能利用受信任的身分識別文件為簽名過程額外增加一層可信度，使其成為需要增強安全性、合規性和使用者驗證等情境的理想選擇。
 
-   * **透過Adobe Sign檔案的稽核軌跡增強透明度** — 使用稽核軌跡功能，以取得有關Adobe Sign檔案生命週期的詳細深入分析。 透過稽核軌跡，您現在可以保留與文件相關的所有動作和互動的全面記錄。其中包括查看、編輯或簽署文件等人員的詳細資訊，以及每個事件的時間戳記。此加強功能對於維持合規性、解決爭議和確保數位協議的完整性至關重要。
+   * **增強Adobe Sign檔案稽核軌跡的透明度** — 使用「稽核軌跡」功能，深入瞭解Adobe Sign檔案的生命週期。 透過稽核軌跡，您現在可以保留與文件相關的所有動作和互動的全面記錄。其中包括查看、編輯或簽署文件等人員的詳細資訊，以及每個事件的時間戳記。此加強功能對於維持合規性、解決爭議和確保數位協議的完整性至關重要。
 
 
    * **將協定收件者的角色擴充至簽署者** - Adobe Acrobat Sign可讓您將協定收件者的角色擴充至簽署者之外，以便更符合其工作流程需求。 啟用後，協定中的每個收件者皆可個別設定其角色，預設為簽署者。
@@ -70,12 +70,12 @@ ht-degree: 25%
 * **[JEE上的AEM Forms完整安裝程式](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/jee-installation/aem-forms-jee-supported-platforms.html)** — 此Service Pack為JEE上的AEM Forms提供完整安裝程式，可支援多種新軟體組合，包括：
    * Microsoft® Windows Server 2022
    * Microsoft® Active Directory 2022
-   * 在Windows Server 2022上OracleWebLogic 14C
+   * Windows Server 2022上的Oracle WebLogic 14C
    * Red Hat® JBoss® 7.4.10
    * MongoDB 6.0 <!-- it was previously MongoDB 4.4 -->
    * MySQL JDBC聯結器8
 
-如果您在JEE環境中安裝或計畫使用適用於您的AEM 6.5 Forms的最新軟體，Adobe建議在JEE完整安裝程式上使用AEM 6.5.18.0 Forms 。 若要探索新增和淘汰的軟體的完整清單，請參閱JEE上的AEM Forms或OSGi上的AEM Forms檔案。
+如果您在JEE環境中安裝或計畫使用適用於AEM 6.5 Forms的最新軟體，Adobe建議在JEE完整安裝程式上使用AEM 6.5.18.0 Forms 。 若要探索新增和淘汰的軟體的完整清單，請參閱JEE上的AEM Forms或OSGi上的AEM Forms檔案。
 
 ## AEM 6.5， Service Pack 17—2023年5月25日
 
@@ -86,8 +86,8 @@ ht-degree: 25%
 
   若要執行這些作業，您並不需要瀏覽至資產位置及檢視其屬性。
 * **Dynamic Media _快照_**— 嘗試測試影像或Dynamic Media URL，以檢視不同影像修飾元的輸出，以及針對檔案大小（使用WebP和AVIF傳遞）、網路頻寬和裝置畫素比最佳化的智慧型影像處理。 請參閱 [Dynamic Media 快照](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-snapshot.html)。
-* 使用Dynamic Media的&#x200B;**DASH資料流** — 針對Dynamic Media視訊傳送中的自我調整資料流（已啟用CMAF）啟動新的通訊協定（DASH — 透過HTTP的動態自我調整資料流）支援。 現在所有地區都可使用，[透過支援票證](/help/assets/video.md#enable-dash-on-your-account-enable-dash)啟用。
-* **整合Experience Manager Sites和內容片段與Assets新一代Dynamic Media** - Experience Manager Assets as a Cloud Service新一代Dynamic Media的使用者現在可以使用這些雲端託管的資產，透過Experience Manager Sites 6.5的內部部署或Managed Services執行個體進行製作和傳送。
+* **使用Dynamic Media的DASH串流** — 針對Dynamic Media視訊傳送中的自我調整串流（已啟用CMAF）啟動新通訊協定（DASH — 透過HTTP的動態自我調整串流）。 現在可供所有區域使用。
+* **整合Experience Manager Sites和內容片段與Assets新一代Dynamic Media** - Experience Manager Assets as a Cloud Service新一代Dynamic Media的使用者現在可以使用這些雲端託管的資產，透過Experience Manager Sites 6.5的內部部署或Managed Services執行個體進行製作和傳遞。
 
 ### [!DNL Forms]
 
@@ -102,13 +102,11 @@ ht-degree: 25%
 
 ## AEM 6.5， Service Pack 16—2023年2月23日
 
-新通訊協定DASH （透過HTTP的動態自我調整資料流）支援在Dynamic Media視訊傳送中啟動自我調整位元速率資料流（已啟用CMAF [通用媒體應用程式格式]）。
+新通訊協定DASH (Dynamic Adaptive Streaming over HTTP)已啟動，以在Dynamic Media視訊傳遞中進行自我調整位元速率串流（已啟用CMAF [通用媒體應用程式格式]）。
 
-* 最適化串流(DASH/HLS)可確保為一般使用者提供更佳的視訊觀看體驗。
+* 最適化串流(DASH/HLS)可確保獲得更出色的視訊使用者觀看體驗。
 * DASH是適用於最適化視訊串流的國際標準通訊協定，在業界被廣泛採用。
-* 亞太地區和北美現已推出（透過支援票證啟用）；即將於歐洲 — 中東 — 非洲推出。
-
-請參閱[在您的帳戶上啟用DASH](/help/assets/video.md#enable-dash)。
+* 現已於亞太及北美推出；即將於歐洲 — 中東 — 非洲推出。
 
 ### [!DNL Forms]
 

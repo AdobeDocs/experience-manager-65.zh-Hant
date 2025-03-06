@@ -11,9 +11,9 @@ role: User, Admin
 mini-toc-levels: 3
 exl-id: b290fac2-7259-45d7-b733-70419d632b07
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 13c495b8b7e9824c5de8469df96bec00c74c8dbc
+source-git-commit: 54b508809733ed86798558aee50f8c7b5de00af9
 workflow-type: tm+mt
-source-wordcount: '3750'
+source-wordcount: '3730'
 ht-degree: 8%
 
 ---
@@ -301,7 +301,7 @@ Dynamic Media已隨附預先定義的自我調整視訊編碼設定檔（MP4 H.2
    <td><code>audioBitrateCustom</code></td>
    <td>若音訊轉碼器支援，請將值設為<code>true</code>以強制音訊資料流使用常數位元速率。</td>
    <td><code>String</code></td>
-   <td><p><code>true</code>/<code>false</code></p> <p>預設值為<code>false</code>。</p> <p>DASH或HLS的建議值為<code>false</code>。 (若要在視訊中使用DASH，必須先在您的帳戶上啟用它。 請參閱<a href="/help/assets/video.md#enable-dash">在您的帳戶上啟用DASH</a>。)</p> <p> </p> </td>
+   <td><p><code>true</code>/<code>false</code></p> <p>預設值為<code>false</code>。</p> <p>DASH或HLS的建議值為<code>false</code>。</p> <p> </p> </td>
   </tr>
  </tbody>
 </table>
