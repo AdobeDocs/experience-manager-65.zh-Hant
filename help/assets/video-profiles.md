@@ -11,9 +11,9 @@ role: User, Admin
 mini-toc-levels: 3
 exl-id: b290fac2-7259-45d7-b733-70419d632b07
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 13c495b8b7e9824c5de8469df96bec00c74c8dbc
 workflow-type: tm+mt
-source-wordcount: '3770'
+source-wordcount: '3750'
 ht-degree: 8%
 
 ---
@@ -38,7 +38,7 @@ Dynamic Media已隨附預先定義的自我調整視訊編碼設定檔。 此現
 
 >[!NOTE]
 >
->若要產生視訊的中繼資料和相關的視訊影像縮圖，視訊本身必須經過Dynamic Media中的編碼程式。 在Adobe Experience Manager中，如果您已啟用Dynamic Media並設定視訊雲端服務，**[!UICONTROL Dynamic Media編碼視訊]**&#x200B;工作流程會對視訊進行編碼。 此工作流程會擷取工作流程處理歷程記錄和失敗資訊。請參閱[監視視訊編碼和YouTube發佈進度](/help/assets/video.md#monitoring-video-encoding-and-youtube-publishing-progress)。 如果您已啟用Dynamic Media並設定視訊雲端服務，當您上傳視訊時，**[!UICONTROL Dynamic Media編碼視訊]**&#x200B;工作流程會自動生效。 (如果您未使用Dynamic Media，**[!UICONTROL DAM更新資產]**&#x200B;工作流程將會生效。)
+>若要產生視訊的中繼資料和相關的視訊影像縮圖，視訊本身必須經過Dynamic Media中的編碼程式。 在Adobe Experience Manager中，如果您已啟用動態媒體並設定視訊雲端服務，**[!UICONTROL 動態媒體編碼視訊]**&#x200B;工作流程會對視訊進行編碼。 此工作流程會擷取工作流程處理歷程記錄和失敗資訊。請參閱[監視視訊編碼和YouTube發佈進度](/help/assets/video.md#monitoring-video-encoding-and-youtube-publishing-progress)。 如果您已啟用Dynamic Media並設定視訊雲端服務，當您上傳視訊時，**[!UICONTROL Dynamic Media編碼視訊]**&#x200B;工作流程會自動生效。 （如果您未使用Dynamic Media，**[!UICONTROL DAM更新資產]**&#x200B;工作流程將會生效。）
 >
 >中繼資料在搜尋資產時相當實用。 縮圖是在編碼期間產生的靜態視訊影像。 Experience Manager系統需要這些視訊，並用於使用者介面，協助您在「卡片」檢視、「搜尋結果」檢視和「資產清單」檢視中以視覺化方式識別影片。 當您選取已編碼視訊的「轉譯」圖示（上色調色盤）時，可以看到產生的縮圖。
 
@@ -131,7 +131,7 @@ Adobe Sensei限製為9000個畫面。 也就是說，30 FPS時需要5分鐘。 �
 
 ## 建立視訊設定檔以進行最適化位元速率串流 {#creating-a-video-encoding-profile-for-adaptive-streaming}
 
-Dynamic Media已隨附預先定義的自我調整視訊編碼設定檔 — 一組適用於MP4 H.264的視訊上傳設定 — 此設定檔已最佳化地提供最佳檢視體驗。 上傳視訊時，您可以使用此設定檔。
+Dynamic Media已隨附預先定義的自我調整視訊編碼設定檔（MP4 H.264的一組視訊上傳設定），此設定檔已最佳化為提供最佳檢視體驗。 上傳視訊時，您可以使用此設定檔。
 
 不過，如果此預先定義的設定檔不符合您的需求，您可以選擇建立您自己的最適化視訊編碼設定檔。 當您使用設定&#x200B;**[!UICONTROL 最適化串流編碼]** — 作為最佳實務 — 您新增到設定檔的所有編碼預設集都會經過驗證，以確保所有視訊具有相同的外觀比例。 此外，經過編碼的視訊會被視為串流適用的多位元速率集。
 
@@ -201,7 +201,7 @@ Dynamic Media已隨附預先定義的自我調整視訊編碼設定檔 — 一�
 視您執行的模式而定，支援的視訊格式轉碼器如下：
 
 * Dynamic Media-Scene7模式： H.264 (.mp4)
-* Dynamic Media-Hybrid模式： H.264 (.mp4)、WebM
+* Dynamic Media-Hybrid模式：H.264 (.mp4)、WebM
 
 另請參閱[建立最適化位元速率資料流的視訊編碼設定檔](#creating-a-video-encoding-profile-for-adaptive-streaming)。
 
@@ -252,12 +252,12 @@ Dynamic Media已隨附預先定義的自我調整視訊編碼設定檔 — 一�
 
 ## 使用自訂新增的視訊編碼引數 {#using-custom-added-video-encoding-parameters}
 
-您可以編輯現有的視訊編碼設定檔，以利用在Experience Manager中建立或編輯視訊設定檔時，使用者介面中找不到的進階視訊編碼引數。 新增一或多個進階引數（例如minBitrate和maxBitrate）至您現有的設定檔。
+您可以編輯現有的視訊編碼設定檔，以運用在Experience Manager中建立或編輯視訊設定檔時，使用者介面中找不到的進階視訊編碼引數。 新增一或多個進階引數（例如minBitrate和maxBitrate）至您現有的設定檔。
 
 **若要使用自訂新增的視訊編碼引數：**
 
 1. 選取Experience Manager標誌，然後導覽至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 一般]** > **[!UICONTROL CRXDE Lite]**。
-1. 從CRXDE Lite頁面，在左側的Explorer面板中，瀏覽至下列專案：
+1. 從CRXDE Lite頁面，在左側的Explorer面板中導覽至下列專案：
 
    `/conf/global/settings/dam/dm/presets/video/*name_of_video_encoding_profile_to_edit`
 
@@ -283,7 +283,7 @@ Dynamic Media已隨附預先定義的自我調整視訊編碼設定檔 — 一�
    <td><code>keyframe</code></td>
    <td>關鍵影格之間的目標影格數。 計算此值，以便每2-10秒產生一個關鍵影格。 例如，以每秒30個影格為例，關鍵影格間隔應該是60-300。<br /> <br />較低的關鍵影格間隔可改善最適化視訊編碼的串流搜尋和串流切換行為，也可能會改善有大量動作的視訊品質。 不過，由於關鍵影格會增加檔案的大小，因此較低的關鍵影格間隔通常會導致指定位元速率下的整體視訊品質較低。</td>
    <td><code>String</code></td>
-   <td><p>正數。</p> <p>預設值為300。</p> <p>DASH或HLS的建議值為60-90。 (若要在視訊中使用DASH，必須先在您的帳戶上啟用它。 請參閱<a href="/help/assets/video.md#enable-dash">在您的帳戶上啟用DASH</a>。)</p> </td>
+   <td><p>正數。</p> <p>預設值為300。</p> <p>DASH或HLS的建議值為60-90。</p> </td>
   </tr>
   <tr>
    <td><code>minBitrate</code></td>
@@ -314,13 +314,13 @@ Dynamic Media已隨附預先定義的自我調整視訊編碼設定檔 — 一�
    * 重複步驟3和4，將另一個引數新增至視訊編碼設定檔。
    * 在頁面的左上角附近，選取&#x200B;**[!UICONTROL 全部儲存]**。
 
-1. 在CRXDE Lite頁面的左上角，選取「**[!UICONTROL 首頁]**」圖示以返回Experience Manager。
+1. 在CRXDE Lite頁面的左上角，選取&#x200B;**[!UICONTROL 首頁]**&#x200B;圖示以返回Experience Manager。
 
 ### 編輯視訊設定檔 {#editing-a-video-encoding-profile}
 
 您可以編輯任何您建立的視訊設定檔，以新增、編輯或刪除該設定檔中的視訊預設集。
 
-依預設，您無法編輯隨Dynamic Media提供的預先定義、現成可用的&#x200B;**[!UICONTROL 最適化視訊編碼]**&#x200B;設定檔。 相反地，您可以輕鬆複製設定檔，並使用新名稱儲存。 然後，您可以在複製的設定檔中編輯所需的預設集。
+依預設，您無法編輯隨附於Dynamic Media的預定義、現成可用的&#x200B;**[!UICONTROL 最適化視訊編碼]**&#x200B;設定檔。 相反地，您可以輕鬆複製設定檔，並使用新名稱儲存。 然後，您可以在複製的設定檔中編輯所需的預設集。
 
 另請參閱[視訊編碼的最佳實務](/help/assets/video.md#best-practices-for-encoding-videos)。
 
@@ -346,9 +346,9 @@ Dynamic Media已隨附預先定義的自我調整視訊編碼設定檔 — 一�
 1. 在「視訊設定檔」頁面上，檢查一個視訊設定檔名稱。
 1. 在工具列上，選取&#x200B;**[!UICONTROL 複製]**。
 1. 在「視訊編碼設定檔」頁面上，輸入設定檔的新名稱。
-1. 最佳實務是，請確定已選取「 **[!UICONTROL 最適化串流編碼]** 」核取方塊。選取資訊圖示以取得最適化位元速率串流的說明。  (如果您要複製漸進式視訊設定檔，請勿選取核取方塊。) 
+1. 最佳實務是，請確定已選取「 **[!UICONTROL 最適化串流編碼]** 」核取方塊。選取資訊圖示以取得最適化位元速率串流的說明。  (如果您要複製漸進式視訊輪廓，請勿選取核取方塊。) 
 
-   在Dynamic Media — 混合模式中，如果WebM視訊預設集是視訊設定檔的一部分，則無法進行&#x200B;**[!UICONTROL 自我調整資料流的編碼]**，因為所有預設集都必須是MP4。
+   在Dynamic Media — 混合模式中，如果WebM視訊預設集是視訊設定檔的一部分，則無法針對最適化串流進行&#x200B;**[!UICONTROL 編碼，因為所有預設集都必須是MP4。]**
 1. 在「視訊編碼預設集」標題下，新增、編輯或刪除組成設定檔的視訊編碼預設集。
 
    選取「基本」和「進階」標籤上每個選項旁的資訊圖示，以取得建議的設定和說明。
@@ -378,9 +378,9 @@ Dynamic Media已隨附預先定義的自我調整視訊編碼設定檔 — 一�
 
 ### 將視訊設定檔套用至特定資料夾 {#applying-video-profiles-to-specific-folders}
 
-您可以從「工具」菜單或在資料夾中從「屬性」將視頻配置檔案應 **[!UICONTROL 用到資料夾]******。本節說明如何以兩種方式將視訊描述檔套用至資料夾。
+您可以從「工具」菜單或在資料夾中從「屬性」將視訊設定檔應 **[!UICONTROL 用到資料夾]******。本節說明如何以兩種方式將視訊設定檔套用至資料夾。
 
-已為其分配配置檔案的資料夾將通過資料夾名稱正下方的配置檔案名稱顯示來指示。
+已為其分配輪廓的資料夾將通過資料夾名稱正下方的輪廓名稱顯示來指示。
 
 另請參閱[在您編輯資料夾中資產的處理設定檔後，重新處理該資料夾中的資產](processing-profiles.md#reprocessing-assets)。
 
@@ -395,7 +395,7 @@ Dynamic Media已隨附預先定義的自我調整視訊編碼設定檔 — 一�
 
 1. 選取Experience Manager標誌並導覽至&#x200B;**[!UICONTROL Assets]**，然後導覽至您要套用視訊設定檔的資料夾。
 1. 在資料夾中，選取核取記號以選取資料夾，然後選取&#x200B;**[!UICONTROL 屬性]**。
-1. 選取「**[!UICONTROL 視訊設定檔]**」標籤，然後從下拉式選單中選取設定檔，然後選取「**[!UICONTROL 儲存並關閉]**」。 已為其分配配置檔案的資料夾將通過資料夾名稱正下方的配置檔案名稱顯示來指示。
+1. 選取「**[!UICONTROL 視訊設定檔]**」標籤，然後從下拉式選單中選取設定檔，然後選取「**[!UICONTROL 儲存並關閉]**」。 已為其分配輪廓的資料夾將通過資料夾名稱正下方的輪廓名稱顯示來指示。
 
    ![chlimage_1-518](assets/chlimage_1-518.png)
 您可以[監視視訊設定檔處理工作的進度](#monitoring-the-progress-of-an-encoding-job)。
@@ -408,7 +408,7 @@ Dynamic Media已隨附預先定義的自我調整視訊編碼設定檔 — 一�
 
 **若要全域套用視訊設定檔：**
 
-* 瀏覽至CRXDE Lite到下列節點： `/content/dam/jcr:content`。 新增屬性`videoProfile:/libs/settings/dam/video/dynamicmedia/<name of video encoding profile>`並選取&#x200B;**[!UICONTROL 全部儲存]**。
+* 導覽至CRXDE Lite至下列節點： `/content/dam/jcr:content`。 新增屬性`videoProfile:/libs/settings/dam/video/dynamicmedia/<name of video encoding profile>`並選取&#x200B;**[!UICONTROL 全部儲存]**。
 
   ![chlimage_1-519](assets/chlimage_1-519.png)
 * 您可以[監視視訊設定檔處理工作](#monitoring-the-progress-of-an-encoding-job)的進度。
@@ -417,13 +417,13 @@ Dynamic Media已隨附預先定義的自我調整視訊編碼設定檔 — 一�
 
 系統會顯示處理指示器（或進度列），讓您以視覺化方式監視視訊設定檔處理工作的進度。
 
-您也可以檢視`error.log`檔案，以監視編碼工作的進度、檢視編碼是否已完成或檢視任何工作錯誤。 在安裝您的Experience Manager執行個體的`logs`資料夾中找到`error.log`。
+您也可以檢視`error.log`檔案，以監視編碼工作的進度、檢視編碼是否已完成或檢視任何工作錯誤。 在安裝Experience Manager執行個體的`logs`資料夾中找到`error.log`。
 
 ## 從資料夾中移除視訊設定檔 {#removing-a-video-profile-from-folders}
 
 當您從資料夾中移除視訊描述檔時，任何子資料夾都會自動繼承其父資料夾中該描述檔的移除作業。 不過，在資料夾內發生的任何檔案處理作業都會維持不變。
 
-您可以從「工具」功能表內的資料夾或在資料夾內的「資料夾設定」中移除視訊描述檔 ********。本節說明如何以兩種方式從資料夾移除視訊描述檔。
+您可以從「工具」功能表內的資料夾或在資料夾內的「資料夾設定」中移除視訊設定檔 ********。本節說明如何以兩種方式從資料夾移除視訊設定檔。
 
 ### 透過「設定檔」使用者介面從資料夾中移除視訊設定檔 {#removing-video-profiles-from-folders-by-way-of-the-profiles-user-interface}
 
@@ -435,6 +435,6 @@ Dynamic Media已隨附預先定義的自我調整視訊編碼設定檔 — 一�
 
 ### 透過「屬性」將視訊設定檔從資料夾中移除 {#removing-video-profiles-from-folders-by-way-of-properties}
 
-1. 選取Experience Manager標誌並導覽至&#x200B;**[!UICONTROL Assets]**，然後導覽至您要移除視訊設定檔的資料夾。
+1. 選取Experience Manager標誌並導覽至&#x200B;**[!UICONTROL Assets]**，然後導覽至您要移除其視訊設定檔的資料夾。
 1. 在資料夾中，選取核取記號，然後選取&#x200B;**[!UICONTROL 屬性]**。
-1. 選取「**[!UICONTROL 視訊設定檔]**」標籤，然後從下拉式功能表中選取「**[!UICONTROL 無]**」，然後選取「**[!UICONTROL 儲存並關閉]**」。 已為其分配配置檔案的資料夾將通過資料夾名稱正下方的配置檔案名稱顯示來指示。
+1. 選取「**[!UICONTROL 視訊設定檔]**」標籤，然後從下拉式功能表中選取「**[!UICONTROL 無]**」，然後選取「**[!UICONTROL 儲存並關閉]**」。 已為其分配輪廓的資料夾將通過資料夾名稱正下方的輪廓名稱顯示來指示。

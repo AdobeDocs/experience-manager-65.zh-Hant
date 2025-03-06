@@ -11,9 +11,9 @@ feature: Viewer Presets
 role: User, Admin
 exl-id: 0899e497-88e9-4fc3-a6be-b3a149fb5b32
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 13c495b8b7e9824c5de8469df96bec00c74c8dbc
 workflow-type: tm+mt
-source-wordcount: '4422'
+source-wordcount: '4397'
 ht-degree: 8%
 
 ---
@@ -22,12 +22,12 @@ ht-degree: 8%
 
 檢視器預設集是一組設定，可決定使用者如何在電腦熒幕和行動裝置上檢視多媒體資產。 如果您是管理員，可以建立檢視器預設集。 設定可供一系列檢視器組態選項使用。 例如，您可以變更檢視器的顯示大小或縮放行為。
 
-如需建立和自訂HTML5檢視器預設集的指示，請參閱AdobeDynamic Media *HTML5檢視器SDK API檔案*。 SDK可在內嵌於SDK本身的IS發佈伺服器上使用。 每個程式庫版本都有各自的SDK檔案。
+如需建立和自訂HTML5檢視器預設集的指示，請參閱Adobe Dynamic Media *HTML5檢視器SDK API檔案*。 SDK可在內嵌於SDK本身的IS發佈伺服器上使用。 每個程式庫版本都有自己的SDK檔案。
 
 路徑： `<scene7_domain>/s7sdk/<library_version>/docs/jsdocs/index.html`。\
 例如，3.10 SDK： [https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html](https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html)
 
-另請參閱[AdobeDynamic Media檢視器參考指南](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources.html)。
+另請參閱[Adobe Dynamic Media檢視器參考指南](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources.html)。
 
 本節說明如何建立、編輯及管理檢視器預設集。 您可以隨時將檢視器預設集套用至資產，進行預覽。 請參閱[套用檢視器預設集](#applying-a-viewer-preset-to-an-asset)。
 
@@ -53,13 +53,13 @@ ht-degree: 8%
 
 ### 檢視器支援回應式設計網頁 {#viewer-support-for-responsive-designed-web-pages}
 
-不同的網頁有不同的需求。 例如，有時您會想要網頁提供連結，在個別瀏覽器視窗中開啟HTML5檢視器。 在其他情況下，您可能需要直接將HTML5檢視器內嵌在託管頁面上。 在後一種情況下，網頁可能會有靜態配置。 或是「回應式」的網頁，在不同裝置或不同瀏覽器視窗大小上的顯示會有所不同。 為因應這些需求，Dynamic Media隨附的所有預先定義、現成可用的HTML5檢視器都支援靜態網頁和回應式設計網頁。
+不同的網頁有不同的需求。 例如，有時候您會想要讓某個網頁提供連結，在個別瀏覽器視窗中開啟HTML5檢視器。 在其他情況下，您可能需要直接將HTML5 Viewer內嵌在託管頁面上。 在後一種情況下，網頁可能會有靜態配置。 或是「回應式」的網頁，在不同裝置或不同瀏覽器視窗大小上的顯示會有所不同。 為因應這些需求，Dynamic Media隨附的所有預先定義、現成可用的HTML5檢視器都支援靜態網頁和回應式設計網頁。
 
 請參閱[回應式影像庫](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/responsive-static-image-library/c-about-responsive-static-image-library.html)，以取得有關如何將回應式檢視器內嵌至網頁的詳細資訊。
 
 >[!NOTE]
 >
->Publish提供所有立即可用的檢視器，您就能在首次使用之前使用這些檢視器。
+>首次使用現成可用的檢視器之前，請先發佈這些檢視器。
 >請參閱[發佈檢視器預設集]。(#publishing-viewer-presets)
 
 ### 檢視器預設集系統相容性 {#viewer-preset-system-compatibility}
@@ -391,7 +391,7 @@ Dynamic Media隨附的所有現成可用的檢視器預設集都與下列系統�
 
 **增加顯示的檢視器預設集數目：**
 
-1. 瀏覽至CRXDE Lite([https://localhost:4502/crx/de](https://localhost:4502/crx/de))。
+1. 導覽至CRXDE Lite ([https://localhost:4502/crx/de](https://localhost:4502/crx/de))。
 1. 導覽至檢視器預設集清單節點，該節點位於下列位置：
 
    `/libs/dam/gui/coral/content/commons/sidepanels/viewerpresets/viewerpresetslist`
@@ -410,7 +410,7 @@ Dynamic Media隨附的所有現成可用的檢視器預設集都與下列系統�
 
 建立檢視器預設集可讓您套用各種設定來檢視資產並與之互動。 不過，您不需要建立檢視器預設集。 您也可以選擇使用AEM Assets隨附的預設現成檢視器預設集。
 
-如果您選擇建立檢視器預設集，在儲存之後，檢視器狀態會在「檢視器預設集」頁面中自動啟動（設定為&#x200B;**[!UICONTROL 開啟]**）。 此狀態表示只要您預覽影像或視訊，都可在Dynamic Media元件和互動媒體元件中看到。
+如果您選擇建立檢視器預設集，在儲存之後，檢視器狀態會在「檢視器預設集」頁面中自動啟動（設定為&#x200B;**[!UICONTROL 開啟]**）。 此狀態表示在動態媒體元件和互動媒體元件中，以及您預覽影像或視訊時，都可看到此狀態。
 
 有些檢視器預設集具有可影響檢視器使用和整體行為的獨佔設定。 根據您建立的檢視器預設集，您可能會想要瞭解這些特殊考量事項。
 
@@ -446,7 +446,7 @@ Dynamic Media隨附的所有現成可用的檢視器預設集都與下列系統�
 
      匯入CSS檔案時，視覺編輯器會檢查CSS是否使用正確的檢視器標籤。 例如，如果您要建立縮放檢視器，所有您匯入的CSS規則必須使用父檢視器元素上定義的檢視器類別名稱`.s7mixedmediaviewer`來定義。
 
-     只要為指定檢視器正確定義CSS標籤，您就可以匯入任意的手工製作CSS。 ([檢視器參考指南](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources.html)的任何「自訂&#x200B;*&lt;檢視器名稱>*&#x200B;檢視器」說明主題中都會說明CSS標籤。 例如，如果您想要閱讀有關縮放檢視器的CSS標籤，請參閱[自訂縮放檢視器](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/zoom/customizing-zoom/c-html5-20-zoom-viewer-customizingviewer.html)。 不過，視覺化編輯器可能並不瞭解某些CSS值。 在這種情況下，視覺化編輯器會嘗試覆寫錯誤，讓CSS仍可運作。
+     只要為指定檢視器正確定義CSS標籤，您就可以匯入任意的手工製作CSS。 ([檢視器參考指南](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources.html)的任何「自訂&#x200B;*&lt;檢視器名稱>*&#x200B;檢視器」說明主題中都會說明CSS標籤。 例如，如果您想要閱讀有關縮放檢視器的CSS標籤，請參閱[自訂縮放檢視器](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/zoom/customizing-zoom/c-html5-20-zoom-viewer-customizingviewer.html)。)不過，視覺化編輯器可能不瞭解某些CSS值。 在這種情況下，視覺化編輯器會嘗試覆寫錯誤，讓CSS仍可運作。
 
    >[!NOTE]
    >
@@ -463,14 +463,10 @@ Dynamic Media隨附的所有現成可用的檢視器預設集都與下列系統�
 
    * **[!UICONTROL 破折號]** — 視訊資料流僅以破折號顯示。 不過，在Safari/iOS裝置上，您必須選取&#x200B;**[!UICONTROL hls]**&#x200B;做為型別。
    * **[!UICONTROL hls]** — 視訊資料流僅作為hls。
-   * **[!UICONTROL auto]** — 最佳實務。 建立DASH和HLS串流已最佳化儲存。 因此，Adobe建議您一律選取&#x200B;**[!UICONTROL auto]**&#x200B;作為播放型別。 視訊串流採用虛線、hls或漸進式，如下列播放順序所示：
+   * **[!UICONTROL auto]** — 最佳實務。 建立DASH和HLS串流時，會最佳化儲存空間。 因此，Adobe建議您一律選取&#x200B;**[!UICONTROL auto]**&#x200B;作為播放型別。 視訊串流採用虛線、hls或漸進式，如下列播放順序所示：
       * 如果瀏覽器支援DASH，則會先使用DASH串流。
-      * 如果瀏覽器不支援DASH，則會使用HLS資料流（第二）。
+      * 如果瀏覽器不支援DASH，則會使用HLS串流（第二個）。
       * 如果瀏覽器不支援DASH或HLS，最後會使用漸進式播放。
-
-   >[!NOTE]
-   >
-   >若要檢視並使用&#x200B;**[!UICONTROL 破折號]**&#x200B;選項，必須先由您帳戶上的Adobe技術支援啟用。 請參閱[在您的帳戶上啟用DASH](/help/assets/video.md#enable-dash)。
 
 1. 從「選 **[!UICONTROL 定類型]** 」(Selected Type)下拉菜單中，選擇要更改其行為的元件。
 
@@ -486,13 +482,13 @@ Dynamic Media隨附的所有現成可用的檢視器預設集都與下列系統�
    >在文字欄位中輸入值後，選取使用者介面中的其他位置以提交變更並關閉虛擬鍵盤。 如果您選取Enter，則不會發生任何動作。
 
 1. 在頁面的右上角附近，選取&#x200B;**[!UICONTROL 儲存]**。
-1. Publish您的新檢視器預設集，因此您可以在網站上使用。
+1. 發佈新的檢視器預設集，以便用於您的網站。
 
    請參閱[發佈檢視器預設集](#publishing-viewer-presets)。
 
    >[!IMPORTANT]
    >
-   >針對使用最適化位元速率串流設定檔的舊視訊，URL會繼續如常播放（使用HLS串流），直到您[重新處理視訊資產](/help/assets/processing-profiles.md#reprocessing-assets)為止。 重新處理之後，相同的URL會繼續運作，但現在已啟用&#x200B;*同時* DASH和HLS串流。
+   >針對使用最適化位元速率串流設定檔的舊視訊，URL會隨著HLS串流繼續如常播放，直到您[重新處理視訊資產](/help/assets/processing-profiles.md#reprocessing-assets)為止。 重新處理之後，相同的URL會繼續運作，但現在已啟用&#x200B;*同時* DASH和HLS串流。
 
 ### 建立互動式檢視器預設集的特殊考量事項 {#special-considerations-for-creating-an-interactive-viewer-preset}
 
@@ -504,7 +500,7 @@ Dynamic Media隨附的所有現成可用的檢視器預設集都與下列系統�
  <tbody>
   <tr>
    <td><strong>顯示模式</strong></td>
-   <td><strong>說明</strong></td>
+   <td><strong>描述</strong></td>
   </tr>
   <tr>
    <td>區段</td>
@@ -567,7 +563,7 @@ Dynamic Media隨附的所有現成可用的檢視器預設集都與下列系統�
 
    已啟動的檢視器預設集會在右側顯示切換，並位於藍色方塊內；已停用的檢視器預設集會在左側顯示切換，並位於淺灰色方塊內。
 
-## Publish檢視器預設集 {#publishing-viewer-presets}
+## 發佈檢視器預設集 {#publishing-viewer-presets}
 
 啟用（或開啟）檢視器預設集狀態表示檢視器預設集會顯示在Dynamic Media元件、互動媒體元件中，以及您檢視資產的任何時間。
 
@@ -581,7 +577,7 @@ Dynamic Media隨附的所有現成可用的檢視器預設集都與下列系統�
 
 1. 在Experience Manager的左上角，選取Experience Manager標誌，然後在左側導軌中，選取&#x200B;**[!UICONTROL 工具]** （槌子圖示） > **[!UICONTROL Assets]** > **[!UICONTROL 檢視器預設集]**。
 1. 選取一或多個您要發佈的檢視器預設集。
-1. 在工具列中選取&#x200B;**[!UICONTROL Publish]**&#x200B;圖示。
+1. 在工具列上，選取&#x200B;**[!UICONTROL 發佈]**&#x200B;圖示。
 
 ## 排序檢視器預設集 {#sorting-viewer-presets}
 

@@ -11,9 +11,9 @@ feature: Asset Management
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 93e5ae0c8b8528af9230eae51e66c91f2239edb0
+source-git-commit: 13c495b8b7e9824c5de8469df96bec00c74c8dbc
 workflow-type: tm+mt
-source-wordcount: '11157'
+source-wordcount: '10517'
 ht-degree: 2%
 
 ---
@@ -24,17 +24,17 @@ ht-degree: 2%
 
 ## 快速入門：影片 {#quick-start-videos}
 
-下列逐步工作流程說明可協助您快速上手並執行Dynamic Media中的Adaptive Video Sets。 每個步驟之後，都有主題標題的互動參照，您可以在其中找到更多資訊。
+下列逐步工作流程說明可協助您快速上手並執行Dynamic Media中的最適化視訊集。 每個步驟之後，都有主題標題的互動參照，您可以在其中找到更多資訊。
 
 >[!IMPORTANT]
 >
->在Dynamic Media中處理視訊之前，請確定Adobe Experience Manager管理員已在Dynamic Media - Scene7模式或混合模式中啟用並設定Dynamic MediaCloud Service。
+>在Dynamic Media中使用視訊之前，請確定Adobe Experience Manager管理員已在Dynamic Media - Scene7模式或混合模式中啟用並設定Dynamic Media雲端服務。
 >
->* 請參閱「設定Dynamic Media - Scene7」模式中的[設定Dynamic MediaCloud Service](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services)和[疑難排解Dynamic Media - Scene7模式](/help/assets/troubleshoot-dms7.md)。
+>* 請參閱設定Dynamic Media - Scene7模式中的[設定Dynamic Media雲端服務](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services)和[疑難排解Dynamic Media - Scene7模式](/help/assets/troubleshoot-dms7.md)。
 >
->* 請參閱「設定Dynamic Media — 混合模式」中的[設定Dynamic MediaCloud Service](/help/assets/config-dynamic.md#configuring-dynamic-media-cloud-services)。
+>* 請參閱設定Dynamic Media — 混合模式中的[設定Dynamic Media雲端服務](/help/assets/config-dynamic.md#configuring-dynamic-media-cloud-services)。
 >
->Dynamic Media *中目前已知的視訊播放問題僅限Experience Manager6.5.9.0*：
+>僅限Experience Manager 6.5.9.0上Dynamic Media *中的目前已知視訊播放問題*：
 >
 >* 如果發佈的視訊已更新，則必須再次發佈以反映傳送中的變更。
 >
@@ -55,7 +55,7 @@ ht-degree: 2%
 
    * 將您的主要來源視訊上傳至資料夾。 將視訊新增至資料夾時，會根據您指派至資料夾的視訊處理設定檔進行編碼。
 
-      * Dynamic Media主要支援長度上限為30分鐘，最小解析度大於25×25的短片影片。
+      * Dynamic Media主要支援長度上限為30分鐘、最小解析度大於25×25的短視訊。
       * 支援的最大輸入視訊解析度是16,384 × 16,384。
       * 您可以上傳每個大小最多15 GB的視訊檔案。
       * [上傳您的視訊](/help/assets/managing-video-assets.md#upload-and-preview-video-assets)。
@@ -80,7 +80,7 @@ ht-degree: 2%
         [管理視訊轉譯](manage-assets.md#managing-renditions)
 
       * [管理檢視器預設集](managing-viewer-presets.md)
-      * [Publish資產](publishing-dynamicmedia-assets.md)
+      * [發佈資產](publishing-dynamicmedia-assets.md)
 
    * 使用視訊中繼資料
 
@@ -103,7 +103,7 @@ ht-degree: 2%
       * [檢閱資料夾資產](bulk-approval.md)
       * [專案](../sites-authoring/projects.md)
 
-1. **執行下列其中一項作業，以Publish您的Dynamic Media影片**：
+1. **執行下列其中一項作業，以發佈您的Dynamic Media影片**：
 
    * 如果您使用Adobe Experience Manager做為網站內容管理系統，可以直接新增影片至您的網頁。
 
@@ -127,7 +127,7 @@ Dynamic Media中的視訊是端對端解決方案，可讓您輕鬆發佈高品�
 
 例如，在iOS行動裝置上，它會偵測頻寬，例如3G、4G或Wi-Fi。 之後，它會從「自我調整視訊集」中的各種視訊位元速率中，自動選取正確的編碼視訊。 影片會串流至桌上型電腦、行動裝置或平板電腦。
 
-此外，如果桌上型電腦或行動裝置上的網路狀況改變，視訊品質會自動動態切換。 此外，如果客戶在桌上型電腦上進入全熒幕模式，Adaptive Video Set會使用更好的解析度來回應，進而改善客戶的觀看體驗。 最適化視訊集可確保在多個熒幕和裝置上檢視Dynamic Media視訊的客戶，獲得最佳播放效果。
+此外，如果桌上型電腦或行動裝置上的網路狀況改變，視訊品質會自動動態切換。 此外，如果客戶在桌上型電腦上進入全熒幕模式，Adaptive Video Set會使用更好的解析度來回應，進而改善客戶的觀看體驗。 最適化視訊集可確保為跨多個熒幕和裝置檢視Dynamic Media視訊的客戶提供最佳播放效果。
 
 視訊播放器用來決定要播放或播放期間要選取已編碼視訊的邏輯，是根據下列演演算法：
 
@@ -139,7 +139,7 @@ Dynamic Media中的視訊是端對端解決方案，可讓您輕鬆發佈高品�
 
 如需演演算法的詳細技術資訊，請參閱[https://android.googlesource.com/platform/frameworks/av/+/master/media/libstagefright/httplive/LiveSession.cpp](https://android.googlesource.com/platform/frameworks/av/+/master/media/libstagefright/httplive/LiveSession.cpp)
 
-對於管理單一視訊和自我調整視訊集，支援下列專案：
+若是管理單一視訊和自我調整視訊集，則支援下列專案：
 
 * 上傳各種支援格式的視訊，並編碼至MP4 H.264以便在多個熒幕上播放。 您可以使用預先定義的自我調整視訊預設集、單一視訊編碼預設集，或自訂自己的編碼來控制視訊的品質和大小。
 
@@ -166,11 +166,11 @@ Dynamic Media支援MP4 H.264視訊的行動視訊播放。<!-- LINK IS 404 WITH 
 
 <!-- See [Dynamic video playback](https://s7d9.scene7.com/s7/uvideo.jsp?asset=GeoRetail/Mop_AVS&config=GeoRetail/Universal_Video1&stageSize=640,480) sample. -->
 
-另請參閱[只適用於Experience Manager Assets和Dynamic Media Classic的檢視器](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers#viewers-aem-assets-dmc)以及[只適用於Experience Manager資產的檢視器](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers#viewers-for-aem-assets-only)。
+另請參閱[僅適用於Experience Manager Assets和Dynamic Media Classic的檢視器](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers#viewers-aem-assets-dmc)以及[僅適用於Experience Manager資產的檢視器](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers#viewers-for-aem-assets-only)。
 
 ## 最佳實務：使用HTML5視訊檢視器 {#best-practice-using-the-html-video-viewer}
 
-Dynamic Media HTML5視訊檢視器預設集是強大的視訊播放器。 您可以使用它們來避免許多與HTML5視訊播放相關的常見問題。 此外，行動裝置也會發生問題，例如缺乏最適化位元速率串流傳送，以及桌上型電腦瀏覽器觸及範圍有限。
+Dynamic Media HTML5視訊檢視器預設集是強大的視訊播放器。 您可以使用它們來避免許多與HTML5視訊播放相關聯的常見問題。 此外，行動裝置也會發生問題，例如缺乏最適化位元速率串流傳送，以及桌上型電腦瀏覽器觸及範圍有限。
 
 在播放器的設計方面，您可以使用標準Web開發工具來設計視訊播放器的功能。 例如，您可以使用HTML5和CSS來設計按鈕、控制項和自訂海報影像背景，協助您以自訂外觀觸及客戶。
 
@@ -192,7 +192,7 @@ Dynamic Media HTML5視訊檢視器預設集是強大的視訊播放器。 您可
 
 使用DASH或HLS或漸進式視訊下載程式進行視訊播放。 在舊版Experience Manager （例如6.0、6.1和6.2）中，影片會透過HTTP進行串流處理。
 
-在Experience Manager6.3及更新版本中，視訊現在會透過HTTPS (亦即DASH或HLS)進行串流，因為DM閘道服務URL也一律使用HTTPS。 此預設行為不會影響客戶。 除了瀏覽器不支援外，視訊串流一律透過HTTPS進行。 （請參閱下表）。 因此，
+在Experience Manager 6.3及更新版本中，視訊現在會透過HTTPS (亦即DASH或HLS)進行串流，因為DM閘道服務URL也一律使用HTTPS。 此預設行為不會影響客戶。 除了瀏覽器不支援外，視訊串流一律透過HTTPS進行。 （請參閱下表）。 因此，
 
 * 如果您的HTTPS網站採用HTTPS視訊串流，則串流沒有問題。
 * 如果您的HTTP網站具有HTTPS視訊串流，串流就不會有問題，而且網頁瀏覽器也不會出現混合內容問題。
@@ -273,13 +273,9 @@ DASH是國際標準，HLS是Apple標準。 兩者都用於自我調整視訊串�
  </tbody>
 </table>
 
->[!IMPORTANT]
->
->*若要在視訊中使用DASH，Adobe技術支援必須先在您的帳戶中啟用。 請參閱[在您的Dynamic Media帳戶上啟用DASH](#enable-dash)。
-
 ## Dynamic Media視訊解決方案的架構 {#architecture-of-dynamic-media-video-solution}
 
-下圖顯示透過DMGateway (在Dynamic Media混合模式中)上傳及編碼，並可供公眾使用的視訊整體製作工作流程。
+下圖顯示透過DMGateway （在Dynamic Media混合模式中）上傳及編碼，並可供公眾使用的視訊整體製作工作流程。
 
 ![Dynamic Media視訊解決方案的架構。](assets/chlimage_1-427.png)
 
@@ -289,7 +285,7 @@ DASH是國際標準，HLS是Apple標準。 兩者都用於自我調整視訊串�
 
 ## 視訊編碼最佳作法 {#best-practices-for-encoding-videos}
 
-如果您已啟用Dynamic Media並設定視訊雲端服務，**Dynamic Media編碼視訊**&#x200B;工作流程會對視訊進行編碼。 此工作流程會擷取工作流程處理歷程記錄和失敗資訊。如果您已啟用Dynamic Media並設定視訊雲端服務，當您上傳視訊時，**[!UICONTROL Dynamic Media編碼視訊]**&#x200B;工作流程會自動生效。 (如果您未使用Dynamic Media，**[!UICONTROL DAM更新資產]**&#x200B;工作流程將會生效。)
+如果您已啟用動態媒體並設定視訊雲端服務，**動態媒體編碼視訊**&#x200B;工作流程會對視訊進行編碼。 此工作流程會擷取工作流程處理歷程記錄和失敗資訊。如果您已啟用Dynamic Media並設定視訊雲端服務，當您上傳視訊時，**[!UICONTROL Dynamic Media編碼視訊]**&#x200B;工作流程會自動生效。 （如果您未使用Dynamic Media，**[!UICONTROL DAM更新資產]**&#x200B;工作流程將會生效。）
 
 <!-- DEAD The following are best-practice tips for encoding source video files.
 
@@ -301,7 +297,7 @@ For advice about video encoding, see [Video Encoding Basics](https://www.adobe.c
 
 編碼視訊檔案時，請使用最高品質的來源視訊檔案。 避免使用先前編碼的視訊檔案，因為這些檔案已經過壓縮，進一步編碼會產生品質不佳的視訊。
 
-* Dynamic Media主要支援長度上限為30分鐘，最小解析度大於25×25的短片影片。
+* Dynamic Media主要支援長度上限為30分鐘、最小解析度大於25×25的短視訊。
 * 您可以上傳每個大小最高達15 GB的主要來源視訊檔案。
 
 下表說明編碼來源視訊檔案前，其建議的大小、外觀比例和最低位元速率等資訊：
@@ -429,60 +425,6 @@ VBR需要更長的時間來編碼，但會產生最有利的結果；媒體檔�
 
 Dynamic Media建議使用MP4 H.264視訊編碼預設集。 由於MP4檔案使用H.264視訊轉碼器，因此可提供高品質的視訊，但檔案大小必須經過壓縮。
 
-### 在您的Dynamic Media帳戶上啟用DASH、多字幕和音訊追蹤支援 {#enable-dash}
-
-**關於啟用您帳戶上的DASH**
-DASH (Digital Adaptive Streaming over HTTP)是視訊串流的國際標準，被廣泛採用於不同的視訊檢視器中。 在您的帳戶上啟用DASH後，您就可以選擇使用DASH或HLS進行最適化視訊串流。 或者，當您在檢視器預設集中選取**[!UICONTROL auto]**&#x200B;作為播放型別時，可以選擇在播放器之間自動切換。
-
-在您的帳戶上啟用DASH的一些主要優點包括：
-
-* 封裝DASH串流視訊，以進行最適化位元速率串流。 此方法可提高傳遞效率。 最適化串流可確保為客戶提供最佳檢視體驗。
-* 使用Dynamic Media播放器將瀏覽器最佳化的串流在HLS和DASH串流之間切換，以確保最佳服務品質。 使用Safari瀏覽器時，視訊播放器會自動切換至HLS。
-* 您可以編輯視訊檢視器預設集，以設定您偏好的串流方法(HLS或DASH)。
-* 最佳化的視訊編碼可確保啟用DASH功能時不會使用額外的儲存空間。 會為HLS和DASH建立單一視訊編碼集，以最佳化視訊儲存成本。
-* 協助讓客戶更容易存取視訊傳送。
-* 也透過API取得串流URL。
-
-在您的帳戶上啟用DASH需要兩個步驟：
-
-* 將Dynamic Media設定為使用DASH，讓您輕鬆自行。
-* 將Experience Manager 6.5設定為使用DASH，這是透過您建立和提交的Adobe客戶支援案例完成的。
-
-當您建立Adobe支援案例以在您的帳戶上啟用DASH時，也會自動啟用多重註解和音訊追蹤支援。 啟用後，所有新上傳的視訊都會使用更新的後端架構進行處理，該架構支援新增多個註解和音訊曲目。
-
->[!IMPORTANT]
->
->在&#x200B;*之前，您已在您的Dynamic Media帳戶[上啟用多重註解和音訊追蹤支援，因此您上傳的任何視訊都必須重新處理](/help/assets/processing-profiles.md#reprocessing-assets)。*&#x200B;此視訊重新處理步驟是必要的，這樣使用者才能使用多個註解和音訊追蹤功能。 重新處理之後，視訊URL仍可繼續如常運作和播放。
-
-**若要啟用DASH，請在您的Dynamic Media帳戶上支援多重註解與多重音訊曲目：**
-
-<!-- 1. **Configure Dynamic Media for DASH** - In Dynamic Media on Experience Manager 6.5, navigate to [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr).
-
-1. Search for **AEM Assets Dynamic Media Video Advanced Streaming** feature flag.
-1. To enable (turn on) DASH, select the checkbox. -->
-1. 從&#x200B;**為DASH設定Dynamic Media**&#x200B;開始 — 從Experience Manager瀏覽至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 作業]** > **[!UICONTROL 網頁主控台]**。
-
-1. 從&#x200B;**[!UICONTROL Adobe Experience Manager Web Console設定]**&#x200B;頁面，捲動至名稱&#x200B;*AEM Assets Dynamic Media Video Advanced Streaming功能標幟*。
-
-1. 在名稱左側，選取核取方塊以啟用（開啟） DASH。
-
-1. 選取「**[!UICONTROL 儲存]**」。
-
-1. 現在請使用Admin Console開始[建立新的支援案例](https://helpx.adobe.com/tw/enterprise/using/support-for-experience-cloud.html)。
-1. 若要建立支援案例，請遵循指示，同時確保您提供下列資訊：
-
-   * 主要連絡人姓名、電子郵件、電話。
-   * 您的Dynamic Media帳戶名稱。
-   * 在Experience Manager6.5中，指定您要在Dynamic Media帳戶上啟用DASH、多重註解和多重音訊追蹤支援。
-
-1. 「Adobe客戶支援」會根據提交請求的順序，將您新增至「客戶等候清單」。
-1. 當Adobe準備好處理您的請求時，客戶支援聯絡您以協調並設定啟用的目標日期。
-1. 客戶支援會在完成後通知您。
-1. 現在，您可以執行下列任一項作業：
-
-   * 照常建立您的[視訊檢視器預設集](/help/assets/managing-viewer-presets.md#creating-a-new-viewer-preset)。
-   * [新增多個註解和音軌](#add-msma)到您的視訊。
-
 ## 檢視視訊報表 {#viewing-video-reports}
 
 >[!NOTE]
@@ -503,7 +445,7 @@ DASH (Digital Adaptive Streaming over HTTP)是視訊串流的國際標準，被�
 
 如果影片是在Adobe Experience Manager Dynamic Media之外編碼，則無法使用表格中的對象保留率（流失）圖表和播放百分比資料。
 
-另請參閱[設定Dynamic MediaCloud Service](/help/assets/config-dynamic.md)。
+另請參閱[設定Dynamic Media雲端服務](/help/assets/config-dynamic.md)。
 
 >[!NOTE]
 >
@@ -511,7 +453,7 @@ DASH (Digital Adaptive Streaming over HTTP)是視訊串流的國際標準，被�
 
 根據預設，您首次輸入「視訊報表」時，報表會顯示從當月第一個日期開始，到當月日期結束的視訊資料。 不過，您可以指定自己的日期範圍來覆寫預設日期範圍。 下次輸入視訊報表時，將會使用您指定的日期範圍。
 
-為了讓視訊報表正常運作，設定Dynamic MediaCloud Service時會自動建立報表套裝ID。 同時，報表套裝ID會推送至Publish伺服器，以便您在預覽資產時可用於複製URL功能。 不過，若要使用此功能，必須先設定Publish伺服器。 如果Publish伺服器未設定，您仍可發佈以檢視視訊報表。 不過，您必須返回Dynamic Media雲端設定，並選取&#x200B;**[!UICONTROL 確定]**。
+為了讓視訊報表正常運作，設定Dynamic Media雲端服務時會自動建立報表套裝ID。 同時，報表套裝ID會推送至發佈伺服器，以便您在預覽資產時可用於複製URL功能。 不過，若要使用此功能，發佈伺服器必須已設定。 如果發佈伺服器未設定，您仍可發佈以檢視視訊報表。 不過，您必須返回Dynamic Media雲端設定，並選取&#x200B;**[!UICONTROL 確定]**。
 
 **若要檢視視訊報告：**
 
@@ -530,11 +472,11 @@ DASH (Digital Adaptive Streaming over HTTP)是視訊串流的國際標準，被�
 
 ### 根據您使用Dynamic Media HTML5 Viewer SDK建立的視訊檢視器檢視視訊報表 {#viewing-video-reports-based-on-a-video-viewer-that-you-created-using-the-scene-hmtl-viewer-sdk}
 
-如果您使用Dynamic Media提供的現成視訊檢視器，或您根據現成視訊檢視器建立自訂檢視器預設集，則檢視視訊報表無需執行其他步驟。 不過，如果您已根據HTML5 Viewer SDK API建立自己的視訊檢視器，請使用下列步驟來確保視訊檢視器會傳送追蹤事件至Dynamic Media Video Reports。
+如果您使用Dynamic Media提供的現成視訊檢視器，或您根據現成視訊檢視器建立自訂檢視器預設集，則檢視視視訊報表不需要執行其他步驟。 不過，如果您已根據HTML5 Viewer SDK API建立自己的視訊檢視器，請使用下列步驟來確保視訊檢視器傳送追蹤事件至Dynamic Media視訊報表。
 
 使用[Adobe Dynamic Media檢視器參考指南](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources)和[HTML5檢視器SDK API](https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html)建立您自己的視訊檢視器。
 
-**若要根據您使用Dynamic Media HTML5檢視器SDK建立的視訊檢視器檢視視訊報表：**
+**若要根據您使用Dynamic Media HTML5檢視器SDK所建立的視訊檢視器檢視視視訊報表：**
 
 1. 導覽至任何已發佈的視訊資產。
 1. 在資產頁面的左上角附近，從下拉式清單中選取「檢 **[!UICONTROL 視器]**」。
@@ -543,7 +485,7 @@ DASH (Digital Adaptive Streaming over HTTP)是視訊串流的國際標準，被�
 
    `videoViewer.setParam("config2", "<value>");`
 
-   `config2`引數可啟用HTML5檢視器中的追蹤。 此預設集也是公司專屬的預設集，其中包含視訊報表的設定資訊，以及用於客戶專屬的Adobe Analytics設定。
+   `config2`引數會在HTML5檢視器中啟用追蹤。 此預設集也是公司專屬的預設集，其中包含視訊報表的設定資訊，以及用於客戶專屬的Adobe Analytics設定。
 
    在&#x200B;**[!UICONTROL 內嵌程式碼]**&#x200B;和復本&#x200B;**[!UICONTROL URL]**&#x200B;函式中找到config2引數的正確值。 在複製&#x200B;**[!UICONTROL URL]**&#x200B;命令的URL中，要尋找的引數為`&config2=<value>`。 值幾乎總是 `companypreset`會出現，但在某些情況下 `companypreset-1`, `companypreset-2`它也可以是、等等。
 
@@ -596,9 +538,9 @@ DASH (Digital Adaptive Streaming over HTTP)是視訊串流的國際標準，被�
 
 ## 關於Dynamic Media中視訊的多重註解和音訊追蹤支援{#about-msma}
 
-透過Dynamic Media中的多重字幕與音訊曲目功能，您可以輕鬆將多重字幕與音訊曲目新增至主要視訊。 此功能表示您的視訊可供全球對象存取。 您可以以多種語言向全球客群自訂單一已發佈的主要影片，並遵守不同地理區域的輔助功能指南。作者還可以從使用者介面中的單個標籤管理字幕和音訊。
+透過Dynamic Media的多重字幕與音訊曲目功能，您可以輕鬆將多重字幕與音訊曲目新增至主要視訊。 擁有此功能代表全球觀眾都可以存取您的影片。您可以著手自訂一部已發佈的主要影片，以多種語言提供給全球觀眾，並遵守不同地理區域的無障礙指南。作者還可以從使用者介面中的單個標籤管理字幕和音訊。
 
-![Dynamic Media中的註解和音訊曲目索引標籤，以及顯示已上傳的`.vtt`註解檔案和已上傳影片的.MP3音訊曲目檔案的表格。](assets-dm/msma-subtitle-audiotracks-tab2.png)
+![Dynamic Media中的註解與音訊曲目標籤，以及顯示已上傳的`.vtt`註解檔案與已上傳視訊的.MP3音訊曲目檔案的表格。](assets-dm/msma-subtitle-audiotracks-tab2.png)
 
 在主要視訊中新增多個註解和音訊曲目時應考慮的一些使用案例包括：
 
@@ -610,23 +552,22 @@ DASH (Digital Adaptive Streaming over HTTP)是視訊串流的國際標準，被�
 |  | 註解追蹤 |
 |  | 描述性音訊 |
 
-Dynamic Media](/help/assets/assets-formats.md)和所有Dynamic Media視訊檢視器(除了Dynamic Media *Video_360*&#x200B;檢視器)支援的所有[視訊格式都支援搭配多個註解和音軌使用。
+Dynamic Media ](/help/assets/assets-formats.md)和所有Dynamic Media視訊檢視器支援的所有[視訊格式（Dynamic Media *Video_360*&#x200B;檢視器除外）都支援搭配多個註解和音軌使用。
 
-您的Dynamic Media帳戶可以透過功能切換使用多標題和音訊追蹤功能，該功能必須由Adobe客戶支援啟用（開啟）。
+透過必須由Adobe客戶支援啟用（開啟）的功能切換，您的Dynamic Media帳戶可使用多字幕和音訊追蹤功能。
 
 ### 在視訊中新增多個標題和音軌 {#add-msma}
 
 在將多個註解和音訊曲目加入視訊之前，請確定您已具備下列內容：
 
-* Dynamic Media是在AEM環境中設定的。
+* Dynamic Media是在AEM環境中設定。
 * [Dynamic Media視訊設定檔已套用至您擷取視訊的資料夾](/help/assets/video-profiles.md#applying-a-video-profile-to-folders)。
-* [已在您的Dynamic Media帳戶中啟用多個標題和音軌](#enable-dash)。
 
-WebVTT和Adobe`.vtt`格式支援新增的字幕和字幕。 此外，新增的音訊軌跡檔案也支援MP3格式。
+WebVTT和Adobe `.vtt`格式支援新增的標題和註解。 此外，新增的音訊軌跡檔案也支援MP3格式。
 
 >[!IMPORTANT]
 >
->在&#x200B;*之前，您已在您的Dynamic Media帳戶[上啟用多重註解和音訊追蹤支援，因此您上傳的任何視訊都必須重新處理](/help/assets/processing-profiles.md#reprocessing-assets)。*&#x200B;此視訊重新處理步驟是必要的，這樣使用者才能使用多個註解和音訊追蹤功能。 重新處理之後，視訊URL仍可繼續如常運作和播放。
+>在&#x200B;*之前，您已在您的Dynamic Media帳戶[上啟用多重標題與音訊追蹤支援的任何視訊，都必須重新處理](/help/assets/processing-profiles.md#reprocessing-assets)。*&#x200B;此視訊重新處理步驟是必要的，這樣使用者才能使用多個註解和音訊追蹤功能。 重新處理之後，視訊URL仍可繼續如常運作和播放。
 
 **若要在視訊中加入多個註解和音軌：**
 
@@ -652,7 +593,7 @@ WebVTT和Adobe`.vtt`格式支援新增的字幕和字幕。 此外，新增的�
    * 導覽至一或多個`.vtt` （影片文字軌）檔案，並加以開啟。
    * 若要在媒體播放器上顯示註解，您&#x200B;*必須*&#x200B;新增您上傳的每個&#x200B;*註解檔案的必要詳細資料（中繼資料）。*&#x200B;選取註解檔案名稱右側的鉛筆圖示。 在&#x200B;**編輯標題**&#x200B;對話方塊中，輸入下列檔案的必要詳細資訊，然後選取&#x200B;**[!UICONTROL 儲存]**。 對您上傳的每個註解檔案重複此程式：
 
-     | 標題中繼資料 | 說明 |
+     | 標題中繼資料 | 描述 |
      |--- |--- |
      | 檔案名稱 | 預設檔案名稱衍生自原始檔案名稱。 檔案名稱只能在上傳時變更，以後無法變更。 檔案名稱字元需求與AEM Assets相同。<br>其他註解檔和音訊曲目檔不能使用相同的檔名。 |
      | 語言 | 選取註解的語言。 |
@@ -666,7 +607,7 @@ WebVTT和Adobe`.vtt`格式支援新增的字幕和字幕。 此外，新增的�
    * 導覽至一或多個.mp3檔案並加以選取，然後開啟。
    * 若要讓音訊曲目出現在媒體播放器的&#x200B;**[!UICONTROL 選取音訊或標題]**&#x200B;快顯清單中，您&#x200B;*必須*&#x200B;提供必要的詳細資料。 您新增的&#x200B;*每個*&#x200B;音訊曲目檔案都需要這些詳細資料。 選取音軌檔案名稱右側的鉛筆圖示。 在&#x200B;**編輯音軌**&#x200B;對話方塊中，輸入下列必要的詳細資料，然後選取&#x200B;**[!UICONTROL 儲存]**。 為您上傳的每個音訊曲目檔案重複此程式。
 
-     | 音訊曲目中繼資料 | 說明 |
+     | 音訊曲目中繼資料 | 描述 |
      |--- |--- |
      | 檔案名稱 | 預設檔案名稱衍生自原始檔案名稱。 檔案名稱只能在上傳時變更，以後無法變更。 檔案名稱字元需求與AEM Assets相同。<br>其他音訊曲目檔或標題檔不能使用相同的檔名。 |
      | 語言 | 選取音訊曲目的語言。 |
@@ -683,19 +624,19 @@ WebVTT和Adobe`.vtt`格式支援新增的字幕和字幕。 此外，新增的�
 
 1. （選擇性）如果您在上一步選取了&#x200B;**[!UICONTROL 儲存並關閉]**，而不是選取&#x200B;**[!UICONTROL 儲存]**，您仍可檢視已上傳檔案的處理狀態。 請參閱[檢視上傳的標題和音訊曲目檔案的生命週期狀態](#lifecycle-status-video)。
 1. （可選）在發佈之前預覽視訊，以確保字幕和音訊如預期般運作。 檢視[預覽含有多個註解和音軌的視訊](#preview-video-audio-subtitle)
-1. Publish影片。 檢視[Publish資產](publishing-dynamicmedia-assets.md)。
+1. 發佈視訊。 請參閱[發佈資產](publishing-dynamicmedia-assets.md)。
 
 #### 關於新增標題和音訊曲目檔案至已發佈的視訊
 
 將額外的註解檔案或音訊曲目檔案上傳到已發佈的視訊中，會導致這些檔案被指派為`Processed`狀態。 此狀態會在檔案在上傳後準備就緒後套用。 此時，您可以在Dynamic Media中預覽視訊，以檢視或聆聽新上傳的檔案。
 
-不過，在預覽後，您必須&#x200B;*發佈*&#x200B;視訊，才能同時發佈新加入的註解或音訊曲目檔案。 發佈後，公開Dynamic Media URL即可使用註解或音訊。
+不過，在預覽後，您必須&#x200B;*發佈*&#x200B;視訊，才能同時發佈新加入的註解或音訊曲目檔案。 發佈後，註解或音訊便可在公用的Dynamic Media URL中使用。
 
 >[!NOTE]
 >
 >根據您執行個體的快取設定，中繼資料更新可能需要幾分鐘的時間才會反映在預覽和已發佈的URL中。
 
-在您設定立即發佈Dynamic Media的案例中，上傳其他註解或音訊檔案會立即觸發上傳註解或音訊檔案後的視訊發佈。
+在您已設定Dynamic Media立即發佈的案例中，上傳其他註解或音訊檔案會立即觸發上傳註解或音訊檔案後視訊的發佈。
 
 >[!CAUTION]
 >
@@ -703,7 +644,7 @@ WebVTT和Adobe`.vtt`格式支援新增的字幕和字幕。 此外，新增的�
 
 #### 在具有現有URL和註解修飾元的視訊中新增多個註解
 
-Dynamic Media支援透過URL修飾元在視訊中新增單一標題。 請參閱[將註解新增至視訊](#adding-captions-to-video)。
+Dynamic Media支援透過URL修飾元在視訊中新增單一註解。 請參閱[將註解新增至視訊](#adding-captions-to-video)。
 
 多個註解變更的優先順序高於透過已發佈視訊URL修飾元新增的註解。
 
@@ -711,7 +652,7 @@ Dynamic Media支援透過URL修飾元在視訊中新增單一標題。 請參閱
 
 1. 上傳已新增為視訊修飾元的註解檔案，以便您明確管理檔案。
 1. 視需要上傳任何其他註解檔案。
-1. 照常使用Publish視訊。
+1. 照常發佈視訊。
 具有註解修飾元的現有URL現在可以載入多個註解。
 
 ### 檢視上傳的標題和音訊曲目檔案的生命週期狀態{#lifecycle-status-video}
@@ -725,11 +666,11 @@ Dynamic Media支援透過URL修飾元在視訊中新增單一標題。 請參閱
 1. 在工具列上，選取「屬性」圖示（內有「i」的圓形）。
 1. 在[內容]頁面上，選取&#x200B;**[!UICONTROL 註解與音軌]**&#x200B;標籤。 在「狀態」欄中，記下每個註解或音訊檔案的狀態。
 
-| 註解或音訊曲目狀態 | 說明 |
+| 註解或音訊曲目狀態 | 描述 |
 | --- | --- |
 | 處理中 | 新增並儲存新的註解或音訊曲目檔案時，檔案會進入「正在處理」狀態。 Dynamic Media會將串流資訊清單附加至主要視訊，以處理檔案。 |
 | 已處理 | 處理完成後，註解或音訊曲目檔案，或與主要視訊相關的原始音訊曲目會以「已處理」狀態出現。 您可以預覽標題和音訊曲目檔案，這些檔案在您發佈視訊上線&#x200B;*之前*&#x200B;顯示為「已處理」。 |
-| 已發佈 | 「已發佈」狀態代表與主要視訊「已發佈」類似的狀態。 Assets會在主要影片發佈時發佈，並可在公開Dynamic Media URL上使用。 |
+| 已發佈 | 「已發佈」狀態代表與主要視訊「已發佈」類似的狀態。 Assets會在主要影片發佈時發佈，並可在公共Dynamic Media URL上使用。 |
 | 失敗 | 「失敗」狀態表示字幕或音訊曲目檔案的處理未完成。 請刪除註解或音訊曲目檔案，然後重新上傳。 |
 | 已取消發佈 | 明確取消發佈已發佈的主要視訊時，您新增至視訊的任何註解或音訊追蹤檔案也會取消發佈。 |
 
@@ -761,7 +702,7 @@ Dynamic Media支援透過URL修飾元在視訊中新增單一標題。 請參閱
    ![音訊曲目標題具有選取的音訊曲目檔案名稱，並反白顯示[設定為預設]按鈕。](assets-dm/msma-defaultaudiotrack2.png)*正在設定視訊的預設音軌。*
 
 1. 在右上角，選取&#x200B;**[!UICONTROL 儲存並關閉]**。
-1. Publish影片。 檢視[Publish資產](publishing-dynamicmedia-assets.md)。
+1. 發佈視訊。 請參閱[發佈資產](publishing-dynamicmedia-assets.md)。
 
 ### 預覽具有多個標題和音訊曲目的視訊{#preview-video-audio-subtitle}
 
@@ -775,7 +716,7 @@ Dynamic Media支援透過URL修飾元在視訊中新增單一標題。 請參閱
 
 >[!NOTE]
 >
->預設的Experience Manager預覽索引標籤不會顯示多個標題和音訊曲目。 原因是這些曲目與Dynamic Media相關聯，而且只能使用Dynamic Media檢視器預覽來檢視。
+>預設的Experience Manager預覽索引標籤不會顯示多個標題和音訊曲目。 原因是這些曲目與Dynamic Media相關聯，且僅能使用Dynamic Media檢視器預覽檢視。
 
 **若要預覽含有多個字幕和音軌的視訊：**
 
@@ -815,7 +756,7 @@ Dynamic Media支援透過URL修飾元在視訊中新增單一標題。 請參閱
    * 音訊曲目 — 在&#x200B;**音訊曲目**&#x200B;標題下，選取您要從視訊中刪除的一或多個音訊曲目檔案，然後選取&#x200B;**[!UICONTROL 刪除]**。
 
 1. 在[刪除]對話方塊中，選取[確定]。****
-1. Publish影片。
+1. 發佈視訊。
 
 ### 下載已上傳至視訊的註解或音訊曲目檔案
 
@@ -836,7 +777,7 @@ Dynamic Media支援透過URL修飾元在視訊中新增單一標題。 請參閱
 
 1. 在「下載」對話方塊中，設定下列選項：
 
-   | 選項 | 說明 |
+   | 選項 | 描述 |
    |--- |--- |
    | 另存新檔 | 使用「另存新檔」文字欄位中指定的預設檔案名稱，或指定您自己的名稱。 |
    | 為每個資產建立個別的資料夾 | 為您選取要下載的每個註解檔或音訊追蹤檔建立一個資料夾。 |
@@ -844,7 +785,7 @@ Dynamic Media支援透過URL修飾元在視訊中新增單一標題。 請參閱
    | Assets | 指定正在下載的檔案數以及所有選取檔案的組合總大小。 取消選取此選項會使&#x200B;**[!UICONTROL 下載]**&#x200B;按鈕變暗（關閉），使您無法下載任何檔案。 |
 
 1. 選取&#x200B;**[!UICONTROL 下載]**。
-1. Publish影片。 檢視[Publish資產](publishing-dynamicmedia-assets.md)。
+1. 發佈視訊。 請參閱[發佈資產](publishing-dynamicmedia-assets.md)。
 
 
 
@@ -852,10 +793,6 @@ Dynamic Media支援透過URL修飾元在視訊中新增單一標題。 請參閱
 
 
 ## 新增隱藏式字幕至視訊 {#adding-captions-to-video}
-
->[!IMPORTANT]
->
->Adobe建議您在您的Dynamic Media帳戶上[啟用多重註解和音訊追蹤功能](#enable-dash)。 如此一來，您便可運用最新的Dynamic Media後端架構和簡化的工作流程，在視訊中新增標題、字幕和音訊曲目。
 
 您可以將隱藏式字幕新增至單一視訊或最適化視訊集，以將視訊觸及全球市場。 透過新增隱藏式字幕，您就不需要對音訊進行配音，或是使用母語者重新錄製每種語言的音訊。 視訊會以錄製的語言播放。 出現外語註解時，不同語言的人仍可瞭解音訊部分。
 
@@ -865,7 +802,7 @@ Dynamic Media支援透過URL修飾元在視訊中新增單一標題。 請參閱
 >
 >您使用的視訊播放器必須支援顯示註解。
 
-另請參閱[Dynamic Media中的協助工具](/help/assets/accessibility-dm.md)。
+另請參閱Dynamic Media中的[協助工具](/help/assets/accessibility-dm.md)。
 
 Dynamic Media會將註解檔案轉換為JSON (JavaScript物件標籤法)格式。 此轉換表示您可以將JSON文字內嵌至網頁，做為影片隱藏但完整的文字記錄。 搜尋引擎接著可以編目和索引內容，讓影片更容易找到，並為客戶提供更多有關影片內容的詳細資料。
 
@@ -879,7 +816,7 @@ Dynamic Media會將註解檔案轉換為JSON (JavaScript物件標籤法)格式�
 
    請參閱[WebVTT：網頁視訊文字追蹤格式](https://w3c.github.io/webvtt/)。
 
-   有許多網站提供免費和優質的工具與服務，讓您在Dynamic Media外部用來製作WebVTT插圖示題/插圖示題檔案。<!-- THE FOLLOWING LINK IS NO LONGER LIVE. CHECKED DECEMBER 13, 2023 For example, to create a simple video caption file with no styling, you can use the following free online caption authoring and editing tool: -->
+   有許多網站提供免費和優質的工具與服務，讓您在Dynamic Media外部用來製作WebVTT標題/標題檔案。<!-- THE FOLLOWING LINK IS NO LONGER LIVE. CHECKED DECEMBER 13, 2023 For example, to create a simple video caption file with no styling, you can use the following free online caption authoring and editing tool: -->
 
    <!--[WebVTT Caption Maker](https://testdrive-archive.azurewebsites.net/Graphics/CaptionMaker/Default.html)
 
@@ -895,12 +832,12 @@ Dynamic Media會將註解檔案轉換為JSON (JavaScript物件標籤法)格式�
 
    一般來說，您會想要將註解`.vtt`檔案的名稱與視訊檔案的名稱相同，並附加語言地區設定，例如 — EN、-FR或 — DE。 如此一來，即可協助您使用現有的網頁內容管理系統，自動化視訊URL的產生作業。
 
-1. 在Experience Manager中，將您的WebVTT標題檔案上傳至DAM。
+1. 在Experience Manager中，將WebVTT標題檔案上傳至DAM。
 1. 導覽至&#x200B;*已發佈*&#x200B;視訊資產，您要將其與您上傳的註解檔案建立關聯。
 
    請記住，URL僅可在您首次發 *布資產* 後 *複製* 。
 
-   檢視[Publish資產](/help/assets/publishing-dynamicmedia-assets.md)。
+   請參閱[發佈資產](/help/assets/publishing-dynamicmedia-assets.md)。
 
 1. 執行下列任一項作業：
 
@@ -922,9 +859,9 @@ Dynamic Media會將註解檔案轉換為JSON (JavaScript物件標籤法)格式�
 
 >[!NOTE]
 >
->使用的視訊播放器必須支援使用章節標籤。 Dynamic Media影片播放器不支援章節標籤，但使用協力廠商影片播放器可能不支援。
+>使用的視訊播放器必須支援使用章節標籤。 Dynamic Media影片播放器不支援章節標籤，但使用協力廠商影片播放器則不支援。
 
-如有需要，您可以用章節來建立自訂視訊檢視器，並將其品牌化，而不使用視訊檢視器預設集。 如需使用章節導覽建立您自己的HTML5檢視器的指示，請在AdobeHTML5檢視器SDK API中，參考類別`s7sdk.video.VideoPlayer`和`s7sdk.video.VideoScrubber`下的「使用修飾元自訂行為」標題。 請參閱[HTML5檢視器SDK API](https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html)檔案。
+如有需要，您可以用章節來建立自訂視訊檢視器，並將其品牌化，而不使用視訊檢視器預設集。 如需使用章節導覽建立您自己的HTML5檢視器的指示，請在Adobe HTML5檢視器SDK API中，參考類別`s7sdk.video.VideoPlayer`和`s7sdk.video.VideoScrubber`下的「使用修飾元自訂行為」標題。 請參閱[HTML5檢視器SDK API](https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html)檔案。
 
 <!-- If desired, you can create and brand your own custom video viewer with chapters instead of using a video viewer preset. For instructions on creating your own HTML5 viewer with chapter navigation, in the Adobe Scene7 Viewer SDK for HTML5 guide, reference the heading "Customizing Behavior Using Modifiers" under the classes `s7sdk.video.VideoPlayer` and `s7sdk.video.VideoScrubber`. The Adobe Scene7 Viewer SDK is available as a download from [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html). -->
 
@@ -1000,7 +937,7 @@ Cost-efficient access to rapidly evolving technology.
 
 視訊縮圖是視訊影格的縮小版本，或是向客戶表示視訊的影像資產。 縮圖可鼓勵客戶選取影片。
 
-Experience Manager中的所有視訊都必須有關聯的縮圖，刪除縮圖需要取代它。 根據預設，上傳視訊至Experience Manager時，會使用第一個影格作為縮圖。 不過，您可以自訂縮圖，以利品牌化或視覺化搜尋，例如。 自訂視訊縮圖時，您可以播放視訊並在要使用的影格上暫停。 或者，您可以選取已在數位資產管理器中上傳並&#x200B;*發佈*&#x200B;的影像資產。
+Experience Manager中的所有視訊都必須有關聯的縮圖，若要刪除縮圖，必須先將其取代。 根據預設，將視訊上傳至Experience Manager時，系統會使用第一個影格作為縮圖。 不過，您可以自訂縮圖，以利品牌化或視覺化搜尋，例如。 自訂視訊縮圖時，您可以播放視訊並在要使用的影格上暫停。 或者，您可以選取已在數位資產管理器中上傳並&#x200B;*發佈*&#x200B;的影像資產。
 
 您從視訊中選取的自訂視訊縮圖影像，不會擷取並儲存在DAM中，作為獨立且不同的資產。 不過，您從現有影像資產中選取的自訂視訊縮圖會儲存至JCR。 選取資產的路徑會儲存在視訊資產的節點下，如下列範例路徑所示：
 
@@ -1008,7 +945,7 @@ Experience Manager中的所有視訊都必須有關聯的縮圖，刪除縮圖�
 
 只有在您將視訊設定檔套用至視訊所在的資料夾後，才能使用自訂視訊縮圖的功能。
 
-另請參閱[關於Dynamic Media — 混合模式的視訊縮圖](#about-video-thumbnails-in-dynamic-media-hybrid-mode)。
+另請參閱[關於Dynamic Media — 混合模式下的視訊縮圖](#about-video-thumbnails-in-dynamic-media-hybrid-mode)。
 
 ### 新增自訂視訊縮圖 {#adding-a-custom-video-thumbnail}
 
@@ -1067,7 +1004,7 @@ Dynamic Media會根據視訊的總時間擷取10個（預設）縮圖影像。 �
 
 您也可以選擇上傳自訂縮圖來代表視訊，而不使用Dynamic Media產生的縮圖。 例如，您可以建立具有視訊標題的自訂縮圖影像、吸引目光的開頭影像，或從視訊擷取的特定影像。 您上傳的自訂視訊縮圖影像的最大解析度必須是1280 × 720畫素（最小寬度為640畫素），並且不得大於2 MB。
 
-另請參閱[關於Dynamic Media中的視訊縮圖 — Scene7模式](/help/assets/video.md#about-video-thumbnails-in-dynamic-media-scene-mode)。
+另請參閱[關於Dynamic Media - Scene7模式的視訊縮圖](/help/assets/video.md#about-video-thumbnails-in-dynamic-media-scene-mode)。
 
 ### 新增視訊縮圖 {#adding-a-video-thumbnail}
 
@@ -1129,12 +1066,12 @@ Dynamic Media會根據視訊的總時間擷取10個（預設）縮圖影像。 �
 1. 在工具列上，選取&#x200B;**[!UICONTROL 檢視屬性]**&#x200B;圖示（內有「i」的圓形）。
 1. 在視訊的「屬性」頁面上，選取&#x200B;**[!UICONTROL 變更縮圖]**。
 1. 在[變更縮圖]頁面的工具列上，選取[上傳]新縮圖&#x200B;]**。**[!UICONTROL 
-1. 導覽至您要使用的縮圖影像，選取該影像，然後選取&#x200B;**[!UICONTROL 開啟]**&#x200B;以開始將影像上傳到Experience Manager。 上傳後，請務必發佈影像。
+1. 導覽至您要使用的縮圖影像，選取該影像，然後選取「**[!UICONTROL 開啟]**」以開始將該影像上傳至Experience Manager。 上傳後，請務必發佈影像。
 1. 成功上傳並發佈影像後，在[變更縮圖]頁面中，選取[儲存變更]。****
 
    自訂縮圖會新增至您的視訊。
 
-## 變更Dynamic Media資產的Dynamic Media URL {#manifest-urls}
+## 變更動態媒體資產的Dynamic Media URL {#manifest-urls}
 
 在Dynamic Media中處理的視訊可用現成的檢視器使用。 或者，存取資訊清單URL並在自訂檢視器中播放。 以下是為影片擷取資訊清單URL的API。
 
@@ -1170,7 +1107,7 @@ String getVideoManifestURI(Resource resource, ManifestType manifestType, boolean
 
 ### 錯誤案例
 
-如果發生錯誤，API會傳回null。 例外狀況會記錄在Experience Manager錯誤記錄檔中。 所有這類記錄錯誤都以`Could not generate Video Manifest URI`開頭。 下列情況可能會導致此類錯誤：
+如果發生錯誤，API會傳回null。 Experience Manager錯誤記錄中會記錄例外狀況。 所有這類記錄錯誤都以`Could not generate Video Manifest URI`開頭。 下列情況可能會導致此類錯誤：
 
 * `IllegalArgumentException`會針對下列任一專案進行記錄：
 
@@ -1180,7 +1117,7 @@ String getVideoManifestURI(Resource resource, ManifestType manifestType, boolean
    * `onlyIfPublished`引數傳遞為true，但視訊未發佈。
    * 未使用Dynamic Media中的最適化視訊集擷取視訊。
 
-* 在連線到Dynamic Media時發生問題時，`IOException`會獲得記錄。
+* 在連線至Dynamic Media時發生問題時，`IOException`會獲得記錄。
 * 當傳遞的`manifestType`引數為`ManifestType.DASH`且未使用DASH格式處理視訊時，會記錄`UnsupportedOperationException`。
 
 以下範例為上述API使用以&#x200B;*HTTPWhiteBoard*&#x200B;規格撰寫的servlet。 選取每個索引標籤以取得程式碼語法。
@@ -1446,7 +1383,7 @@ public class DMSampleApiHttpContext extends ServletContextHelper {
 
 您在`/dmSample/dynamicmedia/video/manifestUrl`執行`GET`作業以叫用此servlet。 傳遞的查詢引數如下：
 
-| 查詢引數 | 說明 |
+| 查詢引數 | 描述 |
 | --- | --- |
 | `assetPath` | 強制。 產生`manifestUrl`之視訊的路徑。 |
 | `manifestType` | 選擇性。引數可以是DASH或HLS。 如果未傳遞，則預設為DASH。 |
@@ -1461,10 +1398,71 @@ public class DMSampleApiHttpContext extends ServletContextHelper {
 
 您可以透過下列方式叫用servlet：
 
-| 類型 | 說明 |
+| 類型 | 描述 |
 | :--- | --- |
 | HLS | `http://sample-aem-author.com/dmSample/dynamicmedia/video/manifestUrl?manifestType=HLS&assetPath=/content/dam/video-example/scenery.mp4`<br><br>若啟用DASH傳遞：<br>`{"manifestUrl":"https://s7d1.scene7.com/is/content/samplecompany/scenery-AVS.m3u8?packagedStreaming=true"}`<br><br>若停用DASH傳遞：<br>`{"manifestUrl":"https://s7d1.scene7.com/is/content/samplecompany/scenery-AVS.m3u8"}` |
 | 虛線 | `http://sample-aem-author.com/dmSample/dynamicmedia/video/manifestUrl?manifestType=DASH&assetPath=/content/dam/video-example/scenery.mp4`<br><br>若啟用DASH傳遞：<br>`{"manifestUrl":"https://s7d1.scene7.com/is/content/samplecompany/scenery-AVS.mpd"}`<br><br>若停用DASH傳遞：<br>`{}` |
 | 錯誤：資產路徑錯誤 | `http://sample-aem-author.com/dmSample/dynamicmedia/video/manifestUrl?manifestType=DASH&assetPath=/content/dam/video-example/scennnnnnery.mp4`<br><br>`{"errorString":"could not retrieve the resource from JCR"}` |
+
+
+
+
+<!-- OBSOLETE. REMOVED AS PER EMAIL FROM RIYA MIDHA ON WEDNESDAY, MARCH 5, 2025
+
+### Enable DASH, multiple caption and audio track support on your Dynamic Media account {#enable-dash}
+
+**About enabling DASH on your account**
+DASH (Digital Adaptive Streaming over HTTP) is the international standard for video streaming and is widely adopted across different video viewers. When DASH is enabled on your account, you get the option to choose from either DASH or HLS for adaptive video streaming. Or, you can opt for both with automatic switching between players when **[!UICONTROL auto]** is selected as the playback type in the Viewer preset.
+
+Some key benefits from enabling DASH on your account include the following:
+     
+* Package DASH stream video for adaptive bitrate streaming. This method leads to higher efficiency of delivery. Adaptive streaming ensures the best viewing experience for your customers.
+* Browser optimized streaming with Dynamic Media players switches between HLS and DASH streaming to ensure the best quality of service. The video player auto-switches to HLS when a Safari browser is used.
+* You can configure your preferred streaming method (HLS or DASH) by editing the video viewer preset.
+* Optimized video encoding ensures that no additional storage is used while enabling DASH capability. A single set of video encodings are created for both HLS and DASH to optimize video storage costs.
+* Helps make video delivery more accessible for your customers.
+* Get the streaming URL by way of APIs, too.
+
+Enabling DASH on your account requires two steps: 
+
+* Configuring Dynamic Media to use DASH, which you can easily do yourself.
+* Configuring Experience Manager 6.5 to use DASH which is done by way of an Adobe Customer Support case that you create and submit.
+
+When you create an Adobe Support case to enable DASH on your account, multiple caption and audio track support is automatically enabled as well. Once activated, all newly uploaded videos are processed using an updated backend architecture that supports adding multiple caption and audio tracks.
+
+>[!IMPORTANT]
+>
+>Any videos that you uploaded *before* enabling multiple caption and audio track support on your Dynamic Media account, [must be reprocessed](/help/assets/processing-profiles.md#reprocessing-assets). This video reprocessing step is necessary so that multiple caption and audio track capability is available to them. The video URLs continue to work and play as usual, after reprocessing.
+
+**To enable DASH, multiple caption and multiple audio track support on your Dynamic Media account:**
+
+<!-- 1. **Configure Dynamic Media for DASH** - In Dynamic Media on Experience Manager 6.5, navigate to [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr).
+
+1. Search for **AEM Assets Dynamic Media Video Advanced Streaming** feature flag.
+1. To enable (turn on) DASH, select the checkbox.
+1. Begin by **configuring Dynamic Media for DASH** - From Experience Manager, navigate to **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
+
+1. From the **[!UICONTROL Adobe Experience Manager Web Console Configuration]** page, scroll to the name *AEM Assets Dynamic Media Video Advanced Streaming Feature Flag*.
+
+1. To the left of the name, select the checkbox to enable (turn on) DASH.
+
+1. Select **[!UICONTROL Save]**.
+
+1. Now, use the Admin Console to start the [creation of a new support case](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html).
+1. To create a support case, follow the instructions while ensuring you provide the following information:
+
+    * Primary contact name, email, phone.
+    * Name of your Dynamic Media account.
+    * Specify that you want DASH, multiple caption and multiple audio track support enabled on your Dynamic Media account, on Experience Manager 6.5.
+   
+1. Adobe Customer Support adds you to the Customer Wait List based on the order in which requests are submitted.
+1. When Adobe is ready to handle your request, Customer Support contacts you to coordinate and set a target date for enablement.
+1. Customer support notifies you after completion.
+1. Now, you can do either one of the following:
+
+    * Create your [video viewer preset](/help/assets/managing-viewer-presets.md#creating-a-new-viewer-preset) as usual.
+    * [Add multiple caption and audio tracks](#add-msma) to your video. -->
+
+
 
 
