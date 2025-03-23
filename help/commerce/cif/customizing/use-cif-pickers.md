@@ -1,16 +1,16 @@
 ---
-title: CIF產品和類別選擇器的使用情況
+title: CIF產品和類別選擇器的使用方式
 description: 瞭解如何在您的客戶商務元件中使用CIF產品和類別選擇器，以支援作者和行銷人員有效使用商務產品和目錄資料。
 sub-product: Commerce
 topics: Development
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 activity: develop
 audience: developer
 feature: Commerce Integration Framework
 exl-id: 1e7c3748-92b5-45f1-8dd9-f1816e3e34aa
 solution: Experience Manager,Commerce
 role: Admin, Developer
-source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
+source-git-commit: a45b09c52d780a954e606d4cae73a3a02a8a6aa4
 workflow-type: tm+mt
 source-wordcount: '563'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # AEM內容與Commerce編寫選擇器 {#cif-pickers}
 
-AEM Content &amp; Commerce Authoring提供一套製作工具，可協助AEM作者和行銷人員有效使用商務產品資料和目錄。 產品選擇器和類別選擇器是CIF附加元件的一部分，由CIF核心元件使用。 專案可以在任何元件對話方塊中使用這些選擇器來選取產品或類別。
+AEM內容與Commerce製作提供一套製作工具，可協助AEM作者和行銷人員有效使用商務產品資料和目錄。 產品選擇器和類別選擇器屬於CIF附加元件的一部分，並由CIF核心元件使用。 專案可以在任何元件對話方塊中使用這些選擇器來選取產品或類別。
 
 ## 產品挑選器 {#product-picker}
 
