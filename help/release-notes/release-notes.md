@@ -6,9 +6,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
-source-git-commit: 64bc2ecbb2b5ef5847af4449562240a7c1ec45e9
+source-git-commit: 39ad2f3eedb35e98dc2239c0b81b3792a0ddc73f
 workflow-type: tm+mt
-source-wordcount: '6146'
+source-wordcount: '6158'
 ht-degree: 1%
 
 ---
@@ -45,13 +45,13 @@ ht-degree: 1%
 
 #### AEM Forms中的新GA功能 {#ga-aem-forms-sp22}
 
-* 新增在[互動式通訊批次API](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/interactive-communications/create-interactive-communication#output-format-print-channel)中啟用字型內嵌的支援 — 互動式通訊現在支援在透過批次API產生的PDF中內嵌Adobe Ming和Adobe Myungjo字型。 此增強功能可確保產生的檔案中能精確呈現文字，即使使用字型子集亦然，進而改善對PDF輸出中的多語言內容的支援。
+* 新增在[Interactive Communications Batch API](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/interactive-communications/create-interactive-communication#output-format-print-channel)中啟用字型內嵌的支援 — 現在，Interactive Communications支援在透過Batch API產生的PDF中內嵌Adobe Ming和Adobe Myungjo字型。 此增強功能可確保產生的檔案能正確呈現文字，即使使用字型子集亦然，改善了PDF輸出中的多語言內容支援。
 
-* [用於PDF協助工具的內容目錄API](/help/forms/using/aem-document-services-programmatically.md#auto-tag-pdf-documents-auto-tag-api) - OSGi上的AEM Forms現在支援新的TOC標籤API，以提升協助工具標準的PDF。 它讓使用者更容易透過輔助技術存取PDF。
+* [適用於PDF協助工具的內容目錄API](/help/forms/using/aem-document-services-programmatically.md#auto-tag-pdf-documents-auto-tag-api) - OSGi上的AEM Forms現在支援新的TOC標籤API，以增強PDF的協助工具標準。 它可讓具有輔助技術的使用者更容易存取PDF。
 
 * [片段XDP解析](/help/forms/using/assembler-service.md#resolve-references-on-crx-repository-resolve-references-on-crx-repository) - OSGi上的AEM Forms現在解析主要XDP中參考並儲存在AEM CRX存放庫中的片段XDP。
 
-* [PDF/A相容性增強功能](/help/forms/developing/pdf-a-documents.md#converting-documents-to-pdfa-documents-converting-documents-to-pdf-a-documents) — 現在，使用者可以將PDF轉換為PDF/A格式(1a、2a、3a)以進行封存，同時確保可存取性並驗證是否符合這些標準。
+* [PDF/A合規性增強功能](/help/forms/developing/pdf-a-documents.md#converting-documents-to-pdfa-documents-converting-documents-to-pdf-a-documents) — 現在，使用者可以將PDF轉換為PDF/A格式(1a、2a、3a)以進行封存，同時確保可存取性並驗證是否符合這些標準。
 
 * **支援靜態PDF檔案的自動調整字型大小** - AEM Forms Designer、OutputService和FormsService現在支援靜態PDF的自動調整字型大小。 如果使用者將文字、數值、密碼或日期時間欄位的字型大小設為0，則字型大小會自動調整這些欄位中的字型大小，而不會改變欄位的整體大小。 若要使用此功能，使用者會在自訂XCI中傳遞旗標： `<behaviorOverride>patch-LC-3921991:1</behaviorOverride>`。
 
@@ -71,7 +71,7 @@ Beta版功能為您提供獨一無二的機會，讓您以獨家方式存取尖�
 
 ### Sites {#sites}
 
-[AEM 6.5現已針對套用Feature Pack的Headless使用案例提供通用編輯器](/help/sites-developing/universal-editor/introduction.md)。
+[Universal Editor](/help/sites-developing/universal-editor/introduction.md)現在可在AEM 6.5上用於套用Feature Pack的Headless使用案例。
 
 ### [!DNL Assets]
 
@@ -97,8 +97,8 @@ IPTC索引標籤現在支援[!UICONTROL 替代文字]和[!UICONTROL 延伸說明
    * 資料夾
    * CSV報表(SITES-2874)
 
-* AEM Core Web Content Management需要RTF編輯器中超連結的協助工具標籤。 當文字元件中使用超連結時，錨點標籤應包含`aria-label`屬性，以確保熒幕朗讀程式可出於協助工具目的準確地閱讀及傳達連結文字。 (SITES-11511)
-* 在AEM中，清單檢視的表格標題中的互動式元素沒有必要的「按鈕」角色。 因此，NVDA熒幕助讀程式不會針對下清單格標題宣告預期的按鈕角色：標題、名稱、已修改、已發佈、預覽、範本、操作、工作流程。 表格標頭中的每個互動式元素都應指派一個「按鈕」角色，以確保與NVDA等輔助技術的相容性。 (SITES-10962)
+* AEM核心Web內容管理需要RTF編輯器中超連結的協助工具標籤。 當文字元件中使用超連結時，錨點標籤應包含`aria-label`屬性，以確保熒幕朗讀程式可出於協助工具目的準確地閱讀及傳達連結文字。 (SITES-11511)
+* 在AEM中，清單檢視的表格標頭中的互動式元素沒有必要的「按鈕」角色。 因此，NVDA熒幕助讀程式不會針對下清單格標題宣告預期的按鈕角色：標題、名稱、已修改、已發佈、預覽、範本、操作、工作流程。 表格標頭中的每個互動式元素都應指派一個「按鈕」角色，以確保與NVDA等輔助技術的相容性。 (SITES-10962)
 
 
 #### 管理員使用者介面{#sites-adminui-6522}
@@ -122,7 +122,7 @@ IPTC索引標籤現在支援[!UICONTROL 替代文字]和[!UICONTROL 延伸說明
 #### [!DNL Content Fragments]{#sites-contentfragments-6522}
 
 * 在升級的AEM 6.5.17中，儲存內容片段導致下列錯誤： *錯誤：無法儲存內容片段。* (SITES-22993)
-* 在AEM的發佈者上，`ContentFragmentModelOmniSearchHandler`中的未關閉資源解析程式發現問題。 (SITES-24903)
+* 在AEM的發佈者上，以`ContentFragmentModelOmniSearchHandler`中未關閉的資源解析程式識別出問題。 (SITES-24903)
 
 
 #### [!DNL Content Fragments] — 管理員{#sites-admin-6522}
@@ -146,15 +146,15 @@ IPTC索引標籤現在支援[!UICONTROL 替代文字]和[!UICONTROL 延伸說明
 
 #### 核心後端{#sites-core-backend-6522}
 
-* 在AEM編寫執行個體上報告了週期性`SegmentNotFoundException`錯誤。 重新啟動作者暫時解決此問題，但需要長期修正以防止再次發生。 (SITES-22573)
-* 提出有關AEM Sites中時間表功能的問題，特別是處理註解上遺失`cq:lastModified`屬性的問題。 套用AEM 6.5.20後，無法確定現有內容是否需要針對遺失的屬性進行修正，或者時間軸是否已更新為在沒有時間軸的情況下正確運作。 (SITES-21861)
+* 在AEM作者執行個體上報告了週期性`SegmentNotFoundException`錯誤。 重新啟動作者暫時解決此問題，但需要長期修正以防止再次發生。 (SITES-22573)
+* 提出有關AEM Sites中時間表功能的問題，特別是處理註解上遺失`cq:lastModified`屬性的問題。 套用AEM 6.5.20後，無法確定現有內容是否需要針對遺失的屬性進行修正，或時間軸是否已更新為在沒有時間軸的情況下正確運作。 (SITES-21861)
 
 
 #### 核心元件{#sites-core-components-6522}
 
 * 從AEM 6.5.18升級至6.5.21後，檢查元件即時使用的功能發現問題。 嘗試捲動即時使用頁面上的其他專案時，即使在UI中看到「載入更多專案」，表格仍無法載入更多結果。 (SITES-23919)
-* 在包含兩個索引標籤的AEM元件對話方塊中，必填欄位驗證時報告了問題。 索引標籤1包含RTF編輯器(RTE)和文字欄位，而索引標籤2包含路徑欄位和文字欄位。 雖然所有欄位都標示為必填(`required=true`)，錯誤通知仍錯誤地保留在索引標籤1中，即使在填寫所有必填欄位之後也是如此。 相反地，標籤2中的錯誤如預期般清除。 (SITES-23243)
-* 移轉至AEM 6.5.21後，HTML範本語言`data-sly-include`陳述式不再如預期運作，特別是無法支援`appendPath`和`prependPath`運算式。 因此，即使內含資源的輸出在移轉前可正常運作，仍無法正確轉譯。 此問題會導致依賴這些運算式進行路徑操作的資源呈現失敗。 (GRANITE-52970)
+* 在包含兩個索引標籤的AEM元件對話方塊中，必填欄位驗證出現問題。 索引標籤1包含RTF編輯器(RTE)和文字欄位，而索引標籤2包含路徑欄位和文字欄位。 雖然所有欄位都標示為必填(`required=true`)，錯誤通知仍錯誤地保留在索引標籤1中，即使在填寫所有必填欄位之後也是如此。 相反地，標籤2中的錯誤如預期般清除。 (SITES-23243)
+* 移轉至AEM 6.5.21後，HTML範本語言`data-sly-include`陳述式不再如預期運作，尤其是無法支援`appendPath`和`prependPath`運算式。 因此，即使內含資源的輸出在移轉前可正常運作，仍無法正確轉譯。 此問題會導致依賴這些運算式進行路徑操作的資源呈現失敗。 (GRANITE-52970)
 
 
 <!-- #### Campaign integration{#sites-campaign-integration-6522}
@@ -166,7 +166,7 @@ IPTC索引標籤現在支援[!UICONTROL 替代文字]和[!UICONTROL 延伸說明
 
 * 在清單檢視中按一下&#x200B;**Title**&#x200B;欄標題時，體驗片段未依照預期的標題排序。 觀察到畫面快速閃爍，但未排序。 (SITES-23706)
 
-* 在AEM 6.5.17中，使用現成可用的功能將頁面元件轉換為體驗片段時遇到問題。 轉換後，體驗片段在編輯期間顯示為空，儘管在使用的頁面上正確顯示。 該問題源自不正確的節點建立：元件節點放在根/容器節點之外，違反了範本的結構。 您必須手動將元件節點移至正確的根/容器節點，才能恢復片段的可編輯性。 (SITES-22974)
+* 在AEM 6.5.17中，使用現成可用功能將頁面元件轉換為體驗片段時遇到問題。 轉換後，體驗片段在編輯期間顯示為空，儘管在使用的頁面上正確顯示。 該問題源自不正確的節點建立：元件節點放在根/容器節點之外，違反了範本的結構。 您必須手動將元件節點移至正確的根/容器節點，才能恢復片段的可編輯性。 (SITES-22974)
 
 * 從AEM 6.5.11移轉至6.5.20後，體驗片段上的雲端設定無法正確儲存。 雖然設定似乎儲存在`crx/de`中，但在重新開啟設定主控台時不會顯示，這表示持續性問題。 (SITES-22287)
 
@@ -206,7 +206,7 @@ LinkCheckerTask無法驗證，因為HTTP使用者端在基本驗證之前嘗試N
 ### [!DNL Assets]{#assets-6522}
 
 * 使用「連線Assets」功能時，在AEM Assets中進行的更新不會反映在AEM Sites環境中。 (ASSETS-42344)
-* 在Experience Manager內將資產從一個位置移動到另一個位置時，資產發佈狀態出現問題。 (ASSETS-41158)
+* 在Experience Manager中將資產從一個位置移動到另一個位置時，資產發佈狀態出現問題。 (ASSETS-41158)
 * 使用API上傳資產導致`unclosed resource resolver`錯誤訊息。 (ASSETS-41049)
 * 升級至Adobe Experience Manager Service Pack 21後，`AssetReferenceResolverImpl`參考查詢發生問題。 (ASSETS-40384)
 * 在AEM 6.5.19版中，從搜尋面板結果中移除一個選項時，也會取消勾選所有其他可用的核取方塊。 (ASSETS-37335)
@@ -232,27 +232,27 @@ Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on
 ### Forms {#forms-bug-fixes-sp22}
 
 * 在AEM Forms中已儲存的草稿中，為檔案附件產生的URL未反映已設定的Apache Sling Resource Resolver Factory對應。 (FORMS-16949)
-* 當使用者在AEM Forms Service Pack 19 (6.5.19.0)預覽信函時，內容未正確對齊，因為空格似乎遺失且字元`x`出現在某些位置。 (FORMS-16670)
-* 當使用者在AEM Forms Service Pack 18 (6.5.18.0)嘗試使用CIF通訊協定列印檔案時，失敗並出現錯誤：(FORMS-16629)
+* 當AEM Forms Service Pack 19 (6.5.19.0)的使用者預覽信函時，內容未正確對齊，因為空格遺失且字元`x`出現在某些位置。 (FORMS-16670)
+* 當使用者在AEM Forms Service Pack 18 (6.5.18.0)嘗試使用CIFS通訊協定列印檔案時，它會失敗並出現錯誤： (FORMS-16629)
   `ALC-OUT-001-401: Unknown error while printing using CIFS on the Printer: \\\\\\\\NSMVPLUETEST01\\\\TH_Test`。
 * 當使用者從AEM Forms Service Pack 17 (6.5.17.0)升級為AEM Forms Service Pack 20 (6.5.20.0)時，規則編輯器圖示未出現在表單容器層級。 (FORMS-16430)
 * 當使用者從AEM Forms Service Pack 17 (6.5.17.0)升級為AEM Forms Service Pack 21 (6.5.21.0)時，修改的最適化表單提交URL路徑無法運作。 (FORMS15894)
-* 在AEM Forms Service Pack 19 (6.5.19.0)上，AEM Forms 6.5PDF/A驗證對某些檔案會失敗，錯誤為`creation date and modification date mismatch with timezone`，同時它會在合規性檢查的Acrobat ProPDF/A驗證上順利執行。 (FORMS-15840)
+* 在AEM Forms Service Pack 19 (6.5.19.0)上，AEM Forms 6.5 PDF/A驗證某些檔案失敗，錯誤為`creation date and modification date mismatch with timezone`，同時在Acrobat Pro PDF/A驗證上順利執行以檢查合規性。 (FORMS-15840)
 * 當使用者在OSGi上的AEM Forms Service Pack 15 (6.5.15.0)的網站頁面上使用「草稿和提交」元件刪除表單草稿時，刪除失敗。 (FORMS-15755)
 * 當使用者擁有包含超過999個專案的SharePoint清單並且表單包含附件時，表單提交失敗。 (FORMS-15057)
 * 已新增驗證規則，以確保「結束日期」不會早於「開始日期」，以及驗證訊息的自訂指令碼。 不過，當「結束日期」早於「開始日期」時，不會觸發驗證。 (FORMS-14757)
 * 當使用者在最適化表單的表格上使用顯示/隱藏功能時，欄位大小會縮小。 新增和移除列時，欄位大小會自我修正。 (FORMS-14756)
 * 當使用者在AEM Forms Service Pack 19 (6.5.19.0)上列印表單時，某些表單在伺服器上無法正確轉譯，導致在列印過程中發生錯誤。 (FORMS14734)
 * 當使用者從AEM Forms Service Pack 15 (6.5.15.0)更新至Service Pack 19 (6.5.19.0)時，就會發生問題。 設定為`num{$zzz,zz9.99}`的自訂顯示模式在預覽和代理程式UI中無法正確轉譯。 (FORMS-14694)
-* 當使用者在互動式通訊中使用儲存的資料xml預覽信函時，信函卡在AEM UI上的「正在載入」狀態。 使用相同的XML再次預覽信函可以正常運作。 (FORMS-14521)
+* 當使用者使用儲存的資料xml在互動式通訊中預覽信函時，信函在AEM UI上卡在「正在載入」狀態。 使用相同的XML再次預覽信函可以正常運作。 (FORMS-14521)
 * 在AEM Forms Service Pack 20 (6.5.20.0)中，使用者使用最適化表單中的「傳送電子郵件」按鈕傳送含附件的電子郵件時，會發現問題。 附件名稱會出現在下一行而非內嵌。 (FORMS-14426)
-* 當使用者在AEM Forms中產生PDF，其中專案符號清單設定為預設「磁碟」樣式，PDF會失敗Adobe Acrobat的協助工具中的協助工具檢查。 具有「專案符號」和「正方形」樣式的清單會通過協助工具檢查。 (FORMS-13802、LC-3922179)
-* 當使用者在獨立RHEL8 JBoss®設定上從AEMForms-6.5.0-0065升級到AEMForms-6.5.0-0087時，無法連線到LiveCycle服務容器。 (FORMS-15907) *
+* 當使用者在AEM Forms中產生PDF且專案符號清單設定為預設「磁碟」樣式時，PDF會失敗Adobe Acrobat的協助工具中的協助工具檢查。 具有「專案符號」和「正方形」樣式的清單會通過協助工具檢查。 (FORMS-13802、LC-3922179)
+* 當使用者在獨立RHEL8 JBoss®設定上從AEMForms-6.5.0-0065升級為AEMForms-6.5.0-0087時，無法連線到LiveCycle服務容器。 (FORMS-15907) *
 * 在JEE版AEM Forms上，在AEM Workspace中，選取先前提交的表單以開始新表單程式會造成問題。 預先填入資料的Forms會覆寫所有先前提交的資料，並移除手動填寫的欄位。 (FORMS-15376)
 * 在AEM Forms Service Pack 20 (6.5.20.0)上，當使用者使用PDFG服務將Tiff檔案轉換為PDF時，它會失敗並出現錯誤： (FORMS-14879) ALC-PDG-011-028 — 將輸入影像檔案轉換為PDF時發生錯誤。 com/sun/image/codec/jpeg/JPEGCodec
 * 在JEE jar檔案的AEM Forms中升級：現在包含`commons-collections:commons-collections:jar`資料庫，以改進各種AEM Forms JEE作業的相依性解析度和功能，例如：
    * 組合器工作增強功能，可改善工作處理和錯誤處理。
-   * PDF Generator(PDFG)工作增強功能，確保檔案產生和轉換作業更順暢。
+   * PDF Generator (PDFG)工作增強功能，確保檔案產生和轉換的作業更順暢。
    * LC-Upgrade Job增強功能可改善升級程式，同時確保版本之間的穩定轉換。
    * Rights Management工作增強功能，可保護檔案處理安全，並改善Rights Management功能。
    * 程式管理工作增強功能，提供更可靠的工作處理及系統管理。
@@ -266,18 +266,18 @@ Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on
 
 #### XMLFM {#forms-xmlfm-sp22}
 
-* 在AEM Forms Service Pack 21 (6.5.21.0)中，當使用者使用XMLFM將非標準標籤新增到PDF時，檔案無法符合PDF規格要求。 (LC-3922484)
-* 當使用者使用AEM Forms Service Pack 20 (6.5.20.0)上的輸出服務產生PDF時，它會因CORBA.COMM_FAILURE而失敗並顯示錯誤： `15:04:35,973 ERROR [com.adobe.formServer.PA.XMLFormAgentWrapper] (default task-14) ALCOUT-002-013: XMLFormFactory, PAexecute failure: "org.omg.CORBA.COMM_FAILURE"`。 當協助工具角色「參考」從XDP範本的子表單中排除時，服務即成功通過。 但是，508規範需要此角色。 (LC-3922402)
-* 當使用者將XFA表單轉換為AcroFormPDF時，它會失敗。 (LC-3922363)
-* 在AEM Forms Service Pack 19 (6.5.19.0)中，當使用者使用未命名的子表單建立XDP時，FS_DATA_SOM對於未命名的子表單顯示為空白。 (LC-3922034)
+* 在AEM Forms Service Pack 21 (6.5.21.0)中，當使用者使用XMLFM將非標準標籤新增至PDF時，檔案無法符合PDF規格要求。 (LC-3922484)
+* 當使用者使用AEM Forms Service Pack 20 (6.5.20.0)上的輸出服務產生PDF時，它會因CORBA.COMM_FAILURE而失敗，並顯示錯誤： `15:04:35,973 ERROR [com.adobe.formServer.PA.XMLFormAgentWrapper] (default task-14) ALCOUT-002-013: XMLFormFactory, PAexecute failure: "org.omg.CORBA.COMM_FAILURE"`。 當協助工具角色「參考」從XDP範本的子表單中排除時，服務即成功通過。 但是，508規範需要此角色。 (LC-3922402)
+* 當使用者將XFA表單轉換為AcroForm PDF時，它會失敗。 (LC-3922363)
+* 在AEM Forms Service Pack 19 (6.5.19.0)中，當使用者使用未命名子表單建立XDP時，未命名子表單的FS_DATA_SOM顯示為空白。 (LC-3922034)
 
 #### Forms Designer {#forms-designer-sp22}
 
-* 當使用者透過選擇AEM Forms Designer 6.5.21.0版中的片段資料夾來開啟片段資料庫時，它會當機。 (LC-3922439)
-* 當使用者解除安裝32位元AEM Forms Designer 6.5.20.0版並安裝AEM Forms Designer 6.5.21.0版時，Forms Designer無法啟動。 錯誤記錄檔顯示Java Runtime Environment (JRE)的記憶體配置不足。 (LC-3922404)
-* 使用者安裝AEM Forms Designer 6.5.20.0版後，「巨集」選項不會出現在功能表中，只有預設的「協助工具檢查器」巨集出現且無法執行。 (LC-3922321)
-* 當使用者新增用於在AEM Forms Designer 6.5.20.0版中建立XDP的新範本位置時，Forms Designer當機。 (LC-3922316)
-* 當使用者使用AEM Forms 6.5 Service Pack 15 (6.5.15.0) OSGI中的ExportData方法產生輸出時，它會產生不完整和不正確的資料。 (LC-3922340)
+* 當使用者透過選擇AEM Forms Designer版本6.5.21.0中的片段資料夾來開啟片段資料庫時，它會當機。 (LC-3922439)
+* 當使用者解除安裝32位元AEM Forms Designer版本6.5.20.0並安裝AEM Forms Designer版本6.5.21.0時，Forms Designer無法啟動。 錯誤記錄檔顯示Java Runtime Environment (JRE)的記憶體配置不足。 (LC-3922404)
+* 使用者安裝AEM Forms Designer版本6.5.20.0後，「巨集」選項不會出現在功能表中，只有預設的「協助工具檢查程式」巨集出現且無法執行。 (LC-3922321)
+* 當使用者新增用於在AEM Forms Designer版本6.5.20.0中建立XDP的新範本位置時，Forms Designer當機。 (LC-3922316)
+* 當使用者使用AEM Forms 6.5 Service Pack 15 (6.5.15.0) OSGI中的ExportData方法產生輸出時，會產生不完整和不正確的資料。 (LC-3922340)
 
 
 <!-- #### [!DNL Adaptive Forms] {#forms-6522}
@@ -323,7 +323,7 @@ Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on
 #### CRX {#foundation-crx-6522}
 
 * 依據CRX封裝管理員左側功能表中的&#x200B;**群組**&#x200B;的排序無法運作。 (GRANITE-53277)
-* AEM中的「封裝管理員」預設會限制安裝較低封裝版本，但允許強制安裝較舊版本。 不過，使用強制安裝選項可能會干擾透過標準管道的未來安裝。 例如，如果已安裝1.21版並新增1.24版，則安裝會成功，並列出兩個版本。 不過，嘗試安裝1.22版而非1.24版會透過管道失敗，但如果強制安裝則會運作，並列出所有版本。 同樣地，如果版本1.24已存在，則會封鎖安裝1.23版，因為管道不允許降級。 (GRANITE-53263)
+* 依預設，AEM中的封裝管理員會限制安裝較低封裝版本，但允許強制安裝較舊版本。 不過，使用強制安裝選項可能會干擾透過標準管道的未來安裝。 例如，如果已安裝1.21版並新增1.24版，則安裝會成功，並列出兩個版本。 不過，嘗試安裝1.22版而非1.24版會透過管道失敗，但如果強制安裝則會運作，並列出所有版本。 同樣地，如果版本1.24已存在，則會封鎖安裝1.23版，因為管道不允許降級。 (GRANITE-53263)
 
 
 #### Granite{#foundation-granite-6522}
@@ -335,7 +335,7 @@ Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on
 
 #### 整合{#foundation-integrations-6522}
 
-* 新增Cloud Service使用者介面的法律歸因宣告。 (FORMS-16373)
+* 新增雲端服務使用者介面的法律歸因宣告。 (FORMS-16373)
 * 為&#x200B;**fd-cloudservice**&#x200B;使用者新增讀取許可權，以存取hCaptcha和Turnstile設定，讓使用者擷取驗證碼轉譯和驗證所需的使用者端ID和使用者端密碼。 此外，已實施存取控制清單模型來管理對這些設定的存取。 (FORMS-16360)
 
 
@@ -351,16 +351,16 @@ Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on
 
 #### Platform{#foundation-platform-6522}
 
-* AEM 6.5.18中引入的企業資訊管理追蹤在計算產品採用分數時造成異常。 Adobe量度資料庫會覆寫Omega追蹤資料庫所提供的使用者資料，進而造成此問題。 因此，許多AEM Sites和AEM Assets客戶的採用分數從2024年2月起降至零。 (CQ-4358438)
+* AEM 6.5.18中引入的企業資訊管理追蹤，導致計算產品採用分數時出現異常。 Adobe量度資料庫會覆寫Omega追蹤資料庫所提供的使用者資料，進而造成此問題。 因此，許多AEM Sites和AEM Assets客戶的採用分數從2024年2月起降至零。 (CQ-4358438)
 * 在生產環境中，發現記憶體回收行程未正確處理標籤。 具體而言，當標籤移動或重新命名時，記憶體回收行程無法更新`cq:MovedTo`屬性，導致標籤從頁面中消失。 (CQ-4358293)
-* AEM 6.5.19中的ContextHub問題導致區段在內容路徑新增到AEM執行個體時無法正確解析。 該問題尤其會影響頁面元件產生之JavaScript物件中的URL欄位，其中缺少必要的內容路徑前置詞。 此遺漏會使區段無法如預期運作。 (SITES-21852)
-* 更新AEM Quickstart以使用程式庫`commons-collections-3.2.2-adobe-2`。 此更新可確保應用程式能夠繼續順利執行。 (NPR-42150)
+* AEM 6.5.19中的ContextHub問題，導致將內容路徑新增至AEM執行個體時，區段無法正確解析。 該問題尤其會影響頁面元件產生之JavaScript物件中的URL欄位，其中缺少必要的內容路徑前置詞。 此遺漏會使區段無法如預期運作。 (SITES-21852)
+* 更新AEM快速入門以使用程式庫`commons-collections-3.2.2-adobe-2`。 此更新可確保應用程式能夠繼續順利執行。 (NPR-42150)
 * AEM 6.5中的SMTP OAuth2設定與AEM as a Cloud Service中使用的差異極大。 為了簡化設定並確保一致性，AEM 6.5中的設定必須符合AEM as a Cloud Service中使用的標準。 (GRANITE-53273)
 * 當您按一下![指南針圖示](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Compass_18_N.svg) > ![專案圖示](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Project_18_N.svg)專案，然後將滑鼠指標停留在![導軌左側圖示](https://spectrum.adobe.com/static/icons/workflow_18/Smock_RailLeft_18_N.svg) ![向下V形圖示](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ChevronDown_18_N.svg)時，發現了一個問題，工具提示文字「僅內容」前出現一個抑音符號。 (CQ-4356633)
 
 #### 安全性{#foundation-security-6522}
 
-* AEM中的過時JSAFE密碼編譯程式庫（版本6.0.0）發生問題。 AEM 6.5.22中包含有JSAFE 6.2.5版的修補套件組合。 (NPR-42006)
+* AEM中的過時JSAFE密碼編譯程式庫（6.0.0版）發生問題。 AEM 6.5.22中包含有JSAFE 6.2.5版的修補套件組合。 (NPR-42006)
 * 在XSS檢查期間驗證允許的通訊協定時，處理常式會與「http」和「https」比較。 但是，URL物件的`protocol`屬性傳回這些帶有結尾冒號的值，例如`http:`和`https:`。 此不相符專案會導致驗證問題。 為確保正確剖析，協定檢查需要說明冒號或相應地調整比較邏輯。  (NPR-42119)
 * 在IBM®WebSphere®Liberty Profile和Semeru Java 8.0上安裝AEM 6.5.21 (先前版本為AEM 6.5.19)後，無法開啟任何頁面。 錯誤記錄檔指出與需要不同套件組合的servlet版本相關的問題。 若要解決此問題，必須還原`org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar`的相依性，因為它與問題有關。 (NPR-42116)
 * 數個瀏覽器正在逐步停止支援&#x200B;**SameSite=None** Cookie （用於允許跨網站存取Cookie）。 作為替代方法，正在引入&#x200B;**已分割的Cookie**。 這些Cookie會依其使用環境來隔離儲存空間，藉由防止跨網站追蹤來增強隱私權和安全性，同時仍允許Cookie在特定分割內運作，例如內嵌的第三方內容。 (GRANITE-51953)
@@ -399,7 +399,7 @@ Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on
 <!-- Remaining content from here to bottom stays the same except for version updating as needed as per update team feedback. -->
 
 * [!DNL Experience Manager] 6.5.22.0需要[!DNL Experience Manager] 6.5。如需詳細指示，請參閱[升級檔案](/help/sites-deploying/upgrade.md)。<!-- UPDATE FOR EACH NEW RELEASE -->
-* Service Pack下載專案可在Adobe[軟體發佈](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.22.0.zip)上取得。
+* Service Pack下載專案可在Adobe [軟體發佈](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.22.0.zip)上取得。
 * 在具有MongoDB和多個執行個體的部署上，使用封裝管理員在其中一個作者執行個體上安裝[!DNL Experience Manager] 6.5.22.0。<!-- UPDATE FOR EACH NEW RELEASE -->
 
 >[!IMPORTANT]
@@ -435,7 +435,7 @@ Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on
 
 >[!NOTE]
 >
->Experience Manager6.5.22.0不支援Bootstrap安裝。<!-- UPDATE FOR EACH NEW RELEASE -->
+>Experience Manager 6.5.22.0不支援Bootstrap安裝。<!-- UPDATE FOR EACH NEW RELEASE -->
 
 **驗證安裝**
 
@@ -455,7 +455,7 @@ Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on
 >
 >調適型表單功能 (適用於 [AEM 6.5 QuickStart](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65/content/implementing/deploying/deploying/deploy)) 僅用於探索和評估目的。若要供生產使用，必須獲得 AEM Forms 的有效許可；調適型表單的功能需要適當許可才可使用。
 
-### 安裝Experience Manager內容片段的GraphQL索引套件{#install-aem-graphql-index-add-on-package}
+### 安裝適用於Experience Manager內容片段的GraphQL索引套件{#install-aem-graphql-index-add-on-package}
 
 使用GraphQL的客戶必須安裝[Experience Manager內容片段搭配GraphQL索引套件1.1.1](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/cfm-graphql-index-def-1.1.1.zip)。
 
@@ -537,7 +537,7 @@ Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on
       * `cache`
       * `diff-cache`
 
-   1. 安裝Service Pack，或重新啟動Experience Manageras a Cloud Service。
+   1. 安裝Service Pack，或重新啟動Experience Manager as a Cloud Service。
 `cache`和`diff-cache`的新資料夾會自動建立，而您在`error.log`中不會再遇到與`mvstore`相關的例外狀況。
 
 * 更新可能已使用您內容模型的自訂API名稱的GraphQL查詢，以改用內容模型的預設名稱。
@@ -577,11 +577,11 @@ Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on
 * 使用者可以在[!DNL Assets]中重新命名階層中的資料夾，並將巢狀資料夾發佈至[!DNL Brand Portal]。 但是，在重新發佈根資料夾之前，[!DNL Brand Portal]中的資料夾標題不會更新。
 
 * 安裝[!DNL Experience Manager] 6.5.x.x期間可能會顯示下列錯誤和警告訊息：
-   * 「當使用Adobe Target API （IMS驗證）在[!DNL Experience Manager]中設定Target Standard整合時，將體驗片段匯出至Target會導致建立錯誤的選件型別。 Target會建立多個具有「HTML」/來源「Adobe Target Classic」型別的選件，而不是「體驗片段」/來源「Adobe Experience Manager」。
+   * 「當使用Adobe Target API （IMS驗證）在[!DNL Experience Manager]中設定Target Standard整合時，將體驗片段匯出至Target會導致建立錯誤的選件型別。 Target會建立多個型別為「HTML」/來源「Adobe Target Classic」的選件，而非「體驗片段」/來源「Adobe Experience Manager」型別。
    * `com.adobe.granite.maintenance.impl.TaskScheduler`：在`granite/operations/maintenance`找不到維護期間。
    * 使用彙總函式(例如SUM、MAX和MIN)時，Adaptive Form伺服器端驗證會失敗(CQ-4274424)。
    * `com.adobe.granite.maintenance.impl.TaskScheduler` ：在`granite/operations/maintenance`找不到維護期間。
-   * 透過Shoppable Banner檢視器預覽資產時，不會顯示Dynamic Media互動影像中的熱點。
+   * 透過Shoppable Banner檢視器預覽資產時，Dynamic Media互動式影像中的熱點不可見。
    * `com.adobe.cq.social.cq-social-jcr-provider bundle com.adobe.cq.social.cq-social-jcr-provider:1.3.5 (395)[com.adobe.cq.social.provider.jcr.impl.SpiSocialJcrResourceProviderImpl(2302)]` ：等待登入變更完成解除登入逾時。
 
 * 從AEM 6.5.15開始，```org.apache.servicemix.bundles.rhino```套件提供的Rhino JavaScript Engine有新的提升行為。 使用嚴格模式(```use strict;```)的指令碼必須宣告其正確的變數。 否則，它們不會執行，並最終擲回執行階段錯誤。
@@ -595,14 +595,20 @@ Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on
 
 ### AEM Forms的已知問題 {#known-issues-aem-forms-6522}
 
+* 如果HTML到PDF的轉換在SLES 15 SP6 Linux®伺服器上失敗，錯誤為： `Auto configuration failed 4143511872:error:0E079065:configuration file routines:DEF_LOAD_BIO:missing equal sign:conf_def.c:362:line 57`。 執行以下步驟以解決問題：
+   1. 啟動容器，並使用下列命令設定`OPENSSL_CONF`環境變數：
+      `export OPENSSL_CONF=/etc/ssl`
+或者，您可以在啟動容器時設定環境變數：
+      `-e OPENSSL_CONF=/etc/ssl`
+   1. 重新啟動伺服器。
 * 安裝AEM Forms JEE Service Pack 21 (6.5.21.0)後，如果在`<AEM_Forms_Installation>/lib/caching/lib`資料夾(FORMS-14926)下找到Geode jar `(geode-*-1.15.1.jar and geode-*-1.15.1.2.jar)`的重複專案，請執行以下步驟以解決問題：
 
    1. 停止儲位（如果它們正在執行）。
-   1. 停止AEM伺服器。
-   1. 移至`<AEM_Forms_Installation>/lib/caching/lib`。
-   1. 移除除`geode-*-1.15.1.2.jar`以外的所有Geode修補程式檔案。 確認只有具有`version 1.15.1.2`的Geode jar存在。
-   1. 在管理員模式中開啟命令提示字元。
-   1. 使用`geode-*-1.15.1.2.jar`檔案安裝Geode修補程式。
+   2. 停止AEM伺服器。
+   3. 移至`<AEM_Forms_Installation>/lib/caching/lib`。
+   4. 移除除`geode-*-1.15.1.2.jar`以外的所有Geode修補程式檔案。 確認只有具有`version 1.15.1.2`的Geode jar存在。
+   5. 在管理員模式中開啟命令提示字元。
+   6. 使用`geode-*-1.15.1.2.jar`檔案安裝Geode修補程式。
 
 * 如果使用者嘗試預覽具有已儲存XML資料的草稿信件，它會在某些特定信件中陷入`Loading`狀態。 若要下載及安裝Hotfix，請參閱[Adobe Experience Manager Forms Hotfix](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)文章。 (FORMS-14521)
 
@@ -615,19 +621,19 @@ Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on
    1. 刪除名稱為`com.adobe.granite.ui.commons-5.10.26.jar`的組合。
    1. 重新啟動AEM伺服器。
 
-* 使用Forms附加元件更新至AEM Forms Service Pack 20 (6.5.20.0)後，依賴舊版Adobe Analytics Cloud Service （使用認證型驗證）的設定會停止運作。 此問題導致Analytics規則無法正確執行。 若要下載及安裝Hotfix，請參閱[Adobe Experience Manager Forms Hotfix](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)文章。 (FORMS-15428)
+* 使用Forms附加元件更新至AEM Forms Service Pack 20 (6.5.20.0)後，依賴舊版Adobe Analytics Cloud Service （使用認證型驗證）的設定停止運作。 此問題導致Analytics規則無法正確執行。 若要下載及安裝Hotfix，請參閱[Adobe Experience Manager Forms Hotfix](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)文章。 (FORMS-15428)
 
-* 當使用者在JEE伺服器上更新至AEM Forms Service Pack 20 (6.5.20.0)，並使用輸出服務產生PDF時，PDF會出現協助工具問題。 若要下載及安裝Hotfix，請參閱[Adobe Experience Manager Forms Hotfix](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)文章。 (LC-3922112)
-* 當使用者使用JEE上的輸出服務產生標籤PDF時，會顯示「不適當的結構警告」。 若要下載及安裝Hotfix，請參閱[Adobe Experience Manager Forms Hotfix](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)文章。 (LC-3922038)
+* 當使用者在JEE伺服器上更新至AEM Forms Service Pack 20 (6.5.20.0)，並使用輸出服務產生PDF時，PDF會產生協助工具問題。 若要下載及安裝Hotfix，請參閱[Adobe Experience Manager Forms Hotfix](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)文章。 (LC-3922112)
+* 當使用者使用JEE上的輸出服務產生已標籤PDF時，會顯示「不適當的結構警告」。 若要下載及安裝Hotfix，請參閱[Adobe Experience Manager Forms Hotfix](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)文章。 (LC-3922038)
 * 在AEM Forms JEE上提交表單時，會從資料中移除重複的XML元素例項。 若要下載及安裝Hotfix，請參閱[Adobe Experience Manager Forms Hotfix](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)文章。 (LC-3922017)
-* 當Linux®環境中的使用者在HTML中轉譯最適化表單（在JEE上）時，它將無法正確轉譯。 若要下載及安裝Hotfix，請參閱[Adobe Experience Manager Forms Hotfix](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)文章。 (LC-3921957)
+* 當Linux®環境中的使用者在HTML中轉譯調適型表單（在JEE上）時，該表單將無法正確轉譯。 若要下載及安裝Hotfix，請參閱[Adobe Experience Manager Forms Hotfix](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)文章。 (LC-3921957)
 * 當使用者使用AEM Forms JEE上的輸出服務將XTG檔案轉換為PostScript格式時，它會失敗並出現錯誤： `AEM_OUT_001_003: Unexpected Exception: PAExecute Failure: XFA_RENDER_FAILURE`。 若要下載及安裝Hotfix，請參閱[Adobe Experience Manager Forms Hotfix](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)文章。 (LC-3921720)
 * 在JEE伺服器上升級至AEM Forms Service Pack 18 (6.5.18.0)後，當使用者提交表單時，將無法轉譯HTML5或PDF forms，並且XMLFM會當機。 若要下載及安裝Hotfix，請參閱[Adobe Experience Manager Forms Hotfix](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)文章。 (LC-3921718)
 * 在互動式通訊代理程式UI的列印預覽中，所有欄位值都會不一致地顯示貨幣符號（例如美元符號$）。 對於最多999的值會顯示它，但對於1000或以上的值則遺失。 (FORMS-16557)
 * 互動式通訊中巢狀配置片段XDP的任何修改都不會反映在IC編輯器中。 (FORMS-16575)
 * 在互動式通訊代理程式UI的列印預覽中，部分計算值無法正確顯示。 (FORMS-16603)
 * 在「列印預覽」中檢視信函時，內容會變更。 也就是說，有些空格會消失，而某些字母會取代為「x」。 (FORMS-15681)
-* 當使用者設定WebLogic 14c執行個體時，在JBoss®上執行的JEE上的AEM Forms Service Pack 21 (6.5.21.0)中的PDFG服務會因涉及SLF4J程式庫的類別載入器衝突而失敗。 錯誤顯示如下(CQDOC-22178)：
+* 當使用者設定WebLogic 14c執行個體時，在JBoss®上執行的JEE上的AEM Forms Service Pack 21 (6.5.21.0)中的PDFG服務會失敗，因為類別載入器衝突涉及SLF4J程式庫。 錯誤顯示如下(CQDOC-22178)：
 
   ```java
   Caused by: java.lang.LinkageError: loader constraint violation: when resolving method "org.slf4j.impl.StaticLoggerBinder.getLoggerFactory()Lorg/slf4j/ILoggerFactory;"
@@ -641,8 +647,8 @@ Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on
 
 下列文字檔案列出此[!DNL Experience Manager] 6.5 Service Pack發行版本中包含的OSGi套件組合和內容套件：
 
-* [Experience Manager6.5.22.0](/help/release-notes/assets/65220-bundles.txt)中包含的OSGi套件組合清單<!-- UPDATE FOR EACH NEW RELEASE -->
-* [Experience Manager6.5.22.0](/help/release-notes/assets/65220-packages.txt)中包含的內容套件清單<!-- UPDATE FOR EACH NEW RELEASE -->
+* [Experience Manager中包含的OSGi套件組合清單6.5.22.0](/help/release-notes/assets/65220-bundles.txt) <!-- UPDATE FOR EACH NEW RELEASE -->
+* [Experience Manager中包含的內容套件清單6.5.22.0](/help/release-notes/assets/65220-packages.txt) <!-- UPDATE FOR EACH NEW RELEASE -->
 
 ## 受限制的網站{#restricted-sites}
 
@@ -655,4 +661,4 @@ Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on
 >
 >* [[!DNL Experience Manager] 產品頁面](https://business.adobe.com/products/experience-manager/adobe-experience-manager.html)
 >* [[!DNL Experience Manager] 6.5檔案](https://experienceleague.adobe.com/en/docs/experience-manager-65)
->* [訂閱Adobe優先順序產品更新](https://www.adobe.com/tw/subscription/priority-product-update.html)
+>* [訂閱Adobe優先產品更新](https://www.adobe.com/tw/subscription/priority-product-update.html)
