@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: 使用Adobe Experience Manager 6.5檔案瞭解其運作方式，以及軟體可為您做哪些事。
 breadcrumb-title: 使用手冊
 user-guide-title: AEM 6.5
-source-git-commit: c878a4d21a7f6197261ac86b27fbdc76eefa589f
+source-git-commit: c0756980d0dc8ada7f6c352f68c4f41ecf15caa4
 workflow-type: tm+mt
-source-wordcount: '7471'
+source-wordcount: '7480'
 ht-degree: 19%
 
 ---
@@ -105,7 +105,7 @@ ht-degree: 19%
          + [為行動裝置編寫頁面](/help/sites-authoring/mobile.md)
          + [疑難排解製作時的AEM](/help/sites-authoring/troubleshooting.md)
          + [編輯頁面時的鍵盤快速鍵](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)
-         + [最佳實務](/help/sites-authoring/best-practices.md)
+         + [最佳做法](/help/sites-authoring/best-practices.md)
       + 網站和頁面功能{#siteandpage}
          + [使用標記](/help/sites-authoring/tags.md)
          + [建立頁面範本](/help/sites-authoring/templates.md)
@@ -259,7 +259,7 @@ ht-degree: 19%
          + [電子郵件範本的最佳實務](/help/sites-administering/best-practices-for-email-templates.md)
          + [與 Livefyre 整合](/help/sites-administering/livefyre.md)
       + 最佳作法 {#bestpractices}
-         + [最佳實務](/help/sites-administering/administer-best-practices.md)
+         + [最佳做法](/help/sites-administering/administer-best-practices.md)
          + [翻譯最佳實務](https://experienceleague.adobe.com/docs/experience-manager-65/content/sites/administering/introduction/tc-bp.html)
          + [MSM最佳實務](https://experienceleague.adobe.com/docs/experience-manager-65/content/sites/administering/introduction/msm-best-practices.html)
          + [AEM Sites - GDPR整備](/help/sites-administering/gdpr-compliance-sites.md)
@@ -1211,6 +1211,7 @@ ht-degree: 19%
       + [PDF產生無法在WorkBench上列印大量PDF](/help/forms/using/pdf-generation-service-fails-to-print-a-large-number-of-pdfs-on-workbench.md)
       + [如何正確重新啟動AEM SDK](/help/forms/using/restart-aem-sdk.md)
       + [PaperCapture服務無法對PDF執行OCR](/help/forms/using/papercapture-service-resolution.md)
+      + [緩解JEE上AEM Forms的Spring Framework漏洞](/help/forms/using/mitigating-spring-framework-vulnerabilities-for-aem-forms-on-jee.md)
    + 舊版檔案{#legacy-documentation}
       + [使用AEM Forms on JEE Workbench中的執行指令碼服務來建置XML資料](/help/forms/developing/building-xml.md)
       + [在JEE自訂DSC上使用AEM Forms來壓縮和解壓縮檔案](/help/forms/developing/compressing-decompressing-custom-dsc.md)
