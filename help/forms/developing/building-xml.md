@@ -5,9 +5,9 @@ exl-id: 2ec57cd4-f41b-4e5c-849d-88ca3d2cfe19
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e67f19784abae1cd41819dd2a763ddd064beee08
+source-git-commit: 361f0a5f2d1484cf594edfda73250c5690ed7cab
 workflow-type: tm+mt
-source-wordcount: '1105'
+source-wordcount: '1043'
 ht-degree: 0%
 
 ---
@@ -52,9 +52,6 @@ JEE流程管理工作流程中的AEM Forms涉及許多XML，例如：XML資訊�
 >
 > 如果JAVA指令碼超過10行，建議將程式碼新增到自訂DSC （檔案服務元件），而不是直接在程式中寫入。 自訂DSC可讓工作流程保持輕量級，進而改善可維護性、可重複使用性和效能。 在工作流程中參考這些元件，可確保提高執行效率，並防止因在工作流程中處理大型程式碼區塊而導致的效能降低。
 
->[!NOTE]
->
-> 如果JAVA指令碼超過10行，建議將程式碼新增到自訂DSC （檔案服務元件），而不是直接在程式中寫入。 自訂DSC可讓工作流程保持輕量級，進而改善可維護性、可重複使用性和效能。 在工作流程中參考這些元件，可確保提高執行效率，並防止因在工作流程中處理大型程式碼區塊而導致的效能降低。
 
 **關於執行指令碼服務的技術**
 
