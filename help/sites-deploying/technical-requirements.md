@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 61f658fc4390610686a308d02a8d74505252434a
+source-git-commit: 07f45107bceee9e793a39f4167985da91fb51e4a
 workflow-type: tm+mt
-source-wordcount: '3638'
+source-wordcount: '3632'
 ht-degree: 1%
 
 ---
@@ -452,9 +452,9 @@ AEM Dynamic Media預設為停用。 請參閱此處[啟用Dynamic Media](/help/a
 
 ### AEM Forms PDF Generator的需求 {#requirements-for-aem-forms-pdf-generator}
 
-* 若要在SUSE® Linux®伺服器上測試PDF轉換，請確定您有下列設定：
+* 若要在SUSE® Linux® （SLES 15 SP6或更新版本）伺服器上測試PDF轉換，請確定您有下列設定：
    * 瀏覽至`/etc/profile`檔案，並將`OpenOffice_PATH`環境變數設定為`/opt/openoffice4`以便全域設定。
-   * 在Linux®作業系統上安裝32位元版本的OpenOffice
+   * 安裝32位元版的OpenOffice。
 
 ### PDF Generator的軟體支援 {#software-support-for-pdf-generator}
 
@@ -517,7 +517,7 @@ AEM Dynamic Media預設為停用。 請參閱此處[啟用Dynamic Media](/help/a
 >
 >此外，
 >
->* PDF Generator需要32位元版本的[Acrobat 2020 classic track 20.004.30006](https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html)或Acrobat 2017 17.011.30078版來執行轉換。
+>* PDF Generator需要32位元版本的[Acrobat 2020 classic track version 20.004.30006](https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html)才能執行轉換。
 >* PDF Generator僅支援32位元版本的Microsoft® Office Professional Plus及其他轉換所需的軟體。
 >* Microsoft® Office Professional Plus安裝可能會使用零售或MAK/KMS/AD型大量授權。
 >* 如果Microsoft® Office安裝由於任何原因（例如磁碟區授權安裝無法在指定期間內找到KMS主機）而停用或取消授權，轉換可能會失敗，直到安裝重新授權並重新啟用。

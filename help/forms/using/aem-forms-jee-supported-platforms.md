@@ -9,9 +9,9 @@ role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,AEM Forms on JEE,Platform Matrix
-source-git-commit: 8fda6635ec0e28b95209431bd12d191f36df943b
+source-git-commit: 07f45107bceee9e793a39f4167985da91fb51e4a
 workflow-type: tm+mt
-source-wordcount: '4197'
+source-wordcount: '4216'
 ht-degree: 0%
 
 ---
@@ -317,7 +317,7 @@ Adobe Experience Manager Forms需要由Java™開發套件(JDK)散發提供的Ja
    <td><p>Service Pack、累積修補程式和重要安全性更新</p> </td>
   </tr>
   <tr>
-   <td><p>SUSE® Linux® Enterprise Server 15 SP6 （64位元）</p> </td>
+   <td><p>SUSE® Linux® Enterprise Server 15 SP6 （64位元） </p> </td>
    <td><p>答：支援</p> </td>
    <td><p>Service Pack、累積修補程式和重要安全性更新</p> </td>
   </tr>
@@ -467,9 +467,9 @@ AEM Forms應用程式現在支援Apache Cordova。 以下是支援的平台特�
 
 ### PDF Generator的需求
 
-- 若要在SUSE® Linux®伺服器上測試PDF轉換，請確定您有下列設定：
+- 若要在SUSE® Linux® （SLES 15 SP6或更新版本）伺服器上測試PDF轉換，請確定您有下列設定：
    - 瀏覽至`/etc/profile`檔案，並將`OpenOffice_PATH`環境變數設定為`/opt/openoffice4`以便全域設定。
-   - 在Linux®作業系統上安裝32位元版本的OpenOffice
+   - 安裝32位元版的OpenOffice。
 
 ### PDF Generator的軟體支援 {#software-support-for-pdf-generator}
 
@@ -508,6 +508,7 @@ AEM Forms應用程式現在支援Apache Cordova。 以下是支援的平台特�
 >
 >此外：
 >
+>- PDF Generator需要32位元版本的[Acrobat 2020 classic track version 20.004.30006](https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html)才能執行轉換。
 >- PDF Generator僅支援32位元版本的Microsoft® Office Professional Plus及其他轉換所需的軟體。
 >- Microsoft® Office Professional Plus安裝可能會使用零售或MAK/KMS/AD型大量授權。
 >- 如果Microsoft® Office安裝由於任何原因（例如磁碟區授權安裝無法在指定期間內找到KMS主機）而停用或取消授權，轉換可能會失敗，直到安裝重新授權並重新啟用。

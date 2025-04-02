@@ -6,9 +6,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
-source-git-commit: 39ad2f3eedb35e98dc2239c0b81b3792a0ddc73f
+source-git-commit: 07f45107bceee9e793a39f4167985da91fb51e4a
 workflow-type: tm+mt
-source-wordcount: '6158'
+source-wordcount: '6161'
 ht-degree: 1%
 
 ---
@@ -595,20 +595,21 @@ Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on
 
 ### AEM Forms的已知問題 {#known-issues-aem-forms-6522}
 
-* 如果HTML到PDF的轉換在SLES 15 SP6 Linux®伺服器上失敗，錯誤為： `Auto configuration failed 4143511872:error:0E079065:configuration file routines:DEF_LOAD_BIO:missing equal sign:conf_def.c:362:line 57`。 執行以下步驟以解決問題：
-   1. 啟動容器，並使用下列命令設定`OPENSSL_CONF`環境變數：
+* 如果HTML到PDF的轉換在SUSE® Linux® （SLES 15 SP6或更新版本）伺服器上失敗，錯誤為： `Auto configuration failed 4143511872:error:0E079065:configuration file routines:DEF_LOAD_BIO:missing equal sign:conf_def.c:362:line 57`。
+執行以下步驟以解決問題：
+   1. 啟動伺服器並使用下列命令設定`OPENSSL_CONF`環境變數：
       `export OPENSSL_CONF=/etc/ssl`
-或者，您可以在啟動容器時設定環境變數：
+或者，您可以在啟動伺服器時設定環境變數：
       `-e OPENSSL_CONF=/etc/ssl`
    1. 重新啟動伺服器。
 * 安裝AEM Forms JEE Service Pack 21 (6.5.21.0)後，如果在`<AEM_Forms_Installation>/lib/caching/lib`資料夾(FORMS-14926)下找到Geode jar `(geode-*-1.15.1.jar and geode-*-1.15.1.2.jar)`的重複專案，請執行以下步驟以解決問題：
 
    1. 停止儲位（如果它們正在執行）。
-   2. 停止AEM伺服器。
-   3. 移至`<AEM_Forms_Installation>/lib/caching/lib`。
-   4. 移除除`geode-*-1.15.1.2.jar`以外的所有Geode修補程式檔案。 確認只有具有`version 1.15.1.2`的Geode jar存在。
-   5. 在管理員模式中開啟命令提示字元。
-   6. 使用`geode-*-1.15.1.2.jar`檔案安裝Geode修補程式。
+   1. 停止AEM伺服器。
+   1. 移至`<AEM_Forms_Installation>/lib/caching/lib`。
+   1. 移除除`geode-*-1.15.1.2.jar`以外的所有Geode修補程式檔案。 確認只有具有`version 1.15.1.2`的Geode jar存在。
+   1. 在管理員模式中開啟命令提示字元。
+   1. 使用`geode-*-1.15.1.2.jar`檔案安裝Geode修補程式。
 
 * 如果使用者嘗試預覽具有已儲存XML資料的草稿信件，它會在某些特定信件中陷入`Loading`狀態。 若要下載及安裝Hotfix，請參閱[Adobe Experience Manager Forms Hotfix](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)文章。 (FORMS-14521)
 

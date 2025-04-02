@@ -5,9 +5,9 @@ exl-id: 2ec57cd4-f41b-4e5c-849d-88ca3d2cfe19
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: ee990092f3174a8c29443eb451d7188c1e27fa7d
+source-git-commit: e67f19784abae1cd41819dd2a763ddd064beee08
 workflow-type: tm+mt
-source-wordcount: '1043'
+source-wordcount: '1105'
 ht-degree: 0%
 
 ---
@@ -47,6 +47,10 @@ JEE流程管理工作流程中的AEM Forms涉及許多XML，例如：XML資訊�
 ## 使用Execute Script Service建立XML {#create-xml-execute-script-service}
 
 一旦建立包含Execute Script服務的處理序後，就可以使用此指令碼來建立XML。 您可以在上述「使用`Execute Script`服務將指令碼新增至處理序」一節中所述的文字方塊中寫入下述指令碼。
+
+>[!NOTE]
+>
+> 如果JAVA指令碼超過10行，建議將程式碼新增到自訂DSC （檔案服務元件），而不是直接在程式中寫入。 自訂DSC可讓工作流程保持輕量級，進而改善可維護性、可重複使用性和效能。 在工作流程中參考這些元件，可確保提高執行效率，並防止因在工作流程中處理大型程式碼區塊而導致的效能降低。
 
 >[!NOTE]
 >
