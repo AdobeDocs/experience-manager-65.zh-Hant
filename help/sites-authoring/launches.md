@@ -10,10 +10,10 @@ exl-id: b25d3f8e-5687-49ab-95e1-19ec75c87f6e
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Launches
 role: User,Admin,Architect,Developer
-source-git-commit: 82597d52ed774f08ce7136d271148e720b56fcf1
+source-git-commit: 7c4be888c392520c82ef7b2172d0eee61fc3ee44
 workflow-type: tm+mt
-source-wordcount: '831'
-ht-degree: 81%
+source-wordcount: '892'
+ht-degree: 73%
 
 ---
 
@@ -21,7 +21,9 @@ ht-degree: 81%
 
 啟動可讓您有效率地開發未來版本的內容。
 
-系統隨即會建立啟動，讓您將來的變更準備就緒，以便發佈（同時維護目前頁面）。 在編輯和更新您的啟動頁面後，您將它們提升回來源，然後啟動來源頁面 (頂層)。提升功能會將啟動內容複製回來源頁面，可以手動或自動完成 (視建立和編輯啟動時設定的欄位)。
+建立&#x200B;*Launch*&#x200B;可讓您進行變更，以準備未來發佈，同時維護您目前的頁面。 這表示您同時有效編輯兩個版本：目前發佈的頁面，以及將來同時發佈的這些頁面版本。 到了那一天後，您就可以取代原始頁面並發佈新版本。
+
+您建立&#x200B;*Launch*，然後在編輯和更新您的&#x200B;*Launch*&#x200B;頁面後，將其&#x200B;*提升*&#x200B;回&#x200B;*Source*。 然後您可以啟用這些&#x200B;*Source*&#x200B;頁面（頂層）。 提升功能會將啟動內容複製回來源頁面，可以手動或自動完成 (視建立和編輯啟動時設定的欄位)。
 
 例如，您的線上商店的季節性產品頁面每季更新一次，以便特色產品符合目前季節。為準備下一季的更新，您可以建立一個相應網頁的啟動。在整個季度中，以下變更會累積在啟動副本中：
 
