@@ -9,9 +9,9 @@ exl-id: 918fcbbc-a78a-4fab-a933-f183ce6a907f
 solution: Experience Manager, Experience Manager Sites
 feature: Configuring
 role: Admin
-source-git-commit: bbd2bc3fa2ebdca111084450941439a37f79cd73
+source-git-commit: efaff4557aba3557a355ed385a5358cf1108c159
 workflow-type: tm+mt
-source-wordcount: '2149'
+source-wordcount: '2154'
 ht-degree: 8%
 
 ---
@@ -46,7 +46,7 @@ AEM傳送電子郵件通知給使用者，符合以下條件：
 * **SMTP伺服器連線埠**&#x200B;必須為25或更高。
 
 * **SMTP伺服器主機名稱**&#x200B;不得為空白。
-* **「寄件者」位址**&#x200B;不可為空白。
+* **「寄件者」位址**&#x200B;不可為空白，且您必須變更預設值&quot;<noreply@day.com>&quot;。
 
 為協助您針對&#x200B;**Day CQ Mail Service**&#x200B;的問題進行偵錯，您可以觀看此服務的記錄檔：
 
@@ -60,9 +60,9 @@ AEM傳送電子郵件通知給使用者，符合以下條件：
 
 當您訂閱頁面或論壇事件通知時，寄件者電子郵件地址會依預設設為`no-reply@acme.com`。 您可以在Web主控台中設定&#x200B;**通知電子郵件通道**&#x200B;服務來變更此值。
 
-若要設定寄件者電子郵件地址，請新增`sling:OsgiConfig`節點至存放庫。 使用以下程式，透過CRXDE Lite直接新增節點：
+若要設定寄件者電子郵件地址，請新增`sling:OsgiConfig`節點至存放庫。 使用以下程式，直接使用CRXDE Lite新增節點：
 
-1. 在CRXDE Lite中，將名為`config`的資料夾新增至應用程式資料夾下方。
+1. 在CRXDE Lite中，在應用程式資料夾下方新增名為`config`的資料夾。
 1. 在設定資料夾中，新增名為的節點：
 
    `sling:OsgiConfig`型別的`com.day.cq.wcm.notification.email.impl.EmailChannel`
@@ -84,7 +84,7 @@ AEM傳送電子郵件通知給使用者，符合以下條件：
 
 ## 設定工作流程電子郵件通知服務 {#configuring-the-workflow-email-notification-service}
 
-當您收到工作流程電子郵件通知時，寄件者電子郵件地址和主機URL首碼都會設定為預設值。 您可以在Web主控台中設定&#x200B;**Day CQ工作流程電子郵件通知服務**，以變更這些值。 如果這樣做，建議將變更保留在存放庫中。
+當您收到工作流程電子郵件通知時，寄件者電子郵件地址和主機URL首碼都會設定為預設值。 您可以在Web主控台中設定&#x200B;**Day CQ工作流程電子郵件通知服務**，以變更這些值。 如果這樣做，您必須將變更保留在存放庫中。
 
 在Web主控台中，預設設定如下所示：
 
@@ -258,7 +258,7 @@ subject=<text_1>
 
 ## 設定AEM Assets電子郵件通知 {#assetsconfig}
 
-共用或取消共用AEM Assets中的集合時，使用者可以接收來自AEM的電子郵件通知。 若要設定電子郵件通知，請依照下列步驟執行。
+共用或取消共用AEM Assets中的集合時，使用者可以從AEM接收電子郵件通知。 若要設定電子郵件通知，請依照下列步驟執行。
 
 1. 設定電子郵件服務，如[設定郵件服務](/help/sites-administering/notification.md#configuring-the-mail-service)中所述。
 1. 以管理員身分登入AEM。 按一下&#x200B;**工具** > **作業** > **網頁主控台**&#x200B;以開啟Web主控台設定。
@@ -272,7 +272,7 @@ AEM為其整合的郵件程式服務提供OAuth2支援，以允許組織遵守�
 
 >[!NOTE]
 >
->此程式是Publish例項的範例。 如果您想在作者執行個體上啟用電子郵件通知，您需要對作者執行相同的步驟。
+>此程式是發佈執行個體的範例。 如果您想在作者執行個體上啟用電子郵件通知，您需要對作者執行相同的步驟。
 
 ### Gmail {#gmail}
 
@@ -290,7 +290,7 @@ AEM為其整合的郵件程式服務提供OAuth2支援，以允許組織遵守�
 
 >[!NOTE]
 >
->「Adobe受管服務」客戶可與他們的客戶服務工程師合作，對生產環境進行這些變更。
+>Adobe Managed Service客戶可與他們的客戶服務工程師合作，對生產環境進行這些變更。
 
 首先，設定郵件服務：
 
@@ -340,7 +340,7 @@ AEM為其整合的郵件程式服務提供OAuth2支援，以允許組織遵守�
 
 最後，透過以下方式確認設定：
 
-1. 前往Publish執行個體的位址，並以管理員身分登入。
+1. 前往發佈執行個體的位址，並以管理員身分登入。
 1. 在瀏覽器中開啟新索引標籤，並移至`http://serveraddress:serverport/services/mailer/oauth2/authorize`。 這會將您重新導向至SMTP提供者的頁面，在此案例中是Gmail。
 1. 登入並同意提供必要許可權
 1. 在同意後，權杖將會儲存在存放庫中。 您可以直接存取發佈執行個體上的此URL，以在`accessToken`下存取它： `http://serveraddress:serverport/crx/de/index.jsp#/conf/global/settings/mailer/oauth`
@@ -372,7 +372,7 @@ AEM為其整合的郵件程式服務提供OAuth2支援，以允許組織遵守�
 1. 接下來，移至&#x200B;**憑證和密碼**，按一下&#x200B;**新增使用者端密碼**，然後依照熒幕上的步驟建立密碼。 請務必記下此密碼以備稍後使用
 1. 在左側窗格中按「**概觀**」並複製「**應用程式 (用戶端) ID**」和「**目錄 (租用戶) ID**」的值以供稍後使用
 
-回顧一下，您必須擁有下列資訊才能為AEM端的郵件程式服務設定OAuth2：
+回顧一下，您必須擁有下列資訊才能在AEM端為郵件程式服務設定OAuth2：
 
 * 驗證 URL，將使用租用戶 ID 建構。 它將具有此形式：`https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/authorize`
 * 權杖 URL，將使用租用戶 ID 建構。 它將具有此形式：`https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/token`
@@ -429,7 +429,7 @@ AEM為其整合的郵件程式服務提供OAuth2支援，以允許組織遵守�
 
 最後，透過以下方式確認設定：
 
-1. 前往Publish執行個體的位址，並以管理員身分登入。
+1. 前往發佈執行個體的位址，並以管理員身分登入。
 1. 在瀏覽器中開啟新索引標籤，並移至`http://serveraddress:serverport/services/mailer/oauth2/authorize`。 這會將您重新導向至SMTP提供者的頁面，在此案例中是Outlook。
 1. 登入並同意提供必要許可權
 1. 在同意後，權杖將會儲存在存放庫中。 您可以直接存取發佈執行個體上的此URL，以在`accessToken`下存取它： `http://serveraddress:serverport/crx/de/index.jsp#/conf/global/settings/mailer/oauth`
