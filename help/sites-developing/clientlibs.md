@@ -10,7 +10,7 @@ exl-id: 408ac30c-60ab-4d6c-855c-d544af8d5cf9
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,Personalization
 role: Developer
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+source-git-commit: f965c449da06a1b7e60428e0734c621f004d318c
 workflow-type: tm+mt
 source-wordcount: '2791'
 ht-degree: 1%
@@ -21,11 +21,11 @@ ht-degree: 1%
 
 現代網站非常依賴由複雜的JavaScript和CSS程式碼驅動的使用者端處理。 組織和最佳化此程式碼的伺服可能是一個複雜的問題。
 
-為了協助處理此問題，AEM提供&#x200B;**使用者端程式庫資料夾**，可讓您將使用者端程式碼儲存在存放庫中、將其組織成類別，以及定義每個類別的程式碼何時及如何提供給使用者端。 然後，使用者端程式庫系統會負責在最終網頁中產生正確的連結，以載入正確的程式碼。
+為協助處理此問題，AEM提供&#x200B;**使用者端程式庫資料夾**，可讓您將使用者端程式碼儲存在存放庫中、將其組織成類別，以及定義每個類別程式碼何時及如何提供給使用者端。 然後，使用者端程式庫系統會負責在最終網頁中產生正確的連結，以載入正確的程式碼。
 
 ## AEM中使用者端資料庫的運作方式 {#how-client-side-libraries-work-in-aem}
 
-在頁面HTML中包含使用者端程式庫（即JS或CSS檔案）的標準方式，就是在該頁面的JSP中包含`<script>`或`<link>`標籤，並包含相關檔案的路徑。 例如，
+在頁面的HTML中包含使用者端資料庫（即JS或CSS檔案）的標準方式，就是在該頁面的JSP中包含`<script>`或`<link>`標籤，並包含相關檔案的路徑。 例如，
 
 ```xml
 ...
@@ -37,7 +37,7 @@ ht-degree: 1%
 ...
 ```
 
-雖然此方法可在AEM中運作，但當頁面及其組成元件變得複雜時，可能會導致問題。 在這種情況下，最終HTML輸出中可能會包含同一JS程式庫的多份副本，這是很危險的。 為了避免此情況，並允許邏輯組織使用者端程式庫，AEM會使用&#x200B;**使用者端程式庫資料夾**。
+雖然此方法可在AEM中運作，但當頁面及其組成元件變得複雜時，可能會導致問題。 在這種情況下，最終HTML輸出中可能會包含同一JS程式庫的多份副本，這是很危險的。 為避免此情況，並允許邏輯組織使用者端程式庫AEM使用&#x200B;**使用者端程式庫資料夾**。
 
 使用者端程式庫資料夾是型別`cq:ClientLibraryFolder`的存放庫節點。 [CND表示法](https://jackrabbit.apache.org/node-type-notation.html)中的定義為
 
@@ -49,34 +49,34 @@ ht-degree: 1%
   - channels (string) multiple
 ```
 
-根據預設，`cq:ClientLibraryFolder`節點可以放置在存放庫的`/apps`、`/libs`和`/etc`子樹狀結構中的任何位置(這些預設值和其他設定可以透過[系統主控台](https://localhost:4502/system/console/configMgr)的&#x200B;**AdobeGraniteHTML庫管理員**&#x200B;面板來控制)。
+根據預設，`cq:ClientLibraryFolder`節點可以放置在存放庫的`/apps`、`/libs`和`/etc`子樹狀結構中的任何位置(這些預設值和其他設定可以透過[系統主控台](https://localhost:4502/system/console/configMgr)的&#x200B;**Adobe Granite HTML資料庫管理員**&#x200B;面板來控制)。
 
-每個`cq:ClientLibraryFolder`都會填入一組JS和/或CSS檔案，以及一些支援檔案（請參閱下文）。 `cq:ClientLibraryFolder`的屬性設定如下：
+每個`cq:ClientLibraryFolder`都會填入一組JS和/或CSS檔案，以及一些支援檔案（請參閱下文）。 `cq:ClientLibraryFolder`屬性設定如下：
 
-* `categories`：識別此`cq:ClientLibraryFolder`中JS和/或CSS檔案集的類別。 `categories`屬性是多值屬性，可讓資料庫資料夾屬於多個類別（請參閱下方以瞭解其用處）。
+* `categories`..識別 JS 和/或 CSS 檔案集目前所屬 `cq:ClientLibraryFolder` 的類別。 屬性 `categories` 是多值的，允許資料庫資料夾屬於多個類別（請參閱下文，了解這可能如何有用）。
 
 * `dependencies`：這是此程式庫資料夾所依存之其他使用者端程式庫類別的清單。 例如，在指定`cq:ClientLibraryFolder`節點`F`和`G`的情況下，如果`F`中的檔案需要`G`中的另一個檔案才能正常運作，則`G`的`categories`中至少有一個`F`的`dependencies`中應該有。
 
-* `embed`：用來內嵌其他程式庫中的程式碼。 如果節點F嵌入節點G和H，則產生的HTML將是來自節點G和H的內容集。
+* `embed`：用來內嵌其他程式庫中的程式碼。 如果節點F嵌入節點G和H，則產生的HTML將是節點G和H中的內容集。
 * `allowProxy`：如果使用者端程式庫位於`/apps`之下，此屬性允許透過Proxy servlet存取它。 請參閱下方的[尋找使用者端資料庫資料夾及使用Proxy使用者端資料庫Servlet](/help/sites-developing/clientlibs.md#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet)。
 
 ## 參考使用者端程式庫 {#referencing-client-side-libraries}
 
-由於HTL是開發AEM網站的慣用技術，因此HTL應該用來在AEM中包含使用者端程式庫。 不過，您也可以使用JSP執行此操作。
+由於 HTL 是開發AEM網站的首選技術，因此應使用 HTL 將用戶端資料庫包含在AEM中。 但是，也可以使用 JSP 來實現。
 
-### 使用HTL {#using-htl}
+### 使用 HTL {#using-htl}
 
-在HTL中，使用者端程式庫是透過AEM提供的Helper範本載入，該範本可透過[`data-sly-use`](https://helpx.adobe.com/experience-manager/htl/using/block-statements.html#use)存取。 此檔案中有三個範本可用，這些範本可透過[`data-sly-call`](https://helpx.adobe.com/experience-manager/htl/using/block-statements.html#template-call)呼叫：
+在 HTL 中，用戶端資料庫是通過 AEM 提供的説明範本程式載入的，可以通過進行 [`data-sly-use`](https://helpx.adobe.com/experience-manager/htl/using/block-statements.html#use)訪問。 此檔案中有三個樣本可用，可以通過以下方式 [`data-sly-call`](https://helpx.adobe.com/experience-manager/htl/using/block-statements.html#template-call)調用：
 
-* **css** — 僅載入參照的使用者端程式庫的CSS檔案。
-* **js** — 僅載入參照的使用者端程式庫的JavaScript檔案。
-* **all** — 載入參照的使用者端程式庫的所有檔案(CSS和JavaScript)。
+* **css** - 僅載入引用的用戶端資料庫的 CSS 檔。
+* **js** - 僅載入引用的用戶端資料庫的JavaScript檔。
+* **all** - 載入引用的用戶端資料庫的所有檔（CSS 和 JavaScript）。
 
 每個 helper 範本都需要 `categories` 選項來參照所需的用戶端程式庫。 這個選項可以是字串值陣列，或是包含逗號分隔值清單的字串。
 
-如需詳細資訊和使用範例，請參閱檔案[HTML範本語言快速入門](https://helpx.adobe.com/experience-manager/htl/using/getting-started.html#loading-client-libraries)。
+有關更多詳細信息和使用示例，請参閱 HTML 範本語言](https://helpx.adobe.com/experience-manager/htl/using/getting-started.html#loading-client-libraries)的文件[快速入門。
 
-### 使用JSP {#using-jsp}
+### 使用 JSP {#using-jsp}
 
 將`ui:includeClientLib`標籤新增至您的JSP程式碼，以在產生的HTML頁面中新增使用者端資料庫的連結。 若要參考資料庫，請使用`ui:includeClientLib`節點的`categories`屬性值。
 
@@ -101,7 +101,7 @@ ht-degree: 1%
 
 >[!CAUTION]
 >
->`<cq:includeClientLib>`過去常用來包含使用者端資料庫，但自AEM 5.6之後已過時。應改用[`<ui:includeClientLib>`](/help/sites-developing/taglib.md#lt-ui-includeclientlib)，如上所述。
+>`<cq:includeClientLib>`過去常用來包含使用者端資料庫，但自AEM 5.6起已淘汰。應改用[`<ui:includeClientLib>`](/help/sites-developing/taglib.md#lt-ui-includeclientlib)，如上所述。
 
 ## 建立使用者端資源庫資料夾 {#creating-client-library-folders}
 
@@ -139,13 +139,13 @@ Web使用者端必須擁有存取`cq:ClientLibraryFolder`節點的許可權。 �
 >
 >若要將程式碼與內容和設定更隔離，建議在`/apps`下找出使用者端程式庫，並使用`allowProxy`屬性透過`/etc.clientlibs`公開它們。
 
-為了能夠存取`/apps`下的使用者端程式庫，使用Proxy servelt。 ACL仍強制在使用者端程式庫資料夾上，但如果`allowProxy`屬性設定為`true`，則servlet允許透過`/etc.clientlibs/`讀取內容。
+為了能夠存取`/apps`下的使用者端程式庫，使用Proxy servlet。 ACL仍強制在使用者端程式庫資料夾上，但如果`allowProxy`屬性設定為`true`，則servlet允許透過`/etc.clientlibs/`讀取內容。
 
 如果靜態資源位於使用者端程式庫資料夾下方的資源之下，則只能透過Proxy存取。
 
 例如：
 
-* 您在`/apps/myproject/clientlibs/foo`中有clientlib
+* 您在`/apps/myprojects/clientlibs/foo`中有clientlib
 * 您在`/apps/myprojects/clientlibs/foo/resources/icon.png`中有靜態影像
 
 然後您將`foo`上的`allowProxy`屬性設定為true。
@@ -155,18 +155,18 @@ Web使用者端必須擁有存取`cq:ClientLibraryFolder`節點的許可權。 �
 
 >[!CAUTION]
 >
->使用代理的使用者端程式庫時，AEM Dispatcher設定可能需要更新，以確保允許具有擴充功能clientlibs的URI。
+>使用代理使用者端程式庫時，AEM Dispatcher設定可能需要更新，以確保可允許具有擴充功能clientlibs的URI。
 
 >[!CAUTION]
 >
->Adobe建議在`/apps`下尋找使用者端程式庫，並使用Proxy Servlet讓使用者端程式庫可供使用。 不過請記住，最佳實務仍要求公用網站不得包含直接透過`/apps`或`/libs`路徑提供的任何內容。
+>Adobe建議在`/apps`下尋找使用者端程式庫，並使用Proxy servlet讓使用者端程式庫可供使用。 不過請記住，最佳實務仍要求公用網站不得包含直接透過`/apps`或`/libs`路徑提供的任何內容。
 
 ### 建立使用者端資源庫資料夾 {#create-a-client-library-folder}
 
-1. 在網頁瀏覽器中開啟CRXDE Lite([https://localhost:4502/crx/de](https://localhost:4502/crx/de))。
+1. 在網頁瀏覽器([https://localhost:4502/crx/de](https://localhost:4502/crx/de))中開啟CRXDE Lite。
 1. 選取您要尋找使用者端程式庫資料夾的資料夾，然後按一下[建立] > [建立節點] **。**
-1. 輸入程式庫檔案的名稱，然後在[型別]清單中選取`cq:ClientLibraryFolder`。 按一下[確定]****，然後按一下[儲存全部]****。
-1. 若要指定程式庫所屬的類別，請選取`cq:ClientLibraryFolder`節點、新增下列屬性，然後按一下[儲存全部] **：**
+1. 輸入資料庫文件的名稱，然後在“類型”中選擇清單 `cq:ClientLibraryFolder`。 按兩下確定&#x200B;****，然後按兩下全部&#x200B;****&#x200B;儲存。
+1. 若要指定資料庫所屬的類別或類別，請選擇 `cq:ClientLibraryFolder` 節點，添加以下屬性，然後按兩下“ **全部**&#x200B;儲存”：
 
    * 名稱：類別
    * 型別：字串
@@ -175,15 +175,15 @@ Web使用者端必須擁有存取`cq:ClientLibraryFolder`節點的許可權。 �
 
 1. 以任何方式將來源檔案新增至程式庫資料夾。 例如，使用WebDav使用者端來複製檔案，或建立檔案並手動編寫內容。
 
-   **注意：**&#x200B;您可以視需要在子資料夾中組織來源檔案。
+   **注：** 如果需要，可以組織子資料夾中的源檔。
 
-1. 選取使用者端程式庫資料夾，然後按一下&#x200B;**建立>建立檔案**。
-1. 在「檔案名稱」方塊中，輸入下列其中一個檔案名稱，然後按一下「確定」：
+1. 選擇用戶端資料庫資料夾，然後按兩下建立> **建立檔**。
+1. 在“檔名”框中，鍵入以下檔名之一，然後按兩下“確定：
 
-   * **`js.txt`：**&#x200B;使用此檔案名稱來產生JavaScript檔案。
-   * **`css.txt`：**&#x200B;使用此檔案名稱產生階層式樣式表。
+   * **`js.txt`：** 使用此檔名產生 JavaScript 檔案。
+   * **`css.txt`：** 使用此檔名生成級聯樣式表。
 
-1. 開啟檔案並輸入下列文字，以識別來源檔案的路徑根目錄：
+1. 開啟檔案並鍵入以下文字以識別來源檔案路徑的根目錄：
 
    `#base=*[root]*`
 
@@ -200,7 +200,7 @@ Web使用者端必須擁有存取`cq:ClientLibraryFolder`節點的許可權。 �
 
 ### 連結至相依性 {#linking-to-dependencies}
 
-當使用者端程式庫資料夾中的程式碼參考其他程式庫時，請將其他程式庫識別為相依性。 在JSP中，參照使用者端程式庫資料夾的`ui:includeClientLib`標籤會讓HTML程式碼包含您產生的程式庫檔案和相依性的連結。
+當使用者端程式庫資料夾中的程式碼參考其他程式庫時，請將其他程式庫識別為相依性。 在JSP中，參照使用者端程式庫資料夾的`ui:includeClientLib`標籤會導致HTML程式碼包含您產生的程式庫檔案和相依性的連結。
 
 相依性必須是另一個`cq:ClientLibraryFolder`。 若要識別相依性，請使用下列屬性將屬性新增至您的`cq:ClientLibraryFolder`節點：
 
@@ -233,7 +233,7 @@ Web使用者端必須擁有存取`cq:ClientLibraryFolder`節點的許可權。 �
 
 #### 使用內嵌將請求最小化 {#using-embedding-to-minimize-requests}
 
-在某些情況下，您可能會發現發佈執行個體針對典型頁面產生的最終HTML包含相對大量的`<script>`元素，特別是如果您的網站正使用使用者端內容資訊來進行分析或鎖定目標時。 例如，在非最佳化專案中，您可能會在HTML中找到以下一連串頁面`<script>`元素：
+在某些情況下，您可能會發現發佈執行個體針對典型頁面產生的最終HTML包含相對大量的`<script>`元素，特別是如果您的網站正使用使用者端內容資訊來進行分析或鎖定目標時。 例如，在非最佳化專案中，您可能會在HTML中找到下列頁面的`<script>`元素系列：
 
 ```xml
 <script type="text/javascript" src="/etc/clientlibs/granite/jquery.js"></script>
@@ -246,7 +246,7 @@ Web使用者端必須擁有存取`cq:ClientLibraryFolder`節點的許可權。 �
 
 在這種情況下，將所有必要的使用者端程式庫程式碼結合到單一檔案中會很有用，這樣就能減少頁面載入上的來回請求數量。 若要這麼做，您可以使用`cq:ClientLibraryFolder`節點的內嵌屬性，將必要的程式庫`embed`到您應用程式專屬的使用者端程式庫中。
 
-AEM包含下列使用者端程式庫類別。 您應該僅內嵌特定網站運作所需的專案。 不過，**您應該維持此處列出的順序**：
+AEM包含下列使用者端資料庫類別。 您應該僅內嵌特定網站運作所需的專案。 不過，**您應該維持此處列出的順序**：
 
 1. `browsermap.standard`
 1. `browsermap`
@@ -322,9 +322,9 @@ body {
 
 ## 使用前置處理器 {#using-preprocessors}
 
-AEM允許可插拔的前處理器，並隨附對CSS和JavaScript的[YUI Compressor](https://github.com/yui/yuicompressor#yui-compressor---the-yahoo-javascript-and-css-compressor)以及YUI設定為AEM預設前處理器的JavaScript的[Google Closure Compiler (GCC)](https://developers.google.com/closure/compiler/)的支援。
+AEM允許可插拔預處理器，並支援[用於CSS和JavaScript[的YUI壓縮器和](https://github.com/yui/yuicompressor#yui-compressor---the-yahoo-javascript-and-css-compressor)用於JavaScript的Google Closure Compiler （GCC），](https://developers.google.com/closure/compiler/)並將YUI設置為AEM的預設預處理器。
 
-可插拔前處理器可彈性使用，包括：
+可插拔預處理器允許靈活使用，包括：
 
 * 定義可以處理指令碼來源的ScriptProcessors
 * 處理器可設定選項
@@ -345,7 +345,7 @@ AEM允許可插拔的前處理器，並隨附對CSS和JavaScript的[YUI Compress
 
 * 在clientlibrary節點上新增多值屬性`cssProcessor`和`jsProcessor`
 
-* 或透過&#x200B;**HTML程式庫管理員** OSGi組態定義系統預設組態
+* 或透過&#x200B;**HTML資料庫管理員** OSGi設定來定義系統預設設定
 
 clientlib節點上的前置處理器設定優先於OSGI設定。
 
@@ -394,17 +394,17 @@ compilationLevel (defaults to "simple") (can be "whitespace", "simple", "advance
 YUI已設定為AEM中的預設縮制器。 若要將此變更為GCC，請按照以下步驟操作。
 
 1. 前往[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)的Apache Felix設定管理員
-1. 尋找並編輯&#x200B;**AdobeGraniteHTML庫管理員**。
+1. 尋找並編輯&#x200B;**Adobe Granite HTML資料庫管理員**。
 1. 啟用&#x200B;**最小化**&#x200B;選項（如果尚未啟用）。
 1. 將&#x200B;**JS處理器預設組態**&#x200B;的值設定為`min:gcc`。
 
    如果以分號分隔，例如`min:gcc;obfuscate=true`，則可以傳遞選項。
 
-1. 按一下[儲存]儲存變更。****
+1. 按一下「**儲存**」以儲存變更。
 
 ## 偵錯工具 {#debugging-tools}
 
-AEM提供數個工具，用於偵錯和測試使用者端程式庫資料夾。
+AEM提供數種用於偵錯和測試使用者端程式庫資料夾的工具。
 
 ### 請參閱內嵌檔案 {#see-embedded-files}
 
@@ -460,4 +460,4 @@ HTML程式庫管理員服務會在執行階段處理`cq:ClientLibraryFolder`標�
 * 提升效能：移除空白並壓縮程式庫。
 * 提高可讀性：包含空白字元且請勿壓縮。
 
-如需有關設定服務的資訊，請參閱[AEMHTML庫管理員](/help/sites-deploying/osgi-configuration-settings.md#aemhtmllibrarymanager)。
+如需設定服務的相關資訊，請參閱[AEM HTML資料庫管理員](/help/sites-deploying/osgi-configuration-settings.md#aemhtmllibrarymanager)。
