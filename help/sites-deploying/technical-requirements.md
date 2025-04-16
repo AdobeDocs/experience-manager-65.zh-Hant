@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 07f45107bceee9e793a39f4167985da91fb51e4a
+source-git-commit: 5dbdce2d8e558e6bf26c6713fd44d58038d38152
 workflow-type: tm+mt
-source-wordcount: '3632'
+source-wordcount: '3593'
 ht-degree: 1%
 
 ---
@@ -340,9 +340,9 @@ AEM使用者介面已針對大型熒幕（通常是筆記型電腦和桌上型�
 
 ### 支援的網站瀏覽器 {#supported-browsers-for-websites}
 
-通常，AEM Sites對網站的瀏覽器支持取決於AEM頁面範本、設計和元件輸出實施，因此由實施這些部分的一方控制。
+一般而言，AEM Sites轉譯的網站瀏覽器支援取決於AEM頁面範本的實作、設計和元件輸出，因此由實作這些部分的當事方控制。
 
-### WebDAV Clients {#webdav-clients}
+### WebDAV使用者端 {#webdav-clients}
 
 **Microsoft® Windows 7+**
 
@@ -408,7 +408,7 @@ AEM Dynamic Media預設為停用。 請參閱此處[啟用Dynamic Media](/help/a
 
 >[!NOTE]
 >
->**禁用 SELinux：** 影像 服務在 SELinux 打開時不起作用。 此選項預設為啟用。 要解決此問題，請編輯 **/etc/selinux/config** 檔並將 SELinux 值從：
+>**禁用 SELinux：** 影像 服務在 SELinux 打開時不起作用。 默認情況下，此選項處於啟用狀態。 要解決此問題，請編輯 **/etc/selinux/config** 檔並將 SELinux 值從：
 >
 >`SELINUX=enforcing` **至** `SELINUX=disabled`
 
@@ -418,7 +418,7 @@ AEM Dynamic Media預設為停用。 請參閱此處[啟用Dynamic Media](/help/a
 >
 >多節點結構可能會導致一或多個節點的記憶體耗盡，之後其他節點就會耗盡。 當記憶體用盡時，即使有可用的記憶體，核心仍可以決定終止處理序（例如，影像伺服器或平台伺服器）。
 >
->因此，Adobe Systems建議，如果您正在運行這樣的系統，請使用 numa=off **引導選項關閉** NUMA，以避免內核終止這些進程。
+>因此，Adobe建議，若您執行的系統讓您使用&#x200B;**numa=off**&#x200B;開機選項來關閉NUMA，以避免核心造成這些處理程式停用。
 
 >[!NOTE]
 >
@@ -452,33 +452,29 @@ AEM Dynamic Media預設為停用。 請參閱此處[啟用Dynamic Media](/help/a
 
 ### AEM Forms PDF Generator的需求 {#requirements-for-aem-forms-pdf-generator}
 
-* 若要在SUSE® Linux® （SLES 15 SP6或更新版本）伺服器上測試PDF轉換，請確定您有下列設定：
-   * 瀏覽至`/etc/profile`檔案，並將`OpenOffice_PATH`環境變數設定為`/opt/openoffice4`以便全域設定。
-   * 安裝32位元版的OpenOffice。
-
 ### PDF Generator的軟體支援 {#software-support-for-pdf-generator}
 
 <table>
  <tbody>
   <tr>
    <th><p><strong>產品</strong></p> </th>
-   <th><p><strong>轉換為 PDF 的支援格式</strong></p> </th>
+   <th><p><strong>支援的格式可轉換成PDF</strong></p> </th>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2020傳統路線</a>最新版本</td>
-   <td>XPS、影像格式(BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC)、HTML、HTM、DWG、DXF和DWF</td>
-  </tr>
-  <tr>
-   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2017 經典曲目</a> 最新版本（已棄用）</td>
+   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2020經典曲目</a> 最新版本</td>
    <td>XPS、影像格式 （BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC）、HTML、HTM、DWG、DXF 和 DWF</td>
+  </tr>
+  <tr>
+   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2017傳統路線</a>最新版本（已棄用）</td>
+   <td>XPS、影像格式(BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC)、HTML、HTM、DWG、DXF和DWF</td>
   </tr>
   <tr>
    <td>® Microsoft Office 2019</td>
    <td>DOC、DOCX、XLS、XLSX、PPT、PPTX、RTF 和 TXT</td>
   </tr>
   <tr>
-   <td>Microsoft® Office 2016 （已棄用）</td>
-   <td>DOC、DOCX、XLS、XLSX、PPT、PPTX、RTF和TXT</td>
+   <td>® Microsoft Office 2016 （已棄用）</td>
+   <td>DOC、DOCX、XLS、XLSX、PPT、PPTX、RTF 和 TXT</td>
   </tr>
   <tr>
    <td>WordPerfect 2020<br /> </td>
@@ -543,9 +539,9 @@ AEM Dynamic Media預設為停用。 請參閱此處[啟用Dynamic Media](/help/a
 * Acrobat Pro DC、Acrobat Standard DC或Adobe Acrobat Reader DC
 * 安裝Designer的管理許可權
 * Microsoft Visual C++ 2019 （VC 14.28或更新版本） 32位元AEM Forms Designer的32位元執行階段
-* Microsoft Visual C++ 2019（VC 14.28 或更高版本） 適用於 64 位 AEM Forms Designer 的 64 位運行時（適用於 OSGI 和 JEE 堆棧）
+* Microsoft Visual C++ 2019 （VC 14.28或更新版本）適用於64位元AEM Forms Designer的64位元執行階段（適用於OSGI和JEE棧疊）
 
-[安裝和配置 AEM Forms 設計器](/help/forms/using/installing-configuring-designer.md)
+[安裝及設定AEM Forms designer](/help/forms/using/installing-configuring-designer.md)
 
 ### AEM Assets XMP中繼資料回寫的需求 {#requirements-for-aem-assets-xmp-metadata-write-back}
 
@@ -556,10 +552,10 @@ AEM Dynamic Media預設為停用。 請參閱此處[啟用Dynamic Media](/help/a
    * Linux® （64位元系統支援32位元和32位元應用程式）。 如需安裝32位元使用者端程式庫的步驟，請參閱[如何在64位元Red Hat® Linux®](https://helpx.adobe.com/experience-manager/kb/enable-xmp-write-back-64-bit-redhat.html)上啟用XMP擷取及回寫。
 
    * Windows Server
-   * macOS X （64 位）
+   * macOS X （64位元）
 
-* **檔案格式**： JPEG、PNG、TIFF、PDF、INDD、AI 和 EPS。
+* **檔案格式**： JPEG、PNG、TIFF、PDF、INDD、AI和EPS。
 
-### 在 Linux® 上處理重中繼資料資產的AEM Assets需求 {#assetsonlinux}
+### AEM Assets在Linux上處理中繼資料密集的資產的需求® {#assetsonlinux}
 
-XMPFilesProcessor處理需要程式庫GLIBC_2.14才能運作。 使用包含GLIBC_2.14的Linux®核心，例如Linux®核心版本3.1.x。它可改善處理包含大量中繼資料的資產(例如PSD檔案)的效能。 使用舊版GLIBC會導致以`com.day.cq.dam.core.impl.handler.xmp.NCommXMPHandler Failed to read XMP`開頭的記錄發生錯誤。
+XMPFilesProcessor 進程需要 資料庫 GLIBC_2.14 才能工作。 使用包含 GLIBC_2.14 的Linux®內核，例如Linux®內核版本3.1.x。它提高了處理包含大量 中繼資料、按讚 PSD 文件的資產的性能。 使用以前版本的 GLIBC 會導致以 開頭 `com.day.cq.dam.core.impl.handler.xmp.NCommXMPHandler Failed to read XMP`的日誌中出錯。

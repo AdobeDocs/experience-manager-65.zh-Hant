@@ -6,9 +6,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
-source-git-commit: 07f45107bceee9e793a39f4167985da91fb51e4a
+source-git-commit: 461ec6a48bc41d46338c2c0162869525e49de97f
 workflow-type: tm+mt
-source-wordcount: '6161'
+source-wordcount: '6138'
 ht-degree: 1%
 
 ---
@@ -595,13 +595,12 @@ Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on
 
 ### AEM Forms的已知問題 {#known-issues-aem-forms-6522}
 
-* 如果HTML到PDF的轉換在SUSE® Linux® （SLES 15 SP6或更新版本）伺服器上失敗，錯誤為： `Auto configuration failed 4143511872:error:0E079065:configuration file routines:DEF_LOAD_BIO:missing equal sign:conf_def.c:362:line 57`。
-執行以下步驟以解決問題：
-   1. 啟動伺服器並使用下列命令設定`OPENSSL_CONF`環境變數：
-      `export OPENSSL_CONF=/etc/ssl`
-或者，您可以在啟動伺服器時設定環境變數：
-      `-e OPENSSL_CONF=/etc/ssl`
-   1. 重新啟動伺服器。
+* 如果HTML至PDF轉換在SUSE® Linux® （自SLES 15 SP6）伺服器上失敗，並出現下列錯誤：
+
+  ```Auto configuration failed 4143511872:error:0E079065:configuration file routines:DEF_LOAD_BIO:missing equal sign:conf_def.c:362:line 57```
+然後設定以下環境變數並重新啟動伺服器：
+  `OPENSSL_CONF=/etc/ssl`
+
 * 安裝AEM Forms JEE Service Pack 21 (6.5.21.0)後，如果在`<AEM_Forms_Installation>/lib/caching/lib`資料夾(FORMS-14926)下找到Geode jar `(geode-*-1.15.1.jar and geode-*-1.15.1.2.jar)`的重複專案，請執行以下步驟以解決問題：
 
    1. 停止儲位（如果它們正在執行）。
