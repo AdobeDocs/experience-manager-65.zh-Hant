@@ -5,9 +5,9 @@ exl-id: cb7a9da2-7112-4ef0-b1cf-211a7df93625
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+source-git-commit: d2e2f330dadb7c327324e53a17e8398ef3a473a9
 workflow-type: tm+mt
-source-wordcount: '1510'
+source-wordcount: '1567'
 ht-degree: 2%
 
 ---
@@ -21,6 +21,13 @@ ht-degree: 2%
    * 還原您對頁面所做的變更。
 * 將頁面的目前版本與先前版本進行比較：
    * 以醒目提示文字和影像中的差異。
+
+>[!NOTE]
+>
+>AEM存放庫中只會建立內容的版本。 程式碼、CSS和JavaScript等動態資源不會進行版本設定。
+>
+>* 檢視版本時，內容會與存放庫的最新程式碼、CSS和JavaScript一併檢視。
+>* 還原版本時，只會還原內容，並套用存放庫的最新程式碼、CSS和JavaScript。
 
 ## 建立新版本 {#creating-a-new-version}
 
@@ -82,7 +89,7 @@ ht-degree: 2%
 >
 >恢復頁面時，建立的版本將成為新分支的一部分。
 >
->舉例說明：
+>說明：
 >
 >1. 建立任何頁面的版本。
 >1. 初始標籤和版本節點名稱將為1.0、1.1、1.2，以此類推。
