@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: 使用Adobe Experience Manager 6.5檔案瞭解其運作方式，以及軟體可為您做哪些事。
 breadcrumb-title: 使用手冊
 user-guide-title: AEM 6.5
-source-git-commit: 8009e4cf7da17afbcfae7f90009157d32ee261fa
+source-git-commit: 1b551a4f8c05c14e40db1e70147542326cb82b80
 workflow-type: tm+mt
-source-wordcount: '7494'
+source-wordcount: '7520'
 ht-degree: 20%
 
 ---
@@ -500,13 +500,13 @@ ht-degree: 20%
       + [相關資產](/help/assets/related-assets.md)
       + [私人資料夾共用](/help/assets/private-folder.md)
       + [視訊轉譯](/help/assets/video-renditions.md)
-   + 和其他解決方案整合 {#integrations}
+   + 與其他解決方案整合 {#integrations}
       + [與  [!DNL Adobe Workfront] 整合](/help/assets/workfront-integrations.md)
       + [安裝 [!DNL enhanced connector] for [!DNL Workfront]](/help/assets/workfront-connector-install.md)
       + [設定 [!DNL enhanced connector] for [!DNL Workfront]](/help/assets/workfront-connector-configure.md)
 + Forms {#forms}
    + 發行說明 {#release-notes-new-features}
-      + [最新資訊](/help/forms/using/whats-new.md)
+      + [新增功能](/help/forms/using/whats-new.md)
       + [常見問題](/help/forms/using/frequently-asked-questions-faq.md)
    + 快速入門 {#getting-started}
       + [AEM Forms簡介](/help/forms/using/introduction-aem-forms.md)
@@ -1213,6 +1213,9 @@ ht-degree: 20%
       + [PaperCapture服務無法對PDF執行OCR](/help/forms/using/papercapture-service-resolution.md)
       + [緩解JEE上AEM Forms的Spring Framework漏洞](/help/forms/using/mitigating-spring-framework-vulnerabilities-for-aem-forms-on-jee.md)
       + [緩解Experience Manager Forms的Log4j2漏洞](/help/forms/using/aem-forms-vulnerability-cve.md)
+      + [顯示XFA型PDF forms和受原則保護檔案的相關問題](/help/forms/using/xfa-pdf-forms-policy-protected-documents-not-displayed.md)
+      + [如何在Firefox和Chrome上開啟XFA型PDF forms](/help/forms/using/xfa-forms-firefox-chrome.md)
+      + [BlazeDS中的XML外部實體(XXE)漏洞](/help/forms/using/xxe-vulnerability-blazeDS.md)
       + [JEE WebLogic Server上的EAR部署失敗](/help/forms/using/ear-deployment-failing-on-jee-weblogic-server.md)
    + 舊版檔案 {#legacy-documentation}
       + [使用AEM Forms on JEE Workbench中的執行指令碼服務來建置XML資料](/help/forms/developing/building-xml.md)
