@@ -1,13 +1,13 @@
 ---
-title: 疑難排解文章，解決PaperCapture服務無法對PDF執行OCR （光學字元辨識）作業的問題。
-description: 瞭解如何解決PaperCapture服務無法對PDF執行OCR （光學字元辨識）作業的問題。
+title: 疑難排解文章，解決當紙張擷取服務無法對PDF執行OCR （光學字元辨識）作業時的問題。
+description: 瞭解解決PaperCapture服務無法對PDF執行OCR （光學字元辨識）作業問題的步驟。
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
 exl-id: 64e120ee-5f16-4cd3-9ae9-95b165169e47
-source-git-commit: f9e98d7de24d516eab163d42f6c1c3155915856e
+source-git-commit: e030a71a0f52e22a803597122369cb111774f49b
 workflow-type: tm+mt
-source-wordcount: '196'
+source-wordcount: '200'
 ht-degree: 2%
 
 ---
@@ -17,11 +17,12 @@ ht-degree: 2%
 
 ## 問題
 
-升級至AEM Forms Service Pack 6.5.21.0後，`PaperCapture`服務無法在PDF上執行OCR （光學字元辨識）作業。 此服務不會產生PDF或記錄檔形式的輸出。
+升級至AEM Forms Service Pack 6.5.21.0或AEM Forms Service Pack 6.5.22.0後，`PaperCapture`服務無法在PDF上執行OCR （光學字元辨識）作業。 此服務不會產生PDF或記錄檔形式的輸出。
 
 ## 套用至
 
 此解決方案適用於：
+
 * 所有(JBoss、Weblogic、Websphere) JEE伺服器上的AEM Forms
 * OSGi伺服器上的AEM Forms
 
@@ -44,4 +45,4 @@ ht-degree: 2%
 
    >[!NOTE]
    >
-   > 建議您使用&#39;Ctrl + C&#39;命令重新啟動SDK。 使用替代方法重新啟動AEM SDK （例如停止Java程式）可能會導致AEM開發環境不一致。
+   > 建議您使用&#39;Ctrl + C&#39;命令重新啟動SDK。 使用替代方法重新啟動AEM SDK （例如停止Java程式），可能會導致AEM開發環境不一致。
