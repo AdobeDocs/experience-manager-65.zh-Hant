@@ -34,7 +34,7 @@ AEM Forms 6.5支援下列驗證碼解決方案：
 
 Cloudflare的Turnstile驗證碼是一種安全性措施，旨在保護表單和網站免受自動化機器人、惡意攻擊、垃圾郵件和不需要的自動化流量的傷害。 在允許提交表單前，它會在表單提交上顯示核取方塊，以驗證使用者是否為人類。
 
->[!VIDEO](https://video.tv.adobe.com/v/3440940/)
+>[!VIDEO](https://video.tv.adobe.com/v/3440951?captions=chi_hant)
 
 ### 整合AEM Forms環境與Turnstile驗證碼的必要條件 {#prerequisite}
 

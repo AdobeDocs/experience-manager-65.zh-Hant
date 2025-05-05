@@ -19,7 +19,7 @@ ht-degree: 1%
 
 ## 數位資產
 
->[!VIDEO](https://video.tv.adobe.com/v/339121/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447320/?quality=12&learn=on&captions=chi_hant)
 
 數位資產可與一個或多個產品SKU相關聯。 一旦關聯，即可根據SKU透過關鍵字搜尋來探索數位資產。 在編輯包含相關產品的頁面時，資產也會自動顯示為關聯內容，讓您更輕鬆地建立下一個數位體驗
 
@@ -31,7 +31,7 @@ ht-degree: 1%
 
 ## 內容片段
 
->[!VIDEO](https://video.tv.adobe.com/v/339182/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3452168/?quality=12&learn=on&captions=chi_hant)
 
 內容片段是Adobe Experience Manager的一項功能，可讓行銷人員建立&#x200B;**結構化**&#x200B;可重複使用的內容。 內容片段可與產品SKU或目錄ID建立關聯。 一旦建立關聯，行銷人員就可以根據頁面上顯示的產品輕鬆探索相關片段。 您也可以使用預留位置及關聯，以動態方式將內容片段納入產品目錄頁面。
 
