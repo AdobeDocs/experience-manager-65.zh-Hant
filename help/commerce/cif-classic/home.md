@@ -19,7 +19,7 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->CIF Classic已過時，並從AEM 6.5 SP 22移除。  如果您需要相容性套件，請[聯絡Adobe客戶支援](https://experienceleague.adobe.com/?support-solution=General#support)。
+>CIF Classic已過時，並從AEM 6.5 SP 22移除。  如果您需要相容性套件，請[聯絡Adobe客戶支援](https://experienceleague.adobe.com/zh-hant?support-solution=General#support)。
 >
 >* 新專案應使用[AEM CIF](/help/commerce/cif/introduction.md)。
 >* 現有的CIF Classic應[移轉至AEM CIF](/help/commerce/cif/migration.md)。

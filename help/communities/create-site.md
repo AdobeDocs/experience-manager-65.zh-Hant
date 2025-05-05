@@ -119,7 +119,7 @@ Communities Sites主控台會提供精靈，引導使用者完成建立社群網
 
 >[!NOTE]
 >
->[通道服務](https://helpx.adobe.com/experience-manager/6-3/help/communities/deploy-communities.html#tunnel-service-on-author)允許選取僅存在於發佈環境中的成員和群組。
+>[通道服務](https://helpx.adobe.com/tw/experience-manager/6-3/help/communities/deploy-communities.html#tunnel-service-on-author)允許選取僅存在於發佈環境中的成員和群組。
 
 新網站中的![個使用者角色](assets/site-admin-1.png)
 

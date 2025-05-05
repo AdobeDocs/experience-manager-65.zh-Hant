@@ -213,7 +213,7 @@ AEM使用一組機製為頁面實現回應式佈局：
 
 AEM使用LESS來產生必要CSS的部分，這些需要包含在您的專案中。
 
-您也必須建立[使用者端程式庫](https://experienceleague.adobe.com/docs/)，以提供額外的設定和函式呼叫。 以下LESS擷取是您必須新增至專案的最小值範例：
+您也必須建立[使用者端程式庫](https://experienceleague.adobe.com/docs/?lang=zh-Hant)，以提供額外的設定和函式呼叫。 以下LESS擷取是您必須新增至專案的最小值範例：
 
 ```css
 @import (once) "/libs/wcm/foundation/clientlibs/grid/grid_base.less";

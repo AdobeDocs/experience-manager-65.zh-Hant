@@ -35,7 +35,7 @@ ht-degree: 0%
 內部連結是指向AEM存放庫中其他內容的連結。 可以使用RTE中的路徑選擇器或使用自訂元件來新增內部連結。 例如：
 
 * 您的頁面`/content/wknd/us/en/adventures/ski-touring.html`
-* 在[文字元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html)中包含`/content/wknd/us/en/adventures/extreme-ironing.html`的連結。
+* 在[文字元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html?lang=zh-Hant)中包含`/content/wknd/us/en/adventures/extreme-ironing.html`的連結。
 
 內容作者新增內部連結至頁面時，就會驗證內部連結。 如果連結失效：
 
@@ -49,7 +49,7 @@ ht-degree: 0%
 外部連結是指AEM存放庫外部內容的連結。 外部連結可使用RTE或使用自訂元件來新增。 例如：
 
 * 您的頁面`/content/wknd/us/en/adventures/ski-touring.html`
-* 在[文字元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html)中包含`https://bunwarmerthermalunderwear.com`的連結。
+* 在[文字元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html?lang=zh-Hant)中包含`https://bunwarmerthermalunderwear.com`的連結。
 
 系統會驗證外部連結的語法，並檢查其可用性。 此檢查會在可設定的內部非同步地完成。 如果連結檢查器發現外部連結無效：
 

@@ -29,7 +29,7 @@ AEM Mobile是Adobe Experience Manager多頻道數位平台的一部分，該平�
 AEM Mobile提供多種建立應用程式的方法。 建立應用程式的三種不同方式如下：
 
 * **[搭配AEM使用隨選服務](/help/mobile/getting-started-aem-mobile-on-demand.md)**
-* **[使用不含AEM的On-Demand Services](https://helpx.adobe.com/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html)**
+* **[使用不含AEM的On-Demand Services](https://helpx.adobe.com/tw/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html)**
 * **[搭配AEM](/help/mobile/getting-started-aem-mobile-phonegap.md)**&#x200B;使用Adobe PhoneGap Enterprise
 
 >[!NOTE]

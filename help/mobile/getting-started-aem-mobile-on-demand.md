@@ -22,7 +22,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->如果您未使用Adobe Experience Manager (AEM)作為內容管理來源，請參閱[AEM Mobile On-demand Services說明](https://helpx.adobe.com/digital-publishing-solution/topics.html)。
+>如果您未使用Adobe Experience Manager (AEM)作為內容管理來源，請參閱[AEM Mobile On-demand Services說明](https://helpx.adobe.com/tw/digital-publishing-solution/topics.html)。
 
 AEM提供數種工具，可讓您將內容整合至行動應用程式。
 
@@ -32,7 +32,7 @@ AEM Preflight應用程式可視為測試環境，可在發佈前預覽應用程�
 
 >[!NOTE]
 >
->若要深入瞭解預檢應用程式，請參閱AEM Mobile On-demand Services說明中的[使用AEM預檢應用程式](https://helpx.adobe.com/digital-publishing-solution/help/preflight-app.html)。
+>若要深入瞭解預檢應用程式，請參閱AEM Mobile On-demand Services說明中的[使用AEM預檢應用程式](https://helpx.adobe.com/tw/digital-publishing-solution/help/preflight-app.html)。
 
 ![chlimage_1-171](assets/chlimage_1-171.png)
 
@@ -104,4 +104,4 @@ AEM Mobile只是構成完整AEM平台的支柱之一。
 
 >[!NOTE]
 >
->AEM作者也負責設定權益、建立卡片和版面配置，以及傳送推播通知。 此外，如需內容製作方法的詳細資訊；管理文章和集合；在AEM Mobile中建立橫幅、卡片和版面，請參閱[AEM Mobile隨選入口網站](https://helpx.adobe.com/digital-publishing-solution/topics.html#dynamicpod_reference_2)。
+>AEM作者也負責設定權益、建立卡片和版面配置，以及傳送推播通知。 此外，如需內容製作方法的詳細資訊；管理文章和集合；在AEM Mobile中建立橫幅、卡片和版面，請參閱[AEM Mobile隨選入口網站](https://helpx.adobe.com/tw/digital-publishing-solution/topics.html#dynamicpod_reference_2)。

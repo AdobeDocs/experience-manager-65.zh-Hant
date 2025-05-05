@@ -20,7 +20,7 @@ ht-degree: 2%
 
 ## 概觀 {#overview}
 
-AEM Brackets Extension提供流暢的工作流程來編輯AEM元件和使用者端程式庫，並運用[Brackets](https://brackets.io/)程式碼編輯器的強大功能，提供從程式碼編輯器存取Photoshop檔案和圖層的許可權。 擴充功能提供的簡易同步功能（不需要Maven或檔案儲存庫）可提升開發人員效率，也可協助具備有限AEM知識的前端開發人員參與專案。 此擴充功能也提供對[HTML範本語言(HTL)](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)的一些支援，可降低JSP的複雜性，讓元件開發更容易、更安全。
+AEM Brackets Extension提供流暢的工作流程來編輯AEM元件和使用者端程式庫，並運用[Brackets](https://brackets.io/)程式碼編輯器的強大功能，提供從程式碼編輯器存取Photoshop檔案和圖層的許可權。 擴充功能提供的簡易同步功能（不需要Maven或檔案儲存庫）可提升開發人員效率，也可協助具備有限AEM知識的前端開發人員參與專案。 此擴充功能也提供對[HTML範本語言(HTL)](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=zh-Hant)的一些支援，可降低JSP的複雜性，讓元件開發更容易、更安全。
 
 ![chlimage_1-53](assets/chlimage_1-53a.png)
 

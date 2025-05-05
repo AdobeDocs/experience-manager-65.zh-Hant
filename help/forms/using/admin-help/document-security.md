@@ -24,7 +24,7 @@ Document Security可確保只有授權的使用者才能使用您的檔案。 �
 * Adobe PDF檔案
 * Microsoft®Word、Excel和PowerPoint檔案
 
-如需有關原則如何保護受支援檔案型別的詳細資訊，請參閱[更多Document Security資訊](https://experienceleague.adobe.com/docs/experience-manager-65/forms/use-document-security/document-security-offerings.html?lang=en)。
+如需有關原則如何保護受支援檔案型別的詳細資訊，請參閱[更多Document Security資訊](https://experienceleague.adobe.com/docs/experience-manager-65/forms/use-document-security/document-security-offerings.html?lang=zh-Hant)。
 
 使用Document Security，您可以輕鬆建立、儲存及套用預先定義的機密性設定至您的檔案。 為了防止資訊擴散到您觸及的範圍之外，您還可以監視和控制在您分發檔案後收件者如何使用您的檔案。
 

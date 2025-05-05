@@ -75,7 +75,7 @@ AEM中的許多效能測量（例如查詢回應時間）都可能受到系統�
 
 觸控式UI中的&#x200B;**開發人員模式**
 
-AEM 6觸控式UI的其中一項新功能是開發人員模式。 就像作者可以在編輯和預覽模式之間切換一樣，開發人員可以在作者UI中切換到開發人員模式。 這麼做可讓您檢視頁面上每個元件的轉譯時間，以及檢視任何錯誤的棧疊追蹤。 如需開發人員模式的詳細資訊，請參閱此[CQ Gems簡報](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2014/aem-developer-mode.html)。
+AEM 6觸控式UI的其中一項新功能是開發人員模式。 就像作者可以在編輯和預覽模式之間切換一樣，開發人員可以在作者UI中切換到開發人員模式。 這麼做可讓您檢視頁面上每個元件的轉譯時間，以及檢視任何錯誤的棧疊追蹤。 如需開發人員模式的詳細資訊，請參閱此[CQ Gems簡報](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2014/aem-developer-mode.html?lang=zh-Hant)。
 
 **使用rlog.jar讀取要求記錄檔**
 
@@ -120,7 +120,7 @@ Google的PageSpeed工具提供網站分析，以符合頁面效能最佳實務�
 1. 將其放在/crx--quickstart/install資料夾下。
 
 >[!NOTE]
->請參閱[AEM 6.x | 效能調整秘訣](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html)
+>請參閱[AEM 6.x | 效能調整秘訣](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=zh-Hant)
 
 預設值為10,000，但大多數部署都必須將其提高至20,000或50,000。
 
@@ -148,7 +148,7 @@ Google的PageSpeed工具提供網站分析，以符合頁面效能最佳實務�
 * 檢視錯誤記錄檔中是否有錯誤或警告。 如需詳細資訊，請參閱[記錄](/help/sites-deploying/configure-logging.md)。
 * 監視系統硬體資源，例如記憶體和CPU使用率、磁碟I/O或網路I/O。這些資源通常是造成效能瓶頸的原因。
 * 最佳化頁面的架構以及處理方式，以儘量減少URL引數的使用，進而允許儘可能多的快取。
-* 請依照[效能最佳化](/help/sites-deploying/configuring-performance.md)和[效能調整提示](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html)檔案操作。
+* 請依照[效能最佳化](/help/sites-deploying/configuring-performance.md)和[效能調整提示](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=zh-Hant)檔案操作。
 
 * 如果編輯作者執行個體上的特定頁面或元件時發生問題，請使用TouchUI開發人員模式來檢查有問題的頁面。 這樣做會提供頁面上每個內容區域的劃分，及其載入時間。
 * 將網站上的所有JS和CSS縮制。 檢視此[部落格](https://blogs.adobe.com/foxes/enable-js-and-css-minification/)。

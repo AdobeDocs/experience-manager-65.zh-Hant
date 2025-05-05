@@ -98,7 +98,7 @@ ht-degree: 3%
   >* 不應設為現有頁面。
   >
 
-  設定Dispatcher以啟用對虛名URL的存取權。 如需詳細資訊，請參閱[啟用對虛名URL的存取權](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#enabling-access-to-vanity-urls-vanity-urls)。
+  設定Dispatcher以啟用對虛名URL的存取權。 如需詳細資訊，請參閱[啟用對虛名URL的存取權](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant#enabling-access-to-vanity-urls-vanity-urls)。
 
 * **重新導向虛名URL**
 
@@ -190,7 +190,7 @@ ht-degree: 3%
 
 * **社群媒體分享**
 
-  定義頁面上可用的共用選項。 公開[共用核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/sharing.html)可用的選項。
+  定義頁面上可用的共用選項。 公開[共用核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/sharing.html?lang=zh-Hant)可用的選項。
 
    * **啟用Facebook的使用者共用**
    * **啟用Pinterest的使用者共用**

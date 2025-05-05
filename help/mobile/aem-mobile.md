@@ -22,7 +22,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->如果您未使用Adobe Experience Manager (AEM)作為內容管理來源，請參閱[AEM Mobile On-demand Services說明](https://helpx.adobe.com/digital-publishing-solution/topics.html)。
+>如果您未使用Adobe Experience Manager (AEM)作為內容管理來源，請參閱[AEM Mobile On-demand Services說明](https://helpx.adobe.com/tw/digital-publishing-solution/topics.html)。
 
 ## AEM 管理員 {#aem-administrator}
 
@@ -36,7 +36,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->如需設定AEM群組與許可權的詳細資訊，請按一下線上說明中的[建立使用者角色並授與存取權](https://helpx.adobe.com/digital-publishing-solution/help/account-admin-dps.html)。
+>如需設定AEM群組與許可權的詳細資訊，請按一下線上說明中的[建立使用者角色並授與存取權](https://helpx.adobe.com/tw/digital-publishing-solution/help/account-admin-dps.html)。
 
 使用AEM Mobile On-demand Services建立應用程式時，AEM管理員會負責下列工作：
 

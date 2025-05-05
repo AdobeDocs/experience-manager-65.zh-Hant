@@ -24,7 +24,7 @@ ht-degree: 13%
 >
 >如需疑難排解和修正效能問題的詳細資訊，請參閱[效能樹狀結構](/help/sites-deploying/performance-tree.md)。
 >
->您也可以檢閱[效能調整秘訣](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-17466)的知識庫文章。
+>您也可以檢閱[效能調整秘訣](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-kcs/kbarticles/ka-17466)的知識庫文章。
 
 關鍵問題是您的網站回應訪客要求所需的時間。 雖然此值會因每個請求而有所不同，但您可以定義平均目標值。 一旦這個值被證實既可達到又可維持，就可用來監視網站的效能並指示潛在問題的發展。
 
@@ -41,7 +41,7 @@ ht-degree: 13%
 >[!NOTE]
 >
 >* 設定效能最佳化之後，請依照[艱難日](/help/sites-developing/tough-day.md)中的程式來測試負載繁重的環境。
->* 另請參閱[效能調整提示。](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-17466)
+>* 另請參閱[效能調整提示。](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-kcs/kbarticles/ka-17466)
 
 ## 效能最佳化方法 {#performance-optimization-methodology}
 
@@ -203,7 +203,7 @@ AEM的某些層面（和/或基礎存放庫）可設定為最佳化效能。 以
 
 >[!NOTE]
 >
->請參閱[效能最佳化](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html)。
+>請參閱[效能最佳化](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=zh-Hant)。
 
 ### 搜尋索引 {#search-indexing}
 
@@ -478,7 +478,7 @@ AEM的某些層面（和/或基礎存放庫）可設定為最佳化效能。 以
 
 ## 使用Dispatcher時最佳化效能 {#optimizing-performance-when-using-the-dispatcher}
 
-[Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)是Adobe的快取及/或負載平衡工具。 使用Dispatcher時，請考慮將網站快取效能最佳化。
+[Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant)是Adobe的快取及/或負載平衡工具。 使用Dispatcher時，請考慮將網站快取效能最佳化。
 
 >[!NOTE]
 >
@@ -494,7 +494,7 @@ Dispatcher提供數個內建機制，方便您在網站運用時最佳化效能�
 >
 >一般而言，許多快取策略與選取良好URL且不依賴這些額外資料有關。
 >
->若使用Dispatcher 4.1.11版，您也可以快取回應標題，請參閱[快取HTTP回應標題](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#configuring-the-dispatcher-cache-cache)。
+>若使用Dispatcher 4.1.11版，您也可以快取回應標題，請參閱[快取HTTP回應標題](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant#configuring-the-dispatcher-cache-cache)。
 >
 
 ### 計算Dispatcher快取比率 {#calculating-the-dispatcher-cache-ratio}
@@ -530,7 +530,7 @@ Dispatcher提供數個內建機制，方便您在網站運用時最佳化效能�
 
 #### 避免 URL 參數 {#avoid-url-parameters}
 
-可能的話，請避免針對您想要快取的頁面使用 URL 參數。 例如，如果您有圖片庫，則絕對不會快取以下 URL (除非 Dispatcher [已適當地設定](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#configuring-the-dispatcher-cache-cache))：
+可能的話，請避免針對您想要快取的頁面使用 URL 參數。 例如，如果您有圖片庫，則絕對不會快取以下 URL (除非 Dispatcher [已適當地設定](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant#configuring-the-dispatcher-cache-cache))：
 
 ```xml
 www.myCompany.com/pictures/gallery.html?event=christmas&amp;page=1
@@ -603,22 +603,22 @@ www.myCompany.com/news/main.large.html
 * 反之，如果您提供 10 個不同起始頁的選擇，您可以快取每一個起始頁，進而提高效能。
 
 >[!TIP]
->如需設定Dispatcher快取的詳細資訊，請參閱[AEM Dispatcher快取教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/dispatcher-tutorial/overview.html)及其有關[快取受保護內容](https://experienceleague.adobe.com/docs/experience-manager-learn/dispatcher-tutorial/chapter-1.html#dispatcher-tips-and-tricks)的章節。
+>如需設定Dispatcher快取的詳細資訊，請參閱[AEM Dispatcher快取教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/dispatcher-tutorial/overview.html?lang=zh-Hant)及其有關[快取受保護內容](https://experienceleague.adobe.com/docs/experience-manager-learn/dispatcher-tutorial/chapter-1.html?lang=zh-Hant#dispatcher-tips-and-tricks)的章節。
 
 如果您將使用者名稱放在標題列中來個人化每個頁面（例如），則會影響效能。
 
 >[!TIP]
->如需快取安全內容，請參閱Dispatcher指南中的[快取安全內容](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/permissions-cache.html)。
+>如需快取安全內容，請參閱Dispatcher指南中的[快取安全內容](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/permissions-cache.html?lang=zh-Hant)。
 
 關於在單一頁面上混合限制和公開內容，請考慮以下策略：在Dispatcher中使用伺服器端包含，或透過瀏覽器中的Ajax使用使用者端包含。
 
 >[!TIP]
 >
->若要處理混合的公開和限制內容，請參閱[設定Sling動態包含。](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-sling-dynamic-include.html)
+>若要處理混合的公開和限制內容，請參閱[設定Sling動態包含。](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-sling-dynamic-include.html?lang=zh-Hant)
 
 #### 黏性連線 {#sticky-connections}
 
-[黏性連線](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html#the-benefits-of-load-balancing)可確保同一個使用者的文件都會在相同伺服器上編寫。如果使用者離開此資料夾並於稍後返回，連線仍然保持不變。若要保留所有需要網站的粘性連線的檔案，請定義一個資料夾。 試著不要將其他文件放在該資料夾中。如果您使用個人化頁面和工作階段資料，此案例會影響負載平衡。
+[黏性連線](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant#the-benefits-of-load-balancing)可確保同一個使用者的文件都會在相同伺服器上編寫。如果使用者離開此資料夾並於稍後返回，連線仍然保持不變。若要保留所有需要網站的粘性連線的檔案，請定義一個資料夾。 試著不要將其他文件放在該資料夾中。如果您使用個人化頁面和工作階段資料，此案例會影響負載平衡。
 
 #### MIME 類型 {#mime-types}
 

@@ -15,7 +15,7 @@ ht-degree: 7%
 
 # 設定Assets深入分析 {#configure-asset-insights}
 
-[!DNL Adobe Experience Manager Assets]會從[!DNL Adobe Analytics]擷取協力廠商網站使用之數位資產的使用資料。 若要啟用Assets Insights以擷取此資料並產生深入分析，請先設定此功能以與[!DNL Adobe Analytics]整合。 若要在內部部署安裝中使用此功能，請另外購買[!DNL Adobe Analytics]授權。 [!DNL Managed Services]的客戶會收到與[!DNL Experience Manager]繫結的[!DNL Analytics]授權。 請參閱[Managed Services產品說明](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html)。
+[!DNL Adobe Experience Manager Assets]會從[!DNL Adobe Analytics]擷取協力廠商網站使用之數位資產的使用資料。 若要啟用Assets Insights以擷取此資料並產生深入分析，請先設定此功能以與[!DNL Adobe Analytics]整合。 若要在內部部署安裝中使用此功能，請另外購買[!DNL Adobe Analytics]授權。 [!DNL Managed Services]的客戶會收到與[!DNL Experience Manager]繫結的[!DNL Analytics]授權。 請參閱[Managed Services產品說明](https://helpx.adobe.com/tw/legal/product-descriptions/adobe-experience-manager-managed-services.html)。
 
 >[!NOTE]
 >

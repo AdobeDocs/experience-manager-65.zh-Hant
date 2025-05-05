@@ -38,7 +38,7 @@ ht-degree: 0%
 >[!NOTE]
 >
 >* 64位元版本的設計工具是隨AEM 6.5 Forms Service Pack 19 (6.5.19.0)推出的。
->* 自[AEM Forms Service Pack 21 (6.5.21.0)](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases)發行以來，已棄用32位元版本的設計工具。
+>* 自[AEM Forms Service Pack 21 (6.5.21.0)](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases)發行以來，已棄用32位元版本的設計工具。
 > * Forms Designer的支援平台與AEM Forms支援的平台一致。 若要瞭解Forms Designer的支援平台，[請按一下這裡](/help/forms/using/aem-forms-jee-supported-platforms.md)。
 
 如需有關安裝Forms Designer的詳細資訊，請造訪[常見問題](#fandq)。
@@ -94,15 +94,15 @@ msiexec /i "<absolute path>\Designer.msi" /quiet SERIALNUMBER=****-****-****-***
 如果您使用AEM Forms Designer的獨立安裝程式，請執行以下步驟：
 
 1. 在安裝&#x200B;**AEM Forms Designer 6.5.16.0**&#x200B;之前，使用者必須先解除安裝任何舊版。
-1. 從AEM表單發行頁面下載並安裝[AEM Forms Designer 6.5.15.0](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)。
-1. 成功安裝&#x200B;**AEM Forms Designer 6.5.15.0**&#x200B;後，在下載的安裝程式檔案上按兩下，即可下載並安裝[AEM Forms Designer 6.5.16.0](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)。
+1. 從AEM表單發行頁面下載並安裝[AEM Forms Designer 6.5.15.0](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=zh-Hant)。
+1. 成功安裝&#x200B;**AEM Forms Designer 6.5.15.0**&#x200B;後，在下載的安裝程式檔案上按兩下，即可下載並安裝[AEM Forms Designer 6.5.16.0](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=zh-Hant)。
 
 +++
 
 +++**當使用者擁有6.5.15.0 AEM Forms Designer版本**
 
 如果您使用AEM Forms Designer的獨立安裝程式，請執行以下步驟：
-1. 從[軟體發佈入口網站](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)下載最新版的AEM Forms Designer。
+1. 從[軟體發佈入口網站](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=zh-Hant)下載最新版的AEM Forms Designer。
 1. 連按兩下下載的安裝程式檔案，安裝最新版的AEM Forms Designer。
 
 +++

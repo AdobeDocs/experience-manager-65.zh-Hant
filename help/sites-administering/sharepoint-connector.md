@@ -87,7 +87,7 @@ SharePoint聯結器可從[軟體發佈](https://experience.adobe.com/#/downloads
 
 ### 標準安裝 {#standard-installation}
 
-Software Distribution用於發佈產品功能、範例和Hot Fix。 如需詳細資訊，請參閱[軟體發佈檔案](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html#software-distribution)。
+Software Distribution用於發佈產品功能、範例和Hot Fix。 如需詳細資訊，請參閱[軟體發佈檔案](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html?lang=zh-Hant#software-distribution)。
 
 
 #### 與AEM整合 {#integrating-with-aem}

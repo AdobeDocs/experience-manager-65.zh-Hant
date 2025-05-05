@@ -37,7 +37,7 @@ Feature Pack 18912可讓您透過FTP將資產直接大量擷取到Adobe Experien
 
 1. 在您的Experience Manager執行個體中，瀏覽至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 安全性]** > **[!UICONTROL 使用者]**，然後選取&#x200B;**[!UICONTROL 建立使用者]**。 此服務使用者必須擁有`/content/dam.`的&#x200B;*讀取/寫入*&#x200B;許可權
 1. 在&#x200B;**[!UICONTROL 識別碼]**&#x200B;與&#x200B;**[!UICONTROL 密碼]**&#x200B;欄位中，輸入使用者名稱與密碼；例如，**FTP使用者**。 此名稱會以建立資產之使用者的身分顯示在時間軸中。 從FTP上傳資產時，資產會在上傳至FTP伺服器並推送至Experience Manager時被視為已建立。
-1. 請連絡[Adobe客戶支援以取得Experience Manager](https://experienceleague.adobe.com/?support-solution=General#support)，以要求存取功能套件18912以進行下載。 當您聯絡支援時，可能需要下列資訊：
+1. 請連絡[Adobe客戶支援以取得Experience Manager](https://experienceleague.adobe.com/zh-hant?support-solution=General#support)，以要求存取功能套件18912以進行下載。 當您聯絡支援時，可能需要下列資訊：
 
    * 您的Author執行個體的伺服器IP位址，包括連線埠號碼（根據預設，連線埠號碼為4502）。
    * Experience Manager上一步驟中的服務使用者名稱與密碼。

@@ -26,7 +26,7 @@ Adobe Experience Platform Launch是在單頁應用程式(SPA)中實作Analytics�
 
 ## 教學課程 {#tutorial}
 
-若要瞭解如何將您的SPA與Adobe Experience Platform Launch整合，請參閱[此知識庫文章和教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/spa-editor/spa-editor-framework-feature-video-use.html)，其將引導您完成Launch設定並實作內建Angular或React的Experience Cloud。
+若要瞭解如何將您的SPA與Adobe Experience Platform Launch整合，請參閱[此知識庫文章和教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/spa-editor/spa-editor-framework-feature-video-use.html?lang=zh-Hant)，其將引導您完成Launch設定並實作內建Angular或React的Experience Cloud。
 
 >[!NOTE]
 >

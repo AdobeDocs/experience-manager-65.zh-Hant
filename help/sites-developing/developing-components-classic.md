@@ -29,7 +29,7 @@ ht-degree: 1%
 >
 >雖然HTML範本語言(HTL)和JSP都可用於開發傳統UI的元件，此頁面說明了使用JSP進行的開發。 這完全是因為在傳統UI中使用JSP的歷史。
 >
->HTL現在是AEM的建議指令碼語言。 請參閱[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)和[開發AEM元件](/help/sites-developing/developing-components.md)以比較方法。
+>HTL現在是AEM的建議指令碼語言。 請參閱[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=zh-Hant)和[開發AEM元件](/help/sites-developing/developing-components.md)以比較方法。
 
 ## 結構 {#structure}
 

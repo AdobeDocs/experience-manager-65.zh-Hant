@@ -16,8 +16,8 @@ ht-degree: 0%
 
 RTF編輯器(RTE)是將文字內容插入AEM的基本建置區塊。 它構成各種元件的基礎，包括：
 
-* [文字](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/wcm-components/text)
-* [表格](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/wcm-components/text#table)
+* [文字](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-core-components/using/wcm-components/text)
+* [表格](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-core-components/using/wcm-components/text#table)
 
 ## 就地編輯 {#in-place-editing}
 

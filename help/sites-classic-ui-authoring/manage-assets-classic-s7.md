@@ -19,7 +19,7 @@ ht-degree: 1%
 
 # 新增Dynamic Media Classic (Scene7)功能至您的頁面{#adding-scene-features-to-your-page}
 
-[Adobe Dynamic Media Classic (Scene7)](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/home.html)是託管式解決方案，可管理、增強、發佈多媒體資產，並將其傳送至網路、行動裝置、電子郵件及連線至網際網路的顯示器和列印。
+[Adobe Dynamic Media Classic (Scene7)](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/home.html?lang=zh-Hant)是託管式解決方案，可管理、增強、發佈多媒體資產，並將其傳送至網路、行動裝置、電子郵件及連線至網際網路的顯示器和列印。
 
 您可以在多種檢視器中檢視在Dynamic Media Classic (Scene7)中發佈的Experience Manager資產：
 

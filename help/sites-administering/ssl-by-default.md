@@ -195,7 +195,7 @@ it for any subsequent updating of the private key or certificate.</dd>
 
 >[!NOTE]
 >
->請參閱[搭配AEM](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/curl.html)使用cURL，以取得AEM中有用cURL命令的集中清單。
+>請參閱[搭配AEM](https://helpx.adobe.com/tw/experience-manager/6-4/sites/administering/using/curl.html)使用cURL，以取得AEM中有用cURL命令的集中清單。
 
 您也可以使用cURL工具自動化SSL/TLS設定。 您可以將設定引數張貼至此URL來執行此操作：
 

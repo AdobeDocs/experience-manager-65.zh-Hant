@@ -35,7 +35,7 @@ ht-degree: 2%
 >
 >* [將工作流程套用至頁面](/help/sites-authoring/workflows-applying.md)
 >* [如何將工作流程套用至DAM資產](/help/assets/assets-workflow.md)
->* [AEM Forms](https://helpx.adobe.com/aem-forms/6-2/aem-workflows-submit-process-form.html)
+>* [AEM Forms](https://helpx.adobe.com/tw/aem-forms/6-2/aem-workflows-submit-process-form.html)
 >* [翻譯專案](/help/sites-administering/tc-manage.md)
 >
 

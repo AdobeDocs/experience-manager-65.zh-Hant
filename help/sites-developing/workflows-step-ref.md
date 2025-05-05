@@ -188,7 +188,7 @@ function check(){
 
 >[!NOTE]
 >
->請參閱[或分割步驟](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/using-variables-in-aem-workflows.html#use-a-variable)
+>請參閱[或分割步驟](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/using-variables-in-aem-workflows.html?lang=zh-Hant#use-a-variable)
 
 ![使用OR Split分支](assets/variables_orsplit_new.png)
 

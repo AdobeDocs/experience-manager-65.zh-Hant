@@ -54,12 +54,12 @@ ht-degree: 0%
 
 所有現成的[!DNL Dynamic Media]檢視器元件都支援客戶的鍵盤協助工具。
 
-請參閱Dynamic Media檢視器參考指南中的[鍵盤協助工具與導覽](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/c-keyboard-accessibility.html)。
+請參閱Dynamic Media檢視器參考指南中的[鍵盤協助工具與導覽](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/c-keyboard-accessibility.html?lang=zh-Hant)。
 
 ## [!DNL Dynamic Media]個檢視者的輔助技術支援 {#assistive-technology-support-for-dm-viewers}
 
 所有[!DNL Dynamic Media]檢視器元件都支援ARIA （可存取的豐富網際網路應用程式）角色和屬性，以改進與熒幕閱讀器等輔助技術的整合。
-請參閱Dynamic Media檢視器參考指南中任何自訂檢視器主題中的&#x200B;**輔助技術支援**&#x200B;說明主題。 例如，請參閱視訊檢視器的[輔助技術支援](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/r-html5-video-viewer-20-assistive.html)，或互動式影像檢視器的[輔助技術支援](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/c-html5-aem-interactive-image-assistive.html#viewers-for-aem-assets-only)。
+請參閱Dynamic Media檢視器參考指南中任何自訂檢視器主題中的&#x200B;**輔助技術支援**&#x200B;說明主題。 例如，請參閱視訊檢視器的[輔助技術支援](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/r-html5-video-viewer-20-assistive.html?lang=zh-Hant)，或互動式影像檢視器的[輔助技術支援](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/c-html5-aem-interactive-image-assistive.html?lang=zh-Hant#viewers-for-aem-assets-only)。
 
 ## Dynamic Media中的隱藏式字幕支援 {#closed-caption-support}
 

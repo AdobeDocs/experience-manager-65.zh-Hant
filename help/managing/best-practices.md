@@ -188,7 +188,7 @@ ht-degree: 0%
 
    * 每個環境的程式；例如，部署和維護需求
    * 維護活動（Datastore GC、TarPM最佳化等）
-   * [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)快取
+   * [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant)快取
    * [叢集](/help/sites-deploying/recommended-deploys.md#deployment-scenarios) Publish/Authorshare
    * 使用者端的效能（JS精簡、concat、css指令集、http請求總數及其他）
 
@@ -239,7 +239,7 @@ ht-degree: 0%
 
   在開發之前，應設定部署、發行、測試和報告問題所需的所有支援流程。
 
-  另請參閱[Adobe支援入口網站](https://experienceleague.adobe.com/?support-solution=General&amp;support-tab=home#support)。
+  另請參閱[Adobe支援入口網站](https://experienceleague.adobe.com/zh-hant?support-solution=General&amp;support-tab=home#support)。
 
 ### 作業計畫與作業 {#operations-planning-and-operations}
 
@@ -628,8 +628,8 @@ ht-degree: 0%
 
       * [開發 — 基本知識](/help/sites-developing/the-basics.md)
       * [MSM概念](/help/sites-administering/msm.md)
-      * [HTML範本語言(HTL)](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)
+      * [HTML範本語言(HTL)](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=zh-Hant)
 
 * 相關檔案
 
-   * Adobe Experience Cloud - [規劃Adobe Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/services/core-services.html)
+   * Adobe Experience Cloud - [規劃Adobe Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/services/core-services.html?lang=zh-Hant)

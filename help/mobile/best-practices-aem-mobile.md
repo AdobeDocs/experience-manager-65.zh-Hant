@@ -28,8 +28,8 @@ ht-degree: 0%
 >
 >若要深入瞭解外掛程式，請參閱下列資源：
 >
->* [在AEM Mobile中使用Cordova外掛程式](https://helpx.adobe.com/digital-publishing-solution/help/cordova-api.html)
->* [使用AEM Mobile特定的Cordova啟用外掛程式](https://helpx.adobe.com/digital-publishing-solution/help/app-runtime-api.html)
+>* [在AEM Mobile中使用Cordova外掛程式](https://helpx.adobe.com/tw/digital-publishing-solution/help/cordova-api.html)
+>* [使用AEM Mobile特定的Cordova啟用外掛程式](https://helpx.adobe.com/tw/digital-publishing-solution/help/app-runtime-api.html)
 >
 
 * 使用外掛程式功能的範本應以可在瀏覽器中編寫的方式撰寫，而不使用外掛程式橋接器。

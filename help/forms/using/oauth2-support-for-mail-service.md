@@ -151,7 +151,7 @@ ht-degree: 5%
 
    >[!NOTE]
    >
-   > 若要瞭解更多與工作通知相關的資訊，[請按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-65/content/forms/administrator-help/configuring-email-endpoints.html#create-an-email-endpoint-for-the-complete-task-service)。
+   > 若要瞭解更多與工作通知相關的資訊，[請按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-65/content/forms/administrator-help/configuring-email-endpoints.html?lang=zh-Hant#create-an-email-endpoint-for-the-complete-task-service)。
 
 ## 設定電子郵件端點 {#configure_email_endpoint}
 
@@ -165,7 +165,7 @@ ht-degree: 5%
 
    >[!NOTE]
    >
-   > 若要瞭解有關設定電子郵件端點的詳細資訊，請按一下[設定電子郵件端點]。[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-65/content/forms/administrator-help/configuring-email-endpoints.html)
+   > 若要瞭解有關設定電子郵件端點的詳細資訊，請按一下[設定電子郵件端點]。[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-65/content/forms/administrator-help/configuring-email-endpoints.html?lang=zh-Hant)
 
 ## 疑難排解 {#troubleshooting}
 

@@ -304,7 +304,7 @@ AEM部署有三個重要的建置組塊。 內容作者、編輯者和核准者�
 
 >[!CAUTION]
 >
->關聯式資料庫微核心受到限制支援。 使用此型別的微核心之前，請連絡[Adobe客戶服務](https://experienceleague.adobe.com/?support-solution=General&amp;support-tab=home#support)。
+>關聯式資料庫微核心受到限制支援。 使用此型別的微核心之前，請連絡[Adobe客戶服務](https://experienceleague.adobe.com/zh-hant?support-solution=General&amp;support-tab=home#support)。
 
 ![chlimage_1-3](assets/chlimage_1-3a.png)
 

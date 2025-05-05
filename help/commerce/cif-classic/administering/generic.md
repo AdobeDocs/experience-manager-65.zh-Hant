@@ -168,7 +168,7 @@ Adobe Experience Manager (AEM)一般解決方案提供管理存放庫內所儲�
 >
 >`/etc/commerce/products/...`
 >
->這表示預設會被[Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html)封鎖，因此請視需要設定。
+>這表示預設會被[Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant)封鎖，因此請視需要設定。
 
 #### 編輯產品資訊 — 觸控最佳化UI {#editing-product-information-touch-optimized-ui}
 

@@ -28,9 +28,9 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->您可以先從InDesign檔案產生InDesign範本，然後再將其匯入AEM Assets。 如需詳細資訊，請參閱[使用檔案與範本](https://helpx.adobe.com/indesign/using/files-templates.html)。
+>您可以先從InDesign檔案產生InDesign範本，然後再將其匯入AEM Assets。 如需詳細資訊，請參閱[使用檔案與範本](https://helpx.adobe.com/tw/indesign/using/files-templates.html)。
 >
->您可以將InDesign範本中的元素對應至XML標籤。 當您在「目錄製作程式」中將產品屬性與範本屬性對應時，對應的標籤會顯示為屬性。 若要瞭解InDesign檔案中的XML標籤，請參閱[標籤XML的內容](https://helpx.adobe.com/indesign/using/tagging-content-xml.html)。
+>您可以將InDesign範本中的元素對應至XML標籤。 當您在「目錄製作程式」中將產品屬性與範本屬性對應時，對應的標籤會顯示為屬性。 若要瞭解InDesign檔案中的XML標籤，請參閱[標籤XML的內容](https://helpx.adobe.com/tw/indesign/using/tagging-content-xml.html)。
 
 >[!NOTE]
 >

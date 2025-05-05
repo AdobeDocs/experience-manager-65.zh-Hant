@@ -198,7 +198,7 @@ JSP會將必要的Analytics JavaScript物件及參照新增至使用者端JavaSc
 
 用來建立mbox的預設mbox.js檔案位於/etc/clientlibs/foundation/testandtarget/mbox/source/mbox.js。 若要使用客戶mbox.js檔案，請新增檔案至Target雲端設定。 若要新增檔案，mbox.js檔案必須在檔案系統上可用。
 
-例如，如果您想要使用[Marketing Cloud識別碼服務](https://experienceleague.adobe.com/docs/id-service/using/home.html)，您必須下載mbox.js，使其包含以您的租使用者為基礎之`imsOrgID`變數的正確值。 若要與Marketing CloudID服務整合，此變數為必要專案。 如需詳細資訊，請參閱[Adobe Analytics作為Adobe Target](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html)和[的報表Source，再執行](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/before-implement.html)。
+例如，如果您想要使用[Marketing Cloud識別碼服務](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=zh-Hant)，您必須下載mbox.js，使其包含以您的租使用者為基礎之`imsOrgID`變數的正確值。 若要與Marketing CloudID服務整合，此變數為必要專案。 如需詳細資訊，請參閱[Adobe Analytics作為Adobe Target](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=zh-Hant)和[的報表Source，再執行](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/before-implement.html?lang=zh-Hant)。
 
 >[!NOTE]
 >

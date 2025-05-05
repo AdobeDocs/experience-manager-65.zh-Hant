@@ -32,7 +32,7 @@ ht-degree: 1%
 
 若要開始設定AEM Mobile，您必須：
 
-* **要求API金鑰**：若要存取On-Demand Services API，您必須要求API金鑰。 若要要求API金鑰，請完成[PDF表單](https://helpx.adobe.com/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html)。 將完成的表單傳送至Adobe Developer支援： [wwds@adobe.com](mailto:wwds@adobe.com)
+* **要求API金鑰**：若要存取On-Demand Services API，您必須要求API金鑰。 若要要求API金鑰，請完成[PDF表單](https://helpx.adobe.com/tw/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html)。 將完成的表單傳送至Adobe Developer支援： [wwds@adobe.com](mailto:wwds@adobe.com)
 
 * **產生裝置ID和裝置Token**：收到API金鑰後，即可產生裝置ID和裝置Token。 移至`https://aex.aemmobile.adobe.com`並執行下列動作：
 
@@ -46,7 +46,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->應授予所需的Adobe ID對AEM Mobile專案的存取權。 請參閱線上說明中的[AEM Mobile帳戶管理](https://helpx.adobe.com/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html)。
+>應授予所需的Adobe ID對AEM Mobile專案的存取權。 請參閱線上說明中的[AEM Mobile帳戶管理](https://helpx.adobe.com/tw/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html)。
 
 ## 建立AEM Mobile專案 {#creating-projects-for-aem-mobile}
 
@@ -56,7 +56,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->若要進一步瞭解如何在AEM Mobile中建立專案，請按一下[這裡](https://helpx.adobe.com/digital-publishing-solution/help/creating-projects.html)。
+>若要進一步瞭解如何在AEM Mobile中建立專案，請按一下[這裡](https://helpx.adobe.com/tw/digital-publishing-solution/help/creating-projects.html)。
 
 ## 設定AEM Mobile聯結器 {#configuring-an-aem-mobile-connector}
 
@@ -117,7 +117,7 @@ AEM Mobile On-Demand聯結器可用來將AEM Mobile管理的內容與Adobe Exper
 * 開發人員
 * 作者
 
-如需以不同許可權建立角色（例如建立應用程式或建立和發佈內容）的詳細資訊，請按一下AEM Mobile說明中的[建立使用者角色並授與存取權](https://helpx.adobe.com/digital-publishing-solution/help/account-admin-dps.html)。
+如需以不同許可權建立角色（例如建立應用程式或建立和發佈內容）的詳細資訊，請按一下AEM Mobile說明中的[建立使用者角色並授與存取權](https://helpx.adobe.com/tw/digital-publishing-solution/help/account-admin-dps.html)。
 
 >[!NOTE]
 >

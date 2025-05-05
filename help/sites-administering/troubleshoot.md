@@ -101,7 +101,7 @@ ht-degree: 2%
 >
 >`jstack <pid> >> /path/to/logfile.log`
 
-如需詳細資訊，請參閱[如何從JVM進行對話串傾印](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17452.html)檔案
+如需詳細資訊，請參閱[如何從JVM進行對話串傾印](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17452.html?lang=zh-Hant)檔案
 
 ### 檢查未關閉的JCR工作階段 {#checking-for-unclosed-jcr-sessions}
 

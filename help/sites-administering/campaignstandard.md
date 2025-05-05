@@ -45,7 +45,7 @@ ht-degree: 0%
 ## 先決條件 {#prerequisites}
 
 * Adobe Campaign Standard的管理員存取權
-   * 如果您需要更多有關如何設定和設定Adobe Campaign Standard的詳細資訊，請參閱[Adobe Campaign Standard檔案。](https://experienceleague.adobe.com/docs/campaign-standard/using/campaign-standard-home.html)
+   * 如果您需要更多有關如何設定和設定Adobe Campaign Standard的詳細資訊，請參閱[Adobe Campaign Standard檔案。](https://experienceleague.adobe.com/docs/campaign-standard/using/campaign-standard-home.html?lang=zh-Hant)
 * AEM的管理員存取權
 
 ## 在Campaign中設定aemserver使用者 {#aemserver-user}
@@ -66,7 +66,7 @@ ht-degree: 0%
 
 您的`aemserver`使用者現在擁有必要許可權，讓AEM能夠使用它與Adobe Campaign通訊。
 
-不過，必須先設定密碼，AEM才能使用`aemserver`使用者。 這不能透過Adobe Campaign完成。 必須由Adobe支援工程師執行。 [向Adobe客戶服務](https://experienceleague.adobe.com/?support-tab=home#support)提交票證，以要求重設`aemserver`密碼。 取得Adobe客戶服務的密碼後，請妥善儲存在安全位置。
+不過，必須先設定密碼，AEM才能使用`aemserver`使用者。 這不能透過Adobe Campaign完成。 必須由Adobe支援工程師執行。 [向Adobe客戶服務](https://experienceleague.adobe.com/zh-hant?support-tab=home#support)提交票證，以要求重設`aemserver`密碼。 取得Adobe客戶服務的密碼後，請妥善儲存在安全位置。
 
 ## 驗證Campaign中的AEMResourceTypeFilter {#resource-type-filter}
 

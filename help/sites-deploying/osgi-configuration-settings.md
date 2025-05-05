@@ -37,7 +37,7 @@ OSGi「*」提供標準化的原語，允許使用小型、可重複使用且協
 
 >[!NOTE]
 >
->[AEM Tools](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17488.html)的OSGi Configuration Diff工具可用來列出預設的OSGi設定。
+>[AEM Tools](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17488.html?lang=zh-Hant)的OSGi Configuration Diff工具可用來列出預設的OSGi設定。
 
 >[!NOTE]
 >
@@ -273,7 +273,7 @@ OSGi「*」提供標準化的原語，允許使用小型、可重複使用且協
 
 >[!CAUTION]
 >
->變更&#x200B;**Minify**&#x200B;或&#x200B;**Gzip**&#x200B;的設定時，請刪除clientlibs快取的內容。 如需詳細資訊，請參閱[知識庫文章](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-16543.html)。
+>變更&#x200B;**Minify**&#x200B;或&#x200B;**Gzip**&#x200B;的設定時，請刪除clientlibs快取的內容。 如需詳細資訊，請參閱[知識庫文章](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-16543.html?lang=zh-Hant)。
 
 >[!NOTE]
 >

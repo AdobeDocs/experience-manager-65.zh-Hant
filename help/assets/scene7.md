@@ -19,7 +19,7 @@ ht-degree: 2%
 
 # 將Dynamic Media Classic功能新增至頁面 {#adding-scene-features-to-your-page}
 
-[Adobe Dynamic Media Classic](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/home.html)是託管式解決方案，可管理、增強、發佈多媒體資產，並將其傳送至Web、行動裝置、電子郵件及連線至網際網路的顯示器和列印。
+[Adobe Dynamic Media Classic](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/home.html?lang=zh-Hant)是託管式解決方案，可管理、增強、發佈多媒體資產，並將其傳送至Web、行動裝置、電子郵件及連線至網際網路的顯示器和列印。
 
 您可以在多種檢視器中檢視Dynamic Media Classic中發佈的Experience Manager資產：
 
@@ -179,13 +179,13 @@ Dynamic Media Classic **[!UICONTROL 影像]**&#x200B;元件可讓您將Dynamic M
 
 **[!UICONTROL 銳利化]** — 選取您要如何銳利化影像。 在[影像預設集最佳實務](/help/assets/managing-image-presets.md#image-preset-options)與[銳利化最佳實務](/help/assets/assets/sharpening_images.pdf)中詳細說明銳利化功能。
 
-**[!UICONTROL URL修飾元]** — 您可以提供其他Dynamic Media Classic影像命令來變更影像效果。 這些命令在[影像預設集](/help/assets/managing-image-presets.md)和[命令參考](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html)中有說明。
+**[!UICONTROL URL修飾元]** — 您可以提供其他Dynamic Media Classic影像命令來變更影像效果。 這些命令在[影像預設集](/help/assets/managing-image-presets.md)和[命令參考](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html?lang=zh-Hant)中有說明。
 
 **[!UICONTROL 中斷點]** — 如果您的網站有回應，您想要調整中斷點。 中斷點必須以逗號( 、 )分隔。
 
 ### 影像範本 {#image-template}
 
-[Dynamic Media Classic影像範本](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/quick-start-template-basics.html)是匯入至Dynamic Media Classic的層級Photoshop內容，其內容和屬性已引數化為變動。 **[!UICONTROL 影像範本]**&#x200B;元件可讓您以Experience Manager匯入影像並動態變更文字。 此外，您可以將&#x200B;**[!UICONTROL 影像範本]**&#x200B;元件設定為使用使用者端內容的值，讓每位使用者都能透過個人化的方式體驗影像。
+[Dynamic Media Classic影像範本](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/quick-start-template-basics.html?lang=zh-Hant)是匯入至Dynamic Media Classic的層級Photoshop內容，其內容和屬性已引數化為變動。 **[!UICONTROL 影像範本]**&#x200B;元件可讓您以Experience Manager匯入影像並動態變更文字。 此外，您可以將&#x200B;**[!UICONTROL 影像範本]**&#x200B;元件設定為使用使用者端內容的值，讓每位使用者都能透過個人化的方式體驗影像。
 
 若要設定元件，請選取&#x200B;**[!UICONTROL 編輯]**。 您可以設定所有Dynamic Media Classic元件的[通用設定](#settings-common-to-all-scene-components)以及本節中說明的其他設定。
 

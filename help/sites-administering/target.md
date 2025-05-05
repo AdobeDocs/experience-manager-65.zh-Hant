@@ -66,7 +66,7 @@ ht-degree: 1%
 
 將AEM與Adobe Target整合需要Adobe Target、AEM活動管理和AEM受眾管理的知識。 您應熟悉下列資訊：
 
-* Adobe Target (請參閱[Adobe Target檔案](https://experienceleague.adobe.com/docs/target/using/target-home.html))。
+* Adobe Target (請參閱[Adobe Target檔案](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=zh-Hant))。
 * AEM活動主控台（請參閱[管理活動](/help/sites-authoring/activitylib.md)）。
 * AEM對象（請參閱[管理對象](/help/sites-authoring/managing-audiences.md)）。
 

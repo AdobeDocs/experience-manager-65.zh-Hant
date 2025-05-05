@@ -66,7 +66,7 @@ Scene7視訊元件支援下列格式：
 
 如果您不需要資產的工作流程或版本設定，請將資產上傳至Scene7。 以下是建議的工作流程：
 
-1. 在Dynamic Media Classic中，[設定排程的FTP上傳和編碼至Scene7 （系統自動化）](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html#upload-files-using-via-ftp)。
+1. 在Dynamic Media Classic中，[設定排程的FTP上傳和編碼至Scene7 （系統自動化）](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html?lang=zh-Hant#upload-files-using-via-ftp)。
 1. 在Experience Manager中，存取「內容尋找器」之&#x200B;**[!UICONTROL Scene7]**&#x200B;索引標籤中WCM的視訊資產。
 1. 使用&#x200B;**[!UICONTROL Scene7視訊]**&#x200B;元件的作者。
 
@@ -85,7 +85,7 @@ Scene7視訊元件支援下列格式：
 
    >[!NOTE]
    >
-   >如需視訊預設集含義的詳細資訊，請參閱[Dynamic Media Classic檔案](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html#video-presets-for-encoding-video-files)。
+   >如需視訊預設集含義的詳細資訊，請參閱[Dynamic Media Classic檔案](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html?lang=zh-Hant#video-presets-for-encoding-video-files)。
    >
    >Adobe建議您在設定通用預設集時同時選取兩個最適化視訊集，或是選取&#x200B;**[!UICONTROL 最適化視訊編碼]**&#x200B;選項。
 

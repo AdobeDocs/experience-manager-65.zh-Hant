@@ -141,7 +141,7 @@ s.linkTrackVars= 'prop4';
 
 ## 連結追蹤設定範例 {#example-link-tracking-configuration}
 
-執行以下程式，探索Adobe Analytics整合的連結追蹤行為。 程式會顯示來自[Adobe Marketing Cloud Debugger](https://experienceleague.adobe.com/docs/debugger/using/experience-cloud-debugger.html)的結果。
+執行以下程式，探索Adobe Analytics整合的連結追蹤行為。 程式會顯示來自[Adobe Marketing Cloud Debugger](https://experienceleague.adobe.com/docs/debugger/using/experience-cloud-debugger.html?lang=zh-Hant)的結果。
 
 ### 一般設定 {#general-configuration}
 

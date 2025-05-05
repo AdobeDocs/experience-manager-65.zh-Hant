@@ -116,12 +116,12 @@ AEM 6.4 GA和AEM 6.3 SP1社交登入已更新，可與較新的Facebook Graph AP
    ![fbsocialloginconfigpng](assets/fbsocialloginconfigpng.png)
 
    * **[!UICONTROL 標題]** （*必要*）輸入識別Facebook應用程式的顯示標題。 使用與Facebook應用程式的&#x200B;*顯示名稱*&#x200B;輸入的相同名稱。
-   * **[!UICONTROL 應用程式ID/API金鑰]** （*必要*）輸入Facebook應用程式的&#x200B;***應用程式ID***。 這會識別從對話方塊建立的[AdobeGranite OAuth應用程式和提供者](https://helpx.adobe.com/experience-manager/6-3/communities/using/social-login.html#AdobeGraniteOAuthApplicationandProvider)執行個體。
+   * **[!UICONTROL 應用程式ID/API金鑰]** （*必要*）輸入Facebook應用程式的&#x200B;***應用程式ID***。 這會識別從對話方塊建立的[AdobeGranite OAuth應用程式和提供者](https://helpx.adobe.com/tw/experience-manager/6-3/communities/using/social-login.html#AdobeGraniteOAuthApplicationandProvider)執行個體。
    * **[!UICONTROL 應用程式密碼]** （*必要*）輸入Facebook應用程式的&#x200B;***應用程式密碼***。
    * **[!UICONTROL 建立使用者]**&#x200B;如果勾選，使用Facebook帳戶登入將會建立AEM使用者專案，並將他們新增為所選使用者群組的成員。  預設為已核取（強烈建議）。
    * **[!UICONTROL 隱藏使用者ID]**：保留取消選取狀態。
    * **[!UICONTROL 範圍電子郵件]**：應從Facebook擷取使用者的電子郵件ID。
-   * **[!UICONTROL 新增至使用者群組]**&#x200B;選取[新增使用者群組]以針對要新增使用者的社群網站選擇一個或多個[成員群組](https://helpx.adobe.com/experience-manager/6-3/communities/using/users.html)。
+   * **[!UICONTROL 新增至使用者群組]**&#x200B;選取[新增使用者群組]以針對要新增使用者的社群網站選擇一個或多個[成員群組](https://helpx.adobe.com/tw/experience-manager/6-3/communities/using/users.html)。
 
    >[!NOTE]
    >
@@ -130,7 +130,7 @@ AEM 6.4 GA和AEM 6.3 SP1社交登入已更新，可與較新的Facebook Graph AP
    * 選取&#x200B;**[!UICONTROL 儲存]**。
    * **[!UICONTROL Publish]**。
 
-結果是[AdobeGranite OAuth應用程式和提供者](https://helpx.adobe.com/experience-manager/6-3/communities/using/social-login.html#adobe-granite-oauth-application-and-provider)執行個體，除非新增其他範圍（許可權），否則不需要進一步修改。 預設範圍是Facebook登入的標準許可權。 如果需要其他範圍，則需要直接編輯OSGI設定。 如果直接透過系統/主控台完成修改，請避免從觸控式UI編輯雲端服務設定以避免覆寫。
+結果是[AdobeGranite OAuth應用程式和提供者](https://helpx.adobe.com/tw/experience-manager/6-3/communities/using/social-login.html#adobe-granite-oauth-application-and-provider)執行個體，除非新增其他範圍（許可權），否則不需要進一步修改。 預設範圍是Facebook登入的標準許可權。 如果需要其他範圍，則需要直接編輯OSGI設定。 如果直接透過系統/主控台完成修改，請避免從觸控式UI編輯雲端服務設定以避免覆寫。
 
 ### AEM Communities Facebook OAuth提供者 {#aem-communities-facebook-oauth-provider}
 
@@ -270,7 +270,7 @@ facebook和Twitter的後續步驟相同：
 
    * **[!UICONTROL 消費者金鑰]**
 
-     （*必要*）輸入Twitter應用程式的&#x200B;**消費者(API)金鑰**。 這會識別從對話方塊建立的[AdobeGranite OAuth應用程式和提供者](https://helpx.adobe.com/experience-manager/6-3/communities/using/social-login.html#AdobeGraniteOAuthApplicationandProvider)執行個體。
+     （*必要*）輸入Twitter應用程式的&#x200B;**消費者(API)金鑰**。 這會識別從對話方塊建立的[AdobeGranite OAuth應用程式和提供者](https://helpx.adobe.com/tw/experience-manager/6-3/communities/using/social-login.html#AdobeGraniteOAuthApplicationandProvider)執行個體。
 
    * **[!UICONTROL 使用者密碼]**
 
@@ -286,7 +286,7 @@ facebook和Twitter的後續步驟相同：
 
    * **[!UICONTROL 新增至使用者群組]**
 
-     選取[新增使用者群組]，為要新增使用者的社群網站選擇一個或多個[成員群組](https://helpx.adobe.com/experience-manager/6-3/communities/using/users.html)。
+     選取[新增使用者群組]，為要新增使用者的社群網站選擇一個或多個[成員群組](https://helpx.adobe.com/tw/experience-manager/6-3/communities/using/users.html)。
 
    >[!NOTE]
    >
@@ -295,7 +295,7 @@ facebook和Twitter的後續步驟相同：
 
 1. 選取&#x200B;**[!UICONTROL 儲存]**&#x200B;和&#x200B;**[!UICONTROL Publish]**。
 
-結果是[Adobe的Granite OAuth應用程式和提供者](https://helpx.adobe.com/experience-manager/6-3/communities/using/social-login.html#adobe-granite-oauth-application-and-provider)執行個體，不需要進一步修改。 預設範圍是Twitter登入的標準許可權。
+結果是[Adobe的Granite OAuth應用程式和提供者](https://helpx.adobe.com/tw/experience-manager/6-3/communities/using/social-login.html#adobe-granite-oauth-application-and-provider)執行個體，不需要進一步修改。 預設範圍是Twitter登入的標準許可權。
 
 ### AEM CommunitiesTwitterOAuth提供者 {#aem-communities-twitter-oauth-provider}
 
@@ -346,7 +346,7 @@ facebook和Twitter的後續步驟相同：
 
 ### AEM Communities Sites主控台 {#aem-communities-sites-console}
 
-設定雲端服務後，可在社群網站[建立](https://helpx.adobe.com/experience-manager/6-3/communities/using/sites-console.html#SiteCreation)或[管理](https://helpx.adobe.com/experience-manager/6-3/communities/using/sites-console.html#ModifyingSiteProperties)期間，使用[使用者管理](https://helpx.adobe.com/experience-manager/6-3/communities/using/sites-console.html#USERMANAGEMENT)設定子面板，針對社群網站的相關社交登入設定啟用雲端服務。
+設定雲端服務後，可在社群網站[建立](https://helpx.adobe.com/tw/experience-manager/6-3/communities/using/sites-console.html#SiteCreation)或[管理](https://helpx.adobe.com/tw/experience-manager/6-3/communities/using/sites-console.html#ModifyingSiteProperties)期間，使用[使用者管理](https://helpx.adobe.com/tw/experience-manager/6-3/communities/using/sites-console.html#USERMANAGEMENT)設定子面板，針對社群網站的相關社交登入設定啟用雲端服務。
 
 1. 選擇您儲存社交登入設定的網站設定內容。
 

@@ -27,7 +27,7 @@ ht-degree: 0%
 
 您可以從[!DNL Adobe Illustrator]檔案中參考現有的數位資產。
 
-1. 使用[[!DNL Experience Manager] 案頭應用程式](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html)，在本機檔案系統上擷取數位資產。 導覽至您要參考之資產的檔案系統位置。
+1. 使用[[!DNL Experience Manager] 案頭應用程式](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=zh-Hant)，在本機檔案系統上擷取數位資產。 導覽至您要參考之資產的檔案系統位置。
 1. 將資產從本機資料夾拖曳至[!DNL Illustrator]檔案。
 
 1. 將[!DNL Illustrator]檔案儲存至掛載的磁碟機，或[上傳](/help/assets/manage-assets.md#uploading-assets)至[!DNL Experience Manager]存放庫。
@@ -65,14 +65,14 @@ ht-degree: 0%
 ### 透過匯出ZIP檔案來建立資產的參考 {#create-references-to-aem-assets-by-exporting-a-zip-file}
 
 1. 執行[建立工作流程模型](/help/sites-developing/workflows-models.md)中的步驟以建立工作流程。
-1. 使用[!DNL Adobe InDesign]的[封裝功能](https://helpx.adobe.com/indesign/how-to/indesign-package-files-for-handoff.html)匯出檔案。 [!DNL Adobe InDesign]可以將檔案和連結的資產匯出為套件。 在此案例中，匯出的資料夾包含`Links`資料夾，其中包含[!DNL InDesign]檔案中的子資產。 `Links`資料夾與INDD檔案位於相同的資料夾中。
+1. 使用[!DNL Adobe InDesign]的[封裝功能](https://helpx.adobe.com/tw/indesign/how-to/indesign-package-files-for-handoff.html)匯出檔案。 [!DNL Adobe InDesign]可以將檔案和連結的資產匯出為套件。 在此案例中，匯出的資料夾包含`Links`資料夾，其中包含[!DNL InDesign]檔案中的子資產。 `Links`資料夾與INDD檔案位於相同的資料夾中。
 1. 建立ZIP檔案並將其上傳至[!DNL Experience Manager]存放庫。
 1. 啟動`Unarchiver`工作流程。
 1. 工作流程完成時，連結資料夾中的參照會自動參照為子資產。 若要檢視引用的資產清單，請導覽至[!DNL InDesign]資產的資產詳細資訊頁面，並關閉[邊欄](/help/sites-authoring/basic-handling.md#rail-selector)。
 
 ## [!DNL Adobe Photoshop]：新增數位資產作為參考 {#refps}
 
-1. 使用[!DNL Experience Manager]案頭應用程式來存取[!DNL Experience Manager Assets]。 下載並顯示本機檔案系統上的資產。 在[!DNL Adobe Photoshop]中使用[!UICONTROL 放置連結]功能。 請參閱[將資產放入案頭應用程式](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#place-assets-in-native-documents)。
+1. 使用[!DNL Experience Manager]案頭應用程式來存取[!DNL Experience Manager Assets]。 下載並顯示本機檔案系統上的資產。 在[!DNL Adobe Photoshop]中使用[!UICONTROL 放置連結]功能。 請參閱[將資產放入案頭應用程式](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=zh-Hant#place-assets-in-native-documents)。
 
 1. 儲存在[!DNL Photoshop]檔案中至掛載的磁碟機或[上傳](/help/assets/manage-assets.md#uploading-assets)至[!DNL Experience Manager]存放庫。
 1. 工作流程完成後，現有[!DNL Experience Manager]資產的參考會列在資產詳細資訊頁面中。
@@ -125,7 +125,7 @@ ht-degree: 0%
 
 工具列、左側邊欄及「頁面檢視器」控制項中有以下選項：
 
-* **[!UICONTROL 案頭動作]**&#x200B;使用[!DNL Experience Manager]案頭應用程式開啟或顯示特定子資產。 瞭解如何[設定案頭動作](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#desktopactions-v2) （如果您使用[!DNL Experience Manager]案頭應用程式）。
+* **[!UICONTROL 案頭動作]**&#x200B;使用[!DNL Experience Manager]案頭應用程式開啟或顯示特定子資產。 瞭解如何[設定案頭動作](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=zh-Hant#desktopactions-v2) （如果您使用[!DNL Experience Manager]案頭應用程式）。
 
 * **[!UICONTROL 屬性]**&#x200B;選項會開啟特定子資產的[!UICONTROL 屬性]頁面。
 
@@ -141,7 +141,7 @@ ht-degree: 0%
 
 >[!MORELIKETHIS]
 >
->* [使用Adobe Experience Manager案頭應用程式](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html)
->* [在Adobe Experience Manager中設定案頭動作](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#desktopactions-v2)
->* [在Adobe Photoshop中建立連結智慧物件](https://helpx.adobe.com/photoshop/using/create-smart-objects.html#create-linked-smart-objects)
->* [在Adobe InDesign中放置圖形](https://helpx.adobe.com/indesign/using/placing-graphics.html)
+>* [使用Adobe Experience Manager案頭應用程式](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=zh-Hant)
+>* [在Adobe Experience Manager中設定案頭動作](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=zh-Hant#desktopactions-v2)
+>* [在Adobe Photoshop中建立連結智慧物件](https://helpx.adobe.com/tw/photoshop/using/create-smart-objects.html#create-linked-smart-objects)
+>* [在Adobe InDesign中放置圖形](https://helpx.adobe.com/tw/indesign/using/placing-graphics.html)

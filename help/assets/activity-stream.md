@@ -28,7 +28,7 @@ ht-degree: 12%
 * 拒絕
 * 移動
 
-將從儲存日誌檔案的CRX位置`/var/audit/com.day.cq.dam/content/dam`擷取要在時間軸中顯示的活動日誌。 此外，當上傳新資產或修改現有資產並透過[Adobe資產連結](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-assets-using-adobe-asset-link.ug.html)或[Experience Manager案頭應用程式](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/release-notes.html)簽入[!DNL Experience Manager]時，會記錄時間軸活動。
+將從儲存日誌檔案的CRX位置`/var/audit/com.day.cq.dam/content/dam`擷取要在時間軸中顯示的活動日誌。 此外，當上傳新資產或修改現有資產並透過[Adobe資產連結](https://helpx.adobe.com/tw/enterprise/admin-guide.html/enterprise/using/manage-assets-using-adobe-asset-link.ug.html)或[Experience Manager案頭應用程式](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/release-notes.html?lang=zh-Hant)簽入[!DNL Experience Manager]時，會記錄時間軸活動。
 
 >[!NOTE]
 >

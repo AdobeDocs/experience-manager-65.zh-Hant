@@ -40,7 +40,7 @@ ht-degree: 1%
 >
 >請務必也進行必要的Dispatcher設定變更，以使用CSRF Protection Framework：
 >
->* [設定Adobe Experience Manager Dispatcher以防止CSRF攻擊](https://experienceleague.adobe.com/en/docs/experience-manager-dispatcher/using/configuring/configuring-dispatcher-to-prevent-csrf)
+>* [設定Adobe Experience Manager Dispatcher以防止CSRF攻擊](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-dispatcher/using/configuring/configuring-dispatcher-to-prevent-csrf)
 >* [Dispatcher概觀](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-dispatcher/using/dispatcher)
 
 >[!NOTE]

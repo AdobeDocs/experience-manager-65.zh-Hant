@@ -25,7 +25,7 @@ ht-degree: 0%
 
 AEM Forms資料整合模組可讓您從不同的後端資料來源(例如AEM使用者設定檔、RESTful Web服務、SOAP型Web服務、OData服務和關聯式資料庫)建立表單資料模型。 您可以在表單資料模型中設定資料模型物件和服務，並將其與調適型表單建立關聯。 最適化表單欄位會繫結至資料模型物件屬性。 這些服務可讓您預先填寫最適化表單，並將提交的表單資料寫入回資料模型物件。
 
-如需表單資料整合與表單資料模型的詳細資訊，請參閱[AEM Forms資料整合](https://helpx.adobe.com/experience-manager/6-3/forms/using/data-integration.html)。
+如需表單資料整合與表單資料模型的詳細資訊，請參閱[AEM Forms資料整合](https://helpx.adobe.com/tw/experience-manager/6-3/forms/using/data-integration.html)。
 
 本教學課程將逐步引導您準備、建立、設定表單資料模型，並將其與互動式通訊建立關聯。 在本教學課程結束時，您將能夠：
 
@@ -46,7 +46,7 @@ AEM Forms資料整合模組可讓您從不同的後端資料來源(例如AEM使�
 開始之前，請確定您具備下列條件：
 
 * 含有範例資料的MySQL資料庫，如[設定資料庫](../../forms/using/create-form-data-model0.md#step-set-up-the-database)區段中所述。
-* 適用於MySQL JDBC驅動程式的OSGi套件組合，如[套件組合JDBC資料庫驅動程式](https://helpx.adobe.com/experience-manager/6-3/help/sites-developing/jdbc.html#bundling-the-jdbc-database-driver)中所述
+* 適用於MySQL JDBC驅動程式的OSGi套件組合，如[套件組合JDBC資料庫驅動程式](https://helpx.adobe.com/tw/experience-manager/6-3/help/sites-developing/jdbc.html#bundling-the-jdbc-database-driver)中所述
 
 ## 步驟1：設定資料庫 {#step-set-up-the-database}
 
@@ -113,7 +113,7 @@ CREATE TABLE `calls` (
 
 ## 步驟2：將MySQL資料庫設定為資料來源 {#step-configure-mysql-database-as-data-source}
 
-您可以設定不同型別的資料來源，以建立表單資料模型。 在本教學課程中，您將設定已設定並填入範例資料的MySQL資料庫。 如需其他支援的資料來源以及如何設定它們的相關資訊，請參閱[AEM Forms資料整合](https://helpx.adobe.com/experience-manager/6-3/forms/using/data-integration.html)。
+您可以設定不同型別的資料來源，以建立表單資料模型。 在本教學課程中，您將設定已設定並填入範例資料的MySQL資料庫。 如需其他支援的資料來源以及如何設定它們的相關資訊，請參閱[AEM Forms資料整合](https://helpx.adobe.com/tw/experience-manager/6-3/forms/using/data-integration.html)。
 
 執行下列動作來設定您的MySQL資料庫：
 
@@ -155,7 +155,7 @@ CREATE TABLE `calls` (
 
 ## 步驟3：建立表單資料模型 {#step-create-form-data-model}
 
-AEM Forms提供直覺式使用者介面，可讓您從已設定的資料來源[建立表單資料模式](https://helpx.adobe.com/experience-manager/6-3/forms/using/data-integration.html#main-pars_header_1524967585)l。 您可以在表單資料模型中使用多個資料來源。 在本教學課程的使用案例中，您將使用MySQL做為資料來源。
+AEM Forms提供直覺式使用者介面，可讓您從已設定的資料來源[建立表單資料模式](https://helpx.adobe.com/tw/experience-manager/6-3/forms/using/data-integration.html#main-pars_header_1524967585)l。 您可以在表單資料模型中使用多個資料來源。 在本教學課程的使用案例中，您將使用MySQL做為資料來源。
 
 執行下列操作以建立表單資料模型：
 

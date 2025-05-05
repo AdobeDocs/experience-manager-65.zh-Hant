@@ -93,7 +93,7 @@ Dynamic Media元件是智慧型的 — 視您新增影像或視訊而定，您�
 
 如果您要檢視影像集、迴轉集或混合媒體集，則此選項無法使用。
 
-**[!UICONTROL 影像修飾元]** — 您可以提供其他影像指令來變更影像效果。 這些命令在[管理影像預設集](/help/assets/managing-viewer-presets.md)和[命令參考](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html)中有說明。
+**[!UICONTROL 影像修飾元]** — 您可以提供其他影像指令來變更影像效果。 這些命令在[管理影像預設集](/help/assets/managing-viewer-presets.md)和[命令參考](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html?lang=zh-Hant)中有說明。
 
 如果您要檢視影像集、迴轉集或混合媒體集，則此選項無法使用。
 
@@ -139,7 +139,7 @@ Dynamic Media元件是智慧型的 — 視您新增影像或視訊而定，您�
 
 在Experience Manager6.2中，當您安裝[FP-13480](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq620/featurepack/cq-6.2.0-featurepack-13480)時，您可以控制視訊是透過安全的SSL連線(HTTPS)還是不安全的連線(HTTP)傳送。 依預設，視訊傳送通訊協定會自動繼承自內嵌網頁的通訊協定。 如果網頁是透過HTTPS載入，影片也會透過HTTPS傳送。 反之，如果網頁採用HTTP格式，影片則會透過HTTP傳送。 通常，此預設行為是正常的，不需要進行任何設定變更。 不過，您可以覆寫此預設行為。 將`VideoPlayer.ssl=on`附加至URL路徑的結尾或內嵌程式碼片段中的其他檢視器組態引數清單。 這兩個動作都會強制安全視訊傳送。
 
-如需有關安全視訊傳送以及在URL路徑中使用`VideoPlayer.ssl`設定屬性的詳細資訊，請參閱「檢視器參考指南」中的[安全視訊傳送](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/c-html5-video-viewer-20-securevideodelivery.html)。 除了視訊檢視器之外，安全視訊傳送適用於混合媒體檢視器和互動式視訊檢視器。
+如需有關安全視訊傳送以及在URL路徑中使用`VideoPlayer.ssl`設定屬性的詳細資訊，請參閱「檢視器參考指南」中的[安全視訊傳送](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/c-html5-video-viewer-20-securevideodelivery.html?lang=zh-Hant)。 除了視訊檢視器之外，安全視訊傳送適用於混合媒體檢視器和互動式視訊檢視器。
 
 ### 互動媒體元件 {#interactive-media-component}
 

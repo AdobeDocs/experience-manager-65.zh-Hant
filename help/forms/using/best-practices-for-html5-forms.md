@@ -44,13 +44,13 @@ HTML5表單可包含多個外部資源，例如影像、JavaScript和CSS檔案�
 
 * 使用[壓縮影像](/help/assets/best-practices-for-optimizing-the-quality-of-your-images.md)。 它可減少呈現表單所需的網路活動和記憶體量。 因此，表單載入時間會大幅減少。
 * 使用AEM Configuration Manager (Day CQHTML庫管理員)中的「縮制」選項來壓縮JavaScript和CSS檔案。 如需詳細資訊，請參閱[OSGi組態設定](/help/sites-deploying/osgi-configuration-settings.md)。
-* 啟用Web壓縮。 這會減少源自表單的請求和回應大小。 如需詳細資訊，請參閱[AEM Forms伺服器的效能調整](https://helpx.adobe.com/aem-forms/6-3/performance-tuning-aem-forms.html)。
+* 啟用Web壓縮。 這會減少源自表單的請求和回應大小。 如需詳細資訊，請參閱[AEM Forms伺服器的效能調整](https://helpx.adobe.com/tw/aem-forms/6-3/performance-tuning-aem-forms.html)。
 
 ## 保持興趣不變，僅顯示必要欄位  {#keep-the-interest-alive-show-only-required-fields}
 
 HTML5表單可能會有數百頁。 含有大量欄位的表單在瀏覽器中載入緩慢。 您可以對XFA表單執行下列最佳化，以最佳化具有大量欄位和頁面的表單：
 
-* 評估將大型表單分割為多個表單。 您也可以使用表單集將所有較小的表單分組，並將它們顯示為單一單位。 表單集只會載入必要的表單。 此外，在表單集中，您可以設定不同表單中的通用欄位以共用資料繫結。 資料繫結可協助使用者僅填入一次通用資訊；資訊會自動填入後續的表單，進而大幅改善效能。 如需表單集的詳細資訊，請參閱AEM表單中的[表單集](https://helpx.adobe.com/aem-forms/6-3/formset-in-aem-forms.html)。
+* 評估將大型表單分割為多個表單。 您也可以使用表單集將所有較小的表單分組，並將它們顯示為單一單位。 表單集只會載入必要的表單。 此外，在表單集中，您可以設定不同表單中的通用欄位以共用資料繫結。 資料繫結可協助使用者僅填入一次通用資訊；資訊會自動填入後續的表單，進而大幅改善效能。 如需表單集的詳細資訊，請參閱AEM表單中的[表單集](https://helpx.adobe.com/tw/aem-forms/6-3/formset-in-aem-forms.html)。
 * 請考慮分割區段，並將每個區段移至不同頁面。 HTML5表單會在頁面捲動要求時動態載入每個頁面。 記憶體中只會儲存捲動頁面（顯示的頁面及其之前的頁面），其餘頁面則會視需要載入。 因此，在其本身的頁面上分割和移動區段可縮短載入表單所需的時間。 您也可以使用表單的第一頁做為登入頁面。 它類似於書籍的目錄(TOC)。 表單的登入頁面僅包含表單其他區段的連結。 它大幅改善表單第一頁的載入時間，並導致改善使用者體驗。
 * 依預設，隱藏條件區段。 讓這些區段只在符合特定條件時才可見。 這有助於將DOM的大小維持在最小。 您也可以使用標籤式導覽，一次只顯示一個截面。
 
@@ -61,7 +61,7 @@ HTML5表單可包含資料導向欄位（表格和子表單）。 這些欄位�
 * 使用XFA指令碼完成分頁導覽，以顯示資料導向欄位（表格和子表單）。 在分頁導覽中，頁面上只會顯示特定資料。 它限制瀏覽器上色作業為一次顯示的欄位，並使表單導覽更容易。 此外，行動裝置上的使用者只對資料子集感興趣。 它可幫助您提供絕佳的使用者體驗，並減少載入所需資料所需的時間。 您只需要一個的價格，就能獲得兩個解決方案。  另請注意，分頁導覽無法直接使用。 您可以使用XFA指令碼來開發分頁導覽。
 
 * 評估將多個唯讀欄合併到單一欄中的情形。 它可減少顯示表單所需的記憶體。 同時，請避免顯示不需要使用者輸入任何內容的欄。
-* 如果上述建議並未產生許多改善效果，請評估將資料導向表單分割為[表單集](https://helpx.adobe.com/aem-forms/6-3/formset-in-aem-forms.html)。 例如，如果表格超過1000列，則每100列會移至不同的表單。 這有助於改善表單的載入時間和效能。  另請注意，表單集會產生所有表單的合併提交XML。 若要區分每個表單的資料，請使用不同的資料根。 如需詳細資訊，請參閱[AEM Forms中的表單集](https://helpx.adobe.com/aem-forms/6-3/formset-in-aem-forms.html)。
+* 如果上述建議並未產生許多改善效果，請評估將資料導向表單分割為[表單集](https://helpx.adobe.com/tw/aem-forms/6-3/formset-in-aem-forms.html)。 例如，如果表格超過1000列，則每100列會移至不同的表單。 這有助於改善表單的載入時間和效能。  另請注意，表單集會產生所有表單的合併提交XML。 若要區分每個表單的資料，請使用不同的資料根。 如需詳細資訊，請參閱[AEM Forms中的表單集](https://helpx.adobe.com/tw/aem-forms/6-3/formset-in-aem-forms.html)。
 
 ## 記錄檔案(DOR)的二進位功能 {#power-of-two-for-document-of-record-dor}
 

@@ -46,4 +46,4 @@ DOM樹狀結構
 
 使用面板工具列擷取SOM運算式
 
-[GuideBridge](https://helpx.adobe.com/aem-forms/6/javascript-api/GuideBridge.html)中列出的部分API會使用專案的SOM運算式。 例如，若要將焦點置於最適化表單中的特定欄位，請將對應的SOM運算式傳遞至`guideBridge`中的`getFocus`API。
+[GuideBridge](https://helpx.adobe.com/tw/aem-forms/6/javascript-api/GuideBridge.html)中列出的部分API會使用專案的SOM運算式。 例如，若要將焦點置於最適化表單中的特定欄位，請將對應的SOM運算式傳遞至`guideBridge`中的`getFocus`API。

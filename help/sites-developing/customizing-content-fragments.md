@@ -132,9 +132,9 @@ ht-degree: 1%
 
 >[!CAUTION]
 >
->現在建議使用[內容片段核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)。 如需詳細資訊，請參閱[開發核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html)。
+>現在建議使用[內容片段核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=zh-Hant)。 如需詳細資訊，請參閱[開發核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html?lang=zh-Hant)。
 
-內容片段可以從AEM頁面引用，就像任何其他資產型別一樣。 AEM提供&#x200B;[**內容片段**&#x200B;核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html) - [元件，可讓您在頁面上包含內容片段](/help/sites-authoring/content-fragments.md#adding-a-content-fragment-to-your-page)。 您也可以擴充此&#x200B;**內容片段**&#x200B;核心元件。
+內容片段可以從AEM頁面引用，就像任何其他資產型別一樣。 AEM提供&#x200B;[**內容片段**&#x200B;核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=zh-Hant) - [元件，可讓您在頁面上包含內容片段](/help/sites-authoring/content-fragments.md#adding-a-content-fragment-to-your-page)。 您也可以擴充此&#x200B;**內容片段**&#x200B;核心元件。
 
 * 元件使用`fragmentPath`屬性來參考實際內容片段。 `fragmentPath`屬性的處理方式與其他資產型別的類似屬性相同；例如，當內容片段移至其他位置時。
 
@@ -537,5 +537,5 @@ ContentFragment newFragment = tpl.createFragment(parentRsc, "A fragment name", "
 
 如需詳細資訊，請參閱
 
-* [核心元件 — 內容片段元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html) （建議）
+* [核心元件 — 內容片段元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=zh-Hant) （建議）
 * [內容片段元件 — 頁面編寫專用元件](/help/sites-developing/components-content-fragments.md#components-for-page-authoring)

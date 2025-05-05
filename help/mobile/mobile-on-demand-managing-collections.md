@@ -30,9 +30,9 @@ ht-degree: 1%
 >
 >請參閱線上說明中的下列資源，以瞭解AEM Mobile應用程式中的下列主題：
 >
->* [設計考量](https://helpx.adobe.com/digital-publishing-solution/help/design-app.html)
+>* [設計考量](https://helpx.adobe.com/tw/digital-publishing-solution/help/design-app.html)
 >
->* [管理集合](https://helpx.adobe.com/digital-publishing-solution/help/creating-collections.html)
+>* [管理集合](https://helpx.adobe.com/tw/digital-publishing-solution/help/creating-collections.html)
 >
 
 ## 建立集合 {#creating-a-collection}

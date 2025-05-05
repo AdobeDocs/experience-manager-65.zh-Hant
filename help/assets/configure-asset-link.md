@@ -25,7 +25,7 @@ ht-degree: 0%
 
 1. 若要將Creative Cloud授權使用者與Experience Manager使用者對應，請管理[使用者存取控制](#user-access)。
 
-1. 建立[自訂查詢索引](#create-custom-index)、設定InDesign的[FPO轉譯](/help/assets/configure-fpo-renditions.md)、設定[Adobe Stock整合](/help/assets/aem-assets-adobe-stock.md)，以及設定[視覺或相似性搜尋](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/search-assets.html#configvisualsearch)。
+1. 建立[自訂查詢索引](#create-custom-index)、設定InDesign的[FPO轉譯](/help/assets/configure-fpo-renditions.md)、設定[Adobe Stock整合](/help/assets/aem-assets-adobe-stock.md)，以及設定[視覺或相似性搜尋](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/search-assets.html?lang=zh-Hant#configvisualsearch)。
 
 ## 各種功能的先決條件和支援 {#prerequisites}
 
@@ -33,7 +33,7 @@ ht-degree: 0%
 
 | Assets功能 | Experience Manager版本和支援需求 |
 |--- |--- |
-| Asset Link預設有效 | Experience Manager 6.5和6.5.2或更新版本。 </br> Experience Manager 6.4.4和6.4.6或更新版本。 </br> Adobe建議先安裝最新的[Experience Manager Service Pack (SP)](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html)，再使用AAL。 |
+| Asset Link預設有效 | Experience Manager 6.5和6.5.2或更新版本。 </br> Experience Manager 6.4.4和6.4.6或更新版本。 </br> Adobe建議先安裝最新的[Experience Manager Service Pack (SP)](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=zh-Hant)，再使用AAL。 |
 | Asset Link可在安裝套件後運作 | 若是Experience Manager 6.4.0 - 6.4.3，請安裝[adobe-asset-link-support](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/featurepack/adobe-asset-link-support)套件。 |
 | Adobe Stock整合 | Experience Manager 6.4.2或更新版本 |
 | 視覺或相似性搜尋 | Experience Manager 6.5.0或更新版本 |
@@ -54,7 +54,7 @@ Adobe建議您安裝[adobe-asset-link-config](https://experience.adobe.com/#/dow
    設定下列屬性並儲存變更。
 
    * [!UICONTROL 群組對應]：除非需要，否則留空。 如需詳細資訊，請參閱[群組對應](#group-mapping)。
-   * [!UICONTROL 組織]：輸入您在Adobe Admin Console中使用的組織ID。 如需有關組織ID的詳細資訊，請參閱[建立使用者群組](https://helpx.adobe.com/enterprise/using/create-aal-user-group.html)。
+   * [!UICONTROL 組織]：輸入您在Adobe Admin Console中使用的組織ID。 如需有關組織ID的詳細資訊，請參閱[建立使用者群組](https://helpx.adobe.com/tw/enterprise/using/create-aal-user-group.html)。
 
 1. 找到&#x200B;**[!UICONTROL Adobe Granite Bearer Authentication Handler]**&#x200B;設定，然後按一下以編輯它。
 
@@ -116,7 +116,7 @@ Adobe建議您安裝[adobe-asset-link-config](https://experience.adobe.com/#/dow
 
 ## 移轉至企業檔案後的其他設定 {#configure-migration-activity}
 
-Adobe Asset Link使用者可連線至Experience Manager，允許從主要的Creative Cloud for Enterprise (CCE)組織進行IMS登入。 Experience Manager使用使用者端ID來識別允許的IMS組織。 移轉至企業設定檔後，必須在Experience Manager中為持有者驗證處理常式的IMS組織設定使用者端ID和秘密金鑰。 如需企業基本資料的詳細資訊，請參閱[Adobe基本資料簡介](https://helpx.adobe.com/enterprise/kb/introducing-adobe-profiles.html)。
+Adobe Asset Link使用者可連線至Experience Manager，允許從主要的Creative Cloud for Enterprise (CCE)組織進行IMS登入。 Experience Manager使用使用者端ID來識別允許的IMS組織。 移轉至企業設定檔後，必須在Experience Manager中為持有者驗證處理常式的IMS組織設定使用者端ID和秘密金鑰。 如需企業基本資料的詳細資訊，請參閱[Adobe基本資料簡介](https://helpx.adobe.com/tw/enterprise/kb/introducing-adobe-profiles.html)。
 
 只有在您針對Experience Manager和Creative Cloud for Enterprise (CCE)使用不同的Adobe IMS組織，且這兩個組織之間已建立網域信任關係時，才需要額外設定。
 
@@ -243,7 +243,7 @@ Adobe Asset Link使用者在登入Creative Cloud應用程式後，就能與Exper
 
 例如，對業務線使用者和行銷人員來說，例如在幾個特定資料夾上建立自訂工作流程時，此設定會很有用。 假設機構拍照時的所有資產都可加上浮水印，或是自由譯者上傳的所有資產都可經過處理，以建立特定轉譯。
 
-如需詳細資訊和Experience Manager組態，請參閱[在資產上自動執行工作流程](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/assets-workflow.html#auto-execute-workflow-on-some-assets)。
+如需詳細資訊和Experience Manager組態，請參閱[在資產上自動執行工作流程](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/assets-workflow.html?lang=zh-Hant#auto-execute-workflow-on-some-assets)。
 
 
 ## 在Experience Manager 6.4.x版本中建立自訂索引 {#create-custom-index}
@@ -261,7 +261,7 @@ Experience Manager包含用於查詢的索引。 為指定版本建立下列自�
 
 ## 設定視覺或相似性搜尋 {#configure-visual-similarity-search}
 
-視覺化搜尋功能可讓您使用Adobe Asset Link面板，在AEM Assets存放庫中搜尋視覺上類似的資產。 6.5.0或更新版本提供此功能，而且只會搜尋已編制索引的資產。 如需詳細資訊，請參閱[如何設定視覺化搜尋](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/search-assets.html#configvisualsearch)。
+視覺化搜尋功能可讓您使用Adobe Asset Link面板，在AEM Assets存放庫中搜尋視覺上類似的資產。 6.5.0或更新版本提供此功能，而且只會搜尋已編制索引的資產。 如需詳細資訊，請參閱[如何設定視覺化搜尋](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/search-assets.html?lang=zh-Hant#configvisualsearch)。
 
 ## 產生Adobe InDesign的「僅供刊登」轉譯 {#fpo-renditions}
 
@@ -283,11 +283,11 @@ Experience Manager提供僅用於放置的轉譯(FPO)。 這些FPO轉譯的檔�
 * 確定您的部署符合先決條件。 具體來說，請確定已安裝適當的功能套件或套件。
 * 請聯絡貴組織的合作夥伴或系統整合商。
 * 如果您的Creative Cloud使用者無法驗證已簽出資產，則請檢查電子郵件ID中網域名稱的大小寫。 若要修正，請參閱[手動組態](#manual-configuration)。
-* 如需詳細資訊，請參閱[疑難排解Asset Link](https://helpx.adobe.com/enterprise/kb/asset-link-troubleshooting.html)。
+* 如需詳細資訊，請參閱[疑難排解Asset Link](https://helpx.adobe.com/tw/enterprise/kb/asset-link-troubleshooting.html)。
 
 
 >[!MORELIKETHIS]
 >
 >* [關於 Adobe Asset Link](https://helpx.adobe.com/tw/enterprise/using/adobe-asset-link.html)
->* [在Creative Cloud案頭應用程式中使用資產連結並管理資產](https://helpx.adobe.com/enterprise/using/manage-assets-using-adobe-asset-link.html)
+>* [在Creative Cloud案頭應用程式中使用資產連結並管理資產](https://helpx.adobe.com/tw/enterprise/using/manage-assets-using-adobe-asset-link.html)
 >* [設定Adobe Experience Manager Assets as a Cloud Service](https://helpx.adobe.com/tw/enterprise/using/configure-aem-assets-for-asset-link.html)。

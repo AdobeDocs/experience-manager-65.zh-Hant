@@ -97,7 +97,7 @@ Node.js是JavaScript執行階段環境，用來處理AEM專案`ui.frontend`子�
 
 設定本機開發環境後，您可以透過在本機部署靜態Node伺服器來模擬提供給React應用程式的內容。
 
-若要更深入瞭解如何設定本機開發環境以及內容預覽所需的所有相依性，請參閱[生產部署檔案](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/overview.html)。
+若要更深入瞭解如何設定本機開發環境以及內容預覽所需的所有相依性，請參閱[生產部署檔案](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/overview.html?lang=zh-Hant)。
 
 ## 準備您的AEM Headless應用程式以供上線 {#prepare-your-aem-headless-application-for-golive}
 
@@ -144,13 +144,13 @@ Node.js是JavaScript執行階段環境，用來處理AEM專案`ui.frontend`子�
 
 ## 使用Maven部署至生產環境 {#deploy-to-production-maven}
 
-如需使用Maven的&#x200B;*傳統*&#x200B;部署（非AMS），請參閱[WKND教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup.html#build)以取得概覽。
+如需使用Maven的&#x200B;*傳統*&#x200B;部署（非AMS），請參閱[WKND教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup.html?lang=zh-Hant#build)以取得概覽。
 
 ## 使用Cloud Manager部署至生產環境 {#deploy-to-production-cloud-manager}
 
-如果您是使用Cloud Manager的AMS客戶，在確認一切都經過測試且正常運作後，您可以將程式碼更新推送到Cloud Manager中的[集中式Git存放庫](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/managing-code/git-integration.html)。
+如果您是使用Cloud Manager的AMS客戶，在確認一切都經過測試且正常運作後，您可以將程式碼更新推送到Cloud Manager中的[集中式Git存放庫](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/managing-code/git-integration.html?lang=zh-Hant)。
 
-將更新上傳到Cloud Manager後，使用[Cloud Manager的CI/CD管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-deployment.html)將它們部署到AEM。
+將更新上傳到Cloud Manager後，使用[Cloud Manager的CI/CD管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-deployment.html?lang=zh-Hant)將它們部署到AEM。
 
 <!-- Cannot find a parallel link -->
 <!--
@@ -217,18 +217,18 @@ You can start deploying your code by using the Cloud Manager CI/CD pipeline, whi
 
 ## 其他資源 {#additional-resources}
 
-* [AEM開發指南](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/the-basics.html)
+* [AEM開發指南](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/the-basics.html?lang=zh-Hant)
 
-* [WKND教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
+* [WKND教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hant)
 
-* 適用於AEM的[Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html)
+* 適用於AEM的[Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html?lang=zh-Hant)
 
 * CDN快取
 
-   * [控制CDN快取](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html#controlling-a-cdn-cache)
+   * [控制CDN快取](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant#controlling-a-cdn-cache)
 
-   * 正在設定[CDN重寫程式](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/osgi-configuration-settings.html) （*搜尋CDN重寫程式*）
+   * 正在設定[CDN重寫程式](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/osgi-configuration-settings.html?lang=zh-Hant) （*搜尋CDN重寫程式*）
 
 * [AEM as a Headless CMS 簡介](/help/sites-developing/headless/introduction.md)
-* [AEM 開發人員入口網站](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
-* [AEM 中的 Headless 教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)
+* [AEM 開發人員入口網站](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=zh-Hant)
+* [AEM 中的 Headless 教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=zh-Hant)

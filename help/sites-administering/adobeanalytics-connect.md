@@ -51,7 +51,7 @@ Adobe Analytics帳戶必須：
 
 ### 設定AEM以使用您的Adobe Analytics資料中心 {#configuring-aem-to-use-your-adobe-analytics-data-centers}
 
-Adobe Analytics [資料中心](https://experienceleague.adobe.com/docs/analytics/analyze/reports-analytics/reporting-interface/overview-data-collection.html)會收集、處理和儲存與您的Adobe Analytics報表套裝相關聯的資料。 設定AEM以使用託管Adobe Analytics報表套裝的資料中心。 資料中心會在您的合約中提及。 如需此資訊，請聯絡貴組織的管理員。
+Adobe Analytics [資料中心](https://experienceleague.adobe.com/docs/analytics/analyze/reports-analytics/reporting-interface/overview-data-collection.html?lang=zh-Hant)會收集、處理和儲存與您的Adobe Analytics報表套裝相關聯的資料。 設定AEM以使用託管Adobe Analytics報表套裝的資料中心。 資料中心會在您的合約中提及。 如需此資訊，請聯絡貴組織的管理員。
 
 如有必要，請使用下列專案以路由傳送至正確的資料中心： `https://api.omniture.com/`。
 
@@ -86,7 +86,7 @@ Adobe Analytics [資料中心](https://experienceleague.adobe.com/docs/analytics
 >
 >由於Adobe Analytics API中的安全性變更，AEM中包含的Activity Map版本已無法再使用。
 >
->現在應該使用Adobe Analytics[&#128279;](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html)提供的ActivityMap外掛程式。
+>現在應該使用Adobe Analytics[&#128279;](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html?lang=zh-Hant)提供的ActivityMap外掛程式。
 
 ## 為Activity Map設定 {#configuring-for-the-activity-map}
 
@@ -94,7 +94,7 @@ Adobe Analytics [資料中心](https://experienceleague.adobe.com/docs/analytics
 >
 >由於Adobe Analytics API中的安全性變更，AEM中包含的Activity Map版本已無法再使用。
 >
->現在應該使用Adobe Analytics[&#128279;](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html)提供的ActivityMap外掛程式。
+>現在應該使用Adobe Analytics[&#128279;](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html?lang=zh-Hant)提供的ActivityMap外掛程式。
 
 ## 建立Adobe Analytics架構 {#creating-a-adobe-analytics-framework}
 
@@ -183,7 +183,7 @@ Adobe Analytics [資料中心](https://experienceleague.adobe.com/docs/analytics
 1. 選取「**儲存並關閉**」。
 1. 若要啟用頁面及任何連線的設定/檔案，請&#x200B;**[Publish](/help/sites-authoring/publishing-pages.md)**&#x200B;頁面。
 1. 最後一個步驟是瀏覽發佈執行個體的頁面，並使用&#x200B;**搜尋**&#x200B;元件來搜尋關鍵字（例如eggplant）。
-1. 您可以使用適當的工具來檢查對Adobe Analytics進行的呼叫；例如[Adobe Experience Cloud Debugger](https://experienceleague.adobe.com/docs/experience-platform/debugger/home.html)。
+1. 您可以使用適當的工具來檢查對Adobe Analytics進行的呼叫；例如[Adobe Experience Cloud Debugger](https://experienceleague.adobe.com/docs/experience-platform/debugger/home.html?lang=zh-Hant)。
 1. 以提供的範例來說，呼叫應包含在eVar7中輸入的值（即茄子），而事件清單應包含event3。
 
 ### 頁面檢視 {#page-views}

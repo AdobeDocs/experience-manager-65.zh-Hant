@@ -80,13 +80,13 @@ SSO驗證處理常式服務( `com.adobe.granite.auth.sso.impl.SsoAuthenticationH
 
 >[!NOTE]
 >
->如果您也使用[Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)搭配Microsoft® Internet Information Server (IIS)，則需要在下列專案中進行其他設定：
+>如果您也使用[Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant)搭配Microsoft® Internet Information Server (IIS)，則需要在下列專案中進行其他設定：
 >
 >* `disp_iis.ini`
 >* IIS
 >
 >在`disp_iis.ini`集合中：
->(如需完整詳細資訊，請參閱[使用Microsoft® Internet Information Server安裝Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html#microsoft-internet-information-server))
+>(如需完整詳細資訊，請參閱[使用Microsoft® Internet Information Server安裝Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html?lang=zh-Hant#microsoft-internet-information-server))
 >
 >* `servervariables=1` （將IIS伺服器變數作為要求標頭轉送給遠端執行個體）
 >* `replaceauthorization=1` (將任何名為「Authorization」的標頭（「Basic」以外的標頭取代為「Basic」的對等標頭）

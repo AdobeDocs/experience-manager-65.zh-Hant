@@ -24,9 +24,9 @@ ht-degree: 7%
 
 瞭解您的特定部署和網站設計所需的內容
 
-* 聯絡[客戶服務](https://experienceleague.adobe.com/?support-solution=General&amp;support-tab=home#support)
+* 聯絡[客戶服務](https://experienceleague.adobe.com/zh-hant?support-solution=General&amp;support-tab=home#support)
 
-另請參閱主要[Dispatcher檔案](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)。
+另請參閱主要[Dispatcher檔案](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant)。
 
 ## Dispatcher快取 {#dispatcher-caching}
 
@@ -42,7 +42,7 @@ AEM Communities適用的Dispatcher快取可讓Dispatcher提供社群網站頁面
 
 ### 要求 {#requirements}
 
-* Dispatcher 4.1.2版或更新版本(如需最新版本，請參閱[安裝Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html))
+* Dispatcher 4.1.2版或更新版本(如需最新版本，請參閱[安裝Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html?lang=zh-Hant))
 * [ACS AEM Commons封裝](https://adobe-consulting-services.github.io/acs-aem-commons/)
 
    * 版本3.3.2或更新版本
@@ -69,7 +69,7 @@ OSGi設定&#x200B;**ACS AEM Commons - Dispatcher快取控制標頭 — Max Age**
 
 ## Dispatcher篩選器 {#dispatcher-filters}
 
-`dispatcher.any`檔案的/filter區段記錄在[設定內容的存取權 — /filter](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html)中。
+`dispatcher.any`檔案的/filter區段記錄在[設定內容的存取權 — /filter](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant)中。
 
 本節說明Communities功能正常運作可能需要的專案。
 
@@ -79,7 +79,7 @@ OSGi設定&#x200B;**ACS AEM Commons - Dispatcher快取控制標頭 — Max Age**
 
 另請參閱：
 
-* [Dispatcher安全性檢查清單](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html)
+* [Dispatcher安全性檢查清單](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html?lang=zh-Hant)
 
 >[!NOTE]
 >
@@ -89,7 +89,7 @@ OSGi設定&#x200B;**ACS AEM Commons - Dispatcher快取控制標頭 — Max Age**
 
 >[!CAUTION]
 >
->請參閱 [Dispatcher 安全性檢查清單](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html)，了解使用 Dispatcher 限制存取時的更多考量事項。此外，也請閱讀 [AEM 安全性檢查清單](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html)，了解有關 AEM 安裝的更多安全性細節。
+>請參閱 [Dispatcher 安全性檢查清單](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html?lang=zh-Hant)，了解使用 Dispatcher 限制存取時的更多考量事項。此外，也請閱讀 [AEM 安全性檢查清單](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hant)，了解有關 AEM 安裝的更多安全性細節。
 >
 
 下列專案應新增至/filter區段的結尾，尤其是在所有被拒絕的專案之後。

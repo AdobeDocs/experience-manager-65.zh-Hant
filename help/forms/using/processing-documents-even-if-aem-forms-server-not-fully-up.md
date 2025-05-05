@@ -27,4 +27,4 @@ ht-degree: 3%
 
 ## 解決方案 {#solution}
 
-若要解決此問題，請在伺服器啟動期間將引數`Dcom.adobe.livecycle.dsc.deferServiceStart=true`新增至[批次檔](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/command-line-start-and-stop.html#windows-platform-start-bat-script-example)。
+若要解決此問題，請在伺服器啟動期間將引數`Dcom.adobe.livecycle.dsc.deferServiceStart=true`新增至[批次檔](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/command-line-start-and-stop.html?lang=zh-Hant#windows-platform-start-bat-script-example)。

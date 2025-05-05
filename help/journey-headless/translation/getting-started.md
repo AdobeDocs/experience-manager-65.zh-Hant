@@ -195,5 +195,5 @@ AEM 的內容，無論是 Headless 網頁還是傳統網頁，都是由其結構
 * [設定翻譯整合框架](/help/sites-administering/tc-tic.md) - 了解如何設定翻譯整合框架以與協力廠商翻譯服務整合。
 * [管理翻譯專案](/help/sites-administering/tc-manage.md) - 了解如何在 AEM 中建立和管理機器和人工翻譯專案。
 * [AEM as a Headless CMS 簡介](/help/sites-developing/headless/introduction.md)
-* [AEM 開發人員入口網站](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
-* [AEM 中的 Headless 教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)
+* [AEM 開發人員入口網站](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=zh-Hant)
+* [AEM 中的 Headless 教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=zh-Hant)

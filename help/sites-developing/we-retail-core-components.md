@@ -86,6 +86,6 @@ ht-degree: 4%
 
 ## 更多資訊 {#further-information}
 
-如需核心元件的詳細資訊，請參閱撰寫檔案[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)，以取得核心元件功能的概觀，並參閱開發人員檔案[開發核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html)，以取得技術概觀。
+如需核心元件的詳細資訊，請參閱撰寫檔案[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)，以取得核心元件功能的概觀，並參閱開發人員檔案[開發核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html?lang=zh-Hant)，以取得技術概觀。
 
 此外，您可能希望進一步調查[可編輯的範本](/help/sites-developing/we-retail-editable-templates.md)。 如需可編輯範本的完整詳細資訊，請參閱撰寫檔案[建立頁面範本](/help/sites-authoring/templates.md)或開發人員檔案頁面[範本 — 可編輯](/help/sites-developing/page-templates-editable.md)。

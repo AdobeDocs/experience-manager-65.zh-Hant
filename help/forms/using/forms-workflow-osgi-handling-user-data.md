@@ -158,4 +158,4 @@ ht-degree: 1%
 
 * [如何以程式設計方式存取AEM JCR](/help/sites-developing/access-jcr.md)
 * [正在移除節點和屬性](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/2.0/10_Writing.html#10.9%20Removing%20Nodes%20and%20Properties)
-* [API參考](https://helpx.adobe.com/experience-manager/6-3/sites-developing/reference-materials/javadoc/overview-summary.html)
+* [API參考](https://helpx.adobe.com/tw/experience-manager/6-3/sites-developing/reference-materials/javadoc/overview-summary.html)

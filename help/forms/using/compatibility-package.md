@@ -21,7 +21,7 @@ ht-degree: 1%
 
 ## 概觀 {#overview}
 
-在AEM Forms 6.5中建立客戶通訊時，互動式通訊是預設且建議使用的方法。若要繼續使用AEM Forms 6.5中的字母，您必須安裝最新的[AEMFD相容性套件](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)。
+在AEM Forms 6.5中建立客戶通訊時，互動式通訊是預設且建議使用的方法。若要繼續使用AEM Forms 6.5中的字母，您必須安裝最新的[AEMFD相容性套件](https://helpx.adobe.com/tw/aem-forms/kb/aem-forms-releases.html)。
 
 AEMFD相容性套件也可讓您[在AEM Forms 6.5上使用AEM Forms 6.4、6.3和6.2的下列資產：](../../forms/using/compatibility-package.md#add-support-for-aem-forms-and-assets-in-aem-forms)
 
@@ -36,9 +36,9 @@ AEMFD相容性套件也可讓您[在AEM Forms 6.5上使用AEM Forms 6.4、6.3和
 
 執行升級後，請執行以下操作以安裝AEMFD相容性套件，並讓您的資產相容於6.5：
 
-確定您已預先安裝[AEM相容性套件](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)。
+確定您已預先安裝[AEM相容性套件](https://helpx.adobe.com/tw/aem-forms/kb/aem-forms-releases.html)。
 
-1. 安裝最新的6.5 [相容性套件](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)。
+1. 安裝最新的6.5 [相容性套件](https://helpx.adobe.com/tw/aem-forms/kb/aem-forms-releases.html)。
 
    如需上傳和安裝套件的詳細資訊，請參閱[如何使用套件](/help/sites-administering/package-manager.md)。
 

@@ -24,7 +24,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->若要深入瞭解AEM Mobile應用程式的設計考量事項，請參閱線上說明中的[AEM Mobile應用程式的設計考量事項](https://helpx.adobe.com/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html)。
+>若要深入瞭解AEM Mobile應用程式的設計考量事項，請參閱線上說明中的[AEM Mobile應用程式的設計考量事項](https://helpx.adobe.com/tw/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html)。
 
 ## 發佈/取消發佈內容 {#publishing-unpublishing-the-content}
 

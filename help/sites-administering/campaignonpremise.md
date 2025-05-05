@@ -44,7 +44,7 @@ AEM與Campaign的整合需要在這兩個解決方案中執行數個步驟。
 
 * Adobe Campaign Classic的管理員存取權
    * 若要執行整合，您需要運作中的Adobe Campaign Classic執行個體，包括已設定的資料庫。
-   * 如果您需要有關如何設定和設定Adobe Campaign Classic的更多詳細資訊，請參閱[Adobe Campaign Classic檔案，](https://experienceleague.adobe.com/docs/campaign-classic/using/campaign-classic-home.html)，特別是《安裝與設定指南》。
+   * 如果您需要有關如何設定和設定Adobe Campaign Classic的更多詳細資訊，請參閱[Adobe Campaign Classic檔案，](https://experienceleague.adobe.com/docs/campaign-classic/using/campaign-classic-home.html?lang=zh-Hant)，特別是《安裝與設定指南》。
 * AEM的管理員存取權
 
 ## 在Campaign中安裝AEM整合套件 {#install-package}
@@ -119,7 +119,7 @@ Adobe Campaign中的&#x200B;**AEM整合**&#x200B;套件包含連線至AEM所需�
    >
    >依預設，運運算元沒有設定安全性區域。 若要讓AEM連線至Adobe Campaign，您必須選取區域，如先前步驟所述。
    >
-   >Adobe強烈建議建立AEM專屬的安全區域，以避免任何安全性問題。 如需有關本主題的詳細資訊，請參閱[Adobe Campaign Classic檔案。](https://experienceleague.adobe.com/docs/campaign-classic/using/installing-campaign-classic/additional-configurations/security-zones.html)
+   >Adobe強烈建議建立AEM專屬的安全區域，以避免任何安全性問題。 如需有關本主題的詳細資訊，請參閱[Adobe Campaign Classic檔案。](https://experienceleague.adobe.com/docs/campaign-classic/using/installing-campaign-classic/additional-configurations/security-zones.html?lang=zh-Hant)
 
 1. 在Campaign使用者端中，返回`aemserver`運運算元並選取&#x200B;**一般**&#x200B;標籤。
 

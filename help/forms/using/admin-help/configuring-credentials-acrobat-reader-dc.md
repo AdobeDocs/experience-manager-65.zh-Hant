@@ -33,7 +33,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->您也可以以程式設計方式匯入和刪除認證。 (請參閱[使用AEM表單進行程式設計](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html)。)
+>您也可以以程式設計方式匯入和刪除認證。 (請參閱[使用AEM表單進行程式設計](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hant)。)
 
 ## 匯入Acrobat Reader DC擴充功能認證 {#import-a-acrobat-reader-dc-extensions-credential}
 

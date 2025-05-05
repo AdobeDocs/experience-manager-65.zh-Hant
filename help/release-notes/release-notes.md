@@ -45,7 +45,7 @@ ht-degree: 1%
 
 #### AEM Forms中的新GA功能 {#ga-aem-forms-sp22}
 
-* 新增在[Interactive Communications Batch API](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/interactive-communications/create-interactive-communication#output-format-print-channel)中啟用字型內嵌的支援 — 現在，Interactive Communications支援在透過Batch API產生的PDF中內嵌Adobe Ming和Adobe Myungjo字型。 此增強功能可確保產生的檔案能正確呈現文字，即使使用字型子集亦然，改善了PDF輸出中的多語言內容支援。
+* 新增在[Interactive Communications Batch API](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65/content/forms/interactive-communications/create-interactive-communication#output-format-print-channel)中啟用字型內嵌的支援 — 現在，Interactive Communications支援在透過Batch API產生的PDF中內嵌Adobe Ming和Adobe Myungjo字型。 此增強功能可確保產生的檔案能正確呈現文字，即使使用字型子集亦然，改善了PDF輸出中的多語言內容支援。
 
 * [適用於PDF協助工具的內容目錄API](/help/forms/using/aem-document-services-programmatically.md#auto-tag-pdf-documents-auto-tag-api) - OSGi上的AEM Forms現在支援新的TOC標籤API，以增強PDF的協助工具標準。 它可讓具有輔助技術的使用者更容易存取PDF。
 
@@ -655,10 +655,10 @@ Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on
 這些網站僅供客戶使用。 如果您是客戶且需要存取權，請聯絡您的Adobe客戶經理。
 
 * [產品下載網址為licensing.adobe.com](https://licensing.adobe.com/)
-* [連絡Adobe客戶支援](https://experienceleague.adobe.com/en/docs/customer-one/using/home)。
+* [連絡Adobe客戶支援](https://experienceleague.adobe.com/zh-hant/docs/customer-one/using/home)。
 
 >[!MORELIKETHIS]
 >
 >* [[!DNL Experience Manager] 產品頁面](https://business.adobe.com/products/experience-manager/adobe-experience-manager.html)
->* [[!DNL Experience Manager] 6.5檔案](https://experienceleague.adobe.com/en/docs/experience-manager-65)
+>* [[!DNL Experience Manager] 6.5檔案](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65)
 >* [訂閱Adobe優先產品更新](https://www.adobe.com/tw/subscription/priority-product-update.html)

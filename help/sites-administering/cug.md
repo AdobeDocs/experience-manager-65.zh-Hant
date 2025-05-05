@@ -117,13 +117,13 @@ ht-degree: 0%
 
 如果您使用Dispatcher，則需要使用下列屬性定義Dispatcher陣列：
 
-* [virtualhosts](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#identifying-virtual-hosts-virtualhosts)：符合CUG套用之頁面的路徑。
+* [virtualhosts](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant#identifying-virtual-hosts-virtualhosts)：符合CUG套用之頁面的路徑。
 * \sessionmanagement：請參閱下文。
-* [快取](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#configuring-the-dispatcher-cache-cache)：專屬於CUG套用之檔案的快取目錄。
+* [快取](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant#configuring-the-dispatcher-cache-cache)：專屬於CUG套用之檔案的快取目錄。
 
 ### 為CUG設定Dispatcher工作階段管理 {#configuring-dispatcher-session-management-for-cugs}
 
-在dispatcher.any檔案[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#enabling-secure-sessions-sessionmanagement)中設定CUG的工作階段管理。 要求CUG頁面的存取權時所使用的驗證處理常式，會決定您設定工作階段管理的方式。
+在dispatcher.any檔案[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant#enabling-secure-sessions-sessionmanagement)中設定CUG的工作階段管理。 要求CUG頁面的存取權時所使用的驗證處理常式，會決定您設定工作階段管理的方式。
 
 ```xml
 /sessionmanagement
@@ -137,7 +137,7 @@ ht-degree: 0%
 >當Dispatcher陣列啟用工作階段管理時，不會快取陣列處理的所有頁面。 若要快取CUG以外的頁面，請在dispatcher.any中建立第二個陣列
 >處理非CUG頁面的即時通訊協定。
 
-1. 定義`/directory`以設定[/sessionmanagement](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#enabling-secure-sessions-sessionmanagement)；例如：
+1. 定義`/directory`以設定[/sessionmanagement](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant#enabling-secure-sessions-sessionmanagement)；例如：
 
    ```xml
    /sessionmanagement
@@ -147,4 +147,4 @@ ht-degree: 0%
      }
    ```
 
-1. 將[/allowAuthorized](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#caching-when-authentication-is-used)設為`0`。
+1. 將[/allowAuthorized](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant#caching-when-authentication-is-used)設為`0`。

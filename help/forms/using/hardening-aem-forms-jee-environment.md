@@ -106,7 +106,7 @@ JEE上的AEM Forms可高度自訂，可在許多不同的環境中運作。 部�
  </tbody> 
 </table>
 
-如需作業系統的其他安全性資訊，請參閱[「作業系統安全性資訊」](https://helpx.adobe.com/aem-forms/6-1/hardening-security/general-security-considerations.html#operating_system_security_information)。
+如需作業系統的其他安全性資訊，請參閱[「作業系統安全性資訊」](https://helpx.adobe.com/tw/aem-forms/6-1/hardening-security/general-security-considerations.html#operating_system_security_information)。
 
 ## 安裝 {#installation}
 
@@ -268,11 +268,11 @@ Configuration Manager會使用部署在應用程式伺服器上的servlet，執�
 
 Configuration Manager可讓您將Acrobat Reader DC擴充功能認證上傳至JEE信任存放區上的AEM Forms。 這表示透過遠端通訊協定(SOAP和EJB)存取「信任存放區認證服務」已預設啟用。 使用Configuration Manager上傳許可權認證後，或決定稍後使用Administration Console管理認證後，不再需要此存取權。
 
-您可以依照[停用非必要的服務遠端存取](https://helpx.adobe.com/aem-forms/6-1/hardening-security/configuring-secure-administration-settings-aem.html#disabling_non_essential_remote_access_to_services)一節中的步驟，停用所有信任存放區服務的遠端存取。
+您可以依照[停用非必要的服務遠端存取](https://helpx.adobe.com/tw/aem-forms/6-1/hardening-security/configuring-secure-administration-settings-aem.html#disabling_non_essential_remote_access_to_services)一節中的步驟，停用所有信任存放區服務的遠端存取。
 
 **停用所有非必要的匿名存取**
 
-有些Forms Server服務具有可由匿名呼叫者叫用的操作。 如果不需要匿名存取這些服務，請依照[停用非必要的匿名存取服務](https://helpx.adobe.com/aem-forms/6-1/hardening-security/configuring-secure-administration-settings-aem.html#disabling_non_essential_anonymous_access_to_services)中的步驟來停用它。
+有些Forms Server服務具有可由匿名呼叫者叫用的操作。 如果不需要匿名存取這些服務，請依照[停用非必要的匿名存取服務](https://helpx.adobe.com/tw/aem-forms/6-1/hardening-security/configuring-secure-administration-settings-aem.html#disabling_non_essential_anonymous_access_to_services)中的步驟來停用它。
 
 #### 變更預設的管理員密碼 {#change-the-default-administrator-password}
 
@@ -351,7 +351,7 @@ Web服務定義語言(WSDL)產生應該只針對開發環境啟用，在這些�
 
 保護資料庫安全時，您應該實施資料庫供應商所述的措施。 您應該配置資料庫使用者，使其具有AEM Forms on JEE授權使用的最低必要資料庫許可權。 例如，請勿使用具有資料庫管理員許可權的帳戶。
 
-在Oracle時，您使用的資料庫帳戶只需要CONNECT、RESOURCE和CREATE VIEW許可權。 如需其他資料庫上的類似需求，請參閱[準備在JEE （單一伺服器）上安裝AEM Forms](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_64)。
+在Oracle時，您使用的資料庫帳戶只需要CONNECT、RESOURCE和CREATE VIEW許可權。 如需其他資料庫上的類似需求，請參閱[準備在JEE （單一伺服器）上安裝AEM Forms](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_64_tw)。
 
 #### 為Windows for JBoss上的SQL Server設定整合式安全性 {#configuring-integrated-security-for-sql-server-on-windows-for-jboss}
 
@@ -408,7 +408,7 @@ AEM Forms資料庫結構描述包含有關系統設定和業務流程的敏感�
 * 信任存放區HSM PIN加密金鑰
 * 本機使用者密碼雜湊
 
-如需廠商特定工具的相關資訊，請參閱[「資料庫安全性資訊」](https://helpx.adobe.com/aem-forms/6-1/hardening-security/general-security-considerations.html#database_security_information)。
+如需廠商特定工具的相關資訊，請參閱[「資料庫安全性資訊」](https://helpx.adobe.com/tw/aem-forms/6-1/hardening-security/general-security-considerations.html#database_security_information)。
 
 ### LDAP安全性 {#ldap-security}
 
@@ -958,9 +958,9 @@ addAllowedRefererExceptions(UMConstants.LC_GLOBAL_ALLOWED_REFERER_EXCEPTION, Arr
 
 請參考[JEE實體架構](hardening-aem-forms-jee-environment.md#aem-forms-on-jee-physical-architecture)中AEM Forms一節中所述的實體架構，您應該為您計畫使用的所有連線設定SSL。 具體而言，所有SOAP連線都必須透過SSL執行，以防止在網路上洩露使用者認證。
 
-如需如何在JBoss、WebLogic和WebSphere上設定SSL的說明，請參閱[管理說明](https://www.adobe.com/go/learn_aemforms_admin_64)中的「設定SSL」。
+如需如何在JBoss、WebLogic和WebSphere上設定SSL的說明，請參閱[管理說明](https://www.adobe.com/go/learn_aemforms_admin_64_tw)中的「設定SSL」。
 
-如需如何將憑證匯入為AEM Forms伺服器設定的JVM （Java虛擬機器器）的指示，請參閱[AEM Forms Workbench說明](https://www.adobe.com/go/learn_aemforms_workbench_65)中的「相互驗證」一節。
+如需如何將憑證匯入為AEM Forms伺服器設定的JVM （Java虛擬機器器）的指示，請參閱[AEM Forms Workbench說明](https://www.adobe.com/go/learn_aemforms_workbench_65_tw)中的「相互驗證」一節。
 
 ### 設定SSL重新導向 {#configuring-ssl-redirect}
 

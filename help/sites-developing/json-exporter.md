@@ -102,4 +102,4 @@ AEM Content Services的設計目的，是要概括AEM內/外部內容的說明�
 * [使用內容片段製作](/help/sites-authoring/content-fragments.md)
 * [為元件啟用 JSON 匯出](/help/sites-developing/json-exporter-components.md)
 
-* [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)和[內容片段元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html)
+* [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)和[內容片段元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html?lang=zh-Hant)

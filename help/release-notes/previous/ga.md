@@ -21,7 +21,7 @@ ht-degree: 3%
 | 版本 | 6.5 |
 | 類型 | 主要版本 |
 | 正式發行日期 | 2019 年 4 月 8 日 |
-| 建議的更新 | 檢視[AEM最近更新](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html)。 |
+| 建議的更新 | 檢視[AEM最近更新](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=zh-Hant)。 |
 
 ### Trivia {#trivia}
 
@@ -118,7 +118,7 @@ UI已進行各種增強功能，使其更有效率且更易於使用。
 
 #### Headless內容管理 {#headless-content-management}
 
-AEM能以各種格式和從棧疊的不同層級提供內容。 有些從2008年起就有了[SlingGET](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html)和[POSTServlet](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html)。 內容服務（[Sling模型匯出程式](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html)）是在AEM 6.3中匯入的，是AEM SJ SDK用來合併單頁應用程式的方法。 適用於Assets[&#128279;](/help/assets/mac-api-assets.md)的HTTP API是擴充適用於AEM 6.5的CRUD API。
+AEM能以各種格式和從棧疊的不同層級提供內容。 有些從2008年起就有了[SlingGET](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html)和[POSTServlet](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html)。 內容服務（[Sling模型匯出程式](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html?lang=zh-Hant)）是在AEM 6.3中匯入的，是AEM SJ SDK用來合併單頁應用程式的方法。 適用於Assets[&#128279;](/help/assets/mac-api-assets.md)的HTTP API是擴充適用於AEM 6.5的CRUD API。
 
 新HTTP API功能：
 
@@ -140,7 +140,7 @@ AEM能以各種格式和從棧疊的不同層級提供內容。 有些從2008年
 * 使用動態預留位置，依位置或資料觸發內容的設定進行個人化。
 * Adobe Analytics整合至AEM Screens Player所驅動的統一深入分析
 
-如需AEM Screens變更的詳細資訊，請參閱[AEM Screens使用手冊](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html)中的發行說明。
+如需AEM Screens變更的詳細資訊，請參閱[AEM Screens使用手冊](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html?lang=zh-Hant)中的發行說明。
 
 #### 元件與範本開發 {#component-amp-template-development}
 
@@ -257,7 +257,7 @@ AEM能以各種格式和從棧疊的不同層級提供內容。 有些從2008年
 
 #### AEM和Commerce {#aem-commerce}
 
-自AEM 6.4起，Commerce integration framework的改良版週期較快。使用Commerce integration framework[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/integrations/magento.html)從AEM和Adobe Commerce整合瞭解更多資訊。
+自AEM 6.4起，Commerce integration framework的改良版週期較快。使用Commerce integration framework[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/integrations/magento.html?lang=zh-Hant)從AEM和Adobe Commerce整合瞭解更多資訊。
 
 #### Communities附加元件 {#communities-add-on}
 
@@ -362,7 +362,7 @@ AEM 6.5引進以下功能和增強功能，以提高AEM使用者、DAM角色和�
 
 [!DNL Experience Manager Assets Brand Portal]可協助您輕鬆取得、有效控制並安全地散佈核准的資產，給跨裝置的外部廠商/代理商及內部業務使用者。 它有助於提高資產共用的效率、加快資產上市時間，並消除不合規使用和未經授權存取的風險。
 
-如需詳細資訊，請參閱[Brand Portal的新功能](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/introduction/whats-new.html)。
+如需詳細資訊，請參閱[Brand Portal的新功能](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/introduction/whats-new.html?lang=zh-Hant)。
 
 #### 已連線資產 {#connectedassets}
 
@@ -378,7 +378,7 @@ AEM 6.5引進以下功能和增強功能，以提高AEM使用者、DAM角色和�
 
 [!DNL Dynamic Media]在[!DNL Experience Manager Assets]中提供增強的豐富媒體製作與傳遞，以推動具沈浸式與個人化的尖端體驗。 透過上傳單一高品質的主要資產，並使用Adobe的進階雲端轉譯和檢視器，您可以即時提供轉譯的任何組合，以支援組織的媒體策略。
 
-如需新[!DNL Dynamic Media]功能的詳細資訊，請參閱[Dynamic Media發行說明](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/release-notes/s7rn2017.html)。
+如需新[!DNL Dynamic Media]功能的詳細資訊，請參閱[Dynamic Media發行說明](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/release-notes/s7rn2017.html?lang=zh-Hant)。
 
 ##### 360視訊支援 {#video-support}
 
@@ -390,7 +390,7 @@ AEM 6.5引進以下功能和增強功能，以提高AEM使用者、DAM角色和�
 
 ##### 協助工具增強功能 {#accessibility-enhancements}
 
-[!DNL Dynamic Media]檢視器現在支援增強的協助工具功能，例如Aria支援、熒幕閱讀程式和Alt文字。 如需詳細資訊，請參閱[檢視者參考指南](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/homeviewers.html)。
+[!DNL Dynamic Media]檢視器現在支援增強的協助工具功能，例如Aria支援、熒幕閱讀程式和Alt文字。 如需詳細資訊，請參閱[檢視者參考指南](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/homeviewers.html?lang=zh-Hant)。
 
 #### 搜尋體驗增強功能 {#experience-enhancement-for-searching}
 
@@ -437,7 +437,7 @@ AEM 6.5 Forms提供數項新功能和增強功能。 重點包括：
 
 Adobe使用以客戶為中心的開發模型，允許客戶在規格、開發和測試期間對開發流程的所有階段作出貢獻。 在此感謝所有貢獻的客戶和合作夥伴。
 
-Adobe已具備程式和流程，可以收集、優先順序化和追蹤以客戶為中心的錯誤解決和增強功能請求開發。 [Experience Manager支援入口網站](https://experienceleague.adobe.com/?support-solution=Experience+Manager#support)已與Adobe增強與瑕疵追蹤系統整合。 客戶支援團隊會儘可能找出客戶問題並加以解決。 當升級至研發時，會擷取所有客戶資訊，並用於優先順序和報告。 在開發中，會優先處理付費支援、保證問題和客戶付費的增強功能。
+Adobe已具備程式和流程，可以收集、優先順序化和追蹤以客戶為中心的錯誤解決和增強功能請求開發。 [Experience Manager支援入口網站](https://experienceleague.adobe.com/zh-hant?support-solution=Experience+Manager#support)已與Adobe增強與瑕疵追蹤系統整合。 客戶支援團隊會儘可能找出客戶問題並加以解決。 當升級至研發時，會擷取所有客戶資訊，並用於優先順序和報告。 在開發中，會優先處理付費支援、保證問題和客戶付費的增強功能。
 
 此優先順序處理程式產生超過750項在AEM 6.5中修正的以客戶為中心的變更。
 
@@ -447,7 +447,7 @@ Adobe已具備程式和流程，可以收集、優先順序化和追蹤以客戶
 
 * 獨立快速入門： `cq-quickstart-6.5.0.jar`。
 * 應用程式伺服器快速入門： `cq-quickstart-6.5.0.war`。
-* 適用於各種Web伺服器和平台的Dispatcher 4.3.2或更新版本。 檢視[下載連結](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/release-notes.html)
+* 適用於各種Web伺服器和平台的Dispatcher 4.3.2或更新版本。 檢視[下載連結](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/release-notes.html?lang=zh-Hant)
 * Eclipse IDE的外掛程式（[閱讀更多資訊並下載](/help/sites-developing/aem-eclipse.md)）
 
 * Brackets程式碼編輯器的延伸模組（[閱讀更多資訊並下載](/help/sites-developing/aem-brackets.md)）
@@ -480,7 +480,7 @@ Adobe已具備程式和流程，可以收集、優先順序化和追蹤以客戶
 
 **Forms**
 
-* 用於AEM Forms功能的[封裝](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)
+* 用於AEM Forms功能的[封裝](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=zh-Hant)
 * [AEM Forms OSGi使用者端SDK](https://repo1.maven.org/maven2/com/adobe/aemfd/aemfd-client-sdk/)
 
 ## 語言 {#languages}
@@ -601,4 +601,4 @@ org.osgi.framework.bootdelegation=sun.*,com.sun.*,jdk.internal.reflect,jdk.inter
 
 * [軟體發佈](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)上其他功能的產品更新、修補程式及套件。
 
-* 透過Admin Console[&#128279;](https://adminconsole.adobe.com/)提供客戶支援。 如需詳細資訊，請參閱[新的Adobe客戶支援體驗](https://experienceleague.adobe.com/docs/customer-one/using/home.html)。
+* 透過Admin Console[&#128279;](https://adminconsole.adobe.com/)提供客戶支援。 如需詳細資訊，請參閱[新的Adobe客戶支援體驗](https://experienceleague.adobe.com/docs/customer-one/using/home.html?lang=zh-Hant)。

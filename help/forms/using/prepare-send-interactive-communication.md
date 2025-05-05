@@ -180,7 +180,7 @@ Adobe建議依序執行這些指示，以成功將互動式通訊儲存為草稿
 
 預設不會啟用「另存為草稿」功能。 執行以下步驟來啟用此功能：
 
-1. 實作[ccrDocumentInstance](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/ccm/ccr/ccrDocumentInstance/api/services/CCRDocumentInstanceService.html)服務提供者介面(SPI)。
+1. 實作[ccrDocumentInstance](https://helpx.adobe.com/tw/experience-manager/6-5/forms/javadocs/com/adobe/fd/ccm/ccr/ccrDocumentInstance/api/services/CCRDocumentInstanceService.html)服務提供者介面(SPI)。
 
    SPI可讓您將互動式通訊的草稿版本儲存到資料庫，並將草稿ID儲存為唯一識別碼。 這些指示假設您擁有有關如何使用Maven專案建置OSGi套件的先前知識。
 

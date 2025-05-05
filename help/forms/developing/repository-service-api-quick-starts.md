@@ -60,7 +60,7 @@ AEM Forms存放庫中的資源路徑為：
 
 >[!NOTE]
 >
->Applications/FormsApplication預設不存在。 若要在快速啟動的同時進行，請使用Workbench建立此應用程式。 如需有關使用Workbench建立應用程式的資訊，請參閱[開始使用程式設計](https://www.adobe.com/go/learn_aemforms_workbench_65)。
+>Applications/FormsApplication預設不存在。 若要在快速啟動的同時進行，請使用Workbench建立此應用程式。 如需有關使用Workbench建立應用程式的資訊，請參閱[開始使用程式設計](https://www.adobe.com/go/learn_aemforms_workbench_65_tw)。
 
 ## 快速入門(SOAP模式)：使用Java API建立資料夾 {#quick-start-soap-mode-creating-a-folder-using-the-java-api}
 

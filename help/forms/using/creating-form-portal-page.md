@@ -20,7 +20,7 @@ ht-degree: 2%
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-forms-portal.html) |
+| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-forms-portal.html?lang=zh-Hant) |
 | AEM 6.5 | 本文章 |
 
 Forms入口網站元件可讓網頁開發人員在利用Adobe Experience Manager (AEM)編寫的網站上建立及自訂表單入口網站。 如需快速瞭解表單入口網站，請參閱[在入口網站上發佈表單的簡介](../../forms/using/introduction-publishing-forms.md)。

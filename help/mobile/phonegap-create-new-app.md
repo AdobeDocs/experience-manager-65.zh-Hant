@@ -34,7 +34,7 @@ AEM Mobile應用程式以定義頁面結構和屬性的Blueprint為基礎。 您
 其他（和選用）標籤可用於建立雲端服務，以及將Adobe Mobile Services SDK外掛程式整合至您的應用程式。
 
 * 組建：按一下這裡的管理設定並設定您的build.phonegap.com組建服務。 然後從下拉式清單，選取新建立的PhoneGap Build雲端服務。
-* Analytics：按一下管理設定，然後設定您的[Adobe Mobile Services SDK](https://experienceleague.adobe.com/docs/mobile-services/using/home.html)雲端服務。 然後從下拉式清單，選取新建立的行動服務以整合至行動應用程式。
+* Analytics：按一下管理設定，然後設定您的[Adobe Mobile Services SDK](https://experienceleague.adobe.com/docs/mobile-services/using/home.html?lang=zh-Hant)雲端服務。 然後從下拉式清單，選取新建立的行動服務以整合至行動應用程式。
 
 ## 使用應用程式範本 {#using-app-templates}
 

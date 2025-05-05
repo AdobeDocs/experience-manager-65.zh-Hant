@@ -24,7 +24,7 @@ ht-degree: 0%
 
 在AEM 6.3和更新版本中，已引入此功能的線上版本，稱為「線上修訂清除」。 相較於必須關閉AEM執行個體的離線修訂清除，在AEM執行個體上線時可以執行線上修訂清除。 線上修訂清除預設為開啟，建議使用此方式執行修訂清除。
 
-**附註**： [觀看影片](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/administration/use-online-revision-clean-up.html)，瞭解如何使用線上修訂清除。
+**附註**： [觀看影片](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/administration/use-online-revision-clean-up.html?lang=zh-Hant)，瞭解如何使用線上修訂清除。
 
 修訂清除程式包含三個階段： **估計**、**壓縮**&#x200B;以及&#x200B;**清除**。 預估會根據可能收集到多少廢棄專案來決定是否執行下一個階段（壓縮）。 在壓縮階段期間，區段和tar檔案會被重寫，而遺漏任何未使用的內容。 然後，清理階段會移除舊區段，包括可能包含的任何垃圾。 離線模式通常可以回收更多空間，因為線上模式必須考慮AEM的工作集，該工作集保留額外的區段以避免被收集。
 
@@ -494,7 +494,7 @@ TarMK GC: no base state available, running full compaction instead
     <ol>
      <li>一種應用程式，可繞過建議的存取機制（例如Sling和JCR API），使用較低層級的API/SPI來存取存放庫，然後超過區段的保留時間。 也就是說，它會保留一個實體的參照，保留時間超過線上修訂清除（預設為24小時）所允許的保留時間。 此案例為暫時性，不會導致資料損毀。 若要復原，應使用Oak-run工具來確認例外狀況的暫時性（Oak-run檢查不應報告任何錯誤）。 若要這麼做，執行個體必須離線並稍後重新啟動。</li>
      <li>外部事件造成磁碟上的資料損毀。 這可能是磁碟故障、磁碟空間不足或意外修改所需資料檔案所致。 在此情況下，執行個體必須離線並使用Oak-run檢查進行修復。 如需如何執行Oak-run檢查的詳細資訊，請閱讀下列<a href="https://github.com/apache/jackrabbit-oak/blob/trunk/oak-doc/src/site/markdown/nodestore/segment/overview.md#check" target="_blank">Apache檔案</a>。</li>
-     <li>透過<a href="https://experienceleague.adobe.com/?support-solution=General&amp;support-tab=home#support" target="_blank">Adobe客戶服務</a>處理所有其他發生的問題。</li>
+     <li>透過<a href="https://experienceleague.adobe.com/zh-hant?support-solution=General&amp;support-tab=home#support" target="_blank">Adobe客戶服務</a>處理所有其他發生的問題。</li>
     </ol> </td>
    <td> </td>
   </tr>

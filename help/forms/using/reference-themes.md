@@ -17,7 +17,7 @@ ht-degree: 0%
 
 # 參考主題{#reference-themes}
 
-[佈景主題](../../forms/using/themes.md)可讓您在不深入瞭解CSS的情況下設定表單樣式。 除了預設佈景主題之外，您可以安裝[AEM Forms附加元件套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en)以取得下列佈景主題：
+[佈景主題](../../forms/using/themes.md)可讓您在不深入瞭解CSS的情況下設定表單樣式。 除了預設佈景主題之外，您可以安裝[AEM Forms附加元件套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=zh-Hant)以取得下列佈景主題：
 
 * 貝瑞爾
 * 執行者

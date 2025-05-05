@@ -19,7 +19,7 @@ ht-degree: 5%
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/search-assets.html?lang=en) |
+| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/search-assets.html?lang=zh-Hant) |
 | AEM 6.5 | 本文章 |
 
 [!DNL Adobe Experience Manager Assets]提供強大的資產探索方法，協助您達到更高的內容速度。 您的團隊可使用開箱即用的功能和自訂方法，透過順暢的智慧型搜尋體驗縮短上市時間。 搜尋資產是使用數位資產管理系統的核心，無論是供創意人員進一步使用、供業務使用者和行銷人員健全管理資產，還是DAM管理員管理。 您可以透過[!DNL Assets]使用者介面或其他應用程式和介面執行的簡單、進階和自訂搜尋，有助於完成這些使用案例。
@@ -124,7 +124,7 @@ ht-degree: 5%
 1. 在&#x200B;**[!UICONTROL 搜尋提升]**&#x200B;方塊中，指定您要提升影像搜尋的關鍵字，然後按一下&#x200B;**[!UICONTROL 新增]**。 您可以用相同方式指定多個關鍵字。
 1. 按一下&#x200B;**[!UICONTROL 儲存並關閉]**。 您針對此關鍵字提升的資產會出現在最上層的搜尋結果中。
 
-您可以藉此機會提升目標關鍵字搜尋結果中某些資產的排名。 請觀看下方的視訊範例。 如需詳細資訊，請參閱[搜尋 [!DNL Experience Manager]](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/search-and-discovery/search-boost.html)。
+您可以藉此機會提升目標關鍵字搜尋結果中某些資產的排名。 請觀看下方的視訊範例。 如需詳細資訊，請參閱[搜尋 [!DNL Experience Manager]](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/search-and-discovery/search-boost.html?lang=zh-Hant)。
 
 >[!VIDEO](https://video.tv.adobe.com/v/16766/?quality=6)
 
@@ -213,11 +213,11 @@ ht-degree: 5%
 
 ### 在[!DNL Experience Manager]案頭應用程式中搜尋數位資產 {#desktop-app}
 
-創意專業人士使用案頭應用程式，讓[!DNL Experience Manager Assets]可輕鬆地在本機案頭(Win或Mac)上搜尋及使用。 創意人員可以輕鬆地在Mac Finder或Windows檔案總管中顯示所需的資產、在案頭應用程式中開啟並在本機變更 — 變更會透過在存放庫中建立的新版本儲存回[!DNL Experience Manager]。 應用程式支援使用一或多個關鍵字、`*`和`?`萬用字元以及`AND`運運算元進行基本搜尋。 請參閱案頭應用程式中的[瀏覽、搜尋及預覽資產](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#browse-search-preview-assets)。
+創意專業人士使用案頭應用程式，讓[!DNL Experience Manager Assets]可輕鬆地在本機案頭(Win或Mac)上搜尋及使用。 創意人員可以輕鬆地在Mac Finder或Windows檔案總管中顯示所需的資產、在案頭應用程式中開啟並在本機變更 — 變更會透過在存放庫中建立的新版本儲存回[!DNL Experience Manager]。 應用程式支援使用一或多個關鍵字、`*`和`?`萬用字元以及`AND`運運算元進行基本搜尋。 請參閱案頭應用程式中的[瀏覽、搜尋及預覽資產](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=zh-Hant#browse-search-preview-assets)。
 
 ### 在[!DNL Brand Portal]中搜尋數位資產 {#brand-portal}
 
-業務線使用者和行銷人員可使用Brand Portal，有效率且安全地與擴充的內部團隊、合作夥伴和經銷商共用核准的數位資產。 請參閱[在Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/search-capabilities/brand-portal-searching.html)上搜尋資產。
+業務線使用者和行銷人員可使用Brand Portal，有效率且安全地與擴充的內部團隊、合作夥伴和經銷商共用核准的數位資產。 請參閱[在Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/search-capabilities/brand-portal-searching.html?lang=zh-Hant)上搜尋資產。
 
 ### 搜尋[!DNL Adobe Stock]個影像 {#adobe-stock1}
 
@@ -239,7 +239,7 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->在舊版[!DNL Adobe Experience Manager]中，資產選取器稱為[資產選取器](https://helpx.adobe.com/experience-manager/6-2/assets/using/asset-picker.html)。
+>在舊版[!DNL Adobe Experience Manager]中，資產選取器稱為[資產選取器](https://helpx.adobe.com/tw/experience-manager/6-2/assets/using/asset-picker.html)。
 
 資產選擇器可讓您以特殊方式搜尋、篩選和瀏覽DAM資產。 資產選擇器位於`https://[aem_server]:[port]/aem/assetpicker.html`。 您可以擷取使用資產選擇器所選取資產的中繼資料。 您可以使用支援的請求引數來啟動它，例如資產型別（影像、視訊、文字）和選取模式（單一或多個選取範圍）。 這些引數會為特定搜尋執行個體設定資產選擇器的內容，並在整個選取範圍中維持不變。
 
@@ -365,11 +365,11 @@ ht-degree: 5%
    儲存變更。
 
 1. 存取`/oak:index/damAssetLucene/indexRules/dam:Asset/properties/predictedTags`並新增值為`true`之型別`Boolean`的`similarityTags`屬性。
-1. 將智慧標籤套用至[!DNL Experience Manager]存放庫中的資產。 請參閱[如何設定智慧標籤](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/configuring/tagging.html#configuring)。
+1. 將智慧標籤套用至[!DNL Experience Manager]存放庫中的資產。 請參閱[如何設定智慧標籤](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/configuring/tagging.html?lang=zh-Hant#configuring)。
 1. 在CRXDE的`/oak-index/damAssetLucene`節點中，將`reindex`屬性設定為`true`。 儲存變更。
 1. （選擇性）如果您有自訂的搜尋表單，則將`/libs/settings/dam/search/facets/assets/jcr%3Acontent/items/similaritysearch`節點複製到`/conf/global/settings/dam/search/facets/assets/jcr:content/items`。 儲存變更。
 
-如需相關資訊，請參閱[瞭解Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/image-smart-tags.html)中的智慧標籤，以及[如何管理智慧標籤](/help/assets/enhanced-smart-tags.md)。
+如需相關資訊，請參閱[瞭解Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/image-smart-tags.html?lang=zh-Hant)中的智慧標籤，以及[如何管理智慧標籤](/help/assets/enhanced-smart-tags.md)。
 
 >[!CAUTION]
 >
@@ -492,6 +492,6 @@ ht-degree: 5%
 
 >[!MORELIKETHIS]
 >
->* [[!DNL Experience Manager] 搜尋實作指南](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/search-tutorial-develop.html)
->* [提升搜尋結果的進階設定](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/search-and-discovery/search-boost.html)
+>* [[!DNL Experience Manager] 搜尋實作指南](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/search-tutorial-develop.html?lang=zh-Hant)
+>* [提升搜尋結果的進階設定](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/search-and-discovery/search-boost.html?lang=zh-Hant)
 >* [設定智慧型翻譯搜尋](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/translation/smart-translation-search-technical-video-setup.html)

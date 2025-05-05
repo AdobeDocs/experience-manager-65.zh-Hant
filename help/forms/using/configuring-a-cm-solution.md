@@ -51,4 +51,4 @@ ht-degree: 1%
 
 1. 按一下「**[!UICONTROL 儲存]**」。
 
-如需有關設定通訊管理的詳細資訊，請參閱[通訊管理組態屬性](https://helpx.adobe.com/aem-forms/6-2/cm-configuration-properties.html)。
+如需有關設定通訊管理的詳細資訊，請參閱[通訊管理組態屬性](https://helpx.adobe.com/tw/aem-forms/6-2/cm-configuration-properties.html)。

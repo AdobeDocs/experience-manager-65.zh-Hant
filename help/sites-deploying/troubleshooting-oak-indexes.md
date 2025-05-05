@@ -53,7 +53,7 @@ AEM的內部重新索引程式會收集存放庫資料並將其儲存在Oak索�
 
 >[!NOTE]
 >
->對於AEM 6.1，請確定已安裝[AEM 6.1 CFP 11](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html)。
+>對於AEM 6.1，請確定已安裝[AEM 6.1 CFP 11](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hant)。
 
 在特殊情況下，用於管理非同步索引的對話串池可能會變得超載。 為了隔離索引過程，可以設定對話串集區，以防止其他AEM工作干擾Oak及時索引內容的能力。 在這種情況下，請執行以下操作：
 
@@ -128,7 +128,7 @@ AEM的內部重新索引程式會收集存放庫資料並將其儲存在Oak索�
 1. 收集步驟1中概述的所有資訊後，請重新啟動AEM。
 
    * 重新啟動AEM可解決高並行負載（觀察佇列溢位或類似情況）時的問題。
-   * 如果重新啟動無法解決問題，請開啟[Adobe客戶服務](https://experienceleague.adobe.com/?support-solution=General&amp;support-tab=home#support)的問題，並提供在步驟1收集的所有資訊。
+   * 如果重新啟動無法解決問題，請開啟[Adobe客戶服務](https://experienceleague.adobe.com/zh-hant?support-solution=General&amp;support-tab=home#support)的問題，並提供在步驟1收集的所有資訊。
 
 ## 安全地中止非同步重新索引 {#safely-aborting-asynchronous-re-indexing}
 

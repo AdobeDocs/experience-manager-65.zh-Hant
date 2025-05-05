@@ -584,7 +584,7 @@ AEM套件可用於在AEM環境中建立和共用內容。
 
 [Software Distribution](https://downloads.experiencecloud.adobe.com)是一項集中式服務，旨在簡化AEM封裝的搜尋和下載。
 
-如需詳細資訊，請參閱[軟體發佈檔案。](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html)
+如需詳細資訊，請參閱[軟體發佈檔案。](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html?lang=zh-Hant)
 
 >[!NOTE]
 >

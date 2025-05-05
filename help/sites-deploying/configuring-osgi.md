@@ -174,7 +174,7 @@ Web主控台不會顯示存放庫中儲存變更的位置，但可以輕鬆找�
 
 >[!NOTE]
 >
->另請閱讀[如何定義特定執行個體的存放庫型設定](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17500.html)。
+>另請閱讀[如何定義特定執行個體的存放庫型設定](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17500.html?lang=zh-Hant)。
 
 ### 新增設定至存放庫 {#adding-a-new-configuration-to-the-repository}
 

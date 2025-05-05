@@ -19,7 +19,7 @@ ht-degree: 1%
 
 [最適化表單片段](../../forms/using/adaptive-form-fragments.md)是一組欄位，或是包含您建立表單時可使用的一組欄位的面板。 它可讓您輕鬆快速地建立表單。 您可以使用側邊欄中的資產瀏覽器將最適化表單片段拖放到表單中，也可以在表單編輯器中編輯它。
 
-對於適用性表單作者，[AEM Forms附加元件套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en)中提供參考片段。 其包含下列片段：
+對於適用性表單作者，[AEM Forms附加元件套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=zh-Hant)中提供參考片段。 其包含下列片段：
 
 * 地址
 * 連絡資訊

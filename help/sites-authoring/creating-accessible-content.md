@@ -68,11 +68,11 @@ ht-degree: 2%
 
 #### 如何達到標準 — 非文字內容(1.1.1) {#how-to-meet-non-text-content}
 
-對於靜態圖形，基本要求是為圖形提供對等文字替代文字。 您可以在&#x200B;**替代文字**&#x200B;欄位中完成此作業。 檢視核心元件&#x200B;**[影像](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/image.html)**。
+對於靜態圖形，基本要求是為圖形提供對等文字替代文字。 您可以在&#x200B;**替代文字**&#x200B;欄位中完成此作業。 檢視核心元件&#x200B;**[影像](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/image.html?lang=zh-Hant)**。
 
 >[!NOTE]
 >
->某些現成可用的核心元件（例如&#x200B;**[轉盤](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/carousel.html)**）不提供用於新增替代文字說明至個別影像的&#x200B;**替代文字**&#x200B;欄位，儘管整個元件有&#x200B;**標籤**&#x200B;欄位（**[協助工具](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/carousel.html#accessibility-tab)**&#x200B;標籤）。
+>某些現成可用的核心元件（例如&#x200B;**[轉盤](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/carousel.html?lang=zh-Hant)**）不提供用於新增替代文字說明至個別影像的&#x200B;**替代文字**&#x200B;欄位，儘管整個元件有&#x200B;**標籤**&#x200B;欄位（**[協助工具](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/carousel.html?lang=zh-Hant#accessibility-tab)**&#x200B;標籤）。
 >
 >當針對您的AEM執行個體實作這些版本時，您的開發團隊必須設定這些元件以支援`alt`屬性，讓作者可以將其新增至內容(請參閱[新增對其他HTML元素和屬性的支援](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes))。
 

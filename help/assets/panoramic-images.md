@@ -43,7 +43,7 @@ ht-degree: 0%
 
 若要讓「全景影像」檢視器在Adobe Experience Manager中正常運作，請將「全景影像」檢視器預設集與Dynamic Media Classic和Dynamic Media Classic專屬的中繼資料同步，好讓JCR中的檢視器預設集得以更新。 若要完成此同步，請依照以下方式設定Dynamic Media Classic：
 
-1. 開啟[Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然後登入您的帳戶。
+1. 開啟[Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html?lang=zh-Hant#getting-started)，然後登入您的帳戶。
 
 1. 在頁面的右上角附近，選取&#x200B;**[!UICONTROL 設定]** > **[!UICONTROL 應用程式設定]** > **[!UICONTROL Publish設定]** > **[!UICONTROL 影像伺服器]**。
 1. 在「影像伺服器Publish」頁面上，從頂端附近的&#x200B;**[!UICONTROL Publish內容]**&#x200B;下拉式功能表中選取&#x200B;**[!UICONTROL 影像伺服]**。

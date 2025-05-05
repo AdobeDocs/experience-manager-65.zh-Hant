@@ -57,7 +57,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >如需在信函預覽的HTML或PDF轉譯模式之間切換的詳細資訊，請參閱[變更信函的轉譯模式](#changerenditionmode)。 如需有關Correspondence Management和AEM中PDF支援的詳細資訊，請參閱[終止NPAPI瀏覽器外掛程式及其影響](https://helpx.adobe.com/acrobat/kb/change-in-support-for-acrobat-and-reader-plug-ins-in-modern-web-.html)。<!-- and [PDF Forms to HTML5 Forms](https://helpx.adobe.com/aem-forms/kb/pdf-forms-to-html5-forms.html). THIS URL IS A 404 AND NO SUITABLE REPLACEMENT TOPIC WAS FOUND. CONSIDER DELETING OR ADDING NEW LINK. COMMENTING OUT SO USERS DON'T CLICK IT. -->
+   >如需在信函預覽的HTML或PDF轉譯模式之間切換的詳細資訊，請參閱[變更信函的轉譯模式](#changerenditionmode)。 如需有關Correspondence Management和AEM中PDF支援的詳細資訊，請參閱[終止NPAPI瀏覽器外掛程式及其影響](https://helpx.adobe.com/tw/acrobat/kb/change-in-support-for-acrobat-and-reader-plug-ins-in-modern-web-.html)。<!-- and [PDF Forms to HTML5 Forms](https://helpx.adobe.com/aem-forms/kb/pdf-forms-to-html5-forms.html). THIS URL IS A 404 AND NO SUITABLE REPLACEMENT TOPIC WAS FOUND. CONSIDER DELETING OR ADDING NEW LINK. COMMENTING OUT SO USERS DON'T CLICK IT. -->
 
 ### 輸入資料 {#enterdata}
 
@@ -375,7 +375,7 @@ AEM Forms Correspondence Management在建立通訊UI中將信件顯示為HTML。
 
 依預設，建立通訊UI使用HTML或行動表單來呈現信件預覽。 行動表單預覽不會在任何瀏覽器中發生轉譯問題，因為其使用瀏覽器的原生外掛程式，且不需要其他外掛程式。 您可以將信函預覽模式變更為PDF。 不過，瀏覽器限制可能會造成信函的互動PDF預覽功能出現不同功能問題。
 
-如需瀏覽器與信函預覽相容性的詳細資訊，請參閱[停止NPAPI瀏覽器外掛程式及其影響](https://helpx.adobe.com/acrobat/kb/change-in-support-for-acrobat-and-reader-plug-ins-in-modern-web-.html)。
+如需瀏覽器與信函預覽相容性的詳細資訊，請參閱[停止NPAPI瀏覽器外掛程式及其影響](https://helpx.adobe.com/tw/acrobat/kb/change-in-support-for-acrobat-and-reader-plug-ins-in-modern-web-.html)。
 
 若要變更信函的預覽模式，請完成下列步驟：
 

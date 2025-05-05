@@ -176,4 +176,4 @@ AEM forms無法區分具有相同使用者ID和密碼但屬於不同網域的使
 
 CQ提供一種機制，可覆寫預設的404處理常式jsp。
 
-如需有關如何自訂錯誤處理頁面的詳細資訊，請參閱Adobe Experience Manager檔案中的[自訂錯誤處理常式顯示的頁面](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/customizing-errorhandler-pages.html?lang=en)。
+如需有關如何自訂錯誤處理頁面的詳細資訊，請參閱Adobe Experience Manager檔案中的[自訂錯誤處理常式顯示的頁面](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/customizing-errorhandler-pages.html?lang=zh-Hant)。

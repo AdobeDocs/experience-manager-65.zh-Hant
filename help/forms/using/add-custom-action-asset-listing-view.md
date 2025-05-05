@@ -108,7 +108,7 @@ ht-degree: 3%
         <tr>
         <td>圖示</td>
         <td>字串</td>
-        <td>icon-download<br /> <br /> Correspondence Management顯示在命令/功能表左側的圖示。 如需其他可用的圖示和設定，請參閱<a href="https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html" target="_blank">CoralUI圖示檔案</a>。<br /> </td>
+        <td>icon-download<br /> <br /> Correspondence Management顯示在命令/功能表左側的圖示。 如需其他可用的圖示和設定，請參閱<a href="https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hant" target="_blank">CoralUI圖示檔案</a>。<br /> </td>
         </tr>
         <tr>
         <td>jcr:primaryType</td>
@@ -277,7 +277,7 @@ ht-degree: 3%
    1. 連按兩下&#x200B;**POST.jsp**&#x200B;檔案，以在CRX中開啟。
    1. 將下列程式碼新增至POST.jsp檔案，然後按一下[儲存全部] **&#x200B;**：
 
-      此程式碼專用於字母轉譯服務。 若是其他資產，請將該資產的Java™程式庫新增至此程式碼。 如需AEM Forms API的詳細資訊，請參閱[AEM Forms API](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html)。
+      此程式碼專用於字母轉譯服務。 若是其他資產，請將該資產的Java™程式庫新增至此程式碼。 如需AEM Forms API的詳細資訊，請參閱[AEM Forms API](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hant)。
 
       如需AEM資料庫的詳細資訊，請參閱AEM [元件](/help/sites-developing/components.md)。
 

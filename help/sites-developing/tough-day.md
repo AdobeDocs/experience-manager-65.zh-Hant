@@ -18,7 +18,7 @@ ht-degree: 1%
 
 ## 何謂艱難的第2天 {#what-is-tough-day}
 
-「艱難第2天」應用程式可讓您對AEM執行個體的限制進行壓力測試。 您可以立即使用預設的測試套件執行此檔案，也可以根據您的測試需求進行設定。 您可以觀看[此錄製](https://experienceleague.adobe.com/docs/events/experience-manager-gems-recordings/gems2017/aem-toughday2-stress-testing-benchmarking-tool.html)的應用程式簡報。
+「艱難第2天」應用程式可讓您對AEM執行個體的限制進行壓力測試。 您可以立即使用預設的測試套件執行此檔案，也可以根據您的測試需求進行設定。 您可以觀看[此錄製](https://experienceleague.adobe.com/docs/events/experience-manager-gems-recordings/gems2017/aem-toughday2-stress-testing-benchmarking-tool.html?lang=zh-Hant)的應用程式簡報。
 
 >[!CAUTION]
 >

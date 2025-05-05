@@ -37,13 +37,13 @@ ht-degree: 1%
 
 **如果有就地升級**
 
-如果您執行就地升級，則升級的執行個體已有資產和檔案。 不過，您必須先安裝[AEMFD相容性套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en) （包含通訊管理相容性套件），才能使用資產和檔案
+如果您執行就地升級，則升級的執行個體已有資產和檔案。 不過，您必須先安裝[AEMFD相容性套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=zh-Hant) （包含通訊管理相容性套件），才能使用資產和檔案
 
 接著，您必須執行[移轉公用程式](#runningmigrationutility)，更新資產和檔案。
 
 **如果有異地安裝**
 
-如果安裝不恰當（全新），您必須先安裝[AEMFD相容性套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en) （包含通訊管理相容性套件），才能使用資產和檔案。
+如果安裝不恰當（全新），您必須先安裝[AEMFD相容性套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=zh-Hant) （包含通訊管理相容性套件），才能使用資產和檔案。
 
 然後，您必須在新的設定上匯入您的資產套件（zip或cmp），然後執行[移轉公用程式](#runningmigrationutility)來更新資產和檔案。 Adobe建議，您必須先執行移轉公用程式，才能在新設定上建立資產。
 

@@ -66,7 +66,7 @@ ht-degree: 58%
 
 **建議**
 
-[AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)是AEM服務中的第一層快取，在CDN快取之前。
+[AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant)是AEM服務中的第一層快取，在CDN快取之前。
 
 **其他參考**
 
@@ -84,7 +84,7 @@ ht-degree: 58%
 
 請參閱：
 
-* [在AEM中使用CDN](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html#using-dispatcher-with-a-cdn)
+* [在AEM中使用CDN](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant#using-dispatcher-with-a-cdn)
 
 #### 設定HTTP快取控制標題 {#set-http-cache-control-headers}
 

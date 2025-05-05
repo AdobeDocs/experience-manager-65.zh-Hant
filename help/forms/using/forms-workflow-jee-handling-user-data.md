@@ -24,7 +24,7 @@ AEM Forms JEE工作流程提供設計、建立和管理業務流程的工具。 
 * 使用watched資料夾
 * 使用電子郵件
 
-如需建立AEM Forms JEE工作流程程式的詳細資訊，請參閱[Workbench說明](https://www.adobe.com/go/learn_aemforms_workbench_65)。
+如需建立AEM Forms JEE工作流程程式的詳細資訊，請參閱[Workbench說明](https://www.adobe.com/go/learn_aemforms_workbench_65_tw)。
 
 ## 使用者資料和資料存放區 {#user-data-and-data-stores}
 
@@ -127,7 +127,7 @@ AEM Forms JEE工作流程提供設計、建立和管理業務流程的工具。 
 
 1. 使用具有正確連線設定的`ServiceClientFactory`執行個體，建立公用`ProcessManager`使用者端(`com.adobe.idp.workflow.client.ProcessManager`)的執行個體。
 
-   如需詳細資訊，請參閱[類別ProcessManager](https://helpx.adobe.com/experience-manager/6-3/forms/ProgramLC/javadoc/com/adobe/idp/workflow/client/ProcessManager.html)的Java™ API參考。
+   如需詳細資訊，請參閱[類別ProcessManager](https://helpx.adobe.com/tw/experience-manager/6-3/forms/ProgramLC/javadoc/com/adobe/idp/workflow/client/ProcessManager.html)的Java™ API參考。
 
 1. 檢查工作流程例項的狀態。 如果狀態不是2 (COMPLETE)或4 (TERMINATED)，請先呼叫下列方法來終止執行個體：
 

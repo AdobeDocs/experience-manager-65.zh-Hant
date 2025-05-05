@@ -28,7 +28,7 @@ AEM搜尋可搜尋和找到AEM資產，並對各種常用的檔案格式(例如�
 
 * 如果您在OSGi上使用AEM Forms：
 
-   * 在AEM Forms伺服器上安裝[AEM Forms Document Security Indexer套件](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)。
+   * 在AEM Forms伺服器上安裝[AEM Forms Document Security Indexer套件](https://helpx.adobe.com/tw/aem-forms/kb/aem-forms-releases.html)。
 
    * 確保JEE伺服器上的AEM Forms啟動並執行，且JEE伺服器上的對應AEM Forms已安裝Document Security。 必須有JEE伺服器上的AEM表單，才能為受保護的檔案建立索引。
 

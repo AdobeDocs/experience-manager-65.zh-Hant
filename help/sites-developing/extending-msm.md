@@ -32,8 +32,8 @@ ht-degree: 53%
 >此頁面應與[重複使用內容：多網站管理員](/help/sites-administering/msm.md)一起閱讀。
 >
 >下列網站存放庫重組的章節可能也會有意義：
->* [多網站管理員藍圖設定](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/restructuring/sites-repository-restructuring-in-aem-6-5.html#multi-site-manager-blueprint-configurations)
->* [多網站管理員轉出設定](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/restructuring/sites-repository-restructuring-in-aem-6-5.html#multi-site-manager-rollout-configurations)
+>* [多網站管理員藍圖設定](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/restructuring/sites-repository-restructuring-in-aem-6-5.html?lang=zh-Hant#multi-site-manager-blueprint-configurations)
+>* [多網站管理員轉出設定](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/restructuring/sites-repository-restructuring-in-aem-6-5.html?lang=zh-Hant#multi-site-manager-rollout-configurations)
 
 >[!CAUTION]
 >

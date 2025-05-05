@@ -104,7 +104,7 @@ AEM Mobile Dashboard可讓您建立、建置和部署行動應用程式、建立
 >
 >如需詳細資訊，請參閱[設定您的Adobe行動服務Cloud Service](/help/mobile/configure-adobe-mobile-cloud-service.md)。
 
-AEM Mobile透過[AdobeMobile Services SDK](https://experienceleague.adobe.com/docs/mobile.html) (AMS)與Adobe Analytics整合。
+AEM Mobile透過[AdobeMobile Services SDK](https://experienceleague.adobe.com/docs/mobile.html?lang=zh-Hant) (AMS)與Adobe Analytics整合。
 
 控制中心&#x200B;**量度圖磚**&#x200B;會顯示從AMS為您的應用程式提取的摘要分析。 您可以按一下右下方的「……」，深入分析控制面板。
 

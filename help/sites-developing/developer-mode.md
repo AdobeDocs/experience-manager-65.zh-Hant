@@ -57,7 +57,7 @@ ht-degree: 3%
 >請參閱：
 >
 >* 知識庫文章，[疑難排解AEM TouchUI問題](https://helpx.adobe.com/experience-manager/kb/troubleshooting-aem-touchui-issues.html)，以取得進一步的提示和工具。
->* 關於[AEM 6.0 Developer Mode](https://experienceleague.adobe.com/docs/events/experience-manager-gems-recordings/gems2014/aem-developer-mode.html)的AEM Gems工作階段。
+>* 關於[AEM 6.0 Developer Mode](https://experienceleague.adobe.com/docs/events/experience-manager-gems-recordings/gems2014/aem-developer-mode.html?lang=zh-Hant)的AEM Gems工作階段。
 >
 
 ## 開啟開發人員模式 {#opening-developer-mode}

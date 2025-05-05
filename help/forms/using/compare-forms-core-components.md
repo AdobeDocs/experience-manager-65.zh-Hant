@@ -23,7 +23,7 @@ ht-degree: 7%
 
 ## 必備條件 {#prerequisite-versioning}
 
-若要使用以核心元件為基礎的最適化表單中的比較功能，請確定已在您的AEM 6.5 Forms環境中啟用[最適化表單核心元件](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components)。
+若要使用以核心元件為基礎的最適化表單中的比較功能，請確定已在您的AEM 6.5 Forms環境中啟用[最適化表單核心元件](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65/content/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components)。
 
 ## 比較不同的調適型表單 {#compare-af-65}
 

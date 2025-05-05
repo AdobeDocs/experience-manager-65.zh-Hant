@@ -197,7 +197,7 @@ AEM Forms應用程式可立即提供數個中繼資料變數（機碼值組）�
 
 您可以使用WorkitemUserMetadataService Java介面為電子郵件範本新增自訂中繼資料。 您可以建立使用WorkitemUserMetadataService Java介面的OSGi套件組合，並將其部署至AEM Forms伺服器。 它使中繼資料可用於指派任務步驟中的選擇。
 
-若要建立具有Java介面的OSGi套件組合，請將[AEM Forms使用者端SDK](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) jar和[granite jar](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.workflow.api/1.0.2/)檔案新增為外部相依性至OSGi套件組合專案。 您可以使用任何Java IDE來建立OSGi套件。 下列程式提供使用Eclipse建立OSGi套件的步驟：
+若要建立具有Java介面的OSGi套件組合，請將[AEM Forms使用者端SDK](https://helpx.adobe.com/tw/aem-forms/kb/aem-forms-releases.html) jar和[granite jar](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.workflow.api/1.0.2/)檔案新增為外部相依性至OSGi套件組合專案。 您可以使用任何Java IDE來建立OSGi套件。 下列程式提供使用Eclipse建立OSGi套件的步驟：
 
 1. 開啟Eclipse IDE。 導覽至「檔案>新增專案」。
 

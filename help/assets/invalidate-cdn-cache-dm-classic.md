@@ -32,7 +32,7 @@ CDN （內容傳遞網路）會快取Dynamic Media資產，以快速遞送。 �
 
 **透過Dynamic Media Classic使CDN快取失效：**
 
-1. 開啟[Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html#system-requirements-dmc-app)，然後登入您的帳戶。
+1. 開啟[Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html?lang=zh-Hant#system-requirements-dmc-app)，然後登入您的帳戶。
 
    您的認證和登入是由Adobe在布建時提供的。 如果您沒有此資訊，請聯絡Adobe客戶支援。
 

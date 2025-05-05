@@ -312,7 +312,7 @@ AEM預設會新增&#x200B;**替代文字**&#x200B;至您的影像。 對於傳�
 
 * [瞭解成功標準1.2.3](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-audio-desc.html)：
 * [如何達到成功標準1.2.3](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#qr-media-equiv-audio-desc)
-* [Adobe Encore CS5](https://helpx.adobe.com/premiere-pro/using/whats-new.html)
+* [Adobe Encore CS5](https://helpx.adobe.com/tw/premiere-pro/using/whats-new.html)
 
 ### 註解（即時） (1.2.4)  {#captions-live}
 

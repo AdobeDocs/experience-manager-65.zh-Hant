@@ -108,7 +108,7 @@ AEM標準安裝中包含的We-Retail網站可用於說明復寫。
 用於從Author復寫至Publish。
 
 * Dispatcher Flush
-此項用於管理Dispatcher快取。 如需詳細資訊，請參閱[使編寫環境中的Dispatcher快取失效](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html#invalidating-dispatcher-cache-from-the-authoring-environment)和[使發佈執行個體中的Dispatcher快取失效](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html#invalidating-dispatcher-cache-from-a-publishing-instance)。
+此項用於管理Dispatcher快取。 如需詳細資訊，請參閱[使編寫環境中的Dispatcher快取失效](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html?lang=zh-Hant#invalidating-dispatcher-cache-from-the-authoring-environment)和[使發佈執行個體中的Dispatcher快取失效](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html?lang=zh-Hant#invalidating-dispatcher-cache-from-a-publishing-instance)。
 
 * [反向復寫](#reverse-replication-publish-to-author)
 用於從Publish復寫至作者。 反向復寫不適用於Communities功能，例如論壇、部落格和評論。 由於未啟用寄件匣，因此此功能實際上已停用。 使用反向復寫需要自訂設定。
@@ -356,7 +356,7 @@ AEM標準安裝中包含的We-Retail網站可用於說明復寫。
 
 >[!NOTE]
 >
->當Dispatcher處理製作或Publish例項的HTTP請求時，復寫代理程式的HTTP請求必須包含PATH標頭。 除了下列程式外，您必須將PATH標頭新增到Dispatcher的使用者端標頭清單。 請參閱[/clientheaders (Client Headers)](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#specifying-the-http-headers-to-pass-through-clientheaders)。
+>當Dispatcher處理製作或Publish例項的HTTP請求時，復寫代理程式的HTTP請求必須包含PATH標頭。 除了下列程式外，您必須將PATH標頭新增到Dispatcher的使用者端標頭清單。 請參閱[/clientheaders (Client Headers)](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant#specifying-the-http-headers-to-pass-through-clientheaders)。
 >
 
 1. 存取AEM中的&#x200B;**工具**&#x200B;索引標籤。

@@ -228,13 +228,13 @@ AEM WCM會記錄詳細的記錄。 拆開包裝並開始快速入門後，您可
    * `error.log`
 錯誤訊息（嚴重性各異）會在此處註冊。
 
-   * [`ImageServer-<PortId>-yyyy>-<mm>-<dd>.log`](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/config-admin/server-logging/c-image-server-log.html)
+   * [`ImageServer-<PortId>-yyyy>-<mm>-<dd>.log`](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/config-admin/server-logging/c-image-server-log.html?lang=zh-Hant)
 此記錄檔只有在啟用[!DNL Dynamic Media]時才使用。 它提供用於分析內部ImageServer處理作業行為的統計資料和分析資訊。
 
    * `request.log`
 每個存取要求都會在這裡與回應一起註冊。
 
-   * [`s7access-<yyyy>-<mm>-<dd>.log`](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/config-admin/server-logging/c-access-log.html)
+   * [`s7access-<yyyy>-<mm>-<dd>.log`](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/config-admin/server-logging/c-access-log.html?lang=zh-Hant)
 此記錄檔只有在啟用[!DNL Dynamic Media]時才使用。 s7access記錄檔會記錄透過`/is/image`和`/is/content`向[!DNL Dynamic Media]提出的每個要求。
 
    * `stderr.log`
@@ -1098,9 +1098,9 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 >
 >另請參閱下列文章以取得詳細資訊：
 >
->* [執行緒傾印](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17452.html)
->* [分析記憶體問題](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html)
->* [使用內建分析工具](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17499.html)進行分析
+>* [執行緒傾印](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17452.html?lang=zh-Hant)
+>* [分析記憶體問題](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html?lang=zh-Hant)
+>* [使用內建分析工具](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17499.html?lang=zh-Hant)進行分析
 >* [分析緩慢和封鎖的處理序](https://helpx.adobe.com/experience-manager/kb/AnalyzeSlowAndBlockedProcesses.html)
 >
 
@@ -1125,7 +1125,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 * 用於[啟動AEM](/help/sites-deploying/deploy.md#getting-started)的JVM設定
 * 知識庫：
 
-   * [分析記憶體問題](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html)
+   * [分析記憶體問題](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html?lang=zh-Hant)
 
 ### 磁碟I/O {#disk-i-o}
 
@@ -1143,7 +1143,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 * 是否已以及如何配置 [版本清除](/help/sites-deploying/version-purging.md)
 * 知識庫：
 
-   * [開啟太多檔案](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17470.html)
+   * [開啟太多檔案](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17470.html?lang=zh-Hant)
    * [日誌佔用太多磁碟空間](https://helpx.adobe.com/experience-manager/kb/JournalTooMuchDiskSpace.html)
 
 ### 定期效能降低 {#regular-performance-degradation}

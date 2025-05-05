@@ -102,7 +102,7 @@ ht-degree: 0%
 
 ### 表單設計考量事項 {#form-design-considerations}
 
-具有可流動版面的Forms是根據在Designer中建立的表單設計。 表單設計會指定一組配置、顯示和資料擷取規則，包括根據使用者輸入計算值。 將資料輸入表單時會套用規則。 新增至表單的欄位是表單設計內的子表單。 例如，在上圖所示的採購單表單中，每一行都是子表單。 如需建立包含子表單的表單設計相關資訊，請參閱[建立具有流程配置之採購單表單](https://www.adobe.com/go/learn_aemforms_qs_poformflowable_9)。
+具有可流動版面的Forms是根據在Designer中建立的表單設計。 表單設計會指定一組配置、顯示和資料擷取規則，包括根據使用者輸入計算值。 將資料輸入表單時會套用規則。 新增至表單的欄位是表單設計內的子表單。 例如，在上圖所示的採購單表單中，每一行都是子表單。 如需建立包含子表單的表單設計相關資訊，請參閱[建立具有流程配置之採購單表單](https://www.adobe.com/go/learn_aemforms_qs_poformflowable_9_tw)。
 
 ### 瞭解資料子群組 {#understanding-data-subgroups}
 

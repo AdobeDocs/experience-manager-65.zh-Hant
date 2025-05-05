@@ -23,7 +23,7 @@ Assets提供集中式視訊資產管理，讓您可以直接將視訊上傳到As
 Dynamic Media Classic視訊整合將最佳化視訊的範圍延伸至所有熒幕（自動裝置和頻寬偵測）。
 
 * Dynamic Media Classic視訊元件會自動執行裝置和頻寬偵測，以在桌上型電腦、平板電腦和行動裝置上播放正確格式和正確品質的視訊。
-* Assets — 您可以包含最適化視訊集，而不只是單一視訊資產。 自我調整視訊集是所有視訊轉譯的容器，必須在多個熒幕上無縫播放視訊。 「最適化視訊集」會將使用不同位元速率和格式（例如400 kbps、800 kbps和1000 kbps）編碼的相同視訊版本分組。 您可使用最適化視訊集和S7視訊元件，在多個熒幕(包括桌上型電腦、iOS、Android™、BlackBerry®和Windows行動裝置)上執行最適化視訊串流。 如需詳細資訊，請參閱有關最適化視訊集的[Dynamic Media Classic檔案](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/quick-start-video.html#video)。
+* Assets — 您可以包含最適化視訊集，而不只是單一視訊資產。 自我調整視訊集是所有視訊轉譯的容器，必須在多個熒幕上無縫播放視訊。 「最適化視訊集」會將使用不同位元速率和格式（例如400 kbps、800 kbps和1000 kbps）編碼的相同視訊版本分組。 您可使用最適化視訊集和S7視訊元件，在多個熒幕(包括桌上型電腦、iOS、Android™、BlackBerry®和Windows行動裝置)上執行最適化視訊串流。 如需詳細資訊，請參閱有關最適化視訊集的[Dynamic Media Classic檔案](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/quick-start-video.html?lang=zh-Hant#video)。
 
 ## 關於FFMPEG和Dynamic Media Classic {#about-ffmpeg-and-scene}
 
@@ -64,7 +64,7 @@ Dynamic Media Classic視訊元件支援下列格式：
 
 如果您不需要針對資產執行工作流程或版本設定，您應將資產上傳至Dynamic Media Classic。 以下是建議的工作流程：
 
-1. 在Dynamic Media Classic案頭應用程式中，[設定已排程的FTP上傳和編碼至Dynamic Media Classic （系統自動化）](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html#upload-options)。
+1. 在Dynamic Media Classic案頭應用程式中，[設定已排程的FTP上傳和編碼至Dynamic Media Classic （系統自動化）](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html?lang=zh-Hant#upload-options)。
 1. 在Experience Manager中，存取「內容尋找器」之&#x200B;**[!UICONTROL Dynamic Media Classic]**&#x200B;索引標籤中WCM的視訊資產。
 1. 使用Dynamic Media Classic視訊元件創作。
 
@@ -81,7 +81,7 @@ Dynamic Media Classic視訊元件支援下列格式：
 
    >[!NOTE]
    >
-   >如需視訊預設集含義的詳細資訊，請參閱[視訊檔案編碼的視訊預設集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html#video-presets-for-encoding-video-files)。
+   >如需視訊預設集含義的詳細資訊，請參閱[視訊檔案編碼的視訊預設集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html?lang=zh-Hant#video-presets-for-encoding-video-files)。
    >
    >Adobe建議您在設定通用預設集時同時選取兩個最適化視訊集，或是選取&#x200B;**[!UICONTROL 最適化視訊編碼]**&#x200B;選項。
 

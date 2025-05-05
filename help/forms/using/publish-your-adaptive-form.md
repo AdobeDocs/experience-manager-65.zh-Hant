@@ -32,7 +32,7 @@ ht-degree: 2%
 ## 開始之前 {#before-you-start}
 
 * **[設定AEM Forms發佈執行個體](https://helpx.adobe.com/tw/experience-manager/6-3/forms/using/installing-configuring-aem-forms-osgi.html)**：發佈執行個體是以發佈模式執行的AEM [!DNL Forms]的公開執行個體。 在生產環境中，發佈執行個體位於組織的防火牆之外。
-* **[設定復寫與反向復寫](https://helpx.adobe.com/experience-manager/6-3/help/sites-deploying/replication.html)**：復寫會將內容從製作執行個體複製到發佈執行個體，並將使用者輸入（例如表單輸入）從發佈執行個體傳回製作執行個體。
+* **[設定復寫與反向復寫](https://helpx.adobe.com/tw/experience-manager/6-3/help/sites-deploying/replication.html)**：復寫會將內容從製作執行個體複製到發佈執行個體，並將使用者輸入（例如表單輸入）從發佈執行個體傳回製作執行個體。
 
 ## 將最適化表單作為AEM頁面Publish {#publish-the-adaptive-form-as-an-aem-page}
 
@@ -54,7 +54,7 @@ AEM [!DNL Forms]提供元件AEM [!DNL Forms] Container，以將最適化表單�
 
    您也可以將最適化表單內嵌在現有的We.Retail [!DNL Site's]頁面中。 例如，「關於我們」頁面[https://localhost:4502/editor.html/content/we-retail/us/en/about-us.html](https://localhost:4502/editor.html/content/we-retail/us/en/about-us.html)。 這可節省您建立頁面的時間。 以下步驟使用新建立的頁面。
 
-   We.Retail網站隨附AEM。 如果您尚未安裝We.Retail網站，請參閱[We.Retail參考實作](https://helpx.adobe.com/experience-manager/6-3/help/sites-developing/we-retail.html)安裝網站。
+   We.Retail網站隨附AEM。 如果您尚未安裝We.Retail網站，請參閱[We.Retail參考實作](https://helpx.adobe.com/tw/experience-manager/6-3/help/sites-developing/we-retail.html)安裝網站。
 
 1. 選取![屬性](assets/properties.png)頁面資訊，並在新建立的We.Retail網站頁面中選取&#x200B;**[!UICONTROL 編輯範本]**&#x200B;選項。 頁面範本會在瀏覽器的新標籤中開啟。
 1. 在&#x200B;**[!UICONTROL 配置容器]**&#x200B;方塊中選取，並選取![feedmanagement](assets/feedmanagement.png)。 在「**[!UICONTROL 允許的元件]**」標籤中，展開「**[!UICONTROL 一般]**」摺疊式功能表，選取「**[!UICONTROL AEM表單]**」選項，然後選取「![儲存圖示](assets/save_icon.svg)」。 已為頁面啟用AEM [!DNL Forms] Container元件。

@@ -18,10 +18,10 @@ ht-degree: 1%
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/configure-fpo-renditions.html?lang=en) |
+| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/configure-fpo-renditions.html?lang=zh-Hant) |
 | AEM 6.5 | 本文章 |
 
-從Experience Manager將大型資產放入Adobe InDesign檔案時，創意專業人士必須在他們[放置資產](https://helpx.adobe.com/indesign/using/placing-graphics.html)後等待相當長的時間。 同時，使用者會被封鎖而無法使用InDesign。 這會中斷創意流程，並對使用者體驗產生負面影響。 Adobe功能可暫時將小型轉譯置於InDesign檔案中。 需要最終輸出時（例如針對列印及發佈工作流程），原始的完整解析度資產會在背景取代暫時轉譯。 這種背景的非同步更新可加快設計流程以提高生產力，且不會影響創作流程。
+從Experience Manager將大型資產放入Adobe InDesign檔案時，創意專業人士必須在他們[放置資產](https://helpx.adobe.com/tw/indesign/using/placing-graphics.html)後等待相當長的時間。 同時，使用者會被封鎖而無法使用InDesign。 這會中斷創意流程，並對使用者體驗產生負面影響。 Adobe功能可暫時將小型轉譯置於InDesign檔案中。 需要最終輸出時（例如針對列印及發佈工作流程），原始的完整解析度資產會在背景取代暫時轉譯。 這種背景的非同步更新可加快設計流程以提高生產力，且不會影響創作流程。
 
 Adobe Experience Manager (AEM)提供僅用於刊登(FPO)的轉譯。 這些FPO轉譯的檔案大小較小，但外觀比例相同。 如果資產無法使用FPO轉譯，Adobe InDesign會改用原始資產。 此遞補機制可確保創意工作流程無任何中斷地進行。
 

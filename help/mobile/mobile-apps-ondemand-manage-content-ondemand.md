@@ -34,7 +34,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->若要深入瞭解AEM Mobile應用程式的設計考量事項，請參閱線上說明中的[AEM Mobile應用程式的設計考量事項](https://helpx.adobe.com/digital-publishing-solution/help/design-app.html)。
+>若要深入瞭解AEM Mobile應用程式的設計考量事項，請參閱線上說明中的[AEM Mobile應用程式的設計考量事項](https://helpx.adobe.com/tw/digital-publishing-solution/help/design-app.html)。
 
 ## 建立和管理內容 {#creating-and-managing-content}
 
