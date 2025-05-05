@@ -22,7 +22,7 @@ ht-degree: 4%
 
 Adobe Experience Manager包含100多項Dynamic Media影像傳送命令，用於調整及最佳化影像和演算結果。 下列准則可協助您使用一些基本指令和最佳作法，簡化程式並快速取得良好的結果。
 
-## 影像格式(`&fmt=`) {#best-practices-for-image-format-fmt}的最佳實務
+## 影像格式(`&fmt=`)的最佳實務 {#best-practices-for-image-format-fmt}
 
 * JPG或PNG是提供高品質影像，且大小與重量皆可管理的最佳選擇。
 * 如果URL中未提供任何格式命令，Dynamic Media影像傳送預設為JPG進行傳送。
@@ -67,7 +67,7 @@ See also [Sharpening an image with unsharp mask](https://helpx.adobe.com/photosh
 
       * **[!UICONTROL *臨界值&#x200B;*]**（0-255，效果敏感度。）
 
-            此參數可決定銳化像素與周圍區域的差異程度，之後才會被視為邊緣像素，濾鏡會銳化這些像素。**[!UICONTROL threshold]**參數有助於避免色彩相似的區域過度銳利化，例如膚色。例如，閾值為12會忽略膚色亮度的微小變化，以避免加上「雜訊」，同時仍會加上邊緣對比度至高對比區域，例如睫毛與皮膚相遇的區域。
+            此參數可決定銳化像素與周圍區域的差異程度，之後才會被視為邊緣像素，濾鏡會銳化這些像素。**[!UICONTROL threshold]**&#x200B;參數有助於避免色彩相似的區域過度銳利化，例如膚色。例如，閾值為12會忽略膚色亮度的微小變化，以避免加上「雜訊」，同時仍會加上邊緣對比度至高對比區域，例如睫毛與皮膚相遇的區域。
         
         如需如何設定這三個引數的詳細資訊，包括篩選使用的最佳實務，請參閱下列資源：
 
@@ -88,7 +88,7 @@ See also [Sharpening an image with unsharp mask](https://helpx.adobe.com/photosh
 
 將單色引數設定保留為0。
 
-### JPEG壓縮(`&qlt=`) {#best-practices-for-jpeg-compression-qlt}的最佳作法
+### JPEG壓縮(`&qlt=`)的最佳作法 {#best-practices-for-jpeg-compression-qlt}
 
 * 此引數會控制JPG編碼品質。 較高的值表示影像品質較高，但檔案大小較大；或者，較低的值表示影像品質較低，但檔案大小較小。 此引數的範圍為0至100。
 * 若要最佳化品質，請勿將引數值設為100。 設定90或95與100之間的差異幾乎無法察覺，但100卻不必要地增加了影像檔案的大小。 因此，若要最佳化品質但避免影像檔案變得太大，請將`qlt= value`設為90或95。

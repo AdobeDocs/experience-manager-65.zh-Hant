@@ -64,7 +64,7 @@ ht-degree: 1%
 
    >[!NOTE]
    >
-   >若要讓表單訂閱正確運作，需要在發佈執行個體](#exporting-keys-from-author-and-importing-on-publish)上匯出和匯入作者的[加密金鑰。
+   >若要讓表單訂閱正確運作，需要在發佈執行個體[&#128279;](#exporting-keys-from-author-and-importing-on-publish)上匯出和匯入作者的加密金鑰。
 
 ## 從作者匯出索引鍵並在發佈時匯入 {#exporting-keys-from-author-and-importing-on-publish}
 
@@ -114,6 +114,6 @@ ht-degree: 1%
 
    >[!NOTE]
    >
-   >若要讓登錄檔單訂閱正確運作，需要在發佈執行個體](#exporting-keys-from-author-and-importing-on-publish)上匯出和匯入作者的[加密金鑰。
+   >若要讓登錄檔單訂閱正確運作，需要在發佈執行個體[&#128279;](#exporting-keys-from-author-and-importing-on-publish)上匯出和匯入作者的加密金鑰。
 
    ![chlimage_1-12](assets/chlimage_1-12.jpeg)

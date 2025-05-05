@@ -17,7 +17,7 @@ ht-degree: 1%
 
 # AEM 6.5中的E-Commerce存放庫重組{#e-commerce-repository-restructuring-in-aem}
 
-如AEM 6.5](/help/sites-deploying/repository-restructuring.md)頁面的上層[存放庫重新調整中所述，升級至AEM 6.5的客戶應使用此頁面來評估與影響AEM E-Commerce解決方案的存放庫變更相關的工作量。 在AEM 6.5升級程式期間，有些變更需要投入大量精力，而其他變更則可能延遲到未來升級。
+如AEM 6.5[&#128279;](/help/sites-deploying/repository-restructuring.md)頁面的上層存放庫重新調整中所述，升級至AEM 6.5的客戶應使用此頁面來評估與影響AEM E-Commerce解決方案的存放庫變更相關的工作量。 在AEM 6.5升級程式期間，有些變更需要投入大量精力，而其他變更則可能延遲到未來升級。
 
 ## 6.5版升級 {#with-upgrade}
 

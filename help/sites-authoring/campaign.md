@@ -63,7 +63,7 @@ ht-degree: 2%
    ![chlimage_1-15](assets/chlimage_1-15a.png)
 
 1. 選取&#x200B;**建立**，然後選取&#x200B;**建立頁面**。
-1. 選取您連線至Adobe Campaign的特定可用範本之一，然後按一下[下一步] ****。 預設提供三個範本：
+1. 選取您連線至Adobe Campaign的特定可用範本之一，然後按一下[下一步] **&#x200B;**。 預設提供三個範本：
 
    * **Adobe Campaign Classic電子郵件**：可讓您在將內容傳送至Adobe Campaign Classic傳送之前，先新增內容至預先定義的範本（兩欄）。
    * **Adobe Campaign Standard電子郵件**：可讓您在將內容傳送至Adobe Campaign Standard傳送之前，先新增內容至預先定義的範本（兩欄）。
@@ -173,7 +173,7 @@ ht-degree: 2%
    >Adobe Campaign Standard的&#x200B;**：**
    >
    >* 可用的內容欄位對應至Adobe Campaign中的&#x200B;**設定檔**&#x200B;目標維度。
-   >* 請參閱將AEM頁面連結至Adobe Campaign電子郵件](#linking-an-aem-page-to-an-adobe-campaign-email-adobe-campaign-standard)。[
+   >* 請參閱將AEM頁面連結至Adobe Campaign電子郵件[&#128279;](#linking-an-aem-page-to-an-adobe-campaign-email-adobe-campaign-standard)。
    >
    >Adobe Campaign Classic的&#x200B;**：**
    >
@@ -232,7 +232,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
-未核准的內容可以與Adobe Campaign中的傳遞同步，但傳遞無法執行。 只有已核准的內容才能透過Campaign傳遞傳送。
+>未核准的內容可以與Adobe Campaign中的傳遞同步，但傳遞無法執行。 只有已核准的內容才能透過Campaign傳遞傳送。
 
 ## 將AEM與Adobe Campaign Standard和Adobe Campaign Classic連結 {#linking-aem-with-adobe-campaign-standard-and-adobe-campaign-classic}
 
@@ -256,7 +256,7 @@ Adobe Campaign Standard可讓您復原和連結在AEM中建立的內容，包含
 
 >[!NOTE]
 >
-如果電子報連結至數個傳送，則會顯示連結的傳送數量（但不會顯示每個ID）。
+>如果電子報連結至數個傳送，則會顯示連結的傳送數量（但不會顯示每個ID）。
 
 若要將AEM中建立的頁面連結至Adobe Campaign的電子郵件：
 
@@ -272,7 +272,7 @@ Adobe Campaign Standard可讓您復原和連結在AEM中建立的內容，包含
 
    >[!NOTE]
    >
-   如果動作列中沒有&#x200B;**具有Adobe Experience Manager**&#x200B;選項的連結，請檢查電子郵件屬性中的&#x200B;**內容編輯模式**&#x200B;是否已正確設定為&#x200B;**Adobe Experience Manager**。
+   >如果動作列中沒有&#x200B;**具有Adobe Experience Manager**&#x200B;選項的連結，請檢查電子郵件屬性中的&#x200B;**內容編輯模式**&#x200B;是否已正確設定為&#x200B;**Adobe Experience Manager**。
 
    ![chlimage_1-38](assets/chlimage_1-38a.png)
 
@@ -287,7 +287,7 @@ Adobe Campaign Standard可讓您復原和連結在AEM中建立的內容，包含
 
    >[!NOTE]
    >
-   依預設，已和傳送同步的內容會隱藏。 不過，您可以顯示並使用它。 例如，如果您想要將內容當做數個傳送的範本。
+   >依預設，已和傳送同步的內容會隱藏。 不過，您可以顯示並使用它。 例如，如果您想要將內容當做數個傳送的範本。
 
    當電子郵件連結至AEM內容時，無法在Adobe Campaign中編輯內容。
 
@@ -296,11 +296,11 @@ Adobe Campaign Standard可讓您復原和連結在AEM中建立的內容，包含
 
    >[!NOTE]
    >
-   如果內容在連結至電子郵件時於AEM中更新，則會在分析期間於Adobe Campaign中自動更新。 同步處理也可以使用內容動作列中的&#x200B;**重新整理Adobe Experience Manager內容**&#x200B;來手動執行。
+   >如果內容在連結至電子郵件時於AEM中更新，則會在分析期間於Adobe Campaign中自動更新。 同步處理也可以使用內容動作列中的&#x200B;**重新整理Adobe Experience Manager內容**&#x200B;來手動執行。
    >
-   您可以使用&#x200B;**從內容動作列刪除含有AEM內容的連結**，來取消電子郵件與Adobe Experience Manager內容之間的連結。 此按鈕僅在內容已連結至傳遞時才能使用。 若要將不同的內容與傳送連結，您必須刪除目前的內容連結，才能建立新連結。
+   >您可以使用&#x200B;**從內容動作列刪除含有AEM內容的連結**，來取消電子郵件與Adobe Experience Manager內容之間的連結。 此按鈕僅在內容已連結至傳遞時才能使用。 若要將不同的內容與傳送連結，您必須刪除目前的內容連結，才能建立新連結。
    >
-   刪除連結後，本機內容會保留，並可在Adobe Campaign中編輯。 如果您在修改內容後再次連結內容，所有變更將會遺失。
+   >刪除連結後，本機內容會保留，並可在Adobe Campaign中編輯。 如果您在修改內容後再次連結內容，所有變更將會遺失。
 
 ### 將AEM中建立的內容與來自Adobe Campaign Classic的傳遞同步 {#synchronizing-content-created-in-aem-with-a-delivery-from-adobe-campaign-classic}
 
@@ -319,11 +319,11 @@ Adobe Campaign可讓您復原及同步在AEM中建立的內容，並搭配以下
 
 >[!NOTE]
 >
-如果Newsletter連結至數個傳送，則會顯示連結的傳送數量（但不會顯示每個ID）。
+>如果Newsletter連結至數個傳送，則會顯示連結的傳送數量（但不會顯示每個ID）。
 >
-[!NOTE]
+>[!NOTE]
 >
-AEM 6.1已棄用工作流程步驟&#x200B;**Publish至Adobe Campaign**。此步驟是AEM 6.0與Adobe Campaign整合的一部分，已不再是必要步驟。
+>AEM 6.1已棄用工作流程步驟&#x200B;**Publish至Adobe Campaign**。此步驟是AEM 6.0與Adobe Campaign整合的一部分，已不再是必要步驟。
 
 若要將AEM中建立的內容與來自Adobe Campaign的傳送同步：
 
@@ -335,7 +335,7 @@ AEM 6.1已棄用工作流程步驟&#x200B;**Publish至Adobe Campaign**。此步�
 
    >[!NOTE]
    >
-   如果&#x200B;**同步**&#x200B;選項未出現在傳遞的工具列中，請選取&#x200B;**內容** > **進階**，以檢查&#x200B;**內容編輯模式**&#x200B;欄位是否已在&#x200B;**AEM**&#x200B;中正確設定。
+   >如果&#x200B;**同步**&#x200B;選項未出現在傳遞的工具列中，請選取&#x200B;**內容** > **進階**，以檢查&#x200B;**內容編輯模式**&#x200B;欄位是否已在&#x200B;**AEM**&#x200B;中正確設定。
 
    ![chlimage_1-41](assets/chlimage_1-41a.png)
 
@@ -350,7 +350,7 @@ AEM 6.1已棄用工作流程步驟&#x200B;**Publish至Adobe Campaign**。此步�
 
    >[!NOTE]
    >
-   依預設，已和傳送同步的內容會隱藏。 不過，您可以顯示並使用它。 例如，如果您想要將內容當做數個傳送的範本。
+   >依預設，已和傳送同步的內容會隱藏。 不過，您可以顯示並使用它。 例如，如果您想要將內容當做數個傳送的範本。
 
    ![chlimage_1-42](assets/chlimage_1-42a.png)
 
@@ -360,8 +360,8 @@ AEM 6.1已棄用工作流程步驟&#x200B;**Publish至Adobe Campaign**。此步�
 
    >[!NOTE]
    >
-   * 在傳遞與內容同步之後，Adobe Campaign中的傳遞內容會變成唯讀。 無法再修改電子郵件主旨及其內容。
-   * 如果內容在連結至Adobe Campaign中的傳送時在AEM中更新，則會在傳送分析期間在傳送中自動更新。 也可以使用&#x200B;**立即重新整理內容**&#x200B;按鈕手動執行同步處理。
-   * 您可以使用&#x200B;**取消同步**&#x200B;按鈕，取消傳遞與AEM內容之間的同步。 唯有內容已與傳送同步時，才可使用此選項。 若要將不同的內容與傳送同步，您必須先取消目前的內容同步，才能建立新連結。
-   * 如果取消同步，本機內容會保留並可在Adobe Campaign中編輯。 如果您在修改內容後重新同步內容，將會遺失所有變更。
-   * 對於循環和連續傳遞，每次執行傳遞時都會停止與AEM內容的同步。
+   >* 在傳遞與內容同步之後，Adobe Campaign中的傳遞內容會變成唯讀。 無法再修改電子郵件主旨及其內容。
+   >* 如果內容在連結至Adobe Campaign中的傳送時在AEM中更新，則會在傳送分析期間在傳送中自動更新。 也可以使用&#x200B;**立即重新整理內容**&#x200B;按鈕手動執行同步處理。
+   >* 您可以使用&#x200B;**取消同步**&#x200B;按鈕，取消傳遞與AEM內容之間的同步。 唯有內容已與傳送同步時，才可使用此選項。 若要將不同的內容與傳送同步，您必須先取消目前的內容同步，才能建立新連結。
+   >* 如果取消同步，本機內容會保留並可在Adobe Campaign中編輯。 如果您在修改內容後重新同步內容，將會遺失所有變更。
+   >* 對於循環和連續傳遞，每次執行傳遞時都會停止與AEM內容的同步。

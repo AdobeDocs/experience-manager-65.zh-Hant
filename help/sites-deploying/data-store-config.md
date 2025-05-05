@@ -165,7 +165,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 
    將以上位置的所有內容複製到`<aem-install>/crx-quickstart/install.`
 
-1. 如果AEM已設定為搭配Tar或MongoDB儲存體使用，請先從***&lt;aem-install>***/*crx-quickstart*/*install*&#x200B;資料夾移除任何現有的設定檔，然後再繼續。 必須移除的檔案包括：
+1. 如果AEM已設定為搭配Tar或MongoDB儲存體使用，請先從&#x200B;***&lt;aem-install>***/*crx-quickstart*/*install*&#x200B;資料夾移除任何現有的設定檔，然後再繼續。 必須移除的檔案包括：
 
    * `For MongoMK: org.apache.jackrabbit.oak.plugins.document.DocumentNodeStoreService.config`
    * `For TarMK: org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config`

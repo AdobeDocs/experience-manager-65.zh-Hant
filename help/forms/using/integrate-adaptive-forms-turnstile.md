@@ -59,12 +59,14 @@ Cloudflare的Turnstile驗證碼是一種安全性措施，旨在保護表單和�
 
 1. 設定您的Cloud Service：
    1. 在您的AEM作者執行個體上，前往![tools-1](assets/tools-1.png) > **[!UICONTROL Cloud Service]**，然後按一下&#x200B;**[!UICONTROL Turnstile]**。
+
       在Cloud Service中![旋轉門](assets/turnstile-in-ui.png)
    1. 選取已建立或已更新的設定容器，如上一節所述。 按一下&#x200B;**[!UICONTROL 建立]**。
+
       ![組態旋轉門](assets/config-hcaptcha.png)
    1. 將&#x200B;**[!UICONTROL Widget Type]**&#x200B;指定為Managed、非互動式或隱藏式。
    1. 提供其他詳細資料，例如&#x200B;**[!UICONTROL 標題]**、**[!UICONTROL 名稱]**。
-   1. 針對在先決條件](#prerequisite)中取得的Turnstile服務[，指定&#x200B;**[!UICONTROL 網站金鑰]**&#x200B;和&#x200B;**[!UICONTROL 秘密金鑰]**。
+   1. 針對在先決條件[&#128279;](#prerequisite)中取得的Turnstile服務，指定&#x200B;**[!UICONTROL 網站金鑰]**&#x200B;和&#x200B;**[!UICONTROL 秘密金鑰]**。
    1. 按一下&#x200B;**[!UICONTROL 建立]**。
 
       ![設定Cloud Service以連線您的AEM Forms環境與Turnstile](assets/config-turntstile.png)
@@ -74,7 +76,7 @@ Cloudflare的Turnstile驗證碼是一種安全性措施，旨在保護表單和�
 
    設定Turnstile Captcha服務後，就可在最適化表單中使用。
 
-## 在最適化表單{#using-turnstile-aem-6.5}中使用Turnstile
+## 在最適化表單中使用Turnstile{#using-turnstile-aem-6.5}
 
 1. 開啟您的AEM Forms環境。
 1. 移至&#x200B;**[!UICONTROL Forms]** > **[!UICONTROL Forms和檔案]**。
@@ -97,6 +99,7 @@ Cloudflare的Turnstile驗證碼是一種安全性措施，旨在保護表單和�
    * **[!UICONTROL 驗證訊息]：**&#x200B;提供驗證訊息，以便在表單提交或使用者動作時驗證驗證碼。
    * **[!UICONTROL 驗證碼服務]：**&#x200B;選取表單提交的驗證碼服務，這裡選取Turnstile®。
    * **[!UICONTROL 組態設定]：**&#x200B;選取您為Turnstile®設定的雲端組態。
+
      >[!NOTE]
      >基於類似目的，您的環境中可以有多個雲端設定。 因此，請謹慎選擇服務。 如果未列出任何服務，請參閱[將您的AEM Forms環境與Turnstile連線](#connect-your-forms-environment-with-turnstile-service)，以瞭解如何建立將AEM Forms環境與Turnstile服務連結的Cloud Service。
 

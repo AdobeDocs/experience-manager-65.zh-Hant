@@ -80,7 +80,7 @@ AEM Mobile Dashboard可讓您建立、建置和部署行動應用程式、建立
 
 **已發佈**&#x200B;欄顯示上次內容更新的發佈時間，可供您的客戶使用。 若要發佈內容，您必須先暫存該內容，然後透過鑽研此圖磚並從「內容發行詳細資料」主控台發佈來發佈更新。
 
-應用程式殼層](do-not-localize/chlimage_1-5.png)的![內容發行磚](assets/chlimage_1-139.png) ![ContentSync套件
+應用程式殼層![&#128279;](do-not-localize/chlimage_1-5.png)的![內容發行磚](assets/chlimage_1-139.png) ContentSync套件
 
 此圖示代表應用程式殼層的內容發行套件
 

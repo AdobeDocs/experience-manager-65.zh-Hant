@@ -151,6 +151,7 @@ Clientlibs可讓您擴充預設實作以實現新功能，同時重複使用標�
 1. 選擇性：
 
    * 如果您想要插入其他資料，您必須使用撰寫[PageInforProvider](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageInfoProvider.html)
+
      `pageInfoProviderType`屬性。
 
    例如，請參閱底下的附加類別/套件（來自GitHub）。

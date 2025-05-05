@@ -386,7 +386,7 @@ ht-degree: 1%
    ![快速存取](assets/aftia-quick-access.jpg)
 1. 導覽至「管理員」標籤，並選取「使用者管理（舊版）」專案
    ![報告](assets/aftia-reports.jpg)
-1. 選取&#x200B;**使用者**索引標籤。
+1. 選取&#x200B;**使用者**&#x200B;索引標籤。
    ![使用者管理](assets/aftia-user-management.jpg)
 1. 從使用者清單中選取所需的使用者。
 1. 捲動至頁面底部，使用者驗證資訊將顯示在頁面底部。

@@ -25,7 +25,7 @@ ht-degree: 3%
 >
 >如需有關記錄的進一步資訊，請參閱：
 >
->* 在AEM](/help/sites-administering/operations-audit-log.md)中維護[稽核記錄
+>* 在AEM[&#128279;](/help/sites-administering/operations-audit-log.md)中維護稽核記錄
 >* [使用稽核記錄和記錄檔](/help/sites-deploying/monitoring-and-maintaining.md#working-with-audit-records-and-log-files)
 
 CRX會記錄詳細的記錄。 拆開包裝並啟動「快速入門」後，您可在下列位置找到記錄：

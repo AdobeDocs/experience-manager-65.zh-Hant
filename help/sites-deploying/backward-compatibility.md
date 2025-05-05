@@ -61,7 +61,7 @@ ht-degree: 1%
 
 ## 設定方法 {#how-to-set-up}
 
-可以使用封裝管理員將6.5 **的** AEM 6.4相容性套件安裝為封裝。 您可以從Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?fulltext=compat*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=20&amp;package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fcompatpack%2Faem-compat-cq65-to-cq64)網站下載6.5的[AEM 6.4 Compatibility Pack。
+可以使用封裝管理員將6.5 **的** AEM 6.4相容性套件安裝為封裝。 您可以從Software Distribution[&#128279;](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?fulltext=compat*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=20&amp;package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fcompatpack%2Faem-compat-cq65-to-cq64)網站下載6.5的AEM 6.4 Compatibility Pack。
 
 安裝相容性套件後，即可使用OSGI組態中的交換器來啟用或停用路由，如下所示：
 

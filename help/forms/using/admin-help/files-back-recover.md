@@ -36,7 +36,7 @@ GDS是用來儲存處理程式中所使用之長期檔案的目錄。 長效檔�
 
 非同步作業引動的輸入檔案也儲存在GDS中，並且必須可用於處理請求。 因此，您必須考量裝載GDS的檔案系統的可靠性，並採用獨立磁碟備援陣列(RAID)或其他適合您品質和服務等級需求的技術。
 
-GDS的位置是在AEM Forms安裝過程中或之後使用管理主控台確定的。 除了保留GDS的高可用性位置之外，您還可以啟用檔案的資料庫儲存。 當資料庫用於檔案儲存體](files-back-recover.md#backup-options-when-database-is-used-for-document-storage)時，請參閱[備份選項。
+GDS的位置是在AEM Forms安裝過程中或之後使用管理主控台確定的。 除了保留GDS的高可用性位置之外，您還可以啟用檔案的資料庫儲存。 當資料庫用於檔案儲存體[&#128279;](files-back-recover.md#backup-options-when-database-is-used-for-document-storage)時，請參閱備份選項。
 
 ### GDS位置 {#gds-location}
 

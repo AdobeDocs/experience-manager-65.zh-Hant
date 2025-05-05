@@ -107,7 +107,7 @@ ht-degree: 0%
 
 1. 在表單URL中，新增查詢引數debugClientLibs並將其值設為true (例如： https://&lt;server>：&lt;port>/content/xfaforms/profiles/test.html？contentRoot=&lt;some path>&amp;template=&lt;name of xdp file>&amp;log=1-a9-b9-c9&amp;debugClientLibs=true)
 1. 在案頭瀏覽器（如Chrome）中，前往「開發人員工具」 > 「主控台」 。
-1. 開啟記錄檔以識別錯誤型別。 如需有關記錄的詳細資訊，請參閱HTML5表單](/help/forms/using/enable-logs.md)的[記錄。
+1. 開啟記錄檔以識別錯誤型別。 如需有關記錄的詳細資訊，請參閱HTML5表單[&#128279;](/help/forms/using/enable-logs.md)的記錄。
 1. 前往「開發人員工具>主控台」。 使用棧疊追蹤來找出導致錯誤的程式碼。 對錯誤進行偵錯以解決問題。
 
    >[!NOTE]
@@ -118,7 +118,7 @@ ht-degree: 0%
 
 1. 確定您有權存取AEM伺服器，且已連線至伺服器。
 1. 檢查引數submitUrl是否正確。
-1. 使用偵錯選項作為&#x200B;**1-a5-b5-c5**，啟用HTML5表單](/help/forms/using/enable-logs.md)的[記錄檔中提及的使用者端記錄檔。 然後轉譯表單並按一下提交。 開啟瀏覽器偵錯主控台並檢查是否有錯誤。
+1. 使用偵錯選項作為&#x200B;**1-a5-b5-c5**，啟用HTML5表單[&#128279;](/help/forms/using/enable-logs.md)的記錄檔中提及的使用者端記錄檔。 然後轉譯表單並按一下提交。 開啟瀏覽器偵錯主控台並檢查是否有錯誤。
 1. 尋找[HTML5表單](/help/forms/using/enable-logs.md)的記錄檔中提及的伺服器記錄檔。 檢查在提交期間伺服器記錄中是否有任何錯誤。
 
 ## 問題：未顯示本地化的錯誤訊息 {#problem-localized-error-messages-do-not-display}

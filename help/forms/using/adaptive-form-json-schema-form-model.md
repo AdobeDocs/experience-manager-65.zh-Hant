@@ -365,7 +365,7 @@ JSON元素與最適化表單元件的對應如下：
 
 ## 設定表單物件的指令碼或運算式  {#configure-scripts-or-expressions-for-form-objects}
 
-JavaScript是適用性表單的運算式語言。 所有運算式都是有效的JavaScript運算式，並使用適用性表單指令碼模型API。 您可以預先設定表單物件，以評估表單事件上的運算式](adaptive-form-expressions.md)。[
+JavaScript是適用性表單的運算式語言。 所有運算式都是有效的JavaScript運算式，並使用適用性表單指令碼模型API。 您可以預先設定表單物件，以評估表單事件上的運算式[&#128279;](adaptive-form-expressions.md)。
 
 使用aem：afproperties屬性預先設定最適化表單元件的最適化表單運算式或指令碼。 例如，觸發初始化事件時，以下程式碼會設定電話欄位的值，並將值列印至記錄檔：
 

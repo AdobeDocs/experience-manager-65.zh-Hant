@@ -48,7 +48,7 @@ AEM Forms使用者可以使用Google的reCAPTCHA服務，以最適化表單實�
 
 1. 建立已啟用[reCAPTCHA Enterprise API](https://cloud.google.com/recaptcha-enterprise/docs/set-up-non-google-cloud-environments-api-keys#enable-the-recaptcha-enterprise-api)的[reCAPTCHA Enterprise專案](https://cloud.google.com/recaptcha-enterprise/docs/set-up-non-google-cloud-environments-api-keys#before-you-begin)。
 1. [取得](https://support.google.com/googleapi/answer/7014113?hl=en#:~:text=To%20locate%20your%20project%20ID,a%20member%20of%20are%20displayed)專案識別碼。
-1. 為網站](https://cloud.google.com/recaptcha-enterprise/docs/create-key#create-key)建立[API金鑰](https://cloud.google.com/recaptcha-enterprise/docs/set-up-non-google-cloud-environments-api-keys#create_an_api_key)和[網站金鑰。
+1. 為網站[&#128279;](https://cloud.google.com/recaptcha-enterprise/docs/create-key#create-key)建立[API金鑰](https://cloud.google.com/recaptcha-enterprise/docs/set-up-non-google-cloud-environments-api-keys#create_an_api_key)和網站金鑰。
 1. 建立雲端服務的設定容器。
 
    1. 移至&#x200B;**[!UICONTROL 工具>一般>設定瀏覽器]**。 如需詳細資訊，請參閱[設定瀏覽器](/help/sites-administering/configurations.md)檔案。
@@ -76,7 +76,7 @@ AEM Forms使用者可以使用Google的reCAPTCHA服務，以最適化表單實�
 
    1. 在「編輯元件」(Edit Component)對話方塊中，指定名稱、專案ID、網站金鑰、API金鑰（在步驟2和3中取得）、選取金鑰型別，然後輸入臨界值分數。 選取&#x200B;**[!UICONTROL 儲存設定]**，然後選取&#x200B;**[!UICONTROL 確定]**&#x200B;以完成設定。
 
-reCAPTCHA Enterprise服務啟用後，就可在調適型表單中使用。 請參閱在最適化表單](#using-reCAPTCHA)中使用驗證碼[。
+reCAPTCHA Enterprise服務啟用後，就可在調適型表單中使用。 請參閱在最適化表單[&#128279;](#using-reCAPTCHA)中使用驗證碼。
 
 ![reCAPTCHA Enterprise](/help/forms/using/assets/recaptcha1-enterprise.png)
 
@@ -131,7 +131,7 @@ reCAPTCHA Enterprise服務啟用後，就可在調適型表單中使用。 請�
 
 1. 選取您新增的Captcha元件，並選取![cmppr](assets/cmppr.png)以編輯其屬性。
 1. 指定驗證碼介面工具集的標題。 預設值為&#x200B;**驗證碼**。 如果您不想顯示標題，請選取&#x200B;**隱藏標題**。
-1. 從&#x200B;**Captcha服務**&#x200B;下拉式清單中，選取&#x200B;**reCAPTCHA**&#x200B;以啟用reCAPTCHA服務(若您已依照Google](#google-reCAPTCHA)的[reCAPTCHA服務說明進行設定)。
+1. 從&#x200B;**Captcha服務**&#x200B;下拉式清單中，選取&#x200B;**reCAPTCHA**&#x200B;以啟用reCAPTCHA服務(若您已依照Google[&#128279;](#google-reCAPTCHA)的reCAPTCHA服務說明進行設定)。
 1. 從「設定」下拉式清單中選取設定。
 1. **如果選取的組態具有版本reCAPTCHA Enterprise**：
    1. 您可以選取具有&#x200B;**金鑰型別**&#x200B;的reCAPTCHA雲端組態做為&#x200B;**核取方塊**。 在核取方塊索引鍵中，如果驗證碼驗證失敗，自訂的錯誤訊息會顯示為內嵌訊息。 您可以選取&#x200B;**[!UICONTROL Normal]**&#x200B;和&#x200B;**[!UICONTROL Compact]**&#x200B;的大小。

@@ -197,11 +197,11 @@ Dynamic Media Viewers擴充功能的唯一設定選項是&#x200B;**[!UICONTROL �
 
 ### 關於Dynamic Media檢視器擴充功能中的資料元素 {#about-data-elements-in-the-dynamic-media-viewers-extension}
 
-「動態媒體檢視器」擴充功能提供的唯一「資料元素」類型是「資 **[!UICONTROL 料元素類型」下拉式清單中的「檢]****** 視器事件」。
+「動態媒體檢視器」擴充功能提供的唯一「資料元素」類型是「資 **[!UICONTROL 料元素類型」下拉式清單中的「檢]**&#x200B;**&#x200B;** 視器事件」。
 
 選取後，資料元素編輯器會呈現包含兩個欄位的表單：
 
-* **[!UICONTROL DM檢視器事件資料類型]** -一個下拉式清單，可識別動態媒體檢視器擴充功能支援的所有檢視器事件 (具有引數)，加上特殊的 **[!UICONTROL COMMON]** 項目。COMMON **** 項目代表檢視器所傳送之所有類型事件的共同事件參數清單。
+* **[!UICONTROL DM檢視器事件資料類型]** -一個下拉式清單，可識別動態媒體檢視器擴充功能支援的所有檢視器事件 (具有引數)，加上特殊的 **[!UICONTROL COMMON]** 項目。COMMON **&#x200B;**&#x200B;項目代表檢視器所傳送之所有類型事件的共同事件參數清單。
 * **[!UICONTROL 追蹤引數]** — 所選Dynamic Media檢視器事件的引數。
 
 ![image2019-7-22_12-5-46](assets/image2019-7-22_12-5-46.png)
@@ -448,7 +448,7 @@ Adobe建議您詳閱本節之前的所有檔案，以便瞭解完整的整合。
 
 ### 選取報表套裝 {#selecting-a-report-suite}
 
-1. 在Adobe Analytics頁面的右上角，「搜尋報表」欄位的右側，從下拉式清單中選取正確的報表套裝。****&#x200B;如果有多個報表套裝可供使用，而您不確定要使用哪個報表套裝，請連絡您的Adobe Analytics管理員，以協助您選取要使用哪個報表套裝。
+1. 在Adobe Analytics頁面的右上角，「搜尋報表」欄位的右側，從下拉式清單中選取正確的報表套裝。**&#x200B;**&#x200B;如果有多個報表套裝可供使用，而您不確定要使用哪個報表套裝，請連絡您的Adobe Analytics管理員，以協助您選取要使用哪個報表套裝。
 
    在下方熒幕擷圖中，使用者建立了名為&#x200B;*DynamicMediaViewersExtensionDoc*&#x200B;的報告套裝，並從下拉式清單中選取它。 報表套裝名稱僅為範例名稱。 您最終選取的報表套裝名稱由您決定。
 
@@ -519,7 +519,7 @@ Experience Platform標籤中的屬性是具名設定，可讓所有設定保持�
 另請參閱[建立Tags屬性](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/initial-configuration/configure-tags.html)。
 
 1. 在Experience Platform標籤中，選取&#x200B;**[!UICONTROL 新增屬性]**。
-1. 在「建 **[!UICONTROL 立屬性]** 」對話方塊的「名稱 **** 」欄位中，輸入描述性名稱，例如網站的標題。例如 `DynamicMediaViewersProp.`
+1. 在「建 **[!UICONTROL 立屬性]** 」對話方塊的「名稱 **&#x200B;**&#x200B;」欄位中，輸入描述性名稱，例如網站的標題。例如 `DynamicMediaViewersProp.`
 1. 在&#x200B;**[!UICONTROL 網域]**&#x200B;欄位中，輸入您網站的網域。
 1. 在&#x200B;**[!UICONTROL 進階選項]**&#x200B;下拉式清單中，啟用&#x200B;**[!UICONTROL 設定擴充功能開發（以後無法修改）]**，以備您要使用的擴充功能(在此例中為&#x200B;*Dynamic Media檢視器*)尚未發行時使用。
 
@@ -551,7 +551,7 @@ Experience Platform標籤中所有可用的擴充功能都會列在&#x200B;**[!U
 
 ![image2019-7-8_16-45-34](assets/image2019-7-8_16-45-34.png)
 
-在「安裝擴充功能」頁面的「開發報表套裝」欄位中，輸入「報表套裝ID」。此欄位包括「 **[!UICONTROL 測試報表套裝」欄位和「]** 生產報表套裝 ******** 」欄位。
+在「安裝擴充功能」頁面的「開發報表套裝」欄位中，輸入「報表套裝ID」。此欄位包括「 **[!UICONTROL 測試報表套裝」欄位和「]** 生產報表套裝 **&#x200B;**&#x200B;**&#x200B;** 」欄位。
 
 ![image2019-7-8_16-47-40](assets/image2019-7-8_16-47-40.png)
 
@@ -686,7 +686,7 @@ Experience Manager設定包含下列兩個主要步驟：
 
    *若要擷取有效的存取Token，新憑證的公開金鑰已新增至Adobe Developer Console上的技術帳戶！*
 
-   若要關閉[資訊]對話方塊，請選取[確定]。****
+   若要關閉[資訊]對話方塊，請選取[確定]。**&#x200B;**
 
    ![2019-07-25_12-09-24](assets/2019-07-25_12-09-24.png)
 
@@ -728,7 +728,7 @@ Experience Manager設定包含下列兩個主要步驟：
 
    ![2019-07-25_14-16-33](assets/2019-07-25_14-16-33.png)
 
-1. 整合詳細資訊頁面隨即顯示，****&#x200B;類似下列內容：
+1. 整合詳細資訊頁面隨即顯示，**&#x200B;**&#x200B;類似下列內容：
 
    >[!NOTE]
    >
@@ -757,7 +757,7 @@ Experience Manager設定包含下列兩個主要步驟：
    * **[!UICONTROL 標題]** — 輸入描述性帳戶標題。
    * **[!UICONTROL 授權伺服器]** — 返回您先前開啟的整合詳細資訊頁面。 選取&#x200B;**[!UICONTROL JWT]**&#x200B;索引標籤。 複製伺服器名稱（不含路徑），如下方反白所示。
 
-   返回&#x200B;**[!UICONTROL 帳戶]**頁面，然後將名稱貼到個別欄位。
+   返回&#x200B;**[!UICONTROL 帳戶]**&#x200B;頁面，然後將名稱貼到個別欄位。
 例如，`https://ims-na1.adobelogin.com/`
 （伺服器名稱僅供範例使用）
 

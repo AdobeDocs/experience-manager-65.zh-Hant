@@ -22,7 +22,7 @@ ht-degree: 4%
 
 ## 概觀 {#overview}
 
-「AEM Developer Tools」是以Apache授權2所發行適用於Apache Sling](https://sling.apache.org/documentation/development/ide-tooling.html)的[Eclipse外掛程式為基礎的Eclipse外掛程式。
+「AEM Developer Tools」是以Apache授權2所發行適用於Apache Sling[&#128279;](https://sling.apache.org/documentation/development/ide-tooling.html)的Eclipse外掛程式為基礎的Eclipse外掛程式。
 
 它提供數項功能，讓AEM開發更容易：
 

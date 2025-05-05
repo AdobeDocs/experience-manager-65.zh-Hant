@@ -226,7 +226,7 @@ ht-degree: 0%
 
 ![社群角色](assets/site-admin-2.png)
 
-已指派這些設定給社群成員](/help/communities/users.md)的[角色。
+已指派這些設定給社群成員[&#128279;](/help/communities/users.md)的角色。
 
 使用預先輸入搜尋可輕鬆尋找社群成員。
 

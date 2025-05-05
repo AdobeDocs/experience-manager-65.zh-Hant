@@ -20,7 +20,7 @@ ht-degree: 1%
 
 在大型組織中，需要動態選取流程的使用者。 例如，根據代理商與客戶的鄰近程度，選取欄位代理商以提供客戶服務。 在這種情況下，代理程式會以動態方式選取。
 
-在OSGi](/help/forms/using/aem-forms-workflow.md)上指派[以Forms為中心的工作流程的任務和Adobe Sign步驟，提供可動態選取使用者的選項。 您可以使用ECMAScript或OSGi套件組合來動態選取「指派工作」步驟的被指定者，或選取「簽署檔案」步驟的簽署者。
+在OSGi[&#128279;](/help/forms/using/aem-forms-workflow.md)上指派以Forms為中心的工作流程的任務和Adobe Sign步驟，提供可動態選取使用者的選項。 您可以使用ECMAScript或OSGi套件組合來動態選取「指派工作」步驟的被指定者，或選取「簽署檔案」步驟的簽署者。
 
 ## 使用ECMAScript動態選取使用者或群組 {#use-ecmascript-to-dynamically-select-a-user-or-group}
 
@@ -39,7 +39,7 @@ ECMAScript是一種指令碼語言。 用於使用者端指令碼和伺服器應
 1. 新增指令碼的顯示名稱。 此名稱會顯示在工作流程步驟中。 若要指定名稱，請執行下列動作：
 
    1. 展開指令碼節點，用滑鼠右鍵按一下&#x200B;**[!UICONTROL jcr：content]**&#x200B;節點，然後按一下&#x200B;**[!UICONTROL Mixins]**。
-   1. 在[編輯Mixin]對話方塊中新增`mix:title`屬性，然後按一下[確定]。****
+   1. 在[編輯Mixin]對話方塊中新增`mix:title`屬性，然後按一下[確定]。**&#x200B;**
    1. 將以下屬性新增到指令碼的jcr：content節點中：
 
       | 名稱 | 類型 | 值 |
@@ -120,7 +120,7 @@ function getAdobeSignRecipients() {
 您需要[AEM Forms使用者端SDK](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) jar和[granite jar](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.workflow.api/1.0.2/)檔案，才能編譯下列的程式碼範例。 將這些jar檔案新增為外部相依性至OSGi套件專案。 您可以使用任何Java IDE來建立OSGi套件。 下列程式提供使用Eclipse建立OSGi套件的步驟：
 
 1. 開啟Eclipse IDE。 瀏覽至&#x200B;**[!UICONTROL 檔案]**> **[!UICONTROL 新專案]**。
-1. 在[選取精靈]畫面上，選取&#x200B;**[!UICONTROL Maven專案]**，然後按一下[下一步] ]**。**[!UICONTROL 
+1. 在[選取精靈]畫面上，選取&#x200B;**[!UICONTROL Maven專案]**，然後按一下[下一步] **。**
 1. 在新的Maven專案中，保留預設值，然後按一下&#x200B;**[!UICONTROL 下一步]**。 選取原型並按一下&#x200B;**[!UICONTROL 下一步]**。 例如，maven-archetype-quickstart。 指定專案的&#x200B;**[!UICONTROL 群組識別碼]**、**[!UICONTROL 成品識別碼]**、**[!UICONTROL 版本]**&#x200B;和&#x200B;**[!UICONTROL 封裝]**，然後按一下&#x200B;**[!UICONTROL 完成]**。 專案已建立。
 1. 開啟pom.xml檔案進行編輯，並將檔案的所有內容取代為下列內容：
 

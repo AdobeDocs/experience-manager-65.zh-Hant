@@ -47,4 +47,4 @@ AEM可讓您產生包含動態擷取自內容的文字的圖形。
 
    這些字型現已可在Java API中使用。
 
-如需有關如何搭配Java API使用字型的完整詳細資訊，請參閱Java API字型類別](https://download.oracle.com/javase/6/docs/api/java/awt/Font.html)的[檔案。
+如需有關如何搭配Java API使用字型的完整詳細資訊，請參閱Java API字型類別[&#128279;](https://download.oracle.com/javase/6/docs/api/java/awt/Font.html)的檔案。

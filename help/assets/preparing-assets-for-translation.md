@@ -67,6 +67,6 @@ ht-degree: 1%
 
    ![chlimage_1-122](assets/chlimage_1-122.png)
 
-1. 在[參考]窗格中，按一下[語言復本]。**** [!UICONTROL 語言副本]面板會顯示資產的語言副本。
+1. 在[參考]窗格中，按一下[語言復本]。**&#x200B;** [!UICONTROL 語言副本]面板會顯示資產的語言副本。
 
    ![語言副本](assets/lang-copy2.png)

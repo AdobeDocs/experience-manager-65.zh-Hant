@@ -48,7 +48,7 @@ ht-degree: 0%
 
 1. 在Administration Console中，按一下「服務>PDF Generator>組態檔>匯入組態」。
 1. 選取「匯入現有的組態檔」。
-1. 若要在[組態檔]方塊中指定檔案位置，請按一下[瀏覽]尋找並選取檔案，然後按一下[匯入]。****
+1. 若要在[組態檔]方塊中指定檔案位置，請按一下[瀏覽]尋找並選取檔案，然後按一下[匯入]。**&#x200B;**
 
 ## 轉換AutoCAD檔案中的所有圖層 {#convert-all-layers-within-autocad-files}
 

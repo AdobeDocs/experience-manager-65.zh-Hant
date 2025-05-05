@@ -132,7 +132,7 @@ ht-degree: 2%
    >
    >可用的內容欄位對應至Adobe Campaign中的&#x200B;**設定檔**&#x200B;目標維度。
    >
-   >請參閱將AEM頁面連結至Adobe Campaign電子郵件](/help/sites-classic-ui-authoring/classic-personalization-ac-campaign.md#linkinganaempagetoanadobecampaignemail)。[
+   >請參閱將AEM頁面連結至Adobe Campaign電子郵件[&#128279;](/help/sites-classic-ui-authoring/classic-personalization-ac-campaign.md#linkinganaempagetoanadobecampaignemail)。
 
    ![chlimage_1-178](assets/chlimage_1-178.png)
 

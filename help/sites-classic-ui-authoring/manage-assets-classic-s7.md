@@ -166,7 +166,7 @@ Adobe建議您只從Dynamic Media Classic (Scene7)目標資料夾內的資產將
 
 1. 將元件從Sidekick中的&#x200B;**[!UICONTROL Dynamic Media Classic (Scene7)]**&#x200B;群組拖曳到頁面上的所需位置。
 
-1. 選取***[!UICONTROL 編輯]**，以便開啟元件。
+1. 選取&#x200B;***[!UICONTROL 編輯]**，以便開啟元件。
 
 1. 視需要編輯元件，並選取&#x200B;**[!UICONTROL 確定]**&#x200B;以儲存變更。
 
@@ -395,7 +395,7 @@ Dynamic Media Classic (Scene7)內容瀏覽器可讓您直接在Experience Manage
 >* 在傳統UI中，您也可以搜尋&#x200B;**Flash**&#x200B;和&#x200B;**FXG**。 不支援在觸控最佳化UI中篩選這兩個詞語。
 >
 >* 搜尋視訊時，您會搜尋單一轉譯。 結果會傳回原始轉譯（僅限&#42;.mp4）和編碼的轉譯。
-* 搜尋最適化視訊集時，您會搜尋資料夾和所有子資料夾，但前提是您已新增關鍵字至搜尋。 如果您尚未新增關鍵字，Experience Manager不會搜尋子資料夾。
+>* 搜尋最適化視訊集時，您會搜尋資料夾和所有子資料夾，但前提是您已新增關鍵字至搜尋。 如果您尚未新增關鍵字，Experience Manager不會搜尋子資料夾。
 >
 
 **Publish狀態** — 您可以根據發佈狀態來篩選資產：已取消發佈或已發佈。 如果您未選取任何Publish狀態，Experience Manager預設會搜尋所有發佈狀態。

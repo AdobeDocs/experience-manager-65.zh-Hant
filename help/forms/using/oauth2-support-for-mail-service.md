@@ -24,7 +24,7 @@ ht-degree: 5%
 
 1. 根據您的要求填寫資訊，然後按一下「**註冊**」。
    ![支援的帳戶](/help/forms/using/assets/azure_suuportedaccountype.png)
-在上述案例中，已選取任何組織目錄（任何Azure AD目錄 — 多租使用者）中的**帳戶和個人Microsoft®帳戶（例如Skype、Xbox）**&#x200B;選項。
+在上述案例中，已選取任何組織目錄（任何Azure AD目錄 — 多租使用者）中的&#x200B;**帳戶和個人Microsoft®帳戶（例如Skype、Xbox）**&#x200B;選項。
 
    >[!NOTE]
    >
@@ -145,7 +145,7 @@ ht-degree: 5%
 1. 若要啟用oAuth工作通知，請選取&#x200B;**啟用oAuth**&#x200B;核取方塊。
 1. 從Azure入口網站複製&#x200B;**使用者端識別碼**&#x200B;和&#x200B;**使用者端密碼**&#x200B;的值。
 1. 複製產生的&#x200B;**重新整理Token**&#x200B;的值。
-1. 按一下[儲存]儲存詳細資料。****
+1. 按一下[儲存]儲存詳細資料。**&#x200B;**
 
    ![工作通知](/help/forms/using/assets/task_notification.png)
 
@@ -159,13 +159,13 @@ ht-degree: 5%
 1. 若要設定電子郵件端點，請將&#x200B;**oAuth 2.0驗證設定**&#x200B;設為`True`。
 1. 從Azure入口網站複製&#x200B;**使用者端識別碼**&#x200B;和&#x200B;**使用者端密碼**&#x200B;的值。
 1. 複製產生的&#x200B;**重新整理Token**&#x200B;的值。
-1. 按一下[儲存]儲存詳細資料。****
+1. 按一下[儲存]儲存詳細資料。**&#x200B;**
 
    ![連線設定](/help/forms/using/assets/oauth_emailendpoint.png)
 
    >[!NOTE]
    >
-   > 若要瞭解有關設定電子郵件端點的詳細資訊，請按一下[設定電子郵件端點]。[](https://experienceleague.adobe.com/docs/experience-manager-65/content/forms/administrator-help/configuring-email-endpoints.html)
+   > 若要瞭解有關設定電子郵件端點的詳細資訊，請按一下[設定電子郵件端點]。[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-65/content/forms/administrator-help/configuring-email-endpoints.html)
 
 ## 疑難排解 {#troubleshooting}
 

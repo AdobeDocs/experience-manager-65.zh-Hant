@@ -23,7 +23,7 @@ ht-degree: 4%
 
 AEM Forms可讓表單開發人員在AEM Sites單頁應用程式(SPA)中順暢地內嵌最適化表單和互動式通訊。 內嵌的最適化表單和互動式通訊功能齊全，使用者無須離開頁面即可填寫和提交表單。 它有助於使用者停留在網頁上其他元素的內容中，同時與最適化表單或互動式通訊互動。
 
-在AEM Sites單頁應用程式中，您可以使用[AEM Forms SPA Container元件](../../forms/using/embed-adaptive-form-aem-sites-spa.md#af-component)[來新增最適化表單或互動式通訊。](../../forms/using/embed-adaptive-form-aem-sites-spa.md#af-component)它是AEM Sites SPA的AEM Forms元件，您可以將其新增至您的網站頁面。
+在AEM Sites單頁應用程式中，您可以使用[AEM Forms SPA Container元件](../../forms/using/embed-adaptive-form-aem-sites-spa.md#af-component) [來新增最適化表單或互動式通訊。](../../forms/using/embed-adaptive-form-aem-sites-spa.md#af-component)它是AEM Sites SPA的AEM Forms元件，您可以將其新增至您的網站頁面。
 
 如需在非SPA AEM Sites中內嵌最適化表單的相關資訊，請參閱[在AEM Sites頁面中內嵌最適化表單或互動式通訊](/help/forms/using/embed-adaptive-form-aem-sites.md)。
 

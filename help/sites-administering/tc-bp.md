@@ -48,7 +48,7 @@ ht-degree: 1%
 
    * 有些LSP既是服務提供者，也是技術提供者。 也有獨立的技術提供者，可讓許多LSP參與其翻譯平台。
    * **AEM Translation Framework**&#x200B;支援與各種機器及人工翻譯的翻譯技術提供者整合。
-   * 瞭解如何在您的AEM系統](/help/sites-administering/translation.md)中[整合LSP聯結器，以自動化內容翻譯，或如何手動建立、匯出及匯入翻譯專案以進行測試，以及如何在沒有LSP或翻譯技術提供者的情況下進行。
+   * 瞭解如何在您的AEM系統[&#128279;](/help/sites-administering/translation.md)中整合LSP聯結器，以自動化內容翻譯，或如何手動建立、匯出及匯入翻譯專案以進行測試，以及如何在沒有LSP或翻譯技術提供者的情況下進行。
 
 * 選擇最適合內容的&#x200B;**翻譯方法**。
 

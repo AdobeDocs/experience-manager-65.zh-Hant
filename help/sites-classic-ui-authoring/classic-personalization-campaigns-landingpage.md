@@ -32,7 +32,7 @@ ht-degree: 2%
 
 >[!CAUTION]
 >
->AEM 6.5](/help/release-notes/deprecated-removed-features.md#deprecated-features)已棄用用來匯入登入頁面的Design Importer [。
+>AEM 6.5[&#128279;](/help/release-notes/deprecated-removed-features.md#deprecated-features)已棄用用來匯入登入頁面的Design Importer 。
 
 >[!CAUTION]
 >

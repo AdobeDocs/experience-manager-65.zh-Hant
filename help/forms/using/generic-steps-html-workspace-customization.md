@@ -33,7 +33,7 @@ ht-degree: 9%
 1. 按一下&#x200B;**[!UICONTROL 「儲存全部」]**。
 1. 將`GET.jsp`、`index`和`html.jsp`檔案從`/libs/ws`資料夾複製到`/apps/ws`資料夾。
 1. 複製`/apps/ws`資料夾中的`/libs/ws/locales`資料夾。 按一下&#x200B;**[!UICONTROL 「儲存全部」]**。
-1. 更新`GET.jsp`檔案中的參照和相對路徑，如下所示，然後按一下[儲存全部]。****
+1. 更新`GET.jsp`檔案中的參照和相對路徑，如下所示，然後按一下[儲存全部]。**&#x200B;**
 
    ```javascript
    <meta http-equiv="refresh" content="0;URL='/lc/apps/ws/index.html'" />

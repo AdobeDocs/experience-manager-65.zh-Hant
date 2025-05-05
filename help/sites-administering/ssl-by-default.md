@@ -236,7 +236,7 @@ curl -u user:password -F "keystorePassword=password" -F "keystorePasswordConfirm
 
 `-F "certificateFile=@root.crt" -F "certificateFile=@localhost.crt"..`
 
-執行命令後，請確認所有憑證都進入金鑰存放區。 檢查下列專案中的&#x200B;**金鑰存放區**專案：
+執行命令後，請確認所有憑證都進入金鑰存放區。 檢查下列專案中的&#x200B;**金鑰存放區**&#x200B;專案：
 [http://localhost:4502/libs/granite/security/content/v2/usereditor.html/home/users/system/security/ssl-service](http://localhost:4502/libs/granite/security/content/v2/usereditor.html/home/users/system/security/ssl-service)
 
 ### 啟用TLS 1.3連線 {#enabling-tls-connection}

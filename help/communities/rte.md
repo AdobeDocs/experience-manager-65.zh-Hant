@@ -22,7 +22,7 @@ ht-degree: 3%
 
 RTF編輯器(RTE)可讓您輸入含有標示的文字。
 
-對於Communities元件，雖然與製作環境](../../help/sites-authoring/rich-text-editor.md)中的[RTF編輯器類似，但會影響在發佈環境中輸入的文字。
+對於Communities元件，雖然與製作環境[&#128279;](../../help/sites-authoring/rich-text-editor.md)中的RTF編輯器類似，但會影響在發佈環境中輸入的文字。
 
 ![RTF編輯器](assets/rich-text-editor.png)
 

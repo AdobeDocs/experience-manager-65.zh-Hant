@@ -158,7 +158,7 @@ ht-degree: 29%
 
 ### 使用表單資料模型預填服務預先填入最適化表單的欄位 {#fdm-prefill-service}
 
-您可以使用表單資料模型預填服務，透過表單資料模型或自訂預填服務預先填入最適化表單的欄位。 表單資料模型預填服務使用已設定的表單資料模型](work-with-form-data-model.md#add-data-model-objects-and-services-add-data-model-objects-and-services)的[Get服務來擷取資料。 若要針對最適化表單使用表單資料模型預填服務：
+您可以使用表單資料模型預填服務，透過表單資料模型或自訂預填服務預先填入最適化表單的欄位。 表單資料模型預填服務使用已設定的表單資料模型[&#128279;](work-with-form-data-model.md#add-data-model-objects-and-services-add-data-model-objects-and-services)的Get服務來擷取資料。 若要針對最適化表單使用表單資料模型預填服務：
 
 1. 開啟內容瀏覽器，然後選取最適化表單的「**[!UICONTROL 指引容器]**」元件。
 1. 按一下「指引容器」屬性 ![指引屬性](/help/forms/using/assets/configure-icon.svg) 圖示。此時會開啟「最適化表單容器」對話框。

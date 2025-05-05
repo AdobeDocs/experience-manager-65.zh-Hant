@@ -26,7 +26,7 @@ ht-degree: 54%
 
 AEM Sites已準備好協助客戶履行GDPR法規遵循義務。 本頁將指導客戶完成在AEM Sites中處理GDPR請求的程式。 它描述了儲存私人資料的位置，以及如何以手動方式或使用程式碼移除它們。
 
-如需進一步資訊，請參閱Adobe隱私權中心](https://www.adobe.com/privacy/general-data-protection-regulation.html)的[GDPR頁面。
+如需進一步資訊，請參閱Adobe隱私權中心[&#128279;](https://www.adobe.com/privacy/general-data-protection-regulation.html)的GDPR頁面。
 
 >[!NOTE]
 >

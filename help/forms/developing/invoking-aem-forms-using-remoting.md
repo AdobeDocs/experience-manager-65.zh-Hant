@@ -132,7 +132,7 @@ docRef.text = "Text for my document";  // Optionally, you can override the ser
 
 >[!NOTE]
 >
-如果將AEM Forms設定為允許上傳不安全的檔案，您可以使用沒有檔案上傳應用程式使用者角色的使用者來上傳檔案。 使用者也可以擁有檔案上傳許可權。 但是，如果AEM Forms設定為僅允許安全檔案，則請確保使用者具有檔案上傳應用程式使用者角色或檔案上傳許可權。 (請參閱[設定AEM Forms以接受安全和不安全的檔案](invoking-aem-forms-using-remoting.md#configuring-aem-forms-to-accept-secure-and-unsecure-documents)。
+>如果將AEM Forms設定為允許上傳不安全的檔案，您可以使用沒有檔案上傳應用程式使用者角色的使用者來上傳檔案。 使用者也可以擁有檔案上傳許可權。 但是，如果AEM Forms設定為僅允許安全檔案，則請確保使用者具有檔案上傳應用程式使用者角色或檔案上傳許可權。 (請參閱[設定AEM Forms以接受安全和不安全的檔案](invoking-aem-forms-using-remoting.md#configuring-aem-forms-to-accept-secure-and-unsecure-documents)。
 
 您對指定的上傳URL使用標準Flash上傳功能： `https://SERVER:PORT/remoting/lcfileupload`。 然後，您就可以使用`DocumentReference`物件，只要需要型別`Document`的輸入引數即可
 ` private function startUpload():void  {  fileRef.addEventListener(Event.SELECT, selectHandler);  fileRef.addEventListener("uploadCompleteData", completeHandler);  try  {   var success:Boolean = fileRef.browse();  }    catch (error:Error)  {   trace("Unable to browse for files.");  }  }      private function selectHandler(event:Event):void {  var request:URLRequest = new  URLRequest("https://SERVER:PORT/remoting/lcfileupload")  try   {   fileRef.upload(request);   }    catch (error:Error)   {   trace("Unable to upload file.");   }  }    private function completeHandler(event:DataEvent):void  {   var params:Object = new Object();   var docRef:DocumentReference = new DocumentReference();   docRef.url = event.data as String;   docRef.referenceType = DocumentReference.REF_TYPE_URL;  }`遠端快速入門使用遠端上傳servlet將PDF檔案傳遞至`MyApplication/EncryptDocument`處理序。 (請參閱[使用(不適用於AEM表單)AEM Forms Remoting](invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting)傳遞不安全的檔案，以叫用短期程式。)
@@ -197,7 +197,7 @@ function completeHandler(event: DataEvent): void  { 
 
 >[!NOTE]
 >
-本節探討如何叫用AEM Forms程式，以及在AEM Forms設定為上傳不安全的檔案時上傳檔案。 如需有關如何叫用AEM Forms程式及上傳安全檔案以及如何設定AEM Forms以接受安全和不安全檔案的資訊，請參閱[傳送安全檔案以使用遠端功能叫用程式](invoking-aem-forms-using-remoting.md#passing-secure-documents-to-invoke-processes-using-remoting)。
+>本節探討如何叫用AEM Forms程式，以及在AEM Forms設定為上傳不安全的檔案時上傳檔案。 如需有關如何叫用AEM Forms程式及上傳安全檔案以及如何設定AEM Forms以接受安全和不安全檔案的資訊，請參閱[傳送安全檔案以使用遠端功能叫用程式](invoking-aem-forms-using-remoting.md#passing-secure-documents-to-invoke-processes-using-remoting)。
 
 **正在建立mx：RemoteObject執行個體**
 
@@ -303,7 +303,7 @@ AEM表單使用者管理員可透過數種方式，驗證來自Flex應用程式�
 
 >[!NOTE]
 >
-如需有關使用HTTP權杖執行驗證的資訊，請參閱[使用HTTP權杖建立執行SSO驗證的Flash Builder應用程式](/help/forms/developing/creating-flash-builder-applications-perform.md#creating-flash-builder-applications-that-perform-sso-authentication-using-http-tokens)。
+>如需有關使用HTTP權杖執行驗證的資訊，請參閱[使用HTTP權杖建立執行SSO驗證的Flash Builder應用程式](/help/forms/developing/creating-flash-builder-applications-perform.md#creating-flash-builder-applications-that-perform-sso-authentication-using-http-tokens)。
 
 ### 使用自訂驗證 {#using-custom-authentication}
 
@@ -311,7 +311,7 @@ AEM表單使用者管理員可透過數種方式，驗證來自Flex應用程式�
 
 >[!NOTE]
 >
-在舊版AEM Forms中，您會呼叫`RemoteObject.setCredentials`方法，將認證傳送至目的地。 在元件第一次嘗試連線到伺服器之前，`setCredentials`方法實際上並未將認證傳遞到伺服器。 因此，如果元件發出錯誤事件，您就無法確定錯誤是否因驗證錯誤或其他原因而發生。 當您呼叫伺服器時，`ChannelSet.login`方法會連線到伺服器，以便您可以立即處理驗證問題。 雖然您可以繼續使用`setCredentials`方法，但建議您使用`ChannelSet.login`方法。
+>在舊版AEM Forms中，您會呼叫`RemoteObject.setCredentials`方法，將認證傳送至目的地。 在元件第一次嘗試連線到伺服器之前，`setCredentials`方法實際上並未將認證傳遞到伺服器。 因此，如果元件發出錯誤事件，您就無法確定錯誤是否因驗證錯誤或其他原因而發生。 當您呼叫伺服器時，`ChannelSet.login`方法會連線到伺服器，以便您可以立即處理驗證問題。 雖然您可以繼續使用`setCredentials`方法，但建議您使用`ChannelSet.login`方法。
 
 由於多個目的地可以使用相同的管道和對應的ChannelSet物件，因此登入一個目的地會將使用者登入使用相同管道或管道的任何其他目的地。 如果兩個元件將不同的認證套用至相同的ChannelSet物件，則會使用最後套用的認證。 如果多個元件使用相同的已驗證ChannelSet物件，呼叫`logout`方法會將所有元件從目的地登出。
 
@@ -457,7 +457,7 @@ AEM Forms開發人員撰寫使用者端應用程式以擴充表單指南（已�
 
 >[!NOTE]
 >
-如果Cookie無效或遺失，則不會隱含重新導向至登入頁面。 因此，您仍可呼叫匿名服務。
+>如果Cookie無效或遺失，則不會隱含重新導向至登入頁面。 因此，您仍可呼叫匿名服務。
 
 您可以撰寫自行登入和登出的使用者端應用程式，略過AEM Forms單一登入機制。 如果您略過單一登入機制，則可對應用程式使用基本或自訂驗證。
 
@@ -552,7 +552,7 @@ AEM Forms開發人員撰寫使用者端應用程式以擴充表單指南（已�
 
 >[!NOTE]
 >
-當您建立角色並希望該角色的成員上傳安全檔案時，請確保您指定檔案上傳許可權。
+>當您建立角色並希望該角色的成員上傳安全檔案時，請確保您指定檔案上傳許可權。
 
 AEM Forms支援名為`getFileUploadToken`的作業，該作業會傳回傳遞至上傳servlet的Token。 `DocumentReference.constructRequestForUpload`方法需要AEM Forms的URL以及`LC.FileUploadAuthenticator.getFileUploadToken`方法傳回的權杖。 此方法會傳回在叫用上傳servlet時所使用的`URLRequest`物件。 下列程式碼會示範此應用程式邏輯。
 
@@ -621,8 +621,8 @@ AEM Forms支援名為`getFileUploadToken`的作業，該作業會傳回傳遞至
 
 >[!NOTE]
 >
-* 若要設定AEM Forms以接受不安全的檔案，請選取「允許從Flex應用程式上傳不安全的檔案」選項。 然後重新啟動應用程式或服務，確保設定生效。
-* 建議您使用&#39;Ctrl + C&#39;命令重新啟動SDK。 使用替代方法重新啟動AEM SDK （例如停止Java程式）可能會導致AEM開發環境不一致。
+>* 若要設定AEM Forms以接受不安全的檔案，請選取「允許從Flex應用程式上傳不安全的檔案」選項。 然後重新啟動應用程式或服務，確保設定生效。
+>* 建議您使用&#39;Ctrl + C&#39;命令重新啟動SDK。 使用替代方法重新啟動AEM SDK （例如停止Java程式）可能會導致AEM開發環境不一致。
 
 
 ### 快速入門：透過使用Remoting傳遞安全檔案來叫用短期流程 {#quick-start-invoking-a-short-lived-process-by-passing-a-secure-document-using-remoting}
@@ -977,7 +977,7 @@ ActionScript類別的欄位與屬於AEM Forms複雜型別的欄位相符。 客�
 
 >[!NOTE]
 >
-判斷屬於Forms複雜型別的欄位名稱的一個好方法是在Web瀏覽器中檢視服務的WSDL。 WSDL會指定服務的複雜型別和對應的資料成員。 客戶服務使用下列WSDL： `https://[yourServer]:[yourPort]/soap/services/CustomerService?wsdl.`
+>判斷屬於Forms複雜型別的欄位名稱的一個好方法是在Web瀏覽器中檢視服務的WSDL。 WSDL會指定服務的複雜型別和對應的資料成員。 客戶服務使用下列WSDL： `https://[yourServer]:[yourPort]/soap/services/CustomerService?wsdl.`
 
 CustomerActionScript類別屬於名為customer的套件。 建議您將對應到複雜AEM Forms資料型別的所有ActionScript類別放在自己的套件中。 在Flex專案的src資料夾中建立資料夾，並將ActionScript檔案置於資料夾中，如下圖所示。
 
@@ -989,7 +989,7 @@ CustomerActionScript類別屬於名為customer的套件。 建議您將對應到
 
 >[!NOTE]
 >
-您必須先建立和部署Bank自訂元件，才能執行此快速入門。
+>您必須先建立和部署Bank自訂元件，才能執行此快速入門。
 
 ```java
  <?xml version="1.0" encoding="utf-8"?>

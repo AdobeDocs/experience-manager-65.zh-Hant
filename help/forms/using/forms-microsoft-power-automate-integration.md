@@ -22,7 +22,7 @@ ht-degree: 13%
 * 對擷取的資料執行複雜的計算
 * 按預定義的排程將最適化表單資料儲存到儲存系統
 
-最適化Forms編輯器提供&#x200B;**叫用Microsoft®Power Automate流程**&#x200B;提交動作，以將最適化表單資料、附件和記錄檔案傳送至Power Automate雲端流程。 若要使用提交動作將擷取的資料傳送至Microsoft® Power Automate，[將您的AEM Forms Author執行個體連線至Microsoft® Power Automate](#connect-your-aem-forms-instance-with-microsoft&reg;-power-automate)
+最適化Forms編輯器提供&#x200B;**叫用Microsoft®Power Automate流程**&#x200B;提交動作，以將最適化表單資料、附件和記錄檔案傳送至Power Automate雲端流程。 若要使用提交動作將擷取的資料傳送至Microsoft® Power Automate，[將您的AEM Forms Author執行個體連線至Microsoft® Power Automate] (#connect-your-aem-forms-instance-with-microsoft&reg;-power-automate)
 
 ## 先決條件
 

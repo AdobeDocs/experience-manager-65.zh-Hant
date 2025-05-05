@@ -22,7 +22,7 @@ ht-degree: 1%
 
 當社群網站的[範本結構](/help/communities/sites-console.md#step1)包含[群組功能](/help/communities/functions.md#groups-function)時，「群組」主控台會提供建立社群群組的存取權。
 
-* AEM Communities支援在其他群組內巢狀內嵌群組。 當新群組](/help/communities/tools-groups.md)的[結構包含群組函式時，便可以進行群組巢狀化。
+* AEM Communities支援在其他群組內巢狀內嵌群組。 當新群組[&#128279;](/help/communities/tools-groups.md)的結構包含群組函式時，便可以進行群組巢狀化。
 * 僅適用於作者環境，有一個群組建立精靈，類似於網站建立精靈。
 * 成員是否可以在發佈環境中建立群組，可以在將群組功能新增至社群網站結構或社群群組結構時進行設定。
 
@@ -99,6 +99,7 @@ ht-degree: 1%
    * 請仔細檢查名稱，因為建立群組後不易變更。
    * 基底URL顯示在`Community Group Name`的下方。
    * 對於有效的URL，附加「.html」
+
      *例如*，`https://localhost:4502/content/sites/mysight/en/mygroup.html`。
 
 * **社群群組範本**&#x200B;功能表

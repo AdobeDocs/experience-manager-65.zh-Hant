@@ -26,7 +26,7 @@ ht-degree: 0%
 >
 >本檔案為網站管理員和開發人員提供回應式設計的概覽，說明如何在AEM中實現功能。
 >
->對於內容作者，如何在內容頁面上使用回應式設計功能的詳細資訊，可在內容頁面的回應式佈局檔案中取得。[](/help/sites-authoring/responsive-layout.md)
+>對於內容作者，如何在內容頁面上使用回應式設計功能的詳細資訊，可在內容頁面的回應式佈局檔案中取得。[&#128279;](/help/sites-authoring/responsive-layout.md)
 
 ## 概觀 {#overview}
 
@@ -51,7 +51,7 @@ AEM使用一組機製為頁面實現回應式佈局：
         您可以將版面容器設為頁面的標準版面容器，同時允許使用者在此容器中新增更多版面容器；例如，實現欄控制。
 
 * **[配置模式](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode)**
-將配置容器放置到頁面上後，您就可以使用**配置**&#x200B;模式在回應式格線內放置內容。
+將配置容器放置到頁面上後，您就可以使用&#x200B;**配置**&#x200B;模式在回應式格線內放置內容。
 
 * [**模擬器**](/help/sites-authoring/responsive-layout.md#selecting-a-device-to-emulate)
 這可讓您建立及編輯回應式網站，這些網站會透過以互動方式調整元件大小，根據裝置/視窗大小重新安排版面。 之後，使用者可以使用模擬器檢視內容的呈現方式。

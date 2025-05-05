@@ -24,7 +24,7 @@ ht-degree: 0%
 
 ## 設定內容處置篩選 {#configure-content-disposition-filter}
 
-您可以在GitHub](https://github.com/apache/sling-org-apache-sling-security/blob/master/src/main/java/org/apache/sling/security/impl/ContentDispositionFilterConfiguration.java)中檢視[Apache Sling內容配置篩選器。
+您可以在GitHub[&#128279;](https://github.com/apache/sling-org-apache-sling-security/blob/master/src/main/java/org/apache/sling/security/impl/ContentDispositionFilterConfiguration.java)中檢視Apache Sling內容配置篩選器。
 
 「內容配置篩選」選項提供下列功能：
 

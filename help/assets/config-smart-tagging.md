@@ -38,13 +38,13 @@ ht-degree: 0%
 
 **新使用者**
 
-安裝Service Pack 22。 若要在Service Pack 22上支援Oauth整合，您必須安裝Service Pack 22](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fproduct%2Fassets%2Fcq-6.5.0-hotfix-42384-1.2.zip)的[Hotfix。
+安裝Service Pack 22。 若要在Service Pack 22上支援Oauth整合，您必須安裝Service Pack 22[&#128279;](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fproduct%2Fassets%2Fcq-6.5.0-hotfix-42384-1.2.zip)的Hotfix。
 
 請依照本文所述指示來設定智慧內容服務。
 
 **現有使用者**
 
-如果您已升級至Service Pack 21，請安裝Service Pack 21](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fproduct%2Fassets%2Fcq-6.5.0-hotfix-40772-1.2.zip)的[Hotfix以支援Oauth整合。 任何現有設定都會自動刪除。 請依照本文所述指示來設定智慧內容服務。 如果您升級至Service Pack 22，必須安裝此Service Pack 22](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fproduct%2Fassets%2Fcq-6.5.0-hotfix-42384-1.2.zip)的[Hotfix。
+如果您已升級至Service Pack 21，請安裝Service Pack 21[&#128279;](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fproduct%2Fassets%2Fcq-6.5.0-hotfix-40772-1.2.zip)的[Hotfix以支援Oauth整合。 任何現有設定都會自動刪除。 請依照本文所述指示來設定智慧內容服務。 如果您升級至Service Pack 22，必須安裝此Service Pack 22](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fproduct%2Fassets%2Fcq-6.5.0-hotfix-42384-1.2.zip)的Hotfix。
 
 若是Service Pack 20和舊版，您需要針對SCS執行因應步驟，以支援Oauth整合。 請參閱[疑難排解OAuth憑證的智慧標籤](config-oauth.md)。
 
@@ -58,7 +58,7 @@ ht-degree: 0%
 
 已啟用此功能的現有內部部署使用者可以繼續使用智慧內容服務。
 
-如果您已升級至Service Pack 21，請安裝Service Pack 21](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fproduct%2Fassets%2Fcq-6.5.0-hotfix-40772-1.2.zip)的[Hotfix以支援Oauth整合。 任何現有設定都會自動刪除。 請依照本文所述指示來設定智慧內容服務。 如果您升級至Service Pack 22，必須安裝此Service Pack 22](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fproduct%2Fassets%2Fcq-6.5.0-hotfix-42384-1.2.zip)的[Hotfix。
+如果您已升級至Service Pack 21，請安裝Service Pack 21[&#128279;](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fproduct%2Fassets%2Fcq-6.5.0-hotfix-40772-1.2.zip)的[Hotfix以支援Oauth整合。 任何現有設定都會自動刪除。 請依照本文所述指示來設定智慧內容服務。 如果您升級至Service Pack 22，必須安裝此Service Pack 22](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fproduct%2Fassets%2Fcq-6.5.0-hotfix-42384-1.2.zip)的Hotfix。
 
 若是Service Pack 20和舊版，您需要針對SCS執行因應步驟，以支援Oauth整合。 請參閱[疑難排解OAuth憑證的智慧標籤](config-oauth.md)。
 
@@ -375,7 +375,7 @@ The validation results are displayed in the same dialog.
 
    ![設定DAM更新資產工作流程並新增智慧標籤步驟](assets/smart-tag-step-properties-workflow1.png)
 
-1. 在「參 **[!UICONTROL 數]** 」頁籤中，如果希望工作流完成，即使自動標籤步驟失敗，請選擇「忽略錯誤 **** 」。
+1. 在「參 **[!UICONTROL 數]** 」頁籤中，如果希望工作流完成，即使自動標籤步驟失敗，請選擇「忽略錯誤 **&#x200B;**&#x200B;」。
 
    此外，若無論是否對資料夾啟用智慧標籤，都要在資產上傳時標籤資產，請選取&#x200B;**[!UICONTROL 忽略智慧標籤旗標]**。
 
@@ -401,7 +401,7 @@ The validation results are displayed in the same dialog.
 
 為達到最佳效果，訓練集中的影像需符合下列准則：
 
-**** 數量和大小：每個標籤至少30個影像。長邊至少500像素。
+**&#x200B;**&#x200B;數量和大小：每個標籤至少30個影像。長邊至少500像素。
 
 **Coherence**：用於特定標籤的影像在視覺上類似。
 
@@ -421,7 +421,7 @@ The validation results are displayed in the same dialog.
 
 ![說明性影像，以示範訓練准則](/help/assets/assets/do-not-localize/distraction.png)
 
-**** 完整性：如果影像符合多個標籤的資格，請先新增所有適用的標籤，再加入影像以進行訓練。例如，對於標籤（例如`raincoat`和`model-side-view`），請先在符合資格的資產上新增兩個標籤，然後再加入以進行訓練。
+**&#x200B;**&#x200B;完整性：如果影像符合多個標籤的資格，請先新增所有適用的標籤，再加入影像以進行訓練。例如，對於標籤（例如`raincoat`和`model-side-view`），請先在符合資格的資產上新增兩個標籤，然後再加入以進行訓練。
 
 ![說明性影像，以示範訓練准則](/help/assets/assets/do-not-localize/completeness.png)
 
@@ -467,7 +467,7 @@ The validation results are displayed in the same dialog.
 
    如果您在此報告中未看到您的標籤，請再次執行這些標籤的培訓工作流程。
 
-1. 若要下載報表，請從清單中選取報表，然後按一下工具列中的[下載]。 ****&#x200B;報表會下載為Microsoft Excel試算表。
+1. 若要下載報表，請從清單中選取報表，然後按一下工具列中的[下載]。 **&#x200B;**&#x200B;報表會下載為Microsoft Excel試算表。
 
 ## 限制 {#limitations}
 

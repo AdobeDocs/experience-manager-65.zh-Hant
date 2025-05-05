@@ -43,7 +43,7 @@ AEM搜尋可搜尋和找到AEM資產，並對各種常用的檔案格式(例如�
    1. 開啟AEM Web Console。 URL是https://&#39;[伺服器]：[連線埠]&#39;/system/console/configMgr。
    1. 找到並開啟&#x200B;**還原序列化防火牆設定**。
 
-   1. 將sun.util.calendar套件新增至[允許清單的類別]或[套件首碼]欄位，然後按一下[儲存]。****
+   1. 將sun.util.calendar套件新增至[允許清單的類別]或[套件首碼]欄位，然後按一下[儲存]。**&#x200B;**
 
 ### 在AEM Forms JEE和OSGi棧疊之間建立安全連線 {#establish-a-secure-connection-between-aem-forms-jee-and-osgi-stacks}
 

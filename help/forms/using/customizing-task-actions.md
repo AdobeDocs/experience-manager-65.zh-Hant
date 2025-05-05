@@ -132,7 +132,7 @@ AEM Forms工作區可讓使用者自訂工作動作。 在自訂工作動作之�
 
 ## 僅顯示動作的影像 {#showing-only-images-for-actions}
 
-若要只顯示動作的影像，請自訂路由動作中使用的影像。 如需詳細資訊，請參閱路由動作](/help/forms/using/images-route-actions.md)的[影像。
+若要只顯示動作的影像，請自訂路由動作中使用的影像。 如需詳細資訊，請參閱路由動作[&#128279;](/help/forms/using/images-route-actions.md)的影像。
 
 ### 工作清單工作動作躍現式選單 {#task-list-task-action-nbsp-pop-up-menu}
 

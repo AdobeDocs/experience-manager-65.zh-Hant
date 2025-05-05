@@ -90,16 +90,16 @@ AEM Forms附加元件套件是部署至AEM的應用程式。 此套件包含AEM 
 
 1. 開啟 [Software Distribution](https://experience.adobe.com/downloads)。您需要 Adobe ID 才能登入 Software Distribution。
 1. 選擇 **[!UICONTROL 標題功能表中的可用Adobe Experience Manager]** 。
-1. 在「篩選器」****&#x200B;部分中：
-   1. 從解決方案&#x200B;****&#x200B;下拉式清單中選擇&#x200B;**[!UICONTROL Forms]**。
+1. 在「篩選器」**&#x200B;**&#x200B;部分中：
+   1. 從解決方案&#x200B;**&#x200B;**&#x200B;下拉式清單中選擇&#x200B;**[!UICONTROL Forms]**。
    2. 選擇包的版本和類型。 您也可以使用「 **[!UICONTROL Search下載]** 」選項來篩選結果。
 1. 選取適用於您作業系統的封裝名稱，選取&#x200B;**[!UICONTROL 接受EULA條款]**，然後選取&#x200B;**[!UICONTROL 下載]**。
 1. 打開 [封裝管理員](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)  然後按兩下上傳 **[!UICONTROL 包]** 以上傳包。
-1. 選擇包，然後按兩下安裝&#x200B;****。
+1. 選擇包，然後按兩下安裝&#x200B;**&#x200B;**。
 
-   還可以通過AEM Forms版本](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en)一文中[列出的直接連結下載包。
+   還可以通過AEM Forms版本[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en)一文中列出的直接連結下載包。
 
-1. 安裝包后，系統會提示您重新啟動AEM 執行個體。 **不要立即重新啟動伺服器。**&#x200B;在停止 AEM Forms 伺服器之前，請等待 ServiceEvent REGISTERED 和 ServiceEvent UNREGISTERED 消息停止出現在 AEM-Installation-Directory]/crx-quickstart/logs/error.記錄檔 中[，並且日誌穩定。
+1. 安裝包后，系統會提示您重新啟動AEM 執行個體。 **不要立即重新啟動伺服器。**&#x200B;在停止 AEM Forms 伺服器之前，請等待 ServiceEvent REGISTERED 和 ServiceEvent UNREGISTERED 消息停止出現在 AEM-Installation-Directory&rbrack;/crx-quickstart/logs/error.記錄檔 中&lbrack;，並且日誌穩定。
 
    >[!NOTE]
    >
@@ -167,7 +167,7 @@ Dispatcher是Adobe Experience Manager的快取與負載平衡工具，用於企�
 
 1. 設定反向連結篩選服務：
 
-   以管理員身分登入Apache Felix設定管理員。 組態管理員的預設URL為https://&#39;server&#39;：[連線埠號碼]/system/console/configMgr。 在&#x200B;**設定**&#x200B;功能表中，選取&#x200B;**Apache Sling反向連結篩選器**&#x200B;選項。 在「允許主機」欄位中，輸入Dispatcher的主機名稱，以允許其作為反向連結，然後按一下「儲存」****。 專案的格式為https://&#39;[伺服器]：[連線埠]&#39;。
+   以管理員身分登入Apache Felix設定管理員。 組態管理員的預設URL為https://&#39;server&#39;：[連線埠號碼]/system/console/configMgr。 在&#x200B;**設定**&#x200B;功能表中，選取&#x200B;**Apache Sling反向連結篩選器**&#x200B;選項。 在「允許主機」欄位中，輸入Dispatcher的主機名稱，以允許其作為反向連結，然後按一下「儲存」**&#x200B;**。 專案的格式為https://&#39;[伺服器]：[連線埠]&#39;。
 
 #### 整合Adobe Target {#integrate-adobe-target}
 

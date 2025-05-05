@@ -26,7 +26,7 @@ AEM Communities的主控台可在全域導覽面板的製作環境中取得，�
 * 管理[社群成員](members.md)
 * [正在稽核](moderate-ugc.md)使用者產生的內容(UGC)
 * 建立[自訂徽章](badges.md)
-* 正在設定UGC](srp-config.md)的[預設儲存體
+* 正在設定UGC[&#128279;](srp-config.md)的預設儲存體
 
 當[UGC存放區](working-with-srp.md)設定為由Author和Publish環境共用的公用存放區時，可在Author和Publish環境中使用的[仲裁主控台](moderation.md)會在UGC的單一執行個體上運作。
 

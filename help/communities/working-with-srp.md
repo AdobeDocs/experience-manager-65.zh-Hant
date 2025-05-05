@@ -25,7 +25,7 @@ ht-degree: 0%
 
 和先前的版本不同，AEM執行個體間沒有反向/正向復寫UGC。 SRP會改為讓UGC可從所有製作和發佈執行個體中直接存取建立、讀取、更新和刪除(CRUD)操作，但JSRP除外。
 
-以下是每個SRP選項](#characteristics-of-srp-options)的[特性，在選擇適當的SRP和[基礎部署](/help/communities/topologies.md)時，這些特性對於決策程式是至關重要的資訊。
+以下是每個SRP選項[&#128279;](#characteristics-of-srp-options)的特性，在選擇適當的SRP和[基礎部署](/help/communities/topologies.md)時，這些特性對於決策程式是至關重要的資訊。
 
 如需有關使用SRP for UGC的詳細資訊，請參閱[儲存資源提供者概觀](/help/communities/srp.md)。
 

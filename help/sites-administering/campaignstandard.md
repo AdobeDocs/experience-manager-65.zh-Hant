@@ -62,7 +62,7 @@ ht-degree: 0%
 
    Adobe Campaign中的![aemserver使用者](assets/acs-aemserver-user.png)
 
-1. 按一下[儲存]儲存變更。****
+1. 按一下[儲存]儲存變更。**&#x200B;**
 
 您的`aemserver`使用者現在擁有必要許可權，讓AEM能夠使用它與Adobe Campaign通訊。
 
@@ -88,7 +88,7 @@ ht-degree: 0%
 
    ![AEMResourceTypeFilter](assets/acs-aem-resource-type-filter.png)
 
-1. 按一下[儲存]儲存變更。****
+1. 按一下[儲存]儲存變更。**&#x200B;**
 
 您的`AEMResourceTypeFilter`現在已設定為從AEM擷取正確的內容。
 
@@ -202,7 +202,7 @@ Campaign內容是由內容作者在AEM編寫執行個體上建立。 此例項�
 
 >[!NOTE]
 >
-發佈執行個體必須可以從Adobe Campaign伺服器存取。 如果影像指向`localhost:4503`或Adobe Campaign無法連線的其他伺服器，則來自AEM的影像不會出現在Adobe Campaign主控台中。
+>發佈執行個體必須可以從Adobe Campaign伺服器存取。 如果影像指向`localhost:4503`或Adobe Campaign無法連線的其他伺服器，則來自AEM的影像不會出現在Adobe Campaign主控台中。
 
 ## 在AEM中設定行銷活動遠端使用者 {#campaign-remote-user}
 
@@ -210,7 +210,7 @@ Campaign內容是由內容作者在AEM編寫執行個體上建立。 此例項�
 
 1. 以管理員身分登入AEM。
 1. 在主導覽主控台上，按一下左側邊欄中的&#x200B;**工具**。
-1. 然後按一下[安全性]**** > [使用者]****&#x200B;以開啟使用者管理主控台。
+1. 然後按一下[安全性]&#x200B;**&#x200B;** > [使用者]&#x200B;**&#x200B;**&#x200B;以開啟使用者管理主控台。
 1. 找到`campaign-remote`使用者。
 1. 選取`campaign-remote`使用者，然後按一下&#x200B;**屬性**&#x200B;以編輯使用者。
 1. 在&#x200B;**編輯使用者設定**&#x200B;視窗中，按一下&#x200B;**變更密碼**。

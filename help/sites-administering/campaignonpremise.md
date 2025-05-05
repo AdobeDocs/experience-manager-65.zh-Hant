@@ -57,13 +57,13 @@ Adobe Campaign中的&#x200B;**AEM整合**&#x200B;套件包含連線至AEM所需�
 
    ![匯入封裝](assets/import-package.png)
 
-1. 按一下[安裝標準封裝]****，然後按一下[下一步]****。
+1. 按一下[安裝標準封裝]&#x200B;**&#x200B;**，然後按一下[下一步]&#x200B;**&#x200B;**。
 
 1. 檢查&#x200B;**AEM整合**&#x200B;封裝。
 
    ![安裝標準套件](assets/select-package.png)
 
-1. 按一下[下一步]****，然後按[開始]****&#x200B;開始安裝。
+1. 按一下[下一步]&#x200B;**&#x200B;**，然後按[開始]&#x200B;**&#x200B;**&#x200B;開始安裝。
 
    ![安裝進度](assets/installation.png)
 
@@ -131,7 +131,7 @@ Adobe Campaign中的&#x200B;**AEM整合**&#x200B;套件包含連線至AEM所需�
 
 ## 在AEM中設定Campaign整合 {#campaign-integration}
 
-AEM使用您在Campaign](#create-operator)中設定的[運運算元與Campaign通訊
+AEM使用您在Campaign[&#128279;](#create-operator)中設定的運運算元與Campaign通訊
 
 1. 以管理員身分登入您的AEM編寫執行個體。
 
@@ -205,7 +205,7 @@ Campaign內容是由內容作者在AEM編寫執行個體上建立。 此例項�
 
 >[!NOTE]
 >
-發佈執行個體必須可以從Adobe Campaign伺服器存取。 如果影像指向`localhost:4503`或Adobe Campaign無法連線的其他伺服器，則來自AEM的影像不會出現在Adobe Campaign主控台中。
+>發佈執行個體必須可以從Adobe Campaign伺服器存取。 如果影像指向`localhost:4503`或Adobe Campaign無法連線的其他伺服器，則來自AEM的影像不會出現在Adobe Campaign主控台中。
 
 ## 在AEM中設定行銷活動遠端使用者 {#configure-user}
 
@@ -213,7 +213,7 @@ Campaign內容是由內容作者在AEM編寫執行個體上建立。 此例項�
 
 1. 以管理員身分登入AEM。
 1. 在主要導覽主控台上，按一下左側邊欄中的&#x200B;**工具**。
-1. 然後按一下[安全性]**** > [使用者]****&#x200B;以開啟使用者管理主控台。
+1. 然後按一下[安全性]&#x200B;**&#x200B;** > [使用者]&#x200B;**&#x200B;**&#x200B;以開啟使用者管理主控台。
 1. 找到`campaign-remote`使用者。
 1. 選取`campaign-remote`使用者，然後按一下&#x200B;**屬性**&#x200B;以編輯使用者。
 1. 在&#x200B;**編輯使用者設定**&#x200B;視窗中，按一下&#x200B;**變更密碼**。

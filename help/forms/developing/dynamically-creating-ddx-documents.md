@@ -129,6 +129,7 @@ ht-degree: 0%
    * 呼叫`DocumentBuilderFactory`物件的`newDocumentBuilder`方法，以建立Java `DocumentBuilder`物件。
    * 呼叫`DocumentBuilder`物件的`newDocument`方法以例項化`org.w3c.dom.Document`物件。
    * 呼叫`org.w3c.dom.Document`物件的`createElement`方法，以建立DDX檔案的根專案。 此方法會建立代表根專案的`Element`物件。 將代表元素名稱的字串值傳遞至`createElement`方法。 將傳回值轉換為`Element`。 接著，呼叫子專案的`setAttribute`方法，以設定其值。 最後，呼叫標頭專案的`appendChild`方法，將專案附加至標頭專案，並將子專案物件作為引數傳遞。 下列幾行程式碼會顯示此應用程式邏輯：
+
      ` Element root = (Element)document.createElement("DDX");  root.setAttribute("xmlns","https://ns.adobe.com/DDX/1.0/");  document.appendChild(root);`
 
    * 呼叫`Document`物件的`createElement`方法，以建立`PDFsFromBookmarks`專案。 將代表元素名稱的字串值傳遞至`createElement`方法。 將傳回值轉換為`Element`。 呼叫其`setAttribute`方法，以設定`PDFsFromBookmarks`專案的值。 呼叫DDX專案的`appendChild`方法，將`PDFsFromBookmarks`專案附加至`DDX`專案。 將`PDFsFromBookmarks`專案物件傳遞為引數。 下列幾行程式碼會顯示此應用程式邏輯：

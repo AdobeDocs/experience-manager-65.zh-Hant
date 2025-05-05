@@ -146,7 +146,7 @@ Adobe Analytics可針對AEM Communities進行設定，以便在成員與支援�
 若要在[為視訊報表設定Analytics報表套裝](#adobe-analytics-report-suite-for-video-reporting)後啟用視訊心率報表：
 
 * 建立[Analytics Cloud服務](#aem-analytics-cloud-service-configuration)
-* 為社群網站](#enable-analytics-for-a-community-site)啟用[分析
+* 為社群網站[&#128279;](#enable-analytics-for-a-community-site)啟用分析
 * 將`Marketing Cloud Org Id`與社群網站建立關聯
 
 [修改](/help/communities/sites-console.md#modifying-site-properties)社群網站屬性，可在[社群網站建立](/help/communities/sites-console.md)或更新版本時輸入`Marketing Cloud Org Id`。

@@ -197,15 +197,15 @@ ht-degree: 0%
 
    * 完整資料庫備份(nsrnmddbf.bat)：
 
-     `NetWorker_database_module_root` `-s`*&lt;NetWorker_Server_Name>* `-U``[username]` `-P`*[密碼&#x200B;]*`-l full`*&lt;資料庫名稱>*
+     `NetWorker_database_module_root` `-s`*&lt;NetWorker_Server_Name>* `-U` `[username]` `-P`*[密碼&#x200B;]*`-l full`*&lt;資料庫名稱>*
 
    * 增量資料庫備份(nsrnmddbi.bat)：
 
-     `[NetWorker_database_module_root]` `-s`*&lt;NetWorker伺服器名稱>* `-U``[username]` `-P``[password]` `-l 1 -R`*&lt;資料庫名稱>*
+     `[NetWorker_database_module_root]` `-s`*&lt;NetWorker伺服器名稱>* `-U` `[username]` `-P` `[password]` `-l 1 -R`*&lt;資料庫名稱>*
 
    * 資料庫記錄備份(nsrnmddbl.bat)：
 
-     `[NetWorker_database_module_root]` `-s``<NetWorker_Server_Name>` `-U``[username]` `-P``[password]` `-l incr -R`*&lt;資料庫名稱>*
+     `[NetWorker_database_module_root]` `-s` `<NetWorker_Server_Name>` `-U` `[username]` `-P` `[password]` `-l incr -R`*&lt;資料庫名稱>*
 
      其中：
 

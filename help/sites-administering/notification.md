@@ -205,7 +205,7 @@ subject=<text_1>
 >
 >其中`<text_x>`可以是靜態文字和動態字串變數的混合。 `<text_x>`專案的每一行都必須以反斜線( `\`)結尾，但最後一個執行個體除外，因為反斜線的缺位代表`<text_x>`字串變數的結尾。
 >
->您可以在Properties.load()](https://docs.oracle.com/javase/8/docs/api/java/util/Properties.html#load-java.io.InputStream-)方法的[javadocs中找到範本格式的詳細資訊。
+>您可以在Properties.load() [&#128279;](https://docs.oracle.com/javase/8/docs/api/java/util/Properties.html#load-java.io.InputStream-)方法的javadocs中找到範本格式的詳細資訊。
 
 方法`${payload.path.open}`會顯示工作專案裝載的路徑。 例如，若為Sites中的頁面，則`payload.path.open`會類似於`/bin/wcmcommand?cmd=open&path=…`。；這沒有伺服器名稱，因此範本會在它前面加上`${host.prefix}`。
 

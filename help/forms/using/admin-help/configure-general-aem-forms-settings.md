@@ -34,7 +34,7 @@ Administration Console中的「核心組態」頁面提供有助於改善系統�
 
 
 1. 在管理控制檯中，選取&#x200B;**[!UICONTROL 設定>核心系統設定>設定]**。
-1. 在[核心組態]頁面上，視需要變更選項並選取[確定]。**** 如需選項的詳細資訊，請參閱[核心組態選項](configure-general-aem-forms-settings.md#core-configurations-options)。
+1. 在[核心組態]頁面上，視需要變更選項並選取[確定]。**&#x200B;** 如需選項的詳細資訊，請參閱[核心組態選項](configure-general-aem-forms-settings.md#core-configurations-options)。
 
 
 ## 核心設定選項 {#core-configurations-options}

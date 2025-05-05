@@ -165,7 +165,7 @@ AEM Forms與[Adobe Analytics](https://experienceleague.adobe.com/docs/analytics-
 
 1. 在&#x200B;**[!UICONTROL 動作]**&#x200B;區段中，選取+並指定&#x200B;**[!UICONTROL Adobe Analytics]**&#x200B;作為擴充功能名稱。
 
-1. 選取&#x200B;**[!UICONTROL 清除變數]**&#x200B;作為動作型別。 選取&#x200B;**[!UICONTROL 保留變更]**。 執行這些步驟後，**[!UICONTROL 動作]**區段顯示為：
+1. 選取&#x200B;**[!UICONTROL 清除變數]**&#x200B;作為動作型別。 選取&#x200B;**[!UICONTROL 保留變更]**。 執行這些步驟後，**[!UICONTROL 動作]**&#x200B;區段顯示為：
    ![動作設定](/help/forms/using/assets/actions-config.png)
 
    根據您的需求自訂&#x200B;**[!UICONTROL 動作]**&#x200B;區段。 例如，您可以在「動作」流程中定義兩個&#x200B;**傳送信標**&#x200B;步驟，將資料傳送至[!DNL Adobe Analytics]，並在一個步驟中將它視為頁面檢視，將資料傳送至[!DNL Adobe Analytics]，並在第二個步驟中不要將其視為頁面檢視。
@@ -239,7 +239,7 @@ AEM Forms與[Adobe Analytics](https://experienceleague.adobe.com/docs/analytics-
 為最適化表單啟用[!DNL Adobe Analytics]後，如果AEM Forms和[!DNL Adobe Analytics]之間有適當的資料事件流程，您可以[驗證](https://experienceleague.adobe.com/docs/launch-learn/implementing-in-websites-with-launch/implement-solutions/analytics.html?lang=en#validate-the-page-view-beacon)。 AEM Forms與Adobe Analytics的整合已完成。 您現在可以[在Adobe Analytics](#view-reports-adobe-analytics)中設定和檢視報告。
 
 >[!NOTE]
->如果同時啟用使用Cloud Service架構](/help/forms/using/configure-analytics-forms-documents.md)的[分析以及使用Adobe啟動項&#x200B;**功能的**&#x200B;分析，則使用Adobe啟動項&#x200B;**的**&#x200B;分析將會取得優先權。
+>如果同時啟用使用Cloud Service架構[&#128279;](/help/forms/using/configure-analytics-forms-documents.md)的分析以及使用Adobe啟動項&#x200B;**功能的**&#x200B;分析，則使用Adobe啟動項&#x200B;**的**&#x200B;分析將會取得優先權。
 > 
 
 ### 建立規則以擷取自訂事件（選用） {#capture-custom-events}

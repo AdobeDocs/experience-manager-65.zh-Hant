@@ -150,4 +150,4 @@ CQ_JVM_OPTS="$CQ_JVM_OPTS -Xdebug -Xrunjdwp:transport=dt_socket,address=58242,su
 
 ### 使用IntelliJ IDEA偵錯套件組合 {#debugging-bundles-with-intellij-idea}
 
-您可以使用標準的通用遠端偵錯連線來偵錯套件中的程式碼。 您可以在遠端偵錯](https://www.jetbrains.com/help/idea/remote-debugging-with-product.html#remote-interpreter)上遵循[Jetbrain檔案。
+您可以使用標準的通用遠端偵錯連線來偵錯套件中的程式碼。 您可以在遠端偵錯[&#128279;](https://www.jetbrains.com/help/idea/remote-debugging-with-product.html#remote-interpreter)上遵循Jetbrain檔案。

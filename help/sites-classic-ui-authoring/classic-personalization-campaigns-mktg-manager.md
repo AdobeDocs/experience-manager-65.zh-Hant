@@ -52,11 +52,11 @@ AEM提供不同的報表，協助您分析及監控執行個體的狀態。 此M
 此窗格會列出您的行銷活動體驗，例如[電子報](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#newsletters)和[Teasers](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#teasers)。
 
 * **[個銷售機會](#leads)**
-您可以在此處管理您的銷售機會。 您可以建立或匯入銷售機會、編輯個別銷售機會的特定詳細資訊，或在不再需要時刪除。 您也可以將潛在客戶放入不同的群組中，稱為「清單」。 **注意：**Adobe不打算進一步增強此功能。
+您可以在此處管理您的銷售機會。 您可以建立或匯入銷售機會、編輯個別銷售機會的特定詳細資訊，或在不再需要時刪除。 您也可以將潛在客戶放入不同的群組中，稱為「清單」。 **注意：**&#x200B;Adobe不打算進一步增強此功能。
 建議使用[Adobe Campaign以及與AEM](/help/sites-administering/campaign.md)的整合。
 
 * **[清單](#lists)**
-您可以在此處管理您的（潛在客戶）清單。**注意：**Adobe不打算進一步增強此功能。
+您可以在此處管理您的（潛在客戶）清單。**注意：**&#x200B;Adobe不打算進一步增強此功能。
 建議使用[Adobe Campaign以及與AEM](/help/sites-administering/campaign.md)的整合。
 
 * **[行銷活動](#campaigns)**
@@ -175,7 +175,7 @@ AEM提供不同的報表，協助您分析及監控執行個體的狀態。 此M
    * 建立&#x200B;**新的……**&#x200B;體驗；例如Adobe Target選件、Teaser和電子報。
    * **編輯**&#x200B;特定Teaser頁面或電子報的詳細資料（也可以使用連按兩下）。
    * 為特定的Teaser頁面或電子報定義&#x200B;**屬性……**。
-   * **模擬**體驗（Teaser頁面或電子報）的外觀與風格。
+   * **模擬**&#x200B;體驗（Teaser頁面或電子報）的外觀與風格。
 當模擬頁面開啟時，您可以接著開啟Sidekick以切換至該頁面的編輯模式。
 
    * **分析……**&#x200B;為頁面產生的曝光數。

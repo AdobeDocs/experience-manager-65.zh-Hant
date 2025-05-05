@@ -180,7 +180,7 @@ ht-degree: 0%
 ### AdobeGranite發佈 — 觀察者工廠差異 {#adobe-granite-distribution-diff-observer-factory}
 
 此設定會同步發佈者之間的群組成員資格。
-如果變更一個發行者中群組的成員資格時沒有更新其他發行者的成員資格，請確定已將**ref ：members**&#x200B;新增到&#x200B;**looks屬性名稱**。
+如果變更一個發行者中群組的成員資格時沒有更新其他發行者的成員資格，請確定已將&#x200B;**ref ：members**&#x200B;新增到&#x200B;**looks屬性名稱**。
 
 若要確保成員同步化：
 
@@ -392,5 +392,5 @@ AEM作者執行個體會使用Sling ID來識別資料來自何處，以及需要
 1. 檢查使用者建立時建立的[記錄順序](/help/communities/sync.md#troubleshoot-sling-distribution-in-aem-communities)。
 1. 檢查是否已在&#x200B;**/var/sling/distribution/packages/socialpubsync-vlt/data**&#x200B;上建立&#x200B;**vlt**&#x200B;套件。
 1. 現在，請在AEM Author例項上啟用使用者同步。
-1. 在發佈者上，變更&#x200B;**Apache Sling散發代理程式 — 同步代理程式處理站**中的匯出工具或匯入工具端點。
+1. 在發佈者上，變更&#x200B;**Apache Sling散發代理程式 — 同步代理程式處理站**&#x200B;中的匯出工具或匯入工具端點。
 我們可以下載並擷取套件資料，以檢查推送至其他發佈者的所有屬性，以及遺失哪些資料。

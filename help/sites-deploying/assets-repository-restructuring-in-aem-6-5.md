@@ -17,7 +17,7 @@ ht-degree: 2%
 
 # AEM 6.5中的Assets存放庫重組 {#assets-repository-restructuring-in-aem}
 
-如AEM 6.5](/help/sites-deploying/repository-restructuring.md)頁面的上層[存放庫重新調整中所述，升級至Adobe Experience Manager (AEM) 6.5的客戶應使用此頁面評估與影響AEM Assets解決方案的存放庫變更相關的工作量。 在AEM 6.5升級程式期間，有些變更需要投入大量精力，而其他變更則可能延遲到未來升級。
+如AEM 6.5[&#128279;](/help/sites-deploying/repository-restructuring.md)頁面的上層存放庫重新調整中所述，升級至Adobe Experience Manager (AEM) 6.5的客戶應使用此頁面評估與影響AEM Assets解決方案的存放庫變更相關的工作量。 在AEM 6.5升級程式期間，有些變更需要投入大量精力，而其他變更則可能延遲到未來升級。
 
 **升級為6.5**
 

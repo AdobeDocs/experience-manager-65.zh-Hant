@@ -141,7 +141,7 @@ ht-degree: 3%
 >在：
 >`/apps/cq/ui/widgets/themes/default/widgets/wcm/SiteAdmin.js`
 >
->如需詳細資訊，請參閱CQ Widget API](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.wcm.SiteAdmin)中的[SiteAdmin 。
+>如需詳細資訊，請參閱CQ Widget API[&#128279;](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.wcm.SiteAdmin)中的SiteAdmin 。
 
 ## 網站主控台上的頁面資訊 {#page-information-on-the-websites-console}
 

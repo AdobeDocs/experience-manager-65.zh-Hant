@@ -98,13 +98,13 @@ Adobe建議您安裝[adobe-asset-link-config](https://experience.adobe.com/#/dow
 
 1. 找到具有&#x200B;**[!UICONTROL 同步處理常式名稱]** `ims`的&#x200B;**[!UICONTROL Apache Jackrabbit Oak Default Sync Handler]**&#x200B;設定，然後按一下以編輯它。
 
-   設定下列組態屬性，然後按一下[儲存]。****
+   設定下列組態屬性，然後按一下[儲存]。**&#x200B;**
 
    * [!UICONTROL 使用者到期時間與使用者成員資格到期]：時間以&#39;m&#39;為單位且後面沒有空格。 例如，`15m`持續15分鐘。 如需詳細資訊，請參閱[群組對應](#group-mapping)。
    * [!UICONTROL 使用者自動成員資格]：不變更
    * [!UICONTROL 使用者動態成員資格]： ` Deslect`
 
-1. 找到&#x200B;**[!UICONTROL Adobe Granite OAuth驗證處理常式]**&#x200B;設定，然後按一下以編輯它。 若不進行任何變更，請按一下[儲存]。****
+1. 找到&#x200B;**[!UICONTROL Adobe Granite OAuth驗證處理常式]**&#x200B;設定，然後按一下以編輯它。 若不進行任何變更，請按一下[儲存]。**&#x200B;**
 
 1. 若要調整持有者驗證處理常式的相對優先順序，請在CRXDE中導覽至`/apps/system/config`。 找到`com.adobe.granite.auth.oauth.impl.BearerAuthenticationHandler.config`並開啟其組態。 最後，新增`service.ranking=I"-10"`。 儲存變更。
 

@@ -59,7 +59,7 @@ ht-degree: 1%
 
 建立可編輯的範本時，您可以：
 
-1. 為範本](#template-folders)建立[資料夾。 此資料夾並非強制性，但建議使用最佳實務。
+1. 為範本[&#128279;](#template-folders)建立資料夾。 此資料夾並非強制性，但建議使用最佳實務。
 1. 選取[範本型別](#template-type)。 此型別已複製以建立[範本定義](#template-definitions)。
 
    >[!NOTE]
@@ -132,7 +132,7 @@ ht-degree: 1%
 
 >[!TIP]
 >
->切勿在範本中輸入任何必須國際化的資訊。 基於內部化的目的，建議使用核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html)的[本地化功能。
+>切勿在範本中輸入任何必須國際化的資訊。 基於內部化的目的，建議使用核心元件[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html)的本地化功能。
 
 >[!NOTE]
 >
@@ -581,6 +581,7 @@ GITHUB上的程式碼
    * 正在設定`jcr:content`節點上的狀態屬性。
 
       * 例如，在：
+
         `/conf/<your-folder>/settings/wcm/templates/<your-template>/jcr:content`
 
       * 定義屬性：
@@ -593,6 +594,7 @@ GITHUB上的程式碼
 
    * [在適當的頁面或子分支的根頁面的&#x200B;**頁面屬性**](/help/sites-authoring/templates.md#allowing-a-template-author)&#x200B;上定義允許的範本路徑。
    * 設定屬性：
+
      `cq:allowedTemplates`
 在必要分支的`jcr:content`節點上。
 

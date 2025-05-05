@@ -194,7 +194,7 @@ Dynamic Media整合會使用下列指令碼：
 
 您可以在&#x200B;**[!UICONTROL DAM更新資產]**&#x200B;工作流程中設定這些設定，以設定縮圖的大小。 工作流程有兩個步驟，您可以在此設定影像資產的縮圖大小。 雖然(**[!UICONTROL Dynamic Media Process Image Assets]**)已用於動態影像資產，且(**[!UICONTROL Process Thumbnails]**)是用於靜態縮圖產生，或當所有其他處理程式無法產生縮圖時，*both*&#x200B;必須具有相同設定。
 
-在「動 **[!UICONTROL 態媒體處理影像資產」步驟中]** ，影像伺服器會產生縮圖，此組態與套用至「處理縮圖」步驟的組態無關 **** 。透過「處理縮圖 **[!UICONTROL 」步驟產生縮圖]** ，是建立縮圖的最慢且記憶體最耗用的方式。
+在「動 **[!UICONTROL 態媒體處理影像資產」步驟中]** ，影像伺服器會產生縮圖，此組態與套用至「處理縮圖」步驟的組態無關 **&#x200B;**&#x200B;。透過「處理縮圖 **[!UICONTROL 」步驟產生縮圖]** ，是建立縮圖的最慢且記憶體最耗用的方式。
 
 縮圖大小是以下列格式定義的： **`width:height:center`**，例如`80:80:false`。 寬度和高度會決定縮圖的大小（以畫素為單位）。 中心值為false或true，若設為true，表示縮圖影像大小與設定中指定的大小完全相同。 如果調整大小的影像較小，它會在縮圖內建中。
 
@@ -216,7 +216,7 @@ Dynamic Media整合會使用下列指令碼：
 
    >[!NOTE]
    >
-   >「處理縮圖」步驟中縮圖引數中 **[!UICONTROL 的值必須與「動態媒體處理影像資產」]** 步驟中的縮圖引數相符 **** 。
+   >「處理縮圖」步驟中縮圖引數中 **[!UICONTROL 的值必須與「動態媒體處理影像資產」]** 步驟中的縮圖引數相符 **&#x200B;**&#x200B;。
 
 1. 選取&#x200B;**[!UICONTROL 儲存]**&#x200B;以儲存對工作流程所做的變更。
 
@@ -231,7 +231,7 @@ Dynamic Media整合會使用下列指令碼：
 
    ![increase_decreasethenumberofimagepresetsthatdisplay](assets/increase_decreasethenumberofimagepresetsthatdisplay.png)
 
-1. 在 **[!UICONTROL limit]** 屬性中，將預設設 ****&#x200B;定為15的值變更為所要的數字。
+1. 在 **[!UICONTROL limit]** 屬性中，將預設設 **&#x200B;**&#x200B;定為15的值變更為所要的數字。
 1. 導覽至`/libs/dam/gui/coral/content/commons/sidepanels/imagepresetsdetail/imgagepresetslist/datasource`的影像預設集資料來源
 
    ![chlimage_1-495](assets/chlimage_1-495.png)
@@ -266,7 +266,7 @@ Dynamic Media整合會使用下列指令碼：
 
    >[!NOTE]
    >
-   >若要讓此影像預設變得自適應，請擦除 **[!UICONTROL 寬度]****[!UICONTROL 和高度欄]** 位中的值，並保留空白。
+   >若要讓此影像預設變得自適應，請擦除 **[!UICONTROL 寬度]**&#x200B;**[!UICONTROL 和高度欄]** 位中的值，並保留空白。
 
 1. 視需要在「基 **[!UICONTROL 本]** 」和「 **[!UICONTROL 進階]** 」標籤中輸入值，包括名稱。這些選項在「影像預設 [集選項」中概述](#image-preset-options)。預設集會出現在左窗格中，並可與其他資產一起即時使用。
 
@@ -284,7 +284,7 @@ Dynamic Media整合會使用下列指令碼：
 
 >[!NOTE]
 >
->若要在套用 **[!UICONTROL 影像預設集]** 至資產時查看 **** URL和RESS按鈕，必須發佈資產。
+>若要在套用 **[!UICONTROL 影像預設集]** 至資產時查看 **&#x200B;**&#x200B;URL和RESS按鈕，必須發佈資產。
 >
 >![chlimage_1-79](assets/chlimage_1-498.png)
 >
@@ -298,7 +298,7 @@ Dynamic Media整合會使用下列指令碼：
 
 * **[!UICONTROL 格式]** （**[!UICONTROL 基本]**&#x200B;標籤） — 選取&#x200B;**[!UICONTROL JPEG]**&#x200B;或其他符合您需求的格式。 所有網頁瀏覽器都支援JPEG影像格式；它在小檔案大小和影像品質之間提供良好的平衡。但是，JPEG格式影像使用有損壓縮方案，如果壓縮設定太低，則該壓縮方案會引入不想要的影像偽影。因此，Adobe建議將壓縮品質設為75。此設定在影像品質和檔案大小之間取得良好的平衡。
 
-* **[!UICONTROL 啟用簡單銳利化]** -請勿選取「啟用簡 **** 單銳利化」 (此銳利化濾鏡提供的控制力比「非銳利化遮色片」設定少)。
+* **[!UICONTROL 啟用簡單銳利化]** -請勿選取「啟用簡 **&#x200B;**&#x200B;單銳利化」 (此銳利化濾鏡提供的控制力比「非銳利化遮色片」設定少)。
 
 * **[!UICONTROL 銳利化：重新取樣模式]** — 選取&#x200B;**[!UICONTROL 銳利化2]**。
 
@@ -496,7 +496,7 @@ Dynamic Media整合會使用下列指令碼：
    ![6_5_imagepreset-editpreset](assets/6_5_imagepreset-editpreset.png)
 
 1. 選取預設集，然後按一下&#x200B;**[!UICONTROL 編輯]**。 **[!UICONTROL 編輯影像預設集]**&#x200B;視窗隨即開啟。
-1. 進行變更，然後按一下[儲存]以儲存變更，或按一下[取消]以取消變更。**[!UICONTROL 取消]**。****
+1. 進行變更，然後按一下[儲存]以儲存變更，或按一下[取消]以取消變更。**[!UICONTROL 取消]**。**&#x200B;**
 
 ## 發佈Dynamic Media影像預設集 {#publishing-image-presets}
 
@@ -516,4 +516,4 @@ Dynamic Media整合會使用下列指令碼：
 
 1. 在Experience Manager中，按一下Experience Manager標誌以存取全域導覽主控台。
 1. 選取&#x200B;**[!UICONTROL 工具]**&#x200B;圖示，然後導覽至&#x200B;**[!UICONTROL Assets]** > **[!UICONTROL 影像預設集]**。
-1. 選取預設集，然後按一下[刪除]。**** Dynamic Media會確認您要刪除它。 選取&#x200B;**[!UICONTROL 刪除]**&#x200B;以刪除，或選取&#x200B;**[!UICONTROL 取消]**&#x200B;以中止。
+1. 選取預設集，然後按一下[刪除]。**&#x200B;** Dynamic Media會確認您要刪除它。 選取&#x200B;**[!UICONTROL 刪除]**&#x200B;以刪除，或選取&#x200B;**[!UICONTROL 取消]**&#x200B;以中止。

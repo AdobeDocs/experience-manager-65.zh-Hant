@@ -233,13 +233,13 @@ AEM的某些層面（和/或基礎存放庫）可設定為最佳化效能。 以
 
 #### 存放庫中的設定 {#configuration-in-the-repo}
 
-如果您使用sling：OsgiConfig節點](/help/sites-deploying/configuring-osgi.md#adding-a-new-configuration-to-the-repository)設定服務[，您必須找到現有服務的PID，例如： org.apache.sling.event.jobs.QueueConfiguration.370aad73-d01b-4a0b-abe4-20198d85f705。 您可以使用Web主控台探索PID。
+如果您使用sling：OsgiConfig節點[&#128279;](/help/sites-deploying/configuring-osgi.md#adding-a-new-configuration-to-the-repository)設定服務，您必須找到現有服務的PID，例如： org.apache.sling.event.jobs.QueueConfiguration.370aad73-d01b-4a0b-abe4-20198d85f705。 您可以使用Web主控台探索PID。
 
 設定名為`queue.maxparallel`的屬性。
 
 #### Web主控台中的設定 {#configuration-in-the-web-console}
 
-若要使用Web主控台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)設定這些服務[，請在Apache Sling工作佇列設定服務工廠下找到現有的設定專案。
+若要使用Web主控台[&#128279;](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)設定這些服務，請在Apache Sling工作佇列設定服務工廠下找到現有的設定專案。
 
 設定名為Maximum Parallel Jobs的屬性。
 

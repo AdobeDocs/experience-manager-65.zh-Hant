@@ -63,8 +63,8 @@ ht-degree: 0%
 
 * ***型別 — 字串 — mobilecontentlisting***
 * ***path*** — 字串 — 保持空白，必須存在才能被視為有效的處理常式，但路徑被推斷為目前的ContentSync快取。 此值會被忽略。
-* ***targetRootDirectory* -**字串 — 新增至路徑的前置詞，作為此處理常式內容更新的目標根目錄。
-* ContentSync要執行此處理常式的&#x200B;***順序 — Long* -**順序。 此數字應設定為高於所有其他處理常式，例如100。 它應在傳統內容處理常式之後執行。
+* ***targetRootDirectory* -**&#x200B;字串 — 新增至路徑的前置詞，作為此處理常式內容更新的目標根目錄。
+* ContentSync要執行此處理常式的&#x200B;***順序 — Long* -**&#x200B;順序。 此數字應設定為高於所有其他處理常式，例如100。 它應在傳統內容處理常式之後執行。
 
 ```xml
 {
@@ -89,9 +89,9 @@ ht-degree: 0%
 該處理常式應該用於AEM應用程式殼層ContentSync設定（具有pge-type=app-instance的節點）
 
 * ***型別 — 字串 — mobilecontentpackageslisting***
-* ***path **-**字串*** — 應用程式殼層（pge-type=app-instance的節點）的路徑。
+* ***path &#x200B;**-**字串*** — 應用程式殼層（pge-type=app-instance的節點）的路徑。
 * ***targetRootDirectory — 字串*** — 要新增至路徑的前置詞，作為此處理常式內容更新的目標根目錄。
-* ContentSync要執行此處理常式的&#x200B;***順序 — Long* -**順序。 此數字應設定為高於所有其他處理常式，例如100。 它應在傳統內容處理常式之後執行。
+* ContentSync要執行此處理常式的&#x200B;***順序 — Long* -**&#x200B;順序。 此數字應設定為高於所有其他處理常式，例如100。 它應在傳統內容處理常式之後執行。
 
 >[!NOTE]
 >
@@ -123,8 +123,8 @@ ht-degree: 0%
 
 這個處理常式應該用於AEM App Shell ContentSync設定（具有pge-type=[app-instance]的節點）。
 
-* ***型別 — 字串* - **widgetconfig
-* ***path **-**字串*** — 任何應用程式殼層子節點（pge-type=[app-instance]的節點）的路徑。
+* ***型別 — 字串* - &#x200B;** widgetconfig
+* ***path &#x200B;**-**字串*** — 任何應用程式殼層子節點（pge-type=[app-instance]的節點）的路徑。
 * ***targetRootDirectory — 字串*** — 要新增至路徑的前置詞，作為此處理常式內容更新的目標根目錄。
 * ***targetIconDirectory — 字串*** — 應用程式圖示放置目錄
 
@@ -165,7 +165,7 @@ AEM屬性是使用「cq」、「sling」或「jcr」建立名稱間距的屬性�
 
 * ***型別 — 字串*** — 應用程式資產
 
-* ***path **-**字串*** — 應用程式執行個體下儲存應用程式資產之位置的路徑
+* ***path &#x200B;**-**字串*** — 應用程式執行個體下儲存應用程式資產之位置的路徑
 
 **mobileappoffers**&#x200B;已為Personalization使用案例引入新的內容同步處理常式，以便呈現目標內容。 「mobileappoffers」處理常式會知道如何呈現內容作者所建立的相關目標選件。 mobileappoffers處理常式會擴充抽象頁面更新處理常式，因此許多屬性都類似。 mobileappoffers處理常式的詳細資訊有下列屬性。
 
@@ -178,7 +178,7 @@ mobileappsoffers處理常式會擴充mobileappspages處理常式，並新增下�
 
 **mobileappconfig** mobileappconfig內容同步處理常式提供將JSON資料插入MobileAppsConfig.json的方法。 若要註冊提供者類別，開發人員會在提供者清單中新增其MobileAppsInfoProvider類別。 處理常式會對MobileAppsInfoProviders清單進行反複運算，並允許提供者將資料插入產生的json檔案中。 此處理常式支援的屬性清單為：
 
-* ***path **-**String*** — 具有pge-type=app-instance或擴充/libs/mobileapps/core/components/instance之RT的應用程式執行個體節點的路徑
+* ***path &#x200B;**-**String*** — 具有pge-type=app-instance或擴充/libs/mobileapps/core/components/instance之RT的應用程式執行個體節點的路徑
 * ***提供者 — 字串*** `[]` — 完整限定的MobileAppsInfoProviders清單
 * ***targetRootDirectory — 字串*** — 將MobileAppsConfig.json檔案寫入的目錄。
 * **fileName — 字串** — 要將JSON寫入的檔案選擇性名稱，預設為MobileAppsConfig.json

@@ -36,9 +36,9 @@ ht-degree: 10%
 
 下列方法可用於將中繼資料新增至數位資產：
 
-* 首先，建立資產的原生應用程式會新增一些中繼資料。 例如，[Acrobat將一些中繼資料](https://helpx.adobe.com/acrobat/using/pdf-properties-metadata.html)新增至PDF檔案，或相機將一些基本中繼資料新增至像片。 產生資產時，您可以在原生應用程式本身中新增中繼資料。 例如，您可以在Adobe Lightroom](https://helpx.adobe.com/lightroom-classic/help/metadata-basics-actions.html)中[新增IPTC中繼資料。
+* 首先，建立資產的原生應用程式會新增一些中繼資料。 例如，[Acrobat將一些中繼資料](https://helpx.adobe.com/acrobat/using/pdf-properties-metadata.html)新增至PDF檔案，或相機將一些基本中繼資料新增至像片。 產生資產時，您可以在原生應用程式本身中新增中繼資料。 例如，您可以在Adobe Lightroom[&#128279;](https://helpx.adobe.com/lightroom-classic/help/metadata-basics-actions.html)中新增IPTC中繼資料。
 
-* 在將資產上傳到[!DNL Experience Manager]之前，您可以使用用於建立資產的原生應用程式或使用其他中繼資料編輯應用程式來編輯和修改中繼資料。 上傳資產至Experience Manager時，系統會處理中繼資料。 例如，瞭解如何[在 [!DNL Adobe Bridge]](https://helpx.adobe.com/bridge/user-guide.html/bridge/using/metadata-adobe-bridge.ug.html)中使用中繼資料，並檢視[!DNL Adobe Exchange]中 [!DNL Adobe Bridge]](https://exchange.adobe.com/creativecloud.details.20009.aem-tags-panel-for-bridge-cc.html)的[標籤面板。
+* 在將資產上傳到[!DNL Experience Manager]之前，您可以使用用於建立資產的原生應用程式或使用其他中繼資料編輯應用程式來編輯和修改中繼資料。 上傳資產至Experience Manager時，系統會處理中繼資料。 例如，瞭解如何[在 [!DNL Adobe Bridge]](https://helpx.adobe.com/bridge/user-guide.html/bridge/using/metadata-adobe-bridge.ug.html)中使用中繼資料，並檢視[!DNL Adobe Exchange]中 [!DNL Adobe Bridge][&#128279;](https://exchange.adobe.com/creativecloud.details.20009.aem-tags-panel-for-bridge-cc.html)的標籤面板。
 
 * 在[!DNL Experience Manager Assets]中，您可以在[!UICONTROL 屬性]頁面中手動新增或編輯資產的中繼資料。
 
@@ -81,7 +81,7 @@ ht-degree: 10%
 
 >[!NOTE]
 >
->大量編輯方法適用於資料夾或集合中可用的資產。 對於跨資料夾可用的資產，或符合共同條件的資產，可在搜尋](search-assets.md#metadataupdates)後[大量更新中繼資料。
+>大量編輯方法適用於資料夾或集合中可用的資產。 對於跨資料夾可用的資產，或符合共同條件的資產，可在搜尋[&#128279;](search-assets.md#metadataupdates)後大量更新中繼資料。
 
 1. 在[!DNL Assets]使用者介面中，導覽至您要編輯之資產的位置。
 1. 選取您要編輯其一般屬性的資產。
@@ -180,7 +180,7 @@ ht-degree: 10%
 
 若資料夾中已有您後來加以變更的現有中繼資料設定檔，您可以重新處理該資料夾中的資產。 請參閱[在您編輯資料夾中資產的處理設定檔](processing-profiles.md#reprocessing-assets)之後，重新處理該資料夾中的資產。
 
-您可以從「工具」菜單或者在資料夾內的「屬性」中，將元資料配置檔案應 **[!UICONTROL 用到資料夾]******。本節說明如何以兩種方式將中繼資料描述檔套用至資料夾。
+您可以從「工具」菜單或者在資料夾內的「屬性」中，將元資料配置檔案應 **[!UICONTROL 用到資料夾]**&#x200B;**&#x200B;**。本節說明如何以兩種方式將中繼資料描述檔套用至資料夾。
 
 已為其分配配置檔案的資料夾將通過資料夾名稱正下方的配置檔案名稱顯示來指示。
 

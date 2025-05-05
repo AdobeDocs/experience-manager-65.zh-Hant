@@ -47,7 +47,7 @@ ht-degree: 15%
   | | [!DNL Sites] as a [!DNL Cloud Service] | AMS上的[!DNL Experience Manager] 6.5 [!DNL Sites] | [!DNL Experience Manager] 6.5 [!DNL Sites]內部部署 |
   |---|---|---|---|
   | **[!DNL Experience Manager Assets]as a[!DNL Cloud Service]** | 支援 | 支援 | 支援 |
-  | AMS **上的**[!DNL Experience Manager] 6.5 [!DNL Assets] | 支援 | 支援 | 支援 |
+  | AMS **上的**&#x200B;[!DNL Experience Manager] 6.5 [!DNL Assets] | 支援 | 支援 | 支援 |
   | **[!DNL Experience Manager]6.5 [!DNL Assets]內部部署** | 不支援 | 不支援 | 不支援 |
 
 ### 支援的檔案格式 {#mimetypes}
@@ -93,6 +93,7 @@ Experience Manager可讓您將遠端DAM部署作為來源連線到多個Experien
 1. 存取現有的[!DNL Sites]部署，或使用下列命令建立部署：
 
    1. 在JAR檔案的資料夾中，在終端機上執行下列命令以建立每個[!DNL Experience Manager]伺服器。
+
       `java -Xmx4096m -jar <quickstart jar filepath> -r samplecontent -p 4502 -nofork -gui -nointeractive &`
 
    1. 幾分鐘後，[!DNL Experience Manager]伺服器就會成功啟動。 將此[!DNL Sites]部署視為網頁編寫的本機電腦，例如`https://[local_sites]:4502`。
@@ -173,7 +174,7 @@ Experience Manager可讓您將遠端DAM部署作為來源連線到多個Experien
    * 在本機[!DNL Sites]上，在[!UICONTROL Dynamic Media同步模式]中，選取&#x200B;**[!UICONTROL 預設為停用]**。 [!DNL Sites]部署必須具有[!DNL Dynamic Media]帳戶的唯讀存取權。
    * 在本機[!DNL Sites]上，在&#x200B;**[!UICONTROL Publish Assets]**&#x200B;選項中，選取&#x200B;**[!UICONTROL 選擇性Publish]**。 不要選取&#x200B;**[!UICONTROL 同步處理所有內容]**。
 
-1. 啟用影像核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html#dynamic-media)中的[[!DNL Dynamic Media] 支援。 當作者在本機[!DNL Sites]部署的網頁中使用[!DNL Dynamic Media]個影像時，此功能可讓預設的[影像元件](https://www.aemcomponents.dev/content/core-components-examples/library/core-content/image.html)顯示[!DNL Dynamic Media]個影像。
+1. 啟用影像核心元件[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html#dynamic-media)中的[!DNL Dynamic Media] 支援。 當作者在本機[!DNL Sites]部署的網頁中使用[!DNL Dynamic Media]個影像時，此功能可讓預設的[影像元件](https://www.aemcomponents.dev/content/core-components-examples/library/core-content/image.html)顯示[!DNL Dynamic Media]個影像。
 
 ## 使用遠端資產 {#use-remote-assets}
 

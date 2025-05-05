@@ -360,7 +360,7 @@ AEM提供翻譯工作流程，您可用來將最適化表單當地語系化。 �
 
 * 透過網頁伺服器壓縮模組啟用HTML。 如需詳細資訊，請參閱[AEM Forms伺服器的效能調整](/help/forms/using/performance-tuning-aem-forms.md)。
 * 針對大型表單，增加每個請求設定的呼叫。 請參閱[最佳化大型與複雜表單的效能](/help/forms/using/adaptive-forms-best-practices.md#optimizing-performance-of-large-and-complex-forms)。
-* 建立錯誤處理常式](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/customizing-errorhandler-pages.html)顯示的[自訂錯誤頁面。
+* 建立錯誤處理常式[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/customizing-errorhandler-pages.html)顯示的自訂錯誤頁面。
 * 安全的AEM Forms伺服器。
 
    * 使用`nosamplecontent`執行模式，確保生產伺服器上未部署範例內容和範例使用者。 請參閱[在生產就緒模式下執行AEM](/help/sites-administering/production-ready.md)。
@@ -397,11 +397,11 @@ AEM提供翻譯工作流程，您可用來將最適化表單當地語系化。 �
 
 AEM Forms規則編輯器提供建立和管理規則的視覺介面，減少大量編碼的需求。 對於可能沒有進階程式設計技能，但需要在表單中定義及維護商業規則的商務使用者或表單設計人員而言，此功能特別實用。這裡我們將討論一些使用案例，規則編輯器可讓您：
 
-* <!-- Allows you --> 為您的表單定義商業規則，而不需要大量的程式設計。
-* <!-- Use the Rule Editor when you need --> 若要在表單中實作條件式邏輯。 這包括顯示或隱藏表單元素、根據特定條件變更欄位值，或動態變更表單的行為。
-* <!--When you want --> 若要對表單提交強制執行資料驗證規則，可使用規則編輯器來定義驗證條件。
-* <!-- When you need --> 若要將表單與外部資料來源(FDM)或服務整合，規則編輯器可協助定義在表單互動期間擷取、顯示或操控資料的規則。
-* <!-- If you want -->若要建立回應使用者動作的動態與互動式表單，規則編輯器可讓您定義規則以即時控制表單元素的行為。
+* &#x200B;<!-- Allows you --> 為您的表單定義商業規則，而不需要大量的程式設計。
+* &#x200B;<!-- Use the Rule Editor when you need --> 若要在表單中實作條件式邏輯。 這包括顯示或隱藏表單元素、根據特定條件變更欄位值，或動態變更表單的行為。
+* &#x200B;<!--When you want --> 若要對表單提交強制執行資料驗證規則，可使用規則編輯器來定義驗證條件。
+* &#x200B;<!-- When you need --> 若要將表單與外部資料來源(FDM)或服務整合，規則編輯器可協助定義在表單互動期間擷取、顯示或操控資料的規則。
+* &#x200B;<!-- If you want -->若要建立回應使用者動作的動態與互動式表單，規則編輯器可讓您定義規則以即時控制表單元素的行為。
 
 規則編輯器適用於AEM Forms Foundation元件和核心元件。
 

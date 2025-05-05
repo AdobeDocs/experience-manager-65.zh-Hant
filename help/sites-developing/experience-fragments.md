@@ -110,9 +110,11 @@ HTML轉譯是使用Sling重寫程式管道產生的。 管道定義於`/libs/exp
 1. 兩者：
 
    1. 範本的資源型別（初始節點）必須繼承自：
+
       `cq/experience-fragments/components/xfpage`
 
    1. 範本的名稱必須以下列專案開頭：
+
       `experience-fragments`
 這可讓使用者在/content/experience-fragments中建立體驗片段，因為此資料夾的`cq:allowedTemplates`屬性包含名稱以`experience-fragment`開頭的所有範本。 客戶可以更新此屬性以包含他們自己的命名配置或範本位置。
 
@@ -149,7 +151,7 @@ HTML轉譯是使用Sling重寫程式管道產生的。 管道定義於`/libs/exp
 * 新增元件，
 * 然後以HTML格式或JSON格式將其匯出為Adobe Target選件。
 
-可在AEM](/help/sites-administering/experience-fragments-target.md#Prerequisites)的作者執行個體上[啟用此功能。 它需要有效的Adobe Target設定，以及Link Externalizer設定。
+可在AEM[&#128279;](/help/sites-administering/experience-fragments-target.md#Prerequisites)的作者執行個體上啟用此功能。 它需要有效的Adobe Target設定，以及Link Externalizer設定。
 
 Link Externalizer可用來判斷建立Target選件的HTML版本時需要正確的URL，然後傳送至Adobe Target。 這是必要的，因為Adobe Target要求可以公開存取TargetHTML選件內的所有連結；這表示連結參照的任何資源以及體驗片段本身必須在使用之前發佈。
 

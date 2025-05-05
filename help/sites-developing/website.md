@@ -59,7 +59,7 @@ ht-degree: 3%
 
 ## 安裝Adobe Experience Manager {#installing-adobe-experience-manager}
 
-若要安裝開發您網站的AEM執行個體，請依照使用作者和發佈執行個體](/help/sites-deploying/deploy.md#author-and-publish-installs)設定[部署環境的指示操作，或執行[一般安裝](/help/sites-deploying/deploy.md#default-local-install)。 一般安裝包括下載AEM Quickstart JAR檔案、將license.properties檔案放在與JAR檔案相同的目錄中，以及連按兩下JAR檔案。
+若要安裝開發您網站的AEM執行個體，請依照使用作者和發佈執行個體[&#128279;](/help/sites-deploying/deploy.md#author-and-publish-installs)設定部署環境的指示操作，或執行[一般安裝](/help/sites-deploying/deploy.md#default-local-install)。 一般安裝包括下載AEM Quickstart JAR檔案、將license.properties檔案放在與JAR檔案相同的目錄中，以及連按兩下JAR檔案。
 
 安裝AEM後，請按一下「歡迎」頁面上的「CRXDE Lite」連結來存取CRXDE Lite開發環境：
 
@@ -123,7 +123,7 @@ static.css檔案與影像範例
 
 1. 在CRXDE Lite的資料夾樹狀結構中，用滑鼠右鍵按一下`/apps/mywebsite/templates`，然後按一下&#x200B;**建立** > **建立範本**。
 
-1. 在[建立範本]對話方塊中，輸入下列值，然後按一下[下一步] ****：
+1. 在[建立範本]對話方塊中，輸入下列值，然後按一下[下一步] **&#x200B;**：
 
    * **標籤**： contentpage
    * **標題**：我的網站內容頁面範本
@@ -165,7 +165,7 @@ static.css檔案與影像範例
 
    此通訊會將範本連線到元件，並且對網站的正確運作至關重要。
 
-1. 按一下[下一步]****，直到對話方塊的[允許的子系]面板出現為止，然後按一下[確定]****。 在CRXDE Lite中，按一下&#x200B;**全部儲存**。
+1. 按一下[下一步]&#x200B;**&#x200B;**，直到對話方塊的[允許的子系]面板出現為止，然後按一下[確定]&#x200B;**&#x200B;**。 在CRXDE Lite中，按一下&#x200B;**全部儲存**。
 
    結構現在看起來如下所示：
 
@@ -210,7 +210,7 @@ static.css檔案與影像範例
    </html>
    ```
 
-1. 按一下[儲存全部]****&#x200B;以儲存變更。
+1. 按一下[儲存全部]&#x200B;**&#x200B;**&#x200B;以儲存變更。
 
 ### 建立您的網站頁面與內容頁面 {#creating-your-website-page-and-content-pages}
 
@@ -329,7 +329,7 @@ static.css檔案與影像範例
 
 1. 在CRXDE Lite中，在`/apps/mywebsite/components/contentpage`下建立檔案`left.jsp`：
 
-   1. 在節點`/apps/mywebsite/components/contentpage`上按一下滑鼠右鍵，然後選取**建立**然後選取&#x200B;**建立檔案**。
+   1. 在節點`/apps/mywebsite/components/contentpage`上按一下滑鼠右鍵，然後選取&#x200B;**建立**&#x200B;然後選取&#x200B;**建立檔案**。
 
    1. 在視窗中，輸入`left.jsp`作為&#x200B;**名稱**，然後按一下&#x200B;**確定**。
 
@@ -425,7 +425,7 @@ static.css檔案與影像範例
 
    * **描述**： `This is My Top Navigation Component`
 
-1. 按一下[下一步]****，直到您進入最後一個按一下[確定]**的視窗**。 儲存您的變更。
+1. 按一下[下一步]&#x200B;**&#x200B;**，直到您進入最後一個按一下[確定]&#x200B;**的視窗**。 儲存您的變更。
 
 #### 建立含有文字連結的頂端導覽指令碼 {#creating-the-top-navigation-script-with-textual-links}
 
@@ -866,7 +866,7 @@ static.css檔案與影像範例
    * 標題： `My Logo Component`。
    * 描述： `This is My Logo Component`。
 
-1. 按一下[下一步]，直到到達對話方塊的最後一個面板，然後按一下[確定]。****
+1. 按一下[下一步]，直到到達對話方塊的最後一個面板，然後按一下[確定]。**&#x200B;**
 
 #### 建立標誌指令碼 {#creating-the-logo-script}
 
@@ -1530,6 +1530,6 @@ public class img_GET extends AbstractImageServlet {
    ```
 
 1. 儲存變更。
-1. 在您的瀏覽器中，重新載入** Products**頁面。 整個頁面如下：
+1. 在您的瀏覽器中，重新載入 **&#x200B; Products**&#x200B;頁面。 整個頁面如下：
 
    ![chlimage_1-5](assets/chlimage_1-5.jpeg)

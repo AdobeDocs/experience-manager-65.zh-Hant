@@ -21,7 +21,7 @@ ht-degree: 0%
 
 ## [!DNL Dynamic Media]中的鍵盤協助工具支援
 
-因為[!DNL Dynamic Media]是[!DNL Adobe Experience Manager Assets]的外掛程式，所以大部分的鍵盤控制項行為與[!DNL Experience Manager Assets]中的相同。 例如，[!DNL Dynamic Media]中的`Cancel`按鈕具有與[!DNL Experience Manager Assets]中相同的焦點反白顯示，並會回應[!DNL Experience Manager Assets]中的`Spacebar`索引鍵。 請參閱Assets](/help/assets/accessibility.md#keyboard-shortcuts)中的[鍵盤快速鍵。
+因為[!DNL Dynamic Media]是[!DNL Adobe Experience Manager Assets]的外掛程式，所以大部分的鍵盤控制項行為與[!DNL Experience Manager Assets]中的相同。 例如，[!DNL Dynamic Media]中的`Cancel`按鈕具有與[!DNL Experience Manager Assets]中相同的焦點反白顯示，並會回應[!DNL Experience Manager Assets]中的`Spacebar`索引鍵。 請參閱Assets[&#128279;](/help/assets/accessibility.md#keyboard-shortcuts)中的鍵盤快速鍵。
 
 [!DNL Dynamic Media]中個別使用者介面元素所支援的按鍵動作清晰且易於探索。 [!DNL Dynamic Media]中的鍵盤控制項與下列內容有關：
 
@@ -59,7 +59,7 @@ ht-degree: 0%
 ## [!DNL Dynamic Media]個檢視者的輔助技術支援 {#assistive-technology-support-for-dm-viewers}
 
 所有[!DNL Dynamic Media]檢視器元件都支援ARIA （可存取的豐富網際網路應用程式）角色和屬性，以改進與熒幕閱讀器等輔助技術的整合。
-請參閱Dynamic Media檢視器參考指南中任何自訂檢視器主題中的**輔助技術支援**&#x200B;說明主題。 例如，請參閱視訊檢視器的[輔助技術支援](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/r-html5-video-viewer-20-assistive.html)，或互動式影像檢視器的[輔助技術支援](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/c-html5-aem-interactive-image-assistive.html#viewers-for-aem-assets-only)。
+請參閱Dynamic Media檢視器參考指南中任何自訂檢視器主題中的&#x200B;**輔助技術支援**&#x200B;說明主題。 例如，請參閱視訊檢視器的[輔助技術支援](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/r-html5-video-viewer-20-assistive.html)，或互動式影像檢視器的[輔助技術支援](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/c-html5-aem-interactive-image-assistive.html#viewers-for-aem-assets-only)。
 
 ## Dynamic Media中的隱藏式字幕支援 {#closed-caption-support}
 
@@ -70,4 +70,4 @@ Dynamic Media支援以隱藏式字幕傳送視訊與最適化視訊集。 註解
 >[!MORELIKETHIS]
 >
 >* [Adobe解決方案的協助工具](https://www.adobe.com/accessibility.html)
->*  [!DNL Experience Manager Assets]](/help/assets/accessibility.md)中的[協助工具
+>*  [!DNL Experience Manager Assets][&#128279;](/help/assets/accessibility.md)中的協助工具

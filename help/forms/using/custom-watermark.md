@@ -59,7 +59,7 @@ ht-degree: 1%
       >    
       >
 
-   1. 按一下[確定]****，然後按一下[儲存全部]****。 **[!UICONTROL previewwatermark]**&#x200B;資料夾是在指定的路徑中建立的。
+   1. 按一下[確定]&#x200B;**&#x200B;**，然後按一下[儲存全部]&#x200B;**&#x200B;**。 **[!UICONTROL previewwatermark]**&#x200B;資料夾是在指定的路徑中建立的。
 
 1. 將ddx檔案從「/libs/fd/cm/configFiles/previewwatermark」資料夾複製並貼到「/apps/fd/cm/configFiles/previewwatermark」資料夾，然後按一下&#x200B;**[!UICONTROL 全部儲存]**。
 1. 在/apps/fd/cm/configFiles/previewwatermark/底下的ddx檔案中進行所需的變更。

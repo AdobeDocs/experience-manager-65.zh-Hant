@@ -51,7 +51,7 @@ ht-degree: 1%
 
 兩個頁面的來源會清楚顯示在瀏覽器視窗頂端的標題列中。
 
-標題](assets/chlimage_1-109.png)中顯示![Source
+標題![&#128279;](assets/chlimage_1-109.png)中顯示Source
 
 差異會偵測元件和HTML層級的變更。 已變更的專案會以不同的顏色反白。
 

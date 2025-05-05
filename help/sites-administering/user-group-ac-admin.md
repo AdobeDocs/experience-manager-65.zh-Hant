@@ -60,7 +60,7 @@ CRX可讓您設定使用者和群組帳戶的存取權。 然後會將相同的�
 
 >[!NOTE]
 >
->CRX實作由JSR-283](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/2.0/16_Access_Control_Management.html)定義的[存取控制。
+>CRX實作由JSR-283[&#128279;](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/2.0/16_Access_Control_Management.html)定義的存取控制。
 >
 >CRX存放庫的標準安裝設定為使用資源型存取控制清單。 這是JSR-283存取控制的一個可能實作，也是Jackrabbit提供的實作之一。
 
@@ -479,7 +479,7 @@ CRX中的存取權評估如下：
 
   您可以輸入&#x200B;**主體**&#x200B;名稱，或按一下欄位右側的圖示以開啟&#x200B;**選取主體**&#x200B;對話方塊。
 
-  這可讓您&#x200B;**搜尋**&#x200B;使用者&#x200B;**或**&#x200B;群組&#x200B;**的**。 從結果清單中選取所需的主體，然後按一下[確定] ****，將該值帶回上一個對話方塊。
+  這可讓您&#x200B;**搜尋**&#x200B;使用者&#x200B;**或**&#x200B;群組&#x200B;**的**。 從結果清單中選取所需的主體，然後按一下[確定] **&#x200B;**，將該值帶回上一個對話方塊。
 
 ![crx_accesscontrol_selectprincipal](assets/crx_accesscontrol_selectprincipal.png)
 

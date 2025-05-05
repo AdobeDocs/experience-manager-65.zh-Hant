@@ -55,9 +55,9 @@ Dynamic Media Publish設定頁面會建立預設設定，用來決定如何從Ad
    * [色彩管理屬性](#color-management-attributes-tab)標籤
 
    ![Dynamic Media Publish設定頁面](/help/assets/assets-dm/dm-publish-setup.png)
-   *Dynamic Media Publish設定頁面，已選取&#x200B;**[!UICONTROL 要求屬性]**索引標籤。*<br><br>
+   *Dynamic Media Publish設定頁面，已選取&#x200B;**[!UICONTROL 要求屬性]**&#x200B;索引標籤。*<br><br>
 
-1. 完成後，在頁面的右上角附近，按一下[儲存]。****
+1. 完成後，在頁面的右上角附近，按一下[儲存]。**&#x200B;**
 
 ## 安全性索引標籤 {#security-tab}
 

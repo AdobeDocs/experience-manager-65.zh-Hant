@@ -275,4 +275,4 @@ ht-degree: 0%
 1. 刪除`viewer`資料夾。
 1. 在CRXDE Lite頁面的左上角附近，選取&#x200B;**[!UICONTROL 全部儲存]**。
 1. 在CRXDE Lite頁面的左上角，選取&#x200B;**首頁**&#x200B;圖示。
-1. 在Cloud Service](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services)中重新建立[Dynamic Media設定。
+1. 在Cloud Service[&#128279;](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services)中重新建立Dynamic Media設定。

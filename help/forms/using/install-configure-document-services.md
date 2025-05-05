@@ -290,7 +290,7 @@ AEM Forms附加元件套件是部署至AEM的應用程式。 一般而言，您�
 
 1. 開啟Microsoft® Office應用程式。 例如，Microsoft® Word。 瀏覽至&#x200B;**[!UICONTROL 檔案]**> **[!UICONTROL 選項]**。 「選項」對話方塊隨即顯示。
 
-1. 按一下[信任中心]****，然後按一下[信任中心設定]****。
+1. 按一下[信任中心]&#x200B;**&#x200B;**，然後按一下[信任中心設定]&#x200B;**&#x200B;**。
 1. 在&#x200B;**[!UICONTROL 信任中心設定]**&#x200B;中，按一下&#x200B;**[!UICONTROL 檔案封鎖設定]**。
 1. 在&#x200B;**[!UICONTROL 檔案型別]**&#x200B;清單中，取消選取&#x200B;**[!UICONTROL 開啟]**，該檔案型別應該允許PDF Generator服務轉換成PDF檔案。
 
@@ -298,7 +298,7 @@ AEM Forms附加元件套件是部署至AEM的應用程式。 一般而言，您�
 
 用來啟動應用程式伺服器的使用者帳戶需要&#x200B;**取代處理序層級權杖**&#x200B;許可權。 本機系統帳戶預設具有&#x200B;**取代處理序層級權杖**&#x200B;許可權。 對於以Local Administrators群組的使用者執行的伺服器，必須明確授與許可權。 執行以下步驟來授與許可權：
 
-1. 開啟Microsoft® Windows的群組原則編輯器。 若要開啟群組原則編輯器，請按一下[開始] ****，在[開始搜尋]方塊中輸入&#x200B;**gpedit.msc**，然後按一下[群組原則編輯器] **[!UICONTROL 。]**
+1. 開啟Microsoft® Windows的群組原則編輯器。 若要開啟群組原則編輯器，請按一下[開始] **&#x200B;**，在[開始搜尋]方塊中輸入&#x200B;**gpedit.msc**，然後按一下[群組原則編輯器] **[!UICONTROL 。]**
 1. 瀏覽至&#x200B;**[!UICONTROL 本機電腦原則]** > **[!UICONTROL 電腦組態]** > **[!UICONTROL Windows設定]** > **[!UICONTROL 安全性設定]** > **[!UICONTROL 本機原則]** > **[!UICONTROL 使用者許可權指派]**，並編輯&#x200B;**[!UICONTROL 取代處理序層級權杖]**&#x200B;原則並包含Administrators群組。
 1. 將使用者新增至「取代程式層級權杖」專案。
 
@@ -471,7 +471,7 @@ AEM Forms附加元件套件是部署至AEM的應用程式。 此套件包含AEM 
 
 在Microsoft® Windows上，PDF Generator服務會使用Adobe Acrobat將支援的檔案格式轉換為PDF檔案。 執行以下步驟，為PDF Generator服務設定Adobe Acrobat：
 
-1. 開啟Acrobat並選取&#x200B;**[!UICONTROL 編輯]**> **[!UICONTROL 偏好設定]**> **[!UICONTROL 更新程式]**。 在[檢查更新]中，取消選取[自動安裝更新]****，然後按一下[確定]****。 關閉Acrobat。
+1. 開啟Acrobat並選取&#x200B;**[!UICONTROL 編輯]**> **[!UICONTROL 偏好設定]**> **[!UICONTROL 更新程式]**。 在[檢查更新]中，取消選取[自動安裝更新]&#x200B;**&#x200B;**，然後按一下[確定]&#x200B;**&#x200B;**。 關閉Acrobat。
 1. 連按兩下您系統上的PDF檔案。 當Acrobat首次啟動時，會顯示登入、歡迎畫面和EULA的對話方塊。 為所有設定要使用PDF Generator的使用者關閉這些對話方塊。
 1. 執行PDF Generator公用程式批次檔案，為PDF Generator服務設定Acrobat：
 
@@ -523,7 +523,7 @@ DocAssurance服務可套用使用許可權至PDF檔案。 若要套用使用許�
 執行以下步驟來設定憑證：
 
 1. 以管理員身分登入AEM作者執行個體。 移至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 安全性]** > **[!UICONTROL 使用者]**。
-1. 按一下使用者帳戶的&#x200B;**[!UICONTROL 名稱]**&#x200B;欄位。 **[!UICONTROL 編輯使用者設定]**&#x200B;頁面隨即開啟。 在AEM編寫執行個體上，憑證位於KeyStore中。 如果您先前尚未建立KeyStore，請按一下[建立KeyStore] ****，並設定KeyStore的新密碼。 如果伺服器已包含KeyStore，請略過此步驟。  如果您使用Adobe的Reader擴充功能憑證，Keystore檔案密碼一律與私密金鑰密碼相同。
+1. 按一下使用者帳戶的&#x200B;**[!UICONTROL 名稱]**&#x200B;欄位。 **[!UICONTROL 編輯使用者設定]**&#x200B;頁面隨即開啟。 在AEM編寫執行個體上，憑證位於KeyStore中。 如果您先前尚未建立KeyStore，請按一下[建立KeyStore] **&#x200B;**，並設定KeyStore的新密碼。 如果伺服器已包含KeyStore，請略過此步驟。  如果您使用Adobe的Reader擴充功能憑證，Keystore檔案密碼一律與私密金鑰密碼相同。
 1. 在&#x200B;**[!UICONTROL 編輯使用者設定]**&#x200B;頁面上，選取&#x200B;**[!UICONTROL KeyStore]**&#x200B;索引標籤。 展開&#x200B;**[!UICONTROL 從金鑰庫檔案新增私密金鑰]**&#x200B;選項並提供別名。 別名可用來執行Reader擴充功能作業。
 1. 若要上傳憑證檔案，請按一下&#x200B;**[!UICONTROL 選取金鑰存放區檔案]**，然後上傳&lt;filename>.pfx檔案。
 
@@ -788,10 +788,10 @@ DocAssurance服務可套用使用許可權至PDF檔案。 若要套用使用許�
      
    * 磁碟區序列化套件（使用prov.xml檔案和新的序列重新序列化現有的安裝）：以管理員身分從PRTK安裝資料夾執行下列命令，以序列化並啟動使用者端機器上已部署的套件：
 
-         ``
+         &grave;&grave;
          adobe_prtk —tool=VolumeSerialize —provfile=C:\prov.xml -stream
          
-         ``
+         &grave;&grave;
      
 * 若是大規模安裝，請使用[Acrobat Customization Wizard](https://www.adobe.com/devnet-docs/acrobatetk/tools/Wizard/index.html)移除舊版Reader和Acrobat。 自訂安裝程式，並將其部署至組織的所有電腦。
 

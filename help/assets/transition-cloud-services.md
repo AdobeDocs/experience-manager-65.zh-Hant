@@ -52,7 +52,7 @@ ht-degree: 45%
 
    ![chlimage_1-219](assets/chlimage_1-219.png)
 
-1. 指定聯結器的標題和名稱，然後按一下[建立]。**** 自訂連接器位於「套用轉譯服務」步驟5中所述「 **[!UICONTROL 雲端服務]** 」標籤的連 [接器清單中](#applying-the-translation-services)。
+1. 指定聯結器的標題和名稱，然後按一下[建立]。**&#x200B;** 自訂連接器位於「套用轉譯服務」步驟5中所述「 **[!UICONTROL 雲端服務]** 」標籤的連 [接器清單中](#applying-the-translation-services)。
 1. 在套用自訂連接器後，執行「 [建立翻譯專案](translation-projects.md) 」中所述的任何翻譯工作流程。驗證「項目」控制台中翻譯項 **[!UICONTROL 目的「翻譯摘要]** 」表徵圖中連接器的詳 **[!UICONTROL 細資訊]** 。
 
    ![chlimage_1-220](assets/chlimage_1-220.png)

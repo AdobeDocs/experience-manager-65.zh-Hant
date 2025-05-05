@@ -78,7 +78,7 @@ ht-degree: 3%
 
    1. 用滑鼠右鍵按一下&#x200B;**專案**&#x200B;資料夾，然後選取&#x200B;**建立** > **建立節點**。
 
-   1. 確定[建立節點]對話方塊具有下列值，然後按一下[確定] ****：
+   1. 確定[建立節點]對話方塊具有下列值，然後按一下[確定] **&#x200B;**：
 
       **名稱：** downloadFlatPDF （或您要指定給此屬性的名稱）
 
@@ -250,7 +250,7 @@ ht-degree: 3%
 
    1. 用滑鼠右鍵按一下專案資料夾，然後選取&#x200B;**建立>建立節點**。
 
-   1. 確定[建立節點]對話方塊具有下列值，然後按一下[確定] ****：
+   1. 確定[建立節點]對話方塊具有下列值，然後按一下[確定] **&#x200B;**：
 
       **名稱：** letterpdfdownloader (或您要指定給此屬性的名稱 — 必須是唯一的。 如果您在此處使用不同的名稱，請在formaction.js檔案的ACTION_URL變數中指定相同的名稱。)
 
@@ -275,7 +275,7 @@ ht-degree: 3%
       將檔案命名為POST.jsp。 (檔案名稱僅需為POST.jsp。)
 
    1. 連按兩下&#x200B;**POST.jsp**&#x200B;檔案，以在CRX中開啟。
-   1. 將下列程式碼新增至POST.jsp檔案，然後按一下[儲存全部] ****：
+   1. 將下列程式碼新增至POST.jsp檔案，然後按一下[儲存全部] **&#x200B;**：
 
       此程式碼專用於字母轉譯服務。 若是其他資產，請將該資產的Java™程式庫新增至此程式碼。 如需AEM Forms API的詳細資訊，請參閱[AEM Forms API](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html)。
 

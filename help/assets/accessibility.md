@@ -44,7 +44,7 @@ Possible topics to cover in this article are below.
 
 若要讀取包含詳細相容性層級的報表，請參閱[協助工具相容性報表](https://www.adobe.com/accessibility/compliance.html) (ACR)頁面。
 
-若要瞭解[!DNL Dynamic Media]的存取方式，請參閱 [!DNL Dynamic Media]](/help/assets/accessibility-dm.md)中的[存取功能。
+若要瞭解[!DNL Dynamic Media]的存取方式，請參閱 [!DNL Dynamic Media][&#128279;](/help/assets/accessibility-dm.md)中的存取功能。
 
 ## 輔助技術 {#at-support}
 
@@ -79,7 +79,7 @@ Possible topics to cover in this article are below.
 
 ### [!DNL Assets]中的鍵盤快速鍵 {#keyboard-shortcuts}
 
-[!DNL Assets]中的下列動作可搭配列出的鍵盤快速鍵使用。 大部分套用至[!DNL Experience Manager]主控台的鍵盤快速鍵也套用至[!DNL Assets]。 請參閱主控台](/help/sites-authoring/keyboard-shortcuts.md#keyboard-shortcuts)的[鍵盤快速鍵。 瞭解如何[啟用或停用鍵盤快速鍵](/help/sites-authoring/keyboard-shortcuts.md#deactivating-keyboard-shortcuts)。
+[!DNL Assets]中的下列動作可搭配列出的鍵盤快速鍵使用。 大部分套用至[!DNL Experience Manager]主控台的鍵盤快速鍵也套用至[!DNL Assets]。 請參閱主控台[&#128279;](/help/sites-authoring/keyboard-shortcuts.md#keyboard-shortcuts)的鍵盤快速鍵。 瞭解如何[啟用或停用鍵盤快速鍵](/help/sites-authoring/keyboard-shortcuts.md#deactivating-keyboard-shortcuts)。
 
 | 使用者介面或情境 | 鍵盤快速鍵 | 動作 |
 |---|---|---|

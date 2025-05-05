@@ -139,7 +139,7 @@ AEM Communities提供者擴充[AdobeGranite OAuth應用程式和提供者](#adob
 此提供者需要編輯以：
 
 * 允許使用者更新
-* 在範圍](#adobe-granite-oauth-application-and-provider)內新增其他欄位[
+* 在範圍[&#128279;](#adobe-granite-oauth-application-and-provider)內新增其他欄位
 
    * 預設不會包含預設允許的所有欄位。
 
@@ -474,17 +474,17 @@ facebook和Twitter的後續步驟相同：
 1. 修改節點ntBaseLucene-oauth的屬性：
 
    * **[!UICONTROL indexPath]**： `/oak:index/ntBaseLucene-oauth`
-   * **[!UICONTROL 名稱]**： `oauthid-123****`
+   * **[!UICONTROL 名稱]**： `oauthid-123&#x200B;**&#x200B;**`
    * **[!UICONTROL 重新索引]**： `true`
    * **[!UICONTROL reindexCount]**： `1`
 
 1. 在節點/oak：index/ntBaseLucene-oauth/indexRules/nt：base/properties底下：
 
    * 刪除cqTags以外的所有子節點。
-   * 將cqTags重新命名為`oauthid-123****`
-   * 修改節點`oauthid-123****`的屬性
+   * 將cqTags重新命名為`oauthid-123**&#x200B;**`
+   * 修改節點`oauthid-123**&#x200B;**`的屬性
 
-      * **[!UICONTROL 名稱]**： `oauthid-123****`
+      * **[!UICONTROL 名稱]**： `oauthid-123&#x200B;**&#x200B;**`
 
    * 選取&#x200B;**[!UICONTROL 全部儲存]**。
 

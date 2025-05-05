@@ -47,4 +47,4 @@ ht-degree: 1%
 >
 >如果您將資訊清單快取與Web應用程式搭配使用，請務必將&quot;**&amp;amp；ast；**&quot;新增至資訊清單，以確定權杖不會使CSRF權杖產生呼叫離線。 如需詳細資訊，請參閱此[連結](https://www.w3.org/TR/offline-webapps/)。
 >
-如需有關CSRF攻擊和緩解其方法的詳細資訊，請參閱[跨網站請求偽造OWASP頁面](https://owasp.org/www-community/attacks/csrf)。
+>如需有關CSRF攻擊和緩解其方法的詳細資訊，請參閱[跨網站請求偽造OWASP頁面](https://owasp.org/www-community/attacks/csrf)。

@@ -210,11 +210,11 @@ Dynamic Media檢視器、網站頁面和靜態內容等其他內容會繼續從E
    >
    >* ImageServer-&lt;PortId>-&lt;yyyy>&lt;mm>&lt;dd>.log - ImageServer記錄檔提供用於分析內部ImageServer處理序行為的統計資料和分析資訊。
    >
-   影像伺服器記錄檔名稱的範例： `ImageServer-57346-2020-07-25.log`
+   >影像伺服器記錄檔名稱的範例： `ImageServer-57346-2020-07-25.log`
    >
-   * s7access-&lt;yyyy>&lt;mm>&lt;dd>.log - s7access記錄檔會記錄透過`/is/image`和`/is/content`向Dynamic Media提出的每個請求。
+   >* s7access-&lt;yyyy>&lt;mm>&lt;dd>.log - s7access記錄檔會記錄透過`/is/image`和`/is/content`向Dynamic Media提出的每個請求。
    >
-   這些記錄檔僅在啟用Dynamic Media時使用。 它們未包含在從`system/console/status-Bundlelist`頁面產生的&#x200B;**下載完整**&#x200B;套件中；如果您有Dynamic Media問題，在呼叫客戶支援時，請將這兩個記錄附加至問題。
+   >這些記錄檔僅在啟用Dynamic Media時使用。 它們未包含在從`system/console/status-Bundlelist`頁面產生的&#x200B;**下載完整**&#x200B;套件中；如果您有Dynamic Media問題，在呼叫客戶支援時，請將這兩個記錄附加至問題。
 
 ### 如果您將Experience Manager安裝至其他連線埠或內容路徑…… {#if-you-installed-aem-to-a-different-port-or-context-path}
 
@@ -233,7 +233,7 @@ Experience Manager：
 
 >[!NOTE]
 >
-在[Experience Manager Quickstart獨立部署](/help/sites-deploying/deploy.md)中，通常不需要設定&#x200B;**自我網域**，因為連線埠號碼和內容路徑可以自動設定。 不過，如果所有網路介面都已關閉，您必須設定&#x200B;**自我網域**。
+>在[Experience Manager Quickstart獨立部署](/help/sites-deploying/deploy.md)中，通常不需要設定&#x200B;**自我網域**，因為連線埠號碼和內容路徑可以自動設定。 不過，如果所有網路介面都已關閉，您必須設定&#x200B;**自我網域**。
 
 ## 停用Dynamic Media  {#disabling-dynamic-media}
 
@@ -255,9 +255,9 @@ Dynamic Media預設為未啟用。 不過，如果您先前已啟用Dynamic Medi
 
    >[!NOTE]
    >
-   停用Dynamic Media執行模式後，會自動略過產生`cqdam.pyramid.tiff`轉譯的工作流程步驟。 它也會停用動態轉譯支援和其他Dynamic Media功能。
+   >停用Dynamic Media執行模式後，會自動略過產生`cqdam.pyramid.tiff`轉譯的工作流程步驟。 它也會停用動態轉譯支援和其他Dynamic Media功能。
    >
-   另請注意，設定Experience Manager伺服器後，如果Dynamic Media執行模式已停用，則所有以該執行模式上傳的資產現在都會無效。
+   >另請注意，設定Experience Manager伺服器後，如果Dynamic Media執行模式已停用，則所有以該執行模式上傳的資產現在都會無效。
 
 ## （可選）將Dynamic Media預設集和設定從6.3移轉至6.5 （零停機時間） {#optional-migrating-dynamic-media-presets-and-configurations-from-to-zero-downtime}
 
@@ -265,7 +265,7 @@ Dynamic Media預設為未啟用。 不過，如果您先前已啟用Dynamic Medi
 
 >[!NOTE]
 >
-如果您以相容性模式執行Experience Manager執行個體（即已安裝相容性套件），則不需要執行這些命令。
+>如果您以相容性模式執行Experience Manager執行個體（即已安裝相容性套件），則不需要執行這些命令。
 
 對於所有升級（無論是否包含相容性套件），您可以執行下列Linux® curl命令，複製原本隨Dynamic Media提供的預設現成檢視器預設集：
 
@@ -290,13 +290,13 @@ Dynamic Media影像傳送的運作方式是從Experience Manager作者發佈影�
 
 >[!NOTE]
 >
-在所有工作流程中，建立PTIFF的預設記憶體限製為3 GB。 例如，您可以處理一個需要3 GB記憶體的影像，同時暫停其他工作流程，或者您可以同時處理10個影像，每個影像需要300 MB記憶體。
+>在所有工作流程中，建立PTIFF的預設記憶體限製為3 GB。 例如，您可以處理一個需要3 GB記憶體的影像，同時暫停其他工作流程，或者您可以同時處理10個影像，每個影像需要300 MB記憶體。
 >
-記憶體限制是可設定的，且符合系統資源可用性以及正在處理的影像內容型別。 如果您有許多大型資產，且系統上的記憶體充足，您可以提高此限制以確保同時處理影像。
+>記憶體限制是可設定的，且符合系統資源可用性以及正在處理的影像內容型別。 如果您有許多大型資產，且系統上的記憶體充足，您可以提高此限制以確保同時處理影像。
 >
-需要超過最大記憶體限制的影像會遭到拒絕。
+>需要超過最大記憶體限制的影像會遭到拒絕。
 >
-若要變更PTIFF建立的記憶體限制，請瀏覽至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 作業]** > **[!UICONTROL 網頁主控台]** > **[!UICONTROL Adobe CQ Scene7 PTiffManager]**，並變更&#x200B;**[!UICONTROL maxMemory]**&#x200B;值。
+>若要變更PTIFF建立的記憶體限制，請瀏覽至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 作業]** > **[!UICONTROL 網頁主控台]** > **[!UICONTROL Adobe CQ Scene7 PTiffManager]**，並變更&#x200B;**[!UICONTROL maxMemory]**&#x200B;值。
 
 ### 設定驗證 {#setting-up-authentication}
 
@@ -320,7 +320,7 @@ Dynamic Media影像傳送的運作方式是從Experience Manager作者發佈影�
 
    >[!NOTE]
    >
-   請記住密碼，因為稍後當您設定「復寫代理程式」時，必須再次輸入密碼。
+   >請記住密碼，因為稍後當您設定「復寫代理程式」時，必須再次輸入密碼。
 
    ![chlimage_1-508](assets/chlimage_1-508.png)
 
@@ -379,10 +379,10 @@ Replication test succeeded
 
 >[!NOTE]
 >
-您也可以執行下列任一項作業來檢查：
+>您也可以執行下列任一項作業來檢查：
 >
-* 檢查復寫記錄檔，確認資產已復寫。
-* Publish影像。 選取影像，並在下拉式選單中選取&#x200B;**[!UICONTROL 檢視器]**，然後選取檢視器預設集。 選取&#x200B;**[!UICONTROL URL]**。 若要確認您能看見影像，請複製並在瀏覽器中貼上URL路徑。
+>* 檢查復寫記錄檔，確認資產已復寫。
+>* Publish影像。 選取影像，並在下拉式選單中選取&#x200B;**[!UICONTROL 檢視器]**，然後選取檢視器預設集。 選取&#x200B;**[!UICONTROL URL]**。 若要確認您能看見影像，請複製並在瀏覽器中貼上URL路徑。
 >
 
 ### 疑難排解驗證 {#troubleshooting-authentication}
@@ -545,7 +545,7 @@ Dynamic MediaCloud Service支援影像和視訊、視訊分析和視訊編碼等
 
 >[!NOTE]
 >
-設定Dynamic Media Cloud Service之前，請務必先設定您的發佈執行個體。 在設定Dynamic MediaCloud Service之前，您也必須設定復寫。
+>設定Dynamic Media Cloud Service之前，請務必先設定您的發佈執行個體。 在設定Dynamic MediaCloud Service之前，您也必須設定復寫。
 
 **若要設定Dynamic MediaCloud Service：**
 
@@ -570,7 +570,7 @@ Dynamic MediaCloud Service支援影像和視訊、視訊分析和視訊編碼等
 **開始使用：**&#x200B;完成下列三個工作以設定視訊報告。
 
 1. 在第一個作者節點上設定Dynamic Media設定（6.3以前版本）後，請建立Video Analytics預設套件。 此初始工作很重要，因為它可讓新設定繼續使用相同的報表套裝。
-1. 將Video Analytics預設集套件安裝至您設定Dynamic Media組態（6.3以前版本）的任何&#x200B;***新***&#x200B;作者節點&#x200B;******。
+1. 將Video Analytics預設集套件安裝至您設定Dynamic Media組態（6.3以前版本）的任何&#x200B;***新***&#x200B;作者節點&#x200B;**&#x200B;**&#x200B;**。
 1. 驗證及偵錯套件安裝。
 
 ### 設定第一個「作者」節點後，建立Video Analytics預設套件 {#creating-a-video-analytics-preset-package-after-configuring-the-first-author-node}
@@ -627,7 +627,7 @@ Dynamic MediaCloud Service支援影像和視訊、視訊分析和視訊編碼等
      ```
 
    * **透過Experience Manager中的視訊報告工具檢查視訊分析預設集**
-導覽至**[!UICONTROL 工具]** > **[!UICONTROL Assets]** > **[!UICONTROL 視訊報告]**
+導覽至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Assets]** > **[!UICONTROL 視訊報告]**
 
      `https://localhost:4502/mnt/overlay/dam/gui/content/s7dam/videoreports/videoreport.html`
 
@@ -686,7 +686,7 @@ Experience Manager 6.4和更新版本將此預設集儲存在`/conf/global/setti
 
 >[!NOTE]
 >
-依預設，當您選取&#x200B;**[!UICONTROL 轉譯]**&#x200B;時，系統會顯示各種轉譯，當您在資產的詳細資料檢視中選取&#x200B;**[!UICONTROL 檢視器]**&#x200B;時，系統會顯示各種檢視器預設集。 您可以增加或減少看到的數量。 請參閱[增加顯示的影像預設集數目](/help/assets/managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display)或[增加顯示的檢視器預設集數目](/help/assets/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display)。
+>依預設，當您選取&#x200B;**[!UICONTROL 轉譯]**&#x200B;時，系統會顯示各種轉譯，當您在資產的詳細資料檢視中選取&#x200B;**[!UICONTROL 檢視器]**&#x200B;時，系統會顯示各種檢視器預設集。 您可以增加或減少看到的數量。 請參閱[增加顯示的影像預設集數目](/help/assets/managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display)或[增加顯示的檢視器預設集數目](/help/assets/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display)。
 
 ## 篩選資產以進行復寫 {#filtering-assets-for-replication}
 
@@ -749,7 +749,7 @@ Experience Manager 6.4和更新版本將此預設集儲存在`/conf/global/setti
 
 >[!NOTE]
 >
-篩選器適用於MIME型別，且不得為路徑專用。
+>篩選器適用於MIME型別，且不得為路徑專用。
 
 ### 為僅限視訊的部署設定資產篩選器 {#setting-up-asset-filters-for-video-only-deployments}
 
@@ -791,9 +791,9 @@ Experience Manager 6.4和更新版本將此預設集儲存在`/conf/global/setti
 
 >[!NOTE]
 >
-如果作者中有許多不同的篩選器，每個代理程式都需要指派不同的使用者。 granite程式碼會強制每個使用者一個篩選器的模型。 每個篩選器設定一律會有不同的使用者。
+>如果作者中有許多不同的篩選器，每個代理程式都需要指派不同的使用者。 granite程式碼會強制每個使用者一個篩選器的模型。 每個篩選器設定一律會有不同的使用者。
 >
-您在伺服器上使用多個篩選器嗎？ 例如，一個篩選器用於復寫至發佈，第二個篩選器用於s7delivery。 若是如此，您必須確定這兩個篩選器在`jcr:content`節點中指派了不同的&#x200B;**userId**。 請參閱下列影像：
+>您在伺服器上使用多個篩選器嗎？ 例如，一個篩選器用於復寫至發佈，第二個篩選器用於s7delivery。 若是如此，您必須確定這兩個篩選器在`jcr:content`節點中指派了不同的&#x200B;**userId**。 請參閱下列影像：
 
 ![image-2018-01-16-10-26-28-465](assets/image-2018-01-16-10-26-28-465.png)
 
@@ -844,7 +844,7 @@ Experience Manager 6.4和更新版本將此預設集儲存在`/conf/global/setti
 
 >[!NOTE]
 >
-Dynamic Media在啟用](#enabling-dynamic-media)後可立即運作[。 不過，您可以選擇設定Dynamic Media Image Server以符合特定規格或需求，進而微調安裝。
+>Dynamic Media在啟用[&#128279;](#enabling-dynamic-media)後可立即運作。 不過，您可以選擇設定Dynamic Media Image Server以符合特定規格或需求，進而微調安裝。
 
 **先決條件** - *在*&#x200B;您設定Dynamic Media Image Server之前，請確定Windows®的VM包含Microsoft® Visual C++程式庫的安裝。 執行Dynamic Media Image Server需要程式庫。 您可以[在這裡](https://www.microsoft.com/en-us/download/details.aspx?id=26999)下載Microsoft® Visual C++ 2010可轉散發套件(x64)。
 
@@ -863,7 +863,7 @@ Dynamic Media在啟用](#enabling-dynamic-media)後可立即運作[。 不過，
 
    >[!NOTE]
    >
-   通常不需要變更預設值。 但是，如果您確實變更了預設值，則必須重新啟動束以使變更生效。
+   >通常不需要變更預設值。 但是，如果您確實變更了預設值，則必須重新啟動束以使變更生效。
 
    | 屬性 | 預設值 | 說明 |
    | --- | --- | --- |
@@ -880,7 +880,7 @@ Dynamic Media在啟用](#enabling-dynamic-media)後可立即運作[。 不過，
 
    >[!NOTE]
    >
-   Dynamic Media Image Server會使用自己的磁碟快取來快取回應。 Experience ManagerHTTP快取和Dispatcher無法用於快取來自Dynamic Media影像伺服器的回應。
+   >Dynamic Media Image Server會使用自己的磁碟快取來快取回應。 Experience ManagerHTTP快取和Dispatcher無法用於快取來自Dynamic Media影像伺服器的回應。
 
    | 屬性 | 預設值 | 說明 |
    |---|---|---|
@@ -939,7 +939,7 @@ Adobe的色彩管理使用ICC （國際色彩聯盟）設定檔，這是由ICC�
 
 >[!NOTE]
 >
-您必須安裝Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-12445)的[Feature Pack 12445，才能使用標準Adobe色彩設定檔集。 所有Feature Pack和Service Pack都可在[軟體發佈](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)取得。 Feature Pack 12445提供Adobe的色彩設定檔。
+>您必須安裝Software Distribution[&#128279;](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-12445)的Feature Pack 12445，才能使用標準Adobe色彩設定檔集。 所有Feature Pack和Service Pack都可在[軟體發佈](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)取得。 Feature Pack 12445提供Adobe的色彩設定檔。
 
 
 ### 安裝Feature Pack 12445 {#installing-feature-pack}
@@ -1041,7 +1041,7 @@ Adobe的色彩管理使用ICC （國際色彩聯盟）設定檔，這是由ICC�
 
 >[!NOTE]
 >
-屬性名稱會區分大小寫，且必須全部小寫。
+>屬性名稱會區分大小寫，且必須全部小寫。
 
 **色彩設定檔表格**
 
@@ -1252,23 +1252,23 @@ Adobe的色彩管理使用ICC （國際色彩聯盟）設定檔，這是由ICC�
   <tr>
    <td>複製檢視器的內嵌程式碼</td>
    <td><p>複製內嵌程式碼對話方塊會顯示類似下列的程式碼片段（程式碼範例僅供示範之用）：</p> <p><code class="code">&lt;style type="text/css"&gt;
-       #s7basiczoom_div.s7basiczoomviewer{
+       &#x200B;#s7basiczoom_div.s7basiczoomviewer&lbrace;
        width:100%;
        height:auto;
-       }
+       &rbrace;
        &lt;/style&gt;
        &lt;script
        type="text/javascript" src="https://PUBLISHNODE/etc/dam/viewers/s7viewers/html5/js/BasicZoomViewer.js"&gt;&lt;/script&gt;
        &lt;div id="s7basiczoom_div"&gt;&lt;/div&gt;
        &lt;script type="text/javascript"&gt;
-       var s7basiczoomviewer = new s7viewers.BasicZoomViewer({
+       var s7basiczoomviewer = new s7viewers.BasicZoomViewer(&lbrace;
        "containerId" : "s7basiczoom_div",
-       "params" : {
+       "params" : &lbrace;
        "serverurl" : "https://IMAGESERVICEPUBLISHNODE/is/image/",
        "contenturl" : "https://PUBLISHNODE/",
        "config" : "/conf/global/settings/dam/dm/presets/viewer/Zoom_dark",
-       "asset" : "/content/dam/path/to/Image.jpg" }
-       }).init();
+       "asset" : "/content/dam/path/to/Image.jpg" &rbrace;
+       &rbrace;).init();
        &lt;/script&gt;</code></p> <p>其中<code>PUBLISHNODE</code>參考一般Experience Manager發佈節點，<code>IMAGESERVICEPUBLISHNODE</code>參考影像服務URL。</p> <p>另請參閱<a href="/help/assets/delivering-dynamic-media-assets.md">傳遞Dynamic Media Assets</a>。</p> </td>
   </tr>
  </tbody>

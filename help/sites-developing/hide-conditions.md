@@ -77,7 +77,7 @@ ${cqDesign.property1 == 'someText' && cqDesign.property2 || cqDesign.property3 !
 
 1. 從設計組態中提取`disableChildren`的值，而運算式`${cqDesign.disableChildren}`評估為`false`，表示選項將不會呈現為元件的一部分。
 
-   您可以在GitHub](https://github.com/adobe/aem-core-wcm-components/blob/main/content/src/content/jcr_root/apps/core/wcm/components/list/v1/list/_cq_dialog/.content.xml#L40)中檢視隱藏運算式為`granite:hide`屬性[的值。
+   您可以在GitHub[&#128279;](https://github.com/adobe/aem-core-wcm-components/blob/main/content/src/content/jcr_root/apps/core/wcm/components/list/v1/list/_cq_dialog/.content.xml#L40)中檢視隱藏運算式為`granite:hide`屬性的值。
 
 1. 使用清單元件時，不再為頁面作者轉譯選項&#x200B;**子頁面**。
 

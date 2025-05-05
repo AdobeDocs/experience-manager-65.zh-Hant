@@ -53,7 +53,7 @@ ht-degree: 1%
    ![熒幕擷圖–2018-2-5pattern-detector](assets/screenshot-2018-2-5pattern-detector.png)
 
 * **透過互動式文字或一般JSON介面**
-* **透過反應式JSON行介面，**可在每行產生個別的JSON檔案。
+* **透過反應式JSON行介面，**&#x200B;可在每行產生個別的JSON檔案。
 
 以下詳細說明了這兩種方法：
 

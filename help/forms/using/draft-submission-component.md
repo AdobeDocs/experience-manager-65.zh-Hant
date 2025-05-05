@@ -100,7 +100,7 @@ Forms入口網站可讓您將資料儲存在本機AEM存放庫、遠端AEM存放
 
 Forms入口網站提供立即可用的服務(API)，將資料儲存在本機與遠端AEM Forms發佈執行個體的crx存放庫上。 您可以用自訂實作來取代預設功能，如[為草稿和提交設定儲存服務](/help/forms/using/configuring-draft-submission-storage.md)文章中所述。 如需自訂實作中所需方法在安全位置儲存內容的詳細資訊，請參閱[自訂草稿和提交資料服務](/help/forms/using/custom-draft-submission-data-services.md)以及[草稿和提交元件的自訂儲存](/help/forms/using/adding-custom-storage-provider-forms.md)。
 
-AEM Forms檔案提供將草稿與提交元件與資料庫](integrate-draft-submission-database.md)整合的[範例。 您可以使用範例實作來開發自己的自訂實作。
+AEM Forms檔案提供將草稿與提交元件與資料庫[&#128279;](integrate-draft-submission-database.md)整合的範例。 您可以使用範例實作來開發自己的自訂實作。
 
 ## 相關文章
 

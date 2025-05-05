@@ -33,7 +33,7 @@ AEM Forms可讓您根據使用者的角色或職能，限制使用者的規則�
 
    ![1-2](assets/1-2.png)
 
-1. 在Web主控台視窗中，找到並按一下&#x200B;**[!UICONTROL 最適化表單和互動式通訊Web通道設定]**。 **[!UICONTROL 最適化表單和互動式通訊Web Channel設定]**&#x200B;對話方塊就會顯示。 不要變更任何值，然後按一下[儲存]。****
+1. 在Web主控台視窗中，找到並按一下&#x200B;**[!UICONTROL 最適化表單和互動式通訊Web通道設定]**。 **[!UICONTROL 最適化表單和互動式通訊Web Channel設定]**&#x200B;對話方塊就會顯示。 不要變更任何值，然後按一下[儲存]。**&#x200B;**
 
    它會在CRX存放庫中建立檔案/apps/system/config/com.adobe.aemds.guide.service.impl.AdaptiveFormConfigurationServiceImpl.config 。
 

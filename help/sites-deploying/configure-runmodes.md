@@ -121,8 +121,8 @@ nosamplecontent執行模式是針對生產安裝所設計。
 如果您已經為多個執行模式定義了配置，則需要定義要在啟動時使用的配置。 有數種方法可指定要使用的執行模式；解析的順序為：
 
 1. [系統屬性(](#using-a-system-property-in-the-start-script)
-1. [](#using-the-sling-properties-file)
-1. [](#using-the-r-option)
+1. [&#128279;](#using-the-sling-properties-file)
+1. [&#128279;](#using-the-r-option)
 1. [檔案名稱偵測](#filename-detection-renaming-the-jar-file)
 
 當您使用應用程式伺服器時，您也可以[在web.xml](#defining-the-run-mode-in-web-xml-with-application-server)中定義執行模式。

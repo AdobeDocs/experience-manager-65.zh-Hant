@@ -85,13 +85,13 @@ ht-degree: 15%
 
 當您選取選項時，會根據選項節點及其子節點（如果有的話）的`value`屬性來執行搜尋。 系統會周遊選項節點下的整個樹狀結構，並使用OR運算來結合每個子節點的`value`屬性，以形成搜尋查詢。
 
-例如，如果您為檔案類型選取「影像」，則會使用OR運算結合屬性來建立資 `value` 產的搜尋查詢。例如，通過組合影像/jpeg *、* image/gif *、* png影像、影像 */jpeg影像、以及使用OR操作對Tiff屬性進行搜索的Joff影像*****`jcr:content/metadata/dc:format` /Tiff影像的匹配結果來構建影像搜索查詢。
+例如，如果您為檔案類型選取「影像」，則會使用OR運算結合屬性來建立資 `value` 產的搜尋查詢。例如，通過組合影像/jpeg *、* image/gif *、* png影像、影像 */jpeg影像、以及使用OR操作對Tiff屬性進行搜索的Joff影像&#x200B;**&#x200B;***`jcr:content/metadata/dc:format` /Tiff影像的匹配結果來構建影像搜索查詢。
 
 ![檔案型別的Value屬性（如CRXDE中所見）用於搜尋查詢以運作](assets/filetype-value-property.png)
 
 檔案型別的Value屬性（如CRXDE中所見）可用來讓搜尋查詢運作
 
-您不必在CRXDE存放庫中手動建立選項的節點結構，而是可以透過指定對應的索引鍵值配對，在JSON檔案中定義選項。 在「屬性名稱」欄位中指定JSON檔 **[!UICONTROL 案的路徑]** 。例如，您可以定義鍵值配對、 `image/bmp`、 `image/gif``image/jpeg`、和 `image/png` 並指定其值，如下列範例JSON檔案中所示。在&#x200B;**[!UICONTROL 屬性名稱]**&#x200B;欄位中，您可以指定此檔案的CRXDE路徑。
+您不必在CRXDE存放庫中手動建立選項的節點結構，而是可以透過指定對應的索引鍵值配對，在JSON檔案中定義選項。 在「屬性名稱」欄位中指定JSON檔 **[!UICONTROL 案的路徑]** 。例如，您可以定義鍵值配對、 `image/bmp`、 `image/gif` `image/jpeg`、和 `image/png` 並指定其值，如下列範例JSON檔案中所示。在&#x200B;**[!UICONTROL 屬性名稱]**&#x200B;欄位中，您可以指定此檔案的CRXDE路徑。
 
 ```json
 {
@@ -113,7 +113,7 @@ ht-degree: 15%
 
 1. 按一下[!DNL Experience Manager]標誌，然後前往&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 一般]** > **[!UICONTROL 搜尋Forms]**。
 1. 從&#x200B;**[!UICONTROL 搜尋Forms]**&#x200B;頁面，選取&#x200B;**[!UICONTROL Assets管理搜尋邊欄]**，然後按一下&#x200B;**[!UICONTROL 編輯]**。
-1. 在「編 **[!UICONTROL 輯搜索表單]** 」頁中，將「選 **[!UICONTROL 項謂詞」從]** 「選擇謂詞 **** 」頁籤拖到主窗格。
+1. 在「編 **[!UICONTROL 輯搜索表單]** 」頁中，將「選 **[!UICONTROL 項謂詞」從]** 「選擇謂詞 **&#x200B;**&#x200B;」頁籤拖到主窗格。
 1. 在「設 **[!UICONTROL 定]** 」標籤中，輸入屬性的標籤和名稱。例如，若要根據資產的格式來搜尋資產，請為標籤指定好記的名稱，例如&#x200B;**[!UICONTROL 檔案型別]**。 指定在屬性欄位中執行搜尋時所依據的屬性，例如`jcr:content/metadata/dc:format.`
 1. 執行下列任一項作業：
 

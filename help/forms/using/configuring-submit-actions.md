@@ -77,7 +77,7 @@ ht-degree: 48%
 
 >[!NOTE]
 >
-若要將欄位做為 REST URL 的參數傳遞，所有欄位都必須具有不同的元素名稱，即使這些欄位位於不同面板上也是如此。
+>若要將欄位做為 REST URL 的參數傳遞，所有欄位都必須具有不同的元素名稱，即使這些欄位位於不同面板上也是如此。
 
 ### Post將資料提交至資源或外部rest端點  {#post-submitted-data-to-a-resource-or-external-rest-end-point-nbsp}
 
@@ -108,7 +108,7 @@ ht-degree: 48%
 
 >[!NOTE]
 >
-所有表單欄位都必須有不同的元素名稱（即使它們放在不同的面板上），才能在電子郵件中包含表單資料。
+>所有表單欄位都必須有不同的元素名稱（即使它們放在不同的面板上），才能在電子郵件中包含表單資料。
 
 ## 透過電子郵件傳送PDF {#send-pdf-via-email}
 
@@ -116,7 +116,7 @@ ht-degree: 48%
 
 >[!NOTE]
 >
-此提交動作適用於具有記錄檔案範本的XFA型最適化表單和XSD型最適化表單。
+>此提交動作適用於具有記錄檔案範本的XFA型最適化表單和XSD型最適化表單。
 
 ## 叫用Forms Workflow {#invoke-a-forms-workflow}
 
@@ -150,7 +150,7 @@ ht-degree: 48%
 
 >[!NOTE]
 >
-無論工作流程模型是否標示為外部資料儲存，都可以使用變數。
+>無論工作流程模型是否標示為外部資料儲存，都可以使用變數。
 
 * **附件**：您可以使用「**[!UICONTROL 附件路徑]**」選項，指定用來儲存上傳到最適化表單之附件的資料夾名稱。該資料夾會建立在相對於承載的位置。如果工作流程標記為外部資料儲存空間，請使用變數選項，並從工作流程模型可用的變數清單中選取變數。
 
@@ -173,7 +173,7 @@ ht-degree: 48%
 
 >[!NOTE]
 >
-提交至Microsoft® SharePoint清單功能是在AEM 6.5 Forms Service Pack 19 (6.5.19.0)中引入。
+>提交至Microsoft® SharePoint清單功能是在AEM 6.5 Forms Service Pack 19 (6.5.19.0)中引入。
 
 **[!UICONTROL 提交至SharePoint]**&#x200B;提交動作會將最適化表單與Microsoft® SharePoint儲存體連線。 您可以將表單資料檔案、附件或記錄檔案提交至連線的Microsoft® Sharepoint儲存體。
 
@@ -199,7 +199,7 @@ ht-degree: 48%
 
      >[!NOTE]
      >
-     **用戶端密碼**&#x200B;欄位為必填或選用，取決於您的 Azure Active Directory 應用程式設定。如果您的應用程式設定為使用用戶端密碼，就必須提供用戶端密碼。
+     >**用戶端密碼**&#x200B;欄位為必填或選用，取決於您的 Azure Active Directory 應用程式設定。如果您的應用程式設定為使用用戶端密碼，就必須提供用戶端密碼。
 
 1. 按一下「**[!UICONTROL 連結]**」。連結成功後，就會顯示 `Connection Successful` 訊息。
 1. 從下拉式清單中選取&#x200B;**[!UICONTROL SharePoint網站]**&#x200B;和&#x200B;**[!UICONTROL SharePoint清單]**。
@@ -218,16 +218,16 @@ ht-degree: 48%
 
 >[!NOTE]
 >
-Microsoft® SharePoint清單不支援下列欄型別：
-* 影像欄
-* 中繼資料欄
-* 人員欄
-* 外部資料欄
+>Microsoft® SharePoint清單不支援下列欄型別：
+>* 影像欄
+>* 中繼資料欄
+>* 人員欄
+>* 外部資料欄
 
 
 >[!NOTE]
 >
-若要設定值，請[使用 AEM SDK 產生 OSGi 設定](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=zh-Hant#generating-osgi-configurations-using-the-aem-sdk-quickstart)，並[將設定部署至](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=zh-Hant#deployment-process)您的 Cloud Service 執行個體。
+>若要設定值，請[使用 AEM SDK 產生 OSGi 設定](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=zh-Hant#generating-osgi-configurations-using-the-aem-sdk-quickstart)，並[將設定部署至](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=zh-Hant#deployment-process)您的 Cloud Service 執行個體。
 
 ## 最適化表單中的伺服器端重新驗證 {#server-side-revalidation-in-adaptive-form}
 
@@ -255,7 +255,7 @@ Microsoft® SharePoint清單不支援下列欄型別：
 
 >[!NOTE]
 >
-伺服器端驗證會驗證表單模型。建議您建立個別的使用者端程式庫進行驗證，不要將其與相同使用者端程式庫中的HTML樣式和DOM操作等其他專案混合。
+>伺服器端驗證會驗證表單模型。建議您建立個別的使用者端程式庫進行驗證，不要將其與相同使用者端程式庫中的HTML樣式和DOM操作等其他專案混合。
 
 ### 支援驗證運算式中的自訂函數 {#supporting-custom-functions-in-validation-expressions-br}
 

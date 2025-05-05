@@ -63,7 +63,7 @@ ht-degree: 16%
 
    >[!NOTE]
    >
-   請確定Cloud Service設定頁面的URL以&#x200B;**HTTPS**&#x200B;開頭。 如果沒有，請[啟用AEM [!DNL Forms]伺服器的SSL](/help/sites-administering/ssl-by-default.md)。
+   >請確定Cloud Service設定頁面的URL以&#x200B;**HTTPS**&#x200B;開頭。 如果沒有，請[啟用AEM [!DNL Forms]伺服器的SSL](/help/sites-administering/ssl-by-default.md)。
 
 
 1. 在設定頁面上，點選「**[!UICONTROL 建立]**」以在AEM [!DNL Forms]中建立[!DNL Adobe Sign]設定。
@@ -91,12 +91,12 @@ ht-degree: 16%
 
    其中：
 
-   **na1** 是指預設的資料庫分片。您可以修改資料庫分片的值。確保[!DNL  Adobe Acrobat Sign] Cloud Configurations 指向[正確的分片](https://helpx.adobe.com/sign/using/identify-account-shard.html)。
+   **na1** 是指預設的資料庫分片。您可以修改資料庫分片的值。確保[!DNL &#x200B; Adobe Acrobat Sign] Cloud Configurations 指向[正確的分片](https://helpx.adobe.com/sign/using/identify-account-shard.html)。
 
    >[!NOTE]
    >
-   * 保持&#x200B;**建立Adobe Acrobat Sign設定**&#x200B;頁面開啟。 不要關閉它。 在設定[!DNL Adobe Acrobat Sign]應用程式的OAuth設定後，您可以擷取&#x200B;**使用者端識別碼**&#x200B;和&#x200B;**使用者端密碼**，如即將進行的步驟所述。
-   * 登入您的Adobe Sign帳戶後，請瀏覽至&#x200B;**[!UICONTROL Acrobat Sign API]** > **[!UICONTROL API資訊]** > **[!UICONTROL REST API方法檔案]** > **[!UICONTROL OAuth存取Token]**，以存取與Adobe Sign OAuth URL和存取權杖URL相關的資訊。
+   >* 保持&#x200B;**建立Adobe Acrobat Sign設定**&#x200B;頁面開啟。 不要關閉它。 在設定[!DNL Adobe Acrobat Sign]應用程式的OAuth設定後，您可以擷取&#x200B;**使用者端識別碼**&#x200B;和&#x200B;**使用者端密碼**，如即將進行的步驟所述。
+   >* 登入您的Adobe Sign帳戶後，請瀏覽至&#x200B;**[!UICONTROL Acrobat Sign API]** > **[!UICONTROL API資訊]** > **[!UICONTROL REST API方法檔案]** > **[!UICONTROL OAuth存取Token]**，以存取與Adobe Sign OAuth URL和存取權杖URL相關的資訊。
 
 1. 設定 [!DNL Adobe Sign] 應用程式的 OAuth 設定：
 
@@ -134,7 +134,7 @@ ht-degree: 16%
    >
    >Ensure that your author and publish instance configurations point to the same shard. If you create multiple Adobe Sign configurations for an organization, ensure all the configurations utilize the same shard. -->
 
-1. 返回&#x200B;**[!UICONTROL 建立Adobe Sign設定]**&#x200B;頁面。 在&#x200B;**[!UICONTROL 設定]**&#x200B;索引標籤中，指定&#x200B;**使用者端識別碼** （也稱為應用程式識別碼）和&#x200B;**使用者端密碼**。 使用為AEM Forms建立的Adobe Sign應用程式](https://opensource.adobe.com/acrobat-sign/developer_guide/helloworld.html#get-the-app-id-and-secret)的[使用者端ID和使用者端密碼。
+1. 返回&#x200B;**[!UICONTROL 建立Adobe Sign設定]**&#x200B;頁面。 在&#x200B;**[!UICONTROL 設定]**&#x200B;索引標籤中，指定&#x200B;**使用者端識別碼** （也稱為應用程式識別碼）和&#x200B;**使用者端密碼**。 使用為AEM Forms建立的Adobe Sign應用程式[&#128279;](https://opensource.adobe.com/acrobat-sign/developer_guide/helloworld.html#get-the-app-id-and-secret)的使用者端ID和使用者端密碼。
 
 1. 選取&#x200B;**[!UICONTROL 同時啟用附件的Adobe Sign]**&#x200B;選項，以將最適化表單附加的檔案附加至要簽名的對應[!DNL Adobe Sign]檔案。
 
@@ -153,7 +153,7 @@ ht-degree: 16%
 
 >[!NOTE]
 >
-若要設定Adobe Sign沙箱，您可以依照[Adobe Sign](#adobe-sign)中說明的相同設定步驟操作。
+>若要設定Adobe Sign沙箱，您可以依照[Adobe Sign](#adobe-sign)中說明的相同設定步驟操作。
 
 ## 連線適用於政府的AEM Forms與Adobe Acrobat Sign Solutions {#adobe-acrobat-sign-for-government}
 
@@ -189,8 +189,8 @@ ht-degree: 16%
 >[!NOTE]
 >
 >
-* `re-direct URL`應包含[最上層](https://en.wikipedia.org/wiki/Top-level_domain)網域。 例如 `https://adobe.com/libs/adobesign/cloudservices/adobesign/createcloudconfigwizard/cloudservices.html/conf/global`
-* 請勿使用本機URL做為`re-direct URL`。 例如，`https://localhost:4502/libs/adobesign/cloudservices/adobesign/createcloudconfigwizard/cloudservices.html/conf/global`。
+>* `re-direct URL`應包含[最上層](https://en.wikipedia.org/wiki/Top-level_domain)網域。 例如 `https://adobe.com/libs/adobesign/cloudservices/adobesign/createcloudconfigwizard/cloudservices.html/conf/global`
+>* 請勿使用本機URL做為`re-direct URL`。 例如，`https://localhost:4502/libs/adobesign/cloudservices/adobesign/createcloudconfigwizard/cloudservices.html/conf/global`。
 
 
 #### 與Adobe Sign團隊共用重新導向URL和範圍並接收認證
@@ -240,11 +240,11 @@ ht-degree: 16%
 
    其中：
 
-   **na1** 是指預設的資料庫分片。您可以修改資料庫分片的值。確保[!DNL  Adobe Acrobat Sign] Cloud Configurations 指向[正確的分片](https://helpx.adobe.com/sign/using/identify-account-shard.html)。
+   **na1** 是指預設的資料庫分片。您可以修改資料庫分片的值。確保[!DNL &#x200B; Adobe Acrobat Sign] Cloud Configurations 指向[正確的分片](https://helpx.adobe.com/sign/using/identify-account-shard.html)。
 
    >[!NOTE]
    >
-   * 登入您的Adobe Sign帳戶後，請瀏覽至&#x200B;**[!UICONTROL Acrobat Sign API]** > **[!UICONTROL API資訊]** > **[!UICONTROL REST API方法檔案]** > **[!UICONTROL OAuth存取Token]**，以存取與Adobe Sign oAuth URL和存取權杖URL相關的資訊。
+   >* 登入您的Adobe Sign帳戶後，請瀏覽至&#x200B;**[!UICONTROL Acrobat Sign API]** > **[!UICONTROL API資訊]** > **[!UICONTROL REST API方法檔案]** > **[!UICONTROL OAuth存取Token]**，以存取與Adobe Sign oAuth URL和存取權杖URL相關的資訊。
 
 1. 在上一節中，將Adobe Acrobat Sign為政府解決方案代表([Adobe Professional Services團隊成員])共用的認證用作[**[!UICONTROL 使用者端識別碼]**&#x200B;和&#x200B;**[!UICONTROL 使用者端密碼]**]。
 

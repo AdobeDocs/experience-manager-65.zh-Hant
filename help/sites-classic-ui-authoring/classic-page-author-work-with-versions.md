@@ -67,7 +67,7 @@ ht-degree: 0%
 
    ![screen_shot_2012-02-08at45743pm](assets/screen_shot_2012-02-08at45743pm.png)
 
-1. 選取您要還原的版本，然後按一下[還原]。**** AEM會還原您選取的版本（或樹狀結構）。
+1. 選取您要還原的版本，然後按一下[還原]。**&#x200B;** AEM會還原您選取的版本（或樹狀結構）。
 
 ### 從主控台還原樹狀結構 {#restoring-a-tree-from-the-console}
 
@@ -161,7 +161,7 @@ Timewarp可在Sidekick中使用。
 
    1. 開啟&#x200B;**版本設定**&#x200B;標籤，然後按一下&#x200B;**時間扭曲** （靠近sidekick底部）。
 
-   1. 使用Timewarp行事曆](#using-the-timewarp-calendar)，使用[之後顯示的sidekick對話方塊。
+   1. 使用Timewarp行事曆[&#128279;](#using-the-timewarp-calendar)，使用之後顯示的sidekick對話方塊。
 
 1. 按一下&#x200B;**顯示時間表** — 檔案的時間表會出現；例如：
 

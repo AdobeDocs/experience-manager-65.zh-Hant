@@ -43,11 +43,11 @@ ht-degree: 0%
 
    * 選取`/apps`節點
 
-      * **建立名為**[!UICONTROL &#x200B;自訂&#x200B;]**的資料夾**
+      * **建立名為**&#x200B;[!UICONTROL &#x200B;自訂&#x200B;]&#x200B;**的資料夾**
 
    * 選取`/apps/custom`節點
 
-      * **建立名為**[!UICONTROL &#x200B;元件&#x200B;]**的資料夾**
+      * **建立名為**&#x200B;[!UICONTROL &#x200B;元件&#x200B;]&#x200B;**的資料夾**
 
 1. 選取`/apps/custom/components`節點
 

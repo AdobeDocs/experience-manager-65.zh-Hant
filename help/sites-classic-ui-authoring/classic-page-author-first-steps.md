@@ -58,7 +58,7 @@ ht-degree: 0%
 
 ### 發佈頁面 {#publishing-a-page}
 
-當您完成編輯頁面後，您將會想要發佈（或啟動）您的頁面](/help/sites-classic-ui-authoring/classic-page-author-publish-pages.md#main-pars-title-10)，以便您的網站中的訪客可以使用該頁面。[
+當您完成編輯頁面後，您將會想要發佈（或啟動）您的頁面[&#128279;](/help/sites-classic-ui-authoring/classic-page-author-publish-pages.md#main-pars-title-10)，以便您的網站中的訪客可以使用該頁面。
 
 ## 其他動作 {#further-actions}
 

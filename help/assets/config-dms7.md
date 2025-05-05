@@ -120,6 +120,7 @@ Feature Pack 18912可讓您透過FTP大量擷取資產，或在Experience Manage
 1. 連線成功時，請設定下列專案。 需要以星號(*)標示的標題：
 
    * **[!UICONTROL 公司]** - Dynamic Media帳戶的名稱。
+
      >[!IMPORTANT]
      >
      >Experience Manager的執行個體僅支援Cloud Service中的一個Dynamic Media設定；請勿新增多個設定。 Experience Manager執行個體上的多個Dynamic Media設定是&#x200B;_不支援或Adobe建議的_。
@@ -146,21 +147,21 @@ Feature Pack 18912可讓您透過FTP大量擷取資產，或在Experience Manage
    * **[!UICONTROL Dynamic Media同步模式]**
       * **[!UICONTROL 預設為啟用]** — 除非您特別標籤要排除的資料夾，否則預設會將設定套用至所有資料夾。<!-- you can then deselect the folders that you do not want the configuration applied to.-->
       * **[!UICONTROL 預設為停用]** — 在您明確標示選取的資料夾以同步至Dynamic Media之前，此設定不會套用至任何資料夾。
-若要將選取的資料夾標示為同步至Dynamic Media，請選取資產資料夾，然後在工具列上選取**[!UICONTROL 屬性]**。 在&#x200B;**[!UICONTROL 詳細資料]**&#x200B;標籤的&#x200B;**[!UICONTROL Dynamic Media同步模式]**&#x200B;下拉式清單中，從下列三個選項中選擇。 完成後，選取&#x200B;**[!UICONTROL 儲存]**。 *請記住：如果您先前選取了&#x200B;**[!UICONTROL 同步所有內容]**，則無法使用這三個選項。*&#x200B;另請參閱[在Dynamic Media的資料夾層級使用選擇性Publish](/help/assets/selective-publishing.md)。
+若要將選取的資料夾標示為同步至Dynamic Media，請選取資產資料夾，然後在工具列上選取&#x200B;**[!UICONTROL 屬性]**。 在&#x200B;**[!UICONTROL 詳細資料]**&#x200B;標籤的&#x200B;**[!UICONTROL Dynamic Media同步模式]**&#x200B;下拉式清單中，從下列三個選項中選擇。 完成後，選取&#x200B;**[!UICONTROL 儲存]**。 *請記住：如果您先前選取了&#x200B;**[!UICONTROL 同步所有內容]**，則無法使用這三個選項。*&#x200B;另請參閱[在Dynamic Media的資料夾層級使用選擇性Publish](/help/assets/selective-publishing.md)。
          * **[!UICONTROL 已繼承]** — 資料夾上沒有明確的同步值；而是從資料夾的其中一個上階資料夾或雲端設定中的預設模式繼承同步值。 繼承的詳細狀態會透過工具提示顯示。
          * **[!UICONTROL 啟用子資料夾]** — 包含此子樹狀結構中的所有專案，以便同步至Dynamic Media。 資料夾特定的設定會覆寫雲端設定中的預設模式。
          * **[!UICONTROL 已停用子資料夾]** — 排除此子樹狀結構中所有要同步至Dynamic Media的內容。
 
    >[!NOTE]
    >
-   >Dynamic Media - Scene7模式中不支援版本設定。 此外，延遲啟動僅適用於在「編輯動態媒體設定」頁面中的「發佈資產 ********」設定為「啟動時」，然後只適用於在首次啟動資產時。
+   >Dynamic Media - Scene7模式中不支援版本設定。 此外，延遲啟動僅適用於在「編輯動態媒體設定」頁面中的「發佈資產 **&#x200B;**&#x200B;**&#x200B;**」設定為「啟動時」，然後只適用於在首次啟動資產時。
    >
    >資產啟動後，所有更新都會立即上線發佈至S7傳送。
 
 1. 選取「**[!UICONTROL 儲存]**」。
 1. 為了在發佈Dynamic Media內容之前安全地預覽內容，Experience Manager Author會使用權杖型驗證，因此Experience Manager Author預設會預覽Dynamic Media內容。 不過，您可以「允許列出」更多IP，讓使用者存取安全地預覽內容。 若要在Experience Manager中設定此動作，請參閱[設定影像伺服器的Dynamic Media Publish設定 — 安全性索引標籤](/help/assets/dm-publish-settings.md#security-tab)。
 
-如果您想進一步自訂設定，例如啟用ACL （存取控制清單）許可權，您可以選擇在Dynamic Media - Scene7模式](#optional-configuring-advanced-settings-in-dynamic-media-scene-mode)的[ （選擇性）設定進階設定下完成任何工作。
+如果您想進一步自訂設定，例如啟用ACL （存取控制清單）許可權，您可以選擇在Dynamic Media - Scene7模式[&#128279;](#optional-configuring-advanced-settings-in-dynamic-media-scene-mode)的 （選擇性）設定進階設定下完成任何工作。
 
 <!-- 1. To securely preview Dynamic Media content before it gets published, Experience Manager uses token-based validation and hence Experience Manager Author previews Dynamic Media content by default. However, you can *allowlist* more IPs to provide users access to securely preview content. To set up this action in Experience Manager, see [Configure Dynamic Media Publish Setup for Image Server - Security tab](/help/assets/dm-publish-settings.md#security-tab).     * In Experience Manager Author mode, select the Experience Manager logo to access the global navigation console.
     * In the left rail, select the **[!UICONTROL Tools]** icon, then go to **[!UICONTROL Assets]** > **[!UICONTROL Dynamic Media Publish Setup]**.
@@ -556,7 +557,7 @@ spin-01-01
 
 迴轉集之共用資產名稱部分的群組已新增到&#x200B;**[!UICONTROL 符合]**&#x200B;欄位（反白顯示）。 包含行和列的資產名稱的變數部分將分別添加到 **[!UICONTROL 行]** 和 **[!UICONTROL 列欄位中]** 。
 
-上傳和發佈回轉集時，您會啟用「上傳工作選項」對話方塊中「批次集預設集」下方所列的2D回轉集 **[!UICONTROL 方式名稱]****** 。
+上傳和發佈回轉集時，您會啟用「上傳工作選項」對話方塊中「批次集預設集」下方所列的2D回轉集 **[!UICONTROL 方式名稱]**&#x200B;**&#x200B;** 。
 
 **若要建立批次集預設集以自動產生2D迴轉集：**
 
@@ -572,7 +573,7 @@ spin-01-01
 1. 在「詳細資訊」面板的「預設集名稱」欄位中，輸入預設集的名稱。
 1. 在「批集類型」下拉式功能表中，選擇「資產 **[!UICONTROL 集」]**。
 1. 在「子型別」下拉式清單中，選取&#x200B;**[!UICONTROL 多軸迴轉集]**。
-1. 展開&#x200B;**[!UICONTROL 資產命名慣例]**，然後在[檔案命名]下拉式清單中，選取[自訂]****。
+1. 展開&#x200B;**[!UICONTROL 資產命名慣例]**，然後在[檔案命名]下拉式清單中，選取[自訂]&#x200B;**&#x200B;**。
 1. 使用「 **[!UICONTROL 比對]** 」(Match **[!UICONTROL )和 (可選) 「基本名稱]** 」(Base Name)屬性，定義組成群組之影像資產的命名規則運算式。
 
    例如，您的常值Match規則運算式可能如下所示：

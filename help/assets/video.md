@@ -75,6 +75,7 @@ ht-degree: 2%
    * 預覽和發佈視訊資產
 
       * 檢視視訊的來源視訊和編碼轉譯及其相關縮圖：
+
         [預覽視訊](managing-video-assets.md#upload-and-preview-video-assets)或[預覽資產](previewing-assets.md)
         [檢視視訊轉譯](video-renditions.md)
         [管理視訊轉譯](manage-assets.md#managing-renditions)
@@ -85,9 +86,11 @@ ht-degree: 2%
    * 使用視訊中繼資料
 
       * 檢視已編碼視訊轉譯的屬性，例如影格速率、音訊和視訊位元速率以及轉碼器：
+
         [檢視視訊轉譯屬性](video-renditions.md)
 
       * 編輯視訊的屬性，例如標題、說明和標籤、自訂中繼資料欄位：
+
         [編輯視訊內容](manage-assets.md#editing-properties)
 
       * [管理數位資產的中繼資料](metadata.md)
@@ -112,9 +115,11 @@ ht-degree: 2%
    * 如果您使用協力廠商網站內容管理系統，您可以將影片連結或內嵌至網頁。
 
       * 使用URL整合視訊：
+
         [將URL連結至您的網頁應用程式](linking-urls-to-yourwebapplication.md)。
 
       * 使用網頁上的內嵌程式碼整合影片：
+
         [將視訊檢視器內嵌在網頁上](embed-code.md)。
 
    * [產生視訊報告](#viewing-video-reports)。
@@ -460,11 +465,11 @@ Dynamic Media建議使用MP4 H.264視訊編碼預設集。 由於MP4檔案使用
 1. 在Experience Manager的左上角，選取Experience Manager標誌，然後在左側導軌中，按一下&#x200B;**[!UICONTROL 工具]** （槌子圖示） > **[!UICONTROL Assets]** > **[!UICONTROL 視訊報表]**。
 1. 在「視訊報表」頁面上，執行下列任一項作業：
 
-   * 在右上角附近，選取&#x200B;**重新整理視訊報告**圖示。
+   * 在右上角附近，選取&#x200B;**重新整理視訊報告**&#x200B;圖示。
 只有在報表的結束日期為當天時，才使用重新整理。 這麼做可確保您看到自上次執行報表以來發生的視訊追蹤。
 
-   * 在右上角附近，選取&#x200B;**日期選擇器**圖示。
-指定您要視訊資料的開始和結束日期範圍，然後選取**[!UICONTROL 執行報表]**。
+   * 在右上角附近，選取&#x200B;**日期選擇器**&#x200B;圖示。
+指定您要視訊資料的開始和結束日期範圍，然後選取&#x200B;**[!UICONTROL 執行報表]**。
 
    「排名在前的量度」群組方塊可識別您網站上所有&#x200B;*已發佈*&#x200B;視訊的各種彙總測量。
 
@@ -552,7 +557,7 @@ Dynamic Media建議使用MP4 H.264視訊編碼預設集。 由於MP4檔案使用
 |  | 註解追蹤 |
 |  | 描述性音訊 |
 
-Dynamic Media ](/help/assets/assets-formats.md)和所有Dynamic Media視訊檢視器支援的所有[視訊格式（Dynamic Media *Video_360*&#x200B;檢視器除外）都支援搭配多個註解和音軌使用。
+Dynamic Media [&#128279;](/help/assets/assets-formats.md)和所有Dynamic Media視訊檢視器支援的所有視訊格式（Dynamic Media *Video_360*&#x200B;檢視器除外）都支援搭配多個註解和音軌使用。
 
 ### 在視訊中新增多個標題和音軌 {#add-msma}
 
@@ -695,7 +700,7 @@ Dynamic Media支援透過URL修飾元在視訊中新增單一註解。 請參閱
 1. 在[內容]頁面上，選取&#x200B;**[!UICONTROL 註解與音軌]**&#x200B;標籤。
 1. 在&#x200B;**音軌**&#x200B;標題下，選取您要設定為視訊預設的音軌檔案。
 1. 選取&#x200B;**[!UICONTROL 設定為預設值]**。
-在**設定為預設值**&#x200B;對話方塊中，選取&#x200B;**[!UICONTROL 取代]**。
+在&#x200B;**設定為預設值**&#x200B;對話方塊中，選取&#x200B;**[!UICONTROL 取代]**。
 
    ![音訊曲目標題具有選取的音訊曲目檔案名稱，並反白顯示[設定為預設]按鈕。](assets-dm/msma-defaultaudiotrack2.png)*正在設定視訊的預設音軌。*
 
@@ -732,8 +737,8 @@ Dynamic Media支援透過URL修飾元在視訊中新增單一註解。 請參閱
 
    ![視訊檢視器中的音訊和註解快顯清單。](assets-dm/msma-selectaudiosubtitle.png)*模擬使用者選取視訊播放的音訊和標題。*
 
-1. 若要開始播放，請選取視訊的&#x200B;**[!UICONTROL 播放]**按鈕。
-記下左下角的**[!UICONTROL URL]**&#x200B;和&#x200B;**[!UICONTROL Embed]**&#x200B;按鈕。 使用這些按鈕分別將視訊的URL[連結至您的網頁應用程式](/help/assets/linking-urls-to-yourwebapplication.md)或[將視訊內嵌至網頁](/help/assets/embed-code.md)。
+1. 若要開始播放，請選取視訊的&#x200B;**[!UICONTROL 播放]**&#x200B;按鈕。
+記下左下角的&#x200B;**[!UICONTROL URL]**&#x200B;和&#x200B;**[!UICONTROL Embed]**&#x200B;按鈕。 使用這些按鈕分別將視訊的URL[連結至您的網頁應用程式](/help/assets/linking-urls-to-yourwebapplication.md)或[將視訊內嵌至網頁](/help/assets/embed-code.md)。
 1. 在預覽頁面的右上角附近，選取&#x200B;**[!UICONTROL 關閉]**。
 
 ### 從視訊中刪除註解或音訊曲目檔案
@@ -753,7 +758,7 @@ Dynamic Media支援透過URL修飾元在視訊中新增單一註解。 請參閱
    * 註解 — 在&#x200B;**註解**&#x200B;標題下，選取一或多個要從視訊中刪除的註解檔案，然後選取&#x200B;**[!UICONTROL 刪除]**。
    * 音訊曲目 — 在&#x200B;**音訊曲目**&#x200B;標題下，選取您要從視訊中刪除的一或多個音訊曲目檔案，然後選取&#x200B;**[!UICONTROL 刪除]**。
 
-1. 在[刪除]對話方塊中，選取[確定]。****
+1. 在[刪除]對話方塊中，選取[確定]。**&#x200B;**
 1. 發佈視訊。
 
 ### 下載已上傳至視訊的註解或音訊曲目檔案
@@ -1049,7 +1054,7 @@ Dynamic Media會根據視訊的總時間擷取10個（預設）縮圖影像。 �
    * 如果要重新排序間隔值，請選取向上箭頭圖示和向下箭頭圖示。
 
 1. 選取「**[!UICONTROL 確定]**」並返回「屬性」標籤。
-1. 在CRXDE Lite頁面的左上角附近，選取「儲存全部」****，然後選取左上角的「首頁」圖示以返回Experience Manager。
+1. 在CRXDE Lite頁面的左上角附近，選取「儲存全部」**&#x200B;**，然後選取左上角的「首頁」圖示以返回Experience Manager。
 
    請參閱[新增視訊縮圖](#adding-a-video-thumbnail)。
 
@@ -1063,9 +1068,9 @@ Dynamic Media會根據視訊的總時間擷取10個（預設）縮圖影像。 �
 1. 在資產選取模式中，從「清單檢視」或「卡片檢視」中選取視訊資產。
 1. 在工具列上，選取&#x200B;**[!UICONTROL 檢視屬性]**&#x200B;圖示（內有「i」的圓形）。
 1. 在視訊的「屬性」頁面上，選取&#x200B;**[!UICONTROL 變更縮圖]**。
-1. 在[變更縮圖]頁面的工具列上，選取[上傳]新縮圖&#x200B;]**。**[!UICONTROL 
+1. 在[變更縮圖]頁面的工具列上，選取[上傳]新縮圖&#x200B;**。**
 1. 導覽至您要使用的縮圖影像，選取該影像，然後選取「**[!UICONTROL 開啟]**」以開始將該影像上傳至Experience Manager。 上傳後，請務必發佈影像。
-1. 成功上傳並發佈影像後，在[變更縮圖]頁面中，選取[儲存變更]。****
+1. 成功上傳並發佈影像後，在[變更縮圖]頁面中，選取[儲存變更]。**&#x200B;**
 
    自訂縮圖會新增至您的視訊。
 
@@ -1216,7 +1221,7 @@ public class ManifestServlet extends HttpServlet {
 
 +++
 
->servlet]的[!TAB 回應類別
+>[!TAB servlet的 回應類別]
 
 +++servlet **的**&#x200B;回應類別
 
@@ -1246,7 +1251,7 @@ public abstract class VideoResponse {
 
 +++
 
->在servlet]中參考的[!TAB 常數檔案
+>[!TAB 在servlet中參考的 常數檔案]
 
 +++在servlet **中參考的**&#x200B;常數檔案
 

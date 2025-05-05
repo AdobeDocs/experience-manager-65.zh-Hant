@@ -27,7 +27,7 @@ ht-degree: 1%
 您也可以透過設定A4T Analytics Cloud設定，將Adobe Target設定為使用Adobe Target作為目標定位內容的報表來源。
 
 若要尋找雲端設定和架構，請透過&#x200B;**Cloud Service** > **部署** > **雲端**&#x200B;瀏覽至&#x200B;**工具**。 ([http://localhost:4502/libs/cq/core/content/tools/cloudservices.html](http://localhost:4502/libs/cq/core/content/tools/cloudservices.html))
-在Adobe Target下方，按一下**顯示設定**。
+在Adobe Target下方，按一下&#x200B;**顯示設定**。
 
 ### 布建的目標組態特性 {#provisioned-target-configuration-properties}
 
@@ -88,9 +88,9 @@ ht-degree: 1%
    >使用AEM設定A4T時，您可能會看到遺漏專案的「設定」參照。 若要選取分析框架，請執行下列動作：
    >
    >1. 導覽至&#x200B;**工具** > **一般** > **CRXDE Lite**。
-   1. 導覽至[A4T Analytics設定對話方塊](#a4t-analytics-config-dialog) （請參閱下文）
-   1. 將屬性&#x200B;**disable**&#x200B;設定為&#x200B;**false**。
-   1. 按一下&#x200B;**「儲存全部」**。
+   >1. 導覽至[A4T Analytics設定對話方塊](#a4t-analytics-config-dialog) （請參閱下文）
+   >1. 將屬性&#x200B;**disable**&#x200B;設定為&#x200B;**false**。
+   >1. 按一下&#x200B;**「儲存全部」**。
 
 #### A4T分析設定對話方塊 {#a4t-analytics-config-dialog}
 
@@ -108,16 +108,16 @@ ht-degree: 1%
 
 >[!NOTE]
 >
-Target程式庫檔案[AT.JS](https://developer.adobe.com/target/implement/client-side/atjs/atjs-functions/mboxcreate-atjs/)是新的Adobe Target實作程式庫，專為典型Web實作和單頁應用程式而設計。 Adobe建議您使用AT.js而非mbox.js作為使用者端資料庫。
+>Target程式庫檔案[AT.JS](https://developer.adobe.com/target/implement/client-side/atjs/atjs-functions/mboxcreate-atjs/)是新的Adobe Target實作程式庫，專為典型Web實作和單頁應用程式而設計。 Adobe建議您使用AT.js而非mbox.js作為使用者端資料庫。
 >
-AT.js對mbox.js資料庫提供數項改善專案：
+>AT.js對mbox.js資料庫提供數項改善專案：
 >
-* 改善Web實施的頁面載入時間
-* 提升安全性
-* 單頁應用程式的更佳實作選項
-* AT.js包含target.js所包含的元件，因此不再需要呼叫target.js
+>* 改善Web實施的頁面載入時間
+>* 提升安全性
+>* 單頁應用程式的更佳實作選項
+>* AT.js包含target.js所包含的元件，因此不再需要呼叫target.js
 >
-您可以在&#x200B;**使用者端資料庫**&#x200B;下拉式功能表中選取AT.js或mbox.js。
+>您可以在&#x200B;**使用者端資料庫**&#x200B;下拉式功能表中選取AT.js或mbox.js。
 
 <!-- OLD URL from above was 404 https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/mbox-download.html -->
 
@@ -151,12 +151,12 @@ AT.js對mbox.js資料庫提供數項改善專案：
 
    >[!NOTE]
    >
-   使用AEM設定A4T時，您可能會看到遺漏專案的「設定」參照。 若要選取分析框架，請執行下列動作：
+   >使用AEM設定A4T時，您可能會看到遺漏專案的「設定」參照。 若要選取分析框架，請執行下列動作：
    >
-   1. 導覽至&#x200B;**工具** > **一般** > **CRXDE Lite**。
-   1. 導覽至&#x200B;**/libs/cq/analytics/components/testandtargetpage/dialog/items/tab/items/tab1_general/items/a4tAnalyticsConfig**
-   1. 將屬性&#x200B;**disable**&#x200B;設定為&#x200B;**false**。
-   1. 按一下&#x200B;**「儲存全部」**。
+   >1. 導覽至&#x200B;**工具** > **一般** > **CRXDE Lite**。
+   >1. 導覽至&#x200B;**/libs/cq/analytics/components/testandtargetpage/dialog/items/tab/items/tab1_general/items/a4tAnalyticsConfig**
+   >1. 將屬性&#x200B;**disable**&#x200B;設定為&#x200B;**false**。
+   >1. 按一下&#x200B;**「儲存全部」**。
 
 1. 在對話方塊中，提供這些屬性的值。
 
@@ -175,13 +175,13 @@ AT.js對mbox.js資料庫提供數項改善專案：
 
    >[!NOTE]
    >
-   依預設，當您選擇加入Adobe Target設定精靈時，會啟用「準確定位」 。
+   >依預設，當您選擇加入Adobe Target設定精靈時，會啟用「準確定位」 。
    >
-   準確定位表示雲端服務設定會等待內容載入後再載入內容。 因此，就效能而言，準確定位可能會在載入內容前造成幾毫秒的延遲。
+   >準確定位表示雲端服務設定會等待內容載入後再載入內容。 因此，就效能而言，準確定位可能會在載入內容前造成幾毫秒的延遲。
    >
-   作者例項上一律會啟用「準確定位」 。 不過，在發佈執行個體上，您可以清除雲端服務設定(**http://localhost:4502/etc/cloudservices.html**)中「準確定位」旁的勾號，來選擇全域關閉準確定位。 無論您在雲端服務設定中的設定為何，您仍可開啟和關閉個別元件的準確定位。
+   >作者例項上一律會啟用「準確定位」 。 不過，在發佈執行個體上，您可以清除雲端服務設定(**http://localhost:4502/etc/cloudservices.html**)中「準確定位」旁的勾號，來選擇全域關閉準確定位。 無論您在雲端服務設定中的設定為何，您仍可開啟和關閉個別元件的準確定位。
    >
-   如果您有&#x200B;***已***&#x200B;建立的目標元件，而且您變更此設定，您的變更不會影響這些元件。 直接變更這些元件。
+   >如果您有&#x200B;***已***&#x200B;建立的目標元件，而且您變更此設定，您的變更不會影響這些元件。 直接變更這些元件。
 
 1. 按一下&#x200B;**連線至Target**&#x200B;以初始化與Target的連線。 如果連線成功，會顯示訊息&#x200B;**連線成功**。 在訊息上按一下&#x200B;**[確定]**，然後在對話方塊上按一下&#x200B;**[確定]**。
 
@@ -194,7 +194,7 @@ AT.js對mbox.js資料庫提供數項改善專案：
 您可以為單一Target設定建立多個架構。 當您必須為網站的不同區段傳送一組不同的引數至Target時，多個架構會很有用。 為您傳送的每組引數建立框架。 將網站的每個區段與適當的架構建立關聯。 一個網頁一次只能使用一個框架。
 
 1. 在您的Target設定頁面上，按一下「可用架構」旁的&#x200B;**+** （加號）。
-1. 在[建立架構]對話方塊中，指定&#x200B;**標題**，選取&#x200B;**Adobe Target架構**，然後按一下[建立]****。
+1. 在[建立架構]對話方塊中，指定&#x200B;**標題**，選取&#x200B;**Adobe Target架構**，然後按一下[建立]&#x200B;**&#x200B;**。
 
    ![建立框架對話方塊](assets/chlimage_1-161.png)
 
@@ -206,7 +206,7 @@ AT.js對mbox.js資料庫提供數項改善專案：
 
    >[!NOTE]
    >
-   對應時，引數會透過簡單字串傳遞至mbox。 您無法從ContextHub對應陣列。
+   >對應時，引數會透過簡單字串傳遞至mbox。 您無法從ContextHub對應陣列。
 
    例如，若要使用網站訪客的&#x200B;**設定檔資料**&#x200B;來控制Target促銷活動，請將&#x200B;**設定檔資料**&#x200B;元件拖曳至頁面。 可用於對應至Target引數的設定檔資料變數隨即顯示。
 
@@ -218,7 +218,7 @@ AT.js對mbox.js資料庫提供數項改善專案：
 
    >[!NOTE]
    >
-   同步引數是唯一方式 — 從AEM到Adobe Target。
+   >同步引數是唯一方式 — 從AEM到Adobe Target。
 
 您的框架隨即建立。 若要將架構復寫到發佈執行個體，請使用sidekick中的&#x200B;**啟動架構**&#x200B;選項。
 
@@ -228,14 +228,14 @@ AT.js對mbox.js資料庫提供數項改善專案：
 
 >[!NOTE]
 >
-可用的活動型別由以下因素決定：
+>可用的活動型別由以下因素決定：
 >
 >
-* 如果AEM端使用的Adobe Target租使用者(clientcode)上已啟用連線至Adobe Target的&#x200B;**xt_only**&#x200B;選項，則您可以在AEM中建立&#x200B;**only** XT活動。
+>* 如果AEM端使用的Adobe Target租使用者(clientcode)上已啟用連線至Adobe Target的&#x200B;**xt_only**&#x200B;選項，則您可以在AEM中建立&#x200B;**only** XT活動。
 >
-* 如果Adobe Target租使用者(clientcode)上的&#x200B;**xt_only**&#x200B;選項為&#x200B;**not**&#x200B;已啟用，則您可以在AEM中建立&#x200B;**XT和A/B活動**。
+>* 如果Adobe Target租使用者(clientcode)上的&#x200B;**xt_only**&#x200B;選項為&#x200B;**not**&#x200B;已啟用，則您可以在AEM中建立&#x200B;**XT和A/B活動**。
 >
-**其他附註：** **xt_only**&#x200B;選項是套用於特定Target租使用者(clientcode)的設定，且只能在Adobe Target中直接修改。 您無法在AEM中啟用或停用此選項。
+>**其他附註：** **xt_only**&#x200B;選項是套用於特定Target租使用者(clientcode)的設定，且只能在Adobe Target中直接修改。 您無法在AEM中啟用或停用此選項。
 
 ### 將Target框架與您的網站建立關聯 {#associating-the-target-framework-with-your-site}
 
@@ -255,14 +255,14 @@ AT.js對mbox.js資料庫提供數項改善專案：
 
    >[!NOTE]
    >
-   請確定您選取的是您建立的特定&#x200B;**架構**，而不是建立架構時所依據的Target雲端組態。
+   >請確定您選取的是您建立的特定&#x200B;**架構**，而不是建立架構時所依據的Target雲端組態。
 
 1. 按一下&#x200B;**「完成」**。
 1. 啟動網站的根頁面，以便將其復寫至發佈伺服器。 (請參閱[如何Publish頁面](/help/sites-authoring/publishing-pages.md)。)
 
    >[!NOTE]
    >
-   如果您附加至頁面的框架尚未啟動，則會開啟精靈，供您一併發佈。
+   >如果您附加至頁面的框架尚未啟動，則會開啟精靈，供您一併發佈。
 
 ## 疑難排解Target連線問題 {#troubleshooting-target-connection-problems}
 

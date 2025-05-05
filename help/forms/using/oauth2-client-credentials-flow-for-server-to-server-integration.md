@@ -12,7 +12,7 @@ ht-degree: 68%
 
 ---
 
-# 使用OAuth 2.0使用者端認證流程{#configure-salesforce-with-ouath-2.0-client-credential}整合Salesforce
+# 使用OAuth 2.0使用者端認證流程整合Salesforce{#configure-salesforce-with-ouath-2.0-client-credential}
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |

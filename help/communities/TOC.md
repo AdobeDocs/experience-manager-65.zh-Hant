@@ -19,7 +19,7 @@ ht-degree: 11%
 # Adobe Experience Manager 6.5 Communities指南 {#communities}
 
 + [Communities 指南](home.md)
-+ AEM Communities {#introduction}簡介
++ AEM Communities簡介 {#introduction}
    + [社群網站](administer-landing.md)
    + [AEM Communities概觀](overview.md)
    + [開始使用AEM Communities](getting-started.md)

@@ -48,7 +48,7 @@ AEM提供各種鍵盤快速鍵。 有些適用於編輯頁面，有些則適用�
 
 >[!NOTE]
 >
-無論是否已停用[主控台捷徑](/help/sites-authoring/keyboard-shortcuts.md#deactivating-keyboard-shortcuts)，編輯器鍵盤捷徑一律為使用中。
+>無論是否已停用[主控台捷徑](/help/sites-authoring/keyboard-shortcuts.md#deactivating-keyboard-shortcuts)，編輯器鍵盤捷徑一律為使用中。
 
 ## 作業系統特定修飾元鍵 {#os-specific-modifier-keys}
 

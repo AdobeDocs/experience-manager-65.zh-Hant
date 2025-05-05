@@ -74,7 +74,7 @@ ht-degree: 1%
 
 每個 helper 範本都需要 `categories` 選項來參照所需的用戶端程式庫。 這個選項可以是字串值陣列，或是包含逗號分隔值清單的字串。
 
-有關更多詳細信息和使用示例，請参閱 HTML 範本語言](https://helpx.adobe.com/experience-manager/htl/using/getting-started.html#loading-client-libraries)的文件[快速入門。
+有關更多詳細信息和使用示例，請参閱 HTML 範本語言[&#128279;](https://helpx.adobe.com/experience-manager/htl/using/getting-started.html#loading-client-libraries)的文件快速入門。
 
 ### 使用 JSP {#using-jsp}
 
@@ -165,7 +165,7 @@ Web使用者端必須擁有存取`cq:ClientLibraryFolder`節點的許可權。 �
 
 1. 在網頁瀏覽器([https://localhost:4502/crx/de](https://localhost:4502/crx/de))中開啟CRXDE Lite。
 1. 選取您要尋找使用者端程式庫資料夾的資料夾，然後按一下[建立] > [建立節點] **。**
-1. 輸入資料庫文件的名稱，然後在“類型”中選擇清單 `cq:ClientLibraryFolder`。 按兩下確定&#x200B;****，然後按兩下全部&#x200B;****&#x200B;儲存。
+1. 輸入資料庫文件的名稱，然後在“類型”中選擇清單 `cq:ClientLibraryFolder`。 按兩下確定&#x200B;**&#x200B;**，然後按兩下全部&#x200B;**&#x200B;**&#x200B;儲存。
 1. 若要指定資料庫所屬的類別或類別，請選擇 `cq:ClientLibraryFolder` 節點，添加以下屬性，然後按兩下“ **全部**&#x200B;儲存”：
 
    * 名稱：類別
@@ -322,7 +322,7 @@ body {
 
 ## 使用前置處理器 {#using-preprocessors}
 
-AEM允許可插拔預處理器，並支援[用於CSS和JavaScript[的YUI壓縮器和](https://github.com/yui/yuicompressor#yui-compressor---the-yahoo-javascript-and-css-compressor)用於JavaScript的Google Closure Compiler （GCC），](https://developers.google.com/closure/compiler/)並將YUI設置為AEM的預設預處理器。
+AEM允許可插拔預處理器，並支援[&#128279;](https://developers.google.com/closure/compiler/)用於CSS和JavaScript[的YUI壓縮器和](https://github.com/yui/yuicompressor#yui-compressor---the-yahoo-javascript-and-css-compressor)用於JavaScript的Google Closure Compiler （GCC），並將YUI設置為AEM的預設預處理器。
 
 可插拔預處理器允許靈活使用，包括：
 

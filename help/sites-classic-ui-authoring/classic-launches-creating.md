@@ -25,7 +25,7 @@ ht-degree: 16%
 * 預設情況下，啟動會包含來源頁面的子頁面。 您可以視需要使用來源頁面。
 * 根據預設，[即時副本](/help/sites-administering/msm.md)會在來源頁面變更時自動更新啟動頁面。 您可以指定建立靜態副本，以防止自動變更。
 
-(可選) 您可以指定 **啟動日期**  (和時間)，以定義啟動頁面要升級和啟動的時間。不過，「 **啟動日期** 」只會搭配「生產就緒 **」旗標運作(請** 參閱編輯啟動設定 [](/help/sites-classic-ui-authoring/classic-launches-editing.md#editing-a-launch-configuration));要讓動作實際自動發生，必須同時設定。
+(可選) 您可以指定 **啟動日期**  (和時間)，以定義啟動頁面要升級和啟動的時間。不過，「 **啟動日期** 」只會搭配「生產就緒 **」旗標運作(請** 參閱編輯啟動設定 [&#128279;](/help/sites-classic-ui-authoring/classic-launches-editing.md#editing-a-launch-configuration));要讓動作實際自動發生，必須同時設定。
 
 ## 建立啟動項 {#creating-a-launch}
 

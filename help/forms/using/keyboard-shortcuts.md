@@ -48,10 +48,10 @@ ht-degree: 4%
 
 >[!NOTE]
 >
-在桌上型電腦裝置上進行多重選取：
+>在桌上型電腦裝置上進行多重選取：
 >
-* Windows：按住Ctrl鍵並按一下必要元件。
-* macOS： Command +按一下所需元件。
+>* Windows：按住Ctrl鍵並按一下必要元件。
+>* macOS： Command +按一下所需元件。
 >
 
 ## 主題編輯器  {#themeeditor}
@@ -66,7 +66,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >
-標示「&amp;amp；ast；」的捷徑可同時使用macOS上的Ctrl和Command鍵。
+>標示「&amp;amp；ast；」的捷徑可同時使用macOS上的Ctrl和Command鍵。
 
 ## 內容瀏覽器  {#contentbrowser}
 

@@ -69,7 +69,7 @@ ContextHub.Utils.storeCandidates.registerStoreCandidate(myStoreCandidate,
 
 ## 建立ContextHub UI模組型別 {#creating-contexthub-ui-module-types}
 
-當與ContextHub](/help/sites-developing/ch-samplemodules.md)一起安裝的[模組不符合您的需求時，請建立自訂UI模組型別。 若要建立UI模組型別，請擴充`ContextHub.UI.BaseModuleRenderer`類別，然後向`ContextHub.UI`註冊，以建立UI模組轉譯器。
+當與ContextHub[&#128279;](/help/sites-developing/ch-samplemodules.md)一起安裝的模組不符合您的需求時，請建立自訂UI模組型別。 若要建立UI模組型別，請擴充`ContextHub.UI.BaseModuleRenderer`類別，然後向`ContextHub.UI`註冊，以建立UI模組轉譯器。
 
 若要建立UI模組轉譯器，請建立包含轉譯UI模組的邏輯的`Class`物件。 您的類別至少必須執行下列動作：
 

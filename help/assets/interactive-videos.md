@@ -73,7 +73,7 @@ ht-degree: 2%
 1. **（選擇性）識別Quickview變數** — 從識別現有Quickview實作所使用的動態變數開始。 當您建立互動式視訊時，可使用變數將產品縮圖對應至其對應的產品快速檢視。 請參閱[（選擇性）識別快速檢視變數](#optional-identifying-quickview-variables)。
    *只有在下列全部為true時才需要此步驟*：
    * 您想要透過觸發至快速檢視來將互動性新增至視訊。
-   * 您的Experience Manager實作&#x200B;*不*&#x200B;會使用電子商務整合架構，將產品資料從任何電子商務解決方案(例如IBM®WebSphere®Commerce、Elastic Path、Hybris或Intershop)提取至Experience Manager。 檢視Experience Manager Assets](/help/commerce/cif-classic/administering/concepts.md)中的[電子商務概念。
+   * 您的Experience Manager實作&#x200B;*不*&#x200B;會使用電子商務整合架構，將產品資料從任何電子商務解決方案(例如IBM®WebSphere®Commerce、Elastic Path、Hybris或Intershop)提取至Experience Manager。 檢視Experience Manager Assets[&#128279;](/help/commerce/cif-classic/administering/concepts.md)中的電子商務概念。
 
 1. **（選擇性）建立互動式視訊檢視器預設集** — 自訂組成播放器的各種元件的外觀和行為，例如視訊筆畫壓感和互動式縮圖。
 如果您打算使用現成的互動視訊檢視器預設集`Shoppable_Video_Light`或`Shoppable_Video_Dark`，則不需要建立自己的互動視訊檢視器預設集。
@@ -103,7 +103,7 @@ ht-degree: 2%
 >只有在下列情況為真時才需要此工作：
 >
 >* 您想要透過觸發至快速檢視來將互動性新增至視訊。
->* 您的Experience Manager實作&#x200B;*不*&#x200B;會使用電子商務整合架構，將產品資料從任何電子商務解決方案(例如IBM®WebSphere®Commerce、Elastic Path、Hybris或Intershop)提取至Experience Manager。 檢視Experience Manager Assets](/help/commerce/cif-classic/administering/concepts.md)中的[電子商務概念。
+>* 您的Experience Manager實作&#x200B;*不*&#x200B;會使用電子商務整合架構，將產品資料從任何電子商務解決方案(例如IBM®WebSphere®Commerce、Elastic Path、Hybris或Intershop)提取至Experience Manager。 檢視Experience Manager Assets[&#128279;](/help/commerce/cif-classic/administering/concepts.md)中的電子商務概念。
 >
 >如果您的Experience Manager實作使用電子商務，您可以略過此任務並繼續下一個任務。
 
@@ -660,27 +660,27 @@ Experience Manager傳回的內嵌程式碼已有現成的事件處理常式。 �
   <tbody>
   <tr>
     <td><p>在查詢字串中找到單一SKU</p> </td>
-    <td><code class="code">s7interactivevideoviewer.setHandlers({
-      "quickViewActivate": function(inData) {
+    <td><code class="code">s7interactivevideoviewer.setHandlers(&lbrace;
+      "quickViewActivate": function(inData) &lbrace;
       var quickViewUrl = "https://server/json?productId=" + inData.sku + "&amp;source=100";
-      },
-      });</code></td>
+      &rbrace;,
+      &rbrace;);</code></td>
   </tr>
   <tr>
     <td>在URL路徑中找到單一SKU</td>
-    <td><code class="code">s7interactivevideoviewer.setHandlers({
-      "quickViewActivate": function(inData) {
+    <td><code class="code">s7interactivevideoviewer.setHandlers(&lbrace;
+      "quickViewActivate": function(inData) &lbrace;
       var quickViewUrl = "https://server/product/" + inData.sku;
-      },
-      });</code></td>
+      &rbrace;,
+      &rbrace;);</code></td>
   </tr>
   <tr>
     <td><p>查詢字串中的SKU和類別ID</p> </td>
-    <td><code class="code">s7interactivevideoviewer.setHandlers({
-      "quickViewActivate": function(inData) {
+    <td><code class="code">s7interactivevideoviewer.setHandlers(&lbrace;
+      "quickViewActivate": function(inData) &lbrace;
       var quickViewUrl = "https://server/quickView/product/?category=" + inData.categoryId + "&amp;prodId=" + inData.sku;
-      },
-      });</code></td>
+      &rbrace;,
+      &rbrace;);</code></td>
   </tr>
   </tbody>
 </table>

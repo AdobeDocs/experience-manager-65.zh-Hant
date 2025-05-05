@@ -169,4 +169,4 @@ AEM提供將大量內容移至發佈執行個體的兩種方法：
 
 ### 後續步驟 {#the-next-steps}
 
-建置程式之後的下一個步驟是學習應用程式](/help/mobile/phonegap-structure-an-app.md)的[結構。
+建置程式之後的下一個步驟是學習應用程式[&#128279;](/help/mobile/phonegap-structure-an-app.md)的結構。

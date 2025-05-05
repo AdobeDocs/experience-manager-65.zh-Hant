@@ -351,7 +351,7 @@ AEM除了格線檢視外，也提供指定路徑所選使用者/群組的許可�
 >
 >為了模擬非管理員使用者才能運作，模擬者（在上述案例中為user-B）必須在`/home/users`路徑中具有「讀取」許可權。
 >
->檢視AEM](/help/sites-administering/security.md#permissions-in-aem)中的[許可權。
+>檢視AEM[&#128279;](/help/sites-administering/security.md#permissions-in-aem)中的許可權。
 
 >[!CAUTION]
 >
@@ -418,7 +418,7 @@ AEM除了格線檢視外，也提供指定路徑所選使用者/群組的許可�
 | 成員 | 僅適用於群組。 列出特定群組的成員。 檢視[成員](#members-adding-users-or-groups-to-a-group)。 |
 | 權限 | 您可以將許可權配置給使用者或群組。 可讓您控制下列專案：<ul><li>與特定頁面/節點相關的許可權。 請參閱[設定許可權](#setting-permissions)。 </li><li>與建立和刪除頁面及階層修改相關的許可權。???可讓您[配置許可權](#settingprivileges)，例如階層修改，可讓您建立和刪除頁面。</li><li>根據路徑與[復寫許可權](#setting-replication-privileges)相關的許可權（通常從作者到發佈）。</li></ul> |
 | Impersonator | 允許其他使用者模擬帳戶。 當您需要使用者代表另一個使用者進行操作時非常有用。 請參閱[模擬使用者](#impersonating-another-user)。 |
-| 偏好設定 | 設定群組或使用者](#setting-user-and-group-preferences)的[偏好設定。 例如，語言偏好設定。 |
+| 偏好設定 | 設定群組或使用者[&#128279;](#setting-user-and-group-preferences)的偏好設定。 例如，語言偏好設定。 |
 
 ### 篩選使用者和群組 {#filtering-users-and-groups}
 
@@ -524,7 +524,7 @@ AEM提供三種將使用者或群組新增至現有群組的不同方式：
 
    ![cqsecurityaddusertogroup](assets/cqsecurityaddusertogroup.png)
 
-1. 按一下[儲存]儲存變更。****
+1. 按一下[儲存]儲存變更。**&#x200B;**
 
 ### 成員 — 新增使用者或群組至群組 {#members-adding-users-or-groups-to-a-group}
 
@@ -536,7 +536,7 @@ AEM提供三種將使用者或群組新增至現有群組的不同方式：
 
    ![cqsecurityadduserasmember](assets/cqsecurityadduserasmember.png)
 
-1. 按一下[儲存]儲存變更。****
+1. 按一下[儲存]儲存變更。**&#x200B;**
 
 ### 新增許可權時新增使用者或群組 {#adding-users-or-groups-while-adding-permissions}
 
@@ -571,7 +571,7 @@ AEM提供三種不同的方式，讓您從群組移除使用者或群組：
 
    ![cqsecurityremoveuserfromgrp](assets/cqsecurityremoveuserfromgrp.png)
 
-1. 按一下[儲存]儲存變更。****
+1. 按一下[儲存]儲存變更。**&#x200B;**
 
 ### 成員 — 從群組移除使用者或群組 {#members-removing-users-or-groups-from-groups}
 
@@ -583,7 +583,7 @@ AEM提供三種不同的方式，讓您從群組移除使用者或群組：
 
    ![cqsecurityremovemember](assets/cqsecurityremovemember.png)
 
-1. 按一下[儲存]儲存變更。****
+1. 按一下[儲存]儲存變更。**&#x200B;**
 
 ### 新增許可權時移除使用者或群組 {#removing-users-or-groups-while-adding-permissions}
 
@@ -638,7 +638,7 @@ AEM提供三種不同的方式，讓您從群組移除使用者或群組：
 >
 >* 套用至群組的任何復寫許可權都會套用至該群組中的所有使用者。
 >* 使用者的復寫許可權會取代群組的復寫許可權。
->* 允許復寫許可權的優先順序高於拒絕復寫許可權。 如需詳細資訊，請參閱AEM](#permissions-in-aem)中的[許可權。
+>* 允許復寫許可權的優先順序高於拒絕復寫許可權。 如需詳細資訊，請參閱AEM[&#128279;](#permissions-in-aem)中的許可權。
 >
 
 若要設定復寫許可權：
@@ -650,7 +650,7 @@ AEM提供三種不同的方式，讓您從群組移除使用者或群組：
 
    ![cquserreplicatepermissions](assets/cquserreplicatepermissions.png)
 
-1. 按一下[儲存]儲存變更。****
+1. 按一下[儲存]儲存變更。**&#x200B;**
 
 ### 搜尋節點 {#searching-for-nodes}
 
@@ -710,7 +710,7 @@ AEM提供三種不同的方式，讓您從群組移除使用者或群組：
 
    ![cqsecuritypreferences](assets/cqsecuritypreferences.png)
 
-1. 視需要變更群組或使用者偏好設定，完成時按一下[儲存]。****
+1. 視需要變更群組或使用者偏好設定，完成時按一下[儲存]。**&#x200B;**
 
 ### 設定使用者或管理員擁有管理其他使用者的許可權 {#setting-users-or-administrators-to-have-the-privilege-to-manage-other-users}
 

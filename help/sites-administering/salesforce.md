@@ -138,7 +138,7 @@ AEM與Salesforce之間的雙向及可擴充整合可啟用：
 
    ![chlimage_1-78](assets/chlimage_1-78.png)
 
-1. 按一下[儲存]儲存變更。****
+1. 按一下[儲存]儲存變更。**&#x200B;**
 
    ![chlimage_1-79](assets/chlimage_1-79.png)
 
@@ -151,7 +151,7 @@ AEM與Salesforce之間的雙向及可擴充整合可啟用：
 
    ![chlimage_1-80](assets/chlimage_1-80.png)
 
-1. 視需要變更對應。 預設對應遵循模式&#x200B;**aemUserAttribute=sfLeadAttribute**。 按一下[儲存]儲存變更。****
+1. 視需要變更對應。 預設對應遵循模式&#x200B;**aemUserAttribute=sfLeadAttribute**。 按一下[儲存]儲存變更。**&#x200B;**
 
 ## 設定Salesforce使用者端內容存放區 {#configuring-salesforce-client-context-store}
 

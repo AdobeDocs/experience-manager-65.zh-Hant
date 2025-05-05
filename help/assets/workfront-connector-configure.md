@@ -145,7 +145,7 @@ Adobe Workfront檔案與Assets之間的中繼資料對應是在AEM中繼資料�
 
 ## 設定狀態 {#set-status}
 
-在工作流程編輯器中，編輯&#x200B;**[!UICONTROL Workfront — 在**[!UICONTROL &#x200B;引數&#x200B;]**索引標籤中設定狀態]**&#x200B;的屬性。
+在工作流程編輯器中，編輯&#x200B;**[!UICONTROL Workfront — 在**&#x200B;[!UICONTROL &#x200B;引數&#x200B;]&#x200B;**索引標籤中設定狀態]**&#x200B;的屬性。
 
 ![編輯工作流程以設定狀態](/help/assets/assets/wf-set-status.png)
 

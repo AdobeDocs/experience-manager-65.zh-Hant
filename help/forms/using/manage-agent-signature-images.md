@@ -52,7 +52,7 @@ agentFolder DDE的值是從Correspondence Management組態屬性的CMUserRoot組
    1. 按一下&#x200B;**內容總管**。 內容總管會在新視窗中開啟。
    1. 在內容總管中，瀏覽至cmUserRoot資料夾並加以選取。 用滑鼠右鍵按一下&#x200B;**cmUserRoot**&#x200B;資料夾，然後選取&#x200B;**新增節點**。
 
-      在cmUserRoot](assets/2_cmuserroot_newnode.png)中新增![節點
+      在cmUserRoot![&#128279;](assets/2_cmuserroot_newnode.png)中新增節點
 
       在新節點的資料列中建立下列專案，然後按一下綠色核取記號。
 

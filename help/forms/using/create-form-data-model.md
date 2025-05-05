@@ -65,7 +65,7 @@ AEM [!DNL Forms]資料整合模組可讓您從不同的後端資料來源(例如
 
 1. 將資料庫配置為 [!DNL MySQL] 資料來源：
 
-   1. 前往位於 https://localhost:4502/system/console/configMgr AEM [](https://localhost:4502/system/console/configMgr)Web 控制台。
+   1. 前往位於 https://localhost:4502/system/console/configMgr AEM [&#128279;](https://localhost:4502/system/console/configMgr)Web 控制台。
    1. 找到 **Apache Sling 連線的池數據源** 設定。 選擇以在編輯模式下打開配置。
    1. 在設定對話方塊中，指定下列詳細資訊：
 
@@ -83,7 +83,7 @@ AEM [!DNL Forms]資料整合模組可讓您從不同的後端資料來源(例如
 
       >[!NOTE]
       >
-      >AEM Forms不支援[!DNL MySQL]的NT驗證。 前往位於 https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr) AEM [Web 控制台並搜尋「Apache Sling 連線共用數據源」。對於“JDBC 連接 URI”屬性，將“集成安全”的值設置為 False，並使用創建的使用者名和密碼與資料庫連接 [!DNL MySQL] 。
+      >AEM Forms不支援[!DNL MySQL]的NT驗證。 前往位於 https://localhost:4502/system/console/configMgr[&#128279;](https://localhost:4502/system/console/configMgr) AEM Web 控制台並搜尋「Apache Sling 連線共用數據源」。對於“JDBC 連接 URI”屬性，將“集成安全”的值設置為 False，並使用創建的使用者名和密碼與資料庫連接 [!DNL MySQL] 。
 
       * **借用測試：** 啟用借 **[!UICONTROL 用]** 測試選項。
       * **返回時測試：** 啟用「 **[!UICONTROL 返回]** 時測試」 選項。

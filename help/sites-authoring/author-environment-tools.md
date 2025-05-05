@@ -50,13 +50,13 @@ AEM的製作環境提供各種機制來組織和編輯您的內容。 提供的�
 * [**頁面資訊**](/help/sites-authoring/editing-page-properties.md#page-properties)&#x200B;選取器；這會顯示簡介投影片（在您第一次存取編輯器時顯示）。
 * 特定元件的[組態](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste)對話方塊(使用問號(？) 圖示)；這會顯示相關內容的「說明」。
 
-可從主控台](/help/sites-authoring/basic-handling.md#accessing-help)取得其他[說明相關資源。
+可從主控台[&#128279;](/help/sites-authoring/basic-handling.md#accessing-help)取得其他說明相關資源。
 
 ## 元件瀏覽器 {#components-browser}
 
 元件瀏覽器會顯示目前頁面上可用的所有元件。 這些檔案可以拖曳至適當位置，然後編輯以新增您的內容。
 
-元件瀏覽器是側面板中的標籤(連同資產 [瀏覽器](/help/sites-authoring/author-environment-tools.md#assets-browser)[和內容樹](/help/sites-authoring/author-environment-tools.md#content-tree))。若要開啟（或關閉）側面板，請使用工具列左上角的圖示：
+元件瀏覽器是側面板中的標籤(連同資產 [瀏覽器](/help/sites-authoring/author-environment-tools.md#assets-browser) [和內容樹](/help/sites-authoring/author-environment-tools.md#content-tree))。若要開啟（或關閉）側面板，請使用工具列左上角的圖示：
 
 ![ateat-03](assets/ateat-03.png)
 
@@ -286,7 +286,7 @@ AEM的製作環境提供各種機制來組織和編輯您的內容。 提供的�
 例如，適當時，**頁面資訊**&#x200B;也有選項：
 
 * 如果頁面是啟動項，請[提升啟動項](/help/sites-authoring/launches-promoting.md)
-* 如果此選項由系統管理員啟用[，則[在傳統UI中開啟](/help/sites-authoring/select-ui.md#switching-to-classic-ui-when-editing-a-page)](/help/sites-administering/enable-classic-ui-editor.md)
+* 如果此選項由系統管理員啟用[&#128279;](/help/sites-administering/enable-classic-ui-editor.md)，則[在傳統UI中開啟](/help/sites-authoring/select-ui.md#switching-to-classic-ui-when-editing-a-page)
 
 此外，**頁面資訊**&#x200B;可讓您在適當時存取分析和建議。
 
@@ -348,7 +348,7 @@ AEM的製作環境提供各種機制來組織和編輯您的內容。 提供的�
 ![screen_shot_2018-03-22at154521](assets/screen_shot_2018-03-22at154521.png)
 
 * 選取資源後，對話方塊右上角的&#x200B;**選取**&#x200B;按鈕就會變成使用中狀態。 按一下以確認選取專案，或按一下&#x200B;**取消**&#x200B;以中止。
-* 如果上下文允許選擇多個資源，則選擇資源也會激活「選擇 **** 」按鈕，但也會向窗口的右上角添加選定資源的計數。按一下數字旁的&#x200B;**X**&#x200B;以取消選取全部。
+* 如果上下文允許選擇多個資源，則選擇資源也會激活「選擇 **&#x200B;**&#x200B;」按鈕，但也會向窗口的右上角添加選定資源的計數。按一下數字旁的&#x200B;**X**&#x200B;以取消選取全部。
 * 當您瀏覽樹狀結構時，您的位置會反映在對話方塊頂端的階層連結中。 這些階層連結也可用來在資源階層內快速跳轉。
 * 您可以隨時使用對話方塊頂端的搜尋欄位。 按一下搜尋欄位中的&#x200B;**X**&#x200B;以清除搜尋。
 * 若要縮小搜尋範圍，您可以顯示篩選選項，並根據特定路徑篩選結果。

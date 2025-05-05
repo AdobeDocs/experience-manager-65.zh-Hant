@@ -53,7 +53,7 @@ AEM提供了數種工具和資源，用於建立工作流程模型、開發工�
 
 工作流程模型的版本已設定。 當您執行工作流程例項時，它會使用並保留工作流程的執行階段模型（如工作流程啟動時可用）。
 
-在工作流程模型編輯器](/help/sites-developing/workflows-models.md#sync-your-workflow-generate-a-runtime-model)中觸發&#x200B;**Sync**&#x200B;時，產生執行階段模型[。
+在工作流程模型編輯器[&#128279;](/help/sites-developing/workflows-models.md#sync-your-workflow-generate-a-runtime-model)中觸發&#x200B;**Sync**&#x200B;時，產生執行階段模型。
 
 對發生的工作流程模型或產生的執行階段模型（或兩者皆有） *之後*&#x200B;特定執行個體啟動的編輯未套用至該執行個體。
 
@@ -202,7 +202,7 @@ AEM提供了數種工具和資源，用於建立工作流程模型、開發工�
    | 步驟 5 | 完成 |
    | 步驟 6 | 完成 |
 
-1. 執行工作流程時，使用者可以根據階段名稱（而不是步驟名稱）檢視進度。 工作流程進度顯示在[收件匣](/help/sites-authoring/inbox.md)中列出的工作流程專案](/help/sites-authoring/workflows-participating.md#opening-a-workflow-item-to-view-details-and-take-actions)的工作流程詳細資訊視窗的[工作流程資訊索引標籤中。
+1. 執行工作流程時，使用者可以根據階段名稱（而不是步驟名稱）檢視進度。 工作流程進度顯示在[收件匣](/help/sites-authoring/inbox.md)中列出的工作流程專案[&#128279;](/help/sites-authoring/workflows-participating.md#opening-a-workflow-item-to-view-details-and-take-actions)的工作流程詳細資訊視窗的工作流程資訊索引標籤中。
 
 ### 工作流程和Forms {#workflows-and-forms}
 

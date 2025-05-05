@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ## 在「建立通訊」使用者介面中建立通訊 {#create-correspondence-in-the-create-correspondence-user-interface}
 
-在「通訊管理」](../../forms/using/create-letter.md)中建立[信函範本後，一般使用者/代理程式/索賠理算員可以在「建立通訊」使用者介面中開啟信函，並透過輸入資料、設定內容和管理附件來建立通訊。 最後，索賠理算員或代理商可以在預覽模式下管理內容並提交信件。
+在「通訊管理」[&#128279;](../../forms/using/create-letter.md)中建立信函範本後，一般使用者/代理程式/索賠理算員可以在「建立通訊」使用者介面中開啟信函，並透過輸入資料、設定內容和管理附件來建立通訊。 最後，索賠理算員或代理商可以在預覽模式下管理內容並提交信件。
 
 ### 預覽通訊 {#preview-a-correspondence}
 
@@ -85,7 +85,7 @@ ht-degree: 0%
 
    在「內容」或「資料」標籤中，點選HTML信函預覽左上角的「反白選取的模組( ![highlightselectedmodulesincontentccr](assets/highlightselectedmodulesincontentccr.png))」，即可停用或啟用在信函預覽中選取相關文字、段落或資料欄位時，移至內容/資料模組的功能。
 
-   如需建立通訊使用者介面中各種模組可用的動作的詳細資訊，請參閱建立通訊使用者介面](#actions-and-info-available-in-the-create-correspondence-content-tab)中可用的[動作和資訊。
+   如需建立通訊使用者介面中各種模組可用的動作的詳細資訊，請參閱建立通訊使用者介面[&#128279;](#actions-and-info-available-in-the-create-correspondence-content-tab)中可用的動作和資訊。
 
 1. 若要尋找內容模組，請使用「尋找」欄位。 輸入內容模組的完整或部分名稱或標題，以在通訊中搜尋它。
 1. 選取清單、文字、條件或目標區域前方的顯示圖示（![顯示](assets/display.png)），以在信函中顯示或隱藏它。
@@ -131,13 +131,13 @@ ht-degree: 0%
 
    ![特殊字元](assets/specialcharacters.png)
 
-   通訊管理已內建對210個特殊字元的支援。 管理員可以透過自訂](../../forms/using/custom-special-characters.md) [新增更多/自訂特殊字元的支援。
+   通訊管理已內建對210個特殊字元的支援。 管理員可以透過自訂[&#128279;](../../forms/using/custom-special-characters.md) 新增更多/自訂特殊字元的支援。
 
 1. 若要在可編輯的內嵌模組中反白顯示\強調部分文字，請選取文字並選取「反白顯示顏色」。
 
    ![letterbackgroundcolor](assets/letterbackgroundcolor.png)
 
-   您可以直接選取[基本色彩]調色盤中的基本色彩`**[A]**`，或在使用滑桿`**[B]**`選擇適當的色彩陰影后選取[選取]****。
+   您可以直接選取[基本色彩]調色盤中的基本色彩`**[A]**`，或在使用滑桿`**[B]**`選擇適當的色彩陰影后選取[選取]**&#x200B;**。
 
    或者，您也可以移至[進階]索引標籤，選取適當的[色相]、[明度]和[飽和度] `**[C]**`來建立精確色彩，然後選取[選取] `**[D]**`來套用色彩以反白顯示文字。
 
@@ -233,7 +233,7 @@ ht-degree: 0%
 
    點選「內容」(![highlightselectedmodulesincontentccr](assets/highlightselectedmodulesincontentccr.png))中的「反白選取的模組」，可以停用或啟用在信函預覽中點選相關文字、段落或資料欄位時，在「內容」標籤中反白選取的內容模組的功能。
 
-   如需建立通訊使用者介面中各種模組可用的動作的詳細資訊，請參閱建立通訊使用者介面](#actions-and-info-available-in-the-create-correspondence-content-tab)中可用的[動作和資訊。
+   如需建立通訊使用者介面中各種模組可用的動作的詳細資訊，請參閱建立通訊使用者介面[&#128279;](#actions-and-info-available-in-the-create-correspondence-content-tab)中可用的動作和資訊。
 
 1. 若要在信函中新增分頁符號，請選取您要插入分頁符號的位置，並選取「分頁符號在前」或「分頁符號在後」 (![pagebreakbeforeafter](assets/pagebreakbeforeafter.png))。
 
@@ -283,7 +283,7 @@ ht-degree: 0%
 
 1. 在AEM中，使用下列URL開啟伺服器的Adobe Experience Manager Web主控台設定： https://&lt;server>：&lt;port>/&lt;contextpath>/system/console/configMgr
 1. 找到&#x200B;**[!UICONTROL 通訊管理組態]**&#x200B;並按一下它。
-1. 檢查Publish ]**組態上的**[!UICONTROL &#x200B;管理信件例項，然後按一下&#x200B;**[!UICONTROL 儲存]**。
+1. 檢查Publish **組態上的**&#x200B;管理信件例項，然後按一下&#x200B;**[!UICONTROL 儲存]**。
 
 ### 啟用儲存草稿功能 {#enable-save-draft-feature}
 
@@ -335,7 +335,7 @@ ht-degree: 0%
 
 1. 在此頁面中，找到AdobeLiveCycle使用者端SDK設定，然後按一下以展開它。
 
-1. 在處理伺服器URL中，輸入LiveCycle伺服器的名稱，提供登入資訊，然後按一下[儲存]。****
+1. 在處理伺服器URL中，輸入LiveCycle伺服器的名稱，提供登入資訊，然後按一下[儲存]。**&#x200B;**
 
    ![輸入LiveCycle伺服器的名稱和登入資訊](assets/3configmanager.png)
 

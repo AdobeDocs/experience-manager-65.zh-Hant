@@ -31,7 +31,7 @@ ht-degree: 1%
 
 設定進階評分與基本評分幾乎相同：
 
-* 基本和進階評分與徽章規則是以相同方式套用至內容](/help/communities/implementing-scoring.md#apply-rules-to-content)。[
+* 基本和進階評分與徽章規則是以相同方式套用至內容[&#128279;](/help/communities/implementing-scoring.md#apply-rules-to-content)。
 
    * 基本和進階評分和徽章規則可套用至相同內容。
 

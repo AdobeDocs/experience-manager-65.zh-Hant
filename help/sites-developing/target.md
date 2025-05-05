@@ -210,7 +210,7 @@ JSP會將必要的Analytics JavaScript物件及參照新增至使用者端JavaSc
 1. 針對「自訂mbox.js」屬性，按一下「瀏覽」並選取檔案。
 1. 若要套用變更，請輸入Adobe Target帳戶的密碼，按一下「重新連線至Target」，然後在連線成功時按一下「確定」。 然後，按一下「編輯元件」對話方塊上的「確定」。
 
-您的Target設定包含自訂mbox.js檔案，在網頁的head區段](/help/sites-developing/target.md#p-the-head-section-p)中[必要的程式碼會將檔案新增至使用者端資料庫架構，而非testandtarget.js資料庫的參考。
+您的Target設定包含自訂mbox.js檔案，在網頁的head區段[&#128279;](/help/sites-developing/target.md#p-the-head-section-p)中必要的程式碼會將檔案新增至使用者端資料庫架構，而非testandtarget.js資料庫的參考。
 
 ## 停用元件的目標命令 {#disabling-the-target-command-for-components}
 

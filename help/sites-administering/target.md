@@ -29,7 +29,7 @@ ht-degree: 1%
 
 若要與Target整合，請執行下列工作：
 
-1. [執行必要工作](/help/sites-administering/target-requirements.md)：向Adobe Target註冊並設定AEM編寫執行個體的某些方面。 您的Adobe Target帳戶必須至少具有**核准者**層級的許可權。 此外，您必須保護發佈節點上的活動設定，讓使用者無法存取。
+1. [執行必要工作](/help/sites-administering/target-requirements.md)：向Adobe Target註冊並設定AEM編寫執行個體的某些方面。 您的Adobe Target帳戶必須至少具有&#x200B;**核准者**&#x200B;層級的許可權。 此外，您必須保護發佈節點上的活動設定，讓使用者無法存取。
 
 1. 可以：
 

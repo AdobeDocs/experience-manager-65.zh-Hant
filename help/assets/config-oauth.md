@@ -52,6 +52,7 @@ OAuth設定需要下列先決條件：
    * `auth.token.provider.orgId="<OrgID>"`
    * `auth.token.provider.default.claims=("\"iss\"\ :\ \"<OrgID>\"")`
    * `auth.token.provider.scope="read_pc.dma_smart_content,\ openid,\ AdobeID,\ additional_info.projectedProductContext"`
+
      `auth.token.validator.type="adobe-ims-similaritysearch"`
    * 以新OAuth設定的使用者端識別碼更新`auth.token.provider.client.id`。
    * 將`auth.access.token.request`更新為`"https://ims-na1.adobelogin.com/ims/token/v3"`
@@ -182,7 +183,7 @@ OAuth設定需要下列先決條件：
 
 1. 在&#x200B;**[!UICONTROL Assets智慧標籤]**&#x200B;底下，開啟上方建立的設定。 在服務設定頁面上，按一下&#x200B;**[!UICONTROL 編輯]**。
 
-1. 在「 **[!UICONTROL AEM Smart Content Service]** 」對話方塊中 **[!UICONTROL ，使用「服務URL」和「授權伺服器」欄位的預先填入值]****** 。
+1. 在「 **[!UICONTROL AEM Smart Content Service]** 」對話方塊中 **[!UICONTROL ，使用「服務URL」和「授權伺服器」欄位的預先填入值]**&#x200B;**&#x200B;** 。
 
 1. 針對欄位[!UICONTROL Api金鑰]、[!UICONTROL 技術帳戶ID]、[!UICONTROL 組織ID]和[!UICONTROL 使用者端密碼]，請複製並使用在[Adobe Developer Console整合](#create-adobe-i-o-integration)中產生的下列值。
 

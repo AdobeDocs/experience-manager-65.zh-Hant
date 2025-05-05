@@ -32,7 +32,7 @@ ht-degree: 13%
 
    ![chlimage_1-408](assets/chlimage_1-408.png)
 
-1. 選取回應式影像預設集。URL **[!UICONTROL 和]****[!UICONTROL RESS]** 按鈕出現。
+1. 選取回應式影像預設集。URL **[!UICONTROL 和]**&#x200B;**[!UICONTROL RESS]** 按鈕出現。
 
    ![chlimage_1-409](assets/chlimage_1-208.png)
 

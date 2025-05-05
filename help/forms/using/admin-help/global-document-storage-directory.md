@@ -22,7 +22,7 @@ ht-degree: 1%
 
 長效檔案可能包含敏感的使用者資訊。 使用AEM Forms API或使用者介面存取此資訊時，可能需要特殊認證。 透過作業系統妥善保護GDS目錄非常重要。 只有用於執行應用程式伺服器的管理員帳戶才應該具有對GDS目錄的讀取/寫入存取權。
 
-除了為GDS選取安全、高可用性的目錄之外，您也可以選擇啟用資料庫中的檔案儲存。 請注意，即使使用AEM Forms資料庫進行檔案儲存，AEM Forms仍需要GDS目錄。 （請參閱當資料庫用於檔案儲存](/help/forms/using/admin-help/files-back-recover.md#backup-options-when-database-is-used-for-document-storage)時的[備份選項。）
+除了為GDS選取安全、高可用性的目錄之外，您也可以選擇啟用資料庫中的檔案儲存。 請注意，即使使用AEM Forms資料庫進行檔案儲存，AEM Forms仍需要GDS目錄。 （請參閱當資料庫用於檔案儲存[&#128279;](/help/forms/using/admin-help/files-back-recover.md#backup-options-when-database-is-used-for-document-storage)時的備份選項。）
 
 AEM forms應用程式資料位於GDS目錄和AEM forms資料庫中。 下表說明資料及其位置。
 

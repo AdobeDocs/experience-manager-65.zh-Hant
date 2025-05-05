@@ -24,7 +24,7 @@ ht-degree: 18%
 
 建立頁面（或一組頁面）的啟動後，您可以在頁面的啟動副本中編輯內容。
 
-1. 從[參考] （網站主控台）](/help/sites-authoring/launches.md#launches-in-references-sites-console)存取[啟動項，以顯示可用的動作。
+1. 從[參考] （網站主控台）[&#128279;](/help/sites-authoring/launches.md#launches-in-references-sites-console)存取啟動項，以顯示可用的動作。
 1. 選取&#x200B;**移至頁面**&#x200B;以開啟要編輯的頁面。
 
 >[!NOTE]
@@ -51,7 +51,7 @@ livecopy可用來將來源 *分支的內容*** 同步到啟動分支 (以便讓�
 
 ## 比較Launch頁面與其Source頁面 {#comparing-a-launch-page-to-its-source-page}
 
-若要追蹤您所做的變更，您可以在「參考」中檢視啟動 **** ，並比較啟動頁面與其來源頁面：
+若要追蹤您所做的變更，您可以在「參考」中檢視啟動 **&#x200B;**&#x200B;，並比較啟動頁面與其來源頁面：
 
 1. 在&#x200B;**網站**&#x200B;主控台中，[導覽至啟動項的來源頁面，並選取它](/help/sites-authoring/basic-handling.md#viewingandselectingyourresources)。
 1. 開啟&#x200B;**[參考](/help/sites-authoring/basic-handling.md#references)**&#x200B;面板，然後選取&#x200B;**啟動**。
@@ -103,10 +103,10 @@ livecopy可用來將來源 *分支的內容*** 同步到啟動分支 (以便讓�
 
 1. 進行必要的變更，然後使用「儲存」 **確認**。
 
-   如需 [「啟動日期」和「生產就緒」欄位的用途和互動相關資訊，請參閱「啟動——事件順序」](/help/sites-authoring/launches.md#launches-the-order-of-events) (Launches - Order of Events ******** )。
+   如需 [「啟動日期」和「生產就緒」欄位的用途和互動相關資訊，請參閱「啟動——事件順序」](/help/sites-authoring/launches.md#launches-the-order-of-events) (Launches - Order of Events **&#x200B;**&#x200B;**&#x200B;** )。
 
 ## 探索頁面的啟動狀態 {#discovering-the-launch-status-of-a-page}
 
-當您從「參考」(References)標籤選取特定啟動時，會顯示狀態(請參閱「參考」(Sites Console)](/help/sites-authoring/launches.md#launches-in-references-sites-console)中的[啟動)。
+當您從「參考」(References)標籤選取特定啟動時，會顯示狀態(請參閱「參考」(Sites Console) [&#128279;](/help/sites-authoring/launches.md#launches-in-references-sites-console)中的啟動)。
 
 ![screen-shot_2019-03-05at121901](assets/screen-shot_2019-03-05at121901.png)

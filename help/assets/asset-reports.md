@@ -119,7 +119,7 @@ ht-degree: 8%
    <!--![A generated report](assets/report_page.png)-->
    [報告狀態](assets/report-status.JPG)
 
-   按一下工具列中的「下載&#x200B;****」，以CSV格式下載報表。
+   按一下工具列中的「下載&#x200B;**&#x200B;**」，以CSV格式下載報表。
 
 ## 新增自訂欄 {#add-custom-columns}
 
@@ -149,7 +149,7 @@ ht-degree: 8%
 
    ![從jcr：content](assets/property_picker.png)中的路徑對應屬性路徑
 
-   若要新增更多自訂欄，請按一下[新增] ****&#x200B;並重複步驟5和6。
+   若要新增更多自訂欄，請按一下[新增] **&#x200B;**&#x200B;並重複步驟5和6。
 
 1. 從工具列按一下&#x200B;**[!UICONTROL 「建立]**」。 訊息會通知已啟動報表產生作業。
 

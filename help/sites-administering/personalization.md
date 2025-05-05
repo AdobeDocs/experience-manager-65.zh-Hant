@@ -172,7 +172,7 @@ AEM提供各種元件供個人化使用。 有些專案可讓使用者登入並�
 
 部落格、論壇和行事曆等社群功能會建立社群內容，通常稱為使用者產生的內容(UGC)。 在包含多個AEM執行個體（[發佈陣列](/help/communities/topologies.md)）的發佈環境中輸入UGC時，一個主要問題是如何同步所有執行個體的UGC。
 
-透過[AEM Communities 6.1](/help/communities/overview.md)擴充功能，使用UGC](/help/communities/working-with-srp.md)的[公用存放區即可解決此問題。 關於個人化，Communities包含[社交登入](/help/communities/social-login.md) — 提供網站訪客使用Facebook和Twitter登入的選項。
+透過[AEM Communities 6.1](/help/communities/overview.md)擴充功能，使用UGC[&#128279;](/help/communities/working-with-srp.md)的公用存放區即可解決此問題。 關於個人化，Communities包含[社交登入](/help/communities/social-login.md) — 提供網站訪客使用Facebook和Twitter登入的選項。
 
 如果沒有Communities擴充功能，可探索多種方法來解決UGC一致性問題，包括：
 

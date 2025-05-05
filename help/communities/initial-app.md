@@ -34,7 +34,7 @@ ht-degree: 1%
    * 選取`/apps/an-scf-sandbox/templates`
    * **[!UICONTROL 建立]** > **[!UICONTROL 建立範本]**
 
-1. 在[建立範本]對話方塊中，輸入下列值，然後按一下[下一步] ****：
+1. 在[建立範本]對話方塊中，輸入下列值，然後按一下[下一步] **&#x200B;**：
 
    * 標籤： `playpage`
    * 標題： `An SCF Sandbox Play Template`
@@ -78,7 +78,7 @@ ht-degree: 1%
 
 1. 按一下「確定」並完成範本的建立後，請注意新`playpage`範本的「屬性」標籤值角落中顯示的紅色三角形。 這些紅色三角形表示尚未儲存的編輯。
 
-   按一下「儲存全部」****，將新範本儲存至存放庫。
+   按一下「儲存全部」**&#x200B;**，將新範本儲存至存放庫。
 
    ![verify-content-template](assets/verify-content-template.png)
 

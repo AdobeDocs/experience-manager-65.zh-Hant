@@ -319,7 +319,7 @@ MSM即時副本是特定網站內容的副本，其維持與原始來源的即�
 
 #### 巢狀 Live Copy {#nested-live-copies}
 
-當您（或程式）在現有即時副本](#live-copy-with-non-live-copy-pages)中建立[頁面時，此新頁面也可以設定為不同Blueprint的即時副本。 這稱為巢狀即時副本，其中第二個（內部）即時副本的行為會受到第一個（外部）即時副本的影響，影響方式如下：
+當您（或程式）在現有即時副本[&#128279;](#live-copy-with-non-live-copy-pages)中建立頁面時，此新頁面也可以設定為不同Blueprint的即時副本。 這稱為巢狀即時副本，其中第二個（內部）即時副本的行為會受到第一個（外部）即時副本的影響，影響方式如下：
 
 * 為頂層即時副本觸發的深層轉出可以繼續進入巢狀即時副本（例如，如果觸發器相符）。
 * 來源之間的任何連結會在即時副本中重寫。
@@ -397,7 +397,7 @@ MSM即時副本是特定網站內容的副本，其維持與原始來源的即�
 
 ### 推出衝突 {#rollout-conflicts}
 
-轉出可能會變得複雜，尤其是當作者同時編輯來源和即時副本中的內容時，因此瞭解AEM如何處理轉出](/help/sites-administering/msm-rollout-conflicts.md)期間可能發生的任何[衝突會很有用。
+轉出可能會變得複雜，尤其是當作者同時編輯來源和即時副本中的內容時，因此瞭解AEM如何處理轉出[&#128279;](/help/sites-administering/msm-rollout-conflicts.md)期間可能發生的任何衝突會很有用。
 
 ### 暫停和取消繼承與同步 {#suspending-and-cancelling-inheritance-and-synchronization}
 

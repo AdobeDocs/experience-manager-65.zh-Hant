@@ -26,7 +26,7 @@ ht-degree: 0%
 * 在所有發佈執行個體上啟用反向復寫
 * 啟用交易報告
 * 提供檢視交易報告的許可權
-* （選擇性）設定交易排清期間與寄件匣[](/help/forms/using/installing-configuring-aem-forms-osgi.md)
+* （選擇性）設定交易排清期間與寄件匣[&#128279;](/help/forms/using/installing-configuring-aem-forms-osgi.md)
 
 >[!NOTE]
 >

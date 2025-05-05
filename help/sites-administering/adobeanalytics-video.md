@@ -322,7 +322,7 @@ eventdata.events.milestoneXX
 
    ![里程碑1](assets/lmilestones1.png)
 
-   *呼叫中傳送的&#x200B;**pev3**變數包含下列資訊：*
+   *呼叫中傳送的&#x200B;**pev3**&#x200B;變數包含下列資訊：*
 
    * *名稱* — 視訊檔的名稱(*film.avi*)
 
@@ -338,7 +338,7 @@ eventdata.events.milestoneXX
 
 ## 舊版秒數 {#legacy-seconds}
 
-使用**舊版秒**方法時，Adobe Analytics呼叫會每隔N秒觸發一次，其中N會在「追蹤位移」欄位中指定。
+使用&#x200B;**舊版秒**&#x200B;方法時，Adobe Analytics呼叫會每隔N秒觸發一次，其中N會在「追蹤位移」欄位中指定。
 
 1. 將追蹤位移設為任何秒數，
 

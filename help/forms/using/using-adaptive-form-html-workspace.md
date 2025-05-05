@@ -74,7 +74,7 @@ JEE上的AEM Forms提供在HTML Workspace中使用最適化表單的功能。
 
    使用CRX資產
 
-1. 選取透過[管理Assets UI]建立的最適化表單，然後按一下[確定]。****
+1. 選取透過[管理Assets UI]建立的最適化表單，然後按一下[確定]。**&#x200B;**
 
    ![選取最適化表單](assets/selecting_form.png)
 

@@ -32,7 +32,7 @@ ht-degree: 1%
 
 若要設定您所選擇的標誌影像，請執行下列步驟：
 
-1. 在CRX](#creatingfolderstructure)中建立適當的[資料夾結構。
+1. 在CRX[&#128279;](#creatingfolderstructure)中建立適當的資料夾結構。
 1. [將新的標誌檔](#uploadlogo)上傳至您在CRX中建立的資料夾。
 
 1. [在CRX上設定CSS](#createcss)以參照新的標誌。
@@ -102,7 +102,7 @@ ht-degree: 1%
       >
       >您也可以手動在/apps資料夾中建立資料夾結構。
 
-1. 按一下[儲存全部]****&#x200B;儲存伺服器上的變更。
+1. 按一下[儲存全部]&#x200B;**&#x200B;**&#x200B;儲存伺服器上的變更。
 
 ## 將新標誌上傳至CRX {#uploadlogo}
 
@@ -141,7 +141,7 @@ ht-degree: 1%
 
    現在按一下newlogo.png資料夾，然後按兩下jcr：content （dim選項）並設定型別nt：resource。 如果不存在，請以名稱jcr：content建立屬性。
 
-1. 在[編輯jcr：data]對話方塊中，按一下[瀏覽]****&#x200B;並選取您要做為標誌使用的影像檔（此處為CustomLogo.png）。
+1. 在[編輯jcr：data]對話方塊中，按一下[瀏覽]&#x200B;**&#x200B;**&#x200B;並選取您要做為標誌使用的影像檔（此處為CustomLogo.png）。
 
    支援的影像檔案格式取決於您用來存取AEM Forms的瀏覽器。 所有瀏覽器都支援JPEG、GIF和PNG。 如需詳細資訊，請參閱瀏覽器特定的檔案，瞭解受支援的影像格式。
 
@@ -165,7 +165,7 @@ ht-degree: 1%
    建立customcss.css檔案的步驟：
 
    1. 在&#x200B;**css**&#x200B;資料夾上按一下滑鼠右鍵，然後選取&#x200B;**建立>建立檔案**。
-   1. 在[新增檔案]對話方塊中，將CSS的名稱指定為`customcss.css` （不能使用其他檔案名稱），然後按一下[確定]。****
+   1. 在[新增檔案]對話方塊中，將CSS的名稱指定為`customcss.css` （不能使用其他檔案名稱），然後按一下[確定]。**&#x200B;**
    1. 將下列程式碼新增至新建立的css檔案。 在程式碼的content：url中，指定您已上傳至CRXDE中imgs資料夾的影像名稱。
 
       ```css

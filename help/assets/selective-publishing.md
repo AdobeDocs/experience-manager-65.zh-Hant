@@ -210,8 +210,8 @@ ht-degree: 3%
    ![搜尋結果中的清單檢視和篩選器](/help/assets/assets-dm/select-publish-search-result.png)
 
 1. 在左側面板中，展開&#x200B;**[!UICONTROL 狀態]**，然後展開&#x200B;**[!UICONTROL Dynamic Media]**&#x200B;搜尋述詞。
-1. 使用&#x200B;**[!UICONTROL 已發佈]**&#x200B;和&#x200B;**[!UICONTROL 已取消發佈]**核取方塊，根據Dynamic Media資產的已發佈狀態進一步調整搜尋結果。
-您可以選擇性將這些核取方塊與**[!UICONTROL Publish]**&#x200B;搜尋述詞搭配使用，以精簡&#x200B;**[!UICONTROL 已發佈]**&#x200B;和&#x200B;**[!UICONTROL 已取消發佈]** Experience Manager資產的搜尋結果。
+1. 使用&#x200B;**[!UICONTROL 已發佈]**&#x200B;和&#x200B;**[!UICONTROL 已取消發佈]**&#x200B;核取方塊，根據Dynamic Media資產的已發佈狀態進一步調整搜尋結果。
+您可以選擇性將這些核取方塊與&#x200B;**[!UICONTROL Publish]**&#x200B;搜尋述詞搭配使用，以精簡&#x200B;**[!UICONTROL 已發佈]**&#x200B;和&#x200B;**[!UICONTROL 已取消發佈]** Experience Manager資產的搜尋結果。
 1. 執行下列任一項作業：
    * 選取一或多個要發佈或取消發佈的資產。
    * 在&#x200B;**[!UICONTROL 搜尋結果]**&#x200B;頁面的右上角附近，選取&#x200B;**[!UICONTROL 全選]**。
@@ -264,10 +264,11 @@ ht-degree: 3%
 1. 在Experience Manager中，在頁面的左上角選取Experience Manager標誌以存取全域導覽主控台。 在頁面左側，選取「導覽」圖示（位於「工具」圖示的正上方），然後選取&#x200B;**[!UICONTROL Assets]** > **[!UICONTROL 檔案]**。
 1. 在&#x200B;**[!UICONTROL 卡片檢視]**、**[!UICONTROL 欄檢視]**&#x200B;或&#x200B;**[!UICONTROL 清單檢視]** （下面的熒幕擷圖顯示&#x200B;**[!UICONTROL 清單檢視]**）中，開啟包含您已發佈或取消發佈之資產的資料夾。
 1. 選取資產，使其出現時帶有核取記號。 如需範例，請參閱下方的熒幕擷圖。
-1. 在頁面的左上角附近，從下拉式功能表中選取&#x200B;**[!UICONTROL 時間軸]**。 左側面板中的&#x200B;**[!UICONTROL 狀態]**區域會顯示所選資產的發佈狀態。
-當您使用**[!UICONTROL 清單檢視]**&#x200B;時，**[!UICONTROL Dynamic Media]**&#x200B;發佈狀態的額外欄會出現。
+1. 在頁面的左上角附近，從下拉式功能表中選取&#x200B;**[!UICONTROL 時間軸]**。 左側面板中的&#x200B;**[!UICONTROL 狀態]**&#x200B;區域會顯示所選資產的發佈狀態。
+當您使用&#x200B;**[!UICONTROL 清單檢視]**&#x200B;時，**[!UICONTROL Dynamic Media]**&#x200B;發佈狀態的額外欄會出現。
    * 設定為同步至Dynamic Media的資料夾依預設會顯示&#x200B;**[!UICONTROL Dynamic Media]**&#x200B;欄。
    * *未*設定為同步至Dynamic Media的資料夾不會顯示Dynamic Media資料行。
+
      ![清單檢視和時間表](/help/assets/assets-dm/selective-publish-status-timeline.png)
 
 ## 疑難排解選擇性Publish {#selective-publish-troubleshoot}

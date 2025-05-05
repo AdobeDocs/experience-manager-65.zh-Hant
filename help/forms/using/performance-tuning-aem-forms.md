@@ -102,7 +102,7 @@ Apache可以使用HTTP通訊協定與CRX通訊。 這些設定是使用HTTP進�
 
 1. 啟用壓縮。 在`APACHE_HOME/conf/httpd.conf`組態檔中新增下列組態。
 
-   HTML5表單的&#x200B;****
+   HTML5表單的&#x200B;**&#x200B;**
 
    ```xml
    <Location /content/xfaforms>
@@ -171,5 +171,5 @@ Apache可以使用HTTP通訊協定與CRX通訊。 這些設定是使用HTTP進�
 >
 >* 如果您使用不同的GDS和暫存目錄位置，請開啟`https://'[server]:[port]'/adminui`的AdminUI，瀏覽至&#x200B;**首頁>設定>核心系統設定>核心設定**&#x200B;以確認使用中的位置。
 >
-* 如果排除建議的目錄後AEM Forms伺服器執行速度會很慢，則同時排除Java™可執行檔(java.exe)。
+>* 如果排除建議的目錄後AEM Forms伺服器執行速度會很慢，則同時排除Java™可執行檔(java.exe)。
 >

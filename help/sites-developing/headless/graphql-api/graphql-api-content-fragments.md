@@ -72,7 +72,7 @@ GraphQL 是：
 
 * [graphQL.org - Java](https://graphql.org/code/#java)
 
-* 在GitHub™](https://github.com/graphql-java)使用[GraphQL Java}
+* 在GitHub™[&#128279;](https://github.com/graphql-java)使用GraphQL Java&rbrace;
 
 ### GraphQL 術語 {#graphql-terminology}
 
@@ -176,7 +176,7 @@ GraphQL是型別API，這表示資料必須清楚建構並依型別組織。
 
 GraphQL 規格提供了一系列指南，說明如何建立健全的 API 來查詢特定執行個體上的資料。若要完成這些准則，使用者端必須擷取[結構描述](#schema-generation)，其中包含查詢所需的所有型別。
 
-對於內容片段，GraphQL 綱要 (結構和類型) 是以&#x200B;**啟用的**[內容片段模型](/help/assets/content-fragments/content-fragments-models.md)及其資料類型為基礎。
+對於內容片段，GraphQL 綱要 (結構和類型) 是以&#x200B;**啟用的**&#x200B;[內容片段模型](/help/assets/content-fragments/content-fragments-models.md)及其資料類型為基礎。
 
 >[!CAUTION]
 >

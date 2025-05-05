@@ -152,11 +152,11 @@ XML 和 JSON 結構描述表示組織的後端系統產生或使用資料的結�
   </tr>
   <tr>
    <td>電子郵件</td>
-   <td><p>新增欄位以擷取電子郵件地址。電子郵件元件預設會使用以下規則運算式驗證電子郵件地址。</p> <p><code>^[a-zA-Z0-9.!#$%&amp;'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$</code></p> </td>
+   <td><p>新增欄位以擷取電子郵件地址。電子郵件元件預設會使用以下規則運算式驗證電子郵件地址。</p> <p><code>^[a-zA-Z0-9.!#$%&amp;'*+/=?^_&grave;{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$</code></p> </td>
   </tr>
   <tr>
    <td>檔案附件</td>
-   <td><p>新增按鈕，讓使用者可瀏覽支援檔案並將其附加至表單。 您可以將多個檔案附加至「檔案」附件元件。 您也可以在元件的屬性瀏覽器中，為附件指定**[！UICONTROL檔案大小上限]**和**[！UICONTROL支援的檔案型別]**。 </p> <p><strong> 注意： </strong><ul> <li> 元件不支援附加檔案名稱(.)開頭為字元，且包含\ / ： * ？ 「 &lt; &gt; | ； % $，或包含保留給Windows作業系統（如nul、prn、con、lpt或com）的特殊檔案名稱。 </li> <li> 若要將多個檔案附加至Apple Safari瀏覽器中開啟的檔案附件元件，請逐一選取並附加檔案。 您無法一次選取並附加多個檔案。</li> <li>檔案附件元件支援為Adobe Sign啟用的調適型表單中的預先定義檔案格式集。 如需詳細資訊，請參閱<a href="https://helpx.adobe.com/tw/document-cloud/help/supported-file-formats-fill-sign.html#main-pars_text">支援的檔案格式</a>。 </li></ul></p> </td>
+   <td><p>新增按鈕，讓使用者可瀏覽支援檔案並將其附加至表單。 您可以將多個檔案附加至「檔案」附件元件。 您也可以在元件的屬性瀏覽器中，為附件指定&#x200B;**[!UICONTROL 檔案大小上限]**&#x200B;和&#x200B;**[!UICONTROL 支援的檔案型別]**。 </p> <p><strong> 注意： </strong><ul> <li> 元件不支援附加檔案名稱(.)開頭為字元，且包含\ / ： * ？ 「 &lt; &gt; | ； % $，或包含保留給Windows作業系統（如nul、prn、con、lpt或com）的特殊檔案名稱。 </li> <li> 若要將多個檔案附加至Apple Safari瀏覽器中開啟的檔案附件元件，請逐一選取並附加檔案。 您無法一次選取並附加多個檔案。</li> <li>檔案附件元件支援為Adobe Sign啟用的調適型表單中的預先定義檔案格式集。 如需詳細資訊，請參閱<a href="https://helpx.adobe.com/tw/document-cloud/help/supported-file-formats-fill-sign.html#main-pars_text">支援的檔案格式</a>。 </li></ul></p> </td>
   </tr>
   <tr>
    <td>檔案附件清單</td>

@@ -66,7 +66,7 @@ analytics-administrators使用者群組的成員可以設定Sites主控台，讓
 
    ![aa-15](assets/aa-15.png)
 
-1. 選取您要在Sites主控台中公開給作者的量度，然後按一下[新增]。****
+1. 選取您要在Sites主控台中公開給作者的量度，然後按一下[新增]。**&#x200B;**
 
    顯示的欄是從Adobe Analytics中擷取的。
 

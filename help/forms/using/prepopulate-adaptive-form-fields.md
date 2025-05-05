@@ -391,9 +391,11 @@ https://localhost:4502/content/forms/af/abc.html?wcmmode=disabled&dataRef=servic
    1. 啟用Configuration.af.clientside.datamerge.enabled.name選項
 * 若要從命令列啟用或停用：
    * 若要啟用，請執行下列cURL命令：
+
      `curl -u admin:admin -X POST -d apply=true \ -d propertylist=af.clientside.datamerge.enabled \ -d af.clientside.datamerge.enabled=true \ http://${crx.host}:${crx.port}/system/console/configMgr/Adaptive%20Form%20and%20Interactive%20Communication%20Web%20Channel%20Configuration`
 
    * 若要停用，請執行下列cURL命令：
+
      `curl -u admin:admin -X POST -d apply=true \ -d propertylist=af.clientside.datamerge.enabled \ -d af.clientside.datamerge.enabled=false \ http://${crx.host}:${crx.port}/system/console/configMgr/Adaptive%20Form%20and%20Interactive%20Communication%20Web%20Channel%20Configuration`
 
   若要充分利用使用者端上的預先填入資料選項，請更新預填服務以傳回[FileAttachmentMap](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/forms/common/service/PrefillData.html)和[CustomContext](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/forms/common/service/PrefillData.html)

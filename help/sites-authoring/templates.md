@@ -21,7 +21,7 @@ ht-degree: 8%
 
 建立頁面時，您必須選取範本，作為建立新頁面的基礎。 範本會定義結果頁面的結構、任何初始內容以及可以使用的元件。
 
-使用范 **本編輯器**，建立和維護範本不再是開發人員專屬的工作。也可以涉及一種稱為模板作 **者的權**&#x200B;力用戶。開發人員仍需要設定環境、建立用戶端程式庫和建立要使用的元件，但是當這些基本功能準備就緒後，範本作者就可以彈性地建立和設定範本，而不需要開發專案。****
+使用范 **本編輯器**，建立和維護範本不再是開發人員專屬的工作。也可以涉及一種稱為模板作 **者的權**&#x200B;力用戶。開發人員仍需要設定環境、建立用戶端程式庫和建立要使用的元件，但是當這些基本功能準備就緒後，範本作者就可以彈性地建立和設定範本，而不需要開發專案。**&#x200B;**
 
 **範本主控台**&#x200B;允許範本作者：
 
@@ -40,7 +40,7 @@ ht-degree: 8%
 
 >[!NOTE]
 >
->范 **** 本編輯器不支援直接在範本層級定位。可以定位根據可編輯範本建立的頁面，但無法定位範本本身。
+>范 **&#x200B;**&#x200B;本編輯器不支援直接在範本層級定位。可以定位根據可編輯範本建立的頁面，但無法定位範本本身。
 
 >[!CAUTION]
 >
@@ -106,7 +106,7 @@ AEM現在提供兩種基本型別的範本：
 * 靜態範本
 
    * 靜態範本可用於多個版本的AEM。
-   * 它們是由您的開發人員](/help/sites-developing/page-templates-static.md)提供的[，因此作者無法建立或編輯它們。
+   * 它們是由您的開發人員[&#128279;](/help/sites-developing/page-templates-static.md)提供的，因此作者無法建立或編輯它們。
    * 會複製以建立新頁面，但之後不存在動態連線（儘管範本名稱已註冊以供參考）。
    * 使用[設計模式](/help/sites-authoring/default-components-designmode.md)來儲存設計屬性。
    * 由於編輯靜態範本是開發人員的專屬工作，如需詳細資訊，請參閱開發人員檔案[頁面範本 — 靜態](/help/sites-developing/page-templates-static.md)。
@@ -146,7 +146,7 @@ AEM現在提供兩種基本型別的範本：
 
 >[!CAUTION]
 >
->切勿在範本中輸入任何需要[國際化](/help/sites-developing/i18n.md)的資訊。 基於內部化的目的，建議使用核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html)的[本地化功能。
+>切勿在範本中輸入任何需要[國際化](/help/sites-developing/i18n.md)的資訊。 基於內部化的目的，建議使用核心元件[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html)的本地化功能。
 
 ### 建立範本資料夾 — 管理員 {#creating-a-template-folder-admin}
 
@@ -161,7 +161,7 @@ AEM現在提供兩種基本型別的範本：
    >在標準AEM執行個體中，**global**&#x200B;資料夾已存在於範本主控台中。 此檔案會保留預設範本，並在目前資料夾中找不到原則及/或範本型別時，做為遞補內容。
    >
    >
-   >建議最好使用專案](/help/sites-developing/page-templates-editable.md#template-folders)所建立的[範本資料夾。
+   >建議最好使用專案[&#128279;](/help/sites-developing/page-templates-editable.md#template-folders)所建立的範本資料夾。
 
 1. 選取&#x200B;**建立**，接著選取&#x200B;**建立範本**&#x200B;以開啟精靈。
 
@@ -188,7 +188,7 @@ AEM現在提供兩種基本型別的範本：
 
 * 影像
 
-   * 要做為範本](/help/sites-authoring/templates.md#template-thumbnail-image)的[縮圖以輔助選取的影像，例如「建立頁面」精靈中的選取。
+   * 要做為範本[&#128279;](/help/sites-authoring/templates.md#template-thumbnail-image)的縮圖以輔助選取的影像，例如「建立頁面」精靈中的選取。
 
       * 可以上傳
       * 可根據範本內容產生
@@ -229,9 +229,9 @@ AEM現在提供兩種基本型別的範本：
 
 1. 對於這兩種方法，都會顯示縮圖的預覽。
 
-   如果不滿意，請按一下[清除]上傳其他影像或重新產生縮圖。****
+   如果不滿意，請按一下[清除]上傳其他影像或重新產生縮圖。**&#x200B;**
 
-1. 如果您對縮圖感到滿意，請按一下[儲存並關閉]。****
+1. 如果您對縮圖感到滿意，請按一下[儲存並關閉]。**&#x200B;**
 
 ### 啟用和允許範本 — 範本作者 {#enabling-and-allowing-a-template-template-author}
 
@@ -321,7 +321,7 @@ AEM現在提供兩種基本型別的範本：
 
 * [版面配置](#editingatemplatelayout)
 
-  您可以在此處預先定義所需裝置格式的範本配置。 **範本製作的** 「版面」模式與頁面製作的「版面 [**** 」模式功能相同](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode)。
+  您可以在此處預先定義所需裝置格式的範本配置。 **範本製作的** 「版面」模式與頁面製作的「版面 [**&#x200B;** 」模式功能相同](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode)。
 
 * [頁面原則](#editingatemplatepagepolicies)
 
@@ -380,7 +380,7 @@ AEM現在提供兩種基本型別的範本：
 
   >[!NOTE]
   >
-  >將現成可用的標題元件新增至範本時 **** ，其中會包含預設的文字 **結構**。
+  >將現成可用的標題元件新增至範本時 **&#x200B;**&#x200B;，其中會包含預設的文字 **結構**。
   >
   >
   >如果您變更此專案，並新增您自己的文字，則從範本建立頁面時，會使用此更新的文字。
@@ -451,7 +451,7 @@ AEM現在提供兩種基本型別的範本：
 
   >[!NOTE]
   >
-  >如果將相同型別的多個元件新增為初始內容，則相同原則會套用至所有元件。 這會在靜態範本](/help/sites-authoring/default-components-designmode.md)的&#x200B;[**設計模式**&#x200B;中映象相同的限制。
+  >如果將相同型別的多個元件新增為初始內容，則相同原則會套用至所有元件。 這會在靜態範本[&#128279;](/help/sites-authoring/default-components-designmode.md)的&#x200B;**設計模式**&#x200B;中映象相同的限制。
 
   ***屬性***
 
@@ -472,7 +472,7 @@ AEM現在提供兩種基本型別的範本：
 
   若要移除設定，請按一下設定右側的&#x200B;**刪除**&#x200B;按鈕。
 
-  若要移除設定，請按一下**刪除**按鈕。
+  若要移除設定，請按一下&#x200B;**刪除**&#x200B;按鈕。
 
   ![chlimage_1-142](assets/chlimage_1-142.png)
 
@@ -490,7 +490,7 @@ AEM現在提供兩種基本型別的範本：
 
   >[!NOTE]
   >
-  >[實作RTF編輯器的元件的內容原則](/help/sites-administering/rich-text-editor.md#main-pars-header-206036638)只能為RTE透過其UI設定提供的選項定義。[](/help/sites-administering/rich-text-editor.md#main-pars_header_206036638) [](/help/sites-administering/rich-text-editor.md#main-pars_header_206036638)
+  >[實作RTF編輯器的元件的內容原則](/help/sites-administering/rich-text-editor.md#main-pars-header-206036638)只能為RTE透過其UI設定提供的選項定義。[&#128279;](/help/sites-administering/rich-text-editor.md#main-pars_header_206036638) [&#128279;](/help/sites-administering/rich-text-editor.md#main-pars_header_206036638)
 
 * **原則與屬性（配置容器）**
 
@@ -564,7 +564,7 @@ AEM現在提供兩種基本型別的範本：
 
   為了節省空間，配置容器不會為了容納允許的元件清單而增大。 容器會變成可捲動清單。
 
-  可配置的元件以「策略」表徵圖顯示 **** ，可以點選或按一下該表徵圖以編輯該元件的策略和屬性。
+  可配置的元件以「策略」表徵圖顯示 **&#x200B;**&#x200B;，可以點選或按一下該表徵圖以編輯該元件的策略和屬性。
 
   ![chlimage_1-148](assets/chlimage_1-148.png)
 
@@ -578,7 +578,7 @@ AEM現在提供兩種基本型別的範本：
 
 **初始內容**&#x200B;模式用於定義首次根據範本建立頁面時顯示的內容。 然後，頁面作者可以編輯初始內容。
 
-雖然在「結構 **」模式下建立的所有內容在「初始內容」中都可** 見 ****，但只能選擇和編輯已解鎖的元件。
+雖然在「結構 **」模式下建立的所有內容在「初始內容」中都可** 見 **&#x200B;**，但只能選擇和編輯已解鎖的元件。
 
 >[!NOTE]
 >
@@ -592,9 +592,9 @@ AEM現在提供兩種基本型別的範本：
 
   ![chlimage_1-151](assets/chlimage_1-151.png)
 
-* 如果容器元件已解除鎖定(在「結 **構** 」模式中)，則您可以在「初始內容 **** 」模式中新增元件至容器。在「初始內 **容」模式中新增的元件** ，可在產生的頁面上移動或從中刪除。
+* 如果容器元件已解除鎖定(在「結 **構** 」模式中)，則您可以在「初始內容 **&#x200B;**&#x200B;」模式中新增元件至容器。在「初始內 **容」模式中新增的元件** ，可在產生的頁面上移動或從中刪除。
 
-  您可以使用「拖曳元件到此處 **」區域，或從適當容器的工具列** 中使用「插入新元件 **** 」選項來新增元件。
+  您可以使用「拖曳元件到此處 **」區域，或從適當容器的工具列** 中使用「插入新元件 **&#x200B;**&#x200B;」選項來新增元件。
 
   ![chlimage_1-152](assets/chlimage_1-152.png) ![chlimage_1-153](assets/chlimage_1-153.png)
 
@@ -618,7 +618,7 @@ AEM現在提供兩種基本型別的範本：
 
 ### 編輯範本 — 頁面設計 — 範本作者/開發人員 {#editing-a-template-page-design-template-author-developer}
 
-頁面設計 (包括所需的用戶端程式庫和頁面原則) 會保留在「頁面資訊」功能表的「 **頁面設計** 」選 **** 項下。
+頁面設計 (包括所需的用戶端程式庫和頁面原則) 會保留在「頁面資訊」功能表的「 **頁面設計** 」選 **&#x200B;**&#x200B;項下。
 
 若要存取&#x200B;**頁面設計**&#x200B;對話方塊：
 

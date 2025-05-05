@@ -94,6 +94,6 @@ As per PM, we must avoid stating such a list, as we do not have a list that make
 
 >[!MORELIKETHIS]
 >
->* 在 [!DNL Experience Manager Assets]](https://experienceleague.adobe.com/docs/experience-manager-65/assets/home.html)中的[DAM功能
+>* 在 [!DNL Experience Manager Assets][&#128279;](https://experienceleague.adobe.com/docs/experience-manager-65/assets/home.html)中的DAM功能
 >* [[!DNL Experience Manager] 6.5 Managed Services產品說明](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html)
 >* [[!DNL Experience Manager] 6.5內部部署產品說明](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html)

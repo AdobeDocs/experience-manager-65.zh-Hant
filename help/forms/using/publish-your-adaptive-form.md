@@ -59,7 +59,7 @@ AEM [!DNL Forms]提供元件AEM [!DNL Forms] Container，以將最適化表單�
 1. 選取![屬性](assets/properties.png)頁面資訊，並在新建立的We.Retail網站頁面中選取&#x200B;**[!UICONTROL 編輯範本]**&#x200B;選項。 頁面範本會在瀏覽器的新標籤中開啟。
 1. 在&#x200B;**[!UICONTROL 配置容器]**&#x200B;方塊中選取，並選取![feedmanagement](assets/feedmanagement.png)。 在「**[!UICONTROL 允許的元件]**」標籤中，展開「**[!UICONTROL 一般]**」摺疊式功能表，選取「**[!UICONTROL AEM表單]**」選項，然後選取「![儲存圖示](assets/save_icon.svg)」。 已為頁面啟用AEM [!DNL Forms] Container元件。
 
-1. 開啟瀏覽器標籤，其中包含在步驟1中開啟的AEM [!DNL Sites]頁面。 選取&#x200B;**[!UICONTROL 將元件拖曳到這裡]**&#x200B;方塊並選取&#x200B;**+。在**[!UICONTROL &#x200B;插入新元件&#x200B;]**方塊中的**，選取&#x200B;**[!UICONTROL AEM表單]**。 **[!UICONTROL AEM Forms Container]**&#x200B;元件已新增至頁面。
+1. 開啟瀏覽器標籤，其中包含在步驟1中開啟的AEM [!DNL Sites]頁面。 選取&#x200B;**[!UICONTROL 將元件拖曳到這裡]**&#x200B;方塊並選取&#x200B;**+。在**&#x200B;[!UICONTROL &#x200B;插入新元件&#x200B;]&#x200B;**方塊中的**，選取&#x200B;**[!UICONTROL AEM表單]**。 **[!UICONTROL AEM Forms Container]**&#x200B;元件已新增至頁面。
 1. 選取&#x200B;**[!UICONTROL AEM Forms container]**&#x200B;元件，然後選取![configure-icon](assets/configure-icon.svg)。 會顯示含有AEM [!DNL Forms] Container屬性的對話方塊。 在&#x200B;**[!UICONTROL 資產路徑]**&#x200B;欄位中，瀏覽並選取shipping-address-add-update-form最適化表單。 選取![儲存圖示](assets/save_icon.svg)。 最適化表單已內嵌在頁面中。
 1. Publish包含最適化表單和[!DNL Sites]頁面。 以下是您需要考慮的幾點：
 

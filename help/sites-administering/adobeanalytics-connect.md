@@ -86,7 +86,7 @@ Adobe Analytics [資料中心](https://experienceleague.adobe.com/docs/analytics
 >
 >由於Adobe Analytics API中的安全性變更，AEM中包含的Activity Map版本已無法再使用。
 >
->現在應該使用Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html)提供的[ActivityMap外掛程式。
+>現在應該使用Adobe Analytics[&#128279;](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html)提供的ActivityMap外掛程式。
 
 ## 為Activity Map設定 {#configuring-for-the-activity-map}
 
@@ -94,7 +94,7 @@ Adobe Analytics [資料中心](https://experienceleague.adobe.com/docs/analytics
 >
 >由於Adobe Analytics API中的安全性變更，AEM中包含的Activity Map版本已無法再使用。
 >
->現在應該使用Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html)提供的[ActivityMap外掛程式。
+>現在應該使用Adobe Analytics[&#128279;](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html)提供的ActivityMap外掛程式。
 
 ## 建立Adobe Analytics架構 {#creating-a-adobe-analytics-framework}
 
@@ -174,7 +174,7 @@ Adobe Analytics [資料中心](https://experienceleague.adobe.com/docs/analytics
 
 1. 從&#x200B;**網站**&#x200B;主控台，選取您要設定追蹤的頁面。
 1. 直接從主控台或頁面編輯器開啟&#x200B;**[頁面屬性](/help/sites-authoring/editing-page-properties.md)**。
-1. 開啟**Cloud Service**標籤。
+1. 開啟&#x200B;**Cloud Service**&#x200B;標籤。
 
 1. 使用&#x200B;**新增組態**&#x200B;下拉式清單，從可用選項中選取&#x200B;**Adobe Analytics**。 如果有繼承，請在選取器可供使用之前停用該繼承。
 
@@ -208,7 +208,7 @@ Adobe Analytics [資料中心](https://experienceleague.adobe.com/docs/analytics
 `cron`運算式，用於決定擷取Analytics報告的頻率。
 預設值為`0 0 0/12 * * ?`；這對應到每小時12次擷取。
 
-若要設定此OSGi服務，您可以使用存放庫](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository)中的[網頁主控台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)或[osgiConfig節點（服務PID為`com.day.cq.analytics.sitecatalyst.impl.importer.ReportImporterScheduler`）。
+若要設定此OSGi服務，您可以使用存放庫[&#128279;](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository)中的[網頁主控台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)或osgiConfig節點（服務PID為`com.day.cq.analytics.sitecatalyst.impl.importer.ReportImporterScheduler`）。
 
 ## 編輯Adobe Analytics設定和/或架構 {#editing-adobe-analytics-configurations-and-or-frameworks}
 

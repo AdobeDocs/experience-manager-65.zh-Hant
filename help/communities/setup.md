@@ -53,7 +53,7 @@ ht-degree: 1%
 
 ## 設定 Analytics {#configure-analytics}
 
-當針對社群網站](analytics.md)設定[Adobe Analytics時，會提供社群活動的相關資訊，以強化社群成員的體驗，並向網站管理員提供意見回饋。
+當針對社群網站[&#128279;](analytics.md)設定Adobe Analytics時，會提供社群活動的相關資訊，以強化社群成員的體驗，並向網站管理員提供意見回饋。
 
 可選擇與Adobe Analytics整合。
 

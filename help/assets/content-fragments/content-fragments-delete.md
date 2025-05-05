@@ -25,7 +25,7 @@ ht-degree: 9%
 1. **內容片段為單一實體。**
 
    * **使用案例**：需要編輯/更新內容片段的使用者 — **並刪除整個片段**。
-   * **許可權**： [Delete](/help/sites-administering/security.md#actions)許可權可以透過使用者和/或群組管理](/help/sites-administering/security.md#managing-permissions)進行[指派。
+   * **許可權**： [Delete](/help/sites-administering/security.md#actions)許可權可以透過使用者和/或群組管理[&#128279;](/help/sites-administering/security.md#managing-permissions)進行指派。
 
 2. **構成內容片段的多個子實體；例如，變化、子節點。**
 
@@ -44,13 +44,13 @@ ht-degree: 9%
 
 ## 僅編輯器功能所需的許可權 {#permissions-required-for-editor-functionality-only}
 
-對於需要編輯/更新內容片段而不允許他們刪除整個片段的使用者 ****，必須指派特定權限，因為內容片段編輯器的基本操作要求可以刪除暫時的子元素。
+對於需要編輯/更新內容片段而不允許他們刪除整個片段的使用者 **&#x200B;**，必須指派特定權限，因為內容片段編輯器的基本操作要求可以刪除暫時的子元素。
 
 例如，操控變數時；編輯中繼資料或管理關聯內容時，也可以。
 
 >[!NOTE]
 >
->編輯/更新內容片段所需的刪除許可權包含在透過使用者和/或群組管理](/help/sites-administering/security.md#managing-permissions)指派的「刪除」許可權[中。
+>編輯/更新內容片段所需的刪除許可權包含在透過使用者和/或群組管理[&#128279;](/help/sites-administering/security.md#managing-permissions)指派的「刪除」許可權中。
 
 編輯/更新片段所需的許可權需要套用至包含內容片段的節點或適當的父節點（`/content/dam`下的任何層級）。 指派給此類父節點時，許可權將套用至該分支內的所有節點。
 
@@ -82,7 +82,7 @@ ht-degree: 9%
 
    * `jcr:addChildNodes`、`jcr:modifyProperties`和`jcr:removeChildNodes`、`jcr:removeNode`
 
-這些`remove`許可權必須由CRXDE Lite](/help/sites-administering/user-group-ac-admin.md#access-right-management)內的存取控制清單[管理。
+這些`remove`許可權必須由CRXDE Lite[&#128279;](/help/sites-administering/user-group-ac-admin.md#access-right-management)內的存取控制清單管理。
 
 `add`和`modify`許可權也可以在CRXDE Lite中管理，或使用使用者管理主控台。
 

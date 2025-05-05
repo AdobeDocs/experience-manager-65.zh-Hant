@@ -55,11 +55,11 @@ ht-degree: 0%
 
 1. 在&#x200B;**[!UICONTROL THEN]**&#x200B;陳述式中，從&#x200B;**[!UICONTROL 選取動作]**&#x200B;下拉式清單中選取&#x200B;**[!UICONTROL 叫用服務]**。
 1. 從&#x200B;**[!UICONTROL 選取]**&#x200B;下拉式清單中選取&#x200B;**[!UICONTROL 擷取送貨地址]**&#x200B;服務。
-1. 從[表單物件]索引標籤將&#x200B;**[!UICONTROL 客戶識別碼]**&#x200B;欄位拖放到&#x200B;**[!UICONTROL 拖放物件，或在**[!UICONTROL &#x200B;輸入&#x200B;]**方塊中選取這裡]**&#x200B;欄位。
+1. 從[表單物件]索引標籤將&#x200B;**[!UICONTROL 客戶識別碼]**&#x200B;欄位拖放到&#x200B;**[!UICONTROL 拖放物件，或在**&#x200B;[!UICONTROL &#x200B;輸入&#x200B;]&#x200B;**方塊中選取這裡]**&#x200B;欄位。
 
    ![dropobjectstoinputfield-retrievedata](assets/dropobjectstoinputfield-retrievedata.png)
 
-1. 從[表單物件]索引標籤將&#x200B;**[!UICONTROL 客戶ID、名稱、送貨地址、狀態和郵遞區號]**&#x200B;欄位拖放到&#x200B;**[!UICONTROL 放置物件，或在**[!UICONTROL &#x200B;輸出&#x200B;]**方塊中選取這裡]**&#x200B;欄位。
+1. 從[表單物件]索引標籤將&#x200B;**[!UICONTROL 客戶ID、名稱、送貨地址、狀態和郵遞區號]**&#x200B;欄位拖放到&#x200B;**[!UICONTROL 放置物件，或在**&#x200B;[!UICONTROL &#x200B;輸出&#x200B;]&#x200B;**方塊中選取這裡]**&#x200B;欄位。
 
    ![dropobjectstooutputfield-retrievedata](assets/dropobjectstooutputfield-retrievedata.png)
 
@@ -89,7 +89,7 @@ ht-degree: 0%
 
    ![dropobjectstoinputfield-updatedata](assets/dropobjectstoinputfield-updatedata.png)
 
-1. 從[!UICONTROL 表單物件]索引標籤將&#x200B;**[!UICONTROL 送貨地址、狀態和郵遞區號]**&#x200B;欄位拖放到&#x200B;**[!UICONTROL Drop物件的對應tablename .property （例如customerdetails .shippingAddress），或在**[!UICONTROL  INPUT ]**方塊中選取這裡]**&#x200B;欄位。 所有前置詞為tablename的欄位（例如，在此使用案例中為customerdetails）都會當作更新服務的輸入資料。 這些欄位中提供的所有內容都會在資料來源中更新。
+1. 從[!UICONTROL 表單物件]索引標籤將&#x200B;**[!UICONTROL 送貨地址、狀態和郵遞區號]**&#x200B;欄位拖放到&#x200B;**[!UICONTROL Drop物件的對應tablename .property （例如customerdetails .shippingAddress），或在**&#x200B;[!UICONTROL &#x200B; INPUT &#x200B;]&#x200B;**方塊中選取這裡]**&#x200B;欄位。 所有前置詞為tablename的欄位（例如，在此使用案例中為customerdetails）都會當作更新服務的輸入資料。 這些欄位中提供的所有內容都會在資料來源中更新。
 
    >[!NOTE]
    >
@@ -105,7 +105,7 @@ ht-degree: 0%
 
 調適型表單提供具備內建驗證的元件，例如電子郵件和數值欄位，您可將其用於常見使用案例。 針對進階使用案例，使用規則編輯器，例如在資料庫傳回零(0)筆記錄（無記錄）時，顯示錯誤訊息。
 
-下列程式說明如果表單中輸入的客戶ID不存在於資料庫中，如何建立規則以顯示錯誤訊息。 此規則也會將焦點帶到&#x200B;**[!UICONTROL 客戶ID]**&#x200B;欄位並重設。 規則使用表單資料模型服務](/help/forms/using/invoke-form-data-model-services.md)的[dataIntegrationUtils API來檢查資料庫中是否有客戶ID。
+下列程式說明如果表單中輸入的客戶ID不存在於資料庫中，如何建立規則以顯示錯誤訊息。 此規則也會將焦點帶到&#x200B;**[!UICONTROL 客戶ID]**&#x200B;欄位並重設。 規則使用表單資料模型服務[&#128279;](/help/forms/using/invoke-form-data-model-services.md)的dataIntegrationUtils API來檢查資料庫中是否有客戶ID。
 
 1. 選取&#x200B;**[!UICONTROL 客戶識別碼]**&#x200B;欄位，並選取`Edit Rules`圖示。 [!UICONTROL 規則編輯器]視窗隨即開啟。
 1. 選取「**[!UICONTROL +建立]**」圖示以新增規則。 這會開啟視覺化編輯器。

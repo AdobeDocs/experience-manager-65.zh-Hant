@@ -165,7 +165,7 @@ UI字串通常以JCR節點屬性為基礎。 例如，頁面的`jcr:title`屬性
 
 #### 指定JCR節點的轉譯提示 {#specifying-translation-hints-for-jcr-nodes}
 
-類似於Java™ API](#using-translation-hints)中的[翻譯提示，您可以提供翻譯提示來區分字典中的重複字串。 提供翻譯提示，作為包含國際化屬性的節點的屬性。 提示屬性的名稱是由具有`_commentI18n`尾碼的國際化屬性名稱所組成：
+類似於Java™ API[&#128279;](#using-translation-hints)中的翻譯提示，您可以提供翻譯提示來區分字典中的重複字串。 提供翻譯提示，作為包含國際化屬性的節點的屬性。 提示屬性的名稱是由具有`_commentI18n`尾碼的國際化屬性名稱所組成：
 
 `${prop}_commentI18n`
 

@@ -141,7 +141,7 @@ Experience Manager中有下列Dynamic Media Classic元件：
 
 當您按下&#x200B;**[!UICONTROL +]**&#x200B;按鈕時，HTML5縮放元件會顯示較大的影像。
 
-資產底部有縮放工具。 若要放大，請選取&#x200B;**[!UICONTROL +]**；若要縮小，請選取&#x200B;**[!UICONTROL -]**。 點選&#x200B;**[!UICONTROL x]**&#x200B;或重設縮放箭頭，可讓影像回覆為匯入的原始大小。 選取對角線箭頭，使其成為全熒幕。 選取「**[!UICONTROL 編輯]**」以設定元件。 使用此元件，您可以設定所有[!UICONTROL Dynamic Media Classic]元件](#settings-common-to-all-scene-components)的[通用設定。
+資產底部有縮放工具。 若要放大，請選取&#x200B;**[!UICONTROL +]**；若要縮小，請選取&#x200B;**[!UICONTROL -]**。 點選&#x200B;**[!UICONTROL x]**&#x200B;或重設縮放箭頭，可讓影像回覆為匯入的原始大小。 選取對角線箭頭，使其成為全熒幕。 選取「**[!UICONTROL 編輯]**」以設定元件。 使用此元件，您可以設定所有[!UICONTROL Dynamic Media Classic]元件[&#128279;](#settings-common-to-all-scene-components)的通用設定。
 
 ![chlimage_1-227](/help/assets/assets/do-not-localize/chlimage_1-227.png)
 
@@ -332,7 +332,7 @@ Dynamic Media Classic內容瀏覽器可讓您直接在Experience Manager檢視Dy
 >* 在傳統UI中，您也可以搜尋&#x200B;**Flash**&#x200B;和&#x200B;**FXG**。 不支援在觸控最佳化UI中篩選這些型別。
 >
 >* 搜尋視訊時，您會搜尋單一轉譯。 結果會傳回原始轉譯（僅限&amp;amp；ast；.mp4）和編碼的轉譯。
-* 搜尋最適化視訊集時，您將會搜尋資料夾和所有子資料夾，但前提是您已新增關鍵字至搜尋。 如果您尚未新增關鍵字，Experience Manager不會搜尋子資料夾。
+>* 搜尋最適化視訊集時，您將會搜尋資料夾和所有子資料夾，但前提是您已新增關鍵字至搜尋。 如果您尚未新增關鍵字，Experience Manager不會搜尋子資料夾。
 >
 
 **[!UICONTROL Publish狀態]** — 您可以根據發佈狀態來篩選資產： **[!UICONTROL 已取消發佈]**&#x200B;或&#x200B;**[!UICONTROL 已發佈]**。 如果您未選取任何&#x200B;**[!UICONTROL Publish狀態]**，根據預設，Experience Manager會搜尋所有發佈狀態。

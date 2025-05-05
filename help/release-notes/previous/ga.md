@@ -51,7 +51,7 @@ ht-degree: 3%
 
 #### Java™開發 {#java-development}
 
-* Uberjar](/help/sites-developing/ht-projects-maven.md#experience-manager-api-dependencies)目前有[兩個版本，建議使用未標示為過時的公用介面版本，以及包含標示為過時的介面的版本。
+* Uberjar[&#128279;](/help/sites-developing/ht-projects-maven.md#experience-manager-api-dependencies)目前有兩個版本，建議使用未標示為過時的公用介面版本，以及包含標示為過時的介面的版本。
 
 #### 使用者介面 {#user-interface}
 
@@ -118,7 +118,7 @@ UI已進行各種增強功能，使其更有效率且更易於使用。
 
 #### Headless內容管理 {#headless-content-management}
 
-AEM能以各種格式和從棧疊的不同層級提供內容。 有些從2008年起就有了[SlingGET](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html)和[POSTServlet](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html)。 內容服務（[Sling模型匯出程式](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html)）是在AEM 6.3中匯入的，是AEM SJ SDK用來合併單頁應用程式的方法。 適用於Assets](/help/assets/mac-api-assets.md)的[HTTP API是擴充適用於AEM 6.5的CRUD API。
+AEM能以各種格式和從棧疊的不同層級提供內容。 有些從2008年起就有了[SlingGET](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html)和[POSTServlet](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html)。 內容服務（[Sling模型匯出程式](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html)）是在AEM 6.3中匯入的，是AEM SJ SDK用來合併單頁應用程式的方法。 適用於Assets[&#128279;](/help/assets/mac-api-assets.md)的HTTP API是擴充適用於AEM 6.5的CRUD API。
 
 新HTTP API功能：
 
@@ -157,9 +157,11 @@ AEM能以各種格式和從棧疊的不同層級提供內容。 有些從2008年
      ```
 
    * 具有data-sly-set的變數宣告：
+
      `<sly data-sly-set.title="${currentPage.title}"/>${title}`
 
    * 列出和重複控制引數：開始、步驟、結束：
+
      `<h2 data-sly-repeat="${currentPage.listChildren @ begin = 1, step=2}">${item.title}</h2>`
 
    * data-sly-unwrap的識別碼：
@@ -255,7 +257,7 @@ AEM能以各種格式和從棧疊的不同層級提供內容。 有些從2008年
 
 #### AEM和Commerce {#aem-commerce}
 
-自AEM 6.4起，Commerce integration framework的改良版週期較快。使用Commerce integration framework](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/integrations/magento.html)從[AEM和Adobe Commerce整合瞭解更多資訊。
+自AEM 6.4起，Commerce integration framework的改良版週期較快。使用Commerce integration framework[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/integrations/magento.html)從AEM和Adobe Commerce整合瞭解更多資訊。
 
 #### Communities附加元件 {#communities-add-on}
 
@@ -332,7 +334,7 @@ AEM 6.5引進以下功能和增強功能，以提高AEM使用者、DAM角色和�
 
 [!DNL Adobe Asset Link]在內容建立過程中加強創意人員與行銷人員之間的協同合作。 創意人員可以存取儲存在[!DNL Experience Manager Assets]中的內容，無需離開他們最熟悉的應用程式。 創意人員可以使用[!DNL Adobe Photoshop]、[!DNL Adobe Illustrator]和[!DNL Adobe InDesign]應用程式中的應用程式內面板，順暢地瀏覽、搜尋、簽出和簽入資產。
 
-[!DNL Adobe Asset Link]是企業](https://www.adobe.com/tw/creativecloud/business/enterprise.html)產品的[Creative Cloud的一部分。 如需詳細資訊，包括[!DNL Experience Manager]部署的必要設定，請參閱[Adobe資產連結](https://helpx.adobe.com/tw/enterprise/using/adobe-asset-link.html)。
+[!DNL Adobe Asset Link]是企業[&#128279;](https://www.adobe.com/tw/creativecloud/business/enterprise.html)產品的Creative Cloud的一部分。 如需詳細資訊，包括[!DNL Experience Manager]部署的必要設定，請參閱[Adobe資產連結](https://helpx.adobe.com/tw/enterprise/using/adobe-asset-link.html)。
 
 ![在Adobe Photoshop中搜尋資產](/help/release-notes/assets/asset_search_photoshop.png)
 
@@ -344,7 +346,7 @@ AEM 6.5引進以下功能和增強功能，以提高AEM使用者、DAM角色和�
 
 如需詳細資訊，請參閱[在Experience Manager Assets中使用Adobe Stock資產](/help/assets/aem-assets-adobe-stock.md)。
 
-從Experience Manager Assets](/help/release-notes/assets/stock_image_preview_license_options.png)預覽Adobe Stock影像和授權![
+從Experience Manager Assets![&#128279;](/help/release-notes/assets/stock_image_preview_license_options.png)預覽Adobe Stock影像和授權
 
 *圖：從[!DNL Experience Manager Assets]預覽[!DNL Adobe Stock]影像和授權。*
 
@@ -599,4 +601,4 @@ org.osgi.framework.bootdelegation=sun.*,com.sun.*,jdk.internal.reflect,jdk.inter
 
 * [軟體發佈](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)上其他功能的產品更新、修補程式及套件。
 
-* 透過Admin Console](https://adminconsole.adobe.com/)提供[客戶支援。 如需詳細資訊，請參閱[新的Adobe客戶支援體驗](https://experienceleague.adobe.com/docs/customer-one/using/home.html)。
+* 透過Admin Console[&#128279;](https://adminconsole.adobe.com/)提供客戶支援。 如需詳細資訊，請參閱[新的Adobe客戶支援體驗](https://experienceleague.adobe.com/docs/customer-one/using/home.html)。

@@ -45,7 +45,7 @@ ht-degree: 1%
    Web Channel中折線圖的基本屬性
 
 1. 根據通道型別設定[圖表屬性](../../forms/using/chart-component-interactive-communications.md#configure-chart-properties)。
-1. （僅列印通道）在&#x200B;**[!UICONTROL 代理程式設定]**&#x200B;中，指定代理程式是否必須使用此圖表。 如果未選取代理程式使用此圖表&#x200B;]**選項，代理程式可以在Agent UI的**[!UICONTROL &#x200B;內容&#x200B;]**標籤中選取圖表的眼睛圖示，以顯示或隱藏圖表。**[!UICONTROL 
+1. （僅列印通道）在&#x200B;**[!UICONTROL 代理程式設定]**&#x200B;中，指定代理程式是否必須使用此圖表。 如果未選取代理程式使用此圖表&#x200B;**選項，代理程式可以在Agent UI的**&#x200B;[!UICONTROL &#x200B;內容&#x200B;]&#x200B;**標籤中選取圖表的眼睛圖示，以顯示或隱藏圖表。**
 
    ![chart_agentproperties](assets/chart_agentproperties.png)
 

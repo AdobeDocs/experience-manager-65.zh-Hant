@@ -41,7 +41,7 @@ ht-degree: 2%
 
 ## 工作流程模型 {#workflow-models}
 
-您可以根據「工作流程模型」控制檯上列出的其中一個模型](/help/sites-administering/workflows.md#workflow-models-and-instances)來啟動工作流程[。 唯一強制資訊是裝載，但也可以新增標題和/或評論。
+您可以根據「工作流程模型」控制檯上列出的其中一個模型[&#128279;](/help/sites-administering/workflows.md#workflow-models-and-instances)來啟動工作流程。 唯一強制資訊是裝載，但也可以新增標題和/或評論。
 
 ## 工作流程啟動器 {#workflows-launchers}
 

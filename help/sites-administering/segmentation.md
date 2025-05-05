@@ -51,7 +51,7 @@ AEM可讓您輕鬆個人化使用者體驗。 它也可讓您驗證區段定義�
 
 使用元件瀏覽器，您可以新增&#x200B;**AND**&#x200B;和&#x200B;**OR**&#x200B;容器來定義區段邏輯，然後新增其他元件來比較屬性和值，或參考指令碼和其他區段來定義選取條件（請參閱[建立新區段](#creating-a-new-segment)），以定義選取區段的確切案例。
 
-當整個陳述式評估為true時，表示區段已解析。 如果有多個適用區段，則也會使用&#x200B;**提升**&#x200B;係數。 如需[提升因子的詳細資訊，請參閱[建立新區段](#creating-a-new-segment)。](/help/sites-administering/campaign-segmentation.md#boost-factor)
+當整個陳述式評估為true時，表示區段已解析。 如果有多個適用區段，則也會使用&#x200B;**提升**&#x200B;係數。 如需[&#128279;](/help/sites-administering/campaign-segmentation.md#boost-factor)提升因子的詳細資訊，請參閱[建立新區段](#creating-a-new-segment)。
 
 >[!CAUTION]
 >
@@ -255,6 +255,7 @@ this.dependOn(ContextHub.SegmentEngine.Property('profile/age'));
 1. 資料夾會出現在區段清單中。
    * 排序欄的方式將影響新資料夾在清單中的顯示位置。
    * 您可以按一下欄標題來調整您的排序。
+
      ![新資料夾](assets/contexthub-folder.png)
 
 ### 修改現有資料夾 {#modify-folders}
@@ -263,7 +264,7 @@ this.dependOn(ContextHub.SegmentEngine.Property('profile/age'));
 
    ![選取資料夾](assets/contexthub-select-folder.png)
 
-1. 按一下工具列中的「重新命名&#x200B;****」以重新命名資料夾。
+1. 按一下工具列中的「重新命名&#x200B;**&#x200B;**」以重新命名資料夾。
 
 1. 提供新的&#x200B;**資料夾標題**&#x200B;並按一下&#x200B;**儲存**。
 
@@ -322,7 +323,7 @@ this.dependOn(ContextHub.SegmentEngine.Property('profile/age'));
 
 這類測試也可以在內容頁面上執行，並與目標內容和相關的&#x200B;**活動**&#x200B;和&#x200B;**體驗**&#x200B;相結合。
 
-如果您已使用上述主要年齡群組區段範例設定活動和體驗，即可使用活動輕鬆測試區段。 如需有關設定活動的詳細資訊，請參閱有關編寫目標內容](/help/sites-authoring/content-targeting-touch.md)的[檔案。
+如果您已使用上述主要年齡群組區段範例設定活動和體驗，即可使用活動輕鬆測試區段。 如需有關設定活動的詳細資訊，請參閱有關編寫目標內容[&#128279;](/help/sites-authoring/content-targeting-touch.md)的檔案。
 
 1. 在您設定目標內容的頁面的編輯模式中，您可以看到已透過內容上的箭頭圖示目標內容。
 

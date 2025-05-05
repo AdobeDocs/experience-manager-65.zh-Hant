@@ -107,11 +107,11 @@ AEM Forms附加元件套件是部署至AEM的應用程式。 此套件包含有�
    2. 選取封裝的版本和型別。 您也可以使用&#x200B;**[!UICONTROL 搜尋下載]**&#x200B;選項來篩選結果。
 1. 選取適用於您作業系統的封裝名稱，選取&#x200B;**[!UICONTROL 接受EULA條款]**，然後選取&#x200B;**[!UICONTROL 下載]**。
 1. 開啟[封裝管理員](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)，然後按一下&#x200B;**[!UICONTROL 上傳封裝]**&#x200B;以上傳封裝。
-1. 選擇包，然後按兩下安裝&#x200B;****。
+1. 選擇包，然後按兩下安裝&#x200B;**&#x200B;**。
 
-   還可以通過AEM Forms版本](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)一文中[列出的直接連結下載包。
+   還可以通過AEM Forms版本[&#128279;](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)一文中列出的直接連結下載包。
 
-1. 安裝包后，系統會提示您重新啟動AEM 執行個體。 **不要立即重新啟動伺服器。**&#x200B;在停止 AEM Forms 伺服器之前，請等待 ServiceEvent REGISTERED 和 ServiceEvent UNREGISTERED 消息停止出現在 AEM-Installation-Directory]/crx-quickstart/logs/error.記錄檔 中[，並且日誌穩定。
+1. 安裝包后，系統會提示您重新啟動AEM 執行個體。 **不要立即重新啟動伺服器。**&#x200B;在停止 AEM Forms 伺服器之前，請等待 ServiceEvent REGISTERED 和 ServiceEvent UNREGISTERED 消息停止出現在 AEM-Installation-Directory&rbrack;/crx-quickstart/logs/error.記錄檔 中&lbrack;，並且日誌穩定。
 
    >[!NOTE]
    >

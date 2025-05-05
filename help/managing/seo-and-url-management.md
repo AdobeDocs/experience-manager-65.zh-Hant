@@ -52,6 +52,7 @@ URL有一些公認的最佳作法。
    * 在網頁上使用選擇器時，建議使用提供語意值的選取器。
    * 如果使用者無法透過字面理解您的 URL，則搜尋引擎也無法。
    * 例如：
+
      `mybrand.com/products/product-detail.product-category.product-name.html`
 比 `mybrand.com/products/product-detail.1234.html` 更適合
 
@@ -256,6 +257,7 @@ Resource myPage = req.getResource();
    您可以使用 Web 控制台 (例如 localhost:4502/system/console/configMgr) 設定 Sling Resource Resolver：
 
    * **Apache Sling Resource Resolver Factory**
+
      `(org.apache.sling.jcr.resource.internal.JcrResourceResolverFactoryImpl)`。
 
    Adobe建議您建置所需對應來將URL縮短為規則運算式，然後在包含在組建中的OsgiConfignode `config.publish`下定義這些組態。

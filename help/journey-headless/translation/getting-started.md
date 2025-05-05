@@ -88,6 +88,7 @@ AEM 的內容，無論是 Headless 網頁還是傳統網頁，都是由其結構
 1. **內容片段模型編輯器**&#x200B;開啟。
    1. 左欄包含模型的欄位。我們對此欄感興趣。
    1. 左欄包含可新增至模型的欄位。此欄我們可以忽略。
+
       ![內容片段模型編輯器](assets/content-fragment-model-editor.png)
 1. 按一下模型的其中一個欄位。 AEM 會標記該欄位，該欄位的詳細資料會顯示在右欄中。
    ![內容片段模型編輯器詳細資料](assets/content-fragment-model-editor-detail.png)

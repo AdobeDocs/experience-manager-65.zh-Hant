@@ -19,7 +19,7 @@ ht-degree: 11%
 # AEM 6.5 Mobile 使用指南 {#mobile}
 
 + [Mobile使用手冊概覽](home.md)
-+ AEM Mobile {#introduction}簡介
++ AEM Mobile簡介 {#introduction}
    + [AEM Mobile快速入門](getting-started-aem-mobile.md)
    + [AEM Mobile On-Demand](getting-started-aem-mobile-on-demand.md)
    + [行動應用程式](mobile-apps.md)

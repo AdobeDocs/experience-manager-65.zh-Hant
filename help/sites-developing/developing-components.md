@@ -189,7 +189,7 @@ newComponent (cq:Component)
 
 >[!NOTE]
 >
->如果元件沒有為觸控式UI定義對話方塊，則會使用Classic UI對話方塊作為相容性層級的後援。 若要自訂此類對話方塊，您需要自訂傳統UI對話方塊。 檢視Classic UI](/help/sites-developing/developing-components-classic.md)的[AEM元件。
+>如果元件沒有為觸控式UI定義對話方塊，則會使用Classic UI對話方塊作為相容性層級的後援。 若要自訂此類對話方塊，您需要自訂傳統UI對話方塊。 檢視Classic UI[&#128279;](/help/sites-developing/developing-components-classic.md)的AEM元件。
 
 ### 自訂對話方塊欄位 {#customizing-dialog-fields}
 
@@ -258,7 +258,7 @@ newComponent (cq:Component)
 
 ### 處理欄位事件 {#handling-field-events}
 
-處理對話方塊欄位上的事件的方法現在已使用自訂使用者端程式庫](#listeners-in-a-custom-client-library)中的[接聽程式完成。 這是在內容結構](#listenersinthecontentstructureclassicui)中有[個接聽程式的舊方法變更。
+處理對話方塊欄位上的事件的方法現在已使用自訂使用者端程式庫[&#128279;](#listeners-in-a-custom-client-library)中的[接聽程式完成。 這是在內容結構](#listenersinthecontentstructureclassicui)中有個接聽程式的舊方法變更。
 
 #### 自訂使用者端資料庫中的監聽器 {#listeners-in-a-custom-client-library}
 
@@ -320,7 +320,7 @@ Granite UI和Granite UI元件（等同於Widget）中的欄位驗證是使用`fo
 
 當元件具有可在[設計模式](/help/sites-authoring/default-components-designmode.md)中編輯的設計詳細資料時，會提供[設計]對話方塊。
 
-定義與用於編輯內容](#creating-a-new-dialog)的[對話方塊的定義非常類似，不同之處在於它定義為節點：
+定義與用於編輯內容[&#128279;](#creating-a-new-dialog)的對話方塊的定義非常類似，不同之處在於它定義為節點：
 
 * 節點名稱： `cq:design_dialog`
 * 類型：`nt:unstructured`

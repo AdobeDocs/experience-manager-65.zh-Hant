@@ -221,7 +221,7 @@ ht-degree: 1%
 
 ![textbackgroundcolorapplied-1](assets/textbackgroundcolorapplied-1.png)
 
-您可以直接選取[基本色彩]調色盤中的基本色彩`**[A]**`，或在使用滑桿`**[B]**`選擇適當的色彩陰影后選取[選取]****。
+您可以直接選取[基本色彩]調色盤中的基本色彩`**[A]**`，或在使用滑桿`**[B]**`選擇適當的色彩陰影后選取[選取]**&#x200B;**。
 
 或者，您也可以移至[進階]索引標籤，選取適當的[色相]、[明度]和[飽和度] `**[C]**`來建立精確色彩，然後選取[選取] `**[D]**`來套用色彩以反白顯示文字。
 
@@ -253,7 +253,7 @@ ht-degree: 1%
 
 ![specialcharacters-2](assets/specialcharacters-2.png)
 
-文字編輯器已內建對210個特殊字元的支援。 管理員可以透過自訂](/help/forms/using/custom-special-characters.md) [新增更多/自訂特殊字元的支援。
+文字編輯器已內建對210個特殊字元的支援。 管理員可以透過自訂[&#128279;](/help/forms/using/custom-special-characters.md) 新增更多/自訂特殊字元的支援。
 
 ## 搜尋和取代文字 {#searching}
 

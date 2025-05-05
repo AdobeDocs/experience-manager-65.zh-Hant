@@ -28,7 +28,7 @@ OSGi「*」提供標準化的原語，允許使用小型、可重複使用且協
 
 * 使用[Adobe CQ Web主控台](#osgi-configuration-with-the-web-console)
 * 使用[組態檔](#osgi-configuration-with-configuration-files)
-* 正在設定存放庫](#osgi-configuration-in-the-repository)中的[內容節點( `sling:OsgiConfig`)
+* 正在設定存放庫[&#128279;](#osgi-configuration-in-the-repository)中的內容節點( `sling:OsgiConfig`)
 
 雖然有細微的差異（主要與[執行模式](/help/sites-deploying/configure-runmodes.md)有關），但可以使用其中一種方法：
 

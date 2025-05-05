@@ -127,7 +127,7 @@ AEM中顯示的產品和產品資料儲存在Adobe Commerce中。 接下來，�
 
    >[!TIP]
    >
-   >在Adobe Commerce使用手冊](https://docs.magento.com/user-guide/system/cache-management.html)中找到有關[快取管理的更多詳細資料。
+   >在Adobe Commerce使用手冊[&#128279;](https://docs.magento.com/user-guide/system/cache-management.html)中找到有關快取管理的更多詳細資料。
 
 ## 使用GraphQL IDE驗證屬性 {#use-graphql-ide}
 
@@ -180,7 +180,7 @@ AEM中顯示的產品和產品資料儲存在Adobe Commerce中。 接下來，�
 
 ## 更新產品Teaser的Sling模型 {#updating-sling-model-product-teaser}
 
-接下來，您可以實作Sling模型來擴充產品Teaser的商業邏輯。 [Sling模型](https://sling.apache.org/documentation/bundles/models.html)是註釋導向的「POJO」(純舊的Java™物件)，可實作元件所需的任何商業邏輯。 Sling模型會搭配HTL指令碼使用作為元件的一部分。 遵循Sling模型](https://github.com/adobe/aem-core-wcm-components/wiki/Delegation-Pattern-for-Sling-Models)的[委派模式，以便您可以擴充現有產品Teaser模型的部分。
+接下來，您可以實作Sling模型來擴充產品Teaser的商業邏輯。 [Sling模型](https://sling.apache.org/documentation/bundles/models.html)是註釋導向的「POJO」(純舊的Java™物件)，可實作元件所需的任何商業邏輯。 Sling模型會搭配HTL指令碼使用作為元件的一部分。 遵循Sling模型[&#128279;](https://github.com/adobe/aem-core-wcm-components/wiki/Delegation-Pattern-for-Sling-Models)的委派模式，以便您可以擴充現有產品Teaser模型的部分。
 
 Sling模型已實作為Java™，且可在產生專案的&#x200B;**核心**&#x200B;模組中找到。
 
@@ -211,7 +211,7 @@ Sling模型已實作為Java™，且可在產生專案的&#x200B;**核心**&#x20
 
 1. 接下來，在`core/src/main/java/com/venia/core/models/commerce/MyProductTeaserImpl.java`檢查`MyProductTeaserImpl.java`。
 
-   Sling模型](https://github.com/adobe/aem-core-wcm-components/wiki/Delegation-Pattern-for-Sling-Models)的[委派模式允許`MyProductTeaserImpl`透過`sling:resourceSuperType`屬性參考`ProductTeaser`模型：
+   Sling模型[&#128279;](https://github.com/adobe/aem-core-wcm-components/wiki/Delegation-Pattern-for-Sling-Models)的委派模式允許`MyProductTeaserImpl`透過`sling:resourceSuperType`屬性參考`ProductTeaser`模型：
 
    ```java
    @Self
@@ -326,7 +326,7 @@ Sling模型已實作為Java™，且可在產生專案的&#x200B;**核心**&#x20
 
 AEM元件的常見擴充功能是修改元件產生的標籤。 覆寫元件用來呈現其標籤的[HTL指令碼](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)即可完成此操作。 HTML範本語言(HTL)是一種輕量型的範本語言，AEM元件會使用它來根據編寫的內容動態呈現標籤，並允許元件重複使用。 例如，產品Teaser可以重複使用以顯示不同的產品。
 
-在此案例中，您想要在Teaser上方呈現橫幅，以根據自訂屬性指出產品是「環保的」。 自訂元件標籤](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/customizing.html#customizing-the-markup)的[設計模式是所有AEM元件的標準模式，不只是AEM CIF核心元件的標準模式。
+在此案例中，您想要在Teaser上方呈現橫幅，以根據自訂屬性指出產品是「環保的」。 自訂元件標籤[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/customizing.html#customizing-the-markup)的設計模式是所有AEM元件的標準模式，不只是AEM CIF核心元件的標準模式。
 
 >[!NOTE]
 >

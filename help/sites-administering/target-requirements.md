@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # 與Adobe Target整合的先決條件{#prerequisites-for-integrating-with-adobe-target}
 
-作為AEM與Adobe Target](/help/sites-administering/target.md)的[整合的一部分，您需要向Adobe Target註冊、設定復寫代理程式，以及發佈節點上的安全活動設定。
+作為AEM與Adobe Target[&#128279;](/help/sites-administering/target.md)的整合的一部分，您需要向Adobe Target註冊、設定復寫代理程式，以及發佈節點上的安全活動設定。
 
 ## 向Adobe Target註冊 {#registering-with-adobe-target}
 
@@ -40,7 +40,7 @@ ht-degree: 0%
 1. 在AEM首頁上，按一下&#x200B;**工具** > **部署** > **復寫**。
 1. 按一下作者上的&#x200B;**代理程式**。
 1. 按一下&#x200B;**Test and Target (test and target)**&#x200B;復寫代理程式，然後按一下&#x200B;**編輯**。
-1. 選取[啟用]選項，然後按一下[確定]。****
+1. 選取[啟用]選項，然後按一下[確定]。**&#x200B;**
 
    >[!NOTE]
    >

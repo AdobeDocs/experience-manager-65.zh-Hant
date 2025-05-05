@@ -244,7 +244,7 @@ AEM 6可以設定為透過SSL使用LDAP進行驗證，其程式如下：
 
 1. 請確定您已安裝SSL程式庫且正常運作。 此程式使用OpenSSL作為範例。
 
-1. 建立自訂的OpenSSL設定(cnf)檔案。 此設定可以透過複製預設**openssl.cnf**設定檔案並自訂它來完成。 在UNIX®系統上，它位於`/usr/lib/ssl/openssl.cnf`
+1. 建立自訂的OpenSSL設定(cnf)檔案。 此設定可以透過複製預設&#x200B;**openssl.cnf**&#x200B;設定檔案並自訂它來完成。 在UNIX®系統上，它位於`/usr/lib/ssl/openssl.cnf`
 
 1. 在終端機中執行以下命令，繼續建立CA根金鑰：
 

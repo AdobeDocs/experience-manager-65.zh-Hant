@@ -176,7 +176,7 @@ ht-degree: 1%
 
    下拉式清單列出「工具> **[!UICONTROL Cloud Service]** > **[!UICONTROL Adobe Sign]**」中`global`資料夾內存在的雲端服務。 此外，當您建立最適化表單時，下拉式清單也會列出您在&#x200B;**[!UICONTROL 設定容器]**&#x200B;欄位中選取的資料夾中存在的雲端服務。
 
-1. 從&#x200B;**[!UICONTROL 簽署者可以簽署]**&#x200B;對話方塊中選取簽署順序。 [!DNL Adobe Sign]位歌手可以依序簽署最適化表單&#x200B;**** — 一個接著另一個簽署者，或&#x200B;**[!UICONTROL 同時]** — 任何順序。
+1. 從&#x200B;**[!UICONTROL 簽署者可以簽署]**&#x200B;對話方塊中選取簽署順序。 [!DNL Adobe Sign]位歌手可以依序簽署最適化表單&#x200B;**&#x200B;** — 一個接著另一個簽署者，或&#x200B;**[!UICONTROL 同時]** — 任何順序。
 
    依序由一位簽署者一次收到需要簽署的表單。 簽名者完成檔案簽名後，表單會傳送給下一個簽名者，依此類推。
 
@@ -328,7 +328,7 @@ ht-degree: 1%
 **問：**&#x200B;您可以將最適化表單內嵌在其他最適化表單中。 內嵌的最適化表單可以啟用[!DNL Adobe Sign]嗎？
 **Ans：**&#x200B;否，AEM [!DNL Forms]不支援使用內嵌[!DNL Adobe Sign]啟用的最適化表單以供簽署的最適化表單
 
-**問：**當我使用進階範本建立最適化表單並開啟以進行編輯時，出現錯誤訊息「電子簽章或簽署者設定不正確」。 隨即顯示。 如何解決錯誤訊息？
+**問：**&#x200B;當我使用進階範本建立最適化表單並開啟以進行編輯時，出現錯誤訊息「電子簽章或簽署者設定不正確」。 隨即顯示。 如何解決錯誤訊息？
 **Ans：**&#x200B;使用進階範本建立的最適化表單已設定為使用[!DNL Adobe Sign]。 若要解決錯誤，請建立並選取[!DNL Adobe Sign]雲端設定，然後為最適化表單設定[!DNL Adobe Sign]簽署者。
 
 **問：**&#x200B;我可以在最適化表單的靜態文字元件中使用[!DNL Adobe Sign]文字標籤嗎？
@@ -350,7 +350,7 @@ ht-degree: 1%
 
 **解析度**
 
-* 檢查最適化表單中使用的Adobe Sign雲端服務](../../forms/using/adobe-sign-integration-adaptive-forms.md)的[設定。
+* 檢查最適化表單中使用的Adobe Sign雲端服務[&#128279;](../../forms/using/adobe-sign-integration-adaptive-forms.md)的設定。
 * 請確定用來設定[!DNL Adobe Sign]雲端服務的[!DNL Adobe Sign]伺服器上的API應用程式具有必要許可權。
 * 如果您使用多個[!DNL Adobe Sign]雲端服務，請將所有服務的&#x200B;**[!UICONTROL oAuth URL]**&#x200B;指向相同的&#x200B;**[!UICONTROL Adobe Sign Shard]**。
 

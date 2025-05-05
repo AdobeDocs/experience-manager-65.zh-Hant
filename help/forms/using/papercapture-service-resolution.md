@@ -32,8 +32,10 @@ ht-degree: 2%
 1. 擷取並複製下載資料夾的內容。
 1. 導覽至下列對應應用程式伺服器的路徑：
    * **jboss**：
+
      `..\Adobe\Adobe_Experience_Manager_Forms\jboss\standalone\svcnative\PaperCaptureSvc`
    * **weblogic**：
+
      `..\Adobe\Adobe_Experience_Manager_Forms\crx-repository\bedrock\svcnative\PaperCaptureSvc`
    * **websphere**：\
      `..\Adobe\Adobe_Experience_Manager_Forms\crx-repository\bedrock\svcnative\PaperCaptureSvc`

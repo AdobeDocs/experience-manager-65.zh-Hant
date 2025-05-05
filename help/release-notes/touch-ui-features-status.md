@@ -112,7 +112,7 @@ Adobe Experience Manager (AEM) 6.4之後的[傳統UI已棄用](../release-notes/
 | 稽核記錄 | 已移除 | 使用網站管理員和[開啟活動邊欄](/help/sites-authoring/author-environment-tools.md#events-timeline)。 |
 | 建立版本 | 已移除 | 使用網站管理員來[建立新版本](/help/sites-authoring/working-with-page-versions.md#creating-a-new-version)。 |
 | 還原版本 | 已移除 | 使用網站管理員來[還原版本](/help/sites-authoring/working-with-page-versions.md#reverting-to-a-page-version)。 |
-| 切換啟動 | 已移除 | 使用[網站管理員]在啟動](/help/sites-authoring/launches-promoting.md)之間[切換。 |
+| 切換啟動 | 已移除 | 使用[網站管理員]在啟動[&#128279;](/help/sites-authoring/launches-promoting.md)之間切換。 |
 | 翻譯頁面 | 已移除 | 使用網站管理員[新增頁面至翻譯專案](/help/sites-administering/tc-manage.md)。 |
 | 時間扭曲（選擇日期/時間並瀏覽當時的網站） | 完成 |  |
 | 設定許可權 | 完成 |  |

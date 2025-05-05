@@ -72,7 +72,7 @@ ht-degree: 0%
 
 1. 新增多值字串( `String[]`)型別的新屬性（例如`myList`），以包含下拉式清單專案的清單。 也可以使用指令碼匯入內容，例如使用JSP指令碼或shell指令碼中的cURL。
 
-1. 在&#x200B;**專案載入路徑**欄位中使用完整路徑：
+1. 在&#x200B;**專案載入路徑**&#x200B;欄位中使用完整路徑：
 例如，`/etc/designs/geometrixx/formlistvalues/myList`
 
 請注意，如果`String[]`中的值格式如下：
@@ -315,7 +315,7 @@ ht-degree: 0%
 
 ### 開發指令碼以與Forms搭配使用 {#developing-scripts-for-use-with-forms}
 
-如需可在編寫指令碼時使用的API元素的詳細資訊，請參閱與表單](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/foundation/forms/package-summary.html)相關的[javadocs。
+如需可在編寫指令碼時使用的API元素的詳細資訊，請參閱與表單[&#128279;](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/foundation/forms/package-summary.html)相關的javadocs。
 
 您可以將此用於動作，例如在提交表單前呼叫服務，以及在服務失敗時取消服務：
 

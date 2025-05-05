@@ -207,7 +207,7 @@ Dublin核心中繼資料提供一組標準化的慣例，用於說明資產，�
 
 XMP （可延伸中繼資料平台）是[!DNL Adobe Experience Manager Assets]用於所有中繼資料管理的中繼資料標準。 XMP為各種應用程式的中繼資料的建立、處理和交換提供標準格式。
 
-除了提供可內嵌至所有檔案格式的通用中繼資料編碼之外，XMP還提供豐富的[內容模型](#xmp-core-concepts)，並受到Adobe](#advantages-of-xmp)和其他公司的[支援，因此XMP與[!DNL Assets]結合的使用者擁有強大的平台可以建置。
+除了提供可內嵌至所有檔案格式的通用中繼資料編碼之外，XMP還提供豐富的[內容模型](#xmp-core-concepts)，並受到Adobe[&#128279;](#advantages-of-xmp)和其他公司的支援，因此XMP與[!DNL Assets]結合的使用者擁有強大的平台可以建置。
 
 [XMP規格](https://www.adobe.com/devnet/xmp.html)可從Adobe取得。
 
@@ -226,9 +226,9 @@ XMP中的中繼資料包含一組屬性。 這些屬性一律與
 
 ### XMP生態系統 {#xmp-ecosystem}
 
-XMP定義了 [中繼資料](https://en.wikipedia.org/wiki/Metadata) 模型，可與任何已定義的中繼資料項目集搭配使用。XMP也定義了基本屬性的特定結構 [](https://en.wikipedia.org/wiki/XML_schema) ，這些基本屬性可用於記錄資源在經過多個處理步驟 (從被拍攝、掃描或創作為文字) 、通過照片編輯步驟(如 [](https://en.wikipedia.org/wiki/Image_scanner)[](https://en.wikipedia.org/wiki/Cropping_%28image%29) or color adjustment)到組合成最終影像時的歷史記錄。XMP可讓每個軟體程式或裝置沿途將其資訊新增至數位資源，然後再保留在最終數位檔案中。
+XMP定義了 [中繼資料](https://en.wikipedia.org/wiki/Metadata) 模型，可與任何已定義的中繼資料項目集搭配使用。XMP也定義了基本屬性的特定結構 [&#128279;](https://en.wikipedia.org/wiki/XML_schema) ，這些基本屬性可用於記錄資源在經過多個處理步驟 (從被拍攝、掃描或創作為文字) 、通過照片編輯步驟(如 [&#128279;](https://en.wikipedia.org/wiki/Image_scanner) [&#128279;](https://en.wikipedia.org/wiki/Cropping_%28image%29) or color adjustment)到組合成最終影像時的歷史記錄。XMP可讓每個軟體程式或裝置沿途將其資訊新增至數位資源，然後再保留在最終數位檔案中。
 
-XMP最常是使用 [W3C](https://en.wikipedia.org/wiki/World_Wide_Web_Consortium)[Resource Description Framework](https://en.wikipedia.org/wiki/Resource_Description_Framework) (RDF)的子集進行序列化和儲存，該子集又以 [XML表示](https://en.wikipedia.org/wiki/XML)。
+XMP最常是使用 [W3C](https://en.wikipedia.org/wiki/World_Wide_Web_Consortium) [Resource Description Framework](https://en.wikipedia.org/wiki/Resource_Description_Framework) (RDF)的子集進行序列化和儲存，該子集又以 [XML表示](https://en.wikipedia.org/wiki/XML)。
 
 ### XMP的優點 {#advantages-of-xmp}
 

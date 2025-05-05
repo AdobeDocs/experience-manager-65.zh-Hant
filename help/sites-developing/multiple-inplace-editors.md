@@ -113,7 +113,7 @@ ht-degree: 1%
 
 ## 程式碼範例 {#code-samples}
 
-您可以在GitHub](https://github.com/Adobe-Marketing-Cloud/aem-authoring-hybrideditors)上的[aem-authoring-hybrideditors專案中找到此頁面的程式碼。 您可以以[ZIP封存](https://github.com/Adobe-Marketing-Cloud/aem-authoring-hybrideditors/archive/master.zip)的形式下載完整專案。
+您可以在GitHub[&#128279;](https://github.com/Adobe-Marketing-Cloud/aem-authoring-hybrideditors)上的aem-authoring-hybrideditors專案中找到此頁面的程式碼。 您可以以[ZIP封存](https://github.com/Adobe-Marketing-Cloud/aem-authoring-hybrideditors/archive/master.zip)的形式下載完整專案。
 
 ## 新增就地編輯器 {#add-an-in-place-editor}
 

@@ -53,7 +53,7 @@ ht-degree: 1%
       * 輸入描述： `List of comments without showing avatars`
       * 超級型別： `social/commons/components/comments`
       * 輸入群組： `Communities`
-      * 按[下一步]****&#x200B;直到&#x200B;**[!UICONTROL [確定]]**
+      * 按[下一步]&#x200B;**&#x200B;**&#x200B;直到&#x200B;**[!UICONTROL [確定]]**
 1. 選取`comments`節點
 
    * **[!UICONTROL 建立]** > **[!UICONTROL 建立元件]**
@@ -63,7 +63,7 @@ ht-degree: 1%
       * 輸入描述： `A comment instance without avatars`
       * 超級型別： `social/commons/components/comments/comment`
       * 輸入群組： `.hidden`
-      * 按[下一步]****&#x200B;直到&#x200B;**[!UICONTROL [確定]]**
+      * 按[下一步]&#x200B;**&#x200B;**&#x200B;直到&#x200B;**[!UICONTROL [確定]]**
    * 選取&#x200B;**[!UICONTROL 全部儲存]**
 1. 刪除預設`comments.jsp`
    * 選取節點`/apps/social/commons/components/hbs/comments/comments.jsp`

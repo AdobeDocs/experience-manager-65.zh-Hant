@@ -80,7 +80,7 @@ AEM Forms提供AEM Forms應用程式的完整原始碼。 來源包含建立自�
 
    ![重新鎖定目標 — 解決方案](assets/retarget-solution.png)
 
-1. 在[建立應用程式封裝]精靈中，選取您是否要上傳應用程式至Windows市集，然後按一下[下一步]****。
+1. 在[建立應用程式封裝]精靈中，選取您是否要上傳應用程式至Windows市集，然後按一下[下一步]&#x200B;**&#x200B;**。
 
    ![createapppackageswizard1](assets/createapppackageswizard1.png)
 

@@ -103,7 +103,7 @@ AEM Forms工作區支援管理表單與檔案的任務指派與完成活動。 �
    [取得檔案](assets/dscsample.zip)
 下載DSC：以上附加的DSCSample.zip檔案中提供範例DSC。 下載並解壓縮DSCSample.zip檔案。 在使用DSC服務之前，您必須先設定它。 請參閱[設定DSC服務](../../forms/using/add-action-button-in-create-correspondence-ui.md#p-configure-the-dsc-service-p)。
 
-   在[定義活動]對話方塊中，選取適當的活動，例如getLetterInstanceInfo，然後按一下[確定]。****
+   在[定義活動]對話方塊中，選取適當的活動，例如getLetterInstanceInfo，然後按一下[確定]。**&#x200B;**
 
 1. 部署應用程式。 如果系統提示入庫並儲存資產。
 1. 在https://&#39;[伺服器]：[連線埠]&#39;/lc/content/ws登入AEM表單工作區。

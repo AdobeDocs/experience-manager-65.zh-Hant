@@ -68,7 +68,7 @@ ht-degree: 0%
 * 條件資料
 * 影像
 
-[](/help/forms/using/planning-interactive-communications.md)
+[&#128279;](/help/forms/using/planning-interactive-communications.md)
 
 ## 步驟2：建立表單資料模型 {#step-create-form-data-model}
 
@@ -87,7 +87,7 @@ ht-degree: 0%
 * 編輯範例資料
 * 測試表單資料模型和已設定的服務（包含測試資料）
 
-[](/help/forms/using/create-form-data-model0.md)
+[&#128279;](/help/forms/using/create-form-data-model0.md)
 
 ## 步驟3：建立檔案片段 {#step-create-document-fragments}
 
@@ -101,7 +101,7 @@ ht-degree: 0%
 * 建立變數
 * 建立和套用規則
 
-[](/help/forms/using/create-document-fragments.md)
+[&#128279;](/help/forms/using/create-document-fragments.md)
 
 ## 步驟4：建立範本 {#step-create-templates}
 
@@ -119,7 +119,7 @@ Web channel的範本是在AEM中建立。 範本作者和管理員可以建立�
 * 將XDP範本上傳至AEM Forms伺服器
 * 建立和啟用網頁管道的範本
 
-[](/help/forms/using/create-templates-print-web.md)
+[&#128279;](/help/forms/using/create-templates-print-web.md)
 
 ## 步驟5：建立互動式通訊 {#step-create-an-interactive-communication}
 
@@ -138,7 +138,7 @@ Web channel的範本是在AEM中建立。 範本作者和管理員可以建立�
 * 在互動式通訊的Web版本中建立圖表
 * 在互動式通訊的Web版本中建立超連結
 
-[](/help/forms/using/create-interactive-communication0.md)
+[&#128279;](/help/forms/using/create-interactive-communication0.md)
 
 ## 步驟6：Publish您的互動式通訊 {#step-publish-your-interactive-communication}
 

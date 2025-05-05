@@ -133,7 +133,7 @@ http://localhost:4502/crx/repository/staging
 
 #### Windows 8設定 {#windows-configuration}
 
-若是Windows 8，請依照Windows 7和更新版本](/help/sites-administering/webdav-access.md#windows-and-greater-configuration)的說明變更登入專案[。 但是，在執行此工作之前，必須啟用[案頭體驗]才能看到登入專案。
+若是Windows 8，請依照Windows 7和更新版本[&#128279;](/help/sites-administering/webdav-access.md#windows-and-greater-configuration)的說明變更登入專案。 但是，在執行此工作之前，必須啟用[案頭體驗]才能看到登入專案。
 
 若要啟用案頭體驗，請開啟&#x200B;**伺服器管理員**，然後開啟&#x200B;**功能**，再開啟&#x200B;**新增功能**，然後開啟&#x200B;**案頭體驗**。
 
@@ -147,7 +147,7 @@ http://localhost:4502/crx/repository/staging
 
    ![chlimage_1-112](assets/chlimage_1-112a.png)
 
-1. 若要啟動精靈，請按一下[對應網路磁碟機]。****
+1. 若要啟動精靈，請按一下[對應網路磁碟機]。**&#x200B;**
 1. 輸入對應明細：
 
    * **磁碟機**：選擇任何可用的字母

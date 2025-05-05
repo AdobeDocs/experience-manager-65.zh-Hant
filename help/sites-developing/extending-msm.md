@@ -208,12 +208,15 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
 
 1. 將以下屬性新增至此節點：
    * **名稱**：`jcr:title`
+
      **類型**：`String`
      **值**：將在UI中顯示的識別標題。
    * **名稱**：`jcr:description`
+
      **類型**：`String`
      **值**：選用的說明。
    * **名稱**：`cq:trigger`
+
      **類型**：`String`
      **值**：要使用的[轉出觸發程式](/help/sites-administering/msm-sync.md#rollout-triggers)。 選取自：
       * `rollout`
@@ -548,7 +551,7 @@ GITHUB上的程式碼
 
 建立使用您所建立 `LiveActionFactory` 的 MSM 推出設定：
 
-1. 使用標準程式](/help/sites-administering/msm-sync.md#creating-a-rollout-configuration)建立並設定[轉出設定 — 並使用屬性：
+1. 使用標準程式[&#128279;](/help/sites-administering/msm-sync.md#creating-a-rollout-configuration)建立並設定轉出設定 — 並使用屬性：
 
    * **標題**：推出設定範例
    * **名稱**：examplerolloutconfig
@@ -686,6 +689,7 @@ MSM 會使用儲存的語言和國家/地區代碼清單來確定和頁面語言
       * **類型**：`String`
 
       * **Value**：保留所考慮屬性的名稱(可與屬性`name`的值比較；例如，請參閱
+
         `/libs/foundation/components/page/cq:dialog/content/items/tabs/items/basic/items/column/items/title/items/title`
 
 若已定義 `cq-msm-lockable`，則毀損/關閉鏈會以下列方式和 MSM 互動：

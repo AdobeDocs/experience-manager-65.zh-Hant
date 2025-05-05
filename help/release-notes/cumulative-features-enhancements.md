@@ -122,7 +122,7 @@ ht-degree: 25%
 
 * AEM Forms Designer現在可在[西班牙語地區設定](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)中使用。
 * 您現在可以使用[OAuth2驗證Microsoft® Office 365郵件伺服器通訊協定（SMTP和IMAP）](/help/forms/using/oauth2-support-for-mail-service.md)。
-* 您可以將伺服器](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-submit-actions-and-metadata-submission/configuring-submit-actions.html#enabling-server-side-validation-br)屬性上的[Revalidate設定為true，以識別從伺服器端的記錄檔案排除的隱藏欄位。
+* 您可以將伺服器[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-submit-actions-and-metadata-submission/configuring-submit-actions.html#enabling-server-side-validation-br)屬性上的Revalidate設定為true，以識別從伺服器端的記錄檔案排除的隱藏欄位。
 * AEM Forms Designer需要32位元版的Visual C++ 2019可轉散發套件(x86)。
 
 ## AEM 6.5， Service Pack 14—2022年8月25日

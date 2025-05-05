@@ -182,7 +182,7 @@ AEM Communities將電子郵件用於：
 
 * **[!UICONTROL URL]**
 
-  *（必要）*&#x200B;傳出郵件伺服器。 例如，`pop.gmail.com:995/INBOX?username=community-emailgmail.com&password=****`。
+  *（必要）*&#x200B;傳出郵件伺服器。 例如，`pop.gmail.com:995/INBOX?username=community-emailgmail.com&password=**&#x200B;**`。
 
 * **[!UICONTROL 匯入到路徑]**&amp;amp；ast；
 

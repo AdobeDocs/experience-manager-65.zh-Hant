@@ -52,7 +52,7 @@ Dynamic Media Publish設定頁面會建立預設設定，用來決定如何從Ad
    * [Illustrator](#illustrator-tab)索引標籤
 
    ![Dynamic Media一般設定頁面](/help/assets/assets-dm/dm-general-settings.png)
-   *Dynamic Media一般設定頁面，已選取&#x200B;**[!UICONTROL 影像編輯]**索引標籤。*<br><br>
+   *Dynamic Media一般設定頁面，已選取&#x200B;**[!UICONTROL 影像編輯]**&#x200B;索引標籤。*<br><br>
 
 1. 完成後，在頁面的右上角附近，選取&#x200B;**[!UICONTROL 儲存]**。
 

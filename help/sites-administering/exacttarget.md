@@ -66,7 +66,7 @@ ht-degree: 2%
 
 1. 在歡迎頁面上，按一下&#x200B;**工具**。 或前往`https://<hostname>:<port>/misadmin#/etc`直接導覽至該處。
 1. 依序選取&#x200B;**工具**、**Cloud Service設定、**&#x200B;和&#x200B;**ExactTarget**。
-1. 按一下&#x200B;**新增**&#x200B;以開啟**建立頁面**視窗。
+1. 按一下&#x200B;**新增**&#x200B;以開啟&#x200B;**建立頁面**&#x200B;視窗。
 
    ![chlimage_1-34](assets/chlimage_1-3.jpeg)
 

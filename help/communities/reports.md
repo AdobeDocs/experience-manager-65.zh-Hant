@@ -125,4 +125,4 @@ ht-degree: 6%
 
 如果報表未顯示在AEM編寫執行個體中，請檢查是否有自訂，例如Publish執行個體上的URL對應。 如果只在社群網站的AEM Publish執行個體上完成URL對應，請確定已在&#x200B;**網站趨勢報表社交元件處理站**&#x200B;設定的AEM Author執行個體中設定相同專案。
 
-在AEM作者](assets/sitetrend.png)上的![URL對應
+在AEM作者![&#128279;](assets/sitetrend.png)上的URL對應

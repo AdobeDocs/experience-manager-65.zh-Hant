@@ -599,7 +599,7 @@ AEM中的元件受到三個不同階層的限制：
 
   `//element(cq:editConfig, cq:EditConfig)[@cq:actions]`
 
-* 例如，若要尋找`cq:editConfig`的子節點，您可以搜尋`cq:dropTargets`，其型別為`cq:DropTargetConfig`；您可以在下列的XPath查詢字串中使用**CRXDE Lite**和搜尋查詢工具：
+* 例如，若要尋找`cq:editConfig`的子節點，您可以搜尋`cq:dropTargets`，其型別為`cq:DropTargetConfig`；您可以在下列的XPath查詢字串中使用&#x200B;**CRXDE Lite**&#x200B;和搜尋查詢工具：
 
   `//element(cq:dropTargets, cq:DropTargetConfig)`
 

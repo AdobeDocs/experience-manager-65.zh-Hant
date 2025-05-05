@@ -163,6 +163,6 @@ XSSAPI速查表。
 
 ### 在Java™程式中開啟檔案 {#open-files-in-the-java-process}
 
-由於AEM可以存取許多檔案，因此建議為AEM明確設定Java™處理序](/help/sites-deploying/configuring.md#open-files-in-the-java-process)的[開啟檔案數。
+由於AEM可以存取許多檔案，因此建議為AEM明確設定Java™處理序[&#128279;](/help/sites-deploying/configuring.md#open-files-in-the-java-process)的開啟檔案數。
 
 為了將這個問題降至最低，開發應確保在（有意義的）可能時，正確關閉任何開啟的檔案。

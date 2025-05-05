@@ -63,7 +63,7 @@ ht-degree: 1%
    * **[!UICONTROL 佈景主題]**&#x200B;和&#x200B;**[!UICONTROL 選取佈景主題]**：瀏覽並選取佈景主題，以設定互動式通訊的網路通道樣式。 如需詳細資訊，請參閱AEM Forms中的[主題](/help/forms/using/themes.md)。
 
    * **[!UICONTROL 為Web Channel使用Print As Master]**：選取此選項以建立與列印管道同步的Web channel。 使用print channel作為web channel的主版，可確保從print channel衍生web channel的內容和資料繫結，當您選取「同步」時，在web channel中進行的變更會反映在web channel中。 不過，作者可視需要中斷Web Channel中特定元件的繼承。 如需詳細資訊，請參閱[將Web channel與Print channel同步](../../forms/using/create-interactive-communication.md#synchronize)。
-如果您選取**[!UICONTROL Web Channel的「列印為主版」]**&#x200B;選項，您可以選取下列任何模式來產生Web channel：
+如果您選取&#x200B;**[!UICONTROL Web Channel的「列印為主版」]**&#x200B;選項，您可以選取下列任何模式來產生Web channel：
 
       * **[!UICONTROL 自動配置]**：選取此模式，即可從Print channel自動產生Web channel的預留位置、內容和資料繫結。
       * **[!UICONTROL 手動整理]**：選取此模式，即可使用&#x200B;**[!UICONTROL 資料來源]**&#x200B;索引標籤中可用的主要內容，手動選取並新增Print channel元素至Web channel。 如需詳細資訊，請參閱[選取[列印管道]元素以建立Web管道內容](#selectprintchannelelements)。

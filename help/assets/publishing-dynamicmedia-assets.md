@@ -21,9 +21,9 @@ ht-degree: 4%
 選取您已上傳的資產，並點選「**[!UICONTROL Publish]**」或「**[!UICONTROL 快速Publish]**」，即可發佈您的Dynamic Media資產。 發佈Dynamic Media資產後，您就可以透過URL或內嵌程式碼至網頁，將資產加入網頁。
 
 您也可立即發佈您上傳的資產，無需任何使用者介入。 請參閱[設定Dynamic Media - Scene7模式](config-dms7.md)。
-或者，您可以在資料夾層級使用**[!UICONTROL 選擇性Dynamic Media]**，選擇性地將資產發佈至Adobe Experience Manager或Publish （互斥）。 請參閱[在Dynamic Media中使用選擇性Publish](/help/assets/selective-publishing.md)。
+或者，您可以在資料夾層級使用&#x200B;**[!UICONTROL 選擇性Dynamic Media]**，選擇性地將資產發佈至Adobe Experience Manager或Publish （互斥）。 請參閱[在Dynamic Media中使用選擇性Publish](/help/assets/selective-publishing.md)。
 
-在&#x200B;**[!UICONTROL 卡片檢視]**&#x200B;中，資產名稱正下方以及日期和時間左側會顯示一個小型全球圖示，以指出資產已發佈。 在「清 **[!UICONTROL 單檢視]**」中，「已發佈」 **** 欄會指出已發佈或未發佈的資產。
+在&#x200B;**[!UICONTROL 卡片檢視]**&#x200B;中，資產名稱正下方以及日期和時間左側會顯示一個小型全球圖示，以指出資產已發佈。 在「清 **[!UICONTROL 單檢視]**」中，「已發佈」 **&#x200B;**&#x200B;欄會指出已發佈或未發佈的資產。
 
 >[!NOTE]
 >

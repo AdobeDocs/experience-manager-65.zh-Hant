@@ -69,7 +69,7 @@ analytics-administrators使用者群組的成員可以設定Sites主控台，讓
 
    ![spad-03](assets/spad-03.png)
 
-1. 選取您要在Sites主控台中公開給作者的量度，然後按一下[新增]。****
+1. 選取您要在Sites主控台中公開給作者的量度，然後按一下[新增]。**&#x200B;**
 
    顯示的欄是從Adobe Analytics中擷取的。
 
@@ -90,4 +90,4 @@ analytics-administrators使用者群組的成員可以設定Sites主控台，讓
 >
 >由於Adobe Analytics API中的安全性變更，AEM中包含的Activity Map版本已無法再使用。
 >
->現在應該使用Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html)提供的[ActivityMap外掛程式。
+>現在應該使用Adobe Analytics[&#128279;](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html)提供的ActivityMap外掛程式。

@@ -54,11 +54,11 @@ ht-degree: 23%
 
 >[!NOTE]
 >
->如果您使用Adobe Analytics搭配自訂的代理設定，則需要 [設定](/help/sites-deploying/configuring-osgi.md) Apache HTTP Client **** Proxy設定所需的兩個OSGi組合 (例如，搭配Web主控台)。由於AEM的某些功能使用3.x API，而其他功能則使用4.x API，因此這兩者皆為必要。設定：
+>如果您使用Adobe Analytics搭配自訂的代理設定，則需要 [設定](/help/sites-deploying/configuring-osgi.md) Apache HTTP Client **&#x200B;**&#x200B;Proxy設定所需的兩個OSGi組合 (例如，搭配Web主控台)。由於AEM的某些功能使用3.x API，而其他功能則使用4.x API，因此這兩者皆為必要。設定：
 >
->* **Day Commons HTTP Client 3.1**以設定3.x API；
+>* **Day Commons HTTP Client 3.1**&#x200B;以設定3.x API；
 >  例如，[https://localhost:4502/system/console/configMgr/com.day.commons.httpclient](https://localhost:4502/system/console/configMgr/com.day.commons.httpclient)
 >
->* **Apache HTTP元件Proxy設定**以設定4.x API；
+>* **Apache HTTP元件Proxy設定**&#x200B;以設定4.x API；
 >  例如，[https://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator](https://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator)
 >

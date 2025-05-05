@@ -20,7 +20,7 @@ ht-degree: 76%
 
 此時，您應該已經完成了整個[AEM Headless 開發人員歷程](overview.md)並了解 AEM Headless 傳遞的基本知識，包括了解：
 
-*  Headless 和 Headful 內容傳遞之間的差異。
+* Headless 和 Headful 內容傳遞之間的差異。
 * AEM 的 Headless 功能。
 * 如何組織 AEM Headless 專案。
 * 如何在 AEM 建立 Headless 內容。

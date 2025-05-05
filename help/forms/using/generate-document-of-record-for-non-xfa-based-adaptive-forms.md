@@ -251,7 +251,7 @@ ht-degree: 3%
 
 1. 選取&#x200B;**Forms — 記錄檔案**&#x200B;類別。
 1. 選取&#x200B;**DoR基底範本**。
-1. 按一下[下一步]****&#x200B;並提供必要的資訊。
+1. 按一下[下一步]&#x200B;**&#x200B;**&#x200B;並提供必要的資訊。
 
 1. （選擇性）修改您要在記錄檔案中欄位上套用的欄位樣式和外觀。
 1. 儲存表單。
@@ -420,12 +420,13 @@ ht-degree: 3%
 **表單層級設定**
 
 * **[!UICONTROL 基本]**
-   * **範本：**您可以選取[預設]或[自訂]範本。
+   * **範本：**&#x200B;您可以選取[預設]或[自訂]範本。
+
      ![替代文字](image.png)
    * **強調色：**&#x200B;您可以預先定義[!UICONTROL 記錄檔案]的範本顏色。
    * **字型系列：**&#x200B;為[!UICONTROL 記錄檔案]文字選取字型型別。
    * **包含未繫結欄位於DoR：**&#x200B;設定屬性包含來自[!UICONTROL 記錄檔案]中結構描述型最適化表單的未繫結欄位。 預設為true。
-   * **若隱藏則從DoR排除欄位：**&#x200B;設定屬性以在表單提交時從[!UICONTROL 記錄檔案]排除隱藏欄位。 當您在伺服器](/help/forms/using/configuring-submit-actions.md#server-side-revalidation-in-adaptive-form-server-side-revalidation-in-adaptive-form)上啟用[重新驗證時，伺服器會先重新計算隱藏的欄位，然後再從[!UICONTROL 記錄檔案]中排除這些欄位
+   * **若隱藏則從DoR排除欄位：**&#x200B;設定屬性以在表單提交時從[!UICONTROL 記錄檔案]排除隱藏欄位。 當您在伺服器[&#128279;](/help/forms/using/configuring-submit-actions.md#server-side-revalidation-in-adaptive-form-server-side-revalidation-in-adaptive-form)上啟用重新驗證時，伺服器會先重新計算隱藏的欄位，然後再從[!UICONTROL 記錄檔案]中排除這些欄位
 * **[!UICONTROL 表單欄位屬性]**
    * 如果勾選選項&#x200B;**對於核取方塊與選項按鈕元件，只顯示選取的值**，它將只產生具有選取值的DoR輸出。
    * 您可以為多個選取的值選取「分隔符號」，也可以選擇任何其他分隔符號型別。
@@ -433,6 +434,7 @@ ht-degree: 3%
       * 垂直
       * 水平
       * 與自適應表單相同
+
      >[!NOTE]
      > 「垂直」和「水準」對齊方式僅適用於     選項按鈕與核取方塊
 * **[!UICONTROL 主版頁面屬性]**&#x200B;按一下以取得有關[主版頁面屬性](#master-page-properties-master-page-properties)的詳細資訊

@@ -47,7 +47,7 @@ ht-degree: 1%
 
 1. **（選用）識別熱點變數** — 如果您使用Experience Manager Assets和Dynamic Media獨立，請先識別現有Quickview實作中使用的動態變數。 之後，您就可以在建立互動式影像時輸入熱點資料。 請參閱[（選擇性）識別熱點變數](#optional-identifying-hotspot-variables)。
 不過，如果您使用Adobe Experience Manager Sites或Adobe Experience Manager電子商務，或同時使用兩者，則不需要執行此步驟。
-檢視Experience Manager Assets](/help/commerce/cif-classic/administering/concepts.md)中的[電子商務概念。
+檢視Experience Manager Assets[&#128279;](/help/commerce/cif-classic/administering/concepts.md)中的電子商務概念。
 
 1. **（選擇性）建立互動式影像檢視器預設集** — 自訂用來代表熱點的圖形影像。 如果您打算改用名為`Shoppable_Banner`的現成互動影像檢視器預設集，則不需要建立自己的互動影像檢視器預設集。
 請參閱[（選擇性）建立互動式影像檢視器預設集](/help/assets/managing-viewer-presets.md#creating-a-new-viewer-preset)。
@@ -74,7 +74,7 @@ ht-degree: 1%
 >只有在下列情況為真時才需要此工作：
 >
 >* 您想要透過觸發至快速檢視將互動性新增至影像。
->* 您的Experience Manager實作&#x200B;*不*&#x200B;會使用電子商務整合架構，將產品資料從任何電子商務解決方案(例如IBM®WebSphere®Commerce、Elastic Path、hybris或Intershop)提取至Experience Manager。 檢視Experience Manager Assets](/help/commerce/cif-classic/administering/concepts.md)中的[電子商務概念。
+>* 您的Experience Manager實作&#x200B;*不*&#x200B;會使用電子商務整合架構，將產品資料從任何電子商務解決方案(例如IBM®WebSphere®Commerce、Elastic Path、hybris或Intershop)提取至Experience Manager。 檢視Experience Manager Assets[&#128279;](/help/commerce/cif-classic/administering/concepts.md)中的電子商務概念。
 >
 >如果您的Experience Manager實作使用電子商務，您可以略過此任務並繼續下一個任務。
 
@@ -445,27 +445,27 @@ Experience Manager Assets傳回的內嵌程式碼已有備註的現成事件處�
  <tbody>
   <tr>
    <td><p>在查詢字串中找到單一SKU</p> </td>
-   <td><code class="code">s7interactiveimageviewer.setHandlers({
-      "quickViewActivate": function(inData) {
-      var quickViewUrl = "https://server/json?productId=" + inData.sku + "&amp;amp;source=100";
-      },
-      });</code></td>
+   <td><code class="code">s7interactiveimageviewer.setHandlers(&lbrace;
+      "quickViewActivate": function(inData) &lbrace;
+      var quickViewUrl = "https://server/json?productId=" + inData.sku + "&amp;source=100";
+      &rbrace;,
+      &rbrace;);</code></td>
   </tr>
   <tr>
    <td><p>在URL路徑中找到單一SKU</p> </td>
-   <td><code class="code">s7interactiveimageviewer.setHandlers({
-      "quickViewActivate": function(inData) {
+   <td><code class="code">s7interactiveimageviewer.setHandlers(&lbrace;
+      "quickViewActivate": function(inData) &lbrace;
       var quickViewUrl = "https://server/product/" + inData.sku;
-      },
-      });</code></td>
+      &rbrace;,
+      &rbrace;);</code></td>
   </tr>
   <tr>
    <td><p>查詢字串中的SKU和類別ID</p> </td>
-   <td><code class="code">s7interactiveimageviewer.setHandlers({
-      "quickViewActivate": function(inData) {
-      var quickViewUrl = "https://server/quickView/product/?category=" + inData.categoryId + "&amp;amp;prodId=" + inData.sku;
-      },
-      });</code></td>
+   <td><code class="code">s7interactiveimageviewer.setHandlers(&lbrace;
+      "quickViewActivate": function(inData) &lbrace;
+      var quickViewUrl = "https://server/quickView/product/?category=" + inData.categoryId + "&amp;prodId=" + inData.sku;
+      &rbrace;,
+      &rbrace;);</code></td>
   </tr>
  </tbody>
 </table>

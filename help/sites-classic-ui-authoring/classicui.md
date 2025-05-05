@@ -30,4 +30,4 @@ Classic UI是從CQ5 (AEM的前身)起就提供的案頭導向使用者介面。 
 
 ## 製作（和發佈）的概念 {#concept-of-authoring-and-publishing}
 
-無論UI選擇為何，製作都有某些共同的概念和概念，這些概念和概念在標準制作檔案](/help/sites-authoring/author.md#concept-of-authoring-and-publishing)的[中都有詳細說明。
+無論UI選擇為何，製作都有某些共同的概念和概念，這些概念和概念在標準制作檔案[&#128279;](/help/sites-authoring/author.md#concept-of-authoring-and-publishing)的中都有詳細說明。

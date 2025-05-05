@@ -38,7 +38,7 @@ ht-degree: 0%
 1. 導覽至您要上傳表單的資料夾或包含表單的資料夾。
 1. 在動作工具列中選取&#x200B;**建立>檔案上傳**。
 
-   在[建立]](assets/step.png)下![來自本機儲存體的檔案選項
+   在[建立]![&#128279;](assets/step.png)下來自本機儲存體的檔案選項
 
 1. 上傳表單或封裝對話方塊可讓您瀏覽並選擇您要上傳的檔案。 檔案瀏覽器只會顯示支援的檔案格式(ZIP、XDP和PDF)。
 
@@ -68,7 +68,7 @@ AEM Forms伺服器可讓您執行JavaScript程式碼。 惡意的JavaScript程�
 
 1. 以管理員身分登入AEM Web Console。 URL是https://&#39;[伺服器]：[連線埠]&#39;/system/console/configMgr
 1. 開啟Mobile Forms設定以進行編輯。
-1. 取消選取[保護模式]選項，然後按一下[儲存]。**** 受保護模式已停用。
+1. 取消選取[保護模式]選項，然後按一下[儲存]。**&#x200B;** 受保護模式已停用。
 
 ## 更新參考的XFA表單 {#updating-referenced-xfa-forms}
 

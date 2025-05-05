@@ -309,7 +309,7 @@ AEM Communities有兩個功能，需要所有AEM伺服器執行個體使用相�
 
 >[!NOTE]
 >
->驗證作者](#replication-agents-on-author)上的[復寫代理程式是否已正確設定。
+>驗證作者[&#128279;](#replication-agents-on-author)上的復寫代理程式是否已正確設定。
 
 將金鑰資料儲存在存放庫後，將密碼編譯金鑰從製作例項複製到其他例項的方式如下：
 
@@ -335,7 +335,7 @@ AEM Communities有兩個功能，需要所有AEM伺服器執行個體使用相�
 
   ![granite-crypto](assets/granite-crypto.png)
 
-* 過了一會兒，應該會出現&#x200B;**Success**對話方塊：
+* 過了一會兒，應該會出現&#x200B;**Success**&#x200B;對話方塊：
   `Operation completed successfully.`
 
 ### Apache HTTP Server {#apache-http-server}

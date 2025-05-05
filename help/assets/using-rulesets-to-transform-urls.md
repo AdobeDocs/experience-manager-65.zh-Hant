@@ -57,7 +57,7 @@ ht-degree: 0%
 * **EMEA staging environment** login page: [https://s7sps3-staging.scene7.com/IpsWeb/](https://s7sps3-staging.scene7.com/IpsWeb/)
 * **JAPAC staging environment** login page: [https://s7sps5-staging.scene7.com/IpsWeb/](https://s7sps5-staging.scene7.com/IpsWeb/) -->
 
-另請參閱規則集](https://helpx.adobe.com/experience-manager/scene7/kb/base/scene7-rulesets/ruleset-asset-instead-image.html)中的[使用&#39;asset&#39;而非&#39;is&#39;影像。
+另請參閱規則集[&#128279;](https://helpx.adobe.com/experience-manager/scene7/kb/base/scene7-rulesets/ruleset-asset-instead-image.html)中的使用&#39;asset&#39;而非&#39;is&#39;影像。
 
 **若要部署XML規則集：**
 

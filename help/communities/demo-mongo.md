@@ -130,7 +130,7 @@ ht-degree: 0%
 >
 >如果Solr Console無法使用，請檢查&lt;solrinstall>/example/logs底下的記錄。 檢視SOLR是否嘗試繫結至無法解析的特定主機名稱（例如「user-macbook-pro」）。
 >
-若是如此，請使用此主機名稱的新專案（例如127.0.0.1 user-macbook-pro）更新`etc/hosts`檔案，以正確啟動Solr。
+>若是如此，請使用此主機名稱的新專案（例如127.0.0.1 user-macbook-pro）更新`etc/hosts`檔案，以正確啟動Solr。
 
 ### SolrCloud {#solrcloud}
 

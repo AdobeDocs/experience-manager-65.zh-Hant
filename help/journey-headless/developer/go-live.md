@@ -199,7 +199,7 @@ You can start deploying your code by using the Cloud Manager CI/CD pipeline, whi
 
 恭喜！您已經完成 AEM Headless 開發人員歷程！您現在應該已經了解：
 
-*  Headless 和 Headful 內容傳遞之間的差異。
+* Headless 和 Headful 內容傳遞之間的差異。
 * AEM 的 Headless 功能。
 * 如何組織 AEM Headless 專案。
 * 如何在 AEM 建立 Headless 內容。
@@ -211,7 +211,7 @@ You can start deploying your code by using the Cloud Manager CI/CD pipeline, whi
 
 ### 探索單頁應用程式 {#explore-spa}
 
-不過，不需要停止AEM中的Headless商店。 在歷程](getting-started.md#integration-levels)的[快速入門部分中，它討論了AEM如何不僅支援Headless傳送和傳統的全棧疊模型，還支援結合兩者優勢的混合模型。
+不過，不需要停止AEM中的Headless商店。 在歷程[&#128279;](getting-started.md#integration-levels)的快速入門部分中，它討論了AEM如何不僅支援Headless傳送和傳統的全棧疊模型，還支援結合兩者優勢的混合模型。
 
 如果您的專案需要這種彈性，請繼續進行[如何使用AEM建立單頁應用程式(SPA) ](create-spa.md)歷程的其他選擇性部分。
 

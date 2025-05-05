@@ -45,7 +45,7 @@ ht-degree: 1%
 
 ### 安裝安全性Hotfix {#install-security-hotfixes}
 
-請確定您已安裝Adobe](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html)提供的最新[安全性Hotfix。
+請確定您已安裝Adobe[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html)提供的最新安全性Hotfix。
 
 ### 變更AEM和OSGi Console管理帳戶的預設密碼 {#change-default-passwords-for-the-aem-and-osgi-console-admin-accounts}
 
@@ -95,7 +95,7 @@ AEM管理帳戶的密碼可以透過[Granite Operations - Users](/help/sites-adm
 
 **若要變更OSGi Web主控台管理密碼**：
 
-1. 使用&#x200B;**工具**，**作業**&#x200B;功能表，開啟&#x200B;**網頁主控台**&#x200B;並導覽至&#x200B;**組態**區段。
+1. 使用&#x200B;**工具**，**作業**&#x200B;功能表，開啟&#x200B;**網頁主控台**&#x200B;並導覽至&#x200B;**組態**&#x200B;區段。
 例如，在`<server>:<port>/system/console/configMgr`。
 1. 導覽至&#x200B;**Apache Felix OSGi Management Console**&#x200B;的專案並加以開啟。
 1. 變更&#x200B;**使用者名稱**&#x200B;和&#x200B;**密碼**。
@@ -211,7 +211,7 @@ AEM 6.1隨附有助於防止跨網站請求偽造攻擊的機制，稱為&#x200B
 
 1. 編輯此篩選器用於檢查`Filter Methods`欄位的方法。
 
-1. 按一下[儲存]儲存變更。****
+1. 按一下[儲存]儲存變更。**&#x200B;**
 
 ### OSGI設定 {#osgi-settings}
 
@@ -377,7 +377,7 @@ Sling是&#x200B;*以內容為中心*。 處理著重於內容，因為每個(HTT
 
 雖然不建議使用，但您可以停用它，以備您需要舊實作以便回溯相容於現有應用程式時使用。 若要這麼做，您必須執行下列動作：
 
-1. 移至Web主控台，並從{2**Apache Jackrabbit Oak SecurityProvider **中的屬性** requiredServicePids **移除** org.apache.jackrabbit.oak.security.user.RandomAuthorizableNodeName}專案。**
+1. 移至Web主控台，並從{2&#x200B;**Apache Jackrabbit Oak SecurityProvider &#x200B;** 中的屬性 **&#x200B; requiredServicePids &#x200B;** 移除 **&#x200B; org.apache.jackrabbit.oak.security.user.RandomAuthorizableNodeName}專案。**
 
    您也可以在OSGi設定中尋找&#x200B;**org.apache.jackrabbit.oak.security.internal.SecurityProviderRegistration** PID，以找到Oak安全性提供者。
 

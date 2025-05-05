@@ -33,7 +33,7 @@ ht-degree: 0%
 
 1. 移至&#x200B;**https://[伺服器]：[連線埠]/system/console/configMgr**。
 1. 搜尋&#x200B;**[!UICONTROL AdobeGranite權杖驗證處理常式]**，然後按一下&#x200B;**[!UICONTROL 編輯]**。
-1. 從下拉式功能表中選取登入權杖Cookie ]**屬性之**[!UICONTROL  SameSite屬性的&#x200B;**[!UICONTROL 無]**&#x200B;選項。
+1. 從下拉式功能表中選取登入權杖Cookie **屬性之** SameSite屬性的&#x200B;**[!UICONTROL 無]**&#x200B;選項。
 1. 按一下「**[!UICONTROL 儲存]**」。
 
 ![將影像與AFA Android應用程式同步](/help/forms/using/assets/afaandroid.png)

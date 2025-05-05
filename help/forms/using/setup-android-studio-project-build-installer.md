@@ -38,7 +38,7 @@ AEM Forms提供AEM Forms應用程式的完整原始碼。 來源包含建立自�
 
 下列影像顯示`src`資料夾中`android`資料夾的目錄結構。
 
-src](assets/android-folder.png)中Android資料夾的![目錄結構
+src![&#128279;](assets/android-folder.png)中Android資料夾的目錄結構
 
 ## 建置標準AEM Forms應用程式 {#set-up-the-xcode-project}
 
@@ -93,7 +93,7 @@ src](assets/android-folder.png)中Android資料夾的![目錄結構
 
    ![gradleconsole](assets/gradleconsole.png)
 
-1. Android™ Studio會顯示連線的裝置和可用的模擬器。 選取您要執行應用程式的裝置，然後按一下[確定]。****
+1. Android™ Studio會顯示連線的裝置和可用的模擬器。 選取您要執行應用程式的裝置，然後按一下[確定]。**&#x200B;**
 
    ![connecteddevice](assets/connecteddevice.png)
 

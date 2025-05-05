@@ -28,12 +28,14 @@ MSM會在資源URL上向選取器註冊數個可請求的servlet。 這些可供
 1. `http://<host>:<port>/content/path/to/bluprint/page.blueprint.json?&maxSize=500&advancedStatus=true&returnRelationships=true&msm%3Atrigger=ROLLOUT`
    * 在Blueprint頁面上使用這個專案來擷取連結到它的所有即時副本清單，連同其他即時副本狀態資訊。
    * 例如：
+
      `http://localhost:4502/content/wknd/language-masters/en.blueprint.json?&maxSize=500&advancedStatus=true&returnRelationships=true&msm%3Atrigger=ROLLOUT`
 
 
 1. `http://<host>:<port>/content/path/to/livecopy/page.msm.json`
    * 在即時副本頁面上使用它可擷取有關其與Blueprint頁面連線的進階資訊。 如果頁面不是即時副本，則不會傳回任何專案。
    * 例如：
+
      `http://localhost:4502/content/wknd/ca/en.msm.json`
 
 這些servlet會透過`com.day.cq.wcm.msm`記錄器產生DEBUG記錄訊息，這些訊息也可能會有所幫助。

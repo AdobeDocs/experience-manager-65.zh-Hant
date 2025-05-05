@@ -393,7 +393,7 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 
 若要使用「資產編輯器」頁面多重編輯資產：
 
-1. 開啟Geometrixx **Press Center**頁面：
+1. 開啟Geometrixx **Press Center**&#x200B;頁面：
    `https://localhost:4502/content/geometrixx/en/company/press.html`
 
 1. 選取資產：

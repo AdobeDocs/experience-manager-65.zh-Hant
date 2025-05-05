@@ -81,7 +81,7 @@ AEM Forms 6.5提供下列核心元件型最適化Forms的主題。
 
 * 安裝最新版的[Apache Maven。](https://maven.apache.org/download.cgi) Apache Maven是常用於Java™專案的組建自動化工具。 安裝最新版本可確保您擁有佈景主題自訂的必要相依性。
 
-* 瞭解如何在Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html)中建立[使用者端資料庫。 AEM提供使用者端程式庫，可讓您將使用者端程式碼儲存在存放庫中、將其組織成類別，並定義每個類別程式碼何時及如何提供給使用者端。
+* 瞭解如何在Adobe Experience Manager[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html)中建立使用者端資料庫。 AEM提供使用者端程式庫，可讓您將使用者端程式碼儲存在存放庫中、將其組織成類別，並定義每個類別程式碼何時及如何提供給使用者端。
 
 * 安裝純文字編輯器。 例如，Microsoft® Visual Studio Code。 使用純文字編輯器(例如Microsoft® Visual Studio Code)可提供方便使用的環境，用於編輯和修改佈景主題檔案。
 
@@ -89,7 +89,7 @@ AEM Forms 6.5提供下列核心元件型最適化Forms的主題。
 
 ### 自訂主題的考量事項 {#consideration}
 
-* 請確定您使用在您的環境中啟用Adaptive Forms核心元件](/help/forms/using/enable-adaptive-forms-core-components.md)所使用的[Archetype專案，來自訂您的主題。
+* 請確定您使用在您的環境中啟用Adaptive Forms核心元件[&#128279;](/help/forms/using/enable-adaptive-forms-core-components.md)所使用的Archetype專案，來自訂您的主題。
 
 * 發佈最適化表單時，使用者端程式庫不會在Publish執行個體上自動發佈。 請確定您手動將在最適化表單中參考的使用者端程式庫發佈到您的Publish環境。
 
@@ -129,7 +129,7 @@ AEM Forms 6.5提供下列核心元件型最適化Forms的主題。
       git clone [Path of Git Repository of the theme]
    ```
 
-   將主題]的Git存放庫的[路徑取代為主題對應的Git存放庫的實際URL
+   將主題&rbrack;的Git存放庫的&lbrack;路徑取代為主題對應的Git存放庫的實際URL
 
    例如，若要複製畫布主題，請執行下列命令：
 

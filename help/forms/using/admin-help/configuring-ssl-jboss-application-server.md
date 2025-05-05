@@ -89,7 +89,7 @@ ht-degree: 0%
 
    * 伺服器叢集 — `[appserver root]`/domain/configuration/domain_&lt;dbname>.xml
 
-1. 
+1. &#x200B;
    * **若為單一伺服器，請在lc_&lt;dbaname/tunkey>.xml檔案的&lt;security-realms>區段後面新增下列內容：**
 
    ```xml

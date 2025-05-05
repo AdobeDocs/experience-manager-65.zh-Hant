@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # 變更品牌化的組織標誌 {#changing-the-organization-logo-for-branding}
 
-組織標誌會顯示在AEM Forms工作區的左上角。 若要更新標誌，請依照AEM Forms工作區自訂](/help/forms/using/generic-steps-html-workspace-customization.md#generic-steps-for-html-workspace-customization)的[一般步驟進行，然後依照下列步驟進行。
+組織標誌會顯示在AEM Forms工作區的左上角。 若要更新標誌，請依照AEM Forms工作區自訂[&#128279;](/help/forms/using/generic-steps-html-workspace-customization.md#generic-steps-for-html-workspace-customization)的一般步驟進行，然後依照下列步驟進行。
 
 1. 建立標誌並將檔案命名為`NewWorkspace.png`。 使用WebDAV使用者端將影像檔案置於/apps/ws/images資料夾中。
 

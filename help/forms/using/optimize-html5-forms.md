@@ -60,8 +60,8 @@ Apache可以使用HTTP或AJP通訊協定與JBoss通訊。
    >使用Proxy時，需要變更下列設定：
    >
    >* 存取： *https://&lt;伺服器>：&lt;連線埠>/system/console/configMgr*
-   * 編輯Apache Sling查閱者篩選器的設定
-   * 在允許主機中，新增代理主機伺服器的專案
+   >* 編輯Apache Sling查閱者篩選器的設定
+   >* 在允許主機中，新增代理主機伺服器的專案
 
 1. 啟用壓縮。
 

@@ -29,7 +29,7 @@ ht-degree: 0%
 
 若要設定您的PWA Studio應用程式，請依照Adobe Commerce [PWA Studio檔案](https://developer.adobe.com/commerce/pwa-studio/tutorials/)操作。
 
-若要將PWA Studio連線至AEM的GraphQL端點，您可以為PWA Studio](https://github.com/adobe/aem-pwa-studio-extensions)使用[AEM擴充功能。
+若要將PWA Studio連線至AEM的GraphQL端點，您可以為PWA Studio[&#128279;](https://github.com/adobe/aem-pwa-studio-extensions)使用AEM擴充功能。
 
 1. 簽出存放庫
 

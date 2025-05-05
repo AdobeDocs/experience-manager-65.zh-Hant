@@ -26,7 +26,7 @@ ht-degree: 0%
 >
 >從舊版升級的執行個體將保留傳統UI以進行頁面編寫。
 >
->升級之後，頁面編寫將不會自動切換至觸控式UI，但您可以使用&#x200B;**WCM編寫UI模式服務** （ `AuthoringUIMode`服務）的[OSGi設定](/help/sites-deploying/configuring-osgi.md)來設定此設定。 檢視編輯器](#uioverridesfortheeditor)的[UI覆寫。
+>升級之後，頁面編寫將不會自動切換至觸控式UI，但您可以使用&#x200B;**WCM編寫UI模式服務** （ `AuthoringUIMode`服務）的[OSGi設定](/help/sites-deploying/configuring-osgi.md)來設定此設定。 檢視編輯器[&#128279;](#uioverridesfortheeditor)的UI覆寫。
 
 ## 為您的執行個體設定預設UI {#configuring-the-default-ui-for-your-instance}
 

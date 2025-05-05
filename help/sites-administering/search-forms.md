@@ -23,7 +23,7 @@ ht-degree: 6%
 
 [範圍的述詞](#predicates-and-their-settings)是現成可用的。 您可以新增多個述詞，包括（其中包括）屬性述詞，以搜尋符合您指定之單一屬性的資產。 或者，使用「選項」述詞來搜尋符合您為特定屬性指定的一或多個值的資產。
 
-您可以[設定用於各種主控台和資產瀏覽器（編輯頁面時）的搜尋表單](#configuring-your-search-forms)。 設定這些表單](#configuring-your-search-forms)的[對話方塊可透過下列方式存取：
+您可以[設定用於各種主控台和資產瀏覽器（編輯頁面時）的搜尋表單](#configuring-your-search-forms)。 設定這些表單[&#128279;](#configuring-your-search-forms)的對話方塊可透過下列方式存取：
 
 * **工具**
 
@@ -386,7 +386,7 @@ ht-degree: 6%
   `(jcr:primaryType = nt:unstructured, value (String), jcr:title (String))`
 
 * **選項節點路徑**
-實際上與**選項路徑**&#x200B;相同，只有這個在通用述詞欄位中，其他則專用於資產。
+實際上與&#x200B;**選項路徑**&#x200B;相同，只有這個在通用述詞欄位中，其他則專用於資產。
 
 * **單選**
 如果勾選，選項會呈現為僅允許單一選取的核取方塊。 如果錯誤地選取了，則可取消選取核取方塊。
@@ -435,7 +435,7 @@ ht-degree: 6%
 
    例如，**日期範圍述詞**&#x200B;的設定：
 
-   日期範圍述詞](assets/chlimage_1-376.png)的![屬性
+   日期範圍述詞![&#128279;](assets/chlimage_1-376.png)的屬性
 
 1. 視需要進行變更，並透過&#x200B;**完成**&#x200B;確認。
 

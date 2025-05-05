@@ -31,7 +31,7 @@ Dynamic Media公司別名帳戶可確保使用者介面中所有現成可用的D
 * Dynamic Media公司別名帳戶功能僅限於Experience Manager Assets製作模式和傳送。 公司別名不適用於Experience Manager Sites。 WCM （Web內容管理）元件未針對此變更進行更新。 這些元件可繼續搭配原始Dynamic Media公司名稱運作，以擷取Dynamic Media資產。
 * 您只能在&#x200B;**[!UICONTROL 編輯Dynamic Media設定]**&#x200B;頁面上設定一個公司別名帳戶。 不過，您可以透過支援案例建立儘可能多的公司別名帳戶，並在Dynamic Media URL或檢視器內嵌程式碼中手動反映必要的別名。
 * Dynamic Media的現成可用[快取失效](/help/assets/invalidate-cdn-cache-dynamic-media.md)功能可讓Cloud Service中Dynamic Media設定頁面中已設定公司和公司別名帳戶的URL失效。
-* 當您在&#x200B;**[!UICONTROL 編輯Dynamic Media組態]**&#x200B;頁面上設定公司別名帳戶時，為了成功讓快取失效，您必須同時使&#x200B;** **[!UICONTROL 公司]**&#x200B;帳戶和&#x200B;**[!UICONTROL 公司別名]**&#x200B;帳戶的URL失效。
+* 當您在&#x200B;**[!UICONTROL 編輯Dynamic Media組態]**&#x200B;頁面上設定公司別名帳戶時，為了成功讓快取失效，您必須同時使&#x200B;**&#x200B; **&#x200B;[!UICONTROL 公司]&#x200B;**&#x200B;帳戶和&#x200B;**&#x200B;[!UICONTROL 公司別名]**&#x200B;帳戶的URL失效。
 
 另請參閱[在Cloud Service中建立Dynamic Media設定](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services)
 

@@ -44,7 +44,7 @@ OSGi上的Forms導向工作流程延伸[AEM收件匣](/help/sites-authoring/inbo
 * 工作流程是真實世界業務流程的表示法。 讓您的真實商業程式與商業程式參與者清單隨時待命。 此外，在開始建立工作流程之前，請準備好附屬資料(調適型表單、PDF檔案等)。
 * 一個工作流程可以有多個階段。 這些階段會顯示在AEM收件匣中，並協助報告工作流程的進度。 將您的業務流程劃分為邏輯階段。
 * 您可以設定AEM Workflows的指派工作步驟，以傳送電子郵件通知給使用者或受指派人。 因此，[啟用電子郵件通知](#configure-email-service)。
-* 工作流程也可以使用Adobe簽章進行數位簽章。 如果您打算在工作流程中使用Adobe Sign，請先為AEM Forms ](../../forms/using/adobe-sign-integration-adaptive-forms.md)設定[Adobe Sign，然後再在工作流程中使用。
+* 工作流程也可以使用Adobe簽章進行數位簽章。 如果您打算在工作流程中使用Adobe Sign，請先為AEM Forms [&#128279;](../../forms/using/adobe-sign-integration-adaptive-forms.md)設定Adobe Sign，然後再在工作流程中使用。
 
 ## 建立工作流程模型 {#create-a-workflow-model}
 

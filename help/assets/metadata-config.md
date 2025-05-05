@@ -238,7 +238,7 @@ To apply a metadata profile globally, follow these steps:
 1. 在「資料夾中繼資料結構Forms」頁面中，選取您要套用至資料夾的結構表單。
 1. 在工具列中按一下&#x200B;**[!UICONTROL 套用至資料夾]**。
 
-1. 選取要套用結構描述的資料夾，然後按一下[套用]。**** 如果資料夾已套用中繼資料結構，則會出現警告訊息，告知您即將覆寫現有的中繼資料結構。 按一下&#x200B;**[!UICONTROL 覆寫]**。
+1. 選取要套用結構描述的資料夾，然後按一下[套用]。**&#x200B;** 如果資料夾已套用中繼資料結構，則會出現警告訊息，告知您即將覆寫現有的中繼資料結構。 按一下&#x200B;**[!UICONTROL 覆寫]**。
 1. 開啟您套用中繼資料結構的資料夾的中繼資料屬性。
 
    ![folder_properties](assets/folder_properties.png)
@@ -264,7 +264,7 @@ To apply a metadata profile globally, follow these steps:
 
 開啟配置了資料夾元資料架構的資料夾的屬性。**[!UICONTROL 資料夾中繼資料]**&#x200B;索引標籤會顯示在資料夾[!UICONTROL 內容]頁面中。 要查看資料夾元資料結構表單，請選擇此頁籤。
 
-在各個欄位中輸入中繼資料值，然後按一下[儲存]儲存這些值。 ****&#x200B;您指定的值會儲存在CRX存放庫的資料夾節點中。
+在各個欄位中輸入中繼資料值，然後按一下[儲存]儲存這些值。 **&#x200B;**&#x200B;您指定的值會儲存在CRX存放庫的資料夾節點中。
 
 ![folder_metadata_properties-1](assets/folder_metadata_properties-1.png)
 

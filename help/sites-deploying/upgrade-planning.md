@@ -99,7 +99,7 @@ AEM通常用於高影響力的部署，可能會為數百萬使用者提供服�
 
 ![unu_cropped](assets/unu_cropped.png)
 
-您可以在adobe.com](/help/release-notes/release-notes.md)的[AEM區段中找到AEM 6.5的新功能。 請務必留意貴組織常用的UI或產品功能有任何變更。 瀏覽新功能時，請注意對貴組織有價值的任何功能。 檢視AEM 6.5中的變更後，為作者開發訓練計畫。 這可能需要使用免費的資源，例如說明功能影片或透過[Adobe數位學習服務](https://learning.adobe.com/)提供的正式訓練。
+您可以在adobe.com[&#128279;](/help/release-notes/release-notes.md)的AEM區段中找到AEM 6.5的新功能。 請務必留意貴組織常用的UI或產品功能有任何變更。 瀏覽新功能時，請注意對貴組織有價值的任何功能。 檢視AEM 6.5中的變更後，為作者開發訓練計畫。 這可能需要使用免費的資源，例如說明功能影片或透過[Adobe數位學習服務](https://learning.adobe.com/)提供的正式訓練。
 
 ### 建立測試計畫 {#creating-a-test-plan}
 

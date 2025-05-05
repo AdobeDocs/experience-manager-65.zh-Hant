@@ -93,7 +93,7 @@ Scene7視訊元件支援下列格式：
 
 ## 更新檢視器和編碼預設集 {#updating-viewer-and-encoding-presets}
 
-若要更新視訊的檢視器和編碼預設集，因為預設集已在Scene7中更新，請導覽至[雲端設定]中的[Scene7]設定，並選取[更新]檢視器和編碼預設集&#x200B;]**。**[!UICONTROL 
+若要更新視訊的檢視器和編碼預設集，因為預設集已在Scene7中更新，請導覽至[雲端設定]中的[Scene7]設定，並選取[更新]檢視器和編碼預設集&#x200B;**。**
 
 ![chlimage_1-364](assets/chlimage_1-364.png)
 

@@ -450,14 +450,14 @@ ht-degree: 4%
 
   ![卡片檢視 — 快速動作](assets/bh-13-1.png)
 
-* 您可以點選/按一下卡片來向下瀏覽樹狀結構（注意避免快速動作），或使用標頭](/help/sites-authoring/basic-handling.md#the-header)中的[階層連結來再次向上瀏覽。
+* 您可以點選/按一下卡片來向下瀏覽樹狀結構（注意避免快速動作），或使用標頭[&#128279;](/help/sites-authoring/basic-handling.md#the-header)中的階層連結來再次向上瀏覽。
 
 ### 清單檢視 {#list-view}
 
 ![清單檢視](assets/bh-19.png)
 
 * 清單檢視會列出目前層級中每個資源的資訊。
-* 您可以點選/按一下資源名稱，然後使用標頭](/help/sites-authoring/basic-handling.md#the-header)中的[階層連結進行備份，在樹狀結構中向下導覽。
+* 您可以點選/按一下資源名稱，然後使用標頭[&#128279;](/help/sites-authoring/basic-handling.md#the-header)中的階層連結進行備份，在樹狀結構中向下導覽。
 
 * 若要輕鬆選取清單中的所有專案，請使用清單左上方的核取方塊。
 

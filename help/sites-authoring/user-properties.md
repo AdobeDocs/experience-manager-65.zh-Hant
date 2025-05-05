@@ -21,7 +21,7 @@ ht-degree: 5%
 
 AEM提供您設定帳戶及製作環境某些方面的功能。
 
-使用頁 [首和相關「我的首選項](/help/sites-authoring/user-properties.md#user-settings) 」對話框中的「用戶」選項 [](/help/sites-authoring/basic-handling.md#the-header)[](#userpreferences) ，可以修改用戶選項，例如。
+使用頁 [首和相關「我的首選項](/help/sites-authoring/user-properties.md#user-settings) 」對話框中的「用戶」選項 [&#128279;](/help/sites-authoring/basic-handling.md#the-header) [&#128279;](#userpreferences) ，可以修改用戶選項，例如。
 
 首先，存取標頭中的[使用者](/help/sites-authoring/user-properties.md#user-settings)選項。
 

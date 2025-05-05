@@ -63,7 +63,7 @@ Adobe Experience Manager (AEM) （以及之前的CQ）一直使用覆蓋原則�
 
 重疊是許多變更的建議方法，例如[設定您的主控台](/help/sites-developing/customizing-consoles-touch.md#create-a-custom-console)或[在側面板中的資產瀏覽器中建立您的選取類別](/help/sites-developing/customizing-page-authoring-touch.md#add-new-selection-category-to-asset-browser) （用於編寫頁面）。 其需求為：
 
-* ***不要*&#x200B;在`/libs`分支&#x200B;**中進行變更
+* ***不要*&#x200B;在`/libs`分支&#x200B;**&#x200B;中進行變更
 您所做的任何變更都可能會遺失，因為每當您：
 
    * 在您的執行個體上升級

@@ -42,7 +42,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->如需進一步資訊，請參閱Sling檔案以及資源解析](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)和[資源](https://sling.apache.org/documentation/the-sling-engine/resources.html)的[對應。
+>如需進一步資訊，請參閱Sling檔案以及資源解析[&#128279;](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)和[資源](https://sling.apache.org/documentation/the-sling-engine/resources.html)的對應。
 
 ## 檢視對應定義 {#viewing-mapping-definitions}
 
@@ -54,7 +54,7 @@ ht-degree: 2%
 顯示目前的設定（如[Apache Sling Resource Resolver](/help/sites-deploying/osgi-configuration-settings.md#apacheslingresourceresolver)所定義）。
 
 * 設定測試
-這可讓您輸入URL或資源路徑。 按一下**解析**&#x200B;或&#x200B;**對應**&#x200B;以確認系統如何轉換專案。
+這可讓您輸入URL或資源路徑。 按一下&#x200B;**解析**&#x200B;或&#x200B;**對應**&#x200B;以確認系統如何轉換專案。
 
 * **解析器對應專案**
 ResourceResolver.resolve方法用來將URL對應至資源的專案清單。

@@ -27,7 +27,7 @@ ht-degree: 1%
 * JSON：支援Headless內容傳送
 * HTML 和 JSON
 
-AEM體驗片段可以匯出至Adobe Target中的預設工作區，或匯出至Adobe Target的使用者定義工作區。 這是使用Adobe Developer Console完成的，對此，AEM必須使用IMS](/help/sites-administering/setting-up-ims-integrations-for-aem.md)與Adobe Target [整合。
+AEM體驗片段可以匯出至Adobe Target中的預設工作區，或匯出至Adobe Target的使用者定義工作區。 這是使用Adobe Developer Console完成的，對此，AEM必須使用IMS[&#128279;](/help/sites-administering/setting-up-ims-integrations-for-aem.md)與Adobe Target 整合。
 
 >[!NOTE]
 >
@@ -55,7 +55,7 @@ AEM體驗片段可以匯出至Adobe Target中的預設工作區，或匯出至Ad
 
 需要執行各種動作：
 
-1. 您必須使用IMS](/help/sites-administering/setting-up-ims-integrations-for-aem.md) [整合AEM與Adobe Target。
+1. 您必須使用IMS[&#128279;](/help/sites-administering/setting-up-ims-integrations-for-aem.md) 整合AEM與Adobe Target。
 
    >[!NOTE]
    >
@@ -144,7 +144,7 @@ AEM體驗片段可以匯出至Adobe Target中的預設工作區，或匯出至Ad
 
    >[!NOTE]
    >
-   >如果體驗片段已匯出，請選取「在Adobe Target中更新」****。
+   >如果體驗片段已匯出，請選取「在Adobe Target中更新」**&#x200B;**。
 
 1. 視需要按一下&#x200B;**匯出而不發佈**&#x200B;或&#x200B;**Publish**。
 

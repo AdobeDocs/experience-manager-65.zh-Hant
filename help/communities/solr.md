@@ -302,7 +302,7 @@ sh 。/scripts/cloud-scripts/zkcli.sh \
 
      solr中的集合路徑
 
-   *  — 說明
+   * — 說明
 
      列印命令列選項
 

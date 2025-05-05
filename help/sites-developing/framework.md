@@ -31,7 +31,7 @@ ht-degree: 0%
 
 若要標籤內容及使用AEM標籤基礎架構：
 
-* 標籤必須存在為[分類根節點下型別`[cq:Tag](#tags-cq-tag-node-type)`的節點。](#taxonomy-root-node)
+* 標籤必須存在為[&#128279;](#taxonomy-root-node)分類根節點下型別`[cq:Tag](#tags-cq-tag-node-type)`的節點。
 
 * 標籤的內容節點的`NodeType`必須包含[`cq:Taggable`](#taggable-content-cq-taggable-mixin) mixin。
 * [`TagID`](#tagid)已新增至內容節點的[`cq:tags`](#tagged-content-cq-tags-property)屬性，並解析為型別` [cq:Tag](#tags-cq-tag-node-type)`的節點。
