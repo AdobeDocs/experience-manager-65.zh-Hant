@@ -5,9 +5,9 @@ feature: Content Fragments
 role: User
 exl-id: 6fd1fdb2-d1d3-4f97-b119-ecfddcccec9e
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: ae9c45982d8c11b88a96d8b4556028fde51d0086
+source-git-commit: e3a35099a48088d5746aa23be45c3e81a1a8b02e
 workflow-type: tm+mt
-source-wordcount: '2310'
+source-wordcount: '2339'
 ht-degree: 5%
 
 ---
@@ -105,6 +105,13 @@ AEM中的內容片段模型定義了您[內容片段，](/help/assets/content-fr
    * 新增一行或多行文字的欄位；可以定義最大長度
 * **多行文字**
    * 可能是RTF、純文字或Markdown的文字區域
+
+     >[!NOTE]
+     >
+     基於效能考量，不建議在單一模式中使用超過10個RTF欄位。
+     >
+     如有需要，建議您使用[巢狀內容片段](#fragment-reference-nested-fragments)。
+
 * **數字**
    * 新增一或多個數值欄位
 * **布林值**
