@@ -6,7 +6,7 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
-source-git-commit: ec388629ba8908ba52fc681e1d6aa5877f64f8b4
+source-git-commit: 122b5f1f76bd5c338b18102aff15b84ff3fbf0c6
 workflow-type: tm+mt
 source-wordcount: '5208'
 ht-degree: 2%
@@ -193,11 +193,11 @@ Key features and enhancements in this release include the following:
 
 ### [!DNL Assets]{#assets-6523}
 
-* 選取![Assets](/help/assets/assets/Smock_Asset_18_N.svg)**[!UICONTROL Assets &#x200B;]**、瀏覽至&#x200B;**[!UICONTROL &#x200B;搜尋Adobe Stock &#x200B;]**&#x200B;資料夾並選取庫存影像後，[!DNL AEM]內部部署(6.5.22.0)導覽頁面中會發生下列問題：
+* 選取![Assets](/help/assets/assets/Smock_Asset_18_N.svg)**[!UICONTROL Assets ]**、瀏覽至**[!UICONTROL &#x200B;搜尋Adobe Stock ]**資料夾並選取庫存影像後，[!DNL AEM]內部部署(6.5.22.0)導覽頁面中會發生下列問題：
    * 選取的stock影像無法授權並儲存為按一下「**[!UICONTROL 授權並儲存]**」會顯示空白的下拉式清單。
    * 選取Stock影像或重新進入庫存頁面URL會重新導向至[!DNL AEM]首頁，導致無法存取Adobe Stock影像。 (ASSETS-48687)
 * 如果資料夾名稱在[!DNL AEM]內部部署(6.5.22.0)導覽頁面上的名稱包含`/`，則管理資料夾時發生問題。 (ASSETS-46740)
-* 在[!DNL AEM] 6.5上，由於記憶體使用量高，資產詳細資訊頁面未從![集合](/help/assets/assets/Smock_Collection_18_N.svg)**[!UICONTROL 集合&#x200B;]**&#x200B;檢視載入。 (ASSETS-46738)
+* 在[!DNL AEM] 6.5上，由於記憶體使用量高，資產詳細資訊頁面未從![集合](/help/assets/assets/Smock_Collection_18_N.svg)**[!UICONTROL 集合&#x200B;]**檢視載入。 (ASSETS-46738)
 * [!DNL InDesign]的整合問題為`Day CQ DAM Mime Type OSGI`服務錯誤將[!DNL InDesign]個檔案識別為`x-adobe-indesign`而非`x-indesign`。 (ASSETS-45953)
 * [!DNL AEM 6.5.21]工作階段洩漏追蹤至現成可用的&#x200B;**[!UICONTROL 已排程發佈至Brand Portal]**&#x200B;工作流程步驟。 (ASSETS-44104)
 * 處理和發佈影像時，[!DNL AEM]中顯示&#x200B;**[!UICONTROL 記憶體不足(OOM)]**&#x200B;錯誤。 此問題是因為工作流程中已棄用的方法，例如&#x200B;**[!DNL Dam Asset update]**&#x200B;和&#x200B;**[!DNL Dynamic Media: Reprocess assets]**。 (ASSETS-43343)
@@ -402,7 +402,7 @@ Software Distribution提供混合式附加元件套件，當AEM 6.5.23於2025年
 您可以使用兩種不同的方法來安裝[!DNL Experience Manager] 6.5.23.0.<!-- UPDATE FOR EACH NEW RELEASE -->
 
 * 伺服器上線時，請將封裝放入`../crx-quickstart/install`資料夾。 套件會自動安裝。
-* 使用封裝管理員[&#128279;](/help/sites-administering/package-manager.md#package-share)的HTTP API。 使用`cmd=install&recursive=true`安裝巢狀套件。
+* 使用封裝管理員](/help/sites-administering/package-manager.md#package-share)的[HTTP API。 使用`cmd=install&recursive=true`安裝巢狀套件。
 
 >[!NOTE]
 >
@@ -555,7 +555,7 @@ Software Distribution提供混合式附加元件套件，當AEM 6.5.23於2025年
 
 ### AEM Sites的已知問題 {#known-issues-aem-sites-6523}
 
-* 內容片段 — 預覽失敗，因為大型片段樹受到DoS保護。 請參閱有關預設GraphQL查詢執行器組態選項[&#128279;](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-kcs/kbarticles/ka-23945)的KB文章(SITES-17934)
+* 內容片段 — 預覽失敗，因為大型片段樹受到DoS保護。 請參閱有關預設GraphQL查詢執行器組態選項](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-kcs/kbarticles/ka-23945)的[KB文章(SITES-17934)
 
 
 
@@ -625,10 +625,10 @@ Software Distribution提供混合式附加元件套件，當AEM 6.5.23於2025年
 這些網站僅供客戶使用。 如果您是客戶且需要存取權，請聯絡您的Adobe客戶經理。
 
 * [產品下載網址為licensing.adobe.com](https://licensing.adobe.com/)
-* [連絡Adobe客戶支援](https://experienceleague.adobe.com/zh-hant/docs/customer-one/using/home)。
+* [連絡Adobe客戶支援](https://experienceleague.adobe.com/en/docs/customer-one/using/home)。
 
 >[!MORELIKETHIS]
 >
 >* [[!DNL Experience Manager] 產品頁面](https://business.adobe.com/products/experience-manager/adobe-experience-manager.html)
->* [[!DNL Experience Manager] 6.5檔案](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65)
+>* [[!DNL Experience Manager] 6.5檔案](https://experienceleague.adobe.com/en/docs/experience-manager-65)
 >* [訂閱Adobe優先產品更新](https://www.adobe.com/tw/subscription/priority-product-update.html)
