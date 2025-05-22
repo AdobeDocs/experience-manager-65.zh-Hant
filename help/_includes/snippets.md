@@ -1,26 +1,26 @@
 ---
-source-git-commit: 3a934bed6d3077efa8d058cc1734fcac21a74506
+source-git-commit: bd29ae46ead836e16362ad3a9a63bb31548415ff
 workflow-type: tm+mt
-source-wordcount: '92'
-ht-degree: 1%
+source-wordcount: '109'
+ht-degree: 60%
 
 ---
-# 代碼片段 {#snippets}
+# 程式碼片段 {#snippets}
 
-## 偏好使用通用編輯器而非SPA編輯器 {#ue-over-spa}
+## 通用編輯器優先於 SPA 編輯器 {#ue-over-spa}
 
 >[!IMPORTANT]
 >
->Adobe仍支援SPA編輯器，但現在在AEM中管理Headless內容的偏好編輯器為：
+>新專案已棄用SPA編輯器[。](/help/sites-developing/spa-editor-deprecation.md)它仍由Adobe支援現有的專案，但不應該用於新專案。 目前，AEM 中用於管理 Headless 內容的首選編輯器為：
 >
->* [用於以視覺化方式編輯Headless內容的通用編輯器](/help/sites-developing/universal-editor/introduction.md)。
->* [內容片段編輯器](/help/assets/content-fragments/content-fragments-managing.md)，用於表單式編輯Headless內容。
+>* [通用編輯器](/help/sites-developing/universal-editor/introduction.md)：用於視覺化編輯 Headless 內容。
+>* [內容片段編輯器](/help/sites-developing/universal-editor/introduction.md)：用於 Headless 內容的表單型編輯。
 
 ## 慣用編輯器勝過行動編輯器 {#ue-over-mobile}
 
 >[!IMPORTANT]
 >
->AEM 6.5的新安裝不支援AEM Mobile應用程式功能。 在AEM中管理Headless內容的首選編輯器現在是：
+>AEM 6.5的新安裝不支援AEM Mobile應用程式功能。 目前，AEM 中用於管理 Headless 內容的首選編輯器為：
 >
->* [用於以視覺化方式編輯Headless內容的通用編輯器](/help/sites-developing/universal-editor/introduction.md)。
->* [內容片段編輯器](/help/assets/content-fragments/content-fragments-managing.md)，用於表單式編輯Headless內容。
+>* [通用編輯器](/help/sites-developing/universal-editor/introduction.md)：用於視覺化編輯 Headless 內容。
+>* [內容片段編輯器](/help/sites-developing/universal-editor/introduction.md)：用於 Headless 內容的表單型編輯。
