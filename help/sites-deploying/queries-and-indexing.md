@@ -10,9 +10,9 @@ feature: Configuring
 exl-id: d9ec7728-84f7-42c8-9c80-e59e029840da
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+source-git-commit: eeeb31d81c22f8dace7a170953bf45a709f5ac73
 workflow-type: tm+mt
-source-wordcount: '3034'
+source-wordcount: '3051'
 ht-degree: 1%
 
 ---
@@ -136,7 +136,7 @@ Lucene索引有下列設定選項：
 
 ### 瞭解全文搜尋 {#understanding-fulltext-search}
 
-例如，本節中的檔案適用於PostgreSQL、SQLite和MySQL的Apache Lucene、Elasticsearch和全文索引。 以下範例適用於AEM / Oak / Lucene。
+例如，本節中的檔案適用於Apache Lucene、Elasticsearch，以及PostgreSQL、SQLite和MySQL的全文索引。 以下範例適用於AEM / Oak / Lucene。
 
 <b>要編制索引的資料</b>
 
@@ -211,6 +211,10 @@ Lucene在兩個清單（或循環配置資源`n`清單，搜尋`n`個字時）�
 | --- | --- | --- |
 
 找到多個專案時，會依分數排序。
+
+>[!NOTE]
+>
+>本節中說明的搜尋機制使用Lucene索引，而非部份比對，如Linux `grep`命令。
 
 ### Lucene屬性索引 {#the-lucene-property-index}
 
@@ -364,11 +368,11 @@ Solr索引的用途是全文檢索搜尋，但也可以用來依路徑、屬性�
 
 AEM中的整合會在存放庫層級進行，因此Solr是AEM隨附的新存放庫實作Oak中可能使用的索引之一。
 
-它可以設定為搭配AEM執行個體作為遠端伺服器使用。
+它可以設定為搭配AEM執行個體作為遠端伺服器運作。
 
 ### 使用單一遠端Solr伺服器設定AEM {#configuring-aem-with-a-single-remote-solr-server}
 
-AEM也可以設定為與遠端Solr伺服器執行處理搭配使用：
+AEM也可以設定為與遠端Solr伺服器執行個體搭配使用：
 
 1. 下載並解壓縮最新版的Solr。 如需如何執行此動作的詳細資訊，請參閱[Apache Solr安裝檔案](https://solr.apache.org/guide/6_6/installing-solr.html)。
 1. 現在，建立兩個Solr分片。 您可以透過在解壓縮Solr的資料夾中為每個分割槽建立資料夾來執行此操作：
@@ -413,7 +417,7 @@ AEM也可以設定為與遠端Solr伺服器執行處理搭配使用：
    ```
 
 1. 兩個分片啟動後，透過連線至`http://localhost:8983/solr/#/`的Solr介面，測試一切是否正常運作
-1. 啟動AEM並前往位於`http://localhost:4502/system/console/configMgr`的網頁主控台
+1. 啟動AEM並前往位於`http://localhost:4502/system/console/configMgr`的Web主控台
 1. 在&#x200B;**Oak Solr遠端伺服器組態**&#x200B;下設定下列組態：
 
    * Solr HTTP URL： `http://localhost:8983/solr/`
