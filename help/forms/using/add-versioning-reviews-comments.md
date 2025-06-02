@@ -1,12 +1,12 @@
 ---
 title: 在AEM 6.5最適化表單中新增版本設定、評論和註解。
-description: 使用AEM 6.5最適化表單核心元件，為最適化表單新增註解、註解和版本設定。
+description: 使用AEM 6.5最適化表單核心元件，為最適化表單新增註解、註解及版本設定。
 feature: Adaptive Forms, Core Components
 role: User, Developer, Admin
 exl-id: 91e6fca2-60ba-45f1-98c3-7b3fb1d762f5
-source-git-commit: 94a9f4087e36bfe5701ad9aafd4e8446ca643ddf
+source-git-commit: 130d900a9c268362b75ffa947606c7145a1f8c9d
 workflow-type: tm+mt
-source-wordcount: '615'
+source-wordcount: '631'
 ht-degree: 0%
 
 ---
@@ -14,16 +14,20 @@ ht-degree: 0%
 # 最適化表單的版本設定、稽核和註解
 
 <!--
-<span class="preview"> This feature is under the early adopter program. If you’re interested in joining our early access program for this feature, send an email from your official address to aem-forms-ea@adobe.com to request access </span>
+<span class="preview"> This feature is under the early adopter program. If you're interested in joining our early access program for this feature, send an email from your official address to aem-forms-ea@adobe.com to request access </span>
 -->
 
 <span class="preview">預設不會啟用此功能。 您可以從您的官方地址寫信到aem-forms-ea@adobe.com，以要求存取此功能。</span>
 
 最適化表單核心元件可讓表單作者在表單中新增版本設定、註釋和註解。 這些功能可讓使用者建立並管理多個版本、透過註釋共同作業，以及將附註新增至特定表單區段，藉此簡化表單開發，進而增強表單建置體驗。
 
+請觀看此逐步影片，瞭解最適化表單中的版本設定、註解和註釋功能。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3463265)
+
 ## 必備條件 {#prerequisite-versioning}
 
-若要在最適化表單中使用版本設定、註解和附註功能，請確定[最適化表單核心元件](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65/content/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components)已在您的AEM 6.5 Forms環境中啟用。
+若要在最適化表單中使用版本設定、註解和附註功能，請確定您的AEM 6.5 Forms環境已啟用[最適化表單核心元件](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components)。
 
 ## 最適化表單版本設定 {#adaptive-form-versioning}
 
@@ -54,7 +58,7 @@ ht-degree: 0%
 
 ### 比較表單版本 {#compare-form-versions}
 
-表單作者可比較兩個不同的表單版本，以供預覽。 若要比較版本，請選取任一表單版本，然後按一下[與目前版本比較]。**&#x200B;** 它會在預覽模式中顯示兩個不同的表單版本。
+表單作者可比較兩個不同的表單版本，以供預覽。 若要比較版本，請選取任一表單版本，然後按一下[與目前版本比較]。**** 它會在預覽模式中顯示兩個不同的表單版本。
 
 ![比較表單版本](assets/compare-form-versions.png)
 
