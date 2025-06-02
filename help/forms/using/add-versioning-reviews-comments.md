@@ -27,7 +27,7 @@ ht-degree: 0%
 
 ## 必備條件 {#prerequisite-versioning}
 
-若要在最適化表單中使用版本設定、註解和附註功能，請確定您的AEM 6.5 Forms環境已啟用[最適化表單核心元件](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components)。
+若要在最適化表單中使用版本設定、註解和附註功能，請確定您的AEM 6.5 Forms環境已啟用[最適化表單核心元件](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65/content/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components)。
 
 ## 最適化表單版本設定 {#adaptive-form-versioning}
 
