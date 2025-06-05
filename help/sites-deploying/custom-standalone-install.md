@@ -7,9 +7,9 @@ exl-id: d6484bb7-8123-4f42-96e8-aa441b1093f3
 solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+source-git-commit: 3effd4fa686ac89421ffe74e52bf34830ddd776c
 workflow-type: tm+mt
-source-wordcount: '1629'
+source-wordcount: '1614'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,7 @@ AEM的預設連線埠為4502。 如果該連線埠無法使用或已使用，Qui
 
 ### Java 11考量事項 {#java-considerations}
 
-如果您執行OracleJava 11 （或通常是8以上的Java版本），啟動AEM時必須在命令列新增其他引數。
+如果您執行Oracle Java 11 （或通常是8個以上的Java版本），啟動AEM時必須在命令列中新增其他引數。
 
 * 需要新增下列 — `-add-opens`個引數，以防止`stdout.log`中出現相關的反射存取警告訊息
 
@@ -86,10 +86,6 @@ AEM的預設連線埠為4502。 如果該連線埠無法使用或已使用，Qui
 * 如果發生錯誤，將無法存取Web主控台和存放庫。 透過此功能，您可以將其他套件組合放入此目錄中，並且應該安裝這些套件。
 * 可以在快速入門開始之前建立`crx-quickstart/install`資料夾，並且可以將其他套件放在該資料夾中。
 
->[!NOTE]
->
->另請參閱[如何在伺服器啟動時自動安裝CRX套件](https://helpx.adobe.com/experience-manager/kb/HowToInstallPackagesUsingRepositoryInstall.html)以取得範例。
-
 ## 安裝和啟動Adobe Experience Manager as a Windows Service {#installing-and-starting-adobe-experience-manager-as-a-windows-service}
 
 >[!NOTE]
@@ -128,7 +124,7 @@ AEM的預設連線埠為4502。 如果該連線埠無法使用或已使用，Qui
 
    ![chlimage_1-12](assets/chlimage_1-12.png)
 
-1. Windows指出服務正在執行。 AEM會啟動，且prunsrv可執行檔會顯示在「工作管理員」中。 在您的網頁瀏覽器中，導覽至AEM，例如`https://localhost:4502`以開始使用AEM。
+1. Windows指出服務正在執行。 AEM會啟動，且prunsrv可執行檔會出現在工作管理員中。 在您的網頁瀏覽器中，導覽至AEM （例如，`https://localhost:4502`）以開始使用AEM。
 
    ![chlimage_1-13](assets/chlimage_1-13.png)
 
@@ -138,7 +134,7 @@ AEM的預設連線埠為4502。 如果該連線埠無法使用或已使用，Qui
 
 >[!NOTE]
 >
->安裝AEM as a service時，您必須從Configuration Manager為`com.adobe.xmp.worker.files.ncomm.XMPFilesNComm`中的記錄檔目錄提供絕對路徑。
+>安裝AEM即服務時，您必須從Configuration Manager為`com.adobe.xmp.worker.files.ncomm.XMPFilesNComm`中的記錄檔目錄提供絕對路徑。
 
 若要解除安裝服務，請在&#x200B;**服務**&#x200B;控制檯中按一下&#x200B;**停止**，或在命令列中，瀏覽至資料夾並輸入`instsrv.bat -uninstall cq5`。 當您輸入`net start`時，服務會從&#x200B;**服務**&#x200B;控制檯的清單或命令列的清單中移除。
 
@@ -163,7 +159,7 @@ Java電腦暫存資料夾的預設位置為`/tmp`。 例如，AEM在建置套件
 
 >[!CAUTION]
 >
->這些選項自AEM 6.5 (6.5.0.0)原始版本起有效。 以後的SP發行版本可能有所變更。
+>這些選項自AEM 6.5 (6.5.0.0)的原始發行版本起有效。 以後的SP發行版本可能有所變更。
 
 ```shell
 Loading quickstart properties: default
@@ -278,7 +274,7 @@ Log files
 
 在EC2環境中安裝Publish執行個體之前，請先執行下列動作：
 
-1. 在第一次啟動執行個體之前，先解壓縮Publish執行個體的jar檔案。 若要解壓縮檔案，請使用下列命令：
+1. 在第一次啟動執行個體之前，先解壓縮發佈執行個體的jar檔案。 若要解壓縮檔案，請使用下列命令：
 
    ```xml
    java -jar quickstart.jar -unpack
@@ -330,21 +326,21 @@ CRXDE Lite主控台。
 
 ## 安裝後的動作 {#actions-after-installation}
 
-雖然設定AEM WCM有許多可能性，但應執行某些動作，或至少在安裝後立即檢查：
+雖然設定AEM WCM有許多可能性，但您應執行某些動作，或至少在安裝後立即檢閱：
 
 * 請參閱[安全性檢查清單](/help/sites-administering/security-checklist.md)，瞭解確保系統安全所需的工作。
 * 檢閱隨AEM WCM安裝的預設使用者和群組清單。 檢查您是否要對任何其他帳戶執行動作 — 如需詳細資訊，請參閱[安全性與使用者管理](/help/sites-administering/security.md)。
 
 ## 存取CRXDE Lite和Web主控台 {#accessing-crxde-lite-and-the-web-console}
 
-AEM WCM啟動後，您就可以存取：
+AEM WCM啟動後，您也可存取：
 
 * [CRXDE Lite](#accessing-crxde-lite) — 用於存取和管理存放庫
 * [網頁主控台](#accessing-the-web-console) — 用來管理或設定OSGi組合（也稱為OSGi主控台）
 
 ### 存取CRXDE Lite {#accessing-crxde-lite}
 
-若要開啟CRXDE Lite，您可以從歡迎畫面中選取&#x200B;**CRXDE Lite**，或使用瀏覽器導覽至
+若要開啟CRXDE Lite，您可以從歡迎畫面選取&#x200B;**CRXDE Lite**，或使用瀏覽器導覽至
 
 ```
  https://<<i>host</i>>:<<i>port</i>>/crx/de/index.jsp
@@ -380,7 +376,7 @@ AEM WCM啟動後，您就可以存取：
 
 ## 解除安裝Adobe Experience Manager {#uninstalling-adobe-experience-manager}
 
-由於AEM會安裝在單一目錄中，因此不需要解除安裝公用程式。 雖然解除安裝AEM的方式取決於您想要達成的目標以及您使用的永久儲存體，但是解除安裝的方式卻可能像刪除整個安裝目錄一樣簡單。
+由於AEM會安裝在單一目錄中，因此不需要解除安裝公用程式。 雖然解除安裝AEM的方式取決於您要達成的目標以及您使用的永久儲存體，但解除安裝可能會像刪除整個安裝目錄一樣簡單。
 
 如果永久儲存裝置內嵌於安裝目錄中（例如，在預設的TarPM安裝中），則刪除資料夾也會移除資料。
 
