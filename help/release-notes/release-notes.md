@@ -6,9 +6,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
-source-git-commit: 6766bd8a1d7569f3913fc20384796b885ed68138
+source-git-commit: 29fa88495225f1314acea2a954737f00d98df468
 workflow-type: tm+mt
-source-wordcount: '5310'
+source-wordcount: '4442'
 ht-degree: 2%
 
 ---
@@ -193,11 +193,11 @@ Key features and enhancements in this release include the following:
 
 ### [!DNL Assets]{#assets-6523}
 
-* 選取![Assets](/help/assets/assets/Smock_Asset_18_N.svg)**[!UICONTROL Assets &#x200B;]**、瀏覽至&#x200B;**[!UICONTROL &#x200B;搜尋Adobe Stock &#x200B;]**&#x200B;資料夾並選取庫存影像後，[!DNL AEM]內部部署(6.5.22.0)導覽頁面中會發生下列問題：
+* 選取![Assets](/help/assets/assets/Smock_Asset_18_N.svg)**[!UICONTROL Assets ]**、瀏覽至**[!UICONTROL &#x200B;搜尋Adobe Stock ]**資料夾並選取庫存影像後，[!DNL AEM]內部部署(6.5.22.0)導覽頁面中會發生下列問題：
    * 選取的stock影像無法授權並儲存為按一下「**[!UICONTROL 授權並儲存]**」會顯示空白的下拉式清單。
    * 選取Stock影像或重新進入庫存頁面URL會重新導向至[!DNL AEM]首頁，導致無法存取Adobe Stock影像。 (ASSETS-48687)
 * 如果資料夾名稱在[!DNL AEM]內部部署(6.5.22.0)導覽頁面上的名稱包含`/`，則管理資料夾時發生問題。 (ASSETS-46740)
-* 在[!DNL AEM] 6.5上，由於記憶體使用量高，資產詳細資訊頁面未從![集合](/help/assets/assets/Smock_Collection_18_N.svg)**[!UICONTROL 集合&#x200B;]**&#x200B;檢視載入。 (ASSETS-46738)
+* 在[!DNL AEM] 6.5上，由於記憶體使用量高，資產詳細資訊頁面未從![集合](/help/assets/assets/Smock_Collection_18_N.svg)**[!UICONTROL 集合&#x200B;]**檢視載入。 (ASSETS-46738)
 * [!DNL InDesign]的整合問題為`Day CQ DAM Mime Type OSGI`服務錯誤將[!DNL InDesign]個檔案識別為`x-adobe-indesign`而非`x-indesign`。 (ASSETS-45953)
 * [!DNL AEM 6.5.21]工作階段洩漏追蹤至現成可用的&#x200B;**[!UICONTROL 已排程發佈至Brand Portal]**&#x200B;工作流程步驟。 (ASSETS-44104)
 * 處理和發佈影像時，[!DNL AEM]中顯示&#x200B;**[!UICONTROL 記憶體不足(OOM)]**&#x200B;錯誤。 此問題是因為工作流程中已棄用的方法，例如&#x200B;**[!DNL Dam Asset update]**&#x200B;和&#x200B;**[!DNL Dynamic Media: Reprocess assets]**。 (ASSETS-43343)
@@ -234,15 +234,15 @@ Key features and enhancements in this release include the following:
 自2025年5月22日星期四起，混合附加元件套件將在Adobe Software Distribution上公開提供，並正式發行AEM 6.5.23。使用者可以在Software Distribution中搜尋&#x200B;**AEM 6.5 Dynamic Media混合式附加元件套件**，找到它。
 
 
-### [!DNL Forms]{#forms-6523}
+<!--### [!DNL Forms]{#forms-6523}
 
-在排程的[!DNL Experience Manager] Service Pack發行日期一週後，[!DNL Experience Manager] Forms中的修正會透過個別附加元件套件傳送。 在此情況下，AEM 6.5.23.0 Forms附加元件套件發行已排定於2025年5月29日（星期四）。 此部分會在發行後新增Forms修正和增強功能的清單。
+Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on package one week after the scheduled [!DNL Experience Manager] Service Pack release date. In this case, the AEM 6.5.23.0 Forms add-on package release is scheduled for Thursday, May 29, 2025. A list of Forms fixes and enhancements is added to this section post the release.
+ 
+#### Forms Captcha {#forms-captcha-6523} 
 
-#### Forms驗證碼 {#forms-captcha-6523}
-
-* 將提交錯誤代碼更新為400，改善調適型Forms中的reCAPTCHA警報。 此外，精細化記錄警報以區分逾時、過期和機器人偵測失敗，提高疑難排解精確度和系統可觀察性。 (FORMS-19240)
-* 在AEM Forms中使用reCAPTCHA整合時，已關閉`ReCaptchaConfigurationServiceImpl`中未關閉的`ResourceResolver`執行個體，以防止潛在的資源洩漏並改善系統穩定性。 (FORMS-19242)
-* 改善AEM Forms的驗證碼組態處理方式，確保當`/conf/global`資料夾中有多個專案時，每個表單都有正確的組態繫結。 避免在未明確選取組態容器時，意外使用不正確的驗證碼設定。 (FORMS-19239)
+* Improved reCAPTCHA alerting in Adaptive Forms by updating submit error codes to 400. Also, refined log alerts to distinguish between timeouts, expirations, and bot detection failures, enhancing troubleshooting accuracy and system observability. (FORMS-19240) 
+* Closed an unclosed `ResourceResolver` instance in `ReCaptchaConfigurationServiceImpl` to prevent potential resource leaks and improve system stability when using reCAPTCHA integrations in AEM Forms. (FORMS-19242) 
+* Improved CAPTCHA configuration handling for AEM Forms by ensuring the correct configuration binds to each form when multiple entries exist in the `/conf/global` folder. Prevents unintended use of incorrect CAPTCHA settings when the configuration container is not explicitly selected. (FORMS-19239)-->
 
 
 <!--
@@ -261,7 +261,7 @@ Key features and enhancements in this release include the following:
 * A () -->
 
 
-### Foundation {#foundation-6523}
+### 基礎 {#foundation-6523}
 
 * 修正Coral警示橫幅在升級至Service Pack 21後，文字顏色顯示為白色而非黑色的問題。 確保套用正確的樣式，以維持介面中警報訊息的正確對比和可讀性。 (NPR-42359)
 * 在智慧標籤設定中新增OAuth整合支援，以符合JWT （JSON Web權杖）的淘汰。 使用更新後的驗證方法確保智慧標籤功能繼續正常運作。 (NPR-42296)
@@ -400,7 +400,7 @@ Key features and enhancements in this release include the following:
 您可以使用兩種不同的方法來安裝[!DNL Experience Manager] 6.5.23.0.<!-- UPDATE FOR EACH NEW RELEASE -->
 
 * 伺服器上線時，請將封裝放入`../crx-quickstart/install`資料夾。 套件會自動安裝。
-* 使用封裝管理員[&#128279;](/help/sites-administering/package-manager.md#package-share)的HTTP API。 使用`cmd=install&recursive=true`安裝巢狀套件。
+* 使用封裝管理員](/help/sites-administering/package-manager.md#package-share)的[HTTP API。 使用`cmd=install&recursive=true`安裝巢狀套件。
 
 >[!NOTE]
 >
@@ -567,61 +567,56 @@ AEM 6.5.21、6.5.22、6.5.23和AEM 6.5 LTS GA隨附`org.apache.sling.scripting.j
 
 ### AEM Sites的已知問題 {#known-issues-aem-sites-6523}
 
-* 內容片段 — 預覽失敗，因為大型片段樹受到DoS保護。 請參閱有關預設GraphQL查詢執行器組態選項[&#128279;](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-kcs/kbarticles/ka-23945)的KB文章(SITES-17934)
+內容片段 — 預覽失敗，因為大型片段樹受到DoS保護。 請參閱有關預設GraphQL查詢執行器組態選項](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-kcs/kbarticles/ka-23945)的[KB文章(SITES-17934)
 
+<!--### Known issues for AEM Forms {#known-issues-aem-forms-6523}
 
-
-### AEM Forms的已知問題 {#known-issues-aem-forms-6523}
-
-* 如果HTML至PDF轉換在SUSE® Linux® （自SLES 15 SP6）伺服器上失敗，並出現下列錯誤：
-
+* If the HTML to PDF conversion fails on a SUSE&reg; Linux&reg; (SLES 15 SP6 onwards) server with the following error:
+  
   ```Auto configuration failed 4143511872:error:0E079065:configuration file routines:DEF_LOAD_BIO:missing equal sign:conf_def.c:362:line 57```
-然後設定以下環境變數並重新啟動伺服器：
-  `OPENSSL_CONF=/etc/ssl`
+  then set the following environment variable and restart the server:
+    `OPENSSL_CONF=/etc/ssl`
 
-* 安裝AEM Forms JEE Service Pack 21 (6.5.21.0)後，如果在`<AEM_Forms_Installation>/lib/caching/lib`資料夾(FORMS-14926)下找到Geode jar `(geode-*-1.15.1.jar and geode-*-1.15.1.2.jar)`的重複專案，請執行以下步驟以解決問題：
+* After installing AEM Forms JEE Service Pack 21 (6.5.21.0), if you find duplicate entries of Geode jars `(geode-*-1.15.1.jar and geode-*-1.15.1.2.jar)` under the `<AEM_Forms_Installation>/lib/caching/lib` folder (FORMS-14926), perform the following steps to resolve the issue:
 
-   1. 停止儲位（如果它們正在執行）。
-   1. 停止AEM伺服器。
-   1. 移至`<AEM_Forms_Installation>/lib/caching/lib`。
-   1. 移除除`geode-*-1.15.1.2.jar`以外的所有Geode修補程式檔案。 確認只有具有`version 1.15.1.2`的Geode jar存在。
-   1. 在管理員模式中開啟命令提示字元。
-   1. 使用`geode-*-1.15.1.2.jar`檔案安裝Geode修補程式。
+  1. Stop the locators, if they are running.
+  1. Stop the AEM Server. 
+  1. Go to the `<AEM_Forms_Installation>/lib/caching/lib`. 
+  1. Remove all the Geode patch files except `geode-*-1.15.1.2.jar`. Confirm that only the Geode jars with `version 1.15.1.2` are present.
+  1. Open the command prompt in administrator mode.  
+  1. Install the Geode patch using the `geode-*-1.15.1.2.jar` file. 
 
-* 如果使用者嘗試預覽具有已儲存XML資料的草稿信件，它會在某些特定信件中陷入`Loading`狀態。 若要下載及安裝Hotfix，請參閱[Adobe Experience Manager Forms Hotfix](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)文章。 (FORMS-14521)
+* If a user tries to preview a draft letter with saved XML data, it gets stuck in `Loading` state for some specific letters. To download and install the hotfix, refer to the [Adobe Experience Manager Forms Hotfixes](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms) article. (FORMS-14521)
+  
+* After upgrading to AEM Forms Service Pack 6.5.21.0, the `PaperCapture` service fails to perform OCR (Optical Character Recognition) operations on PDFs. The service does not generate output in the form of a PDF or a log file. To download and install the hotfix, refer to the [Adobe Experience Manager Forms Hotfixes](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms) article. (CQDOC-21680)
 
-* 升級至AEM Forms Service Pack 6.5.21.0後，`PaperCapture`服務無法在PDF上執行OCR （光學字元辨識）作業。 此服務不會產生PDF或記錄檔形式的輸出。 若要下載及安裝Hotfix，請參閱[Adobe Experience Manager Forms Hotfix](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)文章。 (CQDOC-21680)
+* When users upgraded from AEM 6.5 Forms Service Pack 18 or 19 to Service Pack 20 or 21, they encountered a JSP compilation error. This error prevented them from opening or creating adaptive forms. It also caused issues with other AEM interfaces. Those interfaces included the Page Editor, AEM Forms UI, Workflow editor, and System Overview UI. (FORMS-15256)
 
-* 當使用者從AEM 6.5 Forms Service Pack 18或19升級為Service Pack 20或21時，他們遇到JSP編譯錯誤。 此錯誤會阻止他們開啟或建立最適化表單。 它也會導致其他AEM介面發生問題。 這些介麵包含頁面編輯器、AEM Forms UI、工作流程編輯器和系統概覽UI。 (FORMS-15256)
+  If you face such an issue, perform the following steps to resolve it:
+    1. Navigate to the directory `/libs/fd/aemforms/install/` in CRXDE.
+    1. Delete the bundle with the name `com.adobe.granite.ui.commons-5.10.26.jar`.
+    1. Restart your AEM Server.
 
-  如果您遇到這類問題，請執行以下步驟來解決問題：
-   1. 導覽至CRXDE中的目錄`/libs/fd/aemforms/install/`。
-   1. 刪除名稱為`com.adobe.granite.ui.commons-5.10.26.jar`的組合。
-   1. 重新啟動AEM伺服器。
+* After updating to AEM Forms Service Pack 20 (6.5.20.0) with the Forms Add-On, configurations relying on the legacy Adobe Analytics Cloud Service using credential-based authentication stop working. This issue prevented analytics rules from executing correctly. To download and install the hotfix, refer to the [Adobe Experience Manager Forms Hotfixes](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms) article. (FORMS-15428)
 
-* 使用Forms附加元件更新至AEM Forms Service Pack 20 (6.5.20.0)後，依賴舊版Adobe Analytics Cloud Service （使用認證型驗證）的設定停止運作。 此問題導致Analytics規則無法正確執行。 若要下載及安裝Hotfix，請參閱[Adobe Experience Manager Forms Hotfix](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)文章。 (FORMS-15428)
-
-* 當使用者在JEE伺服器上更新至AEM Forms Service Pack 20 (6.5.20.0)，並使用輸出服務產生PDF時，PDF會產生協助工具問題。 若要下載及安裝Hotfix，請參閱[Adobe Experience Manager Forms Hotfix](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)文章。 (LC-3922112)
-* 當使用者使用JEE上的輸出服務產生已標籤PDF時，會顯示「不適當的結構警告」。 若要下載及安裝Hotfix，請參閱[Adobe Experience Manager Forms Hotfix](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)文章。 (LC-3922038)
-* 在AEM Forms JEE上提交表單時，會從資料中移除重複的XML元素例項。 若要下載及安裝Hotfix，請參閱[Adobe Experience Manager Forms Hotfix](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)文章。 (LC-3922017)
-* 當Linux®環境中的使用者在HTML中轉譯調適型表單（在JEE上）時，該表單將無法正確轉譯。 若要下載及安裝Hotfix，請參閱[Adobe Experience Manager Forms Hotfix](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)文章。 (LC-3921957)
-* 當使用者使用AEM Forms JEE上的輸出服務將XTG檔案轉換為PostScript格式時，它會失敗並出現錯誤： `AEM_OUT_001_003: Unexpected Exception: PAExecute Failure: XFA_RENDER_FAILURE`。 若要下載及安裝Hotfix，請參閱[Adobe Experience Manager Forms Hotfix](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)文章。 (LC-3921720)
-* 在JEE伺服器上升級至AEM Forms Service Pack 18 (6.5.18.0)後，當使用者提交表單時，將無法轉譯HTML5或PDF forms，並且XMLFM會當機。 若要下載及安裝Hotfix，請參閱[Adobe Experience Manager Forms Hotfix](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)文章。 (LC-3921718)
-* 在互動式通訊代理程式UI的列印預覽中，所有欄位值都會不一致地顯示貨幣符號（例如美元符號$）。 對於最多999的值會顯示它，但對於1000或以上的值則遺失。 (FORMS-16557)
-* 互動式通訊中巢狀配置片段XDP的任何修改都不會反映在IC編輯器中。 (FORMS-16575)
-* 在互動式通訊代理程式UI的列印預覽中，部分計算值無法正確顯示。 (FORMS-16603)
-* 在「列印預覽」中檢視信函時，內容會變更。 也就是說，某些空格會消失，而某些字母會以`x`取代。 (FORMS-15681)
-* 當使用者設定WebLogic 14c執行個體時，在JBoss®上執行的JEE上的AEM Forms Service Pack 21 (6.5.21.0)中的PDFG服務會失敗，因為類別載入器衝突涉及SLF4J程式庫。 錯誤顯示如下(CQDOC-22178)：
-
-  ```java
-  Caused by: java.lang.LinkageError: loader constraint violation: when resolving method "org.slf4j.impl.StaticLoggerBinder.getLoggerFactory()Lorg/slf4j/ILoggerFactory;"
-  the class loader org.ungoverned.moduleloader.ModuleClassLoader @404a2f79 (instance of org.ungoverned.moduleloader.ModuleClassLoader, child of 'deployment.adobe-livecycle-jboss.ear'
-  @7e313f80 org.jboss.modules.ModuleClassLoader) of the current class, org/slf4j/LoggerFactory, and the class loader 'org.slf4j.impl@1.1.0.Final-redhat-00001' @506ab52
-  (instance of org.jboss.modules.ModuleClassLoader, child of 'app' jdk.internal.loader.ClassLoaders$AppClassLoader) for the method's defining class, org/slf4j/impl/StaticLoggerBinder,
-  have different Class objects for the type org/slf4j/ILoggerFactory used in the signature
-  ```
-
-
+* When a user updates to AEM Forms Service Pack 20 (6.5.20.0) on the JEE server and generates PDFs using output services, the PDFs render with accessibility issues. To download and install the hotfix, refer to the [Adobe Experience Manager Forms Hotfixes](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms) article. (LC-3922112)
+* When a user generates Tagged PDFs using the output service on JEE, it shows "Inappropriate structure warning." To download and install the hotfix, refer to the [Adobe Experience Manager Forms Hotfixes](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms) article. (LC-3922038)
+* When a form is submitted on AEM Forms JEE, the instances of a repeating XML element are removed from the data. To download and install the hotfix, refer to the [Adobe Experience Manager Forms Hotfixes](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms) article. (LC-3922017)
+* When a user in a Linux&reg; environment renders an Adaptive Form (on JEE) in HTML, it fails to render properly. To download and install the hotfix, refer to the [Adobe Experience Manager Forms Hotfixes](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms) article. (LC-3921957)
+* When a user converts an XTG file to PostScript format using the Output Service on AEM Forms JEE, it fails with the error: `AEM_OUT_001_003: Unexpected Exception: PAExecute Failure: XFA_RENDER_FAILURE`. To download and install the hotfix, refer to the [Adobe Experience Manager Forms Hotfixes](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms) article. (LC-3921720)
+* After upgrading to AEM Forms Service Pack 18 (6.5.18.0) on JEE server, when a user submits a form, it fails to render HTML5 or PDF Forms and XMLFM crashes. To download and install the hotfix, refer to the [Adobe Experience Manager Forms Hotfixes](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms) article. (LC-3921718)
+* In the Print Preview of the Interactive Communications Agent UI, the currency symbol (such as the dollar sign $) is inconsistently displayed for all field values. It appears for values up to 999 but is missing for values of 1000 and above. (FORMS-16557)
+* Any modifications to nested layout fragments' XDP in an Interactive Communication are not reflected in the IC editor. (FORMS-16575)
+* In the Print Preview of the Interactive Communications Agent UI, some calculated values are not displayed correctly. (FORMS-16603)
+* When the letter is viewed in Print Preview, the content is changed. That is, some spaces disappear, and certain letters are replaced with `x`. (FORMS-15681)
+* When a user configures a WebLogic 14c instance, the PDFG service in AEM Forms Service Pack 21 (6.5.21.0) on JEE running on JBoss&reg; fails due to classloader conflicts involving the SLF4J library. The error is displayed as follows (CQDOC-22178):
+  
+    ```java
+    Caused by: java.lang.LinkageError: loader constraint violation: when resolving method "org.slf4j.impl.StaticLoggerBinder.getLoggerFactory()Lorg/slf4j/ILoggerFactory;"
+    the class loader org.ungoverned.moduleloader.ModuleClassLoader @404a2f79 (instance of org.ungoverned.moduleloader.ModuleClassLoader, child of 'deployment.adobe-livecycle-jboss.ear'
+    @7e313f80 org.jboss.modules.ModuleClassLoader) of the current class, org/slf4j/LoggerFactory, and the class loader 'org.slf4j.impl@1.1.0.Final-redhat-00001' @506ab52
+    (instance of org.jboss.modules.ModuleClassLoader, child of 'app' jdk.internal.loader.ClassLoaders$AppClassLoader) for the method's defining class, org/slf4j/impl/StaticLoggerBinder,
+    have different Class objects for the type org/slf4j/ILoggerFactory used in the signature-->
 
 ## 包含的OSGi套件組合和內容套件{#osgi-bundles-and-content-packages-included}
 
@@ -630,17 +625,15 @@ AEM 6.5.21、6.5.22、6.5.23和AEM 6.5 LTS GA隨附`org.apache.sling.scripting.j
 * [Experience Manager中包含的OSGi套件組合清單6.5.23.0](/help/release-notes/assets/65230-bundles.txt) <!-- UPDATE FOR EACH NEW RELEASE -->
 * [Experience Manager中包含的內容套件清單6.5.23.0](/help/release-notes/assets/65230-packages.txt) <!-- UPDATE FOR EACH NEW RELEASE -->
 
-
-
 ## 受限制的網站{#restricted-sites}
 
 這些網站僅供客戶使用。 如果您是客戶且需要存取權，請聯絡您的Adobe客戶經理。
 
 * [產品下載網址為licensing.adobe.com](https://licensing.adobe.com/)
-* [連絡Adobe客戶支援](https://experienceleague.adobe.com/zh-hant/docs/customer-one/using/home)。
+* [連絡Adobe客戶支援](https://experienceleague.adobe.com/en/docs/customer-one/using/home)。
 
 >[!MORELIKETHIS]
 >
 >* [[!DNL Experience Manager] 產品頁面](https://business.adobe.com/products/experience-manager/adobe-experience-manager.html)
->* [[!DNL Experience Manager] 6.5檔案](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65)
+>* [[!DNL Experience Manager] 6.5檔案](https://experienceleague.adobe.com/en/docs/experience-manager-65)
 >* [訂閱Adobe優先產品更新](https://www.adobe.com/tw/subscription/priority-product-update.html)
