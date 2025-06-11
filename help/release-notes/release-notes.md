@@ -6,9 +6,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
-source-git-commit: dbee0e382bad460746416dac5206843ed67bdf04
+source-git-commit: 21d0ba51297b4e90645a9ab64d98016598c0a2be
 workflow-type: tm+mt
-source-wordcount: '6515'
+source-wordcount: '6485'
 ht-degree: 1%
 
 ---
@@ -59,7 +59,7 @@ ht-degree: 1%
 
   最新版本引進了支援平台對照表的更新，確保與更新技術相容。
 
-   * IBM Content Manager Client 8.7
+   * IBM® Content Manager Client 8.7
 
    * MongoDB Enterprise 7.0
 
@@ -71,7 +71,7 @@ ht-degree: 1%
 
    * Red Hat® Enterprise Linux® 9 （核心4.x，64位元） 
 
-* [強化的檔案附件元件](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/file-attachment)：作為安全性測量，此元件現在會防止提交副檔名經過修改、嘗試略過允許的檔案型別檢查的檔案。 提交期間會封鎖這類檔案，以確保僅接受有效的檔案型別。
+* [強化的檔案附件元件](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/file-attachment)：作為安全性測量，此元件現在會防止提交副檔名經過修改、嘗試略過允許的檔案型別檢查的檔案。 提交期間會封鎖這類檔案，以確保僅接受有效的檔案型別。
 
 <!--* **Two-Factor authentication with SAML for AdminUI** 
 
@@ -94,7 +94,7 @@ ht-degree: 1%
 
 #### 協助工具 {#sites-accessibility-6523}
 
-* AEM編輯器頁面中的畫布區段現在支援完整的鍵盤協助工具。 使用者可以僅使用鍵盤啟動區段標題和編輯按鈕，而不需依賴滑鼠懸停。 此更新確保符合WCAG 2.1.1，並改善各種元件（例如Teaser、影像、輪播、版面、時間扭曲和註解模組）的可用性。 (SITES-25256) <!-- 6.5 LTS SP1 -->
+* AEM編輯器頁面中的畫布區段現在支援完整的鍵盤協助工具。 使用者可以僅使用鍵盤啟動區段標題和編輯按鈕，而不需依賴滑鼠懸停。 此更新確保符合WCAG 2.1.1，並改善跨元件（例如Teaser、影像、輪播、版面、時間扭曲和註解模組）的可用性。 (SITES-25256) <!-- 6.5 LTS SP1 -->
 * 修正AEM頁面編輯器中的協助工具問題，該問題導致在啟動「角色」、「購物車」或「放棄」等按鈕後，鍵盤焦點意外地重設為「人口統計」工具列的開始。 焦點現在仍停留於已啟用的按鈕，以支援一致的鍵盤導覽和熒幕助讀程式工作流程。 (SITES-25306)
 * 修正AEM頁面編輯器中的重大協助工具問題，該問題導致多個對話方塊和模式（例如，資產邊欄或版面預覽）中的畫布元素無法僅使用鍵盤操作。 所有互動式畫布元素現在支援僅鍵盤導覽，確保符合WCAG 2.1成功標準2.1.1 (SITE-25256)
 * 修正Sites管理員UI中，建立快顯視窗中的互動式清單專案使用不正確ARIA角色的協助工具問題。 行為類似連結的元素被指派為`role="listitem"`而非`role="menuitem"`，這違反了ARIA設計模式並混淆熒幕閱讀器。 更新可確保所有清單元件都遵循適當的語意角色，以提升鍵盤和輔助技術支援的效能。 (SITES-24493)
@@ -105,7 +105,7 @@ ht-degree: 1%
 * 改善選擇對話方塊中搜尋結果的NVDA/朗讀程式宣告。 更新「開啟選取專案」對話方塊，以宣告在使用熒幕助讀程式（例如NVDA或「朗讀程式」）時是否找到搜尋結果。 這項改善可協助依賴輔助技術的使用者瞭解其搜尋動作的結果，而不需要視覺確認。 (SITES-26883)
 * 修正評論輸入欄位旁省略符號圖示的ARIA角色。 更新評論輸入欄位旁的省略符號（三個點）圖示，以使用正確的ARIA角色，確保熒幕助讀程式可準確識別元素。 這項改善可增強協助工具的合規性，並改善依賴輔助技術的使用者的體驗。 (SITES-26881)
 * 更正Coral UI元件中無效的ARIA屬性。 更新Coral UI元件，確保所有ARIA屬性都使用有效值，進而改善協助工具合規性。 特別是，已處理錯誤指派`aria-modal="dialog"`等無效值的案例。 此增強功能可讓熒幕助讀程式正確解讀對話方塊元素，協助依賴輔助技術的使用者提升協助工具。 (SITES-26873)
-* 改善重排情境中圖示的可見度和工具提示。 已增強重排行為，以確保針對&#x200B;**下載**、**重新處理資產**&#x200B;和&#x200B;**簽出**&#x200B;圖示正確顯示工具提示。 著重於在檢視區調整大小或瀏覽器縮放設定變更時，圖示及其標籤會變成隱藏的協助工具問題。 此修正可維護可見度，並在重排期間提供適當的圖示說明，以支援視力缺佳的使用者。 (SITES-26871)
+* 改進重排情境中圖示的可見度和工具提示。 已增強重排行為，以確保工具提示可正確顯示給&#x200B;**下載**、**重新處理資產**&#x200B;和&#x200B;**簽出**&#x200B;圖示。 著重於在檢視區調整大小或瀏覽器縮放設定變更時，圖示及其標籤會變成隱藏的協助工具問題。 此修正可透過維護可見度並在Reflow期間提供適當的圖示說明，支援視力缺佳的使用者。 (SITES-26871)
 
 #### 管理員使用者介面{#sites-adminui-6523}
 
@@ -119,7 +119,7 @@ ht-degree: 1%
 #### [!DNL Content Fragments]{#sites-contentfragments-6523}
 
 * 修正`DeleteVariationIT.testUpdateBasic`的驗證測試失敗。 `DeleteVariationIT.testUpdateBasic`測試在Service Pack驗證執行期間不再失敗。 此修正修正修正了JSON處理邏輯中缺少文字對應的問題，確保測試穩定性並避免不必要的測試中斷。 (SITES-28022)
-* AEM現在可以防止影像資產中XMP中繼資料的格式錯誤導致效能降低。 Assets如果包含無效或不相容的XMP屬性名稱（例如具有數值區段或不合格結構的名稱），在處理期間將不再觸發重複的警告記錄。 系統會篩選掉有問題的中繼資料，以確保資產擷取和驗證完成且沒有錯誤。 (SITES-30683) <!-- AEM 6.5 LTS SP1 -->
+* AEM現在可以防止影像資產中XMP中繼資料的格式錯誤導致效能降低。 Assets如果包含無效或不相容的XMP屬性名稱（例如具有數值區段或不合格結構的名稱），在處理期間將不再觸發重複的警告記錄。 系統會篩選掉有問題的中繼資料，以確保資產擷取和驗證完整無誤。 (SITES-30683) <!-- AEM 6.5 LTS SP1 -->
 
 
 <!-- #### [!DNL Content Fragments] - Admin{#sites-admin-6523}
@@ -215,11 +215,11 @@ ht-degree: 1%
 
 ### [!DNL Assets]{#assets-6523}
 
-* 選取![Assets](/help/assets/assets/Smock_Asset_18_N.svg)**[!UICONTROL Assets &#x200B;]**、瀏覽至&#x200B;**[!UICONTROL &#x200B;搜尋Adobe Stock &#x200B;]**&#x200B;資料夾並選取庫存影像後，[!DNL AEM]內部部署(6.5.22.0)導覽頁面中會發生下列問題：
+* 選取![Assets](/help/assets/assets/Smock_Asset_18_N.svg)**[!UICONTROL Assets ]**、瀏覽至**[!UICONTROL &#x200B;搜尋Adobe Stock ]**資料夾並選取庫存影像後，[!DNL AEM]內部部署(6.5.22.0)導覽頁面中會發生下列問題：
    * 選取的stock影像無法授權並儲存為按一下「**[!UICONTROL 授權並儲存]**」會顯示空白的下拉式清單。
    * 選取Stock影像或重新進入庫存頁面URL會重新導向至[!DNL AEM]首頁，導致無法存取Adobe Stock影像。 (ASSETS-48687)
 * 如果資料夾名稱在[!DNL AEM]內部部署(6.5.22.0)導覽頁面上的名稱包含`/`，則管理資料夾時發生問題。 (ASSETS-46740)
-* 在[!DNL AEM] 6.5上，由於記憶體使用量高，資產詳細資訊頁面未從![集合](/help/assets/assets/Smock_Collection_18_N.svg)**[!UICONTROL 集合&#x200B;]**&#x200B;檢視載入。 (ASSETS-46738)
+* 在[!DNL AEM] 6.5上，由於記憶體使用量高，資產詳細資訊頁面未從![集合](/help/assets/assets/Smock_Collection_18_N.svg)**[!UICONTROL 集合&#x200B;]**檢視載入。 (ASSETS-46738)
 * [!DNL InDesign]的整合問題為`Day CQ DAM Mime Type OSGI`服務錯誤將[!DNL InDesign]個檔案識別為`x-adobe-indesign`而非`x-indesign`。 (ASSETS-45953)
 * [!DNL AEM 6.5.21]工作階段洩漏追蹤至現成可用的&#x200B;**[!UICONTROL 已排程發佈至Brand Portal]**&#x200B;工作流程步驟。 (ASSETS-44104)
 * 處理和發佈影像時，[!DNL AEM]中顯示&#x200B;**[!UICONTROL 記憶體不足(OOM)]**&#x200B;錯誤。 此問題是因為工作流程中已棄用的方法，例如&#x200B;**[!DNL Dam Asset update]**&#x200B;和&#x200B;**[!DNL Dynamic Media: Reprocess assets]**。 (ASSETS-43343)
@@ -260,89 +260,89 @@ ht-degree: 1%
 
 #### Forms Designer
 
-* 當使用者使用exportDataAPI匯出以XFA為基礎的PDF的資料時，產生的XML與使用Acrobat Reader手動匯出的XML資料相比，會顯示差異。 與Acrobat Reader產生的輸出相比，輸出中缺少某些欄位的值。 (LC-3922791)。
+* 當使用者使用exportDataAPI匯出以XFA為基礎的PDF的資料時，產生的XML與使用Acrobat Reader手動匯出的XML資料相比，會顯示差異。 與Acrobat Reader產生的輸出相比，輸出中缺少某些欄位的值。 (LC-3922791)
 
-* 在AEM Forms 6.5.22.0上，當使用者嘗試使用Workbench中的輸出服務產生已標籤的PDF時，產生的PDF會在內容表專案的參考標籤下包含額外的標籤標籤。 (LC-3922756)
+* 在AEM Forms 6.5.22.0中，使用Workbench中的輸出服務產生已標籤PDF會在目錄專案的參考標籤下新增非預期的標籤標籤。 (LC-3922756)
 
-* 當使用者在AEM Forms Designer中以底部或右側對齊方式放置欄位註解時，標籤樹僅包含註解而沒有對應的值，導致不完整的協助工具標籤。 (LC-3922619)。
+* 當使用者在AEM Forms Designer中以底部或右側對齊方式放置欄位註解時，標籤樹僅包含註解而沒有對應的值，導致不完整的協助工具標籤。 (LC-3922619)
 
-* 從AEM Forms 6.5 Service Pack 6升級至AEM Forms Service Pack 20時，所產生PDF中的二維碼變得無法讀取。 QR碼的替代文字也未能通過協助工具測試，影響熒幕助讀程式的相容性。 (LC-3922551)。
+* 從AEM Forms 6.5 Service Pack 6升級至AEM Forms Service Pack 20時，所產生PDF中的二維碼變得無法讀取。 QR碼的替代文字也未能通過協助工具測試，影響熒幕助讀程式的相容性。 (LC-3922551)
 
-* 當使用者在AEM Forms Service Pack 18上的代理程式UI中轉譯信函時，由於FormService.render() API，內容無法正確顯示。 (LC-3922461)。
+* 當使用者在AEM Forms Service Pack 18上的代理程式UI中轉譯信函時，由於FormService.render() API，內容無法正確顯示。 (LC-3922461)
 
 #### Forms
 
-* 當使用者在AEM Forms最適化表單的根面板上啟用「允許標題的RTF文字」時，巢狀面板上的「從記錄檔案排除標題」設定錯誤地隱藏了自動產生的記錄檔案中的根面板標題。 (FORMS-19696)。
+* 在AEM Forms中，在根面板上啟用「允許標題為RTF文字」會導致巢狀面板上的「從記錄檔案排除標題」無法正確地隱藏根面板的標題。 這會在產生的記錄檔案中進行。 (FORMS-19696)
 
-* 當使用者嘗試在內部部署AEM 6.5執行個體上的JSON結構描述中使用aem：afProperties將自訂sling：resourceType指派給核心元件時，未套用自訂資源型別。 (FORMS-19691)。
+* 在AEM 6.5上的JSON結構描述中，系統會忽略透過`aem:afProperties`指派的自訂`sling:resourceType`。呈現期間會忽略自訂資源型別。 (FORMS-19691)
 
-* 當使用者提交具有使用URI預填附件的調適型表單時，由於缺少二進位資料，表單提交會失敗並出現NullPointerException。 (FORMS-19371) (FORMS-19486)。
+* 當使用者提交具有使用URI預填附件的調適型表單時，由於缺少二進位資料，表單提交會失敗並出現NullPointerException。 (FORMS-19371) (FORMS-19486)
 
-* 當使用者在PDF 6.5 Forms的「Forms和檔案」區段下傳AEM時，時間軸功能停止運作。 (FORMS-19407)(FORMS-19234)。
+* 當使用者在PDF 6.5 Forms的「Forms和檔案」區段下傳AEM時，時間軸功能停止運作。 (FORMS-19407)(FORMS-19234)
 
-* 當使用者使用AEM Forms中的現成(OOTB)檔案附件元件上傳檔案時，會識別安全漏洞。 這可能會導致未經授權的實體攔截提交流程。 (FORMS-19271)。
+* 當使用者使用AEM Forms中的現成(OOTB)檔案附件元件上傳檔案時，會識別安全漏洞。 此問題可能會導致未經授權的實體攔截提交流程。 (FORMS-19271)
 
-* 當使用者在AEM Forms中設定現成的最適化表單以自動產生記錄檔案(DoR)時，Acrobat Reader檔案屬性中的「標題」欄位不顯示擷取的DoR標題，並且預設情況下未出現表單標題來取代檔案名稱。 (FORMS-19263)。
+* 當使用者在AEM Forms中設定現成的最適化表單以自動產生記錄檔案(DoR)時，Acrobat Reader檔案屬性中的「標題」欄位不顯示擷取的DoR標題。 依預設，表單標題不會出現在檔案名稱的位置。 (FORMS-19263)
 
-* 當使用者在代理程式UI中開啟互動式通訊時，預先填入的資料無法完全清除；移除後，它會自動以相同的資料重新填入。 (FORMS-19151)。
+* 當使用者在代理程式UI中開啟互動式通訊時，預先填入的資料無法完全清除；移除後，它會自動以相同的資料重新填入。 (FORMS-19151)
 
-* 當使用者預覽代理程式UI中的日期欄位時，由於VM的UTC設定與系統對日期的詮釋之間時區差異，日期會意外變更。 (FORMS-19115)。
+* 當使用者在代理UI中預覽日期欄位時，日期意外變化。 此問題發生的原因是VM的UTC設定與系統對日期的詮釋之間存在時區差異。 (FORMS-19115)
 
-* 當使用者提交表單時，檔案附件可能會重複，從而導致同一檔案多次上傳。 (FORMS-19045)(FORMS-19051)。
+* 使用者提交表單時，檔案附件可能會重複，導致同一檔案多次上傳。 (FORMS-19045)(FORMS-19051)
 
-* 在AEM 6.5 Document Security中，將協調員新增至原則集會在生產環境和較低環境中失敗。 (FORMS-18603、FORMS-18212、FORMS-19697)。
+* 在AEM 6.5 Document Security中，將協調員新增至原則集會在生產環境和較低環境中失敗。 (FORMS-18603、FORMS-18212、FORMS-19697)
 
-* 當使用者在案頭模式中按一下AEM Forms Service Pack 22中具有空白欄位的「datepicker-calendar-icon」時，由於未定義的_$focusedDate變數而發生錯誤，並中斷相關的自訂指令碼。 (FORMS-18483)(FORMS-18268)。
+* 當使用者在案頭模式中按一下AEM Forms Service Pack 22中具有空白欄位的「datepicker-calendar-icon」時，由於未定義的_$focusedDate變數而發生錯誤，並中斷相關的自訂指令碼。 (FORMS-18483)(FORMS-18268)
 
 * 在AEM Forms Service Pack 19 (6.5.19.0)上，當客戶預覽信函時，「字數金額」欄位無法正確顯示或更新數字值，導致內容不對齊並遺失空格。 (FORMS-18437、FORMS-17330、FORMS-18209、FORMS-18557、CTG-4150848、FORMS-19614、LC-3922004)
 
-* 當客戶在RHEL上預覽在AEM Forms 6.5 SP19中儲存的字母時，內容未妥善對齊、缺少空格，且出現非預期字元，如「x」。 (FORMS-18422)(FORMS-17641)。
+* 當客戶在RHEL上預覽在AEM Forms 6.5 SP19中儲存的字母時，內容未妥善對齊、缺少空格，且出現非預期字元，如「x」。 (FORMS-18422)(FORMS-17641)
 
-* 當使用者在AEM Forms中的標籤之間導覽時，在第一個標籤上選取元件會變得無回應。 (FORMS-18345)。
+* 當使用者在AEM Forms中的標籤之間導覽時，在第一個標籤上選取元件會變得無回應。 (FORMS-18345)
 
-* 在AEM Forms 6.5.21.0中，當使用者使用WebToPDF選項將HTML檔案轉換為PDF時，輸出PDF缺少標題區段，包括中繼資料和標題標籤。 (FORMS-18223、FORMS-17835、FORMS-19642、FORMS-18224)。
+* 在AEM Forms 6.5.21.0中，當使用者使用WebToPDF選項將HTML檔案轉換為PDF時，輸出PDF缺少標題區段，包括中繼資料和標題標籤。 (FORMS-18223、FORMS-17835、FORMS-19642、FORMS-18224)
 
-* 在AEM JEE Process Manager SDK中，當使用者叫用retryAction(long actionOid)方法時，系統會錯誤地重試tb_action_instance表格中的第一個動作。 即使提供特定動作ID或ID為空值，也會發生這種情況，導致意外行為。 (FORMS-18187)。
+* 在AEM JEE Process Manager SDK中，當使用者叫用retryAction(long actionOid)方法時，系統會錯誤地重試tb_action_instance表格中的第一個動作。 即使提供特定動作ID或ID為空值，也會發生此工作流程，導致非預期的行為。 (FORMS-18187)
 
-* 更新至SP22後，使用者遇到儲存草稿和提交功能失敗，且未顯示任何錯誤訊息的問題。 (FORMS-18069)。
+* 更新至SP22後，使用者遇到問題，即儲存的草稿和提交功能失敗，未顯示任何錯誤訊息。 (FORMS-18069)
 
-* 在AEM 6.5.21.0中，從XSD式基礎元件轉換至核心元件，會使無法在JSON結構描述中實作跨檔案參照，進而影響最適化Forms移轉。 (FORMS-18065)。
+* 在AEM 6.5.21.0中，從XSD式基礎元件轉換至核心元件，會使無法在JSON結構描述中實作跨檔案參照，進而影響最適化Forms移轉。 (FORMS-18065)
 
-* 當使用者在代理UI中預覽信函時，由於IC時間轉換問題，日期欄位顯示不正確的值。 這些差異是由於VM環境與系統對時間（UTC與當地時間）的詮釋之間的時區差異所造成。 (FORMS-17988) (FORMS-17248)。
+* 當使用者在代理UI中預覽信函時，由於IC時間轉換問題，日期欄位顯示不正確的值。 這些差異是由於VM環境與系統對時間的詮釋（UTC與當地時間）之間的時區差異所造成。 (FORMS-17988) (FORMS-17248)
 
-* 當使用者在AEM Forms中使用通知IC範本預覽信函時，PDF的產生時間差異顯著，從1.5秒到超過10秒，即使在同一部伺服器上也是如此。 這種不一致會影響關鍵業務工作流程。 (FORMS-17951)。
+* 當使用者在AEM Forms中使用通知IC範本預覽信函時，PDF的產生時間差異顯著，從1.5秒到超過10秒，即使在同一部伺服器上也是如此。 這種不一致會影響關鍵業務工作流程。 (FORMS-17951)
 
-* 當使用者使用「資料來源」選項將調適型表單中的手寫簽名物件繫結到XDP時，由於持續的外觀比例驗證錯誤，即使使用有效值，也無法儲存變更。 (FORMS-17587)。
+* 當使用者使用「資料來源」選項將調適型表單中的手寫簽名物件繫結到XDP時，無法儲存變更。 原因是持續外觀比例驗證錯誤，即使使用有效值亦然。 (FORMS-17587)
 
-* 當使用者使用具有許多用於檔案片段隱藏欄位的特定XDP時，AEM會建立CRX節點，並將cm：optional屬性設定為false，這會造成互動式通訊(IC)提交失敗。 (FORMS-17538)。
+* 當使用者使用具有許多隱藏欄位的特定XDP作為檔案片段時，AEM會建立CRX節點並將`cm:optional`屬性設定為false，這會造成互動式通訊(IC)提交失敗。 (FORMS-17538)
 
-* 在AEM Forms 6.5.19.0上，當客戶預覽信函時，若已定義潛在客戶與片段的數位限制，數值方塊欄位將無法正確處理負值。 此問題是因為使用parseFloat而發生，這會將減號視為數字的一部分。 (FORMS-17451)。
+* 在AEM Forms 6.5.19.0上，當客戶預覽信函時，若已定義潛在客戶與片段的數位限制，數值方塊欄位將無法正確處理負值。 此問題是因為使用parseFloat而發生，這會將減號視為數字的一部分。 (FORMS-17451)
 
-* 在AEM Forms 6.5上，預覽信函時，系統注意到Adobe.json檔案中使用「*」萬用字元，令人擔心其用途和可能的修改(FORMS-17317)。
+* 在AEM Forms 6.5上，預覽信函時，注意到Adobe.json檔案中使用「*」萬用字元，令人擔心其用途和可能的修改。 (FORMS-17317)
 
-* 當使用者在「套用固定利率儲蓄者聯合帳戶」上使用熒幕助讀程式時，標題會錯誤地宣告為「可點按」，導致協助工具問題。 (FORMS-17038)。
+* 當使用者在`Apply for a Fixed Rate Saver joint account`上使用熒幕助讀程式時，標題錯誤地宣告為`clickable`，導致協助工具問題。 (FORMS-17038)
 
-* 內嵌表單時，產生的iframe會遺失title屬性，導致協助工具相容問題。 (FORMS-17010)。
+* 內嵌表單時，產生的iframe會遺失title屬性，導致協助工具相容問題。 (FORMS-17010)
 
-* 無法使用Forms Manager UI下載表單，除非包含關聯的相依性，例如主題和片段。 (FORMS-15811)。
+* 使用Forms Manager UI下載表單一律包含關聯的相依性，例如主題和片段。 (FORMS-15811)
 
-* 當使用者存取行動裝置(iOS和Android)上的表單時，第一個頁面上的「下一個」和「上一個」按鈕會停用，但熒幕助讀程式不會將其識別為已停用。 (FORMS-15773)。
+* 當使用者存取行動裝置上的表單(iOS和Android™)時，第一個頁面上的「下一個」和「上一個」按鈕會停用。 不過，熒幕助讀程式不會將其識別為停用。 (FORMS-15773)
 
-* 當使用者儲存已啟用片段和延遲載入的大型表單時，將無法擷取草稿，並中斷工作流程。 (FORMS-19890、FORMS-19808)。
+* 當使用者儲存已啟用片段和延遲載入的大型表單時，將無法擷取草稿，並中斷工作流程。 (FORMS-19890， FORMS-19808)
 
 #### FORMS JEE
 
 * 當使用者在AEM Forms中重新設定資料庫時，連線會因硬式編碼引數而失敗。 (FORMS-19568， FORMS-17621)
 
-* 當使用者使用partial turnkey方法透過MySQL 8.4設定AEM 6.5時，LiveCycle Configuration Manager (LCM)在資料庫連線測試期間無法辨識必要的MySQL聯結器驅動程式，導致設定失敗。 (FORMS-19442)。
+* 當使用者使用partial turnkey方法設定AEM 6.5與MySQL 8.4時，LiveCycle Configuration Manager (LCM)無法辨識所需的MySQL聯結器驅動程式。 這會導致資料庫連線測試和設定失敗。 (FORMS-19442)
 
-* 當使用者在JEE環境中的JRE 11上執行具有JDBC 12.8.1的LCM時，設定會因不相容問題而失敗。(FORMS-19276)。
+* 當使用者在JEE環境中的JRE 11上執行具有JDBC 12.8.1的LCM時，設定會因不相容問題而失敗。 (FORMS-19276)
 
-* 當使用者在AEM內部部署中開啟任務時，系統會執行Workspace開始動作設定檔，而不是AssignedUserProfile。 (FORMS-19065)。
+* 當使用者在AEM內部部署中開啟任務時，系統會執行Workspace開始動作設定檔，而不是AssignedUserProfile。 (FORMS-19065)
 
-* 當使用者在AEM JEE流程管理員中使用retryAction(long actionOid)方法時，會發生非預期的行為。 (FORMS-18357)(FORMS-18187)。
+* 當使用者在AEM JEE流程管理員中使用retryAction(long actionOid)方法時，會發生非預期的行為。 (FORMS-18357)(FORMS-18187)
 
-* 在AEM Forms 6.5.21.0上，PDFG轉換失敗並出現下列錯誤： (FORMS-16851)(FORMS-14613)。
+* 在AEM Forms 6.5.21.0上，PDFG轉換因下列錯誤而失敗： (FORMS-16851)(FORMS-14613)
 
 #### Forms驗證碼 {#forms-captcha-6523}
 
@@ -505,7 +505,7 @@ ht-degree: 1%
 您可以使用兩種不同的方法來安裝[!DNL Experience Manager] 6.5.23.0.<!-- UPDATE FOR EACH NEW RELEASE -->
 
 * 伺服器上線時，請將封裝放入`../crx-quickstart/install`資料夾。 套件會自動安裝。
-* 使用封裝管理員[&#128279;](/help/sites-administering/package-manager.md#package-share)的HTTP API。 使用`cmd=install&recursive=true`安裝巢狀套件。
+* 使用封裝管理員](/help/sites-administering/package-manager.md#package-share)的[HTTP API。 使用`cmd=install&recursive=true`安裝巢狀套件。
 
 >[!NOTE]
 >
@@ -672,11 +672,11 @@ AEM 6.5.21、6.5.22、6.5.23和AEM 6.5 LTS GA隨附`org.apache.sling.scripting.j
 
 ### AEM Sites的已知問題 {#known-issues-aem-sites-6523}
 
-內容片段 — 預覽失敗，因為大型片段樹受到DoS保護。 請參閱有關預設GraphQL查詢執行器組態選項[&#128279;](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-kcs/kbarticles/ka-23945)的KB文章(SITES-17934)
+內容片段 — 預覽失敗，因為大型片段樹受到DoS保護。 請參閱有關預設GraphQL查詢執行器組態選項](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-kcs/kbarticles/ka-23945)的[KB文章(SITES-17934)
 
 ### AEM Forms的已知問題 {#known-issues-aem-forms-6523}
 
-* 當客戶從Struts 2.x升級至6.x時，更嚴格的型別檢查可能會導致無訊息失敗，尤其是當核取方塊元件傳回false且繫結到清單&#x200B;*整數*&#x200B;時。 必須明確處理這個值不符，以避免還原序列化錯誤。 (FORMS-20203)
+* 當客戶從Struts 2.x升級至6.x時，更嚴格的型別檢查可能會導致無訊息失敗，尤其是當核取方塊元件傳回false且繫結至清單&#x200B;*整數*&#x200B;時。 必須明確處理這個值不符，以避免還原序列化錯誤。 (FORMS-20203)
 
 * 如果HTML至PDF轉換在SUSE® Linux® （自SLES 15 SP6）伺服器上失敗，並出現下列錯誤：
 
@@ -732,10 +732,10 @@ AEM 6.5.21、6.5.22、6.5.23和AEM 6.5 LTS GA隨附`org.apache.sling.scripting.j
 這些網站僅供客戶使用。 如果您是客戶且需要存取權，請聯絡您的Adobe客戶經理。
 
 * [產品下載網址為licensing.adobe.com](https://licensing.adobe.com/)
-* [連絡Adobe客戶支援](https://experienceleague.adobe.com/zh-hant/docs/customer-one/using/home)。
+* [連絡Adobe客戶支援](https://experienceleague.adobe.com/en/docs/customer-one/using/home)。
 
 >[!MORELIKETHIS]
 >
 >* [[!DNL Experience Manager] 產品頁面](https://business.adobe.com/products/experience-manager/adobe-experience-manager.html)
->* [[!DNL Experience Manager] 6.5檔案](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65)
+>* [[!DNL Experience Manager] 6.5檔案](https://experienceleague.adobe.com/en/docs/experience-manager-65)
 >* [訂閱Adobe優先產品更新](https://www.adobe.com/tw/subscription/priority-product-update.html)
