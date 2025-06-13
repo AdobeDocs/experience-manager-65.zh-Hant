@@ -9,9 +9,9 @@ exl-id: fbe15e1b-830b-4752-bd02-0d239a90bc68
 solution: Experience Manager, Experience Manager Sites
 feature: Configuring
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: f96b178ae84b4b930b59e36d4994970682c53dbd
 workflow-type: tm+mt
-source-wordcount: '1213'
+source-wordcount: '1205'
 ht-degree: 0%
 
 ---
@@ -61,7 +61,7 @@ DAM程式非常適合大量同時執行。 以批次及多核心處理器上傳�
 
 廣泛的數位資產處理需要最佳化的硬體資源，其中最相關的因素包括影像大小和已處理影像的尖峰輸送量。
 
-配置至少16 GB的棧積並設定[!UICONTROL DAM更新資產]工作流程以使用[Camera Raw封裝](/help/assets/camera-raw.md)來擷取原始影像。
+配置至少16 GB的棧積，並設定[!UICONTROL DAM更新資產]工作流程以使用[Camera Raw封裝](/help/assets/camera-raw.md)來擷取原始影像。
 
 ## 瞭解系統 {#understanding-the-system}
 
@@ -73,7 +73,7 @@ DAM程式非常適合大量同時執行。 以批次及多核心處理器上傳�
 
 **暫存檔案系統**&#x200B;緩慢的本機檔案系統可能會導致互動式效能問題，尤其是在搜尋時，因為搜尋索引儲存在本機磁碟上。 如果使用命令列程式，也可能會導致資產處理問題。
 
-**AEM DAM Finder**&#x200B;搜尋中經常遇到的互動式效能問題，是由同一執行個體上同時使用許多使用者或其他耗用CPU的處理序所導致，因此會使用高CPU所造成。 從虛擬機器器移至專用機器，並確定機器上未執行其他服務，有助於改善效能。 如果高CPU負載是由於資產處理和許多同時使用者所造成，Day建議新增其他叢集節點。
+**AEM DAM Finder**&#x200B;搜尋中經常遇到的互動式效能問題，是由相同執行個體上同時使用許多使用者或其他使用CPU的處理序所導致CPU使用率高所造成。 從虛擬機器器移至專用機器，並確定機器上未執行其他服務，有助於改善效能。 如果高CPU負載是由於資產處理和許多同時使用者所造成，Day建議新增額外的叢集節點。
 
 **AEM DAM工作流程**&#x200B;資產擷取期間長時間執行的工作流程會導致資產處理效能問題。 根據正在處理的資產型別，這可能表示CPU過度使用。 Day建議您減少系統上執行的其他處理作業數目，並藉由新增叢集節點來增加可用的CPU數目。
 
@@ -105,7 +105,3 @@ NAS中延遲和傳輸量不良的原因在於網路拓撲或其他服務的NAS�
 
 * 選擇性產生轉譯：僅透過將條件新增至資產處理工作流程，產生您所需的轉譯，因此僅針對選取的資產產生成本較高的轉譯。
 * 執行個體之間共用資料存放區：當磁碟空間不足時，這可能會大幅減少所需的磁碟空間，但代價是需要付出更高的設定工作量，並失去資料存放區的自動清理。
-
-## 延伸閱讀 {#further-reading}
-
-* [正在分析緩慢和封鎖的處理序](https://helpx.adobe.com/experience-manager/kb/AnalyzeSlowAndBlockedProcesses.html)

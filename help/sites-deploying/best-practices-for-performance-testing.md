@@ -9,9 +9,9 @@ exl-id: fcac75e1-15c1-4a37-8d43-93c95267b903
 solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+source-git-commit: 8f638eb384bdca59fb6f4f8990643e64f34622ce
 workflow-type: tm+mt
-source-wordcount: '1790'
+source-wordcount: '1767'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 效能測試是任何AEM部署的重要一環。 視客戶需求而定，可能會在發佈執行個體、製作執行個體或兩者上執行效能測試。
 
-本檔案概述執行效能測試的整體策略和方法，以及Adobe為協助該過程而提供的一些工具。 最後，從程式碼分析和系統設定的角度，閱讀AEM 6中可用來協助效能調整的工具分析。
+本檔案概述執行效能測試的整體策略和方法，以及Adobe提供的部分工具來協助此程式。 最後，閱讀對AEM 6中工具的分析，從程式碼分析和系統設定的角度協助效能調整。
 
 ### 模擬現實 {#simulating-reality}
 
@@ -54,12 +54,10 @@ AEM中的許多效能測量（例如查詢回應時間）都可能受到系統�
 
 #### 測試工具 {#testing-tools}
 
-* Adobe的&#x200B;**艱難日**&#x200B;工具可用來在AEM執行個體上產生負載並收集效能資料。 Adobe的AEM工程團隊實際上會使用此工具來執行AEM產品本身的負載測試。 在「艱難日」中執行的指令碼會透過屬性檔案和JMX XML檔案來設定。 如需詳細資訊，請參閱[艱苦天檔案](/help/sites-developing/tough-day.md)。
+* Adobe的&#x200B;**艱難日**&#x200B;工具可用來在AEM執行個體上產生負載並收集效能資料。 Adobe的AEM工程團隊實際上會使用此工具，對AEM產品本身進行負載測試。 在「艱難日」中執行的指令碼會透過屬性檔案和JMX XML檔案來設定。 如需詳細資訊，請參閱[艱苦天檔案](/help/sites-developing/tough-day.md)。
 
-* AEM提供立即可用的工具，可快速檢視有問題的查詢、請求和錯誤訊息。 如需詳細資訊，請參閱操作儀表板檔案的[診斷工具](/help/sites-administering/operations-dashboard.md#diagnosis-tools)區段。
+* AEM提供立即可用的工具，讓您快速檢視有問題的查詢、請求和錯誤訊息。 如需詳細資訊，請參閱操作儀表板檔案的[診斷工具](/help/sites-administering/operations-dashboard.md#diagnosis-tools)區段。
 * Apache提供名為&#x200B;**JMeter**&#x200B;的產品，可用於效能和負載測試，以及功能行為。 它是開放原始碼軟體，可以自由使用，但功能集比企業產品更小，而且學習曲線更陡峭。 您可以在Apache的網站[https://jmeter.apache.org/](https://jmeter.apache.org/)找到JMeter
-
-* **載入執行器**&#x200B;是企業級載入測試產品。 提供免費的評估版本。 如需詳細資訊，請參閱[https://www.microfocus.com/en-us/portfolio/performance-engineering/overview](https://www.microfocus.com/en-us/portfolio/performance-engineering/overview)
 
 * 也可以使用[Vercara](https://vercara.com/website-performance-management)之類的網站負載測試工具。
 * 測試行動或回應式網站時，必須使用另一組工具。 這些設定可藉由節流網路頻寬、模擬較慢的行動連線(如3G或EDGE)來運作。 使用範圍較廣的工具包括：
@@ -75,7 +73,7 @@ AEM中的許多效能測量（例如查詢回應時間）都可能受到系統�
 
 觸控式UI中的&#x200B;**開發人員模式**
 
-AEM 6觸控式UI的其中一項新功能是開發人員模式。 就像作者可以在編輯和預覽模式之間切換一樣，開發人員可以在作者UI中切換到開發人員模式。 這麼做可讓您檢視頁面上每個元件的轉譯時間，以及檢視任何錯誤的棧疊追蹤。 如需開發人員模式的詳細資訊，請參閱此[CQ Gems簡報](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2014/aem-developer-mode.html?lang=zh-Hant)。
+AEM 6的觸控式UI的其中一項新功能是開發人員模式。 就像作者可以在編輯和預覽模式之間切換一樣，開發人員可以在作者UI中切換到開發人員模式。 這麼做可讓您檢視頁面上每個元件的轉譯時間，以及檢視任何錯誤的棧疊追蹤。 如需開發人員模式的詳細資訊，請參閱此[CQ Gems簡報](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2014/aem-developer-mode.html)。
 
 **使用rlog.jar讀取要求記錄檔**
 
@@ -102,7 +100,7 @@ Google的PageSpeed工具提供網站分析，以符合頁面效能最佳實務�
 
 #### MongoDB特定步驟 {#mongodb-specific-steps}
 
-在具有MongoDB後端的系統上，AEM提供數個[JMX](/help/sites-administering/jmx-console.md) MBean，在執行負載或效能測試時必須監視這些專案：
+在具有MongoDB後端的系統上，AEM提供數個[JMX](/help/sites-administering/jmx-console.md) MBean，在執行載入或效能測試時必須監視這些專案：
 
 * **整合快取統計資料** MBean。 您可以透過以下位置直接存取該區域：
 
@@ -120,11 +118,11 @@ Google的PageSpeed工具提供網站分析，以符合頁面效能最佳實務�
 1. 將其放在/crx--quickstart/install資料夾下。
 
 >[!NOTE]
->請參閱[AEM 6.x | 效能調整秘訣](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=zh-Hant)
+>請參閱[AEM 6.x | 效能調整秘訣](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html)
 
 預設值為10,000，但大多數部署都必須將其提高至20,000或50,000。
 
-## Publish環境 {#publish-environment}
+## 發佈環境 {#publish-environment}
 
 ### 執行測試 {#performing-tests-1}
 
@@ -148,11 +146,11 @@ Google的PageSpeed工具提供網站分析，以符合頁面效能最佳實務�
 * 檢視錯誤記錄檔中是否有錯誤或警告。 如需詳細資訊，請參閱[記錄](/help/sites-deploying/configure-logging.md)。
 * 監視系統硬體資源，例如記憶體和CPU使用率、磁碟I/O或網路I/O。這些資源通常是造成效能瓶頸的原因。
 * 最佳化頁面的架構以及處理方式，以儘量減少URL引數的使用，進而允許儘可能多的快取。
-* 請依照[效能最佳化](/help/sites-deploying/configuring-performance.md)和[效能調整提示](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=zh-Hant)檔案操作。
+* 請依照[效能最佳化](/help/sites-deploying/configuring-performance.md)和[效能調整提示](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html)檔案操作。
 
 * 如果編輯作者執行個體上的特定頁面或元件時發生問題，請使用TouchUI開發人員模式來檢查有問題的頁面。 這樣做會提供頁面上每個內容區域的劃分，及其載入時間。
 * 將網站上的所有JS和CSS縮制。 檢視此[部落格](https://blogs.adobe.com/foxes/enable-js-and-css-minification/)。
 * 排除元件中的內嵌CSS和JS。 使用者端程式庫應包含並加以縮制，以將轉譯頁面所需的請求數量降至最低。
 * 若要檢查伺服器請求並檢視哪些請求的執行時間最長，請使用Chrome的「網路」標籤等瀏覽器工具。
 
-一旦識別出問題區域，即可檢查應用程式程式碼以最佳化效能。 任何無法正常執行的現成AEM功能，都可以透過Adobe支援來處理。
+一旦識別出問題區域，即可檢查應用程式程式碼以最佳化效能。 任何無法正常執行的現成AEM功能，都可以透過Adobe支援解決。

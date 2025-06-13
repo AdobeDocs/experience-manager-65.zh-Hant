@@ -10,9 +10,9 @@ exl-id: d2d351e7-87a5-4895-b4ec-391fb0b66798
 solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: f96b178ae84b4b930b59e36d4994970682c53dbd
 workflow-type: tm+mt
-source-wordcount: '536'
+source-wordcount: '527'
 ht-degree: 2%
 
 ---
@@ -49,7 +49,7 @@ ht-degree: 2%
   </tr>
   <tr>
    <td><p>系統管理員</p> </td>
-   <td><p>按兩下AEM CM Quickstart後，AEM歡迎畫面未顯示在瀏覽器中</p> </td>
+   <td><p>按兩下AEM CM Quickstart後，瀏覽器中不會顯示AEM歡迎畫面</p> </td>
   </tr>
   <tr>
    <td><p>系統管理員</p> <p>管理員使用者</p> </td>
@@ -68,13 +68,13 @@ ht-degree: 2%
 
 * 連按兩下Quickstart jar或其他程式（例如archive manager）的JAR檔案沒有任何效果。
 * 在CRX上執行的應用程式擲回記憶體不足錯誤。
-* 按兩下AEM Quickstart後，AEM歡迎畫面未顯示在瀏覽器中。
+* 按兩下AEM快速入門後，瀏覽器中不會顯示AEM歡迎畫面。
 
 ## 疑難排解分析的方法 {#methods-for-troubleshooting-analysis}
 
 ### 建立對話串傾印 {#making-a-thread-dump}
 
-對話串傾印是目前作用中的所有Java™對話串的清單。 如果AEM沒有正確回應，執行緒傾印可以協助您識別死鎖或其他問題。
+對話串傾印是目前作用中的所有Java™對話串的清單。 如果AEM沒有正確回應，對話串傾印可以協助您識別死鎖或其他問題。
 
 ### 使用Sling對話串傾印器 {#using-sling-thread-dumper}
 
@@ -101,7 +101,7 @@ ht-degree: 2%
 >
 >`jstack <pid> >> /path/to/logfile.log`
 
-如需詳細資訊，請參閱[如何從JVM進行對話串傾印](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17452.html?lang=zh-Hant)檔案
+如需詳細資訊，請參閱[如何從JVM進行對話串傾印](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17452.html)檔案
 
 ### 檢查未關閉的JCR工作階段 {#checking-for-unclosed-jcr-sessions}
 
@@ -111,7 +111,7 @@ ht-degree: 2%
 * 您可以看到大部份CacheManager： resizeAll專案在記錄檔中；下列數字(size=&lt;x>)顯示快取數目，每個工作階段會開啟數個快取。
 * 系統有時會用盡記憶體（在數小時、數天或數週後，視嚴重程度而定）。
 
-若要分析未關閉的工作階段並找出哪些程式碼未關閉工作階段，請參閱知識庫文章[分析未關閉的工作階段](https://helpx.adobe.com/experience-manager/kb/AnalyzeUnclosedSessions.html)。
+若要開始分析未關閉的工作階段，請參閱知識庫文章[未關閉的資源解析器](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-23761)。
 
 ### 使用Adobe Experience Manager Web Console {#using-the-adobe-experience-manager-web-console}
 

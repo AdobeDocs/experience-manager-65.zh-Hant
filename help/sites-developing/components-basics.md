@@ -10,18 +10,18 @@ exl-id: 7ff92872-697c-4e66-b654-15314a8cb429
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: f96b178ae84b4b930b59e36d4994970682c53dbd
 workflow-type: tm+mt
-source-wordcount: '4843'
+source-wordcount: '4828'
 ht-degree: 1%
 
 ---
 
-# Adobe Experience Manager (AEM)元件 — 基本需知{#aem-components-the-basics}
+# Adobe Experience Manager (AEM)元件 — 基本知識{#aem-components-the-basics}
 
 當您開始開發新元件時，您需要瞭解其結構和設定的基本知識。
 
-此程式涉及閱讀理論，以及檢視標準AEM例項中廣泛的元件實作。 雖然現在的AEM已改用新的標準、現代化、觸控式UI，但仍可繼續支援傳統UI，因此這種方法稍微複雜一些。
+此過程包括閱讀理論，以及檢視標準AEM例項中的各種元件實施。 雖然AEM已改用新的標準、現代化、觸控式UI，但仍可繼續支援傳統UI，因此這種方法稍微複雜一些。
 
 ## 概觀 {#overview}
 
@@ -39,7 +39,7 @@ ht-degree: 1%
 * 您的元件需要邏輯才能選取或操作內容嗎？
    * 邏輯應與使用者介面層分開。 HTL的設計目的是協助確保做到這一點。
 * 您的元件是否需要CSS格式？
-   * CSS格式應與元件定義分開。 定義命名HTML元素的慣例，以便您可以透過外部CSS檔案來修改它們。
+   * CSS格式應與元件定義分開。 定義命名HTML元素的慣例，以便透過外部CSS檔案進行修改。
 * 我應考慮哪些安全性方面？
    * 如需詳細資訊，請參閱[安全性檢查清單 — 開發最佳實務](/help/sites-administering/security-checklist.md#development-best-practices)。
 
@@ -52,7 +52,7 @@ ht-degree: 1%
 * **傳統UI**
 以AEM 6.4已淘汰的ExtJS技術為基礎的使用者介面。
 
-如需詳細資訊，請參閱[客戶的UI介面Recommendations](/help/sites-deploying/ui-recommendations.md)。
+如需詳細資訊，請參閱[客戶的UI介面建議](/help/sites-deploying/ui-recommendations.md)。
 
 可以實作元件以支援觸控式UI和/或傳統UI。 檢視標準執行個體時，您也會看到原本針對傳統UI或觸控式UI （或兩者）設計的現成元件。
 
@@ -64,15 +64,15 @@ ht-degree: 1%
 
 ### 內容邏輯和轉譯標籤  {#content-logic-and-rendering-markup}
 
-Adobe建議將負責標籤和轉譯的程式碼，與控制用來選取元件內容的邏輯的程式碼分開。
+Adobe建議將負責標籤和轉譯的程式碼，與控制用來選取元件內容之邏輯的程式碼分開。
 
-[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=zh-Hant)支援此理念，這是一種範本化語言，刻意加以限制，以確保使用真正的程式語言來定義基礎商業邏輯。 此（選用）邏輯會使用特定命令從HTL叫用。 此機制會醒目顯示呼叫特定檢視的程式碼，並在必要時允許同一元件的不同檢視使用特定邏輯。
+[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)支援此理念，這是一種範本化語言，刻意加以限制，以確保使用真正的程式語言來定義基礎商業邏輯。 此（選用）邏輯會使用特定命令從HTL叫用。 此機制會醒目顯示呼叫特定檢視的程式碼，並在必要時允許同一元件的不同檢視使用特定邏輯。
 
 ### HTL與JSP {#htl-vs-jsp}
 
 HTL是AEM 6.0引進的HTML範本語言。
 
-關於在開發您自己的元件時是使用[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=zh-Hant)或JSP (Java™ Server Pages)的討論應該簡單明瞭，因為HTL現在是針對AEM的建議指令碼語言。
+關於在開發您自己的元件時是使用[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)或JSP (Java™ Server Pages)的討論應該簡單明瞭，因為HTL現在是建議的AEM指令碼語言。
 
 HTL和JSP都可用來開發傳統和觸控式UI的元件。 雖然我們可能會傾向於假設HTL僅適用於觸控式UI和適用於傳統UI的JSP，但這只是誤解，而且更受時機的影響。 觸控式UI和HTL大約在同一期間併入AEM。 由於HTL現在是建議的語言，因此它被用於新元件，而新元件傾向於用於觸控式UI。
 
@@ -84,14 +84,14 @@ HTL和JSP都可用來開發傳統和觸控式UI的元件。 雖然我們可能�
 
 若要為適當的UI建立您自己的元件，請參閱（閱讀本頁面後）：
 
-* [觸控式UI的AEM元件](/help/sites-developing/developing-components.md)
-* [傳統UI的AEM元件](/help/sites-developing/developing-components-classic.md)
+* [觸控式UI適用的AEM元件](/help/sites-developing/developing-components.md)
+* [傳統UI適用的AEM元件](/help/sites-developing/developing-components-classic.md)
 
 快速入門方法是複製現有元件，然後進行您想要的變更。 若要瞭解如何建立自己的元件並將其新增至段落系統，請參閱：
 
 * [正在開發元件](/help/sites-developing/developing-components-samples.md) （著重於觸控式UI）
 
-### 將元件移至Publish例項 {#moving-components-to-the-publish-instance}
+### 將元件移動至發佈例項 {#moving-components-to-the-publish-instance}
 
 呈現內容的元件必須部署在與內容相同的AEM執行個體上。 因此，在製作執行個體上用於製作和轉譯頁面的所有元件，都必須部署在發佈執行個體上。 部署時，元件可用於轉譯已啟動的頁面。
 
@@ -191,7 +191,7 @@ AEM元件的結構既強大又靈活，主要考量事項為：
 
    * `cq:editConfig (cq:EditConfig)` — 定義元件的編輯屬性，並讓元件出現在元件瀏覽器或Sidekick中。
 
-     注意：如果元件有對話方塊，即使cq：editConfig不存在，它也會自動出現在「元件」瀏覽器或Sidekick中。
+     注意：如果元件有對話方塊，即使cq：editConfig不存在，它也會自動出現在元件瀏覽器或Sidekick中。
 
    * `cq:childEditConfig (cq:EditConfig)` — 控制未定義自己`cq:editConfig`之子元件的作者UI方面。
    * 觸控式UI：
@@ -314,7 +314,7 @@ AEM元件的結構既強大又靈活，主要考量事項為：
   <tr>
    <td><code>cq:cellName</code></td>
    <td><code>String</code></td>
-   <td>如果設定，此屬性會視為儲存格ID。 如需詳細資訊，請參閱知識庫文章<a href="https://helpx.adobe.com/experience-manager/kb/DesigneCellId.html">如何建置設計儲存格ID</a>。<br /> </td>
+   <td>如果設定，此屬性會視為儲存格識別碼。<br /> </td>
   </tr>
   <tr>
    <td><code>cq:childEditConfig</code></td>
@@ -379,7 +379,7 @@ AEM元件的結構既強大又靈活，主要考量事項為：
   <tr>
    <td><code>icon.png</code></td>
    <td><code>nt:file</code></td>
-   <td>元件的圖示，顯示在Sidekick中的標題旁。<br /> </td>
+   <td>元件圖示會出現在Sidekick中的標題旁。<br /> </td>
   </tr>
   <tr>
    <td><code>thumbnail.png</code></td>
@@ -415,7 +415,7 @@ AEM元件的結構既強大又靈活，主要考量事項為：
 * 傳統UI：
    * `dialog` ( `cq:Dialog`) — 定義用於編輯此元件內容的對話方塊（專用於傳統UI）
    * `design_dialog` ( `cq:Dialog`) — 指定此元件的設計編輯選項
-   * `icon.png` — 要用作Sidekick中元件圖示的圖形檔案
+   * `icon.png` — 圖形檔，用作Sidekick中元件的圖示
    * `thumbnail.png` — 從Sidekick拖曳元件時，做為元件縮圖的圖形檔案
 
 ### 對話方塊 {#dialogs}
@@ -599,22 +599,22 @@ AEM中的元件受到三個不同階層的限制：
 
   `//element(cq:editConfig, cq:EditConfig)[@cq:actions]`
 
-* 例如，若要尋找`cq:editConfig`的子節點，您可以搜尋`cq:dropTargets`，其型別為`cq:DropTargetConfig`；您可以在下列的XPath查詢字串中使用&#x200B;**CRXDE Lite**&#x200B;和搜尋查詢工具：
+* 若要尋找`cq:editConfig`的子節點，例如，您可以搜尋`cq:dropTargets`，其型別為`cq:DropTargetConfig`；您可以在** CRXDE Lite**中使用查詢工具，並使用下列XPath查詢字串進行搜尋：
 
   `//element(cq:dropTargets, cq:DropTargetConfig)`
 
 ### 元件預留位置 {#component-placeholders}
 
-元件必須一律呈現某些作者可見的HTML，即使元件沒有內容亦然。 否則，編輯器介面中可能會看不到它，使得它在技術上存在但不會顯示在頁面和編輯器中。 在這種情況下，作者無法選取空白元件並與之互動。
+元件必須一律呈現作者可見的某些HTML，即使元件沒有內容亦然。 否則，編輯器介面中可能會看不到它，使得它在技術上存在但不會顯示在頁面和編輯器中。 在這種情況下，作者無法選取空白元件並與之互動。
 
 因此，只要元件在頁面編輯器中轉譯頁面時（當WCM模式為`edit`或`preview`時）沒有轉譯任何可見輸出，就應該轉譯預留位置。
-預留位置的一般HTML標示如下：
+預留位置的一般HTML標籤如下：
 
 ```HTML
 <div class="cq-placeholder" data-emptytext="Component Name"></div>
 ```
 
-轉譯上述預留位置HTML的典型HTL指令碼如下：
+轉譯上述預留位置HTML的一般HTL指令碼如下：
 
 ```HTML
 <div class="cq-placeholder" data-emptytext="${component.properties.jcr:title}"

@@ -9,9 +9,9 @@ feature: Configuring
 exl-id: b32001a1-0078-43f6-89d6-781d6d2e9c94
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+source-git-commit: f96b178ae84b4b930b59e36d4994970682c53dbd
 workflow-type: tm+mt
-source-wordcount: '650'
+source-wordcount: '636'
 ht-degree: 0%
 
 ---
@@ -40,13 +40,9 @@ AEM可讓您設定：
 * 版本輪換；大小上限或時間間隔
 * 寫入記錄訊息時要使用的格式
 
->[!NOTE]
->
->此[知識庫文章](https://helpx.adobe.com/experience-manager/kb/HowToRotateRequestAndAccessLog.html)說明如何輪換request.log和access.log檔案。
-
 ## 個別服務的記錄器與寫入器 {#loggers-and-writers-for-individual-services}
 
-除了全域記錄設定外，AEM還可讓您設定個別服務的特定設定：
+除了全域記錄設定外，AEM還可讓您為個別服務設定特定設定：
 
 * 特定記錄層級
 * 個別記錄檔的位置
@@ -83,7 +79,7 @@ AEM會使用以下專案將記錄訊息寫入檔案：
 
 ### 標準記錄器與寫入器 {#standard-loggers-and-writers}
 
-標準AEM安裝包含某些記錄器和寫入器。
+標準AEM安裝包含特定記錄器和寫入器。
 
 第一個是特殊情況，因為它同時控制`request.log`和`access.log`檔案：
 

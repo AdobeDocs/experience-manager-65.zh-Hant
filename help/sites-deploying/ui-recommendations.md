@@ -1,5 +1,5 @@
 ---
-title: 客戶適用的使用者介面Recommendations
+title: 客戶適用的使用者介面建議
 description: 和傳統及觸控最佳化使用者介面相關的建議清單。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,16 +10,16 @@ exl-id: 7b71119a-ff58-47c0-aeef-a705ed8c40e0
 solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 8f638eb384bdca59fb6f4f8990643e64f34622ce
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '764'
 ht-degree: 0%
 
 ---
 
-# 客戶適用的使用者介面Recommendations{#user-interface-recommendations-for-customers}
+# 客戶適用的使用者介面建議{#user-interface-recommendations-for-customers}
 
-Adobe Experience Manager提供兩個UI — 統一的Experience CloudUI （也稱為觸控式UI）和傳統UI。
+Adobe Experience Manager提供兩個UI — 統一的Experience Cloud UI （也稱為觸控式UI）和傳統UI。
 
 本檔案旨在引導客戶根據其情況選擇要使用的UI。
 
@@ -45,15 +45,15 @@ Adobe Experience Manager提供兩個UI — 統一的Experience CloudUI （也稱
 
 ## 一般 {#general}
 
-過去幾年，Adobe已更新所有Adobe Experience Cloud解決方案，並具備統一的使用者介面。 整個Experience Cloud解決方案的使用者都能透過使用與操作應用程式的共同模式，獲得一致的體驗。 在每次發行中，Adobe都會根據客戶在各種解決方案中的意見回饋，改進其使用者介面。
+過去幾年，Adobe已更新所有Adobe Experience Cloud解決方案，並具備統一的使用者介面。 Experience Cloud解決方案的使用者可透過使用與操作應用程式的共同模式，獲得一致的體驗。 在每次發行中，Adobe都會根據客戶在各種解決方案中的意見回饋，改進其使用者介面。
 
 Adobe Experience Manager （先前稱為CQ5）的原始使用者介面於2008年推出，供執行5.0-5.6.1版本的客戶使用，現在位於AEM 6.5中。這可保證客戶可更新至6.5版，並可獲益於具有新功能的更新平台，同時繼續使用相同的使用者介面。
 
 Adobe建議客戶在2018/19年度計畫切換至新的UI。 這可以在6.5更新期間完成，或者在更新後的單獨專案中完成，這將包括對自訂和元件對話方塊的必要調整。
 
-Classic UI已透過AEM 6.4棄用，Adobe不打算進一步增強Classic UI。 請注意，傳統UI在被取代時仍完全受支援。
+Classic UI已透過AEM 6.4淘汰，Adobe不打算進一步增強Classic UI。 請注意，傳統UI在被取代時仍完全受支援。
 
-### 規則與Recommendations {#rules-and-recommendations}
+### 規則與建議 {#rules-and-recommendations}
 
 以下是來自Adobe Experience Manager 6.5產品管理的建議清單：
 
@@ -80,7 +80,7 @@ Classic UI已透過AEM 6.4棄用，Adobe不打算進一步增強Classic UI。 �
     </ol> </td>
   </tr>
   <tr>
-   <td>已建置使用ClientContext與整合的網站。<br /> </td>
+   <td>已建立使用ClientContext與整合的網站。<br /> </td>
    <td>
     <ol>
      <li>更新至6.5</li>
@@ -98,10 +98,6 @@ Classic UI已透過AEM 6.4棄用，Adobe不打算進一步增強Classic UI。 �
   </tr>
  </tbody>
 </table>
-
-### 常見問題集 {#faq}
-
-請參閱知識庫文章[Touch UI編寫常見問題集](https://helpx.adobe.com/experience-manager/kb/index/touchui_faq.html)，以取得詳細資料；包括任何有關傳統UI淘汰排程的資訊。
 
 ### 選取您的UI {#selecting-your-ui}
 

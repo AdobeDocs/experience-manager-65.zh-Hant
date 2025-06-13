@@ -10,7 +10,7 @@ exl-id: 70a39462-8584-4c76-a097-05ee436247b7
 solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
-source-git-commit: db7830895c8a2d1b7228dc4780296d43f15776df
+source-git-commit: 8f638eb384bdca59fb6f4f8990643e64f34622ce
 workflow-type: tm+mt
 source-wordcount: '6216'
 ht-degree: 0%
@@ -23,9 +23,9 @@ ht-degree: 0%
 
 如需部署相關詳細資訊，請參閱檔案的[部署和維護](/help/sites-deploying/deploy.md)區段。
 
-## 何時搭配AEM使用MongoDB {#when-to-use-mongodb-with-aem}
+## MongoDB與AEM搭配使用的時機 {#when-to-use-mongodb-with-aem}
 
-MongoDB通常用於支援符合下列其中一項條件的AEM作者部署：
+MongoDB通常用於支援AEM作者部署，其中符合以下其中一項條件：
 
 * 每天超過1000位不重複使用者；
 * 同時有100位以上的使用者；
@@ -40,7 +40,7 @@ MongoDB通常用於支援符合下列其中一項條件的AEM作者部署：
 >
 >您可以在[硬體大小調整指南](/help/managing/hardware-sizing-guidelines.md#authors-working-in-parallel)中找到有關製作執行個體大小和同時使用者定義的額外資訊。
 
-### 針對AEM的最小MongoDB部署 {#minimal-mongodb-deployment-for-aem}
+### AEM的最小MongoDB部署 {#minimal-mongodb-deployment-for-aem}
 
 以下是MongoDB上AEM的最低部署。 為簡化起見，我們已將SSL終止和HTTP Proxy元件標準化。 它包含單一MongoDB復本集，包含一個主要和兩個次要復本。
 
@@ -48,7 +48,7 @@ MongoDB通常用於支援符合下列其中一項條件的AEM作者部署：
 
 最低部署需要三個`mongod`執行個體設定為復本集。 一個執行個體被選為主要執行個體，而其他執行個體是次要執行個體，選舉由`mongod`管理。 附加到每個執行個體是本機磁碟。 因此，叢集可以支援負載，建議使用至少每秒12 MB的輸送量，以及超過每秒3000個I/O作業(IOPS)。
 
-AEM作者已連線至`mongod`執行個體，每個AEM作者均連線至所有三個`mongod`執行個體。 寫入操作會傳送到主要執行個體，而讀取操作可從任何執行個體讀取。 流量會根據Dispatcher的負載分配至任何一個作用中的AEM編寫執行個體。 Oak資料存放區是`FileDataStore`，MongoDB監視會根據部署位置由MMS或MongoDB Ops Manager提供。 作業系統層級和記錄檔監控由第三方解決方案提供，例如Splunk或Ganglia。
+AEM作者已連線至`mongod`個執行個體，每個AEM作者都連線至所有三個`mongod`執行個體。 寫入操作會傳送到主要執行個體，而讀取操作可從任何執行個體讀取。 流量會根據Dispatcher的負載分配至任何一個作用中的AEM作者執行個體。 Oak資料存放區是`FileDataStore`，MongoDB監視會根據部署位置由MMS或MongoDB Ops Manager提供。 作業系統層級和記錄檔監控由第三方解決方案提供，例如Splunk或Ganglia。
 
 在此部署中，成功實施需要所有元件。 任何缺少的元件都會讓實作無法運作。
 
@@ -74,7 +74,7 @@ AEM作者已連線至`mongod`執行個體，每個AEM作者均連線至所有三
 
 使用MMAP儲存引擎的MongoDB 2.6和3.0版需要資料庫的工作集及其索引符合RAM。
 
-RAM不足會導致效能大幅降低。 工作集和資料庫的大小與應用程式高度相關。 雖然可以做出一些估計，但最可靠的判斷所需RAM大小的方法是建置AEM應用程式並進行負載測試。
+RAM不足會導致效能大幅降低。 工作集和資料庫的大小與應用程式高度相關。 雖然可以做出一些估計，但最可靠的判斷所需RAM數量方法是建置AEM應用程式並進行負載測試。
 
 為了協助負載測試過程，可以假設工作集與資料庫總大小的比率如下：
 
@@ -87,7 +87,7 @@ RAM不足會導致效能大幅降低。 工作集和資料庫的大小與應用�
 
 >[!NOTE]
 >
->Adobe建議針對使用MongoDB 3.0的AEM 6.1部署，使用WiredTiger儲存引擎。
+>對於使用MongoDB 3.0的AEM 6.1部署，Adobe建議使用WiredTiger儲存引擎。
 
 ### 資料存放區 {#data-store}
 
@@ -95,7 +95,7 @@ RAM不足會導致效能大幅降低。 工作集和資料庫的大小與應用�
 
 ## 監控 {#monitoring}
 
-監視是成功實作專案的重要條件。 只要掌握足夠的知識，便可在MongoDB上執行AEM而不進行監視。 不過，這些知識通常是由專長於部署每個區段的工程師所掌握。
+監視是成功實作專案的重要條件。 在充分瞭解的情況下，您可以在MongoDB上執行AEM而不進行監視。 不過，這些知識通常是由專長於部署每個區段的工程師所掌握。
 
 這些專門知識通常涉及使用Apache Oak Core的研發工程師和MongoDB專家。
 
@@ -125,7 +125,7 @@ MongoDB Ops Manager與MongoDB Cloud Manager是相同的軟體。 註冊後，Ops
 
 執行AEM MongoDB叢集需要作業系統層級監視。
 
-Ganglia就是這類系統的好例子，它提供了超越基本健康狀態量度（例如CPU、平均負載和可用磁碟空間）所需的資訊範圍和詳細資訊。 若要診斷問題，需要較低層級的資訊，例如平均資訊量集區層級、CPU I/O等待、FIN_WAIT2狀態的通訊端。
+Ganglia就是這類系統的好例子，它提供超越基本健康量度(例如CPU、平均負載和可用磁碟空間)所需的資訊範圍和詳細資訊。 若要診斷問題，需要較低層級的資訊，例如平均資訊量集區層級、CPU I/O等待、FIN_WAIT2狀態的通訊端。
 
 ### 記錄彙總 {#log-aggregation}
 
@@ -142,8 +142,8 @@ Ganglia就是這類系統的好例子，它提供了超越基本健康狀態量�
 1. 所有MongoDB主機都可從相同叢集中的所有其他MongoDB主機路由
 1. MongoDB主機可以將封包路由到MongoDB Cloud Manager和其他監視伺服器
 1. AEM伺服器可以將封包路由到所有MongoDB伺服器
-1. 任何AEM伺服器與任何MongoDB伺服器之間的封包延遲均小於2毫秒，沒有封包遺失，且標準分佈為1毫秒或更少。
-1. 請確定AEM和MongoDB伺服器之間的躍點不超過兩個
+1. 任何AEM伺服器與任何MongoDB伺服器之間的封包延遲均小於2毫秒，沒有封包遺失，且標準分佈為1毫秒以下。
+1. 確保AEM和MongoDB伺服器之間的躍點不超過兩個
 1. 兩個MongoDB伺服器之間的躍點不超過兩個
 1. 任何核心伺服器(MongoDB或AEM或任何組合)之間都沒有高於OSI第3級的路由器。
 1. 如果使用VLAN中繼或任何形式的網路通道，就必須遵守封包延遲檢查。
@@ -152,7 +152,7 @@ Ganglia就是這類系統的好例子，它提供了超越基本健康狀態量�
 
 #### 節點存放區設定 {#node-store-configuration}
 
-AEM執行個體必須設定為搭配MongoMK使用AEM。 AEM中MongoMK實作的基礎是檔案節點存放區。
+AEM執行個體必須設定為搭配MongoMK使用AEM。 AEM中MongoMK實施的基礎是檔案節點存放區。
 
 如需如何設定節點存放區的詳細資訊，請參閱[在AEM中設定節點存放區和資料存放區](/help/sites-deploying/data-store-config.md)。
 
@@ -211,7 +211,7 @@ cacheSizeInMB=128
 位元組大小。 小於或等於此大小的二進位檔會與檔案節點存放區一起儲存。 會儲存二進位檔案的內容，而非儲存blob的ID。 對於大於此大小的二進位檔，二進位檔的ID會儲存為節點集合中檔案的屬性。 而且，二進位檔的主體儲存在磁碟上的`FileDataStore`中。 4096位元組是典型的檔案系統區塊大小。
 
 * `path`
-資料存放區根的路徑。 對於MongoMK部署，此路徑必須是所有AEM執行個體都可用的共用檔案系統。 通常使用網路附加儲存(NAS)伺服器。 對於類似Amazon Web Services的雲端部署，`S3DataFileStore`也可供使用。
+資料存放區根的路徑。 若為MongoMK部署，此路徑必須是可供所有AEM執行個體使用的共用檔案系統。 通常使用網路附加儲存(NAS)伺服器。 對於類似Amazon Web Services的雲端部署，`S3DataFileStore`也可供使用。
 
 * `cacheSizeInMB`
 二進位快取的大小總計(MB)。 用來快取小於`maxCacheBinarySize`設定的二進位檔。
@@ -315,7 +315,7 @@ WiredTiger日誌是使用[snappy](https://docs.mongodb.com/manual/core/journalin
 
 #### 壓縮 {#compression}
 
-使用WiredTiger時，MongoDB支援所有集合和索引的壓縮。 壓縮可儘量減少儲存裝置的使用，但需額外的CPU。
+使用WiredTiger時，MongoDB支援所有集合和索引的壓縮。 壓縮可儘量減少儲存空間的使用量，但需額外付費CPU。
 
 根據預設，WiredTiger使用區塊壓縮，針對所有集合使用[snappy](https://docs.mongodb.com/manual/reference/glossary/#term-snappy)壓縮程式庫，針對所有索引使用[首碼壓縮](https://docs.mongodb.com/manual/reference/glossary/#term-prefix-compression)。
 
@@ -358,15 +358,15 @@ WiredTiger內部快取中的集合資料會解壓縮，並使用與磁碟格式�
 
 NUMA （非統一記憶體存取）可讓核心管理記憶體對應到處理器核心的方式。 雖然此程式會嘗試讓核心的記憶體存取速度更快，以確保他們能夠存取所需的資料，但NUMA會干擾MMAP，導致無法預測讀取的額外延遲。 因此，必須在所有支援的作業系統上為`mongod`處理序停用NUMA。
 
-實質上，在NUMA架構中，記憶體會連線至CPU，而CPU會連線至匯流排。 在SMP或UMA架構中，記憶體會連線至匯流排並由CPU共用。 當執行緒在NUMA CPU上分配記憶體時，會根據原則進行分配。 預設值是配置連線到執行緒本機CPU的記憶體，除非沒有可用的記憶體，否則會使用可用CPU的記憶體，但成本較高。 配置之後，記憶體不會在CPU之間移動。 配置是由從父系對話串繼承的原則執行，該對話串最終是啟動程式的對話串。
+實質上，在NUMA架構中，記憶體會連線至CPU，而CPU會連線至匯流排。 在SMP或UMA架構中，記憶體會連線至匯流排並由CPU共用。 執行緒在NUMA CPU上分配記憶體時，會根據原則進行分配。 預設會分配附加到執行緒本機CPU的記憶體，除非沒有可用空間，否則會使用來自可用CPU的記憶體，但成本較高。 配置之後，記憶體不會在CPU之間移動。 配置是由從父系對話串繼承的原則執行，該對話串最終是啟動程式的對話串。
 
-在許多將電腦視為多核心統一記憶體架構的資料庫中，此情況會導致先讓初始CPU滿滿，之後讓次要CPU滿滿。 如果中央執行緒負責配置記憶體緩衝區，就特別正確。 解決方案是執行下列命令，變更用來啟動`mongod`處理序之主要執行緒的NUMA原則：
+在許多將電腦視為多核心統一記憶體架構的資料庫中，此情況會導致初始CPU先變滿，而次要CPU稍後變滿。 如果中央執行緒負責配置記憶體緩衝區，就特別正確。 解決方案是執行下列命令，變更用來啟動`mongod`處理序之主要執行緒的NUMA原則：
 
 ```shell
 numactl --interleaved=all <mongod> -f config
 ```
 
-此原則會以循環配置方式為所有CPU節點配置記憶體，以確保所有節點上的均分分佈。 它不會產生記憶體的最高效能存取，如同具有多個CPU硬體的系統。 大約一半的記憶體操作速度較慢，而且會超出匯流排，但`mongod`並未以最佳方式寫入目標NUMA，所以這是合理的折衷方式。
+此原則會以循環配置方式將記憶體分配給所有CPU節點，以確保所有節點的均等分佈。 它不會產生記憶體的最高效能存取，如同具有多個CPU硬體的系統。 大約一半的記憶體操作速度較慢，而且會超出匯流排，但`mongod`並未以最佳方式寫入目標NUMA，所以這是合理的折衷方式。
 
 ### NUMA問題 {#numa-issues}
 
@@ -392,7 +392,7 @@ MongoDB程式在不同配置原則下的行為不同：
 僅於列出的CPU （核心）上執行。 Mongod只會在列出的CPU上執行，而且只使用這些CPU上可用的記憶體。
 
 * `--localalloc`
-一律在目前節點上配置記憶體，但使用執行緒執行的所有節點。 如果一個執行緒執行配置，則只會使用該CPU可用的記憶體。
+一律在目前節點上配置記憶體，但使用執行緒執行的所有節點。 如果一個執行緒執行配置，則只會使用可用於該CPU的記憶體。
 
 * `--preferred=<node>`
 偏好配置至節點，但如果偏好節點已滿，則會退回給其他節點。 可以使用定義節點的相對記號。 此外，執行緒會在所有節點上執行。
@@ -567,7 +567,7 @@ echo "{nThreads:32,fileSizeMB:1000,w:true}" | mongoperf
 1. 關閉記憶體膨脹
 1. 為裝載MongoDB資料庫的虛擬機器器預先配置及保留記憶體
 1. 使用儲存體I/O控制將足夠的I/O配置給`mongod`處理序。
-1. 透過設定[CPU保留區](https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.hostclient.doc/GUID-6C9023B2-3A8F-48EB-8A36-44E3D14958F6.html?hWord=N4IghgNiBc4RB7AxmALgUwAQGEAKBVTAJ3QGcEBXIpMkAXyA)，保證主控MongoDB之機器的CPU資源
+1. 透過設定[CPU保留區](https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.hostclient.doc/GUID-6C9023B2-3A8F-48EB-8A36-44E3D14958F6.html?hWord=N4IghgNiBc4RB7AxmALgUwAQGEAKBVTAJ3QGcEBXIpMkAXyA)，保證主控MongoDB之電腦的CPU資源
 
 1. 請考慮使用ParaVirtual I/O驅動程式。<!-- URL is a 404 See [knowledgebase article](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1010398).-->
 
@@ -593,7 +593,7 @@ echo "{nThreads:32,fileSizeMB:1000,w:true}" | mongoperf
 
 由於Dispatcher是無狀態的，因此它可以輕鬆水平縮放。 在某些部署中，必須限製作者存取特定資源。 建議您搭配編寫執行個體使用Dispatcher。
 
-在沒有Dispatcher的情況下執行AEM需要由其他應用程式執行SSL終止和負載平衡。 這是必要操作，因為工作階段必須和建立工作階段的AEM執行個體有相關性，這個概念稱為粘性連線。 原因是為了確保內容的更新顯示最小的延遲。
+在沒有Dispatcher的情況下執行AEM需要由其他應用程式執行SSL終止和負載平衡。 此為必要操作，因為工作階段必須與其建立所在的AEM執行個體具有相關性，這個概念稱為粘性連線。 原因是為了確保內容的更新顯示最小的延遲。
 
 如需如何設定的詳細資訊，請參閱[Dispatcher檔案](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-dispatcher/using/dispatcher)。
 
@@ -657,7 +657,7 @@ CSP可讓您微調原則。 不過，在複雜的應用程式中，開發CSP標�
 
 >[!NOTE]
 >
->如需此運作方式的詳細資訊，請參閱內容安全性原則[&#128279;](https://owasp.deteact.com/cheat/cheatsheets/Content_Security_Policy_Cheat_Sheet.html)上的OWASP頁面。
+>如需此運作方式的詳細資訊，請參閱內容安全性原則](https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html)上的[OWASP頁面。
 
 ### 大小調整 {#sizing}
 

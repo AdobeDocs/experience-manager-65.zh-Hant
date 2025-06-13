@@ -8,7 +8,7 @@ feature: Configuring
 exl-id: c1c90d6a-ee5a-487d-9a8a-741b407c8c06
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
+source-git-commit: f96b178ae84b4b930b59e36d4994970682c53dbd
 workflow-type: tm+mt
 source-wordcount: '3461'
 ht-degree: 1%
@@ -31,7 +31,7 @@ ht-degree: 1%
 1. 在安裝目錄中建立資料夾`crx-quickstart/install`。
 1. 首先，建立組態檔，使用您要在`crx-quickstart/install`目錄中使用的節點存放區選項名稱來設定節點存放區。
 
-   例如，Document節點存放區(AEM MongoMK實作的基礎)使用檔案`org.apache.jackrabbit.oak.plugins.document.DocumentNodeStoreService.config`。
+   例如，Document節點存放區(AEM的MongoMK實作基礎)使用檔案`org.apache.jackrabbit.oak.plugins.document.DocumentNodeStoreService.config`。
 
 1. 編輯檔案，並設定組態選項。
 1. 以您要使用之資料存放區的PID建立設定檔。 編輯檔案以設定組態選項。
@@ -56,14 +56,14 @@ ht-degree: 1%
 
 >[!CAUTION]
 >
->區段節點存放區的PID已從AEM 6.3中的AEM 6的`org.apache.jackrabbit.oak.plugins.segment.SegmentNodeStoreService in previous versions`變更為`org.apache.jackrabbit.oak.segment.SegmentNodeStoreService`。請務必進行必要的設定調整以反映此變更。
+>區段節點存放區的PID已從AEM 6的`org.apache.jackrabbit.oak.plugins.segment.SegmentNodeStoreService in previous versions`變更為AEM 6.3中的`org.apache.jackrabbit.oak.segment.SegmentNodeStoreService`。請務必進行必要的設定調整以反映此變更。
 
 您可以設定下列選項：
 
 * `repository.home`：儲儲存儲存存庫相關資料的儲存庫本位目錄路徑。 依預設，區段檔案儲存在`crx-quickstart/segmentstore`目錄下。
 
 * `tarmk.size`：區段的大小上限（以MB為單位）。 預設最大為256MB。
-* `customBlobStore`：表示使用自訂資料存放區的布林值。 AEM 6.3及更高版本的預設值為true。 AEM 6.3之前的預設值為false。
+* `customBlobStore`：表示使用自訂資料存放區的布林值。 AEM 6.3及更高版本的預設值為true。 AEM 6.3之前的版本預設為false。
 
 以下是範例`org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config`檔案：
 
@@ -137,13 +137,13 @@ customBlobStore=B"false"
 
 ## Amazon S3資料存放區 {#amazon-s-data-store}
 
-AEM可設定為將資料儲存在Amazon的Simple Storage Service (S3)中。 它使用`org.apache.jackrabbit.oak.plugins.blob.datastore.S3DataStore.config` PID進行設定。
+AEM可設定為將資料儲存在Amazon的Simple Storage Service (S3)。 它使用`org.apache.jackrabbit.oak.plugins.blob.datastore.S3DataStore.config` PID進行設定。
 
 >[!NOTE]
 >
->AEM 6.5支援在Amazon的S3儲存資料，但並未延伸至在其他平台儲存資料，這些平台的廠商可能有自己的Amazon S3 API實作。
+>AEM 6.5支援在Amazon的S3中儲存資料，但並未延伸至在其他平台中儲存資料，因為這些平台的廠商可能有自己的Amazon S3 API實作。
 
-若要啟用S3資料存放區功能，必須下載及安裝包含S3資料存放區聯結器的Feature Pack。 移至[Adobe存放庫](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.oak.s3connector/)，並從Feature Pack 1.10.x版（例如com.adobe.granite.oak.s3connector-1.10.0.zip）下載最新版本。 此外，您必須下載並安裝[AEM 6.5發行說明](/help/release-notes/release-notes.md)頁面上列出的最新AEM Service Pack。
+若要啟用S3資料存放區功能，必須下載及安裝包含S3資料存放區聯結器的Feature Pack。 前往[Adobe存放庫](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.oak.s3connector/)並從Feature Pack 1.10.x版（例如com.adobe.granite.oak.s3connector-1.10.0.zip）下載最新版本。 此外，您必須下載並安裝[AEM 6.5發行說明](/help/release-notes/release-notes.md)頁面上列出的最新AEM Service Pack。
 
 >[!NOTE]
 >
@@ -165,7 +165,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 
    將以上位置的所有內容複製到`<aem-install>/crx-quickstart/install.`
 
-1. 如果AEM已設定為搭配Tar或MongoDB儲存體使用，請先從&#x200B;***&lt;aem-install>***/*crx-quickstart*/*install*&#x200B;資料夾移除任何現有的設定檔，然後再繼續。 必須移除的檔案包括：
+1. 如果AEM已設定為搭配Tar或MongoDB儲存體使用，請先從***&lt;aem-install>***/*crx-quickstart*/*install*&#x200B;資料夾移除任何現有的設定檔，然後再繼續。 必須移除的檔案包括：
 
    * `For MongoMK: org.apache.jackrabbit.oak.plugins.document.DocumentNodeStoreService.config`
    * `For TarMK: org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config`
@@ -232,7 +232,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 >
 >S3聯結器同時支援IAM使用者驗證和IAM角色驗證。 若要使用IAM角色驗證，請忽略組態檔中的`accessKey`和`secretKey`值。 然後，S3聯結器會預設為指派給執行個體的[IAM角色](https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/java-dg-roles.html)。
 
-| 索引鍵 | 說明 | 預設 | 必填 |
+| 索引鍵 | 說明 | 預設 | 必要 |
 | --- | --- | --- | --- |
 | accessKey | 可存取貯體之IAM使用者的存取金鑰ID。 | | 是，當不使用IAM角色時。 |
 | secretKey | 可存取貯體的IAM使用者機密存取金鑰。 | | 是，當不使用IAM角色時。 |
@@ -343,7 +343,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 
    `java -jar cq-quickstart.jar -unpack`
 
-1. 解壓縮AEM之後，請在安裝目錄&#x200B;*crx-quickstart*/*install*&#x200B;中建立資料夾。
+1. 解壓縮AEM後，請在安裝目錄&#x200B;*crx-quickstart*/*install*&#x200B;中建立資料夾。
 
 1. 在`crx-quickstart`資料夾中建立這兩個檔案：
 
@@ -355,7 +355,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 
 1. 依照上述說明，安裝S3資料存放區所需的兩個套件組合。
 1. 確定已安裝MongoDB且正在執行`mongod`的執行個體。
-1. 使用以下命令啟動AEM：
+1. 使用下列命令啟動AEM：
 
    `java -Xmx1024m -jar cq-quickstart.jar -r crx3,crx3mongo`
 
@@ -389,12 +389,12 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
    >[https://mvnrepository.com/artifact/org.apache.jackrabbit/oak-run/](https://mvnrepository.com/artifact/org.apache.jackrabbit/oak-run/)
    >
    >
-   >您必須根據您在AEM安裝中使用的Oak版本，使用不同版本的工具。 在使用工具之前，請檢視以下版本需求清單：
+   >您必須根據您在安裝AEM時所使用的Oak版本，使用不同版本的工具。 在使用工具之前，請檢視以下版本需求清單：
    >
    >
    >
    >    * 若為Oak版本&#x200B;**1.2.x**，請使用Oak執行的&#x200B;**1.2.12或更新版本**
-   >    * 若是比上述&#x200B;**更新的Oak版本**，請使用與AEM安裝的Oak核心相符的Oak執行版本。
+   >    * 若是比上述&#x200B;**更新的Oak版本**，請使用與AEM安裝的Oak核心相符的Oak-run版本。
    >
    >
 
@@ -409,13 +409,13 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 
 ## Azure 資料存放區 {#azure-data-store}
 
-可以將AEM設定為將資料儲存在Microsoft®的Azure儲存服務。 它使用`org.apache.jackrabbit.oak.plugins.blob.datastore.AzureDataStore.config` PID進行設定。
+AEM可設定為將資料儲存在Microsoft®的Azure儲存服務。 它使用`org.apache.jackrabbit.oak.plugins.blob.datastore.AzureDataStore.config` PID進行設定。
 
-若要啟用Azure資料存放區功能，必須下載並安裝包含Azure Connector的功能套件。 前往[Adobe存放庫](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.oak.azureblobconnector/)，並從Feature Pack 1.6.x版（例如com.adobe.granite.oak.azureblobconnector-1.6.3.zip）下載最新版本。
+若要啟用Azure資料存放區功能，必須下載並安裝包含Azure Connector的功能套件。 前往[Adobe存放庫](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.oak.azureblobconnector/)並從Feature Pack 1.6.x版（例如com.adobe.granite.oak.azureblobconnector-1.6.3.zip）下載最新版本。
 
 >[!NOTE]
 >
->搭配TarMK使用AEM時，二進位檔案預設會儲存在FileDataStore中。 若要搭配Azure DataStore使用TarMK，您必須使用`crx3tar-nofds`執行模式啟動AEM，例如：
+>搭配TarMK使用AEM時，二進位檔預設會儲存在FileDataStore中。 若要搭配Azure DataStore使用TarMK，您必須使用`crx3tar-nofds`執行模式啟動AEM，例如：
 
 ```shell
 java -jar <aem-jar-file>.jar -r crx3tar-nofds
@@ -426,7 +426,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 1. 將Feature Pack zip檔案的內容解壓縮至暫存資料夾。
 
 1. 移至暫存資料夾，並將`jcr_root/libs/system/install`的內容複製到`<aem-install>crx-quickstart/install`資料夾。
-1. 如果AEM已設定為使用Tar或MongoDB儲存體，請先從`/crx-quickstart/install`資料夾移除任何現有的設定檔，然後再繼續。 必須移除的檔案包括：
+1. 如果AEM已設定為搭配Tar或MongoDB儲存體使用，請先從`/crx-quickstart/install`資料夾移除任何現有的設定檔，然後再繼續。 必須移除的檔案包括：
 
    ForMongoMK：
 
@@ -445,7 +445,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 * azureSas=」：在聯結器的1.6.3版本中，新增了Azure共用存取簽章(SAS)支援。 **如果組態檔中同時存在SAS和儲存認證，則SAS具有優先權。**&#x200B;如需SAS的詳細資訊，請參閱[正式檔案](https://learn.microsoft.com/en-us/azure/storage/common/storage-sas-overview)。 請確定&#39;=&#39;字元已逸出，如&#39;\=&#39;。
 
 * azureBlobEndpoint=&quot;： Azure Blob端點。 例如，https://&lt;storage-account>.blob.core.windows.net。
-* accessKey=&quot;：儲存體帳戶名稱。 如需Microsoft® Azure驗證認證的詳細資訊，請參閱[正式檔案](https://azure.microsoft.com/en-us/documentation/articles/storage-create-storage-account)。
+* accessKey=&quot;：儲存體帳戶名稱。 如需Microsoft® Azure驗證認證的詳細資訊，請參閱[正式檔案](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-create)。
 
 * secretKey=&quot;：儲存體存取金鑰。 請確定&#39;=&#39;字元已逸出，如&#39;\=&#39;。
 * container=&quot;： Microsoft® Azure Blob儲存容器名稱。 容器是一組Blob。 如需其他詳細資訊，請閱讀[正式檔案](https://learn.microsoft.com/en-us/rest/api/storageservices/Naming-and-Referencing-Containers--Blobs--and-Metadata?redirectedfrom=MSDN)。

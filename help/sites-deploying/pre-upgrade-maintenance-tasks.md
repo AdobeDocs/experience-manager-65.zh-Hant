@@ -10,9 +10,9 @@ feature: Upgrading
 exl-id: 37d4aee4-15eb-41ab-ad71-dfbd5c7910f8
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+source-git-commit: 8f638eb384bdca59fb6f4f8990643e64f34622ce
 workflow-type: tm+mt
-source-wordcount: '2014'
+source-wordcount: '1991'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 在開始升級之前，請務必遵循這些維護任務，以確保系統準備就緒，並可在發生問題時回覆：
 
 * [確保有足夠的磁碟空間](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#ensure-sufficient-disk-space)
-* [完全備份AEM](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#fully-back-up-aem)
+* [完整備份AEM](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#fully-back-up-aem)
 * [將變更備份至/etc](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#backup-changes-etc)
 * [產生quickstart.properties檔案](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#generate-quickstart-properties)
 * [設定工作流程和稽核記錄清除](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#configure-wf-audit-purging)
@@ -42,13 +42,13 @@ ht-degree: 0%
 
 執行升級時，除了內容和程式碼升級活動外，還必須執行存放庫移轉。 移轉作業會以新的Segment Tar格式建立存放庫復本。 因此，您需要足夠的磁碟空間，以保留儲存庫的第二個（可能更大）版本。
 
-## 完全備份AEM {#fully-back-up-aem}
+## 完整備份AEM {#fully-back-up-aem}
 
-在開始升級之前，應該先完整備份AEM。 請務必備份存放庫、應用程式安裝、資料存放區和Mongo執行個體（如適用）。 如需有關備份與還原AEM執行個體的詳細資訊，請參閱[備份與還原](/help/sites-administering/backup-and-restore.md)。
+在開始升級之前，應該先完整備份AEM。 請務必備份存放庫、應用程式安裝、資料存放區和Mongo執行個體（如適用）。 如需有關備份和還原AEM執行個體的詳細資訊，請參閱[備份和還原](/help/sites-administering/backup-and-restore.md)。
 
 ## 將變更備份至/etc {#backup-changes-etc}
 
-升級程式在維護及合併存放庫中`/apps`及`/libs`路徑下的現有內容與設定方面做得很好。 對於`/etc`路徑的變更（包括Context Hub設定），通常需要在升級後重新套用這些變更。 雖然升級會備份任何無法在`/var`下合併的變更，但Adobe建議您在開始升級前手動備份這些變更。
+升級程式在維護及合併存放庫中`/apps`及`/libs`路徑下的現有內容與設定方面做得很好。 對於`/etc`路徑的變更（包括Context Hub設定），通常需要在升級後重新套用這些變更。 雖然升級會為無法在`/var`下合併的任何變更製作備份復本，但Adobe建議您在開始升級前手動備份這些變更。
 
 ## 產生quickstart.properties檔案 {#generate-quickstart-properties}
 
@@ -56,25 +56,23 @@ ht-degree: 0%
 
 ## 設定工作流程和稽核記錄清除 {#configure-wf-audit-purging}
 
-`WorkflowPurgeTask`和`com.day.cq.audit.impl.AuditLogMaintenanceTask`任務需要單獨的OSGi設定，沒有它們就無法運作。 如果它們在升級前工作執行期間失敗，遺失設定是最可能的原因。 因此，如果您不想執行OSGi設定，請務必為這些工作新增OSGi設定，或將其從升級前最佳化工作清單中完全移除。 您可以在[管理工作流程執行個體](/help/sites-administering/workflows-administering.md)找到設定工作流程清除工作的檔案，也可以在AEM 6[&#128279;](/help/sites-administering/operations-audit-log.md)中的稽核記錄維護，找到稽核記錄維護工作設定。
-
-如需CQ 5.6的工作流程與稽核記錄清除，以及AEM 6.0的稽核記錄清除，請參閱[清除工作流程與稽核節點](https://helpx.adobe.com/experience-manager/kb/howtopurgewf.html)。
+`WorkflowPurgeTask`和`com.day.cq.audit.impl.AuditLogMaintenanceTask`任務需要單獨的OSGi設定，沒有它們就無法運作。 如果它們在升級前工作執行期間失敗，遺失設定是最可能的原因。 因此，如果您不想執行OSGi設定，請務必為這些工作新增OSGi設定，或將其從升級前最佳化工作清單中完全移除。 您可以在[管理工作流程執行個體](/help/sites-administering/workflows-administering.md)找到設定工作流程清除工作的檔案，也可以在AEM 6](/help/sites-administering/operations-audit-log.md)中的[稽核記錄維護找到稽核記錄維護工作設定。
 
 ## 安裝、設定及執行升級前工作 {#install-configure-run-pre-upgrade-tasks}
 
 由於AEM允許的自訂等級，環境通常不遵循統一的執行升級方式。 因此，建立標準化的升級程式將是一個困難的過程。
 
-在舊版中，已停止或無法安全繼續的AEM升級也很難進行。 此問題會導致需要重新啟動完整升級程式的情況，或執行有缺陷的升級而不會觸發任何警告的情況。
+在舊版中，已停止或無法安全恢復的AEM升級也很難進行。 此問題會導致需要重新啟動完整升級程式的情況，或執行有缺陷的升級而不會觸發任何警告的情況。
 
 為了解決這些問題，Adobe在升級程式中新增了數個增強功能，使其更具復原力且更方便使用。 升級前必須手動執行的維護工作已最佳化並自動化。 此外，已新增升級後報告，以便可以完全審查程式，希望更容易發現任何問題。
 
-升級前的維護工作目前分散在手動執行部分或全部的各種介面中。 AEM 6.3中推出的升級前維護最佳化可讓您以統一方式觸發這些任務，並可依需求檢查結果。
+升級前的維護工作目前分散在手動執行部分或全部的各種介面中。 AEM 6.3中推出的升級前維護最佳化可讓您以統一方式觸發這些工作，並可依需求檢查結果。
 
-升級前最佳化步驟中包含的所有工作與AEM 6.0以後的所有版本都相容。
+升級前最佳化步驟中包含的所有工作，都與AEM 6.0之後的所有版本相容。
 
 ### 如何設定 {#how-to-set-it-up}
 
-在AEM 6.3和更新版本中，升級前維護最佳化任務包含在快速入門jar中。
+在AEM 6.3及更新版本中，快速入門jar中包含升級前維護最佳化任務。
 
 <!-- URLs below are all 404s. This content should probably be removed because it is entirely obsolete.
 
@@ -107,7 +105,7 @@ You can find the packages at these locations:
   <tr>
    <td><strong>任務</strong></td>
    <td><strong>執行模式</strong></td>
-   <td><strong>附註</strong></td>
+   <td><strong>備註</strong></td>
   </tr>
   <tr>
    <td><code>TarIndexMergeTask</code></td>
@@ -127,7 +125,7 @@ You can find the packages at these locations:
   <tr>
    <td><code>WorkflowPurgeTask</code></td>
    <td>crx2/crx3</td>
-   <td>必須先設定AdobeGranite工作流程清除設定OSGi，才能執行。</td>
+   <td>必須先設定Adobe Granite工作流程清除設定OSGi，才能執行。</td>
   </tr>
   <tr>
    <td><code>GenerateBundlesListFileTask</code></td>
@@ -224,12 +222,12 @@ You can find the packages at these locations:
   <tr>
    <td><code>runAllPreUpgradeHealthChecks(shutDownOnSuccess)</code></td>
    <td>動作</td>
-   <td><p>執行所有升級前健康情況檢查，並將其狀態儲存在sling本位目錄路徑中名為<code>preUpgradeHCStatus.properties</code>的檔案中。 如果<code>shutDownOnSuccess</code>引數設定為<code>true</code>，AEM執行個體會關閉，但前提是所有升級前健康狀態檢查的狀態都為「正常」。</p> <p>屬性檔案是作為任何未來升級<br />的先決條件，如果升級前健康狀態檢查<br />執行失敗，則升級程式會停止。 如果您要忽略升級前的<br />健康情況檢查結果，並仍要啟動升級，您可以刪除檔案。</p> </td>
+   <td><p>執行所有升級前健康情況檢查，並將其狀態儲存在sling本位目錄路徑中名為<code>preUpgradeHCStatus.properties</code>的檔案中。 如果<code>shutDownOnSuccess</code>引數設為<code>true</code>，AEM執行個體會關閉，但前提是所有升級前健康狀態檢查的狀態都為「正常」。</p> <p>屬性檔案是作為任何未來升級<br />的先決條件，如果升級前健康狀態檢查<br />執行失敗，則升級程式會停止。 如果您要忽略升級前的<br />健康情況檢查結果，並仍要啟動升級，您可以刪除檔案。</p> </td>
   </tr>
   <tr>
    <td><code>detectUsageOfUnavailableAPI(aemVersion)</code></td>
    <td>動作</td>
-   <td>列出<br />升級到指定的AEM版本時，不再滿足的所有匯入封裝。 目標AEM版本必須以<br />作為引數提供。</td>
+   <td>列出<br />升級到指定的AEM版本時，不再滿足的所有匯入套件。 目標AEM版本必須以<br />作為引數提供。</td>
   </tr>
  </tbody>
 </table>
@@ -247,11 +245,11 @@ You can find the packages at these locations:
 
 >[!NOTE]
 >
->只有在從AEM 5版本升級時，才需要執行此步驟。 從舊版AEM 6升級時可完全略過該步驟。
+>唯有當您從AEM 5版本升級時，才需要執行此步驟。 從舊版AEM 6升級時，可完全略過該步驟。
 
 在存放庫層級設定用於驗證的自訂`LoginModules`的方式在Apache Oak中發生了根本性變化。
 
-在使用CRX2設定的AEM版本中，該設定置於`repository.xml`檔案中，而從AEM 6開始，則是透過Web主控台在Apache Felix JAAS Configuration Factory服務中完成。
+在使用CRX2設定的AEM版本中，將放置在`repository.xml`檔案中，而從AEM 6開始，則是透過Web主控台在Apache Felix JAAS Configuration Factory服務中完成。
 
 因此，在升級後，必須停用任何現有的設定，並為Apache Oak重新建立。
 
@@ -284,9 +282,9 @@ You can find the packages at these locations:
 
 >[!NOTE]
 >
->關閉AEM執行個體後，僅從crx-quickstart/install目錄移除套件。 此步驟是開始就地升級程式之前的最後一個步驟之一。
+>僅在關閉AEM執行個體後，從crx-quickstart/install目錄移除套件。 此步驟是開始就地升級程式之前的最後一個步驟之一。
 
-移除任何透過本機檔案系統上的`crx-quickstart/install`目錄部署的Service Pack、Feature Pack或Hotfix。 如此可防止在更新完成後，在新AEM版本之上意外安裝舊的Hotfix和Service Pack。
+移除任何透過本機檔案系統上的`crx-quickstart/install`目錄部署的Service Pack、Feature Pack或Hotfix。 這麼做可避免在更新完成後，在新AEM版本之上意外安裝舊版Hotfix和Service Pack。
 
 ## 停止任何冷待命執行個體 {#stop-tarmk-coldstandby-instance}
 
@@ -337,7 +335,7 @@ AEM用於持續性的基礎Apache Oak棧疊通常會在需要時負責升級資�
 >* 在升級期間，您會遇到以下提及的任何錯誤。
 >
 
-在特殊情況下，服務使用者可能會在舊版AEM中被錯誤標籤為一般使用者。
+在特殊情況下，服務使用者在舊版AEM中可能會錯誤地標籤為一般使用者。
 
 如果發生這種情況，升級會失敗，並出現以下訊息：
 

@@ -10,7 +10,7 @@ exl-id: aef0350f-4d3d-47f4-9c7e-5675efef65d9
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: 8f638eb384bdca59fb6f4f8990643e64f34622ce
 workflow-type: tm+mt
 source-wordcount: '683'
 ht-degree: 3%
@@ -56,8 +56,8 @@ ht-degree: 3%
 >
 >請參閱：
 >
->* 知識庫文章，[疑難排解AEM TouchUI問題](https://helpx.adobe.com/experience-manager/kb/troubleshooting-aem-touchui-issues.html)，以取得進一步的提示和工具。
->* 關於[AEM 6.0 Developer Mode](https://experienceleague.adobe.com/docs/events/experience-manager-gems-recordings/gems2014/aem-developer-mode.html?lang=zh-Hant)的AEM Gems工作階段。
+>* 知識庫文章，[疑難排解AEM TouchUI問題](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-16935)，以取得進一步的秘訣和工具。
+>* 關於[AEM 6.0開發人員模式](https://experienceleague.adobe.com/docs/events/experience-manager-gems-recordings/gems2014/aem-developer-mode.html)的AEM Gems工作階段。
 >
 
 ## 開啟開發人員模式 {#opening-developer-mode}
@@ -106,7 +106,7 @@ ht-degree: 3%
 
 * **編輯指令碼**：連結：
 
-   * 以CRXDE Lite開啟元件指令碼。
+   * 在CRXDE Lite中開啟元件指令碼。
 
 * 展開元件專案（箭頭標頭）也可顯示：
 
@@ -125,7 +125,7 @@ ht-degree: 3%
 
 希望&#x200B;**錯誤**&#x200B;索引標籤永遠是空的（如上所述），但是當問題發生時，會顯示每個元件的下列詳細資料：
 
-* 如果元件將專案寫入錯誤記錄檔，連同錯誤的詳細資訊以及指向CRXDE Lite內適當程式碼的直接連結，會出現警告。
+* 如果元件將專案寫入錯誤記錄檔，連同錯誤的詳細資料和指向CRXDE Lite中適當程式碼的直接連結時，系統會發出警告。
 * 如果元件開啟管理員工作階段，會出現警告。
 
 例如，在呼叫未定義的方法的情況下，產生的錯誤會顯示在&#x200B;**錯誤**&#x200B;索引標籤中：

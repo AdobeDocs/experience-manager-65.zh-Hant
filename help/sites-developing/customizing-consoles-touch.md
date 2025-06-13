@@ -1,6 +1,6 @@
 ---
 title: 自訂主控台
-description: AEM提供各種機制，讓您能夠自訂編寫執行個體的主控台
+description: AEM提供多種機制，讓您能夠自訂編寫執行個體的主控台
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
@@ -10,7 +10,7 @@ exl-id: 6e67f2b3-78b9-45f2-b496-61776b9fd9cc
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 3aa55b88f589749fb49d5ff46340b0912d490157
+source-git-commit: 8f638eb384bdca59fb6f4f8990643e64f34622ce
 workflow-type: tm+mt
 source-wordcount: '649'
 ht-degree: 22%
@@ -23,7 +23,7 @@ ht-degree: 22%
 >
 >本檔案說明如何在現代、觸控式UI中自訂主控台，且不套用至傳統UI。
 
-AEM提供各種機制，可讓您自訂編寫執行個體的主控台（以及[頁面編寫功能](/help/sites-developing/customizing-page-authoring-touch.md)）。
+AEM提供多種機制，可讓您自訂編寫執行個體的主控台（以及[頁面編寫功能](/help/sites-developing/customizing-page-authoring-touch.md)）。
 
 * Clientlibs
 Clientlibs可讓您擴充預設實作以實現新功能，同時重複使用標準函式、物件和方法。 自訂時，您可以在`/apps.`下建立您自己的clientlib。例如，它可以儲存您自訂元件所需的程式碼。
@@ -64,7 +64,7 @@ Clientlibs可讓您擴充預設實作以實現新功能，同時重複使用標�
 
 >[!NOTE]
 >
->請參閱知識庫文章[AEM TouchUI問題疑難排解](https://helpx.adobe.com/experience-manager/kb/troubleshooting-aem-touchui-issues.html)，以取得進一步的秘訣和工具。
+>請參閱知識庫文章[疑難排解AEM TouchUI問題](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-16935)，以取得進一步的秘訣和工具。
 
 ## 自訂主控台的預設檢視 {#customizing-the-default-view-for-a-console}
 
@@ -94,7 +94,7 @@ Clientlibs可讓您擴充預設實作以實現新功能，同時重複使用標�
 
 ### 將動作新增至工具列 {#add-new-action-to-the-toolbar}
 
-1. 您可以建置自己的元件，並包含自訂動作對應的使用者端程式庫。 例如，在下列位置執行&#x200B;**提升為Twitter**&#x200B;動作：
+1. 您可以建置自己的元件，並包含自訂動作對應的使用者端程式庫。 例如，在下列位置執行&#x200B;**促銷至Twitter**&#x200B;動作：
 
    `/apps/wcm/core/clientlibs/sites/js/twitter.js`
 
@@ -151,7 +151,6 @@ Clientlibs可讓您擴充預設實作以實現新功能，同時重複使用標�
 1. 選擇性：
 
    * 如果您想要插入其他資料，您必須使用撰寫[PageInforProvider](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageInfoProvider.html)
-
      `pageInfoProviderType`屬性。
 
    例如，請參閱底下的附加類別/套件（來自GitHub）。
