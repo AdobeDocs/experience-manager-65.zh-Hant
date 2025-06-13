@@ -6,9 +6,9 @@ role: Admin
 feature: Publishing
 exl-id: 5ba020a3-c36c-402b-a11b-d6b0426b03bf
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 75c15b0f0e4de2ea7fff339ae46b88ce8f6af83f
 workflow-type: tm+mt
-source-wordcount: '1555'
+source-wordcount: '1550'
 ht-degree: 2%
 
 ---
@@ -21,11 +21,11 @@ ht-degree: 2%
 * Proxy Worker用來定義和管理特定工作。
 這些可以涵蓋各種工作；例如，使用[!DNL InDesign Server]處理檔案。
 
-若要將檔案完全上傳至您已使用[!DNL Adobe InDesign]建立的[!DNL Experience Manager Assets]，請使用Proxy。 這會使用Proxy背景工作來與[!DNL Adobe InDesign Server]通訊，其中執行[指令碼](https://www.adobe.com/devnet/indesign/documentation.html#idscripting)以擷取中繼資料並產生[!DNL Experience Manager Assets]的各種轉譯。 Proxy背景工作可啟用雲端組態中[!DNL InDesign Server]與[!DNL Experience Manager]執行個體之間的雙向通訊。
+若要將檔案完全上傳至您已使用[!DNL Adobe InDesign]建立的[!DNL Experience Manager Assets]，請使用Proxy。 這會使用Proxy Worker與[!DNL Adobe InDesign Server]通訊，其中執行指令碼以擷取中繼資料並產生[!DNL Experience Manager Assets]的各種轉譯。 Proxy背景工作可啟用雲端組態中[!DNL InDesign Server]與[!DNL Experience Manager]執行個體之間的雙向通訊。
 
 >[!NOTE]
 >
->[!DNL Adobe InDesign]以兩種不同的方案提供。 [Adobe InDesign](https://www.adobe.com/products/indesign.html)案頭應用程式，用來設計列印和數位分送的版面配置。 [Adobe InDesign Server](https://www.adobe.com/products/indesignserver.html)可讓您根據使用[!DNL InDesign]建立的內容，以程式設計方式建立自動化檔案。 它以服務方式運作，提供其[ExtendScript](https://www.adobe.com/devnet/indesign/documentation.html#idscripting)引擎的介面。指令碼是以[!DNL ExtendScript]撰寫，類似[!DNL JavaScript]。 有關[!DNL InDesign]指令碼的資訊，請參閱[https://www.adobe.com/devnet/indesign/documentation.html#idscripting](https://www.adobe.com/devnet/indesign/documentation.html#idscripting)。
+>[!DNL Adobe InDesign]以兩種不同的方案提供。 [Adobe InDesign](https://www.adobe.com/products/indesign.html)案頭應用程式，用來設計列印和數位分送的版面配置。 [Adobe InDesign Server](https://www.adobe.com/products/indesignserver.html)可讓您根據使用[!DNL InDesign]建立的內容，以程式設計方式建立自動化檔案。 它是以提供ExtendScript引擎介面的服務方式運作。 指令碼是以[!DNL ExtendScript]撰寫，類似[!DNL JavaScript]。
 
 ## 擷取的運作方式 {#how-the-extraction-works}
 
@@ -43,18 +43,18 @@ ht-degree: 2%
    * 執行[!DNL InDesign Server]命令：
 
       * 會擷取結構、文字及任何媒體檔案。
-      * 會產生PDF和JPG轉譯。
-      * 會產生HTML和IDML轉譯。
+      * PDF和JPG轉譯會產生。
+      * HTML和IDML轉譯會產生。
 
-   * 將產生的檔案Post回[!DNL Experience Manager Assets]。
+   * 將產生的檔案發佈回[!DNL Experience Manager Assets]。
 
    >[!NOTE]
    >
-   >IDML是以XML為基礎的格式，可轉譯[!DNL InDesign]檔案的所有內容。 它使用[ZIP](https://www.techterms.com/definition/zip)壓縮儲存為壓縮封裝。 如需詳細資訊，請參閱[InDesign交換格式INX與IDML](https://www.peachpit.com/articles/article.aspx?p=1381880&amp;seqNum=8)。
+   >IDML是以XML為基礎的格式，可轉譯[!DNL InDesign]檔案的所有內容。 它使用[ZIP](https://techterms.com/definition/zip)壓縮儲存為壓縮封裝。 如需詳細資訊，請參閱[InDesign Interchange Formats INX與IDML](https://www.peachpit.com/promotions/adobe-creative-cloud-2024-release-books-ebooks-and-142536)。
 
    >[!CAUTION]
    >
-   >如果未安裝或未設定[!DNL InDesign Server]，則您仍可上傳INDD檔案至[!DNL Experience Manager]。 不過，產生的轉譯僅限於PNG和JPEG。 您將無法產生HTML、.idml或頁面轉譯。
+   >如果未安裝或未設定[!DNL InDesign Server]，則您仍可上傳INDD檔案至[!DNL Experience Manager]。 不過，產生的轉譯僅限於PNG和JPEG。 您將無法產生HTML、`.idml`或頁面轉譯。
 
 1. 在擷取和轉譯產生後：
 
@@ -69,7 +69,7 @@ ht-degree: 2%
 1. [安裝InDesign Server](#installing-the-indesign-server)。
 1. 必要時，[設定Experience Manager Assets工作流程](#configuring-the-aem-assets-workflow)。
 只有在預設值不適合您的執行個體時，才需要執行此操作。
-1. 設定InDesign Server[&#128279;](#configuring-the-proxy-worker-for-indesign-server)的Proxy背景工作。
+1. 設定InDesign Server](#configuring-the-proxy-worker-for-indesign-server)的[Proxy背景工作。
 
 ### 安裝[!DNL InDesign Server] {#installing-the-indesign-server}
 
@@ -105,13 +105,13 @@ ht-degree: 2%
 
 此步驟控制從INDD檔案擷取媒體。
 
-若要自訂，您可以編 **[!UICONTROL 輯]** 「媒體擷 **[!UICONTROL 取」步驟的「引]** 數」標籤。
+若要自訂，您可以編輯&#x200B;**[!UICONTROL 媒體擷取]**&#x200B;步驟的&#x200B;**[!UICONTROL 引數]**&#x200B;標籤。
 
 ![媒體擷取引數和指令碼路徑](assets/media_extraction_arguments_scripts.png)
 
 媒體擷取引數和指令碼路徑
 
-* **ExtendScript程式庫**：這是其他指令碼所需的簡單http get/post方法程式庫。
+* **ExtendScript程式庫**：這是簡單的http get/post方法程式庫，其他指令碼需要它。
 
 * **延伸指令碼**：您可以在此指定不同的指令碼組合。 如果您想要在[!DNL InDesign Server]上執行自己的指令碼，請將指令碼儲存在`/apps/settings/dam/indesign/scripts`。
 
@@ -121,7 +121,7 @@ For information about [!DNL Adobe InDesign] scripts, see [InDesign developer doc
 
 >[!CAUTION]
 >
->請勿變更ExtendScript資料庫。 此程式庫提供與Sling通訊所需的HTTP功能。 此設定指定要傳送至[!DNL InDesign Server]在那裡使用的資料庫。
+>請勿變更ExtendScript程式庫。 此程式庫提供與Sling通訊所需的HTTP功能。 此設定指定要傳送至[!DNL InDesign Server]在那裡使用的資料庫。
 
 媒體擷取工作流程步驟執行的`ThumbnailExport.jsx`指令碼會產生JPG格式的縮圖轉譯。 此轉譯是由「處理縮圖」工作流程步驟用來產生[!DNL Experience Manager]所需的靜態轉譯。
 
@@ -129,7 +129,7 @@ For information about [!DNL Adobe InDesign] scripts, see [InDesign developer doc
 
 #### 頁面擷取 {#page-extraction}
 
-這會從擷取的元素建立[!DNL Experience Manager]頁面。 擷取處理常式用於從轉譯(目前為HTML或IDML)中擷取資料。 然後，這些資料可用來使用PageBuilder建立頁面。
+這會從擷取的元素建立[!DNL Experience Manager]頁面。 擷取處理常式用於從轉譯(目前為HTML或IDML)中擷取資料。 然後，這些資料會用於使用「頁面產生器」建立頁面。
 
 若要自訂，您可以編輯「頁 **[!UICONTROL 面擷取]** 」步驟 **[!UICONTROL 的「引]** 數」標籤。
 
@@ -154,7 +154,7 @@ For information about [!DNL Adobe InDesign] scripts, see [InDesign developer doc
 >
 >Worker位於Proxy執行個體上。
 
-1. 在[工具]主控台中，展開左窗格中的&#x200B;**[!UICONTROL Cloud Service組態]**。 然後展開&#x200B;**[!UICONTROL 雲端Proxy設定]**。
+1. 在[工具]主控台中，展開左側窗格中的&#x200B;**[!UICONTROL 雲端服務組態]**。 然後展開&#x200B;**[!UICONTROL 雲端Proxy設定]**。
 
 1. 連按兩下 **[!UICONTROL IDS工作器]** ，以開啟以進行設定。
 
@@ -184,7 +184,7 @@ For information about [!DNL Adobe InDesign] scripts, see [InDesign developer doc
 您現在可以啟用ID的平行作業處理。 決定[!DNL InDesign Server]可以處理的平行工作數目上限(`x`)：
 
 * 在單一多處理器電腦上，[!DNL InDesign Server]可以處理的平行工作數目上限(`x`)比執行ID的處理器數目少一個。
-* 當您在多部機器上執行ID時，您需要計算可用的處理器總數（即所有機器上的處理器總數），然後減去機器總數。
+* 當您在多部機器上執行ID時，您必須計算可用的處理器總數（即所有機器上的處理器），然後減去機器總數。
 
 若要設定平行ID作業的數目：
 
@@ -198,8 +198,8 @@ For information about [!DNL Adobe InDesign] scripts, see [InDesign developer doc
    * **最大平行工作** - `<*x*>` （如上計算）
 
 1. 儲存這些變更。
-1. 若要啟用AdobeCS6和更新版本的多工作階段支援，請核取`com.day.cq.dam.ids.impl.IDSJobProcessor.name`組態下的`enable.multisession.name`核取方塊。
-1. 將SOAP端點新增至IDS Worker設定[&#128279;](#configuring-the-proxy-worker-for-indesign-server)，以建立`x` IDS Worker的集區。
+1. 若要啟用Adobe CS6和更新版本的多工作階段支援，請核取`com.day.cq.dam.ids.impl.IDSJobProcessor.name`設定下的`enable.multisession.name`核取方塊。
+1. 將SOAP端點新增至IDS Worker設定](#configuring-the-proxy-worker-for-indesign-server)，以建立`x` IDS Worker的[集區。
 
    如果有多部電腦執行[!DNL InDesign Server]，請為每部電腦新增SOAP端點（每部電腦的處理器數目–1）。
 
@@ -209,7 +209,7 @@ TBD: Make updates to configurations for allow and block list after product updat
 
 >[!NOTE]
 >
->使用背景工作集區時，您可以啟用封鎖的IDS背景工作清單。
+>使用背景工作集區時，您可以啟用IDS背景工作區的封鎖清單。
 >
 >若要這麼做，請在`com.day.cq.dam.ids.impl.IDSJobProcessor.name`設定下啟用&#x200B;**[!UICONTROL enable.retry.name]**&#x200B;核取方塊，以啟用IDS工作重試。
 >

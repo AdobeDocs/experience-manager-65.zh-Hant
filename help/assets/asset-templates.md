@@ -6,9 +6,9 @@ role: User
 feature: Asset Management,Developer Tools
 exl-id: 12c92aad-3a1d-486e-a830-31de2fc6d07b
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 0b90fdd13efc5408ef94ee1966f04a80810b515e
 workflow-type: tm+mt
-source-wordcount: '1576'
+source-wordcount: '1558'
 ht-degree: 1%
 
 ---
@@ -17,11 +17,11 @@ ht-degree: 1%
 
 資產範本是一種特殊型別的資產，可協助您將視覺豐富的內容快速重新用於數位和印刷媒體。 資產範本包含固定傳訊區段和可編輯區段兩個部分。 固定傳訊區段可包含專有內容，例如已停用編輯的品牌標誌和版權資訊。 可編輯區段可在可編輯以自訂訊息的欄位中包含視覺和文字內容。
 
-在保護全球招牌的同時進行有限編輯的彈性，讓資產範本成為快速調整與發佈內容的理想建置區塊，成為各種功能的內容人工因素。 重新調整內容用途有助於降低管理列印和數位頻道的成本，並在這些頻道中提供整體且一致的體驗。
+資產範本提供進行有限編輯的彈性，同時確保全域招牌的安全。 這種能力使他們成為在各種功能間快速調整及發佈內容的理想建置區塊。 重新調整內容用途有助於降低管理列印和數位頻道的成本，並在這些頻道中提供整體且一致的體驗。
 
-身為行銷人員，您可以在[!DNL Experience Manager Assets]中儲存和管理範本，並使用單一基本範本輕鬆建立多個個人化列印體驗。 您可以建立各種型別的行銷宣傳品，包括小冊子、傳單、明信片、名片等，以便向客戶清楚傳達行銷訊息。 您也可以組合現有或新列印輸出的多頁列印輸出。 最重要的是，您可以輕鬆同時提供數位和列印體驗，為使用者提供一致的整合式體驗。
+身為行銷人員，您可以在[!DNL Experience Manager Assets]中儲存和管理範本，並使用單一基本範本輕鬆建立多個個人化列印體驗。 您可以建立各種型別的行銷宣傳品，包括小冊子、傳單、明信片、名片等，以向客戶清楚傳達行銷訊息。 您也可以組合現有或新列印輸出的多頁列印輸出。 最重要的是，您可以輕鬆同時提供數位和列印體驗，為使用者提供一致的整合式體驗。
 
-雖然資產範本多為[!DNL Adobe InDesign]個檔案，但[!DNL Adobe InDesign]的熟練程度並不妨礙建立亮麗的成品。 您不需要將[!DNL Adobe InDesign]範本的欄位對應到建立目錄時所需的產品欄位。 您可以直接在Web介面上以WYSIWYG模式編輯範本。 不過，若要讓[!DNL Adobe InDesign]處理您的編輯變更，您必須先設定[!DNL Experience Manager Assets]以與[!DNL Adobe InDesign Server]整合。
+雖然資產範本多為[!DNL Adobe InDesign]個檔案，但[!DNL Adobe InDesign]的熟練程度並不妨礙建立亮麗的成品。 您不需要將[!DNL Adobe InDesign]範本的欄位對應到建立目錄時所需的產品欄位。 您可以在WYSIWYG模式中直接在Web介面編輯範本。 不過，若要讓[!DNL Adobe InDesign]處理您的編輯變更，您必須先設定[!DNL Experience Manager Assets]以與[!DNL Adobe InDesign Server]整合。
 
 能夠從Web介面編輯[!DNL Adobe InDesign]範本，有助於促進創意和行銷人員之間的協同合作。 提升的內容速度可縮短行銷文宣的時間。
 
@@ -67,7 +67,7 @@ ht-degree: 1%
 
 ## 編輯附屬專案 {#editing-a-collateral}
 
-您可以在建立附屬專案後立即編輯附屬專案。 或者，您也可以從[!UICONTROL 範本]頁面或資產頁面將其開啟。
+您可以在建立附屬專案後立即編輯附屬專案。 或者，您也可以從[!UICONTROL 範本]頁面或資產頁面開啟它。
 
 1. 若要開啟要編輯的附屬資料，請執行下列任一項作業：
 
@@ -90,7 +90,7 @@ ht-degree: 1%
 
    >[!NOTE]
    >
-   >確定您的[!DNL Experience Manager]部署已與[!DNL InDesign Server]整合，以讓[!DNL Experience Manager Assets]能夠從[!DNL InDesign]範本擷取資料，並使其可用於編輯。 如需詳細資訊，請參閱[整合Experience Manager Assets與InDesign Server](/help/assets/indesign.md)。
+   >將您的[!DNL Experience Manager]部署與[!DNL InDesign Server]整合，以便[!DNL Experience Manager Assets]可以從[!DNL InDesign]範本擷取資料，並使其可用於編輯。 如需詳細資訊，請參閱[整合Experience Manager Assets與InDesign Server](/help/assets/indesign.md)。
 
 1. 若要修改可編輯欄位中的文字，請從可編輯欄位清單中按一下文字欄位，然後編輯欄位中的文字。
 
@@ -124,12 +124,11 @@ ht-degree: 1%
    >
    >若要啟用[!DNL Experience Manager]以解析影像，請執行下列動作：
    >
-   >* 建立[!DNL InDesign]範本時內嵌影像（請參閱[關於連結和內嵌圖形](https://helpx.adobe.com/tw/indesign/using/graphics-links.html)）。
-   >* 將[!DNL Experience Manager]掛接至您的本機檔案系統，然後將遺漏的圖示與[!DNL Experience Manager]中的現有資產對應。
+   >* 建立[!DNL InDesign]範本時內嵌影像（請參閱[關於連結和內嵌圖形](https://helpx.adobe.com/indesign/using/graphics-links.html)）。
+   >* 將[!DNL Experience Manager]掛接至您的本機檔案系統，然後將遺失的圖示與[!DNL Experience Manager]中的現有資產對應。
    >
-   >如需有關使用[!DNL InDesign]檔案的詳細資訊，請參閱[使用Experience Manager](https://helpx.adobe.com/experience-manager/kb/best-practices-idd-docs-aem.html)中InDesign檔案的最佳實務。
 
-1. 若要產生手冊的PDF轉譯，請在對話方塊中選取Acrobat選項，然後按一下[繼續]。**&#x200B;**
+1. 若要產生手冊的PDF轉譯，請在對話方塊中選取Acrobat選項，然後按一下[繼續]。****
 1. 附屬品片段會建立於您開始使用的資料夾中。 若要檢視轉譯，請開啟宣傳品，然後從GlobalNav清單中選擇&#x200B;**[!UICONTROL 轉譯]**。
 
    ![chlimage_1-118](assets/chlimage_1-323.png)
@@ -165,7 +164,7 @@ ht-degree: 1%
 
    ![chlimage_1-126](assets/chlimage_1-331.png)
 
-1. 在[!UICONTROL 設定範本]畫面中，指定附屬專案的名稱。 選擇性地指定您認為適當的任何標籤。 如果要以PDF格式匯出輸出，請選取&#x200B;**[!UICONTROL Acrobat (.PDF)]**。 依預設，宣傳品會以JPG和[!DNL InDesign]格式匯出。 若要變更多頁附屬資料的顯示縮圖，請按一下[變更縮圖]。**&#x200B;**
+1. 在[!UICONTROL 設定範本]畫面中，指定附屬專案的名稱。 選擇性地指定您認為適當的任何標籤。 如果要以PDF格式匯出輸出，請選取&#x200B;**[!UICONTROL Acrobat (.PDF)]**。 依預設，宣傳品會以JPG和[!DNL InDesign]格式匯出。 若要變更多頁附屬資料的顯示縮圖，請按一下[變更縮圖]。****
 
    ![chlimage_1-127](assets/chlimage_1-332.png)
 
