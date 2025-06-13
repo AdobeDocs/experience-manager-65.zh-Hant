@@ -41,14 +41,14 @@ ht-degree: 0%
 >使用規則集時請務必小心，因為規則集可能會導致Dynamic Media內容無法在您的網站上顯示。
 
 有些範例規則集可幫助您建立自己的規則集。
-請參閱[規則集參考](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/rule-set-reference/c-rule-set-reference)。
+請參閱[規則集參考](https://experienceleague.adobe.com/zh-hant/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/rule-set-reference/c-rule-set-reference)。
 
 與建立所有規則集時一樣，使用XML驗證器程式（例如xmlvalid）來上傳XML檔案之前，請確定該檔案有效。
 
 此外，請務必先在中繼環境中測試規則集，以免影響您的即時生產環境。
 生產環境和測試環境通常需要不同的登入。
 
-如需登入資訊，請參閱[Adobe Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/en/docs/dynamic-media-classic/using/getting-started/signing-out#sign-in-dmc-app)。
+如需登入資訊，請參閱[Adobe Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/zh-hant/docs/dynamic-media-classic/using/getting-started/signing-out#sign-in-dmc-app)。
 
 <!-- OBSOLETE INFORMATION * **NA staging environment** login page: [https://s7sps1-staging.scene7.com/IpsWeb/](https://s7sps1-staging.scene7.com/IpsWeb/)
 * **EMEA staging environment** login page: [https://s7sps3-staging.scene7.com/IpsWeb/](https://s7sps3-staging.scene7.com/IpsWeb/)
@@ -56,7 +56,7 @@ ht-degree: 0%
 
 **若要部署XML規則集：**
 
-1. 登入您的[Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/en/docs/dynamic-media-classic/using/getting-started/signing-out#sign-in-dmc-app)。
+1. 登入您的[Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/zh-hant/docs/dynamic-media-classic/using/getting-started/signing-out#sign-in-dmc-app)。
 
    布建時Adobe已提供您的憑證和登入詳細資訊。 如果您沒有這項資訊，請聯絡Adobe客戶支援。
 
