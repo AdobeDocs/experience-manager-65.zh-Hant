@@ -421,7 +421,7 @@ Dynamic Media Classic資產仍可透過安全預覽使用。 只有當資產在E
 您必須先設定下列專案，才能在不發佈資產的情況下將資產推送至Dynamic Media Classic：
 
 1. [使用Admin Console建立支援案例](https://helpx.adobe.com/tw/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html)。 在您的支援案例中，要求為您的Dynamic Media Classic帳戶啟用安全預覽。
-1. [為您的Dynamic Media Classic帳戶設定安全預覽](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/testing-assets-making-them-public.html)。
+1. [為您的Dynamic Media Classic帳戶設定安全預覽](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/testing-assets-making-them-public.html?lang=zh-Hant)。
 
 這些步驟與您在Dynamic Media Classic中建立任何安全測試設定時所遵循的步驟相同。
 
@@ -450,7 +450,7 @@ Dynamic Media Classic資產仍可透過安全預覽使用。 只有當資產在E
 1. 選取&#x200B;**[!UICONTROL 進階]**&#x200B;標籤。
 1. 在&#x200B;**[!UICONTROL 啟用安全檢視]**&#x200B;下拉式功能表中，選取&#x200B;**[!UICONTROL AEM發佈啟動時]**&#x200B;將資產推送到Dynamic Media Classic而不發佈。 (預設情況下，此值會設為&#x200B;**[!UICONTROL 立即]**，此處會立即發佈Dynamic Media Classic資產。)
 
-   請參閱[Dynamic Media Classic檔案](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/testing-assets-making-them-public.html)，以取得公開資產前測試資產的詳細資訊。
+   請參閱[Dynamic Media Classic檔案](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/testing-assets-making-them-public.html?lang=zh-Hant)，以取得公開資產前測試資產的詳細資訊。
 
    ![chlimage_1-302](assets/chlimage_1-302.png)
 
@@ -565,7 +565,7 @@ Dynamic Media Classic資產仍可透過安全預覽使用。 只有當資產在E
 
    例如，`psprocess="rasterize"&psresolution=120` 。
 
-   如需更多您可使用的上傳工作引數，請參閱[Adobe Dynamic Media Classic Image Production System API](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/c-overview.html)。
+   如需更多您可使用的上傳工作引數，請參閱[Adobe Dynamic Media Classic Image Production System API](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/c-overview.html?lang=zh-Hant)。
 
    >[!NOTE]
    >

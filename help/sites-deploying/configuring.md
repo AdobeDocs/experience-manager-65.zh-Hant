@@ -180,7 +180,7 @@ LDAP驗證會在存放庫層級進行，因此會直接由存放庫處理。 如
 
 Dispatcher是Adobe Experience Manager的快取或/及負載平衡工具。 它可以搭配企業級網頁伺服器使用。
 
-如需完整詳細資訊，請參閱[Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)，特別是[設定Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html)以取得進一步的設定詳細資料。
+如需完整詳細資訊，請參閱[Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant)，特別是[設定Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant)以取得進一步的設定詳細資料。
 
 ### 設定AEM LiveCycle Connector {#configuring-aem-livecycle-connector}
 

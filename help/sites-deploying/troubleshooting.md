@@ -67,7 +67,7 @@ AEM會記錄您可能想要設定以疑難排解安裝問題的詳細記錄。 �
 
 >[!NOTE]
 >
->另請參閱[分析記憶體問題](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html)。
+>另請參閱[分析記憶體問題](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html?lang=zh-Hant)。
 
 
 CRX本身的記憶體空間不足。 如果在CRX中執行的應用程式有更大的記憶體需求或請求記憶體密集型作業（例如大型交易），執行CRX的JVM執行個體必須以適當的記憶體設定啟動。

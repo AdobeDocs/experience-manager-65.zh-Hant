@@ -64,7 +64,7 @@ Clientlibs可讓您擴充預設實作以實現新功能，同時重複使用標�
 
 >[!NOTE]
 >
->請參閱知識庫文章[疑難排解AEM TouchUI問題](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-16935)，以取得進一步的秘訣和工具。
+>請參閱知識庫文章[疑難排解AEM TouchUI問題](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-kcs/kbarticles/ka-16935)，以取得進一步的秘訣和工具。
 
 ## 自訂主控台的預設檢視 {#customizing-the-default-view-for-a-console}
 

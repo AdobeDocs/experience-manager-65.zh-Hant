@@ -254,7 +254,7 @@ Adobe也提供Adobe Managed Services，可在Azure或AWS上部署AEM。 Adobe Ma
 
 ### Dispatcher平台（網頁伺服器） {#dispatcher-platforms-web-servers}
 
-Dispatcher是快取和負載平衡元件。 [下載最新的Dispatcher版本](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/release-notes.html)。 Experience Manager 6.5需要Dispatcher版本4.3.2或更新版本。
+Dispatcher是快取和負載平衡元件。 [下載最新的Dispatcher版本](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/release-notes.html?lang=zh-Hant)。 Experience Manager 6.5需要Dispatcher版本4.3.2或更新版本。
 
 下列Web伺服器支援與Dispatcher 4.3.2版搭配使用：
 
@@ -466,11 +466,11 @@ AEM Dynamic Media預設為停用。 請參閱此處[啟用Dynamic Media](/help/a
    <th><p><strong>支援的格式可轉換成PDF</strong></p> </th>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2020傳統路線</a>最新版本</td>
+   <td><a href="https://helpx.adobe.com/tw/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2020傳統路線</a>最新版本</td>
    <td>XPS、影像格式(BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC)、HTML、HTM、DWG、DXF和DWF</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2017傳統路線</a>最新版本（已棄用）</td>
+   <td><a href="https://helpx.adobe.com/tw/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2017傳統路線</a>最新版本（已棄用）</td>
    <td>XPS、影像格式(BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC)、HTML、HTM、DWG、DXF和DWF</td>
   </tr>
   <tr>
@@ -518,7 +518,7 @@ AEM Dynamic Media預設為停用。 請參閱此處[啟用Dynamic Media](/help/a
 >
 >此外，
 >
->* PDF Generator需要32位元版本的[Acrobat 2020 classic track version 20.004.30006](https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html)才能執行轉換。
+>* PDF Generator需要32位元版本的[Acrobat 2020 classic track version 20.004.30006](https://helpx.adobe.com/tw/acrobat/release-note/release-notes-acrobat-reader.html)才能執行轉換。
 >* PDF Generator僅支援32位元版本的Microsoft® Office Professional Plus及其他轉換所需的軟體。
 >* Microsoft® Office Professional Plus安裝可能會使用零售或MAK/KMS/AD型大量授權。
 >* 如果Microsoft® Office安裝由於任何原因（例如磁碟區授權安裝無法在指定期間內找到KMS主機）而停用或取消授權，轉換可能會失敗，直到安裝重新授權並重新啟用。
@@ -526,7 +526,7 @@ AEM Dynamic Media預設為停用。 請參閱此處[啟用Dynamic Media](/help/a
 >* PDF Generator不支援Microsoft® Office 365。
 >* 只有Windows和Linux®才支援OpenOffice適用的PDF Generator轉換。
 >* 只有Windows支援OCR PDF、最佳化PDF和Export PDF功能。
->* Acrobat版本與AEM Forms搭配，可啟用PDF Generator功能。 在AEM Forms授權期間，僅以程式設計方式存取AEM Forms隨附的版本，以與AEM Forms PDF Generator搭配使用。 如需詳細資訊，請參閱根據您的部署([內部部署](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html)或[Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))提供的AEM Forms產品說明
+>* Acrobat版本與AEM Forms搭配，可啟用PDF Generator功能。 在AEM Forms授權期間，僅以程式設計方式存取AEM Forms隨附的版本，以與AEM Forms PDF Generator搭配使用。 如需詳細資訊，請參閱根據您的部署([內部部署](https://helpx.adobe.com/tw/legal/product-descriptions/adobe-experience-manager-on-premise.html)或[Managed Services](https://helpx.adobe.com/tw/legal/product-descriptions/adobe-experience-manager-managed-services.html))提供的AEM Forms產品說明
 >* PDF Generator服務不支援Microsoft® Windows 10。
 >* PDF Generator無法使用Microsoft® Visio 2019轉換檔案。
 >* PDF Generator無法使用Microsoft® Project 2019轉換檔案。
