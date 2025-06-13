@@ -336,9 +336,9 @@ To understand pre-requisites for Smart Imaging, see [Am I eligible to use Smart 
 >**X-Adobe-Smart-Imaging = -1，正在傳遞WebP**
 >
 >如果`X-Adobe-Smart-Imaging`的值為–1，而且WebP仍在傳遞，則智慧型影像處理為作用中。 但是，由於快取已過時，因此未計算大小優勢。 您可以在影像的URL中使用`cache=update` （僅一次）來修正此問題。
->>使用修飾元的範例：
->>`https://smartimaging.scene7.com/is/image/SmartImaging/sample1?cache=update`
->>若要讓整個快取失效，您必須建立支援案例。
+>&#x200B;>使用修飾元的範例：
+>&#x200B;>`https://smartimaging.scene7.com/is/image/SmartImaging/sample1?cache=update`
+>&#x200B;>若要讓整個快取失效，您必須建立支援案例。
 
 +++
 

@@ -120,7 +120,7 @@ ht-degree: 4%
 
 您可以改善特定資產的關鍵字關聯性，以協助根據關鍵字提升搜尋次數。 換言之，當您根據這些關鍵字進行搜尋時，您為其升級特定關鍵字的影像會出現在搜尋結果的最上方。
 
-1. 從[!DNL Assets]使用者介面，開啟資產的屬性頁面。 按一下「進階」****，然後按一下「**[!UICONTROL 提升搜尋關鍵字]**」下的「新增」****。
+1. 從[!DNL Assets]使用者介面，開啟資產的屬性頁面。 按一下「進階」**&#x200B;**，然後按一下「**[!UICONTROL 提升搜尋關鍵字]**」下的「新增」**&#x200B;**。
 1. 在&#x200B;**[!UICONTROL 搜尋提升]**&#x200B;方塊中，指定您要提升影像搜尋的關鍵字，然後按一下&#x200B;**[!UICONTROL 新增]**。 您可以用相同方式指定多個關鍵字。
 1. 按一下&#x200B;**[!UICONTROL 儲存並關閉]**。 您針對此關鍵字提升的資產會出現在最上層的搜尋結果中。
 
@@ -221,7 +221,7 @@ Creative專業人員使用案頭應用程式，讓[!DNL Experience Manager Asset
 
 ### 搜尋[!DNL Adobe Stock]個影像 {#adobe-stock1}
 
-在[!DNL Experience Manager]使用者介面中，使用者可以搜尋Adobe Stock資產並授權必要的資產。 在Omnisearch欄位中新增`Location: Adobe Stock`。 您也可以使用&#x200B;**[!UICONTROL 篩選器]**&#x200B;面板來尋找所有授權或未授權的資產，或使用Adobe Stock檔案編號搜尋特定資產。 檢視 [!DNL Experience Manager]](/help/assets/aem-assets-adobe-stock.md#usemanage)中的[管理 [!DNL Adobe Stock] 影像。
+在[!DNL Experience Manager]使用者介面中，使用者可以搜尋Adobe Stock資產並授權必要的資產。 在Omnisearch欄位中新增`Location: Adobe Stock`。 您也可以使用&#x200B;**[!UICONTROL 篩選器]**&#x200B;面板來尋找所有授權或未授權的資產，或使用Adobe Stock檔案編號搜尋特定資產。 檢視 [!DNL Experience Manager][&#128279;](/help/assets/aem-assets-adobe-stock.md#usemanage)中的管理 [!DNL Adobe Stock] 影像。
 
 ### 搜尋[!DNL Dynamic Media]資產 {#dynamic-media}
 
@@ -447,7 +447,7 @@ Creative專業人員使用案頭應用程式，讓[!DNL Experience Manager Asset
 
 ### 下載搜尋的資產 {#download}
 
-您可以下載搜尋的資產及其轉譯，就像從資料夾下載一般資產一樣。 從搜尋結果中選取一或多個資產，然後按一下工具列中的[下載]。****
+您可以下載搜尋的資產及其轉譯，就像從資料夾下載一般資產一樣。 從搜尋結果中選取一或多個資產，然後按一下工具列中的[下載]。**&#x200B;**
 
 ### 大量更新中繼資料屬性 {#metadataupdates}
 
@@ -466,7 +466,7 @@ Creative專業人員使用案頭應用程式，讓[!DNL Experience Manager Asset
 
 ### 建立版本 {#create-version}
 
-建立顯示在搜尋結果中的資產版本。 選取資產並按一下&#x200B;**[!UICONTROL 建立]** > **[!UICONTROL 版本]**。 新增選用標籤或註解，然後按一下[建立]。**** 您也可以選取多個資產，並同時為其建立版本。
+建立顯示在搜尋結果中的資產版本。 選取資產並按一下&#x200B;**[!UICONTROL 建立]** > **[!UICONTROL 版本]**。 新增選用標籤或註解，然後按一下[建立]。**&#x200B;** 您也可以選取多個資產，並同時為其建立版本。
 
 ### 建立工作流程 {#create-workflow}
 
@@ -481,7 +481,7 @@ Creative專業人員使用案頭應用程式，讓[!DNL Experience Manager Asset
 | 錯誤、問題、症狀 | 可能的原因 | 對問題的可能修正或瞭解 |
 |---|---|---|
 | 搜尋缺少中繼資料的資產時，結果不正確。 | 搜尋遺失必要中繼資料的資產時，[!DNL Experience Manager]可能會顯示部分具有有效中繼資料的資產。 結果是根據已編制索引的中繼資料屬性。 | 更新中繼資料後，需要重新索引以反映資產中繼資料的正確狀態。 請參閱[必要的中繼資料](metadata-schemas.md#define-mandatory-metadata)。 |
-| 搜尋結果太多。 | 廣泛搜尋引數。 | 請考慮限制搜尋](#scope)的[範圍。 使用智慧標籤可能會為您提供比您預期更多的搜尋結果。 檢視[使用智慧標籤搜尋行為](#withsmarttags)。 |
+| 搜尋結果太多。 | 廣泛搜尋引數。 | 請考慮限制搜尋[&#128279;](#scope)的範圍。 使用智慧標籤可能會為您提供比您預期更多的搜尋結果。 檢視[使用智慧標籤搜尋行為](#withsmarttags)。 |
 | 不相關或部分相關的搜尋結果。 | 使用智慧標籤來變更搜尋行為。 | 瞭解[在智慧標籤之後，搜尋如何變更](#withsmarttags)。 |
 | 沒有資產的自動完成建議。 | 新上傳的資產尚未編列索引。 當您開始在Omnisearch列中輸入搜尋關鍵字時，中繼資料無法立即作為建議使用。 | [!DNL Experience Manager]會等到逾時期間到期（預設為一小時）後才執行背景工作，為所有新上傳或更新資產的中繼資料編制索引，然後將中繼資料新增到建議清單中。 |
 | 沒有搜尋結果。 | <ul><li>符合您查詢的Assets不存在。 </li><li> 在搜尋查詢前新增空格。 </li><li> 不支援的中繼資料欄位包含您搜尋的關鍵字。</li><li> 在資產休假期間進行搜尋。 </li></ul> | <ul><li>使用不同的關鍵字進行搜尋。 或者，使用智慧標籤或相似性搜尋來改善搜尋結果。 </li><li>[已知限制](#limitations)。</li><li>所有中繼資料欄位都不會考慮進行搜尋。 檢視[領域](#scope)。</li><li>稍後搜尋或修改所需資產的開啟時間和關閉時間。</li></ul> |

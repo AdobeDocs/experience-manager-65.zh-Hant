@@ -69,7 +69,7 @@ ht-degree: 2%
 1. [安裝InDesign Server](#installing-the-indesign-server)。
 1. 必要時，[設定Experience Manager Assets工作流程](#configuring-the-aem-assets-workflow)。
 只有在預設值不適合您的執行個體時，才需要執行此操作。
-1. 設定InDesign Server](#configuring-the-proxy-worker-for-indesign-server)的[Proxy背景工作。
+1. 設定InDesign Server[&#128279;](#configuring-the-proxy-worker-for-indesign-server)的Proxy背景工作。
 
 ### 安裝[!DNL InDesign Server] {#installing-the-indesign-server}
 
@@ -199,7 +199,7 @@ For information about [!DNL Adobe InDesign] scripts, see [InDesign developer doc
 
 1. 儲存這些變更。
 1. 若要啟用Adobe CS6和更新版本的多工作階段支援，請核取`com.day.cq.dam.ids.impl.IDSJobProcessor.name`設定下的`enable.multisession.name`核取方塊。
-1. 將SOAP端點新增至IDS Worker設定](#configuring-the-proxy-worker-for-indesign-server)，以建立`x` IDS Worker的[集區。
+1. 將SOAP端點新增至IDS Worker設定[&#128279;](#configuring-the-proxy-worker-for-indesign-server)，以建立`x` IDS Worker的集區。
 
    如果有多部電腦執行[!DNL InDesign Server]，請為每部電腦新增SOAP端點（每部電腦的處理器數目–1）。
 
