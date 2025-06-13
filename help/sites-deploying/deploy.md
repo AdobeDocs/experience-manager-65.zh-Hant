@@ -140,7 +140,7 @@ AEM Managed Services是數位體驗管理的完整解決方案。 它提供雲�
 
 為了熟悉和開發AEM，通常會使用安裝在執行Apple OS X或Microsoft® Windows或Linux®案頭版本的本機電腦上的執行個體。
 
-在使用者端上，AEM可在桌上型電腦及平板電腦作業系統上與所有現代瀏覽器(**Microsoft® Edge**、**Internet Explorer** 11、**Chrome **51+****、**Firefox **47+、**Safari** 8+)搭配使用。 如需詳細資訊，請參閱[支援的使用者端平台](/help/sites-deploying/technical-requirements.md#supported-client-platforms)。
+在使用者端上，AEM可在桌上型電腦及平板電腦作業系統上與所有現代瀏覽器(**Microsoft® Edge**、**Internet Explorer** 11、**Chrome &#x200B;** 51+**&#x200B;**、**Firefox &#x200B;** 47+、**Safari** 8+)搭配使用。 如需詳細資訊，請參閱[支援的使用者端平台](/help/sites-deploying/technical-requirements.md#supported-client-platforms)。
 
 ### 取得軟體 {#getting-the-software}
 

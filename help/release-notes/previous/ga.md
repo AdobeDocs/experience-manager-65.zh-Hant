@@ -51,7 +51,7 @@ ht-degree: 3%
 
 #### Java™開發 {#java-development}
 
-* Uberjar](/help/sites-developing/ht-projects-maven.md#experience-manager-api-dependencies)目前有[兩個版本，建議使用未標示為過時的公用介面版本，以及包含標示為過時的介面的版本。
+* Uberjar[&#128279;](/help/sites-developing/ht-projects-maven.md#experience-manager-api-dependencies)目前有兩個版本，建議使用未標示為過時的公用介面版本，以及包含標示為過時的介面的版本。
 
 #### 使用者介面 {#user-interface}
 
@@ -118,7 +118,7 @@ UI已進行各種增強功能，使其更有效率且更易於使用。
 
 #### Headless內容管理 {#headless-content-management}
 
-AEM能以各種格式和從各種棧疊層級提供內容。 自2008年以來，已有部分產品使用[Sling GET](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html)和[POST Servlet](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html)。 內容服務（[Sling模型匯出程式](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html)）是在AEM 6.3中匯入的，是AEM SJ SDK用來合併單頁應用程式的方法。 適用於Assets](/help/assets/mac-api-assets.md)的[HTTP API是針對AEM 6.5擴充的CRUD API。
+AEM能以各種格式和從各種棧疊層級提供內容。 自2008年以來，已有部分產品使用[Sling GET](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html)和[POST Servlet](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html)。 內容服務（[Sling模型匯出程式](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html)）是在AEM 6.3中匯入的，是AEM SJ SDK用來合併單頁應用程式的方法。 適用於Assets[&#128279;](/help/assets/mac-api-assets.md)的HTTP API是針對AEM 6.5擴充的CRUD API。
 
 新HTTP API功能：
 
@@ -157,9 +157,11 @@ AEM能以各種格式和從各種棧疊層級提供內容。 自2008年以來，
      ```
 
    * 具有data-sly-set的變數宣告：
+
      `<sly data-sly-set.title="${currentPage.title}"/>${title}`
 
    * 列出和重複控制引數：開始、步驟、結束：
+
      `<h2 data-sly-repeat="${currentPage.listChildren @ begin = 1, step=2}">${item.title}</h2>`
 
    * data-sly-unwrap的識別碼：
@@ -255,7 +257,7 @@ AEM能以各種格式和從各種棧疊層級提供內容。 自2008年以來，
 
 #### AEM和Commerce {#aem-commerce}
 
-Commerce integration framework的改良功能發行週期比AEM 6.4更快。使用Commerce integration framework](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/integrations/magento.html)從[AEM和Adobe Commerce整合瞭解更多資訊。
+Commerce integration framework的改良功能發行週期比AEM 6.4更快。使用Commerce integration framework[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/integrations/magento.html)從AEM和Adobe Commerce整合瞭解更多資訊。
 
 #### Communities附加元件 {#communities-add-on}
 
@@ -344,7 +346,7 @@ AEM 6.5引進以下功能和增強功能，以提高AEM使用者、DAM角色和�
 
 如需詳細資訊，請參閱[在Experience Manager Assets中使用Adobe Stock資產](/help/assets/aem-assets-adobe-stock.md)。
 
-從Experience Manager Assets](/help/release-notes/assets/stock_image_preview_license_options.png)預覽Adobe Stock影像和授權![
+從Experience Manager Assets![&#128279;](/help/release-notes/assets/stock_image_preview_license_options.png)預覽Adobe Stock影像和授權
 
 *圖：從[!DNL Experience Manager Assets]預覽[!DNL Adobe Stock]影像和授權。*
 

@@ -253,7 +253,7 @@ AEM WCM會記錄詳細的記錄。 拆開包裝並開始快速入門後，您可
 
 >[!NOTE]
 >
->從**system/console/status-Bundlelist**頁面產生的**Download Full**package中不包含ImageServer和s7access記錄檔。 基於支援目的，如果您有[!DNL Dynamic Media]個問題，請在聯絡客戶支援時附加ImageServer和s7access記錄。
+>從&#x200B;**system/console/status-Bundlelist**&#x200B;頁面產生的&#x200B;**Download Full**&#x200B;package中不包含ImageServer和s7access記錄檔。 基於支援目的，如果您有[!DNL Dynamic Media]個問題，請在聯絡客戶支援時附加ImageServer和s7access記錄。
 
 ### 啟動DEBUG記錄層級 {#activating-the-debug-log-level}
 
@@ -518,7 +518,7 @@ OSGi事件也會產生稽核記錄，您可以從AEM Web Console的&#x200B;**組
    * **重新整理**&#x200B;或&#x200B;**清除**&#x200B;以更新佇列專案的顯示。 這麼做有助於檢視進入和離開佇列的專案。
    * **檢視記錄檔**&#x200B;以存取復寫代理程式的任何動作記錄檔。
    * **測試目標執行個體的連線**。
-   * 如有需要，對任何佇列專案強制重試&#x200B;****。
+   * 如有需要，對任何佇列專案強制重試&#x200B;**&#x200B;**。
 
    >[!CAUTION]
    >
@@ -540,7 +540,7 @@ OSGi事件也會產生稽核記錄，您可以從AEM Web Console的&#x200B;**組
 
 >[!NOTE]
 >
->也可以檢查可改善效能](/help/sites-deploying/configuring-performance.md#configuring-for-performance)的特定[組態。
+>也可以檢查可改善效能[&#128279;](/help/sites-deploying/configuring-performance.md#configuring-for-performance)的特定組態。
 
 以下列出常見的效能問題，以及如何發現和處理這些問題的建議。
 

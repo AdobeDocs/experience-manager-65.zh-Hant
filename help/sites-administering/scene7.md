@@ -162,7 +162,7 @@ Experience Manager Dynamic Media是直接在Experience Manager平台中統一的
 1. （選用；請參閱使用案例表格） — 如果您選擇啟用從Assets自動上傳到Dynamic Media Classic，則必須新增下列專案：
 
    1. 設定自動上傳至Dynamic Media Classic。
-   1. 在&#x200B;***Dam更新資產**工作流程(`https://<server>:<host>/cf#/etc/workflow/models/dam/update_asset.html)`)結尾的所有Dynamic Media工作流程步驟*&#x200B;後新增&#x200B;**Dynamic Media Classic上傳**&#x200B;步驟
+   1. 在&#x200B;***Dam更新資產**&#x200B;工作流程(`https://<server>:<host>/cf#/etc/workflow/models/dam/update_asset.html)`)結尾的所有Dynamic Media工作流程步驟*&#x200B;後新增&#x200B;**Dynamic Media Classic上傳**&#x200B;步驟
    1. （選用）在[https://&lt;server>：&lt;port>/system/console/configMgr/com.day.cq.dam.scene7.impl.Scene7AssetMimeTypeServiceImpl](http://localhost:4502/system/console/configMgr/com.day.cq.dam.scene7.impl.Scene7AssetMimeTypeServiceImpl)中依MIME型別限制Dynamic Media Classic資產上傳。 此清單中沒有的資產MIME型別不會上傳至Dynamic Media Classic伺服器。
    1. （選用）在Dynamic Media Classic設定中設定視訊。 您可以同時為Dynamic Media和/或Dynamic Media Classic啟用視訊編碼。 動態轉譯可用於在Experience Manager例項本機預覽和播放，而Dynamic Media Classic視訊轉譯則會產生並儲存在Dynamic Media Classic伺服器上。 為Dynamic Media和Dynamic Media Classic設定視訊編碼服務時，請將[視訊處理設定檔](/help/assets/video-profiles.md)套用至Dynamic Media Classic資產資料夾。
    1. （選用） [在Dynamic Media Classic中設定安全預覽](/help/sites-administering/scene7.md#configuring-the-state-published-unpublished-of-assets-pushed-to-scene)。
