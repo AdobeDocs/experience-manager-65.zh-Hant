@@ -1,6 +1,6 @@
 ---
 title: SPA 藍圖
-description: 本檔案說明任何SPA架構都應該履行的一般且獨立於架構的合約，以便在AEM內實作可編輯的SPA元件。
+description: 本檔案說明任何SPA框架都應該履行的一般且獨立於框架的合約，以便在AEM中實作可編輯的SPA元件。
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: spa
 content-type: reference
@@ -9,41 +9,42 @@ exl-id: 383f84fd-455c-49a4-9e2b-1c4757cc188b
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
-source-git-commit: 6d961456e0e1f7a26121da9be493308a62c53e04
+index: false
+source-git-commit: 1509ca884e2f9eb931fc7cd416801957459cc4a0
 workflow-type: tm+mt
 source-wordcount: '2023'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
 
 # SPA 藍圖{#spa-blueprint}
 
-若要讓作者能使用AEM SPA編輯器編輯SPA的內容，SPA必須滿足以下需求：本檔案將說明這些需求。
+若要讓作者能夠使用AEM SPA Editor來編輯SPA的內容，SPA必須滿足以下要求，本檔案將對此進行說明。
 
 {{ue-over-spa}}
 
 ## 簡介 {#introduction}
 
-本檔案說明任何SPA架構都應該履行的一般合約(即AEM支援層的型別)，以便在AEM內實作可編輯的SPA元件。
+本檔案說明任何SPA架構都應該履行的一般合約(即AEM支援層的型別)，以便在AEM中實作可編輯的SPA元件。
 
 >[!NOTE]
 >
 >下列需求與架構無關。 如果滿足這些需求，則可以提供框架特定的層，該層由模組、元件和服務組成。
 >
->**AEM中的React和Angular架構已符合這些需求。**&#x200B;只有當您想要實作其他框架以搭配AEM使用時，此藍圖中的需求才相關。
+>**AEM中的React和Angular架構已符合這些需求。**&#x200B;只有當您想要實作其他框架以與AEM一起使用時，此藍圖中的需求才相關。
 
 >[!CAUTION]
 >
->雖然AEM的SPA功能與框架無關，但目前僅支援React和Angular框架。
+>雖然AEM的SPA功能獨立於架構，但目前僅支援React和Angular架構。
 
-若要讓作者能使用AEM頁面編輯器來編輯單頁應用程式架構所公開的資料，專案必須能夠解譯代表為AEM存放庫中應用程式儲存之資料語意的模型結構。 為了達成此目標，提供了兩個與架構無關的資料庫： `PageModelManager`和`ComponentMapping`。
+若要讓作者能使用AEM頁面編輯器來編輯單頁應用程式架構所公開的資料，專案必須能夠解譯代表為AEM存放庫中應用程式儲存的資料語意的模型結構。 為了達成此目標，提供了兩個與架構無關的資料庫： `PageModelManager`和`ComponentMapping`。
 
 ### PageModelManager {#pagemodelmanager}
 
-`PageModelManager`程式庫是以NPM封裝的形式提供，以供SPA專案使用。 它可與SPA搭配使用，並作為資料模型管理員。
+`PageModelManager`資料庫是以NPM套件提供，以供SPA專案使用。 它與SPA搭配使用，可作為資料模型管理員。
 
-它會代表SPA抽象化代表實際內容結構的JSON結構的擷取和管理。 此外也負責與SPA同步，以便在必須重新呈現元件時通知。
+它會代表SPA抽象化代表實際內容結構的JSON結構的擷取和管理。 SPA也應負責與SPA同步，以便知道何時必須重新呈現其元件。
 
 檢視NPM套件[@adobe/aem-spa-page-model-manager](https://www.npmjs.com/package/@adobe/aem-spa-page-model-manager)
 
@@ -71,9 +72,9 @@ ht-degree: 0%
 
 ### 頁面模型 {#page-model}
 
-頁面的內容結構儲存在AEM中。 頁面模型可用來對應及例項化SPA元件。 SPA開發人員建立對應至SPA元件的AEM元件。 為此，它們使用資源型別(或AEM元件的路徑)作為唯一索引鍵。
+頁面的內容結構儲存在AEM中。 頁面模型可用來對應及例項化SPA元件。 SPA開發人員會建立對應至AEM元件的SPA元件。 為此，他們使用資源型別(或AEM元件的路徑)作為唯一索引鍵。
 
-SPA元件必須和頁面模型同步，並更新以相應地變更其內容。 使用動態元件的陣列必須用來按照提供的頁面模型結構即時例項化元件。
+SPA元件必須和頁面模型同步，並相應地隨其內容的任何變更而更新。 使用動態元件的陣列必須用來按照提供的頁面模型結構即時例項化元件。
 
 ### 中繼欄位 {#meta-fields}
 
@@ -104,7 +105,7 @@ SPA元件必須和頁面模型同步，並更新以相應地變更其內容。 �
 
 npm模組： [@adobe/aem-react-editable-components](https://www.npmjs.com/package/@adobe/aem-react-editable-components)
 
-#### angular {#angular}
+#### Angular {#angular}
 
 npm模組： [@adobe/aem-angular-editable-components](https://www.npmjs.com/package/@adobe/aem-angular-editable-components)
 
@@ -118,9 +119,9 @@ npm模組： [@adobe/aem-angular-editable-components](https://www.npmjs.com/pack
 
 為此，模型提供者必須向` [PageModelManager](/help/sites-developing/spa-blueprint.md#pagemodelmanager)`註冊。 然後當變更發生時，它會接收更新後的資料並傳遞至委派元件。 根據慣例，可用於將承載模型片段的委派元件的屬性名為`cqModel`。 實作可免費為元件提供此屬性，但應考量與框架架構整合、可發現性和易用性等層面。
 
-### 元件HTML裝飾器 {#the-component-html-decorator}
+### 元件HTML Decorator {#the-component-html-decorator}
 
-「元件裝飾器」負責以「頁面編輯器」所預期的一系列資料屬性和類別名稱，裝飾每個元件例項之元素的外部HTML。
+元件裝飾器負責使用頁面編輯器預期的一系列資料屬性和類別名稱來裝飾每個元件例項之元素的外部HTML。
 
 #### 元件宣告 {#component-declaration}
 
@@ -137,7 +138,7 @@ npm模組： [@adobe/aem-angular-editable-components](https://www.npmjs.com/pack
 
 空白元件的&#x200B;**預留位置**
 
-每個元件都必須延伸使用功能，以便在將元件識別為空白時，使用預留位置專用的資料屬性和類別名稱以及相關覆蓋來裝飾外部HTML元素。
+每個元件都必須延伸使用功能，以便在將元件識別為空白時，使用預留位置專用的資料屬性和類別名稱以及相關覆蓋圖來裝飾外部HTML元素。
 
 **關於元件的空白**
 
@@ -158,7 +159,7 @@ npm模組： [@adobe/aem-angular-editable-components](https://www.npmjs.com/pack
 
 回應式格線元件是容器。 它包含模型提供者的特定變體，代表其欄。 回應式格線及其欄負責以模型中所包含的特定類別名稱裝飾專案元件的外部HTML元素。
 
-回應式格線元件應預先對應至其AEM對應元件，因為此元件很複雜且很少自訂。
+由於此元件較為複雜且很少自訂，因此回應式格線元件應預先對應至其AEM對應元件。
 
 #### 特定模型欄位 {#specific-model-fields}
 
@@ -277,11 +278,11 @@ ComponentMapping.map = function map (resourceTypes, clazz, editConfig) {};
 
 ## SPA運作中 {#spa-in-action}
 
-繼續檔案[AEM](/help/sites-developing/spa-getting-started-react.md)中的SPA快速入門，瞭解簡單SPA如何運作並親自實驗SPA。
+繼續參閱檔案[在AEM中開始使用SPA](/help/sites-developing/spa-getting-started-react.md)，瞭解簡單SPA如何運作並親自體驗SPA。
 
 ## 延伸閱讀 {#further-reading}
 
 如需AEM中SPA的詳細資訊，請參閱下列檔案：
 
-* [SPA撰寫概觀](/help/sites-developing/spa-overview.md)，瞭解AEM中的SPA概觀和通訊模型
-* [AEM中的SPA快速入門](/help/sites-developing/spa-getting-started-react.md)，瞭解簡單SPA的指南及其運作方式
+* [SPA製作概觀](/help/sites-developing/spa-overview.md)，瞭解AEM中的SPA概觀和通訊模型
+* [在AEM中開始使用SPA](/help/sites-developing/spa-getting-started-react.md)，以取得簡單SPA的指南及其運作方式

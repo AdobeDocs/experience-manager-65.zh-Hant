@@ -1,6 +1,6 @@
 ---
 title: 針對 SPA 實作 React元件
-description: 本文會示範如何調整簡單的現有React元件，以搭配Adobe Experience Manager (AEM) SPA編輯器使用。
+description: 本文會介紹如何調整簡單的現有React元件，以搭配Adobe Experience Manager (AEM) SPA Editor使用。
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: spa
@@ -10,7 +10,8 @@ exl-id: f4959c12-54c5-403a-9973-7a4ab5f16bed
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
-source-git-commit: 6d961456e0e1f7a26121da9be493308a62c53e04
+index: false
+source-git-commit: 1509ca884e2f9eb931fc7cd416801957459cc4a0
 workflow-type: tm+mt
 source-wordcount: '523'
 ht-degree: 9%
@@ -22,22 +23,22 @@ ht-degree: 9%
 
 單頁應用程式 (SPA) 可為網站使用者提供引人入勝的體驗。開發人員希望能使用SPA架構建立網站，而作者則想在Adobe Experience Manager (AEM)中為使用SPA架構建立的網站順暢地編輯內容。
 
-SPA編寫功能提供全方位的解決方案，可支援AEM中的SPA。 本文將以範例說明如何改寫簡單的現有React元件來與AEM SPA編輯器搭配使用。
+SPA製作功能提供全方位的解決方案，可支援AEM中的SPA。 本文將以範例說明如何調整簡單的現有React元件，以搭配AEM SPA Editor使用。
 
 {{ue-over-spa}}
 
 ## 簡介 {#introduction}
 
-由於AEM需要簡易且輕量的合約，且在SPA與SPA編輯器之間建立，因此採用現有的JavaScript應用程式並將其調整為可與AEM中的SPA搭配使用，是一件簡單明瞭的事。
+由於AEM需要簡易且輕量的合約，且在SPA和SPA Editor之間建立，因此在AEM中運用現有的JavaScript應用程式並將其調整為可與SPA搭配使用，是一件簡單明瞭的事。
 
 本文說明We.Retail Journal範例SPA上的天氣元件範例。
 
-閱讀本文之前，您應該先熟悉AEM[&#128279;](/help/sites-developing/spa-getting-started-react.md)的SPA應用程式的結構。
+在閱讀本文之前，您應該先熟悉AEM](/help/sites-developing/spa-getting-started-react.md)的SPA應用程式的[結構。
 
 >[!CAUTION]
 >本檔案僅將[We.Retail Journal應用程式](https://github.com/adobe/aem-sample-we-retail-journal)用於示範用途。 請勿用於任何專案工作。
 >
->任何 AEM 專案都應使用 [AEM 專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hant)，它支援使用 React 或 Angular 的 SPA 專案並使用 SPA SDK。
+>任何 AEM 專案都應使用 [AEM 專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)，它支援使用 React 或 Angular 的 SPA 專案並使用 SPA SDK。
 
 ## 天氣元件 {#the-weather-component}
 
@@ -47,7 +48,7 @@ SPA編寫功能提供全方位的解決方案，可支援AEM中的SPA。 本文�
 
 ![screen_shot_2018-06-08at143224](assets/screen_shot_2018-06-08at143224.png)
 
-在SPA編輯器中編寫SPA的內容時，天氣元件會像任何其他AEM元件一樣顯示、使用工具列完成並可編輯。
+在SPA編輯器中編寫SPA的內容時，天氣元件會像任何其他AEM元件一樣顯示、包含工具列且可以編輯。
 
 ![screen_shot_2018-06-08at143304](assets/screen_shot_2018-06-08at143304.png)
 
@@ -61,7 +62,7 @@ SPA編寫功能提供全方位的解決方案，可支援AEM中的SPA。 本文�
 
 ### 天氣元件實施 {#weather-component-implementation}
 
-天氣元件是以公開可用的React元件為基礎，稱為[React Open Weather](https://www.npmjs.com/package/react-open-weather)。 它已調整為可在We.Retail Journal範例SPA應用程式中作為元件使用。
+天氣元件是以公開可用的React元件為基礎，稱為[React Open Weather](https://www.npmjs.com/package/react-open-weather)。 它已調整為可在We.Retail Journal範例SPA應用程式中當做元件使用。
 
 以下是React Open Weather元件用途的NPM檔案片段。
 

@@ -1,11 +1,12 @@
 ---
 title: RemotePage 元件
-description: RemotePage元件是自訂頁面元件，用於在AEM內編輯遠端React SPA。
+description: RemotePage元件是自訂頁面元件，用於在AEM中編輯遠端React SPA。
 exl-id: 3f015997-0d42-4241-a890-0f16a19c5e34
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
-source-git-commit: 6d961456e0e1f7a26121da9be493308a62c53e04
+index: false
+source-git-commit: 1509ca884e2f9eb931fc7cd416801957459cc4a0
 workflow-type: tm+mt
 source-wordcount: '364'
 ht-degree: 2%
@@ -15,7 +16,7 @@ ht-degree: 2%
 
 # RemotePage 元件 {#remote-page-component}
 
-在決定您要在外部SPA和AEM之間進行的整合層級時，您通常明顯需要能夠檢視和編輯AEM中的SPA。 RemotePage元件是僅用於此目的的自訂頁面元件。
+在決定您要在外部SPA和AEM之間進行的整合層級時，您通常很清楚需要能夠在AEM中檢視和編輯SPA。 RemotePage元件是僅用於此目的的自訂頁面元件。
 
 {{ue-over-spa}}
 
@@ -24,10 +25,10 @@ ht-degree: 2%
 RemotePage元件會從應用程式產生的`asset-manifest.json`擷取所有必要的資產，並用來在AEM中轉譯SPA。
 
 * RemotePage可讓您將SPA的指令碼和樣式表插入AEM Page元件的內文中。
-* 虛擬前端元件可讓您在AEM SPA編輯器中將區段標示為可編輯。
-* 將託管在不同網域上的SPA放在一起，即可在AEM中編輯。
+* 虛擬前端元件可讓您在AEM SPA Editor中將區段標示為可編輯。
+* 只要搭配使用，在AEM中託管的不同網域之SPA即可進行編輯。
 
-請參閱[在AEM](spa-edit-external.md)中編輯外部SPA一文，以取得有關AEM中可編輯外部SPA的更多詳細資料。
+請參閱文章[在AEM中編輯外部SPA](spa-edit-external.md)，以取得有關AEM中可編輯外部SPA的詳細資訊。
 
 ## 要求 {#requirements}
 
@@ -46,7 +47,7 @@ RemotePage元件會從應用程式產生的`asset-manifest.json`擷取所有必�
 ## 限制 {#limitations}
 
 * RemotePage元件預期實作會提供資產資訊清單，就像這裡所提供的[一樣。](https://github.com/shellscape/webpack-manifest-plugin)然而，RemotePage元件僅經過測試可用於React架構（以及透過remote-page-next元件的Next.js），因此不支援從其他架構(例如Angular)從遠端載入應用程式。
-* 在AEM中執行遠端轉譯時，在應用程式的根HTML檔案中定義的內部CSS以及根DOM節點上的內嵌CSS將不可用。
+* 在AEM中執行遠端轉譯時，在應用程式的根HTML檔案中定義的內部CSS和根DOM節點上的內嵌CSS將不可用。
 
 ## 技術細節 {#technical-details}
 

@@ -1,11 +1,12 @@
 ---
 title: SPA 中的複合元件
-description: 瞭解如何建立自己的複合元件，也就是由AEM單頁應用程式(SPA)編輯器運作的其他元件所組成的元件。
+description: 瞭解如何建立您自己的複合元件，也就是由AEM單頁應用程式(SPA)編輯器運作的其他元件所組成的元件。
 exl-id: 02b6c698-d169-467a-9168-9fa6181bed6c
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
-source-git-commit: 6d961456e0e1f7a26121da9be493308a62c53e04
+index: false
+source-git-commit: 1509ca884e2f9eb931fc7cd416801957459cc4a0
 workflow-type: tm+mt
 source-wordcount: '783'
 ht-degree: 1%
@@ -19,7 +20,7 @@ ht-degree: 1%
 
 當在AEM單頁應用程式(SPA)編輯器架構中正確實作複合元件時，內容作者可以像拖放任何其他元件一樣拖放此類元件，但還是可以個別編輯組成複合元件的每個元件。
 
-本文示範如何將複合元件新增至單頁應用程式，以便順暢地與AEM SPA編輯器搭配運作。
+本文示範如何將複合元件新增至單頁應用程式，以便順暢地與AEM SPA Editor搭配運作。
 
 {{ue-over-spa}}
 
@@ -31,16 +32,16 @@ ht-degree: 1%
 
 下列支援複合元件使用案例的模型需要下列先決條件。
 
-* 您的AEM開發執行個體正在連線埠4502上以範例專案本機執行。
-* 您已啟用工作中的外部React應用程式[，以便在AEM中編輯。](spa-edit-external.md)
+* 您的AEM開發執行個體正在連線埠4502上本機執行，並有一個範例專案。
+* 您已啟用作用中的外部React應用程式[，以便在AEM中編輯。](spa-edit-external.md)
 * React應用程式已使用RemotePage元件載入AEM編輯器[中。](spa-remote-page.md)
 
 ## 將複合元件新增至SPA {#adding-composite-components}
 
-實作複合元件有三個不同的模型，視您在AEM中的SPA實作而定。
+實作複合元件有三種不同的模型，取決於AEM中的SPA實作。
 
 * [您的AEM專案中不存在該元件。](#component-does-not-exist)
-* [元件存在於您的AEM專案中，但其必要的內容不存在。](#content-does-not-exist)
+* [元件存在於您的AEM專案中，但它的必要內容不存在。](#content-does-not-exist)
 * [元件及其必要內容都存在於您的AEM專案中。](#both-exist)
 
 以下各節會以卡片元件為例，提供實施每個案例的範例。
@@ -128,15 +129,15 @@ function Home() {
 
 編輯器中的![複合卡元件](assets/composite-card.png)
 
-### 元件存在於您的AEM專案中，但其必要的內容不存在。 {#content-does-not-exist}
+### 元件存在於您的AEM專案中，但它的必要內容不存在。 {#content-does-not-exist}
 
 在此案例中，卡片元件已在包含標題和影像節點的AEM專案中建立。 子節點（文字和影像）具有對應的資源型別。
 
 卡片元件的![節點結構](assets/composite-node-structure.png)
 
-然後，您可以將其新增到您的SPA並擷取其內容。
+接著，您可以將它新增至SPA並擷取其內容。
 
-1. 在SPA中為此建立對應的元件。 確保子元件對應至SPA專案中各自對應的AEM資源型別。 在此範例中，我們使用與先前案例中詳細[相同的`AEMText`和`AEMImage`元件。](#component-does-not-exist)
+1. 在SPA中為此建立對應的元件。 確保子元件對應至SPA專案中其對應的AEM資源型別。 在此範例中，我們使用與先前案例中詳細[相同的`AEMText`和`AEMImage`元件。](#component-does-not-exist)
 
    ```javascript
    import React from 'react';
@@ -180,4 +181,4 @@ function Home() {
 
 ![節點結構中的複合路徑](assets/composite-path.png)
 
-`AEMCard`元件與先前使用案例中定義的[相同。](#content-does-not-exist)在這裡，在AEM專案中上述位置定義的內容包含在SPA中。
+`AEMCard`元件與先前使用案例中定義的[相同。](#content-does-not-exist)在這裡，上述位置在AEM專案中定義的內容包含在SPA中。

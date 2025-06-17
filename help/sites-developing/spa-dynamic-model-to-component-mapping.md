@@ -1,5 +1,5 @@
 ---
-title: SPA的動態模型至元件對應
+title: SPA的元件對應動態模型
 description: 瞭解在Adobe Experience Manager的JavaScript SPA SDK中如何發生元件對應的動態模型。
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -9,7 +9,8 @@ exl-id: 5b2ccac0-bf1d-4f06-8743-7fce6fb68378
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
-source-git-commit: 6d961456e0e1f7a26121da9be493308a62c53e04
+index: false
+source-git-commit: 1509ca884e2f9eb931fc7cd416801957459cc4a0
 workflow-type: tm+mt
 source-wordcount: '313'
 ht-degree: 0%
@@ -17,15 +18,15 @@ ht-degree: 0%
 ---
 
 
-# SPA的動態模型至元件對應{#dynamic-model-to-component-mapping-for-spas}
+# SPA的元件對應動態模型{#dynamic-model-to-component-mapping-for-spas}
 
-本檔案說明適用於Adobe Experience Manager (AEM)的JavaScript SPA SDK中如何產生動態模型與元件的對應。
+本檔案說明適用於Adobe Experience Manager (AEM)的JavaScript SPA SDK中如何發生元件對應的動態模型。
 
 {{ue-over-spa}}
 
 ## 元件對應模組 {#componentmapping-module}
 
-`ComponentMapping`模組是以NPM封裝形式提供給前端專案。 它儲存前端元件，並提供單頁應用程式將前端元件對應到AEM資源型別的方法。 如此一來，在剖析應用程式的JSON模型時，就能啟用元件的動態解析。
+`ComponentMapping`模組是以NPM封裝形式提供給前端專案。 它會儲存前端元件，並提供單頁應用程式將前端元件對應至AEM資源型別的方法。 如此一來，在剖析應用程式的JSON模型時，就能啟用元件的動態解析。
 
 模型中每個專案都包含公開AEM資源型別的`:type`欄位。 掛載時，前端元件可使用從基礎程式庫收到的模型片段來轉譯自身。
 
