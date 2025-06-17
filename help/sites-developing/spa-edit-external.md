@@ -281,13 +281,13 @@ mvn clean install -PautoInstallSinglePackage
 
 ![容器預留位置](assets/container-placeholder.png)
 
-JCR](assets/container-jcr-structure.png)中的![容器位置
+JCR![&#128279;](assets/container-jcr-structure.png)中的容器位置
 
 一旦作者將子元件新增至容器後，新容器節點就會以JCR結構中的對應名稱建立。
 
 ![包含內容的容器](assets/container-with-content.png)
 
-含有JCR](assets/container-with-content-jcr.png)內容的![容器
+含有JCR![&#128279;](assets/container-with-content-jcr.png)內容的容器
 
 現在，您可以依照作者的需求，將更多元件和內容新增至容器，且變更將會持續存在。
 
@@ -313,7 +313,7 @@ JCR](assets/container-jcr-structure.png)中的![容器位置
 
 1. 在React應用程式的`index.js`中（或呼叫`ReactDOM.render()`的位置）
 
-   index.js檔案](assets/external-spa-root-index.png)中的![ReactDOM.render()
+   index.js檔案![&#128279;](assets/external-spa-root-index.png)中的ReactDOM.render()
 
 1. 在React應用程式的`index.html`
 
@@ -367,7 +367,7 @@ JCR](assets/container-jcr-structure.png)中的![容器位置
 
 ## 框架限制 {#framework-limitations}
 
-RemotePage元件預期實作會提供資產資訊清單，例如GitHub](https://github.com/shellscape/webpack-manifest-plugin)上的[webpack-manifest-plugin。 不過，RemotePage元件僅通過測試可用於React架構（以及透過remote-page-next元件的Next.js），因此不支援從其他架構(例如Angular)從遠端載入應用程式。
+RemotePage元件預期實作會提供資產資訊清單，例如GitHub[&#128279;](https://github.com/shellscape/webpack-manifest-plugin)上的webpack-manifest-plugin。 不過，RemotePage元件僅通過測試可用於React架構（以及透過remote-page-next元件的Next.js），因此不支援從其他架構(例如Angular)從遠端載入應用程式。
 
 ## 其他資源 {#additional-resources}
 
