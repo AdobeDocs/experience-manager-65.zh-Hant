@@ -4,13 +4,13 @@ description: 雖然SPA Editor仍受Adobe支援，但瞭解其淘汰對您的專�
 feature: Developing
 role: Admin, Architect, Developer
 exl-id: ea6e46ee-4a90-4236-8d93-292a4dda4dc0
-index: false
-source-git-commit: 1509ca884e2f9eb931fc7cd416801957459cc4a0
+source-git-commit: d619c969604119a8686050fdc34d77c0ffee33cf
 workflow-type: tm+mt
 source-wordcount: '910'
 ht-degree: 1%
 
 ---
+
 
 # 停止支援 SPA 編輯器 {#spa-editor-deprecation}
 
@@ -65,7 +65,7 @@ Universal Editor具備許多優點，因此移轉至此編輯器可成為新專�
 * **未來考量：** AEM的藍圖會優先將通用編輯器設為視覺化編輯器。 採用可確儲存取最新的創新和增強功能。
 * **更簡單的整合：**&#x200B;使用Universal Editor不需要特定AEM的SDK，減少技術棧疊鎖定。
 * **自備應用程式：** Universal Editor支援任何Web架構或架構，允許採用而不需要複雜的重構。
-* **擴充性：** Universal Editor受益於強大的[擴充架構，](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/extending)，包括與GenAI、Workfront等的整合。
+* **擴充性：** Universal Editor受益於強大的[擴充架構，](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/extending)，包括與GenAI、Workfront等的整合。
 
 沒有從SPA編輯器直接移轉至通用編輯器的路徑。 這是因為兩種技術的根本差異。
 
