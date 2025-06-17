@@ -29,9 +29,9 @@ ht-degree: 0%
 先決條件很簡單。
 
 * 確定AEM的執行個體在本機執行。
-* 使用[AEM專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?#available-properties)建立基礎AEM SPA專案。
+* 使用[AEM專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hant&#available-properties)建立基礎AEM SPA專案。
    * 這將構成AEM專案的基礎，專案將更新以包含外部SPA。
-   * 本檔案中的範例使用[WKND SPA專案](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/spa-editor/spa-editor-framework-feature-video-use.html#spa-editor)的起點。
+   * 本檔案中的範例使用[WKND SPA專案](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/spa-editor/spa-editor-framework-feature-video-use.html?lang=zh-Hant#spa-editor)的起點。
 * 準備好您想要整合的可使用外部React SPA。
 
 ## 將SPA上傳至AEM專案 {#upload-spa-to-aem-project}
@@ -373,8 +373,8 @@ RemotePage元件預期實作會提供資產資訊清單，例如GitHub[&#128279;
 
 下列參考資料可協助您瞭解AEM內容中的SPA。
 
-* [AEM專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)
-* [WKND SPA專案](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/spa-editor/spa-editor-framework-feature-video-use.html)
+* [AEM專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hant)
+* [WKND SPA專案](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/spa-editor/spa-editor-framework-feature-video-use.html?lang=zh-Hant)
 * [使用React在AEM中開始使用SPA](spa-getting-started-react.md)
 * [SPA參考資料（API參考）](spa-reference-materials.md)
 * [SPA Blueprint和PageModelManager](spa-blueprint.md#pagemodelmanager)
