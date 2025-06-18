@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: b5ee4815f981aa32faab24ff5e80a7ad9541e45e
+source-git-commit: ee6299819a027ef86a69ddbb5e56cf38e3436b6e
 workflow-type: tm+mt
-source-wordcount: '3688'
+source-wordcount: '3700'
 ht-degree: 4%
 
 ---
@@ -90,6 +90,7 @@ Adobe Experience Manager可搭配下列版本的Java™虛擬機器器運作：
 
 | **平台** | **支援等級** | **連結** |
 |---|---|---|
+| Oracle Java™ SE 21 JDK | Z：不支援`[1]` |
 | Oracle Java™ SE 17 JDK | Z：不支援`[1]` |
 | Oracle Java™ SE 11 JDK - 64位元 | A：支援的`[1]` | [下載](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Oracle*+JDK*+11*&orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&orderby.sort=desc&layout=list&p.offset=0&p.limit=24<td>) |
 | Oracle Java™ SE 10 JDK | Z：不支援`[1]` |
@@ -100,8 +101,8 @@ Adobe Experience Manager可搭配下列版本的Java™虛擬機器器運作：
 | Azul Zulu OpenJDK 11 - 64位元 | A：支援的`[3]` | |
 | Azul Zulu OpenJDK 8 - 64位元 | A：支援的`[3]` | |
 
-1. Oracle已改用Oracle Java™ SE產品的「長期支援」(LTS)模型。 Java™ 9、Java™ 10和Java™ 12是Oracle的非LTS版本(請參閱[Oracle Java™ SE支援藍圖](https://www.oracle.com/technetwork/java/eol-135779.html))。 若要在生產環境中部署AEM，Adobe僅支援Java™的LTS版本。 Adobe直接為所有使用Oracle Java™ SE技術的AEM客戶支援Oracle Java™ SE JDK的支援與發佈，包括公開更新結束之後的LTS版本的所有維護更新。 請參閱Adobe Experience Manager[&#128279;](assets/Java_Policy_for_Adobe_Experience_Manager.pdf)的Java™支援原則。
-   **重要：至少支援Oracle Java™ 11到2026年9月。 正在準備支援Oracle Java™ 17。**
+1. Oracle已改用Oracle Java™ SE產品的「長期支援」(LTS)模型。 Java™ 9、Java™ 10和Java™ 12是Oracle的非LTS版本(請參閱[Oracle Java™ SE支援藍圖](https://www.oracle.com/technetwork/java/eol-135779.html))。 若要在生產環境中部署AEM，Adobe僅支援Java™的LTS版本。 Adobe直接為所有使用Oracle Java™ SE技術的AEM客戶支援Oracle Java™ SE JDK的支援與發佈，包括公開更新結束之後的LTS版本的所有維護更新。 請參閱Adobe Experience Manager](assets/Java_Policy_for_Adobe_Experience_Manager.pdf)的[Java™支援原則。
+   **重要：至少支援Oracle Java™ 11到2026年9月。 [Oracle 6.5 LTS](https://experienceleague.adobe.com/en/docs/experience-manager-65-lts/content/implementing/deploying/introduction/technical-requirements).**&#x200B;支援AEM Java™ 17和21
 
 1. IBM® JRE僅與WebSphere®應用程式伺服器一起受支援。
 
@@ -258,7 +259,7 @@ Adobe也提供Adobe Managed Services，可在Azure或AWS上部署AEM。 Adobe Ma
 
 ### Dispatcher平台（網頁伺服器） {#dispatcher-platforms-web-servers}
 
-Dispatcher是快取和負載平衡元件。 [下載最新的Dispatcher版本](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/release-notes.html?lang=zh-Hant)。 Experience Manager 6.5需要Dispatcher版本4.3.2或更新版本。
+Dispatcher是快取和負載平衡元件。 [下載最新的Dispatcher版本](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/release-notes.html)。 Experience Manager 6.5需要Dispatcher版本4.3.2或更新版本。
 
 下列Web伺服器支援與Dispatcher 4.3.2版搭配使用：
 
@@ -470,11 +471,11 @@ AEM Dynamic Media預設為停用。 請參閱此處[啟用Dynamic Media](/help/a
    <th><p><strong>支援的格式可轉換成PDF</strong></p> </th>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/tw/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2020傳統路線</a>最新版本</td>
+   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2020傳統路線</a>最新版本</td>
    <td>XPS、影像格式(BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC)、HTML、HTM、DWG、DXF和DWF</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/tw/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2017傳統路線</a>最新版本（已棄用）</td>
+   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2017傳統路線</a>最新版本（已棄用）</td>
    <td>XPS、影像格式(BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC)、HTML、HTM、DWG、DXF和DWF</td>
   </tr>
   <tr>
@@ -522,7 +523,7 @@ AEM Dynamic Media預設為停用。 請參閱此處[啟用Dynamic Media](/help/a
 >
 >此外，
 >
->* PDF Generator需要32位元版本的[Acrobat 2020 classic track version 20.004.30006](https://helpx.adobe.com/tw/acrobat/release-note/release-notes-acrobat-reader.html)才能執行轉換。
+>* PDF Generator需要32位元版本的[Acrobat 2020 classic track version 20.004.30006](https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html)才能執行轉換。
 >* PDF Generator僅支援32位元版本的Microsoft® Office Professional Plus及其他轉換所需的軟體。
 >* Microsoft® Office Professional Plus安裝可能會使用零售或MAK/KMS/AD型大量授權。
 >* 如果Microsoft® Office安裝由於任何原因（例如磁碟區授權安裝無法在指定期間內找到KMS主機）而停用或取消授權，轉換可能會失敗，直到安裝重新授權並重新啟用。
@@ -530,7 +531,7 @@ AEM Dynamic Media預設為停用。 請參閱此處[啟用Dynamic Media](/help/a
 >* PDF Generator不支援Microsoft® Office 365。
 >* 只有Windows和Linux®才支援OpenOffice適用的PDF Generator轉換。
 >* 只有Windows支援OCR PDF、最佳化PDF和Export PDF功能。
->* Acrobat版本與AEM Forms搭配，可啟用PDF Generator功能。 在AEM Forms授權期間，僅以程式設計方式存取AEM Forms隨附的版本，以與AEM Forms PDF Generator搭配使用。 如需詳細資訊，請參閱根據您的部署([內部部署](https://helpx.adobe.com/tw/legal/product-descriptions/adobe-experience-manager-on-premise.html)或[Managed Services](https://helpx.adobe.com/tw/legal/product-descriptions/adobe-experience-manager-managed-services.html))提供的AEM Forms產品說明
+>* Acrobat版本與AEM Forms搭配，可啟用PDF Generator功能。 在AEM Forms授權期間，僅以程式設計方式存取AEM Forms隨附的版本，以與AEM Forms PDF Generator搭配使用。 如需詳細資訊，請參閱根據您的部署([內部部署](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html)或[Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))提供的AEM Forms產品說明
 >* PDF Generator服務不支援Microsoft® Windows 10。
 >* PDF Generator無法使用Microsoft® Visio 2019轉換檔案。
 >* PDF Generator無法使用Microsoft® Project 2019轉換檔案。
