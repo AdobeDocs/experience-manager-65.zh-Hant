@@ -6,9 +6,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
-source-git-commit: 21d0ba51297b4e90645a9ab64d98016598c0a2be
+source-git-commit: 16a75f6308319e07bed68b668fc9c20e0ef5f5c9
 workflow-type: tm+mt
-source-wordcount: '6485'
+source-wordcount: '6444'
 ht-degree: 1%
 
 ---
@@ -71,7 +71,7 @@ ht-degree: 1%
 
    * Red Hat® Enterprise Linux® 9 （核心4.x，64位元） 
 
-* [強化的檔案附件元件](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/file-attachment)：作為安全性測量，此元件現在會防止提交副檔名經過修改、嘗試略過允許的檔案型別檢查的檔案。 提交期間會封鎖這類檔案，以確保僅接受有效的檔案型別。
+* [強化的檔案附件元件](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/file-attachment)：作為安全性測量，此元件現在會防止提交副檔名經過修改、嘗試略過允許的檔案型別檢查的檔案。 提交期間會封鎖這類檔案，以確保僅接受有效的檔案型別。
 
 <!--* **Two-Factor authentication with SAML for AdminUI** 
 
@@ -215,11 +215,11 @@ ht-degree: 1%
 
 ### [!DNL Assets]{#assets-6523}
 
-* 選取![Assets](/help/assets/assets/Smock_Asset_18_N.svg)**[!UICONTROL Assets &#x200B;]**、瀏覽至&#x200B;**[!UICONTROL &#x200B;搜尋Adobe Stock &#x200B;]**&#x200B;資料夾並選取庫存影像後，[!DNL AEM]內部部署(6.5.22.0)導覽頁面中會發生下列問題：
+* 選取![Assets](/help/assets/assets/Smock_Asset_18_N.svg)**[!UICONTROL Assets ]**、瀏覽至**[!UICONTROL &#x200B;搜尋Adobe Stock ]**資料夾並選取庫存影像後，[!DNL AEM]內部部署(6.5.22.0)導覽頁面中會發生下列問題：
    * 選取的stock影像無法授權並儲存為按一下「**[!UICONTROL 授權並儲存]**」會顯示空白的下拉式清單。
    * 選取Stock影像或重新進入庫存頁面URL會重新導向至[!DNL AEM]首頁，導致無法存取Adobe Stock影像。 (ASSETS-48687)
 * 如果資料夾名稱在[!DNL AEM]內部部署(6.5.22.0)導覽頁面上的名稱包含`/`，則管理資料夾時發生問題。 (ASSETS-46740)
-* 在[!DNL AEM] 6.5上，由於記憶體使用量高，資產詳細資訊頁面未從![集合](/help/assets/assets/Smock_Collection_18_N.svg)**[!UICONTROL 集合&#x200B;]**&#x200B;檢視載入。 (ASSETS-46738)
+* 在[!DNL AEM] 6.5上，由於記憶體使用量高，資產詳細資訊頁面未從![集合](/help/assets/assets/Smock_Collection_18_N.svg)**[!UICONTROL 集合&#x200B;]**檢視載入。 (ASSETS-46738)
 * [!DNL InDesign]的整合問題為`Day CQ DAM Mime Type OSGI`服務錯誤將[!DNL InDesign]個檔案識別為`x-adobe-indesign`而非`x-indesign`。 (ASSETS-45953)
 * [!DNL AEM 6.5.21]工作階段洩漏追蹤至現成可用的&#x200B;**[!UICONTROL 已排程發佈至Brand Portal]**&#x200B;工作流程步驟。 (ASSETS-44104)
 * 處理和發佈影像時，[!DNL AEM]中顯示&#x200B;**[!UICONTROL 記憶體不足(OOM)]**&#x200B;錯誤。 此問題是因為工作流程中已棄用的方法，例如&#x200B;**[!DNL Dam Asset update]**&#x200B;和&#x200B;**[!DNL Dynamic Media: Reprocess assets]**。 (ASSETS-43343)
@@ -505,7 +505,7 @@ ht-degree: 1%
 您可以使用兩種不同的方法來安裝[!DNL Experience Manager] 6.5.23.0.<!-- UPDATE FOR EACH NEW RELEASE -->
 
 * 伺服器上線時，請將封裝放入`../crx-quickstart/install`資料夾。 套件會自動安裝。
-* 使用封裝管理員[&#128279;](/help/sites-administering/package-manager.md#package-share)的HTTP API。 使用`cmd=install&recursive=true`安裝巢狀套件。
+* 使用封裝管理員](/help/sites-administering/package-manager.md#package-share)的[HTTP API。 使用`cmd=install&recursive=true`安裝巢狀套件。
 
 >[!NOTE]
 >
@@ -672,37 +672,34 @@ AEM 6.5.21、6.5.22、6.5.23和AEM 6.5 LTS GA隨附`org.apache.sling.scripting.j
 
 ### AEM Sites的已知問題 {#known-issues-aem-sites-6523}
 
-內容片段 — 預覽失敗，因為大型片段樹受到DoS保護。 請參閱有關預設GraphQL查詢執行器組態選項[&#128279;](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-kcs/kbarticles/ka-23945)的KB文章(SITES-17934)
+內容片段 — 預覽失敗，因為大型片段樹受到DoS保護。 請參閱有關預設GraphQL查詢執行器組態選項](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-kcs/kbarticles/ka-23945)的[KB文章(SITES-17934)
 
 ### AEM Forms的已知問題 {#known-issues-aem-forms-6523}
 
-* 當客戶從Struts 2.x升級至6.x時，更嚴格的型別檢查可能會導致無訊息失敗，尤其是當核取方塊元件傳回false且繫結至清單&#x200B;*整數*&#x200B;時。 必須明確處理這個值不符，以避免還原序列化錯誤。 (FORMS-20203)
+>[!NOTE]
+>
+> 對於沒有可用的Hotfix的問題，請勿升級至Service Pack 6.5.23.0，因為這樣可能會導致未預期的錯誤。 只有在發行必要的Hotfix之後，才能升級至Service Pack 6.5.23.0。
 
-* 如果HTML至PDF轉換在SUSE® Linux® （自SLES 15 SP6）伺服器上失敗，並出現下列錯誤：
-
-  ```Auto configuration failed 4143511872:error:0E079065:configuration file routines:DEF_LOAD_BIO:missing equal sign:conf_def.c:362:line 57```
-然後設定以下環境變數並重新啟動伺服器：
-  `OPENSSL_CONF=/etc/ssl`
+* 當使用者將Struts從AEM Service Pack 2.5.x升級為AEM Forms Service Pack 6.x時，原則UI無法顯示所有設定，例如新增浮水印的選項。 (FORMS-20203)
+* 升級至AEM Forms Service Pack 6.5.23.0後，ImageToPDF轉換服務會失敗並出現錯誤(FORMS-20360)：
+  ```17:15:44,468 ERROR [com.adobe.pdfg.GeneratePDFImpl] (default task-49) ALC-PDG-001-000-ALC-PDG-011-028-Error occurred while converting the input image file to PDF. com/adobe/internal/pdftoolkit/core/encryption/EncryptionImp```
 
 * 安裝AEM Forms JEE Service Pack 21 (6.5.21.0)後，如果在`<AEM_Forms_Installation>/lib/caching/lib`資料夾(FORMS-14926)下找到Geode jar `(geode-*-1.15.1.jar and geode-*-1.15.1.2.jar)`的重複專案，請執行以下步驟以解決問題：
 
    1. 停止儲位（如果它們正在執行）。
-   1. 停止AEM伺服器。
-   1. 移至`<AEM_Forms_Installation>/lib/caching/lib`。
-   1. 移除除`geode-*-1.15.1.2.jar`以外的所有Geode修補程式檔案。 確認只有具有`version 1.15.1.2`的Geode jar存在。
-   1. 在管理員模式中開啟命令提示字元。
-   1. 使用`geode-*-1.15.1.2.jar`檔案安裝Geode修補程式。
+   2. 停止AEM伺服器。
+   3. 移至`<AEM_Forms_Installation>/lib/caching/lib`。
+   4. 移除除`geode-*-1.15.1.2.jar`以外的所有Geode修補程式檔案。 確認只有具有`version 1.15.1.2`的Geode jar存在。
+   5. 在管理員模式中開啟命令提示字元。
+   6. 使用`geode-*-1.15.1.2.jar`檔案安裝Geode修補程式。
 
 * 如果使用者嘗試預覽具有已儲存XML資料的草稿信件，它會在某些特定信件中陷入`Loading`狀態。 若要下載及安裝Hotfix，請參閱[Adobe Experience Manager Forms Hotfix](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)文章。 (FORMS-14521)
-
-* 升級至AEM Forms Service Pack 6.5.21.0後，`PaperCapture`服務無法在PDF上執行OCR （光學字元辨識）作業。 此服務不會產生PDF或記錄檔形式的輸出。 若要下載及安裝Hotfix，請參閱[Adobe Experience Manager Forms Hotfix](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)文章。 (CQDOC-21680)
-
 * 當使用者從AEM 6.5 Forms Service Pack 18或19升級為Service Pack 20或21時，他們遇到JSP編譯錯誤。 此錯誤會阻止他們開啟或建立最適化表單。 它也會導致其他AEM介面發生問題。 這些介麵包含頁面編輯器、AEM Forms UI、工作流程編輯器和系統概覽UI。 (FORMS-15256)
 
   如果您遇到這類問題，請執行以下步驟來解決問題：
    1. 導覽至CRXDE中的目錄`/libs/fd/aemforms/install/`。
-   1. 刪除名稱為`com.adobe.granite.ui.commons-5.10.26.jar`的組合。
-   1. 重新啟動AEM伺服器。
+   2. 刪除名稱為`com.adobe.granite.ui.commons-5.10.26.jar`的組合。
+   3. 重新啟動AEM伺服器。
 
 * 使用Forms附加元件更新至AEM Forms Service Pack 20 (6.5.20.0)後，依賴舊版Adobe Analytics Cloud Service （使用認證型驗證）的設定停止運作。 此問題導致Analytics規則無法正確執行。 若要下載及安裝Hotfix，請參閱[Adobe Experience Manager Forms Hotfix](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)文章。 (FORMS-15428)
 * 在互動式通訊代理程式UI的列印預覽中，所有欄位值都會不一致地顯示貨幣符號（例如美元符號$）。 對於最多999的值會顯示它，但對於1000或以上的值則遺失。 (FORMS-16557)
@@ -732,10 +729,10 @@ AEM 6.5.21、6.5.22、6.5.23和AEM 6.5 LTS GA隨附`org.apache.sling.scripting.j
 這些網站僅供客戶使用。 如果您是客戶且需要存取權，請聯絡您的Adobe客戶經理。
 
 * [產品下載網址為licensing.adobe.com](https://licensing.adobe.com/)
-* [連絡Adobe客戶支援](https://experienceleague.adobe.com/zh-hant/docs/customer-one/using/home)。
+* [連絡Adobe客戶支援](https://experienceleague.adobe.com/en/docs/customer-one/using/home)。
 
 >[!MORELIKETHIS]
 >
 >* [[!DNL Experience Manager] 產品頁面](https://business.adobe.com/products/experience-manager/adobe-experience-manager.html)
->* [[!DNL Experience Manager] 6.5檔案](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65)
+>* [[!DNL Experience Manager] 6.5檔案](https://experienceleague.adobe.com/en/docs/experience-manager-65)
 >* [訂閱Adobe優先產品更新](https://www.adobe.com/tw/subscription/priority-product-update.html)

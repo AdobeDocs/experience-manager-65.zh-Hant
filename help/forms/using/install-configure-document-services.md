@@ -6,9 +6,9 @@ role: Admin, User, Developer
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
 solution: Experience Manager, Experience Manager Forms
 feature: Interactive Communication
-source-git-commit: 5dbdce2d8e558e6bf26c6713fd44d58038d38152
+source-git-commit: f1fc8554b35d7d9c152023a6b9094e31c1b49807
 workflow-type: tm+mt
-source-wordcount: '5724'
+source-wordcount: '5806'
 ht-degree: 1%
 
 ---
@@ -184,6 +184,17 @@ AEM Forms附加元件套件是部署至AEM的應用程式。 一般而言，您�
    * libc.so.6
    * ld-linux.so.2
    * libexpat.so.1
+* (僅限PDF Generator)若要在RHEL 8或RHEL 9安裝程式中啟用WebKit路由，預設可能無法使用32位元`nspr`程式庫；如果不存在，請安裝。
+
+* (僅限PDF Generator)如果Unix®伺服器上的WebToPDF轉換失敗，並出現下列錯誤：
+
+  ```Auto configuration failed 4143511872:error:0E079065:configuration file routines:DEF_LOAD_BIO:missing equal sign:conf_def.c:362:line 57```
+然後設定以下環境變數並重新啟動伺服器：
+  `OPENSSL_CONF=/etc/ssl`
+
+>[!NOTE]
+>
+> WebToPDF也用於互動式通訊中的「圖表」功能。 因此，上述WebToPDF的所有設定步驟都適用於確保「圖表」功能正常運作。
 
 ## 安裝前設定 {#preinstallationconfigurations}
 
@@ -199,7 +210,7 @@ AEM Forms附加元件套件是部署至AEM的應用程式。 一般而言，您�
 >* Adobe Acrobat、Microsoft®Word、Excel和Powerpoint僅適用於Microsoft®Windows。 如果您使用UNIX作業系統，請安裝OpenOffice，將RTF文字檔和支援的Microsoft® Office檔案轉換成PDF檔案。
 >* 關閉在安裝Adobe Acrobat和協力廠商軟體後，針對所有設定為使用PDF Generator服務的使用者顯示的所有對話方塊。
 >* 至少啟動一次所有已安裝的軟體。 關閉所有設定要使用PDF Generator服務之使用者的所有對話方塊。
->* [檢查Adobe Acrobat序號的到期日](https://helpx.adobe.com/tw/enterprise/kb/volume-license-expiration-check.html)並設定更新授權的日期，或[根據到期日](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number)移轉您的序號。
+>* [檢查Adobe Acrobat序號的到期日](https://helpx.adobe.com/enterprise/kb/volume-license-expiration-check.html)並設定更新授權的日期，或[根據到期日](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number)移轉您的序號。
 
 安裝Acrobat後，請開啟Microsoft® Word。 在&#x200B;**Acrobat**&#x200B;標籤上，按一下&#x200B;**建立PDF**，並將電腦上可用的.doc或.docx檔案轉換成PDF檔案。 如果轉換成功，AEM Forms就可以將Acrobat與PDF Generator服務搭配使用。
 
@@ -290,7 +301,7 @@ AEM Forms附加元件套件是部署至AEM的應用程式。 一般而言，您�
 
 1. 開啟Microsoft® Office應用程式。 例如，Microsoft® Word。 瀏覽至&#x200B;**[!UICONTROL 檔案]**> **[!UICONTROL 選項]**。 「選項」對話方塊隨即顯示。
 
-1. 按一下[信任中心]&#x200B;**&#x200B;**，然後按一下[信任中心設定]&#x200B;**&#x200B;**。
+1. 按一下[信任中心]****，然後按一下[信任中心設定]****。
 1. 在&#x200B;**[!UICONTROL 信任中心設定]**&#x200B;中，按一下&#x200B;**[!UICONTROL 檔案封鎖設定]**。
 1. 在&#x200B;**[!UICONTROL 檔案型別]**&#x200B;清單中，取消選取&#x200B;**[!UICONTROL 開啟]**，該檔案型別應該允許PDF Generator服務轉換成PDF檔案。
 
@@ -298,7 +309,7 @@ AEM Forms附加元件套件是部署至AEM的應用程式。 一般而言，您�
 
 用來啟動應用程式伺服器的使用者帳戶需要&#x200B;**取代處理序層級權杖**&#x200B;許可權。 本機系統帳戶預設具有&#x200B;**取代處理序層級權杖**&#x200B;許可權。 對於以Local Administrators群組的使用者執行的伺服器，必須明確授與許可權。 執行以下步驟來授與許可權：
 
-1. 開啟Microsoft® Windows的群組原則編輯器。 若要開啟群組原則編輯器，請按一下[開始] **&#x200B;**，在[開始搜尋]方塊中輸入&#x200B;**gpedit.msc**，然後按一下[群組原則編輯器] **[!UICONTROL 。]**
+1. 開啟Microsoft® Windows的群組原則編輯器。 若要開啟群組原則編輯器，請按一下[開始] ****，在[開始搜尋]方塊中輸入&#x200B;**gpedit.msc**，然後按一下[群組原則編輯器] **[!UICONTROL 。]**
 1. 瀏覽至&#x200B;**[!UICONTROL 本機電腦原則]** > **[!UICONTROL 電腦組態]** > **[!UICONTROL Windows設定]** > **[!UICONTROL 安全性設定]** > **[!UICONTROL 本機原則]** > **[!UICONTROL 使用者許可權指派]**，並編輯&#x200B;**[!UICONTROL 取代處理序層級權杖]**&#x200B;原則並包含Administrators群組。
 1. 將使用者新增至「取代程式層級權杖」專案。
 
@@ -382,10 +393,10 @@ AEM Forms附加元件套件是部署至AEM的應用程式。 此套件包含AEM 
    1. 從&#x200B;**[!UICONTROL 解決方案]**&#x200B;下拉式清單中選取&#x200B;**[!UICONTROL Forms]**。
    2. 選取封裝的版本和型別。 您也可以使用&#x200B;**[!UICONTROL 搜尋下載]**&#x200B;選項來篩選結果。
 1. 選取適用於您作業系統的封裝名稱，選取&#x200B;**[!UICONTROL 接受EULA條款]**，然後選取&#x200B;**[!UICONTROL 下載]**。
-1. 開啟[封裝管理員](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=zh-Hant)，然後按一下&#x200B;**[!UICONTROL 上傳封裝]**&#x200B;以上傳封裝。
+1. 開啟[封裝管理員](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)，然後按一下&#x200B;**[!UICONTROL 上傳封裝]**&#x200B;以上傳封裝。
 1. 選取封裝並按一下&#x200B;**[!UICONTROL 安裝]**。
 
-   您也可以透過[AEM Forms發行版本](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=zh-Hant)文章中列出的直接連結來下載套件。
+   您也可以透過[AEM Forms發行版本](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)文章中列出的直接連結來下載套件。
 
 1. 安裝套件後，系統會提示您重新啟動AEM執行個體。 **不要立即停止伺服器。**&#x200B;在停止AEM Forms伺服器之前，請等候直到ServiceEvent REGISTERED和ServiceEvent UNREGISTERED訊息停止出現在`[AEM-Installation-Directory]/crx-quickstart/logs/error`.log檔案中，而且記錄檔穩定。
 
@@ -471,7 +482,7 @@ AEM Forms附加元件套件是部署至AEM的應用程式。 此套件包含AEM 
 
 在Microsoft® Windows上，PDF Generator服務會使用Adobe Acrobat將支援的檔案格式轉換為PDF檔案。 執行以下步驟，為PDF Generator服務設定Adobe Acrobat：
 
-1. 開啟Acrobat並選取&#x200B;**[!UICONTROL 編輯]**> **[!UICONTROL 偏好設定]**> **[!UICONTROL 更新程式]**。 在[檢查更新]中，取消選取[自動安裝更新]&#x200B;**&#x200B;**，然後按一下[確定]&#x200B;**&#x200B;**。 關閉Acrobat。
+1. 開啟Acrobat並選取&#x200B;**[!UICONTROL 編輯]**> **[!UICONTROL 偏好設定]**> **[!UICONTROL 更新程式]**。 在[檢查更新]中，取消選取[自動安裝更新]****，然後按一下[確定]****。 關閉Acrobat。
 1. 連按兩下您系統上的PDF檔案。 當Acrobat首次啟動時，會顯示登入、歡迎畫面和EULA的對話方塊。 為所有設定要使用PDF Generator的使用者關閉這些對話方塊。
 1. 執行PDF Generator公用程式批次檔案，為PDF Generator服務設定Acrobat：
 
@@ -523,7 +534,7 @@ DocAssurance服務可套用使用許可權至PDF檔案。 若要套用使用許�
 執行以下步驟來設定憑證：
 
 1. 以管理員身分登入AEM作者執行個體。 移至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 安全性]** > **[!UICONTROL 使用者]**。
-1. 按一下使用者帳戶的&#x200B;**[!UICONTROL 名稱]**&#x200B;欄位。 **[!UICONTROL 編輯使用者設定]**&#x200B;頁面隨即開啟。 在AEM編寫執行個體上，憑證位於KeyStore中。 如果您先前尚未建立KeyStore，請按一下[建立KeyStore] **&#x200B;**，並設定KeyStore的新密碼。 如果伺服器已包含KeyStore，請略過此步驟。  如果您使用Adobe的Reader擴充功能憑證，Keystore檔案密碼一律與私密金鑰密碼相同。
+1. 按一下使用者帳戶的&#x200B;**[!UICONTROL 名稱]**&#x200B;欄位。 **[!UICONTROL 編輯使用者設定]**&#x200B;頁面隨即開啟。 在AEM編寫執行個體上，憑證位於KeyStore中。 如果您先前尚未建立KeyStore，請按一下[建立KeyStore] ****，並設定KeyStore的新密碼。 如果伺服器已包含KeyStore，請略過此步驟。  如果您使用Adobe的Reader擴充功能憑證，Keystore檔案密碼一律與私密金鑰密碼相同。
 1. 在&#x200B;**[!UICONTROL 編輯使用者設定]**&#x200B;頁面上，選取&#x200B;**[!UICONTROL KeyStore]**&#x200B;索引標籤。 展開&#x200B;**[!UICONTROL 從金鑰庫檔案新增私密金鑰]**&#x200B;選項並提供別名。 別名可用來執行Reader擴充功能作業。
 1. 若要上傳憑證檔案，請按一下&#x200B;**[!UICONTROL 選取金鑰存放區檔案]**，然後上傳&lt;filename>.pfx檔案。
 
@@ -788,10 +799,10 @@ DocAssurance服務可套用使用許可權至PDF檔案。 若要套用使用許�
      
    * 磁碟區序列化套件（使用prov.xml檔案和新的序列重新序列化現有的安裝）：以管理員身分從PRTK安裝資料夾執行下列命令，以序列化並啟動使用者端機器上已部署的套件：
 
-         &grave;&grave;
+         ``
          adobe_prtk —tool=VolumeSerialize —provfile=C:\prov.xml -stream
          
-         &grave;&grave;
+         ``
      
 * 若是大規模安裝，請使用[Acrobat Customization Wizard](https://www.adobe.com/devnet-docs/acrobatetk/tools/Wizard/index.html)移除舊版Reader和Acrobat。 自訂安裝程式，並將其部署至組織的所有電腦。
 
