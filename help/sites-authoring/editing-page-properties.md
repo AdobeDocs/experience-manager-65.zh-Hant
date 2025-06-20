@@ -41,7 +41,7 @@ ht-degree: 3%
 
 #### 品牌元素 {#branding}
 
-藉由將品牌概要附加至每個頁面標題，跨頁面套用一致的品牌識別。 此功能需要使用2.14.0版或更新版本的[核心元件。](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)的頁面元件
+藉由將品牌概要附加至每個頁面標題，跨頁面套用一致的品牌識別。 此功能需要使用2.14.0版或更新版本的[核心元件。](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)的頁面元件
 
 * **覆寫** — 檢查以在此頁面上定義品牌概要。
    * 此值由任何子頁面繼承，除非它們也設定了&#x200B;**覆寫**&#x200B;值。
@@ -95,7 +95,7 @@ ht-degree: 3%
 >* 不支援規則運算式模式。
 >* 不應設為現有頁面。
 
-設定Dispatcher以啟用對虛名URL的存取權。 如需詳細資訊，請參閱[啟用對虛名URL的存取權](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#enabling-access-to-vanity-urls-vanity-urls)。
+設定Dispatcher以啟用對虛名URL的存取權。 如需詳細資訊，請參閱[啟用對虛名URL的存取權](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant#enabling-access-to-vanity-urls-vanity-urls)。
 
 * **新增** — 點選或按一下以新增虛名URL。
 * **移除** — 點選或按一下以移除虛名URL。
