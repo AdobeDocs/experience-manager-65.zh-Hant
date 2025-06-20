@@ -5,9 +5,9 @@ exl-id: 61144bbe-6710-4cae-a63e-e708936ff360
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Architect,Developer
-source-git-commit: 6f3c4f4aa4183552492c6ce5039816896bd67495
+source-git-commit: 2a843cefdd881e3cab60b2ddba12a26d0a498d13
 workflow-type: tm+mt
-source-wordcount: '1669'
+source-wordcount: '1701'
 ht-degree: 7%
 
 ---
@@ -24,14 +24,14 @@ ht-degree: 7%
 >
 >可能會混淆與發佈相關的某些術語：
 >
->* **Publish /取消發佈**
->  這些是讓您的內容在發佈環境中公開使用（或不公開使用）的動作主要詞語。
+>* **發佈/取消發佈**
+>  >  這些是讓您的內容在發佈環境中公開使用（或不公開使用）的動作主要詞語。
 >
 >* **啟用/停用**
->  這些辭彙與發佈/取消發佈同義。
+>  >  這些辭彙與發佈/取消發佈同義。
 >
 >* **復寫/復寫**
->  這些是技術術語，說明資料（例如頁面內容、檔案、程式碼、使用者註解）從一個環境移動到另一個環境，例如發佈或反向複製使用者註解時。
+>  >  這些是技術術語，說明資料（例如頁面內容、檔案、程式碼、使用者註解）從一個環境移動到另一個環境，例如發佈或反向複製使用者註解時。
 
 ## 許可權不足 {#insufficient-privileges}
 
@@ -52,22 +52,22 @@ ht-degree: 7%
 
 如果您正在編輯頁面，可以直接從編輯器發佈頁面。
 
-1. 選取&#x200B;**頁面資訊**&#x200B;圖示以開啟功能表，然後選取&#x200B;**Publish頁面**&#x200B;選項。
+1. 選取&#x200B;**頁面資訊**&#x200B;圖示以開啟功能表，然後選取&#x200B;**發佈頁面**&#x200B;選項。
 
    ![screen_shot_2018-03-21at152734](assets/screen_shot_2018-03-21at152734.png)
 
 1. 視頁面是否有需要發佈的參照而定：
 
    * 如果沒有要發佈的引用，則會直接發佈頁面。
-   * 如果頁面含有需要發佈的參考，這些參考將會列在&#x200B;**Publish**&#x200B;精靈中，您可以在其中執行下列其中一項作業：
+   * 如果頁面含有需要發佈的參考，這些參考將會列在&#x200B;**發佈**&#x200B;精靈中，您可以在其中執行下列任一作業：
 
-      * 指定要與頁面一起發佈的資產或標籤，然後使用&#x200B;**Publish**&#x200B;完成程式。
+      * 指定您要與頁面一起發佈的資產或標籤，然後使用&#x200B;**發佈**&#x200B;以完成程式。
 
       * 使用&#x200B;**取消**&#x200B;中止動作。
 
    ![chlimage_1](assets/chlimage_1.png)
 
-1. 選取&#x200B;**Publish**&#x200B;會將頁面復寫至發佈環境。 在頁面編輯器中，會顯示確認發佈動作的資訊橫幅。
+1. 選取&#x200B;**發佈**&#x200B;會將頁面復寫至發佈環境。 在頁面編輯器中，會顯示確認發佈動作的資訊橫幅。
 
    ![screen_shot_2018-03-21at152840](assets/screen_shot_2018-03-21at152840.png)
 
@@ -81,7 +81,7 @@ ht-degree: 7%
 
 >[!NOTE]
 >
->無法發佈編輯器中由[別名](/help/sites-authoring/editing-page-properties.md#advanced)存取的頁面。 編輯器中的Publish選項僅適用於透過實際路徑存取的頁面。
+>無法發佈編輯器中由[別名](/help/sites-authoring/editing-page-properties.md#advanced)存取的頁面。 編輯器中的發佈選項僅適用於透過實際路徑存取的頁面。
 
 ### 從主控台發佈 {#publishing-from-the-console}
 
@@ -92,15 +92,15 @@ ht-degree: 7%
 
 #### 快速發佈 {#quick-publish}
 
-**快速Publish**&#x200B;適用於簡單案例，可立即發佈選取的頁面，無需任何進一步的互動。 因此，任何未發佈的參考也會自動發佈。
+**快速發佈**&#x200B;適用於簡單的情況，並且會立即發佈選取的頁面，而不會進行任何進一步的互動。 因此，任何未發佈的參考也會自動發佈。
 
-若要使用Quick Publish發佈頁面：
+若要使用「快速發佈」功能發佈頁面：
 
-1. 在網站主控台中選取一個或多個頁面，然後按一下&#x200B;**快速Publish**&#x200B;按鈕。
+1. 在網站主控台中選取一個或多個頁面，然後按一下&#x200B;**快速發佈**&#x200B;按鈕。
 
    ![pp-02](assets/pp-02.png)
 
-1. 在「快速Publish」對話方塊中，按一下&#x200B;**Publish**&#x200B;以確認出版物，或按一下&#x200B;**取消**&#x200B;以取消出版物。 請記住，任何未發佈的參考也會自動發佈。
+1. 在[快速發佈]對話方塊中，按一下[發佈]****&#x200B;以確認發佈，或按一下[取消]****&#x200B;以取消發佈。 請記住，任何未發佈的參考也會自動發佈。
 
    ![chlimage_1-1](assets/chlimage_1-1.png)
 
@@ -108,11 +108,11 @@ ht-degree: 7%
 
 >[!NOTE]
 >
->快速Publish是淺層發佈，也就是說，只會發佈選定的一個或多個頁面，而不會發佈任何子頁面。
+>快速發佈是淺層發佈，也就是說，只會發佈選取的頁面，而不會發佈任何子頁面。
 
 #### 管理發佈 {#manage-publication}
 
-**管理出版物**&#x200B;提供比「快速Publish」更多的選項，允許包含子頁面、自訂參考和啟動任何適用的工作流程，並提供在以後的日期發佈的選項。
+**管理出版物**&#x200B;提供比「快速發佈」更多的選項，允許包含子頁面、自訂參照以及啟動任何適用的工作流程，並提供在以後發佈的選項。
 
 若要使用「管理發布」來發佈或取消發佈頁面：
 
@@ -131,7 +131,7 @@ ht-degree: 7%
 
    ![chlimage_1-2](assets/chlimage_1-2.png)
 
-   按一下[下一步]&#x200B;**&#x200B;**&#x200B;繼續。
+   按一下[下一步]****&#x200B;繼續。
 
 1. 在「管理出版物」精靈的下一個步驟&#x200B;**範圍**&#x200B;中，您可以定義發佈/取消發佈的範圍，例如，包含子頁面和/或包含參考。
 
@@ -141,7 +141,7 @@ ht-degree: 7%
 
    按一下[新增內容]按鈕會啟動[路徑瀏覽器](/help/sites-authoring/author-environment-tools.md#path-browser)以允許選擇內容。
 
-   選取必要的頁面，然後按一下[選取]將內容加入精靈，或按一下[**取消**]取消選取並返回精靈。**&#x200B;**
+   選取必要的頁面，然後按一下[選取]將內容加入精靈，或按一下[**取消**]取消選取並返回精靈。****
 
    回到精靈，您可以選取清單中的專案以設定其進一步的選項，例如：
 
@@ -175,7 +175,7 @@ ht-degree: 7%
 
    ![pp-05](assets/pp-05.png)
 
-1. 按一下&#x200B;**Publish**&#x200B;以完成。
+1. 按一下&#x200B;**發佈**&#x200B;以完成。
 
    回到網站主控台，系統會傳送通知訊息確認發佈。
 
@@ -197,11 +197,15 @@ ht-degree: 7%
 
    ![chlimage_1-4](assets/chlimage_1-4.png)
 
+>[!TIP]
+>
+>排程發佈內容會複製內容並遵守發佈工作流程。 如果您想要暫時隱藏已發佈的內容而不取消發佈，請考慮在頁面屬性中使用&#x200B;[**開啟時間**&#x200B;和&#x200B;**關閉時間**。](/help/sites-authoring/editing-page-properties.md#on-time)
+
 ## 取消發佈頁面 {#unpublishing-pages}
 
 取消發佈頁面會將其從發佈環境中移除，因此不再開放給您的讀者使用。
 
-以類似發佈[&#128279;](/help/sites-authoring/publishing-pages.md#publishing-pages)的方式，可以取消發佈一或多個頁面：
+以類似發佈](/help/sites-authoring/publishing-pages.md#publishing-pages)的[方式，可以取消發佈一或多個頁面：
 
 * [從頁面編輯器](/help/sites-authoring/publishing-pages.md#unpublishing-from-the-editor)
 * [從網站主控台](/help/sites-authoring/publishing-pages.md#unpublishing-from-the-console)
@@ -212,14 +216,14 @@ ht-degree: 7%
 
 >[!NOTE]
 >
->無法取消發佈編輯器中由[別名](/help/sites-authoring/editing-page-properties.md#advanced)存取的頁面。 編輯器中的Publish選項僅適用於透過實際路徑存取的頁面。
+>無法取消發佈編輯器中由[別名](/help/sites-authoring/editing-page-properties.md#advanced)存取的頁面。 編輯器中的發佈選項僅適用於透過實際路徑存取的頁面。
 
 ### 從主控台取消發佈 {#unpublishing-from-the-console}
 
 如同您[使用[管理出版物]選項發佈](/help/sites-authoring/publishing-pages.md#manage-publication)一樣，您也可以使用它來取消發佈。
 
 1. 在網站主控台中選取一個或多個頁面，然後按一下&#x200B;**管理出版物**&#x200B;按鈕。
-1. 「管 **理出版物** 」嚮導將啟動。在第一個步驟中， **選項**，選擇「取消發佈」(Unpublish **)，而非「發佈」(Publish)的預設** 選項 **&#x200B;**。
+1. 「管 **理出版物** 」嚮導將啟動。在第一個步驟中， **選項**，選擇「取消發佈」(Unpublish **)，而非「發佈」(Publish)的預設** 選項 ****。
 
    ![chlimage_1-5](assets/chlimage_1-5.png)
 
@@ -262,11 +266,11 @@ ht-degree: 7%
 
 您可以決定頁面的發佈狀態：
 
-* 在網站主控台[&#128279;](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)的資源概觀資訊中
+* 在網站主控台](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)的[資源概觀資訊中
 
   ![screen-shot_2019-03-05at112019](assets/screen-shot_2019-03-05at112019.png)
 
-  發佈狀態會顯示在 [網站主控台](/help/sites-authoring/basic-handling.md#card-view) [的卡片](/help/sites-authoring/basic-handling.md#column-view)、欄和 [清單檢視中](/help/sites-authoring/basic-handling.md#list-view) 。
+  發佈狀態會顯示在 [網站主控台](/help/sites-authoring/basic-handling.md#card-view)[的卡片](/help/sites-authoring/basic-handling.md#column-view)、欄和 [清單檢視中](/help/sites-authoring/basic-handling.md#list-view) 。
 
 * 在[時間表](/help/sites-authoring/basic-handling.md#timeline)中
 
