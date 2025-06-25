@@ -4,9 +4,10 @@ description: 功能切換是AEM中的一項功能，可讓管理員在執行階�
 feature: Adaptive Forms, Foundation Components
 role: User, Developer
 hidefromtoc: true
-source-git-commit: 794d93d890ba752f9036a85831f7cbc8391fb545
+exl-id: 08815c2b-23b3-4545-a3ab-ba47ba1c3c55
+source-git-commit: 9b28ab12422743cd7849d2761aef9916ec6710f5
 workflow-type: tm+mt
-source-wordcount: '293'
+source-wordcount: '381'
 ht-degree: 2%
 
 ---
@@ -15,13 +16,35 @@ ht-degree: 2%
 
 功能切換是AEM中的一項功能，可讓管理員動態啟用或停用特定功能。 此功能特別適合用於管理&#x200B;**早期採用者功能**&#x200B;和&#x200B;**發行前功能**，而不需要主要部署或變更程式碼基底。 它可確保靈活度並控制可在AEM環境中存取的功能。
 
+## 為何要在AEM 6.5設定中使用功能切換？
+
+在AEM 6.5設定中工作時，功能可切換以下協助：
+
+* 安全地測試實驗功能。
+
+* 分階段推出新元件。
+
+* 跨多個環境維護單一程式碼基底。
+
+* 減少部署和升級期間的風險。
+
+## 先決條件
+
+在AEM 6.5設定中啟用功能切換之前，請確定以下事項：
+
+* 使用者是`forms-users`群組的成員。
+
+* 導覽至`http://<author-instance-url>:portnumber/system/console/bundles`，並檢查&#x200B;**(com.adobe.granite.toggle.impl.dev-1.1.2.jar)**&#x200B;套件組合是否存在。 若不存在，請[從連結](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/com.adobe.granite.toggle.impl.dev-1.1.2%20.jar)下載套件。
+
+  ![功能切換](/help/forms/using/assets/feature-toggle-6.5.png)
+
 ## 啟用功能切換 {#enable-feature-toggle-65}
 
-早期採用者的功能切換或新功能可以透過&#x200B;**AEM Web Console**&#x200B;設定，請遵循下列步驟：
+早期採用者的功能切換或新功能可透過&#x200B;**AEM Web Console**&#x200B;設定，請遵循下列步驟：
 
 1. 登入您的AEM Forms執行個體。
 2. 導覽至 `http://<author-instance-url>:portnumber/system/console/configMgr`。
-3. 在Configuration Manager中搜尋&#x200B;**AdobeGranite動態切換提供者**。
+3. 在Configuration Manager中搜尋&#x200B;**Adobe Granite動態切換提供者**。
 4. 按一下圖示![鉛筆圖示](assets/illustratorcc_penciltool_cur_edit_2_17.png)。
 5. 在[!UICONTROL 已啟用的切換]區段中，按一下![鉛筆圖示](assets/aem6forms_add.png)。
 6. 新增功能的功能切換ID，如下圖所示。
@@ -39,7 +62,7 @@ ht-degree: 2%
 
 1. 登入您的AEM Forms執行個體。
 2. 導覽至 `http://<author-instance-url>:portnumber/system/console/configMgr`。
-3. 在Configuration Manager中搜尋&#x200B;**AdobeGranite動態切換提供者**。
+3. 在Configuration Manager中搜尋&#x200B;**Adobe Granite動態切換提供者**。
 4. 按一下圖示![鉛筆圖示](assets/illustratorcc_penciltool_cur_edit_2_17.png)。
 5. 在[!UICONTROL 已停用的切換]區段中，按一下![鉛筆圖示](assets/aem6forms_add.png)。
 6. 為要停用的功能新增切換號碼。
