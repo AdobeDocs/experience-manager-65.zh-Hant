@@ -43,7 +43,7 @@ ht-degree: 13%
 
    * Red Hat® Enterprise Linux® 9 （核心4.x，64位元）
 
-* [強化的檔案附件元件](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/file-attachment)：作為安全性測量，此元件現在會防止提交副檔名經過修改、嘗試略過允許的檔案型別檢查的檔案。 提交期間會封鎖這類檔案，以確保僅接受有效的檔案型別。
+* [強化的檔案附件元件](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/file-attachment)：作為安全性測量，此元件現在會防止提交副檔名經過修改、嘗試略過允許的檔案型別檢查的檔案。 提交期間會封鎖這類檔案，以確保僅接受有效的檔案型別。
 
 ## AEM 6.5， Service Pack 22—2024年11月21日
 
@@ -59,7 +59,7 @@ IPTC索引標籤現在支援[!UICONTROL 替代文字]和[!UICONTROL 延伸說明
 
 #### AEM Forms中的新GA功能 {#ga-aem-forms-sp22}
 
-* 新增在[Interactive Communications Batch API](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/interactive-communications/create-interactive-communication#output-format-print-channel)中啟用字型內嵌的支援 — 現在，Interactive Communications支援在透過Batch API產生的PDF中內嵌Adobe Ming和Adobe Myungjo字型。 此增強功能可確保產生的檔案能正確呈現文字，即使使用字型子集亦然，改善了PDF輸出中的多語言內容支援。
+* 新增在[Interactive Communications Batch API](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65/content/forms/interactive-communications/create-interactive-communication#output-format-print-channel)中啟用字型內嵌的支援 — 現在，Interactive Communications支援在透過Batch API產生的PDF中內嵌Adobe Ming和Adobe Myungjo字型。 此增強功能可確保產生的檔案能正確呈現文字，即使使用字型子集亦然，改善了PDF輸出中的多語言內容支援。
 
 * [適用於PDF協助工具的內容目錄API](/help/forms/using/aem-document-services-programmatically.md#auto-tag-pdf-documents-auto-tag-api) - OSGi上的AEM Forms現在支援新的TOC標籤API，以增強PDF的協助工具標準。 它可讓具有輔助技術的使用者更容易存取PDF。
 
@@ -116,7 +116,7 @@ IPTC索引標籤現在支援[!UICONTROL 替代文字]和[!UICONTROL 延伸說明
 
 ### [!DNL Assets]
 
-* Dynamic Media現在支援Apple iOS/iPadOS的無損HEIC影像格式。 請參閱Dynamic Media影像提供與轉譯API中的[fmt](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-is-http-fmt)。
+* Dynamic Media現在支援Apple iOS/iPadOS的無損HEIC影像格式。 請參閱Dynamic Media影像提供與轉譯API中的[fmt](https://experienceleague.adobe.com/zh-hant/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-is-http-fmt)。
 * 多站台管理員(MSM)現在支援體驗片段結構，包括資料夾和子資料夾，以便有效地將體驗片段大量轉出到即時副本。
 
 ### [!DNL Forms]
@@ -137,13 +137,13 @@ IPTC索引標籤現在支援[!UICONTROL 替代文字]和[!UICONTROL 延伸說明
 ### [!DNL Forms]
 
 * **新最適化表單核心元件**：已新增垂直標籤、條款與條件以及核取方塊，以提升表單的擴充性。
-   * **[核取方塊元件](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/checkbox)**：以核心元件為主的最適化表單現在可以包含核取方塊元件。可讓使用者二選一，選取或取消選取特定選項。它通常為一個小方塊，可以按一下或點選以在兩種狀態之間切換：選取和取消選取。核取方塊是一種常見的表單元素，用來表示選擇是/否或真/假。
+   * **[核取方塊元件](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/checkbox)**：以核心元件為主的最適化表單現在可以包含核取方塊元件。可讓使用者二選一，選取或取消選取特定選項。它通常為一個小方塊，可以按一下或點選以在兩種狀態之間切換：選取和取消選取。核取方塊是一種常見的表單元素，用來表示選擇是/否或真/假。
 
-   * **[條款與條件元件](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/terms-and-conditions)**：核心元件型最適化Forms現在包含條款與條件元件。 表單作者新增此區段，向使用者顯示服務、產品或平台的條款、條件或法律合約。 此元件的設計用意是在告知使用者他們透過提交表單同意的規則、法規和義務。
+   * **[條款與條件元件](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/terms-and-conditions)**：核心元件型最適化Forms現在包含條款與條件元件。 表單作者新增此區段，向使用者顯示服務、產品或平台的條款、條件或法律合約。 此元件的設計用意是在告知使用者他們透過提交表單同意的規則、法規和義務。
 
      ![垂直標籤、條款與條件及核取方塊元件](/help/forms/using/assets/forms-components.png)
 
-   * **[垂直標籤元件](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/vertical-tabs)**：以核心元件為主的最適化表單現在可以將表單內容組織成垂直的標籤清單，提供結構化、可導覽的版面。表單中的垂直標籤可簡化導覽和組織內容，進而增強使用者體驗。 當表單包含多個區段或複雜資訊時，這些變數特別實用。
+   * **[垂直標籤元件](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/vertical-tabs)**：以核心元件為主的最適化表單現在可以將表單內容組織成垂直的標籤清單，提供結構化、可導覽的版面。表單中的垂直標籤可簡化導覽和組織內容，進而增強使用者體驗。 當表單包含多個區段或複雜資訊時，這些變數特別實用。
 
 * **[64位元版本的AEM Forms Designer](/help/forms/using/installing-configuring-designer.md)**： 64位元版本的AEM Forms Designer提供增強的效能、擴充能力及記憶體管理，讓您能夠建立表單。 透過 64 位元架構，您可以輕鬆處理更大、更複雜的專案，確保設計工作流程流暢和最佳效率。透過這最先進的版本，提升您的表單設計能力並擁抱 AEM Forms Designer 的未來。
 
@@ -164,9 +164,9 @@ IPTC索引標籤現在支援[!UICONTROL 替代文字]和[!UICONTROL 延伸說明
 
 ### [!DNL Forms]
 
-* **[規則編輯器中使用自訂錯誤處理常式的增強錯誤處理](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/adaptive-forms-advanced-authoring/standard-validation-error-messages-adaptive-forms)** — 您現在可以叫用自訂函式（使用使用者端程式庫）來回應外部服務傳回的錯誤。 此外，您也可以為使用者提供量身打造的回應。 或者，您可以針對服務傳回的錯誤採取特定動作。例如，您可以在後端叫用自訂工作流程來取得特定錯誤代碼，或通知客戶服務已停止服務
+* **[規則編輯器中使用自訂錯誤處理常式的增強錯誤處理](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65/content/forms/adaptive-forms-advanced-authoring/standard-validation-error-messages-adaptive-forms)** — 您現在可以叫用自訂函式（使用使用者端程式庫）來回應外部服務傳回的錯誤。 此外，您也可以為使用者提供量身打造的回應。 或者，您可以針對服務傳回的錯誤採取特定動作。例如，您可以在後端叫用自訂工作流程來取得特定錯誤代碼，或通知客戶服務已停止服務
 
-* **[增強型Adobe Sign工作流程步驟](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/workflows/aem-forms-workflow-step-reference#sign-document-step)** - AEM工作流程中的Adobe Sign工作流程步驟提供下列增強功能。
+* **[增強型Adobe Sign工作流程步驟](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65/content/forms/workflows/aem-forms-workflow-step-reference#sign-document-step)** - AEM工作流程中的Adobe Sign工作流程步驟提供下列增強功能。
 
    * **Adobe Sign的政府機關身分證件驗證強化安全性** - Adobe Acrobat Sign的政府機關身分證件驗證提供額外的驗證層。 它可讓使用者使用政府頒發的ID （駕照、國民身分證、護照）來驗證身分。 此增強功能利用受信任的身分識別文件為簽名過程額外增加一層可信度，使其成為需要增強安全性、合規性和使用者驗證等情境的理想選擇。
 
@@ -176,7 +176,7 @@ IPTC索引標籤現在支援[!UICONTROL 替代文字]和[!UICONTROL 延伸說明
    * **將合約收件者的角色擴充至簽署者** - Adobe Acrobat Sign可讓您將合約收件者的角色擴充至簽署者之外，以便更符合其工作流程需求。 啟用後，協定中的每個收件者皆可個別設定其角色，預設為簽署者。
 
 
-* **[JEE上的AEM Forms完整安裝程式](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/install-aem-forms/jee-installation/aem-forms-jee-supported-platforms)** — 此Service Pack為JEE上的AEM Forms提供完整安裝程式，可支援多種新軟體組合，包括：
+* **[JEE上的AEM Forms完整安裝程式](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65/content/forms/install-aem-forms/jee-installation/aem-forms-jee-supported-platforms)** — 此Service Pack為JEE上的AEM Forms提供完整安裝程式，可支援多種新軟體組合，包括：
    * Microsoft® Windows Server 2022
    * Microsoft® Active Directory 2022
    * Windows Server 2022上的Oracle WebLogic 14C
@@ -221,8 +221,8 @@ IPTC索引標籤現在支援[!UICONTROL 替代文字]和[!UICONTROL 延伸說明
 
 ### [!DNL Forms]
 
-* [無頭式最適化Forms](https://experienceleague.adobe.com/en/docs/experience-manager-headless-adaptive-forms/using/overview)可讓您的開發人員建立、發佈和管理可透過API （而非透過傳統的圖形使用者介面）存取及互動式表單。
+* [無頭式最適化Forms](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-headless-adaptive-forms/using/overview)可讓您的開發人員建立、發佈和管理可透過API （而非透過傳統的圖形使用者介面）存取及互動式表單。
 
-* [最適化Forms核心元件](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/introduction#features)是一組24個開放原始碼、符合BEM規範的元件，建立在Adobe Experience Manager WCM核心元件的基礎上。 這些元件是開放原始碼，讓開發人員能夠輕鬆自訂和擴充這些元件，以符合其組織的特定需求。 擁有自訂[WCM核心元件](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/get-started/authoring)的現有技能的任何人都可以輕鬆自訂這些元件並設定其樣式。
+* [最適化Forms核心元件](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-core-components/using/adaptive-forms/introduction#features)是一組24個開放原始碼、符合BEM規範的元件，建立在Adobe Experience Manager WCM核心元件的基礎上。 這些元件是開放原始碼，讓開發人員能夠輕鬆自訂和擴充這些元件，以符合其組織的特定需求。 擁有自訂[WCM核心元件](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-core-components/using/get-started/authoring)的現有技能的任何人都可以輕鬆自訂這些元件並設定其樣式。
 
 * OSGi上的Reader擴充功能現在提供個別選項，可啟用PDF的匯入和匯出使用許可權，以便在Adobe Acrobat Reader中匯入或匯出資料。
