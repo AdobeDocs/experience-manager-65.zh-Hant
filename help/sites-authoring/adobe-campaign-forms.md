@@ -9,9 +9,9 @@ exl-id: 7d60673e-484a-4447-83cf-d62a0d7ad745
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization,Integration
 role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+source-git-commit: 389d5fa8de320a7237fc8290992a33743b15db99
 workflow-type: tm+mt
-source-wordcount: '1281'
+source-wordcount: '1280'
 ht-degree: 1%
 
 ---
@@ -52,7 +52,7 @@ AEM可讓您建立並使用與您網站上的Adobe Campaign互動的表單。 �
 
 >[!NOTE]
 >
->當使用Adobe Campaign Classic或Adobe Campaign Standard時，請確定頁面&#x200B;**jcr：content**&#x200B;節點上的&#x200B;**acMapping**&#x200B;屬性分別設為&#x200B;**mapRecipient**&#x200B;或&#x200B;**profile**
+>當使用Adobe Campaign Classic或Adobe Campaign Standard時，請確定頁面&#x200B;**jcr**&#x200B;節點上的&#x200B;**acMapping:content**&#x200B;屬性分別設為&#x200B;**mapRecipient**&#x200B;或&#x200B;**profile**
 >
 
 1. 在AEM的Sites中，導覽至您要建立頁面的位置。
@@ -66,7 +66,7 @@ AEM可讓您建立並使用與您網站上的Adobe Campaign互動的表單。 �
 
 1. 在&#x200B;**名稱**&#x200B;欄位中，新增頁面名稱。 必須為有效的JCR名稱。
 1. 在&#x200B;**標題**&#x200B;欄位中輸入標題，然後按一下&#x200B;**建立**。
-1. 開啟頁面並選取&#x200B;**開啟屬性**，然後在Cloud Service中新增Adobe Campaign設定並選取核取記號以儲存您的變更。
+1. 開啟頁面並選取&#x200B;**開啟屬性**，然後在雲端服務中新增Adobe Campaign設定並選取核取記號以儲存您的變更。
 
    ![chlimage_1-44](assets/chlimage_1-44a.png)
 
@@ -78,11 +78,11 @@ Adobe Campaign專用的Forms具有特定元件。 這些元件有選項可讓您
 
 >[!NOTE]
 >
->如果無法使用所需的範本，請參閱[讓範本可用](/help/sites-authoring/adobe-campaign.md)。
+>如果無法使用所需的範本，請參閱[讓範本可用。](/help/sites-authoring/campaign.md)
 
 本節僅詳細說明Adobe Campaign的特定連結。 如需如何在Adobe Experience Manager中使用表單的一般概覽的詳細資訊，請參閱[編輯模式元件](/help/sites-authoring/default-components-foundation.md)。
 
-1. 選取&#x200B;**開啟屬性**，並在Cloud Service中新增Adobe Campaign設定，並選取核取記號以儲存變更。
+1. 選取「**開啟屬性**」，然後在Cloud Services中新增Adobe Campaign設定，並選取核取記號以儲存變更。
 
    ![chlimage_1-45](assets/chlimage_1-45a.png)
 
@@ -114,7 +114,7 @@ Adobe Campaign專用的Forms具有特定元件。 這些元件有選項可讓您
    >
    >您可以依照下列指示，新增/移除顯示在收件者表格中的欄位： [https://blogs.adobe.com/experiencedelivers/experience-management/aem-campaign-integration/](https://blogs.adobe.com/experiencedelivers/experience-management/aem-campaign-integration/)
 
-1. 按一下&#x200B;**Publish頁面**。 頁面已在您的網站上啟動。 您可以前往AEM發佈執行個體來檢視它。 您也可以[測試表單](#testing-a-form)。
+1. 按一下&#x200B;**發佈頁面**。 頁面已在您的網站上啟動。 您可以前往AEM發佈執行個體來檢視它。 您也可以[測試表單](#testing-a-form)。
 
    >[!CAUTION]
    >

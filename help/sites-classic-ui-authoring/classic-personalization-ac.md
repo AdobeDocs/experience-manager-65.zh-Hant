@@ -9,9 +9,9 @@ exl-id: 7689b0e7-9da3-467f-8e53-f056040391d8
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization
 role: User
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+source-git-commit: 389d5fa8de320a7237fc8290992a33743b15db99
 workflow-type: tm+mt
-source-wordcount: '125'
+source-wordcount: '126'
 ht-degree: 2%
 
 ---
@@ -31,9 +31,9 @@ Adobe Campaign這一組解決方案可讓您跨所有線上及離線管道個人
 * [Adobe Campaign元件](/help/sites-classic-ui-authoring/classic-personalization-ac-components.md)
 * [鎖定您的Adobe Campaign](/help/sites-classic-ui-authoring/classic-personalization-ac-target.md)
 
-您先前必須已[將AEM與Adobe Campaign](/help/sites-administering/campaign.md)整合。
+您先前必須已[整合AEM與Adobe Campaign](/help/sites-administering/campaign.md)。
 
 此外，如果您想要自訂整合，請參閱下列主題：
 
-* [建立自訂擴充功能](/help/sites-developing/extending-campaign-extensions.md)
+* [自訂Adobe Campaign擴充功能](/help/sites-developing/extending-campaign-extensions.md)
 * [建立自訂表單對應](/help/sites-developing/extending-campaign-form-mapping.md)

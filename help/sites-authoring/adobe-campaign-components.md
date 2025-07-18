@@ -10,12 +10,14 @@ exl-id: d1132fcd-e6a0-44a2-8753-d250f68fbd78
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization,Integration
 role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+index: false
+source-git-commit: 389d5fa8de320a7237fc8290992a33743b15db99
 workflow-type: tm+mt
-source-wordcount: '2859'
+source-wordcount: '2857'
 ht-degree: 6%
 
 ---
+
 
 # Adobe Campaign元件{#adobe-campaign-components}
 
@@ -23,13 +25,13 @@ ht-degree: 6%
 
 >[!CAUTION]
 >
->已棄用AEM電子郵件元件。 由於電子郵件結合了內容和樣式，因此由AEM提供的現成可用電子郵件元件對於客戶的重複使用有限，因為需要將自訂樣式實作到專案所需的任何元件中。
+>AEM電子郵件元件已淘汰。 由於電子郵件結合了內容和樣式，因此由AEM提供的現成可用電子郵件元件對於客戶的重複使用有限，因為需要將自訂樣式實作到專案所需的任何元件中。
 >
 >電子郵件元件可在專案層級實作，而過時的AEM電子郵件元件會說明如何實作。 不過，請勿在專案上使用這些已棄用的元件。
 
 ## Adobe Campaign Newsletter元件 {#adobe-campaign-newsletter-components}
 
-所有Campaign元件都遵循[電子郵件範本最佳實務](/help/sites-administering/best-practices-for-email-templates.md)中概述的最佳實務，並以Adobe標籤語言[HTL](https://helpx.adobe.com/tw/experience-manager/htl/using/overview.html)為基礎。
+所有Campaign元件都遵循[電子郵件範本最佳實務](/help/sites-administering/best-practices-for-email-templates.md)中概述的最佳實務，且以Adobe標籤語言[HTL](https://helpx.adobe.com/tw/experience-manager/htl/using/overview.html)為基礎。
 
 當您開啟已設定為要與Adobe Campaign整合的新聞稿/電子郵件時，您應該會在&#x200B;**Adobe Campaign新聞稿**&#x200B;區段中看到下列元件：
 
@@ -64,7 +66,7 @@ ht-degree: 6%
 如果您想使用頁面標題以外的名稱，請在此處輸入它。
 
 * **標題層級(1， 2， 3， 4)**
-根據HTML標題大小1-4的標題層級。
+根據HTML標題大小的標題層級1-4。
 
 下列範例顯示正在顯示的標題（行銷活動）元件。
 
@@ -92,7 +94,7 @@ ht-degree: 6%
 >
 >就地編輯器在編輯時會使用影像的原始大小和外觀比例。 您也可以指定高度和寬度屬性。 儲存編輯變更時，會套用屬性中定義的任何大小和外觀比例限制。
 >
->視您的執行個體而定，頁面[&#128279;](/help/sites-developing/designer.md)的設計可能也會施加最小和最大限制；這些限制是在專案實作期間開發的。
+>視您的執行個體而定，頁面[的](/help/sites-developing/designer.md)設計可能也會施加最小和最大限制；這些限制是在專案實作期間開發的。
 
 全熒幕編輯模式中有數個其他選項可供使用；例如，地圖和縮放：
 
@@ -153,7 +155,7 @@ ht-degree: 6%
 新增如何使用連結的其他資訊。
 
 * **LinkType**
-在下拉式清單中，選取&#x200B;**自訂URL**&#x200B;和&#x200B;**最適化檔案**。 此為必填欄位。 如果您選取「自訂URL」，可提供連結URL。 如果您選取「最適化檔案」，則可以提供檔案路徑。
+在下拉式清單中，選取**自訂URL**&#x200B;和&#x200B;**最適化檔案**。 此為必填欄位。 如果您選取「自訂URL」，可提供連結URL。 如果您選取「最適化檔案」，則可以提供檔案路徑。
 
 * **其他URL引數**
 新增任何其他URL引數。 按一下「新增專案」以新增多個專案。
@@ -265,7 +267,7 @@ Dynamic Media Classic (Scene7)影像範本為圖層式影像檔案，其中的�
 
 >[!NOTE]
 >
->只考慮&#x200B;**nms：seedMember**&#x200B;結構描述或其其中一個擴充功能中定義的欄位。 連結至&#x200B;**nms：seedMember**&#x200B;的資料表屬性無法使用。
+>只考慮&#x200B;**nms:seedMember**&#x200B;結構描述或其其中一個擴充功能中定義的欄位。 連結至&#x200B;**nms:seedMember**&#x200B;的資料表的屬性無法使用。
 
 ## Adobe Campaign表單元件 {#adobe-campaign-form-components}
 
@@ -388,13 +390,13 @@ Adobe Campaign元件具有所有元件中通用的設定（加密的主要金鑰
 
 ![chlimage_1-60](assets/chlimage_1-60.png)
 
-### 日期欄位（行銷活動）和日期欄位/HTML5 （行銷活動） {#date-field-campaign-and-date-field-html-campaign}
+### 日期欄位（行銷活動）和日期欄位/HTML 5 （行銷活動） {#date-field-campaign-and-date-field-html-campaign}
 
 使用日期欄位可允許收件者指定日期；例如，您可能希望收件者指定其出生日期。 日期格式符合您在Adobe Campaign執行個體中使用的格式。
 
 除了大部分Adobe Campaign元件通用的[設定](#settings-common-to-most-components)之外，您還可以設定下列專案：
 
-* **限制 — 限制**&#x200B;下拉式清單
+* **限制 — 限制**下拉式清單
 您可以選取 — **無**&#x200B;或&#x200B;**日期 —**&#x200B;來新增日期限制或無限制。 如果您選取日期，使用者在欄位中輸入的答案必須為日期格式。
 
 * **限制訊息**&#x200B;此外，您可以新增限制訊息，讓使用者知道如何正確格式化他們的回答。
@@ -446,7 +448,7 @@ Adobe Campaign元件具有所有元件中通用的設定（加密的主要金鑰
 
 除了大部分Adobe Campaign元件通用的[設定](#settings-common-to-most-components)之外，您還可以設定下列專案：
 
-* **限制 — 限制**&#x200B;下拉式清單
+* **限制 — 限制**下拉式清單
 您可以選取 — **無**&#x200B;或&#x200B;**數值 —**&#x200B;來新增數值或無限制的限制。 如果您選取數字，使用者在欄位中輸入的答案必須是數字。
 
 * **限制訊息**&#x200B;此外，您可以新增限制訊息，讓使用者知道如何正確格式化他們的回答。
@@ -490,7 +492,7 @@ Adobe Campaign元件具有所有元件中通用的設定（加密的主要金鑰
 
 除了大部分Adobe Campaign元件通用的[設定](#settings-common-to-most-components)之外，您還可以設定下列專案：
 
-* **限制 — 限制**&#x200B;下拉式清單
+* **限制 — 限制**下拉式清單
 您可以選取 — **無、** **電子郵件**&#x200B;或&#x200B;**名稱** （無變音） — 新增電子郵件地址、名稱或無限制的限制。 如果您選取電子郵件，使用者在欄位中輸入的答案必須是電子郵件地址。 如果您選取名稱，則它必須是名稱（不允許變音）。
 
 * **限制訊息**&#x200B;此外，您可以新增限制訊息，讓使用者知道如何正確格式化他們的回答。

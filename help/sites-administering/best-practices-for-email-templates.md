@@ -10,9 +10,10 @@ exl-id: 6666eddc-dc17-4bd4-9d55-e6522f40a680
 solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+index: false
+source-git-commit: 389d5fa8de320a7237fc8290992a33743b15db99
 workflow-type: tm+mt
-source-wordcount: '1073'
+source-wordcount: '1072'
 ht-degree: 1%
 
 ---
@@ -22,19 +23,19 @@ ht-degree: 1%
 
 >[!CAUTION]
 >
->本文適用於已棄用的Foundation元件型AEM電子郵件元件。
+>本文適用於已棄用的AEM電子郵件元件基礎元件。
 >
->建議使用者使用現代[核心元件電子郵件元件。](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/email/introduction.html?lang=zh-Hant)
+>建議使用者使用現代[核心元件電子郵件元件。](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/email/introduction.html)
 
 本檔案說明產生完善開發的電子郵件行銷活動範本的電子郵件設計相關最佳實務。
 
-AEM提供的示範行銷活動會遵循所有這些最佳實務。 每個最佳實務會說明如何在示範行銷活動中實作最佳實務。
+AEM中提供的示範行銷活動會遵循所有這些最佳實務。 每個最佳實務會說明如何在示範行銷活動中實作最佳實務。
 
 建立您自己的電子報時，請使用這些最佳實務。
 
 >[!NOTE]
 >
->所有行銷活動內容應建立於型別為`cq/personalization/components/ambitpage`的`master`頁面下。
+>所有行銷活動內容應建立於型別為`master`的`cq/personalization/components/ambitpage`頁面下。
 >
 >例如，如果您的計畫行銷活動結構類似於
 >
@@ -46,7 +47,7 @@ AEM提供的示範行銷活動會遵循所有這些最佳實務。 每個最佳�
 
 >[!NOTE]
 >
->建立Adobe Campaign的郵件範本時，您必須將值為&#x200B;**mapRecipient**&#x200B;的屬性&#x200B;**acMapping**&#x200B;包含在範本的&#x200B;**jcr：content**&#x200B;節點中。 如果沒有該屬性，您就無法在Experience Manager的&#x200B;**頁面屬性**&#x200B;中選取Adobe Campaign範本（欄位已停用）。
+>建立Adobe Campaign的郵件範本時，您必須將值為&#x200B;**mapRecipient**&#x200B;的屬性&#x200B;**acMapping**&#x200B;包含在範本的&#x200B;**jcr:content**&#x200B;節點中。 如果不這樣做，您就無法在Experience Manager的&#x200B;**頁面屬性**&#x200B;中選取Adobe Campaign範本（欄位已停用）。
 
 ## 範本/頁面元件 {#template-page-component}
 
@@ -56,11 +57,11 @@ AEM提供的示範行銷活動會遵循所有這些最佳實務。 每個最佳�
  <tbody>
   <tr>
    <td><strong>最佳實務</strong></td>
-   <td><strong>實作</strong></td>
+   <td><strong>實施</strong></td>
   </tr>
   <tr>
    <td><p>指定檔案型別，以確保轉譯的一致性。</p> <p>在開頭新增DOCTYPE (HTML或XHTML)</p> </td>
-   <td><p>可透過設計變更<i>"/etc/designs/default/jcr：content/campaign_newsletterpage"</i>中的<i>cq：doctype</i>屬性進行設定</p> <p>預設值為「XHTML」：</p> <p>&lt;！DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional/EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</p> <p>可變更為「HTML_5」：</p> <p>&lt;！DOCTYPEHTML&gt;</p> </td>
+   <td><p>可透過設計變更<i>"/etc/designs/default/jcr：content/campaign_newsletterpage"</i>中的<i>cq：doctype</i>屬性進行設定</p> <p>預設值為「XHTML」：</p> <p>&lt;！DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional/EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</p> <p>可變更為「HTML_5」：</p> <p>&lt;！DOCTYPE HTML&gt;</p> </td>
   </tr>
   <tr>
    <td><p>指定字元定義，以確保正確轉譯特殊字元。</p> <p>將CHARSET宣告（例如iso-8859-15、UTF-8）新增至&lt;head&gt;</p> </td>
@@ -80,7 +81,7 @@ AEM提供的示範行銷活動會遵循所有這些最佳實務。 每個最佳�
   </tr>
   <tr>
    <td>內嵌CSS比將所有CSS放在開頭好。</td>
-   <td><p>為了更妥善地展示基礎HTML結構以及更輕鬆地自訂電子報結構，僅內嵌部分CSS定義。</p> <p>基礎樣式和範本變數已擷取至頁面&lt;head&gt;中的樣式區塊。 在最後提交Newsletter時，這些CSS定義會內嵌至HTML中。 已規劃自動內嵌機制，但目前無法使用。</p> </td>
+   <td><p>為了更妥善地展示基礎HTML結構以及更輕鬆地自訂電子報結構，僅內嵌部分CSS定義。</p> <p>基礎樣式和範本變數已擷取至頁面&lt;head&gt;中的樣式區塊。 在最後提交電子報時，這些CSS定義會內嵌至HTML。 已規劃自動內嵌機制，但目前無法使用。</p> </td>
   </tr>
   <tr>
    <td>保持您的CSS簡單。 避免使用複合樣式宣告、簡寫程式碼、CSS配置屬性、複雜選取器和偽元素。</td>
@@ -112,7 +113,7 @@ AEM提供的示範行銷活動會遵循所有這些最佳實務。 每個最佳�
  <tbody>
   <tr>
    <td><strong>最佳實務</strong></td>
-   <td><strong>實作</strong></td>
+   <td><strong>實施</strong></td>
   </tr>
   <tr>
    <td>在CSS (font-family)中使用html &lt;font&gt;取代樣式</td>
@@ -129,8 +130,8 @@ AEM提供的示範行銷活動會遵循所有這些最佳實務。 每個最佳�
 
 | **最佳實務** | **實作** |
 |---|---|
-| 使用W3C驗證器修正HTML代碼。 請確定所有開啟的標籤皆已正確關閉。 | 程式碼已驗證。 僅適用於XHTML可轉換Doctype，`<html>`專案遺失的xmlns屬性遺失。 |
-| 避免使用JavaScript或Flash — 這些技術通常不受電子郵件使用者端支援。 | 新聞稿範本中未使用JavaScript或Flash。 |
+| 使用W3C驗證器修正HTML程式碼。 請確定所有開啟的標籤皆已正確關閉。 | 程式碼已驗證。 僅適用於XHTML可轉換Doctype，`<html>`專案遺失的xmlns屬性遺失。 |
+| 避免使用JavaScript或Flash，這些技術通常不受電子郵件使用者端支援。 | 新聞稿範本中不使用JavaScript或Flash。 |
 | 新增純文字版本以進行多部分傳送。 | 頁面屬性中內建了新的Widget，以便輕鬆從頁面內容中擷取純文字版本。 您可以使用它作為最終純文字版本的起點。 |
 
 ## 行銷活動新聞稿範本和範例 {#campaign-newsletter-templates-and-examples}
@@ -147,7 +148,7 @@ AEM隨附數種現成的範本和元件，方便您建立行銷活動電子報�
 
 ### 元件 {#components}
 
-目前有[七個元件可在行銷活動範本](/help/sites-authoring/adobe-campaign-components.md)中使用。 這些元件都是以Adobe標籤語言&#x200B;**HTL**&#x200B;為基礎。
+目前有[七個元件可在行銷活動範本](/help/sites-authoring/adobe-campaign-components.md)中使用。 這些元件全都以Adobe標籤語言&#x200B;**HTL**&#x200B;為基礎。
 
 | **元件名稱** | **元件路徑** |
 |---|---|
@@ -156,7 +157,7 @@ AEM隨附數種現成的範本和元件，方便您建立行銷活動電子報�
 | 文字&amp;Personalization | /libs/mcm/campaign/components/personalization |
 | Textimage | /libs/mcm/campaign/components/textimage |
 | 連結 | /libs/mcm/campaign/components/reference |
-| Dynamic Media Classic (前身為Scene7)影像範本 | /libs/mcm/campaign/s7image |
+| Dynamic Media Classic （前身為Scene7）影像範本 | /libs/mcm/campaign/s7image |
 | 目標引用 | /libs/mcm/campaign/components/reference |
 
 >[!NOTE]
