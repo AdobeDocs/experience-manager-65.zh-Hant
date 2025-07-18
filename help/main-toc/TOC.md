@@ -1097,7 +1097,7 @@ ht-degree: 20%
       + [AEM Forms Java API參考](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html)
       + [JEE Java API上的AEM Forms參考](https://helpx.adobe.com/experience-manager/6-5/forms/programlc/javadoc/index.html)
       + [表單適用於HTML5的Bridge API](/help/forms/using/form-bridge-apis.md)
-      + 最適化Forms的[JavaScript資料庫API參考](https://helpx.adobe.com/experience-manager/6-5/forms/javascript-api/index.html)
+      + [最適化Forms的JavaScript資料庫API參考](https://helpx.adobe.com/experience-manager/6-5/forms/javascript-api/index.html)
       + [組合器服務與DDX參考](https://www.adobe.com/go/learn_aemforms_ddxRef_65)
       + [Workbench說明](https://www.adobe.com/go/learn_aemforms_workbench_65)
       + 使用JEE上的AEM Forms進行程式設計 {#programming-aem-forms-jee}
@@ -1402,7 +1402,7 @@ ht-degree: 20%
                + [選擇性 — 如何使用AEM建立單頁應用程式](https://experienceleague.adobe.com/docs/experience-manager-65/content/headless/developer/create-spa.html)
             + Headless 內容架構者歷程 {#architect}
                + [AEM Headless內容架構者歷程概觀](https://experienceleague.adobe.com/docs/experience-manager-65/content/headless/architect/overview.html)
-               + 使用AEM建立Headless的[內容模型 — 簡介](https://experienceleague.adobe.com/docs/experience-manager-65/content/headless/architect/introduction.html)
+               + [使用AEM建立Headless的內容模型 — 簡介](https://experienceleague.adobe.com/docs/experience-manager-65/content/headless/architect/introduction.html)
                + [使用AEM瞭解Headless的內容模型基本概念](https://experienceleague.adobe.com/docs/experience-manager-65/content/headless/architect/basics.html)
                + [瞭解如何在AEM中建立內容片段模型](https://experienceleague.adobe.com/docs/experience-manager-65/content/headless/architect/model-structure.html)
          + 快速入門指南 {#getting-started}
