@@ -10,9 +10,9 @@ exl-id: ef1a3997-feb4-4cb0-9396-c8335b69bb10
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+source-git-commit: 25bf0d64b6839afec0112ea8c9fde0510e56ccf4
 workflow-type: tm+mt
-source-wordcount: '2964'
+source-wordcount: '2965'
 ht-degree: 4%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->* 此頁面旨在概略說明使用Adobe Experience Manager (AEM)製作環境時的基本處理方式。 它使用&#x200B;**Sites**&#x200B;主控台作為基礎。
+>* 此頁面旨在概述使用Adobe Experience Manager (AEM)製作環境時的基本處理方式。 它使用&#x200B;**Sites**&#x200B;主控台作為基礎。
 >
 >* 部分功能並非在所有主控台中提供，部分主控台可能提供其他功能。 有關個別主控台及其相關功能的特定資訊，請參閱其他頁面上的詳細說明。
 >* 在整個AEM環境中都可以使用鍵盤快速鍵。 特別是當[使用主控台](/help/sites-authoring/keyboard-shortcuts.md)和[編輯頁面](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)時。
@@ -31,7 +31,7 @@ ht-degree: 4%
 
 ### 觸控式UI {#a-touch-enabled-ui}
 
-已啟用觸控功能的AEM使用者介面。 觸控式介面可讓您使用觸控功能，透過選擇、觸控並按住及撥動等手勢與軟體互動。 這與傳統的案頭介面使用滑鼠動作（例如按一下、連按兩下、按一下滑鼠右鍵和滑鼠懸停滑鼠）的操作方式相反。
+AEM的使用者介面已啟用觸控功能。 觸控式介面可讓您使用觸控功能，透過選擇、觸控並按住及撥動等手勢與軟體互動。 這與傳統的案頭介面使用滑鼠動作（例如按一下、連按兩下、按一下滑鼠右鍵和滑鼠懸停滑鼠）的操作方式相反。
 
 由於AEM UI支援觸控功能，因此您可以在觸控裝置（例如行動裝置或平板電腦）上使用觸控手勢，並在傳統桌上型裝置上使用滑鼠動作。
 
@@ -49,7 +49,7 @@ ht-degree: 4%
 
 ### 產品導覽 {#product-navigation}
 
-每當使用者首次存取主控台時，就會啟動產品導覽教學課程。 點進以取得AEM基本處理方式的良好概觀。
+每當使用者首次存取主控台時，就會啟動產品導覽教學課程。 按一下以取得AEM基本處理的概述。
 
 ![產品導覽](assets/bh-02.png)
 
@@ -78,7 +78,7 @@ ht-degree: 4%
 
 ### 導覽面板 {#navigation-panel}
 
-「導覽」面板可讓您存取AEM主控台：
+「導覽」面板提供對AEM主控台的存取權：
 
 ![導覽](assets/bh-01.png)
 
@@ -98,10 +98,10 @@ ht-degree: 4%
   </tr>
   <tr>
    <td>Communities</td>
-   <td>此主控台可讓您建立和管理<a href="/help/communities/overview.md#engagement-community">參與</a>和<a href="/help/communities/overview.md#enablement-community">啟用</a>的<a href="/help/communities/sites-console.md">社群網站</a>。</td>
+   <td>此主控台可讓您建立和管理<a href="/help/communities/sites-console.md">參與</a>和<a href="/help/communities/overview.md#engagement-community">啟用</a>的<a href="/help/communities/overview.md#enablement-community">社群網站</a>。</td>
   </tr>
   <tr>
-   <td>商務</td>
+   <td>Commerce</td>
    <td>這可讓您管理與您的<a href="/help/commerce/cif-classic/administering/ecommerce.md">Commerce</a>網站相關的產品、產品目錄和訂單。</td>
   </tr>
   <tr>
@@ -109,7 +109,7 @@ ht-degree: 4%
    <td><a href="/help/sites-authoring/experience-fragments.md">體驗片段</a>是獨立的體驗，可以跨管道重複使用，也可以有變數，省去重複複製和貼上體驗或體驗片段的麻煩。</td>
   </tr>
   <tr>
-   <td>表單</td>
+   <td>Forms</td>
    <td>此主控台可讓您建立、管理及處理您的<a href="/help/forms/using/introduction-aem-forms.md">表單與檔案</a>。</td>
   </tr>
   <tr>
@@ -122,7 +122,7 @@ ht-degree: 4%
   </tr>
   <tr>
    <td>Screens</td>
-   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/authoring/setting-up-projects/creating-a-screens-project.html?lang=zh-Hant">Screens</a>可讓您管理任何地點、任何大小的面向客戶的所有熒幕。</td>
+   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/authoring/setting-up-projects/creating-a-screens-project.html">Screens</a>可讓您管理任何地點、任何大小的面向客戶的所有熒幕。</td>
   </tr>
   <tr>
    <td>Sites</td>
@@ -450,14 +450,14 @@ ht-degree: 4%
 
   ![卡片檢視 — 快速動作](assets/bh-13-1.png)
 
-* 您可以點選/按一下卡片來向下瀏覽樹狀結構（注意避免快速動作），或使用標頭[&#128279;](/help/sites-authoring/basic-handling.md#the-header)中的階層連結來再次向上瀏覽。
+* 您可以點選/按一下卡片來向下瀏覽樹狀結構（注意避免快速動作），或使用標頭[中的](/help/sites-authoring/basic-handling.md#the-header)階層連結來再次向上瀏覽。
 
 ### 清單檢視 {#list-view}
 
 ![清單檢視](assets/bh-19.png)
 
 * 清單檢視會列出目前層級中每個資源的資訊。
-* 您可以點選/按一下資源名稱，然後使用標頭[&#128279;](/help/sites-authoring/basic-handling.md#the-header)中的階層連結進行備份，在樹狀結構中向下導覽。
+* 您可以點選/按一下資源名稱，然後使用標頭[中的](/help/sites-authoring/basic-handling.md#the-header)階層連結進行備份，在樹狀結構中向下導覽。
 
 * 若要輕鬆選取清單中的所有專案，請使用清單左上方的核取方塊。
 
@@ -526,7 +526,7 @@ ht-degree: 4%
 
 使用具有清單檢視或卡片檢視的內容樹側面板，使用者可以輕鬆檢視專案的階層結構。 他們可以透過內容樹側面板輕鬆地在內容結構中導覽，並在清單檢視中檢視詳細的頁面資訊。
 
-![內容樹狀結構](assets/bh-26.png)
+![內容樹](assets/bh-26.png)
 
 >[!NOTE]
 >
@@ -534,7 +534,7 @@ ht-degree: 4%
 >
 >如需詳細資訊，請參閱[鍵盤快速鍵](/help/sites-authoring/keyboard-shortcuts.md)。
 
-### 時間表 {#timeline}
+### 時間軸 {#timeline}
 
 時間軸可用於檢視和/或啟動所選資源上已發生的事件。 若要開啟時間軸欄，請使用邊欄選取器：
 
@@ -566,21 +566,22 @@ ht-degree: 4%
 
 ![時間表](assets/bh-27.png)
 
-### 參考 {#references}
+### 參照 {#references}
 
-**參考**&#x200B;顯示與所選資源的任何連線。 例如，在&#x200B;**Sites**&#x200B;主控台中，[頁面的引用](/help/sites-authoring/author-environment-tools.md#showingpagereferences)會顯示：
+**參考**&#x200B;顯示與所選資源的連線。 例如，在&#x200B;**Sites**&#x200B;主控台中，[頁面的引用](/help/sites-authoring/author-environment-tools.md#showingpagereferences)會顯示：
 
+* [BluePrint](/help/sites-administering/msm.md)
 * [啟動](/help/sites-authoring/launches.md#launches-in-references-sites-console)
 * [即時副本](/help/sites-administering/msm-livecopy-overview.md#openingthelivecopyoverviewfromreferences)
 * [語言副本](/help/sites-administering/tc-prep.md#seeing-the-status-of-language-roots)
 * 內容參照：
 
-   * 從其他頁面連結至選取的頁面
-   * 「參照」元件在所選頁面中借用、借出（或兩者）的內容
+   * 從其他頁面直接連結至所選頁面
+   * 參照元件在所選頁面中借用、借出或兩者皆借用的內容
 
 ![bh-28](assets/bh-28.png)
 
-### 篩選條件 {#filter}
+### 篩選 {#filter}
 
 這會開啟類似於[搜尋](/help/sites-authoring/search.md)的面板，並設定適當的位置篩選器，讓您進一步篩選想要檢視的內容。
 

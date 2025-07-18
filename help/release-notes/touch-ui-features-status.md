@@ -5,18 +5,18 @@ exl-id: 7b71e8db-e8c6-4470-bc22-db3d4600b7fc
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
-source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
+source-git-commit: 25bf0d64b6839afec0112ea8c9fde0510e56ccf4
 workflow-type: tm+mt
-source-wordcount: '1076'
-ht-degree: 14%
+source-wordcount: '1087'
+ht-degree: 15%
 
 ---
 
 # 觸控式 UI 功能狀態 {#touch-ui-feature-status}
 
-Adobe Experience Manager (AEM) 6.4之後的[傳統UI已棄用](../release-notes/deprecated-removed-features.md)。 Adobe不再對傳統UI做任何增強功能，而是鼓勵使用者使用觸控式UI提供的強大新功能。
+Adobe Experience Manager (AEM) 6.4之後的[傳統UI已棄用](../release-notes/deprecated-removed-features.md)。 Adobe不再對傳統UI進行任何增強功能，而是鼓勵使用者使用觸控式UI提供的強大新功能。
 
-從6.0版開始，AEM推出稱為「觸控式UI」（稱為「觸控式UI」）的新使用者介面，此介面會與[!DNL Adobe Experience Cloud]和整體Adobe使用者介面准則保持一致。 隨著功能接近同位，這成為AEM中的標準UI，具有稱為「傳統UI」的舊式案頭導向介面。
+自6.0版開始，AEM推出稱為「觸控式UI」（稱為「觸控式UI」）的新使用者介面，此介面會與[!DNL Adobe Experience Cloud]及整體Adobe使用者介面准則保持一致。 隨著功能接近同位，這成為AEM中的標準UI，具有稱為「傳統UI」的舊式案頭導向介面。
 
 雖然大部分的功能都存在於觸控式UI中，但有些功能尚不完整，且會在未來版本中新增。
 
@@ -57,10 +57,10 @@ Adobe Experience Manager (AEM) 6.4之後的[傳統UI已棄用](../release-notes/
 | 搜尋 | 完成 |  |
 | 複製並貼上頁面（複製） | 完成 |  |
 | 行動頁面 | 完成 |  |
-| Publish頁面 | 完成 |  |
-| 沒有復寫許可權的Publish頁面 | 完成 |  |
+| 發佈頁面 | 完成 |  |
+| 發佈沒有復寫許可權的頁面 | 完成 |  |
 | 稍後發佈 | 完成 |  |
-| Publish樹 | 完成 |  |
+| 發佈樹狀結構 | 完成 |  |
 | 取消發佈頁面 | 完成 |  |
 | 取消發佈沒有復寫許可權的頁面 | 完成 |  |
 | 稍後取消發佈 | 完成 |  |
@@ -74,9 +74,9 @@ Adobe Experience Manager (AEM) 6.4之後的[傳統UI已棄用](../release-notes/
 | 顯示舊版本和目前版本之間的差異 | 完成 |  |
 | 即時副本動作（轉出） | 完成 |  |
 | 檢視語言副本 | 完成 |  |
-| 尋找和取代 | 遺失 | 使用傳統UI。 |
+| 尋找並取代 | 遺失 | 使用傳統UI。 |
 | 通知收件匣（JCR事件） | 遺失 | 使用傳統UI。 已取代為未來的其他實作。 |
-| 參考 | 完成 | 顯示新增至AEM 6.5的傳入頁面連結。 |
+| 參照 | 完成 | 顯示新增至AEM 6.5的傳入頁面連結。基於效能考量，只會顯示頁面的直接連結。 |
 
 ## 功能狀態：頁面編輯器 {#feature-status-page-editor}
 
@@ -112,7 +112,7 @@ Adobe Experience Manager (AEM) 6.4之後的[傳統UI已棄用](../release-notes/
 | 稽核記錄 | 已移除 | 使用網站管理員和[開啟活動邊欄](/help/sites-authoring/author-environment-tools.md#events-timeline)。 |
 | 建立版本 | 已移除 | 使用網站管理員來[建立新版本](/help/sites-authoring/working-with-page-versions.md#creating-a-new-version)。 |
 | 還原版本 | 已移除 | 使用網站管理員來[還原版本](/help/sites-authoring/working-with-page-versions.md#reverting-to-a-page-version)。 |
-| 切換啟動 | 已移除 | 使用[網站管理員]在啟動[&#128279;](/help/sites-authoring/launches-promoting.md)之間切換。 |
+| 切換啟動 | 已移除 | 使用[網站管理員]在啟動[之間](/help/sites-authoring/launches-promoting.md)切換。 |
 | 翻譯頁面 | 已移除 | 使用網站管理員[新增頁面至翻譯專案](/help/sites-administering/tc-manage.md)。 |
 | 時間扭曲（選擇日期/時間並瀏覽當時的網站） | 完成 |  |
 | 設定許可權 | 完成 |  |

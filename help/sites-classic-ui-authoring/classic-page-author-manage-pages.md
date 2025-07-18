@@ -9,9 +9,9 @@ exl-id: bd2636d1-6f13-4c6c-b8cd-3bed9e83a101
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: 25bf0d64b6839afec0112ea8c9fde0510e56ccf4
 workflow-type: tm+mt
-source-wordcount: '1895'
+source-wordcount: '1898'
 ht-degree: 1%
 
 ---
@@ -43,7 +43,7 @@ ht-degree: 1%
 
   `http://localhost:4502/cf#/content/geometrixx/en/products/triangle.html`
 
-* Publish環境
+* 發佈環境
 
   `http://localhost:4503/content/geometrixx/en/products/triangle.html`
 
@@ -87,7 +87,7 @@ ht-degree: 1%
    * 這會用來產生URI。
    * 此欄位的使用者輸入為選用。 如果未指定，則會從標題衍生名稱。
 
-建立頁面時，AEM [會依據AEM和JCR所強加的慣例](/help/sites-developing/naming-conventions.md)來驗證頁面名稱。
+建立頁面時，AEM [會依據AEM和JCR所強加的慣例](/help/sites-developing/naming-conventions.md)驗證頁面名稱。
 
 實作和允許的字元清單因UI而略有不同（觸控式UI允許範圍更廣），但允許的最低字元為：
 
@@ -115,7 +115,7 @@ ht-degree: 1%
 在傳統UI中，**無法在**&#x200B;名稱&#x200B;**欄位中輸入無效的字元**。
 
 >[!NOTE]
->在觸控式UI中，您&#x200B;**無法在**&#x200B;名稱&#x200B;**欄位中提交無效的字元**。 當AEM偵測到無效字元時，將會反白顯示欄位，並顯示說明訊息，指出需要移除/取代的字元。
+>在觸控式UI中，您&#x200B;**無法在**&#x200B;名稱&#x200B;**欄位中提交無效的字元**。 當AEM偵測到無效字元時，該欄位將會反白顯示，並顯示說明訊息以指出需要移除/取代的字元。
 
 >[!NOTE]
 >
@@ -129,7 +129,7 @@ ht-degree: 1%
 
 範本定義頁面的結構，包括縮圖影像和其他屬性。 例如，您可以為產品頁面、Sitemap和聯絡資訊使用不同的範本。 範本由[個元件](#components)組成。
 
-AEM隨附幾個現成可用的範本。 提供的範本取決於個別網站，而需要提供的資訊（建立新頁面時）取決於使用的UI。 主要欄位包括：
+AEM隨附數種現成可用的範本。 提供的範本取決於個別網站，而需要提供的資訊（建立新頁面時）取決於使用的UI。 主要欄位包括：
 
 * **標題**
 在產生的網頁上顯示的標題。
@@ -142,7 +142,7 @@ AEM隨附幾個現成可用的範本。 提供的範本取決於個別網站，�
 
 ### 元件 {#components}
 
-元件是AEM提供的元素，可供您新增特定型別的內容。 AEM隨附一系列現成可用的元件，提供完善的功能；這些元件包括：
+元件是AEM所提供的元素，可供您新增特定型別的內容。 AEM隨附一系列現成可用的元件，提供完善的功能；這些元件包括：
 
 * 文字
 * 影像
@@ -150,7 +150,7 @@ AEM隨附幾個現成可用的範本。 提供的範本取決於個別網站，�
 * 影片
 * 更多專案
 
-建立並開啟頁面後，您就可以使用[sidekick](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#sidekick)提供的元件[&#128279;](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#insertinganewparagraph)來新增內容。
+建立並開啟頁面後，您就可以使用[sidekick](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#insertinganewparagraph)提供的元件[來](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#sidekick)新增內容。
 
 ## 管理頁面 {#managing-pages}
 
@@ -173,7 +173,7 @@ AEM隨附幾個現成可用的範本。 提供的範本取決於個別網站，�
    * 提供&#x200B;**標題**；這會顯示給使用者。
    * 提供&#x200B;**名稱**；此名稱用於產生URI。 如果未指定，則會從標題衍生名稱。
 
-      * 如果您在建立頁面時提供頁面&#x200B;**Name**，AEM [會依據AEM和JCR所沿用的慣例](/help/sites-developing/naming-conventions.md)驗證名稱。
+      * 如果您在建立頁面時提供頁面&#x200B;**Name**，AEM [會根據AEM和JCR所沿用的慣例](/help/sites-developing/naming-conventions.md)驗證名稱。
       * 在傳統UI中，**無法在**&#x200B;名稱&#x200B;**欄位中輸入無效的字元**。
 
    * 按一下您要用來建立新頁面的範本。
@@ -266,7 +266,7 @@ AEM提供更新要重新命名或移動之頁面的內部連結的功能。 您�
 
    ![screen_shot_2012-02-15at121336pm](assets/screen_shot_2012-02-15at121336pm.png)
 
-   頁面也會列出參照所移動頁面的頁面。 根據參照頁面的狀態，您或許可以調整這些連結和/或重新發佈頁面。
+   頁面也會列出直接或間接參照所移動頁面的頁面。 根據參照頁面的狀態，您或許可以調整這些連結和/或重新發佈頁面。
 
 1. 視情況填寫下列欄位：
 

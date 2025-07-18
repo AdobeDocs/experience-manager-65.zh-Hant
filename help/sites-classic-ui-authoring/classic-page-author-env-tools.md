@@ -10,9 +10,9 @@ exl-id: 5d7b6b2e-d1d8-4efe-b9ff-c9542b4e67d7
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: 25bf0d64b6839afec0112ea8c9fde0510e56ccf4
 workflow-type: tm+mt
-source-wordcount: '892'
+source-wordcount: '931'
 ht-degree: 4%
 
 ---
@@ -37,9 +37,9 @@ AEM的製作環境提供各種機制來組織和編輯您的內容。 提供的�
 
 ## 存取說明 {#accessing-help}
 
-您可以從AEM內直接存取各種&#x200B;**說明**&#x200B;資源：
+您可以從AEM中直接存取各種&#x200B;**說明**&#x200B;資源：
 
-除了從主控台工具列[&#128279;](/help/sites-classic-ui-authoring/author-env-basic-handling.md#accessing-help)存取說明外，您也可以從sidekick存取說明(使用？ 圖示)：
+除了從主控台工具列[存取](/help/sites-classic-ui-authoring/author-env-basic-handling.md#accessing-help)說明外，您也可以從sidekick存取說明(使用？ 圖示)：
 
 ![Sidekick已摺疊](do-not-localize/sidekick-collapsed-2.png)
 
@@ -87,9 +87,9 @@ Sidekick的&#x200B;**元件**&#x200B;索引標籤可讓您瀏覽可新增至目�
 
 ### 尋找電影 {#finding-movies}
 
-此索引標籤會列出存放庫中的所有影片(例如Flash專案)。
+此索引標籤會列出存放庫中的所有影片（例如Flash專案）。
 
-在頁面上建立適當的段落(例如Flash)後，您可以將專案拖放到段落中。
+在頁面上建立適當的段落（例如Flash）之後，您可以將專案拖放到段落中。
 
 ![chlimage_1-113](assets/chlimage_1-113.png)
 
@@ -156,7 +156,7 @@ Sidekick的&#x200B;**元件**&#x200B;索引標籤可讓您瀏覽可新增至目�
 
 AEM可讓您檢視哪些頁面連結至您目前工作的頁面。
 
-若要顯示直接頁面參照：
+若要顯示頁面參照：
 
 1. 在Sidekick中，選取&#x200B;**頁面**&#x200B;索引標籤圖示。
 
@@ -166,14 +166,18 @@ AEM可讓您檢視哪些頁面連結至您目前工作的頁面。
 
    ![screen_shot_2012-02-16at83311pm](assets/screen_shot_2012-02-16at83311pm.png)
 
-在某些情況下，Sidekick中提供了進一步的動作，包括：
+AEM會顯示直接參照所選頁面以及任何間接參照的所有頁面。 如果您需要移動或刪除頁面，這有助於瞭解所有將更新的連結。
+
+## 其他Sidekick動作 {#additional-actions}
+
+在某些情況下，可從Sidekick取得進一步動作，包括：
 
 * [啟動](/help/sites-classic-ui-authoring/classic-launches.md)
 * [Live Copy](/help/sites-administering/msm.md)
 
 * [藍圖](/help/sites-administering/msm-best-practices.md)
 
-在網站主控台[&#128279;](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console)中可以看到其他頁面間關係。
+在網站主控台[中可以看到其他](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console)頁面間關係。
 
 ## 稽核記錄 {#audit-log}
 
