@@ -122,7 +122,7 @@ AEM的使用者介面已啟用觸控功能。 觸控式介面可讓您使用觸�
   </tr>
   <tr>
    <td>Screens</td>
-   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/authoring/setting-up-projects/creating-a-screens-project.html">Screens</a>可讓您管理任何地點、任何大小的面向客戶的所有熒幕。</td>
+   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/authoring/setting-up-projects/creating-a-screens-project.html?lang=zh-Hant">Screens</a>可讓您管理任何地點、任何大小的面向客戶的所有熒幕。</td>
   </tr>
   <tr>
    <td>Sites</td>
