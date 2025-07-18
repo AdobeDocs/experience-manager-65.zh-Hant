@@ -25,7 +25,7 @@ ht-degree: 1%
 >
 >本文適用於已棄用的AEM電子郵件元件基礎元件。
 >
->建議使用者使用現代[核心元件電子郵件元件。](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/email/introduction.html)
+>建議使用者使用現代[核心元件電子郵件元件。](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/email/introduction.html?lang=zh-Hant)
 
 本檔案說明產生完善開發的電子郵件行銷活動範本的電子郵件設計相關最佳實務。
 
