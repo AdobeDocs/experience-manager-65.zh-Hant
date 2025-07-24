@@ -5,9 +5,9 @@ exl-id: 37287332-3c8d-4ddc-a77e-3c5ee332898b
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
-source-git-commit: 59d667004bb41a973847e9c53333afaa188ccac1
+source-git-commit: f472766dbfeb8d84b0b97f621828b1c0491529c4
 workflow-type: tm+mt
-source-wordcount: '1160'
+source-wordcount: '1340'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 >
 > 這些Hotfix的設計是累積性的，包含所有先前的修正。 將最新Hotfix套用至某個版本時，不僅可解決最近的問題，還可整合所有先前的錯誤修正和增強功能。
 
-## 最適化Forms的Hotfix {#hotfix-for-adaptive-forms}
+## AEM Forms的Hotfix {#hotfix-for-aem-forms}
 
 <table>
   <tbody>
@@ -46,7 +46,16 @@ ht-degree: 0%
     </td>
     <td>
     <ul>
-    <li>JEE版AEM Forms的SP23 Hotfix</li>
+    <li><strong>此Hotfix修正下列問題：</strong>
+      <ul>
+        <li><strong>FORMS-20533：</strong> AEM Forms現在包含表單元件的Struts版本從2.5.33升級至6.x。 這可提供先前未包含在SP23中的Struts變更。 已透過Hotfix新增支援，您可以下載並安裝該支援，以新增對最新版本Struts的支援。</li>
+        <li><strong>FORMS-20532：</strong> AEM Forms現在包含輸出元件的Struts版本從2.5.33升級至6.x。 這可提供先前未包含在SP23中的Struts變更。 已透過Hotfix新增支援，您可以下載並安裝該支援，以新增對最新版本Struts的支援。</li>
+        <li><strong>FORMS-20203：</strong>當使用者將Struts從AEM Service Pack 2.5.x升級為AEM Forms Service Pack 6.x時，原則UI無法顯示所有設定，例如新增浮水印的選項。 您可以下載並安裝Hotfix來解決此問題。</li>
+        <li><strong>FORMS-20360：</strong>升級至AEM Forms Service Pack 6.5.23.0後，ImageToPDF轉換服務失敗，錯誤為：<br>
+        <code>17:15:44,468 ERROR [com.adobe.pdfg.GeneratePDFImpl] (default task-49) ALC-PDG-001-000-ALC-PDG-011-028-Error occurred while converting the input image file to PDF. com/adobe/internal/pdftoolkit/core/encryption/EncryptionImp</code><br>
+        您可以下載並安裝Hotfix來解決此問題。</li>
+      </ul>
+    </li>
     </ul>
     </td>    
   </tr>
