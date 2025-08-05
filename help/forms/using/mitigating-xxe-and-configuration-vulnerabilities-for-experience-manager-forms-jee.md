@@ -9,7 +9,7 @@ role: Admin
 exl-id: 9fade12f-a038-4fd6-8767-1c30966574c5
 solution: Experience Manager, Experience Manager Forms
 release-date: 2025-08-05T00:00:00Z
-source-git-commit: 8420597b7ee09b15a7f0004acc64e3625771a4d8
+source-git-commit: f57b2e7874aae10dd2112e688f8db6a660f2cbb9
 workflow-type: tm+mt
 source-wordcount: '674'
 ht-degree: 5%
@@ -77,7 +77,7 @@ ht-degree: 5%
 
 ### 選項2： （適用於6.5.18.0 - 6.5.22.0的使用者）手動Hotfix安裝
 
-+++<b>手動安裝6.5.18.0 - 6.5.22.0</b>的Hotfix
++++ 手動安裝6.5.18.0 - 6.5.22.0的Hotfix
 
 **步驟1：下載並解壓縮Hotfix套件**
 
@@ -260,4 +260,4 @@ adobe-xxe-configuration-hotfix/SP[version]/<appserver>/adobe-rightsmanagement-<a
 - [CWE-611： XML外部實體參考的限制不正確](https://cwe.mitre.org/data/definitions/611.html)
 - [CWE-16：組態](https://cwe.mitre.org/data/definitions/16.html)
 - [OWASP XXE預防速查表](https://owasp.org/www-community/vulnerabilities/XML_External_Entity_XXE_Processing)
-- [Adobe Experience Manager Forms安全性最佳實務](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html?lang=zh-Hant)
+- [Adobe Experience Manager Forms安全性最佳實務](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html)
