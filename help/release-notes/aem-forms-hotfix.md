@@ -5,9 +5,9 @@ exl-id: 37287332-3c8d-4ddc-a77e-3c5ee332898b
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
-source-git-commit: f472766dbfeb8d84b0b97f621828b1c0491529c4
+source-git-commit: b810aadeb2741ff2fba28f81b508637f21feb8f9
 workflow-type: tm+mt
-source-wordcount: '1340'
+source-wordcount: '1789'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,67 @@ ht-degree: 0%
     <td><strong>已修正的問題</strong></td>
   </tr>
   <tr>
-    <td>SP23 Hotfix-</td>
+    <td>
+      <strong>2025年8月5日</strong><br>
+      <em>套用至：</em> AEM 6.5 Forms Service Pack 23<br>
+      <em>安裝指示：</em>
+      <a href="/help/forms/using/mitigating-xxe-and-configuration-vulnerabilities-for-experience-manager-forms-jee.md#option-1-for-users-on-version-65230-install-latest-hotfix">
+        緩解JEE上AEM Forms的XXE、設定和遠端程式碼執行(CVE-2025-49533)漏洞
+      </a>
+    </td>
+    <td>
+    <ul>
+    <li><strong>Jboss：</strong></li>
+    <li>Windows - JBoss JEE伺服器<a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-0-hotfix-02/jboss/adobe-aem-forms-jee-hotfix2-6.5.23.0-win-jboss.zip">的Windows上AEM Service Pack 6.5.23.0的</a>Hotfix2</li>
+    <li>Linux- <a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-0-hotfix-02/jboss/adobe-aem-forms-jee-hotfix2-6.5.23.0-linux-jboss.tar.gz">適用於Linux上AEM Service Pack 6.5.23.0的Hotfix2 （適用於JBoss JEE伺服器）</a></li>
+    <li><strong>Weblogic：</strong></li>
+    <li>Windows — 適用於Weblogic JEE伺服器的Windows上AEM Service Pack 6.5.23.0的<a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-0-hotfix-02/weblogic/adobe-aem-forms-jee-hotfix2-6.5.23.0-win-weblogic.zip">Hotfix2</a></li>
+    <li>Linux- Weblogic JEE伺服器<a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-0-hotfix-02/weblogic/adobe-aem-forms-jee-hotfix2-6.5.23.0-linux-weblogic.tar.gz">的Linux上AEM Service Pack 6.5.23.0的</a>Hotfix2</li>
+    <li><strong>Websphere：</strong></li>
+    <li>Windows — 適用於Websphere JEE伺服器<a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-0-hotfix-02/websphere/adobe-aem-forms-jee-hotfix2-6.5.23.0-win-websphere.zip">的Windows上AEM Service Pack 6.5.23.0的</a>Hotfix2</li>
+    <li>Linux- Websphere JEE伺服器<a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-0-hotfix-02/websphere/adobe-aem-forms-jee-hotfix2-6.5.23.0-linux-websphere.zip">的Linux上AEM Service Pack 6.5.23.0的</a>Hotfix2</li>
+    </ul>
+    </td>
+    <td>
+    <ul>
+    <li>解決Adobe Experience Manager (AEM) Forms中的遠端程式碼執行(RCE)弱點以加強安全性。 此問題與管理員使用者介面(UI)中的Struts開發模式有關，該模式允許透過偵錯功能進行任意物件圖表導覽語言(OGNL)評估。 此修正可確保停用Struts開發模式，並套用適當的安全性篩選器以防止未經授權的存取。</li>
+    <li>改善Adobe Experience Manager (AEM) Forms電子檔案元件(EDC)模組針對可延伸標籤語言(XML)外部實體(XXE)弱點的保護。 這些漏洞是由於不正確處理沒有XXE保護的XML檔案所造成，這可能導致本機檔案讀取。 此修正包括：
+      <ul>
+        <li>確定已將SecurityCheckHandler類別中使用的DocumentBuilderFactory設定為防止XXE攻擊。</li>
+        <li>更新EDC Web服務以安全地處理XML檔案，防止對本機檔案的未授權存取。</li>
+      </ul>
+    </li>
+    </ul>
+    </td>    
+  </tr>
+  <tr>
+    <td>
+      <strong>2025年8月5日</strong><br>
+      <em>套用至：</em> AEM 6.5 Forms Service Pack 18 - 22<br>
+      <em>安裝指示：</em>
+      <a href="/help/forms/using/mitigating-xxe-and-configuration-vulnerabilities-for-experience-manager-forms-jee.md#option-2-for-users-on-65180---65220-manual-hotfix-installation">
+        Service Pack 18-22手動Hotfix安裝
+      </a>
+    </td>
+    <td>
+    <ul>
+    <li><a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/adobe-xxe-configuration-hotfix.zip">AEM 6.5 Forms Service Pack 18的修補程式 — AEM 6.5 Forms Service Pack 22 </a></li>
+    </ul>
+    </td>
+    <td>
+    <ul>
+    <li>解決Adobe Experience Manager (AEM) Forms中的遠端程式碼執行(RCE)弱點以加強安全性。 此問題與管理員使用者介面(UI)中的Struts開發模式有關，該模式允許透過偵錯功能進行任意物件圖表導覽語言(OGNL)評估。 此修正可確保停用Struts開發模式，並套用適當的安全性篩選器以防止未經授權的存取。</li>
+    <li>改善對Adobe Experience Manager (AEM) Forms Document Security模組中的可延伸標籤語言(XML)外部實體(XXE)弱點的保護。 這些漏洞是由於不正確處理沒有XXE保護的XML檔案所造成，這可能導致本機檔案讀取。 此修正包括：
+      <ul>
+        <li>確定已將SecurityCheckHandler類別中使用的DocumentBuilderFactory設定為防止XXE攻擊。</li>
+        <li>更新Document Security Web服務以安全地處理XML檔案，防止對本機檔案的未授權存取。</li>
+      </ul>
+    </li>
+    </ul>
+    </td>    
+  </tr>
+  <tr>
+    <td>2025年7月10日 — </td>
     <td>
     <ul>
     <li><strong>Jboss：</strong></li>
@@ -192,7 +252,7 @@ ht-degree: 0%
   <tbody>
 </table>
 
-## 下載並安裝Hotfix {#download-install-hotfix}
+## 下載並安裝OSGi Hotfix {#download-install-hotfix}
 
 執行以下步驟來下載及安裝Hotfix：
 
@@ -200,6 +260,10 @@ ht-degree: 0%
 1. 解壓縮Hotfix封存檔案，以便取得Experience Manager套件(.zip)和套件(.jar)檔案。
 1. 透過[封裝管理員](https://experienceleague.adobe.com/docs/experience-manager-65/content/sites/administering/contentmanagement/package-manager.html?lang=es#accessing)上傳及安裝封裝(.zip)。
 1. 開啟設定管理員組合`https://server:host/system/console/bundles`，上傳並安裝組合(.jar)。 已安裝Hotfix。
+
+## 安裝JEE修補程式 {#download-install-jee-patch}
+
+如需安裝JEE修補程式的指示，請參閱[AEM Forms JEE修補程式安裝程式檔案](/help/release-notes/jee-patch-installer-65.md)。
 
 
 ## 下載並安裝草稿字母問題的Hotfix {#install-hotfix}
