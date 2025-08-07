@@ -6,9 +6,9 @@ role: Admin, Developer
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
 solution: Experience Manager, Experience Manager Forms
 feature: Interactive Communication
-source-git-commit: b5e44b78659f0cb1b8b0025be30143b98c0bf8df
+source-git-commit: 62baf682b75823f52f968a70960aff2388d49cad
 workflow-type: tm+mt
-source-wordcount: '10051'
+source-wordcount: '10085'
 ht-degree: 1%
 
 ---
@@ -253,6 +253,12 @@ AEM Forms附加元件套件是部署至AEM的應用程式。 一般而言，您�
 * **部署型別**：單一使用者或多個使用者
 
 每個標籤都包含針對您的特定設定而最佳化的專屬指示，協助您避免設定問題並確保適當的授權合規性。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3469669)
+
+>[!NOTE]
+>
+>影片示範「零售業授權 — 單一使用者」設定的安裝程式。 若為其他部署案例（零售 — 多位使用者、大量授權 — 單一使用者或大量授權 — 多位使用者），請參閱以下對應標籤中的特定步驟9指示，以確保針對您的部署型別正確啟動伺服器和啟用授權。
 
 >[!BEGINTABS]
 
@@ -701,7 +707,7 @@ AEM Forms附加元件套件是部署至AEM的應用程式。 一般而言，您�
 完成所有程式後，請執行快速動作測試以確認安裝有效：
 
 1. 使用遠端案頭(RDP)登入伺服器，並使用服務啟動AEM Forms伺服器。
-2. 使用遠端案頭(RDP)登入伺服器，並使用Windows服務啟動AEM Forms伺服器。 伺服器執行後，不要簡單地關閉RDP視窗。 相反地，登出使用者即可順利登出 — 這可確保工作階段順利結束，而服務會繼續於背景執行。
+2. 伺服器執行後，不要簡單地關閉RDP視窗。 相反地，登出使用者即可順利登出 — 這可確保工作階段順利結束，而服務會繼續於背景執行。
 
 ###### 步驟10：測試PDF Generator服務
 
