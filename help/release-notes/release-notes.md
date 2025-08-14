@@ -229,14 +229,14 @@ ht-degree: 1%
 
 ### [!DNL Assets]{#assets-6523}
 
-* 選取[!DNL AEM]Assets6.5.22.0Assets![、瀏覽至](/help/assets/assets/Smock_Asset_18_N.svg)**[!UICONTROL 搜尋Adobe Stock ]**資料夾並選取庫存影像後，**[!UICONTROL &#x200B;內部部署(]**)導覽頁面中會發生下列問題：
+* 選取[!DNL AEM]Assets6.5.22.0Assets![、瀏覽至](/help/assets/assets/Smock_Asset_18_N.svg)**[!UICONTROL 搜尋Adobe Stock &#x200B;]**&#x200B;資料夾並選取庫存影像後，**[!UICONTROL &#x200B;內部部署(]**)導覽頁面中會發生下列問題：
    * 選取的stock影像無法授權並儲存為按一下「**[!UICONTROL 授權並儲存]**」會顯示空白的下拉式清單。
    * 選取Stock影像或重新進入庫存頁面URL會重新導向至[!DNL AEM]首頁，導致無法存取Adobe Stock影像。 (ASSETS-48687)
 * 如果資料夾名稱在`/`內部部署([!DNL AEM])導覽頁面上的名稱包含6.5.22.0，則管理資料夾時發生問題。 (ASSETS-46740)
-* 在[!DNL AEM] 6.5上，由於記憶體使用量高，資產詳細資訊頁面未從![集合](/help/assets/assets/Smock_Collection_18_N.svg)**[!UICONTROL 集合&#x200B;]**檢視載入。 (ASSETS-46738)
+* 在[!DNL AEM] 6.5上，由於記憶體使用量高，資產詳細資訊頁面未從![集合](/help/assets/assets/Smock_Collection_18_N.svg)**[!UICONTROL 集合&#x200B;]**&#x200B;檢視載入。 (ASSETS-46738)
 * [!DNL InDesign]的整合問題為`Day CQ DAM Mime Type OSGI`服務錯誤將[!DNL InDesign]個檔案識別為`x-adobe-indesign`而非`x-indesign`。 (ASSETS-45953)
 * [!DNL AEM 6.5.21]工作階段洩漏追蹤至現成可用的&#x200B;**[!UICONTROL 已排程發佈至Brand Portal]**&#x200B;工作流程步驟。 (ASSETS-44104)
-* 處理和發佈影像時，**[!UICONTROL 中顯示]**&#x200B;記憶體不足(OOM)[!DNL AEM]錯誤。 此問題是因為工作流程中已棄用的方法，例如&#x200B;**[!DNL Dam Asset update]**&#x200B;和&#x200B;**[!DNL Dynamic Media: Reprocess assets]**。 (ASSETS-43343)
+* 處理和發佈影像時，**[!UICONTROL 中顯示]**&#x200B;記憶體不足(OOM) [!DNL AEM]錯誤。 此問題是因為工作流程中已棄用的方法，例如&#x200B;**[!DNL Dam Asset update]**&#x200B;和&#x200B;**[!DNL Dynamic Media: Reprocess assets]**。 (ASSETS-43343)
 * 進行微幅變更後（例如更新標題），您會重新開啟並重新儲存本機Sites執行個體上的&#x200B;**[!DNL Connected Assets configuration]**。 然後，遠端執行個體會失去與本機執行個體的連線。 因此，它無法與本機Sites執行個體建立通訊。 (ASSETS-44484)
 * 在[!DNL AEM 6.5.21]中，當清單檢視中的資產上傳被取消並執行第二次上傳時，[!DNL AEM]會顯示已上傳的&#x200B;**[!UICONTROL 0個NaN資產]**&#x200B;錯誤。 (ASSETS-44124)
 
