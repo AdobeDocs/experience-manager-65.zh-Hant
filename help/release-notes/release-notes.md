@@ -6,9 +6,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
-source-git-commit: f472766dbfeb8d84b0b97f621828b1c0491529c4
+source-git-commit: 3f64cfa688ef1f0090b7ce0d821324593cbea693
 workflow-type: tm+mt
-source-wordcount: '6684'
+source-wordcount: '6707'
 ht-degree: 1%
 
 ---
@@ -71,7 +71,7 @@ ht-degree: 1%
 
    * Red Hat® Enterprise Linux® 9 （核心4.x，64位元） 
 
-* [強化的檔案附件元件](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/file-attachment)：作為安全性測量，此元件現在會防止提交副檔名經過修改、嘗試略過允許的檔案型別檢查的檔案。 提交期間會封鎖這類檔案，以確保僅接受有效的檔案型別。
+* [強化的檔案附件元件](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/file-attachment)：作為安全性測量，此元件現在會防止提交副檔名經過修改、嘗試略過允許的檔案型別檢查的檔案。 提交期間會封鎖這類檔案，以確保僅接受有效的檔案型別。
 
 * Forms-20533、FORMS-20532： AEM Forms現在包含從2.5.33升級至6.x的Struts版本。已透過[Hotfix](/help/release-notes/aem-forms-hotfix.md)新增支援，您可以[下載並安裝](/help/release-notes/aem-forms-hotfix.md)以新增對最新版本Struts的支援。
 
@@ -229,14 +229,14 @@ ht-degree: 1%
 
 ### [!DNL Assets]{#assets-6523}
 
-* 選取[!DNL AEM]Assets6.5.22.0Assets![、瀏覽至](/help/assets/assets/Smock_Asset_18_N.svg)**[!UICONTROL 搜尋Adobe Stock &#x200B;]**&#x200B;資料夾並選取庫存影像後，**[!UICONTROL &#x200B;內部部署(]**)導覽頁面中會發生下列問題：
+* 選取[!DNL AEM]Assets6.5.22.0Assets![、瀏覽至](/help/assets/assets/Smock_Asset_18_N.svg)**[!UICONTROL 搜尋Adobe Stock ]**資料夾並選取庫存影像後，**[!UICONTROL &#x200B;內部部署(]**)導覽頁面中會發生下列問題：
    * 選取的stock影像無法授權並儲存為按一下「**[!UICONTROL 授權並儲存]**」會顯示空白的下拉式清單。
    * 選取Stock影像或重新進入庫存頁面URL會重新導向至[!DNL AEM]首頁，導致無法存取Adobe Stock影像。 (ASSETS-48687)
 * 如果資料夾名稱在`/`內部部署([!DNL AEM])導覽頁面上的名稱包含6.5.22.0，則管理資料夾時發生問題。 (ASSETS-46740)
-* 在[!DNL AEM] 6.5上，由於記憶體使用量高，資產詳細資訊頁面未從![集合](/help/assets/assets/Smock_Collection_18_N.svg)**[!UICONTROL 集合&#x200B;]**&#x200B;檢視載入。 (ASSETS-46738)
+* 在[!DNL AEM] 6.5上，由於記憶體使用量高，資產詳細資訊頁面未從![集合](/help/assets/assets/Smock_Collection_18_N.svg)**[!UICONTROL 集合&#x200B;]**檢視載入。 (ASSETS-46738)
 * [!DNL InDesign]的整合問題為`Day CQ DAM Mime Type OSGI`服務錯誤將[!DNL InDesign]個檔案識別為`x-adobe-indesign`而非`x-indesign`。 (ASSETS-45953)
 * [!DNL AEM 6.5.21]工作階段洩漏追蹤至現成可用的&#x200B;**[!UICONTROL 已排程發佈至Brand Portal]**&#x200B;工作流程步驟。 (ASSETS-44104)
-* 處理和發佈影像時，**[!UICONTROL 中顯示]**&#x200B;記憶體不足(OOM) [!DNL AEM]錯誤。 此問題是因為工作流程中已棄用的方法，例如&#x200B;**[!DNL Dam Asset update]**&#x200B;和&#x200B;**[!DNL Dynamic Media: Reprocess assets]**。 (ASSETS-43343)
+* 處理和發佈影像時，**[!UICONTROL 中顯示]**&#x200B;記憶體不足(OOM)[!DNL AEM]錯誤。 此問題是因為工作流程中已棄用的方法，例如&#x200B;**[!DNL Dam Asset update]**&#x200B;和&#x200B;**[!DNL Dynamic Media: Reprocess assets]**。 (ASSETS-43343)
 * 進行微幅變更後（例如更新標題），您會重新開啟並重新儲存本機Sites執行個體上的&#x200B;**[!DNL Connected Assets configuration]**。 然後，遠端執行個體會失去與本機執行個體的連線。 因此，它無法與本機Sites執行個體建立通訊。 (ASSETS-44484)
 * 在[!DNL AEM 6.5.21]中，當清單檢視中的資產上傳被取消並執行第二次上傳時，[!DNL AEM]會顯示已上傳的&#x200B;**[!UICONTROL 0個NaN資產]**&#x200B;錯誤。 (ASSETS-44124)
 
@@ -743,6 +743,8 @@ AEM 6.5.21、6.5.22、6.5.23和AEM 6.5 LTS GA隨附`org.apache.sling.scripting.j
   have different Class objects for the type org/slf4j/ILoggerFactory used in the signature.
   ```
 
+* Forms-21378：啟用伺服器端驗證(SSV)時，表單提交可能會失敗。 如果您遇到此問題，請聯絡Adobe支援以尋求協助。
+
 
 
 ## 包含的OSGi套件組合和內容套件{#osgi-bundles-and-content-packages-included}
@@ -757,10 +759,10 @@ AEM 6.5.21、6.5.22、6.5.23和AEM 6.5 LTS GA隨附`org.apache.sling.scripting.j
 這些網站僅供客戶使用。 如果您是客戶且需要存取權，請聯絡您的Adobe客戶經理。
 
 * [產品下載網址為licensing.adobe.com](https://licensing.adobe.com/)
-* [連絡Adobe客戶支援](https://experienceleague.adobe.com/zh-hant/docs/customer-one/using/home)。
+* [連絡Adobe客戶支援](https://experienceleague.adobe.com/en/docs/customer-one/using/home)。
 
 >[!MORELIKETHIS]
 >
 >* [[!DNL Experience Manager] 產品頁面](https://business.adobe.com/products/experience-manager/adobe-experience-manager.html)
->* [[!DNL Experience Manager] 6.5檔案](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65)
+>* [[!DNL Experience Manager] 6.5檔案](https://experienceleague.adobe.com/en/docs/experience-manager-65)
 >* [訂閱Adobe優先產品更新](https://www.adobe.com/tw/subscription/priority-product-update.html)
