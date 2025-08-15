@@ -5,9 +5,9 @@ feature: Content Fragments
 role: User
 exl-id: e4340828-fe16-4edf-94c9-b0b145740e74
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 2809ae0f2c712ce8e6d94e18211649f2fa6ab8b4
 workflow-type: tm+mt
-source-wordcount: '524'
+source-wordcount: '522'
 ht-degree: 4%
 
 ---
@@ -166,7 +166,7 @@ ht-degree: 4%
 
     `Keyboard shortcut: Ctrl-B (Cmd-B)`
 
-若要指出程式碼範圍，請以反勾號(&amp;amp；grave；)將程式碼換行。 和預先格式化的程式碼區塊不同，程式碼範圍表示一般段落中的程式碼。
+若要指出程式碼範圍，請用反引號(`` ` ``)括住程式碼。 和預先格式化的程式碼區塊不同，程式碼範圍表示一般段落中的程式碼。
 
 例如：
 
@@ -182,7 +182,7 @@ ht-degree: 4%
 
 ## 反斜線逸出 {#backslash-escapes}
 
-您可以使用反斜線逸出產生在格式語法中具有特殊意義的常值字元。 例如，如果您想在單詞周圍加上常值星號(而不是HTML&lt;em>標籤)，則可以在星號前使用反斜線，如下所示：
+您可以使用反斜線逸出產生在格式語法中具有特殊意義的常值字元。 例如，如果您想以星號括住單字(而非HTML &lt;em>標籤)，可以在星號前使用反斜線，如下所示：
 
     `\\*literal asterisks\\*`
 
