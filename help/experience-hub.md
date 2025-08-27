@@ -5,9 +5,9 @@ landing-page-description: 瞭解Adobe Experience Hub，存取所有AEM功能的�
 solution: Experience Manager, Experience Manager 6.5
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: fe1d00d1a3587cc768abeba6f995969c35203bad
+source-git-commit: b7977fcc76a3d8b4ec9e8d9e8ae8622ff13a441a
 workflow-type: tm+mt
-source-wordcount: '590'
+source-wordcount: '589'
 ht-degree: 5%
 
 ---
@@ -75,7 +75,7 @@ Widget也可以在頁面上調整大小和重新定位，以更符合您的需�
 
 ![Experience Hub快速鍵](/help/assets/assets-experience-hub/experience-hub-quick-shortcuts-ams.png)
 
-如果沒有生產AEM Cloud Service或Managed Services環境存在，選擇選項會變暗且無法使用。
+如果不存在生產AEM Cloud Service或Managed Services環境，選擇選項會顯示為暗灰色（無法使用）。
 
 ![無生產環境的Experience Hub](/help/assets/assets-experience-hub/experience-hub-no-prod-environs-ams.png)
 
