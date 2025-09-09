@@ -6,10 +6,10 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
-source-git-commit: 00161ecf48725b774c14ff6c89bd2817e00dc9f3
+source-git-commit: f018681e9202a934be2cfa8d426a32014c5ff66f
 workflow-type: tm+mt
-source-wordcount: '6710'
-ht-degree: 2%
+source-wordcount: '6713'
+ht-degree: 12%
 
 ---
 
@@ -22,14 +22,17 @@ ht-degree: 2%
 >
 >Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on package one week after the scheduled [!DNL Experience Manager] Service Pack release date. In this case, the add-on packages release Thursday, May 29, 2025. In addition, a list of Forms fixes and enhancements is added to this section. -->
 
-## 發行資訊 {#release-information}
+## 版本資訊 {#release-information}
 
 | 產品 | [!DNL Adobe Experience Manager] 6.5 |
 | -------- | ---------------------------- |
-| 版本 | 6.5.23.0 <!-- UPDATE FOR EACH NEW RELEASE --> |
-| 類型 | Service Pack發行 |
-| 日期 | 2025年5月22日（星期四）<!-- UPDATE FOR EACH NEW RELEASE --> |
-| 下載 URL | [軟體發佈](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.23.0.zip) <!-- UPDATE FOR EACH NEW RELEASE --> |
+| 版本 | 6.5.23.0，GRANITE-61551 <!-- UPDATE FOR EACH NEW RELEASE -->的Hotfix |
+| 類型 | Service Pack 發行 |
+| 日期 | 2025年9月9日<!-- UPDATE FOR EACH NEW RELEASE --> |
+| 下載 URL | [軟體發佈](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fhotfix%2Fcq-6.5.0-hotfix-GRANITE-61551-SP23-1.2.zip) <!-- UPDATE FOR EACH NEW RELEASE --> |
+
+<!-- OLD DOWNLOAD URL
+(https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.23.0.zip) -->
 
 ## [!DNL Experience Manager] 6.5.23.0包含的內容 {#what-is-included-in-aem-6523}
 
@@ -71,7 +74,7 @@ ht-degree: 2%
 
    * Red Hat® Enterprise Linux® 9 （核心4.x，64位元） 
 
-* [強化的檔案附件元件](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/file-attachment)：作為安全性測量，此元件現在會防止提交副檔名經過修改、嘗試略過允許的檔案型別檢查的檔案。 提交期間會封鎖這類檔案，以確保僅接受有效的檔案型別。
+* [強化的檔案附件元件](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/file-attachment)：作為安全性測量，此元件現在會防止提交副檔名經過修改、嘗試略過允許的檔案型別檢查的檔案。 提交期間會封鎖這類檔案，以確保僅接受有效的檔案型別。
 
 * Forms-20533、FORMS-20532： AEM Forms現在包含從2.5.33升級至6.x的Struts版本。已透過[Hotfix](/help/release-notes/aem-forms-hotfix.md)新增支援，您可以[下載並安裝](/help/release-notes/aem-forms-hotfix.md)以新增對最新版本Struts的支援。
 
@@ -109,18 +112,18 @@ ht-degree: 2%
 
 #### 協助工具 {#sites-accessibility-6523}
 
-* AEM編輯器頁面中的畫布區段現在支援完整的鍵盤協助工具。 使用者可以僅使用鍵盤啟動區段標題和編輯按鈕，而不需依賴滑鼠懸停。 此更新確保符合WCAG 2.1.1，並改善跨元件（例如Teaser、影像、輪播、版面、時間扭曲和註解模組）的可用性。 (SITES-25256) <!-- 6.5 LTS SP1 -->
-* 修正AEM頁面編輯器中的協助工具問題，該問題導致在啟動「角色」、「購物車」或「放棄」等按鈕後，鍵盤焦點意外地重設為「人口統計」工具列的開始。 焦點現在仍停留於已啟用的按鈕，以支援一致的鍵盤導覽和熒幕助讀程式工作流程。 (SITES-25306)
+* AEM 編輯器頁面的版面區段現在支援完整的鍵盤無障礙功能。使用者只使用鍵盤即可啟動區段標題和編輯按鈕，無需依賴滑鼠停留。此更新確保符合 WCAG 2.1.1 標準，並提升多個元件 (如 Teaser、影像、輪播、版面、時間扭曲及附註模態視窗) 之間的易用性。(SITES-25256) <!-- 6.5 LTS SP1 -->
+* 修正AEM頁面編輯器中的協助工具問題，該問題導致在啟動「角色」、「購物車」或「放棄」等按鈕後，鍵盤焦點意外地重設為「人口統計」工具列的開始。 現在焦點會停留在已啟用的按鈕上，以支援一致的鍵盤導覽與螢幕閱讀器工作流程。(SITES-25306)
 * 修正AEM頁面編輯器中的重大協助工具問題，該問題導致多個對話方塊和模式（例如，資產邊欄或版面預覽）中的畫布元素無法僅使用鍵盤操作。 所有互動式畫布元素現在支援僅鍵盤導覽，確保符合WCAG 2.1成功標準2.1.1 (SITE-25256)
 * 修正Sites管理員UI中，建立快顯視窗中的互動式清單專案使用不正確ARIA角色的協助工具問題。 行為類似連結的元素被指派為`role="listitem"`而非`role="menuitem"`，這違反了ARIA設計模式並混淆熒幕閱讀器。 更新可確保所有清單元件都遵循適當的語意角色，以提升鍵盤和輔助技術支援的效能。 (SITES-24493)
-* 修正頁面標題和標籤欄位的協助工具標籤關聯問題。 AEM介面現在會在使用JAWS等熒幕助讀程式時，正確地將協助工具標籤與「標題」和「頁面標題」欄位建立關聯。 此修正可確保正確讀取標籤，並改善頁面建立、屬性和移動工作流程中的ADA合規性。 (SITES-27149)
+* 已修正頁面標題和標籤欄位的無障礙標籤關聯問題。現在，在使用 JAWS 等螢幕閱讀器時，AEM 介面已經正確地將無障礙標籤與「標題」及「頁面標題」欄位相關聯。修正問題後，可確保正確讀取標籤，並改善頁面建立、屬性與移動工作流程方面的 ADA 合規性。(SITES-27149)
 * 修正許可權對話方塊中表格識別的協助工具問題。 AEM中的許可權表格現在會使用正確的ARIA角色和屬性，以確保熒幕助讀程式（如JAWS）能正確將其識別為表格。 此修正可改善協助工具合規性，並確保使用者收到準確的導覽和內容公告。 (SITES-27140)
-* 修正時間軸中註解輸入欄位缺少視覺標籤的問題。 修正時間軸區段下「註解」輸入欄位缺少視覺標籤的問題，以改善協助工具。 此更新可確保熒幕助讀程式可以準確地朗讀欄位標籤。 此體驗可增強所有使用者的表單導覽和提交功能，尤其是依賴輔助技術的個人。 (SITES-26903)
-* 修正時間軸註解中省略符號按鈕的鍵盤協助工具。 啟用時間軸區段下註解旁的省略符號（三個點）按鈕的鍵盤導覽。 使用者現在可以使用Tab鍵存取並與按鈕互動，改善了依賴僅鍵盤導覽的使用者的協助工具。 (SITES-26891)
-* 改善選擇對話方塊中搜尋結果的NVDA/朗讀程式宣告。 更新「開啟選取專案」對話方塊，以宣告在使用熒幕助讀程式（例如NVDA或「朗讀程式」）時是否找到搜尋結果。 這項改善可協助依賴輔助技術的使用者瞭解其搜尋動作的結果，而不需要視覺確認。 (SITES-26883)
-* 修正評論輸入欄位旁省略符號圖示的ARIA角色。 更新評論輸入欄位旁的省略符號（三個點）圖示，以使用正確的ARIA角色，確保熒幕助讀程式可準確識別元素。 這項改善可增強協助工具的合規性，並改善依賴輔助技術的使用者的體驗。 (SITES-26881)
-* 更正Coral UI元件中無效的ARIA屬性。 更新Coral UI元件，確保所有ARIA屬性都使用有效值，進而改善協助工具合規性。 特別是，已處理錯誤指派`aria-modal="dialog"`等無效值的案例。 此增強功能可讓熒幕助讀程式正確解讀對話方塊元素，協助依賴輔助技術的使用者提升協助工具。 (SITES-26873)
-* 改進重排情境中圖示的可見度和工具提示。 已增強重排行為，以確保工具提示可正確顯示給&#x200B;**下載**、**重新處理資產**&#x200B;和&#x200B;**簽出**&#x200B;圖示。 著重於在檢視區調整大小或瀏覽器縮放設定變更時，圖示及其標籤會變成隱藏的協助工具問題。 此修正可透過維護可見度並在Reflow期間提供適當的圖示說明，支援視力缺佳的使用者。 (SITES-26871)
+* 已修正時間軸中註解輸入欄位缺少視覺標籤的問題。已更正時間軸區段下方「註解」輸入欄位缺少視覺標籤的問題，以利改善無障礙功能。此更新確保螢幕閱讀器可以準確地播報欄位標籤。此體驗增強所有使用者 (特別是依賴輔助技術的使用者) 的表單導覽和提交功能。(SITES-26903)
+* 已修正時間軸註解中省略號按鈕的鍵盤無障礙功能問題。可使用鍵盤導覽至時間軸區段下方註解旁邊的省略號 (三個點) 按鈕。使用者現在可以使用 Tab 鍵存取該按鈕及進行互動，針對只能使用鍵盤導覽之使用者改善無障礙功能。(SITES-26891)
+* 已改善 NVDA/Narrator 對於選取對話框中搜尋結果的播報。已更新「開啟選取」對話框，以便在使用 NVDA 或 Narrator 等螢幕閱讀器時播報是否找到搜尋結果。此改善功能可協助依賴輔助技術的使用者無需透過視覺確認，即可了解其搜尋動作的結果。(SITES-26883)
+* 已修正註解輸入欄位旁省略號圖示的 ARIA 角色。已更新註解輸入欄位旁的省略號 (三個點) 圖示，以使用正確的 ARIA 角色，確保螢幕閱讀器可以準確地識別元素。此項改善功能增進無障礙合規性，並讓依賴輔助技術的使用者享有更好的使用體驗。(SITES-26881)
+* 已修正 Coral UI 元件中無效的 ARIA 屬性。已更新 Coral UI 元件以確保所有 ARIA 屬性都使用有效的值，提高無障礙合規性。特別針對錯誤指派 `aria-modal="dialog"` 一類無效值的情況進行處理。此增強功能使螢幕閱讀器能正確地解讀對話框元素，讓依賴輔助技術的使用者享有更好的無障礙體驗。(SITES-26873)
+* 已改善 Reflow 情境中圖示的可見度與工具提示。已增強 Reflow 行為，確保「**下載**」、「**重新處理資產**」和「**結帳**」圖示的工具提示皆正確顯示。針對一項無障礙功能問題進行修正，原本在調整檢視區大小或變更瀏覽器縮放設定時，圖示及其標籤會變成不可見。此修正在 Reflow 期間中維持圖示可見度並提供正確的圖示描述，支援低視能使用者的需求。(SITES-26871)
 
 #### 管理員使用者介面{#sites-adminui-6523}
 
@@ -134,7 +137,7 @@ ht-degree: 2%
 #### [!DNL Content Fragments]{#sites-contentfragments-6523}
 
 * 修正`DeleteVariationIT.testUpdateBasic`的驗證測試失敗。 `DeleteVariationIT.testUpdateBasic`測試在Service Pack驗證執行期間不再失敗。 此修正修正修正了JSON處理邏輯中缺少文字對應的問題，確保測試穩定性並避免不必要的測試中斷。 (SITES-28022)
-* AEM現在可以防止影像資產中XMP中繼資料的格式錯誤導致效能降低。 Assets如果包含無效或不相容的XMP屬性名稱（例如具有數值區段或不合格結構的名稱），在處理期間將不再觸發重複的警告記錄。 系統會篩選掉有問題的中繼資料，以確保資產擷取和驗證完整無誤。 (SITES-30683) <!-- AEM 6.5 LTS SP1 -->
+* AEM 現在會避免因影像資產中格式錯誤的 XMP 後設資料而造成效能降低。包含無效或不合規之 XMP 屬性名稱的資產 (例如含有數值區段或不合格之結構者)，在處理過程中不再重複觸發警告記錄。系統篩選有問題的後設資料，以確保資產攝取和驗證順利完成且無錯誤。(SITES-30683) <!-- AEM 6.5 LTS SP1 -->
 
 
 <!-- #### [!DNL Content Fragments] - Admin{#sites-admin-6523}
@@ -144,7 +147,7 @@ ht-degree: 2%
 
 #### [!DNL Content Fragments] — 片段編輯器{#sites-fragments-editor-6523}
 
-其他作者仍可發佈內容片段，即使其他作者簽出它們，這違反了簽出功能的預期行為。 此修正可防止其他使用者在取出內容片段時，在製作介面中看見或使用發佈按鈕。 (SITES-30578) <!-- LTS -->
+即使有作者將其他作者簽出，其他作者仍可發佈內容片段，這與簽出功能的預期行為相反。此修正可避免其他使用者在簽出內容片段後仍可看到或使用製作介面中的發佈按鈕。(SITES-30578) <!-- LTS -->
 
 #### [!DNL Content Fragments] - GraphQL API {#sites-graphql-api-6523}
 
@@ -168,7 +171,7 @@ ht-degree: 2%
 
 * 已修正內容尋找器資產因無效資產名稱而列出失敗的問題。 內容尋找器現在會正確處理含有不可編碼字元的資產名稱。 遇到名稱有問題的資產時，頁面編輯器中的資產清單不再失敗或擲回例外狀況。 (SITES-28722)
 * `SearchPathLimiter`元件在每個呼叫的ERROR層級列印訊息，產生過多記錄專案的問題。 這種行為始於Service Pack 17之後，並由於記錄磁碟區極高而導致效能問題。 此修正將記錄層級降級為DEBUG，大幅降低記錄雜訊並改善系統監控和診斷效率。 (SITES-29835)
-* 處理`ValidationDataServlet`中的影像資產時，不正確格式化的XMP中繼資料觸發錯誤。 此修正可確保規範的中繼資料處理，並避免多餘剖析無效屬性。 (SITE-30683) <!-- LTS -->
+* 在 `ValidationDataServlet` 中處理影像資產時，因 XMP 後設資料格式不正確而導致錯誤發生。此修正確保使用合規方式處理後設資料，並避免對無效屬性進行多餘的剖析。(SITE-30683) <!-- LTS -->
 
 
 <!-- #### Core Components{#sites-core-components-6523}
@@ -223,21 +226,21 @@ ht-degree: 2%
 
 使用純文字貼上模式修正RTF編輯器中未預期的`<br>`標籤。 RTF編輯器現在會在使用純文字`defaultPasteMode`時正確處理剪下和貼上操作。 此修正可防止使用者在RTE欄位中剪下並貼上文字時，插入未預期的`<br>`標籤，以確保在內容編輯期間可清除格式設定。 (SITES-27780)
 
-#### Universal Editor {#sites-universal-editor-6523}
+#### 通用編輯器 {#sites-universal-editor-6523}
 
 * 將包含查詢引數的多個請求傳送至AEM時，可能無法及時傳回登入權杖Cookie，進而導致登入失敗。 (SITES-30659) <!-- LTS -->
 * 若要確保相容性並支援SAML處理常式，您必須設定`service.ranking`屬性，讓`Query Token Auth`處理常式在&#x200B;**&#x200B;處理常式之前`SAML Auth`執行。 (SITES-29684)
 
 ### [!DNL Assets]{#assets-6523}
 
-* 選取[!DNL AEM]Assets6.5.22.0Assets![、瀏覽至](/help/assets/assets/Smock_Asset_18_N.svg)**[!UICONTROL 搜尋Adobe Stock &#x200B;]**&#x200B;資料夾並選取庫存影像後，**[!UICONTROL &#x200B;內部部署(]**)導覽頁面中會發生下列問題：
+* 選取[!DNL AEM]Assets6.5.22.0Assets![、瀏覽至](/help/assets/assets/Smock_Asset_18_N.svg)**[!UICONTROL 搜尋Adobe Stock ]**資料夾並選取庫存影像後，**[!UICONTROL &#x200B;內部部署(]**)導覽頁面中會發生下列問題：
    * 選取的stock影像無法授權並儲存為按一下「**[!UICONTROL 授權並儲存]**」會顯示空白的下拉式清單。
    * 選取Stock影像或重新進入庫存頁面URL會重新導向至[!DNL AEM]首頁，導致無法存取Adobe Stock影像。 (ASSETS-48687)
 * 如果資料夾名稱在`/`內部部署([!DNL AEM])導覽頁面上的名稱包含6.5.22.0，則管理資料夾時發生問題。 (ASSETS-46740)
-* 在[!DNL AEM] 6.5上，由於記憶體使用量高，資產詳細資訊頁面未從![集合](/help/assets/assets/Smock_Collection_18_N.svg)**[!UICONTROL 集合&#x200B;]**&#x200B;檢視載入。 (ASSETS-46738)
+* 在[!DNL AEM] 6.5上，由於記憶體使用量高，資產詳細資訊頁面未從![集合](/help/assets/assets/Smock_Collection_18_N.svg)**[!UICONTROL 集合&#x200B;]**檢視載入。 (ASSETS-46738)
 * [!DNL InDesign]的整合問題為`Day CQ DAM Mime Type OSGI`服務錯誤將[!DNL InDesign]個檔案識別為`x-adobe-indesign`而非`x-indesign`。 (ASSETS-45953)
 * [!DNL AEM 6.5.21]工作階段洩漏追蹤至現成可用的&#x200B;**[!UICONTROL 已排程發佈至Brand Portal]**&#x200B;工作流程步驟。 (ASSETS-44104)
-* 處理和發佈影像時，**[!UICONTROL 中顯示]**&#x200B;記憶體不足(OOM) [!DNL AEM]錯誤。 此問題是因為工作流程中已棄用的方法，例如&#x200B;**[!DNL Dam Asset update]**&#x200B;和&#x200B;**[!DNL Dynamic Media: Reprocess assets]**。 (ASSETS-43343)
+* 處理和發佈影像時，**[!UICONTROL 中顯示]**&#x200B;記憶體不足(OOM)[!DNL AEM]錯誤。 此問題是因為工作流程中已棄用的方法，例如&#x200B;**[!DNL Dam Asset update]**&#x200B;和&#x200B;**[!DNL Dynamic Media: Reprocess assets]**。 (ASSETS-43343)
 * 進行微幅變更後（例如更新標題），您會重新開啟並重新儲存本機Sites執行個體上的&#x200B;**[!DNL Connected Assets configuration]**。 然後，遠端執行個體會失去與本機執行個體的連線。 因此，它無法與本機Sites執行個體建立通訊。 (ASSETS-44484)
 * 在[!DNL AEM 6.5.21]中，當清單檢視中的資產上傳被取消並執行第二次上傳時，[!DNL AEM]會顯示已上傳的&#x200B;**[!UICONTROL 0個NaN資產]**&#x200B;錯誤。 (ASSETS-44124)
 
@@ -577,7 +580,7 @@ ht-degree: 2%
 
 
 
-## 過時和移除的功能{#removed-deprecated-features}
+## 已棄用和已移除的功能{#removed-deprecated-features}
 
 如需AEM 6.5已棄用或移除之所有功能的詳細清單，請參閱[已棄用和移除的功能](/help/release-notes/deprecated-removed-features.md/)。
 
@@ -748,7 +751,7 @@ AEM 6.5.21、6.5.22、6.5.23和AEM 6.5 LTS GA隨附`org.apache.sling.scripting.j
 
 
 
-## 包含的OSGi套件組合和內容套件{#osgi-bundles-and-content-packages-included}
+## 包含的 OSGi 套件和內容套件{#osgi-bundles-and-content-packages-included}
 
 下列文字檔案列出此[!DNL Experience Manager] 6.5 Service Pack發行版本中包含的OSGi套件組合和內容套件：
 
@@ -765,5 +768,5 @@ AEM 6.5.21、6.5.22、6.5.23和AEM 6.5 LTS GA隨附`org.apache.sling.scripting.j
 >[!MORELIKETHIS]
 >
 >* [[!DNL Experience Manager] 產品頁面](https://business.adobe.com/products/experience-manager/adobe-experience-manager.html)
->* [[!DNL Experience Manager] 6.5檔案](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65)
+>* [[!DNL Experience Manager] 6.5檔案](https://experienceleague.adobe.com/en/docs/experience-manager-65)
 >* [訂閱Adobe優先產品更新](https://www.adobe.com/tw/subscription/priority-product-update.html)
