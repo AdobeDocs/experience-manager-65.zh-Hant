@@ -1,25 +1,26 @@
 ---
-title: 關於Experience Hub
+title: 關於 Experience Hub
 description: 了解 Adobe Experience Hub 頁面。
 landing-page-description: 了解 Adobe Experience Hub，這是用於存取所有 AEM 功能的集中起點。
 solution: Experience Manager, Experience Manager 6.5
-feature: Cloud Manager, Developing
-role: Admin, Architect, Developer
+feature: Authoring, AI Assistant, Central Interface Components, Getting Started, Onboarding, Programs, Workflows
+feature-set: Experience Cloud,Experience Manager Sites,Experience Cloud Services
+role: Admin, Architect, Developer, User
 exl-id: 8193e420-2e37-45a6-a1fc-01873fed539b
-source-git-commit: 25c154fb310902079e6cd116e29a8e7f9a88e157
+source-git-commit: fa84767b13e3b13ee5115b7dc7d2032092a9063b
 workflow-type: tm+mt
 source-wordcount: '588'
-ht-degree: 9%
+ht-degree: 11%
 
 ---
 
-# 關於Experience Hub {#aem-experience-hub}
+# 關於 Experience Hub {#aem-experience-hub}
 
 Experience Hub推出管理Adobe Experience Manager內容、資產和網站的集中式起點。 Experience Hub的設計目的是提供個人化體驗，可讓您根據自己的角色和目標，順暢地在AEM生態系統中導覽。 它以指南的方式提供關鍵的深入解析和建議的動作，協助您有效率地達成目標。Experience Hub擁有清晰、以人物為導向的版面配置，可確保快速存取基本工具，並支援所有AEM功能中精簡而有效的體驗。
 
 觀看重新構想的AEM Experience Hub工作區快速導覽（4分鐘、9秒）。
 
->[!VIDEO](https://video.tv.adobe.com/v/3471453?learn=on&captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/3471396?learn=on)
 
 <!--
 Available as a private beta, Experience Hub offers an optimized experience focused on improving workflows, prioritizing goals, and delivering results. Opting in lets you influence Experience Hub's development by providing feedback that helps shape its future and enhances its value for the entire AEM community. -->
@@ -82,4 +83,4 @@ Widget也可以在頁面上調整大小和重新定位，以更符合您的需�
 
 ## AEM 中的 AI 助理
 
-對於具有[已完成必要條件](/help/ai-assistant-in-aem.md#get-access)的客戶，其組織的使用者可以使用AEM中的AI助理。 檢視AEM[中的](/help/ai-assistant-in-aem.md)AI小幫手。
+對於具有[已完成必要條件](/help/ai-assistant-in-aem.md#get-access)的客戶，其組織的使用者可以使用AEM中的AI助理。 請參閱 [AEM 中的 AI 助理](/help/ai-assistant-in-aem.md)。
