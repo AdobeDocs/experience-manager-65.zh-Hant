@@ -5,9 +5,9 @@ solution: Experience Manager, Experience Manager 6.5
 feature: Authoring, AI Assistant, AI Tools
 role: Admin, Architect, Developer, User
 exl-id: 3b4a484e-55b5-4924-82dd-56735f6ed46d
-source-git-commit: 646816ab50c432c86772c228878f8114854c320f
+source-git-commit: 4ec42cee96cbedfc70db8a5272ceff64658a22a3
 workflow-type: tm+mt
-source-wordcount: '1278'
+source-wordcount: '1311'
 ht-degree: 4%
 
 ---
@@ -35,32 +35,27 @@ AI 助理會直接嵌入 AEM，並且可透過 AEM Experience Hub、Cloud Manage
 
 以下3分鐘39秒的影片逐步解說AEM中的AI Assistant。
 
->[!VIDEO](https://video.tv.adobe.com/v/3470366?learn=on&captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/3470354?learn=on)
 
 ## 在AEM中存取AI助理{#get-access}
 
-若要授與使用者對AEM中AI助理的存取權，您的Adobe管理員必須為需要在&#x200B;**Adobe Admin Console**&#x200B;中存取的設定檔設定下列自訂許可權：
+若要在AEM中存取AI助理，客戶必須具備下列條件：
 
-* **AI助理存取** — 在AEM中使用AI助理以取得產品知識的許可權，可讓使用者在AI助理聊天中詢問產品相關問題。 必須啟用此許可權。
-* **支援存取** — 使用者也必須具有開啟支援票證的許可權，這需要&#x200B;**支援管理員**&#x200B;角色。
+* 在AEM中使用AI助理以取得產品知識的許可權。 此許可權可讓您在AI助理聊天中詢問產品相關問題。 必須啟用此許可權。
+* 開啟支援票證的許可權，此許可權需要&#x200B;**支援管理員**&#x200B;角色。
 
-AEM中的AI助理要求會透過Adobe Identity Management Services (IMS)驗證。 如需詳細資訊，請參閱[Adobe Identity Management服務總覽](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/corporate/adobe-identity-management-services-security-overview.pdf)。
+>[!NOTE]
+>
+>AEM中的AI助理要求會透過Adobe Identity Management Services (IMS)驗證。 如需詳細資訊，請參閱[Adobe Identity Management服務總覽](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/corporate/adobe-identity-management-services-security-overview.pdf)。
 
 **若要存取AEM中的AI小幫手：**
 
 1. 客戶必須有其他合約才能存取Adobe Experience Manager中大部分的AI支援和代理程式功能。 如需詳細資訊，請聯絡您的Adobe代表。
 
-<!-- OLD STEP 1 [Customers must sign the Gen AI rider with Adobe](https://fieldreadiness-adobe.highspot.com/items/665f831c9f831b011aeda057#1). 
+1. 若要在AEM中使用AI助理，透過AI助理存取產品知識的許可權是強制性的。 此許可權預設為「開啟」。
 
-    The GenAI Rider is a legal agreement between a customer and Adobe, required to use most AI and agentic capabilities. Contact Adobe Customer Care to learn more. -->
+   如果您想要控制誰可以存取產品知識，請從與Adobe ID相關聯的電子郵件地址傳送電子郵件至[aemaiassistant@adobe.com](mailto:aemaiassistant@adobe.com)。 Adobe可啟用使用者層級的存取控制。 啟用後，您的管理員可以按照[在AEM中設定AI小幫手](/help/ai-assistant-in-aem-admin.md)中的步驟來授與使用者層級的存取權。
 
-1. AEM管理員會設定AI助理以供組織使用。 請參閱[在AEM中設定AI小幫手](/help/ai-assistant-in-aem-admin.md)。
-
-<!--
->[!IMPORTANT]
->Be sure you have reviewed and submitted the user agreement so Adobe can enable AI Assistant feature for you to test out and participate in the private beta program.
->
->For any questions, send an email to [Grp-AEMAIASSISTANT@adobe.com](mailto:Grp-AEMAIASSISTANT@adobe.com) from your email address associated with your Adobe ID. -->
 
 ## 範圍 {#scope}
 
@@ -133,7 +128,7 @@ Administrators should keep normal Cloud Manager governance in mind. Hold product
 
 ![Technical support ticket creation in AI Assistant in AEM of the Admin Console](/help/implementing/cloud-manager/assets/ai-assistant-admin-console-support-ticket.png)
 
-For a guided walkthrough of setting up users and groups in AEM as a Cloud Service, see [Configuring access to AEM as a Cloud Service ](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/cloud-service/accessing/overview). 
+For a guided walkthrough of setting up users and groups in AEM as a Cloud Service, see [Configuring access to AEM as a Cloud Service ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/accessing/overview). 
 
 See also [Custom Permissions](/help/implementing/cloud-manager/custom-permissions.md). -->
 
