@@ -7,9 +7,9 @@ feature: Authoring, AI Assistant, Central Interface Components, Getting Started,
 feature-set: Experience Cloud,Experience Manager Sites,Experience Cloud Services
 role: Admin, Architect, Developer, User
 exl-id: 8193e420-2e37-45a6-a1fc-01873fed539b
-source-git-commit: fa84767b13e3b13ee5115b7dc7d2032092a9063b
+source-git-commit: eb0deb1cb401964c86f38cc42961d2c428d9311c
 workflow-type: tm+mt
-source-wordcount: '588'
+source-wordcount: '593'
 ht-degree: 11%
 
 ---
@@ -20,7 +20,7 @@ Experience Hub推出管理Adobe Experience Manager內容、資產和網站的集
 
 觀看重新構想的AEM Experience Hub工作區快速導覽（4分鐘、9秒）。
 
->[!VIDEO](https://video.tv.adobe.com/v/3471453?learn=on&captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/3471396?learn=on)
 
 <!--
 Available as a private beta, Experience Hub offers an optimized experience focused on improving workflows, prioritizing goals, and delivering results. Opting in lets you influence Experience Hub's development by providing feedback that helps shape its future and enhances its value for the entire AEM community. -->
@@ -32,11 +32,11 @@ Available as a private beta, Experience Hub offers an optimized experience focus
    ![Adobe Experience Cloud首頁](/help/assets/assets-experience-hub/experience-cloud-experiencemanager-ams.png)
 
 1. 在&#x200B;**快速存取**&#x200B;群組中，按一下&#x200B;[**Experience Manager**](https://experience.adobe.com)。
-1. 第一次存取時，請在&#x200B;**告訴我們您要做什麼**&#x200B;頁面上按一下您想要的選項，讓Adobe可以量身打造您的體驗。
+1. 第一次存取時，系統會指派&#x200B;**內容作者**&#x200B;預設集（在頁面右上角附近顯示）。 它可控制您所看到的Widget、導覽專案及內容。
 
-   您可以隨時變更此喜好設定。
+   您可以隨時變更此預設集。
 
-   ![告訴我們您想要做什麼](/help/assets/assets-experience-hub/experience-cloud-tellus-ams.png)
+   ![已選取顯示內容作者預設集的下拉式清單](/help/assets/assets-experience-hub/experience-hub-role-selection.png)
 
 Adobe Experience Manager頁面已更新為增強型導覽和互動式Widget。 之前收集的解決方案卡片提供了對類似以下工具的存取：
 
@@ -59,7 +59,7 @@ Adobe Experience Manager頁面已更新為增強型導覽和互動式Widget。 �
 
 ![生產和中繼環境](/help/assets/assets-experience-hub/experience-hub-prod-stage-ams.png)
 
-作為Adobe Experience Manager的中央樞紐，Experience Hub頁面會展開並包含為每個使用者角色量身打造的其他介面工具和動作。 可完全自訂的頁面，可讓您選擇熒幕的最佳版面配置。 Widget可經過篩選，因此只有選取的元件會顯示在首頁面上，確保提供個人化體驗。
+作為Adobe Experience Manager的中央樞紐，Experience Hub頁面會展開並包含為每個使用者角色（預設集）量身打造的其他小工具和動作。 可完全自訂的頁面，可讓您選擇熒幕的最佳版面配置。 Widget可經過篩選，因此只有選取的元件會顯示在首頁面上，確保提供個人化體驗。
 
 ![Experience Hub自訂](/help/assets/assets-experience-hub/experience-hub-custom-ams.png)
 
