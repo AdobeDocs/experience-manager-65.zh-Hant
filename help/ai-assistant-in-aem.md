@@ -5,7 +5,7 @@ solution: Experience Manager, Experience Manager 6.5
 feature: Authoring, AI Assistant, AI Tools
 role: Admin, Architect, Developer, User
 exl-id: 3b4a484e-55b5-4924-82dd-56735f6ed46d
-source-git-commit: 4ec42cee96cbedfc70db8a5272ceff64658a22a3
+source-git-commit: 773a3e1ce6365589c968dd56a44d7adc9a4ec447
 workflow-type: tm+mt
 source-wordcount: '1311'
 ht-degree: 4%
@@ -33,9 +33,9 @@ AI助理支援AEM as a Cloud Service，包括下列解決方案：
 
 AI 助理會直接嵌入 AEM，並且可透過 AEM Experience Hub、Cloud Manager 和 Author UI 存取。
 
-以下3分鐘39秒的影片逐步解說AEM中的AI Assistant。
+以下影片長3分鐘，每秒25秒，逐步解說AEM中的AI Assistant。
 
->[!VIDEO](https://video.tv.adobe.com/v/3470366?learn=on&captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/3475357/?learn=on&enablevpops)
 
 ## 在AEM中存取AI助理{#get-access}
 
@@ -59,7 +59,7 @@ AI 助理會直接嵌入 AEM，並且可透過 AEM Experience Hub、Cloud Manage
 
 ## 範圍 {#scope}
 
-AEM中AI助理目前的範圍著重於解決AEMr as a Cloud Service的產品知識問題。 此範圍包含主要領域的完整支援。<!--, such as Sites, Assets, Forms, Edge Delivery Services, Dynamic Media, and Cloud Manager. -->
+AEM中AI助理的目前範圍著重於解決AEMr as a Cloud Service的產品知識問題。 此範圍包含主要領域的完整支援。<!--, such as Sites, Assets, Forms, Edge Delivery Services, Dynamic Media, and Cloud Manager. -->
 
 * **介面**：適用於AEM Experience Hub、作者UI、Cloud Manager。
 * **功能**：產品知識以及疑難排解和指引的第一站、自動建立支援票證和查詢。
@@ -128,7 +128,7 @@ Administrators should keep normal Cloud Manager governance in mind. Hold product
 
 ![Technical support ticket creation in AI Assistant in AEM of the Admin Console](/help/implementing/cloud-manager/assets/ai-assistant-admin-console-support-ticket.png)
 
-For a guided walkthrough of setting up users and groups in AEM as a Cloud Service, see [Configuring access to AEM as a Cloud Service ](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/cloud-service/accessing/overview). 
+For a guided walkthrough of setting up users and groups in AEM as a Cloud Service, see [Configuring access to AEM as a Cloud Service ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/accessing/overview). 
 
 See also [Custom Permissions](/help/implementing/cloud-manager/custom-permissions.md). -->
 
@@ -192,9 +192,9 @@ AEM中的AI助理包含可發現性功能，可協助您探索支援的主題和
 * **AEM中的AI助理是否即時提供資訊？**\
   不行。AI助理從Adobe Experience League檔案取得其內容。 內容的更新可能需要一些時間才能反映在回應中。
 * **AEM中的AI助理支援哪些Adobe應用程式？**\
-  目前，AI Assistant支援AEM as a Cloud Service中的產品知識查詢，包括Sites、Assets、Dynamic Media、Cloud Manager和Forms。
+  目前，AI助理支援AEM as a Cloud Service中的產品知識查詢，包括Sites、Assets、Dynamic Media、Cloud Manager和Forms。
 * **AEM中的AI助理有哪些功能？**\
-  AEM中的AI Assistant可回答與Adobe產品知識相關的查詢。
+  AEM中的AI助理可回答與Adobe產品知識相關的查詢。
 * **AEM中的AI助理是否將個人資訊用於訓練資料？**\
   不行。AEM中的AI助理不會將個人資訊用於訓練目的。 避免與AEM中的AI助理分享您或其他人的個人資訊，包括姓名或聯絡詳細資訊。
 
