@@ -17,7 +17,7 @@ ht-degree: 3%
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/integrations/workfront-connector-install.html?lang=en) |
+| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/integrations/workfront-connector-install.html?lang=zh-Hant) |
 | AEM 6.5 | 本文章 |
 
 在[!DNL Adobe Experience Manager]中擁有管理員存取許可權的使用者會安裝增強型聯結器。 安裝之前，請先檢閱平台支援和聯結器[的其他](https://one.workfront.com/s/csh?context=2467&pubname=the-new-workfront-experience)必要條件。
