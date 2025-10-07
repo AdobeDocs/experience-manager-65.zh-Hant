@@ -9,37 +9,37 @@ exl-id: 00473769-c447-4966-a71e-117c669e0151
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,Developer Tools
 role: Developer
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+source-git-commit: 172b8667b1ff0bd533a035b21c316e2e66721bf8
 workflow-type: tm+mt
-source-wordcount: '746'
+source-wordcount: '747'
 ht-degree: 4%
 
 ---
 
 # Eclipse 適用的 AEM 開發人員工具{#aem-developer-tools-for-eclipse}
 
-![適用於Eclipse之AEM Developer Tools的圓形影像模組。](do-not-localize/chlimage_1-9.png)
+![適用於Eclipse之AEM Developer Tools的圓形影像母片。](do-not-localize/chlimage_1-9.png)
 
 ## 概觀 {#overview}
 
-「AEM Developer Tools」是以Apache授權2所發行適用於Apache Sling[&#128279;](https://sling.apache.org/documentation/development/ide-tooling.html)的Eclipse外掛程式為基礎的Eclipse外掛程式。
+「AEM Developer Tools」是以Apache授權2所發行適用於Apache Sling[的](https://sling.apache.org/documentation/development/ide-tooling.html)Eclipse外掛程式為基礎的Eclipse外掛程式。
 
 它提供數項功能，讓AEM開發更容易：
 
 * 透過Eclipse伺服器聯結器與AEM執行個體緊密整合。
 * 內容和OSGI套件組合的同步。
 * 使用程式碼熱交換功能提供除錯支援。
-* 透過特定專案建立精靈，簡單BootstrapAEM專案。
+* AEM專案的簡單Bootstrap，透過特定的專案建立精靈。
 * 輕鬆編輯JCR屬性。
 
 ## 要求 {#requirements}
 
-使用AEM開發人員工具之前，請先執行下列動作：
+使用AEM開發人員工具前，請先執行下列動作：
 
 * 下載並安裝適用於Java™ EE開發人員的[Eclipse IDE](https://www.eclipse.org/downloads/packages/release/luna/r/eclipse-ide-java-ee-developers)。 AEM開發人員工具目前支援Eclipse Kepler或更新版本
 
 * 可搭配AEM 5.6.1或更新版本使用
-* 依照[Eclipse常見問答集](https://wiki.eclipse.org/FAQ_How_do_I_increase_the_heap_size_available_to_Eclipse%3F)所述，編輯您的`eclipse.ini`設定檔，設定Eclipse安裝，確保您至少有1 GB的棧積記憶體。
+* 依照`eclipse.ini`Eclipse常見問答集[所述，編輯您的](https://wiki.eclipse.org/FAQ_How_do_I_increase_the_heap_size_available_to_Eclipse%3F)設定檔，設定Eclipse安裝，確保您至少有1 GB的棧積記憶體。
 
 >[!NOTE]
 >
@@ -49,7 +49,7 @@ ht-degree: 4%
 
 當您符合上述[需求](#requirements)後，您可以依照下列方式安裝外掛程式：
 
-1. 瀏覽`https://eclipse.adobe.com/aem/dev-tools/`的&#x200B;**AEM Developer Tools**&#x200B;網站。
+1. 開啟[AEM開發人員工具網站](https://eclipse.adobe.com/)。
 
 1. 複製&#x200B;**安裝連結**。
 
@@ -136,7 +136,7 @@ Eclipse適用的AEM開發工具隨附的透視功能可讓您完全控制AEM專�
 
 只要將適當的相依性新增至專案，標籤程式庫自動完成功能即可立即運作。 使用AEM Uber Jar時，有一個已知問題，其中不包含所需的tld和TagExtraInfo檔案。
 
-若要解決此問題，請確保org.apache.sling.scripting.jsp.taglib成品在AEM Uber Jar之前的類別路徑中。 對於Maven專案，請將以下相依性放在pom.xml中的Uber Jar之前。
+若要解決此問題，請確保org.apache.sling.scripting.jsp.taglib成品位於AEM Uber Jar之前的類別路徑中。 對於Maven專案，請將以下相依性放在pom.xml中的Uber Jar之前。
 
 ```xml
 <dependency>
@@ -152,7 +152,7 @@ Eclipse適用的AEM開發工具隨附的透視功能可讓您完全控制AEM專�
 
 Eclipse網站的官方Apache Sling IDE工具提供您實用資訊：
 
-* 適用於Eclipse **的[** Apache Sling IDE工具使用手冊](https://sling.apache.org/documentation/development/ide-tooling.html)，此檔案會引導您瞭解AEM開發工具支援的整體概念、伺服器整合和部署功能。
+* 適用於Eclipse [**的** Apache Sling IDE工具使用手冊](https://sling.apache.org/documentation/development/ide-tooling.html)，此檔案會引導您瞭解AEM開發工具支援的整體概念、伺服器整合和部署功能。
 * [疑難排解區段](https://sling.apache.org/documentation/development/ide-tooling.html#troubleshooting)。
 * [已知問題清單](https://sling.apache.org/documentation/development/ide-tooling.html#known-issues)。
 
