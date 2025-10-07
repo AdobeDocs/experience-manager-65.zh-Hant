@@ -126,7 +126,7 @@ _適用於Eclipse的Experience Manager Developer Tools_&#x200B;是以Apache授�
 
    >[!TIP]
    >
-   >如需有關在本機AEM SDK上執行專案的偵錯的詳細資訊，請參閱檔案[遠端偵錯AEM SDK。](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-sdk/remote-debugging)
+   >如需有關在本機AEM SDK上執行專案的偵錯的詳細資訊，請參閱檔案[遠端偵錯AEM SDK。](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-sdk/remote-debugging)
 
 1. 按一下&#x200B;**完成**。
 
