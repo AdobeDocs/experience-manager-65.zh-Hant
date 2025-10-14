@@ -75,7 +75,7 @@ ht-degree: 1%
 
 下列步驟顯示建立GCM API金鑰的不同方法：
 
-1. 登入Google並移至[Google的Developer頁面](https://developers.google.com/mobile/add?platform=android&amp;cntapi=gcm)。
+1. 登入Google並移至[Google的Developer頁面](https://developers.google.com/mobile/add?platform=android&cntapi=gcm)。
 1. 從清單中選擇您的應用程式（或建立一個）。
 1. 在Android™封裝名稱下，輸入您的應用程式ID，也就是`com.adobe.cq.mobile.weretail.outdoorsapp`。 （如果這樣還是不行，請用「test.test」再試一次。）
 1. 按一下&#x200B;**繼續選擇並設定服務**

@@ -643,7 +643,7 @@ Portlet API (JSR-286)會指定Portlet事件。 AEM內容Portlet有一個整合�
 
 >[!NOTE]
 >
->只有在將AEM部署為Web應用程式時，才能使用Portlet元件。 ([請參閱使用應用程式伺服器安裝AEM ](/help/sites-deploying/application-server-install.md)。)
+>只有在將AEM部署為Web應用程式時，才能使用Portlet元件。 ([請參閱使用應用程式伺服器安裝AEM &#x200B;](/help/sites-deploying/application-server-install.md)。)
 
 ### 安裝Portlet元件 {#installing-the-portlet-component}
 

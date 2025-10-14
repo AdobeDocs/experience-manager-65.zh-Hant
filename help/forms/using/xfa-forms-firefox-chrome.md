@@ -49,7 +49,7 @@ ht-degree: 1%
 
 1. 按一下Chrome PDF Viewer底下的「停用」 ，然後按一下Adobe PDF Plug-In底下的「啟用」 。
    ![chrome-pdf-viewer](/help/forms/using/assets/chrome-image.png)
-如需詳細資訊，請參閱Google的[Adobe PDF外掛程式](https://support.google.com/chrome/?hl=en&amp;visit_id=638803785294106945-2276548125&amp;rd=4&amp;topic=3421431#topic=7439538)檔案。
+如需詳細資訊，請參閱Google的[Adobe PDF外掛程式](https://support.google.com/chrome/?hl=en&visit_id=638803785294106945-2276548125&rd=4&topic=3421431#topic=7439538)檔案。
 
 >[!NOTE]
 > 

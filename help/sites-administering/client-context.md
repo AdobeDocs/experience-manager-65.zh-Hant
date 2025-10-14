@@ -246,7 +246,7 @@ JSONP存放區就像任何其他存放區一樣，但是它會載入來自其他
 
    元件會呼叫JSONP服務並列出傳回資料包含的所有屬性。 清單中的屬性是可在Client Context中使用的屬性。
 
-   ![ JSONP服務的屬性](assets/chlimage_1-40.png)
+   ![&#x200B; JSONP服務的屬性](assets/chlimage_1-40.png)
 
 1. 按一下「確定」。
 1. 返回Geometrixx Outdoors首頁並重新整理頁面。 Client Context現在包含來自JSONP存放區元件的資訊。

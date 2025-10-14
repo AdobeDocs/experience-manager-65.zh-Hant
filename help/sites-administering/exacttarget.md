@@ -54,7 +54,7 @@ ht-degree: 2%
 
    已設定ExactTarget。 您可以按一下&#x200B;**編輯**&#x200B;來編輯組態。 您可以按一下&#x200B;**移至ExactTarget**，移至ExactTarget。
 
-1. AEM現在提供資料擴充功能功能。 您可以匯入ExactTarget資料延伸模組欄。 除了已成功建立的ExactTarget設定外，按一下「+」符號即可進行設定。 您可從下拉式清單中選取任何現有的資料擴充功能。 如需如何設定資料擴充功能的詳細資訊，請參閱[ExactTarget檔案](https://help.salesforce.com/s/articleView?id=sf.mc_es_data_extension_data_relationships_classic.htm&amp;type=5)。
+1. AEM現在提供資料擴充功能功能。 您可以匯入ExactTarget資料延伸模組欄。 除了已成功建立的ExactTarget設定外，按一下「+」符號即可進行設定。 您可從下拉式清單中選取任何現有的資料擴充功能。 如需如何設定資料擴充功能的詳細資訊，請參閱[ExactTarget檔案](https://help.salesforce.com/s/articleView?id=sf.mc_es_data_extension_data_relationships_classic.htm&type=5)。
 
    匯入的資料延伸欄稍後可透過&#x200B;**文字和Personalization**&#x200B;元件使用。
 

@@ -27,7 +27,7 @@ ht-degree: 4%
 
 建立雲端設定，將AEM連線至您的翻譯服務提供者。
 
-AEM預設包含[連線至Microsoft® Translator](/help/sites-administering/tc-msconf.md)的功能。 其他擁有AEM聯結器且是Adobe Exchange合作夥伴計畫成員的翻譯技術廠商可在[這裡](https://exchange.adobe.com/apps/browse/ec?page=1&amp;partnerLevel=All&amp;product=AEM&amp;q=experience+manager+translation&amp;sort=RELEVANCE)找到。
+AEM預設包含[連線至Microsoft® Translator](/help/sites-administering/tc-msconf.md)的功能。 其他擁有AEM聯結器且是Adobe Exchange合作夥伴計畫成員的翻譯技術廠商可在[這裡](https://exchange.adobe.com/apps/browse/ec?page=1&partnerLevel=All&product=AEM&q=experience+manager+translation&sort=RELEVANCE)找到。
 
 安裝聯結器套件後，您可以為聯結器建立雲端設定。 通常您需要提供認證來向翻譯服務進行驗證。 如需有關為Microsoft Translator聯結器新增雲端設定的資訊，請參閱[與Microsoft Translator整合](/help/sites-administering/tc-msconf.md)。
 

@@ -494,7 +494,7 @@ TarMK GC: no base state available, running full compaction instead
     <ol>
      <li>一種應用程式，可繞過建議的存取機制（例如Sling和JCR API），使用較低層級的API/SPI來存取存放庫，然後超過區段的保留時間。 也就是說，它會保留一個實體的參照，保留時間超過線上修訂清除（預設為24小時）所允許的保留時間。 此案例為暫時性，不會導致資料損毀。 若要復原，應使用Oak-run工具來確認例外狀況的暫時性（Oak-run檢查不應報告任何錯誤）。 若要這麼做，執行個體必須離線並稍後重新啟動。</li>
      <li>外部事件造成磁碟上的資料損毀。 這可能是磁碟故障、磁碟空間不足或意外修改所需資料檔案所致。 在此情況下，執行個體必須離線並使用Oak-run檢查進行修復。 如需如何執行Oak-run檢查的詳細資訊，請閱讀下列<a href="https://github.com/apache/jackrabbit-oak/blob/trunk/oak-doc/src/site/markdown/nodestore/segment/overview.md#check" target="_blank">Apache檔案</a>。</li>
-     <li>透過<a href="https://experienceleague.adobe.com/zh-hant?support-solution=General&amp;support-tab=home#support" target="_blank">Adobe客戶服務</a>處理所有其他發生的問題。</li>
+     <li>透過<a href="https://experienceleague.adobe.com/zh-hant?support-solution=General&support-tab=home#support" target="_blank">Adobe客戶服務</a>處理所有其他發生的問題。</li>
     </ol> </td>
    <td> </td>
   </tr>

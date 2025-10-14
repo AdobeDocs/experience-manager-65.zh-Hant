@@ -37,7 +37,7 @@ Document Security伺服器是Document Security執行交易的中央元件，例�
 
 Document Security伺服器提供網頁型介面（網頁），可建立原則、管理受原則保護的檔案，以及監控與受原則保護檔案相關聯的事件。 管理員也可以設定全域選項，例如受邀使用者的使用者驗證、稽核和傳訊，以及管理受邀的使用者帳戶。
 
-伺服器包含在AEM Forms Document Security附加元件產品中。 您可以聯絡AEM Forms [銷售團隊](https://business.adobe.com/request-consultation/experience-cloud.html?s_osc=70114000002JNwKAAW&amp;s_iid=70114000002JHs3AAG)以購買Document Security附加元件。
+伺服器包含在AEM Forms Document Security附加元件產品中。 您可以聯絡AEM Forms [銷售團隊](https://business.adobe.com/request-consultation/experience-cloud.html?s_osc=70114000002JNwKAAW&s_iid=70114000002JHs3AAG)以購買Document Security附加元件。
 
 ### Protect檔案 {#protect-documents}
 
@@ -49,7 +49,7 @@ AEM Forms Document Security提供多種工具來套用安全性原則。 您可�
 
 * **Document Security SDK：** SDK是功能豐富的使用者端。 您可以使用Document Security SDK來存取檔案伺服器功能、開啟受原則保護的檔案，以及開發自訂擴充功能、外掛程式或應用程式。 例如，您可以開發擴充功能以保護自訂檔案格式，或整合SDK與資料損失防護(DLP)解決方案。 使用Document Security SDK開發的擴充功能、應用程式和外掛程式，可將檔案傳送至指定的AEM Forms伺服器，且原則會套用至伺服器。 AEM Forms Document Security使用者端SDK (CSDK)無法取消保護使用可攜式保護程式庫(PPL)保護的檔案，反之亦然。
 
-  Document Security SDK可同時用於Java™和C++。 Java™ SDK包含在AEM Forms Document Security產品中，並安裝在JEE上部署AEM Forms上。 聯絡[AEM客戶支援](https://experienceleague.adobe.com/zh-hant?support-solution=General&amp;support-tab=home#support)以取得C++ SDK。 C++ SDK可以使用Microsoft® Visual Studio 2013進行編譯。 造訪[Document Security API檔案](https://help.adobe.com/en_US/livecycle/11.0/Services/WS92d06802c76abadb76c48dfe12dbeb3e281-7ff0.2.html)網站，瞭解並使用SDK的功能。
+  Document Security SDK可同時用於Java™和C++。 Java™ SDK包含在AEM Forms Document Security產品中，並安裝在JEE上部署AEM Forms上。 聯絡[AEM客戶支援](https://experienceleague.adobe.com/zh-hant?support-solution=General&support-tab=home#support)以取得C++ SDK。 C++ SDK可以使用Microsoft® Visual Studio 2013進行編譯。 造訪[Document Security API檔案](https://help.adobe.com/en_US/livecycle/11.0/Services/WS92d06802c76abadb76c48dfe12dbeb3e281-7ff0.2.html)網站，瞭解並使用SDK的功能。
 
 * **Adobe Acrobat：**&#x200B;您可以使用Adobe Acrobat將安全性原則套用至PDF使用熱門案頭應用程式(例如Microsoft®Office、網頁瀏覽器或任何支援PDF格式列印的應用程式)建立的檔案。
 
@@ -63,7 +63,7 @@ AEM Forms Document Security提供多種工具來套用安全性原則。 您可�
 
   除了上述功能，PPL還具備Document Security SDK的所有功能。 您可以使用Document Security SDK來存取檔案伺服器功能、開啟受原則保護的檔案，以及開發自訂擴充功能、外掛程式或應用程式。 PPL無法取消保護使用AEM Forms Document Security使用者端SDK (CSDK)受保護的檔案，反之亦然。
 
-  PPL適用於32位元和64位元版本的Java™和C++語言。 它也可作為OSGi上AEM Forms的OSGi套件組合提供。 C++ PPL可以使用Microsoft® Visual Studio 2013進行編譯。 如果您已授權AEM Forms Document Security附加元件，您可以聯絡[AEM Forms Document Security](https://experienceleague.adobe.com/zh-hant?support-solution=General&amp;support-tab=home#support)支援團隊以取得PPL。 稍後，您可以使用PPL說明（與程式庫整合）來設定及使用PPL。
+  PPL適用於32位元和64位元版本的Java™和C++語言。 它也可作為OSGi上AEM Forms的OSGi套件組合提供。 C++ PPL可以使用Microsoft® Visual Studio 2013進行編譯。 如果您已授權AEM Forms Document Security附加元件，您可以聯絡[AEM Forms Document Security](https://experienceleague.adobe.com/zh-hant?support-solution=General&support-tab=home#support)支援團隊以取得PPL。 稍後，您可以使用PPL說明（與程式庫整合）來設定及使用PPL。
 
 ### 檢視或編輯受保護的檔案 {#view-or-edit-protected-documents}
 

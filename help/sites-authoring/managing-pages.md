@@ -389,7 +389,7 @@ AEM提供可更新任何內部連結的功能，這些連結會參照正在重�
 
   ![非同步頁面移動](assets/asynchronous-page-move.png)
 
-可在&#x200B;[**全域導覽** > ](/help/sites-administering/asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations)工具&#x200B;**>**&#x200B;作業&#x200B;**>**&#x200B;作業&#x200B;**的**&#x200B;非同步作業狀態&#x200B;**儀表板**&#x200B;中檢查非同步作業的狀態
+可在&#x200B;[**全域導覽** > &#x200B;](/help/sites-administering/asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations)工具&#x200B;**>**&#x200B;作業&#x200B;**>**&#x200B;作業&#x200B;**的**&#x200B;非同步作業狀態&#x200B;**儀表板**&#x200B;中檢查非同步作業的狀態
 
 >[!NOTE]
 >

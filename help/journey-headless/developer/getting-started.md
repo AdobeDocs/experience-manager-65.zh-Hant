@@ -278,14 +278,14 @@ GraphQL 可作為 AEM 和 Headless 內容取用者之間的「黏著劑」。Gra
 
 雖然建議您查看文件[踏上首次使用 AEM Headless 之路](path-to-first-experience.md)，來繼續 Headless 開發歷程，但以下是一些額外的內容和選用資源，對此文件提到的一些概念有更深入的探討，但它們不是繼續 Headless 開發歷程的必要條件。
 
-* [AEM Headful 和 Headless 技術 ](/help/sites-developing/headful-headless.md) - 對 AEM 中可用的 Headless 整合層級的完整討論
+* [AEM Headful 和 Headless 技術 &#x200B;](/help/sites-developing/headful-headless.md) - 對 AEM 中可用的 Headless 整合層級的完整討論
 
 * [AEM as a Headless CMS 簡介](/help/sites-developing/headless/introduction.md)
 
 * [AEM Headless 翻譯歷程](/help/journey-headless/translation/overview.md) - 此文件歷程讓您對 Headless 技術、AEM 如何提供 Headless 內容以及如何翻譯它，有廣泛的了解。
 
 * [AEM Headless 教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=zh-Hant) - 利用這些實作教學課程來探索如何運用各種不同方式使用 AEM 將內容傳遞到 Headless 端點，並選擇適合您的方式。
-* [使用 GraphQL API 進行 Headless 內容管理](https://experienceleague.adobe.com/zh-hant?Solution=Experience+Manager&amp;Solution=Experience+Manager+Sites&amp;Solution=Experience+Manager+Forms&amp;Solution=Experience+Manager+Screens&amp;Launch=ExperienceManager-D-1-2020.1.headless#courses) - 按照本課程說明對 AEM 中實作的 GraphQL API 有概略的了解。必須透過 AdobeID 進行驗證。
+* [使用 GraphQL API 進行 Headless 內容管理](https://experienceleague.adobe.com/zh-hant?Solution=Experience+Manager&Solution=Experience+Manager+Sites&Solution=Experience+Manager+Forms&Solution=Experience+Manager+Screens&Launch=ExperienceManager-D-1-2020.1.headless#courses) - 按照本課程說明對 AEM 中實作的 GraphQL API 有概略的了解。必須透過 AdobeID 進行驗證。
 * [AEM Guides WKND - GraphQL](https://github.com/adobe/aem-guides-wknd-graphql) - 此 GitHub 專案包含以 AEM GraphQL API 為重點的範例應用程式。
 * [製作概念](/help/sites-authoring/author.md) - 關於 AEM 製作環境的技術文件，包含製作-發佈設定的詳細說明。
 * [發佈頁面](/help/sites-authoring/publishing-pages.md) - 關於在 AEM 發佈內容的技術文件。

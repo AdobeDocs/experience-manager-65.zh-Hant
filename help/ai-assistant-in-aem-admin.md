@@ -85,7 +85,7 @@ AEM中AI助理的設定程式包含下列步驟：
 
 1. 在&#x200B;**編輯AI助理的許可權**&#x200B;頁面上，開啟&#x200B;**AI助理產品知識**&#x200B;切換開關。
 
-   ![ AI助理產品知識切換選項的編輯許可權頁面](/help/assets/assets-ai/ai-assistant-prod-knowledge.png)
+   ![&#x200B; AI助理產品知識切換選項的編輯許可權頁面](/help/assets/assets-ai/ai-assistant-prod-knowledge.png)
 
 1. 在頁面的右下角，按一下[儲存]。**&#x200B;**
 

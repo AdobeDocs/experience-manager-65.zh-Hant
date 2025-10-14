@@ -141,7 +141,7 @@ AEM Forms JEE工作流程提供設計、建立和管理業務流程的工具。 
 
 ### 處理孤立任務 {#orphan}
 
-孤立任務是包含已啟動但尚未提交的流程的任務。 在此案例中，`process_instance_id`是&#x200B;**0** （零）。 因此，您無法使用程式執行個體ID來追蹤為孤立任務儲存的使用者資料。 不過，您可以使用孤立任務的工作ID來追蹤它。 您可以依照[當工作流程發起者或參與者已知時，識別處理程式執行個體ID ](/help/forms/using/forms-workflow-jee-handling-user-data.md#initiator-participant)中的說明，從`tb_task`表格為使用者識別工作ID。
+孤立任務是包含已啟動但尚未提交的流程的任務。 在此案例中，`process_instance_id`是&#x200B;**0** （零）。 因此，您無法使用程式執行個體ID來追蹤為孤立任務儲存的使用者資料。 不過，您可以使用孤立任務的工作ID來追蹤它。 您可以依照[當工作流程發起者或參與者已知時，識別處理程式執行個體ID &#x200B;](/help/forms/using/forms-workflow-jee-handling-user-data.md#initiator-participant)中的說明，從`tb_task`表格為使用者識別工作ID。
 
 取得工作ID後，請執行以下作業從GDS和資料庫中清除具有孤立工作的相關檔案和資料。
 

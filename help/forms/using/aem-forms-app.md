@@ -26,11 +26,11 @@ AEM Forms應用程式可根據您的伺服器，在行動裝置上同步最適�
 
 iOS、Android、Windows裝置支援AEM Forms應用程式。 您可以從Google Play安裝適用於Android的AEM Forms應用程式，從App Store安裝iOS，以及從Windows市集安裝Windows。
 
-    [ ![google_play](assets/google_play.png)](https://play.google.com/store/apps/details?id=com.adobe.aem.forms)
+    [&#x200B; ![google_play](assets/google_play.png)](https://play.google.com/store/apps/details?id=com.adobe.aem.forms)
     
-    [ ![app_store](assets/app_store.png)](https://itunes.apple.com/us/app/adobe-experience-manager-forms/id1129625976?ls=1&amp;mt=8)
+    [&#x200B; ![app_store](assets/app_store.png)](https://itunes.apple.com/us/app/adobe-experience-manager-forms/id1129625976?ls=1&mt=8)
     
-    [ ![microsoft-badge-icon](assets/microsoft-badge-icon.png)](https://www.microsoft.com/en-us/store/p/adobe-experience-manager-forms/9nd12rlxtgtt)
+    [&#x200B; ![microsoft-badge-icon](assets/microsoft-badge-icon.png)](https://www.microsoft.com/en-us/store/p/adobe-experience-manager-forms/9nd12rlxtgtt)
 
 若要在iOS、Android或Windows裝置上安裝、自訂和發佈應用程式，請參閱[自訂、建置和發佈AEM Forms應用程式](#customize-build-distribute)。
 

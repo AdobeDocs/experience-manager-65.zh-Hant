@@ -53,7 +53,7 @@ ht-degree: 2%
 >
 >AEM Verify應用程式可讓您直接將熒幕擷取畫面傳送至AEM中的應用程式詳細資訊。
 >
->如需詳細資訊，請參閱[AEM適用的Mobile Quickstart ](/help/mobile/phonegap-mobile-quickstart.md)。
+>如需詳細資訊，請參閱[AEM適用的Mobile Quickstart &#x200B;](/help/mobile/phonegap-mobile-quickstart.md)。
 
 ![chlimage_1-118](assets/chlimage_1-118.png)
 

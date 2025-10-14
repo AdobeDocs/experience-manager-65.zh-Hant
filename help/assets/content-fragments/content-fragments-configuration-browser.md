@@ -41,7 +41,7 @@ ht-degree: 20%
 
 >[!NOTE]
 >
->如需詳細資訊，請參閱[設定瀏覽器： ](/help/sites-administering/configurations.md#using-configuration-browser)。
+>如需詳細資訊，請參閱[設定瀏覽器： &#x200B;](/help/sites-administering/configurations.md#using-configuration-browser)。
 
 1. 導覽至「 **工具**」、「 **一般**」，然後開啟「 **設定瀏覽器**」。
 

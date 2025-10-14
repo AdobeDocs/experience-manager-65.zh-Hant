@@ -81,7 +81,7 @@ ht-degree: 5%
 
 **步驟1：下載並解壓縮Hotfix套件**
 
-- 從Adobe軟體發佈入口網站下載[ - 6.5.22.6.5.18.0的](/help/release-notes/aem-forms-hotfix.md)Hotfix
+- 從Adobe軟體發佈入口網站下載[&#x200B; - 6.5.22.6.5.18.0的](/help/release-notes/aem-forms-hotfix.md)Hotfix
 - 在本機擷取
 
 **步驟2：瀏覽至正確的版本資料夾**

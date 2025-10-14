@@ -27,7 +27,7 @@ ht-degree: 6%
 
 >[!NOTE]
 >
->如有需要，您可以在[支援程式](https://experienceleague.adobe.com/zh-hant?lang=en&amp;support-tab=home#support)之後提交支援票證。
+>如有需要，您可以在[支援程式](https://experienceleague.adobe.com/zh-hant?lang=en&support-tab=home#support)之後提交支援票證。
 
 ## 現有AMS使用者的OAuth設定 {#oauth-config-new-ams-users}
 
@@ -44,7 +44,7 @@ OAuth設定需要下列先決條件：
 
 ### 現有AMS和On Prem使用者的OAuth設定 {#steps-config-oauth-onprem}
 
-下列步驟可由系統管理員在&#x200B;**CRXDE**&#x200B;中執行。 AMS客戶可依照[支援程式](https://experienceleague.adobe.com/zh-hant?lang=en&amp;support-tab=home#support)，聯絡Adobe代表或提交支援票證。
+下列步驟可由系統管理員在&#x200B;**CRXDE**&#x200B;中執行。 AMS客戶可依照[支援程式](https://experienceleague.adobe.com/zh-hant?lang=en&support-tab=home#support)，聯絡Adobe代表或提交支援票證。
 
 1. 在`com.adobe.granite.auth.oauth.accesstoken.provider.<randomnumbers>.config`中新增或更新以下屬性：
 

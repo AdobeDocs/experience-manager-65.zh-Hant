@@ -51,7 +51,7 @@ ht-degree: 83%
 
 當我們談論 Headless CMS 時，CMS 管理內容並繼續將其傳遞給取用者。然而，透過僅將&#x200B;**內容**&#x200B;以標準方式傳遞，Headless CMS 會省略最後輸出呈現作業，將內容的&#x200B;**展示**&#x200B;作業留給取用內容的服務執行。
 
-![ Headless CMS](/help/journey-headless/developer/assets/headless-cms.png)
+![&#x200B; Headless CMS](/help/journey-headless/developer/assets/headless-cms.png)
 
 取用內容的服務，無論是 AR 體驗、網路商店、行動體驗、漸進式網頁應用程式 (PWA) 等，都從 Headless CMS 取用內容並提供自己的呈現操作。它們負責為您的內容提供自己的頭。
 

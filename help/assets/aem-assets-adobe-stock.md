@@ -124,7 +124,7 @@ To allow communication between [!DNL Experience Manager] and [!DNL Adobe Stock],
 
 執行以下步驟，在您的[!DNL AEM]作者執行個體中新增設定：
 
-1. [在您的 [!DNL AEM] 作者執行個體中設定新的 [!DNL Adobe Stock IMS configuration] ](#set-up-adobe-stock-ims-configuration-in-aem-author-instance)
+1. [在您的 [!DNL AEM] 作者執行個體中設定新的 [!DNL Adobe Stock IMS configuration] &#x200B;](#set-up-adobe-stock-ims-configuration-in-aem-author-instance)
 1. [新增雲端設定以連線至 [!DNL Adobe Stock]](#add-cloud-configuration-to-connect-adobe-stock)
 
 #### 在您的[!DNL AEM author]執行個體中設定新的[!DNL Adobe Stock IMS configuration] {#set-up-adobe-stock-ims-configuration-in-aem-author-instance}

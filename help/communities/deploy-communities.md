@@ -301,7 +301,7 @@ AEM Communities有兩個功能，需要所有AEM伺服器執行個體使用相�
 
 >[!CAUTION]
 >
->如果已經設定了另一個以加密金鑰為基礎的安全性功能，則複製加密金鑰可能會損壞設定。 如需協助，[請連絡客戶服務](https://experienceleague.adobe.com/zh-hant?support-solution=General&amp;support-tab=home#support)。
+>如果已經設定了另一個以加密金鑰為基礎的安全性功能，則複製加密金鑰可能會損壞設定。 如需協助，[請連絡客戶服務](https://experienceleague.adobe.com/zh-hant?support-solution=General&support-tab=home#support)。
 
 #### 存放庫復寫 {#repository-replication}
 

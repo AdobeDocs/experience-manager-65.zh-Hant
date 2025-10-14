@@ -45,7 +45,7 @@ A.新Acrobat Reader擴充功能憑證的說明將&#x200B;**G3-P24**&#x200B;稱�
 
 **Q.如何取得最新的憑證？**
 
-A.所有已授權的Forms客戶（具有使用中授權）都可以從[Adobe授權網站](https://licensing.adobe.com/)下載新憑證(以「Adobe根CA G2」為基礎的憑證)。 如果您在Adobe授權網站上找不到憑證，請連絡[Adobe支援](https://experienceleague.adobe.com/zh-hant?support-solution=Experience+Manager&amp;lang=en#support)或提出支援票證。
+A.所有已授權的Forms客戶（具有使用中授權）都可以從[Adobe授權網站](https://licensing.adobe.com/)下載新憑證(以「Adobe根CA G2」為基礎的憑證)。 如果您在Adobe授權網站上找不到憑證，請連絡[Adobe支援](https://experienceleague.adobe.com/zh-hant?support-solution=Experience+Manager&lang=en#support)或提出支援票證。
 
 **Q.使用由「PDF根CA」（舊憑證授權單位）發行的憑證擴充的Adobe檔案在2023年1月7日之後是否繼續運作？**
 

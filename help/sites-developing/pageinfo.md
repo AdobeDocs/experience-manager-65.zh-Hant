@@ -34,7 +34,7 @@ http://localhost:4502/libs/wcm/core/content/pageinfo.json?path=/content/we-retai
 >* 原生行動應用程式
 >* AEM外部的其他管道和接觸點
 >
->請參閱檔案[ Content Services的JSON匯出工具](/help/sites-developing/json-exporter.md)。
+>請參閱檔案[&#x200B; Content Services的JSON匯出工具](/help/sites-developing/json-exporter.md)。
 
 ## 頁面資訊提供者 {#page-information-providers}
 

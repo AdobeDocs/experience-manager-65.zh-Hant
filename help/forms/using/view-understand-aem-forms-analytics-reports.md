@@ -126,7 +126,7 @@ AEM Forms會顯示表單及表單中每個面板的analytics報表，如下所�
 
 若要進一步篩選分析資料，您可以按一下任何表格中的專案。 例如，如果您按一下「瀏覽器散佈」表格中的Google Chrome ，報表會再次呈現並包含與Google Chrome瀏覽器相關的資料，如下所示：
 
-![套用至Analytics報告的篩選器 — Google Chrome ](assets/filter-1.png)
+![套用至Analytics報告的篩選器 — Google Chrome &#x200B;](assets/filter-1.png)
 
 如果您在套用篩選器後檢視面板報表，面板報表資料也會根據套用的篩選器顯示。
 

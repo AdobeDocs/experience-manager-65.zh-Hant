@@ -31,13 +31,13 @@ ht-degree: 0%
 
 設定AEM與Adobe Campaign Standard之間的整合需要在這兩個解決方案中執行數個步驟。
 
-1. [設定 ](#aemserver-user)
-1. [驗證 ](#resource-type-filter)
+1. [設定 &#x200B;](#aemserver-user)
+1. [驗證 &#x200B;](#resource-type-filter)
 1. [在Campaign中建立AEM專屬電子郵件傳遞範本](#aem-email-delivery-template)
 1. [在AEM中設定Campaign整合](#campaign-integration)
 1. [設定復寫至AEM Publish執行個體的設定](#replication)
 1. [設定AEM Externalizer](#externalizer)
-1. [設定 ](#campaign-remote-user)
+1. [設定 &#x200B;](#campaign-remote-user)
 1. [在Campaign中設定AEM外部帳戶](#acc-external-user)
 
 本檔案將詳細介紹每一個步驟。

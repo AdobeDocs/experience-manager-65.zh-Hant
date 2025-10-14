@@ -34,7 +34,7 @@ AEM Forms會交換在Salesforce連線應用程式中定義的使用者端憑證�
 
 設定 Salesforce 應用程式和 AEM 環境之間的通訊以前：
 
-* 為貴組織建立一個[使用 OAuth 2.0 用戶端認證流程的 Salesforce 連線應用程式](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&amp;type=5)以及一個僅限 API 的使用者，並獲取應用程式的客戶金鑰和客戶密碼。
+* 為貴組織建立一個[使用 OAuth 2.0 用戶端認證流程的 Salesforce 連線應用程式](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5)以及一個僅限 API 的使用者，並獲取應用程式的客戶金鑰和客戶密碼。
 
 * 確保您的 Swagger 檔案已適當設定，和貴組織的 API 相符。或者，您可以選擇從頭開始[建立 Swagger 檔案](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/integrate-with-salesforce/describe-rest-api.html?lang=zh-Hant)，專為在您的 AEM 環境中使用而量身打造。
 >[!NOTE]

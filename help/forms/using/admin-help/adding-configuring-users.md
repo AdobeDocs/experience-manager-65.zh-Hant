@@ -42,7 +42,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >如果您發現使用者的任何登入問題，請參閱[JEE上的AEM Forms使用者無法登入OSGi端的AEM Forms ](https://helpx.adobe.com/aem-forms/kb/AEM-users-fails-to-login.html)。
+   >如果您發現使用者的任何登入問題，請參閱[JEE上的AEM Forms使用者無法登入OSGi端的AEM Forms &#x200B;](https://helpx.adobe.com/aem-forms/kb/AEM-users-fails-to-login.html)。
 
 ## 使用者設定 {#user-settings}
 

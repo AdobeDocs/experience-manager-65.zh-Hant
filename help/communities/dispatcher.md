@@ -24,7 +24,7 @@ ht-degree: 7%
 
 瞭解您的特定部署和網站設計所需的內容
 
-* 聯絡[客戶服務](https://experienceleague.adobe.com/zh-hant?support-solution=General&amp;support-tab=home#support)
+* 聯絡[客戶服務](https://experienceleague.adobe.com/zh-hant?support-solution=General&support-tab=home#support)
 
 另請參閱主要[Dispatcher檔案](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant)。
 

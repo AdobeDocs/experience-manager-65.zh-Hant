@@ -213,7 +213,7 @@ You can start deploying your code by using the Cloud Manager CI/CD pipeline, whi
 
 不過，不需要停止AEM中的Headless商店。 在歷程[&#128279;](getting-started.md#integration-levels)的快速入門部分中，它討論了AEM如何不僅支援Headless傳送和傳統的全棧疊模型，還支援結合兩者優勢的混合模型。
 
-如果您的專案需要這種彈性，請繼續進行[如何使用AEM建立單頁應用程式(SPA) ](create-spa.md)歷程的其他選擇性部分。
+如果您的專案需要這種彈性，請繼續進行[如何使用AEM建立單頁應用程式(SPA) &#x200B;](create-spa.md)歷程的其他選擇性部分。
 
 ## 其他資源 {#additional-resources}
 

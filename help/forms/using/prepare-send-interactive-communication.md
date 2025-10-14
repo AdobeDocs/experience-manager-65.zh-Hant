@@ -146,7 +146,7 @@ Agent UI已內建對210個特殊字元的支援。 管理員可以透過自訂[&
 
 ### 檔案片段 {#document-fragments}
 
-![ ](do-not-localize/contentoptionsdocfragments.png)
+![&#x200B; &#x200B;](do-not-localize/contentoptionsdocfragments.png)
 
 * **向上/向下箭號**：在互動式通訊中向上或向下移動檔案片段的箭號。
 * **刪除**：如果允許，請從互動式通訊中刪除檔案片段。

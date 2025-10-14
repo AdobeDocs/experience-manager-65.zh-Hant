@@ -236,7 +236,7 @@ N:apps
 此元件可作為整個報表的容器，並提供下列專案的資訊：
 
 * [查詢定義](#query-definition)。
-* 用於設定報告的[ （選擇性）對話方塊](#configuration-dialog)。
+* 用於設定報告的[&#x200B; （選擇性）對話方塊](#configuration-dialog)。
 * 任何與報告整合的[圖表](#chart-definitions)。
 
 ```

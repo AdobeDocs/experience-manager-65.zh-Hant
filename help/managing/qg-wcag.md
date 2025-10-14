@@ -16,7 +16,7 @@ ht-degree: 90%
 
 Adobe Experience Manager (AEM)的開發過程儘可能地遵循「網頁內容可及性指引」。
 
-[網頁內容可及性 (WCAG) 指引 2.1 版](https://www.w3.org/TR/WCAG/)是由[全球資訊網協會 (W3C) ](https://www.w3.org/) [資訊網可及性推動組織 (WAI)](https://www.w3.org/WAI/) 所制定之一系列國際公認的指引。
+[網頁內容可及性 (WCAG) 指引 2.1 版](https://www.w3.org/TR/WCAG/)是由[全球資訊網協會 (W3C) &#x200B;](https://www.w3.org/) [資訊網可及性推動組織 (WAI)](https://www.w3.org/WAI/) 所制定之一系列國際公認的指引。
 
 >[!NOTE]
 >
@@ -86,7 +86,7 @@ WCAG 2.1 包含四大無障礙設計原則，有時簡稱為 **POUR**。說明�
 這份清單並非意在詳盡列出所有資源，而是提供可用資源的簡介：
 * [WCAG 所有相關文件的概述](https://www.w3.org/WAI/standards-guidelines/wcag/)
 * [不同文件的摘要](https://www.w3.org/WAI/standards-guidelines/wcag/docs/)
-* [網頁內容可及性指引 (WCAG) 2.1 ](https://www.w3.org/TR/WCAG21/)
+* [網頁內容可及性指引 (WCAG) 2.1 &#x200B;](https://www.w3.org/TR/WCAG21/)
 * [WCAG 2.1 最新內容](https://www.w3.org/WAI/standards-guidelines/wcag/new-in-21/)
 * [WCAG 2.1 遵循快速參考指南](https://www.w3.org/WAI/WCAG21/quickref/)
 * [WCAG 2 常見問題](https://www.w3.org/WAI/standards-guidelines/wcag/faq/)

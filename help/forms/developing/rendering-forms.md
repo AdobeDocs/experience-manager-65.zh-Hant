@@ -49,7 +49,7 @@ Forms服務可讓您建立互動式資料擷取使用者端應用程式，以驗
 * 根據片段轉譯表單。 (請參閱[根據片段呈現Forms](/help/forms/developing/rendering-forms-based-fragments.md)。)
 * 轉譯啟用許可權的表單。 (請參閱[轉譯啟用許可權的Forms](/help/forms/developing/rendering-rights-enabled-forms.md)。)
 * 將表單轉譯為HTML。 (請參閱[將Forms轉譯為HTML](/help/forms/developing/rendering-forms-html.md)。)
-* 使用自訂CSS檔案呈現HTMLForms ([使用自訂CSS檔案呈現HTMLForms ](/help/forms/developing/rendering-html-forms-using-custom.md)。)
+* 使用自訂CSS檔案呈現HTMLForms ([使用自訂CSS檔案呈現HTMLForms &#x200B;](/help/forms/developing/rendering-html-forms-using-custom.md)。)
 * 處理提交的表單。 (請參閱[處理已提交的Forms](/help/forms/developing/handling-submitted-forms.md)。)
 * 使用已提交的XML資料建立PDF檔案。 (請參閱[使用已提交的XML資料建立PDF檔案](/help/forms/developing/creating-pdf-documents-submitted-xml.md)。)
 * 預先填入表單。 (請參閱[使用可流動配置預先填入Forms](/help/forms/developing/prepopulating-forms-flowable-layouts.md)。)

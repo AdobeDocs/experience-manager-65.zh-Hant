@@ -214,7 +214,7 @@ AEM示範機器需要有效的AEM授權。
 
 >[!NOTE]
 >
->檢視AEM示範機器的[影片簡介](https://www.youtube.com/watch?v=zEE_zkR9fVQ&amp;feature=youtu.be) (13:26)。
+>檢視AEM示範機器的[影片簡介](https://www.youtube.com/watch?v=zEE_zkR9fVQ&feature=youtu.be) (13:26)。
 
 ## AEM Communities檔案 {#aem-communities-documentation}
 

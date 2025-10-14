@@ -24,7 +24,7 @@ AEM Forms工作區是AEM Forms的一部分。 除了PDF forms之外，Workspace�
 
 此外，AEM Forms工作區也可供使用標準HTML和JavaScript™開發方法高度自訂。 這是一種元件式軟體，可輕鬆與您的其他Web應用程式整合。
 
-如需詳細資訊，請參閱[ AEM Forms工作區簡介](/help/forms/using/introduction-html-workspace.md)。
+如需詳細資訊，請參閱[&#x200B; AEM Forms工作區簡介](/help/forms/using/introduction-html-workspace.md)。
 
 ## 熟悉 {#getting-familiar}
 

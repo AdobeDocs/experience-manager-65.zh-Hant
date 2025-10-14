@@ -96,7 +96,7 @@ sed -n "s/.*(aem-analytics-integration-.*).*target=\(.*\)\/jcr:content.*/\1/p" e
 
 若要修正此問題，請嘗試下列步驟：
 
-* 請確定加密的屬性可以解密(請注意，加密可能在每個AEM執行個體上使用不同的自動產生金鑰)。 如需其他詳細資料，請一併閱讀[組態屬性的Encryption Support ](/help/sites-administering/encryption-support-for-configuration-properties.md)。
+* 請確定加密的屬性可以解密(請注意，加密可能在每個AEM執行個體上使用不同的自動產生金鑰)。 如需其他詳細資料，請一併閱讀[組態屬性的Encryption Support &#x200B;](/help/sites-administering/encryption-support-for-configuration-properties.md)。
 * 重新發佈`/etc/cloudservices/dynamictagmanagement`中找到的組態
 * 檢查`/etc/cloudservices`上的ACL。 ACL應為：
 

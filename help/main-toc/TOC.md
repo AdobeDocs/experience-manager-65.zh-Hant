@@ -343,7 +343,7 @@ ht-degree: 23%
 + Assets {#assets}
    + [關於DAM](/help/assets/assets.md)
    + [資產最佳實務](/help/assets/best-practices-for-assets.md)
-   + [ [!DNL Assets] 中的協助工具](/help/assets/accessibility.md)
+   + [&#x200B; [!DNL Assets] 中的協助工具](/help/assets/accessibility.md)
    + 使用Experience Manager Assets {#using}
       + [[!DNL Assets]首頁體驗](/help/assets/assets-home-page.md)
       + [搜尋數位資產](/help/assets/search-assets.md)
@@ -419,7 +419,7 @@ ht-degree: 23%
       + [將資產與活動資料流整合](/help/assets/extending-activity-stream.md)
       + [擴充Asset Editor](/help/assets/asseteditorx.md)
       + [[!DNL Assets] HTTP API](/help/assets/mac-api-assets.md)
-      + [ [!DNL Assets] HTTP API中的內容片段支援](/help/assets/assets-api-content-fragments.md)
+      + [&#x200B; [!DNL Assets] HTTP API中的內容片段支援](/help/assets/assets-api-content-fragments.md)
       + [用於內容片段的 GraphQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md)
       + [使用 GraphiQL IDE](/help/sites-developing/headless/graphql-api/graphiql-ide.md)
       + [持續性查詢](/help/sites-developing/headless/graphql-api/persisted-queries.md)
