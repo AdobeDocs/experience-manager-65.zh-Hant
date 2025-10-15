@@ -28,7 +28,7 @@ ht-degree: 1%
 
 ### AEM的功能 {#features-within-aem}
 
-實作AEM （特別是第一次）時，請檢閱AEM[&#128279;](https://business.adobe.com/products/experience-manager/adobe-experience-manager.html)的功能和工作流程，以確定您想要或需要的區域。
+實作AEM （特別是第一次）時，請檢閱AEM[&#128279;](https://business.adobe.com/tw/products/experience-manager/adobe-experience-manager.html)的功能和工作流程，以確定您想要或需要的區域。
 
 請考量您使用的AEM功能及其對設計的影響；例如：
 

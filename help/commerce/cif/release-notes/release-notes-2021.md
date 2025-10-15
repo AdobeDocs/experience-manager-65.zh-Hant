@@ -131,7 +131,7 @@ ht-degree: 9%
    * 在製作模式下分階段產品資料的視覺指示器，可更清楚顯示即將發生的變更
    * 內容和商務頁面的新Sitemap元件
 
-* 支援[Adobe Commerce Sensei產品建議，由AEM Storefront中的Adobe Sensei](https://business.adobe.com/products/magento/product-recommendations.html)提供技術支援，使用預先定義或即時建立的建議
+* 支援[Adobe Commerce Sensei產品建議，由AEM Storefront中的Adobe Sensei](https://business.adobe.com/tw/products/magento/product-recommendations.html)提供技術支援，使用預先定義或即時建立的建議
 
 ## 發行日期： 2021年6月
 

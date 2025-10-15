@@ -24,7 +24,7 @@ ht-degree: 0%
 
 您的使用者是否存取所有內容？ 他們是否正在放棄應用程式？如果是，在哪裡放棄？ 他們會在應用程式中停留的頻率，以及回訪使用應用程式的頻率？ 您可以引入哪些變更，然後測量增加保留率的程度？ 當機率如何呢？您的應用程式會針對使用者當機嗎？
 
-透過與[Analytics Mobile Services](https://business.adobe.com/products/campaign/mobile-marketing.html)整合，在您的Adobe Experience Manager (AEM) Apps中善用[Adobe應用程式Analytics](https://business.adobe.com/products/analytics/mobile-marketing.html)。
+透過與[Analytics Mobile Services](https://business.adobe.com/tw/products/campaign/mobile-marketing.html)整合，在您的Adobe Experience Manager (AEM) Apps中善用[Adobe應用程式Analytics](https://business.adobe.com/tw/products/analytics/mobile-marketing.html)。
 
 檢測您的AEM應用程式，以追蹤、報告並瞭解使用者如何與您的行動應用程式和內容互動，並測量關鍵生命週期量度，例如啟動次數、應用程式內時間和當機率。
 

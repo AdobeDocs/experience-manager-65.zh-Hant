@@ -70,7 +70,7 @@ Adobe建議在AEM中管理與行銷相關的資料和內容。 使用內容片�
 
 ## 14.公司在整個簡報層使用AEM時，如何確保PCI相容性？
 
-Adobe 建議使用抽象的付款方式。這麼做會讓瀏覽器使用者端與支付閘道提供者直接通訊，讓Adobe不會保留或傳遞持卡人日期，或商務解決方案。 此方法僅需要 3 級 PCI 合規性。然而，要完全符合 PCI 標準還需要考慮其他事項，例如員工如何與系統和資料互動。如需Adobe Commerce PCI法規遵循的詳細資訊，請參閱[PCI法規遵循](https://business.adobe.com/products/magento/pci-compliance.html)
+Adobe 建議使用抽象的付款方式。這麼做會讓瀏覽器使用者端與支付閘道提供者直接通訊，讓Adobe不會保留或傳遞持卡人日期，或商務解決方案。 此方法僅需要 3 級 PCI 合規性。然而，要完全符合 PCI 標準還需要考慮其他事項，例如員工如何與系統和資料互動。如需Adobe Commerce PCI法規遵循的詳細資訊，請參閱[PCI法規遵循](https://business.adobe.com/tw/products/magento/pci-compliance.html)
 
 ## 15. 如果我使用 AEM 和 Adobe Commerce 雲端版本，此聯合解決方案是否符合 PCI 要求？
 

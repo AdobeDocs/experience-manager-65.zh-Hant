@@ -126,4 +126,4 @@ JPG壓縮的最佳作法是使用`&qlt=85,0`。
 
 * 請直接在URL上即時嘗試並測試不同的引數。
 * 如需參考最佳做法，請記得您可以將「Dynamic Media影像伺服」命令群組至影像預設集。 影像預設集基本上是含有自訂預設集名稱（例如`$thumb_low$`和`&product_high$`）的URL命令巨集。 URL路徑中的自訂預設集名稱會呼叫這些預設集。 這類功能可協助您針對網站上不同的影像使用模式管理命令和品質設定，並縮短URL的整體長度。
-* Experience Manager也提供更進階的方式來調整影像品質，例如在擷取時套用銳利化影像。 若是進階使用案例，其中有多種選項可調整及最佳化演算結果，則[Adobe Professional Services](https://business.adobe.com/customers/consulting-services/main.html)可協助您提供自訂的深入分析和最佳作法。
+* Experience Manager也提供更進階的方式來調整影像品質，例如在擷取時套用銳利化影像。 若是進階使用案例，其中有多種選項可調整及最佳化演算結果，則[Adobe Professional Services](https://business.adobe.com/tw/customers/consulting-services/main.html)可協助您提供自訂的深入分析和最佳作法。

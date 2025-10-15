@@ -19,7 +19,7 @@ ht-degree: 0%
 >
 >以下各節以GDPR為例，但說明的詳細資料適用於所有資料保護和隱私權法規，例如GDPR和CCPA。
 
-歐盟資料隱私權的一般資料保護規範於2018年5月起生效。 請參閱Adobe隱私權中心[&#128279;](https://business.adobe.com/privacy/general-data-protection-regulation.html)的GDPR頁面。
+歐盟資料隱私權的一般資料保護規範於2018年5月起生效。 請參閱Adobe隱私權中心[&#128279;](https://business.adobe.com/tw/privacy/general-data-protection-regulation.html)的GDPR頁面。
 
 >[!NOTE]
 >

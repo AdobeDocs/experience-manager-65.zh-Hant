@@ -24,7 +24,7 @@ ht-degree: 1%
 >
 >此檔案是[AEM Mobile快速入門](/help/mobile/getting-started-aem-mobile.md)指南的一部分，此指南是AEM Mobile參考的建議起點。
 
-AEM Mobile內容個人化功能可讓[AEM作者](#author)使用[Adobe Target](https://business.adobe.com/products/target/adobe-target.html)來個人化行動應用程式內容。 這可讓您將目標優惠方案傳送給行動應用程式使用者。 Adobe Experience Manager Mobile提供建立、鎖定和傳送內容的功能，這些內容將為使用者提供適合其個人品味的內容。
+AEM Mobile內容個人化功能可讓[AEM作者](#author)使用[Adobe Target](https://business.adobe.com/tw/products/target/adobe-target.html)來個人化行動應用程式內容。 這可讓您將目標優惠方案傳送給行動應用程式使用者。 Adobe Experience Manager Mobile提供建立、鎖定和傳送內容的功能，這些內容將為使用者提供適合其個人品味的內容。
 
 在AEM中，若要讓作者開始建立此內容，管理員和開發人員必須先準備環境。
 

@@ -194,7 +194,7 @@ and CQDOC-19792 (removed as per this ticket December 5, 2022) -->
 
 ## 啟用Dynamic Media {#enabling-dynamic-media}
 
-[Dynamic Media](https://business.adobe.com/products/experience-manager/assets/dynamic-media.html)預設為停用。 若要利用Dynamic Media功能，您必須使用`dynamicmedia`執行模式來啟用Dynamic Media，就像使用`publish`執行模式一樣。 啟用之前，請務必檢閱[技術需求](/help/sites-deploying/technical-requirements.md#requirements-for-aem-dynamic-media-add-on)。
+[Dynamic Media](https://business.adobe.com/tw/products/experience-manager/assets/dynamic-media.html)預設為停用。 若要利用Dynamic Media功能，您必須使用`dynamicmedia`執行模式來啟用Dynamic Media，就像使用`publish`執行模式一樣。 啟用之前，請務必檢閱[技術需求](/help/sites-deploying/technical-requirements.md#requirements-for-aem-dynamic-media-add-on)。
 
 >[!NOTE]
 >

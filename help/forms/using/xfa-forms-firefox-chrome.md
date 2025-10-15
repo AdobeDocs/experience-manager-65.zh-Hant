@@ -54,6 +54,6 @@ ht-degree: 1%
 >[!NOTE]
 > 
 > LiveCycle ES4支援將XFA型表單轉譯為HTML5，因此這些表單可以在支援HTML5的瀏覽器中開啟，包括在iPad等行動裝置上執行的那些表單。 表單的HTML5轉譯可維護表單設計的版面，並支援內嵌於XFA表單範本中的大部分表單邏輯(例如JavaScript、表單計算和表單驗證)。 如此一來，您對XFA表單的技術投資便可輕鬆結轉至無法執行Adobe Reader外掛程式的裝置。
->如需詳細資訊，請參閱[LiveCycle產品檔案](https://business.adobe.com/products/experience-manager/forms/aem-forms.html)。
+>如需詳細資訊，請參閱[LiveCycle產品檔案](https://business.adobe.com/tw/products/experience-manager/forms/aem-forms.html)。
 
 [法律注意事項](https://chl-author-preview.corp.adobe.com/content/help/en/legal/legal-notices.html)    |    [線上隱私權原則](https://www.adobe.com/tw/privacy.html)
