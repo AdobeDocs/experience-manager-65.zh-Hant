@@ -7,9 +7,9 @@ role: User
 feature: Workflow,Renditions
 exl-id: cfd6c981-1a35-4327-82d7-cf373d842cc3
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
+source-git-commit: f8588ef353bd08b41202350072728d80ee51f565
 workflow-type: tm+mt
-source-wordcount: '2113'
+source-wordcount: '2109'
 ht-degree: 3%
 
 ---
@@ -283,7 +283,7 @@ package my.own.stuff; /** * @scr.component inherit="true" * @scr.service */ publ
     </dependencies>
    ```
 
-1. 在`myBundle/src/main/java`下建立包含[!DNL Java™]類別的封裝`com.day.cq5.myhandler`：
+1. 在`com.day.cq5.myhandler`下建立包含[!DNL Java™]類別的封裝`myBundle/src/main/java`：
 
    1. 在myBundle下，用滑鼠右鍵按一下`src/main/java`，選取新增，然後選取封裝。
    1. 將其命名為`com.day.cq5.myhandler`並按一下[完成]。
@@ -437,7 +437,7 @@ package my.own.stuff; /** * @scr.component inherit="true" * @scr.service */ publ
 1. 編譯[!DNL Java™]類別並建立組合：
 
    1. 在`myBundle`專案上按一下滑鼠右鍵，選取&#x200B;**[!UICONTROL 執行身分]**，然後選取&#x200B;**[!UICONTROL Maven安裝]**。
-   1. 已在`myBundle/target`下建立套件`myBundle-0.0.1-SNAPSHOT.jar` （包含編譯的類別）。
+   1. 已在`myBundle-0.0.1-SNAPSHOT.jar`下建立套件`myBundle/target` （包含編譯的類別）。
 
 1. 在CRX總管中，在`/apps/myApp`下建立節點。 名稱= `install`，型別= `nt:folder`。
 1. 複製組合`myBundle-0.0.1-SNAPSHOT.jar`並將其儲存在`/apps/myApp/install`下（例如，使用WebDAV）。 新文書處理常式現在在[!DNL Experience Manager]中處於使用中狀態。
@@ -449,7 +449,7 @@ package my.own.stuff; /** * @scr.component inherit="true" * @scr.service */ publ
 
 下列轉換可自動執行並儲存在[!DNL Assets]中：
 
-* 使用[ImageMagick](https://www.imagemagick.org/script/index.php)和[Ghostscript](https://www.ghostscript.com/)的EPS和AI轉換。
+* 使用`https://www.imagemagick.org/script/index.php`和[Ghostscript](https://www.ghostscript.com/)的EPS和AI轉換。
 * 使用[FFmpeg](https://ffmpeg.org/)的FLV視訊轉碼。
 * 使用[LAME](https://lame.sourceforge.io/)的MP3編碼。
 * 使用[SOX](https://sourceforge.net/projects/sox/)處理音訊。
@@ -470,13 +470,13 @@ package my.own.stuff; /** * @scr.component inherit="true" * @scr.service */ publ
 
 ### 使用[!DNL ImageMagick]的範例 {#an-example-using-imagemagick}
 
-下列範例說明如何設定命令列處理步驟，以便每次將具有miMIME e-typeGIF或TIFF的資產新增至[!DNL Experience Manager]伺服器上的`/content/dam`時，都會建立原始檔案的翻轉影像。 另外也會建立三個縮圖140x100、48x48和10x250。
+下列範例說明如何設定命令列處理步驟，以便每次將具有miMIME e-type GIF或TIFF的資產新增至`/content/dam`伺服器上的[!DNL Experience Manager]時，都會建立原始檔案的翻轉影像。 另外也會建立三個縮圖140x100、48x48和10x250。
 
 若要這麼做，請使用[!DNL ImageMagick]。 [!DNL ImageMagick]是用來建立、編輯和撰寫點陣圖影像的免費命令列軟體。
 
-在裝載[!DNL Experience Manager]伺服器的磁碟上安裝[!DNL ImageMagick]：
+在裝載[!DNL ImageMagick]伺服器的磁碟上安裝[!DNL Experience Manager]：
 
-1. 安裝[!DNL ImageMagick]：請參閱[ImageMagick檔案](https://www.imagemagick.org/script/download.php)。
+1. 安裝[!DNL ImageMagick]：請參閱`https://www.imagemagick.org/script/download.php`網站。
 1. 設定工具，讓您可以在命令列執行`convert`。
 1. 若要檢視工具是否已正確安裝，請在命令列上執行下列命令`convert -h`。
 
@@ -489,7 +489,7 @@ package my.own.stuff; /** * @scr.component inherit="true" * @scr.service */ publ
 1. 若要檢視工具是否正確執行，請將JPG影像新增至工作目錄，並在命令列上執行convert `<image-name>.jpg -flip <image-name>-flipped.jpg`命令。 翻轉的影像會新增至目錄中。 然後，將命令列處理步驟新增至&#x200B;**[!UICONTROL DAM更新資產]**&#x200B;工作流程。
 1. 移至&#x200B;**[!UICONTROL 工作流程]**&#x200B;主控台。
 1. 在&#x200B;**[!UICONTROL 模型]**&#x200B;標籤中，編輯&#x200B;**[!UICONTROL DAM更新資產]**&#x200B;模型。
-1. 將&#x200B;**[!UICONTROL 啟用Web的轉譯]**&#x200B;步驟的[!UICONTROL 引數]變更為： `mime:image/gif,mime:image/tiff,tn:140:100,tn:48:48,tn:10:250,cmd:convert ${directory}/${filename} -flip ${directory}/${basename}.flipped.jpg`。
+1. 將[!UICONTROL 啟用Web的轉譯]步驟的&#x200B;**[!UICONTROL 引數]**&#x200B;變更為： `mime:image/gif,mime:image/tiff,tn:140:100,tn:48:48,tn:10:250,cmd:convert ${directory}/${filename} -flip ${directory}/${basename}.flipped.jpg`。
 1. 儲存工作流程。
 
 若要測試修改的工作流程，請新增資產至`/content/dam`。
@@ -508,13 +508,13 @@ package my.own.stuff; /** * @scr.component inherit="true" * @scr.service */ publ
 |---|---|
 | mime：&lt;mime-type> | 選用引數。 如果資產與引數中的MIME型別相同，則會套用程式。 <br>可以定義數個MIME型別。 |
 | tn：&lt;寬度>：&lt;高度> | 選用引數。 此程式會使用引數中定義的尺寸建立縮圖。 <br>可以定義數個縮圖。 |
-| cmd： &lt;command> | 定義執行的命令。 語法取決於命令列工具。 只能定義一個指令。 <br>下列變數可用來建立命令：<br>`${filename}`：輸入檔案的名稱，例如original.jpg <br> `${file}`：輸入檔案的完整路徑名稱，例如，`/tmp/cqdam0816.tmp/original.jpg` <br> `${directory}`：輸入檔案的目錄，例如，`/tmp/cqdam0816.tmp` <br>`${basename}`：沒有副檔名的輸入檔案的名稱，例如，原始的<br>`${extension}`：輸入檔案的副檔名，例如JPG。 |
+| cmd： &lt;command> | 定義執行的命令。 語法取決於命令列工具。 只能定義一個指令。 <br>下列變數可用來建立命令：<br>`${filename}`：輸入檔案的名稱，例如original.jpg <br> `${file}`：輸入檔案的完整路徑名稱，例如，`/tmp/cqdam0816.tmp/original.jpg` <br> `${directory}`：輸入檔案的目錄，例如，`/tmp/cqdam0816.tmp` <br>`${basename}`：沒有副檔名的輸入檔案名稱，例如，原始的<br>`${extension}`：輸入檔案的副檔名，例如JPG。 |
 
-例如，若在裝載[!DNL Experience Manager]伺服器的磁碟上安裝[!DNL ImageMagick]，且您使用[!UICONTROL CommandLineProcess]做為實作，以及下列值做為[!UICONTROL Process Arguments]來建立處理序步驟：
+例如，若在裝載[!DNL ImageMagick]伺服器的磁碟上安裝[!DNL Experience Manager]，且您使用[!UICONTROL CommandLineProcess]做為實作，以及下列值做為[!UICONTROL Process Arguments]來建立處理序步驟：
 
 `mime:image/gif,mime:image/tiff,tn:140:100,tn:48:48,tn:10:250,cmd:convert ${directory}/${filename} -flip ${directory}/${basename}.flipped.jpg`
 
-然後，當工作流程執行時，該步驟僅適用於具有`image/gif`或`mime:image/tiff`作為`mime-types`的資產。 它會建立原始影像的翻轉影像、將其轉換為JPG，並建立三個尺寸為140x100、48x48和10x250的縮圖。
+然後，當工作流程執行時，該步驟僅適用於具有`image/gif`或`mime:image/tiff`作為`mime-types`的資產。 它會建立原始影像的翻轉影像、將其轉換為JPG，然後建立三個尺寸分別為140x100、48x48和10x250的縮圖。
 
 使用下列[!UICONTROL 處理程式引數]，使用[!DNL ImageMagick]建立三個標準縮圖：
 

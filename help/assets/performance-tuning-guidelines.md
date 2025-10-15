@@ -7,7 +7,7 @@ role: Architect, Admin
 feature: Asset Management
 exl-id: 1d9388de-f601-42bf-885b-6a7c3236b97e
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 0b90fdd13efc5408ef94ee1966f04a80810b515e
+source-git-commit: f8588ef353bd08b41202350072728d80ee51f565
 workflow-type: tm+mt
 source-wordcount: '2729'
 ht-degree: 0%
@@ -47,7 +47,7 @@ mkfs -q /dev/ram1 800000
 
 在Windows作業系統上，使用協力廠商驅動程式來建立RAM磁碟機，或只使用高效能儲存裝置（例如SSD）。
 
-一旦高效能暫存磁碟區準備就緒，請設定JVM引數`-Djava.io.tmpdir`。 例如，您可以將下列JVM引數新增至[!DNL Experience Manager]的`bin/start`指令碼中的`CQ_JVM_OPTS`變數：
+一旦高效能暫存磁碟區準備就緒，請設定JVM引數`-Djava.io.tmpdir`。 例如，您可以將下列JVM引數新增至`CQ_JVM_OPTS`的`bin/start`指令碼中的[!DNL Experience Manager]變數：
 
 `-Djava.io.tmpdir=/mnt/aem-tmp`
 
@@ -130,7 +130,7 @@ Adobe建議啟用HTTPS，因為許多公司都有會偵聽HTTP流量的防火牆
 
 儘可能將[!UICONTROL DAM更新資產]工作流程設定為暫時性。 設定可大幅減少處理工作流程所需的間接成本，因為在此情況下，工作流程不需要通過正常的追蹤和封存程式。
 
-1. 在`https://[aem_server]:[port]/miscadmin`的[!DNL Experience Manager]部署中導覽至`/miscadmin`。
+1. 在`/miscadmin`的[!DNL Experience Manager]部署中導覽至`https://[aem_server]:[port]/miscadmin`。
 
 1. 展開&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 工作流程]** > **[!UICONTROL 模型]** > **[!UICONTROL dam]**。
 
@@ -186,7 +186,7 @@ Adobe建議啟用HTTPS，因為許多公司都有會偵聽HTTP流量的防火牆
 
 #### ImageMagick {#imagemagick}
 
-如果您自訂[!UICONTROL DAM更新資產]工作流程，以使用ImageMagick產生轉譯，Adobe建議您修改位於`/etc/ImageMagick/`的`policy.xml`檔案。 依預設，ImageMagick會使用OS磁碟區上的整個可用磁碟空間，以及可用的記憶體。 在`policy.xml`的`policymap`區段內進行下列設定變更以限制這些資源。
+如果您自訂[!UICONTROL DAM更新資產]工作流程，以使用ImageMagick產生轉譯，Adobe建議您修改位於`policy.xml`的`/etc/ImageMagick/`檔案。 依預設，ImageMagick會使用OS磁碟區上的整個可用磁碟空間，以及可用的記憶體。 在`policymap`的`policy.xml`區段內進行下列設定變更以限制這些資源。
 
 ```xml
 <policymap>
@@ -211,7 +211,7 @@ Adobe建議啟用HTTPS，因為許多公司都有會偵聽HTTP流量的防火牆
 
 >[!NOTE]
 >
->ImageMagick `policy.xml`和`configure.xml`檔案可在`/usr/lib64/ImageMagick-&#42;/config/`取得，而非`/etc/ImageMagick/`。 如需組態檔的位置，請參閱[ImageMagick檔案](https://www.imagemagick.org/script/resources.php)。
+>ImageMagick `policy.xml`和`configure.xml`檔案可在`/usr/lib64/ImageMagick-&#42;/config/`取得，而非`/etc/ImageMagick/`。 如需組態檔的位置，請參閱ImageMagick檔案（`https://www.imagemagick.org/script/resources.php`網站）。
 
 如果您在Adobe Managed Services (AMS)上使用[!DNL Experience Manager]，如果您計畫處理大量大型PSD或PSB檔案，請聯絡Adobe客戶支援。 與Adobe客戶支援代表合作，為您的AMS部署實作這些最佳實務，並為Adobe的專有格式選擇最佳可行的工具和模型。 [!DNL Experience Manager]可能無法處理超過30000 x 23000畫素的高解析度PSB檔案。
 
@@ -243,7 +243,7 @@ Adobe建議啟用HTTPS，因為許多公司都有會偵聽HTTP流量的防火牆
 
 ## 搜尋索引 {#search-indexes}
 
-安裝[最新的Service Pack](/help/release-notes/release-notes.md)和效能相關Hotfix，因為這些通常包含系統索引的更新。 如需某些索引最佳化，請參閱[效能調整提示](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65/content/assets/administer/performance-tuning-guidelines)。
+安裝[最新的Service Pack](/help/release-notes/release-notes.md)和效能相關Hotfix，因為這些通常包含系統索引的更新。 如需某些索引最佳化，請參閱[效能調整提示](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/assets/administer/performance-tuning-guidelines)。
 
 為您經常執行的查詢建立自訂索引。 如需詳細資訊，請參閱分析緩慢查詢的[方法](https://aemfaq.blogspot.com/2014/08/oak-query-log-file-analyzer-tool.html)以及[編排自訂索引](/help/sites-deploying/queries-and-indexing.md)。 如需有關查詢和索引最佳實務的其他深入分析，請參閱[查詢和索引的最佳實務](/help/sites-deploying/best-practices-for-queries-and-indexing.md)。
 
@@ -253,8 +253,8 @@ Adobe建議啟用HTTPS，因為許多公司都有會偵聽HTTP流量的防火牆
 
 1. 開啟CRXDe `/crx/de/index.jsp`並以管理使用者身分登入。
 1. 瀏覽至`/oak:index/lucene`。
-1. 新增值為`/var`、`/etc/workflow/instances`和`/etc/replication`的`String[]`屬性`excludedPaths`。
-1. 瀏覽至`/oak:index/damAssetLucene`。 新增值為`/content/dam`的`String[]`屬性`includedPaths`。 儲存變更。
+1. 新增值為`String[]`、`excludedPaths`和`/var`的`/etc/workflow/instances`屬性`/etc/replication`。
+1. 瀏覽至`/oak:index/damAssetLucene`。 新增值為`String[]`的`includedPaths`屬性`/content/dam`。 儲存變更。
 
 如果您的使用者不需要進行資產的全文搜尋，例如在PDF檔案中搜尋文字，然後停用它。 您可以停用全文檢索索引來改善索引效能。 若要停用[!DNL Apache Lucene]文字擷取，請執行下列步驟：
 
