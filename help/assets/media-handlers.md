@@ -500,7 +500,7 @@ package my.own.stuff; /** * @scr.component inherit="true" * @scr.service */ publ
 
 #### 設定CommandLineProcess程式步驟 {#configuring-the-commandlineprocess-process-step}
 
-本節介紹如何設定 [!UICONTROL CommandLineProcess的Process][!UICONTROL 參數]。
+本節介紹如何設定 [!UICONTROL CommandLineProcess的Process]&#x200B;[!UICONTROL 參數]。
 
 請使用逗號分隔[!UICONTROL 程式引數]的值，並且不要以空格開頭。
 
