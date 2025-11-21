@@ -13,18 +13,18 @@ role: Architect
 source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
 workflow-type: tm+mt
 source-wordcount: '776'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
 
 # AEM平台簡介{#introduction-to-the-aem-platform}
 
-AEM 6中的AEM平台是以Apache Jackrabbit Oak為基礎。
+AEM 6中的AEM平台以Apache Jackrabbit Oak為基礎。
 
 Apache Jackrabbit Oak致力實作可擴展且高效能的階層式內容存放庫，以作為現代世界級網站和其他高需求內容應用程式的基礎。
 
-這是Jackrabbit 2的後續版本，並由AEM 6用作其內容存放庫CRX的預設後端。
+這是Jackrabbit 2的後續版本，由AEM 6用作其內容存放庫CRX的預設後端。
 
 ## 設計原則和目標 {#design-principles-and-goals}
 
@@ -52,7 +52,7 @@ Oak實作[JSR-283](https://jcp.org/en/jsr/detail?id=283) (JCR 2.0)規格。 其�
 Oak核心在儲存層上新增了數個圖層：
 
 * 存取層級控制
-* 搜尋和建立索引
+* 搜尋和索引
 * 觀察
 
 ### OAK JCR {#oak-jcr}
@@ -130,7 +130,7 @@ MongoDB儲存體會在每次修改時新增資料至檔案。 不過，它只會
 
 ## 其他平台相關檔案 {#other-platform-related-documentation}
 
-如需AEM平台的詳細資訊，請查閱以下文章：
+如需AEM平台的詳細資訊，另請參閱以下文章：
 
 * [在AEM 6中設定節點存放區和資料存放區](/help/sites-deploying/data-store-config.md)
 * [Oak查詢與索引](/help/sites-deploying/queries-and-indexing.md)

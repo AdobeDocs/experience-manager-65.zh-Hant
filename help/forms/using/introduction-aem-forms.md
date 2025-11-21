@@ -20,7 +20,7 @@ ht-degree: 15%
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/forms-overview/home.html?lang=zh-Hant) |
+| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/forms-overview/home.html) |
 | AEM 6.5 | 本文章 |
 
 如需AEM Forms最新功能和增強功能的相關資訊，請參閱[AEM Forms的新功能](../../forms/using/whats-new.md)。
@@ -37,7 +37,7 @@ AEM Forms提供的表單管理工具不僅可讓您管理最適化表單，還�
 
 >[!NOTE]
 >
->調適型表單功能 (適用於 [AEM 6.5 QuickStart](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html?lang=zh-Hant)) 僅用於探索和評估目的。若要供生產使用，必須獲得 AEM Forms 的有效許可；調適型表單的功能需要適當許可才可使用。
+>調適型表單功能 (適用於 [AEM 6.5 QuickStart](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html)) 僅用於探索和評估目的。若要供生產使用，必須獲得 AEM Forms 的有效許可；調適型表單的功能需要適當許可才可使用。
 
 ![AEM表單功能](do-not-localize/4th-draft-updated.gif)
 
@@ -57,20 +57,20 @@ AEM Forms提供的表單管理工具不僅可讓您管理最適化表單，還�
 
 AEM Forms可讓您擴充新的和現有的表單，以建立：
 
-* 完美的畫素、分頁HTML和看起來幾乎像紙張的PDF forms，或
+* 完美畫素、分頁的HTML和PDF forms （看起來幾乎像紙張），或
 * 自動針對使用者裝置和瀏覽器轉譯的最適化表單。
 
 **PDF forms**
 
-PDF forms可以離線填寫、儲存在本機，以及下次線上上時傳送的表單資料。 您可以使用2D條碼來擷取表單資料，並使用數位簽名來驗證使用者的真實性。
+PDF forms可以離線填寫、儲存在本機，以及下次連線時傳送的表單資料。 您可以使用2D條碼來擷取表單資料，並使用數位簽名來驗證使用者的真實性。
 
 **HTML表單**
 
-HTML5瀏覽器表單可在行動裝置和桌上型瀏覽器上檢視。 您可以使用Scribble或eSign服務，以電子方式簽署HTML表單。
+您可以在行動裝置和桌上型瀏覽器上檢視HTML5瀏覽器式表單。 您可以使用Scribble或eSign服務，以電子方式簽署HTML表單。
 
 **最適化表單**
 
-調適型表單可以視需要新增或移除欄位或區段，動態調整以符合使用者回應。 AEM可讓您重複使用AdobeXML表單範本來建立調適型表單。
+調適型表單可以視需要新增或移除欄位或區段，動態調整以符合使用者回應。 AEM可讓您重複使用Adobe XML表單範本來建立最適化表單。
 
 ### 支援的功能 {#supported-features}
 
@@ -83,7 +83,7 @@ HTML5瀏覽器表單可在行動裝置和桌上型瀏覽器上檢視。 您可�
 * 協助工具設計與檢查
 * 可在伺服器端儲存表單
 * 支援檔案附件
-* 與資料擷取的WorkspaceHTML整合
+* 與適用於資料擷取的HTML Workspace整合
 
 ## 離線資料收集 {#offline-data-collection}
 
@@ -100,7 +100,7 @@ AEM Forms提供Forms Workspace，此行動應用程式可將您的數位業務�
 * 企業內容管理聯結器(ECM)
 * 開放式標準支援，包括XML和SOAP，可將表單資料與企業系統連線
 * 現成的HTML報告可監控積壓、工作佇列和關鍵績效指標(KPI)
-* 可自訂儀表板，以即時洞察業務營運
+* 可自訂儀表板，讓insight即時進入業務營運
 * 用於連線協力廠商報告工具的API
 
 ![第三份草稿](do-not-localize/3rd-draft.gif)

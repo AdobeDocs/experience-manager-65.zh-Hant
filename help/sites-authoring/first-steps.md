@@ -20,7 +20,7 @@ ht-degree: 7%
 
 # 作者的首要步驟{#first-steps-for-authors}
 
-本節提供當[開始使用Adobe Experience Manager (AEM)編寫內容](/help/sites-authoring/author.md#concept-of-authoring-and-publishing)時將使用的主要工作概覽。
+本節提供當[開始使用Adobe Experience Manager (AEM)編寫內容](/help/sites-authoring/author.md#concept-of-authoring-and-publishing)時，您將使用的主要工作概覽。
 
 內容涵蓋：
 
@@ -61,7 +61,7 @@ ht-degree: 7%
 
 ### 發佈頁面 {#publishing-a-page}
 
-當您完成編輯頁面後，您將會想要發佈（或啟動）您的頁面[&#128279;](/help/sites-authoring/publishing-pages.md#main-pars-title-10)，以便您的網站中的訪客可以使用該頁面。
+當您完成編輯頁面後，您將會想要發佈（或啟動）您的頁面[，以便您的網站中的訪客可以使用該頁面。](/help/sites-authoring/publishing-pages.md#main-pars-title-10)
 
 ## 其他動作 {#further-actions}
 

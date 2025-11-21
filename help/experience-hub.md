@@ -20,7 +20,7 @@ Experience Hub推出管理Adobe Experience Manager內容、資產和網站的集
 
 觀看重新構想的AEM Experience Hub工作區快速導覽（2分鐘39秒）。
 
->[!VIDEO](https://video.tv.adobe.com/v/3475203/?captions=chi_hant&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3475190/?learn=on&enablevpops)
 
 <!--
 Available as a private beta, Experience Hub offers an optimized experience focused on improving workflows, prioritizing goals, and delivering results. Opting in lets you influence Experience Hub's development by providing feedback that helps shape its future and enhances its value for the entire AEM community. -->

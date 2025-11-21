@@ -18,27 +18,27 @@ ht-degree: 4%
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/assets/overview) |
+| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/assets/overview) |
 | AEM 6.5 | 本文章 |
 
 AEM [!DNL Assets]是數位資產管理(DAM)工具，屬於[!DNL Experience Manager]平台的一部分，可讓您的企業管理和散發數位資產。 組織的使用者可以管理、儲存和存取許多型別的數位資產，例如影像、影片、檔案、音訊片段、3D檔案和豐富媒體，以用於網路、印刷品和數位發行。
 
 ## 什麼是數位資產管理？ {#what-is-digital-asset-management}
 
-[!DNL Assets]提供整個企業共用和發佈組織的重要數位資產。 組織的使用者可以透過Web介面(或CIF或WebDAV資料夾)儲存、管理和存取數位資產，例如影像、圖形、音訊、視訊和檔案。
+[!DNL Assets]提供整個企業共用和發佈組織的重要數位資產。 組織的使用者可以透過Web介面（或CIFS或WebDAV資料夾）儲存、管理和存取數位資產，例如影像、圖形、音訊、視訊和檔案。
 
-[!DNL Experience Manager]的[!DNL Assets]功能可讓您進行下列工作：
+[!DNL Assets]的[!DNL Experience Manager]功能可讓您進行下列工作：
 
 * 新增和共用各種檔案格式的影像、檔案、音訊檔案和視訊檔案。
 * 依標籤、燈箱或星星（您的最愛）分組來管理資產。 新增註解至資產。
 * 透過搜尋檔案名稱、檔案全文以及搜尋日期、檔案型別和標籤來尋找資產。
 * 新增或編輯資產的中繼資料資訊。 中繼資料會自動與對應的資產一起建立版本。 您可以匯入或匯出資產中繼資料。
-* 執行影像編輯功能，例如縮放和新增影像濾鏡。 使用WebDAV或CIF資料夾同時匯入和匯出多個數位資產。
+* 執行影像編輯功能，例如縮放和新增影像濾鏡。 使用WebDAV或CIFS資料夾同時匯入和匯出多個數位資產。
 * 使用工作流程和通知以允許共同處理和下載任何資產集，並管理資產的存取許可權。
 
 ### [!DNL Experience Manager Assets]已與[!DNL Experience Manager Sites]整合 {#aem-assets-fully-integrated-in-cq-wcm}
 
-[!DNL Assets]與[!DNL Sites]完全整合，並可在所有使用案例中順暢運作。 例如，在製作網頁時，[!DNL Sites]作者可以透過「內容尋找器」尋找及使用數位資產。 [!DNL Assets]的使用者介面與[!DNL Sites]的使用者介面相同。 如需完整詳細資訊，請參閱Sites[&#128279;](/help/sites-authoring/page-authoring.md)的概觀。
+[!DNL Assets]與[!DNL Sites]完全整合，並可在所有使用案例中順暢運作。 例如，在製作網頁時，[!DNL Sites]作者可以透過「內容尋找器」尋找及使用數位資產。 [!DNL Assets]的使用者介面與[!DNL Sites]的使用者介面相同。 如需完整詳細資訊，請參閱Sites[的](/help/sites-authoring/page-authoring.md)概觀。
 
 基本使用者介面與[!DNL Sites]的介面相同。 如需完整詳細資訊，請參閱[網站概觀](/help/sites-authoring/page-authoring.md)。
 
@@ -75,7 +75,7 @@ AEM [!DNL Assets]是數位資產管理(DAM)工具，屬於[!DNL Experience Manag
 
 * **轉譯**：轉譯是資產的二進位表示法。 [!DNL Assets]一律具有主要表示法 — 已上傳檔案的主要表示法。 它們可以建立任意數量的其他表示法，例如，透過自訂工作流程步驟或資產上傳時建立的表示法。 轉譯可能具有不同的大小、不同的解析度、新增的浮水印或某些其他已變更的特徵。
 
-* **版本**：版本設定功能會在特定時間點建立數位資產的快照。 您可以將資產還原到先前的版本。 檢視 [!DNL Assets][&#128279;](manage-assets.md#asset-versioning)中的版本設定。
+* **版本**：版本設定功能會在特定時間點建立數位資產的快照。 您可以將資產還原到先前的版本。 檢視[中的 [!DNL Assets]](manage-assets.md#asset-versioning)版本設定。
 
 * **子資產**：子資產是構成資產的資產，例如，[!DNL Adobe Photoshop]檔案中的圖層或PDF檔案中的頁面。 在[!DNL Assets]中，您可以像管理資產一樣管理子資產。
 
@@ -92,9 +92,9 @@ AEM [!DNL Assets]是數位資產管理(DAM)工具，屬於[!DNL Experience Manag
 
 您也可以手動套用工作流程。 如需預設工作流程的清單，請參閱[Assets媒體處理常式](media-handlers.md)。
 
-## [!DNL Experience Manager Assets]和[!DNL Media Library] {#cq-dam-vs-cq-medialibrary}
+## [!DNL Experience Manager Assets] 和 [!DNL Media Library] {#cq-dam-vs-cq-medialibrary}
 
-如需差異的相關資訊，請參閱[Assets和Media Library](medialibrary.md)。
+如需差異的相關資訊，請參閱[Assets和媒體櫃](medialibrary.md)。
 
 >[!MORELIKETHIS]
 >
