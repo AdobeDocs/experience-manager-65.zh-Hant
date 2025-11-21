@@ -20,7 +20,7 @@ ht-degree: 15%
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/forms-overview/home.html) |
+| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/forms-overview/home.html?lang=zh-Hant) |
 | AEM 6.5 | 本文章 |
 
 如需AEM Forms最新功能和增強功能的相關資訊，請參閱[AEM Forms的新功能](../../forms/using/whats-new.md)。
@@ -37,7 +37,7 @@ AEM Forms提供的表單管理工具不僅可讓您管理最適化表單，還�
 
 >[!NOTE]
 >
->調適型表單功能 (適用於 [AEM 6.5 QuickStart](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html)) 僅用於探索和評估目的。若要供生產使用，必須獲得 AEM Forms 的有效許可；調適型表單的功能需要適當許可才可使用。
+>調適型表單功能 (適用於 [AEM 6.5 QuickStart](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html?lang=zh-Hant)) 僅用於探索和評估目的。若要供生產使用，必須獲得 AEM Forms 的有效許可；調適型表單的功能需要適當許可才可使用。
 
 ![AEM表單功能](do-not-localize/4th-draft-updated.gif)
 
