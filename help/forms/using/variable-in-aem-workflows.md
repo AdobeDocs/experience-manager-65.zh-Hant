@@ -9,9 +9,9 @@ exl-id: beb2b83e-e8db-40bb-915f-cb6ba3140947
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 9f59606bb58b9e90f07bd22e89f3213afb54a697
+source-git-commit: 704a815e961dc2c690e034a1b1cbe60800c643ae
 workflow-type: tm+mt
-source-wordcount: '2080'
+source-wordcount: '2087'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 1%
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/create-form-centric-workflows/variable-in-aem-workflows.html?lang=zh-Hant) |
+| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/create-form-centric-workflows/variable-in-aem-workflows.html) |
 | AEM 6.5 | 本文章 |
 
 工作流程模型中的變數是根據其資料型別儲存值的方式。 然後，您就可以在任何工作流程步驟中使用變數的名稱，來擷取儲存在變數中的值。 您也可以使用變數名稱來定義用於進行路由決定的運算式。
@@ -35,7 +35,7 @@ ht-degree: 1%
 
 <!-- FUTURE ERROR: YouTube and mp4 videos are not supported -->
 
->[!VIDEO](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/variables_introduction_1_1.mp4)
+[變數簡介影片](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/variables_introduction_1_1.mp4)
 
 變數是現有[MetaDataMap](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html)介面的延伸。 您可以在ECMAScript中使用[MetaDataMap](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html)來存取使用變數儲存的中繼資料。
 
@@ -44,13 +44,13 @@ ht-degree: 1%
 您可以使用工作流程模型Sidekick中可用的變數區段來建立變數。 AEM工作流程變數支援下列資料型別：
 
 * **基本資料型別**： Long、Double、Boolean、Date和String
-* **複雜資料型別**： [檔案](https://helpx.adobe.com/tw/experience-manager/6-5/forms/javadocs/com/adobe/aemfd/docmanager/Document.html)、[XML](https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Document.html)、[JSON](https://static.javadoc.io/com.google.code.gson/gson/2.3/com/google/gson/JsonObject.html)和表單資料模型執行個體。
+* **複雜資料型別**： [檔案](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/aemfd/docmanager/Document.html)、[XML](https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Document.html)、[JSON](https://static.javadoc.io/com.google.code.gson/gson/2.3/com/google/gson/JsonObject.html)和表單資料模型執行個體。
 
 >[!NOTE]
 >
 >工作流程僅支援ISO8601格式用於日期型別變數。
 
-檔案與表單資料模型資料型別需要[AEM Forms附加元件套件](https://helpx.adobe.com/tw/aem-forms/kb/aem-forms-releases.html)。  使用ArrayList資料型別建立變數集合。 您可以為所有基本和複雜資料型別建立ArrayList變數。 例如，建立ArrayList變數並選取String作為子型別，以使用變數儲存多個字串值。
+檔案與表單資料模型資料型別需要[AEM Forms附加元件套件](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)。  使用ArrayList資料型別建立變數集合。 您可以為所有基本和複雜資料型別建立ArrayList變數。 例如，建立ArrayList變數並選取String作為子型別，以使用變數儲存多個字串值。
 
 執行以下步驟來建立變數：
 
@@ -113,7 +113,7 @@ ht-degree: 1%
 
 在此範例中，選取&#x200B;**formdata** XML變數來儲存&#x200B;**cc-app.xml**&#x200B;檔案。 查詢&#x200B;**formdata**&#x200B;變數以設定&#x200B;**emailaddress**&#x200B;字串變數的值，以儲存&#x200B;**cc-app.xml**&#x200B;檔案中可用的&#x200B;**emailAddress**&#x200B;屬性的值。
 
->[!VIDEO](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/set_variable_example1.mp4 "設定變數的值")
+[設定變數視訊](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/set_variable_example1.mp4)
 
 ### 範例2：使用運算式根據其他變數儲存值 {#example2}
 
@@ -123,7 +123,7 @@ ht-degree: 1%
 
 <!-- FUTURE ERROR: YouTube and mp4 videos are not supported -->
 
->[!VIDEO](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/variables_expression.mp4)
+[變數運算式影片](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/variables_expression.mp4)
 
 ## 使用運算式編輯器 {#use-expression-editor}
 
@@ -170,9 +170,7 @@ ht-degree: 1%
 
 在此範例中，在定義路由運算式之前，請使用[範例2](../../forms/using/variable-in-aem-workflows.md#example2)設定&#x200B;**totalvalue**&#x200B;變數的值。 如果&#x200B;**totalvalue**&#x200B;變數的值大於50000，則分支1為作用中。 同樣地，您可以定義一個規則，在&#x200B;**totalvalue**&#x200B;變數的值小於50000時，讓Branch 2生效。
 
-<!-- FUTURE ERROR: YouTube and mp4 videos are not supported -->
-
->[!VIDEO](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/variables_orsplit_example.mp4)
+[OR分割視訊](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/variables_orsplit_example.mp4)
 
 同樣地，選取外部指令集路徑，或指定路由運算式的ECMA指令集以評估作用中分支。 選取&#x200B;**[!UICONTROL 重新命名分支]**&#x200B;以指定分支的替代名稱。
 
@@ -212,7 +210,7 @@ ht-degree: 1%
 | 表單資料模型 | Packages.com.adobe.aem.dermis.api.FormDataModelInstance fdmObject = workItem.getWorkflowData()。getMetaDataMap()。get(variableName， Packages.com.adobe.aem.dermis.api.FormDataModelInstance.class)； |
 | JSON | Packages.com.google.gson.JsonObject jsonObject = workItem.getWorkflowData()。getMetaDataMap()。get(variableName， Packages.com.google.gson.JsonObject.class)； |
 
-檔案和表單資料模型變數資料型別需要[AEM Forms附加元件套件](https://helpx.adobe.com/tw/aem-forms/kb/aem-forms-releases.html)。
+檔案和表單資料模型變數資料型別需要[AEM Forms附加元件套件](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)。
 
 **範例**
 
@@ -300,6 +298,6 @@ workflowSession.startWorkflow(model, wfData, metaData);
 1. 選取您要刪除之變數名稱旁的刪除圖示。
 1. 選取![done_icon](assets/done_icon.png)以確認並刪除變數。
 
-## 參考 {#references}
+## 參照 {#references}
 
 如需在AEM Forms工作流程步驟中使用變數的更多範例，請參閱[AEM工作流程中的變數](https://helpx.adobe.com/experience-manager/kt/forms/using/authoring_variables_in_aem_forms-workflow1.html)。

@@ -1,6 +1,6 @@
 ---
 title: AEM工作流程中的變數
-description: 建立變數、設定變數的值，並在「OR分割」和「移至AEM」工作流程步驟中使用它。
+description: 建立變數、設定變數的值，並在OR分割和前往AEM工作流程步驟中使用它。
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
@@ -9,9 +9,9 @@ exl-id: c8aeceec-860c-49ee-b681-d7107e52020d
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: bdbf9b73553c42865560c76eebab76e2fc397fdf
+source-git-commit: 704a815e961dc2c690e034a1b1cbe60800c643ae
 workflow-type: tm+mt
-source-wordcount: '1935'
+source-wordcount: '1942'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 0%
 
 <!-- FUTURE ERROR: YouTube and mp4 videos are not supported -->
 
->[!VIDEO](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/usevariables_example.mp4)
+[使用變數影片](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/usevariables_example.mp4)
 
 變數是[MetaDataMap](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html)介面的延伸。 您可以在ECMAScript中使用[MetaDataMap](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html)來存取使用變數儲存的中繼資料。
 
@@ -104,7 +104,7 @@ ht-degree: 0%
 
 在此範例中，選取&#x200B;**formdata** XML變數來儲存&#x200B;**cc-app.xml**&#x200B;檔案。 查詢&#x200B;**formdata**&#x200B;變數，以便您可以設定&#x200B;**emailaddress**&#x200B;字串變數的值，以儲存&#x200B;**cc-app.xml**&#x200B;檔案中可用的&#x200B;**emailAddress**&#x200B;屬性的值。
 
->[!VIDEO](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/set_variable_example1.mp4 "設定變數的值")
+[設定變數視訊](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/set_variable_example1.mp4)
 
 ### 範例2：使用運算式根據其他變數儲存值 {#example2}
 
@@ -114,7 +114,7 @@ ht-degree: 0%
 
 <!-- FUTURE ERROR: YouTube and mp4 videos are not supported -->
 
->[!VIDEO](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/variables_expression.mp4)
+[變數運算式影片](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/variables_expression.mp4)
 
 ## 使用運算式編輯器 {#use-expression-editor}
 
@@ -163,7 +163,7 @@ ht-degree: 0%
 
 <!-- FUTURE ERROR: YouTube and mp4 videos are not supported -->
 
->[!VIDEO](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/variables_orsplit_example.mp4)
+[OR分割視訊](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/variables_orsplit_example.mp4)
 
 同樣地，選取外部指令集路徑，或指定路由運算式的ECMA指令集以評估作用中分支。 選取&#x200B;**[!UICONTROL 重新命名分支]**&#x200B;以指定分支的替代名稱。
 
