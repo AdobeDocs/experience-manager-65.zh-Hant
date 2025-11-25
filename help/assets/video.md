@@ -460,11 +460,11 @@ Dynamic Media建議使用MP4 H.264視訊編碼預設集。 由於MP4檔案使用
 1. 在Experience Manager的左上角，選取Experience Manager標誌，然後在左側導軌中，按一下&#x200B;**[!UICONTROL 工具]** （槌子圖示） > **[!UICONTROL Assets]** > **[!UICONTROL 視訊報表]**。
 1. 在「視訊報表」頁面上，執行下列任一項作業：
 
-   * 在右上角附近，選取&#x200B;**重新整理視訊報告**圖示。
+   * 在右上角附近，選取&#x200B;**重新整理視訊報告**&#x200B;圖示。
 只有在報表的結束日期為當天時，才使用重新整理。 這麼做可確保您看到自上次執行報表以來發生的視訊追蹤。
 
-   * 在右上角附近，選取&#x200B;**日期選擇器**圖示。
-指定您要視訊資料的開始和結束日期範圍，然後選取**[!UICONTROL 執行報表]**。
+   * 在右上角附近，選取&#x200B;**日期選擇器**&#x200B;圖示。
+指定您要視訊資料的開始和結束日期範圍，然後選取&#x200B;**[!UICONTROL 執行報表]**。
 
    「排名在前的量度」群組方塊可識別您網站上所有&#x200B;*已發佈*&#x200B;視訊的各種彙總測量。
 
@@ -565,7 +565,7 @@ WebVTT和Adobe `.vtt`格式支援新增的標題和註解。 此外，新增的�
 
 >[!IMPORTANT]
 >
->在&#x200B;*之前，您已在您的Dynamic Media帳戶*&#x200B;上啟用多重標題與音訊追蹤支援的任何視訊，都必須重新處理[。 ](/help/assets/processing-profiles.md#reprocessing-assets)此視訊重新處理步驟是必要的，這樣使用者才能使用多個註解和音訊追蹤功能。 重新處理之後，視訊URL仍可繼續如常運作和播放。
+>在&#x200B;*之前，您已在您的Dynamic Media帳戶*&#x200B;上啟用多重標題與音訊追蹤支援的任何視訊，都必須重新處理[。 &#x200B;](/help/assets/processing-profiles.md#reprocessing-assets)此視訊重新處理步驟是必要的，這樣使用者才能使用多個註解和音訊追蹤功能。 重新處理之後，視訊URL仍可繼續如常運作和播放。
 
 **若要在視訊中加入多個註解和音軌：**
 
@@ -695,7 +695,7 @@ Dynamic Media支援透過URL修飾元在視訊中新增單一註解。 請參閱
 1. 在[內容]頁面上，選取&#x200B;**[!UICONTROL 註解與音軌]**&#x200B;標籤。
 1. 在&#x200B;**音軌**&#x200B;標題下，選取您要設定為視訊預設的音軌檔案。
 1. 選取&#x200B;**[!UICONTROL 設定為預設值]**。
-在**設定為預設值**&#x200B;對話方塊中，選取&#x200B;**[!UICONTROL 取代]**。
+在&#x200B;**設定為預設值**&#x200B;對話方塊中，選取&#x200B;**[!UICONTROL 取代]**。
 
    ![音訊曲目標題具有選取的音訊曲目檔案名稱，並反白顯示[設定為預設]按鈕。](assets-dm/msma-defaultaudiotrack2.png)*正在設定視訊的預設音軌。*
 
@@ -732,8 +732,8 @@ Dynamic Media支援透過URL修飾元在視訊中新增單一註解。 請參閱
 
    ![視訊檢視器中的音訊和註解快顯清單。](assets-dm/msma-selectaudiosubtitle.png)*模擬使用者選取視訊播放的音訊和標題。*
 
-1. 若要開始播放，請選取視訊的&#x200B;**[!UICONTROL 播放]**按鈕。
-記下左下角的**[!UICONTROL URL]**&#x200B;和&#x200B;**[!UICONTROL Embed]**&#x200B;按鈕。 使用這些按鈕分別將視訊的URL[連結至您的網頁應用程式](/help/assets/linking-urls-to-yourwebapplication.md)或[將視訊內嵌至網頁](/help/assets/embed-code.md)。
+1. 若要開始播放，請選取視訊的&#x200B;**[!UICONTROL 播放]**&#x200B;按鈕。
+記下左下角的&#x200B;**[!UICONTROL URL]**&#x200B;和&#x200B;**[!UICONTROL Embed]**&#x200B;按鈕。 使用這些按鈕分別將視訊的URL[連結至您的網頁應用程式](/help/assets/linking-urls-to-yourwebapplication.md)或[將視訊內嵌至網頁](/help/assets/embed-code.md)。
 1. 在預覽頁面的右上角附近，選取&#x200B;**[!UICONTROL 關閉]**。
 
 ### 從視訊中刪除註解或音訊曲目檔案
@@ -753,7 +753,7 @@ Dynamic Media支援透過URL修飾元在視訊中新增單一註解。 請參閱
    * 註解 — 在&#x200B;**註解**&#x200B;標題下，選取一或多個要從視訊中刪除的註解檔案，然後選取&#x200B;**[!UICONTROL 刪除]**。
    * 音訊曲目 — 在&#x200B;**音訊曲目**&#x200B;標題下，選取您要從視訊中刪除的一或多個音訊曲目檔案，然後選取&#x200B;**[!UICONTROL 刪除]**。
 
-1. 在[刪除]對話方塊中，選取[確定]。****
+1. 在[刪除]對話方塊中，選取[確定]。**&#x200B;**
 1. 發佈視訊。
 
 ### 下載已上傳至視訊的註解或音訊曲目檔案
@@ -1049,7 +1049,7 @@ Dynamic Media會根據視訊的總時間擷取10個（預設）縮圖影像。 �
    * 如果要重新排序間隔值，請選取向上箭頭圖示和向下箭頭圖示。
 
 1. 選取「**[!UICONTROL 確定]**」並返回「屬性」標籤。
-1. 在CRXDE Lite頁面的左上角附近，選取「儲存全部」****，然後選取左上角的「首頁」圖示以返回Experience Manager。
+1. 在CRXDE Lite頁面的左上角附近，選取「儲存全部」**&#x200B;**，然後選取左上角的「首頁」圖示以返回Experience Manager。
 
    請參閱[新增視訊縮圖](#adding-a-video-thumbnail)。
 
@@ -1065,7 +1065,7 @@ Dynamic Media會根據視訊的總時間擷取10個（預設）縮圖影像。 �
 1. 在視訊的「屬性」頁面上，選取&#x200B;**[!UICONTROL 變更縮圖]**。
 1. 在[變更縮圖]頁面的工具列上，選取[上傳]新縮圖&#x200B;**[!UICONTROL 。]**
 1. 導覽至您要使用的縮圖影像，選取該影像，然後選取「**[!UICONTROL 開啟]**」以開始將該影像上傳至Experience Manager。 上傳後，請務必發佈影像。
-1. 成功上傳並發佈影像後，在[變更縮圖]頁面中，選取[儲存變更]。****
+1. 成功上傳並發佈影像後，在[變更縮圖]頁面中，選取[儲存變更]。**&#x200B;**
 
    自訂縮圖會新增至您的視訊。
 
@@ -1216,7 +1216,7 @@ public class ManifestServlet extends HttpServlet {
 
 +++
 
->servlet[!TAB 的]回應類別
+>[!TAB servlet 的回應類別]
 
 +++servlet **的**&#x200B;回應類別 
 
@@ -1246,7 +1246,7 @@ public abstract class VideoResponse {
 
 +++
 
->在servlet[!TAB 中參考的]常數檔案
+>[!TAB 在servlet 中參考的常數檔案]
 
 +++在servlet **中參考的**&#x200B;常數檔案 
 

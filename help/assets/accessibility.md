@@ -225,7 +225,7 @@ Review CQ-4282133 before adding - Close option in a coral-dialog was not accessi
 
 >[!MORELIKETHIS]
 >
->* [ [!DNL Dynamic Media]](/help/assets/accessibility-dm.md)中的協助工具功能。
+>* [&#x200B; [!DNL Dynamic Media]](/help/assets/accessibility-dm.md)中的協助工具功能。
 >* [每個Service Pack版本](/help/release-notes/release-notes.md)中完成的增強功能的發行說明。
 >* [[!DNL Adobe Experience Manager] 協助工具指引](/help/managing/web-accessibility.md)。
 >* [Adobe解決方案的一致性報告(ACR)和VPAT清單](https://www.adobe.com/accessibility/compliance.html)。

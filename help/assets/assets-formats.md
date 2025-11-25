@@ -172,7 +172,7 @@ Adobe影像轉碼資料庫是影像處理解決方案，可執行核心影像處
 
 ## 支援的MIME型別 {#supported-mime-types}
 
-根據預設，[!DNL Experience Manager]會使用副檔名偵測檔案型別。 [!DNL Experience Manager]可以從檔案內容偵測到它。 對於後者，請在[!UICONTROL  Web主控台中選取]Day CQ DAM Mime Type Service[!UICONTROL 中的]從內容偵測MIME[!DNL Experience Manager]選項。
+根據預設，[!DNL Experience Manager]會使用副檔名偵測檔案型別。 [!DNL Experience Manager]可以從檔案內容偵測到它。 對於後者，請在[!UICONTROL &#x200B; Web主控台中選取]Day CQ DAM Mime Type Service[!UICONTROL 中的]從內容偵測MIME[!DNL Experience Manager]選項。
 
 在CRXDE Lite的`/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`有受支援的MIME型別清單。
 
@@ -216,7 +216,7 @@ Adobe影像轉碼資料庫是影像處理解決方案，可執行核心影像處
 | PICT | image/x-pict | | |
 | PNG | image/png | | |
 | PPT | application/vnd.ms-powerpoint | | |
-| PS | application/postscript | `psprocess=Rasterize&psresolution=150`<br>`&pscolorspace=Auto&psalpha=false`<br>`&psextractsearchwords=false`<br>`&aiprocess=Rasterize&airesolution=150`<br>`&aicolorspace=Auto&aialpha=false` | <ul><li>[postScriptOptions](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-production-api/data-types/r-post-script-options)</li><li>[illustratorOptions](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-production-api/data-types/r-illustrator-options</li></ul> |
+| PS | application/postscript | `psprocess=Rasterize&psresolution=150`<br>`&pscolorspace=Auto&psalpha=false`<br>`&psextractsearchwords=false`<br>`&aiprocess=Rasterize&airesolution=150`<br>`&aicolorspace=Auto&aialpha=false` | <ul><li>[postScriptOptions](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-production-api/data-types/r-post-script-options)</li><li>[illustratorOptions] (https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-production-api/data-types/r-illustrator-options</li></ul> |
 | PSD | image/vnd.adobe.photoshop | `process=None&layerNaming=Layername`<br>`&anchor=Center&createTemplate=false`<br>`&extractText=false&extendLayers=false` | <ul><li>[photoshopOptions](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-production-api/data-types/r-photoshop-options)</li><li>[photoshopLayerOptions](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-production-api/data-types/r-photoshop-layer-options)</li></ul> |
 | RTF | application/rtf | | |
 | SVG | image/svg+xml | | |

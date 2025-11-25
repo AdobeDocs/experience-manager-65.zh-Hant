@@ -77,7 +77,7 @@ ht-degree: 15%
 
    ![語言副本](assets/lang-copy2.png)
 
-1. 若要導覽至資料夾，請選取語言副本，然後按一下[在Assets中顯示] ****。
+1. 若要導覽至資料夾，請選取語言副本，然後按一下[在Assets中顯示] **&#x200B;**。
 
    ![在資產中顯示](assets/reveal-in-assets.png)
 
