@@ -193,7 +193,7 @@ IPTC索引標籤現在支援[!UICONTROL 替代文字]和[!UICONTROL 延伸說明
 
   若要執行這些作業，您並不需要瀏覽至資產位置及檢視其屬性。
 
-* **Dynamic Media _快照_**可讓您使用測試影像或Dynamic Media URL，預覽影像修飾元和智慧型影像最佳化，例如WebP或AVIF輸出、頻寬感知壓縮和裝置畫素比例縮放。 然後您可以立即比較每個設定對品質和檔案大小的影響。
+* **Dynamic Media _快照_**&#x200B;可讓您使用測試影像或Dynamic Media URL，預覽影像修飾元和智慧型影像最佳化，例如WebP或AVIF輸出、頻寬感知壓縮和裝置畫素比例縮放。 然後您可以立即比較每個設定對品質和檔案大小的影響。
 請參閱 [Dynamic Media 快照](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-snapshot)。
 * **使用Dynamic Media的DASH串流** — 針對Dynamic Media視訊傳送中的自我調整串流（已啟用CMAF）啟動新通訊協定（DASH — 透過HTTP的動態自我調整串流）。 現在可供所有區域使用。
 * **整合Experience Manager Sites和內容片段與Assets新一代Dynamic Media** — 使用者現在可以在Experience Manager Sites 6.5中使用其雲端託管的資產。他們可以在內部部署或Managed Services執行個體上編寫及傳遞這些資產。

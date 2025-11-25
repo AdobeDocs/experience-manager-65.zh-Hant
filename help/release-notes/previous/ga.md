@@ -146,7 +146,7 @@ AEM能以各種格式和從各種棧疊層級提供內容。 自2008年以來，
 
 * Maven專案原型18+如需新專案，請參閱[GitHub的發行說明](https://github.com/adobe/aem-project-archetype/releases)。
 * 單頁應用程式Maven專案原型1.0.6+適用於新專案，請參閱[GitHub版本注意事項](https://github.com/adobe/aem-spa-project-archetype/releases)。
-* HTL 1.4版，請參閱發行說明[GitHub ](https://github.com/adobe/htl-spec/releases/tag/1.4)。
+* HTL 1.4版，請參閱發行說明[GitHub &#x200B;](https://github.com/adobe/htl-spec/releases/tag/1.4)。
 
    * 字串、陣列和物件的「in」運運算元：
 
@@ -179,7 +179,7 @@ AEM能以各種格式和從各種棧疊層級提供內容。 自2008年以來，
 
    * 為使用JS SDK （也稱為SPA編輯器）的單頁應用程式建立和編輯範本
 
-* 參考網站We.Retail 4.0，請參閱發行說明[GitHub ](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases)。
+* 參考網站We.Retail 4.0，請參閱發行說明[GitHub &#x200B;](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases)。
 * 升級現有網站以使用最新編輯器功能的工具組，請參閱[GitHub存放庫](https://github.com/adobe/aem-modernize-tools)
 
 >[!CAUTION]
@@ -308,7 +308,7 @@ Communities (從AEM 6.5開始)允許分散管理（和管理）不同的社群�
 
 **SCORM 2017.1支援**
 
-AEM 6.5 Communities的啟用功能支援可共用的內容物件參考模型[ (SCORM) 2017.1](https://rusticisoftware.com/blog/scorm-engine-2017-released/)引擎。
+AEM 6.5 Communities的啟用功能支援可共用的內容物件參考模型[&#x200B; (SCORM) 2017.1](https://rusticisoftware.com/blog/scorm-engine-2017-released/)引擎。
 
 * 啟用元件的鍵盤導覽支援
 * AEM Communities中的啟用元件（例如目錄和課程播放、指派、檔案庫）可支援鍵盤導覽，以提升協助工具。

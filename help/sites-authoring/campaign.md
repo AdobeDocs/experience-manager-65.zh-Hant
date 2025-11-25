@@ -63,7 +63,7 @@ ht-degree: 2%
    ![chlimage_1-15](assets/chlimage_1-15a.png)
 
 1. 選取&#x200B;**建立**，然後選取&#x200B;**建立頁面**。
-1. 選取您連線至Adobe Campaign的特定可用範本之一，然後按一下[下一步] ****。 預設提供三個範本：
+1. 選取您連線至Adobe Campaign的特定可用範本之一，然後按一下[下一步] **&#x200B;**。 預設提供三個範本：
 
    * **Adobe Campaign Classic電子郵件**：可讓您在將內容傳送至Adobe Campaign Classic傳送之前，先新增內容至預先定義的範本（兩欄）。
    * **Adobe Campaign Standard電子郵件**：可讓您在將內容傳送至Adobe Campaign Standard傳送之前，先新增內容至預先定義的範本（兩欄）。

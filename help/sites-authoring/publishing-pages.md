@@ -100,7 +100,7 @@ ht-degree: 7%
 
    ![pp-02](assets/pp-02.png)
 
-1. 在[快速發佈]對話方塊中，按一下[發佈]****&#x200B;以確認發佈，或按一下[取消]****&#x200B;以取消發佈。 請記住，任何未發佈的參考也會自動發佈。
+1. 在[快速發佈]對話方塊中，按一下[發佈]&#x200B;**&#x200B;**&#x200B;以確認發佈，或按一下[取消]&#x200B;**&#x200B;**&#x200B;以取消發佈。 請記住，任何未發佈的參考也會自動發佈。
 
    ![chlimage_1-1](assets/chlimage_1-1.png)
 
@@ -131,7 +131,7 @@ ht-degree: 7%
 
    ![chlimage_1-2](assets/chlimage_1-2.png)
 
-   按一下[下一步]****&#x200B;繼續。
+   按一下[下一步]&#x200B;**&#x200B;**&#x200B;繼續。
 
 1. 在「管理出版物」精靈的下一個步驟&#x200B;**範圍**&#x200B;中，您可以定義發佈/取消發佈的範圍，例如，包含子頁面和/或包含參考。
 
@@ -141,7 +141,7 @@ ht-degree: 7%
 
    按一下[新增內容]按鈕會啟動[路徑瀏覽器](/help/sites-authoring/author-environment-tools.md#path-browser)以允許選擇內容。
 
-   選取必要的頁面，然後按一下[選取]將內容加入精靈，或按一下[**取消**]取消選取並返回精靈。****
+   選取必要的頁面，然後按一下[選取]將內容加入精靈，或按一下[**取消**]取消選取並返回精靈。**&#x200B;**
 
    回到精靈，您可以選取清單中的專案以設定其進一步的選項，例如：
 
@@ -223,7 +223,7 @@ ht-degree: 7%
 如同您[使用[管理出版物]選項發佈](/help/sites-authoring/publishing-pages.md#manage-publication)一樣，您也可以使用它來取消發佈。
 
 1. 在網站主控台中選取一個或多個頁面，然後按一下&#x200B;**管理出版物**&#x200B;按鈕。
-1. 「管 **理出版物** 」嚮導將啟動。在第一個步驟中， **選項**，選擇「取消發佈」(Unpublish **)，而非「發佈」(Publish)的預設** 選項 ****。
+1. 「管 **理出版物** 」嚮導將啟動。在第一個步驟中， **選項**，選擇「取消發佈」(Unpublish **)，而非「發佈」(Publish)的預設** 選項 **&#x200B;**。
 
    ![chlimage_1-5](assets/chlimage_1-5.png)
 
@@ -270,7 +270,7 @@ ht-degree: 7%
 
   ![screen-shot_2019-03-05at112019](assets/screen-shot_2019-03-05at112019.png)
 
-  發佈狀態會顯示在 [網站主控台](/help/sites-authoring/basic-handling.md#card-view)[的卡片](/help/sites-authoring/basic-handling.md#column-view)、欄和 [清單檢視中](/help/sites-authoring/basic-handling.md#list-view) 。
+  發佈狀態會顯示在 [網站主控台](/help/sites-authoring/basic-handling.md#card-view) [的卡片](/help/sites-authoring/basic-handling.md#column-view)、欄和 [清單檢視中](/help/sites-authoring/basic-handling.md#list-view) 。
 
 * 在[時間表](/help/sites-authoring/basic-handling.md#timeline)中
 

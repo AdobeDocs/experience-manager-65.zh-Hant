@@ -131,7 +131,7 @@ ht-degree: 6%
 
    >[!NOTE]
    >
-   >若要變更您正在使用的活動，請按一下[上一步]。****
+   >若要變更您正在使用的活動，請按一下[上一步]。**&#x200B;**
 
 ## 建立：編寫體驗 {#create-authoring-the-experiences}
 
@@ -149,7 +149,7 @@ ht-degree: 6%
 >
 >選件是目標元件的內容。
 
-體驗會顯示在「客群」窗格中。在下列範例中，體驗包 **括Default**、 **Femole**、 **Femole 30歲以上，******&#x200B;以及Femole 30歲以下。此範例顯示目標影像元件的「預設 **」產品建議** 。
+體驗會顯示在「客群」窗格中。在下列範例中，體驗包 **括Default**、 **Femole**、 **Femole 30歲以上，**&#x200B;**&#x200B;**&#x200B;以及Femole 30歲以下。此範例顯示目標影像元件的「預設 **」產品建議** 。
 
 ![chlimage_1-12](assets/chlimage_1-12.png)
 
@@ -157,7 +157,7 @@ ht-degree: 6%
 
 ![chlimage_1-13](assets/chlimage_1-13.png)
 
-當選取體驗且目標元件不包含該體驗的產品建議時，元件會顯示疊加在半透明預設產品建議上的「新增產品建議 **** 」。當未建立任何體驗的產品建議時，會針對對應至 **體驗的區段顯示** 「預設」產品建議。
+當選取體驗且目標元件不包含該體驗的產品建議時，元件會顯示疊加在半透明預設產品建議上的「新增產品建議 **&#x200B;**&#x200B;」。當未建立任何體驗的產品建議時，會針對對應至 **體驗的區段顯示** 「預設」產品建議。
 
 ![chlimage_1-14](assets/chlimage_1-14.png)
 
@@ -218,7 +218,7 @@ ht-degree: 6%
 
 1. 按一下體驗名稱旁的箭頭。
 1. 按一下&#x200B;**複製**&#x200B;並選擇對象。
-1. 如有需要，請重新命名體驗，然後按一下[確定]。****
+1. 如有需要，請重新命名體驗，然後按一下[確定]。**&#x200B;**
 
 ### 使用定位模式建立選件 {#creating-offers-using-targeting-mode}
 
@@ -297,7 +297,7 @@ ht-degree: 6%
    >管理員可以決定是否需要在&#x200B;**https://&lt;host>：&lt;port>/system/console/configMgr/com.day.cq.personalization.impl.servlets.TargetingConfigurationServlet**&#x200B;設定此組態
    >
    >
-   >若要要求使用者輸入位置，請選取**強制位置**核取方塊。
+   >若要要求使用者輸入位置，請選取&#x200B;**強制位置**&#x200B;核取方塊。
 
 1. 選取您要建立選件的體驗。
 1. 建立選件：
@@ -563,13 +563,13 @@ ht-degree: 6%
    * **指定的日期和時間**：特定時間。 選取此選項時，按一下日曆圖示，選取日期，並指定活動結束時間。
 
 1. 若要指定活動的優先順序，請使用滑桿來選取&#x200B;**低**、**正常**&#x200B;或&#x200B;**高**。
-1. 如果您已使用Adobe Target帳戶設定Adobe Anaytics，則會看到&#x200B;**報告Source**&#x200B;下拉式功能表。 選取 **Adobe Target****或** Adobe Analytics做為來源。
+1. 如果您已使用Adobe Target帳戶設定Adobe Anaytics，則會看到&#x200B;**報告Source**&#x200B;下拉式功能表。 選取 **Adobe Target**&#x200B;**或** Adobe Analytics做為來源。
 
    如果您選取&#x200B;**Adobe Analytics**，請選取公司與報表套裝。 如果您選取&#x200B;**Adobe Target**，則不需要採取任何動作。
 
    ![chlimage_1-33](assets/chlimage_1-33.png)
 
-1. 在「目 **標量度** 」區域的「我的主要目標 **** 」下方，選取您要追蹤的成功量度——轉換、收入、參與——並輸入量度的測量方式 (或客群採取哪些動作來指出已達成目標)。請參閱上表中目標量度的定義，並參閱 [Adobe Target成功量度的相關檔案](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html) 。
+1. 在「目 **標量度** 」區域的「我的主要目標 **&#x200B;**&#x200B;」下方，選取您要追蹤的成功量度——轉換、收入、參與——並輸入量度的測量方式 (或客群採取哪些動作來指出已達成目標)。請參閱上表中目標量度的定義，並參閱 [Adobe Target成功量度的相關檔案](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html) 。
 
    您可以重新命名目標，只需要按一下右上角的三個點並選取&#x200B;**重新命名**。
 
