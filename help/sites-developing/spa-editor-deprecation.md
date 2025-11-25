@@ -65,7 +65,7 @@ Universal Editor具備許多優點，因此移轉至此編輯器可成為新專�
 * **符合未來需求：** AEM 的路徑圖優先發展作為視覺化編輯器的通用編輯器。採用通用編輯器可以確保獲得最新的創新和增強功能。
 * **更簡單的整合：**&#x200B;使用通用編輯器不需要 AEM 特定的 SDK，減少過度依賴技術堆疊的情形。
 * **自備應用程式：**&#x200B;通用編輯器支援任何網頁框架或架構，不需要複雜的重構過程即可採用。
-* **可擴充性：**&#x200B;因為擁有強大的[擴充框架，](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/extending)包括與生成式 AI、Workfront 等的整合，使通用編輯器更具優勢。
+* **可擴充性：**&#x200B;因為擁有強大的[擴充框架，](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/extending)包括與生成式 AI、Workfront 等的整合，使通用編輯器更具優勢。
 
 沒有從SPA編輯器直接移轉至通用編輯器的路徑。 這是因為兩種技術存在根本差異。
 

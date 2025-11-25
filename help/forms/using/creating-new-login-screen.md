@@ -293,7 +293,7 @@ ht-degree: 3%
 1. 在`/apps/livecycle/core/content/login`中新增影像。 若要新增影像：
 
    1. 安裝WebDAV使用者端。
-   1. 使用webDAV使用者端導覽至`/apps/livecycle/core/content/login`資料夾。 如需詳細資訊，請參閱[WebDAV存取](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/webdav-access.html?lang=en)。
+   1. 使用webDAV使用者端導覽至`/apps/livecycle/core/content/login`資料夾。 如需詳細資訊，請參閱[WebDAV存取](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/webdav-access.html?lang=zh-Hant)。
 
    1. 新增影像。
 

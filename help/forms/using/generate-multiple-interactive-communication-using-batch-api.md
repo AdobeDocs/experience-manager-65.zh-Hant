@@ -87,7 +87,7 @@ ht-degree: 1%
    1. 指定資料夾的&#x200B;**[!UICONTROL 名稱]**&#x200B;和實體&#x200B;**[!UICONTROL 路徑]**。 例如，`c:\batchprocessing`。
    1. 選取&#x200B;**[!UICONTROL 使用]**&#x200B;處理檔案中的&#x200B;**[!UICONTROL 服務]**&#x200B;選項。
    1. 在&#x200B;**[!UICONTROL 服務名稱]**&#x200B;欄位中選取&#x200B;**[!UICONTROL com.adobe.fd.ccm.multichannel.batch.impl.service.InteractiveCommunicationBatchServiceImpl]**&#x200B;服務。
-   1. 指定&#x200B;**[!UICONTROL 輸出檔案模式]**。 例如，%F/ [pattern](https://experienceleague.adobe.com/docs/experience-manager-65/content/forms/administrator-help/configuring-watched-folder-endpoints.html?lang=en#about-file-patterns)指定Watched資料夾可以在Watched資料夾\input資料夾的子資料夾中找到輸入檔案。
+   1. 指定&#x200B;**[!UICONTROL 輸出檔案模式]**。 例如，%F/ [pattern](https://experienceleague.adobe.com/docs/experience-manager-65/content/forms/administrator-help/configuring-watched-folder-endpoints.html?lang=zh-Hant#about-file-patterns)指定Watched資料夾可以在Watched資料夾\input資料夾的子資料夾中找到輸入檔案。
 1. 設定進階引數：
    1. 開啟&#x200B;**[!UICONTROL 進階]**&#x200B;索引標籤並新增下列自訂屬性：
 
@@ -147,7 +147,7 @@ ht-degree: 1%
    1. 指定資料夾的&#x200B;**[!UICONTROL 名稱]**&#x200B;和實體&#x200B;**[!UICONTROL 路徑]**。 例如，`c:\batchprocessing`。
    1. 選取&#x200B;**[!UICONTROL 使用]**&#x200B;處理檔案中的&#x200B;**[!UICONTROL 服務]**&#x200B;選項。
    1. 在&#x200B;**[!UICONTROL 服務名稱]**&#x200B;欄位中選取&#x200B;**[!UICONTROL com.adobe.fd.ccm.multichannel.batch.impl.service.InteractiveCommunicationBatchServiceImpl]**&#x200B;服務。
-   1. 指定&#x200B;**[!UICONTROL 輸出檔案模式]**。 例如，%F/ [pattern](https://experienceleague.adobe.com/docs/experience-manager-65/content/forms/administrator-help/configuring-watched-folder-endpoints.html?lang=en#about-file-patterns)指定Watched資料夾可以在Watched資料夾\input資料夾的子資料夾中找到輸入檔案。
+   1. 指定&#x200B;**[!UICONTROL 輸出檔案模式]**。 例如，%F/ [pattern](https://experienceleague.adobe.com/docs/experience-manager-65/content/forms/administrator-help/configuring-watched-folder-endpoints.html?lang=zh-Hant#about-file-patterns)指定Watched資料夾可以在Watched資料夾\input資料夾的子資料夾中找到輸入檔案。
 1. 設定進階引數：
    1. 開啟&#x200B;**[!UICONTROL 進階]**&#x200B;索引標籤並新增下列自訂屬性：
 
@@ -176,8 +176,8 @@ ht-degree: 1%
 部署Java™ Servlet之前，請確保您已進行互動式通訊，且對應的資料檔案已準備就緒。 執行以下步驟，以便您可以建立和部署Java™ Servlet：
 
 1. 登入您的AEM執行個體並建立互動式通訊。 若要使用下列範常式式碼中提及的互動式通訊，[請按一下這裡](assets/SimpleMediumIC.zip)。
-1. [在您的AEM執行個體上使用Apache Maven](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/aem-project-archetype.html)建置和部署AEM專案。
-1. 在您的AEM Forms專案的POM檔案相依性清單中新增[AEM Client SDK 6.0.12版或更新版本](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)。 例如，
+1. [在您的AEM執行個體上使用Apache Maven](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/aem-project-archetype.html?lang=zh-Hant)建置和部署AEM專案。
+1. 在您的AEM Forms專案的POM檔案相依性清單中新增[AEM Client SDK 6.0.12版或更新版本](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=zh-Hant)。 例如，
 
    ```xml
        <dependency>
@@ -327,7 +327,7 @@ ht-degree: 1%
    * 當您指定WEB選項時，系統會產生每個記錄的JSON檔案。 您可以使用JSON檔案[預先填入Web範本](#web-template)。
    * 當您同時指定PRINT和WEB選項時，PDF檔案和JSON檔案都會針對每筆記錄產生。
 
-1. [使用maven將更新的程式碼部署至您的AEM執行個體](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/aem-project-archetype.html)。
+1. [使用maven將更新的程式碼部署至您的AEM執行個體](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/aem-project-archetype.html?lang=zh-Hant)。
 1. 若要產生互動式通訊，請叫用批次API。 批次API列印會根據記錄數量傳回PDF和.json檔案的資料流。 您可以使用JSON檔案[預先填入Web範本](#web-template)。 如果您使用上述程式碼，則API部署在`http://localhost:4502/bin/batchServlet`。 程式碼會列印並傳回PDF和JSON檔案的串流。
 
 ### 預先填入Web範本 {#web-template}
@@ -363,4 +363,4 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->預設只會啟用CRX通訊協定。 若要啟用其他支援的通訊協定，請參閱[使用Configuration Manager設定預填服務](https://experienceleague.adobe.com/docs/experience-manager-65/content/forms/adaptive-forms-advanced-authoring/prepopulate-adaptive-form-fields.html?lang=en)。
+>預設只會啟用CRX通訊協定。 若要啟用其他支援的通訊協定，請參閱[使用Configuration Manager設定預填服務](https://experienceleague.adobe.com/docs/experience-manager-65/content/forms/adaptive-forms-advanced-authoring/prepopulate-adaptive-form-fields.html?lang=zh-Hant)。
