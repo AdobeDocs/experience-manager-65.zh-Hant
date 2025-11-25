@@ -9,7 +9,7 @@ exl-id: efbba312-9fc8-4670-b8f1-d2a86162d075
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,Developer Tools
 role: Developer
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '2687'
 ht-degree: 1%
@@ -24,7 +24,7 @@ Jackrabbit FileVault工具(VLT)是由[Apache Foundation](https://www.apache.org/
 
 ## 概念和架構 {#concepts-and-architecture}
 
-請參閱官方[Apache Jackrabbit Filevault檔案](https://jackrabbit.apache.org/filevault/index.html)中的[Filevault概述](https://jackrabbit.apache.org/filevault/overview.html)和[Vault FS](https://jackrabbit.apache.org/filevault/vaultfs.html)頁面，瞭解Filevault工具的概念和結構的完整概述。
+請參閱官方[Apache Jackrabbit Filevault檔案](https://jackrabbit.apache.org/filevault/overview.html)中的[Filevault概述](https://jackrabbit.apache.org/filevault/vaultfs.html)和[Vault FS](https://jackrabbit.apache.org/filevault/index.html)頁面，瞭解Filevault工具的概念和結構的完整概述。
 
 ## VLT快速入門 {#getting-started-with-vlt}
 
@@ -119,7 +119,7 @@ svn co https://svn.server.com/repos/myproject
 
 ### 與存放庫同步 {#synchronizing-with-the-repository}
 
-您需要將filevault與存放庫同步。 若要這麼做：
+您需要將filevault與存放庫同步。 執行方法：
 
 1. 在命令列中，瀏覽至`content/jcr_root`。
 1. 輸入下列專案來檢查存放庫（將您的連線埠號碼取代為&#x200B;**4502**&#x200B;和您的管理員密碼）：
@@ -224,7 +224,7 @@ Options:
 vlt co http://localhost:4502/crx/-/jcr:root/apps/geometrixx geo
 ```
 
-執行此動作會建立具有`META-INF`和`jcr_root`目錄的新匯出根`geo`，並將所有低於`/apps/geometrixx`的檔案放在`geo/jcr_root`中。
+執行此動作會建立具有`geo`和`META-INF`目錄的新匯出根`jcr_root`，並將所有低於`/apps/geometrixx`的檔案放在`geo/jcr_root`中。
 
 ### 執行篩選的簽出 {#performing-a-filtered-checkout}
 
@@ -443,7 +443,7 @@ analyze -l <format>|-v|-q <localPaths1> [<localPaths2> ...]
 
 |  |  |
 |--- |--- |
-| `-l (--linkFormat) <format>` | hotfix連結的printf格式（名稱、識別碼），例如`[CQ520_HF_%s|%s]` |
+| `-l (--linkFormat) <format>` | hotfix連結的printf格式（名稱、識別碼），例如`[CQ520_HF_%s\|%s]` |
 | `-v (--verbose)` | 詳細輸出 |
 | `-q (--quiet)` | 儘可能減少列印次數 |
 | `<localPaths> [<localPaths> ...]` | 本機路徑 |
@@ -826,7 +826,7 @@ Added new sync directory: /tmp/workspace/vltsync/jcr_root
 
 >[!NOTE]
 >
->在您設定`sync-once`組態之前，`register`命令不會觸發同步處理。
+>在您設定`register`組態之前，`sync-once`命令不會觸發同步處理。
 
 ### 移除同步資料夾 {#removing-a-sync-folder}
 
@@ -857,7 +857,7 @@ Removed sync directory: /tmp/workspace/vltsync/jcr_root
 >
 >服務可以使用Web主控台或存放庫中的`sling:OsgiConfig`節點（名稱為`com.day.jcr.sync.impl.VaultSyncServiceImpl`）進行設定。
 >
->使用AEM時，有數種方法可管理此類服務的組態設定；請參閱[設定OSGi](/help/sites-deploying/configuring-osgi.md)以取得完整詳細資訊。
+>使用AEM時，有數種方法可管理此類服務的組態設定；如需完整詳細資訊，請參閱[設定OSGi](/help/sites-deploying/configuring-osgi.md)。
 
 #### 同步資料夾設定 {#sync-folder-configuration}
 

@@ -1,20 +1,20 @@
 ---
-title: 瞭解如何搭配AEM使用GraphQL — 範例內容和查詢
-description: 瞭解如何搭配AEM使用GraphQL，透過探索範例內容和查詢來無頭提供內容。
+title: 瞭解如何將GraphQL與AEM搭配使用 — 範例內容和查詢
+description: 瞭解如何使用GraphQL搭配AEM，透過探索範例內容和查詢來無頭提供內容。
 feature: Content Fragments,GraphQL API
 exl-id: 91c5f61c-9c15-4d72-9b9b-0c23f31e7cdc
 solution: Experience Manager, Experience Manager Sites
 role: Developer
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
-source-wordcount: '1588'
-ht-degree: 79%
+source-wordcount: '1577'
+ht-degree: 80%
 
 ---
 
 # 了解搭配使用 GraphQL 與 AEM - 範例內容和查詢 {#learn-graphql-with-aem-sample-content-queries}
 
-瞭解如何搭配AEM使用GraphQL，透過探索範例內容和查詢來無頭提供內容。
+瞭解如何使用GraphQL搭配AEM，透過探索範例內容和查詢來無頭提供內容。
 
 >[!NOTE]
 >
@@ -24,7 +24,7 @@ ht-degree: 79%
 >* [內容片段模型](/help/assets/content-fragments/content-fragments-models.md)
 >* [與內容片段搭配使用的 AEM GraphQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md)
 
-若要開始使用GraphQL查詢以及它們如何與AEM內容片段搭配運作，檢視一些實用的範例會有所幫助。
+若要開始使用GraphQL查詢以及它們如何與AEM內容片段搭配使用，檢視一些實用的範例會有所幫助。
 
 如需相關幫助，請參閱：
 
@@ -47,7 +47,7 @@ ht-degree: 79%
 >
 >範例查詢是根據[與 GraphQL 搭配使用的範例內容片段結構](#content-fragment-structure-graphql)
 
-### 範例查詢 - 所有可用的綱要和資料類型 {#sample-all-schemes-datatypes}
+### 範例查詢 - 所有可用的結構描述和資料類型 {#sample-all-schemes-datatypes}
 
 此範例查詢傳回所有可用結構描述的所有`types`。
 
@@ -225,7 +225,7 @@ ht-degree: 79%
 
 ### 範例查詢 - 所有城市的名稱 {#sample-names-all-cities}
 
-此範例查詢是直接查詢，可傳回`city`結構描述中所有專案的`name`。
+此範例查詢是直接查詢，可傳回`name`結構描述中所有專案的`city`。
 
 **範例查詢**
 
@@ -357,14 +357,14 @@ query {
 }
 ```
 
-### 範例查詢 — 所有標籤為城市分隔符號的城市名稱 {#sample-names-all-cities-tagged-city-breaks}
+### 範例查詢 - 所有標記為 City Breaks 的城市名稱 {#sample-names-all-cities-tagged-city-breaks}
 
 如果您：
 
 * 建立各種標記，名稱為 `Tourism`：`Business`、`City Break`、`Holiday`
 * 並將這些標籤指派給各種`City`執行個體的主要變數
 
-接著您可以使用查詢傳回在 `city` 綱要中標記為「City Breaks」之所有項目的 `name` 和 `tags` 的詳細資料。
+接著您可以使用查詢傳回在 `city` 結構描述中標記為「City Breaks」之所有項目的 `name` 和 `tags` 的詳細資料。
 
 **範例查詢**
 
@@ -539,7 +539,7 @@ query {
 
 ### 範例查詢 - 所有名稱為「Jobs」或「Smith」的所有人員 {#sample-all-persons-jobs-smith}
 
-此範例查詢會篩選名稱為`Jobs`或`Smith`之任何專案的所有`persons`。
+此範例查詢會篩選名稱為`persons`或`Jobs`之任何專案的所有`Smith`。
 
 **範例查詢**
 
@@ -593,7 +593,7 @@ query {
 
 ### 範例查詢 - 所有名稱不為「Jobs」的人員 {#sample-all-persons-not-jobs}
 
-此範例查詢會篩選名稱為`Jobs`或`Smith`之任何專案的所有`persons`。
+此範例查詢會篩選名稱為`persons`或`Jobs`之任何專案的所有`Smith`。
 
 **範例查詢**
 
@@ -1333,7 +1333,7 @@ query {
 
 >[!NOTE]
 >
->`fragments` 欄位的資料類型為 `fragment-reference`，且已選取 `Article` 模型。查詢以`[Article]`的陣列傳送`fragments`。
+>`fragments` 欄位的資料類型為 `fragment-reference`，且已選取 `Article` 模型。查詢將 `fragments` 以 `[Article]` 陣列形式傳遞。
 
 ```graphql
 {
@@ -1647,11 +1647,11 @@ query {
 
 這些範例查詢是根據以下結構，該結構使用：
 
-* 一個或多個[範例內容片段模型](#sample-content-fragment-models-schemas) - 構成 GraphQL 綱要的基礎
+* 一個或多個[範例內容片段模型](#sample-content-fragment-models-schemas) - 構成 GraphQL 結構描述的基礎
 
 * 根據上述模型的[範例內容片段](#sample-content-fragments)
 
-### 範例內容片段結構 (綱要) {#sample-content-fragment-models-schemas}
+### 範例內容片段結構 (結構描述) {#sample-content-fragment-models-schemas}
 
 對於範例查詢，請使用以下內容模型及其相互關係（參照 — >）：
 
@@ -1720,7 +1720,7 @@ query {
 | Lincoln |  Abe | |
 | Smith | Adam |   |
 | Slade |  刀具 |  Gameblitz<br>Gamestar |
-| Marsh |  Duke |   |   |
+| Marsh |  Duke |   |
 |  Smith |  Joe |   |
 | Croft |  Lara | Gamestar |
 | Caulfield |  最大 |  Gameblitz |
@@ -1738,10 +1738,10 @@ query {
 
 | 名稱 | 國家/地區 | 人口 | 類別 |
 |--- |--- |--- |--- |
-| 巴塞爾 | 瑞士 | 172258 | city:emea |
-| 柏林 | 德國 | 3669491 | city:capital<br>city:emea |
-| 布加勒斯特 | 羅馬尼亞 | 1821000 |  city：capital<br>city：emea |
-| 舊金山 |  美國 |  883306 |  city：beach<br>city：na |
-| 聖荷西 |  美國 |  102635 |  city：na |
-| 斯圖加特 |  德國 |  634830 |  city：emea |
-|  蘇黎世 |  瑞士 |  415367 |  city：capital<br>city：emea |
+| 巴塞爾 | 瑞士 | 172258 | 城市:emea |
+| 柏林 | 德國 | 3669491 | 城市:capital<br>城市:emea |
+| 布加勒斯特 | 羅馬尼亞 | 1821000 |  城市:capital<br>城市:emea |
+| 舊金山 |  美國 |  883306 |  城市:beach<br>城市:na |
+| 聖荷西 |  美國 |  102635 |  城市:na |
+| 斯圖加特 |  德國 |  634830 |  城市:emea |
+|  蘇黎世 |  瑞士 |  415367 |  城市:capital<br>城市:emea |

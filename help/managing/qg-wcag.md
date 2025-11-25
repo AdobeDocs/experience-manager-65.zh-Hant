@@ -4,8 +4,8 @@ description: 網頁內容可及性指引(WCAG) 2.1版快速指南。
 exl-id: 9cd37f5a-ff59-4617-a0f3-cd8994fbf4ab
 solution: Experience Manager, Experience Manager 6.5
 feature: Compliance
-role: Developer,Leader,Architect,Data Architect,User
-source-git-commit: a4ccee3e8256c098339fb5308b1b4214e67b8b74
+role: Developer, Leader, User
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '1744'
 ht-degree: 90%
@@ -16,7 +16,7 @@ ht-degree: 90%
 
 Adobe Experience Manager (AEM)的開發過程儘可能地遵循「網頁內容可及性指引」。
 
-[網頁內容可及性 (WCAG) 指引 2.1 版](https://www.w3.org/TR/WCAG/)是由[全球資訊網協會 (W3C) &#x200B;](https://www.w3.org/) [資訊網可及性推動組織 (WAI)](https://www.w3.org/WAI/) 所制定之一系列國際公認的指引。
+[網頁內容可及性 (WCAG) 指引 2.1 版](https://www.w3.org/TR/WCAG/)是由[全球資訊網協會 (W3C) ](https://www.w3.org/)[資訊網可及性推動組織 (WAI)](https://www.w3.org/WAI/) 所制定之一系列國際公認的指引。
 
 >[!NOTE]
 >
@@ -86,7 +86,7 @@ WCAG 2.1 包含四大無障礙設計原則，有時簡稱為 **POUR**。說明�
 這份清單並非意在詳盡列出所有資源，而是提供可用資源的簡介：
 * [WCAG 所有相關文件的概述](https://www.w3.org/WAI/standards-guidelines/wcag/)
 * [不同文件的摘要](https://www.w3.org/WAI/standards-guidelines/wcag/docs/)
-* [網頁內容可及性指引 (WCAG) 2.1 &#x200B;](https://www.w3.org/TR/WCAG21/)
+* [網頁內容可及性指引 (WCAG) 2.1 ](https://www.w3.org/TR/WCAG21/)
 * [WCAG 2.1 最新內容](https://www.w3.org/WAI/standards-guidelines/wcag/new-in-21/)
 * [WCAG 2.1 遵循快速參考指南](https://www.w3.org/WAI/WCAG21/quickref/)
 * [WCAG 2 常見問題](https://www.w3.org/WAI/standards-guidelines/wcag/faq/)
@@ -135,7 +135,7 @@ WCAG 2.1 的專用技術闡明於《[Techniques for WCAG 2.1](https://www.w3.org
 * 特定成功標準；
 * 有助於達成指引要求的建議技術，但不屬於任何特定成功標準。
 
-每個成功標準各自的「了解」頁面也都提供以下資訊：
+每個成功標準各自的「瞭解」頁面也都提供以下資訊：
 
 * 成功標準的目的；
 * 如何達成成功標準的一般範例；

@@ -9,8 +9,8 @@ docset: aem65
 exl-id: 9672f7a4-82b7-4175-874d-181846115442
 solution: Experience Manager, Experience Manager 6.5
 feature: Compliance
-role: Admin,Architect,Data Architect,Developer,Leader
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: Admin,Developer,Leader
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '6926'
 ht-degree: 0%
@@ -36,7 +36,7 @@ ht-degree: 0%
 * 使用者接受解決方案，並可構想使用它。
 * 客戶接受專案。
 
-您計畫及設計驗收測試的時間越早，最終部署就越容易。 應該與客戶及您的品質保證團隊一起定義。
+您計畫及設計驗收測試的時間越早，最終部署就越容易。 應與客戶和您的品質Assurance團隊一起定義。
 
 雖然您可能無法於專案一開始定義所有詳細資訊，但應討論並同意初始定義。 驗收測試可能會根據基本需求（功能與效能）進行。
 
@@ -46,13 +46,13 @@ ht-degree: 0%
 
 ### Adobe安全性檢查清單 {#adobe-security-checklist}
 
-[Adobe安全性檢查清單](/help/sites-administering/security-checklist.md)是提供的正式檢查清單，用於確保Adobe Experience Manager (AEM)在安裝時安全。 它包含您必須執行的安全性措施和驗證步驟，以確保執行個體的完整性。
+[Adobe安全性檢查清單](/help/sites-administering/security-checklist.md)是提供的官方檢查清單，用於確保Adobe Experience Manager (AEM)在安裝時安全。 它包含您必須執行的安全性措施和驗證步驟，以確保執行個體的完整性。
 
 ### Adobe支援入口網站專案設定 {#adobe-support-portal-project-set-up}
 
 Adobe支援入口網站可讓實作合作夥伴和客戶在支援入口網站中將AEM實作設定為專案。
 
-您可登入詳細資訊；例如，關於實作的技術和版本。 這些選項可讓客戶和Adobe之間保持透明度。
+您可登入詳細資訊；例如，關於實作的技術和版本。 這些讓客戶和Adobe之間變得透明。
 
 ### AEM管理員培訓 {#aem-administrator-training}
 
@@ -62,15 +62,15 @@ Adobe支援入口網站可讓實作合作夥伴和客戶在支援入口網站中
 
 為將製作（撰寫）解決方案內容的員工提供培訓。 如需詳細資訊，請參閱[Adobe訓練服務](https://training.adobe.com/training/courses.html#solution=adobeExperienceManager)。
 
-### AEM認證測驗 {#aem-certification-exam}
+### AEM認證考試 {#aem-certification-exam}
 
-請確定已註冊適當的角色，以參加相關的[認證考試](https://training.adobe.com/certification/exams.html#p=1&amp;solution=adobeExperienceManager)。
+請確定已註冊適當的角色，以參加相關的[認證考試](https://training.adobe.com/certification/exams.html#p=1&solution=adobeExperienceManager)。
 
 ### AEM認證 {#aem-certified}
 
-確定適當的角色已通過相關的[認證考試](https://training.adobe.com/certification/exams.html#p=1&amp;solution=adobeExperienceManager)。
+確定適當的角色已通過相關的[認證考試](https://training.adobe.com/certification/exams.html#p=1&solution=adobeExperienceManager)。
 
-### AEM技術訓練 {#aem-technical-training}
+### AEM技術培訓 {#aem-technical-training}
 
 為適當的角色（例如開發人員、架構師、工程師和商務從業人員）提供技術培訓。
 
@@ -142,7 +142,7 @@ Adobe支援入口網站可讓實作合作夥伴和客戶在支援入口網站中
 
 ### 自動化測試策略 {#automated-testing-strategy}
 
-此策略定義可重複使用自動化指令碼的架構，以及品質保證(QA)團隊規劃的方法。 它概述自動化測試的整體計畫，以協助確保：
+此策略定義可重複使用自動化指令碼的架構，以及品質Assurance (QA)團隊規劃的方法。 它概述自動化測試的整體計畫，以協助確保：
 
 * 更高的投資報酬率(ROI)
 * 更多測試涵蓋範圍
@@ -355,7 +355,7 @@ Adobe支援入口網站可讓實作合作夥伴和客戶在支援入口網站中
 
 任何套用的自訂功能和/或套用的Hotfix都必須記錄下來，因為它們可能會影響未來的升級：
 
-* AEM可充分客製化，以符合業務需求。 任何可能影響升級的自訂都必須完整記錄。 例如，AEM使用者介面(UI)的任何重大變更。
+* AEM可充分客製化以符合業務需求。 任何可能影響升級的自訂都必須完整記錄。 例如，AEM使用者介面(UI)的任何重大變更。
 * 目前解決方案所需的任何更新都必須完整記錄；這些可能包括：
 
    * cumulative fix pack (CFP)
@@ -635,7 +635,7 @@ AEM和高階解決方案設計的可行性研究結果。 這些指標應與KPI�
 
 ### 通知Adobe支援有關上線排程 {#inform-adobe-support-about-the-go-live-schedule}
 
-請聯絡Adobe支援，確保任何需要的支援都可在上線期間啟用。
+請聯絡Adobe支援，確保所需的任何支援都可在上線期間啟用。
 
 ### 初始體驗設計 {#initial-experience-designs}
 
@@ -692,9 +692,9 @@ AEM和高階解決方案設計的可行性研究結果。 這些指標應與KPI�
 * 詳細程度
 * 為每個活動記錄的資訊
 
-### 測試並啟用的維護任務(AEM專屬) {#maintenance-tasks-aem-specific-tested-and-enabled}
+### 維護任務(AEM專屬)已測試並啟用 {#maintenance-tasks-aem-specific-tested-and-enabled}
 
-測試並啟用AEM維護任務，例如：
+測試及啟用AEM維護任務，例如：
 
 * 壓縮
 * 系統清理
@@ -716,7 +716,7 @@ AEM和高階解決方案設計的可行性研究結果。 這些指標應與KPI�
 
 此外也應建議如何在移轉與新系統實際上線之間的期間保持內容最新（或儘可能保持最新）。 這可能表示內容凍結、重複發佈或維護Alpha系統。
 
-### 監視 — CPU {#monitoring-cpu}
+### 監控 — CPU {#monitoring-cpu}
 
 監視解決方案對系統CPU的使用：
 
@@ -783,7 +783,7 @@ AEM和高階解決方案設計的可行性研究結果。 這些指標應與KPI�
 
 要套用至解決方案的監控概念；包含：
 
-* AEM標準監視
+* AEM標準監控
 * 系統監視
 * 客戶特定的監控需求
 
@@ -873,7 +873,7 @@ AEM和高階解決方案設計的可行性研究結果。 這些指標應與KPI�
 
 概念證明(POC)會根據需求進行評量，以確保兩者保持一致。
 
-### Post部署檢查清單 {#post-deployment-checklist}
+### 部署後檢查清單 {#post-deployment-checklist}
 
 檢查清單可定義每次部署後要執行的一系列檢查與工作。
 
@@ -883,7 +883,7 @@ AEM和高階解決方案設計的可行性研究結果。 這些指標應與KPI�
 
 ### 生產環境基準效能測試 {#production-environment-baseline-performance-tests}
 
-通常在AEM的標準安裝上執行基準測試。 然後，這會作為測試實作與硬體的基準。
+通常會對AEM的標準安裝執行基準測試。 然後，這會作為測試實作與硬體的基準。
 
 ### 生產環境已就緒 {#production-environment-ready}
 
@@ -988,7 +988,7 @@ tar檔案中的資料永遠不會被覆寫，即使只更新現有資料時，�
 
 為了對抗存放庫規模與日俱增的影響，我們已實施最佳化策略來移除過時的資料。
 
-### 請求在Adobe支援入口網站中設定專案區段 {#request-for-setting-up-project-section-in-adobe-support-portal}
+### 在Adobe支援入口網站中設定專案區域的請求 {#request-for-setting-up-project-section-in-adobe-support-portal}
 
 在Adobe支援入口網站中設定專案的正式請求。
 
@@ -1037,9 +1037,9 @@ tar檔案中的資料永遠不會被覆寫，即使只更新現有資料時，�
 
 根據角色和權利概念的詳細規格。
 
-### 安全性架構Recommendations {#security-architecture-recommendations}
+### 安全性架構建議 {#security-architecture-recommendations}
 
-Recommendations與軟體與硬體架構的安全性相關。
+與軟體與硬體架構的安全性相關的建議。
 
 ### 基於安全性的編碼准則 {#security-based-coding-guidelines}
 
@@ -1175,7 +1175,7 @@ Recommendations與軟體與硬體架構的安全性相關。
 
 Quality Lead的部分職責是確保在測試時有資源可支援任何使用者。 例如，在測試時協助使用者、報告問題時，以及協助針對測試環境驗證問題時。
 
-### 支援流程與存取Adobe支援入口網站 {#support-processes-and-access-to-adobe-support-portal}
+### 支援程式與存取Adobe支援入口網站 {#support-processes-and-access-to-adobe-support-portal}
 
 存取Adobe支援入口網站對於提交實施期間可能出現的任何產品相關問題的票證至關重要。
 
@@ -1360,7 +1360,7 @@ Quality Lead的部分職責是確保在測試時有資源可支援任何使用�
 
 ### URL處理概念 {#url-handling-concept}
 
-您的URL處理概念應涵蓋AEM特定的URL功能，包括：
+您的URL處理概念應涵蓋AEM專屬的URL功能，包括：
 
 * 虛名URL
 * 連結外部化

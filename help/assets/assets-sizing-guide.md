@@ -2,11 +2,11 @@
 title: '[!DNL Assets]大小調整指南'
 description: 判斷有效率量度的最佳實務，以評估部署 [!DNL Adobe Experience Manager Assets]所需的基礎結構和資源。
 contentOwner: AG
-role: Architect, Admin
+role: Developer, Admin
 feature: Asset Management
 exl-id: fd58ead9-5e18-4f55-8d20-1cf4402fad97
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '1619'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # [!DNL Assets]大小調整指南 {#assets-sizing-guide}
 
-在調整[!DNL Adobe Experience Manager Assets]實作的環境大小時，請務必確保有足夠的可用資源，例如磁碟、CPU、記憶體、IO和網路傳輸量。 調整其中許多資源的大小需要瞭解載入系統的資產數量。 如果沒有更好的量度，您可以除以現有程式庫的大小，以找出建立資產的速率。
+調整[!DNL Adobe Experience Manager Assets]實作的環境大小時，請務必確保有足夠的可用資源，例如磁碟、CPU、記憶體、IO和網路輸送量。 調整其中許多資源的大小需要瞭解載入系統的資產數量。 如果沒有更好的量度，您可以除以現有程式庫的大小，以找出建立資產的速率。
 
 ## 磁碟 {#disk}
 
@@ -32,7 +32,7 @@ ht-degree: 0%
 1. 決定載入系統的資產大小和數量。
 1. 取得要上傳至[!DNL Experience Manager]的資產代表性範例。 例如，如果您計畫將PSD、JPG、AI和PDF檔案載入系統，則需要每種檔案格式的多個範例影像。 此外，這些範例應能代表不同檔案大小和影像的複雜程度。
 1. 定義要使用的轉譯。
-1. 使用[!DNL ImageMagick]或[!DNL Adobe Creative Cloud]應用程式在[!DNL Experience Manager]中建立轉譯。 除了使用者指定的轉譯外，請建立立即可用的轉譯。 對於實作Dynamic Media的使用者，您可以使用IC二進位檔來產生PTIFF轉譯，以儲存在Experience Manager中。
+1. 使用[!DNL Experience Manager]或[!DNL ImageMagick]應用程式在[!DNL Adobe Creative Cloud]中建立轉譯。 除了使用者指定的轉譯外，請建立立即可用的轉譯。 對於實作Dynamic Media的使用者，您可以使用IC二進位檔來產生要儲存在Experience Manager中的PTIFF轉譯。
 1. 如果您打算使用子資產，請針對適當的檔案型別產生子資產。
 1. 比較輸出影像、轉譯和子資產與原始影像的大小。 它可讓您在系統載入時產生預期的成長因子。 例如，如果您在處理1 GB資產後產生合併大小為3 GB的轉譯和子資產，轉譯成長係數為3。
 1. 決定要在系統中維護哪些資產版本的最長時間。
@@ -98,13 +98,13 @@ S3實施中的延遲是由背景寫入對話串所引入。 備份程式必須�
 
 因為二進位檔儲存在資料存放區中，所以每個二進位檔都會佔用一些空間。 大部分的存放庫大小都低於100GB。 不過，可能有更大的存放庫大小最多為1 TB。 此外，若要執行離線壓縮，您需要磁碟區有足夠的可用空間，以便與預先壓縮的版本一起重寫壓縮的存放庫。 一個好的經驗法則是將磁碟大小調整為存放庫預期大小的1.5倍。
 
-對於存放庫，請使用IOPS等級大於3000的SSD或磁碟。 為了避免IOPS造成效能瓶頸，請監控CPU IO Wait等級，以找出問題的早期跡象。
+對於存放庫，請使用IOPS等級大於3000的SSD或磁碟。 若要避免IOPS造成效能瓶頸，請監控CPU IO Wait等級，以取得問題的早期跡象。
 
 [取得檔案](assets/aem_environment_sizingtool.xlsx)
 
 ## 網路 {#network}
 
-[!DNL Assets]有數個使用案例，讓網路效能比我們的[!DNL Experience Manager]專案中的許多效能更重要。 客戶可以擁有快速伺服器，但如果網路連線不夠大，無法支援從系統上傳和下載資產的使用者負載，則速度仍會顯得緩慢。 在[Assets考量使用者體驗、執行個體大小調整、工作流程評估及網路拓撲](/help/assets/assets-network-considerations.md)時，判斷使用者與[!DNL Experience Manager]的網路連線中的扼殺點的方法很好。
+[!DNL Assets]有數個使用案例，讓網路效能比我們的[!DNL Experience Manager]專案中的許多效能更重要。 客戶可以擁有快速伺服器，但如果網路連線不夠大，無法支援從系統上傳和下載資產的使用者負載，則速度仍會顯得緩慢。 在[!DNL Experience Manager]Assets考量使用者體驗、執行個體大小調整、工作流程評估及網路拓撲[時，判斷使用者與](/help/assets/assets-network-considerations.md)的網路連線中的扼殺點的方法很好。
 
 ## 限制 {#limitations}
 
@@ -118,9 +118,9 @@ S3實施中的延遲是由背景寫入對話串所引入。 備份程式必須�
 
 由於檔案系統的限制，資料存放區中可以存在的檔案數量限製為21億。 存放庫可能會因為在達到資料存放區限制之前很久就因為大量節點而遇到問題。
 
-如果轉譯的產生不正確，請使用Camera Raw程式庫。 不過，在此情況下，影像的最長邊不應大於65000畫素。 此外，影像不應包含超過512 MP （512 x 1024 x 1024畫素）。 資產的大小並不重要。
+如果轉譯的產生不正確，請使用Camera Raw資料庫。 不過，在此情況下，影像的最長邊不應大於65000畫素。 此外，影像不應包含超過512 MP （512 x 1024 x 1024畫素）。 資產的大小並不重要。
 
-由於其他因素（例如畫素大小）會影響處理，因此很難準確估計受[!DNL Experience Manager]之特定棧集支援的現成可用TIFF檔案的大小。 [!DNL Experience Manager]可能可以立即處理大小為255 MB的檔案，但無法處理大小為18 MB的檔案，因為後者的畫素數目異常高於前者。
+由於其他因素（例如畫素大小）會影響處理，因此很難精確估計受[!DNL Experience Manager]之特定棧積現成支援TIFF檔案的大小。 [!DNL Experience Manager]可能可以立即處理大小為255 MB的檔案，但無法處理大小為18 MB的檔案，因為後者的畫素數目異常高於前者。
 
 ## 資產大小 {#size-of-assets}
 

@@ -8,8 +8,8 @@ content-type: reference
 exl-id: 36620e3e-ecdf-4062-bbef-65513362d691
 solution: Experience Manager, Experience Manager 6.5
 feature: Compliance
-role: Admin,Architect,Data Architect,Developer,Leader
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: Admin,Developer,Leader
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '3699'
 ht-degree: 1%
@@ -20,7 +20,7 @@ ht-degree: 1%
 
 此頁面提供進一步詳細資訊，以詳細說明及/或擴充[管理專案 — 最佳實務檢查清單](/help/managing/best-practices.md)所涵蓋的檔案和原則。
 
-## AEM — 您要使用什麼？ {#aem-what-will-you-be-using}
+## AEM — 您將使用什麼功能？ {#aem-what-will-you-be-using}
 
 >[!CAUTION]
 >
@@ -28,23 +28,23 @@ ht-degree: 1%
 
 ### AEM的功能 {#features-within-aem}
 
-實作AEM （特別是第一次）時，請檢閱AEM[&#128279;](https://business.adobe.com/tw/products/experience-manager/adobe-experience-manager.html)的功能和工作流程，以確定您想要或需要的區域。
+實作AEM （特別是第一次）時，請檢閱AEM[的](https://business.adobe.com/products/experience-manager/adobe-experience-manager.html)功能和工作流程，以確定您想要或需要的區域。
 
-請考量您使用的AEM功能及其對設計的影響；例如：
+請考量您使用的AEM功能及其對您設計的影響；例如：
 
-* [商務](/help/commerce/cif-classic/administering/ecommerce.md)
-* [Screens](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html?lang=zh-Hant)
+* [Commerce](/help/commerce/cif-classic/administering/ecommerce.md)
+* [Screens](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html)
 * [Assets](/help/assets/assets.md)
 * [標記](/help/sites-administering/tags.md)
 * [多網站管理與翻譯](/help/sites-administering/msm-and-translation.md)
-* [表單](/help/forms/using/introduction-aem-forms.md)
+* [Forms](/help/forms/using/introduction-aem-forms.md)
 * [Communities](/help/communities/deploy-communities.md)
 
 此外，若要瞭解各種AEM版本，請檢視[發行說明](/help/release-notes/release-notes.md)，以瞭解何時新增任何新功能。
 
 ### 整合 {#integrations}
 
-AEM可與其他Adobe產品、協力廠商服務或兩者整合。 這些工作流程可增加您掌握的能力和功能。
+AEM可以與其他Adobe產品、協力廠商服務或兩者整合。 這些工作流程可增加您掌握的能力和功能。
 
 如需完整資訊，請參閱[解決方案整合](/help/sites-administering/integration.md)。
 
@@ -191,7 +191,7 @@ AEM可與其他Adobe產品、協力廠商服務或兩者整合。 這些工作�
 
 因此，在決定您的設計之前&#x200B;*定義您的目標量度*。 如此可讓您根據這些因素最佳化設計。 專案開發後，基本設計原則就變得富有挑戰性。
 
-當您建立網站的結構時，請遵循AEM網站的建議結構。 請務必瞭解下列問題和/或原則：
+建立網站的結構時，請遵循AEM網站的建議結構。 請務必瞭解下列問題和/或原則：
 
 * 如何建構網站內容。
 * 範本和元件的運作方式。
@@ -246,7 +246,7 @@ AEM可與其他Adobe產品、協力廠商服務或兩者整合。 這些工作�
    * 適合在更新內容頁面和這些頁面上的個別元素時產生大量請求的少數使用者
    * 儘快將您的內容帶入網站，以發揮最大生產力
 
-* **Publish環境**
+* **發佈環境**
 
   此環境包含您提供給使用者使用的內容：
 
@@ -277,7 +277,7 @@ AEM可與其他Adobe產品、協力廠商服務或兩者整合。 這些工作�
 * 在發佈時測量（沒有製作環境和/或CFC額外負荷）
 * 在伺服器上測量（沒有網路負荷）
 * 未快取(無AEM輸出快取，無Dispatcher快取)
-* 僅適用於具有許多相依性的複雜專案(HTML、JS、PDF...)
+* 僅適用於具有許多相依性的複雜專案(HTML、JS、PDF、...)
 * 系統上沒有其他載入
 
 您有數個機制可用來監控回應時間：
@@ -332,7 +332,7 @@ AEM可與其他Adobe產品、協力廠商服務或兩者整合。 這些工作�
 
    * 通常可以準確估計同時使用者的數量。 您可以知道總共有多少位作者，但（可能）並非所有作者同時都在作用中。
 
-* **Publish環境**
+* **發佈環境**
 
    * 預測發佈環境較困難，因此您必須選取目標值。 同樣地，這應該根據您目前網站的體驗，以及您新網站的現實期望。
    * 特殊事件（例如，當您發佈新的、受歡迎的內容）可能會超過預期，甚至超過功能（當某些事件的門票可供出售時，媒體有時會回報此問題）。
@@ -374,7 +374,7 @@ AEM可與其他Adobe產品、協力廠商服務或兩者整合。 這些工作�
 
 安全性至關重要，也是一項日益嚴峻的挑戰。 ***必須***&#x200B;從您專案的最早階段開始考量及規劃。
 
-[安全性檢查清單](/help/sites-administering/security-checklist.md)詳細說明您應採取的步驟，以確保您的AEM安裝部署時是安全的。 其他安全性方面包含在[安全性（開發時）](/help/sites-developing/security.md)和[使用者管理與安全性](/help/sites-administering/security.md)中。
+[安全性檢查清單](/help/sites-administering/security-checklist.md)詳細說明您應採取的步驟，以確保您的AEM在部署時安裝是安全的。 其他安全性方面包含在[安全性（開發時）](/help/sites-developing/security.md)和[使用者管理與安全性](/help/sites-administering/security.md)中。
 
 ## 平行和反複任務 {#parallel-and-iterative-tasks}
 
@@ -382,12 +382,12 @@ AEM可與其他Adobe產品、協力廠商服務或兩者整合。 這些工作�
 >
 >下列專案：
 >
->* 提供與AEM專案的&#x200B;*first*&#x200B;實作相關的總覽。
+>* 提供與AEM專案的&#x200B;*第一個*&#x200B;實作相關的總覽。
 >* 旨在作為摘要概述；如需特定階段/里程碑/任務的相關資訊，請參閱[專案檢查清單](/help/managing/best-practices.md)。
 >* 任何時間範圍都是理論上的。
 >
 
-對於標準AEM專案的新實作，請考慮以下任務：
+對於標準AEM專案的新實作，請考慮以下工作：
 
 * 從銷售處理移轉。
 * 客戶應用程式的實作（**開發**）。
@@ -475,7 +475,7 @@ AEM可與其他Adobe產品、協力廠商服務或兩者整合。 這些工作�
 >
 >這些數字只能用於初始估計。 經驗豐富的AEM開發人員必須進行詳細分析。
 
-| 階段 | 付出 |
+| 階段 | 成果 |
 |---|---|
 | 開發 | 涵蓋所有開發需求的每個元件節點2至4小時的粗略估計。 |
 | 開發人員測試 | 15%的開發專案 |
@@ -521,12 +521,12 @@ AEM可與其他Adobe產品、協力廠商服務或兩者整合。 這些工作�
   </tr>
   <tr>
    <td>AEM</td>
-   <td><p>AEM本身提供一系列機制，協助您監控、測試、調查應用程式及為其偵錯，包括：</p>
+   <td><p>AEM本身提供一系列機制，協助您監控、測試、調查應用程式並為其偵錯，包括：</p>
     <ul>
      <li><a href="/help/sites-developing/developer-mode.md">開發人員模式</a></li>
      <li><a href="/help/sites-developing/hobbes.md">測試主控台</a></li>
      <li><a href="/help/sites-administering/operations-dashboard.md">操作控制面板</a></li>
-     <li><a href="/help/sites-authoring/content-insights.md">內容分析</a></li>
+     <li><a href="/help/sites-authoring/content-insights.md">內容洞察</a></li>
      <li><a href="/help/sites-authoring/author-environment-tools.md#content-tree">內容樹狀結構</a></li>
     </ul> </td>
   </tr>

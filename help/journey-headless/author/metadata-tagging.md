@@ -4,8 +4,8 @@ description: 了解如何為內容片段定義中繼資料和標記
 exl-id: b4cc1311-1ef7-409a-bd41-0456519b3436
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments
-role: Admin, Architect,Data Architect,Developer,User,Leader
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: Admin, Developer, User, Leader
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '257'
 ht-degree: 98%
@@ -24,7 +24,7 @@ ht-degree: 98%
 
 ## 目標 {#objective}
 
-* **對象**：進階
+* **客群**：進階
 * **Objective**：介紹在 Headless CMS 編寫時如何使用中繼資料和標記。
 
 ## 新增中繼資料和標記 {#adding-metadata-and-tags}

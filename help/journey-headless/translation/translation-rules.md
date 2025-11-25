@@ -4,11 +4,11 @@ description: 了解如何定義翻譯規則以識別要翻譯的內容。
 exl-id: 262503af-361b-491c-8639-0bb32f0a4c0e
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments,Language Copy
-role: Admin, Architect,Data Architect,Developer,User,Leader
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: Admin, Developer, User, Leader
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '847'
-ht-degree: 85%
+ht-degree: 91%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 85%
 
 ## 目前進度 {#story-so-far}
 
-在 AEM Headless 翻譯歷程的上一個文件「[設定翻譯整合](configure-connector.md)」中，您已了解如何安裝和設定翻譯整合，您現在應該：
+在 AEM Headless 翻譯歷程的上一份文件「[設定翻譯整合](configure-connector.md)」中，您已了解如何安裝和設定翻譯整合，您現在應該：
 
 * 了解 AEM 中翻譯整合框架的重要參數。
 * 能夠為您的翻譯服務設定您自己的連接。
@@ -69,7 +69,7 @@ ht-degree: 85%
 1. 使用路徑瀏覽器選取所需的路徑，然後按一下&#x200B;**確認**&#x200B;按鈕以儲存。 請記住，內容片段 (其包含 Headless 內容) 通常位於 `/content/dam/<your-project>` 下。
    ![選取路徑](assets/select-context.png)
 1. AEM 儲存設定。
-1. 選取您建立的內容，然後按一下[編輯]。**&#x200B;** 這將開啟&#x200B;**翻譯規則編輯器** 以設定屬性。
+1. 選取您建立的內容，然後按一下[編輯]。**** 這將開啟&#x200B;**翻譯規則編輯器** 以設定屬性。
    ![翻譯規則編輯器](assets/translation-rules-editor.png)
 1. 依預設，所有設定都繼承自父路徑，在此案例中為 `/content/dam`。取消核取選項&#x200B;**從`/content/dam`**&#x200B;繼承以新增其他欄位到組態。
 1. 取消勾選後，在清單的&#x200B;**一般**&#x200B;部分下，新增您[先前識別為翻譯欄位](getting-started.md#content-models)之內容片段模型的屬性名稱。
@@ -77,8 +77,7 @@ ht-degree: 85%
    1. 選項&#x200B;**翻譯**&#x200B;和&#x200B;**繼承**&#x200B;會自動勾選。
    1. 按一下&#x200B;**新增**。
    1. 對必須翻譯的所有欄位重複這些步驟。
-   1. 按一下「**儲存**」。
-
+   1. 按一下&#x200B;**儲存**。
       ![新增屬性](assets/add-property.png)
 
 您現在已經設定翻譯規則。
@@ -87,7 +86,7 @@ ht-degree: 85%
 
 有數個其他屬性可以設定為翻譯規則的一部分。此外，您可以手動將您的規則指定為 XML，可提供更高的明確性和靈活性。
 
-開始本地化 Headless 內容通常不需要此類功能，但如果您有興趣，可以在[其他資源](#additional-resources)章節深入了解。
+開始本地化 Headless 內容通常不需要此類功能，但如果您有興趣，可以在[其他資源](#additional-resources)區段深入了解。
 
 ## 下一步 {#what-is-next}
 
@@ -100,6 +99,6 @@ ht-degree: 85%
 
 ## 其他資源 {#additional-resources}
 
-我們建議您檢閱檔案[翻譯內容](translate-content.md)，以繼續無頭式翻譯歷程的下一部分，以下是一些其他可選資源，這些資源對檔案中提到的一些概念進行了更深入的探究，但並非繼續無頭式歷程所必需的。
+雖然建議您檢閱文件「[翻譯內容](translate-content.md)」以繼續 Headless 翻譯歷程的下一部分，但下列是一些其他選用資源，深入探究了本文件提到的一些概念，不過這些資源並非繼續 Headless 歷程的必要條件。
 
 * [識別要翻譯的內容](/help/sites-administering/tc-rules.md) - 了解翻譯規則如何識別需要翻譯的內容。

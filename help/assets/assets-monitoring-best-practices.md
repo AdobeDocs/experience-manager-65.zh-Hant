@@ -2,13 +2,13 @@
 title: 監視 [!DNL Assets] 部署的最佳實務
 description: 部署 [!DNL Adobe Experience Manager] 部署後，監視其環境和效能的最佳實務。
 contentOwner: AG
-role: Admin, Architect
+role: Admin, Developer
 feature: Asset Management
 exl-id: a9e1bd6b-c768-4faa-99a3-7110693998dc
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
-source-wordcount: '1639'
+source-wordcount: '1638'
 ht-degree: 0%
 
 ---
@@ -31,14 +31,14 @@ ht-degree: 0%
 您應在開發的效能測試階段或高負載情況下執行即時監視，以瞭解環境的效能特性。 通常應使用一套工具來執行即時監視。 以下是一些建議：
 
 * [Visual VM](https://visualvm.github.io/)： Visual VM可讓您檢視詳細的Java VM資訊，包括CPU使用量、Java記憶體使用量。 此外，它可讓您取樣並評估在部署上執行的程式碼。
-* [Top](https://man7.org/linux/man-pages/man1/top.1.html)： Top是開啟儀表板的Linux命令，其中顯示使用狀況統計資料，包括CPU、記憶體和IO使用狀況。 它提供執行個體上所發生事件的整體概觀。
-* [Htop](https://hisham.hm/htop/)： Htop是互動式程式檢視器。 除了Top提供的資訊外，還提供詳細的CPU和記憶體使用狀況。 大部分的Linux系統都可以使用`yum install htop`或`apt-get install htop`安裝Htop。
+* [Top](https://man7.org/linux/man-pages/man1/top.1.html)： Top是Linux命令，可開啟儀表板，顯示使用量統計資料，包括CPU、記憶體和IO使用量。 它提供執行個體上所發生事件的整體概觀。
+* [Htop](https://hisham.hm/htop/)： Htop是互動式程式檢視器。 除了Top所提供的功能，還提供詳細的CPU和記憶體使用率。 大部分的Linux系統都可以使用`yum install htop`或`apt-get install htop`安裝Htop。
 
 * Iotop： Iotop是磁碟IO使用情況的詳細儀表板。 它會顯示長條圖和公尺，描繪使用磁碟IO的流程及其使用的數量。 大部分的Linux系統都可以使用`yum install iotop`或`apt-get install iotop`安裝Iotop。
 
 * [Iftop](https://www.ex-parrot.com/pdw/iftop/)： Iftop顯示有關乙太網路/網路使用情況的詳細資訊。 Iftop會針對使用乙太網路的實體，顯示每個通訊通道的統計資料，以及實體使用的頻寬量。 大部分的Linux系統都可以使用`yum install iftop`或`apt-get install iftop`安裝Iftop。
 
-* Java Flight Recorder (JFR)：Oracle中的商業工具，您可以在非生產環境中自由使用。 如需詳細資訊，請參閱[如何使用Java Flight Recorder來診斷CQ執行階段問題](https://cq-ops.tumblr.com/post/73865704329/how-to-use-java-flight-recorder-to-diagnose-cq)。
+* Java Flight Recorder (JFR)：Oracle的商業工具，您可在非生產環境中自由使用。 如需詳細資訊，請參閱[如何使用Java Flight Recorder來診斷CQ執行階段問題](https://cq-ops.tumblr.com/post/73865704329/how-to-use-java-flight-recorder-to-diagnose-cq)。
 * [!DNL Experience Manager] `error.log`檔案：您可以調查[!DNL Experience Manager] `error.log`檔案，以取得系統記錄之錯誤的詳細資料。 使用命令`tail -F quickstart/logs/error.log`來識別要調查的錯誤。
 * [工作流程主控台](/help/sites-administering/workflows.md)：利用工作流程主控台來監視落後或停滯的工作流程。
 
@@ -69,11 +69,11 @@ ht-degree: 0%
 * 網路輸送量
 * 磁碟IO
 * 記憶體
-* CPU使用率
+* CPU使用情況
 * JMX MBeans
 * 外部網站
 
-您需要外部工具，例如NewRelic(TM)和AppDynamics(TM)來監視每個專案。 使用這些工具，您可以定義系統特定的警示，例如，高系統使用率、工作流程備份、健康狀態檢查失敗，或未驗證的網站存取。 Adobe不建議使用任何優於其他工具的特定工具。 尋找適合您的工具，並用來監視討論的專案。
+您需要外部工具，例如NewRelic(TM)和AppDynamics(TM)來監視每個專案。 使用這些工具，您可以定義系統特定的警示，例如，高系統使用率、工作流程備份、健康狀態檢查失敗，或未驗證的網站存取。 Adobe不建議使用任何優於其他特定工具。 尋找適合您的工具，並用來監視討論的專案。
 
 #### 內部應用程式監視 {#internal-application-monitoring}
 
@@ -111,7 +111,7 @@ Threads
 
 **監視器[!DNL Experience Manager]**
 
-[!DNL Experience Manager]也會透過JMX公開一組統計資料和作業。 這些功能有助於評估系統健康狀況，並在潛在問題影響使用者之前識別它們。 如需詳細資訊，請參閱[!DNL Experience Manager] JMX MBean上的[檔案](/help/sites-administering/jmx-console.md)。
+[!DNL Experience Manager]也會透過JMX公開一組統計資料和作業。 這些功能有助於評估系統健康狀況，並在潛在問題影響使用者之前識別它們。 如需詳細資訊，請參閱[ JMX MBean上的](/help/sites-administering/jmx-console.md)檔案[!DNL Experience Manager]。
 
 以下是您可以監視[!DNL Experience Manager]的一些基準線引數：
 
@@ -131,7 +131,7 @@ Threads
 工作階段計數器
 
 * MBean： `org.apache.jackrabbit.oak:id=7,name="OakRepository Statistics",type="RepositoryStats"`
-* URL： */system/console/jmx/org.apache.jackrabbit.oak：id=7，name=&quot;OakRepository Statistics&quot;，type*=&quot;RepositoryStats&quot;
+* URL： */system/console/jmx/org.apache.jackrabbit.oak:id=7，name=&quot;OakRepository Statistics&quot;，type*=&quot;RepositoryStats&quot;
 * 執行個體：所有伺服器
 * 警報臨界值：當開啟的工作階段超過基準線50%以上時。
 * 警報定義：工作階段可能會透過程式碼開啟，但絕不會關閉。 隨著時間推移，這種情況可能會慢慢發生，最終導致系統中的記憶體遺失。 雖然系統上的工作階段數應該會波動，但不應持續增加。
@@ -194,11 +194,11 @@ Threads
 在監視過程中，如果您遇到問題，您可以執行下面一些疑難排解工作，以解決[!DNL Experience Manager]部署的常見問題：
 
 * 如果使用TarMK，請經常執行Tar壓縮。 如需詳細資訊，請參閱[維護存放庫](/help/sites-deploying/storage-elements-in-aem-6.md#maintaining-the-repository)。
-* 檢查`OutOfMemoryError`記錄。 如需詳細資訊，請參閱[分析記憶體問題](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html?lang=zh-Hant)。
+* 檢查`OutOfMemoryError`記錄。 如需詳細資訊，請參閱[分析記憶體問題](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html)。
 
 * 檢查記錄檔中是否有未編制索引的查詢、樹狀結構周遊或索引周遊的參考。 這些表示未編制索引的查詢或索引不足的查詢。 如需最佳化查詢和索引效能的最佳實務，請參閱[查詢和索引的最佳實務](/help/sites-deploying/best-practices-for-queries-and-indexing.md)。
 * 使用工作流程主控台，驗證您的工作流程是否如預期般執行。 如有可能，請將多個工作流程壓縮為單一工作流程。
 * 重新造訪即時監控，並尋找其他瓶頸或任何特定資源的高消費者。
 * 調查來自使用者端網路的輸出點，以及指向[!DNL Experience Manager]部署網路的輸入點，包括Dispatcher。 這些通常是瓶頸區域。 如需詳細資訊，請參閱[Assets網路考量事項](/help/assets/assets-network-considerations.md)。
-* 增加您的[!DNL Experience Manager]伺服器大小。 您的[!DNL Experience Manager]部署可能大小不足。 Adobe客戶支援可協助您識別伺服器是否過小。
+* 增加您的[!DNL Experience Manager]伺服器大小。 您的[!DNL Experience Manager]部署可能大小不足。 Adobe客戶支援可協助您識別伺服器是否大小不足。
 * 檢查`access.log`和`error.log`檔案中是否有發生錯誤時的專案。 尋找可能表示自訂程式碼異常的模式。 將它們新增至您監視的事件清單。

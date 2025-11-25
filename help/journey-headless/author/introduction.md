@@ -4,21 +4,21 @@ description: 介紹Adobe Experience Manager強大且有彈性的無周邊功能�
 exl-id: 39d2218a-4f11-459d-8514-cfd312246be5
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments
-role: Admin, Architect,Data Architect,Developer,User,Leader
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: Admin, Developer, User, Leader
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '649'
 ht-degree: 87%
 
 ---
 
-# 使用 AEM 進行 Headless 製作 - 簡介 {#author-headless-introduction}
+# 使用 AEM 進行 Headless 編寫 - 簡介 {#author-headless-introduction}
 
-在[AEM Headless內容作者歷程](overview.md)的這一部分，您可以學習必要的（基本）概念和術語，以瞭解Adobe Experience Manager (AEM)的Headless內容傳遞的作者內容。
+在[AEM Headless內容製作歷程](overview.md)的這一部分，您可以瞭解必要的（基本）概念和術語，以瞭解Adobe Experience Manager (AEM)的Headless內容傳送的製作內容。
 
 ## 目標 {#objective}
 
-* **對象**：初學者
+* **客群**：初學者
 * **Objective**：介紹與 Headless 製作相關的概念和術語。
 
 ## 內容管理系統 (CMS) {#content-management-system}
@@ -33,7 +33,7 @@ Headless 是一個術語，用於描述能夠有效地將內容與內容在 Web 
 
 傳統上，您會在 CMS 中管理內容，該 CMS 會負責將內容呈現在您的網頁上。
 
-現在，Headless表示您的內容集可以在CMS中進行管理，然後由一或多個（獨立）應用程式存取。
+現在，Headless表示您的內容集可以在CMS中管理，然後由一或多個（獨立）應用程式存取。
 
 這表示您的內容能以多種格式傳遞到任何裝置。這使整個流程更加靈活，也表示您無需擔心版面和格式。
 
@@ -51,7 +51,7 @@ Headless 是一個術語，用於描述能夠有效地將內容與內容在 Web 
 
 * Headless CMS
    * 若為 Headless ，可將內容製作為&#x200B;**內容片段**。
-這些是內容的獨立項目，可直接由各種應用程式存取，因為它們具有預先定義結構，以&#x200B;**內容片段模型**&#x200B;為基礎。
+這些是內容的獨立項目，可直接由各種應用程式存取，因為它們具有預先定義結構，以**內容片段模型**為基礎。
 這表示您的內容能以多種格式及內含多種功能呈現在多種裝置上。
 (作為一個雙重打擊，如果你想要的話，可以在建構 AEM 網頁時使用這些片段。)
 
@@ -87,6 +87,6 @@ Headless 是一個術語，用於描述能夠有效地將內容與內容在 Web 
 
 * [AEM as a Headless CMS 簡介](/help/sites-developing/headless/introduction.md)
 
-* [AEM 開發人員入口網站](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=zh-Hant)
+* [AEM 開發人員入口網站](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
 
-* [AEM 中的 Headless 教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=zh-Hant)
+* [AEM 中的 Headless 教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)

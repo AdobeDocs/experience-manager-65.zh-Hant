@@ -1,5 +1,5 @@
 ---
-title: 智慧型影像
+title: 智慧型影像處理
 description: 智慧型影像可套用每位使用者獨特的檢視特性，以針對其體驗自動最佳化的正確影像，進而提供更優異的效能和參與度。
 contentOwner: Rick Brough
 topic-tags: dynamic-media
@@ -9,14 +9,14 @@ feature: Asset Management,Renditions
 role: User, Admin
 exl-id: e427d4ee-d5c8-421b-9739-f3cf2de36e41
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 0b90fdd13efc5408ef94ee1966f04a80810b515e
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '3300'
 ht-degree: 0%
 
 ---
 
-# 智慧型影像 {#smart-imaging}
+# 智慧型影像處理 {#smart-imaging}
 
 智慧型影像可套用每位使用者獨特的檢視特性，以針對其體驗自動最佳化的正確影像，進而提供更優異的效能和參與度。
 
@@ -88,7 +88,7 @@ In terms of images, the goal is to serve the best quality images as efficiently 
 
 您可以將`bfc=off`附加至影像的URL以關閉智慧型影像。
 
-另請參閱Dynamic Media影像提供與轉譯API中的[bfc](https://experienceleague.adobe.com/zh-hant/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-bfc)。
+另請參閱Dynamic Media影像提供與轉譯API中的[bfc](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-bfc)。
 
 ### 關於裝置畫素比(dpr)最佳化 {#dpr}
 
@@ -138,7 +138,7 @@ DPR和網路頻寬值是根據偵測到的套件式CDN使用者端值。 這些�
 
 ## 常見問題
 
-+++智慧型影像是否有任何授權成本？
++++智慧型影像是否有任何相關的授權成本？
 
 不行。智慧型影像包含於您現有的授權中。 此規則適用於Dynamic Media Classic或Experience Manager - Dynamic Media (內部部署、AMS和Experience Manager as a Cloud Service)。
 
@@ -221,7 +221,7 @@ To understand pre-requisites for Smart Imaging, see [Am I eligible to use Smart 
 
 +++
 
-+++為帳戶啟用智慧影像的程式為何？
++++為帳戶啟用智慧影像的程式為何？ 
 
 若要開始使用智慧型影像，請附加`bfc=on`、`dpr=on,dprValue`、`network=on`或全部三個引數設定到您現有的URL或預設集。 如果您不想手動進行這些變更，您可以建立支援案例來依預設啟用「智慧型影像」。
 
@@ -255,7 +255,7 @@ To understand pre-requisites for Smart Imaging, see [Am I eligible to use Smart 
 
       * 列出所有相關網域，例如&#x200B;*`company.com`*&#x200B;或&#x200B;*`mycompany.scene7.com`*
       * 智慧型影像支援一般和自訂網域。
-      * 若要識別您的網域，請開啟[Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/zh-hant/docs/dynamic-media-classic/using/getting-started/signing-out#getting-started)並登入您的公司帳戶。
+      * 若要識別您的網域，請開啟[Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/en/docs/dynamic-media-classic/using/getting-started/signing-out#getting-started)並登入您的公司帳戶。
 
          1. 瀏覽至&#x200B;**[!UICONTROL 設定]** > **[!UICONTROL 應用程式設定]** > **[!UICONTROL 一般設定]**。
          1. 尋找&#x200B;**[!UICONTROL 發佈的伺服器名稱]**&#x200B;欄位以確認您的網域。
@@ -288,7 +288,7 @@ To understand pre-requisites for Smart Imaging, see [Am I eligible to use Smart 
 
 +++
 
-+++切換至使用智慧型影像有什麼風險？
++++切換至使用智慧型影像有何風險？
 
 客戶網頁沒有風險。 不過，轉換至智慧型影像處理會清除CDN快取。 此作業涉及在Experience Manager上移至新的Dynamic Media Classic或Dynamic Media設定。
 
@@ -336,9 +336,9 @@ To understand pre-requisites for Smart Imaging, see [Am I eligible to use Smart 
 >**X-Adobe-Smart-Imaging = -1，正在傳遞WebP**
 >
 >如果`X-Adobe-Smart-Imaging`的值為–1，而且WebP仍在傳遞，則智慧型影像處理為作用中。 但是，由於快取已過時，因此未計算大小優勢。 您可以在影像的URL中使用`cache=update` （僅一次）來修正此問題。
->&#x200B;>使用修飾元的範例：
->&#x200B;>`https://smartimaging.scene7.com/is/image/SmartImaging/sample1?cache=update`
->&#x200B;>若要讓整個快取失效，您必須建立支援案例。
+>使用修飾元的範例：
+>`https://smartimaging.scene7.com/is/image/SmartImaging/sample1?cache=update`
+>若要讓整個快取失效，您必須建立支援案例。
 
 +++
 
@@ -358,7 +358,7 @@ To understand pre-requisites for Smart Imaging, see [Am I eligible to use Smart 
 
 +++
 
-+++有哪些「調整」可用？ 是否有任何可定義的設定或行為？
++++有哪些「調整」可供使用？ 是否有任何可定義的設定或行為？
 
 智慧型影像有三個可啟用或停用的選項。
 
@@ -392,25 +392,25 @@ To understand pre-requisites for Smart Imaging, see [Am I eligible to use Smart 
 
 +++
 
-+++如果智慧型影像處理確實能管理品質設定，我可以設定最小值和最大值嗎？ 換句話說，品質不小於60且不大於80？
++++如果智慧型影像確實能管理品質設定，我可以設定最小值和最大值嗎？ 換句話說，品質不小於60且不大於80？
 
 目前沒有這類布建。
 
 +++
 
-+++智慧型影像處理會自動調整百分比品質輸出設定，還是手動調整的設定，且套用至所有影像？ 在哪個範圍內？
++++智慧型影像處理會自動調整百分比品質輸出設定，還是手動調整的設定，且會套用至所有影像？ 在哪個範圍內？
 
 智慧型影像會自動調整品質百分比。 此品質是由Adobe開發的機器學習演演算法所決定。 此百分比不限範圍。
 
 +++
 
-+++使用智慧型影像時，哪些影像伺服命令受到支援或忽略？
++++使用智慧型影像時，支援或忽略哪些「影像伺服」命令？
 
 唯一被忽略的命令是`fmt`和`qlt`。 支援所有剩餘的命令。
 
 +++
 
-+++只有JPEG影像會被智慧型影像取代嗎？ 如果我請求WebP、PNG或其他什麼怎麼辦？
++++智慧型影像是否只會取代JPEG影像？ 如果我請求WebP、PNG或其他什麼怎麼辦？
 
 此功能僅適用於JPEG和PNG。
 

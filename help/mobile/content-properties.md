@@ -9,10 +9,10 @@ exl-id: 05c8c846-69cc-4075-9149-33890b3d1e08
 solution: Experience Manager
 feature: Mobile
 role: User
-source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
-source-wordcount: '333'
-ht-degree: 19%
+source-wordcount: '312'
+ht-degree: 18%
 
 ---
 
@@ -20,9 +20,9 @@ ht-degree: 19%
 
 {{ue-over-mobile}}
 
-在AEM中，文章、橫幅和集合以cq：Pages表示。
+在AEM中，文章、橫幅和集合會顯示為cq:Pages。
 
-除了下面顯示的幾個其他屬性外，它們共用在任何cq：Page中找到的相同常見屬性，這些屬性代表Adobe Experience Manager (AEM) Mobile On-Demand Services中繼資料和整合支援屬性。
+除了下面顯示的幾個其他屬性以外，它們共用在任何cq:Page中找到的相同一般屬性，這些屬性代表Adobe Experience Manager (AEM) Mobile On-Demand Services中繼資料和整合支援屬性。
 
 下表說明內容屬性和節點。
 
@@ -31,11 +31,11 @@ ht-degree: 19%
 | **屬性名稱** | **類型** | **預設值或預期值** | **說明** |
 |---|---|---|---|
 | dps-id | 字串 |  | 上傳至AEM Mobile或從AEM Mobile匯入後，由AEM Mobile指派並由AEM儲存 |
-| dps-resourceType | 字串 | dps:Article | dps:Banner | dps:Collection | 實體型別屬性 |
+| dps-resourceType | 字串 | dps:Article | `dps:Banner` \| `dps:Collection` \| `entity type property` |
 | dps-version | 字串 |  | AEM Mobile實體版本（也包含在完整aemm-id中） |
-| dps-lastSynced | 日期 |  | 上次從AEM Mobile同步/匯入至AEM的日期 |
+| dps-lastSynced | 日期 |  | 上次從AEM Mobile同步/匯入AEM的日期 |
 | dps-lastUploaded | 日期 |  | 上次從AEM上傳至AEM Mobile的日期 |
-| dps-lastUploadedBy | 字串：userid |  | 執行了上次從AEM到AEM Mobile上傳請求的id使用者 |
+| dps-lastUploadedBy | 字串:userid |  | 執行從AEM到AEM Mobile的上次上傳請求的id使用者 |
 
 ## 核心中繼資料屬性 {#core-metadata-properties}
 
@@ -88,7 +88,7 @@ ht-degree: 19%
 
 | 節點名稱 | 類型 | 預設值或預期值 | 說明 |
 |--- |--- |--- |--- |
-| 影像 | jcr：primaryType=nt：unstructured <br> sling：resourceType=foundation/components/image |  |  |
+| 影像 | jcr:primaryType=nt:unstructured <br> sling:resourceType=foundation/components/image |  |  |
 
 ### 實體 {#entities}
 
@@ -96,7 +96,7 @@ ht-degree: 19%
 
 | 節點名稱 | 類型 | 預期值的預設值 | 說明 |
 |--- |--- |--- |--- |
-| social-share-image |  | jcr：primaryType=nt：unstructured <br> sling：resourceType=foundation/components/image |  |
+| social-share-image |  | jcr:primaryType=nt:unstructured <br> sling:resourceType=foundation/components/image |  |
 
 #### 橫幅 {#banners-1}
 
@@ -108,4 +108,4 @@ ht-degree: 19%
 
 | 節點名稱 | 類型 | 預期值的預設值 | 說明 |
 |--- |--- |--- |--- |
-| background-image | jcr：primaryType=nt：unstructured <br> sling：resourceType=foundation/components/image |  |  |
+| background-image | jcr:primaryType=nt:unstructured <br> sling:resourceType=foundation/components/image |  |  |

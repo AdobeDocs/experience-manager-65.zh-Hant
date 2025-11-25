@@ -1,11 +1,11 @@
 ---
 title: Adobe Experience Manager (AEM)與網頁協助工具准則
-description: Adobe Experience Manager (AEM)與網頁協助工具指引簡介
+description: Adobe Experience Manager (AEM)與網路無障礙指引簡介
 exl-id: db8785b9-09eb-444a-addc-74c520e710a9
 solution: Experience Manager, Experience Manager 6.5
 feature: Compliance
-role: Developer,Leader,Architect,Data Architect,User
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: Developer, Leader, User
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '397'
 ht-degree: 65%
@@ -14,9 +14,9 @@ ht-degree: 65%
 
 # AEM與網頁協助工具准則{#aem-and-the-web-accessibility-guidelines}
 
-從社會、經濟和法律層面來看，無論目標對象是否有任何不方便或限制，我們都有許多動機必須盡可能方便他們存取網頁內容。因此，使用Adobe Experience Manager (AEM)增設網頁協助功能，對理想的網頁設計而言可謂日益重要。
+從社會、經濟和法律層面來看，無論目標客群是否有任何不方便或限制，我們都有許多動機必須盡可能方便他們存取網頁內容。因此，使用Adobe Experience Manager (AEM)增設網頁協助功能，對理想的網頁設計而言可謂日益重要。
 
-建立無障礙的網站和內容，並產生AEM影響：
+使用AEM建立無障礙的網站和內容，可帶來以下影響：
 
 * 負責設定 AEM 的管理員可確保無障礙功能可正確啟用。
 
@@ -26,7 +26,7 @@ ht-degree: 65%
 
 * 範本開發人員在實作網站設計時，也應注意這類問題。
 
-Adobe Experience Manager符合[全球資訊網協會](#world-wide-web-consortium)提供的[指引](#wcag-accessibility-guidelines)。
+Adobe Experience Manager符合[全球資訊網協會](#wcag-accessibility-guidelines)提供的[指引](#world-wide-web-consortium)。
 
 >[!NOTE]
 >
@@ -38,7 +38,7 @@ Adobe Experience Manager符合[全球資訊網協會](#world-wide-web-consortium
 
 ## 網頁內容可及性指引 (WCAG) 2.1  {#wcag-accessibility-guidelines}
 
-為協助網頁設計人員和開發人員製作無障礙的網站，[資訊網可及性推動組織 (WAI)](https://www.w3.org/WAI/) 於 2018 年 6 月發佈[網頁內容可及性指引 (WCAG) 2.1 &#x200B;](https://www.w3.org/TR/WCAG/)。
+為協助網頁設計人員和開發人員製作無障礙的網站，[資訊網可及性推動組織 (WAI)](https://www.w3.org/WAI/) 於 2018 年 6 月發佈[網頁內容可及性指引 (WCAG) 2.1 ](https://www.w3.org/TR/WCAG/)。
 
 WCAG 2.1 提供的[指引 (及相關成功標準) 說明了無障礙環境等級以及指引的遵循方式](https://www.w3.org/TR/WCAG/#conformance)。
 

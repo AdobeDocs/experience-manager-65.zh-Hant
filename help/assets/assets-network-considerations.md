@@ -2,11 +2,11 @@
 title: 網路考量事項和需求
 description: 討論設計 [!DNL Adobe Experience Manager Assets] 部署時的網路考量事項。
 contentOwner: AG
-role: Architect, Admin
+role: Developer, Admin
 feature: Developer Tools
 exl-id: 1313842c-18b1-4727-ba63-b454d0f5a2cc
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '1010'
 ht-degree: 0%
@@ -52,7 +52,7 @@ ht-degree: 0%
 
 ![chlimage_1-355](assets/chlimage_1-355.png)
 
-請務必考慮網際網路和VPC連線上的未知因素，因為網際網路的頻寬可能會因為尖峰負載或大規模提供者中斷而受損。 一般來說，網際網路連線非常可靠。 但是，它有時可能會引入瓶頸。
+請務必考量網際網路和VPC連線上的未知因素，因為網際網路上的頻寬可能會因為尖峰負載或大規模提供者服務中斷而受損。 一般來說，網際網路連線非常可靠。 但是，它有時可能會引入瓶頸。
 
 從公司網路到網際網路的上行鏈路上，可能有其他服務使用該頻寬。 請務必瞭解可以為Assets專用或優先處理多少頻寬。 例如，如果1Gbps連結的使用率已經是80%，您最多只能為[!DNL Experience Manager Assets]配置20%的頻寬。
 
@@ -70,7 +70,7 @@ ht-degree: 0%
 
 設計[!DNL Experience Manager]環境的拓撲需要系統組態及使用者環境中網路連線的詳細知識。
 
-範例情境包括具有五部伺服器的發佈陣列、一個S3二進位存放區以及已設定的Dynamic Media。
+範例情境包含具有五部伺服器的發佈陣列、S3二進位存放區及已設定的Dynamic Media。
 
 Dispatcher與兩個實體（外部世界和[!DNL Experience Manager]部署）共用其100Mbps連線。 對於同時上載和下載作業，您應該將此數字除以2。 附加的外部儲存裝置使用個別的連線。
 

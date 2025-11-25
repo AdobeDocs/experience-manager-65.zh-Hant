@@ -4,8 +4,8 @@ description: 了解如何使用 AEM 的內容片段來設計、建立、規劃�
 exl-id: 5787204d-bcce-447e-b98c-2bc1c0d744c3
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments,GraphQL,Persisted Queries,Developing
-role: Admin,Architect,Data Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: Admin,Developer
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '375'
 ht-degree: 60%
@@ -31,7 +31,7 @@ ht-degree: 60%
 1. 登入AEM，從主功能表選取&#x200B;**導覽> Assets**。
 1. 導覽至您先前建立的[資料夾。](create-assets-folder.md)
 1. 按一下&#x200B;**建立>內容片段**。
-1. 內容片段的建立以兩步驟的精靈呈現。 請先選取您要使用哪個模式來建立內容片段，然後按一下[下一步]。**&#x200B;**
+1. 內容片段的建立以兩步驟的精靈呈現。 請先選取您要使用哪個模式來建立內容片段，然後按一下[下一步]。****
    * 可用模型取決於您為內容片段建立所在資產資料夾所定義的&#x200B;[**雲端設定**](create-assets-folder.md)。
    * 如果您收到訊息`We could not find any models`，請檢查資產資料夾的設定。
 

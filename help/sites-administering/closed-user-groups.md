@@ -10,9 +10,9 @@ exl-id: 39e35a07-140f-4853-8f0d-8275bce27a65
 feature: Security
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 6f3c4f4aa4183552492c6ce5039816896bd67495
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
-source-wordcount: '6662'
+source-wordcount: '6654'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ ht-degree: 0%
 
 ### 新的自訂使用者群組實作 {#the-new-custom-user-group-implementation}
 
-在AEM環境中已知的CUG包含下列步驟：
+在AEM中稱為CUG，其包含下列步驟：
 
 * 限制必須保護的樹狀結構上的讀取存取權，並只允許讀取在特定CUG執行個體中列出或完全從CUG評估中排除的主參與者。 這稱為&#x200B;**授權**&#x200B;專案。
 * 強制驗證指定的樹狀結構，並選擇性地指定該樹狀結構的專用登入頁面，然後排除該頁面。 這稱為&#x200B;**驗證**&#x200B;專案。
@@ -70,7 +70,7 @@ CUG的主要功能是限制內容存放庫中指定樹狀結構的讀取存取�
 
 這些CUG原則會透過名為oak-authorization-cug的個別授權模組部署至AEM執行個體。 此模組隨附自己的存取控制管理和許可權評估。 換言之，預設的AEM設定會提供Oak內容存放庫設定，該設定結合了多種授權機制。 如需詳細資訊，請參閱Apache Oak檔案上的[此頁面](https://jackrabbit.apache.org/oak/docs/security/authorization/composite.html)。
 
-在這個複合設定中，新的CUG不會取代附加到目標節點的現有存取控制內容。 相反地，這是一種補充資料，稍後也可以移除，而不會影響原始存取控制，預設情況下在AEM中會是一個存取控制清單。
+在這個複合設定中，新的CUG不會取代附加到目標節點的現有存取控制內容。 相反地，這是一種補充資料，稍後也可以移除，而不會影響原始存取控制，預設情況下，AEM中的會是一個存取控制清單。
 
 相較於前者，新的CUG政策一律會被辨識及視為存取控制內容。 這表示它們是使用JCR存取控制管理API建立和編輯的。 如需詳細資訊，請參閱[管理CUG原則](#managing-cug-policies)區段。
 
@@ -106,7 +106,7 @@ CUG原則的許可權評估以及與預設或任何其他授權模型的互動�
    * 對巢狀CUG的過度需求可能會突顯內容設計中的問題
    * 對CUG的需求過度（例如，在每個頁面上）可能表示需要自訂授權模式，可能更適合應用程式和手頭內容的特定安全性需求。
 
-* 將CUG原則支援的路徑限制在存放庫中的幾個樹狀結構，以便獲得最佳效能。 例如，自AEM 6.3起，僅允許將/content節點底下的CUG作為預設值送出。
+* 將CUG原則支援的路徑限制在存放庫中的幾個樹狀結構，以便獲得最佳效能。 例如，自AEM 6.3起，僅允許將/content節點底下的CUG作為預設值出貨。
 * CUG原則的設計目的，是要授予一小部分主體的讀取存取權。 大量主體的需求可能會突顯內容或應用程式設計中的問題，因此應重新考慮。
 
 ### 驗證：定義驗證需求 {#authentication-defining-the-auth-requirement}
@@ -129,7 +129,7 @@ CUG功能的認證相關部分可讓您標籤需要認證的樹狀結構，並�
 
 由於此型別的驗證需求應限製為某些執行模式，以及內容存放庫中的一小部分樹狀結構，因此追蹤需求mixin型別和登入路徑屬性是有條件的。 而且，它繫結到定義受支援路徑的對應配置（請參閱下面的配置選項）。 因此，只有這些支援路徑範圍內的變更才會觸發OSGi註冊的更新，其他地方mixin型別和屬性都會被忽略。
 
-預設AEM設定現在會使用此設定，允許以製作執行模式設定mixin，但只有在複製到發佈執行個體時才會生效。 請參閱[Sling驗證 — 架構](https://sling.apache.org/documentation/the-sling-engine/authentication/authentication-framework.html)檔案，以瞭解Sling如何強制執行驗證要求的詳細資訊。
+預設的AEM設定現在可允許以製作執行模式設定mixin，但只有在複製到發佈執行個體時才會生效，藉以使用此設定。 請參閱[Sling驗證 — 架構](https://sling.apache.org/documentation/the-sling-engine/authentication/authentication-framework.html)檔案，以瞭解Sling如何強制執行驗證要求的詳細資訊。
 
 在設定的支援路徑中新增`granite:AuthenticationRequired` mixin型別，會導致負責處理常式的OSGi註冊被更新，包含具有`sling.auth.requirements`屬性的新增、其他專案。 如果指定的驗證需求指定了選用的`granite:loginPath`屬性，則值也會向驗證器註冊，且具有&#39;-&#39;前置詞，以排除驗證需求。
 
@@ -139,7 +139,7 @@ Apache Sling驗證需求會透過頁面或節點階層繼承。 繼承和評估�
 
 #### 登入路徑評估 {#evaluation-of-login-path}
 
-評估登入路徑並在驗證時重新導向至對應資源，是AdobeGranite登入選擇器驗證處理常式( `com.day.cq.auth.impl.LoginSelectorHandler`)的實作詳細資料，這是預設以AEM設定的Apache Sling AuthenticationHandler。
+評估登入路徑並在驗證時重新導向至對應資源，是Adobe Granite登入選擇器驗證處理常式( `com.day.cq.auth.impl.LoginSelectorHandler`)的實作詳細資料，這是預設透過AEM設定的Apache Sling AuthenticationHandler。
 
 在呼叫`AuthenticationHandler.requestCredentials`時，此處理常式會嘗試判斷將使用者重新導向到的對應登入頁面。 此工作流程包含下列步驟：
 
@@ -153,7 +153,7 @@ Apache Sling驗證需求會透過頁面或節點階層繼承。 繼承和評估�
 
 * 透過上述呼叫取得有效的登入路徑時，使用者的請求會重新導向至該頁面。
 
-本檔案的目標是評估內部`LoginPathProvider`介面所公開的登入路徑。 自AEM 6.3以來出貨的實作行為如下：
+本檔案的目標是評估內部`LoginPathProvider`介面所公開的登入路徑。 自AEM 6.3之後發行的實作行為如下：
 
 * 登入路徑的註冊取決於區分過期密碼和需要定期登入作為重新導向的原因
 * 若為一般登入，會測試登入路徑是否可依下列順序取得：
@@ -336,7 +336,7 @@ while (isSupportedPath(path)) {
 >
 >如果已經設定`RequirementHandler`，而且目標包含在由支援的路徑所定義的樹狀結構中（請參閱設定選項區段），則上述對指定目標節點的修改只會反映在Apache Sling驗證程式上。
 >
->如需詳細資訊，請參閱[指派Mixin節點型別](https://docs.adobe.com/docs/en/spec/jcr/2.0/10_Writing.html#10.10.3指派Mixin節點型別)和[新增節點及設定屬性](https://docs.adobe.com/docs/en/spec/jcr/2.0/10_Writing.html#10.4新增節點及設定屬性)
+>如需詳細資訊，請參閱[指派Mixin節點型別]&#x200B;(https://docs.adobe.com/docs/en/spec/jcr/2.0/10_Writing.html#10.10.3指派Mixin節點型別)和[新增節點及設定屬性]&#x200B;(https://docs.adobe.com/docs/en/spec/jcr/2.0/10_Writing.html#10.4新增節點及設定屬性)
 
 #### 新增驗證需求 {#adding-a-new-auth-requirement}
 
@@ -436,7 +436,7 @@ session.save();
 
 目前沒有公用API可擷取匿名存取需要驗證的資源時生效的登入路徑。 如需如何擷取登入路徑的實作詳細資訊，請參閱登入路徑評估區段。
 
-不過，請注意，除了此功能定義的登入路徑之外，還有其他方法可指定重新導向至登入，在設計內容模型和特定AEM安裝的驗證需求時，應將這些方法列入考量。
+但請注意，除了此功能定義的登入路徑之外，還有其他方法可指定重新導向至登入，在設計內容模型和特定AEM安裝的驗證需求時，應將這些方法列入考量。
 
 #### 擷取繼承的驗證需求 {#retrieve-the-inherited-auth-requirement}
 
@@ -466,7 +466,7 @@ while (isSupported(node)) {
 
 ### 結合CUG政策與驗證需求 {#combining-cug-policies-and-the-authentication-requirement}
 
-下表列出透過設定同時啟用兩個模組的AEM執行個體中，CUG原則及驗證需求的有效組合。
+下表列出AEM執行個體中，透過設定同時啟用兩個模組的CUG原則及驗證需求的有效組合。
 
 | **需要驗證** | **登入路徑** | **限制的讀取存取權** | **預期效果** |
 |---|---|---|---|
@@ -537,7 +537,7 @@ while (isSupported(node)) {
    <td><code>ConfigurationPolicy.REQUIRE</code></td>
   </tr>
   <tr>
-   <td>參考</td>
+   <td>參照</td>
    <td><code>CugExclude (ReferenceCardinality.OPTIONAL_UNARY)</code></td>
   </tr>
  </tbody>
@@ -567,7 +567,7 @@ while (isSupported(node)) {
    <td><code>ConfigurationPolicy.REQUIRE</code></td>
   </tr>
   <tr>
-   <td>參考</td>
+   <td>參照</td>
    <td>不適用</td>
   </tr>
  </tbody>
@@ -586,13 +586,13 @@ while (isSupported(node)) {
 
 先前實作已採用免除個別主參與者進行CUG評估。 新的CUG授權透過名為CugExclude的專用介面來涵蓋此功能。 Apache Jackrabbit Oak 1.4隨附預設實施，其中排除一組固定的主體名稱和可讓您設定個別主體名稱的擴展實施。 後者在AEM發佈執行個體中設定。
 
-AEM 6.3之後的預設值，可防止下列主體受到CUG原則的影響：
+根據AEM 6.3的預設值，下列主體不會受到CUG政策的影響：
 
 * 管理主體（管理員使用者、管理員群組）
 * 服務使用者主體
 * 存放庫內部系統主體
 
-如需詳細資訊，請參閱下列[自AEM 6.3](#default-configuration-since-aem)以來的預設設定一節中的表格。
+如需詳細資訊，請參閱下方[自AEM 6.3](#default-configuration-since-aem)以來的預設設定一節中的表格。
 
 可以在&#x200B;**Apache Jackrabbit Oak CUG排除清單**&#x200B;之設定區段中的系統主控台中，變更或擴充「管理員」群組的排除。
 
@@ -600,13 +600,13 @@ AEM 6.3之後的預設值，可防止下列主體受到CUG原則的影響：
 
 ### 驗證：設定與組態 {#authentication-setup-and-configuration}
 
-新的驗證相關部分包含在&#x200B;**AdobeGranite驗證處理常式**&#x200B;套件（ `com.adobe.granite.auth.authhandler`版本5.6.48）中。 此套件組合是AEM預設安裝的一部分。
+新的驗證相關部分包含在&#x200B;**Adobe Granite驗證處理常式**&#x200B;套件（ `com.adobe.granite.auth.authhandler`版本5.6.48）中。 此套件組合是AEM預設安裝的一部分。
 
-若要設定取代已棄用CUG支援的驗證需求，在指定的AEM安裝中，必須存在且作用中的部分OSGi元件。 如需詳細資訊，請參閱下方的&#x200B;**OSGi元件的特性**。
+若要設定取代已棄用CUG支援的驗證需求，部分OSGi元件必須在指定的AEM安裝中存在並作用中。 如需詳細資訊，請參閱下方的&#x200B;**OSGi元件的特性**。
 
 >[!NOTE]
 >
->由於RequirementHandler的強制組態選項，驗證相關零件只有在透過指定一組支援的路徑來啟用該功能時，才會生效。 在標準AEM安裝中，此功能會在製作執行模式下停用，並在發佈執行模式下啟用/content。
+>由於RequirementHandler的強制組態選項，驗證相關零件只有在透過指定一組支援的路徑來啟用該功能時，才會生效。 在標準AEM安裝中，此功能會在製作執行模式中停用，並在發佈執行模式中啟用/content 。
 
 **OSGi元件的特性**
 
@@ -636,7 +636,7 @@ AEM 6.3之後的預設值，可防止下列主體受到CUG原則的影響：
    <td><code>ConfigurationPolicy.OPTIONAL</code></td>
   </tr>
   <tr>
-   <td>參考</td>
+   <td>參照</td>
    <td>
     <ul>
      <li><code>RequirementHandler (ReferenceCardinality.MANDATORY_UNARY)</code></li>
@@ -648,16 +648,16 @@ AEM 6.3之後的預設值，可防止下列主體受到CUG原則的影響：
 
 **com.adobe.granite.auth.requirement.impl.DefaultRequirementHandler**
 
-| 標籤 | AdobeGranite驗證需求和登入路徑處理常式 |
+| 標籤 | Adobe Granite驗證需求和登入路徑處理常式 |
 |---|---|
 | 說明 | 更新Apache Sling驗證需求和相關聯登入路徑之對應排除的`RequirementHandler`實作。 |
 | 組態屬性 | `supportedPaths` |
 | 設定原則 | `ConfigurationPolicy.REQUIRE` |
-| 參考 | 不適用 |
+| 參照 | 不適用 |
 
 #### 設定選項 {#configuration-options-1}
 
-CUG重寫的驗證相關部分只隨附與Adobe「Granite驗證需求」和「登入路徑處理常式」相關聯的單一組態選項：
+CUG重寫的驗證相關部分只隨附與Adobe Granite驗證需求和登入路徑處理常式關聯的單一設定選項：
 
 **「驗證需求和登入路徑處理常式」**
 
@@ -678,9 +678,9 @@ CUG重寫的驗證相關部分只隨附與Adobe「Granite驗證需求」和「�
  </tbody>
 </table>
 
-## 自AEM 6.3以來的預設設定 {#default-configuration-since-aem}
+## AEM 6.3之後的預設設定 {#default-configuration-since-aem}
 
-AEM的新安裝預設會將新的實施用於CUG功能的授權和驗證相關部分。 舊版實作「AdobeGranite封閉使用者群組(CUG)支援」已過時，並預設會在所有AEM安裝中停用。 新的實作將改為啟用，如下所示：
+AEM的新安裝預設會將新的實施用於CUG功能的授權和驗證相關部分。 舊版實作「Adobe Granite封閉使用者群組(CUG)支援」已淘汰，並預設會在所有AEM安裝中停用。 新的實作將改為啟用，如下所示：
 
 ### 作者執行個體 {#author-instances}
 
@@ -688,27 +688,27 @@ AEM的新安裝預設會將新的實施用於CUG功能的授權和驗證相關�
 |---|---|
 | 支援的路徑`/content` | CUGpolicies的存取控制管理已啟用。 |
 | CUG評估啟用FALSE | 已停用許可權評估。 CUG政策無效。 |
-| 等級 | 200 | 請參閱Oak檔案。 |
+| 排名\|200 | 請參閱Oak檔案。 |
 
 >[!NOTE]
 >
->預設的編寫執行個體上沒有&#x200B;**Apache Jackrabbit Oak CUG排除清單**&#x200B;和&#x200B;**AdobeGranite驗證需求和登入路徑處理常式**&#x200B;的設定。
+>預設的編寫執行個體上沒有&#x200B;**Apache Jackrabbit Oak CUG排除清單**&#x200B;和&#x200B;**Adobe Granite驗證需求和登入路徑處理常式**&#x200B;的設定。
 
-### Publish例項 {#publish-instances}
+### 發佈執行個體 {#publish-instances}
 
 | **「Apache Jackrabbit Oak CUG設定」** | **說明** |
 |---|---|
 | 支援的路徑`/content` | 在設定的路徑下方啟用CUG原則的存取控制管理。 |
 | CUG評估啟用TRUE | 已針對設定的路徑啟用許可權評估。 CUG原則會在`Session.save()`生效。 |
-| 等級 | 200 | 請參閱Oak檔案。 |
+| 排名\|200 | 請參閱Oak檔案。 |
 
 | **「Apache Jackrabbit Oak CUG排除清單」** | **說明** |
 |---|---|
 | 主體名稱管理員 | 排除CUG評估中的管理員主體。 |
 
-| **&quot;AdobeGranite驗證需求和登入路徑處理常式&quot;** | **說明** |
+| **&quot;Adobe Granite驗證需求和登入路徑處理常式&quot;** | **說明** |
 |---|---|
-| 支援的路徑`/content` | 由`granite:AuthenticationRequired` mixin型別在存放庫中定義的驗證需求於`Session.save()`在`/content`以下生效。 Sling驗證器已更新。 在支援的路徑之外新增mixin型別會被忽略。 |
+| 支援的路徑`/content` | 由`granite:AuthenticationRequired` mixin型別在存放庫中定義的驗證需求於`/content`在`Session.save()`以下生效。 Sling驗證器已更新。 在支援的路徑之外新增mixin型別會被忽略。 |
 
 ## 停用CUG授權與驗證需求 {#disabling-cug-authorization-and-authentication-requirement}
 
@@ -720,7 +720,7 @@ AEM的新安裝預設會將新的實施用於CUG功能的授權和驗證相關�
 
 ### 停用驗證需求 {#disable-the-authentication-requirement}
 
-若要停用`granite.auth.authhandler`模組所提供的驗證需求支援，只要移除與&#x200B;**AdobeGranite驗證需求和登入路徑處理常式**&#x200B;相關聯的組態就足夠了。
+若要停用`granite.auth.authhandler`模組所提供的驗證需求支援，只要移除與&#x200B;**Adobe Granite驗證需求和登入路徑處理常式**&#x200B;相關聯的組態就足夠了。
 
 >[!NOTE]
 >
@@ -740,7 +740,7 @@ AEM的新安裝預設會將新的實施用於CUG功能的授權和驗證相關�
 
 請參閱上述[Apache Jackrabbit FileVault](/help/sites-administering/closed-user-groups.md#apache-jackrabbit-filevault)區段。
 
-### AdobeGranite復寫 {#adobe-granite-replication}
+### Adobe Granite復寫 {#adobe-granite-replication}
 
 復寫模組已稍微調整，以便能夠在不同的AEM執行個體之間復寫CUG原則：
 
@@ -751,15 +751,15 @@ AEM的新安裝預設會將新的實施用於CUG功能的授權和驗證相關�
 
 複製CUG政策有一個限制。 如果未移除對應的mixin節點型別`rep:CugMixin,`就移除指定的CUG原則，則復寫時將不會反映移除。 原則移除後，一律移除mixin即可解決此問題。 不過，如果手動新增mixin型別，則可能會顯示此限制。
 
-### AdobeGranite驗證處理常式 {#adobe-granite-authentication-handler}
+### Adobe Granite驗證處理常式 {#adobe-granite-authentication-handler}
 
-與`com.adobe.granite.auth.authhandler`組合隨附的驗證處理常式&#x200B;**AdobeGranite HTTP標頭驗證處理常式**&#x200B;儲存相同模組所定義的`CugSupport`介面的參考。 在特定情況下，它可用來計算「範圍」，並歸入使用處理常式設定的範圍。
+**套件組合隨附的驗證處理常式** Adobe Granite HTTP Header Authentication Handler`com.adobe.granite.auth.authhandler`包含相同模組所定義`CugSupport`介面的參考。 在特定情況下，它可用來計算「範圍」，並歸入使用處理常式設定的範圍。
 
-此設定已經過調整，以使`CugSupport`的參考成為選用，以便在指定設定決定重新啟用已棄用的實作時，確保最大的回溯相容性。 使用實作的安裝將不會再取得從CUG實作擷取的領域，但將一律顯示使用&#x200B;**AdobeGranite HTTP標頭驗證處理常式**&#x200B;定義的領域。
+此設定已經過調整，以使`CugSupport`的參考成為選用，以便在指定設定決定重新啟用已棄用的實作時，確保最大的回溯相容性。 使用實作的安裝將不會再從CUG實作中擷取領域，但將一律顯示使用&#x200B;**Adobe Granite HTTP標頭驗證處理常式**&#x200B;定義的領域。
 
 >[!NOTE]
 >
->根據預設，**AdobeGranite HTTP標頭驗證處理常式**&#x200B;僅設定於發佈執行模式，並啟用「停用登入頁面」( `auth.http.nologin`)選項。
+>根據預設，**Adobe Granite HTTP Header驗證處理常式**&#x200B;僅設定於發佈執行模式，並啟用「停用登入頁面」( `auth.http.nologin`)選項。
 
 ### AEM LiveCopy {#aem-livecopy}
 
@@ -778,7 +778,7 @@ AEM的新安裝預設會將新的實施用於CUG功能的授權和驗證相關�
 
 ### CUG設定和設定的差異 {#differences-in-cug-setup-and-configuration}
 
-已棄用的OSGi元件&#x200B;**AdobeGranite封閉使用者群組(CUG)支援** ( `com.day.cq.auth.impl.cug.CugSupportImpl`)已由新元件取代，以便能夠分別處理舊版CUG功能的授權和驗證相關部分。
+已棄用的OSGi元件&#x200B;**Adobe Granite Closed User Group (CUG)支援** ( `com.day.cq.auth.impl.cug.CugSupportImpl`)已由新元件取代，以便能夠分別處理以前CUG功能的授權和驗證相關部分。
 
 ## 管理存放庫內容中CUG的差異 {#differences-in-managing-cugs-in-the-repository-content}
 
@@ -802,7 +802,7 @@ CUG的&#x200B;**專用存取控制內容**
 
 在JCR節點建立CUG原則，定義要接受受限讀取存取的子樹狀結構。 這可能是個AEM頁面，以防CUG可能影響整個樹狀結構。
 
-將CUG原則僅置於指定頁面下方的jcr：content節點會限制對指定頁面內容s.str的存取，但不會影響任何同級頁面或子頁面。 這可能是有效的使用案例，並且可以使用存放庫編輯器來完成，該編輯器可讓您套用精細存取內容。 然而，它與以前的實作不同，在以前的實作中，在jcr：content節點上放置cq：cugEnabled屬性會在內部重新對應至頁面節點。 不再執行此對應。
+將CUG原則僅放置在位於指定頁面下方的jcr:content節點上，只會限制對指定頁面內容s.str的存取，而不會對任何同級頁面或子頁面生效。 這可能是有效的使用案例，並且可以使用存放庫編輯器來完成，該編輯器可讓您套用精細存取內容。 不過，它與先前實作不同，在先前實作中，將cq:cugEnabled屬性放置在jcr:content節點上，已在內部重新對應到頁面節點。 不再執行此對應。
 
 使用CUG原則進行&#x200B;**許可權評估**
 
@@ -817,7 +817,7 @@ CUG授權模型可讓您個別開啟存取控制管理和許可權評估：
 * 如果模組有一或多個可建立CUG的支援路徑，則會啟用存取控制管理
 * 只有同時核取選項&#x200B;**CUG Evaluation Enabled**&#x200B;時，才會啟用許可權評估。
 
-在CUG原則的新AEM預設設定評估中，它僅在「發佈」執行模式中啟用。 如需詳細資訊，請參閱AEM 6.3[&#128279;](#default-configuration-since-aem)之後的預設設定詳細資料。 這可透過比較給定路徑的有效原則與內容中儲存的原則來驗證。 只有啟用CUG的許可權評估時，才會顯示有效原則。
+在新的AEM預設設定CUG原則評估中，它僅在「發佈」執行模式中啟用。 如需詳細資訊，請參閱AEM 6.3[之後的](#default-configuration-since-aem)預設設定。 這可透過比較給定路徑的有效原則與內容中儲存的原則來驗證。 只有啟用CUG的許可權評估時，才會顯示有效原則。
 
 如上所述，CUG存取控制原則現在一律會儲存在內容中，但是只有在Apache Jackrabbit Oak **CUG組態的系統主控台中開啟**&#x200B;啟用CUG評估&#x200B;**時，才會強制執行這些原則所產生的有效許可權評估。**&#x200B;依預設，它僅以&#39;publish&#39;執行模式啟用。
 
@@ -841,15 +841,15 @@ mixin型別定義了一個稱為`granite:loginPath`的選擇性屬性，基本�
 
 #### 由Mixin型別定義的目標節點 {#target-node-defined-by-mixin-type}
 
-在JCR節點建立驗證需求，定義要強制登入的子樹狀結構。 這可能是個AEM頁面，以防CUG預期會影響整個樹狀結構，以及新實作的UI，因此會在頁面節點上新增驗證需求mixin型別。
+在JCR節點建立驗證需求，定義要強制登入的子樹狀結構。 這可能是個AEM頁面，以防CUG可能影響整個樹狀結構，以及新實作的UI，因此會在頁面節點上新增驗證需求mixin型別。
 
-將CUG原則僅放置在位於指定頁面下方的jcr：content節點上，只會限制對內容的存取。 但是，它不會影響頁面節點本身或任何子頁面。
+僅將CUG原則置於指定頁面下方的jcr:content節點只會限制內容的存取權。 但是，它不會影響頁面節點本身或任何子頁面。
 
-這可能是有效的案例，並且可在存放庫編輯器中讓您將mixin放置在任何節點上。 不過，此行為與之前的實施相反，也就是在jcr：content節點上放置cq：cugEnabled或cq：cugLoginPage屬性最終會在內部重新對應至頁面節點。 不再執行此對應。
+這可能是有效的案例，並且可在存放庫編輯器中讓您將mixin放置在任何節點上。 不過，此行為與之前的實作不同，也就是將cq:cugEnabled或cq:cugLoginPage屬性放置在jcr:content節點上，最終在內部重新對應到頁面節點。 不再執行此對應。
 
 #### 已設定的支援路徑 {#configured-supported-paths}
 
-`granite:AuthenticationRequired` mixin型別和granite：loginPath屬性都只會在以&#x200B;**AdobeGranite驗證需求和登入路徑處理常式**&#x200B;出現的&#x200B;**支援路徑**&#x200B;組態選項集定義的範圍內接受。 如果未指定路徑，則會完全停用驗證需求功能。 在這種情況下，將mixin型別或屬性新增或設定到給定JCR節點時會生效。
+`granite:AuthenticationRequired` mixin型別和Granite:loginPath屬性都只能在&#x200B;**Adobe Granite驗證需求和登入路徑處理常式**&#x200B;的&#x200B;**支援路徑**&#x200B;組態選項集所定義的範圍內接受。 如果未指定路徑，則會完全停用驗證需求功能。 在這種情況下，將mixin型別或屬性新增或設定到給定JCR節點時會生效。
 
 ### JCR內容、OSGi服務和設定的對應 {#mapping-of-jcr-content-osgi-services-and-configurations}
 
@@ -880,4 +880,4 @@ Adobe提供了移轉至新CUG實作的工具。 若要使用，請執行下列�
 
 >[!NOTE]
 >
->如果您遇到問題，可以在`com.day.cq.auth.impl.cug`上的&#x200B;**DEBUG**&#x200B;層級設定特定記錄器，以取得移轉工具的輸出。 請參閱[記錄](/help/sites-deploying/configure-logging.md)以瞭解如何執行此動作的詳細資訊。
+>如果您遇到問題，可以在&#x200B;**上的** DEBUG`com.day.cq.auth.impl.cug`層級設定特定記錄器，以取得移轉工具的輸出。 請參閱[記錄](/help/sites-deploying/configure-logging.md)以瞭解如何執行此動作的詳細資訊。

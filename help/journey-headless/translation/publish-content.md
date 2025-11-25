@@ -4,8 +4,8 @@ description: 了解如何發佈翻譯的內容，並在內容更新時更新翻�
 exl-id: 32c387fe-fa1b-499b-861f-b4822f5e139e
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments,Language Copy
-role: Admin, Architect,Data Architect,Developer,User,Leader
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: Admin, Developer, User, Leader
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '1336'
 ht-degree: 80%
@@ -74,7 +74,7 @@ ht-degree: 80%
    ![管理發佈選項](assets/manage-publication-options.png)
 1. 在下一個 **管理發佈**&#x200B;視窗中，確認正確的路徑已選取。點擊&#x200B;**發佈**。
    ![管理發佈範圍](assets/manage-publication-scope.png)
-1. AEM會透過畫面頂端的快顯訊息確認發佈動作。
+1. AEM會透過畫面頂端的快顯訊息來確認發佈動作。
    ![資源已發佈橫幅](assets/resources-published-message.png)
 
 您翻譯的 Headless 內容現已發佈！現在您的 Headless 服務可以存取和使用。
@@ -83,7 +83,7 @@ ht-degree: 80%
 >
 >您可以在發佈時選取多個項目 (即多個語言資料夾)，以便一次發佈多個翻譯。
 
-發佈內容時還有其他選項可用，例如排程發佈時間，這不在本歷程的討論範圍內。如需更多資訊息，請參閱文件結尾處的[其他資源](#additional-resources)章節。
+發佈內容時還有其他選項可用，例如排程發佈時間，這不在本歷程的討論範圍內。如需更多資訊息，請參閱文件結尾處的[其他資源](#additional-resources)區段。
 
 ## 更新您的翻譯內容 {#updating-translations}
 
@@ -164,7 +164,7 @@ You see that a new job card was added to the project. In this example, another S
 * 了解 AEM 的翻譯功能及其與 Headless 內容的關係。
 * 能夠開始翻譯您自己的 Headless 內容。
 
-您現在已準備好在 AEM 中翻譯您自己的 Headless 內容。但是，AEM 是一個強大的工具，還有許多其他選項可用。查看[其他資源章節](#additional-resources)提供的一些其他資源，以詳細了解您在此歷程中看到的功能。
+您現在已準備好在 AEM 中翻譯您自己的 Headless 內容。但是，AEM 是一個強大的工具，還有許多其他選項可用。查看[其他資源區段](#additional-resources)提供的一些其他資源，以詳細了解您在此歷程中看到的功能。
 
 ## 其他資源 {#additional-resources}
 

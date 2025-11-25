@@ -9,9 +9,9 @@ exl-id: ec169a01-a113-47eb-8803-bd783ea2c943
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
-source-wordcount: '7192'
+source-wordcount: '7168'
 ht-degree: 0%
 
 ---
@@ -67,7 +67,7 @@ Watched資料夾可以鏈結在一起，因此一個watched資料夾的結果檔
 
 當輸入為資料夾且輸出包含多個檔案時，AEM forms會建立與輸入資料夾同名的輸出資料夾，並將輸出檔案複製到該資料夾中。 當輸出包含包含索引鍵/值組的檔案對映時（例如輸出程式的輸出），索引鍵會用作輸出檔案名稱。
 
-端點程式產生的輸出檔案名稱不能包含字母、數字和句點(.)以外的字元 在副檔名之前。 AEM表單會將其他字元轉換為十六進位值。
+從端點處理作業產生的輸出檔案名稱不能包含字母、數字和句點(.)以外的字元，不能放在副檔名之前。 AEM表單會將其他字元轉換為十六進位值。
 
 使用者端應用程式會從watched資料夾結果資料夾中擷取結果檔案。 處理程式錯誤記錄在watched資料夾失敗資料夾中。
 
@@ -130,7 +130,7 @@ Watched資料夾服務可處理端點的建立、更新及刪除。 管理員建
 
 **重複計數：**&#x200B;監看資料夾掃描資料夾或目錄的次數。 值–1表示無限掃描。 預設值為 -1。
 
-**節流：**&#x200B;選取此選項時，它會限制AEM表單在任何指定時間處理的watched資料夾工作數目。 最大作業數由「批次大小」值決定。 （請參閱關於節流）。
+**節流：**&#x200B;選取此選項時，它會限制AEM在任何指定時間處理之watched資料夾工作的數目。 最大作業數由「批次大小」值決定。 （請參閱關於節流）。
 
 **使用者名稱：** （必要）從watched資料夾叫用目標服務時使用的使用者名稱。 預設值為SuperAdmin。
 
@@ -158,9 +158,9 @@ Watched資料夾服務可處理端點的建立、更新及刪除。 管理員建
 * 具有特定名稱的檔案；例如，資料。&amp;amp；ast；會排除名為&#x200B;*data1*、*data2*&#x200B;等檔案和資料夾。
 * 在名稱和副檔名中有複合運算式的檔案，如下列範例所示：
 
-   * 資料[0-9][0-9][0-9]。[d][aA]&#39;連線埠&#39;
-   * &amp;amp；ast；。[d][Aa]&#39;連線埠&#39;
-   * &amp;amp；ast；。[Xx][毫米][Ll]
+   * 資料`[0-9][0-9][0-9]`。`[dD][aA]`&#39;連線埠&#39;
+   * &amp;amp；ast；。`[dD][aA]`&#39;連線埠&#39;
+   * &amp;amp；ast；.`[Xx][Mm][Ll]`
 
 如需檔案模式的詳細資訊，請參閱[關於檔案模式](configuring-watched-folder-endpoints.md#about-file-patterns)。
 
@@ -174,9 +174,9 @@ Watched資料夾服務可處理端點的建立、更新及刪除。 管理員建
 * 具有特定名稱的檔案；例如，資料。&amp;amp；ast；會包含名為&#x200B;*data1*、*data2*&#x200B;等等的檔案和資料夾。
 * 在名稱和副檔名中有複合運算式的檔案，如下列範例所示：
 
-   * 資料[0-9][0-9][0-9]。[d][aA]&#39;連線埠&#39;
-   * &amp;amp；ast；。[d][Aa]&#39;連線埠&#39;
-   * &amp;amp；ast；。[Xx][毫米][Ll]
+   * 資料`[0-9][0-9][0-9]`。`[dD][aA]`&#39;連線埠&#39;
+   * &amp;amp；ast；。`[dD][aA]`&#39;連線埠&#39;
+   * &amp;amp；ast；.`[Xx][Mm][Ll]`
 
 如需檔案模式的詳細資訊，請參閱[關於檔案模式](configuring-watched-folder-endpoints.md#about-file-patterns)。
 
@@ -246,9 +246,9 @@ Watched資料夾輸出可以是單一檔案、檔案清單或檔案地圖。 然
 * 具有特定名稱的檔案。 例如，資料。&amp;amp；ast；
 * 在名稱和副檔名中有複合運算式的檔案，如下列範例所示：
 
-   * 資料[0-9][0-9][0-9]。[d][aA]&#39;連線埠&#39;
-   * &amp;amp；ast；。[d][Aa]&#39;連線埠&#39;
-   * &amp;amp；ast；。[Xx][毫米][Ll]
+   * 資料`[0-9][0-9][0-9]`。`[dD][aA]`&#39;連線埠&#39;
+   * &amp;amp；ast；。`[dD][aA]`&#39;連線埠&#39;
+   * &amp;amp；ast；.`[Xx][Mm][Ll]`
 
 管理員可以定義儲存結果的輸出資料夾的檔案模式。 對於輸出資料夾（結果、保留和失敗），管理員可以指定下列任一檔案模式：
 
@@ -385,7 +385,7 @@ Watched Folder會在每次輪詢時執行以下三個主要工作：
 
    * 針對`com.adobe.idp.Document`輸入：如果服務作業具有型別`Document`的輸入，則管理員可以將對應型別指定為`Variable`。 Watched資料夾會根據指定給輸入引數的檔案模式，從watched資料夾的輸入資料夾擷取輸入。 如果管理員指定`*.pdf`作為引數，則會擷取每個副檔名為.pdf的檔案，並轉換成`com.adobe.idp.Document`，然後叫用服務。
    * 針對`java.util.Map`輸入：如果服務作業有型別`Map`的輸入，管理員可以將對應型別指定為`Variable`，並輸入模式如`*.pdf`的對應值。 例如，服務需要兩個`com.adobe.idp.Document`物件的對映，這些物件代表輸入資料夾（例如1.pdf和2.pdf）中的兩個檔案。 Watched資料夾將建立以索引鍵做為檔案名稱，且值做為為`com.adobe.idp.Document`的對應。
-   * 針對`java.util.List`輸入：如果服務作業具有型別List的輸入，則管理員可以將對應型別指定為`Variable`，並輸入模式如`*.pdf`的對應值。 將PDF檔案放入輸入資料夾時，Watched Folder會建立代表這些檔案的`com.adobe.idp.Document`物件清單，並叫用目標服務。
+   * 針對`java.util.List`輸入：如果服務作業具有型別List的輸入，則管理員可以將對應型別指定為`Variable`，並輸入模式如`*.pdf`的對應值。 將PDF檔案放入輸入資料夾時，Watched資料夾會建立代表這些檔案的`com.adobe.idp.Document`物件清單，並叫用目標服務。
    * 針對`java.lang.String`：管理員有兩個選項。 首先，管理員可以將對應型別指定為`Literal`，並將對應值輸入為字串，例如`hello.` Watched Folder將使用字串`hello`叫用服務。 第二，管理員可以將對應型別指定為`Variable`，並輸入模式如`*.txt`的對應值。 在後一種情況下，副檔名為.txt的檔案會讀取為檔案，並以字串形式強制來叫用服務。
    * Java基本型別：管理員可以將對應型別指定為`Literal`並提供值。 Watched資料夾會以指定的值叫用服務。
 
@@ -415,8 +415,8 @@ Watched Folder會在每次輪詢時執行以下三個主要工作：
 
 ### 產生PDF服務建議 {#generate-pdf-service-recommendations}
 
-* 「產生PDF」服務一次只能轉換下列檔案型別的一個檔案： Microsoft Word、Microsoft Excel、Microsoft PowerPoint、Microsoft Project、AutoCAD、Adobe Photoshop®、Adobe FrameMaker®和AdobePageMaker®。 這些是長時間執行的工作；因此，請務必將批次大小保持在低設定。 如果叢集中有更多節點，也請增加重複間隔。
-* 針對PostScript (PS)、Encapsulated PostScript (EPS)和影像檔案型別，產生PDF服務可同時處理多個檔案。 您應該根據伺服器的容量和叢集中的節點數目，仔細調整階段作業Bean集區大小（控制將同時進行的轉換數目）。 然後，將批次大小增加至一個數字，該數字等於您嘗試轉換的檔案型別的工作階段Bean池大小。 輪詢頻率應該由叢集中的節點數決定；但是，由於「產生PDF」服務處理這些型別的作業的速度相當快，因此您可以將重複間隔設定為較低的值，例如5或10。
+* 「產生PDF」服務一次只能轉換下列檔案型別的一個檔案： Microsoft Word、Microsoft Excel、Microsoft PowerPoint、Microsoft Project、AutoCAD、Adobe Photoshop®、Adobe FrameMaker®和Adobe PageMaker®。 這些是長時間執行的工作；因此，請務必將批次大小保持在低設定。 如果叢集中有更多節點，也請增加重複間隔。
+* 針對PostScript (PS)、Encapsulated PostScript (EPS)和影像檔案型別，產生PDF服務可同時處理多個檔案。 您應該根據伺服器的容量和叢集中的節點數目，仔細調整階段作業Bean集區大小（控制將同時進行的轉換數目）。 然後，將批次大小增加至一個數字，該數字等於您嘗試轉換的檔案型別的工作階段Bean池大小。 輪詢頻率應該由叢集中的節點數量決定；但是，由於「產生PDF」服務處理這些型別的作業的速度相當快，因此您可以將重複間隔設定為較低的值，例如5或10。
 * 即使「產生PDF」服務一次只能轉換一個OpenOffice檔案，轉換速度還是相當快。 PS、EPS和影像轉換的上述邏輯也適用於OpenOffice轉換。
 * 若要在叢集中啟用均勻負載分佈，請保持批次大小為低並增加重複間隔。
 

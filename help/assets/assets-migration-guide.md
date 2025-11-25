@@ -2,11 +2,11 @@
 title: 大量移轉資產
 description: 說明如何將資產帶入 [!DNL Adobe Experience Manager]、套用中繼資料、產生轉譯，以及將它們啟動至發佈執行個體。
 contentOwner: AG
-role: Architect, Admin
+role: Developer, Admin
 feature: Migration,Renditions,Asset Management
 exl-id: 184f1645-894a-43c1-85f5-8e0d2d77aa73
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '1739'
 ht-degree: 6%
@@ -23,7 +23,7 @@ ht-degree: 6%
 
 >[!NOTE]
 >
->下列資產移轉工具不是[!DNL Experience Manager]的一部分，而且不受Adobe支援：
+>下列資產移轉工具不是[!DNL Experience Manager]的一部分，也不受Adobe支援：
 >
 >* ACS AEM Tools Tag Maker
 >* ACS AEM工具CSV資產匯入工具
@@ -31,7 +31,7 @@ ht-degree: 6%
 >* ACS Commons快速動作管理員
 >* 綜合工作流程
 >
->本軟體為開放原始碼， [Apache v2授權涵蓋此軟體](https://adobe-consulting-services.github.io/pages/license.html)。若要提出問題或報告問題，請造訪ACS AEM工具和 [ACS AEM公域的GitHub](https://github.com/Adobe-Consulting-Services/acs-aem-commons/issues) [問題](https://github.com/Adobe-Consulting-Services/acs-aem-tools/issues)。
+>本軟體為開放原始碼， [Apache v2授權涵蓋此軟體](https://adobe-consulting-services.github.io/pages/license.html)。若要提出問題或報告問題，請造訪ACS AEM工具和 [ACS AEM公域的GitHub](https://github.com/Adobe-Consulting-Services/acs-aem-commons/issues)[問題](https://github.com/Adobe-Consulting-Services/acs-aem-tools/issues)。
 
 ## 移轉至[!DNL Experience Manager] {#migrating-to-aem}
 
@@ -62,7 +62,7 @@ ht-degree: 6%
 
 #### 透過HTTP傳送 {#pushing-through-http}
 
-Adobe的Managed Services團隊會使用名為Glutton的工具，將資料載入客戶環境。 Glutton是一個小型Java應用程式，可將一個目錄中的所有資產載入[!DNL Experience Manager]部署上的另一個目錄中。 您也可以使用Perl指令碼等工具，將資產發佈至存放庫，而不使用Glutton。
+Adobe的Managed Services團隊使用名為Glutton的工具將資料載入客戶環境。 Glutton是一個小型Java應用程式，可將一個目錄中的所有資產載入[!DNL Experience Manager]部署上的另一個目錄中。 您也可以使用Perl指令碼等工具，將資產發佈至存放庫，而不使用Glutton。
 
 使用推送https的方法有兩個主要缺點：
 
@@ -84,7 +84,7 @@ Adobe的Managed Services團隊會使用名為Glutton的工具，將資料載入�
 根據您的需求設定工作流程後，您有兩個選項可執行它：
 
 1. 最簡單的方法是[ACS Commons&#39;大量工作流程管理員](https://adobe-consulting-services.github.io/acs-aem-commons/features/bulk-workflow-manager.html)。 此工具可讓您執行查詢，並透過工作流程處理查詢的結果。 也有設定批次大小的選項。
-1. 您可搭配「合成工 [作流程」使用ACS Commons Fast Action Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/fast-action-manager.html) [&#128279;](https://adobe-consulting-services.github.io/acs-aem-commons/features/synthetic-workflow.html)。雖然此方法的參與度更高，但可讓您移除[!DNL Experience Manager]工作流程引擎的額外負荷，同時最佳化伺服器資源的使用。 此外，Fast Action Manager還通過動態監控伺服器資源並調節系統上的負載，進一步提高了效能。ACS Commons功能頁上提供了示例指令碼。
+1. 您可搭配「合成工 [作流程」使用ACS Commons Fast Action Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/fast-action-manager.html)[](https://adobe-consulting-services.github.io/acs-aem-commons/features/synthetic-workflow.html)。雖然此方法的參與度更高，但可讓您移除[!DNL Experience Manager]工作流程引擎的額外負荷，同時最佳化伺服器資源的使用。 此外，Fast Action Manager還通過動態監控伺服器資源並調節系統上的負載，進一步提高了效能。ACS Commons功能頁上提供了示例指令碼。
 
 ### 啟用資產 {#activating-assets}
 
@@ -92,15 +92,15 @@ Adobe的Managed Services團隊會使用名為Glutton的工具，將資料載入�
 
 若要解決此問題，您可以使用[快速動作管理員](https://adobe-consulting-services.github.io/acs-aem-commons/features/fast-action-manager.html)來管理資產復寫。 這可在不使用Sling佇列的情況下運作，可降低額外負荷，同時限制工作負荷以防止伺服器超載。 使用FAM管理復寫的範例會顯示在該功能的檔案頁面上。
 
-將資產傳送至發佈農場的其他選項包括使 [用vlt-rcp](https://jackrabbit.apache.org/filevault/rcp.html) [或oak-run](https://github.com/apache/jackrabbit-oak/tree/trunk/oak-run)，這些工具是Jackrabbit的一部份。另一個選項是針對您的[!DNL Experience Manager]基礎架構使用開放來源工具，稱為[Grabbit](https://github.com/TWCable/grabbit)，該工具聲稱其效能比vlt快。
+將資產傳送至發佈農場的其他選項包括使 [用vlt-rcp](https://jackrabbit.apache.org/filevault/rcp.html)[或oak-run](https://github.com/apache/jackrabbit-oak/tree/trunk/oak-run)，這些工具是Jackrabbit的一部份。另一個選項是針對您的[!DNL Experience Manager]基礎架構使用開放來源工具，稱為[Grabbit](https://github.com/TWCable/grabbit)，該工具聲稱其效能比vlt快。
 
 對於這些方法中的任一方法，請注意製作例項上的資產未顯示為已啟動。 若要以正確的啟用狀態處理標幟這些資產的問題，您也需要執行指令碼以將資產標示為已啟用。
 
 >[!NOTE]
 >
->Adobe不維護或不支援Grabbit。
+>Adobe不維護或支援Grabbit。
 
-### 原地複製Publish {#cloning-publish}
+### 原地複製發佈 {#cloning-publish}
 
 資產啟動後，您可以複製發佈執行個體，以建立部署所需數量的復本。 複製伺服器相當簡單明瞭，但有一些重要的步驟需要記住。 若要複製發佈：
 
@@ -133,6 +133,6 @@ Adobe的Managed Services團隊會使用名為Glutton的工具，將資料載入�
 
 1. 啟用資產：請依照說明[啟用資產](#activating-assets) （記錄於初始移轉至[!DNL Experience Manager]）。
 
-1. 複製發佈：就像執行新的移轉作業一樣，載入單一發佈執行個體並加以複製會比在兩個節點上啟動內容更有效率。 請參閱[複製Publish。](#cloning-publish)
+1. 複製發佈：就像執行新的移轉作業一樣，載入單一發佈執行個體並加以複製會比在兩個節點上啟動內容更有效率。 請參閱[複製發佈。](#cloning-publish)
 
 1. 啟用工作流程：完成移轉後，請重新啟用[!UICONTROL DAM更新資產]工作流程的啟動器，以支援產生轉譯和擷取中繼資料，以供日常系統使用。

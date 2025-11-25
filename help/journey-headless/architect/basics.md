@@ -4,8 +4,8 @@ description: 了解使用內容片段進行 Headless CMS 內容模型的基本�
 exl-id: a53fef09-6495-4bb7-8df1-ba3c113d88f6
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments
-role: Admin, Architect,Data Architect
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: Admin, Developer
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '896'
 ht-degree: 94%
@@ -22,7 +22,7 @@ ht-degree: 94%
 
 ## 目標 {#objective}
 
-* **對象**：初學者
+* **客群**：初學者
 * **目標**：介紹 Headless CMS 內容模型的概念。
 
 ## 使用內容片段模型建立內容模型 {#architect-content-fragment-models}
@@ -67,9 +67,9 @@ AEM 使用內容片段來提供將內容 Headless 傳遞到應用程式所需的
 
 在模型中：
 
-1. **資料型別**&#x200B;可讓您定義個別屬性。
-例如，將包含教師姓名的欄位定義為&#x200B;**文字** 並將他們的服務年限定義為&#x200B;**數字**。
-1. 資料型別&#x200B;**內容參考**&#x200B;和&#x200B;**片段參考**&#x200B;可讓您建立與AEM內其他內容的關聯。
+1. **資料型別**可讓您定義個別屬性。
+例如，將包含教師姓名的欄位定義為**文字** 並將他們的服務年限定義為&#x200B;**數字**。
+1. 資料型別&#x200B;**內容參考**&#x200B;和&#x200B;**片段參考**&#x200B;可讓您建立與AEM中其他內容的關聯。
 1. **片段參考**&#x200B;資料類型可讓您將內容片段巢狀化 (根據模型類型)，以實現多層結構。這對建立內容模型很重要。
 
 例如：

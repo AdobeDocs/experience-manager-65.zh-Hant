@@ -2,14 +2,14 @@
 title: 設定資產上傳限制
 description: 限制使用者可上傳的資產型別（檔案）
 contentOwner: AG
-role: Developer, Admin, Architect
+role: Developer, Admin
 feature: Asset Management,Upload
 exl-id: 0e009b9a-54c4-4715-98ee-0207839f90f6
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '192'
-ht-degree: 20%
+ht-degree: 6%
 
 ---
 
@@ -26,4 +26,4 @@ ht-degree: 20%
 
    ![chlimage_1-379](assets/chlimage_1-379.png)
 
-1. 按一下[儲存]儲存變更。 **&#x200B;**&#x200B;如果您為允許的MIME類型指定MIME字串，則對於任何MIME類型不符合這些欄位中已設定之MIME字串的資產，上傳作業會失敗。
+1. 按一下[儲存]儲存變更。 ****&#x200B;如果您為允許的MIME型別指定MIME字串，則對於任何MIME型別不符合這些欄位中已設定之MIME字串的資產，上傳作業都會失敗。

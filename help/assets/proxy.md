@@ -2,11 +2,11 @@
 title: '[!DNL Assets] Proxy開發'
 description: Proxy是使用Proxy Worker處理工作的 [!DNL Experience Manager] 執行個體。 瞭解如何設定 [!DNL Experience Manager] Proxy、支援的作業、Proxy元件，以及如何開發自訂Proxy Worker。
 contentOwner: AG
-role: Admin, Architect
+role: Admin, Developer
 exl-id: 42fff236-b4e1-4f42-922c-97da32a933cf
 solution: Experience Manager, Experience Manager Assets
 feature: Proxy Workers
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '824'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 [!DNL Adobe Experience Manager Assets]使用Proxy來分配特定工作的處理。
 
-Proxy是一種特定（有時是獨立的）Experience Manager執行個體，它使用Proxy背景工作器作為負責處理工作和建立結果的處理器。 Proxy Worker可用於多種任務。 如果有[!DNL Assets] Proxy，這可用來載入資產，以便在Assets中呈現。 例如，[IDS Proxy背景工作](indesign.md)使用[!DNL Adobe InDesign]伺服器來處理檔案以用於Assets。
+Proxy是一種特定（有時是獨立的） Experience Manager執行個體，它使用Proxy背景工作器作為負責處理工作並建立結果的處理器。 Proxy Worker可用於多種任務。 如果有[!DNL Assets] Proxy，這可用來載入資產，以便在Assets中呈現。 例如，[IDS Proxy背景工作](indesign.md)使用[!DNL Adobe InDesign]伺服器來處理檔案以用於Assets。
 
 當Proxy是單獨的[!DNL Experience Manager]執行個體時，這有助於減少[!DNL Experience Manager]編寫執行個體的負載。 根據預設，[!DNL Assets]會在相同的JVM中執行資產處理工作（透過Proxy外部化），以減少[!DNL Experience Manager]編寫執行個體的負載。
 
@@ -117,7 +117,7 @@ Proxy和Proxy Worker組態均可透過雲端服務組態使用，可從[!DNL Ass
 
 >[!NOTE]
 >
->如需詳細資訊，請參閱[InDesign ServerProxy Worker設定](indesign.md#configuring-the-proxy-worker-for-indesign-server)和[Cloud Service設定](../sites-developing/extending-cloud-config.md)。
+>如需詳細資訊，請參閱[InDesign Server Proxy Worker設定](indesign.md#configuring-the-proxy-worker-for-indesign-server)和[雲端服務設定](../sites-developing/extending-cloud-config.md)。
 
 以下是API使用方式的範例：
 
@@ -136,7 +136,7 @@ Proxy和Proxy Worker組態均可透過雲端服務組態使用，可從[!DNL Ass
 
 ### 開發自訂的Proxy Worker {#developing-a-customized-proxy-worker}
 
-[IDS Proxy Worker](indesign.md)是[!DNL Assets] Proxy Worker的範例，已提供現成可用以委外InDesign資產的處理。
+[IDS Proxy Worker](indesign.md)是現成提供的[!DNL Assets] Proxy Worker範例，可將處理InDesign資產的工作委外。
 
 您也可以開發並設定您自己的[!DNL Assets] Proxy Worker，以建立專門的Worker來分派及委外您的[!DNL Assets]處理工作。
 
@@ -160,7 +160,7 @@ Proxy和Proxy Worker組態均可透過雲端服務組態使用，可從[!DNL Ass
 
 >[!NOTE]
 >
->在下列步驟中，會以參照範例來指示對等InDesign。
+>在下列步驟中，InDesign的對等項會以參考範例表示。
 
 1. 已使用[Sling工作](https://sling.apache.org/site/eventing-and-jobs.html)，因此您需要為使用案例定義工作主題。
 
@@ -188,4 +188,4 @@ Proxy和Proxy Worker組態均可透過雲端服務組態使用，可從[!DNL Ass
 >
 >結果的同步化：
 >
->如果有n個執行個體使用相同的Proxy，處理結果會保留在Proxy。 使用者端(Experience Manager作者)的作業是使用在建立作業時提供給使用者端的相同唯一作業ID來請求結果。 Proxy只會讓工作完成，並讓結果準備好進行要求。
+>如果有n個執行個體使用相同的Proxy，處理結果會保留在Proxy。 使用者端(Experience Manager作者)的作業是使用建立作業時提供給使用者端的相同唯一作業ID來請求結果。 Proxy只會讓工作完成，並讓結果準備好進行要求。

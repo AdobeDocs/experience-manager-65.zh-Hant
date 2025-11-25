@@ -4,11 +4,11 @@ description: 瞭解如何更新您的內容片段，以用於Adobe Experience Ma
 exl-id: d78ec052-c091-49ca-9f36-a3d24eb9edd5
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments,GraphQL,Persisted Queries,Developing
-role: Admin,Architect,Data Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: Admin,Developer
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
-source-wordcount: '255'
-ht-degree: 49%
+source-wordcount: '250'
+ht-degree: 50%
 
 ---
 
@@ -22,20 +22,20 @@ ht-degree: 49%
 
 ## 先決條件 {#prerequisites}
 
-確保您有最低的AEM 6.5.17.0版本。
+請確定您至少有6.5.17.0個AEM版本。
 
 ## 更新您的內容片段 {#updating-content-fragments}
 
 若要執行此程式，請使用下列步驟：
 
-1. [設定&#x200B;**內容片段移轉工作設定**&#x200B;的OSGi設定](/help/sites-deploying/configuring-osgi.md)：
+1. [設定](/help/sites-deploying/configuring-osgi.md)內容片段移轉工作設定&#x200B;**的OSGi設定**：
 
    ![OSGi內容片段移轉工作設定](assets/cfm-graphql-update-01.png "OSGi內容片段移轉工作設定")
 
 1. 在對話方塊中，設定這兩個引數如下：
 
-   * **ContentFragmentMigration：Enabled** ： `1`
-   * **ContentFragmentMigration：強制** ： `1`
+   * **ContentFragmentMigration:Enabled** ： `1`
+   * **ContentFragmentMigration:Enforce** ： `1`
 
 1. **儲存**&#x200B;規格 — 更新程式開始。
 
@@ -45,8 +45,8 @@ ht-degree: 49%
 
    在&#x200B;**內容片段移轉工作設定**&#x200B;的對話方塊中，設定這兩個引數如下：
 
-   * **ContentFragmentMigration：Enabled** ： `0`
-   * **ContentFragmentMigration：強制** ： `0`
+   * **ContentFragmentMigration:Enabled** ： `0`
+   * **ContentFragmentMigration:Enforce** ： `0`
 
 ## 限制 {#limitations}
 

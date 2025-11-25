@@ -4,8 +4,8 @@ description: 了解使用內容片段模型建立 Headless CMS 內容模型的�
 exl-id: b377e01f-e392-4ef5-a259-73ce9ff941d0
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments
-role: Admin, Architect,Data Architect
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: Admin, Developer
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '690'
 ht-degree: 92%
@@ -22,7 +22,7 @@ ht-degree: 92%
 
 ## 目標 {#objective}
 
-* **對象**：初學者
+* **客群**：初學者
 * **目標**：使用內容片段模型為您的 Headless CMS 建立內容模型的概念和機制。
 
 <!-- which persona does this? -->
@@ -101,11 +101,11 @@ At the very start you need to enable Content Fragment Models for your site, this
 >
 >如果作者嘗試發佈模型尚未發佈的內容片段，選取清單將指出此情況，並且模型將與片段一起發佈。
 
-一旦模型發佈，就會被&#x200B;*鎖定*&#x200B;成作者的唯讀模式。這旨在防止可能導致現有 GraphQL 模式和查詢錯誤的變更，尤其是在發佈環境。它在主控台中顯示為&#x200B;**鎖定**。
+一旦模型發佈，就會被&#x200B;*鎖定*&#x200B;成作者的唯讀模式。這旨在防止可能導致現有 GraphQL 結構和查詢錯誤的變更，尤其是在發佈環境。它在主控台中顯示為&#x200B;**鎖定**。
 
 當模型為&#x200B;**鎖定** (唯讀模式) 時，可以看到模型的內容和結構，但不能直接編輯；儘管您可以從主控台或模型編輯器管理&#x200B;**鎖定**&#x200B;模型。
 
-## 下一步 {#whats-next}
+## 後續步驟 {#whats-next}
 
 現在您已經了解了基本知識，下一步是開始建立您自己的內容片段模型。
 

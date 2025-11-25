@@ -9,9 +9,9 @@ exl-id: fbf5c7c3-cb01-4fda-8e5d-11d56792d4bf
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: Admin, User, Developer
-source-git-commit: 9f59606bb58b9e90f07bd22e89f3213afb54a697
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
-source-wordcount: '7164'
+source-wordcount: '7136'
 ht-degree: 0%
 
 ---
@@ -66,7 +66,7 @@ ht-degree: 0%
 * **inputProcessorType （字串）**：要啟動的處理序型別。 您可以指定工作流程、指令碼或服務。 這是強制屬性。
 * **inputProcessorId （字串）**： inputProcessorId屬性的行為是以為inputProcessorType屬性指定的值為基礎。 這是強制屬性。 下列清單詳細說明了inputProcessorType屬性的所有可能值以及inputProcessorType屬性的對應必要條件：
 
-   * 針對工作流程，指定要執行的工作流程模型。 例如，/etc/workflow/models/&lt;workflow_name>/jcr：content/model
+   * 針對工作流程，指定要執行的工作流程模型。 例如，/etc/workflow/models/&lt;workflow_name>/jcr:content/model
    * 對於指令碼，指定要執行的指令碼的JCR路徑。 例如， /etc/fd/watchfolder/test/testScript.ecma
    * 針對服務，指定用於找到OSGi服務的篩選器。 此服務已註冊為com.adobe.aemfd.watchfolder.service.api.ContentProcessor Interface的實作。
 
@@ -102,9 +102,9 @@ ht-degree: 0%
    * 具有特定名稱的檔案；例如， data&#42;會排除名為data1、data2等的檔案和資料夾。
    * 在名稱和副檔名中有複合運算式的檔案，如下列範例所示：
 
-      * 資料[0-9][0-9][0-9]。[d][aA]&#39;連線埠&#39;
-      * &#42;。[d][Aa]&#39;連線埠&#39;
-      * &#42;。[Xx][毫米][Ll]
+      * 資料`[0-9][0-9][0-9]`。`[dD][aA]`&#39;連線埠&#39;
+      * &#42;。`[dD][aA]`&#39;連線埠&#39;
+      * &#42;.`[Xx][Mm][Ll]`
 
 如需檔案模式的詳細資訊，請參閱[關於檔案模式](../../forms/using/watched-folder-in-aem-forms.md#p-file-and-folder-patterns-p)。
 
@@ -115,10 +115,10 @@ ht-degree: 0%
 
 * 在名稱和副檔名中有複合運算式的檔案，如下列範例所示：
 
-   * 資料[0-9][0-9][0-9]。[d][aA]&#39;連線埠&#39;
+   * 資料`[0-9][0-9][0-9]`。`[dD][aA]`&#39;連線埠&#39;
 
-      * &#42;。[d][Aa]&#39;連線埠&#39;
-      * &#42;。[Xx][毫米][Ll]
+      * &#42;。`[dD][aA]`&#39;連線埠&#39;
+      * &#42;.`[Xx][Mm][Ll]`
 
 如需檔案模式的詳細資訊，請參閱[關於檔案模式](../../forms/using/watched-folder-in-aem-forms.md#p-file-and-folder-patterns-p)
 
@@ -297,7 +297,7 @@ processorContext.setResult(tempFile.getName(), new Packages.com.adobe.aemfd.docm
 1. 以程式設計方式或透過主控台https://&#39;[伺服器]：[連線埠]&#39;/crx/explorer建立系統使用者。 您也可以使用現有的系統使用者。 請務必在這裡與系統使用者而非一般使用者合作。
 1. 在儲存指令碼的自訂位置上，為新建立或現有系統使用者提供讀取許可權。 您可以有多個自訂位置。 至少為所有自訂位置提供讀取許可權。
 1. 在Felix設定主控台(/system/console/configMgr)中，找到監視資料夾的服務使用者對應。 此對應類似於「對應： adobe-aemds-core-watch-folder=...」。
-1. 按一下對應。 對於專案「adobe-aemds-core-watch-folder：scripts=fd-service」，請將fd-service變更為自訂系統使用者的ID。 按一下「儲存」。
+1. 按一下對應。 對於&#39;adobe-aemds-core-watch-folder:scripts=fd-service&#39;專案，請將fd-service變更為自訂系統使用者的ID。 按一下「儲存」。
 
 現在，您可以使用已設定的自訂位置來儲存指令碼。
 
@@ -406,7 +406,7 @@ log.info("Exiting workflow script!")
 1. 在Maven型專案的建置路徑中設定使用者端SDK。 若要開始使用，您可以下載並在您選擇的IDE中開啟以下Maven型專案。
 1. 編輯範例套件中可用的裝載對應程式篩選器程式碼以符合您的需求。
 1. 使用maven建立自訂裝載對應程式篩選器的套件組合。
-1. 使用[AEM套件組合主控台](https://localhost:4502/system/console/bundles)安裝套件組合。
+1. 使用[AEM套件組合主控台](https://localhost:4502/system/console/bundles)安裝該套件組合。
 
    現在，自訂裝載對應工具篩選器列在AEM Watched資料夾UI中。 您可以將其用於工作流程。
 
@@ -556,7 +556,7 @@ Watched Folder會以每個pollInterval掃描輸入資料夾，擷取在「批次
 
 ### 將Watched資料夾鏈結在一起 {#chain-watched-folders-together}
 
-Watched資料夾可以連結在一起，因此一個Watched資料夾的結果檔案是下一個Watched資料夾的輸入檔案。 每個Watched資料夾都可以叫用不同的服務。 透過以這種方式設定Watched資料夾，可以叫用多項服務。 例如，一個Watched資料夾可以將PDF檔案轉換為Adobe PostScript®而另一個Watched資料夾可以將PostScript檔案轉換為PDF/A格式。 若要這麼做，只要將您第一個端點所定義的Watched資料夾的結果資料夾設定為指向您第二個端點所定義的Watched資料夾的輸入資料夾。
+Watched資料夾可以連結在一起，因此一個Watched資料夾的結果檔案是下一個Watched資料夾的輸入檔案。 每個Watched資料夾都可以叫用不同的服務。 透過以這種方式設定Watched資料夾，可以叫用多項服務。 例如，一個Watched資料夾可以將PDF檔案轉換為Adobe PostScript®另一個Watched資料夾可以將PostScript檔案轉換為PDF/A格式。 若要這麼做，只要將您第一個端點所定義的Watched資料夾的結果資料夾設定為指向您第二個端點所定義的Watched資料夾的輸入資料夾。
 
 第一次轉換的輸出將轉至\path\result。 第二次轉換的輸入為\path\result，而第二次轉換的輸出會移至\path\result\result （或您在第二次轉換的「結果資料夾」方塊中定義的目錄）。
 
@@ -568,9 +568,9 @@ Watched資料夾可以連結在一起，因此一個Watched資料夾的結果檔
 * 具有特定名稱的檔案；例如，資料。&#42;
 * 在名稱和副檔名中有複合運算式的檔案，如下列範例所示：
 
-   * 資料[0-9][0-9][0-9]。[d][aA]&#39;連線埠&#39;
-   * &#42;。[d][Aa]&#39;連線埠&#39;
-   * &#42;。[Xx][毫米][Ll]
+   * 資料`[0-9][0-9][0-9]`。`[dD][aA]`&#39;連線埠&#39;
+   * &#42;。`[dD][aA]`&#39;連線埠&#39;
+   * &#42;.`[Xx][Mm][Ll]`
 
 * 管理員可以定義儲存結果的輸出資料夾的檔案模式。 對於輸出資料夾（結果、保留和失敗），管理員可以指定下列任一檔案模式：
 * %Y =年（完整）
@@ -584,7 +584,7 @@ Watched資料夾可以連結在一起，因此一個Watched資料夾的結果檔
 * %R =介於0到9之間的隨機數字
 * %J =工作名稱
 
-例如，結果資料夾的路徑可能是C:\Adobe\AdobeLiveCycleES4\BarcodedForms\%y\%m\%d。
+例如，結果資料夾的路徑可能是C:\Adobe\Adobe LiveCycle ES4\BarcodedForms\%y\%m\%d。
 
 輸出引數對應也可以指定其他模式，例如：
 
@@ -593,11 +593,11 @@ Watched資料夾可以連結在一起，因此一個Watched資料夾的結果檔
 
 如果輸出引數對應模式以「File.separator」（即路徑分隔符號）結尾，則會建立資料夾並將內容複製到該資料夾。 如果模式不是以「File.separator」結尾，則會以該名稱建立內容（結果檔案或資料夾）。
 
-## 搭配Watched資料夾使用PDF Generator {#using-pdf-generator-with-a-watched-folder}
+## 將PDF Generator與Watched資料夾搭配使用 {#using-pdf-generator-with-a-watched-folder}
 
 您可以設定Watched資料夾，以啟動工作流程、服務或指令碼來處理輸入檔案。 在下節中，我們將設定Watched資料夾以起始ECMAScript。 ECMAScript會使用PDF Generator將Microsoft Word (.docx)檔案轉換為PDF檔案。
 
-執行以下步驟來設定具有PDF Generator的Watched資料夾：
+執行以下步驟，使用PDF Generator設定Watched資料夾：
 
 1. [建立ECMAScript](../../forms/using/watched-folder-in-aem-forms.md#p-create-an-ecmascript-p)
 1. [建立工作流程](../../forms/using/watched-folder-in-aem-forms.md#p-create-a-workflow-p)
@@ -640,14 +640,14 @@ ECMAScript會使用PDF Generator的createPDF API將Microsoft Word (.docx)檔案�
 
 ### 建立工作流程 {#create-a-workflow}
 
-1. 在瀏覽器視窗中開啟AEM Workflow UI。
+1. 在瀏覽器視窗中開啟AEM工作流程UI。
    <https://[servername>]：&#39;port&#39;/workflow
 
-1. 在[模型]檢視中，按一下[新增]。**&#x200B;** 在[新增工作流程]對話方塊中，指定&#x200B;**標題**，然後按一下[確定]。**&#x200B;**
+1. 在[模型]檢視中，按一下[新增]。**** 在[新增工作流程]對話方塊中，指定&#x200B;**標題**，然後按一下[確定]。****
 
    ![create-a-workflow-pdf](assets/create-a-workflow-pdf.png)
 
-1. 選取新建立的工作流程，然後按一下[編輯]。**&#x200B;** 工作流程會在新視窗中開啟。
+1. 選取新建立的工作流程，然後按一下[編輯]。**** 工作流程會在新視窗中開啟。
 
 1. 刪除預設的工作流程步驟。 將「流程步驟」從Sidekick拖放至「工作流程」。
 
@@ -663,7 +663,7 @@ ECMAScript會使用PDF Generator的createPDF API將Microsoft Word (.docx)檔案�
 
 1. 在瀏覽器視窗中開啟CRXDE Lite。 https://&#39;[伺服器]：[連線埠]&#39;/crx/de/
 
-1. 導覽至/etc/fd/watchfolder/config/資料夾，並建立nt：unstructured型別的節點。
+1. 導覽至/etc/fd/watchfolder/config/資料夾，並建立nt:unstructured型別的節點。
 
    ![configure-the-watched-folder-pdf](assets/configure-the-watched-folder-pdf.png)
 
@@ -672,7 +672,7 @@ ECMAScript會使用PDF Generator的createPDF API將Microsoft Word (.docx)檔案�
    * folderPath （字串）：在定義的時間間隔掃描的資料夾路徑。 資料夾必須位於共用位置，且所有伺服器都必須具備伺服器的完整存取許可權。
 inputProcessorType （字串）：要啟動的程式型別。 在本教學課程中，指定工作流程。
 
-   * inputProcessorId （字串）： inputProcessorId屬性的行為是根據inputProcessorType屬性的指定值而定。 在此範例中，inputProcessorType屬性的值為workflow。 因此，針對inputProcessorId屬性指定PDFG工作流程的以下路徑： /etc/workflow/models/pdfg/jcr：content/model
+   * inputProcessorId （字串）： inputProcessorId屬性的行為是根據inputProcessorType屬性的指定值而定。 在此範例中，inputProcessorType屬性的值為workflow。 因此，針對inputProcessorId屬性指定PDFG工作流程的以下路徑： /etc/workflow/models/pdfg/jcr:content/model
 
    * outputFilePattern （字串）：輸出檔案的模式。 您可以指定資料夾或檔案模式。 如果指定資料夾模式，則輸出檔案的名稱如工作流程中所述。 如果指定了檔案模式，則輸出檔案的名稱如檔案模式中所述。
 

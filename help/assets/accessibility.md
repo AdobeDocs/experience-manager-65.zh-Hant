@@ -3,10 +3,10 @@ title: ' [!DNL Experience Manager Assets]的可存取功能與介面'
 description: 瞭解 [!DNL Adobe Experience Manager] 6.5 [!DNL Assets] 中的協助工具功能如何協助殘障使用者。
 contentOwner: AG
 feature: Asset Management
-role: User, Architect, Leader
+role: User, Developer, Leader
 exl-id: 15555941-99a2-4586-8d7b-b22f3ec17805
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '1898'
 ht-degree: 0%
@@ -31,7 +31,7 @@ Possible topics to cover in this article are below.
 
 # [!DNL Adobe Experience Manager Assets]中的協助工具功能 {#accessibility-in-aem-assets}
 
-[!DNL Adobe Experience Manager]可讓內容建立者和發佈者在網路上提供令人驚豔的體驗。 Adobe致力於改善[!DNL Experience Manager]的協助工具，以納入殘障人士建立者。 本軟體持續強化，以符合各類使用者的需求，並符合全球標準，包括視覺、聽覺、行動力或其他殘疾人士。
+[!DNL Adobe Experience Manager]可讓內容建立者和發佈者在網路上提供令人驚豔的體驗。 Adobe致力於改善[!DNL Experience Manager]的無障礙功能，以吸引身心障礙的創作者。 本軟體持續強化，以符合各類使用者的需求，並符合全球標準，包括視覺、聽覺、行動力或其他殘疾人士。
 
 [!DNL Experience Manager]會發佈符合性資訊，說明其遵循的標準、概述產品中的協助工具功能，以及符合性等級。 協助工具符合性報告可協助[!DNL Experience Manager]使用者瞭解各項標準的遵守程度。 在[!DNL Assets]中完成的增強功能可讓所有使用者透過鍵盤、熒幕閱讀器、放大鏡和其他輔助技術輕鬆使用介面。
 
@@ -42,9 +42,9 @@ Possible topics to cover in this article are below.
 * [協助工具計畫 — 由W3C](https://www.w3.org/WAI/standards-guidelines/aria/)協助工具的Rich Internet Applications (WAI-ARIA)。
 * [EN 301 549](https://en.wikipedia.org/wiki/EN_301_549)。
 
-若要讀取包含詳細相容性層級的報表，請參閱[協助工具相容性報表](https://www.adobe.com/accessibility/compliance.html) (ACR)頁面。
+若要閱讀包含詳細相容性層級的報表，請參閱[協助工具相容性報表](https://www.adobe.com/accessibility/compliance.html) (ACR)頁面。
 
-若要瞭解[!DNL Dynamic Media]的存取方式，請參閱 [!DNL Dynamic Media][&#128279;](/help/assets/accessibility-dm.md)中的存取功能。
+若要瞭解[!DNL Dynamic Media]的存取方式，請參閱[中的 [!DNL Dynamic Media]](/help/assets/accessibility-dm.md)存取功能。
 
 ## 輔助技術 {#at-support}
 
@@ -79,7 +79,7 @@ Possible topics to cover in this article are below.
 
 ### [!DNL Assets]中的鍵盤快速鍵 {#keyboard-shortcuts}
 
-[!DNL Assets]中的下列動作可搭配列出的鍵盤快速鍵使用。 大部分套用至[!DNL Experience Manager]主控台的鍵盤快速鍵也套用至[!DNL Assets]。 請參閱主控台[&#128279;](/help/sites-authoring/keyboard-shortcuts.md#keyboard-shortcuts)的鍵盤快速鍵。 瞭解如何[啟用或停用鍵盤快速鍵](/help/sites-authoring/keyboard-shortcuts.md#deactivating-keyboard-shortcuts)。
+[!DNL Assets]中的下列動作可搭配列出的鍵盤快速鍵使用。 大部分套用至[!DNL Experience Manager]主控台的鍵盤快速鍵也套用至[!DNL Assets]。 請參閱主控台[的](/help/sites-authoring/keyboard-shortcuts.md#keyboard-shortcuts)鍵盤快速鍵。 瞭解如何[啟用或停用鍵盤快速鍵](/help/sites-authoring/keyboard-shortcuts.md#deactivating-keyboard-shortcuts)。
 
 | 使用者介面或情境 | 鍵盤快速鍵 | 動作 |
 |---|---|---|
@@ -147,7 +147,7 @@ Review CQ-4282133 before adding - Close option in a coral-dialog was not accessi
 * 使用`Esc`鍵從縮圖檢視中移除快速動作圖示並不會從最後一個焦點專案移除鍵盤焦點。
 * 選取資產後，選取`Alt + 4`鍵盤快速鍵會開啟左側邊欄中的[!UICONTROL 參考]清單。 使用`Tab`鍵，使用者可以瀏覽非零參考專案。 僅瀏覽非零參照專案，可節省工作量和按鍵動作。
 * 資產時間軸中提供資產上的註解。 若使用鍵盤或鍵盤快速鍵存取左側邊欄，即可存取。
-* [!DNL Experience Manager]中的[!UICONTROL 檢視設定]可使用鍵盤存取。 使用者可以使用方向鍵瀏覽可用的卡片大小，並選取和Tab鍵瀏覽，以瀏覽和設定現有「檢視設定」檢視中的其他元素。
+* [!UICONTROL 中的]檢視設定[!DNL Experience Manager]可使用鍵盤存取。 使用者可以使用方向鍵瀏覽可用的卡片大小，並選取和Tab鍵瀏覽，以瀏覽和設定現有「檢視設定」檢視中的其他元素。
 
 <!-- TBD: Gradually, as more enhancements are done in these categories, add more content.
 
@@ -209,7 +209,7 @@ Review CQ-4282133 before adding - Close option in a coral-dialog was not accessi
 
 ## 無障礙檔案 {#accessible-docs}
 
-[!DNL Experience Manager]提供無障礙說明檔案，以供身心障礙人士使用。 以下內容有助於讓內容產品現在可供存取，同時Adobe會繼續改善範本和內容：
+[!DNL Experience Manager]提供無障礙說明檔案，以供身心障礙人士使用。 以下內容有助於讓內容立即可供存取，同時Adobe會繼續改善範本和內容：
 
 * 熒幕助讀程式可以閱讀文字。
 * 影像和插圖有可用的替代文字。
@@ -225,7 +225,7 @@ Review CQ-4282133 before adding - Close option in a coral-dialog was not accessi
 
 >[!MORELIKETHIS]
 >
->* [&#x200B; [!DNL Dynamic Media]](/help/assets/accessibility-dm.md)中的協助工具功能。
+>* [ [!DNL Dynamic Media]](/help/assets/accessibility-dm.md)中的協助工具功能。
 >* [每個Service Pack版本](/help/release-notes/release-notes.md)中完成的增強功能的發行說明。
 >* [[!DNL Adobe Experience Manager] 協助工具指引](/help/managing/web-accessibility.md)。
 >* [Adobe解決方案的一致性報告(ACR)和VPAT清單](https://www.adobe.com/accessibility/compliance.html)。

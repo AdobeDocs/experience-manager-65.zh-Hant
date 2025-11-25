@@ -9,17 +9,17 @@ docset: aem65
 exl-id: 94b91996-d2b2-4d4a-b770-334cfa2dc0b7
 solution: Experience Manager, Experience Manager 6.5
 feature: Compliance
-role: Admin,Architect,Data Architect,Developer,Leader
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: Admin,Developer,Leader
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
-source-wordcount: '3214'
+source-wordcount: '3212'
 ht-degree: 0%
 
 ---
 
 # 管理專案 — 最佳實務檢查清單{#managing-projects-best-practices-checklist}
 
-管理專案以實施Adobe Experience Manager (AEM)需要規劃和瞭解，以便於在實施專案之前和期間瞭解您必須所做的問題和（相關）決策。
+管理專案以實施Adobe Experience Manager (AEM)需要規劃和瞭解，以便於在執行專案之前和期間瞭解您必須所做的問題和（相關）決策。
 
 為協助您，最佳實務包括：
 
@@ -34,7 +34,7 @@ ht-degree: 0%
    * [依角色的狀態](#status-by-role)總覽。
    * [階段和里程碑](#phases-and-milestones)。
    * [關鍵角色](#persona)及其在每個（相關）階段的參與。
-   * [必要檔案和交付專案](#required-documents-and-deliverables)的[字彙表](/help/managing/best-practices-glossary.md)。
+   * [必要檔案和交付專案](/help/managing/best-practices-glossary.md)的[字彙表](#required-documents-and-deliverables)。
 
 * [進一步參考](/help/managing/best-practices-further-reference.md)資料以提供特定區域的更多詳細資料。
 
@@ -56,7 +56,7 @@ ht-degree: 0%
 
 ## 按角色顯示狀態 {#status-by-role}
 
-[角色狀態&#x200B;**]工作表顯示**&#x200B;[&#x200B;階段&#x200B;](#phases-and-milestones)**與**&#x200B;[&#x200B;角色&#x200B;](#persona)**之&lbrace;2**&#x200B;健康狀態&#x200B;**、&lbrace;品質及&#x200B;**&#x200B;完整性&#x200B;**[&#128279;](#projectheartbeat)&#x200B;的詳細劃分。**&#x200B;**
+[角色狀態&#x200B;**]工作表顯示**&#x200B;階段&#x200B;[**與**&#x200B;角色&#x200B;**之{2**健康狀態**](#projectheartbeat)、{品質及&#x200B;**[完整性](#phases-and-milestones)**&#x200B;的詳細劃分。**[](#persona)**
 
 ## 階段和里程碑 {#phases-and-milestones}
 
@@ -188,8 +188,8 @@ ht-degree: 0%
 
    * 每個環境的程式；例如，部署和維護需求
    * 維護活動（Datastore GC、TarPM最佳化等）
-   * [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant)快取
-   * [叢集](/help/sites-deploying/recommended-deploys.md#deployment-scenarios) Publish/Authorshare
+   * [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)快取
+   * [叢集](/help/sites-deploying/recommended-deploys.md#deployment-scenarios)發佈/Authorshare
    * 使用者端的效能（JS精簡、concat、css指令集、http請求總數及其他）
 
 * **應用程式架構**
@@ -239,7 +239,7 @@ ht-degree: 0%
 
   在開發之前，應設定部署、發行、測試和報告問題所需的所有支援流程。
 
-  另請參閱[Adobe支援入口網站](https://experienceleague.adobe.com/zh-hant?support-solution=General&support-tab=home#support)。
+  另請參閱[Adobe支援入口網站](https://experienceleague.adobe.com/?support-solution=General&support-tab=home#support)。
 
 ### 作業計畫與作業 {#operations-planning-and-operations}
 
@@ -276,7 +276,7 @@ ht-degree: 0%
 
 * **復原計畫**
 
-  確定您已制定復原計畫。 在緊急情況下，這必須可用於保護AEM的生產使用。 這應該包括備份、還原、容錯移轉和其他情況。
+  確定您已制定復原計畫。 在緊急情況下，這必須可用，以確保AEM的生產使用。 這應該包括備份、還原、容錯移轉和其他情況。
 
 ### 開發 {#development}
 
@@ -323,7 +323,7 @@ ht-degree: 0%
    * 協力廠商軟體整合/相依性
    * 安全性設定
    * 基準效能已透過在生產設定上執行[嚴苛日測試](/help/sites-developing/tough-day.md)驗證
-   * 效能測試的需求；請參閱[品質保證的最佳實務](/help/sites-deploying/configuring-performance.md#best-practices-for-quality-assurance)
+   * 效能測試的需求；請參閱[品質Assurance的最佳實務](/help/sites-deploying/configuring-performance.md#best-practices-for-quality-assurance)
 
 * **整合**
 
@@ -386,7 +386,7 @@ ht-degree: 0%
 
   >[!NOTE]
   >
-  >在正常使用AEM期間必須繼續此程式，但這些初始階段最關鍵。
+  >此程式必須在正常使用AEM期間繼續，但這些初始階段最關鍵。
 
 ### 推出 {#rollout}
 
@@ -460,7 +460,7 @@ ht-degree: 0%
 
   準備並執行您的煙霧測試。
 
-## 角色 {#persona}
+## 人物誌 {#persona}
 
 核對清單由人員設計。 這些角色與專案生命週期有重大的關係。
 
@@ -492,7 +492,7 @@ ht-degree: 0%
 
 * 負責解決方案與系統的高階設計。
 * 協助定義AEM的實作策略。 例如，是否實作叢集安裝、冷待命或需要內容傳遞網路(CDN)時。
-* 您也可以根據使用者端需求定義AEM解決方案架構。 這可以包括使用者角色（具有相關許可權）的概念、範本與元件之間的關係，或何時使用多網站管理。
+* 也根據使用者端需求定義AEM解決方案架構。 這可以包括使用者角色（具有相關許可權）的概念、範本與元件之間的關係，或何時使用多網站管理。
 
 ### 業務分析師 {#business-analyst}
 
@@ -520,7 +520,7 @@ ht-degree: 0%
    * 確保符合業務和效能KPI
    * 將成功標準和定義納入考量
 
-* 與架構師緊密合作(尤其是在草擬AEM的開發策略時)以定義範本與元件之間的關係、第三方應用程式的整合策略及任何特殊功能等方面。
+* 與架構師緊密合作(尤其是在草擬AEM的開發策略時)以定義範本與元件之間的關係、第三方應用程式的整合策略及任何專業功能等方面。
 
 ### 品質銷售機會 {#quality-lead}
 
@@ -618,7 +618,7 @@ ht-degree: 0%
 ## 重要檔案領域 {#key-documentation-areas}
 
 * AEM檔案
-此外，AEM檔案的下列章節也特別令人感興趣（不過，這份清單並非詳盡無遺）：
+此外，AEM檔案的下列章節也特別令人感興趣（不過，此清單並非詳盡無遺）：
 
    * [安全性](/help/sites-developing/security.md)
    * [建議的部署](/help/sites-deploying/recommended-deploys.md)
@@ -628,8 +628,8 @@ ht-degree: 0%
 
       * [開發 — 基本知識](/help/sites-developing/the-basics.md)
       * [MSM概念](/help/sites-administering/msm.md)
-      * [HTML範本語言(HTL)](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=zh-Hant)
+      * [HTML範本語言(HTL)](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)
 
 * 相關檔案
 
-   * Adobe Experience Cloud - [規劃Adobe Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/services/core-services.html?lang=zh-Hant)
+   * Adobe Experience Cloud - [規劃Adobe Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/services/core-services.html)

@@ -8,10 +8,10 @@ exl-id: f0c543ae-33ed-40bb-9eb7-0dc3bdea69e0
 solution: Experience Manager
 feature: Mobile
 role: Developer
-source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
-source-wordcount: '553'
-ht-degree: 6%
+source-wordcount: '547'
+ht-degree: 5%
 
 ---
 
@@ -33,7 +33,7 @@ Content Services Default Renderer可填補現成Sling預設和自訂開發之間
 
 ## 請求JSON {#requesting-json}
 
-使用&#x200B;**&lt;RESOURCE.caas[。&lt;EXPORT-CONFIG][。&lt;EXPORT-CONFIG].json**&#x200B;以要求JSON。
+使用&#x200B;**&lt;RESOURCE.caas`[.<EXPORT-CONFIG][.&lt;DEPTH-INT&gt;]`.json**&#x200B;要求JSON。
 
 <table>
  <tbody>

@@ -8,8 +8,8 @@ topic-tags: best-practices
 exl-id: 8c1ea483-7319-4e5c-be4c-d43a2b67d316
 solution: Experience Manager, Experience Manager Sites
 feature: Compliance
-role: Admin, Architect, Developer, Leader, User, Data Architect, Data Engineer
-source-git-commit: 207c6bcc25eca05d128115f7235e83a6965009c5
+role: Admin, Developer, Leader, User
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '837'
 ht-degree: 54%
@@ -26,7 +26,7 @@ ht-degree: 54%
 
 AEM Sites已準備好協助客戶履行GDPR法規遵循義務。 本頁將指導客戶完成在AEM Sites中處理GDPR請求的程式。 它描述了儲存私人資料的位置，以及如何以手動方式或使用程式碼移除它們。
 
-如需進一步資訊，請參閱Adobe隱私權中心[&#128279;](https://www.adobe.com/privacy/general-data-protection-regulation.html)的GDPR頁面。
+如需進一步資訊，請參閱Adobe隱私權中心[的](https://www.adobe.com/privacy/general-data-protection-regulation.html)GDPR頁面。
 
 >[!NOTE]
 >
@@ -36,7 +36,7 @@ AEM Sites已準備好協助客戶履行GDPR法規遵循義務。 本頁將指導
 
 作者伺服器上的使用者帳戶和UGC內容包含在[平台GDPR檔案](/help/managing/data-protection-and-privacy.md)中。
 
-## Publish伺服器 {#publish-server}
+## 發佈伺服器 {#publish-server}
 
 [Platform GDPR檔案](/help/managing/data-protection-and-privacy.md)涵蓋了用來驗證網站訪客的使用者帳戶以及發佈伺服器上的UGC內容。
 
@@ -50,7 +50,7 @@ AEM有[Cookie選擇退出服務](/help/sites-developing/cookie-optout.md)，可�
 
 AEM Sites包括與Analytics增強型分析的選擇性整合，後者使用Adobe Analytics隨選服務中的功能。
 
-有關管理與Adobe Analytics相關的GDPR資料主體請求的進一步資訊，請參閱[Adobe Analytics和GDPR](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/an-gdpr-overview.html?lang=zh-Hant)。
+有關管理與Adobe Analytics相關的GDPR資料主體請求的進一步資訊，請參閱[Adobe Analytics和GDPR](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/an-gdpr-overview.html)。
 
 ## 目標增強型Personalization {#enhanced-personalization-by-target}
 
@@ -60,13 +60,13 @@ AEM Sites包括與Enhanced Personalization by Target的選擇性整合，後者�
 
 ## ContextHub {#contexthub}
 
-AEM提供具有[ContextHub](/help/sites-developing/contexthub.md)的可選資料層。 這會將訪客特定的資料保存在瀏覽器中，用於規則型個人化。
+AEM提供具有[ContextHub](/help/sites-developing/contexthub.md)的選用資料層。 這會將訪客特定的資料保存在瀏覽器中，用於規則型個人化。
 
 預設情況下，此訪客資料不儲存在 AEM 中；AEM 將規則傳送到資料層以在瀏覽器中做出個人化決策。
 
 >[!NOTE]
 >
->在AdobeAEM (CQ) 5.6之前，ClientContext（舊版ContextHub）確實將資料傳送至伺服器，但並未儲存。
+>在Adobe AEM (CQ) 5.6之前，ClientContext （舊版ContextHub）確實將資料傳送至伺服器，但並未儲存。
 >
 >Adobe AEM 6.4及舊版現已終止服務，本檔案未涵蓋該版本。 請參閱[舊版Adobe Experience Manager、CQ和CRX檔案](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions)。
 

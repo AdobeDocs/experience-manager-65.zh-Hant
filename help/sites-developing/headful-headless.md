@@ -4,8 +4,8 @@ description: AEM 專案可以在 Headful 和 Headless 模型中實作，但這�
 exl-id: c9597c78-be05-42ff-84fe-f7451119e83d
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments,GraphQL,Persisted Queries,Developing
-role: Admin,Architect,Data Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: Admin,Developer
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '1023'
 ht-degree: 92%
@@ -14,7 +14,7 @@ ht-degree: 92%
 
 # AEM Headful 和 Headless 技術 {#headful-headless}
 
-Adobe Experience Manager 專案可以在 Headful 和 Headless 模型中實作，但這不必是二選一。AEM 提供了在一個專案中利用兩種模型優勢的靈活性。本檔案提供不同模式的概觀，並說明SPA整合的等級。
+Adobe Experience Manager 專案可以在 Headful 和 Headless 模型中實作，但這不必是二選一。AEM 提供了在一個專案中利用兩種模型優勢的靈活性。本檔案提供不同模型的概觀，並說明SPA整合的等級。
 
 ## 概觀 {#overview}
 
@@ -26,7 +26,7 @@ AEM 還可用於簡單地管理內容，允許由另一個平台管理內容的�
 
 ![AEM 實作模型](/help/sites-developing/headless/getting-started/assets/aem-implementation-models.png)
 
-在Headful或完整棧疊模式中，內容在AEM存放庫中管理，而根據Java、HTL等的AEM元件用於呈現內容以符合使用者體驗。 在此模型中，內容的建立、樣式設定、內容的呈現和傳遞都在 AEM 中進行。
+在Headful或完整棧疊模式中，內容是在AEM存放庫中管理的，而根據Java、HTL等的AEM元件是用來呈現內容以供使用者體驗。 在此模型中，內容的建立、樣式設定、內容的呈現和傳遞都在 AEM 中進行。
 
 在 Headless 模型中，內容在 AEM 存放庫中管理，但透過 REST 和 GraphQL 等 API 傳遞到另一個系統以呈現內容以提供使用者體驗。在此模型中，內容是在 AEM 中建立，但樣式設定、內容的呈現和傳遞都在另一個平台進行。
 
@@ -46,7 +46,7 @@ AEM 還可用於簡單地管理內容，允許由另一個平台管理內容的�
 
 >[!NOTE]
 >
->當然，您也可以將網路商店 SPA 重新實作為功能完整的 AEM SPA，方法是[使用 AEM SPA 編輯器框架。](/help/sites-developing/spa-walkthrough.md)如果您已有AEM且想要建立網站商店或其他SPA，建議使用此方法，但此檔案無法涵蓋此方法。
+>當然，您也可以將網路商店 SPA 重新實作為功能完整的 AEM SPA，方法是[使用 AEM SPA 編輯器框架。](/help/sites-developing/spa-walkthrough.md)如果您已有AEM且想要建立網站商店或其他SPA，建議使用此方法，但此檔案不在此範圍內。
 
 ## SPA 整合層級 {#integration-levels}
 

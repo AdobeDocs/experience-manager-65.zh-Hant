@@ -1,6 +1,6 @@
 ---
 title: 以程式管理端點
-description: 使用「端點登入」服務來新增EJB端點、新增SOAP端點、新增Watched Folder端點、新增電子郵件端點、新增遠端端點、新增工作管理員端點、修改端點、移除端點，以及擷取端點聯結器資訊。
+description: 使用「端點登入」服務來新增EJB端點、新增SOAP端點、新增Watched資料夾端點、新增電子郵件端點、新增遠端端點、新增Task Manager端點、修改端點、移除端點，以及擷取端點聯結器資訊。
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -9,9 +9,9 @@ role: Developer
 exl-id: b94dcca2-136b-4b7d-b5ce-544804575876
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,APIs & Integrations
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
-source-wordcount: '10800'
+source-wordcount: '10799'
 ht-degree: 1%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->SOAP、EJB和(JEE上的AEM Forms已棄用)遠端端點會自動為每個啟用的服務建立。 SOAP和EJB端點會為所有服務作業啟用SOAP和EJB。
+>SOAP、EJB和(JEE上的AEM Forms已棄用)遠端端點會自動為每個啟用的服務建立。 SOAP和EJB端點可讓SOAP和EJB執行所有服務作業。
 
 遠端端點可讓Flex使用者端叫用新增端點的AEM Forms服務上的操作。 會建立與端點同名的Flex目的地，且Flex使用者端可建立指向此目的地的RemoteObjects，以叫用相關服務的作業。
 
@@ -127,7 +127,7 @@ ht-degree: 1%
 1. 建立EndpointRegistry使用者端物件。
 
    * 建立包含連線屬性的`ServiceClientFactory`物件。
-   * 使用它的建構函式並傳遞`ServiceClientFactory`物件來建立`EndpointRegistryClient`物件。
+   * 使用它的建構函式並傳遞`EndpointRegistryClient`物件來建立`ServiceClientFactory`物件。
 
 1. 設定EJB端點屬性。
 
@@ -144,7 +144,7 @@ ht-degree: 1%
 
 1. 啟用端點。
 
-   啟用端點，方法是叫用`EndpointRegistryClient`物件的enable方法並傳遞`createEndpoint`方法傳回的`Endpoint`物件。
+   啟用端點，方法是叫用`EndpointRegistryClient`物件的enable方法並傳遞`Endpoint`方法傳回的`createEndpoint`物件。
 
 **另請參閱**
 
@@ -158,7 +158,7 @@ ht-degree: 1%
 
 ## 新增SOAP端點 {#adding-soap-endpoints}
 
-您可以使用AEM Forms Java API，以程式設計方式將SOAP端點新增至服務。 透過新增SOAP端點，您可以讓使用者端應用程式使用SOAP模式叫用服務。 也就是說，在設定呼叫AEM Forms所需的連線屬性時，您可以選取SOAP模式。
+您可以使用SOAP API，以程式設計方式將AEM Forms端點新增至服務。 透過新增SOAP端點，您可以讓使用者端應用程式使用SOAP模式叫用服務。 也就是說，在設定呼叫AEM Forms所需的連線屬性時，您可以選取SOAP模式。
 
 >[!NOTE]
 >
@@ -166,11 +166,11 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->通常SOAP端點會依預設新增至服務。不過，SOAP端點可以新增至以程式設計方式部署的流程，或是SOAP端點移除後而必須重新新增的流程。
+>一般而言，SOAP端點會依預設新增至服務。不過，SOAP端點可以新增至以程式設計方式部署的流程，或是在SOAP端點移除後而必須重新新增的流程。
 
 ### 步驟摘要 {#summary_of_steps-1}
 
-若要將SOAP端點新增至服務，請執行下列工作：
+若要將SOAP端點新增至服務，請執行以下工作：
 
 1. 包含專案檔案。
 1. 建立`EndpointRegistryClient`物件。
@@ -189,7 +189,7 @@ ht-degree: 1%
 * adobe-utilities.jar (如果將AEM Forms部署在JBoss Application Server上，則為必要)
 * jbossall-client.jar (如果AEM Forms部署在JBoss Application Server上，則為必要)
 
-建立SOAP端點需要這些JAR檔案。 不過，如果您使用SOAP端點來叫用服務，則需要額外的JAR檔案。 如需AEM Forms JAR檔案的相關資訊，請參閱[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
+需要這些JAR檔案才能建立SOAP端點。 不過，如果您使用SOAP端點來叫用服務，則需要額外的JAR檔案。 如需AEM Forms JAR檔案的相關資訊，請參閱[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
 **建立EndpointRegistry使用者端物件**
 
@@ -232,7 +232,7 @@ ht-degree: 1%
 1. 建立EndpointRegistry使用者端物件。
 
    * 建立包含連線屬性的`ServiceClientFactory`物件。
-   * 使用它的建構函式並傳遞`ServiceClientFactory`物件來建立`EndpointRegistryClient`物件。
+   * 使用它的建構函式並傳遞`EndpointRegistryClient`物件來建立`ServiceClientFactory`物件。
 
 1. 設定SOAP端點屬性。
 
@@ -249,7 +249,7 @@ ht-degree: 1%
 
 1. 啟用端點。
 
-   透過叫用`EndpointRegistryClient`物件的enable方法啟用端點，並傳遞`createEndpoint`方法傳回的`Endpoint`物件。
+   透過叫用`EndpointRegistryClient`物件的enable方法啟用端點，並傳遞`Endpoint`方法傳回的`createEndpoint`物件。
 
 **另請參閱**
 
@@ -269,7 +269,7 @@ ht-degree: 1%
 
 ![aw_aw_encryptdocumentprocess](assets/aw_aw_encryptdocumentprocess.png)
 
-此程式接受不安全的PDF檔案作為輸入值，然後將不安全的PDF檔案傳遞給加密服務的`EncryptPDFUsingPassword`作業。 PDF檔案使用密碼加密，而密碼加密的PDF檔案是此程式的輸出值。 輸入值的名稱(不安全的PDF檔案)是`InDoc`，資料型別是`com.adobe.idp.Document`。 輸出值(密碼加密的PDF檔案)的名稱為`SecuredDoc`，資料型別為`com.adobe.idp.Document`。
+此程式接受不安全的PDF檔案作為輸入值，然後將不安全的PDF檔案傳遞至加密服務的`EncryptPDFUsingPassword`作業。 PDF檔案已使用密碼加密，而密碼加密的PDF檔案是此程式的輸出值。 輸入值的名稱(不安全的PDF檔案)為`InDoc`，資料型別為`com.adobe.idp.Document`。 輸出值(以密碼加密的PDF檔案)的名稱為`SecuredDoc`，資料型別為`com.adobe.idp.Document`。
 
 >[!NOTE]
 >
@@ -351,7 +351,7 @@ ht-degree: 1%
 **對應型別**：用來設定呼叫服務作業所需的輸入值。 對應型別有兩種：
 
 * `Literal`： Watched資料夾端點使用在顯示的欄位中輸入的值。 支援所有基本Java型別。 例如，如果API使用字串、long、int和Boolean等輸入，則字串會轉換為正確型別並叫用服務。
-* `Variable`：輸入的值是watched資料夾用來挑選輸入的檔案模式。 例如，如果您為對應型別選取「變數」，且輸入檔案必須是PDF檔案，則可以指定`*.pdf`作為對應值。
+* `Variable`：輸入的值是watched資料夾用來挑選輸入的檔案模式。 例如，如果您為對應型別選取「變數」，而輸入檔案必須是PDF檔案，則可以指定`*.pdf`作為對應值。
 
 **對應值**：指定對應型別的值。 例如，如果您選取`Variable`對應型別，則可以指定`*.pdf`做為檔案模式。
 
@@ -400,7 +400,7 @@ ht-degree: 1%
 1. 建立EndpointRegistry使用者端物件。
 
    * 建立包含連線屬性的`ServiceClientFactory`物件。
-   * 使用它的建構函式並傳遞`ServiceClientFactory`物件來建立`EndpointRegistryClient`物件。
+   * 使用它的建構函式並傳遞`EndpointRegistryClient`物件來建立`ServiceClientFactory`物件。
 
 1. 設定Watched資料夾端點屬性。
 
@@ -449,7 +449,7 @@ ht-degree: 1%
 
 1. 啟用端點。
 
-   啟用端點，方法是叫用`EndpointRegistryClient`物件的`enable`方法，並傳遞`createEndpoint`方法傳回的`Endpoint`物件。
+   啟用端點，方法是叫用`EndpointRegistryClient`物件的`enable`方法，並傳遞`Endpoint`方法傳回的`createEndpoint`物件。
 
 **另請參閱**
 
@@ -502,7 +502,7 @@ ht-degree: 1%
 
 ![ae_ae_encryptdocumentprocess](assets/ae_ae_encryptdocumentprocess.png)
 
-此程式接受不安全的PDF檔案作為輸入值，然後將不安全的PDF檔案傳遞給加密服務的`EncryptPDFUsingPassword`作業。 此程式會使用密碼加密PDF檔案，並傳回密碼加密的PDF檔案作為輸出值。 輸入值的名稱(不安全的PDF檔案)是`InDoc`，資料型別是`com.adobe.idp.Document`。 輸出值(密碼加密的PDF檔案)的名稱為`SecuredDoc`，資料型別為`com.adobe.idp.Document`。
+此程式接受不安全的PDF檔案作為輸入值，然後將不安全的PDF檔案傳遞至加密服務的`EncryptPDFUsingPassword`作業。 此程式會使用密碼加密PDF檔案，並傳回密碼加密的PDF檔案作為輸出值。 輸入值的名稱(不安全的PDF檔案)為`InDoc`，資料型別為`com.adobe.idp.Document`。 輸出值(以密碼加密的PDF檔案)的名稱為`SecuredDoc`，資料型別為`com.adobe.idp.Document`。
 
 >[!NOTE]
 >
@@ -566,7 +566,7 @@ ht-degree: 1%
 * **userName**：從電子郵件叫用目標服務時使用的使用者名稱。 預設值為 `SuperAdmin`。
 * **domainName**：必要的設定值。 預設值為 `DefaultDom`。
 * **domainPattern**：指定提供者接受的傳入電子郵件的網域模式。 例如，如果使用`adobe.com`，則只會處理來自adobe.com的電子郵件，而會忽略來自其他網域的電子郵件。
-* **filePattern**：指定提供者接受的傳入檔案附件模式。 這包括具有特定副檔名(&amp;amp；ast；.dat、&amp;amp；ast；.xml)的檔案、具有特定名稱（資料）的檔案，以及具有名稱與副檔名複合運算式的檔案(&amp;amp；ast；)。[d][aA]&#39;連線埠&#39;)。 預設值為 `*`。
+* **filePattern**：指定提供者接受的傳入檔案附件模式。 這包括具有特定副檔名(&amp;amp；ast；.dat、&amp;amp；ast；.xml)的檔案、具有特定名稱（資料）的檔案，以及具有名稱與副檔名複合運算式的檔案(&amp;amp；ast；)。``[dD][aA]``&#39;連線埠&#39;)。 預設值為 `*`。
 * **recipientSuccessfulJob**：傳送訊息以指示成功工作的電子郵件地址。 依預設，成功的工作訊息一律會傳送給寄件者。 如果您輸入`sender`，電子郵件結果會傳送給寄件者。 最多可支援100個收件者。 使用電子郵件地址指定其他收件者，每個收件者之間以逗號分隔。 若要關閉此選項，請將此值留空。 某些情況下，您可能想要觸發程式，而不想收到結果的電子郵件通知。 預設值為 `sender`。
 * **recipientFailedJob**：傳送訊息以指出工作失敗的電子郵件地址。 依預設，失敗的工作訊息一律會傳送給寄件者。 如果您輸入`sender`，電子郵件結果會傳送給寄件者。 最多可支援100個收件者。 使用電子郵件地址指定其他收件者，每個收件者之間以逗號分隔。 若要關閉此選項，請將此值留空。 預設值為 `sender`。
 * **收件匣主機**：要掃描的電子郵件提供者的收件匣主機名稱或IP位址。
@@ -583,7 +583,7 @@ ht-degree: 1%
 * **charSet**：電子郵件提供者使用的字元集。 預設值為 `UTF-8`。
 * **smtpSSLEnabled**：設定此值，以強制電子郵件提供者在傳送結果或錯誤的通知訊息時使用SSL。 請確定SMTP主機支援SSL。
 * **failedJobFolder**：指定當SMTP郵件伺服器無法運作時，要儲存結果的目錄。
-* **非同步**：設定為同步時，會處理所有輸入檔案並傳回單一回應。 設為非同步時，系統會針對每個已處理的輸入檔案傳送回應。 例如，會針對本主題中介紹的流程建立電子郵件端點，並傳送電子郵件訊息至端點的收件匣，其中包含多個不安全的PDF檔案。 當所有PDF檔案都使用密碼加密時，如果端點設定為同步，則會傳送單一回應電子郵件訊息並附加所有安全PDF檔案。 如果端點設定為非同步，則會為每個安全PDF檔案傳送個別的回應電子郵件訊息。 每封電子郵件都包含單一PDF檔案作為附件。 預設值為非同步。
+* **非同步**：設定為同步時，會處理所有輸入檔案並傳回單一回應。 設為非同步時，系統會針對每個已處理的輸入檔案傳送回應。 例如，系統會針對本主題介紹的流程建立電子郵件端點，並傳送電子郵件訊息至端點的收件匣，其中含有多個不安全的PDF檔案。 當所有PDF檔案都使用密碼加密時，以及如果端點設定為同步，會傳送單一回應電子郵件訊息並附上所有安全的PDF檔案。 如果端點設定為非同步，系統則會為每個安全的PDF檔案傳送個別的回應電子郵件訊息。 每封電子郵件訊息都包含單一PDF檔案作為附件。 預設值為非同步。
 
 **定義輸入引數值**
 
@@ -596,7 +596,7 @@ ht-degree: 1%
 **對應型別**：用來設定呼叫服務作業所需的輸入值。 兩種對應型別如下：
 
 * `Literal`：電子郵件端點使用在顯示的欄位中輸入的值。 支援所有基本Java型別。 例如，如果API使用字串、long、int和Boolean等輸入，則字串會轉換為正確型別並叫用服務。
-* `Variable`：輸入的值是電子郵件端點用來挑選輸入的檔案模式。 例如，如果您為對應型別選取「變數」，且輸入檔案必須是PDF檔案，則可以指定`*.pdf`作為對應值。
+* `Variable`：輸入的值是電子郵件端點用來挑選輸入的檔案模式。 例如，如果您為對應型別選取「變數」，而輸入檔案必須是PDF檔案，則可以指定`*.pdf`作為對應值。
 
 **對應值**：指定對應型別的值。 例如，如果您選取變數對應型別，則可以指定`*.pdf`做為檔案模式。
 
@@ -645,7 +645,7 @@ ht-degree: 1%
 1. 建立EndpointRegistry使用者端物件。
 
    * 建立包含連線屬性的`ServiceClientFactory`物件。
-   * 使用它的建構函式並傳遞`ServiceClientFactory`物件來建立`EndpointRegistryClient`物件。
+   * 使用它的建構函式並傳遞`EndpointRegistryClient`物件來建立`ServiceClientFactory`物件。
 
 1. 設定電子郵件端點屬性。
 
@@ -694,7 +694,7 @@ ht-degree: 1%
 
 1. 啟用端點。
 
-   啟用端點，方法是叫用`EndpointRegistryClient`物件的`enable`方法，並傳遞`createEndpoint`方法傳回的`Endpoint`物件。
+   啟用端點，方法是叫用`EndpointRegistryClient`物件的`enable`方法，並傳遞`Endpoint`方法傳回的`createEndpoint`物件。
 
 **另請參閱**
 
@@ -752,13 +752,13 @@ ht-degree: 1%
 >
 >JEE版的AEM表單已棄用LiveCycle Remoting API。
 
-您可以使用AEM Forms Java API，以程式設計方式將遠端端點新增至服務。 透過新增遠端端點，您可以啟用Flex應用程式以使用遠端來叫用服務。 (請參閱[使用叫用AEM Forms (AEM表單已棄用) AEM Forms Remoting](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting)。)
+您可以使用AEM Forms Java API，以程式設計方式將遠端端點新增至服務。 透過新增遠端端點，您可以啟用Flex應用程式以使用遠端來叫用服務。 (請參閱[使用叫用AEM Forms (AEM Forms已棄用) AEM Forms Remoting](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting)。)
 
 為了以程式設計方式將Remoting端點新增至服務，請考慮下列名為&#x200B;*EncryptDocument*&#x200B;的短期程式。
 
 ![ar_ar_encryptdocumentprocess](assets/ar_ar_encryptdocumentprocess.png)
 
-此程式接受不安全的PDF檔案作為輸入值，然後將不安全的PDF檔案傳遞給加密服務的`EncryptPDFUsingPassword`作業。 PDF檔案使用密碼加密，而密碼加密的PDF檔案是此程式的輸出值。 輸入值的名稱(不安全的PDF檔案)是`InDoc`，資料型別是`com.adobe.idp.Document`。 輸出值(密碼加密的PDF檔案)的名稱為`SecuredDoc`，資料型別為`com.adobe.idp.Document`。
+此程式接受不安全的PDF檔案作為輸入值，然後將不安全的PDF檔案傳遞至加密服務的`EncryptPDFUsingPassword`作業。 PDF檔案已使用密碼加密，而密碼加密的PDF檔案是此程式的輸出值。 輸入值的名稱(不安全的PDF檔案)為`InDoc`，資料型別為`com.adobe.idp.Document`。 輸出值(以密碼加密的PDF檔案)的名稱為`SecuredDoc`，資料型別為`com.adobe.idp.Document`。
 
 為了示範如何將Remoting端點新增至服務，本節將Remoting端點新增至名為EncryptDocument的服務。
 
@@ -830,7 +830,7 @@ ht-degree: 1%
 1. 建立EndpointRegistry使用者端物件。
 
    * 建立包含連線屬性的`ServiceClientFactory`物件。
-   * 使用它的建構函式並傳遞`ServiceClientFactory`物件來建立`EndpointRegistryClient`物件。
+   * 使用它的建構函式並傳遞`EndpointRegistryClient`物件來建立`ServiceClientFactory`物件。
 
 1. 設定遠端端點屬性。
 
@@ -847,7 +847,7 @@ ht-degree: 1%
 
 1. 啟用端點。
 
-   啟用端點，方法是叫用`EndpointRegistryClient`物件的`enable`方法，並傳遞`createEndpoint`方法傳回的`Endpoint`物件。
+   啟用端點，方法是叫用`EndpointRegistryClient`物件的`enable`方法，並傳遞`Endpoint`方法傳回的`createEndpoint`物件。
 
 **另請參閱**
 
@@ -941,7 +941,7 @@ ht-degree: 1%
 1. 建立EndpointRegistry使用者端物件。
 
    * 建立包含連線屬性的`ServiceClientFactory`物件。
-   * 使用它的建構函式並傳遞`ServiceClientFactory`物件來建立`EndpointRegistryClient`物件。
+   * 使用它的建構函式並傳遞`EndpointRegistryClient`物件來建立`ServiceClientFactory`物件。
 
 1. 為端點建立類別。
 
@@ -968,7 +968,7 @@ ht-degree: 1%
 
 1. 啟用端點。
 
-   啟用端點，方法是叫用`EndpointRegistryClient`物件的`enable`方法，並傳遞`createEndpoint`方法傳回的`Endpoint`物件。
+   啟用端點，方法是叫用`EndpointRegistryClient`物件的`enable`方法，並傳遞`Endpoint`方法傳回的`createEndpoint`物件。
 
 **另請參閱**
 
@@ -1053,7 +1053,7 @@ ht-degree: 1%
 1. 建立EndpointRegistry使用者端物件。
 
    * 建立包含連線屬性的`ServiceClientFactory`物件。
-   * 使用它的建構函式並傳遞`ServiceClientFactory`物件來建立`EndpointRegistryClient`物件。
+   * 使用它的建構函式並傳遞`EndpointRegistryClient`物件來建立`ServiceClientFactory`物件。
 
 1. 擷取要修改的端點。
 
@@ -1084,7 +1084,7 @@ ht-degree: 1%
 
 ## 移除端點 {#removing-endpoints}
 
-您可以使用AEM Forms Java API，以程式設計方式從服務中移除端點。 移除端點後，無法使用啟用端點的叫用方法來叫用服務。 例如，如果您從服務中移除SOAP端點，則無法使用SOAP模式叫用服務。
+您可以使用AEM Forms Java API，以程式設計方式從服務中移除端點。 移除端點後，無法使用啟用端點的叫用方法來叫用服務。 例如，如果您從服務中移除SOAP端點，便無法使用SOAP模式叫用服務。
 
 為了示範如何從服務移除端點，本節從名為&#x200B;*EncryptDocument*&#x200B;的服務移除EJB端點。
 
@@ -1147,7 +1147,7 @@ ht-degree: 1%
 1. 建立EndpointRegistry使用者端物件。
 
    * 建立包含連線屬性的`ServiceClientFactory`物件。
-   * 使用它的建構函式並傳遞`ServiceClientFactory`物件來建立`EndpointRegistryClient`物件。
+   * 使用它的建構函式並傳遞`EndpointRegistryClient`物件來建立`ServiceClientFactory`物件。
 
 1. 擷取端點以移除。
 
@@ -1244,7 +1244,7 @@ ht-degree: 1%
 1. 建立ConnectorRegistry使用者端物件。
 
    * 建立包含連線屬性的`ServiceClientFactory`物件。
-   * 使用它的建構函式並傳遞`ServiceClientFactory`物件來建立`ConnectorRegistryClient`物件。
+   * 使用它的建構函式並傳遞`ConnectorRegistryClient`物件來建立`ServiceClientFactory`物件。
 
 1. 指定聯結器型別。
 

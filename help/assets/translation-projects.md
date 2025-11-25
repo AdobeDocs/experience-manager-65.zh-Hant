@@ -2,11 +2,11 @@
 title: 建立翻譯專案
 description: 瞭解如何在 [!DNL Adobe Experience Manager]中建立翻譯專案。
 contentOwner: AG
-role: Architect, Admin
+role: Developer, Admin
 feature: Translation
 exl-id: 8990feca-cfda-4974-915e-27aa9d8f2ee1
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '1889'
 ht-degree: 15%
@@ -77,7 +77,7 @@ ht-degree: 15%
 
    ![語言副本](assets/lang-copy2.png)
 
-1. 若要導覽至資料夾，請選取語言副本，然後按一下[在Assets中顯示] **&#x200B;**。
+1. 若要導覽至資料夾，請選取語言副本，然後按一下[在Assets中顯示] ****。
 
    ![在資產中顯示](assets/reveal-in-assets.png)
 
@@ -237,7 +237,7 @@ ht-degree: 15%
 
 當您執行翻譯工作流程，以使用原始資產的已編輯版本更新語言副本時，現有的語言副本會保留，直到您核准翻譯資產為止。 [!DNL Adobe Experience Manager Assets]會將新翻譯的資產儲存在暫存位置，並在您明確核准資產後更新現有的語言副本。 如果您拒絕資產，則語言副本會維持不變。
 
-1. 按一下您已為其建立語言副本的&#x200B;**[!UICONTROL 語言副本]**&#x200B;下的來源根資料夾，然後按一下「在Assets中顯示」**以開啟[!DNL Experience Manager Assets]中的資料夾。**
+1. 按一下您已為其建立語言副本的&#x200B;**[!UICONTROL 語言副本]**&#x200B;下的來源根資料夾，然後按一下「在Assets中顯示」**[!UICONTROL 以開啟]**&#x200B;中的資料夾。[!DNL Experience Manager Assets]
 
    ![chlimage_1-99](assets/chlimage_1-99.png)
 

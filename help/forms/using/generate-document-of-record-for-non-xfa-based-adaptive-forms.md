@@ -9,20 +9,20 @@ feature: Adaptive Forms,Foundation Components
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 exl-id: 7240897f-6b3a-427a-abc6-66310c2998f3
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
-source-wordcount: '4308'
+source-wordcount: '4307'
 ht-degree: 3%
 
 ---
 
 # 產生最適化表單或最適化表單片段的記錄檔案 {#generate-document-of-record-for-adaptive-forms}
 
-<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hant)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。本文會介紹使用基礎元件編寫最適化表單的舊方法。</span>
+<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。本文會介紹使用基礎元件編寫最適化表單的舊方法。</span>
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/generate-document-of-record-for-non-xfa-based-adaptive-forms.html?lang=zh-Hant) |
+| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/generate-document-of-record-for-non-xfa-based-adaptive-forms.html) |
 | AEM 6.5 | 本文章 |
 
 
@@ -34,7 +34,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
-> AEM 6.5 Forms Service Pack 19 (6.5.19.0)引進自訂最適化表單片段及其在最適化表單編輯器中欄位的支援。
+> AEM 6.5 Forms Service Pack 19 (6.5.19.0)已引進自訂您的最適化表單片段及其在最適化表單編輯器中欄位的支援。
 
 
 >[!NOTE]
@@ -105,7 +105,7 @@ ht-degree: 3%
    <th>最適化表單元件</th>
    <th>對應的XFA元件</th>
    <th>預設包含在記錄檔案範本中？</th>
-   <th>附註</th>
+   <th>備註</th>
   </tr>
   <tr>
    <td>按鈕</td>
@@ -132,7 +132,7 @@ ht-degree: 3%
    <td> </td>
   </tr>
   <tr>
-   <td>草寫簽名</td>
+   <td>手寫簽名</td>
    <td>手寫簽名</td>
    <td>true</td>
    <td> </td>
@@ -195,7 +195,7 @@ ht-degree: 3%
   <tr>
    <th>最適化表單元件</th>
    <th>對應的XFA元件</th>
-   <th>附註</th>
+   <th>備註</th>
   </tr>
   <tr>
    <td>面板<br /> </td>
@@ -207,10 +207,10 @@ ht-degree: 3%
 
 ### 靜態元件 {#static-components}
 
-| 最適化表單元件 | 對應的XFA元件 | 附註 |
+| 最適化表單元件 | 對應的XFA元件 | 備註 |
 |---|---|---|
 | 影像 | 影像 | 除非使用記錄檔案設定加以排除，否則TextDraw和Image元件（無論已繫結或未繫結）一律會出現在XSD型調適型表單的記錄檔案中。 |
-| 文字 | 文字 |
+| 文字 | 文字 |  |
 
 >[!NOTE]
 >
@@ -240,7 +240,7 @@ ht-degree: 3%
 
 **欄位的樣式慣例**
 
-* 若要在記錄檔案中的欄位套用樣式，基底範本會提供`AF_METATEMPLATE`根子表單下`AF_FIELDSSUBFORM`子表單中的欄位。
+* 若要在記錄檔案中的欄位套用樣式，基底範本會提供`AF_FIELDSSUBFORM`根子表單下`AF_METATEMPLATE`子表單中的欄位。
 
 * 這些欄位的屬性會套用至記錄檔案中的欄位。 這些欄位應遵循`AF_<name of field in all caps>_XFO`命名慣例。 例如，核取方塊的欄位名稱應該是`AF_CHECKBOX_XFO`。
 
@@ -251,7 +251,7 @@ ht-degree: 3%
 
 1. 選取&#x200B;**Forms — 記錄檔案**&#x200B;類別。
 1. 選取&#x200B;**DoR基底範本**。
-1. 按一下[下一步]&#x200B;**&#x200B;**&#x200B;並提供必要的資訊。
+1. 按一下[下一步]****&#x200B;並提供必要的資訊。
 
 1. （選擇性）修改您要在記錄檔案中欄位上套用的欄位樣式和外觀。
 1. 儲存表單。
@@ -274,7 +274,7 @@ ht-degree: 3%
 
 執行以下步驟來設定最適化表單的記錄檔案：
 
-1. 在AEM編寫執行個體中，按一下&#x200B;**Forms > Forms和檔案。**
+1. 在AEM作者執行個體中，按一下&#x200B;**Forms > Forms和檔案。**
 1. 選取表單，然後按一下&#x200B;**檢視內容**。
 1. 在[內容]視窗中，選取&#x200B;**表單模型**。
 您也可以在建立表單時選取表單模型。
@@ -420,13 +420,12 @@ ht-degree: 3%
 **表單層級設定**
 
 * **[!UICONTROL 基本]**
-   * **範本：**&#x200B;您可以選取[預設]或[自訂]範本。
-
+   * **範本：**您可以選取[預設]或[自訂]範本。
      ![替代文字](image.png)
    * **強調色：**&#x200B;您可以預先定義[!UICONTROL 記錄檔案]的範本顏色。
    * **字型系列：**&#x200B;為[!UICONTROL 記錄檔案]文字選取字型型別。
    * **包含未繫結欄位於DoR：**&#x200B;設定屬性包含來自[!UICONTROL 記錄檔案]中結構描述型最適化表單的未繫結欄位。 預設為true。
-   * **若隱藏則從DoR排除欄位：**&#x200B;設定屬性以在表單提交時從[!UICONTROL 記錄檔案]排除隱藏欄位。 當您在伺服器[&#128279;](/help/forms/using/configuring-submit-actions.md#server-side-revalidation-in-adaptive-form-server-side-revalidation-in-adaptive-form)上啟用重新驗證時，伺服器會先重新計算隱藏的欄位，然後再從[!UICONTROL 記錄檔案]中排除這些欄位
+   * **若隱藏則從DoR排除欄位：**&#x200B;設定屬性以在表單提交時從[!UICONTROL 記錄檔案]排除隱藏欄位。 當您在伺服器[上啟用](/help/forms/using/configuring-submit-actions.md#server-side-revalidation-in-adaptive-form-server-side-revalidation-in-adaptive-form)重新驗證時，伺服器會先重新計算隱藏的欄位，然後再從[!UICONTROL 記錄檔案]中排除這些欄位
 * **[!UICONTROL 表單欄位屬性]**
    * 如果勾選選項&#x200B;**對於核取方塊與選項按鈕元件，只顯示選取的值**，它將只產生具有選取值的DoR輸出。
    * 您可以為多個選取的值選取「分隔符號」，也可以選擇任何其他分隔符號型別。
@@ -434,7 +433,6 @@ ht-degree: 3%
       * 垂直
       * 水平
       * 與自適應表單相同
-
      >[!NOTE]
      > 「垂直」和「水準」對齊方式僅適用於     選項按鈕與核取方塊
 * **[!UICONTROL 主版頁面屬性]**&#x200B;按一下以取得有關[主版頁面屬性](#master-page-properties-master-page-properties)的詳細資訊
@@ -448,7 +446,7 @@ ht-degree: 3%
 1. 選取面板並選取![設定](/help/forms/using/assets/configure.png)
 1. 展開&#x200B;**[!UICONTROL 記錄檔案]**&#x200B;以檢視內容。
 
-1. 在&#x200B;**[!UICONTROL 分頁]**&#x200B;區段中，選取&#x200B;**[!UICONTROL 位置]**&#x200B;欄位中的![資料夾](/help/forms/using/assets/folder-icon.png)。
+1. 在&#x200B;**[!UICONTROL 分頁]**&#x200B;區段中，選取![位置](/help/forms/using/assets/folder-icon.png)欄位中的&#x200B;**[!UICONTROL 資料夾]**。
 1. 選取&#x200B;**[!UICONTROL 下一頁頂端]**&#x200B;並選取&#x200B;**[!UICONTROL 選取]**。 您也可以選取&#x200B;**[!UICONTROL 頁面頂端]**，選取主版頁面，然後選取&#x200B;**[!UICONTROL 選取]**&#x200B;以套用分頁符號。
 1. 選取![儲存](/help/forms/using/assets/save_icon.png)以儲存屬性。
 
@@ -466,10 +464,10 @@ ht-degree: 3%
 若要將第二個主版頁面屬性套用至面板，並將第三個主版頁面屬性套用至後續面板，請執行下列步驟：
 
 1. 選取要套用第二個主版頁面的面板，然後選取![設定](assets/cmppr.png)。
-1. 在&#x200B;**[!UICONTROL 分頁]**&#x200B;區段中，選取&#x200B;**[!UICONTROL 位置]**&#x200B;欄位中的![資料夾](/help/forms/using/assets/folder-icon.png)。
+1. 在&#x200B;**[!UICONTROL 分頁]**&#x200B;區段中，選取![位置](/help/forms/using/assets/folder-icon.png)欄位中的&#x200B;**[!UICONTROL 資料夾]**。
 1. 選取&#x200B;**[!UICONTROL 在頁面]**&#x200B;上，選取第二個主版頁面並選取&#x200B;**[!UICONTROL 選取]**。
 AEM Forms會套用第二個主版頁面至面板，以及最適化表單中的所有後續面板。
-1. 在&#x200B;**[!UICONTROL 分頁]**&#x200B;區段中，選取&#x200B;**[!UICONTROL After]**&#x200B;欄位中的![資料夾](/help/forms/using/assets/folder-icon.png)。
+1. 在&#x200B;**[!UICONTROL 分頁]**&#x200B;區段中，選取![After](/help/forms/using/assets/folder-icon.png)欄位中的&#x200B;**[!UICONTROL 資料夾]**。
 1. 選取&#x200B;**[!UICONTROL 移至頁面]**，選取第三個主版頁面，然後選取&#x200B;**[!UICONTROL 選取]**。
 1. 選取![儲存](/help/forms/using/assets/save_icon.png)以儲存屬性。
 AEM Forms會套用第三個主版頁面至面板，以及最適化表單中的所有後續面板。
@@ -509,15 +507,15 @@ XCI檔案可協助您設定檔案的各種屬性。 <!-- Forms as a Cloud Servic
 | config/present/common/log/to | 控制記錄資料或輸出資料寫入的位置。 |
 | config/present/output/to | 控制記錄資料或輸出資料寫入的位置。 |
 | config/present/script/currentPage | 指定開啟檔案時的初始頁面。 |
-| config/present/script/exclude | 通知Formsas a Cloud Service忽略哪些事件。 |
+| config/present/script/exclude | 通知Forms as a Cloud Service要忽略哪些事件。 |
 | config/present/pdf/linearized | 控制是否將輸出PDF檔案線性化。 |
-| config/present/script/runScripts | 控制Forms as a Cloud Service執行的指令碼集。 |
-| config/present/pdf/tagged | 控制標籤在輸出PDF檔案中是否包含。 在PDF的內容中，標籤是包含在檔案中的其他資訊，用於公開檔案的邏輯結構。 標籤有助於協助協助工具及重新格式化。 例如，頁碼可能會被標籤為成品，這樣熒幕閱讀器就不會在文字中間朗讀它。 雖然標籤讓檔案變得更實用，但它們也會增加檔案的大小，以及建立檔案的處理時間。 |
+| config/present/script/runScripts | 控制Forms as a Cloud Service要執行哪一組指令碼。 |
+| config/present/pdf/tagged | 控制標籤在輸出PDF檔案中是否包含。 在PDF中，標籤是包含在檔案中的其他資訊，用於公開檔案的邏輯結構。 標籤有助於協助協助工具及重新格式化。 例如，頁碼可能會被標籤為成品，這樣熒幕閱讀器就不會在文字中間朗讀它。 雖然標籤讓檔案變得更實用，但它們也會增加檔案的大小，以及建立檔案的處理時間。 |
 | config/present/pdf/fontInfo/alwaysEmbed | 指定內嵌在輸出檔案中的字型。 |
 | config/present/pdf/fontInfo/neverEmbed | 指定不得嵌入至輸出檔案的字型。 |
-| config/present/pdf/pdfa/part | 指定檔案符合的PDF/A規格的版本號碼。 |
-| config/present/pdf/pdfa/amd | 指定PDF/A規格的修訂層次。 |
-| config/present/pdf/pdfa/conformance | 指定符合PDF/A規格的等級。 |
+| config/present/pdf/pdfa/part | 指定檔案符合的PDF/A規格版本號碼。 |
+| config/present/pdf/pdfa/amd | 指定PDF/A規格的修訂等級。 |
+| config/present/pdf/pdfa/conformance | 指定與PDF/A規格一致的等級。 |
 | config/present/pdf/version | 指定要產生的PDF檔案版本 |
 | config/present/pdf/version/map | 指定檔案的回覆字型 |
 
