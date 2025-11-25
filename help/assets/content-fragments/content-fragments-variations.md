@@ -168,7 +168,7 @@ RTF編輯可讓您設定格式：
 
 >[!CAUTION]
 >
->如果您在 **Rich Text** 和 **** Markdown之間切換，可能會在區塊引號和程式碼區塊中遇到意外的效果，因為這兩種格式在處理方式上可能會有差異。
+>如果您在 **Rich Text** 和 **&#x200B;**&#x200B;Markdown之間切換，可能會在區塊引號和程式碼區塊中遇到意外的效果，因為這兩種格式在處理方式上可能會有差異。
 
 ### 片段參考 {#fragment-references}
 
@@ -444,7 +444,7 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 1. 選取所需的變數。
 1. 從&#x200B;**動作**&#x200B;下拉式清單中選取&#x200B;**重新命名**。
 
-1. 在產生的對 **話方塊中** ，輸入新的「 **** 標題」和/或「說明」。
+1. 在產生的對 **話方塊中** ，輸入新的「 **&#x200B;**&#x200B;標題」和/或「說明」。
 
 1. 確認&#x200B;**重新命名**&#x200B;動作。
 
@@ -474,7 +474,7 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
 >[!CAUTION]
 >
->同步僅可用於將更改從 *主&#x200B;**版複製**到變化*。
+>同步僅可用於將更改從 *主&#x200B;**版複製**&#x200B;到變化*。
 >
 >只同步變數的目前元素。
 >
