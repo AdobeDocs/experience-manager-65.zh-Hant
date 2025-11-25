@@ -52,7 +52,7 @@ Adobe Experience Manager (AEM)隨附多種現成可用的元件，可為網站�
 
 下列頁面提供元件其他重要資訊的連結：
 
-* [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) — 核心元件提供彈性且功能豐富的編寫功能，可提供建立頁面所需的基本內容型別。
+* [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant) — 核心元件提供彈性且功能豐富的編寫功能，可提供建立頁面所需的基本內容型別。
 
 * [社群](/help/communities/author-communities.md) — 元件為網站提供互動功能，例如論壇和評論。 建立[社群網站](/help/communities/overview.md)時，其中許多元件都會包含在內。
 

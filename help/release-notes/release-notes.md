@@ -74,7 +74,7 @@ ht-degree: 24%
 
    * Red Hat® Enterprise Linux® 9 （核心4.x，64位元） 
 
-* [強化的檔案附件元件](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/file-attachment)：作為安全性測量，此元件現在會防止提交副檔名經過修改、嘗試略過允許的檔案型別檢查的檔案。 提交期間會封鎖這類檔案，以確保僅接受有效的檔案型別。
+* [強化的檔案附件元件](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/file-attachment)：作為安全性測量，此元件現在會防止提交副檔名經過修改、嘗試略過允許的檔案型別檢查的檔案。 提交期間會封鎖這類檔案，以確保僅接受有效的檔案型別。
 
 * Forms-20533、FORMS-20532： AEM Forms現在包含從2.5.33升級至6.x的Struts版本。已透過[Hotfix](/help/release-notes/aem-forms-hotfix.md)新增支援，您可以[下載並安裝](/help/release-notes/aem-forms-hotfix.md)以新增對最新版本Struts的支援。
 
@@ -362,9 +362,9 @@ ht-degree: 24%
 
 * 在AEM Forms 6.5.21.0上，PDFG轉換因下列錯誤而失敗： (FORMS-16851)(FORMS-14613)
 
-* 在AEM Forms 6.5.23.0上，(PDFG) PS到PDF和HTML到PDF (WebKit)轉換失敗。 若要解決此問題，請從[Adobe Experience Manager Forms Hotfix](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/release-notes/aem-forms-hotfix)下載並安裝Hotfix (FORMS-21721)
+* 在AEM Forms 6.5.23.0上，(PDFG) PS到PDF和HTML到PDF (WebKit)轉換失敗。 若要解決此問題，請從[Adobe Experience Manager Forms Hotfix](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65/content/release-notes/aem-forms-hotfix)下載並安裝Hotfix (FORMS-21721)
 
-* 在AEM Forms 6.5.23.0上，(PDFG)影像到PDF的轉換失敗。 若要解決此問題，請從[Adobe Experience Manager Forms Hotfix](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/release-notes/aem-forms-hotfix)下載並安裝Hotfix (FORMS-22029)
+* 在AEM Forms 6.5.23.0上，(PDFG)影像到PDF的轉換失敗。 若要解決此問題，請從[Adobe Experience Manager Forms Hotfix](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65/content/release-notes/aem-forms-hotfix)下載並安裝Hotfix (FORMS-22029)
 
 #### 表單驗證碼 {#forms-captcha-6523}
 
@@ -771,6 +771,6 @@ AEM 6.5.21、6.5.22、6.5.23和AEM 6.5 LTS GA隨附`org.apache.sling.scripting.j
 
 >[!MORELIKETHIS]
 >
->* [[!DNL Experience Manager] 產品頁面](https://business.adobe.com/products/experience-manager/adobe-experience-manager.html)
+>* [[!DNL Experience Manager] 產品頁面](https://business.adobe.com/tw/products/experience-manager/adobe-experience-manager.html)
 >* [[!DNL Experience Manager] 6.5檔案](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65)
 >* [訂閱Adobe優先產品更新](https://www.adobe.com/tw/subscription/priority-product-update.html)

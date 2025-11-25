@@ -260,7 +260,7 @@ Adobe Campaign Standard可讓您復原和連結在AEM中建立的內容，包含
 
 若要將AEM中建立的頁面連結至Adobe Campaign的電子郵件：
 
-1. 根據AEM專屬的電子郵件範本建立電子郵件。 如需詳細資訊，請參閱[在Adobe Campaign Standard中建立電子郵件](https://helpx.adobe.com/campaign/standard/channels/using/creating-an-email.html)。
+1. 根據AEM專屬的電子郵件範本建立電子郵件。 如需詳細資訊，請參閱[在Adobe Campaign Standard中建立電子郵件](https://helpx.adobe.com/tw/campaign/standard/channels/using/creating-an-email.html)。
 
    ![chlimage_1-36](assets/chlimage_1-36a.png)
 
