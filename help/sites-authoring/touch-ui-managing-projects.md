@@ -8,8 +8,8 @@ content-type: reference
 exl-id: 62586c8e-dab4-4be9-a44a-2c072effe3c0
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '965'
 ht-degree: 2%
@@ -38,7 +38,7 @@ ht-degree: 2%
 請依照下列步驟建立專案。
 
 1. 在&#x200B;**專案**&#x200B;主控台中，按一下&#x200B;**建立**&#x200B;以開啟&#x200B;**建立專案**&#x200B;精靈。
-1. 選取範本並按一下[下一步] **&#x200B;**。 您可以在[這裡](/help/sites-authoring/projects.md#project-templates)進一步瞭解標準專案範本。
+1. 選取範本並按一下[下一步] ****。 您可以在[這裡](/help/sites-authoring/projects.md#project-templates)進一步瞭解標準專案範本。
 
    ![建立專案精靈](assets/create-project-wizard.png)
 
@@ -91,7 +91,7 @@ ht-degree: 2%
 
    ![任務拼貼](assets/project-tile-tasks.png)
 
-1. AEM會開啟主控台，以顯示與圖磚關聯的專案型別，以及根據所選專案篩選專案。
+1. AEM會開啟主控台，讓您檢視與圖磚關聯的專案型別，以及根據所選專案篩選專案。
 
    ![專案任務](assets/project-tasks.png)
 
@@ -108,7 +108,7 @@ Assets會顯示在邊欄中。 完成後，使用邊欄選擇器返回正常檢�
 
 ### 檢視非作用中專案 {#viewing-active-inactive-projects}
 
-若要在作用中和[非作用中專案之間切換，請在&#x200B;**專案**&#x200B;主控台中按一下&#x200B;**切換作用中專案**&#x200B;圖示。](#making-projects-inactive-or-active)
+若要在作用中和[非作用中專案之間切換，請在](#making-projects-inactive-or-active)專案&#x200B;**主控台中按一下**&#x200B;切換作用中專案&#x200B;**圖示。**
 
 ![切換使用中的專案圖示](assets/projects-toggle-active.png)
 
@@ -126,7 +126,7 @@ Assets會顯示在邊欄中。 完成後，使用邊欄選擇器返回正常檢�
 
    ![建立資料夾](assets/project-create-folder.png)
 
-1. 提供資料夾標題，然後按一下[建立]。**&#x200B;**
+1. 提供資料夾標題，然後按一下[建立]。****
 
 1. 資料夾會新增至主控台。
 
@@ -134,7 +134,7 @@ Assets會顯示在邊欄中。 完成後，使用邊欄選擇器返回正常檢�
 
 ### 停用專案 {#making-projects-inactive-or-active}
 
-如果專案已完成，您可能想要將其標示為非使用中，但仍要保留有關專案的資訊。 [非使用中的專案現在預設會在&#x200B;**專案**&#x200B;主控台中顯示](#viewing-active-inactive-projects)。
+如果專案已完成，您可能想要將其標示為非使用中，但仍要保留有關專案的資訊。 [非使用中的專案現在預設會在](#viewing-active-inactive-projects)專案&#x200B;**主控台中顯示**。
 
 若要停用專案，請執行下列步驟。
 
@@ -153,7 +153,7 @@ Assets會顯示在邊欄中。 完成後，使用邊欄選擇器返回正常檢�
 1. 導覽至&#x200B;**專案**&#x200B;主控台的最上層。
 1. 在主控台中選取您的專案。
 1. 按一下工具列中的&#x200B;**刪除**。
-1. 刪除專案時，AEM可以移除/修改關聯的專案資料。 在&#x200B;**刪除專案**&#x200B;對話方塊中選取您需要的選項。
+1. 刪除專案時，AEM可以移除/修改相關聯的專案資料。 在&#x200B;**刪除專案**&#x200B;對話方塊中選取您需要的選項。
    * 移除專案群組和角色
    * 刪除專案Assets資料夾
    * 終止專案工作流程

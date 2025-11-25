@@ -9,24 +9,24 @@ docset: aem65
 exl-id: a7e16555-9bbe-4da2-817c-4495a0193f3f
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '1540'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
 # 製作頁面的快速指南{#quick-guide-to-authoring-pages}
 
-這些程式旨在作為在AEM中編寫頁面內容關鍵動作的快速指南（高層級）。
+這些程式旨在作為在AEM中編寫頁面內容之關鍵動作的快速指南（高層級）。
 
 上述功能為：
 
 * 不是為了提供完整的涵蓋範圍。
 * 提供詳細檔案的連結。
 
-如需使用AEM編寫的完整詳細資訊，請參閱：
+如需使用AEM撰寫的完整詳細資訊，請參閱：
 
 * [作者的首要步驟](/help/sites-authoring/first-steps.md)
 * [製作頁面](/help/sites-authoring/page-authoring.md)
@@ -49,7 +49,7 @@ ht-degree: 4%
 
 * 導覽連結
 
-   * 當您處於&#x200B;**編輯**&#x200B;模式時，***連結無法用於導覽***。 若要使用連結導覽，您需要[使用以下其中一種方式預覽頁面](/help/sites-authoring/editing-content.md#previewing-pages)：
+   * 當您處於&#x200B;***編輯***&#x200B;模式時，**連結無法用於導覽**。 若要使用連結導覽，您需要[使用以下其中一種方式預覽頁面](/help/sites-authoring/editing-content.md#previewing-pages)：
 
       * [預覽模式](/help/sites-authoring/editing-content.md#preview-mode)
       * [以已發佈狀態檢視](/help/sites-authoring/editing-content.md#view-as-published)
@@ -68,7 +68,7 @@ ht-degree: 4%
 
 尋找頁面有許多方面；您可以導覽及/或搜尋：
 
-1. 開啟&#x200B;**網站**&#x200B;主控台（使用[全域導覽](/help/sites-authoring/basic-handling.md#global-navigation)中的&#x200B;**網站**&#x200B;選項） — 這會在您選取Adobe Experience Manager連結（左上方）時觸發（下拉式清單）。
+1. 開啟&#x200B;**網站**&#x200B;主控台（使用&#x200B;**全域導覽**&#x200B;中的[網站](/help/sites-authoring/basic-handling.md#global-navigation)選項） — 這會在您選取Adobe Experience Manager連結（左上方）時觸發（下拉式清單）。
 
 1. 點選/按一下適當的頁面，在樹狀結構中向下導覽。 頁面資源的呈現方式取決於您使用的檢視 — [卡片、清單或欄](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)：
 
@@ -230,21 +230,21 @@ ht-degree: 4%
 * 從&#x200B;**網站**&#x200B;主控台：
 
    1. [瀏覽至您要發佈的頁面](#finding-your-page)。
-   1. 從下列任一位置選取&#x200B;**快速Publish**&#x200B;圖示：
+   1. 選取&#x200B;**快速發佈**&#x200B;圖示，其來源為：
 
       * 適當資源的[快速動作（僅限卡片檢視/案頭）](#quick-actions-card-view-desktop-only)。
-      * 已選取您的[頁面時的工具列](#selectiingyourpageforfurtheraction) (也可讓您稍後存取[Publish](/help/sites-authoring/publishing-pages.md#main-pars-title-12))。
+      * 選取[頁面時的工具列](#selectiingyourpageforfurtheraction) （也可存取[稍後發佈](/help/sites-authoring/publishing-pages.md#main-pars-title-12)）。
 
   ![screen_shot_2018-03-21at160957](assets/screen_shot_2018-03-21at160957.png)
 
 * 當[編輯您的頁面](#editing-your-page-content)時：
 
    1. 開啟&#x200B;**頁面資訊**&#x200B;功能表。
-   1. 選取&#x200B;**Publish頁面**。
+   1. 選取&#x200B;**發佈頁面**。
 
   ![screen_shot_2018-03-21at161026](assets/screen_shot_2018-03-21at161026.png)
 
-* 從主控台取消發佈頁面只能透過「管理出版物 **&#x200B;**&#x200B;」選項完成，此選項只能在工具列上使用 (不能透過快速動作)。
+* 從主控台取消發佈頁面只能透過「管理出版物 **** 」選項完成，此選項只能在工具列上使用 (不能透過快速動作)。
 
   編輯器中仍可透過&#x200B;**頁面資訊**&#x200B;功能表使用&#x200B;**取消發佈頁面**&#x200B;選項。
 

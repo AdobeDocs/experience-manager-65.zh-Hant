@@ -10,8 +10,8 @@ legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 exl-id: f59f12a2-ecd6-49cf-90ad-621719fe51bf
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Launches
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '772'
 ht-degree: 1%
@@ -29,7 +29,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->將啟動頁面提升至目標（**生產**）後，您可以啟動&#x200B;**生產**&#x200B;頁面作為實體（讓程式更快）。 將頁面新增至Workflow封裝，並作為啟動頁面封裝的Workflow的裝載。 提升啟動項之前，必須先建立工作流程封裝。 請參閱[使用AEM工作流程](#processing-promoted-pages-using-aem-workflow)處理提升頁面。
+>將啟動頁面提升至目標（**生產**）後，您可以啟動&#x200B;**生產**&#x200B;頁面作為實體（讓程式更快）。 將頁面新增至Workflow封裝，並作為啟動頁面封裝的Workflow的裝載。 提升啟動項之前，必須先建立工作流程封裝。 請參閱[使用AEM工作流程處理提升頁面](#processing-promoted-pages-using-aem-workflow)。
 
 >[!CAUTION]
 >
@@ -68,7 +68,7 @@ ht-degree: 1%
 
 1. 在第一個步驟中，您可以指定：
 
-   * **目標**
+   * **Target**
 
       * **促銷活動後刪除啟動項**
 
@@ -115,7 +115,7 @@ ht-degree: 1%
 
 1. 輸入必要的明細：
 
-   * **目標**
+   * **Target**
 
       * **促銷目標**
 您可以升級至任何來源。

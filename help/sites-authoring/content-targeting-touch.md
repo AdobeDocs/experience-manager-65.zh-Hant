@@ -1,5 +1,5 @@
 ---
-title: 使用定位模式製作目標內容
+title: 使用定位模式編寫目標內容
 description: 目標定位模式和Target元件提供建立體驗內容的工具
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -9,17 +9,17 @@ docset: aem65
 exl-id: edde225d-0be7-4306-8dda-d18d46fae977
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '5284'
 ht-degree: 6%
 
 ---
 
-# 使用定位模式製作目標內容{#authoring-targeted-content-using-targeting-mode}
+# 使用定位模式編寫目標內容{#authoring-targeted-content-using-targeting-mode}
 
-使用AEM的鎖定模式製作鎖定內容。 目標定位模式和Target元件提供建立體驗內容的工具：
+使用AEM的目標定位模式製作目標內容。 目標定位模式和Target元件提供建立體驗內容的工具：
 
 * 輕鬆辨識頁面上的目標內容。 虛線會在所有目標內容周圍形成邊框。
 * 選取品牌和活動以檢視體驗。
@@ -30,7 +30,7 @@ ht-degree: 6%
 * 模擬使用者體驗。
 * 如需更多自訂內容，請設定Target元件。
 
-您可以使用AEM或Adobe Target作為目標定位引擎(您必須具備有效的Adobe Target帳戶才能使用Adobe Target)。 如果您使用Adobe Target，必須先設定整合。 請參閱與Adobe Target[&#128279;](/help/sites-administering/target.md)整合的指示。
+您可以使用AEM或Adobe Target作為目標定位引擎(您必須具備有效的Adobe Target帳戶才能使用Adobe Target)。 如果您使用Adobe Target，必須先設定整合。 請參閱與Adobe Target[整合的](/help/sites-administering/target.md)指示。
 
 ![chlimage_1-8](assets/chlimage_1-8.png)
 
@@ -92,11 +92,11 @@ ht-degree: 6%
 
    >[!NOTE]
    >
-   >當您建立活動且已將Adobe Target雲端設定附加至頁面或其其中一個父頁面時，AEM會自動將Adobe Target視為引擎。
+   >當您建立活動並附加至頁面或其其中一個父頁面的Adobe Target雲端設定時，AEM會自動假設Adobe Target為引擎。
 
 1. 在&#x200B;**鎖定目標**&#x200B;引擎下拉式功能表中，選取您的鎖定目標引擎。
 
-   * 如果您選取&#x200B;**ContextHub AEM**，則其餘欄位會變暗且無法使用。 按一下&#x200B;**建立**。
+   * 如果您選取&#x200B;**ContextHub AEM**，則其餘欄位會變暗且無法使用。 按一下「**建立**」。
 
    * 如果您選取&#x200B;**Adobe Target**，則可以選取設定（預設為您[設定帳戶](/help/sites-administering/opt-in.md)時提供的設定）和活動型別。
 
@@ -131,7 +131,7 @@ ht-degree: 6%
 
    >[!NOTE]
    >
-   >若要變更您正在使用的活動，請按一下[上一步]。**&#x200B;**
+   >若要變更您正在使用的活動，請按一下[上一步]。****
 
 ## 建立：編寫體驗 {#create-authoring-the-experiences}
 
@@ -149,7 +149,7 @@ ht-degree: 6%
 >
 >選件是目標元件的內容。
 
-體驗會顯示在「對象」窗格中。在下列範例中，體驗包 **括Default**、 **Femole**、 **Femole 30歲以上，**&#x200B;**&#x200B;**&#x200B;以及Femole 30歲以下。此範例顯示目標影像元件的「預設 **」選件** 。
+體驗會顯示在「客群」窗格中。在下列範例中，體驗包 **括Default**、 **Femole**、 **Femole 30歲以上，******&#x200B;以及Femole 30歲以下。此範例顯示目標影像元件的「預設 **」產品建議** 。
 
 ![chlimage_1-12](assets/chlimage_1-12.png)
 
@@ -157,7 +157,7 @@ ht-degree: 6%
 
 ![chlimage_1-13](assets/chlimage_1-13.png)
 
-當選取體驗且目標元件不包含該體驗的選件時，元件會顯示疊加在半透明預設選件上的「新增選件 **&#x200B;**&#x200B;」。當未建立任何體驗的選件時，會針對對應至 **體驗的區段顯示** 「預設」選件。
+當選取體驗且目標元件不包含該體驗的產品建議時，元件會顯示疊加在半透明預設產品建議上的「新增產品建議 **** 」。當未建立任何體驗的產品建議時，會針對對應至 **體驗的區段顯示** 「預設」產品建議。
 
 ![chlimage_1-14](assets/chlimage_1-14.png)
 
@@ -169,7 +169,7 @@ ht-degree: 6%
 
 ![chlimage_1-15](assets/chlimage_1-15.png)
 
-從選件資料庫[&#128279;](/help/sites-authoring/content-targeting-touch.md#adding-an-offer-from-an-offer-library)新增的選件會與下列影像重疊：
+從選件資料庫[新增的](/help/sites-authoring/content-targeting-touch.md#adding-an-offer-from-an-offer-library)選件會與下列影像重疊：
 
 ![chlimage_1-16](assets/chlimage_1-16.png)
 
@@ -218,7 +218,7 @@ ht-degree: 6%
 
 1. 按一下體驗名稱旁的箭頭。
 1. 按一下&#x200B;**複製**&#x200B;並選擇對象。
-1. 如有需要，請重新命名體驗，然後按一下[確定]。**&#x200B;**
+1. 如有需要，請重新命名體驗，然後按一下[確定]。****
 
 ### 使用定位模式建立選件 {#creating-offers-using-targeting-mode}
 
@@ -252,7 +252,7 @@ ht-degree: 6%
 
 1. 按一下Target圖示。
 
-   ![目標](do-not-localize/chlimage_1.png)
+   ![Target](do-not-localize/chlimage_1.png)
 
    元件內容是預設體驗的選件。 鎖定元件為目標時，會為每個體驗復寫其預設節點。 在體驗特定撰寫期間，需要此動作來編輯正確的內容節點。 針對這些非預設體驗，請[新增自訂選件](/help/sites-authoring/content-targeting-touch.md#adding-a-custom-offer)或[新增資料庫選件](/help/sites-authoring/content-targeting-touch.md#adding-an-offer-from-an-offer-library)。
 
@@ -297,7 +297,7 @@ ht-degree: 6%
    >管理員可以決定是否需要在&#x200B;**https://&lt;host>：&lt;port>/system/console/configMgr/com.day.cq.personalization.impl.servlets.TargetingConfigurationServlet**&#x200B;設定此組態
    >
    >
-   >若要要求使用者輸入位置，請選取&#x200B;**強制位置**&#x200B;核取方塊。
+   >若要要求使用者輸入位置，請選取**強制位置**核取方塊。
 
 1. 選取您要建立選件的體驗。
 1. 建立選件：
@@ -399,7 +399,7 @@ ht-degree: 6%
 
 [目標程式](/help/sites-authoring/content-targeting-touch.md#the-targeting-process-create-target-and-goals-settings)的目標步驟包括將對象與您在「建立」步驟中使用的體驗對應。 Target頁面會顯示每個體驗鎖定目標的對象。 您可以指定或變更每個體驗的對象。 如果您使用Adobe Target，也可以建立A/B測試，讓您鎖定特定體驗的對象流量百分比。
 
-### 如果您正在使用AEM鎖定目標或Adobe Target （體驗鎖定目標） ... {#if-you-are-using-aem-targeting-or-adobe-target-experience-targeting}
+### 如果您正在使用AEM目標定位或Adobe Target （體驗目標定位） ... {#if-you-are-using-aem-targeting-or-adobe-target-experience-targeting}
 
 對象會出現在對應圖表的左側，而體驗則會出現在右側。
 
@@ -415,7 +415,7 @@ ht-degree: 6%
 
 ### 將體驗與受眾建立關聯(AEM或Adobe Target) {#associating-experiences-with-audiences-aem-or-adobe-target}
 
-使用AEM鎖定目標(或Adobe Target體驗鎖定目標)時，請使用以下程式將體驗與對象建立關聯：
+使用AEM鎖定目標(或Adobe Target體驗鎖定目標)時，請使用下列程式將體驗與對象建立關聯：
 
 1. 在對應至體驗的對象方塊中，按一下旁邊的下拉箭頭。
 1. （選擇性）按一下&#x200B;**編輯**，然後輸入關鍵字以搜尋所需的區段。
@@ -480,10 +480,10 @@ ht-degree: 6%
     </ul> <p>對於這些選項中的任一項，是否已檢視mbox表示是否已達到目標。 您可以定義一或多個mbox。</p> </td>
   </tr>
   <tr>
-   <td><strong>參與</strong></td>
+   <td><strong>參與度</strong></td>
    <td><p>您可以測量三種型別的參與：</p>
     <ul>
-     <li>頁面檢視</li>
+     <li>頁面檢視量</li>
      <li>自訂得分</li>
      <li>網站逗留時間</li>
     </ul> </td>
@@ -530,9 +530,9 @@ ht-degree: 6%
  </tbody>
 </table>
 
-如需成功量度的詳細資訊，請參閱[Adobe Target檔案](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html?lang=zh-Hant)。
+如需成功量度的詳細資訊，請參閱[Adobe Target檔案](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html)。
 
-### 配置設定(AEM定位) {#configuring-settings-aem-targeting}
+### 設定中(AEM目標定位) {#configuring-settings-aem-targeting}
 
 若要在使用AEM定位時進行設定：
 
@@ -563,19 +563,19 @@ ht-degree: 6%
    * **指定的日期和時間**：特定時間。 選取此選項時，按一下日曆圖示，選取日期，並指定活動結束時間。
 
 1. 若要指定活動的優先順序，請使用滑桿來選取&#x200B;**低**、**正常**&#x200B;或&#x200B;**高**。
-1. 如果您已使用Adobe Target帳戶設定Adobe Analytics，則會看到&#x200B;**報告Source**&#x200B;下拉式功能表。 選取 **Adobe Target**&#x200B;**或** Adobe Analytics做為來源。
+1. 如果您已使用Adobe Target帳戶設定Adobe Anaytics，則會看到&#x200B;**報告Source**&#x200B;下拉式功能表。 選取 **Adobe Target****或** Adobe Analytics做為來源。
 
    如果您選取&#x200B;**Adobe Analytics**，請選取公司與報表套裝。 如果您選取&#x200B;**Adobe Target**，則不需要採取任何動作。
 
    ![chlimage_1-33](assets/chlimage_1-33.png)
 
-1. 在「目 **標量度** 」區域的「我的主要目標 **&#x200B;**&#x200B;」下方，選取您要追蹤的成功量度——轉換、收入、參與——並輸入量度的測量方式 (或觀眾採取哪些動作來指出已達成目標)。請參閱上表中目標量度的定義，並參閱 [Adobe Target成功量度的相關檔案](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html?lang=zh-Hant) 。
+1. 在「目 **標量度** 」區域的「我的主要目標 **** 」下方，選取您要追蹤的成功量度——轉換、收入、參與——並輸入量度的測量方式 (或客群採取哪些動作來指出已達成目標)。請參閱上表中目標量度的定義，並參閱 [Adobe Target成功量度的相關檔案](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html) 。
 
-   您可以按一下右上角的三個點並選取「重新命名」，以重新命名目 **標**。
+   您可以重新命名目標，只需要按一下右上角的三個點並選取&#x200B;**重新命名**。
 
    如果您需要清除所有欄位，請按一下右上角的三個點，然後選取「清除所 **有欄位」**。
 
-   所有量度都有您可以定義的進階設定。 選取&#x200B;**進階設定**&#x200B;以存取這些設定。 請參閱上一個表格中成功量度計數方式的定義以及[Adobe Target檔案](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html?lang=zh-Hant)。
+   所有量度都有您可以定義的進階設定。 選取&#x200B;**進階設定**&#x200B;以存取這些設定。 請參閱上一個表格中成功量度計數方式的定義以及[Adobe Target檔案](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html)。
 
    >[!NOTE]
    >
@@ -596,7 +596,7 @@ ht-degree: 6%
    >您可以按一下或點選三個點，然後按一下或點選「**刪除**」，以移除其他目標。 AEM要求您至少定義一個目標。
 
 1. 如果您想要進一步控制成功量度的計數方式，請按一下&#x200B;**進階設定**&#x200B;以存取這些設定。
-1. 按一下「**儲存**」。
+1. 按一下&#x200B;**儲存**。
 
 設定之後，您可以[檢視使用Adobe Target （體驗或A/B測試鎖定目標）之活動的效能](/help/sites-authoring/activitylib.md#viewing-performance-and-converting-winning-experiences-a-b-test)。 此外，透過A/B測試鎖定目標，您可以[轉換獲勝者。](/help/sites-authoring/activitylib.md#viewing-performance-and-converting-winning-experiences-a-b-test)
 
@@ -607,10 +607,10 @@ ht-degree: 6%
 下列條件會決定模擬訪客體驗時顯示的內容：
 
 * 使用者工作階段存放區中的資料（透過Context Hub）。
-* 在[&#128279;](/help/sites-authoring/activitylib.md)上的活動。
-* 定義區段[&#128279;](/help/sites-administering/campaign-segmentation.md)的規則。
+* 在[上的](/help/sites-authoring/activitylib.md)活動。
+* 定義區段[的](/help/sites-administering/campaign-segmentation.md)規則。
 * Target元件中的體驗內容。
-* 定位引擎[&#128279;](/help/sites-authoring/activitylib.md)的設定。
+* 定位引擎[的](/help/sites-authoring/activitylib.md)設定。
 
 如果您在載入設定檔時頁面上出現非預期的內容，請檢查此清單中每個專案的設定。
 
@@ -691,7 +691,7 @@ ht-degree: 6%
   </tr>
   <tr>
    <td><strong>包括已解析的區段</strong></td>
-   <td><p>選取此核取方塊會包含mbox呼叫中的所有已解析區段，以及頁面和框架中設定的任何引數。</p> <p>這僅適用於使用XML API同步AEM區段的情況。 如果您的AEM中有未由Adobe Target處理的區段（例如指令碼區段），則此選項可讓您解析AEM中的區段，並傳送資訊至Adobe Target以確定該區段為作用中。</p> </td>
+   <td><p>選取此核取方塊會包含mbox呼叫中的所有已解析區段，以及頁面和框架中設定的任何引數。</p> <p>這僅適用於使用XML API同步AEM區段的情況。 如果您的AEM中有未由Adobe Target處理的區段（例如指令碼區段），則此選項可讓您在AEM中解析區段，並傳送資訊至Adobe Target以確定該區段有效。</p> </td>
   </tr>
   <tr>
    <td><strong>繼承的內容參數</strong></td>
@@ -734,6 +734,6 @@ ht-degree: 6%
  </tbody>
 </table>
 
-如果您要將AEM與Adobe Campaign整合，請選取&#x200B;**Adobe Campaign**&#x200B;作為引擎。 如需詳細資訊，請參閱[整合AEM與Adobe Campaign](/help/sites-administering/campaign.md)。
+如果您要整合AEM與Adobe Campaign，請選取&#x200B;**Adobe Campaign**&#x200B;作為引擎。 如需詳細資訊，請參閱[整合AEM與Adobe Campaign](/help/sites-administering/campaign.md)。
 
 如果您使用ContextHub進行目標定位，請選取&#x200B;**ContextHub**&#x200B;作為引擎。 請參閱[設定ContextHub。](/help/sites-developing/ch-configuring.md)

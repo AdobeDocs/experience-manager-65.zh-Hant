@@ -4,8 +4,8 @@ description: 在Adobe Experience Manager中建立、比較和還原頁面版本�
 exl-id: cb7a9da2-7112-4ef0-b1cf-211a7df93625
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
-source-git-commit: d2e2f330dadb7c327324e53a17e8398ef3a473a9
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '1567'
 ht-degree: 2%
@@ -71,11 +71,11 @@ ht-degree: 2%
 
 建立頁面的版本後，有多種恢復先前版本的方法：
 
-* **從[時間表](/help/sites-authoring/basic-handling.md#timeline)邊欄還原為此版本**&#x200B;選項
+* **從**&#x200B;時間表[邊欄還原為此版本](/help/sites-authoring/basic-handling.md#timeline)選項
 
   復原所選頁面的先前版本。
 
-* 從頂端[動作工具列](/help/sites-authoring/basic-handling.md#actions-toolbar)的&#x200B;**還原**&#x200B;選項
+* 從頂端&#x200B;**動作工具列**&#x200B;的[還原](/help/sites-authoring/basic-handling.md#actions-toolbar)選項
 
    * **還原版本**
 
@@ -116,7 +116,7 @@ ht-degree: 2%
 
 1. 導覽至[選取](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)必要的資料夾。
 
-1. 從頂端[動作工具列](/help/sites-authoring/basic-handling.md#actions-toolbar)選取&#x200B;**還原**，然後選取&#x200B;**還原版本**。
+1. 從頂端&#x200B;**動作工具列**&#x200B;選取&#x200B;**還原**，然後選取[還原版本](/help/sites-authoring/basic-handling.md#actions-toolbar)。
 
    >[!NOTE]
    >
@@ -151,7 +151,7 @@ ht-degree: 2%
 
 1. 導覽至[選取](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)必要的資料夾。
 
-1. 選取&#x200B;**還原**，然後從頂端[動作工具列](/help/sites-authoring/basic-handling.md#actions-toolbar)選取&#x200B;**還原樹狀結構**。 隨即顯示樹狀結構的最新版本：
+1. 選取&#x200B;**還原**，然後從頂端&#x200B;**動作工具列**&#x200B;選取[還原樹狀結構](/help/sites-authoring/basic-handling.md#actions-toolbar)。 隨即顯示樹狀結構的最新版本：
 
    ![還原樹狀結構](/help/sites-authoring/assets/versions-restore-tree-02.png)
 
@@ -163,7 +163,7 @@ ht-degree: 2%
 
    * 如果處於非使用中（未選取），則會移除任何非版本化頁面，因為這些頁面在版本化樹狀結構中不存在。
 
-1. 針對要還原為&#x200B;*目前*&#x200B;版本的樹狀結構選取版本&#x200B;**還原**。
+1. 針對要還原為&#x200B;**目前**&#x200B;版本的樹狀結構選取版本&#x200B;*還原*。
 
 ## 預覽版本 {#previewing-a-version}
 
@@ -197,13 +197,13 @@ ht-degree: 2%
 
 1. 選取&#x200B;**與目前**&#x200B;比較。 [頁面diff](/help/sites-authoring/page-diff.md)開啟以顯示差異。
 
-## Timewarp {#timewarp}
+## 時間扭曲 {#timewarp}
 
 時間扭曲是一項功能，用來模擬過去特定時間某個頁面的&#x200B;*已發佈*&#x200B;狀態。
 
 >[!TIP]
 >
->執行AEM 6.5.10.0或更新版本時，[Timewarp也可以與Launches搭配使用以預覽未來](/help/sites-authoring/launches.md)。
+>執行AEM [或更新版本時，](/help/sites-authoring/launches.md)Timewarp也可以與Launches搭配使用以預覽未來6.5.10.0。
 
 內容建立是一個持續進行的合作過程。 Timewarp的用途是讓作者追蹤已發佈網站在一段時間內的變化，協助他們瞭解內容的變更情況。 此功能使用頁面版本來判斷發佈環境的狀態：
 

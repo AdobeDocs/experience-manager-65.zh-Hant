@@ -8,8 +8,8 @@ topic-tags: site-features
 exl-id: e3488c9d-035f-4165-ad32-21103ec7e581
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '151'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # 支架{#scaffolding}
 
-有時您可能需要建立大型頁面集，這些頁面共用相同結構但內容不同。 透過標準AEM介面，您需要建立每個頁面、將適當的元件拖曳至頁面上，並個別填入每個元件。
+有時您可能需要建立大型頁面集，這些頁面共用相同結構但內容不同。 透過標準AEM介面，您需要建立每個頁面、將適當的元件拖曳到頁面上，並個別填入每個元件。
 
 使用支架，您可以建立包含欄位的表單（支架），這些欄位會反映您想要用於頁面的結構，然後使用此表單以根據此結構輕鬆建立頁面。
 

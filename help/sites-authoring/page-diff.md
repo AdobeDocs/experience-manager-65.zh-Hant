@@ -9,8 +9,8 @@ docset: aem65
 exl-id: 3beea5cd-5ae0-485b-8dfc-8b3a23c11586
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '569'
 ht-degree: 1%
@@ -51,7 +51,7 @@ ht-degree: 1%
 
 兩個頁面的來源會清楚顯示在瀏覽器視窗頂端的標題列中。
 
-標題![&#128279;](assets/chlimage_1-109.png)中顯示Source
+標題![中顯示](assets/chlimage_1-109.png)Source
 
 差異會偵測元件和HTML層級的變更。 已變更的專案會以不同的顏色反白。
 
@@ -63,7 +63,7 @@ ht-degree: 1%
 **HTML變更**
 
 * 深綠色 — 新增HTML
-* 紅色 — 已移除HTML
+* 紅色 — HTML已移除
 
 >[!NOTE]
 >

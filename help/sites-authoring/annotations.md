@@ -8,8 +8,8 @@ content-type: reference
 exl-id: de1ae7e3-db3a-4b5e-8a4f-ae111227181f
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '633'
 ht-degree: 0%
@@ -85,7 +85,7 @@ ht-degree: 0%
 
      建立草繪時，游標會變成十字線。 您可以繪製多條不同的線條。 草繪線會反映註釋顏色，可以是箭頭、圓或橢圓形。
 
-     ![Sketch](do-not-localize/screen_shot_2018-03-22at110640.png)
+     ![素描](do-not-localize/screen_shot_2018-03-22at110640.png)
 
    * 選擇/變更顏色：
 

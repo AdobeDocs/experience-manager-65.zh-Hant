@@ -8,8 +8,8 @@ content-type: reference
 exl-id: 760b8419-5cf8-49c5-8d4f-6691f5256c53
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
-source-git-commit: 41da3aef16e650d8dc33e96991d0a997564c9224
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '1853'
 ht-degree: 5%
@@ -46,7 +46,7 @@ Adobe Experience Manager可讓您使用&#x200B;**配置容器**&#x200B;元件，
 >
 >雖然「配置容器」元件可用於傳統UI，但其完整功能僅在觸控式UI中提供並支援。
 
-AEM使用一組機製為頁面實現回應式佈局：
+AEM使用多種機制組合，為您的頁面實現回應式佈局：
 
 * [**配置容器**](#adding-a-layout-container-and-its-content-edit-mode)&#x200B;元件
 
@@ -71,7 +71,7 @@ AEM使用一組機製為頁面實現回應式佈局：
 
 >[!NOTE]
 >
->Adobe提供回應式版面的[GitHub檔案](https://adobe-marketing-cloud.github.io/aem-responsivegrid/)，作為前端開發人員參考之用，讓他們能夠在AEM之外使用AEM網格，例如在為未來的AEM網站建立靜態HTML模型時。
+>Adobe提供回應式佈局的[GitHub檔案](https://adobe-marketing-cloud.github.io/aem-responsivegrid/)，前端開發人員可參考該檔案，以便在AEM外部使用AEM格線，例如為未來的AEM網站建立靜態HTML模型時。
 
 >[!NOTE]
 >
@@ -141,7 +141,7 @@ AEM可讓您根據裝置的寬度定義版面：
 
    ![screen_shot_2018-03-23at084932](assets/screen_shot_2018-03-23at084932.png)
 
-   * 藍色虛線代表所選裝置(此處為&#x200B;**iPhone 6**)的&#x200B;*折*。
+   * 藍色虛線代表所選裝置(此處為&#x200B;*iPhone 6*)的&#x200B;**折**。
 
    ![screen_shot_2018-03-23at084947](assets/screen_shot_2018-03-23at084947.png)
 
@@ -159,9 +159,9 @@ AEM可讓您根據裝置的寬度定義版面：
 
 >[!NOTE]
 >
->如果尚未可用，則必須為段落系統/頁面[&#128279;](/help/sites-administering/configuring-responsive-layout.md)明確啟動&#x200B;**配置容器** （例如，使用&#x200B;[**設計**&#x200B;模式](/help/sites-authoring/default-components-designmode.md)）。
+>如果尚未可用，則必須為段落系統/頁面&#x200B;**明確**&#x200B;啟動[配置容器](/help/sites-administering/configuring-responsive-layout.md) （例如，使用&#x200B;[**設計**&#x200B;模式](/help/sites-authoring/default-components-designmode.md)）。
 
-1. 「配 **置容器** 」是元件瀏覽器中的標準 [元件](/help/sites-authoring/author-environment-tools.md#components-browser)。從這裡，您可以將其拖曳至頁面上的必要位置，之後您將看到「拖曳元件至此處 **&#x200B;**&#x200B;」預留位置。
+1. 「配 **置容器** 」是元件瀏覽器中的標準 [元件](/help/sites-authoring/author-environment-tools.md#components-browser)。從這裡，您可以將其拖曳至頁面上的必要位置，之後您將看到「拖曳元件至此處 **** 」預留位置。
 1. 然後，您可以將元件新增至版面容器。 這些元件將儲存實際內容：
 
    ![screen_shot_2018-03-23at085500](assets/screen_shot_2018-03-23at085500.png)
@@ -208,7 +208,7 @@ AEM可讓您根據裝置的寬度定義版面：
 
 * 使用工具列 [中的模式選單](/help/sites-authoring/author-environment-tools.md#page-modes) ，然後選擇「 **版面模式」**
 
-   * 選取「 **版面** 」模式，就像切換至「編輯 **」模式或「** 定位 **&#x200B;**&#x200B;」模式。
+   * 選取「 **版面** 」模式，就像切換至「編輯 **」模式或「** 定位 **** 」模式。
    * **配置模式** (Layout **mode)會維持持續性，而且您必須先透過模式選取器** 選取其他模式，才能離開「配置」模式。
 
 * 當[編輯個別元件時。](/help/sites-authoring/editing-content.md#edit-component-layout)
@@ -271,7 +271,7 @@ AEM可讓您根據裝置的寬度定義版面：
      >在上述範例中，浮動和隱藏動作可供使用，因為此配置容器是巢狀內嵌於上層配置容器中。
 
    * **取消隱藏元件**
-選取父元件以顯示包含&#x200B;**顯示隱藏元件**&#x200B;選項的動作工具列。 在此範例中，隱藏了兩個元件。
+選取父元件以顯示包含**顯示隱藏元件**&#x200B;選項的動作工具列。 在此範例中，隱藏了兩個元件。
 
      ![screen_shot_2018-03-23at091200](assets/screen_shot_2018-03-23at091200.png)
 

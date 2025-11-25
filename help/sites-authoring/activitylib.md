@@ -9,10 +9,10 @@ docset: aem65
 exl-id: f510ca08-977d-45d5-86af-c4b7634b01ba
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
-source-wordcount: '1937'
+source-wordcount: '1936'
 ht-degree: 11%
 
 ---
@@ -53,7 +53,7 @@ ht-degree: 11%
 
 >[!CAUTION]
 >
->保護發佈執行個體上的活動設定節點&#x200B;**cq：ActivitySettings**，使其無法正常使用者存取。 活動設定節點應該只能由處理與Adobe Target的活動同步的服務存取。
+>保護發佈執行個體上的活動設定節點&#x200B;**cq:ActivitySettings**，使其無法正常使用者存取。 活動設定節點應該只能由處理與Adobe Target的活動同步的服務存取。
 >
 >如需詳細資訊，請參閱[與Adobe Target整合的必要條件](/help/sites-administering/target-requirements.md#securingtheactivitysettings)。
 
@@ -76,17 +76,17 @@ ht-degree: 11%
 
 新增活動或編輯現有活動，以將您的行銷工作聚焦於特定對象。 建立/編輯活動時，請指定下列資訊：
 
-* **&#x200B;**&#x200B;名稱：活動的名稱。
-* **&#x200B;**&#x200B;定位引擎：AEM [&#128279;](/help/sites-authoring/personalization.md#aem) 或 [Adobe Target](/help/sites-authoring/personalization.md#adobe-target) ，做為目標內容的引擎。
+* **** 名稱：活動的名稱。
+* **** 定位引擎：AEM [](/help/sites-authoring/personalization.md#aem) 或 [Adobe Target](/help/sites-authoring/personalization.md#adobe-target) ，做為目標內容的引擎。
 
-* **&#x200B;**&#x200B;選擇目標配置： (僅限Adobe Target) 此活動應用來連線至Adobe Target的雲端設定。只有在為「定位引擎」選取Adobe Target時，才會顯示此選項。
-* **活動型別： &#x200B;** 活動型別 — A/B測試或體驗鎖定目標
-* **&#x200B;**&#x200B;目標：(可選) 活動的說明。
-* **&#x200B;**&#x200B;體驗：對象名稱與您所定位之行銷區段之間的對應。
-* **&#x200B;**&#x200B;流量百分比：如果選取A/B測試，您可以變更每個體驗的流量 (百分比)。
-* **&#x200B;**&#x200B;持續時間：套用活動的時段。
-* **&#x200B;**&#x200B;優先順序：活動的相對優先順序。當活動提供相同使用者區段的內容時，優先順序較高的活動優先。
-* **&#x200B;**&#x200B;目標量度：如果選取Adobe target作為定位引擎，您可以將成功度量新增至活動。需要一個成功度量。
+* **** 選擇目標配置： (僅限Adobe Target) 此活動應用來連線至Adobe Target的雲端設定。只有在為「定位引擎」選取Adobe Target時，才會顯示此選項。
+* **活動型別： **活動型別 — A/B測試或體驗鎖定目標
+* **** 目標：(可選) 活動的說明。
+* **** 體驗：客群名稱與您所定位之行銷區段之間的對應。
+* **** 流量百分比：如果選取A/B測試，您可以變更每個體驗的流量 (百分比)。
+* **** 持續時間：套用活動的時段。
+* **** 優先順序：活動的相對優先順序。當活動提供相同使用者區段的內容時，優先順序較高的活動優先。
+* **** 目標量度：如果選取Adobe target作為定位引擎，您可以將成功度量新增至活動。需要一個成功度量。
 
 >[!NOTE]
 >
@@ -96,8 +96,8 @@ ht-degree: 11%
 
 若要新增活動：
 
-1. 按一下您要建立活動的品牌，按一下&#x200B;**「建立」**，然後按一下&#x200B;**「建立活動」**。 如果您正在編輯，請選取活動，然後按一下[編輯]。**&#x200B;**
-1. 提供下列資訊，然後按一下[下一步] **&#x200B;**：
+1. 按一下您要建立活動的品牌，按一下&#x200B;**「建立」**，然後按一下&#x200B;**「建立活動」**。 如果您正在編輯，請選取活動，然後按一下[編輯]。****
+1. 提供下列資訊，然後按一下[下一步] ****：
 
    * 活動的名稱。
    * 要使用的定位引擎。 預設會選取ContextHub (AEM)。 如果您需要使用Adobe Target，請在目標內容編輯器中建立活動。
@@ -106,9 +106,9 @@ ht-degree: 11%
    * 選取活動型別。
 
 1. 新增一或多個體驗至活動。按一下&#x200B;**新增體驗**。
-1. 如果您使用AEM鎖定目標或Adobe Target體驗鎖定目標：
+1. 如果您使用AEM目標定位或Adobe Target體驗目標定位：
 
-   1. 按一下&#x200B;**選取對象**&#x200B;並選取您的體驗鎖定目標的區段。
+   1. 按一下**選取對象**並選取您的體驗鎖定目標的區段。
    1. 按一下&#x200B;**新增體驗**，輸入名稱，然後按一下&#x200B;**確定**。
 
    1. 按一下「**下一步**」。
@@ -133,7 +133,7 @@ ht-degree: 11%
 
 1. 若要指定活動的優先順序，請使用滑桿來選取&#x200B;**低**、**正常**&#x200B;或&#x200B;**高**。
 1. 如果您使用Adobe Target作為目標定位引擎，請選取您要透過此活動測量的內容。 請參閱[設定活動和設定目標](/help/sites-authoring/content-targeting-touch.md)，以取得有關可用成功量度的詳細資訊。 請至少選取一個目標。
-1. 按一下「**儲存**」。
+1. 按一下&#x200B;**儲存**。
 
    >[!NOTE]
    >
@@ -154,9 +154,9 @@ ht-degree: 11%
 
    ![screen-shot_2019-03-05at123846](assets/screen-shot_2019-03-05at123846.png)
 
-1. 若要發佈，請按一下&#x200B;**Publish**。 若要取消發佈，請按一下&#x200B;**取消發佈**。 您的活動已發佈或取消發佈，且狀態在活動主控台中變更（可能需要重新整理）。
+1. 若要發佈，請按一下&#x200B;**發佈**。 若要取消發佈，請按一下&#x200B;**取消發佈**。 您的活動已發佈或取消發佈，且狀態在活動主控台中變更（可能需要重新整理）。
 
-## 作者和Publish例項上的活動 {#activities-on-author-and-publish-instances}
+## 作者和發佈例項上的活動 {#activities-on-author-and-publish-instances}
 
 當使用Adobe Target目標定位引擎的活動啟動時，會在發佈執行個體上建立第二個活動：
 
@@ -207,11 +207,11 @@ ht-degree: 11%
 
 修改活動時，會立即同步_author活動。 即時同步可讓您使用Client Context或ContextHub來模擬活動。
 
-當活動發佈至AEM發佈執行個體時，會同步Publish活動。
+當活動發佈至AEM發佈執行個體時，會同步發佈活動。
 
 ## 疑難排解活動同步 {#troubleshooting-activity-synchronization}
 
-AEM與Adobe Target同步活動時，AEM會包含名為`thirdPartyId`之活動的屬性。 此屬性的值根據AEM存放庫中的活動路徑。 Adobe Target中的兩個行銷活動不能具有`thirdPartyId`屬性的相同值。 因此，如果Adobe Target中的現有行銷活動（屬於不同型別AB、XT）對`thirdPartyId`使用相同的值，則活動將無法同步。
+AEM與Adobe Target同步活動時，AEM包含名為`thirdPartyId`之活動的屬性。 此屬性的值根據AEM存放庫中的活動路徑。 Adobe Target中的兩個行銷活動不能具有`thirdPartyId`屬性的相同值。 因此，如果Adobe Target中的現有行銷活動（屬於不同型別AB、XT）對`thirdPartyId`使用相同的值，則活動將無法同步。
 
 此情況可能在以下情況下發生：
 
@@ -220,7 +220,7 @@ AEM與Adobe Target同步活動時，AEM會包含名為`thirdPartyId`之活動的
 
 此情況也可能發生在以下情況中：
 
-1. 活動會建立並與Adobe Target同步。 活動接著會在AEM上刪除。
+1. 活動會建立並與Adobe Target同步。 該活動接著會在AEM上刪除。
 1. 會在相同品牌下建立活動，並使用與已刪除活動相同的名稱。 嘗試同步此活動時失敗。
 
 若要避免發生同步化問題，請一律對活動使用唯一的名稱。 如果活動同步失敗，您可以刪除Adobe Target中相同名稱的促銷活動（若未使用該促銷活動）。

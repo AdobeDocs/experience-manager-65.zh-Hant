@@ -8,10 +8,10 @@ topic-tags: personalization
 exl-id: d7e4d424-0ca7-449f-95fb-c4fe19dd195d
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization,Integration
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
-source-wordcount: '2770'
+source-wordcount: '2769'
 ht-degree: 2%
 
 ---
@@ -20,14 +20,14 @@ ht-degree: 2%
 
 您可以在AEM中建立電子郵件內容，並在Adobe Campaign電子郵件中處理。 若要這麼做，您必須：
 
-1. 從Adobe Campaign專用的範本在AEM中建立Newsletter。
+1. 從Adobe Campaign專屬的範本，在AEM中建立Newsletter。
 1. 請先選取[Adobe Campaign服務](#selecting-the-adobe-campaign-cloud-service-and-template)，再編輯內容以存取所有功能。
 1. 編輯內容。
 1. 驗證內容。
 
 然後，內容就可以與Adobe Campaign中的傳送同步。 本檔案將說明詳細說明。
 
-另請參閱[在AEM](/help/sites-authoring/adobe-campaign-forms.md)中建立Adobe Campaign Forms。
+另請參閱[在AEM中建立Adobe Campaign Forms](/help/sites-authoring/adobe-campaign-forms.md)。
 
 >[!NOTE]
 >
@@ -63,7 +63,7 @@ ht-degree: 2%
    ![chlimage_1-15](assets/chlimage_1-15a.png)
 
 1. 選取&#x200B;**建立**，然後選取&#x200B;**建立頁面**。
-1. 選取您連線至Adobe Campaign的特定可用範本之一，然後按一下[下一步] **&#x200B;**。 預設提供三個範本：
+1. 選取您連線至Adobe Campaign的特定可用範本之一，然後按一下[下一步] ****。 預設提供三個範本：
 
    * **Adobe Campaign Classic電子郵件**：可讓您在將內容傳送至Adobe Campaign Classic傳送之前，先新增內容至預先定義的範本（兩欄）。
    * **Adobe Campaign Standard電子郵件**：可讓您在將內容傳送至Adobe Campaign Standard傳送之前，先新增內容至預先定義的範本（兩欄）。
@@ -74,7 +74,7 @@ ht-degree: 2%
 
 若要與Adobe Campaign整合，您需要將Adobe Campaign雲端服務新增至頁面。 如此一來，您便可存取個人化及其他Adobe Campaign資訊。
 
-此外，您可能還需要選取Adobe Campaign範本，並變更主旨，為不會以HTML檢視電子郵件的使用者新增純文字內容。
+此外，您可能還需要選取Adobe Campaign範本，並變更主旨，為不會在HTML中檢視電子郵件的使用者新增純文字內容。
 
 您可以在建立雲端服務後，從&#x200B;**網站**&#x200B;標籤或電子郵件/電子報內選取雲端服務。
 
@@ -122,7 +122,7 @@ ht-degree: 2%
 
    ![chlimage_1-20](assets/chlimage_1-20a.png)
 
-1. 如果您想要變更電子郵件的主旨，或為不會以HTML檢視電子郵件的使用者新增純文字，請選取&#x200B;**電子郵件**&#x200B;並新增主旨與文字。 選取頁面圖示以從HTML自動產生純文字版本。 完成後，按一下核取記號。
+1. 如果您想要變更電子郵件的主旨，或為不會在HTML中檢視電子郵件的使用者新增純文字，請選取&#x200B;**電子郵件**&#x200B;並新增主旨與文字。 選取頁面圖示以從HTML自動產生純文字版本。 完成後，按一下核取記號。
 
    您可以使用Adobe Campaign個人化欄位來個人化Newsletter。 若要新增個人化欄位，請按一下顯示Adobe Campaign標誌的按鈕，開啟個人化欄位選擇器。 然後，您可以從此Newsletter可用的所有欄位中進行選擇。
 
@@ -173,11 +173,11 @@ ht-degree: 2%
    >Adobe Campaign Standard的&#x200B;**：**
    >
    >* 可用的內容欄位對應至Adobe Campaign中的&#x200B;**設定檔**&#x200B;目標維度。
-   >* 請參閱將AEM頁面連結至Adobe Campaign電子郵件[&#128279;](#linking-an-aem-page-to-an-adobe-campaign-email-adobe-campaign-standard)。
+   >* 請參閱將AEM頁面連結至Adobe Campaign電子郵件[。](#linking-an-aem-page-to-an-adobe-campaign-email-adobe-campaign-standard)
    >
    >Adobe Campaign Classic的&#x200B;**：**
    >
-   >* 可用的內容欄位會從Adobe Campaign **nms：seedMember**&#x200B;結構描述中動態復原。 目標擴充功能資料會從包含與內容同步之傳遞的工作流程中動態復原。 (請參閱[將AEM中建立的內容與來自Adobe Campaign](#synchronizing-content-created-in-aem-with-a-delivery-from-adobe-campaign-classic)的傳遞同步處理區段)。
+   >* 可用的內容欄位會從Adobe Campaign **nms:seedMember**&#x200B;結構描述中動態復原。 目標擴充功能資料會從包含與內容同步之傳遞的工作流程中動態復原。 (請參閱[將AEM中建立的內容與Adobe Campaign的傳遞同步](#synchronizing-content-created-in-aem-with-a-delivery-from-adobe-campaign-classic)區段)。
    >
    >* 若要新增或隱藏個人化元素，請參閱[管理個人化欄位和區塊](/help/sites-administering/campaignonpremise.md#managing-personalization-fields-and-blocks)。
    >* **重要**：所有種子表格欄位也必須在收件者表格（或對應的聯絡人表格）中。
@@ -236,7 +236,7 @@ ht-degree: 2%
 
 ## 將AEM與Adobe Campaign Standard和Adobe Campaign Classic連結 {#linking-aem-with-adobe-campaign-standard-and-adobe-campaign-classic}
 
-AEM與Adobe Campaign的連結或同步方式取決於您是使用訂閱式Adobe Campaign Standard還是內部部署Adobe Campaign Classic。
+如何將AEM與Adobe Campaign連結或同步處理取決於您是使用訂閱式Adobe Campaign Standard還是內部部署Adobe Campaign Classic。
 
 如需以您的Adobe Campaign解決方案為基礎的指示，請參閱下列章節：
 
@@ -260,7 +260,7 @@ Adobe Campaign Standard可讓您復原和連結在AEM中建立的內容，包含
 
 若要將AEM中建立的頁面連結至Adobe Campaign的電子郵件：
 
-1. 根據AEM專屬電子郵件範本建立電子郵件。 如需詳細資訊，請參閱[在Adobe Campaign Standard中建立電子郵件](https://helpx.adobe.com/tw/campaign/standard/channels/using/creating-an-email.html)。
+1. 根據AEM專屬的電子郵件範本建立電子郵件。 如需詳細資訊，請參閱[在Adobe Campaign Standard中建立電子郵件](https://helpx.adobe.com/campaign/standard/channels/using/creating-an-email.html)。
 
    ![chlimage_1-36](assets/chlimage_1-36a.png)
 
@@ -292,7 +292,7 @@ Adobe Campaign Standard可讓您復原和連結在AEM中建立的內容，包含
    當電子郵件連結至AEM內容時，無法在Adobe Campaign中編輯內容。
 
 1. 從電子郵件的控制面板（受眾、執行排程）指定電子郵件的其他引數。
-1. 執行電子郵件傳遞。 在傳遞分析期間，會擷取AEM內容的最新版本。
+1. 執行電子郵件傳遞。 在傳遞分析期間，系統會擷取最新版本的AEM內容。
 
    >[!NOTE]
    >
@@ -304,7 +304,7 @@ Adobe Campaign Standard可讓您復原和連結在AEM中建立的內容，包含
 
 ### 將AEM中建立的內容與來自Adobe Campaign Classic的傳遞同步 {#synchronizing-content-created-in-aem-with-a-delivery-from-adobe-campaign-classic}
 
-Adobe Campaign可讓您復原及同步在AEM中建立的內容，並搭配以下專案：
+Adobe Campaign可讓您復原在AEM中建立的內容，並與以下內容同步：
 
 * 行銷活動傳遞
 * 行銷活動工作流程中的傳遞活動
@@ -323,7 +323,7 @@ Adobe Campaign可讓您復原及同步在AEM中建立的內容，並搭配以下
 >
 >[!NOTE]
 >
->AEM 6.1已棄用工作流程步驟&#x200B;**Publish至Adobe Campaign**。此步驟是AEM 6.0與Adobe Campaign整合的一部分，已不再是必要步驟。
+>AEM 6.1已棄用工作流程步驟&#x200B;**發佈至Adobe Campaign**。此步驟是AEM 6.0與Adobe Campaign整合的一部分，已不再是必要步驟。
 
 若要將AEM中建立的內容與來自Adobe Campaign的傳送同步：
 
@@ -331,11 +331,11 @@ Adobe Campaign可讓您復原及同步在AEM中建立的內容，並搭配以下
 
    ![chlimage_1-40](assets/chlimage_1-40a.png)
 
-1. 選取工具列中的&#x200B;**同步處理**&#x200B;以存取AEM中可用的內容清單。
+1. 在工具列中選取「**同步化**」以存取AEM中可用的內容清單。
 
    >[!NOTE]
    >
-   >如果&#x200B;**同步**&#x200B;選項未出現在傳遞的工具列中，請選取&#x200B;**內容** > **進階**，以檢查&#x200B;**內容編輯模式**&#x200B;欄位是否已在&#x200B;**AEM**&#x200B;中正確設定。
+   >如果&#x200B;**同步化**&#x200B;選項未出現在傳遞的工具列中，請選取&#x200B;**屬性** > **進階**，以檢查&#x200B;**內容編輯模式**&#x200B;欄位是否已在&#x200B;**AEM**&#x200B;中正確設定。
 
    ![chlimage_1-41](assets/chlimage_1-41a.png)
 
@@ -355,8 +355,8 @@ Adobe Campaign可讓您復原及同步在AEM中建立的內容，並搭配以下
    ![chlimage_1-42](assets/chlimage_1-42a.png)
 
 1. 指定傳送的其他引數（目標等）
-1. 如有必要，請在Adobe Campaign中開始傳遞核准流程。 除了在Adobe Campaign中設定的核准（預算、目標等）之外，還需要AEM中的內容核准。 只有內容已在AEM中核準時，才可能在Adobe Campaign中核准內容。
-1. 執行傳遞。 在傳遞分析期間，會復原AEM內容的最新版本。
+1. 如有必要，請在Adobe Campaign中開始傳遞核准流程。 除了在AEM中設定的核准（預算、目標等）之外，還需要Adobe Campaign中的內容核准。 只有內容已在Adobe Campaign中核準時，才能在AEM中核准內容。
+1. 執行傳遞。 在傳遞分析期間，會復原最新版本的AEM內容。
 
    >[!NOTE]
    >
@@ -364,4 +364,4 @@ Adobe Campaign可讓您復原及同步在AEM中建立的內容，並搭配以下
    >* 如果內容在連結至Adobe Campaign中的傳送時在AEM中更新，則會在傳送分析期間在傳送中自動更新。 也可以使用&#x200B;**立即重新整理內容**&#x200B;按鈕手動執行同步處理。
    >* 您可以使用&#x200B;**取消同步**&#x200B;按鈕，取消傳遞與AEM內容之間的同步。 唯有內容已與傳送同步時，才可使用此選項。 若要將不同的內容與傳送同步，您必須先取消目前的內容同步，才能建立新連結。
    >* 如果取消同步，本機內容會保留並可在Adobe Campaign中編輯。 如果您在修改內容後重新同步內容，將會遺失所有變更。
-   >* 對於循環和連續傳遞，每次執行傳遞時都會停止與AEM內容的同步。
+   >* 對於循環和持續傳遞，每次執行傳遞時都會停止與AEM內容的同步。

@@ -4,8 +4,8 @@ description: Adobe Experience Manager 6.5中的製作和發佈概念。
 exl-id: dcda537a-1bb2-4ce3-9904-40d158b47556
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '547'
 ht-degree: 1%
@@ -60,7 +60,7 @@ AEM提供您兩個環境：
 >
 >AEM也是來自製作環境的[已管理](/help/sites-administering/home.md) （針對大部分工作）。
 
-#### Publish環境 {#publish-environment}
+#### 發佈環境 {#publish-environment}
 
 準備就緒後，AEM網站的內容會發佈至&#x200B;**發佈環境**。 在此處，根據設計介面的外觀，可將網站頁面提供給目標對象。
 
@@ -72,7 +72,7 @@ AEM提供您兩個環境：
 >
 >不幸的是，使用的術語有時會出現重疊。 這可能發生在以下情況中：
 >
->* **Publish /取消發佈**
+>* **發佈/取消發佈**
 >  這些是讓您的內容在發佈環境中公開使用（或不公開使用）的動作主要詞語。
 >
 >* **啟用/停用**
@@ -84,4 +84,4 @@ AEM提供您兩個環境：
 
 #### Dispatcher {#dispatcher}
 
-為了最佳化網站訪客的效能，**[Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant)**&#x200B;實作負載平衡和快取。
+為了最佳化網站訪客的效能，**[Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)**&#x200B;實作負載平衡和快取。

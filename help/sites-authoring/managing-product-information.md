@@ -1,6 +1,6 @@
 ---
-title: Creative Project與PIM整合
-description: Creative Project會簡化整個拍照工作流程，包括產生拍照要求、上傳拍照、合作拍照，以及封裝已核准資產
+title: Creative專案與PIM整合
+description: Creative專案精簡了整個拍照工作流程，包括產生拍照請求、上傳拍照、合作拍照，以及封裝已核准資產
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: projects
@@ -8,8 +8,8 @@ content-type: reference
 exl-id: c4eff50e-0d55-4a61-98fd-cc42138656cb
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '2888'
 ht-degree: 0%
@@ -17,11 +17,11 @@ ht-degree: 0%
 ---
 
 
-# Creative Project與PIM整合 {#creative-project-and-pim-integration}
+# Creative專案與PIM整合 {#creative-project-and-pim-integration}
 
-如果您是行銷人員或創意專業人員，可以使用Adobe Experience Manager (AEM)中的創意專案工具來管理電子商務相關的產品攝影和您組織內的相關創意流程。
+如果您是行銷人員或創意專業人員，可以使用Adobe Experience Manager (AEM)中的Creative專案工具來管理組織內與電子商務相關的產品攝影和相關創意流程。
 
-您可以使用Creative Project來簡化您的拍照工作流程中的下列工作：
+您可以使用Creative專案來簡化您的像片拍攝工作流程中的下列任務：
 
 * 產生拍照要求
 * 正在上傳拍照
@@ -34,7 +34,7 @@ ht-degree: 0%
 
 ## 產品拍照工作流程  {#exploring-product-photo-shoot-workflows}
 
-Creative Project提供各種專案範本以滿足各種專案需求。 **產品拍照專案**&#x200B;範本現成可用。 此範本包含拍照工作流程，可讓您起始及管理產品拍照請求。 其中還包括一系列工作，可讓您透過適當的稽核和核准程式取得產品的數位影像。
+Creative專案提供各種專案範本，以滿足各種專案需求。 **產品拍照專案**&#x200B;範本現成可用。 此範本包含拍照工作流程，可讓您起始及管理產品拍照請求。 其中還包括一系列工作，可讓您透過適當的稽核和核准程式取得產品的數位影像。
 
 ## 建立產品拍照專案 {#create-a-product-photo-shoot-project}
 
@@ -55,7 +55,7 @@ Creative Project提供各種專案範本以滿足各種專案需求。 **產品�
 
 ## 在產品像片拍攝專案中開始工作 {#starting-work-in-a-product-photo-shoot-project}
 
-若要起始拍照要求，請按一下專案，然後按一下專案詳細資訊頁面中的[新增工作] **&#x200B;**&#x200B;以開始工作流程。
+若要起始拍照要求，請按一下專案，然後按一下專案詳細資訊頁面中的[新增工作] ****&#x200B;以開始工作流程。
 
 ![新增工作](assets/chlimage_1-135a.png)
 
@@ -152,7 +152,7 @@ Creative Project提供各種專案範本以滿足各種專案需求。 **產品�
 
    ![工作流程精靈](assets/chlimage_1-140a.png)
 
-1. 按一下[下一步]&#x200B;**&#x200B;**&#x200B;以啟動專案中的工作流程。
+1. 按一下[下一步]****&#x200B;以啟動專案中的工作流程。
 1. 在下一頁輸入工作流程詳細資訊。
 
    ![工作流程詳細資料](assets/chlimage_1-141a.png)
@@ -195,7 +195,7 @@ Creative Project提供各種專案範本以滿足各種專案需求。 **產品�
 
    ![檢視快照清單](assets/chlimage_1-148a.png)
 
-   若要編輯現有資料或新增資料，請按一下工具列中的[編輯]。 **&#x200B;**&#x200B;只能編輯&#x200B;**Product**&#x200B;和&#x200B;**Description**&#x200B;欄位。
+   若要編輯現有資料或新增資料，請按一下工具列中的[編輯]。 ****&#x200B;只能編輯**Product**和&#x200B;**Description**&#x200B;欄位。
 
    ![編輯快照清單](assets/chlimage_1-149a.png)
 
@@ -241,7 +241,7 @@ Creative Project提供各種專案範本以滿足各種專案需求。 **產品�
 
 如果您是編輯者，可以上傳在前一個任務中建立或上傳之&#x200B;**shotlist.csv**&#x200B;檔案中所列產品的快照。
 
-要上傳的影像名稱必須以`<ProductId_>`開頭，其中`ProductId`是從`shotlist.csv`檔案的&#x200B;**Id**&#x200B;欄位中參考的。 例如，對於快照清單中具有&#x200B;**識別碼** `397122`的產品，您可以上傳名稱為`397122_highcontrast.jpg`、`397122_lowlight.png`等等的檔案。
+要上傳的影像名稱必須以`<ProductId_>`開頭，其中`ProductId`是從&#x200B;**檔案的** Id`shotlist.csv`欄位中參考的。 例如，對於快照清單中具有&#x200B;**識別碼** `397122`的產品，您可以上傳名稱為`397122_highcontrast.jpg`、`397122_lowlight.png`等等的檔案。
 
 您可以直接上傳影像或上傳包含影像的ZIP檔案。 根據影像的名稱，這些影像會放置在像片拍攝資料夾中個別的產品資料夾內。
 
@@ -297,7 +297,7 @@ Creative Project提供各種專案範本以滿足各種專案需求。 **產品�
 
 按一下下一個層級，即可根據您的產品資料階層檢視產品。
 
-Creative Project會將核准的資產與參考的產品建立關聯。 資產中繼資料會以產品參考和基本資訊更新，位於&#x200B;**產品資料**&#x200B;索引標籤的資產屬性下，並出現在AEM資產中繼資料區段中。
+Creative專案會將核准的資產與參考的產品建立關聯。 資產中繼資料更新了AEM資產中繼資料區段中出現的資產屬性下的&#x200B;**產品資料**&#x200B;索引標籤中的產品參考和基本資訊。
 
 >[!NOTE]
 >
@@ -349,9 +349,9 @@ Creative Project會將核准的資產與參考的產品建立關聯。 資產中
 
    ![路由標籤](assets/project-task-step-routing.png)
 
-1. 新增選項之後，請按一下[確定] **&#x200B;**&#x200B;將變更新增至步驟。
+1. 新增選項之後，請按一下[確定] ****&#x200B;將變更新增至步驟。
 
-1. 返回&#x200B;**工作流程模型**&#x200B;視窗，按一下&#x200B;**同步**&#x200B;以儲存整個工作流程的變更。 點選或按一下步驟的&#x200B;**確定**&#x200B;不會儲存工作流程中的變更。 若要儲存工作流程中的變更，請按一下[同步]。**&#x200B;**
+1. 返回&#x200B;**工作流程模型**&#x200B;視窗，按一下&#x200B;**同步**&#x200B;以儲存整個工作流程的變更。 點選或按一下步驟的&#x200B;**確定**&#x200B;不會儲存工作流程中的變更。 若要儲存工作流程中的變更，請按一下[同步]。****
 
 1. 開啟側面板並找到&#x200B;**移至步驟**&#x200B;工作流程，然後將其拖曳至工作流程。
 

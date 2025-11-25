@@ -4,8 +4,8 @@ description: 設定您要在Adobe Experience Manager 6.5中使用哪個介面。
 exl-id: 01cab3c3-4c0d-44d9-b47c-034de9a08cb1
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '738'
 ht-degree: 1%
@@ -43,7 +43,7 @@ Adobe Experience Manager (AEM)觸控式UI現在是標準UI，管理和編輯網�
 >
 >從舊版升級的執行個體會保留傳統UI以供編寫頁面。
 >
->升級後，頁面編寫不會自動切換至觸控式UI，但您可以使用&#x200B;**WCM編寫UI模式服務** （ `AuthoringUIMode`服務）的[OSGi設定](/help/sites-deploying/configuring-osgi.md)來設定此設定。 檢視編輯器[&#128279;](#ui-overrides-for-the-editor)的UI覆寫。
+>升級後，頁面編寫不會自動切換至觸控式UI，但您可以使用[WCM編寫UI模式服務](/help/sites-deploying/configuring-osgi.md) （ **服務）的** OSGi設定`AuthoringUIMode`來設定此設定。 檢視編輯器[的](#ui-overrides-for-the-editor)UI覆寫。
 
 ## 為您的執行個體設定預設UI {#configuring-the-default-ui-for-your-instance}
 
@@ -108,11 +108,9 @@ Adobe Experience Manager (AEM)觸控式UI現在是標準UI，管理和編輯網�
 * 編寫頁面時：
 
    * 在URL中使用`cf#`存取頁面時，會強制使用傳統編輯器。 例如：
-
      `https://localhost:4502/cf#/content/geometrixx/en/products/triangle.html`
 
    * 在URL中使用`/editor.html`或使用觸控裝置時，會強制使用觸控式編輯器。 例如：
-
      `https://localhost:4502/editor.html/content/geometrixx/en/products/triangle.html`
 
 * 任何強制都是暫時性的，只對瀏覽器工作階段有效
@@ -123,7 +121,7 @@ Adobe Experience Manager (AEM)觸控式UI現在是標準UI，管理和編輯網�
 
    * Cookie
    * 使用者偏好設定
-   * 如果兩者都不存在，則預設為&#x200B;**WCM編寫UI模式服務** （ `AuthoringUIMode`服務）的[OSGi設定](/help/sites-deploying/configuring-osgi.md)中設定的定義。
+   * 如果兩者都不存在，則預設為[WCM編寫UI模式服務](/help/sites-deploying/configuring-osgi.md) （ **服務）的** OSGi設定`AuthoringUIMode`中設定的定義。
 
 >[!NOTE]
 >

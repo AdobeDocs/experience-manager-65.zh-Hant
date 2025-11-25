@@ -9,8 +9,8 @@ docset: aem65
 exl-id: e47270e8-bace-4d0f-a088-7269b6356315
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Workflow
-role: User,Admin,Architect,Developer
-source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '1521'
 ht-degree: 1%
@@ -75,7 +75,7 @@ ht-degree: 1%
 
 * [收件匣](#completing-a-participant-step-inbox)
 * [頁面編輯器](#completing-a-participant-step-page-editor)
-* [時間表](#completing-a-participant-step-timeline)
+* [時間軸](#completing-a-participant-step-timeline)
 * [開啟工作流程專案以檢視詳細資料](#opening-a-workflow-item-to-view-details-and-take-actions)時。
 
 #### 完成參與者步驟 — 收件匣 {#completing-a-participant-step-inbox}
@@ -134,7 +134,7 @@ ht-degree: 1%
 
 * [收件匣](#delegating-a-participant-step-inbox)
 * [頁面編輯器](#delegating-a-participant-step-page-editor)
-* [時間表](#delegating-a-participant-step-timeline)
+* [時間軸](#delegating-a-participant-step-timeline)
 * [開啟工作流程專案以檢視詳細資料](#opening-a-workflow-item-to-view-details-and-take-actions)時。
 
 #### 委派參與者步驟 — 收件匣 {#delegating-a-participant-step-inbox}
@@ -184,7 +184,7 @@ ht-degree: 1%
 
 * [收件匣](#performing-step-back-on-a-participant-step-inbox)
 * [頁面編輯器](#performing-step-back-on-a-participant-step-page-editor)
-* [時間表](#performing-step-back-on-a-participant-step-timeline)
+* [時間軸](#performing-step-back-on-a-participant-step-timeline)
 * [開啟工作流程專案以檢視詳細資料](#opening-a-workflow-item-to-view-details-and-take-actions)時。
 
 #### 對參與者步驟執行後退 — 收件匣 {#performing-step-back-on-a-participant-step-inbox}

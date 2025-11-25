@@ -4,8 +4,8 @@ description: 使用Adobe Experience Manager 6.5中的收件匣管理您的工作
 exl-id: 80b7f179-b011-4f90-b5ab-9ef8a669d271
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '1155'
 ht-degree: 8%
@@ -42,7 +42,7 @@ ht-degree: 8%
 >* [個專案](/help/sites-authoring/touch-ui-managing-projects.md)
 >* [專案 — 處理任務](/help/sites-authoring/task-content.md)
 >* [工作流程](/help/sites-authoring/workflows.md)
->* [Forms](/help/forms/using/introduction-aem-forms.md)
+>* [表單](/help/forms/using/introduction-aem-forms.md)
 >
 
 ## 標題中的收件匣 {#inbox-in-the-header}
@@ -53,7 +53,7 @@ ht-degree: 8%
 
 >[!NOTE]
 >
->某些動作也會顯示在適當資源[&#128279;](/help/sites-authoring/basic-handling.md#card-view)的卡片檢視中。
+>某些動作也會顯示在適當資源[的](/help/sites-authoring/basic-handling.md#card-view)卡片檢視中。
 
 ## 現成可用的管理工作  {#out-of-the-box-administrative-tasks}
 
@@ -79,7 +79,7 @@ ht-degree: 8%
 
 >[!NOTE]
 >
->收件箱作為控制台運行，因此，在您完成 [後，使用全局導航](/help/sites-authoring/basic-handling.md#global-navigation) [&#128279;](/help/sites-authoring/search.md) 或搜索導航到其他位置。
+>收件箱作為控制台運行，因此，在您完成 [後，使用全局導航](/help/sites-authoring/basic-handling.md#global-navigation)[](/help/sites-authoring/search.md) 或搜索導航到其他位置。
 
 ### 收件匣 — 清單檢視 {#inbox-list-view}
 
@@ -113,7 +113,7 @@ ht-degree: 8%
   您可以針對&#x200B;**行事曆檢視**&#x200B;設定：
 
    * **群組依據**
-   * **排程** 或無 **&#x200B;**
+   * **排程** 或無 ****
    * **卡片大小**
 
   ![wf-92](assets/wf-92.png)
@@ -140,7 +140,7 @@ ht-degree: 8%
 只有`administrators`或`workflow-administrators`群組的成員看得見管理控制選項。
 
 * **欄自訂**：自訂AEM收件匣以變更欄的預設標題、重新排序欄的位置，以及根據工作流程的資料顯示其他欄。
-   * **新增資料行**：選取要新增至AEM收件匣的資料行。
+   * **新增欄**：選取要新增至AEM收件匣的欄。
    * **編輯欄**：將滑鼠停留在欄標題上，並選取![編輯](assets/edit.svg)圖示以輸入欄顯示名稱。
    * **刪除資料行**：選取![刪除](assets/delete_updated.svg)圖示以從AEM收件匣中刪除資料行。
    * **移動欄**：拖曳![移動](assets/move_updated.svg)圖示，將欄移動到AEM收件匣中的新位置。

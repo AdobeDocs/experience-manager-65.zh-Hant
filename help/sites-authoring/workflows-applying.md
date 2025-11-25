@@ -9,8 +9,8 @@ docset: aem65
 exl-id: e00da2b3-046a-4d93-aed0-07dd8c66899f
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Workflow
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '647'
 ht-degree: 6%
@@ -106,7 +106,7 @@ ht-degree: 6%
 
    >[!NOTE]
    >
-   >當工作流程已設定為[多重資源支援](/help/sites-developing/workflows-models.md#configuring-a-workflow-for-multi-resource-support)且已選取多個資源時，**保留工作流程封裝**&#x200B;選項可供使用。
+   >當工作流程已設定為&#x200B;**多重資源支援**&#x200B;且已選取多個資源時，[保留工作流程封裝](/help/sites-developing/workflows-models.md#configuring-a-workflow-for-multi-resource-support)選項可供使用。
 
    完成後，請使用&#x200B;**下一步**&#x200B;繼續。
 
@@ -118,7 +118,7 @@ ht-degree: 6%
 
    * 檢視其他動作的現有資源：
 
-      * **包含子項**&#x200B;以指定該資源的子項將包含在工作流程中。
+      * **包含子項**以指定該資源的子項將包含在工作流程中。
 對話方塊隨即開啟，讓您根據下列條件調整選取範圍：
 
          * 僅包含直接子項。

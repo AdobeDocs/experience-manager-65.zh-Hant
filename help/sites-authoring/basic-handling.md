@@ -9,8 +9,8 @@ docset: aem65
 exl-id: ef1a3997-feb4-4cb0-9396-c8335b69bb10
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
-source-git-commit: 25bf0d64b6839afec0112ea8c9fde0510e56ccf4
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '2965'
 ht-degree: 4%
@@ -122,7 +122,7 @@ AEM的使用者介面已啟用觸控功能。 觸控式介面可讓您使用觸�
   </tr>
   <tr>
    <td>Screens</td>
-   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/authoring/setting-up-projects/creating-a-screens-project.html?lang=zh-Hant">Screens</a>可讓您管理任何地點、任何大小的面向客戶的所有熒幕。</td>
+   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/authoring/setting-up-projects/creating-a-screens-project.html">Screens</a>可讓您管理任何地點、任何大小的面向客戶的所有熒幕。</td>
   </tr>
   <tr>
    <td>Sites</td>
@@ -155,7 +155,7 @@ AEM的使用者介面已啟用觸控功能。 觸控式介面可讓您使用觸�
 
   您也可以使用[捷徑鍵](/help/sites-authoring/keyboard-shortcuts.md) `/` （正斜線）從任何主控台叫用搜尋。
 
-* [解決方案](https://business.adobe.com/tw/)
+* [解決方案](https://business.adobe.com/)
 
   ![解決方案](do-not-localize/screen_shot_2018-03-23at103552.png)
 
@@ -185,7 +185,7 @@ AEM的使用者介面已啟用觸控功能。 觸控式介面可讓您使用觸�
 
   ![邊欄選擇器](assets/screen_shot_2018-03-23at104029.png)
 
-* 導覽列
+* 階層連結
 
   ![階層連結](assets/bh-05.png)
 
@@ -581,7 +581,7 @@ AEM的使用者介面已啟用觸控功能。 觸控式介面可讓您使用觸�
 
 ![bh-28](assets/bh-28.png)
 
-### 篩選 {#filter}
+### 篩選器 {#filter}
 
 這會開啟類似於[搜尋](/help/sites-authoring/search.md)的面板，並設定適當的位置篩選器，讓您進一步篩選想要檢視的內容。
 

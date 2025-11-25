@@ -9,8 +9,8 @@ docset: aem65
 exl-id: 18910143-f2f2-4cfe-88b9-651df90d9cb9
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '192'
 ht-degree: 26%
@@ -32,16 +32,16 @@ ht-degree: 26%
 **建立CSV匯出**&#x200B;精靈可讓您選取：
 
 * 要匯出的屬性
-   * 中繼資料
+   * 後設資料
       * 名稱
-      * 已修改
+      * 修改日期
       * 已發佈
       * 範本
       * 工作流程
-   * 轉換
+   * 翻譯
       * 已翻譯
    * 分析
-      * 頁面檢視
+      * 頁面檢視量
       * 獨特訪客
       * 頁面逗留時間
 * 深度
@@ -61,7 +61,7 @@ ht-degree: 26%
 若要建立CSV匯出：
 
 1. 開啟&#x200B;**網站**&#x200B;主控台，視需要導覽至所需位置。
-1. 從工具列中，依序選 **取「建立**&#x200B;**CSV報表** 」以開啟精靈：
+1. 從工具列中，依序選 **取「建立****CSV報表** 」以開啟精靈：
 
    ![etc-03](assets/etc-03.png)
 

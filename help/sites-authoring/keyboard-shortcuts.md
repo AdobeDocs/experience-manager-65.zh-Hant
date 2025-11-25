@@ -8,8 +8,8 @@ content-type: reference
 exl-id: c58981a0-cdde-4593-b633-7f6898f8f5f5
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '383'
 ht-degree: 4%
@@ -76,9 +76,9 @@ AEM會避免常用瀏覽器已使用的常用捷徑，但AEM捷徑不會覆寫�
 
 >[!CAUTION]
 >
->AEM鍵盤快速鍵可能會干擾熒幕閱讀程式、某些瀏覽器功能和其他協助工具。
+>AEM鍵盤快速鍵可能會干擾熒幕助讀程式、某些瀏覽器功能和其他協助工具。
 >
->Adobe建議在使用熒幕閱讀程式時[停用AEM鍵盤快速鍵](/help/sites-authoring/keyboard-shortcuts.md#deactivating-keyboard-shortcuts)。
+>Adobe建議在使用熒幕助讀程式時[停用AEM鍵盤快速鍵](/help/sites-authoring/keyboard-shortcuts.md#deactivating-keyboard-shortcuts)。
 
 ## 停用鍵盤快速鍵 {#deactivating-keyboard-shortcuts}
 

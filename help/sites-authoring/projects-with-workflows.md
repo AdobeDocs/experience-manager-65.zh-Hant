@@ -8,8 +8,8 @@ content-type: reference
 exl-id: 407fc164-291d-42f6-8c46-c1df9ba3d454
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Workflow
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '783'
 ht-degree: 3%
@@ -74,7 +74,7 @@ ht-degree: 3%
 
 ## 產品拍照工作流程 {#product-photo-shoot-workflow}
 
-**產品拍照**&#x200B;工作流程（商務和非商務）已在檔案[創意專案](/help/sites-authoring/managing-product-information.md)中詳細說明
+**產品拍照**&#x200B;工作流程（商務和非商務）已在檔案[Creative專案](/help/sites-authoring/managing-product-information.md)中詳細說明
 
 ## 專案核准工作流程 {#project-approval-workflow}
 

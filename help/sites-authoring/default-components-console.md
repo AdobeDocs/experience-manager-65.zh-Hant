@@ -4,8 +4,8 @@ description: 「元件」主控台可讓您瀏覽針對執行個體定義的所�
 exl-id: d79107b9-dfa4-4e80-870e-0b7ea72f0bc7
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '280'
 ht-degree: 17%
@@ -26,7 +26,7 @@ ht-degree: 17%
 
 ## 搜尋 {#searching}
 
-使用「 **僅內容**&#x200B;**&#x200B;** 」圖示 (左上角)，您可以開啟「搜尋」面板以搜尋和/或篩選元件：
+使用「 **僅內容****** 」圖示 (左上角)，您可以開啟「搜尋」面板以搜尋和/或篩選元件：
 
 ![screen-shot_2019-03-05at113251](assets/screen-shot_2019-03-05at113251.png)
 
@@ -67,6 +67,6 @@ ht-degree: 17%
 
 * **文件**
 
-  如果開發人員已提供元件[&#128279;](/help/sites-developing/developing-components.md#documenting-your-component)的檔案，它將出現在&#x200B;**檔案**&#x200B;索引標籤上。 如果沒有可用的檔案，將不會顯示&#x200B;**檔案**&#x200B;標籤。
+  如果開發人員已提供元件[的](/help/sites-developing/developing-components.md#documenting-your-component)檔案，它將出現在&#x200B;**檔案**&#x200B;索引標籤上。 如果沒有可用的檔案，將不會顯示&#x200B;**檔案**&#x200B;標籤。
 
   ![文件](assets/chlimage_1-171.png)

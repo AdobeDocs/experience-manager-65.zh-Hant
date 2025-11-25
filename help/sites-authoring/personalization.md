@@ -4,8 +4,8 @@ description: 瞭解Adobe Experience Manager 6.5如何建立個人化內容。
 exl-id: be34760a-875b-419d-9fa4-2359b314a3b7
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '526'
 ht-degree: 23%
@@ -16,11 +16,11 @@ ht-degree: 23%
 
 ## 個人化和內容目標鎖定 {#personalization-and-content-targeting}
 
-AEM提供工具架構，用於製作目標內容及呈現個人化體驗。
+AEM提供工具架構，用於製作目標內容和呈現個人化體驗。
 
 ## 目標定位模式 {#targeting-mode}
 
-[使用AEM的定位模式製作目標內容](/help/sites-authoring/content-targeting-touch.md)。 目標定位模式和目標元件提供用於建立行銷活動體驗內容的工具。
+[使用AEM的鎖定模式製作鎖定內容](/help/sites-authoring/content-targeting-touch.md)。 目標定位模式和目標元件提供用於建立行銷活動體驗內容的工具。
 
 ## 活動 {#activities}
 
@@ -42,7 +42,7 @@ AEM提供工具架構，用於製作目標內容及呈現個人化體驗。
 
 您可以為活動定義體驗。 您可以使用[活動主控台](/help/sites-authoring/activitylib.md#adding-editing-an-activity-using-the-activities-console)或[目標定位模式](/help/sites-authoring/content-targeting-touch.md#adding-and-removing-experiences-using-targeting-mode)來新增體驗至活動。
 
-## 優惠 {#offers}
+## 產品建議 {#offers}
 
 選件是出現在體驗頁面某個位置的內容。 針對不同的體驗使用不同的選件，以讓內容對您的對象產生最大成效。
 
@@ -56,13 +56,13 @@ AEM提供工具架構，用於製作目標內容及呈現個人化體驗。
 
 ### AEM {#aem}
 
-AEM提供內建的鎖定目標引擎，可處理頁面請求並決定要顯示的內容。 使用 AEM 目標定位引擎時，您只能使用在 AEM 建立的區段來定義體驗的對象。
+AEM提供內建定位引擎，可處理頁面請求並決定要顯示的內容。 使用 AEM 目標定位引擎時，您只能使用在 AEM 建立的細分群體來定義體驗的客群。
 
 ### Adobe Target {#adobe-target}
 
 Adobe Target鎖定目標引擎會使系統在Adobe Target中追蹤從頁面瀏覽收集到的資訊。
 
-* 使用此目標定位引擎時，您可以使用從 Adobe Target 匯入的區段來定義體驗的對象。
+* 使用此目標定位引擎時，您可以使用從 Adobe Target 匯入的細分群體來定義體驗的客群。
 * 使用 Adobe Target 引擎的活動[會同步到 Target](/help/sites-authoring/activitylib.md#synchronizing-activities-with-adobe-target)。
 
 如果[已整合 Adobe Target](/help/sites-administering/opt-in.md)，即可使用此引擎。

@@ -4,8 +4,8 @@ description: 專案可讓您將資源分組到一個實體中，其共用的共�
 exl-id: 632c0608-2ab8-4a5b-8251-cd747535449b
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Projects
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '1360'
 ht-degree: 27%
@@ -37,7 +37,7 @@ ht-degree: 27%
 
 ![專案主控台](assets/screen-shot_2019-03-05at125110.png)
 
-專案主控台類似於AEM中的其他主控台，可在個別專案上執行數個動作，並調整您的專案檢視。
+此專案主控台類似於AEM中的其他主控台，可在個別專案上執行數個動作，並調整您的專案檢視。
 
 ### 切換您的模式 {#modes}
 
@@ -49,7 +49,7 @@ ht-degree: 27%
 
 開啟主控台時，預設模式為僅內容。 它會顯示您的所有專案。
 
-#### 時間表 {#timeline}
+#### 時間軸 {#timeline}
 
 時間表檢視可讓您選取個別專案並檢視其上的活動。 使用邊欄選擇器或快速鍵`alt+1`來變更此檢視。
 
@@ -237,4 +237,4 @@ ht-degree: 27%
 * [管理專案](/help/sites-authoring/touch-ui-managing-projects.md)
 * [使用任務](/help/sites-authoring/task-content.md)
 * [使用專案工作流程](/help/sites-authoring/projects-with-workflows.md)
-* [Creative Project與PIM整合](/help/sites-authoring/managing-product-information.md)
+* [Creative專案與PIM整合](/help/sites-authoring/managing-product-information.md)

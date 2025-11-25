@@ -9,8 +9,8 @@ docset: aem65
 exl-id: dd65b308-c449-4f64-9f46-0797b922910f
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '517'
 ht-degree: 6%
@@ -71,7 +71,7 @@ AEM的製作環境提供多種搜尋內容的機制，視資源型別而定。
    * 已儲存的搜尋
    * 搜尋目錄
    * 標記
-   * 搜尋條件；例如修改日期、Publish狀態、即時副本狀態。
+   * 搜尋條件；例如，修改日期、發佈狀態、即時副本狀態。
 
    >[!NOTE]
    >
@@ -90,7 +90,7 @@ AEM的製作環境提供多種搜尋內容的機制，視資源型別而定。
 
    ![screen-shot_2019-03-05at102613](assets/screen-shot_2019-03-05at102613.png)
 
-1. 使用 **X** (右上方 **&#x200B;**&#x200B;)關閉搜尋。
+1. 使用 **X** (右上方 **** )關閉搜尋。
 
 >[!NOTE]
 >

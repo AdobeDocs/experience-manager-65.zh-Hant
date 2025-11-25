@@ -7,10 +7,10 @@ topic-tags: site-features
 exl-id: 1772368a-f5c9-440c-a92a-0f1d34cc4bf8
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
-source-wordcount: '1297'
+source-wordcount: '1296'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 樣式系統可讓範本作者在元件的內容原則中定義樣式類別，讓內容作者在編輯頁面上的元件時能夠選取這些類別。 這些樣式可作為元件的替代視覺變體，讓元件更靈活。
 
-如此一來，您就不需要為每個樣式開發自訂元件，或是自訂元件對話方塊以啟用此類樣式功能。 這可帶來更多可重複使用的元件，這些元件可以快速輕鬆地適應內容作者的需求，而無需任何AEM後端開發。
+如此一來，您就不需要為每個樣式開發自訂元件，或是自訂元件對話方塊以啟用此類樣式功能。 這可導向更多可重複使用的元件，這些元件可以快速輕鬆地配合內容作者的需求，而無需任何AEM後端開發。
 
 ## 使用案例 {#use-case}
 
@@ -40,7 +40,7 @@ ht-degree: 1%
 
 1. 網頁設計工具會建立元件的不同視覺變數。
 
-1. 向HTML開發人員提供元件的HTML輸出以及要實施的所需視覺變化。
+1. HTML開發人員會獲得元件的HTML輸出，以及要實施的所需視覺變數。
 
 1. HTML開發人員會定義與每個視覺變數相對應的CSS類別，並會插入到元件包裝的元素上。
 
@@ -48,13 +48,13 @@ ht-degree: 1%
 
 1. AEM開發人員將提供的CSS （和選用的JS）放置在[使用者端資料庫](/help/sites-developing/clientlibs.md)中並進行部署。
 
-1. AEM開發人員或範本作者會設定頁面範本，並編輯每個已設定樣式元件的原則，新增定義的CSS類別、為每種樣式提供好記的名稱，並指示哪些樣式可以合併。
+1. AEM開發人員或範本作者會設定頁面範本，並編輯每個已設定樣式元件的原則，新增定義的CSS類別、為每種樣式提供好記的名稱，並指出可組合的樣式。
 
-1. AEM頁面作者接著可以透過元件工具列的樣式選單，在頁面編輯器中選擇設計的樣式。
+1. 接著，AEM頁面作者就能透過元件工具列的樣式選單，在頁面編輯器中選擇設計的樣式。
 
-請注意，AEM中實際只執行最後三個步驟。 這表示所有必要的CSS和JavaScript開發都可以不使用AEM來完成。
+請注意，AEM中實際只執行最後三個步驟。 這表示所有必要的CSS和JavaScript開發都可以不使用AEM完成。
 
-實際實作樣式只需要在AEM上部署，以及在所需範本的元件中選取即可。
+若要實際實作樣式，只需要在AEM上部署，並在所需範本的元件中選取。
 
 下圖說明「樣式系統」的架構。
 
@@ -62,7 +62,7 @@ ht-degree: 1%
 
 ## 使用 {#use}
 
-為了示範此功能，我們將使用核心元件的[標題元件](https://www.adobe.com/go/aem_cmp_title_v2_tw)的[WKND](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hant)實作作為範例。
+為了示範此功能，我們將使用核心元件的[標題元件](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)的[WKND](https://www.adobe.com/go/aem_cmp_title_v2_tw)實作作為範例。
 
 下列章節[As a Content Author](#as-a-content-author)及[As a Template Author](#as-a-template-author)說明如何使用WKND的樣式系統測試樣式系統的功能。
 
@@ -120,7 +120,7 @@ ht-degree: 1%
 
 ### 在設計對話方塊中啟用樣式標籤 {#enable-styles-tab-design}
 
-為了使元件能與AEM的樣式系統搭配使用並在其設計對話方塊中顯示樣式標籤，元件開發人員必須包含樣式標籤，且元件上有下列設定：
+為了使元件可與AEM的樣式系統搭配使用並在其設計對話方塊中顯示樣式標籤，元件開發人員必須包含樣式標籤，且元件上須有下列設定：
 
 * `path = "/mnt/overlay/cq/gui/components/authoring/dialog/style/tab_design/styletab"`
 * `sling:resourceType = "granite/ui/components/coral/foundation/include"`
@@ -129,7 +129,7 @@ ht-degree: 1%
 
 ### 在編輯對話方塊中啟用樣式索引標籤 {#enable-styles-tab-edit}
 
-自AEM 6.5.3.0版開始，現在提供「編輯」對話方塊中的選用「樣式」索引標籤。 與「設計」對話方塊索引標籤不同，「編輯」對話方塊中的索引標籤對於樣式系統的運作並非必要，但它是內容作者設定樣式的選用替代介面。
+自AEM版本6.5.3.0起，「編輯」對話方塊中的選用「樣式」索引標籤現已可用。 與「設計」對話方塊索引標籤不同，「編輯」對話方塊中的索引標籤對於樣式系統的運作並非必要，但它是內容作者設定樣式的選用替代介面。
 
 編輯對話方塊索引標籤可以類似設計對話方塊索引標籤的方式加入：
 

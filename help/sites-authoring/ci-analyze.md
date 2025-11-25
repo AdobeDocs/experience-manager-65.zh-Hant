@@ -1,6 +1,6 @@
 ---
 title: 分析頁面效能
-description: 您可以使用「內容分析」頁面來分析您編寫之頁面的效能
+description: 您可以在「內容Insight」頁面分析所編寫頁面的效能
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
@@ -9,8 +9,8 @@ docset: aem65
 exl-id: 14484a90-4e44-4c85-9411-b78ed11dc70d
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Integration
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '661'
 ht-degree: 1%
@@ -19,11 +19,11 @@ ht-degree: 1%
 
 # 分析頁面效能{#analyzing-page-performance}
 
-開啟[內容分析](/help/sites-authoring/content-insights.md)頁面以分析您正在編寫的頁面的效能。 設定報告期間，以集中進行分析。
+開啟[內容Insight](/help/sites-authoring/content-insights.md)頁面以分析您正在編寫的頁面的效能。 設定報告期間，以集中進行分析。
 
 ## 開啟頁面的Analytics和Recommendations {#opening-analytics-and-recommendations-for-a-page}
 
-使用以下程式檢視頁面的Analytics和Recommendations：
+請使用下列程式來檢視頁面的Analytics和Recommendations：
 
 1. 導覽至您要分析的頁面。
 1. 在工具列中按一下&#x200B;**Analytics和Recommendations**。
@@ -41,15 +41,15 @@ ht-degree: 1%
 * 要報告的時間段。
 * 資料的詳細程度。
 
-變更報表時間相關方面的工具會顯示在「內容分析」頁面頂端。 ![chlimage_1-126](assets/chlimage_1-126.png)
+變更報表時間相關層面的工具會顯示在「內容Insight」頁面頂端。 ![chlimage_1-126](assets/chlimage_1-126.png)
 
 #### 變更報告期間 {#changing-the-reporting-period-1}
 
-變更「內容分析」頁面的報告期間，將您對頁面活動的分析聚焦於特定期間。 當您變更報表時段時，報表會自動重新整理。 時間範圍上的陰影區域代表報告期間。 時間範圍上的日期會從左到右增加。
+變更「內容Insight」頁面的報告期間，以針對特定期間分析頁面活動。 當您變更報表時段時，報表會自動重新整理。 時間範圍上的陰影區域代表報告期間。 時間範圍上的日期會從左到右增加。
 
 ![chlimage_1-127](assets/chlimage_1-127.png)
 
-若要變更「內容分析」頁面的報告期間：
+若要變更內容Insight頁面的報告期間：
 
 1. 如果時間範圍未出現在頁面頂端，請按一下切換時間範圍圖示。
 
@@ -77,7 +77,7 @@ ht-degree: 1%
 
 ### 指派SEO Recommendations的任務 {#assigning-tasks-for-seo-recommendations}
 
-使用SEO Recommendations報表來建立任務，以提升搜尋引擎的頁面可見度。 對於報表中沒有核取記號的每個建議，您可以建立指派給使用者的工作，以執行所需工作。
+使用SEO Recommendations報表來建立任務，以改善搜尋引擎的頁面可見度。 對於報表中沒有核取記號的每個建議，您可以建立指派給使用者的工作，以執行所需工作。
 
 ![chlimage_1-129](assets/chlimage_1-129.png)
 

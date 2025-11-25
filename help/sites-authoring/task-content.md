@@ -8,8 +8,8 @@ content-type: reference
 exl-id: a0719745-8d67-44bc-92ba-9ab07f31f8d2
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '586'
 ht-degree: 3%
@@ -88,4 +88,4 @@ ht-degree: 3%
 
 ![收件匣](assets/project-inbox.png)
 
-若要完成工作，請選取工作，然後按一下工具列中的[完成]。 **&#x200B;**&#x200B;新增資訊至工作，然後按一下[完成]。**&#x200B;** 如需詳細資訊，請參閱[您的收件匣](/help/sites-authoring/inbox.md)。
+若要完成工作，請選取工作，然後按一下工具列中的[完成]。 ****&#x200B;新增資訊至工作，然後按一下[完成]。**** 如需詳細資訊，請參閱[您的收件匣](/help/sites-authoring/inbox.md)。

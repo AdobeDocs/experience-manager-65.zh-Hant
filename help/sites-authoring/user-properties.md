@@ -1,6 +1,6 @@
 ---
 title: 設定帳戶環境
-description: AEM提供您設定帳戶及製作環境某些方面的功能
+description: AEM可讓您設定帳戶及製作環境的特定層面
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
@@ -9,8 +9,8 @@ docset: aem65
 exl-id: 6079431d-7d08-4973-8bb4-a8d10626a795
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '521'
 ht-degree: 5%
@@ -21,7 +21,7 @@ ht-degree: 5%
 
 AEM提供您設定帳戶及製作環境某些方面的功能。
 
-使用頁 [首和相關「我的首選項](/help/sites-authoring/user-properties.md#user-settings) 」對話框中的「用戶」選項 [&#128279;](/help/sites-authoring/basic-handling.md#the-header) [&#128279;](#userpreferences) ，可以修改用戶選項，例如。
+使用頁 [首和相關「我的首選項](/help/sites-authoring/user-properties.md#user-settings) 」對話框中的「用戶」選項 [](/help/sites-authoring/basic-handling.md#the-header)[](#userpreferences) ，可以修改用戶選項，例如。
 
 首先，存取標頭中的[使用者](/help/sites-authoring/user-properties.md#user-settings)選項。
 

@@ -1,6 +1,6 @@
 ---
-title: 內容分析
-description: 內容分析會使用網頁分析和SEO建議來提供頁面效能的相關資訊
+title: 內容洞察
+description: 內容Insight使用網頁分析和SEO建議提供頁面效能的相關資訊
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
@@ -8,36 +8,36 @@ topic-tags: site-features
 exl-id: 187f3cde-a0db-4c02-9e8b-08272987a67d
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '537'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
-# 內容分析{#content-insight}
+# 內容洞察{#content-insight}
 
-「內容分析」會使用網頁分析和SEO建議來提供頁面效能的相關資訊。 使用內容深入分析來決定如何修改頁面，或瞭解先前的變更如何變更效能。 對於您編寫的每個頁面，都可以開啟「內容分析」來分析頁面。
+內容Insight提供使用網頁分析和SEO建議的頁面效能相關資訊。 使用內容Insight來決定如何修改頁面，或瞭解先前的變更如何變更效能。 對於您編寫的每個頁面，都可以開啟「內容Insight」以分析頁面。
 
 ![chlimage_1-311](assets/chlimage_1-311.png)
 
-「內容分析」頁面的版面配置會隨著您使用之裝置的熒幕維度和方向而改變。
+「內容Insight」頁面的版面配置會隨著您使用裝置的熒幕大小和方向而改變。
 
 ## 報表資料
 
-「內容分析」頁面包含使用Adobe SiteCatalyst、Adobe Target、Adobe Social和BrightEdge資料的報表：
+「內容Insight」頁面包含使用Adobe SiteCatalyst、Adobe Target、Adobe Social和BrightEdge資料的報表：
 
 * SiteCatalyst：下列量度的報表可供使用：
 
-   * 頁面檢視
+   * 頁面檢視量
    * 頁面平均逗留時間
    * 來源
 
 * Target：頁面包含選件的促銷活動報表。
 * BrightEdge：報告可改善搜尋引擎頁面可見度的頁面功能，並建議應實作的功能。
 
-請參閱[開啟頁面的Analytics和Recommendations](/help/sites-authoring/ci-analyze.md#opening-analytics-and-recommendations-for-a-page)。
+請參閱[開啟頁面的Analytics與建議](/help/sites-authoring/ci-analyze.md#opening-analytics-and-recommendations-for-a-page)。
 
 ## 報告期間
 
@@ -45,7 +45,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->內容深入分析控制面板的時間表在`GMT`內。
+>內容Insight儀表板的時間表在`GMT`內。
 
 您也可以指定報告資料的詳細程度，例如，您可以檢視每日、每週、每月或每年資料。
 
@@ -98,6 +98,6 @@ ht-degree: 3%
 
 SEO Recommendations報表包含頁面的BrightEdge分析結果。 此報表是頁面功能的檢查清單，指出頁面包含和不包含哪些功能，以使用搜尋引擎最大化尋找能力。
 
-報表可讓您建立任務，以便進行改善以改進頁面可查詢性。 Recommendations會指出已建立實施建議的工作。 請參閱[指派SEO Recommendations的工作](/help/sites-authoring/ci-analyze.md#assigning-tasks-for-seo-recommendations)。
+報表可讓您建立任務，以便進行改善以改進頁面可查詢性。 Recommendations會指出已建立用於實作建議的工作。 請參閱[指派SEO Recommendations的工作](/help/sites-authoring/ci-analyze.md#assigning-tasks-for-seo-recommendations)。
 
 ![chlimage_1-317](assets/chlimage_1-317.png)

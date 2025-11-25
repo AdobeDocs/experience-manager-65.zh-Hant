@@ -9,10 +9,10 @@ docset: aem65
 exl-id: b25d3f8e-5687-49ab-95e1-19ec75c87f6e
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Launches
-role: User,Admin,Architect,Developer
-source-git-commit: 7c4be888c392520c82ef7b2172d0eee61fc3ee44
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
-source-wordcount: '892'
+source-wordcount: '896'
 ht-degree: 73%
 
 ---
@@ -37,7 +37,7 @@ ht-degree: 73%
 * 為多個根分支建立。雖然您可以為整個網站建立啟動 (並在其中進行變更)，但這可能是不切實際的，因為需要複製整個網站。當涉及數百甚至數千頁時，複製動作和之後提升工作所需的比較作業，會影響系統要求和效能。
 * 巢狀 (啟動中有啟動) 可讓您在現有啟動中建立啟動，如此作者可以利用已完成的變更，而不用對每個啟動重複進行相同的變更。
 
-本節說明如何從Sites主控台或[Launches主控台](#the-launches-console)內建立、編輯和提升（以及在必要時[刪除](/help/sites-authoring/launches-creating.md#deleting-a-launch)）啟動頁面：
+本節說明如何從Sites主控台或[Launches主控台](/help/sites-authoring/launches-creating.md#deleting-a-launch)內建立、編輯和提升（以及在必要時[刪除](#the-launches-console)）啟動頁面：
 
 * [建立啟動](/help/sites-authoring/launches-creating.md)
 * [編輯啟動](/help/sites-authoring/launches-editing.md)

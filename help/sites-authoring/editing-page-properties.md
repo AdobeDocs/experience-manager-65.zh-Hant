@@ -4,9 +4,9 @@ description: 在Adobe Experience Manager中定義頁面的必要屬性。
 exl-id: 3cd9374f-6f16-40fb-97cf-5f9a750b8dd2
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
+role: User,Admin,Developer
 mini-toc-levels: 2
-source-git-commit: d0515a6a3d08e181eada4a22e0d128305148e6ea
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '2477'
 ht-degree: 3%
@@ -41,7 +41,7 @@ ht-degree: 3%
 
 #### 品牌元素 {#branding}
 
-藉由將品牌概要附加至每個頁面標題，跨頁面套用一致的品牌識別。 此功能需要使用2.14.0版或更新版本的[核心元件。](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)的頁面元件
+藉由將品牌概要附加至每個頁面標題，跨頁面套用一致的品牌識別。 此功能需要使用2.14.0版或更新版本的[核心元件。](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)的頁面元件
 
 * **覆寫** — 檢查以在此頁面上定義品牌概要。
    * 此值由任何子頁面繼承，除非它們也設定了&#x200B;**覆寫**&#x200B;值。
@@ -85,7 +85,7 @@ ht-degree: 3%
 
 輸入此頁面的虛名URL，此URL可讓您使用較短和/或較具表現力的URL。
 
-例如，如果網站`http://example.com,`的虛名URL設定為`welcome`至由路徑`/v1.0/startpage`識別的頁面，則`http://example.com/welcome`將是`http://example.com/content/v1.0/startpage`的虛名URL
+例如，如果網站`welcome`的虛名URL設定為`/v1.0/startpage`至由路徑`http://example.com,`識別的頁面，則`http://example.com/welcome`將是`http://example.com/content/v1.0/startpage`的虛名URL
 
 >[!CAUTION]
 >
@@ -95,7 +95,7 @@ ht-degree: 3%
 >* 不支援規則運算式模式。
 >* 不應設為現有頁面。
 
-設定Dispatcher以啟用對虛名URL的存取權。 如需詳細資訊，請參閱[啟用對虛名URL的存取權](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant#enabling-access-to-vanity-urls-vanity-urls)。
+設定Dispatcher以啟用對虛名URL的存取權。 如需詳細資訊，請參閱[啟用對虛名URL的存取權](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#enabling-access-to-vanity-urls-vanity-urls)。
 
 * **新增** — 點選或按一下以新增虛名URL。
 * **移除** — 點選或按一下以移除虛名URL。
@@ -110,7 +110,7 @@ ht-degree: 3%
 * **重新導向** — 指出此頁面應該自動重新導向的頁面
 * **設計** — 指出要用於此頁面的[設計](/help/sites-developing/designer.md)。
 * **別名** — 指定要用於此頁面的別名
-   * 例如，如果您為頁面`/content/wknd/us/en/magazine/members-only`定義別名`private`，則也可以透過`/content/wknd/us/en/magazine/private`存取此頁面
+   * 例如，如果您為頁面`private`定義別名`/content/wknd/us/en/magazine/members-only`，則也可以透過`/content/wknd/us/en/magazine/private`存取此頁面
    * 建立別名會設定頁面節點上的`sling:alias`屬性，這只會影響資源，而不會影響存放庫路徑。
    * 無法發佈編輯器中以別名存取的頁面。 編輯器中的[發佈選項](/help/sites-authoring/publishing-pages.md)僅適用於透過實際路徑存取的頁面。
    * 如需詳細資訊，請參閱SEO和URL管理最佳實務下的[本地化頁面名稱](/help/managing/seo-and-url-management.md#localized-page-names)。
@@ -334,7 +334,7 @@ ht-degree: 3%
 
       * 您可以選取/取消選取（如有必要）
 
-   * 標籤
+   * 索引標籤
 
       * 和檢視單一頁面屬性時一樣，屬性會依索引標籤排序。
 

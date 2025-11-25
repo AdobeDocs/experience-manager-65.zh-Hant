@@ -4,11 +4,11 @@ description: 在設計模式中設定Adobe Experience Manager元件。
 exl-id: 5e232886-75c1-4f0f-b359-4739ae035fd3
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '905'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 0%
 >
 >設計模式僅適用於儲存為( `/etc`)下內容的設計組態。
 >
->從AEM 6.4開始，建議在`/apps`下將設計儲存為組態資料，以支援連續部署情況。 儲存在`/apps`下的設計在執行階段無法編輯，且這類範本的非管理員使用者將無法使用設計模式。
+>從AEM 6.4開始，建議在`/apps`下將設計儲存為設定資料，以支援連續部署情況。 儲存在`/apps`下的設計在執行階段無法編輯，且這類範本的非管理員使用者將無法使用設計模式。
 
 這涉及新增或移除頁面段落系統中允許的元件。 段落系統( `parsys`)是包含所有其他段落元件的複合元件。 段落系統可讓作者將不同型別的元件新增至頁面，因為它包含所有其他段落元件。 每個段落型別都會表示為元件。
 
@@ -43,7 +43,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如需有關`parsys`的詳細資訊，請參閱[開發元件](/help/sites-developing/components.md)和[使用範本和元件的准則](/help/sites-developing/dev-guidelines-bestpractices.md#guidelines-for-using-templates-and-components)。
+>如需有關[的詳細資訊，請參閱](/help/sites-developing/components.md)開發元件[和](/help/sites-developing/dev-guidelines-bestpractices.md#guidelines-for-using-templates-and-components)使用範本和元件的准則`parsys`。
 
 >[!CAUTION]
 >
