@@ -1,25 +1,25 @@
 ---
-title: 變化 - 製作片段內容
-description: 瞭解變數如何可讓您為片段編寫內容，然後根據用途建立該內容的變數，從而使您在AEM中的Headless內容更靈活。
+title: 變化 - 編寫片段內容
+description: 瞭解變數如何可讓您為片段製作內容，然後根據用途建立內容的變數，從而讓您的AEM中的Headless內容更靈活。
 feature: Content Fragments
 role: User
 exl-id: 50982ede-7ccf-45b2-b0dd-a49d23e0f971
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: b611d044c9dab5aa25a3e58cf2447faa42b4b7b6
 workflow-type: tm+mt
-source-wordcount: '2309'
+source-wordcount: '2350'
 ht-degree: 6%
 
 ---
 
-# 變化 - 製作片段內容{#variations-authoring-fragment-content}
+# 變化 - 編寫片段內容{#variations-authoring-fragment-content}
 
-[變數](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment)是AEM內容片段的一項重要功能，因為它們可讓您建立和編輯主要內容的復本，以用於特定頻道和/或情境，讓Headless內容傳送更靈活。
+[變數](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment)是AEM內容片段的一項重要功能，因為它們可讓您建立和編輯主要內容的復本，以用於特定頻道和/或案例，讓Headless內容傳送更靈活。
 
 您可以從&#x200B;**變數**&#x200B;標籤執行下列動作：
 
 * [為您的片段輸入內容](#authoring-your-content)，
-* [建立和管理&#x200B;**主要**&#x200B;內容的變數](#managing-variations)，
+* [建立和管理](#managing-variations)主要&#x200B;**內容的變數**，
 
 根據正在編輯的資料型別執行一系列其他動作；例如：
 
@@ -70,9 +70,9 @@ ht-degree: 6%
 
   >[!NOTE]
   >
-  >**標籤**&#x200B;也可以新增為[中繼資料](/help/assets/content-fragments/content-fragments-metadata.md)的一部分（至&#x200B;**主要**&#x200B;變數）
+  >**標籤**&#x200B;也可以新增為&#x200B;**中繼資料**&#x200B;的一部分（至[主要](/help/assets/content-fragments/content-fragments-metadata.md)變數）
 
-* [建立和管理&#x200B;**主版**&#x200B;內容的變數](#managing-variations)。
+* [建立和管理](#managing-variations)主版&#x200B;**內容的變數**。
 
 ### 全熒幕編輯器 {#full-screen-editor}
 
@@ -107,13 +107,13 @@ ht-degree: 6%
 
 編輯多行文字的選項取決於所選的格式：
 
-* [RTF](#rich-text)
+* [RTF 文字](#rich-text)
 * [純文字](#plain-text)
 * [Markdown](#markdown)
 
 使用全熒幕編輯器時，可選取格式。
 
-### RTF {#rich-text}
+### RTF 文字 {#rich-text}
 
 RTF編輯可讓您設定格式：
 
@@ -168,7 +168,7 @@ RTF編輯可讓您設定格式：
 
 >[!CAUTION]
 >
->如果您在 **Rich Text** 和 **&#x200B;**&#x200B;Markdown之間切換，可能會在區塊引號和程式碼區塊中遇到意外的效果，因為這兩種格式在處理方式上可能會有差異。
+>如果您在 **Rich Text** 和 **** Markdown之間切換，可能會在區塊引號和程式碼區塊中遇到意外的效果，因為這兩種格式在處理方式上可能會有差異。
 
 ### 片段參考 {#fragment-references}
 
@@ -325,7 +325,7 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
 若要簡化編寫內容片段的程式，您可以直接新增[Assets](/help/assets/manage-assets.md) （影像）至片段。
 
-將它們新增到片段的段落序列中，且不加任何格式；在頁面[&#128279;](/help/sites-authoring/content-fragments.md)上使用/參照片段時，可以完成格式設定。
+將它們新增到片段的段落序列中，且不加任何格式；在頁面[上使用/參照](/help/sites-authoring/content-fragments.md)片段時，可以完成格式設定。
 
 >[!CAUTION]
 >
@@ -407,6 +407,12 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
 若要建立變數：
 
+>[!NOTE]
+>
+>變數會為內容片段增加處理時間、在製作環境中和傳送時。 建議您將變異數維持在可控的最低限度。
+>
+>最佳實務是每個內容片段不超過十個變數。
+
 1. 開啟片段並確保側面板可見。
 1. 從側面板的圖示列選取&#x200B;**變數**。
 1. 選取&#x200B;**建立變數**。
@@ -438,7 +444,7 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 1. 選取所需的變數。
 1. 從&#x200B;**動作**&#x200B;下拉式清單中選取&#x200B;**重新命名**。
 
-1. 在產生的對 **話方塊中** ，輸入新的「 **&#x200B;**&#x200B;標題」和/或「說明」。
+1. 在產生的對 **話方塊中** ，輸入新的「 **** 標題」和/或「說明」。
 
 1. 確認&#x200B;**重新命名**&#x200B;動作。
 
@@ -468,7 +474,7 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
 >[!CAUTION]
 >
->同步僅可用於將更改從 *主&#x200B;**版複製**&#x200B;到變化*。
+>同步僅可用於將更改從 *主&#x200B;**版複製**到變化*。
 >
 >只同步變數的目前元素。
 >
