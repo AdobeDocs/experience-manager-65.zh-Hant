@@ -6,7 +6,7 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
 exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
-source-git-commit: 1fb7c9b718896b18471b2bd86fab3c351d50312e
+source-git-commit: 6eccdab5cd492686dda2aca3fee4df171a2d9011
 workflow-type: tm+mt
 source-wordcount: '8932'
 ht-degree: 6%
@@ -36,7 +36,7 @@ ht-degree: 6%
 
 ## [!DNL Experience Manager] 6.5.24.0包含的內容 {#what-is-included-in-aem-6524}
 
-[!DNL Experience Manager] 6.5.24.0包含新功能、客戶要求的重要增強功能和錯誤修正。 此外，還包含自2019年4月6.5首次推出以來的效能、穩定性和安全性改善專案。 在[&#x200B; 6.5上](#install)安裝此Service Pack[!DNL Experience Manager]。
+[!DNL Experience Manager] 6.5.24.0包含新功能、客戶要求的重要增強功能和錯誤修正。 此外，還包含自2019年4月6.5首次推出以來的效能、穩定性和安全性改善專案。 在[ 6.5上](#install)安裝此Service Pack[!DNL Experience Manager]。
 
 <!-- UPDATE FOR EACH NEW RELEASE -->
 
@@ -508,7 +508,7 @@ ContextHub不再在發佈頁面上插入第二個jQuery副本。 區段引擎使
 
 ### UberJar{#uber-jar}
 
-[!DNL Experience Manager] 6.5.24.0的UberJar可在[Maven中央存放庫](https://repo.maven.apache.org/maven2/com/adobe/aem/uber-jar/6.5.22/)中使用。<!-- CHECK FOR UPDATE EACH NEW RELEASE -->
+[!DNL Experience Manager] 6.5.24.0的UberJar可在[Maven中央存放庫](https://repo.maven.apache.org/maven2/com/adobe/aem/uber-jar/6.5.24/)中使用。<!-- CHECK FOR UPDATE EACH NEW RELEASE -->
 
 若要在Maven專案中使用UberJar，請參閱[如何使用UberJar](/help/sites-developing/ht-projects-maven.md)，並在您的專案POM中包含下列相依性： <!-- CHECK FOR UPDATE EACH NEW RELEASE -->
 
@@ -714,6 +714,6 @@ AEM 6.5.21至6.5.24，以及AEM 6.5 LTS GA隨附`org.apache.sling.scripting.jsp:
 
 >[!MORELIKETHIS]
 >
->* [[!DNL Experience Manager] 產品頁面](https://business.adobe.com/tw/products/experience-manager/adobe-experience-manager.html)
+>* [[!DNL Experience Manager] 產品頁面](https://business.adobe.com/products/experience-manager/adobe-experience-manager.html)
 >* [[!DNL Experience Manager] 6.5檔案](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65)
 >* [訂閱Adobe優先產品更新](https://www.adobe.com/tw/subscription/priority-product-update.html)
