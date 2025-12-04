@@ -6,9 +6,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
 exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
-source-git-commit: 6eccdab5cd492686dda2aca3fee4df171a2d9011
+source-git-commit: 2580bb494bb81da0a923a34c88d37933d7575bec
 workflow-type: tm+mt
-source-wordcount: '8932'
+source-wordcount: '8905'
 ht-degree: 6%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 6%
 
 ## [!DNL Experience Manager] 6.5.24.0包含的內容 {#what-is-included-in-aem-6524}
 
-[!DNL Experience Manager] 6.5.24.0包含新功能、客戶要求的重要增強功能和錯誤修正。 此外，還包含自2019年4月6.5首次推出以來的效能、穩定性和安全性改善專案。 在[&#x200B; 6.5上](#install)安裝此Service Pack[!DNL Experience Manager]。
+[!DNL Experience Manager] 6.5.24.0包含新功能、客戶要求的重要增強功能和錯誤修正。 此外，還包含自2019年4月6.5首次推出以來的效能、穩定性和安全性改善專案。 在[ 6.5上](#install)安裝此Service Pack[!DNL Experience Manager]。
 
 <!-- UPDATE FOR EACH NEW RELEASE -->
 
@@ -393,11 +393,9 @@ ContextHub不再在發佈頁面上插入第二個jQuery副本。 區段引擎使
 #### Security{#foundation-security-6524}
 -->
 
-
 #### Sling{#foundation-sling-6524}
 
-* 已修正受SAML保護的頁面上的快取行為。 AEM新增正確的快取控制，並會因已驗證工作階段而改變中繼資料，因此代理和Dispatcher會略過快取個人化回應。 匿名內容仍會正常快取，而登入檢視仍會是使用者專屬檢視。 (NPR-42640)
-
+* 修正`org.apache.sling.scripting.jsp:2.6.0`套件組合發生未預期的JSP編譯錯誤。 (SLING-12442)
 * 該平台將核心Sling Engine從2.16.2升級至2.16.6。較新的引擎可強化輸入驗證，並穩定負載下的請求處理。 (NPR-43105)
 
 #### SPA編輯器 {#foundation-spa-editor-6524}
@@ -714,6 +712,6 @@ AEM 6.5.21至6.5.24，以及AEM 6.5 LTS GA隨附`org.apache.sling.scripting.jsp:
 
 >[!MORELIKETHIS]
 >
->* [[!DNL Experience Manager] 產品頁面](https://business.adobe.com/tw/products/experience-manager/adobe-experience-manager.html)
+>* [[!DNL Experience Manager] 產品頁面](https://business.adobe.com/products/experience-manager/adobe-experience-manager.html)
 >* [[!DNL Experience Manager] 6.5檔案](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65)
 >* [訂閱Adobe優先產品更新](https://www.adobe.com/tw/subscription/priority-product-update.html)
