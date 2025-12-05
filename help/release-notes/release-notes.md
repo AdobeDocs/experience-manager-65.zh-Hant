@@ -6,10 +6,10 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
 exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
-source-git-commit: 2580bb494bb81da0a923a34c88d37933d7575bec
+source-git-commit: f852fa8d682241ffdddc60148fcd9dce7b89fed4
 workflow-type: tm+mt
-source-wordcount: '8905'
-ht-degree: 6%
+source-wordcount: '8809'
+ht-degree: 5%
 
 ---
 
@@ -36,7 +36,7 @@ ht-degree: 6%
 
 ## [!DNL Experience Manager] 6.5.24.0包含的內容 {#what-is-included-in-aem-6524}
 
-[!DNL Experience Manager] 6.5.24.0包含新功能、客戶要求的重要增強功能和錯誤修正。 此外，還包含自2019年4月6.5首次推出以來的效能、穩定性和安全性改善專案。 在[&#x200B; 6.5上](#install)安裝此Service Pack[!DNL Experience Manager]。
+[!DNL Experience Manager] 6.5.24.0包含新功能、客戶要求的重要增強功能和錯誤修正。 此外，還包含自2019年4月6.5首次推出以來的效能、穩定性和安全性改善專案。 在[ 6.5上](#install)安裝此Service Pack[!DNL Experience Manager]。
 
 <!-- UPDATE FOR EACH NEW RELEASE -->
 
@@ -542,20 +542,6 @@ ContextHub不再在發佈頁面上插入第二個jQuery副本。 區段引擎使
 
 <!-- THESE KNOWN ISSUES CARRY OVER EACH RELEASE. THE "PRODUCT UPDATES TEAM" IS SUPPOSED TO VERIFY EACH ISSUE AND LET YOU KNOW IF ANYTHING NEEDS TO BE ADDED, DELETED, OR CHANGED IN THIS LIST. -->
 
-* **AEM 6.5.21-6.5.24和AEM 6.5 LTS GA中的JSP指令碼套件組合問題**
-AEM 6.5.21至6.5.24，以及AEM 6.5 LTS GA隨附`org.apache.sling.scripting.jsp:2.6.0`套件，其中包含已知問題。 通常在 AEM 實例同時處理許多請求而造成高負載的情況下，就會發生這個問題。
-
-  發生此問題時，錯誤記錄中可能會出現以下其中一項異常，並且參照 `org.apache.sling.scripting.jsp:2.6.0`：
-
-   * `java.io.IOException: classFile.delete() failed`
-   * `java.io.IOException: tmpFile.renameTo(classFile) failed`
-   * `java.lang.ArrayIndexOutOfBoundsException: Index 0 out of bounds for length 0`
-   * `java.io.FileNotFoundException`
-
-  發生此錯誤時，唯一的復原方法是重新啟動AEM執行個體。
-
-  請透過Adobe聯絡客戶支援，並參考此版本注意事項以尋求解決方案。
-
 * **與Oak相關**
 從Service Pack 13及更高版本開始，下列錯誤記錄檔開始出現，這會影響持續性快取：
 
@@ -712,6 +698,6 @@ AEM 6.5.21至6.5.24，以及AEM 6.5 LTS GA隨附`org.apache.sling.scripting.jsp:
 
 >[!MORELIKETHIS]
 >
->* [[!DNL Experience Manager] 產品頁面](https://business.adobe.com/tw/products/experience-manager/adobe-experience-manager.html)
+>* [[!DNL Experience Manager] 產品頁面](https://business.adobe.com/products/experience-manager/adobe-experience-manager.html)
 >* [[!DNL Experience Manager] 6.5檔案](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65)
 >* [訂閱Adobe優先產品更新](https://www.adobe.com/tw/subscription/priority-product-update.html)
