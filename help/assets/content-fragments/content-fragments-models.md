@@ -5,9 +5,9 @@ feature: Content Fragments
 role: User
 exl-id: 6fd1fdb2-d1d3-4f97-b119-ecfddcccec9e
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 11a8181e860c724c817dd549b351df079c8227e2
+source-git-commit: 73ec9a0420206ef2cc60a12d316073a443c1d20d
 workflow-type: tm+mt
-source-wordcount: '2355'
+source-wordcount: '2326'
 ht-degree: 6%
 
 ---
@@ -109,13 +109,6 @@ AEM中的內容片段模型定義了您[內容片段，](/help/assets/content-fr
    * 新增一行或多行文字的欄位；可以定義最大長度
 * **多行文字**
    * 可能是RTF、純文字或Markdown的文字區域
-
-     >[!NOTE]
-     >
-     >基於效能考量，不建議在單一模式中使用超過10個RTF欄位。
-     >
-     >如有需要，建議您使用[巢狀內容片段](#fragment-reference-nested-fragments)。
-
 * **數字**
    * 新增一或多個數值欄位
 * **布林值**
@@ -165,12 +158,12 @@ AEM中的內容片段模型定義了您[內容片段，](/help/assets/content-fr
 在片段中實現/轉譯欄位的各種選項。 這通常可讓您定義作者會看到欄位的單一例項，還是允許建立多個例項。
 
 * **欄位標籤**
-輸入&#x200B;**欄位標籤**&#x200B;會自動產生&#x200B;**屬性名稱**，然後可視需要手動更新。
+輸入**欄位標籤**&#x200B;會自動產生&#x200B;**屬性名稱**，然後可視需要手動更新。
 
 * **驗證**
-基本驗證可由機制使用，例如&#x200B;**Required**&#x200B;屬性。 有些資料型別有額外的驗證欄位。 如需詳細資訊，請參閱[驗證](#validation)。
+基本驗證可由機制使用，例如**Required**&#x200B;屬性。 有些資料型別有額外的驗證欄位。 如需詳細資訊，請參閱[驗證](#validation)。
 
-* 對於「多行」 **資料類型** ，可將「預設類型 **&#x200B;**&#x200B;」定義為：
+* 對於「多行」 **資料類型** ，可將「預設類型 **** 」定義為：
 
    * **RTF 文字**
    * **Markdown**

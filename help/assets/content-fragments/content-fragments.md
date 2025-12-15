@@ -5,9 +5,9 @@ feature: Content Fragments
 role: User
 exl-id: 0ee883c5-0cea-46b7-a759-600b8ea3bc3e
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 11a8181e860c724c817dd549b351df079c8227e2
+source-git-commit: 73ec9a0420206ef2cc60a12d316073a443c1d20d
 workflow-type: tm+mt
-source-wordcount: '2295'
+source-wordcount: '2329'
 ht-degree: 4%
 
 ---
@@ -84,7 +84,7 @@ ht-degree: 4%
 >
 >體驗片段可以包含內容片段形式的內容，反之則不行。
 >
->如需詳細資訊，請參閱[瞭解AEM中的內容片段和體驗片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html?lang=zh-Hant#content-fragments)。
+>如需詳細資訊，請參閱[瞭解AEM中的內容片段和體驗片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html#content-fragments)。
 
 >[!NOTE]
 >
@@ -131,7 +131,7 @@ AEM內容片段可用於說明和管理結構化內容。 結構化內容在可�
    * 內容片段（及其變數）可以從&#x200B;**Assets**&#x200B;主控台建立及維護。
    * 在內容片段編輯器中撰寫和編輯。
 
-* 搭配內容片段元件[&#x200B; （參考元件）用於](/help/sites-authoring/content-fragments.md)頁面編輯器：
+* 搭配內容片段元件[ （參考元件）用於](/help/sites-authoring/content-fragments.md)頁面編輯器：
 
    * **內容片段**&#x200B;元件可供頁面作者使用。 它可讓他們以HTML或JSON格式參考及傳送所需的內容片段。
 
@@ -191,7 +191,7 @@ Assets可以透過數個方式與內容片段一起使用；各有其優點：
 
    * 以個別實體分隔的文字區塊（通常為多行）。
 
-   * 在富 [文本](/help/assets/content-fragments/content-fragments-variations.md#rich-text) [&#128279;](/help/assets/content-fragments/content-fragments-variations.md#markdown) 和標籤下拉模式中，段落可以格式化為標題，在這種情況下，它和以下段落作為一個單位一起組成。
+   * 在富 [文本](/help/assets/content-fragments/content-fragments-variations.md#rich-text)[](/help/assets/content-fragments/content-fragments-variations.md#markdown) 和標籤下拉模式中，段落可以格式化為標題，在這種情況下，它和以下段落作為一個單位一起組成。
 
    * 在頁面製作期間啟用內容控制。
 
@@ -321,7 +321,7 @@ Assets可以透過數個方式與內容片段一起使用；各有其優點：
 
 大量使用內容片段參考資料可能會顯著影響系統效能、UI回應速度和GraphQL查詢執行。 旨在將巢狀結構保持不超過10個層級。
 
-### 每個模型的資料欄位和型別數目 {#number-of-data-fields-and-types-per-model}
+### 每個模型的資料欄位和型別數 {#number-of-data-fields-and-types-per-model}
 
 僅包含模型真正需要的資料欄位和型別。
 
@@ -329,9 +329,15 @@ Assets可以透過數個方式與內容片段一起使用；各有其優點：
 
 ### RTF欄位 {#rich-text-fields}
 
-考慮使用RTF欄位（**多行文字**&#x200B;資料型別）。
+考慮使用RTF欄位（**多行文字**&#x200B;資料型別）：
 
-限制每個模型的RTF文字欄位數。 還有每個片段中儲存的文字量，以及HTML格式化的數量。 非常大的RTF內容可能會對系統效能產生負面影響。
+* 欄位
+
+  限制每個模型的RTF文字欄位數。 基於效能考量，不建議在單一模式中使用超過10個RTF欄位。 如有需要，建議您使用[巢狀內容片段](/help/assets/content-fragments/content-fragments-models.md#using-references-to-form-nested-content)。
+
+* 內容
+
+  您也應該限制每個片段中儲存的文字量，以及HTML格式化的數量。 非常大的RTF內容可能會對系統效能產生負面影響。
 
 ### 變化版本數量 {#number-of-variations}
 
