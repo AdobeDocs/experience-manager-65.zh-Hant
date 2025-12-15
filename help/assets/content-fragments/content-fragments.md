@@ -5,21 +5,23 @@ feature: Content Fragments
 role: User
 exl-id: 0ee883c5-0cea-46b7-a759-600b8ea3bc3e
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 73ec9a0420206ef2cc60a12d316073a443c1d20d
+source-git-commit: e71050fe23cc4c436859776918637158098864ef
 workflow-type: tm+mt
-source-wordcount: '2329'
+source-wordcount: '2331'
 ht-degree: 4%
 
 ---
 
 # 使用內容片段 {#working-with-content-fragments}
 
-透過Adobe Experience Manager (AEM)，內容片段可讓您設計、建立、組織和[發佈獨立於頁面的內容](/help/sites-authoring/content-fragments.md)。 內容可讓您準備內容以用於多個位置/多個管道，非常適合Headless傳送。
+透過Adobe Experience Manager (AEM)，內容片段可讓您設計、建立、組織和[發佈獨立於頁面的內容](/help/sites-authoring/content-fragments.md)。 內容可讓您準備內容，以準備用於多個位置/多個管道，非常適合Headless傳送。
 
 內容片段包含結構化內容：
 
 * 它們以[內容片段模型](/help/assets/content-fragments/content-fragments-models.md)為基礎，該模型預先定義了結果片段的結構。
+
 * 此結構的範圍介於：
+
    * 基本
       * 例如，單一多行文字欄位。
       * 用於準備直接的內容以用於頁面製作。
@@ -84,7 +86,7 @@ ht-degree: 4%
 >
 >體驗片段可以包含內容片段形式的內容，反之則不行。
 >
->如需詳細資訊，請參閱[瞭解AEM中的內容片段和體驗片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html?lang=zh-Hant#content-fragments)。
+>如需詳細資訊，請參閱[瞭解AEM中的內容片段和體驗片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html#content-fragments)。
 
 >[!NOTE]
 >
@@ -131,7 +133,7 @@ AEM內容片段可用於說明和管理結構化內容。 結構化內容在可�
    * 內容片段（及其變數）可以從&#x200B;**Assets**&#x200B;主控台建立及維護。
    * 在內容片段編輯器中撰寫和編輯。
 
-* 搭配內容片段元件[&#x200B; （參考元件）用於](/help/sites-authoring/content-fragments.md)頁面編輯器：
+* 搭配內容片段元件[ （參考元件）用於](/help/sites-authoring/content-fragments.md)頁面編輯器：
 
    * **內容片段**&#x200B;元件可供頁面作者使用。 它可讓他們以HTML或JSON格式參考及傳送所需的內容片段。
 
@@ -191,7 +193,7 @@ Assets可以透過數個方式與內容片段一起使用；各有其優點：
 
    * 以個別實體分隔的文字區塊（通常為多行）。
 
-   * 在富 [文本](/help/assets/content-fragments/content-fragments-variations.md#rich-text) [&#128279;](/help/assets/content-fragments/content-fragments-variations.md#markdown) 和標籤下拉模式中，段落可以格式化為標題，在這種情況下，它和以下段落作為一個單位一起組成。
+   * 在富 [文本](/help/assets/content-fragments/content-fragments-variations.md#rich-text)[](/help/assets/content-fragments/content-fragments-variations.md#markdown) 和標籤下拉模式中，段落可以格式化為標題，在這種情況下，它和以下段落作為一個單位一起組成。
 
    * 在頁面製作期間啟用內容控制。
 
