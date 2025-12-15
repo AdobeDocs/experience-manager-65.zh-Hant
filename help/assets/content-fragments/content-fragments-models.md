@@ -5,10 +5,10 @@ feature: Content Fragments
 role: User
 exl-id: 6fd1fdb2-d1d3-4f97-b119-ecfddcccec9e
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: e3a35099a48088d5746aa23be45c3e81a1a8b02e
+source-git-commit: 11a8181e860c724c817dd549b351df079c8227e2
 workflow-type: tm+mt
-source-wordcount: '2339'
-ht-degree: 5%
+source-wordcount: '2355'
+ht-degree: 6%
 
 ---
 
@@ -21,7 +21,11 @@ AEM中的內容片段模型定義了您[內容片段，](/help/assets/content-fr
 1. [為您的執行個體啟用內容片段模型功能](/help/assets/content-fragments/content-fragments-configuration-browser.md)。
 1. [建立](#creating-a-content-fragment-model)，並[設定您的內容片段模型](#defining-your-content-fragment-model)。
 1. [啟用您的內容片段模型](#enabling-disabling-a-content-fragment-model)，以便在建立內容片段時使用。
-1. [藉由設定&#x200B;**原則**，在必要的Assets資料夾](#allowing-content-fragment-models-assets-folder)上允許您的內容片段模型。
+1. [藉由設定](#allowing-content-fragment-models-assets-folder)原則&#x200B;**，在必要的Assets資料夾**&#x200B;上允許您的內容片段模型。
+
+>[!NOTE]
+>
+>使用您的內容片段模型和內容片段時，請留意[最佳實務](/help/assets/content-fragments/content-fragments.md#best-practices)。
 
 ## 建立內容片段模型 {#creating-a-content-fragment-model}
 
@@ -161,14 +165,14 @@ AEM中的內容片段模型定義了您[內容片段，](/help/assets/content-fr
 在片段中實現/轉譯欄位的各種選項。 這通常可讓您定義作者會看到欄位的單一例項，還是允許建立多個例項。
 
 * **欄位標籤**
-輸入&#x200B;**欄位標籤**&#x200B;會自動產生&#x200B;**屬性名稱**，然後可視需要手動更新。
+輸入**欄位標籤**&#x200B;會自動產生&#x200B;**屬性名稱**，然後可視需要手動更新。
 
 * **驗證**
-基本驗證可由機制使用，例如&#x200B;**Required**&#x200B;屬性。 有些資料型別有額外的驗證欄位。 如需詳細資訊，請參閱[驗證](#validation)。
+基本驗證可由機制使用，例如**Required**&#x200B;屬性。 有些資料型別有額外的驗證欄位。 如需詳細資訊，請參閱[驗證](#validation)。
 
-* 對於「多行」 **資料類型** ，可將「預設類型 **&#x200B;**&#x200B;」定義為：
+* 對於「多行」 **資料類型** ，可將「預設類型 **** 」定義為：
 
-   * **RTF格式**
+   * **RTF 文字**
    * **Markdown**
    * **純文字**
 
@@ -181,7 +185,7 @@ AEM中的內容片段模型定義了您[內容片段，](/help/assets/content-fr
 
   這是為了確保內容作者無法重複已新增至相同模型其他片段中的內容。
 
-  例如，內容片段模型中名為`Country`的&#x200B;**單行文字**&#x200B;欄位在兩個相依的內容片段中不能有值`Japan`。 嘗試第二個執行個體時會發出警告。
+  例如，內容片段模型中名為&#x200B;**的**&#x200B;單行文字`Country`欄位在兩個相依的內容片段中不能有值`Japan`。 嘗試第二個執行個體時會發出警告。
 
   >[!NOTE]
   >
@@ -203,7 +207,7 @@ AEM中的內容片段模型定義了您[內容片段，](/help/assets/content-fr
   * For GraphQL: sets a `<translatable>` property on the Content Fragment field to `yes`, to allow GraphQL query filter for JSON output with only translatable content.
 -->
 
-## 驗證  {#validation}
+## 驗證 {#validation}
 
 各種資料型別現在包含定義在結果片段中輸入內容時適用的驗證需求的可能性：
 
@@ -232,18 +236,18 @@ AEM中的內容片段模型定義了您[內容片段，](/help/assets/content-fr
 
      >[!NOTE]
      >
-     >此方法對於搭配GraphQL[&#128279;](/help/assets/content-fragments/content-fragments-graphql.md)使用內容片段的Headless內容傳遞特別感興趣。
+     >此方法對於搭配GraphQL[使用內容片段的](/help/assets/content-fragments/content-fragments-graphql.md)Headless內容傳遞特別感興趣。
    * 它可以設定為一個參考或多個參考（在產生的片段中）。
 
 >[!NOTE]
 >
 >AEM對下列專案提供週期性保護：
 >
->* 內容參照
->這可防止使用者新增對目前片段的引用。 這可能會導致空的片段參考選擇器對話方塊。
+>* 內容參考
+>  這可防止使用者新增對目前片段的引用。 這可能會導致空的片段參考選擇器對話方塊。
 >
 >* GraphQL中的片段參考
->如果您建立深層查詢，且該查詢傳回多個互相參照的內容片段，則該查詢在第一次出現時會傳回null。
+>  如果您建立深層查詢，且該查詢傳回多個互相參照的內容片段，則該查詢在第一次出現時會傳回null。
 
 ### 內容參考 {#content-reference}
 

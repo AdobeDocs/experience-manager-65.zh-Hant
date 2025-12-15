@@ -1,13 +1,13 @@
 ---
 title: 使用內容片段
-description: 瞭解Adobe Experience Manager (AEM)中的內容片段如何讓您設計、建立、策劃和使用不受頁面影響的內容，適用於Headless傳送。
+description: 瞭解Adobe Experience Manager (AEM)中的內容片段如何讓您設計、建立、策劃及使用獨立於頁面的內容，非常適合Headless傳送。
 feature: Content Fragments
 role: User
 exl-id: 0ee883c5-0cea-46b7-a759-600b8ea3bc3e
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 11a8181e860c724c817dd549b351df079c8227e2
 workflow-type: tm+mt
-source-wordcount: '1966'
+source-wordcount: '2295'
 ht-degree: 4%
 
 ---
@@ -84,7 +84,7 @@ ht-degree: 4%
 >
 >體驗片段可以包含內容片段形式的內容，反之則不行。
 >
->如需詳細資訊，請參閱[瞭解AEM中的內容片段和體驗片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html?lang=zh-Hant#content-fragments)。
+>如需詳細資訊，請參閱[瞭解AEM中的內容片段和體驗片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html#content-fragments)。
 
 >[!NOTE]
 >
@@ -94,7 +94,7 @@ ht-degree: 4%
 
 AEM Content Services的設計目的，是要概括AEM內/外部內容的說明和傳遞，而不只是關注網頁。
 
-它們使用可供任何使用者端使用的標準化方法，將內容傳送至非傳統AEM網頁的管道。 這些管道可能包括：
+這些頻道使用任何使用者端都能使用的標準化方法，將內容傳送至非傳統AEM網頁的管道。 這些管道可能包括：
 
 * 單頁應用程式
 * 原生行動應用程式
@@ -131,11 +131,11 @@ AEM內容片段可用於說明和管理結構化內容。 結構化內容在可�
    * 內容片段（及其變數）可以從&#x200B;**Assets**&#x200B;主控台建立及維護。
    * 在內容片段編輯器中撰寫和編輯。
 
-* 搭配內容片段元件[&#128279;](/help/sites-authoring/content-fragments.md) （參考元件）用於頁面編輯器：
+* 搭配內容片段元件[ （參考元件）用於](/help/sites-authoring/content-fragments.md)頁面編輯器：
 
    * **內容片段**&#x200B;元件可供頁面作者使用。 它可讓他們以HTML或JSON格式參考及傳送所需的內容片段。
 
-* 可使用[AEM GraphQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md)存取。
+* 可使用[AEM GraphQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md)進行存取。
 
 內容片段是內容結構，具備以下功能：
 
@@ -191,7 +191,7 @@ Assets可以透過數個方式與內容片段一起使用；各有其優點：
 
    * 以個別實體分隔的文字區塊（通常為多行）。
 
-   * 在富 [文本](/help/assets/content-fragments/content-fragments-variations.md#rich-text) [&#128279;](/help/assets/content-fragments/content-fragments-variations.md#markdown) 和標籤下拉模式中，段落可以格式化為標題，在這種情況下，它和以下段落作為一個單位一起組成。
+   * 在富 [文本](/help/assets/content-fragments/content-fragments-variations.md#rich-text)[](/help/assets/content-fragments/content-fragments-variations.md#markdown) 和標籤下拉模式中，段落可以格式化為標題，在這種情況下，它和以下段落作為一個單位一起組成。
 
    * 在頁面製作期間啟用內容控制。
 
@@ -199,9 +199,9 @@ Assets可以透過數個方式與內容片段一起使用；各有其優點：
 
    * Assets （影像）會插入實際片段中，並作為片段的內部內容。
    * 嵌入在片段的段落系統中。
-   * 可以在頁面[&#128279;](/help/sites-authoring/content-fragments.md)上使用/參照片段時進行格式化。
+   * 可以在頁面[上使用/參照](/help/sites-authoring/content-fragments.md)片段時進行格式化。
    * 只能使用片段編輯器在片段中新增、刪除或移動。 無法在頁面編輯器中執行這些動作。
-   * 只能在片段編輯器[&#128279;](/help/assets/content-fragments/content-fragments-variations.md#inserting-assets-into-your-fragment)中使用RTF格式新增、刪除或移動片段。
+   * 只能在片段編輯器[中使用](/help/assets/content-fragments/content-fragments-variations.md#inserting-assets-into-your-fragment)RTF格式新增、刪除或移動片段。
    * 只能新增到多行文字元素（任何片段型別）。
    * 附於前文（段落）。
 
@@ -217,7 +217,7 @@ Assets可以透過數個方式與內容片段一起使用；各有其優點：
 
    * 這是片段外部的內容，但與編輯相關。 通常是影像、影片或其他片段。
    * 將集合中的個別資產新增至頁面時，即可在頁面編輯器中與片段搭配使用。 這表示它們是選用專案，視特定通道的需求而定。
-   * 資產透過集合[&#128279;](/help/assets/content-fragments/content-fragments-assoc-content.md)與片段關聯；關聯的集合可讓作者決定在編寫頁面時要使用的資產。
+   * 資產透過集合[與片段關聯](/help/assets/content-fragments/content-fragments-assoc-content.md)；關聯的集合可讓作者決定在編寫頁面時要使用的資產。
 
       * 收藏集可以作為預設內容與片段相關聯，也可以由作者在片段製作期間相關聯。
       * [Assets (DAM)集合](/help/assets/manage-collections.md)是片段關聯內容的基礎。
@@ -263,8 +263,8 @@ Assets可以透過數個方式與內容片段一起使用；各有其優點：
 中間內容：
 
 * 可在使用內容片段時用於頁面編輯器。
-* 是在頁面上使用或參考片段[&#128279;](/help/sites-authoring/content-fragments.md#adding-in-between-content)後，在片段流程中新增的額外內容。
-* 可在使用內容片段[&#128279;](/help/sites-authoring/content-fragments.md)時用於頁面編輯器。
+* 是在頁面上使用或參考片段[後，在片段流程中新增的](/help/sites-authoring/content-fragments.md#adding-in-between-content)額外內容。
+* 可在使用內容片段[時用於](/help/sites-authoring/content-fragments.md)頁面編輯器。
 * 中間內容可以新增到任何片段中，其中只有一個元素可見。
 * 關聯內容以及適當瀏覽器的資產和/或元件皆可使用。
 
@@ -278,7 +278,7 @@ Assets可以透過數個方式與內容片段一起使用；各有其優點：
 
 * **內容模型**
 
-   * 是否使用組態瀏覽器[&#128279;](/help/assets/content-fragments/content-fragments-configuration-browser.md)啟用。
+   * 是否使用組態瀏覽器[啟用](/help/assets/content-fragments/content-fragments-configuration-browser.md)。
    * [是使用工具](/help/assets/content-fragments/content-fragments-models.md)建立的。
    * 需要[建立片段](/help/assets/content-fragments/content-fragments-managing.md#creating-content-fragments)。
    * 定義片段的結構（標題、內容元素、標籤定義）。
@@ -300,3 +300,47 @@ Assets可以透過數個方式與內容片段一起使用；各有其優點：
 ## 使用範例 {#example-usage}
 
 片段及其元素和變數可用於為多個管道建立一致的內容。 在設計片段時，您必須考慮使用的內容及其使用位置。
+
+## 最佳做法 {#best-practices}
+
+內容片段可用於形成複雜結構。 Adobe提供在定義及使用模型與片段時最佳實務的建議。
+
+### 保持簡單 {#keep-it-simple}
+
+在AEM中建立結構化內容模型時，請儘可能簡化內容結構，以確保強大的系統效能和簡化的控管。
+
+### 模型數量 {#number-of-models}
+
+視需要建立儘可能多的內容模型，但不用再建立。
+
+太多模型會使控管複雜化，並可能會減慢GraphQL查詢的速度。 一小部分模型（最多數十個）通常就足夠了。 如果您接近數十或更高的數值，請重新考慮您的模型策略。
+
+### 巢狀模型和片段（非常重要） {#nesting-models-and-fragments}
+
+使用內容片段參考避免內容片段巢狀過多或過深，此參考允許片段參考其他片段，有時會跨多個層級。
+
+大量使用內容片段參考資料可能會顯著影響系統效能、UI回應速度和GraphQL查詢執行。 旨在將巢狀結構保持不超過10個層級。
+
+###每個模型的資料欄位和型別數目 {#number-of-data-fields-and-types-per-model}
+
+僅包含模型真正需要的資料欄位和型別。
+
+過於複雜的模型會導致過於複雜的片段，這會使編寫變得困難並降低編輯器效能。
+
+### RTF欄位 {#rich-text-fields}
+
+考慮使用RTF欄位（**多行文字**&#x200B;資料型別）。
+
+限制每個模型的RTF文字欄位數。 還有每個片段中儲存的文字量，以及HTML格式化的數量。 非常大的RTF內容可能會對系統效能產生負面影響。
+
+### 變化版本數量 {#number-of-variations}
+
+視需要建立儘可能多的片段變數，但僅此而已。
+
+變數會為內容片段增加處理時間、在製作環境中和傳送時。 建議您將變異數維持在可控的最低限度。
+
+最佳實務是每個內容片段不超過十個變數。
+
+### 生產前測試 {#test-before-production}
+
+如有疑問，請先原型設計您預期的內容結構，然後再將其推出至生產環境。 及早的概念證明，加上充分的技術和使用者接受度測試，有助於避免日後生產面臨截止日期時的問題。
