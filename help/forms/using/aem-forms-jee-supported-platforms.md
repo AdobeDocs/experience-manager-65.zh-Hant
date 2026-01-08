@@ -26,7 +26,7 @@ ht-degree: 3%
 
 <div class="preview">
 
-Adobe已在JEE上發行包含AEM [ Forms Service Pack 23 (](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html))的6.5.23.0完整安裝程式6.5.23.0以及修補程式安裝程式。 完整版安裝程式支援新平台，而修補程式安裝程式僅包含錯誤修正。
+Adobe已在JEE上發行包含AEM [&#x200B; Forms Service Pack 23 (](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html))的6.5.23.0完整安裝程式6.5.23.0以及修補程式安裝程式。 完整版安裝程式支援新平台，而修補程式安裝程式僅包含錯誤修正。
 
 如果您正在執行全新安裝或計畫在JEE環境中使用AEM 6.5.23.0 Forms的最新軟體，Adobe建議使用2025年6月6日發行的JEE上的[AEM 6.5.23.0 Forms完整安裝程式](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)，而非2023年8月31日發行的AEM 6.5.18 Forms安裝程式或2019年4月8日發行的AEM 6.5.12 Forms安裝程式。
 
