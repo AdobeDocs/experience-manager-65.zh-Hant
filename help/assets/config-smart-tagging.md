@@ -5,16 +5,16 @@ role: Admin
 feature: Tagging,Smart Tags
 exl-id: 9f68804f-ba15-4f83-ab1b-c249424b1396
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 0b90fdd13efc5408ef94ee1966f04a80810b515e
+source-git-commit: 7c1aeec18f35b019a63d0385ada248b26a0df9de
 workflow-type: tm+mt
-source-wordcount: '2129'
+source-wordcount: '2130'
 ht-degree: 13%
 
 ---
 
 # 準備[!DNL Assets]以進行智慧標籤 {#configure-asset-tagging-using-the-smart-content-service}
 
-開始使用Smart Content Services標籤資產之前，請先將[!DNL Experience Manager Assets]與Adobe Developer Console整合，以使用[!DNL Adobe Sensei]的Smart Service。 設定之後，請使用一些影像和標籤來訓練服務。
+開始使用Smart Content Services標籤資產之前，請先將[!DNL Experience Manager Assets]與Adobe Developer Console整合，以使用[!DNL Adobe AI]的Smart Service。 設定之後，請使用一些影像和標籤來訓練服務。
 
 <!--
 >[!NOTE]
@@ -38,13 +38,13 @@ ht-degree: 13%
 
 **新使用者**
 
-安裝Service Pack 22。 若要在Service Pack 22上支援Oauth整合，您必須安裝Service Pack 22[&#128279;](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fproduct%2Fassets%2Fcq-6.5.0-hotfix-42384-1.2.zip)的Hotfix。
+安裝Service Pack 22。 若要在Service Pack 22上支援Oauth整合，您必須安裝Service Pack 22[的](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fproduct%2Fassets%2Fcq-6.5.0-hotfix-42384-1.2.zip)Hotfix。
 
 請依照本文所述指示來設定智慧內容服務。
 
 **現有使用者**
 
-如果您已升級至Service Pack 21，請安裝Service Pack 21[&#128279;](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fproduct%2Fassets%2Fcq-6.5.0-hotfix-40772-1.2.zip)的[Hotfix以支援Oauth整合。 任何現有設定都會自動刪除。 請依照本文所述指示來設定智慧內容服務。 如果您升級至Service Pack 22，必須安裝此Service Pack 22](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fproduct%2Fassets%2Fcq-6.5.0-hotfix-42384-1.2.zip)的Hotfix。
+如果您已升級至Service Pack 21，請安裝Service Pack 21[的](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fproduct%2Fassets%2Fcq-6.5.0-hotfix-40772-1.2.zip)Hotfix以支援Oauth整合。 任何現有設定都會自動刪除。 請依照本文所述指示來設定智慧內容服務。 如果您升級至Service Pack 22，必須安裝此Service Pack 22[的](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fproduct%2Fassets%2Fcq-6.5.0-hotfix-42384-1.2.zip)Hotfix。
 
 若是Service Pack 20和舊版，您需要針對SCS執行因應步驟，以支援Oauth整合。 請參閱[疑難排解OAuth憑證的智慧標籤](config-oauth.md)。
 
@@ -58,7 +58,7 @@ ht-degree: 13%
 
 已啟用此功能的現有內部部署使用者可以繼續使用智慧內容服務。
 
-如果您已升級至Service Pack 21，請安裝Service Pack 21[&#128279;](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fproduct%2Fassets%2Fcq-6.5.0-hotfix-40772-1.2.zip)的[Hotfix以支援Oauth整合。 任何現有設定都會自動刪除。 請依照本文所述指示來設定智慧內容服務。 如果您升級至Service Pack 22，必須安裝此Service Pack 22](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fproduct%2Fassets%2Fcq-6.5.0-hotfix-42384-1.2.zip)的Hotfix。
+如果您已升級至Service Pack 21，請安裝Service Pack 21[的](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fproduct%2Fassets%2Fcq-6.5.0-hotfix-40772-1.2.zip)Hotfix以支援Oauth整合。 任何現有設定都會自動刪除。 請依照本文所述指示來設定智慧內容服務。 如果您升級至Service Pack 22，必須安裝此Service Pack 22[的](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fproduct%2Fassets%2Fcq-6.5.0-hotfix-42384-1.2.zip)Hotfix。
 
 若是Service Pack 20和舊版，您需要針對SCS執行因應步驟，以支援Oauth整合。 請參閱[疑難排解OAuth憑證的智慧標籤](config-oauth.md)。
 
@@ -97,7 +97,7 @@ To configure the Smart Content Service, follow these top-level steps:
 
 * [!UICONTROL API金鑰] (產生於Adobe Developer Console整合的[!UICONTROL 使用者端識別碼]欄位中)，
 * [!UICONTROL 組織識別碼]，
-* 和[!UICONTROL 使用者端密碼]，適用於[!DNL Experience Manager]中雲端設定的[!UICONTROL Assets智慧標籤服務設定]。
+* 和[!UICONTROL 使用者端密碼]，適用於[!UICONTROL 中雲端設定的]Assets智慧標籤服務設定[!DNL Experience Manager]。
 
 1. 存取瀏覽器中的[https://developer.adobe.com](https://developer.adobe.com/)。 選取適當的帳戶，並確認關聯的組織角色是系統&#x200B;**管理員**。
 
@@ -115,7 +115,7 @@ To configure the Smart Content Service, follow these top-level steps:
 
 1. 在&#x200B;**[!UICONTROL 選取產品設定檔]**&#x200B;頁面中，選取&#x200B;**[!UICONTROL 智慧內容服務]**，然後按一下&#x200B;**[!UICONTROL 儲存設定的API]**&#x200B;選項。
 
-   此時會出現一個頁面，顯示更多關於設定的資訊。請保持此頁面開啟，以複製這些值，並將其新增至[!DNL Experience Manager]中雲端設定的[!UICONTROL Assets智慧標籤服務設定]，以設定智慧標籤。
+   此時會出現一個頁面，顯示更多關於設定的資訊。請保持此頁面開啟，以複製這些值，並將其新增至[!UICONTROL 中雲端設定的]Assets智慧標籤服務設定[!DNL Experience Manager]，以設定智慧標籤。
 
    ![Developer Console 的 OAuth 認證](assets/ims-configuration-developer-console.png)
 
@@ -136,7 +136,7 @@ To configure the Smart Content Service, follow these top-level steps:
    | 雲端解決方案 | 從下拉式清單中選擇&#x200B;**[!UICONTROL 智慧標籤]**。 |
    | 標題 | 新增設定IMS帳戶的標題。 |
    | 授權伺服器 | 新增`https://ims-na1.adobelogin.com` |
-   | 用戶端識別碼 | 將透過[Adobe Developer主控台](https://developer.adobe.com/console/)提供。 |
+   | 用戶端 ID | 將透過[Adobe Developer主控台](https://developer.adobe.com/console/)提供。 |
    | 用戶端密碼 | 將透過[Adobe Developer主控台](https://developer.adobe.com/console/)提供。 |
    | 範圍 | 將透過[Adobe Developer主控台](https://developer.adobe.com/console/)提供。 |
    | 組織 ID | 將透過[Adobe Developer主控台](https://developer.adobe.com/console/)提供。 |
@@ -151,7 +151,7 @@ To configure the Smart Content Service, follow these top-level steps:
 >[!CAUTION]
 >
 >Previously, configurations that were made with JWT Credentials are now subject to deprecation in the Adobe Developer Console. You cannot create new JWT credentials after June 3, 2024. Such configurations can no longer be created or updated, but can be migrated to OAuth configurations.
-> See [Setting up IMS integrations for AEM](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service)
+> See [Setting up IMS integrations for AEM](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service)
 >See [Steps to configure OAuth for on-premise users](#config-oauth-onprem)
 > See [Troubleshooting smart tags for OAuth credentials](#config-smart-tagging.md)
 -->
@@ -183,7 +183,7 @@ To configure the Smart Content Service, follow these top-level steps:
 
 完成設定後，您可以使用JMX MBean來驗證設定。 若要進行驗證，請按照以下步驟操作。
 
-1. 在`https://[aem_server]:[port]`存取您的[!DNL Experience Manager]伺服器。
+1. 在[!DNL Experience Manager]存取您的`https://[aem_server]:[port]`伺服器。
 
 1. 移至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 作業]** > **[!UICONTROL 網頁主控台]**&#x200B;以開啟OSGi主控台。 按一下&#x200B;**[!UICONTROL 主要] > [!UICONTROL JMX]**。
 
@@ -291,7 +291,7 @@ To use Smart Content Service APIs, create an integration in Adobe Developer Cons
 >[!CAUTION]
 >
 >Previously, configurations that were made with JWT Credentials are now subject to deprecation in the Adobe Developer Console. You cannot create new JWT credentials after June 3, 2024. Such configurations can no longer be created or updated, but can be migrated to OAuth configurations.
-> See [Setting up IMS integrations for AEM](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service)
+> See [Setting up IMS integrations for AEM](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service)
 >See [Steps to configure OAuth for on-premise users](#config-oauth-onprem)
 > See [Troubleshooting smart tags for OAuth credentials](#config-smart-tagging.md)
 
@@ -374,7 +374,7 @@ The validation results are displayed in the same dialog.
 
    ![設定DAM更新資產工作流程並新增智慧標籤步驟](assets/smart-tag-step-properties-workflow1.png)
 
-1. 在「參 **[!UICONTROL 數]** 」頁籤中，如果希望工作流完成，即使自動標籤步驟失敗，請選擇「忽略錯誤 **&#x200B;**&#x200B;」。
+1. 在「參 **[!UICONTROL 數]** 」頁籤中，如果希望工作流完成，即使自動標籤步驟失敗，請選擇「忽略錯誤 **** 」。
 
    此外，若無論是否對資料夾啟用智慧標籤，都要在資產上傳時標籤資產，請選取&#x200B;**[!UICONTROL 忽略智慧標籤旗標]**。
 
@@ -400,7 +400,7 @@ The validation results are displayed in the same dialog.
 
 為達到最佳效果，訓練集中的影像需符合下列准則：
 
-**&#x200B;**&#x200B;數量和大小：每個標籤至少30個影像。長邊至少500像素。
+**** 數量和大小：每個標籤至少30個影像。長邊至少500像素。
 
 **Coherence**：用於特定標籤的影像在視覺上類似。
 
@@ -420,7 +420,7 @@ The validation results are displayed in the same dialog.
 
 ![說明性影像，以示範訓練准則](/help/assets/assets/do-not-localize/distraction.png)
 
-**&#x200B;**&#x200B;完整性：如果影像符合多個標籤的資格，請先新增所有適用的標籤，再加入影像以進行訓練。例如，對於標籤（例如`raincoat`和`model-side-view`），請先在符合資格的資產上新增兩個標籤，然後再加入以進行訓練。
+**** 完整性：如果影像符合多個標籤的資格，請先新增所有適用的標籤，再加入影像以進行訓練。例如，對於標籤（例如`raincoat`和`model-side-view`），請先在符合資格的資產上新增兩個標籤，然後再加入以進行訓練。
 
 ![說明性影像，以示範訓練准則](/help/assets/assets/do-not-localize/completeness.png)
 
@@ -466,7 +466,7 @@ The validation results are displayed in the same dialog.
 
    如果您在此報告中未看到您的標籤，請再次執行這些標籤的培訓工作流程。
 
-1. 若要下載報表，請從清單中選取報表，然後按一下工具列中的[下載]。 **&#x200B;**&#x200B;報表會下載為Microsoft Excel試算表。
+1. 若要下載報表，請從清單中選取報表，然後按一下工具列中的[下載]。 ****&#x200B;報表會下載為Microsoft Excel試算表。
 
 ## 限制 {#limitations}
 
@@ -482,4 +482,4 @@ The validation results are displayed in the same dialog.
 >
 >* [智慧標籤概觀及訓練方式](enhanced-smart-tags.md)
 >* [疑難排解OAuth憑證的智慧標籤](config-oauth.md)
->* [有關智慧標籤的教學影片](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/assets/metadata/image-smart-tags)
+>* [有關智慧標籤的教學影片](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/metadata/image-smart-tags)

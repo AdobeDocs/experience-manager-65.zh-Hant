@@ -7,7 +7,7 @@ role: User
 exl-id: 5eff4a0f-30b1-4753-ad0b-002656eed972
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 5aff321eb52c97e076c225b67c35e9c6d3371154
+source-git-commit: 7c1aeec18f35b019a63d0385ada248b26a0df9de
 workflow-type: tm+mt
 source-wordcount: '1581'
 ht-degree: 1%
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/smart-tags.html?lang=zh-Hant) |
+| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/smart-tags.html?lang=en) |
 | AEM 6.5 | 本文章 |
 
 處理數位資產的組織越來越多地在資產中繼資料中使用分類控制的辭彙。 基本上，它包括員工、合作夥伴和客戶通常用來參照和搜尋特定類別數位資產的關鍵字清單。 使用分類控制的辭彙來標籤資產，可確保輕鬆識別和擷取資產。
@@ -31,7 +31,7 @@ ht-degree: 1%
 
 標籤培訓完畢並準備就緒後，該服務現在就能透過標籤工作流程將這些標籤套用至資產。
 
-在背景中，智慧內容服務會使用Adobe Sensei AI架構，根據您的標籤結構和商業分類訓練其影像識別演演算法。 然後，此內容智慧可用來將相關標籤套用至不同的資產集。
+在背景中，智慧內容服務會使用Adobe AI架構，根據您的標籤結構和商業分類訓練其影像識別演演算法。 然後，此內容智慧可用來將相關標籤套用至不同的資產集。
 
 智慧內容服務是裝載於[!DNL Adobe Developer Console]的雲端服務。 若要在[!DNL Adobe Experience Manager]中使用它，系統管理員必須將您的[!DNL Experience Manager]部署與[!DNL Adobe Developer Console]整合。
 
@@ -97,7 +97,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->1. 訓練是一個不可撤銷的過程。 Adobe建議您先檢閱已組織資產集中的標籤，然後再對標籤進行智慧內容服務培訓。
+>1. 訓練是一個不可撤銷的過程。 Adobe建議您先檢閱已組織資產集中的標籤，然後再對標籤培訓智慧內容服務。
 >1. 在訓練標籤之前，請參閱[智慧內容服務訓練准則](/help/assets/config-smart-tagging.md#training-the-smart-content-service)。
 >1. 第一次訓練智慧內容服務時，Adobe建議您至少在兩個相異標籤上訓練。
 
@@ -183,8 +183,8 @@ ht-degree: 1%
 1. 在搜尋方塊中，以標籤作為關鍵字來搜尋資產。
 1. 若要識別您找不到與搜尋相關的影像，請檢閱搜尋結果。
 1. 選取影像，然後按一下工具列中的&#x200B;**[!UICONTROL 管理標籤]**。
-1. 從&#x200B;**[!UICONTROL 管理標籤]**&#x200B;頁面，檢閱標籤。 如果您不想要根據特定標籤搜尋影像，請選取標籤，然後按一下工具列中的[刪除]。 **&#x200B;**&#x200B;或者，按一下標籤旁邊出現的`x`符號。
-1. 或者，若要指派較高排名給標籤，請選取該標籤，然後按一下工具列中的[提升]。**&#x200B;** 您促銷的標籤已移至&#x200B;**[!UICONTROL 標籤]**&#x200B;區段。
+1. 從&#x200B;**[!UICONTROL 管理標籤]**&#x200B;頁面，檢閱標籤。 如果您不想要根據特定標籤搜尋影像，請選取標籤，然後按一下工具列中的[刪除]。 ****&#x200B;或者，按一下標籤旁邊出現的`x`符號。
+1. 或者，若要指派較高排名給標籤，請選取該標籤，然後按一下工具列中的[提升]。**** 您促銷的標籤已移至&#x200B;**[!UICONTROL 標籤]**&#x200B;區段。
 1. 按一下&#x200B;**[!UICONTROL 儲存]**，然後按一下&#x200B;**[!UICONTROL 確定]**
 1. 導覽至影像的&#x200B;**[!UICONTROL 屬性]**&#x200B;頁面。 請注意，您提升的標籤會獲得更多關聯性，並會更早出現在搜尋結果中。
 
@@ -200,4 +200,4 @@ ht-degree: 1%
 >* [智慧標籤概觀及訓練方式](enhanced-smart-tags.md)
 >* [設定智慧標籤](config-smart-tagging.md)
 >* [疑難排解OAuth憑證的智慧標籤](config-oauth.md)
->* [有關智慧標籤的教學影片](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/image-smart-tags.html?lang=zh-Hant)
+>* [有關智慧標籤的教學影片](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/image-smart-tags.html)

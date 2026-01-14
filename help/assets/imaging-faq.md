@@ -9,9 +9,9 @@ feature: Asset Management,Renditions
 role: User, Admin
 exl-id: e427d4ee-d5c8-421b-9739-f3cf2de36e41
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
+source-git-commit: 7c1aeec18f35b019a63d0385ada248b26a0df9de
 workflow-type: tm+mt
-source-wordcount: '3300'
+source-wordcount: '3299'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ## 關於智慧型影像 {#what-is-smart-imaging}
 
-智慧型影像技術可套用Adobe Sensei AI功能，並與現有的「影像預設集」搭配使用。 它會根據使用者端瀏覽器功能自動最佳化影像格式、大小和品質，藉此增強影像傳送效能。
+智慧型影像技術可套用Adobe AI功能，並與現有的「影像預設集」搭配使用。 它會根據使用者端瀏覽器功能自動最佳化影像格式、大小和品質，藉此增強影像傳送效能。
 
 現在，透過改良的智慧型影像處理（現在同時支援AVIF和WebP），取得LCP （最大內容繪製）更好的Google Core Web Vital分數。
 
@@ -88,7 +88,7 @@ In terms of images, the goal is to serve the best quality images as efficiently 
 
 您可以將`bfc=off`附加至影像的URL以關閉智慧型影像。
 
-另請參閱Dynamic Media影像提供與轉譯API中的[bfc](https://experienceleague.adobe.com/zh-hant/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-bfc)。
+另請參閱Dynamic Media影像提供與轉譯API中的[bfc](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-bfc)。
 
 ### 關於裝置畫素比(dpr)最佳化 {#dpr}
 
@@ -131,7 +131,7 @@ DPR和網路頻寬值是根據偵測到的套件式CDN使用者端值。 這些�
 
 * 改善使用最新智慧型影像處理之網頁的Google SEO排名。
 * 立即提供最佳化內容（在執行階段）。
-* 使用Adobe Sensei技術，根據影像要求中指定的品質(`qlt`)進行轉換。
+* 使用Adobe AI技術，根據影像要求中指定的品質(`qlt`)進行轉換。
 * 不受TTL （存留時間）影響。 之前，智慧型影像處理至少必須有12小時的TTL才能運作。
 * 先前，原始和衍生影像都會經過快取，而且是使快取失效的兩步驟程式。 在最新的智慧型影像處理中，只會快取衍生專案，進行單一步驟的快取失效程式。
 * 在規則集中使用自訂標題的客戶可受益於最新的智慧型影像，因為這些標題不會遭到封鎖，不像舊版的智慧型影像。
@@ -255,7 +255,7 @@ To understand pre-requisites for Smart Imaging, see [Am I eligible to use Smart 
 
       * 列出所有相關網域，例如&#x200B;*`company.com`*&#x200B;或&#x200B;*`mycompany.scene7.com`*
       * 智慧型影像支援一般和自訂網域。
-      * 若要識別您的網域，請開啟[Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/zh-hant/docs/dynamic-media-classic/using/getting-started/signing-out#getting-started)並登入您的公司帳戶。
+      * 若要識別您的網域，請開啟[Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/en/docs/dynamic-media-classic/using/getting-started/signing-out#getting-started)並登入您的公司帳戶。
 
          1. 瀏覽至&#x200B;**[!UICONTROL 設定]** > **[!UICONTROL 應用程式設定]** > **[!UICONTROL 一般設定]**。
          1. 尋找&#x200B;**[!UICONTROL 發佈的伺服器名稱]**&#x200B;欄位以確認您的網域。

@@ -7,7 +7,7 @@ feature: Asset Management,Search
 exl-id: d6f815b5-e4fc-4f8c-a6c1-9e50035ab9f2
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 7c1aeec18f35b019a63d0385ada248b26a0df9de
 workflow-type: tm+mt
 source-wordcount: '795'
 ht-degree: 2%
@@ -18,10 +18,10 @@ ht-degree: 2%
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
-| Adobe Experience Manager (AEM)as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/organize-assets.html?lang=zh-Hant) |
+| Adobe Experience Manager (AEM) as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/organize-assets.html?lang=en) |
 | AEM 6.5 | 本文章 |
 
-Microsoft® Office和PDF檔案的所有數位資產、中繼資料和內容均已擷取並設為可搜尋。 搜尋可讓您對資產進行複雜的篩選，並完全遵循適當的許可權。 有關中繼資料的詳情，請參閱數位資產管理的中繼資料。
+Microsoft® Office和PDF檔案的所有數位資產、中繼資料和內容都會經過擷取，並可供搜尋。 搜尋可讓您對資產進行複雜的篩選，並完全遵循適當的許可權。 有關中繼資料的詳情，請參閱數位資產管理的中繼資料。
 
 [!DNL Experience Manager Assets]支援多種組織內容的方式。 您可以使用資料夾以階層方式組織資料夾，或者也可以使用標籤（例如）以無序、臨機方式組織資料夾。 使用者可以在DAM Asset Editor中編輯顯示子資產、轉譯和中繼資料的標籤。
 
@@ -47,9 +47,9 @@ Microsoft® Office和PDF檔案的所有數位資產、中繼資料和內容均�
 
 ## 使用標籤組織資產 {#use-tags-to-organize-assets}
 
-使用標籤作為中繼資料，您可以輕鬆搜尋資產、使用搜尋結果建立集合、提升部分資產的搜尋排名，以及使用Adobe Sensei的人工智慧演演算法來探索資產。
+使用標籤作為中繼資料，您可以輕鬆搜尋資產、使用搜尋結果建立集合、提升部分資產的搜尋排名，以及使用Adobe AI的人工智慧演演算法來探索資產。
 
-[!DNL Adobe Experience Manager Assets]會使用自我學習演演算法來建立高度描述性的標籤，讓您只需按幾下滑鼠即可找到正確的資產。 智慧標籤使用Adobe的人工智慧和機器學習架構Adobe Sensei，這些架構經過訓練可辨識標準標籤和業務特定標籤，並套用至影像。 智慧標籤也可以識別內容、個別字詞或片語，並自動將描述性標籤套用至資產
+[!DNL Adobe Experience Manager Assets]會使用自我學習演演算法來建立高度描述性的標籤，讓您只需按幾下滑鼠即可找到正確的資產。 智慧標籤使用Adobe AI、Adobe的人工智慧和機器學習架構，這些架構經過訓練後，可辨識標準標籤和業務專屬標籤，並套用至影像。 智慧標籤也可以識別內容、個別字詞或片語，並自動將描述性標籤套用至資產
 
 如需詳細資訊，請參閱下列文章：
 
