@@ -126,7 +126,7 @@ ht-degree: 4%
 
 您可以藉此機會提升目標關鍵字搜尋結果中某些資產的排名。 請觀看下方的視訊範例。 如需詳細資訊，請參閱[搜尋 [!DNL Experience Manager]](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/assets/search-and-discovery/search-boost)。
 
->[!VIDEO](https://video.tv.adobe.com/v/16766/?quality=6)
+>[!VIDEO](https://video.tv.adobe.com/v/3444069/?captions=chi_hant&quality=6)
 
 *影片：瞭解搜尋結果的排名方式，以及如何影響排名。*
 
