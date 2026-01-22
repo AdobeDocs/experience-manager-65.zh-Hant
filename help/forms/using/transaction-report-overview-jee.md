@@ -5,22 +5,25 @@ feature: Transaction Reports
 exl-id: 77e95631-6b0d-406e-a1b8-78f8d9cceb63
 role: Admin, User, Developer
 solution: "Experience Manager, Experience Manager Forms"
-source-git-commit: 9f59606bb58b9e90f07bd22e89f3213afb54a697
+source-git-commit: eb059bc4c9f4b5064b8038a2b037670086a9139b
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '632'
 ht-degree: 0%
 
 ---
 
+
 # 在JEE上啟用和檢視AEM Forms的交易報告 {#transaction-reports-overview}
 
-<!--Transaction reports in AEM Forms on JEE let you keep a count of all transactions taken place on your AEM Forms deployment. The objective is to provide information about product usage and helps business stakeholders understand their digital processing volumes. Examples of a transaction include:
+<span>已為AEM Forms 6.5.20.0的AEM Forms on JEE匯入交易報告功能。 此功能預設為停用，並可從管理員UI啟用。</span>
 
-* Submission of a document
-* Rendition of a document
-* Conversion of a document from one file format to another 
+JEE版AEM Forms中的交易報表可讓您保留在AEM Forms部署中發生的所有交易的計數。 目標是提供有關產品使用的資訊，並幫助業務利害關係人瞭解他們的數位處理量。 交易的範例包括：
 
-For more information on what is considered a transaction, see [Billable APIs](../../forms/using/transaction-reports-billable-apis-jee.md). Transaction log helps you to gain information about the number of documents submitted, rendered, and converted.-->
+* 提交檔案
+* 檔案的轉譯
+* 將檔案從一種檔案格式轉換為另一種檔案格式
+
+如需被視為交易的詳細資訊，請參閱[可記帳的API](../../forms/using/transaction-reports-billable-apis-jee.md)。
 
 ## 啟用交易報告 {#enable-transaction-reporting}
 
@@ -53,7 +56,7 @@ For more information on what is considered a transaction, see [Billable APIs](..
 1. 導覽至JEE版AEM Forms上的`/adminui`，例如： `http://10.13.15.08:8080/adminui`。
 1. 以&#x200B;**系統管理員**&#x200B;登入。
 1. 按一下「健康狀態監視」。
-1. 導覽至&#x200B;**交易報告器**&#x200B;標籤，按一下&#x200B;**計算交易總數**，現在您看到圓形圖代表PDF forms數目 — 已提交、已演算或已轉換。
+1. 導覽至&#x200B;**交易報告器**&#x200B;標籤，按一下&#x200B;**計算交易總數**，現在您會看到圓形圖代表PDF forms — 已提交、已演算或已轉換的數量。
 
 ![sample-transaction-report-jee](assets/transaction-piechart.png)
 
@@ -128,7 +131,7 @@ TransactionRecord
 
 記錄交易的頻率取決於伺服器上針對成功提交、演算或轉換的每個表單進行的更新操作。
 
-* 在&#x200B;**儀表板**&#x200B;中，交易計數會定期更新，預設值為1分鐘。 您可以在`"com.adobe.idp.dsc.transaction.recordFrequency"`設定系統屬性來更新頻率。 例如，在JBoss®上適用於JEE的AEM Forms上，在`JAVA_OPTS`中新增`-Dcom.adobe.idp.dsc.transaction.recordFrequency=5`以將更新頻率設為5分鐘。
+* 在&#x200B;**儀表板**&#x200B;中，交易計數會定期更新，預設值為1分鐘。 您可以在`"com.adobe.idp.dsc.transaction.recordFrequency"`設定系統屬性來更新頻率。 例如，在JBoss®上適用於JEE的AEM Forms上，在`-Dcom.adobe.idp.dsc.transaction.recordFrequency=5`中新增`JAVA_OPTS`以將更新頻率設為5分鐘。
 
 * 在&#x200B;**交易記錄**&#x200B;中，當表單成功提交、轉譯或轉換時，每個交易的更新會立即發生。
 
