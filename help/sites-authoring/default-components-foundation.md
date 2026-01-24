@@ -1414,7 +1414,7 @@ Forms是由數個不同元件所建置：
 
 >[!NOTE]
 >
->您可以建立自訂上傳元件以將檔案上傳到Sling Servlet。 如需詳細資訊，請參閱[將檔案上傳至Adobe Experience Manager](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/aem-cloud-service-create-asset-servlet-for-uploading-small-files/td-p/404276)。
+>您可以建立自訂上傳元件以將檔案上傳到Sling Servlet。 如需詳細資訊，請參閱[將檔案上傳至Adobe Experience Manager](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/aem-cloud-service-create-asset-servlet-for-uploading-small-files/td-p/404276?profile.language=zh-Hant)。
 
 ### 隱藏欄位 {#hidden-field}
 

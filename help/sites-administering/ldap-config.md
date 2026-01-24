@@ -43,7 +43,7 @@ LDAP （**L** ightweight **D**&#x200B;目錄&#x200B;**A**&#x200B;存取&#x200B;*
 >
 >觀看[Oak的外部登入模組 — 使用LDAP及Beyond](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-oak-external-login-module-authenticating-with-ldap-and-beyond.html?lang=zh-Hant)進行驗證，以深入探索外部登入模組。
 >
->若要閱讀使用Apache DS設定Experience Manager的範例，請參閱[設定Adobe Experience Manager 6.5使用Apache目錄服務。](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/configuring-adobe-experience-manager-6-to-use-apache-directory/m-p/183805)
+>若要閱讀使用Apache DS設定Experience Manager的範例，請參閱[設定Adobe Experience Manager 6.5使用Apache目錄服務。](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/configuring-adobe-experience-manager-6-to-use-apache-directory/m-p/183805?profile.language=zh-Hant)
 
 ## 設定LDAP識別提供者 {#configuring-the-ldap-identity-provider}
 
