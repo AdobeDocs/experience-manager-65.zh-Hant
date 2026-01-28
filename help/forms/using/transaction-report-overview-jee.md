@@ -5,7 +5,7 @@ feature: Transaction Reports
 exl-id: 77e95631-6b0d-406e-a1b8-78f8d9cceb63
 role: Admin, User, Developer
 solution: "Experience Manager, Experience Manager Forms"
-source-git-commit: eb059bc4c9f4b5064b8038a2b037670086a9139b
+source-git-commit: 5699f5814daf16a397eb6129b881ac2035456e39
 workflow-type: tm+mt
 source-wordcount: '632'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # 在JEE上啟用和檢視AEM Forms的交易報告 {#transaction-reports-overview}
 
-<span>已為AEM Forms 6.5.20.0的AEM Forms on JEE匯入交易報告功能。 此功能預設為停用，並可從管理員UI啟用。</span>
+<span>已為AEM Forms [的JEE上的6.5.20.0](/help/release-notes/previous/6-5-20.md#forms)AEM Forms引入交易報告功能。 此功能預設為停用，並可從管理員UI啟用。</span>
 
 JEE版AEM Forms中的交易報表可讓您保留在AEM Forms部署中發生的所有交易的計數。 目標是提供有關產品使用的資訊，並幫助業務利害關係人瞭解他們的數位處理量。 交易的範例包括：
 
