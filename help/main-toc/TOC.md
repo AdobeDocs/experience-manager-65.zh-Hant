@@ -344,7 +344,7 @@ ht-degree: 23%
 + Assets {#assets}
    + [關於DAM](/help/assets/assets.md)
    + [資產最佳實務](/help/assets/best-practices-for-assets.md)
-   + [ [!DNL Assets] 中的協助工具](/help/assets/accessibility.md)
+   + [&#x200B; [!DNL Assets] 中的協助工具](/help/assets/accessibility.md)
    + 使用Experience Manager Assets {#using}
       + [[!DNL Assets]首頁體驗](/help/assets/assets-home-page.md)
       + [搜尋數位資產](/help/assets/search-assets.md)
@@ -420,7 +420,7 @@ ht-degree: 23%
       + [將資產與活動資料流整合](/help/assets/extending-activity-stream.md)
       + [擴充Asset Editor](/help/assets/asseteditorx.md)
       + [[!DNL Assets] HTTP API](/help/assets/mac-api-assets.md)
-      + [ [!DNL Assets] HTTP API中的內容片段支援](/help/assets/assets-api-content-fragments.md)
+      + [&#x200B; [!DNL Assets] HTTP API中的內容片段支援](/help/assets/assets-api-content-fragments.md)
       + [用於內容片段的 GraphQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md)
       + [使用 GraphiQL IDE](/help/sites-developing/headless/graphql-api/graphiql-ide.md)
       + [持續性查詢](/help/sites-developing/headless/graphql-api/persisted-queries.md)
@@ -1100,7 +1100,7 @@ ht-degree: 23%
       + [AEM Forms Java API參考](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html)
       + [JEE Java API上的AEM Forms參考](https://helpx.adobe.com/experience-manager/6-5/forms/programlc/javadoc/index.html)
       + [表單適用於HTML5的Bridge API](/help/forms/using/form-bridge-apis.md)
-      + 最適化Forms的[JavaScript資料庫API參考](https://helpx.adobe.com/experience-manager/6-5/forms/javascript-api/index.html)
+      + [最適化Forms的JavaScript資料庫API參考](https://helpx.adobe.com/experience-manager/6-5/forms/javascript-api/index.html)
       + [組合器服務與DDX參考](https://www.adobe.com/go/learn_aemforms_ddxRef_65)
       + [Workbench說明](https://www.adobe.com/go/learn_aemforms_workbench_65)
       + 使用JEE上的AEM Forms進行程式設計 {#programming-aem-forms-jee}
@@ -1412,7 +1412,7 @@ ht-degree: 23%
                + [選擇性 — 如何使用AEM建立單頁應用程式](https://experienceleague.adobe.com/docs/experience-manager-65/content/headless/developer/create-spa.html)
             + Headless 內容架構者歷程 {#architect}
                + [AEM Headless內容架構者歷程概觀](https://experienceleague.adobe.com/docs/experience-manager-65/content/headless/architect/overview.html)
-               + 使用AEM建立Headless的[內容模型 — 簡介](https://experienceleague.adobe.com/docs/experience-manager-65/content/headless/architect/introduction.html)
+               + [使用AEM建立Headless的內容模型 — 簡介](https://experienceleague.adobe.com/docs/experience-manager-65/content/headless/architect/introduction.html)
                + [使用AEM瞭解Headless的內容模型基本概念](https://experienceleague.adobe.com/docs/experience-manager-65/content/headless/architect/basics.html)
                + [瞭解如何在AEM中建立內容片段模型](https://experienceleague.adobe.com/docs/experience-manager-65/content/headless/architect/model-structure.html)
          + 快速入門指南 {#getting-started}
