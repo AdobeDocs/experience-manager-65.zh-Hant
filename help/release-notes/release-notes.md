@@ -6,9 +6,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
 exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
-source-git-commit: ae66b28497bfb12686152b324e1758ad2d8592ee
+source-git-commit: 4305b4c7089fe4ac2b1bfe2dc6e4919181b3d892
 workflow-type: tm+mt
-source-wordcount: '9451'
+source-wordcount: '9486'
 ht-degree: 5%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 5%
 
 ## [!DNL Experience Manager] 6.5.24.0包含的內容 {#what-is-included-in-aem-6524}
 
-[!DNL Experience Manager] 6.5.24.0包含新功能、客戶要求的重要增強功能和錯誤修正。 此外，還包含自2019年4月6.5首次推出以來的效能、穩定性和安全性改善專案。 在[&#x200B; 6.5上](#install)安裝此Service Pack[!DNL Experience Manager]。
+[!DNL Experience Manager] 6.5.24.0包含新功能、客戶要求的重要增強功能和錯誤修正。 此外，還包含自2019年4月6.5首次推出以來的效能、穩定性和安全性改善專案。 在[ 6.5上](#install)安裝此Service Pack[!DNL Experience Manager]。
 
 <!-- UPDATE FOR EACH NEW RELEASE -->
 
@@ -694,9 +694,9 @@ ContextHub不再在發佈頁面上插入第二個jQuery副本。 區段引擎使
   have different Class objects for the type org/slf4j/ILoggerFactory used in the signature.
   ```
 
-* Forms-21378：啟用伺服器端驗證(SSV)時，表單提交可能會失敗。 如果您遇到此問題，請聯絡Adobe支援以尋求協助。
+* **FORMS-21378**：啟用伺服器端驗證(SSV)時，表單提交可能會失敗。 如果您遇到此問題，請聯絡Adobe支援以尋求協助。
 
-
+* **FORMS-23703**：若未使用預設值設定`contains`規則，最適化表單的伺服器端驗證會失敗。 您可以安裝最新版的[AEM Forms 6.5.24.0 Service Pack](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases#aem-65-forms-releases)以修正問題。
 
 ## 包含的 OSGi 套件和內容套件{#osgi-bundles-and-content-packages-included}
 
@@ -714,6 +714,6 @@ ContextHub不再在發佈頁面上插入第二個jQuery副本。 區段引擎使
 
 >[!MORELIKETHIS]
 >
->* [[!DNL Experience Manager] 產品頁面](https://business.adobe.com/tw/products/experience-manager/adobe-experience-manager.html)
+>* [[!DNL Experience Manager] 產品頁面](https://business.adobe.com/products/experience-manager/adobe-experience-manager.html)
 >* [[!DNL Experience Manager] 6.5檔案](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65)
 >* [訂閱Adobe優先產品更新](https://www.adobe.com/tw/subscription/priority-product-update.html)
