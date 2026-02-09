@@ -6,10 +6,10 @@ feature: Adaptive Forms,Foundation Components
 exl-id: 3fd26ddb-d247-462f-a0f6-8af6166516c1
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: 0487a5669fbaab35974eb85eb099b82e0847a4f9
+source-git-commit: 385803015a09a11bcc97fed979d529d85f7facb8
 workflow-type: tm+mt
-source-wordcount: '1194'
-ht-degree: 14%
+source-wordcount: '1283'
+ht-degree: 13%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 14%
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
 | AEM 6.5 | 本文章 |
-| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/forms/integrate/set-submit-action/forms-microsoft-power-automate-integration) |
+| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/integrate/set-submit-action/forms-microsoft-power-automate-integration) |
 
 您可以設定最適化表單，在提交時執行 Microsoft® Power Automate Cloud Flow。設定的最適化表單會將擷取的資料、附件和記錄文件傳送到 Power Automate Cloud Flow 進行處理。那有助於建置自訂資料擷取體驗，同時利用 Microsoft® Power Automate 的強大功能，根據擷取的資料建置商業邏輯，並將客戶工作流程自動化。以下是整合最適化表單與 Microsoft® Power Automate 後，可以執行的部分操作範例：
 
@@ -27,7 +27,7 @@ ht-degree: 14%
 * 對擷取的資料執行複雜的計算
 * 按預定義的排程將最適化表單資料儲存到儲存系統
 
-最適化Forms編輯器提供&#x200B;**叫用Microsoft®Power Automate流程**&#x200B;提交動作，以將最適化表單資料、附件和記錄檔案傳送至Power Automate雲端流程。 若要使用提交動作將擷取的資料傳送至Microsoft® Power Automate，[將您的AEM Forms Author執行個體連線至Microsoft® Power Automate] (#connect-your-aem-forms-instance-with-microsoft&reg;-power-automate)
+最適化Forms編輯器提供&#x200B;**叫用Microsoft®Power Automate流程**&#x200B;提交動作，以將最適化表單資料、附件和記錄檔案傳送至Power Automate雲端流程。 若要使用提交動作將擷取的資料傳送至Microsoft® Power Automate，[將您的AEM Forms Author執行個體連線至Microsoft® Power Automate](#connect-your-aem-forms-instance-with-microsoft&reg;-power-automate)
 
 ## 先決條件
 
@@ -118,6 +118,14 @@ ht-degree: 14%
 1. 在發佈頁面上，選取&#x200B;**[!UICONTROL 所有組態]**&#x200B;並選取&#x200B;**[!UICONTROL 發佈]**。 發佈Power Automate Dataverse和Power Automate流程服務雲端設定。
 
 您的AEM Forms作者執行個體現在已與Microsoft® Power Automate連線。 您現在可以將最適化Forms資料傳送到Power Automate流程。
+
+>[!IMPORTANT]
+>
+>用於Microsoft® Power Automate連線的權杖會在90天後過期。
+>
+> 若要讓整合持續運作，在權杖過期之前或時，重新驗證並重新發佈Microsoft® Power Automate Dataverse和Microsoft® Power Automate Flow Service雲端設定，請使用[發佈Microsoft® Power Automate Dataverse和Microsoft® Power Automate Flow Service雲端設定](#publish-microsoft-power-automate-dataverse-cloud-configuration)中記錄的步驟。
+>
+> 如需權杖存留期原則的詳細資訊，請參閱可設定權杖存留期[的](https://learn.microsoft.com/en-us/entra/identity-platform/configurable-token-lifetimes#token-lifetime-policies-for-refresh-tokens-and-session-tokens)Microsoft Entra檔案。 如果未更新Token，則提交至Power Automate的表單可能會失敗。
 
 ## 使用叫用Microsoft® Power Automate流程提交動作將資料傳送至Power Automate流程 {#use-the-invoke-microsoft-power-automate-flow-submit-action}
 
