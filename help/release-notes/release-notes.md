@@ -694,7 +694,7 @@ ContextHub不再在發佈頁面上插入第二個jQuery副本。 區段引擎使
 
 * **FORMS-21378**：啟用伺服器端驗證(SSV)時，表單提交可能會失敗。 如果您遇到此問題，請聯絡Adobe支援以尋求協助。
 
-* **FORMS-23703**：若未使用預設值設定`contains`規則，最適化表單的伺服器端驗證會失敗。 您可以安裝最新版的[AEM Forms 6.5.24.0 Service Pack](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases#aem-65-forms-releases)以修正問題。
+* **FORMS-23703**：若未使用預設值設定`contains`規則，最適化表單的伺服器端驗證會失敗。 您可以安裝最新版的[AEM Forms 6.5.24.0 Service Pack](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases#aem-65-forms-releases)以修正問題。
 
 * 表單資料模型聯結器可能無法驗證，因為預設不允許所需的關鍵字和規則運算式模式。 若要解決此問題，請透過Configuration Manager (`/system/console/configmgr`)新增下列專案：
 
@@ -703,7 +703,7 @@ ContextHub不再在發佈頁面上插入第二個jQuery副本。 區段引擎使
 
      >[!VIDEO](https://video.tv.adobe.com/v/3479697)
 
-* **FORMS-23979。**： HTML到PDF的轉換(PDFG)可能會遇到間歇性逾時。 適用於SP24的較新版本Forms附加元件隨後發行，其中包含此修正。 如果您遇到此問題，請將您的環境更新為[6.5.24.0的](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases#aem-65-forms-releases)最新發行的Forms附加元件。
+* **FORMS-23979。**： HTML到PDF的轉換(PDFG)可能會遇到間歇性逾時。 適用於SP24的較新版本Forms附加元件隨後發行，其中包含此修正。 如果您遇到此問題，請將您的環境更新為[6.5.24.0的](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases#aem-65-forms-releases)最新發行的Forms附加元件。
 
 * **FORMS-23722** （指派工作中遺漏檔案附件）：將含有&#x200B;**檔案附件**&#x200B;欄位的表單提交至使用&#x200B;**指派工作**&#x200B;步驟的AEM工作流程時，從收件匣開啟工作時附件不會顯示。 檔案會正確儲存到存放庫，並在CRX中可見；只有「指派任務」步驟UI不會顯示它們。
 
@@ -727,6 +727,6 @@ ContextHub不再在發佈頁面上插入第二個jQuery副本。 區段引擎使
 
 >[!MORELIKETHIS]
 >
->* [[!DNL Experience Manager] 產品頁面](https://business.adobe.com/products/experience-manager/adobe-experience-manager.html)
+>* [[!DNL Experience Manager] 產品頁面](https://business.adobe.com/tw/products/experience-manager/adobe-experience-manager.html)
 >* [[!DNL Experience Manager] 6.5檔案](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65)
 >* [訂閱Adobe優先產品更新](https://www.adobe.com/tw/subscription/priority-product-update.html)
