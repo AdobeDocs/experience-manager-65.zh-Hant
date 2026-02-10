@@ -3,9 +3,10 @@ title: 在最適化表單中建立及新增自訂函式
 description: AEM Forms支援自訂函式，可讓使用者在規則編輯器中建立並使用自己的函式。
 feature: Adaptive Forms, Foundation Components
 role: Admin, User, Developer
-source-git-commit: f63dcd7edca640cee47c8f615d1675ef5052953c
+exl-id: 14a52bc1-c1b4-4a12-b8e1-54523e5f30bd
+source-git-commit: a0ef9925d1bcb84ea5bf733221875d0322cc6df1
 workflow-type: tm+mt
-source-wordcount: '1084'
+source-wordcount: '1116'
 ht-degree: 4%
 
 ---
@@ -14,10 +15,14 @@ ht-degree: 4%
 
 ## 簡介
 
+>[!NOTE]
+>
+> 自訂函式必須與ECMAScript 5 (ES5)相容。 Foundation Forms僅支援ES5；不支援使用較新的ECMAScript版本（ES6及更新版本），而且可能會導致錯誤或意外行為。
+
 AEM Forms 6.5匯入定義JavaScript函式的功能，以在使用規則編輯器定義複雜商業規則時使用這些函式。 AEM Forms提供許多立即可用的自訂函式，但您需要定義自己的自訂函式，並在多個表單中使用這些函式。
 
 自訂函式可協助處理輸入的資料，以符合指定的需求，進而擴充表單的功能。 它們還可以根據預先定義的條件來啟用表單行為的動態變更。
-在調適型Forms中，您可以使用調適型表單[&#128279;](/help/forms/using/rule-editor.md)的規則編輯器中的自訂函式，為表單欄位建立特定的驗證規則。
+在調適型Forms中，您可以使用調適型表單[的](/help/forms/using/rule-editor.md)規則編輯器中的自訂函式，為表單欄位建立特定的驗證規則。
 讓我們瞭解自訂功能的使用方式，使用者可在其中輸入電子郵件地址，而您想要確保輸入的電子郵件地址遵循特定格式（其中包含「@」符號和網域名稱）。 將自訂函式建立為「ValidateEmail」，此函式會以電子郵件地址作為輸入，並在有效時傳回true，否則傳回false。
 
 ```javascript
@@ -87,7 +92,7 @@ function ValidateEmail(inputText)
 語法： `@return {type}`
 或者，您可以使用`@returns {type}`。
 新增函式的相關資訊，例如其目標。
-{type}代表函式的傳回型別。 允許的傳回型別為：
+  {type}代表函式的傳回型別。 允許的傳回型別為：
 
    1. 字串
    1. 數字
@@ -100,7 +105,7 @@ function ValidateEmail(inputText)
 
   使用@this可參照寫入規則的最適化表單元件。
 
-  以下範例是根據欄位值。 在以下範例中，規則會隱藏表單中的欄位。 `this.value`的`this`部分參考寫入規則的基礎調適型表單元件。
+  以下範例是根據欄位值。 在以下範例中，規則會隱藏表單中的欄位。 `this`的`this.value`部分參考寫入規則的基礎調適型表單元件。
 
   ```
      /**
@@ -198,9 +203,9 @@ var c = {
 
 1. 儲存您的變更。
 
-1. 在`clientlibs`資料夾下建立名為`js`的資料夾。
-1. 在`js`資料夾下建立名為`functions.js`的JavaScript檔案
-1. 在`clientlibs`資料夾下建立名為`js.txt`的檔案。
+1. 在`js`資料夾下建立名為`clientlibs`的資料夾。
+1. 在`functions.js`資料夾下建立名為`js`的JavaScript檔案
+1. 在`js.txt`資料夾下建立名為`clientlibs`的檔案。
 1. 儲存您的變更。
 已建立的檔案夾結構如下所示：
 
@@ -261,4 +266,4 @@ var c = {
 
 ![正在新增自訂函式使用者端程式庫](/help/forms/using//assets/calculateage-customfunction.png)
 
-現在，讓我們瞭解如何在AEM Forms[&#128279;](/help//forms/using/rule-editor.md)中使用規則編輯器的Invoke服務來設定和使用自訂函式。
+現在，讓我們瞭解如何在AEM Forms[中使用](/help//forms/using/rule-editor.md)規則編輯器的Invoke服務來設定和使用自訂函式。
