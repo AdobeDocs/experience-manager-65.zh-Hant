@@ -6,9 +6,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
 exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
-source-git-commit: a0ef9925d1bcb84ea5bf733221875d0322cc6df1
+source-git-commit: a750a6093ae8ba6b43c46af52077ed3773d59a20
 workflow-type: tm+mt
-source-wordcount: '9732'
+source-wordcount: '9595'
 ht-degree: 5%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 5%
 
 ## [!DNL Experience Manager] 6.5.24.0包含的內容 {#what-is-included-in-aem-6524}
 
-[!DNL Experience Manager] 6.5.24.0包含新功能、客戶要求的重要增強功能和錯誤修正。 此外，還包含自2019年4月6.5首次推出以來的效能、穩定性和安全性改善專案。 在[&#x200B; 6.5上](#install)安裝此Service Pack[!DNL Experience Manager]。
+[!DNL Experience Manager] 6.5.24.0包含新功能、客戶要求的重要增強功能和錯誤修正。 此外，還包含自2019年4月6.5首次推出以來的效能、穩定性和安全性改善專案。 在[ 6.5上](#install)安裝此Service Pack[!DNL Experience Manager]。
 
 <!-- UPDATE FOR EACH NEW RELEASE -->
 
@@ -641,26 +641,26 @@ ContextHub不再在發佈頁面上插入第二個jQuery副本。 區段引擎使
 
 ### AEM Forms的已知問題 {#known-issues-aem-forms-6524}
 
+* **FORMS-14521**&#x200B;如果使用者嘗試預覽含有已儲存XML資料的草稿信件，某些特定信件的草稿信件會卡在`Loading`狀態。
+* **FORMS-16603**&#x200B;在互動式通訊代理程式UI的列印預覽中，部分計算值無法正確顯示。
+* **FORMS-15681**&#x200B;在「列印預覽」中檢視信函時，內容會變更。 也就是說，某些空格會消失，而某些字母會以`x`取代。
+* **FORMS-15428**：使用Forms附加元件更新至AEM Forms Service Pack 20 (6.5.20.0)後，依賴舊版Adobe Analytics Cloud Service （使用認證型驗證）的設定停止運作。 此問題導致Analytics規則無法正確執行。
+* **FORMS-16557**&#x200B;在互動式通訊代理程式UI的列印預覽中，所有欄位值都會不一致地顯示貨幣符號（例如美元符號$）。 對於最多999的值會顯示它，但對於1000或以上的值則遺失。
+* **FORMS-16575**&#x200B;互動式通訊中對巢狀配置片段XDP所做的任何修改都不會反映在IC編輯器中。
+* **FORMS-21378**&#x200B;啟用伺服器端驗證(SSV)時，表單提交可能會失敗。 如果您遇到此問題，請聯絡Adobe支援以尋求協助。
+* **FORMS-23722** （指派任務中遺失檔案附件）：將具有&#x200B;**檔案附件**&#x200B;欄位（使用bindref）的表單提交至使用&#x200B;**指派任務**&#x200B;步驟的AEM工作流程時，從收件匣開啟任務時不會顯示附件。 檔案會正確儲存至存放庫，但指派工作步驟UI無法顯示附件。
+
+#### 可用的Hotfix問題 {#aem-forms-issues-with-hotfixes}
+
 >[!NOTE]
 >
 >在沒有可用的Hotfix時，請避免升級至Service Pack 6.5.24.0以解決問題。 這可能會導致意外的錯誤。 只有在發行必要的Hotfix之後，才能升級至Service Pack 6.5.24.0。
 
-#### 可用的Hotfix問題 {#aem-forms-issues-with-hotfixes}
-
 下列問題有可供下載和安裝的Hotfix。 您可以[下載並安裝Hotfix](/help/release-notes/aem-forms-hotfix.md)以解決下列問題：
-
-* **FORMS-20203**：當使用者將Struts架構從2.5.x版升級為6.x版時，AEM Forms中的原則UI無法顯示所有設定，例如新增浮水印的選項。
-
-* **FORMS-20360**：升級至AEM Forms Service Pack 6.5.24.0後，ImageToPDF轉換服務會失敗，並出現錯誤：
-  ```17:15:44,468 ERROR [com.adobe.pdfg.GeneratePDFImpl] (default task-49) ALC-PDG-001-000-ALC-PDG-011-028-Error occurred while converting the input image file to PDF. com/adobe/internal/pdftoolkit/core/encryption/EncryptionImp```
-
-* **FORMS-20478**：嘗試將型別7/8 TIFF檔案轉換成PDF時，轉換程式會失敗，錯誤為「ALC-PDG-001-000-Image2Pdf轉換失敗，原因為：com/sun/image/codec/jpeg/JPEGCodec」和「ALC-PDG-016-003-PDF後處理期間發生未知/未預期的錯誤」。 系統會嘗試使用TM ImageIO TIFF解碼器重試，但最終無法完成工作。
-
-* **FORMS-14521**：如果使用者嘗試預覽含有已儲存XML資料的草稿信件，某些特定信件的草稿信件會卡在`Loading`狀態。
 
 * AEM Forms現在包含表單元件的Struts版本從2.5.33升級至6.x。 此升級提供先前未包含在SP24中的Struts變更。 已透過[Hotfix](/help/release-notes/aem-forms-hotfix.md)新增支援，您可以下載並安裝該支援，以新增對最新版Struts的支援。
 
-* 安裝AEM Forms JEE Service Pack 21 (6.5.21.0)後，如果在`(geode-*-1.15.1.jar and geode-*-1.15.1.2.jar)`資料夾(FORMS-14926)下找到Geode jar `<AEM_Forms_Installation>/lib/caching/lib`的重複專案，請執行以下步驟以解決問題：
+* **FORMS-14926**&#x200B;安裝AEM Forms JEE Service Pack 21 (6.5.21.0)後，如果在`(geode-*-1.15.1.jar and geode-*-1.15.1.2.jar)`資料夾下發現重複的Geode jars `<AEM_Forms_Installation>/lib/caching/lib`專案，請執行以下步驟以解決問題：
 
    1. 停止儲位（如果它們正在執行）。
    2. 停止AEM伺服器。
@@ -669,32 +669,14 @@ ContextHub不再在發佈頁面上插入第二個jQuery副本。 區段引擎使
    5. 在管理員模式中開啟命令提示字元。
    6. 使用`geode-*-1.15.1.2.jar`檔案安裝Geode修補程式。
 
-* 當使用者從AEM 6.5 Forms Service Pack 18或19升級為Service Pack 20或21時，他們遇到JSP編譯錯誤。 此錯誤會阻止他們開啟或建立最適化表單。 它也會導致其他AEM介面發生問題。 這些介麵包含頁面編輯器、AEM Forms UI、工作流程編輯器和系統概覽UI。 (FORMS-15256)
+* **FORMS-15256**&#x200B;當使用者從AEM 6.5 Forms Service Pack 18或19升級為Service Pack 20或21時，他們遇到JSP編譯錯誤。 此錯誤會阻止他們開啟或建立最適化表單。 它也會導致其他AEM介面發生問題。 這些介麵包含頁面編輯器、AEM Forms UI、工作流程編輯器和系統概覽UI。
 
   如果您遇到這類問題，請執行以下步驟來解決問題：
    1. 導覽至CRXDE中的目錄`/libs/fd/aemforms/install/`。
    2. 刪除名稱為`com.adobe.granite.ui.commons-5.10.26.jar`的組合。
    3. 重新啟動AEM伺服器。
 
-* 在互動式通訊代理程式UI的列印預覽中，所有欄位值都會不一致地顯示貨幣符號（例如美元符號$）。 對於最多999的值會顯示它，但對於1000或以上的值則遺失。 (FORMS-16557)
-* 互動式通訊中巢狀配置片段XDP的任何修改都不會反映在IC編輯器中。 (FORMS-16575)
-* 在互動式通訊代理程式UI的列印預覽中，部分計算值無法正確顯示。 (FORMS-16603)
-* 在「列印預覽」中檢視信函時，內容會變更。 也就是說，某些空格會消失，而某些字母會以`x`取代。 (FORMS-15681)
-* **FORMS-15428**：使用Forms附加元件更新至AEM Forms Service Pack 20 (6.5.20.0)後，依賴舊版Adobe Analytics Cloud Service （使用認證型驗證）的設定停止運作。 此問題導致Analytics規則無法正確執行。
-
-* 當使用者設定WebLogic 14c執行個體時，在JBoss®上執行的JEE上的AEM Forms Service Pack 21 (6.5.21.0)中的PDFG服務會失敗，因為類別載入器衝突涉及SLF4J程式庫。 錯誤顯示如下(CQDOC-22178)：
-
-  ```java
-  Caused by: java.lang.LinkageError: loader constraint violation: when resolving method "org.slf4j.impl.StaticLoggerBinder.getLoggerFactory()Lorg/slf4j/ILoggerFactory;"
-  the class loader org.ungoverned.moduleloader.ModuleClassLoader @404a2f79 (instance of org.ungoverned.moduleloader.ModuleClassLoader, child of 'deployment.adobe-livecycle-jboss.ear'
-  @7e313f80 org.jboss.modules.ModuleClassLoader) of the current class, org/slf4j/LoggerFactory, and the class loader 'org.slf4j.impl@1.1.0.Final-redhat-00001' @506ab52
-  (instance of org.jboss.modules.ModuleClassLoader, child of 'app' jdk.internal.loader.ClassLoaders$AppClassLoader) for the method's defining class, org/slf4j/impl/StaticLoggerBinder,
-  have different Class objects for the type org/slf4j/ILoggerFactory used in the signature.
-  ```
-
-* **FORMS-21378**：啟用伺服器端驗證(SSV)時，表單提交可能會失敗。 如果您遇到此問題，請聯絡Adobe支援以尋求協助。
-
-* **FORMS-23703**：若未使用預設值設定`contains`規則，最適化表單的伺服器端驗證會失敗。 您可以安裝最新版的[AEM Forms 6.5.24.0 Service Pack](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases#aem-65-forms-releases)以修正問題。
+* **FORMS-23703**&#x200B;若未使用預設值設定`contains`規則，最適化表單的伺服器端驗證會失敗。 您可以安裝最新版的[AEM Forms 6.5.24.0 Service Pack](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases#aem-65-forms-releases)以修正問題。
 
 * 表單資料模型聯結器可能無法驗證，因為預設不允許所需的關鍵字和規則運算式模式。 若要解決此問題，請透過Configuration Manager (`/system/console/configmgr`)新增下列專案：
 
@@ -703,15 +685,13 @@ ContextHub不再在發佈頁面上插入第二個jQuery副本。 區段引擎使
 
      >[!VIDEO](https://video.tv.adobe.com/v/3479697)
 
-* **FORMS-23979。**： HTML到PDF的轉換(PDFG)可能會遇到間歇性逾時。 適用於SP24的較新版本Forms附加元件隨後發行，其中包含此修正。 如果您遇到此問題，請將您的環境更新為[6.5.24.0的](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases#aem-65-forms-releases)最新發行的Forms附加元件。
-
-* **FORMS-23722** （指派工作中遺漏檔案附件）：將含有&#x200B;**檔案附件**&#x200B;欄位的表單提交至使用&#x200B;**指派工作**&#x200B;步驟的AEM工作流程時，從收件匣開啟工作時附件不會顯示。 檔案會正確儲存到存放庫，並在CRX中可見；只有「指派任務」步驟UI不會顯示它們。
-
-* **FORMS-23717**&#x200B;在表單資料模型搜尋中，即使不存在相關實體，UI中也會顯示HTML標籤。
+* **FORMS-23979** HTML-PDF轉換(PDFG)可能會遇到間歇性逾時。 適用於SP24的較新版本Forms附加元件隨後發行，其中包含此修正。 如果您遇到此問題，請將您的環境更新為[6.5.24.0的](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases#aem-65-forms-releases)最新發行的Forms附加元件。
 
 * **FORMS-23717**&#x200B;升級至&#x200B;**AEM Forms6.5.24.0**&#x200B;後，`server.log`和`error.log`可能會充滿重複的警告訊息，例如&#x200B;*安全剖析器工廠建立失敗*&#x200B;或不支援&#x200B;*安全性屬性……*。 記錄檔可能會以每秒&#x200B;**5到10行的速度增加** （每小時數百個MB），這會填滿磁碟並封鎖生產轉出。 **修正：**&#x200B;包含在AEM Forms **6.5.25.0**&#x200B;中。 **直到：**
 
   若要減少記錄磁碟區，請在應用程式伺服器設定中或透過JVM引數`com.adobe.util.XMLSecurityUtil`將`ERROR`的記錄層級設定為`-Dlogging.level.com.adobe.util.XMLSecurityUtil=ERROR`。 這只會隱藏訊息，不會修正根本原因。
+
+* **FORMS-23875**&#x200B;在表單資料模型搜尋中，即使不存在相關實體，UI中也會顯示HTML標籤。 若要解決此問題，請從[連結](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/bb-expressionmanager-pkg-10.0.48.zip)下載並安裝Hotfix。
 
 ## 包含的 OSGi 套件和內容套件{#osgi-bundles-and-content-packages-included}
 
@@ -729,6 +709,6 @@ ContextHub不再在發佈頁面上插入第二個jQuery副本。 區段引擎使
 
 >[!MORELIKETHIS]
 >
->* [[!DNL Experience Manager] 產品頁面](https://business.adobe.com/tw/products/experience-manager/adobe-experience-manager.html)
+>* [[!DNL Experience Manager] 產品頁面](https://business.adobe.com/products/experience-manager/adobe-experience-manager.html)
 >* [[!DNL Experience Manager] 6.5檔案](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65)
 >* [訂閱Adobe優先產品更新](https://www.adobe.com/tw/subscription/priority-product-update.html)
