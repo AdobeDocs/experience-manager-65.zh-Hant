@@ -6,9 +6,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
 exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
-source-git-commit: 7fdfcc9964bccfea03304e6cae3b5569421720ed
+source-git-commit: 3e1f704d1d0e64deefe157338ab5081521a45c3c
 workflow-type: tm+mt
-source-wordcount: '9628'
+source-wordcount: '9855'
 ht-degree: 5%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 5%
 
 ## [!DNL Experience Manager] 6.5.24.0包含的內容 {#what-is-included-in-aem-6524}
 
-[!DNL Experience Manager] 6.5.24.0包含新功能、客戶要求的重要增強功能和錯誤修正。 此外，還包含自2019年4月6.5首次推出以來的效能、穩定性和安全性改善專案。 在[&#x200B; 6.5上](#install)安裝此Service Pack[!DNL Experience Manager]。
+[!DNL Experience Manager] 6.5.24.0包含新功能、客戶要求的重要增強功能和錯誤修正。 此外，還包含自2019年4月6.5首次推出以來的效能、穩定性和安全性改善專案。 在[ 6.5上](#install)安裝此Service Pack[!DNL Experience Manager]。
 
 <!-- UPDATE FOR EACH NEW RELEASE -->
 
@@ -654,9 +654,12 @@ Adobe打算在產品生命週期結束前保留這些較舊的端點。 Adobe不
 * **FORMS-16557**&#x200B;在互動式通訊代理程式UI的列印預覽中，所有欄位值都會不一致地顯示貨幣符號（例如美元符號$）。 對於最多999的值會顯示它，但對於1000或以上的值則遺失。
 * **FORMS-16575**&#x200B;互動式通訊中對巢狀配置片段XDP所做的任何修改都不會反映在IC編輯器中。
 * **FORMS-21378**&#x200B;啟用伺服器端驗證(SSV)時，表單提交可能會失敗。 如果您遇到此問題，請聯絡Adobe支援以尋求協助。
+
 * **FORMS-23722** （指派任務中遺失檔案附件）：將具有&#x200B;**檔案附件**&#x200B;欄位（使用bindref）的表單提交至使用&#x200B;**指派任務**&#x200B;步驟的AEM工作流程時，從收件匣開啟任務時不會顯示附件。 檔案會正確儲存至存放庫，但指派工作步驟UI無法顯示附件。
 
-#### 可用的Hotfix問題 {#aem-forms-issues-with-hotfixes}
+* **FORMS-23802** （當表單位於Sites頁面中時未載入自訂函式）：當最適化表單嵌入到Sites頁面中，且aem-forms-core-component程式庫的版本小於1.1.76時，自訂函式在預覽或發佈中無法運作。您可能會在記錄檔中看到`InvalidFormContainerException: No form container found`之類的錯誤。 若要解決此問題，請[下載並安裝適用於AEM Forms SP24 (AddOn 6.0.1454)的Hotfix](/help/release-notes/aem-forms-hotfix.md)。
+
+#### 可用Hotfix的已知問題 {#aem-forms-issues-with-hotfixes}
 
 <!-- 
 >[!NOTE]
@@ -665,7 +668,15 @@ Adobe打算在產品生命週期結束前保留這些較舊的端點。 Adobe不
 
 下列問題有可供下載和安裝的Hotfix。 您可以[下載並安裝Hotfix](/help/release-notes/aem-forms-hotfix.md)以解決下列問題：
 
-<!--* **FORMS-23881** On AEM Forms JEE deployments set up using the 6.5.23.0 full installer, Output Service fails to process requests when a custom XCI file is supplied in the invocation. To resolve this issue, install the latest AEM 6.5.24.0 Forms Service Pack from the [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html) portal.-->
+<!--* FORMS-23881 On AEM Forms JEE deployments set up using the 6.5.23.0 full installer, Output Service fails to process requests when a custom XCI file is supplied in the invocation. To resolve this issue, install the latest AEM 6.5.24.0 Forms Service Pack from the [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html) portal.-->
+
+* **FORMS-23789** (僅限JEE上的AEM Forms)：使用者在JEE SP24上的AEM Forms中遇到Log4j問題，導致企業客戶的記錄與監視中斷。 若要解決此問題，請在JEE Service Pack [上](/help/release-notes/aem-forms-hotfix.md)下載並安裝AEM Forms的Hotfix6.5.24.0。
+
+* **FORMS-23802**&#x200B;當表單位於具有舊版aem-forms-core-component (&lt;1.1.76)的Sites頁面時，自訂函式不會載入預覽或發佈中。 若要解決此問題，請安裝適用於SP24的[AEM Forms AddOn Hotfix 6.0.1454](/help/release-notes/aem-forms-hotfix.md)。
+
+* **FORMS-23789** (僅限JEE上的AEM Forms)：使用者在JEE SP24上的AEM Forms中遇到Log4j問題，導致企業客戶的記錄與監視中斷。 若要解決此問題，請在JEE Service Pack [上](/help/release-notes/aem-forms-hotfix.md)下載並安裝AEM Forms的Hotfix6.5.24.0。
+
+* **FORMS-23802**&#x200B;當表單位於具有舊版aem-forms-core-component (&lt;1.1.76)的Sites頁面時，自訂函式不會載入預覽或發佈中。 若要解決此問題，請安裝適用於SP24的[AEM Forms AddOn Hotfix 6.0.1454](/help/release-notes/aem-forms-hotfix.md)。
 
 * AEM Forms現在包含表單元件的Struts版本從2.5.33升級至6.x。 此升級提供先前未包含在SP24中的Struts變更。 已透過[Hotfix](/help/release-notes/aem-forms-hotfix.md)新增支援，您可以下載並安裝該支援，以新增對最新版Struts的支援。
 
@@ -685,7 +696,7 @@ Adobe打算在產品生命週期結束前保留這些較舊的端點。 Adobe不
    2. 刪除名稱為`com.adobe.granite.ui.commons-5.10.26.jar`的組合。
    3. 重新啟動AEM伺服器。
 
-* **FORMS-23703**&#x200B;若未使用預設值設定`contains`規則，最適化表單的伺服器端驗證會失敗。 您可以安裝最新版的[AEM Forms 6.5.24.0 Service Pack](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases#aem-65-forms-releases)以修正問題。
+* **FORMS-23703**&#x200B;若未使用預設值設定`contains`規則，最適化表單的伺服器端驗證會失敗。 您可以安裝最新版的[AEM Forms 6.5.24.0 Service Pack](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases#aem-65-forms-releases)以修正問題。
 
 * **GRANITE-63681**&#x200B;表單資料模型聯結器可能無法驗證，因為預設不允許必要的關鍵字和Regex模式。 若要解決此問題，請從[連結](/help/release-notes/aem-forms-hotfix.md)下載並安裝Hotfix。
 
@@ -696,11 +707,11 @@ Adobe打算在產品生命週期結束前保留這些較舊的端點。 Adobe不
 
     >[!VIDEO](https://video.tv.adobe.com/v/3479697)-->
 
-* **FORMS-23979** HTML-PDF轉換(PDFG)可能會遇到間歇性逾時。 適用於SP24的較新版本Forms附加元件隨後發行，其中包含此修正。 如果您遇到此問題，請將您的環境更新為[6.5.24.0的](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases#aem-65-forms-releases)最新發行的Forms附加元件。
+* **FORMS-23979** HTML-PDF轉換(PDFG)可能會遇到間歇性逾時。 適用於SP24的較新版本Forms附加元件隨後發行，其中包含此修正。 如果您遇到此問題，請將您的環境更新為[6.5.24.0的](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases#aem-65-forms-releases)最新發行的Forms附加元件。
 
-* **FORMS-23717**&#x200B;升級至&#x200B;**AEM Forms6.5.24.0**&#x200B;後，`server.log`和`error.log`可能會充滿重複的警告訊息，例如&#x200B;*安全剖析器工廠建立失敗*&#x200B;或不支援&#x200B;*安全性屬性……*。 記錄檔可能會以每秒&#x200B;**5到10行的速度增加** （每小時數百個MB），這會填滿磁碟並封鎖生產轉出。 **修正：**&#x200B;包含在AEM Forms **6.5.25.0**&#x200B;中。 **直到：**
+* **FORMS-23717**&#x200B;升級至&#x200B;**AEM Forms6.5.24.0**&#x200B;後，`server.log`和`error.log`可能會充滿重複的警告訊息，例如&#x200B;*安全剖析器工廠建立失敗*&#x200B;或不支援&#x200B;*安全性屬性……*。 記錄檔可能會以每秒&#x200B;**5到10行的速度增加** （每小時數百個MB），這會填滿磁碟並封鎖生產轉出。
 
-  若要減少記錄磁碟區，請在應用程式伺服器設定中或透過JVM引數`com.adobe.util.XMLSecurityUtil`將`ERROR`的記錄層級設定為`-Dlogging.level.com.adobe.util.XMLSecurityUtil=ERROR`。 這只會隱藏訊息，不會修正根本原因。
+若要減少記錄磁碟區，請在應用程式伺服器設定中或透過JVM引數`com.adobe.util.XMLSecurityUtil`將`ERROR`的記錄層級設定為`-Dlogging.level.com.adobe.util.XMLSecurityUtil=ERROR`。 這只會隱藏訊息，不會修正根本原因。
 
 * **FORMS-23875**&#x200B;在表單資料模型搜尋中，即使不存在相關實體，UI中也會顯示HTML標籤。 若要解決此問題，請從[連結](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/bb-expressionmanager-pkg-10.0.48.zip)下載並安裝Hotfix。
 
@@ -720,7 +731,7 @@ Adobe打算在產品生命週期結束前保留這些較舊的端點。 Adobe不
 
 >[!MORELIKETHIS]
 >
->* [[!DNL Experience Manager] 產品頁面](https://business.adobe.com/tw/products/experience-manager/adobe-experience-manager.html)
+>* [[!DNL Experience Manager] 產品頁面](https://business.adobe.com/products/experience-manager/adobe-experience-manager.html)
 >* [[!DNL Experience Manager] 6.5檔案](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65)
 >* [訂閱Adobe優先產品更新](https://www.adobe.com/tw/subscription/priority-product-update.html)
 
