@@ -694,7 +694,7 @@ Adobe打算在產品壽命結束前保持這些較舊的端點可用。 Adobe不
    2. 刪除名為`com.adobe.granite.ui.commons-5.10.26.jar`的捆綁包。
    3. 重新啟動AEM伺服器。
 
-* **FORMS-23703**&#x200B;若未使用預設值設定`contains`規則，最適化表單的伺服器端驗證會失敗。 您可以安裝最新版的[AEM Forms 6.5.24.0 Service Pack](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases#aem-65-forms-releases)以修正問題。
+* **FORMS-23703**&#x200B;若未使用預設值設定`contains`規則，最適化表單的伺服器端驗證會失敗。 您可以安裝最新版的[AEM Forms 6.5.24.0 Service Pack](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases#aem-65-forms-releases)以修正問題。
 
 * **GRANITE-63681**&#x200B;表單資料模型聯結器可能無法驗證，因為預設不允許必要的關鍵字和Regex模式。 若要解決此問題，請從[連結](/help/release-notes/aem-forms-hotfix.md)下載並安裝Hotfix。
 
@@ -705,7 +705,7 @@ Adobe打算在產品壽命結束前保持這些較舊的端點可用。 Adobe不
 
     >[!VIDEO](https://video.tv.adobe.com/v/3479697)-->
 
-* **FORMS-23979** HTML-PDF轉換(PDFG)可能會遇到間歇性逾時。 隨後發佈了SP24的Forms附加模組的更新版本，其中包括該修補程式。 如果遇到此問題，請將您的環境更新為[6.5.24.0的](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases#aem-65-forms-releases)最新發佈的Forms載入項。
+* **FORMS-23979** HTML-PDF轉換(PDFG)可能會遇到間歇性逾時。 隨後發佈了SP24的Forms附加模組的更新版本，其中包括該修補程式。 如果遇到此問題，請將您的環境更新為[6.5.24.0的](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases#aem-65-forms-releases)最新發佈的Forms載入項。
 
 * **FORMS.-23717**&#x200B;升級到&#x200B;**AEM Forms6.5.24.0**&#x200B;後，`server.log`和`error.log`可能會被重複的WARN消息洪泛，例如&#x200B;*安全解析器工廠建立失敗*&#x200B;或&#x200B;*不支援安全屬性……*。 記錄檔可能會以每秒&#x200B;**5到10行的速度增加** （每小時數百個MB），這會填滿磁碟並封鎖生產轉出。
 
@@ -725,11 +725,11 @@ Adobe打算在產品壽命結束前保持這些較舊的端點可用。 Adobe不
 這些網站僅供客戶訪問。 若您是客戶並且需要存取權，請聯絡您的 Adobe 客戶經理。
 
 * [在 licensing.adobe.com 下載產品](https://licensing.adobe.com/)
-* [聯絡 Adobe 客戶支援](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-customer-support-experience#)。
+* [聯絡 Adobe 客戶支援](https://experienceleague.adobe.com/zh-hant/docs/support-resources/adobe-support-tools-guide/adobe-customer-support-experience#)。
 
 >[!MORELIKETHIS]
 >
->* [[!DNL Experience Manager] 產品頁面](https://business.adobe.com/products/experience-manager/adobe-experience-manager.html)
+>* [[!DNL Experience Manager] 產品頁面](https://business.adobe.com/tw/products/experience-manager/adobe-experience-manager.html)
 >* [[!DNL Experience Manager] 6.5檔案](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65)
 >* [訂閱Adobe優先產品更新](https://www.adobe.com/tw/subscription/priority-product-update.html)
 
