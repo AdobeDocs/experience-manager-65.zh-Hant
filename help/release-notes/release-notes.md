@@ -6,9 +6,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
 exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
-source-git-commit: 1420f4ee543940b0b95f887d14f9318862219238
+source-git-commit: cd71ed5d9516d330685afee29a86d530a10303aa
 workflow-type: tm+mt
-source-wordcount: '9765'
+source-wordcount: '9811'
 ht-degree: 5%
 
 ---
@@ -29,14 +29,14 @@ ht-degree: 5%
 | 版本 | 6.5.24.0 <!-- UPDATE FOR EACH NEW RELEASE --> |
 | 類型 | Service Pack 發行 |
 | 日期 | 2025年11月26日<!-- UPDATE FOR EACH NEW RELEASE --> |
-| 下載 URL | [軟體發佈](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.24.0.zip) <!-- UPDATE FOR EACH NEW RELEASE --> |
+| 下載 URL | [軟體分發](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.24.0.zip) <!-- UPDATE FOR EACH NEW RELEASE --> |
 
 <!-- OLD DOWNLOAD URL
 (https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.23.0.zip) -->
 
-## [!DNL Experience Manager] 6.5.24.0包含的內容 {#what-is-included-in-aem-6524}
+## [!DNL Experience Manager] 6.5.24.0中包括的內容 {#what-is-included-in-aem-6524}
 
-[!DNL Experience Manager] 6.5.24.0包含新功能、客戶要求的重要增強功能和錯誤修正。 此外，還包含自2019年4月6.5首次推出以來的效能、穩定性和安全性改善專案。 在[&#x200B; 6.5上](#install)安裝此Service Pack[!DNL Experience Manager]。
+[!DNL Experience Manager] 6.5.24.0包括新功能、客戶請求的關鍵增強功能和錯誤修復。 它還包括自2019年4月首次推出6.5以來發佈的效能、穩定性和安全性改進。 在[ 6.5上](#install)安裝此Service Pack[!DNL Experience Manager]。
 
 <!-- UPDATE FOR EACH NEW RELEASE -->
 
@@ -48,7 +48,7 @@ ht-degree: 5%
 * **傳遞自訂XCI的支援：**&#x200B;新增在指令行應用程式xmlformcmd的引數中傳遞自訂XCI的支援。 此功能可讓使用者指定自訂XCI檔案以進行測試，增強測試流程的彈性和控制力。 (LC-3923248)
 
 
-## 已修正Service Pack 24中的問題 {#fixed-issues}
+## Service Pack 24中的已修復問題 {#fixed-issues}
 
 <!-- 6.5.24.0 REVIEWERS: WHAT ARE THE KEY FEATURES AND ENHANCEMENTS THAT YOU WANT TO HIGHLIGHT IN THIS RELEASE? -->
 
@@ -56,14 +56,14 @@ ht-degree: 5%
 
 ### [!DNL Assets] {#assets-sp24}
 
-* 更新至版本6.5.23.0後，在卡片檢視中依修改日期排序資料夾會造成尋找最近修改的資產以進行內部部署的困難。 (Assets-56946)
+* 在更新到版本6.5.23.0後，按「卡視圖」中的修改日期對資料夾進行排序，在查找最近修改的內部部署資產時遇到了困難。 (Assets-56946)
 * 排程器執行期間會產生重複的警告日誌專案。 (Assets-52554)
 * 標題排序在清單檢視中無法運作。 (Assets-50716)
 * 即使按一下「取消」按鈕，「集合屬性」視窗也不會關閉。 (Assets-48504)
 
 * 嘗試在AEM 6.5.22中為資產加上註解時發生&#x200B;*無效的URL*&#x200B;錯誤。 (NPR-42684)
-* Assets中繼資料編輯器表單在執行相關或取消相關動作後未重新初始化。 (Assets-52207)
-* 當資產從遠端DAM重新同步至本機Sites時，資產的已發佈狀態錯誤地更新為`Not published`。 (Assets-48958)
+* 在執行相關或取消相關操作後，「資產元資料編輯器」表單不會重新初始化。 (Assets-52207)
+* 當遠程DAM中的資產重新同步到站點本地時，資產的已發佈狀態將錯誤地更新到`Not published`。 (Assets-48958)
 * 從SP23升級至6.5 LTS版本時發生問題。 (Assets-50541)
 
 ### [!DNL Sites]{#sites-6524}
@@ -77,27 +77,27 @@ ht-degree: 5%
 * 日期輸入和選取器在320畫素處仍完全可見。 Timewarp強制回應式調整大小，因此控制項不再在最小檢視區上裁剪或消失。 (SITES-24962)
 * 「引用」邊欄現在支援400%瀏覽器縮放，而不會失去對其內容的存取權。 邊欄使用回應式大小調整而非固定寬度，因此專案在1280×1024處仍可見且可選取。 (SITES-24972)
 * 篩選器邊欄現在能以400%縮放運作。 邊欄會以相對單位調整大小，不再封鎖或隱藏篩選控制項。 使用者可以檢視及選取每個篩選器選項，而不需要水準捲動或剪裁的點選目標。 (SITES-24981)
-* 鍵盤使用者可以在Teaser強制回應視窗中操作格式功能表。 按`Enter`清單`Space`或&#x200B;**段落格式**&#x200B;上的&#x200B;**或**&#x200B;會開啟快顯視窗、方向鍵導覽選項，而`Enter`會套用選取專案。 `Escape`關閉功能表並將焦點還原到觸發控制項，產生一致的工具列工作流程。 (SITES-25235)
+* 鍵盤用戶可以在預告模式下操作格式菜單。 按`Enter`清單`Space`或&#x200B;**段落格式**&#x200B;上的&#x200B;**或**&#x200B;會開啟快顯視窗、方向鍵導覽選項，而`Enter`會套用選取專案。 `Escape`關閉菜單並將焦點恢復到觸發控制項，從而生成一致的工具欄工作流。 (SITES-25235)
 * 「色票檢色器」彈出視窗現在會保留在檢視區內320畫素。 彈出視窗會顯示所有顏色列並支援捲動，讓作者能在小熒幕上選取任何色票。 (SITES-25274)
 * 人口統計工具列下拉式功能表現在可以使用鍵盤來完整運作。 開啟功能表會將焦點移至第一個選項、方向鍵導覽清單，以及Esc/Tab關閉或前進而不將焦點傾印至工具列。 互動式專案會使用正確的語意，以便NVDA和其他閱讀器能正確宣告選項。 (SITES-25310)
-* 內容樹狀結構中的「新增元件」運作方式與AEM 6.5 SP24上的設計一致。 錯誤初始錯誤來自本機設定中缺少作者許可權，而非來自AEM。 擁有編輯許可權的作者可以透過鍵盤或滑鼠啟動按鈕及新增元件。 (SITES-25312)
-* 人口統計工具列中的鍵盤和熒幕助讀程式存取現在能以可靠的方式運作。 使用NVDA的作者可以使用箭頭遍歷&#x200B;**Commerce**、**角色**&#x200B;和88，觀察清晰的焦點回饋，並瞭解哪個索引標籤作用中。 (SITES-25326)
+* 內容樹狀結構中的「新增元件」運作方式與AEM 6.5 SP24上的設計一致。 錯誤初始錯誤來自本機設定中缺少作者許可權，而非來自AEM。 具有編輯權限的作者可以激活按鈕，並通過鍵盤或滑鼠添加元件。 (SITES-25312)
+* 現在，「人口統計」工具欄中的鍵盤和螢幕閱讀器訪問工作可靠。 使用NVDA的作者可以使用箭頭橫穿&#x200B;**Commerce**、**個人角色**&#x200B;和88，觀察清晰的焦點反饋，並瞭解哪個頁籤處於活動狀態。 (SITES-25326)
 
 * **跳至內容**&#x200B;連結現在將鍵盤焦點移至主要內容標題。 焦點會顯示在唯一識別的目標上，因此熒幕助讀程式會朗讀正確的區段。 此變更符合WCAG 2.4.1和2.4.3。 (SITES-24061)
 * 使用&#x200B;**全選**&#x200B;後，Sites首頁樹狀結構中的鍵盤導覽會遵循邏輯順序。 焦點從&#x200B;**全選**&#x200B;移至下一個控制項（開啟左側邊欄），而非跳回到頁面開頭。 (SITES-24307)
 * Sites編輯器中的區段標題和編輯控制項會回應鍵盤焦點與啟動。 鍵盤使用者會顯示與先前僅於暫留時顯示的相同標題和動作。 (SITES-24479)
 * Sites編輯器中的按鈕會顯示描述性名稱，而不是通用或遺漏標籤。 輔助型技術會宣告正確的動作，提高清晰度並減少誤點。 (SITES-24480)
 * 熒幕助讀程式會在Sites檢視重新整理時收到口語`Loading`訊息。 更新會新增專用狀態即時區域，並以程式設計方式將訊息寫入其中，這樣可確認進度而不移動焦點。 (SITES-24481)
-* Assets側邊欄現在包含清除&#x200B;**關閉**&#x200B;控制項，並將焦點傳回切換按鈕。 鍵盤和熒幕助讀程式的使用者會立即關閉面板，而非在每個控制項之間使用Tab鍵。 此變更可減少按鍵次數，並符合預期的面板行為。 (SITES-24489)
-* 網站頁面編輯器中的ARIA標籤清單包括描述性名稱。 熒幕助讀程式現在會將控制項識別為索引標籤清單，並閱讀正確的標籤，讓使用者找到正確的索引標籤集，並可靠地在這些索引標籤之間移動。 (SITES-24492)
+* Assets側欄現在包含清除的&#x200B;**關閉**&#x200B;控制項，並將焦點返回到切換按鈕。 鍵盤和螢幕閱讀器用戶立即關閉面板，而不是在每個控制項中開啟滑鼠。 更改減少了擊鍵次數，並與預期的面板行為相匹配。 (SITES-24489)
+* 「站點頁面編輯器」中的「ARIA」頁籤清單包含描述性名稱。 螢幕閱讀器現在將控制項標識為頁籤清單並讀取正確的標籤，讓用戶找到正確的頁籤集並可靠地在它們之間移動。 (SITES-24492)
 * 在編輯器側邊欄中搜尋，現在會向熒幕朗讀程式宣告結果。 當使用者輸入時，即時狀態訊息會報告符合和更新的數量，而不會移動焦點。 鍵盤使用者會立即發現結果。 (SITES-24506)
 * 針對輔助技術使用者，可改善「清單檢視」中的列選取範圍。 核取方塊會顯示衍生自列「標題」的有意義名稱，以便公告保持簡短並正確說明動作。 (SITES-24514)
-* 更正清單檢視協助工具名稱。 表格會從非互動式元素中移除`aria-label`，並將標籤指派給可操作的連結或按鈕。 熒幕助讀程式的使用者現在可在整欄聽到準確、不重複的標籤。 (SITES-24515)
-* 在高縮放使用期間，粘性標頭停止遮住Teaser模型對話方塊。 200%和400%縮放下內容仍可讀取和使用，具有垂直流量且沒有剪裁區段。 (SITES-24523)
+* 已更正的清單視圖輔助功能名稱。 該表從非交互元素中刪除`aria-label`，並將標籤分配給可操作的連結或按鈕。 螢幕閱讀器用戶現在可以聽到整個欄中準確、不重複的標籤。 (SITES-24515)
+* 在高縮放使用期間，粘性標頭停止遮住Teaser模型對話方塊。 在200%和400%縮放時，內容仍可讀且可用，而且垂直流動和不剪切部分。 (SITES-24523)
 * 在搜尋欄位中輸入不再觸發提前宣告第一個結果或意外啟用。 體驗現在會朗讀含有結果計數的簡潔狀態訊息，而焦點會保留在欄位中，直到使用者導覽至清單為止。 (SITES-24658)
 * 文字編輯器的超連結對話方塊中的「替代文字」欄位現在會顯示程式設計標籤。 熒幕朗讀程式會朗讀欄位的`Alternative text`，並著重於正確命名的控制項。 此修正可改善鍵盤和語音使用者的導覽功能。 (SITES-24675)
-* 在參考邊欄中新增即時狀態訊息，以便輔助技術立即宣佈變更。 選取多個專案會觸發有關參考可用性的明確訊息，以防止無訊息狀態變更並減少重複動作。 (SITES-24678)
-* 「影像」對話方塊現在會透過ARIA即時區域宣佈其載入狀態。 熒幕助讀程式在旋轉圖出現時聽到`Loading, please wait`訊息。 此外，內容完成時可立即更新，以便使用者知道何時可以互動。 (SITES-24697)
+* 向「參考」欄添加了即時狀態消息，因此輔助技術會立即宣佈更改。 選擇多個項會觸發有關引用可用性的清除消息，這會防止靜默狀態更改並減少重複操作。 (SITES-24678)
+* 「影像」(Image)對話框現在通過ARIA活動區域宣佈其載入狀態。 螢幕閱讀器在顯示螢幕時聽到`Loading, please wait`條消息。 而且，內容完成時隨時更新，這樣用戶就知道何時可以進行交互。 (SITES-24697)
 * 連結選取對話方塊現在會顯示可宣告搜尋結果的即時區域。 熒幕助讀程式會在每次搜尋後聽到`results updated`狀態，而不會移動焦點，因此使用者可獲得搜尋完成的明確確認。 (SITES-24700)
 * 現在，「連結選取」對話方塊會以320畫素重排。 所有欄位和動作保持可見且可用，且水準卷軸不再出現。 (SITES-24709)
 * 現在，「連結選取」對話方塊會針對每個樹狀結構專案上的熒幕文字和存取許可權名稱使用相同的標籤。 熒幕助讀程式會在使用方向鍵移動時朗讀每個專案，包括最後一個層級，消除無訊息節點和不相符的名稱。 (SITES-24710)
@@ -105,24 +105,24 @@ ht-degree: 5%
 * 模組標題不再涵蓋320畫素寬度的內容。 標題會從粘性狀態中釋放，而對話方塊本文會捲動，因此所有欄位和動作按鈕都維持可見且可使用。 鍵盤使用者可觸及每個控制項，而不會失去焦點。 (SITES-24718)
 * 應用程式導覽連結現在會顯示適當的連結語意。 熒幕助讀程式會將每個專案宣告為連結，而非清單專案，這可改善鍵盤導覽和語音控制。 清單容器會保留清單語意，而連結則會保持可聚焦的目標。 (SITES-24719)
 * 篩選器變更時，結果狀態現在會向熒幕助讀程式宣佈。 NVDA會讀取`X of Y results`計數和`no results`訊息。 分頁狀態會使用就地更新的即時區域，讓使用者無需移動焦點即可聽到確認。 (SITES-24720)
-* 「轉盤」對話方塊中的迴轉按鈕現在會向熒幕朗讀程式朗讀單一精簡的名稱。 控制項不再重複群組標籤和輸入標籤，這會減少NVDA使用者的詳細程度和混淆。 (SITES-24725)
+* 現在，「旋轉選取」(Carousel)對話框中的旋轉按鈕會向螢幕閱讀器發佈一個簡單的名稱。 控制項不再重複群組標籤和輸入標籤，這會減少NVDA使用者的詳細程度和混淆。 (SITES-24725)
 * 「說明」功能表搜尋清單會顯示適當的語意。 容器會顯示清單，而每個結果都會維持連結，而不會有衝突的角色。 NVDA和JAWS會準確宣告連結，且導覽維持一致。 (SITES-24729)
 * Adobe已修正「使用者偏好設定」中的顏色色票快顯視窗，因此NVDA會朗讀焦點中的色票，而非先前選取的色票。 鍵盤使用者在瀏覽清單時聽到精確的顏色名稱，並可確認正確的選擇。 (SITES-24739)
 * NVDA現在會讀取樹狀目錄中的完整說明。 詳細資訊面板會將多行文字顯示為單一值，並將其連結至欄位標籤。 鍵盤使用者在Tab鍵瀏覽唯讀欄位時聽到完整的文字。 (SITES-24780)
-* 樹狀目錄現在會朗讀修改日期。 NVDA會讀取焦點移至「已修改」欄的日期。 格線會將每個日期與專案名稱繫結，讓使用者同時聽到檔案及其上次更新。 (SITES-24782)
+* 樹目錄現在將宣佈修改日期。 NVDA讀取焦點移入「已修改」列的日期。 網格將每個日期與項目名稱相關聯，以便用戶同時聽到檔案及其上次更新。 (SITES-24782)
 * 預覽模式現在會遵循使用者文字間距偏好設定。 畫布會反映所有預覽內容中的字母、單字和行高變更。 當間距增加時，文字不再保持固定或剪輯。 鍵盤和視力缺佳的使用者讀取內容時不會出現斷版問題。 (SITES-24936)
 * AEM會更正Assets編輯器頁面上的標籤順序。 Tab鍵現在會從頁首控制項移至連絡人中樞按鈕，最後會以清晰的順序移至畫布工具。 熒幕助讀程式遵循相同的順序，可消除混淆並加快鍵盤導覽。 (SITES-24937)
 * AEM會將程式化名稱新增至「卡片動作」功能表列。 熒幕助讀程式會正確宣告控制項，語音使用者可以依名稱鎖定控制項。 鍵盤導覽與焦點維持不變。 (SITES-24938)
 * 卡片檢視功能表採用增加的文字間距。 「更多動作」專案會成長，且不再截斷標籤，包括「快速發佈」。 提出字母、單字或行距的使用者可保留完整的標籤和鍵盤存取權。 (SITES-24941)
-* 已從協助工具樹狀結構中移除隱藏網站首頁表格的`presentation`角色。 表格會再次正確讀取。 NVDA和JAWS會在列和欄導覽期間偵測表格、識別標題並宣告標題關係。 (SITES-24942)
+* 已從輔助功能樹中刪除隱藏「站點」首頁表的`presentation`角色。 表再次正確讀取。 NVDA和JAWS會在列和欄導覽期間偵測表格、識別標題並宣告標題關係。 (SITES-24942)
 * 在清單檢視中排序意見是明確且一致的。 排序之後，標題會透過`aria-sort`公開順序。 它會宣告變更，而未排序的標題則不再宣告狀態，協助熒幕助讀程式使用者追蹤哪一欄控制排序。 (SITES-24943)
-* Edit Layout標題不再顯示非運作中的&#x200B;**Edit**&#x200B;按鈕。 控制項現在可作為靜態狀態標籤，且不會進入Tab鍵順序，因此鍵盤使用者不會浪費按鍵動作。 使用&#x200B;**選取其他模式**&#x200B;以變更模式，並取得熒幕助讀程式的清晰回饋。 (SITES-24950)
-* 依預設，模擬器工具列會顯示完整的裝置名稱。 標籤在載入時不再截斷，因此使用者不需猜測即可讀取和選取裝置。 文字會整齊地縮放顯示層級並縮小寬度。 (SITES-24952)
-* 模擬器工具列適合小型檢視區。 在320畫素處，裝置會列出並控制顯示而不進行剪裁，讓使用者可以選擇Galaxy S7和更新的型號。 版面會縮放和換行，以避免水準捲動，即使縮放比例為400%也是如此。 (SITES-24953)
+* Edit Layout標題不再顯示非運作中的&#x200B;**Edit**&#x200B;按鈕。 控制項現在可作為靜態狀態標籤，且不會進入Tab鍵順序，因此鍵盤使用者不會浪費按鍵動作。 使用&#x200B;**選擇其他模式**&#x200B;更改模式，並提供清晰的螢幕閱讀器反饋。 (SITES-24950)
+* 預設情況下，模擬器工具欄顯示完整的設備名稱。 標籤在載入時不再截斷，因此使用者不需猜測即可讀取和選取裝置。 文字會整齊地縮放顯示層級並縮小寬度。 (SITES-24952)
+* 模擬器工具列適合小型檢視區。 在320畫素處，裝置會列出並控制顯示而不進行剪裁，讓使用者可以選擇Galaxy S7和更新的型號。 即使在400%的縮放比例下，佈局也會縮放和纏繞，以避免水準滾動。 (SITES-24953)
 * 熒幕朗讀程式會朗讀在模擬器中選取的裝置及其測量。 NVDA會停止讀取尺標資料流；裝置按鈕會使用工具提示文字的附加說明，以減少雜訊並指引導覽。 (SITES-24955)
 * 篩選列現在會將每個選取的標籤視為動作按鈕。 清楚易存取的名稱和焦點處理可改善公告和鍵盤控制。 (SITES-24980)
 * 網站管理員篩選器檢視中的狀態更新會向熒幕朗讀程式宣告。 當使用者在專案載入時切換卡片/清單時，NVDA現在會透過即時區域朗讀`Please wait`訊息。 本指南可防止額外點按和混淆。 (SITES-24992)
-* 現在，當使用者展開左側邊欄時，鍵盤焦點會依邏輯順序移動。 焦點會直接從左側邊欄按鈕移至展開的內容，消除回溯或略過元素的必要性。 這項變更改善了熒幕助讀程式和鍵盤使用者的協助工具。 (SITES-24998)
+* 當用戶展開左滑軌時，鍵盤焦點現在按邏輯順序移動。 焦點從左滑軌按鈕直接轉移到擴展內容，無需回溯或跳過元素。 此更改提高了螢幕閱讀器和鍵盤用戶的可訪問性。 (SITES-24998)
 * **Edit**&#x200B;按鈕的熒幕助讀程式回饋現在符合控制項。 啟動按鈕會朗讀「編輯」動作而不是預覽訊息，這樣可提高清晰度，並減少非滑鼠使用者的輸入錯誤。 (SITES-25208)
 * Teaser對話方塊中的確認動作會正確向熒幕朗讀程式宣告。 控制項報告`Confirm`不是圖示描述，為鍵盤和熒幕助讀程式使用者提供明確的指引。 (SITES-25223)
 * 「說明」按鈕現在會顯示清楚的存取名稱。 熒幕助讀程式會宣告`Help`，而非詳細圖示說明。 使用者可瞭解動作，並更快找到協助。 (SITES-25224)
@@ -130,26 +130,26 @@ ht-degree: 5%
 * 熒幕助讀程式現在會在「註解」工具列中準確朗讀「註解」和「關閉註解」控制項。 NVDA不再指出誤導作者並建議了錯誤動作的`Preview button pressed,`。 宣告符合按下的按鈕，並保持工作流程清晰。 (SITES-25234)
 * 註釋工具列中的鍵盤導覽運作方式一致。 開啟模式時，焦點不再跳至「退出」，而是移至開始控制項以新增註解。 使用者可依序導覽控制項，而不需反向Tab鍵。 (SITES-25241)
 * 小熒幕檢視可在Teaser強制回應視窗中如預期般運作。 此對話方塊不再以320畫素建立水準卷軸，而且工具列在不橫向平移的情況下保持可存取性。 此更新可幫助縮放頁面的弱視使用者。 (SITES-25242)
-* 小熒幕檢視在影像模式中如預期般運作。 此對話方塊不再以320畫素建立水準卷軸，且影像工具仍可存取，不會橫向移動。 此更新可改善縮放頁面的弱視使用者的導覽。 (SITES-25244)
+* 在「影像」模式中，小螢幕視圖工作正常。 該對話框不再在320像素處建立水準捲動條，並且影像工具仍可訪問，而無需側移。 此更新可改善縮放頁面的弱視使用者的導覽。 (SITES-25244)
 * 「搜尋」模式會遵循使用者文字間距設定。 提高行高、段落間距、字母間距或字間距不再截斷文字或重疊樹狀結構。 內容在WCAG 1.4.12中重新排程，並保持完全可讀。 (SITES-25245)
 * 搜尋強制回應現在可容納小型熒幕，而不會與樹狀目錄（320畫素）重疊。 內容在對話方塊內重排，僅保持垂直捲動，並保持控制項可見。 此修正可改善可讀性和鍵盤導覽，並符合WCAG Reflow。 (SITES-25246)
-* 輪播模式溢位不再強制以電話大小的寬度水準捲動。 元件可調整為320畫素、保留垂直流量，並讓控制項保持在檢視畫面中。 這項變更改善了撰寫期間的可讀性和鍵盤存取權。 (SITES-25254)
-* 註解工作流程不再失焦。 強制回應視窗會將初始焦點置於有意義的標題上，避免焦點跳到對話方塊外，並在移除後恢復焦點至觸發程式。 熒幕助讀程式的輸出仍保持簡潔且相關。 (SITES-25257)
+* 旋轉木馬模式溢出不再強制水準滾動以電話大小的寬度。 該元件適應320像素，保留垂直流，並保持控制項的視圖。 此更改提高了創作過程中的可讀性和鍵盤訪問能力。 (SITES-25254)
+* 批注工作流不再失去焦點。 該模式將初始焦點放在有意義的標題上，防止焦點跳出對話框，並在解除後將焦點恢復到觸發器。 熒幕助讀程式的輸出仍保持簡潔且相關。 (SITES-25257)
 * **刪除註解**&#x200B;對話方塊現在可以正確處理鍵盤焦點。 開啟對話方塊會將焦點移至熒幕朗讀程式內容的標題，關閉對話方塊會將焦點傳回啟動對話方塊的&#x200B;**刪除註解**&#x200B;按鈕。 使用者不再登陸於不相關的控制項或強制回應視窗之後。 (SITES-25258)
 * Timewarp日期選擇器現在可以正確管理焦點。 按`Esc`會將焦點傳回&#x200B;**日期選擇器**&#x200B;按鈕，而選擇日期會將焦點移至連結的輸入欄位。 鍵盤和熒幕助讀程式的使用者會保留上下文，不會落在強制回應視窗後面。 (SITES-25264)
 * 熒幕助讀程式會朗讀&#x200B;**註釋**&#x200B;和&#x200B;**關閉註釋**&#x200B;按鈕的正確動作。 NVDA不再顯示`Preview button pressed`；它會朗讀按鈕名稱，讓使用者知道註解模式的開始或結束時間。 (SITES-25268)
 * 註解強制回應現在會顯示清除&#x200B;**提交**&#x200B;動作。 作者可以新增註解，並使用鋼筆圖示按鈕提交，或使用`Esc`關閉強制回應視窗，而不需要猜測流量。 (SITES-25269)
 * 註解專案包含明確的動作按鈕。 此對話方塊會顯示&#x200B;**Submit**&#x200B;以儲存筆記，並顯示&#x200B;**Cancel**&#x200B;以關閉它，鍵盤皆可存取並由輔助技術宣告。 作者不再需要依賴按一下對話方塊外部或僅按下`Esc`即可完成。 (SITES-25281)
 * 註解模式現在將鍵盤焦點保持在覆蓋圖及其工具列上。 當作者按下Tab鍵時，覆蓋圖後面的頁面不再受到焦點，因此使用者保持定向且可以導覽註解而不跳到基礎內容。 (SITES-25282)
-* 「編輯配置」中的裝置選擇器可如預期運作。 當兩個裝置選項具有相似的寬度(例如，Galaxy 7旁邊的iPhone 8 Plus)時，選取的按鈕會顯示工具提示以顯示完整標籤，而兩個按鈕仍可見且可存取。 (SITES-25285)
-* 在200%縮放時，「編輯配置」不再超出頁面。 工具列會完全轉譯，並在需要時顯示水準捲動，讓視力不佳的使用者恢復對先前隱藏控制項的存取。 (SITES-25288)
+* 「編輯配置」中的裝置選擇器可如預期運作。 當兩個裝置選項具有相似的寬度（例如，Galaxy 7旁邊的iPhone 8 Plus）時，選取的按鈕會顯示工具提示以顯示完整標籤，而兩個按鈕仍可見且可存取。 (SITES-25285)
+* 在200%縮放時，「編輯配置」不再超出頁面。 工具欄將全面呈現，並在需要時顯示水準滾動，從而恢復對低視覺用戶以前隱藏的控制項的訪問。 (SITES-25288)
 * 「版面配置預覽」中的Tab鍵順序現在會從主要工具列直接移至「人口統計」工具列。 鍵盤和熒幕助讀程式的使用者可以按照可預測的順序周遊控制項，而不必跳至次要工具列。 此變更與WCAG 2.4.3焦點順序一致。 (SITES-25305)
-* 將頁面縮放至200%不再隱藏「人口統計」工具列的一部分。 工具列區段可管理溢位並在其區域提供捲動，讓每個控制項都能以高放大率顯示和操作。 (SITES-25309)
-* 「人口統計」工具列中的文字輸入現在會顯示正確的存取名稱。 每個欄位都包含唯一ID和程式設計標籤，因此熒幕助讀程式會朗讀欄位的用途，而使用者可以依標籤導覽。 可見標籤位於控制項附近，以改善低視力可讀性。 (SITES-25316)
+* 將頁面縮放至200%不再隱藏「人口統計」工具列的一部分。 工具欄部分管理溢出並提供在其自己區域中的滾動，使每個控制項保持可見並以高放大率可操作。 (SITES-25309)
+* 「人口統計」工具欄中的文本輸入現在會顯示適當的可訪問名稱。 每個欄位都包含唯一ID和程式設計標籤，因此熒幕助讀程式會朗讀欄位的用途，而使用者可以依標籤導覽。 可見標籤位於控制項附近，以改善低視力可讀性。 (SITES-25316)
 * 現在，編輯按鈕在次要工具列中向熒幕朗讀程式宣告正確的動作。 啟用它將會讀取`Edit`，而非不相關的`Preview button pressed,`，這會移除鍵盤導覽期間的混淆。 (SITES-25320)
 * 「人口統計」工具列「購物車」滑桿現在會顯示適當的存取名稱。 熒幕助讀程式會宣告`Cart total`，而語音輸入工具可依名稱鎖定控制項，以改善WCAG 4.1.2 （名稱、角色、值）的相容性。 (SITES-25322)
-* 現在，當作者使用方向鍵變更值時，人口統計工具列滑桿會保持焦點。 焦點不再跳至「購物車」按鈕，因此鍵盤使用者會持續調整值，而熒幕助讀程式會朗讀每次變更。 (SITES-25324)
-* 搜尋Assets現在會以320畫素（大約400%縮放）完全重排。 強制回應視窗可讓標題、欄位和動作保持可讀性和不重疊，讓作者無須水準捲動即可搜尋。 (SITES-25330)
+* 當作者使用箭頭鍵更改值時，「人口統計」工具欄滑塊將保持焦點。 焦點不再跳到購物車按鈕，因此鍵盤用戶會不斷調整值，螢幕閱讀器會宣佈每次更改。 (SITES-25324)
+* Search Assets（搜索資產）現在以320像素（大約400%的縮放比例）乾淨利落的速度在Reflow。 該模式使標題、欄位和操作保持可讀和不重疊，因此作者可以在不水準滾動的情況下進行搜索。 (SITES-25330)
 * 編輯器中的Assets面板遵循邏輯焦點順序。 每個縮圖上的鍵盤使用者索引標籤都能存取面板退出控制項。 此變更移除略過並改善與WCAG 2.4.3的相容性。 (SITES-25360)
 * AEM會更新Teaser強制回應視窗之RTF編輯器中的&#x200B;**清單**&#x200B;和&#x200B;**段落**&#x200B;按鈕，以公開其展開和收合狀態。 按鈕現在會切換`aria-expanded`並宣告熒幕朗讀程式的狀態變更。 作者在開啟或關閉格式功能表前，可獲得清楚的意見反應並避免猜測。 (SITES-25365)
 * AEM會在Teaser強制回應中宣佈載入狀態。 強制回應現在會在內容載入時顯示即時狀態訊息，因此NVDA和JAWS會說`Loading, please wait.`作者應該會收到清楚的回饋，並在對話方塊準備就緒之前避免與對話方塊互動。 (SITES-25366)
@@ -157,7 +157,7 @@ ht-degree: 5%
 * 修正極窄檢視區之「附註」面板中的UI行為。 在320畫素，標題和新增控制項先前發生衝突；工具列現在重新對齊並保留元素之間的明確分離。 作者可以在不遺失資訊或功能的情況下操作控制項。 (SITES-25376)
 * 修正&#x200B;**Teaser**&#x200B;對話方塊的&#x200B;**連結與動作**&#x200B;索引標籤中的延遲錯誤狀態。 在作者啟用&#x200B;**Call to action**&#x200B;並修正空白或無效的欄位後，索引標籤會清除其錯誤樣式和圖示並移除`aria-invalid`。 欄位驗證後，熒幕助讀程式不再宣告錯誤。 (SITES-25527)
 * 網站管理員表單中的錯誤處理現在符合協助工具的期望。 驗證失敗時，頁面會立即顯示錯誤、將焦點移至可用的訊息目標，並向熒幕閱讀程式（例如JAWS）公開文字。 (SITES-27138)
-* 在Sites中建立資料夾時，現在會顯示清除的確認快顯通知。 JAWS會透過即時區域公告訊息，讓作者在動作後立即收到可存取的意見回饋。 (SITES-27141)
+* 現在，在「站點」中建立資料夾時會顯示一個明確的確認Toast。 JAWS會透過即時區域公告訊息，讓作者在動作後立即收到可存取的意見回饋。 (SITES-27141)
 * 修正編寫對話方塊中的影像在轉譯時不含替代文字的協助工具間隙。 此對話方塊現在會視需要提供描述性替代文字，而純視覺化元素則提供空白替代文字，藉此還原JAWS和其他熒幕朗讀程式的相容行為。 (SITES-27153)
 * 改善編寫對話方塊中的錯誤處理。 發生設定錯誤時，UI會顯示明確文字，並透過警示區域觸發熒幕朗讀程式宣告。 作者會立即收到意見反應，且可在不失去內容的情況下修正問題。 (SITES-27155)
 * 修正Sites Admin中的Reflow協助工具缺陷。 在400%的瀏覽器縮放比例下，工具列和格線控制項會重疊並在熒幕外推播按鍵動作，因此會封鎖鍵盤導覽和熒幕助讀程式的使用。 版面現在會正確重排，使搜尋、篩選和動作按鈕保持可見，並可在400%縮放下操作。 (SITES-27238)
@@ -171,12 +171,12 @@ ht-degree: 5%
 * 說明RTE封鎖了前進索引標籤導覽，並中斷了對話方塊流程。 此修正可恢復標準鍵盤移動。 作者使用單一標籤繼續通過欄位，並保持選擇順序可預測。 (SITES-35228)
 * 製作控制項缺少可存取的名稱和公開的原始圖示文字，這會讓JAWS感到困惑。 此修正新增明確的ARIA標籤和標準角色。 公告內容正確無誤，符合協助工具的期望。 (SITES-35227)
 * 「類別」下拉式清單缺少特定標籤，因此JAWS以泛型`images button menu.`表示。更新會命名控制項`Categories`並定義其角色。 熒幕助讀程式的使用者可聽到正確的標籤，並瞭解可用的選擇。 (SITES-35226)
-* 「屬性」對話方塊會顯示資料格線，將熒幕閱讀程式視為純文字。 JAWS和NVDA錯過了焦點，並且無法宣告列和欄。 此修正會新增真正的表格語意和ARIA角色。 熒幕助讀程式現在可辨識表格並正確追蹤焦點。 (SITES-35225)
-* 內容片段文字編輯器已載入截斷的動作列。 圖示被剪裁，溢位功能表無法連線。 更新會修正版面，使完整工具列保持可見且可存取。 (SITES-33005)
+* 「屬性」對話框顯示一個資料網格，螢幕閱讀器被視為純文字檔案。 JAWS和NVDA錯過了焦點，並且無法宣告列和欄。 此修正會新增真正的表格語意和ARIA角色。 熒幕助讀程式現在可辨識表格並正確追蹤焦點。 (SITES-35225)
+* 內容片段文字編輯器已載入截斷的動作列。 圖示被剪裁，溢位功能表無法連線。 更新會修復佈局，使完整工具欄保持可見且可訪問。 (SITES-33005)
 * 基本索引標籤表單欄位無法顯示有用的錯誤文字。 表單現在會顯示清楚的內嵌訊息，並將其連結至欄位，以供熒幕助讀程式使用。 鍵盤和輔助技術使用者可獲得立即的指引來修正輸入。 (SITES-32480)
 * 自訂元件中使用的多欄位會顯示未標籤的圖示按鈕和不一致的Tab順序。 JAWS/NVDA僅宣告`button`或略過控制項，這些控制項會封鎖鍵盤操作。 此更新提供新增、移除和移動的描述性名稱，標準化定位停駐點，並宣佈清單更新以符合ADA的期望。 (SITES-30660)
 * 「快速發佈」現在會傳回明確的成功通知。 對話方塊關閉，快顯通知確認動作，熒幕朗讀程式會朗讀訊息，讓作者不會錯過結果。 (SITES-26912)
-* 不需要變更。 Adobe已檢閱搜尋圖示與附近文字重疊的宣告。 標題含有客戶新增的標籤；vanilla AEM只會呈現圖示。 乾淨的執行個體以100%縮放顯示正確的版面，因此錯誤會因超出範圍而關閉。 (SITES-26910)
+* 無需更改。 Adobe查看了搜索表徵圖與附近文本重疊的聲明。 標題包含客戶添加的標籤；香AEM草只呈現表徵圖。 乾淨的實例以100%縮放顯示正確的佈局，因此Bug已關閉，因為超出範圍。 (SITES-26910)
 * 建立頁面主題不再隱藏焦點狀態。 在鍵盤導覽期間，**基本**&#x200B;索引標籤和相鄰的索引標籤上會呈現一致的醒目提示。 此變更可讓低視力使用者恢復可預測、可感知的焦點回饋。 (SITES-26907)
 
 
@@ -205,7 +205,7 @@ ht-degree: 5%
 
 * 內容片段編輯器無法開啟Polaris資產選擇器，因為已刪除必要的IMS範圍。 此修正會還原最小範圍，並重新建立傳遞連線。 資產瀏覽和選取功能可再次運作，且沒有HTTP 500錯誤。 (SITES-35837)
 
-#### [!DNL Content Fragments] - GraphQL API {#sites-graphql-api-6524}
+#### [!DNL Content Fragments] -GraphQLAPI {#sites-graphql-api-6524}
 
 每次部署後，有效的GraphQL查詢開始傳回`GraphQL_QueryValidationError`。 端點保留過時的結構描述，直到團隊清除快取或重新啟動為止。 此修正會在部署期間重新整理GraphQL結構描述和持續查詢登入，並立即還原正常回應。 (SITES-34301)
 
@@ -229,7 +229,7 @@ ht-degree: 5%
 -->
 
 
-#### ContentHub {#sites-contenthub-6524}
+#### 內容集線器 {#sites-contenthub-6524}
 
 ContextHub不再在發佈頁面上插入第二個jQuery副本。 區段引擎使用者端程式庫捨棄了提取jQuery 1.12.4的cq.shared相依性，因此網站載入一致的jQuery且前端程式碼能以可靠的方式運作。 (SITES-30404)
 
@@ -249,13 +249,13 @@ ContextHub不再在發佈頁面上插入第二個jQuery副本。 區段引擎使
 
 #### 啟動{#sites-launches-6524}
 
-* 刪除非常大的Launch會凍結存放庫。 此工作佇列太多移除作業，導致其他請求無法運作。 此修正現在會批次刪除並在區塊之間產生，因此清理會在系統保持回應狀態時完成。 (SITES-32004)
+* 刪除非常大的Launch會凍結存放庫。 作業排隊了太多的刪除，並擱置了其他請求。 修復程式現在會在塊之間批量刪除並生成，因此在系統保持響應時完成清理。 (SITES-32004)
 
 * 啟動設定>屬性顯示運作中的公司和屬性下拉式清單。 **儲存**&#x200B;和&#x200B;**關閉**&#x200B;會遵循已完成的欄位，而且標題驗證不再觸發公司或屬性上的錯誤。 (CQ-4359853)
-* IMS設定中的必要檢查在更新時執行，而不只是在建立時。 使用者端ID或使用者端密碼等欄位中的空白值會顯示錯誤，並暫停儲存，直到輸入有效值為止，以防止重複使用先前的值。 (CQ-4359938)
+* IMS設定中的必要檢查在更新時執行，而不只是在建立時。 「客戶端ID」或「客戶端密碼」等欄位中的空值顯示錯誤，並停止保存，直到輸入有效值為止，從而防止重用先前的值。 (CQ-4359938)
 * Launch建立會顯示轉譯的驗證和錯誤字串。 建立失敗和遺失來源頁面的英文訊息將不再出現。 在Launch設定期間，作者會看到清晰、地區設定正確的意見反應。 (SITES-13085)
 * 啟動項促銷活動更新來源頁面上的頁面屬性`jcr:title`、`jcr:description`和`cq:redirectTarget`。 此變更會移除MSM轉出設定和工作流程邏輯中的屬性排除。 行銷活動、翻譯和SEO會維持標題、說明和重新導向的一致性。 (SITES-34509)
-* Launch動作忽略範圍，並包含與目標區段共用相同父項的頁面。 更新會強制子樹邊界，並只升級所選頁面及其子系。 不相關的頁面會保留其現有內容。 (SITES-34344)
+* 「啟動」(Launch)操作忽略了範圍，並包含與目標節共用相同父級的頁面。 更新會強制子樹邊界，並只升級所選頁面及其子系。 不相關的頁面保留其現有內容。 (SITES-34344)
 * 修正巢狀Launch自動促銷活動停止在Author並略過Publishing層級的問題。 子啟動的自動促銷會將更新的頁面發佈至已設定的發佈者，並依排程完成完整啟動。 (SITES-30420)
 
 <!--
@@ -314,11 +314,11 @@ ContextHub不再在發佈頁面上插入第二個jQuery副本。 區段引擎使
 * 使用者遇到在特定測試案例中無法點選超連結的問題，這影響了他們在應用程式中導覽和驗證連結的能力。 (LC-3923505)
 * 使用者在使用AEM Forms Designer 6.5.23為非拉丁語言產生的PDF中，遇到協助工具問題。 路徑標籤未放置在成品容器內，導致PAC和熒幕閱讀器檢查失敗。 (LC-3923295)
 * 使用者在使用輸出服務從6.5.21版修補到6.5.23版後，在可攜式檔案格式(PDF)文字方塊中遇到超連結中斷的問題。 (LC-3923290)
-* 使用者遇到記錄檔案(DoR)表單的協助工具問題。 當輸入欄位空白時，熒幕助讀程式僅會讀取欄位標題，而非值，導致身心障礙使用者難以有效導覽表單。 (LC-3923234)
+* 使用者遇到記錄檔案(DoR)表單的協助工具問題。 當輸入欄位為空時，螢幕閱讀器只讀欄位標題而不讀值，使殘疾用戶難以有效地瀏覽表單。 (LC-3923234)
 * 使用者在DoR PDF forms中遇到協助工具問題，其中NVDA錯誤宣告核取方塊、選項按鈕和文字欄位的`unavailable`。 訊息經常重複，造成熒幕助讀程式使用者混淆。 (LC-3923201)
 * 使用者在新增欄位時遇到XDP中的分頁簿訂單不一致。 現有的索引標籤順序意外變更，影響表單導覽。 (LC-3923183、LC-3922630)
 * 使用者遇到HTML轉譯問題。 使用`docReady`事件時，未在HTML中正確觸發，導致指令碼無法如預期執行。 (LC-3923118)
-* 使用者遇到PDF轉譯指令碼無法在AEM Forms Cloud生產環境中運作的問題。 (LC-3923082 )
+* 使用者遇到PDF轉譯指令碼無法在AEM Forms Cloud生產環境中運作的問題。 (LC-3923082)
 * 使用者遇到表單中浮動欄位的問題。 使用不同的資料檔案時，浮動欄位會正確由一個檔案呈現，但無法與另一個檔案呈現，儘管與欄位無關的細微差異。 (LC-3923056)
 * 在有多個主要頁面的XDP （XML資料包）中只選取英文內容時，使用者遇到空白的西班牙文主要頁面。 (LC-3923009)
 * 使用者在AEM Designer中觀察到過時的著作權年份資訊。 此錯誤發生在啟動時的快顯方塊、`About`區段和`Legal Notices`區段，顯示`2003-2024`而非「2003-2025」。 (LC-3923005)
@@ -341,7 +341,7 @@ ContextHub不再在發佈頁面上插入第二個jQuery副本。 區段引擎使
 ### 基礎 {#foundation-6524}
 
 
-#### Apache Felix {#foundation-apachefelix-6524}
+#### 阿帕奇費利克斯 {#foundation-apachefelix-6524}
 
 更新Felix網頁主控台套件組合以包含FELIX-6747。 此修補程式會修正先前中斷OSGi Web主控台中頁面轉譯和驗證的回應處理。 主控台會一致地載入，且不再在記錄中擲回IllegalStateException專案。 (NPR-42730)
 
@@ -368,8 +368,8 @@ ContextHub不再在發佈頁面上插入第二個jQuery副本。 區段引擎使
 * htmlLibraryManager.debug設為true時，編輯模式仍可運作。 這項變更會還原適當的clientlib解析度和載入作業，讓開發人員在編寫期間能夠使用HTML Library Manager的偵錯工具。 (GRANITE-58002)
 * 復寫代理程式編輯頁面不會再在傳統UI中擲回JavaScript錯誤。 頁面會開啟、顯示所有標籤，並儲存代理程式設定，不會出現主控台錯誤。 (GRANITE-58302)
 * 修正了「系統概覽」中的健康狀態彙總。 現在，個別檢查執行後，檢視會更新，並顯示正確的計數。 操作員會在安全性與維護檢查通過時看到`OK`，而不是不正確的`2 errors`橫幅。 (GRANITE-61482)
-* 在AEM 6.5 LTS （長期支援）升級期間停止`CodeUpgradeTasks`執行。 升級現在無需作業觸發的存放庫變更或重新設定。 此修正可減少升級風險，並防止可避免的停機時間。 (GRANITE-61486)
-* 在製作對話方塊中，必填欄位現在會顯示單一、精確的驗證錯誤。 出現時，訊息會使用欄位自己的標籤，而當不存在標籤時，會退回一般提示。 跨欄位的重複和不相符訊息不再出現。 (GRANITE-59531)
+* 在AEM 6.5 LTS （長期支援）升級期間停止`CodeUpgradeTasks`執行。 升級現在繼續進行，而不會更改或重新配置任務觸發的儲存庫。 此解決方案降低了升級風險並防止了可避免的停機時間。 (GRANITE-61486)
+* 在創作對話框中，必填欄位現在顯示單個準確的驗證錯誤。 消息在出現時使用欄位自己的標籤，在不存在標籤時返回一般提示。 不再顯示欄位間重複和不匹配的消息。 (GRANITE-59531)
 * 頁面建立精靈對話方塊現在會在每次互動中重新驗證必要欄位，包括索引標籤變更和多欄位編輯。 **建立**&#x200B;按鈕在作者完成所有必要的輸入之前會保持停用，精靈會顯示遺失值的內嵌錯誤。 (GRANITE-58826)
 
 #### 整合{#foundation-integrations-6524}
@@ -416,7 +416,7 @@ ContextHub不再在發佈頁面上插入第二個jQuery副本。 區段引擎使
 
 #### SPA編輯器 {#foundation-spa-editor-6524}
 
-開啟Sling主要Servlet **檢查Content-Type**&#x200B;覆寫中斷AEM 6.5 SP21/22中的`.model.json`匯出。 由於匯出工具反向了型別中間鏈，因此要求傳回HTML或錯誤。 此修正從一開始便會以正確的型別傳送JSON，因此`.model.json`適用於作者和發佈環境。 (SITES-32634)
+開啟Sling主要Servlet **檢查Content-Type**&#x200B;覆寫中斷AEM 6.5 SP21/22中的`.model.json`匯出。 由於匯出工具反向了型別中間鏈，因此要求傳回HTML或錯誤。 修復程式從開始就發出具有正確類型的JSON，因此`.model.json`在Author和Publish環境中工作。 (SITES-32634)
 
 
 #### 翻譯{#foundation-translation-6524}
@@ -433,7 +433,7 @@ ContextHub不再在發佈頁面上插入第二個jQuery副本。 區段引擎使
 
 * 修正停用「Adobe Stock授權」對話方塊中輸入內容的UI回歸。 此對話方塊現在會正常運作，接受必填欄位中的文字，並從「資產詳細資訊」檢視中完成Stock資產授權流程。 (NPR-42748)
 
-* 已修正作者環境中的群組可見性。 「群組」主控台不再止步於約41個結果，並會為每位使用者傳回完整的成員資格集。 此修正可恢復累積修正後的一致行為，並保持目前的安全性強化。 (NPR-42749)
+* 已在作者環境中固定組可見性。 「組」控制台不再停止大約41個結果，並返回每個用戶的完整成員資格集。 此修復程式在累計修復後恢復一致的行為，並保持當前安全性增強。 (NPR-42749)
 
 
 <!--
@@ -463,7 +463,7 @@ ContextHub不再在發佈頁面上插入第二個jQuery副本。 區段引擎使
 
 ### 在[!DNL Experience Manager] 6.5上安裝Service Pack{#install-service-pack}
 
-1. 如果執行個體處於更新模式（從舊版更新執行個體時），請在安裝前重新啟動執行個體。 如果執行個體的目前運作時間很高，Adobe建議重新啟動。
+1. 如果實例處於更新模式（當實例從早期版本更新時），請在安裝前重新啟動該實例。 Adobe建議在實例的當前正常運行時間較長時重新啟動。
 
 1. 安裝之前，請為您的[!DNL Experience Manager]執行個體建立快照或全新備份。
 
@@ -477,7 +477,7 @@ ContextHub不再在發佈頁面上插入第二個jQuery副本。 區段引擎使
 
 >[!NOTE]
 >
->Service Pack安裝期間，Package Manager UI上的對話方塊有時會退出。 Adobe建議您先等待錯誤記錄穩定下來，再存取部署。 等待與更新程式套件組合解除安裝相關的特定記錄，再確認安裝成功。 此問題通常發生在[!DNL Safari]瀏覽器中，但可能間歇性地發生在任何瀏覽器中。
+>在安裝Service Pack時，包管理器UI上的對話框有時會退出。 Adobe建議您在訪問部署之前等待錯誤日誌穩定。 請等待與卸載更新程式包相關的特定日誌，然後確保安裝成功。 通常，此問題在[!DNL Safari]瀏覽器中發生，但在任何瀏覽器中都可能間歇性發生。
 
 **自動安裝**
 
@@ -496,13 +496,13 @@ ContextHub不再在發佈頁面上插入第二個jQuery副本。 區段引擎使
 
 1. 產品資訊頁(`/system/console/productinfo`)會在`Adobe Experience Manager (6.5.24.0)`已安裝產品[!UICONTROL 下顯示更新的版本字串]。<!-- UPDATE FOR EACH NEW RELEASE -->
 
-1. 在OSGi主控台中，所有OSGi套件組合均為&#x200B;**[!UICONTROL 作用中]**&#x200B;或&#x200B;**[!UICONTROL 片段]** （使用Web主控台： `/system/console/bundles`）。
+1. 所有OSGi捆綁包都是OSGi控制台中的&#x200B;**[!UICONTROL ACTIVE]**&#x200B;或&#x200B;**[!UICONTROL FRAGMENT]**（使用Web控制台： `/system/console/bundles`）。
 
-1. OSGi套件`org.apache.jackrabbit.oak-core`是1.22.20或更新版本（使用Web主控台： `/system/console/bundles`）。<!-- OAK Oak oak VERSION -MAY- NEED TO BE UPDATED FOR EACH NEW RELEASE. CHECK WITH SAMEER DHAWAN -->
+1. OSGi捆綁包`org.apache.jackrabbit.oak-core`是1.22.20版或更高版本（使用Web控制台： `/system/console/bundles`）。<!-- OAK Oak oak VERSION -MAY- NEED TO BE UPDATED FOR EACH NEW RELEASE. CHECK WITH SAMEER DHAWAN -->
 
-### 安裝[!DNL Experience Manager] Forms的Service Pack{#install-aem-forms-add-on-package}
+### 為[!DNL Experience Manager]安裝Service PackForms{#install-aem-forms-add-on-package}
 
-如需在Experience Manager Forms上安裝Service Pack的說明，請參閱[Experience Manager Forms Service Pack安裝說明](/help/release-notes/aem-forms-current-service-pack-installation-instructions.md)。
+有關在Experience Manager Forms安裝Service Pack的說明，請參閱[Experience Manager FormsService Pack安裝說明](/help/release-notes/aem-forms-current-service-pack-installation-instructions.md)。
 
 >[!NOTE]
 >
@@ -518,7 +518,7 @@ ContextHub不再在發佈頁面上插入第二個jQuery副本。 區段引擎使
 
 >[!NOTE]
 >
->每個執行個體僅安裝此套件一次；不需要隨每個Service Pack重新安裝。
+>每個實例只安裝一次此包；不需要隨每個Service Pack重新安裝它。
 
 ### UberJar{#uber-jar}
 
@@ -547,9 +547,9 @@ ContextHub不再在發佈頁面上插入第二個jQuery副本。 區段引擎使
 
 ### AEM Assets REST API中的內容片段支援 {#cf-support-assets-rest-api}
 
-AEM 6.5 LTS SP2為內容片段和模型管理提供現代化的OpenAPI，因此AEM Assets REST API中較舊的內容片段支援端點現已棄用。
+6AEM.5 LTS SP2為內容片段和模型管理提供了現代的OpenAPI，因此現在不建議使用AEM AssetsREST API中較舊的內容片段支援端點。
 
-Adobe打算在產品生命週期結束前保留這些較舊的端點。 Adobe不打算為已棄用的端點提供進一步的增強功能。
+Adobe打算在產品壽命結束前保持這些較舊的端點可用。 Adobe不計畫對不建議使用的終結點進行進一步的增強。
 
 ### SPA 編輯器 {#spa-editor}
 
@@ -591,13 +591,13 @@ Adobe打算在產品生命週期結束前保留這些較舊的端點。 Adobe不
       * `diff-cache`
 
    1. 安裝Service Pack，或重新啟動Experience Manager as a Cloud Service。
-`cache`和`diff-cache`的新資料夾會自動建立，而您在`mvstore`中不會再遇到與`error.log`相關的例外狀況。
+將自動建立`cache`和`diff-cache`的新資料夾，並且您不再在`mvstore`中遇到與`error.log`相關的異常。
 
-* 更新可能已使用您內容模型的自訂API名稱的GraphQL查詢，以改用內容模型的預設名稱。
+* 更新可能已使用內容模型的自定義API名稱以改用內容模型的預設名稱的GraphQL查詢。
 
-* GraphQL查詢可以使用`damAssetLucene`索引，而不是`fragments`索引。 此動作可能會導致GraphQL查詢失敗或需要很長時間才能執行。
+* GraphQL查詢可以使用`damAssetLucene`索引而不是`fragments`索引。 此操作可能導致GraphQL查詢失敗，或者需要很長時間才能運行。
 
-  若要修正問題，`damAssetLucene`必須設定為在`/indexRules/dam:Asset/properties`下包含下列兩個屬性：
+  若要更正此問題，必須將`damAssetLucene`配置為在`/indexRules/dam:Asset/properties`下包含以下兩個屬性：
 
    * `contentFragment`
       * `jcr:primaryType="nt:unstructured"`
@@ -616,7 +616,7 @@ Adobe打算在產品生命週期結束前保留這些較舊的端點。 Adobe不
   執行這些步驟後，GraphQL查詢應該可以更快執行。
 
 * 嘗試移動、刪除或發佈內容片段、網站或頁面時，在擷取內容片段參考時出現問題。 背景查詢失敗。 也就是說，功能無法運作。
-若要確保作業正確，您必須將下列屬性新增至索引定義節點`/oak:index/damAssetLucene` （不需要重新索引）：
+要確保正確操作，必須將以下屬性添加到索引定義節點`/oak:index/damAssetLucene`（不需要重新索引）:
 
   ```xml
   "tags": [
@@ -625,21 +625,21 @@ Adobe打算在產品生命週期結束前保留這些較舊的端點。 Adobe不
   "refresh": true
   ```
 
-* 如果您將[!DNL Experience Manager]執行個體從6.5.0 - 6.5.4升級至Java™ 11上的最新Service Pack，您會在`RRD4JReporter`檔案中看到`error.log`例外狀況。 若要停止例外狀況，請重新啟動[!DNL Experience Manager]的執行個體。<!-- THIS BULLET POINT WAS UPDATED AS PER CQDOC-20021, JANUARY 23, 2023 -->
+* 如果將[!DNL Experience Manager]實例從6.5.0 - 6.5.4升級到Java™ 11上的最新Service Pack，則在`RRD4JReporter`檔案中會看到`error.log`個異常。 若要停止異常，請重新啟動[!DNL Experience Manager]的實例。<!-- THIS BULLET POINT WAS UPDATED AS PER CQDOC-20021, JANUARY 23, 2023 -->
 
-* 使用者可以在[!DNL Assets]中重新命名階層中的資料夾，並將巢狀資料夾發佈至[!DNL Brand Portal]。 但是，在重新發佈根資料夾之前，[!DNL Brand Portal]中的資料夾標題不會更新。
+* 用戶可以更名[!DNL Assets]中層次結構中的資料夾，並將嵌套資料夾發佈到[!DNL Brand Portal]。 但是，在重新發佈根資料夾之前，[!DNL Brand Portal]中的資料夾標題不會更新。
 
 * 安裝[!DNL Experience Manager] 6.5.x.x期間可能會顯示下列錯誤和警告訊息：
    * 「當使用Adobe Target API （IMS驗證）在[!DNL Experience Manager]中設定Target Standard整合時，將體驗片段匯出至Target會導致建立錯誤的選件型別。 Target會建立多個型別為「HTML」/來源「Adobe Target Classic」的選件，而非「體驗片段」/來源「Adobe Experience Manager」型別。
    * `com.adobe.granite.maintenance.impl.TaskScheduler`：在`granite/operations/maintenance`找不到維護期間。
-   * 使用彙總函式(例如SUM、MAX和MIN)時，Adaptive Form伺服器端驗證會失敗(CQ-4274424)。
+   * 使用彙總函式（例如SUM、MAX和MIN）時，Adaptive Form伺服器端驗證會失敗(CQ-4274424)。
    * `com.adobe.granite.maintenance.impl.TaskScheduler` ：在`granite/operations/maintenance`找不到維護期間。
-   * 透過Shoppable Banner檢視器預覽資產時，Dynamic Media互動式影像中的熱點不可見。
-   * `com.adobe.cq.social.cq-social-jcr-provider bundle com.adobe.cq.social.cq-social-jcr-provider:1.3.5 (395)[com.adobe.cq.social.provider.jcr.impl.SpiSocialJcrResourceProviderImpl(2302)]` ：等待登入變更完成解除登入逾時。
+   * 通過Sobler Banner查看器預覽資產時，Dynamic Media互動式影像中的熱點不可見。
+   * `com.adobe.cq.social.cq-social-jcr-provider bundle com.adobe.cq.social.cq-social-jcr-provider:1.3.5 (395)[com.adobe.cq.social.provider.jcr.impl.SpiSocialJcrResourceProviderImpl(2302)]`：等待註冊更改完成註銷時超時。
 
-* 從AEM 6.5.15開始，```org.apache.servicemix.bundles.rhino```套件提供的Rhino JavaScript Engine有新的提升行為。 使用嚴格模式(```use strict;```)的指令碼必須宣告其正確的變數。 否則，它們不會執行，並最終擲回執行階段錯誤。
+* 從AEM6.5.15開始，```org.apache.servicemix.bundles.rhino```捆綁包提供的Rhino JavaScript引擎具有新的提升行為。 使用嚴格模式(```use strict;```)的指令碼必須聲明其正確的變數。 否則，它們將不會運行，最終引發運行時錯誤。
 
-* 透過正式更新套件安裝標籤相關的現成可用內容會將`/content/cq:tags`節點的languages屬性重設為預設值。 此動作適用於Service Pack、Security Service Pack、Extended Feature Pack、Cumulative Feature Pack、修補程式等。 因此，在安裝之前，必須從屬性新增它。
+* 通過正式更新包安裝標籤相關的出廠設定內容，將`/content/cq:tags`節點的語言屬性重置為預設值。 此動作適用於Service Pack、Security Service Pack、Extended Feature Pack、Cumulative Feature Pack、修補程式等。 因此，在安裝之前，必須從屬性新增它。
 
 ### AEM Sites的已知問題 {#known-issues-aem-sites-6524}
 
@@ -655,9 +655,9 @@ Adobe打算在產品生命週期結束前保留這些較舊的端點。 Adobe不
 * **FORMS-16575**&#x200B;互動式通訊中對巢狀配置片段XDP所做的任何修改都不會反映在IC編輯器中。
 * **FORMS-21378**&#x200B;啟用伺服器端驗證(SSV)時，表單提交可能會失敗。 如果您遇到此問題，請聯絡Adobe支援以尋求協助。
 * **FORMS-23722**&#x200B;當包含使用&#x200B;**的**&#x200B;檔案附件`bindref`欄位的表單提交給具有&#x200B;**指派任務**&#x200B;步驟的AEM工作流程時，附件未顯示。 因此，當從「收件匣」開啟任務時，它們不會出現。 檔案會正確儲存至存放庫，但指派工作步驟UI無法顯示附件。
-* **FORMS-23802**&#x200B;將最適化表單內嵌至Sites頁面時，自訂函式無法在預覽或發佈中載入。 當&#x200B;**aem-forms-core-component**&#x200B;程式庫版本早於1.1.76時，就會發生此問題。您可能會在記錄檔中看到`InvalidFormContainerException: No form container found`之類的錯誤。 若要解決此問題，請[下載並安裝適用於AEM Forms SP24 (AddOn 6.0.1454)的Hotfix](/help/release-notes/aem-forms-hotfix.md)。
+* **FORMS-23802**&#x200B;將最適化表單內嵌至Sites頁面時，自訂函式無法在預覽或發佈中載入。 當&#x200B;**aem-forms-core-component**&#x200B;庫版本早於1.1.76時，會出現此問題。您可能在日誌中看到`InvalidFormContainerException: No form container found`之類的錯誤。 要解決此問題，[下載並安裝AEM FormsSP24的修補程式](/help/release-notes/aem-forms-hotfix.md)(AddOn 6.0.1454)。
 
-#### 可用Hotfix的已知問題 {#aem-forms-issues-with-hotfixes}
+#### 可用修補程式的已知問題 {#aem-forms-issues-with-hotfixes}
 
 <!-- 
 >[!NOTE]
@@ -666,15 +666,15 @@ Adobe打算在產品生命週期結束前保留這些較舊的端點。 Adobe不
 
 下列問題有可供下載和安裝的Hotfix。 您可以[下載並安裝Hotfix](/help/release-notes/aem-forms-hotfix.md)以解決下列問題：
 
-<!--* FORMS-23881 On AEM Forms JEE deployments set up using the 6.5.23.0 full installer, Output Service fails to process requests when a custom XCI file is supplied in the invocation. To resolve this issue, install the latest AEM 6.5.24.0 Forms Service Pack from the [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html) portal.-->
+* **FORMS-23881**&#x200B;在使用6.5.23.0完整安裝程式設定的AEM Forms JEE部署上，當引動中提供自訂XCI檔案時，輸出服務無法處理要求。 若要解決此問題，請從6.5.24.0軟體發佈[入口網站安裝最新的AEM ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html) Forms Service Pack。
 
-* **FORMS-23789** (僅限JEE上的AEM Forms)：使用者在JEE SP24上的AEM Forms中遇到Log4j問題，導致企業客戶的記錄與監視中斷。 若要解決此問題，請在JEE Service Pack [上](/help/release-notes/aem-forms-hotfix.md)下載並安裝AEM Forms的Hotfix6.5.24.0。
+* **FORMS-23789** （僅限JEE上的AEM Forms）：使用者在JEE SP24上的AEM Forms中遇到Log4j問題，導致企業客戶的記錄與監視中斷。 若要解決此問題，請在JEE Service Pack [上](/help/release-notes/aem-forms-hotfix.md)下載並安裝AEM Forms的Hotfix6.5.24.0。
 
-* **FORMS-23802**&#x200B;當表單位於具有舊版aem-forms-core-component (&lt;1.1.76)的Sites頁面時，自訂函式不會載入預覽或發佈中。 若要解決此問題，請安裝適用於SP24的[AEM Forms AddOn Hotfix 6.0.1454](/help/release-notes/aem-forms-hotfix.md)。
+* **FORMS-23802**&#x200B;當表單位於具有舊版aem-forms-core-component (&lt;1.1.76)的Sites頁面時，自訂函式不會載入預覽或發佈中。 要解決此問題，請為SP24安裝[AEM FormsAddOn修補程式6.0.1454](/help/release-notes/aem-forms-hotfix.md)。
 
-* **FORMS-23789** (僅限JEE上的AEM Forms)：使用者在JEE SP24上的AEM Forms中遇到Log4j問題，導致企業客戶的記錄與監視中斷。 若要解決此問題，請在JEE Service Pack [上](/help/release-notes/aem-forms-hotfix.md)下載並安裝AEM Forms的Hotfix6.5.24.0。
+* **FORMS.-23789**(僅限JEE上的AEM Forms)：用戶在JEE SP24上的AEM Forms遇到Log4j問題，導致企業客戶的日誌記錄和監控中斷。 要解決此問題，[在JEE Service Pack ](/help/release-notes/aem-forms-hotfix.md)上下載並安裝AEM Forms的修補程式6.5.24.0。
 
-* **FORMS-23802**&#x200B;當表單位於具有舊版aem-forms-core-component (&lt;1.1.76)的Sites頁面時，自訂函式不會載入預覽或發佈中。 若要解決此問題，請安裝適用於SP24的[AEM Forms AddOn Hotfix 6.0.1454](/help/release-notes/aem-forms-hotfix.md)。
+* **FORMS。-23802**&#x200B;當表單位於具有舊版aem-forms-core-component版本的「站點」頁面時，自定義函式不會在預覽或發佈中載入(&lt;1.1.76)。 要解決此問題，請為SP24安裝[AEM FormsAddOn修補程式6.0.1454](/help/release-notes/aem-forms-hotfix.md)。
 
 * AEM Forms現在包含表單元件的Struts版本從2.5.33升級至6.x。 此升級提供先前未包含在SP24中的Struts變更。 已透過[Hotfix](/help/release-notes/aem-forms-hotfix.md)新增支援，您可以下載並安裝該支援，以新增對最新版Struts的支援。
 
@@ -687,14 +687,14 @@ Adobe打算在產品生命週期結束前保留這些較舊的端點。 Adobe不
    5. 在管理員模式中開啟命令提示字元。
    6. 使用`geode-*-1.15.1.2.jar`檔案安裝Geode修補程式。
 
-* **FORMS-15256**&#x200B;當使用者從AEM 6.5 Forms Service Pack 18或19升級為Service Pack 20或21時，他們遇到JSP編譯錯誤。 此錯誤會阻止他們開啟或建立最適化表單。 它也會導致其他AEM介面發生問題。 這些介麵包含頁面編輯器、AEM Forms UI、工作流程編輯器和系統概覽UI。
+* **FORMS-15256**&#x200B;當使用者從AEM 6.5 Forms Service Pack 18或19升級為Service Pack 20或21時，他們遇到JSP編譯錯誤。 此錯誤會阻止他們開啟或建立最適化表單。 它還導致了其他介面AEM的問題。 這些介面包括頁面編輯器、AEM FormsUI、工作流編輯器和系統概述UI。
 
-  如果您遇到這類問題，請執行以下步驟來解決問題：
-   1. 導覽至CRXDE中的目錄`/libs/fd/aemforms/install/`。
-   2. 刪除名稱為`com.adobe.granite.ui.commons-5.10.26.jar`的組合。
+  如果遇到此類問題，請執行以下步驟來解決它：
+   1. 導航到CRXDE中的目錄`/libs/fd/aemforms/install/`。
+   2. 刪除名為`com.adobe.granite.ui.commons-5.10.26.jar`的捆綁包。
    3. 重新啟動AEM伺服器。
 
-* **FORMS-23703**&#x200B;若未使用預設值設定`contains`規則，最適化表單的伺服器端驗證會失敗。 您可以安裝最新版的[AEM Forms 6.5.24.0 Service Pack](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases#aem-65-forms-releases)以修正問題。
+* **FORMS-23703**&#x200B;若未使用預設值設定`contains`規則，最適化表單的伺服器端驗證會失敗。 您可以安裝最新版的[AEM Forms 6.5.24.0 Service Pack](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases#aem-65-forms-releases)以修正問題。
 
 * **GRANITE-63681**&#x200B;表單資料模型聯結器可能無法驗證，因為預設不允許必要的關鍵字和Regex模式。 若要解決此問題，請從[連結](/help/release-notes/aem-forms-hotfix.md)下載並安裝Hotfix。
 
@@ -705,9 +705,9 @@ Adobe打算在產品生命週期結束前保留這些較舊的端點。 Adobe不
 
     >[!VIDEO](https://video.tv.adobe.com/v/3479697)-->
 
-* **FORMS-23979** HTML-PDF轉換(PDFG)可能會遇到間歇性逾時。 適用於SP24的較新版本Forms附加元件隨後發行，其中包含此修正。 如果您遇到此問題，請將您的環境更新至[6.5.24.0的](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases#aem-65-forms-releases)最新發行的Forms附加元件。
+* **FORMS-23979** HTML-PDF轉換(PDFG)可能會遇到間歇性逾時。 隨後發佈了SP24的Forms附加模組的更新版本，其中包括該修補程式。 如果遇到此問題，請將您的環境更新為[6.5.24.0的](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases#aem-65-forms-releases)最新發佈的Forms載入項。
 
-* **FORMS-23717**&#x200B;升級至&#x200B;**AEM Forms6.5.24.0**&#x200B;後，`server.log`和`error.log`可能會充滿重複的警告訊息，例如&#x200B;*安全剖析器工廠建立失敗*&#x200B;或不支援&#x200B;*安全性屬性……*。 記錄檔可能會以每秒&#x200B;**5到10行的速度增加** （每小時數百個MB），這會填滿磁碟並封鎖生產轉出。
+* **FORMS.-23717**&#x200B;升級到&#x200B;**AEM Forms6.5.24.0**&#x200B;後，`server.log`和`error.log`可能會被重複的WARN消息洪泛，例如&#x200B;*安全解析器工廠建立失敗*&#x200B;或&#x200B;*不支援安全屬性……*。 記錄檔可能會以每秒&#x200B;**5到10行的速度增加** （每小時數百個MB），這會填滿磁碟並封鎖生產轉出。
 
 若要減少記錄磁碟區，請在應用程式伺服器設定中或透過JVM引數`com.adobe.util.XMLSecurityUtil`，將`ERROR`的記錄層級設定為`-Dlogging.level.com.adobe.util.XMLSecurityUtil=ERROR`。 此功能只會隱藏訊息，不會修正根本原因。
 
@@ -722,14 +722,14 @@ Adobe打算在產品生命週期結束前保留這些較舊的端點。 Adobe不
 
 ## 受限制的網站{#restricted-sites}
 
-這些網站僅供客戶使用。 若您是客戶並且需要存取權，請聯絡您的 Adobe 客戶經理。
+這些網站僅供客戶訪問。 若您是客戶並且需要存取權，請聯絡您的 Adobe 客戶經理。
 
 * [在 licensing.adobe.com 下載產品](https://licensing.adobe.com/)
-* [聯絡 Adobe 客戶支援](https://experienceleague.adobe.com/zh-hant/docs/support-resources/adobe-support-tools-guide/adobe-customer-support-experience#)。
+* [聯絡 Adobe 客戶支援](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-customer-support-experience#)。
 
 >[!MORELIKETHIS]
 >
->* [[!DNL Experience Manager] 產品頁面](https://business.adobe.com/tw/products/experience-manager/adobe-experience-manager.html)
+>* [[!DNL Experience Manager] 產品頁面](https://business.adobe.com/products/experience-manager/adobe-experience-manager.html)
 >* [[!DNL Experience Manager] 6.5檔案](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65)
 >* [訂閱Adobe優先產品更新](https://www.adobe.com/tw/subscription/priority-product-update.html)
 
