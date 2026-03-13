@@ -36,7 +36,7 @@ ht-degree: 5%
 
 ## [!DNL Experience Manager] 6.5.24.0中包括的內容 {#what-is-included-in-aem-6524}
 
-[!DNL Experience Manager] 6.5.24.0包括新功能、客戶請求的關鍵增強功能和錯誤修復。 它還包括自2019年4月首次推出6.5以來發佈的效能、穩定性和安全性改進。 在[ 6.5上](#install)安裝此Service Pack[!DNL Experience Manager]。
+[!DNL Experience Manager] 6.5.24.0包括新功能、客戶請求的關鍵增強功能和錯誤修復。 它還包括自2019年4月首次推出6.5以來發佈的效能、穩定性和安全性改進。 在[&#x200B; 6.5上](#install)安裝此Service Pack[!DNL Experience Manager]。
 
 <!-- UPDATE FOR EACH NEW RELEASE -->
 
@@ -666,13 +666,13 @@ Adobe打算在產品壽命結束前保持這些較舊的端點可用。 Adobe不
 
 下列問題有可供下載和安裝的Hotfix。 您可以[下載並安裝Hotfix](/help/release-notes/aem-forms-hotfix.md)以解決下列問題：
 
-* **FORMS-23881**&#x200B;在使用6.5.23.0完整安裝程式設定的AEM Forms JEE部署上，當引動中提供自訂XCI檔案時，輸出服務無法處理要求。 若要解決此問題，請從6.5.24.0軟體發佈[入口網站安裝最新的AEM ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html) Forms Service Pack。
+* **FORMS-23881**&#x200B;在使用6.5.23.0完整安裝程式設定的AEM Forms JEE部署上，當引動中提供自訂XCI檔案時，輸出服務無法處理要求。 若要解決此問題，請從6.5.24.0軟體發佈[入口網站安裝最新的AEM &#x200B;](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html) Forms Service Pack。
 
 * **FORMS-23789** （僅限JEE上的AEM Forms）：使用者在JEE SP24上的AEM Forms中遇到Log4j問題，導致企業客戶的記錄與監視中斷。 若要解決此問題，請在JEE Service Pack [上](/help/release-notes/aem-forms-hotfix.md)下載並安裝AEM Forms的Hotfix6.5.24.0。
 
 * **FORMS-23802**&#x200B;當表單位於具有舊版aem-forms-core-component (&lt;1.1.76)的Sites頁面時，自訂函式不會載入預覽或發佈中。 要解決此問題，請為SP24安裝[AEM FormsAddOn修補程式6.0.1454](/help/release-notes/aem-forms-hotfix.md)。
 
-* **FORMS.-23789**(僅限JEE上的AEM Forms)：用戶在JEE SP24上的AEM Forms遇到Log4j問題，導致企業客戶的日誌記錄和監控中斷。 要解決此問題，[在JEE Service Pack ](/help/release-notes/aem-forms-hotfix.md)上下載並安裝AEM Forms的修補程式6.5.24.0。
+* **FORMS.-23789**(僅限JEE上的AEM Forms)：用戶在JEE SP24上的AEM Forms遇到Log4j問題，導致企業客戶的日誌記錄和監控中斷。 要解決此問題，[在JEE Service Pack &#x200B;](/help/release-notes/aem-forms-hotfix.md)上下載並安裝AEM Forms的修補程式6.5.24.0。
 
 * **FORMS。-23802**&#x200B;當表單位於具有舊版aem-forms-core-component版本的「站點」頁面時，自定義函式不會在預覽或發佈中載入(&lt;1.1.76)。 要解決此問題，請為SP24安裝[AEM FormsAddOn修補程式6.0.1454](/help/release-notes/aem-forms-hotfix.md)。
 
