@@ -1,20 +1,20 @@
 ---
 title: 持續性 GraphQL 查詢
-description: 瞭解如何在Adobe Experience Manager中保留GraphQL查詢，以將效能最佳化。 持續性查詢可由使用者端應用程式使用HTTPGET方法請求，回應可在Dispatcher和CDN層進行快取，最終改善使用者端應用程式的效能。
+description: 瞭解如何在Adobe Experience Manager中保留GraphQL查詢，以將效能最佳化。 持續查詢可由使用者端應用程式使用HTTP GET方法請求，回應可快取在Dispatcher和CDN層，最終改善使用者端應用程式的效能。
 exl-id: d7a1955d-b754-4700-b863-e9f66396cbe1
 solution: Experience Manager, Experience Manager Sites
 feature: Content Fragments,GraphQL API
 role: Developer
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 9278eb7dab4a764403fa0769f6e80dd7e8fb0cb9
 workflow-type: tm+mt
 source-wordcount: '1401'
-ht-degree: 85%
+ht-degree: 86%
 
 ---
 
 # 持續性 GraphQL 查詢 {#persisted-queries-caching}
 
-持續查詢是建立並儲存在GraphQL (AEM)伺服器上的Adobe Experience Manager查詢。 用戶端應用程式可以透過 GET 要求來要求它們。GET要求的回應可以在Dispatcher和內容傳遞網路(CDN)層級進行快取，最終改善要求使用者端應用程式的效能。 這與標準的 GraphQL 查詢不同，後者使用 POST 要求執行，其回應無法輕鬆快取。
+持續查詢是建立並儲存在GraphQL (Adobe Experience Manager)伺服器上的AEM查詢。 用戶端應用程式可以透過 GET 要求來要求它們。GET要求的回應可以在Dispatcher和內容傳遞網路(CDN)層快取，最終改善要求使用者端應用程式的效能。 這與標準的 GraphQL 查詢不同，後者使用 POST 要求執行，其回應無法輕鬆快取。
 
 <!--
 >[!NOTE]
@@ -71,7 +71,7 @@ GraphiQL IDE 是保留查詢的&#x200B;**首選**&#x200B;方法。若要使用 *
 
    ```shell
    $ curl -X PUT \
-       -H 'authorization: Basic YWRtaW46YWRtaW4=' \
+       -H 'authorization: Basic yourauthorizationcode' \
        -H "Content-Type: application/json" \
        "http://localhost:4502/graphql/persist.json/wknd/plain-article-query" \
        -d \
@@ -117,7 +117,7 @@ GraphiQL IDE 是保留查詢的&#x200B;**首選**&#x200B;方法。若要使用 *
 
    ```shell
    $ curl -X POST \
-       -H 'authorization: Basic YWRtaW46YWRtaW4=' \
+       -H 'authorization: Basic yourauthorizationcode' \
        -H "Content-Type: application/json" \
        "http://localhost:4502/graphql/persist.json/wknd/plain-article-query" \
        -d \
@@ -143,7 +143,7 @@ GraphiQL IDE 是保留查詢的&#x200B;**首選**&#x200B;方法。若要使用 *
 
    ```shell
    $ curl -X PUT \
-       -H 'authorization: Basic YWRtaW46YWRtaW4=' \
+       -H 'authorization: Basic yourauthorizationcode' \
        -H "Content-Type: application/json" \
        "http://localhost:4502/graphql/persist.json/wknd/plain-article-query-wrapped" \
        -d \
@@ -156,7 +156,7 @@ GraphiQL IDE 是保留查詢的&#x200B;**首選**&#x200B;方法。若要使用 *
 
    ```shell
    $ curl -X PUT \
-       -H 'authorization: Basic YWRtaW46YWRtaW4=' \
+       -H 'authorization: Basic yourauthorizationcode' \
        -H "Content-Type: application/json" \
        "http://localhost:4502/graphql/persist.json/wknd/plain-article-query-max-age" \
        -d \
@@ -169,7 +169,7 @@ GraphiQL IDE 是保留查詢的&#x200B;**首選**&#x200B;方法。若要使用 *
 
    ```shell
    $ curl -X PUT \
-       -H 'authorization: Basic YWRtaW46YWRtaW4=' \
+       -H 'authorization: Basic yourauthorizationcode' \
        -H "Content-Type: application/json" \
        "http://localhost:4502/graphql/persist.json/wknd/plain-article-query-parameters" \
        -d \
@@ -265,7 +265,7 @@ query getAdventuresByActivity($activity: String!) {
 
 ## 快取持續性查詢 {#caching-persisted-queries}
 
-建議使用持續性查詢，因為可以在 [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant) 和內容傳遞網路 (CDN) 層進行快取，最終提升發出要求的用戶端應用程式效能。
+建議使用持續性查詢，因為可以在 [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) 和內容傳遞網路 (CDN) 層進行快取，最終提升發出要求的用戶端應用程式效能。
 
 依預設，AEM 將根據存留時間 (TTL) 定義使快取失效。這些 TTL 可以依照以下參數定義。這些參數可以透過各種方式存取，根據所使用的機制，名稱會有所不同：
 
@@ -353,7 +353,7 @@ curl -u admin:admin -X POST \
 
 ### 使用 OSGi 設定管理快取 {#cache-osgi-configration}
 
-若要全域管理快取，您可以[設定&#x200B;**持續查詢服務組態**&#x200B;的OSGi設定](/help/sites-deploying/configuring-osgi.md)。 否則，此OSGi設定會針對發佈執行個體[&#128279;](#publish-instances)使用預設值。
+若要全域管理快取，您可以[設定](/help/sites-deploying/configuring-osgi.md)持續查詢服務組態&#x200B;**的OSGi設定**。 否則，此OSGi設定會針對發佈執行個體[使用](#publish-instances)預設值。
 
 >[!NOTE]
 >
@@ -404,7 +404,7 @@ URL 可以分解成以下幾個部分：
 1. 在套件定義對話框中，在 **一般**&#x200B;下輸入&#x200B;**名稱**，例如「wknd-persistent-queries」。
 1. 輸入版本號碼，例如「1.0」。
 1. 在&#x200B;**篩選器**&#x200B;下加入新&#x200B;**篩選器**。使用路徑尋找工具選取設定下方的 `persistentQueries` 資料夾。例如，對於`wknd`設定，完整路徑將為`/conf/wknd/settings/graphql/persistentQueries`。
-1. 選取&#x200B;**儲存**&#x200B;以儲存新的封裝定義並關閉對話方塊。
+1. 選取「**儲存**」以儲存新的封裝定義並關閉對話框。
 1. 在新建立的封裝定義中選取&#x200B;**建置**&#x200B;按鈕。
 
 建置套件後，您可以：
