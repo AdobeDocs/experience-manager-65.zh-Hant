@@ -71,7 +71,7 @@ ht-degree: 7%
 
 ### XMP {#xmp}
 
-[!DNL Extensible Metadata Platform] (XMP)是[!DNL Experience Manager Assets]用於所有中繼資料管理的開放標準。 此標準提供通用中繼資料編碼，可嵌入至所有檔案格式。 Adobe和其他公司支援XMP標準，因為它提供豐富的內容模型。 XMP標準和[!DNL Experience Manager Assets]的使用者擁有強大的平台可建置。 如需詳細資訊，請參閱[XMP](https://www.adobe.com/products/xmp.html)。
+[!DNL Extensible Metadata Platform] (XMP)是[!DNL Experience Manager Assets]用於所有中繼資料管理的開放標準。 此標準提供通用中繼資料編碼，可嵌入至所有檔案格式。 Adobe和其他公司支援XMP標準，因為它提供豐富的內容模型。 XMP標準和[!DNL Experience Manager Assets]的使用者擁有強大的平台可建置。 如需詳細資訊，請參閱[XMP](https://www.adobe.com/tw/products/xmp.html)。
 
 ### ID3 {#id}
 
