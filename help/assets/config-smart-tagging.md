@@ -5,9 +5,9 @@ role: Admin
 feature: Tagging,Smart Tags
 exl-id: 9f68804f-ba15-4f83-ab1b-c249424b1396
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 7c1aeec18f35b019a63d0385ada248b26a0df9de
+source-git-commit: a3c0010e5eaef7fc516d49e410bba1c3b3f9e4b9
 workflow-type: tm+mt
-source-wordcount: '2130'
+source-wordcount: '2121'
 ht-degree: 13%
 
 ---
@@ -95,7 +95,7 @@ To configure the Smart Content Service, follow these top-level steps:
 
 若要使用Smart Content Service API，請在Adobe Developer Console中建立整合，以取得下列專案：
 
-* [!UICONTROL API金鑰] (產生於Adobe Developer Console整合的[!UICONTROL 使用者端識別碼]欄位中)，
+* [!UICONTROL API金鑰] （產生於Adobe Developer Console整合的[!UICONTROL 使用者端識別碼]欄位中），
 * [!UICONTROL 組織識別碼]，
 * 和[!UICONTROL 使用者端密碼]，適用於[!UICONTROL 中雲端設定的]Assets智慧標籤服務設定[!DNL Experience Manager]。
 
@@ -151,7 +151,7 @@ To configure the Smart Content Service, follow these top-level steps:
 >[!CAUTION]
 >
 >Previously, configurations that were made with JWT Credentials are now subject to deprecation in the Adobe Developer Console. You cannot create new JWT credentials after June 3, 2024. Such configurations can no longer be created or updated, but can be migrated to OAuth configurations.
-> See [Setting up IMS integrations for AEM](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service)
+> See [Setting up IMS integrations for AEM](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service)
 >See [Steps to configure OAuth for on-premise users](#config-oauth-onprem)
 > See [Troubleshooting smart tags for OAuth credentials](#config-smart-tagging.md)
 -->
@@ -172,11 +172,6 @@ To configure the Smart Content Service, follow these top-level steps:
    | 相關的 Adobe IMS 設定 | 從下拉式清單中選擇設定。 |
    | 服務 URL | `https://smartcontent.adobe.io/<region where your Experience Manager author instance is hosted>`。例如 `https://smartcontent.adobe.io/apac`。您可以將`na`、`emea`或`apac`指定為代管Experience Manager作者執行個體的地區。 |
 
-   >[!NOTE]
-   >
-   >如果在2022年9月1日之前布建Experience Manager Managed Service，請使用下列服務URL：
-   >`https://mc.adobe.io/marketingcloud/smartcontent`
-
 1. 按一下「**[!UICONTROL 儲存並關閉]**」。
 
 ### 驗證設定 {#validate-the-configuration}
@@ -187,8 +182,7 @@ To configure the Smart Content Service, follow these top-level steps:
 
 1. 移至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 作業]** > **[!UICONTROL 網頁主控台]**&#x200B;以開啟OSGi主控台。 按一下&#x200B;**[!UICONTROL 主要] > [!UICONTROL JMX]**。
 
-<!--
-1. Click `com.day.cq.dam.similaritysearch.internal.impl`. It opens **[!UICONTROL SimilaritySearch Miscellaneous Tasks]**.-->
+1. 按一下 `com.day.cq.dam.similaritysearch.internal.impl`。它會開啟&#x200B;**[!UICONTROL SimilaritySearch其他任務]**。—>
 
 1. 按一下「`com.day.cq.dam.similaritysearch.internal.impl (SCS)`」。
 
@@ -231,7 +225,7 @@ A public certificate lets you authenticate your profile on Adobe Developer Conso
 
    >[!NOTE]
    >
-   >The URL provided as [!UICONTROL Service URL] is not accessible via browser and generates a 404 error. The configuration works OK with the same value of the [!UICONTROL Service URL] parameter. For the overall service status and maintenance schedule, see [https://status.adobe.com/zh-tw](https://status.adobe.com/zh-tw).
+   >The URL provided as [!UICONTROL Service URL] is not accessible via browser and generates a 404 error. The configuration works OK with the same value of the [!UICONTROL Service URL] parameter. For the overall service status and maintenance schedule, see [https://status.adobe.com](https://status.adobe.com).
 
 1. Click **[!UICONTROL Download Public Certificate for OAuth Integration]**, and download the public certificate file `AEM-SmartTags.crt`.
 
@@ -291,7 +285,7 @@ To use Smart Content Service APIs, create an integration in Adobe Developer Cons
 >[!CAUTION]
 >
 >Previously, configurations that were made with JWT Credentials are now subject to deprecation in the Adobe Developer Console. You cannot create new JWT credentials after June 3, 2024. Such configurations can no longer be created or updated, but can be migrated to OAuth configurations.
-> See [Setting up IMS integrations for AEM](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service)
+> See [Setting up IMS integrations for AEM](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service)
 >See [Steps to configure OAuth for on-premise users](#config-oauth-onprem)
 > See [Troubleshooting smart tags for OAuth credentials](#config-smart-tagging.md)
 
@@ -374,7 +368,7 @@ The validation results are displayed in the same dialog.
 
    ![設定DAM更新資產工作流程並新增智慧標籤步驟](assets/smart-tag-step-properties-workflow1.png)
 
-1. 在「參 **[!UICONTROL 數]** 」頁籤中，如果希望工作流完成，即使自動標籤步驟失敗，請選擇「忽略錯誤 **&#x200B;**&#x200B;」。
+1. 在「參 **[!UICONTROL 數]** 」頁籤中，如果希望工作流完成，即使自動標籤步驟失敗，請選擇「忽略錯誤 **** 」。
 
    此外，若無論是否對資料夾啟用智慧標籤，都要在資產上傳時標籤資產，請選取&#x200B;**[!UICONTROL 忽略智慧標籤旗標]**。
 
@@ -400,7 +394,7 @@ The validation results are displayed in the same dialog.
 
 為達到最佳效果，訓練集中的影像需符合下列准則：
 
-**&#x200B;**&#x200B;數量和大小：每個標籤至少30個影像。長邊至少500像素。
+**** 數量和大小：每個標籤至少30個影像。長邊至少500像素。
 
 **Coherence**：用於特定標籤的影像在視覺上類似。
 
@@ -420,7 +414,7 @@ The validation results are displayed in the same dialog.
 
 ![說明性影像，以示範訓練准則](/help/assets/assets/do-not-localize/distraction.png)
 
-**&#x200B;**&#x200B;完整性：如果影像符合多個標籤的資格，請先新增所有適用的標籤，再加入影像以進行訓練。例如，對於標籤（例如`raincoat`和`model-side-view`），請先在符合資格的資產上新增兩個標籤，然後再加入以進行訓練。
+**** 完整性：如果影像符合多個標籤的資格，請先新增所有適用的標籤，再加入影像以進行訓練。例如，對於標籤（例如`raincoat`和`model-side-view`），請先在符合資格的資產上新增兩個標籤，然後再加入以進行訓練。
 
 ![說明性影像，以示範訓練准則](/help/assets/assets/do-not-localize/completeness.png)
 
@@ -466,7 +460,7 @@ The validation results are displayed in the same dialog.
 
    如果您在此報告中未看到您的標籤，請再次執行這些標籤的培訓工作流程。
 
-1. 若要下載報表，請從清單中選取報表，然後按一下工具列中的[下載]。 **&#x200B;**&#x200B;報表會下載為Microsoft Excel試算表。
+1. 若要下載報表，請從清單中選取報表，然後按一下工具列中的[下載]。 ****&#x200B;報表會下載為Microsoft Excel試算表。
 
 ## 限制 {#limitations}
 
@@ -482,4 +476,4 @@ The validation results are displayed in the same dialog.
 >
 >* [智慧標籤概觀及訓練方式](enhanced-smart-tags.md)
 >* [疑難排解OAuth憑證的智慧標籤](config-oauth.md)
->* [有關智慧標籤的教學影片](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/assets/metadata/image-smart-tags)
+>* [有關智慧標籤的教學影片](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/metadata/image-smart-tags)
