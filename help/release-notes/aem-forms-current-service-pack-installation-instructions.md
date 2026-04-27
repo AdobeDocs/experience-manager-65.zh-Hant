@@ -81,7 +81,7 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
 
 +++&#x200B;3. 安裝Microsoft Visual C++可轉散發套件
 
-* 在安裝Microsoft 6.5 Forms的電腦上，下載並安裝適用於Visual Studio 2015、2017、2019和2022](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#visual-studio-2015-2017-2019-and-2022)的[64位元版AEM Visual C++可轉散發套件。
+* 在安裝Microsoft 6.5 Forms的電腦上，下載並安裝適用於Visual Studio 2015、2017、2019和2022[&#128279;](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#visual-studio-2015-2017-2019-and-2022)的64位元版AEM Visual C++可轉散發套件。
 
 >[!NOTE]
 >
@@ -179,7 +179,7 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
 * 伺服器上線時，請將封裝放入`../crx-quickstart/install`資料夾。
 此封裝為      已自動安裝。
 
-* 使用封裝管理員](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)的[HTTP API。 使用`cmd=install&recursive=true`安裝巢狀套件。
+* 使用封裝管理員[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)的HTTP API。 使用`cmd=install&recursive=true`安裝巢狀套件。
 
   >[!NOTE]
   >
@@ -230,7 +230,7 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
 
 +++ &#x200B;3. 安裝Microsoft Visual C++可轉散發套件
 
-* 在安裝Microsoft 6.5 Forms的電腦上，下載並安裝適用於Visual Studio 2015、2017、2019和2022](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#visual-studio-2015-2017-2019-and-2022)的[64位元版AEM Visual C++可轉散發套件。
+* 在安裝Microsoft 6.5 Forms的電腦上，下載並安裝適用於Visual Studio 2015、2017、2019和2022[&#128279;](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#visual-studio-2015-2017-2019-and-2022)的64位元版AEM Visual C++可轉散發套件。
 
 >[!NOTE]
 >
@@ -252,7 +252,7 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
 您可以使用兩種不同的方法來自動安裝[!DNL Experience Manager] Service Pack。<!--  UPDATE FOR EACH NEW RELEASE -->
 
 * 伺服器上線時，請將封裝放入`../crx-quickstart/install`資料夾。 此封裝為      已自動安裝。
-* 使用封裝管理員](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)的[HTTP API。 使用`cmd=install&recursive=true`安裝巢狀套件。
+* 使用封裝管理員[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)的HTTP API。 使用`cmd=install&recursive=true`安裝巢狀套件。
 
   >[!NOTE]
   >

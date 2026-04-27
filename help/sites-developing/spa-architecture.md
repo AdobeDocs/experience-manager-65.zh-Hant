@@ -70,7 +70,7 @@ SPA應該僅依賴內容的動態轉譯。 這是AEM擷取並轉譯內容結構�
 
 ## SPA設計模型 {#spa-design-models}
 
-如果遵循AEM](/help/sites-developing/spa-architecture.md#spa-development-principles-for-aem)中開發SPA的[原則，則您的SPA將可搭配所有支援的AEM內容製作功能運作。
+如果遵循AEM[&#128279;](/help/sites-developing/spa-architecture.md#spa-development-principles-for-aem)中開發SPA的原則，則您的SPA將可搭配所有支援的AEM內容製作功能運作。
 
 不過，在某些情況下，這並非完全必要。 下表概述各種設計模型、其優點和缺點。
 

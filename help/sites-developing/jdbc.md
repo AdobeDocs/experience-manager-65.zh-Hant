@@ -28,7 +28,7 @@ ht-degree: 0%
 
 某些資料庫廠商以OSGi套件組合提供JDBC驅動程式，例如[MySQL](https://dev.mysql.com/downloads/connector/j/)。 如果資料庫的JDBC驅動程式無法做為OSGi套件組合使用，請取得驅動程式JAR並將其包裝在OSGi套件組合中。 組合必須匯出與資料庫伺服器互動所需的套件。 組合也必須匯入它參照的套件。
 
-下列範例使用Maven](https://felix.apache.org/documentation/subprojects/apache-felix-maven-bundle-plugin-bnd.html)的[Bundle外掛程式將HSQLDB驅動程式包裝在OSGi套件中。 POM會指示外掛程式內嵌識別為相依性的hsqldb.jar檔案。 所有org.hsqldb套裝軟體都會匯出。
+下列範例使用Maven[&#128279;](https://felix.apache.org/documentation/subprojects/apache-felix-maven-bundle-plugin-bnd.html)的Bundle外掛程式將HSQLDB驅動程式包裝在OSGi套件中。 POM會指示外掛程式內嵌識別為相依性的hsqldb.jar檔案。 所有org.hsqldb套裝軟體都會匯出。
 
 外掛程式會自動決定要匯入哪些套件，並將它們列在套件組合的MANIFEST.MF檔案中。 如果CQ伺服器上沒有任何套裝軟體，安裝時就不會啟動套裝軟體。 兩種可能的解決方案如下：
 

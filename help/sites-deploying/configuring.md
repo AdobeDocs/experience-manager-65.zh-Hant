@@ -22,7 +22,7 @@ Adobe Experience Manager (AEM)已安裝所有引數的預設設定，允許其�
 
 AEM有許多方面可供設定：
 
-* 某些是每個專案安裝通常都設定的[](#primary-configuration-considerations)，必須檢閱以確認它們是否適用於您的專案。
+* 某些是每個專案安裝通常都設定的[&#128279;](#primary-configuration-considerations)，必須檢閱以確認它們是否適用於您的專案。
 * [其他組態](#further-configuration-considerations)可能為通用組態，但不是必要組態；與功能或系統效能與穩定性相關。
 * 只有AEM的特定選用功能才需要其他功能（這些功能會與適當的功能一併記錄）。
 

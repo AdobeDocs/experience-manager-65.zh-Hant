@@ -56,7 +56,7 @@ ht-degree: 14%
    >若要讓成員與其他使用者共用集合，請在路徑`home/users`提供`dam-users`群組讀取許可權。 將許可權授與位於`/content/dam/collections`位置的使用者，讓使用者可以在彈出式清單中檢視集合。 或者，讓使用者成為`dam-users`群組的一部分。
 
 1. （選用）為集合新增縮圖影像。
-1. 按一下[建立]****，然後按一下[確定]]**關閉對話方塊。**[!UICONTROL &#x200B;具有指定標題和屬性的系列會在「系列」主控台中開啟。
+1. 按一下[建立]&#x200B;**&#x200B;**，然後按一下[確定]&#x200B;**關閉對話方塊。**&#x200B;具有指定標題和屬性的系列會在「系列」主控台中開啟。
 
    >[!NOTE]
    >
@@ -69,7 +69,7 @@ ht-degree: 14%
 您可以從[!DNL Assets]使用者介面將資產拖曳至集合。 您也可以建立收藏集的副本，並將資產拖曳至該處。
 
 1. 從[!DNL Assets]使用者介面中，選取您要新增至集合的資產。
-1. 將資產拖曳至集合&#x200B;]**區域中的**[!UICONTROL &#x200B;拖放位置。 或者，按一下工具列中的&#x200B;**[!UICONTROL To Collection]**。
+1. 將資產拖曳至集合&#x200B;**區域中的**&#x200B;拖放位置。 或者，按一下工具列中的&#x200B;**[!UICONTROL To Collection]**。
 
    ![drop_in_collection](assets/drop_in_collection.png)
 
@@ -150,8 +150,8 @@ Smart collections are built by saving a search so you can alter their content by
 收藏集中繼資料包含有關收藏集的資料，包括新增的任何標籤。
 
 1. 從[!UICONTROL 集合]主控台，選取集合，然後按一下工具列中的&#x200B;**[!UICONTROL 屬性]**。
-1. 在「系列 **[!UICONTROL 中繼資料]** 」頁面中，從「基本」和「進階」標籤檢視系 **[!UICONTROL 列中繼資]** 料 **** 。
-1. 視需要修改中繼資料。 若要儲存變更，請按一下工具列中的[儲存並關閉]。****
+1. 在「系列 **[!UICONTROL 中繼資料]** 」頁面中，從「基本」和「進階」標籤檢視系 **[!UICONTROL 列中繼資]** 料 **&#x200B;**&#x200B;。
+1. 視需要修改中繼資料。 若要儲存變更，請按一下工具列中的[儲存並關閉]。**&#x200B;**
 
 ## 大量編輯多個集合的中繼資料 {#editing-collection-metadata-in-bulk}
 
@@ -159,7 +159,7 @@ Smart collections are built by saving a search so you can alter their content by
 
 1. 在「集合」控制檯中，選取兩個或多個集合。
 1. 在工具列中按一下&#x200B;**[!UICONTROL 屬性]**。
-1. 在「系 **[!UICONTROL 列中繼資料]** 」頁面中，視需要編輯「基本」和「進階」標籤下的中繼資料 ******** 。
+1. 在「系 **[!UICONTROL 列中繼資料]** 」頁面中，視需要編輯「基本」和「進階」標籤下的中繼資料 **&#x200B;**&#x200B;**&#x200B;** 。
 1. 若要檢視特定集合的中繼資料屬性，請取消選取集合清單中剩餘的集合。 中繼資料編輯器欄位會填入特定集合的中繼資料。
 
    >[!NOTE]
@@ -241,7 +241,7 @@ When you download a collection, the entire hierarchy of assets within the collec
 
 ## 已儲存搜尋 {#saved-searches}
 
-在[!DNL Assets]使用者介面中，您可以根據特定規則、搜尋准則或自訂搜尋Facet來搜尋或篩選資產。 如果您將這些項目儲存為「 **[!UICONTROL 已儲存的搜尋]**」，您稍後可從「篩選」面板的「已儲存的搜尋 **** 」清單中存取。 建立儲存的搜尋也會建立智慧型系列。
+在[!DNL Assets]使用者介面中，您可以根據特定規則、搜尋准則或自訂搜尋Facet來搜尋或篩選資產。 如果您將這些項目儲存為「 **[!UICONTROL 已儲存的搜尋]**」，您稍後可從「篩選」面板的「已儲存的搜尋 **&#x200B;**&#x200B;」清單中存取。 建立儲存的搜尋也會建立智慧型系列。
 
 ![saved_searches_list](assets/saved_searches_list.png)
 

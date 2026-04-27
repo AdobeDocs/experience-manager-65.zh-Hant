@@ -65,7 +65,7 @@ ht-degree: 11%
    + [DSRP — 關聯式資料庫儲存資源提供者](dsrp.md)
    + [DSRP的MySQL組態](dsrp-mysql.md)
    + [JSRP - JCR儲存資源提供者](jsrp.md)
-   + SRP](solr.md)的[Solr組態
+   + [SRP的Solr組態](solr.md)
    + [標籤使用者產生的內容](tag-ugc.md)
    + [翻譯使用者產生的內容](translate-ugc.md)
    + [Communities使用者同步](sync.md)

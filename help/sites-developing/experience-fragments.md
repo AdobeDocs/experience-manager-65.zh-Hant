@@ -150,7 +150,7 @@ HTML轉譯是使用Sling重寫程式管道產生的。 管道定義於`/libs/exp
 * 新增元件，
 * 然後以HTML格式或JSON格式將其匯出為Adobe Target選件。
 
-可在AEM](/help/sites-administering/experience-fragments-target.md#Prerequisites)的作者執行個體上[啟用此功能。 它需要有效的Adobe Target設定，以及Link Externalizer設定。
+可在AEM[&#128279;](/help/sites-administering/experience-fragments-target.md#Prerequisites)的作者執行個體上啟用此功能。 它需要有效的Adobe Target設定，以及Link Externalizer設定。
 
 Link Externalizer是用來判斷建立Target選件的HTML版本時所需的URL，然後傳送至Adobe Target。 這是必要的，因為Adobe Target要求可以公開存取Target HTML選件內的所有連結；這表示連結參照的任何資源以及體驗片段本身必須在使用之前發佈。
 

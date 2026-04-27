@@ -488,7 +488,7 @@ ContextHub不再在發佈頁面上插入第二個jQuery副本。 區段引擎使
 您可以使用兩種不同的方法來安裝[!DNL Experience Manager] 6.5.24.0.<!-- UPDATE FOR EACH NEW RELEASE -->
 
 * 伺服器上線時，請將封裝放入`../crx-quickstart/install`資料夾。 套件會自動安裝。
-* 使用封裝管理員](/help/sites-administering/package-manager.md#package-share)的[HTTP API。 使用`cmd=install&recursive=true`安裝巢狀套件。
+* 使用封裝管理員[&#128279;](/help/sites-administering/package-manager.md#package-share)的HTTP API。 使用`cmd=install&recursive=true`安裝巢狀套件。
 
 >[!NOTE]
 >
@@ -568,7 +568,7 @@ Adobe打算在產品生命週期結束前保留這些較舊的端點。 Adobe不
 
 <!-- THESE KNOWN ISSUES CARRY OVER EACH RELEASE. THE "PRODUCT UPDATES TEAM" IS SUPPOSED TO VERIFY EACH ISSUE AND LET YOU KNOW IF ANYTHING NEEDS TO BE ADDED, DELETED, OR CHANGED IN THIS LIST. -->
 
-* 與Oak相關的&#x200B;****
+* 與Oak相關的&#x200B;**&#x200B;**
 從Service Pack 13及更高版本開始，下列錯誤記錄檔開始出現，這會影響持續性快取：
 
   ```shell
@@ -647,7 +647,7 @@ Adobe打算在產品生命週期結束前保留這些較舊的端點。 Adobe不
 
 ### AEM Sites的已知問題 {#known-issues-aem-sites-6524}
 
-內容片段 — 預覽失敗，因為大型片段樹受到DoS保護。 請參閱有關預設GraphQL查詢執行器組態選項](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-kcs/kbarticles/ka-23945)的[KB文章(SITES-17934)
+內容片段 — 預覽失敗，因為大型片段樹受到DoS保護。 請參閱有關預設GraphQL查詢執行器組態選項[&#128279;](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-kcs/kbarticles/ka-23945)的KB文章(SITES-17934)
 
 ### AEM Forms的已知問題 {#known-issues-aem-forms-6524}
 
@@ -712,7 +712,7 @@ Adobe打算在產品生命週期結束前保留這些較舊的端點。 Adobe不
     >[!VIDEO](https://video.tv.adobe.com/v/3479697)
   -->
 
-* **FORMS-23979** HTML-PDF轉換(PDFG)可能會遇到間歇性逾時。 適用於SP24的較新版本Forms附加元件隨後發行，其中包含此修正。 如果您遇到此問題，請將您的環境更新至6.5.24.0](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases#aem-65-forms-releases)的[最新發行的Forms附加元件。
+* **FORMS-23979** HTML-PDF轉換(PDFG)可能會遇到間歇性逾時。 適用於SP24的較新版本Forms附加元件隨後發行，其中包含此修正。 如果您遇到此問題，請將您的環境更新至6.5.24.0[&#128279;](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases#aem-65-forms-releases)的最新發行的Forms附加元件。
 
 * **FORMS-23717**&#x200B;升級至&#x200B;**AEM Forms6.5.24.0**&#x200B;後，`server.log`和`error.log`可能會充滿重複的警告訊息，例如&#x200B;*安全剖析器工廠建立失敗*&#x200B;或不支援&#x200B;*安全性屬性……*。 記錄檔可能會以每秒&#x200B;**5到10行的速度增加** （每小時數百個MB），這會填滿磁碟並封鎖生產轉出。
 

@@ -355,7 +355,7 @@ var c = {
 
 ### 使用AEM專案原型建立使用者端程式庫{#create-client-library-archetype}
 
-您可以使用AEM專案原型](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/developing/archetype/using#getting-started)，將使用者端程式庫新增至已建立的專案[，以新增自訂函式。
+您可以使用AEM專案原型[&#128279;](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/developing/archetype/using#getting-started)，將使用者端程式庫新增至已建立的專案，以新增自訂函式。
 如果您有現有的專案<!--and have already the project structure as shown in the image below,-->，您可以直接將[自訂函式](#create-add-custom-function)新增到您的本機專案。
 
 <!--![custom fuction folder structure](assets/custom-library-folder-structure.png)-->
@@ -532,11 +532,11 @@ var c = {
 
 ![正在新增自訂函式使用者端程式庫](/help/forms/using//assets/calculateage-customfunction.png)
 
-現在，讓我們瞭解如何在AEM Forms 6.5](/help/forms/using/rule-editor-core-components.md#invoke-form-data-model-service-invoke)中使用[規則編輯器的Invoke服務來設定和使用自訂函式
+現在，讓我們瞭解如何在AEM Forms 6.5[&#128279;](/help/forms/using/rule-editor-core-components.md#invoke-form-data-model-service-invoke)中使用規則編輯器的Invoke服務來設定和使用自訂函式
 
 ## 在最適化表單中使用自訂函式 {#use-custom-functions}
 
-在最適化表單中，您可以在規則編輯器](/help/forms/using/rule-editor-core-components.md)中使用[自訂函式。
+在最適化表單中，您可以在規則編輯器[&#128279;](/help/forms/using/rule-editor-core-components.md)中使用自訂函式。
 讓我們將下列程式碼新增至JavaScript檔案（`Function.js`檔案），以根據出生日期(YYYY-MM-DD)計算年齡。 建立自訂函式為`calculateAge()`，它以出生日期作為輸入並傳回年齡：
 
 ```javascript
