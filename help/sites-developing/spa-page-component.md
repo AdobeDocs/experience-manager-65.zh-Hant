@@ -92,7 +92,7 @@ SPA的頁面元件不會透過JSP或HTL檔案和資源物件提供其子元件�
 >
 >本檔案僅供示範之用，而使用We.Retail日誌應用程式。 請勿用於任何專案工作。
 >
->任何AEM專案都應該使用[AEM專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)，其支援使用React或Angular的SPA專案，並使用SPA SDK。AEM上的所有SPA專案都應該以SPA Starter Kit的Maven Archetype為基礎。
+>任何AEM專案都應該使用[AEM專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hant)，其支援使用React或Angular的SPA專案，並使用SPA SDK。AEM上的所有SPA專案都應該以SPA Starter Kit的Maven Archetype為基礎。
 
 ## 頁面編輯器覆蓋同步 {#page-editor-overlay-synchronization}
 

@@ -18,7 +18,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->[資產選擇器](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/asset-selector.html?lang=en)在舊版[!DNL Experience Manager]中稱為[資產選擇器](https://helpx.adobe.com/experience-manager/6-2/assets/using/asset-picker.html)。
+>[資產選擇器](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/asset-selector.html?lang=zh-Hant)在舊版[!DNL Experience Manager]中稱為[資產選擇器](https://helpx.adobe.com/tw/experience-manager/6-2/assets/using/asset-picker.html)。
 
 資產選擇器可讓您在[!DNL Adobe Experience Manager] Assets中瀏覽、搜尋及篩選資產。 您也可以擷取使用資產選擇器所選取資產的中繼資料。 若要自訂資產選擇器介面，您可以使用支援的請求引數來啟動它。 這些引數會為特定案例設定資產選擇器的內容。
 
@@ -63,4 +63,4 @@ ht-degree: 2%
 
 >[!MORELIKETHIS]
 >
->* [AEM as a Cloud Service中的Micro-Frontend資產選擇器](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/asset-selector.html?lang=en)
+>* [AEM as a Cloud Service中的Micro-Frontend資產選擇器](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/asset-selector.html?lang=zh-Hant)

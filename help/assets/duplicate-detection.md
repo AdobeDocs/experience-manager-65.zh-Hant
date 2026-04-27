@@ -31,4 +31,4 @@ ht-degree: 0%
 >[!MORELIKETHIS]
 >
 >* [在現有存放庫中複製資產（來自社群成員的教學課程）](https://experience-aem.blogspot.com/2019/06/aem-65-find-duplicate-assets-binaries-in-existing-repository.html)
->* [在AEM as a Cloud Service中偵測重複的資產](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/detect-duplicate-assets.html)
+>* [在AEM as a Cloud Service中偵測重複的資產](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/detect-duplicate-assets.html?lang=zh-Hant)

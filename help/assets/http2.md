@@ -63,7 +63,7 @@ The following demonstration illustrates the difference between HTTP/1 versus HTT
 
 You initiate the request to switch over to HTTP/2; it is not automatically done for you.
 
-1. To switch over to HTTP/2, initiate an Adobe Customer Support request. See [Open a support ticket](https://experienceleague.adobe.com/?support-solution=General&lang=en&support-tab=home#support).
+1. To switch over to HTTP/2, initiate an Adobe Customer Support request. See [Open a support ticket](https://experienceleague.adobe.com/zh-hant?support-solution=General&lang=en&support-tab=home#support).
 
    1. Provide the following information in your support request:
 
