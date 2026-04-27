@@ -10,10 +10,10 @@ feature: Upgrading
 exl-id: 37d4aee4-15eb-41ab-ad71-dfbd5c7910f8
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 8f638eb384bdca59fb6f4f8990643e64f34622ce
+source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
 workflow-type: tm+mt
-source-wordcount: '1991'
-ht-degree: 0%
+source-wordcount: '2049'
+ht-degree: 1%
 
 ---
 
@@ -56,7 +56,7 @@ ht-degree: 0%
 
 ## 設定工作流程和稽核記錄清除 {#configure-wf-audit-purging}
 
-`WorkflowPurgeTask`和`com.day.cq.audit.impl.AuditLogMaintenanceTask`任務需要單獨的OSGi設定，沒有它們就無法運作。 如果它們在升級前工作執行期間失敗，遺失設定是最可能的原因。 因此，如果您不想執行OSGi設定，請務必為這些工作新增OSGi設定，或將其從升級前最佳化工作清單中完全移除。 您可以在[管理工作流程執行個體](/help/sites-administering/workflows-administering.md)找到設定工作流程清除工作的檔案，也可以在AEM 6[&#128279;](/help/sites-administering/operations-audit-log.md)中的稽核記錄維護找到稽核記錄維護工作設定。
+`WorkflowPurgeTask`和`com.day.cq.audit.impl.AuditLogMaintenanceTask`任務需要單獨的OSGi設定，沒有它們就無法運作。 如果它們在升級前工作執行期間失敗，遺失設定是最可能的原因。 因此，如果您不想執行OSGi設定，請務必為這些工作新增OSGi設定，或將其從升級前最佳化工作清單中完全移除。 您可以在[管理工作流程執行個體](/help/sites-administering/workflows-administering.md)找到設定工作流程清除工作的檔案，也可以在AEM 6](/help/sites-administering/operations-audit-log.md)中的[稽核記錄維護找到稽核記錄維護工作設定。
 
 ## 安裝、設定及執行升級前工作 {#install-configure-run-pre-upgrade-tasks}
 
@@ -74,7 +74,8 @@ ht-degree: 0%
 
 在AEM 6.3及更新版本中，快速入門jar中包含升級前維護最佳化任務。
 
-<!-- URLs below are all 404s. This content should probably be removed because it is entirely obsolete.
+<!--
+URLs below are all 404s. This content should probably be removed because it is entirely obsolete.
 
 If you are upgrading from an older version of AEM 6, they are made available through separate packages that you can download from the Package Manager.
 
@@ -84,7 +85,8 @@ You can find the packages at these locations:
 
 * [For upgrading from AEM 6.1](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq610/product/pre-upgrade-tasks-content-cq61)
 
-* [For upgrading from AEM 6.2](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq620/product/pre-upgrade-tasks-content-cq62) -->
+* [For upgrading from AEM 6.2](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq620/product/pre-upgrade-tasks-content-cq62)
+-->
 
 ### 使用方式 {#how-to-use-it}
 
@@ -266,7 +268,8 @@ You can find the packages at these locations:
                      <param name = "adminId" value ="admin" />
                      <param name = "disableNTLMAuth" value = "true" />
                      <param name = "tokenExpiration" value = "43200000" />
-                     <!-- param name="trust_credentials_attribute" value="d5b9167e95dad6e7d3b5d6fa8df48af8"/
+                     <!--
+param name="trust_credentials_attribute" value="d5b9167e95dad6e7d3b5d6fa8df48af8"/
                 -->
                  </LoginModule >
          </ Security>
@@ -274,7 +277,7 @@ You can find the packages at these locations:
 
 >[!NOTE]
 >
->如需詳細資訊，請參閱[使用外部登入模組的驗證](https://jackrabbit.apache.org/oak/docs/security/authentication/externalloginmodule.html)。
+>如需詳細資訊，請參閱[使用外部登入模組的驗證](https://jackrabbit.apache.org/oak/docs/security/authentication/externalloginmodule.html?lang=zh-Hant)。
 >
 >如需AEM 6中`LoginModule`設定的範例，請參閱[使用AEM 6](/help/sites-administering/ldap-config.md)設定LDAP。
 

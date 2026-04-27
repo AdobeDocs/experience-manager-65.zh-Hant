@@ -7,9 +7,9 @@ feature: Asset Management
 exl-id: bc0cfb0e-3f70-4377-8831-326a7cae73bd
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: bca6156727dca11b2e09be549f3def6130827193
 workflow-type: tm+mt
-source-wordcount: '319'
+source-wordcount: '333'
 ht-degree: 4%
 
 ---
@@ -18,10 +18,10 @@ ht-degree: 4%
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/watermark-assets.html?lang=zh-Hant) |
+| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/watermark-assets.html?lang=en) |
 | AEM 6.5 | 本文章 |
 
-[!DNL Adobe Experience Manager Assets]可讓您為資產新增數位浮水印，協助使用者驗證資產的真實性和版權所有權。 [!DNL Experience Manager Assets]支援在PNG和JPEG檔案中做為浮水印使用的文字。
+[!DNL Adobe Experience Manager Assets]可讓您為資產新增數位浮水印，協助使用者驗證資產的真實性和版權所有權。 [!DNL Experience Manager Assets]支援在PNG和JPEG檔案中當作浮水印使用的文字。
 
 若要在資產上套用浮水印，請在[!UICONTROL DAM更新資產]工作流程中新增浮水印步驟。
 
@@ -48,7 +48,7 @@ ht-degree: 4%
 1. 使用浮水印步驟儲存&#x200B;**[!UICONTROL DAM更新資產]**&#x200B;工作流程。
 1. 從[!DNL Assets]使用者介面上傳範例資產。 浮水印會以字型大小、顏色等顯示在您在上述步驟中設定的位置。
 
-若要以程式設計方式或動態資訊為PDF檔案加上浮水印，請考慮使用[Experience Manager檔案服務](/help/forms/using/overview-aem-document-services.md)產品。
+若要以程式設計方式或動態資訊為PDF檔案加上浮水印，請考慮使用[Experience Manager Document Services](/help/forms/using/overview-aem-document-services.md)產品。
 
 ## 提示和限制 {#tips-limitations}
 

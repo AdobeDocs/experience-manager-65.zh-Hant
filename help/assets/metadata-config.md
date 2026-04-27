@@ -1,58 +1,59 @@
 ---
-title: 中繼資料功能的設定和管理。
-description: 與中繼資料新增和管理相關的 [!DNL Experience Manager Assets] 功能的設定和管理。
+title: Configuration and administration of metadata functionality.
+description: Configuration and administration of [!DNL Experience Manager Assets] functionality related to metadata addition and management.
 contentOwner: AG
 role: User, Admin
 feature: Metadata
 exl-id: 56c92b7f-e687-4ab5-a376-afa58bdb6ee0
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
 workflow-type: tm+mt
-source-wordcount: '1978'
-ht-degree: 3%
+source-wordcount: '2005'
+ht-degree: 4%
 
 ---
 
-# 在[!DNL Assets]中設定和管理中繼資料功能 {#config-metadata}
+# Configuration and administration of metadata functionality in [!DNL Assets] {#config-metadata}
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/metadata-profiles.html?lang=zh-Hant) |
+| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/metadata-profiles.html?lang=en) |
 | AEM 6.5 | 本文章 |
 
-<!-- Scope of metadata articles:
+<!--
+Scope of metadata articles:
 * metadata.md: The scope of this article is basic metadata updates, changes, and so on, operations that end-users can do.
 * metadata-concepts.md: All conceptual information. Minor instructions are OK but it is an FYI article about support and standards.
 * metadata-config.md: New article. Contains all configuration and administration how-to info related to metadata of assets.
 -->
 
-[!DNL Adobe Experience Manager Assets]保留每個資產的中繼資料。 它可讓您更輕鬆地分類及組織資產，並協助尋找特定資產的人。 有了使用資產保留和管理中繼資料的功能，您可以根據資產的中繼資料自動組織和處理資產。 [!DNL Adobe Experience Manager Assets]可讓管理員設定和自訂中繼資料功能，以修改預設Adobe方案。
+[!DNL Adobe Experience Manager Assets]保留每個資產的中繼資料。 它可讓您更輕鬆地分類及組織資產，並協助尋找特定資產的人。 有了使用資產保留和管理中繼資料的功能，您可以根據資產的中繼資料自動組織和處理資產。 [!DNL Adobe Experience Manager Assets] lets administrators configure and customize metadata functionality to modify the default Adobe offering.
 
-## 編輯中繼資料結構 {#metadata-schema}
+## Edit metadata schema {#metadata-schema}
 
-如需詳細資訊，請參閱[編輯中繼資料結構表單](metadata-schemas.md#edit-metadata-schema-forms)。
+For details, see [edit metadata schema forms](metadata-schemas.md#edit-metadata-schema-forms).
 
-## 在[!DNL Experience Manager]中註冊自訂名稱空間 {#registering-a-custom-namespace-within-aem}
+## Register a custom namespace within [!DNL Experience Manager] {#registering-a-custom-namespace-within-aem}
 
-您可以在[!DNL Experience Manager]中新增您自己的名稱空間。 如同預先定義的名稱空間（例如`cq`、`jcr`和`sling`），您可以擁有儲存庫中繼資料和XML處理的名稱空間。
+You can add your own namespaces within [!DNL Experience Manager]. Just as there are predefined namespaces such as `cq`, `jcr`, and `sling`, you can have a namespace for your repository metadata and XML processing.
 
-1. 存取節點型別管理頁面`https://[aem_server]:[port]/crx/explorer/nodetypes/index.jsp`。
-1. 若要存取名稱空間管理頁面，請按一下頁面頂端的&#x200B;**[!UICONTROL 名稱空間]**。
-1. 若要新增名稱空間，請按一下頁面底部的&#x200B;**[!UICONTROL 新增]**。
-1. 以XML名稱空間慣例指定自訂名稱空間。 以URI的形式指定ID，並為該ID指定關聯的前置詞。 按一下「**[!UICONTROL 儲存]**」。
+1. Access the node type administration page `https://[aem_server]:[port]/crx/explorer/nodetypes/index.jsp`.
+1. To access the namespace administration page, click **[!UICONTROL Namespaces]** at the top of the page.
+1. To add a namespace, click **[!UICONTROL New]** at the bottom of the page.
+1. Specify a custom namespace in the XML namespace convention. Specify the ID in the form of a URI and an associated prefix for the ID. 按一下&#x200B;**[!UICONTROL 儲存]**。
 
-## 設定大量中繼資料更新的限制 {#bulk-metadata-update-limit}
+## Configure limits for bulk metadata update {#bulk-metadata-update-limit}
 
-為避免發生拒絕服務(DOS)情況，[!DNL Enterprise Manager]會限制Sling要求中支援的引數數量。 一次更新許多資產的中繼資料時，您可能會達到限制，而且中繼資料不會更新以取得更多資產。 Enterprise Manager會在記錄檔中產生下列警告：
+To prevent a denial of service (DOS) like situation, [!DNL Enterprise Manager] limits the number of parameters supported in a Sling request. When updating metadata of many assets in one go, you may reach the limit and the metadata does not get updated for more assets. Enterprise Manager generates the following warning in the logs:
 
 `org.apache.sling.engine.impl.parameters.Util Too many name/value pairs, stopped processing after 10000 entries`
 
-若要變更限制，請存取&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 作業]** > **[!UICONTROL 網頁主控台]**，並變更&#x200B;**[!UICONTROL Apache Sling要求引數處理]** OSGi設定中&#x200B;**[!UICONTROL 最大POST引數]**&#x200B;的值。
+To change the limit, access **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]** and change the value of **[!UICONTROL Maximum POST Parameters]** in **[!UICONTROL Apache Sling Request Parameter Handling]** OSGi configuration.
 
 ## 中繼資料設定檔 {#metadata-profiles}
 
-中繼資料設定檔可讓您將預設中繼資料套用至資料夾中的資產。 建立中繼資料設定檔，並將其套用至資料夾。 您稍後上傳至資料夾的任何資產都會繼承您在中繼資料設定檔中設定的預設中繼資料。
+A metadata profile lets you apply default metadata to assets within a folder. 建立中繼資料設定檔，並將其套用至資料夾。 您稍後上傳至資料夾的任何資產都會繼承您在中繼資料設定檔中設定的預設中繼資料。
 
 ### 新增中繼資料設定檔 {#adding-a-metadata-profile}
 
@@ -106,7 +107,7 @@ ht-degree: 3%
 
 1. 按一下工具列中的&#x200B;**[!UICONTROL 複製]**。
 1. 在&#x200B;**[!UICONTROL 複製中繼資料設定檔]**&#x200B;對話方塊中，輸入新中繼資料設定檔副本的標題。
-1. 按一下&#x200B;**[!UICONTROL 複製]**。 中繼資料描述檔的復本會顯示在「中繼資料描述檔」頁面的描述檔 **[!UICONTROL 清單中]** 。
+1. 按一下「**[!UICONTROL 複製]**」。 中繼資料設定檔的復本會顯示在「中繼資料設定檔」頁面的設定檔 **[!UICONTROL 清單中]** 。
 
    ![在中繼資料設定檔頁面中新增了中繼資料設定檔的復本](assets/copy-metadata-profile.png)
 
@@ -117,8 +118,9 @@ ht-degree: 3%
 1. 按一下工具列中的&#x200B;**[!UICONTROL 刪除中繼資料設定檔]**。
 1. 在對話方塊中，按一下&#x200B;**[!UICONTROL 刪除]**&#x200B;以確認刪除作業。 中繼資料設定檔會從清單中刪除。
 
-<!-- TBD: Revisit to find out the correct config. and update these steps. When fixed, also o
-These steps have been carried forward from old AEM versions. See https://helpx.adobe.com/tw/experience-manager/6-2/assets/using/metadata-profiles.html#ApplyingaMetadataProfiletoFolders
+<!--
+TBD: Revisit to find out the correct config. and update these steps. When fixed, also o
+These steps have been carried forward from old AEM versions. See https://helpx.adobe.com/experience-manager/6-2/assets/using/metadata-profiles.html#ApplyingaMetadataProfiletoFolders
 
 ### Configuration to apply a metadata profile globally {#apply-a-metadata-profile-globally}
 
@@ -153,7 +155,7 @@ To apply a metadata profile globally, follow these steps:
 
 您可以編輯新新增或現有的中繼資料結構表單，其中包括：
 
-* 標籤
+* 索引標籤
 * 索引標籤中的表單專案。
 
 您可以將這些表單專案對應/設定至CRX存放庫中繼資料節點內的欄位。 您可以將新的索引標籤或表單專案新增到中繼資料結構表單。
@@ -200,7 +202,7 @@ To apply a metadata profile globally, follow these steps:
 
 **[!UICONTROL 欄位標籤]**：資料夾屬性頁面上顯示的中繼資料屬性名稱。
 
-**[!UICONTROL 對應至屬性]**：此屬性會指定資料夾節點在CRX存放庫中儲存位置的相對路徑。 它以「**」開頭。/**」，表示路徑在資料夾的節點下。
+**[!UICONTROL 對應至屬性]**：此屬性會指定資料夾節點在CRX存放庫中儲存位置的相對路徑。 它以&quot;**./**&quot;開頭，這表示路徑在資料夾的節點下。
 
 以下是此屬性的有效值：
 
@@ -238,7 +240,7 @@ To apply a metadata profile globally, follow these steps:
 1. 在「資料夾中繼資料結構Forms」頁面中，選取您要套用至資料夾的結構表單。
 1. 在工具列中按一下&#x200B;**[!UICONTROL 套用至資料夾]**。
 
-1. 選取要套用結構描述的資料夾，然後按一下[套用]。**&#x200B;** 如果資料夾已套用中繼資料結構，則會出現警告訊息，告知您即將覆寫現有的中繼資料結構。 按一下&#x200B;**[!UICONTROL 覆寫]**。
+1. 選取要套用結構描述的資料夾，然後按一下[套用]。**** 如果資料夾已套用中繼資料結構，則會出現警告訊息，告知您即將覆寫現有的中繼資料結構。 按一下&#x200B;**[!UICONTROL 覆寫]**。
 1. 開啟您套用中繼資料結構的資料夾的中繼資料屬性。
 
    ![folder_properties](assets/folder_properties.png)
@@ -262,9 +264,9 @@ To apply a metadata profile globally, follow these steps:
 
 ### 使用資料夾中繼資料結構 {#use-the-folder-metadata-schema}
 
-開啟配置了資料夾元資料架構的資料夾的屬性。**[!UICONTROL 資料夾中繼資料]**&#x200B;索引標籤會顯示在資料夾[!UICONTROL 內容]頁面中。 要查看資料夾元資料結構表單，請選擇此頁籤。
+開啟配置了資料夾元資料結構描述的資料夾的屬性。 **[!UICONTROL 資料夾中繼資料]**&#x200B;索引標籤會顯示在資料夾[!UICONTROL 內容]頁面中。 要查看資料夾元資料結構表單，請選擇此頁籤。
 
-在各個欄位中輸入中繼資料值，然後按一下[儲存]儲存這些值。 **&#x200B;**&#x200B;您指定的值會儲存在CRX存放庫的資料夾節點中。
+在各個欄位中輸入中繼資料值，然後按一下[儲存]儲存這些值。 ****&#x200B;您指定的值會儲存在CRX存放庫的資料夾節點中。
 
 ![folder_metadata_properties-1](assets/folder_metadata_properties-1.png)
 
@@ -272,13 +274,13 @@ To apply a metadata profile globally, follow these steps:
 
 * 若要在自訂名稱空間上匯入中繼資料，請先註冊名稱空間。
 * 屬性選取器會顯示用於結構描述編輯器和搜尋表單的屬性。 屬性選擇器不會從資產中挑選中繼資料屬性。
-* 在升級至[!DNL Experience Manager] 6.5之前，您可能已有既存的中繼資料設定檔。升級之後，如果您在[!UICONTROL 中繼資料設定檔]索引標籤中的資料夾[!UICONTROL 屬性]中套用此類設定檔，則不會顯示中繼資料表單欄位。 不過，如果您套用新建立的中繼資料設定檔，表單欄位會顯示但如預期般無法使用。 功能不會遺失，但如果您想檢視（無法使用）表單欄位，則編輯並儲存現有的中繼資料設定檔。
+* 在升級至[!DNL Experience Manager] 6.5之前，您可能已有既存的中繼資料設定檔。 升級之後，如果您在[!UICONTROL 中繼資料設定檔]索引標籤中的資料夾[!UICONTROL 屬性]中套用此類設定檔，則不會顯示中繼資料表單欄位。 不過，如果您套用新建立的中繼資料設定檔，表單欄位會顯示但如預期般無法使用。 功能不會遺失，但如果您想檢視（無法使用）表單欄位，則編輯並儲存現有的中繼資料設定檔。
 
 >[!MORELIKETHIS]
 >
 >* [中繼資料概念與瞭解](metadata-concepts.md)。
 >* [編輯多個集合的中繼資料屬性](manage-collections.md#editing-collection-metadata-in-bulk)。
->* [在Experience Manager Assets中匯入和匯出中繼資料](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/metadata-import-export.html?lang=zh-Hant)。
+>* [在Experience Manager Assets中匯入和匯出中繼資料](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/metadata-import-export.html)。
 >* [處理中繼資料、影像和影片的設定檔](processing-profiles.md)。
 >* [組織您的數位資產以使用處理設定檔的最佳實務](/help/assets/organize-assets.md)。
 >* [XMP回寫](/help/assets/xmp-writeback.md)。

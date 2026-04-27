@@ -11,9 +11,9 @@ role: Admin
 exl-id: ef371ff8-6b4f-4e5a-98fb-d7c274927c46
 solution: Experience Manager
 feature: Communities
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
 workflow-type: tm+mt
-source-wordcount: '1698'
+source-wordcount: '1727'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 1%
 
 當社群網站的[範本結構](/help/communities/sites-console.md#step1)包含[群組功能](/help/communities/functions.md#groups-function)時，「群組」主控台會提供建立社群群組的存取權。
 
-* AEM Communities支援在其他群組內巢狀內嵌群組。 當新群組[&#128279;](/help/communities/tools-groups.md)的結構包含群組函式時，便可以進行群組巢狀化。
+* AEM Communities支援在其他群組內巢狀內嵌群組。 當新群組](/help/communities/tools-groups.md)的[結構包含群組函式時，便可以進行群組巢狀化。
 * 僅適用於作者環境，有一個群組建立精靈，類似於網站建立精靈。
 * 成員是否可以在發佈環境中建立群組，可以在將群組功能新增至社群網站結構或社群群組結構時進行設定。
 
@@ -34,7 +34,8 @@ ht-degree: 1%
 * **控制項**：群組可以是開啟或機密。
 * **巢狀**：群組可以包含零個或多個群組。
 
-<!-- This is a 404 on helpx. Update or remove.
+<!--
+This is a 404 on helpx. Update or remove.
 >[!NOTE]
 >
 >Community groups, created in the publish environment before the [existence of the Community Groups console](/help/communities/version-history.md#featurepack1fp1), is not listed in the Community Groups console, and thus, are not modifiable using the console.
@@ -62,7 +63,7 @@ ht-degree: 1%
 
 * 選取「**群組」資料夾**，以便您開啟它。
 
-  開啟時，所有現有群組(無論是在Author或Publish上建立)都會顯示。
+  開啟時，所有現有群組（無論是在「作者」或「發佈」中建立）都會顯示。
 
   在此「群組」主控台中，可以編寫新的群組。
 
@@ -99,7 +100,6 @@ ht-degree: 1%
    * 請仔細檢查名稱，因為建立群組後不易變更。
    * 基底URL顯示在`Community Group Name`的下方。
    * 對於有效的URL，附加「.html」
-
      *例如*，`https://localhost:4502/content/sites/mysight/en/mygroup.html`。
 
 * **社群群組範本**&#x200B;功能表
@@ -181,7 +181,7 @@ ht-degree: 1%
 
 縮圖是要在製作和發佈時為群組顯示的影像。
 
-群組影像的最佳大小為支援的影像格式(例如JPG或PNG)為170 x 90畫素。
+群組影像的最佳大小為支援的影像格式（例如JPG或PNG）為170 x 90畫素。
 
 如果未新增影像，則會顯示預設影像。
 
@@ -207,7 +207,7 @@ ht-degree: 1%
 
 ![開啟網站](assets/open-site.png)
 
-群組的頁面內容可使用與任何其他AEM頁面相同的工具進行編寫。 若要開啟群組以進行編寫，請選取「開啟網站」圖示，將滑鼠游標停留在群組卡片上時就會顯示。
+群組的頁面內容可與任何其他AEM頁面使用相同的工具進行編寫。 若要開啟群組以進行編寫，請選取「開啟網站」圖示，將滑鼠游標停留在群組卡片上時就會顯示。
 
 ## 修改群組屬性 {#modify-group-properties}
 
@@ -283,9 +283,9 @@ DESIGN面板允許修改主題：
 
 ### 修改縮圖 {#modify-thumbnail}
 
-[THUMBNAIL](#thumbnail)面板可讓您上傳影像，以代表Publish環境中網站訪客的社群群組，以及製作環境中Communities網站的群組主控台。
+[THUMBNAIL](#thumbnail)面板可讓您上傳影像，以代表社群群組至發佈環境中的網站訪客，以及製作環境中的社群網站群組主控台。
 
-## Publish群組 {#publish-the-group}
+## 發佈群組 {#publish-the-group}
 
 ![publish-site](assets/publish-site.png)
 

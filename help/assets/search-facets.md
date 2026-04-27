@@ -7,9 +7,9 @@ feature: Search
 exl-id: acaf46e6-ff70-4825-8922-ce8f82905a92
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: bca6156727dca11b2e09be549f3def6130827193
 workflow-type: tm+mt
-source-wordcount: '2411'
+source-wordcount: '2437'
 ht-degree: 15%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 15%
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/search-facets.html?lang=zh-Hant) |
+| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/search-facets.html?lang=en) |
 | AEM 6.5 | 本文章 |
 
 [!DNL Adobe Experience Manager Assets]的企業範圍部署具有儲存許多資產的容量。 有時候，如果您只使用[!DNL Experience Manager]的一般搜尋功能，尋找正確的資產可能會很困難且耗時。
@@ -55,7 +55,7 @@ ht-degree: 15%
 
 1. 在[!UICONTROL 設定]索引標籤中，輸入述詞的欄位標籤、預留位置文字和描述。 為您要與述詞關聯的中繼資料屬性指定有效的名稱。 [!UICONTROL 設定]索引標籤中的標題標籤可識別所選述詞的型別。
 
-1. 在「屬 [!UICONTROL 性名稱] 」欄位中，指定您要與謂語關聯的中繼資料屬性的有效名稱。它是根據其執行搜索的名稱。例如，輸入 `jcr:content/metadata/dc:description` 或 `./jcr:content/metadata/dc:description`。
+1. 在「屬 [!UICONTROL 性名稱] 」欄位中，指定您要與謂語關聯的中繼資料屬性的有效名稱。 它是根據其執行搜索的名稱。 例如，輸入 `jcr:content/metadata/dc:description` 或 `./jcr:content/metadata/dc:description`。
 
    您也可以從選取對話方塊中選取現有節點。
 
@@ -77,7 +77,7 @@ ht-degree: 15%
 
 ## 新增選項述詞 {#adding-an-options-predicate}
 
-選項述詞可讓您在「篩選器」面板中新增多個搜尋選項。 您可以在「篩選器」面板中選取這些選項中的一或多個來搜尋資產。 例如，若要根據檔案型別搜尋資產，請在搜尋表單中設定選項，例如「影像」、「多媒體」、「檔案」和「封存」。 設定這些選項後，當您在「濾鏡」面板中選取「影像」選項時，系統會對GIF、JPEG、PNG等型別的資產執行搜尋。
+選項述詞可讓您在「篩選器」面板中新增多個搜尋選項。 您可以在「篩選器」面板中選取這些選項中的一或多個來搜尋資產。 例如，若要根據檔案型別搜尋資產，請在搜尋表單中設定選項，例如「影像」、「多媒體」、「檔案」和「封存」。 設定這些選項後，當您在「篩選器」面板中選取「影像」選項時，將會對GIF、JPEG、PNG等型別的資產執行搜尋。
 
 若要將選項對應至個別屬性，請建立選項的節點結構，並在Options述詞的Property Name屬性中提供父節點的路徑。 父節點應屬於型別`sling`： `OrderedFolder`。 選項應屬於型別`nt:unstructured`。 選項節點應設定屬性`jcr:title`和`value`。
 
@@ -85,13 +85,13 @@ ht-degree: 15%
 
 當您選取選項時，會根據選項節點及其子節點（如果有的話）的`value`屬性來執行搜尋。 系統會周遊選項節點下的整個樹狀結構，並使用OR運算來結合每個子節點的`value`屬性，以形成搜尋查詢。
 
-例如，如果您為檔案類型選取「影像」，則會使用OR運算結合屬性來建立資 `value` 產的搜尋查詢。例如，通過組合影像/jpeg *、* image/gif *、* png影像、影像 */jpeg影像、以及使用OR操作對Tiff屬性進行搜索的Joff影像&#x200B;**&#x200B;***`jcr:content/metadata/dc:format` /Tiff影像的匹配結果來構建影像搜索查詢。
+例如，如果您為檔案類型選取「影像」，則會使用OR運算結合屬性來建立資 `value` 產的搜尋查詢。 例如，通過組合影像/jpeg *、* image/gif *、* png影像、影像 */jpeg影像、以及使用OR操作對Tiff屬性進行搜索的Joff影像*****`jcr:content/metadata/dc:format` /Tiff影像的匹配結果來構建影像搜索查詢。
 
 ![檔案型別的Value屬性（如CRXDE中所見）用於搜尋查詢以運作](assets/filetype-value-property.png)
 
 檔案型別的Value屬性（如CRXDE中所見）可用來讓搜尋查詢運作
 
-您不必在CRXDE存放庫中手動建立選項的節點結構，而是可以透過指定對應的索引鍵值配對，在JSON檔案中定義選項。 在「屬性名稱」欄位中指定JSON檔 **[!UICONTROL 案的路徑]** 。例如，您可以定義鍵值配對、 `image/bmp`、 `image/gif` `image/jpeg`、和 `image/png` 並指定其值，如下列範例JSON檔案中所示。在&#x200B;**[!UICONTROL 屬性名稱]**&#x200B;欄位中，您可以指定此檔案的CRXDE路徑。
+您不必在CRXDE存放庫中手動建立選項的節點結構，而是可以透過指定對應的索引鍵值配對，在JSON檔案中定義選項。 在「屬性名稱」欄位中指定JSON檔 **[!UICONTROL 案的路徑]** 。 例如，您可以定義鍵值配對、 `image/bmp`、 `image/gif``image/jpeg`、和 `image/png` 並指定其值，如下列範例JSON檔案中所示。 在&#x200B;**[!UICONTROL 屬性名稱]**&#x200B;欄位中，您可以指定此檔案的CRXDE路徑。
 
 ```json
 {
@@ -113,14 +113,14 @@ ht-degree: 15%
 
 1. 按一下[!DNL Experience Manager]標誌，然後前往&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 一般]** > **[!UICONTROL 搜尋Forms]**。
 1. 從&#x200B;**[!UICONTROL 搜尋Forms]**&#x200B;頁面，選取&#x200B;**[!UICONTROL Assets管理搜尋邊欄]**，然後按一下&#x200B;**[!UICONTROL 編輯]**。
-1. 在「編 **[!UICONTROL 輯搜索表單]** 」頁中，將「選 **[!UICONTROL 項謂詞」從]** 「選擇謂詞 **&#x200B;**&#x200B;」頁籤拖到主窗格。
-1. 在「設 **[!UICONTROL 定]** 」標籤中，輸入屬性的標籤和名稱。例如，若要根據資產的格式來搜尋資產，請為標籤指定好記的名稱，例如&#x200B;**[!UICONTROL 檔案型別]**。 指定在屬性欄位中執行搜尋時所依據的屬性，例如`jcr:content/metadata/dc:format.`
+1. 在「編 **[!UICONTROL 輯搜索表單]** 」頁中，將「選 **[!UICONTROL 項謂詞」從]** 「選擇謂詞 **** 」頁籤拖到主窗格。
+1. 在「設 **[!UICONTROL 定]** 」標籤中，輸入屬性的標籤和名稱。 例如，若要根據資產的格式來搜尋資產，請為標籤指定好記的名稱，例如&#x200B;**[!UICONTROL 檔案型別]**。 指定在屬性欄位中執行搜尋時所依據的屬性，例如`jcr:content/metadata/dc:format.`
 1. 執行下列任一項作業：
 
    * 在&#x200B;**[!UICONTROL 屬性名稱]**&#x200B;欄位中，提及JSON檔案的路徑，您可在此定義選項的節點，並指定對應的索引鍵值配對。
    * 按一下「選項」欄位旁的`+`符號，指定您要在「濾鏡」面板中提供的選項之顯示文字和值。 若要新增其他選項，請按一下`+`符號並重複此步驟。
 
-1. 確保清 **[!UICONTROL 除「單選]** 」，讓使用者一次為檔案類型選取多個選項 (例如影像、檔案、多媒體和封存)。如果您選 **[!UICONTROL 取「單選]**」，使用者一次只能為檔案類型選取一個選項。
+1. 確保清 **[!UICONTROL 除「單選]** 」，讓使用者一次為檔案類型選取多個選項 (例如影像、檔案、多媒體和封存)。 如果您選 **[!UICONTROL 取「單選]**」，使用者一次只能為檔案類型選取一個選項。
 
    ![選項述詞中的可用欄位](assets/options_predicate.png)
 
@@ -137,7 +137,7 @@ ht-degree: 15%
 1. 在「搜尋Forms」頁面上，選取&#x200B;**[!UICONTROL Assets管理搜尋邊欄]**，然後按一下&#x200B;**[!UICONTROL 編輯]** ![編輯圖示](assets/do-not-localize/aemassets_edit.png)。
 1. 在「編輯搜索表單」頁中，將「 **[!UICONTROL Multi Value Property Predicate]** 」從「 **[!UICONTROL Select Predicate]** 」頁籤拖動到主窗格。
 1. 在&#x200B;**[!UICONTROL 設定]**&#x200B;索引標籤中，輸入述詞的標籤及預留位置文字。 指定在屬性欄位中執行搜尋時所依據的屬性名稱，例如`jcr:content/metadata/dc:value`。 您也可以使用選取對話方塊來選取節點。
-1. 請確定已 **[!UICONTROL 選取「分隔字元]** 」支援。在「輸入 **[!UICONTROL 分隔字元]** 」欄位中，指定分隔字元以分隔個別值。依預設，逗號會指定為分隔字元。您可以指定不同的分隔字元。
+1. 請確定已 **[!UICONTROL 選取「分隔字元]** 」支援。 在「輸入 **[!UICONTROL 分隔字元]** 」欄位中，指定分隔字元以分隔個別值。 依預設，逗號會指定為分隔字元。 您可以指定不同的分隔字元。
 1. 在&#x200B;**描述**&#x200B;欄位中輸入選擇性描述，然後按一下&#x200B;**[!UICONTROL 完成]**。
 1. 導覽至[!DNL Assets]使用者介面中的「篩選器」面板。 The **[!UICONTROL Multi Value Property]** predicate is added to the panel.
 1. 在「多值」欄位中指定多個值（以分隔符號分隔），然後執行搜尋。 述詞會針對您指定的值擷取完全相符的文字。
@@ -149,7 +149,7 @@ ht-degree: 15%
 1. 按一下[!DNL Experience Manager]標誌，然後前往&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 一般]** > **[!UICONTROL 搜尋Forms]**。
 1. 從「搜尋Forms」頁面中，選取&#x200B;**[!UICONTROL Assets管理搜尋邊欄]**，然後按一下&#x200B;**[!UICONTROL 編輯]** ![編輯圖示](assets/do-not-localize/aemassets_edit.png)。
 1. 在「編輯搜尋表單」頁中，將&#x200B;**[!UICONTROL 標籤述詞]**&#x200B;從「選擇述詞」頁簽拖到主窗格。
-1. 在「設定」標籤中，輸入述詞的預留位置文字。 指定在屬性欄位中執行搜尋時所依據的屬性名稱，例如&#x200B;*jcr：content/metadata/cq：tags*。 或者，您可以從選取對話方塊中選取CRXDE中的節點。
+1. 在「設定」標籤中，輸入述詞的預留位置文字。 指定在屬性欄位中執行搜尋時所依據的屬性名稱，例如&#x200B;*jcr:content/metadata/cq:tags*。 或者，您可以從選取對話方塊中選取CRXDE中的節點。
 1. 設定此述詞的根標籤路徑屬性，以填入標籤清單中的各種標籤。
 1. 選取 **[!UICONTROL 「顯示符合所有標籤」選項]** ，以搜尋包含您所指定之所有標籤的資產。
 
@@ -165,17 +165,17 @@ ht-degree: 15%
 
 | 述詞名稱 | 說明 | 屬性 |
 |---|---|---|
-| [!UICONTROL 全文] | 搜尋述詞，在整個資產節點上執行全文搜尋。 它使用jcr：contains運運算元對應。 如果要在資產節點的特定部分執行全文搜尋，您可以指定相對路徑。 | <ul><li>標籤</li><li>預留位置</li><li>屬性名稱</li><li>說明</li></ul> |
+| [!UICONTROL 全文] | 搜尋述詞，在整個資產節點上執行全文搜尋。 它使用jcr:contains運運算元對應。 如果要在資產節點的特定部分執行全文搜尋，您可以指定相對路徑。 | <ul><li>標籤</li><li>預留位置</li><li>屬性名稱</li><li>說明</li></ul> |
 | [!UICONTROL 路徑瀏覽器] | 搜尋述詞，以在預先設定的根路徑搜尋資料夾和子資料夾中的資產 | <ul><li>預留位置</li><li>根路徑</li><li>說明</li></ul> |
 | [!UICONTROL 路徑] | 用它來篩選位置結果。 您可以將不同的路徑指定為選項。 | <ul><li>標籤</li><li>路徑</li><li>說明</li></ul> |
-| [!UICONTROL Publish狀態] | 搜尋述詞，以根據資產的發佈狀態進行搜尋 | <ul><li>標籤</li><li>屬性名稱</li><li>說明</li></ul> |
+| [!UICONTROL 發佈狀態] | 搜尋述詞，以根據資產的發佈狀態進行搜尋 | <ul><li>標籤</li><li>屬性名稱</li><li>說明</li></ul> |
 | [!UICONTROL 相對日期] | 搜尋述詞，以根據資產的相對建立日期來搜尋資產。 例如，您可以設定2個月前、3週前等選項。 | <ul><li>標籤</li><li>屬性名稱</li><li>相對日期</li></ul> |
 | [!UICONTROL 範圍] | 搜尋述詞，以搜尋指定範圍內的資產。 在「搜尋」面板中，您可以指定範圍的最小值和最大值。 | <ul><li>標籤</li><li>屬性名稱</li><li>說明</li></ul> |
 | [!UICONTROL 日期範圍] | 搜尋述詞，針對日期屬性搜尋在指定範圍內建立的資產。 在「搜尋」面板中，您可以使用日期選擇器來指定開始和結束日期。 | <ul><li>標籤</li><li>預留位置</li><li>屬性名稱</li><li>範圍文字（從）</li><li>範圍文字（至）</li><li>說明</li></ul> |
 | [!UICONTROL 日期] | 根據日期屬性的資產滑桿式搜尋的搜尋述詞。 | <ul><li>標籤</li><li>屬性名稱</li><li>說明</li></ul> |
 | [!UICONTROL 檔案大小] | 搜尋述詞，以根據資產的大小進行搜尋。 這是以滑桿為基礎的述詞，您可以從可設定的節點選取滑桿選項。 預設選項定義於CRXDE存放庫中的/libs/dam/options/predicates/filesize。 檔案大小以位元組為單位。 | <ul><li>標籤</li><li>屬性名稱</li><li>路徑</li><li>說明</li></ul> |
 | [!UICONTROL 資產上次修改時間] | 搜尋述詞以搜尋最近修改的資產 | <ul><li>屬性名稱</li><li>屬性值</li><li>說明</li></ul> |
-| [!UICONTROL Publish狀態] | 搜尋述詞，以根據資產的發佈狀態來搜尋資產 | <ul><li>標籤</li><li>屬性名稱</li><li>說明</li></ul> |
+| [!UICONTROL 發佈狀態] | 搜尋述詞，以根據資產的發佈狀態來搜尋資產 | <ul><li>標籤</li><li>屬性名稱</li><li>說明</li></ul> |
 | [!UICONTROL 評等] | 根據資產的平均評等搜尋述詞 | <ul><li>標籤</li><li>屬性名稱</li><li>選項路徑</li><li>說明</li></ul> |
 | [!UICONTROL 到期狀態] | 根據資產的到期狀態搜尋資產的搜尋述詞 | <ul><li>標籤</li><li>屬性名稱</li><li>說明</li></ul> |
 | [!UICONTROL 隱藏] | 定義隱藏欄位屬性以搜尋資產的搜尋述詞 | <ul><li>屬性名稱</li><li>屬性值</li><li>說明</li></ul> |
@@ -194,7 +194,7 @@ ht-degree: 15%
 
    刪除搜尋Facet的自訂變更後，**[!UICONTROL 搜尋Forms]**&#x200B;頁面中的&#x200B;**[!UICONTROL Assets管理搜尋邊欄]**&#x200B;前會重新出現鎖定圖示![鎖定已關閉圖示](assets/do-not-localize/lock_closed_icon.svg)。
 
-## 使用者許可權 {#user-permissions}
+## 使用者權限 {#user-permissions}
 
 如果您未獲指派管理員角色，以下是您需要用來執行涉及搜尋Facet的編輯、刪除和預覽動作的許可權清單。
 

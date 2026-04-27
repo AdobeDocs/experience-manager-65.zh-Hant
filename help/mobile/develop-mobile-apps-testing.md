@@ -9,9 +9,9 @@ exl-id: e10e1904-7016-4eb0-9408-36297285f378
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
+source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
 workflow-type: tm+mt
-source-wordcount: '954'
+source-wordcount: '979'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ ht-degree: 0%
 
 ## 自動化測試 {#automated-testing}
 
-應該執行一定程度的自動化測試，以涵蓋各種熒幕大小、記憶體限制、輸入方法和作業系統。 它不僅涵蓋許多測試案例，還可在引入新功能或裝置時加快回歸測試。 理想情況下，您的自動化工具應該減少或限制重複工作。 請使用工具或架構，讓您的測試工作適用於所有平台。 下圖顯示用於網頁式UI測試和行動應用程式測試的測試環境的簡化結構。 圖表左側顯示一系列具有瀏覽器的Selenium節點。 SeleniumGrid可以將常見的Web式UI測試部署至這些節點。 Selenium中心也可以連線至Appium，以進行跨平台應用程式測試。 只顯示模擬器，但您可以納入adb (適用於Android™)和Xcode (適用於iOS裝置)。 本檔案稍後會提供連結，讓您找到所提及工具的特定詳細資訊。
+應該執行一定程度的自動化測試，以涵蓋各種熒幕大小、記憶體限制、輸入方法和作業系統。 它不僅涵蓋許多測試案例，還可在引入新功能或裝置時加快回歸測試。 理想情況下，您的自動化工具應該減少或限制重複工作。 請使用工具或架構，讓您的測試工作適用於所有平台。 下圖顯示用於網頁式UI測試和行動應用程式測試的測試環境的簡化結構。 圖表左側顯示一系列具有瀏覽器的Selenium節點。 SeleniumGrid可以將常見的Web式UI測試部署至這些節點。 Selenium中心也可以連線至Appium，以進行跨平台應用程式測試。 只顯示模擬器，但您可以納入adb （適用於™）和Xcode （適用於iOS裝置）。 本檔案稍後會提供連結，讓您找到所提及工具的特定詳細資訊。
 
 ![chlimage_1](assets/chlimage_1.jpeg)
 
@@ -72,7 +72,7 @@ ht-degree: 0%
 **Testdroid**
 
 * 雲端型測試服務，包含持續的整合掛接和真實的裝置測試。
-* 其中包括應用程式編目程式，可檢查裝置相容性、分析記錄、周遊檢視、擷取熒幕擷取畫面及監視效能。
+* 包含應用程式爬蟲，可檢查裝置相容性、分析記錄、周遊檢視、擷取熒幕擷取畫面及監控效能。
 
 如需詳細資訊，請參閱[https://testdroid.com/](https://testdroid.com/)。
 
@@ -90,12 +90,14 @@ ht-degree: 0%
 
 如需詳細資訊，請參閱[https://saucelabs.com/](https://saucelabs.com/)。
 
-<!-- **AppTestNow**
+<!--
+**AppTestNow**
 
 * An outsourcing service that tests your mobile apps.
 * Included is a large pool of devices and offers a wide range of types of testing: performance, quality, functional, certification, localization, data consumption, and so on.
 
-For more information, see [https://apptestnow.com/](https://apptestnow.com/). -->
+For more information, see [https://apptestnow.com/](https://apptestnow.com/).
+-->
 
 **曲棍球應用程式**
 

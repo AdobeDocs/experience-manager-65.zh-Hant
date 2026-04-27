@@ -1,15 +1,15 @@
 ---
 title: ' [!DNL Adobe Experience Manager Assets] 簡介'
-description: 在 Experience Manager 中建立、管理、處理和分配數位資產。這些指南會介紹最佳做法、協助工具功能以及如何使用 AEM 6.5 資產。
+description: 在 Experience Manager 中建立、管理、處理和分配數位資產。 這些指南會介紹最佳做法、協助工具功能以及如何使用 AEM 6.5 資產。
 hide: true
 feature: Asset Management
 role: Leader, Developer, User
 exl-id: 68239634-a2e8-414e-a866-cd8082641ee8
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
+source-git-commit: bca6156727dca11b2e09be549f3def6130827193
 workflow-type: tm+mt
-source-wordcount: '901'
-ht-degree: 4%
+source-wordcount: '924'
+ht-degree: 5%
 
 ---
 
@@ -27,7 +27,7 @@ AEM [!DNL Assets]是數位資產管理(DAM)工具，屬於[!DNL Experience Manag
 
 [!DNL Assets]提供整個企業共用和發佈組織的重要數位資產。 組織的使用者可以透過Web介面（或CIFS或WebDAV資料夾）儲存、管理和存取數位資產，例如影像、圖形、音訊、視訊和檔案。
 
-[!DNL Assets]的[!DNL Experience Manager]功能可讓您進行下列工作：
+[!DNL Experience Manager]的[!DNL Assets]功能可讓您進行下列工作：
 
 * 新增和共用各種檔案格式的影像、檔案、音訊檔案和視訊檔案。
 * 依標籤、燈箱或星星（您的最愛）分組來管理資產。 新增註解至資產。
@@ -38,7 +38,7 @@ AEM [!DNL Assets]是數位資產管理(DAM)工具，屬於[!DNL Experience Manag
 
 ### [!DNL Experience Manager Assets]已與[!DNL Experience Manager Sites]整合 {#aem-assets-fully-integrated-in-cq-wcm}
 
-[!DNL Assets]與[!DNL Sites]完全整合，並可在所有使用案例中順暢運作。 例如，在製作網頁時，[!DNL Sites]作者可以透過「內容尋找器」尋找及使用數位資產。 [!DNL Assets]的使用者介面與[!DNL Sites]的使用者介面相同。 如需完整詳細資訊，請參閱Sites[的](/help/sites-authoring/page-authoring.md)概觀。
+[!DNL Assets]與[!DNL Sites]完全整合，並可在所有使用案例中順暢運作。 例如，在製作網頁時，[!DNL Sites]作者可以透過「內容尋找器」尋找及使用數位資產。 [!DNL Assets]的使用者介面與[!DNL Sites]的使用者介面相同。 如需完整詳細資訊，請參閱Sites](/help/sites-authoring/page-authoring.md)的[概觀。
 
 基本使用者介面與[!DNL Sites]的介面相同。 如需完整詳細資訊，請參閱[網站概觀](/help/sites-authoring/page-authoring.md)。
 
@@ -75,7 +75,7 @@ AEM [!DNL Assets]是數位資產管理(DAM)工具，屬於[!DNL Experience Manag
 
 * **轉譯**：轉譯是資產的二進位表示法。 [!DNL Assets]一律具有主要表示法 — 已上傳檔案的主要表示法。 它們可以建立任意數量的其他表示法，例如，透過自訂工作流程步驟或資產上傳時建立的表示法。 轉譯可能具有不同的大小、不同的解析度、新增的浮水印或某些其他已變更的特徵。
 
-* **版本**：版本設定功能會在特定時間點建立數位資產的快照。 您可以將資產還原到先前的版本。 檢視[中的 [!DNL Assets]](manage-assets.md#asset-versioning)版本設定。
+* **版本**：版本設定功能會在特定時間點建立數位資產的快照。 您可以將資產還原到先前的版本。 檢視 [!DNL Assets]](manage-assets.md#asset-versioning)中的[版本設定。
 
 * **子資產**：子資產是構成資產的資產，例如，[!DNL Adobe Photoshop]檔案中的圖層或PDF檔案中的頁面。 在[!DNL Assets]中，您可以像管理資產一樣管理子資產。
 

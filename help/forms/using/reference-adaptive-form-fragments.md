@@ -8,9 +8,9 @@ exl-id: 933c164e-7c39-4d2e-834b-53a3c2b4ec90
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Foundation Components
 role: Admin, User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
 workflow-type: tm+mt
-source-wordcount: '381'
+source-wordcount: '399'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 [最適化表單片段](../../forms/using/adaptive-form-fragments.md)是一組欄位，或是包含您建立表單時可使用的一組欄位的面板。 它可讓您輕鬆快速地建立表單。 您可以使用側邊欄中的資產瀏覽器將最適化表單片段拖放到表單中，也可以在表單編輯器中編輯它。
 
-對於適用性表單作者，[AEM Forms附加元件套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=zh-Hant)中提供參考片段。 其包含下列片段：
+對於適用性表單作者，[AEM Forms附加元件套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en)中提供參考片段。 其包含下列片段：
 
 * 地址
 * 連絡資訊
@@ -42,9 +42,11 @@ ht-degree: 1%
 
 ![位址片段](assets/address.png)
 
-<!--[Click to enlarge
+<!--
+[Click to enlarge
 
-](assets/address-1.png)-->
+](assets/address-1.png)
+-->
 
 ## 連絡資訊 {#contact-information}
 
@@ -52,9 +54,11 @@ ht-degree: 1%
 
 ![連絡資訊片段](assets/contact-info.png)
 
-<!--[Click to enlarge
+<!--
+[Click to enlarge
 
-](assets/contact-info-1.png)-->
+](assets/contact-info-1.png)
+-->
 
 ## 信用卡資訊 {#credit-card-information}
 
@@ -67,9 +71,11 @@ ht-degree: 1%
 
 ![目前的僱用片段](assets/current-emp.png)
 
-<!--[Click to enlarge
+<!--
+[Click to enlarge
 
-](assets/current-emp-1.png)-->
+](assets/current-emp-1.png)
+-->
 
 ## 相依物件資訊 {#dependents-information}
 
@@ -77,9 +83,11 @@ ht-degree: 1%
 
 ![相依專案資訊片段](assets/dependents-info.png)
 
-<!--[Click to enlarge
+<!--
+[Click to enlarge
 
-](assets/dependents-info-1.png)-->
+](assets/dependents-info-1.png)
+-->
 
 ## 僱用歷史記錄 {#employment-history}
 
@@ -87,9 +95,11 @@ ht-degree: 1%
 
 ![僱用記錄片段](assets/emp-history.png)
 
-<!--[Click to enlarge
+<!--
+[Click to enlarge
 
-](assets/emp-history-1.png)-->
+](assets/emp-history-1.png)
+-->
 
 ## 收入與支出 {#income-expenditure}
 
@@ -97,9 +107,11 @@ ht-degree: 1%
 
 ![收入與支出片段](assets/income.png)
 
-<!--[Click to enlarge
+<!--
+[Click to enlarge
 
-](assets/income-1.png)-->
+](assets/income-1.png)
+-->
 
 ## 名稱 {#name}
 
@@ -107,9 +119,11 @@ ht-degree: 1%
 
 ![名稱片段](assets/name.png)
 
-<!--[Click to enlarge
+<!--
+[Click to enlarge
 
-](assets/name-1.png)-->
+](assets/name-1.png)
+-->
 
 ## 條款與條件 {#terms-conditions}
 
@@ -117,9 +131,11 @@ ht-degree: 1%
 
 ![條款與條件片段](assets/tnc.png)
 
-<!--[Click to enlarge
+<!--
+[Click to enlarge
 
-](assets/tnc-1.png)-->
+](assets/tnc-1.png)
+-->
 
 ## 條款與條件含草稿 {#terms-conditions-with-scribble}
 
@@ -127,6 +143,8 @@ ht-degree: 1%
 
 ![含草寫字的條款與條件](assets/tnc-scribble.png)
 
-<!--[Click to enlarge
+<!--
+[Click to enlarge
 
-](assets/tnc-scribble-1.png)-->
+](assets/tnc-scribble-1.png)
+-->

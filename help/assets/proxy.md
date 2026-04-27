@@ -6,9 +6,9 @@ role: Admin, Developer
 exl-id: 42fff236-b4e1-4f42-922c-97da32a933cf
 solution: Experience Manager, Experience Manager Assets
 feature: Proxy Workers
-source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
+source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '856'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ curl -u admin:admin -F":operation=job" -F"someproperty=xxxxxxxxxxxx"
 
   **需求**：必須設定引數`jobid`。
 
-  **結果**：傳回作業處理器建立之結果Node的JSON表示法。
+  **Result**: Returns a JSON representation of the result Node as created by the job processor.
 
 ```shell
 curl -u admin:admin -F":operation=result" -F"jobid=xxxxxxxxxxxx"
@@ -51,9 +51,9 @@ curl -u admin:admin -F":operation=result" -F"jobid=xxxxxxxxxxxx"
 
 * `resource`
 
-  **需求**：必須設定引數jobid。
+  **Requirements**: the parameter jobid must be set.
 
-  **結果**：傳回與指定工作關聯的資源。
+  **Result**: Returns a resource associated with the given job.
 
 ```shell
 curl -u admin:admin -F":operation=resource" -F"jobid=xxxxxxxxxxxx"
@@ -62,9 +62,9 @@ curl -u admin:admin -F":operation=resource" -F"jobid=xxxxxxxxxxxx"
 
 * `remove`
 
-  **需求**：必須設定引數jobid。
+  **Requirements**: the parameter jobid must be set.
 
-  **結果**：移除工作（如果找到）。
+  **Results**: Removes a job if found.
 
 ```shell
 curl -u admin:admin -F":operation=remove" -F"jobid=xxxxxxxxxxxx"
@@ -73,17 +73,17 @@ curl -u admin:admin -F":operation=remove" -F"jobid=xxxxxxxxxxxx"
 
 ### Proxy Worker {#proxy-worker}
 
-Proxy Worker是負責處理工作和建立結果的處理器。 Worker位於Proxy執行個體上，必須實作[sling JobProcessor](https://sling.apache.org/site/eventing-and-jobs.html)才能辨識為Proxy Worker。
+A proxy worker is a processor responsible for handling a job and creating a result. Workers reside on the proxy instance and must implement [sling JobProcessor](https://sling.apache.org/site/eventing-and-jobs.html) to be recognized as a proxy worker.
 
 >[!NOTE]
 >
->背景工作必須實作[sling JobProcessor](https://sling.apache.org/site/eventing-and-jobs.html)，才能辨識為Proxy背景工作。
+>The worker must implement [sling JobProcessor](https://sling.apache.org/site/eventing-and-jobs.html) to be recognized as a proxy worker.
 
-### 使用者端API {#client-api}
+### Client API {#client-api}
 
-[`JobService`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html)可用作OSGi服務，提供建立工作、移除工作以及從這些工作取得結果的方法。 此服務的預設實作(`JobServiceImpl`)使用HTTP使用者端與遠端Proxy servlet通訊。
+[`JobService`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html) is available as an OSGi service that provides methods to create jobs, remove jobs and to get results from those jobs. The default implementation of this service (`JobServiceImpl`) uses the HTTP client to communicate with the remote proxy servlet.
 
-以下是API使用方式的範例：
+The following is an example of API usage:
 
 ```java
 @Reference
@@ -105,21 +105,22 @@ Proxy Worker是負責處理工作和建立結果的處理器。 Worker位於Prox
  proxyJobService.removeJob(jobId);
 ```
 
-### Cloud Service設定 {#cloud-service-configurations}
+### Cloud Service configurations {#cloud-service-configurations}
 
-<!-- TBD: Cannot find com.day.cq.dam.api.proxy at https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html which were generated in May 2020. Hiding this broken link for now.
+<!--
+TBD: Cannot find com.day.cq.dam.api.proxy at https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html which were generated in May 2020. Hiding this broken link for now.
 >[!NOTE]
 >
 >Reference documentation for the proxy API is available under [`com.day.cq.dam.api.proxy`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/dam/api/proxy/package-summary.html).
 -->
 
-Proxy和Proxy Worker組態均可透過雲端服務組態使用，可從[!DNL Assets] **工具**&#x200B;主控台或`/etc/cloudservices/proxy`下存取。 每個Proxy背景工作應該在`/etc/cloudservices/proxy`下新增節點，以取得背景工作的特定組態詳細資料（例如，`/etc/cloudservices/proxy/workername`）。
+Both proxy and proxy worker configurations are available via cloud services configurations as accessible from the [!DNL Assets] **Tools** console or under `/etc/cloudservices/proxy`. Each proxy worker is expected to add a node under `/etc/cloudservices/proxy` for worker specific configuration details (for example, `/etc/cloudservices/proxy/workername`).
 
 >[!NOTE]
 >
->如需詳細資訊，請參閱[InDesign Server Proxy Worker設定](indesign.md#configuring-the-proxy-worker-for-indesign-server)和[雲端服務設定](../sites-developing/extending-cloud-config.md)。
+>See [InDesign Server Proxy Worker configuration](indesign.md#configuring-the-proxy-worker-for-indesign-server) and [Cloud Services configuration](../sites-developing/extending-cloud-config.md) for more information.
 
-以下是API使用方式的範例：
+The following is an example of API usage:
 
 ```java
 @Reference(policy = ReferencePolicy.STATIC)
@@ -134,18 +135,18 @@ Proxy和Proxy Worker組態均可透過雲端服務組態使用，可從[!DNL Ass
  final String value = cloudConfig.get("someProperty", "defaultValue");
 ```
 
-### 開發自訂的Proxy Worker {#developing-a-customized-proxy-worker}
+### Developing a Customized Proxy Worker {#developing-a-customized-proxy-worker}
 
-[IDS Proxy Worker](indesign.md)是現成提供的[!DNL Assets] Proxy Worker範例，可將處理InDesign資產的工作委外。
+The [IDS proxy worker](indesign.md) is an example of a [!DNL Assets] proxy worker that is already provided out-of-the-box to outsource the processing of InDesign assets.
 
-您也可以開發並設定您自己的[!DNL Assets] Proxy Worker，以建立專門的Worker來分派及委外您的[!DNL Assets]處理工作。
+You can also develop and configure your own [!DNL Assets] proxy worker to create a specialized worker to dispatch and outsource your [!DNL Assets] processing tasks.
 
-設定您自己的自訂Proxy Worker需要您：
+Setting up your own custom proxy worker requires you to:
 
-* 設定和實作（使用Sling事件）：
+* Set up and implement (using Sling eventing):
 
-   * 自訂工作主題
-   * 自訂工作事件處理常式
+   * a custom job topic
+   * a custom job event handler
 
 * 然後使用JobService API來：
 
@@ -188,4 +189,4 @@ Proxy和Proxy Worker組態均可透過雲端服務組態使用，可從[!DNL Ass
 >
 >結果的同步化：
 >
->如果有n個執行個體使用相同的Proxy，處理結果會保留在Proxy。 使用者端(Experience Manager作者)的作業是使用建立作業時提供給使用者端的相同唯一作業ID來請求結果。 Proxy只會讓工作完成，並讓結果準備好進行要求。
+>如果有n個執行個體使用相同的Proxy，處理結果會保留在Proxy。 使用者端（Experience Manager作者）的作業是使用建立作業時提供給使用者端的相同唯一作業ID來請求結果。 Proxy只會讓工作完成，並讓結果準備好進行要求。

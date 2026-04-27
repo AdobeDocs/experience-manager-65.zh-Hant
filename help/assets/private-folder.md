@@ -1,67 +1,67 @@
 ---
-title: 共用資產的私人資料夾
-description: 瞭解如何在 [!DNL Adobe Experience Manager Assets] 中建立私人資料夾，並與其他使用者共用，以及指派各種許可權給他們。
+title: Private folders to share assets
+description: Learn how to create a private folder in the [!DNL Adobe Experience Manager Assets] and share it with other users and the assign various privileges to them.
 contentOwner: AG
 role: User
 feature: Collaboration
 exl-id: c1aece06-7c1c-43a0-bea0-6f11ecda7e68
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: bca6156727dca11b2e09be549f3def6130827193
 workflow-type: tm+mt
-source-wordcount: '590'
-ht-degree: 4%
+source-wordcount: '603'
+ht-degree: 3%
 
 ---
 
-# [!DNL Adobe Experience Manager Assets]中的私人資料夾 {#private-folder}
+# Private folder in [!DNL Adobe Experience Manager Assets] {#private-folder}
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/private-folder.html?lang=zh-Hant) |
+| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/private-folder.html?lang=en) |
 | AEM 6.5 | 本文章 |
 
-您可以在[!DNL Adobe Experience Manager Assets]使用者介面中建立您專屬的私人資料夾。 您可以與其他使用者共用此私人資料夾，並為他們指派各種許可權。 根據您指派的許可權層級，使用者可以在資料夾上執行各種工作，例如，檢視資料夾內的資產或編輯資產。
+You can create a private folder in the [!DNL Adobe Experience Manager Assets] user interface that is available exclusively to you. You can share this private folder to other users and assign various privileges to them. Based on the privilege level you assign, users can perform various tasks on the folder, for example, view assets within the folder or edit the assets.
 
 >[!NOTE]
 >
->私人資料夾至少有一個成員具有擁有者角色。
+>Private folder has at least one member with Owner role.
 
-## 私人資料夾的建立和共用 {#create-share-private-folder}
+## Private folder creation and sharing {#create-share-private-folder}
 
-若要建立和共用私人資料夾：
+To create and share private folder:
 
-1. 在[!DNL Assets]主控台中，按一下工具列中的[建立] **&#x200B;**，然後從功能表中選擇[資料夾] **&#x200B;**。
+1. In the [!DNL Assets] console, click **[!UICONTROL Create]** from the toolbar and then choose **[!UICONTROL Folder]** from the menu.
 
-   ![建立資產資料夾](assets/Create-folder.png)
+   ![Create assets folder](assets/Create-folder.png)
 
-1. 在&#x200B;**[!UICONTROL 建立資料夾]**&#x200B;對話方塊中，輸入資料夾的標題和名稱（選擇性），並選取&#x200B;**[!UICONTROL 私人]**&#x200B;選項。
+1. In the **[!UICONTROL Create Folder]** dialog, enter a title and name (optional) for the folder, and select **[!UICONTROL Private]** option.
 
-1. 按一下「**[!UICONTROL 建立]**」。已建立私人資料夾。
+1. 按一下「**[!UICONTROL 建立]**」。 A private folder is created.
 
    ![chlimage_1-413](assets/chlimage_1-413.png)
 
-1. 若要與其他使用者共用資料夾以及為其指派許可權，請選取該資料夾，然後按一下工具列中的&#x200B;**[!UICONTROL 內容]**。
+1. To share the folder with other users and the assign privileges to them, select the folder, and click **[!UICONTROL Properties]** from the toolbar.
 
-   ![資訊選項](assets/do-not-localize/info-circle-icon.png)
+   ![info option](assets/do-not-localize/info-circle-icon.png)
 
    >[!NOTE]
    >
-   >在您共用資料夾之前，其他使用者看不到該資料夾。
+   >The folder is not visible to any other user until you share it.
 
-1. 在&#x200B;**[!UICONTROL 資料夾屬性]**&#x200B;頁面中，從&#x200B;**[!UICONTROL 新增使用者]**&#x200B;清單中選取使用者，將角色指派給私人資料夾中的使用者，然後按一下&#x200B;**[!UICONTROL 新增]**。
+1. In the **[!UICONTROL Folder Properties]** page, select a user from the **[!UICONTROL Add User]** list, assign a role to the user on your private folder, and click **[!UICONTROL Add]**.
 
    ![chlimage_1-415](assets/chlimage_1-415.png)
 
    >[!NOTE]
    >
-   >您可以將各種角色（例如`Editor`、`Owner`或`Viewer`）指派給共用資料夾的使用者。 如果您將`Owner`角色指派給使用者，則使用者擁有資料夾的`Editor`許可權。 此外，使用者可以與其他人共用資料夾。 如果您指派`Editor`角色，使用者可以編輯您私人資料夾中的資產。 如果您指派檢視器角色，則使用者只能檢視您私人資料夾中的資產。
+   >You can assign various roles, such as `Editor`, `Owner`, or `Viewer` to the user with whom you share the folder. If you assign an `Owner` role to the user, the user has `Editor` privileges on the folder. In addition, the user can share the folder with others. If you assign an `Editor` role, the user can edit the assets in your private folder. If you assign a viewer role, the user can only view the assets in your private folder.
 
    >[!NOTE]
    >
-   >私人資料夾至少有一個成員具有`Owner`角色。 因此，管理員無法從私人資料夾中移除所有擁有者成員。 但是，若要從私人資料夾中移除現有的擁有者（以及管理員本身），管理員必須新增其他使用者作為擁有者。
+   >Private folder has at least one member with `Owner` role. Therefore, administrator cannot remove all the owner members from a private folder. 但是，若要從私人資料夾中移除現有的擁有者（以及管理員本身），管理員必須新增其他使用者作為擁有者。
 
-1. 按一下「**[!UICONTROL 儲存]**」。根據您指派的角色，當使用者登入[!DNL Assets]時，會指派一組許可權給使用者處理您的私人資料夾。
+1. 按一下「**[!UICONTROL 儲存]**」。 根據您指派的角色，當使用者登入[!DNL Assets]時，會指派一組許可權給使用者處理您的私人資料夾。
 1. 按一下&#x200B;**[!UICONTROL 確定]**&#x200B;關閉確認訊息。
 1. 共用資料夾的使用者會收到共用通知。 使用使用者的認證登入[!DNL Assets]以檢視通知。
 
@@ -85,7 +85,7 @@ ht-degree: 4%
 
 >[!CAUTION]
 >
->如果您從CRXDE Lite中刪除私人資料夾，則多餘的使用者群組會留在存放庫中。
+>如果您從CRXDE Lite刪除私人資料夾，則多餘的使用者群組會留在存放庫中。
 
 >[!NOTE]
 >

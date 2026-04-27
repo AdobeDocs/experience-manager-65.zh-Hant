@@ -7,9 +7,9 @@ role: User
 hide: true
 exl-id: c84ce84a-1e52-48fd-a16c-38c7769df9af
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: bca6156727dca11b2e09be549f3def6130827193
 workflow-type: tm+mt
-source-wordcount: '498'
+source-wordcount: '534'
 ht-degree: 2%
 
 ---
@@ -18,13 +18,13 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->[資產選擇器](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/asset-selector.html?lang=zh-Hant)在舊版[!DNL Experience Manager]中稱為[資產選擇器](https://helpx.adobe.com/tw/experience-manager/6-2/assets/using/asset-picker.html)。
+>[資產選擇器](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/asset-selector.html?lang=en)在舊版[!DNL Experience Manager]中稱為[資產選擇器](https://helpx.adobe.com/experience-manager/6-2/assets/using/asset-picker.html)。
 
 資產選擇器可讓您在[!DNL Adobe Experience Manager] Assets中瀏覽、搜尋及篩選資產。 您也可以擷取使用資產選擇器所選取資產的中繼資料。 若要自訂資產選擇器介面，您可以使用支援的請求引數來啟動它。 這些引數會為特定案例設定資產選擇器的內容。
 
 目前，您可以傳遞要求引數`assettype` （*影像/視訊/文字*）和選取範圍`mode` （*單一/多個*）作為資產選擇器的內容相關資訊，其內容在整個選取範圍中保持不變。
 
-資產選擇器使用HTML5 **Window.postMessage**&#x200B;訊息將所選資產的資料傳送給收件者。
+資產選擇器會使用HTML5 **Window.postMessage**&#x200B;訊息，將所選資產的資料傳送給收件者。
 
 資產選擇器是根據Granite的基礎選擇器辭彙。 依預設，資產選擇器會以瀏覽模式運作。 不過，您可以使用Omnisearch體驗套用篩選器，以縮小特定資產的搜尋。
 
@@ -63,4 +63,4 @@ ht-degree: 2%
 
 >[!MORELIKETHIS]
 >
->* [AEM as a Cloud Service中的Micro-Frontend資產選擇器](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/asset-selector.html?lang=zh-Hant)
+>* [AEM as a Cloud Service中的Micro-Frontend資產選擇器](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/asset-selector.html?lang=en)

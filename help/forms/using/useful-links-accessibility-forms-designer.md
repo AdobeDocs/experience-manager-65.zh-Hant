@@ -6,17 +6,17 @@ solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 hide: true
 hidefromtoc: true
-source-git-commit: 6b86212a2b3a86b2205714c802dc1581d30e7441
+exl-id: 17db72f8-32ff-459a-ad54-c417fa9ab62f
+source-git-commit: bca6156727dca11b2e09be549f3def6130827193
 workflow-type: tm+mt
-source-wordcount: '48'
+source-wordcount: '65'
 ht-degree: 0%
 
 ---
 
-
 # 有用的連結
 
-* Adobe協助工具資源中心： www.adobe.com/accessibility
+* Adobe無障礙資源中心： www.adobe.com/accessibility
 * WCAG 1.0標準： http://www.w3.org/TR/WAI-WEBCONTENT/
 * 美國標準第508節：http://www.section508.gov/index.cfm?FuseAction=ContentGID=12
 * 網頁內容可及性指引1.0的HTML技術：http://www.w3.org/TR/WCAG10-HTML-TECHS/

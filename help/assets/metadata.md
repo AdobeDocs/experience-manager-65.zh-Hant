@@ -8,9 +8,9 @@ role: Developer, Leader
 exl-id: c630709a-7e8b-417c-83a4-35ca9be832a0
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
+source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
 workflow-type: tm+mt
-source-wordcount: '2332'
+source-wordcount: '2400'
 ht-degree: 10%
 
 ---
@@ -19,10 +19,11 @@ ht-degree: 10%
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/manage-metadata.html?lang=zh-Hant) |
+| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/manage-metadata.html?lang=en) |
 | AEM 6.5 | 本文章 |
 
-<!-- Scope of metadata articles:
+<!--
+Scope of metadata articles:
 * metadata.md: The scope of this article is basic metadata updates, changes, and so on, operations that end-users can do.
 * metadata-concepts.md: All conceptual information. Minor instructions are OK but it is an FYI article about support and standards.
 * metadata-config.md: New article. Contains all configuration and administration how-to info related to metadata of assets.
@@ -36,13 +37,13 @@ ht-degree: 10%
 
 下列方法可用於將中繼資料新增至數位資產：
 
-* 首先，建立資產的原生應用程式會新增一些中繼資料。 例如，[Acrobat將一些中繼資料](https://helpx.adobe.com/tw/acrobat/using/pdf-properties-metadata.html)新增至PDF檔案，或相機將一些基本中繼資料新增至像片。 產生資產時，您可以在原生應用程式本身中新增中繼資料。 例如，您可以[在Adobe Lightroom](https://helpx.adobe.com/tw/lightroom-classic/help/metadata-basics-actions.html)中新增IPTC中繼資料。
+* 首先，建立資產的原生應用程式會新增一些中繼資料。 例如，[Acrobat將一些中繼資料](https://helpx.adobe.com/acrobat/using/pdf-properties-metadata.html)新增至PDF檔案，或相機將一些基本中繼資料新增至像片。 產生資產時，您可以在原生應用程式本身中新增中繼資料。 例如，您可以[在Adobe Lightroom](https://helpx.adobe.com/lightroom-classic/help/metadata-basics-actions.html)中新增IPTC中繼資料。
 
-* 在將資產上傳到[!DNL Experience Manager]之前，您可以使用用於建立資產的原生應用程式或使用其他中繼資料編輯應用程式來編輯和修改中繼資料。 將資產上傳至Experience Manager時，系統會處理中繼資料。 例如，瞭解如何[在 [!DNL Adobe Bridge]](https://helpx.adobe.com/tw/bridge/user-guide.html/bridge/using/metadata-adobe-bridge.ug.html)中使用中繼資料，並檢視[中 [!DNL Adobe Bridge]](https://exchange.adobe.com/creativecloud.details.20009.aem-tags-panel-for-bridge-cc.html)的[!DNL Adobe Exchange]標籤面板。
+* 在將資產上傳到[!DNL Experience Manager]之前，您可以使用用於建立資產的原生應用程式或使用其他中繼資料編輯應用程式來編輯和修改中繼資料。 將資產上傳至Experience Manager時，系統會處理中繼資料。 例如，瞭解如何[在 [!DNL Adobe Bridge]](https://helpx.adobe.com/bridge/user-guide.html/bridge/using/metadata-adobe-bridge.ug.html)中使用中繼資料，並檢視[!DNL Adobe Exchange]中 [!DNL Adobe Bridge]](https://exchange.adobe.com/creativecloud.details.20009.aem-tags-panel-for-bridge-cc.html)的[標籤面板。
 
 * 在[!DNL Experience Manager Assets]中，您可以在[!UICONTROL 屬性]頁面中手動新增或編輯資產的中繼資料。
 
-* 當資產上傳至DAM時，您可以使用[的](/help/assets/metadata-config.md#metadata-profiles)中繼資料設定檔[!DNL Experience Manager Assets]功能來自動新增中繼資料。
+* 當資產上傳至DAM時，您可以使用[!DNL Experience Manager Assets]的[中繼資料設定檔](/help/assets/metadata-config.md#metadata-profiles)功能來自動新增中繼資料。
 
 ## 在[!DNL Experience Manager Assets]中新增或編輯中繼資料 {#add-edit-metadata}
 
@@ -81,7 +82,7 @@ ht-degree: 10%
 
 >[!NOTE]
 >
->大量編輯方法適用於資料夾或集合中可用的資產。 對於跨資料夾可用的資產，或符合共同條件的資產，可在搜尋[後](search-assets.md#metadataupdates)大量更新中繼資料。
+>大量編輯方法適用於資料夾或集合中可用的資產。 對於跨資料夾可用的資產，或符合共同條件的資產，可在搜尋](search-assets.md#metadataupdates)後[大量更新中繼資料。
 
 1. 在[!DNL Assets]使用者介面中，導覽至您要編輯之資產的位置。
 1. 選取您要編輯其一般屬性的資產。
@@ -89,7 +90,7 @@ ht-degree: 10%
 1. 修改各種標籤下所選資產的中繼資料屬性。
 1. 若要檢視特定資產的中繼資料，請取消選取清單中剩餘的資產。 如果您取消在[!UICONTROL 屬性]頁面上選取一些資產，這些資產的中繼資料不會更新。
 1. 若要為資產選取不同的中繼資料結構，請從工具列按一下&#x200B;**[!UICONTROL 設定]**，然後選取結構。 按一下「**[!UICONTROL 儲存並關閉]**」。
-1. 若要在包含多個值的欄位中，將新中繼資料與現有中繼資料一起附加，請選取「附 **[!UICONTROL 加模式」]**。如果您未選取此選項，新的中繼資料會取代欄位中現有的中繼資料。按一下「**[!UICONTROL 提交]**」。
+1. 若要在包含多個值的欄位中，將新中繼資料與現有中繼資料一起附加，請選取「附 **[!UICONTROL 加模式」]**。 如果您未選取此選項，新的中繼資料會取代欄位中現有的中繼資料。 按一下「**[!UICONTROL 提交]**」。
 
 ![中繼資料結構描述大量套用至多個資產](assets/metadata-schema-bulk-edit.gif)
 
@@ -114,10 +115,10 @@ ht-degree: 10%
 
    | 中繼資料匯入引數 | 說明 |
    |:---|:---|
-   | [!UICONTROL 批次大小] | 批次中要匯入中繼資料的資產數量。 預設值為50。 最大值為100。 |
+   | [!UICONTROL 批次大小] | 批次中要匯入中繼資料的資產數量。 預設值為 50。 最大值為100。 |
    | [!UICONTROL 欄位分隔符號] | 預設值為`,` （逗號）。 您可以指定任何其他字元。 |
    | [!UICONTROL 多值分隔符號] | 中繼資料值的分隔符號。 預設值為`\|`。 |
-   | [!UICONTROL 啟動工作流程] | 預設為False。 設為`true`時，預設設定對[!UICONTROL DAM中繼資料WriteBack]工作流程有效(會將中繼資料寫入二進位XMP資料)。 啟用工作流程會拖慢系統速度。 |
+   | [!UICONTROL 啟動工作流程] | 預設為False。 設為`true`時，預設設定對[!UICONTROL DAM中繼資料WriteBack]工作流程有效（會將中繼資料寫入二進位XMP資料）。 啟用工作流程會拖慢系統速度。 |
    | [!UICONTROL 資產路徑資料行名稱] | 為含有資產的CSV檔案定義欄名稱。 |
 
 1. 按一下工具列中的&#x200B;**[!UICONTROL 匯入]**。 匯入中繼資料後，[!UICONTROL 通知]收件匣中會顯示通知。
@@ -153,7 +154,7 @@ ht-degree: 10%
 
 1. 在工具列中按一下&#x200B;**[!UICONTROL 匯出]**。 系統會顯示訊息，確認中繼資料已匯出。 關閉訊息。
 
-1. 開啟匯出作業的收件箱通知。選擇作業，然後從工具 **[!UICONTROL 欄中]** ，按一下「開啟」。若要下載含有中繼資料的CSV檔案，請從工具列按一下&#x200B;**[!UICONTROL CSV下載]**。 按一下&#x200B;**[!UICONTROL 關閉]**。
+1. 開啟匯出作業的收件箱通知。 選擇作業，然後從工具 **[!UICONTROL 欄中]** ，按一下「開啟」。 若要下載含有中繼資料的CSV檔案，請從工具列按一下&#x200B;**[!UICONTROL CSV下載]**。 按一下&#x200B;**[!UICONTROL 關閉]**。
 
    ![用於下載包含大量匯出之中繼資料的CSV檔案的對話方塊](assets/csv_download.png)
 
@@ -165,7 +166,8 @@ ht-degree: 10%
 
 ## 將中繼資料設定檔套用至資料夾 {#applying-a-metadata-profile-to-folders}
 
-<!-- TBD: Review this overview.
+<!--
+TBD: Review this overview.
 -->
 
 將中繼資料描述檔指派給資料夾時，所有子資料夾都會自動從其父資料夾繼承描述檔。 這表示您只能將一個中繼資料設定檔指派至資料夾。 因此，請仔細考慮您上傳、儲存、使用和封存資產的資料夾結構。
@@ -180,7 +182,7 @@ ht-degree: 10%
 
 若資料夾中已有您後來加以變更的現有中繼資料設定檔，您可以重新處理該資料夾中的資產。 請參閱[在您編輯資料夾中資產的處理設定檔](processing-profiles.md#reprocessing-assets)之後，重新處理該資料夾中的資產。
 
-您可以從「工具」菜單或者在資料夾內的「屬性」中，將元資料設定檔&#x200B;**[!UICONTROL 應用到資料夾]**&#x200B;**&#x200B;**。本節說明如何以兩種方式將中繼資料設定檔套用至資料夾。
+您可以從「工具」菜單或者在資料夾內的「屬性」中，將元資料設定檔&#x200B;**[!UICONTROL 應用到資料夾]******。 本節說明如何以兩種方式將中繼資料設定檔套用至資料夾。
 
 已為其分配輪廓的資料夾將通過資料夾名稱正下方的輪廓名稱顯示來指示。
 
@@ -203,11 +205,13 @@ ht-degree: 10%
 
 已為其分配輪廓的資料夾將通過資料夾名稱正下方的輪廓名稱顯示來指示。
 
-<!-- TBD: Commenting as the topic in metadata-config.md is incomplete.
+<!--
+TBD: Commenting as the topic in metadata-config.md is incomplete.
 
 ### Apply metadata profile globally {#metadata-profile-global}
 
-For details, see [configuration to apply metadata profile globally](/help/assets/metadata-config.md#apply-a-metadata-profile-globally). -->
+For details, see [configuration to apply metadata profile globally](/help/assets/metadata-config.md#apply-a-metadata-profile-globally).
+-->
 
 ### 從資料夾中移除中繼資料設定檔 {#removing-a-metadata-profile-from-folders}
 
@@ -227,7 +231,7 @@ For details, see [configuration to apply metadata profile globally](/help/assets
 
 1. 按一下[!DNL Experience Manager]標誌並導覽&#x200B;**[!UICONTROL Assets]**，然後移至您要從中移除中繼資料設定檔的資料夾。
 1. 在資料夾上，按一下核取記號以選取資料夾，然後按一下&#x200B;**[!UICONTROL 內容]**。
-1. 選擇&#x200B;**[!UICONTROL 「元資料設定檔」]**&#x200B;標籤，然後從下拉式選單中選 **[!UICONTROL 擇「無」]**，然後按一下&#x200B;**[!UICONTROL 「儲存」]**。已為其分配輪廓的資料夾將通過資料夾名稱正下方的輪廓名稱顯示來指示。
+1. 選擇&#x200B;**[!UICONTROL 「元資料設定檔」]**&#x200B;標籤，然後從下拉式選單中選 **[!UICONTROL 擇「無」]**，然後按一下&#x200B;**[!UICONTROL 「儲存」]**。 已為其分配輪廓的資料夾將通過資料夾名稱正下方的輪廓名稱顯示來指示。
 
 ## 提示和限制 {#best-practices-limitations}
 
@@ -241,9 +245,10 @@ For details, see [configuration to apply metadata profile globally](/help/assets
 >
 >* [中繼資料概念與瞭解](metadata-concepts.md)。
 >* [編輯多個集合的中繼資料屬性](manage-collections.md#editing-collection-metadata-in-bulk)
->* [在Experience Manager Assets中匯入和匯出中繼資料](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/metadata-import-feature-video-use.html?lang=zh-Hant)
+>* [在Experience Manager Assets中匯入和匯出中繼資料](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/metadata-import-feature-video-use.html)
 
-<!-- TBD: Try filling the available information in these topics to the extent possible. As and when complete, publish the sections live.
+<!--
+TBD: Try filling the available information in these topics to the extent possible. As and when complete, publish the sections live.
 
 ## Where to find metadata of an asset or folder {#find-metadata}
 

@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
 index: false
-source-git-commit: 1509ca884e2f9eb931fc7cd416801957459cc4a0
+source-git-commit: 147b0efb32609c05949c9fe374fa4fca6a9dbfb1
 workflow-type: tm+mt
-source-wordcount: '783'
+source-wordcount: '786'
 ht-degree: 1%
 
 ---
@@ -181,4 +181,4 @@ function Home() {
 
 ![節點結構中的複合路徑](assets/composite-path.png)
 
-`AEMCard`元件與先前使用案例中定義的[相同。](#content-does-not-exist)在這裡，上述位置在AEM專案中定義的內容包含在SPA中。
+`AEMCard`元件與先前使用案例中定義的[相同。](#content-does-not-exist) 此處，上述位置在AEM專案中定義的內容包含在SPA中。

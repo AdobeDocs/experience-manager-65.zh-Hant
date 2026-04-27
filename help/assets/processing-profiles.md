@@ -1,6 +1,6 @@
 ---
-title: 用於處理中繼資料、影像和影片的設定檔
-description: 設定檔是一組規則，說明要套用至上傳至資料夾之資產的選項。 指定要套用至您上傳之視訊資產的中繼資料設定檔和視訊編碼設定檔。 針對影像資產，您也可以指定要套用至影像資產的影像設定檔，以正確裁切。
+title: Profiles for Processing Metadata, Images, and Videos
+description: A profile a set of rules around the options to be applied to assets uploaded to a folder. Specify what metadata profile and video encoding profile to apply to video assets that you upload. For image assets, you can also specify what imaging profile to apply to image assets to have them properly cropped.
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: administering
@@ -10,41 +10,41 @@ role: User, Admin
 feature: Workflow,Asset Management,Renditions
 exl-id: 3d9367ed-5a02-43aa-abd9-24fae457d4c5
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
 workflow-type: tm+mt
-source-wordcount: '1392'
+source-wordcount: '1398'
 ht-degree: 0%
 
 ---
 
-# 用於處理中繼資料、影像和影片的設定檔{#profiles-for-processing-metadata-images-and-videos}
+# Profiles for processing metadata, images, and videos{#profiles-for-processing-metadata-images-and-videos}
 
-設定檔是將哪些選項套用至上傳至資料夾之資產的配方。 例如，您可以指定要套用至上傳之視訊資產的中繼資料設定檔和視訊編碼設定檔。 或者，套用至影像資產的影像設定檔，以正確裁切。
+A profile is a recipe for what options to apply to assets that get uploaded to a folder. For example, you can specify what metadata profile and video encoding profile to apply to video assets that you upload. Or, what imaging profile to apply to image assets to have them properly cropped.
 
-這些規則包括新增中繼資料、智慧型裁切影像或建立視訊編碼設定檔。 在Adobe Experience Manager中，您可以建立三種設定檔型別，下列連結將詳細介紹這些設定檔：
+Those rules can include adding metadata, smart cropping of images, or establishing video encoding profiles. In Adobe Experience Manager, you can create three types of profiles, which are covered in detail at the following links:
 
 * [中繼資料設定檔](/help/assets/metadata-config.md#metadata-profiles)
-* [影像設定檔](/help/assets/image-profiles.md)
-* [視訊設定檔](/help/assets/video-profiles.md)
+* [Image profiles](/help/assets/image-profiles.md)
+* [Video profiles](/help/assets/video-profiles.md)
 
-您需要管理員許可權才能建立、編輯和刪除中繼資料、影像或視訊設定檔。
+You need Administrator rights to create, edit, and delete metadata, image, or video profiles.
 
-建立中繼資料、影像或視訊設定檔後，請將其指派至一或多個資料夾，以作為新上傳資產的目的地。
+After you create your metadata, image, or video profile, you assign it to one or more folders that you use as the destination for newly uploaded assets.
 
-在Experience Manager Assets中使用設定檔的重要概念是，設定檔會指派給資料夾。 設定檔中的設定為中繼資料設定檔的形式，以及視訊設定檔或影像設定檔。 這些設定會處理資料夾的內容及其任何子資料夾。 因此，您如何命名檔案和資料夾、如何排列子資料夾，以及如何處理這些資料夾中的檔案對於設定檔處理這些資產的方式有重大影響。
-透過使用一致且適當的檔案和資料夾命名策略，以及良好的中繼資料做法，您可以充分利用數位資產集合，並確保由正確的設定檔處理正確的檔案。
-
->[!NOTE]
->
->您從某個資料夾移至另一個資料夾的Assets不會重新處理。 例如，假設您有已指派設定檔A的資料夾1和已指派設定檔B的資料夾2。 如果您將資產從「資料夾1」移至「資料夾2」，則已移動的資產會保留「資料夾1」的原始處理作業。
->
->即使在您將資產移動到具有相同設定檔的兩個資料夾之間時，也是如此。
-
-## 重新處理資料夾中的資產 {#reprocessing-assets}
+An important concept regarding the use of profiles in Experience Manager Assets is that they are assigned to folders. Within a profile are settings in the form of metadata profiles, along with video profiles or image profiles. These settings process the contents of a folder along with any of its subfolders. Therefore, how you name files and folders, how you arrange subfolders, and how you handle the files within these folders has a significant impact on how those assets are processed by a profile.
+By using consistent and appropriate file and folder naming strategies, and good metadata practice, you make the most of your digital asset collection, and ensure that the right files are processed by the right profile.
 
 >[!NOTE]
 >
->僅適用於Experience Manager 6.4.6.0或更新版本的&#x200B;*Dynamic Media - Scene7模式*。
+>Assets that you move from one folder to another do not get reprocessed. For example, suppose you have Folder 1 that has profile A assigned to it and Folder 2 that has profile B assigned to it. If you move assets from Folder 1 to Folder 2, the moved assets retain their original processing from Folder 1.
+>
+>The same is true even when you move assets between two folders that have the same profile assigned to it.
+
+## Reprocess assets in a folder {#reprocessing-assets}
+
+>[!NOTE]
+>
+>Applies to *Dynamic Media - Scene7 mode* only in Experience Manager 6.4.6.0 or later.
 
 若資料夾中已有您後來加以變更的現有處理設定檔，您可以重新處理該資料夾中的資產。
 
@@ -52,7 +52,7 @@ ht-degree: 0%
 
 您可以對首次處理失敗的資產執行重新處理工作流程。 因此，即使您尚未編輯處理設定檔或套用處理設定檔，您仍可隨時對資產的資料夾執行重新處理工作流程。
 
-您可以選擇調整重新處理工作流程的批次大小，從預設的50個資產調整為1000個資產。 當您在資料夾上執行&#x200B;_Scene7：重新處理Assets_&#x200B;工作流程時，資產會依批次分組，然後傳送至Dynamic Media伺服器以供處理。 處理之後，整個批次集中每個資產的中繼資料會在Experience Manager時更新。 如果批次大小很大，您可能會遇到處理延遲的問題。 或者，如果批次大小太小，可能會導致Dynamic Media伺服器的往返次數過多。
+您可以選擇調整重新處理工作流程的批次大小，從預設的50個資產調整為1000個資產。 當您在資料夾上執行&#x200B;_Scene7：重新處理Assets_&#x200B;工作流程時，資產會依批次分組，然後傳送至Dynamic Media伺服器以供處理。 處理之後，整個批次集中每個資產的中繼資料會在Experience Manager上更新。 如果批次大小很大，您可能會遇到處理延遲的問題。 或者，如果批次大小太小，可能會導致Dynamic Media伺服器的往返次數過多。
 
 請參閱[調整重新處理工作流程的批次大小](#adjusting-load)。
 
@@ -60,7 +60,7 @@ ht-degree: 0%
 >
 >如果您正在將資產從Dynamic Media Classic大量移轉至Experience Manager，您必須在Dynamic Media伺服器上啟用移轉復寫代理程式。 移轉完成後，請務必停用代理程式。
 >
->必須在Dynamic Media伺服器上停用移轉發佈代理程式，才能讓重新處理工作流程如預期般運作。
+>您必須在Dynamic Media伺服器上停用移轉發佈代理程式，才能讓重新處理工作流程如預期般運作。
 
 <!-- Batch size is the number of assets that are amalgamated into a single IPS (Dynamic Media's Image Production System) job. When you run the Dynamic Media Reprocess workflow, the job is triggered on IPS. The number of IPS jobs that are triggered is based on the total number of assets in the folder, divided by the batch size. For example, suppose you had a folder with 150 assets and a batch size of 50. In this case, three IPS jobs are triggered. The assets are updated when the entire batch size (50 in our example) is processed in IPS. The job then moves onto the next IPS job, and so on, until complete. If you increase the batch size, you may notice a longer delay with assets getting updated. -->
 
@@ -93,22 +93,22 @@ ht-degree: 0%
 
 ### 調整重新處理工作流程的批次大小 {#adjusting-load}
 
-（選用）重新處理工作流程中的預設批次大小是每個工作50個資產。 此最佳批次大小是由平均資產大小和執行重新處理的資產MIME型別所控制。 較高的值表示您在一個重新處理工作中擁有許多檔案。 因此，處理橫幅會在Experience Manager資產上停留較長時間。 不過，如果平均檔案大小很小（1 MB以下），Adobe建議您將值增加到數100，但絕不要超過1000。 如果平均檔案大小很大（例如數百個MB），Adobe建議您減少批次大小，最多為10。
+（選用）重新處理工作流程中的預設批次大小是每個工作50個資產。 此最佳批次大小是由平均資產大小和執行重新處理的資產MIME型別所控制。 較高的值表示您在一個重新處理工作中擁有許多檔案。 因此，處理橫幅會在Experience Manager資產上停留較長時間。 不過，如果平均檔案大小很小（1 MB以下），Adobe建議您將值增加到數100，但絕不要超過1000。 如果平均檔案大小很大（例如數百個MB），Adobe建議您減少批次大小，上限為10。
 
 **若要選擇性地調整重新處理工作流程的批次大小：**
 
 1. 在Experience Manager中，選取&#x200B;**[!UICONTROL Adobe Experience Manager]**&#x200B;以存取全域導覽主控台，然後選取&#x200B;**[!UICONTROL 工具]** （槌子）圖示> **[!UICONTROL 工作流程]** > **[!UICONTROL 模型]**。
-1. 在「工作流程模型」頁面的「卡片檢視」或「清單檢視」中，選取&#x200B;**[!UICONTROL Dynamic Media重新處理]**。
+1. 在「工作流程模型」頁面的「卡片檢視」或「清單檢視」中，選取「**[!UICONTROL Dynamic Media重新處理]**」。
 
    在卡片檢視中選取Dynamic Media重新處理工作流程的![工作流程模型頁面](/help/assets/assets-dm/reprocess-assets7.png)
 
 1. 在工具列上，選取&#x200B;**[!UICONTROL 編輯]**。 新的瀏覽器標籤會開啟「Dynamic Media重新處理工作流程」模型頁面。
-1. 在「Dynamic Media重新處理工作流程」頁面的右上角附近，選取「**[!UICONTROL 編輯]**」以「解除鎖定」工作流程。
-1. 在工作流程中，選取Scene7批次上傳元件以開啟工具列，然後在工具列上選取&#x200B;**[!UICONTROL 設定]**。
+1. 在「動態媒體重新處理工作流程」頁面的右上角附近，選取「**[!UICONTROL 編輯]**」以「解除鎖定」工作流程。
+1. 在工作流程中，選取Scene7批次上傳元件以開啟工具列，然後在工具列上選取「**[!UICONTROL 設定]**」。
 
    ![Scene7批次上傳元件](/help/assets/assets-dm/reprocess-assets8.png)
 
-1. 在&#x200B;**[!UICONTROL 批次上傳至Scene7 — 步驟屬性]**&#x200B;對話方塊上，設定下列專案：
+1. 在&#x200B;**[!UICONTROL 批次上傳至Scene7 — 步驟屬性]**&#x200B;對話方塊中，設定下列專案：
    * 在&#x200B;**[!UICONTROL 標題]**&#x200B;和&#x200B;**[!UICONTROL 描述]**&#x200B;文字欄位中，視需要輸入新的標題和描述。
    * 如果您的處理常式將進行到下一個步驟，請選取&#x200B;**[!UICONTROL 處理常式前進]**。
    * 在&#x200B;**[!UICONTROL 逾時]**&#x200B;欄位中，輸入外部處理序逾時（秒）。
@@ -118,15 +118,16 @@ ht-degree: 0%
 
    ![內容對話方塊](/help/assets/assets-dm/reprocess-assets3.png)
 
-1. 在&#x200B;**[!UICONTROL 批次上傳至Scene7 — 步驟屬性]**&#x200B;對話方塊的右上角，選取&#x200B;**[!UICONTROL 完成]**。
+1. 在&#x200B;**[!UICONTROL 批次上傳到Scene7 — 步驟屬性]**&#x200B;對話方塊的右上角，選取&#x200B;**[!UICONTROL 完成]**。
 
-1. 在「Dynamic Media重新處理工作流程模型」頁面的右上角，選取&#x200B;**[!UICONTROL 同步]**。 當您看到&#x200B;**[!UICONTROL 已同步]**&#x200B;時，工作流程執行階段模型已成功同步化，並準備好重新處理資料夾中的資產。
+1. 在「動態媒體重新處理工作流程」模型頁面的右上角，選取&#x200B;**[!UICONTROL 同步]**。 當您看到&#x200B;**[!UICONTROL 已同步]**&#x200B;時，工作流程執行階段模型已成功同步化，並準備好重新處理資料夾中的資產。
 
    ![同步處理工作流程模型](/help/assets/assets-dm/reprocess-assets1.png)
 
-1. 關閉顯示Dynamic Media重新處理工作流程模型的瀏覽器標籤。
+1. 關閉顯示「動態媒體重新處理」工作流程模型的瀏覽器標籤。
 
-<!--1. Return to the browser tab that has the open Workflow Models page, then press **Esc** to exit the selection.
+<!--
+1. Return to the browser tab that has the open Workflow Models page, then press **Esc** to exit the selection.
 1. In the upper-left corner of the page, select **[!UICONTROL Adobe Experience Manager]** to access the global navigation console, then select the **[!UICONTROL Tools]** (hammer) icon > **[!UICONTROL General > CRXDE Lite]**.
 1. In the folder tree on the left side of the CRXDE Lite page, navigate to the following location:
 
@@ -144,4 +145,5 @@ ht-degree: 0%
 
 1. On the menu bar of the CRXDE Lite page, select **[!UICONTROL Save All]**.
 1. In the upper-left corner of the page, select **[!UICONTROL CRXDE Lite]** to return to the main Experience Manager console
-1. Repeat steps 1-7 to re-synchronize the new batch size to the Dynamic Media Reprocess workflow model.-->
+1. Repeat steps 1-7 to re-synchronize the new batch size to the Dynamic Media Reprocess workflow model.
+-->

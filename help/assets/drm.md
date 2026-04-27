@@ -1,5 +1,5 @@
 ---
-title: 資產Digital Rights Management
+title: 資產的Digital Rights Management
 description: 瞭解如何管理 [!DNL Experience Manager]中授權資產的資產到期狀態和資訊。
 contentOwner: AG
 role: User, Admin
@@ -7,9 +7,9 @@ feature: DRM,Asset Management
 exl-id: a49cfd25-e8d9-492f-be5e-acab0cf67a28
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: bca6156727dca11b2e09be549f3def6130827193
 workflow-type: tm+mt
-source-wordcount: '1425'
+source-wordcount: '1440'
 ht-degree: 8%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 8%
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/drm.html?lang=zh-Hant) |
+| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/drm.html?lang=en) |
 | AEM 6.5 | 本文章 |
 
 數位資產通常與指定使用條款與期間的授權相關聯。 因為[!DNL Adobe Experience Manager Assets]已與[!DNL Experience Manager]平台完全整合，您可以有效率地管理資產到期資訊與資產狀態。 您也可以將授權資訊與資產建立關聯。
@@ -76,7 +76,7 @@ ht-degree: 8%
 1. 開啟[!DNL Experience Manager]組態管理員。
 1. 選擇&#x200B;**[!UICONTROL Adobe CQ DAM到期通知]**。 依預設，已選取&#x200B;**[!UICONTROL 以時間為基礎的排程器]**，排程工作以在特定時間檢查資產是否已過期的子資產。 工作完成後，具有過期子資產和參考資產的資產會在搜尋結果中顯示為過期。
 
-1. 要定期運行作業，請清除「基於時 **[!UICONTROL 間的調度程式規則]** 」欄位，並在「定期調度程式」欄位中以秒為單 **[!UICONTROL 位修改時間]** 。例如，範例運算式`0 0 0 * * ?`會在00小時觸發工作。
+1. 要定期運行作業，請清除「基於時 **[!UICONTROL 間的調度程式規則]** 」欄位，並在「定期調度程式」欄位中以秒為單 **[!UICONTROL 位修改時間]** 。 例如，範例運算式`0 0 0 * * ?`會在00小時觸發工作。
 1. 選取&#x200B;**[!UICONTROL 傳送電子郵件]**&#x200B;以在資產過期時接收電子郵件。
 
    >[!NOTE]
@@ -85,15 +85,15 @@ ht-degree: 8%
 
 1. 在&#x200B;**[!UICONTROL 以秒為單位的先前通知]**&#x200B;欄位中，指定當您要接收有關資產到期的通知時，資產到期之前的時間（以秒為單位）。 資產建立者會在資產到期前收到訊息，通知您資產將在指定時間後到期。 資產過期後，您會收到另一則通知，確認資產已過期。 此外，過期資產也會停用。
 
-1. 按一下「**[!UICONTROL 儲存]**」。
+1. 按一下&#x200B;**[!UICONTROL 儲存]**。
 
 ## 資產狀態 {#asset-states}
 
 [!DNL Assets]主控台可顯示資產的各種狀態。 根據特定資產的目前狀態，其卡片檢視會顯示描述其狀態的標籤，例如，已過期、已發佈、已核准、已拒絕等。
 
 1. 在[!DNL Assets]使用者介面中，選取資產。
-1. 按一下工具列中的&#x200B;**[!UICONTROL Publish]**。 如果您在工具列上看不到&#x200B;**Publish**，請按一下工具列上的&#x200B;**[!UICONTROL 更多]**，並找到&#x200B;**[!UICONTROL Publish]** ![發佈選項](assets/do-not-localize/publish-globe.png)選項。
-1. 從功能表選擇&#x200B;**[!UICONTROL Publish]**，然後關閉確認對話方塊。
+1. 按一下工具列中的&#x200B;**[!UICONTROL 發佈]**。 如果您在工具列上看不到&#x200B;**發佈**，請按一下工具列上的&#x200B;**[!UICONTROL 更多]**，並找到&#x200B;**[!UICONTROL 發佈]** ![發佈選項](assets/do-not-localize/publish-globe.png)選項。
+1. 從功能表選擇&#x200B;**[!UICONTROL 發佈]**，然後關閉確認對話方塊。
 1. 結束選取模式。 資產的發佈狀態會顯示在卡片檢視的資產縮圖底部。 在清單檢視中，「已發佈」欄會顯示資產的發佈時間。
 
    ![chlimage_1-157](assets/chlimage_1-157.png)
@@ -119,7 +119,7 @@ ht-degree: 8%
 
 1. 若要根據資產的狀態來搜尋資產，請按一下&#x200B;**[!UICONTROL 搜尋]** ![搜尋選項](assets/do-not-localize/search_icon.png)以顯示Omnisearch列。
 1. 選取`Return`並按一下[!DNL Experience Manager]以顯示搜尋面板。
-1. 在搜尋面板中，按一下&#x200B;**[!UICONTROL Publish狀態]**&#x200B;並選取&#x200B;**[!UICONTROL 已發佈]**，以在[!DNL Assets]中搜尋已發佈的資產。
+1. 在搜尋面板中，按一下&#x200B;**[!UICONTROL 發佈狀態]**&#x200B;並選取&#x200B;**[!UICONTROL 已發佈]**，以在[!DNL Assets]中搜尋已發佈的資產。
 
    ![chlimage_1-163](assets/chlimage_1-163.png)
 
@@ -127,7 +127,7 @@ ht-degree: 8%
 
    ![chlimage_1-164](assets/chlimage_1-164.png)
 
-1. 若要根據資產的到期狀態來搜尋資產，請在「搜尋」面 **[!UICONTROL 板中選取「到期狀態]** 」，然後選擇適當的選項。
+1. 若要根據資產的過期狀態來搜尋資產，請在「搜尋」面板中選取 **[!UICONTROL 「過期狀態]** 」，然後選擇適當的選項。
 
    ![chlimage_1-165](assets/chlimage_1-165.png)
 
@@ -135,11 +135,11 @@ ht-degree: 8%
 
    ![chlimage_1-166](assets/chlimage_1-166.png)
 
-## 在[!DNL Assets]中Digital Rights Management {#digital-rights-management-in-assets-1}
+## [!DNL Assets]中的Digital Rights Management {#digital-rights-management-in-assets-1}
 
 此功能強制接受授權合約，然後才能從[!DNL Adobe Experience Manager Assets]下載授權資產。
 
-如果您選取受保護的資產並按一下[下載]，系統會將您重新導向至授權頁面，讓您接受授權合約。 **&#x200B;**&#x200B;如果您不接受授權合約，將無法使用&#x200B;**[!UICONTROL 下載]**&#x200B;選項。
+如果您選取受保護的資產並按一下[下載]，系統會將您重新導向至授權頁面，讓您接受授權合約。 ****&#x200B;如果您不接受授權合約，將無法使用&#x200B;**[!UICONTROL 下載]**&#x200B;選項。
 
 如果選取範圍包含多個受保護的資產，請一次選取一個資產、接受授權合約，然後繼續下載資產。
 

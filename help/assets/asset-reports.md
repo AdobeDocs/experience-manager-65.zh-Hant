@@ -7,9 +7,9 @@ feature: Asset Reports,Asset Management
 exl-id: b4963a03-3496-4c6c-9d30-8812304d0e9f
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: bca6156727dca11b2e09be549f3def6130827193
 workflow-type: tm+mt
-source-wordcount: '1155'
+source-wordcount: '1171'
 ht-degree: 8%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 8%
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/asset-reports.html?lang=zh-Hant) |
+| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/asset-reports.html?lang=en) |
 | AEM 6.5 | 本文章 |
 
 資產報告可讓您評估[!DNL Adobe Experience Manager Assets]部署的公用程式。 透過[!DNL Assets]，您可以為您的數位資產產生各種報告。 這些報表提供關於您系統使用情況、使用者如何與資產互動，以及哪些資產已下載和共用的有用資訊。
@@ -97,33 +97,33 @@ ht-degree: 8%
 
    ![檔案報告的詳細資訊頁面](assets/files_report.png)
 
-   「**[!UICONTROL 連結共用]**」報表會顯示資產的URL，這些資產是從[!DNL Assets]內與外部使用者共用的。 它包含共用資產之使用者的電子郵件ID、共用資產之使用者的電子郵件ID、連結的共用日期和到期日。欄無法自訂。
+   「**[!UICONTROL 連結共用]**」報表會顯示資產的URL，這些資產是從[!DNL Assets]內與外部使用者共用的。 它包含共用資產之使用者的電子郵件ID、共用資產之使用者的電子郵件ID、連結的共用日期和過期日。 欄無法自訂。
 
    **[!UICONTROL 連結共用]**&#x200B;報告不包含子資料夾和轉譯的選項，因為它只會發佈顯示在`/var/dam/share`下的共用URL。
 
    ![連結共用報告的詳細資訊頁面](assets/link_share.png)
 
-1. 按一下工具列中的&#x200B;**[!UICONTROL 下一步]**。
+1. Click **[!UICONTROL Next]** from the toolbar.
 
-1. 在&#x200B;**[!UICONTROL 設定資料行]**&#x200B;頁面中，預設會選取報表中顯示的某些資料行。 您可以選取更多欄。 取消選取欄以在報告中將其排除。
+1. In the **[!UICONTROL Configure Columns]** page, some columns are selected to appear in the report by default. You can select more columns. Cancel the selection of a column to exclude it in the report.
 
-   ![選取或取消選取報告欄](assets/configure_columns.png)
+   ![Select or cancel the selection of report columns](assets/configure_columns.png)
 
-   若要顯示自訂欄名稱或屬性路徑，請在CRX的`jcr:content`節點下設定資產二進位檔的屬性。 或者，透過屬性路徑選擇器新增路徑。
+   To display a custom column name or property path, configure the properties for the asset binary under the `jcr:content` node in CRX. Alternatively, add it through property path picker.
 
-   ![選取或取消選取報告欄](assets/custom_columns.png)
+   ![Select or cancel the selection of report columns](assets/custom_columns.png)
 
-1. 從工具列按一下&#x200B;**[!UICONTROL 「建立]**」。 訊息會通知已啟動報表產生作業。
-1. 在[!UICONTROL 資產報表]頁面上，報表產生狀態是以報表工作的目前狀態為基礎，例如[!UICONTROL 成功]、[!UICONTROL 失敗]、[!UICONTROL 已排入佇列]或[!UICONTROL 已排程]。 相同的狀態會顯示在通知收件匣中。若要檢視報告頁面，請按一下報告連結。 或者，選取報告，然後按一下工具列中的&#x200B;**[!UICONTROL 檢視]**。
+1. Click **[!UICONTROL Create]** from the toolbar. A message notifies that report generation has been initiated.
+1. On the [!UICONTROL Asset Reports] page, the report generation status is based on the current state of the report job, for example, [!UICONTROL Success], [!UICONTROL Failed], [!UICONTROL Queued], or [!UICONTROL Scheduled]. The same status appears in the notifications inbox.To view the report page, click the report link. Alternatively, select the report, and click **[!UICONTROL View]** from the toolbar.
 
    <!--![A generated report](assets/report_page.png)-->
-   [報告狀態](assets/report-status.JPG)
+   [Report status](assets/report-status.JPG)
 
-   按一下工具列中的「下載&#x200B;**&#x200B;**」，以CSV格式下載報表。
+   Click **[!UICONTROL Download]** from the toolbar to download the report in CSV format.
 
-## 新增自訂欄 {#add-custom-columns}
+## Add custom columns {#add-custom-columns}
 
-您可以將自訂欄新增到以下報表，以顯示更多符合自訂需求的資料：
+You can add custom columns to the following reports to display more data for your custom requirements:
 
 * 上傳
 * 下載
@@ -133,39 +133,39 @@ ht-degree: 8%
 * [!DNL Brand Portal]發佈
 * 檔案
 
-若要新增自訂欄到這些報表，請執行下列步驟：
+To add custom columns to these reports, follow these steps:
 
-1. 在[!DNL Manager interface]中，按一下&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Assets]** > **[!UICONTROL 報表]**。
+1. In the [!DNL Manager interface], click **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Reports]**.
 1. 在[!UICONTROL 資產報表]頁面上，按一下工具列中的&#x200B;**[!UICONTROL 建立]**。
 
 1. 從&#x200B;**[!UICONTROL 建立報告]**&#x200B;頁面，選擇要建立的報告並按一下&#x200B;**[!UICONTROL 下一步]**。
-1. 視情況設定標題、說明、縮圖、資料夾路徑和日期範圍等報表詳細資訊。
+1. Configure report details such as title, description, thumbnail, folder path, and date range as applicable.
 
 1. 要顯示自定義列，請在「自定義列」下指定列 **[!UICONTROL 的名稱]**。
 
-   ![指定報表](assets/custom_columns-1.png)自訂資料行的名稱
+   ![Specify name for custom column of report](assets/custom_columns-1.png)
 
-1. 使用屬性路徑選擇器，在CRXDE中的`jcr:content`節點下新增屬性路徑。 或者，在屬性路徑欄位中輸入路徑。
+1. Add the property path under the `jcr:content` node in CRXDE using the property path picker. Alternatively, type the path in the property path field.
 
-   ![從jcr：content](assets/property_picker.png)中的路徑對應屬性路徑
+   ![Map the property path from paths in jcr:content](assets/property_picker.png)
 
-   若要新增更多自訂欄，請按一下[新增] **&#x200B;**&#x200B;並重複步驟5和6。
+   To add more custom columns, click **[!UICONTROL Add]** and repeat steps 5 and 6.
 
-1. 從工具列按一下&#x200B;**[!UICONTROL 「建立]**」。 訊息會通知已啟動報表產生作業。
+1. Click **[!UICONTROL Create]** from the toolbar. A message notifies that report generation has been initiated.
 
-## 設定清除服務 {#configure-purging-service}
+## Configure purging service {#configure-purging-service}
 
-若要移除您不再需要的報表，請從Web主控台設定「DAM報表清除」服務，以根據其數量和年齡清除現有報表。
+To remove reports that you no longer require, configure the DAM Report Purge service from the web console to purge existing reports based on their quantity and age.
 
-1. 從`https://[aem_server]:[port]/system/console/configMgr`存取Web主控台（組態管理員）。
-1. 開啟&#x200B;**[!UICONTROL DAM報告清除服務]**&#x200B;設定。
-1. 在`scheduler.expression.name`欄位中指定清除服務的頻率（時間間隔）。 您也可以設定報表的年齡和數量臨界值。
+1. Access the web console (configuration manager) from `https://[aem_server]:[port]/system/console/configMgr`.
+1. Open the **[!UICONTROL DAM Report Purge Service]** configuration.
+1. Specify the frequency (time interval) for the purging service in the `scheduler.expression.name` field. You can also configure the age and the quantity threshold for reports.
 1. 儲存變更。
 
-## 疑難排解資訊、提示和限制 {#best-practices-and-limitations}
+## Troubleshooting information, tips, and limitations {#best-practices-and-limitations}
 
-* 如果報表中的某些報表或數字無法使用或無法如預期使用，請確定已啟用[!UICONTROL Day CQ DAM Event Recorder]服務。
+* If some reports or numbers in the reports are not available or as expected, ensure that [!UICONTROL Day CQ DAM Event Recorder] service is enabled.
 
-* 移除不再需要的報表。 使用DAM報告清除服務中的設定選項來設定清除報告的條件。
+* Remove the reports that are no longer required. Use the configuration options in the DAM Report Purge service to configure the criteria to purge reports.
 
-* 如果未產生「磁碟使用量報表」，而您正在使用[!DNL Dynamic Media]，請確定所有資產皆正確繼續。 若要解決，請重新處理資產，然後再次產生報表。
+* If the Disk Usage Report does not generate and you are using [!DNL Dynamic Media], ensure that all assets are proceed correctly. To resolve, reprocess the assets and then generate the report again.

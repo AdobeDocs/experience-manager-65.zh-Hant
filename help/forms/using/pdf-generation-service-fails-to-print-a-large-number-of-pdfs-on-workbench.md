@@ -5,9 +5,9 @@ exl-id: f3746b8e-4c38-447a-b5bf-d11fc77556f7
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Services
 role: User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
 workflow-type: tm+mt
-source-wordcount: '775'
+source-wordcount: '787'
 ht-degree: 0%
 
 ---
@@ -16,12 +16,14 @@ ht-degree: 0%
 
 ## 問題 {#issue}
 
-當客戶透過WorkBench實作的服務產生大量PDF時。 服務因記憶體不足而失敗。 錯誤顯示為：
+客戶透過WorkBench實作的服務產生大量PDF時。 服務因記憶體不足而失敗。 錯誤顯示為：
 
 `ALC-OUT-002-013: XMLFormFactory, PAexecute failure: "0: Out of Memory"`
 
-<!-- Attached is a simplified template (BollatoRiservatiLandscape_table_simple.xdp) that simulates the problem.
-Using the Designer, if we associate the template "BollatoRiservatiLandscape_table_semplice.xdp" with the XML file "BollatoRiservati.xml" during the generation of the pdf, the process comes to occupy 1.6 Gb of RAM. On the server side, with the complete template, the pdf generation process breaks down, occupying 2 GB of RAM.-->
+<!--
+Attached is a simplified template (BollatoRiservatiLandscape_table_simple.xdp) that simulates the problem.
+Using the Designer, if we associate the template "BollatoRiservatiLandscape_table_semplice.xdp" with the XML file "BollatoRiservati.xml" during the generation of the pdf, the process comes to occupy 1.6 Gb of RAM. On the server side, with the complete template, the pdf generation process breaks down, occupying 2 GB of RAM.
+-->
 
 這是因為在Windows上，列印請求的最大頁數限製為大約1000頁。 產生列印輸出時，範本和資料必須載入記憶體，產生的版面配置會建置在記憶體中。 這表示最終輸出的大小有限制。 產生列印輸出的處理程式是32位元工作，這表示它在Windows <!--and 4 GB on UNIX-->上限製為2 GB的RAM。
 
@@ -56,7 +58,7 @@ Using the Designer, if we associate the template "BollatoRiservatiLandscape_tabl
 
 如果表單中有許多小節點且資料量小，該程式會消耗較多的記憶體（因此會更快地用盡記憶體），而不是節點數較少（甚至）且資料量大的表單。
 
-請閱讀下列[附錄](#appendix)以取得更多資訊，其中測試結果是以列印表單(非標籤PDF)為基礎。 使用標籤的PDF程式記憶體需求會增加。 這也取決於表單中的欄位數量 — 大約程式記憶體需求會比非標籤PDF的1.5倍稍多。
+請閱讀下列[附錄](#appendix)以取得更多資訊，其中測試結果是以列印表單（未標籤的PDF）為基礎。 使用標籤的PDF程式記憶體需求會增加。 這也取決於表單中的欄位數 — 大約程式記憶體需求會比未標籤的PDF高出1.5倍。
 
 ### 互動式Forms {#interactive-forms}
 

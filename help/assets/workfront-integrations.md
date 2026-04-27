@@ -1,46 +1,46 @@
 ---
-title: '[!DNL Experience Manager Assets]與 [!DNL Adobe Workfront]整合'
-description: ' [!DNL Assets] 與 [!DNL Workfront]之間的整合簡介'
+title: '[!DNL Experience Manager Assets] integration with [!DNL Adobe Workfront]'
+description: Introduction to integration between [!DNL Assets] and [!DNL Workfront]
 role: Admin,Leader,Developer
 feature: Workfront Integrations and Apps
 exl-id: 57e2bffe-8094-4557-99c8-7b482681687e
 hide: true
 solution: Experience Manager, Workfront
-source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
+source-git-commit: bca6156727dca11b2e09be549f3def6130827193
 workflow-type: tm+mt
-source-wordcount: '1113'
-ht-degree: 7%
+source-wordcount: '1190'
+ht-degree: 8%
 
 ---
 
-# [!DNL Adobe Experience Manager Assets]與[!DNL Adobe Workfront]整合 {#assets-integration-overview}
+# [!DNL Adobe Experience Manager Assets] integration with [!DNL Adobe Workfront] {#assets-integration-overview}
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/integrations/workfront-integrations.html?lang=zh-Hant) |
+| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/integrations/workfront-integrations.html?lang=en) |
 | AEM 6.5 | 本文章 |
 
-[!DNL Adobe Workfront]是工作管理應用程式，可協助您在一個地方管理整個工作生命週期。 [!DNL Workfront] 與 [!DNL Adobe Experience Manager Assets] 整合之後，組織便可以透過工作和數位資產管理的內在連結，改善內容速度與上市時間。就在 Workfront 中管理其工作而言，使用者可以存取必要的文件和影像。
+[!DNL Adobe Workfront] is a work management application that helps you manage the entire lifecycle of work in one place. [!DNL Workfront] 與 [!DNL Adobe Experience Manager Assets] 整合之後，組織便可以透過工作和數位資產管理的內在連結，改善內容速度與上市時間。 就在 Workfront 中管理其工作而言，使用者可以存取必要的文件和影像。
 
-[!DNL Workfront for Experience Manager enhanced connector]可啟用具有端對端工作流程的增強型業務流程，並提供個人化的端對端使用者端體驗和中央儲存空間。 Adobe提供標準聯結器和增強型聯結器，整合這兩個解決方案。 如需比較，請參閱下列支援的功能，並參閱[&#x200B; [!DNL enhanced connector]](https://one.workfront.com/s/csh?context=2467&pubname=the-new-workfront-experience)的新功能。
+The [!DNL Workfront for Experience Manager enhanced connector] enables enhanced business processes with end-to-end workflows and provides personalized end-to-end client experiences and central storage. Adobe offers a standard connector and an enhanced connector to integrate the two solutions. See the supported features below for a comparison and see [what is new in the [!DNL enhanced connector]](https://one.workfront.com/s/csh?context=2467&pubname=the-new-workfront-experience).
 
-[!DNL Workfront for Experience Manage enhanced connector]可讓您的組織：
+[!DNL Workfront for Experience Manage enhanced connector] enables your organization to:
 
-* 在Workfront中自動建立連結的Experience Manager資料夾，並根據Workfront投資組合、計畫和專案組織資料夾。
-* 將Workfront專案中繼資料與連結的Experience Manager資料夾同步。
-* 新版本的Experience Manager中繼資料更新。
-* 使用Workfront工作流程，根據可設定的條件設定Experience Manager物件狀態。
-* 將資產發佈到Experience Manager發佈環境或Brand Portal。
+* Auto-create linked Experience Manager folders in Workfront and organize the folders based on Workfront Portfolios, Programs, and Projects.
+* Synchronize Workfront project metadata with linked Experience Manager folders.
+* Experience Manager metadata updates with new versions.
+* Set Workfront object statuses based on configurable conditions using Experience Manager workflows.
+* Publish assets to Experience Manager publish environment or to Brand Portal.
 
-檢視增強型聯結器的平台支援和[必要條件](https://one.workfront.com/s/csh?context=2467&pubname=the-new-workfront-experience)。
+See the platform support and [prerequisites for the enhanced connector](https://one.workfront.com/s/csh?context=2467&pubname=the-new-workfront-experience).
 
 >[!IMPORTANT]
 >
->* Adobe僅需要透過認證合作夥伴或[!DNL Adobe Workfront for Experience Manager enhanced connector]來部署及設定[!DNL Adobe Professional Services]。 如果未透過認證合作夥伴或[!DNL Adobe Professional Services]進行部署與設定，則Adobe不支援此功能。
+>* Adobe僅需要透過認證合作夥伴或[!DNL Adobe Professional Services]來部署及設定[!DNL Adobe Workfront for Experience Manager enhanced connector]。 如果未透過認證合作夥伴或[!DNL Adobe Professional Services]進行部署與設定，則Adobe不支援此功能。
 >
 >* Adobe可能會發行[!DNL Adobe Workfront]和[!DNL Adobe Experience Manager]的更新，使此聯結器成為多餘的；如果發生這種情況，客戶可能需要從使用此聯結器進行轉換。
 >
->* Adobe支援增強型聯結器1.7.4版及更新版本。 不支援舊版發行前版本和自訂版本。 若要檢查增強型聯結器版本，請瀏覽至`digital.hoodoo`封裝管理員[左側窗格中可用的](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=zh-Hant)群組。
+>* Adobe支援增強型聯結器1.7.4版及更新版本。 不支援舊版發行前版本和自訂版本。 若要檢查增強型聯結器版本，請瀏覽至[封裝管理員](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=zh-Hant)左側窗格中可用的`digital.hoodoo`群組。
 >
 >* 請參閱Experience Manager Assets增強型聯結器的[Workfront合作夥伴認證測驗](https://solutionpartners.adobe.com/solution-partners/home/applications/experience_cloud/workfront/journey/dev_core.html)。 如需有關考試的資訊，請參閱[考試指南](https://express.adobe.com/page/Tc7Mq6zLbPFy8/)。
 

@@ -9,9 +9,9 @@ feature: Dynamic Media Classic,Asset Management,Image Sets,Spin Sets,eCatalog
 role: User
 exl-id: e4d4059e-ac0b-42e7-910c-001310796574
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
 workflow-type: tm+mt
-source-wordcount: '347'
+source-wordcount: '350'
 ht-degree: 8%
 
 ---
@@ -27,22 +27,22 @@ ht-degree: 8%
 
 ## Dynamic Media對資產型別的最佳實務和強制執行限制 {#best-practice-enforced-limits}
 
-當您建立迴轉集或影像集，或上傳頁面擷取的PDF時，Adobe會建議下列最佳作法並強制執行下列限制：
+當您建立迴轉集或影像集，或上傳要擷取頁面的PDF時，Adobe會建議下列最佳作法並強制實行下列限制：
 
 | 資產 — 限制型別 | 最佳實務 | 強加的限制 |
 | --- | --- | --- |
 | **影像** — 每個影像的智慧型裁切數目 | 5 | 100 |
-| **所有集合** — 每個集合的重複資產數目 | 無重複專案 | 20‡ |
+| **所有集合** — 每個集合的重複資產數目 | 無重複項目 | 20‡ |
 | **所有集合** — 每個集合的資產數量上限 | 每組5至10個影像 | 1000 |
 | **迴轉集** — 每個2D集的列/欄數上限 | 每組12至18個影像 | 1000 |
-| **PDF** — 要視為擷取的PDF最大頁數 |  | 100 (適用於所有PDF) |
+| **PDF** — 要視為擷取的PDF最大頁數 |  | 100 （適用於所有PDF） |
 
 ‡最佳實務是集合中不要有重複的資產。 單一資產的限製為20個重複專案。 如果您為該資產新增另一個重複專案（在該集合內），請求會傳回錯誤或忽略重複專案。
 <!-- See also [Dynamic Media limitations](/help/assets/limitations.md). -->
 
 ## Dynamic Media不支援的網頁瀏覽器和作業系統組合 {#unsupported-browser-os}
 
-Dynamic Media不支援下列網頁瀏覽器和作業系統組合。
+Dynamic Media不支援下列Web瀏覽器和作業系統組合。
 
 * Internet Explorer 11 + Windows 7
 * Internet Explorer 11 + Windows 8.1
@@ -56,8 +56,10 @@ Dynamic Media不支援下列網頁瀏覽器和作業系統組合。
 
 ## 終止支援Secure Socket Layer 2.0和3.0以及Transport Layer Security 1.0和1.1 {#tls}
 
-<!-- CQDOC-19433 (original ticket)
-and CQDOC-19792 (removed as per this ticket December 5, 2022) -->
+<!--
+CQDOC-19433 (original ticket)
+and CQDOC-19792 (removed as per this ticket December 5, 2022)
+-->
 
 自2024年4月30日起，Adobe Dynamic Media將停止支援下列專案：
 

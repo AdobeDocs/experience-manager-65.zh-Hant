@@ -7,9 +7,9 @@ feature: Link Sharing,Asset Management
 exl-id: 20370b00-862e-4d04-af2f-7d1c74a842dd
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: bca6156727dca11b2e09be549f3def6130827193
 workflow-type: tm+mt
-source-wordcount: '1026'
+source-wordcount: '1043'
 ht-degree: 7%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 7%
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/share-assets.html?lang=zh-Hant) |
+| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/share-assets.html?lang=en) |
 | AEM 6.5 | 本文章 |
 
 [!DNL Adobe Experience Manager Assets]可讓您以URL的形式與組織成員和外部實體（包括合作夥伴和廠商）共用資產、資料夾和集合。 透過連結共用資產是一種便利的方法，讓外部對象無需先登入[!DNL Assets]即可使用資源。
@@ -43,7 +43,7 @@ ht-degree: 7%
 
    *圖：要以連結形式共用資產的對話方塊。*
 
-1. 在「連結共用」對話方 **[!UICONTROL 塊的電子郵件地址方塊中]** ，輸入您要共用連結之使用者的電子郵件ID。您可以新增一或多個使用者。
+1. 在「連結共用」對話方 **[!UICONTROL 塊的電子郵件地址方塊中]** ，輸入您要共用連結之使用者的電子郵件ID。 您可以新增一或多個使用者。
 
    >[!NOTE]
    >
@@ -61,7 +61,7 @@ ht-degree: 7%
 
 1. 按一下&#x200B;**[!UICONTROL 共用]**。 系統會顯示訊息，確認會透過電子郵件將連結分享給使用者。
 
-1. 若要檢視共用資產，請按一下傳送給使用者之電子郵件中的連結。 若要產生資產的預覽，請按一下共用資產。 若要關閉預覽，請按一下[上一步]。**&#x200B;** 如果您已共用資料夾，請按一下&#x200B;**[!UICONTROL 父資料夾]**&#x200B;以返回父資料夾。
+1. 若要檢視共用資產，請按一下傳送給使用者之電子郵件中的連結。 若要產生資產的預覽，請按一下共用資產。 若要關閉預覽，請按一下[上一步]。**** 如果您已共用資料夾，請按一下&#x200B;**[!UICONTROL 父資料夾]**&#x200B;以返回父資料夾。
 
    ![共用資產預覽](assets/chlimage_1-546.png)
 
@@ -75,7 +75,7 @@ ht-degree: 7%
 
 1. 若要檢視您以連結形式共用的資產，請前往[!DNL Assets]使用者介面並按一下[!DNL Experience Manager]標誌。 選擇&#x200B;**[!UICONTROL 導覽]**。 在[導覽]窗格中，選擇&#x200B;**[!UICONTROL 共用連結]**&#x200B;以顯示共用資產清單。
 
-1. 若要取消共用資產，請選取該資產，然後按一下工具列中的[取消共用]。**&#x200B;** 隨後會顯示確認訊息。 資產的專案會從清單中移除。
+1. 若要取消共用資產，請選取該資產，然後按一下工具列中的[取消共用]。**** 隨後會顯示確認訊息。 資產的專案會從清單中移除。
 
 ## 設定Day CQ郵件服務 {#configure-day-cq-mail-service}
 
@@ -90,7 +90,7 @@ ht-degree: 7%
 
    ![chlimage_1-263](assets/chlimage_1-548.png)
 
-1. 按一下「**[!UICONTROL 儲存]**」。
+1. 按一下&#x200B;**[!UICONTROL 儲存]**。
 
 ## 設定資料大小上限 {#configure-maximum-data-size}
 
@@ -118,4 +118,4 @@ ht-degree: 7%
    * `http://[aem_server]:[port]/linksharepreview.html`
    * `http://[aem_server]:[port]/linkexpired.html`
 
-  在[!DNL Experience Manager]介面中，存取&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 作業]** > **[!UICONTROL 網頁主控台]**。 開啟&#x200B;**[!UICONTROL Day CQ Link Externalizer]**&#x200B;設定，並修改&#x200B;**[!UICONTROL 網域]**&#x200B;欄位中的下列屬性，其中含有針對`local`、`author`和`publish`提及的值。 針對`local`和`author`屬性，請分別提供本機和作者執行個體的URL。 如果您執行單一[!DNL Experience Manager]作者執行個體，請對`local`和`author`屬性使用相同的值。 針對Publish執行個體，請提供[!DNL Experience Manager] Publish執行個體的URL。
+  在[!DNL Experience Manager]介面中，存取&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 作業]** > **[!UICONTROL 網頁主控台]**。 開啟&#x200B;**[!UICONTROL Day CQ Link Externalizer]**&#x200B;設定，並修改&#x200B;**[!UICONTROL 網域]**&#x200B;欄位中的下列屬性，其中含有針對`local`、`author`和`publish`提及的值。 針對`local`和`author`屬性，請分別提供本機和作者執行個體的URL。 如果您執行單一[!DNL Experience Manager]作者執行個體，請對`local`和`author`屬性使用相同的值。 對於發佈執行個體，請提供[!DNL Experience Manager]發佈執行個體的URL。

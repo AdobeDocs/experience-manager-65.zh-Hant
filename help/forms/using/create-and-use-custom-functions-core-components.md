@@ -6,9 +6,9 @@ content-type: reference
 feature: Adaptive Forms, Core Components
 role: Admin, User, Developer
 exl-id: 00073e3a-f1b5-4c42-9fea-4a14b8a22c81
-source-git-commit: 7f1283898cbeebdedb7bdea6f0a8d9db567617ee
+source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
 workflow-type: tm+mt
-source-wordcount: '3385'
+source-wordcount: '3498'
 ht-degree: 2%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 2%
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
 | AEM 6.5 | 本文 |
-| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/create-and-use-custom-functions) |
+| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/create-and-use-custom-functions) |
 
 ## 簡介
 
@@ -355,7 +355,7 @@ var c = {
 
 ### 使用AEM專案原型建立使用者端程式庫{#create-client-library-archetype}
 
-您可以使用AEM Project Archetype[&#128279;](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-core-components/using/developing/archetype/using#getting-started)，將使用者端程式庫新增至已建立的專案，以新增自訂函式。
+您可以使用AEM專案原型](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/developing/archetype/using#getting-started)，將使用者端程式庫新增至已建立的專案[，以新增自訂函式。
 如果您有現有的專案<!--and have already the project structure as shown in the image below,-->，您可以直接將[自訂函式](#create-add-custom-function)新增到您的本機專案。
 
 <!--![custom fuction folder structure](assets/custom-library-folder-structure.png)-->
@@ -364,7 +364,7 @@ var c = {
 
 **新增使用者端資料庫資料夾**
 
-若要新增使用者端程式庫資料夾至您的[AEM專案目錄]，請遵循下列步驟：
+若要將新的使用者端程式庫資料夾新增至您的[AEM專案目錄]，請遵循下列步驟：
 
 1. 在編輯器中開啟[AEM專案目錄]。
 
@@ -456,7 +456,7 @@ var c = {
 
 
 1. 登入`http://server:port/crx/de/index.jsp#`。
-1. 在 `/apps` 檔案夾中建立一個檔案夾。例如，建立名為`experience-league`的資料夾。
+1. 在 `/apps` 檔案夾中建立一個檔案夾。 例如，建立名為`experience-league`的資料夾。
 1. 儲存您的變更。
 1. 導覽至建立的資料夾，並建立型別為`cq:ClientLibraryFolder`的節點作為`clientlibs`。
 1. 導覽至新建立的`clientlibs`資料夾並新增`allowProxy`和`categories`屬性：
@@ -526,17 +526,17 @@ var c = {
 
    ![正在新增自訂函式使用者端程式庫](/help/forms/using//assets/custom-function-category-name-core-component.png)
 
-1. 按一下&#x200B;**[!UICONTROL 「完成」]**。
+1. 按一下&#x200B;**[!UICONTROL 完成]**。
 
 現在，您可以建立規則，以在規則編輯器中使用自訂函式：
 
 ![正在新增自訂函式使用者端程式庫](/help/forms/using//assets/calculateage-customfunction.png)
 
-現在，讓我們瞭解如何在AEM Forms 6.5[&#128279;](/help/forms/using/rule-editor-core-components.md#invoke-form-data-model-service-invoke)中使用規則編輯器的Invoke服務來設定和使用自訂函式
+現在，讓我們瞭解如何在AEM Forms 6.5](/help/forms/using/rule-editor-core-components.md#invoke-form-data-model-service-invoke)中使用[規則編輯器的Invoke服務來設定和使用自訂函式
 
 ## 在最適化表單中使用自訂函式 {#use-custom-functions}
 
-在最適化表單中，您可以在規則編輯器[&#128279;](/help/forms/using/rule-editor-core-components.md)中使用自訂函式。
+在最適化表單中，您可以在規則編輯器](/help/forms/using/rule-editor-core-components.md)中使用[自訂函式。
 讓我們將下列程式碼新增至JavaScript檔案（`Function.js`檔案），以根據出生日期(YYYY-MM-DD)計算年齡。 建立自訂函式為`calculateAge()`，它以出生日期作為輸入並傳回年齡：
 
 ```javascript
@@ -572,7 +572,7 @@ var c = {
 
 >[!NOTE]
 >
-> 您可以參考下列[自訂函式](/help/forms/using/assets/customfunctions.zip)資料夾。 使用[封裝管理員](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65/content/sites/administering/contentmanagement/package-manager)下載此資料夾，並將其安裝在您的AEM執行個體中。
+> 您可以參考下列[自訂函式](/help/forms/using/assets/customfunctions.zip)資料夾。 使用[封裝管理員](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/administering/contentmanagement/package-manager)下載此資料夾，並將其安裝在您的AEM執行個體中。
 
 ### 支援自訂函式中的非同步函式 {#support-of-async-functions}
 
@@ -615,7 +615,7 @@ var c = {
 
 ![為非同步函式建立規則](/help/forms/using/assets/rule-for-async-funct.png)
 
-請參考下方主控台視窗的圖例，以示範當使用者按一下`Fetch`按鈕時，會叫用自訂函式`callAsyncFunction`，進而呼叫非同步函式`asyncFunction`。 Inspect主控台視窗中，檢視按下按鈕時的回應：
+請參考下方主控台視窗的圖例，以示範當使用者按一下`Fetch`按鈕時，會叫用自訂函式`callAsyncFunction`，進而呼叫非同步函式`asyncFunction`。 檢查主控台視窗，檢視按鈕按一下時的回應：
 
 ![主控台視窗](/help/forms/using/assets/async-custom-funct-console.png)
 
@@ -633,7 +633,8 @@ var c = {
 >
 > `param {scope} globals`必須是最後一個引數，且不會顯示在調適型表單的規則編輯器中。
 
-<!-- Let us look at the following code snippet:
+<!--
+Let us look at the following code snippet:
 
 ```JavaScript
    
@@ -653,7 +654,8 @@ var c = {
     }
 ```
 
-In the above code snippet, a custom function named `updateDateTime` takes parameters such as a field object and a global object. The field represents the textbox object where the formatted date and time value is displayed within the form. -->
+In the above code snippet, a custom function named `updateDateTime` takes parameters such as a field object and a global object. The field represents the textbox object where the formatted date and time value is displayed within the form.
+-->
 
 讓我們瞭解自訂函式如何透過使用不同使用案例的`Contact Us`表單來使用欄位和全域物件。
 
@@ -855,7 +857,7 @@ In the above code snippet, a custom function named `updateDateTime` takes parame
 
 您也可以檢查主控台視窗，以檢視提交給伺服器的資料：
 
-在主控台視窗![Inspect資料](/help/forms/using/assets/custom-function-submit-data-console-data.png)
+![在主控台視窗檢查資料](/help/forms/using/assets/custom-function-submit-data-console-data.png)
 
 <!--
 
@@ -980,7 +982,7 @@ Adaptive Forms會在規則編輯器中擷取自訂函式清單時，實作自訂
 
 ## 疑難排解 {#troubleshooting}
 
-* 使用者需要確定[核心元件和規格版本已設定為最新版本](https://github.com/adobe/aem-core-forms-components/tree/release/650)。 不過，對於現有的AEM專案和表單，還有其他步驟需要遵循：
+* 使用者需要確定[核心元件和規格版本已設定為最新版本](https://github.com/adobe/aem-core-forms-components/tree/release/650)。 不過，對於現有的AEM專案和表單，還有其他要遵循的步驟：
 
    * 對於AEM專案，使用者應使用`submitForm()`取代`submitForm('custom:submitSuccess', 'custom:submitError')`的所有執行個體並部署專案。
 

@@ -9,22 +9,24 @@ role: User, Admin
 exl-id: f8a80b22-b1a6-475f-b3f1-b2f47822f21d
 feature: Collaboration,Asset Management
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: d6b9dde5201198cb073293b2b8527a458836ff0b
+source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
 workflow-type: tm+mt
-source-wordcount: '416'
+source-wordcount: '429'
 ht-degree: 10%
 
 ---
 
 # 使用 Dynamic Media {#working-with-dynamic-media}
 
-[Dynamic Media](https://business.adobe.com/tw/products/experience-manager/assets/dynamic-media.html)可協助您隨選提供豐富的視覺化銷售和行銷資產，並根據網路、行動及社交網站上的消費自動調整。 使用一組主要來源資產，軟體會透過其全球性、可擴充、效能最佳化的網路，即時產生並傳送多種多樣的豐富內容。
+[Dynamic Media](https://business.adobe.com/products/experience-manager/assets/dynamic-media.html)可協助提供豐富的視覺銷售和行銷資產（隨選即用），並根據網路、行動及社交網站的消費自動調整。 使用一組主要來源資產，軟體會透過其全球性、可擴充、效能最佳化的網路，即時產生並傳送多種多樣的豐富內容。
 
 此軟體提供互動式檢視體驗，包括縮放、360度旋轉和視訊。 它以獨特方式整合Adobe Experience Manager數位資產管理(Assets)解決方案的工作流程，以簡化及簡化數位行銷活動管理流程。
 
-<!-- >ARTICLE IS MISSING. GIVES 404 [!NOTE]
+<!--
+>ARTICLE IS MISSING. GIVES 404 [!NOTE]
 >
->A Community article is available on [Working with Adobe Experience Manager and Dynamic Media](https://helpx.adobe.com/experience-manager/using/aem_dynamic_media.html). -->
+>A Community article is available on [Working with Adobe Experience Manager and Dynamic Media](https://helpx.adobe.com/experience-manager/using/aem_dynamic_media.html).
+-->
 
 ## 您可以使用軟體做什麼 {#what-you-can-do-with-dynamic-media}
 
@@ -49,9 +51,9 @@ ht-degree: 10%
 
 >[!NOTE]
 >
->若要瞭解使用Dynamic Media與將Dynamic Media Classic與Adobe Experience Manager整合之間的差異，請參閱[Dynamic Media Classic整合與Dynamic Media](/help/sites-administering/scene7.md#aem-scene-integration-versus-dynamic-media)的比較。
+>若要瞭解使用Dynamic Media與整合Dynamic Media Classic與Adobe Experience Manager之間的差異，請參閱[Dynamic Media Classic整合與Dynamic Media](/help/sites-administering/scene7.md#aem-scene-integration-versus-dynamic-media)。
 
-## 啟用Dynamic Media與停用Dynamic Media {#dynamic-media-on-versus-dynamic-media-off}
+## Dynamic Media已啟用與Dynamic Media停用 {#dynamic-media-on-versus-dynamic-media-off}
 
 您可以藉由下列特性來判斷軟體是否已啟用（開啟）：
 
@@ -75,7 +77,7 @@ ht-degree: 10%
 
 ### PTIFF轉譯 {#ptiff-renditions}
 
-啟用Dynamic Media的資產包括`pyramid.tiffs`。
+啟用Dynamic Media的資產包含`pyramid.tiffs`。
 
 ![chlimage_1-360](assets/chlimage_1-360.png)
 

@@ -8,16 +8,16 @@ exl-id: f6c24894-c322-4c44-b001-8978954d6e53
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Foundation Components
 role: Admin, User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
 workflow-type: tm+mt
-source-wordcount: '525'
+source-wordcount: '548'
 ht-degree: 0%
 
 ---
 
 # 參考主題{#reference-themes}
 
-[佈景主題](../../forms/using/themes.md)可讓您在不深入瞭解CSS的情況下設定表單樣式。 除了預設佈景主題之外，您可以安裝[AEM Forms附加元件套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=zh-Hant)以取得下列佈景主題：
+[佈景主題](../../forms/using/themes.md)可讓您在不深入瞭解CSS的情況下設定表單樣式。 除了預設佈景主題之外，您可以安裝[AEM Forms附加元件套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en)以取得下列佈景主題：
 
 * 貝瑞爾
 * 執行者
@@ -42,9 +42,11 @@ We.Gov最適化表單使用Beryl佈景主題，並強調使用背景影像、透
 
 ![貝瑞爾佈景主題](assets/beryl.png)
 
-<!--[Click to enlarge
+<!--
+[Click to enlarge
 
-](assets/beryl-1.png)-->
+](assets/beryl-1.png)
+-->
 
 ## 執行者 {#exec}
 
@@ -52,9 +54,11 @@ We.Gov最適化表單使用Beryl佈景主題，並強調使用背景影像、透
 
 ![執行佈景主題](assets/exec.png)
 
-<!--[Click to enlarge
+<!--
+[Click to enlarge
 
-](assets/exec-1.png)-->
+](assets/exec-1.png)
+-->
 
 ## 執行光 {#exec-light}
 
@@ -62,9 +66,11 @@ Exec Light主題使用空白字元來建立順暢的體驗。 「下一個」和
 
 ![執行燈光佈景主題](assets/exec-light.png)
 
-<!--[Click to enlarge
+<!--
+[Click to enlarge
 
-](assets/exec-light-1.png)-->
+](assets/exec-light-1.png)
+-->
 
 ## Liberty {#liberty}
 
@@ -72,9 +78,11 @@ Liberty主題使用極簡主義方法來強調重要事項。 例如，瀏覽過
 
 ![自由佈景主題](assets/liberty.png)
 
-<!--[Click to enlarge
+<!--
+[Click to enlarge
 
-](assets/liberty-1.png)-->
+](assets/liberty-1.png)
+-->
 
 ## 寧靜 {#tranquil}
 
@@ -82,9 +90,11 @@ Liberty主題使用極簡主義方法來強調重要事項。 例如，瀏覽過
 
 ![寧靜主題](assets/tranquil.png)
 
-<!--[Click to enlarge
+<!--
+[Click to enlarge
 
-](assets/tranquil-1.png)-->
+](assets/tranquil-1.png)
+-->
 
 ## Ultraminary {#ultramarine}
 
@@ -100,9 +110,11 @@ Ultraminary主題使用深藍色陰影來反白標示元件，例如定位點、
 
 ![都市佈景主題](assets/urbane.png)
 
-<!--[Click to enlarge
+<!--
+[Click to enlarge
 
-](assets/urbane-1.png)-->
+](assets/urbane-1.png)
+-->
 
 ## 美國網頁設計標準 {#u-s-web-design-standards}
 
@@ -110,6 +122,8 @@ Ultraminary主題使用深藍色陰影來反白標示元件，例如定位點、
 
 ![美國網頁設計標準主題](assets/us-web-standards.png)
 
-<!--[Click to enlarge
+<!--
+[Click to enlarge
 
-](assets/usgov.png)-->
+](assets/usgov.png)
+-->

@@ -1,5 +1,5 @@
 ---
-title: Assets Insights
+title: 資產洞察
 description: 瞭解Assets Insights功能如何讓您追蹤用於協力廠商網站、行銷活動和Adobe創意解決方案之影像的使用者評分和使用情況統計資料。
 contentOwner: AG
 role: User, Admin
@@ -7,27 +7,27 @@ feature: Asset Insights,Asset Reports
 exl-id: 0130ac40-a72b-4caf-a10f-3c7d76eaa1e6
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: bca6156727dca11b2e09be549f3def6130827193
 workflow-type: tm+mt
-source-wordcount: '771'
-ht-degree: 9%
+source-wordcount: '797'
+ht-degree: 17%
 
 ---
 
-# Assets Insights {#asset-insights}
+# 資產洞察 {#asset-insights}
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/assets-insights.html?lang=zh-Hant) |
+| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/assets-insights.html?lang=en) |
 | AEM 6.5 | 本文章 |
 
 Assets Insights功能可讓您追蹤用於協力廠商網站、行銷活動和Adobe創意解決方案之影像的使用者評等和使用情況統計資料。 這有助於獲得有關其效能和人氣的深入分析。
 
-[!DNL Assets]深入分析會擷取使用者活動詳細資料，例如影像的評分、點按和曝光次數（影像載入網站的次數）。 系統會根據這些統計資料，將分數指派給影像。 您可以使用評分和效能統計資料來選取常用影像，以包含在目錄、行銷活動等中。 您甚至可以根據這些統計資料制定封存和授權更新政策。
+[!DNL Assets]深入分析會擷取使用者活動詳細資料，例如影像的評分、點按和曝光次數（影像載入網站的次數）。 其會根據這些統計資料為影像指定分數。 您可以使用分數和效能統計資料選取受歡迎的影像，將其納入目錄、行銷活動等內容中。 您甚至可以根據這些統計資料制定封存和授權續約原則。
 
 若要讓[!DNL Assets]深入分析從網站擷取影像的使用狀況統計資料，您必須在網站程式碼中包含影像的內嵌程式碼。
 
-若要讓Assets Insights顯示資產的使用狀況統計資料，請先設定功能，以從Adobe Analytics擷取報表資料。 如需詳細資訊，請參閱[設定Assets Insights](/help/assets/configure-asset-insights.md)。 若要在內部部署安裝中使用此功能，請另外購買[!DNL Adobe Analytics]授權。 [!DNL Managed Services]的客戶會收到與[!DNL Experience Manager]繫結的[!DNL Analytics]授權。 請參閱[Managed Services產品說明](https://helpx.adobe.com/tw/legal/product-descriptions/adobe-experience-manager-managed-services.html)。
+若要讓資產洞察顯示資產的使用情況統計資料，首先應設定該功能從 Adobe Analytics 擷取報告資料。 如需詳細資訊，請參閱[設定Assets Insights](/help/assets/configure-asset-insights.md)。 若要在內部部署安裝中使用此功能，請另外購買[!DNL Adobe Analytics]授權。 [!DNL Managed Services]的客戶會收到與[!DNL Experience Manager]繫結的[!DNL Analytics]授權。 請參閱[Managed Services產品說明](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html)。
 
 >[!NOTE]
 >
@@ -49,7 +49,7 @@ Assets Insights功能可讓您追蹤用於協力廠商網站、行銷活動和Ad
 
    * **資產**：資產屬於集合或複合資產的次數
    * **網頁與行動裝置**：資產屬於網站與應用程式一部分的次數
-   * **社交**：解決方案中使用資產的次數，例如Adobe Social和Adobe Campaign
+   * **Social**：解決方案中使用資產的次數，例如Adobe Social和Adobe Campaign
    * **電子郵件**：在電子郵件行銷活動中使用資產的次數
 
    ![usage_statistics](assets/usage_statistics.png)
@@ -58,7 +58,7 @@ Assets Insights功能可讓您追蹤用於協力廠商網站、行銷活動和Ad
    >
    >由於Assets Insights功能通常會定期從Adobe Analytics擷取解決方案資料，因此「解決方案」區段可能不會顯示最新資料。 資料顯示的時間長度取決於Assets Insights為擷取Analytics資料而執行的擷取作業排程。
 
-1. 要以圖形方式查看某個時段內資產的效能統計資訊，請在「效能統計資訊」部分中 **[!UICONTROL 選擇該時段]** 。詳細資訊 (包括點按次數和印象) 會顯示為圖形的趨勢線。
+1. 要以圖形方式查看某個時段內資產的效能統計資訊，請在「效能統計資訊」部分中 **[!UICONTROL 選擇該時段]** 。 詳細資訊 (包括點按次數和印象) 會顯示為圖形的趨勢線。
 
    ![chlimage_1-3](assets/chlimage_1-3.jpeg)
 
@@ -72,7 +72,7 @@ Assets Insights功能可讓您追蹤用於協力廠商網站、行銷活動和Ad
 
 ## 檢視影像的彙總統計資料 {#viewing-aggregate-statistics-for-images}
 
-您可以使用前瞻分析檢視同時檢視資料夾內所有資產 **[!UICONTROL 的分數]**。
+您可以使用洞察檢視同時檢視資料夾內所有資產 **[!UICONTROL 的分數]**。
 
 1. 在[!DNL Assets]使用者介面中，導覽至包含您要檢視其見解的資產的資料夾。
 1. 按一下工具列中的[配置]，然後選擇&#x200B;**[!UICONTROL 前瞻分析檢視]**。

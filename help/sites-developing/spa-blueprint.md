@@ -10,9 +10,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
 index: false
-source-git-commit: 1509ca884e2f9eb931fc7cd416801957459cc4a0
+source-git-commit: 147b0efb32609c05949c9fe374fa4fca6a9dbfb1
 workflow-type: tm+mt
-source-wordcount: '2023'
+source-wordcount: '2114'
 ht-degree: 1%
 
 ---
@@ -26,13 +26,13 @@ ht-degree: 1%
 
 ## 簡介 {#introduction}
 
-本檔案說明任何SPA架構都應該履行的一般合約(即AEM支援層的型別)，以便在AEM中實作可編輯的SPA元件。
+本檔案說明任何SPA架構都應該履行的一般合約（即AEM支援層的型別），以便在AEM中實作可編輯的SPA元件。
 
 >[!NOTE]
 >
 >下列需求與架構無關。 如果滿足這些需求，則可以提供框架特定的層，該層由模組、元件和服務組成。
 >
->**AEM中的React和Angular架構已符合這些需求。**&#x200B;只有當您想要實作其他框架以與AEM一起使用時，此藍圖中的需求才相關。
+>**AEM中的React和Angular架構已符合這些需求。** 此藍圖中的需求只有在您想要實作其他框架以與AEM一起使用時才相關。
 
 >[!CAUTION]
 >
@@ -72,11 +72,11 @@ ht-degree: 1%
 
 ### 頁面模型 {#page-model}
 
-頁面的內容結構儲存在AEM中。 頁面模型可用來對應及例項化SPA元件。 SPA開發人員會建立對應至AEM元件的SPA元件。 為此，他們使用資源型別(或AEM元件的路徑)作為唯一索引鍵。
+頁面的內容結構儲存在AEM中。 頁面模型可用來對應及例項化SPA元件。 SPA開發人員會建立對應至AEM元件的SPA元件。 為此，他們使用資源型別（或AEM元件的路徑）作為唯一索引鍵。
 
 SPA元件必須和頁面模型同步，並相應地隨其內容的任何變更而更新。 使用動態元件的陣列必須用來按照提供的頁面模型結構即時例項化元件。
 
-### 中繼欄位 {#meta-fields}
+### Meta欄位 {#meta-fields}
 
 頁面模型使用JSON模型匯出程式，其本身是以[Sling模型](https://sling.apache.org/documentation/bundles/models.html) API為基礎。 可匯出的Sling模型會顯示下列欄位清單，以啟用基礎程式庫來解譯資料模型：
 
@@ -268,7 +268,7 @@ ComponentMapping.map = function map (resourceTypes, clazz, editConfig) {};
 
 ## 導覽與路由 {#navigation-and-routing}
 
-應用程式擁有路由。 前端開發人員首先需要實作導覽元件(對應至AEM導覽元件)。 此元件會轉譯URL連結，以便搭配顯示或隱藏內容片段的一系列路由使用。
+應用程式擁有路由。 前端開發人員首先需要實作導覽元件（對應至AEM導覽元件）。 此元件會轉譯URL連結，以便搭配顯示或隱藏內容片段的一系列路由使用。
 
 基礎[`PageModelManager`](/help/sites-developing/spa-blueprint.md#pagemodelmanager)程式庫及其` [ModelRouter](/help/sites-developing/spa-routing.md)`模組（預設為啟用）負責預先擷取並提供與指定資源路徑關聯之模型的存取權。
 

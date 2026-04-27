@@ -1,19 +1,19 @@
 ---
-title: 最適化表單的樣式
+title: 設計您的自適應表單
 description: 瞭解如何建立自訂主題、設定個別元件的樣式，以及在主題中使用Web Fonts。
 topic-tags: introduction
 feature: Adaptive Forms
 exl-id: 7742c3ca-1755-44c5-b70f-61309f09d1b8
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
 workflow-type: tm+mt
-source-wordcount: '2038'
-ht-degree: 8%
+source-wordcount: '2189'
+ht-degree: 10%
 
 ---
 
-# 最適化表單的樣式 {#do-not-publish-style-your-adaptive-form}
+# 設計您的自適應表單 {#do-not-publish-style-your-adaptive-form}
 
 瞭解如何建立自訂主題、設定個別元件的樣式，以及在主題中使用Web Fonts。
 
@@ -21,16 +21,16 @@ ht-degree: 8%
 
 本教學課程是[建立第一個最適化表單](https://helpx.adobe.com/tw/experience-manager/6-3/forms/using/create-your-first-adaptive-form.html)系列中的步驟。 Adobe建議您依照時間順序來瞭解、執行和示範完整的教學課程使用案例。
 
-## 關於教學課程  {#about-the-tutorial}
+## 關於本教學課程  {#about-the-tutorial}
 
-您可以使用主題來為最適化表單提供獨特的外觀和樣式。 您可以套用最適化表單編輯器隨附的現成主題，或是建立您自己的自訂主題。 AEM [!DNL Forms]提供[主題編輯器](https://helpx.adobe.com/tw/experience-manager/6-3/forms/using/themes.html)以建立自訂主題。 單一主題可為在行動裝置、平板電腦或桌上型電腦上開啟的相同最適化表單提供不同外觀。 使用主題編輯器不需要有CSS或LESS的任何先前知識，但這是必要的。
+您可以使用主題來為最適化表單提供獨特的外觀和樣式。 您可以套用最適化表單編輯器隨附的現成主題，或是建立您自己的自訂主題。 AEM [!DNL Forms]提供[主題編輯器](https://helpx.adobe.com/experience-manager/6-3/forms/using/themes.html)以建立自訂主題。 單一主題可為在行動裝置、平板電腦或桌上型電腦上開啟的相同最適化表單提供不同外觀。 使用主題編輯器不需要有CSS或LESS的任何先前知識，但這是必要的。
 
 在本教學課程結束時，您應該能夠進行下列工作：
 
 * 將立即可用的主題套用至最適化表單
 * 使用主題編輯器建立最適化表單的主題
 * 個別元件的樣式
-* 額外區段：在自訂主題中使用Web Fonts
+* 額外章節：在自訂主題中使用Web Fonts
 
 完成本教學課程後，您的表單應看起來類似下列內容：
 
@@ -78,7 +78,7 @@ ht-degree: 8%
       [http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html](http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html)
 
    1. 選取[!UICONTROL 標題]元件中的標誌影像，並選取![cmppr](assets/cmppr.png) **[!UICONTROL 屬性]**。 在[!UICONTROL image]屬性中，選取X以移除現有的標誌影像。
-   1. 選取&#x200B;**[!UICONTROL 上傳]**、選取logo.png，然後選取![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)以儲存變更。 在您開始[&#128279;](/help/forms/using/style-your-adaptive-form.md#before-you-start)之前，已在區段中下載影像。
+   1. 選取&#x200B;**[!UICONTROL 上傳]**、選取logo.png，然後選取![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)以儲存變更。 在您開始](/help/forms/using/style-your-adaptive-form.md#before-you-start)之前，已在[區段中下載影像。
    1. 選取標題文字`We.Retail`，然後選取![aem_6_3_edit](assets/aem_6_3_edit.png) **[!UICONTROL edit]**。 將標頭文字變更為`we retail`。 僅套用粗體格式至`we retail`中的`we`。
 
       ![we-retail-logo-text](assets/we-retail-logo-text.png)
@@ -105,10 +105,10 @@ ht-degree: 8%
 1. 登入AEM作者執行個體並導覽至&#x200B;**[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL 主題]**。 預設URL為[http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-themes](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-themes)。
 1. 選取&#x200B;**[!UICONTROL 建立]**&#x200B;並選取&#x200B;**[!UICONTROL 主題]**。 [!UICONTROL 建立佈景主題]頁面，其中包含建立佈景主題所需的欄位。 **[!UICONTROL Title]**&#x200B;和&#x200B;**[!UICONTROL Name]**&#x200B;欄位是必要的：
 
-   * **標題：**&#x200B;指定主題的標題。 例如，**全域主題。**&#x200B;標題可協助您從主題清單中識別主題。
-   * **名稱：**&#x200B;指定主題的名稱。 例如，**Global-Theme。**&#x200B;在存放庫中建立具有指定名稱的節點。 當您開始輸入標題時，會自動產生名稱欄位的值。 您可以變更建議的值。名稱欄位只能包含字母數字字元、連字號和底線。所有無效的輸入都會以連字號取代。
+   * **標題：**&#x200B;指定主題的標題。 例如，**全域佈景主題。** 標題可幫助您從主題清單中識別主題。
+   * **名稱：**&#x200B;指定主題的名稱。 例如，**Global-Theme.** 存放庫中會建立具有指定名稱的節點。 當您開始輸入標題時，會自動產生名稱欄位的值。 您可以變更建議的值。 名稱欄位只能包含字母數字字元、連字號和底線。 所有無效的輸入都會以連字號取代。
 
-1. 選擇 **[!UICONTROL 建立]**。主題隨即建立，並出現對話方塊以開啟表單進行編輯。 選取&#x200B;**[!UICONTROL 開啟]**&#x200B;以在新索引標籤中開啟新建立的主題。 主題會在主題編輯器中開啟。 對於樣式，主題編輯器使用AEM [!DNL Forms]隨附的現成最適化表單。
+1. 選擇 **[!UICONTROL 建立]**。 主題隨即建立，並出現對話方塊以開啟表單進行編輯。 選取&#x200B;**[!UICONTROL 開啟]**&#x200B;以在新索引標籤中開啟新建立的主題。 主題會在主題編輯器中開啟。 對於樣式，主題編輯器使用AEM [!DNL Forms]隨附的現成最適化表單。
 
    如需有關使用主題編輯器UI的資訊，請參閱[關於主題編輯器](/help/forms/using/themes.md#aboutthethemeeditor)。
 
@@ -132,22 +132,22 @@ ht-degree: 8%
 
    | 屬性 | 值 |
    |---|---|
-   | 字型系列 | Arial® |
-   | 字型色彩 | FFFFFF |
-   | 字型大小 | 54畫素 |
+   | 字體系列 | Arial® |
+   | 字體顏色 | FFFFFF |
+   | 字體大小 | 54 px |
 
-1. 選取[!UICONTROL 標題] Widget並選取&#x200B;**[!UICONTROL 標題]**。 「頁首」Widget樣式的選項會顯示在左側。 展開&#x200B;**[!UICONTROL Dimension與位置]**&#x200B;摺疊式功能表，將&#x200B;**[!UICONTROL 高度]**&#x200B;設定為`120px`，然後選取![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)。
+1. 選取[!UICONTROL 標題] Widget並選取&#x200B;**[!UICONTROL 標題]**。 「頁首」Widget樣式的選項會顯示在左側。 展開&#x200B;**[!UICONTROL 維度與位置]**&#x200B;摺疊式功能表，將&#x200B;**[!UICONTROL 高度]**&#x200B;設定為`120px`，然後選取![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)。
 1. 展開標頭Widget的&#x200B;**[!UICONTROL 背景]**&#x200B;摺疊式功能表，將&#x200B;**[!UICONTROL 背景色彩]**&#x200B;設定為`F6921E.`
 
    將游標停留在&#x200B;**[!UICONTROL 影像與漸層]** > **[!UICONTROL +新增]**&#x200B;上，選取&#x200B;**[!UICONTROL 影像]**。 設定下列屬性並選取![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)。
 
    | 屬性 | 值 |
    |---|---|
-   | 影像 | 上傳header-style.png。 在您開始[&#128279;](/help/forms/using/style-your-adaptive-form.md#before-you-start)之前，已在區段中下載影像。 |
+   | 影像 | 上傳header-style.png。 在您開始](/help/forms/using/style-your-adaptive-form.md#before-you-start)之前，已在[區段中下載影像。 |
    | 位置 | 右下 |
    | 並排顯示 | 不重複 |
 
-1. 在主題編輯器中，選取標頭中的標誌，然後選取&#x200B;**[!UICONTROL 標頭標誌]**。 展開「Dimension與位置」設定追蹤器，設定下列屬性並選取![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)。
+1. 在主題編輯器中，選取標頭中的標誌，然後選取&#x200B;**[!UICONTROL 標頭標誌]**。 展開「維度與位置」設定追蹤器，設定下列屬性並選取![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)。
 
    <table> 
     <tbody> 
@@ -182,7 +182,7 @@ ht-degree: 8%
    <table> 
     <tbody> 
      <tr> 
-      <td><b>折疊面板</b></td> 
+      <td><b>摺疊面板</b></td> 
       <td><b>屬性</b></td> 
       <td><b>值</b></td> 
      </tr> 
@@ -204,26 +204,26 @@ ht-degree: 8%
      </tr> 
      <tr> 
       <td>文字</td> 
-      <td>字型系列</td> 
+      <td>字體系列</td> 
       <td>Arial®</td> 
      </tr> 
      <tr> 
       <td>文字</td> 
-      <td>字型色彩</td> 
+      <td>字體顏色</td> 
       <td>939598<br /> </td> 
      </tr> 
      <tr> 
       <td>文字</td> 
-      <td>字型大小</td> 
-      <td>18畫素</td> 
+      <td>字體大小</td> 
+      <td>18 px</td> 
      </tr> 
      <tr> 
-      <td>Dimension和位置</td> 
+      <td>尺寸與位置</td> 
       <td>寬度</td> 
       <td>60%</td> 
      </tr> 
      <tr> 
-      <td>Dimension和位置</td> 
+      <td>尺寸與位置</td> 
       <td>邊距</td> 
       <td> 
        <ul> 
@@ -246,7 +246,7 @@ ht-degree: 8%
    <table> 
     <tbody> 
      <tr> 
-      <td><b>折疊面板</b></td> 
+      <td><b>摺疊面板</b></td> 
       <td><b>屬性</b></td> 
       <td><b>值</b></td> 
      </tr> 
@@ -273,18 +273,18 @@ ht-degree: 8%
      </tr> 
      <tr> 
       <td>文字<br /> </td> 
-      <td>字型系列</td> 
+      <td>字體系列</td> 
       <td>Arial®</td> 
      </tr> 
      <tr> 
       <td>文字</td> 
-      <td>字型色彩</td> 
+      <td>字體顏色</td> 
       <td>FFFFFF</td> 
      </tr> 
      <tr> 
       <td>文字</td> 
-      <td>字型大小</td> 
-      <td>18畫素</td> 
+      <td>字體大小</td> 
+      <td>18 px</td> 
      </tr> 
     </tbody> 
    </table>
@@ -302,11 +302,11 @@ ht-degree: 8%
 
    ![style-option](assets/style-option.png)
 
-1. 選取&#x200B;**[!UICONTROL 附加]**&#x200B;按鈕並選取![aem_6_3_edit](assets/aem_6_3_edit.png)圖示。 在&#x200B;**[!UICONTROL Dimension和Position]**&#x200B;摺疊式功能表中設定下列屬性：
+1. 選取&#x200B;**[!UICONTROL 附加]**&#x200B;按鈕並選取![aem_6_3_edit](assets/aem_6_3_edit.png)圖示。 在&#x200B;**[!UICONTROL 維度和位置]**&#x200B;摺疊式功能表中設定下列屬性：
 
    | 屬性 | 值 |
    |---|---|
-   | 浮點數 | 左 |
+   | 浮動 | 左 |
    | 寬度 | 10% |
 
 1. 選取&#x200B;**[!UICONTROL 政府核准的地址校訂]**&#x200B;選項，並選取![aem_6_3_edit](assets/aem_6_3_edit.png)圖示。 設定下列屬性：
@@ -314,13 +314,13 @@ ht-degree: 8%
    <table> 
     <tbody> 
      <tr> 
-      <td><b>折疊面板</b></td> 
+      <td><b>摺疊面板</b></td> 
       <td><b>屬性</b></td> 
       <td><b>值</b></td> 
      </tr> 
      <tr> 
       <td>尺寸及位置</td> 
-      <td>浮點數</td> 
+      <td>浮動</td> 
       <td>左</td> 
      </tr> 
      <tr> 
@@ -339,10 +339,10 @@ ht-degree: 8%
      <tr> 
       <td>尺寸及位置</td> 
       <td>高度</td> 
-      <td>40畫素</td> 
+      <td>40 px</td> 
      </tr> 
      <tr> 
-      <td>Dimension和位置<br /> </td> 
+      <td>維度和位置<br /> </td> 
       <td>邊距</td> 
       <td><br /> 
        <ul> 
@@ -358,7 +358,7 @@ ht-degree: 8%
      <tr> 
       <td>邊框</td> 
       <td>邊框寬度</td> 
-      <td>1畫素</td> 
+      <td>1 px</td> 
      </tr> 
      <tr> 
       <td>邊框</td> 
@@ -373,22 +373,22 @@ ht-degree: 8%
      <tr> 
       <td>邊框</td> 
       <td>邊框半徑</td> 
-      <td>7畫素</td> 
+      <td>7 px</td> 
      </tr> 
      <tr> 
       <td>文字</td> 
-      <td>字型系列</td> 
+      <td>字體系列</td> 
       <td>Arial®</td> 
      </tr> 
      <tr> 
       <td>文字</td> 
-      <td>字型色彩</td> 
+      <td>字體顏色</td> 
       <td>BCBEC0</td> 
      </tr> 
      <tr> 
       <td>文字</td> 
-      <td>字型大小</td> 
-      <td>18畫素</td> 
+      <td>字體大小</td> 
+      <td>18 px</td> 
      </tr> 
      <tr> 
       <td>文字</td> 
@@ -404,17 +404,17 @@ ht-degree: 8%
    <table> 
     <tbody> 
      <tr> 
-      <td><b>折疊面板</b></td> 
+      <td><b>摺疊面板</b></td> 
       <td><b>屬性</b></td> 
       <td><b>值</b></td> 
      </tr> 
      <tr> 
-      <td>Dimension和位置</td> 
-      <td>浮點數</td> 
+      <td>尺寸與位置</td> 
+      <td>浮動</td> 
       <td>右</td> 
      </tr> 
      <tr> 
-      <td>Dimension和位置</td> 
+      <td>尺寸與位置</td> 
       <td>邊距</td> 
       <td> 
        <ul> 
@@ -444,11 +444,12 @@ ht-degree: 8%
 您可以使用各種字型來設計最適化表單。 所有在其中檢視最適化表單的裝置可能沒有用來設計最適化表單的字型。 您可以使用Web字型服務，將所需的字型傳送至目標裝置。
 
 [!DNL Adobe Fonts]是Web Fonts服務。 您可以透過最適化表單來設定和使用服務。 若要在最適化表單中使用[!DNL Adobe Fonts]：
-1. 瀏覽Adobe字型[&#128279;](https://fonts.adobe.com/)的資料庫，並選擇字型來設定表單的樣式。
+1. 瀏覽Adobe字型的[資料庫](https://fonts.adobe.com/)，並選擇字型來設定表單的樣式。
 <!--
 >[!NOTE]
 >
->![typekit-to-adobe-fonts](assets/typekit-to-adobe-fonts.png) [!DNL Typekit] is now called Adobe Fonts and is included with Creative Cloud and other subscriptions. [Learn more](https://fonts.adobe.com/).-->
+>![typekit-to-adobe-fonts](assets/typekit-to-adobe-fonts.png) [!DNL Typekit] is now called Adobe Fonts and is included with Creative Cloud and other subscriptions. [Learn more](https://fonts.adobe.com/).
+-->
 
 >[!NOTE]
 >
@@ -479,7 +480,7 @@ ht-degree: 8%
 9. 移至新建立的`clientlibs`資料夾並新增`allowProxy`和`categories`屬性。
 10. 瀏覽至`/apps/[fontslibrary]/[customlibrary(clientlibrary)]`並建立css資料夾。
 11. 移至已建立的CSS資料夾並建立檔案。 例如，將檔案建立為`fonts.css`並貼上內嵌程式碼以及URL。
-    ![資料夾結構](/help/forms/using/assets/fonts-add-in-crxde.png)
+   ![資料夾結構](/help/forms/using/assets/fonts-add-in-crxde.png)
 12. 儲存變更。
 
 >[!NOTE]
@@ -515,6 +516,7 @@ The fonts added to the **[!UICONTROL Adobe Fonts]** are available for selection 
 1. Create an [Adobe Fonts](https://fonts.adobe.com/?ref=tk.com) account, create a kit, add font Myriad Pro to the kit, publish the kit, and obtain the Kit ID. It is required to use [!DNL Adobe Fonts] (Web Fonts) in an adaptive form. 
 1. In the AEM [!DNL Forms] Server, navigate to ![adobeexperiencemanager](assets/adobeexperiencemanager.png) **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Tools]** ![hammer](assets/hammer.png) > **[!UICONTROL Adobe Fonts]**. Now, open a configuration folder. If a configuration is already available, click the **[!UICONTROL Create]** button to create an instance.
 
-   On the Create Configuration dialog, specify a **Title** for the configuration, and click **[!UICONTROL Create]**. You are redirected to the configuration page. In the [!UICONTROL Edit Component] dialog that appears, provide your **Kit ID** and click **[!UICONTROL OK]**. -->
+   On the Create Configuration dialog, specify a **Title** for the configuration, and click **[!UICONTROL Create]**. You are redirected to the configuration page. In the [!UICONTROL Edit Component] dialog that appears, provide your **Kit ID** and click **[!UICONTROL OK]**.
+   -->
 
 

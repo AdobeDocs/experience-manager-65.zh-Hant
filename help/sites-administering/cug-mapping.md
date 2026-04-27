@@ -10,10 +10,10 @@ exl-id: 661602eb-a117-454d-93d3-a079584f7a5d
 feature: Administering
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
 workflow-type: tm+mt
-source-wordcount: '469'
-ht-degree: 0%
+source-wordcount: '468'
+ht-degree: 1%
 
 ---
 
@@ -74,7 +74,7 @@ ht-degree: 0%
   ConfigurationPolicy =必要
 
 * 名稱： com.adobe.granite.auth.requirement.impl.RequirementService
-* 標籤：AdobeGranite驗證需求和登入路徑處理常式
+* 標籤：Adobe Granite驗證需求和登入路徑處理常式
 
   名稱： com.adobe.granite.auth.requirement.impl.DefaultRequirementHandler
 
@@ -91,14 +91,15 @@ ht-degree: 0%
 
   如有特殊需求，可插入自訂CugExclude實作。
 
-* 實作LoginPathProvider的OSGi元件會公開與LoginSelectorHandler相符的登入路徑。 它具有對RequirementHandler的強制參照，用於註冊觀察者，該觀察者會偵聽透過granite：AuthenticationRequired mixin型別儲存在內容中的已變更驗證需求。
+* 實作LoginPathProvider的OSGi元件會公開與LoginSelectorHandler相符的登入路徑。 它強制參考RequirementHandler，用於註冊觀察者，該觀察者會偵聽透過granite:AuthenticationRequired mixin型別儲存在內容中的已變更驗證需求。
 * 實作RequirementHandler的OSGi元件會通知SlingAuthenticator授權需求的變更。
 
   由於此元件的設定原則為REQUIRE，因此只有在指定一組支援的路徑時，才會啟動它。
 
   啟用服務會啟動RequirementService。
 
-<!-- nested tables not supported - text above is the table>
+<!--
+nested tables not supported - text above is the table>
 <table>
  <tbody>
   <tr>

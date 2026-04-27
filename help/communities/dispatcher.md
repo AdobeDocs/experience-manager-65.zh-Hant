@@ -9,10 +9,10 @@ exl-id: fb4e3973-2193-4bb5-8120-bf2f3ec80112
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
 workflow-type: tm+mt
-source-wordcount: '601'
-ht-degree: 7%
+source-wordcount: '685'
+ht-degree: 11%
 
 ---
 
@@ -24,9 +24,9 @@ ht-degree: 7%
 
 瞭解您的特定部署和網站設計所需的內容
 
-* 聯絡[客戶服務](https://experienceleague.adobe.com/zh-hant?support-solution=General&support-tab=home#support)
+* 聯絡[客戶服務](https://experienceleague.adobe.com/?support-solution=General&support-tab=home#support)
 
-另請參閱主要[Dispatcher檔案](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant)。
+另請參閱主要[Dispatcher檔案](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)。
 
 ## Dispatcher快取 {#dispatcher-caching}
 
@@ -42,8 +42,8 @@ AEM Communities適用的Dispatcher快取可讓Dispatcher提供社群網站頁面
 
 ### 要求 {#requirements}
 
-* Dispatcher 4.1.2版或更新版本(如需最新版本，請參閱[安裝Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html?lang=zh-Hant))
-* [ACS AEM Commons封裝](https://adobe-consulting-services.github.io/acs-aem-commons/)
+* Dispatcher 4.1.2版或更新版本（如需最新版本，請參閱[安裝Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html)）
+* [ACS AEM Commons套件](https://adobe-consulting-services.github.io/acs-aem-commons/)
 
    * 版本3.3.2或更新版本
    * `ACS AEM Commons - Dispatcher Cache Control Header - Max Age` OSGi設定
@@ -64,12 +64,12 @@ OSGi設定&#x200B;**ACS AEM Commons - Dispatcher快取控制標頭 — Max Age**
 * **篩選模式**
   *（必要）*&#x200B;一或多個社群頁面的路徑。 例如，`/content/sites/engage/(.*)`。
 
-* **Cache-Control最大期限**
+* **Cache-Control最大使用時間**
   *（必要）*&#x200B;要新增至「快取控制項」標頭的最長時間（以秒為單位）。 值必須大於零(0)。
 
 ## Dispatcher篩選器 {#dispatcher-filters}
 
-`dispatcher.any`檔案的/filter區段記錄在[設定內容的存取權 — /filter](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant)中。
+`dispatcher.any`檔案的/filter區段記錄在[設定內容的存取權 — /filter](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html)中。
 
 本節說明Communities功能正常運作可能需要的專案。
 
@@ -79,7 +79,7 @@ OSGi設定&#x200B;**ACS AEM Commons - Dispatcher快取控制標頭 — Max Age**
 
 另請參閱：
 
-* [Dispatcher安全性檢查清單](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html?lang=zh-Hant)
+* [Dispatcher 安全性檢查清單](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html)
 
 >[!NOTE]
 >
@@ -89,12 +89,13 @@ OSGi設定&#x200B;**ACS AEM Commons - Dispatcher快取控制標頭 — Max Age**
 
 >[!CAUTION]
 >
->請參閱 [Dispatcher 安全性檢查清單](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html?lang=zh-Hant)，了解使用 Dispatcher 限制存取時的更多考量事項。此外，也請閱讀 [AEM 安全性檢查清單](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hant)，了解有關 AEM 安裝的更多安全性細節。
+>請參閱 [Dispatcher 安全性檢查清單](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html)，了解使用 Dispatcher 限制存取時的更多考量事項。 此外，也請閱讀 [AEM 安全性檢查清單](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html)，了解有關 AEM 安裝的更多安全性細節。
 >
 
 下列專案應新增至/filter區段的結尾，尤其是在所有被拒絕的專案之後。
 
-<!-- New code wrt CQDOC-16081, changed by Vishabh on 10 Dec 2020.
+<!--
+New code wrt CQDOC-16081, changed by Vishabh on 10 Dec 2020.
 -->
 
 ```shell
@@ -158,7 +159,8 @@ OSGi設定&#x200B;**ACS AEM Commons - Dispatcher快取控制標頭 — Max Age**
 ```
 
 
-<!-- existing content as of Dec 10, wrt CQDOC-16081
+<!--
+existing content as of Dec 10, wrt CQDOC-16081
 
 ```shell
 # design and template assets
@@ -226,7 +228,8 @@ OSGi設定&#x200B;**ACS AEM Commons - Dispatcher快取控制標頭 — Max Age**
 
 `dispatcher.any`的規則區段會根據請求的URL定義應該快取哪些回應。 對於Communities，規則區段用於定義絕不應快取的內容。
 
-<!-- New code wrt CQDOC-16081, changed by Vishabh on 10 Dec 2020.
+<!--
+New code wrt CQDOC-16081, changed by Vishabh on 10 Dec 2020.
 -->
 
 ```shell
@@ -248,7 +251,8 @@ OSGi設定&#x200B;**ACS AEM Commons - Dispatcher快取控制標頭 — Max Age**
 /0208 { /type "deny" /url "/content/usergenerated/*" }
 ```
 
-<!-- existing content as of Dec 10, wrt CQDOC-16081
+<!--
+existing content as of Dec 10, wrt CQDOC-16081
 
 ```shell
 # Never cache the client-side .social.json calls
@@ -280,7 +284,8 @@ OSGi設定&#x200B;**ACS AEM Commons - Dispatcher快取控制標頭 — Max Age**
 
 以下是包含Communities /filters和/rules的範例`dispatcher.any`檔案。
 
-<!-- New code wrt CQDOC-16081, changed by Vishabh on 10 Dec 2020.
+<!--
+New code wrt CQDOC-16081, changed by Vishabh on 10 Dec 2020.
 -->
 
 ```shell
@@ -594,7 +599,8 @@ OSGi設定&#x200B;**ACS AEM Commons - Dispatcher快取控制標頭 — Max Age**
   }
 ```
 
-<!-- existing content as of Dec 10, wrt CQDOC-16081
+<!--
+existing content as of Dec 10, wrt CQDOC-16081
 
 ```shell
 # Each farm configures a set of load balanced renders (that is, remote servers)

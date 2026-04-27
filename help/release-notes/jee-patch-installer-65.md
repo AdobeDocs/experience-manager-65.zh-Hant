@@ -8,10 +8,10 @@ hidefromtoc: true
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
-source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
+source-git-commit: bca6156727dca11b2e09be549f3def6130827193
 workflow-type: tm+mt
-source-wordcount: '562'
-ht-degree: 17%
+source-wordcount: '593'
+ht-degree: 19%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 17%
 
 >[!NOTE]
 >
->[請連絡支援人員](https://experienceleague.adobe.com/zh-hant?support-solution=General&support-tab=home#support)以取得詳細資訊或修補程式。
+>[請連絡支援人員](https://experienceleague.adobe.com/?support-solution=General&support-tab=home#support)以取得詳細資訊或修補程式。
 
 ## 關於修補程式安裝程式 {#about-the-patch-installer}
 
@@ -36,7 +36,7 @@ AEM 6.5 Forms JEE修補程式安裝程式包含此修補程式發行前，AEM 6.
 1. 將修補程式安裝程式封存檔案解壓縮至硬碟。
 1. 在根據您使用的作業系統命名的目錄中：
 
-   * **Windows**
+   * **視窗**
 導覽至安裝媒體上的適當目錄，或硬碟上您複製安裝程式的資料夾，然後按兩下aemforms65_cfp_install.exe檔案。
 
       * （Windows 32位元） `Windows\Disk1\InstData\VM`
@@ -56,9 +56,9 @@ AEM 6.5 Forms JEE修補程式安裝程式包含此修補程式發行前，AEM 6.
 1. 安裝後，按一下 **[!UICONTROL Next]**，將快速修正更新套用至已安裝的檔案。
 
 1. **[僅適用於Windows]：**&#x200B;執行下列動作：
-   * 取消選取&#x200B;**Start Configuration Manager**&#x200B;選項，再按一下&#x200B;**[!UICONTROL 完成]**。 使用&#x200B;**中的** ConfigurationManager.bat **檔案執行** Configuration Manager`[aem-forms root]\configurationManager\bin`。
+   * 取消選取&#x200B;**Start Configuration Manager**&#x200B;選項，再按一下&#x200B;**[!UICONTROL 完成]**。 使用`[aem-forms root]\configurationManager\bin`中的&#x200B;**ConfigurationManager.bat**&#x200B;檔案執行&#x200B;**Configuration Manager**。
 
-   * 或取消選取&#x200B;**Start Configuration Manager**&#x200B;選項，再按一下&#x200B;**[!UICONTROL 完成]**。 在使用&#x200B;**ConfigurationManager.exe**&#x200B;或&#x200B;**ConfigurationManager_IPv6.exe**&#x200B;執行&#x200B;**Configuration Manager**&#x200B;之前，請瀏覽至&#x200B;*`<AEMForms_Install_Dir>\configurationManager\bin`*&#x200B;目錄，並以最新的&#x200B;**ConfigurationManager.lax**&#x200B;和&#x200B;**ConfigurationManager_IPV6.lax**&#x200B;檔案取代[ConfigurationManager.lax](/help/assets/ConfigurationManager.lax)和[ConfigurationManager_IPV6.lax](/help/assets/ConfigurationManager_IPv6.lax)，搜尋並取代在這兩個檔案中具有&#x200B;**軸 — 1.4.1.1.jar**&#x200B;的&#x200B;**軸 — 1.4.1.2.jar**。
+   * 或取消選取&#x200B;**Start Configuration Manager**&#x200B;選項，再按一下&#x200B;**[!UICONTROL 完成]**。 在使用&#x200B;**ConfigurationManager.exe**&#x200B;或&#x200B;**ConfigurationManager_IPv6.exe**&#x200B;執行&#x200B;**Configuration Manager**&#x200B;之前，請瀏覽至&#x200B;*`<AEMForms_Install_Dir>\configurationManager\bin`*&#x200B;目錄，並以最新的[ConfigurationManager.lax](/help/assets/ConfigurationManager.lax)和[ConfigurationManager_IPV6.lax](/help/assets/ConfigurationManager_IPv6.lax)檔案取代&#x200B;**ConfigurationManager.lax**&#x200B;和&#x200B;**ConfigurationManager_IPV6.lax**，搜尋並取代在這兩個檔案中具有&#x200B;**軸 — 1.4.1.2.jar**&#x200B;的&#x200B;**軸 — 1.4.1.1.jar**。
 
    >[!NOTE]
    >
@@ -67,14 +67,14 @@ AEM 6.5 Forms JEE修補程式安裝程式包含此修補程式發行前，AEM 6.
 
 1. **[僅適用於Unix型]：**
 
-   * 預設會選取&#x200B;**啟動組態管理員**&#x200B;核取方塊。 按一下&#x200B;**[!UICONTROL 完成]**&#x200B;立即執行Configuration Manager，或稍後執行&#x200B;**組態管理員**，取消選取&#x200B;**啟動組態管理員**&#x200B;選項，然後再按一下&#x200B;**[!UICONTROL 完成]**。 您可以使用&#x200B;**目錄中的適當指令碼，稍後再啟動**&#x200B;組態管理員`[AEM_forms_root]/configurationManager/bin`。
+   * 預設會選取&#x200B;**啟動組態管理員**&#x200B;核取方塊。 按一下&#x200B;**[!UICONTROL 完成]**&#x200B;立即執行Configuration Manager，或稍後執行&#x200B;**組態管理員**，取消選取&#x200B;**啟動組態管理員**&#x200B;選項，然後再按一下&#x200B;**[!UICONTROL 完成]**。 您可以使用`[AEM_forms_root]/configurationManager/bin`目錄中的適當指令碼，稍後再啟動&#x200B;**組態管理員**。
 
 1. 視您的應用程式伺服器而定，選擇下列其中一份檔案，然後依照&#x200B;*設定和部署AEM表單*&#x200B;區段中的指示操作。
 
-   * [安裝和部署JBoss適用的AEM表單®](https://www.adobe.com/go/learn_aemforms_installJBoss_65_tw)
-   * [安裝和部署AEM Forms for WebSphere®](https://www.adobe.com/go/learn_aemforms_installWebSphere_65_tw)
+   * [安裝和部署AEM forms for JBoss®](https://www.adobe.com/go/learn_aemforms_installJBoss_65)
+   * [安裝和部署AEM forms for WebSphere®](https://www.adobe.com/go/learn_aemforms_installWebSphere_65)
 
-1. (僅限JBoss®)安裝修補程式並設定伺服器後，刪除JBoss®應用程式伺服器的tmp和工作目錄。
+1. （僅限JBoss®）安裝修補程式並設定伺服器後，刪除JBoss®應用程式伺服器的tmp和工作目錄。
 
 ## 部署後設定 {#post-deployment-configurations}
 
@@ -97,4 +97,4 @@ AEM 6.5 Forms JEE修補程式安裝程式包含此修補程式發行前，AEM 6.
 * 文件安全性
 * Foundation JEE
 
-[連絡支援](https://experienceleague.adobe.com/zh-hant?support-solution=General&support-tab=home#support)
+[聯絡支援人員](https://experienceleague.adobe.com/?support-solution=General&support-tab=home#support)

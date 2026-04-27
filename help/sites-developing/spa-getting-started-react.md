@@ -11,17 +11,17 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
 index: false
-source-git-commit: 1509ca884e2f9eb931fc7cd416801957459cc4a0
+source-git-commit: 147b0efb32609c05949c9fe374fa4fca6a9dbfb1
 workflow-type: tm+mt
-source-wordcount: '1127'
-ht-degree: 4%
+source-wordcount: '1169'
+ht-degree: 6%
 
 ---
 
 
 # 在AEM中開始使用SPA - React{#getting-started-with-spas-in-aem-react}
 
-單頁應用程式 (SPA) 可為網站使用者提供引人入勝的體驗。開發人員希望能使用SPA架構建立網站，而作者則想在AEM中為使用SPA架構建立的網站順暢地編輯內容。
+單頁應用程式 (SPA) 可為網站使用者提供引人入勝的體驗。 開發人員希望能使用SPA架構建立網站，而作者則想在AEM中為使用SPA架構建立的網站順暢地編輯內容。
 
 SPA製作功能提供全方位的解決方案，可支援AEM中的SPA。 本文介紹React架構上的簡化SPA應用程式，說明其如何組合，讓您快速啟動並執行自己的SPA。
 
@@ -121,7 +121,7 @@ module.exports = {
 
 ### AEM 專案原型 {#aem-project-archetype}
 
-任何 AEM 專案都應使用 [AEM 專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hant)，它支援使用 React 或 Angular 的 SPA 專案並使用 SPA SDK。
+任何 AEM 專案都應使用 [AEM 專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)，它支援使用 React 或 Angular 的 SPA 專案並使用 SPA SDK。
 
 ## 應用程式結構 {#application-structure}
 
@@ -278,7 +278,7 @@ export default MapTo('my-react-app/react/components/structure/page')(PageClass, 
 
 ## 後續步驟 {#next-steps}
 
-如需建立您自己的SPA的逐步指南，請參閱[AEM SPA Editor快速入門 — WKND事件教學課程](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-spa-wknd-tutorial-develop.html)。
+如需建立您自己的SPA的逐步指南，請參閱[AEM SPA Editor快速入門 — WKND事件教學課程](https://helpx.adobe.com/tw/experience-manager/kt/sites/using/getting-started-spa-wknd-tutorial-develop.html)。
 
 若要進一步瞭解如何組織自己以開發AEM的SPA，請參閱文章[為AEM開發SPA](/help/sites-developing/spa-architecture.md)。
 

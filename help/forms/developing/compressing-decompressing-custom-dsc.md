@@ -5,9 +5,9 @@ exl-id: 1b950d8f-6b54-452a-831b-f5644370691d
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
 workflow-type: tm+mt
-source-wordcount: '482'
+source-wordcount: '486'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Java™編輯器，例如[Eclipse](https://www.eclipse.org/)或[Netbeans IDE](ht
 
 中級
 
-JEE上的AEM Forms可讓開發人員建立自訂ASC (Acrobat服務容器)，以建立豐富的現成功能。 建立這類元件可插入JEE執行階段環境的AEM Forms，並達到預期目的。 本文會說明如何建立自訂ZIP服務，可用來將檔案清單壓縮成.zip檔案，並將.zip解壓縮成檔案清單。
+JEE上的AEM Forms可讓開發人員建立自訂ASC （Acrobat服務容器），以建立豐富的現成功能。 建立這類元件可插入JEE執行階段環境的AEM Forms，並達到預期目的。 本文會說明如何建立自訂ZIP服務，可用來將檔案清單壓縮成.zip檔案，並將.zip解壓縮成檔案清單。
 
 ## 建立自訂ASC元件 {#create-custom-dsc-component}
 
@@ -142,9 +142,11 @@ component.xml檔案顯示於此處：
 
 <!-- Start of the Service definition -->
    <services>
-<!-- Unique name for service descriptor.
+<!--
+Unique name for service descriptor.
            The value is used as the default name for
-           deployed services -->
+           deployed services
+           -->
       <service name="ZipService">
 <!-- service implementation class definition -->
         <implementation-class>nith.lces2.dsc.ZIPService</implementation-class>
@@ -218,7 +220,7 @@ component.xml檔案顯示於此處：
 
 * 尋找指定資料夾中的所有檔案，並將檔案以壓縮檔案格式傳回。
 
-* 提供包含若干PDF檔案的ZIP檔案，在解壓縮這些檔案後可延伸讀取器。 這需要JEEReader擴充功能模組上的AEM Forms。
+* 提供包含數個PDF檔案的ZIP檔案，這些檔案在解壓縮後可延伸閱讀。 這需要使用JEE Reader擴充功能模組上的AEM Forms 。
 
 * 提供包含異質性檔案型別的ZIP檔案，該檔案可使用產生PDF服務解壓縮並轉換成PDF檔案。
 

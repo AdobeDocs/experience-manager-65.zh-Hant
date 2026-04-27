@@ -10,21 +10,23 @@ exl-id: 6c4b8aaa-bda0-4066-a3fc-d91a5ab1621c
 solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
 workflow-type: tm+mt
-source-wordcount: '593'
+source-wordcount: '605'
 ht-degree: 1%
 
 ---
 
 # 與Silverpop Engage整合{#integrating-with-silverpop-engage}
 
-<!-- THIS ENTIRE TOPIC APPEARS OBSOLETE BECAUSE SILVERPOP NO LONGER EXISTS AND THERE ARE NO REDIRECTS FOR THE DOWNLOAD URL BELOW THAT IS 404.
+<!--
+THIS ENTIRE TOPIC APPEARS OBSOLETE BECAUSE SILVERPOP NO LONGER EXISTS AND THERE ARE NO REDIRECTS FOR THE DOWNLOAD URL BELOW THAT IS 404.
 >[!NOTE]
 >
->Silverpop integration is **not** available out of the box. Download the Silverpop integration package `https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem620/product/cq-mcm-integrations-silverpop-content` from Package Share and install it on your instance. After you have installed the package, you can configure it as described in this document. -->
+>Silverpop integration is **not** available out of the box. Download the Silverpop integration package `https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem620/product/cq-mcm-integrations-silverpop-content` from Package Share and install it on your instance. After you have installed the package, you can configure it as described in this document.
+-->
 
-將AEM與Silverpop Engage整合可讓您透過Silverpop管理及傳送在AEM中建立的電子郵件。 它也可讓您透過AEM頁面上的AEM Forms使用Silverpop的潛在客戶管理功能。
+將AEM與Silverpop Engage整合可讓您透過Silverpop管理及傳送AEM中建立的電子郵件。 它也可讓您透過AEM頁面上的AEM表單使用Silverpop的銷售機會管理功能。
 
 整合提供您下列功能：
 
@@ -35,33 +37,33 @@ ht-degree: 1%
 
 ## 建立Silverpop設定 {#creating-a-silverpop-configuration}
 
-可透過&#x200B;**Cloud Service**、**工具**&#x200B;或&#x200B;**API端點**&#x200B;新增Silverpop設定。 本節將說明所有方法。
+可透過&#x200B;**雲端服務**、**工具**&#x200B;或&#x200B;**API端點**&#x200B;新增Silverpop設定。 本節將說明所有方法。
 
-### 透過Cloud Service設定Silverpop {#configuring-silverpop-via-cloudservices}
+### 透過雲端服務設定Silverpop {#configuring-silverpop-via-cloudservices}
 
-若要在Cloud Service中建立Silverpop設定：
+若要在雲端服務中建立Silverpop設定：
 
-1. 在AEM中，按一下&#x200B;**工具** > **部署** > **Cloud Service**。 （或直接在`https://<hostname>:<port>/etc/cloudservices.html`存取。）
+1. 在AEM中，按一下&#x200B;**工具** > **部署** > **雲端服務**。 （或直接在`https://<hostname>:<port>/etc/cloudservices.html`存取。）
 1. 在協力廠商服務底下，按一下&#x200B;**Silverop Engage**，然後按&#x200B;**設定**。 Silverpop設定視窗隨即開啟。
 
    >[!NOTE]
    >
    >除非您從Package Share下載套件，否則Silverpop Engage不提供協力廠商服務選項。
 
-1. 輸入標題，並選擇性地輸入名稱，然後按一下&#x200B;**建立**。 隨即開啟 **&#x200B; Silverpop設定**&#x200B;設定視窗。
+1. 輸入標題，並選擇性地輸入名稱，然後按一下&#x200B;**建立**。 隨即開啟** Silverpop設定**設定視窗。
 1. 輸入使用者名稱和密碼，然後從下拉式清單中選取API端點。
-1. 按一下&#x200B;**連線到Silverpop。**&#x200B;當您成功連線時，您會看到成功對話方塊。 按一下&#x200B;**確定**&#x200B;以結束視窗。 您可以按一下&#x200B;**移至Silverpop Engage**，移至Silverpop。
+1. 按一下&#x200B;**連線到Silverpop。** 成功連線後，您會看到成功對話方塊。 按一下&#x200B;**確定**&#x200B;以結束視窗。 您可以按一下&#x200B;**移至Silverpop Engage**，移至Silverpop。
 1. Silverpop已設定。 您可以按一下&#x200B;**編輯**&#x200B;來編輯組態。
 1. 此外，Silverpop Engage架構可提供標題和名稱（選用），以設定個人化動作。 按一下「建立」，成功為已設定的Silverpop連線建立架構。
 
-   匯入的資料延伸欄稍後可透過AEM元件 — **文字和Personalization**&#x200B;使用。
+   匯入的資料延伸欄稍後可透過AEM元件使用 — **文字和Personalization**。
 
 ### 透過工具設定Silverpop {#configuring-silverpop-via-tools}
 
 若要在工具中建立Silverpop設定：
 
-1. 在AEM中，按一下&#x200B;**工具** > **部署** > **Cloud Service**。 或前往`https://<hostname>:<port>/misadmin#/etc`直接導覽至該處。
-1. 選取&#x200B;**Tools**，然後選取&#x200B;**Cloud Service組態，**，再選取&#x200B;**Silverpop Engage**。
+1. 在AEM中，按一下&#x200B;**工具** > **部署** > **雲端服務**。 或前往`https://<hostname>:<port>/misadmin#/etc`直接導覽至該處。
+1. 依序選取&#x200B;**工具**、**雲端服務組態**&#x200B;和&#x200B;**Silverpop Engage**。
 1. 按一下&#x200B;**新增**。
 
    ![chlimage_1-6](assets/chlimage_1-6.jpeg)
@@ -73,7 +75,7 @@ ht-degree: 1%
 
 若要新增多個組態：
 
-1. 在歡迎頁面上，按一下&#x200B;**Cloud Service**&#x200B;並按一下&#x200B;**Silverpop Engage**。 按一下&#x200B;**顯示設定**&#x200B;按鈕，如果有一或多個Silverpop設定可用，就會顯示這個按鈕。 列出所有可用的設定。
+1. 在歡迎頁面上，按一下&#x200B;**雲端服務**&#x200B;並按一下&#x200B;**Silverpop Engage**。 按一下&#x200B;**顯示設定**&#x200B;按鈕，如果有一或多個Silverpop設定可用，就會顯示這個按鈕。 列出所有可用的設定。
 1. 按一下「可用組態」旁的&#x200B;**+**&#x200B;符號。 它會開啟&#x200B;**建立組態**&#x200B;視窗。 請遵循之前的組態程式，以便建立組態。
 
 ### 設定API端點以連線至Silverpop {#configuring-api-end-points-for-connecting-to-silverpop}
@@ -112,6 +114,6 @@ ht-degree: 1%
    | sp-e5 | `https://api.engage5.silverpop.com/XMLAPI` | `https://api5.silverpop.com` |
    | sp-e6 | `https://api.pilot.silverpop.com/XMLAPI` | `https://api6.silverpop.com` |
 
-1. 按一下&#x200B;**全部儲存**。 AEM現在已準備好透過安全的端點連線至Silverpop。
+1. 按一下&#x200B;**「儲存全部」**。 AEM現在已準備好透過安全的端點連線至Silverpop。
 
    ![chlimage_1-7](assets/chlimage_1-7.jpeg)

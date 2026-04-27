@@ -6,9 +6,10 @@ solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 hide: true
 hidefromtoc: true
-source-git-commit: 6b86212a2b3a86b2205714c802dc1581d30e7441
+exl-id: 77fd3bc5-9a05-4442-af2b-238169d8061a
+source-git-commit: bca6156727dca11b2e09be549f3def6130827193
 workflow-type: tm+mt
-source-wordcount: '356'
+source-wordcount: '359'
 ht-degree: 0%
 
 ---
@@ -33,6 +34,3 @@ ht-degree: 0%
 * 表單的部分會變得不可見、無法辨認或難以使用嗎？
 * 是否有任何區域在白色背景中持續顯示為黑色？
 * 是否有任何元素的大小或截斷不正確？
-
-
-

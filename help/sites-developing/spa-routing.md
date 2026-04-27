@@ -10,9 +10,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
 index: false
-source-git-commit: 1509ca884e2f9eb931fc7cd416801957459cc4a0
+source-git-commit: 147b0efb32609c05949c9fe374fa4fca6a9dbfb1
 workflow-type: tm+mt
-source-wordcount: '468'
+source-wordcount: '479'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ ht-degree: 0%
 
 ## 手動與自動模型製程 {#manual-vs-automatic-model-routing}
 
-`ModelRouter`會自動擷取模型的片段。 但就像任何自動化工具一樣，它也伴隨著限制。 必要時，可以停用`ModelRouter`，或將其設定為使用中繼屬性略過路徑（請參閱[SPA頁面元件](/help/sites-developing/spa-page-component.md)檔案的[中繼屬性]區段）。 前端開發人員可以透過請求`PageModelManager`使用`getData()`函式載入任何指定的模型片段，來實作他們自己的模型路由層。
+`ModelRouter`會自動擷取模型的片段。 但就像任何自動化工具一樣，它也伴隨著限制。 如有需要，可停用`ModelRouter`，或將其設定為使用中繼屬性略過路徑（請參閱[SPA頁面元件](/help/sites-developing/spa-page-component.md)檔案的「Meta屬性」一節）。 前端開發人員可以透過請求`PageModelManager`使用`getData()`函式載入任何指定的模型片段，來實作他們自己的模型路由層。
 
 >[!NOTE]
 >

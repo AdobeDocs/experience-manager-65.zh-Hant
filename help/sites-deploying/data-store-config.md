@@ -8,9 +8,9 @@ feature: Configuring
 exl-id: c1c90d6a-ee5a-487d-9a8a-741b407c8c06
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: f96b178ae84b4b930b59e36d4994970682c53dbd
+source-git-commit: f2c92b990a5c09cbcf532e0800e264620d98af77
 workflow-type: tm+mt
-source-wordcount: '3461'
+source-wordcount: '3615'
 ht-degree: 1%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 1%
 1. 在安裝目錄中建立資料夾`crx-quickstart/install`。
 1. 首先，建立組態檔，使用您要在`crx-quickstart/install`目錄中使用的節點存放區選項名稱來設定節點存放區。
 
-   例如，Document節點存放區(AEM的MongoMK實作基礎)使用檔案`org.apache.jackrabbit.oak.plugins.document.DocumentNodeStoreService.config`。
+   例如，Document節點存放區（AEM的MongoMK實作基礎）使用檔案`org.apache.jackrabbit.oak.plugins.document.DocumentNodeStoreService.config`。
 
 1. 編輯檔案，並設定組態選項。
 1. 以您要使用之資料存放區的PID建立設定檔。 編輯檔案以設定組態選項。
@@ -56,7 +56,7 @@ ht-degree: 1%
 
 >[!CAUTION]
 >
->區段節點存放區的PID已從AEM 6的`org.apache.jackrabbit.oak.plugins.segment.SegmentNodeStoreService in previous versions`變更為AEM 6.3中的`org.apache.jackrabbit.oak.segment.SegmentNodeStoreService`。請務必進行必要的設定調整以反映此變更。
+>區段節點存放區的PID已從AEM 6的`org.apache.jackrabbit.oak.plugins.segment.SegmentNodeStoreService in previous versions`變更為AEM 6.3中的`org.apache.jackrabbit.oak.segment.SegmentNodeStoreService`。 請務必進行必要的設定調整以反映此變更。
 
 您可以設定下列選項：
 
@@ -165,7 +165,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 
    將以上位置的所有內容複製到`<aem-install>/crx-quickstart/install.`
 
-1. 如果AEM已設定為搭配Tar或MongoDB儲存體使用，請先從&#x200B;***&lt;aem-install>***/*crx-quickstart*/*install*&#x200B;資料夾移除任何現有的設定檔，然後再繼續。 必須移除的檔案包括：
+1. 如果AEM已設定為搭配Tar或MongoDB儲存體使用，請先從&#x200B;***&lt;aem-install>***/*crx-quickstart*/*install*資料夾中移除任何現有的設定檔，然後再繼續。 必須移除的檔案包括：
 
    * `For MongoMK: org.apache.jackrabbit.oak.plugins.document.DocumentNodeStoreService.config`
    * `For TarMK: org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config`
@@ -236,26 +236,26 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 | --- | --- | --- | --- |
 | accessKey | 可存取貯體之IAM使用者的存取金鑰ID。 | | 是，當不使用IAM角色時。 |
 | secretKey | 可存取貯體的IAM使用者機密存取金鑰。 | | 是，當不使用IAM角色時。 |
-| cacheSize | 本機快取的大小（位元組）。 | 64GB | 不適用。 |
-| connectionTimeout | 設定初始建立連線時逾時前的等待時間（毫秒）。 | 10000 | 不適用。 |
-| maxCachedBinarySize | 大小小於或等於此值（位元組）的二進位檔儲存在記憶體快取中。 | 17408 (17 KB) | 不適用。 |
-| maxConnections | 設定允許的開啟HTTP連線數目上限。 | 50 | 不適用。 |
-| maxErrorRetry | 設定失敗（可重試）要求的重試次數上限。 | 3 | 不適用。 |
-| minRecordLength | 應儲存在資料存放區中的物件大小下限（位元組）。 | 16384 | 不適用。 |
-| 路徑 | AEM資料存放區的本機路徑。 | `crx-quickstart/repository/datastore` | 不適用。 |
-| proxyHost | 設定使用者端連線時所使用的選用代理主機。 | | 不適用。 |
-| proxyPort | 設定使用者端連線所透過的可選Proxy連線埠。 | | 不適用。 |
+| cacheSize | 本機快取的大小（位元組）。 | 64GB | 否。 |
+| connectionTimeout | 設定初始建立連線時逾時前的等待時間（毫秒）。 | 10000 | 否。 |
+| maxCachedBinarySize | 大小小於或等於此值（位元組）的二進位檔儲存在記憶體快取中。 | 17408 (17 KB) | 否。 |
+| maxConnections | 設定允許的開啟HTTP連線數目上限。 | 50 | 否。 |
+| maxErrorRetry | 設定失敗（可重試）要求的重試次數上限。 | 3 | 否。 |
+| minRecordLength | 應儲存在資料存放區中的物件大小下限（位元組）。 | 16384 | 否。 |
+| 路徑 | AEM資料存放區的本機路徑。 | `crx-quickstart/repository/datastore` | 否。 |
+| proxyHost | 設定使用者端連線時所使用的選用代理主機。 | | 否。 |
+| proxyPort | 設定使用者端連線所透過的可選Proxy連線埠。 | | 否。 |
 | s3Bucket | S3儲存貯體的名稱。 | | 是 |
-| s3EndPoint | S3 REST API端點。 | | 不適用。 |
-| s3Region | 貯體所在的區域。 如需詳細資訊，請參閱此[頁面](https://docs.aws.amazon.com/general/latest/gr/s3.html)。 | AWS執行個體執行所在的區域。 | 不適用。 |
-| socketTimeout | 設定在連線逾時並關閉之前，透過已建立且開啟的連線傳輸資料所需的等待時間（毫秒）。 | 50000 | 不適用。 |
-| stagingPurgeInterval | 從暫存快取中清除已完成的上傳的間隔（秒）。 | 300 | 不適用。 |
-| stagingRetryInterval | 重試失敗的上傳間隔（以秒為單位）。 | 600 | 不適用。 |
-| stagingSplitPercentage | 用於暫存非同步上載的`cacheSize`百分比。 | 10 | 不適用。 |
-| uploadThreads | 用於非同步上傳的上傳執行緒數量。 | 10 | 不適用。 |
-| writeThreads | 透過S3 Transfer Manager寫入時使用的並行執行緒數目。 | 10 | 不適用。 |
+| s3EndPoint | S3 REST API端點。 | | 否。 |
+| s3Region | 貯體所在的區域。 如需詳細資訊，請參閱此[頁面](https://docs.aws.amazon.com/general/latest/gr/s3.html)。 | AWS執行個體執行所在的區域。 | 否。 |
+| socketTimeout | 設定在連線逾時並關閉之前，透過已建立且開啟的連線傳輸資料所需的等待時間（毫秒）。 | 50000 | 否。 |
+| stagingPurgeInterval | 從暫存快取中清除已完成的上傳的間隔（秒）。 | 300 | 否。 |
+| stagingRetryInterval | 重試失敗的上傳間隔（以秒為單位）。 | 600 | 否。 |
+| stagingSplitPercentage | 用於暫存非同步上載的`cacheSize`百分比。 | 10 | 否。 |
+| uploadThreads | 用於非同步上傳的上傳執行緒數量。 | 10 | 否。 |
+| writeThreads | 透過S3 Transfer Manager寫入時使用的並行執行緒數目。 | 10 | 否。 |
 
-<!---
+<!--
 ### Bucket region options {#bucket-region-options}
 
 <table>
@@ -302,7 +302,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 >
 >`S3DataStore`、`CachingFileDataStore`和`AzureDataStore`的DataStore實作支援本機檔案系統快取。 當DataStore位於NFS （網路檔案系統）上時，`CachingFileDataStore`實作很有用。
 
-從舊的快取實作(Oak 1.6以前版本)升級時，本機檔案系統快取目錄的結構會有差異。 在舊的快取結構中，下載的檔案和上傳的檔案都直接放在快取路徑下。 新結構會將下載和上傳分開，並將它們儲存在快取路徑下名為`upload`和`download`的兩個目錄中。 升級程式應該要流暢無礙，任何擱置的上傳都應排程進行上傳，且任何先前下載在快取中的檔案都會在初始化時放入快取中。
+從舊的快取實作（Oak 1.6以前版本）升級時，本機檔案系統快取目錄的結構會有差異。 在舊的快取結構中，下載的檔案和上傳的檔案都直接放在快取路徑下。 新結構會將下載和上傳分開，並將它們儲存在快取路徑下名為`upload`和`download`的兩個目錄中。 升級程式應該要流暢無礙，任何擱置的上傳都應排程進行上傳，且任何先前下載在快取中的檔案都會在初始化時放入快取中。
 
 您也可以使用Oak-run的`datastorecacheupgrade`命令離線升級快取。 如需有關如何執行命令的詳細資訊，請檢查Oak-run模組的[讀我檔案](https://svn.apache.org/repos/asf/jackrabbit/oak/trunk/oak-run/README.md)。
 
@@ -327,13 +327,13 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 若要使用S3設定無二進位式複製，必須執行下列步驟：
 
 1. 安裝作者和發佈執行個體，並確定它們已正確啟動。
-1. 開啟&#x200B;*https://localhost:4502/etc/replication/agents.author/publish.html*&#x200B;的頁面，前往復寫代理程式設定。
+1. 透過開啟&#x200B;*https://localhost:4502/etc/replication/agents.author/publish.html*&#x200B;的頁面，前往復寫代理程式設定。
 1. 按&#x200B;**設定**&#x200B;區段中的&#x200B;**編輯**&#x200B;按鈕。
 1. 將&#x200B;**序列化**&#x200B;型別選項變更為&#x200B;**少二進位**。
 
 1. 在傳輸URI中新增引數&quot; `binaryless`= `true`&quot;。 在變更後，URI應該看起來類似以下內容：
 
-   *https://localhost:4503/bin/receive?sling:authRequestLogin=1&amp;binaryless=true*
+   *https://localhost:4503/bin/receive？sling:authRequestLogin=1&amp;binaryless=true*
 
 1. 重新啟動所有製作和發佈執行個體，讓變更生效。
 
@@ -347,9 +347,9 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 
 1. 在`crx-quickstart`資料夾中建立這兩個檔案：
 
-   * *org.apache.jackrabbit.oak.plugins.document.DocumentNodeStoreService*。*設定*
+   * *org.apache.jackrabbit.oak.plugins.document.DocumentNodeStoreService*.*config*
 
-   * *org.apache.jackrabbit.oak.plugins.blob.datastore.S3DataStore*。*設定*
+   * *org.apache.jackrabbit.oak.plugins.blob.datastore.S3DataStore*.*config*
 
    建立檔案後，視需要新增設定選項。
 
@@ -411,7 +411,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 
 AEM可設定為將資料儲存在Microsoft®的Azure儲存服務。 它使用`org.apache.jackrabbit.oak.plugins.blob.datastore.AzureDataStore.config` PID進行設定。
 
-若要啟用Azure資料存放區功能，必須下載並安裝包含Azure Connector的功能套件。 前往[Adobe存放庫](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.oak.azureblobconnector/)並從Feature Pack 1.6.x版（例如com.adobe.granite.oak.azureblobconnector-1.6.3.zip）下載最新版本。
+若要啟用Azure資料存放區功能，必須下載並安裝包含Azure Connector的Feature Pack。 前往[Adobe存放庫](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.oak.azureblobconnector/)並從Feature Pack 1.6.x版（例如com.adobe.granite.oak.azureblobconnector-1.6.3.zip）下載最新版本。
 
 >[!NOTE]
 >
@@ -442,13 +442,13 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 
 您可以搭配下列選項使用組態檔：
 
-* azureSas=」：在聯結器的1.6.3版本中，新增了Azure共用存取簽章(SAS)支援。 **如果組態檔中同時存在SAS和儲存認證，則SAS具有優先權。**&#x200B;如需SAS的詳細資訊，請參閱[正式檔案](https://learn.microsoft.com/en-us/azure/storage/common/storage-sas-overview)。 請確定&#39;=&#39;字元已逸出，如&#39;\=&#39;。
+* azureSas=」：在聯結器的1.6.3版本中，新增了Azure共用存取簽章(SAS)支援。 **如果組態檔中同時存在SAS和儲存認證，則SAS具有優先順序。** 如需SAS的詳細資訊，請參閱[正式檔案](https://learn.microsoft.com/en-us/azure/storage/common/storage-sas-overview)。 請確定&#39;=&#39;字元已逸出，如&#39;\=&#39;。
 
 * azureBlobEndpoint=&quot;： Azure Blob端點。 例如，https://&lt;storage-account>.blob.core.windows.net。
-* accessKey=&quot;：儲存體帳戶名稱。 如需Microsoft® Azure驗證認證的詳細資訊，請參閱[正式檔案](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-create)。
+* accessKey=&quot;：儲存體帳戶名稱。 如需® Azure驗證認證的詳細資訊，請參閱[正式檔案](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-create)。
 
 * secretKey=&quot;：儲存體存取金鑰。 請確定&#39;=&#39;字元已逸出，如&#39;\=&#39;。
-* container=&quot;： Microsoft® Azure Blob儲存容器名稱。 容器是一組Blob。 如需其他詳細資訊，請閱讀[正式檔案](https://learn.microsoft.com/en-us/rest/api/storageservices/Naming-and-Referencing-Containers--Blobs--and-Metadata?redirectedfrom=MSDN)。
+* container=&quot;： ® Azure Blob儲存容器名稱。 容器是一組Blob。 如需其他詳細資訊，請閱讀[正式檔案](https://learn.microsoft.com/en-us/rest/api/storageservices/Naming-and-Referencing-Containers--Blobs--and-Metadata?redirectedfrom=MSDN)。
 * maxConnections=&quot;：每個作業同時發出的要求數目。 預設值為 1。
 * maxErrorRetry=&quot;&quot;：每個請求的重試次數。 預設值為 3。
 * socketTimeout=&quot;： 預設值為5分鐘。
@@ -480,8 +480,8 @@ secretKey="28932hfjlkwdo8fufsdfas\=\="
 
 您可以透過以下方式執行資料存放區記憶體回收：
 
-1. 前往位於&#x200B;*https://&lt;serveraddress：port>/system/console/jmx*&#x200B;的JMX主控台
-1. 正在搜尋&#x200B;**RepositoryManagement。**&#x200B;找到存放庫管理員MBean後，按一下它即可顯示可用的選項。
+1. 前往位於&#x200B;*https://&lt;serveraddress:port>/system/console/jmx*&#x200B;的JMX主控台
+1. 正在搜尋&#x200B;**RepositoryManagement.** 找到「存放庫管理員MBean」後，按一下它即可顯示可用的選項。
 1. 捲動至頁面結尾，然後按一下&#x200B;**startDataStoreGC（布林值markOnly）**&#x200B;連結。
 1. 在下列對話方塊中，輸入`markOnly`引數的`false`，然後按一下&#x200B;**叫用**：
 

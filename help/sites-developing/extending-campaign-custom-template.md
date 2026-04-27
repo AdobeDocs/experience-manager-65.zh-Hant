@@ -10,9 +10,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 index: false
-source-git-commit: 389d5fa8de320a7237fc8290992a33743b15db99
+source-git-commit: 147b0efb32609c05949c9fe374fa4fca6a9dbfb1
 workflow-type: tm+mt
-source-wordcount: '297'
+source-wordcount: '307'
 ht-degree: 2%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 2%
 
 # 使用Adobe Campaign表單元件建立自訂AEM頁面範本{#creating-custom-aem-page-template-with-adobe-campaign-form-components}
 
-此頁面說明如何透過檢查Geometrixx-outdoors範本([)的實作方式，建置使用](/help/sites-authoring/adobe-campaign-components.md)Adobe Campaign Form`/apps/geometrixx-outdoors/components/page_campaign_profile`元件的自訂頁面範本，並指出建立您自己的自訂範本時可能需要的重要資訊。
+此頁面說明如何透過檢查Geometrixx-outdoors範本(`/apps/geometrixx-outdoors/components/page_campaign_profile`)的實作方式，建置使用[Adobe Campaign Form](/help/sites-authoring/adobe-campaign-components.md)元件的自訂頁面範本，並指出建立您自己的自訂範本時可能需要的重要資訊。
 
 >[!CAUTION]
 >
@@ -81,7 +81,7 @@ ht-degree: 2%
 
    在範本( `/apps/geometrixx-outdoors/templates/campaign_profile/jcr:content`)中，您會看到下列預設值：
 
-   | **acMapping** | mapRecipient (適用於Adobe Campaign 6.1)、設定檔(適用於Adobe Campaign Standard) |
+   | **acMapping** | mapRecipient （適用於Adobe Campaign 6.1）、設定檔（適用於Adobe Campaign Standard） |
    |---|---|
    | **acTemplateId** | 郵件 |
 

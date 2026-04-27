@@ -1,38 +1,38 @@
 ---
 cloud: Experience Cloud
 mini-toc-levels: 2
-git-repo: https://github.com/AdobeDocs/experience-manager-65.zh-Hant
+git-repo: https://github.com/AdobeDocs/experience-manager-65.en
 solution: Experience Manager, Experience Manager 6.5
 feature-set: Experience Manager Assets,Experience Manager,Experience Manager Sites, Experience Manager Forms
 type: Documentation
 version: Experience Manager 6.5
-index: y
+index: true
 recommendations: noDisplay
-source-git-commit: a45b09c52d780a954e606d4cae73a3a02a8a6aa4
+source-git-commit: 147b0efb32609c05949c9fe374fa4fca6a9dbfb1
 workflow-type: tm+mt
-source-wordcount: '131'
-ht-degree: 91%
+source-wordcount: '152'
+ht-degree: 4%
 
 ---
 
 
 # 內部使用的中繼資料
 
-metadata.md 檔案包含存放庫層級中繼資料，這些中繼資料會傳遞至存放庫中的使用手冊 TOC.md 檔案。如果想要變更任何使用手冊的 metadata.md 內容，請在 TOC.md 檔案中變更。
+metadata.md檔案包含存放庫層級中繼資料，這些中繼資料會傳遞至存放庫中的使用手冊TOC.md檔案。 如果您想要變更任何使用手冊的metadata.md內容，請在任何TOC.md檔案中進行變更。
 
-| 中繼資料 | 功能 |
+| 中繼資料 | 作用 |
 |--- |--- |
 | solution-title | 在文章標題中作為連結使用。 |
 | solution-hub-url | 開啟學習與支援中心頁面。 |
-| solution-icon | 在解決方案標題旁顯示解決方案圖示。尚未實作。 |
+| solution-icon | 在解決方案標題旁邊顯示解決方案圖示。 尚未實作。 |
 | getting-started-url | 連結到開始使用頁面。 |
 | tutorials-url | 教學課程影片。 |
-| mini-toc-levels | 決定顯示在右側欄中的標題層數量。預設值為 2。 |
-| git-repo | 指定內部使用的主要存放庫位置。 |
+| mini-toc-levels | 決定顯示在右側欄中的標題層數。 預設值為 2。 |
+| git-repo | 指定內部使用之主要存放庫的位置。 |
 
-在 TOC.md 檔案中
+在TOC.md檔案中
 
-| 中繼資料 | 功能 |
+| 中繼資料 | 作用 |
 |--- |--- |
-| 使用手冊名稱 | 在文章標題中作為連結使用。 |
-| user-guide-url | 開啟學習與支援中心頁面。 |
+| user-guide-title | 在文章標題中作為連結使用。 |
+| 使用手冊 — url | 開啟學習與支援中心頁面。 |

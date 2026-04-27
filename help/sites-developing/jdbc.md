@@ -1,6 +1,6 @@
 ---
 title: 連線到SQL資料庫
-description: 存取外部SQL資料庫，讓您的AEM應用程式可以和資料互動
+description: 存取外部SQL資料庫，讓您的AEM應用程式可以與資料互動
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
@@ -9,9 +9,9 @@ exl-id: 1082b2d7-2d1b-4c8c-a31d-effa403b21b2
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
 workflow-type: tm+mt
-source-wordcount: '895'
+source-wordcount: '939'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 某些資料庫廠商以OSGi套件組合提供JDBC驅動程式，例如[MySQL](https://dev.mysql.com/downloads/connector/j/)。 如果資料庫的JDBC驅動程式無法做為OSGi套件組合使用，請取得驅動程式JAR並將其包裝在OSGi套件組合中。 組合必須匯出與資料庫伺服器互動所需的套件。 組合也必須匯入它參照的套件。
 
-下列範例使用Maven[&#128279;](https://felix.apache.org/documentation/subprojects/apache-felix-maven-bundle-plugin-bnd.html)的Bundle外掛程式將HSQLDB驅動程式包裝在OSGi套件中。 POM會指示外掛程式內嵌識別為相依性的hsqldb.jar檔案。 所有org.hsqldb套裝軟體都會匯出。
+下列範例使用Maven](https://felix.apache.org/documentation/subprojects/apache-felix-maven-bundle-plugin-bnd.html)的[Bundle外掛程式將HSQLDB驅動程式包裝在OSGi套件中。 POM會指示外掛程式內嵌識別為相依性的hsqldb.jar檔案。 所有org.hsqldb套裝軟體都會匯出。
 
 外掛程式會自動決定要匯入哪些套件，並將它們列在套件組合的MANIFEST.MF檔案中。 如果CQ伺服器上沒有任何套裝軟體，安裝時就不會啟動套裝軟體。 兩種可能的解決方案如下：
 
@@ -85,9 +85,9 @@ ht-degree: 0%
 
 下列連結會開啟某些熱門資料庫產品的下載頁面：
 
-* [Microsoft® SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
+* [® SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
 * [Oracle](https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html)
-* [IBM® DB2®](https://www.ibm.com/support/pages/download-db2-fix-packs-version-db2-linux-unix-and-windows)
+* [® DB2®](https://www.ibm.com/support/pages/download-db2-fix-packs-version-db2-linux-unix-and-windows)
 
 ### 設定JDBC連線集區服務 {#configuring-the-jdbc-connection-pool-service}
 
@@ -171,7 +171,9 @@ JDBC連線集區服務是工廠服務。 因此，如果您使用`sling:OsgiConf
 >如果getDataSource方法因找不到資料來源而擲回例外狀況，請確定連線集區服務設定正確。 驗證屬性名稱、值和資料型別。
 >
 
-<!-- Link below redirects to the "Get started with AEM Sites - WKND tutorial"
+<!--
+Link below redirects to the "Get started with AEM Sites - WKND tutorial"
 >[!NOTE]
 >
->To learn how to inject a DataSourcePool into an OSGi bundle, see [Injecting a DataSourcePool Service into an Adobe Experience Manager OSGi bundle](https://helpx.adobe.com/experience-manager/using/datasourcepool.html). -->
+>To learn how to inject a DataSourcePool into an OSGi bundle, see [Injecting a DataSourcePool Service into an Adobe Experience Manager OSGi bundle](https://helpx.adobe.com/experience-manager/using/datasourcepool.html).
+-->

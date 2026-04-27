@@ -8,9 +8,9 @@ user-guide-description: 建立線上體驗，例如論壇、使用者群組、�
 feature: Communities
 role: User
 hide: true
-source-git-commit: e0db340b4fd4e4f7fe7ed623fb2ee9f1b789e39e
+source-git-commit: bca6156727dca11b2e09be549f3def6130827193
 workflow-type: tm+mt
-source-wordcount: '423'
+source-wordcount: '427'
 ht-degree: 11%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 11%
    + [編寫新社群網站](create-site.md)
    + [體驗已發佈的網站](published-site.md)
    + [編寫巢狀群組](nested-groups.md)
-+ 正在部署{#deploy}
++ 部署中 {#deploy}
    + [部署社群](deploy-communities.md)
    + [升級至AEM 6.5社群](upgrade.md)
    + [社群適用的建議拓撲](topologies.md)
@@ -59,13 +59,13 @@ ht-degree: 11%
    + [適用於社群的FFmpeg](ffmpeg.md)
    + [內文中稽核](in-context.md)
    + [進階評分和徽章](advanced.md)
-   + [ASRP -Adobe儲存資源提供者](asrp.md)
+   + [ASRP - Adobe儲存資源提供者](asrp.md)
    + [MSRP - MongoDB儲存資源提供者](msrp.md)
    + [如何設定MongoDB以進行示範](demo-mongo.md)
    + [DSRP — 關聯式資料庫儲存資源提供者](dsrp.md)
    + [DSRP的MySQL組態](dsrp-mysql.md)
    + [JSRP - JCR儲存資源提供者](jsrp.md)
-   + [SRP的Solr組態](solr.md)
+   + SRP](solr.md)的[Solr組態
    + [標籤使用者產生的內容](tag-ugc.md)
    + [翻譯使用者產生的內容](translate-ugc.md)
    + [Communities使用者同步](sync.md)
