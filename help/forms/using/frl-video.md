@@ -1,10 +1,13 @@
 ---
-source-git-commit: b5e44b78659f0cb1b8b0025be30143b98c0bf8df
+title: 影片指令碼：為AEM Forms上的Adobe Acrobat設定功能限制授權(FRL)
+description: 為AEM Forms上的Adobe Acrobat設定功能限制授權(FRL)
+source-git-commit: 5477c768542b65750945dc9789224c0eb223f3c4
 workflow-type: tm+mt
-source-wordcount: '1065'
+source-wordcount: '1095'
 ht-degree: 0%
 
 ---
+
 # 影片指令碼：為AEM Forms上的Adobe Acrobat設定功能限制授權(FRL)
 
 | 視覺 | 標題 | 喇叭指令碼 |
@@ -17,7 +20,7 @@ ht-degree: 0%
 | Adobe Admin Console介面熒幕擷取畫面，其中醒目提示套件索引標籤 | 步驟1：Admin Console準備 | 首先，使用系統管理員許可權登入Adobe Admin Console。 瀏覽至「套件」標籤，然後選取「功能限制授權」。 按一下[開始使用]按鈕，開始建立您的封裝。 |
 | 反白顯示設定的「建立封裝」設定畫面 | 封裝組態 | 使用下列建議的設定來設定您的套件：針對啟用方法選取「離線」、針對權益選取「PDF產生」，針對平台選取「Windows 64位元」。 若是選取應用程式，請僅保留所選應用程式中的授權檔案。 為套件提供「Acrobat FRL AEM Forms」之類的描述性名稱，然後建立套件。 |
 | Admin Console的「使用者」索引標籤內含許可權對話方塊 | 步驟2：授予下載許可權 | 接下來，您需要建立或識別將下載套件的使用者。 在Admin Console中，導覽至使用者索引標籤，選取您的使用者，並將他們指派給「部署管理員」角色。 這可讓他們下載您建立的FRL套件。 |
-| Windows控制面板(含顯示Acrobat的應用程式和功能) | 步驟3：解除安裝先前的Acrobat | 在安裝新版本之前，您必須完全移除任何現有的Acrobat安裝。 開啟Windows「控制面板」，導覽至「應用程式」，找到Adobe Acrobat，然後選取「解除安裝」。 如需徹底移除，請考慮使用Adobe Acrobat清潔工具，尤其是如果您在程式稍後遇到問題。 |
+| Windows控制面板（含顯示Acrobat的應用程式和功能） | 步驟3：解除安裝先前的Acrobat | 在安裝新版本之前，您必須完全移除任何現有的Acrobat安裝。 開啟Windows「控制面板」，導覽至「應用程式」，找到Adobe Acrobat，然後選取「解除安裝」。 如需徹底移除，請考慮使用Adobe Acrobat清潔工具，尤其是如果您在程式稍後遇到問題。 |
 | 反白顯示含有安裝程式的Adobe Acrobat DC下載頁面區段 | 步驟4：下載並安裝Adobe Acrobat Pro | 解除安裝後，請從Acrobat Pro DC下載頁面下載適當的Adobe Acrobat安裝程式。 若為PDF Generator相容性，建議使用Windows 32位元安裝程式。 |
 | 顯示提取和設定步驟的安裝程式 | 安裝程式 | 將下載的zip檔案解壓縮至資料夾，找到Setup.exe，然後以系統管理員身分執行。 請依照熒幕上的指示完成安裝。 安裝後，開啟一次Acrobat Pro以關閉任何歡迎對話方塊，並完成初始設定。 |
 | Admin Console套件索引標籤中反白了下載按鈕 | 步驟5：下載FRL套件 | 現在，請使用您先前授予的下載許可權登入Adobe Admin Console。 導覽至「套件」索引標籤，找出您的FRL套件，然後將其下載至您的AEM Forms伺服器。 |
