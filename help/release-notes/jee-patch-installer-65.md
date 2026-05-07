@@ -4,11 +4,10 @@ description: 瞭解如何使用AEM Forms JEE修補程式安裝程式來修正AEM
 content-type: reference
 exl-id: 6b17472b-9226-4319-b305-4dba862d21af
 hide: true
-hidefromtoc: true
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
-source-git-commit: bca6156727dca11b2e09be549f3def6130827193
+source-git-commit: 63b9494700aaafaa503216d037e2ad6efc8c5eac
 workflow-type: tm+mt
 source-wordcount: '593'
 ht-degree: 19%
@@ -19,7 +18,7 @@ ht-degree: 19%
 
 >[!NOTE]
 >
->[請連絡支援人員](https://experienceleague.adobe.com/zh-hant?support-solution=General&support-tab=home#support)以取得詳細資訊或修補程式。
+>[請連絡支援人員](https://experienceleague.adobe.com/?support-solution=General&support-tab=home#support)以取得詳細資訊或修補程式。
 
 ## 關於修補程式安裝程式 {#about-the-patch-installer}
 
@@ -71,8 +70,8 @@ AEM 6.5 Forms JEE修補程式安裝程式包含此修補程式發行前，AEM 6.
 
 1. 視您的應用程式伺服器而定，選擇下列其中一份檔案，然後依照&#x200B;*設定和部署AEM表單*&#x200B;區段中的指示操作。
 
-   * [安裝和部署AEM forms for JBoss®](https://www.adobe.com/go/learn_aemforms_installJBoss_65_tw)
-   * [安裝和部署AEM forms for WebSphere®](https://www.adobe.com/go/learn_aemforms_installWebSphere_65_tw)
+   * [安裝和部署AEM forms for JBoss®](https://www.adobe.com/go/learn_aemforms_installJBoss_65)
+   * [安裝和部署AEM forms for WebSphere®](https://www.adobe.com/go/learn_aemforms_installWebSphere_65)
 
 1. （僅限JBoss®）安裝修補程式並設定伺服器後，刪除JBoss®應用程式伺服器的tmp和工作目錄。
 
@@ -97,4 +96,4 @@ AEM 6.5 Forms JEE修補程式安裝程式包含此修補程式發行前，AEM 6.
 * 文件安全性
 * Foundation JEE
 
-[聯絡支援人員](https://experienceleague.adobe.com/zh-hant?support-solution=General&support-tab=home#support)
+[聯絡支援人員](https://experienceleague.adobe.com/?support-solution=General&support-tab=home#support)
