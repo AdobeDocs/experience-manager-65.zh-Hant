@@ -5,7 +5,7 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
 exl-id: ae4c7e9d-9af8-4288-a6f9-e3bcbe7d153d
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+source-git-commit: 0c3d9e95f2b1942392cd269891360dd8552e2715
 workflow-type: tm+mt
 source-wordcount: '2149'
 ht-degree: 8%
@@ -95,7 +95,7 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
 1. 將JEE Service Pack安裝程式封存&#x200B;**上的** AEM Forms解壓縮至硬碟：
 
    * **視窗**
-導覽至安裝媒體上的適當目錄，或您硬碟上您所複製的資料夾     安裝程式，然後按兩下`aemforms65_cfp_install.exe`檔案。
+導覽至安裝媒體上的適當目錄，或硬碟上您複製安裝程式的資料夾，然後按兩下`aemforms65_cfp_install.exe`檔案。
 
       * （Windows 32位元） `Windows\Disk1\InstData\VM`
       * （Windows 64位元） `Windows_64Bit`\ `Disk1\InstData\VM`
@@ -177,7 +177,7 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
 您可以使用兩種不同的方法來自動安裝[!DNL ExperienceManager] Service Pack。<!--       UPDATE FOR EACH NEW RELEASE -->
 
 * 伺服器上線時，請將封裝放入`../crx-quickstart/install`資料夾。
-此封裝為      已自動安裝。
+套件會自動安裝。
 
 * 使用封裝管理員[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=zh-Hant)的HTTP API。 使用`cmd=install&recursive=true`安裝巢狀套件。
 
@@ -190,7 +190,7 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
   若要瞭解經過認證可搭配此版本使用的平台，請參閱[技術需求](/help/sites-deploying/technical-requirements.md)。
 
    1. 產品資訊頁(`/system/console/productinfo`)會在[!UICONTROL 已安裝產品].<!-- UPDATE FOR EACH NEW RELEASE -->下顯示更新的版本字串`Adobe Experience Manager (spversion)`
-   1. 在OSGi主控台（使用網頁）中，所有OSGi套件組合均為&#x200B;**[!UICONTROL ACTIVE]**&#x200B;或&#x200B;**[!UICONTROL FRAGMENT]**     主控台： `/system/console/bundles`)。
+   1. 在OSGi主控台中，所有OSGi套件組合均為&#x200B;**[!UICONTROL 作用中]**&#x200B;或&#x200B;**[!UICONTROL 片段]** （使用Web主控台： `/system/console/bundles`）。
    1. OSGi套件`org.apache.jackrabbit.oak-core`的版本為1.22.14或更新版本（使用WebConsole： `/system/console/bundles`）。
 
 +++
@@ -251,7 +251,7 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
 
 您可以使用兩種不同的方法來自動安裝[!DNL Experience Manager] Service Pack。<!--  UPDATE FOR EACH NEW RELEASE -->
 
-* 伺服器上線時，請將封裝放入`../crx-quickstart/install`資料夾。 此封裝為      已自動安裝。
+* 伺服器上線時，請將封裝放入`../crx-quickstart/install`資料夾。 套件會自動安裝。
 * 使用封裝管理員[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=zh-Hant)的HTTP API。 使用`cmd=install&recursive=true`安裝巢狀套件。
 
   >[!NOTE]
