@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: f2c92b990a5c09cbcf532e0800e264620d98af77
+source-git-commit: bbbbf1549f1a44f4613f6c02c33bada5a0980179
 workflow-type: tm+mt
-source-wordcount: '3736'
+source-wordcount: '3755'
 ht-degree: 5%
 
 ---
@@ -491,6 +491,8 @@ AEM Dynamic Media預設為停用。 請參閱此處[啟用Dynamic Media](/help/a
 
 >[!NOTE]
 >
+>* PDF Generator支援Microsoft® Office 2024。
+>* PDF Generator需要Adobe Acrobat Pro DC （32位元）來執行轉換。
 >* PDF Generator僅支援英文、法文、德文和日文版本的支援作業系統和應用程式。
 >* PDF Generator需要Adobe Acrobat Pro DC （32位元）來執行轉換。
 >* PDF Generator僅支援32位元版本的Microsoft® Office Professional Plus及其他轉換所需的軟體。
