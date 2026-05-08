@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: bbbbf1549f1a44f4613f6c02c33bada5a0980179
+source-git-commit: b8be2ca14bdc6c6f21a2a33c893841a9aa201112
 workflow-type: tm+mt
-source-wordcount: '3755'
+source-wordcount: '3746'
 ht-degree: 5%
 
 ---
@@ -475,12 +475,12 @@ AEM Dynamic Media預設為停用。 請參閱此處[啟用Dynamic Media](/help/a
   </tr>
 
 <tr>
-   <td>® Office 2021 Professional Plus、零售及大量授權</td>
+   <td>® Office 2024 Professional Plus、零售及大量授權</td>
    <td>DOC、DOCX、XLS、XLSX、PPT、PPTX、RTF和TXT</td>
   </tr>
   <tr>
    <td>
-    <strong>OpenOffice 4.1.15</strong>   </td>
+OpenOffice 4.1.15 </td>
    <td>
     ODT、ODP、ODS、ODG、ODF、SXW、SXI、SXC、SXD、XLS、XLSX、DOC、DOCX、PPT、PPTX、影像格式(BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC)、HTML、HTM、RTF、TXT<br>
 
@@ -491,16 +491,15 @@ AEM Dynamic Media預設為停用。 請參閱此處[啟用Dynamic Media](/help/a
 
 >[!NOTE]
 >
->* PDF Generator支援Microsoft® Office 2024。
->* PDF Generator需要Adobe Acrobat Pro DC （32位元）來執行轉換。
 >* PDF Generator僅支援英文、法文、德文和日文版本的支援作業系統和應用程式。
->* PDF Generator需要Adobe Acrobat Pro DC （32位元）來執行轉換。
->* PDF Generator僅支援32位元版本的Microsoft® Office Professional Plus及其他轉換所需的軟體。
->* 如果® Office安裝由於任何原因（例如磁碟區授權安裝無法在指定期間內找到KMS主機）而停用或取消授權，轉換可能會失敗，直到安裝重新授權並重新啟用。
+>* PDF Generator需要32位元Adobe Acrobat Pro DC和Microsoft® Office Professional Plus來執行轉換。
+>* ® Office Professional Plus安裝可能會使用零售或MAK/KMS/AD型大量授權。
+>* 如果® Office安裝因任何原因而停用或取消授權（例如磁碟區授權安裝無法在指定期間內找到KMS主機），轉換可能會失敗，直到安裝重新授權並重新啟用為止。
 >* PDF Generator不支援Microsoft® Office 365。
 >* Windows和Linux®均支援OpenOffice適用的PDF Generator轉換。
 >* 只有Windows支援OCR PDF、最佳化PDF和Export PDF功能。
->* PDF Generator服務不支援Microsoft® Windows 11。
+>* PDF Generator不支援Microsoft® Windows 11。
+>* ® Office 2021 Professional Plus支援已過時。
 
 ### AEM Forms Designer的需求 {#requirements-for-aem-forms-designer}
 
