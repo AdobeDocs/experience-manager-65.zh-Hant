@@ -11,7 +11,7 @@ feature: Communities
 role: Admin
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '1290'
+source-wordcount: '1306'
 ht-degree: 0%
 
 ---
@@ -178,7 +178,7 @@ ht-degree: 0%
 
 * `Review Path`
 
-  輸入或瀏覽至`reviews`元件的置入執行個體，這樣您就可以摘要資訊，例如，如果新增至[Geometrixx參與網站](getting-started.md)的網頁，路徑會是：
+  輸入或瀏覽到`reviews`元件的置入執行個體，這樣您就可以彙總，例如，如果新增到[Geometrixx Engage網站](getting-started.md)的網頁，路徑會是：
 
   `/content/sites/engage/en/page/jcr:content/content/primary/reviews`
 
@@ -224,7 +224,7 @@ ht-degree: 0%
 
 網站訪客登入時，根據設定，他們可能：
 
-* Post新稽核
+* 發表新評論
 * 編輯自己的評論
 * 刪除自己的評論
 * 標示其他人的評論意見
