@@ -11,8 +11,8 @@ feature: Communities
 role: Admin
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '264'
-ht-degree: 1%
+source-wordcount: '304'
+ht-degree: 0%
 
 ---
 
@@ -59,9 +59,9 @@ ht-degree: 1%
 
 ## 伺服器端的Essentials {#essentials-for-server-side}
 
-* [總計API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/tally/client/api/package-summary.html)
+* [標籤API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/tally/client/api/package-summary.html)
 
-* [計數的端點](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/tally/client/endpoints/package-summary.html)
+* [計分端點](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/tally/client/endpoints/package-summary.html)
 
 * [伺服器端自訂](server-customize.md)
 
@@ -70,7 +70,7 @@ ht-degree: 1%
 UGC應使用其中一種標準仲裁方法進行仲裁。
 請參閱[仲裁使用者產生的內容](moderate-ugc.md)。
 
-截至AEM 6.1 Communities，使用UGC的[公用存放區](working-with-srp.md)時，無論選擇的存放區選項（例如ASRP、MSRP或JSRP）為何，都可程式化存取UGC。
+截至AEM 6.1 Communities，無論選擇的儲存選項（例如ASRP、MSRP或JSRP）為何，使用UGC的[公用存放區](working-with-srp.md)都能以程式設計方式存取UGC。
 
 **存放庫中UGC的位置和格式可能會變更，而不會出現警告**。
 
