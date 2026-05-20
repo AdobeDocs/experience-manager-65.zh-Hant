@@ -8,14 +8,18 @@ exl-id: 3fb069cf-d3ed-47b0-b6bf-82e110b3b059
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+source-git-commit: 4d0fdb4b3128272d50252b52e5eda1b78cd7cae9
 workflow-type: tm+mt
-source-wordcount: '704'
+source-wordcount: '752'
 ht-degree: 2%
 
 ---
 
 # 建立AEM Forms Android應用程式 {#build-the-aem-forms-android-app}
+
+>[!NOTE]
+>
+>AEM Forms應用程式目前已棄用。 如有疑問或需要協助，請連絡[aemformsapp-android@adobe.com](mailto:aemformsapp-android@adobe.com)。
 
 若要建置適用於AEM Forms的Android應用程式，請依照建議的順序執行下列步驟。
 
@@ -29,7 +33,7 @@ AEM Forms應用程式Source程式碼套件參考`adobe-lc-mobileworkspace-src-<v
 
 若要下載`adobe-aemfd-forms-app-src-pkg-<version>.zip`檔案，請執行下列步驟：
 
-1. 開啟 [Software Distribution](https://experience.adobe.com/downloads)。您需要 Adobe ID 才能登入 Software Distribution。
+1. 開啟 [Software Distribution](https://experience.adobe.com/downloads)。 您需要 Adobe ID 才能登入 Software Distribution。
 1. 選取標題功能表中可用的&#x200B;**[!UICONTROL Adobe Experience Manager]**。
 1. 在&#x200B;**[!UICONTROL 篩選器]**&#x200B;區段中：
    1. 從&#x200B;**[!UICONTROL 解決方案]**&#x200B;下拉式清單中選取&#x200B;**[!UICONTROL Forms]**。
@@ -49,8 +53,8 @@ AEM Forms應用程式Source程式碼套件參考`adobe-lc-mobileworkspace-src-<v
 在開始AEM Forms應用程式的建置流程之前，請設定下列環境變數：
 
 * 將JAVA_HOME環境變數設定為本機檔案系統上JDK軟體的位置。 例如，C:\Program Files\Java\jdk1.8.0_181
-* 將`ANDROID_SDK_ROOT`系統環境變數設定為Android的SDK位置。 例如， C:\Users\&amp;amp；lt；username>\AppData\Local\Android\Sdk
-* 設定`Path`系統環境變數，以包含Android的平台工具和工具資料夾位置。 例如，C:\Users\&amp;amp；lt；username>\AppData\Local\Android\Sdk\platform-tools和C:\Users\&amp;amp；lt；username>\AppData\Local\Android\Sdk\tools。
+* 將`ANDROID_SDK_ROOT`系統環境變數設定為Android的SDK位置。 例如，C:\Users\&amp;lt；username>\AppData\Local\Android\Sdk
+* 設定`Path`系統環境變數，以包含Android的平台工具和工具資料夾位置。 例如，C:\Users\&amp;lt；username>\AppData\Local\Android\Sdk\platform-tools和C:\Users\&amp;lt；username>\AppData\Local\Android\Sdk\tools。
 
 ## 建置標準AEM Forms應用程式 {#set-up-the-xcode-project}
 

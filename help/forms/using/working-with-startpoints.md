@@ -9,9 +9,9 @@ exl-id: d5970f90-2899-43a5-a3a0-61a2c844d919
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: dd8748cee7a4b3ba91795a51928bd8590c47ef27
+source-git-commit: 4d0fdb4b3128272d50252b52e5eda1b78cd7cae9
 workflow-type: tm+mt
-source-wordcount: '235'
+source-wordcount: '249'
 ht-degree: 0%
 
 ---
@@ -19,13 +19,17 @@ ht-degree: 0%
 
 # 使用起點{#working-with-startpoints}
 
+>[!NOTE]
+>
+>AEM Forms應用程式目前已棄用。 如有疑問或需要協助，請連絡[aemformsapp-android@adobe.com](mailto:aemformsapp-android@adobe.com)。
+
 起點會叫用在Workbench中建立的程式。 它與表單相關聯，在提交表單時會叫用流程。
 
 >[!NOTE]
 >
 >在提及此概念時，術語起點、開始流程和表單可互換使用。
 
-若要從Adobe Experience Manager (AEM) Forms應用程式起始程式，程式中的起點必須是&#x200B;**Workspace**。 此外，您必須選取&#x200B;**[!UICONTROL 在行動Workspace中可見]**&#x200B;選項作為起點。
+若要從Adobe Experience Manager (AEM) Forms應用程式起始程式，您程式的起點型別必須為&#x200B;**Workspace**。 此外，您必須選取&#x200B;**[!UICONTROL 在行動Workspace中可見]**&#x200B;選項作為起點。
 
 ![mws_startpoint_select_option](assets/mws_startpoint_select_option.png)
 

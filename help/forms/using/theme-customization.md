@@ -1,6 +1,6 @@
 ---
 title: 佈景主題自訂
-description: 瞭解如何自訂AEM Forms應用程式的主題。 您可以自訂HTML程式碼和CSS檔案，以提供特定於組織的外觀和風格。
+description: 瞭解如何自訂AEM Forms應用程式的主題。 您可以自訂HTML程式碼和CSS檔案，以提供組織專屬的外觀和風格。
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -9,14 +9,18 @@ exl-id: 9b8c5933-b783-48f9-b463-15a01e06ee98
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: 4d0fdb4b3128272d50252b52e5eda1b78cd7cae9
 workflow-type: tm+mt
-source-wordcount: '238'
+source-wordcount: '254'
 ht-degree: 4%
 
 ---
 
 # 佈景主題自訂 {#theme-customization}
+
+>[!NOTE]
+>
+>AEM Forms應用程式目前已棄用。 如有疑問或需要協助，請連絡[aemformsapp-android@adobe.com](mailto:aemformsapp-android@adobe.com)。
 
 您可以自訂HTML程式碼和CSS檔案，為AEM Forms應用程式提供獨特的組織專屬外觀和風格。 例如，您可以變更任務或「起點」的背景顏色和高度。 下列範例提供變更的指示：
 

@@ -8,14 +8,18 @@ exl-id: ba4ceef1-510d-41ef-94b8-4834fb7de804
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: 4d0fdb4b3128272d50252b52e5eda1b78cd7cae9
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '549'
 ht-degree: 0%
 
 ---
 
 # 在離線模式下工作 {#working-in-the-offline-mode}
+
+>[!NOTE]
+>
+>AEM Forms應用程式目前已棄用。 如有疑問或需要協助，請連絡[aemformsapp-android@adobe.com](mailto:aemformsapp-android@adobe.com)。
 
 AEM Forms應用程式的離線模式可讓您順暢地工作，即使應用程式離線亦然。 您可以開啟、更新和提交表單，而不需要任何網路連線。
 

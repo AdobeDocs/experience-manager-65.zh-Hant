@@ -9,14 +9,18 @@ exl-id: 6debb1a7-7889-4fdd-87c7-ecb87cc0b1f5
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: 4d0fdb4b3128272d50252b52e5eda1b78cd7cae9
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '328'
 ht-degree: 0%
 
 ---
 
 # 手勢自訂 {#gesture-customization}
+
+>[!NOTE]
+>
+>AEM Forms應用程式目前已棄用。 如有疑問或需要協助，請連絡[aemformsapp-android@adobe.com](mailto:aemformsapp-android@adobe.com)。
 
 您可以自訂AEM Forms應用程式的手勢，以提供與應用程式互動的不同方法。 例如，您可以新增手勢以開啟或關閉任務或起點。
 
@@ -46,7 +50,7 @@ ht-degree: 0%
 
    `"EventName Selector": "Function"`
 
-   當您在`Selector`所指定的HTML專案上觸發名為`EventName`的JavaScript事件時，會呼叫`Function`。
+   當您在`Selector`所指定的JavaScript元素上觸發名為`EventName`的HTML事件時，會呼叫`Function`。
 
 1. 尋找
 
@@ -71,4 +75,4 @@ ht-degree: 0%
 1. 儲存並關閉`task.js`檔案。
 1. 建置並執行AEM Forms應用程式。 現在您可以使用向左撥動和向右撥動來開啟。
 
-同樣地，您可以針對各種手勢、HTML元素和函式的組合，在其他檢視中進行變更。
+同樣地，您可以針對各種手勢、HTML元素和函陣列合，在其他檢視中進行變更。

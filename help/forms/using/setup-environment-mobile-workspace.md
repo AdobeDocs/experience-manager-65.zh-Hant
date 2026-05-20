@@ -10,22 +10,26 @@ exl-id: 1d1f9db2-83cf-4612-ac8c-d2638c3bbaea
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: Admin, User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: 4d0fdb4b3128272d50252b52e5eda1b78cd7cae9
 workflow-type: tm+mt
-source-wordcount: '211'
+source-wordcount: '234'
 ht-degree: 0%
 
 ---
 
 # 設定AEM Forms應用程式的環境{#set-up-environment-for-aem-forms-app}
 
+>[!NOTE]
+>
+>AEM Forms應用程式目前已棄用。 如有疑問或需要協助，請連絡[aemformsapp-android@adobe.com](mailto:aemformsapp-android@adobe.com)。
+
 您需要下列硬體、軟體和授權，才能建置和部署AEM Forms應用程式：
 
 ## Windows裝置 {#for-windows-devices}
 
-* Microsoft® Windows 10
-* Microsoft® Visual Studio 2015
-* Microsoft® Visual Studio Tools for Apache Cordova
+* ® Windows 10
+* ® Visual Studio 2015
+* ® Visual Studio Tools for Apache Cordova
 
 ## 適用於iOS裝置 {#for-ios-devices}
 
@@ -36,7 +40,7 @@ ht-degree: 0%
 * 用於發佈內部iOS應用程式的企業憑證
 * Apple iPad搭配iOS 8.4或更新版本
 
-## 若為Android™裝置 {#for-android-devices}
+## 若為™裝置 {#for-android-devices}
 
 * 可從[https://developer.android.com/studio](https://developer.android.com/studio)下載的Android™ Development Toolkit （ADT套件）
 * 若環境設定在Mac系統上，則ADT應安裝在「應用程式」資料夾中。
@@ -44,4 +48,4 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->adobe-lc-mobileworkspace-src.zip包含PhoneGap SDK 5.0。請確定未預先安裝PhoneGap SDK。
+>adobe-lc-mobileworkspace-src.zip包含PhoneGap SDK 5.0。 請確定未預先安裝PhoneGap SDK。
