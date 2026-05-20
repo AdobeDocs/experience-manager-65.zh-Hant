@@ -9,14 +9,18 @@ exl-id: 9333705b-9944-4a74-a30f-7d9ec85fd824
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: 4d0fdb4b3128272d50252b52e5eda1b78cd7cae9
 workflow-type: tm+mt
-source-wordcount: '890'
+source-wordcount: '910'
 ht-degree: 1%
 
 ---
 
 # 品牌自訂 {#branding-customization}
+
+>[!NOTE]
+>
+>AEM Forms應用程式目前已棄用。 如有疑問或需要協助，請連絡[aemformsapp-android@adobe.com](mailto:aemformsapp-android@adobe.com)。
 
 您可以自訂應用程式圖示、應用程式名稱、啟動影像和登入頁面，為AEM Forms應用程式提供獨特的組織特定外觀。 例如，您可以將影像變更為使用貴組織的標誌。 AEM Forms應用程式支援下列自訂：
 

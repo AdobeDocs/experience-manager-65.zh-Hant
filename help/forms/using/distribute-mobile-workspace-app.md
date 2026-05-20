@@ -8,14 +8,18 @@ exl-id: 375cfa95-ac6f-44c4-a736-f5dd55d24195
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+source-git-commit: 4d0fdb4b3128272d50252b52e5eda1b78cd7cae9
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '259'
 ht-degree: 0%
 
 ---
 
 # 發佈AEM Forms應用程式 {#distribute-aem-forms-app}
+
+>[!NOTE]
+>
+>AEM Forms應用程式目前已棄用。 如有疑問或需要協助，請連絡[aemformsapp-android@adobe.com](mailto:aemformsapp-android@adobe.com)。
 
 行動裝置管理(MDM)可讓您在行動裝置上大規模部署應用程式。
 

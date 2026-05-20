@@ -8,14 +8,18 @@ exl-id: 12cc2027-ae94-40c3-a7d1-553469426114
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: 4d0fdb4b3128272d50252b52e5eda1b78cd7cae9
 workflow-type: tm+mt
-source-wordcount: '360'
+source-wordcount: '404'
 ht-degree: 0%
 
 ---
 
 # 為iOS建置安全的AEM Forms應用程式 {#building-a-secure-aem-forms-app-for-ios}
+
+>[!NOTE]
+>
+>AEM Forms應用程式目前已棄用。 如有疑問或需要協助，請連絡[aemformsapp-android@adobe.com](mailto:aemformsapp-android@adobe.com)。
 
 您必須封存AEM Forms應用程式的Xcode專案，才能建置安裝程式（.ipa檔案）和屬性清單（.plist檔案）檔案。 屬性清單檔案包含託管內部應用程式的設定資訊，例如應用程式的名稱和託管位置。 如需屬性清單檔案的詳細資訊，請參閱[關於資訊屬性清單檔案](https://developer.apple.com/library/ios/#documentation/general/Reference/InfoPlistKeyReference/Articles/AboutInformationPropertyListFiles.html)。
 
@@ -27,7 +31,7 @@ ht-degree: 0%
 1. 若要為應用程式設定iOS應用程式的套件組合識別碼，請按一下&#x200B;**[!UICONTROL 設定應用程式ID]**。
 1. 在網頁底部，選取&#x200B;**[!UICONTROL 啟用資料保護]**。 指定資料保護選項。
 
-   按一下&#x200B;**[!UICONTROL 「完成」]**。
+   按一下&#x200B;**[!UICONTROL 完成]**。
 
 1. 導覽至「布建>發佈」 ，並使用步驟3中設定的應用程式ID建立新的設定檔。
 1. 下載布建設定檔並新增至Xcode和iPad。

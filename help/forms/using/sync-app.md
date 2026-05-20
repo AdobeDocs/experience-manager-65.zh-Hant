@@ -10,14 +10,18 @@ exl-id: 6bb1d6df-b322-4112-bc25-6300877ee146
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: 4d0fdb4b3128272d50252b52e5eda1b78cd7cae9
 workflow-type: tm+mt
-source-wordcount: '370'
+source-wordcount: '388'
 ht-degree: 0%
 
 ---
 
 # 同步應用程式{#synchronizing-the-app}
+
+>[!NOTE]
+>
+>AEM Forms應用程式目前已棄用。 如有疑問或需要協助，請連絡[aemformsapp-android@adobe.com](mailto:aemformsapp-android@adobe.com)。
 
 ## 同步應用程式 {#synchronizing-the-app-1}
 
@@ -44,6 +48,6 @@ ht-degree: 0%
 ### 技術規格 {#technical-specifications}
 
 * 將離線應用程式資料提交至AEM Forms伺服器的主要邏輯包含在runtime/offline/util/offline.js中。
-* 在.js中，對processOfflineSubmittedSavedTasks(...)函式的呼叫會將已儲存/已提交的工作傳送至伺服器。 它也會處理同步處理過程中的任何錯誤或衝突。 如果任務提交失敗，應用程式上的任務會標示為失敗。 此外，任務仍會保留在寄件匣中。
+* 在.js中，呼叫processOfflineSubmittedSavedTasks(...) 函式中，將已儲存/已提交的工作傳送至伺服器。 它也會處理同步處理過程中的任何錯誤或衝突。 如果任務提交失敗，應用程式上的任務會標示為失敗。 此外，任務仍會保留在寄件匣中。
 * syncSubmittedTask()和syncSavedTask()函式會針對個別工作執行作業。
 * 在使用者選擇同步處理伺服器的離線狀態或背景執行緒自動同步之後，工作清單元件會起始對processOfflineSubmittedSavedTasks()函式的呼叫。

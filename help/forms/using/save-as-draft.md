@@ -8,21 +8,25 @@ exl-id: b4a23b2e-ab18-402c-8dfa-2533ee692912
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: 4d0fdb4b3128272d50252b52e5eda1b78cd7cae9
 workflow-type: tm+mt
-source-wordcount: '492'
+source-wordcount: '511'
 ht-degree: 0%
 
 ---
 
 # 將任務或表單儲存為草稿 {#saving-a-task-or-form-as-a-draft}
 
+>[!NOTE]
+>
+>AEM Forms應用程式目前已棄用。 如有疑問或需要協助，請連絡[aemformsapp-android@adobe.com](mailto:aemformsapp-android@adobe.com)。
+
 另存為草稿選項可儲存任務或表單的快照以及在相關表單中填寫的資料。 您也可以從範本建立草稿。 草稿會儲存在行動裝置內，並與Adobe Experience Manager Forms伺服器同步，以供稍後擷取。
 
 您可以[更新表單](/help/forms/using/working-with-form.md)，[加上註釋](/help/forms/using/add-attachments.md)，並附上像片與手寫筆記。 當您繼續更新表單時，建議將其儲存為草稿。 若您決定稍後再提交已填寫的表單，則將其儲存為草稿會很有幫助。
 
 若要針對儲存在表單入口網站上的表單啟用儲存為草稿功能，請參閱[將HTML5表單儲存為草稿](/help/forms/using/saving-html5-form-draft.md)。
-若要設定最適化表單的提交，請參閱[草稿和提交元件](/help/forms/using/draft-submission-component.md)。 (對與AEM Forms JEE伺服器同步的表單無效。)
+若要設定最適化表單的提交，請參閱[草稿和提交元件](/help/forms/using/draft-submission-component.md)。 （對與AEM Forms JEE伺服器同步的表單無效。）
 
 若要建立草稿，請開啟表單並選取&#x200B;**另存為草稿** ![另存為草稿](assets/save-as-draft.png)。 提供草稿的名稱，並選取&#x200B;**儲存**。 草稿會儲存在「草稿」資料夾中，並與伺服器同步。 如果應用程式離線，則會將其儲存在Outbox資料夾中。
 
