@@ -8,9 +8,20 @@ feature: Accessibility
 role: User, Admin
 exl-id: bbdb800c-b6f8-4506-b8ac-daf64edcd6c0
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: ed7183efa57db6d97941e3acc99d126c2fc0f6c5
+autotag-review: '2026-05-18T18:39:42.457Z'
+TQID: 'https://experienceleague.adobe.com/f9-0rO4QHX7kbx7xwptmuOW1W7WzduM3tOlL2YgHXxI'
+product_v2:
+  - id: e14eb250-3c22-4a07-9061-a78112b2b826
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+topic_v2:
+  - id: cc72dcf1-72e1-48cc-b434-e7c27d62d67c
+source-git-commit: 9c96b6744c7af2f061b4dfbf403560047485f9b5
 workflow-type: tm+mt
-source-wordcount: '583'
+source-wordcount: 647
 ht-degree: 0%
 
 ---
@@ -59,7 +70,7 @@ ht-degree: 0%
 ## [!DNL Dynamic Media]個檢視者的輔助技術支援 {#assistive-technology-support-for-dm-viewers}
 
 所有[!DNL Dynamic Media]檢視器元件都支援ARIA （可存取的豐富網際網路應用程式）角色和屬性，以改進與熒幕閱讀器等輔助技術的整合。
-請參閱Dynamic Media檢視器參考指南中任何自訂檢視器主題中的&#x200B;**輔助技術支援**&#x200B;說明主題。 例如，請參閱視訊檢視器的[輔助技術支援](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/r-html5-video-viewer-20-assistive.html?lang=zh-Hant)，或互動式影像檢視器的[輔助技術支援](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/c-html5-aem-interactive-image-assistive.html?lang=zh-Hant#viewers-for-aem-assets-only)。
+請參閱Dynamic Media檢視器參考指南中任何自訂檢視器主題的&#x200B;**輔助技術支援**&#x200B;說明主題。 例如，請參閱視訊檢視器的[輔助技術支援](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/r-html5-video-viewer-20-assistive.html?lang=zh-Hant)，或互動式影像檢視器的[輔助技術支援](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/c-html5-aem-interactive-image-assistive.html?lang=zh-Hant#viewers-for-aem-assets-only)。
 
 ## Dynamic Media中的隱藏式字幕支援 {#closed-caption-support}
 

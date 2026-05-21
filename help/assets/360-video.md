@@ -10,9 +10,18 @@ feature: 360 VR Video
 role: User, Admin
 exl-id: 0c2077a7-bd16-484b-980f-4d4a1a681491
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: beef1f49b7563d824357043f4ed78fdaf70015cd
+autotag-review: '2026-05-18T18:33:16.243Z'
+TQID: 'https://experienceleague.adobe.com/t3-PFZjnQPbbgNMFEjG7SDwG1Pt1TkvD9wNNYYgaEyE'
+product_v2:
+  - id: e14eb250-3c22-4a07-9061-a78112b2b826
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+source-git-commit: 9c96b6744c7af2f061b4dfbf403560047485f9b5
 workflow-type: tm+mt
-source-wordcount: '1145'
+source-wordcount: 1191
 ht-degree: 0%
 
 ---
@@ -38,7 +47,7 @@ Dynamic Media - Scene7模式包含傳送360個視訊資產的原生支援。 依
 
 ## 360/VR視訊與Adobe Premiere Pro {#vr-video-and-adobe-premiere-pro}
 
-您可以使用AdobePremier Pro來檢視和編輯360/VR素材。 例如，您可以在場景中正確放置標誌和文字，並套用專為等矩形媒體設計的效果和轉場。
+您可以使用Adobe Premier Pro來檢視和編輯360/VR素材。 例如，您可以在場景中正確放置標誌和文字，並套用專為等矩形媒體設計的效果和轉場。
 
 請參閱[編輯360/VR視訊](https://helpx.adobe.com/tw/premiere-pro/how-to/edit-360-vr-video.html)。
 
@@ -56,12 +65,12 @@ Dynamic Media - Scene7模式包含傳送360個視訊資產的原生支援。 依
 
    轉譯360度視訊內容對來源視訊解析度以及編碼轉譯解析度的需求，比標準的非360度視訊內容更高。
 
-   您可以使用隨Dynamic Media提供的現成最適化視訊設定檔。 不過，若使用非360視訊檢視器轉譯的相同設定進行編碼，360度視訊品質會明顯比非360度視訊低。 因此，如果需要高品質的360視訊，請執行下列動作：
+   您可以使用動態媒體隨附的現成最適化視訊設定檔。 不過，若使用非360視訊檢視器轉譯的相同設定進行編碼，360度視訊品質會明顯比非360度視訊低。 因此，如果需要高品質的360視訊，請執行下列動作：
 
    * 理想情況下，您原本的360度影片內容最好具備下列其中一種解析度：
 
       * 1080p - 1920 x 1080，稱為Full HD或FHD解析度，或
-      * 2160p - 3840 x 2160，稱為4k、UHD或UltraHD解析度。 這種大型顯示器解析度最常出現在高檔電視機和電腦熒幕上。 2160p解析度通常稱為「4k」，因為寬度接近4000畫素。 換句話說，它提供1080p的四倍畫素。
+      * 2160p - 3840 x 2160，稱為4k、UHD或超高解析度。 這種大型顯示器解析度最常出現在高檔電視機和電腦熒幕上。 2160p解析度通常稱為「4k」，因為寬度接近4000畫素。 換句話說，它提供1080p的四倍畫素。
 
    * [建立具有更高品質轉譯的自訂最適化視訊設定檔](/help/assets/video-profiles.md#creating-a-video-encoding-profile-for-adaptive-streaming)。 例如，建立包含下列三個設定的最適化視訊設定檔：
 
@@ -71,7 +80,7 @@ Dynamic Media - Scene7模式包含傳送360個視訊資產的原生支援。 依
 
    * 處理專門供360個視訊資產使用的資料夾中的360個視訊內容。
 
-   這種方法對於使用者的網路和CPU提出了更高的要求。
+   此方法對於使用者的網路和CPU提出了更高的要求。
 
 1. [將視訊上傳至資料夾](/help/assets/managing-video-assets.md#upload-and-preview-video-assets)。
 
@@ -79,7 +88,7 @@ Dynamic Media - Scene7模式包含傳送360個視訊資產的原生支援。 依
 
 若要讓已上傳的資產符合搭配360視訊檢視器使用的360視訊資格，該資產的外觀比例必須為2。
 
-根據預設，如果視訊的外觀比例（寬度/高度）為2.0，Experience Manager會將視訊偵測為「360」。如果您是管理員，您可以在下列位置以CRXDE Lite設定選用的`s7video360AR`屬性，覆寫預設外觀比例設定2：
+根據預設，如果視訊的外觀比例（寬度/高度）為2.0，Experience Manager會將視訊偵測為「360」。 如果您是管理員，可以透過下列方式在CRXDE Lite中設定選用的`s7video360AR`屬性，覆寫預設外觀比例設定2：
 
 * `/conf/global/settings/cloudconfigs/dmscene7/jcr:content`
 
@@ -134,9 +143,9 @@ Dynamic Media - Scene7模式包含傳送360個視訊資產的原生支援。 依
 
 ## 發佈360度影片 {#publishing-video}
 
-Publish 360影片供您使用。 發佈360影片會啟用URL和內嵌程式碼。 此外，該公司也會將360影片發佈至Dynamic Media雲端，此雲端已與CDN整合，可提供具備擴充能力及效能的傳送方式。
+發佈360影片以便使用。 發佈360影片會啟用URL和內嵌程式碼。 此外，該公司也會將360影片發佈至Dynamic Media雲端，此雲端整合了CDN，提供具備擴充能力及高效能的傳送服務。
 
-如需如何發佈360視訊的詳細資訊，請參閱[Publish Dynamic Media資產](/help/assets/publishing-dynamicmedia-assets.md)。
+如需如何發佈360視訊的詳細資訊，請參閱[發佈Dynamic Media資產](/help/assets/publishing-dynamicmedia-assets.md)。
 另請參閱[將視訊或影像檢視器嵌入網頁](/help/assets/embed-code.md)。
 另請參閱[將URL連結至您的網頁應用程式](/help/assets/linking-urls-to-yourwebapplication.md)。 如果您的互動式內容有具有相對URL的連結，尤其是指向Experience Manager Sites頁面的連結，則無法採用URL型連結方法。
 另請參閱[將Dynamic Media資產新增至頁面](/help/assets/adding-dynamic-media-assets-to-pages.md)。

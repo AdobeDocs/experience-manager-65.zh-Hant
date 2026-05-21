@@ -1,6 +1,6 @@
 ---
 title: 傳遞 Dynamic Media 資產
-description: 瞭解如何將Dynamic Media資產（例如視訊和影像）傳送至您的網頁。
+description: 瞭解如何將視訊和影像等Dynamic Media資產傳送至您的網頁。
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
@@ -10,9 +10,19 @@ role: User, Admin
 exl-id: 274af114-845a-46bd-b091-802cf589687a
 feature: Asset Management,Renditions
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+autotag-review: '2026-05-18T18:45:05.823Z'
+TQID: 'https://experienceleague.adobe.com/a5ifneRAYCIMHKCGJHGQu9aoQt3EWZu1hiGYItlPZOE'
+product_v2:
+  - id: e14eb250-3c22-4a07-9061-a78112b2b826
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+level_v2:
+  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+source-git-commit: 9c96b6744c7af2f061b4dfbf403560047485f9b5
 workflow-type: tm+mt
-source-wordcount: '323'
+source-wordcount: 324
 ht-degree: 9%
 
 ---
@@ -21,9 +31,9 @@ ht-degree: 9%
 
 如何傳送Dynamic Media資產（包括影片和影像）取決於網站的實作方式。
 
-Dynamic Media提供幾個選項：
+使用Dynamic Media時，您有幾個選項：
 
-* 如果您的網站託管於Adobe Experience Manager，那麼您想要直接將Dynamic Media資產新增至您的頁面。
+* 如果您的網站託管於Adobe Experience Manager，則您想要直接將Dynamic Media資產新增至您的頁面。
 * 如果您的網站不在Experience Manager上，您可以選擇以下任一選項：
 
    * 將您的影片或影像內嵌在網站上。
@@ -48,6 +58,6 @@ Dynamic Media提供幾個選項：
 
 ## Dynamic Media資產的HTTP/2傳送 {#http-delivery-of-dynamic-media-assets}
 
-Experience Manager現在支援透過HTTP/2傳送所有Dynamic Media內容（影像和視訊）。 也就是說，影像或視訊的已發佈URL或內嵌程式碼可整合至任何接受託管資產的應用程式。 該已發佈資產隨後會透過HTTP/2通訊協定傳送。 此傳送方式可改善瀏覽器和伺服器的通訊方式，讓您的所有Dynamic Media資產獲得更好的回應和載入時間。
+Experience Manager現在支援透過HTTP/2傳送所有Dynamic Media內容（影像和影片）。 也就是說，影像或視訊的已發佈URL或內嵌程式碼可整合至任何接受託管資產的應用程式。 該已發佈資產隨後會透過HTTP/2通訊協定傳送。 此傳送方式可改善瀏覽器和伺服器的通訊方式，讓您的所有Dynamic Media資產獲得更好的回應和載入時間。
 
 若要深入瞭解，請參閱[HTTP/2內容傳遞常見問題](/help/sites-administering/scene7-http2faq.md)。
