@@ -53,7 +53,7 @@ AI 助理會直接嵌入 AEM，並且可透過 AEM Experience Hub、Cloud Manage
 
 以下 3 分鐘 25 秒的影片逐步示範操作 AEM 中的 AI 助理。
 
->[!VIDEO](https://video.tv.adobe.com/v/3475357/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3475369/?captions=chi_hant&learn=on&enablevpops)
 
 ## 在 AEM 中存取 AI 助理{#get-access}
 
