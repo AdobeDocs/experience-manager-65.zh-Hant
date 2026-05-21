@@ -25,7 +25,7 @@ ht-degree: 1%
 
 # 設定 Dynamic Media {#setting-up-dynamic-media}
 
-[Dynamic Media](https://business.adobe.com/products/experience-manager/assets/dynamic-media.html)可依需求提供豐富的視覺銷售和行銷資產，並自動針對網路、行動及社交網站的消費進行縮放，協助您管理資產。 Dynamic Media使用一組主要來源資產，透過其可擴充且效能最佳化的全域網路即時產生並傳送多種多樣的豐富內容。
+[Dynamic Media](https://business.adobe.com/tw/products/experience-manager/assets/dynamic-media.html)可依需求提供豐富的視覺銷售和行銷資產，並自動針對網路、行動及社交網站的消費進行縮放，協助您管理資產。 Dynamic Media使用一組主要來源資產，透過其可擴充且效能最佳化的全域網路即時產生並傳送多種多樣的豐富內容。
 
 >[!NOTE]
 >
