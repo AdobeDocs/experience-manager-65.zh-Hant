@@ -5,38 +5,38 @@ exl-id: cd3da71f-892c-4fde-905f-71a64fb5d4e4
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+source-git-commit: 9b4dd5a4a137e529be8142fff1ddbfca889e64ae
 workflow-type: tm+mt
-source-wordcount: '986'
+source-wordcount: '1032'
 ht-degree: 5%
 
 ---
 
 # 將AEM Forms與Microsoft® Office 365郵件伺服器通訊協定整合 {#oauth2-support-for-the-microsoft-mail-server-protocols}
 
-為了讓組織遵守安全電子郵件要求，AEM Forms提供OAuth 2.0支援，以便與Microsoft® Office 365郵件伺服器通訊協定整合。 您可以使用Azure Active Directory (Azure AD) OAuth 2.0驗證服務來連線各種通訊協定（例如IMAP、POP或SMTP），並存取Office 365使用者的電子郵件資料。 以下是設定Microsoft® Office 365郵件伺服器通訊協定以透過OAuth 2.0服務進行驗證的逐步指示：
+為了讓組織遵守安全電子郵件要求，AEM Forms提供OAuth 2.0支援，以便與Microsoft® Office 365郵件伺服器通訊協定整合。 您可以使用Azure Active Directory (Azure AD) OAuth 2.0驗證服務來連線各種通訊協定，例如IMAP、POP或SMTP，並存取Office 365使用者的電子郵件資料。 以下是設定® Office 365郵件伺服器通訊協定以透過OAuth 2.0服務進行驗證的逐步指示：
 
 1. 登入[https://portal.azure.com/](https://portal.azure.com/)並在搜尋列中搜尋&#x200B;**Azure Active Directory**，然後按一下結果。
-或者，您可以直接瀏覽到 [https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview)
+或者，您可以直接瀏覽到[https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview)
 1. 按一下&#x200B;**新增** > **應用程式註冊** > **新註冊**。
 
    ![應用程式註冊](/help/forms/using/assets/outh_outlook_microsoft_azure.png)
 
 1. 根據您的要求填寫資訊，然後按一下「**註冊**」。
    ![支援的帳戶](/help/forms/using/assets/azure_suuportedaccountype.png)
-在上述案例中，已選取任何組織目錄（任何Azure AD目錄 — 多租使用者）中的&#x200B;**帳戶和個人Microsoft®帳戶（例如Skype、Xbox）**&#x200B;選項。
+在上述案例中，已選取任何組織目錄（任何Azure AD目錄 — 多租使用者）和個人Microsoft®帳戶（例如Skype、Xbox）中的&#x200B;**帳戶**&#x200B;選項。
 
    >[!NOTE]
    >
-   > * 對於任何組織目錄（任何Azure AD目錄 — 多租使用者）**應用程式中的**&#x200B;帳戶，Adobe建議您使用工作帳戶，而不是個人電子郵件帳戶。
-   > * 不支援&#x200B;**僅個人Microsoft®帳戶**&#x200B;應用程式。
+   > * 對於任何組織目錄（任何Azure AD目錄 — 多租使用者）**應用程式中的**&#x200B;帳戶，Adobe建議您使用工作帳戶，而非個人電子郵件帳戶。
+   > * 不支援&#x200B;**僅個人®帳戶**&#x200B;應用程式。
    > * Adobe建議您使用&#x200B;**多租使用者和個人Microsoft®帳戶**&#x200B;應用程式。
 
-1. 接下來，移至「**憑證和密碼**」，按一下「**新增用戶端密碼**」，並按照畫面上的步驟建立密碼。請務必記下此secret值以供稍後使用。
+1. 接下來，移至「**憑證和密碼**」，按一下「**新增用戶端密碼**」，並按照畫面上的步驟建立密碼。 請務必記下此secret值以供稍後使用。
 
    ![秘密金鑰](/help/forms/using/assets/azure_secretkey.png)
 
-1. 若要新增許可權，請前往新建立的應用程式，然後選取&#x200B;**API許可權** > **新增許可權** > **Microsoft® Graph** > **委派許可權**。
+1. 若要新增許可權，請前往新建立的應用程式，然後選取&#x200B;**API許可權** > **新增許可權** > **® Graph** > **委派許可權**。
 1. 選取以下應用程式許可權的核取方塊，然後按一下&#x200B;**新增許可權**：
 
    * `IMAP.AccessUser.All`
@@ -71,7 +71,7 @@ ht-degree: 5%
 
 1. 將`clientID`取代為`<client_id>`，並將`redirect_uri`取代為您的應用程式的重新導向URI，然後在瀏覽器中開啟下列URL：
 
-   ```https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=[clientid]&scope=IMAP.AccessAsUser.All%20POP.AccessAsUser.All%20SMTP.Send%20User.Read%20Mail.Read%20offline_access&response_type=code&redirect_uri=[redirect_uri]&prompt=login```
+   `https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=[clientid]&scope=IMAP.AccessAsUser.All%20POP.AccessAsUser.All%20SMTP.Send%20User.Read%20Mail.Read%20offline_access&response_type=code&redirect_uri=[redirect_uri]&prompt=login`
 
    >[!NOTE]
    >
@@ -151,7 +151,7 @@ ht-degree: 5%
 
    >[!NOTE]
    >
-   > 若要瞭解更多與工作通知相關的資訊，[請按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-65/content/forms/administrator-help/configuring-email-endpoints.html?lang=zh-Hant#create-an-email-endpoint-for-the-complete-task-service)。
+   > 若要瞭解更多與工作通知相關的資訊，[請按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-65/content/forms/administrator-help/configuring-email-endpoints.html#create-an-email-endpoint-for-the-complete-task-service)。
 
 ## 設定電子郵件端點 {#configure_email_endpoint}
 
@@ -165,7 +165,7 @@ ht-degree: 5%
 
    >[!NOTE]
    >
-   > 若要瞭解有關設定電子郵件端點的詳細資訊，請按一下[設定電子郵件端點]。[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-65/content/forms/administrator-help/configuring-email-endpoints.html?lang=zh-Hant)
+   > 若要瞭解有關設定電子郵件端點的詳細資訊，請按一下[設定電子郵件端點]。[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-65/content/forms/administrator-help/configuring-email-endpoints.html)
 
 ## 疑難排解 {#troubleshooting}
 

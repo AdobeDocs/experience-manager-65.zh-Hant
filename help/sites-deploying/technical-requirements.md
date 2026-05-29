@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: b8be2ca14bdc6c6f21a2a33c893841a9aa201112
+source-git-commit: 4cdf38284c195122307926f759fa6c60c5cd62af
 workflow-type: tm+mt
-source-wordcount: '3746'
+source-wordcount: '3790'
 ht-degree: 5%
 
 ---
@@ -470,7 +470,7 @@ AEM Dynamic Media預設為停用。 請參閱此處[啟用Dynamic Media](/help/a
    <th><p><strong>支援的格式可轉換成PDF</strong></p> </th>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/tw/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat Pro DC</a>最新版本</td>
+   <td><a href="https://helpx.adobe.com/tw/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat Pro DC</a> （連續追蹤，最新版本）</td>
    <td>XPS、影像格式(BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC)、HTML和HTM</td>
   </tr>
 
@@ -492,7 +492,7 @@ OpenOffice 4.1.15 </td>
 >[!NOTE]
 >
 >* PDF Generator僅支援英文、法文、德文和日文版本的支援作業系統和應用程式。
->* PDF Generator需要32位元Adobe Acrobat Pro DC和Microsoft® Office Professional Plus來執行轉換。
+>* PDF Generator需要支援的32位元Windows建置版本Adobe Acrobat Pro DC （持續追蹤，最新版本），以進行Acrobat驅動的原生轉換，以及32位元Microsoft® Office Professional Plus，以進行Microsoft® Windows上的Office轉換。 如需Acrobat Pro DC的安裝與功能限制授權(FRL)，請參閱檔案服務安裝文章中的[安裝Adobe Acrobat Pro DC](../forms/using/install-configure-document-services.md#install-adobe-acrobat-pro-dc)。
 >* ® Office Professional Plus安裝可能會使用零售或MAK/KMS/AD型大量授權。
 >* 如果® Office安裝因任何原因而停用或取消授權（例如磁碟區授權安裝無法在指定期間內找到KMS主機），轉換可能會失敗，直到安裝重新授權並重新啟用為止。
 >* PDF Generator不支援Microsoft® Office 365。
