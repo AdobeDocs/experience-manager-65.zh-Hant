@@ -8,7 +8,7 @@ feature: Adaptive Forms,Foundation Components
 exl-id: 2a237f74-fdfc-4e28-841c-f69afb7b99cf
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: 20ee89572d58ade43d899b9292497717cb82c8b2
+source-git-commit: fb26d0c08644f8b84e406adeb7fb14496e8e9fd0
 workflow-type: tm+mt
 source-wordcount: '1388'
 ht-degree: 43%
@@ -19,11 +19,11 @@ ht-degree: 43%
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/forms/integrate/services/embed-adaptive-form-core-components-external-web-page) |
+| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/integrate/services/embed-adaptive-form-core-components-external-web-page) |
 | AEM 6.5 | 本文章 |
 
 
-<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hant)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。 這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。 本文介紹使用基礎元件製作最適化Forms的舊方法。</span>
+<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。 這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。 本文介紹使用基礎元件製作最適化Forms的舊方法。</span>
 
 你可以[在 AEM Sites 頁面嵌入調適型表單](/help/forms/using/embed-adaptive-form-aem-sites.md)或在 AEM 外部託管的網頁嵌入調適型表單。 嵌入式調適型表單功能齊全，使用者無需離開頁面即可填寫並提交表單。 此功能可幫助使用者在網頁維持相關的其他元素，並同時與表單進行互動。
 
@@ -39,7 +39,7 @@ ht-degree: 43%
 
 您可以在網頁中插入幾行 JavaScript 來嵌入調適型表單。 代碼中的 API 會向 AEM 伺服器發送 HTTP 請求以獲得調適型表單資源，並將調適型表單注入指定的表單容器中。
 
-嵌入調適型表單：
+若要內嵌最適化表單：
 
 1. 使用以下代碼在您的網站上建立網頁：
 
@@ -144,7 +144,7 @@ window.guideBridge.connect(function () {
 https://publish.example.com/content/forms/af/my-form/jcr:content/guideContainer.af.submit.jsp
 ```
 
-當AEM伺服器和網頁位於不同的網域時，您也必須在AEM發佈執行個體上設定CORS。 執行[啟用AEM Forms以將最適化表單提供給跨網域網站](#cross-site)一節中列出的步驟。
+當AEM伺服器和網頁位於不同的網域時，您也必須在AEM發佈執行個體上設定CORS。 執行[啟用AEM Forms以將最適化表單提供給跨網域網站](#enable-aem-forms-to-serve-adaptive-forms-to-a-cross-domain-site-cross-site)一節中列出的步驟。
 
 ## 範例拓撲 {#sample-topology}
 
@@ -193,8 +193,8 @@ ProxyPassReverse /content https://<AEM_Instance>/content
 
 * 確保網頁 CSS 定義的樣式規則與表單物件 CSS 不衝突。 若要避免衝突，您可以使用AEM使用者端資料庫，重複使用最適化表單主題中的網頁CSS。 如需在最適化表單主題中使用使用者端資料庫的資訊，請參閱AEM Forms中的[主題](../../forms/using/themes.md)。
 * 讓網頁中的表單容器使用整個視窗寬度。 這樣可確保為行動裝置設定的 CSS 規則可使用，而無需任何變更。 如果表單容器未採用完整的視窗寬度，您必須撰寫自訂CSS，讓表單能適應不同的行動裝置。
-* 使用 `[getData](https://helpx.adobe.com/tw/experience-manager/6-3/forms/javascript-api/GuideBridge.html)` API，取得用戶端以 XML 或 JSON 表示的表單資料。
-* 使用 `[unloadAdaptiveForm](https://helpx.adobe.com/tw/experience-manager/6-3/forms/javascript-api/GuideBridge.html)` API 從 HTML DOM 卸載調適型表單。
+* 使用 `[getData](https://helpx.adobe.com/experience-manager/6-3/forms/javascript-api/GuideBridge.html)` API，取得用戶端以 XML 或 JSON 表示的表單資料。
+* 使用 `[unloadAdaptiveForm](https://helpx.adobe.com/experience-manager/6-3/forms/javascript-api/GuideBridge.html)` API 從 HTML DOM 卸載調適型表單。
 * 設定從AEM伺服器傳送回應時的存取控制來源標頭。
 
 ## 啟用AEM Forms以向跨網域網站提供最適化表單 {#cross-site}
@@ -221,3 +221,4 @@ ProxyPassReverse /content https://<AEM_Instance>/content
 1. 在允許的主機欄位中，指定網頁所在的網域。 這樣可讓主機向 AEM 伺服器發送 POST 請求。 您還可以使用規則運算式來指定一系列的外部應用程式網域。
 
 >[!ENDTABS]
+
