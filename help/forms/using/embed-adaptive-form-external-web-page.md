@@ -8,7 +8,7 @@ feature: Adaptive Forms,Foundation Components
 exl-id: 2a237f74-fdfc-4e28-841c-f69afb7b99cf
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: 20ee89572d58ade43d899b9292497717cb82c8b2
+source-git-commit: fb26d0c08644f8b84e406adeb7fb14496e8e9fd0
 workflow-type: tm+mt
 source-wordcount: '1388'
 ht-degree: 43%
@@ -39,7 +39,7 @@ ht-degree: 43%
 
 您可以在網頁中插入幾行 JavaScript 來嵌入調適型表單。 代碼中的 API 會向 AEM 伺服器發送 HTTP 請求以獲得調適型表單資源，並將調適型表單注入指定的表單容器中。
 
-嵌入調適型表單：
+若要內嵌最適化表單：
 
 1. 使用以下代碼在您的網站上建立網頁：
 
@@ -144,7 +144,7 @@ window.guideBridge.connect(function () {
 https://publish.example.com/content/forms/af/my-form/jcr:content/guideContainer.af.submit.jsp
 ```
 
-當AEM伺服器和網頁位於不同的網域時，您也必須在AEM發佈執行個體上設定CORS。 執行[啟用AEM Forms以將最適化表單提供給跨網域網站](#cross-site)一節中列出的步驟。
+當AEM伺服器和網頁位於不同的網域時，您也必須在AEM發佈執行個體上設定CORS。 執行[啟用AEM Forms以將最適化表單提供給跨網域網站](#enable-aem-forms-to-serve-adaptive-forms-to-a-cross-domain-site-cross-site)一節中列出的步驟。
 
 ## 範例拓撲 {#sample-topology}
 
@@ -221,3 +221,4 @@ ProxyPassReverse /content https://<AEM_Instance>/content
 1. 在允許的主機欄位中，指定網頁所在的網域。 這樣可讓主機向 AEM 伺服器發送 POST 請求。 您還可以使用規則運算式來指定一系列的外部應用程式網域。
 
 >[!ENDTABS]
+
