@@ -9,9 +9,9 @@ role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,AEM Forms on JEE,Platform Matrix
-source-git-commit: 4cdf38284c195122307926f759fa6c60c5cd62af
+source-git-commit: ca3f909f4085537a085fd4c8d92f4dcef66f1cab
 workflow-type: tm+mt
-source-wordcount: '3958'
+source-wordcount: '3839'
 ht-degree: 3%
 
 ---
@@ -106,8 +106,8 @@ Adobe建議使用這些設定，並在標準軟體維護合約中提供完整或
 
 >[!NOTE]
 >
->為協助AEM Forms客戶降低擁有成本、簡化部署架構，並匯入最新的開發棧疊，Adobe Experience Manager企業平台正從應用程式伺服器式部署轉向獨立的OSGi式部署。 Adobe透過縮減的基礎架構元件矩陣，持續支援AEM Forms JEE棧疊。
-><br>>隨著版本6.5的發佈，Adobe客戶中最少使用量的基礎結構元件將不再受到支援，如下所示：
+>為協助AEM Forms客戶降低擁有成本、簡化部署架構，並匯入最新的開發棧疊，Adobe Experience Manager企業平台正從應用程式伺服器式部署轉向獨立的OSGi式部署。Adobe透過縮減的基礎架構元件矩陣，持續支援AEM Forms JEE棧疊。
+><br>>自6.5版起，不再支援Adobe客戶使用量最低的基礎結構元件，如下所示：
 >
 > - ® DB2®資料庫
 > - ® AIX®和Sun Solaris™作業系統
@@ -420,7 +420,7 @@ Adobe Experience Manager Forms需要由Java™開發套件(JDK)散發提供的Ja
 1. JEE上的AEM Forms不支援SUSE® Linux® Enterprise Server 12上的JBoss®。 SUSE® Linux® Enterprise Server 12僅支援IBM® WebSphere®。
 1. 除Oracle Java™ SE外，JEE上的AEM Forms不支援任何具®JBoss的JDK。
 1. JEE上的AEM Forms不支援IBM® JDK以外的任何IBM® WebSphere® JDK。
-1. CRX-repository支援TarMK、MongoDB和關聯式資料庫(RDBMK)型別的持續性。 應用程式伺服器和CRX-repository之間不能有兩個不同的資料庫系統。 不過，在JEE環境上的AEM Forms上，您可以使用MongoMK搭配CRX-repository，以及支援的關聯式資料庫搭配應用程式伺服器。
+1. CRX-repository支援TarMK、MongoDB和關聯式資料庫(RDBMK)型別的持續性。應用程式伺服器和CRX-repository之間不能有兩個不同的資料庫系統。不過，在JEE環境上的AEM Forms上，您可以使用MongoMK搭配CRX-repository，以及支援的關聯式資料庫搭配應用程式伺服器。
 @@ -432,12 +359,12 @@選擇平台以設定AEM F時，請考量下列例外
 1. WebLogic伺服器不支援高於1.8.0_281的JDK版本。 (FORMS-8498)
 1. JDK 11.0.20不支援在JEE安裝程式上安裝AEM Forms。 僅支援JDK 11.0.19或較舊版本以在JEE安裝程式上安裝AEM Forms。
