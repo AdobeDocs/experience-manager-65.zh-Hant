@@ -9,9 +9,9 @@ exl-id: f82391d7-e30d-48d2-8f66-88fcae3dfb5f
 solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: d4b1cd8bc04ea21378c8084f4fac8cd66d6c1d3c
 workflow-type: tm+mt
-source-wordcount: '2072'
+source-wordcount: '2079'
 ht-degree: 6%
 
 ---
@@ -19,11 +19,11 @@ ht-degree: 6%
 
 # 設定搜尋表單{#configuring-search-forms}
 
-使用&#x200B;**搜尋Forms**&#x200B;來自訂搜尋面板中所使用的搜尋述詞選擇，這些面板可用於各種AEM主控台及/或製作環境的面板。 自訂這些面板可讓搜尋功能根據您的特定需求而通用。
+使用&#x200B;**搜尋Forms**&#x200B;來自訂搜尋面板所使用的搜尋述詞選擇，這些面板可用於各種AEM主控台及/或製作環境的面板。 自訂這些面板可讓搜尋功能根據您的特定需求而通用。
 
 [範圍的述詞](#predicates-and-their-settings)是現成可用的。 您可以新增多個述詞，包括（其中包括）屬性述詞，以搜尋符合您指定之單一屬性的資產。 或者，使用「選項」述詞來搜尋符合您為特定屬性指定的一或多個值的資產。
 
-您可以[設定用於各種主控台和資產瀏覽器（編輯頁面時）的搜尋表單](#configuring-your-search-forms)。 設定這些表單[&#128279;](#configuring-your-search-forms)的對話方塊可透過下列方式存取：
+您可以[設定用於各種主控台和資產瀏覽器（編輯頁面時）的搜尋表單](#configuring-your-search-forms)。 設定這些表單](#configuring-your-search-forms)的[對話方塊可透過下列方式存取：
 
 * **工具**
 
@@ -63,7 +63,7 @@ ht-degree: 6%
 
   此設定會定義在資產瀏覽器中搜尋產品時（編輯頁面時）可用的選項。
 
-* **頁面編輯器(Dynamic Media Classic [先前為Scene7]搜尋)**：
+* **頁面編輯器（Dynamic Media Classic [先前的Scene7]搜尋）**：
 
   此設定會定義在資產瀏覽器中搜尋Scene7資源（編輯頁面時）時可用的選項。
 
@@ -244,7 +244,7 @@ ht-degree: 6%
    <td>無</td>
   </tr>
   <tr>
-   <td>Publish狀態 </td>
+   <td>發佈狀態 </td>
    <td>根據資產的發佈狀態來搜尋資產</td>
    <td>
     <ul>
@@ -286,13 +286,13 @@ ht-degree: 6%
     </ul> </td>
   </tr>
   <tr>
-   <td>相對日期 </td>
+   <td>相對時間 </td>
    <td>根據資產的建立相對日期搜尋資產<br /> </td>
    <td>
     <ul>
      <li>欄位標籤</li>
      <li>屬性名稱*</li>
-     <li>相對日期</li>
+     <li>相對時間</li>
      <li>說明</li>
     </ul> </td>
   </tr>
@@ -343,7 +343,7 @@ ht-degree: 6%
 
 ### 述詞設定 {#predicate-settings}
 
-視述詞而定，以下是可用於設定的設定選擇：
+視述詞而定，有一組設定可供設定：
 
 * **欄位標籤**
 
@@ -365,7 +365,7 @@ ht-degree: 6%
 
 * **屬性深度**
 
-  在資源中搜尋該屬性的最大深度。 因此，可針對資源及遞回子項執行該屬性的搜尋，直到子項的層級等於指定的深度為止。
+  在資源中搜尋該屬性的最大深度。 因此，可針對資源及遞回子系執行該屬性的搜尋，直到子系的層級等於指定的深度為止。
 
 * **屬性值**
 
@@ -386,15 +386,15 @@ ht-degree: 6%
   `(jcr:primaryType = nt:unstructured, value (String), jcr:title (String))`
 
 * **選項節點路徑**
-實際上與&#x200B;**選項路徑**&#x200B;相同，只有這個在通用述詞欄位中，其他則專用於資產。
+實際上與**選項路徑**&#x200B;相同，只是這個在通用述詞欄位中，另一個則專用於資產。
 
 * **單選**
 如果勾選，選項會呈現為僅允許單一選取的核取方塊。 如果錯誤地選取了，則可取消選取核取方塊。
 
-* **Publish和即時副本屬性名稱**
+* **發佈和即時副本屬性名稱**
 網站特定述詞的發佈和即時副本核取方塊的標籤。
 
-* **設定**&#x200B;索引標籤中欄位標籤上的&amp;amp；ast；表示欄位為必填，若保留為空白，則會出現錯誤訊息。
+* **設定**&#x200B;索引標籤中欄位標籤上的&amp;ast；表示欄位為必要欄位，若保留為空白，則會出現錯誤訊息。
 
 ## 設定搜尋Forms {#configuring-your-search-forms}
 
@@ -435,7 +435,7 @@ ht-degree: 6%
 
    例如，**日期範圍述詞**&#x200B;的設定：
 
-   日期範圍述詞![&#128279;](assets/chlimage_1-376.png)的屬性
+   日期範圍述詞](assets/chlimage_1-376.png)的![屬性
 
 1. 視需要進行變更，並透過&#x200B;**完成**&#x200B;確認。
 
@@ -468,7 +468,7 @@ ht-degree: 6%
 
 >[!NOTE]
 >
->您無法刪除任一預設組態。
+>您無法刪除任何預設設定。
 
 從主控台刪除自訂設定完成：
 
@@ -553,7 +553,7 @@ ht-degree: 6%
   </tr>
   <tr>
    <td>預覽</td>
-   <td><code>/var/dam/content</code>節點的讀取、寫入、刪除許可權。<code>/apps</code>節點上的<br />讀取、寫入許可權。</td>
+   <td><code>/var/dam/content</code>節點的讀取、寫入、刪除許可權。<br /> <code>/apps</code>節點的讀取、寫入許可權。</td>
   </tr>
  </tbody>
 </table>
