@@ -9,9 +9,9 @@ exl-id: 2cf3ac3f-ee17-480d-a32a-c57631502693
 solution: Experience Manager, Experience Manager Sites
 feature: Configuring
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+source-git-commit: f6a903263eca2c412c6ca9af2f5e51ea1c5878aa
 workflow-type: tm+mt
-source-wordcount: '702'
+source-wordcount: '701'
 ht-degree: 1%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 1%
 
 `/libs/wcm/core/config.author/com.day.cq.wcm.undo.UndoConfig`
 
-此節點包含`cq.wcm.undo.whitelist`和`cq.wcm.undo.blacklist`屬性，其他屬性會採用預設值。
+此節點包含`cq.wcm.undo.whitelist`和`cq.wcm.undo.blacklist`屬性。 對於其他屬性，則採用預設值。
 
 >[!CAUTION]
 >
@@ -108,10 +108,10 @@ ht-degree: 1%
    * **預設**： `flash`
    * **類型**：`String`
 
-* **好元件**
+* **個良好的元件**
 ( `cq.wcm.undo.whitelist`)
 
-   * **說明**：您想要受復原和重做命令影響的元件清單。 當元件路徑可透過還原/重做正常運作時，將其新增至此清單。 附加星號(&amp;amp；ast；)以指定一組元件：
+   * **說明**：您想要受復原和重做命令影響的元件清單。 當元件路徑可透過還原/重做正常運作時，將其新增至此清單。 附加星號(&amp;ast；)以指定一組元件：
 
       * 下列值會指定基礎文字元件：
 
@@ -147,3 +147,4 @@ ht-degree: 1%
 
    * **預設**：屬性已填入數個元件作業。
    * **類型**：`String[]`
+
