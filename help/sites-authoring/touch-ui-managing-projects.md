@@ -38,7 +38,7 @@ ht-degree: 2%
 請依照下列步驟建立專案。
 
 1. 在&#x200B;**專案**&#x200B;主控台中，按一下&#x200B;**建立**&#x200B;以開啟&#x200B;**建立專案**&#x200B;精靈。
-1. 選取範本並按一下[下一步] ****。 您可以在[這裡](/help/sites-authoring/projects.md#project-templates)進一步瞭解標準專案範本。
+1. 選取範本並按一下[下一步] **&#x200B;**。 您可以在[這裡](/help/sites-authoring/projects.md#project-templates)進一步瞭解標準專案範本。
 
    ![建立專案精靈](assets/create-project-wizard.png)
 
@@ -126,7 +126,7 @@ Assets會顯示在邊欄中。 完成後，使用邊欄選擇器返回正常檢�
 
    ![建立資料夾](assets/project-create-folder.png)
 
-1. 提供資料夾標題，然後按一下[建立]。****
+1. 提供資料夾標題，然後按一下[建立]。**&#x200B;**
 
 1. 資料夾會新增至主控台。
 

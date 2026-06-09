@@ -198,10 +198,10 @@ UGC的稽核對於識別正面貢獻和限制負面貢獻很有用（例如垃�
 UGC預先稽核時，帖子要等到稽核動作核准後才會出現在已發佈的網站上。 建立[社群網站](/help/communities/sites-console.md)期間，勾選[內容已預先稽核](sites-console.md#moderation)方塊可啟用整個網站的預先稽核。 將元件放置在頁面上時，可使用編輯對話方塊中的設定，將支援稽核的元件設定為可預先稽核：
 
 * [評論](comments.md)和[評論](reviews.md)
-在**[!UICONTROL 使用者稽核]** > **[!UICONTROL 預先稽核]**&#x200B;中。
+在&#x200B;**[!UICONTROL 使用者稽核]** > **[!UICONTROL 預先稽核]**&#x200B;中。
 
 * [論壇](/help/communities/forum.md)、[構思](/help/communities/ideation-feature.md)、[QnA](/help/communities/working-with-qna.md)和[行事曆](/help/communities/calendar.md)
-在**[!UICONTROL 設定]** > **[!UICONTROL 已稽核]**&#x200B;中。
+在&#x200B;**[!UICONTROL 設定]** > **[!UICONTROL 已稽核]**&#x200B;中。
 
 ### 垃圾郵件偵測 {#spam-detection}
 
