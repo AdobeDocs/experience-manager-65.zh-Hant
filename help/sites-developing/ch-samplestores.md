@@ -9,9 +9,9 @@ exl-id: d8d9a799-3e30-442a-843b-d4d7ba70c557
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,Personalization
 role: Developer
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+source-git-commit: ab939c3928068a0836674db6207d9774d6033e79
 workflow-type: tm+mt
-source-wordcount: '464'
+source-wordcount: '475'
 ht-degree: 1%
 
 ---
@@ -351,3 +351,4 @@ contexthub.datetime存放區候選專案延伸[`ContextHub.Store.PersistedJSONPS
    "authorizableId":"anonymous"
 }
 ```
+

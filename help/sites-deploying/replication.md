@@ -10,64 +10,64 @@ feature: Configuring
 exl-id: 09943de5-8d62-4354-a37f-0521a66b4c49
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: e4c42f989baf1a91e94944c612ee6b8de1dc331a
 workflow-type: tm+mt
-source-wordcount: '3363'
-ht-degree: 2%
+source-wordcount: '3334'
+ht-degree: 3%
 
 ---
 
 # 複製{#replication}
 
-復寫代理是Adobe Experience Manager (AEM)的核心，因為此機制可用於：
+復寫代理程式是Adobe Experience Manager (AEM)的核心，因為此機制可用於：
 
-* [Publish （啟動）](/help/sites-authoring/publishing-pages.md#activatingcontent)內容從作者環境移至Publish環境。
+* 從作者[發佈（啟動）](/help/sites-authoring/publishing-pages.md#activatingcontent)內容至發佈環境。
 * 明確從Dispatcher快取排清內容。
-* 將使用者輸入（例如表單輸入）從Publish環境傳回至作者環境（在作者環境的控制下）。
+* 將使用者輸入（例如表單輸入）從發佈環境傳回至作者環境（在作者環境的控制下）。
 
 請求[已排入佇列](/help/sites-deploying/osgi-configuration-settings.md#apacheslingjobeventhandler)給適當的代理程式處理。
 
 >[!NOTE]
 >
->不會在Author和Publish執行個體之間復寫使用者資料（使用者、使用者群組和使用者設定檔）。
+>使用者資料（使用者、使用者群組和使用者設定檔）不會在製作和發佈執行個體之間復寫。
 >
->針對多個Publish執行個體，啟用[使用者同步處理](/help/sites-administering/sync.md)時，使用者資料會進行Sling散發。
+>對於多個Publish執行個體，啟用[使用者同步處理](/help/sites-administering/sync.md)時，使用者資料會進行Sling散發。
 
-## 從作者復寫至Publish {#replicating-from-author-to-publish}
+## 從作者復寫至發佈 {#replicating-from-author-to-publish}
 
-復寫至Publish執行個體或Dispatcher需要幾個步驟：
+復寫至發佈執行個體或Dispatcher需要幾個步驟：
 
 * 作者要求發佈（啟動）特定內容；這可以由手動要求或預先設定的自動觸發程式啟動。
 * 此請求會傳遞至適當的預設復寫代理程式；一個環境可以有多個預設代理程式，這些代理程式一律會選取用於此類動作。
 * 復寫代理程式會「封裝」內容，並將其置於復寫佇列中。
 * 在[網站]索引標籤中，已為個別頁面設定[彩色狀態指示器](/help/sites-authoring/publishing-pages.md#determiningpagepublicationstatus)。
-* 內容會從佇列中提取，並使用設定的通訊協定傳輸至Publish環境；這通常是HTTP。
-* Publish環境中的servlet會接收要求並發佈收到的內容；預設servlet為`https://localhost:4503/bin/receive`。
+* 內容會從佇列中提取，並使用設定的通訊協定傳輸至發佈環境；這通常是HTTP。
+* 發佈環境中的servlet會接收要求並發佈接收的內容；預設servlet為`https://localhost:4503/bin/receive`。
 
-* 可以設定多個作者和Publish環境。
+* 可以設定多個作者和發佈環境。
 
 ![chlimage_1-21](assets/chlimage_1-21.png)
 
-### 從Publish復寫至作者 {#replicating-from-publish-to-author}
+### 從發佈復寫至作者 {#replicating-from-publish-to-author}
 
-部分功能可讓使用者在Publish執行個體上輸入資料。
+部分功能可讓使用者在發佈執行個體上輸入資料。
 
-有時候，您需要使用稱為反向復寫的復寫型別，將此資料傳回至製作環境，再從此處重新分配至其他Publish環境。 基於安全性考量，從Publish到製作環境的任何流量都必須受到嚴格控制。
+有時候，需要有一種稱為反向復寫的復寫型別，將此資料傳回至製作環境，再從此處重新分配至其他發佈環境。 基於安全性考量，從發佈到製作環境的任何流量都必須受到嚴格控制。
 
-反向復寫會在Publish環境中使用參照製作環境的代理程式。 此代理程式會將資料放入寄件匣。 此寄件匣與製作環境中的復寫接聽程式相符。 監聽器會輪詢寄件匣，以收集輸入的任何資料，然後視需要加以散發。 這可確保作者環境可控制所有流量。
+反向復寫會在參照製作環境的發佈環境中使用代理程式。 此代理程式會將資料放入寄件匣。 此寄件匣與製作環境中的復寫接聽程式相符。 監聽器會輪詢寄件匣，以收集輸入的任何資料，然後視需要加以散發。 這可確保作者環境可控制所有流量。
 
-在其他情況下，例如對於Communities功能（例如論壇、部落格、評論和評論），在Publish環境中輸入的使用者產生內容(UGC)量，很難使用復寫在AEM執行個體之間有效同步。
+在其他情況下，例如對於Communities功能（例如論壇、部落格、評論和評論），在發佈環境中輸入的使用者產生內容(UGC)量，很難使用復寫在AEM執行個體之間有效同步。
 
-AEM [社群](/help/communities/overview.md)從未使用復寫來進行UGC。 Communities的部署需要UGC的共同存放區（請參閱[Community Content Storage](/help/communities/working-with-srp.md)）。
+AEM [社群](/help/communities/overview.md)從未使用針對UGC的復寫。 Communities的部署需要UGC的共同存放區（請參閱[Community Content Storage](/help/communities/working-with-srp.md)）。
 
 ### 復寫 — 立即可用 {#replication-out-of-the-box}
 
 AEM標準安裝中包含的We-Retail網站可用於說明復寫。
 
-若要遵循此範例並使用預設的復寫代理程式，[安裝AEM](/help/sites-deploying/deploy.md)，包含：
+若要遵循此範例並使用預設的復寫代理程式，[安裝AEM](/help/sites-deploying/deploy.md)並包含：
 
 * 連線埠`4502`上的作者環境
-* 連線埠`4503`上的Publish環境
+* 通訊埠`4503`上的發佈環境
 
 >[!NOTE]
 >
@@ -75,28 +75,28 @@ AEM標準安裝中包含的We-Retail網站可用於說明復寫。
 >
 >* 作者上的代理程式：預設代理程式（發佈）
 >
->預設有效停用(自AEM 6.1起) ：
+>預設會有效停用（自AEM 6.1起） ：
 >
 >* 製作代理程式：反向復寫代理程式(publish_reverse)
->* Publish上的代理程式：反向復寫（寄件匣）
+>* 發佈代理程式：反向復寫（寄件匣）
 >
 >若要檢查代理程式或佇列的狀態，請使用&#x200B;**工具**&#x200B;主控台。
 >請參閱[監視您的復寫代理程式](#monitoring-your-replication-agents)。
 
-#### 復寫(製作至Publish) {#replication-author-to-publish}
+#### 復寫（作者至發佈） {#replication-author-to-publish}
 
 1. 導覽至作者環境上的支援頁面。
    **https://localhost:4502/content/we-retail/us/en/experience.html** `<pi>`
 1. 編輯頁面，以便新增一些文字。
 1. **啟動頁面**，以便發佈變更。
-1. 在Publish環境中開啟支援頁面：
+1. 在發佈環境中開啟支援頁面：
    **https://localhost:4503/content/we-retail/us/en/experience.html**
 1. 您現在可以看到您在Author上輸入的變更。
 
 系統會從製作環境執行下列動作來執行此復寫：
 
 * **預設代理程式（發佈）**
-此代理程式會將內容復寫至預設的Publish執行個體。
+此代理程式會將內容復寫至預設的發佈執行個體。
 您可以從製作環境的「工具」主控台存取此專案的詳細資訊（設定和記錄）；或：
   `https://localhost:4502/etc/replication/agents.author/publish.html`。
 
@@ -107,16 +107,16 @@ AEM標準安裝中包含的We-Retail網站可用於說明復寫。
 * [預設代理程式](#replication-author-to-publish)
 用於從Author復寫至Publish。
 
-* Dispatcher Flush
+* Dispatcher 排清
 此項用於管理Dispatcher快取。 如需詳細資訊，請參閱[使編寫環境中的Dispatcher快取失效](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html?lang=zh-Hant#invalidating-dispatcher-cache-from-the-authoring-environment)和[使發佈執行個體中的Dispatcher快取失效](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html?lang=zh-Hant#invalidating-dispatcher-cache-from-a-publishing-instance)。
 
 * [反向復寫](#reverse-replication-publish-to-author)
-用於從Publish復寫至作者。 反向復寫不適用於Communities功能，例如論壇、部落格和評論。 由於未啟用寄件匣，因此此功能實際上已停用。 使用反向復寫需要自訂設定。
+用於從發佈復寫至作者。 反向復寫不適用於Communities功能，例如論壇、部落格和評論。 由於未啟用寄件匣，因此此功能實際上已停用。 使用反向復寫需要自訂設定。
 
 * 靜態代理程式
 這是「將節點的靜態表示儲存到檔案系統中的代理程式」。
-例如，使用預設設定時，內容頁面和DAM資產會以HTML或適當的資產格式儲存在`/tmp`下。 檢視設定的`Settings`和`Rules`標籤。
-已要求此專案，以便當直接從應用程式伺服器要求頁面時，可以看到內容。 這是專門的代理程式，（可能）在大多數執行個體中並非必要。
+例如，使用預設設定時，內容頁面和DAM資產會以HTML或適當資產格式的形式儲存在`/tmp`下。檢視設定的`Settings`和`Rules`標籤。
+已要求此專案，以便當直接從應用程式伺服器要求頁面時，可以看到內容。這是專門的代理程式，（可能）在大多數執行個體中並非必要。
 
 ## 復寫代理程式 — 設定引數 {#replication-agents-configuration-parameters}
 
@@ -160,7 +160,7 @@ AEM標準安裝中包含的We-Retail網站可用於說明復寫。
   根據環境，代理程式會使用此使用者帳戶來：
 
    * 從製作環境收集內容並封裝
-   * 在Publish環境中建立及撰寫內容
+   * 在發佈環境中建立和寫入內容
 
   將此欄位保留空白以使用系統使用者帳戶（在sling中定義為管理員使用者的帳戶；預設為`admin`）。
 
@@ -170,7 +170,7 @@ AEM標準安裝中包含的We-Retail網站可用於說明復寫。
 
   >[!CAUTION]
   >
-  >對於Publish環境上的代理程式，此帳戶&#x200B;*必須*&#x200B;具有復寫內容所需的建立/寫入許可權。
+  >對於發佈環境上的代理程式，此帳戶&#x200B;*必須*&#x200B;具有復寫內容所需的建立/寫入許可權。
 
   >[!NOTE]
   >
@@ -188,7 +188,7 @@ AEM標準安裝中包含的We-Retail網站可用於說明復寫。
 
 * **用於反向復寫**
 
-  指出此代理程式是否用於反向復寫；將使用者輸入從Publish傳回至作者環境。
+  指出此代理程式是否用於反向復寫；從發佈環境傳回使用者輸入至製作環境。
 
 * **別名更新**
 
@@ -207,7 +207,7 @@ AEM標準安裝中包含的We-Retail網站可用於說明復寫。
 
   此處指定的通訊協定（HTTP或HTTPS）會決定傳輸方法。
 
-  對於Dispatcher Flush代理程式，只有當您使用以路徑為根據的虛擬主機專案來區分陣列時，才會使用URI屬性，而您會使用此欄位來鎖定要失效的陣列。 例如，陣列 #1 的虛擬主機為 `www.mysite.com/path1/*`，而陣列 #2 的虛擬主機為 `www.mysite.com/path2/*`。您可以使用URL `/path1/invalidate.cache`來鎖定第一個伺服器陣列，並使用`/path2/invalidate.cache`來鎖定第二個伺服器陣列。
+  對於Dispatcher Flush代理程式，只有當您使用以路徑為根據的虛擬主機專案來區分陣列時，才會使用URI屬性，而您會使用此欄位來鎖定要失效的陣列。 例如，陣列 #1 的虛擬主機為 `www.mysite.com/path1/*`，而陣列 #2 的虛擬主機為 `www.mysite.com/path2/*`。 您可以使用 URL `/path1/invalidate.cache` 鎖定第一個陣列，並使用 `/path2/invalidate.cache` 鎖定第二個陣列。
 
 * **使用者**
 
@@ -219,11 +219,11 @@ AEM標準安裝中包含的We-Retail網站可用於說明復寫。
 
 * **NTLM網域**
 
-  NTML驗證的網域。
+  NTLM驗證的網域。
 
 * **NTLM主機**
 
-  NTML驗證的主機。
+  NTLM驗證的主機。
 
 * **啟用寬鬆SSL**
 
@@ -273,7 +273,7 @@ AEM標準安裝中包含的We-Retail網站可用於說明復寫。
 
   要使用的HTTP方法。
 
-  對於Dispatcher Flush代理程式，這幾乎一律為GET且不應變更(POST是另一個可能的值)。
+  對於Dispatcher Flush代理程式，這幾乎一律為GET且不應變更（POST可能是另一個可能的值）。
 
 * **HTTP標頭**
 
@@ -295,7 +295,7 @@ AEM標準安裝中包含的We-Retail網站可用於說明復寫。
 
   >[!NOTE]
   >
-  >如果您在建議預設內容以外的內容中安裝了AEM，則必須在HTTP標頭中註冊該內容。 例如：
+  >如果您已在非建議預設內容的內容中安裝AEM，則您必須在HTTP標頭中註冊該內容。例如：
   >`CQ-Handle:/<*yourContext*>{path}`
 
 * **關閉連線**
@@ -348,15 +348,15 @@ AEM標準安裝中包含的We-Retail網站可用於說明復寫。
 
 ## 設定復寫代理 {#configuring-your-replication-agents}
 
-如需有關使用MSSL將復寫代理程式連線到Publish執行個體的資訊，請參閱[使用雙向SSL復寫](/help/sites-deploying/mssl-replication.md)。
+如需有關使用MSSL將復寫代理程式連線到發佈執行個體的資訊，請參閱[使用雙向SSL復寫](/help/sites-deploying/mssl-replication.md)。
 
 ### 從製作環境設定復寫代理 {#configuring-your-replication-agents-from-the-author-environment}
 
-在製作環境的「工具」標籤中，您可以設定位於製作環境（**製作代理程式**）或Publish環境(**Publish代理程式**)中的復寫代理程式。 以下程式說明為Author環境設定代理程式，但可用於兩者。
+在製作環境的[工具]索引標籤中，您可以設定位於製作環境（**製作代理程式**）或發佈環境（**發佈代理程式**）中的復寫代理程式。 以下程式說明為Author環境設定代理程式，但可用於兩者。
 
 >[!NOTE]
 >
->當Dispatcher處理製作或Publish例項的HTTP請求時，復寫代理程式的HTTP請求必須包含PATH標頭。 除了下列程式外，您必須將PATH標頭新增到Dispatcher的使用者端標頭清單。 請參閱[/clientheaders (Client Headers)](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant#specifying-the-http-headers-to-pass-through-clientheaders)。
+>當Dispatcher處理製作或發佈執行個體的HTTP請求時，來自復寫代理程式的HTTP請求必須包含PATH標頭。 除了下列程式外，您必須將PATH標頭新增到Dispatcher的使用者端標頭清單。 請參閱[/clientheaders (Client Headers)](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant#specifying-the-http-headers-to-pass-through-clientheaders)。
 >
 
 1. 存取AEM中的&#x200B;**工具**&#x200B;索引標籤。
@@ -377,44 +377,44 @@ AEM標準安裝中包含的We-Retail網站可用於說明復寫。
 
 ### 設定反向復寫 {#configuring-reverse-replication}
 
-反向復寫用於將在Publish執行個體上產生的使用者內容取回到Author執行個體。 這通常用於調查和登錄檔單等功能。
+反向復寫是用來將發佈執行個體上產生的使用者內容傳回作者執行個體。 這通常用於調查和登錄檔單等功能。
 
 基於安全理由，大多數網路拓撲不允許連線&#x200B;*來自*&#x200B;的「非軍事區域」（將外部服務公開給不受信任的網路，例如網際網路的子網路）。
 
-由於Publish環境通常位於DMZ，若要將內容傳回製作環境，必須從製作執行個體起始連線。 這是透過下列專案完成的：
+由於發佈環境通常位於DMZ，若要將內容取回製作環境，必須從製作執行個體起始連線。 這是透過下列專案完成的：
 
-* 內容所在的Publish環境中的&#x200B;*寄件匣*。
+* 內容所在的發佈環境中的&#x200B;*寄件匣*。
 * 製作環境中的代理程式（發佈），會定期輪詢寄件匣以尋找新內容。
 
 >[!NOTE]
 >
->對於AEM [Communities](/help/communities/overview.md)，復寫不會用於Publish執行個體上使用者產生的內容。 請參閱[社群內容存放區](/help/communities/working-with-srp.md)。
+>對於AEM [Communities](/help/communities/overview.md)，復寫不適用於發佈執行個體上使用者產生的內容。 請參閱[社群內容存放區](/help/communities/working-with-srp.md)。
 
 若要這麼做，您需要：
 
-**作者環境中的反向復寫代理程式** — 作為作用中元件，從Publish環境中的寄件匣收集資訊：
+**作者環境中的反向復寫代理程式** — 作為作用中元件，從發佈環境中的寄件匣收集資訊：
 
 如果您想要使用反向復寫，請確定此代理程式已啟用。
 
 ![chlimage_1-23](assets/chlimage_1-23.png)
 
-**Publish環境中的反向復寫代理程式（寄件匣）** — 當做寄件匣時的被動元素。 使用者輸入會放置在這裡，由代理程式在製作環境中收集。
+**發佈環境（寄件匣）中的反向復寫代理程式** — 當做寄件匣時的被動元素。 使用者輸入會放置在這裡，由代理程式在製作環境中收集。
 
 ![chlimage_1-1](assets/chlimage_1-1.jpeg)
 
-### 為多個Publish執行個體設定復寫 {#configuring-replication-for-multiple-publish-instances}
+### 為多個發佈執行個體設定復寫 {#configuring-replication-for-multiple-publish-instances}
 
 >[!NOTE]
 >
 >僅複製內容 — 不複製使用者資料（使用者、使用者群組和使用者設定檔）。
 >
->若要同步多個Publish執行個體的使用者資料，請啟用[使用者同步處理](/help/sites-administering/sync.md)。
+>若要同步處理多個發佈執行個體的使用者資料，請啟用[使用者同步處理](/help/sites-administering/sync.md)。
 
-安裝後，已設定預設代理程式，以便將內容復寫至在localhost的連線埠4503上執行的Publish執行個體。
+安裝後，已設定預設代理程式，以便將內容復寫至在localhost的連線埠4503上執行的發佈執行個體。
 
-若要為其他Publish執行個體設定內容復寫，請建立和設定新的復寫代理程式：
+若要設定其他發佈執行個體的內容復寫，請建立並設定新的復寫代理程式：
 
-1. 在AEM中開啟&#x200B;**工具**&#x200B;索引標籤。
+1. 開啟AEM中的&#x200B;**工具**&#x200B;標籤。
 1. 在左側面板中選取&#x200B;**復寫**，然後選取&#x200B;**作者代理程式**。
 1. 選取&#x200B;**新增……**。
 1. 設定&#x200B;**標題**&#x200B;和&#x200B;**名稱**，然後選取&#x200B;**復寫代理程式**。
@@ -432,8 +432,7 @@ AEM標準安裝中包含的We-Retail網站可用於說明復寫。
 
    * 在&#x200B;**傳輸**&#x200B;索引標籤中：
 
-      * 輸入新Publish執行個體所需的URI；例如，
-
+      * 輸入新發佈執行個體的必要URI；例如，
         `https://localhost:4504/bin/receive`。
 
       * 輸入用於復寫的站台特定使用者帳戶。
@@ -443,16 +442,16 @@ AEM標準安裝中包含的We-Retail網站可用於說明復寫。
 
 接著，您可以在作者環境中更新，然後發佈頁面，以測試操作。
 
-更新會顯示在已如上設定的所有Publish執行個體上。
+更新會顯示在已依上述方式設定的所有發佈執行個體上。
 
-如果您遇到任何問題，可以檢視Author執行個體上的記錄。 視所需的詳細程度而定，您也可以使用上述&#x200B;**代理程式設定**&#x200B;對話方塊，將&#x200B;**記錄層級**&#x200B;設定為`Debug`。
+如果您遇到任何問題，可以檢視Author執行個體上的記錄。 視所需的詳細程度而定，您也可以使用上述&#x200B;**代理程式設定**&#x200B;對話方塊將&#x200B;**記錄層級**&#x200B;設定為`Debug`。
 
 >[!NOTE]
 >
->這可以結合使用[代理程式使用者ID](#agentuserid)來選取不同的內容，以復寫至個別的Publish環境。 針對每個Publish環境：
+>這可以結合使用[代理程式使用者ID](#agentuserid)來選取不同的內容，以復寫至個別的發佈環境。 對於每個發佈環境：
 >
->1. 設定復寫代理以復寫至該Publish環境。
->1. 設定使用者帳戶；具有讀取復寫至該特定Publish環境的內容所需的存取許可權。
+>1. 設定復寫代理以復寫至該發佈環境。
+>1. 設定具有讀取復寫至該特定發佈環境之內容所需存取許可權的使用者帳戶。
 >1. 將使用者帳戶指派為復寫代理程式的&#x200B;**代理程式使用者識別碼**。
 >
 
@@ -460,9 +459,9 @@ AEM標準安裝中包含的We-Retail網站可用於說明復寫。
 
 預設代理程式會包含在安裝中。 不過，您仍需要特定設定，如果您定義新的代理程式，也同樣適用：
 
-1. 在AEM中開啟&#x200B;**工具**&#x200B;索引標籤。
+1. 開啟AEM中的&#x200B;**工具**&#x200B;標籤。
 1. 按一下&#x200B;**部署**。
-1. 選取&#x200B;**復寫**，然後選取Publish **上的**&#x200B;代理程式。
+1. 選取&#x200B;**復寫**，然後選取發佈&#x200B;**上的**&#x200B;代理程式。
 1. 連按兩下&#x200B;**Dispatcher Flush**&#x200B;專案以開啟概覽。
 1. 按一下&#x200B;**編輯** - **代理程式設定**&#x200B;對話方塊開啟：
 
@@ -476,23 +475,22 @@ AEM標準安裝中包含的We-Retail網站可用於說明復寫。
 
    * 在&#x200B;**傳輸**&#x200B;索引標籤中：
 
-      * 輸入新Publish執行個體所需的URI；例如，
-
+      * 輸入新發佈執行個體的必要URI；例如，
         `https://localhost:80/dispatcher/invalidate.cache`。
 
       * 輸入用於復寫的站台特定使用者帳戶。
       * 您可以視需要設定其他引數。
 
-   對於Dispatcher Flush代理程式，只有當您使用以路徑為根據的虛擬主機專案來區分陣列時，才會使用URI屬性，而您會使用此欄位來鎖定要失效的陣列。 例如，陣列 #1 的虛擬主機為 `www.mysite.com/path1/*`，而陣列 #2 的虛擬主機為 `www.mysite.com/path2/*`。您可以使用URL `/path1/invalidate.cache`來鎖定第一個伺服器陣列，並使用`/path2/invalidate.cache`來鎖定第二個伺服器陣列。
+   對於Dispatcher Flush代理程式，只有當您使用以路徑為根據的虛擬主機專案來區分陣列時，才會使用URI屬性，而您會使用此欄位來鎖定要失效的陣列。 例如，陣列 #1 的虛擬主機為 `www.mysite.com/path1/*`，而陣列 #2 的虛擬主機為 `www.mysite.com/path2/*`。 您可以使用 URL `/path1/invalidate.cache` 鎖定第一個陣列，並使用 `/path2/invalidate.cache` 鎖定第二個陣列。
 
    >[!NOTE]
    >
    >如果您已在非建議預設內容的內容中安裝AEM，請在&#x200B;**延伸**&#x200B;索引標籤中設定[HTTP標頭](#extended)。
 
 1. 按一下&#x200B;**「確定」**。
-1. 返回&#x200B;**工具**&#x200B;標籤，您可以從這裡&#x200B;**啟用** **Dispatcher Flush**&#x200B;代理程式(&lbrace;Publish上的&#x200B;**個代理程式**)。
+1. 返回&#x200B;**工具**&#x200B;標籤，您可從這裡&#x200B;**啟用** **Dispatcher Flush**&#x200B;代理程式（**發佈上的代理程式**）。
 
-**Dispatcher Flush**&#x200B;復寫代理程式在作者上未啟用。 您可以使用對等的URI （例如`https://localhost:4503/etc/replication/agents.publish/flush.html`），在Publish環境中存取相同的頁面。
+**Dispatcher Flush**&#x200B;復寫代理程式在作者上未啟用。 您可以使用對等的URI （例如，`https://localhost:4503/etc/replication/agents.publish/flush.html`）在發佈環境中存取相同的頁面。
 
 ### 控制對復寫代理程式的存取 {#controlling-access-to-replication-agents}
 
@@ -502,13 +500,13 @@ AEM標準安裝中包含的We-Retail網站可用於說明復寫。
 >
 >設定這類許可權不會影響使用者復寫內容（例如，從網站主控台或Sidekick選項）。 復寫架構在復寫頁面時，不會使用目前使用者的「使用者工作階段」來存取復寫代理。
 
-### 從CRXDE Lite設定您的復寫代理 {#configuring-your-replication-agents-from-crxde-lite}
+### 從CRXDE Lite設定復寫代理 {#configuring-your-replication-agents-from-crxde-lite}
 
 >[!NOTE]
 >
 >僅支援在`/etc/replication`存放庫位置中建立復寫代理。 必須具備此條件才能正確處理關聯的ACL。 在樹狀結構的其他位置建立復寫代理程式，可能會導致未經授權的存取。
 
-您可以使用CRXDE Lite來設定復寫代理的各種引數。
+您可以使用CRXDE Lite設定復寫代理的各種引數。
 
 如果您導覽至`/etc/replication`，您會看到下列三個節點：
 
@@ -516,7 +514,7 @@ AEM標準安裝中包含的We-Retail網站可用於說明復寫。
 * `agents.publish`
 * `treeactivation`
 
-兩個`agents`保留適當環境的組態資訊，而且只有在環境執行時才有效。 例如，`agents.publish`僅用於Publish環境。 以下熒幕擷圖顯示製作環境中的Publish代理程式(包含在AEM WCM中)：
+兩個`agents`保留適當環境的組態資訊，而且只有在環境執行時才有效。 例如，`agents.publish`僅用於發佈環境。 以下熒幕擷圖顯示製作環境中的Publish代理程式（包含在AEM WCM中）：
 
 ![chlimage_1-24](assets/chlimage_1-24.png)
 
@@ -548,7 +546,7 @@ AEM標準安裝中包含的We-Retail網站可用於說明復寫。
 
    >[!CAUTION]
    >
-   >請勿對Publish執行個體上的「反向復寫寄件匣」使用「測試連線」連結。
+   >請勿在發佈執行個體上的反向復寫寄件匣使用「測試連線」連結。
    >
    >
    >如果對Outbox佇列執行復寫測試，則任何早於測試復寫的專案都會透過每次反向復寫重新處理。
@@ -561,7 +559,7 @@ AEM標準安裝中包含的We-Retail網站可用於說明復寫。
 
 ## 批次復寫 {#batch-replication}
 
-批次複製不會複製個別頁面或資產，但會根據時間或大小等待觸發兩者的第一個臨界值。
+批次復寫不會復寫個別頁面或資產。 而是等待觸發兩者的第一個臨界值（根據時間或大小）。
 
 接著，它會將所有復寫專案封裝到一個封裝中，然後以單一檔案的形式復寫到發行者。
 
@@ -572,7 +570,7 @@ Publisher會解壓縮所有專案、儲存專案，並向作者回報。
 1. 前往`http://serveraddress:serverport/siteadmin`
 1. 按熒幕上方的&#x200B;**[!UICONTROL 工具]**&#x200B;圖示
 1. 從左側導覽邊欄中，移至&#x200B;**[!UICONTROL 復寫 — 作者上的代理程式]**，然後按兩下&#x200B;**[!UICONTROL 預設代理程式]**。
-   * 您也可以直接前往`http://serveraddress:serverport/etc/replication/agents.author/publish.html`，取得預設的Publish復寫代理程式
+   * 您也可以直接前往`http://serveraddress:serverport/etc/replication/agents.author/publish.html`，存取預設的發佈復寫代理程式
 1. 按復寫佇列上方的&#x200B;**[!UICONTROL 編輯]**&#x200B;按鈕。
 1. 在下列視窗中，移至&#x200B;**[!UICONTROL 批次]**&#x200B;標籤：
    ![批次復寫](assets/batchreplication.png)

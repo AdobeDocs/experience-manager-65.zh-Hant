@@ -5,17 +5,17 @@ exl-id: 632c0608-2ab8-4a5b-8251-cd747535449b
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Projects
 role: User,Admin,Developer
-source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
+source-git-commit: 35042bcda42d01a9f21afc2230556475cb2983d8
 workflow-type: tm+mt
-source-wordcount: '1360'
-ht-degree: 27%
+source-wordcount: '1373'
+ht-degree: 30%
 
 ---
 
 
 # 專案 {#projects}
 
-專案可讓您將資源群組到一個實體中。共同的共用環境使您的專案容易管理。您可以與專案相關聯的資源類型在 AEM 中稱為圖磚。圖磚可能包括專案和團隊資訊、資產、工作流程和其他類型的資訊，如[專案圖磚](#project-tiles)中詳細所述。
+專案可讓您將資源群組到一個實體中。 共同的共用環境使您的專案容易管理。 您可以與專案相關聯的資源類型在 AEM 中稱為圖磚。 圖磚可能包括專案和團隊資訊、資產、工作流程和其他類型的資訊，如[專案圖磚](#project-tiles)中詳細所述。
 
 身為使用者，您可以：
 
@@ -25,9 +25,9 @@ ht-degree: 27%
 
 ## 存取需求 {#access-requirements}
 
-專案標準AEM功能，不需要任何其他設定。
+專案是標準的AEM功能，不需要任何其他設定。
 
-不過，若使用者在專案中使用專案（例如當建立專案、建立任務/工作流程或檢視及管理團隊時）時檢視其他使用者/群組，這些使用者需要擁有`/home/users`和`/home/groups`的讀取存取權。
+不過，若使用者在專案中使用專案（例如在建立專案、建立任務/工作流程或檢視及管理團隊時）時檢視其他使用者/群組，這些使用者需要擁有`/home/users`和`/home/groups`的讀取存取權。
 
 最簡單的方法是授予&#x200B;**專案 — 使用者**&#x200B;群組對`/home/users`和`/home/groups`的讀取存取權。
 
@@ -37,7 +37,7 @@ ht-degree: 27%
 
 ![專案主控台](assets/screen-shot_2019-03-05at125110.png)
 
-此專案主控台類似於AEM中的其他主控台，可在個別專案上執行數個動作，並調整您的專案檢視。
+專案主控台類似於AEM中的其他主控台。 它允許在個別專案上執行多個動作，並調整您的專案檢視。
 
 ### 切換您的模式 {#modes}
 
@@ -51,7 +51,7 @@ ht-degree: 27%
 
 #### 時間軸 {#timeline}
 
-時間表檢視可讓您選取個別專案並檢視其上的活動。 使用邊欄選擇器或快速鍵`alt+1`來變更此檢視。
+時間軸檢視可讓您選取個別專案並檢視其上的活動。 使用邊欄選擇器或快速鍵`alt+1`來變更此檢視。
 
 ![時間表模式](assets/project-timeline.png)
 
@@ -81,7 +81,7 @@ ht-degree: 27%
 
 專案由您想要一起管理的不同資訊型別組成。 此資訊由不同的&#x200B;**圖磚**&#x200B;表示。
 
-您可以擁有下列與專案關聯的圖磚。
+您可以將以下圖磚與您的專案相關聯。
 
 * [Assets](#assets)
 * [資產集合](#asset-collections)
@@ -105,11 +105,11 @@ ht-degree: 27%
 
 ![資產圖磚](assets/project-tile-assets.png)
 
-您直接在圖磚中上傳資產。
+您直接將資產上傳到圖磚。
 
 ### 資產集合 {#asset-collections}
 
-與資產類似，您可以將[資產集合](/help/assets/manage-collections.md)直接新增到您的專案中。您在 Assets 中定義集合。
+與資產類似，您可以將[資產集合](/help/assets/manage-collections.md)直接新增到您的專案中。 您在 Assets 中定義集合。
 
 ![資產集合拼貼](assets/project-tile-asset-collection.png)
 
@@ -150,11 +150,11 @@ ht-degree: 27%
 
 ### 團隊 {#team}
 
-在此圖磚中，您可以指定專案團隊的成員。編輯時，您可以輸入團隊成員的姓名並指派使用者角色。
+在此圖磚中，您可以指定專案團隊的成員。 編輯時，您可以輸入團隊成員的姓名並指派使用者角色。
 
 ![團隊圖磚](assets/project-tile-team.png)
 
-您可以在團隊中新增和刪除團隊成員。此外，您可以編輯指派給團隊成員的[使用者角色](#userroles)。
+您可以在團隊中新增和刪除團隊成員。 此外，您可以編輯指派給團隊成員的[使用者角色](#userroles)。
 
 ### 登陸頁面 {#landing-pages}
 
@@ -190,7 +190,7 @@ ht-degree: 27%
 
 ### 任務 {#tasks}
 
-任務可讓您監控任何專案相關任務的狀態，包括工作流程。如需任務的詳細資訊，請參閱[使用任務](/help/sites-authoring/task-content.md)。
+任務可讓您監控任何專案相關任務的狀態，包括工作流程。 如需任務的詳細資訊，請參閱[使用任務](/help/sites-authoring/task-content.md)。
 
 ![任務拼貼](assets/project-tile-tasks.png)
 
@@ -203,14 +203,14 @@ ht-degree: 27%
 * **[翻譯專案](/help/sites-administering/translation.md)** — 此為管理翻譯相關活動的參考範例。 其中包含基本角色，並包含管理翻譯的工作流程。
 * **簡單專案** — 這是任何不符合其他類別的專案的參考範例。 其中包含三個基本角色和四個一般AEM工作流程。
 
-根據您選取的範本，專案中提供了不同的可用選項，例如使用者角色和工作流程。
+根據您選取的範本，專案內有不同的可用選項，例如提供的使用者角色和工作流程。
 
 ## 專案中的使用者角色 {#user-roles-in-a-project}
 
 不同的使用者角色會在專案範本中定義，主要原因有二：
 
 1. 許可權：使用者角色屬於列出的三個類別之一：觀察者、編輯者、擁有者。 例如，攝影師或撰稿人將擁有與編輯者相同的許可權。 權限決定使用者可對專案內容進行的操作。
-1. 工作流程：工作流程會決定指派給專案中任務的使用者。 任務可以與專案角色相關聯。例如，可以將任務指派給攝影師，以便所有擁有攝影師角色的團隊成員都能取得任務。
+1. 工作流程：工作流程會決定指派給專案中任務的使用者。 任務可以與專案角色相關聯。 例如，可以將任務指派給攝影師，以便所有具有攝影師角色的團隊成員都將有任務指派給他們。
 
 所有專案都支援下列預設角色，可讓您管理安全性及控制許可權。
 
@@ -224,11 +224,11 @@ ht-degree: 27%
 
 ### 自動群組建立 {#auto-group-creation}
 
-當您建立專案並將使用者新增至各種角色時，系統會自動建立與專案關聯的群組以管理關聯的許可權。
+當您建立專案並將使用者新增至各種角色時，系統會自動建立與專案相關的群組，以管理相關的權限。
 
-例如，名為Myproject的專案將有三個群組&#x200B;**Myproject擁有者**、**Myproject編輯者**、**Myproject觀察者**。
+例如，名為Myproject的專案會有三個群組： **Myproject擁有者**、**Myproject編輯者**、**Myproject觀察者**。
 
-如果刪除專案，則在刪除專案時，只有選取適當的選項[，才會刪除這些群組。](/help/sites-authoring/touch-ui-managing-projects.md#deleting-a-project)管理員也可以手動刪除&#x200B;**工具** > **安全性** > **群組**&#x200B;中的群組。
+如果刪除專案，則在刪除專案時，只有選取適當的選項[，才會刪除這些群組。](/help/sites-authoring/touch-ui-managing-projects.md#deleting-a-project) 管理員也可以手動刪除&#x200B;**工具** > **安全性** > **群組**&#x200B;中的群組。
 
 ## 其他資源 {#additional-resources}
 

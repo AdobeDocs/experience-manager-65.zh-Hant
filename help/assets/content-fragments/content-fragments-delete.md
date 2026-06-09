@@ -5,9 +5,9 @@ feature: Content Fragments
 role: User
 exl-id: 6212457e-a171-4c33-8d19-54c26516e981
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: a77b577341050316ce60ae809a4912bbbbce974c
 workflow-type: tm+mt
-source-wordcount: '510'
+source-wordcount: '517'
 ht-degree: 9%
 
 ---
@@ -46,7 +46,7 @@ ht-degree: 9%
 
 對於需要編輯/更新內容片段而不允許他們刪除整個片段的使用者 **&#x200B;**，必須指派特定權限，因為內容片段編輯器的基本操作要求可以刪除暫時的子元素。
 
-例如，操控變數時；編輯中繼資料或管理關聯內容時，也可以。
+例如，操控變數時、編輯中繼資料時，或管理關聯內容時。
 
 >[!NOTE]
 >
@@ -82,9 +82,9 @@ ht-degree: 9%
 
    * `jcr:addChildNodes`、`jcr:modifyProperties`和`jcr:removeChildNodes`、`jcr:removeNode`
 
-這些`remove`許可權必須由CRXDE Lite[&#128279;](/help/sites-administering/user-group-ac-admin.md#access-right-management)內的存取控制清單管理。
+這些`remove`許可權必須由CRXDE Lite[&#128279;](/help/sites-administering/user-group-ac-admin.md#access-right-management)中的存取控制清單管理。
 
-`add`和`modify`許可權也可以在CRXDE Lite中管理，或使用使用者管理主控台。
+`add`和`modify`許可權也可以在CRXDE Lite中管理，或使用使用者管理主控台進行管理。
 
 例如，群組`content-authors-no-delete`的`remove`許可權定義：
 

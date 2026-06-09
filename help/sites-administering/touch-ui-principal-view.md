@@ -1,6 +1,6 @@
 ---
-title: 許可權管理的主體檢視
-description: 瞭解新的觸控式UI介面有助於進行許可權管理。
+title: 權限管理的主體視圖
+description: 了解有助於權限管理的全新觸控式使用者介面。
 contentOwner: sarchiz
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,129 +10,129 @@ exl-id: 4ce19c95-32cb-4bb8-9d6f-a5bc08a3688d
 solution: Experience Manager, Experience Manager Sites
 feature: Security
 role: Admin
-source-git-commit: 6f3c4f4aa4183552492c6ce5039816896bd67495
+source-git-commit: 8adc566113beedc408698dccc3a4c072349af5dc
 workflow-type: tm+mt
-source-wordcount: '763'
-ht-degree: 1%
+source-wordcount: '777'
+ht-degree: 84%
 
 ---
 
 
-# 許可權管理的主體檢視{#principal-view-for-permissions-management}
+# 權限管理的主體視圖{#principal-view-for-permissions-management}
 
 ## 概觀 {#overview}
 
-AEM 6.5推出使用者和群組的許可權管理。 主要功能與傳統UI相同，但更加方便使用者且更有效率。
+AEM 6.5推出使用者和群組的許可權管理。 其主要功能與傳統使用者介面相同，但更為使用者友善及有效率。
 
 ## 使用方式 {#how-to-use}
 
-### 存取UI {#accessing-the-ui}
+### 存取使用者介面 {#accessing-the-ui}
 
-新的UI型許可權管理可透過「安全性」下的「許可權」卡進行存取，如下所示：
+新的使用者介面型權限管理，可以透過「安全性」之下的「權限」卡片存取，如下所示：
 
-![許可權管理UI](assets/screen_shot_2019-03-17at63333pm.png)
+![權限管理使用者介面](assets/screen_shot_2019-03-17at63333pm.png)
 
-新檢視可讓您更輕鬆地檢視所有已明確授予許可權的路徑中指定主體的整套許可權和限制。 如此一來，您就不需要前往
+透過新的視圖，可以在已明確授予權限的所有路徑上，更輕鬆地查看指定主體的完整權限與限制集。 如此一來，不需要前往
 
-CRXDE可管理進階許可權和限制。 它已在相同檢視中合併。 該檢視預設為「所有人」群組。
+CRXDE 也能管理進階權限與限制。 其已合併於同一個視圖中。 該檢視預設為「所有人」群組。
 
 ![&#x200B; 「所有人」群組的檢視](assets/unu-1.png)
 
-有一個篩選器可讓使用者選取主參與者型別，以檢視&#x200B;**使用者**、**群組**&#x200B;或&#x200B;**全部**&#x200B;並搜尋任何主參與者&#x200B;**。**
+設有一個篩選器讓使用者能夠選取要用於查看&#x200B;**使用者**、**群組**&#x200B;或&#x200B;**全部**&#x200B;的主體類型，以及搜尋任何主體&#x200B;**。**
 
-![搜尋主參與者型別](assets/image2019-3-20_23-52-51.png)
+![搜尋主體類型](assets/image2019-3-20_23-52-51.png)
 
-### 檢視主體的許可權 {#viewing-permissions-for-a-principal}
+### 檢視主體權限 {#viewing-permissions-for-a-principal}
 
-左側的框架可讓使用者向下捲動以尋找任何主參與者，或根據選取的篩選器搜尋「群組」或「使用者」，如下所示：
+使用者能運用位於左側的方框，向下捲動查找任何主體，或者根據所選取的篩選器搜尋群組或使用者，如下所示：
 
-![檢視主體許可權](assets/doi-1.png)
+![檢視主體權限](assets/doi-1.png)
 
-按一下名稱即可在右側顯示指派的許可權。 許可權窗格會顯示特定路徑上的存取控制專案清單以及設定的限制。
+按一下名稱，已指派的權限便會顯示於右側。 權限窗格會顯示特定路徑上的存取控制項目清單，以及設定好的限制。
 
-![檢視ACL清單](assets/trei-1.png)
+![檢視 ACL 清單](assets/trei-1.png)
 
-### 為主體加入新的存取控制專案 {#adding-new-access-control-entry-for-a-principal}
+### 加入新的主體存取控制項目 {#adding-new-access-control-entry-for-a-principal}
 
-可以透過新增存取控制專案來新增新許可權。 只要按一下「新增ACE」按鈕即可。
+可以透過新增存取控制項目來新增權限。 只要按一下「新增 ACE」按鈕即可。
 
-![新增主體](assets/patru.png)的ACL
+![加入新的主體 ACL](assets/patru.png)
 
-這會顯示以下視窗，下一步是選擇必須設定許可權的路徑。
+然後便會帶出下方所示的視窗，下一步是選擇必須設定權限的路徑。
 
-![設定許可權路徑](assets/cinci-1.png)
+![設定權限路徑](assets/cinci-1.png)
 
-在此選取一個路徑，您可在其中設定&#x200B;**dam-users**&#x200B;的許可權：
+如此處所示，已選取一條路徑，您可以在其中設定 **dam-users** 的權限：
 
-![dam-users的設定範例](assets/sase-1.png)
+![dam-users 的設定範例](assets/sase-1.png)
 
-選取路徑後，工作流程會回到此畫面，使用者接著可以從可用的名稱空間（例如`jcr`、`rep`或`crx`）選取一或多個許可權，如下所示。
+選取路徑後，工作流程會回到此畫面，使用者能夠從可供使用的命名空間中選取一個或多個權限 (如 `jcr`、`rep` 或 `crx`)，如下所示。
 
-您可以使用文字欄位進行搜尋，然後從清單中選取，以新增許可權。
+若要新增權限，可以使用文字欄位搜尋，然後自清單中選取。
 
 >[!NOTE]
 >
->如需完整的許可權和說明清單，請參閱[使用者、群組和存取許可權管理](/help/sites-administering/user-group-ac-admin.md#access-right-management)。
+>關於權限的完整清單和說明，請參閱[使用者、群組和存取權管理](/help/sites-administering/user-group-ac-admin.md#access-right-management)。
 
-指定路徑的![搜尋許可權。](assets/image2019-3-21_0-5-47.png) ![新增&#39;dam-users&#39;專案，如在垂直欄中選取的路徑所示。](assets/image2019-3-21_0-6-53.png)
+![指定路徑的搜尋許可權。](assets/image2019-3-21_0-5-47.png) ![為&#39;dam-users&#39;新增專案，如在垂直欄中選取的路徑所示。](assets/image2019-3-21_0-6-53.png)
 
-選取許可權清單後，使用者即可選擇許可權型別：拒絕或允許，如下所示。
+選取權限清單後，使用者可以選擇權限類型：「拒絕」或「允許」，如下所示。
 
-![選取許可權](assets/screen_shot_2019-03-17at63938pm.png) ![選取許可權](assets/screen_shot_2019-03-17at63947pm.png)
+![選取權限](assets/screen_shot_2019-03-17at63938pm.png) ![選取權限](assets/screen_shot_2019-03-17at63947pm.png)
 
-### 使用限制 {#using-restrictions}
+### 運用限制 {#using-restrictions}
 
-除了指定路徑的許可權清單和許可權型別之外，此畫面還可讓您新增精細存取控制的限制，如下所示：
+除了指定路徑的許可權清單和許可權型別之外，此畫面還可讓您為精細存取控制新增限制，如下所示：
 
 ![新增限制](assets/image2019-3-21_1-4-14.png)
 
 >[!NOTE]
 >
->如需每個限制含義的詳細資訊，請參閱[Jackrabbit Oak檔案](https://jackrabbit.apache.org/oak/docs/security/authorization/restriction.html)。
+>如需關於每項限制實際內容的詳細資訊，請參閱 [Jackrabbit Oak 文件](https://jackrabbit.apache.org/oak/docs/security/authorization/restriction.html)。
 
-選擇限制型別、輸入值並點選&#x200B;**+**&#x200B;圖示，即可新增如下所示的限制。
+若要新增限制，請選擇限制類型、輸入值，並且點擊「**+**」圖示，如下所示。
 
-![新增限制型別](assets/sapte-1.png) ![新增限制型別](assets/opt-1.png)
+![新增限制類型](assets/sapte-1.png) ![新增限制類型](assets/opt-1.png)
 
-新的ACE會反映在「存取控制清單」中，如下所示。 請注意，`jcr:write`是包含上面新增的`jcr:removeNode`的彙總許可權，但並未顯示於下方，因為它包含在`jcr:write`之下。
+新的 ACE 會反映在存取控制清單中，如下所示。 請注意，`jcr:write`是包含上面新增的`jcr:removeNode`的彙總許可權，但不會顯示於下方，因為它包含在`jcr:write`之下。
 
-### 編輯ACE {#editing-aces}
+### 編輯 ACE {#editing-aces}
 
-選取主參與者並選擇您要編輯的ACE，即可編輯存取控制專案。
+若要編輯存取控制項目，可以選取一個主體，然後選擇要編輯的 ACE。
 
-例如，您可以在此處按一下右側的鉛筆圖示，編輯&#x200B;**dam-users**&#x200B;的下方專案：
+例如，您可以按一下位於右側的鉛筆圖示，編輯 **dam-users** 的以下項目：
 
 ![新增限制](assets/image2019-3-21_0-35-39.png)
 
-編輯畫面中會顯示預先選取的已設定ACE，按一下它們旁邊的交叉圖示即可刪除這些ACE，或者可以為指定路徑新增許可權，如下所示。
+編輯畫面會顯示出來，並預先選取已設定的 ACE，按一下旁邊的十字圖示可以刪除這些 ACE，或者可以加入指定路徑的新權限，如下所示。
 
-![編輯專案](assets/noua-1.png)
+![編輯項目](assets/noua-1.png)
 
-已在此為指定路徑上的&#x200B;**dam-users**&#x200B;新增`addChildNodes`許可權。
+如此處所示，已在指定路徑上新增 **dam-users** 的 `addChildNodes` 權限。
 
-![新增許可權](assets/image2019-3-21_0-45-35.png)
+![新增權限](assets/image2019-3-21_0-45-35.png)
 
-按一下右上方的&#x200B;**儲存**&#x200B;按鈕可以儲存變更，並且變更會反映在&#x200B;**dam-users**&#x200B;的新許可權中，如下所示：
+按一下右上角的「**儲存**」按鈕可儲存變更，變更會反映在&#x200B;**dam-users**&#x200B;的新許可權中，如下所示：
 
 ![儲存變更](assets/zece-1.png)
 
-### 刪除ACE {#deleting-aces}
+### 刪除 ACE {#deleting-aces}
 
-可以刪除存取控制專案，以移除指定給特定路徑上主要人的所有許可權。 ACE旁的X圖示可用來刪除它，如下所示：
+刪除存取控制項目，可以將授予特定路徑上之主體的所有權限移除。 可以使用 ACE 旁邊的 X 圖示將其刪除，如下所示：
 
-![刪除ACE](assets/image2019-3-21_0-53-19.png) ![刪除ACE](assets/unspe.png)
+![刪除 ACE](assets/image2019-3-21_0-53-19.png) ![刪除 ACE](assets/unspe.png)
 
-### 傳統UI許可權組合 {#classic-ui-privilege-combinations}
+### 傳統使用者介面權限組合 {#classic-ui-privilege-combinations}
 
-新許可權UI會明確使用基本許可權集，而非無法真正反映已授與之確切基礎許可權的預定義組合。
+新的權限使用者介面會明確地使用基本權限集，而非預先定義的組合，因為預先定義的組合無法真正反映出已授予的確切基本權限。
 
-這會導致混淆，無法確定確切的設定內容。 下表列出從傳統UI到組成許可權的實際許可權組合之間的對應：
+這會導致人們對於實際的設定內容感到困惑。 以下表格列出傳統使用者介面中的權限組合，與其實際構成權限之間的對應：
 
 <table>
  <tbody>
   <tr>
-   <th>傳統UI許可權組合</th>
-   <th>許可權UI許可權</th>
+   <th>傳統使用者介面權限組合</th>
+   <th>權限使用者介面權限</th>
   </tr>
   <tr>
    <td>讀取</td>
