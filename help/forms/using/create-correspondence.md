@@ -367,7 +367,7 @@ AEM Forms Correspondence Management在建立通訊UI中將信件顯示為HTML。
 * **分頁符號**：在PDF預覽中，您可以檢視信函中的分頁符號如何影響其輸出。
 * **最終預覽**：在PDF預覽中，您可以檢視信函將出現在輸出中的確切格式與外觀。
 
-如需PDF forms中指令碼支援的相關資訊，請參閱[指令碼支援](https://help.adobe.com/en_US/livecycle/11.0/ScriptingSupport/index.html)。
+如需PDF forms中指令碼支援的相關資訊，請參閱[指令碼支援](https://help.adobe.com/zh_TW/livecycle/11.0/ScriptingSupport/index.html)。
 
 如需有關HTML5表單指令碼支援的詳細資訊，請參閱[HTML5表單指令碼支援](/help/forms/using/scripting-support.md)。
 

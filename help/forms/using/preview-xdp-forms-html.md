@@ -111,7 +111,7 @@ ht-degree: 0%
 
 Designer可讓您使用範例XML資料預覽及測試表單。 建議您經常使用範例資料測試表單，以確保表單正確呈現。
 
-如果您沒有範例資料，Designer可以建立它，您也可以自行建立。 （請參閱[自動產生範例資料以預覽您的表單](https://help.adobe.com/en_US/AEMForms/6.1/DesignerHelp/WS107c29ade9134a2c136ae6f212a1f379c94-8000.2.html#WS92d06802c76abadb-728f46ac129b395660c-7efe.2)和[建立範例資料以預覽您的表單](https://help.adobe.com/en_US/AEMForms/6.1/DesignerHelp/WS107c29ade9134a2c136ae6f212a1f379c94-8000.2.html#WS92d06802c76abadb-728f46ac129b395660c-7eff.2)。）
+如果您沒有範例資料，Designer可以建立它，您也可以自行建立。 （請參閱[自動產生範例資料以預覽您的表單](https://help.adobe.com/zh_TW/AEMForms/6.1/DesignerHelp/WS107c29ade9134a2c136ae6f212a1f379c94-8000.2.html#WS92d06802c76abadb-728f46ac129b395660c-7efe.2)和[建立範例資料以預覽您的表單](https://help.adobe.com/zh_TW/AEMForms/6.1/DesignerHelp/WS107c29ade9134a2c136ae6f212a1f379c94-8000.2.html#WS92d06802c76abadb-728f46ac129b395660c-7eff.2)。）
 
 使用範例資料來源測試您的表單可確保資料和欄位對應，並且重複的子表單會如預期般重複。 您可以建立平衡的表單版面配置，為每個物件提供適當的空間，以顯示合併的資料。
 
