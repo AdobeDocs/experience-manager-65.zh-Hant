@@ -9,9 +9,9 @@ role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,AEM Forms on JEE,Platform Matrix
-source-git-commit: ca3f909f4085537a085fd4c8d92f4dcef66f1cab
+source-git-commit: 518481c75e22655bce0b104fe2eb5614f1d8a3b9
 workflow-type: tm+mt
-source-wordcount: '3839'
+source-wordcount: '3920'
 ht-degree: 3%
 
 ---
@@ -308,17 +308,17 @@ Adobe Experience Manager Forms需要由Java™開發套件(JDK)散發提供的Ja
   <td>Service Pack和重要更新</td>
  </tr>
  <tr>
-  <td><p>JBoss® Enterprise Application Platform (EAP) 7.4 <sup>[2] [3] [7]</sup> </p> </td>
+  <td><p>JBoss® Enterprise Application Platform (EAP) 7.4.23 <sup>[2] [3] [7]</sup> </p> </td>
   <td><p>A：支援</p> </td>
   <td><p>支援EAP版本的修補程式和累積修補程式</p> </td>
  </tr>
 </tbody>
 </table>
 
-
 >[!NOTE]
 >
->® WebSphere®叢集僅支援網路部署版本。
+>- 從AEM Forms Service Pack 6.5.25.0開始，支援JBoss® Enterprise Application Platform (EAP) 7.4.23。 您可以使用此[連結](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/jboss-eap-7.4.23-1.0.16.zip)，從軟體發佈入口網站下載JBoss® EAP 7.4.23。
+>- ® WebSphere®叢集僅支援網路部署版本。
 
 ### 伺服器作業系統 {#server-operating-systems}
 
@@ -488,12 +488,8 @@ Adobe Experience Manager Forms需要由Java™開發套件(JDK)散發提供的Ja
   <td>5.5.2</td>
  </tr>
  <tr>
-  <td>® Content Manager伺服器（已棄用） </td>
-  <td>8.5 Fix Pack 2</td>
- </tr>
-  <tr>
-  <td> ®內容管理員使用者端（已棄用）</td>
-  <td>8.5 </td>
+  <td>®內容管理員使用者端</td>
+  <td>8.7</td>
  </tr>
   <td>® Sharepoint </td>
   <td>2019<br /> </td>
@@ -676,10 +672,9 @@ Removed lines: >- PDF Generator fails to convert files using Microsoft&reg; Visi
 ### Designer {#designer}
 
 
-- ® Windows® 2016 Server、Microsoft® Windows® 2019 Server、Microsoft® Windows® 10或Windows® 11
+- ® Windows® 2016 Server、Microsoft® Windows® 2019 Server、Microsoft® Windows® 10、Windows® 11或Microsoft® Windows Terminal Server 2025
 - 1 GHz或更快的處理器，支援PAE、NX和SSE2。
 - 32位元的1 GB RAM或64位元作業系統的2 GB RAM
-@@ -729,49 +601,45 @@如需其他需求，請參閱：
 - 安裝Designer的管理許可權
 - ® Visual C++ 2019 （VC 14.28或更新版本） 32位元執行階段
 
@@ -913,6 +908,15 @@ The following platforms are marked as deprecated with AEM Forms 6.5.10.0 release
 | Red Hat&reg; Enterprise Linux&reg; 9 (Kernel 4.x) (64-bit) | |Red Hat&reg; Enterprise Linux&reg; 8 (Kernel 4.x) (64-bit)  |
 
 -->
+
+### 版本6.5.25.0 （2026年5月28日）
+
+| 新增的支援 | 移除的支援 | 已棄用的支援 |
+| -------------- | --------------- | ------------------- |
+| JBoss® Enterprise Application Platform (EAP) 7.4.23 | JBoss® Enterprise Application Platform (EAP) 7.4.10 | |
+| ® Content Manager Client 8.7 | ® Content Manager Client 8.5 | |
+| ® Windows Terminal Server 2025 | | |
+
 
 ### 版本6.5.24.0 （2025年11月26日）
 

@@ -5,9 +5,9 @@ feature: Transaction Reports
 exl-id: 77e95631-6b0d-406e-a1b8-78f8d9cceb63
 role: Admin, User, Developer
 solution: "Experience Manager, Experience Manager Forms"
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+source-git-commit: cf6705707554894deeb0315d3e9c7252af211e54
 workflow-type: tm+mt
-source-wordcount: '638'
+source-wordcount: '666'
 ht-degree: 0%
 
 ---
@@ -96,7 +96,10 @@ TransactionRecord
     transactionOperationType='...', 
     transactionCount=..., 
     elapsedTime=..., 
-    transactionDate=...
+    transactionDate=...,
+    formName='...',
+    formPath='...',
+    formTitle='...'
 }
 ```
 
@@ -108,6 +111,15 @@ TransactionRecord
 * **transactionCount**：交易總數。
 * **elapsedTime**：呼叫起始與收到回應之間的時間。
 * **transactionDate**：表示服務何時叫用的時間戳記。
+* **formName**，**formPath**，**formTitle**：表單內容可用時的表單層級詳細資料（AEM Forms Service Pack 6.5.25.0和更新版本）。 不適用時省略。
+
+<a id="form-level-details-transaction-log-jee"></a>
+
+>[!NOTE]
+>
+> 出現表單層級詳細資訊時的範例：
+>
+> `[2026-05-14 14:23:25] [INFO] TransactionRecord{service='FormsService', operation='render', internalService='FormsService', internalOperation='render', transactionOperationType='RENDER', transactionCount=1, elapsedTime=1250, transactionDate=Wed May 14 14:23:23 UTC 2026, formName='Loan.xdp', formPath='Applications/FormsApplication/1.0/FormsFolder/Loan.xdp', formTitle='Loan Application'}`
 
 **交易記錄檔範例**：
 
