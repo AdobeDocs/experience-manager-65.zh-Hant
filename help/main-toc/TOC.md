@@ -569,7 +569,7 @@ ht-degree: 23%
          + [設定最適化表單快取](/help/forms/using/configure-adaptive-forms-cache.md)
          + [正在設定AEM DS設定](/help/forms/using/configuring-the-processing-server-url.md)
          + [設定同步排程器](/help/forms/using/configure-synchronization-scheduler.md)
-         + [設定Microsoft SharePoint的聯結器](https://help.adobe.com/en_US/AEMForms/6.1/SharePointConfig/index.html)
+         + [設定Microsoft SharePoint的聯結器](https://help.adobe.com/zh_TW/AEMForms/6.1/SharePointConfig/index.html)
          + [將AEM Forms與Adobe LiveCycle連線](/help/forms/using/aem-livecycle-connector.md)
          + [設定AEM Forms將表單資料提交至JEE程式的AEM Forms](/help/forms/using/submit-form-data-livecycle-process.md)
          + [適用於AEM Forms的AEM案頭應用程式](/help/forms/using/aem-desktop-app-for-aem-forms.md)

@@ -85,4 +85,4 @@ JEE上的AEM Forms提供在HTML Workspace中使用最適化表單的功能。
    >如需有關建立最適化表單的詳細資訊，請參閱[建立最適化表單](../../forms/using/creating-adaptive-form.md)。
    >
    >
-   >如需有關建立程式的詳細資訊，請參閱[建立和管理程式](https://help.adobe.com/en_US/AEMForms/6.1/WorkbenchHelp/WS92d06802c76abadb-1cc35bda128261a20dd-7ff7.2.html)。
+   >如需有關建立程式的詳細資訊，請參閱[建立和管理程式](https://help.adobe.com/zh_TW/AEMForms/6.1/WorkbenchHelp/WS92d06802c76abadb-1cc35bda128261a20dd-7ff7.2.html)。

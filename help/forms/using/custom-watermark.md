@@ -79,7 +79,7 @@ ht-degree: 1%
    </DDX>
    ```
 
-   如需自訂浮水印外觀、文字和對齊方式的資訊，請參閱[組合器服務和DDX參考](https://help.adobe.com/en_US/livecycle/11.0/ddxRef.pdf)檔案中的新增和移除浮水印和背景。
+   如需自訂浮水印外觀、文字和對齊方式的資訊，請參閱[組合器服務和DDX參考](https://help.adobe.com/zh_TW/livecycle/11.0/ddxRef.pdf)檔案中的新增和移除浮水印和背景。
 
    >[!NOTE]
    >

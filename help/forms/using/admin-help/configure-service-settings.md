@@ -420,7 +420,7 @@ LDAP服務( `LDAPService`)提供查詢LDAP目錄的操作。 LDAP目錄通常用
 
 ## Microsoft SharePoint組態服務設定 {#microsoft-sharepoint-configuration-service-settings}
 
-Microsoft SharePoint設定服務`(MSSharePointConfigService)`可讓您為具有模擬許可權的AEM Forms使用者指定認證。 如需模擬許可權的相關資訊，請參閱[設定Microsoft SharePoint的聯結器](https://help.adobe.com/en_US/AEMForms/6.1/SharePointConfig/index.html)。
+Microsoft SharePoint設定服務`(MSSharePointConfigService)`可讓您為具有模擬許可權的AEM Forms使用者指定認證。 如需模擬許可權的相關資訊，請參閱[設定Microsoft SharePoint的聯結器](https://help.adobe.com/zh_TW/AEMForms/6.1/SharePointConfig/index.html)。
 
 Microsoft SharePoint組態服務可使用下列設定：
 

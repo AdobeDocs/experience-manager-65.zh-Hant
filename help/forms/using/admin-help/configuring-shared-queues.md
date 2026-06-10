@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # 設定共用佇列{#configuring-shared-queues}
 
-共用佇列可讓您有效設定和管理使用者佇列。 使用者佇列只是指派給使用者的所有工作，如需詳細資訊，請參閱[待辦事項清單](https://help.adobe.com/en_US/livecycle/11.0/WorkspaceHelp/WS92d06802c76abadb-2b6ab502126beb6ba2f-7ffc.2.html)。 您可以根據組織需求指派、取消指派和重新指派使用者佇列。 您可以透過兩種方式管理共用佇列：
+共用佇列可讓您有效設定和管理使用者佇列。 使用者佇列只是指派給使用者的所有工作，如需詳細資訊，請參閱[待辦事項清單](https://help.adobe.com/zh_TW/livecycle/11.0/WorkspaceHelp/WS92d06802c76abadb-2b6ab502126beb6ba2f-7ffc.2.html)。 您可以根據組織需求指派、取消指派和重新指派使用者佇列。 您可以透過兩種方式管理共用佇列：
 
 **管理使用者的存取權**
 
