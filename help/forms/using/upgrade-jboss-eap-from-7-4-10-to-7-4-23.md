@@ -9,10 +9,10 @@ exl-id: 8f4c2a91-6b3d-4e7f-9c12-5d8e1f0a2b34
 solution: Experience Manager, Experience Manager Forms
 feature: AEM Forms Upgrade,AEM Forms on JEE
 role: User, Developer
-source-git-commit: 652162941dd716ae797ce50709e91757dad99054
+source-git-commit: cb190feb41152d40c36ea2f152ee04cc8c8eba1d
 workflow-type: tm+mt
-source-wordcount: '412'
-ht-degree: 3%
+source-wordcount: '396'
+ht-degree: 1%
 
 ---
 
@@ -29,15 +29,11 @@ ht-degree: 3%
 * 在獨立環境中於JBoss EAP 7.4.10上執行的JEE上的AEM Forms
 * Windows和Linux上的Turnkey和Partial Turnkey安裝模式
 
->[!NOTE]
->
-> 如果您要升級JBoss叢集環境，請先完成本文中的步驟，然後在[將JEE上的AEM Forms的JBoss EAP叢集從7.4.10升級為7.4.23 &#x200B;](/help/forms/using/upgrade-jboss-eap-cluster-from-7-4-10-to-7-4-23.md)中執行其他步驟。
-
 ## 先決條件 {#prerequisites}
 
 開始之前：
 
-* 從[Adobe軟體發佈入口網站](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)下載JBoss 7.4.23套件。
+* 從[Adobe軟體發佈入口網站](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fjboss-eap-7.4.23-1.0.17.zip)下載JBoss 7.4.23套件。
 * 確保您對目標環境具有管理存取權。
 * 對現有JBoss安裝進行完整備份。
 
