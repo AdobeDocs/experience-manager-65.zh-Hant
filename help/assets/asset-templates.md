@@ -124,7 +124,7 @@ ht-degree: 1%
    >
    >若要啟用[!DNL Experience Manager]以解析影像，請執行下列動作：
    >
-   >* 建立[!DNL InDesign]範本時內嵌影像（請參閱[關於連結和內嵌圖形](https://helpx.adobe.com/indesign/using/graphics-links.html)）。
+   >* 建立[!DNL InDesign]範本時內嵌影像（請參閱[關於連結和內嵌圖形](https://helpx.adobe.com/tw/indesign/using/graphics-links.html)）。
    >* 將[!DNL Experience Manager]掛接至您的本機檔案系統，然後將遺失的圖示與[!DNL Experience Manager]中的現有資產對應。
    >
 
