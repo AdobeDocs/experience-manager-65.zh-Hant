@@ -203,7 +203,7 @@ Prefill-Submit-Data-ContentPackage.zip
 
 >[!NOTE]
 >
->不建議在繫結面板（具有非空白bindRef的面板，這些面板是從Sidekick或「資料來源」索引標籤拖曳元件而建立的）中使用未繫結欄位，因為這可能會造成未繫結欄位的資料遺失。**** 建議在表單中設定唯一的欄位名稱，尤其是未繫結欄位。
+>不建議在繫結面板（具有非空白bindRef的面板，這些面板是從Sidekick或「資料來源」索引標籤拖曳元件而建立的）中使用未繫結欄位，因為這可能會造成未繫結欄位的資料遺失。**&#x200B;** 建議在表單中設定唯一的欄位名稱，尤其是未繫結欄位。
 
 ### 無表單模型的最適化表單 {#adaptive-form-with-no-form-model}
 
@@ -241,7 +241,7 @@ Prefill-Submit-Data-ContentPackage.zip
 >預填服務設定適用於最適化表單、HTML5表單及HTML5表單集。
 
 1. 使用URL開啟&#x200B;**[!UICONTROL Adobe Experience Manager Web主控台組態]**：\
-   https://<server>：<port>/system/console/configMgr
+   https://&lt;server>：&lt;port>/system/console/configMgr
 1. 搜尋並開啟&#x200B;**[!UICONTROL 預設預填服務組態]**。
 
    ![預填設定](assets/prefill_config_new.png)

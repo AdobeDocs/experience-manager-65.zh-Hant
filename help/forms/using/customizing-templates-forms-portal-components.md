@@ -88,11 +88,11 @@ Forms Portal提供預留位置語法，以顯示自訂/現成可用的中繼資�
 
 若要包含可重複的專案，請將屬性&#x200B;**data-repeatable**&#x200B;的值設定為&#x200B;**true**。
 
-*在所討論的範例中，自訂範本的頂端有兩個Div元素。 第一個具有「__FP_boxes-container」CSS類別，可作為所清單單的容器元素。 第二個是「__FP_boxes」CSS類別，是基本實體的範本，在此例中為「表單」。 Div元素中存在的&#x200B;**data-repeatable**屬性具有值&#x200B;**true**.*
+*在所討論的範例中，自訂範本的頂端有兩個Div元素。 第一個具有「__FP_boxes-container」CSS類別，可作為所清單單的容器元素。 第二個是「__FP_boxes」CSS類別，是基本實體的範本，在此例中為「表單」。 Div元素中存在的&#x200B;**data-repeatable**&#x200B;屬性具有值&#x200B;**true**.*
 
 每個預留位置都有一個專屬的現成可用中繼資料集。 若要在表單的特定位置顯示自訂中繼資料，請在該位置新增&#x200B;**${metadata_prop}屬性**。
 
-*在此範例中，中繼資料屬性用於多個執行個體。 例如，它以規定的方式用於&#x200B;**description**、**name**、**formUrl**、**htmlStyle**、**pdfUrl**、**pdfStyle**和&#x200B;**path**。*
+*在此範例中，中繼資料屬性用於多個執行個體。 例如，它以規定的方式用於&#x200B;**description**、**name**、**formUrl**、**htmlStyle**、**pdfUrl**、**pdfStyle**&#x200B;和&#x200B;**path**。*
 
 ## 現成可用的中繼資料 {#out-of-the-box-metadata}
 

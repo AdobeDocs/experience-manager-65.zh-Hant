@@ -149,7 +149,7 @@ ht-degree: 0%
    ![task_search_result](assets/task_search_result.png)
 
 1. 按一下左上角的邊欄按鈕![lc_pr_rail_button](assets/lc_pr_rail_button.png)以摺疊&#x200B;**我的篩選器**&#x200B;窗格，並展開&#x200B;**報表**&#x200B;面板的可用空間。
-1. 使用**報表**面板右上角的選項，對查詢結果執行操作。
+1. 使用&#x200B;**報表**&#x200B;面板右上角的選項，對查詢結果執行操作。
 
    * **重新整理**：以存放裝置中的最新資料重新整理報告
 
