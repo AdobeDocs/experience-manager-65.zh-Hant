@@ -145,7 +145,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >您可使用主控台移除不再需要的備份檔案。 在左窗格中選取備份檔案，然後按一下[刪除]。****
+   >您可使用主控台移除不再需要的備份檔案。 在左窗格中選取備份檔案，然後按一下[刪除]。**&#x200B;**
 
    >[!NOTE]
    >
@@ -192,7 +192,7 @@ curl -u admin:admin -X POST http://localhost:4502/system/console/jmx/com.adobe.g
 
 >[!NOTE]
 >
->也可使用AEM](/help/sites-administering/jmx-console.md)提供的MBean [觸發備份。
+>也可使用AEM[&#128279;](/help/sites-administering/jmx-console.md)提供的MBean 觸發備份。
 
 ### 檔案系統快照備份 {#filesystem-snapshot-backup}
 
