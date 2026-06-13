@@ -11,7 +11,7 @@ feature: Developing
 role: Developer
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
-source-wordcount: '3499'
+source-wordcount: '3628'
 ht-degree: 1%
 
 ---
@@ -59,7 +59,7 @@ ht-degree: 1%
 
   ![wf-22-1](assets/wf-22-1.png)
 
-* [cq：dialog](/help/sites-developing/developing-components.md#creating-and-configuring-a-dialog)
+* [cq:dialog](/help/sites-developing/developing-components.md#creating-and-configuring-a-dialog)
 
   具有下列索引標籤的對話方塊：
 
@@ -131,7 +131,7 @@ ht-degree: 1%
 
    >[!NOTE]
    >
-   >如需cq：editConfig節點的詳細資訊，請參閱[設定元件的編輯行為](/help/sites-developing/developing-components.md#configuring-the-edit-behavior)。
+   >如需cq:editConfig節點的詳細資訊，請參閱[設定元件的編輯行為](/help/sites-developing/developing-components.md#configuring-the-edit-behavior)。
 
 1. 在`cq:EditConfig`節點底下，新增下列節點：
 
@@ -175,14 +175,14 @@ ht-degree: 1%
 
 若要將焦點設定在特定工作流程案例中使用的元件，請設定設計中的關鍵功能，並移除模型開發人員變更該元件的功能。
 
-1. 在cq：component節點底下，新增以下節點：
+1. 在cq:component節點底下，新增下列節點：
 
    * 名稱：`cq:editConfig`
    * 類型：`cq:EditConfig`
 
-   如需cq：editConfig節點的詳細資訊，請參閱[設定元件的編輯行為](/help/sites-developing/developing-components.md#configuring-the-edit-behavior)。
+   如需cq:editConfig節點的詳細資訊，請參閱[設定元件的編輯行為](/help/sites-developing/developing-components.md#configuring-the-edit-behavior)。
 
-1. 在cq：EditConfig節點底下，新增以下節點：
+1. 在cq:EditConfig節點底下，新增下列節點：
 
    * 名稱：`cq:formParameters`
    * 類型：`nt:unstructured`
@@ -215,9 +215,9 @@ ht-degree: 1%
    * 名稱：`cq:editConfig`
    * 類型：`cq:EditConfig`
 
-   如需cq：editConfig節點的詳細資訊，請參閱[設定元件的編輯行為](/help/sites-developing/components-basics.md#edit-behavior)。
+   如需cq:editConfig節點的詳細資訊，請參閱[設定元件的編輯行為](/help/sites-developing/components-basics.md#edit-behavior)。
 
-1. 在cq：EditConfig節點底下，新增以下節點：
+1. 在cq:EditConfig節點底下，新增下列節點：
 
    * 名稱：`cq:formParameters`
    * 類型：`nt:unstructured`
@@ -527,7 +527,7 @@ if (workflowData.getPayloadType() == "JCR_PATH") {
 
 若要使用指令碼：
 
-1. 建立指令碼(例如，使用CRXDE Lite)並將其儲存在`//apps/workflow/scripts/`下的存放庫中
+1. 建立指令碼（例如，使用CRXDE Lite）並將其儲存在`//apps/workflow/scripts/`下的存放庫中
 1. 若要在&#x200B;**處理步驟**&#x200B;編輯對話方塊中指定識別指令碼的標題，請將下列屬性新增至指令碼的`jcr:content`節點：
 
    | 名稱 | 類型 | 值 |
@@ -644,7 +644,7 @@ function getParticipant() {
 }
 ```
 
-1. 建立指令碼(例如，使用CRXDE Lite)並將其儲存在`//apps/workflow/scripts`下的存放庫中
+1. 建立指令碼（例如，使用CRXDE Lite）並將其儲存在`//apps/workflow/scripts`下的存放庫中
 1. 若要在&#x200B;**處理步驟**&#x200B;編輯對話方塊中指定識別指令碼的標題，請將下列屬性新增至指令碼的`jcr:content`節點：
 
    | 名稱 | 類型 | 值 |
@@ -1031,7 +1031,7 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
 >
 >傳統UI模型編輯器對話方塊仍可與標準觸控式UI編輯器搭配使用。
 >
->雖然AEM有[現代化工具](/help/sites-developing/modernization-tools.md)，但如果您要將傳統UI步驟對話方塊升級為標準UI對話方塊。 轉換後，某些情況下仍可對對話方塊進行一些手動改進。
+>不過，如果您要將傳統UI步驟對話方塊升級為標準UI對話方塊，AEM有[現代化工具](/help/sites-developing/modernization-tools.md)。 轉換後，某些情況下仍可對對話方塊進行一些手動改進。
 >
 >* 如果升級後的對話方塊是空的，您可以檢視`/libs`中的對話方塊，這些對話方塊具有類似功能的範例，可做為提供解決方案的範例。 例如：
 >

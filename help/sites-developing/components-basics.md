@@ -12,7 +12,7 @@ feature: Developing
 role: Developer
 source-git-commit: f96b178ae84b4b930b59e36d4994970682c53dbd
 workflow-type: tm+mt
-source-wordcount: '4828'
+source-wordcount: '4949'
 ht-degree: 1%
 
 ---
@@ -126,7 +126,7 @@ AEM元件的結構既強大又靈活，主要考量事項為：
 * 資源類型
 * 元件定義
 * 元件的屬性和子節點
-* 對話方塊
+* 對話框
 * 設計對話方塊
 * 元件可用性
 * 元件及其建立的內容
@@ -142,7 +142,7 @@ AEM元件的結構既強大又靈活，主要考量事項為：
 
 ### 元件定義 {#component-definition}
 
-#### 元件基本知識 {#component-basics}
+#### 元件基礎知識 {#component-basics}
 
 元件的定義可劃分如下：
 
@@ -191,7 +191,7 @@ AEM元件的結構既強大又靈活，主要考量事項為：
 
    * `cq:editConfig (cq:EditConfig)` — 定義元件的編輯屬性，並讓元件出現在元件瀏覽器或Sidekick中。
 
-     注意：如果元件有對話方塊，即使cq：editConfig不存在，它也會自動出現在元件瀏覽器或Sidekick中。
+     注意：如果元件有對話方塊，即使cq:editConfig不存在，它也會自動出現在元件瀏覽器或Sidekick中。
 
    * `cq:childEditConfig (cq:EditConfig)` — 控制未定義自己`cq:editConfig`之子元件的作者UI方面。
    * 觸控式UI：
@@ -344,7 +344,7 @@ AEM元件的結構既強大又靈活，主要考量事項為：
   <tr>
    <td><code>cq:templatePath</code></td>
    <td><code>String</code></td>
-   <td>從元件瀏覽器或Sidekick新增元件時，作為內容範本使用的節點路徑。 這必須是絕對路徑，不是相對於元件節點的路徑。<br />除非您想要重複使用其他地方已有可用的內容，否則不需要此專案，且<code>cq:template</code>已足夠（請參閱下文）。</td>
+   <td>從元件瀏覽器或Sidekick新增元件時，作為內容範本使用的節點路徑。 這必須是絕對路徑，不是相對於元件節點的路徑。<br /> 除非您想要重複使用其他地方已提供的內容，否則不需要這樣做，<code>cq:template</code>就足夠了（請參閱下文）。</td>
   </tr>
   <tr>
    <td><code>jcr:created</code></td>
@@ -418,7 +418,7 @@ AEM元件的結構既強大又靈活，主要考量事項為：
    * `icon.png` — 圖形檔，用作Sidekick中元件的圖示
    * `thumbnail.png` — 從Sidekick拖曳元件時，做為元件縮圖的圖形檔案
 
-### 對話方塊 {#dialogs}
+### 對話框 {#dialogs}
 
 對話方塊是元件的關鍵元素，因為它們提供介面給作者來設定並提供該元件的輸入。
 
@@ -572,7 +572,7 @@ AEM中的元件受到三個不同階層的限制：
       * 只有在傳統UI中才能使用多個放置目標。
       * 觸控式UI中允許單一放置目標。
 
-   * `cq:actionConfigs` （節點型別`nt:unstructured`）：定義附加至cq：actions清單的新動作清單。
+   * `cq:actionConfigs` （節點型別`nt:unstructured`）：定義附加至cq:actions清單的新動作清單。
    * `cq:formParameters` （節點型別`nt:unstructured`）：定義新增至對話方塊表單的其他引數。
    * `cq:inplaceEditing` （節點型別`cq:InplaceEditingConfig`）：定義元件的就地編輯組態。
    * `cq:listeners` （節點型別`cq:EditListenersConfig`）：定義在元件上發生動作之前或之後所發生的事件。
@@ -636,9 +636,9 @@ AEM中的元件受到三個不同階層的限制：
 
 此範本的範例使用可在核心元件[中看到，例如在標題元件中。](https://github.com/adobe/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/title/v2/title/title.html#L27)
 
-### 使用cq：EditConfig屬性進行設定 {#configuring-with-cq-editconfig-properties}
+### 使用cq:EditConfig屬性進行設定 {#configuring-with-cq-editconfig-properties}
 
-### cq：actions {#cq-actions}
+### cq:actions {#cq-actions}
 
 `cq:actions`屬性( `String array`)定義了一或多個可以在元件上執行的動作。 下列值可供設定：
 
@@ -654,7 +654,7 @@ AEM中的元件受到三個不同階層的限制：
   </tr>
   <tr>
    <td>-</td>
-   <td>新增分隔符號。<br />僅顯示在傳統UI中。 觸控式UI不會在內容功能表中顯示動作，因此這不適用。</td>
+   <td>新增分隔符號。<br /> 僅顯示在傳統UI中。 觸控式UI不會在內容功能表中顯示動作，因此這不適用。</td>
   </tr>
   <tr>
    <td><code>edit</code></td>
@@ -697,7 +697,7 @@ AEM中的元件受到三個不同階層的限制：
     jcr:primaryType="cq:EditConfig"/>
 ```
 
-### cq：layout （僅限傳統UI） {#cq-layout-classic-ui-only}
+### cq:layout （僅限傳統UI） {#cq-layout-classic-ui-only}
 
 `cq:layout`屬性( `String`)定義如何在傳統UI中編輯元件。 可使用下列值：
 
@@ -709,11 +709,11 @@ AEM中的元件受到三個不同階層的限制：
   </tr>
   <tr>
    <td><code>rollover</code></td>
-   <td>預設值。 元件版本可透過點按和/或內容功能表「在滑鼠懸停上」存取。<br />對於進階使用，對應的使用者端物件為： <code>CQ.wcm.EditRollover</code>。</td>
+   <td>預設值。 元件版本可透過按一下和/或內容功能表，以「滑鼠懸停在上」方式存取。<br /> 若為進階使用，對應的使用者端物件為： <code>CQ.wcm.EditRollover</code>。</td>
   </tr>
   <tr>
    <td><code>editbar</code></td>
-   <td>元件版本可透過工具列存取。<br />對於進階使用，對應的使用者端物件為： <code>CQ.wcm.EditBar</code>。</td>
+   <td>元件版本可透過工具列存取。<br /> 若為進階使用，對應的使用者端物件為： <code>CQ.wcm.EditBar</code>。</td>
   </tr>
   <tr>
    <td><code>auto</code></td>
@@ -736,7 +736,7 @@ AEM中的元件受到三個不同階層的限制：
 </jcr:root>
 ```
 
-### cq：dialogMode （僅限傳統UI） {#cq-dialogmode-classic-ui-only}
+### cq:dialogMode （僅限傳統UI） {#cq-dialogmode-classic-ui-only}
 
 元件可連結至編輯對話方塊。 `cq:dialogMode`屬性( `String`)定義如何在傳統UI中開啟元件對話方塊。 可使用下列值：
 
@@ -776,11 +776,11 @@ AEM中的元件受到三個不同階層的限制：
 </jcr:root>
 ```
 
-### cq：emptyText {#cq-emptytext}
+### cq:emptyText {#cq-emptytext}
 
 `cq:emptyText`屬性( `String`)定義沒有視覺內容時顯示的文字。 預設為： `Drag components or assets here`。
 
-### cq：inherit {#cq-inherit}
+### cq:inherit {#cq-inherit}
 
 `cq:inherit`屬性( `boolean`)定義遺漏的值是否繼承自它繼承的元件。 預設為`false`。
 
@@ -793,9 +793,9 @@ AEM中的元件受到三個不同階層的限制：
 * 使用者一律可以在對話方塊中切換全熒幕模式。
 * 不適用於傳統UI。
 
-### 使用cq：EditConfig子節點進行配置 {#configuring-with-cq-editconfig-child-nodes}
+### 使用cq:EditConfig子節點進行設定 {#configuring-with-cq-editconfig-child-nodes}
 
-### cq：dropTargets {#cq-droptargets}
+### cq:dropTargets {#cq-droptargets}
 
 `cq:dropTargets`節點（節點型別`nt:unstructured`）定義了可以接受從內容尋找器拖曳之資產的放置目標清單。 它做為型別`cq:DropTargetConfig`的節點集合。
 
@@ -856,7 +856,7 @@ AEM中的元件受到三個不同階層的限制：
     </cq:dropTargets>
 ```
 
-### cq：actionConfigs （僅限傳統UI） {#cq-actionconfigs-classic-ui-only}
+### cq:actionConfigs （僅限傳統UI） {#cq-actionconfigs-classic-ui-only}
 
 `cq:actionConfigs`節點（節點型別`nt:unstructured`）會定義附加至`cq:actions`屬性所定義之清單的新動作清單。 `cq:actionConfigs`的每個子節點會透過定義Widget來定義新動作。
 
@@ -889,7 +889,7 @@ AEM中的元件受到三個不同階層的限制：
 >
 >請參閱觸控式UI的範例： [將新動作新增至元件工具列](/help/sites-developing/customizing-page-authoring-touch.md#add-new-action-to-a-component-toolbar)。
 
-### cq：formParameters {#cq-formparameters}
+### cq:formParameters {#cq-formparameters}
 
 `cq:formParameters`節點（節點型別`nt:unstructured`）定義了新增至對話方塊表單的其他引數。 每個屬性都會對應至一個表單引數。
 
@@ -901,7 +901,7 @@ AEM中的元件受到三個不同階層的限制：
         name="photos/primary"/>
 ```
 
-### cq：inplaceEditing {#cq-inplaceediting}
+### cq:inplaceEditing {#cq-inplaceediting}
 
 `cq:inplaceEditing`節點（節點型別`cq:InplaceEditingConfig`）定義了元件的就地編輯組態。 它可以有以下屬性：
 
@@ -940,7 +940,7 @@ AEM中的元件受到三個不同階層的限制：
         editorType="plaintext"/>
 ```
 
-### cq：listeners {#cq-listeners}
+### cq:listeners {#cq-listeners}
 
 `cq:listeners`節點（節點型別`cq:EditListenersConfig`）會定義元件動作之前或之後所發生的事件。 下表定義其可能的屬性。
 
@@ -973,7 +973,7 @@ AEM中的元件受到三個不同階層的限制：
   </tr>
   <tr>
    <td><code>beforeinsert</code></td>
-   <td>處理常式會在插入元件之前觸發。<br />只適用於觸控式UI。</td>
+   <td>處理常式會在插入元件之前觸發。<br /> 僅適用於觸控式UI。</td>
    <td> </td>
   </tr>
   <tr>

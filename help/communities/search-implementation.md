@@ -11,8 +11,8 @@ feature: Communities
 role: Admin
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '1158'
-ht-degree: 2%
+source-wordcount: '1207'
+ht-degree: 3%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 2%
 
 ## 概觀 {#overview}
 
-搜尋功能是Adobe Experience Manager (AEM) Communities的重要功能。 除了[AEM平台搜尋](../../help/sites-deploying/queries-and-indexing.md)功能外，AEM Communities還提供用於搜尋使用者產生的內容(UGC)的[UGC搜尋API](#ugc-search-api)。 UGC在輸入和儲存時，與其他AEM內容和使用者資料分開，因此有獨特的屬性。
+搜尋功能是Adobe Experience Manager (AEM)社群的重要功能。 除了[AEM平台搜尋](../../help/sites-deploying/queries-and-indexing.md)功能外，AEM Communities還提供用於搜尋使用者產生的內容(UGC)的[UGC搜尋API](#ugc-search-api)。 UGC在輸入和儲存時，與其他AEM內容和使用者資料分開，因此有獨特的屬性。
 
 針對Communities，通常會搜尋以下兩個專案：
 
@@ -48,7 +48,7 @@ ht-degree: 2%
 
 ### ASRP搜尋 {#asrp-searches}
 
-對於[ASRP](asrp.md)，UGC儲存在Adobe雲端。 雖然UGC在CRX中不可見，但[調節](moderate-ugc.md)可在作者和Publish環境中使用。 [UGC搜尋API](#ugc-search-api)的使用在ASRP上的作用與其他SRP相同。
+對於[ASRP](asrp.md)，UGC儲存在Adobe雲端。 雖然UGC在CRX中不可見，但作者和發佈環境均可使用[調節](moderate-ugc.md)。 [UGC搜尋API](#ugc-search-api)的使用在ASRP上的作用與其他SRP相同。
 
 目前沒有管理ASRP搜尋的工具。
 
@@ -56,11 +56,11 @@ ht-degree: 2%
 
 ### MSRP搜尋 {#msrp-searches}
 
-針對[MSRP](msrp.md)，UGC儲存在設定為使用Solr進行搜尋的MongoDB中。 UGC在CRX中不可見，但[調節](moderate-ugc.md)可在作者和Publish環境中使用。
+針對[MSRP](msrp.md)，UGC儲存在設定為使用Solr進行搜尋的MongoDB中。 UGC在CRX中不可見，但[調節](moderate-ugc.md)可在製作和發佈環境中使用。
 
 關於MSRP和Solr：
 
-* AEM平台的內嵌Solr不用於MSRP。
+* AEM平台的內嵌式Solr不適用於MSRP。
 * 如果針對AEM平台使用遠端Solr，則可與MSRP共用，但應使用不同的集合。
 * Solr可設定為標準搜尋或多語言搜尋(MLS)。
 * 如需組態詳細資訊，請參閱MSRP的[Solr組態](msrp.md#solr-configuration)。
@@ -71,17 +71,17 @@ ht-degree: 2%
 
 ### JSRP搜尋 {#jsrp-searches}
 
-對於[JSRP](jsrp.md)，UGC儲存在[Oak](../../help/sites-deploying/platform.md)中，並且只會在輸入它的AEM Author或Publish執行個體的存放庫中顯示。
+對於[JSRP](jsrp.md)，UGC儲存在[Oak](../../help/sites-deploying/platform.md)中，並且只會在輸入它的AEM作者或發佈執行個體的存放庫中顯示。
 
-由於UGC通常是在Publish環境中輸入，因此對於多發佈者生產系統，必須設定[發佈叢集](topologies.md)，而不是發佈陣列，以便所有發佈者都能看到輸入的內容。
+由於UGC通常輸入在發佈環境中，對於多發佈者生產系統，必須設定[發佈叢集](topologies.md)，而不是發佈陣列，以便所有發佈者都能看到輸入的內容。
 
-若為JSRP，在Publish環境中輸入的UGC絕對不會顯示在製作環境中。 因此，所有[稽核](moderate-ugc.md)工作都會在Publish環境中進行。
+對於JSRP，在發佈環境中輸入的UGC在製作環境中從不可見。 因此，所有[稽核](moderate-ugc.md)工作都會在發佈環境中進行。
 
 自訂搜尋功能應該使用[UGC搜尋API](#ugc-search-api)。
 
 #### Oak索引 {#oak-indexing}
 
-雖然自AEM 6.2起，AEM平台搜尋不會自動建立Oak索引，但已為AEM Communities新增索引，以改進效能並在顯示UGC搜尋結果時支援分頁。
+雖然系統不會自動為AEM平台搜尋建立Oak索引（截至AEM 6.2），但已為AEM Communities新增這些索引，以改善效能並在顯示UGC搜尋結果時支援分頁。
 
 如果使用自訂屬性且搜尋速度緩慢，則必須為自訂屬性建立其他索引，以提高其效能。 若要維持可攜性，在建立可搜尋的自訂屬性時，請遵守[命名需求](#naming-of-custom-properties)。
 
@@ -92,7 +92,7 @@ ht-degree: 2%
 * 現有索引的檢視。
 * 啟動重新索引的功能。
 
-若要檢視[CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md)中的現有Oak索引，位置為：
+若要在[CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md)中檢視現有的Oak索引，位置為：
 
 * `/oak:index/socialLucene`
 
@@ -104,7 +104,7 @@ ht-degree: 2%
 
 以下是供各種Communities功能使用的一些可搜尋屬性：
 
-| **屬性** | **資料型別** |
+| **屬性** | **資料類型** |
 |---|---|
 | isFlagged | *布林值* |
 | isSpam | *布林值* |
@@ -119,7 +119,7 @@ ht-degree: 2%
 | userId | *字串* |
 | 回覆 | *長* |
 | jcr:title | *字串* |
-| jcr：description | *字串* |
+| jcr:description | *字串* |
 | sling:resourceType | *字串* |
 | allowThreadedReply | *布林值* |
 | isDraft | *布林值* |
@@ -128,7 +128,7 @@ ht-degree: 2%
 | 已回答 | *布林值* |
 | chosenanswered | *布林值* |
 | 標籤 | *字串* |
-| cq：Tag | *字串* |
+| cq:Tag | *字串* |
 | author_display_name | *字串* |
 | location_t | *字串* |
 | parentpath | *字串* |
@@ -145,7 +145,7 @@ ht-degree: 2%
 
 Solr是使用結構描述的查詢語言範例。
 
-| **尾碼** | **資料型別** |
+| **尾碼** | **資料類型** |
 |---|---|
 | _b | *布林值* |
 | _dt | *行事曆* |
@@ -163,7 +163,7 @@ Solr是使用結構描述的查詢語言範例。
    * `viewDate_dt`：單一日期屬性
    * `viewDates_dts`：日期屬性清單
 
-## 篩選條件 {#filters}
+## 篩選器 {#filters}
 
 包含[註解系統](essentials-comments.md)的元件除了其端點之外，也支援篩選引數。
 
@@ -201,7 +201,7 @@ AND和OR邏輯的篩選器語法如下（在URL編碼之前顯示）：
 
 有一個Adobe Experience Cloud GitHub專案，其中包含：
 
-[AEM Communities SRP工具](https://github.com/Adobe-Marketing-Cloud/aem-communities-srp-tools)
+[AEM Communities SRP Tools](https://github.com/Adobe-Marketing-Cloud/aem-communities-srp-tools)
 
 此存放庫包含用於管理SRP中資料的工具。
 

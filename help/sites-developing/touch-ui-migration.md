@@ -12,8 +12,8 @@ feature: Developing
 role: Developer
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
-source-wordcount: '629'
-ht-degree: 3%
+source-wordcount: '701'
+ht-degree: 6%
 
 ---
 
@@ -93,7 +93,7 @@ ht-degree: 3%
    <td>由伺服器完成的轉譯：
     <ul>
      <li>使用者端要求頁面以及相關UI。</li>
-     <li>伺服器會傳送（推播） UI作為HTML檔案；使用Coral UI元件。<br /> </li>
+     <li>伺服器會將UI作為HTML檔案傳送（推送）；使用Coral UI元件。<br /> </li>
     </ul> </td>
   </tr>
  </tbody>
@@ -104,7 +104,7 @@ ht-degree: 3%
 開始之前，請檢查狀態和相關建議：
 
 * [觸控式UI功能狀態](/help/release-notes/touch-ui-features-status.md)
-* [客戶適用的使用者介面Recommendations](/help/sites-deploying/ui-recommendations.md)
+* [客戶適用的使用者介面建議](/help/sites-deploying/ui-recommendations.md)
 
 開發觸控式UI的基礎知識提供了堅實的基礎：
 
@@ -145,15 +145,15 @@ ht-degree: 3%
 
 ## 其他資源 {#further-resources}
 
-如需有關開發AEM的完整資訊，請參閱以下資源集合：
+如需有關開發AEM的完整資訊，請參閱下列各項下的資源集合：
 
 * [Developing使用手冊](/help/sites-developing/getting-started.md)
 * [Granite UI檔案](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)
-* [AEM 6.5 SitesTutorials和影片](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/overview.html?lang=zh-Hant)
+* [AEM 6.5 Sites教學課程與影片](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/overview.html?lang=zh-Hant)
 * [開發 AEM Sites 快速入門 - WKND 教學課程](/help/sites-developing/getting-started.md)
 * [AEM Gems](https://experienceleague.adobe.com/docs/events/experience-manager-gems-recordings/overview.html?lang=zh-Hant)
 * [AEM 現代化工具](https://opensource.adobe.com/aem-modernize-tools/)
 
 >[!CAUTION]
 >
->AEM現代化工具是社群共同努力的成果，Adobe不提供支援或保證。
+>AEM現代化工具是社群共同努力的結果，Adobe不提供支援或保證。

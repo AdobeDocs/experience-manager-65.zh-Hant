@@ -11,8 +11,8 @@ feature: Developing,Search,Query Builder
 role: Developer
 source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
 workflow-type: tm+mt
-source-wordcount: '2313'
-ht-degree: 2%
+source-wordcount: '2381'
+ht-degree: 1%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 2%
 >
 >例如，請參閱：
 >
->* [http://localhost:4502/system/console/services?filter=%28component.factory%3Dcom.day.cq.search.eval.PredicateEvaluator%2F*%29](http://localhost:4502/system/console/services?filter=%28component.factory%3Dcom.day.cq.search.eval.PredicateEvaluator%2F*%29)
+>* [http://localhost:4502/system/console/services？filter=%28component.factory%3Dcom.day.cq.search.eval.PredicateEvaluator%2F*%29](http://localhost:4502/system/console/services?filter=%28component.factory%3Dcom.day.cq.search.eval.PredicateEvaluator%2F*%29)
 
 ## 一般 {#general}
 
@@ -70,7 +70,7 @@ ht-degree: 2%
 
 #### 屬性 {#properties}
 
-* **boolproperty**
+* **布林屬性**
 屬性的相對路徑，例如`myFeatureEnabled`或`jcr:content/myFeatureEnabled`。
 
 * **值**
@@ -112,7 +112,7 @@ ht-degree: 2%
 ### 日期範圍 {#daterange}
 
 比對JCR DATE屬性與日期/時間間隔。 這使用ISO8601
-日期和時間格式( `YYYY-MM-DDTHH:mm:ss.SSSZ`)，並允許部分表示，如`YYYY-MM-DD`。 或者，時間戳記也可以提供為UTC時區(UNIX®時間格式)自1970年以來的毫秒數。
+日期和時間格式( `YYYY-MM-DDTHH:mm:ss.SSSZ`)，並允許部分表示，如`YYYY-MM-DD`。 或者，時間戳記也可以提供為UTC時區（UNIX®時間格式）自1970年以來的毫秒數。
 
 您可以尋找兩個時間戳記之間的任何專案，或比指定日期新或舊的專案，也可以選擇介於包含間隔和開啟間隔之間的專案。
 
@@ -381,7 +381,7 @@ group.2_group.type=dam:Asset
 
 * **深度**
 
-  屬性/相對路徑可存在的萬用字元層級數目（例如，`property=size depth=2`會檢查節點/大小、節點/&amp;amp； AST；/大小和節點/&amp;amp； AST；/&amp;amp； AST；/size）。
+  屬性/相對路徑可以存在的萬用字元層級數目（例如，`property=size depth=2`會檢查節點/大小、節點/&amp;ast；/大小以及節點/&amp;ast；/&amp;ast；/大小）。
 
 ### rangeproperty {#rangeproperty}
 
@@ -483,7 +483,7 @@ group.2_group.type=dam:Asset
 
    * **選擇性**：
 
-     只有在`p.properties`中指定的屬性，這是相對路徑的空格分隔清單（在URL中使用「+」）；如果相對路徑的深度> 1，這些屬性會表示為子物件；特殊的jcr：path屬性包含點選的路徑
+     只有在`p.properties`中指定的屬性，這是相對路徑的空格分隔清單（在URL中使用「+」）；如果相對路徑的深度> 1，這些屬性會表示為子物件；特殊的jcr:path屬性包含點選的路徑
 
 ### savedquery {#savedquery}
 

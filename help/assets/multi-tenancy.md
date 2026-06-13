@@ -8,8 +8,8 @@ exl-id: f95560c9-f1b9-4e86-94a7-70347d268d8f
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
-source-wordcount: '220'
-ht-degree: 0%
+source-wordcount: '228'
+ht-degree: 2%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 例如，如果您建立名為`Demo`的資料夾，[!DNL Experience Manager]資產傳統上會將資料夾儲存在`../content/dam/Demo`。 啟用多租使用者後，您現在可以將資料儲存在`../content/dam/<organization prefix>/<organization id>Demo`
 
-例如，如果針對指派給[!DNL Adobe Marketing Cloud]組織的[!DNL Assets] （隨選）的`aodpremium`位使用者，您可以使用多租使用者功能來設定`../content/dam/<mac>/<aodpremium>Demo`路徑以分隔其內容。 在此範例中，`mac`是組織首碼，`aodpremium`是組織識別碼。
+例如，如果針對指派給`aodpremium`組織的[!DNL Assets] （隨選）的[!DNL Adobe Marketing Cloud]位使用者，您可以使用多租使用者功能來設定`../content/dam/<mac>/<aodpremium>Demo`路徑以分隔其內容。 在此範例中，`mac`是組織首碼，`aodpremium`是組織識別碼。
 
 根據使用者的組織和ID，此合格路徑會顯示在[!DNL Assets]介面和各種精靈中，包括強制隔離的「移動」和「程式碼片段」建立精靈。
 

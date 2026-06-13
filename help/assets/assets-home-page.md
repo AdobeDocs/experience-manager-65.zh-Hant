@@ -8,7 +8,7 @@ exl-id: 042bd959-256a-4794-a34d-0848a6b8840d
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '562'
+source-wordcount: '567'
 ht-degree: 2%
 
 ---
@@ -87,4 +87,4 @@ ht-degree: 2%
 >
 >Adobe建議執行大量作業的管理員和使用者避免使用資產首頁功能，以防止使用者活動增加。 此外，管理員可以從[!UICONTROL 設定管理員]設定[!UICONTROL Day CQ DAM Event Recorder]，以排除特定使用者的錄製活動。
 >
->如果您使用此功能，Adobe建議您根據伺服器負載排定清除頻率。
+>如果使用功能，Adobe建議您根據伺服器負載排定清除頻率。

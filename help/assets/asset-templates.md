@@ -8,7 +8,7 @@ exl-id: 12c92aad-3a1d-486e-a830-31de2fc6d07b
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 0b90fdd13efc5408ef94ee1966f04a80810b515e
 workflow-type: tm+mt
-source-wordcount: '1558'
+source-wordcount: '1571'
 ht-degree: 1%
 
 ---
@@ -57,7 +57,7 @@ ht-degree: 1%
    ![chlimage_1-104](assets/chlimage_1-309.png)
 
 1. （選擇性）按一下&#x200B;**[!UICONTROL 標籤]**，然後為手冊選取一或多個標籤。 按一下&#x200B;**[!UICONTROL 確認]**&#x200B;以確認您的選擇。
-1. 按一下「**[!UICONTROL 建立]**」。對話方塊會確認已建立新手冊。 按一下&#x200B;**[!UICONTROL 開啟]**，以編輯模式開啟手冊。
+1. 按一下「**[!UICONTROL 建立]**」。 對話方塊會確認已建立新手冊。 按一下&#x200B;**[!UICONTROL 開啟]**，以編輯模式開啟手冊。
 
    <!--![chlimage_1-106](assets/.png) -->
 

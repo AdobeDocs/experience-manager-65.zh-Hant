@@ -11,7 +11,7 @@ feature: Developing
 role: Developer
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
-source-wordcount: '498'
+source-wordcount: '548'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ Granite UI提供一系列設計用於表單的元件；這些在Granite UI辭彙
 
 * 使用者端：
 
-   * clientlibs的集合，提供一些辭彙(即HTML語言的延伸)以透過Hypermedia驅動的使用者介面實現一般互動模式。
+   * 提供一些辭彙（即HTML語言的延伸）的clientlibs集合，可透過Hypermedia驅動的使用者介面實現一般互動模式。
 
 一般Granite UI元件`field`由兩個感興趣的檔案組成：
 

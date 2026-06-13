@@ -1,6 +1,6 @@
 ---
 title: 使用SRP存取UGC
-description: 當網站設定為使用ASRP或MSRP時，實際的UGC不會儲存在AEM節點存放區(JCR)中
+description: 當網站設定為使用ASRP或MSRP時，實際的UGC不會儲存在AEM的節點存放區(JCR)中
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
@@ -12,7 +12,7 @@ feature: Communities
 role: Developer
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '322'
+source-wordcount: '342'
 ht-degree: 0%
 
 ---
@@ -25,13 +25,13 @@ ht-degree: 0%
 
 在建立社群網站之前，必須將[儲存資源提供者(SRP)](/help/communities/working-with-srp.md)設定為選取與基礎[拓撲](/help/communities/topologies.md)一致的實作。 SRP實施會根據三個儲存選項：
 
-1. [ASRP](/help/communities/asrp.md) — 隨選儲存Adobe
+1. [ASRP](/help/communities/asrp.md) - Adobe隨選儲存
 1. [MSRP](/help/communities/msrp.md) - MongoDB
 1. [JSRP](/help/communities/jsrp.md) - JCR
 
 ## 關於UGC儲存 {#about-ugc-storage}
 
-有關UGC儲存的重要資訊是，當網站設定為使用ASRP或MSRP時，實際的UGC不會儲存於AEM [節點存放區](/help/sites-deploying/data-store-config.md) (JCR)。
+有關UGC的儲存，務必要瞭解的是，當網站設定為使用ASRP或MSRP時，實際的UGC不會儲存在AEM的[節點存放區](/help/sites-deploying/data-store-config.md) (JCR)中。
 
 雖然JCR中可能有遮蔽UGC以提供有用中繼資料的節點，但請勿將這些節點與實際UGC混淆。
 

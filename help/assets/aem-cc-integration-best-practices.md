@@ -10,7 +10,7 @@ hide: true
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
 workflow-type: tm+mt
-source-wordcount: '3371'
+source-wordcount: '3263'
 ht-degree: 14%
 
 ---
@@ -119,9 +119,9 @@ TBD: Add some info about XD integration and possibly info about DA v2.0.
 * Adobe Stock中的資產儲存至[!DNL Experience Manager]時，會變成一般[!DNL Assets]，而二進位檔案會儲存至[!DNL Experience Manager]存放庫。 與[!DNL Adobe Stock]相關的部分中繼資料會儲存在[!DNL Experience Manager]中的資產，否則擷取程式看起來會與任何其他檔案相同。 例如，如果智慧標籤作用中，會在儲存時將標籤新增到這些資產。
 * 儲存到[!DNL Experience Manager]的資產是復本，而不是連結回[!DNL Adobe Stock]。
 
-**正在處理從[!DNL Adobe Stock]儲存到[!DNL Creative Cloud]**&#x200B;中[!DNL Experience Manager]的資產。 此整合獨立於[!DNL Adobe Asset Link]，但[!DNL Adobe Asset Link]可辨識這些以此方式從[!DNL Stock]儲存的資產，並在[!DNL Photoshop]、[!DNL Illustrator]或[!DNL InDesign]的[!DNL Adobe Asset Link]擴充功能UI中，於這些資產上顯示額外的中繼資料和[!DNL Adobe Stock]標誌。 這些檔案可供瀏覽、開啟等操作，因為它們是儲存至[!DNL Experience Manager]的一般資產。
+**正在處理從[!DNL Adobe Stock]儲存到[!DNL Creative Cloud]**&#x200B;中[!DNL Experience Manager]的資產。此整合獨立於[!DNL Adobe Asset Link]，但[!DNL Adobe Asset Link]可辨識以此方式從[!DNL Stock]儲存的這些資產，並在[!DNL Photoshop]、[!DNL Illustrator]或[!DNL InDesign]的[!DNL Adobe Asset Link]擴充功能UI中，在這些資產上顯示額外的中繼資料和[!DNL Adobe Stock]標誌。檔案可供瀏覽、開啟等操作，因為它們是儲存至[!DNL Experience Manager]的一般資產。
 使用[!DNL Creative Cloud]應用程式且有[!DNL Adobe Asset Link]副檔名的Creative使用者，除了可以存取已從[!DNL Adobe Stock]到[!DNL Experience Manager]的已授權資產，還可以使用[!DNL Creative Cloud]資料庫面板來搜尋、預覽和授權[!DNL Adobe Stock]資產。
-來自[!DNL Adobe Stock]的授權並儲存至[!DNL Experience Manager]的[!DNL Assets]可供存取[!DNL Experience Manager Assets]部署的更廣泛團隊使用，而來自[!DNL Adobe Stock]的創意內容授權資產則透過[!DNL Creative Cloud]資料庫面板，預設只能在其[!DNL Creative Cloud]帳戶中供自己使用。
+從[!DNL Adobe Stock]授權並儲存至[!DNL Experience Manager]的[!DNL Assets]可供存取[!DNL Experience Manager Assets]部署的更廣泛團隊使用，而從[!DNL Adobe Stock]透過[!DNL Creative Cloud]資料庫面板授權的創意人員只能預設在其[!DNL Creative Cloud]帳戶中供他們自己使用。
 
 <!-- 
 TBD: A condensed version of the below content is better placed in the Adobe DAM introduction article.
@@ -135,7 +135,7 @@ TBD: A condensed version of the below content is better placed in the Adobe DAM 
 
 將資產儲存在DAM中，可讓您輕鬆存取及找到資產。 這可確保整個組織或生態系統中的多位使用者（包括合作夥伴、客戶等）都能使用資產。
 
-大多陣列織會選擇僅儲存與下遊行銷/LOB程式相關的資產（透過[!DNL Experience Manager Sites]發佈至Web頻道之類的頻道，或發佈至Adobe Experience Cloud提供的其他頻道 — Marketing Cloud、Advertising Cloud和Analytics Cloud測量、提供給使用者/合作夥伴等）。 此外，組織可儲存資產，這些資產可能會在DAM中接受稽核/核准程式。 如此一來，DAM主要儲存極有可能使用的資產，避免儲存閒置資產。
+大多陣列織會選擇僅儲存與下遊行銷/LOB程式相關的資產（透過[!DNL Experience Manager Sites]發佈至Web頻道之類的頻道，或發佈至Adobe Experience Cloud提供的其他頻道 — Marketing Cloud、Advertising Cloud，並由Analytics Cloud測量，提供給使用者/合作夥伴等）。 此外，組織可儲存資產，這些資產可能會在DAM中接受稽核/核准程式。 如此一來，DAM主要儲存極有可能使用的資產，避免儲存閒置資產。
 
 儲存資產也受到技術和資源使用率考量的限制。 DAM提供有關已儲存資產的其他服務，包括擷取中繼資料、版本設定、產生預覽/轉碼、管理參考和新增存取控制資訊。 這些服務會消耗額外的時間和基礎架構資源。
 

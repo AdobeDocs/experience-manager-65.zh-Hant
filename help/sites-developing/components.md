@@ -11,14 +11,14 @@ feature: Developing
 role: Developer
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
-source-wordcount: '570'
-ht-degree: 44%
+source-wordcount: '620'
+ht-degree: 47%
 
 ---
 
 # 元件概觀{#components-overview}
 
-此頁面概述了 Adobe Experience Manager (AEM) 元件，例如那些[用於頁面編寫](/help/sites-authoring/default-components-foundation.md)的元件。
+此頁面概觀了 Adobe Experience Manager (AEM) 元件，例如那些[用於頁面編寫](/help/sites-authoring/default-components-foundation.md) 的元件。
 
 ## 元件有哪些？ {#what-exactly-is-a-component}
 
@@ -66,9 +66,9 @@ AEM隨附各種[現成可用的元件](/help/sites-authoring/default-components.
 * [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)
 * [基礎元件](/help/sites-authoring/default-components-foundation.md)
 
-**核心元件**&#x200B;已與AEM 6.3搭配使用，並提供有彈性且功能豐富的編寫功能。 [We.Retail參考網站](/help/sites-developing/we-retail.md)說明如何使用核心元件，並代表目前元件開發的最佳實務。
+**核心元件**&#x200B;已與AEM 6.3搭配使用，並提供有彈性且功能豐富的撰寫功能。 [We.Retail參考網站](/help/sites-developing/we-retail.md)說明如何使用核心元件，並代表目前元件開發的最佳實務。
 
-**Foundation元件**&#x200B;已與AEM一起提供許多版本，並可在標準AEM安裝中立即使用。 雖然仍受支援，但大部分的功能已過時、不再強化，而且以舊版技術為基礎。
+**基礎元件**&#x200B;已與AEM搭配使用許多版本，並且可在標準AEM安裝中立即使用。 雖然仍受支援，但大部分的功能已過時、不再強化，而且以舊版技術為基礎。
 
 >[!NOTE]
 >
