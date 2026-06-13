@@ -11,7 +11,7 @@ feature: Mobile
 role: User
 source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '391'
+source-wordcount: '406'
 ht-degree: 4%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 4%
 
 {{ue-over-mobile}}
 
-將隨選應用程式關聯至雲端設定，可讓Adobe Experience Manager (AEM)建立雙向連結，直接與Mobile On-Demand代管專案通訊。 將應用程式連結至Mobile On-Demand專案後，您就能在AEM內建立內容（例如文章、橫幅和集合），並將內容提供至Mobile On-Demand。
+將隨選應用程式關聯至雲端設定，可讓Adobe Experience Manager (AEM)建立雙向連結，直接與Mobile On-Demand代管專案通訊。 將應用程式連結至Mobile On-Demand專案後，您就能在AEM中建立內容（例如文章、橫幅和集合），將該內容提供給Mobile On-Demand。
 
 從那裡，發佈、預覽和管理內容變得可行。 您也可以將現有的Mobile On-Demand內容匯入AEM並執行內容編輯。
 
@@ -32,7 +32,7 @@ ht-degree: 4%
 >
 >如需詳細資訊，請參閱管理一節中的[設定AEM Mobile On-demand Services](/help/mobile/aem-mobile-setup.md)。
 
-若要設定Mobile On-DemandCloud Service，請從您的應用程式儀表板按一下&#x200B;**管理連線**&#x200B;圖磚右上角的齒輪。
+若要設定Mobile On-Demand Cloud Services，請從您的應用程式儀表板按一下&#x200B;**管理連線**&#x200B;圖磚右上角的上齒輪。
 
 您應熟悉應用程式控制面板和可用的圖磚。 如需詳細資訊，請參閱[AEM Mobile應用程式控制面板](/help/mobile/mobile-apps-ondemand-application-dashboard.md)。
 

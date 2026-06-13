@@ -1,6 +1,6 @@
 ---
-title: Distiller服務Java&amp；trade； API QuickStart(SOAP)
-description: 瞭解Distiller服務如何將PostScript、EPS和PRN檔案轉換為PDF（通常用於高容量列印至電子檔案轉換）。
+title: Distiller服務Java&trade； API快速入門(SOAP)
+description: 瞭解Distiller服務如何將PostScript、EPS和PRN檔案轉換為PDF，這通常用於高容量列印至電子檔案轉換。
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -11,7 +11,7 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,APIs & Integrations,AEM Forms on JEE
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '189'
+source-wordcount: '194'
 ht-degree: 0%
 
 ---
@@ -20,17 +20,17 @@ ht-degree: 0%
 
 Java™ API快速入門(SOAP)適用於Distiller®服務：
 
-[快速入門(SOAP模式)：使用Java將PostScript檔案轉換為PDF檔案](distiller-service-java-api-quick.md#quick-start-soap-mode-converting-a-postscript-file-to-a-pdf-document-using-the-java-api)
+[快速入門（SOAP模式）：使用Java™ API將PostScript檔案轉換為PDF檔案](distiller-service-java-api-quick.md#quick-start-soap-mode-converting-a-postscript-file-to-a-pdf-document-using-the-java-api)
 
-AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定為SOAP。
+AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設為SOAP。
 
 >[!NOTE]
 >
->使用AEM表單進行程式設計的快速入門是以部署在JBoss®應用程式伺服器和Microsoft® Windows作業系統上的Forms伺服器為基礎。 不過，如果您使用其他作業系統(例如UNIX®)，請將Windows特定路徑取代為適用作業系統支援的路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 請參閱[設定連線內容](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
+>使用AEM表單進行程式設計中的快速入門是以部署在JBoss®應用程式伺服器和Microsoft® Windows作業系統上的Forms伺服器為基礎。 不過，如果您使用其他作業系統（例如UNIX®），請將Windows特定路徑取代為適用作業系統支援的路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 請參閱[設定連線內容](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
 
-## 快速入門(SOAP模式)：使用Java™ API將PostScript檔案轉換為PDF檔案 {#quick-start-soap-mode-converting-a-postscript-file-to-a-pdf-document-using-the-java-api}
+## 快速入門（SOAP模式）：使用Java™ API將PostScript檔案轉換為PDF檔案 {#quick-start-soap-mode-converting-a-postscript-file-to-a-pdf-document-using-the-java-api}
 
-下列程式碼範例將名為&#x200B;*Loan.ps*&#x200B;的PostScript檔案轉換為名為&#x200B;*Loan.pdf*&#x200B;的PDF檔案。 (請參閱[將PostScript轉換為PDF檔案](/help/forms/developing/converting-postscript-pdf-documents.md#converting-postscript-to-pdf-documents)。)
+下列程式碼範例將名為&#x200B;*Loan.ps*&#x200B;的PostScript檔案轉換為名為&#x200B;*Loan.pdf*&#x200B;的PDF檔案。 （請參閱[將PostScript轉換為PDF檔案](/help/forms/developing/converting-postscript-pdf-documents.md#converting-postscript-to-pdf-documents)。）
 
 ```java
  /*

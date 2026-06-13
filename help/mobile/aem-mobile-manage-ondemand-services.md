@@ -11,7 +11,7 @@ feature: Mobile
 role: Admin
 source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '247'
+source-wordcount: '266'
 ht-degree: 1%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 1%
 ## 使用預檢預覽 {#previewing-with-preflight-1}
 
 1. 在Mobile中，從目錄選擇您的Mobile On-Demand應用程式。
-1. 按一下&#x200B;**管理文章** （或橫幅/集合）圖磚中的省略符號(...)。
+1. 按一下省略符號(...) 從&#x200B;**管理文章** （或橫幅/集合）圖磚。
 1. 從動作列中選取&#x200B;**預檢**。
 1. 從對話方塊按一下&#x200B;**啟動預檢**。
 1. 您的應用程式現在已準備好在Mobile On-Demand Preflight應用程式上預覽。
@@ -42,7 +42,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->AEM Preflight應用程式用於預覽內容和瀏覽頁面。 若要深入瞭解預檢應用程式，請按一下[這裡](https://helpx.adobe.com/tw/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html)。
+>AEM Preflight應用程式用於預覽內容和瀏覽頁面。 若要深入瞭解預檢應用程式，請按一下[這裡](https://helpx.adobe.com/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html)。
 >
 
 ### 快速入門 {#getting-ahead}
@@ -56,5 +56,5 @@ ht-degree: 1%
 
 若要進一步瞭解建立AEM Mobile On-demand Services應用程式的其他兩個角色和責任，請參閱下列資源：
 
-* [為AEM Mobile On-demand Services開發AEM內容](/help/mobile/aem-mobile-on-demand.md)
+* [針對AEM Mobile On-demand Services開發AEM內容](/help/mobile/aem-mobile-on-demand.md)
 * [為AEM Mobile On-demand Services應用程式編寫AEM內容](/help/mobile/mobile-apps-ondemand.md)
