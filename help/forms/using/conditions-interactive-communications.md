@@ -10,7 +10,7 @@ solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
-source-wordcount: '1494'
+source-wordcount: '1403'
 ht-degree: 1%
 
 ---
@@ -75,11 +75,11 @@ ht-degree: 1%
 
    ![createconditionscreenassetsaddedannotated](assets/createconditionscreenassetsaddedannotated.png)
 
-   **[A]拒絕變更。**&#x200B;選取此圖示以拒絕您對條件中的資產和規則可能進行的變更。
+   **[A]拒絕變更。**&#x200B;選取此圖示可拒絕您對條件中的資產和規則所做的變更。
    **[B]接受變更。**&#x200B;選取此圖示以接受您在條件中的資產和規則中所做的變更。
-   **[C]重複資產。**&#x200B;選取此圖示以建立資產復本以及在條件中套用的規則（如果有的話）。 接著，您可以繼續編輯重複資產的規則和資產。 複製資產有助於建立類似規則，以根據特定內容顯示替代資產。
-   **[D]節目預覽。**&#x200B;選取此圖示以在「建立\編輯條件」頁面中顯示資產的預覽。
-   **&#39;server&#39;重新排序。**&#x200B;選取並按住此圖示以拖放資產，在條件中重新排序。
+   **[C]重複資產。**&#x200B;選取此圖示以在條件中建立資產副本以及套用的規則（如果有的話）。接著，您可以繼續編輯重複資產的規則和資產。複製資產有助於建立類似規則，以根據特定內容顯示替代資產。
+   **[D]顯示預覽。**&#x200B;選取此圖示，即可在[建立\編輯條件]頁面中顯示資產的預覽。
+   **&#39;server&#39;重新排序。** 選取並按住此圖示，以拖放資產在條件中重新排序。
 
    您可以選取下列選項，指定條件在執行階段的行為：
 

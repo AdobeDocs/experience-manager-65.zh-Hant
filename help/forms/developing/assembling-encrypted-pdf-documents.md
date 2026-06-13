@@ -1,6 +1,6 @@
 ---
 title: 組合加密的PDF檔案
-description: 使用Java API和Web服務API彙編加密的PDF檔案。
+description: 使用Java API和Web服務API彙整加密的PDF檔案。
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/assembling_pdf_documents
@@ -12,7 +12,7 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Services
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '1641'
+source-wordcount: '1676'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 **本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
 
-您可以使用Assembler服務，以密碼加密PDF檔案。 使用密碼加密PDF檔案後，使用者必須指定密碼，才能在Adobe Reader或Acrobat中檢視PDF檔案。 若要使用密碼加密PDF檔案，DDX檔案必須包含加密PDF檔案所需的加密元素值。
+您可以使用Assembler服務，以密碼加密PDF檔案。 PDF檔案使用密碼加密後，使用者必須指定密碼，才能在Adobe Reader或Acrobat中檢視PDF檔案。 若要使用密碼加密PDF檔案，DDX檔案必須包含加密PDF檔案所需的加密元素值。
 
 為了進行此討論，假設使用下列DDX檔案。
 
@@ -39,7 +39,7 @@ ht-degree: 0%
 
 在此DDX檔案中，請注意來源屬性已指派值`inDoc`。 如果只有一個輸入PDF檔案傳遞至Assembler服務並傳回一個PDF檔案，而您叫用`invokeOneDocument`作業，請將值`inDoc`指派給PDF來源屬性。 叫用`invokeOneDocument`作業時，`inDoc`值是必須在DDX檔案中指定的預先定義金鑰。
 
-相反地，將兩個或多個輸入PDF檔案傳遞至Assembler服務時，您可以叫用`invokeDDX`作業。 在此情況下，將輸入PDF檔案的檔案名稱指派給`source`屬性。
+相反地，將兩個或多個輸入PDF檔案傳遞至組合器服務時，您可以叫用`invokeDDX`作業。 在此情況下，請將輸入PDF檔案的檔案名稱指派給`source`屬性。
 
 加密服務不一定要成為AEM表單安裝的一部分，才能使用密碼加密PDF檔案。 請參閱[加密和解密PDF檔案](/help/forms/developing/encrypting-decrypting-pdf-documents.md)。
 
@@ -72,8 +72,8 @@ ht-degree: 0%
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-assembler-client.jar
-* adobe-utilities.jar (如果AEM Forms部署在JBoss上，則為必要)
-* jbossall-client.jar (如果AEM Forms部署在JBoss上，則為必要)
+* adobe-utilities.jar （如果AEM Forms部署在JBoss上，則為必要）
+* jbossall-client.jar （如果AEM Forms部署在JBoss上，則為必要）
 
 如果將AEM Forms部署在JBoss以外的受支援J2EE應用程式伺服器上，則必須將adobe-utilities.jar和jbossall-client.jar檔案取代為特定於AEM Forms部署所在J2EE應用程式伺服器的JAR檔案。 如需有關所有AEM Forms JAR檔案位置的資訊，請參閱[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
@@ -83,11 +83,11 @@ ht-degree: 0%
 
 **參考現有的DDX檔案**
 
-必須參考DDX檔案才能組裝PDF檔案。 例如，以本節介紹的DDX檔案為例。 若要加密PDF檔案，DDX檔案必須包含`PasswordEncryptionProfile`專案。
+必須參考DDX檔案才能組裝PDF檔案。 例如，以本節介紹的DDX檔案為例。 若要加密PDF檔案，DDX檔案必須包含`PasswordEncryptionProfile`元素。
 
 **參考不安全的PDF檔案**
 
-不安全的PDF檔案必須參考並傳遞給Assembler服務才能加密。 如果您參照已加密的PDF檔案，則會擲回例外狀況。
+不安全的PDF檔案必須參考並傳遞給Assembler服務才能加密。 如果您參考已加密的PDF檔案，則會擲回例外狀況。
 
 **設定執行階段選項**
 
@@ -95,11 +95,11 @@ ht-degree: 0%
 
 **加密檔案**
 
-建立Assembler服務使用者端、參照包含加密資訊的DDX檔案、參照不安全的PDF檔案，以及設定執行階段選項之後，您可以叫用`invokeOneDocument`作業。 因為只有一個輸入PDF檔案傳遞至組合器服務（且傳回了一個檔案），所以您可以使用`invokeOneDocument`作業而非`invokeDDX`作業。
+建立Assembler服務使用者端、參照包含加密資訊的DDX檔案、參照不安全的PDF檔案，以及設定執行階段選項之後，您可以叫用`invokeOneDocument`作業。 由於只有一個輸入PDF檔案傳遞至組合器服務（且傳回一個檔案），因此您可以使用`invokeOneDocument`作業，而非`invokeDDX`作業。
 
 **儲存加密的PDF檔案**
 
-如果只將單一PDF檔案傳遞到Assembler服務，則Assembler服務會傳回單一檔案，而非集合物件。 也就是說，叫用`invokeOneDocument`作業時，會傳回單一檔案。 因為本節中參考的DDX檔案包含加密資訊，所以Assembler服務會傳回使用密碼加密的PDF檔案。
+如果只有單一PDF檔案傳遞至組合器服務，組合器服務會傳回單一檔案，而非集合物件。 也就是說，叫用`invokeOneDocument`作業時，會傳回單一檔案。 由於本節中參考的DDX檔案包含加密資訊，因此Assembler服務會傳回使用密碼加密的PDF檔案。
 
 **另請參閱**
 
@@ -152,7 +152,7 @@ ht-degree: 0%
 
 **另請參閱**
 
-[快速入門(SOAP模式)：使用Java API彙編加密的PDF檔案](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-an-encrypted-pdf-document-using-the-java-api)
+[快速入門（SOAP模式）：使用Java API組合已加密的PDF檔案](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-an-encrypted-pdf-document-using-the-java-api)
 
 ## 使用網站服務API彙編加密的PDF檔案 {#assemble-an-encrypted-pdf-document-using-the-web-service-api}
 
@@ -188,7 +188,7 @@ ht-degree: 0%
 1. 參考不安全的PDF檔案。
 
    * 使用物件的建構函式建立`BLOB`物件。 `BLOB`物件是用來儲存輸入PDF檔案。 此`BLOB`物件會以引數的形式傳遞至`invokeOneDocument`。
-   * 建立`System.IO.FileStream`物件，方法為叫用其建構函式，並傳遞代表輸入PDF檔案的檔案位置及開啟檔案的模式的字串值。
+   * 建立`System.IO.FileStream`物件，方法為叫用其建構函式，並傳遞代表輸入PDF檔案的檔案位置以及開啟檔案的模式的字串值。
    * 建立位元組陣列以儲存`System.IO.FileStream`物件的內容。 您可以取得`System.IO.FileStream`物件的`Length`屬性來決定位元組陣列的大小。
    * 呼叫`System.IO.FileStream`物件的`Read`方法，並傳遞要讀取的位元組陣列、起始位置和資料流長度，以資料流資料填入位元組陣列。
    * 以位元組陣列的內容指派其`MTOM`欄位，填入`BLOB`物件。

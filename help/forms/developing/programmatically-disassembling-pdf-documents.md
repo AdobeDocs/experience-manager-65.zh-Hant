@@ -1,5 +1,5 @@
 ---
-title: 以程式分解的PDF檔案
+title: 以程式設計方式分解PDF檔案
 description: 使用Assembler服務，透過Java API和Web服務API將單一PDF檔案分解為多個PDF檔案。
 content-type: reference
 geptopics: SG_AEMFORMS/categories/assembling_pdf_documents
@@ -11,20 +11,20 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Services
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '1749'
+source-wordcount: '1779'
 ht-degree: 0%
 
 ---
 
-# 以程式分解的PDF檔案 {#programmatically-disassembling-pdf-documents}
+# 以程式設計方式分解PDF檔案 {#programmatically-disassembling-pdf-documents}
 
 **本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
 
-您可以將PDF檔案傳遞至組合器服務來分解它。 通常，當PDF檔案最初是由許多個別檔案（例如陳述式集合）建立時，這項工作會很有用。 在下圖中，DocA會分成多個結果檔案，其中頁面上的第一個第1層書籤會識別新結果檔案的開頭。
+您可以將PDF檔案傳遞給Assembler服務來分解。 一般來說，這項工作在PDF檔案原本由許多個別檔案建立時相當實用，例如一組陳述式。 在下圖中，DocA會分成多個結果檔案，其中頁面上的第一個第1層書籤會識別新結果檔案的開頭。
 
 ![pd_pd_pdfsfrombookmarks](assets/pd_pd_pdfsfrombookmarks.png)
 
-若要分解PDF檔案，請確定`PDFsFromBookmarks`元素在DDX檔案中。 `PDFsFromBookmarks`專案是結果專案，而且只能是`DDX`專案的子專案。 它沒有`result`屬性，因為它可能導致產生多個檔案。
+若要拆解PDF檔案，請確定`PDFsFromBookmarks`元素位於DDX檔案中。 `PDFsFromBookmarks`專案是結果專案，而且只能是`DDX`專案的子專案。 它沒有`result`屬性，因為它可能導致產生多個檔案。
 
 `PDFsFromBookmarks`元素會針對來原始檔中的每個層級1書籤產生單一檔案。
 
@@ -41,11 +41,11 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->閱讀本節之前，建議您先熟悉使用Assembler服務來組裝PDF檔案。 (請參閱[以程式設計方式組合PDF檔案](/help/forms/developing/programmatically-assembling-pdf-documents.md)。)
+>閱讀本節之前，建議您先熟悉使用Assembler服務組合PDF檔案。 （請參閱[以程式設計方式組合PDF檔案](/help/forms/developing/programmatically-assembling-pdf-documents.md)。）
 
 >[!NOTE]
 >
->將單一PDF檔案傳遞至組合器服務並取回單一檔案時，您可以叫用`invokeOneDocument`作業。 不過，若要拆解PDF檔案，請使用`invokeDDX`作業，因為雖然已將一個輸入PDF檔案傳遞給Assembler服務，但Assembler服務會傳回包含一個或多個檔案的集合物件。
+>將單一PDF檔案傳遞至組合器服務並取回單一檔案時，您可以叫用`invokeOneDocument`作業。 不過，若要拆解PDF檔案，請使用`invokeDDX`作業，因為雖然已將一個輸入PDF檔案傳遞至組合器服務，組合器服務仍會傳回包含一或多個檔案的集合物件。
 
 >[!NOTE]
 >
@@ -57,14 +57,14 @@ ht-degree: 0%
 
 ## 步驟摘要 {#summary-of-steps}
 
-若要拆解PDF檔案，請執行下列工作：
+若要拆分PDF檔案，請執行下列工作：
 
 1. 包含專案檔案。
 1. 建立PDF組合器使用者端。
 1. 參考現有的DDX檔案。
-1. 參照要拆解的PDF檔案。
+1. 參考PDF檔案以分解。
 1. 設定執行階段選項。
-1. 拆解PDF檔案。
+1. 拆分PDF檔案。
 1. 儲存已拆解的PDF檔案。
 
 **包含專案檔**
@@ -76,8 +76,8 @@ ht-degree: 0%
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-assembler-client.jar
-* adobe-utilities.jar (如果AEM Forms部署在JBoss上，則為必要)
-* jbossall-client.jar (如果AEM Forms部署在JBoss上，則為必要)
+* adobe-utilities.jar （如果AEM Forms部署在JBoss上，則為必要）
+* jbossall-client.jar （如果AEM Forms部署在JBoss上，則為必要）
 
 如果將AEM Forms部署在受支援的J2EE應用程式伺服器（不是JBoss）上，則必須將adobe-utilities.jar和jbossall-client.jar取代為特定於已部署AEM Forms之J2EE應用程式伺服器的JAR檔案。
 
@@ -89,9 +89,9 @@ ht-degree: 0%
 
 必須參考DDX檔案才能分解PDF檔案。 此DDX檔案必須包含`PDFsFromBookmarks`專案。
 
-**參考PDF檔案以拆解**
+**參考PDF檔案以分解**
 
-若要拆解PDF檔案，請參照代表要拆解PDF檔案的PDF檔案。 當傳遞至Assembler服務時，會針對檔案中的每個1級書籤傳回個別的PDF檔案。
+若要拆解PDF檔案，請參考代表要拆解PDF檔案的PDF檔案。 當傳遞至Assembler服務時，會針對檔案中的每個1級書籤傳回個別的PDF檔案。
 
 **設定執行階段選項**
 
@@ -99,11 +99,11 @@ ht-degree: 0%
 
 **拆解PDF檔案**
 
-在您建立Assembler服務使用者端、參考DDX檔案、參考PDF檔案以進行拆解，以及設定執行階段選項之後，您可以透過叫用`invokeDDX`方法來拆解PDF檔案。 只要DDX檔案包含解組PDF檔案的指示，組裝程式服務就會傳回集合物件中已解組的PDF檔案。
+在您建立Assembler服務使用者端、參考DDX檔案、參考PDF檔案以拆解並設定執行階段選項後，您可以透過叫用`invokeDDX`方法來拆解PDF檔案。 只要DDX檔案包含分解PDF檔案的指示，組合器服務就會傳回集合物件中已分解的PDF檔案。
 
-**儲存已解譯的PDF檔案**
+**儲存已解壓縮的PDF檔案**
 
-所有已拆解的PDF檔案都會在集合物件中傳回。 逐一檢視集合物件，並將每個PDF檔案儲存為PDF檔案。
+所有已拆解的PDF檔案都會在集合物件中傳回。 逐一檢視系列物件，並將每個PDF檔案儲存為PDF檔案。
 
 **另請參閱**
 
@@ -131,7 +131,7 @@ ht-degree: 0%
    * 使用它的建構函式並傳遞指定DDX檔案位置的字串值，建立代表DDX檔案的`java.io.FileInputStream`物件。
    * 使用它的建構函式並傳遞`java.io.FileInputStream`物件來建立`com.adobe.idp.Document`物件。
 
-1. 參照要拆解的PDF檔案。
+1. 參考PDF檔案以分解。
 
    * 使用`HashMap`建構函式建立用來儲存輸入PDF檔案的`java.util.Map`物件。
    * 使用物件的建構函式並傳遞PDF檔案的位置來建立`java.io.FileInputStream`物件以進行拆解。
@@ -139,14 +139,14 @@ ht-degree: 0%
    * 透過叫用物件的`put`方法並傳遞下列引數，將專案新增至`java.util.Map`物件：
 
       * 代表索引鍵名稱的字串值。 此值必須符合DDX檔案中指定的PDF來源元素的值。
-      * 包含要拆解之PDF檔案的`com.adobe.idp.Document`物件。
+      * 包含要分解之PDF檔案的`com.adobe.idp.Document`物件。
 
 1. 設定執行階段選項。
 
    * 使用建構函式建立儲存執行階段選項的`AssemblerOptionSpec`物件。
    * 透過叫用屬於`AssemblerOptionSpec`物件的方法，設定執行階段選項以符合您的業務需求。 例如，若要指示Assembler服務在發生錯誤時繼續處理工作，請叫用`AssemblerOptionSpec`物件的`setFailOnError`方法，然後傳遞`false`。
 
-1. 拆解PDF檔案。
+1. 拆分PDF檔案。
 
    叫用`AssemblerServiceClient`物件的`invokeDDX`方法，並傳遞下列必要值：
 
@@ -154,7 +154,7 @@ ht-degree: 0%
    * 包含要分解之PDF檔案的`java.util.Map`物件
    * 指定執行階段選項（包括預設字型和作業記錄層級）的`com.adobe.livecycle.assembler.client.AssemblerOptionSpec`物件
 
-   `invokeDDX`方法傳回`com.adobe.livecycle.assembler.client.AssemblerResult`物件，其中包含已解譯的PDF檔案以及發生的任何例外狀況。
+   `invokeDDX`方法傳回`com.adobe.livecycle.assembler.client.AssemblerResult`物件，其中包含已解除組裝的PDF檔案以及發生的任何例外狀況。
 
 1. 儲存已拆解的PDF檔案。
 
@@ -166,17 +166,17 @@ ht-degree: 0%
 
 **另請參閱**
 
-[以程式分解的PDF檔案](#programmatically-disassembling-pdf-documents)
+[以程式設計方式分解PDF檔案](#programmatically-disassembling-pdf-documents)
 
-[快速入門(SOAP模式)：使用Java API分解PDF檔案](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-disassembling-a-pdf-document-using-the-java-api)
+[快速入門（SOAP模式）：使用Java API分解PDF檔案](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-disassembling-a-pdf-document-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-## 使用Web服務API分解PDF檔案 {#disassemble-a-pdf-document-using-the-web-service-api}
+## 使用網站服務API分解PDF檔案 {#disassemble-a-pdf-document-using-the-web-service-api}
 
-使用組合器服務API （Web服務）拆分PDF檔案：
+使用組合器服務API （Web服務）分解PDF檔案：
 
 1. 包含專案檔案。
 
@@ -207,14 +207,14 @@ ht-degree: 0%
    * 呼叫`System.IO.FileStream`物件的`Read`方法，並傳遞要讀取的位元組陣列、起始位置和資料流長度，以資料流資料填入位元組陣列。
    * 以位元組陣列的內容指派物件的`MTOM`屬性，填入`BLOB`物件。
 
-1. 參照要拆解的PDF檔案。
+1. 參考PDF檔案以分解。
 
    * 使用物件的建構函式建立`BLOB`物件。 `BLOB`物件是用來儲存輸入PDF檔案。 此`BLOB`物件會以引數的形式傳遞至`invokeOneDocument`。
-   * 建立`System.IO.FileStream`物件，方法為叫用其建構函式，並傳遞代表輸入PDF檔案的檔案位置和開啟檔案的模式的字串值。
+   * 建立`System.IO.FileStream`物件，方法為叫用其建構函式，並傳遞代表輸入PDF檔案的檔案位置以及開啟檔案的模式的字串值。
    * 建立位元組陣列以儲存`System.IO.FileStream`物件的內容。 您可以取得`System.IO.FileStream`物件的`Length`屬性來決定位元組陣列的大小。
    * 呼叫`System.IO.FileStream`物件的`Read`方法，並傳遞要讀取的位元組陣列、起始位置和資料流長度，以資料流資料填入位元組陣列。
    * 將位元組陣列的內容指派給其`MTOM`欄位，以填入`BLOB`物件。
-   * 建立`MyMapOf_xsd_string_To_xsd_anyType`物件。 此集合物件是用來儲存要拆解的PDF。
+   * 建立`MyMapOf_xsd_string_To_xsd_anyType`物件。 此集合物件是用來儲存PDF以進行拆解。
    * 建立`MyMapOf_xsd_string_To_xsd_anyType_Item`物件。
    * 將代表索引鍵名稱的字串值指派給`MyMapOf_xsd_string_To_xsd_anyType_Item`物件的`key`欄位。 此值必須符合DDX檔案中指定的PDF來源元素的值。
    * 將儲存PDF檔案的`BLOB`物件指派給`MyMapOf_xsd_string_To_xsd_anyType_Item`物件的`value`欄位。
@@ -225,12 +225,12 @@ ht-degree: 0%
    * 使用建構函式建立儲存執行階段選項的`AssemblerOptionSpec`物件。
    * 將值指派給屬於`AssemblerOptionSpec`物件的資料成員，設定執行階段選項以符合您的業務需求。 例如，若要指示Assembler服務在發生錯誤時繼續處理工作，請將`false`指派給`AssemblerOptionSpec`物件的`failOnError`欄位。
 
-1. 拆解PDF檔案。
+1. 拆分PDF檔案。
 
    叫用`AssemblerServiceClient`物件的`invokeDDX`方法，並傳遞下列值：
 
-   * 代表解組PDF檔案的DDX檔案的`BLOB`物件
-   * 包含要拆解之PDF檔案的`MyMapOf_xsd_string_To_xsd_anyType`物件
+   * `BLOB`物件，代表拆解PDF檔案的DDX檔案
+   * 包含PDF檔案的`MyMapOf_xsd_string_To_xsd_anyType`物件進行拆解
    * 指定執行階段選項的`AssemblerOptionSpec`物件
 
    `invokeDDX`方法傳回`AssemblerResult`物件，其中包含工作結果和發生的任何例外狀況。
@@ -239,12 +239,12 @@ ht-degree: 0%
 
    若要取得新建立的PDF檔案，請執行下列動作：
 
-   * 存取`AssemblerResult`物件的`documents`欄位，此欄位是包含已解除組裝PDF檔案的`Map`物件。
+   * 存取`AssemblerResult`物件的`documents`欄位，此欄位是包含已解壓縮PDF檔案的`Map`物件。
    * 逐一檢視`Map`物件以取得每個結果檔案。 然後，將該陣列成員的`value`轉換為`BLOB`。
    * 存取其`BLOB`物件的`MTOM`屬性，以擷取代表PDF檔案的二進位資料。 這會傳回您可以寫出至PDF檔案的位元組陣列。
 
 **另請參閱**
 
-[以程式分解的PDF檔案](#programmatically-disassembling-pdf-documents)
+[以程式設計方式分解PDF檔案](#programmatically-disassembling-pdf-documents)
 
 [使用MTOM叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)

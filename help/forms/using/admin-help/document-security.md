@@ -12,7 +12,7 @@ solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
-source-wordcount: '3219'
+source-wordcount: '3301'
 ht-degree: 0%
 
 ---
@@ -22,17 +22,17 @@ ht-degree: 0%
 Document Security可確保只有授權的使用者才能使用您的檔案。 使用Document Security，您可以安全地散發以支援格式儲存的任何資訊。 支援的檔案格式包括：
 
 * Adobe PDF檔案
-* Microsoft®Word、Excel和PowerPoint檔案
+* ®Word、Excel和PowerPoint檔案
 
 如需有關原則如何保護受支援檔案型別的詳細資訊，請參閱[更多Document Security資訊](https://experienceleague.adobe.com/docs/experience-manager-65/forms/use-document-security/document-security-offerings.html?lang=zh-Hant)。
 
 使用Document Security，您可以輕鬆建立、儲存及套用預先定義的機密性設定至您的檔案。 為了防止資訊擴散到您觸及的範圍之外，您還可以監視和控制在您分發檔案後收件者如何使用您的檔案。
 
-您可以使用原則來保護檔案。 *原則*&#x200B;是包含機密性設定和授權使用者清單的資訊集合。您在原則中指定的機密性設定可決定收件者如何使用您套用原則的檔案。 例如，您可以指定收件者是否可以列印或複製文字、編輯文字，或新增簽名和註解至受保護檔案。
+您可以使用原則來保護檔案。 *原則*&#x200B;是包含機密性設定和授權使用者清單的資訊集合。 您在原則中指定的機密性設定可決定收件者如何使用您套用原則的檔案。 例如，您可以指定收件者是否可以列印或複製文字、編輯文字，或新增簽名和註解至受保護檔案。
 
 Document Security使用者透過一般使用者網頁建立原則。 管理員可使用Document Security網頁建立包含所有授權使用者都可使用的共用原則的原則集。
 
-雖然原則儲存在Document Security中，但您可透過使用者端應用程式將其套用至檔案。 如何套用原則至PDF檔案在&#x200B;*Acrobat說明*&#x200B;中有詳細說明。 使用其他應用程式(例如Microsoft® Office)套用原則，已記錄在該應用程式的&#x200B;*Acrobat Reader DC擴充功能說明*&#x200B;中。
+雖然原則儲存在Document Security中，但您可透過使用者端應用程式將其套用至檔案。 如何套用原則至PDF檔案在&#x200B;*Acrobat說明*&#x200B;中有詳細說明。 使用其他應用程式（例如® Office）套用原則，已記錄在該應用程式的&#x200B;*Acrobat Reader DC擴充功能說明*&#x200B;中。
 
 當您套用原則至檔案時，原則中指定的機密性設定會保護檔案所包含的資訊。 機密性設定也會保護PDF檔案中的任何檔案（文字、音訊或視訊）。 您可以將受原則保護的檔案分發給受原則授權的收件者。
 
@@ -134,7 +134,7 @@ Document Security由伺服器和使用者介面組成：
 * 組織內擁有有效Document Security帳戶的使用者可建立自己的原則、使用原則來保護檔案、追蹤和管理其受原則保護的檔案，以及監控與其檔案相關的事件。
 * 原則組協調員管理檔案、檢視事件，以及（根據其許可權）管理其他原則組協調員。 管理員指定使用者作為特定原則集的原則集協調員。
 * 如果您組織外部的使用者（例如業務合作夥伴）位於Document Security目錄中、管理員為其建立帳戶，或透過自動電子郵件邀請流程註冊Document Security，則他們可以使用受原則保護的檔案。 視管理員啟用存取設定的方式而定，受邀使用者也可能具有將原則套用至檔案的許可權、建立、修改和刪除其原則的許可權，以及邀請其他外部使用者使用其受原則保護的檔案的許可權。
-* 開發人員使用AEM Forms SDK來整合自訂應用程式與Document Security。
+* 開發人員使用AEM Forms SDK將自訂應用程式與Document Security整合。
 
 Document Security管理員可以在「使用者管理」中使用以下許可權來建立自訂角色：
 
@@ -149,7 +149,7 @@ Document Security管理員可以在「使用者管理」中使用以下許可權
 
 *原則*&#x200B;定義了一組機密性設定，以及可以存取套用原則之檔案的使用者。 原則也可讓檔案的許可權動態變更。 它可授予檔案保護者變更機密性設定的許可權，以撤銷對檔案的存取權或切換原則。
 
-原則保護可透過使用Adobe Acrobat® Pro和Acrobat Standard套用至PDF檔案。 原則保護可套用至其他檔案型別，例如Microsoft®Word、Excel和PowerPoint檔案，方法是使用已安裝適當Acrobat Reader DC擴充功能的使用者端應用程式。
+原則保護可套用至PDF檔案，只需使用Adobe Acrobat® Pro和Acrobat Standard即可。 原則保護可套用至其他檔案型別，例如®Word、Excel和PowerPoint檔案，方法是使用使用者端應用程式並安裝適當的Acrobat Reader DC Extensions。
 
 ### 原則如何運作 {#how-policies-work}
 
@@ -159,12 +159,12 @@ Document Security管理員可以在「使用者管理」中使用以下許可權
 
 >[!NOTE]
 >
->透過原則套用的機密性設定會覆寫可能已透過密碼或憑證安全性選項套用到Acrobat中PDF檔案的所有設定。 (如需詳細資訊，請參閱Acrobat說明。)
+>透過原則套用的機密性設定會覆寫可能已透過密碼或憑證安全性選項套用到Acrobat中PDF檔案的所有設定。 （如需詳細資訊，請參閱Acrobat說明。）
 
 使用者和管理員會透過Document Security網頁建立原則。 一次只能將一個原則套用到檔案。 您可以使用下列其中一種方法來套用原則：
 
 * 在Acrobat或其他使用者端應用程式中開啟檔案，並選取保護檔案安全的原則。
-* 在Microsoft® Outlook中傳送檔案作為電子郵件附件。 在這種情況下，您可以從原則清單中選取原則。 或者，您可以選取Acrobat以預設機密性設定集建立並自動產生的原則，以僅為電子郵件收件者保護檔案。
+* 在® Outlook中傳送檔案作為電子郵件附件。 在這種情況下，您可以從原則清單中選取原則。 或者，您可以選取Acrobat以預設機密性設定集建立並自動產生的原則，以僅為電子郵件收件者保護檔案。
 
 可以使用使用者端應用程式從檔案中移除一項原則。
 
@@ -182,9 +182,9 @@ Document Security管理員可以在「使用者管理」中使用以下許可權
 
 ### 受原則保護檔案的運作方式 {#how-policy-protected-documents-work}
 
-若要開啟和使用受原則保護的檔案，原則必須包含您的姓名作為收件者，並且您必須擁有有效的Document Security帳戶。 若是PDF檔案，您需要Acrobat或Adobe Reader®。 若是其他檔案型別，您需要安裝有Acrobat Reader DC副檔名的檔案適用應用程式。
+若要開啟和使用受原則保護的檔案，原則必須包含您的姓名作為收件者，並且您必須擁有有效的Document Security帳戶。 若為PDF檔案，您需要Acrobat或Adobe Reader®。 對於其他檔案型別，您需要安裝有Acrobat Reader DC Extensions之檔案的適當應用程式。
 
-當您開啟受原則保護的檔案時，Acrobat、Adobe Reader或Acrobat Reader DC擴充功能會連線至Document Security以驗證您的身分。 接著，您可以繼續登入。 如果正在稽核檔案使用情況，則會顯示通知訊息。 在Document Security決定要授予哪些檔案許可權後，它會管理檔案的解密。 然後，您可以根據原則機密性設定使用檔案。
+當您開啟受原則保護的檔案時，Acrobat、Adobe Reader或Acrobat Reader DC Extensions會連線至Document Security以驗證您的身分。 接著，您可以繼續登入。 如果正在稽核檔案使用情況，則會顯示通知訊息。 在Document Security決定要授予哪些檔案許可權後，它會管理檔案的解密。 然後，您可以根據原則機密性設定使用檔案。
 
 ![rm_psopen_online](assets/rm_psopen_online.png)
 
@@ -201,7 +201,7 @@ Document Security管理員可以在「使用者管理」中使用以下許可權
 
 如果原則允許離線存取，您也可以離線使用受原則保護的檔案（沒有網際網路或網路連線）。 首先登入Document Security以同步檔案。 然後，您可以在原則中指定的離線租期期間使用檔案。
 
-離線租賃期結束時，請上線並開啟受原則保護的檔案或使用使用者端應用程式中的命令，再次將檔案與Document Security同步。 如需詳細資訊，請參閱&#x200B;*Acrobat說明*&#x200B;或適當的&#x200B;*Acrobat Reader DC擴充功能說明*。
+離線租賃期結束時，請上線並開啟受原則保護的檔案或使用使用者端應用程式中的命令，再次將檔案與Document Security同步。 如需詳細資訊，請參閱&#x200B;*Acrobat說明*&#x200B;或適當的&#x200B;*Acrobat Reader DC延伸功能說明*。
 
 如果您使用「儲存」或「另存新檔」選單命令儲存受原則保護檔案的復本，則會自動套用原則並強制用於新檔案。 嘗試開啟新檔案之類的事件也會針對原始檔案進行稽核和記錄。
 
@@ -266,7 +266,7 @@ Document Security管理員可以在「使用者管理」中使用以下許可權
    * 一段時間內組織內的使用者角色、部門和檔案的增加。
    * 組織的部門會單獨工作，並嚴格控制部門特定的政策。 它會在組織內導向相同的原則。
 
-  Adobe建議將原則和原則集的數量維持在最小。 它有助於輕鬆管理原則和原則集，並提供更好的效能。 若要將數字維持在最小值：
+  Adobe建議將原則和原則集的數目維持在最小值。 它有助於輕鬆管理原則和原則集，並提供更好的效能。 若要將數字維持在最小值：
 
    * 建立可重複使用的原則。 這些原則可以在多個部門之間共用。
    * 如果某些原則套用至多個部門，而不是每個部門的個別原則集，請考慮建立全組織的原則集。

@@ -1,6 +1,6 @@
 ---
 title: 組合非互動式PDF檔案
-description: 使用非互動式PDF表單作為輸入，透過Java API和Web服務API來組合非互動式PDF檔案。
+description: 使用非互動式PDF表單作為輸入，透過Java API和Web服務API彙編非互動式PDF檔案。
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/assembling_pdf_documents
@@ -12,14 +12,14 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Services
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '1763'
+source-wordcount: '1819'
 ht-degree: 0%
 
 ---
 
 # 組合非互動式PDF檔案 {#assembling-non-interactive-pdf-documents}
 
-使用互動式PDF表單作為輸入時，您可以組合非互動式PDF檔案。 也就是說，假設您有一個表單，使用者可使用該表單在欄位中輸入資料。 您可以將該表單傳遞給Assembler服務，導致Assembler服務傳回PDF檔案，以防止使用者在其欄位中輸入資料。 本檔案為非互動式PDF表單。 例如，下圖顯示代表互動式表單的貸款應用程式。
+使用互動式PDF表單作為輸入時，您可以組合非互動式PDF檔案。 也就是說，假設您有一個表單，使用者可使用該表單在欄位中輸入資料。 您可以將該表單傳遞至Assembler服務，導致Assembler服務傳回PDF檔案，以防止使用者在其欄位中輸入資料。 本檔案為非互動式PDF表單。 例如，下圖顯示代表互動式表單的貸款應用程式。
 
 為了進行此討論，假設使用下列DDX檔案。
 
@@ -35,7 +35,7 @@ ht-degree: 0%
 
 在此DDX檔案中，請注意來源屬性已指派值`inDoc`。 如果只有一個輸入PDF檔案傳遞至Assembler服務並傳回一個PDF檔案，而您叫用`invokeOneDocument`作業，請將值`inDoc`指派給PDF來源屬性。 叫用`invokeOneDocument`作業時，`inDoc`值是必須在DDX檔案中指定的預先定義金鑰。
 
-相反地，將兩個或多個輸入PDF檔案傳遞至Assembler服務時，您可以叫用`invokeDDX`作業。 在此情況下，將輸入PDF檔案的檔案名稱指派給`source`屬性。
+相反地，將兩個或多個輸入PDF檔案傳遞至組合器服務時，您可以叫用`invokeDDX`作業。 在此情況下，請將輸入PDF檔案的檔案名稱指派給`source`屬性。
 
 此DDX檔案包含`NoXFA`元素，它會指示Assembler服務傳回非互動式PDF檔案。
 
@@ -43,7 +43,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->閱讀本節之前，建議您先熟悉使用Assembler服務組合PDF檔案。 本節不討論概念，例如建立包含輸入檔案的集合物件，或學習如何從傳回的集合物件中擷取結果。 (請參閱[以程式設計方式組合PDF檔案](/help/forms/developing/programmatically-assembling-pdf-documents.md)。)
+>閱讀本節之前，建議您先熟悉使用Assembler服務組合PDF檔案。 本節不討論概念，例如建立包含輸入檔案的集合物件，或學習如何從傳回的集合物件中擷取結果。 （請參閱[以程式設計方式組合PDF檔案](/help/forms/developing/programmatically-assembling-pdf-documents.md)。）
 
 >[!NOTE]
 >
@@ -74,8 +74,8 @@ ht-degree: 0%
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-assembler-client.jar
-* adobe-utilities.jar (如果AEM Forms部署在JBoss上，則為必要)
-* jbossall-client.jar (如果AEM Forms部署在JBoss上，則為必要)
+* adobe-utilities.jar （如果AEM Forms部署在JBoss上，則為必要）
+* jbossall-client.jar （如果AEM Forms部署在JBoss上，則為必要）
 
 如果將AEM Forms部署在JBoss以外的受支援J2EE應用程式伺服器上，則必須將adobe-utilities.jar和jbossall-client.jar檔案取代為特定於AEM Forms部署所在J2EE應用程式伺服器的JAR檔案。
 
@@ -89,19 +89,19 @@ ht-degree: 0%
 
 **參考互動式PDF檔案**
 
-必須參考互動式PDF檔案並將其傳遞至Assembler服務，才能取回非互動式PDF檔案。
+必須參考互動式PDF檔案並傳遞至Assembler服務，才能取回非互動式PDF檔案。
 
 **設定執行階段選項**
 
 您可以設定執行階段選項，控制Assembler服務執行工作時的行為。 例如，您可以設定一個選項，在遇到錯誤時指示Assembler服務繼續處理工作。
 
-**組合PDF檔案**
+**組裝PDF檔案**
 
-在您建立Assembler服務使用者端、參考DDX檔案、參考互動式PDF檔案，以及設定執行階段選項之後，即可叫用`invokeOneDocument`作業。 因為只有一個輸入PDF檔案傳遞至組合器服務並傳回單一檔案，所以您可以使用`invokeOneDocument`作業，而非`invokeDDX`作業。
+建立Assembler服務使用者端、參考DDX檔案、參考互動式PDF檔案，以及設定執行階段選項之後，您可以叫用`invokeOneDocument`作業。 因為只有一個輸入PDF檔案傳遞至組合器服務且傳回單一檔案，所以您可以使用`invokeOneDocument`作業（而非`invokeDDX`作業）。
 
 **儲存非互動式PDF檔案**
 
-如果只有單一PDF檔案傳遞至Assembler服務，Assembler服務會傳回單一檔案，而非集合物件。 也就是說，叫用`invokeOneDocument`作業時，會傳回單一檔案。 由於此區段中所參照的DDX檔案包含建立非互動式PDF檔案的指示，因此Assembler服務會傳回可儲存為PDF檔案的非互動式PDF檔案。
+如果只有單一PDF檔案傳遞至Assembler服務，Assembler服務會傳回單一檔案，而非集合物件。 也就是說，叫用`invokeOneDocument`作業時，會傳回單一檔案。 因為本節中參考的DDX檔案包含建立非互動式PDF檔案的指示，組合器服務會傳回可儲存為PDF檔案的非互動式PDF檔案。
 
 **另請參閱**
 
@@ -131,7 +131,7 @@ ht-degree: 0%
 
 1. 參考互動式PDF檔案。
 
-   * 使用物件的建構函式並傳遞互動式PDF檔案的位置，來建立`java.io.FileInputStream`物件。
+   * 使用物件的建構函式並傳遞互動式PDF檔案的位置，以建立`java.io.FileInputStream`物件。
    * 建立`com.adobe.idp.Document`物件並傳遞包含PDF檔案的`java.io.FileInputStream`物件。 此`com.adobe.idp.Document`物件已傳遞至`invokeOneDocument`方法。
 
 1. 設定執行階段選項。
@@ -154,7 +154,7 @@ ht-degree: 0%
    * 建立`java.io.File`物件，並確定副檔名為.pdf。
    * 叫用`Document`物件的`copyToFile`方法，將`Document`物件的內容複製到檔案。 請確定您使用的是`invokeOneDocument`方法傳回的`Document`物件。
 
-* 「快速入門(SOAP模式)：使用Java API彙編非互動式PDF檔案」
+* 「快速入門（SOAP模式）：使用Java API彙編非互動式PDF檔案」
 
 ## 使用網站服務API組合非互動式PDF檔案 {#assemble-a-non-interactive-pdf-document-using-the-web-service-api}
 
@@ -192,7 +192,7 @@ ht-degree: 0%
 1. 參考互動式PDF檔案。
 
    * 使用物件的建構函式建立`BLOB`物件。 `BLOB`物件是用來儲存輸入PDF檔案。 此`BLOB`物件會以引數的形式傳遞至`invokeOneDocument`。
-   * 建立`System.IO.FileStream`物件，方法為叫用其建構函式，並傳遞代表輸入PDF檔案的檔案位置及開啟檔案的模式的字串值。
+   * 建立`System.IO.FileStream`物件，方法為叫用其建構函式，並傳遞代表輸入PDF檔案的檔案位置以及開啟檔案的模式的字串值。
    * 建立位元組陣列以儲存`System.IO.FileStream`物件的內容。 您可以取得`System.IO.FileStream`物件的`Length`屬性來決定位元組陣列的大小。
    * 呼叫`System.IO.FileStream`物件的`Read`方法，以串流資料填入位元組陣列。 傳遞位元組陣列、起始位置以及要讀取的資料流長度。
    * 以位元組陣列的內容指派其`MTOM`欄位，填入`BLOB`物件。
@@ -214,12 +214,12 @@ ht-degree: 0%
 
 1. 儲存非互動式PDF檔案。
 
-   * 建立`System.IO.FileStream`物件，方法為叫用其建構函式，並傳遞代表非互動式PDF檔案檔案位置的字串值，以及開啟檔案的模式。
+   * 建立`System.IO.FileStream`物件，方法為叫用其建構函式，並傳遞代表非互動式PDF檔案檔案位置的字串值，以及用來開啟檔案的模式。
    * 建立位元組陣列，儲存`invokeOneDocument`方法傳回的`BLOB`物件內容。 取得`BLOB`物件的`MTOM`欄位值，以填入位元組陣列。
    * 透過叫用它的建構函式並傳遞`System.IO.FileStream`物件來建立`System.IO.BinaryWriter`物件。
    * 呼叫`System.IO.BinaryWriter`物件的`Write`方法並傳遞位元組陣列，將位元組陣列的內容寫入PDF檔案。
 
-* 「快速入門(MTOM)：使用網站服務API組合非互動式PDF檔案」。
+* 「快速入門(MTOM)：使用網站服務API彙編非互動式PDF檔案」。
 
 **另請參閱**
 

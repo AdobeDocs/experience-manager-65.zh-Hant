@@ -11,7 +11,7 @@ solution: Experience Manager
 feature: Communities
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '1142'
+source-wordcount: '1195'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 0%
    * 2.6版或更新版本
    * 不需要設定mongos或分片
    * 強烈建議使用[復本集](#mongoreplicaset)
-   * 可以在與AEM相同的主機上執行或遠端執行
+   * 可在與AEM相同的主機上執行或遠端執行
 
 * [Apache Solr](https://lucene.apache.org/solr/)：
 
@@ -185,8 +185,8 @@ MSRP必須識別為所有製作和發佈執行個體上的通用存放區。
 
 cURL -u *登入* -d *資料* *重新索引 — url*
 
-*登入* =系統管理員ID：密碼
-例如： admin：admin
+*登入* =系統管理員識別碼:password
+例如： admin:admin
 
 *資料* = &quot;batchSize=*size*&amp;path=*path&quot;*
 
@@ -237,7 +237,7 @@ GitHub上有一個開放原始碼工具可用於此用途：
 
 * [AEM Communities UGC移轉工具](https://github.com/Adobe-Marketing-Cloud/communities-ugc-migration)
 
-可自訂移轉工具，從舊版AEM Social Communities匯出UGC，以匯入AEM Communities 6.1或更新版本。
+可自訂移轉工具，從舊版AEM社交社群匯出UGC，以匯入AEM Communities 6.1或更新版本。
 
 ### 錯誤 — 未定義的欄位provider_id {#error-undefined-field-provider-id}
 

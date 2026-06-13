@@ -11,7 +11,7 @@ solution: Experience Manager
 feature: Communities
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '1423'
+source-wordcount: '1534'
 ht-degree: 2%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 2%
 
 下載並安裝Apache Solr：
 
-* [版本7.0](https://archive.apache.org/dist/lucene/solr/7.0.0/)
+* [7.0版](https://archive.apache.org/dist/lucene/solr/7.0.0/)
 
 * Solr需要Java™ 1.7或更高版本
 * 不需要服務
@@ -65,20 +65,20 @@ JVM_OPTS="-server -Xmx2048m -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnable
 
 在SolrCloud模式下執行時，在MLS安裝之前，必須使用下列SolrCloud安裝命令並瞭解這些命令。
 
-#### 1.上傳設定至ZooKeeper {#upload-a-configuration-to-zookeeper}
+#### &#x200B;1. 將設定上傳至ZooKeeper {#upload-a-configuration-to-zookeeper}
 
 參考資料：
 [https://solr.apache.org/guide/6_6/command-line-utilities.html](https://solr.apache.org/guide/6_6/command-line-utilities.html)
 
 使用狀況：
-sh 。/scripts/cloud-scripts/zkcli.sh \
+sh ./scripts/cloud-scripts/zkcli.sh \
 -cmd upconfig \
--zkhost *伺服器：連線埠* \
+-zkhost *伺服器:port* \
 -confname *myconfig-name *\
 -solrhome *solr-home-path* \
 -confdir *config-dir*
 
-#### 2.建立集合 {#create-a-collection}
+#### &#x200B;2. 建立集合 {#create-a-collection}
 
 參考資料：
 [https://solr.apache.org/guide/6_6/solr-control-script-reference.html#SolrControlScriptReference-Create](https://solr.apache.org/guide/6_6/solr-control-script-reference.html#SolrControlScriptReference-Create)
@@ -92,7 +92,7 @@ sh 。/scripts/cloud-scripts/zkcli.sh \
 -s *分片數* \
 -rf *復本數目*
 
-#### 3.將集合連結至組態集 {#link-a-collection-to-a-configuration-set}
+#### &#x200B;3. 將集合連結至組態集 {#link-a-collection-to-a-configuration-set}
 
 將集合連結至已上傳至ZooKeeper的設定。
 
@@ -100,9 +100,9 @@ sh 。/scripts/cloud-scripts/zkcli.sh \
 [https://solr.apache.org/guide/6_6/command-line-utilities.html](https://solr.apache.org/guide/6_6/command-line-utilities.html)
 
 使用狀況：
-sh 。/scripts/cloud-scripts/zkcli.sh \
+sh ./scripts/cloud-scripts/zkcli.sh \
 -cmd linkconfig \
--zkhost *伺服器：連線埠* \
+-zkhost *伺服器:port* \
 -collection *mycollection-name* \
 -confname *myconfig-name*
 
@@ -140,7 +140,7 @@ sh 。/scripts/cloud-scripts/zkcli.sh \
 | 芬蘭文 | 拉脫維亞文 | 泰文 |
 | 法文 | 立陶宛文 | 土耳其文 |
 
-#### AEM 6.1 Solr搜尋、標準MLS和進階MLS的比較 {#comparison-of-aem-solr-search-standard-mls-and-advanced-mls}
+#### AEM 6.1 Solr搜尋、標準MLS及進階MLS的比較 {#comparison-of-aem-solr-search-standard-mls-and-advanced-mls}
 
 **注意**： AEM 6.1參考AEM 6.1 Communities FP3和更早版本。
 
@@ -218,11 +218,11 @@ sh 。/scripts/cloud-scripts/zkcli.sh \
 
 若要讓SRP集合（MSRP或DSRP）支援進階MLS，除了自訂結構描述和Solr設定外，還需要新的Solr外掛程式。 所有必要專案都會封裝成可下載的zip檔案。 此外，當以獨立模式部署Solr時，也會隨附安裝指令碼。
 
-若要取得Advanced MLS套件，請參閱檔案部署區段中的[AEM Advanced MLS](deploy-communities.md#aem-advanced-mls)。
+若要取得Advanced MLS套件，請參閱說明檔案部署區段中的[AEM Advanced MLS](deploy-communities.md#aem-advanced-mls)。
 
 若要開始使用SolrCloud或獨立模式的安裝：
 
-* 將AEM-SOLR-MLS zip封存下載至託管Solr的伺服器。
+* 下載AEM-SOLR-MLS zip封存至託管Solr的伺服器。
 * 解壓縮封存。
 
 #### solrcloud模式 — 進階MLS {#solrcloud-mode-advanced-mls}
@@ -291,7 +291,7 @@ sh 。/scripts/cloud-scripts/zkcli.sh \
    * `./bin/solr start`
    * `./bin/solr create_core -c collection1 -d sample_techproducts_configs`
 
-* 執行安裝指令碼：安裝[-v 4|5] [-d solrhome] [-c collectionpath]
+* 執行安裝指令碼：安裝[-v 4|5] [-d solrhome] [-c集合路徑]
 其中：
 
    * -d solrhome

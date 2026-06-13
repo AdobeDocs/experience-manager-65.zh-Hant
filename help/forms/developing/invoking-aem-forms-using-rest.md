@@ -11,7 +11,7 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,APIs & Integrations,AEM Forms on JEE
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '2481'
+source-wordcount: '2399'
 ht-degree: 0%
 
 ---
@@ -20,9 +20,9 @@ ht-degree: 0%
 
 **本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
 
-您可以設定在Workbench中建立的程式，以便透過代表性狀態轉移(REST)請求叫用它們。 從HTML頁面傳送REST要求。 也就是說，您可以使用REST要求，直接從網頁叫用Forms程式。 例如，您可以開啟網頁的新例項。 接著，您可以叫用Forms程式，並載入轉譯後的PDF檔案，其中包含在HTTPPOST要求中傳送的資料。
+您可以設定在Workbench中建立的程式，以便透過代表性狀態轉移(REST)請求叫用它們。 從HTML頁面傳送REST要求。 也就是說，您可以使用REST要求，直接從網頁叫用Forms程式。 例如，您可以開啟網頁的新例項。 接著，您可以叫用Forms程式，並載入轉譯的PDF檔案，其中包含以HTTP POST請求傳送的資料。
 
-存在兩種型別的HTML使用者端。 第一個HTML使用者端是以JavaScript撰寫的AJAX使用者端。 第二個使用者端是包含提交按鈕的HTML表單。 以HTML為基礎的使用者端應用程式並非唯一可能的REST使用者端。 任何支援HTTP要求的使用者端應用程式都可以使用REST叫用來叫用服務。 例如，您可以使用PDF表單中的REST呼叫來呼叫服務。 (請參閱[從Acrobat](#rest-invocation-examples)叫用MyApplication/EncryptDocument程式。)
+有兩種型別的HTML使用者端。 第一個HTML使用者端是以JavaScript撰寫的AJAX使用者端。 第二個使用者端是包含提交按鈕的HTML表單。 以HTML為基礎的使用者端應用程式並非唯一可能的REST使用者端。 任何支援HTTP要求的使用者端應用程式都可以使用REST叫用來叫用服務。 例如，您可以使用PDF表單中的REST叫用來叫用服務。 （請參閱[從Acrobat](#rest-invocation-examples)叫用MyApplication/EncryptDocument程式。）
 
 使用REST要求時，建議您不要直接叫用Forms服務。 而是叫用在Workbench中建立的程式。 當建立要用於REST呼叫的處理程式時，請使用程式化的起點。 在此情況下，REST端點會自動新增。 如需有關在Workbench中建立程式的資訊，請參閱[使用Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63)。
 
@@ -30,7 +30,7 @@ ht-degree: 0%
 
 若要使用REST叫用Forms服務（流程啟動時會變成服務），請設定REST端點。 （請參閱[管理說明](https://www.adobe.com/go/learn_aemforms_admin_63)中的「管理端點」。）
 
-設定REST端點後，您可以使用HTTPGET方法或POST方法來叫用Forms服務。
+設定REST端點後，您可以使用HTTP GET方法或POST方法叫用Forms服務。
 
 ```java
  action="https://hiro-xp:8080/rest/services/[ServiceName]/[OperationName]:[ServiceVersion]" method="post" enctype="multipart/form-data"
@@ -49,16 +49,16 @@ ht-degree: 0%
 
   這些資料型別通常被接受為Workbench中建立之程式的輸入值。
 
-  如果以HTTPPOST方法叫用Froms服務，引數會在HTTP要求內文中傳遞。 如果AEM Forms服務的簽章有字串輸入引數，請求內文可包含輸入引數的文字值。 如果服務的簽章定義了多個字串引數，則請求可以遵循HTTP的`application/x-www-form-urlencoded`標籤法，以引數名稱作為表單的欄位名稱。
+  如果以HTTP POST方法叫用Froms服務，引數會在HTTP要求內文中傳遞。 如果AEM Forms服務的簽章有字串輸入引數，請求內文可包含輸入引數的文字值。 如果服務的簽章定義了多個字串引數，則請求可以遵循HTTP的`application/x-www-form-urlencoded`標籤法，以引數名稱作為表單的欄位名稱。
 
-  如果Forms服務傳回字串引數，結果會是輸出引數的文字表示法。 如果服務傳回多個字串引數，結果會產生XML檔案，以下列格式編碼輸出引數：
+  如果Forms服務傳回字串引數，結果會是輸出引數的文字表示法。如果服務傳回多個字串引數，結果會產生XML檔案，以下列格式編碼輸出引數：
   ` <result> <output-paramater1>output-parameter-value-as-string</output-paramater1> . . . <output-paramaterN>output-parameter-value-as-string</output-paramaterN> </result>`
 
   >[!NOTE]
   >
   >`output-paramater1`值代表輸出引數名稱。
 
-  如果Forms服務需要`com.adobe.idp.Document`引數，則只能使用HTTPPOST方法叫用該服務。 如果服務需要一個`com.adobe.idp.Document`引數，則HTTP要求內文會成為輸入Document物件的內容。
+  如果Forms服務需要`com.adobe.idp.Document`引數，則只能使用HTTP POST方法叫用該服務。 如果服務需要一個`com.adobe.idp.Document`引數，則HTTP要求內文會成為輸入Document物件的內容。
 
   如果AEM Forms服務需要多個輸入引數，則HTTP要求內文必須是如RFC 1867定義的多部分MIME訊息。 （RFC 1867是網頁瀏覽器用來將檔案上傳至網站的標準。） 每個輸入引數都必須以多部分訊息的個別部分傳送，並以`multipart/form-data`格式編碼。 每個零件的名稱都必須與引數的名稱相符。
 
@@ -84,7 +84,7 @@ ht-degree: 0%
 * 指向檔案內容的URL （如果清單包含`com.adobe.idp.Document`個物件）
 
   下列範例是服務傳回的XML訊息，其單一輸出引數名為&#x200B;*list*，為整數清單。
-  ` <result>   <list>12345</list>   . . .   <list>67890</list>  </result>`輸出map引數在產生的XML訊息中以一系列XML元素表示，對應中的每個記錄都有一個元素。 每個元素的名稱都和對應記錄的鍵相同。 每個元素的值是對應記錄值的文字表示（如果對應包含具有字串值的記錄）或指向檔案內容的URL （如果對應包含具有`com.adobe.idp.Document`值的記錄）。 以下是服務傳回的XML訊息範例，此服務具有名為`map`的單一輸出引數。 此引數值是由字母與`com.adobe.idp.Document`物件關聯的記錄所組成的對映。
+  ` <result>   <list>12345</list>   . . .   <list>67890</list>  </result>`輸出map引數在產生的XML訊息中以一系列XML元素表示，對應中的每個記錄都有一個元素。每個元素的名稱都和對應記錄的鍵相同。每個元素的值是對應記錄值的文字表示（如果對應包含具有字串值的記錄）或指向檔案內容的URL （如果對應包含具有`com.adobe.idp.Document`值的記錄）。以下是服務傳回的XML訊息範例，此服務具有名為`map`的單一輸出引數。此引數值是由字母與`com.adobe.idp.Document`物件關聯的記錄所組成的對映。
   ` <result>   http://localhost:8080/DocumentManager/docm123/4567   . . .   <Z>http://localhost:8080/DocumentManager/docm987/6543</Z>  </result>  `
 
 ## 非同步叫用 {#asynchronous-invocations}
@@ -145,7 +145,7 @@ ht-degree: 0%
 
 ## 安全性與驗證 {#security-and-authentication}
 
-為了提供REST呼叫的安全傳輸，AEM Forms管理員可以在裝載AEM Forms的J2EE應用程式伺服器上啟用HTTPS通訊協定。 此設定專用於J2EE應用程式伺服器；它不是Forms伺服器設定的一部分。
+為了提供REST呼叫的安全傳輸，AEM表單管理員可以在託管AEM Forms的J2EE應用程式伺服器上啟用HTTPS通訊協定。 此設定專用於J2EE應用程式伺服器；它不是Forms伺服器設定的一部分。
 
 >[!NOTE]
 >
@@ -185,7 +185,7 @@ ht-degree: 0%
 
 **傳遞布林值給處理序**
 
-下列HTML範例將兩個`Boolean`值傳遞至名為`RestTest2`的AEM Forms處理序。 叫用方法的名稱是`invoke`，而版本是1.0。請注意，已使用HTMLPost方法。
+下列HTML範例將兩個`Boolean`值傳遞至名為`RestTest2`的AEM Forms處理序。 叫用方法的名稱是`invoke`，而版本是1.0。 請注意，已使用HTML Post方法。
 
 ```html
  <html>
@@ -205,7 +205,7 @@ ht-degree: 0%
 
 **傳遞日期值給處理序**
 
-下列HTML範例將日期值傳遞至名為`SOAPEchoService`的AEM Forms程式。 叫用方法的名稱為`echoCalendar`。 請注意，已使用HTML`Post`方法。
+下列HTML範例將日期值傳遞至名為`SOAPEchoService`的AEM Forms程式。 叫用方法的名稱為`echoCalendar`。 請注意，已使用HTML `Post`方法。
 
 ```html
  <html>
@@ -224,7 +224,7 @@ ht-degree: 0%
 
 **傳遞檔案至處理序**
 
-下列HTML範例會叫用名為`MyApplication/EncryptDocument`且需要PDF檔案的AEM Forms程式。 如需此程式的相關資訊，請參閱[使用MTOM叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)。
+以下HTML範例會叫用名為`MyApplication/EncryptDocument`的AEM Forms程式，該程式需要PDF檔案。 如需此程式的相關資訊，請參閱[使用MTOM叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)。
 
 ```html
  <html>
@@ -244,7 +244,7 @@ ht-degree: 0%
 
 **傳遞檔案和文字值至處理序**
 
-以下HTML範例會叫用名為`RestTest3`的AEM Forms處理序，此處理序需要檔案和兩個文字值。 請注意，已使用HTMLPost方法。
+以下HTML範例會叫用名為`RestTest3`的AEM Forms程式，該程式需要檔案和兩個文字值。 請注意，已使用HTML Post方法。
 
 ```html
  <html>
@@ -266,7 +266,7 @@ ht-degree: 0%
 
 **傳遞列舉值給處理序**
 
-下列HTML範例會叫用名為`SOAPEchoService`且需要列舉值的AEM Forms處理序。 請注意，已使用HTMLPost方法。
+下列HTML範例會叫用名為`SOAPEchoService`且需要列舉值的AEM Forms處理序。 請注意，已使用HTML Post方法。
 
 ```html
  <html>
@@ -294,7 +294,7 @@ ht-degree: 0%
 叫用此程式時，會執行下列動作：
 
 1. 取得傳遞至程式的不安全PDF檔案。 此動作是以`SetValue`作業為基礎。 此處理序的輸入引數是名為`inDoc`的`document`處理序變數。
-1. 使用密碼加密PDF檔案。 此動作是以`PasswordEncryptPDF`作業為基礎。 密碼加密的PDF檔案傳回名為`outDoc`的程式變數。
+1. 使用密碼加密PDF檔案。 此動作是以`PasswordEncryptPDF`作業為基礎。 密碼加密的PDF檔案在名為`outDoc`的程式變數中傳回。
 
    使用REST要求叫用此程式時，加密的PDF檔案會顯示在網頁瀏覽器中。 在檢視PDF檔案之前，您必須指定密碼（除非已停用安全性）。 下列HTML程式碼代表對`MyApplication/EncryptDocument`處理序的REST呼叫要求。
 
@@ -315,12 +315,12 @@ ht-degree: 0%
 
 **從Acrobat叫用MyApplication/EncryptDocument程式** {#invoke-process-acrobat}
 
-您可以使用REST要求，從Acrobat叫用Forms程式。 例如，您可以叫用&#x200B;*MyApplication/EncryptDocument*&#x200B;程式。 若要從Acrobat叫用Forms程式，請在Designer內的XDP檔案上放置提交按鈕。 (請參閱[Designer說明](https://www.adobe.com/go/learn_aemforms_designer_63)。)
+您可以使用REST要求，從Acrobat叫用Forms程式。 例如，您可以叫用&#x200B;*MyApplication/EncryptDocument*&#x200B;程式。 若要從Acrobat叫用Forms程式，請在Designer內的XDP檔案上放置提交按鈕。 （請參閱[Designer說明](https://www.adobe.com/go/learn_aemforms_designer_63)。）
 
 在按鈕的&#x200B;*送出至URL*&#x200B;欄位中指定要叫用處理序的URL，如下圖所示。
 
 叫用處理程式的完整URL為https://hiro-xp:8080/rest/services/MyApplication/EncryptDocument。
 
-如果程式需要PDF檔案作為輸入值，請確保您以PDF提交表單，如上圖所示。 此外，若要成功叫用處理序，處理序必須傳回PDF檔案。 否則Acroabt無法處理傳回值，並發生錯誤。 您不必指定輸入程式變數的名稱。 例如，*MyApplication/EncryptDocument*&#x200B;處理序有一個名為`inDoc`的輸入變數。 只要表單已提交為PDF，您就不需要指定inDoc。
+如果程式需要PDF檔案作為輸入值，請務必以PDF形式提交表單，如上圖所示。 此外，若要成功叫用程式，程式必須傳回PDF檔案。 否則Acroabt無法處理傳回值，並發生錯誤。 您不必指定輸入程式變數的名稱。 例如，*MyApplication/EncryptDocument*&#x200B;處理序有一個名為`inDoc`的輸入變數。 只要表單已提交為PDF，您就不需要指定inDoc。
 
 您也可以將表單資料以XML形式提交至Forms程式。若要提交XML資料，請確定`Submit As`下拉式清單指定XML。 由於流程的傳回值必須是PDF檔案，因此PDF檔案會顯示在Acrobat中。
