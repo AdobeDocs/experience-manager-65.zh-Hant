@@ -11,7 +11,7 @@ feature: Mobile
 role: User
 source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '255'
+source-wordcount: '265'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 ## 內容概觀 {#content-overview}
 
-想一想線上雜誌，主要內容包括文章、廣告和封面。 在AEM中可以建立三種主要型別的Mobile On-Demand內容：
+想一想線上雜誌，主要內容包括文章、廣告和封面。 可在AEM中建立三種主要型別的Mobile On-Demand內容：
 
 * **文章**：文字與藝術一起傳遞資訊
 * **橫幅：**&#x200B;通常是圖形促銷連結
@@ -34,7 +34,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->若要深入瞭解AEM Mobile應用程式的設計考量事項，請參閱線上說明中的[AEM Mobile應用程式的設計考量事項](https://helpx.adobe.com/tw/digital-publishing-solution/help/design-app.html)。
+>若要深入瞭解AEM Mobile應用程式的設計考量事項，請參閱線上說明中的[AEM Mobile應用程式的設計考量事項](https://helpx.adobe.com/digital-publishing-solution/help/design-app.html)。
 
 ## 建立和管理內容 {#creating-and-managing-content}
 
@@ -44,7 +44,7 @@ ht-degree: 0%
 * [管理橫幅](/help/mobile/mobile-on-demand-managing-banners.md)
 * [管理集合](/help/mobile/mobile-on-demand-managing-collections.md)
 * [上傳共用資源](/help/mobile/mobile-on-demand-shared-resources.md)
-* [Publish取消發佈內容](/help/mobile/mobile-on-demand-publishing-unpublishing.md)
+* [發佈取消發佈內容](/help/mobile/mobile-on-demand-publishing-unpublishing.md)
 
 >[!NOTE]
 >
@@ -54,5 +54,5 @@ ht-degree: 0%
 
 若要瞭解管理員和開發人員的角色和責任，請參閱以下資源：
 
-* [為AEM Mobile On-demand Services開發AEM內容](/help/mobile/aem-mobile-on-demand.md)
+* [針對AEM Mobile On-demand Services開發AEM內容](/help/mobile/aem-mobile-on-demand.md)
 * [管理內容以使用AEM Mobile On-demand Services](/help/mobile/aem-mobile.md)
