@@ -173,7 +173,7 @@ AEM中的部分標籤功能包括：
 
 ![chlimage_1-195](assets/chlimage_1-195.png)
 
-選取名稱空間或其他標籤時，可以變更標題、說明，並透過選取**`Edit`**圖示提供標題的當地語系化。
+選取名稱空間或其他標籤時，可以變更標題、說明，並透過選取&#x200B;**`Edit`**&#x200B;圖示提供標題的當地語系化。
 
 完成編輯後，選取&#x200B;**儲存**。
 
@@ -258,7 +258,7 @@ AEM中的部分標籤功能包括：
       * 例如，瀏覽至http://localhost:4502/useradmin
 
    * 在左窗格中，選取要授與[讀取許可權](/help/sites-administering/security.md#permissions)的群組（或使用者）
-   * 在右窗格中，找到**Path **到「標籤名稱空間」
+   * 在右窗格中，找到&#x200B;**Path &#x200B;** 到「標籤名稱空間」
 
       * 例如，`/content/cq:tags/mycommunity`
 
