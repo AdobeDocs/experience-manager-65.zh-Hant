@@ -94,7 +94,7 @@ Web Channel一律啟用。
 
 ![通知14](assets/notifications1.png)
 
-電子郵件通道依賴電子郵件](/help/communities/email.md)的正確[設定，提供與網頁通道相同的設定。
+電子郵件通道依賴電子郵件[&#128279;](/help/communities/email.md)的正確設定，提供與網頁通道相同的設定。
 
 電子郵件通道預設為關閉。
 
