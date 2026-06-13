@@ -10,7 +10,7 @@ solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
-source-wordcount: '6130'
+source-wordcount: '6132'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 1%
 
 建立互動式通訊的先決條件如下：
 
-* 設定包含測試資料或具有實際資料來源(例如Microsoft® Dynamics的執行個體)的[表單資料模型](/help/forms/using/data-integration.md)。
+* 設定包含測試資料或具有實際資料來源（例如® Dynamics的執行個體）的[表單資料模型](/help/forms/using/data-integration.md)。
 * 確定您有[檔案片段](/help/forms/using/document-fragments.md)。
 * 確定您有[列印和Web Channel的範本](/help/forms/using/web-channel-print-channel.md)。
 * 確定您擁有網路通道所需的[佈景主題](/help/forms/using/themes.md)。
@@ -45,15 +45,15 @@ ht-degree: 1%
    * **[!UICONTROL 表單資料模型]**：瀏覽並選取表單資料模型。 如需表單資料模型的詳細資訊，請參閱[AEM Forms資料整合](/help/forms/using/data-integration.md)。
 
    * **[!UICONTROL 預填服務]**：選取預填服務以擷取資料並預填互動式通訊。
-   * **[!UICONTROL Post處理程式型別]**：您可以選取AEM或Forms工作流程，以便在提互動動式通訊時觸發。 選取要觸發的工作流程型別。
+   * **[!UICONTROL 後處理型別]**：您可以選取AEM或Forms工作流程，以便在提互動動式通訊時觸發。 選取要觸發的工作流程型別。
 
-   * **[!UICONTROL Post處理序]**：選取要觸發的工作流程名稱。 選取AEM工作流程時，請提供附件路徑、版面路徑、PDF路徑、列印資料路徑及網頁資料路徑。
+   * **[!UICONTROL 後續程式]**：選取要觸發的工作流程名稱。 選取AEM工作流程時，請提供附件路徑、版面路徑、PDF路徑、列印資料路徑和Web資料路徑。
    * **[!UICONTROL 標籤]**：選取要套用至互動式通訊的標籤。 您也可以輸入新的/自訂標簽名稱，然後按Enter鍵以建立。
-   * **[!UICONTROL 作者]**：作者名稱會自動從登入使用者的使用者名稱中取得。
-   * **[!UICONTROL Publish日期：]**&#x200B;請輸入發佈互動式通訊的日期。
+   * **[!UICONTROL 作者]**:The作者名稱會自動從登入使用者的使用者名稱中取得。
+   * **[!UICONTROL 發佈日期：]**&#x200B;請輸入發佈互動式通訊的日期。
    * **[!UICONTROL 取消發佈日期]**：輸入取消發佈互動式通訊的日期。
 
-1. 選取&#x200B;**[!UICONTROL 下一步]**。 將會顯示指定列印和Web Channel詳細資訊的畫面。
+1. 選取&#x200B;**[!UICONTROL 「下一步」]**。 將會顯示指定列印和Web Channel詳細資訊的畫面。
 1. 輸入下列內容：
 
    * **[!UICONTROL 列印]**：選取此選項以產生互動式通訊的列印通道。
@@ -62,15 +62,15 @@ ht-degree: 1%
    * **[!UICONTROL 互動式通訊Web範本]**：瀏覽並選取Web範本。
    * **[!UICONTROL 佈景主題]**&#x200B;和&#x200B;**[!UICONTROL 選取佈景主題]**：瀏覽並選取佈景主題，以設定互動式通訊的網路通道樣式。 如需詳細資訊，請參閱AEM Forms中的[主題](/help/forms/using/themes.md)。
 
-   * **[!UICONTROL 為Web Channel使用Print As Master]**：選取此選項以建立與列印管道同步的Web channel。 使用print channel作為web channel的主版，可確保從print channel衍生web channel的內容和資料繫結，當您選取「同步」時，在web channel中進行的變更會反映在web channel中。 不過，作者可視需要中斷Web Channel中特定元件的繼承。 如需詳細資訊，請參閱[將Web channel與Print channel同步](../../forms/using/create-interactive-communication.md#synchronize)。
-如果您選取&#x200B;**[!UICONTROL Web Channel的「列印為主版」]**&#x200B;選項，您可以選取下列任何模式來產生Web channel：
+   * **[!UICONTROL 為Web Channel使用Print As Master]**：選取此選項以建立與列印管道同步的Web channel。使用print channel作為web channel的主版，可確保從print channel衍生web channel的內容和資料繫結，當您選取「同步」時，在web channel中進行的變更會反映在web channel中。不過，作者可視需要中斷Web Channel中特定元件的繼承。如需詳細資訊，請參閱[將Web channel與Print channel同步](../../forms/using/create-interactive-communication.md#synchronize)。
+若您選取**[!UICONTROL 使用Web Channel的「列印為主版」]**&#x200B;選項，您可以選取下列任一模式來產生Web channel：
 
       * **[!UICONTROL 自動配置]**：選取此模式，即可從Print channel自動產生Web channel的預留位置、內容和資料繫結。
       * **[!UICONTROL 手動整理]**：選取此模式，即可使用&#x200B;**[!UICONTROL 資料來源]**&#x200B;索引標籤中可用的主要內容，手動選取並新增Print channel元素至Web channel。 如需詳細資訊，請參閱[選取[列印管道]元素以建立Web管道內容](#selectprintchannelelements)。
 
    如需有關列印管道和網頁管道的詳細資訊，請參閱[列印管道和網頁管道](/help/forms/using/web-channel-print-channel.md)。
 
-1. 選擇 **[!UICONTROL 建立]**。隨即建立互動式通訊，並出現警示方塊。 選取&#x200B;**[!UICONTROL 編輯]**&#x200B;以開始建立互動式通訊的內容，如[使用互動式通訊編寫使用者介面](#step2)新增內容。 或者，您可以選取&#x200B;**[!UICONTROL 完成]**，並選擇稍後編輯互動式通訊。
+1. 選擇 **[!UICONTROL 建立]**。 隨即建立互動式通訊，並出現警示方塊。 選取&#x200B;**[!UICONTROL 編輯]**&#x200B;以開始建立互動式通訊的內容，如[使用互動式通訊編寫使用者介面](#step2)新增內容。 或者，您可以選取&#x200B;**[!UICONTROL 完成]**，並選擇稍後編輯互動式通訊。
 
 ## 新增內容至互動式通訊 {#step2}
 
@@ -78,7 +78,7 @@ ht-degree: 1%
 
 如需互動式通訊撰寫介面的詳細資訊，請參閱[互動式通訊撰寫簡介](/help/forms/using/introduction-interactive-communication-authoring.md)。
 
-1. 當您選取[編輯]時，會啟動互動式通訊編寫介面，如[建立互動式通訊](#createic)中所述。 或者，您可以導覽至AEM上現有的互動式通訊資產，選取該資產，然後選取&#x200B;**[!UICONTROL 編輯]**&#x200B;以啟動互動式通訊編寫介面。
+1. 當您選取[編輯]時，會啟動互動式通訊編寫介面，如[建立互動式通訊](#createic)中所述。 或者，您可以導覽至AEM上現有的互動式通訊資產，選取該資產，然後選取&#x200B;**[!UICONTROL 編輯]**&#x200B;以啟動互動式通訊撰寫介面。
 
    依預設，除非互動式通訊是僅限Web-channel，否則互動式通訊的列印管道會出現。 互動式通訊的「列印」通道會顯示目標區域，如所選XDP/列印通道範本中所提供。 在這些目標區域和欄位中，您可以新增元件或資產。
 
@@ -171,7 +171,7 @@ ht-degree: 1%
    * [使用列印管道同步Web Channel](../../forms/using/create-interactive-communication.md#synchronize)
 
       * 自動同步
-      * 取消先前設定
+      * 取消繼承
       * 重新啟用繼承
       * 同步
 
@@ -294,13 +294,13 @@ ht-degree: 1%
 
 下表列出設定變數的資料顯示模式後，所顯示的值範例：
 
-| 類型 | 預設值 | 顯示模式 | 顯示值 | 說明 |
+| 類型 | 預設值 | 顯示圖樣 | 顯示值 | 說明 |
 |---|---|---|---|---|
 | SocialSecurityNumber | 123456789 | 文字{999-99-9999} | 123-45-6789 | 預設值欄位中的位數與「模式」欄位中的位數相符。 已成功顯示以模式為基礎的值。 |
 | SocialSecurityNumber | 1234567 | 文字{999-99-9999} | 1-23-4567 | 預設值欄位中的位數小於「模式」欄位中的位數。 模式會套用至7個可用的數字。 |
 | SocialSecurityNumber | 1234567890 | 文字{999-99-9999} | 1234567890 | 預設值欄位的位數大於「模式」欄位的位數。 因此，顯示值不會變更。 |
 
-如果沒有為變數或表單資料模型元素指定顯示模式，則預設會使用[全域檔案片段組態](https://helpx.adobe.com/tw//experience-manager/6-5/forms/using/interactive-communication-configuration-properties.html)。
+如果沒有為變數或表單資料模型元素指定顯示模式，則預設會使用[全域檔案片段組態](https://helpx.adobe.com//experience-manager/6-5/forms/using/interactive-communication-configuration-properties.html)。
 
 如果您沒有將顯示模式套用至數字資料型別的變數，列印預覽會根據全域檔案片段組態顯示模式。 如果您將變更套用至預設全域檔案片段組態，Agent UI仍會根據為地區設定的預設分隔符號顯示模式。
 
@@ -323,7 +323,7 @@ ht-degree: 1%
 
 您可以使用佈局片段在互動式通訊中新增動態表格。 下列步驟使用信用卡陳述式的範例來說明如何使用版面片段在互動式通訊中建立動態表格。
 
-1. 確保建立表格所需的佈局片段在AEM中可用。
+1. 確保建立表格所需的佈局片段可在AEM中使用。
 1. 在互動式通訊的列印管道中，從資產瀏覽器將佈局片段（含多欄表格）拖放至目標區域。
 
    ![lf_dragdrop](assets/lf_dragdrop.png)
@@ -538,7 +538,7 @@ ht-degree: 1%
 
 ![主要內容](assets/master_content.png)
 
-### 取消先前設定 {#cancelinheritance}
+### 取消繼承 {#cancelinheritance}
 
 在Web Channel中，元件會嵌入目標區域中。
 
@@ -610,7 +610,7 @@ Web Channel編寫介面有助於將面板中的元件分組，以便同時對這
 
 ## 列印管道的輸出格式 {#output-format-print-channel}
 
-使用PrintChannel API定義互動式通訊之Print channel的輸出格式。 如果您未定義輸出格式，AEM Forms會產生PDF格式的輸出。
+使用PrintChannel API定義互動式通訊之Print channel的輸出格式。 如果您未定義輸出格式，AEM Forms會以PDF格式產生輸出。
 
 ```javascript
 //options for rendering print channel of a multi-channel document
@@ -618,7 +618,7 @@ PrintChannelRenderOptions renderOptions = new PrintChannelRenderOptions();
 PrintDocument printDocument = printChannel.render(renderOptions);
 ```
 
-若要以任何其他格式產生輸出，請指定輸出格式型別。 如需支援的輸出格式型別清單，請參閱[PrintChannel API](https://helpx.adobe.com/tw/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/PrintConfig.html)。
+若要以任何其他格式產生輸出，請指定輸出格式型別。 如需支援的輸出格式型別清單，請參閱[PrintChannel API](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/PrintConfig.html)。
 
 例如，您可以使用下列範例將PCL定義為互動式通訊的輸出格式：
 

@@ -1,6 +1,6 @@
 ---
 title: 使用組合器服務
-description: 組合器服務可讓您組合、重新排列和增加PDF和XDP檔案，並取得有關PDF檔案的資訊。
+description: Assembler服務可讓您組合、重新排列和增加PDF和XDP檔案，並取得有關PDF檔案的資訊。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
@@ -11,20 +11,20 @@ solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 source-git-commit: 2eac9acd8b92582424557222b673211b29a15185
 workflow-type: tm+mt
-source-wordcount: '2159'
+source-wordcount: '2167'
 ht-degree: 6%
 
 ---
 
 # 使用組合器服務{#using-assembler-service}
 
-組合器服務可讓您組合、重新排列和增加PDF和XDP檔案，並取得有關PDF檔案的資訊。 提交至組合器服務的每個工作都包含檔案描述XML (DDX)檔案、來原始檔及外部資源（字串與圖形）。 如需有關組合器服務的詳細資訊，請參閱[組合器服務概述](../../forms/using/overview-aem-document-services.md#p-assembler-service-p)。
+Assembler服務可讓您組合、重新排列和增加PDF和XDP檔案，並取得有關PDF檔案的資訊。 提交至組合器服務的每個工作都包含檔案描述XML (DDX)檔案、來原始檔及外部資源（字串與圖形）。 如需有關組合器服務的詳細資訊，請參閱[組合器服務概述](../../forms/using/overview-aem-document-services.md#p-assembler-service-p)。
 
 您可以使用組裝服務進行下列操作：
 
 ## 組合 PDF 文件 {#assemble-pdf-documents}
 
-您可以使用「組合器」服務，將兩個或多個PDF檔案組合成單一PDF檔案或PDFPortfolio。 您也可以將功能套用至PDF檔案，以協助導覽或增強安全性。 以下是一些組合 PDF 文件的方法：
+您可以使用組合器服務將兩個或更多PDF檔案組合為單一PDF檔案或PDF Portfolio。 您也可以將功能套用至PDF檔案，以輔助導覽或增強安全性。 以下是一些組合 PDF 文件的方法：
 
 ### 組合一個簡單 PDF 文件 {#assemble-a-simple-pdf-document}
 
@@ -32,7 +32,7 @@ ht-degree: 6%
 
 ![從多個PDF檔案組合一個簡單的PDF檔案](assets/as_document_assembly.png)
 
-從多個PDF檔案組合簡單PDF檔案
+從多個PDF檔案中組合一個簡單的PDF檔案
 
 以下範例是用於組合檔案的簡單DDX檔案。 它指定用於產生結果檔案的來原始檔的名稱，以及結果檔案的名稱：
 
@@ -54,9 +54,9 @@ ht-degree: 6%
 
 ### 建立 PDF 組合 {#create-a-pdf-portfolio}
 
-Assembler服務可建立包含檔案集合和自含使用者介面的PDFPortfolio。 此介面稱為「PDFPortfolio配置」或「PDFPortfolio導覽器（導覽器）」。 PDFPortfolio透過新增瀏覽器、資料夾和歡迎頁面來擴展PDF套件的功能。 此介面可運用當地語系化的文字字串、自訂色彩配置和圖形資源，提升使用者體驗。 PDFPortfolio也可以包含用於組織投資組合中檔案的資料夾。
+組合器服務可建立包含檔案集合和自含式使用者介面的PDF產品組合。 此介面稱為PDF Portfolio配置或PDF Portfolio導覽器（導覽器）。 PDF產品組合透過新增瀏覽器、資料夾和歡迎頁面來擴充PDF套件的功能。 此介面可運用當地語系化的文字字串、自訂色彩配置和圖形資源，提升使用者體驗。 PDF Portfolio也可以包含資料夾，用以組織投資組合中的檔案。
 
-組合器服務解譯下列DDX檔案時，會組合一個PDFPortfolio，其中包含PDFPortfolio導覽器和兩個檔案的套件。 服務會從myNavigator來源指定的位置取得瀏覽器。 它會將導覽器的預設色彩配置變更為粉紅Scheme色彩配置。
+當組合器服務解譯下列DDX檔案時，它會組合一個PDF Portfolio，其中包含PDF Portfolio導覽器和兩個檔案的套件。 服務會從myNavigator來源指定的位置取得瀏覽器。 它會將導覽器的預設色彩配置變更為粉紅Scheme色彩配置。
 
 ```xml
 <DDX xmlns="https://ns.adobe.com/DDX/1.0/">
@@ -75,7 +75,7 @@ Assembler服務可建立包含檔案集合和自含使用者介面的PDFPortfoli
 
 ### 組合加密的文件 {#assemble-encrypted-documents}
 
-當您組合檔案時，也可以使用密碼加密PDF檔案。 使用密碼加密PDF檔案後，使用者必須指定密碼，才能在Adobe Reader或Acrobat中檢視PDF檔案。 若要使用密碼加密PDF檔案，DDX檔案必須包含加密PDF檔案所需的加密元素值。
+當您組合檔案時，也可以使用密碼加密PDF檔案。 PDF檔案使用密碼加密後，使用者必須指定密碼，才能在Adobe Reader或Acrobat中檢視PDF檔案。 若要使用密碼加密PDF檔案，DDX檔案必須包含加密PDF檔案所需的加密元素值。
 
 加密服務不一定要成為LiveCycle安裝的一部分，才能使用密碼加密PDF檔案。
 
@@ -87,15 +87,15 @@ Assembler服務可建立包含檔案集合和自含使用者介面的PDFPortfoli
 
 下圖顯示的PDF檔案在檔案標題中包含唯一識別碼。
 
-![在檔案的標頭中包含唯一識別碼的PDF檔案](do-not-localize/as_batesnumber.png)
+![在檔案標題中包含唯一識別碼的PDF檔案](do-not-localize/as_batesnumber.png)
 
 在檔案標題中包含唯一識別碼的PDF檔案
 
 ### 扁平化及組合文件 {#flatten-and-assemble-documents}
 
-您可以使用Assembler服務將互動式PDF檔案（例如表單）轉換為非互動式PDF檔案。 互動式PDF檔案可讓使用者在PDF檔案欄位中輸入或修改資料。 將互動式PDF檔案轉換為非互動式PDF檔案的程式稱為平面化。 將PDF檔案平面化時，表單欄位會保留其圖形外觀，但不再具有互動性。 平面化PDF檔案的一個原因是為了確保無法修改資料。 此外，與欄位關聯的指令碼不再運作。
+您可以使用Assembler服務將互動式PDF檔案（例如表單）轉換為非互動式PDF檔案。 互動式PDF檔案可讓使用者在PDF檔案欄位中輸入或修改資料。 將互動式PDF檔案轉換為非互動式PDF檔案的程式稱為平面化。 將PDF檔案平面化時，表單欄位會保留其圖形外觀，但不再為互動式欄位。 平面化PDF檔案的一個原因是為了確保無法修改資料。 此外，與欄位關聯的指令碼不再運作。
 
-當您建立由互動式PDF檔案組裝的PDF檔案時，組裝程式服務會先將表單平面化，再將其組裝成結果檔案。
+當您建立由互動式PDF檔案組裝的PDF檔案時，組裝器服務會先平面化這些表單，然後再將其組裝到結果檔案中。
 
 >[!NOTE]
 >
@@ -103,7 +103,7 @@ Assembler服務可建立包含檔案集合和自含使用者介面的PDFPortfoli
 
 ## 組合XDP檔案 {#assemble-xdp-documents}
 
-您可以使用Assembler服務將多個XDP檔案組合到單個XDP檔案或PDF檔案中。 對於包含插入點的來源XDP檔案，您可以指定要插入的片段。
+您可以使用組合器服務將多個XDP檔案組合為單一XDP檔案或PDF檔案。 對於包含插入點的來源XDP檔案，您可以指定要插入的片段。
 
 以下是組裝XDP檔案的一些方法：
 
@@ -239,7 +239,7 @@ xsi:schemaLocation="http://ns.adobe.com/DDX/1.0/ coldfusion_ddx.xsd">
 
 對表單片段動態插入的支援支援支援單一原始碼控制。 您可維護常用元件的單一來源。 例如，您可以為公司橫幅建立片段。 如果橫幅變更，您只需修改片段。 包含片段的其他表單不會變更。
 
-表單設計人員使用LiveCycleDesigner來建立表單片段。 這些片段在XFA表單中具有獨特的名稱子表單。 表單設計人員也可以使用Designer來建立具有唯一名稱插入點的XFA表單。 您（程式設計人員）撰寫DDX檔案，指定片段插入XFA表單的方式。
+表單設計人員使用LiveCycle Designer來建立表單片段。 這些片段在XFA表單中具有獨特的名稱子表單。 表單設計人員也可以使用Designer來建立具有唯一名稱插入點的XFA表單。 您（程式設計人員）撰寫DDX檔案，指定片段插入XFA表單的方式。
 
 下圖顯示兩個XML表單（XFA範本）。 左邊的表單包含一個名為myInsertionPoint的插入點。 右邊的表單包含一個名為myFragment的片段。
 
@@ -311,13 +311,13 @@ source="myFragmentSource"/>
 </PDFsFromBookmarks>
 ```
 
-## 判斷檔案是否符合PDF/A規範 {#determine-whether-documents-are-pdf-a-compliant}
+## 判斷檔案是否符合PDF/A標準 {#determine-whether-documents-are-pdf-a-compliant}
 
-您可以使用Assembler服務來判斷PDF檔案是否符合PDF/A標準。 PDF/A 是一種用於長期保存文件內容的封存格式。字體內嵌在文件中，檔案未壓縮。因此，PDF/A 文件通常比標準 PDF 文件大。此外，PDF/A 文件不包含音訊和視訊內容。
+您可以使用Assembler服務來判斷PDF檔案是否符合PDF/A標準。 PDF/A 是一種用於長期保存文件內容的封存格式。 字體嵌入在文件中，檔案未壓縮。 因此，PDF/A 文件通常比標準 PDF 文件大。 此外，PDF/A 文件不包含音訊和視訊內容。
 
-## 取得PDF檔案的相關資訊 {#obtain-information-about-a-pdf-document}
+## 取得有關PDF檔案的資訊 {#obtain-information-about-a-pdf-document}
 
-您可以使用Assembler服務來取得有關PDF檔案的下列資訊：
+您可以使用Assembler服務來取得下列有關PDF檔案的資訊：
 
 * 文字資訊。
 
@@ -329,20 +329,20 @@ source="myFragmentSource"/>
   PDF檔案中的資料，並將其匯入PDF檔案中。
 
 * 檔案附件，包括檔案資訊。 對於頁面層級附件，它也會包含\
-  檔案附件附註的位置。 您可以從PDF檔案中匯出此資料，並且\
-  將其匯入PDF檔案中。
+  檔案附件附註的位置。 您可以從PDF檔案匯出此資料，並且\
+  將其匯入至PDF檔案。
 
-* 封裝檔案，包括檔案資訊、資料夾、封裝、結構描述和欄位資料。 您可以從PDF檔案匯出此資料，並將其匯入PDF檔案中。
+* 封裝檔案，包括檔案資訊、資料夾、封裝、結構描述和欄位資料。 您可以從PDF檔案匯出此資料，並將其匯入至PDF檔案。
 
 ## 驗證DDX檔案 {#validate-ddx-documents}
 
-您可以使用組合器服務來判斷DDX檔案是否有效。 例如，如果您從先前的LiveCycle版本升級，則驗證會確保您的DDX檔案有效。
+您可以使用組合器服務來判斷DDX檔案是否有效。 例如，如果您從先前的LiveCycle版本升級，則驗證會確保DDX檔案有效。
 
 ## 呼叫其他服務 {#call-other-services}
 
-您可以使用DDX檔案，讓Assembler服務呼叫下列LiveC循環服務。 組合器服務只能呼叫隨LiveCycle安裝的那些服務。
+您可以使用DDX檔案，讓Assembler服務呼叫下列LiveC循環服務。 Assembler服務只能呼叫那些隨LiveCycle安裝的服務。
 
-**Reader延伸模組服務**：讓Adobe Reader使用者能以數位方式簽署產生的PDF檔案。
+**Reader延伸模組服務**：可讓Adobe Reader使用者以數位方式簽署產生的PDF檔案。
 
 **Forms服務**：合併XDP檔案和XML資料檔案，以產生包含已填互動式表單的PDF檔案。
 

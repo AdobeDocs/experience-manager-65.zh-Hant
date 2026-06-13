@@ -11,7 +11,7 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 source-git-commit: 9f59606bb58b9e90f07bd22e89f3213afb54a697
 workflow-type: tm+mt
-source-wordcount: '6201'
+source-wordcount: '6236'
 ht-degree: 0%
 
 ---
@@ -54,7 +54,7 @@ ht-degree: 0%
  <thead>
   <tr>
    <th><p>步驟</p></th>
-   <th><p>說明</p></th>
+   <th><p>描述</p></th>
   </tr>
  </thead>
  <tbody>
@@ -83,7 +83,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如果伺服器時區與使用者端時區不同，使用WebSphere Application Server叢集上的.NET使用者端在本機SOAP棧疊上使用AEM Forms產生PDF服務的WSDL時，可能會發生下列「使用者管理」驗證錯誤：
+>如果伺服器時區與客戶端時區不同，在WebSphere Application Server叢集上使用.NET使用者端的原生SOAP棧疊上，使用AEM Forms Generate PDF服務的WSDL時，可能會發生下列使用者管理驗證錯誤：
 
 `[com.adobe.idp.um.webservices.WSSecurityHandler] errorCode:12803 errorCodeHEX:0x3203 message:WSSecurityHandler: UM authenticate returns exception : An error was discovered processing the <wsse:Security> header. (WSSecurityEngine: Invalid timestamp The security semantics of message have expired).`
 
@@ -203,7 +203,7 @@ ht-degree: 0%
 
 [步驟摘要](users.md#summary-of-steps)
 
-[快速入門(SOAP模式)：使用Java API新增使用者](/help/forms/developing/user-manager-java-api-quick.md#quick-start-soap-mode-adding-users-using-the-java-api)
+[快速入門（SOAP模式）：使用Java API新增使用者](/help/forms/developing/user-manager-java-api-quick.md#quick-start-soap-mode-adding-users-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -336,7 +336,7 @@ ht-degree: 0%
 
 [快速入門（EJB模式）：使用Java API刪除使用者](/help/forms/developing/user-manager-java-api-quick.md#quick-start-soap-mode-deleting-users-using-the-java-api)
 
-[快速入門(SOAP模式)：使用Java API刪除使用者](/help/forms/developing/user-manager-java-api-quick.md#quick-start-soap-mode-deleting-users-using-the-java-api)
+[快速入門（SOAP模式）：使用Java API刪除使用者](/help/forms/developing/user-manager-java-api-quick.md#quick-start-soap-mode-deleting-users-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -403,8 +403,8 @@ ht-degree: 0%
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
-* adobe-utilities.jar (如果AEM Forms部署在JBoss上，則為必要)
-* jbossall-client.jar (如果AEM Forms部署在JBoss上，則為必要)
+* adobe-utilities.jar （如果AEM Forms部署在JBoss上，則為必要）
+* jbossall-client.jar （如果AEM Forms部署在JBoss上，則為必要）
 
 如需關於這些JAR檔案位置的資訊，請參閱[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
@@ -569,7 +569,7 @@ ht-degree: 0%
 
 1. 包含專案檔案。
 
-   * 建立使用「目錄管理員」WSDL的Microsoft .NET使用者端元件。 (請參閱[使用Base64編碼叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)。)
+   * 建立使用「目錄管理員」WSDL的Microsoft .NET使用者端元件。 （請參閱[使用Base64編碼叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)。）
    * 參考Microsoft .NET使用者端元件。 （請參閱[建立使用Base64編碼的.NET使用者端元件](/help/forms/developing/invoking-aem-forms-using-web.md#creating-a-net-client-assembly-that-uses-base64-encoding)。）
 
 1. 建立DirectoryManagerService使用者端。
@@ -602,7 +602,7 @@ ht-degree: 0%
 
 本主題說明如何使用授權管理員服務API (Java)以程式設計方式指派、移除及決定角色和許可權。
 
-在AEM Forms中，*角色*&#x200B;是存取一或多個系統層級資源的許可權群組。 這些許可權是透過「使用者管理」建立並由服務元件強制執行。 例如，管理員可以將「原則集作者」的角色指派給一組使用者。 然後，Rights Management將允許該群組中具有該角色的使用者透過administration console建立原則集。
+在AEM Forms中，*角色*&#x200B;是存取一或多個系統層級資源的許可權群組。 這些許可權是透過「使用者管理」建立並由服務元件強制執行。 例如，管理員可以將「原則集作者」的角色指派給一組使用者。 然後Rights Management將允許該角色群組的使用者透過administration console建立原則集。
 
 有兩種角色型別： *預設角色*&#x200B;和&#x200B;*自訂角色*。 預設角色（*系統角色）*&#x200B;已駐留在AEM Forms中。 假設管理員無法刪除或修改預設角色，因此這些角色是不可變的。 管理員建立的自訂角色之後可能會修改或刪除它們，因此是可變的。
 
@@ -668,7 +668,7 @@ ht-degree: 0%
 
 [步驟摘要](users.md#summary-of-steps)
 
-[快速入門(SOAP模式)：使用Java API管理角色和許可權](/help/forms/developing/user-manager-java-api-quick.md#quick-start-soap-mode-managing-roles-and-permissions-using-the-java-api)
+[快速入門（SOAP模式）：使用Java API管理角色和許可權](/help/forms/developing/user-manager-java-api-quick.md#quick-start-soap-mode-managing-roles-and-permissions-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -737,7 +737,7 @@ ht-degree: 0%
  <thead>
   <tr>
    <th><p>步驟</p></th>
-   <th><p>說明</p></th>
+   <th><p>描述</p></th>
   </tr>
  </thead>
  <tbody>
@@ -783,7 +783,7 @@ ht-degree: 0%
 
 **擷取驗證內容**
 
-在驗證使用者之後，您可以根據已驗證的使用者來建立內容。 然後，您可以使用內容叫用其他AEM Forms服務。 例如，您可以使用內容來建立`EncryptionServiceClient`並使用密碼加密PDF檔案。 確定已驗證的使用者具有呼叫AEM Forms服務所需的名為`Services User`的角色。
+在驗證使用者之後，您可以根據已驗證的使用者來建立內容。 然後，您可以使用內容叫用其他AEM Forms服務。 例如，您可以使用內容來建立`EncryptionServiceClient`，並使用密碼加密PDF檔案。 確定已驗證的使用者具有呼叫AEM Forms服務所需的名為`Services User`的角色。
 
 **另請參閱**
 
@@ -828,8 +828,8 @@ ht-degree: 0%
 
 1. 包含專案檔案。
 
-   * 建立使用Authentication Manager WSDL的Microsoft .NET使用者端元件。 (請參閱[使用Base64編碼叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)。)
-   * 參考Microsoft .NET使用者端元件。 (請參閱[使用Base64編碼叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)中的「參考.NET使用者端元件」。)
+   * 建立使用Authentication Manager WSDL的Microsoft .NET使用者端元件。 （請參閱[使用Base64編碼叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)。）
+   * 參考Microsoft .NET使用者端元件。 （請參閱[使用Base64編碼叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)中的「參考.NET使用者端元件」。）
 
 1. 建立AuthenticationManagerService使用者端。
 
@@ -851,7 +851,7 @@ ht-degree: 0%
 
 ## 以程式設計方式同步使用者 {#programmatically-synchronizing-users}
 
-您可以使用使用者管理API，以程式設計方式同步使用者。 當您同步使用者時，會使用使用者存放庫中的使用者資料更新AEM Forms。 例如，假設您將新使用者新增至使用者存放庫。 執行同步化作業後，新使用者會成為AEM Forms使用者。 此外，您使用者存放庫中不再存在的使用者也會從AEM Forms中移除。
+您可以使用使用者管理API，以程式設計方式同步使用者。 當您同步使用者時，會使用使用者存放庫中的使用者資料更新AEM Forms。 例如，假設您將新使用者新增至使用者存放庫。 執行同步作業後，新使用者會成為AEM表單使用者。 此外，您使用者存放庫中不再存在的使用者也會從AEM Forms中移除。
 
 下圖顯示與使用者存放庫同步的AEM Forms。
 
@@ -863,7 +863,7 @@ ht-degree: 0%
  <thead>
   <tr>
    <th><p>步驟</p></th>
-   <th><p>說明</p></th>
+   <th><p>描述</p></th>
   </tr>
  </thead>
  <tbody>

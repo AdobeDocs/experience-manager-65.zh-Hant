@@ -10,7 +10,7 @@ feature: Mobile
 role: User
 source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '1130'
+source-wordcount: '1160'
 ht-degree: 1%
 
 ---
@@ -75,10 +75,10 @@ Unlimited文章是範例範本，代表典型的AEM Mobile隨選文章版面。
 1. 在&#x200B;**管理文章**&#x200B;中，選取&#x200B;**+**&#x200B;以建立文章。 您可以選擇&#x200B;**無限制文章**&#x200B;或&#x200B;**RTF文章**。 下圖顯示的選項可讓您從這兩個文章範本的任何一個中進行選擇。
 
 1. 按一下&#x200B;**下一步**&#x200B;以定義文章中繼資料，例如文章名稱/標題、說明、作者、摘要、部門、縮圖影像、文章存取權等。
-1. 按一下[下一步]&#x200B;**&#x200B;**&#x200B;填入廣告內容。
+1. 按一下[下一步]****&#x200B;填入廣告內容。
 1. 按一下&#x200B;**下一步**&#x200B;以輸入文章影像或社群媒體影像
-1. 按一下[下一步]&#x200B;**&#x200B;**，選擇此新文章的集合連結。
-1. 按一下[下一步]&#x200B;**&#x200B;**&#x200B;輸入社交分享的詳細資料。
+1. 按一下[下一步]****，選擇此新文章的集合連結。
+1. 按一下[下一步]****&#x200B;輸入社交分享的詳細資料。
 1. 按一下&#x200B;**建立**，完成使用範例建立文章的程式。 您可以按一下&#x200B;**完成**&#x200B;或&#x200B;**編輯文章**&#x200B;來編輯此文章的內容。
 
 ![chlimage_1-71](assets/chlimage_1-71.png)
@@ -87,7 +87,7 @@ Unlimited文章是範例範本，代表典型的AEM Mobile隨選文章版面。
 
 建立後，作者可以新增文字和影像等元件來編輯文章內容。 文章是AEM頁面範本的擴充功能。
 
-選取要編輯的文章，然後按一下[編輯] **&#x200B;**&#x200B;將元件新增至文章。
+選取要編輯的文章，然後按一下[編輯] ****&#x200B;將元件新增至文章。
 
 ![chlimage_1-72](assets/chlimage_1-72.png) ![chlimage_1-73](assets/chlimage_1-73.png)
 
@@ -99,13 +99,13 @@ Unlimited文章是範例範本，代表典型的AEM Mobile隨選文章版面。
 
 沒有現成的文章範本，不過自訂範本應擴充預設範本，請參閱Geometrixx Unlimited應用程式的[文章範本範例](http://localhost:4502/crx/de/index.jsp#/apps/geometrixx-unlimited-app/templates/article)。
 
-超出一般AEM範本必要屬性的關鍵屬性包括；
+超出一般AEM範本必要屬性的關鍵屬性包括：
 
-***dps-resourceType=&quot;dps：Article&quot;***
+***dps-resourceType=&quot;dps:Article&quot;***
 
 此屬性可確保將AEM頁面辨識為AEM Mobile目標文章頁面。
 
-根據AEM範本，您可以將任何預設屬性或子節點新增到範本的&#x200B;***jcr：content***。
+根據AEM範本，您可以將任何預設屬性或子節點新增到範本的&#x200B;***jcr:content***。
 
 ### 橫幅和系列範本 {#banner-and-collection-templates}
 
@@ -117,7 +117,7 @@ Unlimited文章是範例範本，代表典型的AEM Mobile隨選文章版面。
 
 元件會使用並允許存取Widget，且這些元件會用於轉譯內容。
 
-程式碼存放庫中包含簡單元件，其來源可以在AEM中找到。 接著，也可以在CRXDE Lite本機開啟它。
+程式碼存放庫中包含一個簡單元件，其來源可以在AEM中找到。 接著，您也可以在CRXDE Lite本機中開啟它。
 
 >[!NOTE]
 >

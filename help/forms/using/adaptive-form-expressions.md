@@ -10,14 +10,14 @@ solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '2781'
+source-wordcount: '2779'
 ht-degree: 2%
 
 ---
 
 # 最適化表單運算式{#adaptive-form-expressions}
 
-<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hant)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。本文會介紹使用基礎元件編寫最適化表單的舊方法。</span>
+<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。 這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。 本文會介紹使用基礎元件編寫最適化表單的舊方法。</span>
 
 適用性表單透過動態指令碼功能，為使用者提供最佳化和簡化的表單填寫體驗。 它可讓您編寫運算式以新增各種行為，例如動態顯示/隱藏欄位和面板。 它也可讓您新增計算欄位、讓欄位成為唯讀、新增驗證邏輯等。 動態行為取決於使用者輸入或預填的資料。
 
@@ -71,13 +71,13 @@ JavaScript是適用性表單的運算式語言。 所有運算式都是有效的
 
 ### 計算運算式 {#calculate-expression}
 
-計算運算式用於使用運算式自動計算欄位的值。 通常，這類運算式會使用其他欄位的值屬性。 例如 `field2.value + field3.value`。每當`field2`或`field3`的值變更時，就會重新觸發運算式並重新計算值。
+計算運算式用於使用運算式自動計算欄位的值。 通常，這類運算式會使用其他欄位的值屬性。 例如 `field2.value + field3.value`。 每當`field2`或`field3`的值變更時，就會重新觸發運算式並重新計算值。
 
 **套用至**：欄位
 
 **傳回型別**：運算式傳回與顯示運算式結果的欄位相容的值（例如，小數）。
 
-**範例**：顯示&#x200B;**欄位1**&#x200B;中兩個欄位總和的計算運算式是：
+**範例**：顯示&#x200B;**欄位1**中兩個欄位總和的計算運算式是：
 `field2.value + field3.value`
 
 ### 按一下運算式 {#click-expression}
@@ -137,7 +137,7 @@ click運算式會處理對按鈕的點選事件執行的動作。 GuideBridge開
 
 **套用至**：欄位
 
-**傳回型別**：運算式傳回代表欄位驗證狀態的布林值。 值&#x200B;**false**&#x200B;表示欄位無效，**true**&#x200B;表示欄位有效。
+**傳回型別**：運算式傳回代表欄位驗證狀態的布林值。值&#x200B;**false**&#x200B;表示欄位無效，**true**表示欄位有效。
 **範例**：對於代表UK郵遞區號的欄位，驗證運算式為：
 
 (**this.value** &amp;&amp; `this.value.match(/^(GIR 0AA|[A-Z]{1,2}\d[A-Z0-9]? ?[0-9][A-Z]{2}\s*)$/i) == null) ? false : true`
@@ -159,7 +159,7 @@ click運算式會處理對按鈕的點選事件執行的動作。 GuideBridge開
 
 **傳回型別：**&#x200B;值認可指令碼運算式未傳回任何值。 如果有任何運算式傳回值，則會忽略值。
 
-**範例：**&#x200B;若要將在欄位中輸入的字母大小寫轉換成認可時的大寫，值認可運算式為：
+**範例：**若要將在欄位中輸入的字母大小寫轉換成認可時的大寫，值認可運算式為：
 `this.value=this.value.toUpperCase()`
 
 >[!NOTE]
@@ -184,7 +184,7 @@ click運算式會處理對按鈕的點選事件執行的動作。 GuideBridge開
 
 **傳回型別**：運算式傳回布林值，代表目前的面板是否有效。 **True**&#x200B;表示目前的面板有效，使用者可以導覽至下一個面板。
 
-**範例**：在組織於各種面板的表單中，在導覽至下一個面板之前，將會驗證目前的面板。 在這種情況下，會使用步驟完成運算式。 一般而言，這些運算式會使用GuideBridge驗證API。 步驟完成運算式的範例為：
+**範例**：在組織於各種面板的表單中，在導覽至下一個面板之前，將會驗證目前的面板。在這種情況下，會使用步驟完成運算式。一般而言，這些運算式會使用GuideBridge驗證API。步驟完成運算式的範例為：
 `window.guideBridge.validate([],this.panel.navigationContext.currentItem.somExpression)`
 
 ## 最適化表單中的驗證 {#validations-in-adaptive-form}
@@ -193,13 +193,13 @@ click運算式會處理對按鈕的點選事件執行的動作。 GuideBridge開
 
 在欄位中新增驗證的方法如下：
 
-### 必填 {#required}
+### 必要 {#required}
 
 若要讓元件成為必要元件，請在元件的&#x200B;**編輯**&#x200B;對話方塊中，選取選項&#x200B;**標題與文字>必要**。 您也可以新增適當的&#x200B;**必要訊息** （選擇性）。
 
 ### 驗證模式 {#validation-patterns}
 
-有一個欄位可使用多個現成的驗證模式。 若要選取驗證模式，請在元件的&#x200B;**編輯**&#x200B;對話方塊中，找到&#x200B;**模式**&#x200B;區段並選取&#x200B;**模式**。 您可以在&#x200B;**模式**&#x200B;文字方塊中建立您自己的自訂驗證模式。 只有在填入的資料符合驗證模式時，才會傳回驗證狀態&#x200B;**True**，否則會傳回&#x200B;**False**。 若要撰寫您自己的自訂驗證模式，請參閱HTML5表單[&#128279;](/help/forms/using/picture-clause-support.md)的Picture子句支援。
+有一個欄位可使用多個現成的驗證模式。 若要選取驗證模式，請在元件的&#x200B;**編輯**&#x200B;對話方塊中，找到&#x200B;**模式**&#x200B;區段並選取&#x200B;**模式**。 您可以在&#x200B;**模式**&#x200B;文字方塊中建立您自己的自訂驗證模式。 只有在填入的資料符合驗證模式時，才會傳回驗證狀態&#x200B;**True**，否則會傳回&#x200B;**False**。 若要撰寫您自己的自訂驗證模式，請參閱HTML5表單的[Picture子句支援](/help/forms/using/picture-clause-support.md)。
 
 ### 驗證運算式 {#validation-expressions}
 
@@ -253,7 +253,7 @@ window.addEventListener("bridgeInitializeStart", function(evnt) {
 
 >[!NOTE]
 >
->在AEM中，最好在clientLib中編寫程式碼，並將其包含在頁面中（頁面的header.jsp或footer.jsp）
+>在AEM中，最好在clientLib中撰寫程式碼，並將其納入您的頁面（頁面的header.jsp或footer.jsp）
 
 若要在初始化表單之後使用GuideBridge （已傳送`bridgeInitializeComplete`事件），請使用`window.guideBridge`取得GuideBridge執行個體。 您可以使用`guideBride.isConnected` API來檢查GuideBridge初始化狀態。
 
@@ -273,15 +273,15 @@ guideBridge.on("elementValueChanged", function (event, data)  {
 
 ### 為欄位建立自訂模式 {#creating-custom-patterns-for-a-field}
 
-如上所述，調適型表單可讓作者提供驗證或顯示格式的模式。 除了使用現成可用的模式外，您還可以為最適化表單元件定義可重複使用的自訂模式。 例如，您可以定義文字欄位或數值欄位。 定義之後，您可以在指定元件型別的所有表單中使用這些模式。 例如，您可以建立文字欄位的自訂模式，並在其最適化表單的文字欄位中使用它。 您可以存取元件之「編輯」對話方塊中的「模式」區段，以選取自訂模式。 如需有關模式定義或格式的詳細資訊，請參閱HTML5表單[&#128279;](/help/forms/using/picture-clause-support.md)的Picture子句支援。
+如上所述，調適型表單可讓作者提供驗證或顯示格式的模式。 除了使用現成可用的模式外，您還可以為最適化表單元件定義可重複使用的自訂模式。 例如，您可以定義文字欄位或數值欄位。 定義之後，您可以在指定元件型別的所有表單中使用這些模式。 例如，您可以建立文字欄位的自訂模式，並在其最適化表單的文字欄位中使用它。 您可以存取元件之「編輯」對話方塊中的「模式」區段，以選取自訂模式。 如需有關模式定義或格式的詳細資訊，請參閱HTML5表單的[Picture子句支援](/help/forms/using/picture-clause-support.md)。
 
 執行以下步驟來建立特定欄位型別的自訂模式，並重複用於相同型別的其他欄位：
 
-1. 導覽至您編寫執行個體上的CRXDE Lite。
-1. 建立資料夾以維持您的自訂模式。 在/apps目錄下，建立sling：folder型別的節點。 例如，建立名稱為`customPatterns`的節點。 在此節點底下，建立另一個型別`nt:unstructed`的節點，並將其命名為`textboxpatterns`。 此節點包含您要新增的各種自訂模式。
+1. 在您的編寫執行個體上導覽至CRXDE Lite 。
+1. 建立資料夾以維持您的自訂模式。 在/apps目錄下，建立sling:folder型別的節點。 例如，建立名稱為`customPatterns`的節點。 在此節點底下，建立另一個型別`nt:unstructed`的節點，並將其命名為`textboxpatterns`。 此節點包含您要新增的各種自訂模式。
 1. 開啟已建立節點的「屬性」標籤。 例如，開啟`textboxpatterns`的[內容]索引標籤。 將`guideComponentType`屬性新增至此節點，並將其值設為&#x200B;*fd/af/components/formatter/guideTextBox*。
 
-1. 此屬性的值會依您要定義模式的欄位而有所不同。 對於數值欄位，`guideComponentType`屬性的值為&#x200B;*fd/af/components/formatter/guideNumericBox*。 Datepicker欄位的值為&#x200B;*fd/af/components/formatter/guideDatepicker*。
+1. 此屬性的值會依您要定義模式的欄位而有所不同。對於數值欄位，`guideComponentType`屬性的值為&#x200B;*fd/af/components/formatter/guideNumericBox*。Datepicker欄位的值為&#x200B;*fd/af/components/formatter/guideDatepicker*。
 &quot;
 1. 您可以指派屬性給`textboxpatterns`節點，以新增自訂模式。 新增具有名稱（例如`pattern1`）的屬性，並將其值設定為您要新增的模式。 例如，新增值為Fax=text{99-999-9999999}的屬性`pattern1`。 此模式適用於您在Adaptive Forms中使用的所有文字方塊。
 

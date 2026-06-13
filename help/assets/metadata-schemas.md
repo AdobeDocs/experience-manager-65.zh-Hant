@@ -1,6 +1,6 @@
 ---
-title: Metadata schemas define layout of metadata properties page
-description: Metadata schema defines the layout of the properties page and the metadata properties displayed for assets. Learn how to create custom metadata schema, edit metadata schema, and how to apply metadata schema to assets.
+title: 中繼資料結構描述會定義中繼資料屬性頁面的配置
+description: 中繼資料結構會定義屬性頁面的配置，以及為資產顯示的中繼資料屬性。 瞭解如何建立自訂中繼資料結構、編輯中繼資料結構，以及如何將中繼資料結構套用至資產。
 contentOwner: AG
 mini-toc-levels: 1
 role: User,Admin
@@ -19,26 +19,26 @@ ht-degree: 8%
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/metadata-schemas.html?lang=zh-Hant) |
+| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/metadata-schemas.html?lang=en) |
 | AEM 6.5 | 本文章 |
 
-Organizations come up with a metadata model that enhances the asset discovery, usage, interoperability, and so on. Correct metadata application is sacrosanct to maintain metadata-driven workflows and processes. To adhere to organization-wide metadata strategy and standards, you can use metadata schemas that help DAM users to align. [!DNL Adobe Experience Manager] allows easy and flexible methods to create, maintain, and apply metadata schemas.
+組織會提出中繼資料模型，藉以強化資產探索、使用、互通性等。 正確的中繼資料應用程式對於維護中繼資料驅動的工作流程和流程至關重要。 若要遵循組織範圍的中繼資料策略和標準，您可以使用可協助DAM使用者調整的中繼資料結構。 [!DNL Adobe Experience Manager]可讓您以簡單靈活的方法建立、維護和套用中繼資料結構。
 
-In [!DNL Adobe Experience Manager Assets], schemas contain specific fields for specific information to be filled in. It also contains layout information to display metadata fields in a user-friendly way. Metadata properties include title, description, MIME types, tags, and more. You can use the [!UICONTROL Metadata Schema Forms] editor to modify the existing schemas or add custom metadata schemas.
+在[!DNL Adobe Experience Manager Assets]中，結構描述包含要填入之特定資訊的特定欄位。 它也包含版面資訊，以便以方便使用的方式顯示中繼資料欄位。 中繼資料屬性包括標題、說明、MIME型別、標籤等。 您可以使用[!UICONTROL 中繼資料結構Forms]編輯器來修改現有結構描述或新增自訂中繼資料結構。
 
-To view and edit the properties page for an asset, follow these steps:
+若要檢視及編輯資產的屬性頁面，請遵循下列步驟：
 
-1. Click the **[!UICONTROL View Properties]** option from the quick actions on the asset tile in card view. Alternatively, select an asset and then click **[!UICONTROL Properties]** ![view properties](assets/do-not-localize/info-circle-icon.png) from the toolbar.
+1. 從卡片檢視中資產圖磚上的快速動作，按一下&#x200B;**[!UICONTROL 檢視屬性]**&#x200B;選項。 或者，選取資產，然後從工具列按一下&#x200B;**[!UICONTROL 屬性]** ![檢視屬性](assets/do-not-localize/info-circle-icon.png)。
 
-1. You can edit the various editable metadata properties under the available tabs. However, you cannot modify the asset [!UICONTROL Type] in the [!UICONTROL Basic] tab of properties page.
+1. 您可以在可用的標籤下編輯各種可編輯的中繼資料屬性。 不過，您無法在屬性頁面的[!UICONTROL 基本]索引標籤中修改資產[!UICONTROL 型別]。
 
-   ![Basic tab of asset Properties, where asset type cannot be changed](assets/asset-properties-basic-tab.png)
+   ![資產屬性的基本索引標籤，無法變更資產型別](assets/asset-properties-basic-tab.png)
 
-   *Figure: Basic tab on asset [!UICONTROL Properties].*
+   *圖：資產[!UICONTROL 屬性]上的基本索引標籤。*
 
-   Ensure that only one property is mapped to a field while you create or edit the metadata schema.
+   在建立或編輯中繼資料結構時，請確定只有一個屬性對應至欄位。
 
-   To modify the MIME type for an asset, use a custom metadata schema form or modify an existing form. See [Edit Metadata Schema Forms](#edit-metadata-schema-forms) for more information. If you modify the metadata schema of a MIME type, the properties page layout for the assets and all subtypes are modified. For example, modifying a jpeg schema under `default/image` only modifies the metadata layout (asset properties) for assets with MIME type `image/jpeg`. However, if you edit the default schema, your changes modify the metadata layout for all types of assets.
+   若要修改資產的MIME型別，請使用自訂中繼資料結構表單或修改現有表單。 如需詳細資訊，請參閱[編輯中繼資料結構描述Forms](#edit-metadata-schema-forms)。 如果您修改MIME型別的中繼資料結構，資產和所有子型別的屬性頁面配置都會被修改。 例如，修改`default/image`下的jpeg結構描述只會修改MIME型別為`image/jpeg`之資產的中繼資料配置（資產屬性）。 不過，如果您編輯預設架構，您所做的變更會修改所有資產型別的中繼資料配置。
 
 ## 中繼資料結構表單 {#default-metadata-schema-forms}
 
@@ -61,33 +61,33 @@ To view and edit the properties page for an asset, follow these steps:
 
 >[!NOTE]
 >
->To view the child forms of a schema form, click the schema form name.
+>若要檢視方案表單的子表單，請按一下方案表單名稱。
 
-## Add a metadata schema form {#add-a-metadata-schema-form}
+## 新增中繼資料結構表單 {#add-a-metadata-schema-form}
 
-To add a metadata schema form, follow these steps:
+若要新增中繼資料結構表單，請執行下列步驟：
 
-1. To add a custom template to the list, click **[!UICONTROL Create]** from the toolbar.
+1. 若要新增自訂範本至清單，請按一下工具列中的[建立]。****
 
    >[!NOTE]
    >
-   >A lock symbol is displayed with the unedited templates. If you customize a template, it is not locked ![lock closed](assets/do-not-localize/lock_closed_icon.svg).
+   >鎖定符號會與未編輯的範本一起顯示。 如果您自訂範本，則範本未鎖定![鎖定關閉](assets/do-not-localize/lock_closed_icon.svg)。
 
-1. In the dialog, provide the title of the schema form and click **[!UICONTROL Create]** to complete the form creation process.
+1. 在對話方塊中，提供結構表單的標題，然後按一下&#x200B;**[!UICONTROL 建立]**&#x200B;以完成表單建立程式。
 
-## Edit metadata schema forms {#edit-metadata-schema-forms}
+## 編輯中繼資料結構表單 {#edit-metadata-schema-forms}
 
-You can edit a newly added or existing metadata schema form. The metadata schema form includes tabs and form items within tabs. 您可以將這些表單專案對應/設定至CRX存放庫中繼資料節點內的欄位。 You can add tabs or form items to the metadata schema form. The tabs and form items derived from the parent are in the locked state. You cannot alter them at the child level.
+您可以編輯新新增或現有的中繼資料結構表單。 中繼資料結構表單包含索引標籤以及索引標籤內的表單專案。 您可以將這些表單專案對應/設定至CRX存放庫中繼資料節點內的欄位。 您可以將索引標籤或表單專案新增到中繼資料結構表單。 從父項衍生的標籤和表單專案處於鎖定狀態。 您無法在子層級變更它們。
 
-1. On the [!UICONTROL Metadata Schema Forms] page, select a form and click **[!UICONTROL Edit]** in the toolbar.
+1. 在[!UICONTROL 中繼資料結構Forms]頁面上，選取表單並按一下工具列中的&#x200B;**[!UICONTROL 編輯]**。
 
-1. On the **[!UICONTROL Metadata Schema Form Editor]** page, customize the metadata form. Drag the needed components from the **[!UICONTROL Build Form]** tab to one of the tabs.
+1. 在&#x200B;**[!UICONTROL 中繼資料結構表單編輯器]**&#x200B;頁面上，自訂中繼資料表單。 從&#x200B;**[!UICONTROL 建置表單]**&#x200B;索引標籤將所需的元件拖曳到其中一個索引標籤。
 
 1. 若要設定元件，請選取該元件，並在&#x200B;**[!UICONTROL 設定]**&#x200B;索引標籤中修改其屬性。
 
-### Components within the [!UICONTROL Build Form] tab {#components-within-the-build-form-tab}
+### [!UICONTROL 建置表單]標籤中的元件 {#components-within-the-build-form-tab}
 
-The **[!UICONTROL Build Form]** tab lists form items that you use in your schema form. The **[!UICONTROL Settings]** tab provides the attributes of each item that you select in the **[!UICONTROL Build Form]** tab. The following table lists the form items available in the **[!UICONTROL Build Form]** tab:
+**[!UICONTROL 建置表單]**&#x200B;索引標籤會列出您在結構描述表單中使用的表單專案。 **[!UICONTROL 設定]**&#x200B;索引標籤提供您在&#x200B;**[!UICONTROL 建置表單]**&#x200B;索引標籤中選取之每個專案的屬性。 下表列出&#x200B;**[!UICONTROL 建置表單]**&#x200B;索引標籤中可用的表單專案：
 
 | 元件名稱 | 說明 |
 | -------------------------------- | ----------------------------------------------------------------------------------- |
@@ -177,39 +177,39 @@ The **[!UICONTROL Build Form]** tab lists form items that you use in your schema
 * 需要使用者位置時，根據使用者對國家/地區和州的選擇顯示相關城市名稱。
 * 根據使用者選擇的產品類別，在清單中載入相關品牌名稱。
 * 根據在另一個欄位中指定的值切換特定欄位的可見度。 例如，如果使用者希望以不同的地址運送出貨，則顯示個別的出貨位址列位。
-* Designate a field as mandatory based on the value specified in another field.
-* Change options displayed for a particular field based on the value specified in another field.
-* Set the default metadata value in a particular field based on the value specified in another field.
+* 根據在其他欄位中指定的值，將欄位指定為必填欄位。
+* 根據在其他欄位中指定的值變更針對特定欄位顯示的選項。
+* 根據在其他欄位中指定的值，在特定欄位中設定預設中繼資料值。
 
-### Configure cascading metadata in [!DNL Experience Manager] {#configure-cascading-metadata-in-aem}
+### 在[!DNL Experience Manager]中設定階層式中繼資料 {#configure-cascading-metadata-in-aem}
 
-Consider a scenario where you want to display cascading metadata based on the type of asset that is selected. Some examples
+假設您想根據選取的資產型別顯示階層式中繼資料。 部分範例
 
-* For a video, display applicable fields such as format, codec, duration, and so on.
-* For a Word or PDF document, display fields, such as page count, author, and so on.
+* 對於視訊，會顯示適用的欄位，例如格式、轉碼器、持續時間等。
+* 對於Word或PDF檔案，顯示欄位，例如頁數、作者等。
 
-Irrespective of the asset type chosen, display the copyright information as a required field.
+無論選擇的資產型別為何，都會將版權資訊顯示為必填欄位。
 
-1. In [!DNL Experience Manager] interface, go to **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Schemas]**.
-1. In the **[!UICONTROL Schema Forms]** page, select a schema form and then click **[!UICONTROL Edit]** from the toolbar to edit the schema.
+1. 在[!DNL Experience Manager]介面中，移至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Assets]** > **[!UICONTROL 中繼資料結構描述]**。
+1. 在&#x200B;**[!UICONTROL 結構描述Forms]**&#x200B;頁面中，選取結構描述表單，然後從工具列按一下&#x200B;**[!UICONTROL 編輯]**&#x200B;以編輯結構描述。
 
    ![select_form](assets/select_form.png)
 
-1. (Optional) In the metadata schema editor, create a field to conditionalize. Specify a name and property path in the **[!UICONTROL Settings]** tab.
+1. （選用）在中繼資料結構編輯器中，建立欄位以進行條件化。 在&#x200B;**[!UICONTROL 設定]**&#x200B;索引標籤中指定名稱和屬性路徑。
 
-   To create a tab, click `+` to add a tab and then add a metadata field.
+   若要建立索引標籤，請按一下`+`以新增索引標籤，然後新增中繼資料欄位。
 
    ![add_tab](assets/add_tab.png)
 
-1. Add a Dropdown field for asset type. Specify a name and property path in the **[!UICONTROL Settings]** tab. Add an optional description.
+1. 新增下拉欄位以取得資產型別。 在&#x200B;**[!UICONTROL 設定]**&#x200B;索引標籤中指定名稱和屬性路徑。 新增選擇性說明。
 
    ![asset_type_field](assets/asset_type_field.png)
 
-1. Key-values pairs are the options provided to a form-user. You can provide the key-value pairs either manually or from a JSON file.
+1. 機碼值組是提供給表單使用者的選項。 您可以手動或從JSON檔案提供索引鍵/值組。
 
-   * To specify the values manually, select **[!UICONTROL Add Manually]**, and click **[!UICONTROL Add Choice]** and specify the option text and value. For example, specify Video, PDF, Word, and Image asset types.
+   * 若要手動指定值，請選取&#x200B;**[!UICONTROL 手動新增]**，然後按一下&#x200B;**[!UICONTROL 新增選項]**&#x200B;並指定選項文字和值。 例如，指定視訊、PDF、Word和影像資產型別。
 
-   * To fetch the values from a JSON file dynamically, select **[!UICONTROL Add Through JSON Path]** and provide the path of the JSON file. 當表單呈現給使用者時，[!DNL Experience Manager]會即時擷取機碼值組。
+   * 若要從JSON檔案動態擷取值，請選取&#x200B;**[!UICONTROL 透過JSON路徑新增]**&#x200B;並提供JSON檔案的路徑。 當表單呈現給使用者時，[!DNL Experience Manager]會即時擷取機碼值組。
 
    這兩個選項是互斥的。 您無法從JSON檔案匯入選項並手動編輯。
 
@@ -233,7 +233,7 @@ Irrespective of the asset type chosen, display the copyright information as a re
 
    ![select_dependentfield](assets/select_dependentfield.png)
 
-1. 在&#x200B;**[!UICONTROL 需求]**&#x200B;底下，根據新規則&#x200B;**選項選擇**&#x200B;必要。
+1. 在&#x200B;**[!UICONTROL 需求]**&#x200B;底下，根據新規則&#x200B;]**選項選擇**[!UICONTROL &#x200B;必要。
 1. 按一下&#x200B;**[!UICONTROL 新增規則]**&#x200B;並選擇&#x200B;**[!UICONTROL 資產型別]**&#x200B;欄位以建立相依性。 也選擇要在其上建立相關性的欄位值。 在這種情況下，請選擇「 **[!UICONTROL 視訊」]**。 按一下「**[!UICONTROL 完成]**」以儲存變更。
 
    ![define_rule](assets/define_rule.png)
@@ -342,9 +342,9 @@ Irrespective of the asset type chosen, display the copyright information as a re
    *圖：文字欄位已新增至中繼資料結構描述表單編輯器。*
 
 1. 按一下「**[!UICONTROL 儲存]**」。 修改後的表單會列在&#x200B;**[!UICONTROL 中繼資料結構Forms]**&#x200B;頁面中。
-1. 按一下工具列中的「套用至資料夾」**&#x200B;**，將自訂中繼資料套用至資料夾。
+1. 按一下工具列中的「套用至資料夾」****，將自訂中繼資料套用至資料夾。
 
-1. 選取要套用修改的結構描述的資料夾，然後按一下[套用]。**&#x200B;**
+1. 選取要套用修改的結構描述的資料夾，然後按一下[套用]。****
 
    ![選取要套用中繼資料結構描述的資料夾](assets/metadata-schema-select-folder.png)
 
