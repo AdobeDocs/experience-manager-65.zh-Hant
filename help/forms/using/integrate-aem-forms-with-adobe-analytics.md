@@ -165,7 +165,7 @@ AEM Forms與[Adobe Analytics](https://experienceleague.adobe.com/docs/analytics-
 
 1. 在&#x200B;**[!UICONTROL 動作]**&#x200B;區段中，選取+並指定&#x200B;**[!UICONTROL Adobe Analytics]**&#x200B;作為擴充功能名稱。
 
-1. 選取&#x200B;**[!UICONTROL 清除變數]**&#x200B;作為動作型別。選取&#x200B;**[!UICONTROL 保留變更]**。執行這些步驟後，**[!UICONTROL 動作]**區段顯示為：
+1. 選取&#x200B;**[!UICONTROL 清除變數]**&#x200B;作為動作型別。選取&#x200B;**[!UICONTROL 保留變更]**。執行這些步驟後，**[!UICONTROL 動作]**&#x200B;區段顯示為：
    ![動作設定](/help/forms/using/assets/actions-config.png)
 
    根據您的需求自訂&#x200B;**[!UICONTROL 動作]**&#x200B;區段。 例如，您可以在「動作」流程中定義兩個&#x200B;**傳送信標**&#x200B;步驟，將資料傳送至[!DNL Adobe Analytics]，並在一個步驟中將它視為頁面檢視，將資料傳送至[!DNL Adobe Analytics]，並在第二個步驟中不要將其視為頁面檢視。
