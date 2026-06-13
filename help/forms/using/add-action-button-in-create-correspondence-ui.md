@@ -222,7 +222,7 @@ ACMExtensionsMessages.properties檔案包含「建立通訊」使用者介面中
       將檔案命名為ccrcustomization.js。
 
    1. 連按兩下ccrcustomization.js檔案，以在CRX中開啟。
-   1. 在檔案中貼上下列程式碼，然後按一下[儲存全部] ****：
+   1. 在檔案中貼上下列程式碼，然後按一下[儲存全部] **&#x200B;**：
 
       ```javascript
       /* for adding and handling custom actions in Extensible Toolbar.
