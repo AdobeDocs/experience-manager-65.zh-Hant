@@ -24,7 +24,7 @@ ht-degree: 0%
 
 ## 先決條件 {#prerequisites}
 
-* 瞭解AEM [頁面範本](/help/sites-authoring/templates.md)和[最適化表單製作](https://helpx.adobe.com/aem-forms/6-1/introduction-forms-authoring.html)
+* 瞭解AEM [頁面範本](/help/sites-authoring/templates.md)和[最適化表單製作](https://helpx.adobe.com/tw/aem-forms/6-1/introduction-forms-authoring.html)
 
 * 瞭解AEM [使用者端資料庫](/help/sites-developing/clientlibs.md)
 
