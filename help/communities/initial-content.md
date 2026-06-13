@@ -11,7 +11,7 @@ feature: Communities
 role: Developer
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '487'
+source-wordcount: '508'
 ht-degree: 2%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 2%
 
    * SCF播放 — 要播放之首頁面的子頁面。
 
-本教學課程未深入探討[語言副本](../../help/sites-administering/tc-prep.md)。 相反地，它的設計讓根頁面可透過HTML標題為使用者實施偏好語言偵測，並重新導向至該語言的適當首頁面。 慣例是將兩個字母的國家代碼用於頁面的節點名稱，例如，「en」用於英文，「fr」用於法文。
+本教學課程未深入探討[語言副本](../../help/sites-administering/tc-prep.md)。 相反地，它的設計讓根頁面可透過HTML標頭為使用者實作偏好語言的偵測，並重新導向至該語言的適當首頁面。 慣例是將兩個字母的國家代碼用於頁面的節點名稱，例如，「en」用於英文，「fr」用於法文。
 
 ## 建立第一頁 {#create-first-pages}
 
@@ -53,7 +53,7 @@ ht-degree: 2%
    * 標題： `SCF Sandbox Site`
    * 名稱：`an-scf-sandbox`
    * 選取&#x200B;**[!UICONTROL SCF沙箱播放範本]**
-   * 按一下「**[!UICONTROL 建立]**」。
+   * 按一下「**[!UICONTROL 建立]**」
 
    ![classic-ui-create-page](assets/classic-ui-create-page.png)
 
@@ -62,14 +62,14 @@ ht-degree: 2%
    * 標題： `SCF Sandbox`
    * 名稱：`en`
    * 選取&#x200B;**[!UICONTROL SCF沙箱播放範本]**
-   * 按一下「**[!UICONTROL 建立]**」。
+   * 按一下「**[!UICONTROL 建立]**」
 
 1. 在總管窗格中，選取您建立的頁面`/Websites/SCF Sandbox Site/SCF Sandbox`，然後按一下&#x200B;**[!UICONTROL 新增]** > **[!UICONTROL 新增頁面]**
 
    * 標題： `SCF Play`
    * 名稱：`play`
    * 選取&#x200B;**[!UICONTROL SCF沙箱播放範本]**
-   * 按一下「**[!UICONTROL 建立]**」。
+   * 按一下「**[!UICONTROL 建立]**」
 
 1. 這就是網站現在在「網站」主控台中的顯示方式。 請注意，在總管窗格中選取之專案的子頁面會顯示在可管理專案的右窗格中。
 

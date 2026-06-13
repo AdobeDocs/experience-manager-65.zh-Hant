@@ -1,13 +1,13 @@
 ---
 title: 搭配使用者端裝置畫素比使用智慧型影像
-description: 瞭解如何在Adobe Experience Manager as a Cloud Service中搭配Dynamic Media使用使用者端裝置畫素比率和智慧型影像。
+description: 瞭解如何透過Dynamic Media在Adobe Experience Manager as a Cloud Service中將使用者端裝置畫素比與智慧型影像搭配使用。
 role: Admin,User
 exl-id: e38f522a-242a-4ea9-a866-d8d129950831
 solution: Experience Manager, Experience Manager Assets
 feature: Smart Imaging
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '324'
+source-wordcount: '294'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 0%
 
    Adobe建議您在&#x200B;_前載入此指令碼_&#x200B;任何其他指令碼，以便service worker立即開始初始化。
 
-1. 在HTML頁面內文區段頂端加入下列DPR影像標籤程式碼：
+1. 在HTML頁面內文區段的頂端加入下列DPR影像標籤程式碼：
 
    ```html
    <img src="aem_dm_dpr_1x.jpg" style="width:1px;height:1px;display:none"
@@ -43,7 +43,7 @@ ht-degree: 0%
        aem_dm_dpr_5x.jpg 5x">
    ```
 
-   您必須在HTML頁面中包含此DPR影像標籤代碼&#x200B;_before_。
+   您必須在HTML頁面的&#x200B;_前加入此DPR影像標籤代碼_。
 
 **使用者端轉譯的應用程式**
 
@@ -56,12 +56,12 @@ ht-degree: 0%
 
    您可以將兩個DPR指令碼合併為一個，以避免多個網路請求。
 
-   Adobe建議您在HTML頁面的&#x200B;_前載入這些指令碼_。
-Adobe也建議您將應用程式Bootstrap在不同HTML標籤下，而非使用內文元素。 原因在於`dprImageInjection.js`會在HTML頁面內文區段頂端動態地插入影像標籤。
+   Adobe建議您在HTML頁面的&#x200B;_之前，載入這些指令碼。
+Adobe也建議您在不同的HTML標籤下使用Bootstrap應用程式，而不是使用內文元素。這是因為`dprImageInjection.js`會在HTML頁面的Body區段頂端以動態方式插入影像標籤。_
 
 ## JavaScript檔案下載 {#client-side-dpr-script}
 
-下載中的下列JavaScript檔案僅供範例參考之用。 如果您要在HTML頁面中使用這些檔案，請務必編輯每個檔案的程式碼以符合您自己的需求。
+下載中的下列JavaScript檔案僅供範例參考之用。 如果您打算在HTML頁面中使用這些檔案，請務必編輯每個檔案的程式碼，以符合您自己的需求。
 
 * `dprImageInjection.js`
 * `srvinit.js`

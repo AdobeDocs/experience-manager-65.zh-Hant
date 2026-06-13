@@ -12,8 +12,8 @@ solution: Experience Manager
 feature: Communities
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '3084'
-ht-degree: 0%
+source-wordcount: '2963'
+ht-degree: 1%
 
 ---
 
@@ -36,7 +36,7 @@ ht-degree: 0%
 
 建立社群網站之前，*必須*&#x200B;才能：
 
-* 確認一或多個Publish執行個體在執行中。
+* 確認一或多個Publish執行個體正在執行。
 * 啟用[通道服務](/help/communities/deploy-communities.md#tunnel-service-on-author)以管理成員和成員群組。
 * 識別[主要發行者](/help/communities/deploy-communities.md#primary-publisher)。
 * [當主要發行者連線埠不是預設值(4503)時設定復寫](/help/communities/deploy-communities.md#replication-agents-on-author)。
@@ -61,7 +61,7 @@ ht-degree: 0%
 
 若要存取現有的社群網站以編寫、修改、發佈、匯出或新增巢狀群組，請選取網站的資料夾圖示。
 
-## 網站建立 {#site-creation}
+## 建立網站 {#site-creation}
 
 網站建立主控台提供根據所選[社群網站範本](/help/communities/sites.md)和設定來組合網站功能的逐步方法。
 
@@ -124,7 +124,7 @@ ht-degree: 0%
 
 ![網站佈景主題](assets/sitetheme.png)
 
-架構使用`Twitter Bootstrap`為網站提供回應式彈性設計。 可以選擇預先載入的Bootstrap主題之一來設定所選社群網站範本的樣式，也可以上傳Bootstrap主題。
+架構使用`Twitter Bootstrap`為網站提供回應式彈性設計。 可選擇預先載入的Bootstrap主題之一，以設定所選社群網站範本的樣式，或可上傳Bootstrap主題。
 
 選取時，主題會以不透明的藍色核取記號覆蓋。
 
@@ -179,14 +179,14 @@ ht-degree: 0%
 * **允許使用者註冊**
 
   若勾選，網站訪客可透過自助註冊成為社群成員。
-如果取消勾選，社群網站是*受限制的*，且網站訪客必須指派給社群網站的成員群組、提出要求或透過電子郵件傳送邀請。 如果未勾選，則不應允許匿名存取。
-取消核取*私人*&#x200B;社群網站。 預設為已核取。
+如果取消勾選，社群網站是*受限制的*，且網站訪客必須指派給社群網站的成員群組、提出要求或透過電子郵件傳送邀請。如果未勾選，則不應允許匿名存取。
+取消核取*私人*&#x200B;社群網站。預設為已核取。
 
 * **允許匿名存取**
 
   如果勾選，社群網站是&#x200B;*開啟*，任何網站訪客都可以存取該網站。
 如果未勾選，則只有已登入的成員才能存取該網站。
-取消核取*私人*&#x200B;社群網站。 預設為已核取。
+取消核取*私人*&#x200B;社群網站。預設為已核取。
 
 * **允許傳訊**
 
@@ -196,21 +196,21 @@ ht-degree: 0%
 
 * **允許社交登入： Facebook**
 
-  如果勾選，可允許網站訪客使用其Facebook帳戶憑證登入。 選取的[Facebook雲端設定](/help/communities/social-login.md#create-a-facebook-connect-cloud-service)應設定為在建立社群網站後，將使用者新增至社群網站的成員群組。
-如果未勾選，則不會顯示任何Facebook登入。
-保留*私人*&#x200B;社群網站未勾選。 預設為未勾選。
+  如果勾選，可允許網站訪客使用其Facebook帳戶憑證登入。選取的[Facebook雲端設定](/help/communities/social-login.md#create-a-facebook-connect-cloud-service)應設定為在建立社群網站後，將使用者新增至社群網站的成員群組。
+如果未勾選，則不會顯示Facebook登入。
+取消勾選*私人*&#x200B;社群網站。預設為未勾選。
 
-* **允許社交登入：Twitter**
+* **允許社交登入： Twitter**
 
-  如果勾選，可允許網站訪客使用其Twitter帳戶憑證登入。 選取的[Twitter雲端設定](/help/communities/social-login.md#create-a-twitter-connect-cloud-service)應設定為在建立社群網站後，將使用者新增至社群網站的成員群組。
-如果未勾選，則不會顯示Twitter登入。
-保留*私人*&#x200B;社群網站未勾選。 預設為未勾選。
+  如果勾選，可允許網站訪客使用其Twitter帳戶認證登入。選取的[Twitter雲端設定](/help/communities/social-login.md#create-a-twitter-connect-cloud-service)應設定為在建立社群網站後，將使用者新增至社群網站的成員群組。
+如果未勾選，則不會顯示任何Twitter登入。
+取消勾選*私人*&#x200B;社群網站。預設為未勾選。
 
 >[!NOTE]
 >
 >**允許社交登入**
 >
->雖然範例Facebook和Twitter設定可能存在，並且可供[生產環境](/help/sites-administering/production-ready.md)選擇，但必須建立自訂Facebook和Twitter應用程式。 請參閱[使用Facebook和Twitter的社交登入](/help/communities/social-login.md)。
+>雖然Facebook和Twitter設定範例可能存在，而且可供[生產環境](/help/sites-administering/production-ready.md)選取，但您必須建立自訂Facebook和Twitter應用程式。 請參閱[使用Facebook和Twitter的社交登入](/help/communities/social-login.md)。
 
 #### 標籤 {#tagging}
 
@@ -226,7 +226,7 @@ ht-degree: 0%
 
 ![社群角色](assets/site-admin-2.png)
 
-已指派這些設定給社群成員[&#128279;](/help/communities/users.md)的角色。
+已指派這些設定給社群成員](/help/communities/users.md)的[角色。
 
 使用預先輸入搜尋可輕鬆尋找社群成員。
 
@@ -267,7 +267,7 @@ ht-degree: 0%
 * **啟用Analytics**
 
   僅當[已針對Communities功能](/help/communities/analytics.md)設定Adobe Analytics時可用。
-預設為未勾選。 勾選後，會出現另一個選取功能表：
+預設為未勾選。勾選後，會出現另一個選取功能表：
 
 ![網站分析 — 啟用](assets/site-analytics-enable.png)
 
@@ -317,7 +317,7 @@ ht-degree: 0%
 
 * **選取持續性選項**
 
-   * **翻譯使用者要求上的貢獻並於之後保留**
+   * **翻譯使用者要求上的貢獻並於之後繼續保留**
 如果選取，內容在提出請求之前不會翻譯。 翻譯後，翻譯會儲存在存放庫中。
 
      預設為&#x200B;*未選取*。
@@ -459,7 +459,7 @@ DESIGN面板允許套用新的主題：
 * [審核](#moderation)
 * [會員角色](#roles)
 * [分析](#analytics)
-* [轉換](#translation)
+* [翻譯](#translation)
 
 ### 修改縮圖 {#modify-thumbnail}
 
@@ -511,7 +511,7 @@ UGC未包含在網站套件中。
 >[!NOTE]
 >
 >如果[允許社交登入： Facebook](#user-management)已啟用，則使用者群組`community-<site-name>-<uid>-members`後
->已建立，套用的[Facebook雲端服務](/help/communities/social-login.md#createafacebookcloudservice)應設定為新增使用者至此群組。
+>已建立，套用的[Facebook雲端服務](/help/communities/social-login.md#createafacebookcloudservice)應設定為新增使用者到此群組。
 
 ## 設定驗證錯誤 {#configure-for-authentication-error}
 

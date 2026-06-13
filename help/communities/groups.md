@@ -13,7 +13,7 @@ solution: Experience Manager
 feature: Communities
 source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
 workflow-type: tm+mt
-source-wordcount: '1727'
+source-wordcount: '1691'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 1%
 
 當社群網站的[範本結構](/help/communities/sites-console.md#step1)包含[群組功能](/help/communities/functions.md#groups-function)時，「群組」主控台會提供建立社群群組的存取權。
 
-* AEM Communities支援在其他群組內巢狀內嵌群組。 當新群組[&#128279;](/help/communities/tools-groups.md)的結構包含群組函式時，便可以進行群組巢狀化。
+* AEM Communities支援在其他群組內巢狀內嵌群組。 當新群組](/help/communities/tools-groups.md)的[結構包含群組函式時，便可以進行群組巢狀化。
 * 僅適用於作者環境，有一個群組建立精靈，類似於網站建立精靈。
 * 成員是否可以在發佈環境中建立群組，可以在將群組功能新增至社群網站結構或社群群組結構時進行設定。
 
@@ -87,7 +87,7 @@ This is a 404 on helpx. Update or remove.
 * **社群群組根目錄**
 
   群組的根路徑。
-預設的根是父網站，但根可以移至網站內的任何位置。 不建議進行變更。
+預設的根是父網站，但根可以移至網站內的任何位置。不建議進行變更。
 
 * **其他可用的社群群組語言**&#x200B;功能表
 

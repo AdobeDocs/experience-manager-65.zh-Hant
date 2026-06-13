@@ -12,7 +12,7 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Services,APIs & Integrations
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '1312'
+source-wordcount: '1334'
 ht-degree: 0%
 
 ---
@@ -40,18 +40,18 @@ ht-degree: 0%
 
 ![cd_cd_finsrv_architecture_xml_pdf1](assets/cd_cd_finsrv_architecture_xml_pdf1.png)
 
-使用者從使用者端網頁瀏覽器提交表單後，非互動式PDF檔案會儲存在Content Services中（已棄用）。 下圖顯示儲存在Content Services （已棄用）中的PDF檔案。
+使用者從使用者端Web瀏覽器提交表單後，非互動式PDF檔案會儲存在內容服務中（已棄用）。 下圖顯示儲存在Content Services （已棄用）中的PDF檔案。
 
 ![cd_cd_cs_gui](assets/cd_cd_cs_gui.png)
 
 ### 步驟摘要 {#summary-of-steps}
 
-若要使用提交的XML資料建立非互動式PDF檔案，並儲存在Content Services的PDF檔案中（已棄用），請執行下列工作：
+若要使用提交的XML資料建立非互動式PDF檔案，並將其儲存在內容服務（已棄用）的PDF檔案中，請執行下列工作：
 
 1. 包含專案檔案。
 1. 建立Forms、輸出和檔案管理物件。
 1. 使用Forms服務擷取表單資料。
-1. 使用Output服務建立非互動式PDF檔案。
+1. 使用輸出服務建立非互動式PDF檔案。
 1. 使用檔案管理服務將PDF表單儲存在內容服務（已棄用）中。
 
 **包含專案檔**
@@ -66,13 +66,13 @@ ht-degree: 0%
 
 擷取提交至Forms服務的表單資料。 您可以處理提交的資料，以符合您的業務需求。 例如，您可以將表單資料儲存在企業資料庫中。 不過，若要建立非互動式PDF檔案，表單資料會傳遞至Output服務。
 
-**使用Output服務建立非互動式PDF檔案。**
+**使用輸出服務建立非互動式PDF檔案。**
 
-使用Output服務建立以表單設計和XML表單資料為基礎的非互動式PDF檔案。 在工作流程中，會從Forms服務擷取表單資料。
+使用輸出服務來建立以表單設計和XML表單資料為基礎的非互動式PDF檔案。 在工作流程中，會從Forms服務擷取表單資料。
 
-**使用Document Management服務將PDF表單儲存在Content Services （已棄用）**
+**使用Document Management服務，將PDF表單儲存在Content Services （已棄用）**
 
-使用檔案管理服務API將PDF檔案儲存在內容服務（已棄用）中。
+使用檔案管理服務API將PDF檔案儲存在內容服務中（已棄用）。
 
 **另請參閱**
 
@@ -84,7 +84,7 @@ ht-degree: 0%
 
 ### 使用Java API建立包含已提交XML資料的PDF檔案 {#create-a-pdf-document-with-submitted-xml-data-using-the-java-api}
 
-使用Forms、輸出和檔案管理API (Java)建立包含已提交XML資料的PDF檔案：
+使用Forms、輸出和檔案管理API (Java)，建立包含已提交XML資料的PDF檔案：
 
 1. 包含專案檔案
 
@@ -116,9 +116,9 @@ ht-degree: 0%
    * 呼叫`org.w3c.dom.DocumentBuilder`物件的`parse`方法並傳遞`java.io.InputStream`物件，以建立`org.w3c.dom.Document`物件。
    * 擷取XML檔案中每個節點的值。 完成此工作的一種方式是建立接受兩個引數的自訂方法： `org.w3c.dom.Document`物件以及您要擷取其值的節點名稱。 此方法會傳回代表節點值的字串值。 在此程式之後的程式碼範例中，此自訂方法稱為`getNodeText`。 會顯示此方法的內文。
 
-1. 使用Output服務建立非互動式PDF檔案。
+1. 使用輸出服務建立非互動式PDF檔案。
 
-   呼叫`OutputClient`物件的`generatePDFOutput`方法並傳遞下列值，以建立PDF檔案：
+   叫用`OutputClient`物件的`generatePDFOutput`方法並傳遞下列值，以建立PDF檔案：
 
    * `TransformationFormat`列舉值。 若要產生PDF檔案，請指定`TransformationFormat.PDF`。
    * 字串值，指定表單設計的名稱。 確認表單設計與從Forms服務擷取的表單資料相容。
@@ -136,7 +136,7 @@ ht-degree: 0%
    * 字串值，指定新增內容的存放區。 預設存放區為`SpacesStore`。 此值為必要引數。
    * 字串值，指定新增內容的空間完整路徑（例如`/Company Home/Test Directory`）。 此值為必要引數。
    * 代表新內容的節點名稱（例如，`MortgageForm.pdf`）。 此值為必要引數。
-   * 字串值，指定節點型別。 若要新增內容(例如PDF檔案)，請指定`{https://www.alfresco.org/model/content/1.0}content`。 此值為必要引數。
+   * 字串值，指定節點型別。 若要新增內容（例如PDF檔案），請指定`{https://www.alfresco.org/model/content/1.0}content`。 此值為必要引數。
    * 代表內容的`com.adobe.idp.Document`物件。 此值為必要引數。
    * 字串值，指定編碼值（例如，`UTF-8`）。 此值為必要引數。
    * 指定如何處理版本資訊的`UpdateVersionType`列舉值(例如，`UpdateVersionType.INCREMENT_MAJOR_VERSION`以遞增內容版本。 )此值是必要引數。
