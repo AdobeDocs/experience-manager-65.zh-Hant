@@ -18,7 +18,7 @@ ht-degree: 2%
 
 # 整合Adobe Dynamic Tag Management {#integrating-with-adobe-dynamic-tag-management}
 
-將[Adobe Dynamic Tag Management](https://business.adobe.com/products/experience-platform/adobe-experience-platform.html)與AEM整合，以便您可以使用您的Dynamic Tag Management Web屬性來追蹤AEM網站。 Dynamic Tag Management可讓行銷人員管理用於收集資料的標籤，並在所有數位行銷系統間散發資料。 例如，使用Dynamic Tag Management來收集AEM網站的使用量資料，並散發資料，以便在Adobe Analytics或Adobe Target中進行分析。
+將[Adobe Dynamic Tag Management](https://business.adobe.com/tw/products/experience-platform/adobe-experience-platform.html)與AEM整合，以便您可以使用您的Dynamic Tag Management Web屬性來追蹤AEM網站。 Dynamic Tag Management可讓行銷人員管理用於收集資料的標籤，並在所有數位行銷系統間散發資料。 例如，使用Dynamic Tag Management來收集AEM網站的使用量資料，並散發資料，以便在Adobe Analytics或Adobe Target中進行分析。
 
 整合之前，請先建立追蹤AEM網站網域的Dynamic Tag Management [Web屬性](https://microsite.omniture.com/t2/help/en_US/dtm/#Web_Properties)。 必須設定Web屬性的[託管選項](https://microsite.omniture.com/t2/help/en_US/dtm/#Hosting__Embed_Tab)，以便您可以設定AEM來存取Dynamic Tag Management程式庫。
 
