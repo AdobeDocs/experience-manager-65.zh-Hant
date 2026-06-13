@@ -11,7 +11,7 @@ feature: Authoring,Personalization
 role: User
 source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
 workflow-type: tm+mt
-source-wordcount: '553'
+source-wordcount: '556'
 ht-degree: 1%
 
 ---
@@ -66,7 +66,7 @@ ht-degree: 1%
 
 在未註冊的情況下，有些人口統計特徵很難判斷，但可藉由結合行為和人口統計特徵來衍生。
 
-例如，將反向連結URL （作為行為特徵）與人口統計資料(從例如[Google Ad Planner](https://www.google.com/adplanner/)之類的工具取得)結合，網站擁有者便可匯出其訪客的人口統計特徵。
+例如，將反向連結URL （作為行為特徵）與人口統計資料（從例如[Google Ad Planner](https://www.google.com/adplanner/)之類的工具取得）結合，網站擁有者便可匯出其訪客的人口統計特徵。
 
 **子區段** — 一個區段可以劃分為幾個子區段。 可透過定義其他特徵來達成此目的。
 

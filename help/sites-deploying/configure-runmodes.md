@@ -1,6 +1,6 @@
 ---
 title: 執行模式
-description: 瞭解如何使用執行模式根據特定目的調整AEM執行個體。
+description: 瞭解如何使用執行模式，根據特定目的調整AEM執行個體。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: configuring
@@ -11,7 +11,7 @@ solution: Experience Manager, Experience Manager Sites
 role: Admin
 source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
 workflow-type: tm+mt
-source-wordcount: '746'
+source-wordcount: '750'
 ht-degree: 1%
 
 ---
@@ -65,7 +65,7 @@ ht-degree: 1%
 
 * `publish` + `intranet`
 
-* 視需要。.
+* 視需要。 . .
 
 每次啟動時也可以選取自訂的執行模式。
 
@@ -120,9 +120,9 @@ nosamplecontent執行模式是針對生產安裝所設計。
 
 如果您已經為多個執行模式定義了配置，則需要定義要在啟動時使用的配置。 有數種方法可指定要使用的執行模式；解析的順序為：
 
-1. [系統屬性(](#using-a-system-property-in-the-start-script)
-1. [&#128279;](#using-the-sling-properties-file)
-1. [&#128279;](#using-the-r-option)
+1. [系統屬性(`-D`)](#using-a-system-property-in-the-start-script)
+1. [`sling.properties`檔案](#using-the-sling-properties-file)
+1. [`-r`選項](#using-the-r-option)
 1. [檔案名稱偵測](#filename-detection-renaming-the-jar-file)
 
 當您使用應用程式伺服器時，您也可以[在web.xml](#defining-the-run-mode-in-web-xml-with-application-server)中定義執行模式。
@@ -141,7 +141,7 @@ nosamplecontent執行模式是針對生產安裝所設計。
 
 ### 使用 — r選項 {#using-the-r-option}
 
-啟動快速入門時，可使用`-r`選項啟動自訂執行模式。 例如，使用以下命令來啟動執行模式設為dev的AEM執行個體。&quot;
+啟動快速入門時，可使用`-r`選項啟動自訂執行模式。 例如，使用下列命令來啟動執行模式設為dev的AEM執行個體。 &quot;
 
 ```shell
 java -jar cq-56-p4545.jar -r dev

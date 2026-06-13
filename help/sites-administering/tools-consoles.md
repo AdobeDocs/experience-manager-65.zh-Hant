@@ -12,7 +12,7 @@ feature: Administering
 role: Admin
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
-source-wordcount: '594'
+source-wordcount: '597'
 ht-degree: 25%
 
 ---
@@ -102,7 +102,7 @@ ht-degree: 25%
   </tr>
   <tr>
    <td> </td>
-   <td>系統綜覽</td>
+   <td>系統概觀</td>
   </tr>
   <tr>
    <td> </td>
@@ -230,7 +230,7 @@ ht-degree: 25%
   </tr>
   <tr>
    <td> </td>
-   <td>拓撲</td>
+   <td>拓樸</td>
   </tr>
   <tr>
    <td> </td>
@@ -306,15 +306,15 @@ ht-degree: 25%
   </tr>
   <tr>
    <td> </td>
-   <td>facebook社交登入設定<br /> </td>
+   <td>Facebook社交登入設定<br /> </td>
   </tr>
   <tr>
    <td> </td>
-   <td>twitter社交登入設定<br /> </td>
+   <td>Twitter社交登入設定<br /> </td>
   </tr>
   <tr>
    <td> </td>
-   <td>pinterest社交登入設定<br /> </td>
+   <td>Pinterest社交登入設定<br /> </td>
   </tr>
   <tr>
    <td>Communities</td>
@@ -345,7 +345,7 @@ ht-degree: 25%
    <td>社群預算</td>
   </tr>
   <tr>
-   <td>商務</td>
+   <td>Commerce</td>
    <td> </td>
   </tr>
   <tr>
@@ -373,10 +373,10 @@ ht-degree: 25%
   </tr>
   <tr>
    <td>使用者端內容組態<br /> </td>
-   <td>Client Context代表動態組合的使用者資料集合。 預設和Experience Cloud組態會保留在這裡。<br /> </td>
+   <td>Client Context代表動態組合的使用者資料集合。 預設和Experience Cloud設定會保留在這裡。<br /> </td>
   </tr>
   <tr>
-   <td>Cloud Service設定<br /> </td>
+   <td>雲端服務設定<br /> </td>
    <td>保留與與Adobe Experience Cloud整合相關的設定。</td>
   </tr>
   <tr>
@@ -384,7 +384,7 @@ ht-degree: 25%
    <td>組態管理員設定。</td>
   </tr>
   <tr>
-   <td>商務</td>
+   <td>Commerce</td>
    <td>可存取匯入工具和各種產品資料。</td>
   </tr>
   <tr>
@@ -416,7 +416,7 @@ ht-degree: 25%
    <td>外部連結檢查程式。</td>
   </tr>
   <tr>
-   <td>行動</td>
+   <td>行動裝置</td>
    <td>協助您建立專為行動裝置設計的網站。</td>
   </tr>
   <tr>
@@ -425,7 +425,7 @@ ht-degree: 25%
   </tr>
   <tr>
    <td>復寫 — 復寫代理</td>
-   <td>用於在發佈頁面時，將資料從作者執行個體復寫到Publish，或使用反向復寫將使用者評論從發佈環境傳回給作者。</td>
+   <td>用於在發佈頁面時，將資料從作者執行個體復寫至發佈，或使用反向復寫將使用者評論從發佈環境傳回給作者。</td>
   </tr>
   <tr>
    <td>報告</td>
@@ -440,7 +440,7 @@ ht-degree: 25%
    <td>設定使用者在建立帳戶或重設密碼時自動收到的電子郵件，並確認已重設的密碼。</td>
   </tr>
   <tr>
-   <td>Segmentation</td>
+   <td>細分</td>
    <td>網站訪客造訪網站時，有不同的興趣和目標。 瞭解這些目標並達到預期是線上行銷的重要成功因素。 區段可藉由分析和描述訪客的詳細資料來協助達成此目標。<br /> </td>
   </tr>
   <tr>

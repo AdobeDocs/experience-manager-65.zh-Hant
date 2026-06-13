@@ -10,14 +10,14 @@ solution: Experience Manager, Experience Manager Sites
 role: Admin
 source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
 workflow-type: tm+mt
-source-wordcount: '1047'
-ht-degree: 2%
+source-wordcount: '1083'
+ht-degree: 1%
 
 ---
 
 # AEM 6.5中的Assets存放庫重組 {#assets-repository-restructuring-in-aem}
 
-如AEM 6.5[&#128279;](/help/sites-deploying/repository-restructuring.md)頁面的上層存放庫重新調整中所述，升級至Adobe Experience Manager (AEM) 6.5的客戶應使用此頁面評估與影響AEM Assets解決方案的存放庫變更相關的工作量。 在AEM 6.5升級程式期間，有些變更需要投入大量精力，而其他變更則可能延遲到未來升級。
+如AEM 6.5](/help/sites-deploying/repository-restructuring.md)頁面的上層[存放庫重新調整中所述，升級至Adobe Experience Manager (AEM) 6.5的客戶應使用此頁面評估與影響AEM Assets解決方案的存放庫變更相關的工作量。 在AEM 6.5升級程式期間，有些變更需要大量工作量，而其他變更則可能延遲到未來升級為止。
 
 **升級為6.5**
 
@@ -53,7 +53,7 @@ ht-degree: 2%
    <td><p>如果任何自訂程式碼依賴此位置，也就是說，程式碼明確依賴此路徑，則必須更新程式碼以使用新位置，才能進行升級。 理想情況下，當可用時使用Java™ API，以減少對JCR中任何特定路徑的相依性。</p> <p>用於儲存使用者端下載的ZIP檔案的臨時位置。 使用者端要求下載資產後，就不需要更新。 它會在新位置產生檔案。</p> </td>
   </tr>
   <tr>
-   <td><strong>附註</strong></td>
+   <td><strong>備註</strong></td>
    <td>不適用</td>
   </tr>
  </tbody>
@@ -83,12 +83,12 @@ ht-degree: 2%
       </ol> </li>
      <li>行動資料夾內的電子郵件範本後，移除資料夾： <strong><code>/etc/dam/notification/email/default</code></strong>。<br />
       <ol>
-       <li>如果未更新<strong> <code>/etc/notification/email/default</code></strong>下的電子郵件範本，則資料夾可以移除，因為原始電子郵件範本存在於<strong><code>/libs/settings/notification/email/default</code></strong>下，是AEM 4安裝的一部分。</li>
+       <li>如果未更新<strong> <code>/etc/notification/email/default</code></strong>下的電子郵件範本，則資料夾可以移除，因為原始電子郵件範本存在於<strong><code>/libs/settings/notification/email/default</code></strong>下，屬於AEM 4安裝的一部分。</li>
       </ol> </li>
     </ol> </td>
   </tr>
   <tr>
-   <td><strong>附註</strong></td>
+   <td><strong>備註</strong></td>
    <td>不適用<br /> </td>
   </tr>
  </tbody>
@@ -118,7 +118,7 @@ ht-degree: 2%
     </ol> <p>對於任何未在SCM中管理，且透過設計對話方塊修改執行階段的設計而言，請勿將可編寫的設計移出<code>/etc</code>。</p> </td>
   </tr>
   <tr>
-   <td><strong>附註</strong></td>
+   <td><strong>備註</strong></td>
    <td>不適用<br /> </td>
   </tr>
  </tbody>
@@ -146,12 +146,12 @@ ht-degree: 2%
       </ol> </li>
      <li>移除資料夾： <code>/etc/dam/workflow/notification/email/downloadasset </code>在移動其中的電子郵件範本之後。<br />
       <ol>
-       <li>如果未更新<strong> <code>/etc</code></strong>下的電子郵件範本，則資料夾可以移除，因為原始電子郵件範本存在於<strong><code>/libs/settings/dam/workflownotification/email/downloadasset</code></strong>下，是AEM 6.4安裝的一部分。</li>
+       <li>如果未更新<strong> <code>/etc</code></strong>下的電子郵件範本，則資料夾可以移除，因為原始電子郵件範本存在於<strong><code>/libs/settings/dam/workflownotification/email/downloadasset</code></strong>下，屬於AEM 6.4安裝的一部分。</li>
       </ol> </li>
     </ol> </td>
   </tr>
   <tr>
-   <td><strong>附註</strong></td>
+   <td><strong>備註</strong></td>
    <td>雖然技術上支援<code>/conf/global/settings/dam/workflownotification/email/downloadasset</code>的查詢（透過一般的Sling CAConfig查詢優先於/apps，但在<code>/etc</code>之後），範本可以放在<code>/conf/global/settings/dam/workflownotification/email/downloadasset</code>中。 但是，不建議這麼做，因為沒有執行階段UI可方便編輯電子郵件範本。</td>
   </tr>
  </tbody>
@@ -187,12 +187,12 @@ ht-degree: 2%
       </ol> </li>
      <li>行動資料夾內的電子郵件範本後，移除資料夾： <strong><code>/etc/dam/adhocassetshare</code></strong>。<br />
       <ol>
-       <li>如果未更新<strong> <code>/etc</code></strong>下的電子郵件範本，則資料夾可以移除，因為原始電子郵件範本存在於<strong><code>/libs/settings/dam/adhocassetshare</code></strong>下，是AEM 6.4安裝的一部分。</li>
+       <li>如果未更新<strong> <code>/etc</code></strong>下的電子郵件範本，則資料夾可以移除，因為原始電子郵件範本存在於<strong><code>/libs/settings/dam/adhocassetshare</code></strong>下，屬於AEM 6.4安裝的一部分。</li>
       </ol> </li>
     </ol> </td>
   </tr>
   <tr>
-   <td><strong>附註</strong></td>
+   <td><strong>備註</strong></td>
    <td>雖然技術上支援<code>/conf/global/settings/dam/adhocassetshare</code>的查詢（它透過一般Sling CAConfig查詢優先於<code>/apps</code>，但在<code>/etc</code>之後），範本可以放在<code>/conf/global/settings/dam/adhocassetshare</code>中。 但是，不建議這麼做，因為沒有執行階段UI來方便編輯電子郵件範本</td>
   </tr>
  </tbody>
@@ -216,7 +216,7 @@ ht-degree: 2%
     <ol>
      <li>將所有自訂或修改的指令碼從<strong><code>/etc/dam/indesign/scripts</code></strong>複製到<strong><code>/apps/settings/dam/indesign/scripts</code></strong><br />
       <ol>
-       <li>在AEM 6.5中，只有複製AEM提供的未修改指令碼，才能透過<strong><code>/libs/settings</code></strong>使用</li>
+       <li>在AEM 6.5中，僅可透過<strong><code>/libs/settings</code></strong>複製AEM提供的未修改指令碼的新指令碼或修改的指令碼</li>
       </ol> </li>
      <li>找到所有使用媒體提取程式WF步驟的工作流程模型，並
       <ol>
@@ -226,7 +226,7 @@ ht-degree: 2%
     </ol> </td>
   </tr>
   <tr>
-   <td><strong>附註</strong></td>
+   <td><strong>備註</strong></td>
    <td>建議將自訂指令碼儲存在<code>/apps</code>下，因為這是應儲存程式碼的位置。</td>
   </tr>
  </tbody>
@@ -253,7 +253,7 @@ ht-degree: 2%
     </ol> </td>
   </tr>
   <tr>
-   <td><strong>附註</strong></td>
+   <td><strong>備註</strong></td>
    <td>不適用</td>
   </tr>
  </tbody>
@@ -280,7 +280,7 @@ ht-degree: 2%
     </ul> <p>您不必調整其copyURL/內嵌程式碼以指向<code>/conf</code>。 對<code>/etc</code>的現有請求已重新路由到來自<code>/conf</code>的正確內容。</p> </td>
   </tr>
   <tr>
-   <td><strong>附註</strong></td>
+   <td><strong>備註</strong></td>
    <td>不適用</td>
   </tr>
  </tbody>
@@ -303,7 +303,7 @@ ht-degree: 2%
    <td><p>使用<code>/etc.clientlibs/</code>允許Proxy首碼調整任何參考，以指向<code>/libs</code>下的新資源。</p> <p>最後，透過從移除已移轉的clientlibs的資料夾來清理 <code>/etc/clientlibs/foundation/</code></p> </td>
   </tr>
   <tr>
-   <td><strong>附註</strong></td>
+   <td><strong>備註</strong></td>
    <td>不適用<br /> </td>
   </tr>
  </tbody>
