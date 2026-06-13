@@ -123,7 +123,7 @@ ht-degree: 0%
 
 ### 為CUG設定Dispatcher工作階段管理 {#configuring-dispatcher-session-management-for-cugs}
 
-在dispatcher.any檔案](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#enabling-secure-sessions-sessionmanagement)中設定CUG的[工作階段管理。 要求CUG頁面的存取權時所使用的驗證處理常式，會決定您設定工作階段管理的方式。
+在dispatcher.any檔案[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#enabling-secure-sessions-sessionmanagement)中設定CUG的工作階段管理。 要求CUG頁面的存取權時所使用的驗證處理常式，會決定您設定工作階段管理的方式。
 
 ```xml
 /sessionmanagement
