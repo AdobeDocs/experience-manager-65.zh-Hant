@@ -353,7 +353,7 @@ curl -u admin:admin -X POST \
 
 ### 使用 OSGi 設定管理快取 {#cache-osgi-configration}
 
-若要全域管理快取，您可以為&#x200B;**持續性查詢服務設定**[進行 OSGi 設定](/help/sites-deploying/configuring-osgi.md)。 否則，此OSGi設定會針對發佈執行個體](#publish-instances)使用[預設值。
+若要全域管理快取，您可以為&#x200B;**持續性查詢服務設定**&#x200B;[進行 OSGi 設定](/help/sites-deploying/configuring-osgi.md)。 否則，此OSGi設定會針對發佈執行個體[&#128279;](#publish-instances)使用預設值。
 
 >[!NOTE]
 >
