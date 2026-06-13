@@ -40,7 +40,7 @@ ht-degree: 1%
 
 >[!CAUTION]
 >
->[電子商務整合架構](https://business.adobe.com/products/experience-manager/sites/ecommerce-integrations.html)是AEM附加元件。
+>[電子商務整合架構](https://business.adobe.com/tw/products/experience-manager/sites/ecommerce-integrations.html)是AEM附加元件。
 >
 >您的銷售代表可以根據適當的引擎提供完整詳細資訊。
 
