@@ -44,13 +44,13 @@ ht-degree: 1%
 您可以使用工作流程模型Sidekick中可用的變數區段來建立變數。 AEM工作流程變數支援下列資料型別：
 
 * **基本資料型別**： Long、Double、Boolean、Date和String
-* **複雜資料型別**： [檔案](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/aemfd/docmanager/Document.html)、[XML](https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Document.html)、[JSON](https://static.javadoc.io/com.google.code.gson/gson/2.3/com/google/gson/JsonObject.html)和表單資料模型執行個體。
+* **複雜資料型別**： [檔案](https://helpx.adobe.com/tw/experience-manager/6-5/forms/javadocs/com/adobe/aemfd/docmanager/Document.html)、[XML](https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Document.html)、[JSON](https://static.javadoc.io/com.google.code.gson/gson/2.3/com/google/gson/JsonObject.html)和表單資料模型執行個體。
 
 >[!NOTE]
 >
 >工作流程僅支援ISO8601格式用於日期型別變數。
 
-檔案與表單資料模型資料型別需要[AEM Forms附加元件套件](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)。  使用ArrayList資料型別建立變數集合。 您可以為所有基本和複雜資料型別建立ArrayList變數。 例如，建立ArrayList變數並選取String作為子型別，以使用變數儲存多個字串值。
+檔案與表單資料模型資料型別需要[AEM Forms附加元件套件](https://helpx.adobe.com/tw/aem-forms/kb/aem-forms-releases.html)。  使用ArrayList資料型別建立變數集合。 您可以為所有基本和複雜資料型別建立ArrayList變數。 例如，建立ArrayList變數並選取String作為子型別，以使用變數儲存多個字串值。
 
 執行以下步驟來建立變數：
 
@@ -210,7 +210,7 @@ ht-degree: 1%
 | 表單資料模型 | Packages.com.adobe.aem.dermis.api.FormDataModelInstance fdmObject = workItem.getWorkflowData()。getMetaDataMap()。get(variableName， Packages.com.adobe.aem.dermis.api.FormDataModelInstance.class)； |
 | JSON | Packages.com.google.gson.JsonObject jsonObject = workItem.getWorkflowData()。getMetaDataMap()。get(variableName， Packages.com.google.gson.JsonObject.class)； |
 
-檔案和表單資料模型變數資料型別需要[AEM Forms附加元件套件](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)。
+檔案和表單資料模型變數資料型別需要[AEM Forms附加元件套件](https://helpx.adobe.com/tw/aem-forms/kb/aem-forms-releases.html)。
 
 **範例**
 
