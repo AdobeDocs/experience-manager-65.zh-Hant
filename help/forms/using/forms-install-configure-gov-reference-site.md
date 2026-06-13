@@ -232,7 +232,7 @@ ht-degree: 2%
 
 1. 瀏覽到:
 
-   https://<aemserver>：<port>/libs/fd/fdm/gui/components/admin/fdmcloudservice/fdm.html/conf/we-gov
+   https://&lt;aemserver>：&lt;port>/libs/fd/fdm/gui/components/admin/fdmcloudservice/fdm.html/conf/we-gov
 
    1. 確定您使用與MS® Dynamics應用程式註冊中設定的相同重新導向URL存取伺服器。
 
@@ -386,7 +386,7 @@ ht-degree: 2%
    ![快速存取](assets/aftia-quick-access.jpg)
 1. 導覽至「管理員」標籤，並選取「使用者管理（舊版）」專案
    ![報告](assets/aftia-reports.jpg)
-1. 選取&#x200B;**使用者**索引標籤。
+1. 選取&#x200B;**使用者**&#x200B;索引標籤。
    ![使用者管理](assets/aftia-user-management.jpg)
 1. 從使用者清單中選取所需的使用者。
 1. 捲動至頁面底部，使用者驗證資訊將顯示在頁面底部。
