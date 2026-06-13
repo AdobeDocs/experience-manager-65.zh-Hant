@@ -10,7 +10,7 @@ solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
-source-wordcount: '2474'
+source-wordcount: '2501'
 ht-degree: 1%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 1%
 * **資料模型物件**：資料屬性使用後端資料來源。
 * **規則型內容**：文字中根據規則出現或隱藏的部分內容。 規則也可以根據表單資料模型屬性和變數。
 * **變數**：在文字檔案片段中，變數未繫結到後端資料來源。 代理程式在準備互動式通訊以將其提交至發佈程式時，會填入/選取變數中的值或將變數繫結至資料來源。
-* **重複**：您的互動式通訊中可能有動態資訊，例如信用卡對帳單中的交易，其發生次數會隨著每次產生的互動式通訊而不斷變更。 使用重複，您可以格式化和建構此類動態資訊。 如需詳細資訊，請參閱[內嵌條件和重複](https://helpx.adobe.com/tw/experience-manager/6-3/forms/using/cm-inline-condition.html)。
+* **重複**：您的互動式通訊中可能有動態資訊，例如信用卡對帳單中的交易，其發生次數會隨著每次產生的互動式通訊而不斷變更。 使用重複，您可以格式化和建構此類動態資訊。 如需詳細資訊，請參閱[內嵌條件和重複](https://helpx.adobe.com/experience-manager/6-3/forms/using/cm-inline-condition.html)。
 
 ## 建立文字 {#createtext}
 
@@ -221,7 +221,7 @@ ht-degree: 1%
 
 ![textbackgroundcolorapplied-1](assets/textbackgroundcolorapplied-1.png)
 
-您可以直接選取[基本色彩]調色盤中的基本色彩`**[A]**`，或在使用滑桿`**[B]**`選擇適當的色彩陰影后選取[選取]**&#x200B;**。
+您可以直接選取[基本色彩]調色盤中的基本色彩`**[A]**`，或在使用滑桿`**[B]**`選擇適當的色彩陰影后選取[選取]****。
 
 或者，您也可以移至[進階]索引標籤，選取適當的[色相]、[明度]和[飽和度] `**[C]**`來建立精確色彩，然後選取[選取] `**[D]**`來套用色彩以反白顯示文字。
 
@@ -229,13 +229,13 @@ ht-degree: 1%
 
 ### 貼上格式化文字 {#paste}
 
-若要重複使用存在於其他應用程式(例如來自Microsoft®Word或HTML頁面)中的多個文欄位落，請複製該文字並將其貼到文字編輯器中。 複製的文字的格式會保留在文字編輯器中。
+若要重複使用存在於其他應用程式（例如來自®Word或HTML頁面）中的一段或多段文字，請複製該文字並貼到文字編輯器中。 複製的文字的格式會保留在文字編輯器中。
 
-您可以複製並貼上可編輯文字檔案片段中的一或多個文欄位落。 例如，您可能有Microsoft® Word檔案，其中包含可接受的居住證明專案符號清單，如下所示：
+您可以複製並貼上可編輯文字檔案片段中的一或多個文欄位落。 例如，您可能有® Word檔案，其中包含可接受的居住證明專案符號清單，如下所示：
 
 ![pastetextmsword-2](assets/pastetextmsword-2.png)
 
-您可以直接將Microsoft® Word檔案中的文字複製並貼上至可編輯的文字檔案片段。 專案符號清單、字型和文字顏色等格式會保留在文字檔案片段中。
+您可以直接將® Word檔案中的文字複製並貼上至可編輯的文字檔案片段。 專案符號清單、字型和文字顏色等格式會保留在文字檔案片段中。
 
 ![pastetexteditablemodule-1](assets/pastetexteditablemodule-1.png)
 
@@ -253,7 +253,7 @@ ht-degree: 1%
 
 ![specialcharacters-2](assets/specialcharacters-2.png)
 
-文字編輯器已內建對210個特殊字元的支援。 管理員可以透過自訂[&#128279;](/help/forms/using/custom-special-characters.md) 新增更多/自訂特殊字元的支援。
+文字編輯器已內建對210個特殊字元的支援。 管理員可以透過自訂](/help/forms/using/custom-special-characters.md) [新增更多/自訂特殊字元的支援。
 
 ## 搜尋和取代文字 {#searching}
 

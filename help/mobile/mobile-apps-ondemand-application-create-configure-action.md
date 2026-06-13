@@ -11,7 +11,7 @@ feature: Mobile
 role: User
 source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '419'
+source-wordcount: '380'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ ht-degree: 0%
 1. 選擇行動應用程式範本，然後按一下&#x200B;**下一步**。
 1. 輸入應用程式屬性，例如&#x200B;**Title**、**Name**、**Description**。
 1. 按一下「**下一步**」。
-1. 如果已知，請輸入雲端設定詳細資料，否則請按一下[建立]。**&#x200B;**
+1. 如果已知，請輸入雲端設定詳細資料，否則請按一下[建立]。****
 1. 按一下&#x200B;**完成**，在目錄中檢視您新的AEM Mobile App。
 
 ![chlimage_1](assets/chlimage_1.gif)
@@ -53,7 +53,7 @@ ht-degree: 0%
 
 應用程式範本可讓您輕鬆使用開發人員建立的現有設計，以便在AEM中建立新的應用程式。
 
-什麼是應用程式範本？ 將其視為代表應用程式基準或基礎的頁面範本和元件的集合。
+什麼是應用程式範本？將其視為代表應用程式基準或基礎的頁面範本和元件的集合。
 根據其他應用程式的範本建立應用程式時，您會得到一個具有起始點之應用程式，代表在其中建立該應用程式的應用程式。
 
 您必須擁有現有的行動應用程式範本（或已安裝具備應用程式範本的應用程式），才能使用此功能。
@@ -74,9 +74,9 @@ ht-degree: 0%
 * [管理橫幅](/help/mobile/mobile-on-demand-managing-banners.md)
 * [管理集合](/help/mobile/mobile-on-demand-managing-collections.md)
 * [上傳共用資源](/help/mobile/mobile-on-demand-shared-resources.md)
-* [Publish取消發佈內容](/help/mobile/mobile-on-demand-publishing-unpublishing.md)
+* [發佈取消發佈內容](/help/mobile/mobile-on-demand-publishing-unpublishing.md)
 
 若要瞭解管理員和開發人員的角色和責任，請參閱以下資源：
 
-* [為AEM Mobile On-demand Services開發AEM內容](/help/mobile/aem-mobile-on-demand.md)
+* [針對AEM Mobile On-demand Services開發AEM內容](/help/mobile/aem-mobile-on-demand.md)
 * [管理內容以使用AEM Mobile On-demand Services](/help/mobile/aem-mobile.md)

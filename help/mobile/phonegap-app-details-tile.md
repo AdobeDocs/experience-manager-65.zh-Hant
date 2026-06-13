@@ -11,7 +11,7 @@ feature: Mobile
 role: Admin
 source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '1197'
+source-wordcount: '1206'
 ht-degree: 2%
 
 ---
@@ -47,17 +47,17 @@ ht-degree: 2%
 </widget>
 ```
 
-每個廠商應用程式商店(例如Apple App Store或Google Play Store)都需要一或多個行動應用程式的熒幕擷取畫面，才能向客戶顯示您的應用程式詳細資料。 這些熒幕擷取畫面可能會對維度和內容有嚴格的要求（基本上必須真正代表應用程式）。 AEM應用程式可支援針對支援的平台選取和管理這些熒幕擷取畫面，並依各廠商應用程式商店的需求檢視連線埠維度。
+每個廠商應用程式商店（例如Apple App Store或Google Play Store）都需要一或多個行動應用程式的熒幕擷取畫面，才能向客戶顯示您的應用程式詳細資料。 這些熒幕擷取畫面可能會對維度和內容有嚴格的要求（基本上必須真正代表應用程式）。 AEM應用程式可支援針對支援的平台選取和管理這些熒幕擷取畫面，並依各供應商應用程式商店的需求檢視連線埠維度。
 
 >[!NOTE]
 >
->AEM Verify應用程式可讓您直接將熒幕擷取畫面傳送至AEM中的應用程式詳細資訊。
+>AEM驗證應用程式可讓您直接將熒幕擷取畫面傳送到AEM中的應用程式詳細資料。
 >
->如需詳細資訊，請參閱[AEM適用的Mobile Quickstart &#x200B;](/help/mobile/phonegap-mobile-quickstart.md)。
+>如需詳細資訊，請參閱[AEM適用的Mobile Quickstart驗證](/help/mobile/phonegap-mobile-quickstart.md)。
 
 ![chlimage_1-118](assets/chlimage_1-118.png)
 
-### 中繼資料 {#metadata}
+### 後設資料 {#metadata}
 
 >[!NOTE]
 >
@@ -93,7 +93,7 @@ PhoneGap config.xml中定義的每個平台都可以包含自訂平台屬性。 
 
 >[!NOTE]
 >
->PhoneGap在CLI或遠端PhoneGap的建置期間不會使用平台中繼資料區段。 相反，AEM會嘗試擷取平台的中繼資料，以便稍後在提交至目標供應商的應用程式存放區時使用。
+>PhoneGap在CLI或遠端PhoneGap的建置期間不會使用平台中繼資料區段。 相反地，AEM會嘗試擷取平台的中繼資料，以便稍後在提交至目標供應商的應用程式存放區時使用。
 
 對於AEM不瞭解的平台，AEM開發人員仍可以擴充UI，以擷取此中繼資料，以便稍後在應用程式提交流程中匯出和使用。
 
@@ -109,9 +109,9 @@ Apple AppStore需要額外的中繼資料，才能提交您的應用程式以供
 
 ![chlimage_1-120](assets/chlimage_1-120.png)
 
-#### Android™中繼資料 {#android-metadata}
+#### ™中繼資料 {#android-metadata}
 
-選取Android™平台時，目前沒有可設定的自訂中繼資料。 按一下下載按鈕時，會產生zip檔案，其中包含所有中繼資料和相關熒幕擷取畫面的屬性檔案。
+選取™平台時，目前沒有可設定的自訂中繼資料。 按一下下載按鈕時，會產生zip檔案，其中包含所有中繼資料和相關熒幕擷取畫面的屬性檔案。
 
 匯出功能是用來提供收集熒幕擷取畫面和中繼資料的便利方式，這些擷取畫面和中繼資料可以傳送給應用程式發佈者，以輸入至廠商專屬的應用程式存放區。
 
@@ -127,7 +127,7 @@ AEM應用程式的一項重要功能是可讓行動應用程式透過ContentSync
 
 >[!NOTE]
 >
->如果您的作者伺服器例項複製到許多發佈伺服器例項(AEM的共同架構)，則每個發佈伺服器會有相同的更新內容。 原因是更新是建置在製作上並複製到所有發佈執行個體。 基本上完全支援負載平衡和容錯移轉。
+>如果您的作者伺服器例項複製到許多發佈伺服器例項（AEM的共同架構），則每個發佈伺服器會有相同的更新內容。 原因是更新是建置在製作上並複製到所有發佈執行個體。 基本上完全支援負載平衡和容錯移轉。
 
 ### 外掛程式標籤 {#the-plugins-tab}
 
@@ -159,7 +159,7 @@ AEM應用程式的一項重要功能是可讓行動應用程式透過ContentSync
 * [應用程式定義](/help/mobile/phonegap-app-definitions.md)
 * [使用建立應用程式精靈建立新應用程式](/help/mobile/phonegap-create-new-app.md)
 * [匯入現有的混合式應用程式](/help/mobile/phonegap-adding-content-to-imported-app.md)
-* [Content Services](/help/mobile/develop-content-as-a-service.md)
+* [內容服務](/help/mobile/develop-content-as-a-service.md)
 
 ### 其他資源 {#additional-resources}
 

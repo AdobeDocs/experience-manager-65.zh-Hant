@@ -10,8 +10,8 @@ solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
-source-wordcount: '4159'
-ht-degree: 0%
+source-wordcount: '4255'
+ht-degree: 1%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/work-with-form-data-model.html?lang=zh-Hant) |
+| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/work-with-form-data-model.html) |
 | AEM 6.5 | 本文章 |
 
 ![資料整合](do-not-localize/data-integeration.png)
@@ -46,7 +46,7 @@ ht-degree: 0%
 
 若要新增資料模型物件與服務：
 
-1. 登入AEM編寫執行個體，導覽至&#x200B;**[!UICONTROL Forms >資料整合]**，然後開啟您要新增資料模型物件的表單資料模型。
+1. 登入AEM作者執行個體，導覽至&#x200B;**[!UICONTROL Forms >資料整合]**，然後開啟您要新增資料模型物件的表單資料模型。
 1. 在資料來源窗格中，展開資料來源以檢視可用的資料模型物件及服務。
 1. 選取您要新增至表單資料模型的資料模型物件和服務，並選取&#x200B;**[!UICONTROL 新增選取的專案]**。
 
@@ -113,7 +113,7 @@ ht-degree: 0%
 
    若要手動繫結子屬性與資料模型物件屬性，請選取&#x200B;**[!UICONTROL 繫結參考]**&#x200B;欄位旁的瀏覽圖示。 **[!UICONTROL 選取物件]**&#x200B;對話方塊會列出父資料模型物件的所有屬性。 選取要繫結的屬性，然後選取勾號圖示。 請注意，您只能選取與子屬性具有相同資料型別的屬性。
 
-1. 選取&#x200B;**[!UICONTROL 完成]**&#x200B;以儲存子屬性，並選取&#x200B;**[!UICONTROL 儲存]**&#x200B;以儲存表單資料模型。 子屬性現在已新增至資料模型物件。
+1. 選取&#x200B;**[!UICONTROL 完成]**&#x200B;以儲存子屬性，並選取&#x200B;**[!UICONTROL 儲存]**&#x200B;以儲存表單資料模型。子屬性現在已新增至資料模型物件。
 
 建立資料模型物件和屬性後，您可以繼續根據表單資料模型建立最適化表單和互動式通訊。 稍後，當您有可用的資料來源且已設定資料來源時，即可將表單資料模型與資料來源繫結。 繫結將會在相關的自適應表單和互動式通訊中自動更新。 如需使用表單資料模型建立最適化表單和互動式通訊的詳細資訊，請參閱[使用表單資料模型](/help/forms/using/using-form-data-model.md)。
 
@@ -182,7 +182,7 @@ ht-degree: 0%
 
 #### 使用者檔案屬性 {#user-profile-attribute}
 
-從&#x200B;**[!UICONTROL 繫結至]**&#x200B;下拉式功能表中選取&#x200B;**[!UICONTROL 使用者設定檔屬性]**，並在&#x200B;**[!UICONTROL 繫結值]**&#x200B;欄位中輸入屬性名稱。 根據屬性名稱，會從資料來源擷取登入AEM執行處理的使用者詳細資訊。
+從&#x200B;**[!UICONTROL 繫結至]**&#x200B;下拉式功能表中選取&#x200B;**[!UICONTROL 使用者設定檔屬性]**，並在&#x200B;**[!UICONTROL 繫結值]**&#x200B;欄位中輸入屬性名稱。 根據屬性名稱，系統會從資料來源擷取登入AEM例項的使用者詳細資訊。
 
 在&#x200B;**[!UICONTROL 繫結值]**&#x200B;欄位中指定的屬性名稱必須包含完整的繫結路徑，直到使用者的屬性名稱為止。 開啟以下URL以存取CRXDE上的使用者詳細資訊：
 
@@ -381,9 +381,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->**NavigationPropertyName**&#x200B;引數的&#x200B;**預設值**&#x200B;欄位中可用的值取決於&#x200B;**傳回陣列的狀態？**&#x200B;切換按鈕。 當啟用時，它會顯示集合型別的導覽屬性。
+>**NavigationPropertyName**&#x200B;引數的&#x200B;**預設值**&#x200B;欄位中可用的值取決於&#x200B;**傳回陣列？**&#x200B;的狀態 切換按鈕。 當啟用時，它會顯示集合型別的導覽屬性。
 
-在此範例中，您也可以選擇輸出模型物件作為Person，選擇導覽屬性引數作為Friends或BestFriend （取決於&#x200B;**是否傳回陣列？）**&#x200B;已啟用或已停用)。
+在此範例中，您也可以選擇輸出模型物件作為Person，選擇導覽屬性引數作為Friends或BestFriend （取決於&#x200B;**Return陣列是？**） 啟用或停用)。
 
 ![edit-prop-nav-prop2](assets/edit-prop-nav-prop2.png)
 
@@ -468,12 +468,12 @@ operationOptions.setValidationOptions(ValidationOptions.FULL);
    <td>WSDL、Odata和資料庫</td> 
   </tr> 
   <tr> 
-   <td>最大</td> 
+   <td>maximum</td> 
    <td>指定數值的上限。 指定為上限的最大值也可以指派給輸入資料中的引數。</td> 
    <td>Swagger和WSDL</td> 
   </tr> 
   <tr> 
-   <td>最小值</td> 
+   <td>minimum</td> 
    <td>指定數值的下限。 指定為下限的最小值也可以指定給輸入資料中的引數。</td> 
    <td>Swagger和WSDL</td> 
   </tr> 
@@ -488,7 +488,7 @@ operationOptions.setValidationOptions(ValidationOptions.FULL);
    <td>Swagger和WSDL</td> 
   </tr> 
   <tr> 
-   <td>minlength</td> 
+   <td>minLength</td> 
    <td>指定字串中所含字元數的下限。 指定為下限的最小值也可以指定給輸入資料中的引數。</td> 
    <td>Swagger和WSDL</td> 
   </tr> 
@@ -498,7 +498,7 @@ operationOptions.setValidationOptions(ValidationOptions.FULL);
    <td>Swagger、WSDL、Odata和資料庫</td> 
   </tr> 
   <tr> 
-   <td>圖樣</td> 
+   <td>pattern</td> 
    <td>指定固定的字元順序。 只有在字元符合指定的模式時，才能成功驗證輸入字串。</td> 
    <td>Swagger</td> 
   </tr> 
