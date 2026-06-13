@@ -11,18 +11,18 @@ role: User, Developer
 exl-id: 7240897f-6b3a-427a-abc6-66310c2998f3
 source-git-commit: f2c92b990a5c09cbcf532e0800e264620d98af77
 workflow-type: tm+mt
-source-wordcount: '4370'
+source-wordcount: '4312'
 ht-degree: 4%
 
 ---
 
 # 產生最適化表單或最適化表單片段的記錄檔案 {#generate-document-of-record-for-adaptive-forms}
 
-<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hant)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。 這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。 本文會介紹使用基礎元件編寫最適化表單的舊方法。</span>
+<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。 這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。 本文會介紹使用基礎元件編寫最適化表單的舊方法。</span>
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/generate-document-of-record-for-non-xfa-based-adaptive-forms.html?lang=zh-Hant) |
+| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/generate-document-of-record-for-non-xfa-based-adaptive-forms.html) |
 | AEM 6.5 | 本文章 |
 
 
@@ -251,7 +251,7 @@ ht-degree: 4%
 
 1. 選取&#x200B;**Forms — 記錄檔案**&#x200B;類別。
 1. 選取&#x200B;**DoR基底範本**。
-1. 按一下[下一步]&#x200B;**&#x200B;**&#x200B;並提供必要的資訊。
+1. 按一下[下一步]****&#x200B;並提供必要的資訊。
 
 1. （選擇性）修改您要在記錄檔案中欄位上套用的欄位樣式和外觀。
 1. 儲存表單。
@@ -420,12 +420,12 @@ ht-degree: 4%
 **表單層級設定**
 
 * **[!UICONTROL 基本]**
-   * **範本：**&#x200B;您可以選取[預設]或[自訂]範本。
+   * **範本：**您可以選取[預設]或[自訂]範本。
      ![替代文字](image.png)
    * **強調色：**&#x200B;您可以預先定義[!UICONTROL 記錄檔案]的範本顏色。
    * **字型系列：**&#x200B;為[!UICONTROL 記錄檔案]文字選取字型型別。
    * **包含未繫結欄位於DoR：**&#x200B;設定屬性包含來自[!UICONTROL 記錄檔案]中結構描述型最適化表單的未繫結欄位。 預設為true。
-   * **若隱藏則從DoR排除欄位：**&#x200B;設定屬性以在表單提交時從[!UICONTROL 記錄檔案]排除隱藏欄位。 當您在伺服器[&#128279;](/help/forms/using/configuring-submit-actions.md#server-side-revalidation-in-adaptive-form-server-side-revalidation-in-adaptive-form)上啟用重新驗證時，伺服器會先重新計算隱藏的欄位，然後再從[!UICONTROL 記錄檔案]中排除這些欄位
+   * **若隱藏則從DoR排除欄位：**&#x200B;設定屬性以在表單提交時從[!UICONTROL 記錄檔案]排除隱藏欄位。 當您在伺服器](/help/forms/using/configuring-submit-actions.md#server-side-revalidation-in-adaptive-form-server-side-revalidation-in-adaptive-form)上啟用[重新驗證時，伺服器會先重新計算隱藏的欄位，然後再從[!UICONTROL 記錄檔案]中排除這些欄位
 * **[!UICONTROL 表單欄位屬性]**
    * 如果勾選選項&#x200B;**對於核取方塊與選項按鈕元件，只顯示選取的值**，它將只產生具有選取值的DoR輸出。
    * 您可以為多個選取的值選取「分隔符號」，也可以選擇任何其他分隔符號型別。
@@ -434,7 +434,7 @@ ht-degree: 4%
       * 水平
       * 與自適應表單相同
      >[!NOTE]
-     > 「垂直」和「水準」對齊方式僅適用於     選項按鈕與核取方塊
+     > 「垂直」與「水準」對齊方式僅適用於「選項按鈕」與「核取方塊」
 * **[!UICONTROL 主版頁面屬性]**&#x200B;按一下以取得有關[主版頁面屬性](#master-page-properties-master-page-properties)的詳細資訊
 
 ## 在記錄檔案中套用分頁符號 {#apply-page-breaks-in-dor}

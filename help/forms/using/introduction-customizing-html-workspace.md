@@ -1,6 +1,6 @@
 ---
 title: 自訂AEM表單工作區簡介
-description: 快速介紹，其中包含概念和技術資訊，可自訂LiveCycleAEM Forms工作區的流程管理。
+description: 快速介紹，其中包含概念與技術資訊，以便針對程式管理自訂LiveCycle AEM Forms Workspace。
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -12,14 +12,14 @@ feature: HTML5 Forms,Adaptive Forms,Mobile Forms
 role: Admin, User, Developer
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '1752'
+source-wordcount: '1790'
 ht-degree: 0%
 
 ---
 
 # 自訂AEM表單工作區簡介{#introduction-to-customizing-aem-form-workspace}
 
-AEM表單工作區提供修改其介面的呈現語意和功能的功能。 以下說明用於變更樣式、版面、格式、品牌和核心功能的自訂型別。
+AEM表單工作區提供修改其介面之呈現語意和功能的功能。 以下說明用於變更樣式、版面、格式、品牌和核心功能的自訂型別。
 
 ![cu_customized_workspace_example](assets/cu_customized_workspace_example.png)
 
@@ -145,7 +145,7 @@ CSS自訂的頂層步驟為：
 
 #### HTML範本 {#html-template}
 
-HTML範本有助於定義工作區使用者介面的外觀和配置。 透過更新預設HTML範本，您可以自訂版面配置預設使用者介面。
+HTML範本可協助定義工作區使用者介面的外觀和版面配置。 透過更新預設HTML範本，您可以自訂版面配置預設使用者介面。
 
 HTML範本自訂的最上層步驟為：
 
@@ -182,7 +182,7 @@ HTML範本自訂的最上層步驟為：
 
 此範本主要用於自訂，因為它提供產生以下內容的功能：
 
-* 出貨、偵錯和開發設定檔的CRX套件(在[CRX套件](../../forms/using/introduction-customizing-html-workspace.md#p-crx-package-p)中提到)。
+* 出貨、偵錯和開發設定檔的CRX套件（在[CRX套件](../../forms/using/introduction-customizing-html-workspace.md#p-crx-package-p)中提到）。
 * 自訂程式碼的縮製版本（用於語意變更）。
 
 #### WS內容 {#ws-content}
@@ -194,7 +194,7 @@ HTML範本自訂的最上層步驟為：
 
 * client-html：
 
-   * 元件 — 包含指令碼用於建立AEM Forms工作區SDK的zip.xml。
+   * assembly — 包含指令碼用來建立AEM Forms工作區SDK的zip.xml。
    * src/main/webapp -
 
       * css — 包含AEM Forms工作區的樣式表。
@@ -202,7 +202,7 @@ HTML範本自訂的最上層步驟為：
       * js：
 
          * libs — 包含AEM Forms工作區中使用的所有協力廠商程式庫。
-         * licenses — 包含HTML和JS檔案的授權，以及讓這些授權成為個別原始程式檔字首的程式碼。
+         * 授權 — 包含HTML和JS檔案的授權，以及這些授權各自來源檔案前置碼的程式碼。
          * minifier — 用於組合、縮制和升級customizedJavaScript程式碼。
          * resourcejs_optimizer — 用於JavaScript來源的組合、縮制和升級。
          * resource_generator — 用於產生register.js和modelcontrollerpath.js。
@@ -210,7 +210,7 @@ HTML範本自訂的最上層步驟為：
 
             * 初始設定式 — 包含用於初始化AEM Forms工作區中使用的骨幹檢視和模型的initializer.js。
             * 模型 — 包含AEM Forms工作區中所有元件的主幹模型。
-            * 路由 — 包含JavaScript檔案和HTML檔案，會在AEM Forms工作區中載入啟動程式、待辦事項、追蹤和偏好設定。
+            * 路由 — 包含JavaScript檔案和HTML檔案，可在AEM Forms工作區中載入啟動程式、待辦事項、追蹤和偏好設定。
             * 服務 — 包含用於AEM Forms工作區的service.js。 所有伺服器呼叫都是透過service.js進行。
             * 範本 — 包含所有範本，即AEM Forms工作區中所有檢視的HTML檔案。
             * util — 包含在AEM Forms工作區中使用的所有公用程式檔案(javascript)。
@@ -219,7 +219,7 @@ HTML範本自訂的最上層步驟為：
          * main.js
          * router.js
 
-      * libs/ws： pdf.html和pluginPing.pdf用於載入AEM Forms工作區中的PDF forms，而WSNextAdapter.swf用於載入AEM Forms工作區中的SWF表單和參考線。
+      * libs/ws： pdf.html和pluginPing.pdf用於載入AEM Forms工作區中的PDF forms，而WSNextAdapter.swf用於載入AEM Forms工作區中的SWF表單和Guides。
       * 地區設定：
 
          * de-DE — 包含德文的translation.json。
@@ -239,9 +239,9 @@ CRX套件可部署在CRX™存放庫上。 它在`[LC root]\crx-repository\insta
 
 | **設定檔** | **說明** | **使用狀況** |
 |---|---|---|
-| 出貨設定檔 | 此設定檔會使用縮制來建立儘可能最小的CRX套件。 此套件最有效率。 所有JavaScript™檔案會合併並縮製為單一JS檔案。 | 當JS檔案中不需要進一步語意變更時，使用此設定檔。 |
+| 出貨設定檔 | 此設定檔會使用縮制來建立儘可能最小的CRX套件。 此套件最有效率。 所有™檔案會合併並縮製為單一JS檔案。 | 當JS檔案中不需要進一步語意變更時，使用此設定檔。 |
 | 偵錯設定檔 | 此設定檔會建立中等效率的CRX套件。 套件的大小略大於使用「出貨」設定檔建立的套件。 此套件已將大部分JavaScript檔案合併為單一JS檔案。 | 使用此設定檔進行偵錯。 |
-| 開發設定檔 | 此設定檔會建立最大可能大小的CRX套件。 所有JavaScript檔案都可單獨使用，因為它們位於SDK套件中。 | 在合併語意變更時使用此設定檔。 |
+| 開發設定檔 | 此設定檔會建立最大可能大小的CRX套件。 所有JavaScript檔案都可單獨使用，就像在SDK套件中一樣。 | 在合併語意變更時使用此設定檔。 |
 
 #### 出貨設定檔 {#ship-profile}
 
@@ -352,7 +352,7 @@ mvn clean -P在client-pkg上安裝開發
 
       * 初始設定式 — 包含初始設定式.js和modelcontrollerpath.js。
       * 模型 — 包含AEM Forms工作區中所有元件的模型。
-      * 路由 — 包含JavaScript檔案和HTML檔案，會在AEM Forms工作區中載入啟動程式、待辦事項、追蹤和偏好設定。
+      * 路由 — 包含JavaScript檔案和HTML檔案，可在AEM Forms工作區中載入啟動程式、待辦事項、追蹤和偏好設定。
       * 服務 — 包含用於AEM Forms工作區的service.js。
       * 範本 — 包含所有範本，即AEM Forms工作區中所有元件的HTML檔案。
       * util — 包含在AEM Forms工作區中使用的所有公用程式檔案(JavaScript)。

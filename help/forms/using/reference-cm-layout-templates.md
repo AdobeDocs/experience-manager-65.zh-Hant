@@ -10,7 +10,7 @@ feature: Adaptive Forms,Foundation Components
 role: Admin, User, Developer
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '453'
+source-wordcount: '476'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 在「通訊管理」中，信函範本包含典型的表單欄位、版面配置功能（如頁首和頁尾）以及用於置入內容的空白「目標區域」。
 
-通訊管理在[AEM Forms附加元件套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=zh-Hant)中提供信件範本。 您可以根據品牌和業務需求在Designer中自訂範本。 此套件包含下列範本：
+通訊管理在[AEM Forms附加元件套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en)中提供信件範本。 您可以根據品牌和業務需求在Designer中自訂範本。 此套件包含下列範本：
 
 * Classic
 * Classic簡單
@@ -58,7 +58,7 @@ Classic範本的頂端有標誌，適合使用簡單的專業字母。
 
 ![連絡資訊片段](assets/classicsimple.png)
 
-使用Classic Simple範本建立的字母的PDF預覽
+使用Classic Simple範本建立的信函的PDF預覽
 
 ## 向左平衡 {#balanced-left}
 
@@ -66,7 +66,7 @@ Classic範本的頂端有標誌，適合使用簡單的專業字母。
 
 ![balancedleft](assets/balancedleft.png)
 
-使用「左方平衡」範本建立之信件的PDF預覽
+使用「左側平衡」範本建立之信件的PDF預覽
 
 ## 向右平衡 {#balanced-right}
 
@@ -74,7 +74,7 @@ Balanced Right範本左側有公司標誌，並提供空間在信函本身中輸
 
 ![balancedright](assets/balancedright.png)
 
-使用「向右平衡」範本建立之信函的PDF預覽
+使用「向右平衡」範本建立之信件的PDF預覽
 
 ## 視覺化左側 {#visual-left}
 
@@ -90,7 +90,7 @@ Visual Left範本在頁面左側有一個側標題，並將公司標誌放在側
 
 ![visualtop](assets/visualtop.png)
 
-使用Visual Top範本建立的字母的PDF預覽
+使用Visual Top範本建立的信函的PDF預覽
 
 ## Visual Top — 傳統 {#visual-top-classic}
 
