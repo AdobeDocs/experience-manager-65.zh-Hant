@@ -300,7 +300,7 @@ ht-degree: 1%
 | SocialSecurityNumber | 1234567 | 文字{999-99-9999} | 1-23-4567 | 預設值欄位中的位數小於「模式」欄位中的位數。 模式會套用至7個可用的數字。 |
 | SocialSecurityNumber | 1234567890 | 文字{999-99-9999} | 1234567890 | 預設值欄位的位數大於「模式」欄位的位數。 因此，顯示值不會變更。 |
 
-如果沒有為變數或表單資料模型元素指定顯示模式，則預設會使用[全域檔案片段組態](https://helpx.adobe.com//experience-manager/6-5/forms/using/interactive-communication-configuration-properties.html)。
+如果沒有為變數或表單資料模型元素指定顯示模式，則預設會使用[全域檔案片段組態](https://helpx.adobe.com/tw//experience-manager/6-5/forms/using/interactive-communication-configuration-properties.html)。
 
 如果您沒有將顯示模式套用至數字資料型別的變數，列印預覽會根據全域檔案片段組態顯示模式。 如果您將變更套用至預設全域檔案片段組態，Agent UI仍會根據為地區設定的預設分隔符號顯示模式。
 
@@ -618,7 +618,7 @@ PrintChannelRenderOptions renderOptions = new PrintChannelRenderOptions();
 PrintDocument printDocument = printChannel.render(renderOptions);
 ```
 
-若要以任何其他格式產生輸出，請指定輸出格式型別。 如需支援的輸出格式型別清單，請參閱[PrintChannel API](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/PrintConfig.html)。
+若要以任何其他格式產生輸出，請指定輸出格式型別。 如需支援的輸出格式型別清單，請參閱[PrintChannel API](https://helpx.adobe.com/tw/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/PrintConfig.html)。
 
 例如，您可以使用下列範例將PCL定義為互動式通訊的輸出格式：
 

@@ -120,7 +120,7 @@ Scope of metadata articles:
 
 <!--
 TBD: Revisit to find out the correct config. and update these steps. When fixed, also o
-These steps have been carried forward from old AEM versions. See https://helpx.adobe.com/experience-manager/6-2/assets/using/metadata-profiles.html#ApplyingaMetadataProfiletoFolders
+These steps have been carried forward from old AEM versions. See https://helpx.adobe.com/tw/experience-manager/6-2/assets/using/metadata-profiles.html#ApplyingaMetadataProfiletoFolders
 
 ### Configuration to apply a metadata profile globally {#apply-a-metadata-profile-globally}
 
@@ -280,7 +280,7 @@ To apply a metadata profile globally, follow these steps:
 >
 >* [中繼資料概念與瞭解](metadata-concepts.md)。
 >* [編輯多個集合的中繼資料屬性](manage-collections.md#editing-collection-metadata-in-bulk)。
->* [在Experience Manager Assets中匯入和匯出中繼資料](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/metadata-import-export.html)。
+>* [在Experience Manager Assets中匯入和匯出中繼資料](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/metadata-import-export.html?lang=zh-Hant)。
 >* [處理中繼資料、影像和影片的設定檔](processing-profiles.md)。
 >* [組織您的數位資產以使用處理設定檔的最佳實務](/help/assets/organize-assets.md)。
 >* [XMP回寫](/help/assets/xmp-writeback.md)。
