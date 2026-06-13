@@ -11,7 +11,7 @@ feature: Adaptive Forms,Document Security
 role: User, Developer
 source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '1716'
+source-wordcount: '1719'
 ht-degree: 0%
 
 ---
@@ -24,9 +24,9 @@ ht-degree: 0%
 
 AEM表單提供兩種啟用單一登入(SSO)的方式 — HTTP標題和SPNEGO。
 
-實作SSO時，AEM Forms使用者登入頁面不是必要頁面，且若使用者已透過其公司入口網站驗證，也不會顯示。
+實作SSO時，AEM表單使用者登入頁面不是必要頁面，且不會在使用者已透過其公司入口網站驗證時顯示。
 
-如果AEM Forms無法使用其中一種方法來驗證使用者，系統會將使用者重新導向至登入頁面。
+如果AEM表單無法使用其中一種方法來驗證使用者，系統會將使用者重新導向至登入頁面。
 
 * [使用HTTP標頭啟用SSO](#enable-sso-using-http-headers)
 * [使用SPNEGO啟用SSO](#enable-sso-using-spnego)
@@ -34,7 +34,7 @@ AEM表單提供兩種啟用單一登入(SSO)的方式 — HTTP標題和SPNEGO。
 
 ## 使用HTTP標頭啟用SSO {#enable-sso-using-http-headers}
 
-您可以使用「入口網站組態」頁面，在應用程式與任何支援透過HTTP標題傳送身分的應用程式之間，啟用單一登入(SSO)。 實作SSO時，AEM Forms使用者登入頁面不是必要頁面，且若使用者已透過其公司入口網站驗證，也不會顯示。
+您可以使用「入口網站組態」頁面，在應用程式與任何支援透過HTTP標題傳送身分的應用程式之間，啟用單一登入(SSO)。 實作SSO時，AEM表單使用者登入頁面不是必要頁面，且不會在使用者已透過其公司入口網站驗證時顯示。
 
 您也可以使用SPNEGO來啟用SSO。 （請參閱[使用SPNEGO](enabling-single-sign-on-aem.md#enable-sso-using-spnego)啟用SSO。）
 
@@ -66,7 +66,7 @@ AEM表單提供兩種啟用單一登入(SSO)的方式 — HTTP標題和SPNEGO。
 
 ## 使用SPNEGO啟用SSO {#enable-sso-using-spnego}
 
-在Windows環境中使用Active Directory做為LDAP伺服器時，您可以使用簡單且受保護的GSSAPI交涉機制(SPNEGO)來啟用單一登入(SSO)。 啟用SSO時，AEM Forms使用者登入頁面不是必要專案，也不會出現。
+在Windows環境中使用Active Directory做為LDAP伺服器時，您可以使用簡單且受保護的GSSAPI交涉機制(SPNEGO)來啟用單一登入(SSO)。 啟用SSO時，AEM表單使用者登入頁面不是必要專案，也不會顯示。
 
 您也可以使用HTTP標頭來啟用SSO。 （請參閱[使用HTTP標頭啟用SSO](enabling-single-sign-on-aem.md#enable-sso-using-http-headers)。）
 
@@ -75,7 +75,7 @@ AEM表單提供兩種啟用單一登入(SSO)的方式 — HTTP標題和SPNEGO。
 >JEE上的AEM Forms不支援在多個子網域環境中使用Kerberos/SPNEGO來設定SSO。
 
 1. 決定要使用哪個網域來啟用SSO。 AEM Forms Server和使用者必須屬於相同的Windows網域或受信任的網域。
-1. 在Active Directory中，建立代表AEM Forms伺服器的使用者。 （請參閱[建立使用者帳戶](enabling-single-sign-on-aem.md#create-a-user-account)。）如果您要設定多個網域來使用SPNEGO，請確定每個使用者的密碼不同。 如果密碼不同，SPNEGO SSO將無法運作。
+1. 在Active Directory中，建立代表AEM Forms伺服器的使用者。 （請參閱[建立使用者帳戶](enabling-single-sign-on-aem.md#create-a-user-account)。） 如果您要設定多個網域來使用SPNEGO，請確定每個使用者的密碼不同。 如果密碼不同，SPNEGO SSO將無法運作。
 1. 對應服務主體名稱。 (請參閱[對應服務主要名稱(SPN)](enabling-single-sign-on-aem.md#map-a-service-principal-name-spn)。)
 1. 設定網域控制站。 （請參閱[防止Kerberos完整性檢查失敗](enabling-single-sign-on-aem.md#prevent-kerberos-integrity-check-failures)。）
 1. 新增或編輯企業網域，如[新增網域](/help/forms/using/admin-help/adding-domains.md#adding-domains)或[編輯及轉換現有網域](/help/forms/using/admin-help/editing-converting-existing-domains.md#editing-and-converting-existing-domains)中所述。 當您建立或編輯企業網域時，請執行下列工作：
@@ -155,7 +155,7 @@ ktpass -princ HTTP/lcserver.um.lc.com@UM.LC.COM -mapuser spnegodemo
 
 若要讓SPNEGO式驗證能夠運作，使用者端電腦必須是建立使用者帳戶的網域的一部分。 您也必須設定使用者端瀏覽器以允許以SPNEGO為基礎的驗證。 此外，需要SPNEGO式驗證的網站必須是受信任的網站。
 
-如果使用電腦名稱(例如https://lcserver:8080)存取伺服器，則Internet Explorer不需要任何設定。 如果您輸入的URL不含任何點(「。」)，Internet Explorer會將網站視為近端內部網路網站。 如果您使用網站的完整名稱，則必須將網站新增為信任的網站。
+如果使用電腦名稱（例如https://lcserver:8080）存取伺服器，則Internet Explorer不需要任何設定。 如果您輸入的URL不含任何點(「。」)，Internet Explorer會將網站視為近端內部網路網站。 如果您使用網站的完整名稱，則必須將網站新增為信任的網站。
 
 **設定Internet Explorer 6.x**
 
@@ -169,7 +169,7 @@ ktpass -princ HTTP/lcserver.um.lc.com@UM.LC.COM -mapuser spnegodemo
 
 1. 在瀏覽器URL方塊中，輸入`about:config`
 
-   這時會出現about：config - Mozilla Firefox對話方塊。
+   會出現關於:config - Mozilla Firefox對話方塊。
 
 1. 在篩選方塊中，輸入`negotiate`
 1. 在顯示的清單中，按一下network.negotiate-auth.trusted-uri，然後輸入下列適合您環境的命令：
@@ -186,10 +186,10 @@ ktpass -princ HTTP/lcserver.um.lc.com@UM.LC.COM -mapuser spnegodemo
 
 1. 在JEE環境中登入您的AEM Forms 。
 1. 在管理控制檯中，按一下「設定」>「使用者管理」>「網域管理」。
-1. 選取您的網域設定，例如LDAP，然後按一下它。 您可以在「目錄」中找到所有已建立的使用者和群組。 如有需要，您可以建立新的使用者或群組。
+1. 選取您的網域設定，例如LDAP，然後按一下它。您可以在「目錄」中找到所有已建立的使用者和群組。如有需要，您可以建立新的使用者或群組。
    ![網域管理頁面](/help/forms/using/assets/domain-mgmt-page.png)
 1. 按一下「驗證」，在新頁面上選取「驗證提供者」，例如LDAP。
-1. 瀏覽至「網域管理」頁面，選取LDAP，然後按一下[立即同步] **，將目錄與您設定的驗證配置同步處理，以進行AEM存取。**
+1. 導覽至「網域管理」頁面，選取LDAP，然後按一下「立即同步&#x200B;**」**，將目錄與您設定的驗證配置同步處理，以存取AEM。
    ![同步LDAP](/help/forms/using/assets/sync-ldap.png)
 1. 前往使用者管理，然後按一下使用者和群組。
 1. 搜尋具有其名稱的使用者或群組，如下圖所示。

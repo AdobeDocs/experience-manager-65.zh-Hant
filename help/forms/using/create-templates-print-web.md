@@ -10,7 +10,7 @@ solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
-source-wordcount: '1790'
+source-wordcount: '1820'
 ht-degree: 1%
 
 ---
@@ -23,13 +23,13 @@ ht-degree: 1%
 
 若要建立互動式通訊，您必須在AEM伺服器上為「列印」和「Web管道」提供範本。
 
-列印管道的範本是在AdobeForms Designer中建立並上傳至AEM伺服器。 然後，這些範本便可在建立互動式通訊時使用。
+列印管道的範本是在Adobe Forms Designer中建立並上傳至AEM伺服器。 然後，這些範本便可在建立互動式通訊時使用。
 
-Web channel的範本是在AEM中建立。 範本作者和管理員可以建立、編輯及啟用網頁範本。 建立並啟用後，這些範本便可在建立互動式通訊時使用。
+Web Channel的範本是在AEM中建立。 範本作者和管理員可以建立、編輯及啟用網頁範本。 建立並啟用後，這些範本便可在建立互動式通訊時使用。
 
 本教學課程將逐步帶您瞭解如何建立列印和Web管道範本，以便您在建立互動式通訊時使用這些範本。 在本教學課程結束時，您將能夠：
 
-* 使用AdobeForms Designer為列印頻道建立XDP範本
+* 使用Adobe Forms Designer為列印管道建立XDP範本
 * 將XDP範本上傳至AEM Forms伺服器
 * 建立和啟用網頁管道的範本
 

@@ -8,7 +8,7 @@ role: Admin, User, Developer
 exl-id: 00073e3a-f1b5-4c42-9fea-4a14b8a22c81
 source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
 workflow-type: tm+mt
-source-wordcount: '3498'
+source-wordcount: '3342'
 ht-degree: 2%
 
 ---
@@ -59,8 +59,8 @@ AEM Forms 6.5包含JavaScript函式，可讓您使用規則編輯器定義複雜
 * `@func [functionName] <Function Name>`
 
 >[!NOTE]
->`[functionName]`是函式的名稱。 不允許空格。
->`<Function Name>` 是Adaptive Forms規則編輯器中函式的顯示名稱。
+>`[functionName]`是函式的名稱。不允許空格。
+>`<Function Name>`是Adaptive Forms規則編輯器中函式的顯示名稱。
 >如果函式名稱與函式本身的名稱相同，您可以在語法中省略`[functionName]`。
 
 #### 參數
@@ -473,10 +473,10 @@ var c = {
 1. 在`js`資料夾下建立名為`functions.js`的JavaScript檔案。
 1. 在`clientlibs`資料夾下建立名為`js.txt`的檔案。
 1. 儲存您的變更。
-已建立的檔案夾結構如下所示：
+建立的資料夾結構如下所示：
 
    ![已建立的用戶端資料庫檔案夾結構](/help/forms/using/assets/clientlibrary_folderstructure.png)
-1. 連按兩下`functions.js`檔案以開啟編輯器。 此檔案包含自訂函式的程式碼。
+1. 連按兩下`functions.js`檔案以開啟編輯器。此檔案包含自訂函式的程式碼。
 將下列程式碼新增至JavaScript檔案，以根據出生日期計算年齡(YYYY-MM-DD)。
 
    ```javascript
@@ -537,7 +537,7 @@ var c = {
 ## 在最適化表單中使用自訂函式 {#use-custom-functions}
 
 在最適化表單中，您可以在規則編輯器[&#128279;](/help/forms/using/rule-editor-core-components.md)中使用自訂函式。
-讓我們將下列程式碼新增至JavaScript檔案（`Function.js`檔案），以根據出生日期(YYYY-MM-DD)計算年齡。 建立自訂函式為`calculateAge()`，它以出生日期作為輸入並傳回年齡：
+讓我們將下列程式碼新增至JavaScript檔案（`Function.js`檔案），根據出生日期計算年齡(YYYY-MM-DD)。建立自訂函式為`calculateAge()`，此函式以出生日期作為輸入並傳回年齡：
 
 ```javascript
     /**
@@ -776,7 +776,7 @@ In the above code snippet, a custom function named `updateDateTime` takes parame
 
 #### **使用案例**：在欄位層級顯示自訂訊息並將欄位標籤為無效
 
-您可以使用`markFieldAsInvalid()`函式將欄位定義為無效，並在欄位層級設定自訂錯誤訊息。 `fieldIdentifier`值可以是`fieldId`、`field qualifiedName`或`field dataRef`。 名稱為`option`的物件值可以是`{useId: true}`、`{useQualifiedName: true}`或`{useDataRef: true}`。
+您可以使用`markFieldAsInvalid()`函式將欄位定義為無效，並在欄位層級設定自訂錯誤訊息。`fieldIdentifier`值可以是`fieldId`、`field qualifiedName`或`field dataRef`。名稱為`option`的物件值可以是`{useId: true}`、`{useQualifiedName: true}`或`{useDataRef: true}`。
 用於將欄位標示為無效並設定自訂訊息的語法如下：
 
 * `globals.functions.markFieldAsInvalid(field.$id,"[custom message]",{useId: true});`

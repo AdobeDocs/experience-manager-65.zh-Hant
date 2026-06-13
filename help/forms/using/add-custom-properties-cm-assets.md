@@ -11,7 +11,7 @@ solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
-source-wordcount: '4434'
+source-wordcount: '4415'
 ht-degree: 4%
 
 ---
@@ -63,7 +63,7 @@ ht-degree: 4%
 
       ![重疊節點](assets/cmmetapropertiesoverlaynode.png)
 
-   1. 按一下&#x200B;**確定**。 資料夾結構會在apps資料夾中建立。
+   1. 按一下&#x200B;**「確定」**。 資料夾結構會在apps資料夾中建立。
 
    1. 按一下&#x200B;**「儲存全部」**。
 
@@ -77,7 +77,7 @@ ht-degree: 4%
 
       **名稱：**&#x200B;地理位置（或您要指定給此屬性的名稱）
 
-      **型別：** nt：unstructured
+      **型別：** nt:unstructured
 
       ![建立節點： GeoLocation](assets/geographicallocationcreatenode.png)
 
@@ -114,7 +114,7 @@ ht-degree: 4%
    `/libs/fd/cm/ma/gui/content/cmmetadataproperties/commonproperties/col1/items`
 
 1. 在新建立的覆蓋節點下(/apps/fd/cm/ma/gui/content/cmmetadataproperties/commonproperties/col1/items)
-為每個屬性（欄位）建立節點，您需要為它們建立nt：unstructured型別的下拉式清單（這裡`geographicallocation`）。
+為每個屬性（欄位）建立節點，您需要為它們建立nt:unstructured型別的下拉式清單（這裡`geographicallocation`）。
 1. 將下列屬性新增至節點（此處為geographicallocation），然後按一下&#x200B;**儲存全部**：
 
    <table>
@@ -132,7 +132,7 @@ ht-degree: 4%
    <tr>
       <td>名稱</td>
       <td>字串</td>
-      <td>./extendedproperties/geographicallocation （讓值與您在items節點下建立的欄位名稱相同）</td>
+      <td>./extendedproperties/geographicallocation （讓值與您在「專案」節點下建立的欄位名稱相同）</td>
    </tr>
    <tr>
       <td>renderReadOnly</td>
@@ -150,7 +150,7 @@ ht-degree: 4%
 1. 在屬性節點（此處為geographicallocation）下，新增名稱為`items`的新節點。 在專案節點底下，為下拉式清單中的值新增一個節點。 好的做法是將第一個節點新增為空白，作為下拉式清單的預設值，並新增選項讓使用者指定欄位無值。 若要新增多個選項/下拉式清單值，請重複下列步驟：
 
    1. 用滑鼠右鍵按一下屬性節點（此處為geographicallocation），然後選取&#x200B;**建立** > **建立節點**。
-   1. 輸入欄位名稱作為`item1,`，保留型別為nt：unstructured，然後按一下&#x200B;**確定**。
+   1. 輸入欄位名稱作為`item1,`，保留型別為nt:unstructured，然後按一下&#x200B;**確定**。
    1. 將下列屬性新增至新建立的節點（此處為item1），然後按一下[儲存全部] **&#x200B;**：
 
       <table>
@@ -204,7 +204,7 @@ ht-degree: 4%
 
       **符合節點型別：已選取**
 
-   1. 按一下&#x200B;**確定**。 資料夾結構會在apps資料夾中建立。
+   1. 按一下&#x200B;**「確定」**。 資料夾結構會在apps資料夾中建立。
 
       ![在CRX中建立的覆蓋資料夾結構](assets/cmmetadatapropertiesappsfolder.png)
 
@@ -220,7 +220,7 @@ ht-degree: 4%
 
       **名稱：** commontab （或您要指定給此屬性的名稱）
 
-      **型別：** nt：unstructured
+      **型別：** nt:unstructured
 
    1. 按一下您已建立的新節點（此處為「共用標籤」）。 CRX會顯示節點的屬性。
    1. 將下列屬性新增至節點（此處為commontab）：
@@ -254,7 +254,7 @@ ht-degree: 4%
 
       **名稱：**&#x200B;專案
 
-      **型別：** nt：unstructured
+      **型別：** nt:unstructured
 
    1. 按一下&#x200B;**儲存全部：**
 
@@ -265,7 +265,7 @@ ht-degree: 4%
 
       **名稱：** Column1 （或您要指定給節點的名稱 — 此名稱未出現在使用者介面中。）
 
-      **型別：** nt：unstructured
+      **型別：** nt:unstructured
 
    1. 將下列屬性新增至節點（此處為Column1），然後按一下&#x200B;**儲存全部**：
 
@@ -291,18 +291,18 @@ ht-degree: 4%
 
       **名稱：**&#x200B;專案
 
-      **型別：** nt：unstructured
+      **型別：** nt:unstructured
 
    1. 按一下&#x200B;**「儲存全部」**。
 
-1. 若要在自訂標籤中建立欄位（這裡是收件者），請新增節點（這裡是GeographicLocation）。 此屬性會對應至您建立的欄。 使用以下步驟建立欄位（若要建立更多欄位/節點，請重複這些步驟。）：
+1. 若要在自訂標籤中建立欄位（這裡是收件者），請新增節點（這裡是GeographicLocation）。 此屬性會對應至您建立的欄。 使用下列步驟建立欄位（若要建立更多欄位/節點，請重複這些步驟）：
 
    1. 用滑鼠右鍵按一下專案節點，然後選取&#x200B;**建立** > **建立節點**。
    1. 確定[建立節點]對話方塊具有下列值，然後按一下[確定] **&#x200B;**：
 
       **名稱：**&#x200B;地理位置（或欄位屬性的其他名稱）
 
-      **型別：** nt：unstructured
+      **型別：** nt:unstructured
 
    1. 將下列屬性新增至欄位節點（此處為GeographicLocation），然後按一下&#x200B;**儲存全部**。
 
@@ -333,7 +333,7 @@ ht-degree: 4%
 
       **符合節點型別：已選取**
 
-   1. 按一下&#x200B;**確定**。 資料夾隨即建立。 按一下&#x200B;**「儲存全部」**。
+   1. 按一下&#x200B;**「確定」**。 資料夾隨即建立。 按一下&#x200B;**「儲存全部」**。
 
 1. 在新建立的專案資料夾中，為資產中的自訂標籤新增節點（此處為mytab — 此名稱未顯示在使用者介面中），使用下列步驟：
 
@@ -342,7 +342,7 @@ ht-degree: 4%
 
       **名稱：** mytab （或您要指定給此屬性的名稱）
 
-      **型別：** nt：unstructured
+      **型別：** nt:unstructured
 
    1. 按一下您已建立的新節點（此處為「mytab」）。 CRX會顯示節點的屬性。
    1. 將下列兩個屬性新增至節點（此處為customtab）：
@@ -419,7 +419,7 @@ ht-degree: 4%
 
       **符合節點型別：已選取**
 
-   1. 按一下&#x200B;**確定**。 資料夾結構會在apps資料夾中建立。
+   1. 按一下&#x200B;**「確定」**。 資料夾結構會在apps資料夾中建立。
 
       按一下&#x200B;**「儲存全部」**。
 
@@ -430,7 +430,7 @@ ht-degree: 4%
 
       **名稱：** customtab （或您要指定給此屬性的名稱）
 
-      **型別：** nt：unstructured
+      **型別：** nt:unstructured
 
    1. 按一下您已建立的新節點（此處為「自訂」標籤）。 CRX會顯示節點的屬性。
    1. 將下列兩個屬性新增至節點（此處為customtab）：
@@ -449,7 +449,7 @@ ht-degree: 4%
 
       **名稱：**&#x200B;專案
 
-      **型別：** nt：unstructured
+      **型別：** nt:unstructured
 
    1. 按一下&#x200B;**「儲存全部」**。
 
@@ -460,7 +460,7 @@ ht-degree: 4%
 
       **名稱：** Column1 （或您要指定給節點的名稱）
 
-      **型別：** nt：unstructured
+      **型別：** nt:unstructured
 
    1. 將下列屬性新增至節點（此處為Column1），然後按一下&#x200B;**儲存全部**。
 
@@ -486,7 +486,7 @@ ht-degree: 4%
 
       **名稱：**&#x200B;專案
 
-      **型別：** nt：unstructured
+      **型別：** nt:unstructured
 
    1. 按一下&#x200B;**儲存全部：**
 
@@ -497,7 +497,7 @@ ht-degree: 4%
 
       **名稱：**&#x200B;您選擇的名稱（這裡是地理位置）
 
-      **型別：** nt：unstructured
+      **型別：** nt:unstructured
 
    1. 將下列屬性新增至節點，然後按一下[儲存全部]。**&#x200B;**
 
@@ -526,7 +526,7 @@ ht-degree: 4%
 
 1. 確定「覆蓋節點」對話方塊包含以下字母值。 對於其他資產型別，路徑如下表所示：
 
-   **路徑：** /libs/fd/cm/ma/gui/content/createasset/createletter/jcr：content/body/items/form/items/letterWizard/items/properties/items/properties/items/letterproperties/items
+   **路徑：** /libs/fd/cm/ma/gui/content/createasset/createletter/jcr:content/body/items/form/items/letterWizard/items/properties/items/properties/items/letterproperties/items
 
    **位置：** /apps/
 
@@ -536,13 +536,13 @@ ht-degree: 4%
 
    | **資產/檔案型別** | **要新增的路徑** |
    |---|---|
-   | 文字 | /libs/fd/cm/ma/gui/content/createasset/createtext/jcr：content/body/items/form/items/textwizard/items/editproperties/items/properties/items/tabs/items/tab1/items |
-   | 清單 | /libs/fd/cm/ma/gui/content/createasset/createlist/jcr：content/body/items/form/items/listwizard/items/editproperties/items/properties/items/tabs/items/tab1/items |
-   | 條件 | /libs/fd/cm/ma/gui/content/createasset/createcondition/jcr：content/body/items/form/items/conditionwizard/items/editproperties/items/properties/items/tabs/items/tab1/items |
-   | 片段 | /libs/fd/cm/ma/gui/content/createasset/createfragment/jcr：content/body/items/form/items/fragmentwizard/items/properties/items/properties/items/tabs2/items/tab1/items |
-   | 字母 | /libs/fd/cm/ma/gui/content/createasset/createletter/jcr：content/body/items/form/items/letterWizard/items/properties/items/properties/items/letterproperties/items |
+   | 文字 | /libs/fd/cm/ma/gui/content/createasset/createtext/jcr:content/body/items/form/items/textwizard/items/editproperties/items/properties/items/tabs/items/tab1/items |
+   | 清單 | /libs/fd/cm/ma/gui/content/createasset/createlist/jcr:content/body/items/form/items/listwizard/items/editproperties/items/properties/items/tabs/items/tab1/items |
+   | 條件 | /libs/fd/cm/ma/gui/content/createasset/createcondition/jcr:content/body/items/form/items/conditionwizard/items/editproperties/items/properties/items/tabs/items/tab1/items |
+   | 片段 | /libs/fd/cm/ma/gui/content/createasset/createfragment/jcr:content/body/items/form/items/fragmentwizard/items/properties/items/properties/items/tabs2/items/tab1/items |
+   | 字母 | /libs/fd/cm/ma/gui/content/createasset/createletter/jcr:content/body/items/form/items/letterWizard/items/properties/items/properties/items/letterproperties/items |
 
-1. 按一下&#x200B;**確定**。 資料夾結構會在apps資料夾中建立。
+1. 按一下&#x200B;**「確定」**。 資料夾結構會在apps資料夾中建立。
 
 1. 在您建立的覆蓋專案節點下，建立名稱為col4 （或任何其他名稱）的節點，然後按一下&#x200B;**「儲存全部」**。
 
@@ -599,13 +599,13 @@ ht-degree: 4%
 
    1. 請確定「覆蓋節點」對話方塊是否具備下列值：
 
-      **路徑：** /libs/fd/cm/ma/gui/content/cmassets/jcr：content/views/lists/columns
+      **路徑：** /libs/fd/cm/ma/gui/content/cmassets/jcr:content/views/lists/columns
 
       **位置：** /apps/
 
       **符合節點型別：已選取**
 
-   1. 按一下&#x200B;**確定**。 資料夾結構會在apps資料夾中建立。
+   1. 按一下&#x200B;**「確定」**。 資料夾結構會在apps資料夾中建立。
 
       按一下&#x200B;**「儲存全部」**。
 
@@ -616,7 +616,7 @@ ht-degree: 4%
 
       **名稱：**&#x200B;您選擇的名稱（此處為GeographicLocation）
 
-      **型別：** nt：unstructured
+      **型別：** nt:unstructured
 
    1. 將下列屬性新增至節點，然後按一下[儲存全部]。**&#x200B;**
 
@@ -663,7 +663,7 @@ ht-degree: 4%
 
       **符合節點型別：已選取**
 
-   1. 按一下&#x200B;**確定**。 資料夾結構會在apps資料夾中建立。
+   1. 按一下&#x200B;**「確定」**。 資料夾結構會在apps資料夾中建立。
 
       按一下&#x200B;**「儲存全部」**。
 
@@ -713,7 +713,7 @@ ht-degree: 4%
       %>
       ```
 
-      在程式碼中，GeoLocation是您在建立自訂節點/欄位時，於name屬性中設定的值。 建立自訂節點/欄位時，您指定屬性的名稱給。/extendedproperties/前置詞： 。/extendedproperties/GeoLocation。 在程式碼中，首碼並非必要。
+      在程式碼中，GeoLocation是您在建立自訂節點/欄位時，於name屬性中設定的值。 建立自訂節點/欄位時，您指定具有。/extendedproperties/首碼的屬性名稱： ./extendedproperties/GeoLocation。 在程式碼中，首碼並非必要。
 
    1. 若要在UI中顯示新屬性，請在結束tr (&lt;/tr>)標籤前新增TD標籤，如下所示：
 
@@ -750,7 +750,7 @@ ht-degree: 4%
  </tbody>
 </table>
 
-當您新增sling：orderBefore屬性以指定欄位置時，您也需要更新此程式的步驟6.4中指定的對應&lt;td>標籤的順序。 例如，在此案例中，您需要確保將「地理位置」的&lt;td>標籤置於「版本」欄的&lt;td>標籤之前：
+當您新增sling:orderBefore屬性以指定資料行位置時，也需要更新此程式的步驟6.4中指定的對應&lt;td>標籤的順序。 例如，在此案例中，您需要確保將「地理位置」的&lt;td>標籤置於「版本」欄的&lt;td>標籤之前：
 
 ```xml
 <td is="coral-td" value="<%= xssAPI.encodeForHTMLAttr(geographicalLocation) %>"><%= xssAPI.encodeForHTML(geographicalLocation) %></td>
@@ -773,23 +773,23 @@ ht-degree: 4%
 
       **名稱：**&#x200B;彙總
 
-      **型別：** nt：unstructured
+      **型別：** nt:unstructured
 
    1. 按一下&#x200B;**「儲存全部」**。
 
-1. 在新建立的彙總資料夾下，新增節點cm：resource。 在cm：resource底下，新增名為include0的節點。
+1. 在新建立的彙總資料夾下，新增節點cm:resource。 在cm:resource下，新增名為include0的節點。
 
    1. 用滑鼠右鍵按一下彙總資料夾，然後選取&#x200B;**建立** > **建立節點**。 確定[建立節點]對話方塊具有下列值，然後按一下[確定] **&#x200B;**：
 
-      **名稱：** cm：resource
+      **名稱：** cm:resource
 
-      **型別：** nt：unstructured
+      **型別：** nt:unstructured
 
-   1. 在cm：resource資料夾上按一下滑鼠右鍵，然後選取&#x200B;**建立** > **建立節點**。 確定[建立節點]對話方塊具有下列值，然後按一下[確定] **&#x200B;**：
+   1. 在cm:resource資料夾上按一下滑鼠右鍵，然後選取&#x200B;**建立** > **建立節點**。 確定[建立節點]對話方塊具有下列值，然後按一下[確定] **&#x200B;**：
 
       **名稱：** include0
 
-      **型別：** nt：unstructured
+      **型別：** nt:unstructured
 
    1. 按一下您已建立的新節點（此處為include0）。 CRX會顯示節點的屬性。
    1. 將下列屬性新增至節點（此處為include0）：
@@ -820,7 +820,7 @@ ht-degree: 4%
 
       **名稱：**&#x200B;位置（或您要新增至搜尋的自訂屬性名稱）
 
-      **型別：** nt：unstructured
+      **型別：** nt:unstructured
 
    1. 按一下您已建立的新節點（此處為位置）。 CRX會顯示節點的屬性。
    1. 將下列屬性新增至節點（此處為位置）：
@@ -840,7 +840,7 @@ ht-degree: 4%
 >
 >如果您還是無法搜尋，可能是因為索引問題。 若要重新索引，請前往以下節點並將屬性「重新索引」的值變更為true：
 >
->/oak：index/cmLucene&quot;並變更屬性的值
+>/oak:index/cmLucene&quot;並變更屬性的值
 
 ## 變更搜尋頁面的預設檢視 {#change-default-view-of-the-search-page}
 
@@ -859,7 +859,7 @@ ht-degree: 4%
 
       **符合節點型別：已選取**
 
-   1. 按一下&#x200B;**確定**。 資料夾結構會在apps資料夾中建立。
+   1. 按一下&#x200B;**「確定」**。 資料夾結構會在apps資料夾中建立。
 
    1. 按一下&#x200B;**「儲存全部」**。
 
@@ -891,7 +891,7 @@ ht-degree: 4%
 1. 前往`https://'[server]:[port]'/[ContextPath]/crx/de`並以管理員身分登入。
 1. 在apps資料夾中，建立名為list的資料夾，其路徑/結構類似於中的清單資料夾：
 
-   /libs/fd/cm/ma/gui/content/cmassets/jcr：content/views/
+   /libs/fd/cm/ma/gui/content/cmassets/jcr:content/views/
 
    1. 用滑鼠右鍵按一下下列路徑的專案資料夾，然後選取&#x200B;**覆蓋節點**：
 
@@ -899,13 +899,13 @@ ht-degree: 4%
 
    1. 請確定「覆蓋節點」對話方塊是否具備下列值：
 
-      **路徑：** /libs/fd/cm/ma/gui/content/cmassets/jcr：content/views/list
+      **路徑：** /libs/fd/cm/ma/gui/content/cmassets/jcr:content/views/list
 
       **位置：** /apps/
 
       **符合節點型別：已選取**
 
-   1. 按一下&#x200B;**確定**。 資料夾結構會在apps資料夾中建立。
+   1. 按一下&#x200B;**「確定」**。 資料夾結構會在apps資料夾中建立。
 
    1. 按一下&#x200B;**「儲存全部」**。
 
@@ -932,7 +932,7 @@ ht-degree: 4%
 
 若要顯示或隱藏自訂屬性，請完成下列步驟：
 
-1. 在自訂屬性節點（例如geographicallocation）底下，建立名稱為「granite：rendercondition」且型別為「nt：unstructured」的節點。
+1. 在自訂屬性節點（例如geographicallocation）下，建立名稱為「granite:rendercondition」且型別為「nt:unstructured」的節點。
 1. 將下列屬性新增至節點，然後按一下&#x200B;**全部儲存**：
 
    <table>

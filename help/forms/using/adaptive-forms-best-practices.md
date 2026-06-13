@@ -9,14 +9,14 @@ solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
 workflow-type: tm+mt
-source-wordcount: '6061'
+source-wordcount: '6030'
 ht-degree: 1%
 
 ---
 
 # 使用最適化表單的最佳作法 {#best-practices-for-working-with-adaptive-forms}
 
-<span class="preview"> Adobe建議使用現代且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hant)  針對[建立新的最適化Forms](/help/forms/using/create-an-adaptive-form-core-components.md)  或[將最適化Forms新增至AEM Sites頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。 這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。 本文會介紹使用基礎元件編寫最適化表單的舊方法。</span>
+<span class="preview"> Adobe建議針對[建立新的Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md)或[將Adaptive Forms新增至AEM Sites頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)，使用現代且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hant)。 這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。 本文會介紹使用基礎元件編寫最適化表單的舊方法。</span>
 
 ## 概觀 {#overview}
 

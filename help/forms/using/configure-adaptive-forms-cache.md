@@ -11,8 +11,8 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Foundation Components
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '857'
-ht-degree: 1%
+source-wordcount: '928'
+ht-degree: 2%
 
 ---
 
@@ -22,9 +22,9 @@ ht-degree: 1%
 
 ## 在製作和發佈執行個體設定調適型表單快取 {#configure-adaptive-forms-caching-at-author-and-publish-instances}
 
-1. 前往`https://[server]:[port]/system/console/configMgr`的AEM Web主控台組態管理員。
+1. 前往`https://[server]:[port]/system/console/configMgr`的AEM Web主控台設定管理員。
 1. 按一下&#x200B;**[!UICONTROL 最適化表單和互動式通訊Web Channel設定]**&#x200B;以編輯其設定值。
-1. 在[!UICONTROL 編輯設定值]對話方塊中，指定AEM [!DNL Forms]伺服器執行個體可以在&#x200B;**[!UICONTROL Number of Adaptive Forms]**&#x200B;欄位中快取的表單或檔案數目上限。 預設值為 100。
+1. 在[!UICONTROL 編輯設定值]對話方塊中，指定AEM [!DNL Forms]伺服器執行個體可在&#x200B;**[!UICONTROL 最適化Forms數目]**&#x200B;欄位中快取的表單或檔案數目上限。 預設值為 100。
 
    >[!NOTE]
    >
@@ -47,7 +47,7 @@ ht-degree: 1%
 
 ### 在Dispatcher上快取最適化表單的考量事項 {#considerations}
 
-* 使用最適化表單快取時，請使用AEM [!DNL Dispatcher]來快取最適化表單的使用者端資料庫(CSS和JavaScript)。
+* 使用最適化表單快取時，請使用AEM [!DNL Dispatcher]來快取最適化表單的使用者端資料庫（CSS和JavaScript）。
 * 開發自訂元件時，在用於開發的伺服器上，停用最適化表單快取。
 * 不會快取沒有副檔名的URL。 例如，快取模式為`/content/forms/[folder-structure]/[form-name].html`的URL，而快取會忽略模式為`/content/dam/formsanddocument/[folder-name]/<form-name>/jcr:content`的URL。 因此，請使用具有擴充功能的URL，以獲得快取的優點。
 * 本地化適用性表單的考量事項：
