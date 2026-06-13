@@ -287,7 +287,7 @@ Sling也可讓JCR節點以外的專案成為資源，但這是進階功能。
 
 這會使用Sling API套件、org.apache.sling.&amp;ast；和標籤程式庫。
 
-### 使用sling:include {#referencing-existing-elements-using-sling-include}參考現有元素
+### 使用sling:include參考現有元素 {#referencing-existing-elements-using-sling-include}
 
 最後考量是需要參考指令碼中的現有元素。
 

@@ -119,7 +119,7 @@ Tar微核心的冷待命容量可讓一或多個待命Adobe Experience Manager (
 
    在下方尋找主要執行個體的設定範例：
 
-   ****&#x200B;的範例&#x200B;**org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config**
+   **&#x200B;**&#x200B;的範例&#x200B;**org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config**
 
    ```xml
    org.apache.sling.installer.configuration.persist=B"false"
@@ -325,7 +325,7 @@ Tar微核心的冷待命容量可讓一或多個待命Adobe Experience Manager (
 
 您可以依照下列步驟執行此操作：
 
-1. 前往JMX主控台並使用**org.apache.jackrabbit.oak： Status (&quot;Standby&quot;)**bean，停止冷待命執行個體上的同步化程式。 如需如何執行此動作的詳細資訊，請參閱[監視](#monitoring)一節。
+1. 前往JMX主控台並使用&#x200B;**org.apache.jackrabbit.oak： Status (&quot;Standby&quot;)**&#x200B;bean，停止冷待命執行個體上的同步化程式。 如需如何執行此動作的詳細資訊，請參閱[監視](#monitoring)一節。
 1. 停止冷待命執行個體。
 1. 在主要執行個體上安裝Hotfix。 如需如何安裝Hotfix的詳細資訊，請參閱[如何使用套件](/help/sites-administering/package-manager.md)。
 1. 測試執行個體安裝後是否有問題。
