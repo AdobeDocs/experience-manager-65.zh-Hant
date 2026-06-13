@@ -1,6 +1,6 @@
 ---
-title: 組合PDFPortfolio
-description: 組合PDF組合以組合多種型別的檔案，包括Word檔案、影像檔案和PDF檔案。 您可以使用Java API和Web服務API組合PDF組合。
+title: 組合PDF產品組合
+description: 組合PDF產品組合以組合多種型別的檔案，包括word檔案、影像檔案和PDF檔案。 您可以使用Java API和Web服務API組合PDF產品組合。
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/assembling_pdf_documents
@@ -12,22 +12,22 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Services
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '1815'
+source-wordcount: '1842'
 ht-degree: 0%
 
 ---
 
-# 組合PDFPortfolio {#assembling-pdf-portfolios}
+# 組合PDF產品組合 {#assembling-pdf-portfolios}
 
 **本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
 
-您可以使用組合器Java和網頁服務API組合PDFPortfolio。 產品組合可以組合多種型別的檔案，包括Word檔案、影像檔案（例如jpeg檔案）和PDF檔案。 投資組合的版面可設定為不同的樣式，例如&#x200B;*具有預覽的格線*、*在影像上*&#x200B;的版面，甚至&#x200B;*旋轉*。
+您可以使用組合器Java和Web服務API組合PDF Portfolio。 產品組合可以組合多種型別的檔案，包括Word檔案、影像檔案（例如jpeg檔案）和PDF檔案。 投資組合的版面可設定為不同的樣式，例如&#x200B;*具有預覽的格線*、*在影像上*&#x200B;的版面，甚至&#x200B;*旋轉*。
 
 下圖是影像&#x200B;*樣式配置上具有*&#x200B;的產品組合熒幕擷圖。
 
 ![ap_ap_portfolio](assets/ap_ap_portfolio.png)
 
-建立PDFPortfolio可作為傳遞檔案集合的無紙化替代方式。 使用AEM Forms，您可以透過叫用包含結構化DDX檔案的組合器服務來建立投資組合。 下列DDX檔案是建立PDFPortfolio的DDX檔案範例。
+建立PDF Portfolio可作為傳送一組檔案的無紙化替代方案。 使用AEM Forms，您可以透過叫用包含結構化DDX檔案的組合器服務來建立投資組合。 下列DDX檔案是建立PDF Portfolio的DDX檔案範例。
 
 ```xml
  <DDX xmlns="https://ns.adobe.com/DDX/1.0/">
@@ -63,7 +63,7 @@ DXX檔案必須包含具有巢狀`Navigator`標籤的`Portfolio`標籤。 請注
 
 ## 步驟摘要 {#summary-of-steps}
 
-若要建立PDFPortfolio，請執行下列工作：
+若要建立PDF Portfolio，請執行以下工作：
 
 1. 包含專案檔案。
 1. 建立PDF組合器使用者端。
@@ -82,8 +82,8 @@ DXX檔案必須包含具有巢狀`Navigator`標籤的`Portfolio`標籤。 請注
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-assembler-client.jar
-* adobe-utilities.jar (如果AEM Forms部署在JBoss上，則為必要)
-* jbossall-client.jar (如果AEM Forms部署在JBoss上，則為必要)
+* adobe-utilities.jar （如果AEM Forms部署在JBoss上，則為必要）
+* jbossall-client.jar （如果AEM Forms部署在JBoss上，則為必要）
 
 **建立PDF組合器使用者端**
 
@@ -91,13 +91,13 @@ DXX檔案必須包含具有巢狀`Navigator`標籤的`Portfolio`標籤。 請注
 
 **參考現有的DDX檔案**
 
-必須參考DDX檔案才能組合PDFPortfolio。 此DDX檔案必須包含`Portfolio`、`Navigator`和`PackageFiles`元素。
+必須參考DDX檔案才能組裝PDF Portfolio。 此DDX檔案必須包含`Portfolio`、`Navigator`和`PackageFiles`元素。
 
 **參考必要的檔案**
 
-要組裝PDFPortfolio，參照代表要組裝檔案的所有檔案。 例如，將DDX檔案中指定的所有影像檔案傳遞至組合器服務。 請注意，這些檔案參考於本節所指定的DDX檔案： *myImage.png*&#x200B;和&#x200B;*saint_bernard.jpg*。
+若要組裝PDF Portfolio，請參照代表要組裝的檔案的所有檔案。 例如，將DDX檔案中指定的所有影像檔案傳遞至組合器服務。 請注意，這些檔案參考於本節所指定的DDX檔案： *myImage.png*&#x200B;和&#x200B;*saint_bernard.jpg*。
 
-組裝PDFPortfolio時，請將NAV檔案（導覽器檔案）傳遞至Assembler服務。 您傳遞至組合器服務的NAV檔案取決於要建立的PDFPortfolio型別。 例如，若要在影像&#x200B;*配置上建立*，請傳遞AdobeOnImage.nav檔案。 您可以在下列資料夾中找到NAV檔案：
+組裝PDF Portfolio時，請將NAV檔案（導覽器檔案）傳遞至Assembler服務。 您傳遞至組合器服務的NAV檔案取決於要建立的PDF Portfolio型別。 例如，若要在影像&#x200B;*配置上建立*，請傳遞AdobeOnImage.nav檔案。 您可以在下列資料夾中找到NAV檔案：
 
 `<Install folder>\Acrobat 9.0\Acrobat\Navigators`
 
@@ -105,7 +105,7 @@ DXX檔案必須包含具有巢狀`Navigator`標籤的`Portfolio`標籤。 請注
 
 >[!NOTE]
 >
->與組裝PDFPortfolio相關的快速入門使用AdobeOnImage.nav。
+>與組合PDF產品組合相關的快速入門使用AdobeOnImage.nav。
 
 **設定執行階段選項**
 
@@ -113,17 +113,17 @@ DXX檔案必須包含具有巢狀`Navigator`標籤的`Portfolio`標籤。 請注
 
 **組合投資組合**
 
-若要組合PDFPortfolio，請呼叫`invokeDDX`作業。 組合器服務會傳回集合物件中的PDFPortfolio。
+若要組裝PDF Portfolio，請呼叫`invokeDDX`操作。 組合器服務會傳回集合物件中的PDF Portfolio 。
 
 **儲存組合的產品組合**
 
-在集合物件中傳回PDFPortfolio。 逐一檢視集合物件，並將PDFPortfolio儲存為PDF檔案。
+PDF Portfolio會在集合物件中傳回。 逐一檢視集合物件，並將PDF Portfolio儲存為PDF檔案。
 
 **另請參閱**
 
-[使用Java API組合PDFPortfolio](#assemble-a-pdf-portfolio-using-the-java-api)
+[使用Java API組合PDF Portfolio](#assemble-a-pdf-portfolio-using-the-java-api)
 
-[使用網站服務API組合PDFPortfolio](#assemble-a-pdf-portfolio-using-the-web-service-api)
+[使用網站服務API組合PDF Portfolio](#assemble-a-pdf-portfolio-using-the-web-service-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -131,9 +131,9 @@ DXX檔案必須包含具有巢狀`Navigator`標籤的`Portfolio`標籤。 請注
 
 [以程式設計方式組合PDF檔案](/help/forms/developing/programmatically-assembling-pdf-documents.md)
 
-## 使用Java API組合PDFPortfolio {#assemble-a-pdf-portfolio-using-the-java-api}
+## 使用Java API組合PDF Portfolio {#assemble-a-pdf-portfolio-using-the-java-api}
 
-使用組合器服務API (Java)組合PDFPortfolio：
+使用組合器服務API (Java)組合PDF Portfolio：
 
 1. 包含專案檔案。
 
@@ -169,30 +169,30 @@ DXX檔案必須包含具有巢狀`Navigator`標籤的`Portfolio`標籤。 請注
    叫用`AssemblerServiceClient`物件的`invokeDDX`方法，並傳遞下列必要值：
 
    * 代表要使用的DDX檔案的`com.adobe.idp.Document`物件
-   * 包含建置PDFPortfolio所需檔案的`java.util.Map`物件。
+   * 包含建置PDF Portfolio所需檔案的`java.util.Map`物件。
    * 指定執行階段選項（包括預設字型和作業記錄層級）的`com.adobe.livecycle.assembler.client.AssemblerOptionSpec`物件
 
-   `invokeDDX`方法傳回`com.adobe.livecycle.assembler.client.AssemblerResult`物件，其中包含組合的PDFPortfolio和發生的任何例外狀況。
+   `invokeDDX`方法傳回`com.adobe.livecycle.assembler.client.AssemblerResult`物件，其中包含已組裝的PDF Portfolio以及發生的任何例外狀況。
 
 1. 儲存組合的產品組合。
 
-   若要取得PDFPortfolio，請執行下列動作：
+   若要取得PDF Portfolio，請執行下列動作：
 
    * 叫用`AssemblerResult`物件的`getDocuments`方法。 此方法會傳回`java.util.Map`物件。
    * 逐一檢視`java.util.Map`物件，直到找到結果`com.adobe.idp.Document`物件為止。
-   * 叫用`com.adobe.idp.Document`物件的`copyToFile`方法來擷取PDFPortfolio。
+   * 叫用`com.adobe.idp.Document`物件的`copyToFile`方法來擷取PDF Portfolio。
 
 **另請參閱**
 
-[快速入門(SOAP模式)：使用Java API組合PDFPortfolio](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-pdf-portfolios-using-the-java-api)
+[快速入門（SOAP模式）：使用Java API組合PDF產品組合](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-pdf-portfolios-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-## 使用網站服務API組合PDFPortfolio {#assemble-a-pdf-portfolio-using-the-web-service-api}
+## 使用網站服務API組合PDF Portfolio {#assemble-a-pdf-portfolio-using-the-web-service-api}
 
-使用組合器服務API （Web服務）組合PDFPortfolio：
+使用組合器服務API （Web服務）組合PDF Portfolio：
 
 1. 包含專案檔案。
 
@@ -230,11 +230,11 @@ DXX檔案必須包含具有巢狀`Navigator`標籤的`Portfolio`標籤。 請注
    * 建立位元組陣列以儲存`System.IO.FileStream`物件的內容。 您可以取得`System.IO.FileStream`物件的`Length`屬性來決定位元組陣列的大小。
    * 呼叫`System.IO.FileStream`物件的`Read`方法，以串流資料填入位元組陣列。 傳遞位元組陣列、起始位置以及要讀取的資料流長度。
    * 以位元組陣列的內容指派其`MTOM`欄位，填入`BLOB`物件。
-   * 建立`MyMapOf_xsd_string_To_xsd_anyType`物件。 此集合物件是用來儲存建立PDFPortfolio所需的輸入檔案。
+   * 建立`MyMapOf_xsd_string_To_xsd_anyType`物件。 此集合物件用於儲存建立PDF Portfolio所需的輸入檔案。
    * 針對每個輸入檔案，建立`MyMapOf_xsd_string_To_xsd_anyType_Item`物件。
    * 將代表索引鍵名稱的字串值指派給`MyMapOf_xsd_string_To_xsd_anyType_Item`物件的`key`欄位。 此值必須符合DDX檔案中指定的元素值。 （針對每個輸入檔案執行此工作。）
-   * 將儲存輸入檔案的`BLOB`物件指派給`MyMapOf_xsd_string_To_xsd_anyType_Item`物件的`value`欄位。 (針對每個輸入PDF檔案執行此工作。)
-   * 將`MyMapOf_xsd_string_To_xsd_anyType_Item`物件新增至`MyMapOf_xsd_string_To_xsd_anyType`物件。 叫用`MyMapOf_xsd_string_To_xsd_anyType`物件的`Add`方法並傳遞`MyMapOf_xsd_string_To_xsd_anyType`物件。 (針對每個輸入PDF檔案執行此工作。)
+   * 將儲存輸入檔案的`BLOB`物件指派給`MyMapOf_xsd_string_To_xsd_anyType_Item`物件的`value`欄位。 （針對每個輸入PDF檔案執行此工作。）
+   * 將`MyMapOf_xsd_string_To_xsd_anyType_Item`物件新增至`MyMapOf_xsd_string_To_xsd_anyType`物件。 叫用`MyMapOf_xsd_string_To_xsd_anyType`物件的`Add`方法並傳遞`MyMapOf_xsd_string_To_xsd_anyType`物件。 （針對每個輸入PDF檔案執行此工作。）
 
 1. 設定執行階段選項。
 
@@ -253,7 +253,7 @@ DXX檔案必須包含具有巢狀`Navigator`標籤的`Portfolio`標籤。 請注
 
 1. 儲存組合的產品組合。
 
-   若要取得新建立的PDFPortfolio，請執行下列動作：
+   若要取得新建立的PDF Portfolio，請執行下列動作：
 
    * 存取`AssemblerResult`物件的`documents`欄位，這是包含結果PDF檔案的`Map`物件。
    * 逐一檢視`Map`物件以取得每個結果檔案。 然後，將該陣列成員的`value`轉換為`BLOB`。

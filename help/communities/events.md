@@ -11,8 +11,8 @@ feature: Communities
 role: Admin
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '592'
-ht-degree: 5%
+source-wordcount: '696'
+ht-degree: 4%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 5%
 
 ## 概觀 {#overview}
 
-當成員與Communities功能互動時，會傳送可觸發非同步接聽程式的OSGi事件，例如通知或遊戲化（評分和徽章）。
+當成員與Communities功能互動時，會傳送可觸發非同步接聽程式的OSGi事件，例如通知或gamification （評分和徽章）。
 
 元件的[SocialEvent](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html)執行個體會將事件記錄為`topic`發生的`actions`。 SocialEvent包含傳回與動作相關聯之`verb`的方法。 `actions`與`verbs`之間有&#x200B;*n-1*&#x200B;關係。
 

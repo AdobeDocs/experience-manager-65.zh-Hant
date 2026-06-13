@@ -11,14 +11,14 @@ feature: Adaptive Forms
 role: User, Developer
 source-git-commit: e821be5233fd5f6688507096790d219d25903892
 workflow-type: tm+mt
-source-wordcount: '426'
+source-wordcount: '436'
 ht-degree: 1%
 
 ---
 
 # 微調健康狀態監視器效能{#fine-tuning-health-monitor-performance}
 
-收集系統統計資料以填入「健康情況監視」會對您的AEM表單環境的效能造成一些影響。 若要控制此影響，請在應用程式伺服器中設定下列的Java選項。
+收集系統統計資料以填入「健全狀態監視」會對您的AEM表單環境的效能造成一些影響。 若要控制此影響，請在應用程式伺服器中設定下列的Java選項。
 
 <table>
  <thead>

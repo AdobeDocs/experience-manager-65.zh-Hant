@@ -11,7 +11,7 @@ solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
-source-wordcount: '2621'
+source-wordcount: '2678'
 ht-degree: 1%
 
 ---
@@ -45,7 +45,7 @@ ht-degree: 1%
    Web Channel中折線圖的基本屬性
 
 1. 根據通道型別設定[圖表屬性](../../forms/using/chart-component-interactive-communications.md#configure-chart-properties)。
-1. （僅列印通道）在&#x200B;**[!UICONTROL 代理程式設定]**&#x200B;中，指定代理程式是否必須使用此圖表。 如果未選取代理程式使用此圖表&#x200B;**選項，代理程式可以在Agent UI的**&#x200B;[!UICONTROL &#x200B;內容&#x200B;]&#x200B;**標籤中選取圖表的眼睛圖示，以顯示或隱藏圖表。**
+1. （僅列印通道）在&#x200B;**[!UICONTROL 代理程式設定]**&#x200B;中，指定代理程式是否必須使用此圖表。 如果未選取代理程式使用此圖表&#x200B;]**選項，代理程式可以在Agent UI的**[!UICONTROL &#x200B;內容&#x200B;]**標籤中選取圖表的眼睛圖示，以顯示或隱藏圖表。**[!UICONTROL 
 
    ![chart_agentproperties](assets/chart_agentproperties.png)
 
@@ -81,7 +81,7 @@ ht-degree: 1%
   </tr>
   <tr>
    <td>系列&gt;資料模型物件</td>
-   <td>要新增多個序列至圖表的表單資料模型集合專案名稱。<br />為繪製在X軸和Y軸上的屬性選擇父級表單資料模型物件屬性，以形成有意義的系列。 您繫結的資料模型物件必須是Number、String或Date型別。</td>
+   <td>要新增多個序列至圖表的表單資料模型集合專案名稱。<br /> 為繪製在X軸和Y軸上的屬性選擇父級表單資料模型物件屬性，以形成有意義的系列。 您繫結的資料模型物件必須是Number、String或Date型別。</td>
    <td>列印和網頁</td>
   </tr>
   <tr>
@@ -151,7 +151,7 @@ ht-degree: 1%
   </tr>
   <tr>
    <td>工具提示</td>
-   <td><p>工具提示在Web Channel圖表資料點滑鼠游標上顯示的格式。 預設值為${x}(${y})。 根據圖表型別，當您將滑鼠指向圖表的點、長條圖或分割圖時，變數${x}和${y}會以X軸和Y軸上的對應值動態取代，並顯示在工具提示中。</p> <p>若要停用工具提示，請保留<span class="uicontrol">工具提示</code> 欄位空白。 此選項不適用於折線圖和面積圖。 例如，請參閱<a href="#chartoutputprintweb">範例1：列印和網頁中的圖表輸出</a>。</p> </td>
+   <td><p>工具提示在Web Channel圖表資料點滑鼠游標上顯示的格式。 預設值為${x}(${y})。 根據圖表型別，當您將滑鼠指向圖表的點、長條圖或分割圖時，變數${x}和${y}會動態地以X軸和Y軸上的對應值取代，並顯示在工具提示中。</p> <p>若要停用工具提示，請保留<span class="uicontrol">工具提示</code> 欄位空白。 此選項不適用於折線圖和面積圖。 例如，請參閱<a href="#chartoutputprintweb">範例1：列印和網頁中的圖表輸出</a>。</p> </td>
    <td>Web</td>
   </tr>
   <tr>
@@ -170,7 +170,7 @@ ht-degree: 1%
      <li><strong>參考點&gt;數列的資料模型物件： </strong>如果您選取<span class="uicontrol">資料模型物件，則可用於多個數列象限圖表</code> 從「繫結型別」下拉式清單。 定義表單資料模型物件屬性，以識別參考點的系列。 </li>
      <li><strong>參考點&gt;數列的資料模型物件值： </strong>如果您選取<span class="uicontrol">資料模型物件，則可用於多個數列象限圖表</code> 從「繫結型別」下拉式清單。 使用系列表單資料模型物件屬性，以及此欄位中定義的值來識別參考點的系列。</li>
      <li><strong>參考點&gt;參考點的資料模型物件： </strong>如果選取<span class="uicontrol">資料模型物件，可用於象限圖</code> 從「繫結型別」下拉式清單。 定義與X軸和Y軸上繪製的屬性同等的表單資料模型物件屬性。 此外，對於多個系列，定義資料模型物件屬性，該屬性是為系列定義的資料模型物件屬性的子實體。</li>
-     <li><strong>參考點&gt;參考點的資料模型物件值： </strong>如果選取<span class="uicontrol">資料模型物件，可用於象限圖</code> 從「繫結型別」下拉式清單。 使用表單資料模型物件屬性作為參考點，使用此欄位中定義的值來識別圖表的參考點。<br /> <strong>象限標籤&gt;左上方：</strong>可用於象限圖表，以指定左上方象限的名稱。</li>
+     <li><strong>參考點&gt;參考點的資料模型物件值： </strong>如果選取<span class="uicontrol">資料模型物件，可用於象限圖</code> 從「繫結型別」下拉式清單。 使用表單資料模型物件屬性作為參考點，使用此欄位中定義的值來識別圖表的參考點。<br /> <strong>象限標籤&gt;左上角：</strong>可用於象限圖表，以指定左上象限的名稱。</li>
      <li><strong>象限標籤&gt;右上方：</strong>可用於象限圖表，以指定右上象限的名稱。</li>
      <li><strong>象限標籤&gt;右下方： </strong>可供象限圖表指定右下象限的名稱。</li>
      <li><strong>象限標籤&gt;左下方： </strong>可用於象限圖表，以指定左下方的象限名稱。</li>
@@ -232,7 +232,7 @@ Multiply(valueArray, category) {
 
    * 新增值為`fd/af/reducer`的屬性`guideComponentType`。 （必要）
 
-   * 將屬性`value`新增至自訂JavaScript™函式的完整名稱。 （必要），並將其值設為自訂函式的名稱，例如Multiply。
+   * 將屬性`value`新增至自訂™函式的完整名稱。 （必要），並將其值設為自訂函式的名稱，例如Multiply。
    * 新增屬性`jcr:description`，其值要顯示為「函式」下拉式清單中自訂函式的名稱。 例如，**乘**。
 
    * 新增屬性`qtip`，其值將是自訂函式的簡短描述。 將指標暫留在&#x200B;**函式**&#x200B;下拉式清單中的函式名稱上時，它會顯示為工具提示。

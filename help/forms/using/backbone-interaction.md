@@ -11,7 +11,7 @@ feature: HTML5 Forms,Adaptive Forms,Mobile Forms
 role: Admin, User, Developer
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '436'
+source-wordcount: '438'
 ht-degree: 0%
 
 ---
@@ -40,11 +40,11 @@ Backbone是程式庫，可協助在Web應用程式中建立和遵循MVC架構。
 
 * 已建立元件的主幹模型新例項。 服務會插入模型中。
 * 已建立骨幹檢視的新執行個體。
-* 相應模型、HTML範本和「公用程式」的例證會插入檢視中。
+* 相應模型、HTML範本和「公用程式」的例項會插入檢視中。
 
 在骨幹檢視中，有一個事件對應對應可對應由於使用者介面與對應處理常式的互動而產生的各種事件。 在初始化元件後，就會起始此對應。
 
-初始化檢視時，檢視會呼叫其對應的模型，以從伺服器擷取資料。 當檢視所需的所有資料都可供使用時，檢視會以HTML範本指定的格式呈現資料。 多個檢視可以共用相同的通訊模型。
+初始化檢視時，檢視會呼叫其對應的模型，以從伺服器擷取資料。 檢視所需的所有資料都可供使用後，該檢視就會以HTML範本指定的格式呈現資料。 多個檢視可以共用相同的通訊模型。
 
 ![AEM表單主幹檢視](do-not-localize/aem_forms_workflow.png)
 

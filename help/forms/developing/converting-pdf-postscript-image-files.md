@@ -1,6 +1,6 @@
 ---
 title: 將PDF轉換為Postscript和Image檔案
-description: 使用「轉換PDF」服務，透過Java API和Web服務API將PDF檔案轉換為PostScript和多種影像格式(JPEG、JPEG2000、PNG和TIFF)。
+description: 使用轉換PDF服務，透過Java API和網站服務API將PDF檔案轉換成PostScript和多種影像格式（JPEG、JPEG 2000、PNG和TIFF）。
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -11,7 +11,7 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Services,APIs & Integrations
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '2774'
+source-wordcount: '2820'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 **關於轉換PDF服務**
 
-轉換PDF服務會將PDF檔案轉換為PostScript和多種影像格式(JPEG、JPEG2000、PNG和TIFF)。 將PDF檔案轉換為PostScript對於任何PostScript印表機上的自動伺服器式列印很有用。 將PDF檔案轉換為多頁TIFF檔案對於在不支援PDF檔案的內容管理系統中封存檔案而言是切實可行的。
+轉換PDF服務會將PDF檔案轉換為PostScript和多種影像格式（JPEG、JPEG 2000、PNG和TIFF）。 將PDF檔案轉換為PostScript對於任何PostScript印表機上的自動伺服器式列印都很有用。 在不支援PDF檔案的內容管理系統中封存檔案時，將PDF檔案轉換為多頁TIFF檔案是可行的。
 
 您可以使用轉換PDF服務完成這些工作：
 
@@ -47,7 +47,7 @@ ht-degree: 0%
 
 1. 包含專案檔案。
 1. 建立轉換PDF服務使用者端。
-1. 參照要轉換成PostScript檔案的PDF檔案。
+1. 參考要轉換成PostScript檔案的PDF檔案。
 1. 設定轉換執行階段選項。
 1. 將PDF檔案轉換為PostScript檔案。
 1. 儲存PostScript檔案。
@@ -60,19 +60,19 @@ ht-degree: 0%
 
 您必須先建立轉換PDF服務使用者端，才能以程式設計方式執行轉換PDF服務作業。 如果您使用Java API，請建立`ConvertPdfServiceClient`物件。 如果您使用網站服務API，請建立`ConvertPDFServiceService`物件。
 
-本節使用AEM Forms中介紹的Web服務功能。 若要存取新功能，您必須使用`lc_version`屬性建構您的Proxy物件。 (請參閱[使用Web服務叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-web-services)中的「使用Web服務存取新功能」。)
+本節使用AEM Forms中介紹的Web服務功能。 若要存取新功能，您必須使用`lc_version`屬性建構您的Proxy物件。 （請參閱[使用Web服務叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-web-services)中的「使用Web服務存取新功能」。）
 
-**參考要轉換成PostScript檔案的PDF檔案**
+**參考PDF檔案以轉換為PostScript檔案**
 
-參考您要轉換成PostScript檔案的PDF檔案。 如本主題前面所述，PDF檔案必須是非互動式PDF檔案。 如果您嘗試將互動式PDF檔案轉換為PostScript檔案，則會擲回例外狀況。
+參考您要轉換成PostScript檔案的PDF檔案。 如本主題先前所述，PDF檔案必須是非互動式PDF檔案。 如果您嘗試將互動式PDF檔案轉換成PostScript檔案，會發生例外狀況。
 
 **設定轉換執行階段選項**
 
 將PDF檔案轉換為PostScript檔案時，您可以定義執行階段選項，以指定所建立的PostScript型別。 例如，您可以定義層級3的PostScript檔案。
 
-一般而言，產生的PostScript檔案會反映輸入PDF檔案的大小。 如果您選取`ShrinkToFit`選項(縮減PostScript檔案的輸出以符合頁面)，您不會看到輸入PDF檔案與產生的PostScript檔案之間的差異。 `ShrinkToFit`選項只有在您選擇在小於輸入PDF檔案的頁面大小上列印時才生效。 若要選取較小的頁面大小，請定義`PageSize`選項。 此外，建議您將`RotateAndCenter`選項設為`true`，以取得正確的PostScript輸出。
+一般而言，產生的PostScript檔案會反映輸入PDF檔案的大小。 如果您選取`ShrinkToFit`選項（縮減PostScript檔案的輸出以符合頁面），您不會看到輸入PDF檔案與產生的PostScript檔案之間的差異。 `ShrinkToFit`選項只有在您選擇在比輸入PDF檔案小的頁面大小上列印時才生效。 若要選取較小的頁面大小，請定義`PageSize`選項。 此外，建議您將`RotateAndCenter`選項設為`true`，以取得正確的PostScript輸出。
 
-同樣地，如果您選取`ExpandToFit`選項(會展開PostScript檔案的輸出以符合頁面)，則只有在您選取在大於輸入PDF檔案的頁面大小上列印時，才會生效。 若要選取較大的頁面大小，請定義`PageSize`選項。 此外，建議您將`RotateAndCenter`選項設為`true`，以取得正確的PostScript輸出。
+同樣地，如果您選取`ExpandToFit`選項（會擴充PostScript檔案的輸出以符合頁面），則只有在您選取在大於輸入PDF檔案的頁面大小上列印時，才會生效。 若要選取較大的頁面大小，請定義`PageSize`選項。 此外，建議您將`RotateAndCenter`選項設為`true`，以取得正確的PostScript輸出。
 
 >[!NOTE]
 >
@@ -111,9 +111,9 @@ ht-degree: 0%
    * 建立包含連線屬性的`ServiceClientFactory`物件。
    * 使用它的建構函式並傳遞`ServiceClientFactory`物件來建立`ConvertPdfServiceClient`物件。
 
-1. 參照要轉換成PostScript檔案的PDF檔案。
+1. 參考要轉換成PostScript檔案的PDF檔案。
 
-   * 使用物件的建構函式建立`java.io.FileInputStream`物件，並傳遞字串值，指定轉換PDF檔案的位置。
+   * 使用物件的建構函式建立`java.io.FileInputStream`物件，並傳遞字串值，該字串值指定要轉換的PDF檔案位置。
    * 使用`com.adobe.idp.Document`建構函式建立儲存PDF檔案的`com.adobe.idp.Document`物件。 傳遞包含PDF檔案的`java.io.FileInputStream`物件。
 
 1. 設定轉換執行階段選項。
@@ -139,7 +139,7 @@ ht-degree: 0%
 
 [步驟摘要](converting-pdf-postscript-image-files.md#summary-of-steps)
 
-[快速入門(SOAP模式)：使用Java API將PDF檔案轉換為PostScript](/help/forms/developing/convert-pdf-service-java-api.md#quick-start-soap-mode-converting-a-pdf-document-to-postscript-using-the-java-api)
+[快速入門（SOAP模式）：使用Java API將PDF檔案轉換為PostScript](/help/forms/developing/convert-pdf-service-java-api.md#quick-start-soap-mode-converting-a-pdf-document-to-postscript-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -170,7 +170,7 @@ ht-degree: 0%
       * 將常數值`HttpClientCredentialType.Basic`指派給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
       * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`指派給欄位`BasicHttpBindingSecurity.Security.Mode`。
 
-1. 參照要轉換成PostScript檔案的PDF檔案。
+1. 參考要轉換成PostScript檔案的PDF檔案。
 
    * 使用物件的建構函式建立`BLOB`物件。 `BLOB`物件是用來儲存已轉換為PostScript檔案的PDF檔案。
    * 建立`System.IO.FileStream`物件，方法為叫用其建構函式，並傳遞代表要轉換之PDF檔案的檔案位置以及開啟檔案的模式的字串值。
@@ -209,9 +209,9 @@ ht-degree: 0%
 
 ## 將PDF檔案轉換為影像格式 {#converting-pdf-documents-to-image-formats}
 
-您可以使用轉換PDF服務，以程式設計方式將PDF檔案轉換為影像格式，包括JPEG、JPEG2000、TIFF和PNG。 透過將PDF檔案轉換為影像檔案，您可以將PDF檔案用作影像檔案。 例如，您可以將影像放入企業內容管理系統以進行儲存。
+您可以使用轉換PDF服務，以程式設計方式將PDF檔案轉換為影像格式，包括JPEG、JPEG 2000、TIFF和PNG。 將PDF檔案轉換為影像檔案後，您就可以將PDF檔案當成影像檔案使用。 例如，您可以將影像放入企業內容管理系統以進行儲存。
 
-將PDF檔案轉換為影像時，轉換PDF服務會為檔案中的每個頁面建立個別的影像。 也就是說，如果檔案有20頁，轉換PDF服務會建立20個影像檔案。 將PDF檔案轉換為影像格式時，您可以為PDF檔案中的每個頁面建立個別影像，或為整個PDF檔案建立單一影像檔案。
+將PDF檔案轉換為影像時，轉換PDF服務會為檔案中的每個頁面建立個別影像。 也就是說，如果檔案有20頁，轉換PDF服務會建立20個影像檔案。 將PDF檔案轉換為影像格式時，您可以為PDF檔案中的每個頁面建立個別影像，或為整個PDF檔案建立單一影像檔案。
 
 >[!NOTE]
 >
@@ -219,7 +219,7 @@ ht-degree: 0%
 
 ### 步驟摘要 {#summary_of_steps-1}
 
-若要將PDF檔案轉換為任何支援的型別，請執行下列步驟：
+若要將PDF檔案轉換為任何支援的型別，請執行以下步驟：
 
 1. 包含專案檔案。
 1. 建立轉換PDF服務使用者端。
@@ -238,7 +238,7 @@ ht-degree: 0%
 
 **擷取要轉換的PDF檔案**
 
-擷取PDF檔案以轉換為影像。 您無法將互動式PDF檔案轉換為影像。 如果嘗試這麼做，會發生例外狀況。 若要將互動式PDF檔案轉換為影像檔案，您必須先將PDF檔案平面化，才能進行轉換。 (請參閱[將PDF檔案平面化](/help/forms/developing/creating-document-output-streams.md#flattening-pdf-documents)。)
+擷取PDF檔案以轉換為影像。 您無法將互動式PDF檔案轉換為影像。 如果嘗試這麼做，會發生例外狀況。 若要將互動式PDF檔案轉換為影像檔案，您必須先將PDF檔案平面化，才能進行轉換。 （請參閱[將PDF檔案平面化](/help/forms/developing/creating-document-output-streams.md#flattening-pdf-documents)。）
 
 **設定執行階段選項**
 
@@ -246,11 +246,11 @@ ht-degree: 0%
 
 **將PDF轉換為影像**
 
-建立服務使用者端並設定執行階段選項後，您可以將PDF檔案轉換為影像。 會傳回包含影像的集合物件。
+建立服務使用者端並設定執行階段選項後，您就可以將PDF檔案轉換為影像。 會傳回包含影像的集合物件。
 
 **從集合擷取影像檔案**
 
-您可以從ConvertPDF服務傳回的集合物件擷取影像檔案。 集合中的每個元素都是可儲存為影像檔案(例如JPG檔案)的`com.adobe.idp.Document`執行個體（或如果您使用Web服務則為`BLOB`執行個體）。
+您可以從「轉換PDF」服務傳回的集合物件擷取影像檔案。 集合中的每個元素都是可儲存為影像檔案的`com.adobe.idp.Document`執行個體（如果您使用Web服務，則是`BLOB`執行個體），例如JPG檔案。
 
 影像檔案的格式取決於`ImageConvertFormat`執行階段選項。 也就是說，如果您將`ImageConvertFormat`執行階段選項設為`ImageConvertFormat.JPEG`，您可以將影像檔案儲存為JPG檔案。
 
@@ -277,7 +277,7 @@ ht-degree: 0%
 
 1. 擷取要轉換的PDF檔案。
 
-   * 建立代表要轉換之PDF檔案的`java.io.FileInputStream`物件，方法是使用其建構函式，並傳遞指定PDF檔案位置的字串值。
+   * 建立代表要轉換之PDF檔案的`java.io.FileInputStream`物件，方法為使用其建構函式，並傳遞指定PDF檔案位置的字串值。
    * 使用它的建構函式並傳遞`java.io.FileInputStream`物件來建立`com.adobe.idp.Document`物件。
 
 1. 設定執行階段選項。
@@ -304,7 +304,7 @@ ht-degree: 0%
 
 **另請參閱**
 
-[快速入門(SOAP模式)：使用Java API將PDF檔案轉換為JPEG檔案](/help/forms/developing/convert-pdf-service-java-api.md#quick-start-soap-mode-converting-a-pdf-document-to-jpeg-files-using-the-java-api)
+[快速入門（SOAP模式）：使用Java API將PDF檔案轉換為JPEG檔案](/help/forms/developing/convert-pdf-service-java-api.md#quick-start-soap-mode-converting-a-pdf-document-to-jpeg-files-using-the-java-api)
 
 ### 使用Web服務API將PDF檔案轉換為影像檔案 {#convert-a-pdf-document-to-image-files-using-the-web-service-api}
 

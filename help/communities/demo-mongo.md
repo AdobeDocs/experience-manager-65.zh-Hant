@@ -11,7 +11,7 @@ solution: Experience Manager
 feature: Communities
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '726'
+source-wordcount: '800'
 ht-degree: 0%
 
 ---
@@ -70,7 +70,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如果MongoDB在&#x200B;*AEM之後*&#x200B;啟動，請&#x200B;**重新啟動**&#x200B;所有&#x200B;**AEM**&#x200B;執行個體，以便它們能夠正確連線到MongoDB。
+>如果MongoDB是在&#x200B;*AEM*&#x200B;之後啟動，請&#x200B;**重新啟動**&#x200B;所有&#x200B;**AEM**&#x200B;執行個體，以便它們能夠正確連線至MongoDB。
 
 ### 示範生產選項：設定MongoDB復本集 {#demo-production-option-setup-mongodb-replica-set}
 
@@ -130,7 +130,7 @@ ht-degree: 0%
 >
 >如果Solr Console無法使用，請檢查&lt;solrinstall>/example/logs底下的記錄。 檢視SOLR是否嘗試繫結至無法解析的特定主機名稱（例如「user-macbook-pro」）。
 >
->若是如此，請使用此主機名稱的新專案（例如127.0.0.1 user-macbook-pro）更新`etc/hosts`檔案，以正確啟動Solr。
+>若是如此，請使用此主機名稱的新專案更新`etc/hosts`檔案（例如，127.0.0.1 user-macbook-pro）以正確啟動Solr。
 
 ### SolrCloud {#solrcloud}
 
@@ -152,7 +152,7 @@ ht-degree: 0%
 
 1. 在發佈執行個體上，瀏覽至[社群元件指南](http://localhost:4503/content/community-components/en/comments.html)頁面，並選取Comments元件。
 1. 登入以發表評論：
-1. 在註解文字輸入方塊中輸入文字，然後按一下&#x200B;**[!UICONTROL Post]**
+1. 在註解文字輸入方塊中輸入文字，然後按一下&#x200B;**[!UICONTROL 貼文]**
 
    ![張貼註解](assets/post-comment.png)
 
@@ -188,4 +188,4 @@ ht-degree: 0%
    * 在JCR中，如果[/etc/socialconfig](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/)不包含[srpc](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc)節點，表示儲存提供者為JSRP。
    * 如果srpc節點存在且包含節點[defaultconfiguration](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc/defaultconfiguration)，則defaultconfiguration的屬性應該將MSRP定義為預設提供者。
 
-1. 請確定在選取MSRP後重新啟動AEM。
+1. 請確定在選取MSRP後，AEM已重新啟動。
