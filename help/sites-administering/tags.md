@@ -9,10 +9,10 @@ exl-id: ff041ef0-e566-4373-818e-76680ff668d8
 solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: 3545595dd67b5703d357964a752bf8979a38ea55
 workflow-type: tm+mt
-source-wordcount: '1769'
-ht-degree: 9%
+source-wordcount: '1795'
+ht-degree: 10%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 9%
 
 * 頁面的內容節點（請參閱[使用標籤](/help/sites-authoring/tags.md)）
 
-* 資產的中繼資料節點(請參閱[管理數位Assets的中繼資料](/help/assets/metadata.md))
+* 資產的中繼資料節點（請參閱[管理數位Assets的中繼資料](/help/assets/metadata.md)）
 
 除了頁面和資產，標籤還用於AEM Communities功能
 
@@ -36,7 +36,7 @@ ht-degree: 9%
 
 AEM中的部分標籤功能包括：
 
-* 標籤可以分組到各種名稱空間中。 此類階層允許建立分類。 這些分類法在整個 AEM 中都適用。
+* 標記可分門別類至不同的命名空間。 此類階層允許建立分類。 這些分類法在整個 AEM 中都適用。
 * 新建立標籤的主要限制是在特定名稱空間中必須是唯一的。
 * 標籤的標題不應包含標籤路徑分隔字元（如果存在的話，也不會顯示）
 
@@ -101,7 +101,7 @@ AEM中的部分標籤功能包括：
 選取名稱空間或其他標籤後，您便可以進行下列操作：
 
 * [檢視屬性](#viewing-tag-properties)
-* [參考](#showing-tag-references)
+* [參照](#showing-tag-references)
 * [建立標記](#creating-tags)
 * [編輯](#editing-tags)
 * [移動](#moving-tags)
@@ -224,13 +224,13 @@ AEM中的部分標籤功能包括：
 >
 >合併之後，原先選取的&#x200B;**路徑**&#x200B;將（實際上）不再存在。
 >
->移動或合併參照的標籤時，並不會實際刪除標籤，因此可以保留參照。
+>移動或合併參照的標記時，不會將該標記真的刪除，因此有可能維持參照。
 
 ### 發佈標記 {#publishing-tags}
 
 ![chlimage_1-201](assets/chlimage_1-201.png)
 
-選取名稱空間或其他標籤時，請選取&#x200B;**Publish**&#x200B;圖示以在發佈環境中啟動標籤。 與頁面內容類似，無論是否為容器標籤，都只會發佈選取的標籤。
+選取名稱空間或其他標籤時，請選取&#x200B;**發佈**&#x200B;圖示以在發佈環境中啟動標籤。 與頁面內容類似，無論是否為容器標籤，都只會發佈選取的標籤。
 
 若要發佈分類（名稱空間和子標籤），最佳實務是建立名稱空間的[套件](/help/sites-administering/package-manager.md) （請參閱[分類根節點](/help/sites-developing/framework.md#taxonomy-root-node)）。 在建立套件之前，請務必[套用許可權](#setting-tag-permissions)至名稱空間。
 
@@ -244,7 +244,7 @@ AEM中的部分標籤功能包括：
 
 ![chlimage_1-203](assets/chlimage_1-203.png)
 
-選取名稱空間或其他標籤時，選取&#x200B;**刪除**&#x200B;圖示將會從作者環境中永久移除標籤。 如果該標記已發布，也會將其從發佈環境中移除。如果選取的標籤是容器標籤，則會一併移除其所有子標籤。
+選取名稱空間或其他標籤時，選取&#x200B;**刪除**&#x200B;圖示將會從作者環境中永久移除標籤。 如果該標記已發布，也會將其從發佈環境中移除。 如果選取的標籤是容器標籤，則會一併移除其所有子標籤。
 
 ## 設定標籤許可權 {#setting-tag-permissions}
 
@@ -312,3 +312,4 @@ AEM中的部分標籤功能包括：
   有關標籤架構和延伸並在自訂應用程式中包含標籤的資訊。
 
 * [傳統UI標籤主控台](/help/sites-administering/classic-console.md)
+
