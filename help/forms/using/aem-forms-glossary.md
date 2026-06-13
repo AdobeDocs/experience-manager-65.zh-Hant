@@ -34,7 +34,7 @@ ht-degree: 4%
 
 AEM Forms的部署選項，可運用Java Enterprise Edition (JEE)伺服器，提供企業級擴充性、交易管理，以及複雜企業工作流程的支援。
 
-## OSGi](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65/content/implementing/deploying/introduction/technical-requirements)上的[AEM Forms
+## OSGi[&#128279;](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65/content/implementing/deploying/introduction/technical-requirements)上的AEM Forms
 
 OSGi環境上的AEM Forms是標準的AEM Author或AEM Publish ，且已在其上部署AEM Forms套件。 您可以在單一伺服器環境、伺服陣列和叢集設定中，在OSGi上執行AEM Forms。 叢集設定僅適用於AEM Author執行個體。
 

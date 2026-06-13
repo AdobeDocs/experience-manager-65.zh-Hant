@@ -53,7 +53,7 @@ ht-degree: 8%
 
 >[!NOTE]
 >
->某些動作也會顯示在適當資源](/help/sites-authoring/basic-handling.md#card-view)的[卡片檢視中。
+>某些動作也會顯示在適當資源[&#128279;](/help/sites-authoring/basic-handling.md#card-view)的卡片檢視中。
 
 ## 現成可用的管理工作  {#out-of-the-box-administrative-tasks}
 
@@ -79,7 +79,7 @@ ht-degree: 8%
 
 >[!NOTE]
 >
->收件箱作為控制台運行，因此，在您完成 [後，使用全局導航](/help/sites-authoring/basic-handling.md#global-navigation)[](/help/sites-authoring/search.md) 或搜索導航到其他位置。
+>收件箱作為控制台運行，因此，在您完成 [後，使用全局導航](/help/sites-authoring/basic-handling.md#global-navigation) [&#128279;](/help/sites-authoring/search.md) 或搜索導航到其他位置。
 
 ### 收件匣 — 清單檢視 {#inbox-list-view}
 
@@ -113,7 +113,7 @@ ht-degree: 8%
   您可以針對&#x200B;**行事曆檢視**&#x200B;設定：
 
    * **群組依據**
-   * **排程** 或無 ****
+   * **排程** 或無 **&#x200B;**
    * **卡片大小**
 
   ![wf-92](assets/wf-92.png)
