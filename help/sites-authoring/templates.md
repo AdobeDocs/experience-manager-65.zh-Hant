@@ -146,7 +146,7 @@ AEM現在提供兩種基本型別的範本：
 
 >[!CAUTION]
 >
->切勿在範本中輸入任何需要[國際化](/help/sites-developing/i18n.md)的資訊。 基於內部化的目的，建議使用核心元件[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html)的本地化功能。
+>切勿在範本中輸入任何需要[國際化](/help/sites-developing/i18n.md)的資訊。 基於內部化的目的，建議使用核心元件[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html?lang=zh-Hant)的本地化功能。
 
 ### 建立範本資料夾 — 管理員 {#creating-a-template-folder-admin}
 
@@ -604,7 +604,7 @@ AEM現在提供兩種基本型別的範本：
 >
 >初始內容旨在準備元件和作為建立內容起點的頁面配置。 此並非意圖讓實際內容維持原狀。 因此，初始內容無法翻譯。
 >
->如果您需要在範本中加入可翻譯的文字（例如頁首或頁尾），可以使用核心元件的[本地化功能](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html)。
+>如果您需要在範本中加入可翻譯的文字（例如頁首或頁尾），可以使用核心元件的[本地化功能](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html?lang=zh-Hant)。
 
 ### 編輯範本 — 版面 — 範本作者 {#editing-a-template-layout-template-author}
 
