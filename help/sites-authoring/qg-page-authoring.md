@@ -12,8 +12,8 @@ feature: Authoring
 role: User,Admin,Developer
 source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
-source-wordcount: '1540'
-ht-degree: 5%
+source-wordcount: '1558'
+ht-degree: 4%
 
 ---
 
@@ -49,7 +49,7 @@ ht-degree: 5%
 
 * 導覽連結
 
-   * 當您處於&#x200B;***編輯***&#x200B;模式時，**連結無法用於導覽**。 若要使用連結導覽，您需要[使用以下其中一種方式預覽頁面](/help/sites-authoring/editing-content.md#previewing-pages)：
+   * 當您處於&#x200B;**編輯**&#x200B;模式時，***連結無法用於導覽***。 若要使用連結導覽，您需要[使用以下其中一種方式預覽頁面](/help/sites-authoring/editing-content.md#previewing-pages)：
 
       * [預覽模式](/help/sites-authoring/editing-content.md#preview-mode)
       * [以已發佈狀態檢視](/help/sites-authoring/editing-content.md#view-as-published)
@@ -68,7 +68,7 @@ ht-degree: 5%
 
 尋找頁面有許多方面；您可以導覽及/或搜尋：
 
-1. 開啟&#x200B;**網站**&#x200B;主控台（使用&#x200B;**全域導覽**&#x200B;中的[網站](/help/sites-authoring/basic-handling.md#global-navigation)選項） — 這會在您選取Adobe Experience Manager連結（左上方）時觸發（下拉式清單）。
+1. 開啟&#x200B;**網站**&#x200B;主控台（使用[全域導覽](/help/sites-authoring/basic-handling.md#global-navigation)中的&#x200B;**網站**&#x200B;選項） — 這會在您選取Adobe Experience Manager連結（左上方）時觸發（下拉式清單）。
 
 1. 點選/按一下適當的頁面，在樹狀結構中向下導覽。 頁面資源的呈現方式取決於您使用的檢視 — [卡片、清單或欄](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)：
 
@@ -244,7 +244,7 @@ ht-degree: 5%
 
   ![screen_shot_2018-03-21at161026](assets/screen_shot_2018-03-21at161026.png)
 
-* 從主控台取消發佈頁面只能透過「管理出版物 **&#x200B;**&#x200B;」選項完成，此選項只能在工具列上使用 (不能透過快速動作)。
+* 從主控台取消發佈頁面只能透過「管理出版物 **** 」選項完成，此選項只能在工具列上使用 (不能透過快速動作)。
 
   編輯器中仍可透過&#x200B;**頁面資訊**&#x200B;功能表使用&#x200B;**取消發佈頁面**&#x200B;選項。
 
@@ -282,7 +282,7 @@ ht-degree: 5%
 
 ### 鎖定頁面（然後解鎖） {#locking-your-page-then-unlocking}
 
-[鎖定頁面](/help/sites-authoring/editing-content.md#locking-a-page) ，會使其他作者無法在您執行時使用頁面。您可以找到「鎖定 (和解除鎖定) 」圖示/按鈕：
+[鎖定頁面](/help/sites-authoring/editing-content.md#locking-a-page) ，會使其他作者無法在您執行時使用頁面。 您可以找到「鎖定 (和解除鎖定) 」圖示/按鈕：
 
 * 選取[頁面時的工具列](#selecting-your-page-for-further-action)。
 * 編輯頁面時，[頁面資訊下拉式功能表](#editing-the-page-properties)。

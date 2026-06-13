@@ -12,7 +12,7 @@ solution: Experience Manager, Experience Manager Sites
 role: Admin
 source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
 workflow-type: tm+mt
-source-wordcount: '1798'
+source-wordcount: '1803'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 ## 升級後檢查 {#post-upgrade-checks}
 
-在[就地升級](/help/sites-deploying/in-place-upgrade.md)之後，應執行下列活動以完成升級。 我們假設AEM已使用6.5 jar啟動，而且已部署升級的程式碼基底。
+在[就地升級](/help/sites-deploying/in-place-upgrade.md)之後，應執行下列活動以完成升級。 我們假設AEM是以6.5 jar啟動，且已部署升級的程式碼基底。
 
 * [驗證升級成功的記錄檔](#main-pars-header-290365562)
 
@@ -29,7 +29,7 @@ ht-degree: 0%
 
 * [驗證Oak版本](#main-pars-header-1293049773)
 
-* [Inspect PreUpgradeBackup資料夾](#main-pars-header-988995987)
+* [檢查PreUpgradeBackup資料夾](#main-pars-header-988995987)
 
 * [頁面初始驗證](#main-pars-header-20827371)
 * [套用AEM Service Pack](#main-pars-header-215142387)
@@ -79,17 +79,17 @@ ht-degree: 0%
 
 升級之後，您應該會看到Oak版本已更新為&#x200B;**1.10.2**。 若要驗證Oak版本，請導覽至OSGi主控台，並檢視與Oak套件組合相關聯的版本：Oak Core、Oak Commons、Oak Segment Tar。
 
-### Inspect PreUpgradeBackup資料夾 {#inspect-preupgradebackup-folder}
+### 檢查PreUpgradeBackup資料夾 {#inspect-preupgradebackup-folder}
 
-在升級期間，AEM會嘗試備份自訂並將它們儲存在`/var/upgrade/PreUpgradeBackup/<time-stamp-of-upgrade>`下方。 若要以CRXDE Lite檢視此資料夾，您可能需要[暫時啟用CRXDE Lite](/help/sites-administering/enabling-crxde-lite.md)。
+在升級期間，AEM會嘗試備份自訂並將它們儲存在`/var/upgrade/PreUpgradeBackup/<time-stamp-of-upgrade>`下方。 若要在CRXDE Lite中檢視此資料夾，您可能需要[暫時啟用CRXDE Lite](/help/sites-administering/enabling-crxde-lite.md)。
 
 具有時間戳記的資料夾應具有名為`mergeStatus`的屬性，其值為`COMPLETED`。 **to-process**&#x200B;資料夾應為空白，且&#x200B;**覆寫**&#x200B;節點表示在升級期間覆寫了哪些節點。 剩餘專案節點下的內容表示在升級期間無法安全合併的內容。 如果您的實施相依於任何子節點（且尚未由升級後的程式碼套件安裝），則需要手動合併這些節點。
 
-如果是在中繼或生產環境中，請停用此練習後的CRXDE Lite。
+如果是在中繼或生產環境中，請依照此練習停用CRXDE Lite。
 
 ### 頁面初始驗證 {#initial-validation-of-pages}
 
-對AEM中的數個頁面執行初始驗證。 如果升級作者環境，請開啟開始頁面和歡迎頁面( `/aem/start.html`， `/libs/cq/core/content/welcome.html`)。 在Author和Publish環境中，開啟幾個應用程式頁面，並進行煙霧測試，以測試其是否正確轉譯。 如果發生任何問題，請參閱`error.log`以進行疑難排解。
+對AEM中的數個頁面執行初始驗證。 如果升級作者環境，請開啟開始頁面和歡迎頁面( `/aem/start.html`， `/libs/cq/core/content/welcome.html`)。 在製作和發佈環境中，請開啟一些應用程式頁面，並進行冒煙測試，以正確轉譯。 如果發生任何問題，請參閱`error.log`以進行疑難排解。
 
 ### 套用AEM Service Pack {#apply-aem-service-packs}
 
@@ -97,7 +97,7 @@ ht-degree: 0%
 
 ### 移轉AEM功能 {#migrate-aem-features}
 
-在升級後，AEM中的幾項功能需要額外的步驟。 您可以在[Upgrading Code and Customizations](/help/sites-deploying/upgrading-code-and-customizations.md)頁面上找到這些功能及在AEM 6.5中移轉這些功能的步驟的完整清單。
+升級後，AEM中的幾項功能需要額外的步驟。 您可以在[升級程式碼和自訂](/help/sites-deploying/upgrading-code-and-customizations.md)頁面上找到這些功能及在AEM 6.5中移轉這些功能的步驟的完整清單。
 
 ### 驗證排程的維護設定 {#verify-scheduled-maintenance-configurations}
 
@@ -119,7 +119,7 @@ ht-degree: 0%
 
 ### 啟用復寫代理 {#enable-replication-agents}
 
-發佈環境完全升級和驗證後，在製作環境中啟用復寫代理程式。 驗證代理程式是否能夠連線至個別的Publish執行個體。 如需事件順序的詳細資訊，請參閱U [升級程式](/help/sites-deploying/upgrade-procedure.md)。
+發佈環境完全升級和驗證後，在製作環境中啟用復寫代理程式。 驗證代理程式是否能夠連線至個別的發佈執行個體。 如需事件順序的詳細資訊，請參閱U [升級程式](/help/sites-deploying/upgrade-procedure.md)。
 
 ### 啟用自訂排程工作 {#enable-custom-scheduled-jobs}
 
@@ -133,13 +133,13 @@ ht-degree: 0%
 
 ### 存放庫移轉失敗  {#repository-migration-failing-}
 
-從CRX2移轉至Oak的資料移轉作業，應該適用於任何以根據CQ 5.4的Source執行個體開始的情境。請確定您確實按照本檔案中的升級指示進行，其中包括準備`repository.xml`，確定沒有透過JAAS啟動自訂驗證器，並且在開始移轉之前已檢查執行個體是否不一致。
+從CRX2移轉至Oak的資料移轉作業，應該適用於任何以根據CQ 5.4的Source執行個體開始的情境。 請確定您確實按照本檔案中的升級指示進行，其中包括準備`repository.xml`，確定沒有透過JAAS啟動自訂驗證器，並且在開始移轉之前已檢查執行個體是否不一致。
 
 如果移轉仍然失敗，您可以檢查`upgrade.log`來找出根本原因。 如果問題尚未知，請向客戶支援報告。
 
 ### 升級未執行 {#the-upgrade-did-not-run}
 
-開始準備步驟之前，請確定先使用Java™ -jar aem-quickstart.jar命令執行&#x200B;**來源**&#x200B;執行個體。 這是確定已正確產生quickstart.properties檔案所必需的。 如果遺失，升級將無法運作。 或者，您可以透過檢視來源執行個體的安裝資料夾中的`crx-quickstart/conf`來檢查檔案是否存在。 此外，啟動AEM以開始升級時，必須使用Java™ -jar aem-quickstart.jar命令執行。 從啟動指令碼啟動時，不會以升級模式啟動AEM。
+開始準備步驟之前，請確定先使用Java™ -jar aem-quickstart.jar命令執行&#x200B;**來源**&#x200B;執行個體。 這是確定已正確產生quickstart.properties檔案所必需的。 如果遺失，升級將無法運作。 或者，您可以透過檢視來源執行個體的安裝資料夾中的`crx-quickstart/conf`來檢查檔案是否存在。 此外，啟動AEM以開始升級時，必須使用Java™ -jar aem-quickstart.jar命令執行。 從啟動指令碼啟動時，在升級模式下不會啟動AEM。
 
 ### 套件和套件組合無法更新  {#packages-and-bundles-fail-to-update-}
 
@@ -157,7 +157,7 @@ ht-degree: 0%
 
 如果您的自訂套件組合未切換至使用中狀態，很可能是有程式碼未匯入變更API。 這通常會導致不滿意的相依性。
 
-移除的API應在先前的其中一個版本中標籤為已過時。 您可能會在此淘汰通知中找到直接移轉程式碼的相關指示。 Adobe旨在儘可能進行語意版本設定，讓版本可指出重大變更。
+移除的API應在先前的其中一個版本中標籤為已過時。 您可能會在此淘汰通知中找到直接移轉程式碼的相關指示。 Adobe儘可能針對語意版本設定，讓版本可指出重大變更。
 
 最好檢查造成問題的變更是否必要，如果不是，則恢復它。 此外，在嚴格的語意版本設定後，檢查套件匯出的版本增加是否超過必要。
 
@@ -165,7 +165,7 @@ ht-degree: 0%
 
 如果某些UI功能在升級後無法正常運作，您應該先檢查介面的自訂覆蓋圖。 部分結構可能已變更，覆蓋可能需要更新或過時。
 
-接下來，檢查是否有任何JavaScript錯誤，可向下追蹤至連結至使用者端程式庫的自訂新增擴充功能。 同樣的情況也適用於自訂CSS，可能會導致AEM版面配置發生問題。
+接下來，檢查是否有任何JavaScript錯誤，可向下追蹤至連結至使用者端程式庫的自訂新增擴充功能。 同樣的情況也適用於自訂CSS，可能會導致AEM配置發生問題。
 
 最後，檢查JavaScript可能無法處理的設定錯誤。 不當停用擴充功能時通常會發生這種情況。
 
@@ -201,4 +201,4 @@ grep -v UnrelatedErrorString
 
 ### 連絡 Adobe 支援人員 {#contacting-adobe-support}
 
-如果您詳閱過本頁面的建議但仍遇到問題，請聯絡Adobe支援。 為了向處理您案例的支援工程師提供儘可能多的資訊，請務必加入升級中的upgrade.log檔案。
+如果您詳閱過本頁面的建議，但仍遇到問題，請聯絡Adobe支援。 為了向處理您案例的支援工程師提供儘可能多的資訊，請務必加入升級中的upgrade.log檔案。
