@@ -11,7 +11,7 @@ exl-id: 2ed4d99e-0e90-4b21-ac17-aa6707a3ba7d
 solution: Experience Manager, Experience Manager Forms
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '832'
+source-wordcount: '839'
 ht-degree: 2%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 2%
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/supporting-new-language-localization.html?lang=zh-Hant) |
+| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/supporting-new-language-localization.html) |
 | AEM 6.5 | 本文章 |
 
 ## 關於地區字典 {#about-locale-dictionaries}
@@ -35,12 +35,12 @@ ht-degree: 2%
 
 有兩種方法可識別最適化表單的地區設定。 轉譯適用性表單時，會透過識別要求的地區設定：
 
-* 正在檢視最適化表單URL中的`[local]`選取器。 URL 的格式是：`http://host:port/content/forms/af/[afName].[locale].html?wcmmode=disabled`。使用`[local]`選擇器可允許快取最適化表單。
+* 正在檢視最適化表單URL中的`[local]`選取器。 URL 的格式是：`http://host:port/content/forms/af/[afName].[locale].html?wcmmode=disabled`。 使用`[local]`選擇器可允許快取最適化表單。
 
 * 依指定順序檢視下列引數：
 
    * 要求引數`afAcceptLang`
-若要覆寫使用者的瀏覽器地區設定，您可以傳遞`afAcceptLang`要求引數以強制地區設定。 例如，以下URL被強制以日文地區設定呈現表單：
+若要覆寫使用者的瀏覽器地區設定，您可以傳遞`afAcceptLang`要求引數以強制地區設定。例如，以下URL被強制以日文地區設定呈現表單：
      `https://'[server]:[port]'/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ja`
 
    * 使用`Accept-Language`標頭在請求中指定之使用者的瀏覽器地區設定。
@@ -96,7 +96,7 @@ I18N.js
 
 ### 為地區設定新增最適化表單使用者端資料庫 {#add-adaptive-form-client-library-for-a-locale-br}
 
-在`etc/<folderHierarchy>`下建立型別`cq:ClientLibraryFolder`的節點，類別為`guides.I18N.<locale>`，相依性為`xfaforms.3rdparty`、`xfaforms.I18N.<locale>`和`guide.common`。 」
+在`etc/<folderHierarchy>`下建立型別`cq:ClientLibraryFolder`的節點，類別為`guides.I18N.<locale>`，相依性為`xfaforms.3rdparty`、`xfaforms.I18N.<locale>`和`guide.common`。 &quot;
 
 將下列檔案新增至使用者端資源庫：
 
@@ -128,7 +128,7 @@ LogMessages.js
 
 >[!NOTE]
 >
-> 建議您使用&#39;Ctrl + C&#39;命令重新啟動SDK。 使用替代方法重新啟動AEM SDK （例如停止Java程式）可能會導致AEM開發環境不一致。
+> 建議您使用&#39;Ctrl + C&#39;命令重新啟動SDK。 使用替代方法重新啟動AEM SDK （例如停止Java程式），可能會導致AEM開發環境不一致。
 
 ## 新增西班牙文支援的範常式式庫 {#sample-libraries-for-adding-support-for-spanish}
 

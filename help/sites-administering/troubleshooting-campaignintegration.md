@@ -11,7 +11,7 @@ feature: Integration
 role: Admin
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
-source-wordcount: '802'
+source-wordcount: '826'
 ht-degree: 0%
 
 ---
@@ -27,10 +27,10 @@ ht-degree: 0%
 
 檢查這兩個解決方案(AEM > Adobe Campaign Classic、Adobe Campaign Classic > AEM)是否分別傳送及接收HTTP呼叫。 此秘訣可協助您避免防火牆/SSL問題。
 
-* 針對AEM功能，您可以看到已從AEM製作介面要求JSON呼叫
+* 針對AEM功能，您可以看到已從AEM作者介面要求JSON呼叫
    * 這些呼叫不應導致HTTP-500錯誤。
    * 如果您看到HTTP-500錯誤，請檢查`error.log`以取得詳細資訊。
-* 提高AEM中促銷活動類別的偵錯層級也有助於疑難排解問題。
+* 在AEM中提高campaign類別的偵錯層級也有助於疑難排解問題。
 
 ## 如果連線失敗 {#when-the-connection-fails}
 
@@ -42,7 +42,7 @@ ht-degree: 0%
 
 請參閱[設定外部化程式。](/help/sites-administering/campaignstandard.md#configuring-the-externalizer)
 
-## 如果您無法從AEM連線到Adobe Campaign Classic  {#if-you-cannot-connect-from-aem-to-adobe-campaign}
+## 如果您無法從AEM連線至Adobe Campaign Classic  {#if-you-cannot-connect-from-aem-to-adobe-campaign}
 
 在Adobe Campaign Classic中尋找下列錯誤訊息。
 
@@ -99,13 +99,13 @@ ht-degree: 0%
 
 * `Cannot parse XTK Date+Time 'undefined': not a valid XTK value.`
 
-如果AEM執行個體上有過期的Adobe Campaign Classic資訊，就會發生此錯誤。 您可以執行下列操作來解決此問題：
+如果AEM執行個體上有過時的Adobe Campaign Classic資訊，就會發生此錯誤。 您可以執行下列操作來解決此問題：
 
 1. 移除AEM上的所有Adobe Campaign Classic整合設定。
 1. 重建整合。
 1. 建立範本。
 
-## 如果與SSL的連線在設定Cloud Service時顯示錯誤 {#if-a-connection-to-ssl-displays-an-error-when-setting-up-the-cloud-service}
+## 如果連線到SSL在設定Cloud Service時顯示錯誤 {#if-a-connection-to-ssl-displays-an-error-when-setting-up-the-cloud-service}
 
 如果您在AEM的`error.log`中看到下列內容，請向Adobe Campaign支援團隊提交票證。
 
@@ -130,18 +130,18 @@ at sun.security.ssl.AppOutputStream.write(Unknown Source)
 若要解決此問題，請執行下列動作：
 
 * AEM Dispatcher或反向Proxy必須設定為以標頭傳遞原始通訊協定。
-* AEM的OSGi設定中的&#x200B;**Apache Felix Http服務SSL篩選器**&#x200B;必須設定必要的標頭設定。
+* AEM的OSGi設定中的&#x200B;**Apache Felix Http服務SSL篩選器**&#x200B;必須使用必要的標頭設定進行設定。
    * `https://<host>:<port>/system/console/configMgr`
    * 請參閱[https://github.com/apache/felix-dev/tree/master/http#using-the-ssl-filter](https://github.com/apache/felix-dev/tree/master/http#using-the-ssl-filter)
 
 ## 無法在頁面屬性中選取自訂範本 {#if-the-custom-template-i-created-cannot-be-selected-in-page-properties}
 
-在AEM中為Adobe Campaign Classic建立郵件範本時，您必須在範本的`jcr:content`節點中包含值為`mapRecipient`的屬性`acMapping`。 如果沒有，則無法在AEM的&#x200B;**頁面屬性**&#x200B;中選取Adobe Campaign Classic範本。 欄位顯示為停用。
+在Adobe Campaign Classic的AEM中建立郵件範本時，您必須在範本的`jcr:content`節點中包含值為`mapRecipient`的屬性`acMapping`。 如果沒有該屬性，就無法在AEM的&#x200B;**頁面屬性**&#x200B;中選取Adobe Campaign Classic範本。 欄位顯示為停用。
 
-## 如果您在AEM記錄檔中看到「com.day.cq.mcm.campaign.servlets.util.ParameterMapper」錯誤 {#if-you-get-the-error-com-day-cq-mcm-campaign-servlets-util-parametermapper-in-your-logs}
+## 如果您在AEM記錄檔中看到錯誤「com.day.cq.mcm.campaign.servlets.util.ParameterMapper」 {#if-you-get-the-error-com-day-cq-mcm-campaign-servlets-util-parametermapper-in-your-logs}
 
-使用自訂範本時，您可能會在AEM記錄檔中看到錯誤`com.day.cq.mcm.campaign.servlets.util.ParameterMapper`。
+使用自訂範本時，您可能會在AEM記錄中看到錯誤`com.day.cq.mcm.campaign.servlets.util.ParameterMapper`。
 
 如果`acMapping`屬性設定為`recipient.firstName`以外的值，則在Adobe Campaign管理員中建立空白值，即會發生此錯誤。
 
-如果發生此錯誤，請從[封裝共用](/help/sites-administering/package-manager.md#package-share)安裝AEM適用的Feature Pack 6576。
+如果發生此錯誤，請從[封裝共用](/help/sites-administering/package-manager.md#package-share)安裝AEM的Feature Pack 6576。
