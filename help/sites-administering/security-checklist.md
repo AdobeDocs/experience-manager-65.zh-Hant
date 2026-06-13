@@ -12,8 +12,8 @@ solution: Experience Manager, Experience Manager Sites
 role: Admin,Developer
 source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
 workflow-type: tm+mt
-source-wordcount: '2959'
-ht-degree: 1%
+source-wordcount: '3025'
+ht-degree: 3%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 1%
 
 ## 主要安全性措施 {#main-security-measures}
 
-### 在生產就緒模式下執行AEM {#run-aem-in-production-ready-mode}
+### 以生產就緒模式執行AEM {#run-aem-in-production-ready-mode}
 
 如需詳細資訊，請參閱[以生產就緒模式執行AEM](/help/sites-administering/production-ready.md)。
 
@@ -47,7 +47,7 @@ ht-degree: 1%
 
 請確定您已安裝Adobe[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=zh-Hant)提供的最新安全性Hotfix。
 
-### 變更AEM和OSGi Console管理帳戶的預設密碼 {#change-default-passwords-for-the-aem-and-osgi-console-admin-accounts}
+### 變更AEM和OSGi Console管理員帳戶的預設密碼 {#change-default-passwords-for-the-aem-and-osgi-console-admin-accounts}
 
 Adobe建議您在安裝後變更特殊許可權&#x200B;[**AEM** `admin`帳戶](#changing-the-aem-admin-password)的密碼（在所有執行個體上）。
 
@@ -65,7 +65,7 @@ Adobe建議您在安裝後變更特殊許可權&#x200B;[**AEM** `admin`帳戶](#
 
 #### 變更AEM管理員密碼 {#changing-the-aem-admin-password}
 
-AEM管理帳戶的密碼可以透過[Granite Operations - Users](/help/sites-administering/granite-user-group-admin.md)主控台變更。
+AEM管理帳戶的密碼可以透過[Granite作業 — 使用者](/help/sites-administering/granite-user-group-admin.md)主控台變更。
 
 您可以在此處編輯`admin`帳戶和[變更密碼](/help/sites-administering/granite-user-group-admin.md#changing-the-password-for-an-existing-user)。
 
@@ -142,7 +142,7 @@ AEM 6推出新的操作控制面板，旨在協助系統操作員疑難排解問
 
 ### 檢查是否有範例內容 {#check-if-example-content-is-present}
 
-所有範例內容和使用者(例如Geometrixx專案及其元件)應在生產系統中完全解除安裝並刪除，然後再開放存取。
+所有範例內容和使用者（例如Geometrixx專案及其元件）應該先在生產系統中解除安裝並完全刪除，然後再開放存取。
 
 >[!NOTE]
 >
@@ -155,8 +155,8 @@ AEM 6推出新的操作控制面板，旨在協助系統操作員疑難排解問
 這些開發OSGi套件組合應先在製作和發佈生產力系統上解除安裝，才能供使用者存取。
 
 * Adobe CRXDE支援(com.adobe.granite.crxde-support)
-* AdobeGranite CRX Explorer (com.adobe.granite.crx-explorer)
-* AdobeGraniteCRXDE Lite(com.adobe.granite.crxde-lite)
+* Adobe Granite CRX Explorer (com.adobe.granite.crx-explorer)
+* Adobe Granite CRXDE Lite (com.adobe.granite.crxde-lite)
 
 ### 檢查Sling開發套件組合是否存在 {#check-if-the-sling-development-bundle-is-present}
 
@@ -164,7 +164,7 @@ AEM 6推出新的操作控制面板，旨在協助系統操作員疑難排解問
 
 在可供存取之前，應該先在製作和發佈生產力系統上解除安裝此OSGi套件組合。
 
-### Protect防止跨網站請求偽造 {#protect-against-cross-site-request-forgery}
+### 防止跨網站請求偽造 {#protect-against-cross-site-request-forgery}
 
 #### CSRF保護架構 {#the-csrf-protection-framework}
 
@@ -223,7 +223,7 @@ AEM 6.1隨附有助於防止跨網站請求偽造攻擊的機制，稱為&#x200B
 
 對於下列每項服務，必須變更指定的設定：
 
-* [AdobeGraniteHTML庫管理員](/help/sites-deploying/osgi-configuration-settings.md#day-cq-html-library-manager)：
+* [Adobe Granite HTML資料庫管理員](/help/sites-deploying/osgi-configuration-settings.md#day-cq-html-library-manager)：
 
    * 啟用&#x200B;**最小化** （移除CRLF和空白字元）。
    * 啟用&#x200B;**Gzip** （允許透過一個要求來壓縮及存取檔案）。
@@ -255,7 +255,7 @@ AEM 6.1隨附有助於防止跨網站請求偽造攻擊的機制，稱為&#x200B
 
 ### 減少阻斷服務(DoS)攻擊 {#mitigate-denial-of-service-dos-attacks}
 
-阻斷服務(DoS)攻擊是指嘗試讓電腦資源無法提供給其目標使用者使用。 此攻擊通常是透過資源超載完成的，例如：
+阻斷服務 (DoS) 攻擊是指試圖讓電腦資源無法提供給其目標使用者使用。 此攻擊通常是透過資源超載完成的，例如：
 
 * 來自外部來源的大量請求。
 * 系統無法成功傳遞的資訊請求。
@@ -306,13 +306,13 @@ Sling是&#x200B;*以內容為中心*。 處理著重於內容，因為每個(HTT
 
      **個JSON最大結果** ( `json.maximumresults`)
 
-     在[Apache SlingGETServlet](/help/sites-deploying/osgi-configuration-settings.md#apache-sling-get-servlet)的設定中。 超過此限制時，演算會收合。 AEM中Sling的預設值為`1000`。
+     在[Apache Sling GET Servlet](/help/sites-deploying/osgi-configuration-settings.md#apache-sling-get-servlet)的設定中。 超過此限制時，演算會收合。 AEM中Sling的預設值為`1000`。
 
-   * 作為預防性測量，您應該停用其他預設轉譯器(HTML、純文字、XML)。 再次設定[Apache SlingGETServlet](/help/sites-deploying/osgi-configuration-settings.md#apache-sling-get-servlet)。
+   * 作為預防措施，您應該停用其他預設轉譯器（HTML、純文字、XML）。 再次設定[Apache Sling GET Servlet](/help/sites-deploying/osgi-configuration-settings.md#apache-sling-get-servlet)。
 
    >[!CAUTION]
    >
-   >請勿停用JSON轉譯器，因為AEM的正常操作需要它。
+   >請勿停用JSON轉譯器，因為這是AEM正常運作所需的專案。
 
 1. 使用防火牆來篩選執行個體的存取權。
 
@@ -324,7 +324,7 @@ Sling是&#x200B;*以內容為中心*。 處理著重於內容，因為每個(HTT
 >
 >這項緩解作業只應在未使用Forms的AEM環境中執行。
 
-由於AEM沒有為`FormChooserServlet`提供立即可用的索引，在查詢中使用表單選取器可能會觸發昂貴的存放庫周遊，通常會使AEM執行個體停止。 **&amp;amp；ast；.form的存在可偵測表單選取器。&amp;amp；ast；**&#x200B;字串在查詢中。
+由於AEM沒有為`FormChooserServlet`提供立即可用的索引，在查詢中使用表單選取器可能會觸發代價高昂的存放庫周遊，通常會使AEM執行個體陷入停頓。 查詢中存在&#x200B;**&amp;ast；.form.&amp;ast；**&#x200B;字串，可以偵測到表單選取器。
 
 若要緩解此問題，您可以執行下列步驟：
 
@@ -333,13 +333,13 @@ Sling是&#x200B;*以內容為中心*。 處理著重於內容，因為每個(HTT
 1. 搜尋&#x200B;**Day CQ WCM表單選擇器Servlet**
 1. 按一下專案之後，請在下列視窗中停用&#x200B;**進階搜尋需求**。
 
-1. 按一下「**儲存**」。
+1. 按一下&#x200B;**儲存**。
 
 **針對資產下載Servlet所引起的DoS減輕影響**
 
 預設的資產下載servlet可讓已驗證身分的使用者發出任意大型的並行下載請求，以建立資產的ZIP檔案。 建立大型ZIP封存可能會導致伺服器和網路過載。 為了降低此行為所導致的潛在拒絕服務(DoS)風險，[!DNL Experience Manager]發佈執行個體上的`AssetDownloadServlet` OSGi元件預設為停用。 預設會在[!DNL Experience Manager]作者執行個體上啟用。
 
-如果您不需要下載功能，請在製作和發佈部署上停用servlet。 如果您的設定需要啟用資產下載功能，請參閱[從AdobeExperience Manager下載資產](/help/assets/download-assets-from-aem.md)以取得詳細資訊。 此外，您可以定義部署可支援的最大下載限制。
+如果您不需要下載功能，請在製作和發佈部署上停用servlet。 如果您的設定需要啟用資產下載功能，請參閱[從Adobe Experience Manager下載資產](/help/assets/download-assets-from-aem.md)以取得詳細資訊。 此外，您可以定義部署可支援的最大下載限制。
 
 ### 停用WebDAV {#disable-webdav}
 
@@ -373,11 +373,11 @@ Sling是&#x200B;*以內容為中心*。 處理著重於內容，因為每個(HTT
 
 自AEM 6.1起，使用者（也稱為可授權） ID節點名稱的儲存方式會隨著`AuthorizableNodeName`介面的新實作而改變。 新介面不再公開節點名稱中的使用者ID，而是產生隨機名稱。
 
-啟用時不必執行任何設定，因為現在這是在AEM中產生可授權ID的預設方式。
+啟用時無需執行任何設定，因為現在是在AEM中產生可授權ID的預設方式。
 
 雖然不建議使用，但您可以停用它，以備您需要舊實作以便回溯相容於現有應用程式時使用。 若要這麼做，您必須執行下列動作：
 
-1. 移至Web主控台，並從{2&#x200B;**Apache Jackrabbit Oak SecurityProvider &#x200B;** 中的屬性 **&#x200B; requiredServicePids &#x200B;** 移除 **&#x200B; org.apache.jackrabbit.oak.security.user.RandomAuthorizableNodeName}專案。**
+1. 移至Web主控台，並從{2 **Apache Jackrabbit Oak SecurityProvider**&#x200B;中的屬性&#x200B;**requiredServicePids**&#x200B;移除 **&#x200B; org.apache.jackrabbit.oak.security.user.RandomAuthorizableNodeName}專案。**
 
    您也可以在OSGi設定中尋找&#x200B;**org.apache.jackrabbit.oak.security.internal.SecurityProviderRegistration** PID，以找到Oak安全性提供者。
 
@@ -415,7 +415,7 @@ Sling是&#x200B;*以內容為中心*。 處理著重於內容，因為每個(HTT
 
 ### 請務必視需要正確復寫加密金鑰 {#make-sure-you-properly-replicate-encryption-keys-when-needed}
 
-某些AEM功能和驗證配置需要您在所有AEM執行個體上復寫加密金鑰。
+某些AEM功能和驗證配置需要您在所有AEM執行個體中復寫加密金鑰。
 
 在執行此操作之前，不同版本之間的金鑰復寫會有所不同，因為6.3版與舊版之間的金鑰儲存方式不同。
 
@@ -429,7 +429,7 @@ Sling是&#x200B;*以內容為中心*。 處理著重於內容，因為每個(HTT
 
 更具體地說，您必須執行下列操作：
 
-1. 存取包含要複製之關鍵素材的AEM例項，這通常是製作例項；
+1. 存取AEM例項（通常為製作例項），其中包含要複製的關鍵資料；
 1. 在本機檔案系統中找到com.adobe.granite.crypto.file套件組合。 例如，在此路徑下：
 
    * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21`
@@ -449,11 +449,11 @@ Sling是&#x200B;*以內容為中心*。 處理著重於內容，因為每個(HTT
 1. 如果目標執行個體已在執行中，請[重新整理加密套件組合](/help/communities/deploy-communities.md#refresh-the-granite-crypto-bundle)。
 1. 對您要複製金鑰的所有執行個體重複上述步驟。
 
-#### AEM 6.2和更舊版本的複製金鑰 {#replicating-keys-for-aem-and-older-versions}
+#### AEM 6.2和更舊版本的復寫金鑰 {#replicating-keys-for-aem-and-older-versions}
 
-在AEM 6.2和更舊版本中，金鑰儲存在`/etc/key`節點下的存放庫中。
+在AEM 6.2和更早版本中，金鑰會儲存在`/etc/key`節點下的存放庫中。
 
-跨執行個體安全複製金鑰的建議方法是僅複製此節點。 您可以透過CRXDE Lite選擇性地複製節點：
+跨執行個體安全複製金鑰的建議方法是僅複製此節點。 您可以選擇透過CRXDE Lite複製節點：
 
 1. 前往&#x200B;*`https://&lt;serveraddress&gt;:4502/crx/de/index.jsp`*&#x200B;開啟CRXDE Lite
 1. 選取`/etc/key`節點。
@@ -466,4 +466,4 @@ Adobe建議您在進入生產階段前，先執行AEM基礎結構的滲透測試
 
 ### 開發最佳實務 {#development-best-practices}
 
-新開發必須遵循[安全性最佳實務](/help/sites-developing/security.md)，以確保您的AEM環境安全。
+新開發必須遵循[安全性最佳實務](/help/sites-developing/security.md)，以確保您的AEM環境安全無虞。

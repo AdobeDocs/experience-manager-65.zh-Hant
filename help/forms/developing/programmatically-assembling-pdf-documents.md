@@ -1,6 +1,6 @@
 ---
 title: 以程式設計方式組合PDF檔案
-description: 使用Assembler服務API，透過Java API和Web服務API將多個PDF檔案組合成單一PDF檔案。
+description: 使用Assembler服務API，透過Java API和Web服務API將多個PDF檔案彙整為單一PDF檔案。
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/assembling_pdf_documents
@@ -12,7 +12,7 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Services
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '2105'
+source-wordcount: '2139'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 **本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
 
-您可以使用Assembler Service API將多個PDF檔案組合成單一PDF檔案。 下圖顯示三份PDF檔案合併為單一PDF檔案。
+您可以使用組合器服務API，將多個PDF檔案組合成單一PDF檔案。 下圖顯示三份PDF檔案正在合併為單一PDF檔案。
 
 ![pa_pa_document_assembly](assets/pa_pa_document_assembly.png)
 
@@ -43,7 +43,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->若要檢視可拆解PDF檔案的DDX檔案，請參閱[以程式設計方式拆解PDF檔案](/help/forms/developing/programmatically-disassembling-pdf-documents.md#programmatically-disassembling-pdf-documents)。
+>若要檢視解譯PDF檔案的DDX檔案，請參閱[以程式設計方式解譯PDF檔案](/help/forms/developing/programmatically-disassembling-pdf-documents.md#programmatically-disassembling-pdf-documents)。
 
 >[!NOTE]
 >
@@ -82,8 +82,8 @@ ht-degree: 0%
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-assembler-client.jar
-* adobe-utilities.jar (如果AEM Forms部署在JBoss上，則為必要)
-* jbossall-client.jar (如果AEM Forms部署在JBoss上，則為必要)
+* adobe-utilities.jar （如果AEM Forms部署在JBoss上，則為必要）
+* jbossall-client.jar （如果AEM Forms部署在JBoss上，則為必要）
 
 如果將AEM Forms部署在JBoss以外的受支援J2EE應用程式伺服器上，則必須將adobe-utilities.jar和jbossall-client.jar檔案取代為部署AEM Forms之J2EE應用程式伺服器專屬的JAR檔案。
 
@@ -93,17 +93,17 @@ ht-degree: 0%
 
 **參考現有的DDX檔案**
 
-必須參考DDX檔案才能組裝PDF檔案。 例如，以本節介紹的DDX檔案為例。 此DDX檔案會指示Assembler服務將兩個PDF檔案合併為單一PDF檔案。
+必須參考DDX檔案才能組裝PDF檔案。 例如，以本節介紹的DDX檔案為例。 此DDX檔案會指示組合器服務將兩個PDF檔案合併為單一PDF檔案。
 
 **參考輸入PDF檔案**
 
-參考您要傳遞至組合器服務的輸入PDF檔案。 例如，如果要傳遞兩個名為「地圖」和「方向」的輸入PDF檔案，則必須傳遞對應的PDF檔案。
+參考您要傳遞至組合器服務的輸入PDF檔案。 例如，如果您要傳遞兩個名為「地圖」和「方向」的輸入PDF檔案，則必須傳遞對應的PDF檔案。
 
-map.pdf檔案和directions.pdf檔案都必須放置在集合物件中。 索引鍵的名稱必須符合DDX檔案中PDF來源屬性的值。 如果DDX檔案中的索引鍵和來源屬性相符，則PDF檔案的名稱並不重要。
+map.pdf檔案和directions.pdf檔案都必須放置在集合物件中。 金鑰的名稱必須符合DDX檔案中PDF來源屬性的值。 如果DDX檔案中的索引鍵和來源屬性相符，則PDF檔案的名稱並不重要。
 
 >[!NOTE]
 >
->若您叫用`invokeDDX`作業，會傳回包含集合物件的`AssemblerResult`物件。 將兩個或多個輸入PDF檔案傳遞至組合器服務時，會使用此作業。 但是，如果您只傳遞一個輸入PDF給組合器服務，並且只期望有一個傳回檔案，請叫用`invokeOneDocument`作業。 叫用此作業時，會傳回單一檔案。 如需有關使用此作業的資訊，請參閱[組合加密的PDF檔案](/help/forms/developing/assembling-encrypted-pdf-documents.md#assembling-encrypted-pdf-documents)。
+>若您叫用`invokeDDX`作業，會傳回包含集合物件的`AssemblerResult`物件。 將兩個或多個輸入PDF檔案傳遞至組合器服務時，會使用此作業。 不過，如果您只將一個輸入PDF傳遞至組合器服務，並且只期望有一個傳回檔案，請叫用`invokeOneDocument`作業。 叫用此作業時，會傳回單一檔案。 如需有關使用此作業的資訊，請參閱[組合加密的PDF檔案](/help/forms/developing/assembling-encrypted-pdf-documents.md#assembling-encrypted-pdf-documents)。
 
 **設定執行階段選項**
 
@@ -123,7 +123,7 @@ Assembler服務傳回`java.util.Map`物件，此物件可從`AssemblerResult`物
  <thead>
   <tr>
    <th><p>索引鍵值</p></th>
-   <th><p>物件型別</p></th>
+   <th><p>物件類型</p></th>
    <th><p>說明</p></th>
   </tr>
  </thead>
@@ -152,7 +152,7 @@ Assembler服務傳回`java.util.Map`物件，此物件可從`AssemblerResult`物
 
 [設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[以程式分解的PDF檔案](/help/forms/developing/programmatically-disassembling-pdf-documents.md#programmatically-disassembling-pdf-documents)
+[以程式設計方式分解PDF檔案](/help/forms/developing/programmatically-disassembling-pdf-documents.md#programmatically-disassembling-pdf-documents)
 
 ## 使用Java API組合PDF檔案 {#assemble-pdf-documents-using-the-java-api}
 
@@ -192,7 +192,7 @@ Assembler服務傳回`java.util.Map`物件，此物件可從`AssemblerResult`物
    叫用`AssemblerServiceClient`物件的`invokeDDX`方法，並傳遞下列必要值：
 
    * 代表要使用的DDX檔案的`com.adobe.idp.Document`物件
-   * 包含要組合之輸入PDF檔案的`java.util.Map`物件
+   * 包含要組裝之輸入PDF檔案的`java.util.Map`物件
    * 指定執行階段選項（包括預設字型和作業記錄層級）的`com.adobe.livecycle.assembler.client.AssemblerOptionSpec`物件
 
    `invokeDDX`方法傳回`com.adobe.livecycle.assembler.client.AssemblerResult`物件，其中包含工作的結果和發生的任何例外狀況。
@@ -202,7 +202,7 @@ Assembler服務傳回`java.util.Map`物件，此物件可從`AssemblerResult`物
    若要取得新建立的PDF檔案，請執行下列動作：
 
    * 叫用`AssemblerResult`物件的`getDocuments`方法。 這會傳回`java.util.Map`物件。
-   * 逐一檢視`java.util.Map`物件，直到找到結果`com.adobe.idp.Document`物件為止。 (您可以使用DDX檔案中指定的PDF結果元素來取得檔案。)
+   * 逐一檢視`java.util.Map`物件，直到找到結果`com.adobe.idp.Document`物件為止。 （您可以使用DDX檔案中指定的PDF結果元素來取得檔案。）
    * 叫用`com.adobe.idp.Document`物件的`copyToFile`方法來擷取PDF檔案。
 
    >[!NOTE]
@@ -211,7 +211,7 @@ Assembler服務傳回`java.util.Map`物件，此物件可從`AssemblerResult`物
 
 **另請參閱**
 
-[快速入門(SOAP模式)：使用Java API組合PDF檔案](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-a-pdf-document-using-the-java-api)
+[快速入門（SOAP模式）：使用Java API組合PDF檔案](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-a-pdf-document-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -219,7 +219,7 @@ Assembler服務傳回`java.util.Map`物件，此物件可從`AssemblerResult`物
 
 ## 使用網站服務API組合PDF檔案 {#assemble-pdf-documents-using-the-web-service-api}
 
-使用組合器服務API （Web服務）組合PDF檔案：
+使用Assembler Service API （Web服務）組合PDF檔案：
 
 1. 包含專案檔案。
 
@@ -253,15 +253,15 @@ Assembler服務傳回`java.util.Map`物件，此物件可從`AssemblerResult`物
 1. 參考輸入PDF檔案。
 
    * 對於每個輸入PDF檔案，使用其建構函式來建立`BLOB`物件。 `BLOB`物件是用來儲存輸入PDF檔案。
-   * 建立`System.IO.FileStream`物件，方法為叫用其建構函式，並傳遞代表輸入PDF檔案的檔案位置和開啟檔案的模式的字串值。
+   * 建立`System.IO.FileStream`物件，方法為叫用其建構函式，並傳遞代表輸入PDF檔案的檔案位置以及開啟檔案的模式的字串值。
    * 建立位元組陣列以儲存`System.IO.FileStream`物件的內容。 您可以取得`System.IO.FileStream`物件的`Length`屬性來決定位元組陣列的大小。
    * 呼叫`System.IO.FileStream`物件的`Read`方法，以串流資料填入位元組陣列。 傳遞位元組陣列、起始位置以及要讀取的資料流長度。
    * 以位元組陣列的內容指派其`MTOM`欄位，填入`BLOB`物件。
    * 建立`MyMapOf_xsd_string_To_xsd_anyType`物件。 此集合物件是用來儲存輸入PDF檔案。
    * 針對每個輸入PDF檔案，建立`MyMapOf_xsd_string_To_xsd_anyType_Item`物件。 例如，如果使用兩個輸入PDF檔案，請建立兩個`MyMapOf_xsd_string_To_xsd_anyType_Item`物件。
-   * 將代表索引鍵名稱的字串值指派給`MyMapOf_xsd_string_To_xsd_anyType_Item`物件的`key`欄位。 此值必須符合DDX檔案中指定的PDF來源元素的值。 (針對每個輸入PDF檔案執行此工作。)
-   * 將儲存PDF檔案的`BLOB`物件指派給`MyMapOf_xsd_string_To_xsd_anyType_Item`物件的`value`欄位。 (針對每個輸入PDF檔案執行此工作。)
-   * 將`MyMapOf_xsd_string_To_xsd_anyType_Item`物件新增至`MyMapOf_xsd_string_To_xsd_anyType`物件。 叫用`MyMapOf_xsd_string_To_xsd_anyType`物件的`Add`方法並傳遞`MyMapOf_xsd_string_To_xsd_anyType`物件。 (針對每個輸入PDF檔案執行此工作。)
+   * 將代表索引鍵名稱的字串值指派給`MyMapOf_xsd_string_To_xsd_anyType_Item`物件的`key`欄位。 此值必須符合DDX檔案中指定的PDF來源元素的值。 （針對每個輸入PDF檔案執行此工作。）
+   * 將儲存PDF檔案的`BLOB`物件指派給`MyMapOf_xsd_string_To_xsd_anyType_Item`物件的`value`欄位。 （針對每個輸入PDF檔案執行此工作。）
+   * 將`MyMapOf_xsd_string_To_xsd_anyType_Item`物件新增至`MyMapOf_xsd_string_To_xsd_anyType`物件。 叫用`MyMapOf_xsd_string_To_xsd_anyType`物件的`Add`方法並傳遞`MyMapOf_xsd_string_To_xsd_anyType`物件。 （針對每個輸入PDF檔案執行此工作。）
 
 1. 設定執行階段選項。
 

@@ -7,7 +7,7 @@ feature: Authoring
 role: User,Admin,Developer
 source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
-source-wordcount: '1155'
+source-wordcount: '1173'
 ht-degree: 8%
 
 ---
@@ -53,7 +53,7 @@ ht-degree: 8%
 
 >[!NOTE]
 >
->某些動作也會顯示在適當資源[的](/help/sites-authoring/basic-handling.md#card-view)卡片檢視中。
+>某些動作也會顯示在適當資源[&#128279;](/help/sites-authoring/basic-handling.md#card-view)的卡片檢視中。
 
 ## 現成可用的管理工作  {#out-of-the-box-administrative-tasks}
 
@@ -70,8 +70,8 @@ ht-degree: 8%
 
 1. 按一下工具列中的指示器。
 
-1. 選擇「 **全部查看**」。**AEM收件匣**&#x200B;開啟。 收件匣會顯示工作流程、專案和工作中的項目。
-1. 預設視圖是「列 [表視圖](#inbox-list-view)」，但您也可以切換到「日 [歷視圖」](#inbox-calendar-view)。這是使用檢視選取器 (工具列，右上方) 完成。
+1. 選擇「 **全部查看**」。 **AEM收件匣**&#x200B;開啟。 收件匣會顯示工作流程、專案和工作中的項目。
+1. 預設視圖是「列 [表視圖](#inbox-list-view)」，但您也可以切換到「日 [歷視圖」](#inbox-calendar-view)。 這是使用檢視選取器 (工具列，右上方) 完成。
 
    對於這兩個檢視，您也可以定義[檢視設定](#inbox-view-settings)；可用的選項取決於目前的檢視。
 
