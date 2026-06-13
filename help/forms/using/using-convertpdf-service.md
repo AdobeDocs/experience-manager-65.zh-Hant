@@ -34,9 +34,9 @@ ht-degree: 0%
 
 ConvertPDF服務提供下列兩個API：
 
-* **[toPS](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/cpdf/api/ConvertPdfService.html#toPS)**：將PDF檔案轉換為PostScript檔案。
+* **[toPS](https://helpx.adobe.com/tw/experience-manager/6-3/forms/javadocs/com/adobe/fd/cpdf/api/ConvertPdfService.html#toPS)**：將PDF檔案轉換為PostScript檔案。
 
-* **[toImage](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/cpdf/api/ConvertPdfService.html#toImage)**：將PDF檔案轉換為影像檔案。 支援的影像格式為JPEG、JPEG2000、PNG和TIFF。
+* **[toImage](https://helpx.adobe.com/tw/experience-manager/6-3/forms/javadocs/com/adobe/fd/cpdf/api/ConvertPdfService.html#toImage)**：將PDF檔案轉換為影像檔案。 支援的影像格式為JPEG、JPEG2000、PNG和TIFF。
 
 ### 搭配JSP或Servlet使用toPS API {#using-tops-api-with-a-jsp-or-servlets}
 
