@@ -12,7 +12,7 @@ feature: Integration
 role: Admin
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
-source-wordcount: '333'
+source-wordcount: '406'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 1%
 
 下表列出SharePoint Connector核心程式庫內使用的協力廠商程式庫，以及其涵蓋的授權、版權注意事項或免責宣告：
 
-| 資料庫 | 授權類型 |
+| 程式庫 | 授權類型 |
 |---|---|
 | 註釋 | [Apache](#apache) |
 | axiom-api | [Apache](#apache) |
@@ -165,7 +165,7 @@ ht-degree: 1%
  </colgroup>
  <tbody>
   <tr>
-   <td>資料庫</td>
+   <td>程式庫</td>
    <td>授權</td>
   </tr>
   <tr>

@@ -11,7 +11,7 @@ feature: Mobile
 role: User
 source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '653'
+source-wordcount: '685'
 ht-degree: 1%
 
 ---
@@ -30,9 +30,9 @@ ht-degree: 1%
 >
 >請參閱線上說明中的下列資源，以瞭解AEM Mobile應用程式中的下列主題：
 >
->* [設計考量](https://helpx.adobe.com/tw/digital-publishing-solution/help/design-app.html)
+>* [設計考量](https://helpx.adobe.com/digital-publishing-solution/help/design-app.html)
 >
->* [管理文章](https://helpx.adobe.com/tw/digital-publishing-solution/help/creating-articles.html)
+>* [管理文章](https://helpx.adobe.com/digital-publishing-solution/help/creating-articles.html)
 >
 
 ## 建立文章 {#creating-an-article}
@@ -79,7 +79,7 @@ ht-degree: 1%
 編輯文章的工作流程：
 
 1. 在Mobile中，從目錄選擇您的Mobile On-Demand應用程式。
-1. 從&#x200B;**管理文章**&#x200B;圖磚中選取AEM來源文章。
+1. 從&#x200B;**管理文章**&#x200B;圖磚選取AEM來源文章。
 1. 從清單檢視中按一下醒目提示的文章，以在內容編輯器中開啟它。
 1. 使用內容編輯器拖曳文章內容（手稿、影像、文字等）。
 
@@ -113,7 +113,7 @@ ht-degree: 1%
 
 ## 刪除文章 {#deleting-an-article}
 
-此作業會從Mobile On-Demand以及本機AEM執行個體中刪除選取的內容（選擇性）。
+此操作會從Mobile On-Demand以及本機的AEM執行個體中刪除選取的內容（可選）。
 
 刪除文章的一般工作流程：
 

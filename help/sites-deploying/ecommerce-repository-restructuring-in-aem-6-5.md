@@ -1,6 +1,6 @@
 ---
 title: AEM 6.5中的E-Commerce存放庫重組
-description: 瞭解如何進行必要的變更，以移轉至AEM 6.5中適用於E-Commerce的新存放庫結構。
+description: 瞭解如何進行必要的變更，以移轉至E-Commerce的AEM 6.5中的新存放庫結構。
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: repo_restructuring
@@ -10,14 +10,14 @@ solution: Experience Manager, Experience Manager Sites
 role: Admin
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '208'
+source-wordcount: '215'
 ht-degree: 1%
 
 ---
 
 # AEM 6.5中的E-Commerce存放庫重組{#e-commerce-repository-restructuring-in-aem}
 
-如AEM 6.5[&#128279;](/help/sites-deploying/repository-restructuring.md)頁面的上層存放庫重新調整中所述，升級至AEM 6.5的客戶應使用此頁面來評估與影響AEM E-Commerce解決方案的存放庫變更相關的工作量。 在AEM 6.5升級程式期間，有些變更需要投入大量精力，而其他變更則可能延遲到未來升級。
+如AEM 6.5](/help/sites-deploying/repository-restructuring.md)頁面的上層[存放庫重新調整中所述，升級至AEM 6.5的客戶應使用此頁面評估與影響AEM E-Commerce解決方案的存放庫變更相關的工作量。 在AEM 6.5升級程式期間，有些變更需要大量工作量，而其他變更則可能延遲到未來升級為止。
 
 ## 6.5版升級 {#with-upgrade}
 
@@ -47,10 +47,10 @@ ht-degree: 1%
      <li>/etc/commerce/orders<br /> </li>
      <li>/etc/commerce/payment-methods<br /> </li>
      <li>/etc/commerce/shipping-methods<br /> </li>
-    </ul> <p>若為大型目錄，Adobe建議您透過將下列Java™系統屬性傳遞至AEM來個別執行商務移轉工作：</p> <p><code>propertyname: com.adobe.upgrade.forcemigration</code></p> <p><code>property value: com.day.cq.compat.codeupgrade.impl.cq64.CQ64CommerceMigrationTask</code></p> <p>移轉後，請重新啟動AEM。</p> </td>
+    </ul> <p>若為較大型的目錄，Adobe建議您透過將下列Java™系統屬性傳遞至AEM來個別執行商務移轉工作：</p> <p><code>propertyname: com.adobe.upgrade.forcemigration</code></p> <p><code>property value: com.day.cq.compat.codeupgrade.impl.cq64.CQ64CommerceMigrationTask</code></p> <p>移轉後，請重新啟動AEM。</p> </td>
   </tr>
   <tr>
-   <td><strong>附註</strong></td>
+   <td><strong>備註</strong></td>
    <td>不適用<br /> </td>
   </tr>
  </tbody>
