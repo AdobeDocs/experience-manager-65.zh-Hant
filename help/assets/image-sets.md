@@ -13,7 +13,7 @@ solution: Experience Manager, Experience Manager Assets
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '2274'
-ht-degree: 5%
+ht-degree: 7%
 
 ---
 
@@ -39,7 +39,7 @@ ht-degree: 5%
 
 | 限制型別 | 最佳實務 | 強加的限制 |
 | --- | --- | --- |
-| 每個集的重複資產數 | 無重複專案 | 20‡ |
+| 每個集的重複資產數 | 無重複項目 | 20‡ |
 | 每組影像的最大數量 | 每組5至10個影像 | 1000 |
 
 ‡最佳實務是集合中不要有重複的資產。 單一資產的限製為20個重複專案。 如果您為該資產新增另一個重複專案（在該集合內），請求會傳回錯誤或忽略重複專案。
@@ -52,7 +52,7 @@ ht-degree: 5%
 
 1. [上傳多個檢視的主要來源影像](#uploading-assets-in-image-sets)。
 
-   首先，上傳影像集的影像。 當您選擇影像時，請記得您的客戶可以在影像集檢視器中放大影像。 請確定影像在最大尺寸中至少為2000畫素，以獲得最佳縮放細節。 Dynamic Media可轉譯每張影像高達2500萬畫素。 例如，您可以使用5000 x 5000 MP的影像，或任何其他大小組合，最大可達25 MP。
+   首先，上傳影像集的影像。 當您選擇影像時，請記得您的客戶可以在影像集檢視器中放大影像。 請確定影像在最大尺寸中至少為2000畫素，以獲得最佳縮放細節。 Dynamic Media最多可轉譯每張影像2500萬畫素。 例如，您可以使用5000 x 5000 MP的影像，或任何其他大小組合，最大可達25 MP。
 
    如需影像集支援的格式清單，請參閱[Dynamic Media — 支援的光柵影像格式](/help/assets/assets-formats.md#supported-raster-image-formats-dynamic-media)。
 
@@ -67,7 +67,7 @@ ht-degree: 5%
    您也可以透過[批次集預設集](/help/assets/config-dms7.md)自動建立影像集。
    >[!IMPORTANT]
    >
-   >批次集由IPS (Image Production System)建立，作為資產擷取的一部分，僅適用於Dynamic Media - Scene7模式。
+   >批次集由IPS(Image Production System)建立，作為資產擷取的一部分，並僅適用於Dynamic Media - Scene7模式。
 
    請參閱[準備影像集資產以上傳及上傳您的檔案](#uploading-assets-in-image-sets)。
 
@@ -84,7 +84,7 @@ ht-degree: 5%
 
    選取「影像集」，即可預覽。 選取縮圖圖示，以便您可以在選取的檢視器中檢查影像集。 您可以從&#x200B;**[!UICONTROL 檢視器]**&#x200B;功能表（可從左側導軌下拉式功能表取得）中選擇不同的檢視器。
 
-1. [Publish影像集](/help/assets/publishing-dynamicmedia-assets.md)。
+1. [發佈影像集](/help/assets/publishing-dynamicmedia-assets.md)。
 
    發佈影像集時會啟用URL和內嵌程式碼。 此外，您必須[發佈您已建立的任何自訂檢視器預設集](/help/assets/managing-viewer-presets.md)。 現成可用的檢視器預設集已發佈。
 
@@ -98,11 +98,11 @@ ht-degree: 5%
 
 若要編輯影像集，請參閱[編輯影像集](#editing-image-sets)。 此外，您也可以檢視及編輯[影像集屬性](/help/assets/manage-assets.md#editing-properties)。
 
-如果您無法建立集合，請參閱[疑難排解Dynamic Media - Scene7模式](/help/assets/troubleshoot-dms7.md#images-and-sets)中的影像和集合。
+如果您無法建立集合，請參閱[Dynamic Media - Scene7模式疑難排解](/help/assets/troubleshoot-dms7.md#images-and-sets)中的影像和集合。
 
 ## 上傳影像集中的資產 {#uploading-assets-in-image-sets}
 
-首先，上傳影像集的影像。 當您選擇影像時，請記得您的客戶可以在影像集檢視器中放大影像。 請確定影像在最大尺寸中至少為2000畫素。 影像集支援許多影像檔案格式，但建議使用不失真TIFF、PNG和EPS影像。
+首先，上傳影像集的影像。 當您選擇影像時，請記得您的客戶可以在影像集檢視器中放大影像。 請確定影像在最大尺寸中至少為2000像素。 影像集支援許多影像檔案格式，但建議使用無損的TIFF、PNG和EPS影像。
 
 您可以像在Assets[上傳任何其他資產一樣上傳影像集的影像](/help/assets/manage-assets.md#uploading-assets)。
 
@@ -132,7 +132,7 @@ ht-degree: 5%
 >[!NOTE]
 >
 >您也可以透過[批次集預設集](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)自動建立影像集。
->**重要：**&#x200B;批次集由IPS (Image Production System)建立，作為資產擷取的一部分，僅適用於Dynamic Media - Scene7模式。
+>**重要：**&#x200B;批次集是由IPS (Image Production System)建立為資產擷取的一部分，僅適用於Dynamic Media - Scene7模式。
 
 將資產新增至集時，資產會自動以字母數字順序新增。 在新增資產後，您可以手動重新排序或排序資產。
 
@@ -144,7 +144,7 @@ ht-degree: 5%
 
 | 限制型別 | 最佳實務 | 強加的限制 |
 | --- | --- | --- |
-| 每個集的重複資產數 | 無重複專案 | 20‡ |
+| 每個集的重複資產數 | 無重複項目 | 20‡ |
 | 每組影像的最大數量 | 每組5至10個影像 | 1000 |
 
 ‡最佳實務是集合中不要有重複的資產。 單一資產的限製為20個重複專案。 如果您為該資產新增另一個重複專案（在該集合內），請求會傳回錯誤或忽略重複專案。
@@ -163,15 +163,15 @@ ht-degree: 5%
 
    ![6_5_imageset-creatingnewset](assets/6_5_imageset-creatingnewset.png)
 
-1. 執行下列任一項作業：
+1. 執行下列其中一項：
 
    * 在「影像集編輯器」頁面的左上角附近，選取&#x200B;**[!UICONTROL 新增資產]**。
 
    * 在「影像集編輯器」頁面中間附近，選取&#x200B;**[!UICONTROL 點選以開啟「資產選擇器」]**。
 
-   選取您要納入影像集的資產。 選取的資產上面有核取標籤圖示。完成後，在頁面的右上角附近，選取&#x200B;**[!UICONTROL 選取]**。
+   選取您要納入影像集的資產。 選取的資產上面有核取標籤圖示。 完成後，在頁面的右上角附近，選取&#x200B;**[!UICONTROL 選取]**。
 
-   使用「資產選擇器」，您可以輸入關鍵字並點選或按一下「退貨」來搜尋 **[!UICONTROL 資產]**。您也可以套用篩選條件來調整搜尋結果。您可以依路徑、系列、檔案類型和標籤來篩選。選取篩選，然後在工具列上選取&#x200B;**[!UICONTROL 篩選]**&#x200B;圖示。 點選「檢視」圖示並選取「欄檢視」、「卡片檢視」或「清 **[!UICONTROL 單檢視」]**, **[!UICONTROL 以變更]**&#x200B;檢視 **&#x200B;**。
+   使用「資產選擇器」，您可以輸入關鍵字並點選或按一下「退貨」來搜尋 **[!UICONTROL 資產]**。 您也可以套用篩選條件來調整搜尋結果。 您可以依路徑、系列、檔案類型和標籤來篩選。 選取篩選，然後在工具列上選取&#x200B;**[!UICONTROL 篩選]**&#x200B;圖示。 點選「檢視」圖示並選取「欄檢視」、「卡片檢視」或「清 **[!UICONTROL 單檢視」]**, **[!UICONTROL 以變更]**&#x200B;檢視 **&#x200B;**。
 
    請參閱[使用選取器](/help/assets/working-with-selectors.md)。
 
@@ -185,7 +185,7 @@ ht-degree: 5%
 
    如果您想要變更縮圖或色票，請選取影像旁的&#x200B;**+** **縮圖**&#x200B;圖示，並導覽至您想要的縮圖或色票。 選取完所有影像後，選取&#x200B;**[!UICONTROL 儲存]**。
 
-1. （可選）執行下列任一項作業：
+1. (選用) 執行以下任一操作：
 
    * 若要刪除影像，請選取該影像，然後選取&#x200B;**[!UICONTROL 刪除資產]**。
 
@@ -195,7 +195,7 @@ ht-degree: 5%
    >
    >建立影像集時，您可以變更影像集縮圖，或允許Experience Manager根據影像集中的資產自動選取縮圖。 若要選取縮圖，請選取[影像集編輯器]頁面上[標題]欄位上方的&#x200B;**[!UICONTROL 變更縮圖]**，然後選取任何影像（您也可以導覽至其他檔案夾以尋找影像）。 如果您已選取縮圖，然後決定要讓Experience Manager從影像集產生縮圖，請選取&#x200B;**[!UICONTROL 切換至]** > **[!UICONTROL 自動縮圖]**。
 
-1. 選取&#x200B;**[!UICONTROL 儲存]**。您新建立的影像集會顯示在您建立的資料夾中。
+1. 選取&#x200B;**[!UICONTROL 儲存]**。 您新建立的影像集會顯示在您建立的資料夾中。
 
 ## 檢視影像集 {#viewing-image-sets}
 
@@ -211,13 +211,13 @@ ht-degree: 5%
 
   ![6_5_imageset-assetproperties](assets/6_5_imageset-assetproperties2.png)
 
-* 來自任何組的成員映像。選取&#x200B;**[!UICONTROL 集合]**&#x200B;功能表以顯示資產所屬的集合。
+* 來自任何組的成員映像。 選取&#x200B;**[!UICONTROL 集合]**&#x200B;功能表以顯示資產所屬的集合。
 
   ![6_5_imageset-setspulldownmenu](assets/6_5_imageset-setspulldownmenu.png)
 
 * 從搜尋中，您可以選取&#x200B;**[!UICONTROL 篩選器]**，然後展開&#x200B;**[!UICONTROL Dynamic Media]**&#x200B;並選取&#x200B;**[!UICONTROL 集合]**。
 
-  搜尋會傳回在UI中手動建立，或透過批次集預設集自動建立的相符集。 對於自動化集，搜尋查詢是使用「開頭為」搜尋條件執行的，不同於以使用「包含」搜尋條件為基礎的Experience Manager搜尋。 將篩選器設定為&#x200B;**[!UICONTROL Sets]**&#x200B;是搜尋自動化集合的唯一方法。
+  搜尋會傳回在UI中手動建立，或透過批次集預設集自動建立的相符集。 對於自動化集，搜尋查詢是使用「開頭為」搜尋條件執行，這與Experience Manager搜尋不同，後者是以「包含」搜尋條件為基礎。 將篩選器設定為&#x200B;**[!UICONTROL Sets]**&#x200B;是搜尋自動化集合的唯一方法。
 
   ![chlimage_1-134](assets/chlimage_1-134.png)
 
@@ -248,10 +248,9 @@ ht-degree: 5%
    * 若要重新排序資產，請將影像拖曳至新位置（選取重新排序圖示以移動專案）。
    * 若要以遞增或遞減順序排序專案，請選取欄標題。
    * 若要新增資產或更新現有資產，請選取&#x200B;**[!UICONTROL 新增資產]**。 導覽至某個資產，選取該資產，然後選取頁面右上角附近的&#x200B;**[!UICONTROL 選取]**。
-
      >[!NOTE]
      >
-     >如果您刪除Experience Manager用於縮圖的影像，改為另一個影像，則仍會顯示原始資產。
+     >如果您刪除Experience Manager用於縮圖的影像，改為其他影像，仍會顯示原始資產。
    * 若要刪除資產，請選取該資產，然後選取&#x200B;**[!UICONTROL 刪除資產]**。
    * 若要套用預設集，在頁面右上角附近，選取&#x200B;**[!UICONTROL 預設集]**，然後選取檢視器預設集。
    * 若要新增或變更縮圖，請選取資產右側旁的縮圖圖示。 導覽至新的縮圖或色票資產，選取它，然後選取&#x200B;**[!UICONTROL 選取]**。
@@ -267,6 +266,6 @@ ht-degree: 5%
 
 請參閱[預覽資產](/help/assets/previewing-assets.md)。
 
-## Publish和影像集 {#publishing-image-sets}
+## 發佈影像集 {#publishing-image-sets}
 
 請參閱[發佈Assets](/help/assets/publishing-dynamicmedia-assets.md)。

@@ -11,7 +11,7 @@ solution: Experience Manager, Experience Manager Assets
 source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
 workflow-type: tm+mt
 source-wordcount: '2400'
-ht-degree: 10%
+ht-degree: 13%
 
 ---
 
@@ -29,7 +29,7 @@ Scope of metadata articles:
 * metadata-config.md: New article. Contains all configuration and administration how-to info related to metadata of assets.
 -->
 
-[!DNL Adobe Experience Manager Assets]保留每個資產的中繼資料。 它可讓您更輕鬆地分類及組織資產，並協助尋找特定資產的人。 中繼資料管理可透過從上傳至[!DNL Experience Manager Assets]的檔案擷取中繼資料，與創意工作流程整合。 有了使用資產保留和管理中繼資料的功能，您可以根據資產的中繼資料自動組織和處理資產。
+[!DNL Adobe Experience Manager Assets] 會保留每個資產的後設資料。 這樣便可以更輕鬆地完成資產分類和組織，並協助使用者尋找特定的資產。 中繼資料管理可透過從上傳至[!DNL Experience Manager Assets]的檔案擷取中繼資料，與創意工作流程整合。 藉助保留和管理資產後設資料的功能，您可以根據資產的後設資料自動組織和處理資產。
 
 ## 中繼資料及其來源 {#how-to-edit-or-add-metadata}
 
@@ -39,7 +39,7 @@ Scope of metadata articles:
 
 * 首先，建立資產的原生應用程式會新增一些中繼資料。 例如，[Acrobat將一些中繼資料](https://helpx.adobe.com/tw/acrobat/using/pdf-properties-metadata.html)新增至PDF檔案，或相機將一些基本中繼資料新增至像片。 產生資產時，您可以在原生應用程式本身中新增中繼資料。 例如，您可以[在Adobe Lightroom](https://helpx.adobe.com/tw/lightroom-classic/help/metadata-basics-actions.html)中新增IPTC中繼資料。
 
-* 在將資產上傳到[!DNL Experience Manager]之前，您可以使用用於建立資產的原生應用程式或使用其他中繼資料編輯應用程式來編輯和修改中繼資料。 將資產上傳至Experience Manager時，系統會處理中繼資料。 例如，瞭解如何[在 [!DNL Adobe Bridge]](https://helpx.adobe.com/tw/bridge/user-guide.html/bridge/using/metadata-adobe-bridge.ug.html)中使用中繼資料，並檢視[!DNL Adobe Exchange]中 [!DNL Adobe Bridge][&#128279;](https://exchange.adobe.com/creativecloud.details.20009.aem-tags-panel-for-bridge-cc.html)的標籤面板。
+* 在將資產上傳到[!DNL Experience Manager]之前，您可以使用用於建立資產的原生應用程式或使用其他中繼資料編輯應用程式來編輯和修改中繼資料。 將資產上傳至Experience Manager時，系統會處理中繼資料。 例如，瞭解如何[在 [!DNL Adobe Bridge]](https://helpx.adobe.com/bridge/user-guide.html/bridge/using/metadata-adobe-bridge.ug.html)中使用中繼資料，並檢視[!DNL Adobe Exchange]中 [!DNL Adobe Bridge][&#128279;](https://exchange.adobe.com/creativecloud.details.20009.aem-tags-panel-for-bridge-cc.html)的標籤面板。
 
 * 在[!DNL Experience Manager Assets]中，您可以在[!UICONTROL 屬性]頁面中手動新增或編輯資產的中繼資料。
 
@@ -180,7 +180,7 @@ TBD: Review this overview.
 
 您可以將中繼資料設定檔套用至特定資料夾，或全域套用至所有資產。
 
-若資料夾中已有您後來加以變更的現有中繼資料設定檔，您可以重新處理該資料夾中的資產。 請參閱[在您編輯資料夾中資產的處理設定檔](processing-profiles.md#reprocessing-assets)之後，重新處理該資料夾中的資產。
+若資料夾中已有您後來進行變更的現有後設資料設定檔，您可以對該資料夾中的資產進行重新處理。 請參閱[在您編輯資料夾中資產的處理設定檔](processing-profiles.md#reprocessing-assets)之後，重新處理該資料夾中的資產。
 
 您可以從「工具」菜單或者在資料夾內的「屬性」中，將元資料設定檔&#x200B;**[!UICONTROL 應用到資料夾]**&#x200B;**&#x200B;**。 本節說明如何以兩種方式將中繼資料設定檔套用至資料夾。
 
