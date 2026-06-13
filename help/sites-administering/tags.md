@@ -50,8 +50,8 @@ AEM中的部分標籤功能包括：
    * 非容器標籤的標籤稱為分葉標籤
    * 標籤名稱空間是葉標籤或容器標籤
 
-* [搜尋元件](https://helpx.adobe.com/experience-manager/core-components/using/quick-search.html)使用標籤來協助尋找內容。
-* 標籤由[Teaser元件](https://helpx.adobe.com/experience-manager/core-components/using/teaser.html)使用，該元件會監視使用者的標籤雲以提供目標內容。
+* [搜尋元件](https://helpx.adobe.com/tw/experience-manager/core-components/using/quick-search.html)使用標籤來協助尋找內容。
+* 標籤由[Teaser元件](https://helpx.adobe.com/tw/experience-manager/core-components/using/teaser.html)使用，該元件會監視使用者的標籤雲以提供目標內容。
 * 如果標籤是內容的重要方面
 
    * 請務必封裝標籤與使用這些標籤的頁面
