@@ -7,7 +7,7 @@ exl-id: 25c91a85-06ff-4666-a809-46778a689e25
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 11a8181e860c724c817dd549b351df079c8227e2
 workflow-type: tm+mt
-source-wordcount: '1728'
+source-wordcount: '1741'
 ht-degree: 8%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 8%
 >可以使用內容片段：
 >
 >* 編寫頁面時；請參閱[使用內容片段編寫頁面](/help/sites-authoring/content-fragments.md)。
->* 使用內容片段搭配GraphQL[的](/help/assets/content-fragments/content-fragments-graphql.md)Headless內容傳遞。
+>* 使用內容片段搭配GraphQL](/help/assets/content-fragments/content-fragments-graphql.md)的[Headless內容傳遞。
 
 >[!NOTE]
 >
@@ -127,7 +127,7 @@ ht-degree: 8%
 
 >[!NOTE]
 >
->其中許多是Assets[和/或](/help/assets/manage-assets.md)AEM案頭應用程式[的](https://helpx.adobe.com/tw/experience-manager/desktop-app/aem-desktop-app.html)標準動作。
+>其中許多是Assets](/help/assets/manage-assets.md)和/或[AEM案頭應用程式](https://helpx.adobe.com/tw/experience-manager/desktop-app/aem-desktop-app.html)的[標準動作。
 
 ## 開啟片段編輯器 {#opening-the-fragment-editor}
 
@@ -197,7 +197,7 @@ ht-degree: 8%
 
 * **儲存**&#x200B;提供&#x200B;**儲存並關閉**&#x200B;選項的存取權。
 
-* 三個點(**...**)下拉式清單提供其他動作的存取權：
+* 三個點(**...**) 下拉式清單提供其他動作的存取權：
    * **更新頁面參考**
       * 這會更新任何頁面引用。
    * **[快速發佈](#publishing-and-referencing-a-fragment)**
@@ -322,7 +322,7 @@ This updates any page references and ensures that the Dispatcher is flushed as r
 
 ## 比較片段版本 {#comparing-fragment-versions}
 
-在您選取特定版本後，即可從&#x200B;**時間表**&#x200B;取得[與目前比較](/help/assets/content-fragments/content-fragments-managing.md#timeline-for-content-fragments)動作。
+在您選取特定版本後，即可從[時間表](/help/assets/content-fragments/content-fragments-managing.md#timeline-for-content-fragments)取得&#x200B;**與目前比較**&#x200B;動作。
 
 這將會開啟：
 
@@ -368,7 +368,7 @@ This updates any page references and ensures that the Dispatcher is flushed as r
 
 必須發佈內容片段才能在發佈環境中使用。 它們可以發佈：
 
-* 建立之後；使用Assets主控台[中可用的](#actions-for-a-content-fragment-assets-console)動作。
+* 建立之後；使用Assets主控台](#actions-for-a-content-fragment-assets-console)中可用的[動作。
 * 從[內容片段編輯器](#toolbar-actions-in-the-content-fragment-editor)。
 * 當您[發佈使用片段](/help/sites-authoring/content-fragments.md#publishing)的頁面時；片段將列在頁面參考中。
 
@@ -392,4 +392,4 @@ This updates any page references and ensures that the Dispatcher is flushed as r
 
    >[!CAUTION]
    >
-   >如果片段已在頁面中參考，您會看到警告訊息，並需要確認您要繼續執行強制刪 **除**。片段及其內容片段元件將會從任何內容頁面中刪除。
+   >如果片段已在頁面中參考，您會看到警告訊息，並需要確認您要繼續執行強制刪 **除**。 片段及其內容片段元件將會從任何內容頁面中刪除。

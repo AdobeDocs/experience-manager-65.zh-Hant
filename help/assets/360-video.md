@@ -12,16 +12,12 @@ exl-id: 0c2077a7-bd16-484b-980f-4d4a1a681491
 solution: Experience Manager, Experience Manager Assets
 autotag-review: '2026-05-18T18:33:16.243Z'
 TQID: 'https://experienceleague.adobe.com/t3-PFZjnQPbbgNMFEjG7SDwG1Pt1TkvD9wNNYYgaEyE'
-product_v2:
-  - id: e14eb250-3c22-4a07-9061-a78112b2b826
-  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-level_v2:
-  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+product_v2: id: e14eb250-3c22-4a07-9061-a78112b2b826id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
+level_v2: id: b5a62a22-46f7-4f0d-b151-3fc640bef588
 source-git-commit: 9c96b6744c7af2f061b4dfbf403560047485f9b5
 workflow-type: tm+mt
-source-wordcount: 1191
+source-wordcount: 1093
 ht-degree: 0%
 
 ---
@@ -42,14 +38,14 @@ Dynamic Media - Scene7模式包含傳送360個視訊資產的原生支援。 依
 
 選取[Space Station 360](https://s7d1.scene7.com/s7viewers/html5/Video360Viewer.html?asset=Viewers/space_station_360-AVS)開啟瀏覽器視窗並觀看360度視訊。 在視訊播放期間，將滑鼠指標拖曳到新位置以變更視角。
 
-![360 — 視訊範例，國際空間站漂浮在外層空間，其後面是地球和太陽。](assets/6_5_360videoiss_simplified.png)
+![360視訊範例，國際空間站漂浮在外太空中，其背後是地球和太陽。](assets/6_5_360videoiss_simplified.png)
 來自空間站360*的*&#x200B;視訊影格
 
 ## 360/VR視訊與Adobe Premiere Pro {#vr-video-and-adobe-premiere-pro}
 
 您可以使用Adobe Premier Pro來檢視和編輯360/VR素材。 例如，您可以在場景中正確放置標誌和文字，並套用專為等矩形媒體設計的效果和轉場。
 
-請參閱[編輯360/VR視訊](https://helpx.adobe.com/tw/premiere-pro/how-to/edit-360-vr-video.html)。
+請參閱[編輯360/VR視訊](https://helpx.adobe.com/premiere-pro/how-to/edit-360-vr-video.html)。
 
 ## 上傳資產以與360視訊檢視器搭配使用 {#uploading-assets-for-use-with-the-video-viewer}
 
@@ -110,7 +106,7 @@ Dynamic Media - Scene7模式包含傳送360個視訊資產的原生支援。 依
 當您對360視訊感到滿意時，可以將其發佈。
 
 請參閱[將視訊或影像檢視器嵌入網頁](/help/assets/embed-code.md)。
-檢視[將URL連結至您的網頁應用程式](/help/assets/linking-urls-to-yourwebapplication.md)。 如果您的互動式內容有具有相對URL的連結，尤其是指向Experience Manager Sites頁面的連結，則無法採用URL型連結方法。
+檢視[將URL連結至您的網頁應用程式](/help/assets/linking-urls-to-yourwebapplication.md)。如果您的互動式內容有具有相對URL的連結，尤其是指向Experience Manager Sites頁面的連結，則無法採用URL型連結方法。
 請參閱[將Dynamic Media Assets新增至頁面](/help/assets/adding-dynamic-media-assets-to-pages.md)。
 
 **預覽360個視訊：**
@@ -146,6 +142,6 @@ Dynamic Media - Scene7模式包含傳送360個視訊資產的原生支援。 依
 發佈360影片以便使用。 發佈360影片會啟用URL和內嵌程式碼。 此外，該公司也會將360影片發佈至Dynamic Media雲端，此雲端整合了CDN，提供具備擴充能力及高效能的傳送服務。
 
 如需如何發佈360視訊的詳細資訊，請參閱[發佈Dynamic Media資產](/help/assets/publishing-dynamicmedia-assets.md)。
-另請參閱[將視訊或影像檢視器嵌入網頁](/help/assets/embed-code.md)。
-另請參閱[將URL連結至您的網頁應用程式](/help/assets/linking-urls-to-yourwebapplication.md)。 如果您的互動式內容有具有相對URL的連結，尤其是指向Experience Manager Sites頁面的連結，則無法採用URL型連結方法。
+另請參閱[將視訊或影像檢視器內嵌在網頁上](/help/assets/embed-code.md)。
+另請參閱[將URL連結至您的網頁應用程式](/help/assets/linking-urls-to-yourwebapplication.md)。如果您的互動式內容有具有相對URL的連結，尤其是指向Experience Manager Sites頁面的連結，則無法採用URL型連結方法。
 另請參閱[將Dynamic Media資產新增至頁面](/help/assets/adding-dynamic-media-assets-to-pages.md)。

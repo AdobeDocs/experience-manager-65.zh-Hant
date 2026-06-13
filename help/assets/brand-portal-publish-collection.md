@@ -1,5 +1,5 @@
 ---
-title: Publish集合到Brand Portal
+title: 將集合發佈至Brand Portal
 description: 瞭解如何發佈和取消發佈集合到Brand Portal。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -12,12 +12,12 @@ exl-id: 8f426012-d9ec-418e-8ab6-78e4aeff7538
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '321'
+source-wordcount: '323'
 ht-degree: 30%
 
 ---
 
-# Publish集合到Brand Portal {#publish-collections-to-brand-portal}
+# 將集合發佈至Brand Portal {#publish-collections-to-brand-portal}
 
 身為Adobe Experience Manager (AEM) Assets管理員，您可以將集合發佈至貴組織的AEM Assets Brand Portal執行個體。 不過，您必須先整合AEM Assets與Brand Portal。 如需詳細資訊，請參閱[使用 Brand Portal 設定 AEM Assets](/help/assets/configure-aem-assets-with-brand-portal.md)。
 
@@ -25,11 +25,11 @@ ht-degree: 30%
 
 >[!NOTE]
 >
->內容片段無法發佈至 Brand Portal。因此，如果您在AEM Author上選取內容片段，則無法使用&#x200B;**Publish到Brand Portal**&#x200B;動作。
+>內容片段無法發佈至 Brand Portal。 因此，如果您在AEM Author上選取內容片段，則無法使用&#x200B;**發佈至Brand Portal**&#x200B;動作。
 >
 >如果從AEM Author將包含內容片段的集合發佈到Brand Portal，則除了內容片段以外，資料夾的所有內容都會複製到Brand Portal介面。
 
-## 將Publish集合新增至Brand Portal {#publish-a-collection-to-brand-portal}
+## 將集合發佈至Brand Portal {#publish-a-collection-to-brand-portal}
 
 1. 在 AEM Assets UI 中按一下 AEM 標誌。
 1. 從&#x200B;**導覽**&#x200B;頁面，前往&#x200B;**Assets >集合**。
@@ -54,4 +54,4 @@ ht-degree: 30%
 
 1. 在工具列中按一下&#x200B;**從 Brand Portal 移除**&#x200B;圖示。
 1. 在對話方塊中，按一下&#x200B;**取消發佈**。
-1. 關閉確認訊息。集合會從 Brand Portal 介面中移除。
+1. 關閉確認訊息。 集合會從 Brand Portal 介面中移除。

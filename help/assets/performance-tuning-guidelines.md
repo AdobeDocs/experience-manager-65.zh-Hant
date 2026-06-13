@@ -241,35 +241,35 @@ Adobe建議啟用HTTPS，因為許多公司都有會偵聽HTTP流量的防火牆
 >
 >Adobe不建議自動啟用資產。 不過，如有必要，Adobe建議將此作為工作流程的最後步驟，通常是DAM更新資產。
 
-## Search indexes {#search-indexes}
+## 搜尋索引 {#search-indexes}
 
-Install [the latest Service Packs](/help/release-notes/release-notes.md) and performance-related hotfixes as those often include updates to system indexes. See [performance tuning tips](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65/content/assets/administer/performance-tuning-guidelines) for some index optimizations.
+安裝[最新的Service Pack](/help/release-notes/release-notes.md)和效能相關Hotfix，因為這些通常包含系統索引的更新。 如需某些索引最佳化，請參閱[效能調整提示](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/assets/administer/performance-tuning-guidelines)。
 
-Create custom indexes for queries that you run often. For details, see the [methodology for analyzing slow queries](https://aemfaq.blogspot.com/2014/08/oak-query-log-file-analyzer-tool.html) and [crafting custom indexes](/help/sites-deploying/queries-and-indexing.md). For additional insights around query and index best practices, see [Best Practices for Queries and Indexing](/help/sites-deploying/best-practices-for-queries-and-indexing.md).
+為您經常執行的查詢建立自訂索引。 如需詳細資訊，請參閱分析緩慢查詢的[方法](https://aemfaq.blogspot.com/2014/08/oak-query-log-file-analyzer-tool.html)以及[編排自訂索引](/help/sites-deploying/queries-and-indexing.md)。 如需有關查詢和索引最佳實務的其他深入分析，請參閱[查詢和索引的最佳實務](/help/sites-deploying/best-practices-for-queries-and-indexing.md)。
 
-### Lucene index configurations {#lucene-index-configurations}
+### Lucene索引設定 {#lucene-index-configurations}
 
-Some optimizations can be done on the Oak index configurations that can help improve [!DNL Experience Manager Assets] performance. Update the index configurations to improve the re-indexing time:
+可對Oak索引設定進行一些最佳化，以協助改善[!DNL Experience Manager Assets]效能。 更新索引設定以改善重新索引時間：
 
-1. Open CRXDe `/crx/de/index.jsp` and log in as an administrative user.
-1. Browse to `/oak:index/lucene`.
-1. Add a `String[]` property `excludedPaths` with values `/var`, `/etc/workflow/instances`, and `/etc/replication`.
-1. Browse to `/oak:index/damAssetLucene`. Add a `String[]` property `includedPaths` with value `/content/dam`. Save changes.
+1. 開啟CRXDe `/crx/de/index.jsp`並以管理使用者身分登入。
+1. 瀏覽至`/oak:index/lucene`。
+1. 新增值為`/var`、`/etc/workflow/instances`和`/etc/replication`的`String[]`屬性`excludedPaths`。
+1. 瀏覽至`/oak:index/damAssetLucene`。 新增值為`/content/dam`的`String[]`屬性`includedPaths`。 儲存變更。
 
-If your users do not need to do full-text search of assets, say for example, searching through text in PDF documents, then disable it. You improve index performance by disabling full-text indexing. To disable [!DNL Apache Lucene] text extraction, follow these steps:
+如果您的使用者不需要進行資產的全文搜尋，例如在PDF檔案中搜尋文字，然後停用它。 您可以停用全文檢索索引來改善索引效能。 若要停用[!DNL Apache Lucene]文字擷取，請執行下列步驟：
 
-1. In the [!DNL Experience Manager] interface, access [!UICONTROL Package Manager].
-1. Upload and install the package available at [disable_indexingbinarytextextraction-10.zip](assets/disable_indexingbinarytextextraction-10.zip).
+1. 在[!DNL Experience Manager]介面中，存取[!UICONTROL 封裝管理員]。
+1. 上傳並安裝位於[disable_indexingbinarytextextraction-10.zip](assets/disable_indexingbinarytextextraction-10.zip)的套件。
 
-### Guess Total {#guess-total}
+### 猜測總數 {#guess-total}
 
-When creating queries that generate large result sets, use the `guessTotal` parameter to avoid heavy memory utilization when you run them.
+建立產生大型結果集的查詢時，請使用`guessTotal`引數，以避免在執行這些查詢時佔用大量的記憶體。
 
 ## 已知問題 {#known-issues}
 
-### Large files {#large-files}
+### 大型檔案 {#large-files}
 
-There are two major known issues related to large files in [!DNL Experience Manager]. When files reach sizes greater than 2 GB, cold standby synchronization can run into an out-of-memory situation. 在某些情況下，它會防止待命同步處理執行。 在其他情況下，這會造成主要執行個體當機。 此案例適用於[!DNL Experience Manager]中大於2GB的任何檔案，包括內容套件。
+[!DNL Experience Manager]中有兩個與大型檔案相關的主要已知問題。 當檔案大小超過2 GB時，冷待命同步處理可能會發生記憶體不足的情況。 在某些情況下，它會防止待命同步處理執行。 在其他情況下，這會造成主要執行個體當機。 此案例適用於[!DNL Experience Manager]中大於2GB的任何檔案，包括內容套件。
 
 同樣地，當檔案在使用共用S3資料存放區時達到2 GB的大小時，可能需要一些時間才能將檔案從快取完全儲存至檔案系統。 因此，使用無二進位檔的復寫時，在復寫完成之前，二進位檔資料可能尚未儲存。 這種情況可能會導致問題，尤其是當資料可用性很重要時。
 

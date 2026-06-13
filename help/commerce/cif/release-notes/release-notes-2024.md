@@ -7,8 +7,8 @@ feature: Commerce Integration Framework
 role: Admin, Developer
 source-git-commit: 1788e5f77d4c46a548710361e9e5dae3c6daab28
 workflow-type: tm+mt
-source-wordcount: '221'
-ht-degree: 25%
+source-wordcount: '274'
+ht-degree: 35%
 
 ---
 
@@ -18,28 +18,28 @@ ht-degree: 25%
 
 請檢閱下表中，您目前使用或計畫未來使用的CIF版本的最低系統需求。
 
-| 元件 | 系統需求 |
+| 元件 | 系統要求 |
 |:-------|:-----------------------------------------------------------------------------------------------:|
 | CIF附加元件 | 最低： AEM 6.5.18、Adobe Commerce 2.3.5 GraphQL結構描述 |
-| CIF Core Components | [系統需求](https://github.com/adobe/aem-core-cif-components/blob/master/VERSIONS.md) |
+| CIF 核心元件 | [系統需求](https://github.com/adobe/aem-core-cif-components/blob/master/VERSIONS.md) |
 | AEM 專案原型 | [系統需求](https://github.com/adobe/aem-project-archetype/blob/master/VERSIONS.md) |
 
 ## 發行日期： 2024年10月
 
-| 元件 | 版本 | 詳細資料 |
+| 元件 | 版本 | 詳細資訊 |
 |:-------|:-------:|-----------------------------------------------------------------------------------------------------------:|
-| CIF Core Components | 2.15.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.15.0) |
+| CIF 核心元件 | 2.15.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.15.0) |
 
 ### 錯誤修正 {#bug-fixes-October}
 
-* 修正UI測試，使其可正確搭配核心CIF元件運作。
-* 已解決類別URL格式在雲端例項中無法如預期運作的問題。
+* 修正使用者介面測試，以便與核心 CIF 元件正常搭配運作。
+* 解決類別 URL 格式在雲端執行個體中未如預期運作的問題。
 
 ## 發行日期： 2024年9月
 
-| 元件 | 版本 | 詳細資料 |
+| 元件 | 版本 | 詳細資訊 |
 |:-------|:-------:|-----------------------------------------------------------------------------------------------------------:|
-| CIF Core Components | 2.14.2 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.14.2) |
+| CIF 核心元件 | 2.14.2 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.14.2) |
 
 ### 改善功能 {#improvements-September}
 
@@ -55,9 +55,9 @@ ht-degree: 25%
 
 ## 發行日期： 2024年1月
 
-| 元件 | 版本 | 詳細資料 |
+| 元件 | 版本 | 詳細資訊 |
 |:-------|:-------:|-----------------------------------------------------------------------------------------------------------:|
-| CIF Core Components | 2.12.6 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.12.6) |
+| CIF 核心元件 | 2.12.6 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.12.6) |
 
 ### 錯誤修正 {#bug-fixes-january}
 

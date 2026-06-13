@@ -28,7 +28,7 @@ ht-degree: 6%
 
 ![chlimage_1-520](assets/chlimage_1-520.png)
 
-當您選取（而不是手動輸入）連結區或影像地圖的目標位置時，您使用的是選取器。 只有當您是Experience Manager Sites客戶時，網站選擇器才能運作。 產品選擇器還需要Experience ManagerCommerce。
+當您選取（而不是手動輸入）連結區或影像地圖的目標位置時，您使用的是選取器。 只有當您是Experience Manager Sites客戶時，網站選擇器才能運作。 產品選擇器還需要Experience Manager Commerce。
 
 ## 使用產品選擇器 {#selecting-products}
 
@@ -86,7 +86,7 @@ ht-degree: 6%
 
    ![chlimage_1-531](assets/chlimage_1-531.png)
 
-1. 當您在&#x200B;**[!UICONTROL 預覽]**&#x200B;模式中選取熱點或影像地圖時，您可以導覽至您指定的Experience Manager網站頁面。
+1. 在&#x200B;**[!UICONTROL 預覽]**&#x200B;模式中，如果您選取熱點或影像地圖，請導覽至您指定的Experience Manager網站頁面。
 
 ## 使用資產選擇器 {#selecting-assets}
 

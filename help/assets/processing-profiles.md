@@ -1,6 +1,6 @@
 ---
-title: Profiles for Processing Metadata, Images, and Videos
-description: A profile a set of rules around the options to be applied to assets uploaded to a folder. Specify what metadata profile and video encoding profile to apply to video assets that you upload. For image assets, you can also specify what imaging profile to apply to image assets to have them properly cropped.
+title: 用於處理中繼資料、影像和影片的設定檔
+description: 設定檔是一組規則，說明要套用至上傳至資料夾之資產的選項。 指定要套用至您上傳之視訊資產的中繼資料設定檔和視訊編碼設定檔。 針對影像資產，您也可以指定要套用至影像資產的影像設定檔，以正確裁切。
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: administering
@@ -12,39 +12,39 @@ exl-id: 3d9367ed-5a02-43aa-abd9-24fae457d4c5
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
 workflow-type: tm+mt
-source-wordcount: '1398'
-ht-degree: 0%
+source-wordcount: '1298'
+ht-degree: 2%
 
 ---
 
-# Profiles for processing metadata, images, and videos{#profiles-for-processing-metadata-images-and-videos}
+# 用於處理中繼資料、影像和影片的設定檔{#profiles-for-processing-metadata-images-and-videos}
 
-A profile is a recipe for what options to apply to assets that get uploaded to a folder. For example, you can specify what metadata profile and video encoding profile to apply to video assets that you upload. Or, what imaging profile to apply to image assets to have them properly cropped.
+設定檔是將哪些選項套用至上傳至資料夾之資產的配方。 例如，您可以指定要套用至上傳之視訊資產的中繼資料設定檔和視訊編碼設定檔。 或者，套用至影像資產的影像設定檔，以正確裁切。
 
-Those rules can include adding metadata, smart cropping of images, or establishing video encoding profiles. In Adobe Experience Manager, you can create three types of profiles, which are covered in detail at the following links:
+這些規則包括新增中繼資料、智慧型裁切影像或建立視訊編碼設定檔。 在Adobe Experience Manager中，您可以建立三種設定檔型別，下列連結將詳細介紹這些設定檔：
 
 * [中繼資料設定檔](/help/assets/metadata-config.md#metadata-profiles)
-* [Image profiles](/help/assets/image-profiles.md)
-* [Video profiles](/help/assets/video-profiles.md)
+* [影像設定檔](/help/assets/image-profiles.md)
+* [視訊設定檔](/help/assets/video-profiles.md)
 
-You need Administrator rights to create, edit, and delete metadata, image, or video profiles.
+您需要管理員許可權才能建立、編輯和刪除中繼資料、影像或視訊設定檔。
 
-After you create your metadata, image, or video profile, you assign it to one or more folders that you use as the destination for newly uploaded assets.
+建立中繼資料、影像或視訊設定檔後，請將其指派至一或多個資料夾，以作為新上傳資產的目的地。
 
-An important concept regarding the use of profiles in Experience Manager Assets is that they are assigned to folders. Within a profile are settings in the form of metadata profiles, along with video profiles or image profiles. These settings process the contents of a folder along with any of its subfolders. Therefore, how you name files and folders, how you arrange subfolders, and how you handle the files within these folders has a significant impact on how those assets are processed by a profile.
-By using consistent and appropriate file and folder naming strategies, and good metadata practice, you make the most of your digital asset collection, and ensure that the right files are processed by the right profile.
-
->[!NOTE]
->
->Assets that you move from one folder to another do not get reprocessed. For example, suppose you have Folder 1 that has profile A assigned to it and Folder 2 that has profile B assigned to it. If you move assets from Folder 1 to Folder 2, the moved assets retain their original processing from Folder 1.
->
->The same is true even when you move assets between two folders that have the same profile assigned to it.
-
-## Reprocess assets in a folder {#reprocessing-assets}
+在Experience Manager Assets中使用設定檔的重要概念是，設定檔會指派給資料夾。設定檔中的設定為中繼資料設定檔的形式，以及視訊設定檔或影像設定檔。這些設定會處理資料夾的內容及其任何子資料夾。因此，您如何命名檔案和資料夾、如何排列子資料夾，以及如何處理這些資料夾中的檔案對於設定檔處理這些資產的方式有重大影響。
+透過使用一致且適當的檔案和資料夾命名策略，以及良好的中繼資料做法，您可以充分利用數位資產集合，並確保由正確的設定檔處理正確的檔案。
 
 >[!NOTE]
 >
->Applies to *Dynamic Media - Scene7 mode* only in Experience Manager 6.4.6.0 or later.
+>您從某個資料夾移至另一個資料夾的Assets不會重新處理。 例如，假設您有已指派設定檔A的資料夾1和已指派設定檔B的資料夾2。 如果您將資產從「資料夾1」移至「資料夾2」，則已移動的資產會保留「資料夾1」的原始處理作業。
+>
+>即使在您將資產移動到具有相同設定檔的兩個資料夾之間時，也是如此。
+
+## 重新處理資料夾中的資產 {#reprocessing-assets}
+
+>[!NOTE]
+>
+>僅適用於Experience Manager 6.4.6.0或更新版本中的&#x200B;*Dynamic Media - Scene7模式*。
 
 若資料夾中已有您後來加以變更的現有處理設定檔，您可以重新處理該資料夾中的資產。
 
@@ -72,8 +72,8 @@ By using consistent and appropriate file and folder naming strategies, and good 
 
 1. 選取資料夾。
 
-   * 工作流程會遞回考慮所選資料夾中的所有檔案。
-   * 如果主要選取檔案夾中有一個或多個子檔案夾具有資產，工作流程會重新處理檔案夾階層中的每個資產。
+   * 工作流程會以遞迴方式考量所選資料夾中的所有檔案。
+   * 如果主要所選資料夾中有一個或多個子資料夾含有資產，工作流程會重新處理資料夾階層中的每個資產。
    * 您最好避免在擁有超過1000個資產的資料夾階層上執行此工作流程。
 
 1. 在頁面的左上角附近，從下拉式清單中選取&#x200B;**[!UICONTROL 時間表]**。
