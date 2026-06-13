@@ -10,14 +10,14 @@ solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '2099'
+source-wordcount: '2139'
 ht-degree: 2%
 
 ---
 
 # 建立無障礙的最適化表單{#creating-accessible-adaptive-forms}
 
-<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-core-components/using/adaptive-forms/introduction)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。本文介紹使用基礎元件製作最適化Forms的舊方法。</span>
+<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/introduction)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。 這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。 本文介紹使用基礎元件製作最適化Forms的舊方法。</span>
 
 ## 簡介 {#introduction}
 
@@ -52,13 +52,13 @@ Ultraminary-Accessible主題是參考主題。 它有助於示範如何以最適
 
 1. 下載主題套件。
 1. 在您的AEM執行個體上導覽至&#x200B;**[!UICONTROL Experience Manager]** > **[!UICONTROL 導覽]** ![導覽](assets/Smock_Compass_18_N.svg) > **[!UICONTROL Forms]**。
-1. 選取&#x200B;**[!UICONTROL 建立]** > **[!UICONTROL 檔案上傳]**。 選取並上傳x Ultramarine-Accessible-Theme.zip檔案。 它會上傳主題到您的AEM執行個體。
+1. 選取&#x200B;**[!UICONTROL 建立]** > **[!UICONTROL 檔案上傳]**。 選取並上傳x Ultramarine-Accessible-Theme.zip檔案。 它會上傳主題至您的AEM執行個體。
 
 ## 讓最適化表單可供存取
 
 您應該關注四個關鍵方面：鍵盤導覽、色彩對比、有意義的影像替代文字，以及讓可存取調適型表單的表單控制項適用標籤。 執行以下步驟，讓您存取現有的最適化表單：
 
-### 1.套用無障礙佈景主題並執行其他修正
+### &#x200B;1. 套用無障礙佈景主題並執行其他修正
 
 將Ultraminary-Accessible主題套用至您現有的最適化表單。 若要套用主題：
 
@@ -95,9 +95,9 @@ Ultraminary-Accessible主題是參考主題。 它有助於示範如何以最適
 
 1. 新增自訂協助工具文字至表格的所有唯讀儲存格。 此外，也會停用表格的所有唯讀儲存格。
 
-1. 移除最適化表單中的手寫簽名欄位（如果有的話）。 設定最適化表單以使用Adobe Sign，獲得順暢的數位簽名體驗。
+1. 移除最適化表單中的手寫簽名欄位（如果有的話）。 設定最適化表單以使用Adobe Sign，提供順暢的數位簽名體驗。
 
-### 2.為表單控制項提供適當的標籤 {#provide-proper-labels-for-form-controls}
+### &#x200B;2. 為表單控制項提供適當的標籤 {#provide-proper-labels-for-form-controls}
 
 元件的標籤或標題可識別表單元件代表的意義。 例如，「名字」文字會告訴使用者他們必須在文字欄位中輸入名字。 為了方便熒幕閱讀程式存取，標籤會以程式設計方式與表單元件相關聯。 或者，表單控制項會設定其他協助工具資訊。
 
@@ -112,7 +112,7 @@ Ultraminary-Accessible主題是參考主題。 它有助於示範如何以最適
 
 ![表單元件中的協助工具選項](assets/accessibility-options.png)
 
-**自訂文字**&#x200B;表單作者在協助工具選項[自訂文字]欄位中提供內容。 熒幕助讀程式等輔助技術會使用此自訂文字。 在大部分的案例中，使用「標題」設定是最佳選項。 只有在無法使用標題或簡短說明時，才考慮建立自訂熒幕Reader文字。
+**自訂文字**&#x200B;表單作者在協助工具選項[自訂文字]欄位中提供內容。 熒幕助讀程式等輔助技術會使用此自訂文字。 在大部分的案例中，使用「標題」設定是最佳選項。 只有在無法使用標題或簡短說明時，才考慮建立自訂畫面Reader文字。
 
 **簡短描述**&#x200B;對於大多數元件，當使用者將指標暫留在元件上時，簡短描述會在執行階段顯示。 您可以在說明內容選項下方的簡短說明欄位中設定此選項。
 
@@ -127,7 +127,7 @@ Ultraminary-Accessible主題是參考主題。 它有助於示範如何以最適
 >* Radio Button和Check-box只能有兩個協助工具選項，即Custom Text和Title。
 >* 對於XFA型調適型表單，協助工具選項繼承自XDP中設定的協助工具選項。 XDP的工具提示會對應至簡短說明，而標題會對應至標題。 其他選項則可正常運作。
 
-### 3.提供影像的等效文字 {#provide-text-equivalents-for-images}
+### &#x200B;3. 提供影像的對等文字 {#provide-text-equivalents-for-images}
 
 影像有助於改善部分使用者的理解。 不過，對於使用熒幕助讀程式的使用者，影像會降低表單的協助工具。 如果您選擇使用影像，請為所有影像提供文字說明。
 
@@ -137,7 +137,7 @@ Ultraminary-Accessible主題是參考主題。 它有助於示範如何以最適
 
 ![影像的替代文字](assets/image-properties.png)
 
-### 4.提供足夠的色彩對比 {#provide-sufficient-color-contrast}
+### &#x200B;4. 提供足夠的色彩對比 {#provide-sufficient-color-contrast}
 
 協助工具設計涉及考慮色彩使用的其他准則。 表單作者可以使用顏色來改善表單的外觀，方法是反白顯示各種表單元件。 不過，若色彩使用不當，可能會使有不同能力的人難以或無法閱讀表格。
 
@@ -147,7 +147,7 @@ Ultraminary-Accessible主題是參考主題。 它有助於示範如何以最適
 
 請參閱[建立最適化表單的自訂主題](/help/forms/using/creating-custom-adaptive-form-themes.md)，以取得變更最適化表單色彩對比和主題的詳細資訊。
 
-### 5.確認可使用鍵盤存取表單控制項 {#ensure-that-form-controls-are-keyboard-accessible}
+### &#x200B;5. 確保可使用鍵盤存取表單控制項 {#ensure-that-form-controls-are-keyboard-accessible}
 
 可存取的表單僅能使用鍵盤或同等輸入裝置填入。 行動力下降或視力障礙的使用者可能別無選擇，只能使用鍵盤，而許多使用滑鼠的使用者則偏好使用鍵盤輸入。 透過允許各種輸入方法，您不僅可建立無障礙的表單，還可建立更適合所有使用者偏好設定的表單。
 

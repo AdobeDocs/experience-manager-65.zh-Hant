@@ -11,7 +11,7 @@ feature: Adaptive Forms,Document Security
 role: User, Developer
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '955'
+source-wordcount: '978'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 跨網站請求偽造(CSRF)是一種網站漏洞，其中有效使用者的瀏覽器可能透過iFrame傳送惡意請求。 由於瀏覽器會以網域為基礎傳送Cookie，因此如果使用者已登入應用程式，該使用者的資料可能會受到危害。
 
-例如，假設您登入瀏覽器中的管理主控台。 您會收到包含連結的電子郵件訊息。 按一下連結，即可在瀏覽器中開啟新標籤。 您開啟的頁面包含隱藏的iFrame，會使用已驗證的AEM表單工作階段的Cookie向Forms伺服器提出惡意請求。 由於「使用者管理」會收到有效的Cookie，因此會傳遞請求。
+例如，假設您登入瀏覽器中的管理主控台。 您會收到包含連結的電子郵件訊息。 按一下連結，即可在瀏覽器中開啟新標籤。 您開啟的頁面包含隱藏的iFrame，會使用已驗證的Forms表單工作階段的Cookie向AEM伺服器提出惡意請求。 由於「使用者管理」會收到有效的Cookie，因此會傳遞請求。
 
 ## CSRF相關辭彙 {#csrf-related-terms}
 
@@ -33,12 +33,12 @@ ht-degree: 0%
 **Null反向連結：**&#x200B;當您開啟新的瀏覽器視窗或Tab鍵，然後輸入地址並按Enter鍵時，反向連結為Null。 此請求是全新請求，並非源自上層網頁；因此，此請求沒有反向連結。 Forms伺服器可以從以下位置接收Null反向連結：
 
 * 在SOAP或Acrobat的REST端點上提出的請求
-* 在AEM forms SOAP或REST端點上提出HTTP請求的任何案頭使用者端
+* 在AEM表單SOAP或REST端點上提出HTTP請求的任何案頭使用者端
 * 開啟新的瀏覽器視窗並輸入任何AEM forms web應用程式登入頁面的URL時
 
-在SOAP和REST端點上允許Null反向連結。 在所有URI登入頁面（例如/adminui和/contentspace）及其對應的對應資源上也允許Null反向連結。 例如， /contentspace的對應servlet是/contentspace/faces/jsp/login.jsp，這應該是Null反向連結例外狀況。 只有在啟用Web應用程式的GET篩選時，才需要此例外。 您的應用程式可以指定是否允許空的反向連結。 請參閱[強化AEM表單及安全性](https://help.adobe.com/zh_TW/livecycle/11.0/HardeningSecurity/index.html)中的「防止跨網站要求偽造攻擊」。
+在SOAP和REST端點上允許Null反向連結。 在所有URI登入頁面（例如/adminui和/contentspace）及其對應的對應資源上也允許Null反向連結。 例如， /contentspace的對應servlet是/contentspace/faces/jsp/login.jsp，這應該是Null反向連結例外狀況。 只有當您啟用Web應用程式的GET篩選時，才需要此例外。 您的應用程式可以指定是否允許空的反向連結。 請參閱[強化AEM表單及安全性](https://help.adobe.com/en_US/livecycle/11.0/HardeningSecurity/index.html)中的「防止跨網站要求偽造攻擊」。
 
-**允許的反向連結例外狀況：**&#x200B;允許的反向連結例外狀況是允許的反向連結清單的子清單，會封鎖其要求。 允許的「參考例外」專屬於Web應用程式。 如果不允許允許的反向連結子集呼叫特定的Web應用程式，您可以透過「允許的反向連結例外」將反向連結加入封鎖清單。 在web.xml檔案中為您的應用程式指定允許的反向連結例外。 (請參閱「說明和Tutorials」頁面上「AEM表單的強化和安全性」中的「防止跨網站請求偽造攻擊」。)
+**允許的反向連結例外狀況：**&#x200B;允許的反向連結例外狀況是允許的反向連結清單的子清單，會封鎖其要求。 允許的「參考例外」專屬於Web應用程式。 如果不允許允許的反向連結子集呼叫特定的Web應用程式，您可以透過「允許的反向連結例外」將反向連結加入封鎖清單。 在web.xml檔案中為您的應用程式指定允許的反向連結例外。 （請參閱說明和教學課程頁面上的AEM表單強化與安全性中的「防止跨網站請求偽造攻擊」。）
 
 ## 允許的反向連結如何運作 {#how-allowed-referers-work}
 
@@ -47,7 +47,7 @@ AEM Forms提供反向連結篩選功能，可協助防止CSRF攻擊。 反向連
 1. Forms伺服器會檢查用於叫用的HTTP方法：
 
    * 如果是POST，Forms伺服器會執行反向連結標題檢查。
-   * 如果是GET，則Forms伺服器會略過反向連結檢查，除非CSRF_CHECK_GETS設定為true （在此情況下，會執行反向連結標題檢查）。 CSRF_CHECK_GETS是在web.xml檔案中為您的應用程式指定的。 （請參閱[強化與安全性指南](https://help.adobe.com/zh_TW/livecycle/11.0/HardeningSecurity/index.html)中的「防止跨網站請求偽造攻擊」。）
+   * 如果是GET，則Forms伺服器會略過反向連結檢查，除非CSRF_CHECK_GETS設定為true （在此情況下，會執行反向連結標題檢查）。 CSRF_CHECK_GETS是在web.xml檔案中為您的應用程式指定的。 （請參閱[強化與安全性指南](https://help.adobe.com/en_US/livecycle/11.0/HardeningSecurity/index.html)中的「防止跨網站請求偽造攻擊」。）
 
 1. Forms伺服器會檢查要求的URI是否已加入允許清單：
 
@@ -68,7 +68,7 @@ AEM Forms提供反向連結篩選功能，可協助防止CSRF攻擊。 反向連
 
 當您執行Configuration Manager時，預設主機和IP位址或Forms伺服器會新增至「允許的反向連結」清單中。 您可以在管理控制檯中編輯此清單。
 
-1. 在管理控制檯中，按一下「設定>使用者管理>設定>設定允許的反向連結URL」。允許的反向連結清單會顯示在頁面底部。
+1. 在管理控制檯中，按一下「設定>使用者管理>設定>設定允許的反向連結URL」。 允許的反向連結清單會顯示在頁面底部。
 1. 若要新增允許的反向連結：
 
    * 在允許的反向連結方塊中輸入主機名稱或IP位址。 若要一次新增多個允許的反向連結，請在新行中輸入每個主機名稱或IP位址。

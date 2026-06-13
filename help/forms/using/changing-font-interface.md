@@ -12,7 +12,7 @@ feature: Adaptive Forms
 role: User, Developer
 source-git-commit: e821be5233fd5f6688507096790d219d25903892
 workflow-type: tm+mt
-source-wordcount: '272'
+source-wordcount: '278'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 1%
 請依照[AEM Forms工作區自訂的一般步驟](../../forms/using/generic-steps-html-workspace-customization.md)操作，並根據您的需求，依照自訂CSS、HTML或兩者的步驟操作。
 
 1. 在現有樣式中變更或新增字型系列。
-1. 變更或新增HTML元素的字型系列內嵌。
+1. 變更或新增HTML元素的內嵌字型系列。
 1. 新增樣式並將其用於HTML元素。
 
 例如，若要將頂端導覽列錨點文字的字型變更為Courier New，請遵循下列步驟：

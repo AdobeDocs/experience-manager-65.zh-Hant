@@ -11,8 +11,8 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Foundation Components
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '857'
-ht-degree: 1%
+source-wordcount: '928'
+ht-degree: 2%
 
 ---
 
@@ -22,9 +22,9 @@ ht-degree: 1%
 
 ## 在製作和發佈執行個體設定調適型表單快取 {#configure-adaptive-forms-caching-at-author-and-publish-instances}
 
-1. 前往`https://[server]:[port]/system/console/configMgr`的AEM Web主控台組態管理員。
+1. 前往`https://[server]:[port]/system/console/configMgr`的AEM Web主控台設定管理員。
 1. 按一下&#x200B;**[!UICONTROL 最適化表單和互動式通訊Web Channel設定]**&#x200B;以編輯其設定值。
-1. 在[!UICONTROL 編輯設定值]對話方塊中，指定AEM [!DNL Forms]伺服器執行個體可以在&#x200B;**[!UICONTROL Number of Adaptive Forms]**&#x200B;欄位中快取的表單或檔案數目上限。 預設值為 100。
+1. 在[!UICONTROL 編輯設定值]對話方塊中，指定AEM [!DNL Forms]伺服器執行個體可在&#x200B;**[!UICONTROL 最適化Forms數目]**&#x200B;欄位中快取的表單或檔案數目上限。 預設值為 100。
 
    >[!NOTE]
    >
@@ -32,7 +32,7 @@ ht-degree: 1%
 
    最適化表單HTML快取的![設定對話方塊](assets/cache-configuration-edit.png)
 
-1. 按一下[儲存]儲存組態。**&#x200B;**
+1. 按一下[儲存]儲存組態。****
 
 您的環境已設定為使用快取最適化表單和相關資產。
 
@@ -47,7 +47,7 @@ ht-degree: 1%
 
 ### 在Dispatcher上快取最適化表單的考量事項 {#considerations}
 
-* 使用最適化表單快取時，請使用AEM [!DNL Dispatcher]來快取最適化表單的使用者端資料庫(CSS和JavaScript)。
+* 使用最適化表單快取時，請使用AEM [!DNL Dispatcher]來快取最適化表單的使用者端資料庫（CSS和JavaScript）。
 * 開發自訂元件時，在用於開發的伺服器上，停用最適化表單快取。
 * 不會快取沒有副檔名的URL。 例如，快取模式為`/content/forms/[folder-structure]/[form-name].html`的URL，而快取會忽略模式為`/content/dam/formsanddocument/[folder-name]/<form-name>/jcr:content`的URL。 因此，請使用具有擴充功能的URL，以獲得快取的優點。
 * 本地化適用性表單的考量事項：
@@ -60,10 +60,10 @@ ht-degree: 1%
 
 若要在Dispatcher上啟用並設定快取調適型表單，請執行以下步驟：
 
-1. 為環境的每個發佈執行個體開啟下列URL，並[為環境的發佈執行個體啟用排清代理程式](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html?lang=zh-Hant#invalidating-dispatcher-cache-from-a-publishing-instance)：
+1. 為環境的每個發佈執行個體開啟下列URL，並[為環境的發佈執行個體啟用排清代理程式](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html#invalidating-dispatcher-cache-from-a-publishing-instance)：
    `http://[server]:[port]]/etc/replication/agents.publish/flush.html`
 
-1. [將以下專案新增到您的dispatcher.any檔案](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant#automatically-invalidating-cached-files)：
+1. [將以下專案新增到您的dispatcher.any檔案](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#automatically-invalidating-cached-files)：
 
    ```JSON
       /invalidate
@@ -92,7 +92,7 @@ ht-degree: 1%
    * 最適化表單會保留在快取中，直到表單的更新版本未發佈為止。
 
    * 當最適化表單中參考的資源的較新版本發佈時，受影響的最適化表單會自動失效。 參考資源的自動失效有一些例外。 如需例外狀況的因應措施，請參閱[疑難排解](#troubleshooting)區段。
-1. [新增以下規則dispatcher.any或自訂規則檔案](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant#specifying-the-documents-to-cache)。 它會排除不支援快取的URL。 例如，互動式通訊。
+1. [新增以下規則dispatcher.any或自訂規則檔案](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#specifying-the-documents-to-cache)。 它會排除不支援快取的URL。 例如，互動式通訊。
 
    ```JSON
       /0000 {
@@ -116,7 +116,7 @@ ht-degree: 1%
       }
    ```
 
-1. [將下列引數新增至忽略URL引數清單](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant#ignoring-url-parameters)：
+1. [將下列引數新增至忽略URL引數清單](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#ignoring-url-parameters)：
 
    ```JSON
       /ignoreUrlParams {
@@ -126,7 +126,7 @@ ht-degree: 1%
       }
    ```
 
-您的AEM環境已設定為快取最適化表單。 它會快取所有型別的調適型表單。 如果您需要在傳遞快取頁面之前檢查頁面的使用者存取許可權，請參閱[快取安全內容](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/permissions-cache.html?lang=zh-Hant)。
+您的AEM環境已設定為快取最適化表單。 它會快取所有型別的調適型表單。 如果您需要在傳遞快取頁面之前檢查頁面的使用者存取許可權，請參閱[快取安全內容](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/permissions-cache.html)。
 
 ## 疑難排解 {#troubleshooting}
 

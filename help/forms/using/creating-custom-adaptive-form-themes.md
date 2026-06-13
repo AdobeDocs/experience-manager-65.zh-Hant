@@ -10,7 +10,7 @@ role: User, Developer
 feature: Adaptive Forms,Foundation Components
 source-git-commit: 8a77756e8ba771c8de9950c2323bef8f23cc59b4
 workflow-type: tm+mt
-source-wordcount: '790'
+source-wordcount: '800'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 0%
 
 ## 最適化表單主題 {#adaptive-form-theme}
 
-**最適化表單主題**&#x200B;是AEM使用者端資料庫，可用來定義最適化表單的樣式（外觀）。
+**最適化表單主題**&#x200B;是您用來定義最適化表單樣式（外觀）的AEM使用者端資料庫。
 
 您建立&#x200B;**最適化範本**，並將主題套用至範本。 然後，您可以使用此自訂範本來建立&#x200B;**最適化表單**。
 
@@ -39,7 +39,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->以下程式使用AEM物件的範例名稱（例如節點、屬性和資料夾）進行說明。
+>以下程式將使用AEM物件的範例名稱（例如節點、屬性和資料夾）進行說明。
 >
 >如果使用名稱來遵循這些步驟，則產生的範本應類似於以下快照：
 
@@ -228,7 +228,7 @@ ht-degree: 0%
 
    1. **選擇性**：在自訂頁面中，視需要覆寫header.jsp、footer.jsp和body.jsp。
 
-1. 建立自訂範本（例如： `/apps/myAfCustomizations/myAfTemplates/forestTemplate`），其jcr：content指向在上一步建立的自訂頁面（例如： `myAfCustomizations/myAfPages/forestPage)`）。
+1. 建立自訂範本（例如： `/apps/myAfCustomizations/myAfTemplates/forestTemplate`），其jcr:content指向在上一步建立的自訂頁面（例如： `myAfCustomizations/myAfPages/forestPage)`）。
 
    ![CRX儲存機制快照](assets/2-1.png)
 

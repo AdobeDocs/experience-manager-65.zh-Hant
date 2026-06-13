@@ -11,7 +11,7 @@ role: User, Developer
 feature: Adaptive Forms,Foundation Components
 source-git-commit: 8a77756e8ba771c8de9950c2323bef8f23cc59b4
 workflow-type: tm+mt
-source-wordcount: '496'
+source-wordcount: '498'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ ht-degree: 0%
 1. 選取`reviewbeforesubmit`節點中的`cq:template`節點。 請確定`guideNodeClass`屬性的值為`guideButton`並相應地變更`jcr:title`屬性。
 1. 變更`cq:Template`節點中的型別屬性。 對於目前的範例，將type屬性變更為button。
 
-   型別值會在產生的元件HTML中新增為CSS類別。 使用者可以使用該CSS類別來設定其動作的樣式。 行動裝置和桌上型裝置的預設樣式都會提供給按鈕、提交、重設和儲存型別值。
+   型別值會在元件產生的HTML中新增為CSS類別。 使用者可以使用該CSS類別來設定其動作的樣式。 行動裝置和桌上型裝置的預設樣式都會提供給按鈕、提交、重設和儲存型別值。
 
 1. 從最適化表單編輯工具列對話方塊中選取自訂動作。 「審閱」按鈕會顯示在面板的工具列中。
 
