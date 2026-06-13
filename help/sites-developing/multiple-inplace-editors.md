@@ -8,7 +8,7 @@ feature: Developing
 role: Developer
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
-source-wordcount: '437'
+source-wordcount: '467'
 ht-degree: 1%
 
 ---
@@ -88,7 +88,7 @@ ht-degree: 1%
 
 ### RTF編輯器的其他設定 {#additional-configuration-for-rich-text-editors}
 
-多個RTF編輯器的設定稍有不同，因為您可以分別設定每個個別RTE執行個體。 如需詳細資訊，請參閱[設定RTF編輯器](/help/sites-administering/rich-text-editor.md)。 若要有多個RTE，請為每個就地RTE建立設定。 Adobe建議在`cq:InplaceEditingConfig`下建立新的設定節點，因為每個個別RTE都可以有不同的設定。 在新節點下，建立每個單獨的RTE配置。
+多個RTF編輯器的設定稍有不同，因為您可以分別設定每個個別RTE執行個體。 如需詳細資訊，請參閱[設定RTF編輯器](/help/sites-administering/rich-text-editor.md)。 若要有多個RTE，請為每個就地RTE建立設定。 Adobe建議在`cq:InplaceEditingConfig`下建立新的設定節點，因為每個個別RTE可以有不同的設定。 在新節點下，建立每個單獨的RTE配置。
 
 ```xml
     texttext
@@ -113,7 +113,7 @@ ht-degree: 1%
 
 ## 程式碼範例 {#code-samples}
 
-您可以在GitHub[&#128279;](https://github.com/Adobe-Marketing-Cloud/aem-authoring-hybrideditors)上的aem-authoring-hybrideditors專案中找到此頁面的程式碼。 您可以以[ZIP封存](https://github.com/Adobe-Marketing-Cloud/aem-authoring-hybrideditors/archive/master.zip)的形式下載完整專案。
+您可以在GitHub](https://github.com/Adobe-Marketing-Cloud/aem-authoring-hybrideditors)上的[aem-authoring-hybrideditors專案中找到此頁面的程式碼。 您可以以[ZIP封存](https://github.com/Adobe-Marketing-Cloud/aem-authoring-hybrideditors/archive/master.zip)的形式下載完整專案。
 
 ## 新增就地編輯器 {#add-an-in-place-editor}
 
@@ -121,4 +121,4 @@ ht-degree: 1%
 
 >[!MORELIKETHIS]
 >
->* [在Experience Manager](/help/sites-administering/rich-text-editor.md)中設定RTF編輯器。
+>* [在Experience Manager中設定RTF編輯器](/help/sites-administering/rich-text-editor.md)。

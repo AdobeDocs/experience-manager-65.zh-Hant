@@ -11,7 +11,7 @@ feature: Communities
 role: Admin
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '355'
+source-wordcount: '370'
 ht-degree: 0%
 
 ---
@@ -28,9 +28,9 @@ ht-degree: 0%
 
 使用Dispatcher 4.1.6或更新版本可解決此問題。
 
-### 從CQ 5.4升級後無法存取論壇Post {#cannot-access-forum-post-after-upgrading-from-cq}
+### 從CQ 5.4升級後無法存取論壇貼文 {#cannot-access-forum-post-after-upgrading-from-cq}
 
-如果在CQ 5.4上建立了論壇並張貼了主題，然後網站升級為AEM 5.6.1或更新版本，則嘗試檢視現有文章可能會導致頁面上的錯誤：
+如果論壇是在CQ 5.4上建立並張貼主題，然後網站升級至AEM 5.6.1或更新版本，則嘗試檢視現有文章可能會導致頁面上的錯誤：
 
 不合法的圖樣字元&#39;a&#39;
 無法為此伺服器上的`/content/demoforums/forum-test.html`提供要求，且記錄檔包含下列專案：
@@ -49,7 +49,7 @@ at org.apache.sling.scripting.core.impl.DefaultSlingScript.eval(DefaultSlingScri
 * 寄件者： `final RelativeTimeFormat fmt = new RelativeTimeFormat("r a", resourceBundle);`
 * 收件者： `final RelativeTimeFormat fmt = new RelativeTimeFormat("r", resourceBundle);`
 
-Author和Publish上的失敗情況不同。 在作者上，它只會無訊息地失敗，不會顯示論壇主題。 在Publish上，系統會在頁面上擲回錯誤。
+「作者」和「發佈」上的失敗不同。 在作者上，它只會無訊息地失敗，不會顯示論壇主題。 發佈時，會在頁面上擲回錯誤。
 
 如需詳細資訊，請參閱[com.day.cq.commons.date.RelativeTimeFormat](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/date/RelativeTimeFormat.html) API。
 
@@ -61,7 +61,7 @@ Author和Publish上的失敗情況不同。 在作者上，它只會無訊息地
 
 * `11.04.2014 08:38:07.223 WARN [FelixStartLevel]com.github.jknack.handlebars.Handlebars Helper 'i18n'`已由`com.adobe.cq.social.handlebars.I18nHelper@15bac645`取代
 
-此警告可以安全地忽略，因為[SCF](scf.md#handlebarsjavascripttemplatinglanguage)使用的`jknack.handlebars.Handlebars`隨附其自己的i18n helper公用程式。 啟動時，會以AEM特定的[i18n協助程式](handlebars-helpers.md#i-n)取代。 此警告由協力廠商程式庫產生，以確認覆寫現有的協助程式。
+此警告可以安全地忽略，因為[SCF](scf.md#handlebarsjavascripttemplatinglanguage)使用的`jknack.handlebars.Handlebars`隨附其自己的i18n helper公用程式。 啟動時，已由AEM特定的[i18n協助程式](handlebars-helpers.md#i-n)取代。 此警告由協力廠商程式庫產生，以確認覆寫現有的協助程式。
 
 ### 記錄檔中有警告： OakResourceListener processOsgiEventQueue {#warning-in-logs-oakresourcelistener-processosgieventqueue}
 

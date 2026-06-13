@@ -18,7 +18,7 @@ ht-degree: 8%
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/drm.html?lang=zh-Hant) |
+| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/drm.html?lang=en) |
 | AEM 6.5 | 本文章 |
 
 數位資產通常與指定使用條款與期間的授權相關聯。 因為[!DNL Adobe Experience Manager Assets]已與[!DNL Experience Manager]平台完全整合，您可以有效率地管理資產到期資訊與資產狀態。 您也可以將授權資訊與資產建立關聯。
@@ -139,7 +139,7 @@ ht-degree: 8%
 
 此功能強制接受授權合約，然後才能從[!DNL Adobe Experience Manager Assets]下載授權資產。
 
-如果您選取受保護的資產並按一下[下載]，系統會將您重新導向至授權頁面，讓您接受授權合約。 **&#x200B;**&#x200B;如果您不接受授權合約，將無法使用&#x200B;**[!UICONTROL 下載]**&#x200B;選項。
+如果您選取受保護的資產並按一下[下載]，系統會將您重新導向至授權頁面，讓您接受授權合約。 ****&#x200B;如果您不接受授權合約，將無法使用&#x200B;**[!UICONTROL 下載]**&#x200B;選項。
 
 如果選取範圍包含多個受保護的資產，請一次選取一個資產、接受授權合約，然後繼續下載資產。
 

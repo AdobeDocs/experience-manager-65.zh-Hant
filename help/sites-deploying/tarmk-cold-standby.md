@@ -12,7 +12,7 @@ solution: Experience Manager, Experience Manager Sites
 role: Admin
 source-git-commit: 5575628c54e2e588dfae4c34383af7d6d55ce859
 workflow-type: tm+mt
-source-wordcount: '2680'
+source-wordcount: '2695'
 ht-degree: 0%
 
 ---
@@ -86,8 +86,8 @@ Tar微核心的冷待命容量可讓一或多個待命Adobe Experience Manager (
 >
 >AEM 6.3中區段節點存放區和待命存放區服務的PID較舊版本有所變更，如下所示：
 >
->* 從org.apache.jackrabbit.oak.將&#x200B;**plugins**.segment.standby.standby.store.StandbyStoreService新增至org.apache.jackrabbit.oak.segment.standby.store.StandbyStoreService
->* 從org.apache.jackrabbit.oak.將&#x200B;**plugins**.segment.SegmentNodeStoreService新增至org.apache.jackrabbit.oak.segment.SegmentNodeStoreService
+>* 從org.apache.jackrabbit.oak.**plugins**.segment.standby.store.StandbyStoreService到org.apache.jackrabbit.oak.segment.standby.standby.store.StandbyStoreService
+>* 從org.apache.jackrabbit.oak.**plugins**.segment.SegmentNodeStoreService到org.apache.jackrabbit.oak.segment.SegmentNodeStoreService
 >
 >進行必要的設定調整，以反映此變更。
 
@@ -102,12 +102,12 @@ Tar微核心的冷待命容量可讓一或多個待命Adobe Experience Manager (
 
    1. 檢查並刪除任何您在`aem-primary/crx-quickstart/install`下可能有的先前OSGi設定
 
-   1. 在`install.primary`下建立名為`aem-primary/crx-quickstart/install`的資料夾
+   1. 在`aem-primary/crx-quickstart/install`下建立名為`install.primary`的資料夾
 
    1. 為`aem-primary/crx-quickstart/install/install.primary`下偏好的節點存放區和資料存放區建立必要的設定
    1. 在相同位置建立名為`org.apache.jackrabbit.oak.segment.standby.store.StandbyStoreService.config`的檔案，並加以設定。 如需組態選項的詳細資訊，請參閱[組態](/help/sites-deploying/tarmk-cold-standby.md#configuration)。
 
-   1. 如果您搭配外部資料存放區使用AEM TarMK執行個體，請在`crx3`下建立名為`aem-primary/crx-quickstart/install`的資料夾`crx3`
+   1. 如果您搭配外部資料存放區使用AEM TarMK執行個體，請在`aem-primary/crx-quickstart/install`下建立名為`crx3`的資料夾`crx3`
 
    1. 將資料存放區組態檔放在`crx3`資料夾中。
 
@@ -119,7 +119,7 @@ Tar微核心的冷待命容量可讓一或多個待命Adobe Experience Manager (
 
    在下方尋找主要執行個體的設定範例：
 
-   **&#x200B;**&#x200B;的範例&#x200B;**org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config**
+   ****&#x200B;的範例&#x200B;**org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config**
 
    ```xml
    org.apache.sling.installer.configuration.persist=B"false"
@@ -155,14 +155,14 @@ Tar微核心的冷待命容量可讓一或多個待命Adobe Experience Manager (
 1. 接下來，準備待命執行個體。 您可以透過執行與主要執行處理相同的步驟來執行此操作：
 
    1. 刪除您在`aem-standby/crx-quickstart/install`下可能有的任何檔案。
-   1. 在`install.standby`下建立名為`aem-standby/crx-quickstart/install`的資料夾
+   1. 在`aem-standby/crx-quickstart/install`下建立名為`install.standby`的資料夾
 
    1. 建立兩個組態檔，稱為：
 
       * `org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config`
       * `org.apache.jackrabbit.oak.segment.standby.store.StandbyStoreService.config`
 
-   1. 在`crx3`下建立名為`aem-standby/crx-quickstart/install`的資料夾
+   1. 在`aem-standby/crx-quickstart/install`下建立名為`crx3`的資料夾
 
    1. 建立資料存放區組態，並將其放在`aem-standby/crx-quickstart/install/crx3`下。 在此範例中，您必須建立的檔案為：
 
@@ -325,7 +325,7 @@ Tar微核心的冷待命容量可讓一或多個待命Adobe Experience Manager (
 
 您可以依照下列步驟執行此操作：
 
-1. 前往JMX主控台並使用&#x200B;**org.apache.jackrabbit.oak： Status (&quot;Standby&quot;)**&#x200B;bean，停止冷待命執行個體上的同步化程式。 如需如何執行此動作的詳細資訊，請參閱[監視](#monitoring)一節。
+1. 前往JMX主控台並使用**org.apache.jackrabbit.oak： Status (&quot;Standby&quot;)**bean，停止冷待命執行個體上的同步化程式。 如需如何執行此動作的詳細資訊，請參閱[監視](#monitoring)一節。
 1. 停止冷待命執行個體。
 1. 在主要執行個體上安裝Hotfix。 如需如何安裝Hotfix的詳細資訊，請參閱[如何使用套件](/help/sites-administering/package-manager.md)。
 1. 測試執行個體安裝後是否有問題。

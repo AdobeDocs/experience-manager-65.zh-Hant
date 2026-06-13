@@ -11,7 +11,7 @@ feature: Developing
 role: Developer
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
-source-wordcount: '979'
+source-wordcount: '988'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 0%
 * [定義測試案例](/help/sites-developing/test-cases.md)
 * [測試 — 何時與誰？](/help/sites-developing/when-who.md)
 
-## 在您開始之前 {#before-you-start}
+## 開始之前 {#before-you-start}
 
 開始實際分析和定義測試之前，請先檢閱下列資訊：
 
@@ -32,7 +32,7 @@ ht-degree: 0%
 
 **檔案** — 如需進一步資訊，請參閱任何檔案區段或操作說明文章。
 
-**測試的基本原則** — 您應該瞭解軟體測試和品質保證的基本原則。 您最好應該有測試專案的經驗。
+**測試的基本原則** — 您應該瞭解軟體測試和品質Assurance的基本原則。 您最好應該有測試專案的經驗。
 
 有許多網站、書籍和課程會處理這類原則，因此本檔案不會詳細討論這些內容。
 
@@ -50,7 +50,7 @@ ht-degree: 0%
 
 ## 測試型別 {#types-of-tests}
 
-有多種標準的測試分類適合用於測試AEM專案。 若要決定要使用哪一種，您應該熟悉這些內容：
+有多種標準的測試分類可供測試AEM專案時使用。 若要決定要使用哪一種，您應該熟悉這些內容：
 
 >[!NOTE]
 >
