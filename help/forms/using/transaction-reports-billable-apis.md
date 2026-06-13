@@ -10,8 +10,8 @@ solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 source-git-commit: acb023caf0a7e64fea9cf5d9198d672ee14c8d88
 workflow-type: tm+mt
-source-wordcount: '1754'
-ht-degree: 8%
+source-wordcount: '2350'
+ht-degree: 6%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 8%
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/forms/using-communications/transaction-reports-billable-apis) |
+| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/using-communications/transaction-reports-billable-apis) |
 | AEM 6.5 | 本文章 |
 
 AEM Forms提供多個API來提交表單、處理檔案和轉譯檔案。 有些API是以交易入帳，其他則可供自由使用。 本檔案提供在交易報表中作為交易入帳的所有API清單。 以下是一些使用計費API的常見案例：
@@ -29,8 +29,8 @@ AEM Forms提供多個API來提交表單、處理檔案和轉譯檔案。 有些A
 * 將檔案從一種格式轉換為另一種格式
 * 平面化動態PDF檔案
 * 產生記錄檔案
-* 將互動式PDF檔案與另一個PDF檔案合併
-* 使用AEM Workflow的指派工作步驟與檔案服務步驟
+* 將互動式PDF檔案與其他PDF檔案合併
+* 使用AEM工作流程的指派工作步驟與檔案服務步驟
 * 在最適化表單中使用最適化表單
 
 帳單API不考慮頁數、檔案或表單的長度，或轉譯檔案的最終格式。 交易報告將交易分為兩個類別：已呈現的檔案和Forms已提交。
@@ -51,60 +51,60 @@ AEM Forms提供多個API來提交表單、處理檔案和轉譯檔案。 有些A
  <tbody>
   <tr>
    <td><p>API</p> </td>
-   <td>說明</td>
+   <td>描述</td>
    <td>交易報告類別</td>
    <td>其他資訊</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/tw/experience-manager/6-5/forms/javadocs/com/adobe/pdfg/service/api/GeneratePDFService.html#createPDF-com.adobe.aemfd.docmanager.Document-java.lang.String-java.lang.String-java.lang.String-java.lang.String-com.adobe.aemfd.docmanager.Document-com.adobe.aemfd.docmanager.Document-" target="_blank">createPDF</a></td>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/pdfg/service/api/GeneratePDFService.html#createPDF-com.adobe.aemfd.docmanager.Document-java.lang.String-java.lang.String-java.lang.String-java.lang.String-com.adobe.aemfd.docmanager.Document-com.adobe.aemfd.docmanager.Document-" target="_blank">createPDF</a></td>
    <td>從支援的檔案型別建立Adobe PDF。</td>
    <td>已處理的文件</td>
    <td> </td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/tw/experience-manager/6-5/forms/javadocs/com/adobe/pdfg/service/api/GeneratePDFService.html#createPDF2-com.adobe.aemfd.docmanager.Document-java.lang.String-java.lang.String-java.lang.String-java.lang.String-com.adobe.aemfd.docmanager.Document-com.adobe.aemfd.docmanager.Document-" target="_blank">createPDF2</a></td>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/pdfg/service/api/GeneratePDFService.html#createPDF2-com.adobe.aemfd.docmanager.Document-java.lang.String-java.lang.String-java.lang.String-java.lang.String-com.adobe.aemfd.docmanager.Document-com.adobe.aemfd.docmanager.Document-" target="_blank">createPDF2</a></td>
    <td>從支援的檔案型別建立Adobe PDF。</td>
    <td>已處理的文件</td>
    <td> </td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/tw/experience-manager/6-5/forms/javadocs/com/adobe/pdfg/service/api/GeneratePDFService.html#exportPDF-com.adobe.aemfd.docmanager.Document-java.lang.String-java.lang.String-com.adobe.aemfd.docmanager.Document-" target="_blank">exportPDF</a></td>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/pdfg/service/api/GeneratePDFService.html#exportPDF-com.adobe.aemfd.docmanager.Document-java.lang.String-java.lang.String-com.adobe.aemfd.docmanager.Document-" target="_blank">exportPDF</a></td>
    <td>將Adobe PDF轉換為支援的檔案型別。 </td>
    <td>已處理的檔案<br /> </td>
    <td> </td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/tw/experience-manager/6-5/forms/javadocs/com/adobe/pdfg/service/api/GeneratePDFService.html#exportPDF2-com.adobe.aemfd.docmanager.Document-java.lang.String-java.lang.String-com.adobe.aemfd.docmanager.Document-" target="_blank">exportPDF2</a></td>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/pdfg/service/api/GeneratePDFService.html#exportPDF2-com.adobe.aemfd.docmanager.Document-java.lang.String-java.lang.String-com.adobe.aemfd.docmanager.Document-" target="_blank">exportPDF2</a></td>
    <td>將Adobe PDF轉換為支援的檔案型別。 </td>
    <td>已處理的檔案<br /> </td>
    <td> </td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/tw/experience-manager/6-5/forms/javadocs/com/adobe/pdfg/service/api/GeneratePDFService.html#exportPDF2-com.adobe.aemfd.docmanager.Document-java.lang.String-java.lang.String-com.adobe.aemfd.docmanager.Document-" target="_blank">exportPDF3</a></td>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/pdfg/service/api/GeneratePDFService.html#exportPDF2-com.adobe.aemfd.docmanager.Document-java.lang.String-java.lang.String-com.adobe.aemfd.docmanager.Document-" target="_blank">exportPDF3</a></td>
    <td>將Adobe PDF轉換為支援的檔案型別。 </td>
    <td>已處理的檔案<br /> </td>
    <td> </td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/tw/experience-manager/6-3/forms/javadocs/com/adobe/pdfg/service/api/GeneratePDFService.html#htmlFileToPdf-com.adobe.aemfd.docmanager.Document-java.lang.String-java.lang.String-com.adobe.aemfd.docmanager.Document-com.adobe.aemfd.docmanager.Document-">htmlFileToPdf</a></td>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/pdfg/service/api/GeneratePDFService.html#htmlFileToPdf-com.adobe.aemfd.docmanager.Document-java.lang.String-java.lang.String-com.adobe.aemfd.docmanager.Document-com.adobe.aemfd.docmanager.Document-">htmlFileToPdf</a></td>
    <td><p>從HTML頁面建立PDF。</p> </td>
    <td>已處理的檔案<br /> </td>
    <td> </td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/tw/experience-manager/6-5/forms/javadocs/com/adobe/pdfg/service/api/GeneratePDFService.html#htmlToPdf-java.lang.String-java.lang.String-java.lang.String-com.adobe.aemfd.docmanager.Document-com.adobe.aemfd.docmanager.Document-" target="_blank">htmlToPdf</a></td>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/pdfg/service/api/GeneratePDFService.html#htmlToPdf-java.lang.String-java.lang.String-java.lang.String-com.adobe.aemfd.docmanager.Document-com.adobe.aemfd.docmanager.Document-" target="_blank">htmlToPdf</a></td>
    <td>從指向PDF頁面的URL建立HTML。</td>
    <td>已處理的檔案<br /> </td>
    <td> </td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/tw/experience-manager/6-5/forms/javadocs/com/adobe/pdfg/service/api/GeneratePDFService.html#htmlToPdf2-java.lang.String-java.lang.String-java.lang.String-com.adobe.aemfd.docmanager.Document-com.adobe.aemfd.docmanager.Document-" target="_blank">htmlToPdf2</a></td>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/pdfg/service/api/GeneratePDFService.html#htmlToPdf2-java.lang.String-java.lang.String-java.lang.String-com.adobe.aemfd.docmanager.Document-com.adobe.aemfd.docmanager.Document-" target="_blank">htmlToPdf2</a></td>
    <td>從指向PDF頁面的URL建立HTML。</td>
    <td>已處理的檔案<br /> </td>
    <td> </td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/tw/experience-manager/6-5/forms/javadocs/com/adobe/pdfg/service/api/GeneratePDFService.html#optimizePDF-com.adobe.aemfd.docmanager.Document-java.lang.String-com.adobe.aemfd.docmanager.Document-" target="_blank">optimizePDF</a></td>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/pdfg/service/api/GeneratePDFService.html#optimizePDF-com.adobe.aemfd.docmanager.Document-java.lang.String-com.adobe.aemfd.docmanager.Document-" target="_blank">optimizePDF</a></td>
    <td>最佳化PDF以移除不必要的中繼資料，進而降低檔案大小，而不會影響品質。</td>
    <td>已處理的檔案<br /> </td>
    <td> </td>
@@ -118,7 +118,7 @@ AEM Forms提供多個API來提交表單、處理檔案和轉譯檔案。 有些A
  <tbody>
   <tr>
    <td><p>API</p> </td>
-   <td>說明</td>
+   <td>描述</td>
    <td>交易報告類別</td>
    <td>其他資訊</td>
   </tr>
@@ -138,18 +138,18 @@ AEM Forms提供多個API來提交表單、處理檔案和轉譯檔案。 有些A
  <tbody>
   <tr>
    <td><p>API</p> </td>
-   <td>說明</td>
+   <td>描述</td>
    <td>交易報告類別</td>
    <td>其他資訊</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/tw/experience-manager/6-5/forms/javadocs/com/adobe/pdfg/service/api/DistillerService.html#createPDF-com.adobe.aemfd.docmanager.Document-java.lang.String-java.lang.String-java.lang.String-com.adobe.aemfd.docmanager.Document-com.adobe.aemfd.docmanager.Document-" target="_blank">createPDF</a><br /> </td>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/pdfg/service/api/DistillerService.html#createPDF-com.adobe.aemfd.docmanager.Document-java.lang.String-java.lang.String-java.lang.String-com.adobe.aemfd.docmanager.Document-com.adobe.aemfd.docmanager.Document-" target="_blank">createPDF</a><br /> </td>
    <td>從支援的檔案型別建立Adobe PDF。</td>
    <td>已處理的文件</td>
    <td> </td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/tw/experience-manager/6-5/forms/javadocs/com/adobe/pdfg/service/api/DistillerService.html#createPDF2-com.adobe.aemfd.docmanager.Document-java.lang.String-java.lang.String-java.lang.String-com.adobe.aemfd.docmanager.Document-com.adobe.aemfd.docmanager.Document-" target="_blank">createPDF2</a></td>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/pdfg/service/api/DistillerService.html#createPDF2-com.adobe.aemfd.docmanager.Document-java.lang.String-java.lang.String-java.lang.String-com.adobe.aemfd.docmanager.Document-com.adobe.aemfd.docmanager.Document-" target="_blank">createPDF2</a></td>
    <td>從支援的檔案型別建立Adobe PDF。</td>
    <td>已處理的文件</td>
    <td> </td>
@@ -163,12 +163,12 @@ AEM Forms提供多個API來提交表單、處理檔案和轉譯檔案。 有些A
  <tbody>
   <tr>
    <td><p>API</p> </td>
-   <td>說明</td>
+   <td>描述</td>
    <td>交易報告類別</td>
    <td>其他資訊</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/tw/experience-manager/6-5/forms/javadocs/com/adobe/aemds/guide/addon/dor/DoRService.html#render-com.adobe.aemds.guide.addon.dor.DoROptions-" target="_blank">轉譯</a></td>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/aemds/guide/addon/dor/DoRService.html#render-com.adobe.aemds.guide.addon.dor.DoROptions-" target="_blank">轉譯</a></td>
    <td>叫用指定的轉譯方法，以使用提供的引數產生記錄檔案。</td>
    <td>已處理的文件</td>
    <td> </td>
@@ -182,45 +182,45 @@ AEM Forms提供多個API來提交表單、處理檔案和轉譯檔案。 有些A
  <tbody>
   <tr>
    <td><p>API</p> </td>
-   <td>說明</td>
+   <td>描述</td>
    <td>交易報告類別</td>
    <td>其他資訊</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/tw/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/OutputService.html#generatePDFOutput-com.adobe.aemfd.docmanager.Document-com.adobe.aemfd.docmanager.Document-com.adobe.fd.output.api.PDFOutputOptions-" target="_blank">generatePDFOutput</a></td>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/OutputService.html#generatePDFOutput-com.adobe.aemfd.docmanager.Document-com.adobe.aemfd.docmanager.Document-com.adobe.fd.output.api.PDFOutputOptions-" target="_blank">generatePDFOutput</a></td>
    <td>合併資料和範本以建立PDF檔案。</td>
    <td>已處理的文件</td>
    <td> </td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/tw/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/OutputService.html#generatePDFOutput-java.lang.String-com.adobe.aemfd.docmanager.Document-com.adobe.fd.output.api.PDFOutputOptions-" target="_blank">generatePDFOutput</a></td>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/OutputService.html#generatePDFOutput-java.lang.String-com.adobe.aemfd.docmanager.Document-com.adobe.fd.output.api.PDFOutputOptions-" target="_blank">generatePDFOutput</a></td>
    <td>合併資料和範本以建立PDF檔案。</td>
    <td>已處理的文件</td>
    <td> </td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/tw/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/OutputService.html#generatePDFOutputBatch-java.util.Map-java.util.Map-com.adobe.fd.output.api.PDFOutputOptions-com.adobe.fd.output.api.BatchOptions-" target="_blank">generatePDFOutputBatch</a></td>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/OutputService.html#generatePDFOutputBatch-java.util.Map-java.util.Map-com.adobe.fd.output.api.PDFOutputOptions-com.adobe.fd.output.api.BatchOptions-" target="_blank">generatePDFOutputBatch</a></td>
    <td>合併資料和範本以建立一組PDF檔案。</td>
    <td>已處理的文件</td>
-   <td> generatePDFOutputBatch API將表單範本與記錄結合，並產生PDF。 當您處理記錄批次時，交易報告服務會將每個記錄計為個別的PDF轉譯。 <br>您可以使用<a href="https://helpx.adobe.com/tw/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/BatchOptions.html#getGenerateManyFiles--">getGenerateManyFiles</a>旗標，將多個轉譯合併為單一PDF檔案。 無論標幟的狀態為何，服務都會將每筆記錄計為個別的PDF轉譯。 </td>
+   <td> generatePDFOutputBatch API將表單範本與記錄結合，並產生PDF。 當您處理批次記錄時，交易報告服務會將每個記錄計為個別的PDF轉譯。<br> 您可以使用<a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/BatchOptions.html#getGenerateManyFiles--">getGenerateManyFiles</a>旗標，將多個轉譯合併為單一PDF檔案。 無論標幟的狀態為何，服務都會將每筆記錄計為個別的PDF轉譯。 </td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/tw/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/OutputService.html#generatePrintedOutput-com.adobe.aemfd.docmanager.Document-com.adobe.aemfd.docmanager.Document-com.adobe.fd.output.api.PrintedOutputOptions-" target="_blank">generatePrintedOutput</a></td>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/OutputService.html#generatePrintedOutput-com.adobe.aemfd.docmanager.Document-com.adobe.aemfd.docmanager.Document-com.adobe.fd.output.api.PrintedOutputOptions-" target="_blank">generatePrintedOutput</a></td>
    <td>將XDP和PDF檔案轉換為PostScript (PS)、印表機命令語言(PCL)和ZPL檔案格式。 </td>
    <td>已處理的文件</td>
    <td> </td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/tw/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/OutputService.html#generatePrintedOutput-java.lang.String-com.adobe.aemfd.docmanager.Document-com.adobe.fd.output.api.PrintedOutputOptions-" target="_blank">generatePrintedOutput</a></td>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/OutputService.html#generatePrintedOutput-java.lang.String-com.adobe.aemfd.docmanager.Document-com.adobe.fd.output.api.PrintedOutputOptions-" target="_blank">generatePrintedOutput</a></td>
    <td>將XDP和PDF檔案轉換為PostScript (PS)、印表機命令語言(PCL)和ZPL檔案格式。 </td>
    <td>已處理的文件</td>
    <td> </td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/tw/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/OutputService.html#generatePrintedOutputBatch-java.util.Map-java.util.Map-com.adobe.fd.output.api.PrintedOutputOptions-com.adobe.fd.output.api.BatchOptions-" target="_blank">generatePrintedOutputBatch</a></td>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/OutputService.html#generatePrintedOutputBatch-java.util.Map-java.util.Map-com.adobe.fd.output.api.PrintedOutputOptions-com.adobe.fd.output.api.BatchOptions-" target="_blank">generatePrintedOutputBatch</a></td>
    <td>將一組XDP和PDF檔案轉換為一組PostScript (PS)、印表機命令語言(PCL)和ZPL檔案格式。 </td>
    <td>已處理的文件</td>
-   <td> generatePDFOutputBatch API將表單範本與記錄結合，並產生PDF。 當您處理記錄批次時，交易報告服務會將每個記錄計為個別的PDF轉譯。 <br>您可以使用<a href="https://helpx.adobe.com/tw/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/BatchOptions.html#getGenerateManyFiles--">getGenerateManyFiles</a>旗標，將多個轉譯合併為單一PDF檔案。 無論標幟的狀態為何，服務都會將每筆記錄計為個別的PDF轉譯。 </td>
+   <td> generatePDFOutputBatch API將表單範本與記錄結合，並產生PDF。 當您處理批次記錄時，交易報告服務會將每個記錄計為個別的PDF轉譯。<br> 您可以使用<a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/BatchOptions.html#getGenerateManyFiles--">getGenerateManyFiles</a>旗標，將多個轉譯合併為單一PDF檔案。 無論標幟的狀態為何，服務都會將每筆記錄計為個別的PDF轉譯。 </td>
   </tr>
  </tbody>
 </table>
@@ -231,18 +231,18 @@ AEM Forms提供多個API來提交表單、處理檔案和轉譯檔案。 有些A
  <tbody>
   <tr>
    <td><p>API</p> </td>
-   <td>說明</td>
+   <td>描述</td>
    <td>交易報告類別</td>
    <td>其他資訊</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/tw/experience-manager/6-5/forms/javadocs/com/adobe/fd/forms/api/FormsService.html#renderPDFForm-java.lang.String-com.adobe.aemfd.docmanager.Document-com.adobe.fd.forms.api.PDFFormRenderOptions-" target="_blank">renderPDFForm</a></td>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/forms/api/FormsService.html#renderPDFForm-java.lang.String-com.adobe.aemfd.docmanager.Document-com.adobe.fd.forms.api.PDFFormRenderOptions-" target="_blank">renderPDFForm</a></td>
    <td>從XDP範本轉譯PDF表單。 XP範本是在Forms Designer中建立。</td>
    <td>已處理的文件</td>
    <td> </td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/tw/experience-manager/6-5/forms/javadocs/com/adobe/fd/forms/api/FormsService.html#exportData-com.adobe.aemfd.docmanager.Document-com.adobe.fd.forms.api.DataFormat-" target="_blank">exportData</a></td>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/forms/api/FormsService.html#exportData-com.adobe.aemfd.docmanager.Document-com.adobe.fd.forms.api.DataFormat-" target="_blank">exportData</a></td>
    <td>從PDF表單或XDP範本中擷取資料</td>
    <td>已處理的文件</td>
    <td> </td>
@@ -256,19 +256,19 @@ AEM Forms提供多個API來提交表單、處理檔案和轉譯檔案。 有些A
  <tbody>
   <tr>
    <td><p>API</p> </td>
-   <td>說明</td>
+   <td>描述</td>
    <td>交易報告類別</td>
    <td>其他資訊</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/tw/experience-manager/6-5/forms/javadocs/com/adobe/fd/cpdf/api/ConvertPdfService.html#toImage-com.adobe.aemfd.docmanager.Document-com.adobe.fd.cpdf.api.ToImageOptionsSpec-" target="_blank">toImage</a></td>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/cpdf/api/ConvertPdfService.html#toImage-com.adobe.aemfd.docmanager.Document-com.adobe.fd.cpdf.api.ToImageOptionsSpec-" target="_blank">toImage</a></td>
    <td>將PDF檔案轉換為影像檔案清單。 支援的影像格式為JPEG、JPEG2K、PNG和TIFF。</td>
    <td>已處理的文件</td>
    <td> </td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/tw/experience-manager/6-5/forms/javadocs/com/adobe/fd/cpdf/api/ConvertPdfService.html#toImage-com.adobe.aemfd.docmanager.Document-com.adobe.fd.cpdf.api.ToImageOptionsSpec-" target="_blank">toPS</a></td>
-   <td>使用選項規格中指定的選項，將「平坦PDF」檔案轉換為PostScript格式。</td>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/cpdf/api/ConvertPdfService.html#toImage-com.adobe.aemfd.docmanager.Document-com.adobe.fd.cpdf.api.ToImageOptionsSpec-" target="_blank">toPS</a></td>
+   <td>使用選項規格中指定的選項，將PDF平面檔案轉換為PostScript格式。</td>
    <td>已處理的文件</td>
    <td> </td>
   </tr>
@@ -281,12 +281,12 @@ AEM Forms提供多個API來提交表單、處理檔案和轉譯檔案。 有些A
  <tbody>
   <tr>
    <td><p>API</p> </td>
-   <td>說明</td>
+   <td>描述</td>
    <td>交易報告類別</td>
    <td>其他資訊</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/tw/experience-manager/6-5/forms/javadocs/com/adobe/fd/bcf/api/BarcodedFormsService.html#decode-com.adobe.aemfd.docmanager.Document-java.lang.Boolean-java.lang.Boolean-java.lang.Boolean-java.lang.Boolean-java.lang.Boolean-java.lang.Boolean-java.lang.Boolean-java.lang.Boolean-com.adobe.fd.bcf.api.CharSet-" target="_blank">解碼</a></td>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/bcf/api/BarcodedFormsService.html#decode-com.adobe.aemfd.docmanager.Document-java.lang.Boolean-java.lang.Boolean-java.lang.Boolean-java.lang.Boolean-java.lang.Boolean-java.lang.Boolean-java.lang.Boolean-java.lang.Boolean-com.adobe.fd.bcf.api.CharSet-" target="_blank">解碼</a></td>
    <td>解碼Document物件中的所有條碼，並傳回org.w3c.dom.Document物件，該物件包含從條碼擷取的資料。</td>
    <td>已處理的文件</td>
    <td> </td>
@@ -300,13 +300,13 @@ AEM Forms提供多個API來提交表單、處理檔案和轉譯檔案。 有些A
  <tbody>
   <tr>
    <td><p>API</p> </td>
-   <td>說明</td>
+   <td>描述</td>
    <td>交易報告類別</td>
    <td>其他資訊</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/tw/experience-manager/6-3/forms/javadocs/com/adobe/fd/assembler/service/AssemblerService.html#invoke-com.adobe.aemfd.docmanager.Document-java.util.Map-com.adobe.fd.assembler.client.AssemblerOptionSpec-">叫用</a></td>
-   <td>執行指定的DDX檔案並傳回包含結果檔案的<a href="https://helpx.adobe.com/tw/experience-manager/6-3/forms/javadocs/com/adobe/fd/assembler/client/AssemblerResult.html">AssemblerResult</a>物件。 </td>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/assembler/service/AssemblerService.html#invoke-com.adobe.aemfd.docmanager.Document-java.util.Map-com.adobe.fd.assembler.client.AssemblerOptionSpec-">叫用</a></td>
+   <td>執行指定的DDX檔案並傳回包含結果檔案的<a href="https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/assembler/client/AssemblerResult.html">AssemblerResult</a>物件。 </td>
    <td>已處理的文件</td>
    <td>下列作業不會作為交易入帳：
     <ul>
@@ -315,14 +315,14 @@ AEM Forms提供多個API來提交表單、處理檔案和轉譯檔案。 有些A
     </ul> </td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/tw/experience-manager/6-5/forms/javadocs/com/adobe/fd/assembler/service/AssemblerService.html#invoke-com.adobe.aemfd.docmanager.Document-java.util.Map-com.adobe.fd.assembler.client.AssemblerOptionSpec-" target="_blank">叫用</a></td>
-   <td>執行指定的DDX檔案並傳回包含結果檔案的<a href="https://helpx.adobe.com/tw/experience-manager/6-3/forms/javadocs/com/adobe/fd/assembler/client/AssemblerResult.html">AssemblerResult</a>物件。 </td>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/assembler/service/AssemblerService.html#invoke-com.adobe.aemfd.docmanager.Document-java.util.Map-com.adobe.fd.assembler.client.AssemblerOptionSpec-" target="_blank">叫用</a></td>
+   <td>執行指定的DDX檔案並傳回包含結果檔案的<a href="https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/assembler/client/AssemblerResult.html">AssemblerResult</a>物件。 </td>
    <td>已處理的文件</td>
    <td>PDF Generator、Forms和輸出服務支援的所有輸入檔案格式，組合器服務都支援所有這些格式作為輸出檔案格式。 </td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/tw/experience-manager/6-5/forms/javadocs/com/adobe/fd/assembler/service/AssemblerService.html#toPDFA-com.adobe.aemfd.docmanager.Document-com.adobe.fd.assembler.client.PDFAConversionOptionSpec-">toPDFA</a></td>
-   <td>使用指定的選項將指定的檔案轉換為PDF/A。</td>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/assembler/service/AssemblerService.html#toPDFA-com.adobe.aemfd.docmanager.Document-com.adobe.fd.assembler.client.PDFAConversionOptionSpec-">toPDFA</a></td>
+   <td>使用指定的選項將指定的檔案轉換成PDF/A。</td>
    <td>已處理的文件</td>
    <td> </td>
   </tr>
@@ -330,9 +330,9 @@ AEM Forms提供多個API來提交表單、處理檔案和轉譯檔案。 有些A
 </table>
 
 當您執行下列一或多個作業時，叫用API的使用量會計為交易：
-1. 從非PDF格式轉換成PDF格式。 例如，從XDP格式轉換成PDF格式，兼顧互動和非互動的通訊形式，以及從Word轉換成PDF。
+1. 從非PDF格式轉換成PDF格式。 例如，從XDP格式轉換成PDF格式，以互動和非互動形式通訊，以及從Word轉換成PDF。
 1. 從PDF格式轉換為PDF/A格式。
-1. 從PDF格式轉換為非PDF格式。 範例包括從PDF到影像格式的轉換或從PDF到文字格式的轉換。
+1. 從PDF格式轉換為非PDF格式。 範例包括從PDF轉換為影像格式或從PDF轉換為文字格式。
 
 >[!NOTE]
 >
@@ -345,13 +345,13 @@ AEM Forms提供多個API來提交表單、處理檔案和轉譯檔案。 有些A
  <tbody>
   <tr>
    <td><p>API</p> </td>
-   <td>說明</td>
+   <td>描述</td>
    <td>交易報告類別</td>
    <td>其他資訊</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/tw/experience-manager/6-5/forms/javadocs/com/adobe/fd/pdfutility/services/PDFUtilityService.html#convertPDFtoXDP-com.adobe.aemfd.docmanager.Document-" target="_blank">convertPDFtoXDP</a></td>
-   <td>將PDF檔案轉換為XDP檔案。 若要將PDF檔案成功轉換成XDP檔案，PDF檔案必須在AcroForm字典中包含XFA資料流。</td>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/pdfutility/services/PDFUtilityService.html#convertPDFtoXDP-com.adobe.aemfd.docmanager.Document-" target="_blank">convertPDFtoXDP</a></td>
+   <td>將PDF檔案轉換為XDP檔案。 若要將PDF檔案成功轉換為XDP檔案，PDF檔案必須在AcroForm字典中包含XFA資料流。</td>
    <td>已處理的文件</td>
    <td> </td>
   </tr>
@@ -360,9 +360,9 @@ AEM Forms提供多個API來提交表單、處理檔案和轉譯檔案。 有些A
 
 ## 可記帳資料擷取API {#billable-data-capture-apis}
 
-調適型表單、HTML5 Forms和表單集的所有提交事件都會計為交易。 依預設，PDF表單的提交不會作為交易入帳。 使用提供的[交易錄製器API](record-transaction-custom-implementation.md)，將PDF forms提交記錄為交易。
+調適型表單、HTML5 Forms和表單集的所有提交事件都會入帳為交易。 依預設，PDF表單的提交不會計為交易。 使用提供的[交易錄製器API](record-transaction-custom-implementation.md)，將PDF forms提交記錄為交易。
 
-### 最適化表單 {#adaptive-forms}
+### 自適應表單 {#adaptive-forms}
 
 <table>
  <tbody>
@@ -378,14 +378,14 @@ AEM Forms提供多個API來提交表單、處理檔案和轉譯檔案。 有些A
    <td>已提交的表單</td>
    <td>
     <ul>
-     <li>單一或兩個交易的成功提交帳戶。 計算交易數取決於用於提交的提交動作型別。 例如，透過電子郵件傳送PDF時，提交動作會計算兩個交易計數。 一個交易用於表單提交，另一個交易用於使用記錄檔案(DOR)服務產生的PDF。 </li>
+     <li>單一或兩個交易的成功提交帳戶。 計算交易數取決於用於提交的提交動作型別。 例如，透過電子郵件傳送PDF的提交動作帳戶會產生兩種交易計數。 一個交易用於表單提交，另一個交易用於使用記錄檔案(DOR)服務產生的PDF。 </li>
      <li>在最適化表單（最適化表單集）中使用最適化表單時，只會計算單一交易。 在最適化表單中可以有任意數量的最適化表單。</li>
     </ul> </td>
   </tr>
  </tbody>
 </table>
 
-### HTML5 Forms {#html-forms}
+### HTML5 表單 {#html-forms}
 
 <table>
  <tbody>
@@ -410,7 +410,7 @@ AEM Forms提供多個API來提交表單、處理檔案和轉譯檔案。 有些A
  <tbody>
   <tr>
    <td><p>API</p> </td>
-   <td>說明</td>
+   <td>描述</td>
    <td>交易報告類別</td>
    <td>其他資訊</td>
   </tr>
@@ -427,9 +427,9 @@ AEM Forms提供多個API來提交表單、處理檔案和轉譯檔案。 有些A
  </tbody>
 </table>
 
-## OSGi API上的可計費互動式通訊與表單中心AEM工作流程 {#billable-interactive-communication-and-form-centric-aem-workflows-on-osgi-apis}
+## OSGi API上的可計費互動式通訊與以表單為中心的AEM工作流程 {#billable-interactive-communication-and-form-centric-aem-workflows-on-osgi-apis}
 
-在OSGi上指派以表單為中心的AEM Workflow的工作和檔案服務步驟，以及互動式通訊的所有轉譯，並作為交易入帳。 在製作執行個體上預覽互動式通訊，以及使用代理程式UI在發佈執行個體上預覽，不會計為交易。 如果工作流程步驟將交易入帳，但工作流程無法完成，則不會迴轉交易計數。
+在OSGi上指派以表單為中心的AEM工作流程的任務和檔案服務步驟，以及互動式通訊的所有轉譯，並計為交易。 在製作執行個體上預覽互動式通訊，以及使用代理程式UI在發佈執行個體上預覽，不會計為交易。 如果工作流程步驟將交易入帳，但工作流程無法完成，則不會迴轉交易計數。
 
 ### 互動式通訊 - Web Channel {#interactive-communication-web-channel}
 
@@ -437,7 +437,7 @@ AEM Forms提供多個API來提交表單、處理檔案和轉譯檔案。 有些A
  <tbody>
   <tr>
    <td><p>API</p> </td>
-   <td>說明</td>
+   <td>描述</td>
    <td>交易報告類別</td>
    <td>其他資訊</td>
   </tr>
@@ -458,12 +458,12 @@ AEM Forms提供多個API來提交表單、處理檔案和轉譯檔案。 有些A
  <tbody>
   <tr>
    <td><p>API</p> </td>
-   <td>說明</td>
+   <td>描述</td>
    <td>交易報告類別</td>
    <td>其他資訊</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/tw/experience-manager/6-5/forms/javadocs/com/adobe/fd/ccm/channels/print/api/model/PrintChannel.html" target="_blank">轉譯</a> (轉換成PDF)</td>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/ccm/channels/print/api/model/PrintChannel.html" target="_blank">轉譯</a> （轉換成PDF）</td>
    <td>產生互動式通訊的PDF版本。</td>
    <td>已呈交的文件</td>
    <td>

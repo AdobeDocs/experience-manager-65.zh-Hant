@@ -10,7 +10,7 @@ solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '382'
+source-wordcount: '412'
 ht-degree: 0%
 
 ---
@@ -19,12 +19,12 @@ ht-degree: 0%
 
 ## 概觀 {#overview}
 
-「轉換PDF」服務會將PDF檔案轉換為PostScript或影像檔案(JPEG、JPEG2000、PNG和TIFF)。 將PDF檔案轉換為PostScript對於任何PostScript印表機上的自動伺服器式列印很有用。 將PDF檔案轉換為多頁TIFF檔案對於在不支援PDF檔案的內容管理系統中封存檔案而言是切實可行的。
+轉換PDF服務會將PDF檔案轉換為PostScript或影像檔案（JPEG、JPEG 2000、PNG和TIFF）。 將PDF檔案轉換為PostScript對於任何PostScript印表機上的自動伺服器式列印都很有用。 在不支援PDF檔案的內容管理系統中封存檔案時，將PDF檔案轉換為多頁TIFF檔案是可行的。
 
-您可以使用轉換PDF服務來達到下列目的：
+您可以使用轉換PDF服務來達成下列目標：
 
 * 將PDF檔案轉換為PostScript。 轉換為PostScript時，您可以使用轉換作業來指定來原始檔，以及是否要轉換為PostScript第2級或第3級。 您轉換成PostScript檔案的PDF檔案必須是非互動式的。
-* 將PDF檔案轉換為JPEG、JPEG2000、PNG和TIFF影像格式。 當轉換為任何這些影像格式時，您可以使用轉換作業來指定來原始檔和影像選項規格。 規格包含各種偏好設定，例如影像轉換格式、影像解析度和色彩轉換。
+* 將PDF檔案轉換為JPEG、JPEG 2000、PNG和TIFF影像格式。 當轉換為任何這些影像格式時，您可以使用轉換作業來指定來原始檔和影像選項規格。 規格包含各種偏好設定，例如影像轉換格式、影像解析度和色彩轉換。
 
 ## 設定服務的屬性   {#properties}
 
@@ -34,9 +34,9 @@ ht-degree: 0%
 
 ConvertPDF服務提供下列兩個API：
 
-* **[toPS](https://helpx.adobe.com/tw/experience-manager/6-3/forms/javadocs/com/adobe/fd/cpdf/api/ConvertPdfService.html#toPS)**：將PDF檔案轉換為PostScript檔案。
+* **[toPS](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/cpdf/api/ConvertPdfService.html#toPS)**：將PDF檔案轉換為PostScript檔案。
 
-* **[toImage](https://helpx.adobe.com/tw/experience-manager/6-3/forms/javadocs/com/adobe/fd/cpdf/api/ConvertPdfService.html#toImage)**：將PDF檔案轉換為影像檔案。 支援的影像格式為JPEG、JPEG2000、PNG和TIFF。
+* **[toImage](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/cpdf/api/ConvertPdfService.html#toImage)**：將PDF檔案轉換為影像檔案。 支援的影像格式為JPEG、JPEG2000、PNG和TIFF。
 
 ### 搭配JSP或Servlet使用toPS API {#using-tops-api-with-a-jsp-or-servlets}
 
