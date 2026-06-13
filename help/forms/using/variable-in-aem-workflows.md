@@ -11,7 +11,7 @@ feature: Adaptive Forms
 role: User, Developer
 source-git-commit: 704a815e961dc2c690e034a1b1cbe60800c643ae
 workflow-type: tm+mt
-source-wordcount: '2087'
+source-wordcount: '2208'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 1%
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/create-form-centric-workflows/variable-in-aem-workflows.html?lang=zh-Hant) |
+| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/create-form-centric-workflows/variable-in-aem-workflows.html) |
 | AEM 6.5 | 本文章 |
 
 工作流程模型中的變數是根據其資料型別儲存值的方式。 然後，您就可以在任何工作流程步驟中使用變數的名稱，來擷取儲存在變數中的值。 您也可以使用變數名稱來定義用於進行路由決定的運算式。
@@ -170,7 +170,7 @@ ht-degree: 1%
 
 在此範例中，在定義路由運算式之前，請使用[範例2](../../forms/using/variable-in-aem-workflows.md#example2)設定&#x200B;**totalvalue**&#x200B;變數的值。 如果&#x200B;**totalvalue**&#x200B;變數的值大於50000，則分支1為作用中。 同樣地，您可以定義一個規則，在&#x200B;**totalvalue**&#x200B;變數的值小於50000時，讓Branch 2生效。
 
-[OR分割視訊](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/variables_orsplit_example.mp4)
+[OR拆分視訊](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/variables_orsplit_example.mp4)
 
 同樣地，選取外部指令集路徑，或指定路由運算式的ECMA指令集以評估作用中分支。 選取&#x200B;**[!UICONTROL 重新命名分支]**&#x200B;以指定分支的替代名稱。
 
@@ -279,8 +279,8 @@ workflowSession.startWorkflow(model, wfData, metaData);
 
 ### 使用工作流程變數將敏感的使用者資料儲存在JCR以外 {#jcr-independent-persistance}
 
-使用Forms Workflow處理的資料可能包含敏感的使用者資料，例如個人識別資訊和敏感個人資訊。 企業可以選擇將資料從JCR儲存空間儲存到由他們擁有並管理的外部資料存放區，由各種工作流程步驟處理（並使用工作流程變數傳遞）。 若要進一步瞭解如何在外部儲存空間中儲存工作流程資料，請參閱[針對客戶擁有的資料存放區使用工作流程變數](/help/sites-administering/workflows-administering.md#using-workflow-variables-customer-datastore)。
-[!DNL Adobe Experience Manager]提供工作流程API [UserMetaDataPersistenceProvider](https://github.com/adobe/workflow-variable-externalizer)，以將工作流程變數儲存在外部Azure Blob儲存體中。 如需有關使用API的詳細資訊，請參閱[使用工作流程變數將敏感資料引數化，並儲存在外部資料存放區](/help/forms/using/aem-forms-workflow.md#externalize-wf-variables)。
+使用Forms Workflow處理的資料可能包含敏感的使用者資料，例如個人識別資訊和敏感個人資訊。企業可以選擇將資料從JCR儲存空間儲存到由他們擁有並管理的外部資料存放區，由各種工作流程步驟處理（並使用工作流程變數傳遞）。若要進一步瞭解如何在外部儲存空間中儲存工作流程資料，請參閱[針對客戶擁有的資料存放區使用工作流程變數](/help/sites-administering/workflows-administering.md#using-workflow-variables-customer-datastore)。
+[!DNL Adobe Experience Manager]提供工作流程API [UserMetaDataPersistenceProvider](https://github.com/adobe/workflow-variable-externalizer)，以將工作流程變數儲存在外部Azure Blob儲存體中。如需有關使用API的詳細資訊，請參閱[使用工作流程變數將敏感資料引數化，並儲存在外部資料存放區](/help/forms/using/aem-forms-workflow.md#externalize-wf-variables)。
 
 ## 編輯變數 {#edit-a-variable}
 

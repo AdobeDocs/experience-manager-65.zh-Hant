@@ -11,7 +11,7 @@ solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
-source-wordcount: '783'
+source-wordcount: '797'
 ht-degree: 1%
 
 ---
@@ -60,7 +60,7 @@ ht-degree: 1%
    * java.lang.Long
    * 長
    * java.lang.Float
-   * 浮點數
+   * 浮動
    * java.util.Calendar
    * java.util.Date
    * java.util.List
@@ -112,7 +112,7 @@ ht-degree: 1%
    * java.lang.Long
    * 長
    * java.lang.Float
-   * 浮點數
+   * 浮動
    * java.util.Calendar
    * java.util.Date
    * java.util.List
@@ -126,7 +126,7 @@ ht-degree: 1%
   @org.apache.felix.scr.annotations.Property(name = "exm.service", boolValue = true)})
 ```
 
-exm.service=true專案會指示Expression Manager服務包含適合在運算式中使用的遠端函式。 &lt;service_id>值必須是有效的Java識別碼（英數、$、_不含其他特殊字元）。 此值的前置詞為REMOTE_關鍵字，會構成運算式內部使用的前置詞。 例如，如果介面在服務屬性中具有已註解的方法bar()和服務ID foo，則可在使用REMOTE_foo：bar()的運算式內參照。
+exm.service=true專案會指示Expression Manager服務包含適合在運算式中使用的遠端函式。 &lt;service_id>值必須是有效的Java識別碼（英數、$、_不含其他特殊字元）。 此值的前置詞為REMOTE_關鍵字，會構成運算式內部使用的前置詞。 例如，在服務屬性中有附註方法bar()和服務識別碼foo的介面，可以使用REMOTE_foo:bar()在運算式中參照。
 
 ```java
 package mergeandfuse.com;

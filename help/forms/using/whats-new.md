@@ -1,5 +1,5 @@
 ---
-title: 新功能摘要| AEM 6.5 Forms
+title: 新功能摘要 |AEM 6.5 Forms
 description: AEM表單和檔案的最新功能及改進專案，全球最進階的數位體驗管理解決方案。
 topic-tags: introduction
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -15,7 +15,7 @@ ht-degree: 42%
 
 ---
 
-# 新功能摘要| AEM 6.5 Forms{#new-features-summary-aem-forms}
+# 新功能摘要 |AEM 6.5 Forms{#new-features-summary-aem-forms}
 
 | 產品 | Adobe Experience Manager 6.5 |
 | -------- | ---------------------------- |

@@ -11,8 +11,8 @@ feature: Administering
 role: Admin
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '1088'
-ht-degree: 9%
+source-wordcount: '1340'
+ht-degree: 10%
 
 ---
 
@@ -26,9 +26,9 @@ ht-degree: 9%
 
 ## 必要條件和假設 {#prerequisites-and-assumptions}
 
-假設在指定頁面(AEM主控台或網頁)上發現效能問題，且可一致地重現。 在開始調查之前，必須先有測試或監控效能的方法。
+假設在指定頁面（AEM主控台或網頁）上發現效能問題，且可一致地重現。 在開始調查之前，必須先有測試或監控效能的方法。
 
-分析從步驟0開始。 目標是要判斷哪一個實體(Dispatcher、外部主機或AEM)應該對效能問題負責，然後判斷應該調查哪個區域（伺服器或網路）。
+分析從步驟0開始。 目標是要判斷造成效能問題的實體（Dispatcher、外部主機或AEM），然後判斷應調查哪些區域（伺服器或網路）。
 
 ### 區段 1 {#section}
 
@@ -82,7 +82,7 @@ ht-degree: 9%
   <tr>
    <td><strong>步驟 5</strong></td>
    <td>Dispatcher是否會嘗試透過AEM驗證每個請求？</td>
-   <td>在傳遞快取的資源之前，檢查Dispatcher是否傳送<code>HEAD</code>個要求給AEM以進行驗證。 在AEM <code>access.log</code>中尋找<code>HEAD</code>要求。 如需詳細資訊，請參閱<a href="/help/sites-deploying/configure-logging.md">記錄</a>.<br /> </td>
+   <td>在傳遞快取的資源之前，檢查Dispatcher是否傳送<code>HEAD</code>個要求給AEM以進行驗證。 在AEM <code>access.log</code>中尋找<code>HEAD</code>請求。 如需詳細資訊，請參閱<a href="/help/sites-deploying/configure-logging.md">記錄</a>.<br /> </td>
   </tr>
   <tr>
    <td><strong>步驟 6</strong></td>
@@ -137,7 +137,7 @@ ht-degree: 9%
   <tr>
    <td><strong>步驟 16</strong></td>
    <td>設定檔伺服器</td>
-   <td><p>如需可搭配AEM使用的效能分析工具的相關資訊，請參閱<a href="/help/sites-deploying/monitoring-and-maintaining.md#tools-for-monitoring-and-analyzing-performance">監控與分析效能的工具</a>。<br /> </p> </td>
+   <td><p>如需可搭配AEM使用的效能分析工具的相關資訊，請參閱<a href="/help/sites-deploying/monitoring-and-maintaining.md#tools-for-monitoring-and-analyzing-performance">監控及分析效能的工具</a>。<br /> </p> </td>
   </tr>
   <tr>
    <td><strong>步驟 17</strong></td>
@@ -242,12 +242,12 @@ ht-degree: 9%
     <ol>
      <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant">一般Dispatcher設定</a></li>
      <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant#configuring-the-dispatcher-cache-cache">設定Dispatcher快取</a></li>
-    </ol> <p>如何改善快取比率；使請求可快取(Dispatcher最佳實務)</p> <p>此外，請考慮下列設定以最佳化您的快取設定<br /> </p>
+    </ol> <p>如何改善快取比率；使請求可快取（Dispatcher最佳實務）</p> <p>此外，請考慮下列設定以最佳化您的快取設定<br /> </p>
     <ol>
-     <li>為非GET的HTTP要求設定無快取規則</li>
+     <li>為非GET的HTTP請求設定無快取規則</li>
      <li>設定查詢字串為不可快取</li>
      <li>不要快取缺少副檔名的URL</li>
-     <li>快取驗證標題(自Dispatcher 4.1.10版之後可能提供)</li>
+     <li>快取驗證標題（自Dispatcher 4.1.10版之後可能提供）</li>
     </ol> </td>
   </tr>
   <tr>
@@ -257,7 +257,7 @@ ht-degree: 9%
   </tr>
   <tr>
    <td><strong>步驟 35</strong></td>
-   <td>設定Dispatcher</td>
+   <td>設定 Dispatcher</td>
    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant">設定Dispatcher</a><br /> </td>
   </tr>
   <tr>
@@ -266,7 +266,7 @@ ht-degree: 9%
    <td><br />
     <ul>
      <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html?lang=zh-Hant#invalidating-dispatcher-cache-from-the-authoring-environment">製作層的快取失效；</a></li>
-     <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html?lang=zh-Hant#invalidating-dispatcher-cache-from-a-publishing-instance">Publish層的快取失效。</a></li>
+     <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html?lang=zh-Hant#invalidating-dispatcher-cache-from-a-publishing-instance">發佈層的快取失效。</a></li>
     </ul> </td>
   </tr>
   <tr>

@@ -11,7 +11,7 @@ feature: Adaptive Forms
 role: User, Developer
 source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
 workflow-type: tm+mt
-source-wordcount: '1635'
+source-wordcount: '1650'
 ht-degree: 0%
 
 ---
@@ -214,7 +214,7 @@ ht-degree: 0%
 
    **右下方面板：**&#x200B;顯示所選處理序的下列處理序歷程記錄詳細資料：
 
-   * 處理程式名稱
+   * 程序名稱
    * 程式發起人
    * 處理更新日期時間
    * 處理完成日期時間

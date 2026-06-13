@@ -11,7 +11,7 @@ solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
-source-wordcount: '2171'
+source-wordcount: '2190'
 ht-degree: 0%
 
 ---
@@ -25,11 +25,11 @@ XFA表單範本或XDP是適用於下列專案的範本：
 
 * 布局片段
 
-XDP的設計目的AdobeForms Designer。 本文提供如何設計您的XDP以建立有效對應/互動式通訊的詳細資訊，例如應在何處使用表單欄位或目標區域，以及何時使用佈局片段。
+XDP是在Adobe Forms Designer中設計。 本文提供如何設計您的XDP以建立有效對應/互動式通訊的詳細資訊，例如應在何處使用表單欄位或目標區域，以及何時使用佈局片段。
 
 ## 建立信函或互動式通訊列印頻道的版面配置 {#creating-a-layout-for-letters-or-for-interactive-communications-print-channel}
 
-佈局定義互動式通訊的信件/列印頻道的圖形佈局。 版面配置可包含一般表單欄位，例如「地址」和「參考號碼」。 其中也包含空白的子表單，表示目標區域。 在表單設計工具中建立版面，並在完成後，應用程式專員將其上傳到AEM伺服器。 從那裡，當您建立互動式通訊的通訊範本或列印管道時，可以選取版面。
+佈局定義互動式通訊的信件/列印頻道的圖形佈局。 版面配置可包含一般表單欄位，例如「地址」和「參考號碼」。 其中也包含空白的子表單，表示目標區域。 在表單設計工具中建立版面，並在完成後，應用程式專員將其上傳至AEM伺服器。 從那裡，當您建立互動式通訊的通訊範本或列印管道時，可以選取版面。
 
 ![Designer：建立配置](assets/claimsubrogationlayout.png)
 

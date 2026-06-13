@@ -11,24 +11,24 @@ solution: Experience Manager, Experience Manager Sites
 role: Admin
 source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
 workflow-type: tm+mt
-source-wordcount: '1319'
-ht-degree: 4%
+source-wordcount: '1409'
+ht-degree: 5%
 
 ---
 
 # 使用雙向SSL復寫{#replicating-using-mutual-ssl}
 
-設定AEM，讓製作執行個體上的復寫代理程式使用雙向SSL (MSSL)來與發佈執行個體連線。 使用MSSL，發佈執行個體上的復寫代理程式和HTTP服務會使用憑證來相互驗證。
+設定AEM ，讓製作執行個體上的復寫代理程式使用雙向SSL (MSSL)來與發佈執行個體連線。 使用MSSL，發佈執行個體上的復寫代理程式和HTTP服務會使用憑證來相互驗證。
 
 設定MSSL進行復寫，需要執行下列步驟：
 
 1. 建立或取得製作和發佈執行個體的私密金鑰和憑證。
 1. 在製作和發佈執行個體上安裝金鑰和憑證：
 
-   * 作者：作者的私密金鑰和Publish的憑證。
-   * 發佈： Publish的私密金鑰和作者的憑證。 憑證與透過復寫代理程式驗證的使用者帳戶相關聯。
+   * 作者：作者的私密金鑰和發佈的憑證。
+   * 發佈：發佈的私密金鑰和作者的憑證。 憑證與透過復寫代理程式驗證的使用者帳戶相關聯。
 
-1. 在Publish執行個體上設定Jetty型HTTP服務。
+1. 在發佈執行個體上設定Jetty式HTTP服務。
 1. 設定復寫代理程式的傳輸和SSL屬性。
 
 ![chlimage_1-64](assets/chlimage_1-64.png)
@@ -162,7 +162,7 @@ ht-degree: 4%
 
    ![chlimage_1-67](assets/chlimage_1-67.png)
 
-### 安裝Publish憑證 {#install-the-publish-certificate}
+### 安裝發佈憑證 {#install-the-publish-certificate}
 
 1. 開啟編寫執行個體的「使用者管理」頁面。 ([http://localhost:4502/libs/granite/security/content/useradmin.html](http://localhost:4502/libs/granite/security/content/useradmin.html))
 1. 若要開啟使用者帳戶的內容，請按一下您的使用者名稱。
@@ -177,7 +177,7 @@ ht-degree: 4%
 
    ![chlimage_1-69](assets/chlimage_1-69.png)
 
-## 在Publish上安裝私密金鑰和TrustStore {#install-private-key-and-truststore-on-publish}
+## 在發佈上安裝私密金鑰和TrustStore {#install-private-key-and-truststore-on-publish}
 
 在發佈執行個體上安裝以下專案：
 
@@ -186,7 +186,7 @@ ht-degree: 4%
 
 若要執行下列程式，您必須以發佈執行個體的管理員身分登入。
 
-### 安裝Publish私密金鑰 {#install-the-publish-private-key}
+### 安裝發佈私密金鑰 {#install-the-publish-private-key}
 
 1. 開啟發佈執行個體的使用者管理頁面。 ([http://localhost:4503/libs/granite/security/content/useradmin.html](http://localhost:4503/libs/granite/security/content/useradmin.html))
 1. 若要開啟使用者帳戶的內容，請按一下您的使用者名稱。
@@ -206,7 +206,7 @@ ht-degree: 4%
 1. 請確定已選取將憑證對應到使用者選項。 按一下「選取憑證檔案」，選取「author.cer」，然後按一下「開啟」。
 1. 按一下提交，然後關閉「信任庫管理」對話方塊。
 
-## 在Publish上設定HTTP服務 {#configure-the-http-service-on-publish}
+## 在發佈上設定HTTP服務 {#configure-the-http-service-on-publish}
 
 在發佈執行個體上設定Apache Felix Jetty型HTTP服務的屬性，以便在存取Granite Keystore時使用HTTPS。 服務的PID是`org.apache.felix.http`。
 

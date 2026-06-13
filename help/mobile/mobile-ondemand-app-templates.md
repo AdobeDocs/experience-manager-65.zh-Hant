@@ -10,7 +10,7 @@ feature: Mobile
 role: User
 source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '1130'
+source-wordcount: '1160'
 ht-degree: 1%
 
 ---
@@ -99,13 +99,13 @@ Unlimited文章是範例範本，代表典型的AEM Mobile隨選文章版面。
 
 沒有現成的文章範本，不過自訂範本應擴充預設範本，請參閱Geometrixx Unlimited應用程式的[文章範本範例](http://localhost:4502/crx/de/index.jsp#/apps/geometrixx-unlimited-app/templates/article)。
 
-超出一般AEM範本必要屬性的關鍵屬性包括；
+超出一般AEM範本必要屬性的關鍵屬性包括：
 
-***dps-resourceType=&quot;dps：Article&quot;***
+***dps-resourceType=&quot;dps:Article&quot;***
 
 此屬性可確保將AEM頁面辨識為AEM Mobile目標文章頁面。
 
-根據AEM範本，您可以將任何預設屬性或子節點新增到範本的&#x200B;***jcr：content***。
+根據AEM範本，您可以將任何預設屬性或子節點新增到範本的&#x200B;***jcr:content***。
 
 ### 橫幅和系列範本 {#banner-and-collection-templates}
 
@@ -117,7 +117,7 @@ Unlimited文章是範例範本，代表典型的AEM Mobile隨選文章版面。
 
 元件會使用並允許存取Widget，且這些元件會用於轉譯內容。
 
-程式碼存放庫中包含簡單元件，其來源可以在AEM中找到。 接著，也可以在CRXDE Lite本機開啟它。
+程式碼存放庫中包含一個簡單元件，其來源可以在AEM中找到。 接著，您也可以在CRXDE Lite本機中開啟它。
 
 >[!NOTE]
 >

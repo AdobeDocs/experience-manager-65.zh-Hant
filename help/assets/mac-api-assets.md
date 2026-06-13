@@ -256,38 +256,38 @@ if (jcrcontentNode.hasProperty("jcr:title"))
 * 412 - PRECONDITION FAILED — 如果找不到或無法存取根集合。
 * 500 — 內部伺服器錯誤 — 如果發生其他錯誤。
 
-## Copy a folder or an asset {#copy-a-folder-or-asset}
+## 複製資料夾或資產 {#copy-a-folder-or-asset}
 
-Copies a folder or asset available at the provided path to a new destination.
+將所提供路徑下可用的資料夾或資產複製到新目的地。
 
-**Request Headers**: The parameters are:
+**要求標頭**：引數為：
 
-* `X-Destination` - a new destination URI within the API solution scope to copy the resource to.
-* `X-Depth` - either `infinity` or `0`. Using `0` only copies the resource and its properties and not its children.
-* `X-Overwrite` - Use `F` to prevent overwriting an asset at the existing destination.
+* `X-Destination` - API解決方案範圍內的新目的地URI，可將資源複製到其中。
+* `X-Depth` - `infinity`或`0`。 使用`0`只會複製資源及其屬性，不會複製其子系。
+* `X-Overwrite` — 使用`F`防止覆寫現有目的地的資產。
 
 **要求**： `COPY /api/assets/myFolder -H"X-Destination: /api/assets/myFolder-copy"`
 
 **回應代碼**：回應代碼為：
 
-* 201 - CREATED - if folder/asset has been copied to a non-existing destination.
-* 204 - NO CONTENT - if the folder/asset has been copied to an existing destination.
-* 412 - PRECONDITION FAILED - if a request header is missing.
+* 201 - CREATED — 若資料夾/資產已複製到不存在的目的地。
+* 204 — 無內容 — 若資料夾/資產已複製到現有目的地。
+* 412 — 先決條件失敗 — 如果缺少請求標頭。
 * 500 — 內部伺服器錯誤 — 如果發生其他錯誤。
 
-## Move a folder or an asset {#move-a-folder-or-asset}
+## 行動資料夾或資產 {#move-a-folder-or-asset}
 
-Moves a folder or asset at the given path to a new destination.
+將指定路徑的資料夾或資產移至新目的地。
 
-**Request Headers**: The parameters are:
+**要求標頭**：引數為：
 
-* `X-Destination` - a new destination URI within the API solution scope to copy the resource to.
-* `X-Depth` - either `infinity` or `0`. Using `0` only copies the resource and its properties and not its children.
-* `X-Overwrite` - Use either `T` to force delete an existing resources or `F` to prevent overwriting an existing resource.
+* `X-Destination` - API解決方案範圍內的新目的地URI，可將資源複製到其中。
+* `X-Depth` - `infinity`或`0`。 使用`0`只會複製資源及其屬性，不會複製其子系。
+* `X-Overwrite` — 使用`T`強制刪除現有資源，或使用`F`防止覆寫現有資源。
 
 **要求**： `MOVE /api/assets/myFolder -H"X-Destination: /api/assets/myFolder-moved"`
 
-Do not use `/content/dam` in the URL. A sample command to move assets and overwriting existing ones is:
+請勿在URL中使用`/content/dam`。 移動資產和覆寫現有資產的範例命令為：
 
 ```shell
 curl -u admin:admin -X MOVE https://[aem_server]:[port]/api/assets/source/file.png -H "X-Destination: https://[aem_server]:[port]/api/assets/destination/file.png" -H "X-Overwrite: T"
@@ -295,7 +295,7 @@ curl -u admin:admin -X MOVE https://[aem_server]:[port]/api/assets/source/file.p
 
 **回應代碼**：回應代碼為：
 
-* 201 - CREATED - if folder/asset has been copied to a non-existing destination.
+* 201 - CREATED — 若資料夾/資產已複製到不存在的目的地。
 * 204 — 無內容 — 若資料夾/資產已複製到現有目的地。
 * 412 — 先決條件失敗 — 如果缺少請求標頭。
 * 500 — 內部伺服器錯誤 — 如果發生其他錯誤。

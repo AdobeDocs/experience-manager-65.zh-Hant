@@ -97,7 +97,7 @@ AEM Forms支援下列Web服務標準：
    <td><p><code>http://localhost:8080/soap/services/EncryptionService?wsdl</code></p></td>
   </tr>
   <tr>
-   <td><p>表單</p></td>
+   <td><p>Forms</p></td>
    <td><p><code>http://localhost:8080/soap/services/FormsService?wsdl</code></p></td>
   </tr>
   <tr>

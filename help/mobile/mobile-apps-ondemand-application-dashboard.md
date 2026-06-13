@@ -11,7 +11,7 @@ feature: Mobile
 role: User
 source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '582'
+source-wordcount: '590'
 ht-degree: 4%
 
 ---
@@ -70,7 +70,7 @@ ht-degree: 4%
 * **篇文章**
 * **集合**
 
-按一下右下角的省略符號(...)，可展開每個圖磚以提供更詳細的清單檢視。 這些清單檢視提供存取常見Mobile On Demand動作（如刪除、上傳和編輯屬性）的替代方式。
+按一下省略符號(...)，可展開每個圖磚以提供更詳細的清單檢視 在右下角。 這些清單檢視提供存取常見Mobile On Demand動作（如刪除、上傳和編輯屬性）的替代方式。
 
 ### 「管理橫幅」圖磚 {#the-manage-banners-tile}
 
@@ -81,7 +81,7 @@ ht-degree: 4%
 * **已修改**：上次在AEM中修改
 * **已上傳**：上次從AEM上傳
 * **已發佈**：上次發佈的要求表單AEM
-* **SOURCE**：來源(AEM本機或來自Mobile On Demand的遠端)
+* **SOURCE**：來源（AEM本機或來自Mobile On Demand的遠端）
 
 下圖顯示AEM Mobile應用程式儀表板中的&#x200B;**管理橫幅**&#x200B;圖磚：
 
@@ -100,7 +100,7 @@ ht-degree: 4%
 * **已修改**：上次在AEM中修改
 * **已上傳**：上次從AEM上傳
 * **已發佈**：上次發佈的要求表單AEM
-* **SOURCE**：來源(AEM本機或來自Mobile On-Demand的遠端)
+* **SOURCE**：來源（AEM本機或來自Mobile On-Demand的遠端）
 
 下圖顯示AEM Mobile應用程式儀表板中的&#x200B;**管理文章**&#x200B;動態磚：
 
@@ -119,7 +119,7 @@ ht-degree: 4%
 * **已修改**：上次在AEM中修改
 * **已上傳**：上次從AEM上傳
 * **已發佈**：上次發佈的要求表單AEM
-* **SOURCE**：來源(AEM本機或來自Mobile On-Demand的遠端)
+* **SOURCE**：來源（AEM本機或來自Mobile On-Demand的遠端）
 
 下圖顯示AEM Mobile應用程式儀表板中的&#x200B;**管理集合**&#x200B;圖磚：
 
@@ -141,5 +141,5 @@ ht-degree: 4%
 
 若要瞭解管理員和開發人員的角色和責任，請參閱以下資源：
 
-* [為AEM Mobile On-demand Services開發AEM內容](/help/mobile/aem-mobile-on-demand.md)
+* [針對AEM Mobile On-demand Services開發AEM內容](/help/mobile/aem-mobile-on-demand.md)
 * [管理內容以使用AEM Mobile On-demand Services](/help/mobile/aem-mobile.md)

@@ -1,6 +1,6 @@
 ---
-title: 設定您的Adobe Mobile ServicesCloud Service
-description: 請依照本頁面的說明設定您的Adobe Mobile ServicesCloud Service。
+title: 設定您的Adobe Mobile Services Cloud Service
+description: 請依照本頁面的說明設定您的Adobe Mobile Services Cloud Service。
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
@@ -12,18 +12,18 @@ feature: Mobile
 role: Admin
 source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '428'
+source-wordcount: '440'
 ht-degree: 3%
 
 ---
 
-# 設定您的Adobe Mobile ServicesCloud Service {#configure-your-adobe-mobile-services-cloud-service}
+# 設定您的Adobe Mobile Services Cloud Service {#configure-your-adobe-mobile-services-cloud-service}
 
 {{ue-over-mobile}}
 
 命令中心的&#x200B;**行動量度磚**&#x200B;為您的行動應用程式提供即時分析。
 
-[Adobe Mobile Analytics](https://www.adobe.com/ca/solutions/digital-analytics/mobile-web-apps-analytics.html) SDK可透過PhoneGap外掛程式使用。 系統會在裝置上收集量度並加以快取，直到裝置連線為止，此時資料會推送至AdobeMobile Services雲端，以供報表和分析。
+[Adobe Mobile Analytics](https://www.adobe.com/ca/solutions/digital-analytics/mobile-web-apps-analytics.html) SDK可透過PhoneGap外掛程式使用。 系統會收集量度並在裝置上快取，直到裝置連線為止，屆時會將資料推送至Adobe Mobile Services雲端，以進行報表和分析。
 
 Adobe Mobile Analytics SDK提供下列功能：
 
@@ -40,17 +40,17 @@ Adobe Mobile Analytics SDK提供下列功能：
 
 ![chlimage_1-22](assets/chlimage_1-22.png)
 
-AEM Command Center度量圖磚
+AEM Command Center量度圖磚
 
 ## 設定Cloud Service {#configuring-the-cloud-service}
 
-若要利用Adobe Mobile Services Analytics的優勢，您需要使用Adobe Analytics帳戶資訊設定AEM Mobile Analytics Cloud Service 。
+若要利用Adobe Mobile Services Analytics，您需要使用Adobe Analytics帳戶資訊設定AEM Mobile Analytics Cloud Service 。
 
-1. 按一下右上角的圖示，從應用程式儀表板的&#x200B;**管理Cloud Service**&#x200B;圖磚新增或編輯Cloud Service。
+1. 按一下右上角的圖示，從應用程式儀表板的&#x200B;**管理雲端服務**&#x200B;圖磚新增或編輯雲端服務。
 
    ![chlimage_1-23](assets/chlimage_1-23.png)
 
-1. **新增或編輯Cloud Service**&#x200B;畫面隨即顯示。 選取&#x200B;**AdobeMobile Services**&#x200B;並按一下&#x200B;**下一步**。
+1. 會顯示&#x200B;**新增或編輯雲端服務**&#x200B;畫面。 選取&#x200B;**Adobe Mobile Services**&#x200B;並按一下&#x200B;**下一步**。
 
    ![chlimage_1-24](assets/chlimage_1-24.png)
 

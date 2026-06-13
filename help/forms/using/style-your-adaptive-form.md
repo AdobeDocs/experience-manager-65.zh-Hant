@@ -8,7 +8,7 @@ solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
 workflow-type: tm+mt
-source-wordcount: '2189'
+source-wordcount: '2174'
 ht-degree: 10%
 
 ---
@@ -479,7 +479,7 @@ ht-degree: 10%
 8. 在CRXDE中建立資料夾結構，例如`/apps/[fontslibrary]/[customlibrary(clientlibrary)]`。
 9. 移至新建立的`clientlibs`資料夾並新增`allowProxy`和`categories`屬性。
 10. 瀏覽至`/apps/[fontslibrary]/[customlibrary(clientlibrary)]`並建立css資料夾。
-11. 移至已建立的CSS資料夾並建立檔案。 例如，將檔案建立為`fonts.css`並貼上內嵌程式碼以及URL。
+11. 移至已建立的CSS資料夾並建立檔案。例如，將檔案建立為`fonts.css`並貼上內嵌程式碼以及URL。
     ![資料夾結構](/help/forms/using/assets/fonts-add-in-crxde.png)
 12. 儲存變更。
 

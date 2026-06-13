@@ -10,7 +10,7 @@ solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
-source-wordcount: '2474'
+source-wordcount: '2501'
 ht-degree: 1%
 
 ---
@@ -221,7 +221,7 @@ ht-degree: 1%
 
 ![textbackgroundcolorapplied-1](assets/textbackgroundcolorapplied-1.png)
 
-您可以直接選取[基本色彩]調色盤中的基本色彩`**[A]**`，或在使用滑桿`**[B]**`選擇適當的色彩陰影后選取[選取]**&#x200B;**。
+您可以直接選取[基本色彩]調色盤中的基本色彩`**[A]**`，或在使用滑桿`**[B]**`選擇適當的色彩陰影后選取[選取]&#x200B;**&#x200B;**。
 
 或者，您也可以移至[進階]索引標籤，選取適當的[色相]、[明度]和[飽和度] `**[C]**`來建立精確色彩，然後選取[選取] `**[D]**`來套用色彩以反白顯示文字。
 
@@ -229,13 +229,13 @@ ht-degree: 1%
 
 ### 貼上格式化文字 {#paste}
 
-若要重複使用存在於其他應用程式(例如來自Microsoft®Word或HTML頁面)中的多個文欄位落，請複製該文字並將其貼到文字編輯器中。 複製的文字的格式會保留在文字編輯器中。
+若要重複使用存在於其他應用程式（例如來自®Word或HTML頁面）中的一段或多段文字，請複製該文字並貼到文字編輯器中。 複製的文字的格式會保留在文字編輯器中。
 
-您可以複製並貼上可編輯文字檔案片段中的一或多個文欄位落。 例如，您可能有Microsoft® Word檔案，其中包含可接受的居住證明專案符號清單，如下所示：
+您可以複製並貼上可編輯文字檔案片段中的一或多個文欄位落。 例如，您可能有® Word檔案，其中包含可接受的居住證明專案符號清單，如下所示：
 
 ![pastetextmsword-2](assets/pastetextmsword-2.png)
 
-您可以直接將Microsoft® Word檔案中的文字複製並貼上至可編輯的文字檔案片段。 專案符號清單、字型和文字顏色等格式會保留在文字檔案片段中。
+您可以直接將® Word檔案中的文字複製並貼上至可編輯的文字檔案片段。 專案符號清單、字型和文字顏色等格式會保留在文字檔案片段中。
 
 ![pastetexteditablemodule-1](assets/pastetexteditablemodule-1.png)
 

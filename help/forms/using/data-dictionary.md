@@ -10,8 +10,8 @@ solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
-source-wordcount: '3842'
-ht-degree: 0%
+source-wordcount: '3826'
+ht-degree: 1%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 資料字典由三種型別的元素組成：簡單、複合和集合元素。 簡單DDE是基本元素，例如字串、數字、日期以及布林值，這些元素會包含城市名稱等資訊。 複合DDE包含其他DDE，其型別可以是基本型別、複合型別或集合型別。 例如，由街道地址、城市、省、國家/地區和郵遞區號組成的地址。 集合是類似的簡單或複合DDE清單。 例如，客戶具有多個地點或不同的帳單和運送地址。
 
-「通訊管理」使用根據資料字典結構儲存的後端、客戶或收件者特定資料，來建立針對不同客戶的通訊。 例如，可以使用易記名稱建立檔案，例如「親愛的{名字}」、「先生」。 「{姓氏}」。
+「通訊管理」使用根據資料字典結構儲存的後端、客戶或收件者特定資料，來建立針對不同客戶的通訊。 例如，可以使用易記名稱建立檔案，例如「親愛的{First Name}」、「先生{Last Name}」。
 
 一般來說，業務使用者不需要瞭解中繼資料表示法，例如XSD （XML架構）和Java類別。 但是，它們通常需要存取這些資料結構和屬性才能建置解決方案。
 
@@ -273,12 +273,12 @@ ht-degree: 0%
   <tr>
    <td>名稱</td>
    <td>字串</td>
-   <td>必填。DDE的<br />名稱。 此名稱必須是唯一的。</td>
+   <td>必要。<br /> DDE的名稱。 此名稱必須是唯一的。</td>
   </tr>
   <tr>
    <td>參考<br />名稱</td>
    <td>字串</td>
-   <td>必填。 DDE的唯一參考名稱，允許對DDE的參考與資料字典的階層或結構變更無關。 文字模組已使用此名稱對應</td>
+   <td>必要。 DDE的唯一參考名稱，允許對DDE的參考與資料字典的階層或結構變更無關。 文字模組已使用此名稱對應</td>
   </tr>
   <tr>
    <td>displayname</td>
@@ -293,7 +293,7 @@ ht-degree: 0%
   <tr>
    <td>elementType</td>
    <td>字串</td>
-   <td>必填。 DDE的型別：字串、數字、日期、布林值、複合、集合。</td>
+   <td>必要。 DDE的型別：字串、數字、日期、布林值、複合、集合。</td>
   </tr>
   <tr>
    <td>元素子型別</td>
@@ -326,7 +326,7 @@ ht-degree: 0%
    <td>新增到DDE的自訂屬性地圖（使用者介面特定或任何其他資訊）。</td>
   </tr>
   <tr>
-   <td>必填</td>
+   <td>必要</td>
    <td>布林值</td>
    <td>此旗標指出與資料字典對應的例項資料來源必須包含此特定DDE的值。</td>
   </tr>
@@ -362,7 +362,7 @@ ht-degree: 0%
   </tr>
   <tr>
    <td><p>xs：元素，其中maxOccurs &gt; 1<br /> </p> </td>
-   <td>DDE型別 — COLLECTION-<br /> DDE會在擷取上層COLLECTION節點資訊的COLLECTION DDE旁邊建立DDE節點。 對於簡單/複合資料型別的集合，也會建立相同的。 只要您擁有型別組合的COLLECTION，資料字典樹狀結構就會擷取為擷取型別資訊而建立之DDE子系中的組成欄位。<br /> - DDE （集合）<br /> - DDE（型別資訊的複合）<br /> - DDE（字串）欄位1<br /> - DDE（字串）欄位2<br /> <br /> </p> </td>
+   <td>DDE型別 — COLLECTION-<br /> DDE會在擷取上層COLLECTION節點資訊的COLLECTION DDE旁邊建立DDE節點。 對於簡單/複合資料型別的集合，也會建立相同的。 只要您擁有型別複合的COLLECTION，資料字典樹狀結構就會擷取為擷取型別資訊而建立之DDE子系中的組成欄位。<br /> - DDE （集合）<br /> - DDE（型別資訊的複合）<br /> - DDE（字串）欄位1<br /> - DDE（字串）欄位2<br /> <br /> </p> </td>
    <td>java.util.List<br /> </td>
   </tr>
   <tr>
@@ -648,7 +648,7 @@ ht-degree: 0%
 | **資料字典元素** | **預設XML繫結** |
 |---|---|
 | 根 | empty(null) |
-| Token | /Root/Tokens |
+| 權杖 | /Root/Tokens |
 | 構成 | empty(null) |
 | 權杖ID | 權杖ID |
 | 權杖文字 | empty(null) |

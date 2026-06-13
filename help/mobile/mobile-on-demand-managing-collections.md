@@ -11,7 +11,7 @@ feature: Mobile
 role: Admin
 source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '769'
+source-wordcount: '803'
 ht-degree: 1%
 
 ---
@@ -30,9 +30,9 @@ ht-degree: 1%
 >
 >請參閱線上說明中的下列資源，以瞭解AEM Mobile應用程式中的下列主題：
 >
->* [設計考量](https://helpx.adobe.com/tw/digital-publishing-solution/help/design-app.html)
+>* [設計考量](https://helpx.adobe.com/digital-publishing-solution/help/design-app.html)
 >
->* [管理集合](https://helpx.adobe.com/tw/digital-publishing-solution/help/creating-collections.html)
+>* [管理集合](https://helpx.adobe.com/digital-publishing-solution/help/creating-collections.html)
 >
 
 ## 建立集合 {#creating-a-collection}
@@ -106,7 +106,7 @@ ht-degree: 1%
 
 ## 刪除集合 {#deleting-a-collection}
 
-此作業會從Mobile On-Demand刪除選取的集合，並選擇性地從本機AEM執行個體刪除。
+此操作會從Mobile On-Demand以及本機的AEM執行個體中刪除選取的集合（可選）。
 
 刪除集合的一般工作流程：
 

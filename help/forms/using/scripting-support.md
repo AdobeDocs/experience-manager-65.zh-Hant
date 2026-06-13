@@ -1,6 +1,6 @@
 ---
-title: HTML5表單的指令碼支援
-description: JavaScript、FormCalc屬性，以及HTML5 Forms支援的其他方法。
+title: HTML5 表單的指令碼支援
+description: HTML5 Forms支援的JavaScript、FormCalc屬性及其他方法。
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -11,14 +11,14 @@ solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '3916'
+source-wordcount: '3948'
 ht-degree: 6%
 
 ---
 
-# HTML5表單的指令碼支援 {#scripting-support-for-html-forms}
+# HTML5 表單的指令碼支援 {#scripting-support-for-html-forms}
 
-JavaScript、FormCalc屬性以及HTML5表單支援的方法如下所列：
+HTML5表單支援的JavaScript、FormCalc屬性和方法，如下所示：
 
 ## $event {#event}
 
@@ -77,7 +77,7 @@ JavaScript、FormCalc屬性以及HTML5表單支援的方法如下所列：
   </tr>
   <tr>
    <td>修飾元</td>
-   <td>決定當特定事件執行時，是否按住修飾元鍵(例如Microsoft® Windows®上的Ctrl)。</td>
+   <td>決定當特定事件執行時，是否按住修飾元鍵（例如® Windows®上的Ctrl）。</td>
    <td>無</td>
   </tr>
  </tbody>
@@ -115,7 +115,7 @@ JavaScript、FormCalc屬性以及HTML5表單支援的方法如下所列：
   <tr>
    <td><code>title</code></td>
    <td>指定檔案的標題。 它僅適用於使用者端應用程式。</td>
-   <td>它會傳回表單中HTML檔案的標題，而不是像存在PDF forms一樣傳回表單中繼資料標題。</td>
+   <td>它會傳回表單中HTML檔案的標題，而非如同PDF forms一樣傳回表單中繼資料標題。</td>
   </tr>
   <tr>
    <td><code>version</code></td>
@@ -182,12 +182,12 @@ JavaScript、FormCalc屬性以及HTML5表單支援的方法如下所列：
   <tr>
    <td><code>access</code></td>
    <td>控制內容的使用者存取權。</td>
-   <td>不適用於排除群組。 此外，HTML5表單對非互動和受保護物件給予相同的處理。<br /> </td>
+   <td>不適用於排除群組。 此外，HTML5 Forms對非互動式物件與受保護物件提供相同處理方式。<br /> </td>
   </tr>
   <tr>
    <td><code>name</code></td>
    <td>用於在指令碼運算式中識別此元素的識別碼。</td>
-   <td>HTML5表單不允許設定物件的名稱屬性。 這是HTML5表單的唯讀屬性。</td>
+   <td>HTML5 forms不允許設定物件的名稱屬性。 這是HTML5表單的唯讀屬性。</td>
   </tr>
   <tr>
    <td><code>value</code></td>
@@ -506,13 +506,13 @@ JavaScript、FormCalc屬性以及HTML5表單支援的方法如下所列：
    <td>
     <ul>
      <li>不支援xfa.nodes、desc</li>
-     <li>針對PDF和HTML報告的節點數不同。 </li>
+     <li>針對PDF和HTML報告的節點數量不同。 </li>
     </ul> </td>
   </tr>
   <tr>
    <td>名稱</td>
    <td>指定此節點的名稱。</td>
-   <td>HTML中不允許使用指令碼設定名稱。</td>
+   <td>HTML不允許使用指令碼設定名稱。</td>
   </tr>
   <tr>
    <td>父母</td>
@@ -548,7 +548,7 @@ JavaScript、FormCalc屬性以及HTML5表單支援的方法如下所列：
 |---|---|---|
 | instanceManager | instanceManager物件可管理表單模型物件的建立、移除和移動。 | 無 |
 
-## content {#content}
+## 內容 {#content}
 
 | **屬性** | **說明** | **例外狀況** |
 |---|---|---|
@@ -575,7 +575,7 @@ JavaScript、FormCalc屬性以及HTML5表單支援的方法如下所列：
    <td>
     <ul>
      <li>無法擷取預設值。 </li>
-     <li>這些變更會反映在模型中，且可用於編寫指令碼，但不會同步至HTML元素。 因此，變更不會反映在UI中。</li>
+     <li>變更會反映在模型中，且可用於指令碼，但未同步至HTML元素。 因此，變更不會反映在UI中。</li>
     </ul> </td>
   </tr>
  </tbody>
@@ -596,7 +596,7 @@ JavaScript、FormCalc屬性以及HTML5表單支援的方法如下所列：
    <td>
     <ul>
      <li>無法擷取預設值。 </li>
-     <li>這些變更會反映在模型中，且可用於編寫指令碼，但不會同步至HTML元素。 因此，變更不會反映在UI中。</li>
+     <li>變更會反映在模型中，且可用於指令碼，但未同步至HTML元素。 因此，變更不會反映在UI中。</li>
     </ul> </td>
   </tr>
  </tbody>
@@ -617,7 +617,7 @@ JavaScript、FormCalc屬性以及HTML5表單支援的方法如下所列：
    <td>
     <ul>
      <li>無法擷取預設值。 </li>
-     <li>這些變更會反映在模型中，且可用於編寫指令碼，但不會同步至HTML元素。 因此，變更不會反映在UI中。</li>
+     <li>變更會反映在模型中，且可用於指令碼，但未同步至HTML元素。 因此，變更不會反映在UI中。</li>
     </ul> </td>
   </tr>
  </tbody>
@@ -640,7 +640,7 @@ JavaScript、FormCalc屬性以及HTML5表單支援的方法如下所列：
  </tbody>
 </table>
 
-## 圖樣 {#pattern}
+## pattern {#pattern}
 
 <table>
  <tbody>
@@ -655,7 +655,7 @@ JavaScript、FormCalc屬性以及HTML5表單支援的方法如下所列：
    <td>
     <ul>
      <li>無法擷取預設值。 </li>
-     <li>這些變更會反映在模型中，且可用於編寫指令碼，但不會同步至HTML元素。 因此，變更不會反映在UI中。</li>
+     <li>變更會反映在模型中，且可用於指令碼，但未同步至HTML元素。 因此，變更不會反映在UI中。</li>
     </ul> </td>
   </tr>
  </tbody>
@@ -676,7 +676,7 @@ JavaScript、FormCalc屬性以及HTML5表單支援的方法如下所列：
    <td>
     <ul>
      <li>無法擷取預設值。 </li>
-     <li>這些變更會反映在模型中，且可用於編寫指令碼，但不會同步至HTML元素。 因此，變更不會反映在UI中。</li>
+     <li>變更會反映在模型中，且可用於指令碼，但未同步至HTML元素。 因此，變更不會反映在UI中。</li>
     </ul> </td>
   </tr>
  </tbody>
@@ -697,7 +697,7 @@ JavaScript、FormCalc屬性以及HTML5表單支援的方法如下所列：
    <td>
     <ul>
      <li>無法擷取預設值。 </li>
-     <li>這些變更會反映在模型中，且可用於編寫指令碼，但不會同步至HTML元素。 因此，變更不會反映在UI中。</li>
+     <li>變更會反映在模型中，且可用於指令碼，但未同步至HTML元素。 因此，變更不會反映在UI中。</li>
     </ul> </td>
   </tr>
  </tbody>
@@ -755,7 +755,7 @@ JavaScript、FormCalc屬性以及HTML5表單支援的方法如下所列：
    <td>
     <ul>
      <li>無法擷取預設值。 </li>
-     <li>這些變更會反映在模型中，且可用於編寫指令碼，但不會同步至HTML元素。 因此，變更不會反映在UI中。</li>
+     <li>變更會反映在模型中，且可用於指令碼，但未同步至HTML元素。 因此，變更不會反映在UI中。</li>
     </ul> </td>
   </tr>
  </tbody>
@@ -773,7 +773,7 @@ JavaScript、FormCalc屬性以及HTML5表單支援的方法如下所列：
   <tr>
    <td>邊框</td>
    <td>border物件描述了checkButton物件周圍的邊框。 </td>
-   <td>這些變更會反映在模型中，且可用於編寫指令碼，但不會同步至HTML元素。 因此，變更不會反映在UI中。<br /> </td>
+   <td>變更會反映在模型中，且可用於指令碼，但未同步至HTML元素。 因此，變更不會反映在UI中。<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -1285,13 +1285,13 @@ FormCalc是XFA專屬的語言，用於建立以電子錶單為中心的邏輯和
   </tr>
   <tr>
    <td>app.setTimeOut()</td>
-   <td>指定JavaScript指令碼和時段。 指令碼僅會在經過句點後執行一次。此方法的傳回值必須儲存在JavaScript變數中。 否則，逾時物件會接受記憶體回收，這會導致時鐘停止。 若要取消逾時事件，請將傳回的逾時物件傳遞給clearTimeOut。</td>
+   <td>指定JavaScript指令碼和時段。 指令碼只會在經過期間後執行一次。此方法的傳回值必須儲存在JavaScript變數中。 否則，逾時物件會接受記憶體回收，這會導致時鐘停止。 若要取消逾時事件，請將傳回的逾時物件傳遞給clearTimeOut。</td>
    <td> </td>
   </tr>
   <tr>
    <td>app.clearInterval()</td>
    <td>取消先前由setInterval方法設定的登入間隔。</td>
-   <td>在HTML5表單中，API無法正常運作。</td>
+   <td>在HTML5 Forms中，API無法正常運作。</td>
   </tr>
   <tr>
    <td>app.clearTimeOut()</td>
@@ -1316,12 +1316,12 @@ FormCalc是XFA專屬的語言，用於建立以電子錶單為中心的邏輯和
   <tr>
    <td>app.constants</td>
    <td>用來儲存各種常數值的包裝函式物件。 目前，此屬性會傳回具有單一屬性align的物件。</td>
-   <td>HTML5表單傳回空的對齊物件。</td>
+   <td>HTML5 forms傳回空的對齊物件。</td>
   </tr>
   <tr>
    <td>app.focusRect</td>
    <td>開啟和關閉焦點矩形。 焦點矩形是按鈕、核取方塊、選項按鈕和簽章周圍模糊的虛線，表示表單欄位具有鍵盤焦點。 若值為true，會開啟焦點矩形。</td>
-   <td>HTML5表單一律為True。</td>
+   <td>HTML5表單一律為真。</td>
   </tr>
   <tr>
    <td>app.formsVersion</td>
@@ -1345,7 +1345,7 @@ FormCalc是XFA專屬的語言，用於建立以電子錶單為中心的邏輯和
 * 計算
 * 按一下
 * 輸入
-* 結束
+* 退出
 * 變更
 * ValidationState
 

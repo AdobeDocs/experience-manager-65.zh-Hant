@@ -1,5 +1,5 @@
 ---
-title: 最佳化HTML5表單
+title: 最佳化 HTML5 表單
 description: 您可以最佳化HTML5表單的輸出大小。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -11,14 +11,14 @@ solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '285'
-ht-degree: 0%
+source-wordcount: '284'
+ht-degree: 2%
 
 ---
 
-# 最佳化HTML5表單 {#optimizing-html-forms}
+# 最佳化 HTML5 表單 {#optimizing-html-forms}
 
-HTML5表單會以HTML5格式轉譯表單。 根據表單的表單大小和影像等因素，產生的輸出可能會很大。 為了最佳化資料傳輸，建議使用提供請求的Web伺服器來壓縮HTML回應。 此方法可減少回應大小、網路流量，以及在伺服器和使用者端電腦之間串流資料所需的時間。
+HTML5表單會以HTML5格式轉譯表單。 根據表單的表單大小和影像等因素，產生的輸出可能會很大。 為了最佳化資料傳輸，建議使用伺服請求的網頁伺服器來壓縮HTML回應。 此方法可減少回應大小、網路流量，以及在伺服器和使用者端電腦之間串流資料所需的時間。
 
 本文說明使用JBoss為Apache Web Server 2.0 32位元啟用壓縮的必要步驟。
 
@@ -83,4 +83,4 @@ Apache可以使用HTTP或AJP通訊協定與JBoss通訊。
    </Location>
    ```
 
-1. 若要存取AEM伺服器，請使用https://[Apache_server]：80。
+1. 若要存取AEM伺服器，請使用https://[Apache_server]:80。

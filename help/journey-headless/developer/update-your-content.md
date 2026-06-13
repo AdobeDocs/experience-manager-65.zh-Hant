@@ -7,8 +7,8 @@ feature: Headless,Content Fragments,GraphQL,Persisted Queries,Developing
 role: Admin, Developer
 source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
 workflow-type: tm+mt
-source-wordcount: '1029'
-ht-degree: 87%
+source-wordcount: '1108'
+ht-degree: 84%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 87%
 
 ## 目前進度 {#story-so-far}
 
-在 AEM Headless 歷程的上一個文件「[如何透過 AEM Delivery API 存取您的內容](access-your-content.md)」中，您已了解如何透過 AEM GraphQL API 存取 AEM 中的 Headless 內容，現在您應該：
+在 AEM Headless 歷程的上一份文件「[如何透過 AEM Delivery API 存取您的內容](access-your-content.md)」中，您已了解如何透過 AEM GraphQL API 存取 AEM 中的 Headless 內容，現在您應該：
 
 * 對 GraphQL 有概略的了解。
 * 了解 AEM GraphQL API 運作方式。
@@ -28,7 +28,7 @@ ht-degree: 87%
 
 ## 目標 {#objective}
 
-* **對象**：進階
+* **客群**：進階
 * **目標**：了解如何使用 REST API 存取和更新內容片段的內容：
    * 介紹 AEM Assets HTTP API。
    * 介紹和討論 API 支援內容片段。
@@ -40,7 +40,7 @@ ht-degree: 87%
 
 ## 為什麼您需要 Assets HTTP API 用於內容片段？ {#why-http-api}
 
-在 Headless 歷程的上一個文件中，您已了解如何使用 AEM GraphQL API 透過查詢擷取您的內容。
+在 Headless 歷程的上一份文件中，您已了解如何使用 AEM GraphQL API 透過查詢擷取您的內容。
 
 那麼為什麼需要另一個 API？
 
@@ -57,7 +57,7 @@ Assets HTTP API 包含：
 
 Assets HTTP API 的目前實作是以 **REST** 架構型式為基礎，可讓您透過 **CRUD** 操作 (建立、讀取、更新、刪除) 存取內容。
 
-透過這些作業，API可讓您藉由向Adobe Experience Manager前端應用程式提供內容服務，將JavaScript當作Headless CMS （內容管理系統）來作業。 或者任何其他可以執行 HTTP 要求並處理 JSON 回應的應用程式。例如，框架型或自訂的單頁應用程式 (SPA) 需要透過 API 提供的內容，通常採 JSON 格式。
+透過這些作業，API可讓您藉由向Adobe Experience Manager前端應用程式提供內容服務，將JavaScript當作Headless CMS （內容管理系統）來作業。 或者任何其他可以執行 HTTP 要求並處理 JSON 回應的應用程式。 例如，框架型或自訂的單頁應用程式 (SPA) 需要透過 API 提供的內容，通常採 JSON 格式。
 
 <!--
 >[!NOTE]
@@ -183,7 +183,7 @@ Assets can have multiple renditions. These are typically exposed as child entiti
 
 ## Assets HTTP API 和內容片段 {#assets-http-api-content-fragments}
 
-內容片段用於 Headless 傳遞，內容片段是一種特殊類型的資產。它們用於存取結構化資料，例如文字、數字、日期等。
+內容片段用於 Headless 傳遞，內容片段是一種特殊類型的資產。 它們用於存取結構化資料，例如文字、數字、日期等。
 
 <!--
 As there are several differences to *standard* assets (such as images or audio), some additional rules apply to handling them.
@@ -257,7 +257,7 @@ API 參考文件中定義了受支援要求的確切格式。
 
 >[!NOTE]
 >
->如需更多詳細資訊，請參閱 API 參考。特別是 [Adobe Experience Manager Assets API - 內容片段](https://www.adobe.io/experience-manager/reference-materials/6-5/assets-api-content-fragments/index.html)。
+>如需更多詳細資訊，請參閱 API 參考。 特別是 [Adobe Experience Manager Assets API - 內容片段](https://www.adobe.io/experience-manager/reference-materials/6-5/assets-api-content-fragments/index.html)。
 
 ### 讀取/傳遞 {#read-delivery}
 
@@ -269,7 +269,7 @@ API 參考文件中定義了受支援要求的確切格式。
 
 `http://<host>/api/assets/wknd/en/adventures/cycling-tuscany.json`
 
-回應是序列化的 JSON，其內容結構與內容片段中的一樣。參考是以參考 URL 的形式傳遞。
+回應是序列化的 JSON，其內容結構與內容片段中的一樣。 參考是以參考 URL 的形式傳遞。
 
 可能有兩種類型的讀取操作：
 
@@ -282,7 +282,7 @@ API 參考文件中定義了受支援要求的確切格式。
 
 `POST /{cfParentPath}/{cfName}`
 
-內文必須包含要建立的內容片段的 JSON 表示，包括應在內容片段元素上設定的任何初始內容。必須設定 `cq:model` 屬性，並且它必須指向有效的內容片段模型。未這麼做會導致錯誤。也必須加上標頭 `Content-Type`，其設定為 `application/json`。
+內文必須包含要建立的內容片段的 JSON 表示，包括應在內容片段元素上設定的任何初始內容。 必須設定 `cq:model` 屬性，並且它必須指向有效的內容片段模型。 未這麼做會導致錯誤。 也必須加上標頭 `Content-Type`，其設定為 `application/json`。
 
 ### 更新 {#update}
 
@@ -320,18 +320,18 @@ API 參考文件中定義了受支援要求的確切格式。
 
 <!--You should continue your AEM headless journey by next reviewing the document [How to Put It All Together - Your App and Your Content in AEM Headless](put-it-all-together.md) where you learn how to take your AEM Headless project and prepare it for going live.-->
 
-您應該透過下一次檢視檔案[如何與您的Headless應用程式上線](go-live.md)，繼續您的AEM Headless歷程，您將在其中實際將AEM Headless專案上線！
+您應該透過接下來檢視檔案[如何使用Headless應用程式上線](go-live.md)，繼續您的AEM Headless歷程，讓您的AEM Headless專案上線！
 
 ## 其他資源 {#additional-resources}
 
 * [Assets HTTP API](/help/assets/mac-api-assets.md)
 * [內容片段 REST API](/help/assets/assets-api-content-fragments.md)
    * [API 參考](/help/assets/assets-api-content-fragments.md#api-reference)
-* [Adobe Experience Manager Assets API - 內容片段](https://www.adobe.io/experience-manager/reference-materials/6-5/assets-api-content-fragments/index.html)
+* [Adobe Experience Manager Assets API — 內容片段](https://www.adobe.io/experience-manager/reference-materials/6-5/assets-api-content-fragments/index.html)
 * [使用內容片段](/help/assets/content-fragments/content-fragments.md)
 * [AEM 核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)
-* [CORS/AEM 說明](https://helpx.adobe.com/tw/experience-manager/kt/platform-repository/using/cors-security-article-understand.html)
-* [影片 - 使用 AEM 開發 CORS](https://helpx.adobe.com/tw/experience-manager/kt/platform-repository/using/cors-security-technical-video-develop.html)
+* [CORS/AEM說明](https://helpx.adobe.com/tw/experience-manager/kt/platform-repository/using/cors-security-article-understand.html)
+* [影片 — 使用AEM為CORS開發](https://helpx.adobe.com/tw/experience-manager/kt/platform-repository/using/cors-security-technical-video-develop.html)
 * [AEM as a Headless CMS 簡介](/help/sites-developing/headless/introduction.md)
 * [AEM 開發人員入口網站](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=zh-Hant)
-* [AEM 中的 Headless 教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=zh-Hant)
+* [AEM 中的無周邊教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=zh-Hant)

@@ -1,5 +1,5 @@
 ---
-title: 編輯者
+title: 編輯器
 description: 瞭解如何切換回傳統UI編輯器。
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,13 +12,13 @@ feature: Administering
 role: Admin
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
-source-wordcount: '108'
+source-wordcount: '110'
 ht-degree: 3%
 
 ---
 
 
-# 編輯者{#editor}
+# 編輯器{#editor}
 
 依預設，從編輯器切換到傳統UI的功能已停用。
 

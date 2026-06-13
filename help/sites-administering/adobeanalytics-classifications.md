@@ -11,18 +11,18 @@ feature: Integration
 role: Admin
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
-source-wordcount: '612'
+source-wordcount: '619'
 ht-degree: 4%
 
 ---
 
 # Adobe分類{#adobe-classifications}
 
-「Adobe分類」會以排程方式將分類資料匯出至[Adobe Analytics](/help/sites-administering/adobeanalytics.md)。 匯出程式是&#x200B;**com.adobe.cq.scheduled.exporter.Exporter**&#x200B;的實作。
+Adobe分類會以排程方式將分類資料匯出至[Adobe Analytics](/help/sites-administering/adobeanalytics.md)。 匯出程式是&#x200B;**com.adobe.cq.scheduled.exporter.Exporter**&#x200B;的實作。
 
 若要設定此專案：
 
-1. 使用&#x200B;**導覽**，選取&#x200B;**工具**、**Cloud Service**，然後選取&#x200B;**舊版Cloud Service**。
+1. 使用&#x200B;**導覽**，選取&#x200B;**工具**、**雲端服務**，然後選取&#x200B;**舊版雲端服務**。
 1. 捲動至&#x200B;**Adobe Analytics**&#x200B;並選取&#x200B;**顯示設定**。
 1. 按一下Adobe Analytics設定旁的&#x200B;**[+]**&#x200B;連結。
 
@@ -44,10 +44,10 @@ ht-degree: 4%
 
    | **欄位** | **說明** |
    |---|---|
-   | 已啟用 | 選取&#x200B;**是**&#x200B;以啟用「Adobe分類」設定。 |
+   | 已啟用 | 選取&#x200B;**是**&#x200B;以啟用Adobe分類設定。 |
    | 發生衝突時覆寫 | 選取&#x200B;**是**&#x200B;以覆寫任何資料衝突。 依預設，此設定為&#x200B;**否**。 |
    | 刪除已處理的項目 | 若設為&#x200B;**是**，則在匯出已處理的節點後將其刪除。 預設值為&#x200B;**False**。 |
-   | 匯出工作說明 | 輸入「Adobe分類」工作的說明。 |
+   | 匯出工作說明 | 輸入Adobe分類工作的說明。 |
    | 通知電子郵件 | 輸入Adobe分類通知的電子郵件地址。 |
    | 報表套裝 | 輸入要執行匯入工作的報表套裝。 |
    | 資料集 | 輸入要執行匯入作業的資料集關係ID。 |
@@ -59,13 +59,13 @@ ht-degree: 4%
 
 ## 修改頁面大小 {#modifying-page-size}
 
-以頁面處理記錄。 根據預設，「Adobe分類」會建立頁面大小為1000的頁面。
+以頁面處理記錄。 依預設，Adobe分類會建立頁面大小為1000的頁面。
 
-根據Adobe分類中的定義，頁面的大小上限可25000為，並可從Felix主控台進行修改。 在匯出期間，「Adobe分類」會鎖定來源節點，以防止同時進行修改。 節點會在匯出後、發生錯誤時或作業階段關閉時解除鎖定。
+根據Adobe分類中的定義，頁面大小上限可25000，並可從Felix主控台修改。 在匯出期間，Adobe分類會鎖定來源節點以防止同時進行修改。 節點會在匯出後、發生錯誤時或作業階段關閉時解除鎖定。
 
 若要變更頁面大小：
 
-1. 導覽至&#x200B;**https://&lt;host>：&lt;port>/system/console/configMgr**&#x200B;的OSGI主控台，並選取&#x200B;**AdobeAEM分類匯出工具**。
+1. 導覽至&#x200B;**https://&lt;host>：&lt;port>/system/console/configMgr**&#x200B;的OSGI主控台，然後選取&#x200B;**Adobe AEM Classifications Exporter**。
 
    ![aa-26](assets/aa-26.png)
 
@@ -75,9 +75,9 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->「Adobe分類」先前稱為「SAINT匯出工具」。
+>Adobe Classifications先前稱為SAINT Exporter。
 
-匯出工具可使用轉換器將匯出資料轉換為特定格式。 針對Adobe分類，已提供實作轉換器介面的子介面`SAINTTransformer<String[]>`。 此介面用來將資料型別限製為SAINTAPI所使用的`String[]`，並具有標籤介面來尋找可供選取的此類服務。
+匯出工具可使用轉換器將匯出資料轉換為特定格式。 針對Adobe分類，已提供實作轉換器介面的子介面`SAINTTransformer<String[]>`。 此介面用來將資料型別限製為SAINT API所使用的`String[]`，並具有標籤介面來尋找可供選取的此類服務。
 
 在預設實作SAINTDefaultTransformer中，匯出程式來源的子項資源會被視為記錄，其屬性名稱為索引鍵，而屬性值為值。 **索引鍵**&#x200B;資料行會自動新增為第一資料行 — 其值將是節點名稱。 已忽略名稱空間屬性（包含`:`）。
 
@@ -144,4 +144,4 @@ ht-degree: 4%
 
 ## 自動化Adobe分類匯出 {#automating-adobe-classifications-export}
 
-您可以建立自己的工作流程，讓任何新的匯入啟動工作流程，在&#x200B;**/var/export/**&#x200B;中建立適當且結構正確的資料，以便將其匯出至「Adobe分類」。
+您可以建立自己的工作流程，讓任何新的匯入啟動工作流程，在&#x200B;**/var/export/**&#x200B;中建立適當且結構正確的資料，以便將其匯出至Adobe分類。
