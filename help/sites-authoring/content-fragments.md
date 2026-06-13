@@ -180,7 +180,7 @@ Adobe Experience Manager(AEM)內容片段會建 [立並管理為不受頁面影�
 
 ### 使用關聯內容 {#using-associated-content}
 
-如果您有[與[內容片段](/help/assets/content-fragments/content-fragments.md)相關聯的內容](/help/assets/content-fragments/content-fragments-assoc-content.md)，則可在側面板（將片段放在內容頁面後）取得這些資產。 關聯內容實際上是中間內容的特 [殊內容來源](#adding-in-between-content)。
+如果您有[&#128279;](/help/assets/content-fragments/content-fragments-assoc-content.md)與[內容片段](/help/assets/content-fragments/content-fragments.md)相關聯的內容，則可在側面板（將片段放在內容頁面後）取得這些資產。 關聯內容實際上是中間內容的特 [殊內容來源](#adding-in-between-content)。
 
 >[!NOTE]
 >

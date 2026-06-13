@@ -548,7 +548,7 @@ GITHUB上的程式碼
 
 建立使用您所建立 `LiveActionFactory` 的 MSM 推出設定：
 
-1. 使用標準程式](/help/sites-administering/msm-sync.md#creating-a-rollout-configuration)建立並設定[轉出設定 — 並使用屬性：
+1. 使用標準程式[&#128279;](/help/sites-administering/msm-sync.md#creating-a-rollout-configuration)建立並設定轉出設定 — 並使用屬性：
 
    * **標題**：推出設定範例
    * **名稱**：examplerolloutconfig
