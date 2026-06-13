@@ -12,7 +12,7 @@ feature: Operations
 role: Admin
 source-git-commit: 3aa55b88f589749fb49d5ff46340b0912d490157
 workflow-type: tm+mt
-source-wordcount: '1897'
+source-wordcount: '1905'
 ht-degree: 0%
 
 ---
@@ -23,14 +23,14 @@ ht-degree: 0%
 
 在大多數情況下，WCM應用程式傾向於收集資訊，但刪除資訊的頻率卻幾乎沒有。 雖然已新增新影像，但即使取代舊版本，版本控制系統仍會保留舊影像，並支援在需要時還原成舊影像。 因此，我們認為新增至系統的大部分內容實際上都會永久儲存。 那麼存放庫中，我們可能想要清理的「垃圾」的典型來源為何？
 
-AEM使用存放庫作為數個內部和內部管理活動的存放區：
+AEM使用存放庫作為數個內部和內部管理活動的儲存空間：
 
 * 建置和下載的套件
 * 為發佈復寫建立的暫存檔案
 * 工作流程裝載
 * DAM呈現期間暫時建立的Assets
 
-當這些暫存物件中有任何物件夠大而需要在資料存放區中儲存時，以及當物件最終不使用時，資料存放區記錄本身會保留為「垃圾」。 在典型的WCM製作/發佈應用程式中，此型別記憶體的最大來源通常是發佈啟動程式。 將資料復寫到Publish時，如果資料是先以稱為「Durbo」的有效資料格式收集到集合中，並儲存在`/var/replication/data`下的存放庫中，就會出現這種情況。 資料組合通常大於資料存放區的關鍵大小臨界值，因此最終會儲存為資料存放區記錄。 復寫完成時，會刪除`/var/replication/data`中的節點，但資料存放區記錄仍為「廢棄專案」。
+當這些暫存物件中有任何物件夠大而需要在資料存放區中儲存時，以及當物件最終不使用時，資料存放區記錄本身會保留為「垃圾」。 在典型的WCM製作/發佈應用程式中，此型別記憶體的最大來源通常是發佈啟動程式。 當資料被復寫到Publish時，如果資料是先以稱為「Durbo」的有效資料格式收集到集合中，並儲存在`/var/replication/data`下的存放庫中，就會出現這種情況。 資料組合通常大於資料存放區的關鍵大小臨界值，因此最終會儲存為資料存放區記錄。 復寫完成時，會刪除`/var/replication/data`中的節點，但資料存放區記錄仍為「廢棄專案」。
 
 另一個可復原的記憶體來源是封裝。 封裝資料（就像其他內容一樣）會儲存在存放庫中，因此大於4KB的封裝會儲存在資料存放區中。 在開發專案的過程中，或在維護系統的過程中，可能會多次構建和重建套件，每個組建都會產生新的資料存放區記錄，孤立以前的組建記錄。
 
@@ -123,7 +123,7 @@ AEM使用存放庫作為數個內部和內部管理活動的存放區：
 
 >[!NOTE]
 >
->只有在您已設定外部檔案資料存放區時，資料存放區廢棄專案收集工作才會顯示。 如需如何設定檔案資料存放區的資訊，請參閱[在AEM 6](/help/sites-deploying/data-store-config.md#file-data-store)中設定節點存放區和資料存放區。
+>只有在您已設定外部檔案資料存放區時，資料存放區廢棄專案收集工作才會顯示。 如需有關如何設定檔案資料存放區的資訊，請參閱[在AEM 6](/help/sites-deploying/data-store-config.md#file-data-store)中設定節點存放區和資料存放區。
 
 ### 透過JMX主控台執行資料存放區記憶體回收 {#running-data-store-garbage-collection-via-the-jmx-console}
 
@@ -152,7 +152,7 @@ AEM使用存放庫作為數個內部和內部管理活動的存放區：
 
 >[!NOTE]
 >
->只有在您已設定外部檔案資料存放區時，資料存放區廢棄專案收集工作才會啟動。 如果尚未設定外部檔案資料存放區，則工作將在叫用後傳回訊息`Cannot perform operation: no service of type BlobGCMBean found`。 如需如何設定檔案資料存放區的資訊，請參閱[在AEM 6](/help/sites-deploying/data-store-config.md#file-data-store)中設定節點存放區和資料存放區。
+>只有在您已設定外部檔案資料存放區時，資料存放區廢棄專案收集工作才會啟動。 如果尚未設定外部檔案資料存放區，則工作將在叫用後傳回訊息`Cannot perform operation: no service of type BlobGCMBean found`。 如需有關如何設定檔案資料存放區的資訊，請參閱[在AEM 6](/help/sites-deploying/data-store-config.md#file-data-store)中設定節點存放區和資料存放區。
 
 ## 自動化資料存放區廢棄專案收集 {#automating-data-store-garbage-collection}
 

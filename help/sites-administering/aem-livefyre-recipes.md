@@ -11,8 +11,8 @@ feature: Integration
 role: Admin
 source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
-source-wordcount: '26'
-ht-degree: 65%
+source-wordcount: '37'
+ht-degree: 51%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 65%
 
 >[!IMPORTANT]
 >
->[AdobeLivefyre將於2021年11月30日正式終止服務](https://experienceleague.adobe.com/docs/discontinued/using/livefyre.html?lang=zh-Hant)。
+>[Adobe Livefyre將於2021年11月30日正式終止服務](https://experienceleague.adobe.com/docs/discontinued/using/livefyre.html?lang=zh-Hant)。
 
 <!--
 Step-by-step instructions on common use cases for Adobe Experience Manager Livefyre.

@@ -252,7 +252,7 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
    <td><strong>決定「線上修訂清除」持續時間的因素為何？</strong></td>
-   <td>因素包括：<br />
+   <td>因子為： <br />
     <ul>
      <li>存放庫大小</li>
      <li>在系統上載入（每分鐘的要求數，特別是寫入作業）</li>
@@ -465,7 +465,7 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
    <td><strong>根據健康狀態檢查與記錄專案，線上修訂清除連續三次未順利完成。 需要什麼才能讓線上修訂清除順利完成？</strong></td>
-   <td>您可以採取數個步驟來尋找及修正問題：<br />
+   <td>您可以執行數個步驟來尋找及修正問題：<br />
     <ul>
      <li>首先，檢查記錄專案<br /> </li>
      <li>根據記錄中的資訊，採取適當的動作：

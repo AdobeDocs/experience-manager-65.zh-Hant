@@ -11,7 +11,7 @@ feature: Authoring,Personalization
 role: User
 source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
 workflow-type: tm+mt
-source-wordcount: '620'
+source-wordcount: '625'
 ht-degree: 0%
 
 ---
@@ -38,14 +38,13 @@ ht-degree: 0%
 * **品牌**
 在Adobe Experience Manager (AEM)中，品牌是頂層單位，並構成&#x200B;**行銷活動**&#x200B;的集合。
 
-* **行銷活動**
+* **個行銷活動**
 行銷活動是個別&#x200B;**體驗**&#x200B;的集合。
 
 * **體驗**
 焦點內容會形成各種體驗，在&#x200B;**接觸點**&#x200B;呈現給訪客。 有數種體驗可供使用：
 
    * **預告**
-
      [Teaser頁面/段落](#teasers)用於引導特定訪客&#x200B;**區段**&#x200B;前往關注其興趣的內容。
 
      Teaser頁面可以：

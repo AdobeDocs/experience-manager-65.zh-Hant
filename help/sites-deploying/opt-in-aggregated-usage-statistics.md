@@ -12,7 +12,7 @@ feature: Deploying
 role: Admin
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '291'
+source-wordcount: '307'
 ht-degree: 1%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->您隨時可以使用[網頁主控台](/help/sites-deploying/opt-in-aggregated-usage-statistics.md#opt-in-by-using-the-web-console)選擇退出，或在AEM選擇加入畫面上不選取選擇加入選項。
+>您可以隨時使用[網頁主控台](/help/sites-deploying/opt-in-aggregated-usage-statistics.md#opt-in-by-using-the-web-console)或不在AEM選擇加入畫面中選取選擇加入選項來選擇退出。
 
 ## 使用觸控式UI選擇加入 {#opt-in-by-using-the-touch-ui}
 
@@ -74,4 +74,4 @@ ht-degree: 1%
 
    ![usage_statisticsselect](assets/usage_statisticsselect.png)
 
-1. 按一下「**儲存**」。
+1. 按一下&#x200B;**儲存**。

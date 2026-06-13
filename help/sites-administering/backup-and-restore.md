@@ -11,7 +11,7 @@ feature: Operations
 role: Admin
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
-source-wordcount: '2314'
+source-wordcount: '2225'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ ht-degree: 0%
 
 ## 離線備份 {#offline-backup}
 
-您一律可以進行離線備份。 這需要AEM的停機時間，但相較於線上備份，在所需時間方面可能相當有效。
+您一律可以進行離線備份。 這需要AEM的停機時間，但與線上備份相比，就所需時間而言，這相當有效率。
 
 在大多數情況下，您會使用檔案系統快照，建立儲存裝置的唯讀復本。 若要建立離線備份，請執行下列步驟：
 
@@ -60,7 +60,7 @@ ht-degree: 0%
 
 建立備份時，您有以下選項：
 
-* 使用AEM整合式備份工具備份到目錄。
+* 使用AEM的整合式備份工具備份至目錄。
 * 使用檔案系統快照備份至目錄
 
 在任何情況下，備份都會建立存放庫的影像（或快照）。 接著，系統備份代理程式應小心將影像實際傳輸至專用的備份系統（磁帶機）。
@@ -79,11 +79,11 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
->請勿同時執行AEM Online Backup與[資料存放區記憶體回收](/help/sites-administering/data-store-garbage-collection.md)或[修訂清除](/help/sites-deploying/revision-cleanup.md#how-to-run-offline-revision-cleanup)。 這會對系統效能產生負面影響。
+>請勿同時執行AEM線上備份和[資料存放區記憶體回收](/help/sites-administering/data-store-garbage-collection.md)或[修訂清除](/help/sites-deploying/revision-cleanup.md#how-to-run-offline-revision-cleanup)。 這會對系統效能產生負面影響。
 
 開始備份時，您可以指定&#x200B;**目標路徑**&#x200B;和/或&#x200B;**延遲**。
 
-**目標路徑**&#x200B;備份檔案通常儲存在含有quickstart jar檔案(.jar)之資料夾的父資料夾中。 例如，如果您的AEM jar檔案位於/InstallationKits/AEM下，則會在/InstallationKits下產生備份。 您也可以指定目標至您選擇的位置。
+**目標路徑**&#x200B;備份檔案通常儲存在含有quickstart jar檔案(.jar)之資料夾的父資料夾中。 例如，如果您的AEM jar檔案位於/InstallationKits/AEM底下，則會在/InstallationKits底下產生備份。 您也可以指定目標至您選擇的位置。
 
 如果&#x200B;**TargetPath**&#x200B;是目錄，則會在此目錄中建立存放庫的影像。 如果同一目錄被多次（或一律使用）用來儲存備份，
 
@@ -106,8 +106,8 @@ ht-degree: 0%
 
 **Delay**&#x200B;表示時間延遲（以毫秒為單位），因此存放庫效能不受影響。 依預設，存放庫備份會以全速執行。 您可以減慢建立線上備份的速度，以免減慢其他工作的速度。
 
-如果延遲時間非常長，請確認線上備份所需時間不超過24小時。 如果是，請捨棄此備份，因為它可能不包含所有二進位檔。
-1毫秒的延遲通常會導致10%的CPU使用率，而10毫秒的延遲通常會導致3%的CPU使用率。 延遲總秒數估計如下：存放庫大小（以MB為單位），乘以延遲（以毫秒為單位），再除以2 （如果使用zip選項），或再除以4 （備份到目錄時）。 這表示備份至200 MB存放庫的目錄，且延遲達1毫秒，會將備份時間增加約50秒。
+如果延遲時間非常長，請確認線上備份所需時間不超過24小時。如果是，請捨棄此備份，因為它可能不包含所有二進位檔。
+1毫秒的延遲通常會導致10%的CPU使用率，而10毫秒的延遲通常會導致3%的CPU使用率。延遲總秒數估計如下：存放庫大小（以MB為單位），乘以延遲（以毫秒為單位），再除以2 （如果使用zip選項），或再除以4 （備份到目錄時）。這表示備份至200 MB存放庫的目錄，且延遲達1毫秒，會將備份時間增加約50秒。
 
 >[!NOTE]
 >
@@ -118,7 +118,7 @@ ht-degree: 0%
 1. 以管理員身分登入AEM。
 
 1. 移至&#x200B;**工具 — 作業 — 備份。**
-1. 按一下「**建立**」。備份主控台隨即開啟。
+1. 按一下「**建立**」。 備份主控台隨即開啟。
 
    ![chlimage_1-1](assets/chlimage_1-1a.png)
 
@@ -167,7 +167,7 @@ ht-degree: 0%
 curl -u admin:admin -X POST http://localhost:4502/system/console/jmx/com.adobe.granite:type=Repository/op/startBackup/java.lang.String?target=backup.zip
 ```
 
-備份檔案/目錄是在伺服器上包含`crx-quickstart`資料夾之資料夾的父資料夾中建立的（與使用瀏覽器建立備份時相同）。 例如，如果您已在目錄`/InstallationKits/crx-quickstart/`中安裝AEM，則備份會在`/InstallationKits`目錄中建立。
+備份檔案/目錄是在伺服器上包含`crx-quickstart`資料夾之資料夾的父資料夾中建立的（與使用瀏覽器建立備份時相同）。 例如，如果您已在目錄`/InstallationKits/crx-quickstart/`中安裝AEM，則會在`/InstallationKits`目錄中建立備份。
 
 curl命令會立即傳回，因此您必須監視此目錄，以檢視zip檔案何時準備就緒。 建立備份時，可以看到暫存目錄（其名稱根據最終zip檔案的名稱而定），最後會壓縮這個目錄。 例如：
 
@@ -192,7 +192,7 @@ curl -u admin:admin -X POST http://localhost:4502/system/console/jmx/com.adobe.g
 
 >[!NOTE]
 >
->也可以使用AEM[&#128279;](/help/sites-administering/jmx-console.md)提供的MBean 觸發備份。
+>也可使用AEM[&#128279;](/help/sites-administering/jmx-console.md)提供的MBean 觸發備份。
 
 ### 檔案系統快照備份 {#filesystem-snapshot-backup}
 
@@ -202,14 +202,14 @@ curl -u admin:admin -X POST http://localhost:4502/system/console/jmx/com.adobe.g
 >
 >如果要使用這種備份方法，您的系統必須支援檔案系統快照。 例如，對於Linux，這表示您的檔案系統應該放在邏輯磁碟區上。
 
-1. 對部署了AEM的檔案系統進行快照。
+1. 對部署了AEM的檔案系統拍攝快照。
 
 1. 掛載檔案系統快照。
 1. 執行備份並解除安裝快照。
 
-### AEM Online Backup如何運作 {#how-aem-online-backup-works}
+### AEM線上備份如何運作 {#how-aem-online-backup-works}
 
-AEM Online Backup由一系列內部動作組成，以確保要備份的資料與要建立的備份檔案的完整性。 以下列出感興趣的訪客名單。
+AEM Online Backup包含一系列內部動作，以確保所備份資料和所建立備份檔案的完整性。 以下列出感興趣的訪客名單。
 
 線上備份使用下列演演算法：
 
@@ -244,7 +244,7 @@ AEM Online Backup由一系列內部動作組成，以確保要備份的資料與
 您可以還原備份，如下所示：
 
 * 如果您已執行檔案系統快照備份，您只需還原系統映像即可。
-* 如果您將備份建立為zip檔案，只需將內容解壓縮到新資料夾中，然後從該位置啟動AEM。
+* 如果您將備份建立為zip檔案，只需將內容解壓縮到新資料夾中，然後從該位置啟動AEM即可。
 
 ## 封裝備份 {#package-backup}
 
