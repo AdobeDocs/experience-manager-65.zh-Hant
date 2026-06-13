@@ -11,7 +11,7 @@ solution: Experience Manager, Experience Manager Sites
 role: Admin
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '416'
+source-wordcount: '422'
 ht-degree: 0%
 
 ---
@@ -51,11 +51,11 @@ ht-degree: 0%
    </Location>
    ```
 
-   這可讓中繼快取（例如瀏覽器快取）將CSS、JavaScript、PNG和GIF檔案儲存長達一個月，直到檔案過期為止。 這表示不需要從AEM或Web伺服器要求這些篩選器，但可保留在瀏覽器快取中。
+   這可讓中繼快取（例如瀏覽器快取）將CSS、JavaScript、PNG和GIF檔案儲存長達一個月，直到檔案過期為止。 也就是說，您不需要向AEM或網頁伺服器請求這些擴充功能，但可保留在瀏覽器快取中。
 
    不應在製作執行個體上快取網站的其他區段，因為這些區段隨時可能變更。
 
-1. **適用於Publish執行個體：**
+1. **針對發佈執行個體：**
 
    ```xml
    LoadModule expires_module modules/mod_expires.so

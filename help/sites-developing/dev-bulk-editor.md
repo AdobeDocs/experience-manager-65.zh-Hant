@@ -11,7 +11,7 @@ feature: Developing
 role: Developer
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
-source-wordcount: '1833'
+source-wordcount: '1830'
 ht-degree: 1%
 
 ---
@@ -163,15 +163,15 @@ ht-degree: 1%
 
 ### 開發以大量編輯器為基礎的元件：產品清單元件 {#developing-a-bulk-editor-based-component-the-product-list-component}
 
-本節提供如何使用大量編輯器的概觀，並說明以大量編輯器為基礎的現有Geometrixx元件：產品清單元件。
+本節提供如何使用大量編輯器的總覽，並依據大量編輯器提供現有Geometrixx元件的說明：產品清單元件。
 
-產品清單元件可讓使用者顯示和編輯資料表。 例如，您可以使用產品清單元件來代表目錄中的產品。 此資訊會顯示在標準HTML表格中，且任何編輯都會在包含BulkEditor Widget的&#x200B;**編輯**&#x200B;對話方塊中執行。 (此大量編輯器與在/etc/importers/bulkeditor.html或透過「工具」功能表存取的編輯器相同)。 產品清單元件已針對特定的有限大量編輯器功能進行設定。 可以設定批次編輯器的每個部分（或衍生自批次編輯器的元件）。
+產品清單元件可讓使用者顯示和編輯資料表。 例如，您可以使用產品清單元件來代表目錄中的產品。 此資訊會顯示在標準HTML表格中，且任何編輯都會在包含BulkEditor Widget的&#x200B;**編輯**&#x200B;對話方塊中執行。 （此大量編輯器與在/etc/importers/bulkeditor.html或透過「工具」功能表存取的編輯器相同）。 產品清單元件已針對特定的有限大量編輯器功能進行設定。 可以設定批次編輯器的每個部分（或衍生自批次編輯器的元件）。
 
 使用大量編輯器，您可以新增、修改、刪除、篩選和匯出列、儲存修改和匯入一組列。 每一列都會儲存為「產品清單」元件實體本身的節點。 每個儲存格都是每個節點的屬性。 這是設計選擇，很容易變更，例如，您可以將節點儲存在存放庫中的其他位置。 查詢servlet的角色是傳回要顯示的節點清單；搜尋路徑定義為產品清單執行個體。
 
 產品清單元件的原始程式碼可在存放庫/apps/geometrixx/components/productlist中取得，並且由幾個部分組成，例如所有Adobe Experience Manager (AEM)元件：
 
-* HTML呈現：呈現會在JSP檔案(/apps/geometrixx/components/productlist/productlist.jsp)中完成。 JSP會讀取目前「產品清單」元件的子節點，並將每個子節點顯示為HTML表格的一列。
+* HTML轉譯：轉譯會在JSP檔案(/apps/geometrixx/components/productlist/productlist.jsp)中完成。 JSP會讀取目前「產品清單」元件的子節點，並將每個子節點顯示為HTML表格中的一列。
 * 編輯對話方塊，您可在此定義大量編輯器設定。 設定對話方塊以符合元件的需求：可用的欄以及在格線或搜尋時可能執行的動作。 如需所有組態屬性的詳細資訊，請參閱[大量編輯器組態屬性](#bulk-editor-configuration-properties)。
 
 以下是對話方塊子節點的XML表示法：
@@ -400,7 +400,7 @@ ht-degree: 1%
    <td>搜尋面板Widget設定</td>
   </tr>
   <tr>
-   <td>格線</td>
+   <td>方格</td>
    <td>格線Widget設定</td>
   </tr>
   <tr>
@@ -433,7 +433,7 @@ ht-degree: 1%
   </tr>
   <tr>
    <td>colsMetadata</td>
-   <td>欄中繼資料設定。 可能的屬性是（套用至欄的所有儲存格）： <br />
+   <td>欄中繼資料設定。可能的屬性是（套用至欄的所有儲存格）： <br />
     <ul>
      <li>cellStyle： html樣式 </li>
      <li>cellCls： css類別 </li>
@@ -517,7 +517,7 @@ CSS和唯讀欄
 
 **強制位置**
 
-強制位置中繼資料forcedPosition可讓您指定欄在網格中的放置位置：0是第一個位置，&lt;number of columns>-1是最後一個位置。 任何其他值都會被忽略。
+強制位置中繼資料forcedPosition可讓您指定欄在網格中的放置位置：0是第一個位置，&lt;number of columns>-1是最後一個位置。 任何其他值會受到忽略。
 
 在前一個範例中，選取欄是第一個欄，如forcedPosition=&quot;0&quot;。
 
@@ -529,7 +529,7 @@ CSS和唯讀欄
 
 在產品清單元件案例中，傳送至查詢servlet的兩個引數如下：
 
-* 查詢： &quot;path：/content/geometrixx/en/customers/jcr：content/par/productlist Cube&quot;
+* 查詢： &quot;path：/content/geometrixx/en/customers/jcr:content/par/productlist Cube&quot;
 * 欄： &quot;Selection、ProductId、ProductName、Color、CatalogCode、SellingSku&quot;
 
 而且JSON資料流會傳回如下：
@@ -563,7 +563,7 @@ CSS和唯讀欄
 
 * 引數名稱： &lt;jcr path>/&lt;property name>
 
-  範例： /content/geometrixx/en/products/jcr：content/par/productlist/1258674859000/SellingSku
+  範例： /content/geometrixx/en/products/jcr:content/par/productlist/1258674859000/SellingSku
 
 * 值： &lt;value>
 
@@ -573,4 +573,4 @@ CSS和唯讀欄
 
 預設的「儲存servlet」實作可在/libs/wcm/bulkeditor/save/POST.jsp取得，並用於產品清單元件中。 它會從請求中取得所有引數（具有&lt;jcr path>/&lt;property name>格式），並使用JCR API在節點上寫入屬性。 如果節點不存在，它也會建立節點（格線插入列）。
 
-請勿照原樣使用預設程式碼，因為它會重新實作伺服器原生執行的動作(&lt;jcr path>/&lt;property name>上的POST)，因此，這只是建置可管理屬性繼承模型的「儲存」servlet的良好起點。
+請勿使用預設程式碼，因為它會重新實作伺服器原生執行的動作（&lt;jcr path>/&lt;property name>上的POST），因此這只是建置可管理屬性繼承模型的「儲存」servlet的良好起點。

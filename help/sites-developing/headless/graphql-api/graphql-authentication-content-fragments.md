@@ -7,14 +7,14 @@ solution: Experience Manager, Experience Manager Sites
 role: Developer
 source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
-source-wordcount: '110'
-ht-degree: 42%
+source-wordcount: '112'
+ht-degree: 41%
 
 ---
 
 # 對內容片段的遠端Adobe Experience Manager GraphQL查詢的驗證 {#authentication-for-remote-aem-graphql-queries-on-content-fragments}
 
-內容片段傳送[Adobe Experience Manager (AEM) GraphQL API &#x200B;](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md)的主要使用案例是接受來自協力廠商應用程式或服務的遠端查詢。 這些遠端查詢可能需要經驗證的 API 存取權，以確保 Headless 內容傳遞的安全。
+內容片段傳送[Adobe Experience Manager (AEM) GraphQL API ](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md)的主要使用案例是接受來自協力廠商應用程式或服務的遠端查詢。 這些遠端查詢可能需要經驗證的 API 存取權，以確保 Headless 內容傳遞的安全。
 
 >[!NOTE]
 >

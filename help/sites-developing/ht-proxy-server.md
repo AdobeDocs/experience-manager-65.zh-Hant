@@ -11,7 +11,7 @@ feature: Developing,Developer Tools
 role: Developer
 source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
 workflow-type: tm+mt
-source-wordcount: '943'
+source-wordcount: '954'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Proxy伺服器會作為中繼伺服器，在使用者端與伺服器之間轉送
 * 電子郵件訊息的SMTP
 * 用於使用者管理的LDAP
 
-例如，您可以在透過TCP/IP網路通訊的任意兩個應用程式(例如網頁瀏覽器和AEM)之間放置Proxy伺服器。 這可讓您監控當您請求CQ頁面時的確切情形。
+例如，您可以將代理伺服器放置在透過TCP/IP網路通訊的任意兩個應用程式之間；例如網頁瀏覽器和AEM。 這可讓您監控當您請求CQ頁面時的確切情形。
 
 ## 啟動Proxy伺服器工具 {#starting-the-proxy-server-tool}
 
@@ -47,7 +47,7 @@ Proxy伺服器會作為中繼伺服器，在使用者端與伺服器之間轉送
 
 `<remoteport>`
 
-這是目標CRX執行個體的主機連線埠。 例如，新安裝的AEM安裝的預設值為&#x200B;**`4502`**，而新安裝的AEM編寫執行個體的預設值為`4502`。
+這是目標CRX執行個體的主機連線埠。 例如，新安裝的AEM安裝的預設值為&#x200B;**`4502`**，而新安裝的AEM作者執行個體的預設值為`4502`。
 
 `<localport>`
 
@@ -218,7 +218,7 @@ Keep-alive是HTTP的一項功能，可讓使用者端重複使用伺服器的TCP
 
 **尋找遺失的請求**
 
-如果您在複雜的伺服器設定中遺失要求(例如，在防火牆和Dispatcher中)，您可以使用Proxy伺服器來找出遺失要求的位置。 如果有防火牆：
+如果您在複雜的伺服器設定中遺失要求（例如，在防火牆和Dispatcher中），您可以使用Proxy伺服器來找出遺失要求的位置。 如果有防火牆：
 
 * 在防火牆之前啟動Proxy
 * 在防火牆之後啟動另一個Proxy

@@ -11,14 +11,14 @@ feature: Developing
 role: Developer
 source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
 workflow-type: tm+mt
-source-wordcount: '581'
-ht-degree: 3%
+source-wordcount: '648'
+ht-degree: 7%
 
 ---
 
 # 使用隱藏條件 {#using-hide-conditions}
 
-隱藏條件可用於判斷元件資源是否已轉譯。 例如，範本作者在[範本編輯器](/help/sites-authoring/templates.md)中設定核心元件[list元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/list.html?lang=zh-Hant)，並決定停用根據子頁面建立清單的選項。 在「設計」對話方塊中停用此選項會設定屬性，以便在呈現清單元件時，會評估隱藏條件，並且不會顯示顯示子頁面的選項。
+隱藏條件可用於判斷元件資源是否已轉譯。 例如，範本作者在[範本編輯器](/help/sites-authoring/templates.md)中設定核心元件[list元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/list.html)，並決定停用根據子頁面建立清單的選項。 在「設計」對話方塊中停用此選項會設定屬性，以便在呈現清單元件時，會評估隱藏條件，並且不會顯示顯示子頁面的選項。
 
 ## 概觀 {#overview}
 
@@ -56,7 +56,7 @@ ${cqDesign.property1 == 'someText' && cqDesign.property2 || cqDesign.property3 !
 
 ## 範例 {#example}
 
-隱藏條件的範例可以在AEM中找到，特別是[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-hant)。 例如，考慮[清單核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/list.html?lang=zh-Hant)。
+隱藏條件的範例可在整個AEM中找到，特別是[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。 例如，考慮[清單核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/list.html)。
 
 [使用範本編輯器](/help/sites-authoring/templates.md)，範本作者可以在設計對話方塊中定義清單元件中哪些選項可供頁面作者使用。 您可以啟用或停用選項，例如是否允許清單成為靜態清單、子頁面清單、標籤頁面清單等。
 
@@ -77,7 +77,7 @@ ${cqDesign.property1 == 'someText' && cqDesign.property2 || cqDesign.property3 !
 
 1. 從設計組態中提取`disableChildren`的值，而運算式`${cqDesign.disableChildren}`評估為`false`，表示選項將不會呈現為元件的一部分。
 
-   您可以在GitHub[&#128279;](https://github.com/adobe/aem-core-wcm-components/blob/main/content/src/content/jcr_root/apps/core/wcm/components/list/v1/list/_cq_dialog/.content.xml#L40)中檢視隱藏運算式為`granite:hide`屬性的值。
+   您可以在GitHub](https://github.com/adobe/aem-core-wcm-components/blob/main/content/src/content/jcr_root/apps/core/wcm/components/list/v1/list/_cq_dialog/.content.xml#L40)中檢視隱藏運算式為`granite:hide`屬性[的值。
 
 1. 使用清單元件時，不再為頁面作者轉譯選項&#x200B;**子頁面**。
 
