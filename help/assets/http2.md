@@ -61,39 +61,39 @@ The following demonstration illustrates the difference between HTTP/1 versus HTT
 
 ## 為我的Dynamic Media帳戶啟用HTTP/2的程式為何？ {#what-is-the-process-for-enabling-http-for-my-dynamic-media-account}
 
-You initiate the request to switch over to HTTP/2; it is not automatically done for you.
+您起始切換至HTTP/2的要求；不會自動為您完成。
 
-1. To switch over to HTTP/2, initiate an Adobe Customer Support request. See [Open a support ticket](https://experienceleague.adobe.com/zh-hant?support-solution=General&lang=en&support-tab=home#support).
+1. 若要切換至HTTP/2，請起始Adobe客戶支援請求。 請參閱[開啟支援票證](https://experienceleague.adobe.com/zh-hant?support-solution=General&lang=en&support-tab=home#support)。
 
-   1. Provide the following information in your support request:
+   1. 在您的支援要求中提供下列資訊：
 
-      1. Primary contact name, email, phone.
-      1. All domains to be transitioned over to HTTP/2.
-      1. Verify that you use secure HTTPS for rich media requests.
-      1. Verify that you use the CDN through Adobe and are not managed with a direct relationship.
-      1. Verify that you use a dedicated domain. If you use Dynamic Media, then you use a dedicated domain.
+      1. 主要連絡人姓名、電子郵件、電話。
+      1. 所有要轉換成HTTP/2的網域。
+      1. 確認您使用安全HTTPS處理多媒體請求。
+      1. 確認您是透過Adobe使用CDN，且不是透過直接關係管理。
+      1. 確認您使用專用網域。 如果您使用Dynamic Media，則請使用專用網域。
 
-   1. Customer Support adds you to the HTTP/2 customer waitlist based in the order in which requests were submitted.
-   1. When Adobe is ready to handle your request, Customer Support contacts you to coordinate the transition and set a target date.
-   1. You are notified after completion and can verify successful transition over to HTTP2.
+   1. 客戶支援會根據提交請求的順序，將您新增至HTTP/2客戶輪候表。
+   1. 當Adobe準備好處理您的請求時，客戶支援會聯絡您以協調轉換並設定目標日期。
+   1. 完成後，您會收到通知，並可以驗證是否成功轉換到HTTP2。
 
-      Because the browser does not state this fact, it is necessary to download an extension.
+      由於瀏覽器未說明此事實，因此必須下載擴充功能。
 
-      For Firefox and Chrome, there is an extension called &quot;HTTP/2 and SPDY Indicator.&quot; Browsers only support http/2 securely, so it is necessary to call a URL with https to verify. If http/2 is supported, the extension indicates i. The extension is in the form of a blue Flash symbol, and a header `X-Firefox-Spdy` : `h2`.
+      Firefox和Chrome有一個擴充功能，稱為「HTTP/2和SPDY Indicator」。 瀏覽器僅安全地支援http/2，因此有必要呼叫具有https的URL以進行驗證。 如果支援http/2，擴充功能會指出i。 擴充功能採用藍色Flash符號和標題`X-Firefox-Spdy`的形式： `h2`。
 
-## When can I expect the transition to HTTP/2 to occur? {#when-can-i-expect-to-be-transitioned-over-to-http}
+## 何時可以開始轉換至HTTP/2？ {#when-can-i-expect-to-be-transitioned-over-to-http}
 
-Requests are processed in the order in which Customer Support receives them.
+系統會依客戶支援接收請求的順序處理請求。
 
 >[!NOTE]
 >
->There can be a long lead time because the transition to HTTP/2 involves clearing the cache. Therefore, only a few customer transitions can be handled at a time.
+>由於轉換至HTTP/2的過程涉及清除快取，因此前置時間可能會很長。 因此，一次只能處理幾個客戶轉換。
 
-## What are the risks with moving to HTTP/2? {#what-are-the-risks-with-moving-to-http}
+## 移至HTTP/2有何風險？ {#what-are-the-risks-with-moving-to-http}
 
-The transition to HTTP/2 clears out your cache at the CDN because it involves moving to a new CDN configuration.
+轉換為HTTP/2會清除CDN上的快取，因為它涉及移動到新的CDN設定。
 
-The non-cached content directly hits Adobe&#39;s origin servers until the cache is rebuilt again. 因此，Adobe計劃一次處理幾個客戶轉換，以便在從來源提取請求時維持可接受的效能。
+非快取內容會直接點選Adobe的原始伺服器，直到再次重建快取為止。 因此，Adobe計劃一次處理幾個客戶轉換，以便在從來源提取請求時維持可接受的效能。
 
 ## 如何確認URL或網站是否以HTTP/2啟動？ {#how-can-you-verify-whether-a-url-or-website-is-activated-with-http}
 

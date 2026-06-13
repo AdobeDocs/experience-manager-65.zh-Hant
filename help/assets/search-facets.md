@@ -91,7 +91,7 @@ ht-degree: 15%
 
 檔案型別的Value屬性（如CRXDE中所見）可用來讓搜尋查詢運作
 
-您不必在CRXDE存放庫中手動建立選項的節點結構，而是可以透過指定對應的索引鍵值配對，在JSON檔案中定義選項。 在「屬性名稱」欄位中指定JSON檔 **[!UICONTROL 案的路徑]** 。 例如，您可以定義鍵值配對、 `image/bmp`、 `image/gif` `image/jpeg`、和 `image/png` 並指定其值，如下列範例JSON檔案中所示。 在&#x200B;**[!UICONTROL 屬性名稱]**&#x200B;欄位中，您可以指定此檔案的CRXDE路徑。
+您不必在CRXDE存放庫中手動建立選項的節點結構，而是可以透過指定對應的索引鍵值配對，在JSON檔案中定義選項。 在「屬性名稱」欄位中指定JSON檔 **[!UICONTROL 案的路徑]** 。 例如，您可以定義鍵值配對、 `image/bmp`、 `image/gif`&#x200B;`image/jpeg`、和 `image/png` 並指定其值，如下列範例JSON檔案中所示。 在&#x200B;**[!UICONTROL 屬性名稱]**&#x200B;欄位中，您可以指定此檔案的CRXDE路徑。
 
 ```json
 {

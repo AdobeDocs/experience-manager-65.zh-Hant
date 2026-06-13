@@ -12,8 +12,8 @@ feature: Communities
 role: Admin
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '1556'
-ht-degree: 0%
+source-wordcount: '1624'
+ht-degree: 1%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 ## 建立社群網站 {#create-a-community-site}
 
-使用作者例項建立社群網站。 在AEM編寫執行個體上：
+使用作者例項建立社群網站。 在AEM作者例項上：
 
 1. 以系統管理員許可權登入。
 1. 從全域導覽，前往&#x200B;**[!UICONTROL 社群]** > **[!UICONTROL 網站]**。
@@ -86,12 +86,12 @@ Communities Sites主控台會提供精靈，引導使用者完成建立社群網
 * 允許網站訪客自行註冊
 * 允許網站訪客在不登入的情況下檢視網站
 * 允許成員傳送和接收來自其他社群成員的訊息
-* 允許使用Facebook登入，而非註冊和建立設定檔
-* 允許使用Twitter登入，而不是註冊和建立設定檔
+* 允許使用Facebook登入，而不是註冊和建立設定檔
+* 允許使用Twitter登入，而非註冊和建立設定檔
 
 >[!NOTE]
 >
->對於生產環境，必須建立自訂Facebook和Twitter應用程式。 請參閱[使用Facebook和Twitter的社交登入](/help/communities/social-login.md)。
+>在生產環境中，必須建立自訂Facebook和Twitter應用程式。 請參閱[使用Facebook和Twitter的社交登入](/help/communities/social-login.md)。
 
 ![社群網站設定](assets/site-settings.png)
 
@@ -160,7 +160,7 @@ Communities Sites主控台會提供精靈，引導使用者完成建立社群網
 
 ![communitiessitesconsole](assets/communitiessitesconsole.png)
 
-## Publish社群網站 {#publish-the-community-site}
+## 發佈社群網站 {#publish-the-community-site}
 
 建立的網站應從「社群 — 網站」主控台進行管理，該主控台與可建立新網站的主控台相同。
 
@@ -182,9 +182,9 @@ Communities Sites主控台會提供精靈，引導使用者完成建立社群網
 
   選取屬性圖示會開啟社群網站以修改屬性，例如標題或變更主題。
 
-* **Publish網站**
+* **發佈網站**
 
-  選取世界圖示會發佈社群網站（例如，如果您的發佈伺服器在本機電腦上執行，則預設會發佈至localhost：4503）。
+  選取世界圖示會發佈社群網站（例如，如果您的發佈伺服器在本機電腦上執行，則預設會發佈至localhost:4503）。
 
 * **匯出網站**
 
@@ -207,11 +207,11 @@ Communities Sites主控台會提供精靈，引導使用者完成建立社群網
 >1. 選取&#x200B;**[!UICONTROL 預設代理程式（發佈）]**。
 >1. 在&#x200B;**[!UICONTROL 設定]**&#x200B;旁邊，選取&#x200B;**[!UICONTROL 編輯]**。
 >1. 在[代理程式設定]的快顯對話方塊中，選取&#x200B;**[!UICONTROL 傳輸]**&#x200B;索引標籤。
->1. 在URI中，將連線埠號碼4503變更為所需的連線埠號碼。 例如，使用連線埠6103： https://localhost:6103/bin/receive?sling:authRequestLogin=1
+>1. 在URI中，將連線埠號碼4503變更為所需的連線埠號碼。 例如，若要使用連線埠6103： https://localhost:6103/bin/receive？sling:authRequestLogin=1
 >1. 選取&#x200B;**[!UICONTROL 確定]**。
 >1. （選擇性）選取&#x200B;**[!UICONTROL 清除]**&#x200B;或&#x200B;**[!UICONTROL 強制重試]**&#x200B;以重設復寫佇列。
 
-### 選取Publish {#select-publish}
+### 選取發佈 {#select-publish}
 
 確認發佈伺服器執行後，選取世界圖示以發佈社群網站。
 
@@ -272,20 +272,20 @@ Communities Sites主控台會提供精靈，引導使用者完成建立社群網
       * **名稱** localhost.4503
 （請*不*&#x200B;使用&#39;：&#39;）
 
-      * **型別** [sling：Mapping](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)
+      * **型別** [sling:Mapping](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)
 
 1. 選取新建立的`localhost.4503`節點：
 
    * 新增屬性：
 
-   * **名稱** sling：match
+   * **名稱** sling:match
       * **型別**&#x200B;字串
       * **值** localhost.4503/$
 （結尾必須是「$」字元）
 
    * 新增屬性：
 
-      * **名稱** sling：internalRedirect
+      * **名稱** sling:internalRedirect
       * **型別**&#x200B;字串
       * **值** /content/sites/engage/en.html
 
@@ -309,15 +309,15 @@ Communities Sites主控台會提供精靈，引導使用者完成建立社群網
 
 #### 疑難排解：無法重新導向 {#troubleshooting-fail-to-redirect}
 
-規則運算式`sling:match`字串結尾的&#39;**$**&#39;很關鍵，因此只有`https://localhost:4503/`會進行對應，否則重新導向值會以URL中server：port後面可能存在的任何路徑為前置詞。 因此，當AEM嘗試重新導向到登入頁面時，它會失敗。
+規則運算式`sling:match`字串結尾的&#39;**$**&#39;很關鍵，因此只有`https://localhost:4503/`會進行對應，否則重新導向值會在URL中伺服器:port之後可能存在的任何路徑加上前置詞。 因此，當AEM嘗試重新導向至登入頁面時，它會失敗。
 
 ### 修改網站 {#modify-the-site}
 
-網站初次建立後，作者可使用[開啟網站圖示](/help/communities/sites-console.md#authoring-site-content)執行標準的AEM編寫活動。
+初次建立網站後，作者可使用[開啟網站圖示](/help/communities/sites-console.md#authoring-site-content)執行標準的AEM製作活動。
 
 此外，管理員可以使用[編輯網站圖示](/help/communities/sites-console.md#modifying-site-properties)來修改網站的內容，例如標題。
 
-進行任何修改之後，請記得將&#x200B;**儲存**&#x200B;並重新&#x200B;**Publish**&#x200B;網站。
+進行任何修改之後，記得要&#x200B;**儲存**&#x200B;並重新&#x200B;**發佈**&#x200B;網站。
 
 >[!NOTE]
 >

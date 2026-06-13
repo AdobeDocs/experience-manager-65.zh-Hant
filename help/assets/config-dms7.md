@@ -13,7 +13,7 @@ feature: Configuration,Scene7 Mode
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
 workflow-type: tm+mt
-source-wordcount: '6675'
+source-wordcount: '6444'
 ht-degree: 4%
 
 ---
@@ -28,8 +28,8 @@ ht-degree: 4%
 
 透過新架構，Experience Manager負責主要來源資產，以及與Dynamic Media同步，以處理及發佈資產：
 
-1. 主要來源資產上傳至Experience Manager後，會複製到Dynamic Media。 屆時，Dynamic Media會處理所有資產處理和轉譯產生作業，例如視訊編碼和影像的動態變體。
-(在Dynamic Media - Scene7模式中，預設的上傳檔案大小為2 GB以下。 若要啟用最多15 GB的2 GB上傳檔案大小，請參閱[（選用）設定Dynamic Media - Scene7模式以上傳大於2 GB的資產](#optional-config-dms7-assets-larger-than-2gb)。)
+1. 主要來源資產上傳至Experience Manager後，會複製到Dynamic Media。屆時，Dynamic Media會處理所有資產處理和轉譯產生作業，例如視訊編碼和影像的動態變體。
+(在Dynamic Media - Scene7模式中，預設的上傳檔案大小為2 GB以下。若要啟用最多15 GB的2 GB上傳檔案大小，請參閱[（選用）設定Dynamic Media - Scene7模式以上傳大於2 GB的資產](#optional-config-dms7-assets-larger-than-2gb)。)
 1. 產生轉譯後，Experience Manager可以安全地存取及預覽遠端Dynamic Media轉譯（不會將二進位檔傳回Experience Manager執行個體）。
 1. 內容準備好發佈並核准後，就會觸發Dynamic Media服務，將內容推送至傳遞伺服器，並在CDN （內容傳遞網路）快取內容。
 
@@ -44,47 +44,47 @@ ht-degree: 4%
 >* [直接連結保護](/help/assets/hotlink-protection.md)
 >* [HTTP/2內容傳遞](/help/assets/http2.md)
 >* cdn層級的URL重新導向
->* Akamai ChinaCDN (for optimal delivery in China)
+>* Akamai ChinaCDN （針對中國境內的最佳傳送方式）
 
-## Enable Dynamic Media in Scene7 mode {#enabling-dynamic-media-in-scene-mode}
+## 在Scene7模式下啟用Dynamic Media {#enabling-dynamic-media-in-scene-mode}
 
-[Dynamic Media](https://business.adobe.com/tw/products/experience-manager/assets/dynamic-media.html) is disabled by default. To take advantage of Dynamic Media features, you must enable it.
+[Dynamic Media](https://business.adobe.com/tw/products/experience-manager/assets/dynamic-media.html)預設為停用。 若要利用Dynamic Media功能，您必須啟用它。
 
 >[!WARNING]
 >
->Dynamic Media - Scene7 mode is for the *Experience Manager Author instance only*. As such, you must configure `runmode=dynamicmedia_scene7` on the Experience Manager Author instance, *not* the Experience Manager Publish instance.
+>Dynamic Media - Scene7模式僅適用於&#x200B;*Experience Manager作者執行個體*。 因此，您必須在Experience Manager Author執行個體上設定`runmode=dynamicmedia_scene7`，*而非* Experience Manager Publish執行個體。
 
-To enable Dynamic Media, start up Experience Manager using `dynamicmedia_scene7` run mode from the command line by entering the following in a terminal window (example port used is 4502):
+若要啟用Dynamic Media，請在終端機視窗中輸入下列內容（使用的範例連線埠為4502），從命令列使用`dynamicmedia_scene7`執行模式啟動Experience Manager：
 
 ```shell {.line-numbers}
 java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=500000 -jar cq-quickstart-6.5.0.jar -gui -r author,dynamicmedia_scene7 -p 4502
 ```
 
-## (Optional) Migrate Dynamic Media presets and configurations from 6.3 to 6.5 Zero Downtime {#optional-migrating-dynamic-media-presets-and-configurations-from-to-zero-downtime}
+## （可選）將Dynamic Media預設集和設定從6.3移轉至6.5 （零停機時間） {#optional-migrating-dynamic-media-presets-and-configurations-from-to-zero-downtime}
 
-Upgrading Experience Manager Dynamic Media from 6.3 to 6.4 or 6.5 now includes the ability for zero downtime deployments. To migrate all your presets and configurations from `/etc` to `/conf` in CRXDE Lite, be sure you run the following curl command.
+Experience Manager Dynamic Media從6.3升級至6.4或6.5時，現在包含零停機部署的功能。 若要在CRXDE Lite中將您的所有預設集和設定從`/etc`移轉至`/conf`，請務必執行下列curl命令。
 
 >[!NOTE]
 >
->If you run your Experience Manager instance in compatibility mode – that is, you have the compatibility packaged installed – you do not need to run these commands.
+>如果您以相容性模式執行Experience Manager執行個體（即已安裝相容性套件），就不需要執行這些命令。
 
-For all upgrades, either with or without the compatibility package, you can copy the default, out-of-the-box viewer presets that originally came with Dynamic Media by running the following Linux® curl command:
+對於所有升級（無論是否包含相容性套件），您可以執行下列Linux® curl命令，複製動態媒體原始隨附的預設現成檢視器預設集：
 
 `curl -u admin:admin -X POST https://<server_address>:<server_port>/libs/settings/dam/dm/presets/viewer.pushviewerpresets.json`
 
-To migrate any custom viewer presets and configurations that you have created from `/etc` to `/conf`, run the following Linux® curl command:
+若要將您從`/etc`建立的任何自訂檢視器預設集和設定移轉至`/conf`，請執行下列Linux® curl命令：
 
 `curl -u admin:admin -X POST https://<server_address>:<server_port>/libs/settings/dam/dm/presets.migratedmcontent.json`
 
-## Install feature pack 18912 for bulk asset migration {#installing-feature-pack-for-bulk-asset-migration}
+## 安裝Feature Pack 18912以進行大量資產移轉 {#installing-feature-pack-for-bulk-asset-migration}
 
-The installation of feature pack 18912 is *optional*.
+功能套件18912的安裝是&#x200B;*選擇性*。
 
-Feature pack 18912 lets you either bulk ingest assets by way of FTP, or migrate assets from either Dynamic Media - Hybrid mode or Dynamic Media Classic into Dynamic Media - Scene7 mode on Experience Manager. It is available from [Adobe Professional Services](https://business.adobe.com/tw/customers/consulting-services/main.html).
+Feature Pack 18912可讓您透過FTP大量擷取資產，或在Experience Manager上將資產從Dynamic Media — 混合模式或Dynamic Media Classic移轉至Dynamic Media - Scene7模式。 可從[Adobe Professional Services](https://business.adobe.com/tw/customers/consulting-services/main.html)取得。
 
-See [Install feature pack 18912 for bulk asset migration](/help/assets/bulk-ingest-migrate.md) for more information.
+如需詳細資訊，請參閱[安裝Feature Pack 18912以進行大量資產移轉](/help/assets/bulk-ingest-migrate.md)。
 
-## Create a Dynamic Media Configuration in Cloud Services {#configuring-dynamic-media-cloud-services}
+## 在雲端服務中建立Dynamic Media設定 {#configuring-dynamic-media-cloud-services}
 
 <!--
 **Before you configure Dynamic Media** - After you receive your provisioning email with Dynamic Media credentials, you must open the [Dynamic Media Classic desktop application](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html?lang=zh-Hant#getting-started), then sign in to your account to change your password. The password provided in the provisioning email is system-generated and intended to be a temporary password only. It is important that you update the password so that Dynamic Media Cloud Service is set up with the correct credentials.
@@ -94,11 +94,11 @@ See [Install feature pack 18912 for bulk asset migration](/help/assets/bulk-inge
 **To create a Dynamic Media Configuration in Cloud Services:**
 -->
 
-1. In Experience Manager Author mode, select the Experience Manager logo to access the global navigation console and select the Tools icon, then go to **[!UICONTROL Cloud Services]** > **[!UICONTROL Dynamic Media Configuration]**.
-1. On the Dynamic Media Configuration Browser page, in the left pane, select **[!UICONTROL global]** (do not select the folder icon to the left of **[!UICONTROL global]**), then select **[!UICONTROL Create]**.
-1. On the **[!UICONTROL Create Dynamic Media Configuration]** page, enter a title, the Dynamic Media account email address, password, then select your region. This information is provided to you by Adobe in the provisioning email. Contact Adobe Customer Support if you did not receive the email.
+1. 在Experience Manager作者模式中，選取Experience Manager標誌以存取全域導覽主控台，並選取「工具」圖示，然後前往&#x200B;**[!UICONTROL 雲端服務]** > **[!UICONTROL Dynamic Media設定]**。
+1. 在[Dynamic Media設定瀏覽器]頁面的左窗格中，選取&#x200B;**[!UICONTROL 全域]** （不要選取&#x200B;**[!UICONTROL 全域]**&#x200B;左側的資料夾圖示），然後選取&#x200B;**[!UICONTROL 建立]**。
+1. 在&#x200B;**[!UICONTROL 建立Dynamic Media設定]**&#x200B;頁面上，輸入標題、Dynamic Media帳戶電子郵件地址、密碼，然後選取您的地區。 此資訊由Adobe在布建電子郵件中提供給您。 如果您沒有收到電子郵件，請聯絡Adobe客戶支援。
 
-   Select **[!UICONTROL Connect to Dynamic Media]**.
+   選取&#x200B;**[!UICONTROL 連線至Dynamic Media]**。
 
 1. 在&#x200B;**[!UICONTROL 變更密碼]**&#x200B;對話方塊的&#x200B;**[!UICONTROL 新密碼]**&#x200B;欄位中，輸入包含8-25個字元的新密碼。 密碼至少必須包含下列其中一項：
 
@@ -140,7 +140,7 @@ See [Install feature pack 18912 for bulk asset migration](/help/assets/bulk-inge
 
       * **[!UICONTROL 選擇性發佈]**&#x200B;此選項可讓您控制在Dynamic Media中發佈哪些資料夾。 它可讓您使用智慧型裁切或動態轉譯等功能，或決定哪些資料夾僅在Experience Manager中發佈以供預覽。 這些相同的資產&#x200B;*不是*&#x200B;發佈在Dynamic Media中以供在公用網域中傳送。<br>您可以在&#x200B;**[!UICONTROL Dynamic Media雲端組態]**&#x200B;中設定此選項，或者，如果您偏好設定，也可以選擇在資料夾的&#x200B;**[!UICONTROL 屬性]**&#x200B;中的資料夾層級設定此選項。<br>請參閱[在Dynamic Media中使用選擇性發佈](/help/assets/selective-publishing.md)。<br>如果您稍後變更此組態，或稍後在資料夾層級變更，這些變更只會影響您從此時間點上傳的新資產。 資料夾中現有資產的發佈狀態維持不變，直到您從&#x200B;**[!UICONTROL 快速發佈]**&#x200B;或&#x200B;**[!UICONTROL 管理出版物]**&#x200B;對話方塊手動變更為止。
 
-   * **[!UICONTROL 安全預覽伺服器]** — 可讓您指定安全轉譯預覽伺服器的URL路徑。 也就是說，產生轉譯後，Experience Manager可以安全地存取及預覽遠端Dynamic Media轉譯（不會將二進位檔傳回Experience Manager執行個體）。
+   * **[!UICONTROL 安全預覽伺服器]** — 可讓您指定安全轉譯預覽伺服器的URL路徑。也就是說，產生轉譯後，Experience Manager可以安全地存取及預覽遠端Dynamic Media轉譯（不會將二進位檔傳回Experience Manager執行個體）。
 除非您有特殊安排使用您公司的伺服器或特殊伺服器，否則Adobe建議您保留此設定為已指定。
 
    * **[!UICONTROL 同步處理所有內容]** - <!-- NEW OPTION, CQDOC-15371, Added March 4, 2020-->預設為選取。 如果您想要選擇性地在同步至Dynamic Media時包含或排除資產，請取消選取此選項。 取消選取此選項可讓您從下列兩個Dynamic Media同步模式中選擇：
@@ -148,7 +148,7 @@ See [Install feature pack 18912 for bulk asset migration](/help/assets/bulk-inge
    * **[!UICONTROL Dynamic Media同步模式]**
       * **[!UICONTROL 預設為啟用]** — 除非您特別標籤要排除的資料夾，否則預設會將設定套用至所有資料夾。<!-- you can then deselect the folders that you do not want the configuration applied to.-->
       * **[!UICONTROL 預設為停用]** — 在您明確標示選取的資料夾以同步處理至Dynamic Media之前，此設定不會套用至任何資料夾。
-若要將選取的資料夾標示為同步處理至Dynamic Media，請選取資產資料夾，然後在工具列上選取&#x200B;**[!UICONTROL 屬性]**。 在&#x200B;**[!UICONTROL 詳細資料]**&#x200B;標籤的&#x200B;**[!UICONTROL Dynamic Media同步模式]**&#x200B;下拉式清單中，從下列三個選項中選擇。 完成後，選取&#x200B;**[!UICONTROL 儲存]**。 *請記住：如果您先前選取&#x200B;**[!UICONTROL 同步所有內容]**，則無法使用這三個選項。* 另請參閱[在Dynamic Media](/help/assets/selective-publishing.md)的資料夾層級使用選擇性發佈。
+若要將選取的資料夾標示為同步至動態媒體，請選取資產資料夾，然後在工具列上選取&#x200B;**[!UICONTROL 屬性]**。在&#x200B;**[!UICONTROL 詳細資料]**&#x200B;標籤的&#x200B;**[!UICONTROL Dynamic Media同步模式]**&#x200B;下拉式清單中，從下列三個選項中選擇。完成時，請選取&#x200B;**[!UICONTROL 儲存]**。*記住：如果您先前選取&#x200B;**[!UICONTROL 同步所有內容]**，則這三個選項無法使用。*&#x200B;另請參閱[在Dynamic Media中使用資料夾層級的選擇性發佈](/help/assets/selective-publishing.md)。
          * **[!UICONTROL 已繼承]** — 資料夾上沒有明確的同步值；而是從資料夾的其中一個上階資料夾或雲端設定中的預設模式繼承同步值。 繼承的詳細狀態會透過工具提示顯示。
          * **[!UICONTROL 啟用子資料夾]** — 包含此子樹狀結構中的所有專案，以便同步至Dynamic Media。 資料夾特定的設定會覆寫雲端設定中的預設模式。
          * **[!UICONTROL 已停用子資料夾]** — 排除此子樹狀結構中的所有專案，使其無法同步至Dynamic Media。
@@ -299,8 +299,8 @@ Dynamic Media中的密碼到期日設為目前系統日期起的100年。
 
 1. 在&#x200B;**[!UICONTROL Properties]**&#x200B;索引標籤的&#x200B;**[!UICONTROL Name]**&#x200B;欄下，找到`sizeLimit`。
 1. 在`sizeLimit`名稱的右側，**[!UICONTROL 值]**&#x200B;欄下，按兩下值欄位。
-1. 輸入適當的值（位元組），以便將大小限制增加到所需的上載大小上限。 例如，若要將上傳資產大小限制增加到10 GB，請在值欄位中輸入`10737418240`。
-您可以輸入最多15 GB （`2013265920`位元組）的值。 在此情況下，不會上傳大於15 GB的已上傳資產。
+1. 輸入適當的值（位元組），以便將大小限制增加到所需的上載大小上限。例如，若要將上傳資產大小限制增加到10 GB，請在值欄位中輸入`10737418240`。
+您可以輸入最多15 GB （`2013265920`位元組）的值。在此情況下，不會上傳大於15 GB的已上傳資產。
 
    ![大小限制值](/help/assets/assets-dm/uploadassets15gb_c.png)
 
@@ -360,53 +360,53 @@ Dynamic Media中的密碼到期日設為目前系統日期起的100年。
 
 #### 設定色彩管理 {#configuring-color-management}
 
-Dynamic Media色彩管理可讓您校正資產的色彩。 With color correction, ingested assets retain their color space (RGB, CMYK, Gray) and embedded color profile. When you request a dynamic rendition, the image color is corrected into the target color space using CMYK, RGB, or Gray output.
+Dynamic Media色彩管理可讓您校正資產的色彩。 透過色彩校正，擷取的資產可保留其色域（RGB、CMYK、灰色）和內嵌色彩設定檔。 當您要求動態轉譯時，會使用CMYK、RGB或灰階輸出將影像顏色校正到目標色域。
 
-See [Configure Image Presets](/help/assets/managing-image-presets.md).
+請參閱[設定影像預設集](/help/assets/managing-image-presets.md)。
 
 >[!NOTE]
 >
->By default, the system shows 15 renditions when you select **[!UICONTROL Renditions]** and 15 viewer presets when you select **[!UICONTROL Viewers]** in the asset&#39;s Detail view. 您可以提高此限制。 See [Increase the number of image presets that display](/help/assets/managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display) or [Increase the number of viewer presets that display](/help/assets/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display).
+>依預設，當您選取&#x200B;**[!UICONTROL 轉譯]**&#x200B;時，系統會顯示15個轉譯，當您在資產的詳細資料檢視中選取&#x200B;**[!UICONTROL 檢視器]**&#x200B;時，系統會顯示15個檢視器預設集。 您可以提高此限制。 請參閱[增加顯示的影像預設集數目](/help/assets/managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display)或[增加顯示的檢視器預設集數目](/help/assets/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display)。
 
 #### 編輯支援格式的MIME型別 {#editing-mime-types-for-supported-formats}
 
-You can define which asset types are processed by Dynamic Media and customize advanced asset processing parameters. For example, you can specify asset processing parameters to do the following:
+您可以定義Dynamic Media要處理的資產型別，並自訂進階資產處理引數。 例如，您可以指定資產處理引數，以執行下列作業：
 
-* Convert an Adobe PDF to an eCatalog asset.
-* Convert an Adobe Photoshop Document (.PSD) to a banner template asset for personalization.
-* Rasterize an Adobe Illustrator file (.AI) or an Adobe Photoshop Encapsulated PostScript® file (.EPS).
-* [Video profiles](/help/assets/video-profiles.md) and [Imaging profiles](/help/assets/image-profiles.md) can be used to define processing of videos and images, respectively.
+* 將Adobe PDF轉換為eCatalog資產。
+* 將Adobe Photoshop檔案(.PSD)轉換為橫幅範本資產以進行個人化。
+* 點陣化Adobe Illustrator檔案(.AI)或Adobe Photoshop封裝的PostScript®檔案(.EPS)。
+* [視訊設定檔](/help/assets/video-profiles.md)與[影像設定檔](/help/assets/image-profiles.md)分別可用來定義視訊與影像的處理方式。
 
-See [Uploading Assets](/help/assets/manage-assets.md#uploading-assets).
+請參閱[上傳Assets](/help/assets/manage-assets.md#uploading-assets)。
 
-**To edit MIME types for supported formats:**
+**若要編輯支援格式的MIME型別：**
 
 1. 在Experience Manager中，選取Experience Manager標誌以存取全域導覽主控台，然後導覽至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 一般]** > **[!UICONTROL CRXDE Lite]**。
-1. In the left rail, navigate to the following:
+1. 在左側邊欄中，導覽至下列專案：
 
    `/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`
 
-   ![MIME types](assets/mimetypes.png)
+   ![MIME型別](assets/mimetypes.png)
 
-1. Under the mimeTypes folder, select a mime type.
-1. On the right side of the CRXDE Lite page, in the lower portion:
+1. 在mimeTypes資料夾下，選取mime型別。
+1. 在CRXDE Lite頁面的右側，下半部：
 
-   * Double-click the **[!UICONTROL enabled]** field. By default all asset mime types are enabled (set to **[!UICONTROL true]**), which means the assets are synched to Dynamic Media for processing. If you wish to exclude this asset mime type from being processed, change this setting to **[!UICONTROL false]**.
+   * 連按兩下&#x200B;**[!UICONTROL 已啟用]**&#x200B;欄位。 預設會啟用所有資產MIME型別（設定為&#x200B;**[!UICONTROL true]**），這表示資產會同步至Dynamic Media進行處理。 如果您不想處理這個資產mime型別，請將此設定變更為&#x200B;**[!UICONTROL false]**。
 
-   * Double-select **[!UICONTROL jobParam]** to open its associated text field. See [Supported Mime Types](/help/assets/assets-formats.md#supported-mime-types) for a list of permitted processing parameter values that you can use for a given mime type.
+   * 連按兩下&#x200B;**[!UICONTROL jobParam]**&#x200B;以開啟其相關的文字欄位。 請參閱[支援的MIME型別](/help/assets/assets-formats.md#supported-mime-types)，以取得可用於指定MIME型別的允許處理引數值清單。
 
 1. 執行下列任一項作業：
 
-   * Repeat steps 3-4 to edit more MIME types.
-   * On the menu bar of the CRXDE Lite page, select **[!UICONTROL Save All]**.
+   * 重複步驟3至4以編輯更多MIME型別。
+   * 在CRXDE Lite頁面的功能表列上，選取「**[!UICONTROL 儲存全部]**」。
 
-1. In the upper-left corner of the page, select **[!UICONTROL CRXDE Lite]** to return to Experience Manager.
+1. 在頁面的左上角，選取&#x200B;**[!UICONTROL CRXDE Lite]**&#x200B;以返回Experience Manager。
 
-#### Adding MIME types for unsupported formats {#adding-mime-types-for-unsupported-formats}
+#### 針對不支援的格式新增MIME型別 {#adding-mime-types-for-unsupported-formats}
 
-You can add custom MIME types for unsupported formats in Experience Manager Assets. Ensure any new node that you add in CRXDE Lite is not deleted by Experience Manager by moving the MIME type before `image_`. Also, be sure that its enabled value is set to **[!UICONTROL false]**.
+您可以針對Experience Manager Assets中不支援的格式新增自訂MIME型別。 將MIME型別移動到`image_`之前，確定Experience Manager不會刪除您在CRXDE Lite中新增的任何新節點。 另外，請確定它的啟用值設定為&#x200B;**[!UICONTROL false]**。
 
-**To add MIME types for unsupported formats:**
+**若要針對不支援的格式新增MIME型別：**
 
 1. 從Experience Manager瀏覽至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 作業]** > **[!UICONTROL 網頁主控台]**。
 
@@ -416,43 +416,43 @@ You can add custom MIME types for unsupported formats in Experience Manager Asse
 
    ![2019-08-02_16-17-29](assets/2019-08-02_16-17-29.png)
 
-1. 在頁面上，向下捲動至名稱 *Adobe CQ Scene7 Asset MIME類型Service* ，如下列螢幕擷取所示。 To the right of the name, select the **[!UICONTROL Edit the configuration values]** (pencil icon).
+1. 在頁面上，向下捲動至名稱 *Adobe CQ Scene7 Asset MIME類型Service* ，如下列螢幕擷取所示。 在名稱的右側，選取&#x200B;**[!UICONTROL 編輯組態值]** （鉛筆圖示）。
 
    ![2019-08-02_16-44-56](assets/2019-08-02_16-44-56.png)
 
-1. On the **Adobe CQ Scene7 Asset MIME type Service** page, select any plus sign icon &lt;+>. The location in the table where you select the plus sign to add the new mime type is trivial.
+1. 在&#x200B;**Adobe CQ Scene7 Asset MIME type Service**&#x200B;頁面上，選取任何加號圖示&lt;+>。 在表格中選取加號以新增新MIME型別的位置並不重要。
 
    ![2019-08-02_16-27-27](assets/2019-08-02_16-27-27.png)
 
-1. Type `DWG=image/vnd.dwg` in the empty text field that you just added.
+1. 在您剛新增的空白文字欄位中輸入`DWG=image/vnd.dwg`。
 
-   The example `DWG=image/vnd.dwg` is for demonstration purposes only. The MIME type that you add here can be any other unsupported format.
+   範例`DWG=image/vnd.dwg`僅供示範之用。 您在此處新增的MIME型別可以是任何其他不支援的格式。
 
    ![2019-08-02_16-36-36](assets/2019-08-02_16-36-36.png)
 
-1. In the lower-right corner of the page, select **[!UICONTROL Save]**.
+1. 在頁面的右下角，選取&#x200B;**[!UICONTROL 儲存]**。
 
-   At this point, you can close the browser tab that has the open Adobe Experience Manager Web Console Configuration page.
+   此時，您可以關閉已開啟Adobe Experience Manager Web主控台設定頁面的瀏覽器索引標籤。
 
-1. Return to the browser tab that has your open Experience Manager console.
-1. From Experience Manager, navigate to **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL CRXDE Lite]**.
+1. 返回已開啟Experience Manager主控台的瀏覽器標籤。
+1. 從Experience Manager導覽至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 一般]** > **[!UICONTROL CRXDE Lite]**。
 
    ![2019-08-02_16-55-41](assets/2019-08-02_16-55-41.png)
 
-1. In the left rail, navigate to the following:
+1. 在左側邊欄中，導覽至下列專案：
 
    `conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`
 
-1. Drag the mime type `image_vnd.dwg` and drop it directly above `image_` in the tree as seen in the following screenshot.
+1. 將mime型別`image_vnd.dwg`拖曳到樹狀結構中的`image_`正上方，如下列熒幕擷取所示。
 
    ![crxdelite_cqdoc-14627](assets/crxdelite_cqdoc-14627.png)
 
-1. With the mime type `image_vnd.dwg` still selected, from the **[!UICONTROL Properties]** tab, in the **[!UICONTROL enabled]** row, under the **[!UICONTROL Value]** column header, double-select the value to open the **[!UICONTROL Value]** drop-down list.
-1. Type `false` in the field (or select **[!UICONTROL false]** from the drop-down list).
+1. 在MIME型別`image_vnd.dwg`仍被選取的情況下，從&#x200B;**[!UICONTROL 屬性]**&#x200B;索引標籤的&#x200B;**[!UICONTROL 已啟用]**&#x200B;列，在&#x200B;**[!UICONTROL 值]**&#x200B;欄標題下，按兩下值以開啟&#x200B;**[!UICONTROL 值]**&#x200B;下拉式清單。
+1. 在欄位中輸入`false` （或從下拉式清單中選取&#x200B;**[!UICONTROL false]**）。
 
    ![2019-08-02_16-60-30](assets/2019-08-02_16-60-30.png)
 
-1. Near the upper-left corner of the CRXDE Lite page, select **[!UICONTROL Save All]**.
+1. 在CRXDE Lite頁面的左上角附近，選取&#x200B;**[!UICONTROL 全部儲存]**。
 
 #### 建立批次集預設集以自動生成影像集和迴轉集 {#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets}
 
@@ -720,60 +720,60 @@ Scene7上傳連線設定會將Experience Manager資產同步至Dynamic Media Cla
 
 ### （可選）篩選要複製的資產 {#optional-filtering-assets-for-replication}
 
-在非Dynamic Media部署中，您會將Experience Manager作者環境中的&#x200B;*所有*&#x200B;資產（包括影像和視訊）復寫至Experience Manager發佈節點。 This workflow is necessary because the Experience Manager Publish servers also deliver the assets.
+在非Dynamic Media部署中，您會將Experience Manager作者環境中的&#x200B;*所有*&#x200B;資產（包括影像和視訊）復寫至Experience Manager發佈節點。 此工作流程是必要的，因為Experience Manager發佈伺服器也會傳送資產。
 
-However, in Dynamic Media deployments, because assets are delivered by way of the Cloud Service, there is no need to replicate those same assets to Experience Manager publish nodes. Such a &quot;hybrid publishing&quot; workflow avoids extra storage costs and longer processing times to replicate assets. Other content, such as Site pages, continue to be served from the Experience Manager publish nodes.
+不過，在Dynamic Media部署中，由於資產是透過Cloud Service傳送，因此不需要將這些相同的資產復寫至Experience Manager發佈節點。 這種「混合發佈」工作流程可避免額外的儲存成本及較長的複製資產處理時間。 Experience Manager發佈節點仍會繼續提供其他內容（例如網站頁面）。
 
-The filters provide a way for you to *exclude* assets from being replicated to the Experience Manager publish node.
+這些篩選器可讓您&#x200B;*排除*&#x200B;資產，以免這些資產復寫至Experience Manager發佈節點。
 
-#### Use default asset filters for replication {#using-default-asset-filters-for-replication}
+#### 使用預設的資產篩選器進行復寫 {#using-default-asset-filters-for-replication}
 
-If you use Dynamic Media for imaging, or video, or both, you can use the default filters that Adobe provides as-is. The following filters are active by default:
+如果您使用Dynamic Media進行影像處理或視訊，或兩者同時使用，您可以使用Adobe依現狀提供的預設篩選器。 下列篩選器預設為作用中：
 
 |   | 篩選器 | Mime 類型 | 轉譯 |
 | --- | --- | --- | --- |
-| Dynamic Media Image Delivery | filter-image<br>filter-sets | Starts with **image/**<br> Contains **applications/** and end with **set**. | The out-of-the-box &quot;filter-images&quot; (applies to single images assets, including interactive images) and &quot;filter-sets&quot; (applies to Spin Sets, Image Sets, Mixed Media Sets, and Carousel Sets) will:<br>• Exclude from replication the original image and static image renditions. |
-| Dynamic Media Video Delivery | filter-video | Starts with **video/** | The out-of-the-box &quot;filter video&quot; will:<br>• Exclude from replication the original video and static thumbnail renditions. |
+| Dynamic Media影像傳送 | filter-image<br>filter-set | 開頭為&#x200B;**影像/**<br>&#x200B;包含&#x200B;**應用程式/**，結尾為&#x200B;**組**。 | 現成的「濾鏡影像」（套用至單一影像資產，包括互動式影像）和「濾鏡集」（套用至迴轉集、影像集、混合媒體集和轉盤集）將： <br>·從複製中排除原始影像和靜態影像轉譯。 |
+| Dynamic Media影片傳送 | 濾鏡 — 視訊 | 開頭為&#x200B;**視訊/** | 現成的「篩選視訊」將：<br>·從復寫中排除原始視訊和靜態縮圖轉譯。 |
 
 >[!NOTE]
 >
->Filters apply to MIME types and cannot be path-specific.
+>篩選器適用於MIME型別，且不得為路徑專用。
 
-#### Customize asset filters for replication {#customizing-asset-filters-for-replication}
+#### 自訂用於復寫的資產篩選器 {#customizing-asset-filters-for-replication}
 
-1. In Experience Manager, select the Experience Manager logo to access the global navigation console and navigate to **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL CRXDE Lite]**.
-1. In the left folder tree, navigate to `/etc/replication/agents.author/publish/jcr:content/damRenditionFilters` to review the filters.
+1. 在Experience Manager中，選取Experience Manager標誌以存取全域導覽主控台，並導覽至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 一般]** > **[!UICONTROL CRXDE Lite]**。
+1. 在左側資料夾樹狀結構中，導覽至`/etc/replication/agents.author/publish/jcr:content/damRenditionFilters`以檢閱篩選器。
 
    ![chlimage_1-17](assets/chlimage_1-2.png)
 
-1. To define the Mime Type for the filter, you can locate the Mime Type as follows:
+1. 若要定義篩選器的Mime型別，您可以依照以下步驟找到Mime型別：
 
-   In the left rail, expand `content > dam > <locate_your_asset> > jcr:content > metadata`, and then in the table, locate `dc:format`.
+   在左側邊欄中，展開`content > dam > <locate_your_asset> > jcr:content > metadata`，然後在表格中找出`dc:format`。
 
-   The following graphic is an example of an asset&#39;s path to `dc:format`.
+   下圖是資產路徑`dc:format`的範例。
 
    ![chlimage_1-18](assets/chlimage_1-3.png)
 
-   Notice that the `dc:format` for the asset `Fiji Red.jpg` is `image/jpeg`.
+   請注意，資產`Fiji Red.jpg`的`dc:format`是`image/jpeg`。
 
-   To have this filter apply to all images, regardless of their format, set the value to `image/*` where `*` is a regular expression that is applied to all images of any format.
+   若要將此篩選套用至所有影像，無論其格式為何，請將值設為`image/*`，其中`*`為套用至任何格式之所有影像的規則運算式。
 
-   To have the filter apply only to images of the type JPEG, enter a value of `image/jpeg`.
+   若要讓篩選器僅套用至JPEG型別的影像，請輸入值`image/jpeg`。
 
-1. Define what renditions you want to include or exclude from replication.
+1. 定義您要在復寫中包含或排除的轉譯。
 
-   Characters that you can use to filter for replication include the following:
+   您可用來篩選復寫字元的字元包括：
 
-   | Character to use | How it filters assets for replication |
+   | 要使用的字元 | 如何篩選資產以進行復寫 |
    | --- | --- |
    | * | 萬用字元 |
-   | + | Includes assets for replication |
-   | - | Excludes assets from replication |
+   | + | 包含用於復寫的資產 |
+   | - | 從復寫中排除資產 |
 
    導覽至 `content/dam/<locate your asset>/jcr:content/renditions`。
 
-   The following graphic is an example of an asset&#39;s renditions.
+   下圖是資產的轉譯範例。
 
    ![chlimage_1-4](assets/chlimage_1-4.png)
 
-   If you only wanted to replicate the original, then you would enter `+original`.
+   如果您只想復寫原始檔案，請輸入`+original`。

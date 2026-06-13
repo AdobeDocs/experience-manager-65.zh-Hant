@@ -11,7 +11,7 @@ exl-id: e427d4ee-d5c8-421b-9739-f3cf2de36e41
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
 workflow-type: tm+mt
-source-wordcount: '3480'
+source-wordcount: '3434'
 ht-degree: 2%
 
 ---
@@ -57,7 +57,7 @@ ht-degree: 2%
 
 比較WebP和AVIF與PNG，您可以看到WebP的大小減少84%，AVIF的大小減少87%。 此外，由於WebP和AVIF格式都支援透明和多種影像動畫，因此非常適合取代透明的PNG和GIF檔案。
 
-See also [Image Optimization with Next-gen Image Formats (WebP and AVIF)](https://medium.com/adobetech/image-optimisation-with-next-gen-image-formats-webp-and-avif-248c75afacc4)
+另請參閱[使用下一代影像格式（WebP和AVIF）的影像最佳化](https://medium.com/adobetech/image-optimisation-with-next-gen-image-formats-webp-and-avif-248c75afacc4)
 
 <!--
 HIDDEN ON MAY 19, 2022 BASED ON CQDOC-19280 On the mobile web, the challenges are compounded by two factors:
@@ -68,35 +68,35 @@ HIDDEN ON MAY 19, 2022 BASED ON CQDOC-19280 On the mobile web, the challenges ar
 In terms of images, the goal is to serve the best quality images as efficiently as possible.
 -->
 
-## Benefits of Smart Imaging {#what-are-the-key-benefits-of-smart-imaging}
+## 智慧型影像處理的優點 {#what-are-the-key-benefits-of-smart-imaging}
 
-Smart Imaging enhances image delivery by automatically optimizing file size based on the user&#39;s browser, device display, and network conditions. This approach ensures faster loading times and a better viewing experience across different environments. Because images constitute most of a page&#39;s load time, any performance improvement can have a profound impact on business KPIs such as the following:
+智慧型影像可根據使用者的瀏覽器、裝置顯示和網路狀況，自動最佳化檔案大小，強化影像傳送。 此方法可確保更快的載入時間，以及在不同環境中獲得更好的檢視體驗。 由於影像佔據了頁面的大部分載入時間，因此任何效能改善都會對業務KPI產生深遠影響，例如：
 
-* Higher conversion rates.
-* Time spent on a site.
-* Lower site bounce rates.
+* 轉換率較高。
+* 網站逗留時間。
+* 較低的網站跳出率。
 
-The newest key benefits of the latest Smart Imaging include the following:
+最新智慧型影像處理的最新主要優點包括：
 
-* Supports next generation AVIF format.
-* PNG to WebP and AVIF now supports lossy conversion. Because PNG is a lossless format, earlier WebP and AVIF being delivered were lossless.
-* Browser Format Conversion (`bfc`)
-* Device Pixel Ratio (`dpr`)
-* Network bandwidth (`network`)
+* 支援下一代AVIF格式。
+* PNG至WebP和AVIF現在支援有損轉換。 由於PNG是無損格式，因此先前傳送的WebP和AVIF是無損的。
+* 瀏覽器格式轉換(`bfc`)
+* 裝置畫素比例(`dpr`)
+* 網路頻寬(`network`)
 
-### About Browser Format Conversion (bfc) {#bfc}
+### 關於瀏覽器格式轉換(bfc) {#bfc}
 
-Turning on Browser Format Conversion by appending `bfc=on` to the image URL automatically converts JPEG and PNG to lossy AVIF, lossy WebP, lossy JPEGXR, lossy JPEG2000 for different browsers. For browsers that do not support those formats, Smart Imaging continues to serve the JPEG or PNG. Smart Imaging recalculates the quality of the new format along with the format change.
+透過將`bfc=on`附加至影像URL來開啟瀏覽器格式轉換，會自動將JPEG和PNG轉換成不同瀏覽器的有損AVIF、有損WebP、有損JPEGXR、有損JPEG2000。 針對不支援這些格式的瀏覽器，智慧型影像會繼續提供JPEG或PNG。 智慧型影像會隨著格式變更重新計算新格式的品質。
 
-You can turn off Smart Imaging by appending `bfc=off` to the image&#39;s URL.
+您可以將`bfc=off`附加至影像的URL以關閉智慧型影像。
 
-See also [bfc](https://experienceleague.adobe.com/zh-hant/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-bfc) in the Dynamic Media Image Serving and Rendering API.
+另請參閱Dynamic Media影像提供與轉譯API中的[bfc](https://experienceleague.adobe.com/zh-hant/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-bfc)。
 
-### About Device Pixel Ratio (dpr) optimization {#dpr}
+### 關於裝置畫素比(dpr)最佳化 {#dpr}
 
-Device Pixel Ratio (DPR), also called CSS Pixel Ratio, represents the relationship between a device&#39;s physical pixels and logical pixels. With the rise of retina displays, the pixel resolution of modern mobile devices has been rapidly increasing.
+裝置畫素比率(DPR)，也稱為CSS畫素比率，代表裝置的實體畫素與邏輯畫素之間的關係。 隨著視網膜顯示器的興起，現代行動裝置的畫素解析度也迅速提高。
 
-Enabling Device Pixel Ratio optimization renders the image at the native resolution of the screen, which makes it sharp.
+啟用「裝置畫素比最佳化」 ，以熒幕的原生解析度呈現影像，使影像更清晰。
 
 目前，顯示器的畫素密度來自Akamai CDN標題值。
 
@@ -210,48 +210,48 @@ To understand pre-requisites for Smart Imaging, see [Am I eligible to use Smart 
 
 <!-- OLD As mentioned earlier, Smart Imaging supports only JPEG and PNG image formats. For other formats, you need to append the `bfc=off` modifier to the URL as described earlier. -->
 
-+++Does Smart Imaging working with HTTPS? How about HTTP/2?
++++智慧型影像處理是否適用於HTTPS？ HTTP/2呢？
 
-Smart Imaging works with images delivered over HTTP or HTTPS. In addition, it also works over HTTP/2.
-
-+++
-
-+++Am I eligible to use Smart Imaging?
-
-Smart Imaging is available immediately for all customers. To start enjoying its benefits, just add `bfc=on`, or `dpr=on,dprValue`, or `network=on`, or all three parameter settings to your existing URLs or presets.
-
-To use Smart Imaging, your company&#39;s Dynamic Media Classic or Dynamic Media on Experience Manager account must include the Adobe bundled CDN (Content Delivery Network) as part of your license.
+智慧型影像處理透過HTTP或HTTPS傳送的影像。 此外，它也適用於HTTP/2。
 
 +++
 
-+++What is the process to enable Smart Imaging for an account? 
++++我是否符合使用智慧型影像處理的資格？
 
-To start using Smart Imaging, append `bfc=on`, or `dpr=on,dprValue`, or `network=on`, or all three parameter settings to your existing URLs or presets. If you prefer not to make these changes manually, you can enable Smart Imaging by default by creating a support case.
+智慧型影像處理可立即供所有客戶使用。 若要開始享受其優點，只需將`bfc=on`、`dpr=on,dprValue`、`network=on`或所有三個引數設定新增至您現有的URL或預設集。
 
-When creating the support case, specify which Smart Imaging features you want activated on your account:
+若要使用智慧型影像處理，貴公司的Dynamic Media Classic或Experience Manager上的Dynamic Media帳戶必須包含Adobe隨附的CDN （內容傳遞網路）作為授權的一部分。
 
-* Browser Format Conversion (WebP or AVIF)
-* Network Bandwidth Optimization
++++
+
++++為帳戶啟用智慧影像的程式為何？ 
+
+若要開始使用智慧型影像，請附加`bfc=on`、`dpr=on,dprValue`、`network=on`或全部三個引數設定到您現有的URL或預設集。 如果您不想手動進行這些變更，您可以建立支援案例來依預設啟用「智慧型影像」。
+
+建立支援案例時，請指定您要在帳戶上啟用的智慧型影像功能：
+
+* 瀏覽器格式轉換（WebP或AVIF）
+* 網路頻寬最佳化
 
 >[!NOTE]
 >
->DPR requires client-side adjustments to determine the correct `dprValue`. Therefore, Adobe recommends enabling DPR through URLs by appending `dpr=on,dprValue`.
+>DPR需要使用者端進行調整，以判斷正確的`dprValue`。 因此，Adobe建議藉由附加`dpr=on,dprValue`，透過URL啟用DPR。
 
-**To create a support case to enable Smart Imaging on your account:**
+**若要建立支援案例，在您的帳戶上啟用智慧型影像處理：**
 
-1. [Use the Admin Console to start the creation of a new support case](https://helpx.adobe.com/tw/enterprise/using/support-for-experience-cloud.html).
-1. Provide the following information in your support case:
+1. [使用Admin Console開始建立新的支援案例](https://helpx.adobe.com/tw/enterprise/using/support-for-experience-cloud.html)。
+1. 在您的支援案例中提供下列資訊：
 
-   * **Primary contact details:**
+   * **主要連絡人詳細資料：**
 
-      * Provide your name, email, and phone number.
+      * 提供您的姓名、電子郵件和電話號碼。
 
-   * **Smart Imaging features to enable:**
+   * **要啟用的智慧型影像功能：**
 
-      * List the capabilities that you want for your account:
+      * 列出您想要為您的帳戶提供的功能：
 
-         * Browser format conversion: WebP or AVIF
-         * Network bandwidth optimization
+         * 瀏覽器格式轉換：WebP或AVIF
+         * 網路頻寬最佳化
          * DPR： DPR需要使用者端進行調整，以決定正確的`dprValue`。 因此，Adobe建議藉由附加`dpr=on,dprValue`，透過URL啟用DPR。
 
    * 智慧型影像的&#x200B;**網域：**
@@ -293,36 +293,36 @@ When creating the support case, specify which Smart Imaging features you want ac
 
 +++切換至使用智慧型影像有何風險？
 
-There is no risk to a customer web page. However, the transition to Smart Imaging does clear out your CDN cache. This operation involves moving to a new configuration of Dynamic Media Classic or Dynamic Media on Experience Manager.
+客戶網頁沒有風險。 不過，轉換至智慧型影像處理會清除CDN快取。 此作業涉及在Experience Manager上移至新的Dynamic Media Classic或Dynamic Media設定。
 
-During the initial transition, the non-cached images directly hit Adobe&#39;s origin servers until the cache is rebuilt again. 因此，Adobe計劃一次處理幾個客戶轉換，以便在從來源提取請求時維持可接受的效能。 For most customers, the cache is fully built up again at the CDN within ~1 – 2 days.
+在初始轉變期間，非快取影像會直接點選Adobe的原始伺服器，直到再次重建快取為止。 因此，Adobe計劃一次處理幾個客戶轉換，以便在從來源提取請求時維持可接受的效能。 對於大多數客戶而言，CDN會在約1至2天內再次完全建立快取。
 
 +++
 
-+++How can I verify whether Smart Imaging is working as expected?
++++如何確認智慧型影像處理是否如預期運作？
 
-1. After your account is configured with Smart Imaging, load a Dynamic Media Classic or Adobe Experience Manager - Dynamic Media image URL in the browser.
-1. Open the Chrome developer pane by going to **[!UICONTROL View]** > **[!UICONTROL Developer]** > **[!UICONTROL Developer Tools]** in the browser. Or, choose any browser developer tool of your choice.
+1. 帳戶設定智慧型影像之後，請在瀏覽器中載入Dynamic Media Classic或Adobe Experience Manager - Dynamic Media影像URL。
+1. 在瀏覽器中前往&#x200B;**[!UICONTROL 檢視]** > **[!UICONTROL 開發人員]** > **[!UICONTROL 開發人員工具]**，開啟Chrome開發人員窗格。 或者，選擇您選擇的任何瀏覽器開發人員工具。
 
-1. Ensure that the cache is disabled when developer tools are open.
+1. 請確保在開發人員工具開啟時停用快取。
 
-   * On Windows®, navigate to settings in the developer tool pane, then select **[!UICONTROL Disable cache (while devtools is open)]** check box.
-   * On macOS, in the Developer pane, under the **[!UICONTROL Network]** tab, select **[!UICONTROL disable cache]**.
+   * 在Windows®上，瀏覽至開發人員工具窗格中的設定，然後選取&#x200B;**[!UICONTROL 停用快取（當devtools開啟時）]**&#x200B;核取方塊。
+   * 在macOS上，在[開發人員]窗格的&#x200B;**[!UICONTROL 網路]**&#x200B;標籤下，選取&#x200B;**[!UICONTROL 停用快取]**。
 
-1. Observe the Content Type is transformed to the appropriate format. The following screenshot shows a PNG image being converted dynamically to WebP on Chrome. If your domain has AVIF enabled, you can also expect to see AVIF in the Content Type.
-1. Repeat this test on different browsers and user conditions.
+1. 請注意，內容型別已轉換為適當的格式。 下列熒幕擷圖顯示的PNG影像正動態轉換為Chrome上的WebP。 如果您的網域已啟用AVIF，內容型別中也可能看到AVIF。
+1. 在不同的瀏覽器和使用者條件下重複此測試。
 
 >[!NOTE]
 >
->Not all images are converted. Smart Imaging decides if the conversion can improve performance. Sometimes, where there is no expected performance gain or the format is not JPEG or PNG, the image is not converted.
+>並非所有影像都會轉換。 智慧型影像處理會決定轉換是否能改善效能。 有時，如果沒有預期的效能提升，或格式不是JPEG或PNG，影像就不會轉換。
 
 ![image2017-11-14_15398](/help/assets/assets/image2017-11-14_15398.png)
 
 +++
 
-+++How do I know the performance gain? Is there a way to know the benefits of Smart Imaging?
++++我如何知道效能的提升？ 您是否有辦法瞭解智慧型影像技術的優點？
 
-The Smart Imaging Header determines the benefits of Smart Imaging. When Smart Imaging is enabled, after you request an image, under the **[!UICONTROL Response Headers]** heading, you can see `-X-Adobe-Smart-Imaging` as seen in the following highlighted example:
+智慧型影像標題決定智慧型影像的優點。 啟用智慧型影像時，當您要求影像之後，在&#x200B;**[!UICONTROL 回應標題]**&#x200B;標題下，您可以看到`-X-Adobe-Smart-Imaging`，如下列醒目提示的範例所示：
 
 ![智慧型影像標題](/help/assets/assets-dm/smart-imaging-header2.png)
 
@@ -338,7 +338,7 @@ The Smart Imaging Header determines the benefits of Smart Imaging. When Smart Im
 >
 >**X-Adobe-Smart-Imaging = -1，正在傳遞WebP**
 >
->如果`X-Adobe-Smart-Imaging`的值為–1，而且WebP仍在傳遞，則智慧型影像處理為作用中。 但是，由於快取已過時，因此未計算大小優勢。 您可以在影像的URL中使用`cache=update` （僅一次）來修正此問題。
+>如果`X-Adobe-Smart-Imaging`的值為–1，而且WebP仍在傳遞，則智慧型影像處理為作用中。但是，由於快取已過時，因此未計算大小優勢。您可以在影像的URL中使用`cache=update` （僅限一次）來修正此問題。
 >使用修飾元的範例：
 >`https://smartimaging.scene7.com/is/image/SmartImaging/sample1?cache=update`>若要讓整個快取失效，您必須建立支援案例。
 

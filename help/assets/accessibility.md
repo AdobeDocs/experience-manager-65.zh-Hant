@@ -109,9 +109,9 @@ TBD items:
 
 使用者可使用鍵盤導覽並填寫登入欄位以進行登入。 每次使用者輸入錯誤的使用者名稱和密碼組合時，熒幕助讀程式都會在登入頁面上朗讀錯誤訊息。
 
-登入後，DAM使用者可以使用鍵盤在[!DNL Assets]使用者介面中導覽。 使用者介面元素（如左側邊欄、功能表、使用者設定檔、搜尋列、檔案和資料夾以及管理和組態設定）可使用鍵盤瀏覽。 鍵盤導覽順序為由左至右、由上至下。 When users navigate with a keyboard, the UI highlights the focused actionable option with improved color contrast and screen readers narrate it. Where appropriate, screen readers announce the state (for example, expanded, collapsed, or mixed) of the focused menu options. Also, the screen reader announces the purpose of the actionable option, instead of, say, the appearance or interface placement.
+登入後，DAM使用者可以使用鍵盤在[!DNL Assets]使用者介面中導覽。 使用者介面元素（如左側邊欄、功能表、使用者設定檔、搜尋列、檔案和資料夾以及管理和組態設定）可使用鍵盤瀏覽。 鍵盤導覽順序為由左至右、由上至下。 使用者使用鍵盤導覽時，UI會強調重點可操作選項，並改善色彩對比，而熒幕助讀程式會提供旁白。 在適當的情況下，熒幕助讀程式會朗讀焦點功能表選項的狀態（例如，展開、摺疊或混合）。 此外，熒幕助讀程式會朗讀可操作選項的用途，而非外觀或介面位置等。
 
-If a user expands the help or user profile option from the menu, the screen reader announces the appropriate option or status. If a user expands the user profile option, the available options can be selected using a keyboard. For example, an administrator can impersonate a different user. If a user searches for a string from the [!UICONTROL Help] option, a narrator announces &quot;Searching Help&quot; to indicate that a search is in progress.
+如果使用者從功能表展開說明或使用者設定檔選項，熒幕助讀程式會朗讀適當的選項或狀態。 如果使用者展開使用者設定檔選項，則可使用鍵盤選取可用的選項。 例如，管理員可以模擬其他使用者。 如果使用者從[!UICONTROL 說明]選項中搜尋字串，解說員會宣佈「搜尋說明」以表示搜尋正在進行中。
 
 <!--
 TBD: Removing for now. Add a more informative video later. Host it on tv.adobe
@@ -121,9 +121,9 @@ TBD: Removing for now. Add a more informative video later. Host it on tv.adobe
 *Figure: Navigating through the options at the top of [!DNL Experience Manager] user interface using `Tab` key.*
 -->
 
-## Browse assets and view the related information {#browse}
+## 瀏覽資產並檢視相關資訊 {#browse}
 
-In the [!DNL Assets] user interface, users can use the keyboard to browse digital assets in the DAM repository and preview or download an asset. Users can also view generated renditions, switch views, and review the timeline, version history, comments, and references. In addition, users can view and manage metadata.
+在[!DNL Assets]使用者介面中，使用者可以使用鍵盤來瀏覽DAM存放庫中的數位資產，以及預覽或下載資產。 使用者也可以檢視產生的轉譯、切換檢視，以及檢閱時間軸、版本記錄、註釋和參照。 此外，使用者還可以檢視及管理中繼資料。
 
 <!--
 TBD: Not sure about the following list items mean:
@@ -140,17 +140,17 @@ Review CQ-4282133 before adding - Close option in a coral-dialog was not accessi
 * CQ-4273122 - Assets of video/audio type will have aria-label in format "Multimedia player: <Title>" so users relying on screen-reader will get to know that they are video/audio assets.
 -->
 
-When browsing the assets repository, the following functionality improves accessibility:
+瀏覽資產存放庫時，以下功能可改善協助工具：
 
-* A screen reader announces text alternatives that depict the purpose or functionality of the icons instead of their names.
-* Users can access and focus the interactive user interface options in the References list of assets using keyboard keys.
-* The elements in each row in list view are announced as the elements of the same row by screen readers.
-* When navigating using `Tab` key, the focus can move to the close option in the version preview.
-* When using the keyboard to browse, the highlighted actionable user interface options have more prominent visual focus with enhanced contrast. It makes the focused area more identifiable to the user.
-* Use of the `Esc` key to remove the quick action icons from thumbnail view does not remove the keyboard focus from the last focused item.
-* With an asset selected, selecting `Alt + 4` keyboard shortcut opens the [!UICONTROL References] list in the left rail. Using `Tab` key, users can navigate through the non-zero reference entries. Browsing through only the non-zero reference entries saves effort and keystrokes as well.
-* Comments on an asset are available in the asset timeline. It is accessible if the left rail is accessed using a keyboard or a keyboard shortcut.
-* [!UICONTROL View Settings] in [!DNL Experience Manager] are accessible using a keyboard. Users can navigate through the available card sizes using the arrow keys and select and tab through to navigate through and set other elements in the existing View Settings view.
+* 熒幕助讀程式會朗讀描述圖示用途或功能的替代文字，而非圖示名稱。
+* 使用者可使用鍵盤按鍵存取和聚焦資產參考清單中的互動式使用者介面選項。
+* 清單檢視中每一列的元素會由熒幕助讀程式宣告為相同列的元素。
+* 使用`Tab`鍵導覽時，焦點可以在版本預覽中移至關閉選項。
+* 使用鍵盤瀏覽時，反白顯示的可操作使用者介面選項具有更突出的視覺焦點，以及增強的對比。 這可讓使用者更容易識別重點區域。
+* 使用`Esc`鍵從縮圖檢視中移除快速動作圖示並不會從最後一個焦點專案移除鍵盤焦點。
+* 選取資產後，選取`Alt + 4`鍵盤快速鍵會開啟左側邊欄中的[!UICONTROL 參考]清單。 使用`Tab`鍵，使用者可以瀏覽非零參考專案。 僅瀏覽非零參照專案，可節省工作量和按鍵動作。
+* 資產時間軸中提供資產上的註解。 若使用鍵盤或鍵盤快速鍵存取左側邊欄，即可存取。
+* [!DNL Experience Manager]中的[!UICONTROL 檢視設定]可使用鍵盤存取。 使用者可以使用方向鍵瀏覽可用的卡片大小，並選取和Tab鍵瀏覽，以瀏覽和設定現有「檢視設定」檢視中的其他元素。
 
 <!--
 TBD: Gradually, as more enhancements are done in these categories, add more content.
@@ -166,26 +166,26 @@ TBD: Gradually, as more enhancements are done in these categories, add more cont
 
 ## 管理數位資產 {#manage-assets}
 
-Many asset management tasks such as CRUD operations, downloading an asset, adding metadata are accessible to various degrees. [!DNL Assets] let you accomplish the tasks using various assistive technologies such as a screen reader and a keyboard.
+許多資產管理任務（例如CRUD操作、下載資產、新增中繼資料）都可不同程度的存取。 [!DNL Assets]可讓您使用各種輔助技術（例如熒幕閱讀器和鍵盤）完成工作。
 
-For metadata operations that are typically done by roles, such as marketers and administrators, the following features improve accessibility:
+對於通常由角色（例如行銷人員和管理員）完成的中繼資料操作，以下功能可改善協助工具：
 
-* The [!UICONTROL Save &amp; Close] option on the Asset [!UICONTROL Properties] page can now be accessed using the keyboard.
-* Screen readers announce the options to delete the selected tags in the [!UICONTROL Basic] tab of Asset [!UICONTROL Properties].
-* Users can use the Date picker pop-up dialog box with a keyboard. The Date picker user interface element is used to set on-times and off-times, and select date.
-* The drag functionality using keyboard correctly functions in the [!UICONTROL Metadata Schema Editor] in the browse mode of the screen reader.
-* A user can use the keyboard to move focus to the **Add User or Group** field.
+* 現在可以使用鍵盤存取資產[!UICONTROL 屬性]頁面上的[!UICONTROL 儲存並關閉]選項。
+* 熒幕朗讀程式會朗讀刪除資產[!UICONTROL 屬性]之[!UICONTROL 基本]索引標籤中選取的標籤的選項。
+* 使用者可以使用包含鍵盤的日期選擇器快顯對話方塊。 日期選擇器使用者介面元素可用來設定開啟時間和關閉時間，並選取日期。
+* 使用鍵盤的拖曳功能在熒幕助讀程式的瀏覽模式中，可正確地在[!UICONTROL 中繼資料結構編輯器]中運作。
+* 使用者可以使用鍵盤將焦點移至&#x200B;**新增使用者或群組**&#x200B;欄位。
 
-## Search digital assets {#search-assets}
+## 搜尋數位資產 {#search-assets}
 
-A quick and seamless asset search experience boosts content velocity. The content velocity use cases are part of core [!DNL Assets] functionality. To start a search from the Omnisearch bar, users can use keyboard shortcut `/` or use `Tab` along with screen readers to locate the search option quickly. The screen reader narrates the name of the option as &quot;Search Button&quot; when the focus is on the search option ![search option](assets/do-not-localize/search_icon.png). Users can select `Return` to open the Omnisearch box. The screen reader not only narrates the keyword typed in the search box but also narrates the suggestions offered by [!DNL Experience Manager Assets]. Users can use a combination of arrow keys, `Return`, and `Tab` to access the various options to trigger a search.
+快速且順暢的資產搜尋體驗可加快內容速度。 內容Velocity使用案例是核心[!DNL Assets]功能的一部分。 若要從Omnisearch列開始搜尋，使用者可以使用鍵盤快速鍵`/`或搭配熒幕助讀程式使用`Tab`來快速找到搜尋選項。 當焦點在搜尋選項![搜尋選項](assets/do-not-localize/search_icon.png)上時，熒幕助讀程式會將選項名稱旁白為「搜尋按鈕」。 使用者可以選取`Return`以開啟Omnisearch方塊。 熒幕助讀程式不僅會提供在搜尋方塊中輸入之關鍵字的旁白，也會提供[!DNL Experience Manager Assets]所提供之建議的旁白。 使用者可以使用方向鍵、`Return`和`Tab`的組合來存取各種選項以觸發搜尋。
 
-Search functionality is made accessible by the following functionality:
+搜尋功能可透過下列功能存取：
 
-* Page title, available to a screen reader, helps to identify the page as an assets&#39; search page.
-* Users search for assets from within the Omnisearch field. Users can open it using either the keyboard navigation or the keyboard shortcut `/`.
-* Users can start typing the search keyword and then select the auto-suggestions using arrow keys. Highlighted suggestion can be selected using the `Return` key and assets are searched for the selected suggestion.
-* Screen readers can identify and announce mixed-state checkboxes in the Filters panel when users filter search results. 在混合狀態下，第一層核取方塊會被點進，直到使用者選取所有巢狀述詞為止。
+* 頁面標題（可供熒幕助讀程式使用）有助於將頁面識別為資產的搜尋頁面。
+* 使用者可在Omnisearch欄位內搜尋資產。 使用者可以使用鍵盤導覽或鍵盤快速鍵`/`來開啟它。
+* 使用者可以開始輸入搜尋關鍵字，然後使用方向鍵選取自動建議。 可使用`Return`索引鍵選取醒目提示的建議，並搜尋資產以尋找選取的建議。
+* 當使用者篩選搜尋結果時，熒幕助讀程式可以在「篩選器」面板中識別並朗讀混合狀態核取方塊。 在混合狀態下，第一層核取方塊會被點進，直到使用者選取所有巢狀述詞為止。
 * 關閉Omnisearch方塊後，使用者焦點會移至搜尋選項。
 
 篩選搜尋結果時：

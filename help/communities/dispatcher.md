@@ -11,8 +11,8 @@ feature: Communities
 role: Admin
 source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
 workflow-type: tm+mt
-source-wordcount: '685'
-ht-degree: 11%
+source-wordcount: '666'
+ht-degree: 12%
 
 ---
 
@@ -64,7 +64,7 @@ OSGi設定&#x200B;**ACS AEM Commons - Dispatcher快取控制標頭 — Max Age**
 * **篩選模式**
   *（必要）*&#x200B;一或多個社群頁面的路徑。 例如，`/content/sites/engage/(.*)`。
 
-* **Cache-Control最大使用時間**
+* **Cache-Control最大期限**
   *（必要）*&#x200B;要新增至「快取控制項」標頭的最長時間（以秒為單位）。 值必須大於零(0)。
 
 ## Dispatcher篩選器 {#dispatcher-filters}

@@ -7,7 +7,7 @@ feature: Adaptive Forms,Document Security
 role: User, Developer
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '215'
+source-wordcount: '228'
 ht-degree: 0%
 
 ---
@@ -16,11 +16,11 @@ ht-degree: 0%
 
 使用網路服務在JEE服務上叫用AEM Forms時，您可以使用WS-Security標頭來傳遞JEE上AEM Forms所需的使用者端驗證資訊。 WS-Security定義SOAP擴充功能，以實作使用者端驗證、訊息機密性及訊息完整性。 因此，當JEE上的AEM Forms部署為獨立伺服器或叢集環境時，您可以叫用JEE上的AEM Forms 。
 
-如何在JEE上將WS-Security標頭傳遞到AEM Forms取決於您使用的是Axis產生的Java類別，還是使用服務的原生SOAP棧疊的.NET使用者端元件。
+如何在JEE上將WS-Security標頭傳遞至AEM Forms，取決於您是使用軸產生的Java類別，還是使用服務的原生SOAP棧疊的.NET使用者端元件。
 
 >[!NOTE]
 >
->作為使用WS-Security標頭叫用服務的範例，本主題會叫用Encryption服務，以密碼加密PDF檔案。
+>作為使用WS-Security標頭叫用服務的範例，本主題會叫用加密服務以密碼加密PDF檔案。
 
 本檔案涵蓋下列主題：
 

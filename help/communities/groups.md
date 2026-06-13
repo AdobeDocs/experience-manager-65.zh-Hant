@@ -13,7 +13,7 @@ solution: Experience Manager
 feature: Communities
 source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
 workflow-type: tm+mt
-source-wordcount: '1727'
+source-wordcount: '1691'
 ht-degree: 1%
 
 ---
@@ -87,7 +87,7 @@ This is a 404 on helpx. Update or remove.
 * **社群群組根目錄**
 
   群組的根路徑。
-預設的根是父網站，但根可以移至網站內的任何位置。 不建議進行變更。
+預設的根是父網站，但根可以移至網站內的任何位置。不建議進行變更。
 
 * **其他可用的社群群組語言**&#x200B;功能表
 
