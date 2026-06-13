@@ -84,4 +84,4 @@ AEM提供您兩個環境：
 
 #### Dispatcher {#dispatcher}
 
-為了最佳化網站訪客的效能，**[Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)**&#x200B;實作負載平衡和快取。
+為了最佳化網站訪客的效能，**[Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant)**&#x200B;實作負載平衡和快取。
