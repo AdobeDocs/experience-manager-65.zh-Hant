@@ -6,7 +6,7 @@ solution-title: Experience Cloud
 user-guide-description: 使用Adobe Experience Manager 6.5檔案瞭解其運作方式，以及軟體可為您做哪些事。
 breadcrumb-title: 使用手冊
 user-guide-title: AEM 6.5
-source-git-commit: 25928abbff3ed684fd1b7130c3f4f6095c33e0d2
+source-git-commit: 6af329d2faa778c3cdbb83854fb36066242e14d5
 workflow-type: tm+mt
 source-wordcount: '8279'
 ht-degree: 23%
@@ -345,7 +345,7 @@ ht-degree: 23%
 + Assets {#assets}
    + [關於DAM](/help/assets/assets.md)
    + [資產最佳實務](/help/assets/best-practices-for-assets.md)
-   + [&#x200B; [!DNL Assets] 中的協助工具](/help/assets/accessibility.md)
+   + [ [!DNL Assets] 中的協助工具](/help/assets/accessibility.md)
    + 使用Experience Manager Assets {#using}
       + [[!DNL Assets]首頁體驗](/help/assets/assets-home-page.md)
       + [搜尋數位資產](/help/assets/search-assets.md)
@@ -421,7 +421,7 @@ ht-degree: 23%
       + [將資產與活動資料流整合](/help/assets/extending-activity-stream.md)
       + [擴充Asset Editor](/help/assets/asseteditorx.md)
       + [[!DNL Assets] HTTP API](/help/assets/mac-api-assets.md)
-      + [&#x200B; [!DNL Assets] HTTP API中的內容片段支援](/help/assets/assets-api-content-fragments.md)
+      + [ [!DNL Assets] HTTP API中的內容片段支援](/help/assets/assets-api-content-fragments.md)
       + [用於內容片段的 GraphQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md)
       + [使用 GraphiQL IDE](/help/sites-developing/headless/graphql-api/graphiql-ide.md)
       + [持續性查詢](/help/sites-developing/headless/graphql-api/persisted-queries.md)
@@ -552,24 +552,24 @@ ht-degree: 23%
          + [安裝及設定自動錶單轉換服務](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/configure-service.html)
       + 在JEE上安裝AEM Forms {#jee-installation}
          + [JEE上的AEM Forms支援平台](/help/forms/using/aem-forms-jee-supported-platforms.md)
-         + [使用JBoss Turnkey在JEE上安裝和部署AEM Forms](https://www.adobe.com/go/learn_aemforms_installTurnkey_65_tw)
+         + [使用JBoss Turnkey在JEE上安裝和部署AEM Forms](https://www.adobe.com/go/learn_aemforms_installTurnkey_65)
          + [安裝和設定AEM Forms Document Security伺服器](/help/forms/using/installing-and-configuring-the-document-security-server.md)
-         + [準備安裝AEM Forms （單一伺服器）](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_65_tw)
-         + [在JEE for JBoss上安裝和部署Adobe Experience Manager Forms](https://www.adobe.com/go/learn_aemforms_installJBoss_65_tw)
-         + [在JEE上安裝和部署Adobe Experience Manager Forms for WebSphere](https://www.adobe.com/go/learn_aemforms_installWebSphere_65_tw)
-         + [在JEE for WebLogic上安裝和部署AEM Forms](https://www.adobe.com/go/learn_aemforms_installWebLogic_65_tw)
+         + [準備安裝AEM Forms （單一伺服器）](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_65)
+         + [在JEE for JBoss上安裝和部署Adobe Experience Manager Forms](https://www.adobe.com/go/learn_aemforms_installJBoss_65)
+         + [在JEE上安裝和部署Adobe Experience Manager Forms for WebSphere](https://www.adobe.com/go/learn_aemforms_installWebSphere_65)
+         + [在JEE for WebLogic上安裝和部署AEM Forms](https://www.adobe.com/go/learn_aemforms_installWebLogic_65)
          + [安裝AEM Forms Workbench](/help/forms/using/install-workbench.md)
          + [安裝及設定Designer](/help/forms/using/installing-configuring-designer.md)
-         + [準備安裝AEM Forms （伺服器叢集）](https://www.adobe.com/go/learn_aemforms_prepareInstallcluster_65_tw)
-         + [在JBoss叢集上的JEE上設定Adobe Experience Manager Forms](https://www.adobe.com/go/learn_aemforms_clusterJBoss_65_tw)
-         + [在WebSphere叢集上的JEE上設定Adobe Experience Manager Forms](https://www.adobe.com/go/learn_aemforms_clusterWebSphere_65_tw)
-         + [在WebLogic叢集上的JEE上設定Adobe Experience Manager Forms](https://www.adobe.com/go/learn_aemforms_clusterWebLogic_65_tw)
+         + [準備安裝AEM Forms （伺服器叢集）](https://www.adobe.com/go/learn_aemforms_prepareInstallcluster_65)
+         + [在JBoss叢集上的JEE上設定Adobe Experience Manager Forms](https://www.adobe.com/go/learn_aemforms_clusterJBoss_65)
+         + [在WebSphere叢集上的JEE上設定Adobe Experience Manager Forms](https://www.adobe.com/go/learn_aemforms_clusterWebSphere_65)
+         + [在WebLogic叢集上的JEE上設定Adobe Experience Manager Forms](https://www.adobe.com/go/learn_aemforms_clusterWebLogic_65)
       + 設定 AEM Forms {#configure-aem-forms}
          + [AEM Forms 伺服器的效能調整](/help/forms/using/performance-tuning-aem-forms.md)
          + [設定最適化表單快取](/help/forms/using/configure-adaptive-forms-cache.md)
          + [正在設定AEM DS設定](/help/forms/using/configuring-the-processing-server-url.md)
          + [設定同步排程器](/help/forms/using/configure-synchronization-scheduler.md)
-         + [設定Microsoft SharePoint的聯結器](https://help.adobe.com/zh_TW/AEMForms/6.1/SharePointConfig/index.html)
+         + [設定Microsoft SharePoint的聯結器](https://help.adobe.com/en_US/AEMForms/6.1/SharePointConfig/index.html)
          + [將AEM Forms與Adobe LiveCycle連線](/help/forms/using/aem-livecycle-connector.md)
          + [設定AEM Forms將表單資料提交至JEE程式的AEM Forms](/help/forms/using/submit-form-data-livecycle-process.md)
          + [適用於AEM Forms的AEM案頭應用程式](/help/forms/using/aem-desktop-app-for-aem-forms.md)
@@ -580,13 +580,13 @@ ht-degree: 23%
          + [安裝相容性套件](/help/forms/using/compatibility-package.md)
          + [移轉 AEM Forms 資產和文件](/help/forms/using/migration-utility.md)
       + 在JEE上升級AEM Forms {#aem-forms-jee-upgrade}
-         + [準備升級AEM Forms](https://www.adobe.com/go/learn_aemforms_prepareupgrade_65_tw)
-         + [JEE上的Adobe Experience Manager Forms升級檢查清單和規劃](https://www.adobe.com/go/learn_aemforms_upgrade_checklist_65_tw)
+         + [準備升級AEM Forms](https://www.adobe.com/go/learn_aemforms_prepareupgrade_65)
+         + [JEE上的Adobe Experience Manager Forms升級檢查清單和規劃](https://www.adobe.com/go/learn_aemforms_upgrade_checklist_65)
          + [在JEE上升級至AEM 6.5表單](/help/forms/using/upgrade-forms-jee.md)
-         + [在JEE上升級至JBoss適用的Adobe Experience Manager Forms](https://www.adobe.com/go/learn_aemforms_upgradeJBoss_65_tw)
-         + [在JEE上升級至AEM Forms for JBoss Turnkey](https://www.adobe.com/go/learn_aemforms_upgradeTurnkey_65_tw)
-         + [在JEE上升級為WebSphere適用的Adobe Experience Manager Forms](https://www.adobe.com/go/learn_aemforms_upgradeWebSphere_65_tw)
-         + [在JEE上升級為WebLogic適用的Adobe Experience Manager Forms](https://www.adobe.com/go/learn_aemforms_upgradeWebLogic_65_tw)
+         + [在JEE上升級至JBoss適用的Adobe Experience Manager Forms](https://www.adobe.com/go/learn_aemforms_upgradeJBoss_65)
+         + [在JEE上升級至AEM Forms for JBoss Turnkey](https://www.adobe.com/go/learn_aemforms_upgradeTurnkey_65)
+         + [在JEE上升級為WebSphere適用的Adobe Experience Manager Forms](https://www.adobe.com/go/learn_aemforms_upgradeWebSphere_65)
+         + [在JEE上升級為WebLogic適用的Adobe Experience Manager Forms](https://www.adobe.com/go/learn_aemforms_upgradeWebLogic_65)
          + [針對JEE上的AEM Forms，將JBoss從7.4.10升級至7.4.23](/help/forms/using/upgrade-jboss-eap-from-7-4-10-to-7-4-23.md)
          + [針對JEE上的AEM Forms，將JBoss叢集從7.4.10升級至7.4.23](/help/forms/using/upgrade-jboss-eap-cluster-from-7-4-10-to-7-4-23.md)
    + 管理AEM Forms {#manage-administer-aem-forms}
@@ -883,9 +883,9 @@ ht-degree: 23%
       + [使用Designer](https://www.adobe.com/go/learn_aemforms_designer_65_tw)
       + [Designer快速入門教學課程](https://www.adobe.com/go/learn_aemforms_designer_quick_start_65)
       + [Designer範例](https://www.adobe.com/go/learn_aemforms_designer_samples_65)
-      + [Designer指令碼基本需知](https://www.adobe.com/go/learn_aemforms_scriptingBasics_65_tw)
-      + [Designer指令碼參考](https://www.adobe.com/go/learn_aemforms_scriptingReference_65_tw)
-      + [Designer FormCalc參考](https://www.adobe.com/go/learn_aemforms_formCalc_65_tw)
+      + [Designer指令碼基本需知](https://www.adobe.com/go/learn_aemforms_scriptingBasics_65)
+      + [Designer指令碼參考](https://www.adobe.com/go/learn_aemforms_scriptingReference_65)
+      + [Designer FormCalc參考](https://www.adobe.com/go/learn_aemforms_formCalc_65)
       + [在HTML5 Forms中使用手寫簽名](/help/forms/using/scribble-signature.md)
       + [在 Designer 中變更頁面零內容](/help/forms/using/changing-page-zero-content-designer.md)
       + 協助工具最佳實務 {#accessibility-best-practices}
@@ -1101,12 +1101,12 @@ ht-degree: 23%
    + 開發人員參考資料 {#developer-reference}
       + [HTML範本語言](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)
       + [用於偵錯最適化表單的AEM外掛程式](https://adobe-consulting-services.github.io/acs-aem-tools/aem-chrome-plugin/adaptive-form/)
-      + [AEM Forms Java API參考](https://helpx.adobe.com/tw/experience-manager/6-5/forms/javadocs/index.html)
-      + [JEE上的AEM Forms Java API參考](https://helpx.adobe.com/tw/experience-manager/6-5/forms/programlc/javadoc/index.html)
+      + [AEM Forms Java API參考](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html)
+      + [JEE上的AEM Forms Java API參考](https://helpx.adobe.com/experience-manager/6-5/forms/programlc/javadoc/index.html)
       + [表單適用於HTML5的Bridge API](/help/forms/using/form-bridge-apis.md)
-      + [最適化Forms的JavaScript資料庫API參考](https://helpx.adobe.com/tw/experience-manager/6-5/forms/javascript-api/index.html)
-      + [組合器服務和DDX參考](https://www.adobe.com/go/learn_aemforms_ddxRef_65_tw)
-      + [Workbench說明](https://www.adobe.com/go/learn_aemforms_workbench_65_tw)
+      + [最適化Forms的JavaScript資料庫API參考](https://helpx.adobe.com/experience-manager/6-5/forms/javascript-api/index.html)
+      + [組合器服務和DDX參考](https://www.adobe.com/go/learn_aemforms_ddxRef_65)
+      + [Workbench說明](https://www.adobe.com/go/learn_aemforms_workbench_65)
       + 使用JEE上的AEM Forms進行程式設計 {#programming-aem-forms-jee}
          + 使用AEM Forms on JEE的程式設計簡介 {#introduction-programming-aem-forms-jee}
             + [Java API快速入門簡介](/help/forms/developing/introducing-java-api-soap-quick.md)
@@ -1405,10 +1405,10 @@ ht-degree: 23%
          + Headless 歷程 {#journeys}
             + Headless 開發人員歷程 {#developer}
                + [了解 AEM 中的 Headless](https://experienceleague.adobe.com/docs/experience-manager-65/content/headless/developer/overview.html)
-               + [了解 CMS Headless 開發](https://experienceleague.adobe.com/docs/experience-manager-65/content/headless/developer/learn-about.html?lang=zh-Hant)
+               + [了解 CMS Headless 開發](https://experienceleague.adobe.com/docs/experience-manager-65/content/headless/developer/learn-about.html)
                + [AEM Headless as a Cloud Service 快速入門](https://experienceleague.adobe.com/docs/experience-manager-65/content/headless/developer/getting-started.html)
                + [踏上使用 AEM Headless 初體驗之路](https://experienceleague.adobe.com/docs/experience-manager-65/content/headless/developer/path-to-first-experience.html)
-               + [如何將您的內容模型化為 AEM 內容模型](https://experienceleague.adobe.com/docs/experience-manager-65/content/headless/developer/model-your-content.html?lang=zh-Hant)
+               + [如何將您的內容模型化為 AEM 內容模型](https://experienceleague.adobe.com/docs/experience-manager-65/content/headless/developer/model-your-content.html)
                + [如何透過 AEM Delivery API 存取您的內容](https://experienceleague.adobe.com/docs/experience-manager-65/content/headless/developer/access-your-content.html)
                + [如何透過 AEM Assets API 更新您的內容](https://experienceleague.adobe.com/docs/experience-manager-65/content/headless/developer/update-your-content.html)
                + [如何整合一切](https://experienceleague.adobe.com/docs/experience-manager-65/content/headless/developer/put-it-all-together.html)
@@ -1427,19 +1427,19 @@ ht-degree: 23%
             + [建立內容片段](/help/sites-developing/headless/getting-started/create-content-fragment.md)
             + [存取及傳遞內容片段](/help/sites-developing/headless/getting-started/create-api-request.md)
          + 內容片段{#content-fragments}
-            + [使用內容片段和 GraphQL 的 Headless 傳遞](https://experienceleague.adobe.com/docs/experience-manager-65/content/assets/content-fragments/content-fragments-graphql.html?lang=zh-Hant)
+            + [使用內容片段和 GraphQL 的 Headless 傳遞](https://experienceleague.adobe.com/docs/experience-manager-65/content/assets/content-fragments/content-fragments-graphql.html)
             + [使用內容片段](https://experienceleague.adobe.com/docs/experience-manager-65/content/assets/content-fragments/content-fragments.html)
             + [為您的執行個體啟用內容片段功能](https://experienceleague.adobe.com/docs/experience-manager-65/content/assets/content-fragments/content-fragments-configuration-browser.html)
             + [內容片段模型](https://experienceleague.adobe.com/docs/experience-manager-65/content/assets/content-fragments/content-fragments-models.html)
             + [管理內容片段](https://experienceleague.adobe.com/docs/experience-manager-65/content/assets/content-fragments/content-fragments-managing.html)
             + [變化 - 編寫片段內容](https://experienceleague.adobe.com/docs/experience-manager-65/content/assets/content-fragments/content-fragments-variations.html)
-            + [Markdown](https://experienceleague.adobe.com/docs/experience-manager-65/content/assets/content-fragments/content-fragments-markdown.html?lang=zh-Hant)
+            + [Markdown](https://experienceleague.adobe.com/docs/experience-manager-65/content/assets/content-fragments/content-fragments-markdown.html)
             + [使用關聯內容](https://experienceleague.adobe.com/docs/experience-manager-65/content/assets/content-fragments/content-fragments-assoc-content.html)
-            + [中繼資料 - 片段屬性](https://experienceleague.adobe.com/docs/experience-manager-65/content/assets/content-fragments/content-fragments-metadata.html?lang=zh-Hant)
+            + [中繼資料 - 片段屬性](https://experienceleague.adobe.com/docs/experience-manager-65/content/assets/content-fragments/content-fragments-metadata.html)
             + [樹狀結構](https://experienceleague.adobe.com/docs/experience-manager-65/content/assets/content-fragments/content-fragments-structure-tree.html)
             + [預覽 - JSON 代表](https://experienceleague.adobe.com/docs/experience-manager-65/content/assets/content-fragments/content-fragments-json-preview.html)
          + 傳送API{#delivery-api}
-            + [Assets HTTP API](https://experienceleague.adobe.com/docs/experience-manager-65/content/assets/extending/mac-api-assets.html?lang=zh-Hant)
+            + [Assets HTTP API](https://experienceleague.adobe.com/docs/experience-manager-65/content/assets/extending/mac-api-assets.html)
             + [內容片段 REST API](https://experienceleague.adobe.com/docs/experience-manager-65/content/assets/extending/assets-api-content-fragments.html)
             + [內容片段GraphQL API](https://experienceleague.adobe.com/docs/experience-manager-65/content/assets/extending/graphql-api-content-fragments.html)
             + [管理GraphQL端點](/help/sites-developing/headless/graphql-api/graphql-endpoint.md)
@@ -1452,7 +1452,7 @@ ht-degree: 23%
          + 通用編輯器 {#universal-editor}
             + [簡介](/help/sites-developing/universal-editor/introduction.md)
       + 混合式與SPA AEM開發 {#spas}
-         + [使用AEM的混合式和SPA](https://business.adobe.com/tw/content/dam/dx/us/en/products/experience-manager/sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
+         + [使用AEM的混合式和SPA](https://business.adobe.com/content/dam/dx/us/en/products/experience-manager/sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
          + [停止支援 SPA 編輯器](/help/sites-developing/spa-editor-deprecation.md)
          + [SPA 簡介和逐步解說](/help/sites-developing/spa-walkthrough.md)
          + [SPA WKND 教學課程](/help/sites-developing/spa-wknd.md)
@@ -1669,3 +1669,4 @@ ht-degree: 23%
       + [WCAG 2.1快速指南](/help/managing/qg-wcag.md)
    + 資料保護 {#data-protection}
       + [AEM 的資料保護與資料隱私權法規整備](/help/managing/data-protection-and-privacy.md)
+
