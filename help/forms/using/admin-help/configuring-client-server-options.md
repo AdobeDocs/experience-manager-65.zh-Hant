@@ -9,9 +9,9 @@ feature: Document Security
 exl-id: fe132f13-5f9a-4c86-a385-0a0026c812e2
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
+source-git-commit: 579c90bb4d8ee8a3b7e633ecc9fb0b797b297ca2
 workflow-type: tm+mt
-source-wordcount: '10334'
+source-wordcount: '10377'
 ht-degree: 0%
 
 ---
@@ -58,6 +58,10 @@ ht-degree: 0%
 **允許延伸驗證**&#x200B;選取以啟用延伸驗證，然後輸入延伸驗證登陸URL。
 
 選取此選項可讓使用者端應用程式使用延伸驗證。 延伸驗證可提供自訂驗證程式，以及在AEM Forms伺服器上設定的不同驗證選項。 例如，使用者現在可以從Acrobat和Reader使用者端體驗SAML型驗證，而非AEM表單使用者名稱/密碼。 依預設，登陸URL包含&#x200B;*localhost*&#x200B;作為伺服器名稱。 以完整主機名稱取代伺服器名稱。 如果尚未啟用延伸驗證，登陸URL中的主機名稱會自動從基礎URL填入。 請參閱[新增延伸驗證提供者](configuring-client-server-options.md#add-the-extended-authentication-provider)。
+
+>[!NOTE]
+>
+> JEE Service Pack 6.5.25.0和更新版本上的AEM Forms提供外部瀏覽器驗證。 如果您使用Service Pack 6.5.24.0或更舊版本，請升級至Service Pack 6.5.25.0或安裝適用的JEE Hotfix修補程式。 請參閱[從外部瀏覽器設定延伸驗證，以獲得Document Security](/help/forms/using/admin-help/configure-external-browser-authentication-document-security.md)。
 
 ***注意&#x200B;**： Apple Mac OS X搭配Adobe Acrobat 11.0.6版及更新版本支援延伸驗證。*
 
