@@ -9,9 +9,9 @@ feature: Document Security
 exl-id: a452674c-aea0-45d6-88cd-438af539d355
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: 98a772829d3568a5826ea9e3ae65760f1587040f
+source-git-commit: 89a07256cd5bb850aac19565ad86273322fa1f31
 workflow-type: tm+mt
-source-wordcount: '986'
+source-wordcount: '1029'
 ht-degree: 1%
 
 ---
@@ -32,7 +32,11 @@ ht-degree: 1%
 
 * JEE上的AEM Forms 6.5已部署Service Pack 6.5.25.0，或Service Pack 6.5.24.0，並在支援的應用程式伺服器（JBoss、WebLogic或WebSphere）上安裝適用的JEE Hotfix修補程式。 檢視AEM Forms JEE Hotfix2的[軟體發佈連結6.5.24.0](#software-distribution-links)。
 * 延伸驗證（協力廠商驗證）已啟用，且可與IDP搭配使用。 請參閱[伺服器組態設定](/help/forms/using/admin-help/configuring-client-server-options.md#server-configuration-settings)和[新增延伸驗證提供者](/help/forms/using/admin-help/configuring-client-server-options.md#add-the-extended-authentication-provider)。
-* 使用最新更新安裝在使用者端Windows電腦上的Adobe Acrobat Pro或Adobe Acrobat Reader （64位元）
+* 使用最新更新安裝在使用者端Windows電腦上的Adobe Acrobat Pro或Adobe Acrobat Reader （64位元）。
+
+>[!NOTE]
+>
+> 外部瀏覽器驗證需要使用者端上的Adobe Acrobat或Adobe Acrobat Reader支援版本。 如需版本詳細資訊和更新，請參閱[Acrobat發行說明（2026年3月連續追蹤）](https://www.adobe.com/devnet-docs/acrobatetk/tools/ReleaseNotesDC/continuous/dccontinuousmarch2026.html#dccontinuousmarchtwentytwentysix)。
 
 ### AEM Forms JEE Hotfix2 6.5.24.0的軟體發佈連結 {#software-distribution-links}
 
@@ -115,7 +119,7 @@ To disable external browser authentication on specific client machines (forcing 
 ### 內嵌瀏覽器會開啟，而非系統瀏覽器 {#embedded-browser-opens-instead-of-system-browser}
 
 * 確認伺服器已啟用外部瀏覽器驗證。 請參閱[啟用外部瀏覽器驗證](#enable-external-browser-authentication)。
-* 確認Acrobat或Reader版本支援此功能。
+* 確認Acrobat或Reader版本支援此功能。 請參閱[Acrobat](#acrobat)。
 
 ### 在瀏覽器中驗證成功，但檔案未解鎖 {#authentication-succeeds-but-document-does-not-unlock}
 
