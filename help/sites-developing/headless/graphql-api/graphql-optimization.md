@@ -7,7 +7,7 @@ feature: Headless,Content Fragments,GraphQL,Persisted Queries,Developing
 role: Admin,Developer
 source-git-commit: f2c92b990a5c09cbcf532e0800e264620d98af77
 workflow-type: tm+mt
-source-wordcount: '1993'
+source-wordcount: '1915'
 ht-degree: 87%
 
 ---
@@ -66,7 +66,7 @@ ht-degree: 87%
 
 **推薦**
 
-[AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant) 是 AEM 服務中的第一層快取，位於 CDN 快取之前。
+[AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) 是 AEM 服務中的第一層快取，位於 CDN 快取之前。
 
 **進一步參考**
 
@@ -84,7 +84,7 @@ ht-degree: 87%
 
 請參閱：
 
-* [在AEM中使用CDN](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant#using-dispatcher-with-a-cdn)
+* [在AEM中使用CDN](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html#using-dispatcher-with-a-cdn)
 
 #### 設定 HTTP 快取控制標頭 {#set-http-cache-control-headers}
 
@@ -135,7 +135,7 @@ Contact Adobe to enable this capability for your AEM Cloud Service program and e
 
 在具備大量共有相同模式內容片段的 AEM 執行個體上，GraphQL 列表查詢費用可能會變得很昂貴 (以資源來說)。
 
-這是因為在 GraphQL 查詢中使用共用一個模式的&#x200B;*所有*&#x200B;片段必須載入記憶體中。 這會消耗時間和記憶體。 篩選 (可能會減少 (最終) 結果集中的項目數量) 只能在&#x200B;**&#x200B;**&#x200B;將整個結果集載入記憶體後應用。
+這是因為在 GraphQL 查詢中使用共用一個模式的&#x200B;*所有*&#x200B;片段必須載入記憶體中。 這會消耗時間和記憶體。 篩選 (可能會減少 (最終) 結果集中的項目數量) 只能在&#x200B;****&#x200B;將整個結果集載入記憶體後應用。
 
 這可能會給人留下這樣的印象，即使是很小的結果集 (也可能) 會導致效能不佳。 然而，實際上緩慢是由初始結果集的大小引起的，因為它必須在套用篩選之前在內部進行處理。
 
@@ -185,11 +185,11 @@ AEM中的GraphQL支援兩種分頁型別：
 
 * [限制/位移型分頁](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#list-offset-limit)
 這用於清單查詢；這些查詢以`List`結尾；例如，`articleList`。
-若要使用，您必須提供第一個要返回項目的位置 (`offset`) 和要返回的項目數 (`limit`，或頁面大小)。
+若要使用它，您必須提供第一個要傳回專案的位置(`offset`)以及要傳回的專案數（`limit`或頁面大小）。
 
 * [以游標為基礎的分頁](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#paginated-first-after) （由`first`和`after`表示）
 這會為每個專案提供唯一的ID；也稱為游標。
-在查詢中，您要指定上一頁最後一項的游標，加上頁面大小 (要返回的最大項目數)。
+在查詢中，您可以指定上一頁最後一個專案的游標，加上頁面大小（要傳回的專案數目上限）。
 
   由於游標式分頁不適合列表式查詢的資料結構，AEM 引入了 `Paginated` 查詢類型；例如，`articlePaginated`。 使用的資料結構和參數需依 [GraphQL 游標連接規格](https://relay.dev/graphql/connections.htm)訂定。
 

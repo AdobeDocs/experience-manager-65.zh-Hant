@@ -11,7 +11,7 @@ feature: Developing
 role: Developer
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
-source-wordcount: '3865'
+source-wordcount: '7653'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 本頁說明Adobe Experience Manager (AEM)可用的所有xtype。
 
-在ExtJS語言中，xtype是指定給類別的符號名稱。 您可以閱讀ExtJS 2[&#128279;](https://www.sencha.com/learn/overview-of-extjs-2)的總覽的「元件XTypes」段落，以取得有關什麼是xtype以及如何使用的詳細說明。
+在ExtJS語言中，xtype是指定給類別的符號名稱。 您可以閱讀ExtJS 2](https://www.sencha.com/learn/overview-of-extjs-2)的[總覽的「元件XTypes」段落，以取得有關什麼是xtype以及如何使用的詳細說明。
 
 如需AEM中所有可用Widget的完整資訊，請參閱[Widget API檔案](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html)。
 
@@ -32,7 +32,7 @@ ht-degree: 0%
 >
 >本頁說明傳統UI中ExtJS xtypes的使用方式。
 >
->Adobe建議您根據[Coral UI](/help/sites-developing/touch-ui-concepts.md#coral-ui)和[Granite UI](/help/sites-developing/touch-ui-concepts.md#granite-ui-foundation-components)，使用標準、現代化、[觸控式UI](/help/sites-developing/touch-ui-concepts.md)。
+>Adobe建議您使用以[Coral UI](/help/sites-developing/touch-ui-concepts.md#coral-ui)和[Granite UI](/help/sites-developing/touch-ui-concepts.md#granite-ui-foundation-components)為基礎的標準、新式、[觸控式UI](/help/sites-developing/touch-ui-concepts.md)。
 
 ## xtype {#xtypes}
 
@@ -108,7 +108,7 @@ ht-degree: 0%
 
   [CQ.wcm.BulkEditorForm](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.BulkEditorForm)
 
-  BulkEditorForm提供[CQ.wcm.BulkEditor](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.BulkEditor)，周圍有HTML表單。 這是[CQ.wcm.BulkEditor](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.BulkEditor)的獨立版本，匯入按鈕需要HTML表單。
+  BulkEditorForm提供HTML表單所包圍的[CQ.wcm.BulkEditor](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.BulkEditor)。 這是[CQ.wcm.BulkEditor](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.BulkEditor)的獨立版本，匯入按鈕需要HTML表單。
 
 * 按鈕
 
@@ -176,7 +176,7 @@ ht-degree: 0%
 
   可支援自動完成、遠端載入、分頁和許多其他功能的下拉式方塊控制項。
 
-  ComboBox的運作方式與傳統HTML&lt;select>欄位類似。 不同之處在於，若要提交[valueField](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.ComboBox)，您必須指定[hiddenName](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.ComboBox)以建立隱藏的輸入。
+  ComboBox的運作方式與傳統HTML &lt;select>欄位類似。 不同之處在於，若要提交[valueField](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.ComboBox)，您必須指定[hiddenName](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.ComboBox)以建立隱藏的輸入。
 
 * 元件
 
@@ -344,7 +344,7 @@ ht-degree: 0%
 
 * feedimporter
 
-  [CQ.wcm.FeedImporter](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.FeedImporter)
+  [cq.wcm.FeedImporter](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.FeedImporter)
 
   FeedImporter可讓使用者匯入RSS或Atom摘要，並為每個摘要專案建立頁面。
 
@@ -382,7 +382,7 @@ ht-degree: 0%
 
   [CQ.Ext.FlashComponent](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.FlashComponent)
 
-* 格線
+* 方格
 
   [CQ.Ext.grid.GridPanel](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.GridPanel)
 
@@ -416,7 +416,7 @@ ht-degree: 0%
 
   [CQ.Ext.form.HtmlEditor](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.HtmlEditor)
 
-  提供輕量HTML編輯器元件。 Safari不支援某些工具列功能，這些功能會在需要時自動隱藏。 這些會在適當的設定選項中註明。
+  提供輕量HTML Editor元件。 Safari不支援某些工具列功能，這些功能會在需要時自動隱藏。 這些會在適當的設定選項中註明。
 
   編輯器的工具列按鈕在[buttonTips](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.HtmlEditor)屬性中定義了工具提示。
 
@@ -476,25 +476,25 @@ ht-degree: 0%
 
 * lvbooleancolumn
 
-  [CQ.Ext.list.BooleanColumn](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.BooleanColumn)
+  [cq.Ext.list.BooleanColumn](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.BooleanColumn)
 
   呈現布林資料欄位的Column定義類別。 如需詳細資訊，請參閱[CQ.Ext.list.Column](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.Column)的[xtype](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.Column)組態選項。
 
 * lvcolumn
 
-  [CQ.Ext.list.Column](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.Column)
+  [cq.Ext.list.Column](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.Column)
 
   此類別封裝要用於[ListView](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.ListView)初始化的資料行組態資料。
 
 * lvdatecolumn
 
-  [CQ.Ext.list.DateColumn](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.DateColumn)
+  [cq.Ext.list.DateColumn](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.DateColumn)
 
   根據預設地區設定或設定的[格式](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.DateColumn)呈現通過日期的Column定義類別。 如需詳細資訊，請參閱[CQ.Ext.list.Column](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.Column)的[xtype](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.Column)組態選項。
 
 * lvnumbercolumn
 
-  [CQ.Ext.list.NumberColumn](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.NumberColumn)
+  [cq.Ext.list.NumberColumn](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.NumberColumn)
 
   根據[格式](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.NumberColumn)字串呈現數值資料欄位的Column定義類別。 如需詳細資訊，請參閱[CQ.Ext.list.Column](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.Column)的[xtype](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.Column)組態選項。
 
@@ -578,9 +578,9 @@ ht-degree: 0%
 
 * offlineimporter
 
-  [CQ.wcm.OfflineImporter](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.OfflineImporter)
+  [cq.wcm.OfflineImporter](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.OfflineImporter)
 
-  OfflineImporter是一種將Microsoft® Word檔案匯入並轉換成AEM頁面的工具。 此功能允許使用文書處理器離線編輯內容。
+  OfflineImporter是一種將® Word檔案匯入並轉換成AEM頁面的工具。 此功能允許使用文書處理器離線編輯內容。
 
 * ownerdraw
 
@@ -594,7 +594,7 @@ ht-degree: 0%
 
   隨著記錄數增加，瀏覽器轉譯記錄所需的時間也會增加。 分頁用於減少與使用者端交換的資料量。
 
-* 面板
+* panel
 
   [CQ.Ext.Panel](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Panel)
 
@@ -604,7 +604,7 @@ ht-degree: 0%
 
 * paragrapherference
 
-  [CQ.form.ParagraphReference](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.ParagraphReference)
+  [cq.form.ParagraphReference](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.ParagraphReference)
 
   段落參考欄位可讓您瀏覽頁面並選取其中一個段落。 它由觸發欄位和關聯的段落瀏覽對話方塊組成。
 
@@ -684,7 +684,7 @@ ht-degree: 0%
 
 * RTF
 
-  [CQ.form.RichText](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.RichText)
+  [CQ.form.Rtf](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.RichText)
 
   RTF提供表單欄位，用於編輯樣式文字資訊(RTF)。
 
@@ -728,7 +728,7 @@ ht-degree: 0%
 
 * Siteimporter
 
-  [CQ.wcm.SiteImporter](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.SiteImporter)
+  [cq.wcm.SiteImporter](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.SiteImporter)
 
   SiteImporter可讓使用者匯入完整的網站並建立初始專案。
 

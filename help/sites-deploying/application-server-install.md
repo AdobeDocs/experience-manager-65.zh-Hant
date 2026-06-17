@@ -11,7 +11,7 @@ feature: Deploying
 role: Admin
 source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
-source-wordcount: '1166'
+source-wordcount: '1186'
 ht-degree: 0%
 
 ---
@@ -27,9 +27,9 @@ ht-degree: 0%
 
 以下應用程式伺服器的安裝步驟已說明：
 
-* [WebSphere](#websphere)
-* [Jboss](#jboss-eap)
-* [oracleWebLogic 12.1.3/12.2](#oracle-weblogic)
+* [WebSphere® 8.5](#websphere)
+* [JBoss® EAP 6.3.0/6.4.0](#jboss-eap)
+* [Oracle WebLogic 12.1.3/12.2](#oracle-weblogic)
 * [Tomcat 8/8.5](#tomcat)
 
 請參閱適當的應用程式伺服器檔案，以取得有關安裝Web應用程式、伺服器設定以及如何啟動和停止伺服器的詳細資訊。
@@ -57,11 +57,11 @@ AEM會以單一war檔案的形式進行部署。
 
 * 執行模式：部署前在AEM war檔案的`WEB-INF/web.xml`檔案中設定`sling.run.modes`引數
 
-* sling.home：在部署前設定AEM war檔案的`WEB-INF/web.xml`檔案中的`sling.home`引數
+* sling.home：部署前先在AEM war檔案的`WEB-INF/web.xml`檔案中設定`sling.home`引數
 
 * 內容根目錄：重新命名AEM war檔案
 
-#### Publish安裝 {#publish-installation}
+#### 發佈安裝 {#publish-installation}
 
 若要部署發佈執行個體，您必須將執行模式設定為發佈：
 
@@ -103,10 +103,10 @@ AEM會以單一war檔案的形式進行部署。
 
 * 讓基本驗證標題通過：
 
-   * 讓AEM驗證使用者身份的一種方法是停用WebSphere®伺服器的全域管理安全性，若要這樣做：請移至[安全性] > [全域安全性]，然後取消勾選[啟用管理安全性]核取方塊，儲存並重新啟動伺服器。
+   * 讓AEM驗證使用者的方法之一是停用WebSphere®伺服器的全域管理安全性，若要這樣做：移至[安全性] > [全域安全性]，然後取消勾選[啟用管理安全性]核取方塊，儲存並重新啟動伺服器。
 
 * 設定`"JAVA_OPTS= -Xmx2048m"`
-* 如果您要使用內容根目錄= /安裝AEM，請變更現有預設Web應用程式的內容根目錄。
+* 如果您想使用內容根目錄= /安裝AEM，請變更現有預設Web應用程式的內容根目錄。
 
 **部署AEM Web應用程式**
 
@@ -144,11 +144,11 @@ AEM會以單一war檔案的形式進行部署。
 
 **部署AEM Web應用程式**
 
-* 在您的JBoss®管理主控台中上傳AEM Web應用程式。
+* 在您的JBoss®管理控制檯中上傳AEM Web應用程式。
 
 * 啟用AEM網頁應用程式。
 
-#### oracleWebLogic 12.1.3/12.2 {#oracle-weblogic}
+#### Oracle WebLogic 12.1.3/12.2 {#oracle-weblogic}
 
 在部署之前，請閱讀上述[一般說明](#general-description)。
 
@@ -191,7 +191,7 @@ AEM會以單一war檔案的形式進行部署。
 
    * 增加VM記憶體設定：
 
-      * 在`bin/catalina.bat` (UNIX®上代表`catalina.sh`)中新增下列設定：
+      * 在`bin/catalina.bat` （UNIX®上代表`catalina.sh`）中新增下列設定：
       * `set "JAVA_OPTS= -Xmx2048m`
 
    * Tomcat在安裝時不會啟用管理員或管理員存取權。 因此，您必須手動編輯`tomcat-users.xml`以允許這些帳戶的存取權：
@@ -213,13 +213,13 @@ AEM會以單一war檔案的形式進行部署。
         </tomcat-users>
         ```
 
-   * 如果您想要以內容根目錄「/」部署AEM，則必須變更現有ROOT Webapp的內容根目錄：
+   * 如果您想要使用內容根目錄「/」部署AEM，則必須變更現有ROOT Web應用程式的內容根目錄：
 
       * 停止和取消部署ROOT Web應用程式
       * 重新命名tomcat webapps資料夾中的ROOT.war資料夾
       * 再次啟動Web應用程式
 
-   * 如果您使用管理員gui安裝AEM Web應用程式，則需要增加上傳檔案的最大大小，因為預設僅允許50MB上傳大小。 針對開啟管理程式Web應用程式的web.xml，
+   * 如果您使用管理員gui安裝AEM Web應用程式，則需要增加已上傳檔案的最大大小，因為預設僅允許50MB上傳大小。 針對開啟管理程式Web應用程式的web.xml，
 
      `webapps/manager/WEB-INF/web.xml`
 
@@ -246,7 +246,7 @@ AEM會以單一war檔案的形式進行部署。
 
    * 如果您要將AEM war檔案部署為根Web應用程式，請將它重新命名為ROOT.war。 如果要將aemauthor重新命名為內容根目錄，請將其重新命名為aemauthor.war。
    * 將其複製到tomcat的webapps資料夾。
-   * 請等待AEM安裝完成。
+   * 等到安裝AEM為止。
 
 ## 疑難排解 {#troubleshooting}
 

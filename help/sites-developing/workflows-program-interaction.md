@@ -11,7 +11,7 @@ feature: Developing
 role: Developer
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
-source-wordcount: '1857'
+source-wordcount: '2057'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ ht-degree: 0%
 
 ## 在ECMA指令碼中取得工作流程物件 {#obtaining-workflow-objects-in-ecma-scripts}
 
-如[尋找指令碼](/help/sites-developing/the-basics.md#locating-the-script)中所述，AEM （透過Apache Sling）提供執行伺服器端ECMA指令碼的ECMA指令碼引擎。 [`org.apache.sling.scripting.core.ScriptHelper`](https://sling.apache.org/apidocs/sling5/org/apache/sling/scripting/core/ScriptHelper.html)類別可立即供您的指令碼做為`sling`變數使用。
+如[尋找指令碼](/help/sites-developing/the-basics.md#locating-the-script)中所述，AEM （透過Apache Sling）提供可執行伺服器端ECMA指令碼的ECMA指令碼引擎。 [`org.apache.sling.scripting.core.ScriptHelper`](https://sling.apache.org/apidocs/sling5/org/apache/sling/scripting/core/ScriptHelper.html)類別可立即供您的指令碼做為`sling`變數使用。
 
 `ScriptHelper`類別可讓您存取最終用來取得`WorkflowSession`物件的`SlingHttpServletRequest`；例如：
 
@@ -98,7 +98,7 @@ REST API支援下列動作：
   </tr>
   <tr>
    <td><code>POST</code></td>
-   <td><p>建立新的工作流程例項。 引數為： <br /> - <code>model</code>：個別工作流程模型<br />的ID (URI) - <code>payloadType</code>：包含承載的型別（例如，<code>JCR_PATH</code>或URL）。<br />承載會以引數<code>payload</code>傳送。 <code>201</code> (<code>CREATED</code>)回應會傳回包含新工作流程執行個體資源URL的位置標頭。</p> </td>
+   <td><p>建立新的工作流程例項。 引數為： <br /> - <code>model</code>：個別工作流程模型<br /> - <code>payloadType</code>的ID (URI)：包含承載的型別（例如，<code>JCR_PATH</code>或URL）。<br /> 承載會以引數<code>payload</code>傳送。 <code>201</code> (<code>CREATED</code>)回應會傳回包含新工作流程執行個體資源URL的位置標頭。</p> </td>
   </tr>
  </tbody>
 </table>
@@ -131,7 +131,7 @@ REST API支援下列動作：
   </tr>
   <tr>
    <td><code>POST</code></td>
-   <td>變更執行個體的狀態。 新狀態會以引數<code>state</code>傳送，而且必須有下列其中一個值： <code>RUNNING</code>、<code>SUSPENDED</code>或<code>ABORTED</code>。<br />如果無法連線到新狀態（例如，暫停已終止的執行個體時），<code>409</code> (<code>CONFLICT</code>)回應會傳回給使用者端。</td>
+   <td>變更執行個體的狀態。 新狀態會以引數<code>state</code>傳送，而且必須有下列其中一個值： <code>RUNNING</code>、<code>SUSPENDED</code>或<code>ABORTED</code>。<br /> 如果無法連線到新狀態（例如，暫停已終止的執行個體時），<code>409</code> (<code>CONFLICT</code>)回應會傳回給使用者端。</td>
   </tr>
  </tbody>
 </table>
@@ -154,7 +154,7 @@ REST API支援下列動作：
   </tr>
   <tr>
    <td><code>POST</code></td>
-   <td>建立新的工作流程模型。 如果傳送引數<code>title</code>，則會以指定的標題建立新模型。 附加JSON模型定義作為引數<code>model</code>時，會根據提供的定義建立新的工作流程模型。<br /> <code>201</code>回應(<code>CREATED</code>)會傳回包含新工作流程模型資源URL的位置標頭。<br />當模型定義附加為名為<code>modelfile</code>的檔案引數時，也會發生相同情況。<br />在<code>model</code>和<code>modelfile</code>引數的情況下，需要名為<code>type</code>的額外引數來定義序列化格式。 可使用OSGI API整合新的序列化格式。 標準JSON序列化程式會與工作流程引擎一併傳送。 其型別為JSON。 如需格式的範例，請參閱下文。</td>
+   <td>建立新的工作流程模型。 如果傳送引數<code>title</code>，則會以指定的標題建立新模型。 將JSON模型定義附加為引數<code>model</code>，會根據提供的定義建立新的工作流程模型。<br /> <code>201</code>回應(<code>CREATED</code>)會傳回包含新工作流程模型資源URL的位置標頭。<br /> 當模型定義附加為名為<code>modelfile</code>.<br />的檔案引數時，也會發生相同的情況 在<code>model</code>和<code>modelfile</code>引數的情況下，需要名為<code>type</code>的額外引數來定義序列化格式。 可使用OSGI API整合新的序列化格式。 標準JSON序列化程式會與工作流程引擎一併傳送。 其型別為JSON。 如需格式的範例，請參閱下文。</td>
   </tr>
  </tbody>
 </table>
@@ -239,7 +239,7 @@ REST API支援下列動作：
   </tr>
   <tr>
    <td><code>PUT</code></td>
-   <td>更新模型的<code>HEAD</code>版本（建立新版本）。<br />新版本模型的完整模型定義必須新增為名為<code>model</code>的引數。 此外，建立新模型時需要<code>type</code>引數，而且需要值為<code>JSON</code>.<br /> </td>
+   <td>更新模型的<code>HEAD</code>版本（建立新版本）。<br /> 新版本模型的完整模型定義必須新增為名為<code>model</code>的引數。 此外，建立新模型時需要<code>type</code>引數，而且需要值為<code>JSON</code>.<br /> </td>
   </tr>
   <tr>
    <td><code>POST</code></td>
@@ -358,7 +358,7 @@ REST API支援下列動作：
   </tr>
   <tr>
    <td><code>POST</code></td>
-   <td>完成其URI作為引數<code>item</code>傳送的工作專案，並將相應的工作流程執行個體前進到下一個節點，如果回到步驟，則由引數<code>route</code>或<code>backroute</code>定義。<br />如果傳送引數<code>delegatee</code>，則引數<code>item</code>所識別的工作專案會委派給指定的參與者。</td>
+   <td>完成其URI作為引數<code>item</code>傳送的工作專案，並將相應的工作流程執行個體前進到下一個節點，如果回到步驟，則由引數<code>route</code>或<code>backroute</code>定義。<br /> 如果傳送引數<code>delegatee</code>，則引數<code>item</code>所識別的工作專案會委派給指定的參與者。</td>
   </tr>
  </tbody>
 </table>
@@ -377,7 +377,7 @@ REST API支援下列動作：
 
 ### 如何取得所有執行中工作流程的清單及其ID {#how-to-get-a-list-of-all-running-workflows-with-their-ids}
 
-若要取得所有執行中的工作流程清單，請執行GET：
+若要取得所有正在執行的工作流程清單，請前往：
 
 `http://localhost:4502/etc/workflow/instances.RUNNING.json`
 
@@ -425,7 +425,7 @@ curl -u admin:admin -d "action=UPDATE&workflowTitle=myWorkflowTitle" http://loca
 
 ### 如何列出所有工作流程模型 {#how-to-list-all-workflow-models}
 
-若要取得所有可用工作流程模型的清單，請執行GET：
+若要取得所有可用工作流程模型的清單，請前往：
 
 `http://localhost:4502/etc/workflow/models.json`
 
@@ -566,7 +566,7 @@ curl -u admin:admin -X DELETE http://localhost:4502/etc/workflow/models/{id}
 
 此引數可設為`true`，以表示系統工作流程應從相關結果中排除。
 
-您[可以更新OSGi設定](/help/sites-deploying/configuring-osgi.md) **AdobeGranite工作流程PayloadMapCache**，該設定將工作流程`Models`指定為系統工作流程。 預設（執行階段）工作流程模型為：
+您[可以更新OSGi設定](/help/sites-deploying/configuring-osgi.md) **Adobe Granite工作流程PayloadMapCache**，該設定將工作流程`Models`指定為系統工作流程。 預設（執行階段）工作流程模型為：
 
 * `/var/workflow/models/scheduled_activation/jcr:content/model`
 * `/var/workflow/models/scheduled_deactivation/jcr:content/model`
