@@ -11,7 +11,7 @@ feature: Adaptive Forms
 role: Admin, User, Developer
 source-git-commit: e821be5233fd5f6688507096790d219d25903892
 workflow-type: tm+mt
-source-wordcount: '545'
+source-wordcount: '550'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->您也可以使用&#x200B;**[!UICONTROL 透過電子郵件傳送PDF]**&#x200B;選項，以電子郵件傳送完成的表單作為PDF附件。 此動作可用的組態選項與&#x200B;**[!UICONTROL 傳送電子郵件]**&#x200B;動作可用的選項相同。 電子郵件PDF動作僅適用於XFA型最適化表單
+>您也可以使用&#x200B;**[!UICONTROL 透過電子郵件傳送PDF]**&#x200B;選項，將完成的表單透過電子郵件傳送為PDF附件。 此動作可用的組態選項與&#x200B;**[!UICONTROL 傳送電子郵件]**&#x200B;動作可用的選項相同。 電子郵件PDF動作僅適用於XFA型最適化表單
 
 ## 傳送電子郵件動作 {#email-action}
 
@@ -36,7 +36,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->若要使用[傳送電子郵件]動作，您必須依照[設定郵件服務](/help/sites-administering/notification.md#configuring-the-mail-service)中的說明設定AEM郵件服務。
+>若要使用「傳送電子郵件」動作，您必須依照[設定郵件服務](/help/sites-administering/notification.md#configuring-the-mail-service)中的說明設定AEM郵件服務。
 
 ### 在最適化表單上啟用「傳送電子郵件」動作 {#enabling-email-action-on-an-adaptive-form}
 

@@ -11,7 +11,7 @@ feature: Developing
 role: Developer
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '557'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ AEM提供的服務可讓您設定和控制Cookie在網頁中的使用方式：
 
 ## 設定允許的Cookie {#configuring-allowed-cookies}
 
-設定AdobeGranite選擇退出服務，指定如何在您的網頁上使用Cookie。 下表說明您可以設定的特性。
+設定Adobe Granite選擇退出服務，指定在網頁上使用Cookie的方式。 下表說明您可以設定的特性。
 
 若要設定服務，您可以使用[網頁主控台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)或[新增OSGi設定到存放庫](/help/sites-deploying/configuring-osgi.md#adding-a-new-configuration-to-the-repository)。 下表說明任一方法所需的特性。 對於OSGi設定，服務PID為`com.adobe.granite.optout`。
 
@@ -39,7 +39,7 @@ AEM提供的服務可讓您設定和控制Cookie在網頁中的使用方式：
 
 ## 驗證Cookie使用方式 {#validating-cookie-usage}
 
-使用使用者端JavaScript來呼叫AdobeGranite選擇退出服務，以確認您可以使用Cookie。 使用Granite.OptOutUtil JavaScript物件來執行下列任何工作：
+使用使用者端JavaScript來呼叫Adobe Granite選擇退出服務，確認您可使用Cookie。 使用Granite.OptOutUtil JavaScript物件來執行下列任何工作：
 
 * 取得Cookie名稱清單，該清單指出使用者不同意將Cookie用於追蹤目的。
 * 取得可用的Cookie清單。

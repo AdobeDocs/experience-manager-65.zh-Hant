@@ -7,7 +7,7 @@ feature: Headless,Content Fragments,GraphQL,Persisted Queries,Developing
 role: Admin,Developer
 source-git-commit: f2c92b990a5c09cbcf532e0800e264620d98af77
 workflow-type: tm+mt
-source-wordcount: '1993'
+source-wordcount: '1915'
 ht-degree: 87%
 
 ---
@@ -185,11 +185,11 @@ AEM中的GraphQL支援兩種分頁型別：
 
 * [限制/位移型分頁](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#list-offset-limit)
 這用於清單查詢；這些查詢以`List`結尾；例如，`articleList`。
-若要使用，您必須提供第一個要返回項目的位置 (`offset`) 和要返回的項目數 (`limit`，或頁面大小)。
+若要使用它，您必須提供第一個要傳回專案的位置(`offset`)以及要傳回的專案數（`limit`或頁面大小）。
 
 * [以游標為基礎的分頁](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#paginated-first-after) （由`first`和`after`表示）
 這會為每個專案提供唯一的ID；也稱為游標。
-在查詢中，您要指定上一頁最後一項的游標，加上頁面大小 (要返回的最大項目數)。
+在查詢中，您可以指定上一頁最後一個專案的游標，加上頁面大小（要傳回的專案數目上限）。
 
   由於游標式分頁不適合列表式查詢的資料結構，AEM 引入了 `Paginated` 查詢類型；例如，`articlePaginated`。 使用的資料結構和參數需依 [GraphQL 游標連接規格](https://relay.dev/graphql/connections.htm)訂定。
 

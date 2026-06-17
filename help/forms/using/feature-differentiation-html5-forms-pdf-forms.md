@@ -1,6 +1,6 @@
 ---
-title: HTML5表單與PDF forms之間的功能差異
-description: 瞭解HTML5表單與PDF forms之間的功能差異。
+title: HTML5 表單和 PDF 表單之間的功能差異
+description: 瞭解HTML5 Forms和PDF forms之間的功能差異。
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -12,20 +12,20 @@ solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '447'
-ht-degree: 2%
+source-wordcount: '450'
+ht-degree: 6%
 
 ---
 
-# HTML5表單與PDF forms之間的功能差異 {#feature-differentiation-between-html-forms-and-pdf-forms}
+# HTML5 表單和 PDF 表單之間的功能差異 {#feature-differentiation-between-html-forms-and-pdf-forms}
 
-下表指定為HTML5表單和PDF forms所提供的功能支援：
+下表指定為HTML5 Forms和PDF forms提供的功能支援：
 
 <table>
  <tbody>
   <tr>
    <th>功能</th>
-   <th>HTML5 Forms</th>
+   <th>HTML5 表單</th>
    <th>PDF</th>
   </tr>
   <tr>
@@ -50,12 +50,12 @@ ht-degree: 2%
   </tr>
   <tr>
    <td>分頁<br /> </td>
-   <td><p>HTML5表單會分成面板和方塊，以提供類似於PDF forms的外觀。 頁面大小會以動態方式計算。 如果HTML5表單中頁面的所有內容已刪除或標籤為隱藏，則會隱藏空白頁面。 空白頁面上方和下方頁面之間不會顯示空白字元（空格）。</p> <p>如果資料合併或指令碼新增內容至頁面，則頁面長度會展開以容納新新增的內容。 不會將任何新頁面新增至表單，以容納新新增的內容。 </p> <p><strong>注意：</strong>當HTML5表單中某個頁面的所有內容被刪除或標籤為隱藏時，空白頁面（空格）在第一頁和第二頁之間保持可見，但在任何其他頁面之間則不會顯示。</p> </td>
-   <td>PDF中的分頁取決於合併的資料內容或使用者內容，而頁面計數會據此增加/減少。</td>
+   <td><p>HTML5表單會分成多個面板和方塊，以提供類似於PDF forms的外觀。 頁面大小會以動態方式計算。 如果HTML5表單中頁面的所有內容已刪除或標籤為隱藏，則會隱藏空白頁面。 空白頁面上方和下方頁面之間不會顯示空白字元（空格）。</p> <p>如果資料合併或指令碼新增內容至頁面，則頁面長度會展開以容納新新增的內容。 不會將任何新頁面新增至表單，以容納新新增的內容。 </p> <p><strong>注意：</strong>當HTML5表單中某個頁面的所有內容被刪除或標籤為隱藏時，在第一頁和第二頁之間會保持可見的空白頁面（空格），但在其他任何頁面之間則不會保持可見。</p> </td>
+   <td>PDF中的分頁視合併的資料內容或使用者內容而定，頁面計數會據此增加/減少。</td>
   </tr>
   <tr>
    <td>頁首/頁尾 </td>
-   <td>支援。 <br /> <br />由於HTML5行動表單不支援分頁，所以頁首和頁尾只會出現一次。 不過，您可以在版面中設定這些引數，使其顯示在行動表單預覽中的多個位置。<br /> </td>
+   <td>支援。<br /> <br /> 由於HTML5行動表單不支援分頁，所以頁首和頁尾只會出現一次。 不過，您可以在版面中設定這些引數，使其顯示在行動表單預覽中的多個位置。<br /> </td>
    <td>支援。</td>
   </tr>
   <tr>
@@ -71,7 +71,7 @@ ht-degree: 2%
   <tr>
    <td>Acrobat指令碼API </td>
    <td>HTML5表單支援最常用的API。 如需詳細資訊，請參閱<a href="/help/forms/using/scripting-support.md">指令碼支援</a>。</td>
-   <td>如果PDF檔案是在Acrobat或Reader中開啟，它也支援Acrobat提供的所有指令碼API。</td>
+   <td>如果在Acrobat或Reader中開啟PDF檔案，也支援Acrobat提供的所有指令碼API。</td>
   </tr>
   <tr>
    <td>支援由右至左語言 </td>
