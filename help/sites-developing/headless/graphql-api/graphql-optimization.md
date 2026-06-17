@@ -66,7 +66,7 @@ ht-degree: 87%
 
 **推薦**
 
-[AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) 是 AEM 服務中的第一層快取，位於 CDN 快取之前。
+[AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant) 是 AEM 服務中的第一層快取，位於 CDN 快取之前。
 
 **進一步參考**
 
@@ -84,7 +84,7 @@ ht-degree: 87%
 
 請參閱：
 
-* [在AEM中使用CDN](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html#using-dispatcher-with-a-cdn)
+* [在AEM中使用CDN](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant#using-dispatcher-with-a-cdn)
 
 #### 設定 HTTP 快取控制標頭 {#set-http-cache-control-headers}
 
@@ -135,7 +135,7 @@ Contact Adobe to enable this capability for your AEM Cloud Service program and e
 
 在具備大量共有相同模式內容片段的 AEM 執行個體上，GraphQL 列表查詢費用可能會變得很昂貴 (以資源來說)。
 
-這是因為在 GraphQL 查詢中使用共用一個模式的&#x200B;*所有*&#x200B;片段必須載入記憶體中。 這會消耗時間和記憶體。 篩選 (可能會減少 (最終) 結果集中的項目數量) 只能在&#x200B;****&#x200B;將整個結果集載入記憶體後應用。
+這是因為在 GraphQL 查詢中使用共用一個模式的&#x200B;*所有*&#x200B;片段必須載入記憶體中。 這會消耗時間和記憶體。 篩選 (可能會減少 (最終) 結果集中的項目數量) 只能在&#x200B;**&#x200B;**&#x200B;將整個結果集載入記憶體後應用。
 
 這可能會給人留下這樣的印象，即使是很小的結果集 (也可能) 會導致效能不佳。 然而，實際上緩慢是由初始結果集的大小引起的，因為它必須在套用篩選之前在內部進行處理。
 
