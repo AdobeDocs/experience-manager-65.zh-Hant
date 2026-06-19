@@ -9,9 +9,9 @@ exl-id: 3df90511-e43e-442b-bf73-44c22c1886b7
 solution: Experience Manager
 feature: Communities
 role: Developer
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 1c2c350e91fe9a0a67618ea4ec00d4a8b4e3f0ca
 workflow-type: tm+mt
-source-wordcount: '118'
+source-wordcount: '123'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 ## 概觀 {#overview}
 
-除此之外，Adobe Experience Manager (AEM) Communities檔案的本節還有：
+除此之外，Adobe Experience Manager (AEM) Communities檔案的本節內容還有：
 
 * [使用Apache Maven建置AEM專案](../../help/sites-developing/ht-projects-maven.md)。
 
@@ -36,7 +36,7 @@ ht-degree: 0%
 >
 >請參閱[最新版本](deploy-communities.md#latest-releases)區段，您可在此區段中識別最新版本。
 
-## Maven相依性範例 {#maven-dependency-example}
+## Maven相依性範例
 
 ```xml
 <dependency>
@@ -87,7 +87,7 @@ Ensure thet the version specified corresponds with the Communities package versi
 >
 >Visit the [Latest Releases](deploy-communities.md#latest-releases) section to identify the most recent version.
 
-## Maven Dependency Example {#maven-dependency-example}
+## Maven Dependency Example
 
 The Communities API jar must be specified before the Uber API jar.
 
