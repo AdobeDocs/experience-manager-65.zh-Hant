@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: 使用Adobe Experience Manager 6.5檔案瞭解其運作方式，以及軟體可為您做哪些事。
 breadcrumb-title: 使用手冊
 user-guide-title: AEM 6.5
-source-git-commit: 6af329d2faa778c3cdbb83854fb36066242e14d5
+source-git-commit: ec3941675081255879065c3be9d5af77474b2072
 workflow-type: tm+mt
-source-wordcount: '8279'
+source-wordcount: '8286'
 ht-degree: 23%
 
 ---
@@ -564,6 +564,7 @@ ht-degree: 23%
          + [在JBoss叢集上的JEE上設定Adobe Experience Manager Forms](https://www.adobe.com/go/learn_aemforms_clusterJBoss_65_tw)
          + [在WebSphere叢集上的JEE上設定Adobe Experience Manager Forms](https://www.adobe.com/go/learn_aemforms_clusterWebSphere_65_tw)
          + [在WebLogic叢集上的JEE上設定Adobe Experience Manager Forms](https://www.adobe.com/go/learn_aemforms_clusterWebLogic_65_tw)
+         + [緩解AEM Forms JEE中的序列化問題](/help/forms/using/mitigating-serialization-issues-forms-jee.md)
       + 設定 AEM Forms {#configure-aem-forms}
          + [AEM Forms 伺服器的效能調整](/help/forms/using/performance-tuning-aem-forms.md)
          + [設定最適化表單快取](/help/forms/using/configure-adaptive-forms-cache.md)
@@ -1435,7 +1436,7 @@ ht-degree: 23%
             + [變化 - 編寫片段內容](https://experienceleague.adobe.com/docs/experience-manager-65/content/assets/content-fragments/content-fragments-variations.html?lang=zh-Hant)
             + [Markdown](https://experienceleague.adobe.com/docs/experience-manager-65/content/assets/content-fragments/content-fragments-markdown.html?lang=zh-Hant)
             + [使用關聯內容](https://experienceleague.adobe.com/docs/experience-manager-65/content/assets/content-fragments/content-fragments-assoc-content.html?lang=zh-Hant)
-            + [中繼資料 - 片段屬性](https://experienceleague.adobe.com/docs/experience-manager-65/content/assets/content-fragments/content-fragments-metadata.html?lang=zh-Hant)
+            + [中繼資料 - 片段屬性](https://experienceleague.adobe.com/docs/experience-manager-65/content/assets/content-fragments/content-fragments-metadata.html)
             + [樹狀結構](https://experienceleague.adobe.com/docs/experience-manager-65/content/assets/content-fragments/content-fragments-structure-tree.html?lang=zh-Hant)
             + [預覽 - JSON 代表](https://experienceleague.adobe.com/docs/experience-manager-65/content/assets/content-fragments/content-fragments-json-preview.html?lang=zh-Hant)
          + 傳送API{#delivery-api}
