@@ -11,7 +11,7 @@ feature: Developing,Tagging
 role: Developer
 source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
 workflow-type: tm+mt
-source-wordcount: '2452'
+source-wordcount: '2466'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ Granite標籤庫包含有用的函式。
 <%@taglib prefix="sling" uri="https://sling.apache.org/taglibs/sling" %>
 ```
 
-### &lt;ui：includeClientLib> {#ui-includeclientlib}
+### &lt;ui:includeClientLib> {#ui-includeclientlib}
 
 `<ui:includeClientLib>`標籤包含AEM html使用者端資料庫，可以是js、css或主題資料庫。 對於不同型別的多個包含專案（例如js和css），此標籤必須在jsp中多次使用。 此標籤是` [com.adobe.granite.ui.clientlibs.HtmlLibraryManager](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/ui/clientlibs/HtmlLibraryManager.html)`服務介面的便利包裝函式。
 
@@ -98,7 +98,7 @@ CQ標籤庫包含有用的函式。
 
 它會宣告sling、CQ和jstl taglibs，並公開[`<cq:defineObjects />`](#amp-lt-cq-defineobjects)標籤所定義的定期使用指令碼物件。 這縮短並簡化元件的jsp程式碼。
 
-### &lt;cq：text> {#cq-text}
+### &lt;cq:text> {#cq-text}
 
 `<cq:text>`標籤是便利的標籤，可在JSP中輸出元件文字。
 
@@ -156,7 +156,7 @@ CQ標籤庫包含有用的函式。
 <cq:text property="text" tagClass="text"/>
 ```
 
-### &lt;cq：setContentBundle> {#cq-setcontentbundle}
+### &lt;cq:setContentBundle> {#cq-setcontentbundle}
 
 `<cq:setContentBundle>`標籤會建立i18n本地化內容，並將其儲存在`javax.servlet.jsp.jstl.fmt.localizationContext`設定變數中。
 
@@ -203,7 +203,7 @@ CQ標籤庫包含有用的函式。
 </div> ...
 ```
 
-### &lt;cq：include> {#cq-include}
+### &lt;cq:include> {#cq-include}
 
 `<cq:include>`標籤包含進入目前頁面的資源。
 
@@ -253,11 +253,11 @@ CQ標籤庫包含有用的函式。
 * 開發AEM元件時，Adobe建議您使用`<cq:include>`。
 * `<cq:include>`可讓您在使用script屬性時，直接依名稱包含指令碼檔案。 這會將元件和資源型別繼承列入考量，且通常比使用選擇器和擴充功能嚴格遵守Sling的指令碼解析更簡單。
 
-### &lt;cq：includeClientLib> {#cq-includeclientlib}
+### &lt;cq:includeClientLib> {#cq-includeclientlib}
 
 >[!CAUTION]
 >
->`<cq:includeClientLib>`自AEM 5.6起已過時。應改用[`<ui:includeClientLib>`](/help/sites-developing/taglib.md#ui-includeclientlib)。
+>`<cq:includeClientLib>`自AEM 5.6起已棄用。 應該改用[`<ui:includeClientLib>`](/help/sites-developing/taglib.md#ui-includeclientlib)。
 
 `<cq:includeClientLib>`標籤包含AEM html使用者端資料庫，可以是js、css或主題資料庫。 對於不同型別的多個包含專案（例如js和css），此標籤必須在jsp中多次使用。 此標籤是`com.day.cq.widget.HtmlLibraryManager`服務介面的便利包裝函式。
 
@@ -297,13 +297,13 @@ CQ標籤庫包含有用的函式。
 <cq:includeClientLib css="cq.collab.calendar, cq.security" />
 ```
 
-### &lt;cq：defineObjects> {#cq-defineobjects}
+### &lt;cq:defineObjects> {#cq-defineobjects}
 
 `<cq:defineObjects>`標籤會公開下列定期使用的指令碼物件，以供開發人員參考。 它也會公開[`<sling:defineObjects>`](#amp-lt-sling-defineobjects)標籤所定義的物件。
 
 **componentContext**
 
-* 請求的目前元件內容物件(com.day.cq.wcm.api.components.ComponentContext介面)。
+* 請求的目前元件內容物件（com.day.cq.wcm.api.components.ComponentContext介面）。
 
 **元件**
 
@@ -311,27 +311,27 @@ CQ標籤庫包含有用的函式。
 
 **currentDesign**
 
-* 目前頁面的目前設計物件(com.day.cq.wcm.api.designer.Design介面)。
+* 目前頁面的目前設計物件（com.day.cq.wcm.api.designer.Design介面）。
 
 **currentPage**
 
-* 目前的AEM WCM頁面物件(com.day.cq.wcm.api.Page介面)。
+* 目前的AEM WCM頁面物件（com.day.cq.wcm.api.Page介面）。
 
 **currentStyle**
 
-* 目前儲存格的目前樣式物件(com.day.cq.wcm.api.designer.Style介面)。
+* 目前儲存格的目前樣式物件（com.day.cq.wcm.api.designer.Style介面）。
 
 **設計工具**
 
-* 用來存取設計資訊的設計工具物件(com.day.cq.wcm.api.designer.Designer介面)。
+* 用來存取設計資訊的設計工具物件（com.day.cq.wcm.api.designer.Designer介面）。
 
 **editContext**
 
-* AEM元件的編輯內容物件(com.day.cq.wcm.api.components.EditContext介面)。
+* AEM元件的編輯內容物件（com.day.cq.wcm.api.components.EditContext介面）。
 
 **pageManager**
 
-* 頁面層級作業的頁面管理員物件(com.day.cq.wcm.api.PageManager介面)。
+* 頁面層級作業的頁面管理員物件（com.day.cq.wcm.api.PageManager介面）。
 
 **pageProperties**
 
@@ -343,11 +343,11 @@ CQ標籤庫包含有用的函式。
 
 **resourceDesign**
 
-* 資源頁面的設計物件(com.day.cq.wcm.api.designer.Design介面)。
+* 資源頁面的設計物件（com.day.cq.wcm.api.designer.Design介面）。
 
 **resourcePage**
 
-* 資源頁面物件(com.day.cq.wcm.api.Page介面)。
+* 資源頁面物件（com.day.cq.wcm.api.Page介面）。
 * 它具有下列屬性：
 
 **requestName**
@@ -439,7 +439,7 @@ CQ標籤庫包含有用的函式。
 >
 >當`/libs/foundation/global.jsp`檔案包含在指令碼中時，會自動包含`<cq:defineObjects />`標籤。
 
-### &lt;cq：requestURL> {#cq-requesturl}
+### &lt;cq:requestURL> {#cq-requesturl}
 
 `<cq:requestURL>`標籤會將目前的請求URL寫入JspWriter。 兩個標籤[`<cq:addParam>`](#amp-lt-cq-addparam)和[`<cq:removeParam>`](#amp-lt-cq-removeparam)和可以在此標籤內文中使用，以便在寫入前修改目前的要求URL。
 
@@ -461,7 +461,7 @@ CQ標籤庫包含有用的函式。
 <a title="filter results" href="<cq:requestURL><cq:addParam name="language" value="${bucket.value}"/></cq:requestURL>">${label} (${bucket.count})</a>
 ```
 
-### &lt;cq：addParam> {#cq-addparam}
+### &lt;cq:addParam> {#cq-addparam}
 
 `<cq:addParam>`標籤會將具有指定名稱和值的要求引數新增至結尾的[`<cq:requestURL>`](#amp-lt-cq-requesturl)標籤。
 
@@ -481,7 +481,7 @@ CQ標籤庫包含有用的函式。
 <a title="filter results" href="<cq:requestURL><cq:addParam name="language" value="${bucket.value}"/></cq:requestURL>">${label} (${bucket.count})</a>
 ```
 
-### &lt;cq：removeParam> {#cq-removeparam}
+### &lt;cq:removeParam> {#cq-removeparam}
 
 `<cq:removeParam>`標籤會從封閉[`<cq:requestURL>`](#amp-lt-cq-requesturl)標籤中移除具有指定名稱和值的要求引數。 如果未提供值，則會移除具有指定名稱的所有引數。
 
@@ -511,7 +511,7 @@ Sling標籤資料庫包含實用的Sling函式。
 >
 >當`/libs/foundation/global.jsp`檔案包含在指令碼中時，會自動宣告sling taglib。
 
-### &lt;sling：include> {#sling-include}
+### &lt;sling:include> {#sling-include}
 
 `<sling:include>`標籤包含進入目前頁面的資源。
 
@@ -576,7 +576,7 @@ Sling標籤資料庫包含實用的Sling函式。
 <sling:include replaceSelectors="content" />
 ```
 
-### &lt;sling：defineObjects> {#sling-defineobjects}
+### &lt;sling:defineObjects> {#sling-defineobjects}
 
 `<sling:defineObjects>`標籤會公開下列定期使用的指令碼物件，以供開發人員參考：
 
@@ -586,8 +586,8 @@ Sling標籤資料庫包含實用的Sling函式。
 
 **slingResponse**
 
-* SlingHttpServletResponse物件，可存取伺服器所建立的HTTP回應。 這與它延伸的HttpServletResponse相同。**要求**
-* 純HttpServletRequest的標準JSP要求物件。**回應**
+* SlingHttpServletResponse物件，可存取伺服器所建立的HTTP回應。 這與它延伸的HttpServletResponse相同。**request**
+* 標準JSP要求物件，它是純HttpServletRequest。**回應**
 * 標準JSP回應物件，純HttpServletResponse。
 
 **resourceResolver**
