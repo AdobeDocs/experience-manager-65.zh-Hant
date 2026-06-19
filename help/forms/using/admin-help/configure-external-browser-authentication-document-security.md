@@ -44,25 +44,25 @@ JEE Service Pack 6.5.25.0和更新版本上的AEM Forms提供外部瀏覽器驗�
 
 如果您使用JEE Service Pack 6.5.24.0或更舊版本的AEM Forms，請執行下列任一項作業：
 
-* 升級至JEE Service Pack 6.5.25.0[&#128279;](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.25.0.zip)上的AEM Forms。
+* 升級至JEE Service Pack 6.5.25.0](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.25.0.zip)上的[AEM Forms。
 * 使用以下連結，為您的應用程式伺服器和平台安裝AEM Forms JEE Hotfix 6.5.24.0修補程式。
 
 從[AEM Forms Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)下載並安裝您平台的Adobe JEE Hotfix 6.5.24.0修補程式：
 
 **JBoss**
 
-* Windows：適用於JBoss JEE伺服器[&#128279;](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-24-0-hotfix-02/jboss/adobe-aem-forms-jee-hotfix2-6.5.24.0-win-jboss.zip)的Windows上AEM Service Pack 6.5.24.0的Hotfix
-* Linux：適用於JBoss JEE伺服器[&#128279;](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-24-0-hotfix-02/jboss/adobe-aem-forms-jee-hotfix2-6.5.24.0-linux-jboss.tar.gz)的Linux上AEM Service Pack 6.5.24.0的Hotfix
+* Windows：適用於JBoss JEE伺服器](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-24-0-hotfix-02/jboss/adobe-aem-forms-jee-hotfix2-6.5.24.0-win-jboss.zip)的Windows上AEM Service Pack 6.5.24.0的[Hotfix
+* Linux：適用於JBoss JEE伺服器](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-24-0-hotfix-02/jboss/adobe-aem-forms-jee-hotfix2-6.5.24.0-linux-jboss.tar.gz)的Linux上AEM Service Pack 6.5.24.0的[Hotfix
 
 **WebSphere**
 
-* Windows：適用於WebSphere JEE伺服器[&#128279;](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-24-0-hotfix-02/websphere/adobe-aem-forms-jee-hotfix2-6.5.24.0-win-websphere.zip)的Windows上AEM Service Pack 6.5.24.0的Hotfix
-* Linux：適用於WebSphere JEE伺服器[&#128279;](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-24-0-hotfix-02/websphere/adobe-aem-forms-jee-hotfix2-6.5.24.0-linux-websphere.tar.gz)的Linux上AEM Service Pack 6.5.24.0的Hotfix
+* Windows：適用於WebSphere JEE伺服器](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-24-0-hotfix-02/websphere/adobe-aem-forms-jee-hotfix2-6.5.24.0-win-websphere.zip)的Windows上AEM Service Pack 6.5.24.0的[Hotfix
+* Linux：適用於WebSphere JEE伺服器](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-24-0-hotfix-02/websphere/adobe-aem-forms-jee-hotfix2-6.5.24.0-linux-websphere.tar.gz)的Linux上AEM Service Pack 6.5.24.0的[Hotfix
 
 **WebLogic**
 
-* Windows：適用於WebLogic JEE伺服器[&#128279;](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-24-0-hotfix-02/weblogic/adobe-aem-forms-jee-hotfix2-6.5.24.0-win-weblogic.zip)的Windows上AEM Service Pack 6.5.24.0的Hotfix
-* Linux：適用於WebLogic JEE伺服器[&#128279;](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-24-0-hotfix-02/weblogic/adobe-aem-forms-jee-hotfix2-6.5.24.0-linux-weblogic.tar.gz)的Linux上AEM Service Pack 6.5.24.0的Hotfix
+* Windows：適用於WebLogic JEE伺服器](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-24-0-hotfix-02/weblogic/adobe-aem-forms-jee-hotfix2-6.5.24.0-win-weblogic.zip)的Windows上AEM Service Pack 6.5.24.0的[Hotfix
+* Linux：適用於WebLogic JEE伺服器](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-24-0-hotfix-02/weblogic/adobe-aem-forms-jee-hotfix2-6.5.24.0-linux-weblogic.tar.gz)的Linux上AEM Service Pack 6.5.24.0的[Hotfix
 
 如需安裝指示，請參閱[安裝JEE修補程式](/help/release-notes/jee-patch-installer-65.md)。
 
