@@ -19,7 +19,7 @@ ht-degree: 0%
 
 在「通訊管理」中，信函範本包含典型的表單欄位、版面配置功能（如頁首和頁尾）以及用於置入內容的空白「目標區域」。
 
-通訊管理在[AEM Forms附加元件套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en)中提供信件範本。 您可以根據品牌和業務需求在Designer中自訂範本。 此套件包含下列範本：
+通訊管理在[AEM Forms附加元件套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=zh-Hant)中提供信件範本。 您可以根據品牌和業務需求在Designer中自訂範本。 此套件包含下列範本：
 
 * Classic
 * Classic簡單
