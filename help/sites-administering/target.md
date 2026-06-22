@@ -9,9 +9,9 @@ exl-id: 2b17d8cd-a43c-4d54-b990-a6f0cb1db22b
 solution: Experience Manager, Experience Manager Sites
 feature: Administering,Personalization
 role: Admin
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+source-git-commit: f6e1e28d6fbfc240a46c2c69f02c9c5fda1d0d0d
 workflow-type: tm+mt
-source-wordcount: '567'
+source-wordcount: '618'
 ht-degree: 1%
 
 ---
@@ -29,11 +29,11 @@ ht-degree: 1%
 
 若要與Target整合，請執行下列工作：
 
-1. [執行必要工作](/help/sites-administering/target-requirements.md)：向Adobe Target註冊並設定AEM編寫執行個體的某些方面。 您的Adobe Target帳戶必須至少具有&#x200B;**核准者**&#x200B;層級的許可權。 此外，您必須保護發佈節點上的活動設定，讓使用者無法存取。
+1. [執行必要工作](/help/sites-administering/target-requirements.md)：向Adobe Target註冊並設定AEM作者執行個體的某些方面。 您的Adobe Target帳戶必須至少具有&#x200B;**核准者**&#x200B;層級許可權。 此外，您必須保護發佈節點上的活動設定，讓使用者無法存取。
 
 1. 可以：
 
-   1. [選擇加入Adobe Target](/help/sites-administering/opt-in.md)：選擇加入精靈會考量您的Target帳戶資訊，並建立Adobe Target雲端設定和Target架構。 精靈也會將您的網站與Target架構建立關聯。 如果精靈無法連線到目標，請參閱[連線疑難排解](/help/sites-administering/target-configuring.md#troubleshooting-target-connection-problems)區段。 您可以[修改預設雲端設定](/help/sites-administering/target-configuring.md#modifying-the-opt-in-wizard-configurations)：如有必要，請修改選擇加入精靈建立的雲端設定和架構。 例如，修改框架以傳送其他內容資料至Target。 如果您想要使用Adobe Analytics做為Adobe Target的報表來源，您需要修改雲端設定以指向A4T設定。
+   1. [選擇加入Adobe Target](/help/sites-administering/opt-in.md)：選擇加入精靈會考量您的Target帳戶資訊，並建立Adobe Target雲端設定和Target架構。 精靈也會將您的網站與Target架構建立關聯。 如果精靈無法連線到Target，請參閱[連線疑難排解](/help/sites-administering/target-configuring.md#troubleshooting-target-connection-problems)區段。 您可以[修改預設雲端設定](/help/sites-administering/target-configuring.md#modifying-the-opt-in-wizard-configurations)：如有必要，請修改選擇加入精靈建立的雲端設定和架構。 例如，修改框架以傳送其他內容資料至Target。 如果您想要使用Adobe Analytics做為Adobe Target的報表來源，您需要修改雲端設定以指向A4T設定。
    1. [手動與Adobe Target](/help/sites-administering/target-configuring.md#manually-integrating-with-adobe-target)整合。
 
 1. [設定活動](/help/sites-authoring/activitylib.md)：將您的活動與Target雲端設定建立關聯。
@@ -52,7 +52,7 @@ ht-degree: 1%
 
 >[!CAUTION]
 >
->保護發佈執行個體上的活動設定節點&#x200B;**cq：ActivitySettings**，使其無法正常使用者存取。 活動設定節點應該只能由處理與Adobe Target的活動同步的服務存取。
+>保護發佈執行個體上的活動設定節點&#x200B;**cq:ActivitySettings**，使其無法正常使用者存取。 活動設定節點應該只能由處理與Adobe Target的活動同步的服務存取。
 >
 >如需詳細資訊，請參閱[與Adobe Target整合的必要條件](/help/sites-administering/target-requirements.md#securing-the-activity-settings-node)。
 
@@ -66,7 +66,7 @@ ht-degree: 1%
 
 將AEM與Adobe Target整合需要Adobe Target、AEM活動管理和AEM受眾管理的知識。 您應熟悉下列資訊：
 
-* Adobe Target (請參閱[Adobe Target檔案](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=zh-Hant))。
+* Adobe Target （請參閱[Adobe Target檔案](https://experienceleague.adobe.com/docs/target/using/target-home.html)）。
 * AEM活動主控台（請參閱[管理活動](/help/sites-authoring/activitylib.md)）。
 * AEM對象（請參閱[管理對象](/help/sites-authoring/managing-audiences.md)）。
 

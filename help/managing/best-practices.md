@@ -10,10 +10,10 @@ exl-id: 94b91996-d2b2-4d4a-b770-334cfa2dc0b7
 solution: Experience Manager, Experience Manager 6.5
 feature: Compliance
 role: Admin,Developer,Leader
-source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
+source-git-commit: f6e1e28d6fbfc240a46c2c69f02c9c5fda1d0d0d
 workflow-type: tm+mt
-source-wordcount: '3212'
-ht-degree: 0%
+source-wordcount: '3275'
+ht-degree: 1%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 0%
    * [依角色的狀態](#status-by-role)總覽。
    * [階段和里程碑](#phases-and-milestones)。
    * [關鍵角色](#persona)及其在每個（相關）階段的參與。
-   * [必要檔案和交付專案](/help/managing/best-practices-glossary.md)的[字彙表](#required-documents-and-deliverables)。
+   * [必要檔案和交付專案](#required-documents-and-deliverables)的[字彙表](/help/managing/best-practices-glossary.md)。
 
 * [進一步參考](/help/managing/best-practices-further-reference.md)資料以提供特定區域的更多詳細資料。
 
@@ -56,7 +56,7 @@ ht-degree: 0%
 
 ## 按角色顯示狀態 {#status-by-role}
 
-[角色狀態&#x200B;**]工作表顯示**&#x200B;階段&#x200B;[**與**&#x200B;角色&#x200B;**之&lbrace;2**&#x200B;健康狀態&#x200B;**](#projectheartbeat)、&lbrace;品質及&#x200B;**&#x200B;[完整性](#phases-and-milestones)**&#x200B;的詳細劃分。**&#x200B;[&#128279;](#persona)**
+[角色狀態&#x200B;**]工作表顯示**&#x200B;[&#x200B;階段&#x200B;](#phases-and-milestones)**與**&#x200B;[&#x200B;角色&#x200B;](#persona)**的[**&#x200B;健康狀態&#x200B;**、**&#x200B;品質&#x200B;**及**&#x200B;完整性&#x200B;**](#projectheartbeat)的詳細劃分。**
 
 ## 階段和里程碑 {#phases-and-milestones}
 
@@ -188,7 +188,7 @@ ht-degree: 0%
 
    * 每個環境的程式；例如，部署和維護需求
    * 維護活動（Datastore GC、TarPM最佳化等）
-   * [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant)快取
+   * [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)快取
    * [叢集](/help/sites-deploying/recommended-deploys.md#deployment-scenarios)發佈/Authorshare
    * 使用者端的效能（JS精簡、concat、css指令集、http請求總數及其他）
 
@@ -208,7 +208,7 @@ ht-degree: 0%
    * 範本/元件及其關係的劃分
    * 所需自訂的高層級細節（特定覆蓋圖將於稍後顯示）
    * 設計解決方案所需的工作流程（例如內容建立、核准、發佈、轉換、匯入和匯出）
-   * 任何複雜模組(例如MSM、Commerce、協力廠商整合)的特別考量
+   * 任何複雜模組（例如MSM、Commerce、協力廠商整合）的特別考量
 
 * **系統整合**
 
@@ -276,7 +276,7 @@ ht-degree: 0%
 
 * **復原計畫**
 
-  確定您已制定復原計畫。 在緊急情況下，這必須可用，以確保AEM的生產使用。 這應該包括備份、還原、容錯移轉和其他情況。
+  確定您已制定復原計畫。 在緊急情況下，這必須可用，以確保AEM的生產使用。這應該包括備份、還原、容錯移轉和其他情況。
 
 ### 開發 {#development}
 
@@ -520,7 +520,7 @@ ht-degree: 0%
    * 確保符合業務和效能KPI
    * 將成功標準和定義納入考量
 
-* 與架構師緊密合作(尤其是在草擬AEM的開發策略時)以定義範本與元件之間的關係、第三方應用程式的整合策略及任何專業功能等方面。
+* 與架構師緊密合作（尤其是在草擬AEM的開發策略時）以定義範本與元件之間的關係、第三方應用程式的整合策略及任何專業功能等方面。
 
 ### 品質銷售機會 {#quality-lead}
 
@@ -610,7 +610,8 @@ ht-degree: 0%
    * [企業 DevOps](/help/managing/enterprise-devops.md)
    * [SEO和URL管理最佳作法](/help/managing/seo-and-url-management.md)
    * [AEM與網頁協助工具准則](/help/managing/web-accessibility.md)
-   * [一般資料保護規範](/help/managing/data-protection-and-privacy.md)* [部署及維護最佳實務](/help/sites-deploying/best-practices.md)
+   * [一般資料保護規範](/help/managing/data-protection-and-privacy.md)
+* [部署和維護最佳實務](/help/sites-deploying/best-practices.md)
 * [管理最佳實務](/help/sites-administering/administer-best-practices.md)
 * [開發最佳實務](/help/sites-developing/best-practices.md)
 * [製作最佳實務](/help/sites-authoring/best-practices.md)
@@ -632,4 +633,4 @@ ht-degree: 0%
 
 * 相關檔案
 
-   * Adobe Experience Cloud - [規劃Adobe Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/services/core-services.html?lang=zh-Hant)
+   * Adobe Experience Cloud - [規劃Adobe Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/services/core-services.html)
