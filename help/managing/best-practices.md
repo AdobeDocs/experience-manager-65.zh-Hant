@@ -56,7 +56,7 @@ ht-degree: 1%
 
 ## 按角色顯示狀態 {#status-by-role}
 
-[角色狀態&#x200B;**]工作表顯示**[&#x200B;階段&#x200B;](#phases-and-milestones)**與**[&#x200B;角色&#x200B;](#persona)**的[**&#x200B;健康狀態&#x200B;**、**&#x200B;品質&#x200B;**及**&#x200B;完整性&#x200B;**](#projectheartbeat)的詳細劃分。**
+[角色狀態&#x200B;**]工作表顯示**&#x200B;[&#x200B;階段&#x200B;](#phases-and-milestones)**與**&#x200B;[&#x200B;角色&#x200B;](#persona)**的[**&#x200B;健康狀態&#x200B;**、**&#x200B;品質&#x200B;**及**&#x200B;完整性&#x200B;**](#projectheartbeat)的詳細劃分。**
 
 ## 階段和里程碑 {#phases-and-milestones}
 
