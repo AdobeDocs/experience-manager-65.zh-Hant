@@ -7,9 +7,9 @@ exl-id: ceb9671c-57f9-4d81-94c0-0dbccd4d90a2
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: 0dc83f7613a7202658d2d2eda421cb58c7e0092a
 workflow-type: tm+mt
-source-wordcount: '1825'
+source-wordcount: '1838'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 ## 何謂艱難的第2天 {#what-is-tough-day}
 
-「艱難第2天」應用程式可讓您對AEM執行個體的限制進行壓力測試。 您可以立即使用預設的測試套件執行此檔案，也可以根據您的測試需求進行設定。 您可以觀看[此錄製](https://experienceleague.adobe.com/docs/events/experience-manager-gems-recordings/gems2017/aem-toughday2-stress-testing-benchmarking-tool.html?lang=zh-Hant)的應用程式簡報。
+「艱難第2天」應用程式可讓您對AEM執行個體的限制進行壓力測試。 您可以立即使用預設的測試套件執行此檔案，也可以根據您的測試需求進行設定。
 
 >[!CAUTION]
 >
@@ -26,7 +26,7 @@ ht-degree: 1%
 
 ## 如何執行艱難的第2天 {#how-to-run-tough-day}
 
-從[Adobe存放庫](https://repo1.maven.org/maven2/com/adobe/qe/toughday2/)下載最新版的「困難第2天」。 下載應用程式後，您可以提供`host`引數，立即執行。 在下列範例中，AEM執行個體在本機執行，因此使用`localhost`值：
+從[Adobe存放庫](https://repo1.maven.org/maven2/com/adobe/qe/toughday2/)下載最新版的「困難第2天」。 下載應用程式後，您可以提供`host`引數，立即執行。 在下列範例中，AEM執行個體會在本機執行，因此會使用`localhost`值：
 
 ```xml
 java -jar toughday2.jar --host=localhost
@@ -355,7 +355,7 @@ java -jar toughday2.jar --host=localhost --suite=toughday --add CreatePageTreeTe
 |---|---|
 | 時間戳記 | 上次完成的測試回合的時間戳記。 |
 | 已通過 | 成功執行的次數。 |
-| 已失敗 | 失敗的執行次數。 |
+| 失敗 | 失敗的執行次數。 |
 | 最小&#42; | 測試執行的最短持續時間。 |
 | 最大&#42; | 測試執行的最長持續時間。 |
 | 中位數&#42; | 計算的所有測試執行的中位數持續時間。 |
