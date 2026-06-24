@@ -188,7 +188,7 @@ ht-degree: 1%
 
    * 每個環境的程式；例如，部署和維護需求
    * 維護活動（Datastore GC、TarPM最佳化等）
-   * [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)快取
+   * [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant)快取
    * [叢集](/help/sites-deploying/recommended-deploys.md#deployment-scenarios)發佈/Authorshare
    * 使用者端的效能（JS精簡、concat、css指令集、http請求總數及其他）
 
@@ -633,4 +633,4 @@ ht-degree: 1%
 
 * 相關檔案
 
-   * Adobe Experience Cloud - [規劃Adobe Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/services/core-services.html)
+   * Adobe Experience Cloud - [規劃Adobe Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/services/core-services.html?lang=zh-Hant)
