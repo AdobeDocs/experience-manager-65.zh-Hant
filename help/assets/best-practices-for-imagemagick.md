@@ -8,7 +8,7 @@ exl-id: 6c149d31-1e64-4d29-a32a-58bd69e9fa98
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: f8588ef353bd08b41202350072728d80ee51f565
 workflow-type: tm+mt
-source-wordcount: '679'
+source-wordcount: '688'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ImageMagick是用來建立、編輯、撰寫或轉換點陣圖影像的軟體外
 
 >[!NOTE]
 >
->如果您在[!DNL Experience Manager] (AMS)上使用[!DNL Adobe Managed Services]，如果您打算處理許多高解析度PSD或PSB檔案，請聯絡Adobe客戶支援。 [!DNL Experience Manager]可能無法處理超過30000 x 23000畫素的高解析度PSB檔案。
+>如果您在[!DNL Adobe Managed Services] (AMS)上使用[!DNL Experience Manager]，如果您打算處理許多高解析度PSD或PSB檔案，請聯絡Adobe客戶支援。 [!DNL Experience Manager]可能無法處理超過30000 x 23000畫素的高解析度PSB檔案。
 
 ## 安裝ImageMagick {#installing-imagemagick}
 
@@ -37,7 +37,7 @@ ImageMagic安裝檔案有多種版本可供各種作業系統使用。 使用適
 
 ## 設定命令列處理步驟 {#set-up-the-command-line-process-step}
 
-您可以針對特定使用案例設定命令列處理步驟。 每次將JPEG影像檔案新增至`/content/dam`伺服器上的[!DNL Experience Manager]時，請執行這些步驟以產生翻轉的影像和縮圖（140x100、48x48、319x319和1280x1280）：
+您可以針對特定使用案例設定命令列處理步驟。 每次將JPEG影像檔案新增至[!DNL Experience Manager]伺服器上的`/content/dam`時，請執行這些步驟以產生翻轉的影像和縮圖（140x100、48x48、319x319和1280x1280）：
 
 1. 在[!DNL Experience Manager]伺服器上，前往「工作流程」主控台(`https://[aem_server]:[port]/workflow`)並開啟&#x200B;**[!UICONTROL DAM更新資產]**&#x200B;工作流程模型。
 1. 從&#x200B;**[!UICONTROL DAM Update Asset]**&#x200B;工作流程模型，開啟&#x200B;**[!UICONTROL EPS縮圖（由ImageMagick提供技術支援）]**&#x200B;步驟。
@@ -53,7 +53,7 @@ ImageMagic安裝檔案有多種版本可供各種作業系統使用。 使用適
 
    ![select_flags](assets/select_flags.png)
 
-1. 在&#x200B;**[!UICONTROL 啟用網頁的影像]**&#x200B;標籤中，指定尺寸1280x1280畫素之轉譯的詳細資料。 此外，請在`image/jpeg`Mimetype **[!UICONTROL 方塊中指定]**。
+1. 在&#x200B;**[!UICONTROL 啟用網頁的影像]**&#x200B;標籤中，指定尺寸1280x1280畫素之轉譯的詳細資料。 此外，請在&#x200B;**[!UICONTROL Mimetype]**&#x200B;方塊中指定`image/jpeg`。
 
    ![web_enabled_image](assets/web_enabled_image.png)
 
@@ -66,11 +66,11 @@ ImageMagic安裝檔案有多種版本可供各種作業系統使用。 使用適
    >
    >`"C:\Program Files\ImageMagick-6.8.9-Q16\convert.exe" -define jpeg:size=319x319 ./${filename} -thumbnail 319x319 cq5dam.thumbnail.319.319.png`
 
-1. 開啟&#x200B;**[!UICONTROL 處理縮圖]**&#x200B;步驟，並在`image/jpeg`略過MIME型別&#x200B;**[!UICONTROL 下新增MIME型別]**。
+1. 開啟&#x200B;**[!UICONTROL 處理縮圖]**&#x200B;步驟，並在&#x200B;**[!UICONTROL 略過MIME型別]**&#x200B;下新增MIME型別`image/jpeg`。
 
    ![skip_mime_types](assets/skip_mime_types.png)
 
-1. 在&#x200B;**[!UICONTROL 啟用網頁的影像]**&#x200B;索引標籤中，在`image/jpeg`略過清單&#x200B;**[!UICONTROL 下新增MIME型別]**。 按一下&#x200B;**[!UICONTROL 確定]**&#x200B;以儲存變更。
+1. 在&#x200B;**[!UICONTROL 啟用網頁的影像]**&#x200B;索引標籤中，在&#x200B;**[!UICONTROL 略過清單]**&#x200B;下新增MIME型別`image/jpeg`。 按一下&#x200B;**[!UICONTROL 確定]**&#x200B;以儲存變更。
 
    ![web_enabled](assets/web_enabled.png)
 

@@ -13,7 +13,7 @@ role: Admin
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
 source-wordcount: '293'
-ht-degree: 14%
+ht-degree: 17%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 14%
 
 ## 簡介 {#introduction}
 
-當AEM Communities獲得授權時，除了建立社群網站，您還可以使用標準AEM編寫工具將社群功能新增到任何AEM網站。
+取得AEM Communities授權後，除了建立社群網站外，您也可以使用標準AEM撰寫工具，將社群功能新增至任何AEM網站。
 
 若要深入瞭解如何建立社群網站，請造訪：
 
