@@ -12,19 +12,19 @@ feature: Communities
 role: Admin
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '1195'
+source-wordcount: '1210'
 ht-degree: 0%
 
 ---
 
 # 體驗已發佈的網站 {#experience-the-published-site}
 
-## 在Publish上瀏覽至新網站 {#browse-to-new-site-on-publish}
+## 在發佈時瀏覽至新網站 {#browse-to-new-site-on-publish}
 
 現在新建立的社群網站已發佈，請瀏覽至建立網站時顯示的URL，但在發佈伺服器上，例如：
 
 * 作者URL = https://localhost:4502/content/sites/engage/en.html
-* PUBLISH URL = https://localhost:4503/content/sites/engage/en.html
+* 發佈URL = https://localhost:4503/content/sites/engage/en.html
 
 為了將有關哪些成員已登入作者和發佈的混淆降至最低，建議對每個執行個體使用不同的瀏覽器。
 
@@ -55,7 +55,7 @@ ht-degree: 0%
 
 若要保護您的社群網站內容，避免匿名使用者透過jcr內容和json進行存取，請執行以下步驟：
 
-1. 在AEM Author執行個體上，前往https:// hostname：port/editor.html/content/site/sitename.html。
+1. 在AEM Author執行個體上，前往https:// hostname:port/editor.html/content/site/sitename.html。
 
    >[!NOTE]
    >
@@ -72,7 +72,7 @@ ht-degree: 0%
    ![站台驗證](assets/site-authentication.png)
 
 1. 新增登入頁面的路徑。 例如，**/content/......./GetStarted**。
-1. Publish頁面。
+1. 發佈頁面。
 
 ## 信任的社群成員 {#trusted-community-member}
 
@@ -187,7 +187,7 @@ ht-degree: 0%
 
 只會顯示棒球群組。
 
-以Weston McCall (weston.mccall@dodgit.com /密碼)登入，並導覽至相同位置。 請注意，Weston能夠`Join`開啟的`Baseball`群組和`enter or Leave`私人`Gymnastics`群組。
+以Weston McCall （weston.mccall@dodgit.com /密碼）登入，並導覽至相同位置。 請注意，Weston能夠`Join`開啟的`Baseball`群組和`enter or Leave`私人`Gymnastics`群組。
 
 ![grouplink3](assets/grouplink3.png)
 
