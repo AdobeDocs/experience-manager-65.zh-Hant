@@ -106,7 +106,7 @@ ht-degree: 2%
 
 在步驟3中使用授權使用者來設定Author上的Sling發佈。
 
-* 每個發佈執行個體上的&#x200B;****
+* 每個發佈執行個體上的&#x200B;**&#x200B;**
 
    * 以系統管理員許可權登入
    * 存取[安全性主控台](/help/sites-administering/security.md)
@@ -435,7 +435,7 @@ ht-degree: 2%
 
 * 作者
 
-   * *取消勾選*1}Apache Sling散發代理程式 — 同步代理程式處理站](#apache-sling-distribution-agent-sync-agents-factory)的`Enabled`核取方塊[
+   * *取消勾選*1&rbrace;Apache Sling散發代理程式 — 同步代理程式處理站[&#128279;](#apache-sling-distribution-agent-sync-agents-factory)的`Enabled`核取方塊
 
 工作完成時，若要重新啟用使用者同步：
 

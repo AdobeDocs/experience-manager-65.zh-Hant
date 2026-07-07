@@ -37,7 +37,7 @@ ht-degree: 0%
    ![設定管理員](assets/2configmanager-1.png)
 
 1. 在此頁面上，找到AEM Forms使用者端SDK設定，然後按一下以展開它。
-1. 在伺服器URL中，輸入JEE伺服器上AEM Forms的名稱、登入詳細資料，然後按一下[儲存]。****
+1. 在伺服器URL中，輸入JEE伺服器上AEM Forms的名稱、登入詳細資料，然後按一下[儲存]。**&#x200B;**
 
    ![輸入LiveCycle伺服器的名稱](assets/1cofigmanager.png)
 
