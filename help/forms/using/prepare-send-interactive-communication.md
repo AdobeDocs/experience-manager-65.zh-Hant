@@ -9,7 +9,7 @@ solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
-source-wordcount: '2010'
+source-wordcount: '2029'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ ht-degree: 0%
 
 ### 輸入資料 {#enter-data}
 
-1. 在「資料」標籤中，視需要輸入變數、表單資料模型屬性和列印範本(XDP)欄位的資料。 填寫標示星號(&amp;amp；ast；)的所有必要欄位，以啟用&#x200B;**提交**&#x200B;按鈕。
+1. 在「資料」標籤中，視需要輸入變數、表單資料模型屬性和列印範本(XDP)欄位的資料。 填寫所有標示星號(&amp;ast；)的必要欄位，以啟用&#x200B;**提交**&#x200B;按鈕。
 
    在互動式通訊預覽中選取資料欄位值，以反白顯示「資料」標籤中對應的資料欄位，反之亦然。
 
@@ -134,11 +134,11 @@ ht-degree: 0%
 
 ### 在文字中插入特殊字元 {#specialcharacters}
 
-Agent UI已內建對210個特殊字元的支援。 管理員可以透過自訂[&#128279;](/help/forms/using/custom-special-characters.md) 新增更多/自訂特殊字元的支援。
+Agent UI已內建對210個特殊字元的支援。 管理員可以透過自訂](/help/forms/using/custom-special-characters.md) [新增更多/自訂特殊字元的支援。
 
 #### 附件傳遞 {#attachmentdelivery}
 
-* 使用伺服器端API以互動或非互動式PDF呈現互動式通訊時，呈現的PDF會包含附件作為PDF附件。
+* 使用伺服器端API將互動式通訊呈現為互動式或非互動式PDF時，呈現的PDF會包含附件作為PDF附件。
 * 當使用代理程式UI將與互動式通訊相關聯的貼文程式載入為提交的一部分時，附件會傳遞為List&lt;com.adobe.idp.Document> inAttachmentDocs引數。
 * 傳遞機制工作流程（例如電子郵件和列印）也會連同互動式通訊的PDF版本一起傳遞附件。
 
@@ -146,7 +146,7 @@ Agent UI已內建對210個特殊字元的支援。 管理員可以透過自訂[&
 
 ### 檔案片段 {#document-fragments}
 
-![&#x200B; &#x200B;](do-not-localize/contentoptionsdocfragments.png)
+![ ](do-not-localize/contentoptionsdocfragments.png)
 
 * **向上/向下箭號**：在互動式通訊中向上或向下移動檔案片段的箭號。
 * **刪除**：如果允許，請從互動式通訊中刪除檔案片段。
@@ -180,7 +180,7 @@ Adobe建議依序執行這些指示，以成功將互動式通訊儲存為草稿
 
 預設不會啟用「另存為草稿」功能。 執行以下步驟來啟用此功能：
 
-1. 實作[ccrDocumentInstance](https://helpx.adobe.com/tw/experience-manager/6-5/forms/javadocs/com/adobe/fd/ccm/ccr/ccrDocumentInstance/api/services/CCRDocumentInstanceService.html)服務提供者介面(SPI)。
+1. 實作[ccrDocumentInstance](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/ccm/ccr/ccrDocumentInstance/api/services/CCRDocumentInstanceService.html)服務提供者介面(SPI)。
 
    SPI可讓您將互動式通訊的草稿版本儲存到資料庫，並將草稿ID儲存為唯一識別碼。 這些指示假設您擁有有關如何使用Maven專案建置OSGi套件的先前知識。
 
