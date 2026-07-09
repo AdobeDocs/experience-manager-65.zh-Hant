@@ -11,7 +11,7 @@ feature: Administering
 role: Admin
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
-source-wordcount: '832'
+source-wordcount: '834'
 ht-degree: 4%
 
 ---
@@ -36,11 +36,11 @@ ht-degree: 4%
 1. 在樹狀結構中，按兩下&#x200B;**儀表板**。
 1. 按一下&#x200B;**新儀表板**。
 1. 輸入&#x200B;**Title** （例如，我的儀表板）和&#x200B;**Name**。
-1. 按一下&#x200B;**建立**。
+1. 按一下「**建立**」。
 
 ### 複製控制面板 {#cloning-a-dashboard}
 
-您可能想要有多個控制面板，以從不同檢視快速檢視有關您內容的資訊。 為協助您建立新儀表板，AEM提供複製功能，可用來複製現有儀表板。 若要複製控制面板，請依照下列步驟進行：
+您可能想要有多個控制面板，以從不同檢視快速檢視有關您內容的資訊。 為協助您建立新控制面板，AEM提供複製功能，可用來複製現有控制面板。 若要複製控制面板，請依照下列步驟進行：
 
 1. 在&#x200B;**工具**&#x200B;區段中，按一下&#x200B;**設定主控台**。
 
@@ -70,7 +70,7 @@ ht-degree: 4%
 
 ### 網站分析報表元件 {#web-analytics-reporting-components}
 
-AEM隨附一組元件，可轉譯[SiteCatalyst](/help/sites-administering/adobeanalytics.md)資料的多個量度。 這些元件列在&#x200B;**儀表板**&#x200B;區段下的Sidekick中。
+AEM隨附一組元件，可轉譯[SiteCatalyst](/help/sites-administering/adobeanalytics.md)資料的多個量度。 這些元件列在Sidekick的&#x200B;**儀表板**&#x200B;區段下。
 
 每個報表元件至少提供三個標籤：
 
@@ -89,7 +89,7 @@ AEM隨附一組元件，可轉譯[SiteCatalyst](/help/sites-administering/adobea
 
 **要求型別**&#x200B;要求資料的方式。
 
-**SiteCatalyst設定（選擇性）**&#x200B;您要用來連線至SiteCatalyst的設定。 若未提供，則會假設設定是在「控制面板」頁面（透過頁面屬性）上進行。
+**SiteCatalyst組態（選用）**&#x200B;您要用來連線至SiteCatalyst的組態。 若未提供，則會假設設定是在「控制面板」頁面（透過頁面屬性）上進行。
 
 **報表套裝ID （選用）**&#x200B;您要用來產生圖形的SiteCatalyst報表套裝。
 

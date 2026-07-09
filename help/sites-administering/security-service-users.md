@@ -11,8 +11,8 @@ solution: Experience Manager, Experience Manager Sites
 role: Admin
 source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
 workflow-type: tm+mt
-source-wordcount: '1737'
-ht-degree: 0%
+source-wordcount: '1802'
+ht-degree: 1%
 
 ---
 
@@ -97,7 +97,7 @@ ht-degree: 0%
 * `service-id`對應到資源解析程式和/或JCR存放庫使用者ID以進行驗證
 * `service-name`是提供服務的套件組合之符號名稱
 
-## 其他Recommendations {#other-recommendations}
+## 其他建議 {#other-recommendations}
 
 ### 將管理員工作階段取代為服務使用者 {#replacing-the-admin-session-with-a-service-user}
 
@@ -118,7 +118,7 @@ ht-degree: 0%
 
 ## 建立服務使用者 {#creating-a-new-service-user}
 
-在您確認AEM服務使用者清單中的任何使用者都不適用於您的使用案例，且對應的RTC問題已核准之後，請將新使用者新增至預設內容。
+在您確認AEM服務使用者清單中的任何使用者都不適用於您的使用案例，且對應的RTC問題已核准後，請將新使用者新增至預設內容。
 
 建議的方法是建立服務使用者，以使用位於&#x200B;*https://&lt;server>：&lt;port>/crx/explorer/index.jsp*&#x200B;的存放庫總管
 
@@ -246,6 +246,6 @@ JSP無法使用`loginService()`，因為沒有關聯的服務。 不過，JSP中
 
 若要修正這些問題，建議使用[處理事件、復寫前置處理器和工作](/help/sites-administering/security-service-users.md#processing-events-replication-preprocessors-and-jobs)中提到的相同方法。
 
-## SlingPOST處理器與已刪除頁面 {#sling-post-processors-and-deleted-pages}
+## Sling POST處理器與已刪除頁面 {#sling-post-processors-and-deleted-pages}
 
-SlingPOST處理器實作中使用了一些管理工作階段。 通常，管理工作階段是用來存取正在處理的POST內擱置刪除的節點。 因此，無法再透過要求工作階段使用這些功能。 可能會存取擱置刪除的節點，以揭露原本不應存取的中繼資料。
+Sling POST處理器實施中會使用幾個管理工作階段。 通常，管理工作階段會用來存取處理之POST內擱置刪除的節點。 因此，無法再透過要求工作階段使用這些功能。 可能會存取擱置刪除的節點，以揭露原本不應存取的中繼資料。
