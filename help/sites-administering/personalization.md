@@ -11,7 +11,7 @@ feature: Administering,Personalization
 role: Admin
 source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
 workflow-type: tm+mt
-source-wordcount: '1696'
+source-wordcount: '1710'
 ht-degree: 2%
 
 ---
@@ -73,7 +73,7 @@ Personalization可用於許多情況，例如：
 
 ### 銷售及分銷網站 {#sales-site}
 
-* 銷售和發佈網站(例如Amazon)可以結合使用者個人資料、使用者的銷售記錄和瀏覽記錄，以建議使用者接下來可能會感興趣的內容。
+* 銷售和發佈網站（例如Amazon）可以結合使用者個人資料、使用者的銷售記錄和瀏覽記錄，以建議使用者接下來可能會感興趣的內容。
 
 ### 搜尋網站 {#search-site}
 
@@ -143,7 +143,7 @@ AEM提供各種元件供個人化使用。 有些專案可讓使用者登入並�
 | 組合登入註冊 | 允許使用者登入現有帳戶或註冊新帳戶。 |
 | Forms位址列位 | 允許輸入國際地址的複雜欄位。 |
 | Forms開始 | 開始表單定義 |
-| Forms驗證碼 | 由自動重新整理的英數字元組成的欄位。 驗證碼元件可保護網站免受機器人攻擊。 |
+| 表單驗證碼 | 由自動重新整理的英數字元組成的欄位。 驗證碼元件可保護網站免受機器人攻擊。 |
 | Forms核取方塊組 | 將多個專案組織成清單，且前面有核取方塊。 使用者可選取多個核取方塊。 |
 | Forms下拉式清單 | 將多個專案組織到下拉式清單中。 「多重可選取」切換引數會指定是否可從清單中選取數個元素。 |
 | Forms結尾 | 終止表單定義。 |
@@ -170,9 +170,9 @@ AEM提供各種元件供個人化使用。 有些專案可讓使用者登入並�
 
 ## Personalization和社群內容 {#personalization-and-community-content}
 
-部落格、論壇和行事曆等社群功能會建立社群內容，通常稱為使用者產生的內容(UGC)。 在包含多個AEM執行個體（[發佈陣列](/help/communities/topologies.md)）的發佈環境中輸入UGC時，一個主要問題是如何同步所有執行個體的UGC。
+部落格、論壇和行事曆等社群功能會建立社群內容，通常稱為使用者產生的內容(UGC)。 在包含多個AEM執行個體（[發佈陣列](/help/communities/topologies.md)）的發佈環境中輸入UGC時，一個主要問題是如何同步所有執行個體中的UGC。
 
-透過[AEM Communities 6.1](/help/communities/overview.md)擴充功能，使用UGC[&#128279;](/help/communities/working-with-srp.md)的公用存放區即可解決此問題。 關於個人化，Communities包含[社交登入](/help/communities/social-login.md) — 提供網站訪客使用Facebook和Twitter登入的選項。
+透過[AEM Communities 6.1](/help/communities/overview.md)擴充功能，使用UGC](/help/communities/working-with-srp.md)的[公用存放區即可解決此問題。 關於個人化，Communities包含[社交登入](/help/communities/social-login.md) — 提供網站訪客使用Facebook和Twitter登入的選項。
 
 如果沒有Communities擴充功能，可探索多種方法來解決UGC一致性問題，包括：
 

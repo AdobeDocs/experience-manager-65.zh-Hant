@@ -11,7 +11,7 @@ feature: Adaptive Forms
 role: User, Developer
 source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '282'
+source-wordcount: '287'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 > 
 > 確保使用者具有存取管理員控制檯的管理員許可權。
 
-在AEM表單安裝過程中，您使用Configuration Manager來設定及部署所需的AEM表單模組。 預設情況下，這些模組會設定60天的評估授權。 使用管理主控台中的「變更授權」頁面來變更部署的授權型別。 目前部署的模組會顯示在「變更許可證」頁面上。
+在AEM表單安裝過程中，您使用Configuration Manager來設定和部署所需的AEM表單模組。 預設情況下，這些模組會設定60天的評估授權。 使用管理主控台中的「變更授權」頁面來變更部署的授權型別。 目前部署的模組會顯示在「變更許可證」頁面上。
 
 「變更許可證」頁面會顯示有關您的許可證的資訊：
 
@@ -40,7 +40,7 @@ ht-degree: 0%
 ## 更新授權型別 {#update-the-license-type}
 
 1. 在管理控制檯中，按一下授權。
-1. 閱讀AEM Forms一般使用者授權合約，如果您同意合約條款，請選取「我接受」，然後按一下「下一步」。
+1. 閱讀AEM Forms一般使用者授權合約，若您同意合約條款，請選取「我接受」，然後按一下「下一步」。
 1. 在「變更許可證」頁面上，選取許可證型別：
 
    * **評估：** 60天評估授權

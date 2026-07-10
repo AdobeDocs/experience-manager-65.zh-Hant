@@ -12,7 +12,7 @@ feature: Developing,Search,Query Builder
 role: Developer
 source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
 workflow-type: tm+mt
-source-wordcount: '664'
+source-wordcount: '816'
 ht-degree: 0%
 
 ---
@@ -44,14 +44,14 @@ GITHUB上的程式碼
 
 您可以在GitHub上找到此頁面的程式碼。
 
-* 在GitHub上[開啟aem-search-custom-predicate-evaluator專案](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator)
+* [在GitHub上開啟aem-search-custom-predicate-evaluator專案](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator)
 * 將專案下載為[ZIP檔](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator/archive/master.zip)
 
 ### 述詞求值器詳細資料 {#predicate-evaluator-in-detail}
 
 述詞評估器處理特定述詞的評估，這些述詞是查詢的定義限制。
 
-這會將較高層級的搜尋限制（例如「寬度> 200」）對應至符合實際內容模型的特定JCR查詢(例如，中繼資料/@width度> 200)。 或者，它可以手動篩選節點並檢查其限制。
+這會將較高層級的搜尋限制（例如「寬度> 200」）對應至符合實際內容模型的特定JCR查詢（例如，中繼資料/@width度> 200）。 或者，它可以手動篩選節點並檢查其限制。
 
 >[!NOTE]
 >
@@ -105,7 +105,7 @@ replic.action=Activate
 
 >[!NOTE]
 >
->[如何使用Apache Maven建置AEM專案](/help/sites-developing/ht-projects-maven.md)已記錄使用Maven設定新的Adobe Experience Manager (AEM)專案。
+>[如何使用Apache Maven建置Adobe Experience Manager專案](/help/sites-developing/ht-projects-maven.md)已記錄使用Maven設定新的AEM (AEM)專案。
 
 首先，更新專案的Maven相依性。 `PredicateEvaluator`是`cq-search`成品的一部分，因此必須將其新增到您的Maven pom.xml檔案。
 

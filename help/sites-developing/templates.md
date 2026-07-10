@@ -12,8 +12,8 @@ feature: Developing
 role: Developer
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
-source-wordcount: '924'
-ht-degree: 0%
+source-wordcount: '943'
+ht-degree: 2%
 
 ---
 
@@ -61,14 +61,14 @@ AEM現在提供兩種基本型別的範本以用於建立頁面：
 
 >[!NOTE]
 >
->請參閱[使用可編輯的頁面範本來開發Experience Manager網站](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html?lang=zh-Hant)。
+>請參閱[使用可編輯的頁面範本來開發Experience Manager網站](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html)。
 
 ### 靜態範本 {#static-templates}
 
 靜態範本：
 
 * 必須由您的開發人員定義和設定。
-* 已推出許多版本的AEM原始範本系統。
+* AEM的原始範本系統已推出多個版本。
 * 靜態範本是指與要建立之頁面結構相同，但沒有任何實際內容的節點階層。
 * 建立頁面時會複製，之後不會有任何動態連線。
 * 使用[設計模式](/help/sites-authoring/default-components-designmode.md)來儲存設計屬性。
@@ -77,9 +77,9 @@ AEM現在提供兩種基本型別的範本以用於建立頁面：
 
 >[!NOTE]
 >
->自AEM 6.5起，使用靜態範本已不再是最佳做法。 請改用可編輯的範本。
+>自AEM 6.5起，使用靜態範本不被視為最佳實務。 請改用可編輯的範本。
 >
->[AEM現代化](modernization-tools.md)工具可協助您從靜態範本移轉至可編輯的範本。
+>[AEM現代化](modernization-tools.md)工具可協助您從靜態範本移轉至可編輯範本。
 
 ### 範本可用性 {#template-availability}
 
@@ -87,7 +87,7 @@ AEM現在提供兩種基本型別的範本以用於建立頁面：
 >
 >AEM提供多個屬性，可控制&#x200B;**網站**&#x200B;下允許的範本。 不過，將其合併可能會導致複雜規則，難以追蹤和管理。
 >
->因此，Adobe建議您透過定義以下內容來開始簡化：
+>因此，Adobe建議您先定義：
 >
 >* 僅`cq:allowedTemplates`屬性
 >

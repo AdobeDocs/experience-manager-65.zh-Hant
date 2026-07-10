@@ -1,6 +1,6 @@
 ---
 title: Acrobat Reader DC擴充功能使用的憑證型別
-description: 瞭解Acrobat Reader DC擴充功能使用的憑證型別。
+description: 瞭解Acrobat Reader DC擴充功能所使用的憑證型別。
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_acrobat_reader_dc_extensions
@@ -11,7 +11,7 @@ feature: Adaptive Forms
 role: User, Developer
 source-git-commit: e821be5233fd5f6688507096790d219d25903892
 workflow-type: tm+mt
-source-wordcount: '944'
+source-wordcount: '947'
 ht-degree: 2%
 
 ---
@@ -33,15 +33,15 @@ Acrobat Reader DC擴充功能憑證的「易記」名稱是說明憑證屬性的
 
 字串包含以下元素：
 
-**憑證型別：**&#x200B;說明憑證啟動的AEM表單模組，以及啟動等級，例如ARE 2D Barcode Full。 如需可用憑證型別的清單，請參閱憑證設定檔區段表格中的型別欄。
+**憑證型別：**&#x200B;說明憑證啟動的AEM表單模組，以及啟動等級，例如「ARE 2D條碼已滿」。 如需可用憑證型別的清單，請參閱憑證設定檔區段表格中的型別欄。
 
 **部署型別：**&#x200B;表示憑證的預期用途，例如生產。 該值可以是「評估」或「生產」。 如需與每個憑證型別相關聯的部署型別清單，請參閱憑證設定檔區段表格中的部署型別欄。
 
-**使用許可權版本：**&#x200B;說明憑證可以使用的使用許可權演演算法版本，例如V6.1。此版本並不表示Acrobat或Acrobat Reader DC擴充功能的版本。
+**使用許可權版本：**&#x200B;說明憑證可以使用的使用許可權演演算法版本，例如V6.1。 此版本不表示Acrobat或Acrobat Reader DC擴充功能的版本。
 
 **設定檔代碼：**&#x200B;設定檔代碼是完整憑證屬性的簡短描述，例如P8。 如需與每種檔案型別相關聯的設定檔程式碼清單，請參閱「憑證設定檔」區段表格中的設定檔程式碼欄。
 
-**序號：**&#x200B;將序號指派給每個Adobe發行的憑證，例如0002054。 Adobe企業支援或Adobe企業客戶代表可以使用此序號來追蹤憑證至特定產品訂單或OEM關係。
+**序號：**&#x200B;將序號指派給Adobe發行的每個憑證，例如0002054。 Adobe企業支援或Adobe企業客戶代表可使用此序號，追蹤憑證至特定產品訂單或OEM關係。
 
 ## 憑證設定檔 {#certificate-profiles}
 
@@ -77,7 +77,7 @@ Acrobat Reader DC擴充功能憑證的「易記」名稱是說明憑證屬性的
   </tr>
   <tr>
    <td><p>P4</p></td>
-   <td><p>Acrobat Reader DC擴充功能，內部Adobe使用</p></td>
+   <td><p>Acrobat Reader DC擴充功能，Adobe內部使用</p></td>
    <td><p>2年</p></td>
    <td><p>生產</p></td>
   </tr>
@@ -148,7 +148,7 @@ Acrobat Reader DC擴充功能憑證的「易記」名稱是說明憑證屬性的
 
 評估憑證會核發給客戶和開發人員，以便他們能夠評估並開發產品的範例應用程式。 這些憑證的有效期介於60到90天之間。 到期日是問題資料之後的第二個月。
 
-合作夥伴整合憑證會核發給Adobe業務合作夥伴，以支援軟體開發、整合、原型製作和示範。 這些憑證的有效期為發行日期起兩年。
+合作夥伴整合憑證會核發給Adobe業務合作夥伴，以支援軟體開發、整合、建立原型和示範。 這些憑證的有效期為發行日期起兩年。
 
 Adobe內部使用憑證用於Adobe，以支援軟體開發、整合、建立原型和示範。 這些憑證的有效期為發行日期起兩年。
 
@@ -156,7 +156,7 @@ Adobe內部使用憑證用於Adobe，以支援軟體開發、整合、建立原�
 
 ## Acrobat Reader DC擴充功能使用許可權 {#acrobat-reader-dc-extensions-usage-rights}
 
-在Certificate Viewer中檢查Acrobat Reader DC擴充功能憑證時，您可以從「詳細資訊」標籤（如果已設定）中選取使用許可權專案，以檢視憑證可啟用的Adobe Reader使用許可權詳細清單。 在特定檔案上啟用的使用許可權可以是憑證啟用的使用許可權的子集。
+當您在Certificate Viewer中檢查Acrobat Reader DC擴充功能憑證時，可以從「詳細資訊」標籤（如果已設定）選取使用許可權專案，以檢視憑證可啟用的Adobe Reader使用許可權詳細清單。 在特定檔案上啟用的使用許可權可以是憑證啟用的使用許可權的子集。
 
 如果在非合作環境中需要線上註解，請聯絡Adobe支援以取得更多資訊。 Mode屬性符合部署型別，且是&#x200B;*生產*&#x200B;或&#x200B;*評估*。
 
@@ -166,7 +166,7 @@ Adobe內部使用憑證用於Adobe，以支援軟體開發、整合、建立原�
  <thead>
   <tr>
    <th><p>使用許可權元素</p></th>
-   <th><p>檢視已啟用許可權的PDF檔案時，Adobe Reader中會啟用的功能</p></th>
+   <th><p>Adobe Reader在檢視啟用許可權的PDF檔案時啟用的功能</p></th>
   </tr>
  </thead>
  <tbody>
@@ -212,7 +212,7 @@ Adobe內部使用憑證用於Adobe，以支援軟體開發、整合、建立原�
   </tr>
   <tr>
    <td><p>FormOnline</p></td>
-   <td><p>連線到PDF表單中定義的Web服務或資料庫。</p></td>
+   <td><p>連線至PDF表單中定義的Web服務或資料庫。</p></td>
   </tr>
   <tr>
    <td><p>EFModif</p></td>
@@ -223,4 +223,4 @@ Adobe內部使用憑證用於Adobe，以支援軟體開發、整合、建立原�
 
 >[!NOTE]
 >
->Acrobat Reader DC擴充功能使用許可權只能在Adobe中以某些搭配使用的組合方式授權。 無法單獨授權這些功能。 如需有關可用使用許可權組合的資訊，請聯絡AEM表單客戶代表。
+>Acrobat Reader DC擴充功能使用許可權只能從Adobe以搭配使用的特定組合授權。 無法單獨授權這些功能。 如需使用許可權可用組合的詳細資訊，請聯絡AEM表單客戶代表。

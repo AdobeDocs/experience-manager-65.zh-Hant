@@ -11,7 +11,7 @@ solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
-source-wordcount: '684'
+source-wordcount: '699'
 ht-degree: 0%
 
 ---
@@ -28,8 +28,8 @@ Adobe Experience Manager Forms可使用儲存在HSM上的憑證或eSign，或將
 
 ## 使用AEM Forms設定HSM或etoken裝置之前 {#configurehsmetoken}
 
-* 安裝[AEM Forms附加元件](https://helpx.adobe.com/tw/aem-forms/kb/aem-forms-releases.html)套件。
-* 在與AEM伺服器相同的電腦上安裝並設定HSM或etoken使用者端軟體。 使用者端軟體必須與HSM和Etoken裝置通訊。
+* 安裝[AEM Forms附加元件](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)套件。
+* 在與AEM伺服器相同的電腦上，安裝並設定HSM或etoken使用者端軟體。 使用者端軟體必須與HSM和Etoken裝置通訊。
 
 ## 啟用DocAssurance服務 {#configuredocassurance}
 
@@ -56,7 +56,7 @@ Adobe Experience Manager Forms可使用儲存在HSM上的憑證或eSign，或將
 
 >[!NOTE]
 >
-> 建議您使用&#39;Ctrl + C&#39;命令重新啟動SDK。 使用替代方法重新啟動AEM SDK （例如停止Java程式）可能會導致AEM開發環境不一致。
+> 建議您使用&#39;Ctrl + C&#39;命令重新啟動SDK。 使用替代方法重新啟動AEM SDK （例如停止Java程式），可能會導致AEM開發環境不一致。
 
 <!--
 
@@ -103,7 +103,7 @@ Perform the following steps to setup certificates:
 1. 開啟&#x200B;**HSM認證設定服務**，並指定下列欄位的值：
 
    * **認證別名**：指定用來識別別名的字串。 此值會用作某些數位簽名作業（例如「簽名欄位」作業）的屬性。
-   * **DLL路徑**：指定伺服器上HSM或etoken使用者端程式庫的路徑。 例如 `C:\Program Files\LunaSA\cryptoki.dll`。在叢集環境中，您必須確定叢集中的所有伺服器都必須使用相同的路徑。
+   * **DLL路徑**：指定伺服器上HSM或etoken使用者端程式庫的路徑。 例如 `C:\Program Files\LunaSA\cryptoki.dll`。 在叢集環境中，您必須確定叢集中的所有伺服器都必須使用相同的路徑。
    * **HSM Pin**：指定存取裝置金鑰所需的密碼。
    * **HSM插槽識別碼**：指定整數型別的插槽識別碼。 插槽ID是依使用者端而設定。 用於識別HSM上包含簽署/認證私密金鑰的插槽。
 
@@ -114,7 +114,7 @@ Perform the following steps to setup certificates:
    * **憑證SHA1**：為您使用的認證指定公開金鑰(.cer)檔案的SHA1值（指紋）。 請確定SHA1值中未使用空格。
    * **HSM裝置型別**：選取HSM （Luna或其他）或eToken裝置的製造商。
 
-   按一下「**儲存**」。已針對AEM Forms設定硬體安全性模組。 現在，您可以搭配AEM Forms使用硬體安全性模組，以簽署或認證檔案。
+   按一下「**儲存**」。 已針對AEM Forms設定硬體安全性模組。 現在，您可以搭配AEM Forms使用硬體安全性模組，以簽署或認證檔案。
 
 ## 使用DocAssurance Service API簽署或認證檔案，並使用儲存在裝置上的數位金鑰  {#programatically}
 
@@ -415,4 +415,4 @@ public class Sign{
  public CredentialContext(String credentialAlias, ResourceResolver resourceResolver, boolean isHSMCredential);
 ```
 
-如需DocAssurance服務的API和範常式式碼詳細資訊，請參閱[以程式設計方式使用AEM Document Services](/help/forms/using/aem-document-services-programmatically.md)。
+如需DocAssurance服務的API與範常式式碼的相關詳細資訊，請參閱[以程式設計方式使用AEM檔案服務](/help/forms/using/aem-document-services-programmatically.md)。
