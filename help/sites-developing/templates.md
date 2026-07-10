@@ -61,7 +61,7 @@ AEM現在提供兩種基本型別的範本以用於建立頁面：
 
 >[!NOTE]
 >
->請參閱[使用可編輯的頁面範本來開發Experience Manager網站](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html)。
+>請參閱[使用可編輯的頁面範本來開發Experience Manager網站](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html?lang=zh-Hant)。
 
 ### 靜態範本 {#static-templates}
 

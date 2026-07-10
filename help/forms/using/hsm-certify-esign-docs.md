@@ -28,7 +28,7 @@ Adobe Experience Manager Forms可使用儲存在HSM上的憑證或eSign，或將
 
 ## 使用AEM Forms設定HSM或etoken裝置之前 {#configurehsmetoken}
 
-* 安裝[AEM Forms附加元件](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)套件。
+* 安裝[AEM Forms附加元件](https://helpx.adobe.com/tw/aem-forms/kb/aem-forms-releases.html)套件。
 * 在與AEM伺服器相同的電腦上，安裝並設定HSM或etoken使用者端軟體。 使用者端軟體必須與HSM和Etoken裝置通訊。
 
 ## 啟用DocAssurance服務 {#configuredocassurance}
