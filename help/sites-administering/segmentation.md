@@ -11,7 +11,7 @@ feature: Administering,Personalization
 role: Admin
 source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
 workflow-type: tm+mt
-source-wordcount: '1745'
+source-wordcount: '1763'
 ht-degree: 4%
 
 ---
@@ -113,7 +113,7 @@ AEM可讓您輕鬆個人化使用者體驗。 它也可讓您驗證區段定義�
 >
 >比較屬性`profile/age`時，您已知道比較的型別會是&#x200B;**number**，因此即使未設定`profile/age`，小於30的比較`profile/age`將傳回&#x200B;**false**，如您預期的那樣。
 
-### 參考 {#references}
+### 參照 {#references}
 
 下列是現成可用的參考，可直接連結至指令碼或其他區段。 它們可從元件瀏覽器拖曳至編輯器。
 
@@ -248,14 +248,13 @@ this.dependOn(ContextHub.SegmentEngine.Property('profile/age'));
 
    ![建立資料夾](assets/contexthub-create-folder.png)
 
-1. 按一下&#x200B;**建立**。
+1. 按一下「**建立**」。
 
    ![確認資料夾](assets/contexthub-confirm-folder.png)
 
 1. 資料夾會出現在區段清單中。
    * 排序欄的方式將影響新資料夾在清單中的顯示位置。
    * 您可以按一下欄標題來調整您的排序。
-
      ![新資料夾](assets/contexthub-folder.png)
 
 ### 修改現有資料夾 {#modify-folders}

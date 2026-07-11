@@ -1,6 +1,6 @@
 ---
 title: 變更驗證的評估順序
-description: 您可以變更AEM Forms評估多個驗證提供者的順序。
+description: 您可以變更AEM表單評估多個驗證提供者的順序。
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_user_management
@@ -22,7 +22,7 @@ ht-degree: 0%
 > 
 > 確保使用者具有存取管理員控制檯的管理員許可權。
 
-如果您已設定多個驗證提供者，您可以變更AEM Forms評估其驗證順序。 在config.xml檔案中列出的驗證提供者順序，決定了驗證的評估順序。
+如果您已設定多個驗證服務提供者，您可以變更AEM表單評估其驗證順序。 在config.xml檔案中列出的驗證提供者順序，決定了驗證的評估順序。
 
 1. 在管理控制檯中，按一下「設定」>「使用者管理」>「組態」>「匯入和匯出組態檔」。
 1. 若要將目前的組態設定匯出至檔案，請按一下「匯出」並將組態檔案儲存在其他位置。
