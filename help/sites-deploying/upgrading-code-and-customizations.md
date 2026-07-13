@@ -42,7 +42,7 @@ ht-degree: 0%
 
 除了選擇性地升級您的程式碼基底和自訂以與新的AEM版本搭配使用之外，6.5還可透過[AEM 6.5](/help/sites-deploying/backward-compatibility.md)中的回溯相容性中所述，協助您更有效率地管理自訂。
 
-如上所述及下圖所示，在第一個步驟中執行[模式偵測器](/help/sites-deploying/pattern-detector.md)可協助您評估升級的整體複雜性。 它也可以協助您決定您是要以相容性模式執行，或更新自訂以使用所有新的AEM 6.5功能。 如需詳細資訊，請參閱AEM 6.5](/help/sites-deploying/backward-compatibility.md)中的[回溯相容性頁面。[![opt_cropped](assets/opt_cropped.png)](assets/upgrade-code-base-highlevel.png)
+如上所述及下圖所示，在第一個步驟中執行[模式偵測器](/help/sites-deploying/pattern-detector.md)可協助您評估升級的整體複雜性。 它也可以協助您決定您是要以相容性模式執行，或更新自訂以使用所有新的AEM 6.5功能。 如需詳細資訊，請參閱AEM 6.5[&#128279;](/help/sites-deploying/backward-compatibility.md)中的回溯相容性頁面。[![opt_cropped](assets/opt_cropped.png)](assets/upgrade-code-base-highlevel.png)
 
 ## 升級程式碼基底 {#upgrade-code-base}
 
