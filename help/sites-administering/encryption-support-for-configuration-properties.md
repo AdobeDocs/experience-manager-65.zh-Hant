@@ -11,7 +11,7 @@ feature: Security
 role: Admin
 source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
 workflow-type: tm+mt
-source-wordcount: '279'
+source-wordcount: '280'
 ht-degree: 1%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 1%
 
 這些步驟顯示如何加密Mail服務的SMTP密碼。 您可以針對要加密的OSGI屬性完成這些步驟。
 
-1. 移至AEM Web Console，位於&#x200B;*https://&lt;serveraddress>：&lt;serverport>/system/console/configMgr*
+1. 前往AEM Web Console，位於&#x200B;*https://&lt;serveraddress>：&lt;serverport>/system/console/configMgr*
 1. 在左上角，前往&#x200B;**Main - Crypto Support**
 
    ![chlimage_1-325](assets/chlimage_1-325.png)
@@ -42,7 +42,7 @@ ht-degree: 1%
    ![screen_shot_2018-08-01at113417am](assets/screen_shot_2018-08-01at113417am.png)
 
 1. 在&#x200B;**純文字**&#x200B;欄位中，輸入要保護的敏感資料文字。
-1. 選取&#x200B;**Protect**。 受保護文字會顯示為加密文字。
+1. 選取&#x200B;**保護**。 受保護文字會顯示為加密文字。
 
    ![screen_shot_2018-08-01at113844am](assets/screen_shot_2018-08-01at113844am.png)
 

@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 2493f25c9f22a165360107e9f642ef3f8c07e957
+source-git-commit: 06cdf1211a48838d1e578d1d804aad00cd01eb79
 workflow-type: tm+mt
-source-wordcount: '3772'
+source-wordcount: '3853'
 ht-degree: 5%
 
 ---
@@ -101,8 +101,7 @@ Adobe Experience Manager可搭配下列版本的Java™虛擬機器器運作：
 | Azul Zulu OpenJDK 11 - 64位元 | A：支援的`[3]` | |
 | Azul Zulu OpenJDK 8 - 64位元 | A：支援的`[3]` | |
 
-1. Oracle已改用Oracle Java™ SE產品的「長期支援」(LTS)模型。Java™ 9、Java™ 10和Java™ 12是Oracle的非LTS版本（請參閱[Oracle Java™ SE支援藍圖](https://www.oracle.com/technetwork/java/eol-135779.html)）。若要在生產環境中部署AEM，Adobe僅支援Java™的LTS版本。Adobe直接為所有使用Oracle Java™ SE技術的AEM客戶支援Oracle Java™ SE JDK的支援和發佈，包括LTS版本的所有維護更新。請參閱Adobe Experience Manager的[Java™支援原則](assets/Java_Policy_for_Adobe_Experience_Manager.pdf)。
-   **重要： [Oracle 6.5 LTS](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65-lts/content/implementing/deploying/introduction/technical-requirements)支援AEM Java™ 17和21。**
+1. Oracle已改用Oracle Java™ SE產品的「長期支援」(LTS)模型。 Java™ 9、Java™ 10和Java™ 12是Oracle的非LTS版本（請參閱[Oracle Java™ SE支援藍圖](https://www.oracle.com/technetwork/java/eol-135779.html)）。 若要在生產環境中部署AEM，Adobe僅支援Java™的LTS版本。 Adobe直接為所有使用Oracle Java™ SE技術的AEM客戶支援Oracle Java™ SE JDK的支援和發佈，包括LTS版本的所有維護更新。 請參閱Adobe Experience Manager[&#128279;](assets/Java_Policy_for_Adobe_Experience_Manager.pdf)的Java™支援原則。   **重要： [Oracle 6.5 LTS](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65-lts/content/implementing/deploying/introduction/technical-requirements)支援AEM Java™ 17和21。**
 
 1. ® JRE僅與WebSphere®應用程式伺服器一起受支援。
 
@@ -123,7 +122,7 @@ Adobe Experience Manager可搭配下列版本的Java™虛擬機器器運作：
 | MongoDB Enterprise 8.0 | 存放庫 | A：支援的`[3, 4]` |
 | MongoDB Enterprise 7.0 | 存放庫 | A：支援的`[3, 4]` |
 | MongoDB Enterprise 6.0 | 存放庫 | A：支援的`[3, 4]` |
-| MongoDB Enterprise 5.0 | 存放庫 | A：支援的`[3, 4]` |
+| MongoDB Enterprise 5.0 | 存放庫 | A：支援的`[3, 4, 7]` |
 | MongoDB Enterprise 4.4 | 存放庫 | A：支援的`[2, 3, 4, 7]` |
 | MongoDB Enterprise 4.2 | 存放庫 | A：支援的`[2, 3, 4, 7]` |
 | MongoDB Enterprise 4.0 | 存放庫 | Z：不支援 |
@@ -146,6 +145,7 @@ Adobe Experience Manager可搭配下列版本的Java™虛擬機器器運作：
 6. 僅適用於AEM Forms：
    * 移除對Oracle Database 12c的支援，並新增對Oracle Database 19c的支援。
    * 移除對® SQL Server 2016的支援，並新增對Microsoft® SQL Server 2019和Microsoft® SQL Server 2022的支援。
+7. AEM Forms不支援。
 
 >[!NOTE]
 >
@@ -192,7 +192,7 @@ Adobe Experience Manager能以獨立伺服器（快速入門JAR檔案）或協�
 | JBoss® EAP 7.2.x （含JBoss®應用程式伺服器） | Z：不支援 |
 | JBoss® EAP 7.1.4含JBoss®應用程式伺服器 | R：新合約`[1]`的支援受限`[2]` |
 | JBoss® EAP 7.0.x （含JBoss®應用程式伺服器） | Z：不支援 |
-| JBoss® EAP 7.4含JBoss®應用程式伺服器<sup>[2] [3] [7] | A：支援 |
+| JBoss® EAP 7.4含JBoss®應用程式伺服器<sup>[2] [3] | A：支援 |
 
 1. 建議使用AEM Forms進行部署。
 2. 在應用程式伺服器上啟動AEM 6.5部署後，系統會移至「有限支援」。 現有客戶可升級至AEM 6.5，並繼續使用應用程式伺服器。 對於新客戶，如上方Level-R說明所述，隨附支援條件和支援計畫。
