@@ -1,6 +1,6 @@
 ---
-title: 使用SAPCommerce Cloud開發
-description: SAPCommerce Cloud整合架構包含具有API的整合層。
+title: 使用SAP Commerce Cloud進行開發
+description: SAP Commerce Cloud整合架構包含具有API的整合層。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
@@ -11,12 +11,12 @@ feature: Commerce Integration Framework
 role: Admin, Developer
 source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
 workflow-type: tm+mt
-source-wordcount: '2303'
+source-wordcount: '2335'
 ht-degree: 0%
 
 ---
 
-# 使用SAPCommerce Cloud開發 {#developing-with-sap-commerce-cloud}
+# 使用SAP Commerce Cloud進行開發 {#developing-with-sap-commerce-cloud}
 
 >[!NOTE]
 >
@@ -26,7 +26,7 @@ ht-degree: 0%
 
 * 外掛電子商務系統，並將產品資料提取至Adobe Experience Manager (AEM)
 
-* 建置AEM元件，用於獨立於特定電子商務引擎的商務功能
+* 建置AEM元件，以提供獨立於特定電子商務引擎的商務功能
 
 ![chlimage_1-11](/help/sites-developing/assets/chlimage_1-11a.png)
 
@@ -40,7 +40,7 @@ ht-degree: 0%
 * 購物車
 * 結帳
 
-針對搜尋，整合勾點可讓您使用AEM搜尋、電子商務系統搜尋、第三方搜尋或其組合。
+針對搜尋，整合勾點可讓您使用AEM搜尋、搜尋電子商務系統、第三方搜尋或兩者的組合。
 
 ## 電子商務引擎選擇 {#ecommerce-engine-selection}
 
@@ -96,7 +96,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->您可以使用CRXDE Lite檢視在Hybris實作的產品元件中如何處理這項作業：
+>您可以使用CRXDE Lite檢視在Hybris實作的產品元件中如何處理此問題：
 >
 >`/apps/geometrixx-outdoors/components/hybris/product/product.jsp`
 
@@ -154,10 +154,10 @@ hybris會使用使用者工作階段來儲存資訊，例如客戶的購物車�
 
 ### 產品同步與發佈 {#product-synchronization-and-publishing}
 
-在Hybris中維護的產品資料必須在AEM中可用。 已實作下列機制：
+在Hybris中維護的產品資料必須可在AEM中使用。 已實作下列機制：
 
 * hybris會提供ID的初始載入作為摘要。 可能有此摘要的更新。
-* hybris會透過摘要(AEM輪詢)提供更新資訊。
+* hybris會透過摘要（AEM會輪詢）提供更新資訊。
 * 當AEM使用產品資料時，它會針對目前的資料將要求傳回hybris （條件式get要求使用上次修改日期）。
 * 在Hybris上，可以宣告方式指定摘要內容。
 * 將摘要結構對應至AEM內容模型會在AEM端的摘要配接器中進行。
@@ -171,7 +171,7 @@ hybris會使用使用者工作階段來儲存資訊，例如客戶的購物車�
 
    * 產品已核准。
 
-* hybris擴充功能提供輪詢匯入工具（「hybris」配置），可設定為以指定的間隔（例如，每24小時將間隔指定為秒）將變更匯入AEM：
+* hybris擴充功能提供輪詢匯入工具（「hybris」配置），可設定為以指定間隔（例如每24小時以秒指定間隔）將變更匯入AEM：
 
   ```JavaScript
       http://localhost:4502/content/geometrixx-outdoors/en_US/jcr:content.json
@@ -184,9 +184,9 @@ hybris會使用使用者工作階段來儲存資訊，例如客戶的購物車�
        }
   ```
 
-* AEM中的目錄設定可辨識&#x200B;**已暫存**&#x200B;和&#x200B;**線上**&#x200B;目錄版本。
+* AEM中的目錄設定可辨識&#x200B;**階段**&#x200B;和&#x200B;**線上**&#x200B;目錄版本。
 
-* 在目錄版本之間同步產品需要啟用或停用對應的AEM頁面(a、c)
+* 在目錄版本之間同步產品時，需啟用或停用對應的AEM頁面(a、c)
 
    * 若要將產品新增至&#x200B;**Online**&#x200B;目錄版本，必須啟用產品頁面。
 
@@ -200,17 +200,17 @@ hybris會使用使用者工作階段來儲存資訊，例如客戶的購物車�
 
 * 啟用的產品頁面必須存取產品資料的&#x200B;**線上**&#x200B;版本(d)。
 
-* AEM Publish執行個體需要存取hybris，以擷取產品和個人化資料(d)。
+* AEM發佈執行個體需要存取hybris，才能擷取產品和個人化資料(d)。
 
 ### 架構 {#architecture}
 
 #### 產品和變體的架構 {#architecture-of-product-and-variants}
 
-單一產品可以有多個變數，例如可能因顏色和/或大小而異。 產品必須定義哪些屬性會驅動變化；Adobe字詞這些&#x200B;*變化軸*。
+單一產品可以有多個變數，例如可能因顏色和/或大小而異。 產品必須定義哪些屬性會驅動變異；Adobe會用這&#x200B;*個變體軸*&#x200B;來表示。
 
 不過，並非所有屬性都是變數軸。 變化也可能會影響其他屬性；例如，價格可能取決於大小。 購物者無法選取這些屬性，因此不會視為變數軸。
 
-每個產品和/或變體由資源表示，因此將1:1對應到存放庫節點。 必然結果是，特定產品和/或變體可由其路徑唯一識別。
+每個產品和/或變體都由資源表示，因此將1:1對應到存放庫節點。 必然結果是，特定產品和/或變體可由其路徑唯一識別。
 
 產品/變體資源並非總是包含實際產品資料。 它可能是其他系統上所保留資料的表示法（例如hybris）。 例如，產品說明和定價不會儲存在AEM中，而是從電子商務引擎即時擷取。
 
@@ -227,13 +227,13 @@ hybris會使用使用者工作階段來儲存資訊，例如客戶的購物車�
 >
 >1. 再加一個
 >
->此額外變體是透過產品參考的`variationAxis`屬性選取的(Geometrixx Outdoors通常為`color`)。
+>這個額外的變體是透過產品參考的`variationAxis`屬性選取的（通常是Geometrixx Outdoors的`color`）。
 
 #### 產品參考和產品資料 {#product-references-and-product-data}
 
 一般而言，產品資料位於`/etc`之下，而產品參考位於`/content`之下。
 
-產品變數和產品資料節點之間必須是1:1對應。
+產品變數和產品資料節點之間必須有1:1對應。
 
 產品參考也必須針對呈現的每個變數有一個節點，但不需要呈現所有變數。 例如，如果產品有S、M、L等變數，則產品資料可能是：
 
@@ -409,7 +409,7 @@ public class AxisFilter implements VariantFilter {
 * 購物車屬於`CommerceSession:`
 
    * `CommerceSession`執行新增或移除等動作。
-   * `CommerceSession`也會在購物車上執行各種計算。&quot;
+   * `CommerceSession`也會在購物車上執行各種計算。 &quot;
 
 * 雖然不直接與購物車相關，但`CommerceSession`也必須提供目錄定價資訊（因為它擁有定價）
 
@@ -429,12 +429,12 @@ public class AxisFilter implements VariantFilter {
 * 儲存空間
 
    * 在hybris案例中，hybris伺服器擁有購物車。
-   * 在AEM一般案例中，購物車儲存在[ClientContext](/help/sites-administering/client-context.md)中。
+   * 在AEM一般案例中，購物車會儲存在[ClientContext](/help/sites-administering/client-context.md)中。
 
-**Personalization**
+**個人化**
 
 * 一律透過[ClientContext](/help/sites-administering/client-context.md)推動個人化。
-* 在所有情況下都會建立購物車的ClientContext`/version/`：
+* 在所有情況下都會建立購物車的ClientContext `/version/`：
 
    * 應該使用`CommerceSession.addCartEntry()`方法來新增產品。
 
@@ -498,7 +498,7 @@ public class AxisFilter implements VariantFilter {
 >
 >您可以實作送貨選擇器；例如：
 >
->`yourProject/commerce/components/shippingpicker`：
+>`yourProject/commerce/components/shippingpicker`:
 >
 >* 基本上，這可以是`foundation/components/form/radio`的復本，但是針對`CommerceSession`有回呼：
 >
@@ -535,7 +535,7 @@ public class AxisFilter implements VariantFilter {
 
 這會使用搜尋API來查詢選取的商務引擎（請參閱[電子商務引擎選擇](#ecommerce-engine-selection)）：
 
-#### 搜尋API {#search-api}
+#### 搜尋 API {#search-api}
 
 核心專案提供了幾個通用/協助程式類別：
 
@@ -551,7 +551,7 @@ public class AxisFilter implements VariantFilter {
 
 ### 使用者整合 {#user-integration}
 
-提供AEM與各種電子商務系統之間的整合。 這需要在不同系統之間同步處理購物者的策略，以便AEM的特定程式碼只需瞭解AEM，反之亦然：
+提供AEM與各種電子商務系統之間的整合。 這需要採取在不同系統之間同步購買者的策略，好讓AEM特定的程式碼只需瞭解AEM，反之亦然：
 
 * 驗證
 
@@ -579,7 +579,7 @@ AEM前端可放置在現有Hybris實作的前面。 您也可以將hybris引擎�
    * 登入AEM時，如果系統辨識出使用者：
 
       * 嘗試使用提供的使用者名稱/密碼登入hybris
-      * 如果成功，請在AEM中使用相同的密碼建立使用者(AEM特定的salt會產生AEM特定的雜湊)
+      * 如果成功，請在AEM中以相同的密碼建立使用者（AEM特定的salt會導致AEM特定的雜湊）
 
    * 上述演演算法是在Sling `AuthenticationInfoPostProcessor`中實作
 

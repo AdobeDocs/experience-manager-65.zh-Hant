@@ -1,6 +1,6 @@
 ---
 title: 開發（一般）
-description: 整合架構包含具有API的整合層，可讓您為電子商務功能建立AEM元件。
+description: 整合框架包含具有API的整合層，可讓您為電子商務功能建置AEM元件。
 contentOwner: Guillaume Carlino
 exl-id: 1138a548-d112-4446-b0e1-b7a9ea7c7604
 solution: Experience Manager,Commerce
@@ -8,7 +8,7 @@ feature: Commerce Integration Framework
 role: Admin, Developer
 source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
 workflow-type: tm+mt
-source-wordcount: '1856'
+source-wordcount: '1883'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 >
 >[API檔案](/help/commerce/cif-classic/developing/ecommerce.md#api-documentation)也可供使用。
 
-整合架構包含具有API的整合層。 這可讓您建置電子商務功能的AEM元件（不受特定電子商務引擎影響）。 它也可讓您使用內部CRX資料庫或插入電子商務系統，並將產品資料提取到AEM中。
+整合架構包含具有API的整合層。 這可讓您建立AEM元件，用於電子商務功能（不受特定電子商務引擎影響）。 它也可讓您使用內部CRX資料庫或插入電子商務系統，並將產品資料提取到AEM。
 
 提供幾個現成的AEM元件，以供使用整合層。 目前包括：
 
@@ -51,7 +51,7 @@ ht-degree: 0%
 
 * `cq:commerceProvider`屬性也用來參考適當的商務工廠定義。
 
-   * 例如，值為Geometrixx的`cq:commerceProvider`屬性與&#x200B;**Day CQ Commerce Factory for Geometrixx-Outdoors** (`com.adobe.cq.commerce.hybris.impl.GeoCommerceServiceFactory`)的OSGi設定相關，其中引數`commerceProvider`也具有值`geometrixx`。
+   * 例如，值為Geometrixx的`cq:commerceProvider`屬性與Geometrixx-Outdoors之&#x200B;**Day CQ Commerce Factory** (`com.adobe.cq.commerce.hybris.impl.GeoCommerceServiceFactory`)的OSGi設定相關，其中引數`commerceProvider`也具有值`geometrixx`。
    * 您可以在此處設定其他屬性（若適當且可提供）。
 
 在標準AEM安裝中，需要特定實施，例如：
@@ -79,7 +79,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->您可以使用CRXDE Lite檢視這在AEM一般實作的產品元件中受到如何處理的問題：
+>您可以使用CRXDE Lite檢視在AEM一般實作的產品元件中如何處理這種情況：
 >
 >`/apps/geometrixx-outdoors/components/product`
 
@@ -108,11 +108,11 @@ ht-degree: 0%
 
 #### 產品和變體的架構 {#architecture-of-product-and-variants}
 
-單一產品可以有多個變數，例如可能因顏色和/或大小而異。 產品必須定義哪些屬性會驅動變化；Adobe字詞這些&#x200B;*變化軸*。
+單一產品可以有多個變數，例如可能因顏色和/或大小而異。 產品必須定義哪些屬性會驅動變異；Adobe會用這&#x200B;*個變體軸*&#x200B;來表示。
 
 不過，並非所有屬性都是變數軸。 變化也可能會影響其他屬性；例如，價格可能取決於大小。 購物者無法選取這些屬性，因此不會視為變數軸。
 
-每個產品和/或變體由資源表示，因此將1:1對應到存放庫節點。 必然結果是，特定產品和/或變體可由其路徑唯一識別。
+每個產品和/或變體都由資源表示，因此將1:1對應到存放庫節點。 必然結果是，特定產品和/或變體可由其路徑唯一識別。
 
 任何產品資源都可以以`Product API`表示。 產品API中的大部分呼叫都是變動專用（雖然變動可能會繼承來自上階的共用值），但也有列出變動集（`getVariantAxes()`、`getVariants()`等）的呼叫。
 
@@ -127,7 +127,7 @@ ht-degree: 0%
 >1. `size`
 >1. 再加一個
 >
->   此額外變體是透過產品參考的`variationAxis`屬性選取的(Geometrixx Outdoors通常為`color`)。
+>   這個額外的變體是透過產品參考的`variationAxis`屬性選取的（通常是Geometrixx Outdoors的`color`）。
 
 #### 產品參考與PIM資料 {#product-references-and-pim-data}
 
@@ -137,7 +137,7 @@ ht-degree: 0%
 
 * `/content`下的產品參考。
 
-產品變數和產品資料節點之間必須是1:1對應。
+產品變數和產品資料節點之間必須有1:1對應。
 
 產品參考也必須針對呈現的每個變數有一個節點，但不需要呈現所有變數。 例如，如果產品有S、M、L等變數，則產品資料可能是：
 
@@ -237,7 +237,7 @@ public class AxisFilter implements VariantFilter {
 
 * **一般儲存機制**
 
-   * 產品節點nt：unstructured。
+   * 產品節點不是:unstructured。
    * 產品節點可以是：
 
       * 具有儲存在其他位置的產品資料的參考：
@@ -329,10 +329,10 @@ public class AxisFilter implements VariantFilter {
 
    * 在AEM一般案例中，購物車儲存在[ClientContext](/help/sites-administering/client-context.md)中
 
-**Personalization**
+**個人化**
 
 * 一律透過[ClientContext](/help/sites-administering/client-context.md)推動個人化。
-* 在所有情況下都會建立購物車的ClientContext`/version/`：
+* 在所有情況下都會建立購物車的ClientContext `/version/`：
 
    * 應該使用`CommerceSession.addCartEntry()`方法來新增產品。
 
@@ -408,7 +408,7 @@ public class AxisFilter implements VariantFilter {
 
 這會使用搜尋API來查詢選取的商務引擎（請參閱[電子商務引擎選擇](#ecommerce-engine-selection)）：
 
-#### 搜尋API {#search-api}
+#### 搜尋 API {#search-api}
 
 核心專案提供了幾個通用/協助程式類別：
 
@@ -472,10 +472,10 @@ public class AxisFilter implements VariantFilter {
       * `DiscountPromotionHandler`，適用於整個購物車的絕對折扣或百分比折扣
       * `PerfectPartnerPromotionHandler`，如果合作夥伴產品也在購物車中，則套用產品絕對折扣或百分比折扣
 
-   * ClientContext`SegmentMgr`會解析區段，而ClientContext`CartMgr`會解析促銷活動。 至少會引發一個已解析區段的促銷活動。
+   * ClientContext `SegmentMgr`解析區段，而ClientContext `CartMgr`解析促銷活動。 至少會引發一個已解析區段的促銷活動。
 
       * 已引發的促銷活動會透過AJAX呼叫傳回至伺服器，以重新計算購物車。
-      * 已引發的促銷活動（以及新增的憑單）也會顯示在「ClientContext」面板中。
+      * 已啟動的促銷活動（以及新增的憑單）也會顯示在ClientContext面板中。
 
 新增/移除購物車的憑單是透過`CommerceSession` API完成：
 
@@ -512,7 +512,7 @@ public List<Voucher> getVouchers() throws CommerceException;
 * 簡短說明
 * 參考指出折扣型態與值的相關促銷
 
-提供的`AbstractJcrCommerceSession`可以套用憑單。 類別`getVouchers()`傳回的憑單是`cq:Page`的執行個體，包含具有下列屬性（等等）的jcr：content節點：
+提供的`AbstractJcrCommerceSession`可以套用憑單。 類別`getVouchers()`傳回的憑單是`cq:Page`的執行個體，包含具有下列屬性（等等）的jcr:content節點：
 
 * `sling:resourceType` （字串） — 這必須是`commerce/components/voucher`
 
