@@ -11,7 +11,7 @@ feature: Mobile
 role: Admin
 source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '982'
+source-wordcount: '993'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ AEM Mobile Dashboard可讓您建立、建置和部署行動應用程式、建立
 
 ## AEM Mobile應用程式目錄 {#the-aem-mobile-apps-catalog}
 
-[AEM Mobile應用程式目錄](http://localhost:4502/aem/apps.html/content/phonegap)會顯示在AEM中管理的所有行動應用程式。
+[AEM Mobile應用程式目錄](http://localhost:4502/aem/apps.html/content/phonegap)會顯示您在AEM中管理的所有行動應用程式。
 
 將此目錄視為AEM Mobile的「登陸頁面」，管理員可依據範本建立，或上傳行動開發人員已啟動的現有應用程式，藉此啟動新的AEM Mobile應用程式。
 
@@ -66,7 +66,7 @@ AEM Mobile Dashboard可讓您建立、建置和部署行動應用程式、建立
 
 透過「管理頁面內容」方塊新增或修改內容後，您就可以透過「內容版本」更新，將這些變更推送給客戶。
 
-內容套件可讓AEM App Author管理AEM中的頁面內容，且讓開發團隊變更您的PhoneGap Shell應用程式（即應用程式架構或基礎架構），然後快速將這些變更推送給您的客戶，而不需要徵詢開發人員以重新提交至各種商店進行發佈。
+內容套件可讓AEM App Author在AEM中管理頁面內容，並要求開發團隊變更您的PhoneGap Shell應用程式（即應用程式架構或基礎架構），然後快速將這些變更推送給您的客戶，而不需要徵詢開發人員以重新提交至各種商店進行發佈。
 
 「內容套件」會為每次更新建立ZIP檔案（視為內容發行套件）。 這些套件包含轉譯應用程式時產生的html資源和html頁面，而且具備足夠的智慧，可僅封裝自上次更新以來已修改的檔案。
 
@@ -88,13 +88,13 @@ AEM Mobile Dashboard可讓您建立、建置和部署行動應用程式、建立
 
 這些圖示代表應用程式內容的內容發行套件
 
-### PhoneGap Build圖磚 {#the-phonegap-build-tile}
+### PhoneGap Build動態磚 {#the-phonegap-build-tile}
 
-**PhoneGap Build磚**&#x200B;會連線至`https://build.phonegap.com`，以建置並裝載遠端建置。 建置後，即可下載此組建版本，或直接透過二維碼將組建版本提供給您的裝置。
+**PhoneGap Build動態磚**&#x200B;會與`https://build.phonegap.com`連線，以建置並裝載遠端組建。 建置後，即可下載此組建版本，或直接透過二維碼將組建版本提供給您的裝置。
 
 或者，您可以下載裝置來源，透過PhoneGap CLI (`https://docs.phonegap.com/en/3.5.0/guide_cli_index.md.html`)在本機建置。
 
-![PhoneGap Build磚](assets/chlimage_1-140.png)
+![PhoneGap Build動態磚](assets/chlimage_1-140.png)
 
 ### 量度圖磚 {#the-metrics-tile}
 
@@ -102,9 +102,9 @@ AEM Mobile Dashboard可讓您建立、建置和部署行動應用程式、建立
 >
 >只有在您設定雲端服務後，才會顯示「量度」圖磚。
 >
->如需詳細資訊，請參閱[設定您的Adobe行動服務Cloud Service](/help/mobile/configure-adobe-mobile-cloud-service.md)。
+>如需詳細資訊，請參閱[設定您的Adobe Mobile Services Cloud Service](/help/mobile/configure-adobe-mobile-cloud-service.md)。
 
-AEM Mobile透過[AdobeMobile Services SDK](https://experienceleague.adobe.com/docs/mobile.html?lang=zh-Hant) (AMS)與Adobe Analytics整合。
+AEM Mobile透過[Adobe Mobile Services SDK](https://experienceleague.adobe.com/docs/mobile.html?lang=zh-Hant) (AMS)與Adobe Analytics整合。
 
 控制中心&#x200B;**量度圖磚**&#x200B;會顯示從AMS為您的應用程式提取的摘要分析。 您可以按一下右下方的「……」，深入分析控制面板。
 

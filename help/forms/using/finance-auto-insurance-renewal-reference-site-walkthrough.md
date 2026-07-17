@@ -11,7 +11,7 @@ feature: Adaptive Forms,Foundation Components
 role: User, Developer
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '761'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 We.Finance網站是金融服務網站，旨在協助您學習AEM Forms的互動式通訊功能。
 
-閱讀We.Finance汽車保險使用案例的詳細逐步解說，其中展示AEM表單及其與Microsoft® Dynamics的整合如何協助金融服務公司的客戶體驗個人化。 互動式逐步解說的設計目的，是為了在金融公司中輕鬆實作複雜的數位交易和客戶通訊。
+閱讀We.Finance汽車保險使用案例的詳細逐步解說，該使用案例展示AEM如何形成及其與Microsoft® Dynamics的整合有助於金融服務公司的個人化客戶體驗。 互動式逐步解說的設計目的，是為了在金融公司中輕鬆實作複雜的數位交易和客戶通訊。
 
 **歷程從使用案例開始：**
 
@@ -65,7 +65,7 @@ Sarah按一下&#x200B;**立即續約**，並導向至其汽車保險信函的網
 
 #### 親眼看看 {#see-it-yourself-1}
 
-您必須已收到附有PDF的電子郵件。 此PDF是車險信函的列印版本。 按一下[立即續約] **&#x200B;**&#x200B;以存取原則的Web版本。 檢查您的個人資訊和原則詳細資料，然後按一下[立即續約]&#x200B;**&#x200B;**，即可進入另一個互動式通訊。
+您必須已收到附有PDF的電子郵件。 PDF是汽車保險信函的列印版本。 按一下[立即續約] **&#x200B;**&#x200B;以存取原則的Web版本。 檢查您的個人資訊和原則詳細資料，然後按一下[立即續約]&#x200B;**&#x200B;**，即可進入另一個互動式通訊。
 
 電子郵件中的「**立即續約**」按鈕會將Sarah導向網頁上的原則。 您可以造訪下列URL：
 
