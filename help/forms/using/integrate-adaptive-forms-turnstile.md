@@ -1,29 +1,25 @@
 ---
 title: 如何在AEM最適化表單6.5中使用Turnstile？
-description: 透過Turnstile服務輕鬆增強表單安全性。 內的逐步指南！
+description: 透過Turnstile服務輕鬆增強表單安全性。 裡面有詳細的逐步指南！
 feature: Adaptive Forms, Foundation Components
 role: User, Developer
 exl-id: bed93ce3-89db-477a-8316-7598275e4bca
-source-git-commit: 94a9f4087e36bfe5701ad9aafd4e8446ca643ddf
+source-git-commit: 8025412849a1f324537019247a5e37b7931df7e7
 workflow-type: tm+mt
-source-wordcount: '851'
-ht-degree: 2%
+source-wordcount: '860'
+ht-degree: 9%
 
 ---
 
 # 使用Turnstile連線您的AEM Forms環境 {#connect-your-forms-environment-with-turnstile-service}
 
-<!--
-<span class="preview">This feature is based on Feature Toggle id `FT_FORMS-12407`. To enable the feature, follow the steps given in the [Enable Feature Toggle](/help/forms/using/enable-feature-toggle.md) article. </span>
--->
+<span class="preview">此功能是以功能切換ID `FT_FORMS-12407`為基礎。 若要啟用功能，請依照[啟用功能切換](/help/forms/using/enable-feature-toggle.md)文章中提供的步驟操作。</span>
 
-<span class="preview">預設不會啟用此功能。 您可以從您的官方地址寫信到aem-forms-ea@adobe.com，以要求存取此功能。</span>
-
-CAPTCHA （完全自動化公用圖靈測試來區分電腦和人之間的差異）是一種常用於線上交易的程式，以區分人和自動化程式或機器人。 這會帶來挑戰，並評估使用者的回應，以判斷其是否為人類或機器人與網站互動。 它可防止使用者在測試失敗時繼續進行，並透過防止機器人張貼垃圾郵件或惡意目的來確保線上交易的安全。
+CAPTCHA （完全自動化公用圖靈測試來區分電腦和人之間的差異）是一種常用於線上交易的程式，以區分人和自動化程式或機器人。 它會提出質詢並評估使用者的回應，以判斷與網站互動的是真人還是機器人。 它可防止使用者在測試失敗時繼續操作，並透過防止機器人發佈垃圾郵件或惡意目的來確保線上交易的安全。
 
 AEM Forms 6.5支援下列驗證碼解決方案：
 
-* [Turnstile驗證碼](/help/forms/using/integrate-adaptive-forms-turnstile.md)
+* [Turnstile 驗證碼](/help/forms/using/integrate-adaptive-forms-turnstile.md)
 * [Google reCAPTCHA](/help/forms/using/captcha-adaptive-forms.md)
 * [驗證碼](/help/forms/using/integrate-adaptive-forms-hcaptcha.md)
 
@@ -34,7 +30,7 @@ AEM Forms 6.5支援下列驗證碼解決方案：
 
 Cloudflare的Turnstile驗證碼是一種安全性措施，旨在保護表單和網站免受自動化機器人、惡意攻擊、垃圾郵件和不需要的自動化流量的傷害。 在允許提交表單前，它會在表單提交上顯示核取方塊，以驗證使用者是否為人類。
 
->[!VIDEO](https://video.tv.adobe.com/v/3440951?captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/3440940/)
 
 ### 整合AEM Forms環境與Turnstile驗證碼的必要條件 {#prerequisite}
 
@@ -49,25 +45,23 @@ Cloudflare的Turnstile驗證碼是一種安全性措施，旨在保護表單和�
    1. 前往&#x200B;**[!UICONTROL 工具 > 一般 > 設定瀏覽器]**。
    1. 在「組態瀏覽器」中，選取現有資料夾或建立新資料夾：
       * 若要建立&#x200B;**新資料夾**&#x200B;並啟用雲端設定：
-         1. 在組態瀏覽器中，按一下&#x200B;**[!UICONTROL 建立]**。
-         1. 在[建立設定]對話方塊中，指定名稱、標題，並檢查&#x200B;**[!UICONTROL 雲端設定]**。
-         1. 按一下&#x200B;**[!UICONTROL 建立]**。
+        1. 在組態瀏覽器中，按一下&#x200B;**[!UICONTROL 建立]**。
+        1. 在[建立設定]對話方塊中，指定名稱、標題，並檢查&#x200B;**[!UICONTROL 雲端設定]**。
+        1. 按一下「**[!UICONTROL 建立]**」。
       * 若要啟用&#x200B;**現有資料夾**&#x200B;的雲端設定：
-         1. 在組態瀏覽器中，選取資料夾並按一下&#x200B;**[!UICONTROL 內容]**。
-         1. 在[組態內容]對話方塊中，啟用&#x200B;**[!UICONTROL 雲端組態]**。
-         1. 按一下&#x200B;**[!UICONTROL 儲存並關閉]**&#x200B;以儲存組態。
+        1. 在組態瀏覽器中，選取資料夾並按一下&#x200B;**[!UICONTROL 內容]**。
+        1. 在[組態內容]對話方塊中，啟用&#x200B;**[!UICONTROL 雲端組態]**。
+        1. 按一下&#x200B;**[!UICONTROL 儲存並關閉]**&#x200B;以儲存組態。
 
-1. 設定您的Cloud Service：
-   1. 在您的AEM作者執行個體上，前往![tools-1](assets/tools-1.png) > **[!UICONTROL Cloud Service]**，然後按一下&#x200B;**[!UICONTROL Turnstile]**。
-
-      在Cloud Service中![旋轉門](assets/turnstile-in-ui.png)
-   1. 選取已建立或已更新的設定容器，如上一節所述。 按一下&#x200B;**[!UICONTROL 建立]**。
-
+1. 設定您的雲端服務：
+   1. 在您的AEM作者執行個體上，前往![工具–1](assets/tools-1.png) > **[!UICONTROL 雲端服務]**&#x200B;並按一下&#x200B;**[!UICONTROL Turnstile]**。
+      在雲端服務中![Turnstile](assets/turnstile-in-ui.png)
+   1. 選取已建立或已更新的設定容器，如上一節所述。按一下&#x200B;**[!UICONTROL 建立]**。
       ![組態旋轉門](assets/config-hcaptcha.png)
    1. 將&#x200B;**[!UICONTROL Widget Type]**&#x200B;指定為Managed、非互動式或隱藏式。
    1. 提供其他詳細資料，例如&#x200B;**[!UICONTROL 標題]**、**[!UICONTROL 名稱]**。
-   1. 針對在先決條件[&#128279;](#prerequisite)中取得的Turnstile服務，指定&#x200B;**[!UICONTROL 網站金鑰]**&#x200B;和&#x200B;**[!UICONTROL 秘密金鑰]**。
-   1. 按一下&#x200B;**[!UICONTROL 建立]**。
+   1. 針對在先決條件](#prerequisite)中取得的Turnstile服務[，指定&#x200B;**[!UICONTROL 網站金鑰]**&#x200B;和&#x200B;**[!UICONTROL 秘密金鑰]**。
+   1. 按一下「**[!UICONTROL 建立]**」。
 
       ![設定Cloud Service以連線您的AEM Forms環境與Turnstile](assets/config-turntstile.png)
 
@@ -76,7 +70,7 @@ Cloudflare的Turnstile驗證碼是一種安全性措施，旨在保護表單和�
 
    設定Turnstile Captcha服務後，就可在最適化表單中使用。
 
-## 在最適化表單中使用Turnstile{#using-turnstile-aem-6.5}
+## 在最適化表單中使用 Turnstile {#using-turnstile-aem-6.5}
 
 1. 開啟您的AEM Forms環境。
 1. 移至&#x200B;**[!UICONTROL Forms]** > **[!UICONTROL Forms和檔案]**。
@@ -99,9 +93,8 @@ Cloudflare的Turnstile驗證碼是一種安全性措施，旨在保護表單和�
    * **[!UICONTROL 驗證訊息]：**&#x200B;提供驗證訊息，以便在表單提交或使用者動作時驗證驗證碼。
    * **[!UICONTROL 驗證碼服務]：**&#x200B;選取表單提交的驗證碼服務，這裡選取Turnstile®。
    * **[!UICONTROL 組態設定]：**&#x200B;選取您為Turnstile®設定的雲端組態。
-
      >[!NOTE]
-     >基於類似目的，您的環境中可以有多個雲端設定。 因此，請謹慎選擇服務。 如果未列出任何服務，請參閱[將您的AEM Forms環境與Turnstile連線](#connect-your-forms-environment-with-turnstile-service)，以瞭解如何建立將AEM Forms環境與Turnstile服務連結的Cloud Service。
+     >基於類似目的，您的環境中可以有多個雲端設定。 因此，請謹慎選擇服務。 如果未列出任何服務，請參閱[將您的AEM Forms環境與Turnstile連線](#connect-your-forms-environment-with-turnstile-service)，以瞭解如何建立Cloud Service，將您的AEM Forms環境與Turnstile服務連線。
 
    * **[!UICONTROL 錯誤訊息]：**&#x200B;提供驗證碼提交失敗時向使用者顯示的錯誤訊息。
    * **驗證碼大小：**&#x200B;您可以選取hCaptcha®挑戰對話方塊的顯示大小。 使用&#x200B;**[!UICONTROL Compact]**&#x200B;選項可顯示小尺寸，使用&#x200B;**[!UICONTROL Normal]**&#x200B;可顯示相對大尺寸的hCaptcha®挑戰對話方塊。
