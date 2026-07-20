@@ -60,7 +60,7 @@ Cloudflare的Turnstile驗證碼是一種安全性措施，旨在保護表單和�
       ![組態旋轉門](assets/config-hcaptcha.png)
    1. 將&#x200B;**[!UICONTROL Widget Type]**&#x200B;指定為Managed、非互動式或隱藏式。
    1. 提供其他詳細資料，例如&#x200B;**[!UICONTROL 標題]**、**[!UICONTROL 名稱]**。
-   1. 針對在先決條件](#prerequisite)中取得的Turnstile服務[，指定&#x200B;**[!UICONTROL 網站金鑰]**&#x200B;和&#x200B;**[!UICONTROL 秘密金鑰]**。
+   1. 針對在先決條件[&#128279;](#prerequisite)中取得的Turnstile服務，指定&#x200B;**[!UICONTROL 網站金鑰]**&#x200B;和&#x200B;**[!UICONTROL 秘密金鑰]**。
    1. 按一下「**[!UICONTROL 建立]**」。
 
       ![設定Cloud Service以連線您的AEM Forms環境與Turnstile](assets/config-turntstile.png)
