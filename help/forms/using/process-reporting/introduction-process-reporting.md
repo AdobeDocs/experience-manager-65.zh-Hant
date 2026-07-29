@@ -9,9 +9,9 @@ exl-id: 674d28dc-7353-49de-9e12-b1998e1509c7
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: c29c24f3e8b05d12689536376ce1a07798f784e6
 workflow-type: tm+mt
-source-wordcount: '294'
+source-wordcount: '305'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 0%
 程式報告會建置在具備下列條件的模組上：
 
 * 從AEM Forms資料庫讀取程式資料
-* Publish流程資料到內嵌的流程報表存放庫
+* 將程式資料發佈到內嵌的Process Reporting存放庫
 * 提供瀏覽器式使用者介面以檢視報表
 
 ## 主要功能 {#key-capabilities}
@@ -46,7 +46,7 @@ ht-degree: 0%
 
 ### 臨時報表 {#adhoc-reports}
 
-![print-&amp;-color](assets/print-&-colour.png)
+![print-&amp;-color](assets/print-and-colour.png)
 
 使用篩選器可取得您資料的特定檢視。
 
