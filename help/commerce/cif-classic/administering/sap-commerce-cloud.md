@@ -1,6 +1,6 @@
 ---
-title: 搭配SAPCommerce Cloud使用AEM
-description: 瞭解如何搭配SAPCommerce Cloud使用Adobe Experience Manager。
+title: 搭配SAP Commerce Cloud使用AEM
+description: 瞭解如何將Adobe Experience Manager與SAP Commerce Cloud搭配使用。
 contentOwner: Guillaume Carlino
 topic-tags: e-commerce
 content-type: reference
@@ -10,12 +10,12 @@ feature: Commerce Integration Framework
 role: Admin, Developer
 source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
 workflow-type: tm+mt
-source-wordcount: '1574'
+source-wordcount: '1769'
 ht-degree: 1%
 
 ---
 
-# SAPCOMMERCE CLOUD{#sap-commerce-cloud}
+# SAP COMMERCE CLOUD{#sap-commerce-cloud}
 
 安裝後，您可以設定執行個體：
 
@@ -27,7 +27,7 @@ ht-degree: 1%
 1. [設定目錄匯入工具](#configure-the-catalog-importer)。
 1. 使用[匯入工具將目錄](#catalog-import)匯入至AEM中的特定位置。
 
-## 設定Geometrixx Outdoors的多面搜尋 {#configure-the-facetted-search-for-geometrixx-outdoors}
+## 設定Geometrixx Outdoors的面向搜尋 {#configure-the-facetted-search-for-geometrixx-outdoors}
 
 >[!NOTE]
 >
@@ -112,7 +112,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->使用AEM時，有數種方法可管理此類服務的組態設定；請參閱[設定OSGi](/help/sites-deploying/configuring-osgi.md)以取得完整詳細資訊。 如需可設定引數及其預設值的完整清單，另請參閱主控台。
+>使用AEM時，有數種方法可管理此類服務的組態設定；如需完整詳細資訊，請參閱[設定OSGi](/help/sites-deploying/configuring-osgi.md)。 如需可設定引數及其預設值的完整清單，另請參閱主控台。
 
 記錄輸出提供已建立頁面和元件的意見回饋，並報告潛在錯誤。
 
@@ -161,10 +161,10 @@ ht-degree: 1%
 
 匯入時要產生的結構可以設定為：
 
-**Day CQ Commerce Hybris預設匯入處理常式**
+&quot;**Day CQ Commerce Hybris預設匯入處理常式**
 `(com.adobe.cq.commerce.hybris.importer.DefaultImportHandler`)
 
-使用AEM時，有數種方法可管理此類服務的組態設定；請參閱[設定OSGi](/help/sites-deploying/configuring-osgi.md)以取得完整詳細資訊。 如需可設定引數及其預設值的完整清單，另請參閱主控台。
+使用AEM時，有數種方法可管理此類服務的組態設定；如需完整詳細資訊，請參閱[設定OSGi](/help/sites-deploying/configuring-osgi.md)。 如需可設定引數及其預設值的完整清單，另請參閱主控台。
 
 ## 設定產品屬性以載入 {#configure-the-product-attributes-to-load}
 
@@ -173,13 +173,13 @@ ht-degree: 1%
 1. 設定OSGi套件組合：
 
    **Day CQ Commerce Hybris預設回應剖析器**
-(`com.adobe.cq.commerce.hybris.impl.importer.DefaultResponseParser`)
+   (`com.adobe.cq.commerce.hybris.impl.importer.DefaultResponseParser`)
 
    您可以在此定義載入和對映所需的各種選項和屬性。
 
    >[!NOTE]
    >
-   >使用AEM時，有數種方法可管理此類服務的組態設定；請參閱[設定OSGi](/help/sites-deploying/configuring-osgi.md)以取得完整詳細資訊。 如需可設定引數及其預設值的完整清單，另請參閱主控台。
+   >使用AEM時，有數種方法可管理此類服務的組態設定；如需完整詳細資訊，請參閱[設定OSGi](/help/sites-deploying/configuring-osgi.md)。 如需可設定引數及其預設值的完整清單，另請參閱主控台。
 
 ## 匯入產品資料 {#importing-the-product-data}
 
@@ -240,17 +240,17 @@ ht-degree: 1%
        /etc/commerce/products/outdoors
    ```
 
-   您可以以CRXDE Lite開啟此專案；例如：
+   例如，您可以在CRXDE Lite中開啟此專案：
 
    `[http://localhost:4502/crx/de/index.jsp#/etc/commerce/products](http://localhost:4502/crx/de/index.jsp#/etc/commerce/products)`
 
 ### 增量匯入 {#incremental-import}
 
-1. 檢查AEM中相關產品的相關資訊（在適當的子樹狀結構下）：
+1. 檢查AEM中相關產品的資訊（在適當的子樹狀結構下）：
 
    `/etc/commerce/products`
 
-   您可以以CRXDE Lite開啟此專案；例如：
+   例如，您可以在CRXDE Lite中開啟此專案：
 
    [http://localhost:4502/crx/de/index.jsp#/etc/commerce/products](http://localhost:4502/crx/de/index.jsp#/etc/commerce/products)
 
@@ -267,7 +267,7 @@ ht-degree: 1%
 1. 選取核取方塊&#x200B;**增量匯入**。
 1. 按一下&#x200B;**匯入目錄**&#x200B;以開始匯入。
 
-   完成後，您可以驗證下AEM中更新的資料：
+   完成後，您可以驗證AEM中更新的資料，其位於：
 
    ```
        /etc/commerce/products
@@ -278,11 +278,11 @@ ht-degree: 1%
 
 匯入程式可能需要很長的時間，因此，作為「產品同步化」的延伸，您可以選取目錄的特定區域，以進行手動觸發的快速更新。 這會使用匯出摘要與標準屬性組態。
 
-1. 檢查AEM中相關產品的相關資訊（在適當的子樹狀結構下）：
+1. 檢查AEM中相關產品的資訊（在適當的子樹狀結構下）：
 
    `/etc/commerce/products`
 
-   您可以以CRXDE Lite開啟此專案；例如：
+   例如，您可以在CRXDE Lite中開啟此專案：
 
    [http://localhost:4502/crx/de/index.jsp#/etc/commerce/products](http://localhost:4502/crx/de/index.jsp#/etc/commerce/products)
 
@@ -303,7 +303,7 @@ ht-degree: 1%
 1. 選取核取方塊&#x200B;**快速更新**。
 1. 按一下&#x200B;**匯入目錄**&#x200B;以開始匯入。
 
-   完成後，您可以驗證下AEM中更新的資料：
+   完成後，您可以驗證AEM中更新的資料，其位於：
 
    ```
        /etc/commerce/products
@@ -311,14 +311,14 @@ ht-degree: 1%
 
 ## 設定目錄匯入工具 {#configure-the-catalog-importer}
 
-Hybris目錄可以使用Hybris目錄、類別和產品的批次匯入工具，匯入AEM。
+Hybris目錄可以使用Hybris目錄、類別和產品的批次匯入工具，匯入AEM中。
 
 匯入工具使用的引數可以設定為：
 
 **Day CQ Commerce Hybris目錄匯入工具**
 ( `com.adobe.cq.commerce.hybris.impl.importer.DefaultHybrisImporter`)
 
-使用AEM時，有數種方法可管理此類服務的組態設定；請參閱[設定OSGi](/help/sites-deploying/configuring-osgi.md)以取得完整詳細資訊。 如需可設定引數及其預設值的完整清單，另請參閱主控台。
+使用AEM時，有數種方法可管理此類服務的組態設定；如需完整詳細資訊，請參閱[設定OSGi](/help/sites-deploying/configuring-osgi.md)。 如需可設定引數及其預設值的完整清單，另請參閱主控台。
 
 ## 目錄匯入 {#catalog-import}
 
@@ -332,7 +332,7 @@ hybris套件隨附有目錄匯入工具，可用於設定初始頁面結構。
 
 必須提供下列資訊：
 
-* **基底存放區**
+* **基礎存放區**
 在Hybris中設定的基礎存放區的識別碼。
 
 * **目錄**
@@ -354,7 +354,7 @@ hybris套件隨附有目錄匯入工具，可用於設定初始頁面結構。
 
    >[!NOTE]
    >
-   >使用AEM時，有數種方法可管理此類服務的組態設定；請參閱[設定OSGi](/help/sites-deploying/configuring-osgi.md)以取得完整詳細資訊。 如需可設定引數及其預設值的完整清單，另請參閱主控台。
+   >使用AEM時，有數種方法可管理此類服務的組態設定；如需完整詳細資訊，請參閱[設定OSGi](/help/sites-deploying/configuring-osgi.md)。 如需可設定引數及其預設值的完整清單，另請參閱主控台。
 
 1. 執行兩個累加更新，初始化匯入工具（請參閱[目錄匯入](#catalog-import)）：
 

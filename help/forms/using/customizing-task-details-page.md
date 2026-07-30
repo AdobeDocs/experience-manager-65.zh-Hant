@@ -10,7 +10,7 @@ feature: Adaptive Forms
 role: User, Developer
 source-git-commit: e821be5233fd5f6688507096790d219d25903892
 workflow-type: tm+mt
-source-wordcount: '263'
+source-wordcount: '267'
 ht-degree: 0%
 
 ---
@@ -21,8 +21,8 @@ ht-degree: 0%
 
 您可以將下列資訊新增至工作詳細資訊頁面：
 
-* 任務的JSON物件中可用的資訊([AEM Forms工作區JSON物件說明](/help/forms/using/html-workspace-json-object-description.md)中的任務區段)
-* 處理程式執行個體的JSON物件中可用的資訊([AEM Forms工作區JSON物件說明](/help/forms/using/html-workspace-json-object-description.md)中的處理程式執行個體區段)
+* 任務的JSON物件中可用的資訊（[AEM Forms工作區JSON物件說明](/help/forms/using/html-workspace-json-object-description.md)中的任務區段）
+* 處理程式執行個體的JSON物件中可用的資訊（[AEM Forms工作區JSON物件說明](/help/forms/using/html-workspace-json-object-description.md)中的處理程式執行個體區段）
 
 若要自訂工作詳細資訊頁面，請執行下列動作：
 

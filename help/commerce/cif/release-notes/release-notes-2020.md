@@ -7,8 +7,8 @@ feature: Commerce Integration Framework
 role: Admin, Developer
 source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
 workflow-type: tm+mt
-source-wordcount: '1257'
-ht-degree: 8%
+source-wordcount: '1471'
+ht-degree: 13%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 8%
 | GitHub | 版本 | 詳細的發行說明 |
 |:-------|:-----:|---------------------:|
 | CIF聯結器 | 1.6.0 | [發行說明](https://github.com/adobe/commerce-cif-connector/releases) |
-| CIF Core Components | 1.6.0 | [發行說明](https://github.com/adobe/aem-core-cif-components/releases) |
+| CIF 核心元件 | 1.6.0 | [發行說明](https://github.com/adobe/aem-core-cif-components/releases) |
 | CIF Venia參考網站 | 2020.12.01 | [發行說明](https://github.com/adobe/aem-cif-guides-venia/releases) |
 
 ### 新增功能 {#what-is-new-november}
@@ -41,14 +41,14 @@ ht-degree: 8%
 | GitHub | 版本 | 詳細的發行說明 |
 |:-------|:-----:|---------------------:|
 | CIF聯結器 | 1.5.0 | [發行說明](https://github.com/adobe/commerce-cif-connector/releases) |
-| CIF Core Components | 1.5.0 | [發行說明](https://github.com/adobe/aem-core-cif-components/releases) |
+| CIF 核心元件 | 1.5.0 | [發行說明](https://github.com/adobe/aem-core-cif-components/releases) |
 | CIF Venia參考網站 | 2020.10.27 | [發行說明](https://github.com/adobe/aem-cif-guides-venia/releases) |
 
 ### 新增功能 {#what-is-new-october}
 
 * 已新增類別輪播元件，讓業務使用者可將此元件拖放至AEM內容頁面，以透過商業資料擴充內容頁面。
 
-* CIF核心元件已擴充為透過傳送商務資料將Adobe使用者端資料層水合化。 Adobe使用者端資料層是收集資料並將資料通訊至Digital Analytics和報表伺服器的標準化方法。 如需詳細資訊，請參閱[Adobe使用者端資料層](https://github.com/adobe/adobe-client-data-layer/wiki)。
+* 已擴充的CIF核心元件，可透過傳送商務資料來水合Adobe使用者端資料層。 Adobe Client Data Layer是標準化方法，用於收集資料並將資料通訊至Digital Analytics和報表伺服器。 如需詳細資訊，請參閱[Adobe使用者端資料層](https://github.com/adobe/adobe-client-data-layer/wiki)。
 
 * 產品詳細資料和產品清單頁面已擴充，可自動填入Adobe Commerce管理UI中設定的SEO中繼資料（例如標題、中繼說明、中繼關鍵字）
 
@@ -59,7 +59,7 @@ ht-degree: 8%
 | GitHub | 版本 | 詳細的發行說明 |
 |:-------|:-----:|---------------------:|
 | CIF聯結器 | 1.4.0 | [發行說明](https://github.com/adobe/commerce-cif-connector/releases) |
-| CIF Core Components | 1.4.0 | [發行說明](https://github.com/adobe/aem-core-cif-components/releases) |
+| CIF 核心元件 | 1.4.0 | [發行說明](https://github.com/adobe/aem-core-cif-components/releases) |
 | CIF Venia參考網站 | 2020.10.2 | [發行說明](https://github.com/adobe/aem-cif-guides-venia/releases) |
 
 ### 新增功能 {#what-is-new-september}
@@ -74,7 +74,7 @@ ht-degree: 8%
 
 * 提供套件產品型別的支援。
 
-* 開發人員可以設定產品輪播、相關產品和精選類別清單元件的HTML標籤，以遵循SEO最佳實務。
+* 開發人員可以設定產品輪播、相關產品和精選類別清單元件的HTML標籤，以遵循SEO最佳作法。
 
 * 我的帳戶錯誤已修正。
 
@@ -85,7 +85,7 @@ ht-degree: 8%
 | GitHub | 版本 | 詳細的發行說明 |
 |:-------|:-----:|---------------------:|
 | CIF聯結器 | 1.3.0 | [發行說明](https://github.com/adobe/commerce-cif-connector/releases) |
-| CIF Core Components | 1.3.0 | [發行說明](https://github.com/adobe/aem-core-cif-components/releases) |
+| CIF 核心元件 | 1.3.0 | [發行說明](https://github.com/adobe/aem-core-cif-components/releases) |
 | CIF Venia參考網站 | 2020.9.2 | [發行說明](https://github.com/adobe/aem-cif-guides-venia/releases) |
 
 ### 新增功能 {#what-is-new-august}
@@ -109,14 +109,14 @@ ht-degree: 8%
 | GitHub | 版本 | 詳細的發行說明 |
 |:-------|:-----:|---------------------:|
 | CIF聯結器 | 1.2.0 | [發行說明](https://github.com/adobe/commerce-cif-connector/releases) |
-| CIF Core Components | 1.2.0 | [發行說明](https://github.com/adobe/aem-core-cif-components/releases) |
+| CIF 核心元件 | 1.2.0 | [發行說明](https://github.com/adobe/aem-core-cif-components/releases) |
 | CIF Venia參考網站 | 2020.8.14 | [發行說明](https://github.com/adobe/aem-cif-guides-venia/releases) |
 
 ### 新增功能 {#what-is-new-july}
 
 * CIF Venia參考網站是從CIF Archetype存放庫擷取，現在是獨立的GitHub存放庫。
 
-* CIF原型與AEM專案原型合併。 若為新專案，請使用[AEM專案原型](https://github.com/adobe/aem-project-archetype)作為起點。
+* CIF原型已與AEM專案原型合併。 若為新專案，請使用[AEM專案原型](https://github.com/adobe/aem-project-archetype)作為起點。
 
 * 新增通訊錄管理，讓登入的使用者可以管理其地址。
 
@@ -135,7 +135,7 @@ ht-degree: 8%
 | GitHub | 版本 | 詳細的發行說明 |
 |:-------|:-----:|---------------------:|
 | CIF聯結器 | 1.1.0 | [發行說明](https://github.com/adobe/commerce-cif-connector/releases) |
-| CIF Core Components | 1.1.1 | [發行說明](https://github.com/adobe/aem-core-cif-components/releases) |
+| CIF 核心元件 | 1.1.1 | [發行說明](https://github.com/adobe/aem-core-cif-components/releases) |
 | CIF原型 | 0.11.0 | [發行說明](https://github.com/adobe/aem-cif-project-archetype/releases) |
 
 ### 新增功能 {#what-is-new-june}
@@ -154,7 +154,7 @@ ht-degree: 8%
 
 * 結合類別查詢與產品搜尋查詢可最佳化多面向搜尋。
 
-* 頁面預覽的類別/產品選擇器遵守cq：catalogPath。
+* 頁面預覽榮譽cq:catalogPath的類別/產品選擇器。
 
 * 多項錯誤修正。
 
@@ -163,7 +163,7 @@ ht-degree: 8%
 | GitHub | 版本 | 詳細的發行說明 |
 |:-------|:-----:|---------------------:|
 | CIF聯結器 | 1.0.0 | [發行說明](https://github.com/adobe/commerce-cif-connector/releases) |
-| CIF Core Components | 1.0.0 | [發行說明](https://github.com/adobe/aem-core-cif-components/releases) |
+| CIF 核心元件 | 1.0.0 | [發行說明](https://github.com/adobe/aem-core-cif-components/releases) |
 | CIF原型 | 0.11.0 | [發行說明](https://github.com/adobe/aem-cif-project-archetype/releases) |
 
 ### 新增功能 {#what-is-new-may}
@@ -187,12 +187,12 @@ ht-degree: 8%
 | GitHub | 版本 | 詳細的發行說明 |
 |:-------|:-----:|---------------------:|
 | CIF聯結器 | 0.10.0 | [發行說明](https://github.com/adobe/commerce-cif-connector/releases) |
-| CIF Core Components | 0.10.0 | [發行說明](https://github.com/adobe/aem-core-cif-components/releases) |
+| CIF 核心元件 | 0.10.0 | [發行說明](https://github.com/adobe/aem-core-cif-components/releases) |
 | CIF原型 | 0.10.0 | [發行說明](https://github.com/adobe/aem-cif-project-archetype/releases) |
 
 ### 新增功能 {#what-is-new-april}
 
-* CIF Connector的組態設定已統一並簡化。 如需詳細資訊，請結帳[開始使用](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/home.html?lang=zh-Hant)或[新的AEM CIF專案安裝程式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/home.html?lang=zh-Hant)
+* CIF聯結器的組態設定均經過統一及簡化。 如需詳細資訊，請檢視[快速入門](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/home.html?lang=zh-Hant)或[新的AEM CIF專案安裝程式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/home.html?lang=zh-Hant)
 
 ### 功能改善 {#what-is-improved-april}
 
@@ -211,7 +211,7 @@ ht-degree: 8%
 | GitHub | 版本 | 詳細的發行說明 |
 |:-------|:-----:|---------------------:|
 | CIF聯結器 | 0.9.0 | [發行說明](https://github.com/adobe/commerce-cif-connector/releases) |
-| CIF Core Components | 0.9.0 | [發行說明](https://github.com/adobe/aem-core-cif-components/releases) |
+| CIF 核心元件 | 0.9.0 | [發行說明](https://github.com/adobe/aem-core-cif-components/releases) |
 | CIF原型 | 0.9.0 | [發行說明](https://github.com/adobe/aem-cif-project-archetype/releases) |
 
 ### 新增功能 {#what-is-new-february}
@@ -237,7 +237,7 @@ ht-degree: 8%
 | GitHub | 版本 | 詳細的發行說明 |
 |:-------|:-----:|---------------------:|
 | CIF聯結器 | 0.8.0 | [發行說明](https://github.com/adobe/commerce-cif-connector/releases) |
-| CIF Core Components | 0.8.0 | [發行說明](https://github.com/adobe/aem-core-cif-components/releases) |
+| CIF 核心元件 | 0.8.0 | [發行說明](https://github.com/adobe/aem-core-cif-components/releases) |
 | CIF原型 | 0.7.0 | [發行說明](https://github.com/adobe/aem-cif-project-archetype/releases) |
 
 ### 新增功能 {#what-is-new-january}

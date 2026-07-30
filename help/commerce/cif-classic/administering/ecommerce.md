@@ -10,7 +10,7 @@ feature: Commerce Integration Framework
 role: Admin, Developer
 source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
 workflow-type: tm+mt
-source-wordcount: '762'
+source-wordcount: '788'
 ht-degree: 2%
 
 ---
@@ -58,7 +58,7 @@ Adobe提供兩個版本的Commerce integration framework：
    <td><p>產品目錄</p> </td>
    <td>
     <ul>
-     <li>產品匯入工具、編輯器、AEM中的快取</li>
+     <li>AEM中的產品匯入工具、編輯器、快取</li>
      <li>具有AEM或Proxy頁面的一般目錄</li>
     </ul> </td>
    <td>
@@ -88,7 +88,7 @@ Adobe提供兩個版本的Commerce integration framework：
   </tr>
   <tr>
    <td>可用性</td>
-   <td><p>可以。SAPCommerce Cloud(擴充功能已更新，以支援AEM 6.4和Hybris 5 （預設），並保持與Hybris 4的相容性</p> <p>SalesforceCommerce Cloud(開放來源以支援AEM 6.4的聯結器)</p> </td>
+   <td><p>可以。 SAP Commerce Cloud (擴充功能已更新，以支援AEM 6.4和Hybris 5 （預設），並保持與Hybris 4的相容性</p> <p>Salesforce Commerce Cloud （開放來源以支援AEM 6.4的聯結器）</p> </td>
    <td>是，透過GitHub的開放原始碼。 Adobe Commerce (支援2.3.2 （預設）並與2.3.1相容)。</td>
   </tr>
   <tr>
@@ -131,31 +131,31 @@ AEM eCommerce可協助行銷人員跨網路、行動及社交接觸點，提供�
 
 AEM eCommerce提供：
 
-* 許多&#x200B;**現成可用的AEM元件**，以說明您的專案可達成的目標：
+* 許多&#x200B;**現成的AEM元件**，以說明您的專案可達成的目標：
 
-   * 產品顯示
-   * 購物車
-   * 結帳
-   * 最近檢視的產品
-   * 憑單
-   * 和其他
+  * 產品顯示
+  * 購物車
+  * 結帳
+  * 最近檢視的產品
+  * 憑單
+  * 和其他
 
   ![geometrixx元件範例](/help/sites-administering/assets/chlimage_1-130.png)
 
   >[!NOTE]
   >
-  >AEM提供的整合架構也可讓您為商業功能建立其他AEM元件，不受特定電子商務引擎影響。
+  >AEM提供的整合架構也可讓您建立其他AEM元件，用於獨立於您的特定電子商務引擎的商業功能。
 
 * **搜尋** — 使用：
 
-   * AEM搜尋
-   * 搜尋電子商務系統
-   * 協力廠商搜尋
-   * 或兩者的組合。
+  * AEM搜尋
+  * 搜尋電子商務系統
+  * 協力廠商搜尋
+  * 或兩者的組合。
 
   ![搜尋範例](/help/sites-administering/assets/chlimage_1-131.png)
 
-* 使用AEM功能，在多個管道&#x200B;**（完整瀏覽器視窗或行動裝置）上**&#x200B;展示您的內容。 這樣會以訪客所需的格式提供您的內容。
+* 使用AEM的功能，將您的內容&#x200B;**呈現在多個管道**&#x200B;上，無論是完整的瀏覽器視窗或行動裝置。 這樣會以訪客所需的格式提供您的內容。
 
   ![行動檢視範例](/help/sites-administering/assets/chlimage_1-132.png)
 
@@ -165,8 +165,8 @@ AEM eCommerce提供：
 
 * 根據購物者資料和活動&#x200B;**來開發**&#x200B;體驗導向商務的可能性。 這可讓您瞭解許多案例：
 
-   * 例如，當訂單總額超過特定金額時，可減少運費。
-   * 另一種方式可讓您提供使用設定檔資料的季節性選件（例如位置）。 然後可反白顯示這些專案，在必要時會根據其他因素再次反白顯示。
+  * 例如，當訂單總額超過特定金額時，可減少運費。
+  * 另一種方式可讓您提供使用設定檔資料的季節性選件（例如位置）。 然後可反白顯示這些專案，在必要時會根據其他因素再次反白顯示。
 
   在以下範例中，當購物車的內容少於$75美元時顯示了一個Teaser：
 
@@ -178,9 +178,9 @@ AEM eCommerce提供：
 
 * 和其他功能包括：
 
-   * 跨工作階段保留的購物車內容
-   * 完整訂單歷史記錄
-   * 快速目錄更新
+  * 跨工作階段保留的購物車內容
+  * 完整訂單歷史記錄
+  * 快速目錄更新
 
 ## 框架 {#the-framework}
 

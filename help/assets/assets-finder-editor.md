@@ -8,8 +8,8 @@ exl-id: 53e310a9-c511-447a-91bd-8c5b2760dc03
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '2088'
-ht-degree: 0%
+source-wordcount: '2121'
+ht-degree: 1%
 
 ---
 
@@ -206,11 +206,11 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 若要建立Asset Editor頁面：
 
 1. 在&#x200B;**[!UICONTROL 網站]**&#x200B;索引標籤中，導覽至您要建立Asset Editor頁面的位置，然後按一下&#x200B;**新增**。
-1. 選取&#x200B;**GeometrixxAsset Editor**&#x200B;並按一下&#x200B;**建立**。 已建立新頁面，且頁面列在&#x200B;**網站**&#x200B;索引標籤中。
+1. 選取&#x200B;**Geometrixx Asset Editor**&#x200B;並按一下&#x200B;**建立**。 已建立新頁面，且頁面列在&#x200B;**網站**&#x200B;索引標籤中。
 
 ![screen_shot_2012-04-23at15858pm](assets/screen_shot_2012-04-23at15858pm.png)
 
-使用GeometrixxAsset Editor範本建立的基本頁面如下所示：
+使用Geometrixx Asset Editor範本建立的基本頁面如下所示：
 
 ![assetshare5](assets/assetshare5.png)
 
@@ -380,7 +380,7 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 | [!UICONTROL 編輯器] | 可讓使用者編輯影像（互動式編輯） |
 | [!UICONTROL 燈箱] | 將資產儲存至「燈箱」，讓您在其中執行其他動作。 這項功能可在處理多個頁面的資產時方便使用。 |
 | [!UICONTROL 鎖定] | 可讓使用者鎖定資產。 預設不會啟用此功能，且必須在元件清單中啟用。 |
-| [!UICONTROL 個參考] | 按一下此以在使用資產的頁面上顯示。 |
+| [!UICONTROL 參照] | 按一下此以在使用資產的頁面上顯示。 |
 | [!UICONTROL 版本設定] | 可讓您建立和還原資產的版本。 |
 
 1. 將適當的動作拖曳至頁面上的&#x200B;**動作**&#x200B;區域。 這會建立一個選項，用來執行在頁面上拖曳的動作。
