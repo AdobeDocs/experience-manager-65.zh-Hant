@@ -39,7 +39,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->本檔案著重於在傳統UI中使用[Foundation元件](/help/sites-authoring/default-components-foundation.md)來開發表單。 Adobe建議在觸控式UI中使用新的[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)和[隱藏條件](/help/sites-developing/hide-conditions.md)進行表單開發。
+>本檔案著重於在傳統UI中使用[Foundation元件](/help/sites-authoring/default-components-foundation.md)來開發表單。 Adobe建議在觸控式UI中使用新的[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)和[隱藏條件](/help/sites-developing/hide-conditions.md)進行表單開發。
 
 ## 預先載入表單值 {#preloading-form-values}
 
