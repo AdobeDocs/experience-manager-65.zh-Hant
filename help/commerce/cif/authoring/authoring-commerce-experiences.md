@@ -7,7 +7,7 @@ feature: Commerce Integration Framework
 role: Admin, Developer
 source-git-commit: a02724597338ee2451448c6c4188fc349dd47d01
 workflow-type: tm+mt
-source-wordcount: '711'
+source-wordcount: '724'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 ## 概觀 {#overview}
 
-CIF附加元件以特定於commerce的功能擴充AEM編寫功能。 這可讓作者在不離開內容的情況下存取產品資料和內容，以有效率地建置和管理商務相關的體驗。
+CIF附加元件以特定於Commerce的功能擴充AEM的製作功能。 這可讓作者在不離開內容的情況下存取產品資料和內容，以有效率地建置和管理商務相關的體驗。
 
 ## 選取器 {#pickers}
 
@@ -36,7 +36,7 @@ CIF附加元件以特定於commerce的功能擴充AEM編寫功能。 這可讓�
 
 ![沒有選取專案的Teaser元件](/help/commerce/cif/assets/authoring/teaser_component_without_selection.png)
 
-此元件的設定對話方塊需要產品。 CIF會使用SKU作為產品識別碼。 作者可以手動輸入SKU或按一下資料夾圖示以開啟產品選擇器。 選取並關閉選擇器後，元件對話方塊會顯示所選產品的名稱
+此元件的設定對話方塊需要產品。 CIF使用SKU作為產品識別碼。 作者可以手動輸入SKU或按一下資料夾圖示以開啟產品選擇器。 選取並關閉選擇器後，元件對話方塊會顯示所選產品的名稱
 
 ![含選取專案的Teaser元件](/help/commerce/cif/assets/authoring/teaser_component_with_selection.png)
 
@@ -50,7 +50,7 @@ CIF附加元件以特定於commerce的功能擴充AEM編寫功能。 這可讓�
 
 ![轉盤元件未選取](/help/commerce/cif/assets/authoring/carousel_component_without_selection.png)
 
-此元件的設定對話方塊需要1 ： n類別。 CIF會使用UID / ID作為類別識別碼。 作者可以手動輸入UID或按一下資料夾圖示以開啟類別選擇器。 選取並關閉選擇器後，元件對話方塊會顯示所選類別的名稱。
+此元件的設定對話方塊需要1 ： n類別。 CIF使用UID / ID作為類別識別碼。 作者可以手動輸入UID或按一下資料夾圖示以開啟類別選擇器。 選取並關閉選擇器後，元件對話方塊會顯示所選類別的名稱。
 
 具有選取範圍的![轉盤元件](/help/commerce/cif/assets/authoring/carousel_component_with_selection.png)
 
@@ -80,7 +80,7 @@ CIF產品目錄頁面是即時轉譯的虛擬頁面。 因此，不可能內嵌�
 
 ### 存取關聯產品內容 {#associated-content}
 
-如果通用編輯器可辨識頁面上的1：n產品，側面板會自動顯示「關聯的Commerce內容」索引標籤。 此索引標籤可讓作者快速存取已使用產品標籤的AEM內容(如需詳細資訊，請參閱[以關聯AEM內容擴充產品資料](./enrich-product-associated-content.md))。 如果頁面上有多個產品，此標籤會提供下拉式選單，以篩選內容型別和特定產品。 使用內容的運作方式與使用「Assets」標籤中的內容完全相同。
+如果Universal Editor可辨識頁面上的1:n個產品，側面板會自動顯示「關聯的Commerce內容」索引標籤。 此索引標籤可讓作者快速存取已使用產品標籤的AEM內容（如需詳細資訊，請參閱[以相關AEM內容擴充產品資料](./enrich-product-associated-content.md)）。 如果頁面上有多個產品，此標籤會提供下拉式選單，以篩選內容型別和特定產品。 使用內容的運作方式與使用「Assets」標籤中的內容完全相同。
 
 ![產品資料側面板](/help/commerce/cif/assets/authoring/associated-commerce-content-tab.png)
 
@@ -94,9 +94,9 @@ CIF產品目錄頁面是即時轉譯的虛擬頁面。 因此，不可能內嵌�
 
 ![暫存指標](/help/commerce/cif/assets/authoring/staged-indicator.png)
 
-## Omnisearch {#omnisearch}
+## 全方位搜尋 {#omnisearch}
 
-使用Omnisearch是從業人員使用全文檢索搜尋尋找AEM內容和產品目錄資料的簡單方法。 Omnisearch將在AEM和commerce後端中執行全文檢索搜尋，以在commerce後端和AEM內容中尋找產品目錄物件。 AEM結果也包含已標籤產品/類別資料的內容。
+使用Omnisearch可讓從業人員透過全文檢索搜尋，輕鬆尋找AEM內容和產品目錄資料。 Omnisearch將在AEM和commerce後端中執行全文搜尋，以在commerce後端和AEM內容中尋找產品目錄物件。 AEM結果也包含已標籤產品/類別資料的內容。
 
 ![Omnisearch](/help/commerce/cif/assets/authoring/omnisearch.png)
 

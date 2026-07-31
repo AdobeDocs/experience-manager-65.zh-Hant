@@ -12,7 +12,7 @@ feature: Developing
 role: Developer
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
-source-wordcount: '3227'
+source-wordcount: '3276'
 ht-degree: 1%
 
 ---
@@ -52,7 +52,7 @@ ht-degree: 1%
 * **逾時**
 
   步驟「逾時」之前的期間。
-您可以選取： **關閉**、**立即**、**1h**、**6h**、**12h**、**24h**。
+  您可以選取： **關閉**、**立即**、**1h**、**6h**、**12h**、**24h**。
 
 * **逾時處理常式**
 
@@ -68,15 +68,15 @@ ht-degree: 1%
 
 * **透過電子郵件通知使用者**
 
-   * 當工作流程到達步驟時，透過傳送電子郵件通知參與者來通知參與者。
-   * 如果啟用，會傳送電子郵件給屬性&#x200B;**使用者/群組**&#x200B;所定義的使用者，或如果已定義群組，則會傳送電子郵件給群組的每個成員。
+  * 當工作流程到達步驟時，透過傳送電子郵件通知參與者來通知參與者。
+  * 如果啟用，會傳送電子郵件給屬性&#x200B;**使用者/群組**&#x200B;所定義的使用者，或如果已定義群組，則會傳送電子郵件給群組的每個成員。
 
 * **使用者/群組**
 
-   * 下拉式選取方塊可讓您導覽至並選取使用者或群組。
-   * 如果您將步驟指派給特定使用者，則只有此使用者可以在該步驟上進行操作。
-   * 如果您將步驟指派給整個群組，則當工作流程到達此步驟時，此群組中的所有使用者都會在其&#x200B;**工作流程收件匣**&#x200B;中執行該動作。
-   * 如需詳細資訊，請參閱[參與工作流程](/help/sites-authoring/workflows-participating.md)。
+  * 下拉式選取方塊可讓您導覽至並選取使用者或群組。
+  * 如果您將步驟指派給特定使用者，則只有此使用者可以在該步驟上進行操作。
+  * 如果您將步驟指派給整個群組，則當工作流程到達此步驟時，此群組中的所有使用者都會在其&#x200B;**工作流程收件匣**&#x200B;中執行該動作。
+  * 如需詳細資訊，請參閱[參與工作流程](/help/sites-authoring/workflows-participating.md)。
 
 ## AND 拆分 {#and-split}
 
@@ -90,8 +90,8 @@ ht-degree: 1%
 
 * 編輯&#x200B;**AND分割屬性**：
 
-   * **分割名稱**：指派名稱以供解釋
-   * 選取所需的分支數；2、3、4或5。
+  * **分割名稱**：指派名稱以供解釋
+  * 選取所需的分支數；2、3、4或5。
 
 * 視需要將工作流程步驟新增到分支。
 
@@ -112,7 +112,7 @@ ht-degree: 1%
 * [一般](#step-properties-common-tab)
 * **容器**
 
-   * **子工作流程**：選取要啟動的工作流程。
+  * **子工作流程**：選取要啟動的工作流程。
 
 ## 移至步驟 {#goto-step}
 
@@ -130,12 +130,12 @@ ht-degree: 1%
 * [一般](#step-properties-common-tab)
 * **處理序**
 
-   * **目標步驟**：選取評估路由運算式的條件後要執行的步驟。
-   * **路由運算式**：選取規則定義、外部指令碼，或決定是否執行&#x200B;**目標步驟**&#x200B;的ECMA指令碼。
+  * **目標步驟**：選取評估路由運算式的條件後要執行的步驟。
+  * **路由運算式**：選取規則定義、外部指令碼，或決定是否執行&#x200B;**目標步驟**&#x200B;的ECMA指令碼。
 
-      * **規則定義：**&#x200B;使用[運算式編輯器](/help/forms/using/variable-in-aem-workflows.md#use-expression-editor)來定義規則。
-      * **外部指令碼：**&#x200B;外部指令碼的路徑。
-      * **ECMA指令碼**：決定是否要執行&#x200B;**Goto步驟**&#x200B;的指令碼。
+    * **規則定義：**&#x200B;使用[運算式編輯器](/help/forms/using/variable-in-aem-workflows.md#use-expression-editor)來定義規則。
+    * **外部指令碼：**&#x200B;外部指令碼的路徑。
+    * **ECMA指令碼**：決定是否要執行&#x200B;**Goto步驟**&#x200B;的指令碼。
 
 #### 模擬for回圈 {#simulating-a-for-loop}
 
@@ -188,7 +188,7 @@ function check(){
 
 >[!NOTE]
 >
->請參閱[或分割步驟](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/using-variables-in-aem-workflows.html?lang=zh-Hant#use-a-variable)
+>請參閱[或分割步驟](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/using-variables-in-aem-workflows.html#use-a-variable)
 
 ![使用OR Split分支](assets/variables_orsplit_new.png)
 
@@ -198,18 +198,18 @@ function check(){
 
 * 編輯&#x200B;**OR分割屬性**：
 
-   * **一般**
+  * **一般**
 
-      * 指定分割名稱。
+    * 指定分割名稱。
 
-   * **分支(*x)***
+  * **分支(*x)***
 
-      * **新增分支：**&#x200B;在步驟中新增更多分支。
-      * **選取路由運算式**：若要評估作用中的分支，請選取路由運算式。 可能的值包括：規則定義、外部指令碼和ECMA指令碼。
-      * **按一下以新增運算式**：如果您選取&#x200B;**規則定義**&#x200B;作為路由運算式，請新增運算式以評估作用中分支。
-      * **指令碼路徑**：如果選取&#x200B;**外部指令碼**&#x200B;作為路由運算式，則包含要評估作用中分支之指令碼的檔案路徑。
-      * **指令碼**：如果您選取&#x200B;**ECMA指令碼**&#x200B;作為路由運算式，請在方塊中新增指令碼，以評估作用中分支。
-      * **預設路由**：如果有多個分支，則遵循預設分支。 您只能指定一個分支作為預設值。
+    * **新增分支：**&#x200B;在步驟中新增更多分支。
+    * **選取路由運算式**：若要評估作用中的分支，請選取路由運算式。 可能的值包括：規則定義、外部指令碼和ECMA指令碼。
+    * **按一下以新增運算式**：如果您選取&#x200B;**規則定義**&#x200B;作為路由運算式，請新增運算式以評估作用中分支。
+    * **指令碼路徑**：如果選取&#x200B;**外部指令碼**&#x200B;作為路由運算式，則包含要評估作用中分支之指令碼的檔案路徑。
+    * **指令碼**：如果您選取&#x200B;**ECMA指令碼**&#x200B;作為路由運算式，請在方塊中新增指令碼，以評估作用中分支。
+    * **預設路由**：如果有多個分支，則遵循預設分支。 您只能指定一個分支作為預設值。
 
   >[!NOTE]
   >
@@ -269,13 +269,13 @@ function check(){
 * [使用者/群組](#step-properties-user-group-tab)
 * **對話方塊**
 
-   * **對話方塊路徑**：您建立的[對話方塊](#dialog-participant-step-creating-a-dialog)的對話方塊節點路徑。
+  * **對話方塊路徑**：您建立的[對話方塊](#dialog-participant-step-creating-a-dialog)的對話方塊節點路徑。
 
 #### 對話方塊參與者步驟 — 建立對話 {#dialog-participant-step-creating-a-dialog}
 
 若要建立對話方塊，您必須建立對話方塊：
 
-* 決定產生的資料儲存在承載[&#128279;](#dialog-participant-step-storing-data-in-the-payload)中的何處。
+* 決定產生的資料儲存在承載](#dialog-participant-step-storing-data-in-the-payload)中的何處[。
 * [定義對話方塊；包括定義用來收集和儲存資料的欄位](#dialog-participant-step-dialog-definition)。
 
 #### 對話方塊參與者步驟 — 將資料儲存在承載中 {#dialog-participant-step-storing-data-in-the-payload}
@@ -284,20 +284,18 @@ function check(){
 
 * **儲存資料與承載**
 
-   * 若要將Widget資料儲存為工作流程裝載的屬性，請為Widget節點的name屬性值使用以下格式：
+  * 若要將Widget資料儲存為工作流程裝載的屬性，請為Widget節點的name屬性值使用以下格式：
+    `./jcr:content/nodename`
 
-     `./jcr:content/nodename`
-
-   * 資料儲存在承載節點的`nodename`屬性中。 如果節點不包含該屬性，則會建立屬性。
-   * 與裝載一併儲存時，後續使用具有相同裝載的對話方塊會覆寫屬性的值。
+  * 資料儲存在承載節點的`nodename`屬性中。 如果節點不包含該屬性，則會建立屬性。
+  * 與裝載一併儲存時，後續使用具有相同裝載的對話方塊會覆寫屬性的值。
 
 * **儲存工作專案的資料**
 
-   * 若要將Widget資料儲存為工作專案中繼資料的屬性，請為name屬性的值使用下列格式：
+  * 若要將Widget資料儲存為工作專案中繼資料的屬性，請為name屬性的值使用下列格式：
+    `nodename`
 
-     `nodename`
-
-   * 資料儲存在工作專案`metadata`的`nodename`屬性中。 如果之後將對話方塊用於相同的裝載，則會保留資料。
+  * 資料儲存在工作專案`metadata`的`nodename`屬性中。 如果之後將對話方塊用於相同的裝載，則會保留資料。
 
 #### 對話方塊參與者步驟 — 對話方塊定義 {#dialog-participant-step-dialog-definition}
 
@@ -387,13 +385,13 @@ function check(){
 * [一般](#step-properties-common-tab)
 * **參與者選擇器**
 
-   * **參與者選擇器**：您建立的[參與者選擇器](#developingtheparticipantchooser)的名稱。
-   * **引數**：任何必要的引數。
-   * **電子郵件**：是否應傳送電子郵件通知給使用者。
+  * **參與者選擇器**：您建立的[參與者選擇器](#developingtheparticipantchooser)的名稱。
+  * **引數**：任何必要的引數。
+  * **電子郵件**：是否應傳送電子郵件通知給使用者。
 
 * **對話方塊**
 
-   * **對話方塊路徑**：您建立之[對話方塊的對話方塊節點路徑（如同&#x200B;**對話方塊參與者步驟**）](#dialog-participant-step-creating-a-dialog)。
+  * **對話方塊路徑**：您建立之[對話方塊的對話方塊節點路徑（如同&#x200B;**對話方塊參與者步驟**）](#dialog-participant-step-creating-a-dialog)。
 
 #### 動態參與者步驟 — 開發參與者選擇器 {#dynamic-participant-step-developing-the-participant-chooser}
 
@@ -432,9 +430,9 @@ function check(){
 
   服務必須實作[com.day.cq.workflow.exec.ParticipantStepChooser](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/workflow/exec/ParticipantStepChooser.html)介面。 介面會定義下列成員：
 
-   * `SERVICE_PROPERTY_LABEL`欄位：使用此欄位來指定參與者選擇器的名稱。 該名稱出現在&#x200B;**動態參與者步驟**&#x200B;屬性的可用參與者選擇器清單中。
+  * `SERVICE_PROPERTY_LABEL`欄位：使用此欄位來指定參與者選擇器的名稱。 該名稱出現在&#x200B;**動態參與者步驟**&#x200B;屬性的可用參與者選擇器清單中。
 
-   * `getParticipant`方法：傳回動態解析的主體ID做為`String`值。
+  * `getParticipant`方法：傳回動態解析的主體ID做為`String`值。
 
   >[!CAUTION]
   >
@@ -443,7 +441,7 @@ function check(){
   >
   >但是，當傳回參與者清單時，群組ID只能用於&#x200B;**參與者步驟**。 對於&#x200B;**動態參與者步驟**，會傳回空白清單且無法用於委派。
 
-  若要讓您的實作可供&#x200B;**動態參與者步驟**&#x200B;元件使用，請將您的Java™類別新增至匯出服務的OSGi套件組合，然後將套件組合部署至AEM伺服器。
+  若要讓您的實作可供&#x200B;**動態參與者步驟**&#x200B;元件使用，請將您的Java™類別新增至匯出服務的OSGi套件組合，並將套件組合部署至AEM伺服器。
 
   >[!NOTE]
   >
@@ -516,7 +514,7 @@ public class InitiatorParticipantChooser implements ParticipantStepChooser {
 * [使用者/群組](#step-properties-user-group-tab)
 * **表單**
 
-   * **表單路徑**：您建立的[表單](#form-participant-step-creating-the-form)的路徑。
+  * **表單路徑**：您建立的[表單](#form-participant-step-creating-the-form)的路徑。
 
 #### 表單參與者步驟 — 建立表單 {#form-participant-step-creating-the-form}
 
@@ -555,7 +553,7 @@ public class InitiatorParticipantChooser implements ParticipantStepChooser {
 * [一般](#step-properties-common-tab)
 * **引數**
 
-   * **參與者**：指定可供選取的使用者清單。 若要新增使用者至清單，請按一下[新增專案] **&#x200B;**，然後輸入使用者節點的本位目錄路徑或使用者ID。 使用者的順序不會影響被指派工作專案的可能性。
+  * **參與者**：指定可供選取的使用者清單。 若要新增使用者至清單，請按一下[新增專案] ****，然後輸入使用者節點的本位目錄路徑或使用者ID。 使用者的順序不會影響被指派工作專案的可能性。
 
 ### 工作流程發起人參與者選擇器 {#workflow-initiator-participant-chooser}
 
@@ -580,14 +578,14 @@ public class InitiatorParticipantChooser implements ParticipantStepChooser {
 * [一般](#step-properties-common-tab)
 * **處理序**
 
-   * **處理程式**：要執行的處理程式實作。 使用下拉式功能表選取ECMAScript或OSGi服務。 如需下列相關資訊：
+  * **處理程式**：要執行的處理程式實作。 使用下拉式功能表選取ECMAScript或OSGi服務。 如需下列相關資訊：
 
-      * 標準ECMAScripts和OSGi服務，請參閱[處理步驟的內建程式](/help/sites-developing/workflows-process-ref.md)。
-      * 正在建立處理步驟的ECMAScript，請參閱[使用ECMAScript實作處理步驟](/help/sites-developing/workflows-customizing-extending.md#using-ecmascript)。
-      * 正在建立處理序步驟的OSGi服務，請參閱[使用Java™類別實作處理序步驟](/help/sites-developing/workflows-customizing-extending.md#implementing-a-process-step-with-a-java-class)。
+    * 標準ECMAScripts和OSGi服務，請參閱[處理步驟的內建程式](/help/sites-developing/workflows-process-ref.md)。
+    * 正在建立處理步驟的ECMAScript，請參閱[使用ECMAScript實作處理步驟](/help/sites-developing/workflows-customizing-extending.md#using-ecmascript)。
+    * 正在建立處理序步驟的OSGi服務，請參閱[使用Java™類別實作處理序步驟](/help/sites-developing/workflows-customizing-extending.md#implementing-a-process-step-with-a-java-class)。
 
-   * **處理常式前進**：選取此選項可自動將工作流程前進到執行後的下一個步驟。 如果未選取，實作指令碼必須處理工作流程推進。
-   * **引數**：要傳遞給處理程式的引數。
+  * **處理常式前進**：選取此選項可自動將工作流程前進到執行後的下一個步驟。 如果未選取，實作指令碼必須處理工作流程推進。
+  * **引數**：要傳遞給處理程式的引數。
 
 ## 設定變數 {#set-variable}
 
@@ -602,15 +600,15 @@ public class InitiatorParticipantChooser implements ParticipantStepChooser {
 * [一般](/help/sites-developing/workflows-step-ref.md#step-properties-common-tab)
 * **對應**
 
-   * **選取變數：**&#x200B;使用此選項來選取變數以設定其值。
-   * **選取對應模式：**&#x200B;若要設定變數的值，請選取對應模式。 視變數的資料型別而定，您可以使用下列選項來設定變數的值：
+  * **選取變數：**&#x200B;使用此選項來選取變數以設定其值。
+  * **選取對應模式：**&#x200B;若要設定變數的值，請選取對應模式。 視變數的資料型別而定，您可以使用下列選項來設定變數的值：
 
-      * **常值：**&#x200B;當您知道要指定的確切值時，請使用選項。
-      * **運算式：**&#x200B;根據運算式計算所要使用的值時，請使用選項。 運算式是在提供的運算式編輯器中建立。
-      * **JSON點標籤法：**&#x200B;使用選項從JSON或FDM型別變數擷取值。
-      * **XPATH：**&#x200B;使用選項從XML型別變數擷取值。
-      * **相對於承載：**&#x200B;當要儲存至變數的值可在相對於承載的路徑取得時，請使用選項。
-      * **絕對路徑：**&#x200B;當要儲存至變數的值在絕對路徑可用時，請使用選項。
+    * **常值：**&#x200B;當您知道要指定的確切值時，請使用選項。
+    * **運算式：**&#x200B;根據運算式計算所要使用的值時，請使用選項。 運算式是在提供的運算式編輯器中建立。
+    * **JSON點標籤法：**&#x200B;使用選項從JSON或FDM型別變數擷取值。
+    * **XPATH：**&#x200B;使用選項從XML型別變數擷取值。
+    * **相對於承載：**&#x200B;當要儲存至變數的值可在相對於承載的路徑取得時，請使用選項。
+    * **絕對路徑：**&#x200B;當要儲存至變數的值在絕對路徑可用時，請使用選項。
 
-   * **指定值：**&#x200B;若要對應至變數，請指定值。 您在此欄位中指定的值取決於對應模式。
-   * **新增對應：**&#x200B;使用此選項新增更多對應，以設定變數的值。
+  * **指定值：**&#x200B;若要對應至變數，請指定值。 您在此欄位中指定的值取決於對應模式。
+  * **新增對應：**&#x200B;使用此選項新增更多對應，以設定變數的值。
