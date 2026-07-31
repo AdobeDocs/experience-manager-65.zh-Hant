@@ -11,7 +11,7 @@ feature: Integration
 role: Admin
 source-git-commit: f96b178ae84b4b930b59e36d4994970682c53dbd
 workflow-type: tm+mt
-source-wordcount: '5405'
+source-wordcount: '5545'
 ht-degree: 1%
 
 ---
@@ -199,8 +199,8 @@ Adobe建議您讓根資料夾僅指向子資料夾，而非整個公司，以測
 * Experience Manager Assets尚未支援的Dynamic Media Classic資產型別必須直接透過Dynamic Media Classic內容瀏覽器，從Dynamic Media Classic新增至Experience Manager網站。 例如影像範本。
 * 對於Experience Manager Assets和Dynamic Media Classic都支援的資產型別，決定如何上傳它們取決於以下因素：
 
-   * 資產目前所在的位置，以及
-   * 在通用存放庫中管理這些區段的重要性
+  * 資產目前所在的位置，以及
+  * 在通用存放庫中管理這些區段的重要性
 
 假設資產已在Dynamic Media Classic中，在通用存放庫管理這些資產並不重要。 如果是這種情況，那麼將資產匯出至Experience Manager Assets時，只需將其同步回Dynamic Media Classic進行傳送，就不需要進行往返測試。 Adobe建議您將資產放在單一存放庫中，並同步至Dynamic Media Classic以僅供傳送。
 
@@ -210,11 +210,11 @@ Adobe建議您讓根資料夾僅指向子資料夾，而非整個公司，以測
 
 >[!NOTE]
 >
->Adobe建議您只使用指定的目標資料夾來匯入Dynamic Media Classic資產。 位於目標資料夾之外的數位資產只能在已啟用Dynamic Media Classic設定的頁面上的Dynamic Media Classic元件中使用。 此外，它們會被放在Dynamic Media Classic的隨選資料夾中。 隨選資料夾未與Experience Manager同步(但資產可在Dynamic Media Classic內容瀏覽器中找到)。
+>Adobe建議您只使用指定的目標資料夾來匯入Dynamic Media Classic資產。 位於目標資料夾之外的數位資產只能在已啟用Dynamic Media Classic設定的頁面上的Dynamic Media Classic元件中使用。 此外，它們會被放在Dynamic Media Classic的隨選資料夾中。 隨選資料夾未與Experience Manager同步（但資產可在Dynamic Media Classic內容瀏覽器中找到）。
 
 **若要設定Dynamic Media Classic以與Experience Manager整合：**
 
-1. [定義雲端設定](#creating-a-cloud-configuration-for-scene) — 定義Dynamic Media Classic資料夾與Assets資料夾之間的對應。 即使您只想要單向(Experience Manager Assets到Dynamic Media Classic)同步，請完成此步驟。
+1. [定義雲端設定](#creating-a-cloud-configuration-for-scene) — 定義Dynamic Media Classic資料夾與Assets資料夾之間的對應。 即使您只想要單向（Experience Manager Assets到Dynamic Media Classic）同步，請完成此步驟。
 1. [啟用&#x200B;**Adobe CQ s7dam Dam接聽程式**](#enabling-the-adobe-cq-scene-dam-listener) — 在[!UICONTROL OSGi]主控台中完成。
 1. 如果您希望Experience Manager Assets自動上傳至Dynamic Media Classic，您必須開啟該選項，並將Dynamic Media Classic新增至[!UICONTROL DAM更新資產]工作流程。 您也可以手動上傳資產。
 1. 將Dynamic Media Classic元件新增至Sidekick。 此功能可讓使用者在其Experience Manager頁面上使用Dynamic Media Classic元件。
@@ -368,7 +368,7 @@ Adobe建議您讓根資料夾僅指向子資料夾，而非整個公司，以測
 
    >[!NOTE]
    >
-   >最佳實務：大部分資產至多會在數分鐘內擷取（例如影像）。 但在某些情況下（例如較大的影片），請將逾時值增加到7200秒（兩個小時），以因應較長的處理時間。 否則，此Dynamic Media Classic上傳工作在JCR (Java™內容存放庫)中繼資料中會標示為&#x200B;**[!UICONTROL UploadFailed]**。
+   >最佳實務：大部分資產至多會在數分鐘內擷取（例如影像）。 但在某些情況下（例如較大的影片），請將逾時值增加到7200秒（兩個小時），以因應較長的處理時間。 否則，此Dynamic Media Classic上傳工作在JCR （Java™內容存放庫）中繼資料中會標示為&#x200B;**[!UICONTROL UploadFailed]**。
 
 1. 選取「**[!UICONTROL 儲存]**」。
 
@@ -448,7 +448,7 @@ Dynamic Media Classic資產仍可透過安全預覽使用。 只有當資產在E
 1. 選取&#x200B;**[!UICONTROL Dynamic Media Classic]**。
 1. 在Dynamic Media Classic中選取您的設定。
 1. 選取&#x200B;**[!UICONTROL 進階]**&#x200B;標籤。
-1. 在&#x200B;**[!UICONTROL 啟用安全檢視]**&#x200B;下拉式功能表中，選取&#x200B;**[!UICONTROL AEM發佈啟動時]**&#x200B;將資產推送到Dynamic Media Classic而不發佈。 (預設情況下，此值會設為&#x200B;**[!UICONTROL 立即]**，此處會立即發佈Dynamic Media Classic資產。)
+1. 在&#x200B;**[!UICONTROL 啟用安全檢視]**&#x200B;下拉式功能表中，選取&#x200B;**[!UICONTROL AEM發佈啟動時]**&#x200B;將資產推送到Dynamic Media Classic而不發佈。 （預設情況下，此值會設為&#x200B;**[!UICONTROL 立即]**，此處會立即發佈Dynamic Media Classic資產。）
 
    請參閱[Dynamic Media Classic檔案](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/testing-assets-making-them-public.html?lang=zh-Hant)，以取得公開資產前測試資產的詳細資訊。
 
@@ -583,7 +583,7 @@ Dynamic Media Classic資產仍可透過安全預覽使用。 只有當資產在E
 
 **如果您的數位資產發佈至Dynamic Media Classic失敗：**
 
-* 檢查您要上傳的資產是否位於&#x200B;**[!UICONTROL CQ目標]**&#x200B;資料夾中(您在Dynamic Media Classic雲端設定中指定此資料夾)。
+* 檢查您要上傳的資產是否位於&#x200B;**[!UICONTROL CQ目標]**&#x200B;資料夾中（您在Dynamic Media Classic雲端設定中指定此資料夾）。
 * 如果沒有，您必須在該頁面的&#x200B;**[!UICONTROL 頁面屬性]**&#x200B;中設定雲端設定，以允許上傳至&#x200B;**[!UICONTROL CQ ad hoc]**&#x200B;資料夾。
 
 * 檢查記錄檔以取得任何資訊。
@@ -598,12 +598,12 @@ Dynamic Media Classic資產仍可透過安全預覽使用。 只有當資產在E
 
 **如果Experience Manager中的新資產或修改的資產未自動上傳至Dynamic Media Classic：**
 
-* 請確定資產位於CQ目標資料夾中。 系統只會自動更新CQ目標資料夾中的資產(前提是您已將Experience Manager Assets設定為自動上傳資產)。
+* 請確定資產位於CQ目標資料夾中。 系統只會自動更新CQ目標資料夾中的資產（前提是您已將Experience Manager Assets設定為自動上傳資產）。
 * 確認您已將Cloud Services設定為「啟用自動上傳」，且已更新並儲存DAM資產工作流程，以包含Dynamic Media Classic上傳。
 * 將影像上傳至Dynamic Media Classic目標資料夾的子資料夾時，請務必執行下列任一項作業：
 
-   * 請確定所有資產的名稱（無論位於何處）都是唯一的。 否則，會刪除主要目標資料夾中的資產，而僅保留子資料夾中的資產。
-   * 在Dynamic Media Classic帳戶的設定區域中變更Dynamic Media Classic覆寫資產的方式。 如果您在子檔案夾中使用同名資產，請勿設定Dynamic Media Classic覆寫資產，而不論位置為何。
+  * 請確定所有資產的名稱（無論位於何處）都是唯一的。 否則，會刪除主要目標資料夾中的資產，而僅保留子資料夾中的資產。
+  * 在Dynamic Media Classic帳戶的設定區域中變更Dynamic Media Classic覆寫資產的方式。 如果您在子檔案夾中使用同名資產，請勿設定Dynamic Media Classic覆寫資產，而不論位置為何。
 
 **如果您刪除的資產或資料夾未在Dynamic Media Classic和Experience Manager之間同步：**
 

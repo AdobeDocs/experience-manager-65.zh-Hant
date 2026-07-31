@@ -12,7 +12,7 @@ feature: Communities
 role: Admin
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '1204'
+source-wordcount: '1332'
 ht-degree: 1%
 
 ---
@@ -27,7 +27,7 @@ AEM Communities可讓您發展與網站訪客的關係，這會：
 
 * **透過部落格、問答和事件行事曆通知**，
 * 同時&#x200B;**透過論壇、評論和其他社群內容獲得見解**，通常稱為使用者產生的內容(UGC)。
-* 它允許Publish環境中受信任的成員進行&#x200B;**稽核**，
+* 它允許發佈環境中受信任的成員進行&#x200B;**稽核**，
 * 使用Twitter和Facebook的&#x200B;**社交登入**，
 * **社群內容的內嵌翻譯**，
 * 從發佈的社群網站建立&#x200B;**社群群組**，
@@ -46,34 +46,34 @@ AEM Communities可讓您發展與網站訪客的關係，這會：
 
 * 根據選取的[社群網站範本](/help/communities/sites.md)來組合網站的功能，該範本為：
 
-   * 由[社群功能](#community-functions)建置
-   * 選用的[社群群組](#communitygroups)功能
+  * 由[社群功能](#community-functions)建置
+  * 選用的[社群群組](#communitygroups)功能
 
 * 使用設定進行配置：
 
-   * 稽核
-   * 登入
-   * 轉換
+  * 稽核
+  * 登入
+  * 轉換
 
 * 提供基本功能：
 
-   * 回應式設計：使用[TwitterBootstrap主題](https://getbootstrap.com)
+  * 回應式設計：使用[Twitter Bootstrap主題](https://getbootstrap.com)
 
-   * 登入：自我註冊，[社交登入](/help/communities/social-login.md)，使用者設定檔
+  * 登入：自我註冊，[社交登入](/help/communities/social-login.md)，使用者設定檔
 
-      * 通知：
-成員會看到與其相關的事件，以及使用者產生的內容，其中他們是[@mentioned](/help/communities/overview.md#mentionssupport)。
+    * 通知：
+      成員會看到與其相關的事件，以及使用者產生的內容，其中他們是[@mentioned](/help/communities/overview.md#mentionssupport)。
 
-      * 傳送訊息：成員可在社群網站內傳送或接收訊息。
-      * 搜尋：可在社群網站內搜尋。
-      * 語言切換：可為[多語言網站](/help/sites-administering/translation.md)選取語言。
+    * 傳送訊息：成員可在社群網站內傳送或接收訊息。
+    * 搜尋：可在社群網站內搜尋。
+    * 語言切換：可為[多語言網站](/help/sites-administering/translation.md)選取語言。
 
-      * 管理：授權成員的存取權，以便稽核和管理社群網站內的使用者。
+    * 管理：授權成員的存取權，以便稽核和管理社群網站內的使用者。
 
 * 省去許多頁面層級的編寫步驟：
 
-   * 品牌推廣：可選擇上傳橫幅影像以在社群網站的所有頁面上顯示
-   * 導覽功能表：社群網站範本中包含的功能提供導覽連結。
+  * 品牌推廣：可選擇上傳橫幅影像以在社群網站的所有頁面上顯示
+  * 導覽功能表：社群網站範本中包含的功能提供導覽連結。
 
 若要體驗快速建立社群網站的簡易性，請造訪[AEM Communities快速入門](/help/communities/getting-started.md)。
 
@@ -95,47 +95,47 @@ AEM Communities可讓您發展與網站訪客的關係，這會：
 
 * [網站](/help/communities/sites-console.md)主控台
 
-   * 網站建立
-   * 網站編輯
-   * 網站管理
-   * [社群群組](/help/communities/groups.md)主控台
+  * 網站建立
+  * 網站編輯
+  * 網站管理
+  * [社群群組](/help/communities/groups.md)主控台
 
 * [稽核](/help/communities/moderation.md)主控台
 
-   * 適用於作者和Publish環境的通用大量稽核UI。
-   * 新增篩選條件。
+  * 適用於作者和發佈環境的通用大量稽核UI。
+  * 新增篩選條件。
 
 * [成員和群組](/help/communities/members.md)管理主控台
 
-   * 可讓您從製作環境建立和管理發布端使用者（成員）。
-   * 可讓您禁止成員。
-   * 可讓您從製作環境建立和管理發布端使用者群組（成員群組）。
+  * 可讓您從製作環境建立和管理發布端使用者（成員）。
+  * 可讓您禁止成員。
+  * 可讓您從製作環境建立和管理發布端使用者群組（成員群組）。
 
 * [報表](/help/communities/reports.md)主控台
 
-   * 可讓您產生指派、貼文和檢視報表。
+  * 可讓您產生指派、貼文和檢視報表。
 
 全域工具主控台提供下列Communities工具的存取權：
 
 * [網站範本](/help/communities/tools.md#sitetemplatesconsole)主控台
 
-   * 建立及管理社群網站範本。
+  * 建立及管理社群網站範本。
 
 * [群組範本](/help/communities/tools.md#grouptemplatesconsole)主控台
 
-   * 建立及管理社群群組範本。
+  * 建立及管理社群群組範本。
 
 * [社群功能](/help/communities/tools.md#communityfunctionsconsole)主控台
 
-   * 建立及管理社群功能。
+  * 建立及管理社群功能。
 
 * [儲存設定](/help/communities/tools.md#storageconfiguratonconsole)主控台
 
-   * 選取並設定網站的[公用存放區](/help/communities/working-with-srp.md)。
+  * 選取並設定網站的[公用存放區](/help/communities/working-with-srp.md)。
 
 * [元件指南](/help/communities/components-guide.md)
 
-   * 範例網站[Community Components](https://localhost:4502/editor.html/content/community-components/en.html)提供所有Community元件的範例以及其預設設定和實驗能力。
+  * 範例網站[Community Components](https://localhost:4502/editor.html/content/community-components/en.html)提供所有Community元件的範例以及其預設設定和實驗能力。
 
 ## 社群網站範本 {#community-site-templates}
 
@@ -189,7 +189,7 @@ AEM Communities可讓您發展與網站訪客的關係，這會：
 * 部落格
 * 群組
 * 行事曆
-* 轉換
+* 翻譯
 * 審核
 * 通知
 * 評分和徽章
@@ -197,9 +197,9 @@ AEM Communities可讓您發展與網站訪客的關係，這會：
 
 若要體驗快速建立參與社群的簡易性，請造訪[AEM Communities快速入門](/help/communities/getting-started.md)。
 
-## AEM示範電腦 {#aem-demo-machine}
+## AEM示範機器 {#aem-demo-machine}
 
-[AEM示範電腦](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine)管理並執行AEM [Sites](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Sites)、[Assets](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Assets)、[社群](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Communities)、[應用程式](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Apps)和[Forms](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Forms)的示範，這些通常需要比啟動QuickStart執行個體更多的設定。 AEM示範機器會設定其他[基礎架構](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Infrastructure)，例如MongoDB、Solr、MySQL、FFmpeg及電子郵件伺服器。
+[AEM示範電腦](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine)管理並執行AEM [網站](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Sites)、[Assets](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Assets)、[社群](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Communities)、[應用程式](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Apps)和[Forms](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Forms)的示範，這些通常需要比啟動QuickStart執行個體更多的設定。 AEM示範機器會設定其他[基礎架構](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Infrastructure)，例如MongoDB、Solr、MySQL、FFmpeg及電子郵件伺服器。
 
 AEM示範機器包括：
 
@@ -208,7 +208,7 @@ AEM示範機器包括：
 
 * 要安裝的套件。
 
-AEM Demo Machine已在Windows、macOS和Linux®上透過CQ 5.5、CQ 5.6.1、AEM 6.0、AEM 6.1、AEM 6.2、AEM 6.3和AEM 6.4成功進行測試。
+AEM Demo Machine已在Windows、macOS和Linux®上成功使用CQ 5.5、CQ 5.6.1、AEM 6.0、AEM 6.1、AEM 6.2、AEM 6.3和AEM 6.4進行測試。
 
 AEM示範機器需要有效的AEM授權。
 

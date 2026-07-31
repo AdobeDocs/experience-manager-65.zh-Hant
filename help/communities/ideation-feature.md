@@ -12,7 +12,7 @@ feature: Communities
 role: Admin
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '1132'
+source-wordcount: '1142'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 ## 簡介 {#introduction}
 
-創意力功能為Publish環境中的登入網站訪客（社群成員）提供一個區域，以：
+創意力功能為發佈環境中的登入網站訪客（社群成員）提供一個區域，以：
 
 * 建立想法並與社群分享。
 * 檢視和評論創意。

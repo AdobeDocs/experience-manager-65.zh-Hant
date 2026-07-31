@@ -11,33 +11,33 @@ feature: Communities
 role: Admin
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '684'
+source-wordcount: '695'
 ht-degree: 1%
 
 ---
 
 # 初始設定 {#initial-setup}
 
-## 啟動作者和Publish例項 {#start-author-and-publish-instances}
+## 啟動作者和發佈執行個體 {#start-author-and-publish-instances}
 
 為了開發和示範之目的，必須執行一個製作和一個發佈例項。
 
-若要這麼做，請遵循基本的Adobe Experience Manager (AEM) [快速入門](../../help/sites-deploying/deploy.md#getting-started)指示，結果如下：
+若要這麼做，請依照基本Adobe Experience Manager (AEM) [快速入門](../../help/sites-deploying/deploy.md#getting-started)指示進行，這會產生下列結果：
 
 * [localhost：4502](http://localhost:4502/)上的作者環境
-* [localhost：4503](http://localhost:4503/)上的Publish環境
+* 在[localhost：4503](http://localhost:4503/)上發佈環境
 
 若為AEM Communities，
 
 * 「作者」環境適用於：
 
-   * 網站、範本和元件的開發。
-   * 管理和設定工作。
+  * 網站、範本和元件的開發。
+  * 管理和設定工作。
 
-* Publish環境適用於：
+* 發佈環境適用於：
 
-   * 發佈及仲裁內容的社群體驗。
-   * 建立社群群組、成員和成員群組。
+  * 發佈及仲裁內容的社群體驗。
+  * 建立社群群組、成員和成員群組。
 
 >[!NOTE]
 >
@@ -83,23 +83,23 @@ ht-degree: 1%
 
 * 在作者執行個體上
 
-   * 例如，[http://localhost:4502/](http://localhost:4503/)
+  * 例如，[http://localhost:4502/](http://localhost:4503/)
 
 * 使用管理員許可權登入
 
-   * 例如，使用者名稱&#39;admin&#39; /密碼&#39;admin&#39;
+  * 例如，使用者名稱&#39;admin&#39; /密碼&#39;admin&#39;
 
 * 從主控台，瀏覽至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 作業]** > **[!UICONTROL 安全性]** > **[!UICONTROL 使用者]**。
 * 從&#x200B;**編輯**&#x200B;功能表，選取&#x200B;**[!UICONTROL 新增使用者]**
 
 * 在`Create New User`對話方塊中，輸入：
 
-   * **[!UICONTROL 識別碼]**： sirius
-   * **[!UICONTROL 電子郵件地址]**： sirius.nilson@mailinator.com
-   * **[!UICONTROL 密碼]**：密碼
-   * **[!UICONTROL 確認密碼&amp;amp；ast；]**：密碼
-   * **[!UICONTROL 名字]**： Sirius
-   * **[!UICONTROL 姓氏]**： Nilson
+  * **[!UICONTROL 識別碼]**： sirius
+  * **[!UICONTROL 電子郵件地址]**： sirius.nilson@mailinator.com
+  * **[!UICONTROL 密碼]**：密碼
+  * **[!UICONTROL 確認密碼&amp;ast；]**：密碼
+  * **[!UICONTROL 名字]**： Sirius
+  * **[!UICONTROL 姓氏]**： Nilson
 
 ### 指派Sirius至社群管理員群組 {#assign-sirius-to-community-administrators-group}
 
@@ -107,8 +107,8 @@ ht-degree: 1%
 
 * 輸入&#39;C&#39;進行搜尋
 
-   * 選取`Community Administrators`
-   * 選取`Community Enablement Managers`
+  * 選取`Community Administrators`
+  * 選取`Community Enablement Managers`
 
 * 選取「**[!UICONTROL 儲存]**」。
 
@@ -116,9 +116,9 @@ ht-degree: 1%
 
 ## 啟用社交登入 {#enable-social-login}
 
-在可以使用Facebook和Twitter的社交登入示範版本之前，您必須
+在可以使用Facebook和Twitter社交登入的示範版本之前，您必須
 
-1. 安裝Fix Pack或[最新Feature Pack](deploy-communities.md#latestfeaturepack) (2017年3月Facebook API變更)。
+1. 安裝Fix Pack或[最新Feature Pack](deploy-communities.md#latestfeaturepack) （2017年3月Facebook API變更）。
 1. [在發佈環境中啟用OAuth提供者](social-login.md#adobe-granite-oauth-authentication-handler)。
 
 對於生產伺服器，必須建立提供社交登入所需的雲端服務。
@@ -143,9 +143,9 @@ ht-degree: 1%
 然後依照指示進行：
 
 1. [設定標籤許可權](../../help/sites-administering/tags.md#setting-tag-permissions)。
-1. [Publish標籤](../../help/sites-administering/tags.md#publishing-tags)。
+1. [發佈標籤](../../help/sites-administering/tags.md#publishing-tags)。
 
-為AEM Communities快速入門Tutorials建立的標籤範例套件
+為AEM Communities快速入門教學課程建立的標籤範例套件
 
 [取得檔案](assets/tutorial_tags-v63.zip)
 
@@ -155,4 +155,4 @@ ht-degree: 1%
 
 如需指示，請造訪[如何設定MongoDB以進行示範](demo-mongo.md)。
 
-依照預設，安裝作者和發佈AEM執行個體會導致使用者產生的內容(UGC)儲存在[JCR Tar儲存體](../../help/sites-deploying/platform.md)中，該儲存體可使用[JSRP](jsrp.md)存取。 JSRP不是通用存放區，這表示UGC只會顯示在輸入它的執行個體上。 通常UGC會輸入在發佈執行個體上，且不會顯示在製作環境中，導致所有協調工作需要使用發佈執行個體。
+依照預設，安裝作者和發佈AEM執行個體後，使用者產生的內容(UGC)會儲存在[JCR Tar儲存空間](../../help/sites-deploying/platform.md)，而此儲存空間是使用[JSRP](jsrp.md)來存取。 JSRP不是通用存放區，這表示UGC只會顯示在輸入它的執行個體上。 通常UGC會輸入在發佈執行個體上，且不會顯示在製作環境中，導致所有協調工作需要使用發佈執行個體。
