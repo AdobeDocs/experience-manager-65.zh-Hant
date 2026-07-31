@@ -10,14 +10,14 @@ solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '543'
-ht-degree: 9%
+source-wordcount: '470'
+ht-degree: 13%
 
 ---
 
 # 將提交稽核者與表單建立關聯 {#associating-submission-reviewers-with-a-form}
 
-<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hant)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。本文會介紹使用基礎元件編寫最適化表單的舊方法。</span>
+<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。 這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。 本文會介紹使用基礎元件編寫最適化表單的舊方法。</span>
 
 建立表單時，您可以指定透過表單入口網站稽核表單提交內容並提供意見回饋的使用者。 您的組織可以收集意見並對提交的表單進行重新處理。
 
@@ -54,19 +54,19 @@ AEM Forms可讓您將檢閱者群組與表單建立關聯。 新增至表單稽�
 
 ## 將提交稽核者與表單建立關聯 {#associating-submission-reviewers-with-a-form-1}
 
-若要將提交稽核者與最適化表單建立關聯，請建立稽核者群組並新增使用者。 在表單的進階屬性中，於表單提交稽核者欄位下新增建立的稽核者群組。
-使用者群組可讓您將不同的提交稽核者集與不同的調適型表單建立關聯。 此功能可防止未經授權的使用者進行提交稽核。
+若要將提交稽核者與最適化表單建立關聯，請建立稽核者群組並新增使用者。在表單的進階屬性中，於表單提交稽核者欄位下新增建立的稽核者群組。
+使用者群組可讓您將不同的提交稽核者集與不同的調適型表單建立關聯。此功能可防止未經授權的使用者進行提交稽核。
 
 執行以下步驟之前，請參閱[先決條件](../../forms/using/adding-reviewers-form.md#prerequisite)。
 
 若要建立群組並新增成員，請瀏覽至&#x200B;**工具** > **作業** > **安全性** > **群組**。
 如需詳細資訊，請參閱[使用者管理與服務](/help/sites-administering/security.md)。
-請確定您將建立的群組新增為現成使用者群組的成員： **forms-submission-reviewers**。 此使用者群組隨附於AEM Forms，可確保將使用者新增為提交稽核者。
+請確定您將建立的群組新增為現成可用的使用者群組的成員： **forms-submission-reviewers**。此使用者群組隨附於AEM Forms，可確保將使用者新增為提交稽核者。
 
 若要將使用者群組與最適化表單建立關聯：
 
 1. 在撰寫模式中，導覽至&#x200B;**Forms** > **Forms和檔案**。
-1. 使用&#x200B;**選取**&#x200B;選項選取最適化表單，然後按一下&#x200B;**檢視屬性**。
+1. 使用&#x200B;**選取**&#x200B;選項選取最適化表單，然後按一下**檢視屬性**。
 1. 在表單的[內容]視窗中，按一下[**編輯**]，然後按一下[**進階**]。
 1. 在提交稽核者群組欄位中輸入群組，然後按一下&#x200B;**完成**。
 

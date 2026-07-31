@@ -12,8 +12,8 @@ feature: Developing
 role: Developer
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
-source-wordcount: '1930'
-ht-degree: 0%
+source-wordcount: '1834'
+ht-degree: 1%
 
 ---
 
@@ -39,7 +39,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->本檔案著重於在傳統UI中使用[Foundation元件](/help/sites-authoring/default-components-foundation.md)來開發表單。 Adobe建議在觸控式UI中使用新的[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)和[隱藏條件](/help/sites-developing/hide-conditions.md)進行表單開發。
+>本檔案著重於在傳統UI中使用[Foundation元件](/help/sites-authoring/default-components-foundation.md)來開發表單。 Adobe建議在觸控式UI中使用新的[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)和[隱藏條件](/help/sites-developing/hide-conditions.md)進行表單開發。
 
 ## 預先載入表單值 {#preloading-form-values}
 
@@ -72,7 +72,7 @@ ht-degree: 0%
 
 1. 新增多值字串( `String[]`)型別的新屬性（例如`myList`），以包含下拉式清單專案的清單。 也可以使用指令碼匯入內容，例如使用JSP指令碼或shell指令碼中的cURL。
 
-1. 在&#x200B;**專案載入路徑**&#x200B;欄位中使用完整路徑：
+1. 在&#x200B;**專案載入路徑**欄位中使用完整路徑：
 例如，`/etc/designs/geometrixx/formlistvalues/myList`
 
 請注意，如果`String[]`中的值格式如下：
@@ -80,7 +80,7 @@ ht-degree: 0%
 * `AL=Alabama`
 * `AK=Alaska`
 
-依此類推，則AEM產生清單為：
+依此類推，AEM產生的清單為：
 
 * `<option value="AL">Alabama</option>`
 * `<option value="AK">Alaska</option>`
@@ -91,7 +91,7 @@ ht-degree: 0%
 
 表單需要動作。 動作會定義隨使用者資料提交表單時所執行的操作。
 
-標準AEM安裝會提供一系列動作，您可以在下列位置看到這些動作：
+標準AEM安裝提供了一系列動作，您可以在下列位置看到這些動作：
 
 `/libs/foundation/components/form/actions`
 
@@ -117,9 +117,9 @@ ht-degree: 0%
 
    * 選擇性：
 
-      * `jcr:title` — 指定您選擇的標題，這會顯示在下拉式選擇清單中。 如果未設定，則會顯示節點名稱
+     * `jcr:title` — 指定您選擇的標題，這會顯示在下拉式選擇清單中。 如果未設定，則會顯示節點名稱
 
-      * `jcr:description` — 輸入您選擇的說明
+     * `jcr:description` — 輸入您選擇的說明
 
 1. 在資料夾中建立對話方塊節點：
 
@@ -128,14 +128,14 @@ ht-degree: 0%
 1. 在資料夾中建立：
 
    1. 後置指令碼。
-指令碼的名稱為`post.POST.<extension>`，例如`post.POST.jsp`
-在提交表單以處理表單時，會叫用後置指令碼，其中包含處理來自表單`POST`之資料的程式碼。
+      指令碼的名稱為`post.POST.<extension>`，例如`post.POST.jsp`
+      在提交表單以處理表單時，會叫用後置指令碼，其中包含處理來自表單`POST`之資料的程式碼。
 
    1. 新增在提交表單時叫用的轉寄指令碼。
-指令碼的名稱為`forward.<extension`>，例如`forward.jsp`
-此指令碼可定義路徑。 接著會將目前的請求轉送至指定的路徑。
+      指令碼的名稱為`forward.<extension`>，例如`forward.jsp`
+      此指令碼可定義路徑。接著會將目前的請求轉送至指定的路徑。
 
-   必要的呼叫是`FormsHelper#setForwardPath` （2個變體）。 典型案例是執行一些驗證或邏輯來尋找目標路徑，然後前進到該路徑，讓預設的SlingPOSTservlet實際執行JCR中的儲存。
+   必要的呼叫是`FormsHelper#setForwardPath` （2個變體）。 典型案例是執行一些驗證或邏輯來尋找目標路徑，然後前進到該路徑，讓預設的Sling POST servlet實際以JCR儲存。
 
    也可能有另一個servlet執行實際處理，在這種情況下，表單動作和`forward.jsp`將只當作「貼上」程式碼。 這方面的範例是位於`/libs/foundation/components/form/actions/mail`的郵件動作，其會將詳細資料轉寄給郵件servlet所在的`<currentpath>.mail.html`。
 
@@ -148,35 +148,35 @@ ht-degree: 0%
 
    * 轉譯表單( `GET`)時：
 
-      1. `init.jsp`
-      1. 所有欄位的限制： `clientvalidation.jsp`
-      1. 表單的validationRT： `clientvalidation.jsp`
-      1. 表單已透過載入資源載入（如果已設定）
-      1. `addfields.jsp` （在演算`<form></form>`內）
+     1. `init.jsp`
+     1. 所有欄位的限制： `clientvalidation.jsp`
+     1. 表單的validationRT： `clientvalidation.jsp`
+     1. 表單已透過載入資源載入（如果已設定）
+     1. `addfields.jsp` （在演算`<form></form>`內）
 
    * 處理表單`POST`時：
 
-      1. `init.jsp`
-      1. 所有欄位的限制： `servervalidation.jsp`
-      1. 表單的validationRT： `servervalidation.jsp`
-      1. `forward.jsp`
-      1. 如果已設定轉寄路徑( `FormsHelper.setForwardPath`)，則轉寄要求，然後呼叫`cleanup.jsp`
+     1. `init.jsp`
+     1. 所有欄位的限制： `servervalidation.jsp`
+     1. 表單的validationRT： `servervalidation.jsp`
+     1. `forward.jsp`
+     1. 如果已設定轉寄路徑( `FormsHelper.setForwardPath`)，則轉寄要求，然後呼叫`cleanup.jsp`
 
-      1. 如果未設定轉送路徑，請呼叫`post.POST.jsp` （在此結束，未呼叫`cleanup.jsp`）
+     1. 如果未設定轉送路徑，請呼叫`post.POST.jsp` （在此結束，未呼叫`cleanup.jsp`）
 
 1. 再次在資料夾中選擇性地新增：
 
    1. 用於新增欄位的指令碼。
-指令碼的名稱為`addfields.<extension>`，例如`addfields.jsp`
-在寫入表單起始HTML後，會立即叫用`addfields`指令碼。 這可讓動作在表單內新增自訂輸入欄位或其他此類HTML。
+      指令碼的名稱為`addfields.<extension>`，例如`addfields.jsp`
+      在表單開始的HTML寫入後，會立即叫用`addfields`指令碼。這可讓動作在表單內新增自訂輸入欄位或其他類似的HTML。
 
    1. 初始化指令碼。
-指令碼的名稱為`init.<extension>`，例如`init.jsp`
-此指令碼會在表單轉譯時叫用。 這可用來初始化動作細節。
+      指令碼的名稱為`init.<extension>`，例如`init.jsp`
+      此指令碼會在表單轉譯時叫用。這可用來初始化動作細節。
 
    1. 清除指令碼。
-指令碼的名稱為`cleanup.<extension>`，例如`cleanup.jsp`
-此指令碼可用於執行清理。
+      指令碼的名稱為`cleanup.<extension>`，例如`cleanup.jsp`
+      此指令碼可用於執行清理。
 
 1. 在parsys中使用&#x200B;**Forms**&#x200B;元件。 **動作型別**&#x200B;下拉式清單現在會包含您的新動作。
 
@@ -212,18 +212,18 @@ ht-degree: 0%
 
    * 選擇性：
 
-      * `jcr:title` — 指定您選取的標題，這會顯示在選取專案清單中。 如果未設定，則會顯示節點名稱
-      * `hint` — 使用者如何使用該欄位的額外資訊
+     * `jcr:title` — 指定您選取的標題，這會顯示在選取專案清單中。 如果未設定，則會顯示節點名稱
+     * `hint` — 使用者如何使用該欄位的額外資訊
 
 1. 在此資料夾中，您需要下列指令碼：
 
    * 使用者端驗證指令碼：
-指令碼的名稱為`clientvalidation.<extension>`，例如`clientvalidation.jsp`
-這會在表單欄位轉譯時叫用。 它可用來建立使用者端JavaScript，以驗證使用者端上的欄位。
+     指令碼名稱為`clientvalidation.<extension>`，例如， `clientvalidation.jsp`
+     這會在表單欄位轉譯時叫用。 它可用來建立使用者端JavaScript，以驗證使用者端上的欄位。
 
    * 伺服器驗證指令碼：
-指令碼的名稱為`servervalidation.<extension>`，例如`servervalidation.jsp`
-這會在表單提交時叫用。 它可用於在提交欄位後驗證伺服器上的欄位。
+     指令碼名稱為`servervalidation.<extension>`，例如， `servervalidation.jsp`
+     這會在表單提交時叫用。 它可用於在提交欄位後驗證伺服器上的欄位。
 
 >[!NOTE]
 >
@@ -281,8 +281,8 @@ ht-degree: 0%
 
    * 在上行末端的下拉式清單中選取：
 
-      * **all** — 如果所有條件都必須為true才能顯示或隱藏元件
-      * **any** — 如果只有一個或多個條件必須為true才能顯示或隱藏元件
+     * **all** — 如果所有條件都必須為true才能顯示或隱藏元件
+     * **any** — 如果只有一個或多個條件必須為true才能顯示或隱藏元件
 
    * 在條件行（其中一個顯示為預設值）中，選取元件、運運算元，然後指定值。
    * 視需要按一下&#x200B;**新增條件**，以新增更多條件。
@@ -311,15 +311,15 @@ ht-degree: 0%
 
 顯示/隱藏條件會使用Element Name屬性的值來參照表單中的其他元件。 當任何條件引用已刪除或已變更Element Name屬性的元件時，顯示/隱藏設定無效。 發生這種情況時，您需要手動更新條件，否則表單載入時發生錯誤。
 
-顯示/隱藏設定無效時，系統只會以JavaScript程式碼的形式提供設定。 編輯程式碼以修正問題。程式碼使用原本用來參考元件的Element Name屬性。
+顯示/隱藏設定無效時，系統只會以JavaScript程式碼的形式提供設定。 編輯程式碼以更正問題。程式碼會使用原本用來參考元件的Element Name屬性。
 
 ### 開發指令碼以與Forms搭配使用 {#developing-scripts-for-use-with-forms}
 
-如需可在編寫指令碼時使用的API元素的詳細資訊，請參閱與表單[&#128279;](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/foundation/forms/package-summary.html)相關的javadocs。
+如需可在編寫指令碼時使用的API元素的詳細資訊，請參閱與表單](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/foundation/forms/package-summary.html)相關的[javadocs。
 
 您可以將此用於動作，例如在提交表單前呼叫服務，以及在服務失敗時取消服務：
 
 * 定義驗證資源型別
 * 包含用於驗證的指令碼：
 
-   * 在您的JSP中，呼叫您的Web服務並建立包含錯誤訊息的`com.day.cq.wcm.foundation.forms.ValidationInfo`物件。 如果發生錯誤，將不會張貼表單資料。
+  * 在您的JSP中，呼叫您的Web服務並建立包含錯誤訊息的`com.day.cq.wcm.foundation.forms.ValidationInfo`物件。 如果發生錯誤，將不會張貼表單資料。

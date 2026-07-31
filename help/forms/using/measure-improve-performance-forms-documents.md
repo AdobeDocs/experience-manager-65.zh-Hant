@@ -11,7 +11,7 @@ feature: Adaptive Forms
 role: Admin, User, Developer
 source-git-commit: e821be5233fd5f6688507096790d219d25903892
 workflow-type: tm+mt
-source-wordcount: '1274'
+source-wordcount: '1295'
 ht-degree: 0%
 
 ---
@@ -78,9 +78,9 @@ AEM Forms與[Adobe Marketing Cloud](https://www.adobe.com/marketing-cloud.html)�
 
 當您的客戶存取您已啟用Analytics的表單並與之互動時，其互動會被擷取到高度安全的Analytics資料庫中。 資料庫會依使用者端分段，並可透過安全連線存取。
 
-您可以針對啟用Analytics的表單從AEM內檢視報表，並分析資料。 若要檢視報表，請執行下列動作：
+您可以從AEM檢視已啟用Analytics之表單的報表，並分析資料。 若要檢視報表，請執行下列動作：
 
-1. 在AEM伺服器上，瀏覽至&#x200B;**Forms > Forms和檔案**。
+1. 在AEM伺服器上，瀏覽至&#x200B;**Forms > Forms與檔案**。
 1. 選取您要為其建立分析報表的表單。
 1. 按一下「Analytics報表」圖示。 報表隨即顯示。
 
@@ -114,7 +114,7 @@ AEM Forms與[Adobe Marketing Cloud](https://www.adobe.com/marketing-cloud.html)�
 
 >[!NOTE]
 >
->您可以透過Adobe Marketing Cloud上的Analytics帳戶，檢視詳細報表，並深入瞭解客戶及其與您表單的互動。
+>您可以從Adobe Marketing Cloud上的Analytics帳戶檢視詳細報表，並深入瞭解insight中的客戶及其與您表單的互動。
 
 #### 步驟3：分析資料點 {#step-analyze-data-points}
 

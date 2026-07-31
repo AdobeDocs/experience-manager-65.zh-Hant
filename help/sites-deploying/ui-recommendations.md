@@ -12,7 +12,7 @@ feature: Administering
 role: Admin
 source-git-commit: 8f638eb384bdca59fb6f4f8990643e64f34622ce
 workflow-type: tm+mt
-source-wordcount: '764'
+source-wordcount: '790'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Adobe Experience Manager提供兩個UI — 統一的Experience Cloud UI （也�
 興趣條款：
 
 * **UI （或標準UI）**
-在5.6.0中引入作為技術預覽的現代使用者介面，並在後續發行版本中進行擴展。 這是以Adobe Experience Cloud的統一使用者體驗為基礎，先前稱為觸控式UI或觸控式UI。
+在5.6.0中引入作為技術預覽的現代使用者介面，並在後續發行版本中進行擴展。 這是以Adobe Experience Cloud （先前稱為觸控式UI或觸控式UI）的統一使用者體驗為基礎。
 
 * **傳統UI**
 以ExtJS技術為基礎的使用者介面，此技術於2008年隨CQ 5.1推出。
@@ -40,14 +40,14 @@ Adobe Experience Manager提供兩個UI — 統一的Experience Cloud UI （也�
 * **DAM/Assets管理員**
 管理數位資產（包括影像、影片、檔案和下載）的功能。
 
-* **ContextHub**
+* **上下文中心**
 彙總訪客相關資訊並將其用於各種用途的功能。 提供使用者介面來模擬造訪網站的人。 從AEM 6.2開始，ContextHub取代舊版技術Client Context。
 
 ## 一般 {#general}
 
-過去幾年，Adobe已更新所有Adobe Experience Cloud解決方案，並具備統一的使用者介面。 Experience Cloud解決方案的使用者可透過使用與操作應用程式的共同模式，獲得一致的體驗。 在每次發行中，Adobe都會根據客戶在各種解決方案中的意見回饋，改進其使用者介面。
+過去幾年，Adobe已更新所有Adobe Experience Cloud解決方案，並統一使用者介面。 Experience Cloud解決方案的使用者可針對如何使用及操作應用程式，享用一致的體驗。 在每次發行中，Adobe都會根據客戶在各種解決方案中的意見回饋，改進其使用者介面。
 
-Adobe Experience Manager （先前稱為CQ5）的原始使用者介面於2008年推出，供執行5.0-5.6.1版本的客戶使用，現在位於AEM 6.5中。這可保證客戶可更新至6.5版，並可獲益於具有新功能的更新平台，同時繼續使用相同的使用者介面。
+Adobe Experience Manager （先前稱為CQ5）的原始使用者介面於2008年推出，供執行5.0-5.6.1版本的客戶使用，現在位於AEM 6.5中。 這可保證客戶可更新至6.5版，並可獲益於具有新功能的更新平台，同時繼續使用相同的使用者介面。
 
 Adobe建議客戶在2018/19年度計畫切換至新的UI。 這可以在6.5更新期間完成，或者在更新後的單獨專案中完成，這將包括對自訂和元件對話方塊的必要調整。
 
@@ -72,7 +72,7 @@ Classic UI已透過AEM 6.4淘汰，Adobe不打算進一步增強Classic UI。 �
    <td>
     <ol>
      <li>更新至6.5</li>
-     <li>使用預設UI進行網站管理、資產…… etc.<br /> </li>
+     <li>使用網站管理、資產……等的預設UI。<br /> </li>
      <li>設定「編輯頁面」動作以開啟傳統UI頁面編輯器。 檢視<a href="#selecting-your-ui">選取您的UI</a>。</li>
     </ol> <p>然後，在第二階段：</p>
     <ol>
@@ -84,12 +84,12 @@ Classic UI已透過AEM 6.4淘汰，Adobe不打算進一步增強Classic UI。 �
    <td>
     <ol>
      <li>更新至6.5</li>
-     <li>使用預設UI進行網站管理、資產…… 等等。</li>
+     <li>使用預設UI進行網站管理、資產等。</li>
      <li>設定「編輯頁面」動作以開啟傳統UI頁面編輯器。 檢視<a href="#selecting-your-ui">選取您的UI</a>。</li>
     </ol> <p>然後，在第二階段：</p>
     <ol>
      <li>更新您的元件對話方塊，以使用Coral 3對話方塊格式。 Adobe建議使用<a href="/help/sites-developing/modernization-tools.md">AEM現代化工具</a>來更新元件。</li>
-     <li>設定ContextHub (取代ClientContext)並更新頁面範本，以使用ContextHub。 ContextHub的相容性模式允許載入自訂ClientContext存放區。</li>
+     <li>設定ContextHub （取代ClientContext）並更新頁面範本，以使用ContextHub。 ContextHub的相容性模式允許載入自訂ClientContext存放區。</li>
     </ol> </td>
   </tr>
   <tr>
