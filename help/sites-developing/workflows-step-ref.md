@@ -275,7 +275,7 @@ function check(){
 
 若要建立對話方塊，您必須建立對話方塊：
 
-* 決定產生的資料儲存在承載](#dialog-participant-step-storing-data-in-the-payload)中的何處[。
+* 決定產生的資料儲存在承載[&#128279;](#dialog-participant-step-storing-data-in-the-payload)中的何處。
 * [定義對話方塊；包括定義用來收集和儲存資料的欄位](#dialog-participant-step-dialog-definition)。
 
 #### 對話方塊參與者步驟 — 將資料儲存在承載中 {#dialog-participant-step-storing-data-in-the-payload}
@@ -553,7 +553,7 @@ public class InitiatorParticipantChooser implements ParticipantStepChooser {
 * [一般](#step-properties-common-tab)
 * **引數**
 
-  * **參與者**：指定可供選取的使用者清單。 若要新增使用者至清單，請按一下[新增專案] ****，然後輸入使用者節點的本位目錄路徑或使用者ID。 使用者的順序不會影響被指派工作專案的可能性。
+  * **參與者**：指定可供選取的使用者清單。 若要新增使用者至清單，請按一下[新增專案] **&#x200B;**，然後輸入使用者節點的本位目錄路徑或使用者ID。 使用者的順序不會影響被指派工作專案的可能性。
 
 ### 工作流程發起人參與者選擇器 {#workflow-initiator-participant-chooser}
 
