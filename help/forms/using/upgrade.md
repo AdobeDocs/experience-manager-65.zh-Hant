@@ -9,10 +9,10 @@ role: Admin,User
 exl-id: 2fc8abec-8ba6-40b7-bbb1-4288eeea7c86
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,AEM Forms Upgrade
-source-git-commit: 4f9129101f537e035b8a7ec52fbc046ae6f93f92
+source-git-commit: beb40e8e83b52b60d68dffecb95f3d877a47d397
 workflow-type: tm+mt
-source-wordcount: '362'
-ht-degree: 6%
+source-wordcount: '427'
+ht-degree: 5%
 
 ---
 
@@ -45,7 +45,7 @@ AEM 6.5 Forms包含數項新功能和增強功能，可簡化表單和對應項�
 
 下圖顯示AEM Forms on JEE的可用升級路徑：
 
-![JEE升級6.5](do-not-localize/upgradepathjee.png)
+![JEE升級6.5](do-not-localize/upgradepathjee.svg)
 
 
 您可以從下列位置執行直接升級：
