@@ -148,36 +148,36 @@ AEM能以各種格式和從各種棧疊層級提供內容。 有些從2008年開
 * 單頁應用程式Maven專案原型1.0.6+適用於新專案，請參閱[GitHub版本注意事項](https://github.com/adobe/aem-spa-project-archetype/releases)。
 * HTL 1.4版，請參閱發行說明[GitHub &#x200B;](https://github.com/adobe/htl-spec/releases/tag/1.4)。
 
-   * 字串、陣列和物件的「in」運運算元：
+  * 字串、陣列和物件的「in」運運算元：
 
-     ```html
-     ${'a' in 'abc'}
-     ${100 in myArray}
-     ${'a' in myObject}
-     ```
+    ```html
+    ${'a' in 'abc'}
+    ${100 in myArray}
+    ${'a' in myObject}
+    ```
 
-   * 具有data-sly-set的變數宣告：
-     `<sly data-sly-set.title="${currentPage.title}"/>${title}`
+  * 具有data-sly-set的變數宣告：
+    `<sly data-sly-set.title="${currentPage.title}"/>${title}`
 
-   * 列出和重複控制引數：開始、步驟、結束：
-     `<h2 data-sly-repeat="${currentPage.listChildren @ begin = 1, step=2}">${item.title}</h2>`
+  * 列出和重複控制引數：開始、步驟、結束：
+    `<h2 data-sly-repeat="${currentPage.listChildren @ begin = 1, step=2}">${item.title}</h2>`
 
-   * data-sly-unwrap的識別碼：
+  * data-sly-unwrap的識別碼：
 
-     ```html
-     <div data-sly-unwrap.isUnwrapped="${myCondition || myOtherCondition}">
-     text <span data-sly-test="${isUnwrapped}>is unwrapped</code>
-     </div>
-     ```
+    ```html
+    <div data-sly-unwrap.isUnwrapped="${myCondition || myOtherCondition}">
+    text <span data-sly-test="${isUnwrapped}>is unwrapped</code>
+    </div>
+    ```
 
-   * 支援負數
+  * 支援負數
 
 * 核心元件2.3.2+請參閱[GitHub版本注意事項](https://github.com/adobe/aem-core-wcm-components/releases)。
 * 配置容器的格線系統，請參閱[GitHub](https://github.com/Adobe-Marketing-Cloud/aem-responsivegrid)。
 * Clientlib Manager：將Google Closure Compiler預設為JavaScript clientlibs的縮制（舊預設為Yahoo YUI），並將Google Closure Compiler更新為v版20190121
 * 範本編輯器和原則
 
-   * 為使用JS SDK （也稱為SPA編輯器）的單頁應用程式建立和編輯範本
+  * 為使用JS SDK （也稱為SPA編輯器）的單頁應用程式建立和編輯範本
 
 * 參考網站We.Retail 4.0，請參閱發行說明[GitHub &#x200B;](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases)。
 * 升級現有網站以使用最新編輯器功能的工具組，請參閱[GitHub存放庫](https://github.com/adobe/aem-modernize-tools)
@@ -457,17 +457,17 @@ Adobe已具備程式和流程，可讓您收集、區分優先順序和追蹤以
 * We.Retail參考實作（[瞭解詳情](/help/sites-developing/we-retail.md)）
 * Maven專案原型：
 
-   * 完整棧疊網站： [GitHub專案](https://github.com/adobe/aem-project-archetype)
-   * 若為具有React/Angular的單頁應用程式： [GitHub專案](https://github.com/adobe/aem-spa-project-archetype)
+  * 完整棧疊網站： [GitHub專案](https://github.com/adobe/aem-project-archetype)
+  * 若為具有React/Angular的單頁應用程式： [GitHub專案](https://github.com/adobe/aem-spa-project-archetype)
 
 * 適用於各種目標平台的AEM Screens Player （[下載](https://download.macromedia.com/screens/)）
 
 * 智慧內容語言模型。 已預先安裝英文 — 可以下載更多語言
 
-   * [德文](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-de)
-   * [西班牙文](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-es)
-   * [義大利文](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-it)
-   * [法文](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-fr)
+  * [德文](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-de)
+  * [西班牙文](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-es)
+  * [義大利文](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-it)
+  * [法文](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-fr)
 
 * AEM現代化工具套裝，例如對話方塊轉換工具。 （[GitHub專案](https://github.com/adobe/aem-modernize-tools)）
 
@@ -526,9 +526,9 @@ Adobe會持續評估產品功能，不斷使用更強大的版本進行替換，
 
   在這些動作中，確定屬性`htmllibmanager.fileSystemOutputCacheLocation`不是空字串：
 
-   1. 正在呼叫`/libs/granite/ui/content/dumplibs.rebuild.html?invalidate=true`。
-   2. 升級至AEM 6.5。
-   3. 在AEM 6.5上執行「延遲內容移轉」。
+  1. 正在呼叫`/libs/granite/ui/content/dumplibs.rebuild.html?invalidate=true`。
+  2. 升級至AEM 6.5。
+  3. 在AEM 6.5上執行「延遲內容移轉」。
 
 * 如果您搭配使用JDK 11與AEM 6.5執行個體，部署部分套件後，部分頁面可能會顯示為空白。 記錄檔中會顯示下列錯誤訊息：
 
@@ -575,13 +575,13 @@ org.osgi.framework.bootdelegation=sun.*,com.sun.*,jdk.internal.reflect,jdk.inter
 
 * 當調適型表單設定為動態更新元件值，且透過Dispatcher存取託管表單的發佈執行個體時，動態更新欄位值的功能會停止運作。 若要解決此問題，請在發佈執行個體上，開啟CRXDE，導覽至`/libs/fd/af/runtime/clientlibs/guideChartReducer`，然後建立下列屬性。
 
-   * 名稱： allowProxy
-   * 型別：布林值
-   * 值： true
-   * Protected： False
-   * 必要： False
-   * 多個：False
-   * 自動建立： False
+  * 名稱： allowProxy
+  * 型別：布林值
+  * 值： true
+  * Protected： False
+  * 必要： False
+  * 多個：False
+  * 自動建立： False
 
   屬性可讓執行階段資料夾下的使用者端程式庫存取代理。 (CQ-4268679)
 

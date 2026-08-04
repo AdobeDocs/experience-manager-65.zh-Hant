@@ -10,7 +10,7 @@ hide: true
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
 workflow-type: tm+mt
-source-wordcount: '5796'
+source-wordcount: '5853'
 ht-degree: 5%
 
 ---
@@ -88,7 +88,7 @@ ht-degree: 5%
 * `woman-running`
 
 但是，查詢`woman -running`傳回的中繼資料中不含`running`的資產。
-使用智慧標籤會新增額外的`OR`子句，以尋找任何搜尋詞作為套用的智慧標籤。使用智慧標籤以`woman`或`running`標籤的資產也會出現在這類搜尋查詢中。所以搜尋結果是，
+使用智慧標籤會新增額外的`OR`子句，以尋找任何搜尋詞作為套用的智慧標籤。 使用智慧標籤以`woman`或`running`標籤的資產也會出現在這類搜尋查詢中。 所以搜尋結果是，
 
 * Assets的中繼資料中有`woman`和`running`個關鍵字（預設行為）。
 
