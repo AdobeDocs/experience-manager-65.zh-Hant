@@ -51,7 +51,7 @@ ht-degree: 6%
 
 #### Java™開發 {#java-development}
 
-* Uberjar](/help/sites-developing/ht-projects-maven.md#experience-manager-api-dependencies)目前有[兩個版本，建議使用未標示為過時的公用介面版本，以及包含標示為過時的介面的版本。
+* Uberjar[&#128279;](/help/sites-developing/ht-projects-maven.md#experience-manager-api-dependencies)目前有兩個版本，建議使用未標示為過時的公用介面版本，以及包含標示為過時的介面的版本。
 
 #### 使用者介面 {#user-interface}
 
@@ -118,7 +118,7 @@ UI已進行各種增強功能，使其更有效率且更易於使用。
 
 #### Headless內容管理 {#headless-content-management}
 
-AEM能以各種格式和從各種棧疊層級提供內容。 有些從2008年開始使用[Sling GET](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html)和[POST Servlet](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html)。 內容服務（[Sling模型匯出程式](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html)）是在AEM 6.3中匯入的，是AEM SJ SDK用來合併單頁應用程式的方法。 適用於Assets](/help/assets/mac-api-assets.md)的[HTTP API是針對AEM 6.5擴充的CRUD API。
+AEM能以各種格式和從各種棧疊層級提供內容。 有些從2008年開始使用[Sling GET](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html)和[POST Servlet](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html)。 內容服務（[Sling模型匯出程式](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html)）是在AEM 6.3中匯入的，是AEM SJ SDK用來合併單頁應用程式的方法。 適用於Assets[&#128279;](/help/assets/mac-api-assets.md)的HTTP API是針對AEM 6.5擴充的CRUD API。
 
 新HTTP API功能：
 
@@ -146,7 +146,7 @@ AEM能以各種格式和從各種棧疊層級提供內容。 有些從2008年開
 
 * Maven專案原型18+如需新專案，請參閱[GitHub的發行說明](https://github.com/adobe/aem-project-archetype/releases)。
 * 單頁應用程式Maven專案原型1.0.6+適用於新專案，請參閱[GitHub版本注意事項](https://github.com/adobe/aem-spa-project-archetype/releases)。
-* HTL 1.4版，請參閱發行說明[GitHub ](https://github.com/adobe/htl-spec/releases/tag/1.4)。
+* HTL 1.4版，請參閱發行說明[GitHub &#x200B;](https://github.com/adobe/htl-spec/releases/tag/1.4)。
 
   * 字串、陣列和物件的「in」運運算元：
 
@@ -179,7 +179,7 @@ AEM能以各種格式和從各種棧疊層級提供內容。 有些從2008年開
 
   * 為使用JS SDK （也稱為SPA編輯器）的單頁應用程式建立和編輯範本
 
-* 參考網站We.Retail 4.0，請參閱發行說明[GitHub ](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases)。
+* 參考網站We.Retail 4.0，請參閱發行說明[GitHub &#x200B;](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases)。
 * 升級現有網站以使用最新編輯器功能的工具組，請參閱[GitHub存放庫](https://github.com/adobe/aem-modernize-tools)
 
 >[!CAUTION]
@@ -255,7 +255,7 @@ AEM能以各種格式和從各種棧疊層級提供內容。 有些從2008年開
 
 #### AEM和Commerce {#aem-commerce}
 
-Commerce integration framework的改良功能發行週期比AEM 6.4更快。 使用Commerce integration framework](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/integrations/magento.html)從[AEM和Adobe Commerce整合瞭解更多資訊。
+Commerce integration framework的改良功能發行週期比AEM 6.4更快。 使用Commerce integration framework[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/integrations/magento.html)從AEM和Adobe Commerce整合瞭解更多資訊。
 
 #### Communities附加元件 {#communities-add-on}
 
@@ -308,7 +308,7 @@ Communities （從AEM 6.5開始）允許分散管理（和管理）不同的社�
 
 **SCORM 2017.1支援**
 
-AEM 6.5 Communities的啟用功能支援可共用的內容物件參考模型[ (SCORM) 2017.1](https://rusticisoftware.com/blog/scorm-engine-2017-released/)引擎。
+AEM 6.5 Communities的啟用功能支援可共用的內容物件參考模型[&#x200B; (SCORM) 2017.1](https://rusticisoftware.com/blog/scorm-engine-2017-released/)引擎。
 
 * 啟用元件的鍵盤導覽支援
 * AEM Communities中的啟用元件（例如目錄和課程播放、指派、檔案庫）可支援鍵盤導覽，以提升協助工具。
@@ -344,7 +344,7 @@ AEM 6.5引進以下功能和增強功能，以提高AEM使用者、DAM角色和�
 
 如需詳細資訊，請參閱[在Experience Manager Assets中使用Adobe Stock資產](/help/assets/aem-assets-adobe-stock.md)。
 
-從Experience Manager Assets](/help/release-notes/assets/stock_image_preview_license_options.png)預覽Adobe Stock影像和授權![
+從Experience Manager Assets![&#128279;](/help/release-notes/assets/stock_image_preview_license_options.png)預覽Adobe Stock影像和授權
 
 *圖：從[!DNL Experience Manager Assets]預覽[!DNL Adobe Stock]影像和授權。*
 
