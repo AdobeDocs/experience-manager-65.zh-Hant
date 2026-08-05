@@ -8,15 +8,20 @@ exl-id: 6cfbeec0-0be3-48b2-a4bb-fd19c69c92c7
 solution: Experience Manager, Experience Manager Forms
 feature: Interactive Communication
 role: Admin, User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: 2e13a0cd09477ccd5374f1850efad882c8222f0a
 workflow-type: tm+mt
-source-wordcount: '487'
-ht-degree: 7%
+source-wordcount: '526'
+ht-degree: 10%
 
 ---
 
 
 # 互動式通訊概述 {#interactive-communications-overview}
+
+| 版本 | 文章連結 |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/interactive-communication/overview/introduction) |
+| AEM 6.5 | 本文章 |
 
 本文包括概述、範例使用案例、建立工作流程，以及互動式通訊與信函之間的差異。
 
@@ -28,7 +33,7 @@ ht-degree: 7%
 
 以下是互動式通訊的主要功能：
 
-- 與表單資料模型開箱即用的整合，可輕鬆且簡化後端資料庫和其他CRM系統(例如MS® Dynamics)的存取
+- 與表單資料模型開箱即用的整合，可輕鬆且簡化後端資料庫和其他CRM系統（例如MS® Dynamics）的存取
 - 適用於列印與網路頻道的整合式撰寫介面，可自動從列印頻道產生網路頻道
 - 以易於理解的視覺格式在列印和網頁中顯示資訊的圖表
 - 檔案片段支援規則編輯器和表單資料模型
@@ -58,7 +63,7 @@ ht-degree: 7%
 1. 預覽列印和Web管道，並在必要時編輯互動式通訊。
 1. 代理程式使用代理程式UI來[準備互動式通訊](/help/forms/using/prepare-send-interactive-communication.md)，以便傳送給收件者/張貼程式。
 
-### 建置區塊 {#buildingblocks}
+### 建構區塊 {#buildingblocks}
 
 以下是建立互動式通訊所需的建置區塊：
 
@@ -124,7 +129,7 @@ ht-degree: 7%
    <td>支援</td>
   </tr>
    <tr>
-   <td>提交內容</td>
+   <td>提交</td>
    <td>支援</td>
    <td>支援</td>
   </tr>
