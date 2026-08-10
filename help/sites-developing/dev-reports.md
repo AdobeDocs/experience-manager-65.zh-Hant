@@ -1,6 +1,6 @@
 ---
 title: 開發報表
-description: Adobe Experience Manager (AEM)根據報告架構提供多種標準報告
+description: Adobe Experience Manager (AEM)根據報表架構提供多種標準報表
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
@@ -11,8 +11,8 @@ feature: Developing
 role: Developer
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
-source-wordcount: '5177'
-ht-degree: 0%
+source-wordcount: '5297'
+ht-degree: 1%
 
 ---
 
@@ -27,16 +27,16 @@ Adobe Experience Manager (AEM)提供了一系列[標準報告](/help/sites-admin
 
 * 這些報表是以報告架構為基礎：
 
-   * [元件報表](/help/sites-administering/reporting.md#component-report)
-   * [頁面活動報表](/help/sites-administering/reporting.md#page-activity-report)
-   * [使用者報表](/help/sites-administering/reporting.md#user-report)
-   * [工作流程例項報表](/help/sites-administering/reporting.md#workflow-instance-report)
+  * [元件報表](/help/sites-administering/reporting.md#component-report)
+  * [頁面活動報表](/help/sites-administering/reporting.md#page-activity-report)
+  * [使用者報表](/help/sites-administering/reporting.md#user-report)
+  * [工作流程例項報表](/help/sites-administering/reporting.md#workflow-instance-report)
 
 * 下列報表是根據個別原則，因此無法擴充：
 
-   * [磁碟使用情況](/help/sites-administering/reporting.md#disk-usage)
-   * [健康情況檢查](/help/sites-administering/reporting.md#health-check)
-   * [工作流程報告](/help/sites-administering/reporting.md#workflow-report)
+  * [磁碟使用情況](/help/sites-administering/reporting.md#disk-usage)
+  * [健康情況檢查](/help/sites-administering/reporting.md#health-check)
+  * [工作流程報告](/help/sites-administering/reporting.md#workflow-report)
 
 >[!NOTE]
 >
@@ -49,12 +49,12 @@ Adobe Experience Manager (AEM)提供了一系列[標準報告](/help/sites-admin
 >在下列範例和定義中，使用下列標籤法：
 >
 >* 每一行會定義一個節點或屬性，其中：
->  `N:<name> [<nodeType>]` ：說明名稱為`<*name*>`且節點型別為&#x200B;`<*nodeType*>`*.*的節點
+>  `N:<name> [<nodeType>]` ：說明名稱為`<*name*>`且節點型別為&#x200B;`<*nodeType*>`*的節點。*
 >  `P:<name> [<propertyType]` ：描述名稱為`<*name*>`且屬性型別為`<*propertyType*>`的屬性。
 >  `P:<name> = <value>` ：說明必須設定為`<value>`值的屬性`<name>`。
 >
 >* 縮排顯示節點之間的階層式相依性。
->* 專案分隔方式 | 代表可能專案的清單；例如，型別或名稱；例如，`String|String[]`表示屬性可以是String或String[]。
+>* 專案分隔方式 |代表可能專案的清單；例如，型別或名稱；例如，`String|String[]`表示屬性可以是String或String[]。
 >
 >* `[]`描繪陣列；例如String[]或節點陣列，如[查詢定義](#query-definition)中。
 >
@@ -113,15 +113,15 @@ Adobe Experience Manager (AEM)提供了一系列[標準報告](/help/sites-admin
 
 * 通常包含：
 
-   * 根路徑。
+  * 根路徑。
 
-     這會指定要搜尋之存放庫的子樹狀結構。
+    這會指定要搜尋之存放庫的子樹狀結構。
 
-     為了協助將效能影響降至最低，建議（嘗試）將查詢限制在存放庫的特定子樹狀結構。 根路徑可在[報告範本](#report-template)中預先定義，或由使用者在[組態（編輯）對話方塊](#configuration-dialog)中設定。
+    為了協助將效能影響降至最低，建議（嘗試）將查詢限制在存放庫的特定子樹狀結構。 根路徑可在[報告範本](#report-template)中預先定義，或由使用者在[組態（編輯）對話方塊](#configuration-dialog)中設定。
 
-   * [一或多個條件](#query-definition)。
+  * [一或多個條件](#query-definition)。
 
-     這些條件會強制執行，以產生（初始）結果集；例如，它們包括對節點型別的限制或屬性限制。
+    這些條件會強制執行，以產生（初始）結果集；例如，它們包括對節點型別的限制或屬性限制。
 
 **此處的要點是，查詢結果集中傳回的每個單一節點都會用來在報告上產生單一列（所以是1:1關係）。**
 
@@ -139,7 +139,7 @@ Adobe Experience Manager (AEM)提供了一系列[標準報告](/help/sites-admin
 
 * 解析擷取的值；這可以用多種方式完成。
 
-  例如，路徑可以對應到標題（如同個別&#x200B;*jcr：title*&#x200B;屬性中更易於人類閱讀的內容）。
+  例如，路徑可以對應到標題（如個別&#x200B;*jcr:title*&#x200B;屬性中更易於人類閱讀的內容）。
 
 * 在不同點套用篩選器。
 * 建立複合值（如有必要）。
@@ -315,68 +315,68 @@ N:charting
 
   保留使用中圖表的定義。
 
-   * `active`
+  * `active`
 
-     由於可以定義多個設定，因此您可以使用此項來定義哪些設定目前為使用中。 這些是由節點陣列所定義(這些節點沒有強制性的命名慣例，但標準報表通常使用`0`、`1`。 `x`)，每個都具有下列屬性：
+    由於可以定義多個設定，因此您可以使用此項來定義哪些設定目前為使用中。 這些是由節點陣列所定義（這些節點沒有強制性的命名慣例，但標準報表通常使用`0`、`1`... `x`），每個節點都有以下屬性：
 
-      * `id`
+    * `id`
 
-        使用中圖表的識別。 這必須符合其中一個圖表`definitions`的識別碼。
+      使用中圖表的識別。 這必須符合其中一個圖表`definitions`的識別碼。
 
 * `definitions`
 
   定義報表可能可用的圖表型別。 要使用的`definitions`由`active`設定指定。
 
-  使用節點陣列（通常也稱為`0`、`1`）指定定義。 `x`)，每個都具有下列屬性：
+  定義是使用節點陣列來指定（通常也稱為`0`， `1`.. `x`），每個節點都具有下列屬性：
 
-   * `id`
+  * `id`
 
-     圖表的識別。
+    圖表的識別。
 
-   * `type`
+  * `type`
 
-     可用的圖表型別。 選取自：
+    可用的圖表型別。 選取自：
 
-      * `pie`
-圓形圖。 僅從目前的資料產生。
+    * `pie`
+      圓形圖。 僅從目前的資料產生。
 
-      * `lineseries`
-一連串的直線（代表實際快照的連線點）。 僅從歷史資料產生。
+    * `lineseries`
+      一連串的直線（代表實際快照的連線點）。 僅從歷史資料產生。
 
-   * 根據圖表型別，可使用其他屬性：
+  * 根據圖表型別，可使用其他屬性：
 
-      * 對於圖表型別`pie`：
+    * 對於圖表型別`pie`：
 
-         * `maxRadius` ( `Double/Long`)
+      * `maxRadius` ( `Double/Long`)
 
-           圓餅圖允許的最大半徑；因此圖表允許的大小上限（沒有圖例）。 如果已定義`fixedRadius`，則忽略。
+        圓餅圖允許的最大半徑；因此圖表允許的大小上限（沒有圖例）。 如果已定義`fixedRadius`，則忽略。
 
-         * `minRadius` ( `Double/Long`)
+      * `minRadius` ( `Double/Long`)
 
-           圓餅圖允許的最小半徑。 如果已定義`fixedRadius`，則忽略。
+        圓餅圖允許的最小半徑。 如果已定義`fixedRadius`，則忽略。
 
-         * `fixedRadius` ( `Double/Long`)
-定義圓形圖的固定半徑。
+      * `fixedRadius` ( `Double/Long`)
+        定義圓形圖的固定半徑。
 
-      * 對於圖表型別[`lineseries`](/help/sites-administering/reporting.md#display-limits)：
+    * 對於圖表型別[`lineseries`](/help/sites-administering/reporting.md#display-limits)：
 
-         * `totals` ( `Boolean`)
+      * `totals` ( `Boolean`)
 
-           如果應該顯示其他顯示&#x200B;**總計**&#x200B;的行，則為True。
-預設： `false`
+        如果應該顯示其他顯示&#x200B;**總計**&#x200B;的行，則為True。
+        預設： `false`
 
-         * `series` ( `Long`)
+      * `series` ( `Long`)
 
-           要顯示的行/數列數目。
-預設值： `9` （這也是允許的最大值）
+        要顯示的行/數列數目。
+        預設值： `9` （這也是允許的最大值）
 
-         * `hoverLimit` ( `Long`)
+      * `hoverLimit` ( `Long`)
 
-           要顯示快顯視窗的彙總快照的最大數量（在每個水平線上顯示的點，代表不同的值）。 也就是說，當使用者確實將滑鼠移至圖表圖例中的不重複值或對應標籤上時。
+        要顯示快顯視窗的彙總快照的最大數量（在每個水平線上顯示的點，代表不同的值）。 也就是說，當使用者確實將滑鼠移至圖表圖例中的不重複值或對應標籤上時。
 
-           預設值： `35` （也就是說，如果超過35個不同的值適用於目前的圖表設定，則完全不會顯示快顯視窗）。
+        預設值： `35` （也就是說，如果超過35個不同的值適用於目前的圖表設定，則完全不會顯示快顯視窗）。
 
-           此外還有10個可平行顯示的快顯視窗限制（將滑鼠移到圖例文字上方時，會顯示多個快顯視窗）。
+        此外還有10個可平行顯示的快顯視窗限制（將滑鼠移到圖例文字上方時，會顯示多個快顯視窗）。
 
 ### 設定對話方塊 {#configuration-dialog}
 
@@ -463,8 +463,8 @@ N:charting
 
   可透過以下方式指定：
 
-   * [報告範本](#report-template) （以固定值或設定對話方塊的預設值）。
-   * 使用者（使用此引數）
+  * [報告範本](#report-template) （以固定值或設定對話方塊的預設值）。
+  * 使用者（使用此引數）
 
 ## 欄基本元件 {#column-base-component}
 
@@ -531,8 +531,8 @@ N:definitions
 
   對應的值擷取器（在這裡是控制對象）：
 
-   * 檢查是否有可用的jcr：lastModified屬性，如果有，請使用它。
-   * 如果沒有可用的jcr：lastModified屬性，則改用jcr：created的內容。
+  * 檢查是否有可用的jcr:lastModified屬性，如果有的話，請使用它。
+  * 如果沒有可用的jcr:lastModified屬性，則改用jcr:created的內容。
 
 * `subPath`
 
@@ -599,81 +599,81 @@ N:definitions
 
   定義要使用的解析器。 下列解析器可供使用：
 
-   * `const`
+  * `const`
 
-     將值對應到其他值；例如，這可用來將常數（例如`en`）解析為它的對等值`English`。
+    將值對應到其他值；例如，這可用來將常數（例如`en`）解析為它的對等值`English`。
 
-   * `default`
+  * `default`
 
-     預設解析程式。 這是虛擬解析程式，實際上不會解析任何內容。
+    預設解析程式。 這是虛擬解析程式，實際上不會解析任何內容。
 
-   * `page`
+  * `page`
 
-     將路徑值解析為適當頁面的路徑；更準確地解析為對應的`jcr:content`節點。 例如，`/content/.../page/jcr:content/par/xyz`已解析為`/content/.../page/jcr:content`。
+    將路徑值解析為適當頁面的路徑；更準確地解析為對應的`jcr:content`節點。 例如，`/content/.../page/jcr:content/par/xyz`已解析為`/content/.../page/jcr:content`。
 
-   * `path`
+  * `path`
 
-     解析路徑值，方法為選擇性附加子路徑，並在解析的路徑從節點的屬性（如`resolverConfig`所定義）中取得實際值。 例如，`/content/.../page/jcr:content`的`path`可以解析為`jcr:title`屬性的內容，這表示頁面路徑會解析為頁面標題。
+    解析路徑值，方法為選擇性附加子路徑，並在解析的路徑從節點的屬性（如`resolverConfig`所定義）中取得實際值。 例如，`/content/.../page/jcr:content`的`path`可以解析為`jcr:title`屬性的內容，這表示頁面路徑會解析為頁面標題。
 
-   * `pathextension`
+  * `pathextension`
 
-     藉由在路徑前面加上並從已解析路徑之節點的屬性中取得實際值來解析值。 例如，值`de`前面可能會加上一個路徑，例如`/libs/wcm/core/resources/languages`，從屬性`language`中取得值，以將國碼`de`解析為語言描述`German`。
+    藉由在路徑前面加上並從已解析路徑之節點的屬性中取得實際值來解析值。 例如，值`de`前面可能會加上一個路徑，例如`/libs/wcm/core/resources/languages`，從屬性`language`中取得值，以將國碼`de`解析為語言描述`German`。
 
 * `resolverConfig`
 
   提供解析程式的定義。 可用的選項視選取的`resolver`而定：
 
-   * `const`
+  * `const`
 
-     使用屬性來指定要解析的常數。 屬性的名稱會定義要解析的常數；屬性的值會定義解析的值。
+    使用屬性來指定要解析的常數。 屬性的名稱會定義要解析的常數；屬性的值會定義解析的值。
 
-     例如，具有&#x200B;**Name**= `1`和&#x200B;**Value** `=One`的屬性，會將1解析為1。
+    例如，具有&#x200B;**Name**= `1`和&#x200B;**Value** `=One`的屬性，會將1解析為1。
 
-   * `default`
+  * `default`
 
-     沒有可用的設定。
+    沒有可用的設定。
 
-   * `page`
+  * `page`
 
-      * `propertyName` (可選)
+    * `propertyName` (可選)
 
-        定義用於解析值的屬性名稱。 如果未指定，則使用預設值&#x200B;*jcr：title* （頁面標題）；對於`page`解析程式，這表示先將路徑解析為頁面路徑，然後進一步解析為頁面標題。
+      定義用於解析值的屬性名稱。 如果未指定，則使用預設值&#x200B;*jcr:title* （頁面標題）；對於`page`解析程式，這表示先將路徑解析為頁面路徑，然後進一步解析為頁面標題。
 
-   * `path`
+  * `path`
 
-      * `propertyName` (可選)
+    * `propertyName` (可選)
 
-        指定用於解析值的屬性名稱。 如果未指定，則使用預設值`jcr:title`。
+      指定用於解析值的屬性名稱。 如果未指定，則使用預設值`jcr:title`。
 
-      * `subPath` (可選)
+    * `subPath` (可選)
 
-        此屬性可用於指定在解析值之前附加至路徑的後置字元。
+      此屬性可用於指定在解析值之前附加至路徑的後置字元。
 
-   * `pathextension`
+  * `pathextension`
 
-      * `path` （必要）
+    * `path` （必要）
 
-        定義要在前面加上的路徑。
+      定義要在前面加上的路徑。
 
-      * `propertyName` （必要）
+    * `propertyName` （必要）
 
-        定義實際值所在解析路徑上的屬性。
+      定義實際值所在解析路徑上的屬性。
 
-      * `i18n` （選擇性；輸入布林值）
+    * `i18n` （選擇性；輸入布林值）
 
-        決定解析的值是否應為&#x200B;*國際化* （也就是使用[CQ5的國際化服務](/help/sites-administering/tc-manage.md)）。
+      決定解析的值是否應為&#x200B;*國際化* （也就是使用[CQ5的國際化服務](/help/sites-administering/tc-manage.md)）。
 
 * `preprocessing`
 
   前置處理是選擇性的，可以繫結（分別）到處理階段&#x200B;*apply*&#x200B;或&#x200B;*applyAfter*：
 
-   * `apply`
+  * `apply`
 
-     初始前置處理階段（[處理佇列](#processing-queue)的表示步驟3）。
+    初始前置處理階段（[處理佇列](#processing-queue)的表示步驟3）。
 
-   * `applyAfter`
+  * `applyAfter`
 
-     在預先處理之後套用([步驟9 （在處理佇列](#processing-queue)的表示中）。
+    在預先處理之後套用([步驟9 （在處理佇列](#processing-queue)的表示中）。
 
 #### 解析器 {#resolvers}
 
@@ -692,9 +692,9 @@ N:data
         P:VersionCreated="New version created"
 ```
 
-**Page**
+**頁面**
 
-解析對應頁面之jcr：content （子項）節點上jcr：description屬性的路徑值。
+解析對應頁面之jcr:content （子項）節點上jcr:description屬性的路徑值。
 
 請參閱`/libs/cq/reporting/components/compreport/pagecol/definitions/data`。
 
@@ -785,23 +785,23 @@ N:definitions
 
 * 針對具有下列兩個屬性的節點`definitions/data/preprocessing/apply`：
 
-   * `pattern`: `(.*)(/jcr:content)(/|$)(.*)`
-   * `replace`: `$1`
+  * `pattern`: `(.*)(/jcr:content)(/|$)(.*)`
+  * `replace`: `$1`
 
 * 字串的送達：
 
-   * `/content/geometrixx/en/services/jcr:content/par/text`
+  * `/content/geometrixx/en/services/jcr:content/par/text`
 
 * 分為四個區段：
 
-   * `$1` - `(.*)` - `/content/geometrixx/en/services`
-   * `$2` - `(/jcr:content)` - `/jcr:content`
-   * `$3` - `(/|$)` - `/`
-   * `$4` - `(.*)` - `par/text`
+  * `$1` - `(.*)` - `/content/geometrixx/en/services`
+  * `$2` - `(/jcr:content)` - `/jcr:content`
+  * `$3` - `(/|$)` - `/`
+  * `$4` - `(.*)` - `par/text`
 
 * 並取代為`$1`所代表的字串：
 
-   * `/content/geometrixx/en/services`
+  * `/content/geometrixx/en/services`
 
 #### 預先處理 — 資料型別格式化程式 {#preprocessing-data-type-formatters}
 
@@ -815,17 +815,17 @@ N:definitions
 
   資料型別格式化程式：
 
-   * `duration`
+  * `duration`
 
-     期間是兩個已定義日期之間的時間範圍。 例如，一小時工作流程動作的開始和結束，從2/13/11 11:23h開始，並在一小時後於2/13/11 12:23h結束。
+    期間是兩個已定義日期之間的時間範圍。 例如，一小時工作流程動作的開始和結束，從2/13/11 11:23h開始，並在一小時後於2/13/11 12:23h結束。
 
-     它將數值（解譯為毫秒）轉換為持續時間字串；例如，`30000`的格式為* `30s`。*
+    它將數值（解譯為毫秒）轉換為持續時間字串；例如，`30000`的格式為* `30s`。*
 
-   * `datedelta`
+  * `datedelta`
 
-     Datadelta是指過去某個日期到「現在」之間的時間範圍（因此，如果在之後的某個時間點檢視報表，會有不同的結果）。
+    Datadelta是指過去某個日期到「現在」之間的時間範圍（因此，如果在之後的某個時間點檢視報表，會有不同的結果）。
 
-     它會將此數值（解譯為以天為單位的時間差異）轉換為相對日期字串。 例如，1的格式為一天前。
+    它會將此數值（解譯為以天為單位的時間差異）轉換為相對日期字串。 例如，1的格式為一天前。
 
 下列範例定義`min`與`max`彙總的`datedelta`格式：
 
@@ -868,18 +868,18 @@ N:definitions
 
   下列專案可作為標準選項使用：
 
-   * `string`
-   * `number`
-   * `int`
-   * `date`
-   * `diff`
-   * `timeslot`
+  * `string`
+  * `number`
+  * `int`
+  * `date`
+  * `diff`
+  * `timeslot`
 
-     用於擷取彙總所需的日期部分（例如，依年分組，以取得每年彙總的資料）。
+    用於擷取彙總所需的日期部分（例如，依年分組，以取得每年彙總的資料）。
 
-   * `sortable`
+  * `sortable`
 
-     用於使用不同值（從不同屬性取得）進行排序和顯示的值。
+    用於使用不同值（從不同屬性取得）進行排序和顯示的值。
 
   此外，上述任何專案都可以定義為多個值；例如，`string[]`會定義字串陣列。
 
@@ -887,16 +887,16 @@ N:definitions
 
   型別可以（選擇性）接受引數。 例如，`timeslot:year`會從日期欄位中擷取年份。 型別及其引數：
 
-   * `timeslot` — 這些值可與`java.utils.Calendar`的對應常數比較。
+  * `timeslot` — 這些值可與`java.utils.Calendar`的對應常數比較。
 
-      * `timeslot:year` - `Calendar.YEAR`
-      * `timeslot:month-of-year` - `Calendar.MONTH`
-      * `timeslot:week-of-year` - `Calendar.WEEK_OF_YEAR`
-      * `timeslot:day-of-month` - `Calendar.DAY_OF_MONTH`
-      * `timeslot:day-of-week` - `Calendar.DAY_OF_WEEK`
-      * `timeslot:day-of-year` - `Calendar.DAY_OF_YEAR`
-      * `timeslot:hour-of-day` - `Calendar.HOUR_OF_DAY`
-      * `timeslot:minute-of-hour` - `Calendar.MINUTE`
+    * `timeslot:year` - `Calendar.YEAR`
+    * `timeslot:month-of-year` - `Calendar.MONTH`
+    * `timeslot:week-of-year` - `Calendar.WEEK_OF_YEAR`
+    * `timeslot:day-of-month` - `Calendar.DAY_OF_MONTH`
+    * `timeslot:day-of-week` - `Calendar.DAY_OF_WEEK`
+    * `timeslot:day-of-year` - `Calendar.DAY_OF_YEAR`
+    * `timeslot:hour-of-day` - `Calendar.HOUR_OF_DAY`
+    * `timeslot:minute-of-hour` - `Calendar.MINUTE`
 
 * `groupable`
 
@@ -906,77 +906,77 @@ N:definitions
 
   篩選器定義。
 
-   * `filterType`
+  * `filterType`
 
-     可用的篩選器包括：
+    可用的篩選器包括：
 
-      * `string`
+    * `string`
 
-        字串型篩選器。
+      字串型篩選器。
 
-   * `id`
+  * `id`
 
-     篩選器識別碼。
+    篩選器識別碼。
 
-   * `phase`
+  * `phase`
 
-     可用的階段：
+    可用的階段：
 
-      * `raw`
+    * `raw`
 
-        篩選器套用至原始資料。
+      篩選器套用至原始資料。
 
-      * `preprocessed`
+    * `preprocessed`
 
-        篩選條件會套用到已預先處理的資料。
+      篩選條件會套用到已預先處理的資料。
 
-      * `resolved`
+    * `resolved`
 
-        篩選器會套用至已解析的資料。
+      篩選器會套用至已解析的資料。
 
 * `aggregates`
 
   彙總定義。
 
-   * `text`
+  * `text`
 
-     彙總的文字名稱。 如果未指定`text`，則會採用彙總的預設描述。 例如，`minimum`用於`min`彙總。
+    彙總的文字名稱。 如果未指定`text`，則會採用彙總的預設描述。 例如，`minimum`用於`min`彙總。
 
-   * `type`
+  * `type`
 
-     彙總型別。 可用的彙總包括：
+    彙總型別。 可用的彙總包括：
 
-      * `count`
+    * `count`
 
-        計算列數。
+      計算列數。
 
-      * `count-nonempty`
+    * `count-nonempty`
 
-        計算非空白列的數量。
+      計算非空白列的數量。
 
-      * `min`
+    * `min`
 
-        它提供最小值。
+      它提供最小值。
 
-      * `max`
+    * `max`
 
-        它提供最大值。
+      它提供最大值。
 
-      * `average`
+    * `average`
 
-        它提供平均值。
+      它提供平均值。
 
-      * `sum`
+    * `sum`
 
-        它會提供所有值的總和。
+      它會提供所有值的總和。
 
-      * `median`
+    * `median`
 
-        它提供中間值。
+      它提供中間值。
 
-      * `percentile95`
+    * `percentile95`
 
-        使用所有值的第95個百分位數。
+      使用所有值的第95個百分位數。
 
 ### 欄預設值 {#column-default-values}
 
@@ -1029,11 +1029,11 @@ Generic欄是擴充功能，其中（大部分）欄定義儲存在欄節點的�
 
   檢視`/libs/cq/reporting/components/userreport/genericcol/definitions/dialog`
 
-   * 對話方塊的欄位必須參照與對應元件屬性相同的名稱，包括其路徑。
+  * 對話方塊的欄位必須參照與對應元件屬性相同的名稱，包括其路徑。
 
-     例如，如果要透過對話方塊設定泛型資料行的型別，請使用名稱為`./definitions/type`的欄位。
+    例如，如果要透過對話方塊設定泛型資料行的型別，請使用名稱為`./definitions/type`的欄位。
 
-   * 使用UI/對話方塊定義的屬性優先於`columnbase`元件上定義的屬性。
+  * 使用UI/對話方塊定義的屬性優先於`columnbase`元件上定義的屬性。
 
 * 定義編輯組態。
 
@@ -1045,13 +1045,13 @@ Generic欄是擴充功能，其中（大部分）欄定義儲存在欄節點的�
 
   一般資料行可用的屬性包括：
 
-   * `jcr:title` — 欄名稱
-   * `definitions/aggregates` — 彙總
-   * `definitions/filters` — 篩選器
-   * `definitions/type` — 欄的型別（這必須在對話方塊中使用選取器/下拉式方塊或隱藏欄位定義）
-   * `definitions/data/resolver`和`definitions/data/resolverConfig` （但不是`definitions/data/preprocessing`或`.../clientFilter`） — 解析程式和設定
-   * `definitions/queryBuilder` — 查詢產生器設定
-   * `defaults/aggregate` — 預設彙總
+  * `jcr:title` — 欄名稱
+  * `definitions/aggregates` — 彙總
+  * `definitions/filters` — 篩選器
+  * `definitions/type` — 欄的型別（這必須在對話方塊中使用選取器/下拉式方塊或隱藏欄位定義）
+  * `definitions/data/resolver`和`definitions/data/resolverConfig` （但不是`definitions/data/preprocessing`或`.../clientFilter`） — 解析程式和設定
+  * `definitions/queryBuilder` — 查詢產生器設定
+  * `defaults/aggregate` — 預設彙總
 
   如果&#x200B;**使用者報告**&#x200B;上有泛型資料行的新執行個體，則使用對話方塊定義的屬性會儲存在：
 
@@ -1061,7 +1061,7 @@ Generic欄是擴充功能，其中（大部分）欄定義儲存在欄節點的�
 
 設計會定義哪些欄型別可用於建立報告。 它也會定義要新增欄的段落系統。
 
-Adobe建議您為每個報告建立個別設計。 這麼做可確保完全的彈性。 請參閱[定義您的新報告](#defining-your-new-report)。
+Adobe建議您為每個報表建立個別設計。 這麼做可確保完全的彈性。 請參閱[定義您的新報告](#defining-your-new-report)。
 
 預設報告元件儲存在`/etc/designs/reports`下。
 

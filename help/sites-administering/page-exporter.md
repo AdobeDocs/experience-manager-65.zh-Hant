@@ -7,8 +7,8 @@ feature: Administering
 role: Admin
 source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
 workflow-type: tm+mt
-source-wordcount: '1060'
-ht-degree: 0%
+source-wordcount: '1068'
+ht-degree: 1%
 
 ---
 
@@ -45,10 +45,10 @@ Adobe Experience Manager (AEM)可讓您將頁面匯出為包含影像、`.js`和
 1. 要求匯出頁面，在URL中將尾碼`html`取代為`export.zip`。
 
    例如：
-   * localhost:4502/content/we-retail/language-masters/en.html
+   * localhost：4502/content/we-retail/language-masters/en.html
 
    存取方式：
-   * localhost:4502/content/we-retail/language-masters/en.export.zip
+   * localhost：4502/content/we-retail/language-masters/en.export.zip
 
 1. 將封存檔案下載至您的檔案系統。
 
@@ -56,7 +56,7 @@ Adobe Experience Manager (AEM)可讓您將頁面匯出為包含影像、`.js`和
 
    * 子資料夾`content`是反映存放庫中頁面路徑的一系列子資料夾的根目錄
 
-      * 在此結構中有所選頁面(`<page-name>.html`)的html檔案
+     * 在此結構中有所選頁面(`<page-name>.html`)的html檔案
 
    * 根據匯出範本中的設定，可找到其他資源（`.js`個檔案、`.css`個檔案、影像等）
 
@@ -119,16 +119,16 @@ For more details about the type property, see the Overview of configuration type
 * `page`
 頁面節點用於將頁面html複製到zip檔案。 它具有下列特性：
 
-   * 必要節點。
-   * 位於`/etc/contentsync/templates/<mysite>`下方。
-   * 已定義屬性`Name`設定為`page`。
-   * 節點型別為`nt:unstructured`
+  * 必要節點。
+  * 位於`/etc/contentsync/templates/<mysite>`下方。
+  * 已定義屬性`Name`設定為`page`。
+  * 節點型別為`nt:unstructured`
 
   `page`節點有下列屬性：
 
-   * 以值`pages`設定的`type`屬性。
+  * 以值`pages`設定的`type`屬性。
 
-   * 它沒有`path`屬性，因為目前的頁面路徑會動態複製到設定。
+  * 它沒有`path`屬性，因為目前的頁面路徑會動態複製到設定。
   <!--
   * The other properties are described in the Overview of configuration types section of the Content Sync framework.
   -->
@@ -140,25 +140,25 @@ For more details about the type property, see the Overview of configuration type
 * `design`
 設計節點用於複製用於匯出頁面的設計。 它具有下列特性：
 
-   * 選填。
-   * 位於`/etc/contentsync/templates/<mysite>`下方。
-   * 已定義屬性`Name`設定為`design`。
-   * 節點型別為`nt:unstructured`。
+  * 選填。
+  * 位於`/etc/contentsync/templates/<mysite>`下方。
+  * 已定義屬性`Name`設定為`design`。
+  * 節點型別為`nt:unstructured`。
 
   `design`節點有下列屬性：
 
-   * 設定為值`copy`的`type`屬性。
+  * 設定為值`copy`的`type`屬性。
 
-   * 它沒有`path`屬性，因為目前的頁面路徑會動態複製到設定。
+  * 它沒有`path`屬性，因為目前的頁面路徑會動態複製到設定。
 
 * `generic`
 泛型節點用於將資源（如clientlibs `.js`或`.css`檔案）複製到zip檔案。 它具有下列特性：
 
-   * 選填。
-   * 位於`/etc/contentsync/templates/<mysite>`下方。
-   * 沒有特定名稱。
-   * 節點型別為`nt:unstructured`。
-   * 具有`type`屬性和`type`相關屬性。<!--Has a `type` property and any `type` related properties as defined in the Overview of configuration types section of the Content Sync framework.-->
+  * 選填。
+  * 位於`/etc/contentsync/templates/<mysite>`下方。
+  * 沒有特定名稱。
+  * 節點型別為`nt:unstructured`。
+  * 具有`type`屬性和`type`相關屬性。<!--Has a `type` property and any `type` related properties as defined in the Overview of configuration types section of the Content Sync framework.-->
 
   例如，下列設定節點會將`mysite.clientlibs.js`檔案複製到zip檔：
 

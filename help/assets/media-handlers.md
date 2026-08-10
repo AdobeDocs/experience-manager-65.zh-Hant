@@ -112,9 +112,9 @@ package my.own.stuff; /** * @scr.component inherit="true" * @scr.service */ publ
 * `com.day.cq.dam.api.handler.AssetHandler`介面：此介面說明新增特定MIME型別支援的服務。 新增MIME型別需要實作此介面。 介麵包含匯入和匯出特定檔案的方法、建立縮圖和擷取中繼資料的方法。
 * `com.day.cq.dam.core.AbstractAssetHandler`類別：此類別可做為所有其他資產處理常式實作的基礎，並提供常用的功能。
 * `com.day.cq.dam.core.AbstractSubAssetHandler` 類別：
-   * 此類別可做為所有其他資產處理常式實作的基礎，並提供常用功能以及子資產擷取的常用功能。
-   * 開始實作的最佳方式是繼承自提供的抽象實作，該實作會處理大多數事情並提供合理的預設行為：com.day.cq.dam.core.AbstractAssetHandler類別。
-   * 此類別已經提供抽象服務描述元。 因此，如果您繼承自此類別並使用maven-sling-plugin，請務必將inherit標幟設為true。
+  * 此類別可做為所有其他資產處理常式實作的基礎，並提供常用功能以及子資產擷取的常用功能。
+  * 開始實作的最佳方式是繼承自提供的抽象實作，該實作會處理大多數事情並提供合理的預設行為：com.day.cq.dam.core.AbstractAssetHandler類別。
+  * 此類別已經提供抽象服務描述元。 因此，如果您繼承自此類別並使用maven-sling-plugin，請務必將inherit標幟設為true。
 
 必須實作下列方法：
 

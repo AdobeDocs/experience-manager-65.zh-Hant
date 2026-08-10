@@ -12,7 +12,7 @@ feature: Administering
 role: Admin
 source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
-source-wordcount: '6110'
+source-wordcount: '6118'
 ht-degree: 0%
 
 ---
@@ -171,7 +171,7 @@ Portlet可自行設定快取，以便顯示Portlet中的內容而不需要存取
 部署快取後，Portlet會快取來自發佈執行個體的內容。 來自AEM的Dispatcher Flush可讓Portlet快取失效。 若要設定Portlet使用自己的快取：
 
 1. 在作者中設定以入口網站伺服器為目標的復寫代理程式。
-1. 假設入口網站伺服器於主機&#x200B;**localhost**，**連線埠8080**&#x200B;上執行，且AEM portlet Web應用程式已掛接在內容&#x200B;**cqportlet**&#x200B;中，清除快取的URL為`https://localhost:8080/cqportlet/cqbridge/cqpcache?Path=$(path)`。使用GET作為方法。
+1. 假設入口網站伺服器執行於主機&#x200B;**localhost**，**連線埠8080**，且AEM Portlet Web應用程式已裝載於內容&#x200B;**cqportlet**&#x200B;中，則清除快取的URL為`https://localhost:8080/cqportlet/cqbridge/cqpcache?Path=$(path)`。 使用GET作為方法。
    **注意：**&#x200B;您可以傳送名稱為&#x200B;**Path**&#x200B;的http標頭，而不使用要求引數。
 
 #### 透過復寫代理程式排清快取 {#flushing-the-cache-via-replication-agent}
@@ -389,7 +389,7 @@ C-12-#002289 -> [ ]
    </LoginModule>
    ```
 
-1. 在OSGi設定主控台中，預設為位於https://localhost:4502/system/console/configMgr，請從下拉式功能表中選取&#x200B;**CQ PIN驗證處理常式**。
+1. 在OSGi設定主控台中，預設位於https://localhost:4502/system/console/configMgr，從下拉式功能表中選取&#x200B;**CQ PIN驗證處理常式**。
 1. 編輯&#x200B;**URL根路徑**&#x200B;引數，使其只包含單一值&#x200B;**/**。
 
 ### 權限 {#privileges}
@@ -730,7 +730,7 @@ AEM快速入門JAR檔案包含Portlet元件檔案。 若要取得檔案(cq-portl
 
 若要存取AEM WCM提供的內容，入口網站伺服器必須安裝AEM入口網站管理員Portlet。 若要這麼做，請使用本節提供的步驟，安裝、設定並新增Portlet至入口網站頁面。
 
-依預設，Portlet會連線至localhost:4503的發佈執行個體以及localhost:4502的作者執行個體。 這些值可在部署Portlet期間變更。 入口網站導向程式可在/libs/portal/directory下的存放庫中作為內容使用。 下載應用程式war檔案後再使用。
+依預設，Portlet會連線至localhost：4503的發佈執行個體以及localhost：4502的製作執行個體。 這些值可在部署Portlet期間變更。 入口網站導向程式可在/libs/portal/directory下的存放庫中作為內容使用。 下載應用程式war檔案後再使用。
 
 ### 正在下載war檔案 {#downloading-the-war-file}
 
@@ -776,7 +776,7 @@ AEM快速入門JAR檔案包含Portlet元件檔案。 若要取得檔案(cq-portl
    * **作者基底URL**： AEM作者執行個體的基底URL。
    * **發佈基底URL**： AEM發佈執行個體的基底URL。
    * **Author已用作Publish**：是Author執行個體已用作Publish
-例項（用於開發）？
+     例項（用於開發）？
 
    ![chlimage_1-137](assets/chlimage_1-137.png)
 
