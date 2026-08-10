@@ -171,7 +171,7 @@ Portlet可自行設定快取，以便顯示Portlet中的內容而不需要存取
 部署快取後，Portlet會快取來自發佈執行個體的內容。 來自AEM的Dispatcher Flush可讓Portlet快取失效。 若要設定Portlet使用自己的快取：
 
 1. 在作者中設定以入口網站伺服器為目標的復寫代理程式。
-1. 假設入口網站伺服器執行於主機&#x200B;**localhost**，**連線埠8080**，且AEM Portlet Web應用程式已裝載於內容**cqportlet**中，則清除快取的URL為`https://localhost:8080/cqportlet/cqbridge/cqpcache?Path=$(path)`。 使用GET作為方法。
+1. 假設入口網站伺服器執行於主機&#x200B;**localhost**，**連線埠8080**，且AEM Portlet Web應用程式已裝載於內容&#x200B;**cqportlet**&#x200B;中，則清除快取的URL為`https://localhost:8080/cqportlet/cqbridge/cqpcache?Path=$(path)`。 使用GET作為方法。
    **注意：**&#x200B;您可以傳送名稱為&#x200B;**Path**&#x200B;的http標頭，而不使用要求引數。
 
 #### 透過復寫代理程式排清快取 {#flushing-the-cache-via-replication-agent}
@@ -336,7 +336,7 @@ Portlet可以使用單一登入(SSO)配置來驗證AEM WCM的身份。 在此模
    |---|---|---|
    | Cookie名稱 | cqpsso | 由Portlet提供的Cookie名稱（在Portlet的OSGi主控台中設定）。 |
 
-1. 按一下[儲存]以啟用SSO。 **** SSO現在是主要驗證配置。
+1. 按一下[儲存]以啟用SSO。 **&#x200B;**&#x200B;SSO現在是主要驗證配置。
 
 對於AEM WCM收到的每個請求，都會先嘗試以SSO為基礎的驗證。 失敗時，會執行一般基本驗證方案的遞補。 因此，沒有SSO的情況下仍可正常連線至AEM WCM。
 
@@ -526,7 +526,7 @@ title="{text}"/>
 
 #### 安裝自訂配置 {#installing-a-custom-layout}
 
-若要安裝自訂配置，請存取Portlet的OSGI Web主控台**套件**區段，然後上傳套件。
+若要安裝自訂配置，請存取Portlet的OSGI Web主控台&#x200B;**套件**&#x200B;區段，然後上傳套件。
 
 #### 套件 {#packages}
 
@@ -610,7 +610,7 @@ Portal Director地區設定處理常式可設定檢查地區設定資訊的路�
 
 下列服務在內容Portlet中具有預設實作（具有對應的Java介面）。 若要自訂，必須將包含新服務實作的套件組合部署至Portlet應用程式中。
 
-實作此類服務時，請確定將服務的&#x200B;**service.ranking**&#x200B;屬性設定為正值。 預設實施使用排名** 0**，而Portlet使用排名最高的服務。
+實作此類服務時，請確定將服務的&#x200B;**service.ranking**&#x200B;屬性設定為正值。 預設實施使用排名 **&#x200B; 0**，而Portlet使用排名最高的服務。
 
 | **名稱** | **說明** | **預設行為** |
 |---|---|---|
@@ -643,7 +643,7 @@ Portlet API (JSR-286)會指定Portlet事件。 AEM內容Portlet有一個整合�
 
 >[!NOTE]
 >
->只有在將AEM部署為Web應用程式時，才能使用Portlet元件。 （[請參閱使用應用程式伺服器安裝AEM ](/help/sites-deploying/application-server-install.md)。）
+>只有在將AEM部署為Web應用程式時，才能使用Portlet元件。 （[請參閱使用應用程式伺服器安裝AEM &#x200B;](/help/sites-deploying/application-server-install.md)。）
 
 ### 安裝Portlet元件 {#installing-the-portlet-component}
 
@@ -715,7 +715,7 @@ AEM快速入門JAR檔案包含Portlet元件檔案。 若要取得檔案(cq-portl
 
 1. 連按兩下元件以開啟Portlet屬性。
 1. 在&#x200B;**Portlet實體**&#x200B;下拉式功能表中，從清單中選取Portlet。
-1. 選取或清除**隱藏標題列**核取方塊，視您是否要檢視Portlet的標題列而定。
+1. 選取或清除&#x200B;**隱藏標題列**&#x200B;核取方塊，視您是否要檢視Portlet的標題列而定。
 1. 如果需要，請在&#x200B;**Portlet視窗**&#x200B;欄位中輸入唯一的Portlet視窗ID。
 
    >[!NOTE]

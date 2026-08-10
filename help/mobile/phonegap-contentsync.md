@@ -157,7 +157,7 @@ Day CQ Content Sync Manager服務可控制Content Sync的存取權。 設定此�
 * **deep** — 決定是否也應該包含子頁面的選用布林屬性。 預設值為&#x200B;*true。*
 
 * **includeImages** — 決定是否應包含影像的選用布林屬性。 預設值為&#x200B;*true*。
-依預設，只有資源型別為foundation/components/image的影像元件才會被視為包含。 您可以在Web主控台中設定**Day CQ WCM Pages更新處理常式**，以新增更多資源型別。
+依預設，只有資源型別為foundation/components/image的影像元件才會被視為包含。 您可以在Web主控台中設定&#x200B;**Day CQ WCM Pages更新處理常式**，以新增更多資源型別。
 
 **rewrite** — 重寫節點會定義如何在匯出的頁面中重寫連結。 重寫的連結可以指向zip檔案中包含的檔案或伺服器上的資源。
 

@@ -83,7 +83,7 @@ Adobe Experience Manager (AEM)提供了一系列[標準報告](/help/sites-admin
 報告頁面為：
 
 * 標準CQ5頁面。
-* 根據為報告](#report-template)設定的[標準CQ5範本。
+* 根據為報告[&#128279;](#report-template)設定的標準CQ5範本。
 
 ### 報表基礎 {#report-base}
 
@@ -236,7 +236,7 @@ N:apps
 此元件可作為整個報表的容器，並提供下列專案的資訊：
 
 * [查詢定義](#query-definition)。
-* 用於設定報告的[ （選擇性）對話方塊](#configuration-dialog)。
+* 用於設定報告的[&#x200B; （選擇性）對話方塊](#configuration-dialog)。
 * 任何與報告整合的[圖表](#chart-definitions)。
 
 ```
@@ -362,7 +362,7 @@ N:charting
 
       * `totals` ( `Boolean`)
 
-        如果應該顯示其他顯示&#x200B;**總計**的行，則為True。
+        如果應該顯示其他顯示&#x200B;**總計**&#x200B;的行，則為True。
         預設： `false`
 
       * `series` ( `Long`)
