@@ -1,6 +1,6 @@
 ---
-title: Adobe PhoneGap Enterprise與Adobe Experience Manager的內容同步
-description: 瞭解使用Adobe Experience Manager進行Adobe PhoneGap Enterprise的Content Sync。
+title: 使用Adobe Experience Manager同步Adobe PhoneGap Enterprise的內容
+description: 瞭解Adobe PhoneGap Enterprise與Adobe Experience Manager的Content Sync。
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
@@ -12,7 +12,7 @@ feature: Mobile
 role: Admin
 source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '2924'
+source-wordcount: '2955'
 ht-degree: 0%
 
 ---
@@ -23,15 +23,15 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->此檔案是[Adobe Experience Manager (AEM) Mobile快速入門](/help/mobile/getting-started-aem-mobile.md)指南的一部分，此指南是AEM Mobile參考的建議起點。
+>本檔案是[Adobe Experience Manager (AEM) Mobile快速入門](/help/mobile/getting-started-aem-mobile.md)指南的一部分，此指南是AEM Mobile參考的建議起點。
 
-使用Content Sync來封裝內容，以便用於原生行動應用程式。 在AEM中編寫的頁面可作為應用程式內容，即使裝置離線亦然。 此外，由於AEM頁面是根據網頁標準，因此可跨平台運作，而讓您將其內嵌在任何原生包裝函式中。 此策略可減少開發工作量，並可讓您輕鬆更新應用程式內容。
+使用Content Sync來封裝內容，以便用於原生行動應用程式。 在AEM中編寫的頁面可作為應用程式內容，即使裝置離線亦然。 此外，由於AEM頁面是根據網頁標準，因此可跨平台運作，讓您將其內嵌在任何原生包裝函式中。 此策略可減少開發工作量，並可讓您輕鬆更新應用程式內容。
 
 >[!NOTE]
 >
 >您使用AEM Tools建立的PhoneGap應用程式已設定為透過Content Sync使用AEM頁面作為內容。
 
-Content Sync架構會建立包含網頁內容的封存檔案。 內容可以是簡單頁面、影像和PDF檔案或整個網頁應用程式的內容。 內容同步API提供從行動應用程式或建置程式存取封存檔案的許可權，以便內容可擷取並納入應用程式中。
+Content Sync架構會建立包含網頁內容的封存檔案。 內容可以是簡單頁面、影像和PDF檔案的任何內容，或整個網頁應用程式。 內容同步API提供從行動應用程式或建置程式存取封存檔案的許可權，以便內容可擷取並納入應用程式中。
 
 下列步驟順序說明了Content Sync的典型使用案例：
 
@@ -50,9 +50,9 @@ Content Sync架構會建立包含網頁內容的封存檔案。 內容可以是�
 
 建立Content Sync設定，以指定傳遞至使用者端的ZIP檔案內容。 您可以建立任意數量的Content Sync設定。 每個設定都有名稱用於識別。
 
-若要建立Content Sync設定，請將`cq:ContentSyncConfig`節點新增至存放庫，並將`sling:resourceType`屬性設定為`contentsync/config`。 `cq:ContentSyncConfig`節點可以位於存放庫中的任何位置，但AEM發佈執行個體上的使用者必須可以存取該節點。 因此，您應該在`/content`底下新增節點。
+若要建立Content Sync設定，請將`cq:ContentSyncConfig`節點新增至存放庫，並將`sling:resourceType`屬性設定為`contentsync/config`。 `cq:ContentSyncConfig`節點可以位於存放庫中的任意位置，但此節點必須可供AEM發佈執行個體上的使用者存取。 因此，您應該在`/content`底下新增節點。
 
-若要指定Content Sync ZIP檔案的內容，請將子節點新增至cq：ContentSyncConfig節點。 每個子節點的下列屬性會識別要包含的內容專案，以及新增內容專案時的處理方式：
+若要指定Content Sync ZIP檔案的內容，請將子節點新增至cq:ContentSyncConfig節點。 每個子節點的下列屬性會識別要包含的內容專案，以及新增內容專案時的處理方式：
 
 * `path`：內容的位置。
 * `type`：用於處理內容的設定型別名稱。 有數種型別可供使用，在組態型別中有所說明。
@@ -100,13 +100,13 @@ Day CQ Content Sync Manager服務可控制Content Sync的存取權。 設定此�
 
 您可以覆寫預設使用者，並指定使用者或群組來更新特定的Content Sync快取。
 
-若要覆寫預設使用者，請指定使用者或群組，透過將下列屬性新增到cq：ContentSyncConfig節點來執行特定Content Sync設定的更新：
+若要覆寫預設使用者，請指定使用者或群組，透過將下列屬性新增到cq:ContentSyncConfig節點來執行特定Content Sync設定的更新：
 
 * 名稱： updateuser
 * 型別：字串
 * 值：可執行更新的使用者或群組名稱。
 
-如果cq：ContentSyncConfig節點沒有`updateuser`屬性，則預設的匿名使用者會更新快取。
+如果cq:ContentSyncConfig節點沒有`updateuser`屬性，則預設的匿名使用者會更新快取。
 
 ### 設定型別 {#configuration-types}
 
@@ -135,11 +135,11 @@ Day CQ Content Sync Manager服務可控制Content Sync的存取權。 設定此�
 * **path** - /content/dam下的資產資料夾路徑。
 * **轉譯** — 型別是字串陣列，可讓使用者指定要使用哪些轉譯，而非預設影像。 下列清單總結列出一些現成的轉譯，但您也可以使用工作流程建立的任何轉譯：
 
-   * *原始*
-   * *cq5dam.thumbnail.48.48.png*
-   * *cq5dam.thumbnail.319.319.png*
-   * *cq5dam.thumbnail.140.100.png*
-   * *cq5dam.web.1280.1280.png*
+  * *原始*
+  * *cq5dam.thumbnail.48.48.png*
+  * *cq5dam.thumbnail.319.319.png*
+  * *cq5dam.thumbnail.140.100.png*
+  * *cq5dam.web.1280.1280.png*
 
 **映像** — 收集映像。
 
@@ -157,7 +157,7 @@ Day CQ Content Sync Manager服務可控制Content Sync的存取權。 設定此�
 * **deep** — 決定是否也應該包含子頁面的選用布林屬性。 預設值為&#x200B;*true。*
 
 * **includeImages** — 決定是否應包含影像的選用布林屬性。 預設值為&#x200B;*true*。
-依預設，只有資源型別為foundation/components/image的影像元件才會被視為包含。 您可以在Web主控台中設定&#x200B;**Day CQ WCM Pages更新處理常式**，以新增更多資源型別。
+依預設，只有資源型別為foundation/components/image的影像元件才會被視為包含。 您可以在Web主控台中設定**Day CQ WCM Pages更新處理常式**，以新增更多資源型別。
 
 **rewrite** — 重寫節點會定義如何在匯出的頁面中重寫連結。 重寫的連結可以指向zip檔案中包含的檔案或伺服器上的資源。
 
@@ -176,7 +176,7 @@ Day CQ Content Sync Manager服務可控制Content Sync的存取權。 設定此�
 
 * `REWRITE_EXTERNAL`：使用AEM [Externalizer服務](/help/sites-developing/externalizer.md)，指向伺服器上的資源來重寫路徑。
 
-名為&#x200B;**PathRewriterTransformerFactory**&#x200B;的AEM服務可讓您設定要重寫的特定html屬性。 服務可以在Web主控台中設定，而且具有`rewrite`節點的每個屬性的組態： `clientlibs`、`images`和`links`。
+名為&#x200B;**PathRewriterTransformerFactory**&#x200B;的AEM服務可讓您設定將重寫的特定html屬性。 服務可以在Web主控台中設定，而且具有`rewrite`節點的每個屬性的組態： `clientlibs`、`images`和`links`。
 
 AEM 5.5已新增此功能。
 

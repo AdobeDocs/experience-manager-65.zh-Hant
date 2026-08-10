@@ -1,6 +1,6 @@
 ---
 title: 具有內容同步功能的行動裝置
-description: 請依照本頁所述瞭解Content Sync。 在Adobe Experience Manager (AEM)中編寫的頁面可作為應用程式內容，即使裝置離線亦然。 此外，由於AEM頁面是根據網頁標準，因此可跨平台運作，而讓您將其內嵌在任何原生包裝函式中。 此策略可減少開發工作量，並可讓您輕鬆更新應用程式內容。
+description: 請依照本頁所述瞭解Content Sync。 在Adobe Experience Manager (AEM)中編寫的頁面可作為應用程式內容，即使裝置離線亦然。 此外，由於AEM頁面是根據網頁標準，因此可跨平台運作，讓您將其內嵌在任何原生包裝函式中。 此策略可減少開發工作量，並可讓您輕鬆更新應用程式內容。
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
@@ -11,7 +11,7 @@ feature: Mobile
 role: User
 source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '2950'
+source-wordcount: '2976'
 ht-degree: 0%
 
 ---
@@ -20,9 +20,9 @@ ht-degree: 0%
 
 {{ue-over-mobile}}
 
-使用Content Sync來封裝內容，以便用於原生行動應用程式。 在Adobe Experience Manager (AEM)中編寫的頁面可作為應用程式內容，即使裝置離線亦然。 此外，由於AEM頁面是根據網頁標準，因此可跨平台運作，而讓您將其內嵌在任何原生包裝函式中。 此策略可減少開發工作量，並可讓您輕鬆更新應用程式內容。
+使用Content Sync來封裝內容，以便用於原生行動應用程式。 在Adobe Experience Manager (AEM)中編寫的頁面可作為應用程式內容，即使裝置離線亦然。 此外，由於AEM頁面是根據網頁標準，因此可跨平台運作，讓您將其內嵌在任何原生包裝函式中。 此策略可減少開發工作量，並可讓您輕鬆更新應用程式內容。
 
-Content Sync架構會建立包含網頁內容的封存檔案。 內容可以是簡單頁面、影像和PDF檔案或整個網頁應用程式的內容。 內容同步API提供從行動應用程式或建置程式存取封存檔案的許可權，以便內容可擷取並納入應用程式中。
+Content Sync架構會建立包含網頁內容的封存檔案。 內容可以是簡單頁面、影像和PDF檔案的任何內容，或整個網頁應用程式。 內容同步API提供從行動應用程式或建置程式存取封存檔案的許可權，以便內容可擷取並納入應用程式中。
 
 下列步驟順序說明了Content Sync的典型使用案例：
 
@@ -39,7 +39,7 @@ Content Sync架構會建立包含網頁內容的封存檔案。 內容可以是�
 
 * 處理常式必須實作&#x200B;*com.day.cq.contentsync.handler.ContentUpdateHandler* （直接或擴充有此功能的類別）
 * 處理常式可擴充&#x200B;*com.adobe.cq.mobile.platform.impl.contentsync.handler.AbstractSlingResourceUpdateHandler*
-* 如果處理常式更新ContentSync快取，則只能報告true。 錯誤報告true會讓AEM在實際上並未發生更新時建立更新。
+* 如果處理常式更新ContentSync快取，則只能報告true。 謊報true會讓AEM在實際上並未發生更新時建立更新。
 * 處理常式只應在內容變更時更新快取。 如果不需要白色，請勿寫入快取。 這會導致建立不必要的更新。
 
 >[!NOTE]
@@ -50,9 +50,9 @@ Content Sync架構會建立包含網頁內容的封存檔案。 內容可以是�
 
 建立Content Sync設定，以指定傳遞至使用者端的ZIP檔案內容。 您可以建立任意數量的Content Sync設定。 每個設定都有名稱用於識別。
 
-若要建立Content Sync設定，請將`cq:ContentSyncConfig`節點新增至存放庫，並將`sling:resourceType`屬性設定為`contentsync/config`。 `cq:ContentSyncConfig`節點可以位於存放庫中的任何位置，但AEM發佈執行個體上的使用者必須可以存取該節點。 因此，您應該在`/content`底下新增節點。
+若要建立Content Sync設定，請將`cq:ContentSyncConfig`節點新增至存放庫，並將`sling:resourceType`屬性設定為`contentsync/config`。 `cq:ContentSyncConfig`節點可以位於存放庫中的任意位置，但此節點必須可供AEM發佈執行個體上的使用者存取。 因此，您應該在`/content`底下新增節點。
 
-若要指定Content Sync ZIP檔案的內容，請將子節點新增至cq：ContentSyncConfig節點。 每個子節點的下列屬性會識別要包含的內容專案，以及新增內容專案時的處理方式：
+若要指定Content Sync ZIP檔案的內容，請將子節點新增至cq:ContentSyncConfig節點。 每個子節點的下列屬性會識別要包含的內容專案，以及新增內容專案時的處理方式：
 
 * `path`：內容的位置。
 * `type`：用於處理內容的設定型別名稱。 有幾種型別可供使用，在&#x200B;*組態型別*&#x200B;一節中有所說明。
@@ -100,7 +100,7 @@ Day CQ Content Sync Manager服務可控制Content Sync的存取權。 設定此�
 
 您可以覆寫預設使用者，並指定使用者或群組來更新特定的Content Sync快取。
 
-若要覆寫預設使用者，請指定使用者或群組，透過將下列屬性新增到cq：ContentSyncConfig節點來執行特定Content Sync設定的更新：
+若要覆寫預設使用者，請指定使用者或群組，透過將下列屬性新增到cq:ContentSyncConfig節點來執行特定Content Sync設定的更新：
 
 * 名稱：`updateuser`
 * 類型：`String`
@@ -170,7 +170,7 @@ Day CQ Content Sync Manager服務可控制Content Sync的存取權。 設定此�
 
 * `REWRITE_EXTERNAL`：使用AEM [Externalizer服務](/help/sites-developing/externalizer.md)，指向伺服器上的資源來重寫路徑。
 
-名為&#x200B;**PathRewriterTransformerFactory**&#x200B;的AEM服務可讓您設定要重寫的特定html屬性。 服務可以在Web主控台中設定，而且具有`rewrite`節點的每個屬性的組態： `clientlibs`、`images`和`links`。
+名為&#x200B;**PathRewriterTransformerFactory**&#x200B;的AEM服務可讓您設定將重寫的特定html屬性。 服務可以在Web主控台中設定，而且具有`rewrite`節點的每個屬性的組態： `clientlibs`、`images`和`links`。
 
 AEM 5.5已新增此功能。
 
@@ -282,7 +282,7 @@ public class OtherTypeUpdateHandler extends AbstractSlingResourceUpdateHandler {
 
 ### 實作自訂更新處理常式 {#implementing-a-custom-update-handler}
 
-每個We.Retail Mobile頁面的左上角都有一個標誌，應包含在zip檔案中。 但是，針對快取最佳化，AEM不會參考影像檔案在存放庫中的實際位置，這會防止我們單純使用&#x200B;**副本**&#x200B;設定型別。 您必須改為提供我們自己的&#x200B;**標誌**&#x200B;設定型別，以便在AEM要求的位置提供影像。 下列程式碼清單顯示完整實施的標誌更新處理常式：
+每個We.Retail Mobile頁面的左上角都有一個標誌，應包含在zip檔案中。 但是，針對快取最佳化，AEM不會參考影像檔案在存放庫中的實際位置，這會防止我們單純使用&#x200B;**副本**&#x200B;設定型別。 您必須改為提供我們自己的&#x200B;**標誌**&#x200B;設定型別，讓影像可在AEM要求的位置使用。 下列程式碼清單顯示完整實施的標誌更新處理常式：
 
 #### LogoUpdateHandler.java {#logoupdatehandler-java}
 
@@ -382,5 +382,5 @@ iOS型AEM Mobile應用程式的典型執行路徑：
 
 若要瞭解管理員與作者的角色與責任，請參閱下列資源：
 
-* [為AEM Mobile On-demand Services編寫AEM內容](/help/mobile/mobile-apps-ondemand.md)
+* [編寫適用於AEM Mobile On-demand Services的AEM內容](/help/mobile/mobile-apps-ondemand.md)
 * [管理內容以使用AEM Mobile On-demand Services](/help/mobile/aem-mobile.md)

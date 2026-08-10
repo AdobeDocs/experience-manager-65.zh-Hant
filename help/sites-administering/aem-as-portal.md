@@ -12,7 +12,7 @@ feature: Administering
 role: Admin
 source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
-source-wordcount: '6110'
+source-wordcount: '6118'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,7 @@ Portlet是部署在產生動態內容的容器內的Web元件。 Portlet介面�
 
 >[!CAUTION]
 >
->AEM Portal Director自AEM 6.4起已淘汰。 請參閱[已過時和已移除的功能](https://helpx.adobe.com/tw/experience-manager/6-4/release-notes/deprecated-removed-features.html)。
+>AEM Portal Director自AEM 6.4起已淘汰。 請參閱[已過時和已移除的功能](https://helpx.adobe.com/experience-manager/6-4/release-notes/deprecated-removed-features.html)。
 
 ## 管理AEM內容Portlet {#administering-the-aem-content-portlet}
 
@@ -171,7 +171,7 @@ Portlet可自行設定快取，以便顯示Portlet中的內容而不需要存取
 部署快取後，Portlet會快取來自發佈執行個體的內容。 來自AEM的Dispatcher Flush可讓Portlet快取失效。 若要設定Portlet使用自己的快取：
 
 1. 在作者中設定以入口網站伺服器為目標的復寫代理程式。
-1. 假設入口網站伺服器於主機&#x200B;**localhost**，**連線埠8080**&#x200B;上執行，且AEM portlet Web應用程式已掛接在內容&#x200B;**cqportlet**&#x200B;中，清除快取的URL為`https://localhost:8080/cqportlet/cqbridge/cqpcache?Path=$(path)`。使用GET作為方法。
+1. 假設入口網站伺服器執行於主機&#x200B;**localhost**，**連線埠8080**，且AEM Portlet Web應用程式已裝載於內容**cqportlet**中，則清除快取的URL為`https://localhost:8080/cqportlet/cqbridge/cqpcache?Path=$(path)`。 使用GET作為方法。
    **注意：**&#x200B;您可以傳送名稱為&#x200B;**Path**&#x200B;的http標頭，而不使用要求引數。
 
 #### 透過復寫代理程式排清快取 {#flushing-the-cache-via-replication-agent}
@@ -336,7 +336,7 @@ Portlet可以使用單一登入(SSO)配置來驗證AEM WCM的身份。 在此模
    |---|---|---|
    | Cookie名稱 | cqpsso | 由Portlet提供的Cookie名稱（在Portlet的OSGi主控台中設定）。 |
 
-1. 按一下[儲存]以啟用SSO。 **&#x200B;**&#x200B;SSO現在是主要驗證配置。
+1. 按一下[儲存]以啟用SSO。 **** SSO現在是主要驗證配置。
 
 對於AEM WCM收到的每個請求，都會先嘗試以SSO為基礎的驗證。 失敗時，會執行一般基本驗證方案的遞補。 因此，沒有SSO的情況下仍可正常連線至AEM WCM。
 
@@ -389,7 +389,7 @@ C-12-#002289 -> [ ]
    </LoginModule>
    ```
 
-1. 在OSGi設定主控台中，預設為位於https://localhost:4502/system/console/configMgr，請從下拉式功能表中選取&#x200B;**CQ PIN驗證處理常式**。
+1. 在OSGi設定主控台中，預設位於https://localhost:4502/system/console/configMgr，從下拉式功能表中選取&#x200B;**CQ PIN驗證處理常式**。
 1. 編輯&#x200B;**URL根路徑**&#x200B;引數，使其只包含單一值&#x200B;**/**。
 
 ### 權限 {#privileges}
@@ -526,7 +526,7 @@ title="{text}"/>
 
 #### 安裝自訂配置 {#installing-a-custom-layout}
 
-若要安裝自訂配置，請存取Portlet的OSGI Web主控台&#x200B;**套件**&#x200B;區段，然後上傳套件。
+若要安裝自訂配置，請存取Portlet的OSGI Web主控台**套件**區段，然後上傳套件。
 
 #### 套件 {#packages}
 
@@ -610,7 +610,7 @@ Portal Director地區設定處理常式可設定檢查地區設定資訊的路�
 
 下列服務在內容Portlet中具有預設實作（具有對應的Java介面）。 若要自訂，必須將包含新服務實作的套件組合部署至Portlet應用程式中。
 
-實作此類服務時，請確定將服務的&#x200B;**service.ranking**&#x200B;屬性設定為正值。 預設實施使用排名 **&#x200B; 0**，而Portlet使用排名最高的服務。
+實作此類服務時，請確定將服務的&#x200B;**service.ranking**&#x200B;屬性設定為正值。 預設實施使用排名** 0**，而Portlet使用排名最高的服務。
 
 | **名稱** | **說明** | **預設行為** |
 |---|---|---|
@@ -643,7 +643,7 @@ Portlet API (JSR-286)會指定Portlet事件。 AEM內容Portlet有一個整合�
 
 >[!NOTE]
 >
->只有在將AEM部署為Web應用程式時，才能使用Portlet元件。 （[請參閱使用應用程式伺服器安裝AEM &#x200B;](/help/sites-deploying/application-server-install.md)。）
+>只有在將AEM部署為Web應用程式時，才能使用Portlet元件。 （[請參閱使用應用程式伺服器安裝AEM ](/help/sites-deploying/application-server-install.md)。）
 
 ### 安裝Portlet元件 {#installing-the-portlet-component}
 
@@ -715,7 +715,7 @@ AEM快速入門JAR檔案包含Portlet元件檔案。 若要取得檔案(cq-portl
 
 1. 連按兩下元件以開啟Portlet屬性。
 1. 在&#x200B;**Portlet實體**&#x200B;下拉式功能表中，從清單中選取Portlet。
-1. 選取或清除&#x200B;**隱藏標題列**&#x200B;核取方塊，視您是否要檢視Portlet的標題列而定。
+1. 選取或清除**隱藏標題列**核取方塊，視您是否要檢視Portlet的標題列而定。
 1. 如果需要，請在&#x200B;**Portlet視窗**&#x200B;欄位中輸入唯一的Portlet視窗ID。
 
    >[!NOTE]
@@ -730,7 +730,7 @@ AEM快速入門JAR檔案包含Portlet元件檔案。 若要取得檔案(cq-portl
 
 若要存取AEM WCM提供的內容，入口網站伺服器必須安裝AEM入口網站管理員Portlet。 若要這麼做，請使用本節提供的步驟，安裝、設定並新增Portlet至入口網站頁面。
 
-依預設，Portlet會連線至localhost:4503的發佈執行個體以及localhost:4502的作者執行個體。 這些值可在部署Portlet期間變更。 入口網站導向程式可在/libs/portal/directory下的存放庫中作為內容使用。 下載應用程式war檔案後再使用。
+依預設，Portlet會連線至localhost：4503的發佈執行個體以及localhost：4502的製作執行個體。 這些值可在部署Portlet期間變更。 入口網站導向程式可在/libs/portal/directory下的存放庫中作為內容使用。 下載應用程式war檔案後再使用。
 
 ### 正在下載war檔案 {#downloading-the-war-file}
 
@@ -776,7 +776,7 @@ AEM快速入門JAR檔案包含Portlet元件檔案。 若要取得檔案(cq-portl
    * **作者基底URL**： AEM作者執行個體的基底URL。
    * **發佈基底URL**： AEM發佈執行個體的基底URL。
    * **Author已用作Publish**：是Author執行個體已用作Publish
-例項（用於開發）？
+     例項（用於開發）？
 
    ![chlimage_1-137](assets/chlimage_1-137.png)
 
