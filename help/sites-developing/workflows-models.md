@@ -21,7 +21,7 @@ ht-degree: 2%
 
 >[!CAUTION]
 >
->如需使用傳統UI，請參閱[AEM 6.3檔案](https://helpx.adobe.com/experience-manager/6-3/help/sites-developing/workflows-models.html)以取得參考。
+>如需使用傳統UI，請參閱[AEM 6.3檔案](https://helpx.adobe.com/tw/experience-manager/6-3/help/sites-developing/workflows-models.html)以取得參考。
 
 您可以建立[工作流程模型](/help/sites-developing/workflows.md#model)，以定義使用者啟動工作流程時所執行的一系列步驟。 您也可以定義模型屬性，例如工作流程是暫時的或使用多個資源。
 

@@ -66,7 +66,7 @@ ht-degree: 2%
 
 ### 使用HTL {#using-htl}
 
-在HTL中，使用者端程式庫是透過AEM提供的Helper範本載入，該範本可透過[`data-sly-use`](https://helpx.adobe.com/experience-manager/htl/using/block-statements.html#use)存取。 此檔案中有三個範本可用，這些範本可透過[`data-sly-call`](https://helpx.adobe.com/experience-manager/htl/using/block-statements.html#template-call)呼叫：
+在HTL中，使用者端程式庫是透過AEM提供的Helper範本載入，該範本可透過[`data-sly-use`](https://helpx.adobe.com/tw/experience-manager/htl/using/block-statements.html#use)存取。 此檔案中有三個範本可用，這些範本可透過[`data-sly-call`](https://helpx.adobe.com/tw/experience-manager/htl/using/block-statements.html#template-call)呼叫：
 
 * **css** — 僅載入參照的使用者端程式庫的CSS檔案。
 * **js** — 僅載入參照的使用者端程式庫的JavaScript檔案。
@@ -74,7 +74,7 @@ ht-degree: 2%
 
 每個 helper 範本都需要 `categories` 選項來參照所需的用戶端程式庫。 這個選項可以是字串值陣列，或是包含逗號分隔值清單的字串。
 
-如需詳細資訊和使用範例，請參閱檔案[開始使用HTML範本語言](https://helpx.adobe.com/experience-manager/htl/using/getting-started.html#loading-client-libraries)。
+如需詳細資訊和使用範例，請參閱檔案[開始使用HTML範本語言](https://helpx.adobe.com/tw/experience-manager/htl/using/getting-started.html#loading-client-libraries)。
 
 ### 使用JSP {#using-jsp}
 
