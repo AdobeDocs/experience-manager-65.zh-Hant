@@ -8,10 +8,10 @@ exl-id: 2e4f8f51-df02-4bbb-99bb-30181facd1e0
 solution: Experience Manager, Experience Manager Forms
 feature: Forms Portal
 role: Admin, User, Developer
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+source-git-commit: 'null'
 workflow-type: tm+mt
-source-wordcount: '1502'
-ht-degree: 1%
+source-wordcount: '1537'
+ht-degree: 2%
 
 ---
 
@@ -26,7 +26,7 @@ AEM Forms入口網站草稿和提交元件可讓使用者將其表單儲存為�
 >[!NOTE]
 >
 >* 本檔案中說明的範例和設定是根據MySQL 5.6.24，您必須適當地取代它們來取代資料庫系統。
->* 確保您已安裝最新版的AEM Forms附加元件套件。 如需可用封裝的清單，請參閱[AEM Forms發行版本](https://helpx.adobe.com/tw/aem-forms/kb/aem-forms-releases.html)文章。
+>* 確保您已安裝最新版的AEM Forms附加元件套件。 如需可用封裝的清單，請參閱[AEM Forms發行版本](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)文章。
 >* 範例套件僅適用於Adaptive Forms提交動作。
 
 ## 設定範例 {#set-up-and-configure-the-sample}
@@ -37,14 +37,14 @@ AEM Forms入口網站草稿和提交元件可讓使用者將其表單儲存為�
 
    資料庫整合的範例套件
 
-[取得檔案](assets/aem-fp-db-integration-sample-pkg-6.1.2.zip)
+   [取得檔案](assets/aem-fp-db-integration-sample-pkg-6.1.2.zip)
 
 1. 移至https://[*host*]：[*連線埠*]/crx/packmgr/的AEM封裝管理員。
 1. 按一下&#x200B;**[!UICONTROL 上傳封裝]**。
 
 1. 瀏覽以選取&#x200B;**aem-fp-db-integration-sample-pkg-6.1.2.zip**&#x200B;封裝，然後按一下&#x200B;**[!UICONTROL 確定]**。
 1. 按一下封裝旁的&#x200B;**[!UICONTROL 安裝]**&#x200B;以安裝封裝。
-1. 移至&#x200B;**[!UICONTROL AEM Web主控台組態]**
+1. 移至&#x200B;**[!UICONTROL AEM Web主控台設定]**
 頁面位於https://[*host*]：[*連線埠*]/system/console/configMgr。
 1. 按一下以在編輯模式中開啟&#x200B;**[!UICONTROL Forms入口網站草稿和提交設定]**。
 
@@ -84,7 +84,7 @@ AEM Forms入口網站草稿和提交元件可讓使用者將其表單儲存為�
    >
    >如果您變更表格名稱，請在Form Portal設定中提供它們。
 
-1. 將其他組態維持原狀，然後按一下[儲存]。**&#x200B;**
+1. 將其他組態維持原狀，然後按一下[儲存]。****
 
 1. 資料庫連線可透過Apache Sling Connection Pooled Data Source完成。
 1. 若為Apache Sling連線，請在Web主控台設定中尋找並按一下，以編輯模式開啟&#x200B;**[!UICONTROL Apache Sling Connection Pooled DataSource]**。 指定特性值，如下表所述：
@@ -149,7 +149,7 @@ AEM Forms入口網站草稿和提交元件可讓使用者將其表單儲存為�
   </tr>
   <tr>
    <td>驗證查詢</td>
-   <td>範例值為SELECT 1(mysql)、select 1 from dual(oracle)、SELECT 1(MS Sql Server) (validationQuery)</td>
+   <td>範例值為SELECT 1(mysql)，從dual(oracle)選取1，從SELECT 1(MS Sql Server) (validationQuery)選取</td>
   </tr>
   <tr>
    <td>驗證查詢逾時</td>
@@ -163,7 +163,7 @@ AEM Forms入口網站草稿和提交元件可讓使用者將其表單儲存為�
 >* 範例未提供適用於MySQL的JDBC驅動程式。 請確定您已布建此資料庫，並提供設定JDBC連線集區所需的資訊。
 >* 將您的作者和發佈執行個體指向使用相同的資料庫。 所有製作和發佈執行個體的JDBC連線URI欄位值必須相同。
 
-1. 將其他組態維持原狀，然後按一下[儲存]。**&#x200B;**
+1. 將其他組態維持原狀，然後按一下[儲存]。****
 
 1. 如果資料庫綱要中已經有表格，請跳至下一個步驟。
 
@@ -315,7 +315,7 @@ AEM Forms入口網站草稿和提交元件可讓使用者將其表單儲存為�
 
 >[!NOTE]
 >
-> 建議您使用&#39;Ctrl + C&#39;命令重新啟動SDK。 使用替代方法重新啟動AEM SDK （例如停止Java程式）可能會導致AEM開發環境不一致。
+> 建議您使用&#39;Ctrl + C&#39;命令重新啟動SDK。 使用替代方法重新啟動AEM SDK （例如停止Java程式），可能會導致AEM開發環境不一致。
 
 ## 表單入口網站資料和中繼資料服務的範常式式碼 {#sample-code-for-forms-portal-data-and-metadata-service}
 
@@ -330,7 +330,7 @@ Forms Portal的資料庫實作會使用其他中繼資料表格。 表格具有�
 執行以下步驟來建立[使用者端程式庫](/help/sites-developing/clientlibs.md)並使用指令碼：
 
 1. 登入CRXDE並導覽至/etc/clientlibs/
-1. 建立&#x200B;**cq：ClientLibraryFolder**&#x200B;型別的節點，並提供節點的名稱。 例如，`validation`。
+1. 建立&#x200B;**cq:ClientLibraryFolder**&#x200B;型別的節點，並提供節點的名稱。 例如，`validation`。
 
    按一下&#x200B;**[!UICONTROL 「儲存全部」]**。
 
@@ -343,9 +343,9 @@ Forms Portal的資料庫實作會使用其他中繼資料表格。 表格具有�
 
    在上述程式碼中，`util`是資料夾的名稱和`util`資料夾中檔案的`util.js`名稱。 `util`資料夾和`util.js`檔案是在後續步驟中建立的。
 
-1. 以滑鼠右鍵按一下在步驟2中建立的`cq:ClientLibraryFolder`節點，選取建立>建立資料夾。 建立名為`util`的資料夾。 按一下&#x200B;**[!UICONTROL 全部儲存]**。 在`util`資料夾上按一下滑鼠右鍵，選取「建立>建立檔案」。 建立名為`util.js`的檔案。 按一下&#x200B;**[!UICONTROL 「儲存全部」]**。
+1. 以滑鼠右鍵按一下在步驟2中建立的`cq:ClientLibraryFolder`節點，選取建立>建立資料夾。 建立一個名為 `util` 的檔案夾。 按一下&#x200B;**[!UICONTROL 「儲存全部」]**。 在`util`資料夾上按一下滑鼠右鍵，選取「建立>建立檔案」。 建立一個名為 `util.js` 的檔案。 按一下&#x200B;**[!UICONTROL 「儲存全部」]**。
 
-1. 將下列程式碼新增至util.js檔案，然後按一下[儲存全部]。**&#x200B;** 程式碼會驗證檔案名稱的長度。
+1. 將下列程式碼新增至util.js檔案，然後按一下[儲存全部]。**** 程式碼會驗證檔案名稱的長度。
 
    ```javascript
    /*
@@ -402,7 +402,7 @@ Forms Portal的資料庫實作會使用其他中繼資料表格。 表格具有�
    >
    >此指令碼適用於現成可用的附件Widget元件。 如果您已自訂立即可用的附件Widget，請變更上述指令碼以納入個別變更。
 
-1. 將下列屬性新增至步驟2中建立的資料夾，然後按一下[儲存全部]。**&#x200B;**
+1. 將下列屬性新增至步驟2中建立的資料夾，然後按一下[儲存全部]。****
 
    * **[!UICONTROL 名稱：]**&#x200B;類別
 
@@ -420,4 +420,4 @@ Forms Portal的資料庫實作會使用其他中繼資料表格。 表格具有�
    >
    >如果您使用自訂使用者端程式庫，而不是guideRuntime和guideRuntimeWithXfa使用者端程式庫，請使用類別名稱，將在此程式中建立的使用者端程式庫內嵌到在執行階段載入的自訂程式庫中。
 
-1. 按一下「**[!UICONTROL 儲存全部」。]**&#x200B;現在，當檔案名稱大於150 （包括副檔名）字元時，會顯示訊息。
+1. 按一下&#x200B;**[!UICONTROL 儲存全部。]** 現在，當檔案名稱大於150 （包括副檔名）字元時，會顯示訊息。

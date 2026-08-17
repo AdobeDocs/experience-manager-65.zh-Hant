@@ -9,10 +9,10 @@ feature: Context Hub,Developing,Personalization
 exl-id: b472d96f-b1a5-40b7-be2a-52f3396f6884
 solution: Experience Manager, Experience Manager Sites
 role: Developer
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+source-git-commit: 'null'
 workflow-type: tm+mt
-source-wordcount: '4913'
-ht-degree: 0%
+source-wordcount: '4976'
+ht-degree: 1%
 
 ---
 
@@ -36,7 +36,7 @@ ContextHub JavaScript API定義的常數值。
 | ContextHub.Constants.EVENT_STORE_REGISTERED | 註冊存放區時引發 | store-registered |
 | ContextHub.Constants.EVENT_STORE_READY | 表示存放區已準備就緒。 註冊後會立即觸發，但JSONP存放區除外（在擷取資料時會觸發）。 | 已備妥 |
 | ContextHub.Constants.EVENT_STORE_UPDATED | 在存放區更新其持續性時引發 | 存放區已更新 |
-| ContextHub.Constants.PERSISTENCE_CONTAINER_NAME | 持續性容器名稱 | ContextHubPersistence |
+| contexthub.Constants.PERSISTENCE_CONTAINER_NAME | 持續性容器名稱 | ContextHubPersistence |
 | ContextHub.Constants.SERVICE_RAW_RESPONSE_KEY | 儲存原始JSON結果的特定持續性索引鍵名稱 | /_/raw-response |
 | ContextHub.Constants.SERVICE_RESPONSE_TIME_KEY | 儲存特定時間戳記，指出擷取JSON資料的時間 | /_/response-time |
 | ContextHub.Constants.SERVICE_LAST_URL_KEY | 儲存上次呼叫期間所使用的特定JSON服務URL | /_/url |
@@ -65,7 +65,7 @@ ContextHub JavaScript API定義的常數值。
 | ContextHub.Constants.EVENT_UI_CONTAINER_OPENED | 在ContextHub UI開啟時引發 | ui-container-open |
 | ContextHub.Constants.EVENT_UI_CONTAINER_CLOSED | 在ContextHub UI摺疊時引發 | ui-container-closed |
 | ContextHub.Constants.EVENT_UI_PROPERTY_MODIFIED | 修改屬性時引發 | ui-property-modified |
-| ContextHub.Constants.EVENT_UI_RENDERED | 每次呈現ContextHub UI時引發（例如，在屬性變更後） | ui-rendered |
+| ContextHub.Constants.EVENT_UI_RENDED | 每次呈現ContextHub UI時引發（例如，在屬性變更後） | ui-rendered |
 | ContextHub.Constants.EVENT_UI_INITIALIZED | 當UI容器初始化時引發 | ui已初始化 |
 | ContextHub.Constants.ACTIVE_UI_MODE | 指示作用中UI模式 | /_/active-ui-mode |
 
@@ -271,9 +271,9 @@ contexthub.Utils.Persistence物件。 如需預設值和初始化的相關資訊
 * **名稱：**&#x200B;存放區的名稱。
 * **設定：**&#x200B;包含設定屬性的物件：
 
-   * eventDeferring：預設值為32。
-   * 事件：此存放區的[ContextHub.Utils.Eventing](/help/sites-developing/contexthub-api.md#contexthub-utils-eventing)物件。 預設值是ContextHub.eventing物件使用的值。
-   * 持續性：此存放區的ContextHub.Utils.Persistence物件。 預設值為ContextHub.persistence物件。
+  * eventDeferring：預設值為32。
+  * 事件：此存放區的[ContextHub.Utils.Eventing](/help/sites-developing/contexthub-api.md#contexthub-utils-eventing)物件。 預設值是ContextHub.eventing物件使用的值。
+  * 持續性：此存放區的ContextHub.Utils.Persistence物件。 預設值為ContextHub.persistence物件。
 
 #### isEventingPaused() {#iseventingpaused}
 
@@ -303,7 +303,7 @@ contexthub.Utils.Persistence物件。 如需預設值和初始化的相關資訊
 * **key：** （字串）要移除的金鑰名稱。
 * **選項：** （物件）選項的物件。 下列物件屬性有效：
 
-   * 無訊息： `true`的值可防止觸發`data`事件。 預設值為 `false`。
+  * 無訊息： `true`的值可防止觸發`data`事件。 預設值為 `false`。
 
 **傳回**
 
@@ -376,7 +376,7 @@ contexthub.Utils.Persistence物件。 如需預設值和初始化的相關資訊
 * **key：** （字串）金鑰的名稱。
 * **選項：** （物件）選項的物件。 下列物件屬性有效：
 
-   * 無訊息： `true`的值可防止觸發`data`事件。 預設值為 `false`。
+  * 無訊息： `true`的值可防止觸發`data`事件。 預設值為 `false`。
 
 * **值：** （物件）要與索引鍵關聯的值。
 
@@ -387,11 +387,11 @@ contexthub.Utils.Persistence物件。 如需預設值和初始化的相關資訊
 * 值`true`表示已儲存資料物件。
 * 值`false`表示資料存放區未變更。
 
-## ContextHub.Store.JSONPStore {#contexthub-store-jsonpstore}
+## contexthub.Store.JSONPStore {#contexthub-store-jsonpstore}
 
 包含JSON資料的存放區。 資料會從外部JSONP服務擷取，或選擇性地從傳回JSON資料的服務擷取。 當您建立此類別的執行個體時，請使用[`init`](/help/sites-developing/contexthub-api.md#init-name-config)函式指定服務詳細資料。
 
-存放區使用記憶體中持續性(JavaScript變數)。 存放區資料僅在頁面存留期內可用。
+存放區使用記憶體中持續性（JavaScript變數）。 存放區資料僅在頁面存留期內可用。
 
 ContextHub.Store.JSONPStore擴充[ContextHub.Store.Core](/help/sites-developing/contexthub-api.md#contexthub-store-core)並繼承該類別的函式。
 
@@ -405,16 +405,16 @@ ContextHub.Store.JSONPStore擴充[ContextHub.Store.Core](/help/sites-developing/
 
 * **serviceConfig：**&#x200B;包含下列屬性的物件：
 
-   * 主機： （字串）伺服器名稱或IP位址。
-   * jsonp： （布林值） true值表示服務是JSONP服務，否則為false。 若為True，則{callback： &quot;ContextHub.Callbacks.*Object.name*}物件已新增至service.params物件。
-   * params： （物件）以物件屬性表示的URL引數。 引數名稱為屬性名稱，引數值為屬性值。
-   * path： （字串）服務的路徑。
-   * port： (Number)服務的連線埠號碼。
-   * secure： （字串或布林值）決定用於服務URL的通訊協定：
+  * 主機： （字串）伺服器名稱或IP位址。
+  * jsonp： （布林值） true值表示服務是JSONP服務，否則為false。 為true時，會將{callback： &quot;ContextHub.Callbacks.*Object.name*}物件新增至service.params物件。
+  * params： （物件）以物件屬性表示的URL引數。 引數名稱為屬性名稱，引數值為屬性值。
+  * path： （字串）服務的路徑。
+  * port： (Number)服務的連線埠號碼。
+  * secure： （字串或布林值）決定用於服務URL的通訊協定：
 
-      * 自動： //
-      * true： https://
-      * false： https://
+    * 自動： //
+    * true： https://
+    * false： https://
 
 * **覆寫：** （布林值）。 值`true`會導致現有的服務組態被`serviceConfig`的屬性取代。 值為`false`會導致現有的服務組態屬性與`serviceConfig`的屬性合併。
 
@@ -435,16 +435,16 @@ ContextHub.Store.JSONPStore擴充[ContextHub.Store.Core](/help/sites-developing/
 具有下列屬性的物件：
 
 * **主機：** （字串）伺服器名稱或IP位址。
-* **jsonp：** （布林值） true值表示服務是JSONP服務，否則為false。 若為True，則{callback： &quot;ContextHub.Callbacks.*Object.name*}物件已新增至service.params物件。
+* **jsonp：** （布林值） true值表示服務是JSONP服務，否則為false。 為true時，會將{callback： &quot;ContextHub.Callbacks.*Object.name*}物件新增至service.params物件。
 
 * **引數：** （物件） URL參數列示為物件屬性。 引數名稱為屬性名稱，引數值為屬性值。
 * **路徑：** （字串）服務的路徑。
 * **連線埠：** （號碼）服務的連線埠號碼。
 * **安全：** （字串或布林值）決定用於服務URL的通訊協定：
 
-   * 自動： //
-   * true： https://
-   * false： https://
+  * 自動： //
+  * true： https://
+  * false： https://
 
 #### getServiceURL(resolve) {#getserviceurl-resolve}
 
@@ -467,24 +467,24 @@ ContextHub.Store.JSONPStore擴充[ContextHub.Store.Core](/help/sites-developing/
 * **名稱：** （字串）存放區的名稱。
 * **config：** （物件）包含服務屬性的物件。 JSONPStore物件使用`service`物件的屬性來建構JSONP服務的URL：
 
-   * eventDeferring： 32。
-   * 事件：此存放區的ContextHub.Utils.Eventing物件。 預設值為`ContextHub.eventing`物件。
-   * 持續性：此存放區的ContextHub.Utils.Persistence物件。 預設會使用記憶體持續性(JavaScript物件)。
-   * 服務： （物件）
+  * eventDeferring： 32。
+  * 事件：此存放區的ContextHub.Utils.Eventing物件。 預設值為`ContextHub.eventing`物件。
+  * 持續性：此存放區的ContextHub.Utils.Persistence物件。 預設會使用記憶體持續性（JavaScript物件）。
+  * 服務： （物件）
 
-      * 主機： （字串）伺服器名稱或IP位址。
-      * jsonp： （布林值） true值表示服務是JSONP服務，否則為false。 為True時，會將`{callback: "ContextHub.Callbacks.*Object.name*}`物件新增至`service.params`。
-      * params： （物件）以物件屬性表示的URL引數。 引數名稱和值分別是物件屬性名稱和值。
-      * path： （字串）服務的路徑。
-      * port： (Number)服務的連線埠號碼。
-      * secure： （字串或布林值）決定用於服務URL的通訊協定：
+    * 主機： （字串）伺服器名稱或IP位址。
+    * jsonp： （布林值） true值表示服務是JSONP服務，否則為false。 為True時，會將`{callback: "ContextHub.Callbacks.*Object.name*}`物件新增至`service.params`。
+    * params： （物件）以物件屬性表示的URL引數。 引數名稱和值分別是物件屬性名稱和值。
+    * path： （字串）服務的路徑。
+    * port： (Number)服務的連線埠號碼。
+    * secure： （字串或布林值）決定用於服務URL的通訊協定：
 
-         * 自動： //
-         * true： https://
-         * false： https://
+      * 自動： //
+      * true： https://
+      * false： https://
 
-      * 逾時： （數字）逾時前等待JSONP服務回應的時間（以毫秒為單位）。
-      * ttl：呼叫JSONP服務之間的最小時間量（以毫秒為單位）。 （請參閱[queryService](/help/sites-developing/contexthub-api.md#queryservice-reload)函式）。
+    * 逾時： （數字）逾時前等待JSONP服務回應的時間（以毫秒為單位）。
+    * ttl：呼叫JSONP服務之間的最小時間量（以毫秒為單位）。 （請參閱[queryService](/help/sites-developing/contexthub-api.md#queryservice-reload)函式）。
 
 #### queryService（重新載入） {#queryservice-reload}
 
@@ -518,9 +518,9 @@ ContextHub.Store.PersistedJSONPStore擴充[ContextHub.Store.JSONPStore](/help/si
 
 ContextHub.Store.PersistedStore擴充[ContextHub.Store.Core](/help/sites-developing/contexthub-api.md#contexthub-store-core)，因此會繼承該類別的所有函式。 此存放區中的資料會根據ContextHub持續性的設定持續儲存。
 
-## ContextHub.Store.SessionStore {#contexthub-store-sessionstore}
+## contexthub.Store.SessionStore {#contexthub-store-sessionstore}
 
-ContextHub.Store.SessionStore擴充[ContextHub.Store.Core](/help/sites-developing/contexthub-api.md#contexthub-store-core)，因此會繼承該類別的所有函式。 此存放區中的資料是使用記憶體內持續性(JavaScript物件)來持續儲存。
+ContextHub.Store.SessionStore擴充[ContextHub.Store.Core](/help/sites-developing/contexthub-api.md#contexthub-store-core)，因此會繼承該類別的所有函式。 此存放區中的資料是使用記憶體內持續性（JavaScript物件）來持續儲存。
 
 ## ContextHub.UI {#contexthub-ui}
 
@@ -580,10 +580,10 @@ if (ContextHub.Utils.Cookie.exists("name")) {
 
 * （選用） **篩選器：**&#x200B;符合Cookie金鑰的條件。 若要傳回所有Cookie，請勿指定任何值。 支援的型別如下：
 
-   * 字串：字串會與Cookie金鑰比較。
-   * 陣列：陣列中的每個專案都是一個篩選器。
-   * RegExp物件：物件的測試函式用於比對Cookie金鑰。
-   * 函式：測試Cookie金鑰以符合專案的函式。 函式必須以Cookie金鑰為引數，如果測試確認相符，則傳回true。
+  * 字串：字串會與Cookie金鑰比較。
+  * 陣列：陣列中的每個專案都是一個篩選器。
+  * RegExp物件：物件的測試函式用於比對Cookie金鑰。
+  * 函式：測試Cookie金鑰以符合專案的函式。 函式必須以Cookie金鑰為引數，如果測試確認相符，則傳回true。
 
 **傳回**
 
@@ -621,10 +621,10 @@ ContextHub.Utils.Cookie.getItem("name");
 
 * **篩選器：**&#x200B;相符Cookie金鑰的條件。 支援的型別如下：
 
-   * 字串：字串會與Cookie金鑰比較。
-   * 陣列：陣列中的每個專案都是一個篩選器。
-   * RegExp物件：物件的測試函式用於比對Cookie金鑰。
-   * 函式：測試Cookie金鑰以符合專案的函式。 函式必須將Cookie金鑰當作引數，如果測試確認相符，則傳回`true`。
+  * 字串：字串會與Cookie金鑰比較。
+  * 陣列：陣列中的每個專案都是一個篩選器。
+  * RegExp物件：物件的測試函式用於比對Cookie金鑰。
+  * 函式：測試Cookie金鑰以符合專案的函式。 函式必須將Cookie金鑰當作引數，如果測試確認相符，則傳回`true`。
 
 **傳回**
 
@@ -666,9 +666,9 @@ ContextHub.Utils.Cookie.vanish([/^cq-authoring/, 'cq-scrollpos']);
 * **值：**&#x200B;包含Cookie值的字串。
 * **選項：** （選用）包含下列任何設定Cookie屬性的屬性的物件：
 
-   * 過期：指定Cookie過期時間的`date`或`number`值。 日期值會指定絕對到期時間。 數字（以天為單位）會將到期時間設定為目前時間加上數字。 預設值為 `undefined`。
-   * secure：指定Cookie `Secure`屬性的`boolean`值。 預設值為 `false`。
-   * 路徑：用作Cookie之`Path`屬性的`String`值。 預設值為 `undefined`。
+  * 過期：指定Cookie過期時間的`date`或`number`值。 日期值會指定絕對到期時間。 數字（以天為單位）會將到期時間設定為目前時間加上數字。 預設值為 `undefined`。
+  * secure：指定Cookie `Secure`屬性的`boolean`值。 預設值為 `false`。
+  * 路徑：用作Cookie之`Path`屬性的`String`值。 預設值為 `undefined`。
 
 **傳回**
 
@@ -699,7 +699,7 @@ ContextHub.Utils.Cookie.setItem("name", "mycookie", {
 
 此函式未傳回值。
 
-## ContextHub.Utils.Eventing {#contexthub-utils-eventing}
+## contexthub.Utils.Eventing {#contexthub-utils-eventing}
 
 可讓您將函式繫結和解除繫結至ContextHub存放區事件。 使用存放區的[eventing](/help/sites-developing/contexthub-api.md#eventing)屬性，存取存放區的ContextHub.Utils.Eventing物件。
 
@@ -711,7 +711,7 @@ ContextHub.Utils.Cookie.setItem("name", "mycookie", {
 
 **引數**
 
-* **名稱：**&#x200B;您要解除繫結函式的事件[&#128279;](/help/sites-developing/contexthub-api.md#contexthub-utils-eventing)的名稱。
+* **名稱：**&#x200B;您要解除繫結函式的事件](/help/sites-developing/contexthub-api.md#contexthub-utils-eventing)的[名稱。
 
 * **選取器：**&#x200B;識別繫結的選取器。 （請參閱[on](/help/sites-developing/contexthub-api.md#on-name-handler-selector-triggerforpastevents)和[once](/help/sites-developing/contexthub-api.md#once-name-handler-selector-triggerforpastevents)函式的`selector`引數）。
 
@@ -725,7 +725,7 @@ ContextHub.Utils.Cookie.setItem("name", "mycookie", {
 
 **引數**
 
-* **name：** （字串）您要繫結函式的事件[&#128279;](/help/sites-developing/contexthub-api.md#contexthub-utils-eventing)的名稱。
+* **name：** （字串）您要繫結函式的事件](/help/sites-developing/contexthub-api.md#contexthub-utils-eventing)的[名稱。
 
 * **處理常式：** （函式）要繫結至事件的函式。
 * **選取器：** （字串）繫結的唯一識別碼。 如果要使用`off`函式移除繫結，則需要選取器識別繫結。
@@ -767,7 +767,7 @@ ContextHub.Utils.Cookie.setItem("name", "mycookie", {
 
 **引數**
 
-* **name：** （字串）您要繫結函式的事件[&#128279;](/help/sites-developing/contexthub-api.md#contexthub-utils-eventing)的名稱。
+* **name：** （字串）您要繫結函式的事件](/help/sites-developing/contexthub-api.md#contexthub-utils-eventing)的[名稱。
 
 * **處理常式：** （函式）要繫結至事件的函式。
 * **選取器：** （字串）繫結的唯一識別碼。 如果要使用`off`函式移除繫結，則需要選取器識別繫結。

@@ -9,9 +9,9 @@ exl-id: 362b7b91-c58b-4e47-a6ef-56a4b54a100c
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
+source-git-commit: 'null'
 workflow-type: tm+mt
-source-wordcount: '2643'
+source-wordcount: '2665'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 0%
 
 若要在AEM表單和使用者之間啟用電子郵件訊息的傳送，請在「電子郵件設定」頁面上設定寄出電子郵件設定。 寄出電子郵件必須使用SMTP伺服器。
 
-若要讓AEM表單接收並處理來自使用者的傳入電子郵件訊息，請為「完成任務」服務建立電子郵件端點。 （請參閱[為完成工作服務建立電子郵件端點](/help/forms/using/admin-help/configuring-email-endpoints.md#create-an-email-endpoint-for-the-complete-task-service)）。
+若要讓AEM表單接收並處理使用者傳入的電子郵件訊息，請為「完成任務」服務建立電子郵件端點。 （請參閱[為完成工作服務建立電子郵件端點](/help/forms/using/admin-help/configuring-email-endpoints.md#create-an-email-endpoint-for-the-complete-task-service)）。
 
 如果您的流程在設計及實作時不需要電子郵件，則您不需要在「電子郵件設定」頁面上設定任何選項。
 
@@ -62,7 +62,7 @@ ht-degree: 0%
 >
 >AEM Forms版本已棄用Flex Workspace。
 
-根據預設，AEM表單傳送的電子郵件會包含指向(JEE不建議使用AEM表單) Flex Workspace的連結。 您可以設定AEM表單，以傳送包含AEM Forms Workspace連結的電子郵件。 若要進一步瞭解AEM Forms Workspace優於(JEE上的AEM Forms已棄用) Flex Workspace，請參閱[此](/help/forms/using/features-html-workspace-available-flex.md)文章。
+依預設，AEM表單傳送的電子郵件會包含連結至（JEE不建議使用AEM表單） Flex Workspace。 您可以設定AEM表單以傳送包含AEM Forms Workspace連結的電子郵件。 若要進一步瞭解AEM Forms Workspace優於（JEE上的AEM Forms已棄用） Flex Workspace，請參閱[此](/help/forms/using/features-html-workspace-available-flex.md)文章。
 
 1. 在管理控制檯中，按一下首頁>服務>表單工作流程>伺服器設定>任務通知。
 1. 開啟任務指派範本。
@@ -86,7 +86,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->AEM Forms版本已棄用Flex工作區。
+>AEM Forms版本已棄用Flex Workspace。
 
 ### 設定使用者或群組的提醒 {#configure-reminders-for-users-or-groups}
 
@@ -98,7 +98,7 @@ ht-degree: 0%
 1. （僅限使用者通知）若要在提醒電子郵件訊息中包含表單及其資料的附件，請選取「包含表單資料」。
 1. 在「主旨」方塊中，輸入電子郵件主旨行的文字。 此欄位已預先填入預設文字。 如需有關自訂此欄位的詳細資訊，請參閱[自訂通知內容](configuring-server-settings.md#customizing-the-content-of-notifications)。
 1. 在「通知範本」方塊中，輸入電子郵件內文的文字。 此欄位已預先填入預設文字。 如需有關自訂此欄位的詳細資訊，請參閱[自訂通知內容](configuring-server-settings.md#customizing-the-content-of-notifications)。
-1. 在「郵件格式」清單中，選取傳送電子郵件訊息的格式，即HTML或文字。 預設格式為HTML。
+1. 在「郵件格式」清單中，選取傳送電子郵件訊息的格式，可以是HTML或文字。 預設格式為HTML。
 1. 在電子郵件編碼清單中，選取用於電子郵件訊息的編碼格式。 預設值為UTF-8，日本以外的大多數使用者都會使用它。 日本使用者可選擇ISO2022-JP。
 1. 按一下「儲存」。
 
@@ -112,7 +112,7 @@ ht-degree: 0%
 1. （僅限使用者通知）若要在任務指派電子郵件訊息中包含表單及其資料的附件，請選取「包含表單資料」。
 1. 在「主旨」方塊中，輸入電子郵件主旨行的文字。 此欄位已預先填入預設文字。 如需有關自訂此欄位的詳細資訊，請參閱[自訂通知內容](configuring-server-settings.md#customizing-the-content-of-notifications)。
 1. 在「通知範本」方塊中，輸入電子郵件內文的文字。 此欄位已預先填入預設文字。 如需有關自訂此欄位的詳細資訊，請參閱[自訂通知內容](configuring-server-settings.md#customizing-the-content-of-notifications)。
-1. 在「郵件格式」清單中，選取傳送電子郵件訊息的格式，即HTML或文字。 預設格式為HTML。
+1. 在「郵件格式」清單中，選取傳送電子郵件訊息的格式，可以是HTML或文字。 預設格式為HTML。
 1. 在電子郵件編碼清單中，選取用於電子郵件訊息的編碼格式。 預設值為UTF-8，日本以外的大多數使用者都會使用它。 日本使用者可選擇ISO2022-JP。
 1. 按一下「儲存」。
 
@@ -125,13 +125,13 @@ ht-degree: 0%
 1. 選取「啟用期限」或「啟用群組 — 期限」。
 1. 在「主旨」方塊中，輸入電子郵件主旨行的文字。 此欄位已預先填入預設文字。 如需有關自訂此欄位的詳細資訊，請參閱[自訂通知內容](configuring-server-settings.md#customizing-the-content-of-notifications)。
 1. 在「通知範本」方塊中，輸入電子郵件內文的文字。 此欄位已預先填入預設文字。 如需有關自訂此欄位的詳細資訊，請參閱[自訂通知內容](configuring-server-settings.md#customizing-the-content-of-notifications)。
-1. 在「郵件格式」清單中，選取傳送電子郵件訊息的格式，即HTML或文字。 預設格式為HTML。
+1. 在「郵件格式」清單中，選取傳送電子郵件訊息的格式，可以是HTML或文字。 預設格式為HTML。
 1. 在電子郵件編碼清單中，選取用於電子郵件訊息的編碼格式。 預設值為UTF-8，日本以外的大多數使用者都會使用它。 日本使用者可選擇ISO2022-JP。
 1. 按一下「儲存」。
 
 ### 隱藏所有電子郵件的「不DELETE」標籤 {#hide-the-do-not-delete-tag-for-all-emails}
 
-您可以設定電子郵件，以隱藏在以人為中心的流程傳送的所有電子郵件中，不要DELETE追蹤標籤。
+您可以設定電子郵件，以隱藏在透過以人為中心的流程傳送的所有電子郵件中「勿DELETE」追蹤標籤。
 
 <!-- 
 For details, see [How to hide the 'DO-NOT-DELETE' tag with CSS](https://blogs.adobe.com/LiveCycleHelp/2013/09/how-to-hide-the-do-not-delete-tag-with-css.html) 
@@ -156,7 +156,7 @@ For details, see [How to hide the 'DO-NOT-DELETE' tag with CSS](https://blogs.ad
 1. 在「電子郵件地址」方塊中，輸入分支停止時要通知的使用者地址。 使用格式user@domain.com ，並以逗號分隔每個地址。 通常此電子郵件地址是管理員的。
 1. 在「主旨」方塊中，輸入電子郵件主旨行的文字。 此欄位已預先填入預設文字。 如需有關自訂此欄位的詳細資訊，請參閱[自訂通知內容](configuring-server-settings.md#customizing-the-content-of-notifications)。
 1. 在「通知範本」方塊中，輸入電子郵件內文的文字。 此欄位已預先填入預設文字。 如需有關自訂此欄位的詳細資訊，請參閱[自訂通知內容](configuring-server-settings.md#customizing-the-content-of-notifications)。
-1. 在「郵件格式」清單中，選取傳送電子郵件訊息的格式，即HTML或文字。 預設格式為HTML。
+1. 在「郵件格式」清單中，選取傳送電子郵件訊息的格式，可以是HTML或文字。 預設格式為HTML。
 1. 在電子郵件編碼清單中，選取用於電子郵件訊息的編碼格式。 預設值為UTF-8，日本以外的大多數使用者都使用它。 日本使用者可選擇ISO2022-JP。
 1. 按一下「儲存」。
 
@@ -182,7 +182,7 @@ For details, see [How to hide the 'DO-NOT-DELETE' tag with CSS](https://blogs.ad
 
 ### RTF編輯器 {#rich-text-editor}
 
-「通知範本」區域是RTF編輯器，可讓您產生電子郵件通知訊息的HTML。 它提供字型和段落格式選項，這些選項可在「通知範本」方塊下找到。 選項包括字型型別、大小、樣式和顏色，以及段落對齊和專案符號。
+通知範本區域是RTF編輯器，可讓您為電子郵件通知訊息產生HTML。 它提供字型和段落格式選項，這些選項可在「通知範本」方塊下找到。 選項包括字型型別、大小、樣式和顏色，以及段落對齊和專案符號。
 
 ### URL產生 {#url-generation}
 
@@ -198,7 +198,7 @@ For details, see [How to hide the 'DO-NOT-DELETE' tag with CSS](https://blogs.ad
 
 >[!NOTE]
 >
->AEM Forms版本已棄用Flex工作區。
+>AEM Forms版本已棄用Flex Workspace。
 
 如果您的解決方案部署在叢集環境中，請將`@@notification-host@@`取代為叢集位址。
 
@@ -206,7 +206,7 @@ For details, see [How to hide the 'DO-NOT-DELETE' tag with CSS](https://blogs.ad
 
 **JBoss：** 8080
 
-**OracleWebLogic伺服器：** 7001
+**Oracle WebLogic Server：** 7001
 
 **IBM WebSphere：** 9080
 
@@ -226,7 +226,7 @@ For details, see [How to hide the 'DO-NOT-DELETE' tag with CSS](https://blogs.ad
 
 **指示**&#x200B;工作指示屬性的內容，如Workbench中處理序的使用者步驟中所定義。
 
-**notification-host** AEM forms應用程式伺服器的主機名稱。
+**notification-host** AEM表單應用程式伺服器的主機名稱。
 
 **process-name**&#x200B;處理序的名稱。
 
@@ -250,7 +250,7 @@ For details, see [How to hide the 'DO-NOT-DELETE' tag with CSS](https://blogs.ad
 
 **process-id**&#x200B;處理序執行個體識別碼。
 
-**notification-host** AEM forms應用程式伺服器的主機名稱。
+**notification-host** AEM表單應用程式伺服器的主機名稱。
 
 對於已停止的作業，您可以在「主旨」和「通知範本」方塊中使用下列變數：
 
@@ -260,7 +260,7 @@ For details, see [How to hide the 'DO-NOT-DELETE' tag with CSS](https://blogs.ad
 
 **process-id**&#x200B;處理序執行個體識別碼。
 
-**notification-host** AEM forms應用程式伺服器的主機名稱。
+**notification-host** AEM表單應用程式伺服器的主機名稱。
 
 ### 在主旨方塊中使用變數 {#using-a-variable-in-the-subject-box}
 

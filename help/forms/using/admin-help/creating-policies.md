@@ -9,9 +9,9 @@ feature: Document Security
 exl-id: 5e57451c-1a89-442c-8404-841e95d5ceff
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
+source-git-commit: 'null'
 workflow-type: tm+mt
-source-wordcount: '4725'
+source-wordcount: '4769'
 ht-degree: 0%
 
 ---
@@ -40,9 +40,9 @@ Document Security提供下列型別的原則。
 
 當您第一次安裝Document Security時，它包含一個共用原則，名為&#x200B;*限制到所有主體*。 將此原則套用至檔案時，任何能登入Document Security的使用者都可以存取該檔案。 此原則位於名為&#x200B;*全域原則集*&#x200B;的原則集中。 預設不會啟用此原則。 如果符合貴組織的需求，則可將其啟用。
 
-**Microsoft® Outlook自動產生的原則**
+**® Outlook自動產生的原則**
 
-使用Acrobat，您可以將原則套用至您在Microsoft® Outlook中作為電子郵件附件傳送的檔案。 在Outlook中，您可以使用現有原則來保護檔案。 或者，您可以使用Acrobat透過預設機密性設定產生並套用至附加至電子郵件訊息之檔案的自動產生原則。 (請參閱&#x200B;*[Acrobat說明](https://help.adobe.com/en_US/acrobat/pro/using/index.html)*。)
+使用Acrobat，您可以將原則套用至您在Microsoft® Outlook中作為電子郵件附件傳送的檔案。 在Outlook中，您可以使用現有原則來保護檔案。 或者，您可以使用Acrobat透過預設機密性設定產生並套用至附加至電子郵件訊息之檔案的自動產生原則。 （請參閱&#x200B;*[Acrobat說明](https://help.adobe.com/en_US/acrobat/pro/using/index.html)*。）
 
 >[!NOTE]
 >
@@ -166,15 +166,15 @@ Document Security提供下列型別的原則。
 
 這些檔案許可權可在許可權索引標籤上取得。 您可以將這些許可權套用至PDF、PTC Pro/E和Microsoft Office檔案。
 
-**列印：**&#x200B;允許使用者列印受此原則保護的檔案。 對於Office和Pro/E檔案，您可以選取「列印」核取方塊以允許列印，或清除該核取方塊以防止列印。 如果您選取「顯示PDF的自訂許可權」核取方塊，則可從下列選項中進行選取：
+**列印：**&#x200B;允許使用者列印受此原則保護的檔案。 對於Office和Pro/E檔案，您可以選取「列印」核取方塊以允許列印，或清除該核取方塊以防止列印。 如果您選取「顯示PDF的自訂許可權」核取方塊，您可選取下列選項：
 
 **不允許：**&#x200B;不允許使用者列印PDF。
 
-**允許：**&#x200B;允許使用者列印PDF。
+**允許：**&#x200B;使用者可以列印PDF。
 
 **低解析度。 僅限：**&#x200B;使用者可以低解析度列印PDF。
 
-**修改：**&#x200B;允許使用者修改受此原則保護的檔案。 對於Office和Pro/E檔案，您可以選取「修改」核取方塊以允許修改，或清除該核取方塊以防止修改。 如果您選取「顯示PDF的自訂許可權」核取方塊，則可從下列選項中進行選取：
+**修改：**&#x200B;允許使用者修改受此原則保護的檔案。 對於Office和Pro/E檔案，您可以選取「修改」核取方塊以允許修改，或清除該核取方塊以防止修改。 如果您選取「顯示PDF的自訂許可權」核取方塊，您可選取下列選項：
 
 **不允許：**&#x200B;不允許使用者修改PDF。
 
@@ -184,11 +184,11 @@ Document Security提供下列型別的原則。
 
 **變更頁面：**&#x200B;使用者可以在PDF中新增及移除頁面，以及編輯內容。
 
-**Fill &amp; Sign：**&#x200B;使用者可以在PDF上填寫表單欄位並簽署。
+**填寫並簽署：**&#x200B;允許使用者在PDF上填寫表單欄位並簽署。
 
 **複製：**&#x200B;允許使用者從受此原則保護的檔案複製文字。
 
-**熒幕Reader：**&#x200B;如果您選取[顯示PDF的自訂許可權]核取方塊，就會顯示此許可權。 選取此選項時，Adobe Acrobat有權將臨時標籤新增至PDF，以提升其透過熒幕助讀程式的閱讀能力。
+**熒幕Reader：**&#x200B;如果您選取「顯示PDF的自訂許可權」核取方塊，則會顯示此許可權。 選取此選項時，Adobe Acrobat有權將臨時標籤新增至PDF，以提升其透過熒幕助讀程式的可讀性。
 
 這些檔案許可權可在「選項」標籤上取得。 您可以將這些許可權套用至PDF、PTC Pro/E和Microsoft Office檔案：
 
@@ -266,11 +266,11 @@ Document Security提供下列型別的原則。
 >
 >對於提供匿名使用者存取權的原則，即使您選取此型別的浮水印，匿名使用者的使用者名稱和識別碼也不會顯示為浮水印。
 
-**僅使用認證的Acrobat外掛程式進行PDF：**&#x200B;針對原則選取時，此選項會指定在開啟受原則保護的檔案時，Acrobat 8.0和更新版本必須在認證模式下執行。 當Acrobat以認證模式執行時，不會載入任何協力廠商的外掛程式。
+**僅針對PDF使用認證的Acrobat外掛程式：**&#x200B;選取原則時，此選項會指定Acrobat 8.0和更新版本在開啟受原則保護的檔案時，必須以認證模式執行。 當Acrobat以認證模式執行時，不會載入任何協力廠商的外掛程式。
 
 如果您擔心檔案收件者寫入的外掛程式可能會繞過Acrobat 8.0和更新版本中的任何檔案保護，請選取此選項。 如果您的檔案收件者必須使用Acrobat中的協力廠商外掛程式才能與檔案互動，請勿選取此選項。
 
-此選項僅會在Acrobat 8.0或更新版本中啟用已驗證的模式；管理員必須停用Acrobat 7.0的存取權。
+此選項只在Acrobat 8.0或更新版本中啟用認證模式；管理員必須停用Acrobat 7.0的存取權。
 
 （請參閱[設定Document Security伺服器](/help/forms/using/admin-help/configuring-client-server-options.md#configure-the-document-security-server)。）
 
@@ -292,7 +292,7 @@ Document Security提供下列型別的原則。
 
 * 整個檔案，包括其附件和中繼資料。 *中繼資料*&#x200B;是有關檔案及其內容的資訊，您可以透過檔案[內容]對話方塊或Acrobat [進階]功能表檢視。 在Acrobat中，您可以將不同型別的檔案（例如文字、音訊和視訊檔案）附加至PDF檔案。
 * 檔案及其附件，但不包括中繼資料。
-* 僅限檔案附件。 您可以將附件加密為PDF檔案，而不加密檔案內容。
+* 僅限檔案附件。 您可將附件加密為PDF檔案，而不需加密檔案內容。
 
 ## 啟用或停用共用原則 {#enable-or-disable-shared-policies}
 
@@ -398,7 +398,7 @@ Document Security提供下列型別的原則。
 
 >[!NOTE]
 >
->使用使用者端應用程式從檔案中移除原則。 (請參閱Acrobat說明或適當的Acrobat Reader DC擴充功能說明)。
+>使用使用者端應用程式從檔案中移除原則。 （請參閱Acrobat說明或適當的Acrobat Reader DC擴充功能說明）。
 
 ## 排序原則清單 {#sort-the-policy-list}
 

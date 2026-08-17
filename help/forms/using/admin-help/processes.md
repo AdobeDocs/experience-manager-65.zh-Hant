@@ -9,7 +9,7 @@ exl-id: 21a2317d-3542-4ccb-98db-3cedf20c89ea
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
+source-git-commit: 'null'
 workflow-type: tm+mt
 source-wordcount: '1643'
 ht-degree: 0%
@@ -130,7 +130,7 @@ ht-degree: 0%
 
 **處理序識別碼：**&#x200B;當處理序具現化時（亦即，當使用者或自動化步驟起始處理序時），表單工作流程所指派的正整數。 您可以使用此識別碼在整個生命週期中追蹤流程例項。
 
-**處理程式名稱 — 版本：**&#x200B;處理程式名稱(如Designer所定義)。
+**處理程式名稱 — 版本：**&#x200B;處理程式名稱（如Designer所定義）。
 
 **狀態：**&#x200B;指出處理序執行個體是否正常執行、變更狀態或停止。 （請參閱關於流程例證狀態。）
 

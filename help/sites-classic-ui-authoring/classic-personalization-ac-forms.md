@@ -9,9 +9,9 @@ exl-id: 3f9ed24e-c54b-4bd4-9212-eabc67bb540e
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization
 role: User
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+source-git-commit: 'null'
 workflow-type: tm+mt
-source-wordcount: '1227'
+source-wordcount: '1231'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,7 @@ AEM可讓您建立並使用與您網站上的Adobe Campaign互動的表單。 �
 
 >[!NOTE]
 >
->當使用Adobe Campaign 6.1.x或Adobe Campaign Standard時，請確定頁面&#x200B;**jcr：content**&#x200B;節點上的&#x200B;**acMapping**&#x200B;屬性分別設為&#x200B;**mapRecipient**&#x200B;或&#x200B;**profile**
+>當使用Adobe Campaign 6.1.x或Adobe Campaign Standard時，請確定頁面&#x200B;**jcr:content**&#x200B;節點上的&#x200B;**acMapping**&#x200B;屬性分別設為&#x200B;**mapRecipient**&#x200B;或&#x200B;**profile**
 >
 
 ### 建立表單 {#creating-a-form}
@@ -81,7 +81,7 @@ Adobe Campaign專用的Forms具有特定元件。 這些元件有選項可讓您
 本節僅詳細說明Adobe Campaign的特定連結。 如需如何在Adobe Experience Manager中使用表單的一般概覽的詳細資訊，請參閱[編輯模式元件](/help/sites-classic-ui-authoring/classic-page-author-edit-mode.md)。
 
 1. 導覽至您要編輯的表單。
-1. 在工具箱中，選取&#x200B;**頁面** > **頁面屬性……**，然後移至快顯視窗的&#x200B;**Cloud Service**&#x200B;標籤。
+1. 在工具箱中，選取&#x200B;**頁面** > **頁面屬性……**，然後移至快顯視窗的&#x200B;**雲端服務**&#x200B;標籤。
 1. 按一下&#x200B;**新增服務**，然後在服務的下拉式清單中選取與您的Adobe Campaign執行個體對應的設定，以新增Adobe Campaign服務。 此設定會在您設定執行個體之間的連線時執行。 如需詳細資訊，請參閱[將AEM連線到Adobe Campaign](/help/sites-administering/campaignonpremise.md#connecting-aem-to-adobe-campaign)。
 
    >[!NOTE]
@@ -90,7 +90,7 @@ Adobe Campaign專用的Forms具有特定元件。 這些元件有選項可讓您
 
 1. 使用表單開頭的&#x200B;**編輯**&#x200B;按鈕存取表單的一般引數。 **表單**&#x200B;索引標籤可讓您選取感謝頁面，使用者在驗證表單後將會重新導向該頁面。
 
-   **進階**&#x200B;表單可讓您選取表單型別。 **Post選項**&#x200B;欄位可讓您在三種型別的Adobe Campaign表單之間進行選擇：
+   **進階**&#x200B;表單可讓您選取表單型別。 **張貼選項**&#x200B;欄位可讓您在三種型別的Adobe Campaign表單之間進行選擇：
 
    * **Adobe Campaign：儲存設定檔**：可讓您在Adobe Campaign中建立或更新收件者（預設值）。
    * **Adobe Campaign：訂閱服務**：可讓您在Adobe Campaign中管理收件者的訂閱。

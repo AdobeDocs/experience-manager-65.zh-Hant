@@ -10,9 +10,9 @@ exl-id: 569f2052-b4fe-4f7f-aec9-657217cba091
 solution: Experience Manager
 feature: Communities
 role: Developer
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 'null'
 workflow-type: tm+mt
-source-wordcount: '690'
+source-wordcount: '735'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ ht-degree: 0%
 * 按一下&#x200B;**新增**
 * 按一下&#x200B;**全部儲存**
 
-注意：在類別值前面加上「apps」。 是將「擁有的應用程式」識別為/apps資料夾中的慣例，而非/libs。 重要：新增預留位置`js.tx`t和&#x200B;**`css.txt`**&#x200B;檔案。 （這並非正式的cq：ClientLibraryFolder缺少它們。）
+注意：在類別值前面加上&#39;apps.&#39;是將&#39;owning application&#39;識別為/apps資料夾，而非/libs中的慣例。 重要：新增預留位置`js.tx`t和&#x200B;**`css.txt`**&#x200B;檔案。 （這並非正式的cq:ClientLibraryFolder沒有它們。）
 
 1. 用滑鼠右鍵按一下&#x200B;**`/etc/designs/an-scf-sandbox/clientlibs`**
 1. 選取&#x200B;**建立檔案……**
@@ -74,7 +74,7 @@ css.txt和js.txt的第一行會識別要尋找下列檔案清單的基本位置�
 
 ### 內嵌SCF Clientlibs {#embed-scf-clientlibs}
 
-在`clientlibs`節點的&#x200B;**屬性**&#x200B;標籤中，輸入多值字串屬性&#x200B;**內嵌**。 這會為SCF元件[&#128279;](/help/communities/client-customize.md#clientlibs-for-scf)嵌入必要的使用者端資料庫(clientlibs)。 在本教學課程中，已新增Communities元件所需的許多clientlibs。
+在`clientlibs`節點的&#x200B;**屬性**&#x200B;標籤中，輸入多值字串屬性&#x200B;**內嵌**。 這會為SCF元件](/help/communities/client-customize.md#clientlibs-for-scf)嵌入必要的[使用者端資料庫(clientlibs)。 在本教學課程中，已新增Communities元件所需的許多clientlibs。
 
 這可能是或不可能是用於生產網站的理想方法，因為考量便利性與每個頁面下載的clientlibs的大小/速度而定。
 
@@ -89,16 +89,16 @@ css.txt和js.txt的第一行會識別要尋找下列檔案清單的基本位置�
 * 按一下&#x200B;**`Multi`**
 * 值： **`cq.social.scf`**
 
-   * 它將會彈出一個對話方塊，
-在每個專案後按一下&#x200B;**`+`**&#x200B;以新增下列clientlib類別：
+  * 它將會彈出一個對話方塊，
+    在每個專案後按一下**`+`**&#x200B;以新增下列clientlib類別：
 
-      * **`cq.ckeditor`**
-      * **`cq.social.author.hbs.comments`**
-      * **`cq.social.author.hbs.forum`**
-      * **`cq.social.author.hbs.rating`**
-      * **`cq.social.author.hbs.reviews`**
-      * **`cq.social.author.hbs.voting`**
-      * 按一下&#x200B;**確定**
+    * **`cq.ckeditor`**
+    * **`cq.social.author.hbs.comments`**
+    * **`cq.social.author.hbs.forum`**
+    * **`cq.social.author.hbs.rating`**
+    * **`cq.social.author.hbs.reviews`**
+    * **`cq.social.author.hbs.voting`**
+    * 按一下&#x200B;**確定**
 
 * 按一下&#x200B;**全部儲存**
 
@@ -159,29 +159,29 @@ Include陳述式屬於`html`指令碼的`head`區段。 預設&#x200B;**`foundat
 
 若要建立封裝：
 
-* 在CRXDE Lite中，按一下[封裝圖示](https://localhost:4502/crx/packmgr/)
+* 從CRXDE Lite按一下[封裝圖示](https://localhost:4502/crx/packmgr/)
 * 按一下&#x200B;**建立封裝**
 
-   * 套件名稱： an-scf-sandbox-minimal-pkg
-   * 版本： 0.1
-   * 群組： `leave as default`
-   * 按一下&#x200B;**確定**
+  * 套件名稱： an-scf-sandbox-minimal-pkg
+  * 版本： 0.1
+  * 群組： `leave as default`
+  * 按一下&#x200B;**確定**
 
-* 按一下&#x200B;**編輯**
+* 按一下「**編輯**」
 
-   * 選取&#x200B;**篩選器**&#x200B;索引標籤
+  * 選取&#x200B;**篩選器**&#x200B;索引標籤
 
-      * 按一下&#x200B;**新增篩選器**
-      * 根路徑：瀏覽至`/apps/an-scf-sandbox`
-      * 按一下&#x200B;**完成**
-      * 按一下&#x200B;**新增篩選器**
-      * 根路徑：瀏覽至`/etc/designs/an-scf-sandbox`
-      * 按一下&#x200B;**完成**
-      * 按一下&#x200B;**新增篩選器**
-      * 根路徑：瀏覽至`/content/an-scf-sandbox**`
-      * 按一下&#x200B;**完成**
+    * 按一下&#x200B;**新增篩選器**
+    * 根路徑：瀏覽至`/apps/an-scf-sandbox`
+    * 按一下&#x200B;**完成**
+    * 按一下&#x200B;**新增篩選器**
+    * 根路徑：瀏覽至`/etc/designs/an-scf-sandbox`
+    * 按一下&#x200B;**完成**
+    * 按一下&#x200B;**新增篩選器**
+    * 根路徑：瀏覽至`/content/an-scf-sandbox**`
+    * 按一下&#x200B;**完成**
 
-   * 按一下&#x200B;**儲存**
+  * 按一下「**儲存**」
 
 * 按一下&#x200B;**建置**
 

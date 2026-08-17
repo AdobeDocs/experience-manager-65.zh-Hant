@@ -9,9 +9,9 @@ exl-id: c708936d-7aa7-4b92-be2d-d97008f187d2
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
+source-git-commit: 'null'
 workflow-type: tm+mt
-source-wordcount: '941'
+source-wordcount: '956'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 0%
 1. 在管理控制檯中，按一下「設定>使用者管理>網域管理」。
 1. 按一下新增企業網域。
 1. 在ID方塊中，輸入網域的唯一識別碼，並在Name方塊中，輸入網域的描述性名稱。 （請參閱[網域名稱和ID的重要考量](adding-domains.md#important-considerations-for-domain-names-and-ids)。）
-1. 指定是否啟用帳戶鎖定。 （請參閱[設定帳戶鎖定設定](/help/forms/using/admin-help/configure-account-locking-settings.md#configure-account-locking-settings)。）依預設，會選取[啟用帳戶鎖定]。
+1. 指定是否啟用帳戶鎖定。 （請參閱[設定帳戶鎖定設定](/help/forms/using/admin-help/configure-account-locking-settings.md#configure-account-locking-settings)。） 依預設，會選取[啟用帳戶鎖定]。
 1. 按一下「新增驗證」，然後在「驗證提供者」清單中選取提供者，視您的組織所使用的驗證機制而定。 可能的值包括LDAP、Kerberos、SAML或自訂驗證提供者。
 
    如果您選取LDAP，則可以使用目錄組態中指定的LDAP伺服器，也可以選擇不同的LDAP伺服器來用於驗證。 如果您選擇不同的伺服器，您的使用者必須存在於兩個LDAP伺服器上。
@@ -43,7 +43,7 @@ ht-degree: 0%
 1. 在管理控制檯中，按一下「設定>使用者管理>網域管理」。
 1. 按一下「新增本機網域」。
 1. 在ID方塊中，輸入網域的唯一識別碼，並在Name方塊中，輸入網域的描述性名稱。 （請參閱[網域名稱和ID的重要考量](adding-domains.md#important-considerations-for-domain-names-and-ids)。）
-1. 指定是否啟用帳戶鎖定，然後按一下[確定]。 （請參閱[設定帳戶鎖定設定](/help/forms/using/admin-help/configure-account-locking-settings.md#configure-account-locking-settings)。）依預設，會選取[啟用帳戶鎖定]。
+1. 指定是否啟用帳戶鎖定，然後按一下[確定]。 （請參閱[設定帳戶鎖定設定](/help/forms/using/admin-help/configure-account-locking-settings.md#configure-account-locking-settings)。） 依預設，會選取[啟用帳戶鎖定]。
 
 ## 新增混合式網域 {#add-a-hybrid-domain}
 
@@ -75,8 +75,8 @@ ht-degree: 0%
 
 使用MySQL做為AEM表單資料庫時，會套用下列限制：
 
-* 網域ID和網域名稱僅使用單位元組(ASCII)字元。 如果您使用擴充ASCII字元，AEM表單會處於不穩定狀態，而且如果您嘗試刪除網域，可能會擲回例外狀況。 若要從此不穩定狀態復原，請參閱本頁的[移除包含延伸或多位元組字元](adding-domains.md#remove-a-domain-that-contains-extended-or-multi-byte-characters)的網域」主題。
-* 您無法建立兩個名稱相同但大小寫不同的網域。 例如，當名為&#x200B;*adobe*&#x200B;的網域已存在時，嘗試建立名為&#x200B;*Adobe*&#x200B;的網域會導致錯誤。
+* 網域ID和網域名稱僅使用單位元組(ASCII)字元。 如果您使用擴充ASCII字元，AEM表單將會處於不穩定狀態，而且如果您嘗試刪除網域，可能會擲回例外狀況。 若要從此不穩定狀態復原，請參閱本頁的[移除包含延伸或多位元組字元](adding-domains.md#remove-a-domain-that-contains-extended-or-multi-byte-characters)的網域」主題。
+* 您無法建立兩個名稱相同但大小寫不同的網域。 例如，當名為&#x200B;*Adobe*&#x200B;的網域已存在時，嘗試建立名為&#x200B;*adobe*&#x200B;的網域會導致錯誤。
 * 「使用者管理」無法區分僅在使用擴充字元時不同的兩個網域名稱。 例如，如果您建立名為&#x200B;*abcde*&#x200B;的網域和名為&#x200B;*abcde*&#x200B;的網域，則兩者會被視為相同。
 
 ### 移除包含延伸或多位元組字元的網域 {#remove-a-domain-that-contains-extended-or-multi-byte-characters}
