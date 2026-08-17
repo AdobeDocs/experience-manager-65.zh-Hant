@@ -29,7 +29,7 @@ ht-degree: 1%
 
 * [Personalization](/help/sites-administering/personalization.md)允許訪客設定存取您網站的特定方式。
 
-登入（及登出）功能由具有&#x200B;**設定檔**](#profiles-and-user-accounts)&#x200B;的[帳戶提供，該帳戶包含有關已註冊訪客（使用者）的其他資訊。 註冊和授權的實際流程可能有所不同：
+登入（及登出）功能由具有&#x200B;**設定檔**&#x200B;[&#128279;](#profiles-and-user-accounts)&#x200B;的帳戶提供，該帳戶包含有關已註冊訪客（使用者）的其他資訊。 註冊和授權的實際流程可能有所不同：
 
 * 從網站自助註冊
 
