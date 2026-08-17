@@ -275,7 +275,7 @@ Apache Sling作業取用者管理員服務提供主題允許清單和封鎖清�
 
 ### 建立連出代理程式 {#creating-the-outgoing-agent}
 
-1. 在作者上建立&#x200B;**復寫代理**。 （請參閱復寫代理程式](/help/sites-deploying/replication.md)的[檔案）。 指定任何&#x200B;**標題**。 **名稱**&#x200B;必須遵循命名慣例。
+1. 在作者上建立&#x200B;**復寫代理**。 （請參閱復寫代理程式[&#128279;](/help/sites-deploying/replication.md)的檔案）。 指定任何&#x200B;**標題**。 **名稱**&#x200B;必須遵循命名慣例。
 1. 使用下列屬性建立代理程式：
 
    | 屬性 | 值 |
@@ -289,7 +289,7 @@ Apache Sling作業取用者管理員服務提供主題允許清單和封鎖清�
 
 ### 建立反向代理程式 {#creating-the-reverse-agent}
 
-1. 在作者上建立&#x200B;**反向復寫代理**。 （請參閱復寫代理程式](/help/sites-deploying/replication.md)的[檔案。） 指定任何&#x200B;**標題**。 **名稱**&#x200B;必須遵循命名慣例。
+1. 在作者上建立&#x200B;**反向復寫代理**。 （請參閱復寫代理程式[&#128279;](/help/sites-deploying/replication.md)的檔案。） 指定任何&#x200B;**標題**。 **名稱**&#x200B;必須遵循命名慣例。
 1. 使用下列屬性建立代理程式：
 
    | 屬性 | 值 |
@@ -302,7 +302,7 @@ Apache Sling作業取用者管理員服務提供主題允許清單和封鎖清�
 
 ### 建立寄件匣代理程式 {#creating-the-outbox-agent}
 
-1. 在背景工作執行個體上建立&#x200B;**復寫代理程式**。 （請參閱復寫代理程式](/help/sites-deploying/replication.md)的[檔案。） 指定任何&#x200B;**標題**。 **名稱**&#x200B;必須是`offloading_outbox`。
+1. 在背景工作執行個體上建立&#x200B;**復寫代理程式**。 （請參閱復寫代理程式[&#128279;](/help/sites-deploying/replication.md)的檔案。） 指定任何&#x200B;**標題**。 **名稱**&#x200B;必須是`offloading_outbox`。
 1. 使用下列屬性建立代理程式。
 
    | 屬性 | 值 |
