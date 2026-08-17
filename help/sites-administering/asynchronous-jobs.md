@@ -7,14 +7,14 @@ feature: Developing
 role: Developer
 source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
 workflow-type: tm+mt
-source-wordcount: '791'
-ht-degree: 84%
+source-wordcount: '806'
+ht-degree: 82%
 
 ---
 
 # 非同步操作 {#asynchronous-operations}
 
-為減少對效能造成負面影響，Adobe Experience Manager 會以非同步方式處理某些長時間執行且耗用大量資源的操作。非同步處理包括將多項作業排入佇列，並根據系統資源的可用情形依序執行。
+為減少對效能造成負面影響，Adobe Experience Manager 會以非同步方式處理某些長時間執行且耗用大量資源的操作。 非同步處理包括將多項作業排入佇列，並根據系統資源的可用情形依序執行。
 
 這些操作包括：
 
@@ -28,7 +28,7 @@ ht-degree: 84%
 
 >[!NOTE]
 >
->預設狀態下，非同步作業會並行運作。如果 CPU 核心數為 *`n`*，預設狀態下可供 *`n/2`* 項作業並行運作。若要使用作業佇列的自訂設定，請從 Web 主控台修改&#x200B;**[!UICONTROL 「非同步操作預設佇列設定」]**&#x200B;和&#x200B;**「非同步操作頁面移動與轉出設定」** 。
+>預設狀態下，非同步作業會並行運作。 如果 CPU 核心數為 *`n`*，預設狀態下可供 *`n/2`* 項作業並行運作。 若要使用作業佇列的自訂設定，請從 Web 主控台修改&#x200B;**[!UICONTROL 「非同步操作預設佇列設定」]**&#x200B;和&#x200B;**「非同步操作頁面移動與轉出設定」** 。
 >
 >如需詳細資訊，請參閱[佇列設定](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html#queue-configurations)。
 
@@ -44,7 +44,7 @@ AEM 以非同步方式處理操作時，您會透過[收件匣](/help/sites-auth
 
    ![非同步操作的狀態和詳細資訊](assets/async-operation-status.png)
 
-   若需了解特定操作的進度，請查看&#x200B;**[!UICONTROL 狀態]**&#x200B;欄中的值。系統會根據進度顯示下列其中一種狀態：
+   若需了解特定操作的進度，請查看&#x200B;**[!UICONTROL 狀態]**&#x200B;欄中的值。 系統會根據進度顯示下列其中一種狀態：
 
    * **[!UICONTROL 執行中]**：正在處理操作
 
@@ -58,7 +58,7 @@ AEM 以非同步方式處理操作時，您會透過[收件匣](/help/sites-auth
 
    ![停止圖示](assets/async-stop-icon.png)
 
-1. 若要檢視額外詳細資訊（例如，說明和記錄），請選取操作，然後按一下工具列中的[開啟]。**&#x200B;**
+1. 若要檢視額外詳細資訊（例如，說明和記錄），請選取操作，然後按一下工具列中的[開啟]。****
 
    ![開啟圖示](assets/async-open-icon.png)
 
@@ -66,7 +66,7 @@ AEM 以非同步方式處理操作時，您會透過[收件匣](/help/sites-auth
 
    ![作業詳細資訊](assets/async-job-details.png)
 
-1. 若要從清單中刪除操作，請選取工具列中的&#x200B;**[!UICONTROL 「刪除」]**。若要以 CSV 檔案格式下載詳細資訊，請按&#x200B;**[!UICONTROL 「下載」]**。
+1. 若要從清單中刪除操作，請選取工具列中的&#x200B;**[!UICONTROL 「刪除」]**。 若要以 CSV 檔案格式下載詳細資訊，請按&#x200B;**[!UICONTROL 「下載」]**。
 
    >[!NOTE]
    >
@@ -74,9 +74,9 @@ AEM 以非同步方式處理操作時，您會透過[收件匣](/help/sites-auth
 
 ## 清除已完成的工作 {#purging-completed-jobs}
 
-AEM 每天 01:00 會執行清除作業，將超過一天的已完成非同步作業刪除。
+AEM每天01:00會執行清除作業，將超過一天的已完成非同步作業刪除。
 
-您可以修改清除作業的排程，並調整已完成作業詳細資訊的保留時間。您也可以針對要保留詳細資訊的已完成作業，隨時設定數量上限。
+您可以修改清除作業的排程，並調整已完成作業詳細資訊的保留時間。 您也可以針對要保留詳細資訊的已完成作業，隨時設定數量上限。
 
 1. 在「全域導覽」中，按一下&#x200B;**[!UICONTROL 「工具]** > **[!UICONTROL 操作]** > **[!UICONTROL Web 主控台」]**。
 1. 開啟&#x200B;**[!UICONTROL 「Adobe Granite 非同步作業清除已排程作業」]**。
@@ -91,7 +91,7 @@ AEM 每天 01:00 會執行清除作業，將超過一天的已完成非同步作
 
 ## 設定非同步處理 {#configuring-asynchronous-processing}
 
-您可以設定資產、頁面或參照等專案的數量上限，讓AEM以非同步方式處理特定操作，還可以針對作業處理時間，切換電子郵件通知。
+您可以設定資產、頁面或參照等專案的數量上限，讓AEM以非同步方式處理特定操作，並切換作業處理時間的電子郵件通知。
 
 ### 設定非同步資產刪除操作 {#configuring-synchronous-delete-operations}
 
@@ -103,7 +103,7 @@ AEM 每天 01:00 會執行清除作業，將超過一天的已完成非同步作
 
    ![資產刪除臨界值](assets/async-delete-threshold.png)
 
-1. 勾選&#x200B;**「啟用電子郵件通知」**&#x200B;選項，接收此作業狀態的電子郵件通知，例如，成功、失敗。
+1. 勾選&#x200B;**「啟用電子郵件通知」**&#x200B;選項，接收此作業狀態的電子郵件通知， 例如，成功、失敗。
 1. 儲存變更。
 
 ### 設定非同步資產移動操作 {#configuring-asynchronous-move-operations}
@@ -116,14 +116,14 @@ AEM 每天 01:00 會執行清除作業，將超過一天的已完成非同步作
 
    ![資產移動臨界值](assets/async-move-threshold.png)
 
-1. 勾選&#x200B;**「啟用電子郵件通知」**&#x200B;選項，接收此作業狀態的電子郵件通知，例如，成功、失敗。
+1. 勾選&#x200B;**「啟用電子郵件通知」**&#x200B;選項，接收此作業狀態的電子郵件通知， 例如，成功、失敗。
 1. 儲存變更。
 
 ### 設定非同步MSM操作 {#configuring-asynchronous-msm-operations}
 
 1. 在「全域導覽」中，按一下&#x200B;**[!UICONTROL 「工具]** > **[!UICONTROL 操作]** > **[!UICONTROL Web 主控台」]**。
 1. 在 Web 主控台中，開啟&#x200B;**[!UICONTROL 「非同步頁面移動操作作業處理設定」]**。
-1. 勾選&#x200B;**「啟用電子郵件通知」**&#x200B;選項，接收此作業狀態的電子郵件通知，例如，成功、失敗。
+1. 勾選&#x200B;**「啟用電子郵件通知」**&#x200B;選項，接收此作業狀態的電子郵件通知， 例如，成功、失敗。
 
    ![MSM 設定](assets/async-msm.png)
 
@@ -133,7 +133,7 @@ AEM 每天 01:00 會執行清除作業，將超過一天的已完成非同步作
 >
 >* [建立及組織頁面](/help/sites-authoring/managing-pages.md)
 >* [建立和同步處理即時副本](/help/sites-administering/msm-livecopy.md)
->* [在Experience Manager](/help/sites-administering/notification.md)中設定電子郵件。
+>* [在Experience Manager中設定電子郵件](/help/sites-administering/notification.md)。
 >* [匯入資產中繼資料](/help/assets/metadata.md#import-metadata)。
 >* [匯出資產中繼資料](/help/assets/metadata.md#export-metadata)。
 >* [透過連線資產共用遠端部署的 DAM 資產](/help/assets/use-assets-across-connected-assets-instances.md)。

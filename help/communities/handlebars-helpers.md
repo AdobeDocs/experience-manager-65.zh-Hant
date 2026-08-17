@@ -9,7 +9,7 @@ feature: Communities
 role: Admin
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '1445'
+source-wordcount: '1531'
 ht-degree: 2%
 
 ---
@@ -154,7 +154,7 @@ Then content-loadmore would return
 // returns "03-18-2015"
 ```
 
-## 等於 {#equals}
+## 等號 {#equals}
 
 根據等式條件傳回內容的協助程式。
 
@@ -237,7 +237,7 @@ Then content-loadmore would return
 
 只有少數幾個社群元件可供包含。<!-- OBSOLETE/OLD  NEED TO UPDATE FOR 6.5  For AEM 6.1, those that are includable are [comments](essentials-comments.md), [rating](rating-basics.md), [reviews](reviews-basics.md), and [voting](essentials-voting.md). -->
 
-此協助程式僅適用於伺服器端，可提供類似於JSP指令碼的[cq：include](../../help/sites-developing/taglib.md)的功能。
+此協助程式僅適用於伺服器端，可提供類似於JSP指令碼的[cq:include](../../help/sites-developing/taglib.md)的功能。
 
 ### 參數 {#parameters-6}
 
@@ -275,9 +275,9 @@ Then content-loadmore would return
 
 ## IncludeClientLib {#includeclientlib}
 
-包含AEM html使用者端程式庫的協助程式，可以是js、css或主題程式庫。 對於不同型別的多個包含專案（例如js和css），此標籤必須在Handlebars指令碼中多次使用。
+協助程式包含AEM html使用者端資料庫，可以是js、css或主題資料庫。 對於不同型別的多個包含專案（例如js和css），此標籤必須在Handlebars指令碼中多次使用。
 
-此協助程式僅適用於伺服器端，提供類似於JSP指令碼的[ui：includeClientLib](../../help/sites-developing/taglib.md)的功能。
+此協助程式僅適用於伺服器端，可提供類似於JSP指令碼之[ui:includeClientLib](../../help/sites-developing/taglib.md)的功能。
 
 ### 參數 {#parameters-7}
 
@@ -374,7 +374,7 @@ Depending on how long in the past, may return
 
 ## Xss-html {#xss-html}
 
-協助程式會為HTML元素內容編碼來源字串，以協助抵禦XSS。
+協助程式會編碼HTML元素內容的來源字串，以協助抵禦XSS。
 
 注意：此協助程式不是驗證器，且不可用於寫入屬性值。
 
@@ -428,7 +428,7 @@ var input = {{xss-jsString topic-title}}
 
 ## Xss-validHref {#xss-validhref}
 
-協助程式會清理要當作HTMLhref或srce屬性值寫入的URL，以協助防範XSS。
+協助程式會清理要當作HTML href或srce屬性值寫入的URL，以協助防範XSS。
 
 注意：此協助程式可能會傳回空字串。
 
@@ -458,12 +458,12 @@ var input = {{xss-jsString topic-title}}
 
 * Handlebars為名為&#39;options&#39;的協助程式提供最終引數。 特殊物件&#39;options&#39;包括
 
-   * 選擇性私人資料(options.data)
-   * 呼叫的選用機碼值屬性(options.hash)
-   * 啟動本身的功能(options.fn())
-   * 可叫用本身的反函式(options.inverse())
+  * 選擇性私人資料(options.data)
+  * 呼叫的選用機碼值屬性(options.hash)
+  * 啟動本身的功能(options.fn())
+  * 可叫用本身的反函式(options.inverse())
 
-* 建議從協助程式傳回的HTML字串內容為SafeString。
+* 建議從協助程式傳回的HTML String內容為SafeString。
 
 ### Handlebars.js檔案中的簡單協助程式範例： {#an-example-of-a-simple-helper-from-handlebars-js-documentation}
 
@@ -488,7 +488,7 @@ template(context);
 會呈現：
 
 &lt;ul>
-&lt;li>&lt;a href=&quot;/posts/hello-world&quot;>Post！&lt;/a>&lt;/li>
+&lt;li>&lt;a href=&quot;/posts/hello-world&quot;>帖子！&lt;/a>&lt;/li>
 &lt;/ul>
 
 ### Handlebars.js檔案中的區塊協助程式範例： {#an-example-of-a-block-helper-from-handlebars-js-documentation}
@@ -519,7 +519,7 @@ template(data);
 
 ## 自訂SCF協助程式 {#custom-scf-helpers}
 
-必須在伺服器端和使用者端實作自訂協助程式，尤其是在傳遞資料時。 對於SCF，大多數範本會在伺服器端編譯並轉譯，因為伺服器會在要求頁面時產生指定元件的HTML。
+必須在伺服器端和使用者端實作自訂協助程式，尤其是在傳遞資料時。 對於SCF，當伺服器為請求頁面時的指定元件產生HTML時，大多數範本會在伺服器端編譯和轉譯。
 
 ### 伺服器端自訂協助程式 {#server-side-custom-helpers}
 

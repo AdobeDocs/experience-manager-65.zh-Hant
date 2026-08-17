@@ -12,7 +12,7 @@ solution: Experience Manager
 feature: Communities
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '2215'
+source-wordcount: '2253'
 ht-degree: 2%
 
 ---
@@ -37,7 +37,7 @@ ht-degree: 2%
 
 ## 預先建立的函式 {#pre-built-functions}
 
-以下簡述AEM Communities所提供的功能。 每個功能都包含一或多個AEM頁面，其中包含以連線方式連線在一起的Communities元件，此功能可輕鬆整合至[社群網站範本](/help/communities/sites.md)。
+以下簡述AEM Communities所提供的功能。 每個功能都包含一或多個AEM頁面，其中包含以連線方式連線在[社群網站範本](/help/communities/sites.md)中的社群元件。
 
 社群網站範本提供社群網站的結構，包括登入、使用者設定檔、通知、訊息、網站功能表、搜尋、主題設定和品牌功能。
 
@@ -226,10 +226,10 @@ ht-degree: 2%
 
   如果選取，則論壇僅允許有特殊許可權的成員透過選擇[有特殊許可權的成員安全性群組](/help/communities/users.md#privileged-members-group)來張貼主題。 如果未選取，則允許所有社群成員張貼。 預設為取消選取。
 
-* **允許建立Publish**
+* **允許發佈建立**
 
   如果選取，獲授權的社群成員可以在發佈環境中建立群組。 如果取消選取，則只能從Communities Sites的「群組」主控台在作者環境中建立新群組（子社群）。
-預設為已選取。
+  預設為已選取。
 
 ### 創意力功能 {#ideation-function}
 
@@ -272,17 +272,17 @@ ht-degree: 2%
 * **顯示徽章**
 
   如果選取，則排行榜會包含徽章圖示欄。
-預設為取消選取。
+  預設為取消選取。
 
 * **顯示徽章名稱**
 
   如果選取，則排行榜會包含徽章名稱的欄。
-預設為取消選取。
+  預設為取消選取。
 
 * **顯示頭像**
 
   如果選取，成員的頭像影像會包含在排行榜中，位於其名稱連結旁邊，以連結至其成員設定檔。
-預設為取消選取。
+  預設為取消選取。
 
 ### 頁面功能 {#page-function}
 
@@ -322,7 +322,7 @@ QnA函式是具有[QnA元件](/help/communities/working-with-qna.md)的頁面，
 
 ## 建立社群功能 {#create-community-function}
 
-選取位於社群功能主控台頂端的`Create Community Function`圖示，即可建立社群功能。 您可以根據相同AEM Blueprint建立多個函式，然後透過在作者編輯模式下開啟以唯一自訂。
+選取位於社群功能主控台頂端的`Create Community Function`圖示，即可建立社群功能。 您可以根據同一個AEM Blueprint建立多個函式，然後透過在作者編輯模式下開啟以唯一自訂。
 
 ![create-community-function](assets/create-community-function.png)
 

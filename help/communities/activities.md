@@ -12,7 +12,7 @@ feature: Communities
 role: Admin
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '473'
+source-wordcount: '477'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 本檔案說明：
 
-* 將「活動串流」元件新增至AEM網站
+* 將活動資料流元件新增至AEM網站
 * 活動串流元件的組態設定
 
 ### 新增活動資料流至頁面 {#adding-activity-streams-to-a-page}
@@ -89,11 +89,11 @@ ht-degree: 0%
 * 檢視其他成員的設定檔時。
 * 在主要功能頁面上，例如論壇、QnA和部落格。
 
-   * 遵循該一般功能的所有活動。
+  * 遵循該一般功能的所有活動。
 
 * 適用於特定專案，例如論壇主題、QnA問題或部落格。
 
-   * 追蹤該特定專案的所有活動。
+  * 追蹤該特定專案的所有活動。
 
 ### 其他資訊 {#additional-information}
 

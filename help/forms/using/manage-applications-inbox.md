@@ -1,6 +1,6 @@
 ---
-title: 管理AEM收件匣中的Forms應用程式和工作
-description: AEM收件匣可讓您透過提交應用程式和管理工作來啟動以Forms為中心的工作流程。
+title: 在 AEM 收件匣管理 Forms 應用程式和任務
+description: AEM收件匣可讓您透過提交應用程式和管理工作，啟動以Forms為中心的工作流程。
 contentOwner: vishgupt
 topic-tags: document_services, publish
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -11,16 +11,16 @@ feature: Adaptive Forms
 role: Admin, User, Developer
 source-git-commit: 9f59606bb58b9e90f07bd22e89f3213afb54a697
 workflow-type: tm+mt
-source-wordcount: '1069'
-ht-degree: 2%
+source-wordcount: '1125'
+ht-degree: 4%
 
 ---
 
-# 管理AEM收件匣中的Forms應用程式和工作{#manage-forms-applications-and-tasks-in-aem-inbox}
+# 在 AEM 收件匣管理 Forms 應用程式和任務{#manage-forms-applications-and-tasks-in-aem-inbox}
 
-啟動或觸發以Forms為中心的工作流程的多種方式之一，就是透過AEM收件匣中的應用程式。 若要讓Forms工作流程在收件匣中成為應用程式，請建立工作流程應用程式。 如需工作流程應用程式和其他啟動Forms工作流程之方法的詳細資訊，請參閱[在OSGi上啟動Forms為中心的工作流程](../../forms/using/aem-forms-workflow.md#launch)。
+要啟動或觸發以Forms為中心的工作流程，有許多方式之一，就是透過AEM收件匣中的應用程式來進行。 若要讓Forms工作流程在收件匣中成為應用程式，請建立工作流程應用程式。 如需工作流程應用程式和其他啟動Forms工作流程之方法的詳細資訊，請參閱[在OSGi上啟動Forms為中心的工作流程](../../forms/using/aem-forms-workflow.md#launch)。
 
-此外，AEM收件匣會整合來自各種AEM元件(包括Forms工作流程)的通知和工作。 當觸發包含「指派」任務步驟的表單工作流程時，相關聯的應用程式會在受指派人的收件匣中列為任務。 如果受指派人是群組，則該任務會出現在所有群組成員的「收件匣」中，直到個別人員宣告或委派該任務為止。
+此外，AEM收件匣會整合來自各種AEM元件（包括Forms工作流程）的通知和工作。 當觸發包含「指派」任務步驟的表單工作流程時，相關聯的應用程式會在受指派人的收件匣中列為任務。 如果受指派人是群組，則該任務會出現在所有群組成員的「收件匣」中，直到個別人員宣告或委派該任務為止。
 
 收件匣使用者介面提供清單和行事曆檢視以檢視工作。 您也可以配置檢視設定。 您可以根據各種引數篩選任務。 如需檢視和篩選的詳細資訊，請參閱[您的收件匣](/help/sites-authoring/inbox.md)。
 
@@ -104,12 +104,12 @@ ht-degree: 2%
 
 AEM收件匣只會顯示作用中的任務。 已完成的任務未出現在清單中。 不過，您可以使用收件匣篩選器根據數個引數來篩選任務，例如任務型別、狀態以及開始和結束日期。 若要檢視已完成的工作，請執行下列動作：
 
-1. 在AEM收件匣中，選取![切換側面板1](assets/toggle-side-panel1.png)以開啟篩選選擇器。
+1. 在AEM收件匣中，選取![切換側面板1](assets/toggle-side-panel1.png)以開啟篩選器選擇器。
 1. 選取&#x200B;**[!UICONTROL 工作狀態]**&#x200B;摺疊式功能表，然後選取&#x200B;**[!UICONTROL 完成]**。 所有已完成的任務都會出現。
 
    ![篩選器](assets/filter.png)
 
-1. 選取以選取工作並按一下[開啟]。**&#x200B;**
+1. 選取以選取工作並按一下[開啟]。****
 
 任務會開啟以顯示與任務相關聯的檔案或最適化表單。 對於最適化表單，任務會顯示唯讀的最適化表單或其PDF記錄檔案，如[指派任務工作流程步驟](/help/sites-developing/workflows-step-ref.md)的表單/檔案索引標籤中所設定。
 
@@ -125,7 +125,7 @@ AEM收件匣只會顯示作用中的任務。 已完成的任務未出現在清�
 
 ### 無法在AEM收件匣中檢視與AEM工作流程相關的專案 {#unable-to-see-aem-worklow-items}
 
-工作流程模型所有者無法在AEM收件匣中檢視與AEM工作流程相關的專案。 若要解決此問題，請將下列索引新增至您的AEM存放庫並重新建立索引。
+工作流程模型擁有者無法在AEM收件匣中檢視與AEM工作流程相關的專案。 若要解決此問題，請將下列索引新增至您的AEM存放庫並重新建立索引。
 
 1. 使用下列其中一種方法來新增索引：
 
@@ -140,7 +140,7 @@ AEM收件匣只會顯示作用中的任務。 已完成的任務未出現在清�
      | allowExplicitSharing | allowExplicitSharing | 布林值 |
 
 
-   * 透過AEM套件部署索引。 您可以使用[AEM Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/using.html?lang=zh-Hant)專案來建立可部署的AEM封裝。 使用以下範常式式碼，將索引新增至AEM Archetype專案：
+   * 透過AEM套件部署索引。 您可以使用[AEM Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/using.html?lang=en)專案來建立可部署的AEM套件。 使用以下範常式式碼，將索引新增至AEM Archetype專案：
 
    ```Java
       .property("sharedWith", "sharedWith").type(TYPENAME_STRING).propertyIndex()
@@ -150,8 +150,8 @@ AEM收件匣只會顯示作用中的任務。 已完成的任務未出現在清�
       .property("allowExplicitSharing", "allowExplicitSharing").type(TYPENAME_BOOLEAN).propertyIndex()
    ```
 
-1. [建立屬性索引並將其設定為true](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/queries-and-indexing.html?lang=zh-Hant#the-property-index)。
+1. [建立屬性索引並將其設定為true](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/queries-and-indexing.html#the-property-index)。
 
 1. 在CRX DE中設定索引或透過封裝進行部署後，[重新索引存放庫](https://helpx.adobe.com/in/experience-manager/kb/HowToCheckLuceneIndex.html#Completelyrebuildtheindex)。
 
-https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/queries-and-indexing.html?lang=zh-Hant
+https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/queries-and-indexing.html
