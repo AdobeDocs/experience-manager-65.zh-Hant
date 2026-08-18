@@ -10,16 +10,16 @@ feature: HTML5 Forms,Mobile Forms
 role: User, Developer
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '1152'
+source-wordcount: '1165'
 ht-degree: 2%
 
 ---
 
 # 最適化和HTML5表單的外觀架構 {#appearance-framework-for-adaptive-and-html-forms}
 
-Forms (適用性表單和HTML5表單)使用[jQuery](https://jquery.com/)、[Backbone.js](https://backbonejs.org/)和[Underscore.js](https://underscorejs.org/)資料庫的外觀和指令碼。 表單也針對表單中的所有互動式元素（例如欄位和按鈕）使用[jQuery UI](https://jqueryui.com/) **Widget**&#x200B;架構。 此架構可讓Form開發人員在Forms中使用一組豐富的可用jQuery Widget和外掛程式。 您也可以從使用者擷取資料（如leadDigits/trailDigits限制或實作圖片子句）時實作表單特定邏輯。 表單開發人員可以建立並使用自訂外觀，以改善資料擷取體驗，使其更人性化。
+Forms （適用性表單和HTML5表單）使用[jQuery](https://jquery.com/)、[Backbone.js](https://backbonejs.org/)和[Underscore.js](https://underscorejs.org/)資料庫的外觀和指令碼。 表單也針對表單中的所有互動式元素（例如欄位和按鈕）使用[jQuery UI](https://jqueryui.com/) **Widget**&#x200B;架構。 此架構可讓Form開發人員在Forms中使用一組豐富的可用jQuery Widget和外掛程式。 您也可以從使用者擷取資料（如leadDigits/trailDigits限制或實作圖片子句）時實作表單特定邏輯。 表單開發人員可以建立並使用自訂外觀，以改善資料擷取體驗，使其更人性化。
 
-本文內容適用於對jQuery和jQuery Widget有足夠瞭解的開發人員。 它提供外觀架構的深入分析，並可讓開發人員為表單欄位建立替代外觀。
+本文內容適用於對jQuery和jQuery Widget有足夠瞭解的開發人員。 它將insight提供至外觀架構中，並可讓開發人員為表單欄位建立替代外觀。
 
 外觀架構依賴各種選項、事件（觸發器）和函式來擷取使用者與表單的互動，並回應模型變更以通知一般使用者。 此外：
 
@@ -51,7 +51,7 @@ Forms (適用性表單和HTML5表單)使用[jQuery](https://jquery.com/)、[Back
   </tr>
   <tr>
    <td>screenReaderText</td>
-   <td>熒幕Reader會使用此值提供欄位相關資訊的旁白。 表單提供值，您可以覆寫值。<br /> </td>
+   <td>熒幕助讀程式會使用此值來提供欄位相關資訊的旁白。 表單提供值，您可以覆寫值。<br /> </td>
   </tr>
   <tr>
    <td>tabIndex</td>
@@ -100,19 +100,19 @@ Forms (適用性表單和HTML5表單)使用[jQuery](https://jquery.com/)、[Back
   </tr>
   <tr>
    <td>XFA_ENTER_EVENT</td>
-   <td>每當欄位成為焦點時，就會觸發此事件。 它可讓「enter」指令碼在欄位上執行。 觸發事件的語法是<br /> (Widget)。_trigger(xfalib.ut.XfaUtil.prototype.XFA_ENTER_EVENT)<br /> </td>
+   <td>每當欄位成為焦點時，就會觸發此事件。 它可讓「enter」指令碼在欄位上執行。 觸發事件的語法為<br /> (Widget)。_trigger(xfalib.ut.XfaUtil.prototype.XFA_ENTER_EVENT)<br /> </td>
   </tr>
   <tr>
    <td>XFA_EXIT_EVENT</td>
-   <td>只要使用者離開欄位，就會觸發此事件。 它可讓引擎設定欄位的值，並執行其「退出」指令碼。 觸發事件的語法是<br /> (Widget)。_trigger(xfalib.ut.XfaUtil.prototype.XFA_EXIT_EVENT)<br /> </td>
+   <td>只要使用者離開欄位，就會觸發此事件。 它可讓引擎設定欄位的值，並執行其「退出」指令碼。 觸發事件的語法為<br /> (Widget)。_trigger(xfalib.ut.XfaUtil.prototype.XFA_EXIT_EVENT)<br /> </td>
   </tr>
   <tr>
    <td>XFA_CHANGE_EVENT</td>
-   <td>此事件會觸發，以允許引擎執行在欄位上寫入的「變更」指令碼。 觸發事件的語法是<br /> (Widget)。_trigger(xfalib.ut.XfaUtil.prototype.XFA_CHANGE_EVENT)<br /> </td>
+   <td>此事件會觸發，以允許引擎執行在欄位上寫入的「變更」指令碼。 觸發事件的語法為<br /> (Widget)。_trigger(xfalib.ut.XfaUtil.prototype.XFA_CHANGE_EVENT)<br /> </td>
   </tr>
   <tr>
    <td>XFA_CLICK_EVENT</td>
-   <td>此事件在每次按一下欄位時觸發。 它可讓引擎執行在欄位上撰寫的「click」指令碼。 觸發事件的語法是<br /> (Widget)。_trigger(xfalib.ut.XfaUtil.prototype.XFA_CLICK_EVENT)<br /> </td>
+   <td>此事件在每次按一下欄位時觸發。 它可讓引擎執行在欄位上撰寫的「click」指令碼。 觸發事件的語法為<br /> (Widget)。_trigger(xfalib.ut.XfaUtil.prototype.XFA_CLICK_EVENT)<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -136,11 +136,11 @@ Forms (適用性表單和HTML5表單)使用[jQuery](https://jquery.com/)、[Back
    <td>將焦點放在欄位上並呼叫XFA_CLICK_EVENT。</td>
   </tr>
   <tr>
-   <td><p>markError：function(errorMessage， errorType)<br /> <br /> <em>erorrMessage：代表錯誤的字串</em> <br /> <em>errorType：字串("warning"/"error")</em></p> <p><strong>附註</strong>：僅適用於HTML5表單。</p> </td>
+   <td><p>markError：function(errorMessage， errorType)<br /> <br /> <em>erorrMessage：代表錯誤的字串</em> <br /> <em>errorType：字串("warning"/"error")</em></p> <p><strong>注意</strong>：僅適用於HTML5表單。</p> </td>
    <td>傳送錯誤訊息和錯誤型別至Widget。 Widget會顯示錯誤。</td>
   </tr>
   <tr>
-   <td><p>clearError：函式()</p> <p><strong>附註</strong>：僅適用於HTML5表單。</p> </td>
+   <td><p>clearError：函式()</p> <p><strong>注意</strong>：僅適用於HTML5表單。</p> </td>
    <td>若欄位中的錯誤已修正，則呼叫。 Widget會隱藏錯誤。</td>
   </tr>
  </tbody>
@@ -251,11 +251,11 @@ Forms (適用性表單和HTML5表單)使用[jQuery](https://jquery.com/)、[Back
   </tr>
   <tr>
    <td>狀態</td>
-   <td><p>允許的狀態數。 </p> <p>兩個用於調適型表單（開、關），三個用於HTML5表單（開、關、中性）。</p> </td>
+   <td><p>允許的狀態數。 </p> <p>兩個適用於調適型表單（開、關），三個適用於HTML5表單（開、關、中性）。</p> </td>
   </tr>
   <tr>
    <td>州別</td>
-   <td><p>元素的目前狀態。</p> <p>兩個用於調適型表單（開、關），三個用於HTML5表單（開、關、中性）。</p> </td>
+   <td><p>元素的目前狀態。</p> <p>兩個適用於調適型表單（開、關），三個適用於HTML5表單（開、關、中性）。</p> </td>
   </tr>
  </tbody>
 </table>

@@ -12,16 +12,16 @@ solution: Experience Manager
 feature: Communities
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '2028'
+source-wordcount: '2073'
 ht-degree: 2%
 
 ---
 
 # 稽核主控台 {#moderation-console}
 
-在AEM Communities中，管理員和社群版主（指派為版主的受信任社群成員）可同時在Author和Publish環境中大量[版主社群內容](/help/communities/moderate-ugc.md)。
+在AEM Communities中，管理員和社群版主（指派為版主的受信任社群成員）可同時在「作者」和「發佈」環境中大量[版主社群內容](/help/communities/moderate-ugc.md)。
 
-管理員和社群版主也可以在Publish環境中執行[內容中稽核](/help/communities/in-context.md)。
+管理員和社群版主也可以在發佈環境中執行[內容內調節](/help/communities/in-context.md)。
 
 所有[社群網站](/help/communities/sites-console.md)的功能是可供具有管理許可權登入的使用者使用的`Administration`功能表專案。 `Administration`連結提供對Moderation Console的存取權。
 
@@ -38,7 +38,7 @@ ht-degree: 2%
 
 只有當以管理員或具有` [moderator permissions](/help/communities/in-context.md#identifyingtrustedmembers)`的成員身分登入時，才能執行仲裁工作。
 
-## Publish環境存取權 {#publish-environment-access}
+## 發佈環境存取權 {#publish-environment-access}
 
 若要從已發佈的社群網站存取版主主控台，需先透過社群版主登入時顯示的「管理」連結進行。
 
@@ -58,13 +58,13 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->如果所選的SRP實作公用存放區，則Publish環境的UGC僅對Author可見。 例如，預設的儲存體為JSRP，這不是Author和Publish的常見儲存體。 請參閱[社群內容存放區](/help/communities/working-with-srp.md)。
+>只有當所選的SRP實作通用存放區時，發佈環境的UGC才會顯示在Author上。 例如，預設的儲存體為JSRP，這不是Author和Publish的常見儲存體。 請參閱[社群內容存放區](/help/communities/working-with-srp.md)。
 
 ![moderationconsoleauthor](assets/moderationconsoleauthor.png)
 
 ## Moderation Console UI {#moderation-console-ui}
 
-將左側導覽邊欄放開(顯示在作者上，但不顯示在Publish上)，稽核UI有下列主要區域：
+將左側導覽邊欄放開（顯示在作者上，但不顯示在發佈上），稽核UI有下列主要區域：
 
 * **[頂端導覽列](#top-navigation-bar)**
 * **[工具列](#toolbar)**
@@ -78,14 +78,14 @@ ht-degree: 2%
 
 工具列位於頂端導覽列下方，在左側提供下列切換開關：
 
-* [篩選器邊欄](/help/communities/moderation.md#filterrail)
+* [篩選邊欄](/help/communities/moderation.md#filterrail)
 開啟邊欄，您可在其中選取要篩選內容的屬性。
 
 工具列位於頂端導覽列下方，在左側提供下列切換開關：
 
 ![toggleswitch](assets/toggleswitch.png)
 
-[篩選器邊欄](/help/communities/moderation.md#filterrail)
+[篩選邊欄](/help/communities/moderation.md#filterrail)
 在選取「搜尋」時開啟邊欄，允許您選取要篩選內容的屬性。
 
 ![篩選邊欄](assets/filterrail.png)
@@ -100,7 +100,7 @@ ht-degree: 2%
 * 貼文的位置
 * 張貼時間
 * 回覆貼文的次數
-* 與貼文相關的[情緒](/help/communities/moderate-ugc.md#sentiment)
+* 與貼文相關聯的[情緒](/help/communities/moderate-ugc.md#sentiment)
 * 如果核准，會顯示核取記號
 * 如果有附件，則會顯示回形針
 
@@ -148,9 +148,9 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->當管理員存取大量仲裁主控台時，所有對UGC的參考都會顯示，包括不是使用[網站建立精靈](/help/communities/sites-console.md)建立的網站，例如Geometrixx範例。
+>管理員存取大量仲裁主控台時，所有對UGC的參考皆會顯示，包括未使用[網站建立精靈](/help/communities/sites-console.md)建立的網站，例如Geometrixx範例。
 >
->當信任的社群成員在Publish上存取大量仲裁主控台時，只會顯示對該成員有權仲裁的社群網站所建立的UGC參照。 此外，也可使用「網站」篩選條件來篩選。
+>當信任的社群成員在「發佈」上存取大量稽核主控台時，只會顯示對該成員有權稽核的社群網站所建立的UGC參照。 此外，也可使用「網站」篩選條件來篩選。
 
 #### 內容類型 {#content-type}
 
@@ -182,9 +182,9 @@ ht-degree: 2%
 * 選取設定，以便您可以在編輯模式中開啟。
 * 輸入要篩選之元件的ResourceType：
 
-   * 例如，若要篩選包含的投票元件，請輸入：
+  * 例如，若要篩選包含的投票元件，請輸入：
 
-     `Voting=social/tally/components/hbs/voting`
+    `Voting=social/tally/components/hbs/voting`
 
   ![additional-contenttype](assets/additional-contenttype.png)
 
@@ -227,7 +227,7 @@ ht-degree: 2%
 
 #### 情緒 {#sentiment}
 
-[情緒](/help/communities/moderate-ugc.md#sentiment)將參考的UGC顯示限製為情緒值為正面、負面或中立的貼文。
+[情緒](/help/communities/moderate-ugc.md#sentiment)將參考的UGC顯示限製為具有情緒值（正數、負數或中性）的貼文。
 
 ![情緒](assets/sentiment.png)
 
@@ -243,9 +243,9 @@ GitHub上的[範例專案](https://github.com/Adobe-Marketing-Cloud/aem-communit
 
 1. 在AEM Author (`https://[aem-author]:4502/crx/packmgr/index.jsp`)執行個體和AEM Publish (`https://[aem-publish]:4503/crx/packmgr/index.jsp`)執行個體上開啟封裝管理員。
 1. 從GitHub程式碼建置套件`com.adobe.social.sample.moderation.filter.ui.apps-1.0-SNAPSHOT.zip`，並安裝及啟用相同的套件。
-1. 開啟AEM Author (`https://[aem-author]:4502/system/console/bundles`)執行個體和AEM Publish (`https://[aem-publish]:4503/system/console/bundles`)執行個體上的套件組合主控台。
+1. 開啟AEM作者( `https://[aem-author]:4502/system/console/bundles`)執行個體和AEM發佈( `https://[aem-publish]:4503/system/console/bundles`)執行個體上的套件組合主控台。
 1. 從GitHub建置套件(`[com](https://sample-moderation-filter.com/).adobe.social.sample.moderation.filter.core-1.0-SNAPSHOT.jar`)，並安裝及啟用相同的套件。
-1. 前往AEM Author (`https://[aem-author]:4502/crx/de/index.jsp#/apps/social/moderation/facets`)和AEM Publish (`https://[aem-publish]:4502/crx/de/index.jsp#/apps/social/moderation/facets`)執行個體上的&#x200B;**/apps/social/moderation/facets**&#x200B;節點。
+1. 前往AEM作者(`https://[aem-author]:4502/crx/de/index.jsp#/apps/social/moderation/facets`)和AEM發佈(`https://[aem-publish]:4502/crx/de/index.jsp#/apps/social/moderation/facets`)執行個體上的&#x200B;**/apps/social/moderation/facets**&#x200B;節點。
 1. 新增具有`jcr:read`許可權的技術使用者&#x200B;**communities-utility-reader**。
 
 若要在現有社群網站上公開自訂篩選器：

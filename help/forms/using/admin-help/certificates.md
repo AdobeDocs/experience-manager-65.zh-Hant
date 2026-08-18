@@ -11,7 +11,7 @@ feature: Adaptive Forms,Document Security
 role: User, Developer
 source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '653'
 ht-degree: 0%
 
 ---
@@ -27,13 +27,13 @@ ht-degree: 0%
 * **信任具有CA：**&#x200B;的憑證驗證以進行CRL驗證，同時選取[信任以取得身分]。
 * **信任具有ICA的憑證驗證：**&#x200B;請只選取信任以取得身分。 不應將ICA信任為憑證驗證。 如果您信任ICA進行憑證驗證，則ICA會成為路徑建立的CA。 如果ICA同時受到憑證驗證和身分識別的信任，則會忽略CA廠商憑證，因為ICA會變成CA。
 * **信任具有HTTP的OCSP伺服器：**&#x200B;如果OSCP回應伺服器位在HTTPs位置，您也必須選取[信任SSL連線]。 如果OSCP回應要求CRL驗證，請確定您也選取「信任身分」。
-* **Adobe根目錄：**&#x200B;不選取SSL連線或OCSP伺服器信任存放區型別。 SSL連線和OCSP伺服器不信任Adobe根目錄。 Adobe不會發行OCSP和SSL憑證。 Adobe根以別名=&quot;ADOBEROOT&quot;隱含信任。
+* **Adobe根目錄：**&#x200B;不選取SSL連線或OCSP伺服器信任存放區型別。 SSL連線和OCSP伺服器不信任Adobe根目錄。 Adobe不會發行OCSP和SSL憑證。 Adobe根目錄受到隱含信任，別名為=&quot;ADOBEROOT&quot;。
 
 僅支援X509v3憑證。 此憑證型別可在二進位DER編碼檔案（.cer檔案）或包含相同DER編碼憑證之Base64編碼版本的文字檔案(包括隱私權增強型郵件(PEM)格式的X509憑證)中提供。
 
 完成簽章驗證所需的憑證必須位於相同的存放區（HSM或資料庫）。
 
-您也可以使用信任管理員API匯入和刪除憑證。 如需詳細資訊，請參閱[使用AEM Forms](https://www.adobe.com/go/learn_aemforms_programming_63)進行程式設計中的「使用信任管理員API匯入憑證」和「使用信任管理員API刪除憑證」。
+您也可以使用信任管理員API匯入和刪除憑證。 如需詳細資訊，請參閱[使用AEM表單程式設計](https://www.adobe.com/go/learn_aemforms_programming_63)中的「使用信任管理員API匯入憑證」和「使用信任管理員API刪除憑證」。
 
 ## 匯入憑證 {#import-a-certificate}
 
@@ -49,7 +49,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >信任存放區會隱含信任Adobe根憑證以進行憑證驗證、簽章、憑證簽章及身分。
+   >信任存放區會隱含信任Adobe根憑證，以取得憑證驗證、簽章、憑證簽章和身分。
 
 1. 在「別名」方塊中，鍵入憑證的識別碼。
 1. 按一下&#x200B;**[!UICONTROL 瀏覽]**&#x200B;以尋找憑證，然後按一下&#x200B;**[!UICONTROL 確定]**。

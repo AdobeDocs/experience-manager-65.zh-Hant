@@ -11,7 +11,7 @@ feature: Communities
 role: Admin
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '1235'
+source-wordcount: '1242'
 ht-degree: 0%
 
 ---
@@ -95,7 +95,7 @@ ht-degree: 0%
 1. 識別您要變更的元素（例如：撰寫器區域、工具列按鈕、訊息字型等）。
 1. 識別影響這些元素的CSS類別/規則。
 1. 建立樣式表檔案(.css)。
-1. 將樣式表包含在您網站的使用者端資料庫資料夾([clientlibs](#clientlibs-for-scf))中，並確定它包含在您的範本和具有[ui：includeClientLib](../../help/sites-developing/clientlibs.md)的頁面中。
+1. 將樣式表包含在您網站的使用者端資料庫資料夾([clientlibs](#clientlibs-for-scf))中，並確定它包含在您的範本和具有[ui:includeClientLib](../../help/sites-developing/clientlibs.md)的頁面中。
 
 1. 重新定義已在樣式表中識別(#2)的CSS類別和規則，並新增樣式。
 
@@ -111,7 +111,7 @@ ht-degree: 0%
 
 若要擴充元件JavaScript實作，您需要：
 
-1. 為應用程式建立元件，並將jcr：resourceSuperType設定為擴充元件的jcr：resourceType值，例如social/forum/components/hbs/forum。
+1. 為應用程式建立元件，並將jcr:resourceSuperType設定為擴充元件的jcr:resourceType值，例如social/forum/components/hbs/forum。
 1. 檢查預設SCF元件的JavaScript，以決定需要使用SCF.registerComponent()註冊的方法。
 1. 複製擴充元件的JavaScript或從頭開始。
 1. 擴充方法。
@@ -161,7 +161,7 @@ SCF的clientlibs遵循兩個變體的非常特定命名模式，這些模式僅�
 
 ### 完成Clientlibs {#complete-clientlibs}
 
-完整的（非作者） clientlib包含相依性，並可方便地包含在ui：includeClientLib中。
+完整的（非作者） clientlibs包含相依性，並可方便地包含在ui:includeClientLib中。
 
 您可以在下列位置找到這些版本：
 

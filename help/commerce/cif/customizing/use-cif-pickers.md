@@ -12,7 +12,7 @@ solution: Experience Manager,Commerce
 role: Admin, Developer
 source-git-commit: a45b09c52d780a954e606d4cae73a3a02a8a6aa4
 workflow-type: tm+mt
-source-wordcount: '563'
+source-wordcount: '632'
 ht-degree: 0%
 
 ---
@@ -59,7 +59,7 @@ AEM內容與Commerce製作提供一套製作工具，可協助AEM作者和行銷
 
 類別選擇器可用於元件對話方塊中，其使用方式與產品選擇器類似。
 
-以下程式碼片段可用於cq：dialog設定：
+下列程式碼片段可用於cq:dialog設定：
 
 ```xml
 <category jcr:primaryType="nt:unstructured" 

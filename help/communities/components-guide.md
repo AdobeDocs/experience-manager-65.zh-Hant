@@ -11,7 +11,7 @@ feature: Communities
 role: Admin
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '1153'
+source-wordcount: '1212'
 ht-degree: 0%
 
 ---
@@ -103,19 +103,19 @@ ht-degree: 0%
 
 ![社群元件4](assets/community-component4.png)
 
-* **包含具有sling：include**&#x200B;的子元件
+* **包含具有sling:include**&#x200B;的子元件
 
   如果取消勾選，「元件指南」會使用存放庫中的現有資源（jcr節點，是par節點的子節點）。
 
-   * 文字顯示為：「透過其par節點包含此元件」。
+  * 文字顯示為：「透過其par節點包含此元件」。
 
   如果勾選，「元件指南」會使用Sling來動態包含子節點的resourceType （非現有資源）的元件。
 
-   * 文字顯示為：「此元件為動態包含。」
+  * 文字顯示為：「此元件為動態包含。」
 
   預設為未勾選。
 
-### Publish互動 {#publish-interactions}
+### 發佈互動 {#publish-interactions}
 
 在發佈執行個體上使用指南時，元件和功能可能會以網站訪客（未登入）及具有各種許可權的成員身分在登入時體驗。
 
@@ -123,7 +123,7 @@ ht-degree: 0%
 >
 >請注意，如果SRP預設為[JSRP](jsrp.md)，則發佈執行個體上輸入的UGC將只會顯示在發佈上，而&#x200B;*不會*&#x200B;從作者執行個體上的[稽核](moderate-ugc.md)主控台中顯示。
 
-## 用戶端資源庫 {#client-side-libraries}
+## 用戶端程式庫 {#client-side-libraries}
 
 針對每個元件列出的使用者端程式庫(clientlibs)是那些將元件放在頁面上時要參考的&#x200B;*必要*。 clientlibs提供一種方法，用於管理和最佳化瀏覽器中用於呈現元件的JavaScript和CSS的下載。
 

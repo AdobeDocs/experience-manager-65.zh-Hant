@@ -10,7 +10,7 @@ feature: Forms Portal
 role: Admin, User, Developer
 source-git-commit: e821be5233fd5f6688507096790d219d25903892
 workflow-type: tm+mt
-source-wordcount: '531'
+source-wordcount: '537'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ AEM Forms入口網站資料和中繼資料服務提供草稿和提交方式的�
 
 >[!NOTE]
 >
->當您使用Forms Portal提交動作或啟用最適化表單中的將資料儲存在Forms Portal選項時，表單資料會儲存在AEM存放庫中。 在生產環境中，建議不要將草稿或提交的表單資料儲存在AEM存放庫中。 相反地，您必須將草稿和提交元件與安全的儲存裝置（例如企業資料庫）整合，以儲存草稿和提交的表單資料。
+>當您使用Forms入口網站提交動作或啟用最適化表單中的將資料儲存在表單入口網站選項時，表單資料會儲存在AEM存放庫中。 在生產環境中，建議不要將草稿或提交的表單資料儲存在AEM存放庫中。 相反地，您必須將草稿和提交元件與安全的儲存裝置（例如企業資料庫）整合，以儲存草稿和提交的表單資料。
 >
 >如需詳細資訊，請參閱[將草稿與提交元件與資料庫整合的範例](/help/forms/using/integrate-draft-submission-database.md)。
 
@@ -103,7 +103,7 @@ AEM Forms入口網站資料和中繼資料服務提供草稿和提交方式的�
 
 除了上述指定的設定之外，請提供已設定遠端處理執行個體的相關資訊。
 
-在AEM Web主控台組態( `https://[host]:'port'/system/console/configMgr`)中，按一下以編輯模式開啟&#x200B;**AEM DS設定服務**。 在AEM DS設定服務對話方塊中，提供處理伺服器URL、處理伺服器使用者名稱及密碼的相關資訊。
+在AEM Web主控台設定( `https://[host]:'port'/system/console/configMgr`)中，按一下以在編輯模式中開啟&#x200B;**AEM DS設定服務**。 在AEM DS設定服務對話方塊中，提供有關處理伺服器URL、處理伺服器使用者名稱和密碼的資訊。
 
 >[!NOTE]
 >

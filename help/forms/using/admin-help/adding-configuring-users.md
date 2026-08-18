@@ -9,7 +9,7 @@ role: User, Developer
 feature: Adaptive Forms
 source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '1739'
+source-wordcount: '1771'
 ht-degree: 0%
 
 ---
@@ -74,7 +74,7 @@ ht-degree: 0%
 
 **地區：**&#x200B;使用者的ISO地區
 
-**商務行事曆索引鍵：**&#x200B;可讓您根據此設定的值，將商務行事曆對應到使用者。 商務行事曆定義商務和非商務日。 AEM表單在計算事件如提醒、截止日期和呈報的未來日期和時間時，可以使用商業行事曆。 指派商務行事曆金鑰給使用者的方式取決於您是使用企業、本機或混合式網域。 （請參閱[新增網域](/help/forms/using/admin-help/adding-domains.md#adding-domains)。）
+**商務行事曆索引鍵：**&#x200B;可讓您根據此設定的值，將商務行事曆對應到使用者。 商務行事曆定義商務和非商務日。 AEM表單可在計算事件（如提醒、截止日期和呈報）的未來日期和時間時，使用企業行事曆。 指派商務行事曆金鑰給使用者的方式取決於您是使用企業、本機或混合式網域。 （請參閱[新增網域](/help/forms/using/admin-help/adding-domains.md#adding-domains)。）
 
 如果您使用本機或混合式網域，有關使用者的資訊只會儲存在「使用者管理」資料庫中。 對於這些使用者，將商務行事曆索引鍵設定為字串。 然後將商務行事曆索引鍵（字串）對應至表單工作流程中的商務行事曆。
 
@@ -90,7 +90,7 @@ ht-degree: 0%
 
 確認使用者ID是唯一的。 請勿使用已指派給已刪除使用者的密碼。
 
-AEM forms無法區分具有相同使用者ID和密碼但屬於不同網域的使用者帳戶。 為避免此問題，請勿在多個網域上建立具有相同使用者ID的帳戶。
+AEM表單無法區分具有相同使用者ID和密碼但屬於不同網域的使用者帳戶。 為避免此問題，請勿在多個網域上建立具有相同使用者ID的帳戶。
 
 使用SQL Server作為資料庫時，您無法建立超過255個字元的使用者ID。
 
@@ -160,7 +160,7 @@ AEM forms無法區分具有相同使用者ID和密碼但屬於不同網域的使
 
 >[!NOTE]
 >
->JEE上的AEM Forms也可讓在OSGi上執行的AEM Forms附加元件的使用者辨識為AEM使用者。 在JEE上的AEM Forms與在OSGi上執行的AEM Forms附加元件之間需要單一登入(例如HTML工作區)的情況下，此為必要專案。 上述刪除操作只會從JEE上的AEM Forms移除使用者。 系統不會從OSGi環境上執行的AEM Forms附加元件中刪除使用者。 但是在刪除使用者後所嘗試的任何登入(登入嘗試AEM Forms附加元件JEE伺服器或AEM Forms附加元件OSGi環境)都遭到拒絕。
+>JEE上的AEM Forms也可讓在OSGi上執行的AEM Forms附加元件的使用者辨識為AEM使用者。 若JEE上的AEM Forms與在OSGi上執行的AEM Forms附加元件之間需要單一登入（例如HTML工作區），則需要此專案。 上述刪除操作只會從JEE上的AEM Forms移除使用者。 系統不會從OSGi環境上執行的AEM Forms附加元件中刪除使用者。 但是在刪除使用者後所嘗試的任何登入（登入嘗試AEM Forms附加元件JEE伺服器或AEM Forms附加元件OSGi環境）都遭到拒絕。
 
 ## 建立自訂登入錯誤處理常式 {#create-custom-login-error-handler}
 
@@ -169,7 +169,7 @@ AEM forms無法區分具有相同使用者ID和密碼但屬於不同網域的使
 * 通訊管理解決方案
 * AEM forms Workspace
 
-  ***注意&#x200B;**： AEM Forms版本已棄用Flex Workspace。*
+  ***注意&#x200B;**： AEM表單版本已棄用Flex Workspace。*
 
 * 表單管理員
 * 程序報告

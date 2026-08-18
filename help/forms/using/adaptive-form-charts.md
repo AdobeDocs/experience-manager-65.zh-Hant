@@ -9,7 +9,7 @@ solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '2005'
+source-wordcount: '2045'
 ht-degree: 0%
 
 ---
@@ -23,8 +23,8 @@ AEM Forms附加元件套件提供立即可用的Chart元件。 您可在最適�
 
 1. 圓餅圖
 1. 欄
-1. 圈狀
-1. 長條
+1. 環形圖
+1. 長條圖
 1. 線條
 1. 線條和點
 1. 點
@@ -149,10 +149,10 @@ Multiply(valueArray, category) {
 編寫自訂函式後，請執行以下操作以使其可用於圖表設定：
 
 1. 在與最適化表單或檔案相關聯的使用者端資料庫中新增自訂函式。
-1. 在CRXDE Lite中，使用以下屬性在apps資料夾中建立nt：unstructured節點：
+1. 在CRXDE Lite中，使用下列屬性在Apps資料夾中建立nt:unstructured節點：
    * 將guideComponentType設定為fd/af/reducer。 （必要）
    * 將值設為自訂JavaScript函式的完整名稱。 （必要）
-   * 將jcr：description設定為有意義的名稱。 它出現在&#x200B;**使用函式**&#x200B;下拉式清單中。 例如，**乘**。
+   * 將jcr:description設定為有意義的名稱。 它出現在&#x200B;**使用函式**&#x200B;下拉式清單中。 例如，**乘**。
    * 將qtip設為函式的簡短說明。 將指標暫留在「使用函式」下拉式清單中的函式名稱上時，它會以工具提示的形式出現。
    * 按一下「儲存全部&#x200B;**」**&#x200B;以儲存組態。
    * 函式現在可用於圖表中。
@@ -176,7 +176,7 @@ chartType屬性指定圖表的型別。 可能的值包括圓餅圖、環圈圖�
 1. 從最適化表單的AEM側邊欄拖放下拉式清單元件。
 1. 選取元件並點選![設定](cmppr1.png)。
 1. 指定下拉式清單的標題。 例如，選取圖表型別。
-1. 在「專案」區段中新增支援的圖表型別，以填入下拉式清單。 按一下&#x200B;**「完成」**。
+1. 在「專案」區段中新增支援的圖表型別，以填入下拉式清單。 按一下&#x200B;**完成**。
    ![選取圖表下拉式清單](chart-drop-down.png)
 
 1. 選取下拉式元件並點選![替代文字](rule_editor_icon.png)。 在規則編輯器中，在視覺規則編輯器中編寫規則，如下所示。

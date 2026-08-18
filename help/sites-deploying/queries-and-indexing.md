@@ -12,7 +12,7 @@ solution: Experience Manager, Experience Manager Sites
 role: Admin
 source-git-commit: eeeb31d81c22f8dace7a170953bf45a709f5ac73
 workflow-type: tm+mt
-source-wordcount: '3051'
+source-wordcount: '3098'
 ht-degree: 1%
 
 ---
@@ -58,7 +58,7 @@ Oak查詢引擎支援下列語言：
 
 上圖是Apache Oak查詢執行機制的高層級表示。
 
-首先，查詢會剖析為抽象語法樹狀結構。 然後，會檢查查詢並轉換為SQL-2 (Oak查詢的原生語言)。
+首先，查詢會剖析為抽象語法樹狀結構。 然後，會檢查查詢並轉換為SQL-2 （Oak查詢的原生語言）。
 
 接著，會參考每個索引來估計查詢的成本。 完成後，會擷取最便宜索引的結果。 最後，會篩選結果，以確保目前使用者具有結果的讀取許可權，以及結果符合完整查詢。
 
@@ -70,17 +70,17 @@ Oak查詢引擎支援下列語言：
 
 如果大型存放庫需要重新索引，尤其是使用MongoDB和針對全文檢索索引時，請考慮文字預先擷取，並使用Oak-run建立初始索引和重新索引。
 
-索引在&#x200B;**Oak：index**&#x200B;節點下的儲存庫中設定為節點。
+索引在&#x200B;**Oak:index**&#x200B;節點下的存放庫中設定為節點。
 
-索引節點的型別必須是&#x200B;**oak：QueryIndexDefinition。**&#x200B;每個索引器都有數個組態選項作為節點屬性使用。 如需詳細資訊，請參閱以下每個索引器型別的設定詳細資料。
+索引節點的型別必須是&#x200B;**oak:QueryIndexDefinition.** 每個索引器都有數個組態選項作為節點屬性使用。 如需詳細資訊，請參閱以下每個索引器型別的設定詳細資料。
 
 ### 屬性索引 {#the-property-index}
 
 對於具有屬性限制但不是全文檢索的查詢，屬性索引非常有用。 可依下列程式進行設定：
 
 1. 前往`http://localhost:4502/crx/de/index.jsp`開啟CRXDE
-1. 在&#x200B;**oak：index**&#x200B;下建立節點
-1. 為節點&#x200B;**PropertyIndex**&#x200B;命名，並將節點型別設定為&#x200B;**oak：QueryIndexDefinition**
+1. 在&#x200B;**oak:index**&#x200B;下建立節點
+1. 為節點&#x200B;**PropertyIndex**&#x200B;命名，並將節點型別設定為&#x200B;**oak:QueryIndexDefinition**
 1. 為新節點設定下列屬性：
 
    * **型別：** `property` （型別為String）
@@ -94,7 +94,7 @@ Oak查詢引擎支援下列語言：
 
 * **type**&#x200B;屬性指定索引的型別，在此情況下，它必須設定為&#x200B;**屬性**
 
-* **propertyNames**&#x200B;屬性指出儲存在索引中的屬性清單。 如果遺失該節點，則會使用節點名稱作為屬性名稱參考值。 在此範例中，工作為公開其節點唯一識別碼(UUID)的&#x200B;**jcr：uuid**&#x200B;屬性會新增至索引。
+* **propertyNames**&#x200B;屬性指出儲存在索引中的屬性清單。 如果遺失該節點，則會使用節點名稱作為屬性名稱參考值。 在此範例中，工作為公開其節點唯一識別碼(UUID)的&#x200B;**jcr:uuid**&#x200B;屬性會新增至索引。
 
 * **唯一**&#x200B;旗標，如果設為&#x200B;**true**，會在屬性索引上新增唯一性限制。
 
@@ -117,8 +117,8 @@ AEM 6提供以Apache Lucene為基礎的全文檢索器。
 
 您可以依照以下程式設定Lucene全文索引：
 
-1. 開啟CRXDE並在&#x200B;**oak：index**&#x200B;下建立節點。
-1. 為節點&#x200B;**LuceneIndex**&#x200B;命名，並將節點型別設定為&#x200B;**oak：QueryIndexDefinition**
+1. 開啟CRXDE並在&#x200B;**oak:index**&#x200B;下建立節點。
+1. 為節點&#x200B;**LuceneIndex**&#x200B;命名，並將節點型別設定為&#x200B;**oak:QueryIndexDefinition**
 1. 將下列屬性新增至節點：
 
    * **型別：** `lucene` （型別為String）
@@ -159,14 +159,14 @@ Lucene索引有下列設定選項：
 
 | <b>Token</b> | <b>檔案識別碼</b> |
 | --- | --- |
-| 194 | ...， 200，... |
-| 品牌 | ...， 100，... |
-| 立方體 | ...、200、300、... |
+| 194 | ..., 200,... |
+| 品牌 | ..., 100,... |
+| 立方體 | ..., 200, 300,... |
 | 維度 | 300 |
-| 完成 | ...， 100，... |
+| 完成 | ..., 100,... |
 | invent | 200 |
-| 物件 | ...， 300，... |
-| rubik | ...、100、200、... |
+| 物件 | ..., 300,... |
+| rubik | ..., 100, 200,... |
 
 檔案清單已排序。 這在查詢時很方便。
 
@@ -189,8 +189,8 @@ Lucene索引有下列設定選項：
 
 | <b>Token</b> | <b>檔案識別碼</b> |
 | --- | --- |
-| rubik | 10， 100， 200， 1000 |
-| 立方體 | 30、200、300、2000 |
+| rubik | 10, 100, 200, 1000 |
+| 立方體 | 30, 200, 300, 2000 |
 
 
 Lucene在兩個清單（或循環配置資源`n`清單，搜尋`n`個字時）之間來回切換：
@@ -316,39 +316,39 @@ select * from [nt:base] where [alias] = '/admin'
 
 * **名稱：** `analyzers`
 
-   * **名稱：** `default`
+  * **名稱：** `default`
 
-      * **名稱：** `charFilters`
-      * **型別：** `nt:unstructured`
+    * **名稱：** `charFilters`
+    * **型別：** `nt:unstructured`
 
-         * **名稱：** `HTMLStrip`
-         * **名稱：** `Mapping`
+      * **名稱：** `HTMLStrip`
+      * **名稱：** `Mapping`
 
-      * **名稱：** `tokenizer`
+    * **名稱：** `tokenizer`
 
-         * **屬性名稱：** `name`
+      * **屬性名稱：** `name`
 
-            * **型別：** `String`
-            * **值：** `Standard`
+        * **型別：** `String`
+        * **值：** `Standard`
 
-      * **名稱：** `filters`
-      * **型別：** `nt:unstructured`
+    * **名稱：** `filters`
+    * **型別：** `nt:unstructured`
 
-         * **名稱：** `LowerCase`
-         * **名稱：** `Stop`
+      * **名稱：** `LowerCase`
+      * **名稱：** `Stop`
 
-            * **屬性名稱：** `words`
+        * **屬性名稱：** `words`
 
-               * **型別：** `String`
-               * **值：** `stop1.txt, stop2.txt`
+          * **型別：** `String`
+          * **值：** `stop1.txt, stop2.txt`
 
-            * **名稱：** `stop1.txt`
+        * **名稱：** `stop1.txt`
 
-               * **型別：** `nt:file`
+          * **型別：** `nt:file`
 
-            * **名稱：** `stop2.txt`
+        * **名稱：** `stop2.txt`
 
-               * **型別：** `nt:file`
+          * **型別：** `nt:file`
 
 濾鏡、charFilters和tokenizers的名稱是透過移除原廠尾碼所組成。 因此：
 
@@ -425,7 +425,7 @@ AEM也可以設定為與遠端Solr伺服器執行個體搭配使用：
 1. 在&#x200B;**Oak Solr**&#x200B;伺服器提供者下方的下拉式清單中選擇&#x200B;**遠端Solr**。
 
 1. 前往CRXDE並以管理員身分登入。
-1. 在&#x200B;**oak：index**&#x200B;下建立名為&#x200B;**solrIndex**&#x200B;的節點，並設定下列屬性：
+1. 在&#x200B;**oak:index**&#x200B;下建立名為&#x200B;**solrIndex**&#x200B;的節點，並設定下列屬性：
 
    * **型別：** solr （型別為String）
    * **非同步處理：**&#x200B;非同步處理（字串型別）

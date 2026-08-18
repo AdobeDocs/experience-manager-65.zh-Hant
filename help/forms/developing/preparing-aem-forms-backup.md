@@ -11,7 +11,7 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,APIs & Integrations
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '2484'
+source-wordcount: '2536'
 ht-degree: 0%
 
 ---
@@ -111,8 +111,8 @@ ht-degree: 0%
    * adobe-backup-restore-client-sdk.jar
    * adobe-livecycle-client.jar
    * adobe-usermanager-client.jar
-   * adobe-utilities.jar (如果將AEM Forms部署在JBoss Application Server上，則為必要)
-   * jbossall-client.jar (如果AEM Forms部署在JBoss Application Server上，則為必要)
+   * adobe-utilities.jar （如果將AEM Forms部署在JBoss Application Server上，則為必要）
+   * jbossall-client.jar （如果AEM Forms部署在JBoss Application Server上，則為必要）
 
 1. 建立BackupService使用者端API物件
 
@@ -226,8 +226,8 @@ ht-degree: 0%
    * adobe-backup-restore-client-sdk.jar
    * adobe-livecycle-client.jar
    * adobe-usermanager-client.jar
-   * adobe-utilities.jar (如果將AEM Forms部署在JBoss Application Server上，則為必要)
-   * jbossall-client.jar (如果AEM Forms部署在JBoss Application Server上，則為必要)
+   * adobe-utilities.jar （如果將AEM Forms部署在JBoss Application Server上，則為必要）
+   * jbossall-client.jar （如果AEM Forms部署在JBoss Application Server上，則為必要）
 
 1. 建立BackupService使用者端API物件
 

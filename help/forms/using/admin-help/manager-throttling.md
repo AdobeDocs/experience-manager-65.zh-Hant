@@ -11,7 +11,7 @@ feature: Adaptive Forms
 role: User, Developer
 source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '1042'
+source-wordcount: '1053'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ AEM forms （及舊版）使用JMS佇列來非同步執行操作。 在AEM表單
 
 ## 關於長期（非同步）操作 {#about-long-lived-asynchronous-operations}
 
-在AEM Forms中，服務執行的作業可能是短期（同步）或長期（非同步）。 短期作業會在從中叫用的相同執行緒上同步完成。 這些作業會等待回應再繼續。
+在AEM表單中，服務執行的作業可為短期（同步）或長期（非同步）。 短期作業會在從中叫用的相同執行緒上同步完成。 這些作業會等待回應再繼續。
 
 長期作業可能橫跨系統，甚至可能延伸到組織之外，例如，客戶必須完成並提交貸款申請表，作為整合多項自動化和人為作業的較大解決方案的一部分。 在等待回應的同時，這類作業必須繼續。 長期作業以非同步方式執行其基礎工作，允許資源在等待完成時以其他方式參與。 不同於短期作業，「工作管理員」在叫用長期作業時，不會將其視為已完成。 必須發生外部觸發程式（例如要求相同服務上進行其他作業的系統或提交表單的使用者）才能完成作業。
 
@@ -40,7 +40,7 @@ AEM forms （及舊版）使用JMS佇列來非同步執行操作。 AEM Forms會
 1. Work Manager會將工作專案儲存在資料庫表格中，並將唯一識別碼指派給工作專案。 資料庫記錄包含執行工作專案所需的所有資訊。
 1. 當執行緒變成可用狀態時，工作管理員執行緒會拉入工作專案。 提取工作專案之前，執行緒可以檢查所需的服務是否已啟動、是否有足夠的棧積大小可提取下一個工作專案，以及是否有足夠的CPU週期可處理工作專案。 Work Manager也會在排程其執行時評估工作專案的屬性（例如其優先順序）。
 
-AEM Forms管理員可以使用「健康情況監視」來檢查Work Manager統計資料，例如佇列中的工作專案數量及其狀態。 您也可以使用「健全狀態監視器」來暫停、繼續、重試或刪除工作專案。 （請參閱[檢視與工作管理員相關的統計資料](/help/forms/using/admin-help/view-statistics-related-manager.md#view-statistics-related-to-work-manager)。）
+AEM表單管理員可使用健康狀態監視來檢查工作管理員統計資料，例如佇列中的工作專案數量及其狀態。 您也可以使用「健全狀態監視器」來暫停、繼續、重試或刪除工作專案。 （請參閱[檢視與工作管理員相關的統計資料](/help/forms/using/admin-help/view-statistics-related-manager.md#view-statistics-related-to-work-manager)。）
 
 ## 設定Work Manager節流選項 {#configuring-work-manager-throttling-options}
 

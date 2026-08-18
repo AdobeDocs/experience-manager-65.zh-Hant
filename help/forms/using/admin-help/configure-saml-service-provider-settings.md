@@ -1,6 +1,6 @@
 ---
 title: 設定SAML服務提供者設定
-description: 您可以設定SAML服務提供者設定，讓使用者透過指定的協力廠商身分提供者(IDP)登入並驗證AEM Forms。
+description: 您可以設定SAML服務提供者設定，讓使用者透過指定的第三方身分提供者(IDP)登入並驗證AEM表單。
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_user_management
@@ -11,7 +11,7 @@ feature: Adaptive Forms
 role: User, Developer
 source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '607'
+source-wordcount: '626'
 ht-degree: 0%
 
 ---
@@ -27,9 +27,9 @@ ht-degree: 0%
 如需SAML的說明，請參閱[安全性宣告標籤語言(SAML) V2.0技術概覽](https://docs.oasis-open.org/security/saml/Post2.0/sstc-saml-tech-overview-2.0.html)。
 
 1. 在管理控制檯中，按一下「設定>使用者管理>設定> SAML服務提供者設定」。
-1. 在「服務提供者實體ID」方塊中，輸入唯一ID以用作AEM表單服務提供者實作的識別碼。 您也可以在設定IDP時指定這個唯一ID （例如，`um.lc.com`）。您也可以使用用來存取AEM表單的URL （例如，`https://AEMformsserver`）。
+1. 在「服務提供者實體ID」方塊中，輸入唯一ID以用作AEM表單服務提供者實作的識別碼。 您也可以在設定IDP時指定此唯一ID （例如，`um.lc.com`）。 您也可以使用用來存取AEM表單的URL （例如，`https://AEMformsserver`）。
 1. 在服務提供者基本URL方塊中，輸入您Forms伺服器的基本URL （例如，`https://AEMformsserver:8080`）。
-1. （選擇性）若要讓AEM Forms傳送已簽署的驗證要求給IDP，請執行下列工作：
+1. （選用）若要讓AEM表單傳送已簽署的驗證要求給IDP，請執行以下工作：
 
    * 使用信任管理員匯入PKCS #12格式的認證，並選取檔案簽署認證作為信任存放區型別。 （請參閱[管理本機認證](/help/forms/using/admin-help/local-credentials.md#managing-local-credentials)。）
    * 在「服務提供者認證金鑰別名」清單中，選取您在「信任存放區」中指派給認證的別名。
@@ -48,7 +48,7 @@ ht-degree: 0%
 
    如果未選取此選項，使用者會直接進入第三方SAML身分提供者的登入頁面，其中屬於企業網域的使用者可以驗證。
 
-1. （選擇性）選取啟用成品繫結以啟用成品繫結支援。 根據預設，POST繫結會與SAML搭配使用。 但如果您已設定成品繫結，請選取此選項。 選取此選項時，不會透過瀏覽器請求傳遞實際使用者宣告。 相反地，會傳遞宣告指標，並使用後端Web服務呼叫擷取宣告。
+1. （選擇性）選取啟用成品繫結以啟用成品繫結支援。 依預設，POST繫結會與SAML搭配使用。 但如果您已設定成品繫結，請選取此選項。 選取此選項時，不會透過瀏覽器請求傳遞實際使用者宣告。 相反地，會傳遞宣告指標，並使用後端Web服務呼叫擷取宣告。
 1. （選擇性）選取「啟用重新導向繫結」以支援使用重新導向的SAML繫結。
 1. （選用）在自訂屬性中，指定其他屬性。 其他屬性為名稱=值配對，以新行分隔。
 

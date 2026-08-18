@@ -10,7 +10,7 @@ solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
-source-wordcount: '335'
+source-wordcount: '337'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 AEM Forms可讓您將表單儲存為草稿。 草稿功能可讓您維護進行中表單，您可稍後從任何裝置完成並提交此表單。
 
-依預設，AEM Forms會將與表單草稿和提交相關聯的使用者資料儲存在Publish執行個體上的`/content/forms/fp`節點中。 此外，AEM Forms Portal元件也提供資料服務，供您自訂儲存草稿及提交之使用者資料的實作。 例如，您可以將使用者資料儲存在資料存放區中。
+依預設，AEM Forms會將與表單草稿和提交相關聯的使用者資料儲存在發佈執行個體上的`/content/forms/fp`節點中。 此外，AEM Forms Portal元件也提供資料服務，供您自訂儲存草稿及提交之使用者資料的實作。 例如，您可以將使用者資料儲存在資料存放區中。
 
 ## 先決條件  {#prerequisites}
 
@@ -97,7 +97,7 @@ public interface DraftDataService {
 
 >[!NOTE]
 >
->草稿ID欄位長度的最小值為26個字元。 Adobe建議將草稿ID長度設定為26個或更多字元。
+>草稿ID欄位長度的最小值為26個字元。 Adobe建議將草稿ID長度設為26個或更多字元。
 
 ## 提交資料服務 {#submission-data-service}
 

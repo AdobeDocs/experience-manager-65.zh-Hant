@@ -11,7 +11,7 @@ solution: Experience Manager, Experience Manager Sites
 role: Admin
 source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
 workflow-type: tm+mt
-source-wordcount: '951'
+source-wordcount: '956'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 由於Granite納入CRX Repository的JCR API規格實作，因此有自己的使用者和群組管理。
 
-這些帳戶是[AEM帳戶](/help/sites-administering/security.md)的基礎基礎，如果從[AEM使用者主控台](/help/sites-administering/security.md#accessing-user-administration-with-the-security-console) （例如`http://localhost:4502/useradmin`）存取帳戶，則會反映對Granite管理所做的任何帳戶變更。 您也可以從AEM使用者主控台管理許可權和其他AEM細節。
+這些帳戶是[AEM帳戶](/help/sites-administering/security.md)的基礎基礎，如果從[AEM使用者主控台](/help/sites-administering/security.md#accessing-user-administration-with-the-security-console) （例如`http://localhost:4502/useradmin`）存取帳戶，則會反映對Granite管理所做的任何帳戶變更。 從「AEM使用者」主控台，您也可以管理許可權和其他AEM細節。
 
 觸控最佳化UI的&#x200B;**[工具](/help/sites-administering/tools-consoles.md)**&#x200B;主控台提供Granite使用者和群組管理主控台：
 
@@ -35,9 +35,9 @@ ht-degree: 1%
 
   **使用者**&#x200B;主控台清單：
 
-   * 使用者名稱
-   * 使用者登入名稱（帳戶名稱）
-   * 已指定帳戶的任何標題
+  * 使用者名稱
+  * 使用者登入名稱（帳戶名稱）
+  * 已指定帳戶的任何標題
 
 * [群組管理](#group-administration)
 
@@ -45,9 +45,9 @@ ht-degree: 1%
 
   **群組**&#x200B;主控台清單：
 
-   * 群組名稱
-   * 群組說明
-   * 群組中的使用者/群組數量
+  * 群組名稱
+  * 群組說明
+  * 群組中的使用者/群組數量
 
 ## 使用者管理 {#user-administration}
 
@@ -91,8 +91,8 @@ ht-degree: 1%
    * **關於**
    * **帳戶設定**
 
-      * **狀態**
-您可以將帳戶標幟為&#x200B;**使用中**&#x200B;或&#x200B;**非使用中**。
+     * **狀態**
+       您可以將帳戶標幟為&#x200B;**使用中**&#x200B;或&#x200B;**非使用中**。
 
    * **像片**
 

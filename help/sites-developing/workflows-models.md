@@ -12,7 +12,7 @@ feature: Developing
 role: Developer
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
-source-wordcount: '2462'
+source-wordcount: '2503'
 ht-degree: 2%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 2%
 
 >[!CAUTION]
 >
->若要使用傳統UI，請參閱[AEM 6.3檔案](https://helpx.adobe.com/tw/experience-manager/6-3/help/sites-developing/workflows-models.html)以取得參考。
+>如需使用傳統UI，請參閱[AEM 6.3檔案](https://helpx.adobe.com/tw/experience-manager/6-3/help/sites-developing/workflows-models.html)以取得參考。
 
 您可以建立[工作流程模型](/help/sites-developing/workflows.md#model)，以定義使用者啟動工作流程時所執行的一系列步驟。 您也可以定義模型屬性，例如工作流程是暫時的或使用多個資源。
 
@@ -85,9 +85,9 @@ ht-degree: 2%
 * 步驟瀏覽器無法使用（左側）。
 * 工具列（右側）中有&#x200B;**編輯**&#x200B;動作可用。
 * 最初，模型及其屬性會以唯讀模式顯示為：
-   * 預設工作流程在`/libs`中
-   * 舊版工作流程位於`/etc`
-選取&#x200B;**編輯**&#x200B;將：
+  * 預設工作流程在`/libs`中
+  * 舊版工作流程位於 `/etc`
+    選取&#x200B;**編輯**&#x200B;將：
 * 將工作流程復本帶入`/conf`
 * 讓步驟瀏覽器可供使用
 * 讓您進行變更
@@ -279,13 +279,13 @@ ht-degree: 2%
 
    `/conf/global/settings/workflow/models/<*your-model-name*>`
 
-   按一下&#x200B;**「完成」**。
+   按一下&#x200B;**完成**。
 
 1. 選取&#x200B;**新增篩選器**&#x200B;並指定&#x200B;*執行階段*&#x200B;工作流程模型的路徑：
 
    `/var/workflow/models/<*your-model-name*>`
 
-   按一下&#x200B;**「完成」**。
+   按一下&#x200B;**完成**。
 
 1. 為您的模型使用的任何自訂指令碼新增其他篩選器。
 1. 按一下&#x200B;**儲存**&#x200B;以確認您的篩選器定義。
@@ -391,7 +391,7 @@ ht-degree: 2%
 
    ![wf-13](assets/wf-13.png)
 
-1. 將此工作流程套用至您的頁面，以便當使用者移至&#x200B;**完成** **驗證內容**&#x200B;步驟時，他們可以選擇是否要依要求&#x200B;**Publish頁面**，或&#x200B;**拒絕Publish要求**。
+1. 將此工作流程套用至您的頁面，以便在使用者移至&#x200B;**完成** **驗證內容**&#x200B;步驟時，他們可以選擇是要&#x200B;**依照要求發佈頁面**，還是&#x200B;**拒絕發佈要求**。
 
    ![chlimage_1-72](assets/chlimage_1-72.png)
 
@@ -415,7 +415,6 @@ ht-degree: 2%
    * 透過將&#x200B;**值**&#x200B;設定為`true`，將此定義為&#x200B;**預設路由**。
 
    * 作為&#x200B;**規則**，設定指令碼的路徑。 例如：
-
      `/apps/myapp/workflow/scripts/myscript1.ecma`
 
    >[!NOTE]
@@ -425,7 +424,6 @@ ht-degree: 2%
 1. 編輯&#x200B;**OR分割**&#x200B;的&#x200B;**分支2**&#x200B;的屬性。
 
    * 作為&#x200B;**規則**，設定其他指令碼的路徑。 例如：
-
      `/apps/myapp/workflow/scripts/myscript2.ecma`
 
 1. 設定每個分支中個別步驟的屬性。 請確定已設定&#x200B;**使用者/群組**。

@@ -7,7 +7,7 @@ feature: Adaptive Forms
 role: User, Developer
 source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
 workflow-type: tm+mt
-source-wordcount: '3945'
+source-wordcount: '3986'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 ## 必備條件知識 {#prerequisites}
 
-熟悉JEE、JBoss®、WebSphere®及WebLogic應用程式伺服器、Red Hat® Linux®、SUSE® Linux®、Microsoft®Windows、IBM®AIX®或Sun Solaris™作業系統、Oracle、IBM® DB2®或SQL Server資料庫伺服器上的Adobe Experience Manager (AEM) Forms以及Web環境。
+熟悉JEE、JBoss®、WebSphere®及WebLogic應用程式伺服器、Red Hat® Linux®、SUSE® Linux®、Microsoft®Windows、IBM®AIX®或Sun Solaris™作業系統、Oracle、IBM® DB2®或SQL Server資料庫伺服器上的Adobe Experience Manager (AEM)Forms以及Web環境。
 
 ## 使用者層級 {#user-level}
 
@@ -154,7 +154,7 @@ GemFire會產生記錄資訊，可用來診斷GemFire快取已找到並採用的
 
 共用公司網路的每個不同叢集應該使用單獨的TCP位置集合（如果使用TCP位置），或使用單獨的UDP連線埠號碼（如果使用多點傳送UDP組態）。 由於UDP自動探索是JEE上AEM Forms的預設設定，而且多個叢集使用相同的預設連線埠33456，因此不嘗試通訊的叢集可能會意外地這樣做。 例如，生產和QA叢集應該保持獨立，但可以透過UDP多點傳送相互連線。
 
-在GemFire不正確叢集的網路中，最常見的情況是在Bootstrap叢集期間發現重複的連線埠。 您可能會發現Bootstrap程式沒有明確原因而失敗。 通常會看到類似以下的錯誤：
+在GemFire不正確叢集的網路中，最常見的情況是在Bootstrap叢集期間發現重複的連線埠。 您可能會發現Bootstrap程式在沒有明確原因的情況下失敗。 通常會看到類似以下的錯誤：
 
 ```xml
 Caused by: com.ibm.ejs.container.UnknownLocalException: nested exception is: com.adobe.pof.schema.ObjectTypeNotFoundException: Object Type: dsc.sc_service_configuration not found.
@@ -168,7 +168,7 @@ Caused by: com.ibm.ejs.container.UnknownLocalException: nested exception is: com
 
 在這種情況下，啟動載入器會使用GemFire來存取必要的表格。 而且，透過JDBC存取的資料表與GemFire傳回的快取資料表資訊不一致，因為資料表資訊來自具有不同基礎資料庫的不同叢集。
 
-雖然在Bootstrap期間經常會明顯出現重複的連線埠，但此情況有可能在稍後出現。 當叢集在關閉之後重新啟動，而發生其他叢集的Bootstrap時，就會發生這種情況。 或者，當網路組態變更時，使先前為多點傳送目的而隔離的叢集彼此可見。
+雖然Bootstrap期間經常會顯示重複的連線埠，但此情況稍後可能會出現。 當叢集在關閉後重新啟動，而發生其他叢集的Bootstrap時，就可能發生這種情況。 或者，當網路組態變更時，使先前為多點傳送目的而隔離的叢集彼此可見。
 
 若要診斷這些情況，請檢視GemFire記錄檔，並仔細考慮是否只找到預期的節點。 若要修正問題，必須將`adobe.cache.multicast-port`屬性變更為叢集之一或兩個叢集上的不同值。
 
@@ -224,9 +224,9 @@ Caused by: com.ibm.ejs.container.UnknownLocalException: nested exception is: com
 
 引用：
 
-* [透過JBoss®叢集的高可用性企業服務](https://docs.jboss.org/jbossas/jboss4guide/r4/html/cluster.chapt.html)
+* [透過JBoss®叢集提供高可用性企業服務](https://docs.jboss.org/jbossas/jboss4guide/r4/html/cluster.chapt.html)
 
-* [OracleWebLogic伺服器使用叢集](https://docs.oracle.com/cd/E12840_01/wls/docs103/pdf/cluster.pdf)
+* [Oracle WebLogic Server-Using叢集](https://docs.oracle.com/cd/E12840_01/wls/docs103/pdf/cluster.pdf)
 
 ### 如何檢查JBoss®是否正確叢集？ {#check-jboss-clustering}
 
@@ -295,7 +295,7 @@ Caused by: java.sql.SQLException: ORA-00060: deadlock detected while waiting for
 
 若要讓叢集順利運作，所有叢集節點的時鐘都必須密切同步。 這無法以手動方式完成，且必須由定期執行之某種形式的時間同步服務完成。 所有節點的時鐘必須彼此位於一秒內。 最佳實務不僅要求同步叢集節點，還要求負載平衡器、資料庫伺服器、GDS NAS伺服器以及任何其他元件。
 
-Windows時間同步處理趨向於網域控制站。 UNIX®系統可使用NTP同步至不同的時間來源。 如果可能的話，最好是讓所有系統(包括JEE節點上的AEM Forms和其他系統元件)都同步至相同的來源。
+Windows時間同步處理趨向於網域控制站。 UNIX®系統可使用NTP同步至不同的時間來源。 如果可能的話，最好是讓所有系統（包括JEE節點上的AEM Forms和其他系統元件）都同步至相同的來源。
 
 即使是在最暫時的測試環境中，手動設定節點的時鐘仍是不夠的。 手動設定時鐘無法提供足夠的精確同步處理，而且兩個節點上的時鐘不可避免地會彼此相對漂移，即使在一天的時間段內也是如此。 使用中的時間同步機制是可靠叢集操作的關鍵。
 
@@ -320,7 +320,7 @@ JEE版AEM Forms中的某些檔案路徑設定會在整個叢集內建立，且�
 應檢查下列設定：
 
 1. 暫存目錄的位置
-1. Adobe伺服器字型目錄的位置
+1. Adobe Server Fonts目錄的位置
 1. Customer Fonts目錄的位置
 1. System Fonts目錄的位置
 1. 資料服務組態檔的位置

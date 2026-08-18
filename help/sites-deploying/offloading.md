@@ -11,7 +11,7 @@ solution: Experience Manager, Experience Manager Sites
 role: Admin
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '2318'
+source-wordcount: '2386'
 ht-degree: 1%
 
 ---
@@ -20,9 +20,9 @@ ht-degree: 1%
 
 ## 簡介 {#introduction}
 
-解除安裝會將處理工作分散到拓撲中的Experience Manager執行個體之間。 解除安裝時，您可以使用特定Experience Manager例項來執行特定型別的處理。 專業化的處理可讓您最大限度地使用可用的伺服器資源。
+解除安裝會將處理工作分散到拓撲中的Experience Manager執行個體之間。 透過解除安裝，您可以使用特定的Experience Manager執行個體來執行特定型別的處理。 專業化的處理可讓您最大限度地使用可用的伺服器資源。
 
-解除安裝是根據[Apache Sling Discovery](https://sling.apache.org/documentation/bundles/discovery-api-and-impl.html)和Sling JobManager功能。 若要使用解除安裝，您可以將Experience Manager叢集新增至拓朴，並識別叢集處理的工作主題。 叢集是由一或多個Experience Manager執行處理所組成，因此單一執行處理會被視為叢集。
+解除安裝是根據[Apache Sling Discovery](https://sling.apache.org/documentation/bundles/discovery-api-and-impl.html)和Sling JobManager功能。 若要使用解除安裝，您可以將Experience Manager叢集新增至拓撲，並識別叢集所處理的工作主題。 叢集是由一或多個Experience Manager執行個體組成，因此單一執行個體會被視為叢集。
 
 如需將執行個體加入至拓撲的詳細資訊，請參閱[管理拓撲](/help/sites-deploying/offloading.md#administering-topologies)。
 
@@ -52,7 +52,7 @@ Sling JobManager和JobConsumer可讓您建立拓撲中處理的工作：
 
 ## 管理拓撲 {#administering-topologies}
 
-拓撲是參與解除安裝的鬆散耦合Experience Manager叢集。 叢集由一或多個Experience Manager伺服器執行處理組成（單一執行處理被視為叢集）。
+拓撲是鬆散耦合的Experience Manager叢集，參與解除安裝。 叢集包含一或多個Experience Manager伺服器執行個體（單一執行個體視為叢集）。
 
 每個Experience Manager執行個體都會執行下列解除安裝相關服務：
 
@@ -67,7 +67,7 @@ Sling JobManager和JobConsumer可讓您建立拓撲中處理的工作：
 
 ### 檢視拓撲 {#viewing-the-topology}
 
-使用「拓朴瀏覽器」來探索Experience Manager執行處理所參與的拓朴的狀態。 「拓朴瀏覽器」會顯示拓朴的叢集和執行處理。
+使用拓撲瀏覽器來探索Experience Manager執行個體參與的拓撲狀態。 「拓朴瀏覽器」會顯示拓朴的叢集和執行處理。
 
 對於每個叢集，您會看到一個叢整合員清單，指出每個成員加入叢集的順序，以及哪個成員是前導。 Current屬性指出您目前管理的執行處理。
 
@@ -104,14 +104,14 @@ Sling JobManager和JobConsumer可讓您建立拓撲中處理的工作：
 
 ### 設定拓朴成員資格 {#configuring-topology-membership}
 
-Apache Sling Resource-Based Discovery Service會在每個執行個體上執行，以控制Experience Manager執行個體與拓撲互動的方式。
+Apache Sling資源型探索服務會在每個執行個體上執行，以控制Experience Manager執行個體與拓撲的互動方式。
 
 探索服務會定期傳送POST要求（心率）給拓撲聯結器服務，以建立與維護與拓撲的連線。 Topology Connector服務會維護允許加入拓撲的IP位址或主機名稱允許清單：
 
 * 若要將執行個體聯結至拓撲，請指定根成員的Topology Connector服務的URL。
 * 若要啟用執行個體以加入拓撲，請將執行個體新增至根成員的拓撲聯結器服務的允許清單。
 
-使用Web主控台或sling：OsgiConfig節點來設定org.apache.sling.discovery.impt.Config服務的下列屬性：
+使用Web主控台或sling:OsgiConfig節點來設定org.apache.sling.discovery.impt.Config服務的下列屬性：
 
 <table>
  <tbody>
@@ -208,7 +208,7 @@ Experience Manager中安裝了數個JobConsumer實作。 這些JobConsumers註�
 | 工作主題 | 服務PID | 說明 |
 |---|---|---|
 | / | org.apache.sling.event.impl.jobs.deprecated.EventAdminBridge | 隨Apache Sling安裝。 處理OSGi事件管理員產生的工作，以便回溯相容性。 |
-| com/day/cq/replication/job/&amp;amp；ast； | com.day.cq.replication.impl.AgentManagerImpl | 復製作業裝載的復寫代理程式。 |
+| com/day/cq/replication/job/&amp;ast； | com.day.cq.replication.impl.AgentManagerImpl | 復製作業裝載的復寫代理程式。 |
 
 <!--
 | com/adobe/granite/workflow/offloading |com.adobe.granite.workflow.core.offloading.WorkflowOffloadingJobConsumer |Processes jobs that the DAM Update Asset Offloader workflow generates. |
@@ -226,7 +226,7 @@ Apache Sling作業取用者管理員服務提供主題允許清單和封鎖清�
 
 | Web主控台中的屬性名稱 | OSGi ID | 說明 |
 |---|---|---|
-| 主題允許清單 | job.consumermanager.whitelist | 本機JobManager服務處理的主題清單。 預設值&amp;amp；ast；會傳送所有主題至已註冊的TopicConsumer服務。 |
+| 主題允許清單 | job.consumermanager.whitelist | 本機JobManager服務處理的主題清單。 預設值&amp;ast；會傳送所有主題至已註冊的TopicConsumer服務。 |
 | 主題封鎖清單 | job.consumermanager.blacklist | 本機JobManager服務未處理的主題清單。 |
 
 ## 建立解除安裝的復寫代理程式 {#creating-replication-agents-for-offloading}
@@ -261,13 +261,13 @@ Apache Sling作業取用者管理員服務提供主題允許清單和封鎖清�
 
 `offloading_<slingid>`，其中`<slingid>`是背景工作執行個體的Sling ID。
 
-範例： `offloading_f5c8494a-4220-49b8-b079-360a72f71559`
+範例：`offloading_f5c8494a-4220-49b8-b079-360a72f71559`
 
 **在製作執行個體上命名反向代理程式：**
 
 `offloading_reverse_<slingid>`，其中`<slingid>`是背景工作執行個體的Sling ID。
 
-範例： `offloading_reverse_f5c8494a-4220-49b8-b079-360a72f71559`
+範例：`offloading_reverse_f5c8494a-4220-49b8-b079-360a72f71559`
 
 **為背景工作執行個體上的寄件匣命名：**
 

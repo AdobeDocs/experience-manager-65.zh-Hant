@@ -11,7 +11,7 @@ solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
-source-wordcount: '2167'
+source-wordcount: '2196'
 ht-degree: 0%
 
 ---
@@ -188,19 +188,19 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->在Adobe Reader/Acrobat或行動Reader中檢視這類檔案（包含頁面0）時，受保護檔案會依預設開啟。
+>在Adobe Reader/Acrobat或Mobile Reader中檢視此類檔案（包含頁面0）時，受保護檔案會依預設開啟。
 
 **若要將封面頁新增至受原則保護的檔案**
 
 在Workbench中使用下列處理：
 
-**Protect
-具有封面頁的檔案：**&#x200B;使用指定的原則保護PDF檔案，並將封面頁新增至檔案
+**保護
+具有封面頁的檔案：**&#x200B;使用指定的原則保護PDF檔案的安全，並將封面頁新增至檔案
 
-**擷取受保護的檔案：**&#x200B;從含有封面頁的PDF檔案中擷取受原則保護的PDF檔案
+**擷取受保護的檔案：**&#x200B;從含有封面頁的PDF檔案擷取受原則保護的PDF檔案
 
 使用下列Document Security API：
 
-**protectDocumentWithCoverPage：**&#x200B;使用指定的原則保護指定PDF，並傳回封面頁和受保護檔案作為附件的檔案
+**protectDocumentWithCoverPage：**&#x200B;使用指定的原則保護指定PDF的安全，並傳回包含封面頁和受保護檔案作為附件的檔案
 `//Create a ServiceClientFactory instance ServiceClientFactory factory = ServiceClientFactory.createInstance(connectionProps); //Create a RightsManagementClient object RightsManagementClient rightsClient = new RightsManagementClient(factory); //Reference a PDF document to which a policy is applied FileInputStream fileInputStream = new FileInputStream("C:\\testFile.pdf"); Document inPDF = new Document(fileInputStream); //Reference a Cover Page document FileInputStream coverPageInputStream = new FileInputStream("C:\\CoverPage.pdf"); Document inCoverDoc = new Document(coverPageInputStream); //Create a Document Manager object DocumentManager documentManager = rightsClient.getDocumentManager(); //Apply a policy to the PDF document RMSecureDocumentResult rmSecureDocument = documentManager.protectDocumentWithCoverPage( inPDF, "ProtectedPDF.pdf", "PolicySetName", "PolicyName", null, null, inCoverDoc, true); //Retrieve the policy-protected PDF document Document protectPDF = rmSecureDocument.getProtectedDoc(); //Save the policy-protected PDF document File myFile = new File("C:\\PolicyProtectedDoc.pdf"); protectPDF.copyToFile(myFile);` **extractProtectedDocument：**&#x200B;擷取封面檔案中所含受保護檔案的附件。 可以使用protectDocumentWithCoverPage方法建立具有封面頁的檔案
 `//Create a ServiceClientFactory instance ServiceClientFactory factory = ServiceClientFactory.createInstance(connectionProps); //Create a RightsManagementClient object RightsManagementClient rightsClient = new RightsManagementClient(factory); //Reference a protected PDF document with a Cover Page FileInputStream fileInputStream = new FileInputStream("C:\\policyProtectedDocWithCoverPage.pdf"); Document inPDF = new Document(fileInputStream); //Create a Document Manager object DocumentManager documentManager = rightsClient.getDocumentManager(); //Apply a policy to the PDF document Document extractedDoc = documentManager.extractProtectedDocument(inPDF); //Save the policy-protected PDF document File myFile = new File("C:\\PolicyProtectedDoc.pdf"); extractedDoc.copyToFile(myFile);`

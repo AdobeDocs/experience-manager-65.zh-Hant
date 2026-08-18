@@ -10,14 +10,14 @@ solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '253'
-ht-degree: 26%
+source-wordcount: '266'
+ht-degree: 30%
 
 ---
 
 # 最適化表單關鍵字 {#adaptive-forms-keywords}
 
-<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hant)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。本文會介紹使用基礎元件編寫最適化表單的舊方法。</span>
+<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hant)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。 這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。 本文會介紹使用基礎元件編寫最適化表單的舊方法。</span>
 
 調適型表單關鍵字為預先定義的保留識別碼，對調適型表單具有特殊意義。 您無法在最適化表單中將這些關鍵字當作識別碼使用。 下表列出作為適用性表單的保留識別碼的所有關鍵字。
 
@@ -26,12 +26,12 @@ ht-degree: 26%
   <tr>
    <td><p>初始化</p> </td>
    <td><p>getonoffValues</p> </td>
-   <td><p>minOccure</p> </td>
+   <td><p>minOccur</p> </td>
   </tr>
   <tr>
    <td><p>驗證</p> </td>
    <td><p>setGuideState</p> </td>
-   <td><p>maxOccure</p> </td>
+   <td><p>maxOccur</p> </td>
   </tr>
   <tr>
    <td><p>forceElementFocusChange</p> </td>
@@ -105,7 +105,7 @@ ht-degree: 26%
   </tr>
   <tr>
    <td><p>強制</p> </td>
-   <td><p>面板</p> </td>
+   <td><p>panel</p> </td>
    <td><p>templateId</p> </td>
   </tr>
   <tr>

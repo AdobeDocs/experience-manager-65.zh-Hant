@@ -1,6 +1,6 @@
 ---
 title: 管理具有引用和多頁面的複合資產
-description: 瞭解如何從 [!DNL Adobe InDesign]、 [!DNL Adobe Illustrator]和 [!DNL Adobe Photoshop]內建立數位資產的參考。 使用「頁面檢視器」功能可檢視多頁檔案的個別子資產頁面，例如PDF、INDD、PPT、PPTX和AI檔案。
+description: 瞭解如何從 [!DNL Adobe InDesign]、 [!DNL Adobe Illustrator]和 [!DNL Adobe Photoshop]內建立數位資產的參考。 使用「頁面檢視器」功能可檢視多頁檔案（例如PDF、INDD、PPT、PPTX和AI檔案）的個別子資產頁面。
 contentOwner: AG
 role: User, Admin
 feature: Asset Management
@@ -8,7 +8,7 @@ exl-id: 1ea9d8fe-602c-452b-9a24-4125b705aedf
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '1382'
+source-wordcount: '1473'
 ht-degree: 0%
 
 ---
@@ -54,7 +54,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如果[!DNL InDesign Server]已進行代理處理，[!DNL InDesign]個檔案的預覽已內嵌於其XMP中繼資料中。 在此情況下，不會明確要求縮圖擷取。 不過，如果[!DNL InDesign Server]不是代理的，則必須明確擷取[!DNL InDesign]檔案的縮圖。
+>如果[!DNL InDesign Server]已使用代理程式，[!DNL InDesign]個檔案的預覽已內嵌於其XMP中繼資料中。 在此情況下，不會明確要求縮圖擷取。 不過，如果[!DNL InDesign Server]不是代理的，則必須明確擷取[!DNL InDesign]檔案的縮圖。
 
 上傳INDD檔案時，會透過查詢存放庫中有`xmpMM:InstanceID`和`xmpMM:DocumentID`屬性的資產來擷取參考。
 
@@ -87,7 +87,7 @@ ht-degree: 0%
 
 ## 建立子資產 {#generate-subassets}
 
-對於支援的多頁格式資產 — PDF檔案、AI檔案、[!DNL Microsoft PowerPoint]和[!DNL Apple Keynote]檔案，以及[!DNL Adobe InDesign]檔案 — [!DNL Experience Manager]可以產生與原始資產的每個個別頁面相對應的子資產。 這些子資產已連結至&#x200B;*上層*&#x200B;資產，有助於進行多頁檢視。 就所有其他目的而言，會將子資產視為[!DNL Experience Manager]中的一般資產。
+對於支援的多頁格式資產 — PDF檔案、AI檔案、[!DNL Microsoft PowerPoint]和[!DNL Apple Keynote]檔案以及[!DNL Adobe InDesign]檔案 — [!DNL Experience Manager]可以產生與原始資產的每個個別頁面相對應的子資產。 這些子資產已連結至&#x200B;*上層*&#x200B;資產，有助於進行多頁檢視。 就所有其他目的而言，會將子資產視為[!DNL Experience Manager]中的一般資產。
 
 子資產產生功能預設為停用。 若要啟用子資產產生功能，請執行下列步驟：
 
@@ -100,14 +100,14 @@ ht-degree: 0%
 * 新資產： [!UICONTROL DAM更新Assets]工作流程會在任何上傳至[!DNL Experience Manager]的新資產上執行。 系統會自動為新多頁資產產生子資產。
 * 現有的多頁資產：在執行以下任一步驟後，手動執行[!UICONTROL DAM更新Assets]工作流程：
 
-   * 選取資產並按一下[!UICONTROL 時間軸]以開啟左側面板。 或者，使用鍵盤快速鍵`alt + 3`。 按一下「[!UICONTROL 開始工作流程]」、選取「[!UICONTROL DAM更新資產]」、按一下「[!UICONTROL 開始]」，然後按一下「[!UICONTROL 繼續]」。
-   * 選取資產，然後從工具列按一下[!UICONTROL 建立] > [!UICONTROL 工作流程]。 從快顯對話方塊中，選取[!UICONTROL DAM更新資產]工作流程，按一下[!UICONTROL 開始]，然後按一下[!UICONTROL 繼續]。
+  * 選取資產並按一下[!UICONTROL 時間軸]以開啟左側面板。 或者，使用鍵盤快速鍵`alt + 3`。 按一下「[!UICONTROL 開始工作流程]」、選取「[!UICONTROL DAM更新資產]」、按一下「[!UICONTROL 開始]」，然後按一下「[!UICONTROL 繼續]」。
+  * 選取資產，然後從工具列按一下[!UICONTROL 建立] > [!UICONTROL 工作流程]。 從快顯對話方塊中，選取[!UICONTROL DAM更新資產]工作流程，按一下[!UICONTROL 開始]，然後按一下[!UICONTROL 繼續]。
 
 尤其是Microsoft Word檔案，請執行&#x200B;**[!UICONTROL DAM Parse Word檔案]**&#x200B;工作流程。 它會從Microsoft Word檔案的內容產生`cq:Page`元件。 從檔案擷取的影像是從`cq:Page`元件參照的。 即使停用子資產產生，也會擷取這些影像。
 
 >[!NOTE]
 >
->在[!UICONTROL 處理引數]的[!UICONTROL 建立子資產程式 — 步驟屬性]中，您可以指定[!DNL Experience Manager]產生的子資產數目。 預設值為 5。若要產生所有子資產，請將此欄位留空。 如果欄位有負值，則不會產生任何子資產。
+>在[!UICONTROL 處理引數]的[!UICONTROL 建立子資產程式 — 步驟屬性]中，您可以指定[!DNL Experience Manager]產生的子資產數目。 預設值為 5。 若要產生所有子資產，請將此欄位留空。 如果欄位有負值，則不會產生任何子資產。
 
 ## 檢視子資產 {#viewing-subassets}
 

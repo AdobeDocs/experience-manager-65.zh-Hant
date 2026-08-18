@@ -11,7 +11,7 @@ feature: Operations
 role: Admin
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
-source-wordcount: '1010'
+source-wordcount: '1015'
 ht-degree: 1%
 
 ---
@@ -117,7 +117,7 @@ ht-degree: 1%
 
 將工作流程例項的數目降至最低會提升工作流程引擎的效能，因此您可以定期從儲存庫中清除已完成或執行中的工作流程例項。
 
-設定&#x200B;**AdobeGranite工作流程清除組態**&#x200B;以根據其年齡和狀態清除工作流程執行個體。 您也可以清除所有模型或特定模型的工作流程例項。
+設定&#x200B;**Adobe Granite工作流程清除設定**&#x200B;以根據其年齡和狀態清除工作流程執行個體。 您也可以清除所有模型或特定模型的工作流程例項。
 
 您也可以建立多個服務組態，以永久刪除滿足不同條件的工作流程例項。 例如，建立一個設定，當特定工作流程模型的執行個體執行時間超過預期時間時，該設定會清除這些執行個體。 建立另一個設定，以在特定天數後清除所有已完成的工作流程，將存放庫的大小降至最低。
 
@@ -169,7 +169,7 @@ ht-degree: 1%
 
 ## 設定收件匣大小上限 {#setting-the-maximum-size-of-the-inbox}
 
-您可以設定&#x200B;**AdobeGranite工作流程服務**，使用[網頁主控台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)或[將OSGi設定新增至存放庫](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository)，以設定收件匣的大小上限。 下表說明您為任一方法設定的屬性。
+您可以設定&#x200B;**Adobe Granite工作流程服務**，使用[Web主控台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)或[將OSGi設定新增至存放庫](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository)，以設定收件匣的大小上限。 下表說明您為任一方法設定的屬性。
 
 >[!NOTE]
 >
@@ -183,13 +183,13 @@ ht-degree: 1%
 
 ## 對客戶擁有的資料存放區使用工作流程變數 {#using-workflow-variables-customer-datastore}
 
-工作流程處理的資料儲存在Adobe提供的儲存空間(JCR)。 此資料本質上可能是敏感資料。 您可能希望將所有使用者定義的中繼資料/資料儲存在您自己的受管理儲存空間中，而非Adobe提供的儲存空間。 以下各節說明如何為外部儲存設定這些變數。
+工作流程處理的資料儲存在Adobe提供的儲存空間(JCR)。 此資料本質上可能是敏感資料。 您可能想要將所有使用者定義的中繼資料/資料儲存在您自己的受管儲存空間中，而非Adobe提供的儲存空間。 以下各節說明如何為外部儲存設定這些變數。
 
 ### 設定模型以使用中繼資料的外部儲存 {#set-model-for-external-storage}
 
 在工作流程模型的層級，會提供旗標，指出模型（及其執行階段執行個體）具有中繼資料的外部儲存。 針對標籤為外部儲存的模型的工作流程例項，工作流程變數不會儲存在JCR中。
 
-屬性&#x200B;*userMetadataPersistenceEnabled*&#x200B;儲存在工作流程模型的&#x200B;*jcr：content節點*&#x200B;上。 此旗標會以&#x200B;*cq：userMetaDataCustomPersistenceEnabled*&#x200B;保留在工作流程中繼資料中。
+屬性&#x200B;*userMetadataPersistenceEnabled*&#x200B;儲存在工作流程模型的&#x200B;*jcr:content節點*&#x200B;上。 此旗標會以&#x200B;*cq:userMetaDataCustomPersistenceEnabled*&#x200B;形式保留在工作流程中繼資料中。
 
 下圖說明如何在工作流程上設定標幟。
 

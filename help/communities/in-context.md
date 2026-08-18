@@ -11,7 +11,7 @@ solution: Experience Manager
 feature: Communities
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '796'
+source-wordcount: '830'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ ht-degree: 0%
 
 ## 範例 {#example}
 
-使用在[AEM Communities快速入門](getting-started.md)時建立的[Geometrixx參與](http://localhost:4503/content/sites/engage/en.html)網站，可以在論壇中設定執行緒，以體驗Publish環境中的各種協調活動。 請參閱下文。
+使用在[AEM Communities快速入門](getting-started.md)時建立的[Geometrixx Engage](http://localhost:4503/content/sites/engage/en.html)網站，可以在論壇中設定執行緒，以體驗發佈環境中的各種協調活動。 請參閱下文。
 
 建立網站時，將Aaron McDonald (`aaron.mcdonald@mailinator.com`)加入社群參與版主群組，即可識別為信任的社群成員。
 
@@ -50,40 +50,40 @@ Rebekah Larsen (`rebekah.larsen@trashymail.com`)可以使用[成員主控台](me
 
 * 以Rebekah Larsen (rebekah.larsen@trashymail.com)登入
 
-   * 選取論壇
-   * 選取新的Post
-   * 輸入主旨
+  * 選取論壇
+  * 選取新貼文
+  * 輸入主旨
 
-     蜂鳴送鳥器何時變更花蜜
+    蜂鳴送鳥器何時變更花蜜
 
-   * 輸入內文
+  * 輸入內文
 
-     我每年都掛一隻蜂鳥餵食器，可不太成功。 他們好像來了一兩天，就是這樣。 我每週變更一次會太長嗎？ 我是否必須更早進行變更？
+    我每年都掛一隻蜂鳥餵食器，可不太成功。 他們好像來了一兩天，就是這樣。 我每週變更一次會太長嗎？ 我是否必須更早進行變更？
 
-   * 選取Post
-   * 選取登出
+  * 選取貼文
+  * 選取登出
 
 * 以Aaron McDonald (aaron.mcdonald@mailinator.com)登入
 
-   * 選取論壇
-   * 蜂鳥主題，請選取閱讀更多
-   * 輸入Post回覆的註解
+  * 選取論壇
+  * 蜂鳥主題，請選取閱讀更多
+  * 輸入張貼回覆的註解
 
-     我每週都會換一次衣服，從5月到10月都會收到衣服。
+    我每週都會換一次衣服，從5月到10月都會收到衣服。
 
-   * 選取回覆
-   * 選取登出
+  * 選取回覆
+  * 選取登出
 
 * 以Andrew Schaeffer身分登入(andrew.schaeffer@trashymail.com)
 
-   * 選取論壇
-   * 蜂鳥主題，請選取閱讀更多
-   * 輸入Post回覆的註解
+  * 選取論壇
+  * 蜂鳥主題，請選取閱讀更多
+  * 輸入張貼回覆的註解
 
-     我銷售花蜜和飼料 — 請造訪https://my.viral.url/
+    我銷售花蜜和飼料 — 請造訪https://my.viral.url/
 
-   * 選取回覆
-   * 選取登出
+  * 選取回覆
+  * 選取登出
 
 ### 匿名網站訪客(#5) {#anonymous-site-visitor}
 
@@ -122,9 +122,9 @@ Rebekah Larsen (`rebekah.larsen@trashymail.com`)可以使用[成員主控台](me
 
 ![社群 — 管理員 — 論壇](assets/community-admin-forum.png)
 
-選取管理功能表專案，以便您可以從Publish環境存取[稽核主控台](moderation.md)。
+選取[管理]功能表專案，以便您可以從[發佈]環境存取[稽核主控台](moderation.md)。
 
-請注意，對於管理員而言，所有可稽核內容皆可見，而不僅僅是GeometrixxEngage社群網站的內容。
+請注意，管理員可以看到所有可稽核的內容，而不僅僅是Geometrixx Engage社群網站的內容。
 
 搜尋篩選是可切換開啟或關閉的側面板。
 
@@ -145,9 +145,9 @@ Rebekah Larsen (`rebekah.larsen@trashymail.com`)可以使用[成員主控台](me
 
 ![社群論壇 — 版主](assets/community-forum-moderator.png)
 
-選取管理功能表專案，以便您可以從Publish環境存取[稽核主控台](moderation.md)。
+選取[管理]功能表專案，以便您可以從[發佈]環境存取[稽核主控台](moderation.md)。
 
-請注意，對於社群版主，只會顯示來自GeometrixxEngage社群網站的可稽核內容。
+請注意，對於社群版主，只會顯示來自Geometrixx Engage社群網站的可稽核內容。
 
 請注意，社群版主的選項與管理員相同（影像已關閉搜尋側邊欄），但無法存取其他AEM主控台。
 

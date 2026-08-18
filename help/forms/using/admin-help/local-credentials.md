@@ -11,7 +11,7 @@ feature: Adaptive Forms,Document Security
 role: User, Developer
 source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '533'
+source-wordcount: '545'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ AEM forms支援標準PKCS12格式（.pfx和.p12檔案）中最多4096位元的RS
 
 您可以匯入及匯出任何數量的認證。 如果您想使用相同的別名來取代過期的認證，請刪除認證，然後以相同的別名匯入新的認證。
 
-如需Acrobat Reader DC擴充功能的相關資訊和指示，請參閱[設定用於Acrobat Reader DC擴充功能的認證](/help/forms/using/admin-help/configuring-credentials-acrobat-reader-dc.md#configuring-credentials-for-use-with-acrobat-reader-dc-extensions)。
+如需Acrobat Reader DC擴充功能的相關資訊與指示，請參閱[設定與Acrobat Reader DC擴充功能搭配使用的認證](/help/forms/using/admin-help/configuring-credentials-acrobat-reader-dc.md#configuring-credentials-for-use-with-acrobat-reader-dc-extensions)。
 
 ## 匯入認證 {#import-a-credential}
 
@@ -36,12 +36,12 @@ AEM forms支援標準PKCS12格式（.pfx和.p12檔案）中最多4096位元的RS
 1. 按一下「匯入」。 在「信任存放區型別」下，選取下列其中一個選項：
 
    * **檔案簽署認證：**&#x200B;用來在檔案上發行數位簽章的認證。
-   * **Acrobat Reader DC擴充功能認證：** Acrobat Reader DC擴充功能專屬的數位憑證，可讓您在產生的PDF檔案中啟用Adobe Reader使用許可權。
-   * **預設值：**&#x200B;指出這是搭配Acrobat Reader DC擴充功能使用的預設認證。
+   * **Acrobat Reader DC延伸模組認證：**&#x200B;特定於Acrobat Reader DC延伸模組的數位憑證，可在產生的PDF檔案中啟用Adobe Reader使用許可權。
+   * **預設值：**&#x200B;指出這是搭配Acrobat Reader DC延伸模組使用的預設認證。
 
    如需取得認證的相關資訊，請參閱[準備安裝AEM表單](https://helpx.adobe.com/pdf/aem-forms/6-3/prepare-install-single-server.pdf)。
 
-1. 在「別名」方塊中，輸入認證的識別碼。 此識別碼會用作Acrobat Reader DC擴充功能及簽名服務中認證的顯示名稱。 此別名也會用來透過AEM表單SDK以程式設計方式存取認證。
+1. 在「別名」方塊中，輸入認證的識別碼。 此識別碼會用作Acrobat Reader DC Extensions和Signature service中認證的顯示名稱。 此別名也會用來透過AEM表單SDK，以程式設計方式存取認證。
 
    >[!NOTE]
    >

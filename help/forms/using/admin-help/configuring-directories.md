@@ -11,7 +11,7 @@ feature: Adaptive Forms
 role: User, Developer
 source-git-commit: e9afc12af78140ae0ec12cc2ee95fc9e175f8d94
 workflow-type: tm+mt
-source-wordcount: '3241'
+source-wordcount: '3263'
 ht-degree: 0%
 
 ---
@@ -110,7 +110,7 @@ ht-degree: 0%
 
 ### 使用者設定 {#user-settings}
 
-**唯一識別碼：** （必要）用來識別使用者的唯一且常數屬性。 使用非DN屬性當作唯一識別碼，因為使用者的DN若移至組織的其他部分，可能會變更。 此設定取決於目錄伺服器。 值為objectGUID （適用於Active Directory 2003）、nsuniqueID (適用於Sun™ One)和guid （適用於eDirectory）。
+**唯一識別碼：** （必要）用來識別使用者的唯一且常數屬性。 使用非DN屬性當作唯一識別碼，因為使用者的DN若移至組織的其他部分，可能會變更。 此設定取決於目錄伺服器。 值為objectGUID （適用於Active Directory 2003）、nsuniqueID （適用於Sun™ One）和guid （適用於eDirectory）。
 
 >[!NOTE]
 >
@@ -124,7 +124,7 @@ ht-degree: 0%
 >
 >請勿在此設定中加入使用者的DN。 若要同步特定使用者，請使用「搜尋篩選」設定。
 
-雖然Base DN是Administration Console中的必要設定，但某些目錄伺服器(例如IBM Domino Enterprise Server)可能需要空的BaseDN。 若要指定空的基本DN，請匯出config.xml檔案，編輯config.xml檔案中的設定，然後重新匯入它。 （請參閱[匯入及匯出組態檔](/help/forms/using/admin-help/importing-exporting-configuration-file.md#importing-and-exporting-the-configuration-file)。）
+雖然Base DN是Administration Console中的必要設定，但某些目錄伺服器（例如IBM Domino Enterprise Server）可能需要空的BaseDN。 若要指定空的基本DN，請匯出config.xml檔案，編輯config.xml檔案中的設定，然後重新匯入它。 （請參閱[匯入及匯出組態檔](/help/forms/using/admin-help/importing-exporting-configuration-file.md#importing-and-exporting-the-configuration-file)。）
 
 **搜尋篩選器：** （必要）用來尋找與使用者相關之記錄的搜尋篩選器。 您可以執行一級搜尋或子級搜尋。 （請參閱搜尋篩選器語法或RFC 2254。） 如需Microsoft AD架構的其他資訊，請參閱Active Directory架構。
 
@@ -140,7 +140,7 @@ ht-degree: 0%
 
 **首字母：**&#x200B;使用者首字母的結構描述屬性
 
-**商務行事曆：**&#x200B;可讓您根據此設定的值（商務行事曆索引鍵），將商務行事曆對應到使用者。 商務行事曆定義商務和非商務日。 AEM表單在計算事件如提醒、截止日期和呈報的未來日期和時間時，可以使用商業行事曆。 指派商務行事曆金鑰給使用者的方式取決於您是使用企業、本機或混合式網域。 （請參閱設定商務行事曆）。
+**商務行事曆：**&#x200B;可讓您根據此設定的值（商務行事曆索引鍵），將商務行事曆對應到使用者。 商務行事曆定義商務和非商務日。 AEM表單可在計算事件（如提醒、截止日期和呈報）的未來日期和時間時，使用企業行事曆。 指派商務行事曆金鑰給使用者的方式取決於您是使用企業、本機或混合式網域。 （請參閱設定商務行事曆）。
 
 如果您使用企業網域，您可以將「商務行事曆」設定對應到LDAP目錄中的欄位。 例如，如果目錄中的每個使用者記錄都包含&#x200B;*國家/地區*&#x200B;欄位，而您想要根據使用者所在的國家/地區來指派商務行事曆，請將&#x200B;*國家/地區*&#x200B;欄位名稱指定為「商務行事曆」設定的值。 然後，您可以將商務行事曆索引鍵（為LDAP目錄中的&#x200B;*國家/地區*&#x200B;欄位定義的值）對應到表單工作流程中的商務行事曆。
 
@@ -180,7 +180,7 @@ ht-degree: 0%
 
 **基底DN：** （必要）目錄的基礎辨別名稱。
 
-雖然Base DN是Administration Console中的必要設定，但某些目錄伺服器(例如IBM Domino Enterprise Server)需要空的BaseDN。 若要指定空的基本DN，請匯出config.xml檔案，編輯config.xml檔案中的設定，然後重新匯入它。 （請參閱[匯入及匯出組態檔](/help/forms/using/admin-help/importing-exporting-configuration-file.md#importing-and-exporting-the-configuration-file)。）
+雖然Base DN是Administration Console中的必要設定，但某些目錄伺服器（例如IBM Domino Enterprise Server）需要空的BaseDN。 若要指定空的基本DN，請匯出config.xml檔案，編輯config.xml檔案中的設定，然後重新匯入它。 （請參閱[匯入及匯出組態檔](/help/forms/using/admin-help/importing-exporting-configuration-file.md#importing-and-exporting-the-configuration-file)。）
 
 **搜尋篩選器：** （必要）用來尋找與群組關聯之記錄的搜尋篩選器。 您可以執行一級搜尋或子級搜尋。
 
@@ -238,7 +238,7 @@ LDAP通訊協定提供使用要求控制項，以分頁方式查詢大型資料�
 
 ### 為VLV設定Sun ONE Directory Server {#configuring-the-sun-one-directory-server-for-vlv}
 
-建立VLV需要一組包含`vlvSearch`和`vlvIndex`物件類別的專案。 vlvSearch專案包含搜尋基底和`vlvFilter`屬性，此屬性指定包含您要排序之屬性的物件類別。 `vlvIndex`物件類別包含`vlvSort`屬性，它指定要排序的一或多個屬性，以及排序它們的順序。 (減號(-)代表反字母順序)。 搭配AEM表單使用VLV時，使用者和群組需要個別的專案。
+建立VLV需要一組包含`vlvSearch`和`vlvIndex`物件類別的專案。 vlvSearch專案包含搜尋基底和`vlvFilter`屬性，此屬性指定包含您要排序之屬性的物件類別。 `vlvIndex`物件類別包含`vlvSort`屬性，它指定要排序的一或多個屬性，以及排序它們的順序。 (減號(-)代表反字母順序)。 搭配AEM表單使用VLV時，使用者和群組必須分別輸入專案。
 
 >[!NOTE]
 >

@@ -12,8 +12,8 @@ feature: Developing,Personalization
 role: Developer
 source-git-commit: f965c449da06a1b7e60428e0734c621f004d318c
 workflow-type: tm+mt
-source-wordcount: '2791'
-ht-degree: 1%
+source-wordcount: '2898'
+ht-degree: 2%
 
 ---
 
@@ -49,11 +49,11 @@ ht-degree: 1%
   - channels (string) multiple
 ```
 
-根據預設，`cq:ClientLibraryFolder`節點可以放置在存放庫的`/apps`、`/libs`和`/etc`子樹狀結構中的任何位置(這些預設值和其他設定可以透過[系統主控台](https://localhost:4502/system/console/configMgr)的&#x200B;**Adobe Granite HTML資料庫管理員**&#x200B;面板來控制)。
+根據預設，`cq:ClientLibraryFolder`節點可以放置在存放庫的`/apps`、`/libs`和`/etc`子樹狀結構中的任何位置（這些預設值和其他設定可以透過[系統主控台](https://localhost:4502/system/console/configMgr)的&#x200B;**Adobe Granite HTML資料庫管理員**&#x200B;面板來控制）。
 
-每個`cq:ClientLibraryFolder`都會填入一組JS和/或CSS檔案，以及一些支援檔案（請參閱下文）。 `cq:ClientLibraryFolder`屬性設定如下：
+每個`cq:ClientLibraryFolder`都會填入一組JS和/或CSS檔案，以及一些支援檔案（請參閱下文）。 `cq:ClientLibraryFolder`的屬性設定如下：
 
-* `categories`..識別 JS 和/或 CSS 檔案集目前所屬 `cq:ClientLibraryFolder` 的類別。 屬性 `categories` 是多值的，允許資料庫資料夾屬於多個類別（請參閱下文，了解這可能如何有用）。
+* `categories`：識別此`cq:ClientLibraryFolder`中JS和/或CSS檔案集的類別。 `categories`屬性是多值屬性，可讓資料庫資料夾屬於多個類別（請參閱下方以瞭解其用處）。
 
 * `dependencies`：這是此程式庫資料夾所依存之其他使用者端程式庫類別的清單。 例如，在指定`cq:ClientLibraryFolder`節點`F`和`G`的情況下，如果`F`中的檔案需要`G`中的另一個檔案才能正常運作，則`G`的`categories`中至少有一個`F`的`dependencies`中應該有。
 
@@ -62,21 +62,21 @@ ht-degree: 1%
 
 ## 參考使用者端程式庫 {#referencing-client-side-libraries}
 
-由於 HTL 是開發AEM網站的首選技術，因此應使用 HTL 將用戶端資料庫包含在AEM中。 但是，也可以使用 JSP 來實現。
+由於HTL是開發AEM網站的偏好技術，因此HTL應該用於在AEM中包含使用者端程式庫。 不過，您也可以使用JSP執行此操作。
 
-### 使用 HTL {#using-htl}
+### 使用HTL {#using-htl}
 
-在 HTL 中，用戶端資料庫是通過 AEM 提供的説明範本程式載入的，可以通過進行 [`data-sly-use`](https://helpx.adobe.com/tw/experience-manager/htl/using/block-statements.html#use)訪問。 此檔案中有三個樣本可用，可以通過以下方式 [`data-sly-call`](https://helpx.adobe.com/tw/experience-manager/htl/using/block-statements.html#template-call)調用：
+在HTL中，使用者端程式庫是透過AEM提供的Helper範本載入，該範本可透過[`data-sly-use`](https://helpx.adobe.com/tw/experience-manager/htl/using/block-statements.html#use)存取。 此檔案中有三個範本可用，這些範本可透過[`data-sly-call`](https://helpx.adobe.com/tw/experience-manager/htl/using/block-statements.html#template-call)呼叫：
 
-* **css** - 僅載入引用的用戶端資料庫的 CSS 檔。
-* **js** - 僅載入引用的用戶端資料庫的JavaScript檔。
-* **all** - 載入引用的用戶端資料庫的所有檔（CSS 和 JavaScript）。
+* **css** — 僅載入參照的使用者端程式庫的CSS檔案。
+* **js** — 僅載入參照的使用者端程式庫的JavaScript檔案。
+* **all** — 載入參照的使用者端程式庫的所有檔案（CSS和JavaScript）。
 
 每個 helper 範本都需要 `categories` 選項來參照所需的用戶端程式庫。 這個選項可以是字串值陣列，或是包含逗號分隔值清單的字串。
 
-有關更多詳細信息和使用示例，請参閱 HTML 範本語言[&#128279;](https://helpx.adobe.com/tw/experience-manager/htl/using/getting-started.html#loading-client-libraries)的文件快速入門。
+如需詳細資訊和使用範例，請參閱檔案[開始使用HTML範本語言](https://helpx.adobe.com/tw/experience-manager/htl/using/getting-started.html#loading-client-libraries)。
 
-### 使用 JSP {#using-jsp}
+### 使用JSP {#using-jsp}
 
 將`ui:includeClientLib`標籤新增至您的JSP程式碼，以在產生的HTML頁面中新增使用者端資料庫的連結。 若要參考資料庫，請使用`ui:includeClientLib`節點的`categories`屬性值。
 
@@ -97,11 +97,11 @@ ht-degree: 1%
 <script type="text/javascript" src="/etc/clientlibs/foundation/jquery.js"></script>
 ```
 
-如需完整的資訊，包括篩選JS、CSS或主題資料庫的屬性，請參閱[ui：includeClientLib](/help/sites-developing/taglib.md#lt-ui-includeclientlib)。
+如需完整的資訊，包括篩選JS、CSS或主題庫的屬性，請參閱[ui:includeClientLib](/help/sites-developing/taglib.md#lt-ui-includeclientlib)。
 
 >[!CAUTION]
 >
->`<cq:includeClientLib>`過去常用來包含使用者端資料庫，但自AEM 5.6起已淘汰。應改用[`<ui:includeClientLib>`](/help/sites-developing/taglib.md#lt-ui-includeclientlib)，如上所述。
+>`<cq:includeClientLib>`過去常用來包含使用者端資料庫，但自AEM 5.6起已淘汰。 應該改用[`<ui:includeClientLib>`](/help/sites-developing/taglib.md#lt-ui-includeclientlib)，如上所述。
 
 ## 建立使用者端資源庫資料夾 {#creating-client-library-folders}
 
@@ -165,8 +165,8 @@ Web使用者端必須擁有存取`cq:ClientLibraryFolder`節點的許可權。 �
 
 1. 在網頁瀏覽器([https://localhost:4502/crx/de](https://localhost:4502/crx/de))中開啟CRXDE Lite。
 1. 選取您要尋找使用者端程式庫資料夾的資料夾，然後按一下[建立] > [建立節點] **。**
-1. 輸入資料庫文件的名稱，然後在“類型”中選擇清單 `cq:ClientLibraryFolder`。 按兩下確定&#x200B;**&#x200B;**，然後按兩下全部&#x200B;**&#x200B;**&#x200B;儲存。
-1. 若要指定資料庫所屬的類別或類別，請選擇 `cq:ClientLibraryFolder` 節點，添加以下屬性，然後按兩下“ **全部**&#x200B;儲存”：
+1. 輸入程式庫檔案的名稱，然後在[型別]清單中選取`cq:ClientLibraryFolder`。 按一下[確定]&#x200B;**&#x200B;**，然後按一下[儲存全部]&#x200B;**&#x200B;**。
+1. 若要指定程式庫所屬的類別，請選取`cq:ClientLibraryFolder`節點、新增下列屬性，然後按一下[儲存全部] **：**
 
    * 名稱：類別
    * 型別：字串
@@ -175,15 +175,15 @@ Web使用者端必須擁有存取`cq:ClientLibraryFolder`節點的許可權。 �
 
 1. 以任何方式將來源檔案新增至程式庫資料夾。 例如，使用WebDav使用者端來複製檔案，或建立檔案並手動編寫內容。
 
-   **注：** 如果需要，可以組織子資料夾中的源檔。
+   **注意：**&#x200B;您可以視需要在子資料夾中組織來源檔案。
 
-1. 選擇用戶端資料庫資料夾，然後按兩下建立> **建立檔**。
-1. 在“檔名”框中，鍵入以下檔名之一，然後按兩下“確定：
+1. 選取使用者端程式庫資料夾，然後按一下&#x200B;**建立>建立檔案**。
+1. 在「檔案名稱」方塊中，輸入下列其中一個檔案名稱，然後按一下「確定」：
 
-   * **`js.txt`：** 使用此檔名產生 JavaScript 檔案。
-   * **`css.txt`：** 使用此檔名生成級聯樣式表。
+   * **`js.txt`：**&#x200B;使用此檔案名稱來產生JavaScript檔案。
+   * **`css.txt`：**&#x200B;使用此檔案名稱產生階層式樣式表。
 
-1. 開啟檔案並鍵入以下文字以識別來源檔案路徑的根目錄：
+1. 開啟檔案並輸入下列文字，以識別來源檔案的路徑根目錄：
 
    `#base=*[root]*`
 
@@ -206,7 +206,7 @@ Web使用者端必須擁有存取`cq:ClientLibraryFolder`節點的許可權。 �
 
 * **名稱：**&#x200B;相依性
 * **型別：**&#x200B;字串[]
-* **值：**&#x200B;目前程式庫資料夾所依賴之cq：ClientLibraryFolder節點的categories屬性值。
+* **值：**&#x200B;目前程式庫資料夾所依賴之cq:ClientLibraryFolder節點的categories屬性值。
 
 例如，/ `etc/clientlibs/myclientlibs/publicmain`在`cq.jquery`資料庫上有相依性。 參考主要使用者端程式庫的JSP會產生HTML，其中包含下列程式碼：
 
@@ -322,9 +322,9 @@ body {
 
 ## 使用前置處理器 {#using-preprocessors}
 
-AEM允許可插拔預處理器，並支援[&#128279;](https://developers.google.com/closure/compiler/)用於CSS和JavaScript[的YUI壓縮器和](https://github.com/yui/yuicompressor#yui-compressor---the-yahoo-javascript-and-css-compressor)用於JavaScript的Google Closure Compiler （GCC），並將YUI設置為AEM的預設預處理器。
+AEM允許可插拔的前處理器，並隨附對CSS和JavaScript的[YUI Compressor](https://github.com/yui/yuicompressor#yui-compressor---the-yahoo-javascript-and-css-compressor)以及JavaScript的[Google Closure Compiler (GCC)](https://developers.google.com/closure/compiler/)的支援，並將YUI設為AEM的預設前處理器。
 
-可插拔預處理器允許靈活使用，包括：
+可插拔前處理器可彈性使用，包括：
 
 * 定義可以處理指令碼來源的ScriptProcessors
 * 處理器可設定選項
@@ -339,7 +339,7 @@ AEM允許可插拔預處理器，並支援[&#128279;](https://developers.google.
 >
 >請勿將縮制的程式庫放入使用者端程式庫中。 改為提供原始程式庫，如果需要縮制，請使用前置處理器的選項。
 
-### 使用情況 {#usage}
+### 用途 {#usage}
 
 您可以選擇為每個使用者端程式庫或系統範圍設定前置處理器組態。
 
@@ -446,7 +446,7 @@ AEM提供數種用於偵錯和測試使用者端程式庫資料夾的工具。
 
    * 在網頁瀏覽器中開啟下列URL （視需要使用不同的主機和連線埠）：
 
-      * `http://<host>:<port>/libs/granite/ui/content/dumplibs.html`
+     * `http://<host>:<port>/libs/granite/ui/content/dumplibs.html`
 
    預設頁面顯示沒有categories屬性值的標籤的輸出。
 

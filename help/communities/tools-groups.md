@@ -12,7 +12,7 @@ solution: Experience Manager
 feature: Communities
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '545'
+source-wordcount: '551'
 ht-degree: 2%
 
 ---
@@ -33,9 +33,9 @@ ht-degree: 2%
 
 ## 群組範本主控台 {#group-templates-console}
 
-若要在AEM作者環境中存取群組範本主控台：
+若要在AEM製作環境中存取群組範本主控台：
 
-* 選取&#x200B;**工具 | Communities | 群組範本，**&#x200B;來自全域導覽。
+* 選取&#x200B;**工具 |社群 |群組範本，**&#x200B;來自全域導覽。
 
 此主控台顯示可從中建立[社群網站](/help/communities/sites-console.md)的範本，並允許建立新的群組範本。
 

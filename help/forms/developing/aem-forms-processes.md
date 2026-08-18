@@ -11,7 +11,7 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 source-git-commit: 939a2efa64c853928a9082aa30d7338e98deb695
 workflow-type: tm+mt
-source-wordcount: '793'
+source-wordcount: '831'
 ht-degree: 0%
 
 ---
@@ -60,10 +60,10 @@ ht-degree: 0%
    >
    >通常一個短暫的流程包含三個以上的動作。 您可以使用「維護作業」來建立處理。 （請參閱[使用Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63)。）
 
-   *使用AEM Forms進行程式設計*&#x200B;說明下列以程式設計方式叫用此短期處理序的方式：
+   *使用AEM表單進行程式設計*&#x200B;說明以下以程式設計方式叫用此短期程式：
 
-   * [使用AEM Forms Remoting傳遞不安全的檔案，以叫用短期程式](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting) (使用Flex應用程式)
-   * [使用叫用API](/help/forms/developing/invoking-aem-forms-using-java.md#invoking-a-short-lived-process-using-the-invocation-api) (Java™叫用API)叫用短期處理程式
+   * [使用AEM Forms Remoting傳遞不安全的檔案，以叫用短期程式](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting) （使用Flex應用程式）
+   * [使用叫用API](/help/forms/developing/invoking-aem-forms-using-java.md#invoking-a-short-lived-process-using-the-invocation-api) （Java™叫用API）叫用短期處理程式
    * [使用Base64編碼叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding) （Web服務範例）
    * [使用MTOM叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom) （Web服務範例）
    * [使用SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)叫用AEM Forms （Web服務範例）

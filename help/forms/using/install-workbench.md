@@ -9,8 +9,8 @@ solution: Experience Manager, Experience Manager Forms
 feature: Workbench,Adaptive Forms
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '2184'
-ht-degree: 0%
+source-wordcount: '2298'
+ht-degree: 1%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 ## 誰應該閱讀此檔案？ {#who-should-read-this-doc}
 
-本檔案適用於負責安裝、設定、管理或部署Workbench的管理員或開發人員。 此外也包含設定您的系統以支援升級AEM Forms程式的資訊。 所提供的資訊係基於以下假設：閱讀本檔案的任何人都熟悉Microsoft® Windows®作業系統。
+本檔案適用於負責安裝、設定、管理或部署Workbench的管理員或開發人員。 此外也包含設定您的系統以支援升級AEM Forms程式的資訊。 所提供的資訊係基於以下假設：閱讀本檔案的任何人都熟悉® Windows®作業系統。
 
 ## 其他資訊 {#additional-information}
 
@@ -36,7 +36,7 @@ ht-degree: 0%
    <td><p><a href="https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/WorkbenchHelp.pdf">Workbench說明</a><br /> <br /> </p> </td>
   </tr>
   <tr>
-   <td><p>有關AEM Forms以及它如何與其他Adobe產品整合的一般資訊</p> </td>
+   <td><p>有關AEM Forms及其如何與其他Adobe產品整合的一般資訊</p> </td>
    <td><p><a href="https://experienceleague.adobe.com/docs/experience-manager-65/forms/getting-started/introduction-aem-forms.html?lang=zh-Hant">AEM Forms概觀</a><br /> <br /> </p> </td>
   </tr>
   <tr>
@@ -98,7 +98,7 @@ Workbench是整合式開發環境(IDE)，開發人員和表單作者可使用它
 >
 >您必須具有管理許可權才能安裝Workbench。 如果您使用非系統管理員帳戶進行安裝，安裝程式會提示您輸入適當帳戶的認證。
 
-### 支援平台 {#supported-platforms}
+### 受支援平台 {#supported-platforms}
 
 請在[AEM Forms支援平台](https://www.adobe.com/go/learn_aemforms_supportedplatforms_65_tw)，檢視Workbench的完整支援平台清單。
 
@@ -114,10 +114,10 @@ Workbench是整合式開發環境(IDE)，開發人員和表單作者可使用它
    <td><p><strong>必要動作</strong></p> </td>
   </tr>
   <tr>
-   <td><p>Acrobat Pro或Acrobat Pro Extended (包括Designer)</p> </td>
+   <td><p>Acrobat Pro或Acrobat Pro Extended （包括Designer）</p> </td>
    <td><p>無。<br /> 
 Workbench安裝會偵測電腦上隨Acrobat Pro或Acrobat Pro Extended安裝的Designer例項。<br />
-不同版本的Designer可共存於相同系統上，例如，Designer 6.4.x （適用於Workbench 6.4）和Designer 6.5.0.x （適用於Workbench 6.5）。不需要解除安裝隨Acrobat 10 Pro或Acrobat 10 Pro Extended （含）以上版本安裝的Designer版本。
+不同版本的Designer可共存於相同系統上，例如，Designer 6.4.x （適用於Workbench 6.4）和Designer 6.5.0.x （適用於Workbench 6.5）。 不需要解除安裝隨Acrobat 10 Pro或Acrobat 10 Pro Extended （含）以上版本安裝的Designer版本。
 <br /></p> </td>
   </tr>
   <tr>
@@ -130,7 +130,7 @@ Workbench安裝會偵測電腦上隨Acrobat Pro或Acrobat Pro Extended安裝的D
 ### 若要在Windows 10上解除安裝Designer （獨立） {#uninstall-designer-standalone-windows10}
 
 1. 移至&#x200B;**控制檯>程式>程式和功能**
-1. 在[目前安裝的程式]清單中，選取&#x200B;**AdobeDesigner**。
+1. 在[目前安裝的程式]清單中，選取&#x200B;**Adobe Designer**。
 1. 按一下&#x200B;**解除安裝**，然後按一下&#x200B;**是**。
 
 ## 安裝Workbench {#installing-workbench}
@@ -157,7 +157,7 @@ Workbench安裝會偵測電腦上隨Acrobat Pro或Acrobat Pro Extended安裝的D
 
 1. 在「簡介」畫面上，按一下「下一步」。
 1. 閱讀「產品授權合約」，選取「我接受授權合約的條款」，然後按一下「下一步」。
-1. （選用）如果您需要此工具來建立和修改表單，請選取「安裝AdobeDesigner」 。
+1. （選用）如果您需要此工具來建立和修改表單，請選取「安裝Adobe Designer」 。
 
    >[!NOTE]
    >
@@ -173,8 +173,8 @@ Workbench安裝會偵測電腦上隨Acrobat Pro或Acrobat Pro Extended安裝的D
 1. 檢閱安裝摘要。 選取「啟動AEM Forms Workbench」 ，以啟動Workbench，然後按一下「下一步」 。
 1. 檢閱發行說明，然後按一下「完成」。
 1. 下列專案現在已安裝在您的電腦上：
-   * **Workbench**：若要從[開始]功能表執行Workbench，請選取[所有程式] > [AEM Forms] > [Workbench] （如果您選擇儲存捷徑資料夾）。 如需詳細資訊，   請參閱<a href="https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/WorkbenchHelp.pdf">使用Workbench</a>檔案。
-   * **Designer**：您可以從Workbench內部存取Designer。 如需相關資訊，請參閱<a href="https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/using-designer.pdf">Designer說明</a>中的快速入門主題。
+   * **Workbench**：若要從[開始]功能表執行Workbench，請選取[所有程式] > [AEM Forms] > [Workbench] （如果您選擇儲存捷徑資料夾）。 如需詳細資訊，請參閱<a href="https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/WorkbenchHelp.pdf">使用Workbench</a>檔案。
+   * **Designer**：您可以從Workbench內部存取Designer。 如需相關資訊，請參閱<a href="https://helpx.adobe.com/tw/content/dam/help/en/experience-manager/6-5/forms/pdf/using-designer.pdf">Designer說明</a>中的快速入門主題。
    * **AEM Forms SDK**：如需使用SDK的詳細資訊，請參閱<a href="https://helpx.adobe.com/pdf/aem-forms/6-3/programming-with-aem-forms.pdf">使用AEM Forms進行程式設計</a>。
 
 ## 升級流程 {#upgrading-processes}
@@ -187,7 +187,7 @@ JEE程式上的AEM Forms可使用升級精靈升級到AEM Forms應用程式。 �
 
 >[!NOTE]
 >
->如果您已將AEM Forms設定為使用EMC Documentum®或IBM® FileNet Repository Provider ，而且您想登入儲存區域(AEM Forms管理主控台中設定為預設儲存區域以外的儲存區域)，請以username@Repository格式提供使用者名稱。
+>如果您已將AEM Forms設定為使用EMC Documentum®或IBM® FileNet Repository Provider ，而且您想登入的存放庫不是在AEM Forms管理控制檯中設定為預設的存放庫，請以username@Repository提供使用者名稱。
 
 ### 設定逾時設定 {#configuring-timeout-settings}
 
@@ -214,7 +214,7 @@ JEE程式上的AEM Forms可使用升級精靈升級到AEM Forms應用程式。 �
 
 1. 開啟命令提示視窗，瀏覽至[Workbench_HOME]/workbench/jre/bin，然後輸入下列命令：
    `keytool -import -storepass changeit -file [Workbench_HOME]\workbench\jre\lib\security\ssl_cert_for_certname.cer -keystore [Workbench_HOME]\workbench\jre\lib\security\cacerts -alias example`
-其中：
+   其中：
    * `changeit`是cacerts金鑰儲存區的預設密碼。
    * certname是您在步驟1中選取的憑證。
    * 範例是您為憑證選擇的別名。 此值可以變更。
@@ -258,8 +258,8 @@ Forms服務會參考檔案名稱或存放庫位置來接收範本，或是以記
 * 對於非被動式輸入範本，快取取決於產生檔案的內容根目錄和檔案名稱。
 相同的快取只會用於內容根目錄和範本檔案名稱相同的請求。
 下列最佳實務可確保將動態產生的範本傳遞至Forms服務時，快取不會無休止地增加：
-   * 請拆除UUID，或在所有動態產生的範本中傳遞相同的UUID。
-   * 從範本位元組或磁碟上的相同檔名產生檔案。
+  * 請拆除UUID，或在所有動態產生的範本中傳遞相同的UUID。
+  * 從範本位元組或磁碟上的相同檔名產生檔案。
 
 ### 解除安裝Workbench {#uninstalling-workbench}
 

@@ -11,7 +11,7 @@ role: User, Developer
 feature: Adaptive Forms,Foundation Components
 source-git-commit: 5723e9990969dff1b508062d69a68f68a20eb576
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '549'
 ht-degree: 0%
 
 ---
@@ -65,7 +65,7 @@ CustomToolbarLayoutDemo.zip
 
 1. 將複製的節點`mobileFixedToolbarLayout`重新命名為`customToolbarLayout.`
 
-   此外，也提供節點的相關說明。 例如，將節點的jcr：description變更為&#x200B;**工具列**&#x200B;的自訂配置。
+   此外，也提供節點的相關說明。 例如，將節點的jcr:description變更為&#x200B;**工具列**&#x200B;的自訂配置。
 
    節點的`guideComponentType`屬性決定配置型別。 在此情況下，版面配置型別為工具列，因此會顯示在工具列版面配置選擇下拉式清單中。
 

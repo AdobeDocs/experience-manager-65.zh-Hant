@@ -12,7 +12,7 @@ feature: Administering
 role: Admin
 source-git-commit: 315171dca4501718a34fd33f937334f7e7958963
 workflow-type: tm+mt
-source-wordcount: '1249'
+source-wordcount: '1254'
 ht-degree: 1%
 
 ---
@@ -75,7 +75,7 @@ ht-degree: 1%
 
 這會為訪客提供&#x200B;**使用者名稱**&#x200B;和&#x200B;**密碼**&#x200B;的標準欄位，並提供&#x200B;**登入**&#x200B;按鈕，以便在輸入認證時啟動登入程式。
 
-例如，使用者可以登入，或使用Geometrixx工具列上的&#x200B;**登入**&#x200B;選項建立帳戶，該選項使用頁面：
+例如，使用者可以使用Geometrixx工具列上的&#x200B;**登入**&#x200B;選項登入或建立帳戶，該工具列使用頁面：
 
 `http://localhost:4502/content/geometrixx-outdoors/en/user/sign-in.html`
 
@@ -83,11 +83,11 @@ ht-degree: 1%
 
 ## 登出 {#logging-out}
 
-由於有登入機制，因此也需要登出機制。 這在Geometrixx中可作為&#x200B;**登出**&#x200B;選項使用。
+由於有登入機制，因此也需要登出機制。 這可作為Geometrixx中的&#x200B;**登出**&#x200B;選項使用。
 
 ## 檢視和更新設定檔 {#viewing-and-updating-a-profile}
 
-根據您的登錄檔格，訪客可能在他們的設定檔中擁有註冊資訊。 他們應該能夠在稍後階段檢視和/或更新此內容。 您可以使用類似的形式完成此操作；例如，在Geometrixx中：
+根據您的登錄檔格，訪客可能在他們的設定檔中擁有註冊資訊。 他們應該能夠在稍後階段檢視和/或更新此內容。 您可以使用類似的表單完成此操作；例如，在Geometrixx中：
 
 ```
 http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
@@ -98,7 +98,7 @@ http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 
 您可以使用[使用者端內容](/help/sites-administering/client-context.md) （在製作環境中，並具有足夠的許可權）來檢視另一個設定檔：
 
-1. 開啟頁面；例如，Geometrixx頁面：
+1. 開啟頁面；例如Geometrixx頁面：
 
    `http://localhost:4502/cf#/content/geometrixx/en.html`
 
@@ -120,7 +120,7 @@ http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 
 您可以將欄位新增至設定檔定義。 例如，若要將「最喜愛的顏色」欄位新增至Geometrixx設定檔：
 
-1. 從「網站」主控台導覽至「Geometrixx Outdoors網站>英文>使用者>我的設定檔」 。
+1. 從網站主控台導覽至Geometrixx Outdoors網站>英文>使用者>我的設定檔。
 1. 連按兩下&#x200B;**我的設定檔**&#x200B;頁面以開啟它進行編輯。
 1. 在sidekick的&#x200B;**元件**&#x200B;標籤中，展開&#x200B;**表單**&#x200B;區段。
 1. 將&#x200B;**下拉式清單**&#x200B;從Sidekick拖曳至表單，緊接在&#x200B;**關於我**&#x200B;欄位下方。
@@ -162,7 +162,7 @@ http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 
   管理與狀態相關的動作。
 
-可以定義多個狀態；例如，在Geometrixx中，這些狀態包括：
+您可以定義多個狀態；例如，在Geometrixx中，這些狀態包括：
 
 * 訂閱（或取消訂閱）電子報或評論對話串上的通知
 * 新增和移除朋友的連線
@@ -194,7 +194,7 @@ http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 
 這些存取權由下列萬用字元ACL定義：
 
-/home每個人都允許jcr：read rep：glob = &#42;/profile&#42;
+/home每個人都允許jcr:read rep:glob = &#42;/profile&#42;
 
 這允許：
 

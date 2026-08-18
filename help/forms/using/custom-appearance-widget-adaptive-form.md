@@ -11,7 +11,7 @@ role: User, Developer
 feature: Adaptive Forms,Foundation Components
 source-git-commit: 8a77756e8ba771c8de9950c2323bef8f23cc59b4
 workflow-type: tm+mt
-source-wordcount: '1702'
+source-wordcount: '1744'
 ht-degree: 0%
 
 ---
@@ -40,11 +40,11 @@ ht-degree: 0%
 
 建立自訂外觀的高層級步驟如下：
 
-1. **建立專案**：建立Maven專案，此專案會產生內容套件以部署在AEM上。
+1. **建立專案**：建立可產生內容套件以部署在AEM上的Maven專案。
 1. **擴充現有的Widget類別**：擴充現有的Widget類別並覆寫必要的類別。
 1. **建立使用者端資料庫**：建立`clientLib: af.customwidget`資料庫並新增必要的JavaScript和CSS檔案。
 
-1. **建置並安裝專案**：建置Maven專案，並在AEM上安裝產生的內容封裝。
+1. **建置並安裝專案**：建置Maven專案，並在AEM上安裝產生的內容套件。
 1. **更新最適化表單**：更新最適化表單欄位屬性以使用自訂外觀。
 
 ### 建立專案 {#create-a-project}
@@ -130,9 +130,9 @@ maven原型是建立自訂外觀的起點。 要使用的原型的詳細資訊�
   </tr>
   <tr>
    <td><code>getEventMap</code></td>
-   <td>傳回對應以將HTML事件轉換為XFA事件。 <br /> <code class="code">&lbrace;
+   <td>傳回對應以將HTML事件轉換為XFA事件。<br /> <code class="code">&lbrace;
       blur: XFA_EXIT_EVENT,
-      &rbrace;</code><br />此範例顯示<code>blur</code>是HTML事件，而<code>XFA_EXIT_EVENT</code>是相對應的XFA事件。 </td>
+      &rbrace;</code><br /> 此範例顯示<code>blur</code>是HTML事件，而<code>XFA_EXIT_EVENT</code>是相對應的XFA事件。 </td>
   </tr>
   <tr>
    <td><code>getOptionsMap</code></td>

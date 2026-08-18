@@ -10,14 +10,14 @@ solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '1192'
-ht-degree: 4%
+source-wordcount: '1208'
+ht-degree: 5%
 
 ---
 
 # AEM Forms鍵盤快速鍵 {#aem-forms-keyboard-shortcuts}
 
-<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hant)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。本文介紹使用基礎元件製作最適化Forms的舊方法。</span>
+<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hant)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。 這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。 本文介紹使用基礎元件製作最適化Forms的舊方法。</span>
 
 本文列出可與Windows和Macintosh作業系統的最適化表單編輯器、主題編輯器、內容瀏覽器及通訊管理搭配使用的鍵盤快速鍵。
 
@@ -29,22 +29,22 @@ ht-degree: 4%
 | 關閉所選最適化表單元件的屬性瀏覽器 | Ctrl+Alt+W | Command+Alt+W |
 | 在屬性瀏覽器中儲存所選最適化表單元件的變更 | Ctrl+S | Command+S |
 | 編輯所選最適化表單元件的規則 | Ctrl+Alt+Enter | Command+Alt+Return |
-| 在預覽和目前選取的模式（例如，編輯和支架）之間切換 | Ctrl+Shift+M | Ctrl+Shift+M&amp;amp；ast； |
-| 復原上次變更 | Ctrl+Z | Ctrl+Z&amp;amp；ast； |
-| 重做最後一次變更 | Ctrl+Y | Ctrl+Y&amp;amp；ast； |
+| 在預覽和目前選取的模式（例如，編輯和支架）之間切換 | Ctrl+Shift+M | Ctrl+Shift+M&amp;ast； |
+| 復原上次變更 | Ctrl+Z | Ctrl+Z&amp;ast； |
+| 重做最後一次變更 | Ctrl+Y | Ctrl+Y&amp;ast； |
 | 選取多個元件 | Shift+Click | Shift+Click |
-| 複製所選的元件 | Ctrl-C | Ctrl-C&amp;amp；ast； |
-| 剪下所選的元件。 剪下的元件在貼到新位置之前不會消失。 | Ctrl-X | Ctrl-X&amp;amp；ast； |
+| 複製所選的元件 | Ctrl-C | Ctrl-C&amp;ast； |
+| 剪下所選的元件。 剪下的元件在貼到新位置之前不會消失。 | Ctrl-X | Ctrl-X&amp;ast； |
 | 貼上元件 | Ctrl+V | Ctrl+V |
-| 刪除選取的元件 | Ctrl+Del | Ctrl+Del&amp;amp；ast； |
-| 刪除選取的元件 | Ctrl+退格鍵 | Ctrl+退格鍵&amp;amp；ast； |
-| 在預覽模式下使用RTF編輯器元件時將文字設為粗體 | Ctrl+B | Ctrl+B&amp;amp；ast； |
-| 在預覽模式下使用RTF編輯器元件時使文字變為斜體 | Ctrl+I | Ctrl+I&amp;amp；ast； |
-| 在預覽模式下使用RTF編輯器元件時將文字設為粗體 | Ctrl+U | Ctrl+U&amp;amp；ast； |
+| 刪除選取的元件 | Ctrl+Del | Ctrl+Del&amp;ast； |
+| 刪除選取的元件 | Ctrl+退格鍵 | Ctrl+退格鍵&amp;ast； |
+| 在預覽模式下使用RTF編輯器元件時將文字設為粗體 | Ctrl+B | Ctrl+B&amp;ast； |
+| 在預覽模式下使用RTF編輯器元件時使文字變為斜體 | Ctrl+I | Ctrl+儲存(&amp;A)； |
+| 在預覽模式下使用RTF編輯器元件時將文字設為粗體 | Ctrl+U | Ctrl+U&amp;Ast； |
 
 >[!NOTE]
 >
->標示「&amp;amp；ast；」的捷徑可同時使用macOS上的Ctrl和Command鍵。
+>標示為&#39;&amp;ast；&#39;的捷徑可與macOS上的Ctrl和Command鍵搭配使用。
 
 >[!NOTE]
 >
@@ -60,13 +60,13 @@ ht-degree: 4%
 |---|---|---|
 | 開啟主題中所選元件的「屬性」瀏覽器 | Alt+Enter | Alt+Return |
 | 關閉主題中所選元件的「屬性」瀏覽器 | Ctrl+Alt+W | Command+Alt+W |
-| 復原上次變更 | Ctrl+Z | Ctrl+Z&amp;amp；ast； |
-| 重做最後一次變更 | Ctrl+Y | Ctrl+Y&amp;amp；ast； |
-| 在「屬性」瀏覽器中，儲存主題中所選元件的變更 | Ctrl+S | Ctrl+S&amp;amp；ast； |
+| 復原上次變更 | Ctrl+Z | Ctrl+Z&amp;ast； |
+| 重做最後一次變更 | Ctrl+Y | Ctrl+Y&amp;ast； |
+| 在「屬性」瀏覽器中，儲存主題中所選元件的變更 | Ctrl+S | Ctrl+S&amp;ast； |
 
 >[!NOTE]
 >
->標示「&amp;amp；ast；」的捷徑可同時使用macOS上的Ctrl和Command鍵。
+>標示為&#39;&amp;ast；&#39;的捷徑可與macOS上的Ctrl和Command鍵搭配使用。
 
 ## 內容瀏覽器  {#contentbrowser}
 
@@ -332,7 +332,7 @@ ht-degree: 4%
  </tbody>
 </table>
 
-### 正在格式化 {#formatting}
+### 格式化 {#formatting}
 
 <table> 
  <tbody>
