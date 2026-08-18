@@ -9,7 +9,7 @@ exl-id: 90923d39-3ac5-4028-976c-d011f0404476
 solution: Experience Manager, Experience Manager Sites
 feature: Operations
 role: Admin
-source-git-commit: 'null'
+source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '1015'
 ht-degree: 1%
@@ -96,7 +96,7 @@ ht-degree: 1%
 當工作流程失敗時，AEM會提供&#x200B;**失敗**&#x200B;主控台，讓您在原始原因得到處理之後，立即調查並採取適當的動作：
 
 * **失敗詳細資料**
-開啟視窗以顯示&#x200B;**失敗訊息**、**步驟**&#x200B;和&#x200B;**失敗棧疊**。
+開啟視窗以顯示**失敗訊息**、**步驟**&#x200B;和&#x200B;**失敗棧疊**。
 
 * **開啟歷程記錄**
 顯示工作流程記錄的詳細資料。

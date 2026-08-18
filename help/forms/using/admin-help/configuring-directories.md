@@ -9,7 +9,7 @@ exl-id: 30edcef2-e8fa-403a-9850-b8dfeeb9ac65
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 'null'
+source-git-commit: e9afc12af78140ae0ec12cc2ee95fc9e175f8d94
 workflow-type: tm+mt
 source-wordcount: '3263'
 ht-degree: 0%
@@ -279,7 +279,7 @@ LDAP通訊協定提供使用要求控制項，以分頁方式查詢大型資料�
 
    >[!NOTE]
    >
-   >根據慣例，vlvIndex專案名稱也設為`lcuser`，但您可以為其指定不同的名稱。 在vlvindex工具中使用相同的名稱。 （請參閱[建立VLV &#x200B;](configuring-directories.md#create-the-directory-server-index-for-vlv)*的目錄伺服器索引。）*
+   >根據慣例，vlvIndex專案名稱也設為`lcuser`，但您可以為其指定不同的名稱。 在vlvindex工具中使用相同的名稱。 （請參閱[建立VLV ](configuring-directories.md#create-the-directory-server-index-for-vlv)*的目錄伺服器索引。）*
 
 1. 使用Sun ONE Server隨附的`ldapmodify`工具，分別使用群組的基本DN、搜尋篩選和排序欄位，為群組建立類似的專案：
 

@@ -7,7 +7,7 @@ feature: Adaptive Forms,Foundation Components
 exl-id: 973d5ddb-cbcc-454d-859f-144442828a1a
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: 'null'
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
 source-wordcount: '2045'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 ![Hero_Image](assets/charts_hero_image.jpg)
 
 圖表或圖表是資料的視覺化表示法。 它可讓您將大量資訊壓縮成容易理解的視覺格式，讓您更妥善地視覺化、解譯和分析複雜的資料。
-AEM Forms附加元件套件提供立即可用的Chart元件。 您可在最適化表單和檔案中使用，在&#x200B;**可重複面板**&#x200B;和&#x200B;**表格**&#x200B;中以視覺化方式呈現二維資料。 「圖表」元件可讓您新增及設定下列型別的圖表：
+AEM Forms附加元件套件提供立即可用的Chart元件。 您可在最適化表單和檔案中使用，在**可重複面板**&#x200B;和&#x200B;**表格**&#x200B;中以視覺化方式呈現二維資料。 「圖表」元件可讓您新增及設定下列型別的圖表：
 
 1. 圓餅圖
 1. 欄

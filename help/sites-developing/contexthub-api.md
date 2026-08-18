@@ -9,7 +9,7 @@ feature: Context Hub,Developing,Personalization
 exl-id: b472d96f-b1a5-40b7-be2a-52f3396f6884
 solution: Experience Manager, Experience Manager Sites
 role: Developer
-source-git-commit: 'null'
+source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
 workflow-type: tm+mt
 source-wordcount: '4976'
 ht-degree: 1%
@@ -711,7 +711,7 @@ ContextHub.Utils.Cookie.setItem("name", "mycookie", {
 
 **引數**
 
-* **名稱：**&#x200B;您要解除繫結函式的事件[&#128279;](/help/sites-developing/contexthub-api.md#contexthub-utils-eventing)的名稱。
+* **名稱：**&#x200B;您要解除繫結函式的事件](/help/sites-developing/contexthub-api.md#contexthub-utils-eventing)的[名稱。
 
 * **選取器：**&#x200B;識別繫結的選取器。 （請參閱[on](/help/sites-developing/contexthub-api.md#on-name-handler-selector-triggerforpastevents)和[once](/help/sites-developing/contexthub-api.md#once-name-handler-selector-triggerforpastevents)函式的`selector`引數）。
 
@@ -725,7 +725,7 @@ ContextHub.Utils.Cookie.setItem("name", "mycookie", {
 
 **引數**
 
-* **name：** （字串）您要繫結函式的事件[&#128279;](/help/sites-developing/contexthub-api.md#contexthub-utils-eventing)的名稱。
+* **name：** （字串）您要繫結函式的事件](/help/sites-developing/contexthub-api.md#contexthub-utils-eventing)的[名稱。
 
 * **處理常式：** （函式）要繫結至事件的函式。
 * **選取器：** （字串）繫結的唯一識別碼。 如果要使用`off`函式移除繫結，則需要選取器識別繫結。
@@ -767,7 +767,7 @@ ContextHub.Utils.Cookie.setItem("name", "mycookie", {
 
 **引數**
 
-* **name：** （字串）您要繫結函式的事件[&#128279;](/help/sites-developing/contexthub-api.md#contexthub-utils-eventing)的名稱。
+* **name：** （字串）您要繫結函式的事件](/help/sites-developing/contexthub-api.md#contexthub-utils-eventing)的[名稱。
 
 * **處理常式：** （函式）要繫結至事件的函式。
 * **選取器：** （字串）繫結的唯一識別碼。 如果要使用`off`函式移除繫結，則需要選取器識別繫結。

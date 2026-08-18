@@ -8,7 +8,7 @@ exl-id: 2e4f8f51-df02-4bbb-99bb-30181facd1e0
 solution: Experience Manager, Experience Manager Forms
 feature: Forms Portal
 role: Admin, User, Developer
-source-git-commit: 'null'
+source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
 workflow-type: tm+mt
 source-wordcount: '1537'
 ht-degree: 2%
@@ -26,7 +26,7 @@ AEM Forms入口網站草稿和提交元件可讓使用者將其表單儲存為�
 >[!NOTE]
 >
 >* 本檔案中說明的範例和設定是根據MySQL 5.6.24，您必須適當地取代它們來取代資料庫系統。
->* 確保您已安裝最新版的AEM Forms附加元件套件。 如需可用封裝的清單，請參閱[AEM Forms發行版本](https://helpx.adobe.com/tw/aem-forms/kb/aem-forms-releases.html)文章。
+>* 確保您已安裝最新版的AEM Forms附加元件套件。 如需可用封裝的清單，請參閱[AEM Forms發行版本](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)文章。
 >* 範例套件僅適用於Adaptive Forms提交動作。
 
 ## 設定範例 {#set-up-and-configure-the-sample}
@@ -84,7 +84,7 @@ AEM Forms入口網站草稿和提交元件可讓使用者將其表單儲存為�
    >
    >如果您變更表格名稱，請在Form Portal設定中提供它們。
 
-1. 將其他組態維持原狀，然後按一下[儲存]。**&#x200B;**
+1. 將其他組態維持原狀，然後按一下[儲存]。****
 
 1. 資料庫連線可透過Apache Sling Connection Pooled Data Source完成。
 1. 若為Apache Sling連線，請在Web主控台設定中尋找並按一下，以編輯模式開啟&#x200B;**[!UICONTROL Apache Sling Connection Pooled DataSource]**。 指定特性值，如下表所述：
@@ -163,7 +163,7 @@ AEM Forms入口網站草稿和提交元件可讓使用者將其表單儲存為�
 >* 範例未提供適用於MySQL的JDBC驅動程式。 請確定您已布建此資料庫，並提供設定JDBC連線集區所需的資訊。
 >* 將您的作者和發佈執行個體指向使用相同的資料庫。 所有製作和發佈執行個體的JDBC連線URI欄位值必須相同。
 
-1. 將其他組態維持原狀，然後按一下[儲存]。**&#x200B;**
+1. 將其他組態維持原狀，然後按一下[儲存]。****
 
 1. 如果資料庫綱要中已經有表格，請跳至下一個步驟。
 
@@ -345,7 +345,7 @@ Forms Portal的資料庫實作會使用其他中繼資料表格。 表格具有�
 
 1. 以滑鼠右鍵按一下在步驟2中建立的`cq:ClientLibraryFolder`節點，選取建立>建立資料夾。 建立一個名為 `util` 的檔案夾。 按一下&#x200B;**[!UICONTROL 「儲存全部」]**。 在`util`資料夾上按一下滑鼠右鍵，選取「建立>建立檔案」。 建立一個名為 `util.js` 的檔案。 按一下&#x200B;**[!UICONTROL 「儲存全部」]**。
 
-1. 將下列程式碼新增至util.js檔案，然後按一下[儲存全部]。**&#x200B;** 程式碼會驗證檔案名稱的長度。
+1. 將下列程式碼新增至util.js檔案，然後按一下[儲存全部]。**** 程式碼會驗證檔案名稱的長度。
 
    ```javascript
    /*
@@ -402,7 +402,7 @@ Forms Portal的資料庫實作會使用其他中繼資料表格。 表格具有�
    >
    >此指令碼適用於現成可用的附件Widget元件。 如果您已自訂立即可用的附件Widget，請變更上述指令碼以納入個別變更。
 
-1. 將下列屬性新增至步驟2中建立的資料夾，然後按一下[儲存全部]。**&#x200B;**
+1. 將下列屬性新增至步驟2中建立的資料夾，然後按一下[儲存全部]。****
 
    * **[!UICONTROL 名稱：]**&#x200B;類別
 
