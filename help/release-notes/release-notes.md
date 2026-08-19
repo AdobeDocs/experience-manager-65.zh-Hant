@@ -630,11 +630,11 @@ Adobe打算在產品生命週期結束前保留這些較舊的端點。 Adobe �
 這些網站僅供客戶使用。 若您是客戶並且需要存取權，請聯絡您的 Adobe 客戶經理。
 
 * [在 licensing.adobe.com 下載產品](https://licensing.adobe.com/)
-* [聯絡 Adobe 客戶支援](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-customer-support-experience#)。
+* [聯絡 Adobe 客戶支援](https://experienceleague.adobe.com/zh-hant/docs/support-resources/adobe-support-tools-guide/adobe-customer-support-experience#)。
 
 >[!MORELIKETHIS]
 >
->* [[!DNL Experience Manager] 產品頁面](https://business.adobe.com/products/experience-manager/adobe-experience-manager.html)
+>* [[!DNL Experience Manager] 產品頁面](https://business.adobe.com/tw/products/experience-manager/adobe-experience-manager.html)
 >* [[!DNL Experience Manager] 6.5檔案](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65)
 >* [訂閱Adobe優先產品更新](https://www.adobe.com/tw/subscription/priority-product-update.html)
 
