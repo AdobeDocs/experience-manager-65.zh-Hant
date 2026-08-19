@@ -166,7 +166,7 @@ var s=s_gi(s_account)
 您可以嘗試下列解決方案：
 
 * 確定在[頁面標題](/help/sites-developing/target.md#enabling-targeting-with-adobe-target-on-your-pages)中同步執行載入類似DTM的程式庫（接著載入Target程式庫）的客戶程式碼。
-* 如果網站設定為使用DTM來傳遞Target資料庫，請確定已在[Target組態](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/target-configuring.html)中核取由DTM **傳遞的** Clientlib選項。
+* 如果網站設定為使用DTM來傳遞Target資料庫，請確定已在[Target組態](https://helpx.adobe.com/tw/experience-manager/6-3/sites/administering/using/target-configuring.html)中核取由DTM **傳遞的** Clientlib選項。
 
 ### 使用AT.js 1.3+時，一律會顯示預設選件，而非正確選件 {#a-default-offer-is-always-displayed-instead-of-correct-offer-when-using-at-js}
 
@@ -211,7 +211,7 @@ http://localhost:4502/etc/cloudservices/testandtarget/<YOUR-CONFIG>/jcr:content.
 }
 ```
 
-如果回應包含行`a4tEnabled:false`，請連絡[Adobe客戶服務](https://helpx.adobe.com/contact.html)，以正確布建您的帳戶。
+如果回應包含行`a4tEnabled:false`，請連絡[Adobe客戶服務](https://helpx.adobe.com/tw/contact.html)，以正確布建您的帳戶。
 
 ### 實用的Target API {#helpful-target-apis}
 

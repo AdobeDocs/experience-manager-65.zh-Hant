@@ -19,7 +19,7 @@ Adobe Dynamic Tag Management是可啟用您的數位行銷工具的工具。 Ado
 
 >[!CAUTION]
 >
->Adobe DTM已淘汰，改為[!DNL Adobe Experience Platform]，並將很快結束[生命週期](https://medium.com/launch-by-adobe/dtm-plans-for-a-sunset-3c6aab003a6f)。 Adobe建議您[使用 [!DNL Adobe Experience Platform] 進行資產分析](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/advanced/asset-insights-launch-tutorial.html)。
+>Adobe DTM已淘汰，改為[!DNL Adobe Experience Platform]，並將很快結束[生命週期](https://medium.com/launch-by-adobe/dtm-plans-for-a-sunset-3c6aab003a6f)。 Adobe建議您[使用 [!DNL Adobe Experience Platform] 進行資產分析](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/advanced/asset-insights-launch-tutorial.html?lang=zh-Hant)。
 
 執行這些步驟，透過DTM啟用Assets Insights。
 
@@ -33,7 +33,7 @@ Adobe Dynamic Tag Management是可啟用您的數位行銷工具的工具。 Ado
 
    * 選取&#x200B;**[!UICONTROL Web屬性]**&#x200B;標籤，然後按一下&#x200B;**[!UICONTROL 新增屬性]**。
 
-   * 視需要更新欄位，然後按一下&#x200B;**[!UICONTROL 建立屬性]**。 請參閱[文件](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)。
+   * 視需要更新欄位，然後按一下&#x200B;**[!UICONTROL 建立屬性]**。 請參閱[文件](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hant)。
 
    ![建立編輯Web屬性](assets/Create-edit-web-property.png)
 

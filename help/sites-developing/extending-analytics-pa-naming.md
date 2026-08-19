@@ -42,7 +42,7 @@ Adobe Analytics使用`s.pageName`屬性來唯一識別頁面，並為頁面所�
 
 * `pagedata.navTitle`：服務使用`page.getNavigationTitle()`
 
-`page`物件是頁面的[`com.day.cq.wcm.api.Page`](https://helpx.adobe.com/experience-manager/6-3/sites-developing/reference-materials/javadoc/com/day/cq/wcm/api/Page.html) Java物件。
+`page`物件是頁面的[`com.day.cq.wcm.api.Page`](https://helpx.adobe.com/tw/experience-manager/6-3/sites-developing/reference-materials/javadoc/com/day/cq/wcm/api/Page.html) Java物件。
 
 如果您未將CQ變數對應到架構中的`s.pageName`屬性，則會從頁面路徑產生`s.pageName`的值。 例如，路徑為`/content/geometrixx/en`的頁面使用`s.pageName`的值`content:geometrixx:en`。
 
