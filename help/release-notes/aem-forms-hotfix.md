@@ -5,10 +5,10 @@ exl-id: 37287332-3c8d-4ddc-a77e-3c5ee332898b
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
-source-git-commit: 0f718a65a5aa0257a1507f3c9541dba84d861ea3
+source-git-commit: 15a33b28a5148473cf7942328a85c594249a3571
 workflow-type: tm+mt
-source-wordcount: '3491'
-ht-degree: 0%
+source-wordcount: '4046'
+ht-degree: 6%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 0%
   <tr>
     <td>
       <strong>2026年6月8日</strong><br>
-      <em>適用於：</em> AEM 6.5.25.0 WAR/JEE部署（包括JEE上的AEM Forms）<br>
+      <em>套用至：</em> AEM 6.5.25.0 Forms JEE部署<br>
     </td>
     <td>
     <ul>
@@ -42,6 +42,30 @@ ht-degree: 0%
     <td>
     <ul>
     <li><b>NPR-44100</b>在WAR/JEE部署上安裝AEM 6.5 Service Pack 25.0後，<code>com.adobe.cq.screens.sessions</code>套件組合會維持在「已安裝」狀態，而不會變成「作用中」。</li>
+    </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <strong>2026年1月6日</strong><br>
+      <em>適用於：</em> AEM 6.5.24.0 Forms JEE部署(JBoss、WebLogic、WebSphere)<br>
+    </td>
+    <td>
+    <ul>
+    <strong>Jboss：</strong>
+    <li>Windows - <a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/aemforms-6-5-0-115/jboss/adobe-aem-forms-jee-service-pack-6.5.24.0-win-jboss.zip">適用於JBoss JEE伺服器Windows上AEM Service Pack 6.5.24.0的Hotfix</a></li>
+    <li>Linux- <a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/aemforms-6-5-0-115/jboss/adobe-aem-forms-jee-service-pack-6.5.24.0-linux-jboss.gz">適用於Linux上AEM Service Pack 6.5.24.0的Hotfix （適用於JBoss JEE伺服器）</a></li>
+    <strong>Weblogic：</strong>
+    <li>Windows — 適用於Weblogic JEE伺服器的Windows上<a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/aemforms-6-5-0-115/weblogic/adobe-aem-forms-jee-service-pack-6.5.24.0-win-weblogic.zip">AEM Service Pack 6.5.24.0的Hotfix</a></li>
+    <li>Linux- Weblogic JEE伺服器Linux上AEM Service Pack 6.5.24.0的<a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/aemforms-6-5-0-115/weblogic/adobe-aem-forms-jee-service-pack-6.5.24.0-linux-weblogic.gz">Hotfix</a></li>
+    <strong>Websphere：</strong>
+    <li>Windows - Websphere JEE伺服器</a>的Windows上AEM Service Pack 6.5.24.0的Hotfix<a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/aemforms-6-5-0-115/websphere/adobe-aem-forms-jee-service-pack-6.5.24.0-windows-websphere.zip"></li>
+    <li>Linux- <a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/aemforms-6-5-0-115/websphere/adobe-aem-forms-jee-service-pack-6.5.24.0-linux-websphere.gz">適用於Linux上AEM Service Pack 6.5.24.0的Hotfix （適用於Websphere JEE伺服器）</a></li>
+    </ul>
+    </td>
+    <td>
+    <ul>
+    <li><b>FORMS-23491</b>將Struts升級為可解決此問題的版本，以減少CVE-2025-64775 （多部分請求處理中的Apache Struts拒絕服務漏洞）。</li>
     </ul>
     </td>
   </tr>
@@ -110,7 +134,7 @@ ht-degree: 0%
     <td>
     <ul>
     <li>解決Adobe Experience Manager (AEM) Forms中的遠端程式碼執行(RCE)弱點以加強安全性。 此問題與管理員使用者介面(UI)中的Struts開發模式有關，該模式允許透過偵錯功能進行任意物件圖表導覽語言(OGNL)評估。 此修正可確保停用Struts開發模式，並套用適當的安全性篩選器以防止未經授權的存取。</li>
-    <li>改善Adobe Experience Manager (AEM) Forms電子檔案元件(EDC)模組針對可延伸標籤語言(XML)外部實體(XXE)弱點的保護。這些漏洞是由於不正確處理沒有XXE保護的XML檔案所造成，這可能導致本機檔案讀取。此修正包括：
+    <li>改善Adobe Experience Manager (AEM) Forms電子檔案元件(EDC)模組針對可延伸標籤語言(XML)外部實體(XXE)弱點的保護。 這些漏洞是由於不正確處理沒有XXE保護的XML檔案所造成，這可能導致本機檔案讀取。 此修正包括：
       <ul>
         <li>確定已將SecurityCheckHandler類別中使用的DocumentBuilderFactory設定為防止XXE攻擊。</li>
         <li>更新EDC Web服務以安全地處理XML檔案，防止對本機檔案的未授權存取。</li>
@@ -136,7 +160,7 @@ ht-degree: 0%
     <td>
     <ul>
     <li>解決Adobe Experience Manager (AEM) Forms中的遠端程式碼執行(RCE)弱點以加強安全性。 此問題與管理員使用者介面(UI)中的Struts開發模式有關，該模式允許透過偵錯功能進行任意物件圖表導覽語言(OGNL)評估。 此修正可確保停用Struts開發模式，並套用適當的安全性篩選器以防止未經授權的存取。</li>
-    <li>改善對Adobe Experience Manager (AEM) Forms Document Security模組中的可延伸標籤語言(XML)外部實體(XXE)弱點的保護。這些漏洞是由於不正確處理沒有XXE保護的XML檔案所造成，這可能導致本機檔案讀取。此修正包括：
+    <li>改善對Adobe Experience Manager (AEM) Forms Document Security模組中的可延伸標籤語言(XML)外部實體(XXE)弱點的保護。 這些漏洞是由於不正確處理沒有XXE保護的XML檔案所造成，這可能導致本機檔案讀取。 此修正包括：
       <ul>
         <li>確定已將SecurityCheckHandler類別中使用的DocumentBuilderFactory設定為防止XXE攻擊。</li>
         <li>更新Document Security Web服務以安全地處理XML檔案，防止對本機檔案的未授權存取。</li>
@@ -167,7 +191,7 @@ ht-degree: 0%
         <li><strong>FORMS-20533：</strong> AEM Forms現在包含表單元件的Struts版本從2.5.33升級至6.x。 這可提供先前未包含在SP23中的Struts變更。 已透過Hotfix新增支援，您可以下載並安裝該支援，以新增對最新版本Struts的支援。</li>
         <li><strong>FORMS-20532：</strong> AEM Forms現在包含輸出元件的Struts版本從2.5.33升級至6.x。 這可提供先前未包含在SP23中的Struts變更。 已透過Hotfix新增支援，您可以下載並安裝該支援，以新增對最新版本Struts的支援。</li>
         <li><strong>FORMS-20203：</strong>當使用者將Struts從AEM Service Pack 2.5.x升級為AEM Forms Service Pack 6.x時，原則UI無法顯示所有設定，例如新增浮水印的選項。 您可以下載並安裝Hotfix來解決此問題。</li>
-        <li><strong>FORMS-20360：</strong>升級至AEM Forms Service Pack 6.5.23.0後，ImageToPDF轉換服務失敗，錯誤為：<br>
+        <li><strong>FORMS-20360：</strong>升級至AEM Forms Service Pack 6.5.23.0後，ImageToPDF轉換服務會失敗並出現錯誤：<br>
         <code>17:15:44,468 ERROR [com.adobe.pdfg.GeneratePDFImpl] (default task-49) ALC-PDG-001-000-ALC-PDG-011-028-Error occurred while converting the input image file to PDF. com/adobe/internal/pdftoolkit/core/encryption/EncryptionImp</code><br>
         您可以下載並安裝Hotfix來解決此問題。</li>
       </ul>
@@ -206,7 +230,7 @@ ht-degree: 0%
      </ul>
      </td>
     <td>
-    <ul><li>當使用者在JEE伺服器上更新至AEM Forms Service Pack 20 (6.5.20.0)，並使用輸出服務產生PDF時，PDF會呈現協助工具問題。 (LC-3922112)</li><li>在AEM Forms JEE上使用輸出服務產生的已標籤PDF會顯示「不適當的結構警告」。 (LC-3922038)</li><li>在AEM Forms JEE上提交表單時，會從資料中移除重複的XML元素例項。 (LC-3922017)</li><li>當Linux環境中的使用者在HTML中轉譯最適化表單（在JEE上）時，該表單將無法正確轉譯。 (LC-3921957)</li><li>當使用者使用AEM Forms JEE上的輸出服務將XTG檔案轉換為PostScript格式時，它會失敗並出現錯誤： AEM_OUT_001_003：非預期的例外狀況：PAExecute失敗：XFA_RENDER_FAILURE。 (LC-3921720)</li><li>在JEE伺服器上升級至AEM Forms Service Pack 18 (6.5.18.0)後，當使用者提交表單時，將無法轉譯HTML5或PDF forms，並且XMLFM會當機。(LC-3921718)
+    <ul><li>當使用者在JEE伺服器上更新至AEM Forms Service Pack 20 (6.5.20.0)，並使用輸出服務產生PDF時，PDF會呈現協助工具問題。 (LC-3922112)</li><li>在AEM Forms JEE上使用輸出服務產生的已標籤PDF會顯示「不適當的結構警告」。 (LC-3922038)</li><li>在AEM Forms JEE上提交表單時，會從資料中移除重複的XML元素例項。 (LC-3922017)</li><li>當Linux環境中的使用者在HTML中轉譯最適化表單（在JEE上）時，該表單將無法正確轉譯。 (LC-3921957)</li><li>當使用者使用AEM Forms JEE上的輸出服務將XTG檔案轉換為PostScript格式時，它會失敗並出現錯誤： AEM_OUT_001_003：非預期的例外狀況：PAExecute失敗：XFA_RENDER_FAILURE。 (LC-3921720)</li><li>在JEE伺服器上升級至AEM Forms Service Pack 18 (6.5.18.0)後，當使用者提交表單時，將無法轉譯HTML5或PDF forms，並且XMLFM會當機。 (LC-3921718)
     </ul>
     </td>    
   </tr>
@@ -214,10 +238,10 @@ ht-degree: 0%
     <td>2024年6月21日</td>
      <td>
      <ul>
-     <li>JBoss JEE伺服器</a>上的AEM Service Pack 6.5.21.0或AEM Forms Service Pack 6.5.22.0的<a href="https://nam04.safelinks.protection.outlook.com/?url=https%3A%2F%2Fexperience.adobe.com%2F%23%2Fdownloads%2Fcontent%2Fsoftware-distribution%2Fen%2Faem.html%3Fpackage%3D%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fhotfix%2FPaperCaptureSvc.zip&data=05%7C02%7Cruchitas%40adobe.com%7Cf50f80aab6994875271a08dc91f2f137%7Cfa7b1b5a7b34438794aed2c178decee1%7C0%7C0%7C638545719814675925%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&sdata=9pTrMfiMD%2B5kQezxsZwTdOmaaktxURR99d7f6wHr%2FWQ%3D&reserved=0">Hotfix </li>
-      <li>Weblogic JEE伺服器</a>上的<a href="https://nam04.safelinks.protection.outlook.com/?url=https%3A%2F%2Fexperience.adobe.com%2F%23%2Fdownloads%2Fcontent%2Fsoftware-distribution%2Fen%2Faem.html%3Fpackage%3D%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fhotfix%2FPaperCaptureSvc.zip&data=05%7C02%7Cruchitas%40adobe.com%7Cf50f80aab6994875271a08dc91f2f137%7Cfa7b1b5a7b34438794aed2c178decee1%7C0%7C0%7C638545719814675925%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&sdata=9pTrMfiMD%2B5kQezxsZwTdOmaaktxURR99d7f6wHr%2FWQ%3D&reserved=0">AEM Service Pack 6.5.21.0或AEM Forms Service Pack 6.5.22.0的Hotfix </li>
-       <li>Webshpere JEE伺服器</a>上的<a href="https://nam04.safelinks.protection.outlook.com/?url=https%3A%2F%2Fexperience.adobe.com%2F%23%2Fdownloads%2Fcontent%2Fsoftware-distribution%2Fen%2Faem.html%3Fpackage%3D%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fhotfix%2FPaperCaptureSvc.zip&data=05%7C02%7Cruchitas%40adobe.com%7Cf50f80aab6994875271a08dc91f2f137%7Cfa7b1b5a7b34438794aed2c178decee1%7C0%7C0%7C638545719814675925%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&sdata=9pTrMfiMD%2B5kQezxsZwTdOmaaktxURR99d7f6wHr%2FWQ%3D&reserved=0">AEM Service Pack 6.5.21.0或AEM Forms Service Pack 6.5.22.0的Hotfix </li>
-        <li><a href="https://nam04.safelinks.protection.outlook.com/?url=https%3A%2F%2Fexperience.adobe.com%2F%23%2Fdownloads%2Fcontent%2Fsoftware-distribution%2Fen%2Faem.html%3Fpackage%3D%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fhotfix%2FPaperCaptureSvc.zip&data=05%7C02%7Cruchitas%40adobe.com%7Cf50f80aab6994875271a08dc91f2f137%7Cfa7b1b5a7b34438794aed2c178decee1%7C0%7C0%7C638545719814675925%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&sdata=9pTrMfiMD%2B5kQezxsZwTdOmaaktxURR99d7f6wHr%2FWQ%3D&reserved=0">OSGi伺服器</a>上AEM Service Pack 6.5.21.0或AEM Forms Service Pack 6.5.22.0的Hotfix </li>
+     <li>JBoss JEE伺服器</a>上的AEM Service Pack 6.5.21.0或AEM Forms Service Pack 6.5.22.0的<a href="https://nam04.safelinks.protection.outlook.com/?url=https%3A%2F%2Fexperience.adobe.com%2F%23%2Fdownloads%2Fcontent%2Fsoftware-distribution%2Fen%2Faem.html%3Fpackage%3D%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fhotfix%2FPaperCaptureSvc.zip&amp;data=05%7C02%7Cruchitas%40adobe.com%7Cf50f80aab6994875271a08dc91f2f137%7Cfa7b1b5a7b34438794aed2c178decee1%7C0%7C0%7C638545719814675925%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&amp;sdata=9pTrMfiMD%2B5kQezxsZwTdOmaaktxURR99d7f6wHr%2FWQ%3D&amp;reserved=0">Hotfix </li>
+      <li>Weblogic JEE伺服器</a>上的<a href="https://nam04.safelinks.protection.outlook.com/?url=https%3A%2F%2Fexperience.adobe.com%2F%23%2Fdownloads%2Fcontent%2Fsoftware-distribution%2Fen%2Faem.html%3Fpackage%3D%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fhotfix%2FPaperCaptureSvc.zip&amp;data=05%7C02%7Cruchitas%40adobe.com%7Cf50f80aab6994875271a08dc91f2f137%7Cfa7b1b5a7b34438794aed2c178decee1%7C0%7C0%7C638545719814675925%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&amp;sdata=9pTrMfiMD%2B5kQezxsZwTdOmaaktxURR99d7f6wHr%2FWQ%3D&amp;reserved=0">AEM Service Pack 6.5.21.0或AEM Forms Service Pack 6.5.22.0的Hotfix </li>
+       <li>Webshpere JEE伺服器</a>上的<a href="https://nam04.safelinks.protection.outlook.com/?url=https%3A%2F%2Fexperience.adobe.com%2F%23%2Fdownloads%2Fcontent%2Fsoftware-distribution%2Fen%2Faem.html%3Fpackage%3D%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fhotfix%2FPaperCaptureSvc.zip&amp;data=05%7C02%7Cruchitas%40adobe.com%7Cf50f80aab6994875271a08dc91f2f137%7Cfa7b1b5a7b34438794aed2c178decee1%7C0%7C0%7C638545719814675925%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&amp;sdata=9pTrMfiMD%2B5kQezxsZwTdOmaaktxURR99d7f6wHr%2FWQ%3D&amp;reserved=0">AEM Service Pack 6.5.21.0或AEM Forms Service Pack 6.5.22.0的Hotfix </li>
+        <li><a href="https://nam04.safelinks.protection.outlook.com/?url=https%3A%2F%2Fexperience.adobe.com%2F%23%2Fdownloads%2Fcontent%2Fsoftware-distribution%2Fen%2Faem.html%3Fpackage%3D%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fhotfix%2FPaperCaptureSvc.zip&amp;data=05%7C02%7Cruchitas%40adobe.com%7Cf50f80aab6994875271a08dc91f2f137%7Cfa7b1b5a7b34438794aed2c178decee1%7C0%7C0%7C638545719814675925%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&amp;sdata=9pTrMfiMD%2B5kQezxsZwTdOmaaktxURR99d7f6wHr%2FWQ%3D&amp;reserved=0">OSGi伺服器</a>上AEM Service Pack 6.5.21.0或AEM Forms Service Pack 6.5.22.0的Hotfix </li>
      </ul>
      </td>
     <td>
