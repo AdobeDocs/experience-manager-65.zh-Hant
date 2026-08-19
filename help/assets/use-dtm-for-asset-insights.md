@@ -1,6 +1,6 @@
 ---
 title: 透過DTM啟用Assets深入分析
-description: 瞭解如何使用AdobeDynamic Tag Management (DTM)來啟用Assets Insights。
+description: 瞭解如何使用Adobe Dynamic Tag Management (DTM)來啟用Assets Insights。
 contentOwner: AG
 role: User, Admin
 feature: Asset Insights,Asset Reports
@@ -8,23 +8,23 @@ exl-id: 80e8f84e-3235-4212-9dcd-6acdb9067893
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '631'
-ht-degree: 2%
+source-wordcount: '668'
+ht-degree: 3%
 
 ---
 
 # 透過DTM啟用Assets深入分析 {#enable-asset-insights-through-dtm}
 
-AdobeDynamic Tag Management是可啟用您的數位行銷工具的工具。 Adobe Analytics客戶可免費使用此功能。 您可以自訂追蹤代碼，讓協力廠商CMS解決方案能夠使用Assets Insights，或使用DTM插入Assets Insights標籤。 僅支援並為影像提供深入分析。
+Adobe Dynamic Tag Management是可啟用您的數位行銷工具的工具。 Adobe Analytics客戶可免費使用此功能。 您可以自訂追蹤代碼，讓協力廠商CMS解決方案能夠使用Assets Insights，或使用DTM插入Assets Insights標籤。 僅支援並為影像提供深入分析。
 
 >[!CAUTION]
 >
->AdobeDTM已遭取代而支援[!DNL Adobe Experience Platform]，且即將結束[生命週期](https://medium.com/launch-by-adobe/dtm-plans-for-a-sunset-3c6aab003a6f)。 Adobe建議您[使用 [!DNL Adobe Experience Platform] 進行資產分析](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/advanced/asset-insights-launch-tutorial.html?lang=zh-Hant)。
+>Adobe DTM已淘汰，改為[!DNL Adobe Experience Platform]，並將很快結束[生命週期](https://medium.com/launch-by-adobe/dtm-plans-for-a-sunset-3c6aab003a6f)。 Adobe建議您[使用 [!DNL Adobe Experience Platform] 進行資產分析](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/advanced/asset-insights-launch-tutorial.html?lang=zh-Hant)。
 
 執行這些步驟，透過DTM啟用Assets Insights。
 
 1. 按一下Experience Manager標誌，然後前往&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Assets]** > **[!UICONTROL 深入分析設定]**。
-1. [使用DTMCloud Service設定Experience Manager部署](/help/sites-administering/dtm.md)
+1. [使用DTM Cloud Service設定Experience Manager部署](/help/sites-administering/dtm.md)
 
    在您登入[https://dtm.adobe.com](https://dtm.adobe.com/)並造訪使用者設定檔中的&#x200B;**[!UICONTROL 帳戶設定]**&#x200B;後，應該就能使用API權杖。 從Assets Insights的角度來看，不需要執行此步驟，因為仍在進行Experience Manager Sites與Assets Insights的整合。
 
@@ -52,7 +52,7 @@ AdobeDynamic Tag Management是可啟用您的數位行銷工具的工具。 Adob
    >
    >* `AppMeasurement.js`已移除。 應透過DTM的Adobe Analytics工具提供。
    >* 對`assetAnalytics.dispatcher.init()`的呼叫已移除。 DTM的Adobe Analytics工具載入完成後，應該會呼叫函式。
-   >* 根據Assets前瞻分析頁面追蹤器的託管位置(例如，Experience Manager、CDN等)，指令碼來源的來源可能需要變更。
+   >* 根據Assets前瞻分析頁面追蹤器的託管位置（例如Experience Manager、CDN等），指令碼來源的來源可能需要變更。
    >* 對於Experience Manager託管的頁面追蹤器，來源應使用Dispatcher執行個體的主機名稱指向發佈執行個體。
 
 1. 存取`https://dtm.adobe.com`。 在Web屬性中按一下&#x200B;**[!UICONTROL 概觀]**，然後按一下&#x200B;**[!UICONTROL 新增工具]**&#x200B;或開啟現有的Adobe Analytics工具。 建立工具時，您可以將&#x200B;**[!UICONTROL 組態方法]**&#x200B;設定為&#x200B;**[!UICONTROL 自動]**。
@@ -109,9 +109,9 @@ AdobeDynamic Tag Management是可啟用您的數位行銷工具的工具。 Adob
 
    * DTM中的頁面載入規則僅包含`pagetracker.js`程式碼。 任何`assetAnalytics`欄位都視為預設值的覆寫。 預設不需要。
    * 程式碼在確定`_satellite.getToolsByType('sc')[0].getS()`已初始化且`assetAnalytics,dispatcher.init`可用之後呼叫`assetAnalytics.dispatcher.init()`。 因此，您可以略過在步驟11中新增。
-   * 如前瞻分析頁面追蹤器程式碼(**[!UICONTROL 工具> Assets >前瞻分析頁面追蹤器]**)中的評論所指示，當頁面追蹤器未建立`AppMeasurement`物件時，前三個引數（RSID、追蹤伺服器和訪客名稱空間）無關。 傳遞空字串而非醒目提示此專案。\
-     其餘引數對應至見解設定頁面(**[!UICONTROL 工具> Assets >見解設定]**)中的設定內容。
-   * 透過查詢所有可用AppMeasurement引擎的`satelliteLib`來擷取SiteCatalyst物件。 如果設定了多個標籤，請適當的變更陣列選擇器的索引。 陣列中的專案會根據DTM介面中可用的SiteCatalyst工具排序。
+   * 如前瞻分析頁面追蹤器程式碼（**[!UICONTROL 工具> Assets >前瞻分析頁面追蹤器]**）中的評論所指示，當頁面追蹤器未建立`AppMeasurement`物件時，前三個引數（RSID、追蹤伺服器和訪客名稱空間）無關。 傳遞空字串而非醒目提示此專案。\
+     其餘引數對應至見解設定頁面（**[!UICONTROL 工具> Assets >見解設定]**）中的設定內容。
+   * 透過查詢所有可用SiteCatalyst引擎的`satelliteLib`來擷取AppMeasurement物件。 如果設定了多個標籤，請適當的變更陣列選擇器的索引。 陣列中的專案會根據DTM介面中可用的SiteCatalyst工具排序。
 
 1. 儲存並關閉程式碼編輯器視窗，然後將變更儲存在工具設定中。
 1. 在&#x200B;**[!UICONTROL 核准]**&#x200B;索引標籤中，核准兩個擱置的核准。 DTM標籤已可插入您的網頁。

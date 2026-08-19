@@ -11,7 +11,7 @@ feature: Integration
 role: Admin
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
-source-wordcount: '1078'
+source-wordcount: '1102'
 ht-degree: 2%
 
 ---
@@ -46,9 +46,9 @@ ${ myHtlVariable }
 
 ## Analytics整合問題 {#analytics-integration-issues}
 
-### Report Importer造成高CPU/記憶體使用率 {#the-report-importer-causes-high-cpu-memory-usage}
+### 報表匯入工具造成高CPU/記憶體使用量 {#the-report-importer-causes-high-cpu-memory-usage}
 
-Report Importer造成高CPU/記憶體使用率或造成`OutOfMemoryError`例外狀況。
+Report Importer造成CPU/記憶體使用量過高或造成`OutOfMemoryError`個例外狀況。
 
 #### 解決方案 {#solution}
 
@@ -57,18 +57,18 @@ Report Importer造成高CPU/記憶體使用率或造成`OutOfMemoryError`例外�
 * 確認沒有大量的PollingImporters註冊（請參閱下方的「由於PollingImporter關機需花很長時間」一節）。
 * 在[OSGi主控台](/help/sites-deploying/configuring-osgi.md)中的`ManagedPollingImporter`設定使用CRON運算式，在一天中的特定時間執行報表匯入程式。
 
-如需有關在AEM中建立自訂資料匯入工具服務的詳細資訊，請參閱下列文章[https://helpx.adobe.com/experience-manager/using/polling.html](https://helpx.adobe.com/experience-manager/using/polling.html)。
+如需在AEM中建立自訂資料匯入工具服務的詳細資訊，請參閱下列文章[https://helpx.adobe.com/experience-manager/using/polling.html](https://helpx.adobe.com/experience-manager/using/polling.html)。
 
 ### 由於PollingImporter，關機需要很長的時間 {#shutdown-takes-a-long-time-due-to-the-pollingimporter}
 
-Analytics在設計時已考慮繼承機制。 通常，您會在頁面屬性[Cloud Service](/help/sites-developing/extending-cloud-config.md)索引標籤中新增Analytics設定的參考，以啟用網站的Analytics。 然後，設定會自動繼承到所有子頁面，無需再次參考，除非頁面需要不同的設定。 新增對網站的參照也會自動建立數個節點(12適用於AEM 6.3和更早版本，或6適用於AEM 6.4)   型別`cq;PollConfig`的（及更新版本），它會具現化用來將Analytics資料匯入AEM的PollingImporters。 因此：
+Analytics在設計時已考慮繼承機制。 通常，您會透過在頁面屬性[雲端服務](/help/sites-developing/extending-cloud-config.md)索引標籤中新增Analytics設定的參考來啟用網站的Analytics。 然後，設定會自動繼承到所有子頁面，無需再次參考，除非頁面需要不同的設定。 新增對網站的參考也會自動建立`cq;PollConfig`型別的數個節點（12個適用於AEM 6.3和更早版本，或6個適用於AEM 6.4及更高版本），這些節點會具現化用來將Analytics資料匯入AEM的PollingImporters。 因此：
 
 * 有大量頁面參考Analytics會導致大量的PollingImporters。
 * 此外，複製和貼上參照Analytics設定的頁面會導致其PollingImporters重複。
 
 #### 解決方案 {#solution-1}
 
-首先，分析[error.log](/help/sites-deploying/configure-logging.md)可能會讓您深入瞭解作用中或註冊的PollingImporters數量。 例如：
+首先，分析[error.log](/help/sites-deploying/configure-logging.md)可能會提供一些有關作用中或註冊的PollingImporters數量的insight。 例如：
 
 ```
 # Count PollingImporter entries
@@ -84,27 +84,27 @@ sed -n "s/.*(aem-analytics-integration-.*).*target=\(.*\)\/jcr:content.*/\1/p" e
 
 其次，請確定只有最上層的頁面（在階層中的較高位置）有參考的Analytics設定。
 
-如需有關在AEM中建立自訂資料匯入工具服務的詳細資訊，請參閱下列文章[https://helpx.adobe.com/experience-manager/using/polling.html](https://helpx.adobe.com/experience-manager/using/polling.html)。
+如需在AEM中建立自訂資料匯入工具服務的詳細資訊，請參閱下列文章[https://helpx.adobe.com/experience-manager/using/polling.html](https://helpx.adobe.com/experience-manager/using/polling.html)。
 
 ## DTM（舊版）問題 {#dtm-legacy-issues}
 
 ### DTM指令碼標籤沒有在頁面來源中轉譯 {#the-dtm-script-tag-is-not-rendered-in-the-page-source}
 
-[DTM](/help/sites-administering/dtm.md)指令碼標籤未正確包含在頁面中，即使已在頁面屬性[Cloud Service](/help/sites-developing/extending-cloud-config.md)索引標籤中參考組態。
+[DTM](/help/sites-administering/dtm.md)指令碼標籤未正確包含在頁面中，即使已在頁面屬性[雲端服務](/help/sites-developing/extending-cloud-config.md)索引標籤中參考組態。
 
 #### 解決方案 {#solution-2}
 
 若要修正此問題，請嘗試下列步驟：
 
-* 請確定加密的屬性可以解密(請注意，加密可能在每個AEM執行個體上使用不同的自動產生金鑰)。 如需其他詳細資料，請一併閱讀[組態屬性的Encryption Support &#x200B;](/help/sites-administering/encryption-support-for-configuration-properties.md)。
+* 請確定加密的屬性可以解密（請注意，加密可能在每個AEM執行個體上使用不同的自動產生金鑰）。 如需其他詳細資料，請一併閱讀[組態屬性的Encryption Support &#x200B;](/help/sites-administering/encryption-support-for-configuration-properties.md)。
 * 重新發佈`/etc/cloudservices/dynamictagmanagement`中找到的組態
 * 檢查`/etc/cloudservices`上的ACL。 ACL應為：
 
-   * 允許； jcr：read； webservice-support-servicelibfinder
-   * 允許； jcr：read；每個人；`rep:glob:`&amp;amp；ast；`/defaults/`&amp;amp；ast；
-   * 允許； jcr：read；每個人；`rep:glob:`&amp;amp；ast；`/defaults`
-   * 允許； jcr：read；每個人；`rep:glob:`&amp;amp；ast；`/public/`&amp;amp；ast；
-   * 允許； jcr：read；每個人；`rep:glob:`&amp;amp；ast；`/public`
+  * 允許； jcr:read； webservice-support-servicelibfinder
+  * 允許； jcr:read；每個人；`rep:glob:`&amp;ast；`/defaults/`&amp;ast；
+  * 允許； jcr:read；每個人； `rep:glob:`&amp;ast；`/defaults`
+  * 允許； jcr:read；每個人；`rep:glob:`&amp;ast；`/public/`&amp;ast；
+  * 允許； jcr:read；每個人； `rep:glob:`&amp;ast；`/public`
 
 如需有關管理ACL的詳細資訊，請閱讀[使用者管理與安全性](/help/sites-administering/security.md#permissions-in-aem)頁面。
 
@@ -159,7 +159,7 @@ var s=s_gi(s_account)
 
 * 使用第三方Tag Management系統非同步載入Target使用者端資料庫（ `mbox.js`或`at.js`）可能會隨機中斷鎖定目標。 Target程式庫應在頁面標頭中同步載入。 從AEM傳遞程式庫時，一律會有此情況。
 
-* 同時載入兩個Target使用者端程式庫( `at.js`)，例如，一個使用DTM，另一個使用AEM中的Target設定。 如果`at.js`版本不同，這可能會導致`adobe.target`定義的衝突。
+* 同時載入兩個Target使用者端資料庫( `at.js`)，例如，一個使用DTM，另一個使用AEM中的Target設定。 如果`at.js`版本不同，這可能會導致`adobe.target`定義的衝突。
 
 #### 解決方案 {#solution-5}
 
@@ -195,7 +195,7 @@ adobe.target.getOffer({
 
 #### 解決方案 {#solution-7}
 
-您必須發出下列驗證要求給AEM，以驗證Target帳戶是否已正確啟用A4T：
+您必須透過向AEM發出以下驗證請求，驗證您的Target帳戶是否已正確啟用A4T：
 
 ```
 http://localhost:4502/etc/cloudservices/testandtarget/<YOUR-CONFIG>/jcr:content.a4t.json
@@ -211,7 +211,7 @@ http://localhost:4502/etc/cloudservices/testandtarget/<YOUR-CONFIG>/jcr:content.
 }
 ```
 
-如果回應包含行`a4tEnabled:false`，請連絡[Adobe客戶服務](https://helpx.adobe.com/tw/contact.html)以正確布建您的帳戶。
+如果回應包含行`a4tEnabled:false`，請連絡[Adobe客戶服務](https://helpx.adobe.com/tw/contact.html)，以正確布建您的帳戶。
 
 ### 實用的Target API {#helpful-target-apis}
 

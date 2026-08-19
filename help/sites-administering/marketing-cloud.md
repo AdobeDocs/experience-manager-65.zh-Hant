@@ -11,25 +11,25 @@ feature: Integration
 role: Admin
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
-source-wordcount: '825'
+source-wordcount: '868'
 ht-degree: 1%
 
 ---
 
 # 與Adobe Experience Cloud整合{#integrating-with-the-adobe-marketing-cloud}
 
-[Adobe Experience Cloud](https://business.adobe.com/tw/products/marketing-cloud/main.html)包含強大的網站分析和網站最佳化產品，可提供可操作的即時資料和深入分析，以推動成功的線上方案。 它提供整合且開放的平台，用於線上業務最佳化。 Cloud包含整合式應用程式，可收集並釋放客戶深入分析的力量，以最佳化客戶贏取、轉換和保留工作，以及內容的建立和分發。
+[Adobe Experience Cloud](https://business.adobe.com/tw/products/marketing-cloud/main.html)包含強大的網站分析和網站最佳化產品，可提供可操作的即時資料和深入分析，以推動成功的線上方案。 它提供整合且開放的平台，用於線上業務最佳化。 雲端包含整合式應用程式，可收集並釋放客戶insight的強大功能，以最佳化客戶贏取、轉換和保留工作，以及內容的建立和分發。
 
 透過Adobe Experience Manager (AEM)，您可以順暢地整合下列Adobe Experience Cloud產品：
 
 * Adobe Analytics可提供行銷人員有關線上策略與行銷方案的可行、即時資訊。
 * Adobe Target可讓行銷人員持續提供與客戶更相關的線上內容，提供更理想的轉換。
 * Adobe Dynamic Media Classic可自動化媒體管理、簡化Web發佈，以及增強Web體驗，所有這些都可在託管環境中完成。
-* Adobe Dynamic Tag Management為行銷人員提供了直覺式工具，可快速輕鬆地管理不限數量的Adobe和第三方標籤。
+* Adobe Dynamic Tag Management提供行銷人員直覺式工具，可快速輕鬆管理不限數量的Adobe和協力廠商標籤。
 <!-- Search&Promote is end of life as of September 1, 2022 * Adobe Search&Promote gives marketers the ability to control and optimize the search results on their sites. -->
 * Adobe Campaign可讓您直接在Adobe Experience Manager中管理電子郵件傳遞內容。
 
-此外，您可以[將AEM與Creative Cloud](/help/assets/aem-cc-integration-best-practices.md)以及[協力廠商服務](/help/sites-administering/third-party-services.md)整合。
+此外，您可以[整合AEM與Creative Cloud](/help/assets/aem-cc-integration-best-practices.md)以及與[協力廠商服務](/help/sites-administering/third-party-services.md)。
 
 ## 整合 Adobe Analytics {#integrating-with-adobe-analytics}
 
@@ -82,13 +82,13 @@ Adobe Dynamic Media Classic是託管解決方案，可發佈、管理、增強�
 
 ## 整合Adobe Dynamic Tag Management {#integrating-with-adobe-dynamic-tag-management}
 
-[Adobe動態Tag Management](https://business.adobe.com/tw/products/experience-platform/adobe-experience-platform.html)提供行銷人員直覺式工具，可快速輕鬆管理不限數量的Adobe和協力廠商標籤。 您擁有更多控制力與彈性，幾乎可將任何線上作業最佳化，同時減少對IT資源的依賴。
+[Adobe Dynamic Tag Management](https://business.adobe.com/tw/products/experience-platform/adobe-experience-platform.html)提供行銷人員直覺式工具，可快速輕鬆管理不限數量的Adobe和協力廠商標籤。 您擁有更多控制力與彈性，幾乎可將任何線上作業最佳化，同時減少對IT資源的依賴。
 
-[將Adobe動態Tag Management](/help/sites-administering/dtm.md)與AEM整合，以便您可以使用動態Tag Management網頁屬性來追蹤AEM網站。
+[將Adobe Dynamic Tag Management](/help/sites-administering/dtm.md)與AEM整合，以便您可以使用您的Dynamic Tag Management Web屬性來追蹤AEM網站。
 
 ## 與Adobe Audience Manager整合 {#integrating-with-adobe-audience-manager}
 
-已在AEM 6.3中移除Audience Manager整合。
+Audience Manager整合已在AEM 6.3中移除。
 
 <!-- Search&Promote is end of life as of September 1, 2022 ## Integrating with Search&Promote {#integrating-with-search-promote} -->
 
