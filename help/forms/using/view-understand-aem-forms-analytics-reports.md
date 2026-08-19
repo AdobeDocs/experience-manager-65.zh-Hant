@@ -11,14 +11,14 @@ role: Admin, User, Developer
 feature: Adaptive Forms
 source-git-commit: 9f59606bb58b9e90f07bd22e89f3213afb54a697
 workflow-type: tm+mt
-source-wordcount: '1056'
-ht-degree: 0%
+source-wordcount: '1082'
+ht-degree: 2%
 
 ---
 
 # 檢視和瞭解AEM Forms分析報表 {#view-and-understand-aem-forms-analytics-reports}
 
-Adobe Experience Manager Forms與Adobe Analytics整合，可讓您擷取及追蹤已發佈表單和檔案的績效量度。 分析這些量度背後的目的是，根據使表單或檔案更易於使用所需的變更相關資料，做出明智的決定。
+Adobe Experience Manager Forms與Adobe Analytics整合，可讓您擷取及追蹤已發佈表單和檔案的績效量度。 分析這些指標背後的目標是根據有關使表單或文件更有用所需的變更資料做出明智的決策。
 
 ## 設定分析 {#setting-up-analytics}
 
@@ -63,7 +63,7 @@ AEM Forms會顯示表單及表單中每個面板的analytics報表，如下所�
 
 ![最適化表單的摘要報告](assets/analyticsdashboard_callout.png)
 
-**A.**&#x200B;轉換&#x200B;**B.**&#x200B;表單層級摘要&#x200B;**C.**&#x200B;面板層級摘要&#x200B;**D.**&#x200B;訪客瀏覽器 — 篩選訪客的&#x200B;**E.**&#x200B;作業系統 — 篩選&#x200B;**F.**&#x200B;訪客的語言 — 篩選
+**A.**&#x200B;轉換&#x200B;**B.**&#x200B;表單層級摘要&#x200B;**C.**&#x200B;面板層級摘要&#x200B;**D.**&#x200B;訪客瀏覽器 — 篩選器&#x200B;**E.** 訪客的OS — 篩選&#x200B;**F.**&#x200B;訪客的語言 — 篩選
 
 依預設，會顯示過去七天的分析報表。 您可以檢視最近15天、最近一個月等的報告，或指定日期範圍。
 
@@ -75,7 +75,7 @@ AEM Forms會顯示表單及表單中每個面板的analytics報表，如下所�
 
 ### 最適化和HTML5表單的轉換圖 {#conversions-graph-for-adaptive-and-html-forms}
 
-表單層級轉換圖表可讓您深入瞭解表單在下列關鍵績效指標(KPI)上的執行情形：
+表單層級轉換圖表可讓您透過insight，瞭解表單在下列關鍵績效指標(KPI)上的執行情形：
 
 * **轉譯**：表單開啟的次數
 * **訪客**：表單的訪客數量
@@ -83,16 +83,16 @@ AEM Forms會顯示表單及表單中每個面板的analytics報表，如下所�
 
 ![轉換圖形](assets/conversion-graph.png)
 
-### 最適化和HTML5表單的Analytics報表 {#analytics-report-for-adaptive-and-html-forms}
+### 最適化和HTML5 Forms的Analytics報表 {#analytics-report-for-adaptive-and-html-forms}
 
-表單層級摘要區段可讓您深入瞭解表單在下列關鍵績效指標(KPI)上的執行情形：
+表單層級摘要區段會為您提供insight，讓您瞭解表單在下列關鍵績效指標(KPI)上的執行方式：
 
 * **平均填寫時間**：填寫表單所花費的平均時間。 當使用者在表單上花費時間但未提交時，該時間未包含在此計算中。
 * **轉譯**：表單已轉譯或開啟的次數
 * **草稿**：表單已儲存為草稿的次數
 * **提交專案**：已提交表單的次數
 * **中止**：使用者開始填寫表單後離開而未完成表單的次數
-* **不重複訪客**：表單由不重複訪客轉譯的次數。 如需不重複訪客的詳細資訊，請參閱[不重複訪客、造訪和客戶行為](https://helpx.adobe.com/tw/analytics/kb/unique-visitors-visitor-behavior.html)。
+* **不重複訪客**：表單由不重複訪客轉譯的次數。 如需不重複訪客的詳細資訊，請參閱[不重複訪客、造訪和客戶行為](https://helpx.adobe.com/analytics/kb/unique-visitors-visitor-behavior.html)。
 
 ![已展開的表單層級摘要分析報告](assets/analytics-report.png)
 
@@ -126,7 +126,7 @@ AEM Forms會顯示表單及表單中每個面板的analytics報表，如下所�
 
 若要進一步篩選分析資料，您可以按一下任何表格中的專案。 例如，如果您按一下「瀏覽器散佈」表格中的Google Chrome ，報表會再次呈現並包含與Google Chrome瀏覽器相關的資料，如下所示：
 
-![套用至Analytics報告的篩選器 — Google Chrome &#x200B;](assets/filter-1.png)
+![套用至Analytics報告的篩選器 — Google Chrome ](assets/filter-1.png)
 
 如果您在套用篩選器後檢視面板報表，面板報表資料也會根據套用的篩選器顯示。
 
@@ -138,7 +138,7 @@ AEM Forms會顯示表單及表單中每個面板的analytics報表，如下所�
 
 ![關閉按鈕以移除套用的篩選器](assets/close-filter.png)
 
-### A/B測試 {#a-b-testing}
+### A/B 測試 {#a-b-testing}
 
 如果您已啟用並設定表單的A/B測試，報表頁面會有一個下拉式清單，可用來顯示A/B測試報表。 A/B測試報告會顯示您已設定的兩個表單版本的比較效能。
 

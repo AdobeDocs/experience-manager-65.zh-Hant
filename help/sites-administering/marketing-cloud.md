@@ -11,29 +11,29 @@ feature: Integration
 role: Admin
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
-source-wordcount: '825'
+source-wordcount: '868'
 ht-degree: 1%
 
 ---
 
 # 與Adobe Experience Cloud整合{#integrating-with-the-adobe-marketing-cloud}
 
-[Adobe Experience Cloud](https://business.adobe.com/tw/products/marketing-cloud/main.html)包含強大的網站分析和網站最佳化產品，可提供可操作的即時資料和深入分析，以推動成功的線上方案。 它提供整合且開放的平台，用於線上業務最佳化。 Cloud包含整合式應用程式，可收集並釋放客戶深入分析的力量，以最佳化客戶贏取、轉換和保留工作，以及內容的建立和分發。
+[Adobe Experience Cloud](https://business.adobe.com/products/marketing-cloud/main.html)包含強大的網站分析和網站最佳化產品，可提供可操作的即時資料和深入分析，以推動成功的線上方案。 它提供整合且開放的平台，用於線上業務最佳化。 雲端包含整合式應用程式，可收集並釋放客戶insight的強大功能，以最佳化客戶贏取、轉換和保留工作，以及內容的建立和分發。
 
 透過Adobe Experience Manager (AEM)，您可以順暢地整合下列Adobe Experience Cloud產品：
 
 * Adobe Analytics可提供行銷人員有關線上策略與行銷方案的可行、即時資訊。
 * Adobe Target可讓行銷人員持續提供與客戶更相關的線上內容，提供更理想的轉換。
 * Adobe Dynamic Media Classic可自動化媒體管理、簡化Web發佈，以及增強Web體驗，所有這些都可在託管環境中完成。
-* Adobe Dynamic Tag Management為行銷人員提供了直覺式工具，可快速輕鬆地管理不限數量的Adobe和第三方標籤。
+* Adobe Dynamic Tag Management提供行銷人員直覺式工具，可快速輕鬆管理不限數量的Adobe和協力廠商標籤。
 <!-- Search&Promote is end of life as of September 1, 2022 * Adobe Search&Promote gives marketers the ability to control and optimize the search results on their sites. -->
 * Adobe Campaign可讓您直接在Adobe Experience Manager中管理電子郵件傳遞內容。
 
-此外，您可以[將AEM與Creative Cloud](/help/assets/aem-cc-integration-best-practices.md)以及[協力廠商服務](/help/sites-administering/third-party-services.md)整合。
+此外，您可以[整合AEM與Creative Cloud](/help/assets/aem-cc-integration-best-practices.md)以及與[協力廠商服務](/help/sites-administering/third-party-services.md)。
 
 ## 整合 Adobe Analytics {#integrating-with-adobe-analytics}
 
-[Adobe Analytics](https://business.adobe.com/tw/products/analytics/adobe-analytics.html)是領先業界的解決方案，為數位行銷人員提供一個可以測量、分析和最佳化多個行銷管道中所有線上方案的整合資料的位置。 它為行銷人員提供有關數位策略和行銷方案的可行、即時Web分析情報。 Adobe Analytics可協助行銷人員快速找出網站中利潤率最高的路徑、區隔流量以找出高價值的Web訪客、判斷訪客從網站的哪個頁面瀏覽離開，以及找出線上行銷活動的關鍵成功量度。
+[Adobe Analytics](https://business.adobe.com/products/analytics/adobe-analytics.html)是領先業界的解決方案，為數位行銷人員提供一個可以測量、分析和最佳化多個行銷管道中所有線上方案的整合資料的位置。 它為行銷人員提供有關數位策略和行銷方案的可行、即時Web分析情報。 Adobe Analytics可協助行銷人員快速找出網站中利潤率最高的路徑、區隔流量以找出高價值的Web訪客、判斷訪客從網站的哪個頁面瀏覽離開，以及找出線上行銷活動的關鍵成功量度。
 
 您可以使用Adobe Analytics來分析來自您網站的資料。
 
@@ -52,7 +52,7 @@ ht-degree: 1%
 
 ## 整合 Adobe Target {#integrating-with-adobe-target}
 
-行銷人員使用[Adobe Target](https://business.adobe.com/tw/products/target/adobe-target.html)來設計和執行線上測試、建立即時對象區段（根據行為），以及自動化內容鎖定目標和線上體驗。
+行銷人員使用[Adobe Target](https://business.adobe.com/products/target/adobe-target.html)來設計和執行線上測試、建立即時對象區段（根據行為），以及自動化內容鎖定目標和線上體驗。
 
 現今的線上消費者不斷改變需求，期待來自各種網站和內容來源的相關內容，甚至是個人化內容，以供選擇。 若要吸引線上受眾，線上行銷人員必須快速找出哪些優惠方案和內容與受眾相關且吸引人。 有了這些知識，行銷人員需要持續改進其網站的能力，並將適當的內容鎖定在不同對象。
 
@@ -82,13 +82,13 @@ Adobe Dynamic Media Classic是託管解決方案，可發佈、管理、增強�
 
 ## 整合Adobe Dynamic Tag Management {#integrating-with-adobe-dynamic-tag-management}
 
-[Adobe動態Tag Management](https://business.adobe.com/tw/products/experience-platform/adobe-experience-platform.html)提供行銷人員直覺式工具，可快速輕鬆管理不限數量的Adobe和協力廠商標籤。 您擁有更多控制力與彈性，幾乎可將任何線上作業最佳化，同時減少對IT資源的依賴。
+[Adobe Dynamic Tag Management](https://business.adobe.com/products/experience-platform/adobe-experience-platform.html)提供行銷人員直覺式工具，可快速輕鬆管理不限數量的Adobe和協力廠商標籤。 您擁有更多控制力與彈性，幾乎可將任何線上作業最佳化，同時減少對IT資源的依賴。
 
-[將Adobe動態Tag Management](/help/sites-administering/dtm.md)與AEM整合，以便您可以使用動態Tag Management網頁屬性來追蹤AEM網站。
+[將Adobe Dynamic Tag Management](/help/sites-administering/dtm.md)與AEM整合，以便您可以使用您的Dynamic Tag Management Web屬性來追蹤AEM網站。
 
 ## 與Adobe Audience Manager整合 {#integrating-with-adobe-audience-manager}
 
-已在AEM 6.3中移除Audience Manager整合。
+Audience Manager整合已在AEM 6.3中移除。
 
 <!-- Search&Promote is end of life as of September 1, 2022 ## Integrating with Search&Promote {#integrating-with-search-promote} -->
 
@@ -100,6 +100,6 @@ Adobe Dynamic Media Classic是託管解決方案，可發佈、管理、增強�
 
 ## 與 Adobe Campaign 整合 {#integrating-with-adobe-campaign}
 
-[Adobe Campaign](https://business.adobe.com/tw/products/campaign/adobe-campaign.html)可讓您直接在Adobe Experience Manager中管理電子郵件傳遞內容。
+[Adobe Campaign](https://business.adobe.com/products/campaign/adobe-campaign.html)可讓您直接在Adobe Experience Manager中管理電子郵件傳遞內容。
 
 如需AEM如何與Adobe Campaign整合的詳細資訊，請參閱[與Adobe Campaign整合](/help/sites-administering/campaignstandard.md)。
