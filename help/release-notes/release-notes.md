@@ -6,9 +6,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
 exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
-source-git-commit: 87e11d37b9aa14ee3d4e47ae30eaa25f151a9b5b
+source-git-commit: 4a2915dc890887ad8c7174d3ef5f1de8413fd8f4
 workflow-type: tm+mt
-source-wordcount: '7373'
+source-wordcount: '7412'
 ht-degree: 4%
 
 ---
@@ -55,9 +55,9 @@ Experience Manager 6.5.25.0包含新功能、客戶要求的重要增強功能�
 * [&#x200B; JEE交易記錄中的表單層級詳細資料](/help/forms/using/transaction-report-overview-jee.md#form-level-details-transaction-log-jee)： JEE上的AEM Forms現在會將每個交易的表單層級詳細資料記錄在`transaction_log.log`中，以及現有的服務和操作資訊。 管理員可在分析提交、轉譯和轉換時，將交易報告資料與特定表單建立關聯。 (FORMS-21574)
 
 * [已更新支援的平台矩陣](/help/forms/using/aem-forms-jee-supported-platforms.md)： JEE Service Pack上的AEM Forms 6.5.25.0新增支援與下列較新技術的相容性：
-   * JBoss® Enterprise Application Platform (EAP) 7.4.23
-   * ® Content Manager Client 8.7
-   * ® Windows Terminal Server 2025上的AEM Forms Designer
+  * JBoss® Enterprise Application Platform (EAP) 7.4.23
+  * ® Content Manager Client 8.7
+  * ® Windows Terminal Server 2025上的AEM Forms Designer
 
   >[!NOTE]
   >
@@ -537,13 +537,13 @@ Adobe打算在產品生命週期結束前保留這些較舊的端點。 Adobe �
 
   若要解決此例外狀況，請執行下列動作：
 
-   1. 從`crx-quickstart/repository/`中刪除以下兩個資料夾
+  1. 從`crx-quickstart/repository/`中刪除以下兩個資料夾
 
-      * `cache`
-      * `diff-cache`
+     * `cache`
+     * `diff-cache`
 
-   1. 安裝Service Pack，或重新啟動Experience Manager as a Cloud Service。
-`cache`和`diff-cache`的新資料夾會自動建立，而您在`error.log`中不會再遇到與`mvstore`相關的例外狀況。
+  1. 安裝Service Pack，或重新啟動Experience Manager as a Cloud Service。
+     `cache`和`diff-cache`的新資料夾會自動建立，而您在`error.log`中不會再遇到與`mvstore`相關的例外狀況。
 
 * 更新可能已使用您內容模型的自訂API名稱的GraphQL查詢，以改用內容模型的預設名稱。
 
@@ -551,23 +551,23 @@ Adobe打算在產品生命週期結束前保留這些較舊的端點。 Adobe �
 
   若要修正問題，`damAssetLucene`必須設定為在`/indexRules/dam:Asset/properties`下包含下列兩個屬性：
 
-   * `contentFragment`
-      * `jcr:primaryType="nt:unstructured"`
-      * `name="jcr:content/contentFragment"`
-      * `propertyIndex="{Boolean}true"`
-      * `type="Boolean"`
-   * `model`
-      * `jcr:primaryType="nt:unstructured"`
-      * `name="jcr:content/data/cq:model"`
-      * `ordered="{Boolean}true"`
-      * `propertyIndex="{Boolean}true"`
-      * `type="String"`
+  * `contentFragment`
+    * `jcr:primaryType="nt:unstructured"`
+    * `name="jcr:content/contentFragment"`
+    * `propertyIndex="{Boolean}true"`
+    * `type="Boolean"`
+  * `model`
+    * `jcr:primaryType="nt:unstructured"`
+    * `name="jcr:content/data/cq:model"`
+    * `ordered="{Boolean}true"`
+    * `propertyIndex="{Boolean}true"`
+    * `type="String"`
 
   在變更索引定義之後，需要重新索引(`reindex` = `true`)。
 
   執行這些步驟後，GraphQL查詢應該可以更快執行。
 
-* 嘗試移動、刪除或發佈內容片段、網站或頁面時，在擷取內容片段參考時出現問題。背景查詢失敗；功能無法運作。
+* 嘗試移動、刪除或發佈內容片段、網站或頁面時，在擷取內容片段參考時出現問題。 背景查詢失敗；功能無法運作。
 若要確保作業正確，您必須將下列屬性新增至索引定義節點`/oak:index/damAssetLucene` （不需要重新索引）：
 
   ```xml
@@ -582,12 +582,12 @@ Adobe打算在產品生命週期結束前保留這些較舊的端點。 Adobe �
 * 使用者可以在[!DNL Assets]中重新命名階層中的資料夾，並將巢狀資料夾發佈至[!DNL Brand Portal]。 但是，在重新發佈根資料夾之前，[!DNL Brand Portal]中的資料夾標題不會更新。
 
 * 安裝[!DNL Experience Manager] 6.5.x.x期間可能會顯示下列錯誤和警告訊息：
-   * 「當使用Adobe Target API （IMS驗證）在[!DNL Experience Manager]中設定Target Standard整合時，將體驗片段匯出至Target會導致建立錯誤的選件型別。 Target會建立多個型別為「HTML」/來源「Adobe Target Classic」的選件，而非「體驗片段」/來源「Adobe Experience Manager」型別。
-   * `com.adobe.granite.maintenance.impl.TaskScheduler`：在`granite/operations/maintenance`找不到維護期間。
-   * 使用彙總函式（例如SUM、MAX和MIN）時，Adaptive Form伺服器端驗證會失敗(CQ-4274424)。
-   * `com.adobe.granite.maintenance.impl.TaskScheduler` ：在`granite/operations/maintenance`找不到維護期間。
-   * 透過Shoppable Banner檢視器預覽資產時，Dynamic Media互動式影像中的熱點不可見。
-   * `com.adobe.cq.social.cq-social-jcr-provider bundle com.adobe.cq.social.cq-social-jcr-provider:1.3.5 (395)[com.adobe.cq.social.provider.jcr.impl.SpiSocialJcrResourceProviderImpl(2302)]` ：等待登入變更完成解除登入逾時。
+  * 「當使用Adobe Target API （IMS驗證）在[!DNL Experience Manager]中設定Target Standard整合時，將體驗片段匯出至Target會導致建立錯誤的選件型別。 Target會建立多個型別為「HTML」/來源「Adobe Target Classic」的選件，而非「體驗片段」/來源「Adobe Experience Manager」型別。
+  * `com.adobe.granite.maintenance.impl.TaskScheduler`：在`granite/operations/maintenance`找不到維護期間。
+  * 使用彙總函式（例如SUM、MAX和MIN）時，Adaptive Form伺服器端驗證會失敗(CQ-4274424)。
+  * `com.adobe.granite.maintenance.impl.TaskScheduler` ：在`granite/operations/maintenance`找不到維護期間。
+  * 透過Shoppable Banner檢視器預覽資產時，Dynamic Media互動式影像中的熱點不可見。
+  * `com.adobe.cq.social.cq-social-jcr-provider bundle com.adobe.cq.social.cq-social-jcr-provider:1.3.5 (395)[com.adobe.cq.social.provider.jcr.impl.SpiSocialJcrResourceProviderImpl(2302)]` ：等待登入變更完成解除登入逾時。
 
 * 從AEM 6.5.15開始，`org.apache.servicemix.bundles.rhino`套件提供的Rhino JavaScript Engine有新的提升行為。 使用嚴格模式(`use strict;`)的指令碼必須宣告其正確的變數。 否則，它們不會執行，並最終擲回執行階段錯誤。
 
@@ -606,16 +606,15 @@ Adobe打算在產品生命週期結束前保留這些較舊的端點。 Adobe �
 下列問題有可供下載和安裝的Hotfix。 您可以[下載並安裝Hotfix](/help/release-notes/aem-forms-hotfix.md)以解決下列問題：
 
 * **NPR-44100**&#x200B;在WAR/JEE部署（包括JEE上的AEM Forms）上安裝AEM 6.5 Service Pack 25後，`com.adobe.cq.screens.sessions`套件組合會維持在「已安裝」狀態，而不會變成「作用中」。 若要解決此問題，請[下載並安裝AEM Service Pack 6.5.25.0的Hotfix](/help/release-notes/aem-forms-hotfix.md)。
+* **FORMS-23491** AEM Forms 6.5.24.0 JEE部署(JBoss、WebLogic、WebSphere)會受到CVE-2025-64775所影響，這是多部分請求處理中的Apache Struts拒絕服務漏洞。 若要解決此問題，請[下載並安裝AEM Service Pack 6.5.24.0的Hotfix](/help/release-notes/aem-forms-hotfix.md)。
 * **FORMS-14926**&#x200B;安裝AEM Forms JEE Service Pack 21 (6.5.21.0)後，如果在`<AEM_Forms_Installation>/lib/caching/lib`資料夾下發現重複的Geode jars `(geode-*-1.15.1.jar and geode-*-1.15.1.2.jar)`專案，請執行以下步驟以解決問題：
 
-   1. 停止儲位（如果它們正在執行）。
-   2. 停止AEM伺服器。
-   3. 移至`<AEM_Forms_Installation>/lib/caching/lib`。
-   4. 移除除`geode-*-1.15.1.2.jar`以外的所有Geode修補程式檔案。 確認只有具有`version 1.15.1.2`的Geode jar存在。
-   5. 在管理員模式中開啟命令提示字元。
-   6. 使用`geode-*-1.15.1.2.jar`檔案安裝Geode修補程式。
-
-   * AEM Forms現在包含表單元件的Struts版本從2.5.33升級至6.x。 此升級提供先前未包含在SP24中的Struts變更。 已透過[Hotfix](/help/release-notes/aem-forms-hotfix.md)新增支援，您可以下載並安裝該支援，以新增對最新版Struts的支援。
+  1. 停止儲位（如果它們正在執行）。
+  2. 停止AEM伺服器。
+  3. 移至`<AEM_Forms_Installation>/lib/caching/lib`。
+  4. 移除除`geode-*-1.15.1.2.jar`以外的所有Geode修補程式檔案。 確認只有具有`version 1.15.1.2`的Geode jar存在。
+  5. 在管理員模式中開啟命令提示字元。
+  6. 使用`geode-*-1.15.1.2.jar`檔案安裝Geode修補程式。
 
 ## 包含的 OSGi 套件和內容套件{#osgi-bundles-and-content-packages-included}
 
