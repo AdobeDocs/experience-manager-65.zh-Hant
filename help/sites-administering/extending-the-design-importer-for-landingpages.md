@@ -12,7 +12,7 @@ feature: Administering
 role: Admin
 source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
 workflow-type: tm+mt
-source-wordcount: '3442'
+source-wordcount: '3524'
 ht-degree: 0%
 
 ---
@@ -43,11 +43,11 @@ ht-degree: 0%
 >
 >AEM 6.5[&#128279;](/help/release-notes/deprecated-removed-features.md#deprecated-features)已棄用用來匯入登入頁面的Design Importer 。
 
-## 準備匯入的HTML {#preparing-the-html-for-import}
+## 準備HTML以供匯入 {#preparing-the-html-for-import}
 
 建立匯入工具頁面後，您可以匯入完整的HTML登陸頁面。 若要匯入HTML登入頁面，您必須先將其內容壓縮至設計封裝。 設計套件包含您的HTML登陸頁面以及參照的資產（影像、css、圖示、指令碼等）。
 
-下列速查表提供如何準備匯入HTML的範例：
+下列速查表提供如何準備HTML以進行匯入的範例：
 
 登陸頁面速查表
 
@@ -72,13 +72,13 @@ ht-degree: 0%
 >
 >設計封裝&#x200B;**至少必須**&#x200B;在根層級包含&#x200B;**index.html**&#x200B;檔案。 如果要匯入的登入頁面也有行動版本，則zip在根層級必須包含&#x200B;**mobile.index.html**&#x200B;以及&#x200B;**index.html**。
 
-### 準備登入頁面HTML {#preparing-the-landing-page-html}
+### 準備登陸頁面HTML {#preparing-the-landing-page-html}
 
 為了能夠匯入HTML，您需要將畫布div新增到登陸頁面HTML。
 
-Canvas div是具有`id="cqcanvas"`的html **div**，必須插入HTML`<body>`標籤中，且必須包裝要轉換的內容。
+Canvas div是具有`id="cqcanvas"`的html **div**，必須插入到HTML `<body>`標籤中，且必須包裝要進行轉換的內容。
 
-新增畫布div後登入頁面HTML的範例片段如下：
+新增畫布div後，登陸頁面HTML的範常式式碼片段如下：
 
 ```xml
 <!doctype html>
@@ -98,23 +98,23 @@ Canvas div是具有`id="cqcanvas"`的html **div**，必須插入HTML`<body>`標�
 
 ### 準備HTML以包含可編輯的AEM元件 {#preparing-the-html-to-include-editable-aem-components}
 
-匯入登入頁面時，您可以選擇按原樣匯入頁面，這表示在匯入登入頁面後，您無法在AEM中編輯任何匯入的專案(您仍然可以在頁面上新增其他AEM元件)。
+匯入登入頁面時，您可以選擇按原樣匯入頁面，這表示在匯入登入頁面後，您無法在AEM中編輯任何匯入的專案（您仍然可以在頁面上新增其他AEM元件）。
 
-在匯入登入頁面之前，您可能需要轉換登入頁面的某些部分，使其成為可編輯的AEM元件。 這可讓您快速編輯登入頁面的部分，即使登入頁面設計已匯入亦然。
+在匯入登入頁面之前，您可能需要轉換登入頁面的某些部分，以便這些部分是可編輯的AEM元件。 這可讓您快速編輯登入頁面的部分，即使登入頁面設計已匯入亦然。
 
 若要這麼做，請將`data-cq-component`新增至您匯入之HTML檔案中的適當元件。
 
-下節將說明如何編輯HTML檔案，以便將登入頁面的某些部分轉換為其他可編輯的AEM元件。 在[登入頁面元件](/help/sites-classic-ui-authoring/classic-personalization-campaigns-landingpage.md)中詳細說明元件。
+下節將說明如何編輯您的HTML檔案，以便您將登入頁面的某些部分轉換為不同的可編輯AEM元件。 在[登入頁面元件](/help/sites-classic-ui-authoring/classic-personalization-campaigns-landingpage.md)中詳細說明元件。
 
 >[!NOTE]
 >
->將部分登入頁面轉換為AEM元件的HTML標示同時具有長格式和速記標籤宣告。 針對每個元件說明兩者。
+>要將部分登入頁面轉換為AEM元件的HTML標籤既有長格式又有速記標籤宣告。 針對每個元件說明兩者。
 
 ### 限制 {#limitations}
 
 匯入之前，請注意下列限制：
 
-### 不會保留套用至&amp;amp；lt；body>標籤的任何屬性，例如類別或id {#any-attribute-like-class-or-id-applied-on-the-amp-lt-body-tag-is-not-preserved}
+### 不會保留套用至&amp;lt；body>標籤的任何屬性，例如類別或id {#any-attribute-like-class-or-id-applied-on-the-amp-lt-body-tag-is-not-preserved}
 
 如果有任何屬性（例如id或類別）套用至body標籤（例如`<body id="container">`），則匯入後不會保留。 因此，匯入的設計不應與套用至`<body>`標籤的屬性有任何相依性。
 
@@ -132,21 +132,21 @@ Internet Explorer和Firefox 3.6版及舊版不支援拖放zip上傳。 若要在
 
 為頁面（使用空白登陸頁面範本）設定的任何頁面屬性（例如，自訂網域、強制執行HTTPS等）在匯入設計封裝之前都會在匯入設計封裝後遺失。 因此，建議您在匯入設計封裝後設定頁面屬性。
 
-### 假設只有HTML標示 {#html-only-markup-assumed}
+### 假設只有HTML標籤 {#html-only-markup-assumed}
 
-匯入時，標籤會因為安全性原因而遭到清除，以避免匯入和發佈無效的標籤。 這假設僅限HTML的標籤以及所有其他形式的元素(例如內嵌SVG或Web元件)將被篩選掉。
+匯入時，標籤會因為安全性原因而遭到清除，以避免匯入和發佈無效的標籤。 這假設僅限HTML的標籤和所有其他形式的元素，例如內嵌SVG或Web元件，都會被篩選掉。
 
 ### 文字 {#text}
 
-HTML標示，可在設計封裝內的HTML中插入文字元件( `foundation/components/text`)：
+HTML標籤，可在設計封裝內的HTML中插入文字元件( `foundation/components/text`)：
 
 ```xml
 <div data-cq-component="text"> <p>This is some editable text</p> </div>
 ```
 
-在HTML中包含上述標籤，會執行下列動作：
+在HTML中加入上述標籤，會執行下列動作：
 
-* 在匯入設計封裝後建立的登入頁面中建立可編輯的AEM文字元件(`sling:resourceType=foundation/components/text`)。
+* 在匯入設計封裝後建立的登入頁面中建立可編輯的AEM文字元件( `sling:resourceType=foundation/components/text`)。
 * 將已建立文字元件的`text`屬性設定為`div`內所包含的HTML。
 
 **速記元件標籤宣告**：
@@ -178,13 +178,13 @@ HTML標示，可在設計封裝內的HTML中插入文字元件( `foundation/comp
 
 ### 標題 {#title}
 
-HTML標示，可在設計封裝內的HTML中插入標題元件( `wcm/landingpage/components/title`)：
+HTML標籤可在設計封裝內的HTML中插入標題元件( `wcm/landingpage/components/title`)：
 
 ```xml
 <div data-cq-component="title"> <h1>This is some editable title text</h1> </div>
 ```
 
-在HTML中包含上述標籤，會執行下列動作：
+在HTML中加入上述標籤，會執行下列動作：
 
 * 在匯入設計封裝後建立的登入頁面中建立可編輯的AEM標題元件( `sling:resourceType=wcm/landingpage/components/title`)。
 * 將已建立標題元件的`jcr:title`屬性設定為包在div內的標題標籤內的文字。
@@ -200,7 +200,7 @@ HTML標示，可在設計封裝內的HTML中插入標題元件( `wcm/landingpage
 
 ### 影像 {#image}
 
-HTML標示，可在設計封裝內的HTML中插入影像元件(foundation/components/image)：
+HTML標籤可在設計封裝內的HTML中插入影像元件(foundation/components/image)：
 
 ```xml
 <div data-cq-component="image">
@@ -208,7 +208,7 @@ HTML標示，可在設計封裝內的HTML中插入影像元件(foundation/compon
 </div>
 ```
 
-在HTML中包含上述標籤，會執行下列動作：
+在HTML中加入上述標籤，會執行下列動作：
 
 * 在匯入設計封裝後建立的登入頁面中建立可編輯的AEM影像元件( `sling:resourceType=foundation/components/image`)。
 * 將建立的影像元件的`fileReference`屬性設定為src屬性中指定的影像匯入路徑。
@@ -235,9 +235,9 @@ HTML標示，可在設計封裝內的HTML中插入影像元件(foundation/compon
 
 否則，不屬於影像元件div的img標籤支援絕對URL影像。
 
-### 行動號召元件 {#call-to-action-components}
+### call-to-action元件 {#call-to-action-components}
 
-您可以將部分登入頁面標示為「可編輯的行動號召元件」，這樣已匯入的行動號召元件可在匯入登入頁面後進行編輯。 AEM包含下列CTA元件：
+您可以將部分登入頁面標示為匯入為「可編輯的Call to action元件」，如此匯入的call-to-action元件可在匯入登入頁面後進行編輯。 AEM包含下列CTA元件：
 
 * 點進連結 — 可讓您新增文字連結，當按一下連結時，會將訪客導向至目標URL。
 * 圖形連結 — 可讓您新增影像，在按一下時讓訪客移至目標URL。
@@ -276,7 +276,7 @@ HTML標籤，以在匯入的zip檔案中包含點進元件。 此處href對應�
 
 #### 圖形連結 {#graphical-link}
 
-此CTA元件可用來新增登陸頁面上具有連結的任何圖形影像。 影像可以是簡單的按鈕，也可以是任何圖形影像作為背景。 按一下影像時，使用者將被帶往元件屬性中指定的目標URL。 它是「行動號召」群組的一部分。
+此CTA元件可用來新增登陸頁面上具有連結的任何圖形影像。 影像可以是簡單的按鈕，也可以是任何圖形影像作為背景。 按一下影像時，使用者將被帶往元件屬性中指定的目標URL。 它是「Call to action」群組的一部分。
 
 支援的屬性
 
@@ -316,17 +316,17 @@ HTML標籤，在匯入的zip檔案中包含圖形連結元件。 此處href對�
 >與相關聯的`css .hasbackground { background-image: pathtoimage }`
 >
 
-### 銷售機會表單 {#lead-form}
+### 銷售線索表單 {#lead-form}
 
 潛在客戶表單是用於收集訪客/潛在客戶設定檔資訊的表單。 這些資訊可儲存於以後使用，以便根據資訊進行有效的行銷。 此資訊通常包括標題、名稱、電子郵件、出生日期、地址、興趣等。 它是「CTA銷售機會表單」群組的一部分。
 
 **支援的功能**
 
 * 預先定義的銷售機會欄位 — 名字、姓氏、地址、dob、性別、關於、userId、emailId、提交按鈕在sidekick中可用。 只需在潛在客戶表單中拖放所需的元件即可。
-* 在這些元件的協助下，作者可以設計獨立的銷售機會表單，這些欄位與銷售機會表單欄位相對應。 在獨立或匯入的zip應用程式中，使用者可以使用cq：form或cta潛在客戶表單欄位、名稱來新增額外的欄位，並根據需求進行設計。
+* 在這些元件的協助下，作者可以設計獨立的銷售機會表單，這些欄位與銷售機會表單欄位相對應。 在獨立或匯入的zip應用程式中，使用者可以使用cq:form或cta潛在客戶表單欄位、名稱來新增額外的欄位，並根據需求進行設計。
 * 使用CTA潛在客戶表單的特定預先定義名稱來對應潛在客戶表單欄位，例如 — 潛在客戶表單中名字的firstName等等。
-* 未對應到潛在表單對應到cq：form元件的欄位 — 文字、單選、核取方塊、下拉式清單、隱藏、密碼。
-* 使用者可以使用「label」標籤提供標題，也可以使用樣式屬性「class」提供樣式(僅適用於CTA潛在客戶表單元件)。
+* 未對應到潛在客戶表單對應到cq:form元件的欄位 — 文字、單選、核取方塊、下拉式清單、隱藏、密碼。
+* 使用者可以使用「label」標籤提供標題，也可以使用樣式屬性「class」提供樣式（僅適用於CTA潛在客戶表單元件）。
 * 感謝頁面和訂閱清單可作為表單的隱藏引數提供（出現在index.htm中），或可從「潛在客戶表單開始」的編輯列新增/編輯
 
   &lt;input type=&quot;hidden&quot; name=&quot;redirectUrl&quot; value=&quot;/content/we-retail/en/user/register/thank_you&quot;/>
@@ -335,7 +335,7 @@ HTML標籤，在匯入的zip檔案中包含圖形連結元件。 此處href對�
 
 * 每個元件的編輯組態都可以提供 — 等限制。
 
-HTML標籤，在匯入的zip檔案中包含圖形連結元件。 這裡「firstName」對應到潛在客戶表單firstName，以此類推，但核取方塊除外 — 這兩個核取方塊對應到cq：form下拉式元件。
+HTML標籤，在匯入的zip檔案中包含圖形連結元件。 此處「firstName」對應至銷售機會表單firstName，以此類推，但核取方塊除外 — 這兩個核取方塊對應至cq:form下拉式元件。
 
 ```xml
 <div id="cqcanvas">
@@ -368,11 +368,11 @@ HTML標籤，在匯入的zip檔案中包含圖形連結元件。 這裡「firstN
 
 ### Parsys {#parsys}
 
-AEM Parsys元件是可包含其他AEM元件的容器元件。 可以在匯入的HTML中新增Parsys元件。 這可讓使用者在登入頁面新增/刪除可編輯的AEM元件，即使頁面已匯入亦然。
+AEM Parsys元件是可包含其他AEM元件的容器元件。 您可在匯入的HTML中新增Parsys元件。 這可讓使用者在登入頁面新增/刪除可編輯的AEM元件，即使頁面已匯入亦然。
 
 段落系統讓使用者能夠使用Sidekick新增元件。
 
-HTML標示，可在設計封裝內的HTML中插入Parsys元件( `foundation/components/parsys`)：
+HTML標籤可在設計封裝內將Parsys元件( `foundation/components/parsys`)插入HTML：
 
 ```xml
 <div data-cq-component="parsys">
@@ -413,23 +413,23 @@ HTML標示，可在設計封裝內的HTML中插入Parsys元件( `foundation/comp
 
 除了指定匯入的元件是否為可編輯的AEM元件以外，您也可以在匯入設計封裝之前設定下列專案：
 
-* 擷取匯入HTML中定義的中繼資料，以設定頁面屬性。
-* 指定HTML中的字元集編碼。
+* 擷取在匯入的HTML中定義的中繼資料，以設定頁面屬性。
+* 在HTML中指定字元集編碼。
 * 覆蓋匯入工具頁面範本。
 
-### 透過擷取匯入HTML中定義的中繼資料來設定頁面屬性 {#setting-page-properties-by-extracting-metadata-defined-in-imported-html}
+### 透過擷取匯入的HTML中定義的中繼資料來設定頁面屬性 {#setting-page-properties-by-extracting-metadata-defined-in-imported-html}
 
-設計匯入工具應擷取並保留在匯入HTML標題中宣告的以下中繼資料，作為屬性「jcr：description」：
+設計匯入工具應擷取並保留在匯入的HTML標題中宣告的下列中繼資料，做為屬性&quot;jcr:description&quot;：
 
 * &lt;meta name=&quot;description&quot; content=&quot;>
 
-在HTML標籤中設定的Lang屬性應由設計匯入工具擷取並保留為屬性&quot;jcr：language&quot;
+設計匯入工具應擷取並保留HTML標籤中設定的Lang屬性，做為屬性&quot;jcr:language&quot;
 
 * &lt;html lang=&quot;en&quot;>
 
 ### 指定html中的字元集編碼 {#specifying-the-charset-encoding-in-the-html}
 
-設計匯入工具會讀取匯入HTML中指定的編碼。 編碼方式可依下列方式指定：
+設計匯入工具會讀取匯入的HTML中指定的編碼。 編碼方式可依下列方式指定：
 
 `<meta charset="UTF-8">`
 
@@ -437,17 +437,17 @@ HTML標示，可在設計封裝內的HTML中插入Parsys元件( `foundation/comp
 
 `<meta http-equiv="content-type" content="text/html;charset=utf-8">`
 
-如果匯入HTML中未指定編碼，則設計匯入工具設定的預設編碼為UTF-8。
+如果在匯入的HTML中未指定編碼，則設計匯入工具設定的預設編碼為UTF-8。
 
 ### 覆蓋範本 {#overlaying-template}
 
 您可以在`/apps/<appName>/designimporter/templates/<templateName>`建立空白登入頁面範本，以將其覆蓋
 
-在AEM中建立範本的步驟在[範本](/help/sites-developing/templates.md)下說明。
+在AEM中建立範本的步驟說明在[範本](/help/sites-developing/templates.md)下。
 
 ### 從登入頁面反向連結元件 {#referring-a-component-from-landing-page}
 
-假設您有一個元件，且您要使用data-cq-component屬性在HTML中參照該元件，如此設計匯入工具就會在此呈現一個元件包含。 例如，您想要參考資料表元件( `resourceType = /libs/foundation/components/table`)。 需要在HTML中新增下列專案：
+假設您有一個元件，且您要使用data-cq-component屬性在HTML中參照，好讓設計匯入工具在此呈現元件包含。 例如，您想要參考資料表元件( `resourceType = /libs/foundation/components/table`)。 需要在HTML中新增下列專案：
 
 `<div data-cq-component="/libs/foundation/components/table">foundation table</div>`
 
@@ -461,16 +461,16 @@ data-cq-component中的路徑應為元件的resourceType。
 |---|---|---|
 | E + F | 緊接在E元素前面的F元素 | [相鄰的同層級組合器](https://www.w3.org/TR/css3-selectors/#adjacent-sibling-combinators) |
 | E ~ F | F元素前面加上E元素 | [一般同層級組合器](https://www.w3.org/TR/css3-selectors/#general-sibling-combinators) |
-| E：root | E元素，檔案的根 | [結構化的虛擬類別](https://www.w3.org/TR/css3-selectors/#structural-pseudos) |
-| E：nth-child(n) | E元素，其父項的第n個子項 | [結構化的虛擬類別](https://www.w3.org/TR/css3-selectors/#structural-pseudos) |
-| E：nth-last-child(n) | E元素，其父項的第n個子項，從最後一個專案開始計數 | [結構化的虛擬類別](https://www.w3.org/TR/css3-selectors/#structural-pseudos) |
-| E：nth-of-type(n) | E元素，其型別的第n個同層級 | [結構化的虛擬類別](https://www.w3.org/TR/css3-selectors/#structural-pseudos) |
-| E：nth-last-of-type(n) | E元素，其型別的第n個同層級，從最後一個專案開始計數 | [結構化的虛擬類別](https://www.w3.org/TR/css3-selectors/#structural-pseudos) |
+| E:root | E元素，檔案的根 | [結構化的虛擬類別](https://www.w3.org/TR/css3-selectors/#structural-pseudos) |
+| E:nth-child(n) | E元素，其父項的第n個子項 | [結構化的虛擬類別](https://www.w3.org/TR/css3-selectors/#structural-pseudos) |
+| E:nth-last-child(n) | E元素，其父項的第n個子項，從最後一個專案開始計數 | [結構化的虛擬類別](https://www.w3.org/TR/css3-selectors/#structural-pseudos) |
+| E:nth-of-type(n) | E元素，其型別的第n個同層級 | [結構化的虛擬類別](https://www.w3.org/TR/css3-selectors/#structural-pseudos) |
+| E:nth-last-of-type(n) | E元素，其型別的第n個同層級，從最後一個專案開始計數 | [結構化的虛擬類別](https://www.w3.org/TR/css3-selectors/#structural-pseudos) |
 
 這是因為其他html元素（例如&lt;div>標籤）會在匯入後新增至產生的Html。
 
-* 此外，不建議將依賴上述結構的指令碼與標示為要轉換至AEM元件的元素搭配使用。
-* 不建議在標籤標籤上使用樣式來轉換元件，例如&lt;div data-cq-component=&quot;&amp;amp；ast；&quot;>。
+* 也不建議將依賴上述結構的指令碼與標籤為要轉換至AEM元件的元素搭配使用。
+* 不建議在標籤標籤上使用樣式來進行元件轉換，例如&lt;div data-cq-component=&quot;&amp;ast；&quot;>。
 * 設計配置應遵循HTML5 Boilerplate的最佳實務。 閱讀更多資訊： [https://html5boilerplate.com/](https://html5boilerplate.com/)。
 
 ## 設定OSGI模組 {#configuring-osgi-modules}
@@ -494,7 +494,7 @@ data-cq-component中的路徑應為元件的resourceType。
   <tr>
    <td>登陸頁面設計匯入工具</td>
    <td>擷取篩選器</td>
-   <td>用於篩選擷取中檔案的規則運算式清單。 從擷取中排除符合任何指定模式的<br />個Zip專案</td>
+   <td>用於篩選擷取中檔案的規則運算式清單。<br /> 符合任何指定模式的壓縮專案會從擷取中排除</td>
   </tr>
   <tr>
    <td>登陸頁面產生器</td>
@@ -514,12 +514,12 @@ data-cq-component中的路徑應為元件的resourceType。
   <tr>
    <td>登陸頁面登入前置處理器</td>
    <td>搜尋模式 </td>
-   <td>要在封存專案內容中搜尋的模式。 此規則運算式與專案內容逐行比對。 相符時，相符的文字會以指定的取代模式取代。<br /> <br />請參閱下方關於登陸頁面專案前置處理器目前限制的附註。</td>
+   <td>要在封存專案內容中搜尋的模式。 此規則運算式與專案內容逐行比對。 相符時，相符的文字會以指定的取代模式取代。<br /> <br /> 請參閱下方關於登陸頁面登入前置處理器目前限制的附註。</td>
   </tr>
   <tr>
    <td> </td>
    <td>取代圖樣</td>
-   <td>取代找到的相符項的模式。 您可以使用$1、$2之類的規則運算式群組參考。 此外，此模式支援在匯入期間以實際值解析的關鍵字，例如{designPath}。</td>
+   <td>取代找到的相符項的模式。 您可以使用$1、$2之類的規則運算式群組參考。 此外，此模式支援在匯入期間以實際值解析的{designPath}等關鍵字。</td>
   </tr>
  </tbody>
 </table>
@@ -554,13 +554,13 @@ data-cq-component中的路徑應為元件的resourceType。
 
 ### 匯入後顯示警告 {#warnings-displayed-after-import}
 
-如果有任何警告(例如HTML參照封裝內不存在的影像)，設計匯入工具會匯入zip，但同時在結果窗格中顯示問題/警告清單，按一下問題連結會顯示警告清單，指出設計封裝內的任何問題。 設計匯入工具攔截到並顯示警告的不同情況如下：
+如果有任何警告（例如，HTML參照封裝內不存在的影像），設計匯入工具會匯入zip，但同時在結果窗格中顯示問題/警告清單，按一下問題連結會顯示警告清單，指出設計封裝內的任何問題。 設計匯入工具攔截到並顯示警告的不同情況如下：
 
-* HTML是指封裝內不存在的影像。
+* HTML是指不存在於套件中的影像。
 * HTML是指套件中不存在的指令碼。
-* HTML是指封裝內不存在的樣式。
+* HTML會參照套件中不存在的樣式。
 
-### ZIP檔案的檔案儲存在AEM中的什麼位置？ {#where-are-the-files-of-the-zip-file-being-stored-in-aem}
+### ZIP檔案的檔案儲存在AEM的什麼位置？ {#where-are-the-files-of-the-zip-file-being-stored-in-aem}
 
 匯入登入頁面後，設計套件中的檔案（影像、css、js等）會儲存在AEM的下列位置：
 

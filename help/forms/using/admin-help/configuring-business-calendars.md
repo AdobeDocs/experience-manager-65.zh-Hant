@@ -11,7 +11,7 @@ feature: Adaptive Forms
 role: User, Developer
 source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '1901'
+source-wordcount: '1949'
 ht-degree: 0%
 
 ---
@@ -24,11 +24,11 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->使用商業行事曆計算日期和時間時，AEM Forms會使用執行所在伺服器的日期和時間，不會調整時區之間的差異。 例如，如果工作提醒排程在倫敦執行之伺服器上的上午10:00，但收到提醒的使用者位於紐約市，則使用者將於當地時間上午5:00收到提醒。
+>使用商業行事曆計算日期和時間時，AEM表單會使用執行所在伺服器的日期和時間，不會調整時區之間的差異。 例如，如果工作提醒排程在倫敦執行之伺服器上的上午10:00，但收到提醒的使用者位於紐約市，則使用者將於當地時間上午5:00收到提醒。
 
 ## 使用預設商務行事曆 {#using-the-default-business-calendar}
 
-AEM Forms提供預設商務行事曆（名為&#x200B;*內建行事曆*），將星期六和星期日指定為非工作日。 如果您組織中的所有使用者都有相同的非營業日，您可以更新預設的商務行事曆以符合您的組織。 僅使用預設業務行事曆時，您不需要在「使用者管理」中啟用業務行事曆或提供任何對應。 若未定義其他業務行事曆，AEM表單會使用預設的業務行事曆。
+AEM Forms提供預設商務行事曆（名為&#x200B;*內建行事曆*），將星期六和星期日指定為非工作日。 如果您組織中的所有使用者都有相同的非營業日，您可以更新預設的商務行事曆以符合您的組織。 僅使用預設業務行事曆時，您不需要在「使用者管理」中啟用業務行事曆或提供任何對應。 若未定義其他企業行事曆，AEM表單會使用預設的企業行事曆。
 
 ## 設定多個商務行事曆 {#setting-up-multiple-business-calendars}
 
@@ -46,15 +46,15 @@ AEM Forms提供預設商務行事曆（名為&#x200B;*內建行事曆*），將�
 
    指派商務行事曆金鑰給使用者的方式取決於您是使用企業、本機或混合式網域。 如需設定網域的詳細資訊，請參閱[新增網域](/help/forms/using/admin-help/adding-domains.md#adding-domains)。
 
-   如果您使用本機或混合式網域，有關使用者的資訊只會儲存在「使用者管理」資料庫中。 若要為這些使用者設定商務行事曆索引鍵，請在「使用者管理」中新增或編輯使用者時，於「商務行事曆索引鍵」欄位中輸入字串。 （請參閱[新增及設定使用者](/help/forms/using/admin-help/adding-configuring-users.md#adding-and-configuring-users)。）然後將商務行事曆金鑰（字串）對應至表單工作流程中的商務行事曆。 （請參閱[將使用者和群組對應至商務行事曆](configuring-business-calendars.md#mapping-users-and-groups-to-a-business-calendar)。）
+   如果您使用本機或混合式網域，有關使用者的資訊只會儲存在「使用者管理」資料庫中。 若要為這些使用者設定商務行事曆索引鍵，請在「使用者管理」中新增或編輯使用者時，於「商務行事曆索引鍵」欄位中輸入字串。 （請參閱[新增及設定使用者](/help/forms/using/admin-help/adding-configuring-users.md#adding-and-configuring-users)。） 然後，將商務行事曆索引鍵（字串）對應至表單工作流程中的商務行事曆。 （請參閱[將使用者和群組對應至商務行事曆](configuring-business-calendars.md#mapping-users-and-groups-to-a-business-calendar)。）
 
-   如果您使用企業網域，有關使用者的資訊會儲存在協力廠商儲存系統中，例如「使用者管理」與「使用者管理」資料庫同步的LDAP目錄。 這可讓您將商務行事曆索引鍵對應到LDAP目錄中的欄位。 例如，如果目錄中的每個使用者記錄都包含「國家/地區」欄位，而您想要根據使用者所在的國家/地區來指派商務行事曆，請在指定目錄的使用者設定時，在「商務行事曆索引鍵」欄位中指定「國家/地區」欄位名稱。 （請參閱[設定目錄](/help/forms/using/admin-help/configuring-directories.md#configuring-directories)。）然後您可以將商務行事曆金鑰（在LDAP目錄中為「國家/地區」欄位定義的值）對應至表單工作流程中的商務行事曆。 （請參閱[將使用者和群組對應至商務行事曆](configuring-business-calendars.md#mapping-users-and-groups-to-a-business-calendar)。）
+   如果您使用企業網域，有關使用者的資訊會儲存在協力廠商儲存系統中，例如「使用者管理」與「使用者管理」資料庫同步的LDAP目錄。 這可讓您將商務行事曆索引鍵對應到LDAP目錄中的欄位。 例如，如果目錄中的每個使用者記錄都包含「國家/地區」欄位，而您想要根據使用者所在的國家/地區來指派商務行事曆，請在指定目錄的使用者設定時，在「商務行事曆索引鍵」欄位中指定「國家/地區」欄位名稱。 （請參閱[設定目錄](/help/forms/using/admin-help/configuring-directories.md#configuring-directories)。） 然後，您可以將商務行事曆索引鍵（在LDAP目錄中為「國家/地區」欄位定義的值）對應至表單工作流程中的商務行事曆。 （請參閱[將使用者和群組對應至商務行事曆](configuring-business-calendars.md#mapping-users-and-groups-to-a-business-calendar)。）
 
 1. 在表單工作流程中，為共用相同非營業日的每一組使用者定義一個行事曆。 （請參閱[建立或更新商務行事曆](configuring-business-calendars.md#create-or-update-a-business-calendar)。）
 1. 在表單工作流程中，對應每個行事曆的業務行事曆索引鍵或群組成員資格。 （請參閱[將使用者和群組對應至商務行事曆](configuring-business-calendars.md#mapping-users-and-groups-to-a-business-calendar)。）
 1. 在Workbench中，處理開發人員會選擇是否要使用業務工作歷來提醒、截止日期及升級。 （請參閱[Workbench說明](https://www.adobe.com/go/learn_aemforms_workbench_63)。）
 
-   如果處理開發人員選擇使用商務行事曆，AEM Forms會根據「使用者管理」設定和「管理主控台」中定義的商務行事曆對應，動態選取適當的商務行事曆；如果不存在對應，則會使用預設行事曆。
+   如果程式開發人員選擇使用商務行事曆，AEM表單會根據「使用者管理」設定和「管理主控台」中定義的商務行事曆對應，動態選取適當的商務行事曆，如果不存在對應，則使用預設行事曆。
 
    如果處理開發人員未使用商業行事曆，則事件的日期計算會將每天視為工作日。 例如，任務截止日期設定為在任務指派給使用者後的三天內。 任務會在星期四指派。 任務截止日期為星期日，即使為週末。
 
@@ -95,7 +95,7 @@ AEM Forms提供預設商務行事曆（名為&#x200B;*內建行事曆*），將�
 
 ## 將使用者和群組對應至商務行事曆 {#mapping-users-and-groups-to-a-business-calendar}
 
-您可以使用兩種方法將業務行事曆與使用者建立關聯。 您可以根據商務行事曆索引鍵或根據使用者所屬的目錄群組，將商務行事曆指派給使用者。 您可以使用「對應」標籤來指定AEM表單將使用的方式，以及將商務行事曆索引鍵與群組對應至商務行事曆。 如需將商務行事曆索引鍵與使用者產生關聯的詳細資訊，請參閱[設定多個商務行事曆](configuring-business-calendars.md#setting-up-multiple-business-calendars)。
+您可以使用兩種方法將業務行事曆與使用者建立關聯。 您可以根據商務行事曆索引鍵或根據使用者所屬的目錄群組，將商務行事曆指派給使用者。 您可以使用「對應」標籤來指定AEM表單將使用的方式，以及將商務行事曆索引鍵和群組對應至商務行事曆。 如需將商務行事曆索引鍵與使用者產生關聯的詳細資訊，請參閱[設定多個商務行事曆](configuring-business-calendars.md#setting-up-multiple-business-calendars)。
 
 ### 根據商務行事曆索引鍵將商務行事曆與使用者建立關聯 {#associate-business-calendars-with-users-based-on-business-calendar-keys}
 
@@ -118,14 +118,14 @@ AEM Forms提供預設商務行事曆（名為&#x200B;*內建行事曆*），將�
 
    >[!NOTE]
    >
-   >在Workbench中，如果您已設定「使用者」服務使用業務行事曆，且服務已指派給群組，則AEM Forms會使用此處指定的群組對應來解析群組的行事曆。 AEM forms一律會使用群組對應來解析群組的行事曆，即使您使用商務行事曆索引鍵來解析使用者的行事曆亦然。 如果找不到群組對應，則會使用預設的業務行事曆。
+   >在Workbench中，如果您已設定使用者服務使用企業行事曆，並將服務指派給群組，AEM Forms會使用此處指定的群組對應來解析群組的行事曆。 AEM forms一律會使用群組對應來解析群組的行事曆，即使您使用商務行事曆索引鍵來解析使用者的行事曆亦然。 如果找不到群組對應，則會使用預設的業務行事曆。
 
 1. 針對「目錄服務群組」清單中的每個專案，選取行事曆。
 1. 按一下「儲存」。
 
 ## 匯出和匯入商務行事曆 {#exporting-and-importing-business-calendars}
 
-AEM表單可讓您匯出業務行事曆並將其匯入為XML檔案。 您可以使用此功能將行事曆從中繼系統移至生產系統。
+AEM表單可讓您將業務行事曆匯出和匯入為XML檔案。 您可以使用此功能將行事曆從中繼系統移至生產系統。
 
 >[!NOTE]
 >

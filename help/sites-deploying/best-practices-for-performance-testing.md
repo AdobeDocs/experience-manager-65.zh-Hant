@@ -11,8 +11,8 @@ feature: Administering
 role: Admin
 source-git-commit: 8f638eb384bdca59fb6f4f8990643e64f34622ce
 workflow-type: tm+mt
-source-wordcount: '1767'
-ht-degree: 0%
+source-wordcount: '1827'
+ht-degree: 1%
 
 ---
 
@@ -60,10 +60,10 @@ AEM中的許多效能測量（例如查詢回應時間）都可能受到系統�
 * Apache提供名為&#x200B;**JMeter**&#x200B;的產品，可用於效能和負載測試，以及功能行為。 它是開放原始碼軟體，可以自由使用，但功能集比企業產品更小，而且學習曲線更陡峭。 您可以在Apache的網站[https://jmeter.apache.org/](https://jmeter.apache.org/)找到JMeter
 
 * 也可以使用[Vercara](https://vercara.com/website-performance-management)之類的網站負載測試工具。
-* 測試行動或回應式網站時，必須使用另一組工具。 這些設定可藉由節流網路頻寬、模擬較慢的行動連線(如3G或EDGE)來運作。 使用範圍較廣的工具包括：
+* 測試行動或回應式網站時，必須使用另一組工具。 這些設定可藉由節流網路頻寬、模擬較慢的行動連線（如3G或EDGE）來運作。 使用範圍較廣的工具包括：
 
-   * **[網路連結調節器](https://nshipster.com/network-link-conditioner/)** — 它提供簡單易用的UI，在網路棧疊上以相當低的層級運作。 其中包括OS X和iOS的版本；
-   * [**Charles**](https://www.charlesproxy.com/) — 除了數個其他用途之外，還提供網路節流的網頁偵錯Proxy應用程式。 提供適用於Windows、OS X和Linux®的版本。
+  * **[網路連結調節器](https://nshipster.com/network-link-conditioner/)** — 它提供簡單易用的UI，在網路棧疊上以相當低的層級運作。 其中包括OS X和iOS的版本；
+  * [**Charles**](https://www.charlesproxy.com/) — 除了數個其他用途之外，還提供網路節流的網頁偵錯Proxy應用程式。 提供適用於Windows、OS X和Linux®的版本。
 
 #### 最佳化工具 {#optimization-tools}
 
@@ -118,7 +118,7 @@ Google的PageSpeed工具提供網站分析，以符合頁面效能最佳實務�
 1. 將其放在/crx--quickstart/install資料夾下。
 
 >[!NOTE]
->請參閱[AEM 6.x | 效能調整秘訣](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=zh-Hant)
+>請參閱[AEM 6.x |效能調整秘訣](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=zh-Hant)
 
 預設值為10,000，但大多數部署都必須將其提高至20,000或50,000。
 

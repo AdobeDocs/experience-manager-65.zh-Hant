@@ -7,7 +7,7 @@ feature: Headless,Content Fragments,GraphQL,Persisted Queries,Developing
 role: Admin, Developer
 source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
 workflow-type: tm+mt
-source-wordcount: '1301'
+source-wordcount: '1352'
 ht-degree: 93%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 93%
 
 ## 目前進度 {#story-so-far}
 
-在 AEM Headless 歷程的上一個文件「[如何建立內容模型](model-your-content.md)」中，您已了解在 AEM 中建立內容模型的基本知識，所以現在您應該了解如何建立內容結構模型，然後使用 AEM 內容片段模型和內容片段實現該結構。
+在 AEM Headless 歷程的上一份文件「[如何建立內容模型](model-your-content.md)」中，您已了解在 AEM 中建立內容模型的基本知識，所以現在您應該了解如何建立內容結構模型，然後使用 AEM 內容片段模型和內容片段實現該結構。
 
 * 認識內容模型相關的概念和術語。
 * 了解為什麼 Headless 內容傳遞需要內容模型。
@@ -27,15 +27,15 @@ ht-degree: 93%
 
 本文章以這些基本知識為基礎，以便您了解如何使用 AEM GraphQL API 在 AEM 存取您現有的 Headless 內容。
 
-* **對象**：初學者
+* **客群**：初學者
 * **目標**：了解如何使用 GraphQL 查詢來存取內容片段的內容。
-   * 介紹 GraphQL 和 AEM GraphQL API。
-   * 深入了解 AEM GraphQL API 的詳細資訊。
-   * 查看一些範例查詢以了解實務運作。
+  * 介紹 GraphQL 和 AEM GraphQL API。
+  * 深入了解 AEM GraphQL API 的詳細資訊。
+  * 查看一些範例查詢以了解實務運作。
 
 ## 所以您想存取您的內容嗎？ {#so-youd-like-to-access-your-content}
 
-所以...您已經取得所有這些內容，結構整齊 (在內容片段中)，正等待提供給您的新應用程式。問題是 - 如何到達那裡？
+所以...您已經取得所有這些內容，結構整齊 (在內容片段中)，正等待提供給您的新應用程式。 問題是 - 如何到達那裡？
 
 您需要的是可以找出特定內容為目標的方法，選擇您需要的內容並將其傳回到您的應用程式以進一步處理。
 
@@ -52,7 +52,7 @@ GraphQL 是一種開放原始碼的規格，它提供：
 * 查詢語言，使您能夠從結構化物件中選擇特定內容。
 * 執行階段，使用您的結構化內容來完成這些查詢。
 
-GraphQL 是&#x200B;*強*&#x200B;類型 API。這表示&#x200B;*所有*&#x200B;內容必須按類型清楚結構和組織，以便 GraphQL *了解*&#x200B;要存取什麼以及如何存取。資料欄位在 GraphQL 結構描述中定義，其定義內容物件的結構。
+GraphQL 是&#x200B;*強*&#x200B;類型 API。 這表示&#x200B;*所有*&#x200B;內容必須按類型清楚結構和組織，以便 GraphQL *了解*&#x200B;要存取什麼以及如何存取。 資料欄位在 GraphQL 結構描述中定義，其定義內容物件的結構。
 
 然後，GraphQL 端點提供回應 GraphQL 查詢的路徑。
 
@@ -84,17 +84,17 @@ GraphQL is used in various locations in AEM; for example:
 
 AEM GraphQL API是根據標準GraphQL API規格的自訂版本，特別設定為可讓您對內容片段執行（複雜）查詢。
 
-使用內容片段，因為內容的結構是根據內容片段模型建立的。這滿足了 GraphQL 的基本要求。
+使用內容片段，因為內容的結構是根據內容片段模型建立的。 這滿足了 GraphQL 的基本要求。
 
 * 內容片段模型由一個或多個欄位組成。
-   * 每個欄位都是根據資料類型定義的。
+  * 每個欄位都是根據資料類型定義的。
 * 內容片段模型用於產生對應的 AEM GraphQL 結構描述。
 
 為了實際存取 GraphQL 以用於 AEM (和內容)，端點用於提供存取路徑。
 
 然後，透過 AEM GraphQL API 傳回的內容可以供您的應用程式使用。
 
-為了協助您直接輸入和測試查詢，標準 GraphiQL 介面的實作也可與 AEM GraphQL (這可與 AEM 一起安裝) 搭配使用。它提供語法醒目顯示、自動完成、自動建議等功能，以及歷史記錄和線上文件。
+為了協助您直接輸入和測試查詢，標準 GraphiQL 介面的實作也可與 AEM GraphQL (這可與 AEM 一起安裝) 搭配使用。 它提供語法醒目顯示、自動完成、自動建議等功能，以及歷史記錄和線上文件。
 
 >[!NOTE]
 >
@@ -127,7 +127,7 @@ The use cases for the AEM GraphQL API can depend on the type of AEMenvironment:
 這些內容片段模型：
 
 * **啟用**&#x200B;後，用於產生結構描述。
-* 提供 GraphQL 所需的資料類型和欄位。它們確保您的應用程式只要求可能的內容並接收預期的內容。
+* 提供 GraphQL 所需的資料類型和欄位。 它們確保您的應用程式只要求可能的內容並接收預期的內容。
 * **片段參考**&#x200B;資料類型可在您的模型中用來參考另一個內容片段，從而引入額外的結構層。
 
 ### 片段參考 {#fragment-references}
@@ -138,7 +138,7 @@ The use cases for the AEM GraphQL API can depend on the type of AEMenvironment:
 * 可參考另一個片段，取決於特定的內容片段模型。
 * 可讓您建立並接著擷取結構化資料。
 
-   * 當定義為 **multifeed** 時，主片段可以參考 (擷取) 多個子片段。
+  * 當定義為 **multifeed** 時，主片段可以參考 (擷取) 多個子片段。
 
 ### JSON 預覽 {#json-preview}
 
@@ -245,23 +245,23 @@ It provides features such as syntax-highlighting, auto-complete, auto-suggest, t
 在開始對您的內容進行查詢之前，您需要：
 
 * 啟用您的端點
-   * 使用「工具> Assets > GraphQL」
-   * [啟用 GraphQL 端點](/help/sites-developing/headless/graphql-api/graphql-endpoint.md#enabling-graphql-endpoint)
+  * 使用「工具> Assets > GraphQL」
+  * [啟用 GraphQL 端點](/help/sites-developing/headless/graphql-api/graphql-endpoint.md#enabling-graphql-endpoint)
 
 * 存取GraphiQL （如有必要）
-   * [AEM GraphiQL介面](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#graphiql-interface)
+  * [AEM GraphiQL介面](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#graphiql-interface)
 
 ### 範例結構 {#sample-structure}
 
 若要實際在查詢中使用 AEM GraphQL API，我們可以使用兩個非常基本的內容片段模型結構：
 
 * 公司
-   * 名稱 - 文字
-   * CEO (人員) - 片段參考
-   * 員工 (人員) - 片段參考
+  * 名稱 - 文字
+  * CEO (人員) - 片段參考
+  * 員工 (人員) - 片段參考
 * 人員
-   * 名稱 - 文字
-   * 名字 - 文字
+  * 名稱 - 文字
+  * 名字 - 文字
 
 如您所見，CEO 和員工欄位參考了人員片段。
 
@@ -280,7 +280,7 @@ It provides features such as syntax-highlighting, auto-complete, auto-suggest, t
 
 ### 查詢快速入門 {#getting-Started-with-queries}
 
-一個簡單的查詢是傳回「公司」結構描述中所有項目的名稱。您在這裡要求所有公司名稱的清單：
+一個簡單的查詢是傳回「公司」結構描述中所有項目的名稱。 您在這裡要求所有公司名稱的清單：
 
 ```xml
 query {
@@ -292,7 +292,7 @@ query {
 }
 ```
 
-一個稍微複雜的查詢是選擇所有名稱不是「Jobs」的人員。這將篩選出所有名稱沒有 Jobs 的人員。這是使用 EQUALS_NOT 運算子完成 (還有更多)：
+一個稍微複雜的查詢是選擇所有名稱不是「Jobs」的人員。 這將篩選出所有名稱沒有 Jobs 的人員。 這是使用 EQUALS_NOT 運算子完成 (還有更多)：
 
 ```xml
 query {
@@ -314,7 +314,7 @@ query {
 }
 ```
 
-您還可以建構更複雜的查詢。例如，查詢至少有一名員工名稱為「Smith」的所有公司。此查詢說明了對任何名稱為「Smith」的人員的篩選，從跨巢狀片段傳回資訊：
+您還可以建構更複雜的查詢。 例如，查詢至少有一名員工名稱為「Smith」的所有公司。 此查詢說明了對任何名稱為「Smith」的人員的篩選，從跨巢狀片段傳回資訊：
 
 ```xml
 query {
@@ -361,24 +361,24 @@ query {
 ## 其他資源 {#additional-resources}
 
 * [GraphQL.org](https://graphql.org)
-   * [結構描述](https://graphql.org/learn/schema/)
-   * [變數](https://graphql.org/learn/queries/#variables)
-   * [GraphQL Java 程式庫](https://graphql.org/code/#java)
+  * [結構描述](https://graphql.org/learn/schema/)
+  * [變數](https://graphql.org/learn/queries/#variables)
+  * [GraphQL Java程式庫](https://graphql.org/code/#java)
 * [GraphiQL](https://graphql.org/learn/serving-over-http/#graphiql)
 * [了解如何將 GraphQL 與 AEM 搭配使用](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md)
-   * [啟用 GraphQL 端點](/help/sites-developing/headless/graphql-api/graphql-endpoint.md#enabling-graphql-endpoint)
-   * [安裝 AEM GraphiQL 介面](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#installing-graphiql-interface)
+  * [啟用 GraphQL 端點](/help/sites-developing/headless/graphql-api/graphql-endpoint.md#enabling-graphql-endpoint)
+  * [安裝 AEM GraphiQL 介面](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#installing-graphiql-interface)
 * [範例內容片段結構](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#content-fragment-structure-graphql)
 * [了解搭配使用 GraphQL 與 AEM - 範例內容和查詢](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md)
-   * [範例查詢 - 單一特定城市片段](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-single-specific-city-fragment)
-   * [中繼資料的範例查詢 - 列出 GB 獎項的中繼資料](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-metadata-awards-gb)
-   * [範例查詢 - 所有具有名稱變化的城市](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-cities-named-variation)
+  * [範例查詢 - 單一特定城市片段](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-single-specific-city-fragment)
+  * [中繼資料的範例查詢 - 列出 GB 獎項的中繼資料](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-metadata-awards-gb)
+  * [範例查詢 - 所有具有名稱變化的城市](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-cities-named-variation)
 * [在設定瀏覽器中啟用內容片段功能](/help/assets/content-fragments/content-fragments-configuration-browser.md#enable-content-fragment-functionality-in-configuration-browser)
 * [使用內容片段](/help/assets/content-fragments/content-fragments.md)
-   * [內容片段模型](/help/assets/content-fragments/content-fragments-models.md)
-   * [JSON 輸出](/help/assets/content-fragments/content-fragments-json-preview.md)
+  * [內容片段模型](/help/assets/content-fragments/content-fragments-models.md)
+  * [JSON 輸出](/help/assets/content-fragments/content-fragments-json-preview.md)
 * [了解跨原始資源共用 (CORS)](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html?lang=zh-Hant#understand-cross-origin-resource-sharing-(cors))
-* [AEM Headless 快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=zh-Hant) - 此為簡短的教學影片系列，概述如何使用 AEM 的 Headless 功能，包括內容模型和 GraphQL。
+* [AEM Headless 快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=zh-Hant) - 此為簡短的教學影片系列，概觀如何使用 AEM 的 Headless 功能，包括內容模型和 GraphQL。
 
 <!--
 * [Generating Access Tokens for Server Side APIs](/help/implementing/developing/introduction/generating-access-tokens-for-server-side-apis.md)

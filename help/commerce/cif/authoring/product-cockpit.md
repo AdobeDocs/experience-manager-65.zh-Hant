@@ -7,7 +7,7 @@ feature: Commerce Integration Framework
 role: Admin, Developer
 source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
 workflow-type: tm+mt
-source-wordcount: '428'
+source-wordcount: '433'
 ht-degree: 1%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 1%
 
 ## 開啟產品駕駛艙 {#opening-product-cockpit}
 
-存取產品駕駛艙最簡單的方式是透過AEM主要功能表中的「Commerce」功能表。 也可以使用Omnisearch (搜尋Commerce)或開啟`https://<yourAEMInstance>/commerce.html`。
+存取產品駕駛艙最簡單的方式是透過AEM主要功能表中的「Commerce」功能表。 也可以使用Omnisearch （搜尋Commerce）或開啟`https://<yourAEMInstance>/commerce.html`。
 
 ![AEM功能表](/help/commerce/cif/assets/aem-menu.png)
 
@@ -56,7 +56,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->AEM中的產品目錄資料是指透過設定的商務端點即時擷取的資料。 AEM中未儲存任何產品目錄資料。
+>AEM中的產品目錄資料是透過設定的商務端點即時擷取的資料。 AEM中未儲存任何產品目錄資料。
 
 ## 搜尋產品目錄 {#searching-product-catalog}
 
@@ -76,12 +76,12 @@ ht-degree: 1%
 
 ### Commerce標籤 {#tabs}
 
-一般和變體標籤會顯示來自商務後端的預先定義商務屬性。 此資料(包括 變體)是AEM中的唯讀資料，因為記錄系統是商務後端。 變體索引標籤只會針對具有變體的產品顯示，並顯示所有變體的清單。
+一般和變體標籤會顯示來自商務後端的預先定義商務屬性。 由於記錄系統是商務後端，因此這些資料（包括變體）在AEM中是唯讀資料。 變體索引標籤只會針對具有變體的產品顯示，並顯示所有變體的清單。
 
 ![目錄屬性](/help/commerce/cif/assets/catalog-properties.png)
 
 ### AEM內容標籤 {#content-tabs}
 
-這些按AEM內容型別(體驗片段、內容片段、關聯的Assets)分組的標籤會顯示與商務物件關聯的AEM內容。 「檢視詳細資料」動作會開啟新的瀏覽器索引標籤，其中包含選取的內容。
+這些按AEM內容型別（體驗片段、內容片段、相關Assets）分組的標籤會顯示與商業物件相關的AEM內容。 「檢視詳細資料」動作會開啟新的瀏覽器索引標籤，其中包含選取的內容。
 
 ![內容屬性](/help/commerce/cif/assets/content-properties.png)

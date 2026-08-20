@@ -11,8 +11,8 @@ feature: Adaptive Forms
 role: User, Developer
 source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
 workflow-type: tm+mt
-source-wordcount: '790'
-ht-degree: 0%
+source-wordcount: '792'
+ht-degree: 1%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->這些指示假設已視需要安裝和設定帶有Connectors for ECM和EMC Documentum Content Server的AEM表單。
+>這些指示假設您已視需要安裝及設定AEM forms with Connectors for ECM和EMC Documentum Content Server。
 
 對於備份和還原程式，有兩個主要工作：
 
@@ -197,15 +197,15 @@ ht-degree: 0%
 
    * 完整資料庫備份(nsrnmddbf.bat)：
 
-     `NetWorker_database_module_root` `-s`*&lt;NetWorker_Server_Name>* `-U` `[username]` `-P`*[密碼&#x200B;]*`-l full`*&lt;資料庫名稱>*
+     `NetWorker_database_module_root` `-s`*&lt;NetWorker_Server_Name>* `-U`&#x200B;`[username]` `-P`*[密碼&#x200B;]*`-l full`*&lt;資料庫名稱>*
 
    * 增量資料庫備份(nsrnmddbi.bat)：
 
-     `[NetWorker_database_module_root]` `-s`*&lt;NetWorker伺服器名稱>* `-U` `[username]` `-P` `[password]` `-l 1 -R`*&lt;資料庫名稱>*
+     `[NetWorker_database_module_root]` `-s`*&lt;NetWorker伺服器名稱>* `-U`&#x200B;`[username]` `-P`&#x200B;`[password]` `-l 1 -R`*&lt;資料庫名稱>*
 
    * 資料庫記錄備份(nsrnmddbl.bat)：
 
-     `[NetWorker_database_module_root]` `-s` `<NetWorker_Server_Name>` `-U` `[username]` `-P` `[password]` `-l incr -R`*&lt;資料庫名稱>*
+     `[NetWorker_database_module_root]` `-s`&#x200B;`<NetWorker_Server_Name>` `-U`&#x200B;`[username]` `-P`&#x200B;`[password]` `-l incr -R`*&lt;資料庫名稱>*
 
      其中：
 
@@ -235,7 +235,7 @@ ht-degree: 0%
 
 ## 備份EMC Documentum Content Server {#back-up-the-emc-documentum-content-server}
 
-完成AEM表單資料的完整備份後，請執行以下工作。 (請參閱[備份AEM表單資料](/help/forms/using/admin-help/backing-aem-forms-data.md#backing-up-the-aem-forms-data)。)
+完成AEM表單資料的完整備份後，請執行以下工作。 （請參閱[備份AEM表單資料](/help/forms/using/admin-help/backing-aem-forms-data.md#backing-up-the-aem-forms-data)。）
 
 >[!NOTE]
 >
@@ -250,7 +250,7 @@ ht-degree: 0%
 
 ## 還原EMC Documentum Content Server {#restore-the-emc-documentum-content-server}
 
-還原AEM表單資料之前，請執行以下工作。 (請參閱[復原AEM表單資料](/help/forms/using/admin-help/recovering-aem-forms-data.md#recovering-the-aem-forms-data)。)
+還原AEM表單資料之前，請執行以下工作。 （請參閱[復原AEM表單資料](/help/forms/using/admin-help/recovering-aem-forms-data.md#recovering-the-aem-forms-data)。）
 
 >[!NOTE]
 >

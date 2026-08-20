@@ -1,6 +1,6 @@
 ---
 title: 備份Adobe Experience Manager Forms資料
-description: 本檔案說明完成Adobe Experience Manager (AEM) Forms資料庫、GDS和內容儲存根目錄之即時或線上備份所需的步驟。
+description: 本檔案說明完成Adobe Experience Manager (AEM)表單資料庫、GDS和內容儲存根目錄之即時或線上備份所需的步驟。
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
@@ -11,7 +11,7 @@ feature: Adaptive Forms
 role: User, Developer
 source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '1527'
+source-wordcount: '1555'
 ht-degree: 0%
 
 ---
@@ -38,36 +38,36 @@ GDS位置的備份頻率取決於AEM Forms的使用方式以及可用的備份�
 >
 >復原程式之後，未參考的檔案可能會保留在GDS目錄中。 這是目前已知的限制。
 
-## 備份資料庫、GDS、AEM儲存庫和內容儲存根目錄 {#back-up-the-database-gds-aem-repository-and-content-storage-root-directories}
+## 備份資料庫、GDS、AEM存放庫和內容儲存根目錄 {#back-up-the-database-gds-aem-repository-and-content-storage-root-directories}
 
 將AEM Forms置於安全備份（快照）模式或滾動備份（連續涵蓋範圍）模式。 在設定AEM Forms進入任一備份模式之前，請確定下列事項：
 
 * 驗證系統版本，並記錄上次執行完整系統映像備份後套用的修補程式或更新。
-* 如果您使用滾動或快照模式備份，請確定您的資料庫已設定正確的記錄檔設定，以允許進行資料庫的熱備份。 (請參閱[AEM Forms資料庫](/help/forms/using/admin-help/files-back-recover.md#aem-forms-database)。)
+* 如果您使用滾動或快照模式備份，請確定您的資料庫已設定正確的記錄檔設定，以允許進行資料庫的熱備份。 （請參閱[AEM Forms資料庫](/help/forms/using/admin-help/files-back-recover.md#aem-forms-database)。）
 
 除此之外，請遵循下列備份/還原程式准則。
 
 * 使用可用的作業系統或協力廠商備份公用程式來備份GDS目錄。 （請參閱[GDS位置](/help/forms/using/admin-help/files-back-recover.md#gds-location)。）
 * （選擇性）使用可用的作業系統或協力廠商的備份與公用程式來備份「內容儲存根目錄」。 (請參閱[內容儲存根目錄位置（獨立環境）](/help/forms/using/admin-help/files-back-recover.md#content-storage-root-location-stand-alone-environment)或[內容儲存根目錄位置（叢集環境）](/help/forms/using/admin-help/files-back-recover.md#content-storage-root-location-clustered-environment)。)
-* 備份   製作和發佈執行個體( crx -repository backup)。
+* 備份作者和發佈執行個體( crx -repository backup)。
 
   若要備份Correspondence Management Solution環境，請依照[備份與還原](/help/sites-administering/backup-and-restore.md)中所述，對製作與發佈執行個體執行步驟。
 
   備份製作和發佈執行個體時，請考慮以下幾點：
 
-   * 請確認製作與發佈執行個體的備份已同步處理，以便同時啟動。 雖然您可以在執行備份時繼續使用製作和發佈執行個體，但建議不要在備份期間發佈任何資產，以避免任何未擷取的變更。 請等待製作和發佈執行個體的備份結束，然後再發佈新資產。
-   * 製作節點的完整備份包括Forms Manager和AEM Forms Workspace資料的備份。
-   * Workbench開發人員可繼續在本機處理其程式。 他們不應在備份階段部署任何新程式。
-   * 每個備份工作階段長度（用於滾動備份模式）的決定應依據備份AEM Forms中的所有資料(DB、GDS、AEM存放庫和任何其他自訂資料)所花的總時間。
+  * 請確認製作與發佈執行個體的備份已同步處理，以便同時啟動。 雖然您可以在執行備份時繼續使用製作和發佈執行個體，但建議不要在備份期間發佈任何資產，以避免任何未擷取的變更。 請等待製作和發佈執行個體的備份結束，然後再發佈新資產。
+  * 製作節點的完整備份包括Forms Manager和AEM Forms Workspace資料的備份。
+  * Workbench開發人員可繼續在本機處理其程式。 他們不應在備份階段部署任何新程式。
+  * 每個備份工作階段長度（用於滾動備份模式）的決定應依據備份AEM Forms中的所有資料（DB、GDS、AEM存放庫和任何其他自訂資料）所花的總時間。
 
 備份AEM Forms資料庫，包括任何交易記錄。 請參閱[AEM Forms資料庫](/help/forms/using/admin-help/files-back-recover.md#aem-forms-database)。
 
 如需詳細資訊，請參閱適用於您資料庫的知識庫文章：
 <!-- The four URLs below are all 404s; checked July 19, 2023 -->
-* [AEM Forms的Oracle備份和復原](https://www.adobe.com/go/kb403624)
-* 適用於AEM Forms的[MySQL備份與復原](https://www.adobe.com/go/kb403625)
-* [Microsoft® SQL Server Backup and Recovery for AEM Forms](https://www.adobe.com/go/kb403623)
-* 適用於AEM Forms的[DB2®備份與復原](https://www.adobe.com/go/kb403626)
+* [適用於AEM Forms的Oracle備份與復原](https://www.adobe.com/go/kb403624)
+* [適用於AEM Forms的MySQL備份與復原](https://www.adobe.com/go/kb403625)
+* [適用於AEM Forms的Microsoft® SQL Server備份與復原](https://www.adobe.com/go/kb403623)
+* [DB2® AEM Forms的備份與復原](https://www.adobe.com/go/kb403626)
 
 這些文章提供基本資料庫功能的相關指引，以供您備份及復原資料。 這些指南並非特定廠商的資料庫備份與復原功能的完整技術指南。 這些命令概述為AEM Forms應用程式資料建立可靠資料庫備份策略所需的命令。
 

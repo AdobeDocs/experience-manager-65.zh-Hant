@@ -11,7 +11,7 @@ feature: Experience Fragments,Developing
 role: Developer
 source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
-source-wordcount: '241'
+source-wordcount: '244'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 1%
 
 它們可讓作者重複使用頁面的部分（體驗的片段），而無須複製和貼上內容。
 
-這可支援Headless內容管理系統(CMS)使用案例，作者可將AEM僅用於撰寫，而非用於提供給客戶。 然後協力廠商系統/接觸點會取用該體驗，再傳送給一般使用者。
+這可支援Headless內容管理系統(CMS)的使用案例，作者可藉此將AEM僅用於撰寫，不用於提供給客戶。 然後協力廠商系統/接觸點會取用該體驗，再傳送給一般使用者。
 
 >[!NOTE]
 >
