@@ -107,7 +107,7 @@ AEM在虛擬化環境中運作良好，但可能有些因素無法直接等同�
 預估需要多少叢集節點是根據基本需求及特定Web專案的特定使用案例而定：
 
 * 從故障安全的角度來看，必須根據叢集節點復原所需的時間，決定所有環境的嚴重故障以及故障補償時間。
-* 在擴充性方面，寫入作業的數目基本上是最重要的因素。 可以針對僅存取系統的作業建立負載平衡，以處理讀取作業；如需詳細資訊，請參閱[Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)。
+* 在擴充性方面，寫入作業的數目基本上是最重要的因素。 可以針對僅存取系統的作業建立負載平衡，以處理讀取作業；如需詳細資訊，請參閱[Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant)。
 
 ### 硬體建議 {#hardware-recommendations}
 

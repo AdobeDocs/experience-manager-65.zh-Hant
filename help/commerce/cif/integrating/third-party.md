@@ -31,7 +31,7 @@ Experience Manager會隨選擷取資料，因此需要產品目錄的即時API�
 
 >[!TIP]
 >
->如果沒有可用的即時API，則應使用具有API的外部產品快取進行整合。 範例[Magento開放原始碼](https://business.adobe.com/products/magento/open-source.html)。
+>如果沒有可用的即時API，則應使用具有API的外部產品快取進行整合。 範例[Magento開放原始碼](https://business.adobe.com/tw/products/magento/open-source.html)。
 
 不需要實作完整的GraphQL結構描述，只需要結構描述的物件即可啟用所需的使用案例。
 

@@ -385,4 +385,4 @@ Translator工具底部的搜尋列提供字串選取選項：
 
 >[!NOTE]
 >
->使用Dispatcher時，您需要[讓快取頁面失效](https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html)，才能在演算後的元件字串中加入新的字典字串。
+>使用Dispatcher時，您需要[讓快取頁面失效](https://helpx.adobe.com/tw/experience-manager/dispatcher/using/page-invalidate.html)，才能在演算後的元件字串中加入新的字典字串。

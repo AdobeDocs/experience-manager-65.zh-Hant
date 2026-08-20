@@ -39,7 +39,7 @@ MSM是可設定的架構，用於自動化內容部署。 實作通常涉及網�
 >您也可以使用[Reference元件](/help/sites-authoring/default-components-foundation.md#reference)重複使用單一頁面或段落。 但請記住：
 >
 >* MSM的彈性更高，可讓您更精確地控制要同步的內容以及同步時間。
->* 現在建議使用[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)來取代基礎元件。
+>* 現在建議使用[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)來取代基礎元件。
 >
 
 ## 即時副本來源和Blueprint設定 {#live-copy-sources-and-blueprint-configurations}

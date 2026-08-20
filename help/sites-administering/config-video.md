@@ -24,7 +24,7 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
->已棄用此基礎元件。 Adobe建議改用[核心元件內嵌元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/embed.html)。
+>已棄用此基礎元件。 Adobe建議改用[核心元件內嵌元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/embed.html?lang=zh-Hant)。
 
 >[!CAUTION]
 >
