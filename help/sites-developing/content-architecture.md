@@ -11,7 +11,7 @@ feature: Developing
 role: Developer
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
-source-wordcount: '421'
+source-wordcount: '425'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,7 @@ Servlet應該根據resourceTypes而不是路徑來定義。 這可讓您使用JC
 
 ### 避免定義新的節點型別 {#avoid-defining-new-node-types}
 
-節點型別在基礎結構層的低層級運作，且大多數需求都可透過使用指派給nt：unstructured、oak：Unstructured、sling：Folder或cq：Page節點型別的sling：resourceType來滿足。 節點型別等同於存放庫中的結構描述，並且之後變更節點型別可能會很昂貴。
+節點型別在基礎結構層的低層級運作，而使用指派給nt:unstructured、oak:Unstructured、sling:Folder或cq:Page節點型別的sling:resourceType可以滿足大部分的需求。 節點型別等同於存放庫中的結構描述，並且之後變更節點型別可能會很昂貴。
 
 ### 遵守JCR中的命名慣例 {#adhere-to-naming-conventions-in-the-jcr}
 
@@ -54,14 +54,14 @@ Servlet應該根據resourceTypes而不是路徑來定義。 這可讓您使用JC
 
 * 節點名稱
 
-   * 全部小寫
-   * 使用連字型大小分隔文字
+  * 全部小寫
+  * 使用連字型大小分隔文字
 
 * 屬性名稱
 
-   * 駝峰式大小寫，以小寫字母開頭
+  * 駝峰式大小寫，以小寫字母開頭
 
 * 元件(JSP/HTML)
 
-   * 全部小寫
-   * 使用連字型大小分隔文字
+  * 全部小寫
+  * 使用連字型大小分隔文字

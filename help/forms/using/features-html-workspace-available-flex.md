@@ -11,7 +11,7 @@ feature: HTML5 Forms,Adaptive Forms,Mobile Forms
 role: Admin, User, Developer
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '378'
+source-wordcount: '384'
 ht-degree: 0%
 
 ---
@@ -40,4 +40,4 @@ AEM Forms工作區超越以Flex為基礎的工作區，不斷創新，提供有�
 
 ## 支援根據一般使用者裝置呈現自訂任務 {#support-for-custom-task-rendering-based-on-end-user-s-device}
 
-AEM Forms工作區支援XDP表單的HTML轉譯。 此支援用於根據裝置或使用者代理路由傳送到不同的XDP轉譯的轉譯流程時，可讓使用者將XDP表單檢視為行動裝置上的HTML和案頭上的PDF。 這有助於為在不同裝置上的不同環境中工作的使用者提供流程管理的順暢涵蓋範圍。
+AEM Forms工作區支援HTML的XDP表單轉譯。 此支援用於根據裝置或使用者代理路由傳送到不同的XDP轉譯的轉譯流程時，可讓使用者在行動裝置上以HTML檢視XDP表單，並在案頭上以PDF檢視。 這有助於為在不同裝置上的不同環境中工作的使用者提供流程管理的順暢涵蓋範圍。

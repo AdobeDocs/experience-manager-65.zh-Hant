@@ -1,6 +1,6 @@
 ---
 title: AEM Forms工作區JSON物件說明
-description: LiveCycleAEM Forms Workspace中所用JSON JavaScript物件的相關概念資訊，可供自訂、擴充功能、修改和重複使用。
+description: LiveCycle AEM Forms Workspace中使用之JSON JavaScript物件的相關概念資訊，可用於自訂、擴充功能、修改和重複使用。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
@@ -10,8 +10,8 @@ feature: HTML5 Forms,Adaptive Forms,Mobile Forms
 role: Admin, User, Developer
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '2144'
-ht-degree: 8%
+source-wordcount: '2168'
+ht-degree: 7%
 
 ---
 
@@ -193,7 +193,7 @@ AEM Forms工作區中使用的JSON物件說明如下。
   <tr>
    <td>優先順序<br /> </td>
    <td>五</td>
-   <td>它包含任務的優先順序。<br /> 1 =最高優先順序<br /> 2 =高優先順序<br /> 3 =一般優先順序<br /> 4 =低優先順序<br /> 5 =最低優先順序<br /> </td>
+   <td>它包含工作的優先順序。<br /> 1 =最高優先順序<br /> 2 =高優先順序<br /> 3 =一般優先順序<br /> 4 =低優先順序<br /> 5 =最低優先順序<br /> </td>
   </tr>
   <tr>
    <td>processInstanceId</td>
@@ -238,7 +238,7 @@ AEM Forms工作區中使用的JSON物件說明如下。
   <tr>
    <td>狀態<br /> </td>
    <td>五</td>
-   <td>1 =已建立（從起點建立任務。）<br /> 2 =建立並儲存（從起點建立並儲存任務）。<br /> 3 =已指派（任務在處理序啟動後指派給使用者。）<br /> 4 =指派並儲存（已指派並儲存任務）。<br /> 100 =已完成（工作已完成。）<br /> 101 =已逾期（任務已到期限）。<br /> 102 =已終止<br /> </td>
+   <td>1 =已建立（從起始點建立任務。）<br /> 2 =建立與儲存（從起點建立並儲存任務。）<br /> 3 =已指派（工作在處理序啟動後指派給使用者。）<br /> 4 =已指派和儲存（已指派和儲存任務。）<br /> 100 =已完成（工作已完成。）<br /> 101 =已截止（任務已達到截止日期。）<br /> 102 =已終止<br /> </td>
   </tr>
   <tr>
    <td>步驟名稱<br /> </td>
@@ -383,7 +383,7 @@ AEM Forms工作區中使用的JSON物件說明如下。
  </tbody>
 </table>
 
-1. 篩選條件
+1. 篩選器
 
    篩選器基本上是使用者或群組的佇列。 當任務指派給使用者/群組時，任務會新增到對應的佇列中。
 
@@ -412,7 +412,7 @@ AEM Forms工作區中使用的JSON物件說明如下。
   <tr>
    <td>類型</td>
    <td>五</td>
-   <td>它包含佇列的型別。<br /> 0 — 使用者佇列。<br /> 1. 共用佇列。<br /> 2. 群組佇列。<br type="_moz" /> </td>
+   <td>它包含佇列的型別。<br /> 0 — 使用者佇列。<br /> 1.共用佇列。<br /> 2.群組佇列。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>查詢</td>
@@ -606,7 +606,7 @@ AEM Forms工作區中使用的JSON物件說明如下。
   <tr>
    <td>assignmentType<br type="_moz" /> </td>
    <td>五</td>
-   <td>0 =初始工作分派<br /> 1 =轉寄（任務已轉寄給目前的任務擁有者。）<br /> 2 =已傳回（任務已由任務的先前擁有者傳回至任務的目前擁有者。）<br /> 3 =已申請（任務已由任務的目前所有者申請）。<br /> 4 =提升（提升後任務已指派給目前的任務所有者）。<br /> 5 =已指派管理員（任務已由管理員指派給任務的目前所有者）。<br /> 6 =已諮詢（已諮詢任務給目前的任務所有者。）<br type="_moz" /> </td>
+   <td>0 =初始工作分派<br /> 1 =轉寄（任務已轉寄給目前的任務擁有者。）<br /> 2 =已傳回（任務已由任務的先前擁有者傳回至任務的目前擁有者。）<br /> 3 =已申請（任務已由任務的目前所有者申請。）<br /> 4 =提升（提升後任務已指派給目前的任務擁有者。）<br /> 5 =已指派管理員（任務已由管理員指派給任務的目前擁有者。）<br /> 6 =已諮詢（已諮詢任務給任務的目前擁有者。）<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>assignmentUpdateTime<br type="_moz" /> </td>

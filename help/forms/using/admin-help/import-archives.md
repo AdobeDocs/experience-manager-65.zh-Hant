@@ -11,7 +11,7 @@ feature: Adaptive Forms
 role: User, Developer
 source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '1450'
+source-wordcount: '1457'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 0%
 1. 按一下「瀏覽」以找出要匯入的封存，然後按一下「預覽」。
 1. 檢閱將隨歸檔一起安裝的資源和物件清單。 確保與現有資源、物件和服務組態沒有衝突，因為沒有可用的復原功能。
 
-   如果您選取匯入服務組態，AEM表單會匯入LCA中處理程式使用的所有處理程式組態檔（端點、安全性設定檔及服務組態引數）。
+   如果您選取匯入服務組態，AEM表單會匯入LCA中處理程式使用的所有處理程式組態檔案（端點、安全性設定檔及服務組態引數）。
 
 1. 按一下「匯入」。
 1. 檢閱匯入結果，然後按一下「略過組態」完成匯入程式，或按一下「組態」設定歸檔。
@@ -86,7 +86,7 @@ ht-degree: 0%
 
      **CREATE_VERSION_PERM：**&#x200B;若要建立服務的版本
 
-     **DELETE_版本_PERM：**&#x200B;若要刪除服務的版本
+     **DELETE_VERSION_PERM：**&#x200B;若要刪除服務的版本
 
      **MODIFY_VERSION_PERM：**&#x200B;若要修改服務的版本
 
@@ -153,7 +153,7 @@ ht-degree: 0%
 
      **CREATE_VERSION_PERM：**&#x200B;若要建立服務的版本
 
-     **DELETE_版本_PERM：**&#x200B;若要刪除服務的版本
+     **DELETE_VERSION_PERM：**&#x200B;若要刪除服務的版本
 
      **MODIFY_VERSION_PERM：**&#x200B;若要修改服務的版本
 
@@ -165,7 +165,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->若要移除包含儲存在協力廠商存放庫(EMC Documentum Content Server、IBM FileNet Content Manager或IBM Content Manager)中的資產的封存，您也必須使用Workbench從存放庫中刪除資產檔案。
+>若要移除包含儲存在協力廠商存放庫（EMC Documentum Content Server、IBM FileNet Content Manager或IBM Content Manager）中的資產的封存，您也必須使用Workbench從存放庫中刪除資產檔案。
 
 1. 在Administration Console中，按一下「服務>應用程式和服務>封存管理」。
 1. 在「歸檔管理」頁面上，選取要移除的歸檔核取方塊，然後按一下移除。

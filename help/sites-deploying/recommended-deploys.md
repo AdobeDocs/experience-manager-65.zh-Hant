@@ -12,8 +12,8 @@ feature: Deploying
 role: Admin
 source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
 workflow-type: tm+mt
-source-wordcount: '1756'
-ht-degree: 0%
+source-wordcount: '1805'
+ht-degree: 1%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 0%
 >
 >本頁介紹AEM的建議拓撲。 如需叢集功能以及如何設定它們的詳細資訊，請參閱[Apache Sling Discovery API檔案](https://sling.apache.org/documentation/bundles/discovery-api-and-impl.html)。
 
-從AEM 6.2開始，MicroKernels會充當持續性管理員。選擇符合您需求的部署型別，取決於執行個體的用途以及您考慮的部署型別。
+從AEM 6.2開始，MicroKernels就充當持續性管理員。 選擇符合您需求的部署型別，取決於執行個體的用途以及您考慮的部署型別。
 
 以下範例旨在指出最常見的AEM設定中，建議使用哪些功能。
 
@@ -71,7 +71,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如需有關如何設定AEM與TarMK冷待命的詳細資訊，請參閱[此](/help/sites-deploying/tarmk-cold-standby.md)文章。
+>如需有關如何使用TarMK冷待命設定AEM的詳細資訊，請參閱[此](/help/sites-deploying/tarmk-cold-standby.md)文章。
 
 >[!NOTE]
 >
@@ -123,7 +123,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->在上圖中，假設資料中心2的AEM伺服器與資料中心1的MongoDB主要節點之間的網路延遲，高於[具有MongoDB — 檢查清單](/help/sites-deploying/aem-with-mongodb.md#checklists)的Adobe Experience Manager下記錄的要求，AEM Server 3和AEM Server 4會顯示非使用中狀態。 如果最大延遲與需求相容（例如透過使用可用性區域），則資料中心2中的AEM伺服器也可以作用中，以建立跨多個資料中心作用中的AEM叢集。
+>在上圖中，假設資料中心2的AEM伺服器與資料中心1的MongoDB主要節點之間的網路延遲，高於[具有MongoDB的AEM - Checklist](/help/sites-deploying/aem-with-mongodb.md#checklists)的AEM中記錄的要求，則Adobe Experience Manager Server 3和MongoDB Server 4會顯示非使用中狀態。 如果最大延遲與需求相容（例如透過使用可用性區域），則資料中心2中的AEM伺服器也可以作用中，跨多個資料中心建立作用中作用中的AEM叢集。
 
 >[!NOTE]
 >
@@ -135,13 +135,13 @@ ht-degree: 0%
 
 您可以使用這些決策矩陣來建立適合您需求的最佳部署型別。
 
-Adobe強烈建議TarMK作為客戶在所有部署案例(AEM Author和Publish例項除外)中使用的預設持續性技術。
+Adobe強烈建議TarMK作為客戶在所有部署案例（AEM製作和發佈執行個體皆然）中使用的預設持續性技術，但以下概述的使用案例除外。
 
 ### 在製作執行個體上選擇AEM MongoMK而非TarMK的例外情況 {#exceptions-for-choosing-aem-mongomk-over-tarmk-on-author-instances}
 
-選擇MongoMK持續性後端而非TarMK的主要原因是要水平縮放執行個體。 這表示需隨時執行兩個或多個作用中的製作執行個體，並使用MongoDB作為持續性儲存系統。 通常需要執行多個製作執行個體，是因為單一伺服器的CPU和記憶體容量（支援所有並行製作活動）已無法持續。
+選擇MongoMK持續性後端而非TarMK的主要原因是要水平縮放執行個體。 這表示需隨時執行兩個或多個作用中的製作執行個體，並使用MongoDB作為持續性儲存系統。 需要執行多個製作執行個體，通常是因為單一伺服器支援所有並行製作活動的CPU和記憶體容量已無法持續。
 
-預測新網站上線後的確切並行模式幾乎是不可能的。 因此，Adobe建議您在評估是否使用MongoMK和兩個或更多作者活動節點時，考慮以下標準：
+預測新網站上線後的確切並行模式幾乎是不可能的。 因此，Adobe建議您在評估是否使用MongoMK和兩個或兩個以上作者活動節點時，考慮以下標準：
 
 1. 一天內連線的已命名使用者數：以千或以上為單位。
 1. 同時使用者人數：以數百或以上的數量計算。
@@ -162,24 +162,24 @@ Adobe強烈建議TarMK作為客戶在所有部署案例(AEM Author和Publish例�
 
 部署具有兩個或多個製作執行個體叢集的MongoDB復本集的額外優點之一，就是如果製作執行個體、MongoDB復本或資料中心完全失敗，便能以最小的停機時間自動復原案例。 儘管如此，選擇MongoMK而非TarMK不應完全由復原需求所驅動，因為TarMK也可以提供具備受控容錯移轉機制的最小停機時間解決方案。
 
-如果在部署的前18個月中不符合上述標準，建議先使用TarMK部署AEM，稍後當上述標準適用時，再重新評估您的設定，最後決定是否留在TarMK上或移轉至MongoMK。
+如果在部署的前18個月中不符合上述條件，建議先使用TarMK部署AEM，稍後當上述條件適用時，再重新評估您的設定，最後決定是否留在TarMK上或移轉至MongoMK。
 
-### 在Publish執行個體上選擇AEM MongoMK而非TarMK的例外情況 {#exceptions-for-choosing-aem-mongomk-over-tarmk-on-publish-instances}
+### 在發佈執行個體上選擇AEM MongoMK而非TarMK的例外情況 {#exceptions-for-choosing-aem-mongomk-over-tarmk-on-publish-instances}
 
 不建議為發佈執行個體部署MongoMK。 部署的發佈層級幾乎總是部署為執行TarMK的完全獨立發佈執行個體的陣列，透過從製作執行個體複製內容來保持同步。 這種「不共用」的架構適用於發佈執行個體，可讓發佈層的部署以線性方式水準擴展。 陣列拓撲還提供以滾動方式套用任何更新或升級至發佈執行個體的優點，因此對發佈層級的任何變更不需要任何停機時間。
 
 當有多個發佈者時，這不適用於在發佈層上使用叢集的AEM Communities。 若選擇JSRP （請參閱[社群內容儲存體](/help/communities/working-with-srp.md)），則MongoMK叢集會很合適，不論選擇哪個MK （例如MongoDB或RDB），任何發佈端叢集都一樣。
 
-### 使用MongoMK部署AEM時的先決條件和Recommendations {#prerequisites-and-recommendations-when-deploying-aem-with-mongomk}
+### 使用MongoMK部署AEM時的先決條件和建議 {#prerequisites-and-recommendations-when-deploying-aem-with-mongomk}
 
 如果您考慮使用AEM的MongoMK部署，有一組必要條件和建議可供使用：
 
 **MongoDB部署的必要先決條件：**
 
-1. 在熟悉AEM的Adobe Consulting或MongoDB架構師的協助下，MongoDB部署架構和規模調整必須是專案實作的一部分；
+1. MongoDB部署架構和規模調整必須是專案實作的一部分，並需要熟悉AEM的Adobe Consulting或MongoDB架構師的協助；
 1. 合作夥伴或客戶團隊必須具備MongoDB專業知識，才能有信心維持及維護現有或新的MongoDB環境；
-1. 您可以選擇部署商業或開放原始碼版本的MongoDB (AEM同時支援兩者)，但必須直接從MongoDB Inc購買MongoDB維護和支援合約；
-1. 整體AEM和MongoDB架構和基礎架構應由AdobeAEM架構師妥善定義和驗證；
+1. 您可以選擇部署商業或開放原始碼版本的MongoDB （AEM同時支援兩者），但必須直接從MongoDB Inc購買MongoDB維護和支援合約；
+1. 整體AEM和MongoDB架構和基礎架構應由Adobe AEM Architect明確定義和驗證；
 1. 檢閱包含MongoDB的AEM部署的支援模型。
 
 **MongoDB部署的Strong建議：**
@@ -190,7 +190,7 @@ Adobe強烈建議TarMK作為客戶在所有部署案例(AEM Author和Publish例�
 
 >[!NOTE]
 >
->如需這些准則、先決條件和建議的所有其他問題，請連絡[Adobe客戶服務](https://helpx.adobe.com/tw/marketing-cloud/contact-support.html)。
+>若對這些指引、必要條件與建議有任何疑問，請連絡[Adobe客戶服務](https://helpx.adobe.com/tw/marketing-cloud/contact-support.html)。
 
 ### AEM Communities的考量事項 {#considerations-for-aem-communities}
 
@@ -210,9 +210,9 @@ Adobe強烈建議TarMK作為客戶在所有部署案例(AEM Author和Publish例�
 
 >[!NOTE]
 >
->MongoDB是協力廠商軟體，不包含在AEM授權套件中。 如需詳細資訊，請參閱[MongoDB授權原則](https://www.mongodb.org/about/licensing/)頁面。
+>MongoDB是協力廠商軟體，未包含在AEM授權套件中。 如需詳細資訊，請參閱[MongoDB授權原則](https://www.mongodb.org/about/licensing/)頁面。
 >
->為了充分利用AEM部署，Adobe建議授權MongoDB企業版，以享受專業支援。
+>若要充分利用AEM部署，Adobe建議您授權MongoDB企業版，以受益於專業支援。
 >
 >此授權包含標準復本集，該標準復本集由一個主要和兩個次要執行個體組成，可用於製作或發佈部署。
 >

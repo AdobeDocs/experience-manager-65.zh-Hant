@@ -10,7 +10,7 @@ feature: HTML5 Forms,Adaptive Forms,Mobile Forms
 role: Admin, User, Developer
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '666'
+source-wordcount: '675'
 ht-degree: 0%
 
 ---
@@ -21,8 +21,8 @@ ht-degree: 0%
 
 在AEM Forms工作區中，可順暢地支援多種表單型別。 這些類別包括：
 
-* PDF forms(XDP / Acroform /一般PDF)
-* 新HTML表單
+* PDF forms （XDP / Acroform /平面PDF）
+* 新的HTML表單
 * 影像
 * 協力廠商應用程式（例如，通訊管理）
 
@@ -30,9 +30,9 @@ ht-degree: 0%
 
 ## PDF forms {#pdf-forms}
 
-PDF forms由`PdfTaskForm View`轉譯。
+PDF forms已由`PdfTaskForm View`轉譯。
 
-XDP表單轉譯為PDF時，FormsAugmenter服務會新增`FormBridge`JavaScript™。 此JavaScript™ (位於PDF表單內)有助於執行表單提交、表單儲存或離線建立表單等動作。
+XDP表單轉譯為PDF時，FormsAugmenter服務會新增`FormBridge`JavaScript™。 此™ （位於PDF表單內）有助於執行表單提交、表單儲存或離線建立表單等動作。
 
 在AEM Forms工作區中，PDFTaskForm檢視會透過位於`/lc/libs/ws/libs/ws/pdf.html`的中介HTML與`FormBridge`JavaScript通訊。 流程為：
 
@@ -40,9 +40,9 @@ XDP表單轉譯為PDF時，FormsAugmenter服務會新增`FormBridge`JavaScript�
 
 使用`window.postMessage` / `window.attachEvent('message')`通訊
 
-此方法為父框架與iframe之間的標準通訊方式。 先前開啟的事件中現有的事件接聽程式會在新增新的PDF forms之前移除。 此永久刪除也會考量在任務詳細資料檢視中的表單標籤和歷史記錄標籤之間切換。
+此方法為父框架與iframe之間的標準通訊方式。 先前開啟之PDF forms的現有事件接聽程式會在新增接聽程式之前移除。 此永久刪除也會考量在任務詳細資料檢視中的表單標籤和歷史記錄標籤之間切換。
 
-**pdf.html - `FormBridge`已轉譯PDF內的JavaScript**
+**pdf.html - `FormBridge`已轉譯之PDF內的JavaScript**
 
 使用`pdfObject.postMessage` / `pdfObject.messageHandler`通訊
 
@@ -52,13 +52,13 @@ XDP表單轉譯為PDF時，FormsAugmenter服務會新增`FormBridge`JavaScript�
 >
 >不建議編輯PdfTaskForm檢視的pdf.html /內容。
 
-## 新HTMLForms {#new-html-forms}
+## 全新HTML Forms {#new-html-forms}
 
-新的HTML表單由NewHTMLTaskForm檢視轉譯。
+新的HTML表單會由NewHTMLTaskForm檢視轉譯。
 
 使用部署在CRX上的行動表單套件將XDP表單轉譯為HTML時，也會將額外的`FormBridge`JavaScript新增至表單，這會公開儲存和提交表單資料的不同方法。
 
-此JavaScript與上述PDF forms中提到的不同，但其用途類似。
+此JavaScript與上述的PDF forms不同，但其用途類似。
 
 >[!NOTE]
 >
@@ -68,11 +68,11 @@ XDP表單轉譯為PDF時，FormsAugmenter服務會新增`FormBridge`JavaScript�
 
 Flex Forms會分別以SwfTaskForm和HtmlTaskForm檢視來轉譯。
 
-在AEM Forms工作區中，這些檢視會使用出現在`/lc/libs/ws/libs/ws/WSNextAdapter.swf`的中介SWF，與構成Flex®表單/指南的實際SWF通訊
+在AEM Forms工作區中，這些檢視會使用位於`/lc/libs/ws/libs/ws/WSNextAdapter.swf`的中介SWF與構成Flex®表單/指南的實際SWF通訊
 
 使用`swfObject.postMessage` / `window.flexMessageHandler`進行通訊。
 
-此通訊協定由`WsNextAdapter.swf`定義。 視窗物件上的現有`flexMessageHandlers`在新增新的表單之前，會先從先前開啟的SWF表單中移除。 此邏輯也會考量在任務詳細資料檢視中的表單標籤和歷程記錄標籤之間切換。 `WsNextAdapter.swf`用於執行各種表單動作，例如儲存或提交。
+此通訊協定由`WsNextAdapter.swf`定義。 在加入新的視窗物件之前，會移除先前開啟之SWF表單中的現有`flexMessageHandlers`。 此邏輯也會考量在任務詳細資料檢視中的表單標籤和歷程記錄標籤之間切換。 `WsNextAdapter.swf`用於執行各種表單動作，例如儲存或提交。
 
 >[!NOTE]
 >
@@ -86,7 +86,7 @@ Flex Forms會分別以SwfTaskForm和HtmlTaskForm檢視來轉譯。
 
 AEM Forms工作區監聽`window.global.postMessage([Message],[Payload])`
 
-[訊息]可以是指定為`SubmitMessage`的字串| `CancelMessage`| `ErrorMessage`| `runtimeMap`中的`actionEnabledMessage`。 協力廠商應用程式必須使用此介面，視需要通知AEM Forms工作區。 使用此介面是強制性的，因為AEM Forms工作區必須知道何時提交任務，才能清除任務視窗。
+[訊息]可以在`runtimeMap`中指定為`SubmitMessage`| `CancelMessage`| `ErrorMessage`| `actionEnabledMessage`的字串。 協力廠商應用程式必須使用此介面，視需要通知AEM Forms工作區。 使用此介面是強制性的，因為AEM Forms工作區必須知道何時提交任務，才能清除任務視窗。
 
 **AEM Forms工作區與協力廠商應用程式通訊**
 

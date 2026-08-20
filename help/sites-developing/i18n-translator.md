@@ -1,6 +1,6 @@
 ---
-title: 使用Translator管理字典
-description: AEM提供了一個主控台，用於管理元件UI中使用的各種文字翻譯
+title: 使用翻譯工具來管理字典
+description: AEM提供主控台，用於管理元件UI中使用的各種文字翻譯
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
@@ -11,14 +11,14 @@ feature: Developing
 role: Developer
 source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
-source-wordcount: '2318'
+source-wordcount: '2350'
 ht-degree: 2%
 
 ---
 
-# 使用Translator管理字典{#using-translator-to-manage-dictionaries}
+# 使用翻譯工具來管理字典{#using-translator-to-manage-dictionaries}
 
-AEM提供了一個主控台，用於管理元件UI中使用的各種文字翻譯。 此主控台位於
+AEM提供主控台，用於管理元件UI中使用的各種文字翻譯。 此主控台位於
 
 `https://<hostname>:<port-number>/libs/cq/i18n/translator.html`
 
@@ -30,13 +30,13 @@ AEM提供了一個主控台，用於管理元件UI中使用的各種文字翻譯
 >
 >僅編輯針對專案建立且位於`/apps`下的字典。
 >
->此工具中也提供AEM系統字典。 請勿變更AEM系統字典，因為這會導致AEM UI發生問題。 此外，升級時可能會遺失變更。 AEM系統字典位於`/libs`下。
+>此工具中也提供AEM系統字典。 請勿變更AEM系統字典，因為這可能會導致AEM UI發生問題。 此外，升級時可能會遺失變更。 AEM系統字典位於`/libs`下方。
 
 >[!NOTE]
 >
 >雖然Translator工具具有典型的UI介面，但它仍可用於翻譯片語，無論這些片語位於哪個介面。
 
-譯者會列出AEM中使用的文字，並附帶各種語言翻譯：
+翻譯人員會列出AEM中使用的文字，並附帶各種語言翻譯：
 
 ![chlimage_1-205](assets/chlimage_1-205.png)
 
@@ -64,7 +64,7 @@ AEM提供了一個主控台，用於管理元件UI中使用的各種文字翻譯
 
 建立字典以管理當地語系化的UI字串。 建立字典後，您可以使用翻譯工具來管理字典。
 
-1. 使用CRXDE Lite新增新字典的根節點( `sling:Folder`)作為儲存語言定義的結構：
+1. 使用CRXDE Lite為您的新字典新增根節點( `sling:Folder`)作為儲存語言定義的結構：
 
    ` /apps/<projectName>/i18n`
 
@@ -100,7 +100,7 @@ AEM提供了一個主控台，用於管理元件UI中使用的各種文字翻譯
 >
 >僅編輯針對專案建立且位於`/apps`下的字典。
 >
->請勿變更AEM系統字典，因為這會導致AEM UI發生問題。 此外，升級時可能會遺失變更。 AEM系統字典位於`/libs`下。
+>請勿變更AEM系統字典，因為這可能會導致AEM UI發生問題。 此外，升級時可能會遺失變更。 AEM系統字典位於`/libs`下方。
 
 ### 新增、變更和移除字串 {#adding-changing-and-removing-strings}
 
@@ -178,11 +178,11 @@ Translator工具底部的搜尋列提供字串選取選項：
 * **依文字篩選：**&#x200B;符合英文字串、註解或翻譯的模式。 只有符合全部或部分圖樣的專案才會出現在表格中。
 * **變更： Any、Modified、New、Deleted：**&#x200B;顯示已變更但尚未儲存的專案。
 
-   * 任何：顯示已修改、新增或移除的專案。
-   * 已修改：顯示已變更的專案。
-   * 新增：顯示新增的專案。
-   * 已刪除：顯示要移除的專案。
-   * 多重選取專案：顯示具有所有選取之屬性的專案。
+  * 任何：顯示已修改、新增或移除的專案。
+  * 已修改：顯示已變更的專案。
+  * 新增：顯示新增的專案。
+  * 已刪除：顯示要移除的專案。
+  * 多重選取專案：顯示具有所有選取之屬性的專案。
 
 * **有註解**：顯示有註解給譯者的專案。
 * **缺少翻譯：**&#x200B;顯示至少一種語言沒有翻譯的專案。
@@ -205,7 +205,7 @@ Translator工具底部的搜尋列提供字串選取選項：
    >
    >僅編輯針對專案建立且位於`/apps`下的字典。
    >
-   >此工具中也提供AEM系統字典。 請勿變更AEM系統字典，因為這會導致AEM UI發生問題。 此外，升級時可能會遺失變更。 AEM系統字典位於`/libs`下。
+   >此工具中也提供AEM系統字典。 請勿變更AEM系統字典，因為這可能會導致AEM UI發生問題。 此外，升級時可能會遺失變更。 AEM系統字典位於`/libs`下方。
 
 1. 若要編輯其中一個字串的翻譯文字，您可以：
 
@@ -217,7 +217,7 @@ Translator工具底部的搜尋列提供字串選取選項：
 
    ![chlimage_1-217](assets/chlimage_1-217.png)
 
-1. 按一下工具列中的[儲存] **&#x200B;**&#x200B;以認可您的變更。
+1. 按一下工具列中的[儲存] ****&#x200B;以認可您的變更。
 
    >[!NOTE]
    >
@@ -292,24 +292,24 @@ Translator工具底部的搜尋列提供字串選取選項：
    * **類型**：`Multi-String`
    * **值**：您要顯示的語言清單。 例如：
 
-      * fr
-      * es
+     * fr
+     * es
 
    >[!NOTE]
    >
    >語言程式碼必須為小寫。
 
-1. 按一下CRXDE Lite中的「儲存全部&#x200B;**」**，然後重新載入轉譯器。 格線將會更新以顯示定義的語言。
+1. 在CRXDE Lite中按一下「儲存全部&#x200B;**」**，然後重新載入轉譯器。 格線將會更新以顯示定義的語言。
 
    >[!NOTE]
    >
-   >翻譯人員只會儲存字典[&#128279;](#creating-a-dictionary)中實際存在的語言的翻譯(亦即，在字典路徑（例如`/apps/myProject/i18n`）下)。
+   >翻譯人員只會儲存字典](#creating-a-dictionary)中實際[存在的語言的翻譯(亦即，在字典路徑（例如`/apps/myProject/i18n`）下)。
    >
    >請確定這些對應至格線中所顯示的語言。
 
 ### 讓作者可以使用語言 {#making-languages-available-to-authors}
 
-為您的AEM執行個體定義新語言的字典後，您需要讓作者可以選取此字典（例如，用於&#x200B;**偏好設定**）：
+在為AEM執行個體的新語言定義字典後，您需要讓作者可以選取此字典（例如，用於&#x200B;**偏好設定**）：
 
 1. 若要變更&#x200B;**安全性**&#x200B;主控台的&#x200B;**偏好設定**&#x200B;中可用的語言清單：
 
@@ -372,7 +372,7 @@ Translator工具底部的搜尋列提供字串選取選項：
 
 ## 發佈字典 {#publishing-dictionaries}
 
-將您的字典納入AEM應用程式的發行管理流程。 例如，將字典包含在應用程式的內容套件中，以部署至發佈執行個體。 此策略提供下列優點：
+將您的字典併入AEM應用程式的發行管理程式。 例如，將字典包含在應用程式的內容套件中，以部署至發佈執行個體。 此策略提供下列優點：
 
 * 字典可用於其發佈環境中的元件。
 * 元件UI字串的變更會與更新的翻譯一起部署。
@@ -385,4 +385,4 @@ Translator工具底部的搜尋列提供字串選取選項：
 
 >[!NOTE]
 >
->使用Dispatcher時，您需要[讓快取頁面失效](https://helpx.adobe.com/tw/experience-manager/dispatcher/using/page-invalidate.html)，才能在演算後的元件字串中加入新的字典字串。
+>使用Dispatcher時，您需要[讓快取頁面失效](https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html)，才能在演算後的元件字串中加入新的字典字串。

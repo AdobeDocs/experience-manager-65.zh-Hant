@@ -11,8 +11,8 @@ feature: Administering
 role: Admin
 source-git-commit: 8f638eb384bdca59fb6f4f8990643e64f34622ce
 workflow-type: tm+mt
-source-wordcount: '1767'
-ht-degree: 0%
+source-wordcount: '1827'
+ht-degree: 1%
 
 ---
 
@@ -60,10 +60,10 @@ AEM中的許多效能測量（例如查詢回應時間）都可能受到系統�
 * Apache提供名為&#x200B;**JMeter**&#x200B;的產品，可用於效能和負載測試，以及功能行為。 它是開放原始碼軟體，可以自由使用，但功能集比企業產品更小，而且學習曲線更陡峭。 您可以在Apache的網站[https://jmeter.apache.org/](https://jmeter.apache.org/)找到JMeter
 
 * 也可以使用[Vercara](https://vercara.com/website-performance-management)之類的網站負載測試工具。
-* 測試行動或回應式網站時，必須使用另一組工具。 這些設定可藉由節流網路頻寬、模擬較慢的行動連線(如3G或EDGE)來運作。 使用範圍較廣的工具包括：
+* 測試行動或回應式網站時，必須使用另一組工具。 這些設定可藉由節流網路頻寬、模擬較慢的行動連線（如3G或EDGE）來運作。 使用範圍較廣的工具包括：
 
-   * **[網路連結調節器](https://nshipster.com/network-link-conditioner/)** — 它提供簡單易用的UI，在網路棧疊上以相當低的層級運作。 其中包括OS X和iOS的版本；
-   * [**Charles**](https://www.charlesproxy.com/) — 除了數個其他用途之外，還提供網路節流的網頁偵錯Proxy應用程式。 提供適用於Windows、OS X和Linux®的版本。
+  * **[網路連結調節器](https://nshipster.com/network-link-conditioner/)** — 它提供簡單易用的UI，在網路棧疊上以相當低的層級運作。 其中包括OS X和iOS的版本；
+  * [**Charles**](https://www.charlesproxy.com/) — 除了數個其他用途之外，還提供網路節流的網頁偵錯Proxy應用程式。 提供適用於Windows、OS X和Linux®的版本。
 
 #### 最佳化工具 {#optimization-tools}
 
@@ -73,7 +73,7 @@ AEM中的許多效能測量（例如查詢回應時間）都可能受到系統�
 
 觸控式UI中的&#x200B;**開發人員模式**
 
-AEM 6的觸控式UI的其中一項新功能是開發人員模式。 就像作者可以在編輯和預覽模式之間切換一樣，開發人員可以在作者UI中切換到開發人員模式。 這麼做可讓您檢視頁面上每個元件的轉譯時間，以及檢視任何錯誤的棧疊追蹤。 如需開發人員模式的詳細資訊，請參閱此[CQ Gems簡報](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2014/aem-developer-mode.html?lang=zh-Hant)。
+AEM 6的觸控式UI的其中一項新功能是開發人員模式。 就像作者可以在編輯和預覽模式之間切換一樣，開發人員可以在作者UI中切換到開發人員模式。 這麼做可讓您檢視頁面上每個元件的轉譯時間，以及檢視任何錯誤的棧疊追蹤。 如需開發人員模式的詳細資訊，請參閱此[CQ Gems簡報](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2014/aem-developer-mode.html)。
 
 **使用rlog.jar讀取要求記錄檔**
 
@@ -118,7 +118,7 @@ Google的PageSpeed工具提供網站分析，以符合頁面效能最佳實務�
 1. 將其放在/crx--quickstart/install資料夾下。
 
 >[!NOTE]
->請參閱[AEM 6.x | 效能調整秘訣](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=zh-Hant)
+>請參閱[AEM 6.x |效能調整秘訣](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html)
 
 預設值為10,000，但大多數部署都必須將其提高至20,000或50,000。
 
@@ -146,7 +146,7 @@ Google的PageSpeed工具提供網站分析，以符合頁面效能最佳實務�
 * 檢視錯誤記錄檔中是否有錯誤或警告。 如需詳細資訊，請參閱[記錄](/help/sites-deploying/configure-logging.md)。
 * 監視系統硬體資源，例如記憶體和CPU使用率、磁碟I/O或網路I/O。這些資源通常是造成效能瓶頸的原因。
 * 最佳化頁面的架構以及處理方式，以儘量減少URL引數的使用，進而允許儘可能多的快取。
-* 請依照[效能最佳化](/help/sites-deploying/configuring-performance.md)和[效能調整提示](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=zh-Hant)檔案操作。
+* 請依照[效能最佳化](/help/sites-deploying/configuring-performance.md)和[效能調整提示](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html)檔案操作。
 
 * 如果編輯作者執行個體上的特定頁面或元件時發生問題，請使用TouchUI開發人員模式來檢查有問題的頁面。 這樣做會提供頁面上每個內容區域的劃分，及其載入時間。
 * 將網站上的所有JS和CSS縮制。 檢視此[部落格](https://blogs.adobe.com/foxes/enable-js-and-css-minification/)。

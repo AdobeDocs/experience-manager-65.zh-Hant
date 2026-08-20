@@ -11,7 +11,7 @@ feature: Administering
 role: Admin
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
-source-wordcount: '479'
+source-wordcount: '534'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
->已棄用此基礎元件。 Adobe建議改用[核心元件內嵌元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/embed.html?lang=zh-Hant)。
+>已棄用此基礎元件。 Adobe建議改用[核心元件內嵌元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/embed.html)。
 
 >[!CAUTION]
 >
@@ -80,7 +80,7 @@ ht-degree: 0%
    >
    >覆蓋並編輯整個設定檔節點，而不僅僅是需要修改的屬性。 這類資源無法透過SlingResourceMerger解析。
 
-4. 如果您變更其中一個屬性，請按一下[全部儲存]。**&#x200B;**
+4. 如果您變更其中一個屬性，請按一下[全部儲存]。****
 
 >[!NOTE]
 >

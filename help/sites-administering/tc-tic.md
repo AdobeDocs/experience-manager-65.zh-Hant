@@ -8,8 +8,8 @@ solution: Experience Manager, Experience Manager Sites
 role: Admin
 source-git-commit: 943a855f8eb46837e122c3bf2c2deb3f109b2ea9
 workflow-type: tm+mt
-source-wordcount: '1435'
-ht-degree: 4%
+source-wordcount: '1461'
+ht-degree: 5%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 4%
 
 建立雲端設定，將AEM連線至您的翻譯服務提供者。
 
-AEM預設包含[連線至Microsoft® Translator](/help/sites-administering/tc-msconf.md)的功能。 其他擁有AEM聯結器且是Adobe Exchange合作夥伴計畫成員的翻譯技術廠商可在[這裡](https://exchange.adobe.com/apps/browse/ec?page=1&partnerLevel=All&product=AEM&q=experience+manager+translation&sort=RELEVANCE)找到。
+根據預設，AEM包括[連線至Microsoft® Translator](/help/sites-administering/tc-msconf.md)的功能。 其他擁有AEM聯結器且是Adobe Exchange合作夥伴計畫成員的翻譯技術廠商可在[這裡](https://exchange.adobe.com/apps/browse/ec?page=1&partnerLevel=All&product=AEM&q=experience+manager+translation&sort=RELEVANCE)找到。
 
 安裝聯結器套件後，您可以為聯結器建立雲端設定。 通常您需要提供認證來向翻譯服務進行驗證。 如需有關為Microsoft Translator聯結器新增雲端設定的資訊，請參閱[與Microsoft Translator整合](/help/sites-administering/tc-msconf.md)。
 
@@ -147,7 +147,7 @@ Assets屬性可控制如何設定資產。 如需有關翻譯資產的詳細資�
    <td>選取以在翻譯專案中包含資產。 </td>
   </tr>
   <tr>
-   <td>翻譯中繼資料</td>
+   <td>翻譯後設資料</td>
    <td>選取以翻譯資產中繼資料。</td>
   </tr>
   <tr>
@@ -161,7 +161,7 @@ Assets屬性可控制如何設定資產。 如需有關翻譯資產的詳細資�
  </tbody>
 </table>
 
-1. 按一下側邊欄中的「工具>作業>雲端>Cloud Service」 。
+1. 按一下側邊欄中的「工具>作業>雲端>雲端服務」 。
 1. 在「翻譯整合」區域中，是否已建立任何設定會決定要顯示的連結：
 
    * 如果尚未建立任何設定，請按一下「立即設定」。
@@ -174,7 +174,7 @@ Assets屬性可控制如何設定資產。 如需有關翻譯資產的詳細資�
 
 若要設定將來源頁面翻譯成其他語言的功能，請將這些頁面與下列雲端設定建立關聯：
 
-* 用於將AEM連線到您的翻譯提供商的雲端設定。
+* 用於將AEM連線到您的翻譯提供者的雲端設定。
 * 可設定翻譯詳細資訊的翻譯整合架構。
 
 翻譯整合框架雲端設定會識別要用於連線至服務提供者的雲端設定。 將來源頁面與框架雲端設定建立關聯時，該頁面必須與框架雲端設定使用的服務提供者雲端設定建立關聯。
@@ -190,7 +190,7 @@ Assets屬性可控制如何設定資產。 如需有關翻譯資產的詳細資�
 將頁面與您用來翻譯頁面和後代頁面的翻譯提供者建立關聯。
 
 1. 在網站主控台中，選取要設定的頁面，然後按一下檢視屬性。
-1. 按一下「編輯」 ，然後按一下「Cloud Service」標籤。
+1. 按一下編輯，然後按一下雲端服務標籤。
 1. 按一下「新增設定>翻譯整合」 。
 1. 選取要使用的翻譯提供者，然後按一下「完成」。
 
@@ -199,6 +199,6 @@ Assets屬性可控制如何設定資產。 如需有關翻譯資產的詳細資�
 將頁面與定義您要如何執行頁面和後代頁面翻譯的翻譯整合框架建立關聯。
 
 1. 在網站主控台中，選取要設定的頁面，然後按一下檢視屬性。
-1. 按一下「編輯」 ，然後按一下「Cloud Service」標籤。
+1. 按一下編輯，然後按一下雲端服務標籤。
 1. 按一下「新增設定>翻譯整合」 。
 1. 選取要使用的翻譯整合架構，然後按一下「完成」。

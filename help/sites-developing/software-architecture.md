@@ -11,7 +11,7 @@ feature: Developing
 role: Developer
 source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
-source-wordcount: '612'
+source-wordcount: '623'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 ## 針對升級而設計 {#design-for-upgrades}
 
-擴充現成行為時，請務必牢記升級事項。 請一律在/apps目錄中套用自訂，並覆蓋在/libs目錄中對應的節點上方，或使用sling：resourceSuperType來擴充現成行為。 雖然可能需要進行一些修改才能支援新的AEM版本，但若遵循此作法，新版本不應覆寫您的自訂。
+擴充現成行為時，請務必牢記升級事項。 請一律在/apps目錄中套用自訂，並覆蓋在/libs目錄中對應的節點上方，或使用sling:resourceSuperType擴充立即可用的行為。 雖然可能需要進行一些修改才能支援新的AEM版本，但若遵循此作法，新版本不應覆寫您的自訂。
 
 ### 儘可能重複使用範本和元件 {#reuse-template-and-components-when-possible}
 
