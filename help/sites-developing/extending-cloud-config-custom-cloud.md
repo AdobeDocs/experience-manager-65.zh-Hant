@@ -51,7 +51,7 @@ ht-degree: 11%
    * **超級型別**： `cq/cloudserviceconfigs/components/configpage`
    * **群組**： `.hidden`
 
-1. 按兩次「下一步&#x200B;****」並指定：
+1. 按兩次「下一步&#x200B;**&#x200B;**」並指定：
 
    * **允許的父系：** `acs/analytics/templates/googleanalytics`
 

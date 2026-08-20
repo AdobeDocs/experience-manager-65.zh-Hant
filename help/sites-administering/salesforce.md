@@ -138,7 +138,7 @@ AEM與Salesforce之間的雙向及可擴充整合可啟用：
 
    ![chlimage_1-78](assets/chlimage_1-78.png)
 
-1. 按一下[儲存]儲存變更。****
+1. 按一下[儲存]儲存變更。**&#x200B;**
 
    ![chlimage_1-79](assets/chlimage_1-79.png)
 
@@ -151,7 +151,7 @@ AEM與Salesforce之間的雙向及可擴充整合可啟用：
 
    ![chlimage_1-80](assets/chlimage_1-80.png)
 
-1. 視需要變更對應。 預設對應遵循模式&#x200B;**aemUserAttribute=sfLeadAttribute**。 按一下[儲存]儲存變更。****
+1. 視需要變更對應。 預設對應遵循模式&#x200B;**aemUserAttribute=sfLeadAttribute**。 按一下[儲存]儲存變更。**&#x200B;**
 
 ## 設定Salesforce使用者端內容存放區 {#configuring-salesforce-client-context-store}
 
@@ -183,7 +183,7 @@ Salesforce使用者端內容存放區會顯示目前登入使用者的其他資�
    >
    >此元件僅供示範之用。 在真實情境中，會有另一個程式可將使用者與潛在客戶連結或比對。
 
-1. 在頁面上拖曳元件後，請開啟元件以對其進行設定。 選取組態、連絡人型別以及Salesforce潛在客戶或連絡人，然後按一下[確定]。****
+1. 在頁面上拖曳元件後，請開啟元件以對其進行設定。 選取組態、連絡人型別以及Salesforce潛在客戶或連絡人，然後按一下[確定]。**&#x200B;**
 
    ![chlimage_1-82](assets/chlimage_1-82.png)
 

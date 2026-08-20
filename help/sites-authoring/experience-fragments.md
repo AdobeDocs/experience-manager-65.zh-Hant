@@ -105,7 +105,7 @@ WKND專案會根據`Contributors`建構一些體驗片段。 使用的結構也�
 
 >[!NOTE]
 >
->也可以為您的執行個體](#configure-allowed-templates-instance)設定[允許的範本，但此方法&#x200B;**不**&#x200B;建議使用，因為升級時會覆寫這些值。
+>也可以為您的執行個體[&#128279;](#configure-allowed-templates-instance)設定允許的範本，但此方法&#x200B;**不**&#x200B;建議使用，因為升級時會覆寫這些值。
 
 ### 設定資料夾的允許範本 {#configure-allowed-templates-folder}
 
@@ -175,7 +175,7 @@ WKND專案會根據`Contributors`建構一些體驗片段。 使用的結構也�
 
    ![xf-03](assets/xf-03.png)
 
-1. 輸入 **體驗****片段的屬性**。
+1. 輸入 **體驗**&#x200B;**片段的屬性**。
 
    **標題**&#x200B;為必填。 如果&#x200B;**Name**&#x200B;留空，則會從&#x200B;**Title**&#x200B;衍生它。
 

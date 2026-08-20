@@ -183,4 +183,4 @@ Select * from EdcPrincipalEntity where id='<principal_id>';
 1. 使用AEM系統管理員認證移至`https://'[server]:[port]'/lc/useradmin`。
 1. 搜尋使用者並連按兩下使用者名稱以開啟使用者屬性。 複製`Path`屬性。
 1. 前往`https://'[server]:[port]'/lc/crx/de/index.jsp`的AEM CRXDE Lite並導覽或搜尋使用者路徑。
-1. 刪除路徑，然後按一下[儲存全部] ****，從AEM存放庫中永久刪除使用者。
+1. 刪除路徑，然後按一下[儲存全部] **&#x200B;**，從AEM存放庫中永久刪除使用者。

@@ -99,7 +99,7 @@ AEM升級程式需要謹慎處理規劃、分析和執行階段，並為每個�
 
 ![unu_cropped](assets/unu_cropped.png)
 
-您可以在adobe.com](/help/release-notes/release-notes.md)的[AEM區段中找到AEM 6.5中的新功能。 請務必留意貴組織常用的UI或產品功能有任何變更。 瀏覽新功能時，請注意對貴組織有價值的任何功能。 檢視AEM 6.5中的變更後，為作者開發培訓計畫。 這可能需要使用免費提供的資源，例如說明功能影片或透過[Adobe數位學習服務](https://learning.adobe.com/)提供的正式訓練。
+您可以在adobe.com[&#128279;](/help/release-notes/release-notes.md)的AEM區段中找到AEM 6.5中的新功能。 請務必留意貴組織常用的UI或產品功能有任何變更。 瀏覽新功能時，請注意對貴組織有價值的任何功能。 檢視AEM 6.5中的變更後，為作者開發培訓計畫。 這可能需要使用免費提供的資源，例如說明功能影片或透過[Adobe數位學習服務](https://learning.adobe.com/)提供的正式訓練。
 
 ### 建立測試計畫 {#creating-a-test-plan}
 
@@ -178,7 +178,7 @@ Adobe已在[升級程式](/help/sites-deploying/upgrade-procedure.md)中提供�
 
 ### 執行開發和QA {#performing-development-and-qa}
 
-Adobe已提供[升級程式碼和自訂](/help/sites-deploying/upgrading-code-and-customizations.md)以與AEM 6.5相容的程式。 在執行此反複處理程式時，應視需要變更Runbook。 另請參閱AEM 6.5](/help/sites-deploying/backward-compatibility.md)中的[回溯相容性，瞭解自訂如何維持回溯相容性，通常升級後不需要立即開發。
+Adobe已提供[升級程式碼和自訂](/help/sites-deploying/upgrading-code-and-customizations.md)以與AEM 6.5相容的程式。 在執行此反複處理程式時，應視需要變更Runbook。 另請參閱AEM 6.5[&#128279;](/help/sites-deploying/backward-compatibility.md)中的回溯相容性，瞭解自訂如何維持回溯相容性，通常升級後不需要立即開發。
 
 ![patru_cropped](assets/patru_cropped.png)
 
