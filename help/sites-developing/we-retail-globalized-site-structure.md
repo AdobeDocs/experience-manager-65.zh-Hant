@@ -11,7 +11,7 @@ feature: Developing
 role: Developer
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
-source-wordcount: '428'
+source-wordcount: '436'
 ht-degree: 5%
 
 ---
@@ -53,7 +53,7 @@ We.Retail是藉由全球化網站結構所建置，可提供語言母版，且�
 
    ![chlimage_1-93](assets/chlimage_1-93.png)
 
-1. 按一下德文可檢視翻譯專案的詳細資料。 狀態為&#x200B;**草稿**。 若要使用Microsoft®的翻譯服務開始翻譯，請按一下&#x200B;**翻譯工作**&#x200B;標題旁的>形箭號，然後選取&#x200B;**開始**。
+1. 按一下德文可檢視翻譯專案的詳細資料。 狀態為&#x200B;**草稿**。 若要使用®的翻譯服務開始翻譯，請按一下&#x200B;**翻譯工作**&#x200B;標題旁的>形箭號，然後選取&#x200B;**開始**。
 
    ![chlimage_1-94](assets/chlimage_1-94.png)
 
@@ -67,7 +67,7 @@ We.Retail是藉由全球化網站結構所建置，可提供語言母版，且�
 
 >[!NOTE]
 >
->此程式展示與Microsoft®機器翻譯的內建整合。 使用[AEM Translation Integration Framework](/help/sites-administering/translation.md)，您可以整合許多標準翻譯服務，以協調AEM的翻譯。
+>此程式展示與®機器翻譯的內建整合。 使用[AEM Translation Integration Framework](/help/sites-administering/translation.md)，您可以整合許多標準翻譯服務，以協調AEM的翻譯。
 
 ## 詳細資訊 {#further-information}
 

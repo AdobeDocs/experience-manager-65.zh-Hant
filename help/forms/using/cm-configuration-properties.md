@@ -10,7 +10,7 @@ solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
-source-wordcount: '846'
+source-wordcount: '854'
 ht-degree: 3%
 
 ---
@@ -51,11 +51,11 @@ ht-degree: 3%
    <td>轉譯型別</td>
    <td>「建立通訊」應用程式用來呈現信件預覽的轉譯型別。 </td>
    <td>HTML轉譯</td>
-   <td>HTML轉譯/PDF轉譯</td>
+   <td>HTML轉譯/ PDF轉譯</td>
   </tr>
   <tr>
-   <td><p>啟用CCRPDF醒目提示</p> </td>
-   <td><p>在建立通訊應用程式中啟用PDF的醒目提示</p> </td>
+   <td><p>啟用CCR PDF醒目提示</p> </td>
+   <td><p>在建立通訊應用程式中啟用PDF上的醒目提示</p> </td>
    <td><p>true</p> </td>
    <td><p>true / false</p> </td>
   </tr>
@@ -68,7 +68,7 @@ ht-degree: 3%
   <tr>
    <td><p>目標反白顯示色彩</p> </td>
    <td><p>建立通訊應用程式中的目標反白顯示色彩</p> </td>
-   <td><p>90；155；245</p> </td>
+   <td><p>90;155;245</p> </td>
    <td><p>R；G；B格式的任何RGB顏色</p> </td>
   </tr>
   <tr>
@@ -80,7 +80,7 @@ ht-degree: 3%
   <tr>
    <td><p>內容反白顯示色彩</p> </td>
    <td><p>建立通訊應用程式中的內容反白顯示顏色</p> </td>
-   <td><p>210；225；245</p> </td>
+   <td><p>210;225;245</p> </td>
    <td><p>R；G；B格式的任何RGB顏色</p> </td>
   </tr>
   <tr>
@@ -92,7 +92,7 @@ ht-degree: 3%
   <tr>
    <td><p>欄位反白顯示色彩</p> </td>
    <td><p>建立通訊應用程式中的欄位反白顏色</p> </td>
-   <td><p>210；225；245</p> </td>
+   <td><p>210;225;245</p> </td>
    <td><p>R；G；B格式的任何RGB顏色</p> </td>
   </tr>
   <tr>
@@ -127,7 +127,7 @@ ht-degree: 3%
   </tr>
   <tr>
    <td><p>PDF提交型別</p> </td>
-   <td><p>PDF提交型態(從「建立通訊」應用模組提交時產生的PDF型態)</p> </td>
+   <td><p>PDF提交型別（從建立通訊應用程式提交時產生的PDF型別）</p> </td>
    <td><p>非互動式</p> </td>
    <td><p>互動/非互動</p> </td>
   </tr>
@@ -152,18 +152,18 @@ ht-degree: 3%
   <tr>
    <td><p>資料顯示格式</p> </td>
    <td><p>指定資料的區域設定特定顯示格式</p> </td>
-   <td><p>locale=en_US； dateFormat=dd-MM-yyyy； numberDecimalSeparator=.； numberGroupSeparator=，； numberUseGroupSeparator=truelocale=de_DE； dateFormat=dd-MM-yyyy； numberDecimalSeparator=，； numberGroupSeparator=.； numberUseGroupSeparator=truelocale=fr_FR； dateFormat=dd-MM-yyyy； numberDecimalSeparator=，； numberGroupSeparator= ； numberUseGroupSeparator=truelocale=ja_JP； dateFormat=dd-MM-yyy； numberDecimalSeparator=。； numberGroupSeparator=，； numberUseGroupSeparator=true</p> </td>
-   <td><p>—</p> </td>
+   <td><p>locale=en_US； dateFormat=dd-MM-yyyy； numberDecimalSeparator=.； numberGroupSeparator=，； numberUseGroupSeparator=truelocale=de_DE； dateFormat=dd-MM-yyy； numberDecimalSeparator=，； numberUseGroupSeparator=fr_FR； dateFormat=dd-MM-yyy； numberDecimalSeparator=； numberUseGroupSeparator=truelocale=ja_JP； dateFormat=dd-MM-yyyy； numberDecimalSeparator=.； numberGroupSeparator=，； numberUseGroupSeparator=true</p> </td>
+   <td><p>--</p> </td>
   </tr>
   <tr>
    <td><p>資料編輯格式</p> </td>
    <td><p>編輯資料格式。 將資料寫入字串或從字串剖析資料時，會使用此方法</p> </td>
    <td><p>locale=en_US； dateFormat=dd-MM-yyyy； numberDecimalSeparator=.； numberGroupSeparator=，； numberUseGroupSeparator=true</p> </td>
-   <td>—<p> </p> </td>
+   <td>--<p> </p> </td>
   </tr>
   <tr>
-   <td><p>在Publish上管理字母例項</p> </td>
-   <td><p>啟用/停用「管理信件」功能(僅適用於Publish伺服器)</p> </td>
+   <td><p>管理發布時的信件例項</p> </td>
+   <td><p>啟用/停用管理信函功能（僅適用於發佈伺服器）</p> </td>
    <td><p>false</p> </td>
    <td><p>true / false</p> </td>
   </tr>
@@ -198,7 +198,7 @@ ht-degree: 3%
    <td><p>true / false</p> </td>
   </tr>
   <tr>
-   <td><p>啟用Publish稽核</p> </td>
+   <td><p>啟用發佈稽核</p> </td>
    <td><p>啟用/停用資產發佈的稽核功能</p> </td>
    <td><p>false</p> </td>
    <td><p>true / false</p> </td>
@@ -242,7 +242,7 @@ ht-degree: 3%
   <tr>
    <td><p>CM使用者根目錄</p> </td>
    <td><p>包含所有Correspondence Management使用者資產的資料夾URL</p> </td>
-   <td><p>—</p> </td>
+   <td><p>--</p> </td>
    <td><p>有效的資料夾位置</p> </td>
   </tr>
   <tr>

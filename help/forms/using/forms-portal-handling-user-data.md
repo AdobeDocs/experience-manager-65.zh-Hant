@@ -1,5 +1,5 @@
 ---
-title: Forms入口網站 | 處理使用者資料
+title: Forms入口網站 |處理使用者資料
 description: 瞭解如何管理AEM Forms Portal上的使用者資料，例如存取、刪除和資料存放區。
 contentOwner: vishgupt
 topic-tags: grdp
@@ -10,16 +10,16 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
 workflow-type: tm+mt
-source-wordcount: '867'
+source-wordcount: '878'
 ht-degree: 0%
 
 ---
 
-# Forms入口網站 | 處理使用者資料 {#forms-portal-handling-user-data}
+# Forms入口網站 |處理使用者資料 {#forms-portal-handling-user-data}
 
-[!DNL AEM Forms]入口網站提供您可用來在[!DNL AEM Sites]頁面上列出最適化表單、HTML5表單和其他Forms資產的元件。 此外，您可以將其設定為顯示草稿並向登入使用者提交最適化表單和HTML5表單。 如需Forms入口網站的詳細資訊，請參閱[在入口網站上發佈表單簡介](/help/forms/using/introduction-publishing-forms.md)。
+[!DNL AEM Forms]入口網站提供您可用來在[!DNL AEM Sites]頁面上列出最適化表單、HTML5表單和其他Forms資產的元件。 此外，您可以將其設定為顯示草稿，並向登入使用者提交最適化表單和HTML5表單。 如需Forms入口網站的詳細資訊，請參閱[在入口網站上發佈表單簡介](/help/forms/using/introduction-publishing-forms.md)。
 
-當登入的使用者將最適化表單儲存為草稿或提交時，他們會顯示在Forms入口網站上的草稿和提交索引標籤中。 草擬或提交表單的資料會儲存在為AEM部署設定的資料存放區中。 匿名使用者的草稿和提交內容不會顯示在Forms入口網站頁面上，但資料會儲存在已設定的資料存放區中。 請參閱[設定草稿和提交內容的儲存服務](/help/forms/using/configuring-draft-submission-storage.md)。
+當登入的使用者將最適化表單儲存為草稿或提交時，他們會顯示在Forms入口網站上的草稿和提交索引標籤中。 草擬或提交表單的資料會儲存在為AEM部署設定的資料存放區。 匿名使用者的草稿和提交內容不會顯示在Forms入口網站頁面上，但資料會儲存在已設定的資料存放區中。 請參閱[設定草稿和提交內容的儲存服務](/help/forms/using/configuring-draft-submission-storage.md)。
 
 ## 使用者資料和資料存放區 {#user-data-and-data-stores}
 
@@ -45,17 +45,17 @@ Forms入口網站會在下列情況下儲存草稿與已提交表單的資料：
   </tr>
   <tr>
    <td><p>預設</p> </td>
-   <td><p>作者和Publish例項的AEM存放庫</p> </td>
+   <td><p>製作和發佈執行個體的AEM存放庫</p> </td>
    <td><p><code>/content/forms/fp/</code></p> </td>
   </tr>
   <tr>
    <td><p>遠端</p> </td>
-   <td><p>作者和遠端AEM例項的AEM存放庫</p> </td>
+   <td><p>製作和遠端AEM例項的AEM存放庫</p> </td>
    <td><p><code>/content/forms/fp/</code></p> </td>
   </tr>
   <tr>
    <td><p>資料庫</p> </td>
-   <td><p>製作執行個體和資料庫表格的AEM儲存庫</p> </td>
+   <td><p>製作執行個體和資料庫表格的AEM存放庫</p> </td>
    <td>資料庫資料表<code>data</code>、<code>metadata</code>和 <code>additionalmetadata</code></td>
   </tr>
  </tbody>
@@ -67,11 +67,11 @@ Forms入口網站會在下列情況下儲存草稿與已提交表單的資料：
 
 ### AEM執行個體 {#aem-instances}
 
-AEM執行個體（作者、發佈或遠端）中針對登入和匿名使用者的所有草稿和已提交表單資料都會儲存在適用的AEM存放庫的`/content/forms/fp/`節點中。 每次登入的使用者儲存草稿或提交表單時，就會產生每個附件的`draft ID`或`submission ID`、`user data ID`以及隨機`ID` （如果適用）。 它與個別草稿或提交內容相關聯。
+已登入及匿名使用者在AEM執行個體（作者、發佈或遠端）中的所有草稿及提交的表單資料，都會儲存在適用的AEM存放庫的`/content/forms/fp/`節點中。 每次登入的使用者儲存草稿或提交表單時，就會產生每個附件的`draft ID`或`submission ID`、`user data ID`以及隨機`ID` （如果適用）。 它與個別草稿或提交內容相關聯。
 
 #### 存取使用者資料 {#access-user-data}
 
-當登入的使用者儲存草稿或提交表單時，會使用其使用者ID建立子節點。 例如，使用者ID為`srose`的Sarah Rose的草稿和提交資料儲存在AEM存放庫的`/content/forms/fp/srose/`節點中。 在使用者ID節點中，資料會以階層結構組織。
+當登入的使用者儲存草稿或提交表單時，會使用其使用者ID建立子節點。 例如，使用者ID為`srose`的Sarah Rose之草稿和提交資料儲存在AEM存放庫的`/content/forms/fp/srose/`節點中。 在使用者ID節點中，資料會以階層結構組織。
 
 下表說明`srose`所有草稿的資料如何儲存在AEM存放庫中。
 
@@ -93,9 +93,9 @@ AEM執行個體（作者、發佈或遠端）中針對登入和匿名使用者�
 
 #### 刪除使用者資料 {#delete-user-data}
 
-若要從AEM系統的已登入使用者的草稿和提交中完全刪除使用者資料，您必須從製作節點中刪除特定使用者的`user ID`節點。 從所有適用的AEM執行個體手動刪除資料。
+若要從AEM系統的已登入使用者的草稿和提交中完全刪除使用者資料，您必須從製作節點中刪除特定使用者的`user ID`節點。 手動刪除所有適用AEM例項的資料。
 
-所有匿名使用者的草稿與提交資料都儲存在`/content/forms/fp/anonymous`下的通用`drafts`與`submit`節點中。 除非某些可識別的資訊是已知的，否則沒有方法可以尋找特定匿名使用者的資料。 在這種情況下，您可以搜尋可識別AEM存放庫中匿名使用者的資訊，並從所有適用的AEM執行個體中手動刪除包含該資訊的節點，以從AEM系統中移除資料。 但是，若要刪除所有匿名使用者的資料，您可以刪除`anonymous`節點以移除所有匿名使用者的草稿和提交資料。
+所有匿名使用者的草稿與提交資料都儲存在`/content/forms/fp/anonymous`下的通用`drafts`與`submit`節點中。 除非某些可識別的資訊是已知的，否則沒有方法可以尋找特定匿名使用者的資料。 在此情況下，您可以在AEM存放庫中搜尋可識別匿名使用者的資訊，並手動從所有適用的AEM執行個體中刪除包含該資訊的節點，以從AEM系統中移除資料。 但是，若要刪除所有匿名使用者的資料，您可以刪除`anonymous`節點以移除所有匿名使用者的草稿和提交資料。
 
 ### 資料庫 {#database}
 

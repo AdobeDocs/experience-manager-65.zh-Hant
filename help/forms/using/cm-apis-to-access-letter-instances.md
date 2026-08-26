@@ -10,8 +10,8 @@ solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
-source-wordcount: '591'
-ht-degree: 1%
+source-wordcount: '604'
+ht-degree: 0%
 
 ---
 
@@ -137,7 +137,7 @@ Boolean result = letterInstanceService.letterInstanceExists(letterInstanceName )
 
 信件例項可以是已提交或草稿型別。 開啟兩種信件例項型別會顯示不同的行為：
 
-* 如果存在「已提交」信件例項，則會開啟代表該信件例項的PDF。 儲存在伺服器上的提交信件例項也包含dataXML和已處理的XDP，這可用於完成並進一步自訂使用案例，例如建立PDF/A。
+* 如果存在「已提交信件」例項，則會開啟代表該信件例項的PDF。 儲存在伺服器上的提交信件例項也包含dataXML和已處理的XDP，這可用於完成並進一步自訂使用案例，例如建立PDF/A。
 * 如果存在「草稿」信件例項，則建立通訊UI會重新載入到與建立草稿時完全相同的先前狀態
 
 ### 開啟草稿字母例項  {#opening-draft-letter-instance-nbsp}

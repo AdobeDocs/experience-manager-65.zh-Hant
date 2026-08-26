@@ -1,6 +1,6 @@
 ---
 title: 在待辦事項清單中顯示其他資料
-description: 如何自訂LiveCycleAEM Forms工作區待辦事項清單的顯示方式，以顯示預設值以外的更多資訊。
+description: 如何自訂LiveCycle AEM Forms工作區待辦事項清單的顯示方式，以顯示預設值以外的更多資訊。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
@@ -11,7 +11,7 @@ feature: Adaptive Forms
 role: User, Developer
 source-git-commit: e821be5233fd5f6688507096790d219d25903892
 workflow-type: tm+mt
-source-wordcount: '282'
+source-wordcount: '288'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 依預設，AEM Forms工作區的待辦事項清單會顯示任務顯示名稱和說明。 不過，您可以新增其他資訊，例如建立日期、截止日期。 您也可以新增圖示並變更顯示樣式。
 
-![檢視HTMLWorkspace待辦事項索引標籤，其中顯示預設設定](assets/html-todo-list.png)
+![檢視HTML Workspace待辦事項索引標籤，其中顯示預設設定](assets/html-todo-list.png)
 
 本文詳細說明為ToDo清單中的每個任務新增資訊的步驟。
 

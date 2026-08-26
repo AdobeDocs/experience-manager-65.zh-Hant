@@ -11,7 +11,7 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
 workflow-type: tm+mt
-source-wordcount: '237'
+source-wordcount: '242'
 ht-degree: 0%
 
 ---
@@ -22,8 +22,8 @@ ht-degree: 0%
 
 * 在通訊管理中
 
-   * 設定AEM Forms工作流程
-   * 使用Forms入口網站從遠端儲存草稿/提交內容時
+  * 設定AEM Forms工作流程
+  * 使用Forms入口網站從遠端儲存草稿/提交內容時
 
 * 在調適型表單中，適用於從發佈執行個體提交調適型表單的情況
 
@@ -44,7 +44,7 @@ ht-degree: 0%
 
 1. 在個別欄位中新增下列資訊：
 
-   **[!UICONTROL 處理伺服器URL]**：處理伺服器是必須觸發Forms或AEM工作流程的伺服器。 這可以與AEM編寫執行個體的URL或其他伺服器URL (即https://localhost:port/)相同。
+   **[!UICONTROL 處理伺服器URL]**：處理伺服器是必須觸發Forms或AEM工作流程的伺服器。 這可以與AEM編寫執行個體的URL或其他伺服器URL （即https://localhost:port/）相同。
 
    **[!UICONTROL 正在處理伺服器使用者名稱]**：工作流程使用者的使用者名稱[，根據正在使用的伺服器URL]
 

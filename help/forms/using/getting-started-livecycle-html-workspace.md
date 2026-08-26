@@ -1,6 +1,6 @@
 ---
 title: AEM Forms工作區快速入門
-description: 如何開始使用LiveCycleAEM Forms工作區來管理您的企業自動化流程。
+description: 如何開始使用LiveCycle AEM Forms工作區來管理您的企業自動化流程。
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -11,7 +11,7 @@ feature: Adaptive Forms
 role: Admin, User, Developer
 source-git-commit: e821be5233fd5f6688507096790d219d25903892
 workflow-type: tm+mt
-source-wordcount: '993'
+source-wordcount: '1010'
 ht-degree: 0%
 
 ---
@@ -77,5 +77,5 @@ AEM Forms workspace是網頁式HTML應用程式，與熒幕閱讀程式相容。
 * **日期格式：**&#x200B;指定AEM Forms工作區使用的日期顯示格式。
 * **時間格式**：指定用於AEM Forms工作區的時間顯示格式。
 * **透過電子郵件通知任務事件：**&#x200B;指定您是否收到任務事件的電子郵件通知，包括任務指派、提醒，以及您待辦事項清單和您所屬群組待辦事項清單中任務的截止日期。
-* **在電子郵件中附加Forms：**&#x200B;指定是否在電子郵件通知訊息中附加表單復本。 附件僅支援PDF和XDP表單。
+* **在電子郵件中附加Forms：**&#x200B;指定是否在電子郵件通知訊息中附加表單復本。 只有PDF和XDP表單支援附件。
 * **定期儲存草稿：**&#x200B;指定您的表單草稿是否定期自動儲存。 若要定期儲存草稿，請啟用此選項，並將自動儲存持續時間設定為1到30分鐘。 當啟用自動儲存且使用者正在處理草稿時，草稿會在指定的分鐘數後定期儲存。 僅當草稿自上次儲存或自動儲存後發生變更時，才會自動儲存草稿。 儲存草稿時，熒幕上會出現警告訊息。

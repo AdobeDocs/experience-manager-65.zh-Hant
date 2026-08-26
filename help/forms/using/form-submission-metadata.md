@@ -11,14 +11,14 @@ solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '740'
-ht-degree: 7%
+source-wordcount: '757'
+ht-degree: 8%
 
 ---
 
 # 將使用者資料中的資訊新增至表單提交中繼資料{#adding-information-from-user-data-to-form-submission-metadata}
 
-<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hant)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。本文會介紹使用基礎元件編寫最適化表單的舊方法。</span>
+<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hant)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。 這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。 本文會介紹使用基礎元件編寫最適化表單的舊方法。</span>
 
 您可以使用在表單元素中輸入的值，計算草稿或表單提交的中繼資料欄位。 中繼資料可讓您根據使用者資料篩選內容。 例如，使用者在您的表單名稱欄位中輸入John Doe。 您可以使用此資訊來計算中繼資料，這些中繼資料可以將此提交分類在首字母縮寫JD下。
 
@@ -55,7 +55,7 @@ ht-degree: 7%
 
 以上例為例，中繼資料會儲存在CRX存放庫中。 中繼資料看起來像這樣：
 
-![中繼資料](assets/metadata_entry_new.png)
+![後設資料](assets/metadata_entry_new.png)
 
 如果您在中繼資料中新增核取方塊元素，則選取的值會儲存為逗號分隔字串。 例如，您在表單中新增核取方塊元件，並將其名稱指定為`checkbox1`。 在核取方塊元件屬性中，您新增值0、1和2的「駕駛執照」、「社會安全號碼」和「護照」專案。
 

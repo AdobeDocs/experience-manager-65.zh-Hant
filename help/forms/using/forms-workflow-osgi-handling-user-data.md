@@ -1,6 +1,6 @@
 ---
-title: OSGi上以Forms為中心的工作流程 | 處理使用者資料
-description: OSGi上以Forms為中心的工作流程 | 處理使用者資料
+title: OSGi上以Forms為中心的工作流程 |處理使用者資料
+description: OSGi上以Forms為中心的工作流程 |處理使用者資料
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 role: Admin,User
@@ -9,14 +9,14 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,AEM Forms on OSGi
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '986'
-ht-degree: 1%
+source-wordcount: '1032'
+ht-degree: 0%
 
 ---
 
-# OSGi上以Forms為中心的工作流程 | 處理使用者資料 {#forms-centric-workflows-on-osgi-handling-user-data}
+# OSGi上以Forms為中心的工作流程 |處理使用者資料 {#forms-centric-workflows-on-osgi-handling-user-data}
 
-以Forms為中心的AEM工作流程可讓您自動執行以Forms為中心的真實商業流程。 工作流程由一系列步驟組成，這些步驟會以關聯工作流程模型中指定的順序執行。 每個步驟都會執行特定動作，例如將任務指派給使用者或傳送電子郵件訊息。 工作流程可與存放庫中的資產、使用者帳戶和服務互動。 因此，工作流程可以協調涉及Experience Manager任何方面的複雜活動。
+以Forms為中心的AEM工作流程可讓您自動執行以Forms為中心的真實商業流程。 工作流程由一系列步驟組成，這些步驟會以關聯工作流程模型中指定的順序執行。 每個步驟都會執行特定動作，例如將任務指派給使用者或傳送電子郵件訊息。 工作流程可與存放庫中的資產、使用者帳戶和服務互動。 因此，工作流程可以協調涉及Experience Manager任何層面的複雜活動。
 
 可透過下列任何方法觸發或啟動以表單為中心的工作流程：
 
@@ -51,7 +51,7 @@ ht-degree: 1%
    <td>/etc/workflow/instances/[server_id]/[date]/[workflow-instance]/</td>
   </tr>
   <tr>
-   <td><strong>總額</strong></td>
+   <td><strong>承載</strong></td>
    <td>/var/fd/dashboard/payload/[server_id]/[date]/<br /> [payload-id]/</td>
    <td>/etc/fd/dashboard/payload/[server_id]/[date]/<br /> [payload-id]/</td>
   </tr>
@@ -61,7 +61,7 @@ ht-degree: 1%
    <td>/etc/fd/dashboard/instances/[server_id]/<br /> [日期]/[workflow-instance]/draft/[workitem]/</td>
   </tr>
   <tr>
-   <td><strong>記錄</strong></td>
+   <td><strong>歷史記錄</strong></td>
    <td>/var/fd/dashboard/instances/[server_id]/<br /> [date]/[workflow_instance]/history/</td>
    <td>/etc/fd/dashboard/instances/[server_id]/<br /> [date]/[workflow_instance]/history/</td>
   </tr>
@@ -81,7 +81,7 @@ ht-degree: 1%
 
 若要識別及存取為工作流程執行個體儲存的使用者資料，請執行下列步驟：
 
-1. 在AEM作者執行個體上，前往`https://'[server]:[port]'/crx/de`並瀏覽至&#x200B;**[!UICONTROL 工具>查詢]**。
+1. 在AEM作者執行個體上，前往`https://'[server]:[port]'/crx/de`並導覽至&#x200B;**[!UICONTROL 工具>查詢]**。
 
    從&#x200B;**[!UICONTROL 型別]**&#x200B;下拉式清單中選取&#x200B;**[!UICONTROL SQL2]**。
 
@@ -125,7 +125,7 @@ ht-degree: 1%
 
 ### 刪除使用者資料 {#delete-user-data}
 
-您必須是AEM管理員，才能執行下列步驟，從工作流程例項刪除使用者資料：
+您必須是AEM管理員，才能透過下列步驟從工作流程例項刪除使用者資料：
 
 1. 請依照[存取使用者資料](/help/forms/using/forms-workflow-osgi-handling-user-data.md#access)中的指示操作，並注意下列事項：
 
@@ -152,10 +152,10 @@ ht-degree: 1%
    >刪除工作流程例項節點將會移除所有工作流程參與者的工作流程例項。
 
 1. 針對已識別的使用者之所有工作流程例項，重複步驟2至6。
-1. 識別並刪除來自工作流程參與者AEM [!DNL Forms]應用程式寄件匣的離線草稿與提交資料，以避擴音交至伺服器。
+1. 識別並刪除AEM [!DNL Forms]應用程式寄件匣中工作流程參與者的離線草稿與提交資料，以避擴音交至伺服器。
 
 您也可以使用API來存取及移除節點和屬性。 如需詳細資訊，請參閱下列檔案。
 
 * [如何以程式設計方式存取AEM JCR](/help/sites-developing/access-jcr.md)
-* [正在移除節點和屬性](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/2.0/10_Writing.html#10.9%20Removing%20Nodes%20and%20Properties)
+* [移除節點和屬性](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/2.0/10_Writing.html#10.9%20Removing%20Nodes%20and%20Properties)
 * [API參考](https://helpx.adobe.com/tw/experience-manager/6-3/sites-developing/reference-materials/javadoc/overview-summary.html)

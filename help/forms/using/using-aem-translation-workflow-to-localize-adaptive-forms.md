@@ -10,14 +10,14 @@ solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '802'
-ht-degree: 20%
+source-wordcount: '814'
+ht-degree: 21%
 
 ---
 
 # 使用AEM翻譯工作流程將最適化表單和記錄檔案本地化 {#using-aem-translation-workflow-to-localize-adaptive-forms-and-document-of-record}
 
-<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hant)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。本文會介紹使用基礎元件編寫最適化表單的舊方法。</span>
+<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hant)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。 這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。 本文會介紹使用基礎元件編寫最適化表單的舊方法。</span>
 
 本地化的表單可協助您跨地理區域提供更廣泛的受眾。 Adobe Experience Manager翻譯工作流程可協助您將最適化表單及其記錄檔案翻譯為當地語言。 您可以使用&#x200B;**機器翻譯**&#x200B;或&#x200B;**人力翻譯人員**&#x200B;將最適化表單當地語系化。
 
@@ -46,16 +46,16 @@ ht-degree: 20%
 
    如需記錄檔案設定和組態的詳細資訊，請參閱：
 
-[記錄範本文件配置](/help/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md#p-document-of-record-template-configuration-p)
+   [記錄範本文件配置](/help/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md#p-document-of-record-template-configuration-p)
 
-[記錄檔案設定](/help/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md#p-document-of-record-settings-p)
+   [記錄檔案設定](/help/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md#p-document-of-record-settings-p)
 
 1. [自訂記錄檔案的品牌資訊](/help/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md)，並確定瀏覽器地區設定為您使用機器語言將最適化表單當地語系化的語言。 瀏覽器地區設定有助於記錄檔案中的品牌資訊本地化。
-1. 若要檢視本地化記錄檔案，請選取「產生預覽」。 記錄檔案PDF會產生，並在瀏覽器的新索引標籤中開啟。
+1. 若要檢視本地化記錄檔案，請選取「產生預覽」。 記錄檔案PDF會在您的瀏覽器中以新索引標籤產生和開啟。
 
 ## 使用人工翻譯將最適化表單及其記錄檔案當地語系化 {#localizing-an-adaptive-form-and-its-document-of-record-using-human-translation}
 
-在人工翻譯中，內容會傳送給翻譯提供者，並由專業翻譯人員進行翻譯。 完成後，翻譯後的內容將傳回並匯入到 AEM 中。如果您的翻譯提供商與 AEM 相整合，內容會在 AEM 和翻譯提供商之間自動傳送。
+在人工翻譯中，內容會傳送給翻譯提供者，並由專業翻譯人員進行翻譯。 完成後，翻譯後的內容將傳回並匯入到 AEM 中。 如果您的翻譯提供商與 AEM 相整合，內容會在 AEM 和翻譯提供商之間自動傳送。
 
 翻譯時，會與專業譯者共用包含XLIFF格式檔案的字典。 字典包括每個地區設定的個別XLIFF檔案。 每個XLIFF檔案都包含文字，這些文字會針對對應的本地化文字顯示給一般使用者及預留位置。
 
