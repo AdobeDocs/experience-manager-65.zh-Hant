@@ -11,7 +11,7 @@ feature: Forms Portal
 role: Admin, User, Developer
 source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
 workflow-type: tm+mt
-source-wordcount: '935'
+source-wordcount: '942'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ Forms Portal可減少管理開銷和生產延遲。 它為網頁開發人員配�
 
 導覽至已發佈的Forms Portal頁面。 如需建立Forms入口網站頁面的詳細資訊，請參閱[建立Forms入口網站頁面](../../forms/using/creating-form-portal-page.md)。
 
-Forms Portal的搜尋與清單元件會顯示AEM伺服器的Publish執行個體上可用的表單。 此清單包含在編寫Forms入口網站頁面時，篩選條件中定義的所有表單或表單。 Forms入口網站頁面看起來類似於，如下圖所示：
+Forms Portal的搜尋與清單元件會顯示AEM伺服器發佈執行個體上可用的表單。 此清單包含在編寫Forms入口網站頁面時，篩選條件中定義的所有表單或表單。 Forms入口網站頁面看起來類似於，如下圖所示：
 
 ![範例表單入口網站頁面](assets/forms-portal-page.png)
 
@@ -42,7 +42,7 @@ Forms Portal頁面範例
 
 * 在面板、卡片或格線檢視中列出可立即使用的表單。 它也支援來自Forms Manager中特定資料夾的自訂範本清單表單。
 * 指定表單的呈現方式 — HTML5、PDF或兩者。
-* 指定PDF和XFA表單的呈現方式 — HTML5、PDF或兩者。 非XFA表單做為HTML5。
+* 指定PDF和XFA表單的呈現方式 — HTML5、PDF或兩者。 HTML5的非XFA表單。
 * 啟用根據條件搜尋表單，例如表單屬性、中繼資料和標籤。
 * 將表單資料提交至servlet。
 * 使用自訂樣式表(CSS)來自訂入口網站的外觀。
@@ -50,7 +50,7 @@ Forms Portal頁面範例
 
 您可以使用下列選項，在Forms Portal頁面中搜尋表單：
 
-* 全文檢索搜尋
+* 全文搜尋
 * 進階搜尋
 
 全文檢索搜尋可讓您根據指定的關鍵字尋找及列出表單。

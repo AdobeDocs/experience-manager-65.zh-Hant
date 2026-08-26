@@ -1,5 +1,5 @@
 ---
-title: 通訊管理 | 處理使用者資料
+title: 通訊管理 |處理使用者資料
 description: 瞭解在Adobe Experience Manager Forms環境中通訊管理和處理使用者資料。
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -9,12 +9,12 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Form Data Model
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '555'
 ht-degree: 0%
 
 ---
 
-# 通訊管理 | 處理使用者資料 {#correspondence-management-handling-user-data}
+# 通訊管理 |處理使用者資料 {#correspondence-management-handling-user-data}
 
 AEM Forms Correspondence Management可讓您建立、管理及簡化安全且個人化的客戶信函。 它提供直覺式使用者介面，供商業使用者使用預先核准的內容區塊和媒體元素來建立對應。 如需建立通訊的詳細資訊，請參閱[建立通訊](/help/forms/using/create-correspondence.md)。
 
@@ -50,7 +50,7 @@ AEM Forms Correspondence Management可讓您建立、管理及簡化安全且個
  </tbody>
 </table>
 
-在上述指定的AEM存放庫位置：
+在上述指定的AEM存放庫位置中：
 
 * `[yyyy]/[mm]/[dd]`是以信件執行個體的建立日期為基礎的節點結構
 * `[node-id]`是指派給包含字母的資料夾的ID
@@ -80,6 +80,6 @@ AEM Forms Correspondence Management可讓您建立、管理及簡化安全且個
 若要尋找包含特定使用者資料的信件例項，您可以：
 
 * 如果信函例項名稱或儲存草稿或提交信函的使用者已知，則使用信函管理API
-* 使用電子郵件ID或名稱等個人識別資訊進行AEM存放庫搜尋，以尋找儲存資訊的節點
+* 使用電子郵件ID或名稱等個人識別資訊搜尋AEM存放庫，以尋找儲存資訊的節點
 
-若要從AEM系統完全刪除草稿與已提交對映中的使用者資料，您必須從所有適用的AEM執行處理中手動刪除信函執行處理節點。
+若要從AEM系統完全刪除草稿和已提交通訊中的使用者資料，您必須從所有適用的AEM執行個體中手動刪除信件執行個體節點。

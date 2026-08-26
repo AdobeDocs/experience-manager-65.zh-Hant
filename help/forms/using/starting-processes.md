@@ -1,6 +1,6 @@
 ---
 title: 啟動流程
-description: 如何使用LiveCycleAEM Forms工作區 — 選取程式、新增附註和附件、儲存草稿副本，以及新增至我的最愛。
+description: 如何使用LiveCycle AEM Forms工作區 — 選取程式、新增附註和附件、儲存草稿副本，以及新增至我的最愛。
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -11,7 +11,7 @@ feature: Adaptive Forms
 role: Admin, User, Developer
 source-git-commit: e821be5233fd5f6688507096790d219d25903892
 workflow-type: tm+mt
-source-wordcount: '1334'
+source-wordcount: '1356'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,7 @@ AEM Forms工作區會依管理員或流程設計人員設定的類別來組織�
 
 1. 按一下任務以選取程式。 與流程關聯的表單會在「表單」標籤上開啟。
 
-   流程中的每個表單都有唯一的URL。 您可以使用唯一URL，透過特定程式和表單直接啟動HTMLWorkspace。 URL的格式為https://&lt;server>：&lt;port>/lc/libs/ws/index.html#/startprocess/&lt;ApplicationName>%2F&lt;ProcessName>。 &lt;ApplicationName>%2F&lt;ProcessName>字串一律為URL編碼。 範例URL為http://localhost:8080/lc/libs/ws/index.html#/startprocess/MyApplication%2FNewProcess。 範例中的ApplicationName%2FProcessName字串是URL編碼的。
+   流程中的每個表單都有唯一的URL。 您可以使用唯一URL，透過特定程式與表單直接啟動HTML Workspace。 URL的格式為https://&lt;server>：&lt;port>/lc/libs/ws/index.html#/startprocess/&lt;ApplicationName>%2F&lt;ProcessName>。 &lt;ApplicationName>%2F&lt;ProcessName>字串一律為URL編碼。 範例URL為http://localhost:8080/lc/libs/ws/index.html#/startprocess/MyApplication%2FNewProcess。 範例中的ApplicationName%2FProcessName字串是URL編碼的。
 
 1. 根據表單提供的指示填寫表單。 如有必要，請按一下&#x200B;**最大化**&#x200B;以增加表單的可見區域。
 1. 如果「附件」標籤可用，請視需要新增附件。
@@ -58,7 +58,7 @@ AEM Forms工作區會依管理員或流程設計人員設定的類別來組織�
 
    「流程管理」會啟動流程，並將表單傳送至需要完成流程中下一個任務的適當人員的待辦事項清單。
 
-   如果您必須在提交表單之前關閉表單，並且不會遺失您輸入的資料，請儲存草稿並在程式允許時稍後完成。 如果表單和程式允許，您也可以按一下&#x200B;**離線**，稍後再從Adobe®Reader®或Adobe® Acrobat® Professional或Acrobat Standard提交。
+   如果您必須在提交表單之前關閉表單，並且不會遺失您輸入的資料，請儲存草稿並在程式允許時稍後完成。 如果表單和程式允許，您也可以按一下「**離線**」，稍後再從®Reader®或Adobe®Acrobat® Professional或Acrobat Standard提交。
 
    >[!NOTE]
    >
@@ -81,7 +81,7 @@ AEM Forms工作區會依管理員或流程設計人員設定的類別來組織�
 1. 開啟工作，如果程式允許，請按一下&#x200B;**附註**&#x200B;標籤。
 1. 在&#x200B;**標題**&#x200B;方塊中輸入附註的標題，並在&#x200B;**附註**&#x200B;方塊中輸入附註文字。
 1. 為參與程式的其他使用者選取附註的&#x200B;**許可權**&#x200B;層級。
-1. 按一下&#x200B;**確定**。 包含附註的文字檔案會附加至表單。 您可以按一下註記並直接修改文字來更新註記。 您可以按一下附註旁的&#x200B;**刪除**&#x200B;按鈕![垃圾桶影像](assets/icondelete.png)來刪除附註。
+1. 按一下&#x200B;**「確定」**。 包含附註的文字檔案會附加至表單。 您可以按一下註記並直接修改文字來更新註記。 您可以按一下附註旁的&#x200B;**刪除**&#x200B;按鈕![垃圾桶影像](assets/icondelete.png)來刪除附註。
 
 ### 新增附件 {#add-an-attachment}
 
@@ -96,7 +96,7 @@ AEM Forms工作區會依管理員或流程設計人員設定的類別來組織�
 1. 按一下「**附件**」標籤，然後選取「**附件**」。
 1. 按一下&#x200B;**瀏覽**&#x200B;以選取要附加的檔案。
 1. 為參與程式的其他使用者選取附件的&#x200B;**許可權**&#x200B;層級。 如果您選取&#x200B;**讀取**，其他使用者便可以將檔案儲存在本機。 如果您選取其中一個編輯許可權，其他使用者也可以上傳新檔案來取代您的附件。
-1. 按一下&#x200B;**確定**。 檔案會附加至表單。 您可以按一下附件旁邊的&#x200B;**刪除**&#x200B;按鈕![垃圾桶影像](assets/icondelete.png)來刪除檔案。
+1. 按一下&#x200B;**「確定」**。 檔案會附加至表單。 您可以按一下附件旁邊的&#x200B;**刪除**&#x200B;按鈕![垃圾桶影像](assets/icondelete.png)來刪除檔案。
 
 ## 儲存表單的草稿復本 {#saving-draft-copies-of-forms}
 

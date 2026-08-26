@@ -8,18 +8,18 @@ exl-id: 1b402aef-a319-4d32-8ada-cadc86f5c872
 solution: Experience Manager, Experience Manager Forms
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '1844'
-ht-degree: 7%
+source-wordcount: '1901'
+ht-degree: 8%
 
 ---
 
 # 使用JSON結構描述建立調適型表單 {#creating-adaptive-forms-using-json-schema}
 
-<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hant)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。本文會介紹使用基礎元件編寫最適化表單的舊方法。</span>
+<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。 這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。 本文會介紹使用基礎元件編寫最適化表單的舊方法。</span>
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/create-an-adaptive-form-on-forms-cs/adaptive-form-json-schema-form-model.html?lang=zh-Hant) |
+| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/create-an-adaptive-form-on-forms-cs/adaptive-form-json-schema-form-model.html) |
 | AEM 6.5 | 本文章 |
 
 
@@ -343,7 +343,7 @@ JSON元素與最適化表單元件的對應如下：
 
 ## 在JSON結構描述定義中預先設定欄位 {#pre-configuring-fields-in-json-schema-definition}
 
-您可以使用&#x200B;**aem：afProperties**&#x200B;屬性來預先設定JSON結構描述欄位，以對應至自訂最適化表單元件。 範例如下：
+您可以使用&#x200B;**aem:afProperties**&#x200B;屬性來預先設定JSON結構描述欄位，以對應至自訂最適化表單元件。 範例如下：
 
 ```json
 {
@@ -365,9 +365,9 @@ JSON元素與最適化表單元件的對應如下：
 
 ## 設定表單物件的指令碼或運算式  {#configure-scripts-or-expressions-for-form-objects}
 
-JavaScript是適用性表單的運算式語言。 所有運算式都是有效的JavaScript運算式，並使用適用性表單指令碼模型API。 您可以預先設定表單物件，以評估表單事件上的運算式[&#128279;](adaptive-form-expressions.md)。
+JavaScript是適用性表單的運算式語言。 所有運算式都是有效的JavaScript運算式，並使用適用性表單指令碼模型API。 您可以預先設定表單物件，以評估表單事件上的運算式](adaptive-form-expressions.md)。[
 
-使用aem：afproperties屬性預先設定最適化表單元件的最適化表單運算式或指令碼。 例如，觸發初始化事件時，以下程式碼會設定電話欄位的值，並將值列印至記錄檔：
+使用aem:afproperties屬性預先設定最適化表單元件的最適化表單運算式或指令碼。 例如，觸發初始化事件時，以下程式碼會設定電話欄位的值，並將值列印至記錄檔：
 
 ```json
 "telephone": {
@@ -735,7 +735,7 @@ JavaScript是適用性表單的運算式語言。 所有運算式都是有效的
 
 若要讓所有JSON結構描述型最適化Forms在表單提交時產生結構描述相容的資料，請遵循下列步驟：
 
-1. 前往`https://server:host/system/console/configMgr`的Experience ManagerWeb主控台。
+1. 前往`https://server:host/system/console/configMgr`的Experience Manager Web主控台。
 1. 找到&#x200B;**[!UICONTROL 最適化表單與互動式通訊Web通道組態]**。
 1. 選取以在編輯模式中開啟設定。
 1. 選取&#x200B;**[!UICONTROL 產生符合結構描述的資料]**&#x200B;核取方塊。

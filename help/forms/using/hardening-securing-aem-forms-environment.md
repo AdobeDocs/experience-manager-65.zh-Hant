@@ -8,7 +8,7 @@ solution: Experience Manager, Experience Manager Forms
 feature: Document Security,Adaptive Forms
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '1434'
+source-wordcount: '1470'
 ht-degree: 0%
 
 ---
@@ -61,7 +61,7 @@ AEM Forms高度客製化，可以在許多不同的環境中運作。 部分建�
     </ul> </td> 
   </tr>
   <tr>
-   <td>HTML5表單</td> 
+   <td>HTML5 forms</td> 
    <td>
     <ul> 
      <li>/content/forms/formsets/profiles/</li> 
@@ -75,7 +75,7 @@ AEM Forms高度客製化，可以在許多不同的環境中運作。 部分建�
     </ul> </td> 
   </tr>
   <tr>
-   <td>Forms入口網站 </td> 
+   <td>Forms Portal </td> 
    <td>
     <ul> 
      <li>/content/forms/portal/</li> 
@@ -105,7 +105,7 @@ AEM Forms高度客製化，可以在許多不同的環境中運作。 部分建�
    <td>URI</td> 
   </tr>
   <tr>
-   <td>Publish陣列（發佈節點）</td> 
+   <td>發佈陣列（發佈節點）</td> 
    <td>/bin/receive</td> 
   </tr>
   <tr>
@@ -113,7 +113,7 @@ AEM Forms高度客製化，可以在許多不同的環境中運作。 部分建�
    <td>/content/forms/fp/*</td> 
   </tr>
   <tr>
-   <td>Forms Workflow附加伺服器(JEE伺服器上的AEM Forms)</td> 
+   <td>Forms Workflow附加伺服器（JEE伺服器上的AEM Forms）</td> 
    <td>/soap/sdk</td> 
   </tr>
  </tbody>
@@ -123,9 +123,9 @@ AEM Forms高度客製化，可以在許多不同的環境中運作。 部分建�
 
 依預設，發佈節點上可用的資產可供所有人存取。 已針對所有資產啟用唯讀存取權。 必須啟用匿名存取。 如果您計畫限制表單檢視並將存取權提交給已驗證的使用者，請使用通用群組來允許僅已驗證的使用者對發佈節點上可用的資產具有唯讀存取權。 下列位置/目錄包含需要強化的forms資產（已驗證身分的使用者僅能讀取存取權）：
 
-* /content/&amp;amp；ast；
-* /etc.clientlibs/fd/&amp;amp；ast；
-* /libs/fd/&amp;amp；ast；
+* /content/&amp;ast；
+* /etc.clientlibs/fd/&amp;ast；
+* /libs/fd/&amp;ast；
 
 ## 安全地處理表單資料  {#securely-handle-forms-data}
 
@@ -133,7 +133,7 @@ AEM Forms會將資料儲存至預先定義的位置和暫時資料夾。 您應�
 
 ### 設定定期清理暫存資料夾 {#setup-periodic-cleanup-of-temporary-folder}
 
-當您設定檔案附件的表單、驗證或預覽元件時，對應的資料會儲存在/tmp/fd/的發佈節點上。 資料會定期清除。 您可以修改預設的資料清除工作，使其更積極。 若要修改排定清除資料的工作，請開啟AEM Web主控台、開啟AEM Forms暫存清除工作，並修改Cron運算式。
+當您設定檔案附件的表單、驗證或預覽元件時，對應的資料會儲存在/tmp/fd/的發佈節點上。 資料會定期清除。 您可以修改預設的資料清除工作，使其更積極。 若要修改排定清除資料的工作，請開啟AEM Web主控台、開啟AEM Forms臨時儲存體清除工作，並修改Cron運算式。
 
 在上述案例中，資料僅會為已驗證的使用者儲存。 此外，資料受到存取控制清單(ACL)的保護。 因此，修改資料清除是保護資訊的額外步驟。
 
@@ -152,7 +152,7 @@ AEM Forms會將資料儲存至預先定義的位置和暫時資料夾。 您應�
 
 **預先處理授權：**&#x200B;您可以使用預先處理授權，在執行要求之前先驗證要求的真實性。 您可以使用輸入、服務和請求詳細資訊，以允許或停止執行請求。 如果執行停止，您可以傳回資料整合例外OPERATION_ACCESS_DENIED。 您也可以在傳送使用者端請求以供執行之前對其進行修改。 例如，變更輸入並新增其他資訊。
 
-**Post處理序授權：**&#x200B;您可以使用處理序後授權來驗證並控制結果，然後再將結果傳回給請求者。 您也可以篩選、刪減和插入其他資料至結果。
+**處理序後授權：**&#x200B;您可以使用處理序後授權，在將結果傳回給要求者之前，先驗證並控制結果。 您也可以篩選、刪減和插入其他資料至結果。
 
 ### 限制使用者存取 {#limit-user-access}
 
@@ -168,18 +168,18 @@ AEM Forms會將資料儲存至預先定義的位置和暫時資料夾。 您應�
 
 * 有不同的一組預先定義的群組，具有每個角色的特定許可權。 將使用者指派給群組。
 
-   * 表單 — 使用者群組的使用者：
+  * 表單 — 使用者群組的使用者：
 
-      * 可以建立、填寫、發佈及提交表單。
-      * 無法建立XDP型最適化表單。
-      * 沒有許可權可撰寫最適化表單的指令碼。
-      * 無法匯入XDP或任何包含XDP的封裝
+    * 可以建立、填寫、發佈及提交表單。
+    * 無法建立XDP型最適化表單。
+    * 沒有許可權可撰寫最適化表單的指令碼。
+    * 無法匯入XDP或任何包含XDP的封裝
 
-   * 表單超級使用者群組的使用者可建立、填寫、發佈及提交所有型別的表單、編寫最適化表單的指令碼，以及匯入包含XDP的套件。
-   * 範本作者和範本超級使用者的使用者可以預覽和建立範本。
-   * fdm作者的使用者可以建立和修改表單資料模型。
-   * cm-user-agent群組的使用者可以建立、預覽和發佈通訊管理信件。
-   * 工作流程編輯器群組的使用者可以建立收件匣應用程式和工作流程模型。
+  * 表單超級使用者群組的使用者可建立、填寫、發佈及提交所有型別的表單、編寫最適化表單的指令碼，以及匯入包含XDP的套件。
+  * 範本作者和範本超級使用者的使用者可以預覽和建立範本。
+  * fdm作者的使用者可以建立和修改表單資料模型。
+  * cm-user-agent群組的使用者可以建立、預覽和發佈通訊管理信件。
+  * 工作流程編輯器群組的使用者可以建立收件匣應用程式和工作流程模型。
 
 **在處理作者時：**
 
@@ -188,7 +188,7 @@ AEM Forms會將資料儲存至預先定義的位置和暫時資料夾。 您應�
 
 ## AEM Forms環境的安全內部網路元素 {#secure-intranet-elements-of-an-aem-forms-environment}
 
-一般而言，處理叢集和Forms Workflow附加元件(JEE上的AEM Forms)會在防火牆後面執行。 因此，這些被認為是安全的。 您仍然可以執行一些步驟來強化這些環境：
+一般而言，處理叢集和Forms Workflow附加元件（JEE上的AEM Forms）會在防火牆後面執行。 因此，這些被認為是安全的。 您仍然可以執行一些步驟來強化這些環境：
 
 ### 安全處理叢集 {#secure-processing-cluster}
 
@@ -196,4 +196,4 @@ AEM Forms會將資料儲存至預先定義的位置和暫時資料夾。 您應�
 
 ### 使用AEM最佳實務來保護AEM Forms環境的安全 {#use-aem-best-practices-to-secure-an-aem-forms-environment}
 
-本檔案提供AEM Forms環境的特定指示。 您應該採取，以確保底層AEM在部署時的安裝安全。 如需詳細指示，請參閱[AEM安全性檢查清單](/help/sites-administering/security-checklist.md)檔案。
+本檔案提供AEM Forms環境的特定指示。 您應採取，以確保底層AEM在部署時的安裝安全。 如需詳細指示，請參閱[AEM安全性檢查清單](/help/sites-administering/security-checklist.md)檔案。

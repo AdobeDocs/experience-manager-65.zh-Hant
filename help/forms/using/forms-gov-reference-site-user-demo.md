@@ -9,7 +9,7 @@ feature: Adaptive Forms,Foundation Components
 role: Admin, User, Developer
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '2478'
+source-wordcount: '2522'
 ht-degree: 1%
 
 ---
@@ -24,22 +24,22 @@ ht-degree: 1%
 
 * AEM Forms
 
-   * 自動表單轉換
-   * 製作
-   * 表單資料模型/資料來源
+  * 自動表單轉換
+  * 製作
+  * 表單資料模型/資料來源
 
 * AEM Forms
 
-   * 資料擷取
-   * （選用）資料整合(MS® Dynamics)
-   * （選用） Adobe Sign
+  * 資料擷取
+  * （選用）資料整合(MS® Dynamics)
+  * （選用） Adobe Sign
 
 * 工作流程
 * 電子郵件通知
 * （可選）客戶通訊
 
-   * Print Channel
-   * Web Channel
+  * Print Channel
+  * Web Channel
 
 * Adobe Analytics
 * 資料Source整合
@@ -64,14 +64,14 @@ We.Gov示範套件隨附下列內建虛擬使用者：
 
 * **We.Gov Forms使用者**
 
-   * George Lang （會員）
-   * Camila Santos （會員）
+  * George Lang （會員）
+  * Camila Santos （會員）
 
 * **We.Gov使用者**
 
-   * George Lang （會員）
-   * Camila Santos （會員）
-   * 譚雅（會員）
+  * George Lang （會員）
+  * Camila Santos （會員）
+  * 譚雅（會員）
 
 ### 示範概觀術語圖例 {#demo-overview-terms-legend}
 
@@ -81,28 +81,28 @@ We.Gov示範套件隨附下列內建虛擬使用者：
 1. **連結**：在We.Gov網站的主要功能表頂端。
 1. **使用者指示**：導覽使用者劇本時要遵循的一組數值步驟。
 1. **Forms入口網站**： *https://&lt;aemserver>：&lt;port>/content/we-gov/formsportal.html*
-1. **行動檢視**：We.Gov使用者要使用調整大小的瀏覽器來復寫行動檢視。
+1. **行動檢視**:We.Gov使用者，使用調整大小的瀏覽器來復寫行動檢視。
 1. **桌上型電腦檢視**： We.gov使用者可在筆記型電腦或桌上型電腦上檢視示範。
 1. **預先篩選表單**： We.Gov網站首頁上的表單。
 1. **最適化表單**： We.gov示範的註冊應用程式表單。
 
    *https://&lt;aemserver>：&lt;port>/content/forms/af/adobe-gov-forms/enrollment-application-for-health-benefits.html*
 
-1. **AdobeWe.Gov網站**： *https://&lt;aemserver>：&lt;port>/content/we-gov/home.html*
-1. **Adobe收件匣**：位於AEM後端中的頂端功能表列[鈴鐺圖示](assets/bell.svg)。
+1. **Adobe We.Gov網站**： *https://&lt;aemserver>：&lt;port>/content/we-gov/home.html*
+1. **Adobe收件匣**：位於AEM後端的頂端功能表列[鈴鐺圖示](assets/bell.svg)。
 
    *https://&lt;aemserver>：&lt;port>/aem/start.html*
 
 1. **電子郵件使用者端**：檢視您電子郵件的偏好方式(Gmail、Outlook)
-1. **CTA**：呼叫動作
+1. **CTA**： Call to action
 1. **瀏覽**：在瀏覽器頁面上尋找特定參考點。
-1. **AFC**：Automated forms conversion
+1. **AFC**：自動錶單轉換
 
-## automated forms conversion（卡蜜拉） {#automated-forms-conversion}
+## 自動錶單轉換(Camila) {#automated-forms-conversion}
 
-**本節**： CX銷售機會的Camila有一個現有的PDF型表單，此表單是紙張式程式的一部分。 Camila想要使用此PDF表單來自動建立現代最適化Forms，以現代化作業的一部分。
+**本節**： CX Lead的Camila已有以PDF為基礎的表單，此表單已用於以紙張為基礎的程式。 Camila想要使用此PDF表單來自動建立現代最適化Forms，以現代化作業的一部分。
 
-### automated forms conversion - We.Gov （卡蜜拉） {#automated-forms-conversion-wegov}
+### 自動錶單轉換 — We.Gov (Camila) {#automated-forms-conversion-wegov}
 
 1. 導覽至&#x200B;*https://&lt;aemserver>：&lt;port>/aem/start.html*
 
@@ -110,7 +110,7 @@ We.Gov示範套件隨附下列內建虛擬使用者：
    * **使用者**： camila.santos
    * **密碼**：密碼
 1. 從首頁面，選取「Forms > Forms &amp; Documents > AEM Forms We.gov Forms > AFC」。
-1. Camila將PDF上傳到AEM Forms。
+1. Camila將PDF上傳至AEM Forms。
 
    ![上傳表單](assets/aftia-upload-form.jpg)
 
@@ -144,7 +144,7 @@ We.Gov示範套件隨附下列內建虛擬使用者：
 
 **本節**：轉換檔案並產生最適化表單後，Camila必須將最適化表單連線到資料來源。
 
-1. Camila在以[Automated forms conversion轉換的表單上開啟內容 — We.Gov](#automated-forms-conversion-wegov)。
+1. Camila會開啟以[自動錶單轉換 — We.Gov](#automated-forms-conversion-wegov)轉換的表單內容。
 
 1. 接著Camila會選取「表單模型」 > 「從下拉式清單中選取表單資料模型」 > 「從選項清單中選取We.gov註冊FDM」。
 
@@ -227,7 +227,7 @@ Aya必須先在家中檢視一些檔案，才能完成服務請求申請。 她�
    1. **已婚**：顯示婚姻相依面板
    1. **離婚**：顯示親屬面板
    1. **喪偶**：顯示近親面板
-   1. **您有孩子嗎？**： （是/否）選項按鈕可顯示子相依面板。
+   1. **您有子系嗎？**： （是/否）用來顯示子系相依面板的單選按鈕。
 
       1. （新增/移除）按鈕可新增/移除多個子項相依面板。
 
@@ -254,7 +254,7 @@ Aya必須先在家中檢視一些檔案，才能完成服務請求申請。 她�
 
    **使用者指示：**
 
-1. 在「圓CTA」上按一下滑鼠右鍵，移至下一個截面。
+1. 在「圓CTA」上按一下滑鼠右鍵，移至下一個區段。
 
    ![右圓形CTA](/help/forms/using/assets/right_circle_cta_new.png)
 
@@ -273,7 +273,7 @@ Aya必須先在家中檢視一些檔案，才能完成服務請求申請。 她�
 **使用者指示：**
 
 1. 導覽至您的電子郵件使用者端，並找到Adobe Sign電子郵件。
-1. 按一下Adobe Sign的連結。
+1. 按一下Adobe Sign連結。
 
    ![Adobe簽署連結](/help/forms/using/assets/adobe_sign_link.png)
 
@@ -351,7 +351,7 @@ George會核准Aya的申請，並且由於現有的自動化工作流程，也�
 
 **本節：** Camila CX銷售代表與Aya設定歡迎電話來解釋如何使用她核准的政府服務。
 
-### （選用） AEM Inbox &amp; MS® Dynamics {#camila-user-story-aem-inbox-ms-dynamics}
+### （選用） AEM收件匣與MS® Dynamics {#camila-user-story-aem-inbox-ms-dynamics}
 
 **使用者指示：**
 
@@ -395,7 +395,7 @@ George會核准Aya的申請，並且由於現有的自動化工作流程，也�
 
 ## （選用）歡迎套件公民(Aya) {#welcome-kit-citizen-aya}
 
-**此節：** Aya收到一封電子郵件，其中包含互動式通訊的連結，其中摘要說明其優點，並包含要填寫的表單欄位。 附帶PDF權益宣告及郵件中互動式通訊信函的連結（與互動式通訊具有相同的主題/品牌）。
+**此節：** Aya收到一封電子郵件，其中包含互動式通訊的連結，其中摘要說明其優點，並包含要填寫的表單欄位。 附帶PDF權益宣告，並連結至郵件中的互動式通訊信函（與互動式通訊具有相同的主題/品牌）。
 
 ### 電子郵件使用者端通知(Aya) {#aya-user-story-email-client}
 
@@ -408,13 +408,13 @@ George會核准Aya的申請，並且由於現有的自動化工作流程，也�
 
    1. 這會開啟相同檔案的Web channel版本。
 
-1. 如需直接PDF的快速參考：
+1. 若要直接快速參考PDF：
 
    *https://&lt;aemserver>：&lt;port>/aem/formdetails.html/content/dam/formsanddocuments/adobe-gov-forms/welcome-handbook/we-gov-welcome-handbook*
 
 1. 如需積體電路的快速參考，請點選：
 
-   *https://&lt;aemserver>：&lt;port>/content/dam/formsanddocuments/adobe-gov-forms/welcome-handbook/we-gov-welcome-handbook/jcr：content？channel=web&amp;mode=preview&amp;wcmmode=disabled*
+   *https://&lt;aemserver>：&lt;port>/content/dam/formsanddocuments/adobe-gov-forms/welcome-handbook/we-gov-welcome-handbook/jcr:content？channel=web&amp;mode=preview&amp;wcmmode=disabled*
 
    ![歡迎權益手冊](/help/forms/using/assets/welcome_benefits_handbook.png) ![互動式通訊連結](/help/forms/using/assets/interactive_communication.png)
 
@@ -442,7 +442,7 @@ George會核准Aya的申請，並且由於現有的自動化工作流程，也�
 
 **此段落**： Camila會瀏覽至「資料來源」頁面，驗證伺服器在Derby資料庫中復寫的資料。
 
-1. 使用者體驗完成且使用者提交完成後，Camila會導覽至AEM Forms中的「資料來源」索引標籤(**Forms** > **資料整合**)
+1. 使用者體驗完成且使用者提交完成後，Camila會導覽至AEM Forms中的「資料來源」索引標籤（**Forms** > **資料整合**）
 
 1. Camila接著選取AEM Forms We.gov FDM，然後編輯&#x200B;**We.gov註冊FDM**。
 
@@ -486,11 +486,11 @@ George會核准Aya的申請，並且由於現有的自動化工作流程，也�
 
 1. 導覽至&#x200B;*https://&lt;aemserver>：&lt;port>/sites.html/content*
 1. 選取&#x200B;**AEM Forms We.Gov網站**&#x200B;以檢視網站頁面。
-1. 選取其中一個網站頁面（例如「首頁」），然後選擇&#x200B;**Analytics與Recommendations**。
+1. 選取其中一個網站頁面（例如「首頁」），然後選擇&#x200B;**Analytics &amp; Recommendations**。
 
    ![分析和建議](/help/forms/using/assets/analytics_recommendation.jpg)
 
-1. 在此頁面上，您會看到從Adobe Analytics擷取的資訊，其中與AEM Sites頁面相關(注意：這項資訊的設計會定期從Adobe Analytics重新整理，且不會即時顯示)。
+1. 在此頁面上，您會看到從Adobe Analytics擷取的資訊，其中與AEM Sites頁面相關（注意：這項資訊的設計會定期從Adobe Analytics重新整理，且不會即時顯示）。
 
    ![Adobe Analytics關鍵量度](/help/forms/using/assets/analytics_key_metrics.jpg)
 

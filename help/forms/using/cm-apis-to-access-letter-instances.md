@@ -10,8 +10,8 @@ solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
-source-wordcount: '591'
-ht-degree: 1%
+source-wordcount: '604'
+ht-degree: 0%
 
 ---
 
@@ -40,7 +40,7 @@ Correspondence Management會公開API，以透過LetterInstanceService服務擷�
 
 ### 使用getAllLetterInstances {#using-nbsp-getallletterinstances}
 
-以下API會根據查詢物件（已提交和草稿）來尋找信件例項。 如果查詢物件為Null，則會傳回所有信件例項。 此API傳回[LetterInstanceVO](https://helpx.adobe.com/tw/aem-forms/6-2/javadocs/com/adobe/icc/dbforms/obj/LetterInstanceVO.html)物件的清單，這些物件可用於擷取信件執行個體的其他資訊。
+以下API會根據查詢物件（已提交和草稿）來尋找信件例項。 如果查詢物件為Null，則會傳回所有信件例項。 此API傳回[LetterInstanceVO](https://helpx.adobe.com/aem-forms/6-2/javadocs/com/adobe/icc/dbforms/obj/LetterInstanceVO.html)物件的清單，這些物件可用於擷取信件執行個體的其他資訊。
 
 **語法**： `List getAllLetterInstances(Query query) throws ICCException;`
 
@@ -137,7 +137,7 @@ Boolean result = letterInstanceService.letterInstanceExists(letterInstanceName )
 
 信件例項可以是已提交或草稿型別。 開啟兩種信件例項型別會顯示不同的行為：
 
-* 如果存在「已提交」信件例項，則會開啟代表該信件例項的PDF。 儲存在伺服器上的提交信件例項也包含dataXML和已處理的XDP，這可用於完成並進一步自訂使用案例，例如建立PDF/A。
+* 如果存在「已提交信件」例項，則會開啟代表該信件例項的PDF。 儲存在伺服器上的提交信件例項也包含dataXML和已處理的XDP，這可用於完成並進一步自訂使用案例，例如建立PDF/A。
 * 如果存在「草稿」信件例項，則建立通訊UI會重新載入到與建立草稿時完全相同的先前狀態
 
 ### 開啟草稿字母例項  {#opening-draft-letter-instance-nbsp}
