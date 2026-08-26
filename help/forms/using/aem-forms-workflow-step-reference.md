@@ -89,7 +89,7 @@ Forms Workflow步驟會在AEM工作流程中執行AEM Forms專屬的操作。 �
   * **儲存配置範本，使用：**&#x200B;使用相對於承載的路徑儲存配置範本，或將其儲存在Document資料型別的變數中。 [配置範本](../../forms/using/layout-design-details.md)參考您使用Forms Designer建立的XDP檔案。 只有從「型別」下拉式清單中選取「互動式通訊代理程式UI」，才能使用此選項。
 
 * **受指派人>指派選項：**&#x200B;指定將工作指派給使用者的方法。 您可以使用「參與者選擇器」指令碼動態地將任務指派給使用者或群組，或將任務指派給特定的AEM使用者或群組。
-* **參與者選擇器：**&#x200B;在[指派選項]欄位中選取&#x200B;**動態至使用者或群組**&#x200B;選項時，即可使用此選項。 您可以使用ECMAScript或服務來動態選取使用者或群組。 如需詳細資訊，請參閱[動態指派工作流程給使用者](https://helpx.adobe.com/experience-manager/kb/HowToAssignAWorkflowDynamicallyToParticipants.html)和[建立自訂Adobe Experience Manager動態參與者步驟。](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=en&CID=RedirectAEMCommunityKautuk)
+* **參與者選擇器：**&#x200B;在[指派選項]欄位中選取&#x200B;**動態至使用者或群組**&#x200B;選項時，即可使用此選項。 您可以使用ECMAScript或服務來動態選取使用者或群組。 如需詳細資訊，請參閱[動態指派工作流程給使用者](https://helpx.adobe.com/experience-manager/kb/HowToAssignAWorkflowDynamicallyToParticipants.html)和[建立自訂Adobe Experience Manager動態參與者步驟。](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hant&CID=RedirectAEMCommunityKautuk)
 
 * **參與者：**&#x200B;在&#x200B;**參與者選擇器**&#x200B;欄位中選取&#x200B;**[!UICONTROL com.adobe.granite.workflow.core.process.RandomParticipantChooser]**&#x200B;選項時，即可使用此欄位。 欄位可讓您為RandomParticipantChooser選項選取使用者或群組。
 
