@@ -9,9 +9,9 @@ exl-id: b447e545-f73e-4fde-a001-86e0e1cf4a12
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 feature: Adaptive Forms
-source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
+source-git-commit: b631b5d4308a2ad1e2397c60c4ee78ec097beaa9
 workflow-type: tm+mt
-source-wordcount: '2495'
+source-wordcount: '2503'
 ht-degree: 0%
 
 ---
@@ -48,13 +48,13 @@ ht-degree: 0%
 
 ### 其他預設角色 {#additional-default-roles}
 
-根據您安裝的AEM Forms元件，可能包括以下其他預設角色
+根據您安裝的AEM表單元件，可能包括以下其他預設角色
 
 **檔案上載應用程式使用者：**&#x200B;可以使用Flex遠端功能上載檔案。
 
 **Forms管理員：**&#x200B;可以從Administration Console的Forms頁面檢視及修改設定
 
-**AEM Forms Contentspace系統管理員：**&#x200B;可以從管理主控台的Content Services （已棄用）頁面檢視及修改設定
+**AEM Forms Contentspace管理員：**&#x200B;可以從管理控制檯的Content Services （已棄用）頁面檢視及修改設定
 
 **AEM Forms Contentspace使用者：**&#x200B;可以登入Contentspace （已棄用）網頁
 
@@ -64,31 +64,31 @@ ht-degree: 0%
 
 **AEM forms IBM CM聯結器管理員：**&#x200B;可以從管理控制檯中的IBM Content Manager聯結器頁面檢視及修改設定
 
-**Rights Management管理員：**&#x200B;執行相關Rights Management頁面上所有伺服器設定所需的所有工作
+**Rights Management系統管理員：**&#x200B;執行相關Rights Management頁面上所有伺服器設定所需的所有工作
 
 **Rights Management一般使用者：**&#x200B;可以存取Rights Management一般使用者網頁
 
 **Rights Management邀請使用者：**&#x200B;可以邀請使用者
 
-**Rights Management管理受邀和本機使用者：**&#x200B;可以執行管理相關Rights Management頁面上所有受邀和本機使用者所需的工作
+**Rights Management管理受邀和本機使用者：**&#x200B;可以執行在相關Rights Management頁面上管理所有受邀和本機使用者所需的工作
 
 **Rights Management原則集管理員：**&#x200B;執行相關Rights Management頁面上所有原則集所需的所有工作
 
 **Rights Management超級管理員：**&#x200B;執行Rights Management頁面所需的所有工作
 
-**AEM forms Workspace管理員：**&#x200B;可以從Administration Console的Workspace頁面檢視及修改設定
+**AEM表單Workspace管理員：**&#x200B;可以從Administration Console的Workspace頁面檢視及修改設定
 
-***注意&#x200B;**： AEM Forms版本已棄用Flex Workspace。*
+***注意&#x200B;**： Flex Workspace已針對AEM表單發行版本淘汰。*
 
 **Workspace使用者：**&#x200B;可以登入Workspace使用者應用程式
 
 **輸出系統管理員：**&#x200B;可以從[管理主控台]的[輸出]頁面檢視及修改設定
 
-**PDFG系統管理員：**&#x200B;可以從管理主控台的PDF Generator頁面檢視及修改設定
+**PDFG系統管理員：**&#x200B;可以從管理控制檯的PDF Generator頁面檢視及修改設定
 
 **PDFG使用者：**&#x200B;可以存取PDF Generator的所有非系統管理功能
 
-**Acrobat Reader DC擴充功能網頁應用程式：**&#x200B;可以使用Acrobat Reader DC擴充功能網頁應用程式
+**Acrobat Reader DC延伸Web應用程式：**&#x200B;可以使用Acrobat Reader DC延伸Web應用程式
 
 >[!NOTE]
 >
@@ -96,7 +96,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->AEM Forms版本已棄用Flex工作區。
+>AEM Forms版本已棄用Flex Workspace。
 
 ## 建立角色 {#create-a-role}
 
@@ -220,9 +220,9 @@ ht-degree: 0%
 
 **委派：**&#x200B;在資源上設定ACL
 
-**DELETE_版本_PERM：**&#x200B;刪除服務的版本
+**DELETE_VERSION_PERM：**&#x200B;刪除服務的版本
 
-**檔案上傳：**&#x200B;在AEM Forms中上傳檔案
+**檔案上傳：**&#x200B;在AEM表單中上傳檔案
 
 **網域控制：**&#x200B;建立、刪除或修改任何使用者管理網域的設定，包括其驗證和目錄提供者
 
@@ -254,7 +254,7 @@ ht-degree: 0%
 
 **PERM_OUTPUT_ADMIN：**&#x200B;輸出系統管理員
 
-**PERM_READER_延伸_WEB_APPLICATION：**&#x200B;使用Acrobat Reader DC延伸Web應用程式
+**PERM_READER_EXTENSIONS_WEB_APPLICATION：**&#x200B;使用Acrobat Reader DC擴充功能Web應用程式
 
 **PERM_SP_ADMIN：**&#x200B;管理SharePoint聯結器設定
 
@@ -284,7 +284,7 @@ ht-degree: 0%
 
 **Rights Management變更原則擁有者：**&#x200B;變更原則擁有者
 
-**Rights Management一般使用者主控台登入：**&#x200B;登入Rights Management一般使用者UI
+**Rights Management一般使用者控制檯登入：**&#x200B;登入Rights Management一般使用者UI
 
 **Rights Management管理組態：**&#x200B;管理伺服器組態
 
@@ -306,11 +306,11 @@ ht-degree: 0%
 
 **Rights Management原則集撤銷檔案：**&#x200B;撤銷原則集中檔案的存取權
 
-**Rights Management原則集切換原則：**&#x200B;檔案的切換原則
+**Rights Management原則集切換原則：**&#x200B;切換檔案的原則
 
 **Rights Management原則集解除撤銷檔案：**&#x200B;解除撤銷檔案
 
-**Rights Management原則集檢視事件：**&#x200B;檢視原則集內任何原則或檔案的原則與檔案事件
+**Rights Management原則集檢視事件：**&#x200B;檢視原則集內任何原則或檔案的原則和檔案事件
 
 **Rights Management檢視伺服器事件：**&#x200B;搜尋並檢視所有稽核事件
 
