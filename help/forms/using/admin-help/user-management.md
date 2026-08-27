@@ -1,6 +1,6 @@
 ---
 title: 使用者管理
-description: 「使用者管理」可讓您使用SAML在AEM表單模組與Netegrity SiteMinder保護的應用程式之間啟用SSO。 本檔案提供「使用者管理」的詳細資訊。
+description: 「使用者管理」可讓您使用SAML，在AEM表單模組與Netegrity SiteMinder保護的應用程式之間啟用SSO。 本檔案提供「使用者管理」的詳細資訊。
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/maintaining_aem_forms
@@ -9,9 +9,9 @@ exl-id: 1da1f6de-ac0d-4e0d-b8bb-956420e42699
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
+source-git-commit: b631b5d4308a2ad1e2397c60c4ee78ec097beaa9
 workflow-type: tm+mt
-source-wordcount: '484'
+source-wordcount: '493'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 > 
 > 確保使用者具有存取管理員控制檯的管理員許可權。
 
-「使用者管理」可讓您使用安全性宣告標籤語言(SAML)，在AEM表單模組與Netegrity SiteMinder保護的應用程式之間啟用單一登入(SSO)。 實作SSO時，AEM Forms使用者登入頁面不是必要頁面，且若使用者已透過公司入口網站驗證，則不顯示。
+「使用者管理」可讓您使用安全性宣告標籤語言(SAML)，在AEM表單模組與Netegrity SiteMinder保護的應用程式之間啟用單一登入(SSO)。 實作SSO時，AEM表單使用者登入頁面不是必要頁面，且若使用者已透過公司入口網站驗證，則不顯示。
 
 如需有關改善DB2的資料庫和目錄同步處理效能的資訊，請參閱[IBM DB2資料庫：執行定期維護的命令](/help/forms/using/admin-help/ibm-db2-database-running-commands.md#ibm-db2-database-running-commands-for-regular-maintenance)。
 
@@ -44,7 +44,7 @@ ht-degree: 0%
 
 ### 設定可見的使用者和群組 {#set-visible-users-and-groups}
 
-使用Document Security安裝和設定AEM表單環境後，請在「使用者管理」中設定所有適當的網域。
+使用Document Security安裝並設定AEM表單環境後，請在「使用者管理」中設定所有適當的網域。
 
 1. 在管理控制檯中，按一下「服務」>「Document Security」>「原則」，然後按一下「原則集」標籤。
 1. 選取[Global Policy Set]，然後按一下[Visible Users And Groups]索引標籤。
@@ -58,4 +58,4 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->AEM Forms版本已棄用Flex工作區。
+>AEM Forms版本已棄用Flex Workspace。
