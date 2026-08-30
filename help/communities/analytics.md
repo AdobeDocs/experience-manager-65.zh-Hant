@@ -10,9 +10,9 @@ role: Admin
 exl-id: 7d54928b-6512-4da9-a209-eb4488bf2b64
 solution: Experience Manager
 feature: Communities
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 86ce8d1ead6f2b760eb0d037042ddfc2af418913
 workflow-type: tm+mt
-source-wordcount: '2785'
+source-wordcount: '2818'
 ht-degree: 1%
 
 ---
@@ -31,14 +31,14 @@ Adobe Analytics可針對AEM Communities進行設定，以便在成員與支援�
 
 * 在發佈環境中：
 
-   * 社群[趨勢](/help/communities/trends.md)的報告
-   * 允許網站訪客依「檢視次數最多」、「最活躍」、「最喜歡」排序
-   * 檢視UGC （使用者產生的內容）清單上的計數
+  * 社群[趨勢](/help/communities/trends.md)的報告
+  * 允許網站訪客依「檢視次數最多」、「最活躍」、「最喜歡」排序
+  * 檢視UGC （使用者產生的內容）清單上的計數
 
 * 在作者環境中：
 
-   * 在[成員管理主控台](/help/communities/members.md)中顯示參與率資料（檢視、貼文、追蹤、贊）
-   * 啟用資源[報告的趨勢摘要、視訊活動訊號和視訊裝置](/help/communities/reports.md)
+  * 在[成員管理主控台](/help/communities/members.md)中顯示參與率資料（檢視、貼文、追蹤、贊）
+  * 啟用資源[報告的趨勢摘要、視訊活動訊號和視訊裝置](/help/communities/reports.md)
 
 支援的Communities功能包括：
 
@@ -71,7 +71,7 @@ Adobe Analytics可針對AEM Communities進行設定，以便在成員與支援�
 * **使用者名稱**
 
   有權管理Analytics帳戶之使用者的登入使用者名稱
-（應該包含Web服務存取許可權）。
+  （應該包含Web服務存取許可權）。
 
 * **密碼**
 
@@ -87,37 +87,37 @@ Adobe Analytics可針對AEM Communities進行設定，以便在成員與支援�
 
 ## 適用於視訊報表的Adobe Analytics報表套裝 {#adobe-analytics-report-suite-for-video-reporting}
 
-使用Adobe Experience Cloud的[報表套裝管理員](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/new-report-suite.html?lang=zh-Hant)，可以設定Analytics報表套裝，以便啟用社群網站，提供社群功能的報告。
+使用Adobe Experience Cloud的[報表套裝管理員](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/new-report-suite.html)，可以設定Analytics報表套裝，以便啟用社群網站，提供社群功能的報告。
 
-使用[公司名稱和使用者名稱](/help/communities/analytics.md#prerequisites)登入[Adobe Experience Cloud](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/home.html?lang=zh-Hant)，即可設定新的或現有的報表套裝：
+使用[公司名稱和使用者名稱](/help/communities/analytics.md#prerequisites)登入[Adobe Experience Cloud](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/home.html)，即可設定新的或現有的報表套裝：
 
-* [11個轉換變數](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/conversion-var-admin.html?lang=zh-Hant) (eVar)
+* [11個轉換變數](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/conversion-var-admin.html) (eVar)
 
-   * **`evar1`**&#x200B;到&#x200B;**`evar11`**&#x200B;已啟用
+  * **`evar1`**&#x200B;到&#x200B;**`evar11`**&#x200B;已啟用
 
-   * 可以重新利用（重新命名）現有的eVar，或建立要用於Communities功能的專案
+  * 可以重新利用（重新命名）現有的eVar，或建立要用於Communities功能的專案
 
-* [7個成功事件](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/success-events/success-event.html?lang=zh-Hant) （個事件）
+* [7個成功事件](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/success-events/success-event.html) （個事件）
 
-   * **`event1`**&#x200B;到&#x200B;**`event7`**&#x200B;已啟用
+  * **`event1`**&#x200B;到&#x200B;**`event7`**&#x200B;已啟用
 
-   * 型別&#x200B;**`Counter`**
+  * 型別&#x200B;**`Counter`**
 
-      * 不是&#x200B;**`Counter (no subrelations)`**
+    * 不是&#x200B;**`Counter (no subrelations)`**
 
-   * 可以重新利用（重新命名）現有事件，或建立用於Communities功能的事件
+  * 可以重新利用（重新命名）現有事件，或建立用於Communities功能的事件
 
-* [視訊管理](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html?lang=zh-Hant)
+* [視訊管理](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html)
 
-   * 視訊報表主控台
+  * 視訊報表主控台
 
-      * 啟用`Video Core`
-      * 選取儲存
+    * 啟用`Video Core`
+    * 選取儲存
 
-   * 視訊核心測量主控台
+  * 視訊核心測量主控台
 
-      * 選取`Use Solution Variables`
-      * 選取儲存
+    * 選取`Use Solution Variables`
+    * 選取儲存
 
 如果使用&#x200B;**新報表套裝**，則新報表套裝可能只有4個evar和6個事件變數，而Communities則需要11個evar和7個事件變數。
 
@@ -146,7 +146,7 @@ Adobe Analytics可針對AEM Communities進行設定，以便在成員與支援�
 若要在[為視訊報表設定Analytics報表套裝](#adobe-analytics-report-suite-for-video-reporting)後啟用視訊心率報表：
 
 * 建立[Analytics Cloud服務](#aem-analytics-cloud-service-configuration)
-* 為社群網站[&#128279;](#enable-analytics-for-a-community-site)啟用分析
+* 為社群網站](#enable-analytics-for-a-community-site)啟用[分析
 * 將`Marketing Cloud Org Id`與社群網站建立關聯
 
 [修改](/help/communities/sites-console.md#modifying-site-properties)社群網站屬性，可在[社群網站建立](/help/communities/sites-console.md)或更新版本時輸入`Marketing Cloud Org Id`。
@@ -158,6 +158,10 @@ Adobe Analytics可針對AEM Communities進行設定，以便在成員與支援�
 若未啟用，視訊心率程式碼永遠不會例項化，而且只有視訊進度和恢復位置追蹤會儲存至SRP以供報告。
 
 ## AEM Analytics Cloud服務設定 {#aem-analytics-cloud-service-configuration}
+
+>[!CAUTION]
+>
+>[Adobe Analytics 1.4 API已到期](https://developer.adobe.com/analytics-apis/docs/1.4/guides/eol/)。 因此，我們不再支援使用使用者憑證（使用者名稱和密碼）的Adobe Analytics設定。
 
 若要建立Analytics整合，即使用作者例項上的標準UI，將Adobe Analytics與AEM社群網站整合：
 
@@ -177,11 +181,13 @@ Adobe Analytics可針對AEM Communities進行設定，以便在成員與支援�
 
 * **標題**
 
-  （必要）設定的顯示標題。例如，輸入&#x200B;*社群分析*
+  （必要）設定的顯示標題。
+  例如，輸入*社群分析*
 
 * **名稱**
 
-  （選擇性）如果未指定，則名稱會預設為從標題衍生的有效節點名稱。例如，輸入&#x200B;*communities*
+  （選擇性）如果未指定，則名稱會預設為從標題衍生的有效節點名稱。
+  例如，輸入*communities*
 
 * **範本**
 
@@ -189,7 +195,7 @@ Adobe Analytics可針對AEM Communities進行設定，以便在成員與支援�
 
 * 選取「**建立**」
 
-   * 啟動設定頁面並開啟`Analytics Settings`對話方塊
+  * 啟動設定頁面並開啟`Analytics Settings`對話方塊
 
 ### Analytics設定對話方塊 {#analytics-settings-dialog}
 
@@ -233,10 +239,10 @@ Adobe Analytics可針對AEM Communities進行設定，以便在成員與支援�
 
 * 選取&#x200B;**連線至Analytics**
 
-   * 如果未成功，
+  * 如果未成功，
 
-      * 確認專案不包含前置空格。
-      * 嘗試不同的資料中心。
+    * 確認專案不包含前置空格。
+    * 嘗試不同的資料中心。
 
 * 選取&#x200B;**確定**。
 
@@ -253,11 +259,12 @@ Adobe Analytics可針對AEM Communities進行設定，以便在成員與支援�
 * **標題**
 
   （必要）框架的顯示標題
-例如，輸入*社群架構*。
+  例如，輸入*社群架構*。
 
 * **名稱**
 
-  （選擇性）如果未指定，則名稱會預設為從標題衍生的有效節點名稱。例如，輸入&#x200B;*communities*。
+  （選擇性）如果未指定，則名稱會預設為從標題衍生的有效節點名稱。
+  例如，輸入*communities*。
 
 * *範本*
 
@@ -316,8 +323,8 @@ Analytics雲端服務與架構現已完成。 在啟用此Analytics服務的情�
 若要在[建立社群網站](/help/communities/sites-console.md)時新增Analytics Cloud服務：
 
 * 在步驟3的[ANALYTICS標籤](/help/communities/sites-console.md#analytics)下：
-   * 選取&#x200B;**啟用Analytics**&#x200B;核取方塊。
-   * 從下拉式方塊中選取架構。
+  * 選取&#x200B;**啟用Analytics**&#x200B;核取方塊。
+  * 從下拉式方塊中選取架構。
 
 * 或者返回Analytics框架設定以調整變數對應。
 
@@ -329,8 +336,8 @@ Analytics雲端服務與架構現已完成。 在啟用此Analytics服務的情�
 * 選取社群網站的「編輯網站」圖示。
 * 選取「設定」。
 * 在Analytics區段中：
-   * 選取&#x200B;**啟用Analytics**&#x200B;核取方塊。
-   * 從下拉式方塊中選擇架構。
+  * 選取&#x200B;**啟用Analytics**&#x200B;核取方塊。
+  * 從下拉式方塊中選擇架構。
 
 * 或者返回Analytics框架設定以調整變數對應。
 
@@ -634,27 +641,28 @@ Adobe Analytics憑證已加密。 為了便於作者與發佈者之間複製或�
 * 在主要發行者上，以管理許可權登入。
 * 導覽至[CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md)。 例如，[https://localhost:4503/crx/de](https://localhost:4503/crx/de)。
 
-* 在語言根目錄的`jcr:content`節點下（例如`/content/sites/engage/en/jcr:content`），導覽至為Analytics報表設定的元件。例如 **`analytics/reportConfigs/social_forum_components_hbs_topic`**
+* 在語言根目錄的`jcr:content`節點下（例如`/content/sites/engage/en/jcr:content`），導覽至為Analytics報表設定的元件。
+例如 **`analytics/reportConfigs/social_forum_components_hbs_topic`**
 
 * 請注意已建立的時間週期：
 
-   * `last30Days`
-   * `last90Days`
-   * `thisYear`
+  * `last30Days`
+  * `last90Days`
+  * `thisYear`
 
 * 注意`total`節點。
 
-   * 修改&#x200B;**`interval`**&#x200B;屬性會覆寫Report Importer間隔。
-   * 該值以秒為單位，並設為四小時（14400秒）。
+  * 修改&#x200B;**`interval`**&#x200B;屬性會覆寫Report Importer間隔。
+  * 該值以秒為單位，並設為四小時（14400秒）。
 
 ![元件報告](assets/component-report.png)
 
 ## 在Analytics中管理使用者資料 {#manage-user-data-in-analytics}
 
-Adobe Analytics提供的API可讓您存取、匯出和刪除使用者資料。 如需詳細資訊，請參閱[提交存取及刪除要求](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/data-governance/an-gdpr-workflow.html?lang=zh-Hant)。
+Adobe Analytics提供的API可讓您存取、匯出和刪除使用者資料。 如需詳細資訊，請參閱[提交存取及刪除要求](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/data-governance/an-gdpr-workflow.html)。
 
 ## 資源 {#resources}
 
-* Adobe Experience Cloud： [Analytics說明和參考](https://experienceleague.adobe.com/docs/analytics.html?lang=zh-Hant)
+* Adobe Experience Cloud： [Analytics說明和參考](https://experienceleague.adobe.com/docs/analytics.html)
 * AEM： [與Adobe Analytics整合](/help/sites-administering/adobeanalytics.md)
 * AEM： [Analytics與外部提供者](/help/sites-administering/external-providers.md)
