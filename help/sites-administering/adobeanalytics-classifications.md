@@ -9,14 +9,18 @@ exl-id: 0e675ce8-ba3b-481d-949e-0c85c97054d2
 solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: f6f6552b10cbc84d9e39e46905c2fa68201d4d96
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '673'
 ht-degree: 4%
 
 ---
 
 # Adobe分類{#adobe-classifications}
+
+[!BADGE 已終止]{type=negative tooltip="此功能現已終止服務"}
+
+<div class="preview"> Adobe分類需要使用使用者認證（使用者名稱和密碼）的Adobe Analytics設定，由於<a href="https://developer.adobe.com/analytics-apis/docs/1.4/guides/eol/">Adobe Analytics 1.4 API生命週期結束</a>，因此不再支援此設定。 因此，不再使用Adobe分類。 </div>
 
 Adobe分類會以排程方式將分類資料匯出至[Adobe Analytics](/help/sites-administering/adobeanalytics.md)。 匯出程式是&#x200B;**com.adobe.cq.scheduled.exporter.Exporter**&#x200B;的實作。
 
@@ -85,13 +89,13 @@ Adobe分類會以排程方式將分類資料匯出至[Adobe Analytics](/help/sit
 
 * ID分類`nt:unstructured`
 
-   * 1 `nt:unstructured`
+  * 1 `nt:unstructured`
 
-      * 產品=我的產品名稱（字串）
-      * 價格= 120.90 （字串）
-      * 大小= M （字串）
-      * 顏色=黑色（字串）
-      * Color^Code = 101 （字串）
+    * 產品=我的產品名稱（字串）
+    * 價格= 120.90 （字串）
+    * 大小= M （字串）
+    * 顏色=黑色（字串）
+    * Color^Code = 101 （字串）
 
 **SAINT標題與記錄：**
 

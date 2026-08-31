@@ -10,9 +10,9 @@ exl-id: 8262bbf9-a982-479b-a2b5-f8782dd4182d
 solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
-source-git-commit: 36265810f0284acfd13dfd01d89c250d9923cd45
+source-git-commit: f6f6552b10cbc84d9e39e46905c2fa68201d4d96
 workflow-type: tm+mt
-source-wordcount: '1491'
+source-wordcount: '1582'
 ht-degree: 6%
 
 ---
@@ -84,6 +84,10 @@ Adobe Analytics [資料中心](https://experienceleague.adobe.com/docs/analytics
 
 >[!CAUTION]
 >
+>[Adobe Analytics 1.4 API已到期](https://developer.adobe.com/analytics-apis/docs/1.4/guides/eol/)。 因此，我們不再支援使用使用者憑證（使用者名稱和密碼）的Adobe Analytics設定。
+
+>[!CAUTION]
+>
 >由於 Adobe Analytics API 中的安全性變更，AEM 中包含的 Activity Map 版本已無法再使用。
 >
 >現在應該使用Adobe Analytics[&#128279;](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html?lang=zh-Hant)提供的ActivityMap外掛程式。
@@ -150,21 +154,21 @@ Adobe Analytics [資料中心](https://experienceleague.adobe.com/docs/analytics
 
 * **追蹤伺服器**
 
-   * 包含用來傳送Adobe Analytics呼叫的URL
+  * 包含用來傳送Adobe Analytics呼叫的URL
 
-      * `cname` — 預設為Adobe Analytics帳戶的&#x200B;*公司名稱*
-      * `d1` — 對應至資訊傳送至的資料中心（`d1`、`d2`或`d3`）
-      * `sc.omtrdc.net` — 網域名稱
+    * `cname` — 預設為Adobe Analytics帳戶的&#x200B;*公司名稱*
+    * `d1` — 對應至資訊傳送至的資料中心（`d1`、`d2`或`d3`）
+    * `sc.omtrdc.net` — 網域名稱
 
 * **安全追蹤伺服器**
 
-   * 具有與追蹤伺服器相同的區段
-   * 用於從安全頁面(`https://`)傳送資料
+  * 具有與追蹤伺服器相同的區段
+  * 用於從安全頁面(`https://`)傳送資料
 
 * **訪客名稱空間**
 
-   * 名稱空間會決定追蹤URL的第一部分。
-   * 例如，將名稱空間變更為&#x200B;**CNAME**&#x200B;會導致呼叫Adobe Analytics看起來像&#x200B;**CNAME.d1.omtrdc.net**，而不是預設值。
+  * 名稱空間會決定追蹤URL的第一部分。
+  * 例如，將名稱空間變更為&#x200B;**CNAME**&#x200B;會導致呼叫Adobe Analytics看起來像&#x200B;**CNAME.d1.omtrdc.net**，而不是預設值。
 
 ## 將頁面與Adobe Analytics框架建立關聯 {#associating-a-page-with-a-adobe-analytics-framework}
 
@@ -198,11 +202,11 @@ Adobe Analytics [資料中心](https://experienceleague.adobe.com/docs/analytics
 
 * **擷取嘗試**：
 嘗試擷取佇列報表的次數。
-預設值為`6`。
+預設為 `6`。
 
 * **擷取延遲**：
 嘗試擷取已排入佇列的報表之間的毫秒數。
-預設值為`10000`。由於是以毫秒為單位，因此會對10秒。
+預設為 `10000`。 由於是以毫秒為單位，因此會對10秒。
 
 * **擷取頻率**：
 `cron`運算式，用於決定擷取Analytics報告的頻率。
