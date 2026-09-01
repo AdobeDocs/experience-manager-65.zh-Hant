@@ -6,9 +6,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
 exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
-source-git-commit: 4a2915dc890887ad8c7174d3ef5f1de8413fd8f4
+source-git-commit: b30bc6ce844cacce396a09c5195c48083b96a9ec
 workflow-type: tm+mt
-source-wordcount: '7412'
+source-wordcount: '7444'
 ht-degree: 4%
 
 ---
@@ -52,7 +52,7 @@ Experience Manager 6.5.25.0包含新功能、客戶要求的重要增強功能�
 
 * [XFA型PDF的階層式書籤](https://helpx.adobe.com/tw/content/dam/help/en/experience-manager/6-5/forms/pdf/using-designer.pdf)：輸出服務和AEM Forms Designer現在會在靜態互動和平坦的XFA型PDF中產生結構化的書籤階層。 書籤會依照在文字方塊的「協助工具」屬性中設定的標題層級(H1-H6)顯示，因此H1-H6專案會巢狀內嵌在正確的父項下，而非平行顯示。
 
-* [&#x200B; JEE交易記錄中的表單層級詳細資料](/help/forms/using/transaction-report-overview-jee.md#form-level-details-transaction-log-jee)： JEE上的AEM Forms現在會將每個交易的表單層級詳細資料記錄在`transaction_log.log`中，以及現有的服務和操作資訊。 管理員可在分析提交、轉譯和轉換時，將交易報告資料與特定表單建立關聯。 (FORMS-21574)
+* [ JEE交易記錄中的表單層級詳細資料](/help/forms/using/transaction-report-overview-jee.md#form-level-details-transaction-log-jee)： JEE上的AEM Forms現在會將每個交易的表單層級詳細資料記錄在`transaction_log.log`中，以及現有的服務和操作資訊。 管理員可在分析提交、轉譯和轉換時，將交易報告資料與特定表單建立關聯。 (FORMS-21574)
 
 * [已更新支援的平台矩陣](/help/forms/using/aem-forms-jee-supported-platforms.md)： JEE Service Pack上的AEM Forms 6.5.25.0新增支援與下列較新技術的相容性：
   * JBoss® Enterprise Application Platform (EAP) 7.4.23
@@ -372,7 +372,8 @@ AEM 6.5升級後，JSP檔案編輯現在可在CRXDE Lite中如預期般運作。
 
 #### 安全性{#foundation-security-6525}
 
-AEM現在允許列出包含client-secret的其他關鍵字。 當受支援的整合使用這些使用者端密碼命名模式時，設定建立不會再失敗。 (GRANITE-66495)
+* AEM現在允許列出包含client-secret的其他關鍵字。 當受支援的整合使用這些使用者端密碼命名模式時，設定建立不會再失敗。 (GRANITE-66495)
+* Sling XSS組合現在使用Java HTML Sanitizer程式庫，應該使用`XSSAPI#filterHTML()`方法的使用來安全地呈現HTML內容，而不是將資料傳遞至其他API。 (GRANITE-63840)
 
 <!-- #### Sling{#foundation-sling-6525} -->
 
@@ -436,7 +437,7 @@ AEM現在允許列出包含client-secret的其他關鍵字。 當受支援的整
 您可以使用兩種不同的方法來安裝[!DNL Experience Manager] 6.5.25.0.<!-- UPDATE FOR EACH NEW RELEASE -->
 
 * 伺服器上線時，請將封裝放入`../crx-quickstart/install`資料夾。 套件會自動安裝。
-* 使用封裝管理員[&#128279;](/help/sites-administering/package-manager.md#package-share)的HTTP API。 使用`cmd=install&recursive=true`安裝巢狀套件。
+* 使用封裝管理員](/help/sites-administering/package-manager.md#package-share)的[HTTP API。 使用`cmd=install&recursive=true`安裝巢狀套件。
 
 >[!NOTE]
 >
@@ -516,7 +517,7 @@ Adobe打算在產品生命週期結束前保留這些較舊的端點。 Adobe �
 
 <!-- THESE KNOWN ISSUES CARRY OVER EACH RELEASE. THE "PRODUCT UPDATES TEAM" IS SUPPOSED TO VERIFY EACH ISSUE AND LET YOU KNOW IF ANYTHING NEEDS TO BE ADDED, DELETED, OR CHANGED IN THIS LIST. -->
 
-* 與Oak相關的&#x200B;**&#x200B;**
+* 與Oak相關的&#x200B;****
 從Service Pack 13及更高版本開始，下列錯誤記錄檔開始出現，這會影響持續性快取：
 
   ```shell
@@ -595,7 +596,7 @@ Adobe打算在產品生命週期結束前保留這些較舊的端點。 Adobe �
 
 ### AEM Sites的已知問題 {#known-issues-aem-sites-6525}
 
-內容片段 — 預覽失敗，因為大型片段樹受到DoS保護。 請參閱有關預設GraphQL查詢執行器組態選項[&#128279;](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-kcs/kbarticles/ka-23945)的KB文章(SITES-17934)
+內容片段 — 預覽失敗，因為大型片段樹受到DoS保護。 請參閱有關預設GraphQL查詢執行器組態選項](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-kcs/kbarticles/ka-23945)的[KB文章(SITES-17934)
 
 ### AEM Forms的已知問題 {#known-issues-aem-forms-6525}
 
@@ -630,11 +631,11 @@ Adobe打算在產品生命週期結束前保留這些較舊的端點。 Adobe �
 這些網站僅供客戶使用。 若您是客戶並且需要存取權，請聯絡您的 Adobe 客戶經理。
 
 * [在 licensing.adobe.com 下載產品](https://licensing.adobe.com/)
-* [聯絡 Adobe 客戶支援](https://experienceleague.adobe.com/zh-hant/docs/support-resources/adobe-support-tools-guide/adobe-customer-support-experience#)。
+* [聯絡 Adobe 客戶支援](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-customer-support-experience#)。
 
 >[!MORELIKETHIS]
 >
->* [[!DNL Experience Manager] 產品頁面](https://business.adobe.com/tw/products/experience-manager/adobe-experience-manager.html)
+>* [[!DNL Experience Manager] 產品頁面](https://business.adobe.com/products/experience-manager/adobe-experience-manager.html)
 >* [[!DNL Experience Manager] 6.5檔案](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65)
 >* [訂閱Adobe優先產品更新](https://www.adobe.com/tw/subscription/priority-product-update.html)
 
