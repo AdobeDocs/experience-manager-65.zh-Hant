@@ -6,9 +6,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
 exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
-source-git-commit: 4a2915dc890887ad8c7174d3ef5f1de8413fd8f4
+source-git-commit: b30bc6ce844cacce396a09c5195c48083b96a9ec
 workflow-type: tm+mt
-source-wordcount: '7412'
+source-wordcount: '7444'
 ht-degree: 4%
 
 ---
@@ -372,7 +372,8 @@ AEM 6.5升級後，JSP檔案編輯現在可在CRXDE Lite中如預期般運作。
 
 #### 安全性{#foundation-security-6525}
 
-AEM現在允許列出包含client-secret的其他關鍵字。 當受支援的整合使用這些使用者端密碼命名模式時，設定建立不會再失敗。 (GRANITE-66495)
+* AEM現在允許列出包含client-secret的其他關鍵字。 當受支援的整合使用這些使用者端密碼命名模式時，設定建立不會再失敗。 (GRANITE-66495)
+* Sling XSS組合現在使用Java HTML Sanitizer程式庫，應該使用`XSSAPI#filterHTML()`方法的使用來安全地呈現HTML內容，而不是將資料傳遞至其他API。 (GRANITE-63840)
 
 <!-- #### Sling{#foundation-sling-6525} -->
 
