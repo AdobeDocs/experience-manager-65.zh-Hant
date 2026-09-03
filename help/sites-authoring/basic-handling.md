@@ -10,9 +10,9 @@ exl-id: ef1a3997-feb4-4cb0-9396-c8335b69bb10
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Developer
-source-git-commit: 8cb06cb2240f4ba460493dda1615cb64006d4646
+source-git-commit: 174d9e7466002e209422fefdc32a363a98dc99f9
 workflow-type: tm+mt
-source-wordcount: '3016'
+source-wordcount: '3122'
 ht-degree: 4%
 
 ---
@@ -253,11 +253,11 @@ AEM的使用者介面已啟用觸控功能。 觸控式介面可讓您使用觸�
 
   從&#x200B;**工具**&#x200B;主控台，您也可以存取外部&#x200B;**資源**：
 
-   * **檔案**
-檢視Web Experience Management檔案
+  * **檔案**
+    檢視Web Experience Management檔案
 
-   * **開發人員資源**
-開發人員資源和下載
+  * **開發人員資源**
+    開發人員資源和下載
 
   >[!NOTE]
   >
@@ -408,29 +408,30 @@ AEM的使用者介面已啟用觸控功能。 觸控式介面可讓您使用觸�
 
 * 您可以點選或按一下資源名稱或資源名稱右側的>形箭號，在樹狀結構中向上和向下導覽。
 
-   * 點選或按一下時，資源名稱和>形箭號會醒目提示。
+  * 點選或按一下時，資源名稱和>形箭號會醒目提示。
 
-     ![資料行檢視](assets/bh-17.png)
+    ![資料行檢視](assets/bh-17.png)
 
-   * 已點按/已點按資源的子項會顯示在已點按/已點按資源右側的欄中。
-   * 如果按一下沒有子系的資源名稱，其詳細資訊會顯示在最後一欄。
+  * 已點按/已點按資源的子項會顯示在已點按/已點按資源右側的欄中。
+  * 如果按一下沒有子系的資源名稱，其詳細資訊會顯示在最後一欄。
 
 * 點選或按一下縮圖可選取資源。
 
-   * 選取時，縮圖上會覆蓋勾號，資源名稱也會反白顯示。
-   * 所選資源的詳細資訊會顯示在最後一欄。
-   * 動作工具列隨即可用。
+  * 選取時，縮圖上會覆蓋勾號，資源名稱也會反白顯示。
+  * 所選資源的詳細資訊會顯示在最後一欄。
+  * 動作工具列隨即可用。
 
-     ![資料行檢視](assets/bh-18.png)
+    ![資料行檢視](assets/bh-18.png)
 
   在欄檢視中選取頁面時，選取的頁面會連同下列詳細資料顯示在最後一欄：
 
-   * 頁面標題
-   * 頁面名稱（頁面URL的一部分）
-   * 頁面所依據的範本
-   * 修改詳細資料
-   * 頁面語言
-   * 發佈詳細資料
+  * 頁面標題
+  * 頁面名稱（頁面URL的一部分）
+  * 頁面所依據的範本
+  * 修改詳細資料
+  * 頁面語言
+  * 發佈詳細資料
+  * [頁面開啟/關閉時間](/help/sites-authoring/editing-page-properties.md#on-off-time) （若有設定）
 
 ### 卡片檢視 {#card-view}
 
@@ -438,13 +439,13 @@ AEM的使用者介面已啟用觸控功能。 觸控式介面可讓您使用觸�
 
 * 卡片檢視會顯示目前層級中每個專案的資訊卡片。 這些會提供下列資訊：
 
-   * 頁面內容的視覺化表示法。
-   * 頁面標題。
-   * 重要日期（例如上次編輯、上次發佈）。
-   * 如果頁面已鎖定、隱藏或屬於即時副本的一部分。
-   * 適當時，您需要在工作流程中採取動作的時機。
+  * 頁面內容的視覺化表示法。
+  * 頁面標題。
+  * 重要日期（例如上次編輯、上次發佈）。
+  * 如果頁面已鎖定、隱藏或屬於即時副本的一部分。
+  * 適當時，您需要在工作流程中採取動作的時機。
 
-      * 表示所需動作的標籤可能與[收件匣](/help/sites-authoring/inbox.md)中的專案有關。
+    * 表示所需動作的標籤可能與[收件匣](/help/sites-authoring/inbox.md)中的專案有關。
 
 * [此檢視中也提供快速動作](#quick-actions)，例如選取範圍以及常見的動作，例如編輯。
 
@@ -463,26 +464,31 @@ AEM的使用者介面已啟用觸控功能。 觸控式介面可讓您使用觸�
 
   ![清單檢視 — 全選](assets/bh-20.png)
 
-   * 當選取清單中的所有專案時，此核取方塊會顯示為已核取。
+  * 當選取清單中的所有專案時，此核取方塊會顯示為已核取。
 
-      * 若要取消選取全部，請按一下核取方塊。
+    * 若要取消選取全部，請按一下核取方塊。
 
-   * 僅選取部分專案時，其顯示會帶有減號。
+  * 僅選取部分專案時，其顯示會帶有減號。
 
-      * 若要選取全部，請按一下核取方塊。
-      * 若要取消選取全部，請再次按一下核取方塊。
+    * 若要選取全部，請按一下核取方塊。
+    * 若要取消選取全部，請再次按一下核取方塊。
 
 * 使用位於[檢視]按鈕下方的&#x200B;**檢視設定**&#x200B;選項來選取要顯示的欄。 下列欄可供顯示：
 
-   * **名稱** — 頁面名稱，在多語言撰寫環境中很有用，因為它是頁面URL的一部分，無論使用何種語言，都不會變更
-   * **修改日期** — 上次修改日期和上次修改的使用者
-   * **已發佈** — 發佈狀態
-   * **範本** — 頁面所依據的範本
-   * **工作流程** — 目前已套用至頁面的工作流程。 將滑鼠移至上方或開啟「時間軸」時，可以取得更多資訊。
+  * **名稱** — 頁面名稱，在多語言撰寫環境中很有用，因為它是頁面URL的一部分，無論使用何種語言，都不會變更
+  * **修改日期** — 上次修改日期和上次修改的使用者
+    * 如果頁面自上次發佈後已更新，欄專案則會以警告圖示標籤。
+    * ![自上次發行後已修改](assets/modified.png)
+  * **已發佈** — 發佈狀態
+    * 如果頁面已設定[開啟/關閉時間](/help/sites-authoring/editing-page-properties.md#on-time)，欄專案將會以時鐘圖示標籤。
+    * 將滑鼠指標暫留在圖示上即可檢視詳細資訊。
+    * ![開啟關閉時間集](assets/on-off-time.png)
+  * **範本** — 頁面所依據的範本
+  * **工作流程** — 目前已套用至頁面的工作流程。 將滑鼠移至上方或開啟「時間軸」時，可以取得更多資訊。
 
-   * **頁面分析**
-   * **不重複訪客**
-   * 第&#x200B;**頁上的**&#x200B;時間
+  * **頁面分析**
+  * **不重複訪客**
+  * 第&#x200B;**頁上的**&#x200B;時間
 
   ![檢視設定 — 設定資料行](assets/bh-21.png)
 
@@ -542,25 +548,27 @@ AEM的使用者介面已啟用觸控功能。 觸控式介面可讓您使用觸�
 
 * [檢視與選取專案相關的各種事件](#timelineviewevents)。
 
-   * 您可從下拉式清單中選取事件型別：
+  * 您可從下拉式清單中選取事件型別：
 
-      * [評論](#timelineaddingandviewingcomments)
-      * 註解
-      * 活動
-      * [啟動](/help/sites-authoring/launches.md)
-      * [版本](/help/sites-authoring/working-with-page-versions.md)
-      * [工作流程](/help/sites-authoring/workflows-applying.md)
+    * [評論](#timelineaddingandviewingcomments)
+    * 註解
+    * 活動，包括編輯和發佈
+      * 如果頁面已設定[開啟/關閉時間](/help/sites-authoring/editing-page-properties.md#on-off-time)，且目前時間在開啟/關閉時間範圍之外，則可能會顯示「頁面無效」活動。
+      * 這僅表示頁面在其有效期間之外，不一定是該頁面已取消發佈。
+    * [啟動](/help/sites-authoring/launches.md)
+    * [版本](/help/sites-authoring/working-with-page-versions.md)
+    * [工作流程](/help/sites-authoring/workflows-applying.md)
 
-         * 除了[暫時性工作流程](/help/sites-developing/workflows.md#transient-workflows)，因為沒有儲存這些工作流程的歷程記錄資訊
+      * 除了[暫時性工作流程](/help/sites-developing/workflows.md#transient-workflows)，因為沒有儲存這些工作流程的歷程記錄資訊
 
-      * 並全部顯示
+    * 並全部顯示
 
 * [新增/檢視所選專案的相關註解](#timelineaddingandviewingcomments)。 「注 **釋** 」方塊會顯示在事件清單的底部。 鍵入評論後跟回車可註冊該評論。 當選取「注 **釋** 」或「 **全部顯示** 」時顯示。
 
 * 特定的主控台具有其他功能。 例如，在Sites主控台中，您可以執行以下操作：
 
-   * [儲存版本](/help/sites-authoring/working-with-page-versions.md#creatinganewversiontouchoptimizedui)。
-   * [啟動工作流程](/help/sites-authoring/workflows-applying.md#startingaworkflowfromtherail)。
+  * [儲存版本](/help/sites-authoring/working-with-page-versions.md#creatinganewversiontouchoptimizedui)。
+  * [啟動工作流程](/help/sites-authoring/workflows-applying.md#startingaworkflowfromtherail)。
 
 這些選項可透過&#x200B;**註解**&#x200B;欄位旁的>形箭號存取。
 
@@ -576,8 +584,8 @@ AEM的使用者介面已啟用觸控功能。 觸控式介面可讓您使用觸�
 * [語言副本](/help/sites-administering/tc-prep.md#seeing-the-status-of-language-roots)
 * 內容參照：
 
-   * 從其他頁面直接連結至所選頁面
-   * 參照元件在所選頁面中借用、借出或兩者皆借用的內容
+  * 從其他頁面直接連結至所選頁面
+  * 參照元件在所選頁面中借用、借出或兩者皆借用的內容
 
 ![bh-28](assets/bh-28.png)
 

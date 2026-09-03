@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Developer
 mini-toc-levels: 2
-source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
+source-git-commit: 174d9e7466002e209422fefdc32a363a98dc99f9
 workflow-type: tm+mt
-source-wordcount: '2477'
-ht-degree: 3%
+source-wordcount: '2559'
+ht-degree: 4%
 
 ---
 
@@ -27,16 +27,16 @@ ht-degree: 3%
 #### 標題和標籤 {#tile}
 
 * **標題** — 頁面的標題會顯示在不同的位置
-   * 例如，**網站**&#x200B;索引標籤清單和&#x200B;**網站**&#x200B;卡片/清單檢視。
-   * 這是必要欄位。
+  * 例如，**網站**&#x200B;索引標籤清單和&#x200B;**網站**&#x200B;卡片/清單檢視。
+  * 這是必要欄位。
 * **標籤** — 您可以在此處更新選取方塊中的清單，以新增或移除頁面上的標籤。
-   * 選取標籤後，標籤會列在選取方塊下方。 您可以使用x從此清單中移除標籤。
-   * 在空白選取方塊中輸入名稱即可輸入新標籤。
-      * 新標籤會在您點選Enter時建立。
-      * 新標籤會在右側顯示一個小星號，表示它是新標籤。
-   * 使用下拉式清單，您可以從現有標籤中選取。
-   * 當您將滑鼠移到選取方塊中的標籤專案上時，會出現x，可用來為此頁面移除該標籤。
-   * 如需關於標籤的詳細資訊，請參閱[使用標籤。](/help/sites-authoring/tags.md)
+  * 選取標籤後，標籤會列在選取方塊下方。 您可以使用x從此清單中移除標籤。
+  * 在空白選取方塊中輸入名稱即可輸入新標籤。
+    * 新標籤會在您點選Enter時建立。
+    * 新標籤會在右側顯示一個小星號，表示它是新標籤。
+  * 使用下拉式清單，您可以從現有標籤中選取。
+  * 當您將滑鼠移到選取方塊中的標籤專案上時，會出現x，可用來為此頁面移除該標籤。
+  * 如需關於標籤的詳細資訊，請參閱[使用標籤。](/help/sites-authoring/tags.md)
 * **在導覽中隱藏** — 指示在產生的網站頁面導覽中是顯示還是隱藏頁面
 
 #### 品牌元素 {#branding}
@@ -44,17 +44,17 @@ ht-degree: 3%
 藉由將品牌概要附加至每個頁面標題，跨頁面套用一致的品牌識別。 此功能需要使用2.14.0版或更新版本的[核心元件。](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)的頁面元件
 
 * **覆寫** — 檢查以在此頁面上定義品牌概要。
-   * 此值由任何子頁面繼承，除非它們也設定了&#x200B;**覆寫**&#x200B;值。
+  * 此值由任何子頁面繼承，除非它們也設定了&#x200B;**覆寫**&#x200B;值。
 * **覆寫值** — 要附加至頁面標題的品牌概要文字
-   * 值會附加至頁面標題後的垂直號字元，例如`Cycling Tuscany | Always ready for the WKND`
+  * 值會附加至頁面標題後的垂直號字元，例如`Cycling Tuscany | Always ready for the WKND`
 
 #### 更多標題和說明 {#more}
 
 * **頁面標題** — 要在頁面上使用的標題
-   * 通常由標題元件使用
-   * 如果空白，則使用&#x200B;**標題**。
+  * 通常由標題元件使用
+  * 如果空白，則使用&#x200B;**標題**。
 * **導覽標題** — 您可以指定單獨的標題以用於導覽（例如，如果您想要更簡潔的標題）。
-   * 如果空白，則使用&#x200B;**標題**。
+  * 如果空白，則使用&#x200B;**標題**。
 * **子標題** — 頁面上使用的子標題
 * **描述** — 頁面的描述、用途或您要新增的任何其他詳細資訊
 
@@ -64,13 +64,15 @@ ht-degree: 3%
 
 * **開啟時間** — 已發佈頁面在發佈環境中可見（轉譯）的日期和時間。 頁面必須以手動方式或預先設定的自動復寫方式發佈。
 
-   * 如果已經[發佈，](/help/sites-authoring/publishing-pages.md)此頁面可在發佈執行個體上使用，但會保持隱匿（隱藏）狀態，直到在指定時間才呈現。
-   * 如果未發佈且[已設定為自動復寫，](/help/sites-deploying/replication.md)則會自動發佈頁面，然後在指定的時間轉譯。
-   * 如果未發佈且未設定為自動復寫，則不會自動發佈頁面，因此嘗試存取該頁面時會顯示404。
+  * 如果已經[發佈，](/help/sites-authoring/publishing-pages.md)此頁面可在發佈執行個體上使用，但會保持隱匿（隱藏）狀態，直到在指定時間才呈現。
+  * 如果未發佈且[已設定為自動復寫，](/help/sites-deploying/replication.md)則會自動發佈頁面，然後在指定的時間轉譯。
+  * 如果未發佈且未設定為自動復寫，則不會自動發佈頁面，因此嘗試存取該頁面時會顯示404。
 
 * **關閉時間** — 類似於&#x200B;**開啟時間**，且經常與其搭配使用，這會定義發佈頁面在發佈環境中隱藏的時間。
 
 對於您要發佈的頁面，請將這些欄位（**開啟時間**&#x200B;和&#x200B;**關閉時間**）留空，這些欄位可立即使用並在發佈環境中使用，直到它們停用（一般案例）為止。
+
+設定開啟/關閉時間時，您會在Sites Console[&#128279;](/help/sites-authoring/basic-handling.md#views)的清單和卡片檢視以及主控台側面板的[時間軸檢視中，看到與開啟時間相關的其他圖示和資訊。](/help/sites-authoring/basic-handling.md#timeline)
 
 >[!NOTE]
 >如果&#x200B;**開啟時間**&#x200B;或&#x200B;**關閉時間**&#x200B;是過去的時間，且已設定自動復寫，則會立即觸發相關動作。
@@ -85,7 +87,7 @@ ht-degree: 3%
 
 輸入此頁面的虛名URL，此URL可讓您使用較短和/或較具表現力的URL。
 
-例如，如果網站`welcome`的虛名URL設定為`/v1.0/startpage`至由路徑`http://example.com,`識別的頁面，則`http://example.com/welcome`將是`http://example.com/content/v1.0/startpage`的虛名URL
+例如，如果網站`http://example.com,`的虛名URL設定為`welcome`至由路徑`/v1.0/startpage`識別的頁面，則`http://example.com/welcome`將是`http://example.com/content/v1.0/startpage`的虛名URL
 
 >[!CAUTION]
 >
@@ -110,10 +112,10 @@ ht-degree: 3%
 * **重新導向** — 指出此頁面應該自動重新導向的頁面
 * **設計** — 指出要用於此頁面的[設計](/help/sites-developing/designer.md)。
 * **別名** — 指定要用於此頁面的別名
-   * 例如，如果您為頁面`private`定義別名`/content/wknd/us/en/magazine/members-only`，則也可以透過`/content/wknd/us/en/magazine/private`存取此頁面
-   * 建立別名會設定頁面節點上的`sling:alias`屬性，這只會影響資源，而不會影響存放庫路徑。
-   * 無法發佈編輯器中以別名存取的頁面。 編輯器中的[發佈選項](/help/sites-authoring/publishing-pages.md)僅適用於透過實際路徑存取的頁面。
-   * 如需詳細資訊，請參閱SEO和URL管理最佳實務下的[本地化頁面名稱](/help/managing/seo-and-url-management.md#localized-page-names)。
+  * 例如，如果您為頁面`/content/wknd/us/en/magazine/members-only`定義別名`private`，則也可以透過`/content/wknd/us/en/magazine/private`存取此頁面
+  * 建立別名會設定頁面節點上的`sling:alias`屬性，這只會影響資源，而不會影響存放庫路徑。
+  * 無法發佈編輯器中以別名存取的頁面。 編輯器中的[發佈選項](/help/sites-authoring/publishing-pages.md)僅適用於透過實際路徑存取的頁面。
+  * 如需詳細資訊，請參閱SEO和URL管理最佳實務下的[本地化頁面名稱](/help/managing/seo-and-url-management.md#localized-page-names)。
 
 #### 設定 {#configuration}
 
@@ -147,9 +149,9 @@ ht-degree: 3%
 #### SEO {#seo}
 
 * **標準URL** — 用於覆寫頁面的標準URL
-   * 如果保留為空白，頁面的URL將是其標準URL。
-* **Robots標籤** — 使用下拉式清單來選取Robots標籤，以控制搜尋引擎編目程式的行為
-   * 有些選項會相互衝突，以較寬鬆的選項優先。
+  * 如果保留為空白，頁面的URL將是其標準URL。
+* **Robots標籤** — 使用下拉式清單來選取Robots標籤，以控制搜尋引擎爬蟲的行為
+  * 有些選項會相互衝突，以較寬鬆的選項優先。
 * **產生Sitemap** — 選取時，會為此頁面及其子系產生`sitemap.xml`。
 
 ### 影像 {#images}
@@ -175,18 +177,18 @@ ht-degree: 3%
 
 * **Cloud Service設定** — 定義用於頁面的雲端服務設定
 * **繼承自** — 對於即時副本和語言副本，預設會從Blueprint繼承雲端設定。
-   * 取消勾選以覆寫繼承
+  * 取消勾選以覆寫繼承
 
 ### 個人化 {#personalization}
 
 #### ContextHub 組態 {#contexthub}
 
 * **繼承自** — 預設會從父頁面繼承ContextHub設定。
-   * 取消勾選以覆寫繼承。
+  * 取消勾選以覆寫繼承。
 * **ContextHub路徑** — 選取[ContextHub設定](/help/sites-developing/ch-configuring.md)
 * **區段路徑** — 選取[區段路徑](/help/sites-administering/segmentation.md)。
 
-#### 定位組態 {#targeting}
+#### 目標選擇組態 {#targeting}
 
 選取[品牌以指定目標定位的範圍。](/help/sites-authoring/target-adobe-campaign.md)
 
@@ -251,16 +253,16 @@ ht-degree: 3%
 
 * 從&#x200B;**網站**&#x200B;主控台：
 
-   * [建立頁面](/help/sites-authoring/managing-pages.md#creating-a-new-page) （屬性的子集）
+  * [建立頁面](/help/sites-authoring/managing-pages.md#creating-a-new-page) （屬性的子集）
 
-   * 按一下或點選&#x200B;**屬性**
+  * 按一下或點選&#x200B;**屬性**
 
-      * 針對單一頁面
-      * 針對多個頁面（只有屬性的子集可整體編輯）
+    * 針對單一頁面
+    * 針對多個頁面（只有屬性的子集可整體編輯）
 
 * 從頁面編輯器：
 
-   * 使用 **頁面資訊** (接著 **開啟屬性**)
+  * 使用 **頁面資訊** (接著 **開啟屬性**)
 
 ### 從Sites Console — 單一頁面 {#from-the-sites-console-single-page}
 
@@ -304,7 +306,7 @@ ht-degree: 3%
 >
 >您也可以為Assets大量編輯屬性。 兩者相似，但有幾處不同。 如需詳細資訊，請參閱[編輯多個Assets的屬性](/help/assets/metadata.md)。
 >
->還有[大量編輯器](/help/sites-administering/bulk-editor.md)。 此編輯器可讓您使用GQL (Google查詢語言)從多個頁面搜尋內容，然後直接使用大量編輯器編輯內容，再將變更儲存到原始頁面。
+>還有[大量編輯器](/help/sites-administering/bulk-editor.md)。 此編輯器可讓您使用GQL （Google查詢語言）從多個頁面搜尋內容，然後直接使用大量編輯器編輯內容，再將變更儲存到原始頁面。
 
 您可以選取多個頁面以透過各種方法進行大量編輯，包括：
 
@@ -322,7 +324,7 @@ ht-degree: 3%
 * 共用相同的資源型別
 * 不是Livecopy的一部分
 
-   * 如果有任何頁面位於即時副本中，則會在屬性開啟時顯示訊息。
+  * 如果有任何頁面位於即時副本中，則會在屬性開啟時顯示訊息。
 
 進入「大量編輯」後，您可以執行下列動作：
 
@@ -330,23 +332,23 @@ ht-degree: 3%
 
   檢視多個頁面的頁面屬性時，您會看到下列內容：
 
-   * 受影響的頁面清單
+  * 受影響的頁面清單
 
-      * 您可以選取/取消選取（如有必要）
+    * 您可以選取/取消選取（如有必要）
 
-   * 索引標籤
+  * 索引標籤
 
-      * 和檢視單一頁面屬性時一樣，屬性會依索引標籤排序。
+    * 和檢視單一頁面屬性時一樣，屬性會依索引標籤排序。
 
-   * 屬性的子集
+  * 屬性的子集
 
-      * 會顯示所有選定頁面上可用的屬性，這些屬性已明確定義為可大量編輯。
-      * 如果您將頁面選取範圍縮小至一頁，則會顯示所有屬性。
+    * 會顯示所有選定頁面上可用的屬性，這些屬性已明確定義為可大量編輯。
+    * 如果您將頁面選取範圍縮小至一頁，則會顯示所有屬性。
 
-   * 具有共同值的共同屬性
+  * 具有共同值的共同屬性
 
-      * 在「檢視」模式中只會顯示具有相同值的屬性。
-      * 當欄位有多個值時（例如Tags），只有在&#x200B;*所有*&#x200B;為通用時，才會顯示值。 如果只有部分相同，則僅在編輯時顯示。
+    * 在「檢視」模式中只會顯示具有相同值的屬性。
+    * 當欄位有多個值時（例如Tags），只有在&#x200B;*所有*&#x200B;為通用時，才會顯示值。 如果只有部分相同，則僅在編輯時顯示。
 
   如果沒有任何具有相同值的屬性存在，則會顯示訊息。
 
@@ -354,12 +356,12 @@ ht-degree: 3%
 
   編輯多個頁面的頁面屬性時：
 
-   * 您可以更新可用欄位中的值。
+  * 您可以更新可用欄位中的值。
 
-      * 當您選取&#x200B;**完成**&#x200B;時，新值會套用至所有選取的頁面。
-      * 當欄位有多個值時（例如「標籤」），您可以附加新值或移除通用值。
+    * 當您選取&#x200B;**完成**&#x200B;時，新值會套用至所有選取的頁面。
+    * 當欄位有多個值時（例如「標籤」），您可以附加新值或移除通用值。
 
-   * 不同頁面中通用但值不同的欄位，會以特殊值（例如文字`<Mixed Entries>`）表示。
+  * 不同頁面中通用但值不同的欄位，會以特殊值（例如文字`<Mixed Entries>`）表示。
 
 >[!NOTE]
 >
