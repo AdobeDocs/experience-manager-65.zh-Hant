@@ -72,7 +72,7 @@ ht-degree: 4%
 
 對於您要發佈的頁面，請將這些欄位（**開啟時間**&#x200B;和&#x200B;**關閉時間**）留空，這些欄位可立即使用並在發佈環境中使用，直到它們停用（一般案例）為止。
 
-設定開啟/關閉時間時，您會在Sites Console](/help/sites-authoring/basic-handling.md#views)的[清單和卡片檢視以及主控台側面板的[時間軸檢視中，看到與開啟時間相關的其他圖示和資訊。](/help/sites-authoring/basic-handling.md#timeline)
+設定開啟/關閉時間時，您會在Sites Console[&#128279;](/help/sites-authoring/basic-handling.md#views)的清單和卡片檢視以及主控台側面板的[時間軸檢視中，看到與開啟時間相關的其他圖示和資訊。](/help/sites-authoring/basic-handling.md#timeline)
 
 >[!NOTE]
 >如果&#x200B;**開啟時間**&#x200B;或&#x200B;**關閉時間**&#x200B;是過去的時間，且已設定自動復寫，則會立即觸發相關動作。
