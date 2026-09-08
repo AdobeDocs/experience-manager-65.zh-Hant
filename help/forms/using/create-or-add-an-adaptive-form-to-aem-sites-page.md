@@ -6,10 +6,10 @@ feature: Adaptive Forms,Foundation Components
 exl-id: dcf023a1-8735-48cb-b3ea-d17357eeedaf
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+source-git-commit: f67bc6dce0f923294fba7d543eb3b170f992182f
 workflow-type: tm+mt
-source-wordcount: '2961'
-ht-degree: 26%
+source-wordcount: '3002'
+ht-degree: 25%
 
 ---
 
@@ -88,6 +88,10 @@ AEM Forms 會提供調適型表單內容和調適型表單 – 嵌入元件。 �
        <sly data-sly-call="${clientlib.css @ categories='core.forms.components.runtime.all'}"/>
        </sly> 
    ```
+
+   >[!NOTE]
+   >
+   >`core.forms.components.runtime.all`包含所有現成(OOTB)元件。 而是建立僅包含屬於設計原則並要包含在表單中的元件的自訂使用者端程式庫，並將其新增至頁面。
 
 1. 開啟`/apps/[your-sites-project]/components/page/customfooterlibs.html`檔案，並將下列程式碼新增至檔案：
 
