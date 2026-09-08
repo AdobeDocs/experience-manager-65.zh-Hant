@@ -6,21 +6,21 @@ feature: Adaptive Forms,Foundation Components
 exl-id: dcf023a1-8735-48cb-b3ea-d17357eeedaf
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+source-git-commit: f67bc6dce0f923294fba7d543eb3b170f992182f
 workflow-type: tm+mt
-source-wordcount: '2961'
-ht-degree: 26%
+source-wordcount: '3002'
+ht-degree: 25%
 
 ---
 
 # 建立或新增調適型表單至 AEM Sites 頁面 {#create-or-add-an-adaptive-form-to-aem-sites-page}
 
-<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hant)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。 這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。 本文會介紹使用基礎元件編寫最適化表單的舊方法。</span>
+<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。 這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。 本文會介紹使用基礎元件編寫最適化表單的舊方法。</span>
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
 | AEM 6.5 | 本文章 |
-| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/create-or-add-an-adaptive-form-to-aem-sites-page.html?lang=zh-Hant) |
+| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/create-or-add-an-adaptive-form-to-aem-sites-page.html) |
 
 透過 AEM Forms，您可以將調適型表單無縫整合到您的網頁中。 這可讓您的訪客方便填寫和提交表單，而無需離開他們所在的頁面。 這麼，他們便可毫不費力地使用網站的其他元素，同時積極與表單進行互動。
 
@@ -70,7 +70,7 @@ AEM Forms 會提供調適型表單內容和調適型表單 – 嵌入元件。 �
 
 +++  為您的環境啟用調適型表單核心元件
 
-確定您的環境已啟用[最適化Forms核心元件](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/quick-setup/enable-headless-adaptive-forms-and-core-components.html?lang=zh-Hant)。
+確定您的環境已啟用[最適化Forms核心元件](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/quick-setup/enable-headless-adaptive-forms-and-core-components.html?lang=en)。
 
 +++ 
 
@@ -88,6 +88,10 @@ AEM Forms 會提供調適型表單內容和調適型表單 – 嵌入元件。 �
        <sly data-sly-call="${clientlib.css @ categories='core.forms.components.runtime.all'}"/>
        </sly> 
    ```
+
+   >[!NOTE]
+   >
+   >`core.forms.components.runtime.all`包含所有現成(OOTB)元件。 而是建立僅包含屬於設計原則並要包含在表單中的元件的自訂使用者端程式庫，並將其新增至頁面。
 
 1. 開啟`/apps/[your-sites-project]/components/page/customfooterlibs.html`檔案，並將下列程式碼新增至檔案：
 
@@ -231,7 +235,7 @@ AEM Forms 會提供調適型表單內容和調適型表單 – 嵌入元件。 �
 
 ### 使用表單資料模型預填服務 {#fdm-prefill-service}
 
-您可以使用表單資料模型預填服務，使用已設定的表單資料模型預填表單的欄位。 表單資料模型預填服務使用已設定的表單資料模型[&#128279;](work-with-form-data-model.md#add-data-model-objects-and-services-add-data-model-objects-and-services)的Get服務來擷取資料。 若要針對最適化表單使用表單資料模型預填服務：
+您可以使用表單資料模型預填服務，使用已設定的表單資料模型預填表單的欄位。 表單資料模型預填服務使用已設定的表單資料模型](work-with-form-data-model.md#add-data-model-objects-and-services-add-data-model-objects-and-services)的[Get服務來擷取資料。 若要針對最適化表單使用表單資料模型預填服務：
 
 1. 開啟包含最適化表單的AEM頁面編輯器或體驗片段。
 1. 開啟內容樹狀結構，然後選取裝載您最適化表單的&#x200B;**[!UICONTROL 最適化Forms容器]**。 一個AEM Sites頁面可以託管多個最適化Forms。 因此，請仔細選取正確的最適化Forms容器。
