@@ -60,7 +60,7 @@ Adobe 持續評估產品功能，以更新或替代的方式來改善或取代�
 | 開發人員 | Handlebars使用者端程式庫。 Adobe不打算進一步維護和更新隨分送（快速入門）提供的Handlebar使用者端程式庫。 | Adobe建議仍然需要`Handlebars`程式碼的客戶，將其新增至專案程式碼基底。 |  |
 | 開發人員 | 草坪椅使用者端資源庫。 Adobe不打算進一步維護和更新隨分送（快速入門）提供的Lawnchair使用者端程式庫。 | Adobe建議仍需使用Lawnchair程式碼的客戶，將其新增至專案程式碼基底。 |  |
 | 開發人員 | `Granite.Sling.js`使用者端資料庫。 Adobe不打算進一步增強隨分送（快速入門）提供的Granite.Sling.js使用者端資料庫。 | Adobe建議依賴程式庫功能的客戶將其程式碼重構為不再使用。 |  |
-| 開發人員 | 使用 YUI 壓縮/縮小 JavaScript 用戶端資料庫。 Adobe 不打算進一步更新 YUI 資料庫。 直到AEM 6.4之前，YUI預設會透過切換至Google Closure Compiler (GCC)的選項來縮制JavaScript。 從AEM 6.5開始，預設為GCC。 | Adobe建議客戶升級至AEM 6.5，以切換至GCC進行實作 |  |
+| 開發人員 | 使用 YUI 壓縮/縮小 JavaScript 用戶端程式庫。 Adobe 不打算進一步更新 YUI 程式庫。 直到AEM 6.4之前，YUI預設會透過切換至Google Closure Compiler (GCC)的選項來縮制JavaScript。 從AEM 6.5開始，預設為GCC。 | Adobe建議客戶升級至AEM 6.5，以切換至GCC進行實作 |  |
 | 開發人員 | CRXDE Lite中的傳統UI對話方塊編輯器。 Adobe不打算進一步增強傳統UI對話方塊編輯器(隨附於分送（快速入門）) | 沒有可用的替代專案。 |  |
 | Forms | AEM Forms與AEM Mobile的整合已過時。 | 沒有可用的替代專案。 |  |
 | 開發人員 | CRXDE Lite中的傳統UI對話方塊編輯器。 Adobe不打算進一步增強傳統UI對話方塊編輯器(隨附於分送（快速入門）) | 沒有可用的替代專案。 |  |
