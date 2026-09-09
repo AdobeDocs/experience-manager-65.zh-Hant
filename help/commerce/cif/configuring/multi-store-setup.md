@@ -38,7 +38,7 @@ AEM CIF核心元件可用於多個AEM網站結構，而基礎GraphQL使用者端
 
 3. 依照下列步驟建立CIF Cloud Service設定的子設定：
 
-   * 在AEM中，移至[工具] > [一般] > [設定瀏覽器] ](/help/sites-administering/configurations.md#using-configuration-browser)[
+   * 在AEM中，移至[工具] > [一般] > [設定瀏覽器] [&#128279;](/help/sites-administering/configurations.md#using-configuration-browser)
    * 選取您建立的基本組態
    * 使用上述第2點所述的步驟建立設定
 
