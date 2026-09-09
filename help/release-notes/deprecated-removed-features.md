@@ -60,7 +60,7 @@ Adobe 持續評估產品功能，以更新或替代的方式來改善或取代�
 | 開發人員 | Handlebars使用者端程式庫。 Adobe不打算進一步維護和更新隨分送（快速入門）提供的Handlebar使用者端程式庫。 | Adobe建議仍然需要`Handlebars`程式碼的客戶，將其新增至專案程式碼基底。 |  |
 | 開發人員 | 草坪椅使用者端資源庫。 Adobe不打算進一步維護和更新隨分送（快速入門）提供的Lawnchair使用者端程式庫。 | Adobe建議仍需使用Lawnchair程式碼的客戶，將其新增至專案程式碼基底。 |  |
 | 開發人員 | `Granite.Sling.js`使用者端資料庫。 Adobe不打算進一步增強隨分送（快速入門）提供的Granite.Sling.js使用者端資料庫。 | Adobe建議依賴程式庫功能的客戶將其程式碼重構為不再使用。 |  |
-| 開發人員 | 使用 YUI 壓縮/縮小 JavaScript 用戶端資料庫。 Adobe 不打算進一步更新 YUI 資料庫。 直到AEM 6.4之前，YUI預設會透過切換至Google Closure Compiler (GCC)的選項來縮制JavaScript。 從AEM 6.5開始，預設為GCC。 | Adobe建議客戶升級至AEM 6.5，以切換至GCC進行實作 |  |
+| 開發人員 | 使用 YUI 壓縮/縮小 JavaScript 用戶端程式庫。 Adobe 不打算進一步更新 YUI 程式庫。 直到AEM 6.4之前，YUI預設會透過切換至Google Closure Compiler (GCC)的選項來縮制JavaScript。 從AEM 6.5開始，預設為GCC。 | Adobe建議客戶升級至AEM 6.5，以切換至GCC進行實作 |  |
 | 開發人員 | CRXDE Lite中的傳統UI對話方塊編輯器。 Adobe不打算進一步增強傳統UI對話方塊編輯器(隨附於分送（快速入門）) | 沒有可用的替代專案。 |  |
 | Forms | AEM Forms與AEM Mobile的整合已過時。 | 沒有可用的替代專案。 |  |
 | 開發人員 | CRXDE Lite中的傳統UI對話方塊編輯器。 Adobe不打算進一步增強傳統UI對話方塊編輯器(隨附於分送（快速入門）) | 沒有可用的替代專案。 |  |
@@ -73,9 +73,9 @@ Adobe 持續評估產品功能，以更新或替代的方式來改善或取代�
 
 | 區域 | 功能 | 替代方案 | 版本 (SP) |
 |--- |--- |--- |--- |
-| Commerce | AEM CIF Classic已移除。 | 您應該移轉至[AEM CIF](/help/commerce/cif/migration.md)。 如果您仍然需要CIF Classic，已建立相容性套件，請[聯絡Adobe客戶支援](https://experienceleague.adobe.com/zh-hant?support-solution=General#support)。 | 6.5.22.0 |
-| 與[!DNL Experience Cloud]整合 | 您可以透過[!DNL Adobe I/O]使用設定，將您的資產與[!DNL Experience Cloud]同步化。 [!DNL Adobe Experience Cloud]先前稱為[!DNL Adobe Experience Cloud]。 | 若您有任何疑問，請[聯絡Adobe客戶支援](https://experienceleague.adobe.com/zh-hant?support-solution=General#support)。 |  |
-| Analytics Activity Map | AEM中包含的Activity Map版本。 | 由於 Adobe Analytics API 中的安全性變更，AEM 中包含的 Activity Map 版本已無法再使用。 使用Adobe Analytics[&#128279;](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html?lang=zh-Hant)提供的ActivityMap外掛程式。 |  |
+| Commerce | AEM CIF Classic已移除。 | 您應該移轉至[AEM CIF](/help/commerce/cif/migration.md)。 如果您仍然需要CIF Classic，已建立相容性套件，請[聯絡Adobe客戶支援](https://experienceleague.adobe.com/?support-solution=General#support)。 | 6.5.22.0 |
+| 與[!DNL Experience Cloud]整合 | 您可以透過[!DNL Adobe I/O]使用設定，將您的資產與[!DNL Experience Cloud]同步化。 [!DNL Adobe Experience Cloud]先前稱為[!DNL Adobe Experience Cloud]。 | 若您有任何疑問，請[聯絡Adobe客戶支援](https://experienceleague.adobe.com/?support-solution=General#support)。 |  |
+| Analytics Activity Map | AEM中包含的Activity Map版本。 | 由於 Adobe Analytics API 中的安全性變更，AEM 中包含的 Activity Map 版本已無法再使用。 使用Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html)提供的[ActivityMap外掛程式。 |  |
 | 整合 | ExactTarget整合已從預設分送（快速入門）中移除，且不再提供。 | 沒有替代專案。 |  |
 | 整合 | Salesforce Force API整合已從預設發佈(Quickstart)中移除，現在是一個要從[軟體發佈](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)安裝的額外套件。 | 此功能仍可使用。 |  |
 | Forms | 已移除對Adobe中央移轉Bridge服務的支援，因為已不再支援Adobe中央產品。 | 沒有替代專案。 |  |
