@@ -50,7 +50,7 @@ PIM資料會透過GraphQL要求向AEM和使用者端公開。 Adobe建議將PIM�
 
 ## &#x200B;9. AEM Dispatcher的快取失效如何與AEM和商務搭配運作？
 
-Adobe 建議為 Dispatcher 上快取的頁面設定 TTL 型快取失效。 若是價格或庫存等動態資訊，Adobe建議在使用者端轉譯日期。 如需TTL型快取失效的詳細資訊，請參閱[AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17458.html)
+Adobe 建議為 Dispatcher 上快取的頁面設定 TTL 型快取失效。 若是價格或庫存等動態資訊，Adobe建議在使用者端轉譯日期。 如需TTL型快取失效的詳細資訊，請參閱[AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17458.html?lang=zh-Hant)
 
 ## &#x200B;10. 是否對使用Commerce跨AEM內容進行整合式搜尋有任何建議？
 
@@ -70,7 +70,7 @@ Adobe建議您在AEM中管理與行銷相關的資料和內容。 使用內容�
 
 ## &#x200B;14. 公司在整個展示層使用AEM時，如何確保PCI法規遵循？
 
-Adobe 建議使用抽象的付款方式。 這麼做會讓瀏覽器使用者端與支付閘道提供者直接通訊，讓Adobe不會保留或傳遞持卡人日期，或商業解決方案。 此方法僅需要 3 級 PCI 合規性。 然而，要完全符合 PCI 標準還需要考慮其他事項，例如員工如何與系統和資料互動。 如需Adobe Commerce PCI法規遵循的詳細資訊，請參閱[PCI法規遵循](https://business.adobe.com/products/magento/pci-compliance.html)
+Adobe 建議使用抽象的付款方式。 這麼做會讓瀏覽器使用者端與支付閘道提供者直接通訊，讓Adobe不會保留或傳遞持卡人日期，或商業解決方案。 此方法僅需要 3 級 PCI 合規性。 然而，要完全符合 PCI 標準還需要考慮其他事項，例如員工如何與系統和資料互動。 如需Adobe Commerce PCI法規遵循的詳細資訊，請參閱[PCI法規遵循](https://business.adobe.com/tw/products/magento/pci-compliance.html)
 
 ## &#x200B;15. 如果我使用AEM和Adobe Commerce雲端版本，此聯合解決方案是否符合PCI規範？
 

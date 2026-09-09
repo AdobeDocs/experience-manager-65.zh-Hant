@@ -192,7 +192,7 @@ ht-degree: 13%
 
 ### 新增功能 {#what-is-new-april}
 
-* CIF聯結器的組態設定均經過統一及簡化。 如需詳細資訊，請檢視[快速入門](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/home.html)或[新的AEM CIF專案安裝程式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/home.html)
+* CIF聯結器的組態設定均經過統一及簡化。 如需詳細資訊，請檢視[快速入門](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/home.html?lang=zh-Hant)或[新的AEM CIF專案安裝程式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/home.html?lang=zh-Hant)
 
 ### 功能改善 {#what-is-improved-april}
 
