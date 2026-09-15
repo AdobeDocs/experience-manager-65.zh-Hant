@@ -14,9 +14,7 @@ source-git-commit: ee6294a03b2e4faf4e3c2dc8a466d03a0fb8a28a
 workflow-type: tm+mt
 source-wordcount: '5344'
 ht-degree: 6%
-
 ---
-
 # 使用定位模式編寫目標內容{#authoring-targeted-content-using-targeting-mode}
 
 使用目標定位模式，您可以為AEM編寫目標定位內容。 目標定位模式和Target元件提供建立體驗內容的工具：
