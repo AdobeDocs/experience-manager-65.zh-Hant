@@ -2,14 +2,12 @@
 title: JEE WebLogic伺服器上的EAR部署失敗
 seo-title: EAR Deployment failing on JEE Weblogic Server
 description: 解決JEE WebLogic Server上EAR部署失敗的步驟
-source-git-commit: 05712cfcef1d9c37b7cd015133abaf6df0e351d2
+exl-id: 109d9182-5e3f-477e-9417-abc83d5ea3bc
+source-git-commit: 04cdc51ea2059daed6573987052feb893bd5f634
 workflow-type: tm+mt
-source-wordcount: '97'
+source-wordcount: '98'
 ht-degree: 7%
-
 ---
-
-
 # JEE WebLogic Server上的EAR部署失敗 {#ear-deployment-failing-on-jee-weblogic-server}
 
 ## 問題 {#issue}

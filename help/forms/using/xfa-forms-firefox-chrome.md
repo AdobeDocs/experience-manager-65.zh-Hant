@@ -8,13 +8,12 @@ geptopics: SG_AEMFORMS/categories/jee
 role: Admin
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
-source-git-commit: ebb61f2c5056a780e829e64031f8eba69a8ae25b
+exl-id: 31b52a82-5062-403e-bba7-e6a7e32ee961
+source-git-commit: 913e249ba52f1ee262ed78167ce3b2a857e86213
 workflow-type: tm+mt
-source-wordcount: '287'
+source-wordcount: '334'
 ht-degree: 1%
-
 ---
-
 # 如何在Firefox和Chrome上開啟XFA型PDF forms
 
 ## 問題
@@ -49,11 +48,11 @@ ht-degree: 1%
 
 1. 按一下Chrome PDF Viewer底下的「停用」 ，然後按一下Adobe PDF Plug-In底下的「啟用」 。
    ![chrome-pdf-viewer](/help/forms/using/assets/chrome-image.png)
-如需詳細資訊，請參閱Google的[Adobe PDF外掛程式](https://support.google.com/chrome/?hl=en&visit_id=638803785294106945-2276548125&rd=4&topic=3421431#topic=7439538)檔案。
+   如需詳細資訊，請參閱Google的[Adobe PDF外掛程式](https://support.google.com/chrome/?hl=en&visit_id=638803785294106945-2276548125&rd=4&topic=3421431#topic=7439538)檔案。
 
 >[!NOTE]
 > 
-> LiveCycle ES4支援將XFA型表單轉譯為HTML5，因此這些表單可以在支援HTML5的瀏覽器中開啟，包括在iPad等行動裝置上執行的那些表單。 表單的HTML5轉譯可維護表單設計的版面，並支援內嵌於XFA表單範本中的大部分表單邏輯(例如JavaScript、表單計算和表單驗證)。 如此一來，您對XFA表單的技術投資便可輕鬆結轉至無法執行Adobe Reader外掛程式的裝置。
->如需詳細資訊，請參閱[LiveCycle產品檔案](https://business.adobe.com/tw/products/experience-manager/forms/aem-forms.html)。
+> LiveCycle ES4支援將XFA型表單轉譯為HTML5，因此這些表單可以在支援HTML5的瀏覽器中開啟，包括在iPad等行動裝置上執行的那些表單。 表單的HTML5轉譯可維護表單設計的版面，並支援內嵌於XFA表單範本中的大部分表單邏輯（例如JavaScript、表單計算和表單驗證）。 如此一來，您對XFA表單的技術投資便可輕鬆結轉至無法執行Adobe Reader外掛程式的裝置。
+>如需詳細資訊，請參閱[LiveCycle產品檔案](https://business.adobe.com/products/experience-manager/forms/aem-forms.html)。
 
-[法律注意事項](https://chl-author-preview.corp.adobe.com/content/help/en/legal/legal-notices.html)    |    [線上隱私權原則](https://www.adobe.com/tw/privacy.html)
+[法律注意事項](https://chl-author-preview.corp.adobe.com/content/help/en/legal/legal-notices.html)    | [線上隱私權原則](https://www.adobe.com/tw/privacy.html)
