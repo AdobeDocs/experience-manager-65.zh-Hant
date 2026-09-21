@@ -8,14 +8,13 @@ topic-tags: coding
 role: Developer
 exl-id: 036c35c1-1be7-4825-bbb6-ea025e49c6f6
 solution: Experience Manager, Experience Manager Forms
+
 feature: Adaptive Forms,APIs & Integrations
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+source-git-commit: 2856a470ceb45fbdc6852c016386c465ee1b4930
 workflow-type: tm+mt
-source-wordcount: '5557'
+source-wordcount: '5599'
 ht-degree: 0%
-
 ---
-
 # 使用Java API叫用AEM Forms {#invoking-aem-forms-using-the-javaapi}
 
 **本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
@@ -62,6 +61,10 @@ Java API支援下列功能：
 >（僅全包式）使用命令`standalone.bat -b <Server IP> -c lc_turnkey.xml`啟動AEM Forms伺服器，以指定EJB的伺服器IP
 
 * 部署AEM Forms的J2EE應用程式伺服器。
+
+>[!NOTE]
+>
+>如果您在使用AEM Forms使用者端程式庫檔案（例如`adobe-livecycle-client.jar`）時遇到問題，請檢查[AEM Forms Hotfix](/help/release-notes/aem-forms-hotfix.md)頁面，檢視Hotfix是否提供該檔案的更新版本。 如果出現提示，請在專案的類別路徑中使用更新的檔案。
 
 ### 服務特定的JAR檔案 {#service-specific-jar-files}
 
@@ -422,21 +425,21 @@ Java API支援下列功能：
 
 * **DSC_DEFAULT_EJB_ENDPOINT：**&#x200B;如果您使用EJB連線模式，此值代表部署AEM Forms之J2EE應用程式伺服器的URL。 若要從遠端叫用AEM Forms，請指定部署AEM Forms的J2EE應用程式伺服器名稱。 如果您的使用者端應用程式位於相同的J2EE應用程式伺服器上，則可以指定`localhost`。 視建置AEM Forms的J2EE應用程式伺服器而定，請指定下列其中一個值：
 
-   * JBoss： `https://<ServerName>:8080 (default port)`
-   * WebSphere： `iiop://<ServerName>:2809 (default port)`
-   * WebLogic： `t3://<ServerName>:7001 (default port)`
+  * JBoss： `https://<ServerName>:8080 (default port)`
+  * WebSphere： `iiop://<ServerName>:2809 (default port)`
+  * WebLogic： `t3://<ServerName>:7001 (default port)`
 
 * **DSC_DEFAULT_SOAP_ENDPOINT**：如果您使用SOAP連線模式，此值代表叫用要求傳送到的端點。 若要從遠端叫用AEM Forms，請指定部署AEM Forms的J2EE應用程式伺服器名稱。 如果您的使用者端應用程式位於相同的J2EE應用程式伺服器上，您可以指定`localhost` （例如，`http://localhost:8080`）。
 
-   * 如果J2EE應用程式是JBoss，則通訊埠值`8080`適用。 如果J2EE應用程式伺服器是® WebSphere®，請使用連線埠`9080`。 同樣地，如果J2EE應用程式伺服器是WebLogic，請使用連線埠`7001`。 (這些值是預設的連線埠值。 如果您變更連線埠值，請使用適用的連線埠號碼。)
+  * 如果J2EE應用程式是JBoss，則通訊埠值`8080`適用。 如果J2EE應用程式伺服器是® WebSphere®，請使用連線埠`9080`。 同樣地，如果J2EE應用程式伺服器是WebLogic，請使用連線埠`7001`。 (這些值是預設的連線埠值。 如果您變更連線埠值，請使用適用的連線埠號碼。)
 
 * **DSC_TRANSPORT_PROTOCOL**：如果您使用EJB連線模式，請為此值指定`ServiceClientFactoryProperties.DSC_EJB_PROTOCOL`。 如果您使用SOAP連線模式，請指定`ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL`。
 * **DSC_SERVER_TYPE**：指定部署AEM Forms的J2EE應用程式伺服器。 有效值為`JBoss`、`WebSphere`、`WebLogic`。
 
-   * 如果您將此連線屬性設為`WebSphere`，則`java.naming.factory.initial`值會設為`com.ibm.ws.naming.util.WsnInitCtxFactory`。
-   * 如果您將此連線屬性設為`WebLogic`，則`java.naming.factory.initial`值會設為`weblogic.jndi.WLInitialContextFactory`。
-   * 同樣地，如果您將此連線屬性設為`JBoss`，則`java.naming.factory.initial`值會設為`org.jnp.interfaces.NamingContextFactory`。
-   * 如果您不想使用預設值，您可以將`java.naming.factory.initial`屬性設定為符合您要求的值。
+  * 如果您將此連線屬性設為`WebSphere`，則`java.naming.factory.initial`值會設為`com.ibm.ws.naming.util.WsnInitCtxFactory`。
+  * 如果您將此連線屬性設為`WebLogic`，則`java.naming.factory.initial`值會設為`weblogic.jndi.WLInitialContextFactory`。
+  * 同樣地，如果您將此連線屬性設為`JBoss`，則`java.naming.factory.initial`值會設為`org.jnp.interfaces.NamingContextFactory`。
+  * 如果您不想使用預設值，您可以將`java.naming.factory.initial`屬性設定為符合您要求的值。
 
   >[!NOTE]
   >
@@ -474,12 +477,12 @@ Java API支援下列功能：
    * `ServiceClientFactoryProperties.DSC_SERVER_TYPE`列舉值
    * 字串值，指定代管AEM Forms的J2EE應用程式伺服器（例如，如果AEM Forms部署在JBoss上，請指定`JBoss`）。
 
-      1. 若要設定`DSC_CREDENTIAL_USERNAME`連線屬性，請叫用`java.util.Properties`物件的`setProperty`方法，並傳遞下列值：
+     1. 若要設定`DSC_CREDENTIAL_USERNAME`連線屬性，請叫用`java.util.Properties`物件的`setProperty`方法，並傳遞下列值：
 
    * `ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME`列舉值
    * 字串值，指定呼叫AEM Forms所需的使用者名稱
 
-      1. 若要設定`DSC_CREDENTIAL_PASSWORD`連線屬性，請叫用`java.util.Properties`物件的`setProperty`方法，並傳遞下列值：
+     1. 若要設定`DSC_CREDENTIAL_PASSWORD`連線屬性，請叫用`java.util.Properties`物件的`setProperty`方法，並傳遞下列值：
 
    * `ServiceClientFactoryProperties.DSC_CREDENTIAL_PASSWORD`列舉值
    * 字串值，指定對應的密碼值
@@ -886,7 +889,7 @@ c：/temp/input.pdf檔案必須位於使用者端電腦上（而非伺服器電�
 <table>
  <thead>
   <tr>
-   <th><p>MIME型別</p></th>
+   <th><p>MIME 類型</p></th>
    <th><p>說明</p></th>
   </tr>
  </thead>
