@@ -1,18 +1,16 @@
 ---
-title: ' [!DNL Adobe Experience Manager] 6.5的發行說明'
-description: 尋找 [!DNL Adobe Experience Manager] 6.5的版本資訊、新增功能、安裝操作說明和詳細變更清單。
+title: '[!DNL Adobe Experience Manager] 6.5的發行說明'
+description: 尋找 [!DNL Adobe Experience Manager] 6.5 的版本資訊、新增功能、安裝方法和詳細變更清單。
 mini-toc-levels: 4
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
 exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
-source-git-commit: b30bc6ce844cacce396a09c5195c48083b96a9ec
+source-git-commit: 11e155ed72caf8f75bd2d8c8293723f24fe82945
 workflow-type: tm+mt
-source-wordcount: '7444'
+source-wordcount: '7679'
 ht-degree: 4%
-
 ---
-
 # [!DNL Adobe Experience Manager] 6.5最新Service Pack發行說明 {#aem-service-pack-release-notes}
 
 <!-- For an itemized list of all issues found in this release information, see the following spreadsheet: https://adobe-my.sharepoint.com/:x:/r/personal/anujkapo_adobe_com/_layouts/15/Doc.aspx?sourcedoc=%7B3ea81ae4-e605-4153-b132-f2698c86f84e%7D&action=edit&wdinitialsession=d8c7b903-87fc-4f2d-9ef2-542a82169570&wdrldsc=3&wdrldc=1&wdrldr=SessionMemoryQuotaExceededDuringSession -->
@@ -64,6 +62,8 @@ Experience Manager 6.5.25.0包含新功能、客戶要求的重要增強功能�
   > 若要將JBoss EAP從7.4.10升級至7.4.23，請參閱：
   > * [針對獨立環境，將JEE版AEM Forms的JBoss EAP從7.4.10升級至7.4.23](/help/forms/using/upgrade-jboss-eap-from-7-4-10-to-7-4-23.md)。
   > * [針對叢集環境，將JEE上的AEM Forms的JBoss EAP叢集從7.4.10升級至7.4.23。](/help/forms/using/upgrade-jboss-eap-cluster-from-7-4-10-to-7-4-23.md)
+
+* **Configuration Manager (LCM) Express Mode認證提示：**&#x200B;當您在JEE上使用Configuration Manager (LCM)在Express Mode設定AEM Forms時，LCM現在會顯示新畫面，在設定期間提示您輸入AEM管理員認證，而不是使用內建的預設認證。 此變更可透過AEM Service Pack 6.5.25.0的[Hotfix](/help/release-notes/aem-forms-hotfix.md)取得。 如需設定步驟，請參閱[使用JBoss Turnkey在JEE上安裝和部署AEM Forms](https://www.adobe.com/go/learn_aemforms_installTurnkey_65_tw)。 (FORMS-26365)
 
 ## 已修正Service Pack 25中的問題 {#fixed-issues}
 
@@ -607,6 +607,10 @@ Adobe打算在產品生命週期結束前保留這些較舊的端點。 Adobe �
 下列問題有可供下載和安裝的Hotfix。 您可以[下載並安裝Hotfix](/help/release-notes/aem-forms-hotfix.md)以解決下列問題：
 
 * **NPR-44100**&#x200B;在WAR/JEE部署（包括JEE上的AEM Forms）上安裝AEM 6.5 Service Pack 25後，`com.adobe.cq.screens.sessions`套件組合會維持在「已安裝」狀態，而不會變成「作用中」。 若要解決此問題，請[下載並安裝AEM Service Pack 6.5.25.0的Hotfix](/help/release-notes/aem-forms-hotfix.md)。
+* **FORMS-26802** SOAP SDK驗證強化後，LCM Configuration Manager、Workbench和Designer無法連線至JEE伺服器上的AEM Forms，錯誤為`ALC-LCM-200-001`，因為`/soap/sdk`端點拒絕未驗證的請求。 若要解決此問題，請[下載並安裝AEM Service Pack 6.5.25.0的Hotfix](/help/release-notes/aem-forms-hotfix.md)。
+* **FORMS-26679**&#x200B;在AEM Forms Document Security中，Microsoft Entra ID (MFA)重新導向後，驗證Cookie會遭到捨棄，導致在開啟受原則保護的檔案時發生「Cookie可能未啟用」錯誤。 若要解決此問題，請[下載並安裝AEM Service Pack 6.5.25.0的Hotfix](/help/release-notes/aem-forms-hotfix.md)。
+* **FORMS-26617**&#x200B;在使用WebLogic的JEE上的AEM Forms上，使用Microsoft SQL Server JDBC驅動程式12.10.0時，透過Configuration Manager的資料庫組態會失敗，因為「找不到合適的驅動程式」。 若要解決此問題，請[下載並安裝AEM Service Pack 6.5.25.0的Hotfix](/help/release-notes/aem-forms-hotfix.md)。
+* 安裝最新AEM Forms 6.5版本編號後，**FORMS-27869** PDF開啟速度緩慢。 若要解決此問題，請[下載並安裝AEM Service Pack 6.5.25.0的Hotfix](/help/release-notes/aem-forms-hotfix.md)。
 * **FORMS-23491** AEM Forms 6.5.24.0 JEE部署(JBoss、WebLogic、WebSphere)會受到CVE-2025-64775所影響，這是多部分請求處理中的Apache Struts拒絕服務漏洞。 若要解決此問題，請[下載並安裝AEM Service Pack 6.5.24.0的Hotfix](/help/release-notes/aem-forms-hotfix.md)。
 * **FORMS-14926**&#x200B;安裝AEM Forms JEE Service Pack 21 (6.5.21.0)後，如果在`<AEM_Forms_Installation>/lib/caching/lib`資料夾下發現重複的Geode jars `(geode-*-1.15.1.jar and geode-*-1.15.1.2.jar)`專案，請執行以下步驟以解決問題：
 
