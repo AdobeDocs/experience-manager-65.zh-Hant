@@ -1,18 +1,20 @@
 ---
-title: AEM Forms的Hotfix
-description: 提供有關如何下載和安裝AEM Forms的Hotfix的資訊。
+title: AEM 6.5 Forms的Hotfix
+description: 提供如何下載和安裝AEM 6.5 Forms的Hotfix的相關資訊。 如需AEM 6.5 LTS的相關資訊，請參閱AEM Forms 6.5 LTS Hotfix文章。
 exl-id: 37287332-3c8d-4ddc-a77e-3c5ee332898b
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
-source-git-commit: 11e155ed72caf8f75bd2d8c8293723f24fe82945
+source-git-commit: 8133fcba5caddc7c0054766a92a32e28bfbc6b21
 workflow-type: tm+mt
-source-wordcount: '4751'
+source-wordcount: '4809'
 ht-degree: 5%
 ---
-# Adobe Experience Manager Forms Hotfix{#aem-form-hotfix}
+# Adobe Experience Manager 6.5 Forms Hotfix{#aem-form-hotfix}
 
 本文列出為解決已知問題、改善系統穩定性及增強AEM Forms整體效能而實作的重大修正。
+
+本文適用於AEM 6.5 Forms （非LTS）。 若為AEM 6.5 LTS部署，請參閱[Adobe Experience Manager Forms 6.5 LTS Hotfix](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65-lts/content/forms/adobe-experience-manager-forms-65-lts-hotfixes)。
 
 >[!NOTE]
 >
@@ -73,6 +75,7 @@ ht-degree: 5%
     <li><b>FORMS-26617</b>在WebLogic上，使用Microsoft SQL Server JDBC驅動程式12.10.0時，透過Configuration Manager的資料庫組態會失敗，因為「找不到合適的驅動程式」。 此Hotfix會還原成功的資料來源設定。</li>
     <li>安裝最新AEM Forms 6.5版本編號後，<b>FORMS-27869</b> PDF開啟速度緩慢。 此Hotfix可改善檔案開啟效能。</li>
     </ul>
+    <p><strong>組建：</strong> AEMForms-6.5.0-0134</p>
     </td>
   </tr>
   <tr>
