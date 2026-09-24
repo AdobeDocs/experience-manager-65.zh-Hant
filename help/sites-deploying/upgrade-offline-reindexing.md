@@ -11,11 +11,9 @@ solution: Experience Manager, Experience Manager Sites
 role: Admin
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '1306'
-ht-degree: 0%
-
+source-wordcount: '1384'
+ht-degree: 1%
 ---
-
 # 使用離線重新索引以減少升級期間的停機時間 {#offline-reindexing-to-reduce-downtime-during-upgrades}
 
 ## 簡介 {#introduction}
@@ -26,11 +24,11 @@ ht-degree: 0%
 
 ## 概觀 {#overview}
 
-隨著功能集的展開，新版本的AEM會引入Oak索引定義的變更。 在升級AEM執行個體時，對Oak索引的變更會強制重新索引。 由於資產中的文字（例如PDF檔案中的文字）會被擷取及編制索引，因此重新索引對於資產部署而言成本較高。 使用MongoMK存放庫時，資料會透過網路持續存在，進一步增加重新索引所花費的時間。
+隨著功能集的展開，新版本的AEM會引入Oak索引定義的變更。 升級Oak執行個體時，對AEM索引的變更會強制重新索引。 由於資產中的文字（例如PDF檔案中的文字）會被擷取及編制索引，因此重新索引對於資產部署而言成本較高。 使用MongoMK存放庫時，資料會透過網路持續存在，進一步增加重新索引所花費的時間。
 
 在升級期間，大多數客戶面臨的問題是縮短停機時間。 解決方案是在升級期間&#x200B;**略過**&#x200B;重新索引活動。 若要達成此目的，請先建立新指令&#x200B;**prior**&#x200B;以執行升級，然後在升級期間直接匯入這些指令。
 
-## 方針 {#approach}
+## 方法 {#approach}
 
 ![offline-reindexing-upgrade-text-extraction](assets/offline-reindexing-upgrade-process.png)
 
@@ -45,7 +43,7 @@ ht-degree: 0%
 
 ### 文字提取 {#text-extraction}
 
-若要在AEM中啟用完整索引，會擷取二進位檔(例如PDF)的文字並將其新增至索引。 在索引過程中，這通常是昂貴的步驟。 文字擷取是特別建議用於重新索引資產存放庫（因為它們儲存大量二進位檔案）的最佳化步驟。
+若要在AEM中啟用完整索引，會擷取二進位檔（例如PDF）的文字，並將其新增至索引。 在索引過程中，這通常是昂貴的步驟。 文字擷取是特別建議用於重新索引資產存放庫（因為它們儲存大量二進位檔案）的最佳化步驟。
 
 ![offline-reindexing-upgrade-text-extraction](assets/offline-reindexing-upgrade-text-extraction.png)
 
@@ -85,7 +83,7 @@ java -jar oak-run.jar tika --data-file text-extraction/oak-binary-stats.csv --st
 
 其中`oak-index-name`是全文檢索索引的名稱，例如「lucene」。
 
-**3。 針對上述步驟**&#x200B;中遺漏的二進位檔案，使用Tika程式庫執行文字擷取程式
+**3. 針對上述步驟**&#x200B;中遺漏的二進位檔案，使用Tika程式庫執行文字擷取程式
 
 ```
 java -cp oak-run.jar:tika-app-1.21.jar org.apache.jackrabbit.oak.run.Main tika --data-file text-extraction/oak-binary-stats.csv --store-path text-extraction/store --fds-path <datastore path> extract
@@ -107,7 +105,7 @@ java -cp oak-run.jar:tika-app-1.21.jar org.apache.jackrabbit.oak.run.Main tika -
 
 **1. 產生目標AEM版本**&#x200B;的Oak Lucene索引定義
 
-傾印現有的索引定義。 發生變更的索引定義是使用目標AEM版本和Oak-run的AdobeGranite存放庫套件組合所產生。
+傾印現有的索引定義。 發生變更的索引定義是使用目標AEM版本的Adobe Granite存放庫套件組合及Oak-run產生的。
 
 若要從&#x200B;**來源** AEM執行個體傾印索引定義，請執行此命令：
 
@@ -121,7 +119,7 @@ java -jar oak-run.jar index --fds-path <datastore path> <nodestore path> --index
 
 其中`datastore path`和`nodestore path`來自&#x200B;**來源** AEM執行個體。
 
-然後，使用目標版本的Granite存放庫套件從&#x200B;**目標** AEM版本產生索引定義。
+然後，使用目標版本的Granite存放庫套件組合，從&#x200B;**目標** AEM版本產生索引定義。
 
 ```
 java -cp oak-run.jar:bundle-com.adobe.granite.repository.jar org.apache.jackrabbit.oak.index.IndexDefinitionUpdater --in indexing-definitions_source.json --out merge-index-definitions_target.json --initializer com.adobe.granite.repository.impl.GraniteContent
@@ -168,7 +166,7 @@ merge-index-definitions_target: JSON file having merged definitions for the targ
 
 ### 匯入索引 {#importing-indexes}
 
-使用AEM 6.4及更新版本時，AEM具有在啟動順序從磁碟匯入索引的內建功能。 啟動期間會觀察資料夾`<repository>/indexing-result/indexes`是否有索引資料。 在開始新版本的&#x200B;**target** AEM jar之前，您可以在[升級程式](in-place-upgrade.md#performing-the-upgrade)期間將預先建立的索引複製到上述位置。 AEM會將其匯入存放庫，並從系統中移除對應的查核點。 因此，完全避免重新索引。
+透過AEM 6.4及更新版本，AEM具有在啟動順序從磁碟匯入索引的內建功能。 啟動期間會觀察資料夾`<repository>/indexing-result/indexes`是否有索引資料。 在開始新版本的&#x200B;**target** AEM jar之前，您可以在[升級程式](in-place-upgrade.md#performing-the-upgrade)期間將預先建立的索引複製到上述位置。 AEM會將其匯入存放庫，並從系統中移除對應的查核點。 因此，完全避免重新索引。
 
 ## 其他秘訣和疑難排解 {#troubleshooting}
 
