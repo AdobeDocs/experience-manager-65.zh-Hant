@@ -11,11 +11,9 @@ feature: Deploying
 role: Admin
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '1380'
+source-wordcount: '1435'
 ht-degree: 0%
-
 ---
-
 # Oak-run.jar索引使用案例{#oak-run-jar-indexing-use-cases}
 
 Oak-run支援在命令列上索引使用案例，不必透過AEM的JMX主控台協調這些使用案例的執行。
@@ -73,7 +71,7 @@ Valid indexes :
 
 ## 使用案例2 — 索引統計資料 {#usecase2indexstatistics}
 
-為了診斷查詢效能Adobe的某些案例，通常需要現有的索引定義、來自客戶設定的索引相關統計資料。 目前為止，這項資訊分散在多個資源中。 為了更輕鬆進行疑難排解，Adobe已建立具有以下功能的工具：
+為了診斷查詢效能相關的一些案例，Adobe通常需要現有的索引定義，以及來自客戶設定的索引相關統計資料。 目前為止，這項資訊分散在多個資源中。 為了更輕鬆進行疑難排解，Adobe已建立具有以下功能的工具：
 
 1. 將系統上存在的所有索引定義傾印到單一JSON檔案中；
 
@@ -81,7 +79,7 @@ Valid indexes :
 
 1. 傾印索引內容以供離線分析；
 
-1. 即使AEM無法存取，仍可使用
+1. 可用，即使AEM無法存取
 
 上述作業現在可透過下列作業索引命令來完成：
 
@@ -119,7 +117,7 @@ java -jar oak-run*.jar index --fds-path=/path/to/datastore  /path/to/segmentstor
 * 重新索引涉及周遊整個存放庫，這可能對AEM設定造成高負載，從而影響一般使用者體驗；
 * 對於重新索引可能需要相當長時間的`DocumentNodeStore`安裝，如果作業期間與Mongo資料庫的連線失敗，則必須從頭開始重新索引；
 
-* 有時候，由於文字擷取，重新索引可能需要很長的時間。 這是特定於具有許多PDF檔案的設定，其中花費在文字擷取上的時間可能會影響索引時間。
+* 有時候，由於文字擷取，重新索引可能需要很長的時間。 這是具有許多PDF檔案的設定所專屬的行為，因為其中花費在文字擷取上的時間可能會影響索引時間。
 
 為了滿足這些目標，Oak-run索引工具支援可視需要使用之重新索引的不同模式。 oak-run index指令提供下列優點：
 
@@ -141,7 +139,7 @@ java -jar oak-run*.jar index --reindex --index-paths=/oak:index/lucene --read-wr
 
 這樣將提供下列優點
 
-* 對執行AEM執行個體影響極小。 大部分的讀取可以從次要伺服器完成，而且由於重新索引所需的所有周遊，執行AEM快取不會受到不利的影響；
+* 對執行AEM執行個體影響極小。 大部分的讀取可從次要伺服器完成，而且執行AEM快取不會因為重新索引所需的所有周遊而受到負面影響；
 * 使用者也可以透過`--index-definitions-file`選項提供新索引或更新索引的JSON。
 
 ### 重新索引 — SegmentNodeStore {#reindexsegmentnodestore}
@@ -152,7 +150,7 @@ java -jar oak-run*.jar index --reindex --index-paths=/oak:index/lucene --read-wr
 
 透過設定`reindex`旗標，遵循重新索引的已建立方式。
 
-#### 線上重新索引 — SegmentNodeStore - AEM執行個體正在執行 {#onlinereindexsegmentnodestoretheaeminstanceisrunning}
+#### 線上重新索引 — SegmentNodeStore - AEM執行個體執行中 {#onlinereindexsegmentnodestoretheaeminstanceisrunning}
 
 對於`SegmentNodeStore`安裝，只有一個處理程式可以在讀寫模式中存取區段檔案。 因此，Oak-run索引中的一些操作需要執行額外的手動步驟。
 
@@ -183,9 +181,9 @@ java -jar oak-run*.jar index --reindex --index-paths=/oak:index/lucene --read-wr
 
 #### 頻外重新索引 — SegmentNodeStore {#outofbandreindexsegmentnodestore}
 
-在此使用案例中，您可以在複製的設定上執行重新索引，以將對正在執行的AEM執行個體造成的影響降至最低：
+在此使用案例中，您可以在複製的設定上執行重新索引，以將對執行中的AEM執行個體造成的影響降至最低：
 
-1. 透過JMX作業建立查核點。 您可以前往[JMX主控台](/help/sites-administering/jmx-console.md)搜尋`CheckpointManager`，以執行此操作。 然後，使用高有效值(以秒為單位，按一下&#x200B;**createCheckpoint(long p1)**&#x200B;作業(例如&#x200B;**2592000**)。
+1. 透過JMX作業建立查核點。 您可以前往[JMX主控台](/help/sites-administering/jmx-console.md)搜尋`CheckpointManager`，以執行此操作。 然後，使用高有效值(以秒為單位，按一下&#x200B;**createCheckpoint(long p1)**&#x200B;作業（例如&#x200B;**2592000**）。
 1. 將`crx-quickstart`資料夾複製到新電腦
 1. 透過oak-run index命令執行重新索引
 
@@ -209,4 +207,4 @@ Oak-run現在支援提供JSON格式的索引定義，以及在未對即時執行
 
 1. 更新的JSON隨後會提供給系統管理員
 1. 系統管理員遵循頻外方法，在不同的安裝上準備索引
-1. 完成此操作後，產生的索引檔案會匯入到正在執行的AEM安裝中。
+1. 完成此操作後，產生的索引檔案會匯入到執行中的AEM安裝中。
