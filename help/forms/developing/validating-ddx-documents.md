@@ -1,22 +1,25 @@
 ---
 title: 驗證DDX檔案
+
 description: 使用Java API和網站服務API，以程式設計方式驗證DDX檔案。
+
+
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/assembling_pdf_documents
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
+
 role: Developer
 exl-id: 1f5a2cf3-ef6b-45b4-8fa8-b300e492fee1
 solution: Experience Manager, Experience Manager Forms
+
 feature: Adaptive Forms,Document Services,APIs & Integrations
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '1507'
+source-wordcount: '1542'
 ht-degree: 0%
-
 ---
-
 # 驗證DDX檔案 {#validating-ddx-documents}
 
 **本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
@@ -51,8 +54,8 @@ ht-degree: 0%
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-assembler-client.jar
-* adobe-utilities.jar (如果AEM Forms部署在JBoss上，則為必要)
-* jbossall-client.jar (如果AEM Forms部署在JBoss上，則為必要)
+* adobe-utilities.jar （如果AEM Forms部署在JBoss上，則為必要）
+* jbossall-client.jar （如果AEM Forms部署在JBoss上，則為必要）
 
 如果將AEM Forms部署在JBoss以外的受支援J2EE應用程式伺服器上，則必須將adobe-utilities.jar和jbossall-client.jar檔案取代為特定於AEM Forms部署所在J2EE應用程式伺服器的JAR檔案。
 
@@ -70,7 +73,7 @@ ht-degree: 0%
 
 **執行驗證**
 
-建立Assembler服務使用者端、參考DDX檔案並設定執行階段選項之後，您可以叫用`invokeDDX`作業來驗證DDX檔案。 驗證DDX檔案時，您可以傳遞`null`作為對應引數(此引數通常會儲存組合器執行DDX檔案中指定之作業所需的PDF檔案)。
+建立Assembler服務使用者端、參考DDX檔案並設定執行階段選項之後，您可以叫用`invokeDDX`作業來驗證DDX檔案。 驗證DDX檔案時，您可以傳遞`null`作為對應引數（此引數通常會儲存組合器執行DDX檔案中指定的作業所需的PDF檔案）。
 
 如果驗證失敗，則會擲回例外狀況，而記錄檔會包含詳細資訊，說明為何可從`OperationException`執行個體取得DDX檔案無效。 一旦通過基本的XML剖析和結構描述檢查，就會根據DDX規格執行驗證。 DDX檔案中的所有錯誤都在記錄中指定。
 
@@ -138,7 +141,7 @@ ht-degree: 0%
 
 [驗證DDX檔案](#validating-ddx-documents)
 
-[快速入門(SOAP模式)：使用Java API驗證DDX檔案](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-validating-ddx-documents-using-the-java-api) (SOAP模式)
+[快速入門（SOAP模式）：使用Java API驗證DDX檔案](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-validating-ddx-documents-using-the-java-api) （SOAP模式）
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -164,10 +167,10 @@ ht-degree: 0%
    * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作來啟用基本的HTTP驗證：
 
-      * 將AEM表單使用者名稱指派給欄位`AssemblerServiceClient.ClientCredentials.UserName.UserName`。
-      * 將對應的密碼值指派給欄位`AssemblerServiceClient.ClientCredentials.UserName.Password`。
-      * 將常數值`HttpClientCredentialType.Basic`指派給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
-      * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`指派給欄位`BasicHttpBindingSecurity.Security.Mode`。
+     * 將AEM表單使用者名稱指派給欄位`AssemblerServiceClient.ClientCredentials.UserName.UserName`。
+     * 將對應的密碼值指派給欄位`AssemblerServiceClient.ClientCredentials.UserName.Password`。
+     * 將常數值`HttpClientCredentialType.Basic`指派給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+     * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`指派給欄位`BasicHttpBindingSecurity.Security.Mode`。
 
 1. 參考現有的DDX檔案。
 

@@ -11,24 +11,22 @@ feature: Adaptive Forms
 role: User, Developer
 source-git-commit: e821be5233fd5f6688507096790d219d25903892
 workflow-type: tm+mt
-source-wordcount: '301'
+source-wordcount: '372'
 ht-degree: 0%
-
 ---
-
 # 管理憑證和憑證的基本知識 {#basics-of-managing-certificates-and-credentials}
 
 *認證*&#x200B;包含簽署或識別檔案所需的私密金鑰資訊。 *憑證*&#x200B;是您設定為信任的公開金鑰資訊。 AEM forms將憑證和認證用於多種用途：
 
-* Acrobat Reader DC擴充功能會使用認證，在PDF檔案中啟用Adobe Reader使用許可權。 (請參閱[設定認證以搭配Acrobat Reader DC擴充功能使用](/help/forms/using/admin-help/configuring-credentials-acrobat-reader-dc.md#configuring-credentials-for-use-with-acrobat-reader-dc-extensions)。)
-* 您可以設定Rights Management只顯示來自受信任發行者的憑證以用於Acrobat。 (請參閱[設定Rights Management顯示設定](/help/forms/using/admin-help/configuring-client-server-options.md#configure-document-security-display-settings)。) 一般名稱(CN)必須存在於憑證中。
+* Acrobat Reader DC擴充功能會使用認證來啟用PDF檔案中的Adobe Reader使用許可權。 （請參閱[設定認證以搭配Acrobat Reader DC擴充功能使用](/help/forms/using/admin-help/configuring-credentials-acrobat-reader-dc.md#configuring-credentials-for-use-with-acrobat-reader-dc-extensions)。）
+* 您可以設定Rights Management顯示憑證，以僅供來自受信任發行者的Acrobat使用。 （請參閱[設定Rights Management顯示設定](/help/forms/using/admin-help/configuring-client-server-options.md#configure-document-security-display-settings)。） 一般名稱(CN)必須存在於憑證中。
 * 簽章服務會存取憑證和認證。 如需簽名服務的詳細資訊，請參閱[服務參考](https://www.adobe.com/go/learn_aemforms_services_65)。
 
 **正在產生配對金鑰**
 
-AEM Forms使用信任存放區來儲存和管理憑證、認證和憑證撤銷清單(CRL)。 此外，您可以使用獨立的Hardware Security Module (HSM)裝置來儲存私密金鑰。
+AEM Forms使用其「信任存放區」來儲存和管理憑證、憑證和憑證撤銷清單(CRL)。 此外，您可以使用獨立的Hardware Security Module (HSM)裝置來儲存私密金鑰。
 
-AEM forms不提供任何選項來產生金鑰組。 不過，您可以使用Java keytool等工具產生它，並將其匯入AEM Forms信任存放區。 如需Java keytool的詳細資訊，請參閱下列內容：
+AEM forms不提供產生金鑰組的任何選項。 不過，您可以使用Java keytool等工具產生它，並將其匯入AEM表單信任存放區。 如需Java keytool的詳細資訊，請參閱下列內容：
 
 [https://docs.oracle.com/javase/tutorial/security/toolsign/step3.html](https://docs.oracle.com/javase/tutorial/security/toolsign/step3.html)
 
@@ -36,7 +34,7 @@ AEM forms不提供任何選項來產生金鑰組。 不過，您可以使用Java
 
 [https://helpcenter.gsx.com/hc/en-us/articles/115015960428-How-to-Generate-a-Self-Signed-Certificate-and-Private-Key-using-OpenSSL](https://helpcenter.gsx.com/hc/en-us/articles/115015960428-How-to-Generate-a-Self-Signed-Certificate-and-Private-Key-using-OpenSSL)
 
-下列簽章型別受到支援，並可在AEM表單中匯入：
+下列簽名型別受支援，並可在AEM表單中匯入：
 
 * XML簽章
 * XMLTimeStampToken

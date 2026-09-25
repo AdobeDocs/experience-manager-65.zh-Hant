@@ -1,35 +1,38 @@
 ---
 title: 轉譯已啟用許可權的Forms
+
 description: 使用Forms服務來轉譯已套用使用許可權的表單。 您可以使用Java API和Web服務API來轉譯啟用許可權的表單。
+
+
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/rendering_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
+
 role: Developer
 exl-id: 012a3a9f-542c-4ed1-a092-572bfccbdf21
 solution: Experience Manager, Experience Manager Forms
+
 feature: Adaptive Forms,Document Services,APIs & Integrations
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '1447'
+source-wordcount: '1488'
 ht-degree: 0%
-
 ---
-
 # 轉譯已啟用許可權的Forms {#rendering-rights-enabled-forms}
 
-Forms服務可轉譯已套用使用許可權的表單。 使用許可權與Acrobat中預設提供的功能有關，但不適用於Adobe Reader，例如新增註解至表單或填寫表單欄位及儲存表單的功能。 已套用使用許可權的Forms稱為許可權啟用表單。 在Adobe Reader中開啟許可權啟用表單的使用者，可以執行為該表單啟用的操作。
+Forms服務可轉譯已套用使用許可權的表單。 使用許可權與Acrobat預設提供但不適用於Adobe Reader的功能相關，例如新增註解至表單或填寫表單欄位及儲存表單的功能。 已套用使用許可權的Forms稱為許可權啟用表單。 在Adobe Reader中開啟許可權啟用表單的使用者，可執行針對該表單啟用的操作。
 
-若要將使用許可權套用至表單，Acrobat Reader DC擴充功能服務必須是AEM表單安裝的一部分。 此外，您必須具備有效的認證，才能將使用許可權套用至PDF檔案。 也就是說，您必須先正確設定Acrobat Reader DC擴充功能服務，才能轉譯啟用許可權的表單。 (請參閱[關於Acrobat Reader DC擴充功能服務](/help/forms/developing/assigning-usage-rights.md#about-the-acrobat-reader-dc-extensions-service)。)
-
->[!NOTE]
->
->若要呈現包含使用許可權的表單，您必須使用XDP檔案作為輸入，而非PDF檔案。 如果您使用PDF檔案作為輸入，表單仍會呈現；但是，它不會是啟用許可權的表單。
+若要將使用許可權套用至表單，Acrobat Reader DC擴充功能服務必須是AEM表單安裝的一部分。 此外，您必須具備有效的認證，才能將使用許可權套用至PDF檔案。 也就是說，您必須正確設定Acrobat Reader DC延伸模組服務，才能轉譯啟用許可權的表單。 （請參閱[關於Acrobat Reader DC延伸模組服務](/help/forms/developing/assigning-usage-rights.md#about-the-acrobat-reader-dc-extensions-service)。）
 
 >[!NOTE]
 >
->當您指定下列使用許可權時，無法預先填入XML資料的表單： `enableComments`、`enableCommentsOnline`、`enableEmbeddedFiles`或`enableDigitalSignatures`。 (請參閱[使用可流動配置預先填入Forms](/help/forms/developing/prepopulating-forms-flowable-layouts.md)。)
+>若要轉譯包含使用許可權的表單，您必須使用XDP檔案作為輸入，而非PDF檔案。 如果您使用PDF檔案作為輸入，表單仍會呈現；但是，它不會是啟用許可權的表單。
+
+>[!NOTE]
+>
+>當您指定下列使用許可權時，無法預先填入XML資料的表單： `enableComments`、`enableCommentsOnline`、`enableEmbeddedFiles`或`enableDigitalSignatures`。 （請參閱[使用可流動配置預先填入Forms](/help/forms/developing/prepopulating-forms-flowable-layouts.md)。）
 
 >[!NOTE]
 >
@@ -132,7 +135,7 @@ Forms服務轉譯啟用許可權的表單時，會傳回您必須寫入使用者
 
 **另請參閱**
 
-[快速入門(SOAP模式)：使用Java API轉譯已啟用許可權的表單](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-a-rights-enabled-form-using-the-java-api)
+[快速入門（SOAP模式）：使用Java API轉譯已啟用許可權的表單](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-a-rights-enabled-form-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
