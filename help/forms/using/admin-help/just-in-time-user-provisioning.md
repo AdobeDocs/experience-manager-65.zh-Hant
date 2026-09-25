@@ -11,14 +11,12 @@ feature: Adaptive Forms
 role: User, Developer
 source-git-commit: e821be5233fd5f6688507096790d219d25903892
 workflow-type: tm+mt
-source-wordcount: '575'
+source-wordcount: '612'
 ht-degree: 0%
-
 ---
-
 # 即時使用者布建 {#just-in-time-user-provisioning}
 
-AEM Forms支援「使用者管理」中尚未存在的使用者之即時布建。 透過即時布建，使用者在成功驗證其認證後，就會自動新增到「使用者管理」。 此外，相關的角色和群組會動態指派給新使用者。
+AEM Forms支援即時布建使用者管理（尚未存在）中的使用者。 透過即時布建，使用者在成功驗證其認證後，就會自動新增到「使用者管理」。 此外，相關的角色和群組會動態指派給新使用者。
 
 ## 需要即時使用者布建 {#need-for-just-in-time-user-provisioning}
 
@@ -99,7 +97,7 @@ public Boolean assign(User user);
 
 ## 幕後 {#behind-the-scenes}
 
-假設使用者正在嘗試登入AEM表單，而驗證提供者接受他們的使用者認證。 如果使用者尚未存在於「使用者管理」資料庫中，則使用者的識別檢查會失敗。 AEM forms現在會執行下列動作：
+假設使用者正嘗試登入AEM表單，而驗證提供者接受其使用者認證。 如果使用者尚未存在於「使用者管理」資料庫中，則使用者的識別檢查會失敗。 AEM forms現在會執行下列動作：
 
 1. 使用驗證資料建立`UserProvisioningBO`物件，並將其放入認證對應中。
 1. 根據`UserProvisioningBO`傳回的網域資訊，擷取並叫用網域的已登入`IdentityCreator`和`AssignmentProvider`。

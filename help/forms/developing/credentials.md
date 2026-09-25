@@ -1,21 +1,24 @@
 ---
 title: 使用認證
+
 description: 使用信任管理員API和Java API將憑證匯入AEM Forms。 此外，瞭解如何使用信任管理員API和Java API來刪除認證。
+
+
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
+
 role: Developer
 exl-id: 1101c85a-6a90-471d-a7be-8d25765e84bf
 solution: Experience Manager, Experience Manager Forms
+
 feature: Adaptive Forms,Document Services,APIs & Integrations
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '1077'
+source-wordcount: '1100'
 ht-degree: 0%
-
 ---
-
 # 使用認證 {#working-with-credentials}
 
 **本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
@@ -24,8 +27,8 @@ ht-degree: 0%
 
 認證包含簽署或識別檔案所需的私密金鑰資訊。 憑證是您設定為信任的公開金鑰資訊。 AEM Forms將憑證和認證用於多種用途：
 
-* Acrobat Reader DC擴充功能會使用認證，在PDF檔案中啟用Adobe Reader使用許可權。 (請參閱[套用使用許可權至PDF檔案](/help/forms/developing/assigning-usage-rights.md#applying-usage-rights-to-pdf-documents)。)
-* 簽章服務會在執行作業(例如數位簽署PDF檔案)時存取憑證和認證。 (請參閱[數位簽署PDF檔案](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-pdf-documents)。)
+* Acrobat Reader DC擴充功能會使用認證來啟用PDF檔案中的Adobe Reader使用許可權。 （請參閱[將使用許可權套用至PDF檔案](/help/forms/developing/assigning-usage-rights.md#applying-usage-rights-to-pdf-documents)。）
+* 簽章服務會在執行作業（例如數位簽署PDF檔案）時存取憑證和認證。 （請參閱[數位簽署PDF檔案](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-pdf-documents)。）
 
 您可以使用信任管理員Java API，以程式設計方式與認證服務互動。 您可以執行下列工作：
 
@@ -38,7 +41,7 @@ ht-degree: 0%
 
 ## 使用信任管理員API匯入認證 {#importing-credentials-by-using-the-trust-manager-api}
 
-您可以使用信任管理員API，以程式設計方式將認證匯入AEM Forms。 例如，您可以匯入用來簽署PDF檔案的認證。 (請參閱[數位簽署PDF檔案](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-pdf-documents))。
+您可以使用信任管理員API，以程式設計方式將認證匯入AEM Forms。 例如，您可以匯入用來簽署PDF檔案的認證。 （請參閱[數位簽署PDF檔案](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-pdf-documents)）。
 
 匯入認證時，您需指定認證的別名。 別名可用來執行需要認證的Forms作業。 匯入後，可在管理主控台中檢視認證，如下圖所示。 請注意，認證的別名是&#x200B;*安全*。
 
@@ -66,8 +69,8 @@ ht-degree: 0%
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-truststore-client.jar
-* adobe-utilities.jar (如果AEM Forms部署在JBoss上，則為必要)
-* jbossall-client.jar (如果AEM Forms部署在JBoss上，則為必要)
+* adobe-utilities.jar （如果AEM Forms部署在JBoss上，則為必要）
+* jbossall-client.jar （如果AEM Forms部署在JBoss上，則為必要）
 
 如需關於這些JAR檔案位置的資訊，請參閱[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
@@ -118,16 +121,16 @@ ht-degree: 0%
    * 建立容納一個元素的字串陣列。 將值`truststore.usage.type.sign`指派給元素。
    * 叫用`CredentialServiceClient`物件的`importCredential`方法，並傳遞下列值：
 
-      * 字串值，指定認證的別名值。
-      * 儲存認證的`com.adobe.idp.Document`執行個體。
-      * 字串值，指定與認證相關的密碼。
-      * 包含使用值的字串陣列。 例如，您可以指定此值`truststore.usage.type.sign`。 若要匯入Reader延伸認證，請指定`truststore.usage.type.lcre`。
+     * 字串值，指定認證的別名值。
+     * 儲存認證的`com.adobe.idp.Document`執行個體。
+     * 字串值，指定與認證相關的密碼。
+     * 包含使用值的字串陣列。 例如，您可以指定此值`truststore.usage.type.sign`。 若要匯入Reader延伸模組認證，請指定`truststore.usage.type.lcre`。
 
 **另請參閱**
 
 [使用信任管理員API匯入認證](credentials.md#importing-credentials-by-using-the-trust-manager-api)
 
-[快速入門(SOAP模式)：使用Java API匯入認證](/help/forms/developing/credential-service-java-api-quick.md#quick-start-soap-mode-importing-credentials-using-the-java-api)
+[快速入門（SOAP模式）：使用Java API匯入認證](/help/forms/developing/credential-service-java-api-quick.md#quick-start-soap-mode-importing-credentials-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -156,8 +159,8 @@ ht-degree: 0%
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-truststore-client.jar
-* adobe-utilities.jar (如果AEM Forms部署在JBoss上，則為必要)
-* jbossall-client.jar (如果AEM Forms部署在JBoss上，則為必要)
+* adobe-utilities.jar （如果AEM Forms部署在JBoss上，則為必要）
+* jbossall-client.jar （如果AEM Forms部署在JBoss上，則為必要）
 
 如需關於這些JAR檔案位置的資訊，請參閱[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
@@ -200,7 +203,7 @@ ht-degree: 0%
 
 [使用信任管理員API刪除認證](credentials.md#deleting-credentials-by-using-the-trust-manager-api)
 
-[快速入門(SOAP模式)：使用Java API刪除認證](/help/forms/developing/credential-service-java-api-quick.md#quick-start-soap-mode-deleting-credentials-using-the-java-api)
+[快速入門（SOAP模式）：使用Java API刪除認證](/help/forms/developing/credential-service-java-api-quick.md#quick-start-soap-mode-deleting-credentials-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 

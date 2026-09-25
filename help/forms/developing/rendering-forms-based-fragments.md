@@ -1,22 +1,25 @@
 ---
 title: 根據片段轉譯Forms
+
 description: 使用Forms服務來轉譯以使用Designer建立的片段為基礎的表單。
+
+
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/rendering_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
+
 role: Developer
 exl-id: febf5350-3fc5-48c0-8bc5-198daff15936
 solution: Experience Manager, Experience Manager Forms
+
 feature: Adaptive Forms,Document Services,APIs & Integrations
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '2189'
+source-wordcount: '2204'
 ht-degree: 0%
-
 ---
-
 # 根據片段轉譯Forms {#rendering-forms-based-on-fragments}
 
 **本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
@@ -81,7 +84,7 @@ Forms服務可以轉譯以您使用Designer建立的片段為基礎的表單。 
 
 **轉譯表單**
 
-以片段為基礎的表單能以與非片段表單相同的方式轉譯。 也就是說，您可以將表單轉譯為PDF、HTML或表單參考線（已棄用）。 本節中的範例將以片段為基礎的表單轉譯為互動式PDF表單。 (請參閱[呈現互動式PDF forms](/help/forms/developing/rendering-interactive-pdf-forms.md)。)
+以片段為基礎的表單能以與非片段表單相同的方式轉譯。 也就是說，您可以將表單轉譯為PDF、HTML或表單參考線（已棄用）。 本節中的範例將以片段為基礎的表單轉譯為互動式PDF表單。 （請參閱[呈現互動式PDF forms](/help/forms/developing/rendering-interactive-pdf-forms.md)。）
 
 **將表單資料流寫入使用者端網頁瀏覽器**
 
@@ -149,7 +152,7 @@ Forms服務轉譯表單時，會傳回您必須寫入使用者端網頁瀏覽器
 
 [根據片段轉譯Forms](#rendering-forms-based-on-fragments)
 
-[快速入門(SOAP模式)：使用Java API根據片段轉譯表單](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-a-form-based-on-fragments-using-the-java-api)
+[快速入門（SOAP模式）：使用Java API根據片段轉譯表單](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-a-form-based-on-fragments-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -181,7 +184,7 @@ Forms服務轉譯表單時，會傳回您必須寫入使用者端網頁瀏覽器
 
    * 字串值，指定表單設計名稱，包括副檔名。 如果您參照的表單設計屬於Forms應用程式的一部分，請確定您指定完整路徑，例如`Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`。
    * 包含要與表單合併之資料的`BLOB`物件。 如果您不想合併資料，請傳遞`null`。
-   * 儲存執行階段選項的`PDFFormRenderSpec`物件。 如果輸入檔案是PDF檔案，則無法設定標籤的PDF選項。 如果輸入檔案是XDP檔案，則可以設定標籤的PDF選項。
+   * 儲存執行階段選項的`PDFFormRenderSpec`物件。 如果輸入檔案是PDF檔案，則無法設定已標籤PDF選項。 如果輸入檔案是XDP檔案，則可設定標籤的PDF選項。
    * 包含Forms服務所需URI值的`URLSpec`物件。
    * 儲存檔案附件的`java.util.HashMap`物件。 這是選用引數，如果您不想將檔案附加至表單，可以指定`null`。
    * 方法填入的空白`com.adobe.idp.services.holders.BLOBHolder`物件。 此引數用於儲存演算後的表單。

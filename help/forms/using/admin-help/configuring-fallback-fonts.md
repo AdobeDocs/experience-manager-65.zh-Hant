@@ -1,24 +1,24 @@
 ---
 title: 設定遞補字型
 description: 瞭解如何設定AEM Forms的遞補字型。 您可以使用FontManagerResources.properties檔案，手動將預設字型對應到遞補字型。
+
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
+
 feature: PDF Generator
 exl-id: 76dd2b0c-9f16-47bf-a565-99277be750fb
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
-source-wordcount: '264'
+source-wordcount: '271'
 ht-degree: 0%
-
 ---
-
 # 設定遞補字型 {#configuring-fallback-fonts}
 
-您可以手動設定FontManagerResources.properties檔案，將預設AEM Forms字型對應至備援（或替代），如果伺服器上無法使用預設字型。 此屬性檔案位於adobe-fontmanager.jar檔案中。
+您可以手動設定FontManagerResources.properties檔案，將預設AEM表單字型對應到備援（或替代），如果伺服器上無法使用預設字型。 此屬性檔案位於adobe-fontmanager.jar檔案中。
 
 >[!NOTE]
 >
