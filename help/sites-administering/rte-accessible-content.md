@@ -60,7 +60,7 @@ RTE提供多種元件供觸控式使用者介面和傳統使用者介面使用�
 
 ## 使用來源編輯功能 {#use-of-the-source-edit-feature}
 
-在某些情況下，內容作者會發現必須檢查並調整使用RTE建立的HTML原始碼。 例如，在RTE內建立的內容片段可能需要額外的標籤，以確保符合WCAG 2.0。 您可以使用RTE的[來源編輯](/help/sites-administering/rich-text-editor.md#aboutplugins)選項來完成此操作。 您可以在`misctools`外掛程式](/help/sites-administering/rich-text-editor.md#aboutplugins)上指定[`sourceedit`功能。
+在某些情況下，內容作者會發現必須檢查並調整使用RTE建立的HTML原始碼。 例如，在RTE內建立的內容片段可能需要額外的標籤，以確保符合WCAG 2.0。 您可以使用RTE的[來源編輯](/help/sites-administering/rich-text-editor.md#aboutplugins)選項來完成此操作。 您可以在`misctools`外掛程式[&#128279;](/help/sites-administering/rich-text-editor.md#aboutplugins)上指定`sourceedit`功能。
 
 >[!CAUTION]
 >
