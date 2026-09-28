@@ -1,10 +1,14 @@
 ---
 title: 建立有效的Newsletter登陸頁面
+
 description: 有效的電子報登陸頁面可協助您讓儘可能多的使用者註冊您的電子報（或其他電子郵件行銷活動）。 您可以使用從電子報註冊收集到的資訊來取得銷售機會。
+
+
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
+
 docset: aem65
 exl-id: c2fbf858-8815-426e-a2e5-f92bcf909ad0
 solution: Experience Manager, Experience Manager Sites
@@ -12,11 +16,9 @@ feature: Authoring,Personalization
 role: User
 source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
 workflow-type: tm+mt
-source-wordcount: '596'
+source-wordcount: '612'
 ht-degree: 0%
-
 ---
-
 # 建立有效的Newsletter登陸頁面{#creating-an-effective-newsletter-landing-page}
 
 有效的電子報登陸頁面可協助您讓儘可能多的使用者註冊您的電子報（或其他電子郵件行銷活動）。 您可以使用從電子報註冊收集到的資訊來取得銷售機會。
@@ -35,7 +37,7 @@ ht-degree: 0%
 
 ## 建立Newsletter的清單 {#creating-a-list-for-the-newsletter}
 
-在MCM中建立人員應訂閱之電子報的清單，例如&#x200B;**Geometrixx電子報**。 建立清單的說明請參閱[建立清單](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatingnewlists)。
+在MCM中建立清單，例如&#x200B;**Geometrixx Newsletter**，供人員訂閱的電子報。 建立清單的說明請參閱[建立清單](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatingnewlists)。
 
 以下顯示清單的範例：
 
