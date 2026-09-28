@@ -1,21 +1,23 @@
 ---
 title: 自訂歡迎主控台（傳統UI）
+
 description: 「歡迎」主控台提供AEM中各種主控台和功能的連結清單
+
+
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
+
 exl-id: 9e171b62-8efb-4143-a202-ba6555658d4b
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
-source-wordcount: '449'
-ht-degree: 6%
-
+source-wordcount: '466'
+ht-degree: 5%
 ---
-
 # 自訂歡迎主控台（傳統UI）{#customizing-the-welcome-console-classic-ui}
 
 >[!CAUTION]
@@ -24,7 +26,7 @@ ht-degree: 6%
 >
 >如需有關標準觸控式UI的詳細資訊，請參閱[自訂主控台](/help/sites-developing/customizing-consoles-touch.md)。
 
-「歡迎」主控台提供AEM內各種主控台和功能的連結清單。
+「歡迎」主控台提供AEM中各種主控台和功能的連結清單。
 
 ![cq_welcomescreen](assets/cq_welcomescreen.png)
 
@@ -35,7 +37,7 @@ ht-degree: 6%
 
 ## 主主控台中的連結（左窗格） {#links-in-main-console-left-pane}
 
-這會列出AEM的主要主控台。
+以下列出AEM的主要主控台。
 
 ![cq_welcomescreenmainconsole](assets/cq_welcomescreenmainconsole.png)
 

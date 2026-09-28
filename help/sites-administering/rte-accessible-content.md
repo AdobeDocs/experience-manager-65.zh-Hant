@@ -8,11 +8,9 @@ feature: Administering
 role: Admin
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
-source-wordcount: '930'
-ht-degree: 0%
-
+source-wordcount: '970'
+ht-degree: 2%
 ---
-
 # 設定RTE以建立無障礙的網頁和網站 {#configure-rte-for-accessibility}
 
 Adobe Experience Manager支援許多符合各種協助工具標準的協助工具功能。 此外，開發人員可以自訂或擴充功能，協助您使用使用RTF編輯器(RTE)的Experience Manager元件來建立無障礙內容。
@@ -42,7 +40,7 @@ RTE提供多種元件供觸控式使用者介面和傳統使用者介面使用�
 * [啟動外掛程式並設定功能屬性](/help/sites-administering/rich-text-editor.md#enable-rte-functionalities-by-activating-plug-ins)。
 * [設定RTE的其他功能](/help/sites-administering/rich-text-editor.md#enable-rte-functionalities-by-activating-plug-ins)。
 
-藉由在CRXDE Lite中適當的`rtePlugins`子分支內設定外掛程式，您可以為該外掛程式啟動所有或特定功能。
+在CRXDE Lite的適當`rtePlugins`子分支中設定外掛程式，即可為該外掛程式啟動所有或特定功能。
 
 ![CRXDE Lite顯示rtePlugin範例。](assets/chlimage_1-208.png)
 
@@ -62,15 +60,15 @@ RTE提供多種元件供觸控式使用者介面和傳統使用者介面使用�
 
 ## 使用來源編輯功能 {#use-of-the-source-edit-feature}
 
-在某些情況下，內容作者會發現必須檢查並調整使用RTE建立的HTML原始碼。 例如，在RTE內建立的內容片段可能需要額外的標籤，以確保符合WCAG 2.0。您可以使用RTE的[來源編輯](/help/sites-administering/rich-text-editor.md#aboutplugins)選項來完成此操作。 您可以在`misctools`外掛程式[&#128279;](/help/sites-administering/rich-text-editor.md#aboutplugins)上指定`sourceedit`功能。
+在某些情況下，內容作者會發現必須檢查並調整使用RTE建立的HTML原始碼。 例如，在RTE內建立的內容片段可能需要額外的標籤，以確保符合WCAG 2.0。 您可以使用RTE的[來源編輯](/help/sites-administering/rich-text-editor.md#aboutplugins)選項來完成此操作。 您可以在`misctools`外掛程式[&#128279;](/help/sites-administering/rich-text-editor.md#aboutplugins)上指定`sourceedit`功能。
 
 >[!CAUTION]
 >
 >請謹慎使用`sourceedit`功能。 輸入錯誤和/或不支援的功能可能會造成更多問題。
 
-## 新增對更多HTML元素和屬性的支援 {#add-support-for-more-html-elements-and-attributes}
+## 新增更多HTML元素和屬性的支援 {#add-support-for-more-html-elements-and-attributes}
 
-若要進一步擴充AEM的協助工具功能，您可以利用其他元素和屬性，以RTE為基礎擴充現有元件（例如&#x200B;**Text**&#x200B;和&#x200B;**Table**&#x200B;元件）。
+若要進一步擴充AEM的協助工具功能，您可以利用其他元素和屬性，根據RTE擴充現有元件（例如&#x200B;**Text**&#x200B;和&#x200B;**Table**&#x200B;元件）。
 
 下列程式說明如何使用&#x200B;**Caption**&#x200B;元素來擴充&#x200B;**Table**&#x200B;元件，該元素將資料表的相關資訊提供給輔助技術使用者：
 
@@ -84,7 +82,7 @@ RTE提供多種元件供觸控式使用者介面和傳統使用者介面使用�
 >
 >此程式僅適用於Classic使用者介面。
 
-### 範例 — 在文字中使用強調時建立無障礙HTML {#create-accessible-html-for-text}
+### 範例 — 在文字中使用強調時建立無障礙的HTML {#create-accessible-html-for-text}
 
 RTE可以使用`strong`和`em`標籤來取代`b`和`i`。 將下列節點新增為對話方塊中`uiSettings`和`rtePlugins`節點的同層級。
 
@@ -103,7 +101,7 @@ RTE可以使用`strong`和`em`標籤來取代`b`和`i`。 將下列節點新增�
 
 ### 逐步指示 {#step-by-step-instructions}
 
-1. 開始CRXDE Lite。 例如： [http://localhost:4502/crx/de/](http://localhost:4502/crx/de/)
+1. 啟動CRXDE Lite。 例如： [http://localhost:4502/crx/de/](http://localhost:4502/crx/de/)
 1. 複製:
 
    `/libs/cq/ui/widgets/source/widgets/form/rte/commands/Table.js`

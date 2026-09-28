@@ -1,5 +1,5 @@
 ---
-title: 自訂HTML5表單的錯誤訊息
+title: 自訂 HTML5 表單的錯誤訊息
 description: 瞭解如何自訂HTML5表單的錯誤訊息顯示，包括如何變更其位置和外觀。
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
@@ -9,14 +9,12 @@ solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '497'
-ht-degree: 3%
-
+source-wordcount: '508'
+ht-degree: 6%
 ---
+# 自訂 HTML5 表單的錯誤訊息 {#customizing-error-messages-for-html-forms}
 
-# 自訂HTML5表單的錯誤訊息 {#customizing-error-messages-for-html-forms}
-
-在HTML5表單中，錯誤訊息和警告在開箱即用的位置和外觀（字型和顏色）都是固定的，錯誤只會針對選取的欄位顯示，而且只會顯示一個錯誤。
+在HTML5 Forms中，錯誤訊息和警告會立即使用固定的位置和外觀（字型和顏色），錯誤只會針對選取的欄位顯示，而且只會顯示一個錯誤。
 
 本文提供自訂HTML5表單錯誤訊息的步驟，讓您可執行下列操作：
 
@@ -75,7 +73,7 @@ ht-degree: 3%
    ```
 
 1. 儲存並關閉檔案。
-1. 導覽至`CustomErrorManager-1.0-SNAPSHOT`資料夾，並建立jcr_root和META-INF資料夾的封存。 將封存重新命名為CustomErrorManager-1.0-SNAPSHOT.zip。
+1. 導覽至`CustomErrorManager-1.0-SNAPSHOT`資料夾，並建立jcr_root與META-INF資料夾的封存。 將封存重新命名為CustomErrorManager-1.0-SNAPSHOT.zip。
 1. 使用封裝管理員來上傳及安裝封裝。
 
 ## 顯示多個欄位的錯誤訊息  {#display-error-messages-for-multiple-fields-nbsp}

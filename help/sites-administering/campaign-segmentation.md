@@ -1,6 +1,6 @@
 ---
 title: 設定分段
-description: 瞭解如何設定AEM Campaign的分段。
+description: 瞭解如何設定AEM Campaign的細分。
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
@@ -12,11 +12,9 @@ feature: Administering,Personalization
 role: Admin
 source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
 workflow-type: tm+mt
-source-wordcount: '1128'
+source-wordcount: '1139'
 ht-degree: 0%
-
 ---
-
 
 # 設定分段 {#configuring-segmentation}
 

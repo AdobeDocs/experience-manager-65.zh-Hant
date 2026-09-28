@@ -1,5 +1,5 @@
 ---
-title: 適用於HTML5表單的Form Bridge API
+title: 表單適用於HTML5的Bridge API
 description: 外部應用程式會使用FormBridge API連線至XFA行動表單。 API會在父視窗上排程FormBridgeInitialized事件。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -12,14 +12,12 @@ source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
 workflow-type: tm+mt
 source-wordcount: '938'
 ht-degree: 0%
-
 ---
+# 表單適用於HTML5的Bridge API {#form-bridge-apis-for-html-forms}
 
-# 適用於HTML5表單的Form Bridge API {#form-bridge-apis-for-html-forms}
+您可以使用Form Bridge API開啟XFA型HTML5表單與應用程式之間的通訊通道。 表單Bridge API提供&#x200B;**連線** API來建立連線。
 
-您可以使用Form Bridge API開啟XFA型HTML5表單與您的應用程式之間的通訊通道。 表單Bridge API提供&#x200B;**連線** API來建立連線。
-
-**connect** API接受處理常式做為引數。 在XFA型HTML5表單與表單Bridge之間成功建立連線後，就會叫用控制代碼。
+**connect** API接受處理常式做為引數。 在以XFA為基礎的HTML5表單與表單Bridge之間成功建立連線後，就會叫用控制代碼。
 
 您可以使用以下範常式式碼來建立連線。
 
@@ -59,8 +57,8 @@ window.addEventListener("FormBridgeInitialized",
 
 * **輸入**：
 
-   * **處理常式**：在連線表單Bridge之後要執行的函式
-   * **context**： *處理常式*&#x200B;函式內容（這個）設定的物件。
+  * **處理常式**：在連線表單Bridge之後要執行的函式
+  * **context**： *處理常式*&#x200B;函式內容（這個）設定的物件。
 
 * **輸出**：無
 * **錯誤**：無
@@ -69,13 +67,13 @@ window.addEventListener("FormBridgeInitialized",
 
 * **輸入：**
 
-   * **選項：**&#x200B;包含下列屬性的JavaScript物件：
+  * **選項：**&#x200B;包含下列屬性的JavaScript物件：
 
-      * **錯誤**：錯誤處理常式函式
-      * **success**：成功處理常式函式。 此函式傳遞的物件包含&#x200B;*資料*&#x200B;屬性中的XML。
-      * **context**： *success*&#x200B;函式內容（這個）設定的物件
-      * **validationChecker**：用於呼叫以檢查從伺服器收到的驗證錯誤的函式。 驗證函式傳遞錯誤字串的陣列。
-      * **formState**：必須傳回資料XML之XFA表單的JSON狀態。 如果未指定，它會傳回目前轉譯之表單的資料XML。
+    * **錯誤**：錯誤處理常式函式
+    * **success**：成功處理常式函式。 此函式傳遞的物件包含&#x200B;*資料*&#x200B;屬性中的XML。
+    * **context**： *success*&#x200B;函式內容（這個）設定的物件
+    * **validationChecker**：用於呼叫以檢查從伺服器收到的驗證錯誤的函式。 驗證函式傳遞錯誤字串的陣列。
+    * **formState**：必須傳回資料XML之XFA表單的JSON狀態。 如果未指定，它會傳回目前轉譯之表單的資料XML。
 
 * **輸出：**&#x200B;無
 * **錯誤：**&#x200B;無
@@ -84,42 +82,42 @@ window.addEventListener("FormBridgeInitialized",
 
 * **輸入：**
 
-   * **configName：**&#x200B;要覆寫的組態名稱
+  * **configName：**&#x200B;要覆寫的組態名稱
 
-      * **widgetConfig：**&#x200B;允許使用者以自訂widget覆寫表單中的預設widget。 設定會覆寫，如下所示：
+    * **widgetConfig：**&#x200B;允許使用者以自訂widget覆寫表單中的預設widget。 設定會覆寫，如下所示：
 
-        *formBridge.registerConfig(&quot;widgetConfig&quot;：{/&amp;amp；ast；configuration&amp;amp；ast；/})*
+      *formBridge.registerConfig(&quot;widgetConfig&quot;：{/&amp;ast；configuration&amp;ast；/})*
 
-      * **pagingConfig：**&#x200B;允許使用者覆寫僅呈現第一頁的預設行為。 設定會覆寫，如下所示：
+    * **pagingConfig：**&#x200B;允許使用者覆寫僅呈現第一頁的預設行為。 設定會覆寫，如下所示：
 
-        *window.formBridge.registerConfig(&quot;pagingConfig&quot;：{pagingDisabled： &lt;true | false>， shrinkPageDisabled： &lt;true | false> })。*
+      *window.formBridge.registerConfig(&quot;pagingConfig&quot;：{pagingDisabled： &lt;true | false>， shrinkPageDisabled： &lt;true | false> })。*
 
-      * **LoggingConfig：**&#x200B;允許使用者覆寫記錄層級、停用類別的記錄，或者是否要顯示記錄主控台或傳送至伺服器。 設定可以覆寫，如下所示：
+    * **LoggingConfig：**&#x200B;允許使用者覆寫記錄層級、停用類別的記錄，或者是否要顯示記錄主控台或傳送至伺服器。 設定可以覆寫，如下所示：
 
-     ```javascript
-     formBridge.registerConfig{
-       "LoggerConfig" : {
-     {
-     "on":`<true *| *false>`,
-     "category":`<array of categories>`,
-     "level":`<level of categories>`, "
-     type":`<"console"/"server"/"both">`
-     }
-       }
-     ```
+    ```javascript
+    formBridge.registerConfig{
+      "LoggerConfig" : {
+    {
+    "on":`<true *| *false>`,
+    "category":`<array of categories>`,
+    "level":`<level of categories>`, "
+    type":`<"console"/"server"/"both">`
+    }
+      }
+    ```
 
-      * **SubmitServiceProxyConfig：**&#x200B;允許使用者註冊提交和記錄器Proxy服務。
+    * **SubmitServiceProxyConfig：**&#x200B;允許使用者註冊提交和記錄器Proxy服務。
 
-        ```javascript
-        window.formBridge.registerConfig("submitServiceProxyConfig",
-        {
-        "submitServiceProxy" : "`<submitServiceProxy>`",
-        "logServiceProxy": "`<logServiceProxy>`",
-        "submitUrl" : "`<submitUrl>`"
-        });
-        ```
+      ```javascript
+      window.formBridge.registerConfig("submitServiceProxyConfig",
+      {
+      "submitServiceProxy" : "`<submitServiceProxy>`",
+      "logServiceProxy": "`<logServiceProxy>`",
+      "submitUrl" : "`<submitUrl>`"
+      });
+      ```
 
-   * **設定：**&#x200B;設定的值
+  * **設定：**&#x200B;設定的值
 
 * **輸出：**&#x200B;物件包含&#x200B;*資料*&#x200B;屬性中組態的原始值。
 
@@ -129,7 +127,7 @@ window.addEventListener("FormBridgeInitialized",
 
 * **輸入：**
 
-   * **fieldArray：**&#x200B;要隱藏之欄位的Som運算式陣列
+  * **fieldArray：**&#x200B;要隱藏之欄位的Som運算式陣列
 
 * **輸出：**&#x200B;無
 * **錯誤：**&#x200B;無
@@ -138,7 +136,7 @@ window.addEventListener("FormBridgeInitialized",
 
 * **輸入：**
 
-   * **fieldArray：**&#x200B;要顯示之欄位的Som運算式陣列
+  * **fieldArray：**&#x200B;要顯示之欄位的Som運算式陣列
 
 * **輸出：**&#x200B;無
 * **錯誤：**&#x200B;無
@@ -160,12 +158,12 @@ window.addEventListener("FormBridgeInitialized",
 
 * **輸入：**
 
-   * **選項：**&#x200B;包含下列屬性的JavaScript物件：
+  * **選項：**&#x200B;包含下列屬性的JavaScript物件：
 
-      * **錯誤**：錯誤處理常式函式
-      * **success**：成功處理常式函式
-      * **context**： *success*&#x200B;函式內容（這個）設定的物件
-      * **formState**：表單的JSON狀態。 表單會還原為JSON狀態。
+    * **錯誤**：錯誤處理常式函式
+    * **success**：成功處理常式函式
+    * **context**： *success*&#x200B;函式內容（這個）設定的物件
+    * **formState**：表單的JSON狀態。 表單會還原為JSON狀態。
 
 * **輸出：**&#x200B;無
 * **錯誤：**&#x200B;無
@@ -180,8 +178,8 @@ window.addEventListener("FormBridgeInitialized",
 
 * **輸入：**
 
-   * **som：**&#x200B;包含欄位的Som運算式的陣列。 用來設定欄位值的som運算式。
-   * **值：**&#x200B;陣列包含對應於&#x200B;**som**&#x200B;陣列中所提供的Som運算式的值。 如果值的資料型別與fieldType不同，則不會修改值。
+  * **som：**&#x200B;包含欄位的Som運算式的陣列。 用來設定欄位值的som運算式。
+  * **值：**&#x200B;陣列包含對應於&#x200B;**som**&#x200B;陣列中所提供的Som運算式的值。 如果值的資料型別與fieldType不同，則不會修改值。
 
 * **輸出：**&#x200B;無
 * **錯誤：**&#x200B;如果有不正確的Som運算式，則擲回例外狀況
@@ -210,8 +208,8 @@ if(a.errors) {
 
 * **輸入：**
 
-   * **som：**&#x200B;包含欄位的Som運算式的陣列
-   * **屬性**：需要其值的屬性名稱
+  * **som：**&#x200B;包含欄位的Som運算式的陣列
+  * **屬性**：需要其值的屬性名稱
 
 * **輸出：**&#x200B;物件包含結果為&#x200B;*資料*&#x200B;屬性中的陣列
 
@@ -221,9 +219,9 @@ if(a.errors) {
 
 * **輸入：**
 
-   * **som：**&#x200B;陣列包含必須設定其值的欄位的Som運算式
-   * **屬性**：必須設定其值的屬性
-   * **值：**&#x200B;陣列包含Som運算式中所指定欄位之指定屬性的值
+  * **som：**&#x200B;陣列包含必須設定其值的欄位的Som運算式
+  * **屬性**：必須設定其值的屬性
+  * **值：**&#x200B;陣列包含Som運算式中所指定欄位之指定屬性的值
 
 * **輸出：**&#x200B;無
 * **錯誤：**&#x200B;無

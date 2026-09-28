@@ -1,5 +1,5 @@
 ---
-title: HTML5表單的熒幕助讀程式
+title: HTML5 表單的螢幕閱讀器
 description: 列出HTML5表單支援的熒幕助讀程式。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -11,24 +11,22 @@ solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '305'
-ht-degree: 0%
-
+source-wordcount: '333'
+ht-degree: 3%
 ---
+# HTML5 表單的螢幕閱讀器 {#screen-readers-for-html-forms}
 
-# HTML5表單的熒幕助讀程式 {#screen-readers-for-html-forms}
+HTML5 forms元件會將XFA表單範本轉譯為HTML5格式。 支援HTML5的所有標準瀏覽器都可以轉譯這些表單。 為了在PDF和HTML5表單中支援類似的資料擷取體驗，PDF forms的版面配置保留在HTML5表單中。
 
-HTML5表單元件會將XFA表單範本轉譯為HTML5格式。 支援HTML5的所有標準瀏覽器都可以轉譯這些表單。 為了支援跨PDF和HTML5表單的類似資料擷取體驗，PDF forms版面配置會保留在HTML5表單中。
-
-HTML5表單會使用標準的HTML建構，以便讓一般的HTML協助工具可搭配這些表單使用。 如果表單是根據無障礙表單的最佳實務而設計，則可與任何支援的熒幕助讀程式搭配使用。 此外，這類表單已啟用鍵盤導覽。
+HTML5 forms使用標準的HTML建構，可讓HTML的常規協助工具用於這些表單。 如果表單是根據無障礙表單的最佳實務而設計，則可與任何支援的熒幕助讀程式搭配使用。 此外，這類表單已啟用鍵盤導覽。
 
 ## 協助工具標準 {#accessibility-standards}
 
-HTML5表單符合協助工具的第508條，但有已知例外。 如需詳細資訊，請參閱HTML5表單的[VPAT](https://www.adobe.com/content/dam/cc1/en/accessibility/compliance/pdfs/adobe-livecycle-es4-section-508-vpat-portfolio.pdf)。
+HTML5 forms符合第508條，具有已知例外狀況的協助工具。 如需詳細資訊，請參閱HTML5表單的[VPAT](https://www.adobe.com/content/dam/cc1/en/accessibility/compliance/pdfs/adobe-livecycle-es4-section-508-vpat-portfolio.pdf)。
 
-## HTML5表單的認證熒幕閱讀程式 {#certified-screen-readers-for-html-forms}
+## HTML5表單的認證熒幕助讀程式 {#certified-screen-readers-for-html-forms}
 
-* Microsoft® Windows上的JAWS 14.0
+* ® Windows上的JAWS 14.0
 * macOS X和iPad上的VoiceOver
 
 ### JAWS {#jaws}
@@ -37,7 +35,7 @@ HTML5表單符合協助工具的第508條，但有已知例外。 如需詳細�
 
 ### 配音 {#voiceover}
 
-HTML5表單支援所有預設的按鍵動作和配音手勢。 如需設定和使用VoiceOver的詳細資訊，請參閱[https://www.apple.com/accessibility/vision/](https://www.apple.com/accessibility/vision/)。
+HTML5 forms支援所有預設的按鍵動作和配音手勢。 如需設定和使用VoiceOver的詳細資訊，請參閱[https://www.apple.com/accessibility/vision/](https://www.apple.com/accessibility/vision/)。
 
 ## 已知問題 {#known-issues}
 
