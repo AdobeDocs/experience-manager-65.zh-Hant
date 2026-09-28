@@ -1,6 +1,6 @@
 ---
-title: 建立HTML5表單的CSS樣式
-description: 瞭解如何修改與HTML表單元素相關的CSS類別，以變更HTML5表單的外觀。
+title: 建立 HTML5 表單的 CSS 樣式
+description: 瞭解如何修改與HTML表單元素關聯的CSS類別，以變更HTML5表單的外觀。
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -12,20 +12,18 @@ solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '812'
-ht-degree: 2%
-
+source-wordcount: '825'
+ht-degree: 4%
 ---
+# 建立 HTML5 表單的 CSS 樣式 {#creating-css-styles-for-html-forms}
 
-# 建立HTML5表單的CSS樣式 {#creating-css-styles-for-html-forms}
-
-XFA型表單範本的HTML5轉譯包含數個HTML元素。 這些元素會依順序排列。 每個元素都有已妥善定義的CSS類別。 您可以使用這些CSS類別來選取和變更元素的外觀。
+XFA式表單範本的HTML5轉譯包含數個HTML元素。 這些元素會依順序排列。 每個元素都有已妥善定義的CSS類別。 您可以使用這些CSS類別來選取和變更元素的外觀。
 
 >[!NOTE]
 >
 >在CSS類別中，請勿變更width、height、border-thickness、top、left、right、bottom、padding、margin及其他位置與大小屬性的值。 位置和大小屬性的任何變更都會對表單的版面配置造成變更。
 
-## CSS類別  針對元素  {#css-classes-nbsp-for-elements-nbsp}
+## 元素的CSS類別  {#css-classes-nbsp-for-elements-nbsp}
 
 每個元素都包含定義良好的CSS類別。 您可以修改這些類別來變更元素的外觀。 每個元素（欄位和繪圖元素除外）都有兩個CSS類別 — Type類別和Name類別。
 
@@ -37,7 +35,7 @@ XFA型表單範本的HTML5轉譯包含數個HTML元素。 這些元素會依順�
 >
 >有些XFA元素沒有名稱。 若要變更這類元件的樣式，請修改該特定型別的所有元件。
 
-對於AEM Forms Designer中未命名的頁面，HTML5表單中的頁面會依其編號的遞增順序命名。 例如，如果是具有兩個頁面的HTML5表單，這些頁面的名稱為Page1， Page2。
+對於AEM Forms Designer中未命名的頁面，HTML5表單中的頁面會依編號遞增的順序命名。 例如，對於具有兩個頁面的HTML5表單，這些頁面的名稱為Page1， Page2。
 
 ## 欄位元素 {#field-element}
 
@@ -115,7 +113,7 @@ widget元素包含用於與使用者互動的使用者介面元素。 它有三�
    <td>不適用</td>
   </tr>
   <tr>
-   <td>Widget</td>
+   <td>小工具</td>
    <td>Widget</td>
    <td>Widget開發人員會加以定義（若是使用者定義的Widget，請參閱下節中的表格）</td>
   </tr>
@@ -131,11 +129,11 @@ AEM Forms Designer支援表單中不同型別的欄位，例如NumericField、De
 <table>
  <tbody>
   <tr>
-   <td><strong>欄位型別</strong></td>
+   <td><strong>欄位類型</strong></td>
    <td><strong>子類型</strong></td>
    <td><strong>Widget名稱</strong></td>
    <td><strong>Widget 類型</strong></td>
-   <td><strong>HTMLUI標籤</strong></td>
+   <td><strong>HTML UI標籤</strong></td>
   </tr>
   <tr>
    <td>按鈕<br type="_moz" /> </td>
@@ -224,11 +222,11 @@ AEM Forms Designer支援表單中不同型別的欄位，例如NumericField、De
  </tbody>
 </table>
 
-## 不同Draw元素的CSS類別 {#css-classes-for-different-draw-elements}
+## 不同繪圖元素的CSS類別 {#css-classes-for-different-draw-elements}
 
 您可以使用AEM Forms Designer插入靜態繪圖元素，例如文字和影像。 對於每個繪圖元素，個別的CSS類別會與該元素相關聯。 以下列出用於繪製元素的CSS類別清單。 每個繪圖元素都有與其關聯的繪圖類別。
 
-| **Draw型別** | **CSS類別** |
+| **繪圖型別** | **CSS類別** |
 |---|---|
 | 文字 | text |
 | 影像 | 影像 |
@@ -237,7 +235,7 @@ AEM Forms Designer支援表單中不同型別的欄位，例如NumericField、De
 
 ## 設定表單其他部分的樣式 {#styling-other-parts-of-the-form}
 
-除了HTML表單中UI元件的外觀外，您還可以變更元素的樣式，例如內嵌錯誤、內嵌警告和有驗證錯誤的欄位。
+除了HTML表單中UI元件的外觀之外，您還可以變更元素的樣式，例如內嵌錯誤、內嵌警告和有驗證錯誤的欄位。
 
 `Styling Inline Errors`
 

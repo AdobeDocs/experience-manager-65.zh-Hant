@@ -11,11 +11,9 @@ role: User, Developer
 feature: Adaptive Forms,Foundation Components
 source-git-commit: 8a77756e8ba771c8de9950c2323bef8f23cc59b4
 workflow-type: tm+mt
-source-wordcount: '521'
+source-wordcount: '530'
 ht-degree: 0%
-
 ---
-
 # 自訂最適化表單的錯誤訊息佈局和位置{#customize-layout-and-positioning-of-error-messages-of-an-adaptive-form}
 
 您可以自訂最適化表單的錯誤訊息版面配置和位置。 您可以執行下列自訂：
@@ -51,11 +49,11 @@ ht-degree: 0%
 
 ## 建立自訂欄位佈局 {#create-a-custom-field-layout}
 
-1. 開啟CRXDE Lite。 預設URL為https://&#39;[伺服器]：[連線埠]&#39;/crx/de。
+1. 開啟 CRXDE Lite。 預設URL為https://&#39;[伺服器]：[連線埠]&#39;/crx/de。
 1. 將欄位配置從/libs/fd/af/layouts/field節點（例如defaultFieldLayout）複製到/apps節點（例如/apps/af-field-layout）。
 1. 重新命名複製的節點和defaultFieldLayout.jsp檔案。 例如，errorOnRight.jsp。
 
-1. 變更所複製節點的qtip和jcr：description屬性的值。 例如，將屬性的值變更為Error On Right
+1. 變更所複製節點的qtip和jcr:description屬性值。 例如，將屬性的值變更為Error On Right
 
 1. 若要新增樣式和行為，請在/etc節點中建立使用者端程式庫。
 
