@@ -4,13 +4,11 @@ description: 使用AEM 6.5最適化表單核心元件，為最適化表單新增
 feature: Adaptive Forms, Core Components
 role: User, Developer, Admin
 exl-id: 91e6fca2-60ba-45f1-98c3-7b3fb1d762f5
-source-git-commit: 130d900a9c268362b75ffa947606c7145a1f8c9d
+source-git-commit: 15fb75221470fe30d4a0c603e1bb0d0a45575eb5
 workflow-type: tm+mt
-source-wordcount: '631'
+source-wordcount: '652'
 ht-degree: 0%
-
 ---
-
 # 最適化表單的版本設定、稽核和註解
 
 <!--
@@ -27,7 +25,7 @@ ht-degree: 0%
 
 ## 必備條件 {#prerequisite-versioning}
 
-若要在最適化表單中使用版本設定、註解和附註功能，請確定您的AEM 6.5 Forms環境已啟用[最適化表單核心元件](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65/content/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components)。
+若要在最適化表單中使用版本設定、註解和附註功能，請確定您的AEM 6.5 Forms環境已啟用[最適化表單核心元件](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components)。
 
 ## 最適化表單版本設定 {#adaptive-form-versioning}
 
@@ -58,7 +56,7 @@ ht-degree: 0%
 
 ### 比較表單版本 {#compare-form-versions}
 
-表單作者可比較兩個不同的表單版本，以供預覽。 若要比較版本，請選取任一表單版本，然後按一下[與目前版本比較]。**&#x200B;** 它會在預覽模式中顯示兩個不同的表單版本。
+表單作者可比較兩個不同的表單版本，以供預覽。 若要比較版本，請選取任一表單版本，然後按一下[與目前版本比較]。**** 它會在預覽模式中顯示兩個不同的表單版本。
 
 ![比較表單版本](assets/compare-form-versions.png)
 
@@ -67,7 +65,8 @@ ht-degree: 0%
 稽核是一種機制，可讓一或多個稽核者在表單上加上註解。 任何表單使用者都可以評論表單或透過評論來檢閱表單。 若要在表單上加上註解，請選取&#x200B;**[!UICONTROL 表單]**，然後新增&#x200B;**[!UICONTROL 註解]**&#x200B;至表單。
 
 >[!NOTE]
-> 如上所述，當您在調適型表單核心元件中使用註解時，表單功能[新增稽核者至表單](/help/forms/using/create-reviews-forms.md)會停用。
+>
+>如上所述，當您在調適型表單核心元件中使用註解時，表單功能[新增稽核者至表單](/help/forms/using/create-reviews-forms.md)會停用。
 
 
 ![在表單上新增註解](assets/form-comments.png)

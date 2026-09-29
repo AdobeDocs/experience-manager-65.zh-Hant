@@ -8,13 +8,11 @@ exl-id: f837a2b3-4650-4261-84c6-291bb2a46dc7
 solution: Experience Manager, Experience Manager Forms
 feature: HTML5 Forms,Adaptive Forms,Mobile Forms
 role: Admin, User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+source-git-commit: 15fb75221470fe30d4a0c603e1bb0d0a45575eb5
 workflow-type: tm+mt
 source-wordcount: '2168'
 ht-degree: 7%
-
 ---
-
 # AEM Forms工作區JSON物件說明 {#aem-forms-workspace-json-object-description}
 
 AEM Forms工作區中使用的JSON物件說明如下。
@@ -23,49 +21,49 @@ AEM Forms工作區中使用的JSON物件說明如下。
 
    類別會顯示在工作區的啟動流程標籤中。 這些類別是用來分類起點。
 
-<table>
- <tbody>
-  <tr>
-   <td><strong>屬性</strong></td>
-   <td><strong>僅限使用者端</strong></td>
-   <td><strong>評論</strong></td>
-  </tr>
-  <tr>
-   <td>名稱</td>
-   <td>五</td>
-   <td>類別名稱</td>
-  </tr>
-  <tr>
-   <td>id</td>
-   <td>五</td>
-   <td>類別識別碼<br type="_moz" /> </td>
-  </tr>
-  <tr>
-   <td>描述<br type="_moz" /> </td>
-   <td>五</td>
-   <td>類別描述<br type="_moz" /> </td>
-  </tr>
-  <tr>
-   <td>parentOid<br type="_moz" /> </td>
-   <td>五</td>
-   <td>包含父類別<br type="_moz" />的OID </td>
-  </tr>
-  <tr>
-   <td>startPointsList<br type="_moz" /> </td>
-   <td>二</td>
-   <td>包含類別中存在的所有起點的清單</td>
-  </tr>
-  <tr>
-   <td>categorylist</td>
-   <td>二</td>
-   <td>包含類別<br type="_moz" />的直接子類別清單 </td>
-  </tr>
- </tbody>
-</table>
+   <table>
+   <tbody>
+   <tr>
+      <td><strong>屬性</strong></td>
+      <td><strong>僅限使用者端</strong></td>
+      <td><strong>評論</strong></td>
+   </tr>
+   <tr>
+      <td>名稱</td>
+      <td>五</td>
+      <td>類別名稱</td>
+   </tr>
+   <tr>
+      <td>id</td>
+      <td>五</td>
+      <td>類別識別碼<br type="_moz" /> </td>
+   </tr>
+   <tr>
+      <td>描述<br type="_moz" /> </td>
+      <td>五</td>
+      <td>類別描述<br type="_moz" /> </td>
+   </tr>
+   <tr>
+      <td>parentOid<br type="_moz" /> </td>
+      <td>五</td>
+      <td>包含父類別<br type="_moz" />的OID </td>
+   </tr>
+   <tr>
+      <td>startPointsList<br type="_moz" /> </td>
+      <td>二</td>
+      <td>包含類別中存在的所有起點的清單</td>
+   </tr>
+   <tr>
+      <td>categorylist</td>
+      <td>二</td>
+      <td>包含類別<br type="_moz" />的直接子類別清單 </td>
+   </tr>
+   </tbody>
+   </table>
 
->[!NOTE]
->
->所有「起點」和「我的最愛」都是在使用者端定義的類別。 我的最愛類別包含使用者標示為我的最愛的所有起點。 「所有起點」類別包含所有起點。
+   >[!NOTE]
+   >
+   >所有「起點」和「我的最愛」都是在使用者端定義的類別。 我的最愛類別包含使用者標示為我的最愛的所有起點。 「所有起點」類別包含所有起點。
 
 1. 起點
 

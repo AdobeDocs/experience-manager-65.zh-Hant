@@ -6,13 +6,11 @@ feature: Adaptive Forms
 exl-id: 7742c3ca-1755-44c5-b70f-61309f09d1b8
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+source-git-commit: 15fb75221470fe30d4a0c603e1bb0d0a45575eb5
 workflow-type: tm+mt
-source-wordcount: '2174'
+source-wordcount: '2193'
 ht-degree: 10%
-
 ---
-
 # 設計您的自適應表單 {#do-not-publish-style-your-adaptive-form}
 
 瞭解如何建立自訂主題、設定個別元件的樣式，以及在主題中使用Web Fonts。
@@ -23,7 +21,7 @@ ht-degree: 10%
 
 ## 關於本教學課程  {#about-the-tutorial}
 
-您可以使用主題來為最適化表單提供獨特的外觀和樣式。 您可以套用最適化表單編輯器隨附的現成主題，或是建立您自己的自訂主題。 AEM [!DNL Forms]提供[主題編輯器](https://helpx.adobe.com/tw/experience-manager/6-3/forms/using/themes.html)以建立自訂主題。 單一主題可為在行動裝置、平板電腦或桌上型電腦上開啟的相同最適化表單提供不同外觀。 使用主題編輯器不需要有CSS或LESS的任何先前知識，但這是必要的。
+您可以使用主題來為最適化表單提供獨特的外觀和樣式。 您可以套用最適化表單編輯器隨附的現成主題，或是建立您自己的自訂主題。 AEM [!DNL Forms]提供[主題編輯器](https://helpx.adobe.com/experience-manager/6-3/forms/using/themes.html)以建立自訂主題。 單一主題可為在行動裝置、平板電腦或桌上型電腦上開啟的相同最適化表單提供不同外觀。 使用主題編輯器不需要有CSS或LESS的任何先前知識，但這是必要的。
 
 在本教學課程結束時，您應該能夠進行下列工作：
 
@@ -78,7 +76,7 @@ ht-degree: 10%
       [http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html](http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html)
 
    1. 選取[!UICONTROL 標題]元件中的標誌影像，並選取![cmppr](assets/cmppr.png) **[!UICONTROL 屬性]**。 在[!UICONTROL image]屬性中，選取X以移除現有的標誌影像。
-   1. 選取&#x200B;**[!UICONTROL 上傳]**、選取logo.png，然後選取![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)以儲存變更。 在您開始[&#128279;](/help/forms/using/style-your-adaptive-form.md#before-you-start)之前，已在區段中下載影像。
+   1. 選取&#x200B;**[!UICONTROL 上傳]**、選取logo.png，然後選取![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)以儲存變更。 在您開始](/help/forms/using/style-your-adaptive-form.md#before-you-start)之前，已在[區段中下載影像。
    1. 選取標題文字`We.Retail`，然後選取![aem_6_3_edit](assets/aem_6_3_edit.png) **[!UICONTROL edit]**。 將標頭文字變更為`we retail`。 僅套用粗體格式至`we retail`中的`we`。
 
       ![we-retail-logo-text](assets/we-retail-logo-text.png)
@@ -143,7 +141,7 @@ ht-degree: 10%
 
    | 屬性 | 值 |
    |---|---|
-   | 影像 | 上傳header-style.png。 在您開始[&#128279;](/help/forms/using/style-your-adaptive-form.md#before-you-start)之前，已在區段中下載影像。 |
+   | 影像 | 上傳header-style.png。 在您開始](/help/forms/using/style-your-adaptive-form.md#before-you-start)之前，已在[區段中下載影像。 |
    | 位置 | 右下 |
    | 並排顯示 | 不重複 |
 
@@ -444,16 +442,18 @@ ht-degree: 10%
 您可以使用各種字型來設計最適化表單。 所有在其中檢視最適化表單的裝置可能沒有用來設計最適化表單的字型。 您可以使用Web字型服務，將所需的字型傳送至目標裝置。
 
 [!DNL Adobe Fonts]是Web Fonts服務。 您可以透過最適化表單來設定和使用服務。 若要在最適化表單中使用[!DNL Adobe Fonts]：
-1. 瀏覽Adobe字型的[資料庫](https://fonts.adobe.com/)，並選擇字型來設定表單的樣式。
+
 <!--
 >[!NOTE]
 >
 >![typekit-to-adobe-fonts](assets/typekit-to-adobe-fonts.png) [!DNL Typekit] is now called Adobe Fonts and is included with Creative Cloud and other subscriptions. [Learn more](https://fonts.adobe.com/).
 -->
 
->[!NOTE]
->
-> 您可以新增標籤或篩選器來調整字型清單。
+1. 瀏覽Adobe字型的[資料庫](https://fonts.adobe.com/)，並選擇字型來設定表單的樣式。
+
+   >[!NOTE]
+   >
+   > 您可以新增標籤或篩選器來調整字型清單。
 
 1. 按一下&lt;/>按鈕，將系列新增至Web專案，以備您找到想要的字型時使用。
 
@@ -465,23 +465,25 @@ ht-degree: 10%
    >
    > 只有在Web專案有&lt;/>按鈕可用時，您才能新增字型。
 
-2. 為您的Web專案命名。
-3. 選取核取方塊以選取要包含的字型粗細和樣式。
+1. 為您的Web專案命名。
+1. 選取核取方塊以選取要包含的字型粗細和樣式。
 
    ![新增字型庫](assets/add-a-font-window.png)
 
-4. 選取&#x200B;**按一下**&#x200B;以建立專案。
-5. 從畫面複製內嵌程式碼和URL。
+1. 選取&#x200B;**按一下**&#x200B;以建立專案。
+1. 從畫面複製內嵌程式碼和URL。
    ![內嵌程式碼和URL](assets/font-add-url.png)
 
-6. 按一下&#x200B;**完成**&#x200B;以關閉Web專案視窗。
-7. 登入您的AEM執行個體並移至URL `http://server:port/crx/de/index.jsp#`
-8. 在CRXDE中建立資料夾結構，例如`/apps/[fontslibrary]/[customlibrary(clientlibrary)]`。
-9. 移至新建立的`clientlibs`資料夾並新增`allowProxy`和`categories`屬性。
-10. 瀏覽至`/apps/[fontslibrary]/[customlibrary(clientlibrary)]`並建立css資料夾。
-11. 移至已建立的CSS資料夾並建立檔案。例如，將檔案建立為`fonts.css`並貼上內嵌程式碼以及URL。
-    ![資料夾結構](/help/forms/using/assets/fonts-add-in-crxde.png)
-12. 儲存變更。
+1. 按一下&#x200B;**完成**&#x200B;以關閉Web專案視窗。
+1. 登入您的AEM執行個體並移至URL `http://server:port/crx/de/index.jsp#`
+1. 在CRXDE中建立資料夾結構，例如`/apps/[fontslibrary]/[customlibrary(clientlibrary)]`。
+1. 移至新建立的`clientlibs`資料夾並新增`allowProxy`和`categories`屬性。
+1. 瀏覽至`/apps/[fontslibrary]/[customlibrary(clientlibrary)]`並建立css資料夾。
+1. 移至已建立的CSS資料夾並建立檔案。 例如，將檔案建立為`fonts.css`並貼上內嵌程式碼以及URL。
+
+   ![資料夾結構](/help/forms/using/assets/fonts-add-in-crxde.png)
+
+1. 儲存變更。
 
 >[!NOTE]
 >

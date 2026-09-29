@@ -5,13 +5,11 @@ feature: Adaptive Forms, Core Components
 role: User
 level: Beginner, Intermediate
 exl-id: 107ad23b-53df-41d4-ab97-b09d189abc1b
-source-git-commit: 0c3d9e95f2b1942392cd269891360dd8552e2715
+source-git-commit: 15fb75221470fe30d4a0c603e1bb0d0a45575eb5
 workflow-type: tm+mt
-source-wordcount: '5734'
+source-wordcount: '5748'
 ht-degree: 3%
-
 ---
-
 # 將規則新增至最適化表單核心元件 {#adaptive-forms-rule-editor}
 
 本文包含最適化Forms核心元件的最新規則編輯器功能，包括：
@@ -258,7 +256,7 @@ Allowed Multiple fields in When condition feature is disabled by default. To ena
 
 **[!UICONTROL 函式輸出]**&#x200B;根據預先定義的函式或自訂函式定義規則。
 
-**[!UICONTROL 導覽至]**&#x200B;導覽至其他最適化Forms、影像或檔案片段等其他資產，或外部URL。
+**[!UICONTROL 導覽至]**導覽至其他最適化Forms、影像或檔案片段等其他資產，或外部URL。
 <!--Interactive Communications,-->
 <!-- For more information, see [Add button to the Interactive Communication](create-interactive-communication.md#addbuttontothewebchannel). -->
 
@@ -267,7 +265,7 @@ Allowed Multiple fields in When condition feature is disabled by default. To ena
 
 ### [!UICONTROL 設定值] {#set-value-of}
 
-**規則型別的**&#x200B;設定值可讓您依據指定的條件是否符合，來設定表單物件的值。 值可以設定為另一個物件的值、常值字串、衍生自數學運算式或函式的值、另一個物件的屬性值，或表單資料模型服務的輸出。 同樣地，您可以檢查元件、字串、屬性或衍生自函式或數學運算式的值的條件。
+]**規則型別的**[!UICONTROL &#x200B;設定值可讓您依據指定的條件是否符合，來設定表單物件的值。 值可以設定為另一個物件的值、常值字串、衍生自數學運算式或函式的值、另一個物件的屬性值，或表單資料模型服務的輸出。 同樣地，您可以檢查元件、字串、屬性或衍生自函式或數學運算式的值的條件。
 
 **Set Value Of**&#x200B;規則型別不適用於所有表單物件，例如面板和工具列按鈕。 標準的「設定值」規則具有以下結構：
 
@@ -513,7 +511,7 @@ Users in the forms-power-users group can access code editor. For other users, co
 
    ![write-rules-visual-editor-5](assets/write-rules-visual-editor-5-cc.png)
 
-1. 從&#x200B;**[!UICONTROL 拖放物件上的[表單物件]索引標籤中拖放**&#x200B;[!UICONTROL &#x200B;配偶薪資&#x200B;]&#x200B;**欄位，或選取這裡]**&#x200B;欄位。 或者，選取&#x200B;**[!UICONTROL 拖放物件或選取這裡]**&#x200B;欄位，然後從躍現式選單中選取&#x200B;**[!UICONTROL 配偶薪資]**&#x200B;欄位，這會列出表單中的所有表單物件。
+1. 從&#x200B;**[!UICONTROL 拖放物件上的[表單物件]索引標籤中拖放**[!UICONTROL &#x200B;配偶薪資&#x200B;]**欄位，或選取這裡]**&#x200B;欄位。 或者，選取&#x200B;**[!UICONTROL 拖放物件或選取這裡]**&#x200B;欄位，然後從躍現式選單中選取&#x200B;**[!UICONTROL 配偶薪資]**&#x200B;欄位，這會列出表單中的所有表單物件。
 
    ![write-rules-visual-editor-6](assets/write-rules-visual-editor-6-cc.png)
 
@@ -525,7 +523,7 @@ Users in the forms-power-users group can access code editor. For other users, co
 1. 在Else陳述式中，從&#x200B;**[!UICONTROL 選取動作]**&#x200B;下拉式清單中選取&#x200B;**[!UICONTROL 隱藏]**。
    ![when-else](assets/when-else-1.png)
 
-1. 從&#x200B;**[!UICONTROL 拖放物件上的[表單物件]索引標籤中拖放**&#x200B;[!UICONTROL &#x200B;配偶薪資&#x200B;]&#x200B;**欄位，或選取這裡]**&#x200B;欄位。 或者，選取&#x200B;**[!UICONTROL 拖放物件或選取這裡]**&#x200B;欄位，然後從躍現式選單中選取&#x200B;**[!UICONTROL 配偶薪資]**&#x200B;欄位，這會列出表單中的所有表單物件。
+1. 從&#x200B;**[!UICONTROL 拖放物件上的[表單物件]索引標籤中拖放**[!UICONTROL &#x200B;配偶薪資&#x200B;]**欄位，或選取這裡]**&#x200B;欄位。 或者，選取&#x200B;**[!UICONTROL 拖放物件或選取這裡]**&#x200B;欄位，然後從躍現式選單中選取&#x200B;**[!UICONTROL 配偶薪資]**欄位，這會列出表單中的所有表單物件。
    ![when-else](assets/when-else-2.png)
 
    規則在規則編輯器中會顯示如下。
@@ -536,17 +534,11 @@ Users in the forms-power-users group can access code editor. For other users, co
 
 1. 選取「**[!UICONTROL 完成]**」以儲存此規則。
 
-<!--
-1. Repeat steps 1 through 5 to define another rule to hide the Spouse Salary field if the marital Status is Single. The rule appears as follows in the rule editor.
+   >[!NOTE]
+   >
+   > 或者，您可以在「配偶薪資」欄位上撰寫「顯示」規則，而不是「婚姻狀況」欄位上的「何時」規則，以實施相同的行為。
 
-   ![write-rules-visual-editor-8](assets/write-rules-visual-editor-8-cc.png)
-   -->
-
->[!NOTE]
->
-> 或者，您可以在「配偶薪資」欄位上撰寫「顯示」規則，而不是「婚姻狀況」欄位上的「何時」規則，以實施相同的行為。
-
-![write-rules-visual-editor-9](assets/write-rules-visual-editor-9-cc.png)
+   ![write-rules-visual-editor-9](assets/write-rules-visual-editor-9-cc.png)
 
 1. 接著，撰寫規則以計算貸款資格金額（為薪資總額的50%），並在「貸款資格」欄位中顯示。 若要取得此結果，請在貸款適用性欄位上建立&#x200B;**[!UICONTROL 設定值（共]**&#x200B;個）。
 
@@ -562,11 +554,11 @@ Users in the forms-power-users group can access code editor. For other users, co
 
 1. 在運算式欄位中：
 
-   * 從Forms物件標籤中選取或拖放第一個&#x200B;**[!UICONTROL 放置物件中的**&#x200B;[!UICONTROL &#x200B; Salary &#x200B;]&#x200B;**欄位，或選取這裡]**&#x200B;欄位。
+   * 從Forms物件標籤中選取或拖放第一個&#x200B;**[!UICONTROL 放置物件中的**[!UICONTROL  Salary ]**欄位，或選取這裡]**&#x200B;欄位。
 
    * 從&#x200B;**[!UICONTROL 選取運運算元]**&#x200B;欄位中選取&#x200B;**[!UICONTROL 加號]**。
 
-   * 從「Forms物件」標籤中選取或拖放其他&#x200B;**[!UICONTROL 拖放物件的**&#x200B;[!UICONTROL &#x200B;配偶薪資&#x200B;]&#x200B;**欄位，或選取這裡]**&#x200B;欄位。
+   * 從「Forms物件」標籤中選取或拖放其他&#x200B;**[!UICONTROL 拖放物件的**[!UICONTROL &#x200B;配偶薪資&#x200B;]**欄位，或選取這裡]**&#x200B;欄位。
 
    ![write-rules-visual-editor-12](assets/write-rules-visual-editor-12.png)
 
@@ -590,7 +582,7 @@ Users in the forms-power-users group can access code editor. For other users, co
 
    在When陳述式中：
 
-   * 從Forms物件索引標籤中選取或拖放第一個&#x200B;**[!UICONTROL 放置物件的**&#x200B;[!UICONTROL &#x200B;婚姻狀況&#x200B;]&#x200B;**欄位，或選取這裡]**&#x200B;欄位。
+   * 從Forms物件索引標籤中選取或拖放第一個&#x200B;**[!UICONTROL 放置物件的**[!UICONTROL &#x200B;婚姻狀況&#x200B;]**欄位，或選取這裡]**&#x200B;欄位。
 
    * 從&#x200B;**[!UICONTROL 選取運運算元]**&#x200B;欄位中選取&#x200B;**[!UICONTROL 等於]**。
 
@@ -612,13 +604,19 @@ Users in the forms-power-users group can access code editor. For other users, co
 
 ![write-rules-visual-editor-19](assets/write-rules-visual-editor-19-cc.png)
 
+<!--
+1. Repeat steps 1 through 5 to define another rule to hide the Spouse Salary field if the marital Status is Single. The rule appears as follows in the rule editor.
+
+   ![write-rules-visual-editor-8](assets/write-rules-visual-editor-8-cc.png)
+-->
+
 
 <!--
 ### Using code editor {#using-code-editor}
 
 Users added to the forms-power-users group can use code editor. The rule editor auto generates the JavaScript code for any rule you create using visual editor. You can switch from visual editor to the code editor to view the generated code. However, if you modify the rule code in the code editor, you cannot switch back to the visual editor. If you prefer writing rules in code editor rather than visual editor, you can write rules afresh in the code editor. The visual-code editors switcher helps you switch between the two modes.
 
-The code editor JavaScript is the expression language of Adaptive Forms. All the expressions are valid JavaScript expressions and use Adaptive Forms scripting model APIs. These expressions return values of certain types. For the complete list of Adaptive Forms classes, events, objects, and public APIs, see [JavaScript Library API reference for Adaptive Forms](https://helpx.adobe.com/tw/experience-manager/6-5/forms/javascript-api/index.html).
+The code editor JavaScript is the expression language of Adaptive Forms. All the expressions are valid JavaScript expressions and use Adaptive Forms scripting model APIs. These expressions return values of certain types. For the complete list of Adaptive Forms classes, events, objects, and public APIs, see [JavaScript Library API reference for Adaptive Forms](https://helpx.adobe.com/experience-manager/6-5/forms/javascript-api/index.html).
 
 For more information about guidelines to write rules in the code editor, see [Adaptive Form Expressions](adaptive-form-expressions.md).
 
@@ -720,7 +718,7 @@ For example, you want to add a custom function which calculates area of a square
 
 To create a client library and add it in the CRX repository, perform the following steps:
 
-1. Create a client library. For more information, see [Using Client-Side Libraries](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/full-stack/clientlibs.html?lang=zh-Hant#developing).
+1. Create a client library. For more information, see [Using Client-Side Libraries](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/full-stack/clientlibs.html#developing).
 2. In CRXDE, add a property `categories`with string type value as `customfunction` to the `clientlib` folder.
 
    >[!NOTE]
@@ -845,7 +843,7 @@ var c = {
 
    如需有關管理現有規則的資訊，請參閱[管理規則](rule-editor.md#p-manage-rules-p)。
 
-1. 選取規則標題旁的核取方塊，管理規則的選項就會出現。 選取&#x200B;**[!UICONTROL 複製]**。
+1. 選取規則標題旁的核取方塊，管理規則的選項就會出現。 選取「**[!UICONTROL 複製]**」。
 
    ![copyrule2](assets/copyrule2.png)
 
