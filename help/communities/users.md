@@ -11,11 +11,9 @@ solution: Experience Manager
 feature: Communities
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '1910'
+source-wordcount: '1922'
 ht-degree: 0%
-
 ---
-
 # 管理使用者和使用者群組 {#managing-users-and-user-groups}
 
 ## 概觀 {#overview}
@@ -46,7 +44,7 @@ ht-degree: 0%
 
 ### 動態建立的使用者群組 {#dynamically-created-user-groups}
 
-建立新社群網站時，會在作者環境（請參閱[作者群組角色](#author-group-roles)）或發佈環境(請參閱[Publish群組角色](#publish-group-roles))中，以適用於管理社群網站所需各種管理功能的唯一ID (uid)和許可權，動態建立新使用者群組。
+建立新社群網站時，新使用者群組會以適用於各種管理功能的唯一ID (uid)和許可權動態建立，這些管理功能是在作者環境（請參閱[作者群組角色](#author-group-roles)）或發佈環境（請參閱[發佈群組角色](#publish-group-roles)）中管理社群網站所必需的。
 
 群組名稱是在[社群網站建立](sites-console.md#step13asitetemplate)期間，從指定的網站名稱產生。 此唯一ID可避免相同伺服器上名稱相似之社群網站和社群群組的命名衝突。
 
@@ -87,25 +85,25 @@ ht-degree: 0%
 
 請務必遵循[安全性檢查清單](../../help/sites-administering/security-checklist.md)。
 
-## Publish環境 {#publish-environment}
+## 發佈環境 {#publish-environment}
 
 ### 成為會員 {#becoming-a-member}
 
 在發佈環境中，根據社群網站的[設定](sites-console.md#user-management)，網站訪客可能會成為社群成員：
 
 * 當社群網站為私人（已關閉）時：
-   * 透過邀請
-   * 依管理員的動作
+  * 透過邀請
+  * 依管理員的動作
 
 * 當社群網站為公開（開放）時：
-   * 依自助註冊
-   * 透過Facebook和Twitter的社交登入
+  * 依自助註冊
+  * 透過Facebook和Twitter的社交登入
 
 >[!NOTE]
 >
 >如果網站訪客註冊為一個開放社群網站的成員，則他們會自動成為相同發佈環境中其他開放社群網站的成員。
 
-### Publish群組角色 {#publish-group-roles}
+### 發佈群組角色 {#publish-group-roles}
 
 | 如果群組的成員…… | 主要角色 |
 |---|---|
@@ -116,7 +114,7 @@ ht-degree: 0%
 | *有特殊許可權的成員安全性群組* | 以限制內容建立為目的的手動建立和維護的使用者群組。 檢視[有特殊許可權的成員群組](#privileged-members-group)。 |
 | 無 | 探索到網站的匿名網站訪客，可以檢視及搜尋允許匿名存取的社群網站。 若要參與和發佈內容，使用者必須自行註冊（如果允許）並成為社群成員。 |
 
-### 將成員指派給Publish群組角色 {#assigning-members-to-publish-group-roles}
+### 將成員指派給發佈群組角色 {#assigning-members-to-publish-group-roles}
 
 當[在作者環境中建立社群網站](sites-console.md)時，或當[修改網站屬性時，](sites-console.md#modifying-site-properties)成員可能會被指派在發佈環境中執行的各種角色，例如版主、群組管理員、資源聯絡人或有特殊許可權的成員。
 
@@ -211,9 +209,9 @@ AEM支援使用LDAP來驗證使用者並建立使用者帳戶。 這在[使用AE
 
    * 設定下列屬性：
 
-      * **[!UICONTROL 使用者自動會籍]**： `community-<site name>-<uid>-members`
-      * **[!UICONTROL 使用者路徑前置詞]**： `/community`
-      * **[!UICONTROL 群組路徑首碼]**： `/community`
+     * **[!UICONTROL 使用者自動會籍]**： `community-<site name>-<uid>-members`
+     * **[!UICONTROL 使用者路徑前置詞]**： `/community`
+     * **[!UICONTROL 群組路徑首碼]**： `/community`
 
 4. [外部登入模組](../../help/sites-administering/ldap-config.md#the-external-login-module)
 

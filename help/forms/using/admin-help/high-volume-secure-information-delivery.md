@@ -1,21 +1,23 @@
 ---
 title: 大量安全資訊傳遞
+
 description: Document Security支援將授權與使用者相關聯，而不是與大量生產環境中的檔案相關聯。
+
+
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
+
 feature: Document Security
 exl-id: 616e8821-ca96-4471-9120-0e1076a06178
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
-source-wordcount: '320'
+source-wordcount: '326'
 ht-degree: 0%
-
 ---
-
 # 大量安全資訊傳遞 {#high-volume-secure-information-delivery}
 
 在大量生產環境中（例如為電信公司產生每月安全發票的環境中），建立每個檔案特定的授權可能會成為資源密集的過程。 在這種情況下，Document Security支援將授權與使用者相關聯，而不是與檔案相關聯。 為使用者產生的授權將用於為該使用者保護的所有檔案。
@@ -28,4 +30,4 @@ Document Security也支援抽象原則。 抽象原則是包含所有原則屬�
 
 僅支援透過Document Security Java SDK建立抽象原則。 但是，您可以管理從Document Security網頁的抽象原則建立的原則。 使用此方法建立的原則，其行為與從Document Security網頁建立的原則相同。
 
-如需詳細資訊，請參閱[使用AEM表單](https://www.adobe.com/go/learn_aemforms_programming_63)程式設計。
+如需詳細資訊，請參閱[使用AEM表單程式設計](https://www.adobe.com/go/learn_aemforms_programming_63)。
