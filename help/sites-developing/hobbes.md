@@ -142,7 +142,7 @@ AEM測試架構使用Hobbes.js，這是以JavaScript撰寫的測試程式庫。 
    myTestSuite.js
    ```
 
-1. 按一下[儲存全部]****，然後關閉`js.txt`檔案。
+1. 按一下[儲存全部]&#x200B;**&#x200B;**，然後關閉`js.txt`檔案。
 1. 以滑鼠右鍵按一下`myFirstTest`節點，然後按一下&#x200B;**建立>建立檔案**。 將檔案命名為`myTestSuite.js`並按一下&#x200B;**確定**。
 1. 將下列程式碼複製到`myTestSuite.js`檔案，然後儲存檔案：
 
