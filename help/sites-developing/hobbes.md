@@ -1,22 +1,22 @@
 ---
 title: 測試您的UI
-description: AEM為AEM UI提供自動化測試框架
+description: AEM為AEM UI提供自動化測試架構
+
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: components, testing
+
 docset: aem65
 exl-id: 2d28cee6-31b0-4288-bad3-4d2ecad7b626
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
 workflow-type: tm+mt
-source-wordcount: '759'
+source-wordcount: '795'
 ht-degree: 3%
-
 ---
-
 # 測試您的UI{#testing-your-ui}
 
 >[!NOTE]
@@ -25,13 +25,13 @@ ht-degree: 3%
 >
 >請參閱[已過時和已移除的功能](/help/release-notes/deprecated-removed-features.md)。
 
-AEM為AEM UI提供自動化測試框架。 使用框架，您可以直接在網頁瀏覽器中編寫和執行UI測試。 此架構提供用來建立測試的JavaScript API。
+AEM為AEM UI的測試自動化提供架構。 使用框架，您可以直接在網頁瀏覽器中編寫和執行UI測試。 此架構提供用來建立測試的JavaScript API。
 
-AEM測試架構使用Hobbes.js，這是以JavaScript撰寫的測試程式庫。 Hobbes.js架構是作為開發流程的一部分開發用於測試AEM。 此架構現在可供公眾用來測試您的AEM應用程式。
+AEM測試架構使用Hobbes.js，這是以JavaScript撰寫的測試程式庫。 Hobbes.js架構是作為開發流程的一部分為測試AEM而開發的。 此架構現在可供公眾用來測試您的AEM應用程式。
 
 >[!NOTE]
 >
->如需API的完整詳細資訊，請參閱Hobbes.js [檔案](https://developer.adobe.com/experience-manager/reference-materials/6-5/test-api/index.html)。
+>如需API的完整詳細資訊，請參閱Hobbes.js [檔案](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/test-api/index.html)。
 
 ## 測試結構 {#structure-of-tests}
 
@@ -104,9 +104,9 @@ AEM測試架構使用Hobbes.js，這是以JavaScript撰寫的測試程式庫。 
 
 下列程式會逐步引導您使用[We.Retail內容](/help/sites-developing/we-retail.md)建立並執行測試套裝，但您可以輕鬆修改測試，以使用不同的網頁。
 
-如需建立您自己的測試套裝的完整詳細資訊，請參閱[Hobbes.js API檔案](https://developer.adobe.com/experience-manager/reference-materials/6-5/test-api/index.html)。
+如需建立您自己的測試套裝的完整詳細資訊，請參閱[Hobbes.js API檔案](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/test-api/index.html)。
 
-1. 開啟CRXDE Lite。 ([https://localhost:4502/crx/de](https://localhost:4502/crx/de))
+1. 開啟 CRXDE Lite。 ([https://localhost:4502/crx/de](https://localhost:4502/crx/de))
 1. 用滑鼠右鍵按一下`/etc/clientlibs`資料夾，然後按一下&#x200B;**建立>建立資料夾**。 輸入名稱`myTests`並按一下&#x200B;**確定**。
 1. 以滑鼠右鍵按一下`/etc/clientlibs/myTests`資料夾，然後按一下&#x200B;**建立>建立節點**。 使用以下屬性值，然後按一下&#x200B;**確定**：
 

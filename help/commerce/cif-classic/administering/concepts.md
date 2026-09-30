@@ -6,13 +6,11 @@ exl-id: 290b2af6-257f-42f2-b809-1248227a4795
 solution: Experience Manager,Commerce
 feature: Commerce Integration Framework
 role: Admin, Developer
-source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
+source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
 workflow-type: tm+mt
-source-wordcount: '4534'
+source-wordcount: '4567'
 ht-degree: 1%
-
 ---
-
 # 概念{#concepts}
 
 整合架構提供以下用途的機制和元件：
@@ -60,33 +58,33 @@ ht-degree: 1%
 
 * AEM可以：
 
-   * 要求：
+  * 要求：
 
-      * 電子商務引擎的產品資訊。
+    * 電子商務引擎的產品資訊。
 
-   * 提供：
+  * 提供：
 
-      * 使用者檢視產品資訊、購物車和結帳。
-      * 購物車和結帳資訊至電子商務引擎。
-      * 搜尋引擎最佳化(SEO)。
-      * 社群功能。
-      * 非結構化行銷互動。
+    * 使用者檢視產品資訊、購物車和結帳。
+    * 購物車和結帳資訊至電子商務引擎。
+    * 搜尋引擎最佳化(SEO)。
+    * 社群功能。
+    * 非結構化行銷互動。
 
 * 電子商務引擎可以：
 
-   * 提供：
+  * 提供：
 
-      * 資料庫中的產品資訊。
-      * 產品變體管理。
-      * Order Management。
-      * ERP （企業資源規劃）。
-      * 搜尋產品資訊。
+    * 資料庫中的產品資訊。
+    * 產品變體管理。
+    * Order Management。
+    * ERP （企業資源規劃）。
+    * 搜尋產品資訊。
 
-   * 程式：
+  * 程式：
 
-      * 購物車。
-      * 結帳。
-      * 訂單履行。
+    * 購物車。
+    * 結帳。
+    * 訂單履行。
 
 >[!NOTE]
 >
@@ -126,7 +124,7 @@ AEM eCommerce是使用電子商務引擎實施：
 >
 >使用以JCR為基礎的一般開發在AEM中實作的AEM電子商務是：
 >
->* 獨立的AEM原生電子商務範例，說明如何使用API。 這可用來透過現有的資料顯示和行銷活動，控制產品資料、購物車和結帳。 在此案例中，產品資料庫儲存在AEM （Adobe的[JCR](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/2.0/index.html)實作）原生儲存機制中。
+>* 獨立的AEM原生電子商務範例，說明如何使用API。 這可用來透過現有的資料顯示和行銷活動，控制產品資料、購物車和結帳。 在此案例中，產品資料庫儲存在AEM （Adobe的[JCR](https://experienceleague.adobe.com/en/tools/aem-api-documentation/spec/jcr/2.0/index.html)實作）原生儲存機制中。
 >
 >  標準AEM安裝包含[一般電子商務實作](/help/commerce/cif-classic/administering/generic.md)的基本知識。
 
@@ -150,7 +148,7 @@ AEM eCommerce是使用電子商務引擎實施：
 >
 >Geometrixx匯入工具使用CSV檔案；在其實作上方的註解中有接受的結構描述（允許自訂屬性）。
 
-[ProductServicesManager](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/commerce/pim/api/ProductServicesManager.html) （透過[OSGi](/help/sites-deploying/configuring.md#osgi-configuration-settings)）維護[ProductImporter](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/commerce/pim/api/ProductImporter.html)與[CatalogBlueprintImporter](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/commerce/pim/api/CatalogBlueprintImporter.html)介面的實作清單。 這些列在Importer精靈的&#x200B;**Importer/Commerce提供者**&#x200B;下拉式欄位中（使用`commerceProvider`屬性當作名稱）。
+[ProductServicesManager](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/adobe/cq/commerce/pim/api/ProductServicesManager.html) （透過[OSGi](/help/sites-deploying/configuring.md#osgi-configuration-settings)）維護[ProductImporter](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/adobe/cq/commerce/pim/api/ProductImporter.html)與[CatalogBlueprintImporter](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/adobe/cq/commerce/pim/api/CatalogBlueprintImporter.html)介面的實作清單。 這些列在Importer精靈的&#x200B;**Importer/Commerce提供者**&#x200B;下拉式欄位中（使用`commerceProvider`屬性當作名稱）。
 
 當下拉式清單中提供特定的匯入工具/商務提供者時，您必須在以下任一位置定義所需的任何補充資料（視匯入工具型別而定）：
 
@@ -169,24 +167,24 @@ AEM eCommerce是使用電子商務引擎實施：
 
 * 維護下列專案的產品資訊管理(PIM)使用者：
 
-   * 產品資訊。
-   * 分類、分類、核准。
-   * 與數位資產管理互動。
-   * 定價 — 通常來自ERP系統，不會在商務系統中明確維護。
+  * 產品資訊。
+  * 分類、分類、核准。
+  * 與數位資產管理互動。
+  * 定價 — 通常來自ERP系統，不會在商務系統中明確維護。
 
 * 負責維護下列專案的作者/行銷經理：
 
-   * 所有管道的行銷內容。
-   * 促銷活動。
-   * 憑單。
-   * 行銷活動。
+  * 所有管道的行銷內容。
+  * 促銷活動。
+  * 憑單。
+  * 行銷活動。
 
 * 瀏覽網路者/購物者：
 
-   * 檢視您的產品資訊。
-   * 將專案放入購物車。
-   * 檢查他們的訂單。
-   * 期望訂單履行。
+  * 檢視您的產品資訊。
+  * 將專案放入購物車。
+  * 檢查他們的訂單。
+  * 期望訂單履行。
 
 雖然實際位置取決於您的實作，例如通用或使用電子商務引擎：
 
@@ -265,15 +263,15 @@ AEM eCommerce是使用電子商務引擎實施：
 
   企業資源規劃(ERP)資訊。
 
-   * **SKU**
+  * **SKU**
 
-     庫存單位(SKU)資訊。
+    庫存單位(SKU)資訊。
 
-   * **色彩**
-   * **大小**
-   * **價格**
+  * **色彩**
+  * **大小**
+  * **價格**
 
-     產品的單價。
+    產品的單價。
 
 * **摘要**
 
@@ -394,19 +392,19 @@ AEM支援多種語言的產品內容。 請求資料時，整合架構會從目�
 
 * 內容數量
 
-   * Assets
-   * 本地化的I18ned產品和SKU
+  * Assets
+  * 本地化的I18ned產品和SKU
 
 * 使用者活動：
 
-   * 大量版本
-   * 大量發佈
-   * 大量搜尋請求
+  * 大量版本
+  * 大量發佈
+  * 大量搜尋請求
 
 * 背景處理程式
 
-   * 匯入
-   * 同步處理更新（例如，定價）
+  * 匯入
+  * 同步處理更新（例如，定價）
 
 * 維護需求（備份、Tar PM最佳化、資料存放區垃圾收集等）
 
@@ -505,9 +503,9 @@ Proxy頁面使用不包含任何實際產品內容的雙節點結構（`cq:Page`
 
 * 憑單供給：
 
-   * 憑單代碼（由購物者輸入購物車中）。
-   * 憑單標籤（購物者將其輸入購物車後顯示）。
-   * 促銷活動路徑（定義憑單套用的動作）。
+  * 憑單代碼（由購物者輸入購物車中）。
+  * 憑單標籤（購物者將其輸入購物車後顯示）。
+  * 促銷活動路徑（定義憑單套用的動作）。
 
 * 外部商務引擎也可以提供憑單。
 
@@ -516,9 +514,9 @@ Proxy頁面使用不包含任何實際產品內容的雙節點結構（`cq:Page`
 * 憑單是使用「網站」主控台建立/編輯的頁面型元件。
 * **憑單**&#x200B;元件提供：
 
-   * 憑單管理的轉譯器；這會顯示目前購物車中的任何憑單。
-   * 用於管理（新增/移除）憑單的編輯對話方塊（表單）。
-   * 在購物車中新增/移除憑單所需的動作。
+  * 憑單管理的轉譯器；這會顯示目前購物車中的任何憑單。
+  * 用於管理（新增/移除）憑單的編輯對話方塊（表單）。
+  * 在購物車中新增/移除憑單所需的動作。
 
 * 憑單沒有自己的開啟和結束日期/時間，但會使用父行銷活動的日期/時間。
 
@@ -541,16 +539,16 @@ Proxy頁面使用不包含任何實際產品內容的雙節點結構（`cq:Page`
 * 促銷活動是使用「網站」主控台建立/編輯的頁面型元件。 &quot;
 * 促銷供應：
 
-   * 優先順序
-   * 推進處理常式路徑
+  * 優先順序
+  * 推進處理常式路徑
 
 * 您可以將促銷活動連結至促銷活動，以定義其開啟/關閉日期/時間。
 * 您可以將促銷活動連結至體驗，以定義其區段。
 * 未連線至體驗的促銷活動不會自行引發，但憑單仍可引發。
 * 「推進」元件包含：
 
-   * 推進管理的轉譯器和對話方塊
-   * 用於呈現和編輯升級處理常式專屬之組態引數的子元件
+  * 推進管理的轉譯器和對話方塊
+  * 用於呈現和編輯升級處理常式專屬之組態引數的子元件
 
 在AEM中，促銷活動也會整合至[促銷活動管理](/help/sites-authoring/personalization.md)：
 
@@ -707,8 +705,8 @@ Proxy頁面使用不包含任何實際產品內容的雙節點結構（`cq:Page`
 * 所選專案的產品頁面連結
 * 具備以下功能：
 
-   * 更新個別料號的數目/數量
-   * 移除個別專案
+  * 更新個別料號的數目/數量
+  * 移除個別專案
 
 ![電子商務_購物車](/help/sites-administering/assets/ecommerce_shoppingcart.png)
 
@@ -812,7 +810,7 @@ Proxy頁面使用不包含任何實際產品內容的雙節點結構（`cq:Page`
 
 >[!NOTE]
 >
->建立訂單精靈中使用的欄位取決於為位置定義的觸控最佳化支架。在一般範例中，這可在下列位置找到：
+>建立訂單精靈中使用的欄位取決於為位置定義的觸控最佳化支架。 在一般範例中，這可在下列位置找到：
 >`/etc/scaffolding/geometrixx-outdoors/order/jcr:content/cq:dialog`
 
 在AEM中保留訂單時，訂單主控台會針對每個訂單顯示下列內容：

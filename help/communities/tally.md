@@ -9,13 +9,11 @@ exl-id: 0b508df9-1a24-4728-a254-f913eeb9b391
 solution: Experience Manager
 feature: Communities
 role: Developer
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
 workflow-type: tm+mt
-source-wordcount: '330'
+source-wordcount: '339'
 ht-degree: 0%
-
 ---
-
 # Tally Essentials {#tally-essentials}
 
 Tally是抽象類別，提供收整合員意見的標準方法，說明他們如何評估特定產品和服務。 不支援匿名意見反應。 網站訪客必須註冊並登入才能參與並登入以變更其意見反應。 登入要求有助於稽核，並藉由防止多個貼文而提升意見回饋的價值。
@@ -38,9 +36,9 @@ Tally是抽象類別，提供收整合員意見的標準方法，說明他們如
 
 ## 伺服器端的Essentials {#essentials-for-server-side}
 
-* [標籤API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/tally/client/api/package-summary.html)
+* [標籤API](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/adobe/cq/social/tally/client/api/package-summary.html)
 
-* [計分端點](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/tally/client/endpoints/package-summary.html)
+* [計分端點](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/adobe/cq/social/tally/client/endpoints/package-summary.html)
 
 * [伺服器端自訂](server-customize.md)
 

@@ -9,13 +9,11 @@ exl-id: 3891150e-9972-4bbc-ad61-7f46a1f9bbb4
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
 workflow-type: tm+mt
-source-wordcount: '5297'
+source-wordcount: '5299'
 ht-degree: 1%
-
 ---
-
 
 # 開發報表 {#developing-reports}
 
@@ -108,7 +106,7 @@ Adobe Experience Manager (AEM)提供了一系列[標準報告](/help/sites-admin
 查詢：
 
 * 定義為[`reportbase`](#report-base)元件的一部分。
-* 是以[CQ QueryBuilder](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/search/QueryBuilder.html)為基礎。
+* 是以[CQ QueryBuilder](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/day/cq/search/QueryBuilder.html)為基礎。
 * 擷取用作報表基礎的資料。 結果集（表格）的每一列都會繫結至查詢傳回的節點。 接著會從此資料集中擷取[個別資料行](#column-base-component)的特定資訊。
 
 * 通常包含：
@@ -382,7 +380,7 @@ N:charting
 
 每個報告都可以有一個設定對話方塊，允許使用者為報告指定各種引數。 報表頁面開啟時，可透過&#x200B;**編輯**&#x200B;按鈕存取此對話方塊。
 
-此對話方塊是標準的CQ [對話方塊](/help/sites-developing/components-basics.md#dialogs)，可以如此設定（如需詳細資訊，請參閱[CQ.Dialog](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.Dialog)）。
+此對話方塊是標準的CQ [對話方塊](/help/sites-developing/components-basics.md#dialogs)，可以如此設定（如需詳細資訊，請參閱[CQ.Dialog](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/widgets-api/index.html?class=CQ.Dialog)）。
 
 範例對話方塊如下所示：
 

@@ -10,13 +10,11 @@ exl-id: 3f078139-73fd-4913-9d67-264fb2515f8a
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
 workflow-type: tm+mt
-source-wordcount: '2340'
-ht-degree: 1%
-
+source-wordcount: '2450'
+ht-degree: 2%
 ---
-
 # 開發Adobe Experience Manager (AEM)元件（傳統UI）{#developing-aem-components-classic-ui}
 
 傳統UI會使用ExtJS建立提供元件外觀的Widget。 由於這些Widget的性質，元件與傳統UI和[觸控式UI](/help/sites-developing/developing-components.md)的互動方式有一些差異。
@@ -27,13 +25,13 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->雖然HTML範本語言(HTL)和JSP都可用於開發傳統UI的元件，此頁面說明了使用JSP進行的開發。 這完全是因為在傳統UI中使用JSP的歷史。
+>雖然HTML範本語言(HTL)和JSP都可用於開發傳統UI的元件，本頁還是會說明使用JSP進行開發。 這完全是因為在傳統UI中使用JSP的歷史。
 >
 >HTL現在是AEM的建議指令碼語言。 請參閱[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=zh-Hant)和[開發AEM元件](/help/sites-developing/developing-components.md)以比較方法。
 
 ## 結構 {#structure}
 
-元件基本結構涵蓋在[AEM Components - The Basics](/help/sites-developing/components-basics.md#structure)頁面，此頁面同時套用觸控式Eanbeld和傳統UI。 即使您不需要在新元件中使用觸控式UI的設定，從現有元件繼承時瞭解這些設定也會有所幫助。
+元件基本結構已覆蓋在[AEM元件 — 基本知識](/help/sites-developing/components-basics.md#structure)頁面，此頁面同時套用觸控式Eanbeld和傳統UI。 即使您不需要在新元件中使用觸控式UI的設定，從現有元件繼承時瞭解這些設定也會有所幫助。
 
 ## JSP指令碼 {#jsp-scripts}
 
@@ -63,20 +61,20 @@ JSP指令碼檔案`global.jsp`可用來讓特定物件（亦即存取內容）�
 
 * `<cq:defineObjects />`
 
-   * `slingRequest` — 包裝的要求物件( `SlingHttpServletRequest`)。
-   * `slingResponse` — 包裝的回應物件( `SlingHttpServletResponse`)。
-   * `resource` - Sling資源物件( `slingRequest.getResource();`)。
-   * `resourceResolver` - Sling資源解析程式物件( `slingRequest.getResoucreResolver();`)。
-   * `currentNode` — 要求的已解析JCR節點。
-   * `log` — 預設記錄器()。
-   * `sling` - Sling指令碼協助程式。
-   * `properties` — 已定址資源( `resource.adaptTo(ValueMap.class);`)的屬性。
-   * `pageProperties` — 已定址資源的頁面屬性。
-   * `pageManager` — 存取AEM內容頁面的頁面管理員( `resourceResolver.adaptTo(PageManager.class);`)。
-   * `component` — 目前AEM元件的元件物件。
-   * `designer` — 用於擷取設計資訊的Designer物件( `resourceResolver.adaptTo(Designer.class);`)。
-   * `currentDesign` — 已定址資源的設計。
-   * `currentStyle` — 已定址資源的樣式。
+  * `slingRequest` — 包裝的要求物件( `SlingHttpServletRequest`)。
+  * `slingResponse` — 包裝的回應物件( `SlingHttpServletResponse`)。
+  * `resource` - Sling資源物件( `slingRequest.getResource();`)。
+  * `resourceResolver` - Sling資源解析程式物件( `slingRequest.getResoucreResolver();`)。
+  * `currentNode` — 要求的已解析JCR節點。
+  * `log` — 預設記錄器()。
+  * `sling` - Sling指令碼協助程式。
+  * `properties` — 已定址資源( `resource.adaptTo(ValueMap.class);`)的屬性。
+  * `pageProperties` — 已定址資源的頁面屬性。
+  * `pageManager` — 存取AEM內容頁面的頁面管理員( `resourceResolver.adaptTo(PageManager.class);`)。
+  * `component` — 目前AEM元件的元件物件。
+  * `designer` — 用於擷取設計資訊的Designer物件( `resourceResolver.adaptTo(Designer.class);`)。
+  * `currentDesign` — 已定址資源的設計。
+  * `currentStyle` — 已定址資源的樣式。
 
 ### 存取內容 {#accessing-content}
 
@@ -92,15 +90,15 @@ JSP指令碼檔案`global.jsp`可用來讓特定物件（亦即存取內容）�
 
 * 透過`global.jsp`中引入的`currentPage`物件：
 
-  `currentPage`物件是頁面的執行個體(請參閱[AEM API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/Page.html))。 Page類別提供一些存取內容的方法。
+  `currentPage`物件是頁面的執行個體（請參閱[AEM API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/Page.html)）。 Page類別提供一些存取內容的方法。
 
-  範例： `String pageTitle = currentPage.getTitle();`
+  範例：`String pageTitle = currentPage.getTitle();`
 
 * 透過`global.jsp`中引入的`currentNode`物件：
 
   `currentNode`物件是節點的執行個體（請參閱[JCR API](https://jackrabbit.apache.org/api/2.16/org/apache/jackrabbit/standalone/cli/core/CurrentNode.html)）。 `getProperty()`方法可存取節點的屬性。
 
-  範例： `String pageTitle = currentNode.getProperty("jcr:title");`
+  範例：`String pageTitle = currentNode.getProperty("jcr:title");`
 
 ## JSP標籤庫 {#jsp-tag-libraries}
 
@@ -108,13 +106,13 @@ CQ和Sling標籤庫可讓您存取特定函式，以便在範本和元件的JSP�
 
 如需詳細資訊，請參閱檔案[標籤庫](/help/sites-developing/taglib.md)。
 
-## 使用使用者端HTML程式庫 {#using-client-side-html-libraries}
+## 使用使用者端HTML資料庫 {#using-client-side-html-libraries}
 
 現代網站非常依賴由複雜的JavaScript和CSS程式碼驅動的使用者端處理。 組織和最佳化此程式碼的伺服可能是一個複雜的問題。
 
 為協助處理此問題，AEM提供&#x200B;**使用者端程式庫資料夾**，可讓您將使用者端程式碼儲存在存放庫中、將其組織成類別並定義每個類別程式碼何時及如何提供給使用者端。 然後，使用者端程式庫系統會負責在最終網頁中產生正確的連結，以載入正確的程式碼。
 
-如需詳細資訊，請參閱檔案[使用使用者端HTML庫](/help/sites-developing/clientlibs.md)。
+如需詳細資訊，請參閱檔案[使用使用者端HTML資料庫](/help/sites-developing/clientlibs.md)。
 
 ## 對話方塊 {#dialog}
 
@@ -148,7 +146,7 @@ CQ和Sling標籤庫可讓您存取特定函式，以便在範本和元件的JSP�
 
 若要根據現有元件為AEM開發新元件，您可以複製元件、為新元件建立JavaScript檔案，並將其儲存在AEM可存取的位置（另請參閱[自訂元件和其他元素](/help/sites-developing/dev-guidelines-bestpractices.md#customizing-components-and-other-elements)）：
 
-1. 使用CRXDE Lite，在下方建立元件資料夾：
+1. 使用CRXDE Lite，在中建立元件資料夾：
 
    / `apps/<myProject>/components/<myComponent>`
 
@@ -164,8 +162,8 @@ CQ和Sling標籤庫可讓您存取特定函式，以便在範本和元件的JSP�
 
    * 在對話方塊中新增欄位
 
-      * `cq:dialog` — 觸控式UI的對話方塊
-      * `dialog` — 傳統UI的對話方塊
+     * `cq:dialog` — 觸控式UI的對話方塊
+     * `dialog` — 傳統UI的對話方塊
 
    * 取代`.jsp`檔案（以新元件命名）
    * 或完全重工整個元件（若您需要）
@@ -176,8 +174,8 @@ CQ和Sling標籤庫可讓您存取特定函式，以便在範本和元件的JSP�
    >
    >的元件：
    >
-   >* 觸控式UI使用[Granite](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)元件
-   >* 傳統UI使用[ExtJS Widget](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html)
+   >* 觸控式UI使用[Granite](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)元件
+   >* 傳統UI使用[ExtJS Widget](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/widgets-api/index.html)
 
    >[!NOTE]
    >
@@ -251,13 +249,13 @@ CQ和Sling標籤庫可讓您存取特定函式，以便在範本和元件的JSP�
 
 >[!NOTE]
 >
->此範例是根據AEM不再隨附的Geometrixx範例內容，已由We.Retail取代。 如需如何下載和安裝Geometrixx，請參閱檔案[We.Retail參考實作](/help/sites-developing/we-retail.md#we-retail-geometrixx)。
+>此範例是根據Geometrixx範例內容，AEM已不再隨附此內容，並已由We.Retail取代。 如需如何下載和安裝Geometrixx，請參閱檔案[We.Retail參考實作](/help/sites-developing/we-retail.md#we-retail-geometrixx)。
 
 #### 擴充現有的文字元件 {#extending-the-existing-textimage-component}
 
-若要建立元件，可使用標準文字元件作為基礎並加以修改。 您可以將新元件儲存在GeometrixxAEM WCM範例應用程式中。
+若要建立元件，可使用標準文字元件作為基礎並加以修改。 您可以將新元件儲存在Geometrixx AEM WCM範例應用程式中。
 
-1. 將標準文字檔元件從`/libs/foundation/components/textimage`複製到Geometrixx元件資料夾`/apps/geometrixx/components`，使用文字檔作為目標節點名稱。 （瀏覽至元件、以滑鼠右鍵按一下並選取「複製」，然後瀏覽至目標目錄，以複製元件。）
+1. 將標準文字頁面元件從`/libs/foundation/components/textimage`複製到Geometrixx元件資料夾`/apps/geometrixx/components`，使用文字頁面作為目標節點名稱。 （瀏覽至元件、以滑鼠右鍵按一下並選取「複製」，然後瀏覽至目標目錄，以複製元件。）
 
    ![chlimage_1-59](assets/chlimage_1-59a.png)
 
@@ -278,16 +276,16 @@ CQ和Sling標籤庫可讓您存取特定函式，以便在範本和元件的JSP�
 
    * 元件名稱
 
-      * 將`jcr:description`設為`Text Image Component (Extended)`
-      * 將`jcr:title`設為`Text Image (Extended)`
+     * 將`jcr:description`設為`Text Image Component (Extended)`
+     * 將`jcr:title`設為`Text Image (Extended)`
 
    * 群組，其中元件列在Sidekick中（維持原狀）
 
-      * 保留`componentGroup`設定為`General`
+     * 保留`componentGroup`設定為`General`
 
    * 新元件的父元件（標準文字元件）
 
-      * 將`sling:resourceSuperType`設為`foundation/components/textimage`
+     * 將`sling:resourceSuperType`設為`foundation/components/textimage`
 
    在此步驟後，元件節點看起來像這樣：
 
@@ -305,24 +303,24 @@ CQ和Sling標籤庫可讓您存取特定函式，以便在範本和元件的JSP�
 
    * 在前兩個標籤（tab1和tab2）中：
 
-      * 將xtype變更為cqinclude （繼承自標準元件）。
-      * 分別使用值`/libs/foundation/components/textimage/dialog/items/tab1.infinity.json`和`/libs/foundation/components/textimage/dialog/items/tab2.infinity.json`新增路徑屬性。
-      * 移除所有其他屬性或子節點。
+     * 將xtype變更為cqinclude （繼承自標準元件）。
+     * 分別使用值`/libs/foundation/components/textimage/dialog/items/tab1.infinity.json`和`/libs/foundation/components/textimage/dialog/items/tab2.infinity.json`新增路徑屬性。
+     * 移除所有其他屬性或子節點。
 
    * 針對索引標籤3：
 
-      * 保留屬性和子節點而不變更
-      * 新增欄位定義至`tab3/items`，節點位置為`cq:Widget`
-      * 為新`tab3/items/position`節點設定下列屬性（型別為String）：
+     * 保留屬性和子節點而不變更
+     * 新增欄位定義至`tab3/items`，節點位置為`cq:Widget`
+     * 為新`tab3/items/position`節點設定下列屬性（型別為String）：
 
-         * `name`: `./imagePosition`
-         * `xtype`: `selection`
-         * `fieldLabel`: `Image Position`
-         * `type`: `select`
+       * `name`: `./imagePosition`
+       * `xtype`: `selection`
+       * `fieldLabel`: `Image Position`
+       * `type`: `select`
 
-      * 新增型別`cq:WidgetCollection`的子節點`position/options`以代表兩個影像放置選項，並在其下建立兩個節點，即`nt:unstructured`型別的o1和o2。
-      * 針對節點`position/options/o1`，將屬性： `text`設定為`Left`，`value`設定為`left.`
-      * 針對節點`position/options/o2`，將屬性： `text`設定為`Right`，`value`設定為`right`。
+     * 新增型別`cq:WidgetCollection`的子節點`position/options`以代表兩個影像放置選項，並在其下建立兩個節點，即`nt:unstructured`型別的o1和o2。
+     * 針對節點`position/options/o1`，將屬性： `text`設定為`Left`，`value`設定為`left.`
+     * 針對節點`position/options/o2`，將屬性： `text`設定為`Right`，`value`設定為`right`。
 
    * 刪除Tab4。
 
@@ -357,8 +355,8 @@ CQ和Sling標籤庫可讓您存取特定函式，以便在範本和元件的JSP�
 
 開發元件後，您可以將其新增至段落系統，讓作者在編輯頁面時可選取並使用元件。 這些步驟可讓您測試元件。
 
-1. 以Geometrixx（例如英文/公司）開啟頁面。
-1. 按一下Sidekick中的「設計」以切換至設計模式。
+1. 在Geometrixx中開啟頁面，例如英文/公司。
+1. 按一下Sidekick中的「設計」，切換至設計模式。
 1. 按一下頁面中間段落系統上的「編輯」，編輯段落系統設計。 隨即顯示元件清單，這些元件可放置在段落系統中，清單中應包含您新開發的元件「文字影像（延伸）」 。 選取它並按一下確定，為段落系統啟動它。
 1. 切換回編輯模式。
 1. 將文字影像（延伸）段落新增至段落系統，以範例內容初始化文字和影像。 儲存變更。
@@ -370,15 +368,15 @@ CQ和Sling標籤庫可讓您存取特定函式，以便在範本和元件的JSP�
 
 ### 停用影像元件的上傳功能 {#disable-upload-capability-of-the-image-component}
 
-若要停用此功能，請使用標準影像元件作為基礎並加以修改。 您可以將新元件儲存在Geometrixx範例應用程式中。
+若要停用此功能，請使用標準影像元件作為基礎並加以修改。 您會將新元件儲存在Geometrixx範例應用程式中。
 
-1. 將標準影像元件從`/libs/foundation/components/image`複製到Geometrixx元件資料夾`/apps/geometrixx/components`，使用影像作為目標節點名稱。
+1. 將標準影像元件從`/libs/foundation/components/image`複製到目標節點名稱為影像的Geometrixx元件資料夾`/apps/geometrixx/components`。
 
    ![chlimage_1-62](assets/chlimage_1-62a.png)
 
 1. 編輯元件中繼資料：
 
-   * 將&#x200B;**jcr：title**&#x200B;設為`Image (Extended)`
+   * 將&#x200B;**jcr:title**&#x200B;設為`Image (Extended)`
 
 1. 導覽至 `/apps/geometrixx/components/image/dialog/items/image`。
 1. 新增屬性：
@@ -389,8 +387,8 @@ CQ和Sling標籤庫可讓您存取特定函式，以便在範本和元件的JSP�
 
    ![chlimage_1-63](assets/chlimage_1-63a.png)
 
-1. 按一下&#x200B;**全部儲存**。 元件已準備好進行測試。
-1. 以Geometrixx（例如英文/公司）開啟頁面。
+1. 按一下&#x200B;**「儲存全部」**。 元件已準備好進行測試。
+1. 在Geometrixx中開啟頁面，例如英文/公司。
 1. 切換到設計模式並啟動影像（延伸）。
 1. 切換回編輯模式，並將其新增至段落系統。 在下一張圖片中，您可以看到原始影像元件與您建立的影像元件之間的差異。
 

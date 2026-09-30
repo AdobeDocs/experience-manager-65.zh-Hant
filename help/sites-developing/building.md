@@ -13,16 +13,16 @@ feature: Developing,Tagging
 exl-id: d885520d-d0ed-45fa-8511-faa2495d667a
 solution: Experience Manager, Experience Manager Sites
 role: Developer
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
 workflow-type: tm+mt
-source-wordcount: '932'
+source-wordcount: '936'
 ht-degree: 0%
 ---
 # 將標籤建置到AEM應用程式中{#building-tagging-into-an-aem-application}
 
 若要以程式設計方式處理自訂AEM應用程式內的標籤或擴展標籤，本頁會說明如何使用
 
-* [標籤API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/tagging/package-summary.html)
+* [標籤API](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/day/cq/tagging/package-summary.html)
 
 那個會與
 
@@ -35,7 +35,7 @@ ht-degree: 0%
 
 ## 標籤API的總覽 {#overview-of-the-tagging-api}
 
-AEM中[標籤架構](/help/sites-developing/framework.md)的實作允許使用JCR API管理標籤和標籤內容。 TagManager會確保在`cq:tags`字串陣列屬性上作為值輸入的標籤不會重複，它會移除指向不存在標籤的TagID，並更新已移動或合併標籤的標籤ID。 TagManager會使用JCR觀察監聽器來回覆任何不正確的變更。 主要類別位於[com.day.cq.tagging](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/index.html?com/day/cq/tagging/package-summary.html)封裝中：
+AEM中[標籤架構](/help/sites-developing/framework.md)的實作允許使用JCR API管理標籤和標籤內容。 TagManager會確保在`cq:tags`字串陣列屬性上作為值輸入的標籤不會重複，它會移除指向不存在標籤的TagID，並更新已移動或合併標籤的標籤ID。 TagManager會使用JCR觀察監聽器來回覆任何不正確的變更。 主要類別位於[com.day.cq.tagging](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/index.html?com/day/cq/tagging/package-summary.html)封裝中：
 
 * JcrTagManagerFactory — 傳回`TagManager`的JCR型實作。 此版本為「標籤API」的參考實作。
 * `TagManager` — 允許依路徑和名稱解析及建立標籤。
@@ -158,7 +158,7 @@ http://localhost:4502/system/console/configMgr/com.day.cq.tagging.impl.TagGarbag
 
 伺服器端API已本地化`title`相關方法：
 
-* [com.day.cq.tagging.Tag](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/index.html?com/day/cq/tagging/Tag.html)
+* [com.day.cq.tagging.Tag](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/index.html?com/day/cq/tagging/Tag.html)
 
   * getLocalizedTitle（地區設定）
   * getLocalizedTitlePaths()
@@ -166,7 +166,7 @@ http://localhost:4502/system/console/configMgr/com.day.cq.tagging.impl.TagGarbag
   * getTitle（地區設定）
   * getTitlePath（地區設定）
 
-* [com.day.cq.tagging.TagManager](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/index.html?com/day/cq/tagging/TagManager.html)
+* [com.day.cq.tagging.TagManager](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/index.html?com/day/cq/tagging/TagManager.html)
 
   * canCreateTagByTitle(String tagTitlePath， Locale)
   * createTagByTitle(String tagTitlePath， Locale)

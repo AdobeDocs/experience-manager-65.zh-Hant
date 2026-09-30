@@ -9,13 +9,11 @@ exl-id: 20a19ee5-7113-4aca-934a-a42c415a8d93
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
 workflow-type: tm+mt
-source-wordcount: '552'
-ht-degree: 3%
-
+source-wordcount: '570'
+ht-degree: 4%
 ---
-
 # 雲端服務設定{#cloud-service-configurations}
 
 設定旨在提供儲存服務設定的邏輯和結構。
@@ -31,7 +29,7 @@ ht-degree: 3%
 * 依路徑從Analytics節點參照。
 * 可輕鬆擴充。
 * 具有彈性以因應更複雜的組態，例如[Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics)。
-* 相依性支援(例如，[Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics)外掛程式需要[Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics)設定)。
+* 相依性支援（例如，[Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics)外掛程式需要[Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics)設定）。
 
 ## 結構 {#structure}
 
@@ -49,8 +47,8 @@ ht-degree: 3%
 
 * 在此底下：
 
-   * 設定範本
-   * 設定元件
+  * 設定範本
+  * 設定元件
 
 範本和元件必須繼承基底範本的`sling:resourceSuperType`：
 
@@ -136,11 +134,11 @@ propertyname
 
 ### API {#api}
 
-如需API的參考檔案，請參閱[com.day.cq.wcm.webservicesupport](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/webservicesupport/package-summary.html)。
+如需API的參考檔案，請參閱[com.day.cq.wcm.webservicesupport](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/day/cq/wcm/webservicesupport/package-summary.html)。
 
 ### AEM整合 {#aem-integration}
 
-可用的服務列在&#x200B;**頁面屬性**&#x200B;對話方塊（繼承自`foundation/components/page`或`wcm/mobile/components/page`的任何頁面）的&#x200B;**Cloud Service**&#x200B;索引標籤中。
+可用的服務列在&#x200B;**頁面屬性**&#x200B;對話方塊（繼承自`foundation/components/page`或`wcm/mobile/components/page`的任何頁面）的&#x200B;**雲端服務**&#x200B;索引標籤中。
 
 標籤也提供：
 
@@ -165,7 +163,7 @@ propertyname
 >
 >根據預設，`EcryptionPostProcessor`只會加密對`/etc/cloudservices`提出的`POST`個請求。
 
-#### 服務頁面的其他屬性jcr：content節點 {#additional-properties-for-service-page-jcr-content-nodes}
+#### 服務頁面jcr:content節點的其他屬性 {#additional-properties-for-service-page-jcr-content-nodes}
 
 <table>
  <tbody>
@@ -175,7 +173,7 @@ propertyname
   </tr>
   <tr>
    <td>componentreference</td>
-   <td>要自動納入頁面中的元件的參照路徑。<br />這用於其他功能和JS包含。<br />這包含在包含<br /> <code> cq/cloudserviceconfigs/components/servicecomponents</code><br />的頁面上的元件（通常在<code>body</code>標籤之前）。<br />若是Adobe Analytics和Adobe Target，我們會使用這個包含其他功能，例如JavaScript呼叫以追蹤訪客行為。</td>
+   <td>要自動包含在頁面中的元件的參考路徑。<br /> 這用於其他功能和JS包含。<br /> 這包括包含<br /> <code> cq/cloudserviceconfigs/components/servicecomponents</code><br />的頁面上的元件（通常在<code>body</code>標籤之前）。<br /> 若是Adobe Analytics和Adobe Target，我們會使用這一點來包含其他功能，例如追蹤訪客行為的JavaScript呼叫。</td>
   </tr>
   <tr>
    <td>說明</td>
@@ -216,7 +214,7 @@ propertyname
 
 預設會提供下列服務：
 
-* [追蹤器代碼片段](/help/sites-administering/external-providers.md) (Google、WebTrends等)
+* [追蹤器代碼片段](/help/sites-administering/external-providers.md) （Google、WebTrends等）
 * [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics)
 * [Test&amp;Target](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-target)
 <!-- Search&Promote is end of life as of September 1, 2022 * [Search&Promote](/help/sites-administering/marketing-cloud.md#integrating-with-search-promote) -->

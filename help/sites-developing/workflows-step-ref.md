@@ -1,22 +1,24 @@
 ---
 title: 工作流程步驟參考
+
 description: 請參閱此步驟參考以瞭解Adobe Experience Manager的工作流程。
+
+
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
+
 docset: aem65
 exl-id: 8de78bde-2fcb-4221-873e-59e347ff2d74
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
 workflow-type: tm+mt
-source-wordcount: '3276'
+source-wordcount: '3288'
 ht-degree: 1%
-
 ---
-
 # 工作流程步驟參考 {#workflow-step-reference}
 
 工作流程模型包含一系列各種型別的步驟。 根據型別，您可以使用引數和指令碼來設定和擴充這些步驟，以提供您需要的功能和控制項。
@@ -340,7 +342,7 @@ function check(){
 
 1. **範例對話方塊定義**
 
-   下列XML程式碼片段代表在承載內容的`watchEmail`節點中儲存`String`值的對話方塊。 標題節點代表[TextField](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/form/textfield/index.html)元件：
+   下列XML程式碼片段代表在承載內容的`watchEmail`節點中儲存`String`值的對話方塊。 標題節點代表[TextField](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/form/textfield/index.html)元件：
 
    ```xml
    jcr:primaryType="nt:unstructured"
@@ -428,7 +430,7 @@ function check(){
 
 * **OSGi服務**
 
-  服務必須實作[com.day.cq.workflow.exec.ParticipantStepChooser](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/workflow/exec/ParticipantStepChooser.html)介面。 介面會定義下列成員：
+  服務必須實作[com.day.cq.workflow.exec.ParticipantStepChooser](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/day/cq/workflow/exec/ParticipantStepChooser.html)介面。 介面會定義下列成員：
 
   * `SERVICE_PROPERTY_LABEL`欄位：使用此欄位來指定參與者選擇器的名稱。 該名稱出現在&#x200B;**動態參與者步驟**&#x200B;屬性的可用參與者選擇器清單中。
 

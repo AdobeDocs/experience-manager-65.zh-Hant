@@ -9,13 +9,11 @@ exl-id: 8af5ee58-19d7-47b6-b45d-e88006703a5d
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
 workflow-type: tm+mt
-source-wordcount: '1207'
+source-wordcount: '1210'
 ht-degree: 3%
-
 ---
-
 # 搜尋Essentials {#search-essentials}
 
 ## 概觀 {#overview}
@@ -26,11 +24,11 @@ ht-degree: 3%
 
 * 社群成員張貼的內容
 
-   * 它使用AEM Communities的UGC搜尋API。
+  * 它使用AEM Communities的UGC搜尋API。
 
 * 使用者和使用者群組（使用者資料）
 
-   * 它使用AEM平台搜尋功能。
+  * 它使用AEM平台搜尋功能。
 
 建立自訂元件以建立或管理UGC的開發人員，可能會對說明檔案的此區段感興趣。
 
@@ -44,7 +42,7 @@ ht-degree: 3%
 
 ## UGC搜尋API {#ugc-search-api}
 
-[UGC公用存放區](working-with-srp.md)是由不同的存放裝置資源提供者(SRP)之一所提供，每個提供者可能都有不同的原生查詢語言。 因此，無論選取的SRP為何，自訂程式碼都應該使用[UGC API套件](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/ugc/api/package-summary.html) (*com.adobe.cq.social.ugc.api*)中的方法，它會叫用適合所選SRP的查詢語言。
+[UGC公用存放區](working-with-srp.md)是由不同的存放裝置資源提供者(SRP)之一所提供，每個提供者可能都有不同的原生查詢語言。 因此，無論選取的SRP為何，自訂程式碼都應該使用[UGC API套件](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/adobe/cq/social/ugc/api/package-summary.html) (*com.adobe.cq.social.ugc.api*)中的方法，它會叫用適合所選SRP的查詢語言。
 
 ### ASRP搜尋 {#asrp-searches}
 
@@ -160,8 +158,8 @@ Solr是使用結構描述的查詢語言範例。
 
 * 對於多值型別，請在尾碼中新增&#39;s&#39;，例如：
 
-   * `viewDate_dt`：單一日期屬性
-   * `viewDates_dts`：日期屬性清單
+  * `viewDate_dt`：單一日期屬性
+  * `viewDates_dts`：日期屬性清單
 
 ## 篩選器 {#filters}
 
@@ -171,11 +169,11 @@ AND和OR邏輯的篩選器語法如下（在URL編碼之前顯示）：
 
 * 若要指定OR或使用帶有逗號分隔值的篩選器引數：
 
-   * `filter=name eq 'Jennifer',name eq 'Jen'`
+  * `filter=name eq 'Jennifer',name eq 'Jen'`
 
 * 若要指定AND並使用多個篩選引數，請執行下列動作：
 
-   * `filter = name eq 'Jackson'&filter=message eq 'testing'`
+  * `filter = name eq 'Jackson'&filter=message eq 'testing'`
 
 [搜尋元件](search.md)的預設實作會使用此語法，如在[社群元件指南](components-guide.md)中開啟搜尋結果頁面的URL中所見。 若要實驗，請瀏覽至[http://localhost:4503/content/community-components/en/search.html](http://localhost:4503/content/community-components/en/search.html)。
 
@@ -193,9 +191,9 @@ AND和OR邏輯的篩選器語法如下（在URL編碼之前顯示）：
 重要的是，URL應參考Communities元件（資源），而非該元件所在的頁面：
 
 * 正確：論壇元件
-   * `/content/community-components/en/forum/jcr:content/content/forum.social.json`
+  * `/content/community-components/en/forum/jcr:content/content/forum.social.json`
 * 不正確：論壇頁面
-   * `/content/community-components/en/forum.social.json`
+  * `/content/community-components/en/forum.social.json`
 
 ## SRP工具 {#srp-tools}
 

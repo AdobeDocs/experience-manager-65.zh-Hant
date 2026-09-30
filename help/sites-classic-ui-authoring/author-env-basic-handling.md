@@ -1,6 +1,6 @@
 ---
 title: 基本處理
-description: 使用Adobe Experience Manager作者環境時的基本處理概觀。 它使用Sites主控台作為基礎。
+description: 使用Adobe Experience Manager作者環境時的基本處理概觀。 其以 Sites 主控台作為基礎。
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
@@ -9,13 +9,11 @@ exl-id: 2981dc20-b2ba-4ea2-a53b-8b5fe526aa9c
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
 workflow-type: tm+mt
-source-wordcount: '1161'
-ht-degree: 3%
-
+source-wordcount: '1189'
+ht-degree: 4%
 ---
-
 # 基本處理{#basic-handling}
 
 >[!NOTE]
@@ -46,7 +44,7 @@ ht-degree: 3%
   </tr>
   <tr>
    <td><strong>歡迎</strong></td>
-   <td>提供概述和（透過連結）直接存取AEM主要功能。</td>
+   <td>提供概述，並（透過連結）直接存取AEM的主要功能。</td>
   </tr>
   <tr>
    <td><strong>數位Assets</strong><br /> </td>
@@ -54,7 +52,7 @@ ht-degree: 3%
   </tr>
   <tr>
    <td><strong>啟動</strong></td>
-   <td>這可協助您管理您的<a href="/help/sites-classic-ui-authoring/classic-launches.md">啟動</a>；這些啟動可讓您為未來發行的一或多個已啟動網頁開發內容。<br /> <i>注意：在觸控式UI中，Sites主控台中提供許多相同的功能，以及參考邊欄。</i> <i>如有必要，可以從[工具]主控台取得此主控台；請選取[作業]，然後選取[啟動]。</i></td>
+   <td>這可協助您管理您的<a href="/help/sites-classic-ui-authoring/classic-launches.md">啟動</a>；這些啟動可讓您為未來發行的一或多個已啟動網頁開發內容。<br /> <i>注意：在觸控式UI中，Sites Console中提供許多相同的功能，以及「參考」邊欄。</i> <i>如有必要，可以從[工具]主控台取得此主控台；請選取[作業]，然後選取[啟動]。</i></td>
   </tr>
   <tr>
    <td><strong>收件匣 </strong></td>
@@ -117,10 +115,10 @@ ht-degree: 3%
 
 * 按一下左窗格中的頁面名稱會執行下列動作：
 
-   * 列出右側窗格中的子頁面
-   * 展開左側窗格中的結構。
+  * 列出右側窗格中的子頁面
+  * 展開左側窗格中的結構。
 
-     基於效能考量，此動作會視子節點的數目而定。 在標準安裝中，當子節點數目為`30`或更少時，這個擴充方法就會運作。
+    基於效能考量，此動作會視子節點的數目而定。 在標準安裝中，當子節點數目為`30`或更少時，這個擴充方法就會運作。
 
 * 連按兩下頁面名稱（左窗格）會展開樹狀結構，不過同時開啟頁面時，這種效果並不明顯。
 
@@ -141,7 +139,7 @@ ht-degree: 3%
 >在：
 >`/apps/cq/ui/widgets/themes/default/widgets/wcm/SiteAdmin.js`
 >
->如需詳細資訊，請參閱CQ Widget API[&#128279;](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.wcm.SiteAdmin)中的SiteAdmin 。
+>如需詳細資訊，請參閱CQ Widget API[&#128279;](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/widgets-api/index.html?class=CQ.wcm.SiteAdmin)中的SiteAdmin 。
 
 ## 網站主控台上的頁面資訊 {#page-information-on-the-websites-console}
 
@@ -167,7 +165,7 @@ ht-degree: 3%
   </tr>
   <tr>
    <td>名稱</td>
-   <td>AEM參考頁面的名稱</td>
+   <td>AEM參照頁面的名稱</td>
   </tr>
   <tr>
    <td>已發佈</td>
@@ -178,7 +176,7 @@ ht-degree: 3%
    <td>指出頁面是否已修改，並提供修改日期和時間。 若要儲存任何修改，您必須啟動頁面。</td>
   </tr>
   <tr>
-   <td>Scene7 Publish</td>
+   <td>Scene7發佈</td>
    <td>指出頁面是否已發佈至Scene7。<br /> </td>
   </tr>
   <tr>
@@ -198,7 +196,7 @@ ht-degree: 3%
    <td>表示頁面在工作流程中。</td>
   </tr>
   <tr>
-   <td>鎖定者: </td>
+   <td>鎖定者:</td>
    <td>顯示頁面何時已鎖定，以及已鎖定頁面的使用者帳戶。</td>
   </tr>
   <tr>

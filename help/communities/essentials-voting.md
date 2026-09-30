@@ -9,13 +9,11 @@ exl-id: e8ff751f-404a-498d-8e90-62a13ab593ff
 solution: Experience Manager
 feature: Communities
 role: Developer
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
 workflow-type: tm+mt
-source-wordcount: '278'
-ht-degree: 1%
-
+source-wordcount: '321'
+ht-degree: 0%
 ---
-
 # Voting Essentials {#voting-essentials}
 
 投票元件（一個[總計](tally.md)子類別）是一種有用的工具，可讓成員只要選取向上或向下箭頭來表示其意見，即可對特定內容進行評等。
@@ -59,9 +57,9 @@ ht-degree: 1%
 
 ## 伺服器端的Essentials {#essentials-for-server-side}
 
-* [總計API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/tally/client/api/package-summary.html)
+* [標籤API](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/adobe/cq/social/tally/client/api/package-summary.html)
 
-* [計數的端點](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/tally/client/endpoints/package-summary.html)
+* [計分端點](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/adobe/cq/social/tally/client/endpoints/package-summary.html)
 
 * [伺服器端自訂](server-customize.md)
 
@@ -70,7 +68,7 @@ ht-degree: 1%
 UGC應使用其中一種標準仲裁方法進行仲裁。
 請參閱[仲裁使用者產生的內容](moderate-ugc.md)。
 
-截至AEM 6.1 Communities，使用UGC的[公用存放區](working-with-srp.md)時，無論選擇的存放區選項（例如ASRP、MSRP或JSRP）為何，都可程式化存取UGC。
+截至AEM 6.1 Communities，無論選擇的儲存選項（例如ASRP、MSRP或JSRP）為何，使用UGC的[公用存放區](working-with-srp.md)都能以程式設計方式存取UGC。
 
 **存放庫中UGC的位置和格式可能會變更，而不會出現警告**。
 

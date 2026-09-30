@@ -9,13 +9,11 @@ exl-id: 8b2a2f1d-8286-4ba5-8fe2-627509c72a45
 feature: Security
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
 workflow-type: tm+mt
-source-wordcount: '519'
+source-wordcount: '520'
 ht-degree: 3%
-
 ---
-
 # OWASP前10名{#owasp-top}
 
 [Open Web Application Security Project](https://owasp.org/) (OWASP)會維護一份清單，列出他們認為是[前10名Web應用程式安全性風險](https://owasp.org/www-project-top-ten/)。
@@ -62,7 +60,7 @@ AEM依賴[Apache Jackrabbit](https://jackrabbit.apache.org/jcr/index.html)和[Ap
 
 ## &#x200B;8. 無法限制URL存取 {#failure-to-restrict-url-access}
 
-存放庫允許透過存取控制專案，為任何指定路徑的任何指定使用者或群組設定[精細的許可權（由JCR指定）](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/2.0/16_Access_Control_Management.html)。 存取限制由存放庫強制執行。
+存放庫允許透過存取控制專案，為任何指定路徑的任何指定使用者或群組設定[精細的許可權（由JCR指定）](https://experienceleague.adobe.com/en/tools/aem-api-documentation/spec/jcr/2.0/16_Access_Control_Management.html)。 存取限制由存放庫強制執行。
 
 ## &#x200B;9. 傳輸層保護不足 {#insufficient-transport-layer-protection}
 

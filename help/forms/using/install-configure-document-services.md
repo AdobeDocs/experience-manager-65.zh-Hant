@@ -6,13 +6,11 @@ role: Admin, Developer
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
 solution: Experience Manager, Experience Manager Forms
 feature: Interactive Communication
-source-git-commit: 2b097caa05ec889ae445d74a905fb6c3f8457cee
+source-git-commit: b860fd19c0aeaa94fb0e04052dac70b0bc58b11b
 workflow-type: tm+mt
-source-wordcount: '10688'
+source-wordcount: '10825'
 ht-degree: 1%
-
 ---
-
 # 安裝和設定檔案服務 {#installing-and-configuring-document-services}
 
 AEM Forms提供了一組OSGi服務，用於完成不同的檔案層級作業，例如，建立、彙編、散發和封存PDF檔案、新增數位簽名以限制對檔案的存取，以及解碼條碼Forms的服務。 這些服務包含在AEM Forms附加元件套件中。 這些服務統稱為檔案服務。 可用檔案服務及其主要功能的清單如下：
@@ -37,9 +35,9 @@ AEM Forms提供了一組OSGi服務，用於完成不同的檔案層級作業，�
 
 * **簽章服務：**&#x200B;可讓您在AEM伺服器上處理數位簽章和檔案。 例如，簽章服務通常用於以下情況：
 
-   * AEM伺服器會先認證表單，再傳送給使用者使用Acrobat或Adobe Reader開啟。
-   * AEM伺服器會使用Acrobat或Adobe Reader驗證已新增至表單的簽名。
-   * AEM伺服器代表公證人簽署表格。
+  * AEM伺服器會先認證表單，再傳送給使用者使用Acrobat或Adobe Reader開啟。
+  * AEM伺服器會使用Acrobat或Adobe Reader驗證已新增至表單的簽名。
+  * AEM伺服器代表公證人簽署表格。
 
   簽章服務會存取儲存在信任存放區中的憑證和認證。 如需詳細資訊，請參閱[簽章服務](/help/forms/using/aem-document-services-programmatically.md)。
 
@@ -64,18 +62,18 @@ AEM Forms附加元件套件是部署至AEM的應用程式。 一般而言，您�
 * AEM執行個體的安裝路徑未包含空格。
 * AEM執行個體已啟動且執行中。 在AEM術語中，「例項」是在伺服器上以製作或發佈模式執行的AEM副本。 一般而言，您只需要一個AEM例項（製作或發佈）即可執行AEM Forms檔案服務：
 
-   * **作者**：用來建立、上傳和編輯內容以及管理網站的AEM執行個體。 一旦內容準備好上線，就會將其復寫到發佈執行個體。
-   * **發佈**：透過網際網路或內部網路，向公眾提供已發佈內容的AEM執行個體。
+  * **作者**：用來建立、上傳和編輯內容以及管理網站的AEM執行個體。 一旦內容準備好上線，就會將其復寫到發佈執行個體。
+  * **發佈**：透過網際網路或內部網路，向公眾提供已發佈內容的AEM執行個體。
 
 * 符合記憶體需求。 AEM Forms附加元件套件需要：
 
-   * ® Windows安裝專用的15 GB暫存空間。
-   * UNIX安裝需要6 GB的暫存空間。
+  * ® Windows安裝專用的15 GB暫存空間。
+  * UNIX安裝需要6 GB的暫存空間。
 
 * 已安裝在®Windows和Linux®上執行PDF產生器轉換所需的使用者端軟體：
 
-   * **® Windows**：安裝[Microsoft® Office](/help/forms/using/aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator)或[Apache OpenOffice](/help/forms/using/aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator)
-   * **Linux®**：安裝[Apache OpenOffice](/help/forms/using/aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator)
+  * **® Windows**：安裝[Microsoft® Office](/help/forms/using/aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator)或[Apache OpenOffice](/help/forms/using/aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator)
+  * **Linux®**：安裝[Apache OpenOffice](/help/forms/using/aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator)
 
 >[!NOTE]
 >
@@ -165,26 +163,30 @@ AEM Forms附加元件套件是部署至AEM的應用程式。 一般而言，您�
 
 * **（僅限PDF Generator**）安裝32位元版本的libcurl、libcrypto和libssl程式庫，並建立下列symlink。 符號連結指向個別程式庫的最新版本：
 
-   * /usr/lib/libcurl.so
-   * /usr/lib/libcrypto.so
-   * /usr/lib/libssl.so
+  * /usr/lib/libcurl.so
+  * /usr/lib/libcrypto.so
+  * /usr/lib/libssl.so
 
 * **（僅限PDF Generator）** PDF Generator服務支援WebKit和WebToPDF路由，以便將HTML檔案轉換為PDF檔案。 若要啟用WebToPDF路由的轉換，請安裝下列的64位元程式庫。 一般而言，這些程式庫已經安裝。 如果缺少任何程式庫，請手動安裝：
 
-   * linux-gate.so.1
-   * libz.so.1
-   * libfontconfig.so.1
-   * libfreetype.so.6
-   * libdl.so.2
-   * librt.so.1
-   * libpthread.so.0
-   * libstdc++.so.6
-   * libm.so.6
-   * libgcc_s.so.1
-   * libc.so.6
-   * ld-linux.so.2
-   * libexpat.so.1
+  * linux-gate.so.1
+  * libz.so.1
+  * libfontconfig.so.1
+  * libfreetype.so.6
+  * libdl.so.2
+  * librt.so.1
+  * libpthread.so.0
+  * libstdc++.so.6
+  * libm.so.6
+  * libgcc_s.so.1
+  * libc.so.6
+  * ld-linux.so.2
+  * libexpat.so.1
 * （僅限PDF Generator）若要在RHEL 8或RHEL 9、SLES15安裝程式上啟用WebKit路由，預設可能無法使用32位元`nspr`資料庫；如果不存在，請安裝。
+
+* 在Red Hat® Enterprise Linux® 9上，32位元的OpenOffice組建需要`libcrypt.so.1`，預設不會安裝。 如果遺失，OpenOffice將無法啟動，並出現錯誤`soffice.bin: error while loading shared libraries: libcrypt.so.1: cannot open shared object file: No such file or directory`，且OpenOffice到PDF的轉換會失敗。 安裝`libxcrypt-compat`套件（32位元）以提供程式庫：
+
+  `sudo dnf install -y libxcrypt-compat.i686`
 
 * （僅限PDF Generator）如果Unix®伺服器上的WebToPDF轉換失敗，並出現下列錯誤：
 
@@ -1038,7 +1040,7 @@ Backup solution for existing Acrobat settings
    1. ®建議您在修改登入之前先備份登入。 如需詳細步驟，請參閱[如何在Windows](https://support.microsoft.com/en-us/help/322756)中備份及還原登入。
    1. 開啟® Windows登入編輯器。 若要開啟登入編輯程式，請前往[開始] > [執行]，輸入regedit，然後按一下[確定]。
    1. 導覽至 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\policies\system\`。 請確定EnableLUA的值設為0 （零）。
-   1. 請確定&#x200B;**EnableLUA**&#x200B;的值設為0 （零）。 如果值不是0，請將值變更為0。 關閉登錄編輯程式。
+   1. 請確定&#x200B;**EnableLUA**&#x200B;的值設為0 （零）。 如果值不是0，請將值變更為0。 關閉登錄檔編輯器。
 
 1. 重新啟動電腦。
 
@@ -1128,7 +1130,7 @@ AEM Forms附加元件套件是部署至AEM的應用程式。 此套件包含AEM 
 
    >[!NOTE]
    >
-   >您使用Adobe以外各方所提供字型的權利，受這些各方所提供且具備這些字型的授權合約所規範，且不在您使用Adobe軟體的授權範圍內。Adobe建議您在搭配Adobe軟體使用非Adobe字型之前，檢閱並確保符合所有適用的非Adobe授權合約，尤其是在伺服器環境中使用字型的相關事項。
+   >您使用Adobe以外各方所提供字型的權利，受這些各方所提供且具備這些字型的授權合約所規範，且不在您使用Adobe軟體的授權範圍內。 Adobe建議您在搭配Adobe軟體使用非Adobe字型之前，檢閱並確保符合所有適用的非Adobe授權合約，尤其是在伺服器環境中使用字型的相關事項。
    >將新字型安裝至字型資料夾時，請重新啟動AEM Forms例項。
    >
 
@@ -1247,7 +1249,7 @@ DocAssurance服務可套用使用許可權至PDF檔案。 若要套用使用許�
 
 * 憑證提供的私密金鑰密碼。
 
-* 私密金鑰別名。您可以執行Java keytool指令來檢視「私密金鑰別名」：
+* 私密金鑰別名。 您可以執行Java keytool指令來檢視「私密金鑰別名」：
   `keytool -list -v -keystore [keystore-file] -storetype pkcs12`
 
 * 金鑰庫檔案密碼。 如果您使用Adobe的Reader擴充功能憑證，Keystore檔案密碼一律與私密金鑰密碼相同。
@@ -1405,13 +1407,13 @@ DocAssurance服務可套用使用許可權至PDF檔案。 若要套用使用許�
 * 確認已在PDF Generator設定UI中新增PDF使用者。
 * 請確定PDF Generator使用者是系統管理員群組的成員，並且已為該使用者設定了[取代處理序層級權杖](#grant-the-replace-a-process-level-token-privilege)許可權。
 * 請確認已在PDF Generator UI中設定使用者，並執行下列動作：
-   1. 使用PDF Generator使用者登入Microsoft® Windows。
-   1. 開啟® Office或OpenOffice應用程式並取消所有對話方塊。
-   1. 將AdobePDF設為預設印表機。
-   1. 將Acrobat設為PDF檔案的預設程式。
-   1. 在Microsoft Office應用程式中使用選項「檔案>列印和Acrobat功能區」來執行手動轉換，並取消所有對話方塊。
-   1. 結束所有與轉換相關的程式，例如winword.exe、powerpoint.exe和excel.exe。
-   1. 重新啟動AEM Forms伺服器。
+  1. 使用PDF Generator使用者登入Microsoft® Windows。
+  1. 開啟® Office或OpenOffice應用程式並取消所有對話方塊。
+  1. 將AdobePDF設為預設印表機。
+  1. 將Acrobat設為PDF檔案的預設程式。
+  1. 在Microsoft Office應用程式中使用選項「檔案>列印和Acrobat功能區」來執行手動轉換，並取消所有對話方塊。
+  1. 結束所有與轉換相關的程式，例如winword.exe、powerpoint.exe和excel.exe。
+  1. 重新啟動AEM Forms伺服器。
 
 **Linux®**
 
@@ -1419,6 +1421,10 @@ DocAssurance服務可套用使用許可權至PDF檔案。 若要套用使用許�
 
 * 建立環境變數`OpenOffice_PATH`，並將其設定為指向設定在[主控台](https://linuxize.com/post/how-to-set-and-list-environment-variables-in-linux/)或dt （裝置樹狀結構）設定檔中的OpenOffice安裝。
 * 如果安裝OpenOffice時發生問題，請確定OpenOffice安裝所需的[32位元程式庫](#extrarequirements)可供使用。
+
+* 在Red Hat® Enterprise Linux® 9上，32位元的OpenOffice組建需要`libcrypt.so.1`，預設不會安裝。 如果遺失，OpenOffice將無法啟動，並出現錯誤`soffice.bin: error while loading shared libraries: libcrypt.so.1: cannot open shared object file: No such file or directory`，且OpenOffice到PDF的轉換會失敗。 安裝`libxcrypt-compat`套件（32位元）以提供程式庫：
+
+  `sudo dnf install -y libxcrypt-compat.i686`
 
 +++
 
@@ -1451,29 +1457,29 @@ DocAssurance服務可套用使用許可權至PDF檔案。 若要套用使用許�
 * 確保系統上已安裝32位元lib curl、libcrypto和libssl程式庫的最新版本。 同時建立指向個別程式庫最新版本（32位元）的符號連結`/usr/lib/libcurl.so` (或libcurl.a (AIX®))、`/usr/lib/libcrypto.so` (或libcrypto.a (AIX®)和`/usr/lib/libssl.so` (或libssl.a (AIX®))。
 
 * 對® SSL通訊端提供者執行以下步驟：
-   1. 將java.security檔案從`<WAS_Installed_JAVA>\jre\lib\security`複製到AEM Forms伺服器上的任何位置。 預設位置為「預設位置」= `<WAS_Installed>\Appserver\java_[version]\jre\lib\security`。
+  1. 將java.security檔案從`<WAS_Installed_JAVA>\jre\lib\security`複製到AEM Forms伺服器上的任何位置。 預設位置為「預設位置」= `<WAS_Installed>\Appserver\java_[version]\jre\lib\security`。
 
-   1. 編輯複製位置的java.security檔案，並變更預設的SSL通訊端工廠與JSSE2工廠（使用JSSE2工廠而非WebSphere®）。
+  1. 編輯複製位置的java.security檔案，並變更預設的SSL通訊端工廠與JSSE2工廠（使用JSSE2工廠而非WebSphere®）。
 
-      變更下列預設JSSE通訊端處理站：
+     變更下列預設JSSE通訊端處理站：
 
-      ```
-      #ssl.SocketFactory.provider=com.ibm.jsse2.SSLSocketFactoryImpl
-      #ssl.ServerSocketFactory.provider=com.ibm.jsse2.SSLServerSocketFactoryImpl
-      WebSphere socket factories (in cryptosf.jar)
-      ssl.SocketFactory.provider=com.ibm.websphere.ssl.protocol.SSLSocketFactory
-      ssl.ServerSocketFactory.provider=com.ibm.websphere.ssl.protocol.SSLServerSocketFactory
-      ```
+     ```
+     #ssl.SocketFactory.provider=com.ibm.jsse2.SSLSocketFactoryImpl
+     #ssl.ServerSocketFactory.provider=com.ibm.jsse2.SSLServerSocketFactoryImpl
+     WebSphere socket factories (in cryptosf.jar)
+     ssl.SocketFactory.provider=com.ibm.websphere.ssl.protocol.SSLSocketFactory
+     ssl.ServerSocketFactory.provider=com.ibm.websphere.ssl.protocol.SSLServerSocketFactory
+     ```
 
-      包含
+     包含
 
-      ```
-      ssl.SocketFactory.provider=com.ibm.jsse2.SSLSocketFactoryImpl
-      ssl.ServerSocketFactory.provider=com.ibm.jsse2.SSLServerSocketFactoryImpl
-      WebSphere socket factories (in cryptosf.jar)
-      #ssl.SocketFactory.provider=com.ibm.websphere.ssl.protocol.SSLSocketFactory
-      #ssl.ServerSocketFactory.provider=com.ibm.websphere.ssl.protocol.SSLServerSocketFactory
-      ```
+     ```
+     ssl.SocketFactory.provider=com.ibm.jsse2.SSLSocketFactoryImpl
+     ssl.ServerSocketFactory.provider=com.ibm.jsse2.SSLServerSocketFactoryImpl
+     WebSphere socket factories (in cryptosf.jar)
+     #ssl.SocketFactory.provider=com.ibm.websphere.ssl.protocol.SSLSocketFactory
+     #ssl.ServerSocketFactory.provider=com.ibm.websphere.ssl.protocol.SSLServerSocketFactory
+     ```
 
 +++
 

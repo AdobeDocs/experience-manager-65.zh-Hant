@@ -1,25 +1,23 @@
 ---
-title: 將 [!DNL Assets] 與活動資料流整合
-description: 說明 [!DNL Experience Manager] 的錄製功能，以及如何設定它以錄製特定事件。
+title: 將[!DNL Assets]與活動資料流整合
+description: 說明[!DNL Experience Manager]的錄製功能，以及如何設定以錄製特定事件。
 contentOwner: AG
 role: Developer
 feature: Asset Management
 exl-id: 2a08a7c1-8be9-42d1-9983-f9c8b12ea4e8
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '258'
 ht-degree: 0%
-
 ---
-
 # 將[!DNL Assets]與活動資料流整合 {#integrating-assets-with-activity-stream}
 
 [!DNL Adobe Experience Manager Assets]使用者可執行許多動作，例如建立、上傳和刪除Assets。 這些動作可以記錄下來，這樣您就可以提供使用者所做動作的歷史記錄。 本節說明[!DNL Experience Manager]的錄製功能，以及如何設定[!DNL Experience Manager]來錄製特定事件。
 
 ## 效能考量事項和預設行為 {#performance-considerations-and-default-behavior}
 
-例如，執行大量匯入時，這項整合可能會耗用CPU和磁碟空間。 基於這些原因，[!DNL Assets]與活動資料流的整合預設為停用。
+例如，執行大量匯入時，此整合可能會耗用CPU和磁碟空間。 基於這些原因，[!DNL Assets]與活動資料流的整合預設為停用。
 
 ## 支援的動作事件 {#supported-action-events}
 
@@ -55,8 +53,8 @@ ht-degree: 0%
 
 1. 檢查您要在使用者活動資料流中記錄哪些&#x200B;**[!UICONTROL 事件型別]**。
 
-1. 按一下「**[!UICONTROL 儲存]**」。
+1. 按一下&#x200B;**[!UICONTROL 儲存]**。
 
 ## 讀取錄製的事件 {#reading-recorded-events}
 
-記錄的事件會儲存為活動。 您可以使用[ActivityManager API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/granite/activitystreams/ActivityManager.html)以程式設計方式讀取它們。
+記錄的事件會儲存為活動。 您可以使用[ActivityManager API](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/adobe/granite/activitystreams/ActivityManager.html)以程式設計方式讀取它們。

@@ -9,13 +9,11 @@ exl-id: 6e8af8cf-1239-46f9-b2fe-4aa80abc86ea
 solution: Experience Manager
 feature: Communities
 role: Developer
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
 workflow-type: tm+mt
-source-wordcount: '240'
-ht-degree: 2%
-
+source-wordcount: '279'
+ht-degree: 3%
 ---
-
 # 標籤Essentials {#tag-essentials}
 
 設定AEM Communities元件並啟用標籤後，社群成員將可標籤他們在發佈環境中張貼的內容。
@@ -73,9 +71,9 @@ ht-degree: 2%
 
 ## 伺服器端的Essentials {#essentials-for-server-side}
 
-* [社交標籤雲端API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/commons/tagcloud/api/package-summary.html)
+* [社交標籤雲API](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/adobe/cq/social/commons/tagcloud/api/package-summary.html)
 
-* [社交標籤管理員](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/commons/tagging/package-summary.html)
+* [社交標籤管理員](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/adobe/cq/social/commons/tagging/package-summary.html)
 
 * [伺服器端自訂](server-customize.md)
 

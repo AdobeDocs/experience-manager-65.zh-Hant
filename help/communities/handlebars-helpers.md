@@ -7,13 +7,11 @@ exl-id: bfb95cae-4b0f-4521-a113-042dc4005a63
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
 workflow-type: tm+mt
-source-wordcount: '1531'
+source-wordcount: '1534'
 ht-degree: 2%
-
 ---
-
 # SCF Handlebars協助程式 {#scf-handlebars-helpers}
 
 | **[⇐ Feature Essentials](essentials.md)** | **[伺服器端自訂⇒](server-customize.md)** |
@@ -180,7 +178,7 @@ Then content-loadmore would return
 
 ## If-wcm-mode {#if-wcm-mode}
 
-區塊協助程式，可針對字串分隔的模式清單來測試[WCM模式](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/WCMMode.html)的目前值。
+區塊協助程式，可針對字串分隔的模式清單來測試[WCM模式](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/day/cq/wcm/api/WCMMode.html)的目前值。
 
 ### 參數 {#parameters-4}
 
@@ -190,7 +188,7 @@ Then content-loadmore would return
 
 * **模式**：字串
 
-  （選擇性）要測試是否設定的[WCM模式](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/WCMMode.html)的逗號分隔清單。
+  （選擇性）要測試是否設定的[WCM模式](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/day/cq/wcm/api/WCMMode.html)的逗號分隔清單。
 
 ### 範例 {#example-2}
 
@@ -523,7 +521,7 @@ template(data);
 
 ### 伺服器端自訂協助程式 {#server-side-custom-helpers}
 
-若要在伺服器端實作並註冊自訂SCF Helper，只要實作Java™介面[TemplateHelper](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/handlebars/api/TemplateHelper.html)，讓它成為[OSGi服務](../../help/sites-developing/the-basics.md#osgi)，並將其安裝為OSGi套件組合的一部分。
+若要在伺服器端實作並註冊自訂SCF Helper，只要實作Java™介面[TemplateHelper](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/adobe/cq/social/handlebars/api/TemplateHelper.html)，讓它成為[OSGi服務](../../help/sites-developing/the-basics.md#osgi)，並將其安裝為OSGi套件組合的一部分。
 
 例如：
 

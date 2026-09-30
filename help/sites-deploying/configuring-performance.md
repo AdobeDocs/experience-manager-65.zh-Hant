@@ -13,9 +13,9 @@ feature: Configuring
 exl-id: 5b0c9a8c-0f5f-46ee-a455-adb9b9d27270
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 15fb75221470fe30d4a0c603e1bb0d0a45575eb5
+source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
 workflow-type: tm+mt
-source-wordcount: '6649'
+source-wordcount: '6650'
 ht-degree: 13%
 ---
 # 效能最佳化 {#performance-optimization}
@@ -225,7 +225,7 @@ AEM的某些層面（和/或基礎存放庫）可設定為最佳化效能。 以
 工作流程引擎使用Apache Sling工作佇列來處理和排程工作專案處理。 預設已從Apache Sling工作佇列設定服務工廠建立下列工作佇列服務，以用於處理工作流程工作：
 
 * Granite工作流程佇列：大部分的工作流程步驟（例如處理DAM資產的步驟）都會使用Granite工作流程佇列服務。
-* Granite工作流程外部程式工作佇列：此服務用於特殊外部工作流程步驟，通常用於連絡外部系統和輪詢結果。 例如，「InDesign媒體提取程式」步驟會實作為外部程式。 工作流程引擎使用外部佇列來處理輪詢。 （請參閱[com.day.cq.workflow.exec.WorkflowExternalProcess](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/workflow/exec/WorkflowExternalProcess.html)。）
+* Granite工作流程外部程式工作佇列：此服務用於特殊外部工作流程步驟，通常用於連絡外部系統和輪詢結果。 例如，「InDesign媒體提取程式」步驟會實作為外部程式。 工作流程引擎使用外部佇列來處理輪詢。 （請參閱[com.day.cq.workflow.exec.WorkflowExternalProcess](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/day/cq/workflow/exec/WorkflowExternalProcess.html)。）
 
 設定這些服務以限制同時執行的工作流程程式數上限。
 
