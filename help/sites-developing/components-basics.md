@@ -64,13 +64,13 @@ ht-degree: 1%
 
 Adobe建議將負責標籤和轉譯的程式碼，與控制用來選取元件內容之邏輯的程式碼分開。
 
-[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)支援此理念，這是一種範本化語言，刻意加以限制，以確保使用真正的程式語言來定義基礎商業邏輯。 此（選用）邏輯會使用特定命令從HTL叫用。 此機制會醒目顯示呼叫特定檢視的程式碼，並在必要時允許同一元件的不同檢視使用特定邏輯。
+[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=zh-Hant)支援此理念，這是一種範本化語言，刻意加以限制，以確保使用真正的程式語言來定義基礎商業邏輯。 此（選用）邏輯會使用特定命令從HTL叫用。 此機制會醒目顯示呼叫特定檢視的程式碼，並在必要時允許同一元件的不同檢視使用特定邏輯。
 
 ### HTL與JSP {#htl-vs-jsp}
 
 HTL是AEM 6.0引進的HTML範本語言。
 
-關於在開發您自己的元件時是使用[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)或JSP (Java™ Server Pages)的討論應該簡單明瞭，因為HTL現在是建議的AEM指令碼語言。
+關於在開發您自己的元件時是使用[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=zh-Hant)或JSP (Java™ Server Pages)的討論應該簡單明瞭，因為HTL現在是建議的AEM指令碼語言。
 
 HTL和JSP都可用來開發傳統和觸控式UI的元件。 雖然我們可能會傾向於假設HTL僅適用於觸控式UI和適用於傳統UI的JSP，但這只是誤解，而且更受時機的影響。 觸控式UI和HTL大約在同一期間併入AEM。 由於HTL現在是建議的語言，因此它被用於新元件，而新元件傾向於用於觸控式UI。
 
