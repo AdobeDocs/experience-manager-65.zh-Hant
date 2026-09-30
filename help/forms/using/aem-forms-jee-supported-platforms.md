@@ -9,13 +9,11 @@ role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,AEM Forms on JEE,Platform Matrix
-source-git-commit: 87e11d37b9aa14ee3d4e47ae30eaa25f151a9b5b
+source-git-commit: b860fd19c0aeaa94fb0e04052dac70b0bc58b11b
 workflow-type: tm+mt
-source-wordcount: '4096'
+source-wordcount: '4259'
 ht-degree: 3%
-
 ---
-
 
 
 # AEM Forms on JEE的支援平台 {#supported-platforms-for-aem-forms-on-jee}
@@ -26,9 +24,9 @@ ht-degree: 3%
 
 <div class="preview">
 
-Adobe已在JEE上發行包含AEM 6.5.23.0 Forms Service Pack 23 (6.5.23.0)的[完整安裝程式](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=zh-Hant)以及修補程式安裝程式。 完整版安裝程式支援新平台，而修補程式安裝程式僅包含錯誤修正。
+Adobe已在JEE上發行包含AEM 6.5.23.0 Forms Service Pack 23 (6.5.23.0)的[完整安裝程式](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)以及修補程式安裝程式。 完整版安裝程式支援新平台，而修補程式安裝程式僅包含錯誤修正。
 
-如果您正在執行全新安裝或計畫在JEE環境中使用AEM 6.5.23.0 Forms的最新軟體，Adobe建議使用2025年6月6日發行的JEE上的[AEM 6.5.23.0 Forms完整安裝程式](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=zh-Hant)，而非2023年8月31日發行的AEM 6.5.18 Forms安裝程式或2019年4月8日發行的AEM 6.5.12 Forms安裝程式。
+如果您正在執行全新安裝或計畫在JEE環境中使用AEM 6.5.23.0 Forms的最新軟體，Adobe建議使用2025年6月6日發行的JEE上的[AEM 6.5.23.0 Forms完整安裝程式](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)，而非2023年8月31日發行的AEM 6.5.18 Forms安裝程式或2019年4月8日發行的AEM 6.5.12 Forms安裝程式。
 
 
 </div>
@@ -106,8 +104,9 @@ Adobe建議使用這些設定，並在標準軟體維護合約中提供完整或
 
 >[!NOTE]
 >
->為協助AEM Forms客戶降低擁有成本、簡化部署架構，並匯入最新的開發棧疊，Adobe Experience Manager企業平台正從應用程式伺服器式部署轉向獨立的OSGi式部署。Adobe透過縮減的基礎架構元件矩陣，持續支援AEM Forms JEE棧疊。
-><br>>自6.5版起，不再支援Adobe客戶使用量最低的基礎結構元件，如下所示：
+>為協助AEM Forms客戶降低擁有成本、簡化部署架構，並匯入最新的開發棧疊，Adobe Experience Manager企業平台正從應用程式伺服器式部署轉向獨立的OSGi式部署。 Adobe透過縮減的基礎架構元件矩陣，持續支援AEM Forms JEE棧疊。
+><br>
+>隨著版本6.5的發佈，Adobe客戶中最少使用量的基礎結構元件將不再受到支援，如下所示：
 >
 > - ® DB2®資料庫
 > - ® AIX®和Sun Solaris™作業系統
@@ -383,6 +382,7 @@ Adobe Experience Manager Forms需要由Java™開發套件(JDK)散發提供的Ja
 > - libXau.x86_64 (1.0.8-2.1.el7)
 > - glibc-locale.x86_64 （ 2.17或更高版本）
 > - OpenSSL 3 （作業系統上的預設位置需要）。
+> - 在Red Hat® Enterprise Linux® 9上，32位元的OpenOffice組建需要`libcrypt.so.1`，預設不會安裝。 如果遺失，OpenOffice將無法啟動，並出現錯誤`soffice.bin: error while loading shared libraries: libcrypt.so.1: cannot open shared object file: No such file or directory`，且OpenOffice到PDF的轉換會失敗。 安裝`libxcrypt-compat`封裝（32位元）以提供程式庫： `sudo dnf install -y libxcrypt-compat.i686`。
 
 對於OpenSSL 3安裝：程式庫libcrypto.so.3和libssl.so.3必須在LD_LIBRARY_PATH環境變數代表的預設程式庫路徑中可用。 如果它們安裝在非標準位置，請確定在啟動伺服器之前，將此路徑新增到LD_LIBRARY_PATH。
 
@@ -420,7 +420,7 @@ Adobe Experience Manager Forms需要由Java™開發套件(JDK)散發提供的Ja
 1. JEE上的AEM Forms不支援SUSE® Linux® Enterprise Server 12上的JBoss®。 SUSE® Linux® Enterprise Server 12僅支援IBM® WebSphere®。
 1. 除Oracle Java™ SE外，JEE上的AEM Forms不支援任何具®JBoss的JDK。
 1. JEE上的AEM Forms不支援IBM® JDK以外的任何IBM® WebSphere® JDK。
-1. CRX-repository支援TarMK、MongoDB和關聯式資料庫(RDBMK)型別的持續性。應用程式伺服器和CRX-repository之間不能有兩個不同的資料庫系統。不過，在JEE環境上的AEM Forms上，您可以使用MongoMK搭配CRX-repository，以及支援的關聯式資料庫搭配應用程式伺服器。
+1. CRX-repository支援TarMK、MongoDB和關聯式資料庫(RDBMK)型別的持續性。 應用程式伺服器和CRX-repository之間不能有兩個不同的資料庫系統。 不過，在JEE環境上的AEM Forms上，您可以使用MongoMK搭配CRX-repository，以及支援的關聯式資料庫搭配應用程式伺服器。
 @@ -432,12 +359,12 @@選擇平台以設定AEM F時，請考量下列例外
 1. WebLogic伺服器不支援高於1.8.0_281的JDK版本。 (FORMS-8498)
 1. JDK 11.0.20不支援在JEE安裝程式上安裝AEM Forms。 僅支援JDK 11.0.19或較舊版本以在JEE安裝程式上安裝AEM Forms。
@@ -518,7 +518,7 @@ AEM Forms應用程式現在支援Apache Cordova。 以下是支援的平台特�
    <th><p><strong>支援的格式可轉換成PDF</strong></p> </th>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/tw/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat Pro DC</a> （連續追蹤，最新版本）</td>
+   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat Pro DC</a> （連續追蹤，最新版本）</td>
    <td>XPS、影像格式(BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC)、HTML和HTM</td>
   </tr>
 
@@ -604,8 +604,8 @@ Removed lines: >- PDF Generator fails to convert files using Microsoft&reg; Visi
 
 如需其他需求，請參閱：
 
-- [JEE部署中單一伺服器AEM Forms的系統需求](https://www.adobe.com/go/learn_aemforms_sysreq_single_65_tw)
-- [JEE部署上叢集AEM Forms的系統需求](https://www.adobe.com/go/learn_aemforms_sysreq_cluster_65_tw)
+- [JEE部署中單一伺服器AEM Forms的系統需求](https://www.adobe.com/go/learn_aemforms_sysreq_single_65)
+- [JEE部署上叢集AEM Forms的系統需求](https://www.adobe.com/go/learn_aemforms_sysreq_cluster_65)
 
 
 ### Adobe Acrobat與Adobe Reader {#adobe-acrobat-and-adobe-reader}
@@ -619,7 +619,7 @@ Removed lines: >- PDF Generator fails to convert files using Microsoft&reg; Visi
  </tr>
  <tr>
   <td>Adobe Acrobat Pro DC （連續追蹤，最新版本）</td>
-  <td>最新版本，如<a href="https://helpx.adobe.com/tw/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat和Reader發行說明</a><br />中所述 </td>
+  <td>最新版本，如<a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat和Reader發行說明</a><br />中所述 </td>
  </tr>
  </tbody>
 </table>
@@ -778,7 +778,7 @@ AEM Forms應用程式適用於下列平台：
 ### ® Office適用的Adobe Document Security Extension {#adobe-rights-management-extension-for-microsoft-office}
 
 
-按一下[這裡](https://www.adobe.com/tw/products/livecycle/rightsmanagement/extension/downloads.html)檢視® Office適用的Adobe Document Security Extension的系統需求。
+按一下[這裡](https://www.adobe.com/products/livecycle/rightsmanagement/extension/downloads.html)檢視® Office適用的Adobe Document Security Extension的系統需求。
 
 
 ### 使用者端支援的例外 {#exceptions-to-client-support}
@@ -790,7 +790,7 @@ AEM Forms應用程式適用於下列平台：
 ## 協力廠商修補支援政策 {#third-party-patch-support-policy}
 
 
-JEE版AEM Forms的協力廠商軟體需求記錄在各自產品檔案的「系統需求」一節。 從[https://adobe.com/go/learn_aemforms_documentation_65_tw](https://adobe.com/go/learn_aemforms_documentation_65_tw)存取所有檔案。
+JEE版AEM Forms的協力廠商軟體需求記錄在各自產品檔案的「系統需求」一節。 從[https://adobe.com/go/learn_aemforms_documentation_65](https://adobe.com/go/learn_aemforms_documentation_65)存取所有檔案。
 
 
 JEE上的AEM Forms第三方參考平台會說明在JEE上AEM Forms開發和發行期間第三方基礎架構的特定修補程式層級，以及該JEE上AEM Forms版本支援之基礎架構的最低修補程式/Service Pack層級。
@@ -821,7 +821,7 @@ The following platforms are marked as deprecated with AEM Forms 6.5.18.0 release
 The following platforms are marked as deprecated with AEM Forms 6.5.13.0 release on June 2, 2022:
 - Microsoft&reg; SharePoint 2016
 The following platforms are marked as deprecated with AEM Forms 6.5.10.0 release on September 7, 2021:
-- Adobe Acrobat 2017 - [Core support for Adobe Acrobat 2017 ends on June 6, 2022](https://helpx.adobe.com/tw/support/programs/eol-matrix.html).
+- Adobe Acrobat 2017 - [Core support for Adobe Acrobat 2017 ends on June 6, 2022](https://helpx.adobe.com/support/programs/eol-matrix.html).
 - Red Hat&reg; Enterprise Linux&reg; 7 (Kernel 3.x) (64-bit)
 - Microsoft&reg; Windows Server 2016 (64-bit)
 - Microsoft&reg; Office 2016
@@ -892,7 +892,7 @@ The following platforms are marked as deprecated with AEM Forms 6.5.10.0 release
  - **Added support**: [!DNL Adobe Experience Manager Forms] on JEE has added support for the following platform:
     - Oracle Java&trade; SE 11 (64 bit) SDK for application server JBoss&reg; EAP 7.4.
  - **Deprecated support**: [!DNL Adobe Experience Manager Forms] on JEE has deprecated the following platforms:
-   - Adobe Acrobat 2017 - [Core support for Adobe Acrobat 2017 ends on June 6, 2022](https://helpx.adobe.com/tw/support/programs/eol-matrix.html).
+   - Adobe Acrobat 2017 - [Core support for Adobe Acrobat 2017 ends on June 6, 2022](https://helpx.adobe.com/support/programs/eol-matrix.html).
    - Red Hat&reg; Enterprise Linux&reg; 7 (Kernel 3.x) (64-bit)
    - Microsoft&reg; Windows Server 2016 (64-bit)
    - Microsoft&reg; Office 2016
