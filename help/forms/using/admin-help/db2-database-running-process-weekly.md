@@ -1,6 +1,6 @@
 ---
-title: DB2&amp；reg；資料庫：每週執行處理序
-description: 瞭解如何改善AEM Forms DB2&amp； reg；資料庫的效能。
+title: DB2&reg； database：每週執行處理作業
+description: 瞭解如何改善AEM Forms DB2&reg；資料庫的效能。
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/maintaining_the_aem_forms_database
@@ -11,20 +11,18 @@ feature: Adaptive Forms
 role: User, Developer
 source-git-commit: e821be5233fd5f6688507096790d219d25903892
 workflow-type: tm+mt
-source-wordcount: '148'
+source-wordcount: '149'
 ht-degree: 0%
-
 ---
-
 # DB2®資料庫：每週執行處理作業{#db-database-running-a-process-weekly}
 
 如果您的AEM Forms DB2®資料庫開始執行速度很慢，每週執行下列程式可以改善其效能：
 
 1. 啟動DB2®控制中心：
 
-   (Windows)選取「開始>程式> IBM® DB2® >一般管理工具>控制中心」。
+   (Windows)選取「開始>程式> ® DB2® >一般管理工具>控制中心」。
 
-   (Linux®和UNIX®)在命令提示字元中，輸入`db2jcc`命令。
+   （Linux®和UNIX®）在命令提示字元中，輸入`db2jcc`命令。
 
 1. 在DB2® Control Center物件樹狀結構中，按一下所有資料庫。
 1. 按一下您為AEM Forms建立的資料庫，然後按一下「表格」資料夾。

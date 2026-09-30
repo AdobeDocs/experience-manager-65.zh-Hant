@@ -1,6 +1,6 @@
 ---
-title: Adobe Experience Manager Managed Services的Adobe IMS驗證和 [!DNL Admin Console] 支援
-description: 瞭解如何在Adobe Experience Manager中使用 [!DNL Admin Console] 。
+title: Adobe Experience Manager Managed Services的Adobe IMS驗證和[!DNL Admin Console]支援
+description: 瞭解如何在Adobe Experience Manager中使用[!DNL Admin Console]。
 contentOwner: sarchiz
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
@@ -11,20 +11,18 @@ solution: Experience Manager, Experience Manager Sites
 role: Admin
 source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
 workflow-type: tm+mt
-source-wordcount: '1602'
-ht-degree: 5%
-
+source-wordcount: '1700'
+ht-degree: 9%
 ---
-
-# Adobe IMS驗證和對AEM Managed Services的[!DNL Admin Console]支援 {#adobe-ims-authentication-and-admin-console-support-for-aem-managed-services}
+# AEM Managed Services的Adobe IMS驗證和[!DNL Admin Console]支援 {#adobe-ims-authentication-and-admin-console-support-for-aem-managed-services}
 
 >[!NOTE]
 >
->此功能僅適用於AdobeManaged Services客戶。
+>此功能僅供Adobe Managed Services客戶使用。
 
 ## 簡介 {#introduction}
 
-AEM 6.4.3.0為&#x200B;**AEM Managed Services**&#x200B;客戶引入[!DNL Admin Console]對AEM執行個體和Adobe IMS(Identity Management System)型驗證的支援。
+AEM 6.4.3.0為&#x200B;**AEM Managed Services**&#x200B;客戶推出了[!DNL Admin Console]對AEM執行個體和Adobe IMS(Identity Management System)型驗證的支援。
 
 「[!DNL Admin Console]」的AEM上線將允許AEM Managed Services客戶在一個主控台中管理所有Experience Cloud使用者。 您可以將使用者指派給與AEM執行個體相關聯的產品設定檔，讓他們登入特定執行個體。
 
@@ -35,8 +33,8 @@ AEM 6.4.3.0為&#x200B;**AEM Managed Services**&#x200B;客戶引入[!DNL Admin Co
 * AEM Managed Services會將客戶拓撲與[!DNL Admin Console]同步。 在[!DNL Admin Console]中，每個執行個體會有一個AEM Managed Services產品內容的執行個體。
 * [!DNL Admin Console]中的產品設定檔將決定使用者可存取的執行個體
 * 支援使用客戶自己的符合SAML 2的身分提供者進行同盟驗證
-* 僅支援Enterprise ID或Federated ID （適用於客戶的單一登入），不支援個人AdobeID。
-* [!DNL User Management] (在Adobe[!DNL Admin Console]中)將繼續由客戶管理員擁有。
+* 僅支援Enterprise ID或Federated ID （適用於客戶的單一登入），不支援個人Adobe ID。
+* [!DNL User Management] （在Adobe [!DNL Admin Console]中）將繼續由客戶管理員擁有。
 
 ## 架構 {#architecture}
 
@@ -63,14 +61,14 @@ AEM Managed Services客戶應先布建組織，而在IMS布建過程中，[!DNL 
 ![image2018-9-23_23-33-25](assets/image2018-9-23_23-33-25.png)
 
 1. 指定的系統管理員會收到登入[!DNL Admin Console]的邀請
-1. 系統管理員宣告網域，以確認網域的所有權(在此範例中為acme.com)
+1. 系統管理員宣告網域，以確認網域的所有權（在此範例中為acme.com）
 1. 系統管理員設定使用者目錄
 1. 系統管理員在[!DNL Admin Console]中設定身分提供者(IDP)以進行SSO設定。
 1. AEM管理員可照常管理本機群組、許可權和許可權。 請參閱使用者和群組同步
 
 >[!NOTE]
 >
->如需有關AdobeIdentity Management基本知識（包括IDP設定）的詳細資訊，請參閱有關[設定身分和單一登入](https://helpx.adobe.com/tw/enterprise/using/set-up-identity.html)的文章。
+>如需Adobe Identity Management基本概念的詳細資訊，包括IDP設定，請參閱關於[設定身分和單一登入](https://helpx.adobe.com/tw/enterprise/using/set-up-identity.html)的文章。
 >
 >如需有關企業管理和[!DNL Admin Console]的詳細資訊，請參閱[歡迎使用企業和團隊管理指南](https://helpx.adobe.com/tw/enterprise/managing/user-guide.html)。
 
@@ -84,9 +82,9 @@ AEM Managed Services客戶應先布建組織，而在IMS布建過程中，[!DNL 
 
 #### 透過[!DNL Admin Console] UI手動新增 {#manual-addition-through-admin-console-ui}
 
-您可以在[!DNL Admin Console] UI中手動建立使用者和群組。 如果可供管理的使用者不多，可使用此方法。 例如，少於50名AEM使用者。
+您可以在[!DNL Admin Console] UI中手動建立使用者和群組。 如果可供管理的使用者不多，可使用此方法。 例如，AEM使用者少於50名。
 
-如果客戶已使用此方法管理其他Adobe產品(如Adobe Analytics、Adobe Target或Adobe Creative Cloud應用程式)，也可以手動建立使用者。
+如果客戶已使用此方法來管理其他Adobe產品（例如Adobe Analytics、Adobe Target或Adobe Creative Cloud應用程式），也可以手動建立使用者。
 
 ![image2018-9-23_20-39-9](assets/image2018-9-23_20-39-9.png)
 
@@ -100,7 +98,7 @@ AEM Managed Services客戶應先布建組織，而在IMS布建過程中，[!DNL 
 
 使用者同步工具（簡稱UST）可讓企業客戶建立或管理使用Active Directory或其他經測試的OpenLDAP目錄服務的Adobe使用者。 目標使用者是IT身分管理員（企業目錄與系統管理員），他們將能安裝及設定此工具。 此開放原始碼工具可供自訂，因此客戶可讓開發人員修改工具，以符合其自身的特定需求。
 
-當使用者同步執行時，它會從組織的Active Directory （或任何其他相容的資料來源）擷取使用者清單，並將其與[!DNL Admin Console]中的使用者清單進行比較。 然後它會呼叫Adobe[!DNL User Management] API，以便[!DNL Admin Console]與組織的目錄同步。 變更流程完全是單向的；在[!DNL Admin Console]中所做的任何編輯都不會推送至目錄。
+當使用者同步執行時，它會從組織的Active Directory （或任何其他相容的資料來源）擷取使用者清單，並將其與[!DNL Admin Console]中的使用者清單進行比較。 然後它會呼叫Adobe [!DNL User Management] API，以便[!DNL Admin Console]與組織的目錄同步。 變更流程完全是單向的；在[!DNL Admin Console]中所做的任何編輯都不會推送至目錄。
 
 此工具可讓系統管理員將客戶目錄中的使用者群組與[!DNL Admin Console]中的產品設定和使用者群組對應，新的UST版本也可在[!DNL Admin Console]中動態建立使用者群組。
 
@@ -108,7 +106,7 @@ AEM Managed Services客戶應先布建組織，而在IMS布建過程中，[!DNL 
 
 ![image2018-9-23_13-36-56](assets/image2018-9-23_13-36-56.png)
 
-使用者同步是透過AdobeGithub存放庫提供使用，其位置如下：
+使用者同步是透過Adobe Github存放庫提供使用，其位置如下：
 
 [https://github.com/adobe-apiplatform/user-sync.py/releases/latest](https://github.com/adobe-apiplatform/user-sync.py/releases/latest)
 
@@ -126,7 +124,7 @@ AEM Managed Services客戶應先布建組織，而在IMS布建過程中，[!DNL 
 >
 >* [使用者同步工具 — Adobe使用者同步](https://adobe-apiplatform.github.io/user-sync.py/en/)
 >
->* 使用者同步工具必須使用[API存取驗證](https://adobe-apiplatform.github.io/umapi-documentation/en/UM_Authentication.html)中所述的程式註冊為Adobe I/O使用者端UMAPI
+>* 使用者同步工具必須使用[API存取驗證](https://adobe-apiplatform.github.io/umapi-documentation/en/UM_Authentication.html)中所述的程式，註冊為Adobe I/O使用者端UMAPI
 >
 >* [Adobe Developer Console檔案](https://developer.adobe.com/developer-console/docs/guides/)。
 >
@@ -135,7 +133,7 @@ AEM Managed Services客戶應先布建組織，而在IMS布建過程中，[!DNL 
 
 >[!NOTE]
 >
->AEM IMS設定將由AdobeManaged Services團隊處理。 但是，客戶管理員可以根據他們的需求（例如，自動群組成員資格或群組對應）來修改它。 您的Managed Services團隊也將註冊IMS使用者端。
+>AEM IMS設定將由Adobe Managed Services團隊處理。 但是，客戶管理員可以根據他們的需求（例如，自動群組成員資格或群組對應）來修改它。 您的Managed Services團隊也將註冊IMS使用者端。
 
 ## 使用方式 {#how-to-use}
 
@@ -171,7 +169,7 @@ AEM可繼續為管理員使用者支援本機登入，因為登入畫面具有�
 
 #### IMS登入 {#ims-based-login}
 
-若是其他使用者，在執行個體上設定 IMS 後，即可使用 IMS 登入。使用者先按一下&#x200B;**使用Adobe**&#x200B;登入，如下所示：
+若是其他使用者，在執行個體上設定 IMS 後，即可使用 IMS 登入。 使用者先按一下&#x200B;**使用Adobe**&#x200B;登入，如下所示：
 
 ![image2018-9-18_0-10-32](assets/image2018-9-18_0-10-32.png)
 
@@ -193,13 +191,13 @@ AEM可繼續為管理員使用者支援本機登入，因為登入畫面具有�
 
 對於使用其他驗證方法且現在正移轉至IMS的現有AEM執行個體，需要移轉步驟。
 
-AEM存放庫中的現有使用者（來源為本機，透過LDAP或SAML）可以使用使用者移轉公用程式移轉為IDP指向IMS。
+AEM存放庫中的現有使用者（來自本機，透過LDAP或SAML）可以使用使用者移轉公用程式以IDP的形式移轉至指向IMS。
 
 此公用程式將由您的AMS團隊執行，作為IMS布建的一部分。
 
 ### 在AEM中管理許可權和ACL {#managing-permissions-and-acls-in-aem}
 
-存取控制和許可權將繼續在AEM中管理，這可透過將來自IMS(例如，以下範例中的AEM-GRP-008)的使用者群組與定義了許可權和存取控制的本機群組分離來達成。 可將從IMS同步的使用者群組指派給本機群組，並繼承許可權。
+存取控制和許可權將繼續在AEM中管理，這可透過將來自IMS的使用者群組（例如，以下範例中的AEM-GRP-008）與定義許可權和存取控制的本機群組分離來達成。 可將從IMS同步的使用者群組指派給本機群組，並繼承許可權。
 
 以下範例中，我們會示範將同步的群組新增至本機 *Dam_Users* 群組。
 

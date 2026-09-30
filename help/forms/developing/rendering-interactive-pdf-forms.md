@@ -1,6 +1,6 @@
 ---
 title: 呈現互動式PDF forms
-description: 使用Forms服務向客戶裝置（通常是網頁瀏覽器）呈現互動式PDF forms，以便從使用者收集資訊。 您可以使用Forms服務，透過Java API和Web服務API呈現互動式表單。
+description: 使用Forms服務向客戶裝置（通常為網頁瀏覽器）呈現互動式PDF forms，以便從使用者收集資訊。 您可以使用Forms服務，透過Java API和Web服務API呈現互動式表單。
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/rendering_forms
@@ -9,19 +9,18 @@ topic-tags: operations
 role: Developer
 exl-id: d9f32939-c2c0-4531-b15e-f63941c289e3
 solution: Experience Manager, Experience Manager Forms
+
 feature: Adaptive Forms,Document Services,APIs & Integrations
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '2455'
+source-wordcount: '2471'
 ht-degree: 0%
-
 ---
-
 # 呈現互動式PDF forms {#rendering-interactive-pdf-forms}
 
 **本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
 
-Forms服務會將互動式PDF forms轉譯給使用者端裝置（通常是網頁瀏覽器），以收集使用者的資訊。 呈現互動式表單後，使用者可在表單欄位中輸入資料，然後按一下表單上的提交按鈕，將資訊傳回Forms服務。 使用者端Web瀏覽器所在的電腦上必須安裝Adobe Reader或Acrobat，互動式PDF表單才能顯示。
+Forms服務會將互動式PDF forms轉譯給使用者端裝置（通常為網頁瀏覽器），以便從使用者收集資訊。 呈現互動式表單後，使用者可在表單欄位中輸入資料，然後按一下表單上的提交按鈕，將資訊傳回Forms服務。 使用者端網頁瀏覽器所在的電腦上必須安裝Adobe Reader或Acrobat，才能顯示互動式PDF表單。
 
 >[!NOTE]
 >
@@ -39,7 +38,7 @@ Forms服務會將互動式PDF forms轉譯給使用者端裝置（通常是網頁
  <thead>
   <tr>
    <th><p>步驟</p></th>
-   <th><p>說明</p></th>
+   <th><p>描述</p></th>
   </tr>
  </thead>
  <tbody>
@@ -49,7 +48,7 @@ Forms服務會將互動式PDF forms轉譯給使用者端裝置（通常是網頁
   </tr>
   <tr>
    <td><p>2</p></td>
-   <td><p><code>GetLoanForm</code> Java Servlet使用Forms服務使用者端API將貸款表單轉譯給使用者端網頁瀏覽器。 (請參閱<a href="#render-an-interactive-pdf-form-using-the-java-api">使用Java API演算互動式PDF表單</a>。)</p></td>
+   <td><p><code>GetLoanForm</code> Java Servlet使用Forms服務使用者端API將貸款表單轉譯給使用者端網頁瀏覽器。 （請參閱<a href="#render-an-interactive-pdf-form-using-the-java-api">使用Java API演算互動式PDF表單</a>。）</p></td>
   </tr>
   <tr>
    <td><p>3</p></td>
@@ -57,11 +56,11 @@ Forms服務會將互動式PDF forms轉譯給使用者端裝置（通常是網頁
   </tr>
   <tr>
    <td><p>4</p></td>
-   <td><p><code>HandleData</code> Java Servlet使用Forms服務使用者端API來處理表單提交作業並擷取表單資料。 然後，資料會儲存在企業資料庫中。 (請參閱<a href="/help/forms/developing/handling-submitted-forms.md#handling-submitted-forms">處理已提交的Forms</a>。)</p></td>
+   <td><p><code>HandleData</code> Java Servlet使用Forms服務使用者端API來處理表單提交作業並擷取表單資料。 然後，資料會儲存在企業資料庫中。 （請參閱<a href="/help/forms/developing/handling-submitted-forms.md#handling-submitted-forms">處理已提交的Forms</a>。）</p></td>
   </tr>
   <tr>
    <td><p>5</p></td>
-   <td><p>確認表單會轉譯回網頁瀏覽器。 如使用者的名字和姓氏等資料會在呈現之前與表單合併。 (請參閱<a href="/help/forms/developing/prepopulating-forms-flowable-layouts.md">使用可流動配置預先填入Forms</a>。)</p></td>
+   <td><p>確認表單會轉譯回網頁瀏覽器。 如使用者的名字和姓氏等資料會在呈現之前與表單合併。 （請參閱<a href="/help/forms/developing/prepopulating-forms-flowable-layouts.md">使用可流動配置預先填入Forms</a>。）</p></td>
   </tr>
  </tbody>
 </table>
@@ -78,7 +77,7 @@ Forms服務會將互動式PDF forms轉譯給使用者端裝置（通常是網頁
 
 ![ri_ri_confirm](assets/ri_ri_confirm.png)
 
-`HandleData` Java Servlet會使用使用者的名字和姓氏以及金額預先填入此表單。 預先填入表單後，會傳送給使用者端網頁瀏覽器。 (請參閱[使用可流動版面配置預先填入Forms](/help/forms/developing/prepopulating-forms-flowable-layouts.md))
+`HandleData` Java Servlet會使用使用者的名字和姓氏以及金額預先填入此表單。 預先填入表單後，會傳送給使用者端網頁瀏覽器。 （請參閱[使用可流動版面配置預先填入Forms](/help/forms/developing/prepopulating-forms-flowable-layouts.md)）
 
 **Java Servlet**
 
@@ -106,7 +105,7 @@ Forms服務會將互動式PDF forms轉譯給使用者端裝置（通常是網頁
 
 **步驟摘要**
 
-若要呈現互動式PDF表單，請執行下列工作：
+若要呈現互動式PDF表單，請執行以下工作：
 
 1. 包含專案檔案。
 1. 建立Forms使用者端API物件。
@@ -156,11 +155,11 @@ Forms應用程式中的資源路徑為：
 
 >[!NOTE]
 >
->您也可以將`com.adobe.idp.Document`執行個體傳遞至Forms服務，而不需指定URL值來參照XDP檔案。 `com.adobe.idp.Document`執行個體包含表單設計。 (請參閱[將檔案傳遞至Forms服務](/help/forms/developing/passing-documents-forms-service.md)。)
+>您也可以將`com.adobe.idp.Document`執行個體傳遞至Forms服務，而不需指定URL值來參照XDP檔案。 `com.adobe.idp.Document`執行個體包含表單設計。 （請參閱[將檔案傳遞至Forms服務](/help/forms/developing/passing-documents-forms-service.md)。）
 
 **附加檔案至表單**
 
-您可以將檔案附加至表單。 當您轉譯含有檔案附件的PDF表單時，使用者可以使用檔案附件窗格在Acrobat中擷取檔案附件。 您可以將不同的檔案型別附加到表單（如文字檔案）或二進位檔案(如JPG檔案)。
+您可以將檔案附加至表單。 當您轉譯含有檔案附件的PDF表單時，使用者可以使用檔案附件窗格在Acrobat中擷取檔案附件。 您可以將不同的檔案型別附加至表單（例如文字檔案）或二進位檔案（例如JPG檔案）。
 
 >[!NOTE]
 >
@@ -176,11 +175,11 @@ Forms應用程式中的資源路徑為：
 
 >[!NOTE]
 >
->如果輸入檔案是PDF檔案，則無法設定標籤的PDF執行階段選項。 如果輸入檔案是XDP檔案，則可以設定標籤的PDF選項。
+>如果輸入檔案是PDF檔案，則無法設定標籤的PDF執行階段選項。 如果輸入檔案是XDP檔案，則可設定標籤的PDF選項。
 
-## 使用Java API演算互動式PDF表單 {#render-an-interactive-pdf-form-using-the-java-api}
+## 使用Java API呈現互動式PDF表單 {#render-an-interactive-pdf-form-using-the-java-api}
 
-使用Forms API (Java)演算互動式PDF表單：
+使用Forms API (Java)呈現互動式PDF表單：
 
 1. 包含專案檔案
 
@@ -203,7 +202,7 @@ Forms應用程式中的資源路徑為：
    * 使用它的建構函式建立`java.util.HashMap`物件以儲存檔案附件。
    * 對每個要附加到轉譯表單的檔案叫用`java.util.HashMap`物件的`put`方法。 將下列值傳遞至此方法：
 
-      * 字串值，指定檔案附件的名稱，包括副檔名。
+     * 字串值，指定檔案附件的名稱，包括副檔名。
 
    * 包含檔案附件的`com.adobe.idp.Document`物件。
 
@@ -211,7 +210,7 @@ Forms應用程式中的資源路徑為：
    >
    >對每個要附加到表單的檔案重複此步驟。 此步驟是選擇性的，如果您不想傳送檔案附件，可以傳遞`null`。
 
-1. 演算互動式PDF表單
+1. 呈現互動式PDF表單
 
    叫用`FormsServiceClient`物件的`renderPDFForm`方法，並傳遞下列值：
 
@@ -235,7 +234,7 @@ Forms應用程式中的資源路徑為：
 
 ## 使用網站服務API呈現互動式PDF表單 {#render-an-interactive-pdf-form-using-the-web-service-api}
 
-使用Forms API （Web服務）演算互動式PDF表單：
+使用PDF API （Web服務）呈現互動式Forms表單：
 
 1. 包含專案檔案
 
@@ -258,7 +257,7 @@ Forms應用程式中的資源路徑為：
    * 使用它的建構函式建立`java.util.HashMap`物件以儲存檔案附件。
    * 對每個要附加到轉譯表單的檔案叫用`java.util.HashMap`物件的`put`方法。 將下列值傳遞至此方法：
 
-      * 字串值，指定檔案附件的名稱，包括副檔名
+     * 字串值，指定檔案附件的名稱，包括副檔名
 
    * 包含檔案附件的`BLOB`物件
 
@@ -266,7 +265,7 @@ Forms應用程式中的資源路徑為：
    >
    >對每個要附加到表單的檔案重複此步驟。
 
-1. 演算互動式PDF表單
+1. 呈現互動式PDF表單
 
    叫用`FormsService`物件的`renderPDFForm`方法，並傳遞下列值：
 
@@ -275,7 +274,7 @@ Forms應用程式中的資源路徑為：
    * 儲存執行階段選項的`PDFFormRenderSpec`物件。 這是選用引數，如果您不想指定執行階段選項，可以指定`null`。
    * 包含Forms服務所需URI值的`URLSpec`物件。
    * 儲存檔案附件的`java.util.HashMap`物件。 這是選用引數，如果您不想將檔案附加至表單，可以指定`null`。
-   * 方法填入的空白`com.adobe.idp.services.holders.BLOBHolder`物件。 這可用來儲存轉譯的PDF表單。
+   * 方法填入的空白`com.adobe.idp.services.holders.BLOBHolder`物件。 這是用來儲存轉譯的PDF表單。
    * 方法填入的空白`javax.xml.rpc.holders.LongHolder`物件。 （此引數會儲存表單中的頁數。）
    * 方法填入的空白`javax.xml.rpc.holders.StringHolder`物件。 （此引數將會儲存地區設定值。）
    * 包含此作業結果的空白`com.adobe.idp.services.holders.FormsResultHolder`物件。

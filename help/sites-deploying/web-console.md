@@ -11,11 +11,9 @@ solution: Experience Manager, Experience Manager Sites
 role: Admin
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '706'
+source-wordcount: '718'
 ht-degree: 1%
-
 ---
-
 # Web 控制台{#web-console}
 
 Adobe Experience Manager (AEM)中的Web主控台是以[Apache Felix Web管理主控台](https://felix.apache.org/documentation/subprojects/apache-felix-web-console.html)為基礎。 Apache Felix是社群努力實施OSGi R4服務平台，其中包括OSGi架構和標準服務。
@@ -40,7 +38,7 @@ Web主控台提供一系列用於維護OSGi套裝的標籤，包括：
 
 ## 設定 {#configuration}
 
-**Configuration**&#x200B;索引標籤是用來設定OSGi組合，因此是設定AEM系統引數的基礎機制。
+**組態**&#x200B;索引標籤是用來設定OSGi組合，因此是設定AEM系統引數的基礎機制。
 
 >[!NOTE]
 >
@@ -65,8 +63,8 @@ Web主控台提供一系列用於維護OSGi套裝的標籤，包括：
 * **組態**
 可讓您更新現有的組態。 這些具有持續性身分(PID)，可以是：
 
-   * 標準及為AEM不可或缺的一部分；若刪除這些值，則會傳回預設設定。
-   * 從「工廠組態」建立的執行處理；這些執行處理是由使用者建立的，刪除會移除執行處理。
+  * AEM的標準與整合功能；若刪除這些值，會傳回預設設定，則需使用這些功能。
+  * 從「工廠組態」建立的執行處理；這些執行處理是由使用者建立的，刪除會移除執行處理。
 
 * **工廠組態**
 可讓您建立所需功能物件的例項。
@@ -103,7 +101,7 @@ Web主控台提供一系列用於維護OSGi套裝的標籤，包括：
 
 ## 組合 {#bundles}
 
-**組合**&#x200B;索引標籤是安裝AEM所需的OSGi組合的機制。 可透過下列任一方法來存取標籤：
+**組合**&#x200B;索引標籤是安裝AEM所需OSGi組合的機制。 可透過下列任一方法來存取標籤：
 
 * 下拉式功能表：
 

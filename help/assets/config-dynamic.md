@@ -12,13 +12,11 @@ role: User, Admin
 exl-id: 5719d32c-4f19-47c1-bea9-8fd0bc8439ed
 feature: Configuration,Hybrid Mode
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+source-git-commit: 15fb75221470fe30d4a0c603e1bb0d0a45575eb5
 workflow-type: tm+mt
-source-wordcount: '8511'
+source-wordcount: '8519'
 ht-degree: 1%
-
 ---
-
 # 設定Dynamic Media — 混合模式 {#configuring-dynamic-media-hybrid-mode}
 
 ## Dynamic Media — 混合附加元件套件（AEM 6.5.23和更新版本）
@@ -207,21 +205,21 @@ and CQDOC-19792 (removed as per this ticket December 5, 2022)
 * 僅能管理單一主要來源影像，且無需額外儲存空間即可即時產生無限轉譯。
 * 能夠使用互動式視覺效果，例如縮放、平移和迴轉。
 
-如果您想在Experience Manager中使用Dynamic Media Classic，除非您使用[特定案例](/help/sites-administering/scene7.md#aem-scene-integration-versus-dynamic-media)，否則請勿啟用Dynamic Media。 Dynamic Media is disabled unless you enable Dynamic Media by way of the run mode.
+如果您想在Experience Manager中使用Dynamic Media Classic，除非您使用[特定案例](/help/sites-administering/scene7.md#aem-scene-integration-versus-dynamic-media)，否則請勿啟用Dynamic Media。 除非您透過執行模式啟用Dynamic Media，否則會停用Dynamic Media。
 
-To enable Dynamic Media, you must enable the Dynamic Media run mode either from the command line or from the quickstart file name.
+若要啟用Dynamic Media，您必須從命令列或快速入門檔案名稱啟用Dynamic Media執行模式。
 
-**To enable Dynamic Media:**
+**啟用Dynamic Media：**
 
-1. On the command line, when launching the quickstart, do the following:
+1. 在命令列上，啟動快速入門時，執行下列動作：
 
-   * Add `-r dynamicmedia` to the end of the command line when starting the jar file.
+   * 啟動jar檔案時將`-r dynamicmedia`新增到命令列的結尾。
 
    ```shellsession {.line-numbers}
    java -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=500000 -jar cq-quickstart-6.5.0.jar -r dynamicmedia
    ```
 
-   If you are publishing to s7delivery, you must also include the following trustStore arguments:
+   如果要發佈至s7delivery，您還必須包含下列trustStore引數：
 
    ```shellsession {.line-numbers}
    -Djavax.net.ssl.trustStore=<absoluteFilePath>/customerTrustStoreFileName>
@@ -229,38 +227,38 @@ To enable Dynamic Media, you must enable the Dynamic Media run mode either from 
     -Djavax.net.ssl.trustStorePassword=<passwordForTrustStoreFile>
    ```
 
-1. Request `https://localhost:4502/is/image` and make sure that Image Server is now running.
+1. 要求`https://localhost:4502/is/image`並確定影像伺服器目前正在執行。
 
    >[!NOTE]
    >
-   >To troubleshoot issues with Dynamic Media, see the following logs in the `crx-quickstart/logs/` directory:
+   >若要疑難排解Dynamic Media的問題，請參閱`crx-quickstart/logs/`目錄中的下列記錄：
    >
-   >* ImageServer-&lt;PortId>-&lt;yyyy>&lt;mm>&lt;dd>.log - The ImageServer log provides statistics and analytical information used for analyzing the behavior of the internal ImageServer process.
+   >* ImageServer-&lt;PortId>-&lt;yyyy>&lt;mm>&lt;dd>.log - ImageServer記錄檔提供用於分析內部ImageServer處理序行為的統計資料和分析資訊。
    >
-   >Example of an Image Server log file name: `ImageServer-57346-2020-07-25.log`
+   >影像伺服器記錄檔名稱的範例： `ImageServer-57346-2020-07-25.log`
    >
-   >* s7access-&lt;yyyy>&lt;mm>&lt;dd>.log - The s7access log records each request made to Dynamic Media through `/is/image` and `/is/content`.
+   >* s7access-&lt;yyyy>&lt;mm>&lt;dd>.log - s7access記錄檔會記錄透過`/is/image`和`/is/content`向Dynamic Media提出的每個要求。
    >
-   >These logs are only used when Dynamic Media is enabled. They are not included in the **Download Full** package that is generated from the `system/console/status-Bundlelist` page; when calling Customer Support if you have a Dynamic Media issue, append both these logs to the issue.
+   >這些記錄檔僅在啟用Dynamic Media時使用。 它們未包含在從`system/console/status-Bundlelist`頁面產生的&#x200B;**下載完整**&#x200B;套件中；如果您有Dynamic Media問題，在呼叫客戶支援時，請將這兩個記錄附加至問題。
 
-### If you installed Experience Manager to a different port or context path ... {#if-you-installed-aem-to-a-different-port-or-context-path}
+### 如果您已將Experience Manager安裝至其他連線埠或內容路徑…… {#if-you-installed-aem-to-a-different-port-or-context-path}
 
-If you are deploying [Experience Manager to an application server](/help/sites-deploying/application-server-install.md) and have Dynamic Media enabled, you must configure the **self-domain** in the Externalizer. Otherwise, thumbnail generation for assets does not work properly for Dynamic Media assets.
+如果您要將[Experience Manager部署至應用程式伺服器](/help/sites-deploying/application-server-install.md)並啟用Dynamic Media，則必須在外部化程式中設定&#x200B;**自我網域**。 否則，資產的縮圖產生功能無法正常用於Dynamic Media資產。
 
-In addition, if you run quickstart on a different port or context path, you also have to change the **self-domain**.
+此外，如果您在其他連線埠或內容路徑上執行快速入門，您也必須變更&#x200B;**自我網域**。
 
-When Dynamic Media is enabled, the static thumbnail renditions for image assets are generated using Dynamic Media. For thumbnail generation to work properly for Dynamic Media, Experience Manager must perform a URL request to itself and must know both the port number and the context path.
+啟用動態媒體時，會使用動態媒體產生影像資產的靜態縮圖轉譯。 為了讓縮圖產生功能在Dynamic Media中正常運作，Experience Manager必須對其本身執行URL要求，且必須知道連線埠號碼和內容路徑。
 
-In Experience Manager:
+在Experience Manager中：
 
-* The **self-domain** in the [Externalizer](/help/sites-developing/externalizer.md) is used to retrieve both the port number and context path.
-* If no **self-domain** is configured, the port number and context path are retrieved from the Jetty HTTP service.
+* [Externalizer](/help/sites-developing/externalizer.md)中的&#x200B;**自我網域**&#x200B;用來擷取連線埠號碼和內容路徑。
+* 如果未設定任何&#x200B;**自我網域**，則會從Jetty HTTP服務擷取連線埠號碼和內容路徑。
 
-In an Experience Manager QuickStart WAR deployment, the port number and context path cannot be derived, therefore you must configure a **self-domain**. See [Externalizer documentation](/help/sites-developing/externalizer.md) on how to configure the **self-domain**.
+在Experience Manager QuickStart WAR部署中，無法衍生連線埠號碼和內容路徑，因此您必須設定&#x200B;**自我網域**。 請參閱[外部化器檔案](/help/sites-developing/externalizer.md)，瞭解如何設定&#x200B;**自我網域**。
 
 >[!NOTE]
 >
->In an [Experience Manager Quickstart stand-alone deployment](/help/sites-deploying/deploy.md), a **self-domain** generally does not need to be configured because the port number and context path can be auto-configured. 不過，如果所有網路介面都已關閉，您必須設定&#x200B;**自我網域**。
+>在[Experience Manager Quickstart獨立部署](/help/sites-deploying/deploy.md)中，通常不需要設定&#x200B;**自我網域**，因為連線埠號碼和內容路徑可以自動設定。 不過，如果所有網路介面都已關閉，您必須設定&#x200B;**自我網域**。
 
 ## 停用Dynamic Media  {#disabling-dynamic-media}
 
@@ -351,30 +349,30 @@ Dynamic Media影像傳遞的運作方式是從Experience Manager Author發佈影
 
    ![chlimage_1-508](assets/chlimage_1-508.png)
 
-1. On the **[!UICONTROL Edit User Settings For dynamic-media-replication]** page, expand the **Add Private Key from KeyStore file** area and add the following (see the images that follow):
+1. 在&#x200B;**[!UICONTROL 編輯Dynamic-media-replication的使用者設定]**&#x200B;頁面上，展開&#x200B;**從KeyStore檔案新增私密金鑰**&#x200B;區域並新增下列專案（請參閱下列影像）：
 
-   * In the **[!UICONTROL New Alias]** field, enter the name of an alias that you want to use later in the replication configuration. For example, you could use `replication` as an alias.
-   * Select **[!UICONTROL KeyStore File]**. Navigate to the KeyStore file provided to you by Adobe, select it, then select **[!UICONTROL Open]**.
-   * In the **[!UICONTROL KeyStore File Password]** field, enter the KeyStore File password. This password is **not** the KeyStore password that you created in Step 5 but is the KeyStore File password Adobe provides in the Welcome email sent to you during provisioning. Contact Adobe Customer Support if you did not receive a KeyStore File password.
-   * In the **[!UICONTROL Private Key Password]** field, enter the private key password (can be the same private key password provided in the previous step). Adobe provides the private key password in the Welcome email sent to you during provisioning. Contact Adobe Customer Support if you did not receive a private key password.
-   * In the **[!UICONTROL Private Key Alias]** field, enter the private key alias. 例如 `*companyname*-alias`。 Adobe provides the private key alias in the Welcome email sent to you during provisioning. Contact Adobe Customer Support if you did not receive a private key alias.
+   * 在&#x200B;**[!UICONTROL 新別名]**&#x200B;欄位中，輸入您稍後要在復寫組態中使用的別名名稱。 例如，您可以使用`replication`作為別名。
+   * 選取&#x200B;**[!UICONTROL KeyStore檔案]**。 導覽至Adobe提供給您的KeyStore檔案，選取該檔案，然後選取&#x200B;**[!UICONTROL 開啟]**。
+   * 在&#x200B;**[!UICONTROL KeyStore檔案密碼]**&#x200B;欄位中，輸入KeyStore檔案密碼。 此密碼&#x200B;**不是**&#x200B;您在步驟5中建立的KeyStore密碼，而是Adobe在布建期間傳送給您的歡迎電子郵件中提供的KeyStore檔案密碼。 如果您沒有收到KeyStore檔案密碼，請聯絡Adobe客戶支援。
+   * 在&#x200B;**[!UICONTROL 私密金鑰密碼]**&#x200B;欄位中，輸入私密金鑰密碼（可以是上一步驟中提供的相同私密金鑰密碼）。 Adobe會在布建期間傳送給您的歡迎電子郵件中提供私密金鑰密碼。 如果您沒有收到私密金鑰密碼，請聯絡Adobe客戶支援。
+   * 在&#x200B;**[!UICONTROL 私密金鑰別名]**&#x200B;欄位中輸入私密金鑰別名。 例如 `*companyname*-alias`。 Adobe在布建期間傳送給您的歡迎電子郵件中提供私人金鑰別名。 如果您沒有收到私密金鑰別名，請聯絡Adobe客戶支援。
 
    ![edit_settings_fordynamic-media-replication2](assets/edit_settings_fordynamic-media-replication2.png)
 
-1. Select **[!UICONTROL Save &amp; Close]** to save your changes to this user.
+1. 選取&#x200B;**[!UICONTROL 儲存並關閉]**&#x200B;以儲存您對此使用者的變更。
 
-   Next, you must [configure the replication agent](#configuring-the-replication-agent).
+   接下來，您必須[設定復寫代理程式](#configuring-the-replication-agent)。
 
-### Configure the replication agent {#configuring-the-replication-agent}
+### 設定復寫代理程式 {#configuring-the-replication-agent}
 
-1. In Experience Manager, select the Experience Manager logo to access the global navigation console, then navigate to **[!UICONTROL Tools]** > **[!UICONTROL Deployment]** > **[!UICONTROL Replication]** > **[!UICONTROL Agents on author]**.
-1. On the Agents on author page, select **[!UICONTROL Dynamic Media Hybrid Image Replication (s7delivery)]**.
+1. 在Experience Manager中，選取Experience Manager標誌以存取全域導覽主控台，然後導覽至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL 復寫]** > **[!UICONTROL 作者代理程式]**。
+1. 在作者頁面上的「代理程式」中，選取&#x200B;**[!UICONTROL Dynamic Media混合影像復寫(s7delivery)]**。
 1. 選取&#x200B;**[!UICONTROL 編輯]**。
-1. Select the **[!UICONTROL Settings]** tab, then enter the following:
+1. 選取&#x200B;**[!UICONTROL 設定]**&#x200B;標籤，然後輸入下列內容：
 
-   * **[!UICONTROL Enabled]** - Select this check box to enable the replication agent.
-   * **[!UICONTROL Region]** - Set to the appropriate region: North America, Europe, or Asia
-   * **[!UICONTROL Tenant ID]** - This value is the name of your company/tenant that is publishing to the Replication Service. This value is the Tenant ID that Adobe provides in the Welcome email sent to you during provisioning. 如果您沒有收到這項資訊，請聯絡Adobe客戶支援。
+   * **[!UICONTROL 已啟用]** — 選取此核取方塊以啟用復寫代理程式。
+   * **[!UICONTROL 地區]** — 設定為適當的地區：北美、歐洲或亞洲
+   * **[!UICONTROL 租使用者識別碼]** — 這個值是您要發佈至復寫服務的公司/租使用者的名稱。 此值是Adobe在布建期間傳送給您的歡迎電子郵件中提供的租使用者ID。 如果您沒有收到這項資訊，請聯絡Adobe客戶支援。
    * **[!UICONTROL 金鑰存放區別名]** — 這個值與在[設定驗證](#setting-up-authentication)中產生金鑰時設定的&#x200B;**新別名**&#x200B;值相同；例如`replication`。 （請參閱[設定驗證](#setting-up-authentication)中的步驟7。）
    * **[!UICONTROL 金鑰庫密碼]** — 在您點選&#x200B;**[!UICONTROL 建立KeyStore]**&#x200B;時所建立的KeyStore密碼。 Adobe未提供此密碼。 請參閱[設定驗證](#setting-up-authentication)的步驟5。
 
@@ -629,7 +627,7 @@ Dynamic Media Cloud Service支援影像和視訊、視訊分析和視訊編碼�
 1. 執行下列任一項作業，驗證封裝安裝，並在必要時偵錯安裝：
 
    * **透過JCR檢查視訊分析預設集**
-若要透過JCR檢視Video Analytics預設集，您必須有權存取CRXDE Lite。
+     若要透過JCR檢視Video Analytics預設集，您必須有權存取CRXDE Lite。
 
      Experience Manager — 在CRXDE Lite中導覽至`/conf/global/settings/dam/dm/presets/analytics/jcr:content/userdata`
 
@@ -640,7 +638,7 @@ Dynamic Media Cloud Service支援影像和視訊、視訊分析和視訊編碼�
    * **透過影像伺服器檢查視訊分析預設集**
 
      您可以發出影像伺服器req=userdata要求，直接驗證Video Analytics預設集。
-例如，若要檢視「作者」節點上的Analytics預設集，您可以提出下列請求：
+     例如，若要檢視「作者」節點上的Analytics預設集，您可以提出下列請求：
 
      `https://localhost:4502/is/image/conf/global/settings/dam/dm/presets/analytics?req=userdata`
 
@@ -654,7 +652,7 @@ Dynamic Media Cloud Service支援影像和視訊、視訊分析和視訊編碼�
      ```
 
    * **透過Experience Manager中的視訊報告工具檢查視訊分析預設集**
-導覽至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Assets]** > **[!UICONTROL 視訊報告]**
+     導覽至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Assets]** > **[!UICONTROL 視訊報告]**
 
      `https://localhost:4502/mnt/overlay/dam/gui/content/s7dam/videoreports/videoreport.html`
 
@@ -758,17 +756,17 @@ Experience Manager 6.4和更新版本將此預設集儲存在`/conf/global/setti
    <td>現成的「filter-video」會：
     <ul>
      <li>包含用於復寫的Proxy視訊轉譯、視訊縮圖/海報影像、中繼資料（同時在父視訊與視訊轉譯中） （任何以<strong>cqdam</strong>開頭的轉譯）。</li>
-     <li>Exclude from replication the original video and static thumbnail renditions.<br /> <br /> <strong>Note:</strong> The proxy video renditions do not contain binaries, but instead are just node properties. Hence, there is no impact on publisher repository size.</li>
+     <li>從復寫中排除原始視訊和靜態縮圖轉譯。<br /> <br /> <strong>注意：</strong> Proxy視訊轉譯未包含二進位檔，而是只有節點屬性。 因此，發佈者存放庫大小不受影響。</li>
     </ul> </td>
   </tr>
   <tr>
-   <td>Dynamic Media Classic (Scene7) integration</td>
+   <td>Dynamic Media Classic (Scene7)整合</td>
    <td><p>filter-images</p> <p>篩選集</p> <p>濾鏡 — 視訊</p> </td>
    <td><p>開頭為<strong>影像/</strong></p> <p>包含<strong>應用程式/</strong>且結尾為<strong>set</strong>。</p> <p>開頭為<strong>視訊/</strong></p> </td>
-   <td><p>You configure the Transport URI to point to your Experience Manager publish server instead of the Adobe Dynamic Media Cloud Replication Service URL. Setting up this filter allows Dynamic Media Classic to deliver assets instead of the Experience Manager publish instance.</p> <p>The out-of-the-box "filter-images," "filter-sets," and "filter-video" will:</p>
+   <td><p>您可以設定傳輸URI以指向您的Experience Manager發佈伺服器，而非Adobe動態媒體雲端復寫服務URL。 設定此篩選器可讓Dynamic Media Classic傳送資產，而非Experience Manager發佈執行個體。</p> <p>現成可用的「filter-images」、「filter-set」和「filter-video」將：</p>
     <ul>
-     <li>Include PTIFF image, proxy video renditions, and metadata for replication. However, because they do not exist in the JCR-for those running Experience Manager - Dynamic Media Classic integration-it effectively does nothing.</li>
-     <li>Exclude from replication the original image, static image renditions, original video, and static thumbnail renditions. Instead, Dynamic Media Classic delivers image and video assets.</li>
+     <li>包含PTIFF影像、Proxy視訊轉譯，以及復寫用的中繼資料。 但是，由於這些範本不存在於執行Experience Manager的JCR — 中 — Dynamic Media Classic整合 — 它實際上不會執行任何動作。</li>
+     <li>從復寫中排除原始影像、靜態影像轉譯、原始視訊和靜態縮圖轉譯。 Dynamic Media Classic而是提供影像和視訊資產。</li>
     </ul> </td>
   </tr>
  </tbody>
@@ -776,16 +774,16 @@ Experience Manager 6.4和更新版本將此預設集儲存在`/conf/global/setti
 
 >[!NOTE]
 >
->Filters apply to MIME types and cannot be path-specific.
+>篩選器適用於MIME型別，且不得為路徑專用。
 
-### Set up asset filters for video-only deployments {#setting-up-asset-filters-for-video-only-deployments}
+### 為僅限視訊的部署設定資產篩選器 {#setting-up-asset-filters-for-video-only-deployments}
 
-If you are using Dynamic Media for video-only, follow these steps to set up asset filters for replication:
+如果您將Dynamic Media僅用於視訊，請依照下列步驟設定用於復寫的資產篩選器：
 
-1. In Experience Manager, select the Experience Manager logo to access the global navigation console, then navigate to **[!UICONTROL Tools]** > **[!UICONTROL Deployment]** > **[!UICONTROL Replication]** > **[!UICONTROL Agents on author]**.
-1. On the Agents on author page, select **[!UICONTROL Default Agent (publish)]**.
+1. 在Experience Manager中，選取Experience Manager標誌以存取全域導覽主控台，然後導覽至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL 復寫]** > **[!UICONTROL 作者代理程式]**。
+1. 在[作者上的代理程式]頁面上，選取&#x200B;**[!UICONTROL 預設代理程式（發佈）]**。
 1. 選取&#x200B;**[!UICONTROL 編輯]**。
-1. In the **[!UICONTROL Agent Settings]** dialog box, in the **[!UICONTROL Settings]** tab, check **[!UICONTROL Enabled]** to turn on the agent.
+1. 在&#x200B;**[!UICONTROL 代理程式設定]**&#x200B;對話方塊的&#x200B;**[!UICONTROL 設定]**&#x200B;索引標籤中，勾選&#x200B;**[!UICONTROL 已啟用]**&#x200B;以開啟代理程式。
 1. 選取&#x200B;**[!UICONTROL 確定]**。
 1. 在Experience Manager中，導覽至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 一般]** > **[!UICONTROL CRXDE Lite]**。
 1. 在左側資料夾樹狀結構中，瀏覽至`/etc/replication/agents.author/dynamic_media_replication/jcr:content/damRenditionFilters`
@@ -867,38 +865,38 @@ If you are using Dynamic Media for video-only, follow these steps to set up asse
 
 ## 正在設定Dynamic Media影像伺服器設定 {#configuring-dynamic-media-image-server-settings}
 
-Configuring the Dynamic Media Image Server involves editing the Adobe CQ Scene7 ImageServer bundle and the Adobe CQ Scene7 PlatformServer bundle.
+設定Dynamic Media影像伺服器需要編輯Adobe CQ Scene7 ImageServer套件組合和Adobe CQ Scene7 PlatformServer套件組合。
 
 >[!NOTE]
 >
->Dynamic Media works out-of-the-box [after it is enabled](#enabling-dynamic-media). However, you can optionally choose to fine-tune your installation by configuring Dynamic Media Image Server to meet certain specifications or requirements.
+>Dynamic Media在啟用[&#128279;](#enabling-dynamic-media)後立即運作。 不過，您可以選擇設定Dynamic Media影像伺服器，以符合特定規格或需求，進而微調您的安裝。
 
-**Prerequisite** - *Before* you configure Dynamic Media Image Server, ensure that your VM of Windows® includes an installation of the Microsoft® Visual C++ Libraries. The libraries are necessary to run Dynamic Media Image Server. You can [download the Microsoft® Visual C++ 2010 Redistributable Package (x64) here](https://www.microsoft.com/en-us/download/details.aspx?id=26999).
+**先決條件** - *在*&#x200B;您設定Dynamic Media影像伺服器之前，請確定Windows®的VM包含Microsoft® Visual C++程式庫的安裝。 需要程式庫才能執行Dynamic Media影像伺服器。 您可以[在這裡](https://www.microsoft.com/en-us/download/details.aspx?id=26999)下載® Visual C++ 2010可轉散發套件(x64)。
 
-To configure Dynamic Media Image Server settings:
+若要設定Dynamic Media影像伺服器設定：
 
-1. In the upper-left corner of Experience Manager, select **[!UICONTROL Adobe Experience Manager]** to access the global navigation console, then navigate to **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
-1. On the Adobe Experience Manager Web Console Configuration page, go to **[!UICONTROL OSGi]** > **[!UICONTROL Configuration]** to list all the bundles that are currently running within Experience Manager.
+1. 在Experience Manager的左上角，選取&#x200B;**[!UICONTROL Adobe Experience Manager]**&#x200B;以存取全域導覽主控台，然後導覽至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 作業]** > **[!UICONTROL 網頁主控台]**。
+1. 在Adobe Experience Manager Web主控台設定頁面上，前往&#x200B;**[!UICONTROL OSGi]** > **[!UICONTROL 設定]**&#x200B;列出目前在Experience Manager中執行的所有組合。
 
-   The Dynamic Media Delivery Servers are found under the following names in the list:
+   Dynamic Media傳送伺服器位於清單中的下列名稱下：
 
    * `Adobe CQ Scene7 ImageServer`
    * `Adobe CQ Scene7 PlatformServer`
 
-1. In the list of bundles, to the right of Adobe CQ Scene7 ImageServer, select the **[!UICONTROL Edit]** icon.
-1. In the Adobe CQ Scene7 ImageServer dialog box, set the following configuration values:
+1. 在套件組合清單中，在Adobe CQ Scene7 ImageServer的右側，選取&#x200B;**[!UICONTROL 編輯]**&#x200B;圖示。
+1. 在Adobe CQ Scene7 ImageServer對話方塊中，設定下列設定值：
 
    >[!NOTE]
    >
-   >Usually, there is no need to change the default values. However, if you do change the default values, you must restart the bundle for the changes to take effect.
+   >通常不需要變更預設值。 但是，如果您確實變更了預設值，則必須重新啟動束以使變更生效。
 
    | 屬性 | 預設值 | 說明 |
    | --- | --- | --- |
-   | `TcpPort.name` | *`empty`* | Port number to use for communication with the ImageServer process. By default free port is automatically detected. |
-   | `AllowRemoteAccess.name` | *`empty`* | Allow or disallow remote access to ImageServer process. If false, the image server listens only on localhost.<br> Default Externalizer settings that point to the localhost must specify the actual domain or IP address of the specific VM instance. The reason is because the localhost points to the parent system of the VM.<br>Domains or IP addresses for the VM must have a host file entry so that it can resolve itself. |
-   | `MaxRenderRgnPixels` | 16 MP | Maximum size in megapixels that is rendered. |
-   | `MaxMessageSize` | 16 MB | Maximum message size in megabytes that is delivered. |
-   | `RandomAccessUrlTimeout` | 20 | Time out value for how long in seconds the Image Server waits for the JCR to respond to a ranged tile request. |
+   | `TcpPort.name` | *`empty`* | 用來與ImageServer處理序通訊的連線埠號碼。 預設會自動偵測自由連線埠。 |
+   | `AllowRemoteAccess.name` | *`empty`* | 允許或不允許遠端存取ImageServer處理序。 如果為false，則影像伺服器僅在localhost上接聽。<br> 指向本機主機的預設Externalizer設定必須指定特定VM執行處理的實際網域或IP位址。 原因在於localhost指向VM的父系。<br>VM的網域或IP位址必須有主機檔案專案，才能自行解析。 |
+   | `MaxRenderRgnPixels` | 16兆帕 | 已轉譯的大小上限（百萬畫素）。 |
+   | `MaxMessageSize` | 16 MB | 傳遞的訊息大小上限（以MB為單位）。 |
+   | `RandomAccessUrlTimeout` | 20 | 逾時值：影像伺服器等待JCR回應範圍磚要求的秒數。 |
    | `WorkerThreads` | 10 | 工作者執行緒的數量。 |
 
 1. 選取「**[!UICONTROL 儲存]**」。
@@ -941,14 +939,14 @@ To configure Dynamic Media Image Server settings:
 | `bkgcolor` | `FFFFFF` | 預設背景顏色。 RGB值，用來對不包含實際影像資料的回覆影像的任何區域進行填色。 另請參閱影像伺服API中的[BkgColor](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-bkgcolor.html?lang=zh-Hant#image-serving-api)。 |
 | `defaultpix` | `300,300` | 預設檢視大小。 如果要求未使用wid=、hei=或scl=明確指定檢視大小，則伺服器會將回覆影像限製為不得大於此寬度與高度。<br>指定為兩個大於或等於0的整數，並以逗號分隔。 寬度和高度（畫素）。 任一或兩個值都可以設為0，以保持不受限制。 不適用於巢狀/內嵌請求。<br>另請參閱「影像伺服API」中的[DefaultPix](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultpix.html?lang=zh-Hant#image-serving-api)。<br>不過，您通常是使用檢視器預設集或影像預設集來傳遞資產。 Defaultpix僅適用於未使用檢視器預設集或影像預設集的資產。 |
 | `defaultthumbpix` | `100,100` | 預設縮圖大小。 用於縮圖要求(`req=tmb`)，而不是attribute：：DefaultPix。<br>伺服器限制回覆影像不得大於此寬度與高度。 如果縮圖要求(`req=tmb`)未明確指定大小，且未使用`wid=`、`hei=`或`scl=`明確指定檢視大小，則此動作為true。<br>指定為兩個整數（0或更大，以逗號分隔）。 寬度和高度（畫素）。 任一或兩個值都可以設為0，以保持不受限制。<br>不適用於巢狀/內嵌要求。<br>另請參閱影像伺服API中的[DefaultThumbPix](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultthumbpix.html?lang=zh-Hant#image-serving-api)。 |
-| `expiration` | `36000000` | 預設使用者端快取存留時間。 提供預設過期時間間隔，以防止特定目錄記錄未包含有效的目錄：：過期值。<br>實數，0或更大。 從產生回覆資料到到期為止的毫秒數。 設為0可一律使回覆影像立即過期，以有效停用使用者端快取。 預設情況下，此值會設為10小時，這表示如果發佈新影像，則舊影像需要10小時才能離開使用者的快取。 如果您需要及早清除快取，請聯絡客戶支援。<br>See also [Expiration](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-expiration.html?lang=zh-Hant) in the Image Serving API. |
-| `jpegquality` | `80` | Default JPEG encoding attributes. Specifies the default attributes for JPEG reply images.<br>Integer number and flag, separated by a comma. The first value is in the range 1..100 and defines the quality. The second value can be 0 for normal behavior, or 1 to disable the RGB chromaticity down-sampling employed by JPEG encoders.<br>See also [JpegQuality](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-jpegquality.html?lang=zh-Hant#image-serving-api) in the Image Serving API. |
-| `maxpix` | `2000,2000` | Reply image size limit. Maximum reply image width and height that is returned to the client.<br>The server returns an error if a request causes a reply image whose width or height is larger than attribute::MaxPix.<br>See also [MaxPix](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-maxpix.html?lang=zh-Hant#image-serving-api) in the Image Serving API. |
-| `resmode` | `SHARP2` | Default resampling mode. Specifies the default resampling and interpolation attributes to be used for scaling image data.<br>Used when `resMode=` is not specified in a request.<br>Allowed values include `BILIN`, `BICUB`, or `SHARP2`.<br>Enum. Set to 2 for `bilin`, 3 for `bicub`, or 4 for `sharp2` interpolation mode. Use `sharp2` for best results.<br>See also [ResMode](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-is-cat-resmode.html?lang=zh-Hant#image-serving-api) in the Image Serving API. |
-| `resolution` | `72` | Default object resolution. Provides a default object resolution in case a particular catalog record does not contain a valid catalog::Resolution value.<br>Real number, larger than 0. Typically expressed as pixels per inch, but can also be in other units, such as pixels per meter.<br>See also [Resolution](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-resolution.html?lang=zh-Hant#image-serving-api) in the Image Serving API. |
-| `thumbnailtime` | `1%,11%,21%,31%,41%,51%,61%,71%,81%,91%` | These values represent a snapshot of video playtime and are passed to [encoding.com](https://www.encoding.com/). See [About video thumbnail](/help/assets/video.md#about-video-thumbnails-in-dynamic-media-hybrid-mode) for more information. |
+| `expiration` | `36000000` | 預設使用者端快取存留時間。 提供預設過期時間間隔，以防止特定目錄記錄未包含有效的目錄：：過期值。<br>實數，0或更大。 從產生回覆資料到到期為止的毫秒數。 設為0可一律使回覆影像立即過期，以有效停用使用者端快取。 預設情況下，此值會設為10小時，這表示如果發佈新影像，則舊影像需要10小時才能離開使用者的快取。 如果您需要及早清除快取，請聯絡客戶支援。<br>另請參閱影像伺服API中的[有效期](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-expiration.html?lang=zh-Hant)。 |
+| `jpegquality` | `80` | 預設JPEG編碼屬性。 指定JPEG回覆影像的預設屬性。<br>整數與旗標，以逗號分隔。 第一個值在1到100的範圍內，並定義品質。 第二個值可以是0 （正常行為），或1 （停用JPEG編碼器採用的RGB色度向下取樣）。<br>另請參閱「影像伺服API」中的[JpegQuality](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-jpegquality.html?lang=zh-Hant#image-serving-api)。 |
+| `maxpix` | `2000,2000` | 回覆影像大小限制。 傳回給使用者端的最大回覆影像寬度和高度。<br>如果要求造成回覆影像的寬度或高度大於attribute：：MaxPix，伺服器會傳回錯誤。<br>另請參閱「影像伺服API」中的[MaxPix](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-maxpix.html?lang=zh-Hant#image-serving-api)。 |
+| `resmode` | `SHARP2` | 預設重新取樣模式。 指定用來縮放影像資料的預設重新取樣與內插屬性。<br>在要求中未指定`resMode=`時使用。<br>允許的值包括`BILIN`、`BICUB`或`SHARP2`。<br>列舉。 設定`bilin`為2，`bicub`為3，或`sharp2`內插模式為4。 使用`sharp2`以獲得最佳結果。<br>另請參閱影像伺服API中的[ResMode](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-is-cat-resmode.html?lang=zh-Hant#image-serving-api)。 |
+| `resolution` | `72` | 預設物件解析度。 提供預設的物件解析度，以防止特定目錄記錄未包含有效的catalog：：Resolution值。<br>實數，大於0。 通常以每英吋的畫素表示，但也可以使用其他單位，例如每米的畫素。<br>另請參閱影像伺服API中的[解析度](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-resolution.html?lang=zh-Hant#image-serving-api)。 |
+| `thumbnailtime` | `1%,11%,21%,31%,41%,51%,61%,71%,81%,91%` | 這些值代表視訊播放時間的快照，並傳遞至[encoding.com](https://www.encoding.com/)。 如需詳細資訊，請參閱[關於視訊縮圖](/help/assets/video.md#about-video-thumbnails-in-dynamic-media-hybrid-mode)。 |
 
-## Configuring Dynamic Media Color Management {#configuring-dynamic-media-color-management}
+## 設定Dynamic Media色彩管理 {#configuring-dynamic-media-color-management}
 
 Dynamic Media色彩管理可讓您校正資產色彩，以便預覽。
 
@@ -1001,248 +999,248 @@ Adobe的色彩管理使用ICC （國際色彩聯盟）設定檔，這是由ICC�
 
    **色彩校正屬性表**
 
-<table>
- <tbody>
-  <tr>
-   <td><strong>屬性</strong></td>
-   <td><strong>類型</strong></td>
-   <td><strong>預設</strong></td>
-   <td><strong>說明</strong></td>
-  </tr>
-  <tr>
-   <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilergb.html?lang=zh-Hant">iccprofilergb</a></td>
-   <td>字串</td>
-   <td>&lt;empty&gt;</td>
-   <td>預設RGB色彩設定檔的名稱。</td>
-  </tr>
-  <tr>
-   <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilecmyk.html?lang=zh-Hant">iccprofilecmyk</a></td>
-   <td>字串</td>
-   <td>&lt;empty&gt;</td>
-   <td>預設CMYK色彩設定檔的名稱。</td>
-  </tr>
-  <tr>
-   <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilegray.html?lang=zh-Hant">iccprofilegray</a></td>
-   <td>字串</td>
-   <td>&lt;empty&gt;</td>
-   <td>預設灰階色彩設定檔的名稱。</td>
-  </tr>
-  <tr>
-   <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilesrcrgb.html?lang=zh-Hant">iccprofilesrcrgb</a></td>
-   <td>字串</td>
-   <td>&lt;empty&gt;</td>
-   <td>用於沒有內嵌色彩設定檔的RGB影像的預設RGB色彩設定檔名稱</td>
-  </tr>
-  <tr>
-   <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilesrccmyk.html?lang=zh-Hant">iccprofilescmyk</a></td>
-   <td>字串</td>
-   <td>&lt;empty&gt;</td>
-   <td>用於沒有內嵌色彩設定檔的CMYK影像的預設CMYK色彩設定檔名稱。</td>
-  </tr>
-  <tr>
-   <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilesrcgray.html?lang=zh-Hant">iccprofilesrcgray</a></td>
-   <td>字串</td>
-   <td>&lt;empty&gt;</td>
-   <td>用於沒有內嵌色彩設定檔的CMYK影像的預設灰階色彩設定檔名稱。</td>
-  </tr>
-  <tr>
-   <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccblackpointcompensation.html?lang=zh-Hant">iccblackpointcompensation</a></td>
-   <td>布林值</td>
-   <td>真</td>
-   <td>指定在色彩校正期間是否進行黑點補償。 Adobe建議開啟此設定。</td>
-  </tr>
-  <tr>
-   <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccdither.html?lang=zh-Hant">iccdither</a></td>
-   <td>布林值</td>
-   <td>假</td>
-   <td>指定色彩校正期間是否執行遞色。</td>
-  </tr>
-  <tr>
-   <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccrenderintent.html?lang=zh-Hant">iccrenderintent</a></td>
-   <td>字串</td>
-   <td>相對值</td>
-   <td><p>指定演算色彩比對方式。 可接受的值為： <strong>感應式、相對、飽和度、絕對。</strong><i></i>Adobe建議使用<strong>相對</strong><i></i>作為預設值。</p> </td>
-  </tr>
- </tbody>
-</table>
+   <table>
+   <tbody>
+   <tr>
+      <td><strong>屬性</strong></td>
+      <td><strong>類型</strong></td>
+      <td><strong>預設</strong></td>
+      <td><strong>說明</strong></td>
+   </tr>
+   <tr>
+      <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilergb.html?lang=zh-Hant">iccprofilergb</a></td>
+      <td>字串</td>
+      <td>&lt;empty&gt;</td>
+      <td>預設RGB色彩設定檔的名稱。</td>
+   </tr>
+   <tr>
+      <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilecmyk.html?lang=zh-Hant">iccprofilecmyk</a></td>
+      <td>字串</td>
+      <td>&lt;empty&gt;</td>
+      <td>預設CMYK色彩設定檔的名稱。</td>
+   </tr>
+   <tr>
+      <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilegray.html?lang=zh-Hant">iccprofilegray</a></td>
+      <td>字串</td>
+      <td>&lt;empty&gt;</td>
+      <td>預設灰階色彩設定檔的名稱。</td>
+   </tr>
+   <tr>
+      <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilesrcrgb.html?lang=zh-Hant">iccprofilesrcrgb</a></td>
+      <td>字串</td>
+      <td>&lt;empty&gt;</td>
+      <td>用於沒有內嵌色彩設定檔的RGB影像的預設RGB色彩設定檔名稱</td>
+   </tr>
+   <tr>
+      <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilesrccmyk.html?lang=zh-Hant">iccprofilescmyk</a></td>
+      <td>字串</td>
+      <td>&lt;empty&gt;</td>
+      <td>用於沒有內嵌色彩設定檔的CMYK影像的預設CMYK色彩設定檔名稱。</td>
+   </tr>
+   <tr>
+      <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilesrcgray.html?lang=zh-Hant">iccprofilesrcgray</a></td>
+      <td>字串</td>
+      <td>&lt;empty&gt;</td>
+      <td>用於沒有內嵌色彩設定檔的CMYK影像的預設灰階色彩設定檔名稱。</td>
+   </tr>
+   <tr>
+      <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccblackpointcompensation.html?lang=zh-Hant">iccblackpointcompensation</a></td>
+      <td>布林值</td>
+      <td>真</td>
+      <td>指定在色彩校正期間是否進行黑點補償。 Adobe建議開啟此設定。</td>
+   </tr>
+   <tr>
+      <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccdither.html?lang=zh-Hant">iccdither</a></td>
+      <td>布林值</td>
+      <td>假</td>
+      <td>指定色彩校正期間是否執行遞色。</td>
+   </tr>
+   <tr>
+      <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccrenderintent.html?lang=zh-Hant">iccrenderintent</a></td>
+      <td>字串</td>
+      <td>相對值</td>
+      <td><p>指定演算色彩比對方式。 可接受的值為： <strong>感應式、相對、飽和度、絕對。</strong><i></i>Adobe建議使用<strong>相對</strong><i></i>作為預設值。</p> </td>
+   </tr>
+   </tbody>
+   </table>
 
->[!NOTE]
->
->屬性名稱會區分大小寫，且必須全部小寫。
+   >[!NOTE]
+   >
+   >屬性名稱會區分大小寫，且必須全部小寫。
 
-**色彩設定檔表格**
+   **色彩設定檔表格**
 
-已安裝下列色彩設定檔：
+   已安裝下列色彩設定檔：
 
-<table>
- <tbody>
-  <tr>
-   <th><p>名稱</p> </th>
-   <th><p>色彩空間</p> </th>
-   <th><p>說明</p> </th>
-  </tr>
-  <tr>
-   <td>Adobe RGB</td>
-   <td>RGB</td>
-   <td>Adobe RGB (1998)</td>
-  </tr>
-  <tr>
-   <td>AppleRGB</td>
-   <td>RGB</td>
-   <td>Apple RGB</td>
-  </tr>
-  <tr>
-   <td>CIERGB</td>
-   <td>RGB</td>
-   <td>CIE RGB</td>
-  </tr>
-  <tr>
-   <td>CoatedFogra27</td>
-   <td>CMYK</td>
-   <td>Coated FOGRA27 (ISO 12647-2:2004)</td>
-  </tr>
-  <tr>
-   <td>CoatedFogra39</td>
-   <td>CMYK</td>
-   <td>Coated FOGRA39 (ISO 12647-2:2004)</td>
-  </tr>
-  <tr>
-   <td>CoatedGraCol</td>
-   <td>CMYK</td>
-   <td>Coated GRACoL 2006 (ISO 12647-2:2004)</td>
-  </tr>
-  <tr>
-   <td>ColorMatchRGB</td>
-   <td>RGB</td>
-   <td>ColorMatch RGB</td>
-  </tr>
-  <tr>
-   <td>歐洲ISOCoated</td>
-   <td>CMYK</td>
-   <td>歐洲ISO銅版FOGRA27</td>
-  </tr>
-  <tr>
-   <td>EuroscaleCoated</td>
-   <td>CMYK</td>
-   <td>歐式塗布v2</td>
-  </tr>
-  <tr>
-   <td>EuroscaleUncoated</td>
-   <td>CMYK</td>
-   <td>歐洲規模無塗層的v2</td>
-  </tr>
-  <tr>
-   <td>JapanColorCoated</td>
-   <td>CMYK</td>
-   <td>Japan Color 2001塗裝</td>
-  </tr>
-  <tr>
-   <td>JapanColorPaper</td>
-   <td>CMYK</td>
-   <td>Japan Color 2002報紙</td>
-  </tr>
-  <tr>
-   <td>JapanColorUncoated</td>
-   <td>CMYK</td>
-   <td>Japan Color 2001 Uncoated</td>
-  </tr>
-  <tr>
-   <td>JapanColorWebCoated</td>
-   <td>CMYK</td>
-   <td>Japan Color 2003 Web Coated</td>
-  </tr>
-  <tr>
-   <td>Japanawebcoated</td>
-   <td>CMYK</td>
-   <td>Japan Web Coated （廣告）</td>
-  </tr>
-  <tr>
-   <td>NewsprintSNAP2007</td>
-   <td>CMYK</td>
-   <td>美國新聞紙(SNAP 2007)</td>
-  </tr>
-  <tr>
-   <td>NTSC</td>
-   <td>RGB</td>
-   <td>NTSC (1953)</td>
-  </tr>
-  <tr>
-   <td>PAL</td>
-   <td>RGB</td>
-   <td>PAL/SECAM</td>
-  </tr>
-  <tr>
-   <td>ProPhoto</td>
-   <td>RGB</td>
-   <td>ProPhoto RGB</td>
-  </tr>
-  <tr>
-   <td>PS4預設</td>
-   <td>CMYK</td>
-   <td>Photoshop 4預設CMYK</td>
-  </tr>
-  <tr>
-   <td>PS5預設</td>
-   <td>CMYK</td>
-   <td>Photoshop 5預設CMYK</td>
-  </tr>
-  <tr>
-   <td>SheetfedCoated</td>
-   <td>CMYK</td>
-   <td>U.S. Sheetfed Coated v2</td>
-  </tr>
-  <tr>
-   <td>SheetfedUncoated</td>
-   <td>CMYK</td>
-   <td>U.S. Sheetfed Uncoated v2</td>
-  </tr>
-  <tr>
-   <td>SMPTE</td>
-   <td>RGB</td>
-   <td>SMPTE-C</td>
-  </tr>
-  <tr>
-   <td>sRGB</td>
-   <td>RGB</td>
-   <td>sRGB IEC61966-2.1</td>
-  </tr>
-  <tr>
-   <td>UncoatedFogra29</td>
-   <td>CMYK</td>
-   <td>無塗層的FOGRA29 (ISO 12647-2:2004)</td>
-  </tr>
-  <tr>
-   <td>網頁套裝</td>
-   <td>CMYK</td>
-   <td>U.S. Web Coated (SWOP) v2</td>
-  </tr>
-  <tr>
-   <td>WebCoatedFogra28</td>
-   <td>CMYK</td>
-   <td>Web Coated FOGRA28 (ISO 12647-2:2004)</td>
-  </tr>
-  <tr>
-   <td>WebCoatedGrade3</td>
-   <td>CMYK</td>
-   <td>Web Coated SWOP 2006 Grade 3紙</td>
-  </tr>
-  <tr>
-   <td>WebCoatedGrade5</td>
-   <td>CMYK</td>
-   <td>Web Coated SWOP 2006 Grade 5紙張</td>
-  </tr>
-  <tr>
-   <td>WebUncoated</td>
-   <td>CMYK</td>
-   <td>U.S. Web Uncoated v2</td>
-  </tr>
-  <tr>
-   <td>寬色域RGB</td>
-   <td>RGB</td>
-   <td>寬色域RGB</td>
-  </tr>
- </tbody>
-</table>
+   <table>
+   <tbody>
+   <tr>
+      <th><p>名稱</p> </th>
+      <th><p>色彩空間</p> </th>
+      <th><p>說明</p> </th>
+   </tr>
+   <tr>
+      <td>Adobe RGB</td>
+      <td>RGB</td>
+      <td>Adobe RGB (1998)</td>
+   </tr>
+   <tr>
+      <td>AppleRGB</td>
+      <td>RGB</td>
+      <td>Apple RGB</td>
+   </tr>
+   <tr>
+      <td>CIERGB</td>
+      <td>RGB</td>
+      <td>CIE RGB</td>
+   </tr>
+   <tr>
+      <td>CoatedFogra27</td>
+      <td>CMYK</td>
+      <td>Coated FOGRA27 (ISO 12647-2:2004)</td>
+   </tr>
+   <tr>
+      <td>CoatedFogra39</td>
+      <td>CMYK</td>
+      <td>Coated FOGRA39 (ISO 12647-2:2004)</td>
+   </tr>
+   <tr>
+      <td>CoatedGraCol</td>
+      <td>CMYK</td>
+      <td>Coated GRACoL 2006 (ISO 12647-2:2004)</td>
+   </tr>
+   <tr>
+      <td>ColorMatchRGB</td>
+      <td>RGB</td>
+      <td>ColorMatch RGB</td>
+   </tr>
+   <tr>
+      <td>歐洲ISOCoated</td>
+      <td>CMYK</td>
+      <td>歐洲ISO銅版FOGRA27</td>
+   </tr>
+   <tr>
+      <td>EuroscaleCoated</td>
+      <td>CMYK</td>
+      <td>歐式塗布v2</td>
+   </tr>
+   <tr>
+      <td>EuroscaleUncoated</td>
+      <td>CMYK</td>
+      <td>歐洲規模無塗層的v2</td>
+   </tr>
+   <tr>
+      <td>JapanColorCoated</td>
+      <td>CMYK</td>
+      <td>Japan Color 2001塗裝</td>
+   </tr>
+   <tr>
+      <td>JapanColorPaper</td>
+      <td>CMYK</td>
+      <td>Japan Color 2002報紙</td>
+   </tr>
+   <tr>
+      <td>JapanColorUncoated</td>
+      <td>CMYK</td>
+      <td>Japan Color 2001 Uncoated</td>
+   </tr>
+   <tr>
+      <td>JapanColorWebCoated</td>
+      <td>CMYK</td>
+      <td>Japan Color 2003 Web Coated</td>
+   </tr>
+   <tr>
+      <td>Japanawebcoated</td>
+      <td>CMYK</td>
+      <td>Japan Web Coated （廣告）</td>
+   </tr>
+   <tr>
+      <td>NewsprintSNAP2007</td>
+      <td>CMYK</td>
+      <td>美國新聞紙(SNAP 2007)</td>
+   </tr>
+   <tr>
+      <td>NTSC</td>
+      <td>RGB</td>
+      <td>NTSC (1953)</td>
+   </tr>
+   <tr>
+      <td>PAL</td>
+      <td>RGB</td>
+      <td>PAL/SECAM</td>
+   </tr>
+   <tr>
+      <td>ProPhoto</td>
+      <td>RGB</td>
+      <td>ProPhoto RGB</td>
+   </tr>
+   <tr>
+      <td>PS4預設</td>
+      <td>CMYK</td>
+      <td>Photoshop 4預設CMYK</td>
+   </tr>
+   <tr>
+      <td>PS5預設</td>
+      <td>CMYK</td>
+      <td>Photoshop 5預設CMYK</td>
+   </tr>
+   <tr>
+      <td>SheetfedCoated</td>
+      <td>CMYK</td>
+      <td>U.S. Sheetfed Coated v2</td>
+   </tr>
+   <tr>
+      <td>SheetfedUncoated</td>
+      <td>CMYK</td>
+      <td>U.S. Sheetfed Uncoated v2</td>
+   </tr>
+   <tr>
+      <td>SMPTE</td>
+      <td>RGB</td>
+      <td>SMPTE-C</td>
+   </tr>
+   <tr>
+      <td>sRGB</td>
+      <td>RGB</td>
+      <td>sRGB IEC61966-2.1</td>
+   </tr>
+   <tr>
+      <td>UncoatedFogra29</td>
+      <td>CMYK</td>
+      <td>無塗層的FOGRA29 (ISO 12647-2:2004)</td>
+   </tr>
+   <tr>
+      <td>網頁套裝</td>
+      <td>CMYK</td>
+      <td>U.S. Web Coated (SWOP) v2</td>
+   </tr>
+   <tr>
+      <td>WebCoatedFogra28</td>
+      <td>CMYK</td>
+      <td>Web Coated FOGRA28 (ISO 12647-2:2004)</td>
+   </tr>
+   <tr>
+      <td>WebCoatedGrade3</td>
+      <td>CMYK</td>
+      <td>Web Coated SWOP 2006 Grade 3紙</td>
+   </tr>
+   <tr>
+      <td>WebCoatedGrade5</td>
+      <td>CMYK</td>
+      <td>Web Coated SWOP 2006 Grade 5紙張</td>
+   </tr>
+   <tr>
+      <td>WebUncoated</td>
+      <td>CMYK</td>
+      <td>U.S. Web Uncoated v2</td>
+   </tr>
+   <tr>
+      <td>寬色域RGB</td>
+      <td>RGB</td>
+      <td>寬色域RGB</td>
+   </tr>
+   </tbody>
+   </table>
 
 1. 選取&#x200B;**[!UICONTROL 全部儲存]**。
 

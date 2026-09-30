@@ -1,21 +1,23 @@
 ---
 title: 在AEM中使用Sling Resource Merger
+
 description: Sling Resource Merger提供存取及合併資源的服務
+
+
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
+
 exl-id: 1eed754e-9a7d-4b65-a929-757fc962614d
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
-source-wordcount: '1247'
+source-wordcount: '1273'
 ht-degree: 1%
-
 ---
-
 # 在AEM中使用Sling Resource Merger{#using-the-sling-resource-merger-in-aem}
 
 ## 用途 {#purpose}
@@ -98,25 +100,25 @@ Sling Resource Merger提供存取及合併資源的服務。 它為兩者提供�
 
 * 覆蓋
 
-   * Sites主控台之導覽專案的定義（如邊欄中所示）定義於：
+  * Sites主控台之導覽專案的定義（如邊欄中所示）定義於：
 
-     `/libs/cq/core/content/nav/sites/jcr:title`
+    `/libs/cq/core/content/nav/sites/jcr:title`
 
-   * 若要覆蓋此節點，請建立下列節點：
+  * 若要覆蓋此節點，請建立下列節點：
 
-     `/apps/cq/core/content/nav/sites`
+    `/apps/cq/core/content/nav/sites`
 
-     然後視需要更新屬性`jcr:title`。
+    然後視需要更新屬性`jcr:title`。
 
 * 覆寫
 
-   * 文字控制檯之觸控式對話方塊的定義定義如下：
+  * 文字控制檯之觸控式對話方塊的定義定義如下：
 
-     `/libs/foundation/components/text/cq:dialog`
+    `/libs/foundation/components/text/cq:dialog`
 
-   * 若要覆寫此節點，請建立以下節點 — 例如：
+  * 若要覆寫此節點，請建立以下節點 — 例如：
 
-     `/apps/the-project/components/text/cq:dialog`
+    `/apps/the-project/components/text/cq:dialog`
 
 若要建立其中一個，您只需要重新建立骨架結構。 若要簡化結構的重新建立，所有中介節點都可以是`nt:unstructured`型別（它們不必反映原始節點型別；例如，在`/libs`中）。
 
@@ -143,20 +145,20 @@ Sling Resource Merger提供存取及合併資源的服務。 它為兩者提供�
 
   屬性不存在於`/libs`定義中，但在`/apps`覆蓋/覆寫中是必要的。
 
-   1. 在`/apps`中建立對應的節點
-   1. 在此節點上建立新屬性»
+  1. 在`/apps`中建立對應的節點
+  1. 在此節點上建立新屬性»
 
 * **重新定義屬性（不是自動建立的屬性）**
 
   屬性已在`/libs`中定義，但在`/apps`覆蓋/覆寫中需要新值。
 
-   1. 在`/apps`中建立對應的節點
-   1. 在此節點上建立相符的屬性（在/ `apps`下）
+  1. 在`/apps`中建立對應的節點
+  1. 在此節點上建立相符的屬性（在/ `apps`下）
 
-      * 根據Sling資源解析器設定，屬性的優先順序將為。
-      * 支援變更屬性型別。
+     * 根據Sling資源解析器設定，屬性的優先順序將為。
+     * 支援變更屬性型別。
 
-        如果您使用的屬性型別與`/libs`中使用的屬性型別不同，則會使用您定義的屬性型別。
+       如果您使用的屬性型別與`/libs`中使用的屬性型別不同，則會使用您定義的屬性型別。
 
   >[!NOTE]
   >
@@ -166,67 +168,67 @@ Sling Resource Merger提供存取及合併資源的服務。 它為兩者提供�
 
   依預設，自動建立的屬性（例如`jcr:primaryType`）不受覆蓋/覆寫約束，以確保目前在`/libs`之下的節點型別受到遵守。 若要強制覆蓋/覆寫，您必須在`/apps`中重新建立節點，明確隱藏屬性並重新定義它：
 
-   1. 使用所需的`jcr:primaryType`在`/apps`下建立對應的節點
-   1. 在該節點上建立屬性`sling:hideProperties`，其值設為自動建立屬性的值；例如`jcr:primaryType`
+  1. 使用所需的`jcr:primaryType`在`/apps`下建立對應的節點
+  1. 在該節點上建立屬性`sling:hideProperties`，其值設為自動建立屬性的值；例如`jcr:primaryType`
 
-      這個在`/apps`下定義的屬性，現在會優先於`/libs`下定義的屬性
+     這個在`/apps`下定義的屬性，現在會優先於`/libs`下定義的屬性
 
 * **重新定義節點及其子系**
 
   節點及其子系已在`/libs`中定義，但在`/apps`覆蓋/覆寫中需要新設定。
 
-   1. 結合下列動作：
+  1. 結合下列動作：
 
-      1. 隱藏節點的子系（保留節點的屬性）
-      1. 重新定義屬性/屬性
+     1. 隱藏節點的子系（保留節點的屬性）
+     1. 重新定義屬性/屬性
 
 * **隱藏屬性**
 
   屬性已在`/libs`中定義，但在`/apps`覆蓋/覆寫中並非必要。
 
-   1. 在`/apps`中建立對應的節點
-   1. 建立型別`String`或`String[]`的屬性`sling:hideProperties`。 使用此項可指定要隱藏/忽略的屬性。 也可以使用萬用字元。 例如：
+  1. 在`/apps`中建立對應的節點
+  1. 建立型別`String`或`String[]`的屬性`sling:hideProperties`。 使用此項可指定要隱藏/忽略的屬性。 也可以使用萬用字元。 例如：
 
-      * `*`
-      * `["*"]`
-      * `jcr:title`
-      * `["jcr:title", "jcr:description"]`
+     * `*`
+     * `["*"]`
+     * `jcr:title`
+     * `["jcr:title", "jcr:description"]`
 
 * **隱藏節點及其子系**
 
   節點及其子系已在`/libs`中定義，但在`/apps`覆蓋/覆寫中並非必要。
 
-   1. 在/apps下建立對應的節點
-   1. 建立屬性`sling:hideResource`
+  1. 在/apps下建立對應的節點
+  1. 建立屬性`sling:hideResource`
 
-      * 型別： `Boolean`
-      * 值： `true`
+     * 型別： `Boolean`
+     * 值： `true`
 
 * **隱藏節點的子系（同時保留節點的屬性）**
 
   在`/libs`中定義節點、其屬性及其子系。 `/apps`覆蓋/覆寫中需要節點及其屬性，但`/apps`覆蓋/覆寫中不需要部分或全部子節點。
 
-   1. 在`/apps`下建立對應的節點
-   1. 建立屬性`sling:hideChildren`：
+  1. 在`/apps`下建立對應的節點
+  1. 建立屬性`sling:hideChildren`：
 
-      * 型別： `String[]`
-      * 值：要隱藏/忽略的子節點清單（如`/libs`中所定義）
+     * 型別： `String[]`
+     * 值：要隱藏/忽略的子節點清單（如`/libs`中所定義）
 
-      萬用字元&amp;amp；ast；可用來隱藏/忽略所有子節點。
+     您可以使用萬用字元&amp;ast；來隱藏/忽略所有子節點。
 
 * **重新排序節點**
 
   節點及其同層級已在`/libs`中定義。 需要新位置，以便在`/apps`覆蓋/覆寫中重新建立節點，其中新位置是參照`/libs`中適當的同層級節點所定義。
 
-   * 使用`sling:orderBefore`屬性：
+  * 使用`sling:orderBefore`屬性：
 
-      1. 在`/apps`下建立對應的節點
-      1. 建立屬性`sling:orderBefore`：
+    1. 在`/apps`下建立對應的節點
+    1. 建立屬性`sling:orderBefore`：
 
-         這會指定目前節點應置於之前的節點（如`/libs`）：
+       這會指定目前節點應置於之前的節點（如`/libs`）：
 
-         * 型別： `String`
-         * 值： `<before-SiblingName>`
+       * 型別： `String`
+       * 值： `<before-SiblingName>`
 
 ### 從您的程式碼叫用Sling Resource Merger {#invoking-the-sling-resource-merger-from-your-code}
 
@@ -240,21 +242,21 @@ Sling Resource Merger包含兩個自訂資源提供者，一個用於覆蓋，�
 
 * 覆蓋：
 
-   * 用途：根據搜尋路徑合併資源
-   * 掛接點： `/mnt/overlay`
-   * 使用狀況： `mount point + relative path`
-   * 範例：
+  * 用途：根據搜尋路徑合併資源
+  * 掛接點： `/mnt/overlay`
+  * 使用狀況： `mount point + relative path`
+  * 範例：
 
-      * `getResource('/mnt/overlay' + '<relative-path-to-resource>');`
+    * `getResource('/mnt/overlay' + '<relative-path-to-resource>');`
 
 * 覆寫：
 
-   * 用途：根據資源的超級型別合併資源
-   * 掛接點： `/mnt/overide`
-   * 使用狀況： `mount point + absolute path`
-   * 範例：
+  * 用途：根據資源的超級型別合併資源
+  * 掛接點： `/mnt/overide`
+  * 使用狀況： `mount point + absolute path`
+  * 範例：
 
-      * `getResource('/mnt/override' + '<absolute-path-to-resource>');`
+    * `getResource('/mnt/override' + '<absolute-path-to-resource>');`
 
 ### 使用範例 {#example-of-usage}
 
@@ -262,9 +264,9 @@ Sling Resource Merger包含兩個自訂資源提供者，一個用於覆蓋，�
 
 * 覆蓋：
 
-   * [自訂主控台](/help/sites-developing/customizing-consoles-touch.md)
-   * [自訂頁面編寫](/help/sites-developing/customizing-page-authoring-touch.md)
+  * [自訂主控台](/help/sites-developing/customizing-consoles-touch.md)
+  * [自訂頁面編寫](/help/sites-developing/customizing-page-authoring-touch.md)
 
 * 覆寫：
 
-   * [設定頁面屬性](/help/sites-developing/page-properties-views.md#configuring-your-page-properties)
+  * [設定頁面屬性](/help/sites-developing/page-properties-views.md#configuring-your-page-properties)

@@ -9,47 +9,45 @@ docset: aem65
 exl-id: 2f276e9d-b3c1-48f7-a94a-bdf7eb15a031
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+source-git-commit: 15fb75221470fe30d4a0c603e1bb0d0a45575eb5
 workflow-type: tm+mt
-source-wordcount: '2372'
-ht-degree: 3%
-
+source-wordcount: '2452'
+ht-degree: 8%
 ---
-
 # 最適化表單片段{#adaptive-form-fragments}
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/adaptive-form-fragments-core-components.html?lang=zh-Hant) |
+| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/adaptive-form-fragments-core-components.html?lang=zh-Hant) |
 | AEM 6.5 | 本文章 |
 
-<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hant)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。本文會介紹使用基礎元件編寫最適化表單的舊方法。</span>
+<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hant)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。 這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。 本文會介紹使用基礎元件編寫最適化表單的舊方法。</span>
 
 雖然每個表單都是為特定目的而設計，但大多數表單中都有一些常見的區段，例如提供個人詳細資訊，例如姓名和地址、家庭詳細資訊和收入詳細資訊。 每次建立新表單時，表單開發人員都必須建立這些通用區段。
 
-調適型表單提供一種便利的機制，讓您只需建立一次表單區段（例如面板或欄位群組），即可在調適型表單中重複使用。 這些可重複使用的獨立區段稱為最適化表單片段。
+調適型表單提供一種便利的機制，讓您只需建立一次表單區段（例如面板或欄位群組），即可在調適型表單中重複使用。 這些可重複使用的獨立區段稱為「最適化表單片段」。
 
 >[!NOTE]
 >
-> 您可以使用表單片段元件[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/form-fragment.html)的“配置”對話框和“設計”對話框輕鬆為用戶自定義片段體驗。
+> 您可以使用[表單片段元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/form-fragment.html)的「設定」對話方塊和「設計」對話方塊，輕鬆自訂使用者的片段體驗。
 
 ## 建立片段 {#create-a-fragment}
 
-您可以從頭開始創建自適應表單片段，也可以將現有自適應表單中的面板另存為片段。
+您可以從頭開始建立最適化表單片段，或將現有最適化表單中的面板儲存為片段。
 
 ### 從頭開始建立片段 {#create-fragment-from-scratch}
 
 1. 在https://[*主機名稱*]：[*連線埠*]/aem/forms.html登入AEM Forms作者執行個體。
-1. 按一下&#x200B;**建立>最適化表單片段**。
+1. 按一下「**建立 > 自適應表單片段**」。
 1. 指定片段的標題、名稱、說明和標籤。
 
    >[!NOTE]
    >
-   >請確定您為片段指定唯一的名稱。 如果存在另一個相同名稱的片段，則無法建立片段。
+   >確保為片段指定唯一的名稱。 如果存在另一個相同名稱的片段，則無法建立片段。
 
 1. 按一下以開啟&#x200B;**表單模型**&#x200B;標籤，然後從&#x200B;**選取自**&#x200B;下拉式功能表中，為片段選取下列其中一個模型：
 
-   * **無**：指定從頭開始建立片段，而不使用任何表單模型。
+   * **無模型**：指定此選項，即可不使用任何表單模型，從頭開始建立表單。
 
      >[!NOTE]
      >
@@ -91,10 +89,9 @@ ht-degree: 3%
 1. 在「片段建立」對話方塊中，指定下列資訊：
 
    * **名稱**：片段的名稱。 預設值為面板的元素名稱。 這是必填欄位。
-
      >[!NOTE]
      >
-     >請確定您為片段指定唯一的名稱。 如果存在另一個相同名稱的片段，則無法建立片段。
+     >確保為片段指定唯一的名稱。 如果存在另一個相同名稱的片段，則無法建立片段。
 
    * **Title**：片段的標題。 預設值為面板的標題。
 
@@ -107,7 +104,7 @@ ht-degree: 3%
    * **表單模型**：根據最適化表單的表單模型，此欄位會顯示&#x200B;**XML結構描述**、**表單範本**&#x200B;或&#x200B;**無**。 這是不可編輯的欄位。
 
    * **片段模型根**：僅出現在XSD型最適化表單中。 它會指定片段模型的根。 您可以從下拉式清單中選擇&#x200B;**/**&#x200B;或XSD複雜型別。 只有在選取複雜型別作為片段模型根時，才能在另一個最適化表單中重複使用片段。
-如果您選擇&#x200B;**/**&#x200B;作為片段模型根目錄，則最適化表單資料模型標籤中會顯示根目錄的完整XSD樹狀結構。 對於複雜型別片段模型根，在調適型表單資料模型標籤中只會顯示所選複雜型別的子系。 如果您建立片段並選擇複雜型別做為&#x200B;**片段模型根**，則您可以在使用該複雜型別的地方使用它，無論是在相同表單中還是在多個表單中。
+     如果您選擇&#x200B;**/**&#x200B;作為片段模型根目錄，則最適化表單資料模型標籤中會顯示根目錄的完整XSD樹狀結構。 對於複雜型別片段模型根，在調適型表單資料模型標籤中只會顯示所選複雜型別的子系。 如果您建立片段並選擇複雜型別做為&#x200B;**片段模型根**，則您可以在使用該複雜型別的地方使用它，無論是在相同表單中還是在多個表單中。
 
    * **XSD Ref**：僅出現在XSD型最適化表單中。 它顯示XML綱要的位置。
 
@@ -119,7 +116,7 @@ ht-degree: 3%
 
 1. 按一下&#x200B;**「確定」**。
 
-   面板會儲存在存放庫 中的指定位置或預設位置。 在自適應表單中，面板被片段快照取代。 如下所示，「常規資訊」面板及其子面板「個人資訊」和「位址」將另存為片段。
+   面板會儲存在存放庫中的指定或預設位置。 在最適化表單中，面板會由片段的快照取代。 如下所示，「一般資訊」面板及其子面板「個人資訊和地址」會儲存為片段。
 
    若要編輯片段，請按一下面板工具列中的&#x200B;**[!UICONTROL 編輯資產]**。 片段會在編輯模式的新標籤或視窗中開啟。
 
@@ -129,13 +126,13 @@ ht-degree: 3%
 
 ### 設定片段外觀 {#configure-fragment-appearance}
 
-您在自適應表單中插入的任何片段都會顯示為佔位元元圖像。 佔位元顯示片段中最多十個子面板的標題。 您可以設定AEM Forms以顯示完整片段，而非佔位元影像。
+您在調適型表單中插入的任何片段都會顯示為預留位置影像。 預留位置最多可在片段中顯示十個子面板的標題。 您可以設定AEM Forms顯示完整的片段，而非預留位置影像。
 
-執行以下步驟，以便您可以在表單中顯示完整的片段：
+請執行以下步驟，讓您可以在表單中顯示完整的片段：
 
-1. 要前往 https：[*主機：[*&#x200B;連接埠&#x200B;*]*]/system/console/configMgr AEM Web 控制面板設定頁面。
+1. 移至https：[*主機*]：[*連線埠*]/system/console/configMgr的AEM Web主控台設定頁面。
 
-1. Search並選擇 **[!UICONTROL 「自適應表單」和「互動式通信 Web 通道配置]** 」以在編輯模式下打開它。
+1. 搜尋並選取&#x200B;**[!UICONTROL 最適化表單和互動式通訊Web Channel設定]**，以在編輯模式中開啟它。
 1. 停用&#x200B;**[!UICONTROL 啟用預留位置來取代片段]**&#x200B;核取方塊，以便您可以顯示完整的片段，而非預留位置影像。
 
 ### 在最適化表單中插入片段 {#insert-a-fragment-in-an-adaptive-form}
@@ -195,7 +192,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->您也可以從AEM內容尋找器中的Adaptive Form片段資料庫拖放已繫結的自適應表單片段，並在Adaptive Form片段面板的「編輯」元件對話方塊中提供正確的繫結參考。
+>您也可以從AEM內容尋找器中的最適化表單片段資料庫拖放已繫結的最適化表單片段，並在最適化表單片段面板的「編輯」元件對話方塊中提供正確的繫結參考。
 
 ## 管理片段 {#manage-fragments}
 
@@ -209,7 +206,7 @@ ht-degree: 3%
  <tbody>
   <tr>
    <td><p><strong>操作</strong></p> </td>
-   <td><p><strong>說明</strong></p> </td>
+   <td><p><strong>描述</strong></p> </td>
   </tr>
   <tr>
    <td><p>開啟</p> </td>
@@ -225,14 +222,14 @@ ht-degree: 3%
   </tr>
   <tr>
    <td><p>下載</p> </td>
-   <td><p>下載選取的片段。<br /> <br /> </p> </td>
+   <td><p>下載所選片段。<br /><br /> </p> </td>
   </tr>
   <tr>
    <td><p>預覽</p> </td>
-   <td><p>提供以HTML預覽片段的選項，或透過將XML檔案的資料與片段合併來預覽自訂預覽。 有關詳細資訊，請參閱 <a href="/help/forms/using/previewing-forms.md" target="_blank">預覽表單</a>。<br /> <br /> </p> </td>
+   <td><p>提供以HTML預覽片段的選項，或透過合併XML檔案中的資料與片段來自訂預覽。 如需詳細資訊，請參閱<a href="/help/forms/using/previewing-forms.md" target="_blank">預覽表單</a>。<br /> <br /> </p> </td>
   </tr>
   <tr>
-   <td><p>開始檢視/管理檢視</p> </td>
+   <td><p>開始評論/管理評論</p> </td>
    <td><p>允許啟動和管理所選片段的審查。 如需詳細資訊，請參閱<a href="../../forms/using/create-reviews-forms.md" target="_blank">建立和管理評論</a>。<br /> <br /> </p> </td>
   </tr>
   <tr>
@@ -240,17 +237,17 @@ ht-degree: 3%
    <td><p>產生字典以將選取的片段本地化。 如需詳細資訊，請參閱<a href="/help/forms/using/lazy-loading-adaptive-forms.md" target="_blank">將最適化表單當地語系化</a>。<br /> <br /> </p> </td>
   </tr>
   <tr>
-   <td><p>Publish/取消發佈</p> </td>
-   <td><p>發佈/取消發佈選取的片段。<br /> <br /> </p> </td>
+   <td><p>發佈/取消發佈</p> </td>
+   <td><p>發佈/取消發佈所選片段。<br /><br /> </p> </td>
   </tr>
   <tr>
    <td><p>刪除</p> </td>
-   <td><p>刪除選取的片段。<br /> <br /> </p> </td>
+   <td><p>刪除所選片段。<br /><br /> </p> </td>
   </tr>
  </tbody>
 </table>
 
-## 當地語系化包含片段的自適應表單 {#localizing-adaptive-form-containing-fragments}
+## 本地化包含片段的自適應表單 {#localizing-adaptive-form-containing-fragments}
 
 若要將包含自適應表單片段的自適應表單本地化，您必須分別將片段和表單本地化。 其構想是將片段本地化一次，並在多個最適化表單中重複使用。
 
@@ -260,17 +257,17 @@ ht-degree: 3%
 
 ## 使用片段時要記住的關鍵點 {#key-points-to-remember-when-working-with-fragments}
 
-* 確保片段名稱是唯一的。 如果存在具有相同名稱的現有片段，則片段無法建立。
+* 確認片段使用唯一的名稱。 如果現有片段擁有相同的名稱，則無法建立片段。
 * 在XDP型最適化表單中，如果您將面板儲存為包含其他XDP片段的片段，則產生的片段會自動與子XDP片段繫結。 如果存在XSD型最適化表單，則產生的片段會與結構描述根繫結。
-* 建立最適化表單片段時，會在CRXDE Lite中建立片段節點，該節點類似於最適化表單的guideContainer節點。
+* 建立最適化表單片段時，會建立片段節點，這類似於CRXDE Lite中最適化表單的guideContainer節點。
 * 不支援使用不同表單資料模型的最適化表單中的片段。 例如，XSD型最適化表單中不支援XDP型片段，反之亦然。
 * 最適化表單片段可透過AEM內容尋找器中的最適化表單片段標籤使用。
 * 透過參考插入或嵌入自適應表單時，獨立自適應表單片段中的任何運算式、指令碼或樣式都會保留。
 * 您無法從最適化表單中編輯依參考插入的最適化表單片段。 若要編輯，請編輯獨立的自適應表單片段，或將片段嵌入自適應表單中。
-* 發佈自適應表單時，必須發佈通過引用插入到自適應表單中的獨立自適應表單片段。
-* 當您重新發佈更新的自適應表單片段時，更改會反映在使用片段的自適應表單的已發佈實例中。
-* 包含驗證元件的自適應表單不支援匿名使用者。 同時，不建議在最適化窗體片段中使用驗證元件。
-* （**僅限** Mac）為了確保表單片段功能在所有場景中都能完美運行，請將以下內容添加到 /private/etc/hosts 檔中：
+* 發佈最適化表單時，您必須發佈在最適化表單中透過參考插入的獨立最適化表單片段。
+* 當您重新發佈更新的自適應表單片段時，變更會反映在使用片段的自適應表單的已發佈例項中。
+* 包含Verify元件的調適型表單不支援匿名使用者。 此外，不建議在自適應表單片段中使用驗證元件。
+* （**僅限Mac**）若要確保表單片段功能在所有案例中都能完美運作，請將下列專案新增至/private/etc/hosts檔案：
   `127.0.0.1 <Host machine>` **主機電腦**：部署AEM Forms的Apple Mac電腦。
 
 ## 參考片段 {#reference-fragments}

@@ -5,13 +5,11 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
 exl-id: ae4c7e9d-9af8-4288-a6f9-e3bcbe7d153d
-source-git-commit: 8ad159ce65fd11c6d1d75a2bc75061f6996f173e
+source-git-commit: 15fb75221470fe30d4a0c603e1bb0d0a45575eb5
 workflow-type: tm+mt
-source-wordcount: '2144'
+source-wordcount: '2149'
 ht-degree: 8%
-
 ---
-
 # AEM 6.5 Forms Service Pack安裝指示 {#aem-form-patch-installation-instructions}
 
 ## 版本資訊
@@ -95,15 +93,15 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
 1. 將JEE Service Pack安裝程式封存&#x200B;**上的** AEM Forms解壓縮至硬碟：
 
    * **視窗**
-導覽至安裝媒體上的適當目錄，或硬碟上您複製安裝程式的資料夾，然後按兩下`aemforms65_cfp_install.exe`檔案。
+     導覽至安裝媒體上的適當目錄，或硬碟上您複製安裝程式的資料夾，然後按兩下`aemforms65_cfp_install.exe`檔案。
 
-      * （Windows 32位元） `Windows\Disk1\InstData\VM`
-      * （Windows 64位元） `Windows_64Bit`\ `Disk1\InstData\VM`
+     * （Windows 32位元） `Windows\Disk1\InstData\VM`
+     * （Windows 64位元） `Windows_64Bit`\ `Disk1\InstData\VM`
 
    * **Linux®**
-導覽至適當的目錄，並從殼層及型別`./aem65_cfp_install.bin`。
+     導覽至適當的目錄，並從殼層及型別`./aem65_cfp_install.bin`。
 
-      * (Linux®) `Linux/Disk1/InstData/NoVM`
+     * (Linux®) `Linux/Disk1/InstData/NoVM`
 
    這會啟動安裝精靈，引導您完成安裝。
 
@@ -189,9 +187,9 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
 
   若要瞭解經過認證可搭配此版本使用的平台，請參閱[技術需求](/help/sites-deploying/technical-requirements.md)。
 
-   1. 產品資訊頁(`/system/console/productinfo`)會在[!UICONTROL 已安裝產品].<!-- UPDATE FOR EACH NEW RELEASE -->下顯示更新的版本字串`Adobe Experience Manager (spversion)`
-   1. 在OSGi主控台中，所有OSGi套件組合均為&#x200B;**[!UICONTROL 作用中]**&#x200B;或&#x200B;**[!UICONTROL 片段]** （使用Web主控台： `/system/console/bundles`）。
-   1. OSGi套件`org.apache.jackrabbit.oak-core`的版本為1.22.14或更新版本（使用WebConsole： `/system/console/bundles`）。
+  1. 產品資訊頁(`/system/console/productinfo`)會在[!UICONTROL 已安裝產品].<!-- UPDATE FOR EACH NEW RELEASE -->下顯示更新的版本字串`Adobe Experience Manager (spversion)`
+  1. 在OSGi主控台中，所有OSGi套件組合均為&#x200B;**[!UICONTROL 作用中]**&#x200B;或&#x200B;**[!UICONTROL 片段]** （使用Web主控台： `/system/console/bundles`）。
+  1. OSGi套件`org.apache.jackrabbit.oak-core`的版本為1.22.14或更新版本（使用WebConsole： `/system/console/bundles`）。
 
 +++
 
@@ -262,11 +260,11 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
 
   若要瞭解經過認證可搭配此版本使用的平台，請參閱[技術需求](/help/sites-deploying/technical-requirements.md)。
 
-   1. 產品資訊頁(`/system/console/productinfo`)會在[!UICONTROL 已安裝產品]下顯示更新的版本字串`Adobe Experience Manager (spversion)`。<!-- UPDATE FOR EACH NEW RELEASE -->
+  1. 產品資訊頁(`/system/console/productinfo`)會在[!UICONTROL 已安裝產品]下顯示更新的版本字串`Adobe Experience Manager (spversion)`。<!-- UPDATE FOR EACH NEW RELEASE -->
 
-   1. 在OSGi主控台中，所有OSGi套件組合均為&#x200B;**[!UICONTROL 作用中]**&#x200B;或&#x200B;**[!UICONTROL 片段]** （使用Web主控台： `/system/console/bundles`）。
+  1. 在OSGi主控台中，所有OSGi套件組合均為&#x200B;**[!UICONTROL 作用中]**&#x200B;或&#x200B;**[!UICONTROL 片段]** （使用Web主控台： `/system/console/bundles`）。
 
-      1. OSGi套件`org.apache.jackrabbit.oak-core`的版本為1.22.14或更新版本（使用Web主控台： `/system/console/bundles`）。
+     1. OSGi套件`org.apache.jackrabbit.oak-core`的版本為1.22.14或更新版本（使用Web主控台： `/system/console/bundles`）。
 
 +++
 

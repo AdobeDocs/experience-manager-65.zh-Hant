@@ -6,13 +6,11 @@ exl-id: 030fe9f2-cd41-4290-b8a6-2f9ade6b5789
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 feature: Adaptive Forms
-source-git-commit: 38e3439b5b9f3b4bc56bb1618d33e570ca0603f5
+source-git-commit: 15fb75221470fe30d4a0c603e1bb0d0a45575eb5
 workflow-type: tm+mt
-source-wordcount: '1908'
+source-wordcount: '1920'
 ht-degree: 0%
-
 ---
-
 # 使用[!DNL Adobe Launch]的Analytics {#analyticsusingadobelaunch}
 
 AEM Forms與[Adobe Analytics](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/overview.html?lang=zh-Hant)整合，可讓您擷取及追蹤已發佈表單的績效量度。 分析這些量度是為了讓業務使用者深入瞭解一般使用者行為，並最佳化資料擷取體驗。 您可以透過Adobe Analytics for Adaptive Forms擷取及追蹤已登入和未登入（匿名）使用者的行為。
@@ -165,7 +163,7 @@ AEM Forms與[Adobe Analytics](https://experienceleague.adobe.com/docs/analytics-
 
 1. 在&#x200B;**[!UICONTROL 動作]**&#x200B;區段中，選取+並指定&#x200B;**[!UICONTROL Adobe Analytics]**&#x200B;作為擴充功能名稱。
 
-1. 選取&#x200B;**[!UICONTROL 清除變數]**&#x200B;作為動作型別。選取&#x200B;**[!UICONTROL 保留變更]**。執行這些步驟後，**[!UICONTROL 動作]**&#x200B;區段顯示為：
+1. 選取&#x200B;**[!UICONTROL 清除變數]**&#x200B;作為動作型別。 選取&#x200B;**[!UICONTROL 保留變更]**。 執行這些步驟後，**[!UICONTROL 動作]**&#x200B;區段顯示為：
    ![動作設定](/help/forms/using/assets/actions-config.png)
 
    根據您的需求自訂&#x200B;**[!UICONTROL 動作]**&#x200B;區段。 例如，您可以在「動作」流程中定義兩個&#x200B;**傳送信標**&#x200B;步驟，將資料傳送至[!DNL Adobe Analytics]，並在一個步驟中將它視為頁面檢視，將資料傳送至[!DNL Adobe Analytics]，並在第二個步驟中不要將其視為頁面檢視。
@@ -239,8 +237,8 @@ AEM Forms與[Adobe Analytics](https://experienceleague.adobe.com/docs/analytics-
 為最適化表單啟用[!DNL Adobe Analytics]後，如果AEM Forms和[!DNL Adobe Analytics]之間有適當的資料事件流程，您可以[驗證](https://experienceleague.adobe.com/docs/launch-learn/implementing-in-websites-with-launch/implement-solutions/analytics.html?lang=zh-Hant#validate-the-page-view-beacon)。 AEM Forms與Adobe Analytics的整合已完成。 您現在可以[在Adobe Analytics](#view-reports-adobe-analytics)中設定和檢視報告。
 
 >[!NOTE]
+>
 >如果同時啟用使用Cloud Service Framework的[Analytics](/help/forms/using/configure-analytics-forms-documents.md)和使用Adobe Launch的&#x200B;**Analytics**&#x200B;功能，則優先使用Adobe Launch的&#x200B;**Analytics**。
-> 
 
 ### 建立規則以擷取自訂事件（選用） {#capture-custom-events}
 

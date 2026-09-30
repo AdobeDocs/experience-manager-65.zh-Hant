@@ -8,13 +8,11 @@ exl-id: 2e4f8f51-df02-4bbb-99bb-30181facd1e0
 solution: Experience Manager, Experience Manager Forms
 feature: Forms Portal
 role: Admin, User, Developer
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+source-git-commit: 15fb75221470fe30d4a0c603e1bb0d0a45575eb5
 workflow-type: tm+mt
 source-wordcount: '1537'
 ht-degree: 2%
-
 ---
-
 # 將草稿和提交元件與資料庫整合的範例 {#sample-for-integrating-drafts-submissions-component-with-database}
 
 ## 範例概述 {#sample-overview}
@@ -89,79 +87,79 @@ AEM Forms入口網站草稿和提交元件可讓使用者將其表單儲存為�
 1. 資料庫連線可透過Apache Sling Connection Pooled Data Source完成。
 1. 若為Apache Sling連線，請在Web主控台設定中尋找並按一下，以編輯模式開啟&#x200B;**[!UICONTROL Apache Sling Connection Pooled DataSource]**。 指定特性值，如下表所述：
 
-<table>
- <tbody>
-  <tr>
+   <table>
+   <tbody>
+   <tr>
    <td><strong>屬性</strong></td>
    <td><strong>值</strong></td>
-  </tr>
-  <tr>
+   </tr>
+   <tr>
    <td>資料來源名稱</td>
    <td><p>從資料來源集區篩選驅動程式的資料來源名稱</p> <p><strong>注意： </strong><em>範例實作使用FormsPortal做為資料來源名稱。</em></p> </td>
-  </tr>
-  <tr>
+   </tr>
+   <tr>
    <td>JDBC驅動程式類別</td>
    <td>com.mysql.jdbc.Driver</td>
-  </tr>
-  <tr>
+   </tr>
+   <tr>
    <td>JDBC連線URI<br /> </td>
    <td>jdbc:mysql://[<em>主機</em>]：[<em>連線埠</em>]/[<em>結構描述名稱</em>]</td>
-  </tr>
-  <tr>
+   </tr>
+   <tr>
    <td>使用者名稱</td>
    <td>用於驗證資料庫表格並執行動作的使用者名稱</td>
-  </tr>
-  <tr>
+   </tr>
+   <tr>
    <td>密碼</td>
    <td>與使用者名稱關聯的密碼</td>
-  </tr>
-  <tr>
+   </tr>
+   <tr>
    <td>交易隔離</td>
    <td>READ_COMMITTED</td>
-  </tr>
-  <tr>
+   </tr>
+   <tr>
    <td>最大使用中連線</td>
    <td>1000</td>
-  </tr>
-  <tr>
+   </tr>
+   <tr>
    <td>最大閒置連線</td>
    <td>100</td>
-  </tr>
-  <tr>
+   </tr>
+   <tr>
    <td>最小閒置連線</td>
    <td>10</td>
-  </tr>
-  <tr>
+   </tr>
+   <tr>
    <td>初始大小</td>
    <td>10</td>
-  </tr>
-  <tr>
+   </tr>
+   <tr>
    <td>等待上限</td>
    <td>100000</td>
-  </tr>
-  <tr>
+   </tr>
+   <tr>
    <td>借入時測試</td>
    <td>已核取</td>
-  </tr>
-  <tr>
+   </tr>
+   <tr>
    <td>閒置時測試</td>
    <td>已核取</td>
-  </tr>
-  <tr>
+   </tr>
+   <tr>
    <td>驗證查詢</td>
    <td>範例值為SELECT 1(mysql)，從dual(oracle)選取1，從SELECT 1(MS Sql Server) (validationQuery)選取</td>
-  </tr>
-  <tr>
+   </tr>
+   <tr>
    <td>驗證查詢逾時</td>
    <td>10000</td>
-  </tr>
- </tbody>
-</table>
+   </tr>
+   </tbody>
+   </table>
 
->[!NOTE]
->
->* 範例未提供適用於MySQL的JDBC驅動程式。 請確定您已布建此資料庫，並提供設定JDBC連線集區所需的資訊。
->* 將您的作者和發佈執行個體指向使用相同的資料庫。 所有製作和發佈執行個體的JDBC連線URI欄位值必須相同。
+   >[!NOTE]
+   >
+   >* 範例未提供適用於MySQL的JDBC驅動程式。 請確定您已布建此資料庫，並提供設定JDBC連線集區所需的資訊。
+   >* 將您的作者和發佈執行個體指向使用相同的資料庫。 所有製作和發佈執行個體的JDBC連線URI欄位值必須相同。
 
 1. 將其他組態維持原狀，然後按一下[儲存]。**&#x200B;**
 

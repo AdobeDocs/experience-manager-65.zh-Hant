@@ -9,13 +9,11 @@ feature: Adaptive Forms,Foundation Components
 exl-id: 9b4219b8-d5eb-4099-b205-d98d84e0c249
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+source-git-commit: 15fb75221470fe30d4a0c603e1bb0d0a45575eb5
 workflow-type: tm+mt
 source-wordcount: '1959'
 ht-degree: 11%
-
 ---
-
 # 在最適化表單中使用驗證碼{#using-captcha-in-adaptive-forms}
 
 | 版本 | 文章連結 |
@@ -26,7 +24,7 @@ ht-degree: 11%
 
 <span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hant)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。 這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。 本文會介紹使用基礎元件編寫最適化表單的舊方法。</span>
 
-CAPTCHA （完全自動化公用圖靈測試來區分電腦和人之間的差異）是一種常用於線上交易的程式，以區分人和自動化程式或機器人。 它會提出質詢並評估使用者的回應，以判斷與網站互動的是真人還是機器人。 它可防止使用者在測試失敗時繼續操作，並透過防止機器人發佈垃圾郵件或惡意目的來確保線上交易的安全。
+CAPTCHA （完全自動化公用圖靈測試來區分電腦和人之間的差異）是一種常用於線上交易的程式，以區分人和自動化程式或機器人。 它會提出挑戰並評估使用者的回應，以判斷與網站互動的是真人還是機器人。 它可防止使用者在測試失敗時繼續操作，並透過防止機器人發佈垃圾郵件或惡意目的來確保線上交易的安全。
 
 AEM Forms支援最適化表單中的驗證碼。 您可以使用Google的reCAPTCHA服務來實作CAPTCHA。
 
@@ -238,7 +236,7 @@ reCAPTCHA Enterprise服務啟用後，就可在調適型表單中使用。 請�
 
 >[!NOTE]
 >
-> * 如果您選取大小為&#x200B;**[!UICONTROL 隱藏]**&#x200B;或reCAPTCHA Enterprise分數型金鑰的reCAPTCHA v2組態，則顯示/隱藏選項不適用。
+>* 如果您選取大小為&#x200B;**[!UICONTROL 隱藏]**&#x200B;或reCAPTCHA Enterprise分數型金鑰的reCAPTCHA v2組態，則顯示/隱藏選項不適用。
 
 ### 進行驗證碼驗證 {#validate-captcha}
 

@@ -5,13 +5,11 @@ feature: Adaptive Forms, Core Components
 role: User
 level: Beginner, Intermediate
 exl-id: 107ad23b-53df-41d4-ab97-b09d189abc1b
-source-git-commit: 0c3d9e95f2b1942392cd269891360dd8552e2715
+source-git-commit: 15fb75221470fe30d4a0c603e1bb0d0a45575eb5
 workflow-type: tm+mt
-source-wordcount: '5734'
+source-wordcount: '5748'
 ht-degree: 3%
-
 ---
-
 # 將規則新增至最適化表單核心元件 {#adaptive-forms-rule-editor}
 
 本文包含最適化Forms核心元件的最新規則編輯器功能，包括：
@@ -536,17 +534,11 @@ Users in the forms-power-users group can access code editor. For other users, co
 
 1. 選取「**[!UICONTROL 完成]**」以儲存此規則。
 
-<!--
-1. Repeat steps 1 through 5 to define another rule to hide the Spouse Salary field if the marital Status is Single. The rule appears as follows in the rule editor.
+   >[!NOTE]
+   >
+   > 或者，您可以在「配偶薪資」欄位上撰寫「顯示」規則，而不是「婚姻狀況」欄位上的「何時」規則，以實施相同的行為。
 
-   ![write-rules-visual-editor-8](assets/write-rules-visual-editor-8-cc.png)
-   -->
-
->[!NOTE]
->
-> 或者，您可以在「配偶薪資」欄位上撰寫「顯示」規則，而不是「婚姻狀況」欄位上的「何時」規則，以實施相同的行為。
-
-![write-rules-visual-editor-9](assets/write-rules-visual-editor-9-cc.png)
+   ![write-rules-visual-editor-9](assets/write-rules-visual-editor-9-cc.png)
 
 1. 接著，撰寫規則以計算貸款資格金額（為薪資總額的50%），並在「貸款資格」欄位中顯示。 若要取得此結果，請在貸款適用性欄位上建立&#x200B;**[!UICONTROL 設定值（共]**&#x200B;個）。
 
@@ -611,6 +603,12 @@ Users in the forms-power-users group can access code editor. For other users, co
 您可以使用Else條件，撰寫合併規則以控制「配偶薪資」欄位的可見度，並在「婚姻狀況」為「已婚」時計算貸款資格。
 
 ![write-rules-visual-editor-19](assets/write-rules-visual-editor-19-cc.png)
+
+<!--
+1. Repeat steps 1 through 5 to define another rule to hide the Spouse Salary field if the marital Status is Single. The rule appears as follows in the rule editor.
+
+   ![write-rules-visual-editor-8](assets/write-rules-visual-editor-8-cc.png)
+-->
 
 
 <!--
@@ -845,7 +843,7 @@ var c = {
 
    如需有關管理現有規則的資訊，請參閱[管理規則](rule-editor.md#p-manage-rules-p)。
 
-1. 選取規則標題旁的核取方塊，管理規則的選項就會出現。 選取&#x200B;**[!UICONTROL 複製]**。
+1. 選取規則標題旁的核取方塊，管理規則的選項就會出現。 選取「**[!UICONTROL 複製]**」。
 
    ![copyrule2](assets/copyrule2.png)
 

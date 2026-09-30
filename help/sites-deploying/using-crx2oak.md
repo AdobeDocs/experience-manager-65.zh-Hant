@@ -11,11 +11,9 @@ solution: Experience Manager, Experience Manager Sites
 role: Admin
 source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
 workflow-type: tm+mt
-source-wordcount: '1175'
-ht-degree: 0%
-
+source-wordcount: '1217'
+ht-degree: 1%
 ---
-
 # 使用CRX2Oak移轉工具{#using-the-crx-oak-migration-tool}
 
 ## 簡介 {#introduction}
@@ -47,15 +45,15 @@ CRX2Oak工具專為在不同存放庫之間移轉資料而設計。
 
 ## 功能 {#features}
 
-在AEM升級期間以使用者可以指定預先定義的移轉設定檔的方式來呼叫CRX2Oak，以自動重新設定持續性模式。 這稱為快速入門模式。
+在CRX升級期間以使用者可指定預先定義的移轉設定檔的方式來呼叫AEM2Oak，以自動重新設定持續性模式。 這稱為快速入門模式。
 
-它也可以單獨執行，以備需要更多自訂時使用。 不過，在此模式中，僅會對存放庫進行變更，而且必須手動執行AEM的任何其他重新配置。 這稱為獨立模式。
+它也可以單獨執行，以備需要更多自訂時使用。 不過，在此模式中，僅會對存放庫進行變更，且必須手動執行對AEM的任何其他重新配置。 這稱為獨立模式。
 
 另外請注意，使用獨立模式中的預設設定，只會移轉節點存放區，而新的存放庫會重複使用舊的二進位存放區。
 
 ### 自動快速入門模式 {#automated-quickstart-mode}
 
-自AEM 6.3起，CRX2Oak就能夠處理使用者定義的移轉設定檔，這些設定檔可設定為可用的所有移轉選項。 這樣可擁有更高的彈性和自動設定AEM的能力，而如果您在獨立模式下使用工具，則無法使用這些功能。
+自AEM 6.3起，CRX2Oak就能夠處理使用者定義的移轉設定檔，並設定所有可用的移轉選項。 這樣既能提供更高的彈性，又能自動設定AEM的功能；如果您在獨立模式下使用工具，則無法使用這些功能。
 
 若要將CRX2Oak切換為快速入門模式，請透過此作業系統環境變數，在AEM安裝目錄中定義crx-quickstart資料夾的路徑：
 
@@ -119,7 +117,7 @@ CRX2Oak的開放原始碼版本可透過Oak-upgrade取得。 支援所有功能�
 
 * CRX2支援
 * 移轉設定檔支援
-* 支援自動化AEM重新配置
+* 支援自動化AEM重新設定
 
 如需詳細資訊，請參閱[Apache檔案](https://jackrabbit.apache.org/oak/docs/migration.html)。
 
@@ -144,7 +142,7 @@ CRX2Oak的開放原始碼版本可透過Oak-upgrade取得。 支援所有功能�
 * `--fail-on-error`：如果無法從來源存放庫讀取節點，強制移轉失敗。
 * `--ldap`：將LDAP使用者從CQ 5.x執行個體移轉至Oak型執行個體。 為了讓此功能發揮作用，Oak設定中的身分提供者必須命名為ldap。 如需詳細資訊，請參閱[LDAP檔案](/help/sites-administering/ldap-config.md)。
 
-* `--ldap-config:`將此用於使用多個LDAP伺服器驗證的CQ 5.x存放庫的`--ldap`引數。 您可以使用它指向CQ 5.x `ldap_login.conf`或`jaas.conf`組態檔。 格式為`--ldapconfig=path/to/ldap_login.conf`。
+* `--ldap-config:`將此用於使用多個LDAP伺服器驗證的CQ 5.x存放庫的`--ldap`引數。 您可以使用它指向CQ 5.x `ldap_login.conf`或`jaas.conf`組態檔。 格式為 `--ldapconfig=path/to/ldap_login.conf`。
 
 ### 版本存放區選項 {#version-store-options}
 

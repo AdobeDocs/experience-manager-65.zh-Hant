@@ -10,13 +10,11 @@ exl-id: 72cbe589-14a1-40f5-a7cb-8960f02e0ebb
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,Search,Query Builder
 role: Developer
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+source-git-commit: 15fb75221470fe30d4a0c603e1bb0d0a45575eb5
 workflow-type: tm+mt
 source-wordcount: '816'
 ht-degree: 0%
-
 ---
-
 # 為查詢產生器實作自訂述詞求值器{#implementing-a-custom-predicate-evaluator-for-the-query-builder}
 
 本節說明如何實作自訂述詞求值器來擴充[查詢產生器](/help/sites-developing/querybuilder-api.md)。
@@ -149,30 +147,30 @@ pom.xml
 
    下列程式碼片段顯示[統一差異格式](https://en.wikipedia.org/wiki/Diff#Unified_format)的差異
 
-```
-@@ -19,8 +19,11 @@
-  */
- package com.adobe.aem.docs.search;
+   ```
+    @@ -19,8 +19,11 @@
+    */
+    package com.adobe.aem.docs.search;
+   
+    +import org.apache.felix.scr.annotations.Component;
+    +
+    import com.day.cq.search.eval.AbstractPredicateEvaluator;
+   
+    +@Component(metatype = false, factory = "com.day.cq.search.eval.PredicateEvaluator/repli")
+    public class ReplicationPredicateEvaluator extends AbstractPredicateEvaluator {
+   
+    }
+   ```
 
-+import org.apache.felix.scr.annotations.Component;
-+
- import com.day.cq.search.eval.AbstractPredicateEvaluator;
+   [aem-search-custom-predicate-evaluator](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator) - [src/main/java/com/adobe/aem/docs/search/ReplicationPredicateEvaluator.java](https://raw.githubusercontent.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator/ec70fac35fbd0d132e00c6066a204804e9cbe70f/src/main/java/com/adobe/aem/docs/search/ReplicationPredicateEvaluator.java)
 
-+@Component(metatype = false, factory = "com.day.cq.search.eval.PredicateEvaluator/repli")
- public class ReplicationPredicateEvaluator extends AbstractPredicateEvaluator {
+   >[!NOTE]
+   >
+   >`factory`必須是以`com.day.cq.search.eval.PredicateEvaluator/`開頭並以自訂`PredicateEvaluator`的名稱結尾的唯一字串。
 
- }
-```
-
-[aem-search-custom-predicate-evaluator](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator) - [src/main/java/com/adobe/aem/docs/search/ReplicationPredicateEvaluator.java](https://raw.githubusercontent.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator/ec70fac35fbd0d132e00c6066a204804e9cbe70f/src/main/java/com/adobe/aem/docs/search/ReplicationPredicateEvaluator.java)
-
->[!NOTE]
->
->`factory`必須是以`com.day.cq.search.eval.PredicateEvaluator/`開頭並以自訂`PredicateEvaluator`的名稱結尾的唯一字串。
-
->[!NOTE]
->
->`PredicateEvaluator`的名稱是建立查詢時使用的述詞名稱。
+   >[!NOTE]
+   >
+   >`PredicateEvaluator`的名稱是建立查詢時使用的述詞名稱。
 
 1. 覆寫：
 

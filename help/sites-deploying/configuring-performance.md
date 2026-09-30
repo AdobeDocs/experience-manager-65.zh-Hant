@@ -1,21 +1,23 @@
 ---
 title: 效能最佳化
+
 description: 瞭解如何設定AEM的某些方面以最佳化效能。
+
+
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: configuring
+
 feature: Configuring
 exl-id: 5b0c9a8c-0f5f-46ee-a455-adb9b9d27270
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
+source-git-commit: 15fb75221470fe30d4a0c603e1bb0d0a45575eb5
 workflow-type: tm+mt
 source-wordcount: '6649'
 ht-degree: 13%
-
 ---
-
 # 效能最佳化 {#performance-optimization}
 
 >[!NOTE]
@@ -584,7 +586,7 @@ www.myCompany.com/news/main.large.html
 
 #### 讓用於導覽的影像檔案失效 {#invalidating-image-files-used-for-navigation}
 
-如果您將圖片用於導覽專案，此方法基本上與標題相同，但稍微複雜一點。 將所有導覽影像與目標頁面一起儲存。 如果您將兩張圖片用於一般和活躍情境，可以使用以下指令碼：
+如果您將圖片用於導覽專案，此方法基本上與標題相同，但稍微複雜一點。 將所有導覽影像與目標頁面一起儲存。 如果您將兩張圖片用於一般和作用中狀態，可以使用以下指令碼：
 
 * 正常顯示頁面的指令碼。
 * 處理「.normal」請求並傳回正常圖片的指令碼。
@@ -598,7 +600,7 @@ www.myCompany.com/news/main.large.html
 
 建議您將個人化限制在必要的地方。 以下說明原因：
 
-* 如果您使用可自由地自訂的起始頁，則每次使用者請求該頁面時都必須編寫它。
+* 如果您使用可自由地自訂的起始頁，則每次使用者請求該頁面時都必須重新產生該頁面。
 * 反之，如果您提供 10 個不同起始頁的選擇，您可以快取每一個起始頁，進而提高效能。
 
 >[!TIP]

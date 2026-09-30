@@ -10,7 +10,7 @@ exl-id: edde225d-0be7-4306-8dda-d18d46fae977
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization
 role: User,Admin,Developer
-source-git-commit: ee6294a03b2e4faf4e3c2dc8a466d03a0fb8a28a
+source-git-commit: 15fb75221470fe30d4a0c603e1bb0d0a45575eb5
 workflow-type: tm+mt
 source-wordcount: '5344'
 ht-degree: 6%
@@ -656,82 +656,82 @@ ht-degree: 6%
 
 1. 依照下清單格中的說明，設定Target元件設定。
 
-<table>
- <tbody>
-  <tr>
-   <td><strong>選項</strong></td>
-   <td><strong>說明</strong></td>
-  </tr>
-  <tr>
-   <td><strong>位置</strong></td>
-   <td><p>位置是一個字串，可為目標內容位置命名，並連線選件與頁面上應放置這些選件的位置（或元件）。</p> <p>此欄位是通用值。</p> <p>如果您將選件放入元件中，選件會記住位置ID。 執行頁面時，引擎會評估使用者的區段，並據此解析應顯示的作用中行銷活動的體驗。 接著，系統會檢查頁面上的位置ID，並嘗試將選件與對應的位置ID比對。</p> </td>
-  </tr>
-  <tr>
-   <td><strong>引擎</strong></td>
-   <td>視您要使用的引擎而定，選取<strong>使用者端規則（不含追蹤）、Adobe Target、ContextHub、</strong>和<strong> Adobe Campaign </strong>之間。</td>
-  </tr>
- </tbody>
-</table>
+   <table>
+   <tbody>
+   <tr>
+      <td><strong>選項</strong></td>
+      <td><strong>說明</strong></td>
+   </tr>
+   <tr>
+      <td><strong>位置</strong></td>
+      <td><p>位置是一個字串，可為目標內容位置命名，並連線選件與頁面上應放置這些選件的位置（或元件）。</p> <p>此欄位是通用值。</p> <p>如果您將選件放入元件中，選件會記住位置ID。 執行頁面時，引擎會評估使用者的區段，並據此解析應顯示的作用中行銷活動的體驗。 接著，系統會檢查頁面上的位置ID，並嘗試將選件與對應的位置ID比對。</p> </td>
+   </tr>
+   <tr>
+      <td><strong>引擎</strong></td>
+      <td>視您要使用的引擎而定，選取<strong>使用者端規則（不含追蹤）、Adobe Target、ContextHub、</strong>和<strong> Adobe Campaign </strong>之間。</td>
+   </tr>
+   </tbody>
+   </table>
 
-如果您選取Adobe Target作為引擎：
+   如果您選取Adobe Target作為引擎：
 
-![chlimage_1-39](assets/chlimage_1-39.png)
+   ![chlimage_1-39](assets/chlimage_1-39.png)
 
-<table>
- <tbody>
-  <tr>
-   <td><strong>選項</strong></td>
-   <td><strong>說明</strong></td>
-  </tr>
-  <tr>
-   <td><strong>準確目標選擇</strong></td>
-   <td><p>啟用「準確定位」可告訴元件等到使用者端內容或內容中心資料可用後，再將請求傳送至Adobe Target。 這可能會增載入入時間。 製作時，一律會啟用準確定位。</p> <p>如果您選取<strong>準確定位</strong>核取方塊，在資料可用時，mbox會先執行<code>mboxDefine</code>並於稍後執行<code>mboxUpdate</code>，以產生Ajax要求。</p> <p>如果您未選取<strong>準確定位</strong>核取方塊，mbox會執行<code>mboxCreate</code>，並立即產生同步要求（在此情況下，並非所有內容資料都可用）。</p> <p><strong>注意：</strong>啟用或停用特定元件的準確定位不會影響您全域設定的設定。 您一律可以透過選取元件中的「準確定位」來覆寫全域設定。</p> </td>
-  </tr>
-  <tr>
-   <td><strong>包括已解析的區段</strong></td>
-   <td><p>選取此核取方塊會包含mbox呼叫中的所有已解析區段，以及頁面和框架中設定的任何引數。</p> <p>這僅適用於使用XML API同步AEM區段的情況。 如果您的AEM中有未由Adobe Target處理的區段（例如指令碼區段），則此選項可讓您在AEM中解析區段，並傳送資訊至Adobe Target以確定該區段有效。</p> </td>
-  </tr>
-  <tr>
-   <td><strong>繼承的內容參數</strong></td>
-   <td>列出從Adobe Target架構繼承而來的內容引數（如果有的話），這些引數與選取的頁面相關聯。</td>
-  </tr>
-  <tr>
-   <td><strong>內容引數</strong></td>
-   <td>按一下<strong>新增欄位</strong>以設定其他內容引數（與Target架構中可用的引數相同）。 新增至元件的內容引數僅會將<i>套用至元件</i>，而非套用至其他元件，如果您直接將內容引數新增至架構，就會發生這種情況。</td>
-  </tr>
-  <tr>
-   <td><strong>靜態引數</strong></td>
-   <td>按一下<strong>新增欄位</strong>以設定其他靜態引數（與Target架構中可用的引數相同）。 新增至元件的靜態引數僅會將<i>套用至元件，而非套用至其他元件，如果您直接將靜態引數新增至架構，就會發生這種情況。 </i>靜態引數並非來自內容（內容中樞的使用者端內容）。</td>
-  </tr>
- </tbody>
-</table>
+   <table>
+   <tbody>
+   <tr>
+      <td><strong>選項</strong></td>
+      <td><strong>說明</strong></td>
+   </tr>
+   <tr>
+      <td><strong>準確目標選擇</strong></td>
+      <td><p>啟用「準確定位」可告訴元件等到使用者端內容或內容中心資料可用後，再將請求傳送至Adobe Target。 這可能會增載入入時間。 製作時，一律會啟用準確定位。</p> <p>如果您選取<strong>準確定位</strong>核取方塊，在資料可用時，mbox會先執行<code>mboxDefine</code>並於稍後執行<code>mboxUpdate</code>，以產生Ajax要求。</p> <p>如果您未選取<strong>準確定位</strong>核取方塊，mbox會執行<code>mboxCreate</code>，並立即產生同步要求（在此情況下，並非所有內容資料都可用）。</p> <p><strong>注意：</strong>啟用或停用特定元件的準確定位不會影響您全域設定的設定。 您一律可以透過選取元件中的「準確定位」來覆寫全域設定。</p> </td>
+   </tr>
+   <tr>
+      <td><strong>包括已解析的區段</strong></td>
+      <td><p>選取此核取方塊會包含mbox呼叫中的所有已解析區段，以及頁面和框架中設定的任何引數。</p> <p>這僅適用於使用XML API同步AEM區段的情況。 如果您的AEM中有未由Adobe Target處理的區段（例如指令碼區段），則此選項可讓您在AEM中解析區段，並傳送資訊至Adobe Target以確定該區段有效。</p> </td>
+   </tr>
+   <tr>
+      <td><strong>繼承的內容參數</strong></td>
+      <td>列出從Adobe Target架構繼承而來的內容引數（如果有的話），這些引數與選取的頁面相關聯。</td>
+   </tr>
+   <tr>
+      <td><strong>內容引數</strong></td>
+      <td>按一下<strong>新增欄位</strong>以設定其他內容引數（與Target架構中可用的引數相同）。 新增至元件的內容引數僅會將<i>套用至元件</i>，而非套用至其他元件，如果您直接將內容引數新增至架構，就會發生這種情況。</td>
+   </tr>
+   <tr>
+      <td><strong>靜態引數</strong></td>
+      <td>按一下<strong>新增欄位</strong>以設定其他靜態引數（與Target架構中可用的引數相同）。 新增至元件的靜態引數僅會將<i>套用至元件，而非套用至其他元件，如果您直接將靜態引數新增至架構，就會發生這種情況。 </i>靜態引數並非來自內容（內容中樞的使用者端內容）。</td>
+   </tr>
+   </tbody>
+   </table>
 
->[!NOTE]
->
->當您選取元件並將其設定為可鎖定目標時，AEM也會取代該元件並插入Adobe Target元件。 （Adobe Target元件不僅會在您手動新增至頁面時使用，也會用於鎖定現有元件為目標時。）
+   >[!NOTE]
+   >
+   >當您選取元件並將其設定為可鎖定目標時，AEM也會取代該元件並插入Adobe Target元件。 （Adobe Target元件不僅會在您手動新增至頁面時使用，也會用於鎖定現有元件為目標時。）
 
-如果您選取Client Context (client side)作為引擎：
+   如果您選取Client Context (client side)作為引擎：
 
-![chlimage_1-40](assets/chlimage_1-40.png)
+   ![chlimage_1-40](assets/chlimage_1-40.png)
 
-<table>
- <tbody>
-  <tr>
-   <td><strong>選項</strong></td>
-   <td><strong>說明</strong></td>
-  </tr>
-  <tr>
-   <td><strong>使用者端的選項 — 策略</strong></td>
-   <td><p>選取下列其中一項：</p>
-    <ul>
-     <li><strong>第一個</strong>：清單中最上層的體驗，依行銷活動中的順序排列。</li>
-     <li><strong>Random</strong>：已使用任何體驗。</li>
-     <li><strong>點按流分數</strong>：使用使用者端內容中追蹤的標籤和相關標籤點選。 系統會比較Teaser頁面上定義之標籤的點選率。</li>
-    </ul> </td>
-  </tr>
- </tbody>
-</table>
+   <table>
+   <tbody>
+   <tr>
+      <td><strong>選項</strong></td>
+      <td><strong>說明</strong></td>
+   </tr>
+   <tr>
+      <td><strong>使用者端的選項 — 策略</strong></td>
+      <td><p>選取下列其中一項：</p>
+      <ul>
+      <li><strong>第一個</strong>：清單中最上層的體驗，依行銷活動中的順序排列。</li>
+      <li><strong>Random</strong>：已使用任何體驗。</li>
+      <li><strong>點按流分數</strong>：使用使用者端內容中追蹤的標籤和相關標籤點選。 系統會比較Teaser頁面上定義之標籤的點選率。</li>
+      </ul> </td>
+   </tr>
+   </tbody>
+   </table>
 
-如果您要整合AEM與Adobe Campaign，請選取&#x200B;**Adobe Campaign**&#x200B;作為引擎。 如需詳細資訊，請參閱[整合AEM與Adobe Campaign](/help/sites-administering/campaign.md)。
+   如果您要整合AEM與Adobe Campaign，請選取&#x200B;**Adobe Campaign**&#x200B;作為引擎。 如需詳細資訊，請參閱[整合AEM與Adobe Campaign](/help/sites-administering/campaign.md)。
 
-如果您使用ContextHub進行目標定位，請選取&#x200B;**ContextHub**&#x200B;作為引擎。 請參閱[設定ContextHub。](/help/sites-developing/ch-configuring.md)
+   如果您使用ContextHub進行目標定位，請選取&#x200B;**ContextHub**&#x200B;作為引擎。 請參閱[設定ContextHub。](/help/sites-developing/ch-configuring.md)

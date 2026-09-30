@@ -1,18 +1,16 @@
 ---
-title: 整合 [!DNL Assets] 與 [!DNL InDesign Server]
-description: 瞭解如何整合 [!DNL Adobe Experience Manager Assets] 與 [!DNL Adobe InDesign Server]。
+title: 將[!DNL Assets]與[!DNL InDesign Server]整合
+description: 瞭解如何將[!DNL Adobe Experience Manager Assets]與[!DNL Adobe InDesign Server]整合。
 contentOwner: AG
 role: Admin
 feature: Publishing
 exl-id: 5ba020a3-c36c-402b-a11b-d6b0426b03bf
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+source-git-commit: 15fb75221470fe30d4a0c603e1bb0d0a45575eb5
 workflow-type: tm+mt
-source-wordcount: '1579'
+source-wordcount: '1584'
 ht-degree: 2%
-
 ---
-
 # 將[!DNL Adobe Experience Manager Assets]與[!DNL Adobe InDesign Server]整合 {#integrating-aem-assets-with-indesign-server}
 
 [!DNL Adobe Experience Manager Assets]使用：
@@ -42,9 +40,9 @@ ht-degree: 2%
    * 擷取INDD檔案。
    * 執行[!DNL InDesign Server]命令：
 
-      * 會擷取結構、文字及任何媒體檔案。
-      * PDF和JPG轉譯會產生。
-      * HTML和IDML轉譯會產生。
+     * 會擷取結構、文字及任何媒體檔案。
+     * PDF和JPG轉譯會產生。
+     * HTML和IDML轉譯會產生。
 
    * 將產生的檔案發佈回[!DNL Experience Manager Assets]。
 
@@ -124,47 +122,47 @@ For information about [!DNL Adobe InDesign] scripts, see [InDesign developer doc
 >
 >請勿變更ExtendScript程式庫。 此程式庫提供與Sling通訊所需的HTTP功能。 此設定指定要傳送至[!DNL InDesign Server]在那裡使用的資料庫。
 
-媒體擷取工作流程步驟執行的`ThumbnailExport.jsx`指令碼會產生JPG格式的縮圖轉譯。 This rendition is used by the Process Thumbnails workflow step to generate the static renditions required by [!DNL Experience Manager].
+媒體擷取工作流程步驟執行的`ThumbnailExport.jsx`指令碼會產生JPG格式的縮圖轉譯。 此轉譯是由「處理縮圖」工作流程步驟用來產生[!DNL Experience Manager]所需的靜態轉譯。
 
-You can configure the Process Thumbnails workflow step to generate static renditions at different sizes. Ensure that you do not remove the defaults, because they are required by the [!DNL Experience Manager Assets] interface. Finally, the Delete Image Preview Rendition workflow step removes the JPG thumbnail rendition, as it is no longer needed.
+您可以設定「處理縮圖」工作流程步驟，以產生不同大小的靜態轉譯。 請確定您未移除預設值，因為[!DNL Experience Manager Assets]介面需要這些預設值。 最後，「刪除影像預覽轉譯」工作流程步驟會移除JPG縮圖轉譯，因為已不再需要。
 
-#### Page extraction {#page-extraction}
+#### 頁面擷取 {#page-extraction}
 
-This creates an [!DNL Experience Manager] page from the extracted elements. An extraction handler is used to extract data from a rendition (currently HTML or IDML). This data is then used to create a page using the Page Builder.
+這會從擷取的元素建立[!DNL Experience Manager]頁面。 擷取處理常式用於從轉譯（目前為HTML或IDML）中擷取資料。 然後，這些資料會用於使用「頁面產生器」建立頁面。
 
 若要自訂，您可以編輯「頁 **[!UICONTROL 面擷取]** 」步驟 **[!UICONTROL 的「引]** 數」標籤。
 
 ![chlimage_1-96](assets/chlimage_1-289.png)
 
-* **Page Extraction Handler**: From the popup list, select the handler that you want to use. An extraction handler operates on a specific rendition, chosen by a related `RenditionPicker` (see the `ExtractionHandler` API). In a standard [!DNL Experience Manager] installation the following is available:
-   * IDML Export Extraction Handle: Operates on the `IDML` rendition generated in the MediaExtract step.
+* **頁面擷取處理常式**：從快顯清單中選取您要使用的處理常式。 擷取處理常式會針對相關`RenditionPicker`選擇的特定轉譯進行操作（請參閱`ExtractionHandler` API）。 在標準[!DNL Experience Manager]安裝中，可以使用下列專案：
+  * IDML匯出擷取控制代碼：在MediaExtract步驟中產生的`IDML`轉譯上操作。
 
-* **Page Name**: Specify the name that you want to have assigned to the resulting page. If left blank then the name is &quot;page&quot; (or a derivative if &quot;page&quot; already exists).
+* **頁面名稱**：指定您要指派給結果頁面的名稱。 如果保留為空白，則名稱為「page」（如果「page」已存在，則為衍生專案）。
 
-* **Page Title**: Specify the title that you want to have assigned to the resulting page.
+* **頁面標題**：指定您要指派給結果頁面的標題。
 
-* **Page Root Path**: The path to the root location of the resulting page. If left blank, the node holding the asset&#39;s renditions is used.
+* **頁面根路徑**：結果頁面的根位置路徑。 如果保留為空白，則會使用儲存資產轉譯的節點。
 
-* **Page Template**: The template to use when generating the resulting page.
+* **頁面範本**：產生結果頁面時要使用的範本。
 
-* **Page Design**: The page design to be used when generating the resulting page.
+* **頁面設計**：產生結果頁面時要使用的頁面設計。
 
-### Configure the proxy worker for [!DNL InDesign Server] {#configuring-the-proxy-worker-for-indesign-server}
+### 設定[!DNL InDesign Server]的Proxy背景工作 {#configuring-the-proxy-worker-for-indesign-server}
 
 >[!NOTE]
 >
->The worker resides on the proxy instance.
+>Worker位於Proxy執行個體上。
 
-1. In the Tools console, expand **[!UICONTROL Cloud Services Configurations]** in the left pane. Then expand **[!UICONTROL Cloud Proxy Configuration]**.
+1. 在[工具]主控台中，展開左側窗格中的&#x200B;**[!UICONTROL 雲端服務組態]**。 然後展開&#x200B;**[!UICONTROL 雲端Proxy設定]**。
 
 1. 連按兩下 **[!UICONTROL IDS工作器]** ，以開啟以進行設定。
 
-1. Click **[!UICONTROL Edit]** to open the configuration dialog and define the required settings:
+1. 按一下&#x200B;**[!UICONTROL 編輯]**&#x200B;以開啟設定對話方塊並定義必要的設定：
 
    ![proxy_idsworkerconfig](assets/proxy_idsworkerconfig.png)
 
    * **IDS集區**
-用來與[!DNL InDesign Server]通訊的SOAP端點。 您可以新增、移除及訂購必要專案。
+     用來與[!DNL InDesign Server]通訊的SOAP端點。 您可以新增、移除及訂購必要專案。
 
 1. 按一下「確定」以儲存。
 
@@ -204,19 +202,20 @@ This creates an [!DNL Experience Manager] page from the extracted elements. An e
 
    如果有多部電腦執行[!DNL InDesign Server]，請為每部電腦新增SOAP端點（每部電腦的處理器數目–1）。
 
+   >[!NOTE]
+   >
+   >使用背景工作集區時，您可以啟用IDS背景工作區的封鎖清單。
+   >
+   >若要這麼做，請在`com.day.cq.dam.ids.impl.IDSJobProcessor.name`設定下啟用&#x200B;**[!UICONTROL enable.retry.name]**&#x200B;核取方塊，以啟用IDS工作重試。
+   >
+   >此外，在`com.day.cq.dam.ids.impl.IDSPoolImpl.name`設定下，為`max.errors.to.blacklist`引數設定正值，該值決定在從工作處理常式清單中禁止ID之前的工作重試次數。
+   >
+   >根據預設，在可設定的(`retry.interval.to.whitelist.name`)時間（以分鐘為單位）之後，會重新驗證IDS背景工作。 如果線上上找到背景工作，就會從封鎖清單中移除背景工作。
+
 <!-- 
 TBD: Make updates to configurations for allow and block list after product updates are done.
 -->
 
->[!NOTE]
->
->使用背景工作集區時，您可以啟用IDS背景工作區的封鎖清單。
->
->若要這麼做，請在`com.day.cq.dam.ids.impl.IDSJobProcessor.name`設定下啟用&#x200B;**[!UICONTROL enable.retry.name]**&#x200B;核取方塊，以啟用IDS工作重試。
->
->此外，在`com.day.cq.dam.ids.impl.IDSPoolImpl.name`設定下，為`max.errors.to.blacklist`引數設定正值，該值決定在從工作處理常式清單中禁止ID之前的工作重試次數。
->
->根據預設，在可設定的(`retry.interval.to.whitelist.name`)時間（以分鐘為單位）之後，會重新驗證IDS背景工作。 如果線上上找到背景工作，就會從封鎖清單中移除背景工作。
 
 ## 啟用[!DNL InDesign Server] 10.0或更新版本的支援 {#enabling-support-for-indesign-server-or-later}
 

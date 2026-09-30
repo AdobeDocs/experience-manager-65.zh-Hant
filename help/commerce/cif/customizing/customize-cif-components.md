@@ -5,13 +5,11 @@ exl-id: 8933942e-be49-49d3-bf0a-7225257e2803
 feature: Commerce Integration Framework
 solution: Experience Manager,Commerce
 role: Admin, Developer
-source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
+source-git-commit: 15fb75221470fe30d4a0c603e1bb0d0a45575eb5
 workflow-type: tm+mt
-source-wordcount: '2662'
+source-wordcount: '2667'
 ht-degree: 4%
-
 ---
-
 # 自訂Adobe Experience Manager CIF核心元件 {#customize-cif-components}
 
 [CIF Venia專案](https://github.com/adobe/aem-cif-guides-venia)是使用[CIF核心元件](https://github.com/adobe/aem-core-cif-components)的參考程式碼基底。 在本教學課程中，您進一步延伸[Product Teaser](https://github.com/adobe/aem-core-cif-components/tree/master/ui.apps/src/main/content/jcr_root/apps/core/cif/components/commerce/productteaser/v1/productteaser)元件，以顯示來自Adobe Commerce的自訂屬性。 您也會進一步瞭解Adobe Experience Manager (AEM)與Adobe Commerce之間的GraphQL整合，以及CIF核心元件提供的擴充功能勾點。
@@ -55,7 +53,7 @@ Venia品牌最近開始使用永續性材料來製造某些產品，而企業想
 
 1. 新增必要的OSGi設定，以便將AEM執行個體連線至Adobe Commerce執行個體，或將設定新增至新建立的專案。
 
-1. 此時，您應該有已連線至Adobe Commerce執行個體的有效店面版本。 導覽至`US` > `Home`頁面： [http://localhost:4502/editor.html/content/venia/us/en.html](http://localhost:4502/editor.html/content/venia/us/en.html)。
+1. 此時，您應該有已連線至Adobe Commerce執行個體的有效店面版本。 瀏覽至`US` > `Home`頁面，網址為： [http://localhost:4502/editor.html/content/venia/us/en.html](http://localhost:4502/editor.html/content/venia/us/en.html)。
 
    您應該會看到店面目前使用Venia佈景主題。 展開店面的「主要」功能表，應該會看到各種類別，表示與Adobe Commerce的連線正常運作。
 
@@ -405,7 +403,7 @@ AEM元件的常見擴充功能是修改元件產生的標籤。 覆寫元件用�
 
    這表示Sling模型已正確部署並對應至正確的元件。
 
-1. 重新整理至&#x200B;**Venia首頁** （位於[http://localhost:4502/editor.html/content/venia/us/en.html](http://localhost:4502/editor.html/content/venia/us/en.html)，其中已新增Product Teaser）。
+1. 重新整理至&#x200B;**Venia首頁** （位於[http://localhost:4502/editor.html/content/venia/us/en.html](http://localhost:4502/editor.html/content/venia/us/en.html)），其中已新增Product Teaser。
 
    顯示![環保訊息](../assets/customize-cif-components/eco-friendly-text-displayed.png)
 
@@ -474,7 +472,7 @@ AEM元件的常見擴充功能是修改元件產生的標籤。 覆寫元件用�
    $ mvn clean install -PautoInstallSinglePackage -Pclassic
    ```
 
-1. 重新整理至&#x200B;**Venia首頁** （位於[http://localhost:4502/editor.html/content/venia/us/en.html](http://localhost:4502/editor.html/content/venia/us/en.html)，其中已新增Product Teaser）。
+1. 重新整理至&#x200B;**Venia首頁** （位於[http://localhost:4502/editor.html/content/venia/us/en.html](http://localhost:4502/editor.html/content/venia/us/en.html)），其中已新增Product Teaser。
 
    ![環保徽章最終實作](../assets/customize-cif-components/final-product-teaser-eco-badge.png)
 

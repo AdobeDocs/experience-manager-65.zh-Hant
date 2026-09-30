@@ -8,13 +8,11 @@ role: Developer, Leader
 exl-id: c630709a-7e8b-417c-83a4-35ca9be832a0
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+source-git-commit: 15fb75221470fe30d4a0c603e1bb0d0a45575eb5
 workflow-type: tm+mt
 source-wordcount: '2400'
 ht-degree: 13%
-
 ---
-
 # 管理數位資產的中繼資料 {#managing-metadata-for-digital-assets}
 
 | 版本 | 文章連結 |
@@ -39,7 +37,7 @@ Scope of metadata articles:
 
 * 首先，建立資產的原生應用程式會新增一些中繼資料。 例如，[Acrobat將一些中繼資料](https://helpx.adobe.com/tw/acrobat/using/pdf-properties-metadata.html)新增至PDF檔案，或相機將一些基本中繼資料新增至像片。 產生資產時，您可以在原生應用程式本身中新增中繼資料。 例如，您可以[在Adobe Lightroom](https://helpx.adobe.com/tw/lightroom-classic/help/metadata-basics-actions.html)中新增IPTC中繼資料。
 
-* 在將資產上傳到[!DNL Experience Manager]之前，您可以使用用於建立資產的原生應用程式或使用其他中繼資料編輯應用程式來編輯和修改中繼資料。 將資產上傳至Experience Manager時，系統會處理中繼資料。 例如，瞭解如何[在 [!DNL Adobe Bridge]](https://helpx.adobe.com/bridge/user-guide.html/bridge/using/metadata-adobe-bridge.ug.html)中使用中繼資料，並檢視[!DNL Adobe Exchange]中 [!DNL Adobe Bridge][&#128279;](https://exchange.adobe.com/creativecloud.details.20009.aem-tags-panel-for-bridge-cc.html)的標籤面板。
+* 在將資產上傳到[!DNL Experience Manager]之前，您可以使用用於建立資產的原生應用程式或使用其他中繼資料編輯應用程式來編輯和修改中繼資料。 將資產上傳至Experience Manager時，系統會處理中繼資料。 例如，瞭解如何[在 [!DNL Adobe Bridge]](https://helpx.adobe.com/bridge/user-guide.html/bridge/using/metadata-adobe-bridge.ug.html)中使用中繼資料，並檢視[!DNL Adobe Exchange]中 [!DNL Adobe Bridge]&#x200B;[&#128279;](https://exchange.adobe.com/creativecloud.details.20009.aem-tags-panel-for-bridge-cc.html)的標籤面板。
 
 * 在[!DNL Experience Manager Assets]中，您可以在[!UICONTROL 屬性]頁面中手動新增或編輯資產的中繼資料。
 
@@ -90,7 +88,7 @@ Scope of metadata articles:
 1. 修改各種標籤下所選資產的中繼資料屬性。
 1. 若要檢視特定資產的中繼資料，請取消選取清單中剩餘的資產。 如果您取消在[!UICONTROL 屬性]頁面上選取一些資產，這些資產的中繼資料不會更新。
 1. 若要為資產選取不同的中繼資料結構，請從工具列按一下&#x200B;**[!UICONTROL 設定]**，然後選取結構。 按一下「**[!UICONTROL 儲存並關閉]**」。
-1. 若要在包含多個值的欄位中，將新中繼資料與現有中繼資料一起附加，請選取「附 **[!UICONTROL 加模式」]**。 如果您未選取此選項，新的中繼資料會取代欄位中現有的中繼資料。 按一下「**[!UICONTROL 提交]**」。
+1. 若要在包含多個值的欄位中，將新中繼資料與現有中繼資料一起附加，請選取「附 **[!UICONTROL 加模式」]**。 如果您未選取此選項，新的後設資料會取代欄位中現有的後設資料。 按一下「**[!UICONTROL 提交]**」。
 
 ![中繼資料結構描述大量套用至多個資產](assets/metadata-schema-bulk-edit.gif)
 
@@ -154,7 +152,7 @@ Scope of metadata articles:
 
 1. 在工具列中按一下&#x200B;**[!UICONTROL 匯出]**。 系統會顯示訊息，確認中繼資料已匯出。 關閉訊息。
 
-1. 開啟匯出作業的收件箱通知。 選擇作業，然後從工具 **[!UICONTROL 欄中]** ，按一下「開啟」。 若要下載含有中繼資料的CSV檔案，請從工具列按一下&#x200B;**[!UICONTROL CSV下載]**。 按一下&#x200B;**[!UICONTROL 關閉]**。
+1. 開啟匯出作業的收件匣通知。 選擇作業，然後從工具 **[!UICONTROL 欄中]** ，按一下「開啟」。 若要下載含有中繼資料的CSV檔案，請從工具列按一下&#x200B;**[!UICONTROL CSV下載]**。 按一下&#x200B;**[!UICONTROL 關閉]**。
 
    ![用於下載包含大量匯出之中繼資料的CSV檔案的對話方塊](assets/csv_download.png)
 
@@ -182,7 +180,7 @@ TBD: Review this overview.
 
 若資料夾中已有您後來進行變更的現有後設資料設定檔，您可以對該資料夾中的資產進行重新處理。 請參閱[在您編輯資料夾中資產的處理設定檔](processing-profiles.md#reprocessing-assets)之後，重新處理該資料夾中的資產。
 
-您可以從「工具」菜單或者在資料夾內的「屬性」中，將元資料設定檔&#x200B;**[!UICONTROL 應用到資料夾]**&#x200B;**&#x200B;**。 本節說明如何以兩種方式將中繼資料設定檔套用至資料夾。
+您可以從「工具」菜單或者在資料夾內的「屬性」中，將元資料設定檔&#x200B;**[!UICONTROL 應用到資料夾]**&#x200B;**&#x200B;**。 本節說明如何以兩種方式將後設資料設定檔套用至資料夾。
 
 已為其分配輪廓的資料夾將通過資料夾名稱正下方的輪廓名稱顯示來指示。
 
@@ -194,7 +192,7 @@ TBD: Review this overview.
 
 1. 按一下[!DNL Experience Manager]標誌並導覽至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Assets]** > **[!UICONTROL 中繼資料設定檔]**。
 1. 選取您要套用至一或多個資料夾的中繼資料設定檔。
-1. 按一下&#x200B;**[!UICONTROL 將中繼資料設定檔套用至資料夾]**，然後選取您要用來接收新上傳資產的資料夾或多個資料夾，並按一下&#x200B;**[!UICONTROL 完成]**。 已為其分配輪廓的資料夾將通過資料夾名稱正下方的輪廓名稱顯示來指示。
+1. 按一下&#x200B;**[!UICONTROL 將中繼資料設定檔套用至資料夾]**，然後選取您要用來接收新上傳資產的資料夾或多個資料夾，並按一下&#x200B;**[!UICONTROL 完成]**。 已指派設定檔的資料夾會在資料夾名稱正下方顯示設定檔名稱，以資識別。
 
 ### 從[!UICONTROL 屬性]將中繼資料設定檔套用至資料夾 {#applying-metadata-profiles-to-folders-from-properties}
 
@@ -203,7 +201,7 @@ TBD: Review this overview.
 
 1. 選取「**[!UICONTROL 中繼資料描述檔]**」標籤，然後從快顯功能表選取描述檔，然後按一下「**[!UICONTROL 儲存]**」。
 
-已為其分配輪廓的資料夾將通過資料夾名稱正下方的輪廓名稱顯示來指示。
+已指派設定檔的資料夾會在資料夾名稱正下方顯示設定檔名稱，以資識別。
 
 <!--
 TBD: Commenting as the topic in metadata-config.md is incomplete.

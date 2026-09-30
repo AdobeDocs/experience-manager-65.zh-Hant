@@ -4,13 +4,11 @@ description: 使用AEM 6.5最適化表單核心元件，為最適化表單新增
 feature: Adaptive Forms, Core Components
 role: User, Developer, Admin
 exl-id: 91e6fca2-60ba-45f1-98c3-7b3fb1d762f5
-source-git-commit: 130d900a9c268362b75ffa947606c7145a1f8c9d
+source-git-commit: 15fb75221470fe30d4a0c603e1bb0d0a45575eb5
 workflow-type: tm+mt
-source-wordcount: '631'
+source-wordcount: '652'
 ht-degree: 0%
-
 ---
-
 # 最適化表單的版本設定、稽核和註解
 
 <!--
@@ -67,7 +65,8 @@ ht-degree: 0%
 稽核是一種機制，可讓一或多個稽核者在表單上加上註解。 任何表單使用者都可以評論表單或透過評論來檢閱表單。 若要在表單上加上註解，請選取&#x200B;**[!UICONTROL 表單]**，然後新增&#x200B;**[!UICONTROL 註解]**&#x200B;至表單。
 
 >[!NOTE]
-> 如上所述，當您在調適型表單核心元件中使用註解時，表單功能[新增稽核者至表單](/help/forms/using/create-reviews-forms.md)會停用。
+>
+>如上所述，當您在調適型表單核心元件中使用註解時，表單功能[新增稽核者至表單](/help/forms/using/create-reviews-forms.md)會停用。
 
 
 ![在表單上新增註解](assets/form-comments.png)
