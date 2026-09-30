@@ -9,25 +9,23 @@ exl-id: 84a1964c-4121-4763-b946-9eee6093747d
 solution: Experience Manager, Experience Manager Sites
 feature: Operations
 role: Admin
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
 workflow-type: tm+mt
-source-wordcount: '790'
+source-wordcount: '821'
 ht-degree: 2%
-
 ---
-
 # 開始工作流程{#starting-workflows}
 
 管理工作流程時，您可以使用各種方法來啟動工作流程：
 
 * 手動：
 
-   * 來自[工作流程模型](#workflow-models)。
-   * 正在使用[批次處理](#workflow-packages-for-batch-processing)的工作流程封裝。
+  * 來自[工作流程模型](#workflow-models)。
+  * 正在使用[批次處理](#workflow-packages-for-batch-processing)的工作流程封裝。
 
 * 自動：
 
-   * 回應節點變更；[使用啟動器](#workflows-launchers)。
+  * 回應節點變更；[使用啟動器](#workflows-launchers)。
 
 >[!NOTE]
 >
@@ -35,13 +33,13 @@ ht-degree: 2%
 >
 >* [將工作流程套用至頁面](/help/sites-authoring/workflows-applying.md)
 >* [如何將工作流程套用至DAM資產](/help/assets/assets-workflow.md)
->* [AEM Forms](https://helpx.adobe.com/tw/aem-forms/6-2/aem-workflows-submit-process-form.html)
+>* [AEM Forms](https://helpx.adobe.com/aem-forms/6-2/aem-workflows-submit-process-form.html)
 >* [翻譯專案](/help/sites-administering/tc-manage.md)
 >
 
 ## 工作流程模型 {#workflow-models}
 
-您可以根據「工作流程模型」控制檯上列出的其中一個模型[&#128279;](/help/sites-administering/workflows.md#workflow-models-and-instances)來啟動工作流程。 唯一強制資訊是裝載，但也可以新增標題和/或評論。
+您可以根據「工作流程模型」控制檯上列出的其中一個模型](/help/sites-administering/workflows.md#workflow-models-and-instances)來啟動工作流程[。 唯一強制資訊是裝載，但也可以新增標題和/或評論。
 
 ## 工作流程啟動器 {#workflows-launchers}
 
@@ -65,7 +63,7 @@ ht-degree: 2%
 * `/var/mobile`
 * `/var/statistics`
 
-   * 例外狀況：變更`/var/statistics/tracking` *do*&#x200B;下的節點會導致工作流程啟動。
+  * 例外狀況：變更`/var/statistics/tracking` *do*&#x200B;下的節點會導致工作流程啟動。
 
 標準安裝包含各種定義。 這些是用於數位資產管理和社會合作任務：
 
@@ -122,9 +120,9 @@ ht-degree: 2%
 
      啟動工作流程的事件型別：
 
-      * 已建立
-      * 已修改
-      * 已移除
+     * 建立時間
+     * 已修改
+     * 已移除
 
    * **節點型別**
 
@@ -136,7 +134,7 @@ ht-degree: 2%
 
    * **執行模式**
 
-     工作流程啟動器套用的伺服器型別。 選取&#x200B;**作者**、**Publish**&#x200B;或&#x200B;**作者與Publish**。
+     工作流程啟動器套用的伺服器型別。 選取&#x200B;**作者**、**發佈**&#x200B;或&#x200B;**作者與發佈**。
 
    * **條件**
 
@@ -164,8 +162,8 @@ ht-degree: 2%
 
      控制是否啟動工作流程啟動器：
 
-      * 選取&#x200B;**啟用**，在組態屬性滿足時啟動工作流程。
-      * 選取&#x200B;**當工作流程不應執行時停用** （即使組態屬性已滿足，也不會執行）。
+     * 選取&#x200B;**啟用**，在組態屬性滿足時啟動工作流程。
+     * 選取&#x200B;**當工作流程不應執行時停用** （即使組態屬性已滿足，也不會執行）。
 
    * **排除清單**
 
@@ -173,8 +171,8 @@ ht-degree: 2%
 
      此啟動器屬性是以逗號分隔的專案清單： &quot;
 
-      * `property-name`忽略在指定屬性名稱上觸發的任何`jcr`事件。&quot;
-      * `event-user-data:<*someValue*>`會忽略任何包含透過[`ObservationManager` API](https://developer.adobe.com/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/observation/ObservationManager.html#setUserData(java.lang.String))設定的`*<someValue*`> `user-data`的事件。
+     * `property-name`忽略在指定屬性名稱上觸發的任何`jcr`事件。 &quot;
+     * `event-user-data:<*someValue*>`會忽略任何包含透過[`ObservationManager` API](https://experienceleague.adobe.com/en/tools/aem-api-documentation/spec/jsr170/javadocs/jcr-2.0/javax/jcr/observation/ObservationManager.html#setUserData(java.lang.String))設定的`*<someValue*`> `user-data`的事件。
 
      例如：
 

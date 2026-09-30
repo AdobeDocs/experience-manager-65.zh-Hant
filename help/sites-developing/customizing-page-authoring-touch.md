@@ -9,13 +9,11 @@ exl-id: 90594588-db8e-4d4c-a208-22c1c6ea2a2d
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 3aa55b88f589749fb49d5ff46340b0912d490157
+source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
 workflow-type: tm+mt
-source-wordcount: '1466'
-ht-degree: 39%
-
+source-wordcount: '1471'
+ht-degree: 38%
 ---
-
 # 自訂頁面編寫{#customizing-page-authoring}
 
 >[!CAUTION]
@@ -28,16 +26,16 @@ Adobe Experience Manager (AEM)提供各種機制，可讓您自訂編寫執行�
 
   Clientlibs可讓您擴充預設實作以實現新功能，同時重複使用標準函式、物件和方法。 進行自訂時，您可以在 `/apps.` 下面建立自己的 clientlib。新的 clientlib 必須：
 
-   * 取決於編寫clientlib `cq.authoring.editor.sites.page`
-   * 屬於適當的`cq.authoring.editor.sites.page.hook`類別
+  * 取決於編寫clientlib `cq.authoring.editor.sites.page`
+  * 屬於適當的`cq.authoring.editor.sites.page.hook`類別
 
 * 覆蓋
 
-  覆蓋是以節點定義為基礎，可讓您以您自己的自訂功能（在`/apps`中）覆蓋標準功能（在`/libs`中）。 建立覆蓋時不需要原始的1:1復本，因為[sling資源合併器](/help/sites-developing/sling-resource-merger.md)允許繼承。
+  覆蓋是以節點定義為基礎，可讓您以您自己的自訂功能（在`/apps`中）覆蓋標準功能（在`/libs`中）。 建立覆蓋時不需要1:1的原始復本，因為[sling資源合併器](/help/sites-developing/sling-resource-merger.md)允許繼承。
 
 >[!NOTE]
 >
->如需詳細資訊，請參閱[JS檔案集](https://developer.adobe.com/experience-manager/reference-materials/6-5/jsdoc/ui-touch/editor-core/index.html)。
+>如需詳細資訊，請參閱[JS檔案集](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/jsdoc/ui-touch/editor-core/index.html)。
 
 您可以透過多種方式，在AEM例項中擴充頁面製作功能。 選取範圍會涵蓋在底下（高階）。
 
@@ -47,7 +45,7 @@ Adobe Experience Manager (AEM)提供各種機制，可讓您自訂編寫執行�
 >
 >* 正在使用和建立[clientlibs](/help/sites-developing/clientlibs.md)。
 >* 使用和建立[重疊](/help/sites-developing/overlays.md)。
->* [Granite](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)
+>* [Granite](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)
 >* [AEM觸控式UI的結構](/help/sites-developing/touch-ui-structure.md)，以取得用於編寫頁面的結構區域的詳細資訊。
 >
 
@@ -107,9 +105,9 @@ GITHUB上的程式碼
 
 編寫頁面時，使用者通常必須從資源（例如頁面、元件和資產）中選取。 例如，這可採取清單的形式，作者必須從中選取專案。
 
-若要將清單保持為合理的大小並且和使用案例相關，可以以自訂述詞的形式實作篩選器。 例如，如果使用[`pathbrowser`](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html) [Granite](/help/sites-developing/touch-ui-concepts.md#granite-ui)元件來允許使用者選取特定資源的路徑，則顯示的路徑可依下列方式篩選：
+若要將清單保持為合理的大小並且和使用案例相關，可以以自訂述詞的形式實作篩選器。 例如，如果使用[`pathbrowser`](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html) [Granite](/help/sites-developing/touch-ui-concepts.md#granite-ui)元件來允許使用者選取特定資源的路徑，則顯示的路徑可依下列方式篩選：
 
-* 透過實作 [`com.day.cq.commons.predicate.AbstractNodePredicate`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/predicate/package-summary.html) 介面實作自訂述詞。
+* 透過實作 [`com.day.cq.commons.predicate.AbstractNodePredicate`](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/day/cq/commons/predicate/package-summary.html) 介面實作自訂述詞。
 * 指定述詞的名稱，並在使用 `pathbrowser` 時參照該名稱。
 
 如需建立自訂述詞的詳細資訊，請參閱[為查詢產生器實作自訂述詞評估器](/help/sites-developing/implementing-custom-predicate-evaluator.md)。
@@ -151,12 +149,12 @@ GITHUB上的程式碼
 
      例如：
 
-      * `/libs/foundation/components/text/cq:editConfig`
-      * `/libs/foundation/components/image/cq:editConfig`
+     * `/libs/foundation/components/text/cq:editConfig`
+     * `/libs/foundation/components/image/cq:editConfig`
 
-         * 屬性：`editorType`
+       * 屬性：`editorType`
 
-           定義觸發該元件的就地編輯時所使用的內聯編輯器的類型；例如，`text`、`textimage`、`image`、`title`。
+         定義觸發該元件的就地編輯時所使用的內聯編輯器的類型；例如，`text`、`textimage`、`image`、`title`。
 
 1. 編輯器的其他組態詳細資料可使用包含組態的`config`節點和包含必要外掛程式組態詳細資料的`plugin`節點來設定。
 

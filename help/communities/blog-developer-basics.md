@@ -10,16 +10,14 @@ exl-id: 51f616e8-4aba-47f6-b948-d5147d84bbb6
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
 workflow-type: tm+mt
-source-wordcount: '428'
+source-wordcount: '475'
 ht-degree: 1%
-
 ---
-
 # 部落格要點 {#blog-essentials}
 
-截至AEM 6.1 Communities，部落格是社群活動。 部落格現在從發佈環境發佈，而以前只能在作者環境中建立並發佈部落格。
+截至AEM 6.1社群，部落格是社群活動。 部落格現在從發佈環境發佈，而以前只能在作者環境中建立並發佈部落格。
 
 部落格現在可由任何社群成員建立，除非僅限於有特殊許可權的成員。
 
@@ -78,9 +76,9 @@ ht-degree: 1%
 
 ## 伺服器端的Essentials {#essentials-for-server-side}
 
-* [部落格API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/journal/client/api/package-summary.html)
+* [部落格API](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/adobe/cq/social/journal/client/api/package-summary.html)
 
-* [部落格端點](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/journal/client/endpoints/package-summary.html)
+* [部落格端點](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/adobe/cq/social/journal/client/endpoints/package-summary.html)
 
 * [伺服器端自訂](/help/communities/server-customize.md)
 
@@ -93,7 +91,7 @@ ht-degree: 1%
 UGC應使用其中一種標準仲裁方法進行仲裁。
 請參閱[仲裁使用者產生的內容](/help/communities/moderate-ugc.md)。
 
-截至AEM 6.1 Communities，使用UGC的[公用存放區](/help/communities/working-with-srp.md)時，無論選擇的存放區選項（例如ASRP、MSRP或JSRP）為何，都可程式化存取UGC。
+截至AEM 6.1 Communities，無論選擇的儲存選項（例如ASRP、MSRP或JSRP）為何，使用UGC的[公用存放區](/help/communities/working-with-srp.md)都能以程式設計方式存取UGC。
 
 **存放庫中UGC的位置和格式可能會變更，而不會出現警告**。
 
@@ -114,7 +112,7 @@ UGC應使用其中一種標準仲裁方法進行仲裁。
 
 AEM平台會封鎖其他網站的連結，以防止XSS攻擊，如所述
 
-* [Protect避免跨網站指令碼(XSS)](/help/sites-developing/security.md#protect-against-cross-site-scripting-xss)
+* [避免跨網站指令碼(XSS)](/help/sites-developing/security.md#protect-against-cross-site-scripting-xss)
 
 自AEM 6.2起，先前需要手動進行的修改會包含在預設的AntiSamy設定檔案中。
 

@@ -1,22 +1,25 @@
 ---
 title: 什麼是Document Security？
+
 description: 瞭解如何建立、儲存和套用預先定義的機密性設定，以及如何使用Document Security安全地散發您的資訊。
+
+
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
+
 docset: aem65
+
 feature: Document Security
 exl-id: 0cdc9ee3-0172-43be-9b62-ed768534c074
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
 workflow-type: tm+mt
-source-wordcount: '3301'
+source-wordcount: '3302'
 ht-degree: 0%
-
 ---
-
 # 關於Document Security {#about-document-security}
 
 Document Security可確保只有授權的使用者才能使用您的檔案。 使用Document Security，您可以安全地散發以支援格式儲存的任何資訊。 支援的檔案格式包括：
@@ -24,7 +27,7 @@ Document Security可確保只有授權的使用者才能使用您的檔案。 �
 * Adobe PDF檔案
 * ®Word、Excel和PowerPoint檔案
 
-如需有關原則如何保護受支援檔案型別的詳細資訊，請參閱[更多Document Security資訊](https://experienceleague.adobe.com/docs/experience-manager-65/forms/use-document-security/document-security-offerings.html?lang=zh-Hant)。
+如需有關原則如何保護受支援檔案型別的詳細資訊，請參閱[更多Document Security資訊](https://experienceleague.adobe.com/docs/experience-manager-65/forms/use-document-security/document-security-offerings.html?lang=en)。
 
 使用Document Security，您可以輕鬆建立、儲存及套用預先定義的機密性設定至您的檔案。 為了防止資訊擴散到您觸及的範圍之外，您還可以監視和控制在您分發檔案後收件者如何使用您的檔案。
 
@@ -75,15 +78,15 @@ Document Security由伺服器和使用者介面組成：
 
   具有此角色的使用者可以存取管理控制檯中的所有檔案安全性設定。 這些許可權與角色相關聯：
 
-   * 管理設定
-   * 管理原則
-   * 管理原則集
-   * 管理檔案
-   * 管理檔案發佈者
-   * 管理受邀和本機使用者
-   * 檢視事件
-   * 委派
-   * 邀請外部使用者
+  * 管理設定
+  * 管理原則
+  * 管理原則集
+  * 管理檔案
+  * 管理檔案發佈者
+  * 管理受邀和本機使用者
+  * 檢視事件
+  * 委派
+  * 邀請外部使用者
 
   **Document Security管理員**
 
@@ -97,12 +100,12 @@ Document Security由伺服器和使用者介面組成：
 
   具有此角色的使用者可以使用Administration Console的Document Security區段來編輯其他使用者的原則，以及建立、編輯和刪除原則集。 當原則集管理員建立原則集時，他們可以將原則集協調員指派給該原則集。 這些許可權與角色相關聯：
 
-   * 管理原則
-   * 管理原則集
-   * 管理檔案
-   * 管理檔案發佈者
-   * 檢視事件
-   * 委派
+  * 管理原則
+  * 管理原則集
+  * 管理檔案
+  * 管理檔案發佈者
+  * 檢視事件
+  * 委派
 
   >[!NOTE]
   >
@@ -112,9 +115,9 @@ Document Security由伺服器和使用者介面組成：
 
   具有此角色的使用者可以執行在相關Document Security網頁上管理所有受邀和本地使用者所需的工作。 這些許可權與角色相關聯：
 
-   * 管理受邀和本機使用者
-   * 邀請外部使用者
-   * 存取一般使用者網頁
+  * 管理受邀和本機使用者
+  * 邀請外部使用者
+  * 存取一般使用者網頁
 
   >[!NOTE]
   >
@@ -124,8 +127,8 @@ Document Security由伺服器和使用者介面組成：
 
   具有此角色的使用者可以邀請使用者。 這些許可權與角色相關聯：
 
-   * 邀請外部使用者
-   * 存取一般使用者網頁
+  * 邀請外部使用者
+  * 存取一般使用者網頁
 
   **Document Security使用者**
 
@@ -251,28 +254,28 @@ Document Security管理員可以在「使用者管理」中使用以下許可權
 
   使用原則集可以更輕鬆地將相關原則指派和管理給組織或部門中的特定使用者。 例如，財務與人力資源部門的個別原則集可協助您輕鬆管理相關原則，並將其套用至指定給相應部門的檔案。
 
-* **使用外部授權器以動態方式套用許可權：**&#x200B;您可以使用[外部授權器](https://help.adobe.com/zh_TW/livecycle/11.0/ProgramLC/WS624e3cba99b79e12e69a9941333732bac8-6f26.2.html)根據外部條件評估及動態套用許可權。 根據外部條件以動態方式評估許可權時，您可以：
+* **使用外部授權器以動態方式套用許可權：**&#x200B;您可以使用[外部授權器](https://help.adobe.com/en_US/livecycle/11.0/ProgramLC/WS624e3cba99b79e12e69a9941333732bac8-6f26.2.html)根據外部條件評估及動態套用許可權。 根據外部條件以動態方式評估許可權時，您可以：
 
-   * 為您組織中的檔案提供集中式存取控制。
+  * 為您組織中的檔案提供集中式存取控制。
 
-   * 動態判斷使用者是否可以存取受原則保護的檔案，藉此控制對受原則保護檔案的存取權。 例如，動態地決定使用者是否可以列印受原則保護的檔案。
+  * 動態判斷使用者是否可以存取受原則保護的檔案，藉此控制對受原則保護檔案的存取權。 例如，動態地決定使用者是否可以列印受原則保護的檔案。
 
-   * 使用內容管理系統所使用的存取控制機制，以及標準原則評估程式。 例如，當服務決定使用者是否可以列印受原則保護的檔案時，它可以使用標準原則評估程式。 此外，它也可以使用您的內容管理系統所使用的存取控制機制。
+  * 使用內容管理系統所使用的存取控制機制，以及標準原則評估程式。 例如，當服務決定使用者是否可以列印受原則保護的檔案時，它可以使用標準原則評估程式。 此外，它也可以使用您的內容管理系統所使用的存取控制機制。
 
-  雖然您可以使用外部授權處理常式完全取代Document Security原則評估程式，但建議您使用外部授權處理常式來評估原則程式。 因此，檔案存取可受內容管理系統使用的相同控制機制控制。 例如，當Document Security服務確定使用者是否可以列印受原則保護的檔案時，它會使用標準原則評估程式。 它也會使用您的內容管理系統所使用的存取控制機制。 如需詳細資訊，請參閱[建立外部授權處理常式](https://help.adobe.com/zh_TW/livecycle/11.0/ProgramLC/WS624e3cba99b79e12e69a9941333732bac8-6f26.2.html)。
+  雖然您可以使用外部授權處理常式完全取代Document Security原則評估程式，但建議您使用外部授權處理常式來評估原則程式。 因此，檔案存取可受內容管理系統使用的相同控制機制控制。 例如，當Document Security服務確定使用者是否可以列印受原則保護的檔案時，它會使用標準原則評估程式。 它也會使用您的內容管理系統所使用的存取控制機制。 如需詳細資訊，請參閱[建立外部授權處理常式](https://help.adobe.com/en_US/livecycle/11.0/ProgramLC/WS624e3cba99b79e12e69a9941333732bac8-6f26.2.html)。
 
 * **將原則集保留為有限的數目：**&#x200B;有幾個因素會導致原則與原則集持續成長。 常見因素包括：
 
-   * 一段時間內組織內的使用者角色、部門和檔案的增加。
-   * 組織的部門會單獨工作，並嚴格控制部門特定的政策。 它會在組織內導向相同的原則。
+  * 一段時間內組織內的使用者角色、部門和檔案的增加。
+  * 組織的部門會單獨工作，並嚴格控制部門特定的政策。 它會在組織內導向相同的原則。
 
   Adobe建議將原則和原則集的數目維持在最小值。 它有助於輕鬆管理原則和原則集，並提供更好的效能。 若要將數字維持在最小值：
 
-   * 建立可重複使用的原則。 這些原則可以在多個部門之間共用。
-   * 如果某些原則套用至多個部門，而不是每個部門的個別原則集，請考慮建立全組織的原則集。
-   * 原則集中的群組相關原則。 不要為每個原則建立個別的原則集。
-   * 使用外部授權者來動態控制使用者許可權。
+  * 建立可重複使用的原則。 這些原則可以在多個部門之間共用。
+  * 如果某些原則套用至多個部門，而不是每個部門的個別原則集，請考慮建立全組織的原則集。
+  * 原則集中的群組相關原則。 不要為每個原則建立個別的原則集。
+  * 使用外部授權者來動態控制使用者許可權。
 
   >[!NOTE]
   >
-  >您可以使用[getAllPolicysetnames()](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/programlc/javadoc/com/adobe/livecycle/rightsmanagement/client/PolicyManager.html) API來擷取最多1000個原則集名稱。 在內部，API會擷取API叫用程式具有檔案發佈者許可權的最多1000個原則，然後建立與擷取之原則相關的唯一原則集名稱清單，並傳回給您。 例如，當API擷取1000個原則，且擷取的原則與總共200個原則集相關聯時，API只會傳回200個原則集名稱。
+  >您可以使用[getAllPolicysetnames()](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/forms/programlc/javadoc/com/adobe/livecycle/rightsmanagement/client/PolicyManager.html) API來擷取最多1000個原則集名稱。 在內部，API會擷取API叫用程式具有檔案發佈者許可權的最多1000個原則，然後建立與擷取之原則相關的唯一原則集名稱清單，並傳回給您。 例如，當API擷取1000個原則，且擷取的原則與總共200個原則集相關聯時，API只會傳回200個原則集名稱。

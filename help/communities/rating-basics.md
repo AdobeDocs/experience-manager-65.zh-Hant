@@ -9,13 +9,11 @@ exl-id: 49456944-ff0d-4507-b3b8-143c90067573
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
 workflow-type: tm+mt
-source-wordcount: '304'
+source-wordcount: '308'
 ht-degree: 0%
-
 ---
-
 # Rating Essentials {#rating-essentials}
 
 評等元件（一個[總計](tally.md)子類別）可讓登入的社群成員對網站上的功能進行評等。
@@ -59,9 +57,9 @@ ht-degree: 0%
 
 ## 伺服器端的Essentials {#essentials-for-server-side}
 
-* [標籤API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/tally/client/api/package-summary.html)
+* [標籤API](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/adobe/cq/social/tally/client/api/package-summary.html)
 
-* [計分端點](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/tally/client/endpoints/package-summary.html)
+* [計分端點](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/adobe/cq/social/tally/client/endpoints/package-summary.html)
 
 * [伺服器端自訂](server-customize.md)
 

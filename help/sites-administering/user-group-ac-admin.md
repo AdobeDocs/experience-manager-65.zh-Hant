@@ -9,13 +9,11 @@ exl-id: 5808b8f9-9b37-4970-b5c1-4d33404d3a8b
 feature: Security
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
 workflow-type: tm+mt
-source-wordcount: '3107'
+source-wordcount: '3109'
 ht-degree: 0%
-
 ---
-
 # 使用者、群組和存取權管理{#user-group-and-access-rights-administration}
 
 啟用CRX存放庫的存取權涉及幾個主題：
@@ -60,7 +58,7 @@ CRX可讓您設定使用者和群組帳戶的存取權。 然後會將相同的�
 
 >[!NOTE]
 >
->CRX實作由JSR-283[&#128279;](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/2.0/16_Access_Control_Management.html)定義的存取控制。
+>CRX實作由JSR-283](https://experienceleague.adobe.com/en/tools/aem-api-documentation/spec/jcr/2.0/16_Access_Control_Management.html)定義的[存取控制。
 >
 >CRX存放庫的標準安裝設定為使用資源型存取控制清單。 這是JSR-283存取控制的一個可能實作，也是Jackrabbit提供的實作之一。
 
@@ -70,22 +68,22 @@ CRX在評估存取權時會使用兩個重要概念：
 
 * **主體**&#x200B;是具有存取許可權的實體。 主要專案包括：
 
-   * 使用者帳戶
-   * 群組帳戶
+  * 使用者帳戶
+  * 群組帳戶
 
-     如果使用者帳戶屬於一或多個群組，它也會與每個群組主參與者相關聯。
+    如果使用者帳戶屬於一或多個群組，它也會與每個群組主參與者相關聯。
 
 * **主旨**&#x200B;是用來表示要求的來源。
 
   它可用來合併適用於該請求的存取權。 這些擷取自：
 
-   * 使用者主體
+  * 使用者主體
 
-     您直接指派給使用者帳戶的許可權。
+    您直接指派給使用者帳戶的許可權。
 
-   * 與該使用者相關聯的所有群組主體
+  * 與該使用者相關聯的所有群組主體
 
-     所有許可權都會指派給使用者所屬的任何群組。
+    所有許可權都會指派給使用者所屬的任何群組。
 
   然後會使用結果來允許或拒絕存取要求的資源。
 
@@ -124,8 +122,8 @@ CRX中的存取權評估如下：
 
 * 使用者主參與者一律優先於群組主參與者，不論：
 
-   * 它們在存取控制清單中的順序
-   * 其在節點階層中的位置
+  * 它們在存取控制清單中的順序
+  * 其在節點階層中的位置
 
 * 對於指定的主體，指定節點上最多有一個「拒絕」和「允許」專案。 實作一律會清除多餘的專案，並確保允許和拒絕專案中未列出相同的許可權。
 
@@ -479,7 +477,7 @@ CRX中的存取權評估如下：
 
   您可以輸入&#x200B;**主體**&#x200B;名稱，或按一下欄位右側的圖示以開啟&#x200B;**選取主體**&#x200B;對話方塊。
 
-  這可讓您&#x200B;**搜尋**&#x200B;使用者&#x200B;**或**&#x200B;群組&#x200B;**的**。 從結果清單中選取所需的主體，然後按一下[確定] **&#x200B;**，將該值帶回上一個對話方塊。
+  這可讓您&#x200B;**搜尋**&#x200B;使用者&#x200B;**或**&#x200B;群組&#x200B;**的**。 從結果清單中選取所需的主體，然後按一下[確定] ****，將該值帶回上一個對話方塊。
 
 ![crx_accesscontrol_selectprincipal](assets/crx_accesscontrol_selectprincipal.png)
 
@@ -491,7 +489,7 @@ CRX中的存取權評估如下：
 
 ### 權限 {#privileges}
 
-新增存取控制專案時，可以選取下列許可權（如需完整詳細資訊，請參閱[安全性API](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/javax/jcr/security/Privilege.html)）：
+新增存取控制專案時，可以選取下列許可權（如需完整詳細資訊，請參閱[安全性API](https://experienceleague.adobe.com/en/tools/aem-api-documentation/spec/javax.jcr/javadocs/jcr-2.0/javax/jcr/security/Privilege.html)）：
 
 <table>
  <tbody>

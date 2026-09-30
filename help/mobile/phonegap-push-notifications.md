@@ -9,13 +9,11 @@ exl-id: 375f2f40-1b98-4e21-adee-cbea274e6a2a
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
+source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
 workflow-type: tm+mt
-source-wordcount: '3248'
+source-wordcount: '3252'
 ht-degree: 1%
-
 ---
-
 # 推播通知{#push-notifications}
 
 {{ue-over-mobile}}
@@ -117,7 +115,7 @@ AEM已設定為使用下列三項服務之一來推送通知：
 1. **建立存取金鑰與識別碼**
 
    1. 按一下畫面右上角的登入名稱，然後從功能表選擇[安全性認證]。
-   1. 按一下[存取金鑰]，然後在下面的空白處按一下[建立新的存取金鑰]&#x200B;**&#x200B;**。
+   1. 按一下[存取金鑰]，然後在下面的空白處按一下[建立新的存取金鑰]****。
    1. 按一下&#x200B;**顯示存取金鑰**，然後複製並儲存顯示的存取金鑰ID和機密存取金鑰。 如果選擇下載金鑰的選項，您會得到包含這些相同值的csv檔案。
    1. 您可以在此頁面管理其他安全性相關憑證，以及某些其他憑證。
 
@@ -212,7 +210,7 @@ AEM已設定為使用下列三項服務之一來推送通知：
 * /content/`<your app>`/shell/jcr:content/pge-app/app-config/notificationsConfig
 
 使用以下屬性（.content.xml檔案） ：
-&lt;jcr:root xmlns:jcr=&quot; [https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/1.0/index.html](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/1.0/index.html)&quot; xmlns:nt=&quot; [https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/1.0/index.html](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/1.0/index.html)&quot;
+&lt;jcr:root xmlns:jcr=&quot; [https://experienceleague.adobe.com/en/tools/aem-api-documentation/spec/jcr/1.0/index.html](https://experienceleague.adobe.com/en/tools/aem-api-documentation/spec/jcr/1.0/index.html)&quot; xmlns:nt=&quot; [https://experienceleague.adobe.com/en/tools/aem-api-documentation/spec/jcr/1.0/index.html](https://experienceleague.adobe.com/en/tools/aem-api-documentation/spec/jcr/1.0/index.html)&quot;
 jcr:primaryType=&quot;nt:unstructured&quot;
 excludeProperties=&quot;[appAPIAccessToken]&quot;
 path=&quot;。./../../..&quot;

@@ -10,20 +10,18 @@ exl-id: 971d6c25-1fbe-4c07-944e-be6b97a59922
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
 workflow-type: tm+mt
-source-wordcount: '473'
+source-wordcount: '504'
 ht-degree: 0%
-
 ---
-
 # 外部化URL{#externalizing-urls}
 
 在Adobe Experience Manager (AEM)中，**外部化程式**&#x200B;是OSGI服務，可讓您以程式設計方式將資源路徑（例如`/path/to/my/page`）轉換為外部和絕對URL （例如`https://www.mycompany.com/path/to/my/page`），方法是以預先設定的DNS為路徑加上前置詞。
 
 由於執行個體在網頁層後面執行時無法知道其外部可見的URL，而且有時必須在請求範圍之外建立連結，因此此服務會提供中央位置來設定這些外部URL並建置它們。
 
-此頁面說明如何設定&#x200B;**Externalizer**&#x200B;服務以及如何使用它。 如需詳細資訊，請參閱[Javadocs](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/Externalizer.html)。
+此頁面說明如何設定&#x200B;**Externalizer**&#x200B;服務以及如何使用它。 如需詳細資訊，請參閱[Javadocs](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/day/cq/commons/Externalizer.html)。
 
 ## 設定Externalizer服務 {#configuring-the-externalizer-service}
 
@@ -51,8 +49,8 @@ ht-degree: 0%
 
    * **配置**&#x200B;是http或https，但也可以是ftp等等。
 
-      * 必要時使用https強制執行https連結
-      * 若使用者端代碼在要求外部化URL時未覆寫配置，則會使用它。
+     * 必要時使用https強制執行https連結
+     * 若使用者端代碼在要求外部化URL時未覆寫配置，則會使用它。
 
    * **server**&#x200B;是主機名稱（可以是網域名稱或ip位址）。
    * **連線埠** （選擇性）是連線埠號碼。
@@ -68,13 +66,13 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >自訂組態可讓您新增類別，例如`production`、`staging`，或甚至外部非AEM系統，例如`my-internal-webservice`。 避免在專案的程式碼基底中跨不同位置以硬式編碼撰寫這類URL，會很有用。
+   >自訂設定可讓您新增類別，例如`production`、`staging`，或甚至外部非AEM系統，例如`my-internal-webservice`。 避免在專案的程式碼基底中跨不同位置以硬式編碼撰寫這類URL，會很有用。
 
-1. 按一下[儲存]儲存變更。**&#x200B;**
+1. 按一下[儲存]儲存變更。****
 
 >[!NOTE]
 >
->Adobe建議您[將組態新增到存放庫](/help/sites-deploying/configuring.md#addinganewconfigurationtotherepository)。
+>Adobe建議您[將設定新增至存放庫](/help/sites-deploying/configuring.md#addinganewconfigurationtotherepository)。
 
 ### 使用Externalizer服務 {#using-the-externalizer-service}
 
@@ -128,4 +126,4 @@ ht-degree: 0%
 
    * `https://publish-3.internal/contextpath/my/page.html`
 
-1. 您可以在[Javadocs](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/Externalizer.html)中找到更多範例。
+1. 您可以在[Javadocs](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/day/cq/commons/Externalizer.html)中找到更多範例。

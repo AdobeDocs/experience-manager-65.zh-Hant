@@ -9,13 +9,11 @@ exl-id: c037a788-c943-4f95-a028-1fcb0ef48f86
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
 workflow-type: tm+mt
-source-wordcount: '225'
+source-wordcount: '267'
 ht-degree: 2%
-
 ---
-
 # 社交圖基本資訊  {#social-graph-essentials}
 
 社群成員追蹤[活動](essentials-activities.md)及被追蹤的能力是透過兩個元件建立的：
@@ -60,7 +58,7 @@ ht-degree: 2%
     <ul>
      <li>名稱: <strong><code>outgoing</code></strong></li>
      <li>型別：布林值</li>
-     <li>值： <br />
+     <li>值：<br />
       <ul>
        <li><i>True </i>- <code>following</code>元件列出登入成員的成員 <code>follows</code></li>
        <li><i>False </i>- <code>following</code>元件列出<code>follow </code>登入成員的成員</li>
@@ -82,8 +80,8 @@ ht-degree: 2%
 
 ## 伺服器端的Essentials {#essentials-for-server-side}
 
-* [社交圖API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/graph/client/api/package-frame.html)
+* [社交圖API](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/adobe/cq/social/graph/client/api/package-frame.html)
 
-* [社交圖端點](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/graph/client/endpoint/package-frame.html)
+* [社交圖端點](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/adobe/cq/social/graph/client/endpoint/package-frame.html)
 
 * [伺服器端自訂](server-customize.md)

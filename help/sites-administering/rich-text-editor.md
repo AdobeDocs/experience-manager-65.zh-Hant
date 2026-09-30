@@ -6,16 +6,14 @@ exl-id: 2e7ec22f-0856-44c4-bb15-1086dae0b85a
 solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
 workflow-type: tm+mt
-source-wordcount: '2887'
-ht-degree: 0%
-
+source-wordcount: '3073'
+ht-degree: 1%
 ---
-
 # 設定RTF編輯器 {#configure-the-rich-text-editor}
 
-RTF編輯器(RTE)為作者提供了一系列廣泛的功能，以便編輯其文字內容。 提供圖示、選取方塊、工具列和選單，以提供WYSIWYG文字編輯體驗。
+RTF編輯器(RTE)為作者提供了一系列廣泛的功能，以便編輯其文字內容。 提供圖示、選取方塊、工具列和功能表，以提供WYSIWYG文字編輯體驗。
 
 若要瞭解如何使用RTE功能進行編寫，請參閱[使用RTF編輯器進行編寫](/help/sites-authoring/rich-text-editor.md)。 RTE可以設定為啟用、停用及擴充編寫元件中可用的功能。 下列工作流程說明在Experience Manager中完成RTE設定工作的建議順序。
 
@@ -25,7 +23,7 @@ RTF編輯器(RTE)為作者提供了一系列廣泛的功能，以便編輯其文
 
 ## 瞭解觸控式UI和傳統UI {#understand-touch-enabled-ui-and-classic-ui}
 
-觸控式UI是Experience Manager的標準使用者介面。 Adobe針對製作環境推出觸控式UI搭配[回應式設計](/help/sites-authoring/responsive-layout.md)。 觸控式UI專為觸控和桌上型裝置而設計。 此介面與原始傳統UI有很大差異。
+觸控式UI是Experience Manager的標準使用者介面。 Adobe針對製作環境推出觸控式UI，包含[回應式設計](/help/sites-authoring/responsive-layout.md)。 觸控式UI專為觸控和桌上型裝置而設計。 此介面與原始傳統UI有很大差異。
 
 觸控式使用者介面中的![RTF編輯器工具列](assets/chlimage_1-35.png)
 
@@ -38,13 +36,13 @@ RTF編輯器(RTE)為作者提供了一系列廣泛的功能，以便編輯其文
 >[!MORELIKETHIS]
 >
 >* [UI建議](/help/sites-deploying/ui-recommendations.md)
->* 關於淘汰傳統UI，請參閱[Experience Manager 6.5發行說明](/help/release-notes/deprecated-removed-features.md)
+>* 若要瞭解如何淘汰傳統UI，請參閱[Experience Manager 6.5發行說明](/help/release-notes/deprecated-removed-features.md)
 >* 如需UI之間的差異，請參閱[觸控式UI和傳統UI](https://aemcq5pedia.wordpress.com/2018/01/05/touch-enabled-ui-aem6-3/)
 >* 若要深入瞭解觸控式UI，請參閱[Experience Manager觸控式UI的概念](/help/sites-developing/touch-ui-concepts.md)
 
 ## 各種編輯模式 {#editingmodes}
 
-作者可以使用不同的元件模式，在Experience Manager中建立和編輯文字內容。 製作和格式化內容的工具列選項，以及不同編輯模式中RTE啟用元件的使用者體驗，會因RTE設定而異。
+作者可在Experience Manager中使用不同的元件模式來建立和編輯文字內容。 製作和格式化內容的工具列選項，以及不同編輯模式中RTE啟用元件的使用者體驗，會因RTE設定而異。
 
 | 編輯模式 | 編輯區域 | 建議啟用的功能 | 觸控式 UI | 傳統 UI |
 |--- |--- |--- |--- |--- |
@@ -95,8 +93,8 @@ Experience Manager元件可在全熒幕檢視中開啟，以隱藏頁面內容�
 
 * `features`屬性：
 
-   * 用來啟用或停用該外掛程式的基本功能
-   * 可使用標準化的程式進行設定
+  * 用來啟用或停用該外掛程式的基本功能
+  * 可使用標準化的程式進行設定
 
 * 適當時，需要專門設定的其他屬性和選項。
 
@@ -152,7 +150,7 @@ RTE的基本功能會由適當外掛程式特定節點上的`features`屬性值�
 
 設定以下僅適用於Touch UI中對話方塊編輯模式的屬性：
 
-* `useFixedInlineToolbar`：將這個RTE節點（具有sling：resourceType= `cq/gui/components/authoring/dialog/richtext`的節點）上定義的布林值屬性設定為`True`，以使RTE工具列固定而非浮動。
+* `useFixedInlineToolbar`：將這個RTE節點（具有sling:resourceType= `cq/gui/components/authoring/dialog/richtext`的節點）上定義的布林值屬性設定為`True`，以使RTE工具列固定而非浮動。
 
   此屬性為true時，RTF編輯預設會在「foundation-contentloaded」事件中啟動。
 
@@ -166,7 +164,7 @@ RTE的基本功能會由適當外掛程式特定節點上的`features`屬性值�
 
 ## 自訂就地編輯 {#customizing-in-place-editing}
 
-您可以透過設定以下屬性來定義文字編輯器從哪個HTML選擇器開始：
+您可以設定下列屬性，以定義文字編輯器從哪個HTML選擇器開始：
 
 * **`editElementQuery`** — 定義於`cq:InplaceEditingConfig`，此屬性用於指定將開始內嵌編輯文字元件的HTML元素選取器。 如果未指定，內嵌編輯會直接在文字元件HTML上啟動。
 * **`textPropertyName`** — 定義於`cq:InplaceEditingConfig`，此屬性用於指定將儲存在內容節點上的屬性名稱，其中文字元件的HTML值將在內嵌編輯後持續存在。
@@ -183,9 +181,9 @@ RTE功能可透過一系列外掛程式使用，每個外掛程式都具備功�
 
 >[!NOTE]
 >
->[核心元件文字元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html?lang=zh-Hant#the-text-component-and-the-rich-text-editor)可讓範本編輯器在GUI中設定許多RTE外掛程式作為內容原則，而不需要技術設定。 內容原則可搭配使用RTE UI設定，如本檔案所述。
+>[核心元件文字元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html#the-text-component-and-the-rich-text-editor)可讓範本編輯器在GUI中設定許多RTE外掛程式作為內容原則，而不需要技術設定。 內容原則可搭配使用RTE UI設定，如本檔案所述。
 >
->如需詳細資訊，請參閱本檔案的[RTE UI設定和內容原則](/help/sites-administering/rich-text-editor.md)一節，以及[建立頁面範本](/help/sites-authoring/templates.md)和[核心元件開發人員檔案](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/developing.html?lang=zh-Hant)。
+>如需詳細資訊，請參閱本檔案的[RTE UI設定和內容原則](/help/sites-administering/rich-text-editor.md)一節，以及[建立頁面範本](/help/sites-authoring/templates.md)和[核心元件開發人員檔案](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/developing.html)。
 
 >[!NOTE]
 >
@@ -261,7 +259,7 @@ RTE中可用的選項會從使用者介面設定向下流向內容原則。
 * 如果RTE的使用者介面設定已移除或未啟用專案，則內容原則無法進行設定。
 * 作者只能存取使用者介面設定和內容原則所提供的功能。
 
-例如，您可以看到[文字核心元件檔案](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/text.html?lang=zh-Hant#the-text-component-and-the-rich-text-editor)。
+例如，您可以看到[文字核心元件檔案](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/text.html#the-text-component-and-the-rich-text-editor)。
 
 ## 自訂工具列圖示和命令之間的對應 {#iconstoolbar}
 
@@ -325,17 +323,17 @@ RTE中可用的選項會從使用者介面設定向下流向內容原則。
 
 ## 更多資訊 {#further-information}
 
-如需有關設定RTE的詳細資訊，請參閱[AEM Widget API](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.form.RichText)參考。
+如需有關設定RTE的詳細資訊，請參閱[AEM Widget API](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/widgets-api/index.html?class=CQ.form.RichText)參考。
 
 具體來說，若要檢視外掛程式和可用的相關選項：
 
-* [CQ.form.RichText](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.form.RichText)元件提供表單欄位，用於編輯樣式文字資訊(RTF)。 若要瞭解RTF表單可用的所有引數，請參閱設定選項。
-* RTF元件使用[CQ.form.rte.plugins.Plugin](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.form.rte.plugins.Plugin)下列出的外掛程式，提供各種功能。 對於每個外掛程式：
+* [CQ.form.RichText](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/widgets-api/index.html?class=CQ.form.RichText)元件提供表單欄位，用於編輯樣式文字資訊(RTF)。 若要瞭解RTF表單可用的所有引數，請參閱設定選項。
+* RTF元件使用[CQ.form.rte.plugins.Plugin](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/widgets-api/index.html?class=CQ.form.rte.plugins.Plugin)下列出的外掛程式，提供各種功能。 對於每個外掛程式：
 
-   * 如需可啟用（或已停用）功能的詳細資訊，請參閱功能
-   * 如需適當外掛程式的詳細設定資訊，請參閱設定選項以取得所有可用引數
+  * 如需可啟用（或已停用）功能的詳細資訊，請參閱功能
+  * 如需適當外掛程式的詳細設定資訊，請參閱設定選項以取得所有可用引數
 
-* 也提供連結之HTML規則的詳細資訊。
+* 您也可以參閱連結適用的HTML規則詳細資訊。
 
 這些可用來擴充及自訂您自己的RTE。 例如，若要在建立連結時列出頁面中可用的錨點，您可以提供自己的`LinkPlugin`實作。
 
@@ -371,15 +369,15 @@ AEM RTE功能有下列限制：
 
 因應措施是在第二次顯示編輯對話方塊時按一下文字元件，然後執行連結驗證。
 
-此問題已在AEM 6.3及更高版本中解決。
+此問題已在AEM 6.3及更新版本中解決。
 
 在來源編輯模式中新增的&#x200B;**HTML內容遺失**
 
-請勿新增易發XSS的HTML。 AEM而非RTE可能會移除一些HTML內容，以遵守XSS防霧規則。
+請勿新增容易出現XSS的HTML。 AEM而非RTE可能會移除一些HTML內容，以遵守XSS防霧規則。
 
-若要確認已貼上的HTML是否已儲存，請檢查CRXDE中已儲存的內容（在內容節點中）。
+若要確認已貼上的HTML是否已儲存，請檢查CRXDE中的已儲存內容（在內容節點中）。
 
-如果未儲存，則HTML必須已由RTE移除，因為它不符合RTE的規則。
+若未儲存，HTML必須已由RTE移除，因為它未遵守RTE規則。
 
 如果儲存在CRXDE中但未在頁面上轉譯(若要檢查轉譯，請參閱頁面的[預覽](/help/sites-authoring/editing-content.md#preview-mode)，則會被AEM XSS規則移除。
 

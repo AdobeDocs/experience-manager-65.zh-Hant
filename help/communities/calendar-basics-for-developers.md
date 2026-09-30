@@ -9,13 +9,11 @@ exl-id: 069e379d-c6fd-49ca-b337-df6fd466e023
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
 workflow-type: tm+mt
-source-wordcount: '204'
+source-wordcount: '244'
 ht-degree: 2%
-
 ---
-
 # 行事曆要點 {#calendar-essentials}
 
 本頁提供有關使用行事曆功能的重要資訊。
@@ -56,9 +54,9 @@ ht-degree: 2%
 
 ## 伺服器端的Essentials {#essentials-for-server-side}
 
-* [行事曆API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/calendar/client/api/package-summary.html)
+* [行事曆API](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/adobe/cq/social/calendar/client/api/package-summary.html)
 
-* [行事曆端點](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/calendar/client/endpoints/package-summary.html)
+* [行事曆端點](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/adobe/cq/social/calendar/client/endpoints/package-summary.html)
 
 * [伺服器端自訂](server-customize.md)
 
@@ -68,7 +66,7 @@ ht-degree: 2%
 
 ### 存取行事曆文章(UGC) {#accessing-calendar-posts-ugc}
 
-截至AEM 6.1 Communities，使用UGC的[公用存放區](working-with-srp.md)時，無論選擇的存放區選項（例如ASRP、MSRP或JSRP）為何，都可程式化存取UGC。
+截至AEM 6.1 Communities，無論選擇的儲存選項（例如ASRP、MSRP或JSRP）為何，使用UGC的[公用存放區](working-with-srp.md)都能以程式設計方式存取UGC。
 
 **存放庫中UGC的位置和格式可能會變更，而不會出現警告**。
 

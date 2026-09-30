@@ -11,13 +11,11 @@ exl-id: 419d2e19-1198-4ab5-9aa0-02ad18fe171d
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
+source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
 workflow-type: tm+mt
-source-wordcount: '782'
+source-wordcount: '785'
 ht-degree: 0%
-
 ---
-
 # 建立裝置群組篩選器{#creating-device-group-filters}
 
 {{ue-over-mobile}}
@@ -30,7 +28,7 @@ ht-degree: 0%
 
 ## 篩選器Java™類別 {#the-filter-java-class}
 
-裝置群組篩選器是實作[com.day.cq.wcm.mobile.api.device.DeviceGroupFilter](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/index.html?com/day/cq/wcm/mobile/api/device/DeviceGroupFilter.html)介面的OSGi元件。 部署時，實作類別會提供篩選服務，可供裝置群組設定使用。
+裝置群組篩選器是實作[com.day.cq.wcm.mobile.api.device.DeviceGroupFilter](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/index.html?com/day/cq/wcm/mobile/api/device/DeviceGroupFilter.html)介面的OSGi元件。 部署時，實作類別會提供篩選服務，可供裝置群組設定使用。
 
 本文所述的解決方案使用Apache Felix Maven SCR外掛程式來促進元件和服務的開發。 因此，範例Java™類別使用`@Component`和`@Service`註解。 類別的結構如下：
 
@@ -94,7 +92,7 @@ public String getTitle() {
 * 使用者代理程式的名稱
 * 包含裝置功能的對映物件。 Map鍵是WURFL™功能名稱，值是WURFL™資料庫的對應值。
 
-[com.day.cq.wcm.mobile.api.devicespecs.DeviceSpecsConstants](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/index.html?com/day/cq/wcm/mobile/api/device/DeviceGroupFilter.html)介麵包含靜態欄位中WURFL™功能名稱的子集。 從裝置功能地圖擷取值時，使用這些欄位常數作為索引鍵。
+[com.day.cq.wcm.mobile.api.devicespecs.DeviceSpecsConstants](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/index.html?com/day/cq/wcm/mobile/api/device/DeviceGroupFilter.html)介麵包含靜態欄位中WURFL™功能名稱的子集。 從裝置功能地圖擷取值時，使用這些欄位常數作為索引鍵。
 
 例如，下列程式碼範例會判斷裝置是否支援CSS：
 
@@ -188,7 +186,7 @@ getTitle和getDescription方法傳回的String值會包含在裝置群組摘要�
 
 DeviceGroup和DeviceGroupFilter介面包含在Day Communique 5 WCM Mobile API套件組合中。 Felix註解包含在Apache Felix Declarative Services套件組合中。 您可以從公共Adobe存放庫取得此JAR檔案。
 
-編寫時，5.5.2是AEM最新版本中的WCM Mobile API套件組合版本。 使用Adobe Web Console ([https://localhost:4502/system/console/bundles](https://localhost:4502/system/console/bundles))，確定這是部署在您的環境中的套件版本。
+編寫時，5.5.2是AEM最新版本中的WCM Mobile API套件組合版本。 使用Adobe Web Console ([https://localhost:4502/system/console/bundles](https://localhost:4502/system/console/bundles))來確保這是部署在您的環境中的套件組合版本。
 
 **POM：** （您的POM使用不同的groupId和版本。）
 

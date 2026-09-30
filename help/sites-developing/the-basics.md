@@ -9,13 +9,11 @@ exl-id: f6f32290-422e-4037-89d8-d9f414332e8e
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
 workflow-type: tm+mt
-source-wordcount: '3364'
-ht-degree: 1%
-
+source-wordcount: '3377'
+ht-degree: 0%
 ---
-
 # AEM核心概念 {#aem-core-concepts}
 
 >[!NOTE]
@@ -28,10 +26,10 @@ ht-degree: 1%
 
 * 網頁應用程式技術的基本知識，包括：
 
-   * request -response (XMLHttpRequest / XMLHttpResponse)循環
-   * HTML
-   * CSS
-   * JavaScript
+  * request -response (XMLHttpRequest / XMLHttpResponse)循環
+  * HTML
+  * CSS
+  * JavaScript
 
 * Experience Server (CRX)的工作知識，包括Content Explorer
 * 若要使用傳統UI進行開發，您也必須具備JSP (JavaServer Pages)的基本知識，包括瞭解及修改簡單JSP範例的能力。
@@ -40,11 +38,11 @@ ht-degree: 1%
 
 ## Java™內容存放庫 {#java-content-repository}
 
-Java™ Content Repository (JCR)標準[JSR 283](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/2.0/index.html)指定了在內容存放庫內的精細層級，以獨立於廠商和實作的方式雙向存取內容。
+Java™ Content Repository (JCR)標準[JSR 283](https://experienceleague.adobe.com/en/tools/aem-api-documentation/spec/jcr/2.0/index.html)指定了在內容存放庫內的精細層級，以獨立於廠商和實作的方式雙向存取內容。
 
 規格領先者為Adobe Research （瑞士） AG。
 
-[JCR API 2.0](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/index.html)套件javax.jcr.&amp;ast；用於直接存取及操控存放庫內容。
+[JCR API 2.0](https://experienceleague.adobe.com/en/tools/aem-api-documentation/spec/javax.jcr/javadocs/jcr-2.0/index.html)套件javax.jcr.&amp;ast；用於直接存取及操控存放庫內容。
 
 ## Experience Server (CRX)和Jackrabbit {#experience-server-crx-and-jackrabbit}
 
@@ -86,8 +84,8 @@ Sling是&#x200B;*以內容為中心*。 這表示處理著重於內容，因為�
 * RESTful，而不只是曲面上的；資源和表示在伺服器內正確建模
 * 移除一或多個資料模型
 
-   * 之前需要下列專案：URL結構、業務物件、DB綱要；
-   * 現在減少為： URL =資源= JCR結構
+  * 之前需要下列專案：URL結構、業務物件、DB綱要；
+  * 現在減少為： URL =資源= JCR結構
 
 ### URL分解 {#url-decomposition}
 
@@ -160,11 +158,11 @@ Sling也可讓JCR節點以外的專案成為資源，但這是進階功能。
 * 當需要方法(GET、POST)時，會根據HTTP規格以大寫指定，例如jobs.POST.esp （請參閱下文）
 * 支援各種指令碼引擎：
 
-   * HTL （HTML範本語言 — Adobe Experience Manager偏好並建議的HTML伺服器端範本系統）： `.html`
-   * ECMAScript (JavaScript)頁面（伺服器端執行）： `.esp, .ecma`
-   * Java™ Server Pages （伺服器端執行）： `.jsp`
-   * Java™ Servlet編譯器（伺服器端執行）： `.java`
-   * JavaScript範本（使用者端執行）： `.jst`
+  * HTL （HTML範本語言 — Adobe Experience Manager偏好並建議的HTML伺服器端範本系統）： `.html`
+  * ECMAScript (JavaScript)頁面（伺服器端執行）： `.esp, .ecma`
+  * Java™ Server Pages （伺服器端執行）： `.jsp`
+  * Java™ Servlet編譯器（伺服器端執行）： `.java`
+  * JavaScript範本（使用者端執行）： `.jst`
 
 特定AEM執行個體支援的指令碼引擎清單列在Felix管理主控台( `http://<host>:<port>/system/console/slingscripting`)上。
 
@@ -198,19 +196,19 @@ Sling也可讓JCR節點以外的專案成為資源，但這是進階功能。
 
 * 如果未定義sling:resourceType，則：
 
-   * 內容路徑可用來搜尋適當的指令碼（如果路徑型ResourceTypeProvider為作用中）。
+  * 內容路徑可用來搜尋適當的指令碼（如果路徑型ResourceTypeProvider為作用中）。
 
-     例如，`../content/corporate/jobs/developer.html`的指令碼將在`/apps/content/corporate/jobs/`中產生搜尋。
+    例如，`../content/corporate/jobs/developer.html`的指令碼將在`/apps/content/corporate/jobs/`中產生搜尋。
 
-   * 主要節點型別已使用。
+  * 主要節點型別已使用。
 
 * 如果找不到指令碼，則會使用預設指令碼。
 
   支援純文字(.txt)、HTML (.html)和JSON (.json)作為預設轉譯，所有這些轉譯都列出節點的屬性（格式適當）。 副檔名為.res或沒有要求副檔名的要求的預設轉譯為儘可能將資源多工緩衝處理。
 * 如需http錯誤處理（程式碼403或404），Sling會在以下位置尋找指令碼：
 
-   * [自訂指令碼的位置/apps/sling/servlet/errorhandler](/help/sites-developing/customizing-errorhandler-pages.md)
-   * 或標準指令碼/libs/sling/servlet/errorhandler/403.esp或404.esp的位置。
+  * [自訂指令碼的位置/apps/sling/servlet/errorhandler](/help/sites-developing/customizing-errorhandler-pages.md)
+  * 或標準指令碼/libs/sling/servlet/errorhandler/403.esp或404.esp的位置。
 
 如果特定請求套用多個指令碼，則會選取最符合的指令碼。 相符專案越具體，越好；換言之，無論是否有任何相符的要求副檔名或方法名稱，選取器越符合越好。
 
@@ -243,30 +241,30 @@ Sling也可讓JCR節點以外的專案成為資源，但這是進階功能。
 
 * /
 
-   * a
-   * b
+  * a
+  * b
 
-      * sling:resourceSuperType = a
+    * sling:resourceSuperType = a
 
-   * c
+  * c
 
-      * sling:resourceSuperType = b
+    * sling:resourceSuperType = b
 
-   * x
+  * x
 
-      * sling:resourceType = c
+    * sling:resourceType = c
 
-   * y
+  * y
 
-      * sling:resourceType = c
-      * sling:resourceSuperType = a
+    * sling:resourceType = c
+    * sling:resourceSuperType = a
 
 下列專案的型別階層：
 
 * `/x`
-   * 為`[ c, b, a, <default>]`
+  * 為`[ c, b, a, <default>]`
 * 為`/y`時
-   * 階層為`[ c, a, <default>]`
+  * 階層為`[ c, a, <default>]`
 
 這是因為`/y`具有`sling:resourceSuperType`屬性，而`/x`沒有，因此其超型別取自其資源型別。
 
@@ -278,8 +276,8 @@ Sling也可讓JCR節點以外的專案成為資源，但這是進階功能。
 
 * 自動處理GET以外的http方法，包括：
 
-   * POST、PUT、DELETE，由Sling預設實作處理
-   * sling:resourceType位置中的`POST.jsp`指令碼
+  * POST、PUT、DELETE，由Sling預設實作處理
+  * sling:resourceType位置中的`POST.jsp`指令碼
 
 * 您的程式碼架構已不像原來那麼乾淨和結構清晰；這對於大規模開發至關重要
 
@@ -287,7 +285,7 @@ Sling也可讓JCR節點以外的專案成為資源，但這是進階功能。
 
 這會使用Sling API套件、org.apache.sling.&amp;ast；和標籤程式庫。
 
-### 使用sling:include參考現有元素 {#referencing-existing-elements-using-sling-include}
+### 使用sling:include {#referencing-existing-elements-using-sling-include}參考現有元素
 
 最後考量是需要參考指令碼中的現有元素。
 
@@ -336,7 +334,7 @@ OSGi定義用於開發和部署模組化應用程式和程式庫的架構（也�
 
 **專案**&#x200B;專案是節點或屬性。
 
-如需有關操作Item物件的詳細資訊，請參閱介面javax.jcr.Item的[Java™檔案](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/javax/jcr/Item.html)
+如需有關操作Item物件的詳細資訊，請參閱介面javax.jcr.Item的[Java™檔案](https://experienceleague.adobe.com/en/tools/aem-api-documentation/spec/javax.jcr/javadocs/jcr-2.0/javax/jcr/Item.html)
 
 **節點（及其屬性）**&#x200B;節點及其屬性是在JCR API 2.0規格(JSR 283)中定義。 它們儲存內容、物件定義、演算指令碼和其他資料。
 
@@ -352,7 +350,7 @@ OSGi定義用於開發和部署模組化應用程式和程式庫的架構（也�
 
 currentNode是目前的節點物件。
 
-如需有關操作Node物件的詳細資訊，請參閱[Java™檔案](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/javax/jcr/Node.html)。
+如需有關操作Node物件的詳細資訊，請參閱[Java™檔案](https://experienceleague.adobe.com/en/tools/aem-api-documentation/spec/javax.jcr/javadocs/jcr-2.0/javax/jcr/Node.html)。
 
 **Widget**&#x200B;在AEM中，所有使用者輸入均由Widget管理。 這些通常用於控制內容的編輯。
 
@@ -391,7 +389,7 @@ AEM是使用Widget的ExtJS資料庫開發的。
 
 S`tring pageName = currentPage.getName();`
 
-TcurrentPage為目前頁面物件。 如需有關操控頁面物件的詳細資訊，請參閱[Java™檔案](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/Page.html)。
+TcurrentPage為目前頁面物件。 如需有關操控頁面物件的詳細資訊，請參閱[Java™檔案](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/day/cq/wcm/api/Page.html)。
 
 **頁面管理員**&#x200B;頁面管理員是提供頁面層級作業方法的介面。
 
@@ -399,7 +397,7 @@ TcurrentPage為目前頁面物件。 如需有關操控頁面物件的詳細資�
 
 頁面myPage = pageManager.getContainingPage(myResource)；
 
-pageManager是頁面管理員物件，myResource是資源物件。 如需頁面管理員所提供方法的詳細資訊，請參閱[Java™檔案](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/PageManager.html)。
+pageManager是頁面管理員物件，myResource是資源物件。 如需頁面管理員所提供方法的詳細資訊，請參閱[Java™檔案](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/day/cq/wcm/api/PageManager.html)。
 
 ## 存放庫內的結構 {#structure-within-the-repository}
 
@@ -447,7 +445,7 @@ pageManager是頁面管理員物件，myResource是資源物件。 如需頁面�
 
 ## Dispatcher {#the-dispatcher}
 
-Dispatcher是Adobe的快取和/或負載平衡工具。 您可以在[Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant)下找到進一步資訊。
+Dispatcher是Adobe的快取和/或負載平衡工具。 您可以在[Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)下找到進一步資訊。
 
 ## FileVault （來源修訂系統） {#filevault-source-revision-system}
 
@@ -470,9 +468,9 @@ FileVault為您的JCR存放庫提供檔案系統對應和版本控制。 透過�
 * 有效管理網站的不同語言版本。
 * 根據來源網站自動更新一或多個網站：
 
-   * 強制實施通用基礎結構，並在多個網站間使用通用內容。
-   * 最大限度地利用可用資源。
-   * 維持共同的外觀與風格。
-   * 集中管理網站之間不同的內容。
+  * 強制實施通用基礎結構，並在多個網站間使用通用內容。
+  * 最大限度地利用可用資源。
+  * 維持共同的外觀與風格。
+  * 集中管理網站之間不同的內容。
 
 如需詳細資訊，請參閱[多網站管理員](/help/sites-administering/msm.md)。

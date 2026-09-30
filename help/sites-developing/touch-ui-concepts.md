@@ -10,13 +10,11 @@ exl-id: f13ac6c2-16ab-422d-9005-ab0b49172271
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
 workflow-type: tm+mt
-source-wordcount: '2238'
+source-wordcount: '2240'
 ht-degree: 1%
-
 ---
-
 # Adobe Experience Manager觸控式UI的概念{#concepts-of-the-aem-touch-enabled-ui}
 
 Adobe Experience Manager (AEM)提供觸控式UI，其中[回應式設計](/help/sites-authoring/responsive-layout.md)適用於製作環境，可在觸控和桌上型裝置上運作。
@@ -28,24 +26,24 @@ Adobe Experience Manager (AEM)提供觸控式UI，其中[回應式設計](/help/
 觸控式UI包含：
 
 * 套裝標題：
-   * 顯示標誌
-   * 提供全域導覽的連結
-   * 提供其他一般動作的連結；例如搜尋、說明、Experience Cloud解決方案、通知和使用者設定。
+  * 顯示標誌
+  * 提供全域導覽的連結
+  * 提供其他一般動作的連結；例如搜尋、說明、Experience Cloud解決方案、通知和使用者設定。
 * 左側邊欄（需要時顯示且可隱藏），其中可顯示：
-   * 時間軸
-   * 參照
-   * 篩選器
+  * 時間軸
+  * 參照
+  * 篩選器
 * 導覽標頭(同樣是內容感應式，可顯示：
-   * 指出您目前正在使用哪個主控台，或您的位置，或同時使用兩者
-   * 左側邊欄的選取專案
-   * 階層連結
-   * 存取適當的&#x200B;**建立**&#x200B;動作
-   * 檢視選取專案
+  * 指出您目前正在使用哪個主控台，或您的位置，或同時使用兩者
+  * 左側邊欄的選取專案
+  * 階層連結
+  * 存取適當的&#x200B;**建立**&#x200B;動作
+  * 檢視選取專案
 * 內容區域：
-   * 列出內容專案（無論是頁面、資產、論壇帖子等）
-   * 可依要求格式化，例如，欄、卡片或清單
-   * 使用回應式設計（顯示器會根據您的裝置和/或視窗大小自動調整大小）
-   * 使用無限捲動（不再分頁，所有專案都列在一個視窗中）
+  * 列出內容專案（無論是頁面、資產、論壇帖子等）
+  * 可依要求格式化，例如，欄、卡片或清單
+  * 使用回應式設計（顯示器會根據您的裝置和/或視窗大小自動調整大小）
+  * 使用無限捲動（不再分頁，所有專案都列在一個視窗中）
 
 ![chlimage_1-79](assets/chlimage_1-79.png)
 
@@ -200,7 +198,7 @@ Granite UI和ExtJS （用於傳統UI）之間的差異也令人感興趣：
 
 ### Granite UI Foundation元件 {#granite-ui-foundation-components}
 
-[Granite UI基礎元件](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)提供建置任何UI所需的基本建置區塊。 其中包括：
+[Granite UI基礎元件](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)提供建置任何UI所需的基本建置區塊。 其中包括：
 
 * 按鈕
 * 超連結
@@ -245,19 +243,19 @@ Granite UI和ExtJS （用於傳統UI）之間的差異也令人感興趣：
 | `pathfield, paragraphreference` | `granite/ui/components/foundation/form/pathbrowser` |
 | `selection` | `granite/ui/components/foundation/form/select` |
 | `sizefield` | `cq/gui/components/authoring/dialog/sizefield` |
-| `tags` | `granite/ui/components/foundation/form/autocomplete`&#x200B;`cq/gui/components/common/datasources/tags` |
+| `tags` | `granite/ui/components/foundation/form/autocomplete``cq/gui/components/common/datasources/tags` |
 | `textarea` | `granite/ui/components/foundation/form/textarea` |
 | `textfield` | `granite/ui/components/foundation/form/textfield` |
 
 | **節點型別** | **Granite UI資源型別** |
 |---|---|
 | `cq:WidgetCollection` | `granite/ui/components/foundation/container` |
-| `cq:TabPanel` | `granite/ui/components/foundation/container`&#x200B;`granite/ui/components/foundation/layouts/tabs` |
+| `cq:TabPanel` | `granite/ui/components/foundation/container``granite/ui/components/foundation/layouts/tabs` |
 | `cq:panel` | `granite/ui/components/foundation/container` |
 
 ### Granite UI管理元件 {#granite-ui-administration-components}
 
-[Granite UI管理元件](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)建置在基礎元件上，以提供任何管理應用程式都可以實作的通用建置區塊。 其中包括：
+[Granite UI管理元件](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)建置在基礎元件上，以提供任何管理應用程式都可以實作的通用建置區塊。 其中包括：
 
 * 全域導覽列
 * 邊欄（骨架）

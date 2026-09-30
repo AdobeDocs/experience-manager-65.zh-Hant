@@ -9,13 +9,11 @@ exl-id: 91e0e245-a2f1-4bd7-b38f-7641fd94a547
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '351'
 ht-degree: 1%
-
 ---
-
 # 稽核Essentials {#reviews-essentials}
 
 此功能包含兩個共同運作的元件：稽核和稽核摘要。
@@ -71,9 +69,9 @@ ht-degree: 1%
 
 ## 伺服器端的Essentials {#essentials-for-server-side}
 
-* [檢閱API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/review/client/api/package-summary.html)
+* [檢閱API](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/adobe/cq/social/review/client/api/package-summary.html)
 
-* [檢閱端點](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/review/client/endpoints/package-summary.html)
+* [檢閱端點](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/adobe/cq/social/review/client/endpoints/package-summary.html)
 
 * [伺服器端自訂](server-customize.md)
 
@@ -82,7 +80,7 @@ ht-degree: 1%
 UGC應使用其中一種標準仲裁方法進行仲裁。
 請參閱[仲裁使用者產生的內容](moderate-ugc.md)。
 
-截至AEM 6.1 Communities，使用UGC的[公用存放區](working-with-srp.md)時，無論選擇的存放區選項（例如ASRP、MSRP或JSRP）為何，都可程式化存取UGC。
+截至AEM 6.1 Communities，無論選擇的儲存選項（例如ASRP、MSRP或JSRP）為何，使用UGC的[公用存放區](working-with-srp.md)都能以程式設計方式存取UGC。
 
 **存放庫中UGC的位置和格式可能會變更，而不會出現警告**。
 
