@@ -1,6 +1,6 @@
 ---
 title: 社群群組
-description: 瞭解社群群組功能如何讓您透過Publish和Author中的授權使用者，在社群網站中以動態方式建立子社群。
+description: 瞭解社群群組功能如何讓您在「發佈」和「作者」中，由授權使用者在社群網站中以動態方式建立子社群。
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: authoring
@@ -12,11 +12,9 @@ feature: Communities
 role: Admin
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '558'
+source-wordcount: '565'
 ht-degree: 1%
-
 ---
-
 # 社群群組 {#community-groups}
 
 社群群組功能可讓發佈和作者環境中的授權使用者（社群成員和作者）在社群網站中動態建立子社群。

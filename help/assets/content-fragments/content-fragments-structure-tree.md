@@ -9,9 +9,7 @@ source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
 workflow-type: tm+mt
 source-wordcount: '110'
 ht-degree: 28%
-
 ---
-
 # 內容片段結構樹 {#content-fragment-structure-tree}
 
 使用AEM中內容片段編輯器的結構樹功能，更能瞭解您的Headless內容。

@@ -11,11 +11,9 @@ feature: Communities
 role: Admin
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '339'
+source-wordcount: '349'
 ht-degree: 2%
-
 ---
-
 # 主要內容功能 {#featured-content-feature}
 
 ## 簡介 {#introduction}

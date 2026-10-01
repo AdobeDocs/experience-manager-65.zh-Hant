@@ -11,11 +11,9 @@ feature: Adaptive Forms
 role: User, Developer
 source-git-commit: e821be5233fd5f6688507096790d219d25903892
 workflow-type: tm+mt
-source-wordcount: '269'
+source-wordcount: '266'
 ht-degree: 0%
-
 ---
-
 # 在工作摘要窗格中顯示資訊 {#displaying-information-in-the-task-summary-pane}
 
 當您在AEM Forms工作區中開啟任務時，「任務摘要」窗格會顯示任務的摘要。 這項工作的相關額外資訊為AEM Forms工作區的一般使用者增加了更多價值。
@@ -32,7 +30,7 @@ AEM Forms工作區可讓您在「工作摘要」窗格中顯示您所選擇的�
 1. 以下是「工作摘要」頁面上顯示資訊的範例。
 
    * 在`https://'[server]:[port]'/lc/crx/de`登入CRXDE Lite環境。
-   * `Create a node`**SampleSummary** ` under `/content` with type `nt：unstructured`. In the properties of this node, add `sling：resourceType` of type String and value `SampleSummary`. In the Access Control List of this node, add an entry for `PERM_WORKSPACE_USER` allowing `jcr：read` privileges.`
+   * `Create a node`**SampleSummary** ` under `/content` with type `nt:unstructured`. In the properties of this node, add `sling:resourceType` of type String and value `SampleSummary`. In the Access Control List of this node, add an entry for `PERM_WORKSPACE_USER` allowing `jcr:read` privileges.`
    * `/apps`下的&#x200B;`Create a folder`**SampleSummary**。 在`/apps/SampleSummary`的存取控制清單中，新增允許`jcr:readprivileges`的`PERM_WORKSPACE_USER`專案。
    * `Create a file `html.esp` at `/apps/SampleSummary`. For example, add the following lines in `html.esp`.`
 

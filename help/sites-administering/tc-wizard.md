@@ -1,17 +1,15 @@
 ---
 title: 語言複製精靈
-description: 瞭解如何在AdobeExperience Manager中使用語言複製精靈。
+description: 瞭解如何在Adobe Experience Manager中使用語言複製精靈。
 feature: Language Copy
 exl-id: 99f9929f-26de-4e95-9ee3-d70512d53bb7
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 source-git-commit: eae057caed533ef16bb541b4ad41b8edd7aaa1c7
 workflow-type: tm+mt
-source-wordcount: '219'
+source-wordcount: '220'
 ht-degree: 8%
-
 ---
-
 # 語言複製精靈{#language-copy-wizard}
 
 語言複製精靈是建立和檢測多語言內容結構的引導式體驗。 現在建立語言副本會更簡單快速。

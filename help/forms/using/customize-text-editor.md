@@ -11,11 +11,9 @@ solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
-source-wordcount: '597'
-ht-degree: 1%
-
+source-wordcount: '623'
+ht-degree: 2%
 ---
-
 # 自訂文字編輯器{#customize-text-editor}
 
 ## 概觀 {#overview}
@@ -57,7 +55,7 @@ ht-degree: 1%
 
       ![重疊節點](assets/2.png)
 
-   1. 按一下&#x200B;**確定**。 資料夾結構會在apps資料夾中建立。
+   1. 按一下&#x200B;**「確定」**。 資料夾結構會在apps資料夾中建立。
 
    1. 按一下&#x200B;**「儲存全部」**。
 

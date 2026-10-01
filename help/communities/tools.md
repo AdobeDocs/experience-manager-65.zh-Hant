@@ -14,9 +14,7 @@ source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
 source-wordcount: '112'
 ht-degree: 0%
-
 ---
-
 # 社群工具 {#communities-tools}
 
 若要存取Communities工具主控台，請登入您的Author例項：
