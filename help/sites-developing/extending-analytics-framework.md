@@ -11,11 +11,9 @@ feature: Integration
 role: Developer
 source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
-source-wordcount: '1610'
+source-wordcount: '1638'
 ht-degree: 0%
-
 ---
-
 # 自訂Adobe Analytics框架{#customizing-the-adobe-analytics-framework}
 
 Adobe Analytics架構會決定使用Adobe Analytics追蹤的資訊。 若要自訂預設架構，請使用JavaScript新增自訂追蹤、整合Adobe Analytics外掛程式，以及變更用於追蹤之架構內的一般設定。
@@ -24,7 +22,7 @@ Adobe Analytics架構會決定使用Adobe Analytics追蹤的資訊。 若要自�
 
 當頁面與Adobe Analytics架構相關聯，且頁面包含[對Analytics模組](/help/sites-administering/adobeanalytics.md)的參考時，系統會自動為頁面產生analytics.sitecatalyst.js檔案。
 
-頁面中的JavaScript會建立`s_gi`物件(s_code.js Adobe Analytics程式庫所定義)並指派值給其屬性。 物件執行個體的名稱為`s`。 本節中顯示的程式碼範例會對此`s`變數提供數個參考。
+頁面中的JavaScript會建立`s_gi`物件（s_code.js Adobe Analytics程式庫所定義）並指派值給其屬性。 物件執行個體的名稱為`s`。 本節中顯示的程式碼範例會對此`s`變數提供數個參考。
 
 以下範常式式碼類似於analytics.sitecatalyst.js檔案中的程式碼：
 
@@ -122,7 +120,7 @@ s.trackingServerSecure = "xxxxxxx.net";
 
 `s.prop10= 'CONSTANT';`
 
-[analytics.sitecatalyst.js](/help/sites-developing/extending-analytics-components.md)檔案中的程式碼(包含Adobe Analytics `s-code.js`檔案的內容)包含下列程式碼：
+[analytics.sitecatalyst.js](/help/sites-developing/extending-analytics-components.md)檔案中的程式碼（包含Adobe Analytics `s-code.js`檔案的內容）包含下列程式碼：
 
 `if (s.usePlugins) s.doPlugins(s)`
 
@@ -185,7 +183,7 @@ s.doPlugins=s_doPlugins;
 */
 ```
 
-analytics.sitecatalyst.js檔案中的程式碼(包括Adobe Analytics s_code.js檔案的內容)包含下列程式碼：
+analytics.sitecatalyst.js檔案中的程式碼（包括Adobe Analytics s_code.js檔案的內容）包含下列程式碼：
 
 若為(s.usePlugins) s.doPlugins(s)
 
@@ -193,7 +191,7 @@ analytics.sitecatalyst.js檔案中的程式碼(包括Adobe Analytics s_code.js�
 
 >[!NOTE]
 >
->請勿編輯/libs/cq/analytics/components/sitecatalyst/config.js.jsp檔案。 某些AEM升級或維護工作可以重新安裝原始檔案，移除您的變更。
+>請勿編輯/libs/cq/analytics/components/sitecatalyst/config.js.jsp檔案。 某些AEM升級或維護工作可重新安裝原始檔案，並移除您的變更。
 
 1. 在CRXDE Lite中，建立/apps/cq/analytics/components資料夾結構：
 
@@ -240,9 +238,9 @@ analytics.sitecatalyst.js檔案中的程式碼(包括Adobe Analytics s_code.js�
 
 ### 在AEM中使用Adobe Analytics外掛程式 {#using-adobe-analytics-plugins-in-aem}
 
-取得適用於Adobe Analytics外掛程式的JavaScript程式碼，並將其整合至AEM中的Adobe Analytics架構。 將程式碼新增至類別`sitecatalyst.plugins`的使用者端程式庫資料夾，以便您的自訂JavaScript程式碼可以使用該程式碼。
+取得適用於Adobe Analytics外掛程式的JavaScript程式碼，並將它們整合至AEM中的Adobe Analytics架構。 將程式碼新增至類別`sitecatalyst.plugins`的使用者端程式庫資料夾，以便您的自訂JavaScript程式碼可以使用該程式碼。
 
-例如，如果您整合`getQueryParams`外掛程式，您可以從自訂JavaScript的`s_doPlugins`函式呼叫外掛程式。 下列範常式式碼在觸發Adobe Analytics呼叫時，會從反向連結的URL傳送&#x200B;**&quot;pid&quot;**&#x200B;中的查詢字串做為&#x200B;**eVar1**。
+例如，如果您整合`getQueryParams`外掛程式，您可以從自訂JavaScript的`s_doPlugins`函式呼叫外掛程式。 下列範常式式碼會在觸發Adobe Analytics呼叫時，從反向連結的URL以&#x200B;**eVar1**&#x200B;形式傳送&#x200B;**&quot;pid&quot;**&#x200B;中的查詢字串。
 
 ```
 s.usePlugins=true;
@@ -263,17 +261,17 @@ AEM會安裝下列Adobe Analytics外掛程式，以便依預設提供：
 
 >[!NOTE]
 >
->為外掛程式建立使用者端程式庫資料夾。 請勿將外掛程式新增至`/libs/cq/analytics/clientlibs/sitecatalyst/plugins`資料夾。 此作法可確保在AEM重新安裝或升級工作期間，不會覆寫您對`sitecatalyst.plugins`類別的貢獻。
+>為外掛程式建立使用者端程式庫資料夾。 請勿將外掛程式新增至`/libs/cq/analytics/clientlibs/sitecatalyst/plugins`資料夾。 此作法可確保在AEM重新安裝或升級工作時，不會覆寫您對`sitecatalyst.plugins`類別的貢獻。
 
 使用以下程式，為您的外掛程式建立使用者端程式庫資料夾。 您只需要執行一次此程式。 若要將外掛程式新增至使用者端程式庫資料夾，請使用後續程式。
 
-1. 在網頁瀏覽器中，開啟「CRXDE Lite」。 ([http://localhost:4502/crx/de](http://localhost:4502/crx/de))
+1. 在網頁瀏覽器中，開啟CRXDE Lite。 ([http://localhost:4502/crx/de](http://localhost:4502/crx/de))
 
 1. 以滑鼠右鍵按一下/apps/my-app/clientlibs資料夾，然後按一下「建立>建立節點」。 輸入下列屬性值，然後按一下「確定」：
 
    * 名稱：使用者端程式庫資料夾的名稱，例如my-plugins
 
-   * 型別： cq：ClientLibraryFolder
+   * 型別： cq:ClientLibraryFolder
 
 1. 選取您建立的使用者端程式庫資料夾，並使用右下方的屬性列來新增下列屬性：
 

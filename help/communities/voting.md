@@ -11,11 +11,9 @@ feature: Communities
 role: Admin
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '257'
 ht-degree: 1%
-
 ---
-
 # 使用投票 {#using-voting}
 
 `Voting`元件是實用的工具，可讓社群成員為特定內容評分，例如QnA元件中的答案。 使用`Voting`元件時，成員會選取向上或向下箭頭來表示其意見。

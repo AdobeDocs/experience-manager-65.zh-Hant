@@ -12,11 +12,9 @@ feature: Communities
 role: Admin
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '983'
+source-wordcount: '993'
 ht-degree: 0%
-
 ---
-
 # 使用註解 {#using-comments}
 
 ## 簡介 {#introduction}
@@ -190,7 +188,7 @@ ht-degree: 0%
 
 網站訪客登入時，根據設定，他們可能
 
-* Post新註解
+* 發表新評論
 * 編輯自己的評論
 * 刪除自己的評論
 * 標幟其他人的評論

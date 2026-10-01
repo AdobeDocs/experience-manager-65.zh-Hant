@@ -13,9 +13,7 @@ source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
 workflow-type: tm+mt
 source-wordcount: '472'
 ht-degree: 1%
-
 ---
-
 # ContextHub 診斷 {#contexthub-diagnostics}
 
 ContextHub提供診斷頁面，您可在其中檢視ContextHub架構的概觀。 若要開啟頁面，請前往AEM作者執行個體的`contexthub.diagnostics.html`頁面，例如：

@@ -12,11 +12,9 @@ feature: Integration
 role: Admin
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
-source-wordcount: '445'
-ht-degree: 0%
-
+source-wordcount: '451'
+ht-degree: 1%
 ---
-
 
 # Analytics與外部提供者 {#analytics-with-external-providers}
 
@@ -67,12 +65,12 @@ _gaq.push(['_trackPageview']);
 對於基本設定：
 
 1. 開啟&#x200B;**工具**&#x200B;主控台。
-1. 從左窗格中，展開&#x200B;**Cloud Service設定**。
+1. 從左窗格，展開&#x200B;**雲端服務設定**。
 1. 連按兩下&#x200B;**Generic Analytics Snippet**&#x200B;以開啟頁面：
 
    ![一般Analytics程式碼片段](assets/analytics_genericoverview.png)
 
-1. 按一下+即可使用對話方塊新增組態。 至少要指定一個名稱，例如Google Analytics：
+1. 按一下+即可使用對話方塊新增組態。 至少指派一個名稱，例如Google Analytics：
 
    ![建立設定](assets/analytics_addconfig.png)
 
@@ -87,13 +85,13 @@ _gaq.push(['_trackPageview']);
 建立服務組態之後，您必須設定使用它所需的頁面：
 
 1. 導覽至頁面。
-1. 從Sidekick開啟&#x200B;**頁面屬性**，然後開啟&#x200B;**Cloud Service**&#x200B;索引標籤。
+1. 從Sidekick開啟&#x200B;**頁面屬性**，然後開啟&#x200B;**雲端服務**&#x200B;標籤。
 1. 按一下&#x200B;**新增服務**，然後選取所需的服務。 例如，**Generic Analytics程式碼片段**：
 
    ![正在新增雲端服務](assets/analytics_selectservice.png)
 
 1. 按一下&#x200B;**確定**&#x200B;以儲存。
-1. 您返回&#x200B;**Cloud Service**&#x200B;標籤。 **Generic Analytics程式碼片段**&#x200B;現在會與訊息`Configuration reference missing`一併列出。 使用下拉式清單來選取您的特定服務執行個體。 例如，google-analytics：
+1. 您返回&#x200B;**雲端服務**&#x200B;標籤。 **Generic Analytics程式碼片段**&#x200B;現在會與訊息`Configuration reference missing`一併列出。 使用下拉式清單來選取您的特定服務執行個體。 例如，google-analytics：
 
    ![正在新增雲端服務組態](assets/analytics_selectspecificservice.png)
 

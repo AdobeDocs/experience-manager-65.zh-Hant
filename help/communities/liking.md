@@ -11,11 +11,9 @@ feature: Communities
 role: Admin
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '247'
+source-wordcount: '251'
 ht-degree: 1%
-
 ---
-
 # 使用連結 {#using-liking}
 
 `Liking`元件是實用工具，可讓使用者表達對特定內容的意見，例如論壇內的評論。 使用`Liking`元件時，成員會選取心形圖示來表示正面意見。

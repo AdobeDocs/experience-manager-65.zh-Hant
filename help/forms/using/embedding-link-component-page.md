@@ -11,16 +11,14 @@ feature: Forms Portal
 role: Admin, User, Developer
 source-git-commit: e821be5233fd5f6688507096790d219d25903892
 workflow-type: tm+mt
-source-wordcount: '408'
+source-wordcount: '412'
 ht-degree: 0%
-
 ---
-
 # 將連結元件內嵌在頁面中{#embedding-link-component-in-a-page}
 
 ## 先決條件 {#prerequisites}
 
-連結元件是Document Services類別的成員。 請確定AEM元件瀏覽器中顯示Document Services類別。 如果未列出類別，請依照[啟用Forms Portal元件](/help/forms/using/enabling-forms-portal-components.md)中列出的步驟操作。
+連結元件是Document Services類別的成員。 請確定AEM元件瀏覽器中顯示「檔案服務」類別。 如果未列出類別，請依照[啟用Forms Portal元件](/help/forms/using/enabling-forms-portal-components.md)中列出的步驟操作。
 
 ## 連結元件 {#link-component}
 
@@ -42,7 +40,7 @@ ht-degree: 0%
 
    * **資產路徑**：儲存資產的存放庫路徑。
 
-   * **轉譯器型別**：轉譯器格式 — PDF、HTML或自動。 「自動」轉譯型別會偵測使用者環境，並據此將表單轉譯為HTML或PDF。 例如，如果表單可從行動裝置存取，則自動轉譯型別會以HTML轉譯表單。
+   * **轉譯器型別**：轉譯器格式 — PDF、HTML或Auto。 自動轉譯型別會偵測使用者環境，並據此將表單轉譯為HTML或PDF。 例如，如果表單可從行動裝置存取，則自動轉譯型別會在HTML中轉譯表單。
    * **將URL：** URL送至送出表單資料的Servlet。
    * **HTML設定檔**：將表單轉譯為HTML的設定檔。
    * **PDF設定檔**：將表單轉譯為PDF檔案的設定檔。
@@ -53,9 +51,9 @@ ht-degree: 0%
 
 ## 使用連結元件的最佳實務 {#best-practices-for-using-link-component-br}
 
-* 如果「表單路徑」中指定的路徑指向的檔案將PDF作為其允許的轉譯格式，請確保您選擇「PDF」作為轉譯型別。
+* 如果「表單路徑」中指定的路徑指向的檔案將PDF作為其允許的轉譯格式，請確保您選擇PDF作為轉譯器型別。
 * 表單的提交URL可在數個位置指定，其優先順序如下：
 
-   1. 表單中內嵌的提交URL （在提交按鈕中）具有最高優先順序。
-   1. Forms Manager中提到的提交URL具有中優先順序。
-   1. Forms入口網站中提到的提交URL優先順序最低。
+  1. 表單中內嵌的提交URL （在提交按鈕中）具有最高優先順序。
+  1. Forms Manager中提到的提交URL具有中優先順序。
+  1. Forms入口網站中提到的提交URL優先順序最低。

@@ -11,11 +11,9 @@ feature: Developing
 role: Developer
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
-source-wordcount: '857'
+source-wordcount: '861'
 ht-degree: 0%
-
 ---
-
 # 編碼提示{#coding-tips}
 
 ## 儘可能使用taglibs或HTL {#use-taglibs-or-htl-as-much-as-possible}
@@ -75,19 +73,19 @@ API一經棄用，最好尋找新的建議方法，而非依賴已棄用的API�
 
 ### 撰寫可當地語系化的程式碼 {#write-localizable-code}
 
-任何不是由作者提供的字串，都應透過JSP/Java中的&#x200B;*I18n.get()*&#x200B;和JavaScript中的&#x200B;*CQ.I18n.get()*，包裝在對AEM i18n字典的呼叫中。 如果找不到實作，此實作會傳回傳遞至它的字串，因此在使用主要語言實作功能後，如此可提供實作本地化的彈性。
+任何不是由作者提供的字串，都應透過JSP/Java中的&#x200B;*I18n.get()*&#x200B;和JavaScript中的&#x200B;*CQ.I18n.get()*，包裝在對AEM的i18n字典的呼叫中。 如果找不到實作，此實作會傳回傳遞至它的字串，因此在使用主要語言實作功能後，如此可提供實作本地化的彈性。
 
 ### 為安全逸出資源路徑 {#escape-resource-paths-for-safety}
 
-雖然JCR中的路徑不應包含空格，但它們的存在不應導致程式碼中斷。 Jackrabbit提供&#x200B;*escape()*&#x200B;和&#x200B;*escapePath()*&#x200B;方法的文字公用程式類別。 針對JSP，Granite UI會公開&#x200B;*granite：encodeURIPath() EL*&#x200B;函式。
+雖然JCR中的路徑不應包含空格，但它們的存在不應導致程式碼中斷。 Jackrabbit提供&#x200B;*escape()*&#x200B;和&#x200B;*escapePath()*&#x200B;方法的文字公用程式類別。 針對JSP，Granite UI會公開&#x200B;*granite:encodeURIPath() EL*&#x200B;函式。
 
 ### 使用XSS API和/或HTL來抵禦跨網站指令碼攻擊 {#use-the-xss-api-and-or-htl-to-protect-against-cross-site-scripting-attacks}
 
-AEM提供的XSS API可輕鬆清除引數，並確保安全性不受跨網站指令碼攻擊。 此外，HTL也將這些保護功能直接內建在範本語言中。 API速查表可在[開發 — 指導方針與最佳實務](/help/sites-developing/dev-guidelines-bestpractices.md)下載。
+AEM提供的XSS API可輕鬆清除引數，並確保安全不受跨網站指令碼攻擊。 此外，HTL也將這些保護功能直接內建在範本語言中。 API速查表可在[開發 — 指導方針與最佳實務](/help/sites-developing/dev-guidelines-bestpractices.md)下載。
 
 ### 實作適當的記錄 {#implement-appropriate-logging}
 
-對於Java™程式碼，AEM支援slf4j作為記錄訊息的標準API，並且應該與透過OSGi主控台提供的設定一起使用，以確保管理的一致性。 Slf4j會公開五個不同的記錄層級。 Adobe建議在選擇要在哪個層級記錄訊息時遵循下列准則：
+對於Java™程式碼，AEM支援slf4j作為記錄訊息的標準API，並應與透過OSGi主控台提供的設定搭配使用，以確保管理的一致性。 Slf4j會公開五個不同的記錄層級。 Adobe建議您在選擇要在哪個層級記錄訊息時，遵循下列准則：
 
 * 錯誤：當程式碼中的某些專案中斷時，處理無法繼續。 這通常會發生於非預期的例外狀況。 在這些情況下包含棧疊追蹤會很有幫助。
 * 警告：當某些專案未正常運作，但處理作業可以繼續進行。 這通常是我們所預期的例外狀況的結果，例如&#x200B;*PathNotFoundException*。

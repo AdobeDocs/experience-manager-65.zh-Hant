@@ -11,11 +11,9 @@ feature: Communities
 role: Admin
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '456'
+source-wordcount: '463'
 ht-degree: 1%
-
 ---
-
 # 搜尋功能 {#search-feature}
 
 搜尋功能可與各種其他功能（例如論壇）搭配使用，以提供搜尋內容的功能。
@@ -53,7 +51,7 @@ ht-degree: 1%
 * **[!UICONTROL 搜尋路徑]**
 透過使用新增專案按鈕新增搜尋路徑，內容搜尋受到限制。 例如，若要將搜尋限制在特定論壇，請選取放置在頁面中的論壇元件：
 
-   * `/content/community-components/en/forum/jcr:content/content/forum`
+  * `/content/community-components/en/forum/jcr:content/content/forum`
 
 * **[!UICONTROL 結果頁面]**
 結果將出現在使用瀏覽器選取包含`Search Results`元件的頁面所指定的個別頁面上。
