@@ -6,9 +6,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
 exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
-source-git-commit: 11e155ed72caf8f75bd2d8c8293723f24fe82945
+source-git-commit: e30b37bc03a811eca3dac08ca30c5ab32343be4e
 workflow-type: tm+mt
-source-wordcount: '7679'
+source-wordcount: '7612'
 ht-degree: 4%
 ---
 # [!DNL Adobe Experience Manager] 6.5最新Service Pack發行說明 {#aem-service-pack-release-notes}
@@ -46,11 +46,11 @@ Experience Manager 6.5.25.0包含新功能、客戶要求的重要增強功能�
 
 ### Forms的主要功能和增強功能
 
-* [多執行緒PDF Generator轉換](/help/forms/using/install-configure-document-services.md#windows-only-enable-multi-threaded-pdf-generator-conversions)：新增支援，當AEM Forms在單一設定的使用者帳戶下以Windows服務形式執行時，可同時執行Microsoft Word (doc/docx)和Excel (xls/xlsx)轉換。
+* [多執行緒PDF Generator轉換](/help/forms/using/install-configure-document-services.md#windows-only-enable-multi-threaded-pdf-generator-conversions)：新增支援，當AEM Forms在單一設定的服務帳戶下以Windows服務形式執行時，可同時執行Microsoft Word (doc/docx)和Excel (xls/xlsx)轉換。
 
 * [XFA型PDF的階層式書籤](https://helpx.adobe.com/tw/content/dam/help/en/experience-manager/6-5/forms/pdf/using-designer.pdf)：輸出服務和AEM Forms Designer現在會在靜態互動和平坦的XFA型PDF中產生結構化的書籤階層。 書籤會依照在文字方塊的「協助工具」屬性中設定的標題層級(H1-H6)顯示，因此H1-H6專案會巢狀內嵌在正確的父項下，而非平行顯示。
 
-* [&#x200B; JEE交易記錄中的表單層級詳細資料](/help/forms/using/transaction-report-overview-jee.md#form-level-details-transaction-log-jee)： JEE上的AEM Forms現在會將每個交易的表單層級詳細資料記錄在`transaction_log.log`中，以及現有的服務和操作資訊。 管理員可在分析提交、轉譯和轉換時，將交易報告資料與特定表單建立關聯。 (FORMS-21574)
+* [ JEE交易記錄中的表單層級詳細資料](/help/forms/using/transaction-report-overview-jee.md#form-level-details-transaction-log-jee)： JEE上的AEM Forms記錄每個交易的`transaction_log.log`中的表單層級詳細資料，以及服務和操作資訊。 管理員可在分析提交、轉譯和轉換時，將交易報告資料與特定表單建立關聯。 (FORMS-21574)
 
 * [已更新支援的平台矩陣](/help/forms/using/aem-forms-jee-supported-platforms.md)： JEE Service Pack上的AEM Forms 6.5.25.0新增支援與下列較新技術的相容性：
   * JBoss® Enterprise Application Platform (EAP) 7.4.23
@@ -63,7 +63,7 @@ Experience Manager 6.5.25.0包含新功能、客戶要求的重要增強功能�
   > * [針對獨立環境，將JEE版AEM Forms的JBoss EAP從7.4.10升級至7.4.23](/help/forms/using/upgrade-jboss-eap-from-7-4-10-to-7-4-23.md)。
   > * [針對叢集環境，將JEE上的AEM Forms的JBoss EAP叢集從7.4.10升級至7.4.23。](/help/forms/using/upgrade-jboss-eap-cluster-from-7-4-10-to-7-4-23.md)
 
-* **Configuration Manager (LCM) Express Mode認證提示：**&#x200B;當您在JEE上使用Configuration Manager (LCM)在Express Mode設定AEM Forms時，LCM現在會顯示新畫面，在設定期間提示您輸入AEM管理員認證，而不是使用內建的預設認證。 此變更可透過AEM Service Pack 6.5.25.0的[Hotfix](/help/release-notes/aem-forms-hotfix.md)取得。 如需設定步驟，請參閱[使用JBoss Turnkey在JEE上安裝和部署AEM Forms](https://www.adobe.com/go/learn_aemforms_installTurnkey_65_tw)。 (FORMS-26365)
+* **Configuration Manager (LCM) Express模式認證提示：**&#x200B;當您在JEE上的Express模式中設定AEM Forms時，LCM會提示您輸入AEM系統管理員認證，而不是使用預設值。 此變更可透過AEM Service Pack 6.5.25.0的[Hotfix](/help/release-notes/aem-forms-hotfix.md)取得。 如需設定步驟，請參閱[使用JBoss Turnkey在JEE上安裝和部署AEM Forms 6.5](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/install-turnkey.pdf)。 (FORMS-26365)
 
 ## 已修正Service Pack 25中的問題 {#fixed-issues}
 
@@ -85,7 +85,7 @@ Experience Manager 6.5.25.0包含新功能、客戶要求的重要增強功能�
 * 重複暫留動作後，「刪除」強制回應視窗中的工具提示現在會一致顯示。 使用者可以將指標移開並返回圖示以再次閱讀工具提示。 (SITES-24778)
 * 現在，使用者從Sites首頁開啟左側邊欄後，左側邊欄會依預期順序收到焦點。 鍵盤和熒幕助讀程式的使用者可從設定按鈕移至邊欄內容，無需略過擴充區域。 (SITES-24754)
 * 「焦點」管理現在可在輪播模式對話方塊中一致運作。 鍵盤和熒幕助讀程式的使用者可以從模組標題開始，並在關閉對話方塊後返回原始控制項。 (SITES-24716)
-* 現在，「連結選取」對話方塊會將焦點傳回至使用者關閉對話方塊後開啟該對話方塊的控制項。 關閉對話方塊後，鍵盤和熒幕助讀程式的使用者不再失去位置。 (SITES-24707)
+* 現在，「連結選取」對話方塊會將焦點傳回至使用者關閉對話方塊後開啟該對話方塊的控制項。 鍵盤和熒幕助讀程式的使用者關閉對話方塊後，不再遺失其導覽內容。 (SITES-24707)
 * 當作者開啟或關閉對話方塊時，「影像」強制回應視窗不再將焦點移至第一個索引標籤或首頁面地標。 焦點會先移至對話方塊標題，然後回到開啟對話方塊的控制。 (SITES-24693)
 * 現在，當強制回應對話方塊開啟時，「參考邊欄」可正確管理焦點。 鍵盤和熒幕助讀程式的使用者會保留在對話方塊內，直到關閉為止，然後繼續導覽，而不會失去內容。 (SITES-24683)
 * 當作者開啟或關閉超連結路徑選擇模式時，該模式不再將焦點移至錯誤的欄位或控制項。 焦點從強制回應視窗標題開始，然後返回到開啟強制回應視窗的按鈕。 (SITES-24672)
@@ -109,13 +109,13 @@ Experience Manager 6.5.25.0包含新功能、客戶要求的重要增強功能�
 * 「編輯版面」工具列現在會顯示「案頭」按鈕的清除選取狀態。 「案頭」選項與其他裝置按鈕相符，讓使用中的檢視更容易識別。 (SITES-25290)
 * 「編輯版面」工具列現在會標籤輔助技術的尺標區域。 熒幕助讀程式的使用者在版面編輯期間不會再遇到未標籤的測量值。 (SITES-25287)
 * 「編輯版面」工具列現在會以未勾選的狀態顯示完整的iPhone 8 Plus按鈕標籤。 當按鈕周圍有足夠的空間時，標籤不再截斷。 (SITES-25284)
-* 報告的問題說明「編輯配置」工具列中有一個焦點指示器，似乎涵蓋多個裝置控制項。 當焦點外框包含相鄰按鈕時，可能會失去作用中控制項追蹤的鍵盤使用者會成為關注的焦點。 問題按預期運作。 (SITES-25283)
+* 報告的問題說明「編輯配置」工具列中有一個焦點指示器，似乎涵蓋多個裝置控制項。 當焦點外框包含相鄰按鈕時，鍵盤使用者無法識別作用中控制項。 問題按預期運作。 (SITES-25283)
 * 所報告的問題描述了在每個按鈕標籤之前宣佈註解的註解模式按鈕。 令人擔心的焦點在於不清楚的熒幕助讀程式輸出，以執行如註釋、色票和刪除等動作。 (SITES-25277)
 * 註解按鈕文字現在在註解強制回應視窗中使用足夠的對比。 此更新可改善視力缺佳使用者的可讀性，並支援WCAG對比度要求。 (SITES-25267)
 * 熒幕助讀程式現在會在使用者篩選「插入新元件」清單時收到狀態更新。 強制回應會朗讀結果變更，讓使用者瞭解清單在他們輸入時發生了變更。 (SITES-25251)
 * 記錄的問題說明註釋模組標題缺少標題語意。 問題是熒幕助讀程式導覽和瞭解模組結構的能力。 (SITES-25248)
 * 頁面編輯器側邊欄中的標題層級，現在會遵循更清楚的內容階層。 左側欄區段不再顯示為輔助技術的主要頁面標題。 (SITES-25222)
-* Assets左側邊欄中的「編輯」按鈕現在擁有較大的觸控目標。 具有行動需求的使用者可以更輕鬆地啟動按鈕，並避免附近的控制項。 (SITES-25221)
+* Assets左側邊欄中的「編輯」按鈕現在擁有較大的觸控目標。 身心障礙使用者可以更輕鬆地啟動按鈕，並避免附近的控制項。 (SITES-25221)
 * Assets左側邊欄現在會在「編輯」按鈕開啟新的瀏覽器標籤時識別。 使用者可以預期導覽變更，而非意外遺失內容。 (SITES-25220)
 * 現在，使用者套用增加文字間距時，元件標題可正確顯示。 側邊欄會保留可讀的標籤，並支援WCAG文字間距要求。 (SITES-25219)
 * 側邊欄元件中的篩選器欄位現在會顯示適當的存取名稱。 此更新可協助熒幕助讀程式的使用者識別欄位，而不需依賴預留位置文字。 (SITES-25212)
@@ -134,7 +134,7 @@ Experience Manager 6.5.25.0包含新功能、客戶要求的重要增強功能�
 * 模型對話方塊現在會針對標題控制項使用更精確的協助工具標示。 說明和切換全熒幕按鈕仍為互動式控制項，不再顯示為熒幕助讀程式的標題。 (SITES-24696)
 * 「篩選器邊欄」地標現在會使用不同的標籤來識別其用途。 熒幕助讀程式的使用者可以更自信地導覽具有多個類似地標的頁面。 (SITES-24686)
 * 參考邊欄訊息現在為依賴足夠文字對比的使用者提供更好的可讀性。 報告的問題涉及選擇範圍和多重選擇訊息，在背景中看起來太淺。 (SITES-24666)
-* 「搜尋」強制回應視窗現在會為「移除位置」和「關閉」按鈕提供較大的觸控目標。 這項變更可協助手部顫動、痙攣或視力缺佳的使用者啟動預期的控制項。 (SITES-24530)
+* 「搜尋」強制回應視窗現在會為「移除位置」和「關閉」按鈕提供較大的觸控目標。 此變更可協助殘障或視力缺佳的使用者啟用預期的控制項。 (SITES-24530)
 * Adobe Experience Manager標題連結報告為使用不正確的ARIA屬性。 測試確認連結控制可擴充內容，因此現有的存取狀態仍然適當。 (SITES-24528)
 * 「元件」清單中「署名」按鈕的焦點指示器不再顯示為截斷。 可見的大綱可協助鍵盤使用者追蹤其在編輯器中的位置。 (SITES-24503)
 * 一個回報問題說明「元件」面板中資訊工具提示圖示遺漏替代文字。 問題並未重現，但檢閱確認資訊圖示必須公開清楚的存取名稱。 (SITES-24500)
@@ -190,7 +190,7 @@ Assets搜尋現在會在使用者選取或變更篩選器時正確回應。 篩�
 #### [!DNL Content Fragments] — 模型與模型編輯器{#sites-models-model-editor-6525}
 
 * 當選取的值需要有效的模型型別時，使用者現在會在內容片段模型編輯器中看到當地語系化的驗證訊息。 編輯器不再於本地化介面中顯示未翻譯的英文訊息。 (SITES-41117)
-* 內容片段模型篩選器面板現在會將其狀態和標題字串當地語系化。 使用者不會再看到未翻譯的標籤，例如模型標題、狀態、草稿、已啟用和已停用。 (SITES-30863)
+* 內容片段模型篩選器面板現在會將其狀態和標題字串當地語系化。 使用者不會再看到模型標題、狀態、草稿、已啟用和已停用的未翻譯標籤。 (SITES-30863)
 
 <!-- #### [!DNL Content Fragments] - REST API{#sites-restapi-6525} -->
 
@@ -203,7 +203,7 @@ ContextHub現在載入時不會出現JavaScript錯誤，並會中斷個人化。
 #### 核心元件{#sites-core-components-6525}
 
 * 當請求鎖定缺少的DAM資源時，AEM不再產生重複的ThumbnailServlet錯誤。 此servlet會在重新導向後停止處理，以防止NullPointerException專案淹沒錯誤記錄。 (SITES-41238)
-* 當作者重新開啟元件對話方塊時，AEM不再將選用對話方塊欄位標示為必填。 對話方塊會持續讓驗證集中在實際需要輸入的欄位上，以避免誤導性的索引標籤層級錯誤。 (SITES-40449)
+* 當作者重新開啟元件對話方塊時，AEM不再將選用對話方塊欄位標示為必填。 此對話方塊可讓驗證聚焦於需要輸入的欄位，以避免誤導性的索引標籤層級錯誤。 (SITES-40449)
 
 * AEM包含數個反向移植安全性修正，可加強Sites和相關雲端服務元件。 這些修正可減少跨網站指令碼風險，並改善受影響編寫路徑的請求處理方式。 (SITES-38314)
 * 影像v3元件設定對話方塊現在會在頁面編輯器中本地化字串。 作者在本地化介面中設定影像元件時，不會再看到未翻譯的標籤。 (SITES-38726)
@@ -214,7 +214,7 @@ ContextHub現在載入時不會出現JavaScript錯誤，並會中斷個人化。
 
 #### 行人穿越道 {#sites-crosswalk-6525}
 
-* 交叉通路在安裝後不再需要個別的套件和組態設定。 AEM包含現成可用套件的必要套件組合、內容套件、系統使用者、服務使用者對應及功能切換。 (SITES-41417)
+* 交叉通路在安裝後不再需要個別的套件和組態設定。 AEM包含標準套件中的必要套件、內容套件、系統使用者、服務使用者對應和功能切換。 (SITES-41417)
 * 行人穿越道工作流程現在可以在AEM 6.5中使用必要的cq-wcm-core支援。 作者可使用「建立範本」和「開啟Universal Editor」動作，而不需個別更新核心套件。 (SITES-37666)
 
 #### 體驗片段{#sites-experiencefragments-6525}
@@ -278,7 +278,7 @@ AEM現在會在作者建立體驗片段變數並捲動通過前40個結果時載
 * 「我的共用」使用者端程式庫現在會在將共用資產標題資料新增至頁面標籤之前，安全地處理該資料。 產生的共用頁面不再讓使用者透過操控的資產中繼資料接受指令碼插入。 (ASSETS-60898)
 
 * Adobe Stock授權現在可在Assets使用者介面中正常運作。 AEM載入股票資產設定檔和權益資料後，授權按鈕不再保持停用。 (ASSETS-62610)
-* 現成可用的資產到期通知現在可正確處理接近到期日期。 當剩餘時間達到設定的臨界值時，會執行提醒電子郵件，而非略過八天過期的資產。 (ASSETS-57857)
+* 標準資產到期通知現在可正確處理接近到期日期。 當剩餘時間達到設定的臨界值時，會執行提醒電子郵件，而非略過八天過期的資產。 (ASSETS-57857)
 
 * AEM Assets現在會在使用者選擇儲存的搜尋後，還原鍵盤導覽。 介面可讓使用者離開下拉式清單，而不需重新整理或重新啟動Assets檢視。 (ASSETS-52061)
 
@@ -298,7 +298,7 @@ Subtitles and Audio Tracks下拉式清單現在會將阿拉伯語顯示為Dynami
 * 升級至AEM Forms Service Pack 6.5.24.0後，Red Hat Enterprise Linux (RHEL) 8上的輸出服務不再當機，並出現不合法的指令錯誤。 檔案產生和表單輸出處理完成，不會突然停止服務。 (FORMS-25192)
 * 當初始例項數設為0時，在Adaptive Forms中使用addInstance()函式動態新增的面板和內容現在會出現。 (FORMS-25169， FORMS-25124)
 * 升級至AEM Forms Service Pack 6.5.24.0後，繁體中文（香港）翻譯現在可在製作和發佈環境中正確顯示。 本地化的zh-HK內容不再以錯誤的語言出現，或是意外地回覆為預設字串。 (FORMS-25042)
-* 現在，在最適化Forms中，鍵盤導覽在手寫簽名欄位中的焦點會一致地移入和移出簽名區域，同時在表單中按Tab鍵。 (FORMS-25011)
+* 鍵盤導覽在透過Adaptive Forms的Scribble簽名欄位中移動焦點，同時在表單中按Tab鍵瀏覽時保持一致。 (FORMS-25011)
 * Web服務描述語言(WSDL)檔案現在會在組態和更新作業期間，在叫用Web服務步驟中正確載入。 (FORMS-24992、FORMS-24789、FORMS-24188)
 * 現在，將條件套用至文字片段時，字母草稿會保留分行符號。 多行內容不再顯示為單一連續行。 (FORMS-24602)
 * 到達Adobe Sign步驟後未傳回簽署狀態回應時，Adobe Managed Services (AMS)上AEM Forms中的Adobe Sign工作流程不再停滯。 (FORMS-24514)
@@ -344,7 +344,7 @@ Subtitles and Audio Tracks下拉式清單現在會將阿拉伯語顯示為Dynami
 
 <!-- #### Content distribution{#foundation-content-distribution-6525} -->
 
-#### CRX {#foundation-crx-6525}
+#### Adobe CRX {#foundation-crx-6525}
 
 AEM 6.5升級後，JSP檔案編輯現在可在CRXDE Lite中如預期般運作。 CodeMirror編輯器會載入檔案內容，而不是將JSP標籤保留為空白。 (GRANITE-64333)
 
@@ -373,7 +373,7 @@ AEM 6.5升級後，JSP檔案編輯現在可在CRXDE Lite中如預期般運作。
 #### 安全性{#foundation-security-6525}
 
 * AEM現在允許列出包含client-secret的其他關鍵字。 當受支援的整合使用這些使用者端密碼命名模式時，設定建立不會再失敗。 (GRANITE-66495)
-* Sling XSS組合現在使用Java HTML Sanitizer程式庫，應該使用`XSSAPI#filterHTML()`方法的使用來安全地呈現HTML內容，而不是將資料傳遞至其他API。 (GRANITE-63840)
+* Sling XSS組合現在使用Java HTML Sanitizer程式庫，應使用`XSSAPI#filterHTML()`方法安全地呈現HTML內容，而非將資料傳遞至其他API。 (GRANITE-63840)
 
 <!-- #### Sling{#foundation-sling-6525} -->
 
@@ -410,7 +410,7 @@ AEM 6.5升級後，JSP檔案編輯現在可在CRXDE Lite中如預期般運作。
 
 >[!IMPORTANT]
 >
-> Adobe不建議您移除或解除安裝[!DNL Experience Manager] 6.5.25.0套件。 因此，在安裝套件之前，您應該建立`crx-repository`的備份，以備您必須復原它時使用。<!-- UPDATE FOR EACH NEW RELEASE -->
+> Adobe不建議您移除或解除安裝[!DNL Experience Manager] 6.5.25.0套件。 若要視需要回覆，請先建立`crx-repository`的備份，然後再安裝套件。<!-- UPDATE FOR EACH NEW RELEASE -->
 
 <!-- FORMS For instructions to install Service Pack for Experience Manager Forms, see [Experience Manager Forms Service Pack installation instructions](/help/release-notes/aem-forms-current-service-pack-installation-instructions.md). -->
 
@@ -430,14 +430,14 @@ AEM 6.5升級後，JSP檔案編輯現在可在CRXDE Lite中如預期般運作。
 
 >[!NOTE]
 >
->Service Pack安裝期間，Package Manager UI上的對話方塊有時會退出。 Adobe建議您先等待錯誤記錄穩定下來，再存取部署。 等待與更新程式套件組合解除安裝相關的特定記錄，再確認安裝成功。 此問題通常發生在[!DNL Safari]瀏覽器中，但可能間歇性地發生在任何瀏覽器中。
+>Service Pack安裝期間，Package Manager UI上的對話方塊有時會退出。 Adobe建議您先等待錯誤記錄穩定下來，再存取部署。 在確認安裝成功之前，請等待與更新程式套件組合解除安裝相關的特定記錄。 此問題通常發生在[!DNL Safari]瀏覽器中，但可能間歇性地發生在任何瀏覽器中。
 
 **自動安裝**
 
 您可以使用兩種不同的方法來安裝[!DNL Experience Manager] 6.5.25.0.<!-- UPDATE FOR EACH NEW RELEASE -->
 
 * 伺服器上線時，請將封裝放入`../crx-quickstart/install`資料夾。 套件會自動安裝。
-* 使用封裝管理員[&#128279;](/help/sites-administering/package-manager.md#package-share)的HTTP API。 使用`cmd=install&recursive=true`安裝巢狀套件。
+* 使用封裝管理員](/help/sites-administering/package-manager.md#package-share)的[HTTP API。 使用`cmd=install&recursive=true`安裝巢狀套件。
 
 >[!NOTE]
 >
@@ -465,9 +465,9 @@ AEM 6.5升級後，JSP檔案編輯現在可在CRXDE Lite中如預期般運作。
 
 使用GraphQL的客戶必須安裝[Experience Manager內容片段搭配GraphQL索引套件1.1.1](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/cfm-graphql-index-def-1.1.1.zip)。
 
-如此一來，您就可以根據使用者實際使用的功能，新增必要的索引定義。
+這可讓您根據使用的功能新增所需的索引定義。
 
-無法安裝此套件可能會導致GraphQL查詢變慢或失敗。
+無法安裝此套件會導致GraphQL查詢變慢或失敗。
 
 >[!NOTE]
 >
@@ -517,7 +517,7 @@ Adobe打算在產品生命週期結束前保留這些較舊的端點。 Adobe �
 
 <!-- THESE KNOWN ISSUES CARRY OVER EACH RELEASE. THE "PRODUCT UPDATES TEAM" IS SUPPOSED TO VERIFY EACH ISSUE AND LET YOU KNOW IF ANYTHING NEEDS TO BE ADDED, DELETED, OR CHANGED IN THIS LIST. -->
 
-* 與Oak相關的&#x200B;**&#x200B;**
+* 與Oak相關的&#x200B;****
 從Service Pack 13及更高版本開始，下列錯誤記錄檔開始出現，這會影響持續性快取：
 
   ```shell
@@ -546,9 +546,9 @@ Adobe打算在產品生命週期結束前保留這些較舊的端點。 Adobe �
   1. 安裝Service Pack，或重新啟動Experience Manager as a Cloud Service。
      `cache`和`diff-cache`的新資料夾會自動建立，而您在`error.log`中不會再遇到與`mvstore`相關的例外狀況。
 
-* 更新可能已使用您內容模型的自訂API名稱的GraphQL查詢，以改用內容模型的預設名稱。
+* 更新您的內容模型使用自訂API名稱的GraphQL查詢，以改用內容模型的預設名稱。
 
-* GraphQL查詢可以使用`damAssetLucene`索引，而不是`fragments`索引。 此動作可能會導致GraphQL查詢失敗或需要很長時間才能執行。
+* GraphQL查詢使用`damAssetLucene`索引，而非`fragments`索引。 此動作會導致GraphQL查詢失敗或需要很長時間才能執行。
 
   若要修正問題，`damAssetLucene`必須設定為在`/indexRules/dam:Asset/properties`下包含下列兩個屬性：
 
@@ -566,7 +566,7 @@ Adobe打算在產品生命週期結束前保留這些較舊的端點。 Adobe �
 
   在變更索引定義之後，需要重新索引(`reindex` = `true`)。
 
-  執行這些步驟後，GraphQL查詢應該可以更快執行。
+  執行這些步驟後，GraphQL查詢的執行速度會更快。
 
 * 嘗試移動、刪除或發佈內容片段、網站或頁面時，在擷取內容片段參考時出現問題。 背景查詢失敗；功能無法運作。
 若要確保作業正確，您必須將下列屬性新增至索引定義節點`/oak:index/damAssetLucene` （不需要重新索引）：
@@ -580,9 +580,9 @@ Adobe打算在產品生命週期結束前保留這些較舊的端點。 Adobe �
 
 * 如果您將[!DNL Experience Manager]執行個體從6.5.0 - 6.5.4升級至Java™ 11上的最新Service Pack，您會在`error.log`檔案中看到`RRD4JReporter`例外狀況。 若要停止例外狀況，請重新啟動[!DNL Experience Manager]的執行個體。<!-- THIS BULLET POINT WAS UPDATED AS PER CQDOC-20021, JANUARY 23, 2023 -->
 
-* 使用者可以在[!DNL Assets]中重新命名階層中的資料夾，並將巢狀資料夾發佈至[!DNL Brand Portal]。 但是，在重新發佈根資料夾之前，[!DNL Brand Portal]中的資料夾標題不會更新。
+* 使用者可以在[!DNL Assets]中重新命名資料夾，並將巢狀資料夾發佈至[!DNL Brand Portal]。 但是，在重新發佈根資料夾之前，[!DNL Brand Portal]中的資料夾標題不會更新。
 
-* 安裝[!DNL Experience Manager] 6.5.x.x期間可能會顯示下列錯誤和警告訊息：
+* 安裝[!DNL Experience Manager] 6.5.x.x期間出現下列錯誤和警告訊息：
   * 「當使用Adobe Target API （IMS驗證）在[!DNL Experience Manager]中設定Target Standard整合時，將體驗片段匯出至Target會導致建立錯誤的選件型別。 Target會建立多個型別為「HTML」/來源「Adobe Target Classic」的選件，而非「體驗片段」/來源「Adobe Experience Manager」型別。
   * `com.adobe.granite.maintenance.impl.TaskScheduler`：在`granite/operations/maintenance`找不到維護期間。
   * 使用彙總函式（例如SUM、MAX和MIN）時，Adaptive Form伺服器端驗證會失敗(CQ-4274424)。
@@ -592,11 +592,11 @@ Adobe打算在產品生命週期結束前保留這些較舊的端點。 Adobe �
 
 * 從AEM 6.5.15開始，`org.apache.servicemix.bundles.rhino`套件提供的Rhino JavaScript Engine有新的提升行為。 使用嚴格模式(`use strict;`)的指令碼必須宣告其正確的變數。 否則，它們不會執行，並最終擲回執行階段錯誤。
 
-* 透過正式更新套件安裝標籤相關的現成可用內容會將`/content/cq:tags`節點的languages屬性重設為預設值。 此動作適用於Service Pack、Security Service Pack、Extended Feature Pack、Cumulative Feature Pack、修補程式等。 因此，在安裝之前，必須從屬性新增它。
+* 透過正式更新套件安裝標籤相關標準內容時，會將`/content/cq:tags`節點的languages屬性重設為預設值。 此動作適用於Service Pack、Security Service Pack、Extended Feature Pack、Cumulative Feature Pack、修補程式等。 因此，在安裝之前，必須從屬性新增它。
 
 ### AEM Sites的已知問題 {#known-issues-aem-sites-6525}
 
-內容片段 — 預覽失敗，因為大型片段樹受到DoS保護。 請參閱有關預設GraphQL查詢執行器組態選項[&#128279;](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-kcs/kbarticles/ka-23945)的KB文章(SITES-17934)
+內容片段 — 預覽失敗，因為大型片段樹受到DoS保護。 請參閱有關預設GraphQL查詢執行器組態選項](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-kcs/kbarticles/ka-23945)的[KB文章(SITES-17934)
 
 ### AEM Forms的已知問題 {#known-issues-aem-forms-6525}
 
@@ -608,10 +608,10 @@ Adobe打算在產品生命週期結束前保留這些較舊的端點。 Adobe �
 
 * **NPR-44100**&#x200B;在WAR/JEE部署（包括JEE上的AEM Forms）上安裝AEM 6.5 Service Pack 25後，`com.adobe.cq.screens.sessions`套件組合會維持在「已安裝」狀態，而不會變成「作用中」。 若要解決此問題，請[下載並安裝AEM Service Pack 6.5.25.0的Hotfix](/help/release-notes/aem-forms-hotfix.md)。
 * **FORMS-26802** SOAP SDK驗證強化後，LCM Configuration Manager、Workbench和Designer無法連線至JEE伺服器上的AEM Forms，錯誤為`ALC-LCM-200-001`，因為`/soap/sdk`端點拒絕未驗證的請求。 若要解決此問題，請[下載並安裝AEM Service Pack 6.5.25.0的Hotfix](/help/release-notes/aem-forms-hotfix.md)。
-* **FORMS-26679**&#x200B;在AEM Forms Document Security中，Microsoft Entra ID (MFA)重新導向後，驗證Cookie會遭到捨棄，導致在開啟受原則保護的檔案時發生「Cookie可能未啟用」錯誤。 若要解決此問題，請[下載並安裝AEM Service Pack 6.5.25.0的Hotfix](/help/release-notes/aem-forms-hotfix.md)。
-* **FORMS-26617**&#x200B;在使用WebLogic的JEE上的AEM Forms上，使用Microsoft SQL Server JDBC驅動程式12.10.0時，透過Configuration Manager的資料庫組態會失敗，因為「找不到合適的驅動程式」。 若要解決此問題，請[下載並安裝AEM Service Pack 6.5.25.0的Hotfix](/help/release-notes/aem-forms-hotfix.md)。
+* **FORMS-26679**&#x200B;在AEM Forms Document Security中，Microsoft Entra ID (MFA)重新導向後，驗證Cookie會遭到捨棄，導致在開啟受原則保護的檔案時出現「Cookie未啟用」錯誤。 若要解決此問題，請[下載並安裝AEM Service Pack 6.5.25.0的Hotfix](/help/release-notes/aem-forms-hotfix.md)。
+* 使用Microsoft SQL Server JDBC驅動程式12.10.0時，[!DNL JEE] [!DNL WebLogic]資料庫設定上的&#x200B;**FORMS-26617** [!DNL AEM Forms]會失敗，因為「找不到合適的驅動程式」。 若要解決此問題，請[下載並安裝AEM Service Pack 6.5.25.0的Hotfix](/help/release-notes/aem-forms-hotfix.md)。
 * 安裝最新AEM Forms 6.5版本編號後，**FORMS-27869** PDF開啟速度緩慢。 若要解決此問題，請[下載並安裝AEM Service Pack 6.5.25.0的Hotfix](/help/release-notes/aem-forms-hotfix.md)。
-* **FORMS-23491** AEM Forms 6.5.24.0 JEE部署(JBoss、WebLogic、WebSphere)會受到CVE-2025-64775所影響，這是多部分請求處理中的Apache Struts拒絕服務漏洞。 若要解決此問題，請[下載並安裝AEM Service Pack 6.5.24.0的Hotfix](/help/release-notes/aem-forms-hotfix.md)。
+* **FORMS-23491** CVE-2025-64775是多部分請求處理中的Apache Struts拒絕服務弱點，會影響AEM Forms 6.5.24.0 JEE部署(JBoss、WebLogic、WebSphere)。 若要解決此問題，請[下載並安裝AEM Service Pack 6.5.24.0的Hotfix](/help/release-notes/aem-forms-hotfix.md)。
 * **FORMS-14926**&#x200B;安裝AEM Forms JEE Service Pack 21 (6.5.21.0)後，如果在`<AEM_Forms_Installation>/lib/caching/lib`資料夾下發現重複的Geode jars `(geode-*-1.15.1.jar and geode-*-1.15.1.2.jar)`專案，請執行以下步驟以解決問題：
 
   1. 停止儲位（如果它們正在執行）。
@@ -635,11 +635,11 @@ Adobe打算在產品生命週期結束前保留這些較舊的端點。 Adobe �
 這些網站僅供客戶使用。 若您是客戶並且需要存取權，請聯絡您的 Adobe 客戶經理。
 
 * [在 licensing.adobe.com 下載產品](https://licensing.adobe.com/)
-* [聯絡 Adobe 客戶支援](https://experienceleague.adobe.com/zh-hant/docs/support-resources/adobe-support-tools-guide/adobe-customer-support-experience#)。
+* [聯絡 Adobe 客戶支援](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-customer-support-experience#)。
 
 >[!MORELIKETHIS]
 >
->* [[!DNL Experience Manager] 產品頁面](https://business.adobe.com/tw/products/experience-manager/adobe-experience-manager.html)
+>* [[!DNL Experience Manager] 產品頁面](https://business.adobe.com/products/experience-manager/adobe-experience-manager.html)
 >* [[!DNL Experience Manager] 6.5檔案](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65)
 >* [訂閱Adobe優先產品更新](https://www.adobe.com/tw/subscription/priority-product-update.html)
 
