@@ -1,20 +1,22 @@
 ---
 title: 通訊管理概觀
+
 description: 本主題提供「通訊管理」的概觀。
+
+
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
+
 feature: Correspondence Management
 exl-id: c7f1acf3-ec2b-4a71-83a4-c71981d4cefa
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
-source-wordcount: '217'
+source-wordcount: '226'
 ht-degree: 1%
-
 ---
-
 # 通訊管理概觀 {#correspondence-management-overview}
 
 ## 簡介 {#introduction}
@@ -44,5 +46,5 @@ ht-degree: 1%
 這可改善客戶參與度，讓您能夠：
 
 * 新增互動式技術，啟用雙向通道，減少書面提交量
-* 使用內建的端對端Document Security保護Protect敏感資訊
+* 使用內建的端對端檔案安全性來保護敏感資訊
 * 透過客戶偏好的通訊管道傳送信件，包括電子郵件、郵件、行動裝置或傳真。
