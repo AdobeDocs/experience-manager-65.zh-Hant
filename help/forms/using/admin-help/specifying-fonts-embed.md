@@ -13,9 +13,7 @@ source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
 source-wordcount: '282'
 ht-degree: 0%
-
 ---
-
 # 指定要嵌入的字型 {#specifying-fonts-to-embed}
 
 >[!NOTE]
@@ -26,9 +24,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如果您已為Forms指定自訂XCI檔案，則XCI檔案中的內嵌字型選項會覆寫這些設定。 (請參閱[設定Forms的位置](/help/forms/using/admin-help/configuring-locations-forms.md#configuring-locations-for-forms)。)
+>如果您已為Forms指定自訂XCI檔案，則XCI檔案中的內嵌字型選項會覆寫這些設定。 （請參閱[設定Forms的位置](/help/forms/using/admin-help/configuring-locations-forms.md#configuring-locations-for-forms)。）
 
 1. 在管理控制檯中，按一下&#x200B;**[!UICONTROL 服務> Forms]**。
-1. 在&#x200B;**[!UICONTROL 字型內嵌設定]**&#x200B;下，在&#x200B;**[!UICONTROL 永遠內嵌字型]**&#x200B;方塊中，鍵入要內嵌表單的字型名稱（以逗號分隔）。 您指定的字型只有在用於表單時，才會內嵌在產生的表單中。 如果已在傳遞給服務的XCI檔案中開啟內嵌字型選項，則會忽略此設定，因為在此情況下，PDF中使用的所有字型都會內嵌。
-1. 在&#x200B;**[!UICONTROL 永不嵌入字型]**&#x200B;方塊中，輸入不要嵌入表單的字型名稱，並以逗號分隔。 您指定的字型不會內嵌在PDF中，即使這些字型用於產生的PDF中亦然。 如果傳遞至服務的XCI檔案中已關閉內嵌字型選項，則會忽略此設定，因為在此情況下，PDF中使用的字型都不會內嵌。
-1. 按一下「**[!UICONTROL 儲存]**」。
+1. 在&#x200B;**[!UICONTROL 字型內嵌設定]**&#x200B;下，在&#x200B;**[!UICONTROL 永遠內嵌字型]**&#x200B;方塊中，鍵入要內嵌表單的字型名稱（以逗號分隔）。 您指定的字型只有在用於表單時，才會內嵌在產生的表單中。 如果已在傳遞至服務的XCI檔案中開啟內嵌字型選項，則會忽略此設定，因為在此情況下，PDF中使用的所有字型都會內嵌。
+1. 在&#x200B;**[!UICONTROL 永不嵌入字型]**&#x200B;方塊中，輸入不要嵌入表單的字型名稱，並以逗號分隔。 您指定的字型不會內嵌於PDF中，即使這些字型用於產生的PDF中亦然。 如果在傳遞給服務的XCI檔案中關閉了內嵌字型選項，則會忽略此設定，因為在這種情況下，PDF中使用的字型都不會內嵌。
+1. 按一下&#x200B;**[!UICONTROL 儲存]**。
