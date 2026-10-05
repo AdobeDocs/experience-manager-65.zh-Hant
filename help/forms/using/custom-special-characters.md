@@ -11,11 +11,9 @@ solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
-source-wordcount: '656'
+source-wordcount: '652'
 ht-degree: 1%
-
 ---
-
 # 通訊管理中的自訂特殊字元{#custom-special-characters-in-correspondence-management}
 
 ## 概觀 {#overview}
@@ -68,7 +66,7 @@ ht-degree: 1%
       >
       >
 
-   1. 按一下[確定]&#x200B;**&#x200B;**，然後按一下[儲存全部]&#x200B;**&#x200B;**。 specialcharacters資料夾是在指定的路徑中建立的。
+   1. 按一下[確定]****，然後按一下[儲存全部]****。 specialcharacters資料夾是在指定的路徑中建立的。
 
       建立覆蓋圖後，請驗證節點結構標籤。 使用覆蓋在/apps中建立的每個節點，都應與該節點的/libs中定義的類別和屬性相同。 如果/apps位置下方的節點結構中缺少任何屬性或標籤，請將其標籤與/libs中的對應節點同步。
 

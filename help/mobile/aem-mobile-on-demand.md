@@ -1,27 +1,27 @@
 ---
 title: AEM Mobile On-Demand
 description: 請依照本頁面的說明使用AEM (Adobe Experience Manager)開發On-Demand Services應用程式的起點。 此頁面涵蓋與應用程式開發人員相關的主題。
+
 contentOwner: JYOTIKA SYAL
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
+
 exl-id: a2134afd-4c0e-4a93-ac58-013b98fd9a09
 solution: Experience Manager
 feature: Mobile
 role: User
 source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '287'
+source-wordcount: '306'
 ht-degree: 0%
-
 ---
-
 # AEM Mobile On-Demand {#aem-mobile-on-demand}
 
 {{ue-over-mobile}}
 
 >[!NOTE]
 >
->如果您未使用AEM作為內容管理來源，請參閱[AEM Mobile On-demand Services說明](https://helpx.adobe.com/tw/digital-publishing-solution/topics.html)。
+>如果您未使用AEM作為內容管理來源，請參閱[AEM Mobile On-demand Services說明](https://helpx.adobe.com/digital-publishing-solution/topics.html)。
 
 >[!NOTE]
 >
@@ -29,9 +29,9 @@ ht-degree: 0%
 >
 >若要設定AEM Mobile On-demand Services的環境，請參閱[AEM Mobile應用程式儀表板或控制中心](/help/mobile/mobile-apps-ondemand-application-dashboard.md)。
 
-**AEM開發人員**&#x200B;延伸並建立自訂Web範本和元件，讓&#x200B;*AEM作者*&#x200B;能夠建立美觀且吸引人的行動體驗。 這些範本和元件不僅已針對行動應用程式世界最佳化，而且可與裝置和AEM伺服器（任何遠端伺服器）通訊，以連線全通路服務端點。 *AEM作者*&#x200B;使用AEM的內建內容編輯器在應用程式中建立豐富的相關體驗，包括與Adobe Marketing Cloud其他部分的整合。
+**AEM開發人員**&#x200B;延伸並建立自訂Web範本和元件，讓&#x200B;*AEM作者*&#x200B;能夠建立美觀且吸引人的行動體驗。 這些範本和元件不僅已針對行動應用程式世界最佳化，而且可與裝置和AEM伺服器（任何遠端伺服器）通訊，以連線全頻道服務端點。 *AEM作者*&#x200B;使用AEM的內建內容編輯器在應用程式中建立豐富的相關體驗，包括與Adobe Marketing Cloud其他部分的整合。
 
-使用AEM Mobile On-demand Services建立應用程式時，AEM開發人員會負責下列工作：
+使用AEM建立應用程式時，AEM Mobile On-demand Services開發人員會負責下列工作：
 
 * [應用程式範本和元件](/help/mobile/app-templates-and-components1.md)
 * [具有內容同步功能的行動裝置](/help/mobile/mobile-ondemand-contentsync.md)

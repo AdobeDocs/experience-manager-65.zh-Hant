@@ -1,6 +1,6 @@
 ---
 title: 管理一般電子商務
-description: AEM一般解決方案提供管理存放庫中持有的商業資訊的方法。
+description: AEM一般解決方案提供管理存放庫中儲存的商務資訊的方法。
 contentOwner: Guillaume Carlino
 topic-tags: e-commerce
 content-type: reference
@@ -11,14 +11,12 @@ feature: Commerce Integration Framework
 role: Admin, Developer
 source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
 workflow-type: tm+mt
-source-wordcount: '2907'
-ht-degree: 1%
-
+source-wordcount: '2961'
+ht-degree: 2%
 ---
-
 # 管理一般電子商務 {#administering-generic-ecommerce}
 
-Adobe Experience Manager (AEM)一般解決方案提供管理存放庫內所儲存之商務資訊的方法（與使用外部電子商務引擎相反）。 其中包括：
+Adobe Experience Manager (AEM)一般解決方案提供管理存放庫內所儲存之商務資訊的方法，有別於使用外部電子商務引擎。 其中包括：
 
 * [產品](/help/commerce/cif-classic/administering/concepts.md#products)
 * [產品的系列品種](/help/commerce/cif-classic/administering/concepts.md#product-variants)
@@ -30,7 +28,7 @@ Adobe Experience Manager (AEM)一般解決方案提供管理存放庫內所儲�
 
 >[!NOTE]
 >
->標準AEM安裝包含通用AEM (JCR)電子商務實作。
+>標準AEM安裝包含通用的AEM (JCR)電子商務實作。
 >
 >其目的是為了示範，或作為根據您需求自訂實作的基本基礎。
 
@@ -53,7 +51,7 @@ Adobe Experience Manager (AEM)一般解決方案提供管理存放庫內所儲�
 >
 >`/etc/scaffolding/geometrixx-outdoors`
 >
->Geometrixx — 戶外活動產品型別啟用於：
+>Geometrixx-Outdoors產品型別作用中：
 >
 >`/etc/commerce/products/geometrixx-outdoors`
 >
@@ -118,7 +116,7 @@ Adobe Experience Manager (AEM)一般解決方案提供管理存放庫內所儲�
 
    * **Commerce提供者**
 
-     您的[商務提供者](/help/commerce/cif-classic/administering/concepts.md#commerce-providers)的匯入工具；預設Geometrixx。
+     您的[商務提供者](/help/commerce/cif-classic/administering/concepts.md#commerce-providers)的匯入工具；預設為Geometrixx。
 
    * **Source檔案**
 
@@ -134,11 +132,11 @@ Adobe Experience Manager (AEM)一般解決方案提供管理存放庫內所儲�
 
 >[!NOTE]
 >
->標準產品管理是基本的，因為Geometrixx-Outdoors產品組是基本的。 複雜性取決於產品[支架](/help/sites-authoring/scaffolding.md)，因此有了您自己的產品支架，就可以進行更複雜的編輯。
+>標準產品管理是基本的，因為Geometrixx-Outdoors產品組一直是基本的。 複雜性取決於產品[支架](/help/sites-authoring/scaffolding.md)，因此有了您自己的產品支架，就可以進行更複雜的編輯。
 
 #### 建立產品資訊 — 觸控最佳化UI {#creating-product-information-touch-optimized-ui}
 
-1. 使用&#x200B;**產品**&#x200B;主控台(透過&#x200B;**Commerce**)導覽至所需位置。
+1. 使用&#x200B;**產品**&#x200B;主控台（透過&#x200B;**Commerce**）導覽至所需位置。
 1. 使用「**建立**」圖示來選取（視結構和位置而定）：
 
    * **建立產品**
@@ -168,11 +166,11 @@ Adobe Experience Manager (AEM)一般解決方案提供管理存放庫內所儲�
 >
 >`/etc/commerce/products/...`
 >
->這表示預設會被[Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant)封鎖，因此請視需要設定。
+>這表示預設會被[Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html)封鎖，因此請視需要設定。
 
 #### 編輯產品資訊 — 觸控最佳化UI {#editing-product-information-touch-optimized-ui}
 
-1. 使用&#x200B;**產品**&#x200B;主控台(透過&#x200B;**Commerce**)導覽至您的產品資訊。
+1. 使用&#x200B;**產品**&#x200B;主控台（透過&#x200B;**Commerce**）導覽至您的產品資訊。
 1. 使用下列其中一項：
 
    * [快速動作](/help/sites-authoring/basic-handling.md#quick-actions)
@@ -188,7 +186,7 @@ Adobe Experience Manager (AEM)一般解決方案提供管理存放庫內所儲�
 
 #### 顯示產品參考 — 觸控最佳化UI {#showing-product-references-touch-optimized-ui}
 
-1. 使用&#x200B;**產品**&#x200B;主控台(透過&#x200B;**Commerce**)導覽至您的產品資訊。
+1. 使用&#x200B;**產品**&#x200B;主控台（透過&#x200B;**Commerce**）導覽至您的產品資訊。
 1. 使用圖示開啟參照的次要邊欄：
 
    ![雙箭頭圖示](/help/sites-administering/do-not-localize/chlimage_1-16.png)
@@ -220,7 +218,7 @@ Adobe Experience Manager (AEM)一般解決方案提供管理存放庫內所儲�
 
 #### 延伸搜尋 {#extending-search}
 
-您可以使用CRXDE Lite修改現有多面或新增多面：
+您可以使用CRXDE Lite修改現有Facet或新增專案：
 
 1. 瀏覽到:
 
@@ -229,7 +227,7 @@ Adobe Experience Manager (AEM)一般解決方案提供管理存放庫內所儲�
 1. 例如，您可以編輯出現在產品搜尋頁面上的大小。 按一下`sizegroup`節點。
 1. 按一下`items`節點，然後按一下`propertypredicate`節點。
 1. 您可以編輯`propertyValues`。 例如，您可以新增XS、XXL或移除大小。
-1. 按一下「儲存全部」**&#x200B;**，並導覽至產品搜尋頁面。 您的變更將會顯示。
+1. 按一下「儲存全部」****，並導覽至產品搜尋頁面。 您的變更將會顯示。
 
 ### 多個Assets {#multiple-assets}
 
@@ -254,7 +252,7 @@ Adobe Experience Manager (AEM)一般解決方案提供管理存放庫內所儲�
 
    ![正在新增產品資料熒幕擷取畫面](/help/sites-administering/assets/chlimage_1-91.png)
 
-1. 選取&#x200B;**新增**。 新的資產預留位置隨即出現。
+1. 選取「**新增**」。 新的資產預留位置隨即出現。
 1. 選取&#x200B;**變更**&#x200B;會開啟一個對話方塊，讓您選擇資產。
 1. 選取您要新增的資產。
 
@@ -300,7 +298,7 @@ Adobe Experience Manager (AEM)一般解決方案提供管理存放庫內所儲�
 1. 導覽至您的產品頁面。
 1. **編輯**&#x200B;產品元件。
 1. 輸入您選擇的&#x200B;**影像類別** （例如`cat1`）。
-1. 選取&#x200B;**完成**。 頁面會重新整理，且應會顯示正確的資產。
+1. 選取「**完成**」。 頁面會重新整理，且應會顯示正確的資產。
 
 #### 目錄  {#catalog}
 
@@ -327,17 +325,17 @@ Adobe Experience Manager (AEM)一般解決方案提供管理存放庫內所儲�
 
 >[!NOTE]
 >
->通常產品資訊會透過參考它的頁面發佈。 例如，發佈參考產品Y的頁面X時，AEM會詢問您是否要發佈產品Y。
+>通常產品資訊會透過參考它的頁面發佈。 例如，發佈參考產品Y的頁面X時，AEM會詢問您是否要同時發佈產品Y。
 >
->對於特殊情況，AEM也支援直接從產品資料發佈。
+>在特殊情況下，AEM也支援直接從產品資料發佈。
 
-1. 使用&#x200B;**產品**&#x200B;主控台(透過&#x200B;**Commerce**)導覽至您的產品資訊。
+1. 使用&#x200B;**產品**&#x200B;主控台（透過&#x200B;**Commerce**）導覽至您的產品資訊。
 1. 使用下列其中一項：
 
    * [快速動作](/help/sites-authoring/basic-handling.md#quick-actions)
    * [選擇模式](/help/sites-authoring/basic-handling.md#navigating-and-selection-mode)
 
-   視需要選取&#x200B;**Publish**&#x200B;或&#x200B;**取消發佈**&#x200B;圖示：
+   視需要選取&#x200B;**發佈**&#x200B;或&#x200B;**取消發佈**&#x200B;圖示：
 
    ![世界圖示](/help/sites-administering/do-not-localize/chlimage_1-18.png) ![具有十字元號的世界圖示 — 無符號](/help/sites-administering/do-not-localize/chlimage_1-19.png)
 
@@ -373,9 +371,9 @@ Adobe Experience Manager (AEM)一般解決方案提供管理存放庫內所儲�
 
 >[!NOTE]
 >
->另請閱讀AEM[&#128279;](https://blogs.adobe.com/experiencedelivers/experience-management/event_handling_incq/)中的事件處理。
+>另請閱讀AEM](https://blogs.adobe.com/experiencedelivers/experience-management/event_handling_incq/)中的[事件處理。
 
-### 含有加入購物車連結的影像 {#image-with-add-to-cart-links}
+### 具有「加入購物車」連結的影像 {#image-with-add-to-cart-links}
 
 包含加入購物車連結的影像元件可讓您在影像上建立與產品連結的熱點，快速將產品加入購物車。
 
@@ -384,7 +382,7 @@ Adobe Experience Manager (AEM)一般解決方案提供管理存放庫內所儲�
 1. 導覽至您要新增元件的頁面。
 1. 將元件拖放到頁面中。
 1. 從[資產瀏覽器](/help/sites-authoring/author-environment-tools.md#assets-browser)拖放元件中的影像。
-1. 您可以執行下列兩個動作中的一個:
+1. 下列兩個動作您可以擇一執行：
 
    * 按一下元件，然後按一下編輯圖示
    * 進行緩慢連按兩下
@@ -455,7 +453,7 @@ Adobe Experience Manager (AEM)一般解決方案提供管理存放庫內所儲�
 
 若要產生目錄：
 
-1. 開啟Sites主控台(例如，[http://localhost:4502/sites.html/content](http://localhost:4502/sites.html/content))。
+1. 開啟Sites主控台（例如，[http://localhost:4502/sites.html/content](http://localhost:4502/sites.html/content)）。
 1. 導覽至您要建立頁面的位置。
 1. 若要開啟選項清單，請使用&#x200B;**建立**&#x200B;圖示：
 
@@ -498,16 +496,16 @@ Adobe Experience Manager (AEM)一般解決方案提供管理存放庫內所儲�
 
 1. 開啟新的`Swimwear`頁面，然後按一下&#x200B;**編輯Blueprint**。 **屬性**&#x200B;對話方塊開啟，您可以設定&#x200B;**產品**&#x200B;選項。
 
-   例如，開啟&#x200B;**標籤/關鍵字**&#x200B;欄位以選取「活動」，然後從「Geometrixx — 戶外」區段選取「游泳」。
+   例如，開啟&#x200B;**標籤/關鍵字**&#x200B;欄位以選取「活動」，然後從Geometrixx-Outdoors區段選取「游泳」。
 
-1. 按一下「確定」**&#x200B;**&#x200B;以儲存您的屬性；範例產品會顯示在Blueprint頁面的「**產品選取條件**」下。
+1. 按一下「確定」****&#x200B;以儲存您的屬性；範例產品會顯示在Blueprint頁面的「**產品選取條件**」下。
 1. 按一下&#x200B;**轉出變更……**，選取&#x200B;**轉出頁面與所有子頁面**，然後按一下&#x200B;**下一步**，再按一下&#x200B;**轉出**。 轉出成功完成後，**狀態**&#x200B;指標會顯示為綠色。
 1. 您現在可以按一下&#x200B;**關閉**&#x200B;並檢查新目錄區段；例如，在和底下：
 
    `http://localhost:4502/cf#/content/geometrixx-outdoors/en/swimwear.html`
 
 1. 再次從Blueprint頁面按一下&#x200B;**編輯Blueprint**，然後在&#x200B;**屬性**&#x200B;對話方塊中開啟&#x200B;**產生的頁面**&#x200B;標籤。 在「橫幅」清單欄位中，選取您要顯示的影像，例如`summer.jpg`
-1. 按一下「確定」**&#x200B;**&#x200B;以儲存您的屬性；橫幅資訊會顯示在Blueprint頁面的&#x200B;**產品選取條件**&#x200B;下。
+1. 按一下「確定」****&#x200B;以儲存您的屬性；橫幅資訊會顯示在Blueprint頁面的&#x200B;**產品選取條件**&#x200B;下。
 1. 轉出這些新變更。
 
 ### 轉出目錄 {#rolling-out-a-catalog}
@@ -552,7 +550,7 @@ Adobe Experience Manager (AEM)一般解決方案提供管理存放庫內所儲�
 
    ![匯入Blueprint圖示](/help/sites-administering/do-not-localize/chlimage_1-13.png)
 
-1. 在精靈中，視需要選取Source，然後按一下[下一步]。**&#x200B;**
+1. 在精靈中，視需要選取Source，然後按一下[下一步]。****
 
    ![Blueprint精靈](/help/sites-administering/assets/chlimage_1-102.png)
 
@@ -587,7 +585,7 @@ Adobe Experience Manager (AEM)一般解決方案提供管理存放庫內所儲�
 1. 開啟作者執行個體的&#x200B;**網站**&#x200B;主控台。
 1. 在左窗格中，選取您所需的&#x200B;**促銷活動**。
 1. 按一下「新增&#x200B;**」，選取**&#x200B;促銷活動&#x200B;**範本，然後指定新憑單的**&#x200B;標題&#x200B;**（及必要時指定**&#x200B;名稱&#x200B;**）。**
-1. 按一下「**建立**」。新的促銷活動頁面會顯示在右側窗格中。
+1. 按一下「**建立**」。 新的促銷活動頁面會顯示在右側窗格中。
 
 1. 編輯&#x200B;**屬性**，方法如下：
 
@@ -609,9 +607,9 @@ Adobe Experience Manager (AEM)一般解決方案提供管理存放庫內所儲�
 1. 開啟作者執行個體的&#x200B;**網站**&#x200B;主控台。
 1. 在左窗格中，選取您所需的&#x200B;**促銷活動**。
 1. 按一下「新增&#x200B;**」，選取**&#x200B;憑單&#x200B;**範本，然後指定新憑單的**&#x200B;標題&#x200B;**（及必要時指定**&#x200B;名稱&#x200B;**）。**
-1. 按一下「**建立**」。新的憑單頁面會顯示在右側窗格中。
+1. 按一下「**建立**」。 新的憑單頁面會顯示在右側窗格中。
 
-1. 按兩下以開啟您的新憑單頁面，然後按一下[編輯] **&#x200B;**&#x200B;並視需要設定資訊。
+1. 按兩下以開啟您的新憑單頁面，然後按一下[編輯] ****&#x200B;並視需要設定資訊。
 1. 按一下&#x200B;**確定**&#x200B;以儲存。
 
 1. 您現在可以啟用憑單，讓購物者可以在發佈執行個體的購物車中使用它。
@@ -635,15 +633,15 @@ Adobe Experience Manager (AEM)一般解決方案提供管理存放庫內所儲�
 
 ### 新增憑單至購物車 {#adding-vouchers-to-a-cart}
 
-若要讓使用者將憑單新增至購物車，您可以使用內建的&#x200B;**憑單**&#x200B;元件(Commerce類別)。 將此專案新增到顯示購物車的相同頁面（但這並非強制性）。 憑單元件只是使用者可在其中輸入憑單代碼的表單，它是實際顯示套用憑單清單及其折扣的購物車元件。
+若要讓使用者將憑單新增至購物車，您可以使用內建的&#x200B;**憑單**&#x200B;元件（Commerce類別）。 將此專案新增到顯示購物車的相同頁面（但這並非強制性）。 憑單元件只是使用者可在其中輸入憑單代碼的表單，它是實際顯示套用憑單清單及其折扣的購物車元件。
 
-在示範網站(Geometrixx Outdoors文 — 英文)中，您可以在購物車頁面上實際購物車下方看到憑單表單。
+在示範網站（Geometrixx Outdoors — 英文）中，您可以在購物車頁面上實際購物車下方看到憑單表單。
 
 ## 訂購 {#orders}
 
 >[!NOTE]
 >
->請記得，現成可用的AEM沒有訂單相關標準功能所需的動作，例如退回商品、更新訂單狀態、執行履行、產生包裝單。 它主要是作為技術預覽。
+>請記得，現成可用的AEM沒有與訂單相關的標準功能所需的動作，例如退回商品、更新訂單狀態、執行履行、產生包裝單。 它主要是作為技術預覽。
 >
 >AEM中的通用Order Management一直是基本功能；精靈中的可用欄位取決於支架：
 >`/etc/scaffolding/geometrixx-outdoors/order/jcr:content/cq:dialog`
@@ -665,7 +663,7 @@ Adobe Experience Manager (AEM)一般解決方案提供管理存放庫內所儲�
 
    ![加號形狀建立圖示](/help/sites-administering/do-not-localize/chlimage_1-14.png)
 
-1. 精靈隨即開啟。 使用&#x200B;**Basic**、**Content**、**Payment**&#x200B;及&#x200B;**Fulfillment**&#x200B;索引標籤，輸入有關新訂單[&#128279;](/help/commerce/cif-classic/administering/concepts.md#order-information)的資訊。
+1. 精靈隨即開啟。 使用&#x200B;**Basic**、**Content**、**Payment**&#x200B;及&#x200B;**Fulfillment**&#x200B;索引標籤，輸入有關新訂單](/help/commerce/cif-classic/administering/concepts.md#order-information)的[資訊。
 
 1. 選取&#x200B;**建立**&#x200B;以儲存資訊。
 

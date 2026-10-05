@@ -1,5 +1,5 @@
 ---
-title: 從AEM工作流程啟動Document Services API
+title: 從AEM工作流程啟動檔案服務API
 description: 瞭解如何在DDX或提供的輸入上叫用AEM檔案服務。 另請參閱如何將PDF轉換為PDF/A
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,27 +10,25 @@ feature: Interactive Communication
 role: User, Developer
 source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
 workflow-type: tm+mt
-source-wordcount: '1167'
+source-wordcount: '1173'
 ht-degree: 0%
-
 ---
-
-# 從AEM工作流程啟動Document Services API  {#initiate-document-services-apis-from-aem-workflow}
+# 從AEM工作流程啟動檔案服務API  {#initiate-document-services-apis-from-aem-workflow}
 
 ## 組合器 {#assembler}
 
 AEM Forms提供自訂工作流程，可叫用下列Assembler服務API：
 
 * **invoke**：在提供的輸入上叫用輸入DDX中指定的作業。
-* **toPDFA**：將輸入PDF檔案轉換為PDF/A檔案。
+* **toPDFA**：將輸入的PDF檔案轉換為PDF/A檔案。
 
 ### 叫用DDX工作流程 {#invoke-ddx-workflow}
 
 **叫用DDX**&#x200B;工作流程會叫用`Invoke`組合器服務API，您可以用它來組合或分解檔案、為PDF新增浮水印等等。
 
-1. 將&#x200B;**[!UICONTROL 叫用DDX]**&#x200B;工作流程步驟拖曳至Sidekick中「Forms Workflow」標籤下。
+1. 將&#x200B;**[!UICONTROL 叫用DDX]**&#x200B;工作流程步驟拖曳至Sidekick中Forms Workflow標籤下。
 1. 連按兩下新增的工作流程步驟以編輯元件。
-1. 在[編輯元件]對話方塊中，設定輸入檔案、環境選項和輸出檔案，然後按一下[確定]。**&#x200B;**
+1. 在[編輯元件]對話方塊中，設定輸入檔案、環境選項和輸出檔案，然後按一下[確定]。****
 
 #### 輸入檔案 {#input-documents}
 
@@ -38,9 +36,9 @@ AEM Forms提供自訂工作流程，可叫用下列Assembler服務API：
 
 * **DDX**：這是「呼叫DDX」工作流程步驟的必要輸入，可以從DDX輸入下拉式清單中選取下列其中一個選項來指定。
 
-   * *相對於承載*： DDX輸入檔案相對於工作流程專案的承載資料夾。
-   * *使用承載*：工作流程專案的承載已用作輸入DDX檔案。
-   * *絕對路徑*： CRX存放庫中DDX檔案的絕對路徑。
+  * *相對於承載*： DDX輸入檔案相對於工作流程專案的承載資料夾。
+  * *使用承載*：工作流程專案的承載已用作輸入DDX檔案。
+  * *絕對路徑*： CRX存放庫中DDX檔案的絕對路徑。
 
 * **從PayLoad建立對應**：選取時，裝載資料夾下的所有檔案都會新增到組合器中`invoke` API的輸入檔案對應。 每個檔案的節點名稱都會作為對應中的索引鍵。
 
@@ -64,18 +62,18 @@ AEM Forms提供自訂工作流程，可叫用下列Assembler服務API：
 
 1. *工作記錄檔*：指定工作記錄檔檔案的儲存位置，這有助於疑難排解失敗。
 
-### 轉換為PDF/工作流程 {#convert-to-pdf-a-workflow}
+### 轉換為PDF/A工作流程 {#convert-to-pdf-a-workflow}
 
-轉換成PDF/工作流程步驟會叫用`toPDFA`組合器服務API。 它用於將PDF檔案轉換為PDF/A相容檔案。
+轉換至PDF/A工作流程步驟會叫用`toPDFA`組合器服務API。 它可用來將PDF檔案轉換為PDF/A相容檔案。
 
-1. 將&#x200B;**[!UICONTROL ConvertToPDFA]**&#x200B;工作流程步驟拖曳至Sidekick中「Forms Workflow」標籤下。
+1. 將&#x200B;**[!UICONTROL ConvertToPDFA]**&#x200B;工作流程步驟拖曳至Sidekick中Forms Workflow標籤下。
 
 1. 連按兩下新增的工作流程步驟以編輯元件。
-1. 在[編輯元件]對話方塊中，設定輸入檔案、轉換選項和輸出檔案，然後按一下[確定]。**&#x200B;**
+1. 在[編輯元件]對話方塊中，設定輸入檔案、轉換選項和輸出檔案，然後按一下[確定]。****
 
 #### 輸入檔案 {#input-documents-1}
 
-以下列其中一種方式，指定要轉換為PDF/A相容檔案的檔案來源。
+以下列其中一種方式，指定要轉換成PDF/A相容檔案的檔案來源。
 
 * *相對於承載*：輸入檔案相對於工作流程專案的承載資料夾。
 * *使用承載*：工作流程專案的承載已用作輸入檔案。
@@ -86,30 +84,30 @@ AEM Forms提供自訂工作流程，可叫用下列Assembler服務API：
 「轉換選項」可讓您指定變更PDF/A轉換流程的選項。
 
 * *法規遵循* ：指定輸出PDF/A必須符合的PDF/A標準。
-* *結果層級* ：指定用於PDF/A轉換記錄的記錄層級。
+* *結果層級* ：指定要用於PDF/A轉換記錄的記錄層級。
 * *簽章* ：指定轉換期間必須如何處理輸入檔案中的簽章。
 * *色域* ：指定要用於輸出PDF/A檔案的預先定義色域。
 * *驗證*&#x200B;轉換：指定轉換後的PDF/A檔案在轉換後是否應驗證PDF/A相容性。
 * *工作記錄層級* ：指定要用於處理記錄的記錄層級。
 
-* *中繼資料延伸結構描述* ：指定在PDF檔案的中繼資料中用於XMP屬性的中繼資料延伸結構描述路徑。
+* *中繼資料延伸結構描述* ：指定在PDF檔案的中繼資料中，用於XMP屬性的中繼資料延伸結構描述路徑。
 
 #### 輸出檔案 {#output-documents-1}
 
 「輸出檔案」標籤可讓您指定輸出檔案的目的地
 
-* *PDFA Document*：指定轉換PDF/A檔案的儲存位置。 它可以覆寫裝載檔案或儲存在裝載資料夾下。
+* *PDFA檔案*：指定轉換的PDF/A檔案的儲存位置。 它可以覆寫裝載檔案或儲存在裝載資料夾下。
 * *轉換記錄檔*：指定轉換記錄檔的儲存位置。 它可以覆寫裝載檔案，或儲存在裝載資料夾下。
 
-## 表單 {#forms}
+## Forms {#forms}
 
-「轉譯PDF表單」工作流程是`renderPDFForm` Forms服務API的包裝函式，可使用XDP範本和資料xml建立PDF表單。
+「呈現PDF表單」工作流程是`renderPDFForm` Forms服務API的包裝函式，可使用XDP範本和資料xml建立PDF表單。
 
 ### 呈現PDF表單工作流程 {#render-pdf-form-workflow}
 
-1. 在「Sidekick」中，將「呈現PDF表單」工作流程步驟拖曳至「Forms Workflow」標籤下。
+1. 拖曳Sidekick中「PDF」標籤下的「呈現Forms Workflow表單」工作流程步驟。
 1. 連按兩下新增的工作流程步驟以編輯元件。
-1. 在[編輯元件]對話方塊中，設定輸入檔案、輸出檔案和其他引數，然後按一下[確定]。**&#x200B;**
+1. 在[編輯元件]對話方塊中，設定輸入檔案、輸出檔案和其他引數，然後按一下[確定]。****
 
 #### 輸入檔案 {#input-documents-2}
 
@@ -124,10 +122,10 @@ AEM Forms提供自訂工作流程，可叫用下列Assembler服務API：
 #### 其他引數 {#additional-parameters}
 
 * *內容根*：指定儲存於輸入XDP範本中所用片段或影像之存放庫中的資料夾路徑。
-* *提交URL*：指定所產生PDF表單的預設提交URL。
+* *提交URL*：指定產生的PDF表單的預設提交URL。
 * *地區*：指定產生的PDF表單的預設地區。
-* *Acrobat版本*：為產生的PDF表單指定目標Acrobat版本。
-* *已標籤的PDF*：指定是否要讓產生的PDF可供存取。
+* *Acrobat版本*：指定所產生PDF表單的目標Acrobat版本。
+* *已標籤的PDF*：指定是否要存取產生的PDF。
 * *XCI檔案*：指定XCI檔案的路徑。
 
 ## 輸出 {#output}
@@ -136,9 +134,9 @@ AEM Forms提供自訂工作流程，可叫用下列Assembler服務API：
 
 ### 產生非互動式PDF輸出工作流程   {#generate-non-interactive-pdf-output-workflow-nbsp}
 
-1. 將「產生非互動式PDF輸出」工作流程拖曳至「Sidekick」中「Forms Workflow」標籤下。
+1. 拖曳Sidekick中「PDF」標籤下的「產生非互動式Forms Workflow輸出」工作流程。
 1. 連按兩下新增的工作流程步驟以編輯元件。
-1. 在[編輯元件]對話方塊中，設定輸入檔案、輸出檔案和其他引數，然後按一下[確定]。**&#x200B;**
+1. 在[編輯元件]對話方塊中，設定輸入檔案、輸出檔案和其他引數，然後按一下[確定]。****
 
 #### 輸入檔案 {#input-documents-3}
 
@@ -154,7 +152,7 @@ AEM Forms提供自訂工作流程，可叫用下列Assembler服務API：
 
 * *內容根*：指定儲存於輸入XDP範本中所用片段或影像之存放庫中的資料夾路徑。
 * *地區*：指定產生的PDF表單的預設地區。
-* *Acrobat版本*：為產生的PDF表單指定目標Acrobat版本。
-* 線性PDF：指定是否要最佳化產生的PDF以供網頁檢視。
-* *已標籤的PDF*：指定是否要讓產生的PDF可供存取。
+* *Acrobat版本*：指定所產生PDF表單的目標Acrobat版本。
+* 線性化PDF：指定是否將產生的PDF最佳化以供網頁檢視。
+* *已標籤的PDF*：指定是否要存取產生的PDF。
 * *XCI檔案*：指定XCI檔案的路徑。

@@ -7,11 +7,9 @@ solution: Experience Manager, Experience Manager Sites
 role: Admin
 source-git-commit: d5fb67933676c9ea5fdbeafe592960403e78af79
 workflow-type: tm+mt
-source-wordcount: '4177'
+source-wordcount: '4204'
 ht-degree: 2%
-
 ---
-
 # 建立和同步 Live Copies{#creating-and-synchronizing-live-copies}
 
 您可以從頁面或Blueprint設定建立即時副本，然後管理繼承和同步。
@@ -126,7 +124,7 @@ Blueprint設定會識別您要當作一或多個即時副本頁面來源的現�
    * 未選取：建立包含所選頁面所有子系的即時副本（深層即時副本）
 
 1. （可選）若要指定一或多個轉出設定以用於LiveCopy，請使用&#x200B;**轉出設定**&#x200B;下拉式清單來選取它們；選取的設定會顯示在下拉式選取器下方。
-1. 按一下「**建立**」。顯示確認訊息，您可以從這裡選取&#x200B;**開啟**&#x200B;或&#x200B;**完成**。
+1. 按一下「**建立**」。 顯示確認訊息，您可以從這裡選取&#x200B;**開啟**&#x200B;或&#x200B;**完成**。
 
 ### 從Blueprint設定建立網站的即時副本 {#creating-a-live-copy-of-a-site-from-a-blueprint-configuration}
 
@@ -181,9 +179,9 @@ Blueprint設定會識別您要當作一或多個即時副本頁面來源的現�
 * **狀態**：即時副本的同步處理狀態。 狀態包括即時副本是否與來源保持同步、上次同步發生的時間以及同步的執行者。
 * **組態**：
 
-   * 頁面是否仍受即時副本繼承的約束。
-   * 設定是否繼承自父頁面。
-   * 即時副本使用的任何轉出設定。
+  * 頁面是否仍受即時副本繼承的約束。
+  * 設定是否繼承自父頁面。
+  * 即時副本使用的任何轉出設定。
 
 若要檢視屬性：
 
@@ -210,7 +208,7 @@ Blueprint頁面（在Blueprint設定中參照）為您提供使用目前(Bluepri
 >
 >如果在Blueprint分支和相依即時副本分支中同時建立具有相同頁面名稱的新頁面，則可能會發生衝突。
 >
->轉出[&#128279;](/help/sites-administering/msm-rollout-conflicts.md)時需要處理和解決這類衝突。
+>轉出](/help/sites-administering/msm-rollout-conflicts.md)時需要處理和解決這類[衝突。
 >
 
 #### 從頁面屬性轉出Blueprint {#rolling-out-a-blueprint-from-page-properties}
@@ -303,7 +301,7 @@ Blueprint頁面（在Blueprint設定中參照）為您提供使用目前(Bluepri
 
 #### 從即時副本概述同步即時副本 {#synchronize-a-live-copy-from-the-live-copy-overview}
 
-選取即時副本頁面時，也可從即時副本綜覽[&#128279;](/help/sites-administering/msm-livecopy-overview.md#using-the-live-copy-overview)使用同步動作。
+選取即時副本頁面時，也可從即時副本綜覽](/help/sites-administering/msm-livecopy-overview.md#using-the-live-copy-overview)使用[同步動作。
 
 1. 開啟[即時副本總覽](/help/sites-administering/msm-livecopy-overview.md#using-the-live-copy-overview)並選取即時副本頁面。
 1. 從工具列選取&#x200B;**同步處理**。
@@ -331,7 +329,7 @@ Blueprint頁面（在Blueprint設定中參照）為您提供使用目前(Bluepri
 >
 >如果在Blueprint分支和相依即時副本分支中同時建立具有相同頁面名稱的新頁面，則可能會發生衝突。
 >
->轉出[&#128279;](/help/sites-administering/msm-rollout-conflicts.md)時需要處理和解決這類衝突。
+>轉出](/help/sites-administering/msm-rollout-conflicts.md)時需要處理和解決這類[衝突。
 >
 
 ### 將元件新增至即時副本頁面 {#adding-components-to-a-live-copy-page}
@@ -414,7 +412,7 @@ Blueprint頁面（在Blueprint設定中參照）為您提供使用目前(Bluepri
 
 #### 從即時副本概觀繼續即時副本頁面 {#resume-a-live-copy-page-from-the-live-copy-overview}
 
-選取即時副本頁面時，也可從即時副本綜覽[&#128279;](/help/sites-administering/msm-livecopy-overview.md#using-the-live-copy-overview)使用繼續動作。
+選取即時副本頁面時，也可從即時副本綜覽](/help/sites-administering/msm-livecopy-overview.md#using-the-live-copy-overview)使用[繼續動作。
 
 1. 開啟[即時副本總覽](/help/sites-administering/msm-livecopy-overview.md#using-the-live-copy-overview)，並選取已暫停的即時副本頁面；它會顯示為&#x200B;**繼承已取消**。
 1. 從工具列選取&#x200B;**繼續**。
@@ -426,20 +424,20 @@ Blueprint頁面（在Blueprint設定中參照）為您提供使用目前(Bluepri
 
 * 切換到淺層即時副本：
 
-   * 將立即生效且不可還原。
+  * 將立即生效且不可還原。
 
-      * 子頁面會明確從即時副本分離。 如果還原，則無法保留對子項所做的進一步修改。
+    * 子頁面會明確從即時副本分離。 如果還原，則無法保留對子項所做的進一步修改。
 
-      * 將移除任何下階`LiveRelationships`，即使有巢狀`LiveCopies`亦然。
+    * 將移除任何下階`LiveRelationships`，即使有巢狀`LiveCopies`亦然。
 
 * 切換到深層即時副本：
 
-   * 子頁面保持不變。
-   * 若要檢視切換的效果，您可以進行轉出，系統會根據轉出設定套用任何內容修改。
+  * 子頁面保持不變。
+  * 若要檢視切換的效果，您可以進行轉出，系統會根據轉出設定套用任何內容修改。
 
 * 切換至淺層即時副本，然後回到深：
 
-   * （先前的）淺層即時副本的所有子項都會被視為是手動建立的，因此會使用`[oldname]_msm_moved name`移開。
+  * （先前的）淺層即時副本的所有子項都會被視為是手動建立的，因此會使用`[oldname]_msm_moved name`移開。
 
 若要指定或變更深度，請執行下列動作：
 
@@ -456,7 +454,7 @@ Blueprint頁面（在Blueprint設定中參照）為您提供使用目前(Bluepri
    >
    >如需詳細資訊，請參閱[即時副本 — 構成](/help/sites-administering/msm.md#live-copies-composition)。
 
-1. 按一下[儲存]&#x200B;**&#x200B;**&#x200B;以保留您的更新。
+1. 按一下[儲存]****&#x200B;以保留您的更新。
 
 ### 取消元件的繼承 {#cancelling-inheritance-for-a-component}
 
@@ -524,7 +522,7 @@ Blueprint頁面（在Blueprint設定中參照）為您提供使用目前(Bluepri
 
 >[!NOTE]
 >
->重新啟用繼承時，Live Copy 頁面屬性不會和來源屬性自動同步。如有需要，您可以手動要求同步。
+>重新啟用繼承時，Live Copy 頁面屬性不會和來源屬性自動同步。 如有需要，您可以手動要求同步。
 
 1. 使用&#x200B;**網站**&#x200B;主控台的&#x200B;**檢視屬性**&#x200B;選項或頁面工具列上的&#x200B;**頁面資訊**&#x200B;圖示，開啟即時副本頁面的屬性。
 1. 若要取消屬性的繼承，請按一下屬性右側顯示的連結圖示。
@@ -560,7 +558,7 @@ Blueprint頁面（在Blueprint設定中參照）為您提供使用目前(Bluepri
 
 #### 從即時副本概觀重設即時副本頁面 {#reset-a-live-copy-page-from-the-live-copy-overview}
 
-選取即時副本頁面時，也可從即時副本綜覽[&#128279;](/help/sites-administering/msm-livecopy-overview.md#using-the-live-copy-overview)使用重設動作。
+選取即時副本頁面時，也可從即時副本綜覽](/help/sites-administering/msm-livecopy-overview.md#using-the-live-copy-overview)使用[重設動作。
 
 1. 開啟[即時副本總覽](/help/sites-administering/msm-livecopy-overview.md#using-the-live-copy-overview)並選取即時副本頁面。
 1. 從工具列選取&#x200B;**重設**。
@@ -603,7 +601,7 @@ Blueprint頁面（在Blueprint設定中參照）為您提供使用目前(Bluepri
 
 在樹狀結構中使用&#x200B;**Detach**&#x200B;的位置上會有影響：
 
-* 在LiveCopy的根頁面上中斷連結&#x200B;**&#x200B;**
+* 在LiveCopy的根頁面上中斷連結&#x200B;****
 
   在即時副本的根頁面上執行此操作時，它會移除Blueprint的所有頁面與其LiveCopy之間的即時關係。
 
@@ -613,16 +611,16 @@ Blueprint頁面（在Blueprint設定中參照）為您提供使用目前(Bluepri
 
   在即時副本的子頁面（或分支）上執行此操作時：
 
-   * 隨即會移除該子頁面（或分支）的即時關係
-   * 而即時副本分支中的（子）頁面會被視為已手動建立。
+  * 隨即會移除該子頁面（或分支）的即時關係
+  * 而即時副本分支中的（子）頁面會被視為已手動建立。
 
   *但是*，子頁面仍受父分支的即時關係限制，因此藍圖頁面的進一步轉出將：
 
-   1. 重新命名分離的頁面：
+  1. 重新命名分離的頁面：
 
-      * 這是因為MSM將它們視為手動建立的頁面，這些頁面因具有與它嘗試建立的LiveCopy頁面相同的名稱而造成衝突。
+     * 這是因為MSM將它們視為手動建立的頁面，這些頁面因具有與它嘗試建立的LiveCopy頁面相同的名稱而造成衝突。
 
-   1. 以原始名稱建立（即時副本）頁面，其中包含轉出的變更。
+  1. 以原始名稱建立（即時副本）頁面，其中包含轉出的變更。
 
   >[!NOTE]
   >
