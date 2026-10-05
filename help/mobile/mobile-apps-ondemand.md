@@ -30,7 +30,7 @@ ht-degree: 4%
 
 ## AEM Mobile Author {#aem-mobile-author}
 
-***AEM作者* （或&#x200B;*行銷人員*）**使用自訂開發或現成可用的範本和元件來新增及編輯頁面、拖放元件，以及從DAM新增所有型別的媒體，包括影像、影片和文字片段（內容片段）。 *AEM作者*會使用AEM的內建內容編輯器，在應用程式中建立豐富的相關體驗，包括與Adobe Experience Cloud其他部分的整合。
+***AEM作者* （或&#x200B;*行銷人員*）**&#x200B;使用自訂開發或現成可用的範本和元件來新增及編輯頁面、拖放元件，以及從DAM新增所有型別的媒體，包括影像、影片和文字片段（內容片段）。 *AEM作者*會使用AEM的內建內容編輯器，在應用程式中建立豐富的相關體驗，包括與Adobe Experience Cloud其他部分的整合。
 
 使用AEM建立應用程式時，AEM Mobile On-demand Services作者會負責下列工作。
 
