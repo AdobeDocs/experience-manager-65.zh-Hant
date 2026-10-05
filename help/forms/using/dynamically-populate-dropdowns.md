@@ -11,16 +11,14 @@ role: User, Developer
 feature: Adaptive Forms,Foundation Components,Form Data Model
 source-git-commit: 8a77756e8ba771c8de9950c2323bef8f23cc59b4
 workflow-type: tm+mt
-source-wordcount: '328'
+source-wordcount: '351'
 ht-degree: 0%
-
 ---
-
 # 動態填入下拉式清單 {#dynamically-populating-drop-down-lists}
 
 ## 先決條件 {#prerequisites}
 
-* [正在建立OSGI組合](https://helpx.adobe.com/experience-manager/using/creating-osgi-bundles-digital-marketing.html)
+* [建立OSGI套件組合](https://helpx.adobe.com/experience-manager/using/creating-osgi-bundles-digital-marketing.html)
 * [開發AEM元件](/help/sites-developing/components.md)
 * [建立最適化表單](../../forms/using/creating-adaptive-form.md)
 * [製作最適化表單](../../forms/using/introduction-forms-authoring.md)

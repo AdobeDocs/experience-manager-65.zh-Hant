@@ -11,11 +11,9 @@ exl-id: 98d88b59-eb8f-42db-abb8-04506a5b8c30
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '344'
+source-wordcount: '346'
 ht-degree: 4%
-
 ---
-
 # 套用Dynamic Media影像預設集 {#applying-image-presets}
 
 影像預設集可讓資產動態傳送不同大小、不同格式或其他動態產生影像屬性的影像。 您可在匯出影像時選擇預設集。 預設集會根據管理員指定的規格重新格式化影像。
@@ -42,7 +40,7 @@ ht-degree: 4%
    >
    >* 靜態轉譯會顯示在窗格的上半部。 動態轉譯會顯示在下半部。 若僅使用動態轉譯，您可以使用URL來顯示影像。 **[!UICONTROL URL]**&#x200B;按鈕只會在您選取動態轉譯時顯示。 **[!UICONTROL RESS]**&#x200B;按鈕只有在您選取回應式影像預設集時才會出現。
    >
-   >* 當您在資產的詳細資料檢視中選取&#x200B;**[!UICONTROL 轉譯]**&#x200B;時，系統會顯示許多轉譯。 您可以增加所檢視的預設集數目。請參閱[增加顯示的影像預設集數目](managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display)。
+   >* 當您在資產的詳細資料檢視中選取&#x200B;**[!UICONTROL 轉譯]**&#x200B;時，系統會顯示許多轉譯。 您可以增加所檢視的預設集數目。 請參閱[增加顯示的影像預設集數目](managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display)。
 
    ![chlimage_1-208](assets/chlimage_1-208.png)
 

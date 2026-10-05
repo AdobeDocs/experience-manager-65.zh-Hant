@@ -11,11 +11,9 @@ feature: Adaptive Forms
 role: User, Developer
 source-git-commit: e821be5233fd5f6688507096790d219d25903892
 workflow-type: tm+mt
-source-wordcount: '260'
+source-wordcount: '263'
 ht-degree: 0%
-
 ---
-
 # 輸出服務概觀 {#overview-of-output-service}
 
 輸出可讓您將XML表單資料與Designer中建立的表單設計合併，以建立多種格式的檔案輸出資料流。 輸出資料流可以傳送到網路印表機、本機印表機或磁碟檔案

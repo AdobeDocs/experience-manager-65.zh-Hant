@@ -11,11 +11,9 @@ feature: Communities
 role: Admin
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '1478'
+source-wordcount: '1512'
 ht-degree: 0%
-
 ---
-
 # 社交元件架構 {#social-component-framework}
 
 社交元件架構(SCF)可簡化設定、自訂及擴充伺服器端和使用者端之Communities元件的程式。
@@ -50,19 +48,19 @@ SocialComponent API可延伸以提供使用者端檢視層或HTTP使用者端所
 若要自訂或擴充元件，您只需將覆蓋圖和擴充功能寫入/apps目錄，即可簡化升級至未來版本的程式。
 
 * 外觀設定：
-   * 只有[CSS需要編輯](client-customize.md#skinning-css)。
+  * 只有[CSS需要編輯](client-customize.md#skinning-css)。
 * 外觀與風格：
-   * 變更JS範本和CSS。
+  * 變更JS範本和CSS。
 * 外觀、觸感和UX：
-   * 變更JS範本、CSS和[擴充/覆寫JavaScript](client-customize.md#extending-javascript)。
+  * 變更JS範本、CSS和[擴充/覆寫JavaScript](client-customize.md#extending-javascript)。
 * 若要修改JS範本或GET端點可用的資訊：
-   * 延伸[SocialComponent](server-customize.md#socialcomponent-interface)。
+  * 延伸[SocialComponent](server-customize.md#socialcomponent-interface)。
 * 若要在作業期間新增自訂處理：
-   * 寫入[OperationExtension](server-customize.md#operationextension-class)。
+  * 寫入[OperationExtension](server-customize.md#operationextension-class)。
 * 若要新增自訂作業：
-   * 建立[Sling Post作業](server-customize.md#postoperation-class)。
-   * 視需要使用現有的[OperationServices](server-customize.md#operationservice-class)。
-   * 新增JavaScript程式碼以視需要從使用者端叫用您的作業。
+  * 建立[Sling貼文作業](server-customize.md#postoperation-class)。
+  * 視需要使用現有的[OperationServices](server-customize.md#operationservice-class)。
+  * 新增JavaScript程式碼以視需要從使用者端叫用您的作業。
 
 ## 伺服器端架構 {#server-side-framework}
 
@@ -80,9 +78,9 @@ Java™ API提供可輕鬆繼承或子類別的抽象類別和介面。
 
 HTTP API支援輕鬆自訂，並可為PhoneGap應用程式、原生應用程式以及其他整合和混合程式選擇使用者端平台。 此外，HTTP API允許社群網站在沒有使用者端的情況下以服務形式執行，使得框架元件可以整合到任何技術建置的任何網頁中。
 
-### HTTP API -GET要求 {#http-api-get-requests}
+### HTTP API - GET要求 {#http-api-get-requests}
 
-框架會為每個SocialComponent提供HTTP型API端點。 透過傳送GET要求至具有「.social.json」選擇器+擴充功能的資源來存取端點。 使用Sling時，要求會傳遞給`DefaultSocialGetServlet`。
+框架會為每個SocialComponent提供HTTP型API端點。 透過傳送GET要求至具有「.social.json」選擇器+副檔名的資源來存取端點。 使用Sling時，要求會傳遞給`DefaultSocialGetServlet`。
 
 **`DefaultSocialGetServlet`**
 
@@ -94,19 +92,19 @@ HTTP API支援輕鬆自訂，並可為PhoneGap應用程式、原生應用程式�
 
 **`GET Request`**
 
-預設的GETservlet會監聽.social.json請求，SocialComponent會以可自訂的JSON回應這些請求。
+預設的GET servlet會監聽.social.json請求，SocialComponent會以可自訂的JSON回應這些請求。
 
 ![scf-framework](assets/scf-framework.png)
 
-### HTTP API -POST要求 {#http-api-post-requests}
+### HTTP API - POST要求 {#http-api-post-requests}
 
-除了GET（讀取）作業之外，框架還定義了端點模式，以啟用元件上的其他作業，包括建立、更新和刪除。 這些端點是HTTP API，可接受輸入並使用HTTP狀態代碼或JSON回應物件回應。
+除了GET （讀取）作業之外，框架還定義端點模式，以啟用元件上的其他作業，包括建立、更新和刪除。 這些端點是HTTP API，可接受輸入並使用HTTP狀態代碼或JSON回應物件回應。
 
 此框架端點模式可讓CUD作業可擴充、可重複使用且可測試。
 
 **`POST Request`**
 
-每個SocialComponent作業都有SlingPOST：operation。 每個操作的商業邏輯和維護程式碼都包裝在OperationService中，可透過HTTP API或從其他位置以OSGi服務的形式存取。 提供鉤點可支援之前/之後動作的可插接操作延伸模組。
+每個SocialComponent作業都有Sling POST:operation。 每個操作的商業邏輯和維護程式碼都包裝在OperationService中，可透過HTTP API或從其他位置以OSGi服務的形式存取。 提供鉤點可支援之前/之後動作的可插接操作延伸模組。
 
 ![scf-post-request](assets/scf-post-request.png)
 
@@ -171,7 +169,7 @@ Handlebars (HBS)範本檔案(.hbs)類似於.jsp和.html範本檔案，但它們�
 
 `{{include this.id path="comments" resourceType="social/commons/components/hbs/comments"}}`
 
-**使用JSP**&#x200B;時，包含使用標籤[cq：include](../../help/sites-developing/taglib.md#lt-cq-include)的資源：
+**使用JSP**&#x200B;時，包含使用標籤[cq:include](../../help/sites-developing/taglib.md#lt-cq-include)的資源：
 
 ```
 <cq:include path="votes"
@@ -190,7 +188,7 @@ Handlebars (HBS)範本檔案(.hbs)類似於.jsp和.html範本檔案，但它們�
 
 ### 模型 — 檢視JavaScript架構 {#model-view-javascript-framework}
 
-此架構包含[Backbone.js](https://backbonejs.org/) (模型檢視JavaScript架構)的擴充功能，以方便開發豐富的互動式元件。 物件導向的性質支援可擴充/可重複使用的架構。 HTTP API可簡化使用者端與伺服器之間的通訊。
+此架構包含[Backbone.js](https://backbonejs.org/) （模型檢視JavaScript架構）的擴充功能，以方便開發豐富的互動式元件。 物件導向的性質支援可擴充/可重複使用的架構。 HTTP API可簡化使用者端與伺服器之間的通訊。
 
 此架構使用伺服器端Handlebars範本來呈現使用者端的元件。 這些模型是根據HTTP API產生的JSON回應。 檢視會將自身繫結到Handlebars範本產生的HTML，並提供互動功能。
 

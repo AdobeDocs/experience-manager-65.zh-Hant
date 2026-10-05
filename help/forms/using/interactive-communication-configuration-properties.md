@@ -1,22 +1,25 @@
 ---
 title: 互動式通訊設定屬性
+
 description: 編輯互動式通訊的預設設定屬性
+
+
 contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 content-type: reference
 topic-tags: interactive-communications
+
 docset: aem65
+
 feature: Interactive Communication
 exl-id: 09eeade6-e16d-4159-b26a-803c7201097a
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
-source-wordcount: '610'
-ht-degree: 6%
-
+source-wordcount: '614'
+ht-degree: 7%
 ---
-
 # 互動式通訊設定屬性{#interactive-communications-configuration-properties}
 
 互動式通訊包含安裝[AEM Forms附加元件](../../forms/using/installing-configuring-aem-forms-osgi.md)套件後自動設定的屬性。 互動式通訊作者可以使用&#x200B;**Adobe Experience Manager Web主控台組態**&#x200B;頁面編輯這些預設組態屬性。
@@ -55,7 +58,7 @@ ht-degree: 6%
      <li>numberGroupSeparator = ，</li> 
      <li>numberUseGroupSeparator = true</li> 
     </ul> </td> 
-   <td><p>—</p> </td> 
+   <td><p>--</p> </td> 
   </tr> 
   <tr> 
    <td>縮排</td> 
@@ -104,7 +107,7 @@ ht-degree: 6%
   </tr> 
   <tr> 
    <td>在PDF中啟用字型內嵌</td> 
-   <td><p>選取核取方塊以啟用在PDF檔案中嵌入字型。 選取此選項後，您可在使用Agent UI產生或預覽PDF檔案後內嵌新字型。 使用互動式通訊的列印通道來產生和預覽PDF檔案。</p> <p>如果用於產生PDF的機器上有字型，而存取PDF的使用者端機器上沒有字型，則在PDF檔案中嵌入字型會很有用。</p> <p>如需內嵌字型的詳細資訊，請參閱<a href="../../forms/using/customize-text-editor.md" target="_blank">自訂文字編輯器</a>。</p> </td> 
+   <td><p>選取核取方塊以啟用在PDF檔案中嵌入字型。 選取此選項後，您可在使用Agent UI產生或預覽PDF檔案後內嵌新字型。 使用互動式通訊的列印通道來產生和預覽PDF檔案。</p> <p>如果用於產生PDF的機器上有字型，但存取PDF的使用者端機器上沒有字型，則在PDF檔案中嵌入字型會很有用。</p> <p>如需內嵌字型的詳細資訊，請參閱<a href="../../forms/using/customize-text-editor.md" target="_blank">自訂文字編輯器</a>。</p> </td> 
    <td>未選取</td> 
    <td>不適用</td> 
   </tr> 
