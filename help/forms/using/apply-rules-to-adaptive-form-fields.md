@@ -9,18 +9,16 @@ feature: Adaptive Forms
 role: Admin, User, Developer
 source-git-commit: e821be5233fd5f6688507096790d219d25903892
 workflow-type: tm+mt
-source-wordcount: '1115'
-ht-degree: 0%
-
+source-wordcount: '1176'
+ht-degree: 1%
 ---
-
 # 教學課程：將規則套用至最適化表單欄位 {#tutorial-apply-rules-to-adaptive-form-fields}
 
 ![06-apply-rules-to-adaptive-form_main](assets/06-apply-rules-to-adaptive-form_main.png)
 
-本教學課程是[建立第一個最適化表單](/help/forms/using/create-your-first-adaptive-form.md)系列中的步驟。 Adobe建議您依照時間順序進行序列學習，以瞭解、執行並示範完整的教學課程使用案例。
+本教學課程是[建立第一個最適化表單](/help/forms/using/create-your-first-adaptive-form.md)系列中的步驟。 Adobe建議您依照時間順序來瞭解、執行和示範完整的教學課程使用案例。
 
-## 關於教學課程 {#about-the-tutorial}
+## 關於本教學課程 {#about-the-tutorial}
 
 您可以使用規則將互動性、商業邏輯和智慧型驗證新增至最適化表單。 調適型表單有內建規則編輯器。 規則編輯器提供與引導式導覽類似的拖放功能。 拖放方法是最快速且最簡單的規則建立方法。 規則編輯器也會為有興趣測試其程式碼技能或將規則提升到更高層級的使用者提供程式碼視窗。
 
@@ -63,7 +61,7 @@ ht-degree: 0%
 
    ![dropobjectstooutputfield-retrievedata](assets/dropobjectstooutputfield-retrievedata.png)
 
-   選取&#x200B;**[!UICONTROL 完成]**&#x200B;以儲存規則。 在規則編輯器視窗中，選取&#x200B;**[!UICONTROL 關閉]**。
+   選取「**[!UICONTROL 完成]**」以儲存此規則。 在規則編輯器視窗中，選取&#x200B;**[!UICONTROL 關閉]**。
 
 1. 預覽最適化表單。 在&#x200B;**[!UICONTROL 客戶識別碼]**&#x200B;欄位中輸入ID。 該表單現在可以從資料庫擷取客戶詳細資訊。
 
@@ -96,7 +94,7 @@ ht-degree: 0%
    >請勿將&#x200B;**[!UICONTROL Name]**&#x200B;和&#x200B;**[!UICONTROL 客戶ID]**&#x200B;欄位拖放至對應的tablename.property （例如customerdetails.name）。 它有助於避免錯誤地更新客戶的名稱和ID。
 
 1. 將&#x200B;**[!UICONTROL 客戶ID]**&#x200B;欄位從[!UICONTROL 表單物件]標籤拖放至&#x200B;**[!UICONTROL 輸入]**&#x200B;方塊中的ID欄位。 沒有前置字元Tablename的欄位（例如，此使用案例中的Customerdetails）會作為更新服務的搜尋引數。 此使用案例中的&#x200B;**[!UICONTROL id]**&#x200B;欄位可唯一識別&#x200B;**customerdetails**&#x200B;資料表中的記錄。
-1. 選取&#x200B;**[!UICONTROL 完成]**&#x200B;以儲存規則。 在規則編輯器視窗中，選取&#x200B;**[!UICONTROL 關閉]**。
+1. 選取「**[!UICONTROL 完成]**」以儲存此規則。 在規則編輯器視窗中，選取&#x200B;**[!UICONTROL 關閉]**。
 1. 預覽最適化表單。 擷取客戶的詳細資料、更新送貨地址並提交表單。 當您再次擷取相同客戶的詳細資料時，會顯示更新的送貨地址。
 
 ## 步驟3： （額外區段）使用程式碼編輯器執行驗證並顯示錯誤訊息 {#step-bonus-section-use-the-code-editor-to-run-validations-and-display-error-messages}

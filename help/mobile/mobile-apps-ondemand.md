@@ -11,18 +11,16 @@ feature: Mobile
 role: User
 source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '249'
-ht-degree: 3%
-
+source-wordcount: '269'
+ht-degree: 4%
 ---
-
 # Mobile On-Demand{#mobile-on-demand}
 
 {{ue-over-mobile}}
 
 >[!NOTE]
 >
->如果您未使用Adobe Experience Manager (AEM)作為內容管理來源，請參閱[AEM Mobile On-demand Services說明](https://helpx.adobe.com/tw/digital-publishing-solution/topics.html)。
+>如果您未使用Adobe Experience Manager (AEM)作為內容管理來源，請參閱[AEM Mobile On-demand Services說明](https://helpx.adobe.com/digital-publishing-solution/topics.html)。
 
 >[!NOTE]
 >
@@ -32,9 +30,9 @@ ht-degree: 3%
 
 ## AEM Mobile Author {#aem-mobile-author}
 
-***AEM作者* （或&#x200B;*行銷人員*）**&#x200B;使用自訂開發或現成可用的範本和元件來新增及編輯頁面、拖放元件，以及從DAM新增所有型別的媒體，包括影像、影片和文字片段（內容片段）。 然後&#x200B;*AEM作者*會使用AEM的內建內容編輯器在應用程式中建立豐富的相關體驗，包括與Adobe Experience Cloud其他部分的整合。
+***AEM作者* （或&#x200B;*行銷人員*）**&#x200B;使用自訂開發或現成可用的範本和元件來新增及編輯頁面、拖放元件，以及從DAM新增所有型別的媒體，包括影像、影片和文字片段（內容片段）。 *AEM作者*會使用AEM的內建內容編輯器，在應用程式中建立豐富的相關體驗，包括與Adobe Experience Cloud其他部分的整合。
 
-使用AEM Mobile On-demand Services建立應用程式時，AEM作者會負責下列工作。
+使用AEM建立應用程式時，AEM Mobile On-demand Services作者會負責下列工作。
 
 **為AEM Mobile On-demand Services應用程式編寫AEM內容**&#x200B;涉及下列動作：
 
@@ -57,5 +55,5 @@ ht-degree: 3%
 
 若要進一步瞭解建立AEM Mobile On-demand Services應用程式的其他兩個角色和責任，請參閱下列資源：
 
-* [為AEM Mobile On-demand Services開發AEM內容](/help/mobile/aem-mobile-on-demand.md)
+* [針對AEM Mobile On-demand Services開發AEM內容](/help/mobile/aem-mobile-on-demand.md)
 * [管理內容以使用AEM Mobile On-demand Services](/help/mobile/aem-mobile.md)

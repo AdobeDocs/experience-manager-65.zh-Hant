@@ -11,11 +11,9 @@ feature: Developing
 role: Developer
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
-source-wordcount: '617'
+source-wordcount: '621'
 ht-degree: 0%
-
 ---
-
 # 開發實務{#development-practices}
 
 ## 根據完成定義(DoD)的工作 {#work-according-to-a-definition-of-done}
@@ -61,9 +59,9 @@ ht-degree: 0%
 
 程式碼分析工具可能很有價值，但前提是其報表會導致開發團隊採取行動。 若不微調這些工具所提供的分析，這些工具所產生的建議就會變得無關緊要，並失去其價值。
 
-### 遵循男孩Scout規則 {#follow-the-boy-scout-rule}
+### 遵循童子軍規則 {#follow-the-boy-scout-rule}
 
-「男孩」Scout有一個規則：「不要比原來發現更好。」 只要開發團隊的所有成員都遵守此規則，並在遇到問題時進行清理，程式碼就會持續改善。
+童子軍有一項規則：「別犯錯。」 只要開發團隊的所有成員都遵守此規則，並在遇到問題時進行清理，程式碼就會持續改善。
 
 ### 避免實作YAGNI功能 {#avoid-implementing-yagni-features}
 

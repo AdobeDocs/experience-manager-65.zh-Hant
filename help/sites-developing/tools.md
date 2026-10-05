@@ -1,10 +1,12 @@
 ---
 title: 測試和追蹤工具
 description: AEM提供測試元件UI的架構，以及測試和偵錯元件的機制
+
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: testing
 content-type: reference
+
 docset: aem65
 exl-id: bb5d1c7c-56ce-4d1e-a3cb-4e74d6922137
 solution: Experience Manager, Experience Manager Sites
@@ -12,11 +14,9 @@ feature: Developing
 role: Developer
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
-source-wordcount: '288'
-ht-degree: 0%
-
+source-wordcount: '293'
+ht-degree: 1%
 ---
-
 # 測試和追蹤工具{#testing-and-tracking-tools}
 
 ## 測試 {#testing}

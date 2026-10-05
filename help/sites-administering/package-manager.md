@@ -11,11 +11,9 @@ exl-id: e8929d7c-9920-4c02-95a9-6f7f7a365203
 solution: Experience Manager, Experience Manager Sites
 source-git-commit: c705667e60ccfbc4612ef3212dbe549e6bea66a9
 workflow-type: tm+mt
-source-wordcount: '3568'
-ht-degree: 1%
-
+source-wordcount: '3576'
+ht-degree: 2%
 ---
-
 
 # 封裝管理員 {#working-with-packages}
 
@@ -35,7 +33,7 @@ ht-degree: 1%
 
 ## 封裝管理員 {#package-manager}
 
-封裝管理員會管理AEM安裝上的封裝。 在您[指派必要的許可權](#permissions-needed-for-using-the-package-manager)之後，您就可以使用封裝管理員執行各種動作，包括設定、建置、下載和安裝封裝。
+封裝管理員會管理您AEM安裝上的封裝。 在您[指派必要的許可權](#permissions-needed-for-using-the-package-manager)之後，您就可以使用封裝管理員執行各種動作，包括設定、建置、下載和安裝封裝。
 
 ### 必要許可權 {#required-permissions}
 
@@ -55,7 +53,7 @@ ht-degree: 1%
 您可以透過三種方式存取「封裝管理員」：
 
 1. 從AEM主功能表> **工具** > **部署** > **套件**
-1. 使用頂端切換器列從[CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md)
+1. 從[CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md) （使用頂端切換列）
 1. 直接存取`http://<host>:<port>/crx/packmgr/`
 
 ### 封裝管理員UI {#ui}
@@ -65,8 +63,8 @@ ht-degree: 1%
 * **左側導覽面板** — 此面板可讓您篩選及排序封裝清單。
 * **封裝清單** — 這是執行個體上按照左側導覽面板中的選取專案篩選和排序的封裝清單。
 * **活動記錄** — 此面板一開始會最小化，並展開以詳細說明封裝管理員的活動，例如建置或安裝封裝時。 「活動記錄」標籤中還有額外的按鈕可執行下列動作：
-   * **清除記錄檔**
-   * **顯示/隱藏**
+  * **清除記錄檔**
+  * **顯示/隱藏**
 * **工具列** — 工具列包含[左側導覽面板]和[封裝清單]的重新整理按鈕，以及搜尋、建立和上傳封裝的按鈕。
 
 ![封裝管理員UI](assets/package-manager-ui.png)
@@ -128,7 +126,7 @@ ht-degree: 1%
 | 名稱 | 封裝的名稱 |
 | 群組 | 若要組織封裝，您可以鍵入新群組的名稱或選取現有群組 |
 | 版本 | 用於版本的文字 |
-| 說明 | 允許格式化HTML標示的封裝的簡短說明 |
+| 說明 | 套件允許格式化時使用HTML標籤的簡短說明 |
 | 縮圖 | 隨套件清單一起出現的圖示 |
 
 #### 封裝縮圖 {#thumbnails}
@@ -141,13 +139,13 @@ ht-degree: 1%
 
 ![官方Hotfix縮圖](assets/official-hotfix.png)
 
-擴充功能的正式AEM安裝
+正式安裝的AEM擴充功能
 
 ![正式AEM安裝或擴充功能縮圖](assets/official-installation.png)
 
 Official Service Pack
 
-![官方AEM Service Pack圖示](assets/official-service-pack.png)
+![正式AEM Service Pack圖示](assets/official-service-pack.png)
 
 對您的套件使用唯一的圖示。 請勿重複使用Adobe使用的圖示。
 
@@ -170,12 +168,12 @@ Official Service Pack
 
 建立規則時，您可以定義規則運算式（也稱為regex、regexp或rational運算式），以指定要包含或排除的所有節點。
 
-| 規則型別 | 說明 |
+| 規則類型 | 說明 |
 |---|---|
 | include | 包含將包含指定目錄中符合規則運算式的所有檔案和資料夾。 包含&#x200B;**將不會**&#x200B;包含指定根路徑下的其他檔案或資料夾。 |
 | 排除 | 排除將排除符合規則運算式的所有檔案和資料夾。 |
 
-當您首次[建立封裝時，最常會定義封裝篩選器。](#creating-a-new-package)不過，它們也可在稍後編輯，之後應重新建置封裝，以根據新的篩選定義更新其內容。
+當您首次[建立封裝時，最常會定義封裝篩選器。](#creating-a-new-package) 不過，它們也可在稍後進行編輯，之後應重新建置套件，以根據新的篩選定義更新其內容。
 
 >[!TIP]
 >
@@ -240,11 +238,11 @@ Official Service Pack
 
 1. 按一下&#x200B;**確定**&#x200B;以建立封裝。
 
-1. AEM會在套裝程式清單頂端列出新套裝程式。
+1. AEM會在套件清單頂端列出新套件。
 
    ![新封裝](assets/new-package.png)
 
-1. 按一下&#x200B;**編輯**&#x200B;以定義[封裝內容。完成編輯設定後，](#package-contents)按一下&#x200B;**儲存**。
+1. 按一下&#x200B;**編輯**&#x200B;以定義[封裝內容。](#package-contents) 完成編輯設定後，請按一下&#x200B;**儲存**。
 
 1. 您現在可以[建置](#building-a-package)您的封裝。
 
@@ -260,11 +258,11 @@ Official Service Pack
 
 1. 按一下&#x200B;**建置**。 對話方塊會要求您確認是否要建置封裝，因為任何現有的封裝內容都會被覆寫。
 
-1. 按一下&#x200B;**確定**。 AEM會建置套件，在活動清單中列出新增到套件的所有內容。 完成時，AEM會顯示已建置封裝的確認，並且（當您關閉對話方塊時）會更新封裝清單資訊。
+1. 按一下&#x200B;**「確定」**。 AEM會建置套件，並在活動清單中列出新增至套件的所有內容。 完成時，AEM會顯示已建置封裝的確認，而且（當您關閉對話方塊時）會更新封裝清單資訊。
 
 ### 編輯封裝 {#edit-package}
 
-將套件上傳到AEM後，您可以修改其設定。
+套件上傳至AEM後，您就可以修改其設定。
 
 1. [Access封裝管理員。](#accessing)
 
@@ -324,7 +322,7 @@ Official Service Pack
 
 1. 按一下封裝詳細資訊區域中的&#x200B;**下載**&#x200B;按鈕或封裝的連結檔案名稱。
 
-1. AEM會將套件下載到您的電腦。
+1. AEM會將套件下載至您的電腦。
 
 ### 共用封裝 {#share}
 
@@ -365,11 +363,11 @@ Package Share是一項集中式公用服務，可分發內容套件。 封裝共
 
 **檢查的內容**
 
-此驗證會檢查所有JAR檔案（OSGi套裝）的套件，擷取其`manifest.xml` （其中包含所述OSGi套裝所依賴的版本化相依性），並以正確版本驗證AEM執行個體匯出所述相依性。
+此驗證會檢查所有JAR檔案（OSGi套件組合）的套件，擷取其`manifest.xml` （其中包含所述OSGi套件組合所依賴的版本化相依性），並驗證AEM執行個體以正確版本匯出所述相依性。
 
 **報告方式**
 
-任何無法由AEM執行個體滿足的版本化相依性都會列在「封裝管理員」的「活動記錄」中。
+任何無法由AEM執行個體滿足的已建立版本相依性都會列在「封裝管理員」的「活動記錄」中。
 
 **錯誤狀態**
 
@@ -383,7 +381,7 @@ Package Share是一項集中式公用服務，可分發內容套件。 封裝共
 
 **檢查的內容**
 
-此驗證會決定要安裝的套件是否包含已在目的地AEM執行個體中覆蓋的檔案。
+此驗證會判斷要安裝的套件是否包含已在目的地AEM執行個體中覆蓋的檔案。
 
 例如，假設在`/apps/sling/servlet/errorhandler/404.jsp`有一個現有的覆蓋，一個包含`/libs/sling/servlet/errorhandler/404.jsp`的封裝，因此它將變更`/libs/sling/servlet/errorhandler/404.jsp`的現有檔案。
 
@@ -430,7 +428,7 @@ Package Share是一項集中式公用服務，可分發內容套件。 封裝共
 套件的驗證可以透過兩種不同的方式完成：
 
 * [透過封裝管理員UI](#via-package-manager)
-* [透過HTTPPOST請求，例如使用cURL](#via-post-request)
+* [透過HTTP POST要求，例如使用cURL](#via-post-request)
 
 上傳套件後但安裝套件前應一律進行驗證。
 
@@ -446,9 +444,9 @@ Package Share是一項集中式公用服務，可分發內容套件。 封裝共
 
 1. 接著會執行選取的驗證，結果會顯示在「封裝管理員」的「活動記錄」中。
 
-##### 透過HTTPPOST要求進行套件驗證 {#via-post-request}
+##### 透過HTTP POST要求進行套件驗證 {#via-post-request}
 
-Post請求會採用下列形式。
+POST要求會採用下列形式。
 
 ```
 https://<host>:<port>/crx/packmgr/service.jsp?cmd=validate&type=osgiPackageImports,overlays,acls
@@ -528,7 +526,7 @@ curl -v -X POST --user admin:admin -F file=@/Users/SomeGuy/Desktop/core.wcm.comp
 
 ### 以檔案系統為基礎的上傳與安裝 {#file-system-based-upload-and-installation}
 
-安裝套件時，您可以完全放棄套件管理員。 AEM可以偵測位於主機本機檔案系統特定位置的套件，並自動上傳及安裝這些套件。
+安裝套件時，您可以完全放棄套件管理員。 AEM可以偵測放置在主機本機檔案系統特定位置的套件，並自動上傳及安裝這些套件。
 
 1. 在AEM安裝資料夾下，jar和`license.properties`檔案旁邊有`crx-quicksart`資料夾。 在`crx-quickstart`下建立名為`install`的資料夾，產生路徑`<aem-home>/crx-quickstart/install`。
 
@@ -578,11 +576,11 @@ curl -v -X POST --user admin:admin -F file=@/Users/SomeGuy/Desktop/core.wcm.comp
 
 1. 會複製套件，並在活動記錄中報告詳細資訊。
 
-## Software Distribution {#software-distribution}
+## 軟體散發 {#software-distribution}
 
-AEM套件可用於在AEM環境中建立和共用內容。
+AEM套件可用來在AEM環境中建立和共用內容。
 
-[Software Distribution](https://downloads.experiencecloud.adobe.com)是一項集中式服務，旨在簡化AEM封裝的搜尋和下載。
+[Software Distribution](https://downloads.experiencecloud.adobe.com)是一項集中式服務，旨在簡化AEM套件的搜尋和下載。
 
 如需詳細資訊，請參閱[軟體發佈檔案。](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html?lang=zh-Hant)
 
