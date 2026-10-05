@@ -29,7 +29,7 @@ ht-degree: 1%
 您也可以透過設定A4T Analytics Cloud設定，將Adobe Target設定為使用Adobe Target作為目標定位內容的報表來源。
 
 若要尋找雲端設定和架構，請透過&#x200B;**工具** > **部署** > **雲端**&#x200B;導覽至&#x200B;**雲端服務**。 ([http://localhost:4502/libs/cq/core/content/tools/cloudservices.html](http://localhost:4502/libs/cq/core/content/tools/cloudservices.html))
-在Adobe Target下方，按一下**顯示設定**。
+在Adobe Target下方，按一下&#x200B;**顯示設定**。
 
 ### 布建的目標組態特性 {#provisioned-target-configuration-properties}
 
@@ -196,7 +196,7 @@ ht-degree: 1%
 您可以為單一Target設定建立多個架構。 當您必須為網站的不同區段傳送一組不同的引數至Target時，多個架構會很有用。 為您傳送的每組引數建立框架。 將網站的每個區段與適當的架構建立關聯。 一個網頁一次只能使用一個框架。
 
 1. 在您的Target設定頁面上，按一下「可用架構」旁的&#x200B;**+** （加號）。
-1. 在[建立架構]對話方塊中，指定&#x200B;**標題**，選取&#x200B;**Adobe Target架構**，然後按一下[建立]****。
+1. 在[建立架構]對話方塊中，指定&#x200B;**標題**，選取&#x200B;**Adobe Target架構**，然後按一下[建立]&#x200B;**&#x200B;**。
 
    ![建立框架對話方塊](assets/chlimage_1-161.png)
 
