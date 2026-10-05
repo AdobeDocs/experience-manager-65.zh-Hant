@@ -9,16 +9,14 @@ solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 source-git-commit: f941782f9a4201e7bff898853d3fc18954418500
 workflow-type: tm+mt
-source-wordcount: '908'
-ht-degree: 3%
-
+source-wordcount: '997'
+ht-degree: 8%
 ---
-
 # 教學課程：建立第一個最適化表單 {#tutorial-create-your-first-adaptive-form}
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/create-an-adaptive-form-on-forms-cs/creating-adaptive-form.html?lang=zh-Hant) |
+| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/create-an-adaptive-form-on-forms-cs/creating-adaptive-form.html) |
 | AEM 6.5 | 本文章 |
 
 
@@ -45,11 +43,11 @@ ht-degree: 3%
 
 ### 必備條件 {#prerequisite}
 
-* 設定[AEM作者執行個體](https://experienceleague.adobe.com/docs/experience-manager-65/content/implementing/deploying/deploying/deploy.html?lang=zh-Hant#author-and-publish-installs)
+* 設定[AEM作者執行個體](https://experienceleague.adobe.com/docs/experience-manager-65/content/implementing/deploying/deploying/deploy.html#author-and-publish-installs)
 * 在作者執行個體上安裝[AEM Forms附加元件](../../forms/using/installing-configuring-aem-forms-osgi.md)。
 * 從資料庫提供者取得JDBC資料庫驅動程式（JAR檔案）。 教學課程中的範例是以[!DNL MySQL]資料庫為基礎，並使用[!DNL Oracle's] [MySQL JDBC資料庫驅動程式](https://dev.mysql.com/downloads/connector/j/5.1.html)。
 
-* 使用下列顯示的欄位，設定包含客戶資料的資料庫。 建立最適化表單不需要資料庫。 此教學課程使用資料庫來顯示AEM [!DNL Forms]的表單資料模型和持續性功能。
+* 使用下列顯示的欄位，設定包含客戶資料的資料庫。 建立最適化表單不需要資料庫。 本教學課程使用資料庫來顯示AEM [!DNL Forms]的表單資料模型和持續性功能。
 
 ![adaptiveformdata](assets/adaptiveformdata.png)
 
@@ -66,9 +64,9 @@ ht-degree: 3%
 * 建立提交動作，以傳送包含表單內容的電子郵件。
 * 預覽並提交最適化表單。
 
-[![檢視指南](assets/see-the-guide-sm.png)](create-adaptive-form.md)
+[![請參閱指南](assets/see-the-guide-sm.png)](create-adaptive-form.md)
 
-## 步驟2：建立表單資料模型 {#step-create-form-data-model}
+## 步驟 2：建立表單資料模型 {#step-create-form-data-model}
 
 ![05-create-form-data-model-main_small](assets/05-create-form-data-model-main_small.png)
 
@@ -82,7 +80,7 @@ ht-degree: 3%
 * 設定表單資料模型的讀寫服務。
 * 測試表單資料模型和已設定服務的測試資料。
 
-[![檢視指南](assets/see-the-guide-sm.png)](create-form-data-model.md)
+[![請參閱指南](assets/see-the-guide-sm.png)](create-form-data-model.md)
 
 ## 步驟3：將規則套用至最適化表單欄位 {#step-apply-rules-to-adaptive-form-fields}
 
@@ -95,23 +93,23 @@ ht-degree: 3%
 * 建立規則並套用至最適化表單欄位。
 * 使用規則來觸發表單資料模型服務，以將資料更新至資料庫。
 
-[![檢視指南](assets/see-the-guide-sm.png)](apply-rules-to-adaptive-form-fields.md)
+[![請參閱指南](assets/see-the-guide-sm.png)](apply-rules-to-adaptive-form-fields.md)
 
 ## 步驟4：設計最適化表單的樣式 {#step-style-your-adaptive-form}
 
 ![adaptive-form-styling](/help/forms/using/assets/09-style-your-adaptive-form-small.png)
 
-調適型表單提供主題和[編輯器](../../forms/using/themes.md)，以便為調適型表單建立主題。 主題包含元件和面板的樣式細節，您可以重複使用不同表單中的主題。 樣式包括背景顏色、狀態顏色、透明度、對齊方式和大小等屬性。將主題套用至表單時，指定的樣式會反映至表單的對應元件。 調適型表單也支援表單專屬樣式的內嵌樣式。
+調適型表單提供主題和[編輯器](../../forms/using/themes.md)，以便為調適型表單建立主題。 主題包含元件和面板的樣式細節，您可以重複使用不同表單中的主題。 樣式包括背景顏色、狀態顏色、透明度、對齊方式和大小等屬性。 將主題套用至表單時，指定的樣式會反映至表單的對應元件。 調適型表單也支援表單專屬樣式的內嵌樣式。
 
 目標：
 
 * 將現成的主題套用至最適化表單。
 * 使用主題編輯器建立最適化表單的主題。
-* 在自訂主題中使用Web Fonts。
+* 在自訂主題中使用Web Fonts 。
 
-[![檢視指南](assets/see-the-guide-sm.png)](style-your-adaptive-form.md)
+[![請參閱指南](assets/see-the-guide-sm.png)](style-your-adaptive-form.md)
 
-## 步驟5：將您的最適化表單Publish {#step-publish-your-adaptive-form}
+## 步驟5：發佈最適化表單 {#step-publish-your-adaptive-form}
 
 ![12-publish-your-adaptive-form-_small](assets/12-publish-your-adaptive-form-_small.png)
 
@@ -119,8 +117,8 @@ ht-degree: 3%
 
 目標：
 
-* 將最適化表單作為AEM頁面Publish。
+* 將最適化表單發佈為AEM頁面。
 * 將最適化表單內嵌到AEM [!DNL Sites]頁面中。
-* 將最適化表單內嵌於外部網頁(託管在AEM外部的非AEM網頁)中。
+* 將最適化表單內嵌於外部網頁（託管於AEM外部的非AEM網頁）中。
 
-[![檢視指南](assets/see-the-guide-sm.png)](publish-your-adaptive-form.md)
+[![請參閱指南](assets/see-the-guide-sm.png)](publish-your-adaptive-form.md)

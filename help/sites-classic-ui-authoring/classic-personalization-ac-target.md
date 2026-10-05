@@ -11,11 +11,9 @@ feature: Authoring,Personalization
 role: User
 source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
 workflow-type: tm+mt
-source-wordcount: '805'
+source-wordcount: '816'
 ht-degree: 0%
-
 ---
-
 # 鎖定您的Adobe Campaign{#targeting-your-adobe-campaign}
 
 若要鎖定您的Adobe Campaign電子報，您必須先設定分段，而這僅適用於傳統UI。 之後，您可以為Adobe Campaign建立鎖定目標的體驗。
@@ -61,7 +59,7 @@ ht-degree: 0%
 1. 開啟您建立的&#x200B;**促銷活動**&#x200B;頁面。
 1. 按一下「**建立頁面**」並輸入頁面的標題（例如，「男性」）來建立您區段的體驗，然後選取「**體驗**」範本。
 1. 開啟已建立的體驗頁面。
-1. 按一下[編輯]&#x200B;**&#x200B;**，然後在[區段]下方按一下[新增專案]&#x200B;**&#x200B;**。
+1. 按一下[編輯]****，然後在[區段]下方按一下[新增專案]****。
 1. 輸入男性區段的路徑，例如`/etc/segmentation/ac-segments/male`，然後按一下&#x200B;**確定**。 應該會出現下列訊息： *體驗目標為：男性*
 1. 重複上述步驟以建立所有區段的體驗，例如女性目標。
 
@@ -73,7 +71,7 @@ ht-degree: 0%
 
 若要建立具有目標內容的Newsletter：
 
-1. 建立具有目標內容的Newsletter：在Geometrixx Outdoors的電子郵件行銷活動底下，按一下「**建立** > **頁面**」，然後選取其中一個Adobe Campaign郵件範本。
+1. 建立具有目標內容的新聞稿：在Geometrixx Outdoors的電子郵件行銷活動底下，按一下「**建立** > **頁面**」，然後選取其中一個Adobe Campaign郵件範本。
 
    >[!NOTE]
    >
@@ -95,11 +93,11 @@ ht-degree: 0%
 
 1. 導覽至另一個區段（男性），然後按一下&#x200B;**新增選件**，然後按一下加號圖示+。 然後編輯選件。
 1. 導覽至另一個區段（女性），然後按一下「**新增選件**」和加號圖示+。 然後編輯此選件。
-1. 按一下[下一步]&#x200B;**&#x200B;**&#x200B;檢視對應，然後按一下[下一步]&#x200B;**&#x200B;**&#x200B;檢視不適用於Adobe Campaign的設定，然後按一下[儲存]&#x200B;**&#x200B;**。
+1. 按一下[下一步]****&#x200B;檢視對應，然後按一下[下一步]****&#x200B;檢視不適用於Adobe Campaign的設定，然後按一下[儲存]****。
 
-   當內容在Adobe Campaign內的傳遞中使用時，AEM會自動產生適用於Adobe Campaign的正確目標定位代碼
+   當內容用於Adobe Campaign內的傳遞時，AEM會自動產生適用於Adobe Campaign的正確目標定位代碼
 
-1. 在Adobe Campaign中，建立您的傳遞 — 選取包含AEM內容的&#x200B;**電子郵件傳遞**，並視需要選取本機AEM帳戶並確認您的變更。
+1. 在Adobe Campaign中，建立您的傳遞 — 選取&#x200B;**包含AEM內容的電子郵件傳遞**，然後視需要選取本機AEM帳戶，並確認您的變更。
 
    在HTML檢視中，目標元件的不同體驗會包含在Adobe Campaign目標定位程式碼中。
 

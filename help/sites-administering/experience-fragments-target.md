@@ -12,22 +12,20 @@ feature: Integration
 role: Admin
 source-git-commit: dcb55b3b185fe5dccf52377a12556e33d818e410
 workflow-type: tm+mt
-source-wordcount: '1438'
+source-wordcount: '1487'
 ht-degree: 1%
-
 ---
-
 # 將體驗片段匯出到 Adobe Target{#exporting-experience-fragments-to-adobe-target}
 
 您可以將在Adobe Experience Manager (AEM)中建立的[體驗片段](/help/sites-authoring/experience-fragments.md)匯出至Adobe Target (Target)。 接著，可將這些選件做為Target活動中的選件，以大規模測試並個人化體驗。
 
 有三個格式選項可用於將體驗片段匯出至Adobe Target：
 
-* HTML（預設）：支援網頁和混合式內容傳遞
+* HTML （預設）：支援網頁和混合式內容傳遞
 * JSON：支援Headless內容傳送
 * HTML 和 JSON
 
-AEM體驗片段可以匯出至Adobe Target中的預設工作區，或匯出至Adobe Target的使用者定義工作區。 這是使用Adobe Developer Console完成的，對此，AEM必須使用IMS[&#128279;](/help/sites-administering/setting-up-ims-integrations-for-aem.md)與Adobe Target 整合。
+AEM體驗片段可以匯出至Adobe Target中的預設工作區，或匯出至Adobe Target的使用者定義工作區。 這是使用Adobe Developer Console完成的，對此，AEM必須使用IMS](/help/sites-administering/setting-up-ims-integrations-for-aem.md)與Adobe Target [整合。
 
 >[!NOTE]
 >
@@ -37,7 +35,7 @@ AEM體驗片段可以匯出至Adobe Target中的預設工作區，或匯出至Ad
 
 >[!NOTE]
 >
->Adobe Target本身並不存在Adobe Target工作區。 它們是在Adobe IMS (Identity Management系統)中定義和管理，然後使用Adobe Developer Console中的整合選取以供跨解決方案使用。
+>Adobe Target本身並不存在Adobe Target工作區。 它們是在Adobe IMS （Identity Management系統）中定義和管理，然後使用Adobe Developer Console中的整合選取以供跨解決方案使用。
 
 >[!NOTE]
 >
@@ -48,14 +46,14 @@ AEM體驗片段可以匯出至Adobe Target中的預設工作區，或匯出至Ad
 >如需進一步資訊，另請參閱：
 >
 >* [Adobe Target開發](https://developers.adobetarget.com/)
->* [核心元件 — 體驗片段](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/experience-fragment.html?lang=zh-Hant)
+>* [核心元件 — 體驗片段](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/experience-fragment.html)
 >
 
 ## 先決條件 {#prerequisites}
 
 需要執行各種動作：
 
-1. 您必須使用IMS[&#128279;](/help/sites-administering/setting-up-ims-integrations-for-aem.md) 整合AEM與Adobe Target。
+1. 您必須使用IMS](/help/sites-administering/setting-up-ims-integrations-for-aem.md) [整合AEM與Adobe Target。
 
    >[!NOTE]
    >
@@ -63,7 +61,7 @@ AEM體驗片段可以匯出至Adobe Target中的預設工作區，或匯出至Ad
    >
    >先前是使用[JWT認證進行設定，而現在Adobe Developer Console](/help/sites-administering/jwt-credentials-deprecation-in-adobe-developer-console.md)已棄用。
 
-1. 體驗片段會從AEM編寫執行個體匯出，因此您必須在編寫執行個體上[設定AEM連結外部化程式](/help/sites-administering/target-requirements.md#configuring-the-aem-link-externalizer)，以確保體驗片段中的任何參考都會外部化以供Web傳遞。
+1. 體驗片段會從AEM製作執行個體匯出，因此您必須在製作執行個體上[設定AEM連結外部化器](/help/sites-administering/target-requirements.md#configuring-the-aem-link-externalizer)，以確保體驗片段中的任何參考都會外部化，以供Web傳遞使用。
 
    >[!NOTE]
    >
@@ -100,7 +98,7 @@ AEM體驗片段可以匯出至Adobe Target中的預設工作區，或匯出至Ad
    >
    >請參閱核心元件：
    >
-   >[核心元件 — 體驗片段](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/experience-fragment.html?lang=zh-Hant)
+   >[核心元件 — 體驗片段](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/experience-fragment.html)
 
    在&#x200B;**Adobe Target**&#x200B;下選取：
 
@@ -113,13 +111,13 @@ AEM體驗片段可以匯出至Adobe Target中的預設工作區，或匯出至Ad
    >
    >Externalizer網域是選用的。
    >
-   >當您想要匯出的內容指向特定的&#x200B;*發佈*&#x200B;網域時，會設定AEM Externalizer。 如需詳細資訊，請參閱[設定AEM連結外部器](/help/sites-administering/target-requirements.md#configuring-the-aem-link-externalizer)。
+   >當您想要匯出的內容指向特定的&#x200B;*發佈*&#x200B;網域時，就會設定AEM Externalizer。 如需詳細資訊，請參閱[設定AEM連結外部器](/help/sites-administering/target-requirements.md#configuring-the-aem-link-externalizer)。
    >
    >另請注意，外部化器網域僅與傳送至Target的體驗片段內容相關，與檢視選件內容之類的中繼資料無關。
 
    例如，針對資料夾：
 
-   ![資料夾 — Cloud Service](assets/xf-target-integration-01.png "資料夾 — Cloud Service")
+   ![資料夾 — 雲端服務](assets/xf-target-integration-01.png "資料夾 — 雲端服務")
 
 1. **儲存並關閉**。
 
@@ -144,13 +142,13 @@ AEM體驗片段可以匯出至Adobe Target中的預設工作區，或匯出至Ad
 
    >[!NOTE]
    >
-   >如果體驗片段已匯出，請選取「在Adobe Target中更新」**&#x200B;**。
+   >如果體驗片段已匯出，請選取「在Adobe Target中更新」****。
 
-1. 視需要按一下&#x200B;**匯出而不發佈**&#x200B;或&#x200B;**Publish**。
+1. 視需要按一下&#x200B;**匯出而不發佈**&#x200B;或&#x200B;**發佈**。
 
    >[!NOTE]
    >
-   >選取&#x200B;**Publish**&#x200B;會立即發佈體驗片段並將其傳送到Target。
+   >選取&#x200B;**發佈**&#x200B;會立即發佈體驗片段並將其傳送到Target。
 
 1. 在確認對話方塊中按一下&#x200B;**確定**。
 
@@ -170,7 +168,7 @@ AEM體驗片段可以匯出至Adobe Target中的預設工作區，或匯出至Ad
 
 ## 在Adobe Target中使用您的體驗片段 {#using-your-experience-fragments-in-adobe-target}
 
-執行先前的工作後，體驗片段會顯示在Adobe Target的「選件」頁面中。 檢視[特定Target檔案](https://experienceleague.adobe.com/docs/target/using/experiences/offers/aem-experience-fragments.html?lang=zh-Hant)以瞭解您可以達成的目標。
+執行先前的工作後，體驗片段會顯示在Adobe Target的「選件」頁面中。 檢視[特定Target檔案](https://experienceleague.adobe.com/docs/target/using/experiences/offers/aem-experience-fragments.html)以瞭解您可以達成的目標。
 
 >[!NOTE]
 >
@@ -178,21 +176,21 @@ AEM體驗片段可以匯出至Adobe Target中的預設工作區，或匯出至Ad
 
 ## 刪除已匯出至Adobe Target的體驗片段 {#deleting-an-experience-fragment-already-exported-to-adobe-target}
 
-刪除已匯出至Target的體驗片段，如果片段已在Adobe Target的選件中使用，可能會造成問題。 刪除片段會導致選件無法使用，因為AEM正在傳遞片段內容。
+刪除已匯出至Target的體驗片段，如果片段已在Adobe Target的選件中使用，可能會造成問題。 刪除片段會導致選件無法使用，因為AEM正在傳送片段內容。
 
 若要避免此類情況：
 
 * 如果體驗片段目前未用於活動中，AEM可讓使用者刪除片段而不顯示警告訊息。
-* 如果Adobe Target中的活動使用體驗片段，則會出現錯誤訊息，警告AEM使用者刪除片段對活動可能造成的後果。
+* 如果Adobe Target中的活動使用體驗片段，則會出現錯誤訊息，警告AEM使用者刪除片段可能會對活動造成的後果。
 
   AEM中的錯誤訊息不會禁止使用者（強制）刪除體驗片段。 如果刪除體驗片段：
 
-   * 具有AEM體驗片段的Target選件可能會顯示不良行為
+  * 具有AEM體驗片段的Target選件可能會顯示不良行為
 
-      * 由於體驗片段HTML已推送至Target，因此該選件很可能仍會呈現
-      * 如果也在AEM中刪除了參照的資產，體驗片段中的任何參照都無法正常運作。
+    * 選件可能仍會呈現，因為體驗片段HTML已推送至Target
+    * 如果也在AEM中刪除了參照的資產，體驗片段中的任何參照都無法正常運作。
 
-   * 由於體驗片段在AEM中不再存在，因此無法對體驗片段進行任何進一步的修改。
+  * 由於體驗片段在AEM中不再存在，因此無法對體驗片段進行任何進一步的修改。
 
 
 ## 從匯出至Target的體驗片段中移除ClientLibs {#removing-clientlibs-from-fragments-exported-target}
@@ -217,7 +215,7 @@ AEM體驗片段可以匯出至Adobe Target中的預設工作區，或匯出至Ad
 </html>
 ```
 
-概言之，當AEM將體驗片段匯出至Adobe Target時，它會使用數個額外的Sling選取器來執行此操作。 例如，匯出的體驗片段的URL可能如下所示（注意`nocloudconfigs.atoffer`）：
+概言之，AEM將體驗片段匯出至Adobe Target時，會使用數個額外的Sling選取器來執行。 例如，匯出的體驗片段的URL可能如下所示（注意`nocloudconfigs.atoffer`）：
 
 * http://www.your-aem-instance.com/content/experience-fragments/my-offers/my-xf-offer.nocloudconfigs.atoffer.html
 

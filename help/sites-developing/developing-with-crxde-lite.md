@@ -1,6 +1,6 @@
 ---
-title: 使用CRXDE Lite開發
-description: CRXDE Lite已內嵌至Adobe Experience Manager (AEM)中，可讓您在瀏覽器中執行標準開發工作
+title: 使用CRXDE Lite進行開發
+description: CRXDE Lite內嵌至Adobe Experience Manager (AEM)中，可讓您在瀏覽器中執行標準開發工作
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: development-tools
@@ -12,23 +12,21 @@ feature: Developing,Developer Tools
 role: Developer
 source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
 workflow-type: tm+mt
-source-wordcount: '2114'
+source-wordcount: '2116'
 ht-degree: 1%
-
 ---
-
-# 使用CRXDE Lite開發{#developing-with-crxde-lite}
+# 使用CRXDE Lite進行開發{#developing-with-crxde-lite}
 
 本節說明如何使用CRXDE Lite開發您的Adobe Experience Manager (AEM)應用程式。
 
 請參閱概述檔案，深入瞭解可用的不同開發環境。
 
-CRXDE Lite內嵌於AEM中，可讓您在瀏覽器中執行標準開發工作。 使用CRXDE Lite，您可以在記錄時建立專案、建立和編輯檔案(如.jsp和.java)、資料夾、範本、元件、對話方塊、節點、屬性和組合。
-當您無法直接存取AEM伺服器時，建議使用CRXDE Lite。 或者，當您透過擴充或修改現成可用的元件和Java™套件組合來開發應用程式時，或當您不需要專用的偵錯工具時，程式碼完成和語法醒目提示。
+CRXDE Lite內嵌至AEM，可讓您在瀏覽器中執行標準開發工作。 使用CRXDE Lite，您可以在記錄時建立專案、建立和編輯檔案(如.jsp和.java)、資料夾、範本、元件、對話方塊、節點、屬性和組合。
+如果您無法直接存取CRXDE Lite伺服器，建議使用AEM 。 或者，當您透過擴充或修改現成可用的元件和Java™套件組合來開發應用程式時，或當您不需要專用的偵錯工具時，程式碼完成和語法醒目提示。
 
 >[!NOTE]
 >
->從AEM 6.5.5.0開始，已無法再匿名存取CRXDE Lite。
+>從AEM 6.5.5.0開始，無法再匿名存取CRXDE Lite。
 >系統會將使用者重新導向至登入畫面。
 
 
@@ -46,7 +44,7 @@ CRXDE Lite內嵌於AEM中，可讓您在瀏覽器中執行標準開發工作。 
 
 1. 按一下&#x200B;**「確定」**。
 
-CRXDE Lite使用者介面在您的瀏覽器中看起來如下所示：
+CRXDE Lite使用者介面在瀏覽器中看起來如下所示：
 
 ![chlimage_1-18](assets/crx-interface.jpg)
 
@@ -72,7 +70,7 @@ CRXDE Lite提供下列功能：
   </tr>
   <tr>
    <td>編輯窗格</td>
-   <td><p><strong>首頁</strong>標籤：可讓您搜尋內容和/或檔案，並存取開發人員資源（檔案、開發人員部落格、知識庫）和支援(Adobe首頁和支援中心)。<br /> </p> <p>連按兩下<strong>總管</strong>窗格中的檔案，以便顯示其內容。 例如，.jsp或.java檔案。 然後，您可以修改它並儲存變更。</p> <p>在<strong>編輯</strong>窗格中編輯檔案後，工具列上有下列工具： <br /> </p> - <strong>在樹狀結構中顯示： </strong>在存放庫樹狀結構中顯示檔案。<br /> - <strong>搜尋/取代……</strong>：執行搜尋或取代。<br /> <br />連按兩下<strong>編輯</strong>窗格的狀態行會開啟<strong>移至行</strong>對話方塊，讓您能夠輸入要移至的特定行號。<br /> </td>
+   <td><p><strong>首頁</strong>標籤：可讓您搜尋內容和/或檔案，並存取開發人員資源（檔案、開發人員部落格、知識庫）和支援（Adobe首頁和支援中心）。<br /> </p> <p>連按兩下<strong>總管</strong>窗格中的檔案，以便顯示其內容。 例如，.jsp或.java檔案。 然後，您可以修改它並儲存變更。</p> <p>在<strong>編輯</strong>窗格中編輯檔案後，工具列上有下列工具： <br /> </p> - <strong>在樹狀結構中顯示： </strong>在存放庫樹狀結構中顯示檔案。<br /> - <strong>搜尋/取代……</strong>：執行搜尋或取代。<br /> <br /> 連按兩下<strong>編輯</strong>窗格的狀態行會開啟<strong>移至行</strong>對話方塊，讓您能夠輸入特定行號來移至。<br /> </td>
   </tr>
   <tr>
    <td>屬性標籤<br /> </td>
@@ -132,7 +130,7 @@ CRXDE Lite提供下列功能：
   </tr>
   <tr>
    <td>工具<br /> </td>
-   <td><p>包含下列工具的下拉式功能表：</p> <p>- <strong>伺服器設定……</strong>：存取Felix主控台。</p> <p>- <strong>查詢……</strong>：查詢存放庫。</p> <p>- <strong>許可權……</strong>：開啟許可權管理，您可以在其中檢視及新增許可權。</p> <p>- <strong>測試存取控制……</strong>：您可以在此測試特定路徑和/或主體的許可權。</p> <p>- <strong>匯出節點型別</strong>：將系統中的節點型別匯出為cnd標籤法。</p> <p>- <strong>匯入節點型別……</strong>：使用cnd標籤法匯入節點型別。</p> <p>- <strong>安裝SiteCatalyst偵錯工具……</strong>：如何安裝Analytics偵錯工具的說明。</p> </td>
+   <td><p>包含下列工具的下拉式功能表：</p> <p>- <strong>伺服器設定……</strong>：存取Felix主控台。</p> <p>- <strong>查詢……</strong>：查詢存放庫。</p> <p>- <strong>許可權……</strong>：開啟許可權管理，您可以在其中檢視及新增許可權。</p> <p>- <strong>測試存取控制……</strong>：您可以在此測試特定路徑和/或主體的許可權。</p> <p>- <strong>匯出節點型別</strong>：將系統中的節點型別匯出為cnd標籤法。</p> <p>- <strong>匯入節點型別……</strong>：使用cnd標籤法匯入節點型別。</p> <p>- <strong>安裝SiteCatalyst Debugger ...</strong>：如何安裝Analytics Debugger的說明。</p> </td>
   </tr>
   <tr>
    <td>登入Widget<br /> </td>
@@ -143,31 +141,31 @@ CRXDE Lite提供下列功能：
 
 ## 建立資料夾 {#creating-a-folder}
 
-若要建立具有CRXDE Lite的資料夾：
+若要使用CRXDE Lite建立資料夾：
 
-1. 在瀏覽器中開啟CRXDE Lite。
+1. 在瀏覽器中開啟CRXDE Lite 。
 1. 在[導覽]窗格中，用滑鼠右鍵按一下您要建立資料夾的資料夾，選取&#x200B;**建立……**，然後選取&#x200B;**建立資料夾……**。
 
 1. 輸入資料夾&#x200B;**名稱**&#x200B;並按一下&#x200B;**確定**。
 
-1. 按一下[儲存全部]&#x200B;**&#x200B;**&#x200B;儲存伺服器上的變更。
+1. 按一下[儲存全部]****&#x200B;儲存伺服器上的變更。
 
 ## 建立範本 {#creating-a-template}
 
 若要使用CRXDE Lite建立範本：
 
-1. 在瀏覽器中開啟CRXDE Lite。
+1. 在瀏覽器中開啟CRXDE Lite 。
 1. 在導覽窗格中，用滑鼠右鍵按一下您要建立範本的資料夾，選取&#x200B;**建立……**，然後選取&#x200B;**建立範本……**。
 
 1. 輸入範本的&#x200B;**標籤**、**標題**、**描述**、**資源型別**&#x200B;和&#x200B;**排名**。 按一下「**下一步**」。
 
-1. 此步驟為選用：設定&#x200B;**允許的路徑**。 按一下&#x200B;**下一步**
+1. 此步驟為選用：設定&#x200B;**允許的路徑**。 按一下「**下一步**」。
 
 1. 此步驟是選擇性的：設定&#x200B;**允許的父項**。 按一下「**下一步**」。
 
 1. 此步驟是選用的：設定&#x200B;**允許的子項**。 按一下&#x200B;**「確定」**。
 
-1. 按一下[儲存全部]&#x200B;**&#x200B;**&#x200B;儲存伺服器上的變更。
+1. 按一下[儲存全部]****&#x200B;儲存伺服器上的變更。
 
 它會建立：
 
@@ -181,9 +179,9 @@ CRXDE Lite提供下列功能：
 
 此處說明的功能只有在已安裝CQ5時才能使用，亦即節點型別`cq:Component`可在存放庫中使用。
 
-若要建立具有CRXDE Lite的元件：
+若要使用CRXDE Lite建立元件：
 
-1. 在瀏覽器中開啟CRXDE Lite。
+1. 在瀏覽器中開啟CRXDE Lite 。
 1. 在[導覽]窗格中，用滑鼠右鍵按一下您要建立元件的資料夾，選取&#x200B;**建立……**，然後選取&#x200B;**建立元件……**。
 
 1. 輸入元件的&#x200B;**標籤**、**標題**、**描述**、**超級資源型別**&#x200B;和&#x200B;**群組**。 按一下「**下一步**」。
@@ -194,7 +192,7 @@ CRXDE Lite提供下列功能：
 
 1. 此步驟是選擇性的：設定元件屬性&#x200B;**允許的子項**。 按一下&#x200B;**「確定」**。
 
-1. 按一下[儲存全部]&#x200B;**&#x200B;**&#x200B;儲存伺服器上的變更。
+1. 按一下[儲存全部]****&#x200B;儲存伺服器上的變更。
 
 它會建立：
 
@@ -206,7 +204,7 @@ CRXDE Lite提供下列功能：
 
 若要使用CRXDE Lite建立對話方塊：
 
-1. 在瀏覽器中開啟CRXDE Lite。
+1. 在瀏覽器中開啟CRXDE Lite 。
 1. 在導覽窗格中，用滑鼠右鍵按一下您要建立對話方塊的元件，選取&#x200B;**建立……**，然後選取&#x200B;**建立對話方塊……**。
 
 1. 輸入&#x200B;**標籤**&#x200B;和&#x200B;**標題**。 按一下&#x200B;**「確定」**。
@@ -223,12 +221,12 @@ CRXDE Lite提供下列功能：
 
 ## 建立節點 {#creating-a-node}
 
-若要建立具有CRXDE Lite的節點：
+若要使用CRXDE Lite建立節點：
 
-1. 在瀏覽器中開啟CRXDE Lite。
+1. 在瀏覽器中開啟CRXDE Lite 。
 1. 在導覽窗格中，用滑鼠右鍵按一下您要建立節點的節點，選取&#x200B;**建立……**，然後選取&#x200B;**建立節點……**。
 1. 輸入&#x200B;**名稱**&#x200B;和&#x200B;**型別**。 按一下&#x200B;**「確定」**。
-1. 按一下[儲存全部]&#x200B;**&#x200B;**&#x200B;儲存伺服器上的變更。
+1. 按一下[儲存全部]****&#x200B;儲存伺服器上的變更。
 
 您現在可以透過修改屬性或建立節點來調整節點以符合您的需求。
 
@@ -242,32 +240,32 @@ CRXDE Lite提供下列功能：
 
 若要使用CRXDE Lite建立屬性：
 
-1. 在瀏覽器中開啟CRXDE Lite。
+1. 在瀏覽器中開啟CRXDE Lite 。
 1. 在「導覽」窗格中，選取您要新增屬性的節點。
-1. 在底部窗格的&#x200B;**屬性**&#x200B;索引標籤中，輸入&#x200B;**名稱**、**型別**&#x200B;和&#x200B;**值**。 按一下&#x200B;**新增**。
+1. 在底部窗格的&#x200B;**屬性**&#x200B;索引標籤中，輸入&#x200B;**名稱**、**型別**&#x200B;和&#x200B;**值**。 按一下&#x200B;**「新增」**。
 
-1. 按一下[儲存全部]&#x200B;**&#x200B;**&#x200B;儲存伺服器上的變更。
+1. 按一下[儲存全部]****&#x200B;儲存伺服器上的變更。
 
 ## 建立指令碼 {#creating-a-script}
 
 若要建立指令碼：
 
-1. 在瀏覽器中開啟CRXDE Lite。
+1. 在瀏覽器中開啟CRXDE Lite 。
 1. 在導覽窗格中，用滑鼠右鍵按一下您要建立指令碼的元件，選取&#x200B;**建立……**，然後選取&#x200B;**建立檔案……**。
 
 1. 輸入包含副檔名的檔案&#x200B;**名稱**。 按一下&#x200B;**「確定」**。
 
 1. 新檔案會在「編輯」窗格中開啟為標籤。
 1. 編輯檔案。
-1. 按一下[全部儲存]&#x200B;**儲存變更。**
+1. 按一下[全部儲存]**儲存變更。**
 
 ## 匯出和匯入節點型別 {#exporting-and-importing-node-types}
 
-透過CRXDE Lite，您可以在[CND （壓縮名稱空間和節點型別定義）表示法](https://jackrabbit.apache.org/jcr/node-type-notation.html)中匯入和/或匯出節點型別定義。
+透過CRXDE Lite，您可以在[CND （壓縮名稱空間和節點型別定義）標籤法](https://jackrabbit.apache.org/jcr/node-type-notation.html)中匯入和/或匯出節點型別定義。
 
 若要匯出節點型別定義，請執行下列動作：
 
-1. 在瀏覽器中開啟CRXDE Lite。
+1. 在瀏覽器中開啟CRXDE Lite 。
 1. 選取您需要的節點。
 1. 選取&#x200B;**工具**&#x200B;然後&#x200B;**匯出節點型別**。
 
@@ -275,7 +273,7 @@ CRXDE Lite提供下列功能：
 
 若要匯入節點型別定義，請執行下列動作：
 
-1. 在瀏覽器中開啟CRXDE Lite。
+1. 在瀏覽器中開啟CRXDE Lite 。
 1. 選取&#x200B;**工具**&#x200B;然後&#x200B;**匯入節點型別……**。
 
 1. 在文字方塊中輸入定義的CND標籤法。
@@ -286,7 +284,7 @@ CRXDE Lite提供下列功能：
 
 透過CRXDE Lite，您可以顯示位於檔案系統`<crx-install-dir>/crx-quickstart/server/logs`上的檔案`error.log`，並使用適當的記錄層級加以篩選。 請依照下列步驟進行：
 
-1. 在瀏覽器中開啟CRXDE Lite。
+1. 在瀏覽器中開啟CRXDE Lite 。
 1. 在視窗底部的&#x200B;**主控台**&#x200B;標籤中，在右側的下拉式功能表中，選取&#x200B;**伺服器記錄檔**。
 
 1. 按一下&#x200B;**停止**&#x200B;圖示以顯示訊息。

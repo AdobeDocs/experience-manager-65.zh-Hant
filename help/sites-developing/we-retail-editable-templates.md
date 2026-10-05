@@ -1,21 +1,23 @@
 ---
 title: 在We.Retail中嘗試可編輯的範本
+
 description: 瞭解如何使用We.Retail在Adobe Experience Manager中試用可編輯的範本。
+
+
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
+
 exl-id: efebe66d-3d30-4033-9c4c-ae347e134f2f
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
-source-wordcount: '467'
-ht-degree: 2%
-
+source-wordcount: '495'
+ht-degree: 3%
 ---
-
 # 在We.Retail中嘗試可編輯的範本{#trying-out-editable-templates-in-we-retail}
 
 使用可編輯的範本，建立和維護範本不再是開發人員專屬的工作。 稱為範本作者的權力使用者現在可以建立範本。 開發人員仍需要設定環境、建立使用者端程式庫和建立要使用的元件，但是當這些基本功能準備就緒後，範本作者就可以彈性地建立和設定範本，而不需要開發專案。
@@ -57,10 +59,10 @@ We.Retail中的所有頁面都是以可編輯的範本為基礎，讓非開發�
    * 選取現有原則或建立容器的原則
    * 定義頁面作者使用此元件時可用的功能，例如
 
-      * 允許的貼上來源
-      * 格式化選項
-      * 允許的段落樣式
-      * 允許的特殊字元
+     * 允許的貼上來源
+     * 格式化選項
+     * 允許的段落樣式
+     * 允許的特殊字元
 
    許多以核心元件為基礎的元件，都允許透過可編輯的範本在元件層級設定選項，免除開發人員自訂的需求。
 
@@ -74,4 +76,4 @@ We.Retail中的所有頁面都是以可編輯的範本為基礎，讓非開發�
 
 如需進一步資訊，請參閱撰寫檔案[建立頁面範本](/help/sites-authoring/templates.md)或開發人員檔案頁面[範本 — 可編輯](/help/sites-developing/page-templates-editable.md)，以取得可編輯範本的完整技術細節。
 
-您可能也想要調查[核心元件](/help/sites-developing/we-retail-core-components.md)。 請參閱撰寫檔案[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)，以取得核心元件功能的概述，以及開發人員檔案[開發核心元件](https://helpx.adobe.com/tw/experience-manager/core-components/using/developing.html)，以取得技術概述。
+您可能也想要調查[核心元件](/help/sites-developing/we-retail-core-components.md)。 請參閱撰寫檔案[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)，以取得核心元件功能的概述，以及開發人員檔案[開發核心元件](https://helpx.adobe.com/experience-manager/core-components/using/developing.html)，以取得技術概述。

@@ -10,18 +10,16 @@ feature: Adaptive Forms
 role: Admin, User, Developer
 source-git-commit: e821be5233fd5f6688507096790d219d25903892
 workflow-type: tm+mt
-source-wordcount: '840'
+source-wordcount: '846'
 ht-degree: 0%
-
 ---
-
 # 在AEM Forms中建立鎖定目標的體驗 {#create-targeted-experiences-in-aem-forms}
 
 ## 將Adobe Target與AEM Forms整合 {#integrate-adobe-target-with-aem-forms}
 
 Adobe Target與AEM整合，可讓您建立針對目標受眾自訂的體驗。 透過Adobe Target，您可以建立A/B測試、測量使用者回應，並為目標使用者產生自訂的網頁內容。 您可以整合Adobe Target與AEM Forms，以針對最適化表單和互動式通訊的影像元件進行定位。
 
-在AEM中設定Adobe Target以搭配最適化表單和互動式通訊使用，請參閱[在AEM](/help/sites-administering/target.md)中建立Target設定和[新增架構](/help/sites-administering/target.md)。
+在AEM中設定Adobe Target以搭配最適化表單和互動式通訊使用，請參閱[在AEM中建立Target設定](/help/sites-administering/target.md)和[新增架構](/help/sites-administering/target.md)。
 
 >[!NOTE]
 >
@@ -36,8 +34,8 @@ Adobe Target與AEM整合，可讓您建立針對目標受眾自訂的體驗。 �
 1. 在「活動」頁面中，選取&#x200B;**建立>建立品牌**。
 1. 系統會要求您選擇範本並輸入屬性。
 
-   選取範本，選取[下一步] **。**&#x200B;在[內容]區段中輸入您品牌的標題，然後選取[建立]。**&#x200B;**
-您的品牌現在已列在活動頁面中。
+   選取範本，選取&#x200B;**下一步。** 在[內容]區段中輸入您品牌的標題，然後選取[建立]。****
+   您的品牌現在已列在活動頁面中。
 
 1. 在「活動」頁面中選取您的品牌。
 1. 在品牌的主版區域中，選取&#x200B;**建立** > **建立活動**。

@@ -11,11 +11,9 @@ feature: Authoring
 role: User
 source-git-commit: 25bf0d64b6839afec0112ea8c9fde0510e56ccf4
 workflow-type: tm+mt
-source-wordcount: '1898'
+source-wordcount: '1916'
 ht-degree: 1%
-
 ---
-
 # 建立及組織頁面{#creating-and-organizing-pages}
 
 本節說明如何使用Adobe Experience Manager (AEM)建立和管理頁面，以便您接著可以在這些頁面上[建立內容](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md)。
@@ -79,13 +77,13 @@ ht-degree: 1%
 
 * **[標題](#title)**：
 
-   * 主控台會向使用者顯示這項資訊，並在編輯時顯示在頁面內容的頂端。
-   * 此字段是必填字段。
+  * 主控台會向使用者顯示這項資訊，並在編輯時顯示在頁面內容的頂端。
+  * 此字段是必填字段。
 
 * **[名稱](#name)**：
 
-   * 這會用來產生URI。
-   * 此欄位的使用者輸入為選用。 如果未指定，則會從標題衍生名稱。
+  * 這會用來產生URI。
+  * 此欄位的使用者輸入為選用。 如果未指定，則會從標題衍生名稱。
 
 建立頁面時，AEM [會依據AEM和JCR所強加的慣例](/help/sites-developing/naming-conventions.md)驗證頁面名稱。
 
@@ -106,7 +104,7 @@ ht-degree: 1%
 | 標題 | 衍生名稱 |
 |---|---|
 | Schon | schoen.html |
-| SC%&amp;&amp;amp；ast；c+ | sc---c-.html |
+| SC%&amp;&amp;ast；c+ | sc—c-.html |
 
 #### 名稱 {#name}
 
@@ -150,7 +148,7 @@ AEM隨附數種現成可用的範本。 提供的範本取決於個別網站，�
 * 影片
 * 更多專案
 
-建立並開啟頁面後，您就可以使用[sidekick](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#insertinganewparagraph)提供的元件[來](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#sidekick)新增內容。
+建立並開啟頁面後，您就可以使用[sidekick](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#sidekick)提供的元件](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#insertinganewparagraph)來[新增內容。
 
 ## 管理頁面 {#managing-pages}
 
@@ -164,7 +162,7 @@ AEM隨附數種現成可用的範本。 提供的範本取決於個別網站，�
 
    ![screen_shot_2012-02-15at114413am](assets/screen_shot_2012-02-15at114413am.png)
 
-1. 在&#x200B;**新增……**&#x200B;功能表（按一下&#x200B;**新增……**&#x200B;旁的箭頭）中，選取&#x200B;**新增頁面……**。 **建立頁面**&#x200B;視窗隨即開啟。
+1. 在&#x200B;**新增……**&#x200B;功能表（按一下&#x200B;**新增……**&#x200B;旁的箭頭）中，選取&#x200B;**新增頁面……**。**建立頁面**&#x200B;視窗隨即開啟。
 
    按一下&#x200B;**新增……**&#x200B;本身也可當做&#x200B;**新增頁面……**&#x200B;選項的捷徑。
 
@@ -173,8 +171,8 @@ AEM隨附數種現成可用的範本。 提供的範本取決於個別網站，�
    * 提供&#x200B;**標題**；這會顯示給使用者。
    * 提供&#x200B;**名稱**；此名稱用於產生URI。 如果未指定，則會從標題衍生名稱。
 
-      * 如果您在建立頁面時提供頁面&#x200B;**Name**，AEM [會根據AEM和JCR所沿用的慣例](/help/sites-developing/naming-conventions.md)驗證名稱。
-      * 在傳統UI中，**無法在**&#x200B;名稱&#x200B;**欄位中輸入無效的字元**。
+     * 如果您在建立頁面時提供頁面&#x200B;**Name**，AEM [會根據AEM和JCR所沿用的慣例](/help/sites-developing/naming-conventions.md)驗證名稱。
+     * 在傳統UI中，**無法在**&#x200B;名稱&#x200B;**欄位中輸入無效的字元**。
 
    * 按一下您要用來建立新頁面的範本。
 
