@@ -1,10 +1,15 @@
 ---
 title: 設定同步排程器
+
 description: 瞭解如何移轉及同步資產、設定同步排程器，以及使用資料夾來排列資產。
+
+
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Configuration
+
 docset: aem65
+
 role: Admin,User
 exl-id: 34db1f76-ee40-4612-85da-22041e7560fb
 solution: Experience Manager, Experience Manager Forms
@@ -13,12 +18,10 @@ source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
 source-wordcount: '288'
 ht-degree: 0%
-
 ---
-
 # 設定同步排程器 {#configuring-the-synchronization-scheduler}
 
-根據預設，同步排程器每3分鐘執行一次，以同步存放庫中透過LiveCycleWorkbench 11修改和更新的所有資產。 同步程式完成後，AEM Forms使用者介面中會顯示包含表單和資源的應用程式。
+根據預設，同步排程器每3分鐘會執行一次，以同步處理在存放庫中透過LiveCycle Workbench 11修改及更新的所有資產。 同步程式完成後，AEM Forms使用者介面中會顯示包含表單和資源的應用程式。
 
 ## 變更同步化排程器的間隔 {#change-interval-of-the-synchronization-scheduler}
 
@@ -50,9 +53,9 @@ ht-degree: 0%
 
 ## 疑難排解同步處理錯誤 {#troubleshooting-synchronization-error}
 
-您可以在工作流程設計工具(LiveCycle工作台)中建立新的應用程式。
+您可以在工作流程設計工具(LiveCycle Workbench)中建立新的應用程式。
 
-如果新建立的應用程式和位於/content/dam/formsanddocuments的資料夾具有相同的名稱，則會發生錯誤「*」根層級已存在與此應用程式同名的資產。「*」已記錄。
+如果新建立的應用程式和位於/content/dam/formsanddocuments的資料夾具有相同的名稱，則會發生錯誤「*根層級已存在與此應用程式同名的資產。*」 已記錄。
 
 若要解決衝突，請重新命名應用程式，然後手動同步資產。
 

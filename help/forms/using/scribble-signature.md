@@ -1,25 +1,28 @@
 ---
-title: 在HTML5表單中使用手寫簽名
+title: 在HTML5 Forms中使用手寫簽名
+
 description: HTML5表單越來越多地用於觸控裝置，常見的要求之一就是支援簽名。 在行動裝置上簽署檔案已成為在行動裝置上簽署表單的普遍方式。
+
+
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: designer
+
 docset: aem65
+
 feature: Forms Designer,Designer
 exl-id: 2025182f-195b-40d0-aee7-67669f55b964
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '655'
+source-wordcount: '657'
 ht-degree: 0%
-
 ---
+# 在HTML5 Forms中使用手寫簽名{#using-scribble-signature-in-html-forms}
 
-# 在HTML5表單中使用手寫簽名{#using-scribble-signature-in-html-forms}
-
-HTML5表單越來越多地用於觸控裝置，常見的要求之一就是支援簽名。 在行動裝置上簽署表單時，塗寫（使用手寫筆或手指書寫）已成為一種可接受的方式。 HTML5 forms和Forms Designer現在提供在表單上有手寫簽名欄位的選項。 當表單在瀏覽器中呈現時，人們可以使用手寫筆、滑鼠或觸控來登入這些欄位。
+HTML5表單越來越多地用於觸控裝置，常見的要求之一便是支援簽名。 在行動裝置上簽署表單時，塗寫（使用手寫筆或手指書寫）已成為一種可接受的方式。 HTML5 forms和Forms Designer現在提供在表單上有手寫簽名欄位的選項。 當表單在瀏覽器中呈現時，人們可以使用手寫筆、滑鼠或觸控來登入這些欄位。
 
 ## 如何使用手寫簽名欄位設計表單 {#how-to-design-a-form-using-scribble-signature-field}
 
@@ -30,7 +33,7 @@ HTML5表單越來越多地用於觸控裝置，常見的要求之一就是支援
 
    >[!NOTE]
    >
-   >呈現欄位時，會反映在Forms Designer中選取欄位的Dimension。 不過，已演算簽名方塊的維度是根據欄位的外觀比例計算，而非根據Forms Designer中指定的維度。
+   >在Forms Designer中選取的欄位維度會在欄位呈現時反映出來。 不過，已演算簽名方塊的維度是根據欄位的外觀比例計算，而非根據Forms Designer中指定的維度。
 
 1. 設定「簽名草寫」欄位。
 
