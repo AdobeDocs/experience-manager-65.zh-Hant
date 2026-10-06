@@ -1,6 +1,6 @@
 ---
 title: 設定帳戶環境
-description: Adobe Experience Manager (AEM)提供您設定帳戶與製作環境某些方面的功能。
+description: Adobe Experience Manager (AEM)可讓您設定帳戶及製作環境的特定方面。
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
@@ -12,23 +12,21 @@ feature: Authoring
 role: User
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
-source-wordcount: '228'
-ht-degree: 13%
-
+source-wordcount: '229'
+ht-degree: 15%
 ---
-
 # 設定帳戶環境{#configuring-your-account-environment}
 
-Adobe Experience Manager (AEM)提供您設定帳戶與製作環境某些方面的功能。
+Adobe Experience Manager (AEM)可讓您設定帳戶及製作環境的特定方面。
 
 使用[帳戶設定](#account-settings)和[使用者偏好設定](#user-preferences)，可以定義下列選項和偏好設定：
 
-* **正在編輯工具列**
+* **編輯工具列**
 選取您是否想要擁有全域編輯工具列。 這個工具列顯示在瀏覽器視窗的頂端，提供您&#x200B;**複製**、**剪下**、**貼上**、**刪除**&#x200B;用於該頁面段落元件的按鈕：
 
-   * 需要時顯示 (預設)
-   * 永遠顯示
-   * 保持隱藏
+  * 需要時顯示 (預設)
+  * 永遠顯示
+  * 保持隱藏
 
 * **模擬為**
 [模擬為](/help/sites-administering/security.md#impersonating-another-user)的功能可讓使用者代表其他使用者工作。
@@ -39,10 +37,10 @@ Adobe Experience Manager (AEM)提供您設定帳戶與製作環境某些方面�
 * **視窗管理**
 選取：
 
-   * 多視窗（預設）
-頁面會在新視窗中開啟。
-   * 單一視窗
-頁面會在目前視窗中開啟。
+  * 多視窗 (預設)
+    頁面會在新視窗中開啟。
+  * 單一視窗
+    頁面會在目前視窗中開啟。
 
 ## 帳戶設定 {#account-settings}
 

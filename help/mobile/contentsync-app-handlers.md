@@ -1,21 +1,23 @@
 ---
 title: 開箱即用的應用程式處理常式
-description: 請詳閱本頁面，瞭解搭配AEM的Adobe PhoneGap Enterprise適用的現成處理常式。
+
+description: 請依照本頁面的說明使用AEM瞭解Adobe PhoneGap Enterprise適用的現成處理常式。
+
+
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
+
 exl-id: e2ddf5d1-0f5b-4f3b-9666-0f388915730e
 solution: Experience Manager
 feature: Mobile
 role: Admin
 source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '1387'
+source-wordcount: '1419'
 ht-degree: 0%
-
 ---
-
 # 開箱即用的應用程式處理常式{#out-of-the-box-app-handlers}
 
 {{ue-over-mobile}}
@@ -43,7 +45,7 @@ ht-degree: 0%
 
 * ***includeImages - Boolean*** — 決定是否應包含影像的選用布林屬性。 預設值為&#x200B;*true*。
 
-   * 依預設，只有資源型別為foundation/components/image的影像元件才會被視為包含。
+  * 依預設，只有資源型別為foundation/components/image的影像元件才會被視為包含。
 
 * ***includeVideos — 布林值*** — 選擇性布林值屬性決定是否應包含影片。 預設值為&#x200B;*true*。
 
@@ -53,13 +55,13 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->設定&#x200B;*com.adobe.cq.mobile.platform.impl.contentsync.handler*&#x200B;的屬性，即可設定受此處理常式影響的影像與視訊元件的資源型別。*MobilePagesUpdateHandler OSGi服務*。
+>設定&#x200B;*com.adobe.cq.mobile.platform.impl.contentsync.handler*.*MobilePagesUpdateHandler OSGi服務*&#x200B;的屬性，即可設定受此處理常式影響的影像與視訊元件的資源型別。
 
 **mobilepageassets**&#x200B;收集應用程式頁面資產。
 
 **mobilecontentlisting**&#x200B;列出ContentSync壓縮檔的內容。 裝置上的使用者端js會使用此檔案，執行AEM應用程式所需的初始檔案複製。
 
-應該將此處理常式新增至任何AEM Apps ContentSync設定。
+應該將此處理常式新增至任何AEM應用程式ContentSync設定。
 
 * ***型別 — 字串 — mobilecontentlisting***
 * ***path*** — 字串 — 保持空白，必須存在才能被視為有效的處理常式，但路徑被推斷為目前的ContentSync快取。 此值會被忽略。
@@ -121,7 +123,7 @@ ht-degree: 0%
 
 **widgetconfig**&#x200B;包含更新的config.xml，它會合併透過命令中心所做的任何編輯與提供的config.xml。 如果未包含此處理常式，則透過Administration介面變更的任何應用程式詳細資料都不會包含在快取中。
 
-這個處理常式應該用於AEM App Shell ContentSync設定（具有pge-type=[app-instance]的節點）。
+這個處理常式應該用於AEM應用程式殼層ContentSync設定（具有pge-type=[app-instance]的節點）。
 
 * ***型別 — 字串* - &#x200B;** widgetconfig
 * ***path &#x200B;**-**字串*** — 任何應用程式殼層子節點（pge-type=[app-instance]的節點）的路徑。
@@ -140,7 +142,7 @@ ht-degree: 0%
 
 **notificationsconfig**&#x200B;擷取裝置上所需的通知設定。 屬性會從與應用程式關聯的個別推送服務雲端服務設定中擷取。
 
-已擷取雲端服務jcr：content節點中的非AEM屬性，並將其新增至&#x200B;**pge-notifications-config.json** JSON檔案，以包含在應用程式內容的www根中。
+已擷取雲端服務jcr:content節點中的非AEM屬性，並將其新增至&#x200B;**pge-notifications-config.json** JSON檔案，以包含在應用程式內容的www根中。
 
 AEM屬性是使用「cq」、「sling」或「jcr」建立名稱間距的屬性。 您可以使用content-sync設定節點上的「excludeProperties」屬性來排除其他屬性。
 
@@ -152,9 +154,9 @@ AEM屬性是使用「cq」、「sling」或「jcr」建立名稱間距的屬性�
 * ***型別 — 字串*** - contentsyncconfigcontent
 * ***path — 字串*** — 下列其中一個的路徑：
 
-   * 另一個ContentSync設定
-   * 至內容封裝（將使用其phonegap-exportTemplate屬性來尋找其ContentSync設定）
-   * 至行動資源（若這些內容套件的page-includeInBuild屬性為true，則會使用phonegap-exportTemplate尋找其ContentSync設定）
+  * 另一個ContentSync設定
+  * 至內容封裝（將使用其phonegap-exportTemplate屬性來尋找其ContentSync設定）
+  * 至行動資源（若這些內容套件的page-includeInBuild屬性為true，則會使用phonegap-exportTemplate尋找其ContentSync設定）
 
 * ***autoCreateFirstUpdateBeforeImport — 布林值*** — 如果為true，則在匯入之前先在目標設定中建立初始&#x200B;**更新** （如果一次不存在）
 

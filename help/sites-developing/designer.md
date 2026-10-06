@@ -11,22 +11,20 @@ feature: Developing
 role: Developer
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
-source-wordcount: '358'
-ht-degree: 0%
-
+source-wordcount: '359'
+ht-degree: 1%
 ---
-
 # 設計和Designer{#designs-and-the-designer}
 
 >[!CAUTION]
 >
->本文會說明如何根據傳統UI建立網站。 Adobe建議對您的網站使用最新的AEM技術，如文章[開發AEM Sites快速入門](/help/sites-developing/getting-started.md)中所述。
+>本文會說明如何根據傳統UI建立網站。 Adobe建議您為網站使用最新的AEM技術，如文章[開發AEM Sites快速入門](/help/sites-developing/getting-started.md)中所述。
 
 Designer是用來建立您網站的設計，使用AEM中的[傳統UI](/help/release-notes/touch-ui-features-status.md)。
 
 >[!NOTE]
 >
->如需有關網頁協助工具的詳細資訊，請參閱[AEM與網頁協助工具准則](/help/managing/web-accessibility.md)。
+>如需網頁協助工具的詳細資訊，請參閱[AEM與網頁協助工具准則](/help/managing/web-accessibility.md)。
 
 ## 使用Designer {#using-the-designer}
 
@@ -44,7 +42,7 @@ Designer是用來建立您網站的設計，使用AEM中的[傳統UI](/help/rele
 >
 >在設計模式中，對頁面所做的所有變更都會保留在網站的設計節點下方，並自動套用至具有相同設計的所有頁面。
 
-## 您將需要什麼 {#what-you-will-need}
+## 您將需要的內容 {#what-you-will-need}
 
 若要實現您的設計，您需要：
 

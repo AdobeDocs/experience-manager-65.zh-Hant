@@ -1,21 +1,23 @@
 ---
 title: Target優惠
+
 description: 在Adobe Experience Manager中建立目標選件，以用於Adobe Target。
+
+
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
+
 exl-id: 46c2fbd0-7eff-4a6c-a088-57560ad2c5e4
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization
 role: User
 source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
 workflow-type: tm+mt
-source-wordcount: '100'
-ht-degree: 8%
-
+source-wordcount: '104'
+ht-degree: 7%
 ---
-
 # Target優惠{#target-offers}
 
 ## 建立Test&amp;Target選件體驗 {#creating-a-test-target-offer-experience}
@@ -30,7 +32,7 @@ ht-degree: 8%
 
    ![chlimage_1-139](assets/chlimage_1-139.png)
 
-1. 按一下&#x200B;**建立**。
+1. 按一下「**建立**」。
 
    >[!NOTE]
    >

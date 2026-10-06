@@ -1,26 +1,28 @@
 ---
 title: WebDAV存取
+
 description: 瞭解如何使用WebDAV存取Adobe Experience Manager。
+
+
 contentOwner: Chiradeep Majumdar
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: content
 content-type: reference
+
 exl-id: 891ee66c-e49c-4561-8fef-e6e448a8aa1c
 solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
-source-wordcount: '1118'
+source-wordcount: '1123'
 ht-degree: 1%
-
 ---
-
 # WebDAV存取{#webdav-access}
 
-透過WebDAV與KDE連線AEM：
+透過WebDAV使用KDE連線至AEM：
 
-AEM提供WebDAV支援，可讓您顯示和編輯存放庫內容。 透過WebDAV連線可讓您透過案頭直接存取內容存放庫。 透過WebDAV連線新增到存放庫中的文字和PDF檔案會自動建立全文檢索索引，並可透過標準搜尋介面及標準Java™ API進行搜尋。
+AEM提供WebDAV支援，可讓您顯示和編輯存放庫內容。 透過WebDAV連線可讓您透過案頭直接存取內容存放庫。 透過WebDAV連線新增到存放庫中的文字和PDF檔案會自動建立全文檢索索引，並可使用標準搜尋介面及標準Java™ API進行搜尋。
 
 ## 一般 {#general}
 
@@ -103,13 +105,13 @@ http://localhost:4502/crx/repository/staging
 
 * [Windows](/help/sites-administering/webdav-access.md#windows)
 * [macOS](/help/sites-administering/webdav-access.md#macos)
-* [Linux](/help/sites-administering/webdav-access.md#linux)
+* [Linux®](/help/sites-administering/webdav-access.md#linux)
 
 ### Windows {#windows}
 
-若要成功將Microsoft® Windows 7 （及更新版本）系統連線至不使用SSL保護的AEM執行個體，必須在Windows中明確啟用透過不安全的網路建立基本驗證的選項。 這項功能需要在WebClient的Windows登入中進行變更。
+若要成功將® Windows 7 （及更新版本）系統連線至不使用SSL保護的AEM執行個體，必須在Windows中明確啟用透過不安全的網路建立基本驗證的選項。 這項功能需要在WebClient的Windows登入中進行變更。
 
-更新登入之後，AEM執行個體就可以對應為磁碟機。
+在更新登入之後，便可以將AEM執行個體對應為磁碟機。
 
 #### Windows 7和更新組態 {#windows-and-greater-configuration}
 
@@ -160,7 +162,7 @@ http://localhost:4502/crx/repository/staging
 
    >[!NOTE]
    >
-   >如果AEM在另一個連線埠上，請使用該連線埠號碼，而不是4502。 此外，如果您不是在本機電腦上執行內容存放庫，請將`localhost`取代為個別的伺服器名稱或IP位址。
+   >如果AEM位於另一個連線埠，請使用該連線埠號碼，而非4502。 此外，如果您不是在本機電腦上執行內容存放庫，請將`localhost`取代為個別的伺服器名稱或IP位址。
 
 1. 輸入使用者名稱`admin`和密碼`admin`。 Adobe建議您使用預先設定的管理員帳戶進行測試。
 
@@ -177,13 +179,13 @@ Windows現在已透過WebDAV將AEM對應為磁碟機，您可以像使用任何�
 在macOS上透過WebDAV連線不需要設定步驟。 您可以連線到WebDAV伺服器。
 
 1. 瀏覽至任何&#x200B;**尋找器**&#x200B;視窗，然後按一下&#x200B;**執行**&#x200B;和&#x200B;**連線到伺服器**，或按&#x200B;**Command+k**。
-1. 在&#x200B;**連線到伺服器**&#x200B;視窗中，輸入AEM位置：
+1. 在&#x200B;**連線至伺服器**&#x200B;視窗中，輸入AEM位置：
 
    * `http://localhost:4502`
 
    >[!NOTE]
    >
-   >如果AEM在另一個連線埠上，請使用該連線埠號碼，而不是4502。 此外，如果您不是在本機電腦上執行內容存放庫，請將`localhost`取代為個別的伺服器名稱或IP位址。
+   >如果AEM位於另一個連線埠，請使用該連線埠號碼，而非4502。 此外，如果您不是在本機電腦上執行內容存放庫，請將`localhost`取代為個別的伺服器名稱或IP位址。
 
 1. 當系統提示您進行驗證時，請輸入使用者名稱`admin`和密碼`admin`。 Adobe建議您使用預先設定的管理員帳戶進行測試。
 
@@ -204,27 +206,27 @@ macOS現在已透過WebDAV連線至AEM，您可以像使用Mac上的任何其他
 
    >[!NOTE]
    >
-   >如果AEM在另一個連線埠上，請使用該連線埠號碼，而不是4502。 此外，如果您不是在本機電腦上執行內容存放庫，請將`localhost`取代為個別的伺服器名稱或IP位址。
+   >如果AEM位於另一個連線埠，請使用該連線埠號碼，而非4502。 此外，如果您不是在本機電腦上執行內容存放庫，請將`localhost`取代為個別的伺服器名稱或IP位址。
 
 1. 在&#x200B;**資料夾**&#x200B;中，輸入`/dav`
 1. 輸入使用者名稱`admin`。 Adobe建議您使用預先設定的管理員帳戶進行測試。
 1. 將連線埠保留空白，並為您的連線輸入任何名稱。
-1. 按一下「**連結**」。AEM會提示您輸入密碼。
+1. 按一下「**連結**」。 AEM會提示您輸入密碼。
 1. 輸入密碼`admin`並按一下&#x200B;**連線**。
 
-GNOME現在已將AEM掛接為磁碟區，您可以像使用任何其他磁碟區一樣使用它。
+GNOME現在已將AEM掛接為磁碟區，您可以像使用任何其他磁碟區一樣加以使用。
 
 #### KDE {#kde}
 
 1. 開啟網路資料夾精靈。
 1. 選取&#x200B;**WebFolder**(webdav)，然後按[下一步]。
 1. 在&#x200B;**Name**&#x200B;中，輸入連線名稱。
-1. 在&#x200B;**使用者**&#x200B;中，輸入`admin.`Adobe，建議您使用預先設定的管理員帳戶。
+1. 在&#x200B;**使用者**&#x200B;中，輸入`admin.` Adobe建議您使用預先設定的管理員帳戶。
 1. 在&#x200B;**伺服器**&#x200B;中，輸入`http://localhost:4502/crx/repository/crx.default`
 
    >[!NOTE]
    >
-   >如果AEM在另一個連線埠上，請使用該連線埠號碼，而不是4502。 此外，如果您不是在本機電腦上執行內容存放庫，請將`localhost`取代為個別的伺服器名稱或IP位址
+   >如果AEM位於另一個連線埠，請使用該連線埠號碼，而非4502。 此外，如果您不是在本機電腦上執行內容存放庫，請將`localhost`取代為個別的伺服器名稱或IP位址
 
 1. 在&#x200B;**資料夾**&#x200B;中，輸入`dav`
 

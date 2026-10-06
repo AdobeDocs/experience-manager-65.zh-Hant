@@ -12,11 +12,9 @@ feature: Authoring,Personalization
 role: User
 source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
 workflow-type: tm+mt
-source-wordcount: '2194'
+source-wordcount: '2219'
 ht-degree: 0%
-
 ---
-
 # 設定您的行銷活動{#setting-up-your-campaign}
 
 設定新的行銷活動包括下列（一般）步驟：
@@ -30,22 +28,22 @@ ht-degree: 0%
 
 * 如果建立Teaser：
 
-   1. [建立Teaser體驗](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatingateaserexperience)。
-   1. [新增內容至您的Teaser](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#addingcontenttoyourteaser)。
-   1. [為您的Teaser建立接觸點](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatingatouchpointforyourteaser) （將您的Teaser新增至內容頁面）。
+  1. [建立Teaser體驗](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatingateaserexperience)。
+  1. [新增內容至您的Teaser](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#addingcontenttoyourteaser)。
+  1. [為您的Teaser建立接觸點](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatingatouchpointforyourteaser) （將您的Teaser新增至內容頁面）。
 
 * 如果建立Newsletter：
 
-   1. [建立電子報體驗](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatinganewsletterexperience)。
-   1. [將內容新增至Newsletter。](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#addingcontenttonewsletters)
-   1. [個人化電子報。](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#personalizingnewsletters)
-   1. [建立極具吸引力的Newsletter登陸頁面](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#settingupanewsletterlandingpage)。
-   1. [傳送Newsletter](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#sendingnewsletters)給訂閱者或潛在客戶。
+  1. [建立電子報體驗](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatinganewsletterexperience)。
+  1. [將內容新增至Newsletter。](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#addingcontenttonewsletters)
+  1. [個人化電子報。](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#personalizingnewsletters)
+  1. [建立極具吸引力的Newsletter登陸頁面](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#settingupanewsletterlandingpage)。
+  1. [傳送Newsletter](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#sendingnewsletters)給訂閱者或潛在客戶。
 
 * 如果建立Adobe Target （先前稱為Test&amp;Target）選件：
 
-   1. [建立Adobe Target選件體驗](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatingatesttargetofferexperience)。
-   1. [整合Adobe Target](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#integratewithadobetesttarget)
+  1. [建立Adobe Target選件體驗](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatingatesttargetofferexperience)。
+  1. [整合Adobe Target](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#integratewithadobetesttarget)
 
 >[!NOTE]
 >
@@ -59,7 +57,7 @@ ht-degree: 0%
 
    ![chlimage_1-17](assets/chlimage_1-17.png)
 
-1. 按一下「**建立**」。您的新品牌會顯示在MCM中（具有預設圖示）。
+1. 按一下「**建立**」。 您的新品牌會顯示在MCM中（具有預設圖示）。
 
 ### 定義新品牌的屬性 {#defining-the-properties-for-your-new-brand}
 
@@ -81,7 +79,7 @@ ht-degree: 0%
 
    ![chlimage_1-19](assets/chlimage_1-19.png)
 
-1. 按一下「**建立**」。您的新行銷活動會顯示在MCM中。
+1. 按一下「**建立**」。 您的新行銷活動會顯示在MCM中。
 
 ### 定義新行銷活動的屬性 {#defining-the-properties-for-your-new-campaign}
 
@@ -90,13 +88,13 @@ ht-degree: 0%
 * **優先順序：**&#x200B;此行銷活動相對於其他行銷活動的優先順序。 同時開啟多個行銷活動時，具有最高優先順序的行銷活動會控制訪客體驗。
 * **開啟與關閉時間：**&#x200B;這些屬性會控制行銷活動控制訪客體驗的時間期間。 開啟時間屬性會控制行銷活動開始控制體驗的時間。 關閉時間屬性可控制行銷活動何時停止控制體驗。
 * **影像：**&#x200B;代表AEM中行銷活動的影像。
-* **Cloud Services：**&#x200B;與行銷活動整合的Cloud Service設定。 (請參閱[與Adobe Marketing Cloud整合](/help/sites-administering/marketing-cloud.md)。)
+* **雲端服務：**&#x200B;與行銷活動整合的Cloud Service設定。 （請參閱[與Adobe Marketing Cloud整合](/help/sites-administering/marketing-cloud.md)。）
 
-* **Adobe Target：**&#x200B;設定與Adobe Target整合之行銷活動的屬性。 (請參閱[與Adobe Target整合](/help/sites-administering/target.md)。)
+* **Adobe Target：**&#x200B;設定與Adobe Target整合之行銷活動的屬性。 （請參閱[與Adobe Target整合](/help/sites-administering/target.md)。）
 
 1. 從&#x200B;**行銷活動**，選取您的品牌。 在右窗格中，選取您的行銷活動，然後按一下&#x200B;**屬性**。
 
-   您可以輸入各種屬性，包括&#x200B;**Title**、**Description**&#x200B;以及您想要的任何&#x200B;**Cloud Service**。
+   您可以輸入各種屬性，包括&#x200B;**Title**、**Description**&#x200B;以及您想要的任何&#x200B;**雲端服務**。
 
    ![chlimage_1-20](assets/chlimage_1-20.png)
 
@@ -122,19 +120,19 @@ ht-degree: 0%
 
 * [預告](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#teasers)：
 
-   * [將Teaser頁面連結至訪客區段。](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#applyingasegmenttoyourteaser)
-   * [為您的Teaser建立接觸點](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatingatouchpointforyourteaser) （將您的Teaser新增至內容頁面）。
+  * [將Teaser頁面連結至訪客區段。](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#applyingasegmenttoyourteaser)
+  * [為您的Teaser建立接觸點](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatingatouchpointforyourteaser) （將您的Teaser新增至內容頁面）。
 
 * [電子報](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#newsletters)：
 
-   * [將內容新增至Newsletter。](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#addingcontenttonewsletters)
-   * [個人化電子報。](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#personalizingnewsletters)
-   * [傳送Newsletter](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#sendingnewsletters)給訂閱者或潛在客戶。
-   * [建立極具吸引力的Newsletter登陸頁面](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#settingupanewsletterlandingpage)。
+  * [將內容新增至Newsletter。](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#addingcontenttonewsletters)
+  * [個人化電子報。](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#personalizingnewsletters)
+  * [傳送Newsletter](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#sendingnewsletters)給訂閱者或潛在客戶。
+  * [建立極具吸引力的Newsletter登陸頁面](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#settingupanewsletterlandingpage)。
 
 * [Adobe Target選件](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#testtargetoffers)：
 
-   * [整合Adobe Target](/help/sites-administering/target.md)
+  * [整合Adobe Target](/help/sites-administering/target.md)
 
 ### 新增接觸點 {#adding-a-new-touchpoint}
 
@@ -200,7 +198,7 @@ ht-degree: 0%
 
    ![screen_shot_2012-02-21at120620pm](assets/screen_shot_2012-02-21at120620pm.png)
 
-   與AEM頁面一樣，發佈狀態會顯示在&#x200B;**已發佈**&#x200B;欄。
+   和AEM頁面一樣，發佈狀態會顯示在&#x200B;**已發佈**&#x200B;欄。
 
    ![screen_shot_2012-02-21at122901pm](assets/screen_shot_2012-02-21at122901pm.png)
 
@@ -234,11 +232,11 @@ ht-degree: 0%
 
    ![screen_shot_2012-02-21at123055pm](assets/screen_shot_2012-02-21at123055pm.png)
 
-1. 按一下「**下一步**」。您可在此預覽銷售機會，以確保其正確性。
+1. 按一下「**下一步**」。 您可在此預覽銷售機會，以確保其正確性。
 
    ![screen_shot_2012-02-21at123104pm](assets/screen_shot_2012-02-21at123104pm.png)
 
-1. 按一下「**下一步**」。選取您要銷售機會所屬的清單。 如果您不希望它們屬於清單，請刪除欄位中的資訊。 依預設，AEM會建立包含日期和時間的清單名稱。 按一下&#x200B;**匯入**。
+1. 按一下「**下一步**」。 選取您要銷售機會所屬的清單。 如果您不希望它們屬於清單，請刪除欄位中的資訊。 依預設，AEM會建立包含日期和時間的清單名稱。 按一下&#x200B;**匯入**。
 
    ![screen_shot_2012-02-21at123123pm](assets/screen_shot_2012-02-21at123123pm.png)
 
@@ -254,7 +252,7 @@ ht-degree: 0%
 
    ![screen_shot_2012-02-21at123835pm](assets/screen_shot_2012-02-21at123835pm.png)
 
-1. 在&#x200B;**工具**&#x200B;功能表中，選取&#x200B;**新增至清單....** **新增至清單**&#x200B;視窗開啟。
+1. 在&#x200B;**工具**&#x200B;功能表中，選取&#x200B;**新增至清單....** **新增至清單**&#x200B;視窗會開啟。
 
    ![screen_shot_2012-02-21at124019pm](assets/screen_shot_2012-02-21at124019pm.png)
 
@@ -278,7 +276,7 @@ ht-degree: 0%
    >
    >您一次只能編輯一個銷售機會。 如果您需要修改屬於相同清單的銷售機會，您可以改為修改清單。
 
-1. 按一下&#x200B;**編輯**。 **編輯銷售機會**&#x200B;視窗隨即開啟。
+1. 按一下「**編輯**」。 **編輯銷售機會**&#x200B;視窗隨即開啟。
 
    ![screen_shot_2012-02-21at124609pm](assets/screen_shot_2012-02-21at124609pm.png)
 
@@ -385,7 +383,7 @@ ht-degree: 0%
 
 1. 選取您要檢視其成員的清單旁的核取方塊。
 
-1. 在&#x200B;**工具**&#x200B;功能表中，選取&#x200B;**顯示銷售機會**。 AEM會顯示屬於該清單成員的潛在客戶。 您可以瀏覽清單或搜尋成員。
+1. 在&#x200B;**工具**&#x200B;功能表中，選取&#x200B;**顯示銷售機會**。 AEM會顯示屬於該清單的銷售機會。 您可以瀏覽清單或搜尋成員。
 
    >[!NOTE]
    >

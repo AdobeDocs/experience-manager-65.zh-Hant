@@ -1,21 +1,21 @@
 ---
 title: 管理行動應用程式
 description: 請依照本頁面的說明開始管理行動應用程式的內容。
+
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: introduction
 content-type: reference
+
 exl-id: dc7ba6ad-9df9-4312-a82f-5f3405dea684
 solution: Experience Manager
 feature: Mobile
 role: Admin
 source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '112'
+source-wordcount: '114'
 ht-degree: 1%
-
 ---
-
 # 行動應用程式{#mobile-apps}
 
 {{ue-over-mobile}}
@@ -29,4 +29,4 @@ AEM Mobile提供多種建立應用程式的方法。 您可用來建立應用程
 
 >[!NOTE]
 >
->如果您是Adobe Experience Manager的新手，您可能想要逐步瞭解[AEM快速入門](/help/sites-deploying/deploy.md)。
+>如果您是Adobe Experience Manager的新手，您可以逐步瞭解[AEM快速入門](/help/sites-deploying/deploy.md)。

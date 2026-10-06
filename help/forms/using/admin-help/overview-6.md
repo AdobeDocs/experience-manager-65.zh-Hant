@@ -11,11 +11,9 @@ feature: Adaptive Forms
 role: User, Developer
 source-git-commit: e821be5233fd5f6688507096790d219d25903892
 workflow-type: tm+mt
-source-wordcount: '211'
+source-wordcount: '213'
 ht-degree: 0%
-
 ---
-
 # 設定SSL的概觀 {#overview-of-configuring-ssl}
 
 您可以建立Secure Sockets Layer (SSL)認證，並在應用程式伺服器上設定SSL，以加強與應用程式伺服器通訊的安全性。
