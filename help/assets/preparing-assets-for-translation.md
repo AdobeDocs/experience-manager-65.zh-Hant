@@ -8,11 +8,9 @@ exl-id: eee768e3-3eb4-46fa-b9ae-9ef8764a3a94
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '442'
-ht-degree: 1%
-
+source-wordcount: '449'
+ht-degree: 2%
 ---
-
 # 準備要翻譯的資產 {#preparing-assets-for-translation}
 
 多語言資產是指具有多語言二進位檔案、中繼資料和標籤的資產。 一般而言，資產的二進位檔案、中繼資料和標籤會以一種語言存在，然後會翻譯成其他語言以用於多語言專案。
@@ -46,7 +44,7 @@ ht-degree: 1%
 
 若要建立語言根，請建立資料夾並使用ISO語言代碼作為Name屬性的值。 建立語言根後，您可以在語言根內的任何層級建立語言副本。
 
-例如，範例階層的義大利文語言副本的根頁面以`it`作為Name屬性。 Name屬性會用作存放庫中資產節點的名稱，從而決定資產的路徑。(`https://[aem_server]:[port]/assets.html/content/dam/it/`)。
+例如，範例階層的義大利文語言副本的根頁面以`it`作為Name屬性。 Name屬性會用作存放庫中資產節點的名稱，從而決定資產的路徑。 (`https://[aem_server]:[port]/assets.html/content/dam/it/`).
 
 1. 從[!DNL Assets]主控台，按一下&#x200B;**[!UICONTROL 建立]**，然後從功能表選擇&#x200B;**[!UICONTROL 資料夾]**。
 
@@ -56,7 +54,7 @@ ht-degree: 1%
 
    ![在資料夾中新增語言代碼](assets/Add-language-code-in-folder.png)
 
-1. 按一下「**[!UICONTROL 建立]**」。語言根目錄是在[!DNL Assets]主控台中建立。
+1. 按一下「**[!UICONTROL 建立]**」。 語言根目錄是在[!DNL Assets]主控台中建立。
 
 ## 檢視語言根 {#viewing-language-roots}
 
@@ -67,6 +65,6 @@ ht-degree: 1%
 
    ![chlimage_1-122](assets/chlimage_1-122.png)
 
-1. 在[參考]窗格中，按一下[語言復本]。**&#x200B;** [!UICONTROL 語言副本]面板會顯示資產的語言副本。
+1. 在[參考]窗格中，按一下[語言復本]。**** [!UICONTROL 語言副本]面板會顯示資產的語言副本。
 
    ![語言副本](assets/lang-copy2.png)

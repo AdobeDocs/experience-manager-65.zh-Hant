@@ -1,25 +1,28 @@
 ---
 title: 建立表單資料模型
+
 description: 瞭解如何使用或不使用已設定的資料來源建立表單資料模型。
+
+
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: integration
+
 docset: aem65
+
 feature: Form Data Model
 exl-id: 7f5978c3-6c9f-4ce4-b0fb-660ac1d49244
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
-source-wordcount: '952'
-ht-degree: 1%
-
+source-wordcount: '974'
+ht-degree: 3%
 ---
-
 # 建立表單資料模型{#create-form-data-model}
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/create-form-data-models.html?lang=zh-Hant) |
+| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/create-form-data-models.html) |
 | AEM 6.5 | 本文章 |
 
 
@@ -45,7 +48,7 @@ AEM Forms資料整合提供直覺式使用者介面，用於建立和使用表�
 
    * 指定表單資料模型的名稱。
    * （**選擇性**）指定表單資料模型的標題、說明和標籤。
-   * （**選擇性，並只在資料來源已設定時才適用**）選取&#x200B;**[!UICONTROL 資料Source設定]**&#x200B;欄位旁的勾選圖示，並選取您要使用之資料來源的雲端服務所在的設定節點。 它會將下一頁可供選取的資料來源清單，限制在所選設定節點中可供選取的資料來源。 不過，預設會列出任何JDBC資料庫和AEM使用者設定檔資料來源。 如果您未選取組態節點，則會列出所有組態節點的資料來源。
+   * （**選擇性，並只在資料來源已設定時才適用**）選取&#x200B;**[!UICONTROL 資料Source設定]**&#x200B;欄位旁的勾選圖示，並選取您要使用之資料來源的雲端服務所在的設定節點。 它會將下一頁可供選取的資料來源清單，限制在所選設定節點中可供選取的資料來源。 不過，依預設會列出任何JDBC資料庫和AEM使用者設定檔資料來源。 如果您未選取組態節點，則會列出所有組態節點的資料來源。
 
    選取&#x200B;**[!UICONTROL 「下一步」]**。
 

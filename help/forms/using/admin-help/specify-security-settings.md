@@ -13,16 +13,14 @@ source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
 source-wordcount: '101'
 ht-degree: 1%
-
 ---
-
 # 指定安全性設定 {#specify-security-settings}
 
 >[!NOTE]
 > 
 > 確保使用者具有存取管理員控制檯的管理員許可權。
 
-輸出可讓您控制是否解析XML輸入中的外部圖元。 預設會解決這些問題，但您可以變更此行為以提高AEM表單系統的安全性。
+輸出可讓您控制是否解析XML輸入中的外部圖元。 預設會解決問題，但您可以變更此行為以提高AEM表單系統的安全性。
 
 **禁止處理包含外部實體參照的XML資料檔**
 

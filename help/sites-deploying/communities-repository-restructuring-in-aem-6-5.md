@@ -10,14 +10,12 @@ solution: Experience Manager, Experience Manager Sites
 role: Admin
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '1003'
+source-wordcount: '1034'
 ht-degree: 1%
-
 ---
-
 # 6.5中AEM Communities的存放庫重組 {#repository-restructuring-for-aem-communities-in}
 
-如AEM 6.4[&#128279;](/help/sites-deploying/repository-restructuring.md)頁面的上層存放庫重新調整中所述，升級至AEM 6.5的客戶應使用此頁面來評估與影響AEM Communities解決方案的存放庫變更相關的工作量。 在AEM 6.5升級程式期間，有些變更需要投入大量精力，而其他變更則可能延遲到未來升級。
+如AEM 6.4](/help/sites-deploying/repository-restructuring.md)頁面的上層[存放庫重新調整中所述，升級至AEM 6.5的客戶應使用此頁面評估與影響AEM Communities解決方案的存放庫變更相關的工作量。 在AEM 6.5升級程式期間，有些變更需要大量工作量，而其他變更則可能延遲到未來升級為止。
 
 **升級為6.5**
 
@@ -28,12 +26,12 @@ ht-degree: 1%
 
 * [徽章設定](/help/sites-deploying/communities-repository-restructuring-in-aem-6-5.md#badging-configurations)
 * [傳統Communities主控台設計](/help/sites-deploying/communities-repository-restructuring-in-aem-6-5.md#classic-communities-console-designs)
-* [facebook社交登入設定](/help/sites-deploying/communities-repository-restructuring-in-aem-6-5.md#facebook-social-login-configurations)
+* [Facebook社交登入設定](/help/sites-deploying/communities-repository-restructuring-in-aem-6-5.md#facebook-social-login-configurations)
 * [語言選項設定](/help/sites-deploying/communities-repository-restructuring-in-aem-6-5.md#language-options-configurations)
 
-* [pinterest社交登入設定](/help/sites-deploying/communities-repository-restructuring-in-aem-6-5.md#pinterest-social-login-configurations)
+* [Pinterest社交登入設定](/help/sites-deploying/communities-repository-restructuring-in-aem-6-5.md#pinterest-social-login-configurations)
 * [評分設定](/help/sites-deploying/communities-repository-restructuring-in-aem-6-5.md#scoring-configurations)
-* [twitter社交登入設定](/help/sites-deploying/communities-repository-restructuring-in-aem-6-5.md#twitter-social-login-configurations)
+* [Twitter社交登入設定](/help/sites-deploying/communities-repository-restructuring-in-aem-6-5.md#twitter-social-login-configurations)
 * [雜項](/help/sites-deploying/communities-repository-restructuring-in-aem-6-5.md#misc)
 
 ## 6.5版升級 {#with-upgrade}
@@ -55,7 +53,7 @@ ht-degree: 1%
    <td><p>如果您想要移至"<code>/apps/settings</code>"下的新路徑，則需要手動移轉。 您可以使用Granite Configuration Manager來執行移轉。</p> <p>您可以在<code>/libs/settings/community/subscriptions</code>節點上將屬性<code>mergeList</code>設定為<code>true</code>並新增<code>nt:unstructured</code>子節點來執行移轉。</p> </td>
   </tr>
   <tr>
-   <td><strong>附註</strong></td>
+   <td><strong>備註</strong></td>
    <td>不適用<br /> </td>
   </tr>
  </tbody>
@@ -78,7 +76,7 @@ ht-degree: 1%
    <td><p>如果您想要移至"<code>/apps/settings</code>"下的新路徑，則需要手動移轉。 您可以使用Granite Configuration Manager來執行移轉。</p> <p>您可以在<code>/libs/settings/community/subscriptions</code>節點上將屬性<code>mergeList</code>設定為<code>true</code>並新增<code>nt:unstructured</code>子節點來執行移轉。</p> </td>
   </tr>
   <tr>
-   <td><strong>附註</strong></td>
+   <td><strong>備註</strong></td>
    <td>不適用<br /> </td>
   </tr>
  </tbody>
@@ -101,7 +99,7 @@ ht-degree: 1%
    <td>延遲移轉工作可用於清除Communities設定。<br /> <p>任務會將關注字詞從<code>/etc/watchwords</code>移至<code>/conf/global/settings/community/watchwords</code>。</p> <p>如果自訂標語儲存在SCM中，則應將其部署到<code>/apps/settings/...</code>，您必須確保沒有優先的重疊<code>/conf/global/settings/...</code>設定。</p> <p>移轉工作已移除<code>/etc</code>個位置。</p> </td>
   </tr>
   <tr>
-   <td><strong>附註</strong></td>
+   <td><strong>備註</strong></td>
    <td>不適用<br /> </td>
   </tr>
  </tbody>
@@ -137,7 +135,7 @@ ht-degree: 1%
     </ol> <p> </p> <p>最後，移除資源以清除 <code>/etc/community/badging</code></p> </td>
   </tr>
   <tr>
-   <td><strong>附註</strong></td>
+   <td><strong>備註</strong></td>
    <td>不適用<br /> </td>
   </tr>
  </tbody>
@@ -160,13 +158,13 @@ ht-degree: 1%
    <td>不適用</td>
   </tr>
   <tr>
-   <td><strong>附註</strong></td>
+   <td><strong>備註</strong></td>
    <td>不適用<br /> </td>
   </tr>
  </tbody>
 </table>
 
-### facebook社交登入設定 {#facebook-social-login-configurations}
+### Facebook社交登入設定 {#facebook-social-login-configurations}
 
 <table>
  <tbody>
@@ -185,15 +183,15 @@ ht-degree: 1%
     <ol>
      <li>將先前位置中的現有組態移轉到新位置。
       <ol>
-       <li>透過AEM編寫UI，在<strong>工具&gt;Cloud Service&gt; Facebook社交登入設定</strong>手動重新建立新的Facebook社交登入設定。<br /> 或 <br /> </li>
-       <li>將任何新的Facebook雲端設定從先前位置複製到<code>/conf/global or /conf/&lt;tenant&gt;</code>下的適當新位置。</li>
+       <li>透過AEM編寫UI，在<strong>工具&gt;雲端服務&gt; Facebook社交登入設定</strong>.<br />手動重新建立新的Facebook社交登入設定 或<br /> </li>
+       <li>將任何新Facebook雲端設定從先前位置複製到<code>/conf/global or /conf/&lt;tenant&gt;</code>下的適當新位置。</li>
       </ol> </li>
-     <li>透過將<code>[cq:Page]/jcr:content@cq:conf</code>屬性設定為新位置中的絕對路徑，更新任何AEM Communities網站根以參考新的Facebook社交登入設定。</li>
-     <li>解除舊版Facebook ConnectCloud Service與任何更新以參照新位置的AEM Communities網站根目錄的關聯。</li>
+     <li>透過將<code>[cq:Page]/jcr:content@cq:conf</code>屬性設定為「新位置」中的絕對路徑，更新任何AEM Communities網站根以參考新的Facebook社交登入設定。</li>
+     <li>解除舊版Facebook Connect Cloud Service與任何更新以參照新位置的AEM Communities網站根目錄的關聯。</li>
     </ol> </td>
   </tr>
   <tr>
-   <td><strong>附註</strong></td>
+   <td><strong>備註</strong></td>
    <td>不適用<br /> </td>
   </tr>
  </tbody>
@@ -216,13 +214,13 @@ ht-degree: 1%
    <td>不適用<br /> </td>
   </tr>
   <tr>
-   <td><strong>附註</strong></td>
+   <td><strong>備註</strong></td>
    <td>不適用<br /> </td>
   </tr>
  </tbody>
 </table>
 
-### pinterest社交登入設定 {#pinterest-social-login-configurations}
+### Pinterest社交登入設定 {#pinterest-social-login-configurations}
 
 <table>
  <tbody>
@@ -241,15 +239,15 @@ ht-degree: 1%
     <ol>
      <li>將先前位置中的現有組態移轉到新位置。
       <ol>
-       <li>透過AEM編寫UI，在<strong>工具&gt;Cloud Service&gt; Pinterest社交登入設定</strong>手動重新建立新的Pinterest社交登入設定。<br />或</li>
+       <li>透過Pinterest編寫UI，在<strong>工具&gt; Cloud Services &gt; Pinterest社交登入設定</strong>手動重新建立新的AEM社交登入設定。<br /> 或</li>
        <li>將任何新的Pinterest雲端設定從先前的位置複製到<code>/conf/global or /conf/&lt;tenant&gt;</code>下適當的新位置。</li>
       </ol> </li>
      <li>透過將<code>[cq:Page]/jcr:content@cq:conf</code>屬性設定為新位置中的絕對路徑，更新任何AEM Communities網站根以參考新的Pinterest社交登入設定。</li>
-     <li>解除舊版Pinterest ConnectCloud Service與任何更新以參照新位置的AEM Communities網站根目錄的關聯。</li>
+     <li>解除舊版Pinterest Connect Cloud Service與任何更新以參照新位置的AEM Communities網站根的關聯。</li>
     </ol> </td>
   </tr>
   <tr>
-   <td><strong>附註</strong></td>
+   <td><strong>備註</strong></td>
    <td>不適用<br /> </td>
   </tr>
  </tbody>
@@ -282,13 +280,13 @@ ht-degree: 1%
     </ol> <p>清除：移除資源 <code>/etc/community/scoring</code></p> </td>
   </tr>
   <tr>
-   <td><strong>附註</strong></td>
+   <td><strong>備註</strong></td>
    <td>不適用<br /> </td>
   </tr>
  </tbody>
 </table>
 
-### twitter社交登入設定 {#twitter-social-login-configurations}
+### Twitter社交登入設定 {#twitter-social-login-configurations}
 
 <table>
  <tbody>
@@ -307,15 +305,15 @@ ht-degree: 1%
     <ol>
      <li>將先前位置中的現有組態移轉到新位置。
       <ol>
-       <li>透過<strong>工具&gt;Cloud Service&gt;Twitter社交登入設定</strong>的AEM編寫UI，手動重新建立新的Twitter社交登入設定。<br /> 或 <br /> </li>
-       <li>將任何新Twitter雲端設定從先前位置複製到<code>/conf/global or /conf/&lt;tenant&gt;</code>下的適當新位置。</li>
+       <li>透過AEM編寫UI，在<strong>工具&gt;雲端服務&gt; Twitter社交登入設定</strong>手動重新建立新的Twitter社交登入設定。<br /> 或<br /> </li>
+       <li>將任何新的Twitter雲端設定從先前位置複製到<code>/conf/global or /conf/&lt;tenant&gt;</code>下的適當新位置。</li>
       </ol> </li>
-     <li>將<code>[cq:Page]/jcr:content@cq:conf</code>屬性設定為「新位置」中的絕對Twitter，更新任何AEM Communities網站根以參照新的網站社交登入設定。</li>
-     <li>解除舊版Twitter連線Cloud Service與任何已更新為參考新位置的AEM Communities網站根目錄的關聯。</li>
+     <li>將<code>[cq:Page]/jcr:content@cq:conf</code>屬性設定為「新位置」中的絕對路徑，更新任何AEM Communities網站根目錄以參考新的Twitter社交登入設定。</li>
+     <li>解除舊版Twitter Connect Cloud Service與任何更新以參照新位置的AEM Communities網站根目錄的關聯。</li>
     </ol> </td>
   </tr>
   <tr>
-   <td><strong>附註</strong></td>
+   <td><strong>備註</strong></td>
    <td>不適用<br /> </td>
   </tr>
  </tbody>
@@ -335,10 +333,10 @@ ht-degree: 1%
   </tr>
   <tr>
    <td><strong>重組指南</strong></td>
-   <td><p>Adobe已在以下位置提供移轉公用程式：</p> <p><a href="https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/master/bundles/communities-template-migration">https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/master/bundles/communities-template-migration</a></p> </td>
+   <td><p>Adobe在下列位置提供移轉公用程式：</p> <p><a href="https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/master/bundles/communities-template-migration">https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/master/bundles/communities-template-migration</a></p> </td>
   </tr>
   <tr>
-   <td><strong>附註</strong></td>
+   <td><strong>備註</strong></td>
    <td>現有的自訂範本將會移至 <code>/conf/global/settings/community/template/&lt;groups/sites/functions&gt;</code></td>
   </tr>
  </tbody>

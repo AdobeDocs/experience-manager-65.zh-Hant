@@ -9,14 +9,13 @@ topic-tags: operations
 role: Developer
 exl-id: a3a6a06d-ec90-4147-a5f0-e776a086ee12
 solution: Experience Manager, Experience Manager Forms
+
 feature: Adaptive Forms,Document Services,APIs & Integrations
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '1822'
+source-wordcount: '1848'
 ht-degree: 0%
-
 ---
-
 # 依值呈現Forms {#rendering-forms-by-value}
 
 **本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
@@ -35,11 +34,11 @@ Forms服務也可以解析表單設計內連結內容的位置。 例如，從�
 
 * 表單設計內沒有相對連結的內容。 所有影像和片段都必須嵌入表單設計內，或絕對參照。
 * 轉譯表單後無法執行伺服器端計算。 如果表單提交回Forms服務，系統就會擷取並傳回資料，而不會進行任何伺服器端計算。
-* 由於HTML只能在執行階段使用連結的影像，因此無法產生含有內嵌影像的HTML。 這是因為Forms服務可透過從參照的表單設計擷取影像，支援具有HTML的內嵌影像。 由於以值傳遞的表單設計沒有參考位置，因此在顯示HTML頁面時無法擷取內嵌影像。 因此，影像參照必須是絕對路徑，才能以HTML呈現。
+* 由於HTML在執行階段只能使用連結的影像，因此無法產生內嵌影像的HTML。 這是因為Forms服務可透過從參照的表單設計擷取影像，支援使用HTML嵌入影像。 由於以值傳遞的表單設計沒有參考位置，因此在顯示HTML頁面時無法擷取內嵌影像。 因此，影像參照必須是絕對路徑，才能在HTML中呈現。
 
 >[!NOTE]
 >
->雖然您可以依值呈現不同型別的表單(例如，包含使用許可權的HTML表單或表單)，本節將討論呈現互動式PDF forms。
+>雖然您可以依值呈現不同型別的表單（例如，包含使用許可權的HTML表單或表單），本節將討論呈現互動式PDF forms。
 
 >[!NOTE]
 >
@@ -61,7 +60,7 @@ Forms服務也可以解析表單設計內連結內容的位置。 例如，從�
 
 **建立Forms使用者端API物件**
 
-您必須先建立資料整合服務使用者端，才能以程式設計方式將資料從使用者端API匯入PDF。 建立服務使用者端時，您可以定義呼叫服務所需的連線設定。
+您必須先建立資料整合服務使用者端，才能以程式設計方式將資料匯入PDF表單使用者端API。 建立服務使用者端時，您可以定義呼叫服務所需的連線設定。
 
 **參考表單設計**
 
@@ -144,7 +143,7 @@ Forms服務也可以解析表單設計內連結內容的位置。 例如，從�
 
 [依值呈現Forms](/help/forms/developing/rendering-forms.md)
 
-[快速入門(SOAP模式)：使用Java API依值轉譯](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-by-value-using-the-java-api)
+[快速入門（SOAP模式）：使用Java API依值轉譯](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-by-value-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -166,7 +165,7 @@ Forms服務也可以解析表單設計內連結內容的位置。 例如，從�
 1. 參考表單設計
 
    * 使用物件的建構函式建立`java.io.FileInputStream`物件。 傳遞字串值，指定XDP檔案的位置。
-   * 使用物件的建構函式建立`BLOB`物件。 `BLOB`物件是用來儲存以密碼加密的PDF檔案。
+   * 使用物件的建構函式建立`BLOB`物件。 `BLOB`物件是用來儲存已使用密碼加密的PDF檔案。
    * 建立位元組陣列以儲存`java.io.FileInputStream`物件的內容。 您可以使用其`available`方法取得`java.io.FileInputStream`物件的大小，以決定位元組陣列的大小。
    * 呼叫`java.io.FileInputStream`物件的`read`方法並傳遞位元組陣列，以串流資料填入位元組陣列。
    * 叫用物件的`setBinaryData`方法並傳遞位元組陣列以填入`BLOB`物件。
@@ -180,7 +179,7 @@ Forms服務也可以解析表單設計內連結內容的位置。 例如，從�
    * 儲存執行階段選項的`PDFFormRenderSpec`物件。 這是選用引數，如果您不想指定執行階段選項，可以指定`null`。
    * 包含Forms服務所需URI值的`URLSpec`物件。
    * 儲存檔案附件的`java.util.HashMap`物件。 這是選用引數，如果您不想將檔案附加至表單，可以指定`null`。
-   * 方法填入的空白`com.adobe.idp.services.holders.BLOBHolder`物件。 這可用來儲存轉譯的PDF表單。
+   * 方法填入的空白`com.adobe.idp.services.holders.BLOBHolder`物件。 這是用來儲存轉譯的PDF表單。
    * 方法填入的空白`javax.xml.rpc.holders.LongHolder`物件。 （此引數會以表單儲存頁數。）
    * 方法填入的空白`javax.xml.rpc.holders.StringHolder`物件。 （此引數會儲存地區設定值。）
    * 包含此作業結果的空白`com.adobe.idp.services.holders.FormsResultHolder`物件。

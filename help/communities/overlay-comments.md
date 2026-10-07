@@ -14,9 +14,7 @@ source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
 source-wordcount: '267'
 ht-degree: 0%
-
 ---
-
 # 覆蓋Communities元件 {#overlay-communities-components}
 
 [覆蓋](/help/communities/client-customize.md#overlays)預設元件的目的是針對該元件的所有相對參照，全域變更元件的外觀或行為。 在/libs資料夾中搜尋之前，這會仰賴sling的性質解析至/apps資料夾。 因此，元件的路徑與預設元件的路徑相同，不同之處在於它位在/apps資料夾中，而非/libs資料夾中。

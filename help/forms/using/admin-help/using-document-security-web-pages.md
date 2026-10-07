@@ -1,21 +1,23 @@
 ---
 title: 使用Document Security網頁
+
 description: 瞭解如何登入、導覽及使用Document Security網頁。
+
+
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
+
 feature: Document Security
 exl-id: caa31752-a02d-4d20-b7d9-c4aad5d0fae6
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '933'
+source-wordcount: '939'
 ht-degree: 0%
-
 ---
-
 # 使用Document Security網頁 {#using-the-document-security-webpages}
 
 >[!NOTE]

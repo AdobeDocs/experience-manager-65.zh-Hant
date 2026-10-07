@@ -1,21 +1,23 @@
 ---
 title: 管理受邀和本機使用者帳戶
+
 description: 使用Document Security，您可以搜尋、檢視、編輯、鎖定、解鎖和刪除受邀和本機使用者帳戶。
+
+
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
+
 feature: Document Security
 exl-id: 23f71b34-a0cb-4664-bb8b-a60f33dc70d8
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '1208'
+source-wordcount: '1211'
 ht-degree: 0%
-
 ---
-
 # 管理受邀和本機使用者帳戶 {#managing-invited-and-local-user-accounts}
 
 >[!NOTE]
@@ -99,7 +101,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->透過AEM Forms使用者管理介面刪除的已邀請使用者無法重新生效，直到使用下列程式再次刪除為止。
+>透過AEM表單使用者管理介面刪除的受邀使用者後，才能重新活用該使用者，除非使用下列程式再次將其刪除。
 
 1. 在管理控制檯中，按一下「服務」>「Document Security」>「受邀和本地使用者」，然後按一下「受邀使用者」標籤。
 1. 選取一或多個使用者旁的核取方塊，按一下刪除，然後按一下確定。
@@ -132,6 +134,6 @@ ht-degree: 0%
 * 向上三角形表示遞增順序。
 * 向下三角形表示遞減順序。
 
-   1. 在管理控制檯中，按一下「服務> Document Security >受邀和本機使用者」。
-   1. 若要排序受邀使用者，請按一下受邀使用者索引標籤，然後按一下適當的欄標題。
-   1. 若要排序本機使用者，請按一下[本機使用者]索引標籤，然後按一下適當的欄標題。
+  1. 在管理控制檯中，按一下「服務> Document Security >受邀和本機使用者」。
+  1. 若要排序受邀使用者，請按一下受邀使用者索引標籤，然後按一下適當的欄標題。
+  1. 若要排序本機使用者，請按一下[本機使用者]索引標籤，然後按一下適當的欄標題。
