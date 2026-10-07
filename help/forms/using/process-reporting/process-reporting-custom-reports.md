@@ -11,11 +11,9 @@ feature: Adaptive Forms
 role: User, Developer
 source-git-commit: e821be5233fd5f6688507096790d219d25903892
 workflow-type: tm+mt
-source-wordcount: '837'
-ht-degree: 1%
-
+source-wordcount: '1053'
+ht-degree: 14%
 ---
-
 # 自訂報告進行中報告{#custom-reports-in-process-reporting}
 
 您可以使用QueryBuilder的REST介面，或使用QueryBuilder API建立OSGi服務來建立自訂報表。

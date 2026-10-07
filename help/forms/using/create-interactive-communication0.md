@@ -1,20 +1,23 @@
 ---
 title: '教學課程：建立互動式通訊 '
+
 description: 使用所有建置區塊建立互動式通訊
+
+
 contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
+
 docset: aem65
+
 feature: Interactive Communication
 exl-id: aaacee66-6bbe-498b-91b1-3a9545ff1aeb
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
-source-wordcount: '1884'
+source-wordcount: '1914'
 ht-degree: 0%
-
 ---
-
 # 教學課程：建立互動式通訊 {#tutorial-create-interactive-communication}
 
 ![09-style-your-adaptive-form-small](assets/09-style-your-adaptive-form-small.png)
@@ -179,7 +182,7 @@ ht-degree: 0%
    1. 在&#x200B;**邊框**&#x200B;區段中，將&#x200B;**1.5px**&#x200B;指定為&#x200B;**邊框寬度**，選取&#x200B;**實線**&#x200B;作為&#x200B;**邊框樣式**，並將&#x200B;**46px**&#x200B;指定為&#x200B;**邊框半徑**。
 
    1. 從&#x200B;**背景**&#x200B;區段中選取紅色作為按鈕的背景顏色。
-   1. 在&#x200B;**Dimension與位置**&#x200B;區段的&#x200B;**邊界**&#x200B;欄位中，選取&#x200B;**同時編輯**&#x200B;圖示，並將&#x200B;**右側**&#x200B;邊界設定為&#x200B;**450px**。 「上」、「下」和「左」欄位會設為空白。
+   1. 在&#x200B;**維度與位置**&#x200B;區段的&#x200B;**邊界**&#x200B;欄位中，選取&#x200B;**同時編輯**&#x200B;圖示，並將&#x200B;**右側**&#x200B;邊界設定為&#x200B;**450px**。 「上」、「下」和「左」欄位會設為空白。
 
    ![在互動式通訊中插入超連結](assets/ic_web_hyperlink_new.png)
 

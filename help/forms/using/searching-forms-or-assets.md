@@ -1,21 +1,24 @@
 ---
 title: 搜尋表單和資產
-description: 您可以使用AEM搜尋來搜尋AEM例項中的表單和資產。 基本和進階搜尋可讓您快速找到資產。
+
+description: 您可以使用AEM搜尋功能，在AEM例項中搜尋表單和資產。 基本和進階搜尋可讓您快速找到資產。
+
+
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-manager
+
 docset: aem65
+
 role: Admin,User
 exl-id: 1f4f49b7-5f32-47dd-9dc7-a6974faf2bdf
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
 workflow-type: tm+mt
-source-wordcount: '689'
-ht-degree: 3%
-
+source-wordcount: '690'
+ht-degree: 4%
 ---
-
 # 搜尋表單和資產{#searching-for-forms-and-assets}
 
 您可以使用文字字串或文字字串以及萬用字元來搜尋您的表單或表單資產。 您也可以使用「搜尋」面板中各種類別所提供的條件來縮小搜尋範圍。
@@ -91,7 +94,7 @@ AEM表單和資產搜尋的搜尋欄位和引數或篩選器
    <td>搜尋所有表單範本。<br /> </td> 
   </tr>
   <tr>
-   <td>PDF表單</td> 
+   <td>PDF 表單</td> 
    <td>搜尋所有PDF檔案。</td> 
   </tr>
   <tr>
