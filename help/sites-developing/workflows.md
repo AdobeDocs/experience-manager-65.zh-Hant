@@ -42,7 +42,7 @@ AEM提供了數種工具和資源，用於建立工作流程模型、開發工�
 >
 >* 參與工作流程，請參閱[使用工作流程](/help/sites-authoring/workflows.md)。
 >* 管理工作流程和工作流程執行個體，請參閱[管理工作流程](/help/sites-administering/workflows.md)。
->* 如需端對端社群文章，請參閱[使用Adobe Experience Manager工作流程修改數位Assets。](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/assets-workflow.html)
+>* 如需端對端社群文章，請參閱[使用Adobe Experience Manager工作流程修改數位Assets。](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/assets-workflow.html?lang=zh-Hant)
 >* 請參閱[向AEM專家提問工作流程線上講座](https://communities.adobeconnect.com/p5s33iburd54/)。
 >* 資訊位置的變更請參閱[AEM 6.5](/help/sites-deploying/repository-restructuring.md)中的存放庫重組[工作流程最佳實務 — 位置](/help/sites-developing/workflows-best-practices.md#locations)。
 >
@@ -208,7 +208,7 @@ AEM提供了數種工具和資源，用於建立工作流程模型、開發工�
 
 ### 工作流程和Forms {#workflows-and-forms}
 
-工作流程通常用於處理AEM中的表單提交。 它可以是標準AEM執行個體中可用的[核心元件表單元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-container.html)，或是[AEM Forms解決方案](/help/forms/using/aem-forms-workflow.md)。
+工作流程通常用於處理AEM中的表單提交。 它可以是標準AEM執行個體中可用的[核心元件表單元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-container.html?lang=zh-Hant)，或是[AEM Forms解決方案](/help/forms/using/aem-forms-workflow.md)。
 
 建立表單時，可輕鬆將表單提交與工作流程模型建立關聯。 例如，將內容儲存在存放庫的特定位置，或通知使用者表單提交及其內容。
 
