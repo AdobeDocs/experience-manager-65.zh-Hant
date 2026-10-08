@@ -77,7 +77,7 @@ AI 助理會直接嵌入 AEM，並且可透過 AEM Experience Hub、Cloud Manage
 
 **在 AEM 中存取 AI 助理：**
 
-1. 客戶必須有其他協議就緒才能存取 Adobe Experience Manager 中大部分的 AI 驅動功能和代理式功能。 如需詳細資訊，請聯絡您的 Adobe 代表。 如需Generative AI啟用的運作方式，請參閱[CX Enterprise應用程式中的Generative AI](https://experienceleague.adobe.com/en/docs/cx-enterprise-ai/experience-cloud-ai/overview/generative-ai)。
+1. 客戶必須有其他協議就緒才能存取 Adobe Experience Manager 中大部分的 AI 驅動功能和代理式功能。 如需詳細資訊，請聯絡您的 Adobe 代表。 如需Generative AI啟用的運作方式，請參閱[CX Enterprise應用程式中的Generative AI](https://experienceleague.adobe.com/zh-hant/docs/cx-enterprise-ai/experience-cloud-ai/overview/generative-ai)。
 
 1. 您的組織達成此合約後，所有使用者預設都可使用AI Assistant取得產品知識。 不需要額外的個別使用者或個別群組許可權。
 
