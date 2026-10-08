@@ -38,7 +38,7 @@ Forms Portal提交動作會保留透過Adaptive Forms擷取或提交的資料，
 
 若要讀取和寫入資料存放區的資料，請使用表單資料模型(FDM)。 FDM是將表單連線到您擁有及管理的資料來源（例如資料庫或RESTful Web服務）的建議機制。
 
-如需詳細資訊，請參閱[ AEM Forms資料整合簡介](/help/forms/using/data-integration.md)。 如需保護FDM所處理資料的指引，請參閱[由表單資料模型(FDM)所處理的安全資料](/help/forms/using/hardening-securing-aem-forms-environment.md#secure-data-handled-by-form-data-model-fdm)。
+如需詳細資訊，請參閱[&#x200B; AEM Forms資料整合簡介](/help/forms/using/data-integration.md)。 如需保護FDM所處理資料的指引，請參閱[由表單資料模型(FDM)所處理的安全資料](/help/forms/using/hardening-securing-aem-forms-environment.md#secure-data-handled-by-form-data-model-fdm)。
 
 ## 長期工作流程中的資料 {#long-lived-workflow-processes}
 
@@ -68,7 +68,7 @@ AEM是可自訂的解決方案。 如果您自訂AEM，請確保您的自訂不�
 
 **長期工作流程是否儲存表單資料？**
 
-Adobe Experience Manager (AEM) Forms中的長期工作流程可以暫時將資料儲存為工作流程裝載的一部分，該裝載儲存在AEM存放庫的工作流程例項中繼資料中。 若要將此資料保留在您擁有並管理的存放庫（例如Azure Blob儲存體）中，而不是在AEM上，請針對工作流程變數](/help/forms/using/aem-forms-workflow.md#externalize-wf-variables)使用[AEM資料外部化功能。
+Adobe Experience Manager (AEM) Forms中的長期工作流程可以暫時將資料儲存為工作流程裝載的一部分，該裝載儲存在AEM存放庫的工作流程例項中繼資料中。 若要將此資料保留在您擁有並管理的存放庫（例如Azure Blob儲存體）中，而不是在AEM上，請針對工作流程變數[&#128279;](/help/forms/using/aem-forms-workflow.md#externalize-wf-variables)使用AEM資料外部化功能。
 
 **AEM Forms會將資料寫入記錄檔嗎？**
 
