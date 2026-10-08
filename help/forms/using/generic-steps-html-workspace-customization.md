@@ -12,11 +12,9 @@ feature: HTML5 Forms,Adaptive Forms,Mobile Forms
 role: User, Developer
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '300'
+source-wordcount: '302'
 ht-degree: 9%
-
 ---
-
 # AEM Forms工作區自訂的一般步驟 {#generic-steps-for-aem-forms-workspace-customization}
 
 執行任何自訂的一般步驟為：
@@ -27,7 +25,7 @@ ht-degree: 9%
 1. 選取&#x200B;**[!UICONTROL 存放庫]**&#x200B;選項。 在&#x200B;**[!UICONTROL 存取控制]**&#x200B;清單中，按一下&#x200B;**[!UICONTROL +]**&#x200B;以新增專案。 再按一下&#x200B;**[!UICONTROL +]**。
 1. 搜尋並選取&#x200B;**PERM_WORKSPACE_USER**&#x200B;主體。
 
-   ![選取PERM_WORKSPACE_USER主體作為自訂HTMLWorkspace的一般步驟的一部分](assets/perm_workspace_user.png)
+   ![選取PERM_WORKSPACE_USER主體作為自訂HTML Workspace的一般步驟的一部分](assets/perm_workspace_user.png)
 
 1. 將`jcr:read`許可權授與主體。
 1. 按一下&#x200B;**[!UICONTROL 「儲存全部」]**。
@@ -84,7 +82,7 @@ ht-degree: 9%
 
    1. 將`/libs/ws/js/libs/jqueryui`資料夾複製到`/apps/ws/js/libs`。 按一下&#x200B;**[!UICONTROL 「儲存全部」]**。
 
-1. 請針對HTML自訂執行以下動作：
+1. 請針對HTML自訂執行下列動作：
 
    1. 在`/apps/ws/js`下，建立名為`runtime`的資料夾。 按一下&#x200B;**[!UICONTROL 「儲存全部」]**。
 

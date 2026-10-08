@@ -12,11 +12,9 @@ feature: Developing
 role: Developer
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
-source-wordcount: '1601'
+source-wordcount: '1585'
 ht-degree: 2%
-
 ---
-
 # 頁面範本 — 靜態{#page-templates-static}
 
 範本可用來建立頁面，並定義哪些元件可以在選取的範圍中使用。 範本是節點的階層，其結構與要建立的頁面相同，但沒有任何實際內容。
@@ -32,7 +30,7 @@ ht-degree: 2%
 
 ## 範本的屬性和子節點 {#properties-and-child-nodes-of-a-template}
 
-範本是cq：Template型別的節點，具有下列屬性和子節點：
+範本是cq:Template型別的節點，並具有下列屬性和子節點：
 
 <table>
  <tbody>
@@ -42,7 +40,7 @@ ht-degree: 2%
    <td><strong>說明 <br /> </strong></td>
   </tr>
   <tr>
-   <td>.<br /> </td>
+   <td>. <br /> </td>
    <td> cq:Template</td>
    <td>目前的範本。 範本為節點型別cq：Template。<br /> </td>
   </tr>
@@ -103,7 +101,7 @@ ht-degree: 2%
 
 若要建立頁面，必須將範本（節點樹狀結構`/apps/<myapp>/template/<mytemplate>`）複製到網站樹狀結構中的對應位置：如果使用&#x200B;**網站**&#x200B;索引標籤建立頁面，就會發生這種情況。
 
-此複製動作也會提供頁面的初始內容（通常是僅限最上層內容）和屬性sling：resourceType，也就是用來呈現頁面的頁面元件路徑（子節點jcr：content中的所有專案）。
+此複製動作也會提供頁面的初始內容（通常是僅限最上層內容）和屬性sling:resourceType，也就是用來轉譯頁面的頁面元件路徑（子節點jcr:content中的所有專案）。
 
 ## 範本的結構方式 {#how-templates-are-structured}
 
@@ -114,16 +112,16 @@ ht-degree: 2%
 
 ### 範本的結構 {#the-structure-of-a-template}
 
-範本是在型別&#x200B;**cq：Template**&#x200B;的節點下建立。
+範本是在型別&#x200B;**cq:Template**&#x200B;的節點下建立。
 
 ![screen_shot_2012-02-13at63646pm](assets/screen_shot_2012-02-13at63646pm.png)
 
 您可以設定各種屬性，特別是：
 
-* **jcr：title** — 範本的標題；建立頁面時顯示在對話方塊中。
-* **jcr：description** — 範本的說明；建立頁面時顯示在對話方塊中。
+* **jcr:title** — 範本的標題；建立頁面時顯示在對話方塊中。
+* **jcr:description** — 範本的說明；建立頁面時顯示在對話方塊中。
 
-此節點包含jcr：content (cq：PageContent)節點，會用作結果頁面內容節點的基礎；這會使用sling：resourceType參考要用於呈現新頁面實際內容的元件。
+此節點包含一個jcr:content (cq:PageContent)節點，此節點是作為結果頁面之內容節點的基礎；此節點使用sling:resourceType參考要用來呈現新頁面之實際內容的元件。
 
 ![screen_shot_2012-02-13at64010pm](assets/screen_shot_2012-02-13at64010pm.png)
 
@@ -133,9 +131,9 @@ ht-degree: 2%
 
 ### 範本產生的內容 {#the-content-produced-by-a-template}
 
-範本是用來建立型別`cq:Page`的頁面（如前所述，頁面是一種特殊型別的元件）。 每個AEM頁面都有結構化節點`jcr:content`。 此特性：
+範本是用來建立型別`cq:Page`的頁面（如前所述，頁面是一種特殊型別的元件）。 每個AEM頁面都有一個結構化的節點`jcr:content`。 此特性：
 
-* 屬於cq：PageContent型別
+* 為cq:PageContent型別
 * 是儲存已定義內容定義的結構化節點型別
 * 具有屬性`sling:resourceType`，以參考包含用於轉譯內容之sling指令碼的元件
 
@@ -159,14 +157,14 @@ AEM隨附各種現成可用的預設範本。 有時候，您可能會想要依�
 1. 在「查詢」索引標籤中
 1. 以&#x200B;**型別**&#x200B;形式選取&#x200B;**XPath**。
 
-1. 在&#x200B;**查詢**&#x200B;輸入欄位中，輸入下列字串：
-//element(&#42;， cq：Template)
+1. 在&#x200B;**查詢** 輸入欄位，輸入以下字串：
+//element(&#42;， cq:Template)
 
 1. 按一下&#x200B;**執行**。 清單會顯示在結果方塊中。
 
 通常，您會取用現有範本並開發新的範本以供您自己使用。 如需詳細資訊，請參閱[開發頁面範本](#developing-page-templates)。
 
-若要為您的網站啟用現有的範本，並且您想要在從&#x200B;**網站**&#x200B;主控台直接在&#x200B;**網站**&#x200B;下建立頁面時，將它顯示在&#x200B;**建立頁面**&#x200B;對話方塊中，請將範本節點的allowedPaths屬性設定為： **/content(/。&#42;)？**
+若要為您的網站啟用現有的範本，並且您想要在從&#x200B;**網站**&#x200B;主控台直接在&#x200B;**網站**&#x200B;下建立頁面時，將它顯示在&#x200B;**建立頁面**&#x200B;對話方塊中，請將範本節點的allowedPaths屬性設定為： **/content(/.&#42;)？**
 
 ## 範本設計的套用方式 {#how-template-designs-are-applied}
 
@@ -176,7 +174,7 @@ AEM隨附各種現成可用的預設範本。 有時候，您可能會想要依�
 >
 >Adobe建議僅透過[設計模式](/help/sites-authoring/default-components-designmode.md)套用設計。
 >
->例如，在CRXDE Lite中修改設計不是最佳做法，此類設計的應用可能會與預期行為有所不同。
+>例如，在CRXDE Lite中修改設計並非最佳實務，且這些設計的應用可能會與預期行為有所差異。
 
 如果設計僅使用設計模式套用，則下列區段、[設計路徑解析度](/help/sites-developing/page-templates-static.md#design-path-resolution)、[決策樹](/help/sites-developing/page-templates-static.md#decision-tree)和[範例](/help/sites-developing/page-templates-static.md#example)不適用。
 
@@ -265,7 +263,7 @@ AEM會依照下列順序決定內容節點最相關的樣式：
 
 ## 開發頁面範本 {#developing-page-templates}
 
-AEM頁面範本只是用來建立頁面的模型。 它們可以視需要包含儘可能少或儘可能多的初始內容，其角色是建立正確的初始節點結構，並將所需的屬性（主要是sling：resourceType）設定為允許編輯和呈現。
+AEM頁面範本只是用來建立頁面的模型。 它們可以視需要包含儘可能少或儘可能多的初始內容，其角色是建立正確的初始節點結構，並將必要的屬性（主要是sling:resourceType）設定為允許編輯和呈現。
 
 ### 建立範本（根據現有範本） {#creating-a-new-template-based-on-an-existing-template}
 
@@ -281,7 +279,7 @@ AEM頁面範本只是用來建立頁面的模型。 它們可以視需要包含�
    >
    >可用範本的清單取決於新頁面的位置以及每個範本中指定的位置限制。 檢視[範本可用性](#templateavailibility)。
 
-1. 變更新範本節點的&#x200B;**jcr：title**&#x200B;以反映其新角色。 您也可以更新&#x200B;**jcr：description** （如果適用）。 請務必視需要變更頁面的範本可用性。
+1. 變更新範本節點的&#x200B;**jcr:title**&#x200B;以反映其新角色。 您也可以更新&#x200B;**jcr:description** （如果適用）。 請務必視需要變更頁面的範本可用性。
 
    >[!NOTE]
    >
@@ -289,13 +287,13 @@ AEM頁面範本只是用來建立頁面的模型。 它們可以視需要包含�
 
    ![chlimage_1-88](assets/chlimage_1-88.png)
 
-1. 複製範本所依據的元件（由範本內&#x200B;**jcr：content**&#x200B;節點的&#x200B;**sling：resourceType**&#x200B;屬性表示）以建立執行個體。
+1. 複製範本所依據的元件（由範本內&#x200B;**jcr:content**&#x200B;節點的&#x200B;**sling:resourceType**&#x200B;屬性表示）以建立執行個體。
 
    元件儲存在&#x200B;**/apps/&lt;website-name>/components/&lt;component-name>**。
 
-1. 更新新元件的&#x200B;**jcr：title**&#x200B;和&#x200B;**jcr：description**。
+1. 更新新元件的&#x200B;**jcr:title**&#x200B;和&#x200B;**jcr:description**。
 1. 如果您想要在範本選取範圍清單中顯示新的縮圖圖片（大小為128 x 98畫素），請取代thumbnail.png。
-1. 更新範本&#x200B;**jcr：content**&#x200B;節點的&#x200B;**sling：resourceType**&#x200B;以參考新元件。
+1. 更新範本&#x200B;**jcr:content**&#x200B;節點的&#x200B;**sling:resourceType**&#x200B;以參考新元件。
 1. 對範本或其基礎元件（或兩者）的功能或設計進行其他變更。
 
    >[!NOTE]

@@ -11,11 +11,9 @@ feature: Developing
 role: Developer
 source-git-commit: f96b178ae84b4b930b59e36d4994970682c53dbd
 workflow-type: tm+mt
-source-wordcount: '1767'
-ht-degree: 0%
-
+source-wordcount: '1780'
+ht-degree: 1%
 ---
-
 # 資料模型 — David Nuescheler模型{#data-modeling-david-nuescheler-s-model}
 
 ## 來源 {#source}
@@ -46,7 +44,7 @@ David是Day Software AG的聯合創始人和CTO，該公司是全球內容管理
 
 我建議您不要擔心ERD意義上的宣告資料結構。 最初。
 
-瞭解如何在開發中喜歡nt：unstructured (&amp; friends)。
+瞭解如何在開發中喜歡nt:unstructured （&amp;好友）。
 
 我的底線：結構昂貴，通常完全不需要明確宣告結構給基礎儲存體。
 
@@ -173,11 +171,11 @@ JCR引進了工作區的抽象概念，讓許多開發人員不知道如何處�
 
 如果內容模型揭露某些連遠端都聞起來像檔案或資料夾的東西，我就會嘗試使用（或延伸） `nt:file`、`nt:folder`和`nt:resource`。
 
-根據我的經驗，許多通用應用程式允許與nt：folder和nt：files進行隱含的互動，而且如果事件富含其他中繼資訊，它們也能知道如何處理和顯示這些事件。 例如，與CIFS或WebDAV等檔案伺服器實作（位於JCR頂端）的直接互動變得隱含。
+根據我的經驗，許多通用應用程式允許與nt:folder和nt:files進行隱含的互動，而且如果事件富含其他中繼資訊，則知道如何處理和顯示這些事件。 例如，與CIFS或WebDAV等檔案伺服器實作（位於JCR頂端）的直接互動變得隱含。
 
-我認為根據經驗法則，您可以使用下列專案：如果您必須儲存檔案名稱和mime型別，則`nt:file`/ `nt:resource`是很好的相符專案。 如果您可以有多個「檔案」，則nt：folder是儲存這些檔案的好地方。
+我認為根據經驗法則，您可以使用下列專案：如果您必須儲存檔案名稱和mime型別，則`nt:file`/ `nt:resource`是很好的相符專案。 如果您可以有多個「檔案」，則nt:folder是儲存這些檔案的好地方。
 
-如果您必須為資源新增中繼資訊，可以說「作者」或「說明」屬性，請延伸`nt:resource`而非`nt:file`。 我很少擴充nt：file，而且經常擴充`nt:resource`。
+如果您必須為資源新增中繼資訊，可以說「作者」或「說明」屬性，請延伸`nt:resource`而非`nt:file`。 我很少延伸nt:file，而且經常延伸`nt:resource`。
 
 #### 範例 {#example-6}
 
@@ -209,19 +207,19 @@ JCR引進了工作區的抽象概念，讓許多開發人員不知道如何處�
 
 也請記住，專案可透過路徑識別。 此外，由於「symlink」對於大多數使用者來說比UNIX®檔案系統中的硬連結更合理，因此對於大多數應用程式而言，路徑是指向目標節點也是合理的。
 
-更重要的是，它是&#x200B;**mix**：referenceable，這表示它可以在您實際必須參考它的時間點套用至節點。
+更重要的是，這是&#x200B;**mix**:referenceable，這表示它可以在您實際必須參考它的時間點套用至節點。
 
 因此，您想要可能參考「檔案」型別的節點並不表示您的「檔案」節點型別必須從`mix:referenceable`以靜態方式延伸。 這是因為可將其動態新增至「檔案」的任何執行個體。
 
 #### 範例 {#example-7}
 
-使用：
+建議內容：
 
 ```xml
 /content/myblog/posts/iphone_shipping/attachments/front.jpg
 ```
 
-而非：
+不建議的內容：
 
 ```xml
 [Blog]

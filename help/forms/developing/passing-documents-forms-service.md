@@ -1,27 +1,30 @@
 ---
 title: 將檔案傳遞至FormsService
+
 description: 將包含表單設計的com.adobe.idp.Document物件傳遞至Forms服務。 Forms服務會呈現com.adobe.idp.Document物件中的表單設計。
+
+
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/rendering_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
+
 role: Developer
 exl-id: 29c7ebda-407a-464b-a9db-054163f5b737
 solution: Experience Manager, Experience Manager Forms
+
 feature: Adaptive Forms,Document Services,APIs & Integrations
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '1677'
+source-wordcount: '1689'
 ht-degree: 0%
-
 ---
-
 # 將檔案傳遞至Forms服務 {#passing-documents-to-the-formsservice}
 
 **本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
 
-AEM Forms服務會將互動式PDF forms轉譯給使用者端裝置（通常是網頁瀏覽器），以收集使用者的資訊。 互動式PDF表單是以表單設計為基礎，通常會儲存為XDP檔案並在Designer中建立。 自AEM Forms起，您可以將包含表單設計的`com.adobe.idp.Document`物件傳遞至Forms服務。 Forms服務接著會轉譯`com.adobe.idp.Document`物件中的表單設計。
+AEM Forms服務會將互動式PDF forms轉譯給使用者端裝置（通常為網頁瀏覽器），以便從使用者收集資訊。 互動式PDF表單是以表單設計為基礎，通常會儲存為XDP檔案並在Designer中建立。 自AEM Forms起，您可以將包含表單設計的`com.adobe.idp.Document`物件傳遞至Forms服務。 Forms服務接著會轉譯`com.adobe.idp.Document`物件中的表單設計。
 
 將`com.adobe.idp.Document`物件傳遞至Forms服務的好處是，其他服務作業會傳回`com.adobe.idp.Document`執行個體。 也就是說，您可以從另一個服務作業取得`com.adobe.idp.Document`執行個體並加以轉譯。 例如，假設XDP檔案儲存在名為`/Company Home/Form Designs`的Content Services （已過時）節點中，如下圖所示。
 
@@ -38,7 +41,7 @@ AEM Forms服務會將互動式PDF forms轉譯給使用者端裝置（通常是�
 1. 包含專案檔案。
 1. 建立Forms和Document Management使用者端API物件。
 1. 從內容服務擷取表單設計（已棄用）。
-1. 演算互動式PDF表單。
+1. 呈現互動式PDF表單。
 1. 使用表單資料流執行動作。
 
 **包含專案檔**
@@ -97,7 +100,7 @@ AEM Forms服務會將互動式PDF forms轉譯給使用者端裝置（通常是�
 
    `retrieveContent`方法傳回包含XDP檔案的`CRCResult`物件。 透過叫用`CRCResult`物件的`getDocument`方法取得`com.adobe.idp.Document`執行個體。
 
-1. 演算互動式PDF表單
+1. 呈現互動式PDF表單
 
    叫用`FormsServiceClient`物件的`renderPDFForm2`方法，並傳遞下列值：
 
@@ -121,7 +124,7 @@ AEM Forms服務會將互動式PDF forms轉譯給使用者端裝置（通常是�
 
 **另請參閱**
 
-[快速入門(SOAP模式)：使用Java API將檔案傳遞至Forms服務](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-passing-documents-to-the-forms-service-using-the-java-api)
+[快速入門（SOAP模式）：使用Java API將檔案傳遞至Forms服務](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-passing-documents-to-the-forms-service-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -151,9 +154,9 @@ AEM Forms服務會將互動式PDF forms轉譯給使用者端裝置（通常是�
    * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作來啟用基本的HTTP驗證：
 
-      * 將AEM表單使用者名稱指派給欄位`FormsServiceClient.ClientCredentials.UserName.UserName`。
-      * 將對應的密碼值指派給欄位`FormsServiceClient.ClientCredentials.UserName.Password`。
-      * 將常數值`HttpClientCredentialType.Basic`指派給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+     * 將AEM表單使用者名稱指派給欄位`FormsServiceClient.ClientCredentials.UserName.UserName`。
+     * 將對應的密碼值指派給欄位`FormsServiceClient.ClientCredentials.UserName.Password`。
+     * 將常數值`HttpClientCredentialType.Basic`指派給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
 
    * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`指派給欄位`BasicHttpBindingSecurity.Security.Mode`。
 
@@ -173,7 +176,7 @@ AEM Forms服務會將互動式PDF forms轉譯給使用者端裝置（通常是�
    * 儲存內容屬性的`ServiceReference1.MyMapOf_xsd_string_To_xsd_anyType`輸出引數。
    * `CRCResult`輸出引數。 您可以使用`BLOB`輸出引數來取得內容，而不使用此物件。
 
-1. 演算互動式PDF表單
+1. 呈現互動式PDF表單
 
    叫用`FormsServiceClient`物件的`renderPDFForm2`方法，並傳遞下列值：
 
@@ -184,14 +187,14 @@ AEM Forms服務會將互動式PDF forms轉譯給使用者端裝置（通常是�
    * 儲存檔案附件的`Map`物件。 此值是選用引數，如果您不想將檔案附加至表單，可以指定`null`。
    * 用來儲存頁數的長輸出引數。
    * 用來儲存地區設定值的字串輸出引數。
-   * `FormsResult`輸出引數，用來儲存互動PDF表單`.`
+   * 用來儲存互動式PDF表單`.`的`FormsResult`輸出引數
 
    `renderPDFForm2`方法傳回包含互動式PDF表單的`FormsResult`物件。
 
 1. 使用表單資料流執行動作
 
    * 取得`FormsResult`物件之`outputContent`欄位的值，建立包含表單資料的`BLOB`物件。
-   * 透過叫用它的建構函式來建立`System.IO.FileStream`物件。 傳遞代表互動式PDF檔案檔案位置及開啟檔案模式的字串值。
+   * 透過叫用它的建構函式來建立`System.IO.FileStream`物件。 傳遞字串值，該值代表互動式PDF檔案的檔案位置以及開啟檔案的模式。
    * 建立位元組陣列，儲存從`FormsResult`物件擷取的`BLOB`物件的內容。 取得`BLOB`物件的`MTOM`資料成員的值，以填入位元組陣列。
    * 透過叫用它的建構函式並傳遞`System.IO.FileStream`物件來建立`System.IO.BinaryWriter`物件。
    * 呼叫`System.IO.BinaryWriter`物件的`Write`方法並傳遞位元組陣列，將位元組陣列的內容寫入PDF檔案。

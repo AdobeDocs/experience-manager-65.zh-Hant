@@ -1,10 +1,12 @@
 ---
 title: 製作 — 環境與工具
 description: 「網站」主控台可讓您管理和導覽您的網站。 使用兩個窗格，可以展開網站的結構並針對所需元素採取的動作。
+
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
+
 docset: aem65
 exl-id: 5d7b6b2e-d1d8-4efe-b9ff-c9542b4e67d7
 solution: Experience Manager, Experience Manager Sites
@@ -12,11 +14,9 @@ feature: Authoring
 role: User
 source-git-commit: 25bf0d64b6839afec0112ea8c9fde0510e56ccf4
 workflow-type: tm+mt
-source-wordcount: '931'
+source-wordcount: '952'
 ht-degree: 4%
-
 ---
-
 # 製作 — 環境與工具 {#authoring-the-environment-and-tools}
 
 AEM的製作環境提供各種機制來組織和編輯您的內容。 提供的工具可從各種主控台和頁面編輯器存取。
@@ -39,7 +39,7 @@ AEM的製作環境提供各種機制來組織和編輯您的內容。 提供的�
 
 您可以從AEM中直接存取各種&#x200B;**說明**&#x200B;資源：
 
-除了從主控台工具列[存取](/help/sites-classic-ui-authoring/author-env-basic-handling.md#accessing-help)說明外，您也可以從sidekick存取說明(使用？ 圖示)：
+除了從主控台工具列[&#128279;](/help/sites-classic-ui-authoring/author-env-basic-handling.md#accessing-help)存取說明外，您也可以從sidekick存取說明(使用？ 圖示)：
 
 ![Sidekick已摺疊](do-not-localize/sidekick-collapsed-2.png)
 
@@ -177,7 +177,7 @@ AEM會顯示直接參照所選頁面以及任何間接參照的所有頁面。 �
 
 * [藍圖](/help/sites-administering/msm-best-practices.md)
 
-在網站主控台[中可以看到其他](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console)頁面間關係。
+在網站主控台[&#128279;](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console)中可以看到其他頁面間關係。
 
 ## 稽核記錄 {#audit-log}
 

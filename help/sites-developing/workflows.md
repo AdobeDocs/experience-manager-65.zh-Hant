@@ -1,21 +1,23 @@
 ---
 title: 開發和延伸工作流程
-description: AEM提供了數種工具和資源，用於建立工作流程模型、開發工作流程步驟，以及以程式設計方式與工作流程互動
+
+description: AEM提供多種工具和資源，用於建立工作流程模型、開發工作流程步驟，以及以程式設計方式與工作流程互動
+
+
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
+
 exl-id: 041b1767-8b6c-4887-a70d-abc96a116976
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
-source-wordcount: '1460'
-ht-degree: 3%
-
+source-wordcount: '1494'
+ht-degree: 4%
 ---
-
 
 # 開發和延伸工作流程{#developing-and-extending-workflows}
 
@@ -68,7 +70,7 @@ AEM提供了數種工具和資源，用於建立工作流程模型、開發工�
 每個步驟都會完成離散任務。 有不同型別的工作流程步驟：
 
 * 參與者（使用者/群組）：這些步驟會產生工作專案並將其指派給使用者或群組。 使用者必須完成工作專案才能推進工作流程。
-* 處理(指令碼、Java™方法呼叫)：這些步驟會由系統自動執行。 ECMA指令碼或Java™類別會實作該步驟。 可以開發服務以監聽特殊的工作流程事件，並根據商業邏輯執行任務。
+* 處理（指令碼、Java™方法呼叫）：這些步驟會由系統自動執行。 ECMA指令碼或Java™類別會實作該步驟。 可以開發服務以監聽特殊的工作流程事件，並根據商業邏輯執行任務。
 * 容器（子工作流程）：此型別的步驟會啟動另一個工作流程模型。
 * OR分割/聯結：使用邏輯來決定要在工作流程中執行下一個步驟。
 * AND分割/聯結：允許同時執行多個步驟。
@@ -91,7 +93,7 @@ AEM提供了數種工具和資源，用於建立工作流程模型、開發工�
 * `WorkItem`參考工作流程執行個體。
 * 在存放庫中，`WorkItem`儲存在工作流程執行個體下方。
 
-### 總額 {#payload}
+### 承載 {#payload}
 
 參考必須透過工作流程進行進階的資源。
 
@@ -206,7 +208,7 @@ AEM提供了數種工具和資源，用於建立工作流程模型、開發工�
 
 ### 工作流程和Forms {#workflows-and-forms}
 
-通常使用工作流程來處理AEM中的表單提交。 它可以是標準AEM執行個體中可用的[核心元件表單元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-container.html?lang=zh-Hant)，或是[AEM Forms解決方案](/help/forms/using/aem-forms-workflow.md)。
+工作流程通常用於處理AEM中的表單提交。 它可以是標準AEM執行個體中可用的[核心元件表單元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-container.html?lang=zh-Hant)，或是[AEM Forms解決方案](/help/forms/using/aem-forms-workflow.md)。
 
 建立表單時，可輕鬆將表單提交與工作流程模型建立關聯。 例如，將內容儲存在存放庫的特定位置，或通知使用者表單提交及其內容。
 

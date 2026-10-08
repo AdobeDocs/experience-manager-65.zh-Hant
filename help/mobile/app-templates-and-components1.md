@@ -11,11 +11,9 @@ feature: Mobile
 role: User
 source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '387'
+source-wordcount: '382'
 ht-degree: 1%
-
 ---
-
 # 應用程式範本和元件{#app-templates-and-components}
 
 {{ue-over-mobile}}
@@ -35,7 +33,7 @@ ht-degree: 1%
 
 若要建立頁面，必須將範本（節點樹狀結構&#x200B;**/apps/&lt;myapp>/templates/&lt;mytemplate>**）複製到網站樹狀結構中的對應位置：如果使用&#x200B;**網站**&#x200B;索引標籤建立頁面，就會發生這種情況。
 
-此複製動作也會提供頁面的初始內容（通常是僅限最上層內容）和屬性sling：resourceType，也就是用來呈現頁面的頁面元件路徑（子節點jcr：content中的所有專案）。
+此複製動作也會提供頁面的初始內容（通常是僅限最上層內容）和屬性sling:resourceType，也就是用來轉譯頁面的頁面元件路徑（子節點jcr:content中的所有專案）。
 
 ## 範本的結構 {#structure-of-a-template}
 
@@ -44,18 +42,18 @@ ht-degree: 1%
 * 範本本身的結構
 * 使用範本時產生的內容結構
 
-範本是在型別&#x200B;**cq：Template**&#x200B;的節點下建立。
+範本是在型別&#x200B;**cq:Template**&#x200B;的節點下建立。
 
 您可以設定各種屬性，特別是：
 
-* **jcr：title** — 範本的標題；建立頁面時顯示在對話方塊中。
-* **jcr：description** — 範本的說明；建立頁面時顯示在對話方塊中。
+* **jcr:title** — 範本的標題；建立頁面時顯示在對話方塊中。
+* **jcr:description** — 範本的說明；建立頁面時顯示在對話方塊中。
 
-此節點包含&#x200B;*jcr：content (cq：PageContent)*&#x200B;節點，此節點是作為結果頁面之內容節點的基礎。 此參考使用&#x200B;*sling：resourceType*&#x200B;呈現新頁面實際內容的元件。
+此節點包含&#x200B;*jcr:content (cq:PageContent)*&#x200B;節點，此節點是產生頁面之內容節點的基礎。 此參考使用&#x200B;*sling:resourceType*&#x200B;呈現新頁面實際內容所使用的元件。
 
 >[!NOTE]
 >
->若要瞭解AEM範本和元件的基本知識，請參閱下列資源：
+>若要瞭解AEM中範本和元件的基本知識，請參閱下列資源：
 >
 >* [範本](/help/sites-developing/templates.md)
 >* [元件](/help/sites-developing/components.md)

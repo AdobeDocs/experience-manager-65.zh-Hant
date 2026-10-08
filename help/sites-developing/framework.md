@@ -1,6 +1,6 @@
 ---
 title: AEM 標記框架
-description: 標籤內容並使用AEM標籤基礎架構
+description: 標籤內容並使用AEM標籤基礎結構
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
@@ -12,11 +12,9 @@ solution: Experience Manager, Experience Manager Sites
 role: Developer
 source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
 workflow-type: tm+mt
-source-wordcount: '1637'
-ht-degree: 0%
-
+source-wordcount: '1651'
+ht-degree: 1%
 ---
-
 
 # AEM 標記框架 {#aem-tagging-framework}
 
@@ -25,18 +23,18 @@ ht-degree: 0%
 * 如需將內容標籤為內容作者的相關資訊，請參閱檔案[使用標籤](/help/sites-authoring/tags.md)。
 * 如需管理員建立和管理標籤以及已套用至哪些內容標籤的觀點，請參閱檔案[管理標籤](/help/sites-administering/tags.md)。
 
-本文主要介紹在AEM中支援標籤的基本架構，以及如何作為開發人員使用它。
+本文主要說明在AEM中支援標籤的基本架構，以及如何以開發人員身分使用。
 
 ## 簡介 {#introduction}
 
-若要標籤內容及使用AEM標籤基礎架構：
+若要標籤內容及使用AEM標籤基礎結構：
 
-* 標籤必須存在為[&#128279;](#taxonomy-root-node)分類根節點下型別`[cq:Tag](#tags-cq-tag-node-type)`的節點。
+* 標籤必須存在為[分類根節點下型別`[cq:Tag](#tags-cq-tag-node-type)`的節點。](#taxonomy-root-node)
 
 * 標籤的內容節點的`NodeType`必須包含[`cq:Taggable`](#taggable-content-cq-taggable-mixin) mixin。
 * [`TagID`](#tagid)已新增至內容節點的[`cq:tags`](#tagged-content-cq-tags-property)屬性，並解析為型別` [cq:Tag](#tags-cq-tag-node-type)`的節點。
 
-## 標籤：cq：Tag節點型別  {#tags-cq-tag-node-type}
+## 標籤：cq:Tag節點型別  {#tags-cq-tag-node-type}
 
 在型別`cq:Tag`的節點中的儲存庫中擷取標籤的宣告。
 
@@ -78,7 +76,7 @@ TagID包含[名稱空間](#tag-namespace)，後面接著本機TagID。 [容器�
 
 ### 標籤名稱空間 {#tag-namespace}
 
-名稱空間可讓您將專案分組。 最典型的使用案例是每個網站的名稱空間（例如公用、內部和入口網站）或大型應用程式(例如WCM、Assets、Communities)。 但名稱空間可用於各種其他需求。 在使用者介面中使用名稱空間，以僅顯示適用於目前內容的標籤子集（即特定名稱空間的標籤）。
+名稱空間可讓您將專案分組。 最典型的使用案例是每個網站的名稱空間（例如公用、內部和入口網站）或大型應用程式（例如WCM、Assets、Communities）。 但名稱空間可用於各種其他需求。 在使用者介面中使用名稱空間，以僅顯示適用於目前內容的標籤子集（即特定名稱空間的標籤）。
 
 標籤的名稱空間是分類子樹狀結構中的第一個層級，它是[分類根節點](#taxonomy-root-node)正下方的節點。 名稱空間是型別`cq:Tag`的節點，其父系不是`cq:Tag`節點型別。
 
@@ -129,7 +127,7 @@ TagID包含[名稱空間](#tag-namespace)，後面接著本機TagID。 [容器�
 * 允許使用者/作者讀取他們應可讀取的所有名稱空間（幾乎全部）。
 * 允許使用者/作者寫入存取那些標籤應該可由使用者/作者自由定義的名稱空間（在`/content/cq:tags/some_namespace`下新增節點）
 
-## 可標籤的內容：cq：Taggable Mixin {#taggable-content-cq-taggable-mixin}
+## 可標籤的內容：cq:Taggable Mixin {#taggable-content-cq-taggable-mixin}
 
 若要讓應用程式開發人員將標籤附加至內容型別，節點的註冊([CND](https://jackrabbit.apache.org/jcr/node-type-notation.html))必須包含`cq:Taggable` mixin或`cq:OwnerTaggable` mixin。
 
@@ -147,7 +145,7 @@ TagID包含[名稱空間](#tag-namespace)，後面接著本機TagID。 [容器�
 
 節點型別定義以CND檔案的形式存在於存放庫中。 CND標籤法定義為[Jackrabbit檔案](https://jackrabbit.apache.org/jcr/node-type-notation.html)的一部分。
 
-AEM中包含的「節點型別」的基本定義如下：
+AEM中包含之節點型別的基本定義如下：
 
 ```xml
 [cq:Tag] > mix:title, nt:base
@@ -164,7 +162,7 @@ AEM中包含的「節點型別」的基本定義如下：
     mixin
 ```
 
-## 標籤內容： cq：tags屬性 {#tagged-content-cq-tags-property}
+## 標籤的內容： cq:tags屬性 {#tagged-content-cq-tags-property}
 
 `cq:tags`屬性是`String`陣列，用來儲存一或多個TagID （當作者或網站訪客套用至內容時）。 屬性只有在新增至使用`[cq:Taggable](#taggable-content-cq-taggable-mixin)` mixin定義的節點時才有意義。
 
@@ -178,14 +176,14 @@ AEM中包含的「節點型別」的基本定義如下：
 
 * 將標籤A移動或合併到`/content/cq:tags`下的標籤B中時：
 
-   * 標籤A未刪除並取得`cq:movedTo`屬性。
-   * 標籤B已建立（如果有移動）並取得`cq:backlinks`屬性。
+  * 標籤A未刪除並取得`cq:movedTo`屬性。
+  * 標籤B已建立（如果有移動）並取得`cq:backlinks`屬性。
 
 * `cq:movedTo`指向標籤B。
 
-   * 此屬性表示標籤A已移動或合併到標籤B中。移動標籤B會相應地更新此屬性。 因此標籤A會隱藏，並僅保留在存放庫中，以解析指向標籤A的內容節點中的標籤ID。標籤記憶體回收行程會移除標籤A，如此一來，內容節點便不再指向這些標籤。
+  * 此屬性表示標籤A已移動或合併到標籤B中。移動標籤B會相應地更新此屬性。 因此標籤A會隱藏，並僅保留在存放庫中，以解析指向標籤A的內容節點中的標籤ID。標籤記憶體回收行程會移除標籤A，如此一來，內容節點便不再指向這些標籤。
 
-   * `cq:movedTo`屬性的特殊值為`nirvana`。 它會在標籤刪除時套用，但無法從存放庫移除，因為必須保留具有`cq:movedTo`的子標籤。
+  * `cq:movedTo`屬性的特殊值為`nirvana`。 它會在標籤刪除時套用，但無法從存放庫移除，因為必須保留具有`cq:movedTo`的子標籤。
 
   >[!NOTE]
   >
@@ -205,13 +203,13 @@ AEM中包含的「節點型別」的基本定義如下：
 
 * 讀取內容節點的`cq:tags`屬性涉及下列解析度：
 
-   1. 如果`/content/cq:tags`下沒有相符專案，則不會傳回任何標籤。
+  1. 如果`/content/cq:tags`下沒有相符專案，則不會傳回任何標籤。
 
-   1. 如果標籤已設定`cq:movedTo`屬性，則會接著參考的標籤ID。
+  1. 如果標籤已設定`cq:movedTo`屬性，則會接著參考的標籤ID。
 
-      * 只要後續的標籤具有`cq:movedTo`屬性，就會重複此步驟。
+     * 只要後續的標籤具有`cq:movedTo`屬性，就會重複此步驟。
 
-   1. 如果追蹤的標籤沒有`cq:movedTo`屬性，則會讀取標籤。
+  1. 如果追蹤的標籤沒有`cq:movedTo`屬性，則會讀取標籤。
 
 * 若要在標籤移動或合併時發佈變更，必須復寫`cq:Tag`節點及其所有反向連結。 當在標籤管理控制檯中啟動標籤時，會自動完成此作業。
 

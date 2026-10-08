@@ -1,6 +1,6 @@
 ---
 title: 設定Forms的位置
-description: 瞭解如何設定AEM表單的位置。 您可以指定屬性的檔案位置、表單的位置、種子PDF檔案和快取位置。
+description: 瞭解如何設定AEM表單的位置。 您可以指定屬性的檔案位置、表單位置、種子PDF檔案和快取位置。
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_forms
@@ -11,18 +11,16 @@ feature: Adaptive Forms
 role: User, Developer
 source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '834'
+source-wordcount: '838'
 ht-degree: 1%
-
 ---
-
 # 設定Forms的位置 {#configuring-locations-for-forms}
 
 >[!NOTE]
 > 
 > 確保使用者具有存取管理員控制檯的管理員許可權。
 
-您可以指定屬性的URL、URI和檔案位置，例如Web根目錄、要擷取之表單的位置、PDForm轉換中使用的種子PDF檔案，以及快取位置。
+您可以指定屬性的URL、URI和檔案位置，例如Web根目錄、要擷取之表單的位置、用於PDForm轉換的種子PDF檔案，以及快取位置。
 
 1. 在Administration Console中，按一下「服務> Forms」。
 1. 在「位置」下，指定適當的選項。 選項如下所述。
@@ -30,7 +28,7 @@ ht-degree: 1%
 
 ## 位置設定 {#locations-settings}
 
-**基礎URL：**&#x200B;影像和指令碼等表單資源所在的基礎URL。 HTML轉換需要此值，其中包含外部相依性的HREF參照，例如影像或指令碼。 其中一個這類指令碼是xfasubset.js，這是HTML表單執行XFA智慧型所需的指令碼。 此值必須是內容根URI的HTTP對等值。
+**基礎URL：**&#x200B;影像和指令碼等表單資源所在的基礎URL。 HTML轉換需要此值，其中包含外部相依性的HREF參照，例如影像或指令碼。 其中一個指令碼是xfasubset.js，這是HTML表單執行XFA智慧的必要功能。 此值必須是內容根URI的HTTP對等值。
 
 >[!NOTE]
 >
@@ -56,7 +54,7 @@ ht-degree: 1%
 
 預設值為空字串。
 
-**網頁根URI：**&#x200B;應用程式的網頁根。 此值會與sTargetURL引數（當sTargetURL以相對形式提供時）結合(透過AEM Forms SDK指定)，以建構絕對URL來存取應用程式專屬的網頁內容。
+**網頁根URI：**&#x200B;應用程式的網頁根。 此值會與sTargetURL引數（當sTargetURL以相對形式提供時）結合（透過AEM Forms SDK指定），以建構絕對URL來存取應用程式專屬的網頁內容。
 
 預設值為空字串。
 
@@ -64,11 +62,11 @@ ht-degree: 1%
 
 預設值為空字串。
 
-**XCI組態URI：**&#x200B;找到用於轉譯之XCI檔案的相對或絕對位置。 若為相對值，則假設XCI檔案位在可部署的AEM Forms EAR檔案中。
+**XCI組態URI：**&#x200B;找到用於轉譯之XCI檔案的相對或絕對位置。 如需相對值，請假設XCI檔案位在可部署的AEM表單EAR檔案中。
 
 預設值為 `com/adobe/formServer/PA/pa.xci`。
 
-**字型對應URI：**&#x200B;字型對應檔案的相對或絕對位置。 如需相對值，假設此檔案位在可部署的AEM Forms EAR檔案中。
+**字型對應URI：**&#x200B;字型對應檔案的相對或絕對位置。 如需相對值，假設此檔案位在可部署的AEM表單EAR檔案中。
 
 字型對應檔案可用來建立表單中HTML轉換的自訂字型對應，因此可讓您指定在使用者端電腦無法使用字型時，要取代哪些字型。
 
@@ -78,7 +76,7 @@ ht-degree: 1%
 
 `Arial=Arial,Helvetica,sans-serif`
 
-**種子PDF檔：**&#x200B;用於PDFForm轉換以最佳化傳遞的初始PDF檔。 種子PDF檔案會指定自訂的PDF檔案（僅包含XFA資料流、影像和字型資源），以附加表單設計和資料。 表單會由Acrobat 7轉譯或更新版本，並套用至PDForm轉換。
+**種子PDF檔案：**&#x200B;用於PDFForm轉換以最佳化傳遞的初始PDF檔案。 種子PDF檔案會指定自訂的PDF檔案（僅包含XFA資料流、影像和字型資源），該檔案會附加表單設計和資料。 表單會由Acrobat 7或更新版本轉譯，並適用於PDForm轉換。
 
 預設值為空字串。
 

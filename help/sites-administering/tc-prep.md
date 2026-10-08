@@ -8,16 +8,14 @@ solution: Experience Manager, Experience Manager Sites
 role: Admin
 source-git-commit: eae057caed533ef16bb541b4ad41b8edd7aaa1c7
 workflow-type: tm+mt
-source-wordcount: '669'
+source-wordcount: '681'
 ht-degree: 2%
-
 ---
-
 # 準備翻譯內容{#preparing-content-for-translation}
 
 多語言網站通常以多種語言提供一定數量的內容。 網站是以一種語言撰寫，然後翻譯成其他語言。 通常，多語言網站是由頁面分支組成，每個分支都包含不同語言的網站頁面。
 
-範例Geometrixx示範網站包含數個語言分支，並使用下列結構：
+Geometrixx示範網站範例包含數個語言分支，並會使用以下結構：
 
 ```xml
 /content
@@ -60,7 +58,7 @@ ht-degree: 2%
 1. 導覽至「網站」。
 1. 按一下要建立語言副本的網站。
 
-   例如，若要建立Geometrixx Outdoors網站的語言副本，您可以按一下「Geometrixx Outdoors網站」。
+   例如，若要建立Geometrixx Outdoors網站的語言副本，請按一下Geometrixx Outdoors網站。
 
 1. 按一下建立，然後按一下建立頁面。
 

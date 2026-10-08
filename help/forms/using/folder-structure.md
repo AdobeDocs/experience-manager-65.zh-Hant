@@ -13,9 +13,7 @@ source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
 source-wordcount: '145'
 ht-degree: 0%
-
 ---
-
 # 瞭解檔案夾結構 {#understanding-the-folder-structure}
 
 AEM Forms工作區元件是使用Backbone在MVC架構上設計。 每個元件都有一個檔案，用於：
@@ -32,7 +30,7 @@ AEM Forms工作區元件是使用Backbone在MVC架構上設計。 每個元件�
 
 **範本**&#x200B;僅包含元件的HTML範本。
 
-**路由**&#x200B;包含通用路由。 路由內的Templates資料夾包含HTML程式碼和元件的參照。
+**路由**&#x200B;包含通用路由。 路由內的範本資料夾包含HTML程式碼和元件的參考。
 
 **服務**&#x200B;包含呼叫REST端點上Adobe Experience Manager伺服器API的服務介面。
 
