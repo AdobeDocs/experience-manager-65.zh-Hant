@@ -71,7 +71,7 @@ ht-degree: 23%
 
    >[!NOTE]
    >
-   >此範例假設核心元件已安裝在例項上，若例項搭配We.Retail範例內容執行即是如此。 如需詳細資訊，請參閱[核心元件檔案](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。
+   >此範例假設核心元件已安裝在例項上，若例項搭配We.Retail範例內容執行即是如此。 如需詳細資訊，請參閱[核心元件檔案](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)。
 
 1. 導覽至 `cq:dialog` 定義內的所需欄位。
 1. 在欄位節點上定義以下屬性：
