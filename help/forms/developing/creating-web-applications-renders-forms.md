@@ -10,13 +10,29 @@ role: Developer
 exl-id: 85e00003-8c8b-463a-b728-66af174be295
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Workbench,APIs & Integrations
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 36ac8e9c-5c7a-56d8-af5e-39399fd7b101
+    internal-label: Workbench
+  - id: 516393bc-fa69-5e74-a04e-f7ec9ffe2c5e
+    internal-label: APIs & Integrations
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1832'
+source-wordcount: '1870'
 ht-degree: 0%
-
 ---
-
 # 建立轉譯Forms的網頁應用程式 {#creating-web-applications-thatrenders-forms}
 
 **本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
@@ -27,7 +43,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->本節說明如何建立以Web為基礎的應用程式，該應用程式使用Java servlet來叫用Forms服務及轉譯以片段為基礎的表單。 (請參閱[根據片段呈現Forms](/help/forms/developing/rendering-forms-based-fragments.md)。)
+>本節說明如何建立以Web為基礎的應用程式，該應用程式使用Java servlet來叫用Forms服務及轉譯以片段為基礎的表單。 （請參閱[根據片段呈現Forms](/help/forms/developing/rendering-forms-based-fragments.md)。）
 
 您可以使用Java servlet將表單寫入使用者端網頁瀏覽器，讓客戶可以檢視表單並在表單中輸入資料。 將資料填入表單後，網頁使用者按一下表單上的提交按鈕，將資訊傳回Java servlet，以便擷取和處理資料。 例如，可將資料傳送至另一個程式。
 
@@ -59,7 +75,7 @@ ht-degree: 0%
 
 若要存取Purchase Order Dynamic.xdp表單設計，請將`Applications/FormsApplication/1.0/FormsFolder/Purchase Order Dynamic.xdp`指定為表單名稱（傳遞給`renderPDFForm`方法的第一個引數），並將`repository:///`指定為內容根URI值。
 
-Web應用程式使用的XML資料檔案已從Data資料夾移至`C:\Adobe` (屬於裝載AEM Forms的J2EE應用程式伺服器的檔案系統)。 檔案名稱是採購單&#x200B;*加拿大.xml*&#x200B;和採購單&#x200B;*US.xml*。
+Web應用程式使用的XML資料檔案已從Data資料夾移至`C:\Adobe` （屬於裝載AEM Forms的J2EE應用程式伺服器的檔案系統）。 檔案名稱是採購單&#x200B;*加拿大.xml*&#x200B;和採購單&#x200B;*US.xml*。
 
 >[!NOTE]
 >
@@ -82,7 +98,7 @@ Web應用程式使用的XML資料檔案已從Data資料夾移至`C:\Adobe` (屬�
 
 ### 建立網站專案 {#creating-a-web-project}
 
-建立包含可呼叫Forms服務的Java servlet的Web應用程式的第一個步驟是建立Web專案。 此檔案所根據的Java IDE為Eclipse 3.3。使用Eclipse IDE建立Web專案，並將必要的JAR檔案新增至專案。 最後，將名為&#x200B;*index.html*&#x200B;的HTML頁面和Java Servlet新增至專案。
+建立包含可呼叫Forms服務的Java servlet的Web應用程式的第一個步驟是建立Web專案。 此檔案所根據的Java IDE為Eclipse 3.3。 使用Eclipse IDE建立Web專案，並將必要的JAR檔案新增至專案。 最後，將名為&#x200B;*index.html*&#x200B;的HTML頁面和Java Servlet新增至專案。
 
 下列清單指定您必須新增至Web專案的JAR檔案：
 
@@ -109,13 +125,13 @@ Web應用程式使用的XML資料檔案已從Data資料夾移至`C:\Adobe` (屬�
 
 1. 在[專案總管]視窗中，用滑鼠右鍵按一下`FragmentsWebApplication`專案，然後選取&#x200B;**新增** > **其他**。
 1. 展開&#x200B;**Web**&#x200B;資料夾，選取&#x200B;**Servlet**，然後按一下&#x200B;**下一步**。
-1. 在[建立Servlet]對話方塊中，輸入`RenderFormFragment`作為Servlet的名稱，然後按一下[完成]。**&#x200B;**
+1. 在[建立Servlet]對話方塊中，輸入`RenderFormFragment`作為Servlet的名稱，然後按一下[完成]。****
 
 **若要將HTML頁面新增至專案：**
 
 1. 在[專案總管]視窗中，用滑鼠右鍵按一下`FragmentsWebApplication`專案，然後選取&#x200B;**新增** > **其他**。
 1. 展開&#x200B;**Web**&#x200B;資料夾，選取&#x200B;**HTML**，然後按一下&#x200B;**下一步**。
-1. 在[新增HTML]對話方塊中，輸入`index.html`檔案名稱，然後按一下[完成]。**&#x200B;**
+1. 在[新增HTML]對話方塊中，輸入`index.html`檔案名稱，然後按一下[完成]。****
 
 >[!NOTE]
 >
@@ -309,7 +325,7 @@ Web應用程式使用的XML資料檔案已從Data資料夾移至`C:\Adobe` (屬�
 
 index.html網頁提供Java servlet的進入點並叫用Forms服務。 此網頁是基本的HTML表單，包含兩個選項按鈕和一個提交按鈕。 選項按鈕的名稱是單選按鈕。 當使用者按一下提交按鈕時，表單資料會張貼到`RenderFormFragment` Java servlet。
 
-Java servlet會使用下列Java程式碼來擷取從HTML頁面張貼的資料：
+Java Servlet會使用下列Java程式碼，從HTML頁面擷取張貼的資料：
 
 ```java
              Document oInputData = null;

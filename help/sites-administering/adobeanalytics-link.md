@@ -9,13 +9,22 @@ exl-id: 9fa3e531-11b3-4b8d-a87c-a08faf06f5b7
 solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
-source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 243139ec-8e41-5296-a287-31343ab1bc0f
+    internal-label: Integration
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1615'
+source-wordcount: '1645'
 ht-degree: 0%
-
 ---
-
 
 # 設定Adobe Analytics的連結追蹤{#configuring-link-tracking-for-adobe-analytics}
 
@@ -23,7 +32,7 @@ ht-degree: 0%
 
 ## 為Adobe Analytics框架設定連結追蹤 {#configuring-link-tracking-for-an-adobe-analytics-framework}
 
-1. 使用&#x200B;**導覽**，透過&#x200B;**部署**、**Cloud Service**&#x200B;前往&#x200B;**Adobe Analytics**&#x200B;區段。
+1. 使用&#x200B;**導覽**，透過&#x200B;**部署**，**雲端服務**&#x200B;前往&#x200B;**Adobe Analytics**&#x200B;區段。
 
 1. 使用&#x200B;**顯示設定**，開啟必要的Adobe Analytics架構。
 1. 展開&#x200B;**連結追蹤設定**&#x200B;區段，並視需要設定（此頁面提供進一步的詳細資料）：
@@ -48,7 +57,7 @@ ht-degree: 0%
 * PDF
 * xls
 
-舉例來說，若為PDF檔案啟用下載追蹤功能，則每當使用者按一下連結以PDF檔案時，就會追蹤PDF的下載。
+因此，舉例來說，如果為PDF檔案啟用下載追蹤功能，每當使用者按一下PDF檔案的連結時，就會追蹤PDF的下載。
 
 架構的下載追蹤屬性已實作為針對頁面產生的`analytics.sitecatalyst.js`檔案中的程式碼。 下列程式碼範例代表預設的下載追蹤設定：
 
@@ -109,7 +118,7 @@ s.linkLeaveQueryString= false;
 
 ## 透過連結點選傳送變數資料 {#sending-variable-data-with-link-clicks}
 
-您可以設定AEM，讓使用者按一下連結時，將事件和變數資料傳送至Adobe Analytics。 **連結追蹤設定**&#x200B;屬性可讓您指定要在發生連結點選時追蹤的Adobe Analytics事件和變數。
+您可以設定AEM ，讓使用者按一下連結時，將事件和變數資料傳送至Adobe Analytics。 **連結追蹤設定**&#x200B;屬性可讓您指定要在發生連結點選時追蹤的Adobe Analytics事件和變數。
 
 框架對應決定事件和變數值。 您可以將Adobe Analytics變數對應至內容元件的變數，這些變數會儲存您要在點按連結時追蹤的資料。
 
@@ -141,7 +150,7 @@ s.linkTrackVars= 'prop4';
 
 ## 連結追蹤設定範例 {#example-link-tracking-configuration}
 
-執行以下程式，探索Adobe Analytics整合的連結追蹤行為。 程式會顯示來自[Adobe Marketing Cloud Debugger](https://experienceleague.adobe.com/docs/debugger/using/experience-cloud-debugger.html?lang=zh-Hant)的結果。
+執行以下程式，探索Adobe Analytics整合的連結追蹤行為。 程式會顯示來自[Adobe Marketing Cloud Debugger](https://experienceleague.adobe.com/docs/debugger/using/experience-cloud-debugger.html)的結果。
 
 ### 一般設定 {#general-configuration}
 
@@ -167,7 +176,7 @@ s.linkTrackVars= 'prop4';
   </tr>
   <tr>
    <td>pagedata.title</td>
-   <td>自訂eVar1 (eVar1)</td>
+   <td>自訂eVar 1 (eVar1)</td>
    <td>EVAR1</td>
   </tr>
   <tr>
@@ -178,7 +187,7 @@ s.linkTrackVars= 'prop4';
  </tbody>
 </table>
 
-1. 將搜尋元件拖曳至框架的對映區域。 搜尋元件屬於Sidekick中的「一般」元件群組。 從左側面板拖曳Analytics (SiteCatalyst)變數，根據下表設定對應：
+1. 將搜尋元件拖曳至框架的對映區域。 搜尋元件屬於Sidekick中的一般元件群組。 從左側面板拖曳Analytics (SiteCatalyst)變數，根據下表設定對應：
 
 <table>
  <tbody>
@@ -189,12 +198,12 @@ s.linkTrackVars= 'prop4';
   </tr>
   <tr>
    <td>eventdata.keyword</td>
-   <td>自訂eVar2 (eVar2)</td>
+   <td>自訂eVar 2 (eVar2)</td>
    <td>EVAR2</td>
   </tr>
   <tr>
    <td>eventdata.results</td>
-   <td>自訂eVar3 (eVar3)</td>
+   <td>自訂eVar 3 (eVar3)</td>
    <td>EVAR3</td>
   </tr>
   <tr>

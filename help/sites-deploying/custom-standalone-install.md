@@ -7,13 +7,25 @@ exl-id: d6484bb7-8123-4f42-96e8-aa441b1093f3
 solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
-source-git-commit: 3effd4fa686ac89421ffe74e52bf34830ddd776c
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: a642c50e-80eb-4fc1-a5d2-f3762d1f841d
+    internal-label: Administration
+subfeature_v2:
+  - id: c191041a-8b54-4bde-9e43-bc8d8f8cea74
+    internal-label: Deploying
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1614'
-ht-degree: 0%
-
+source-wordcount: '1637'
+ht-degree: 1%
 ---
-
 # 自訂獨立安裝{#custom-standalone-install}
 
 本節說明安裝獨立AEM執行個體時可用的選項。 您也可以閱讀[儲存體元素](/help/sites-deploying/storage-elements-in-aem-6.md)，以瞭解全新安裝AEM 6後選擇後端儲存體型別的詳細資訊。
@@ -316,7 +328,7 @@ Log files
 
 ## 驗證安裝 {#verifying-the-installation}
 
-下列連結可用來確認您的安裝是否可正常運作(所有範例均以執行個體在localhost的連線埠8080上執行、CRX安裝在/crx下、Launchpad安裝在/下為基礎)：
+下列連結可用來確認您的安裝是否可正常運作（所有範例均以執行個體在localhost的連線埠8080上執行、CRX安裝在/crx下、Launchpad安裝在/下為基礎）：
 
 * `https://localhost:8080/crx/de`
 CRXDE Lite主控台。

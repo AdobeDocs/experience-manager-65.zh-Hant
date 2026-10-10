@@ -9,13 +9,20 @@ exl-id: a43c1c4d-a6c2-4ef9-9047-a945978e618b
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '208'
+source-wordcount: '211'
 ht-degree: 15%
-
 ---
-
 # 元件、功能和功能要點  {#component-function-and-feature-essentials}
 
 Adobe Experience Manager (AEM) Communities功能要求網站訪客成為成員並登入[社群網站](overview.md#communitiessites)，才能發佈內容。 因此，[社群網站範本](sites.md) （其中社群網站是[建立的](sites-console.md)）的設計包含登入功能和使用者設定檔、傳訊、搜尋、稽核及翻譯。
@@ -30,10 +37,10 @@ Adobe Experience Manager (AEM) Communities功能要求網站訪客成為成員�
 * [評論](reviews-basics.md)
 * [總計](tally.md)
 
-   * [連結](essentials-liking.md)
-   * [評等](rating-basics.md)
-   * [投票](essentials-voting.md)
-   * *輪詢（已無法使用）*
+  * [連結](essentials-liking.md)
+  * [評等](rating-basics.md)
+  * [投票](essentials-voting.md)
+  * *輪詢（已無法使用）*
 
 ## 具有函式的元件 {#components-with-functions}
 
@@ -75,9 +82,9 @@ Adobe Experience Manager (AEM) Communities功能要求網站訪客成為成員�
 
 * [社交元件架構(SCF)](scf.md)
 
-   * [使用者端自訂](client-customize.md)
-   * [伺服器端自訂](server-customize.md)
-   * [儲存資源提供者概觀](srp.md)
+  * [使用者端自訂](client-customize.md)
+  * [伺服器端自訂](server-customize.md)
+  * [儲存資源提供者概觀](srp.md)
 
 * [編碼准則](code-guide.md)
 * [教學課程](tutorials.md)

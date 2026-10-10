@@ -10,13 +10,20 @@ exl-id: c9b34b00-525d-4ca3-bd18-11bb7ce66787
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1158'
+source-wordcount: '1169'
 ht-degree: 0%
-
 ---
-
 # 行事曆功能 {#calendar-feature}
 
 ## 簡介 {#introduction}
@@ -25,7 +32,7 @@ ht-degree: 0%
 
 本檔案的此章節說明
 
-* 將行事曆功能新增到AEM網站
+* 將日曆功能新增至AEM網站
 * `Calendar`元件的組態設定
 
 ## 新增行事曆至頁面 {#adding-a-calendar-to-a-page}
@@ -92,7 +99,7 @@ ht-degree: 0%
 
 * **附加影像檔案大小上限**
 
-  只有在勾選「允許檔案上傳」時才相關。 已上傳影像檔案的最大位元組數。 預設值為2097152 **&#x200B; &#x200B;**(2 Mb)。
+  只有在勾選「允許檔案上傳」時才相關。 已上傳影像檔案的最大位元組數。 預設值為** **(2 Mb)。
 
 * **允許的封面影像型別**
 
@@ -164,7 +171,7 @@ ht-degree: 0%
 
 * **建議限制**
 
-  輸入要顯示為論壇成員張貼建議之標籤數目。 預設值為&#x200B;**-**&#x200B;1 （無限制）。
+  輸入要顯示為論壇成員張貼建議之標籤數目。 預設值為**-**1 （無限制）。
 
 >[!NOTE]
 >
@@ -199,7 +206,7 @@ ht-degree: 0%
 具體而言，他們可能：
 
 * 建立日曆事件
-* Post日曆事件的評論
+* 發表評論至行事曆事件
 * 編輯他們自己的行事曆事件或評論
 * 刪除自己的行事曆事件或評論
 * 標幟其他人的行事曆活動或評論

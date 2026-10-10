@@ -10,22 +10,29 @@ role: Admin
 exl-id: e29aae44-67be-43d2-8004-c986412d9e63
 solution: Experience Manager
 feature: Communities
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
-source-wordcount: '906'
+source-wordcount: '912'
 ht-degree: 0%
-
 ---
-
 # SRP — 社群內容儲存 {#srp-community-content-storage}
 
 ## 簡介 {#introduction}
 
 自AEM Communities 6.1起，使用者產生的內容(UGC)會儲存在儲存資源提供者(SRP)提供的單一共用存放區中。 有數個SRP選項可供選擇，例如ASRP、MSRP和JSRP。
 
-和先前的版本不同，AEM執行個體間沒有反向/正向復寫UGC。 SRP會改為讓UGC可從所有製作和發佈執行個體中直接存取建立、讀取、更新和刪除(CRUD)操作，但JSRP除外。
+與舊版不同，AEM執行個體間沒有反向/正向復寫UGC。 SRP會改為讓UGC可從所有製作和發佈執行個體中直接存取建立、讀取、更新和刪除(CRUD)操作，但JSRP除外。
 
-以下是每個SRP選項[&#128279;](#characteristics-of-srp-options)的特性，在選擇適當的SRP和[基礎部署](/help/communities/topologies.md)時，這些特性對於決策程式是至關重要的資訊。
+以下是每個SRP選項](#characteristics-of-srp-options)的[特性，在選擇適當的SRP和[基礎部署](/help/communities/topologies.md)時，這些特性對於決策程式是至關重要的資訊。
 
 如需有關使用SRP for UGC的詳細資訊，請參閱[儲存資源提供者概觀](/help/communities/srp.md)。
 
@@ -41,11 +48,11 @@ ht-degree: 0%
 
 ## SRP選項的特性 {#characteristics-of-srp-options}
 
-[ASRP -Adobe儲存資源提供者](/help/communities/asrp.md)
+[ASRP - Adobe儲存資源提供者](/help/communities/asrp.md)
 
 透過此選項，UGC會從遠端儲存在由Adobe託管和管理的雲端服務中。 它需要額外的授權，並與客戶代表合作，為該特定授權布建帳戶。 ASRP需要：
 
-* Adobe提供並支援的關聯雲端服務可儲存社群內容。
+* Adobe提供並支援的相關雲端服務，可儲存社群內容。
 * 在特定地區（美國、歐洲、中東及非洲、亞太地區）選擇資料中心。
 
 * 所有對UGC的程式化存取都是透過SRP API。
@@ -97,7 +104,7 @@ DSRP適合：
 
 JSRP：
 
-* 將社群內容儲存在AEM作者或發佈執行個體的JCR存放庫中。
+* 將社群內容儲存在AEM作者或發佈執行個體的JCR存放庫中，內容已發佈至該存放庫。
 * 需要透過SRP API以程式設計方式存取UGC。
 * 如果部署了多個發佈執行個體，則需要發佈叢集（TarMK陣列中的發佈執行個體之間沒有復寫機制）。
 * 稽核僅在發佈環境中執行（製作和發佈之間沒有反向/正向復寫機制）。
@@ -109,7 +116,7 @@ JSRP：
 
 如需每個選項的組態詳細資訊，請參閱：
 
-* [ASRP -Adobe儲存資源提供者](/help/communities/asrp.md)
+* [ASRP - Adobe儲存資源提供者](/help/communities/asrp.md)
 * [MSRP - MongoDB儲存資源提供者](/help/communities/msrp.md)
 * [DSRP — 關聯式資料庫儲存資源提供者](/help/communities/dsrp.md)
 * [JSRP - JCR儲存資源提供者](/help/communities/jsrp.md)
@@ -136,6 +143,6 @@ CommunitIes感興趣的還有&#x200B;[*使用者*、*使用者群組*&#x200B;和
 
 ### 升級至AEM Communities 6.5 {#upgrading-to-aem-communities}
 
-升級至AEM 6.5 Communities時，如果需要保留既有的UGC，則應根據是AEM 5.6.1或AEM 6.0社群使用Adobe隨選儲存還是UGC的內部部署儲存來採取步驟。
+升級至AEM 6.5 Communities時，如果需要保留既有的UGC，則應該根據AEM 5.6.1或AEM 6.0社群使用的是Adobe隨選儲存還是UGC的內部部署儲存，採取步驟。
 
 如需詳細資訊，請造訪[升級至AEM Communities 6.5](/help/communities/upgrade.md)。

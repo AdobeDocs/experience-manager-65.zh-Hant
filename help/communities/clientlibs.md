@@ -10,13 +10,20 @@ exl-id: 94415926-a273-4f03-b7b6-57fdac12c741
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '388'
+source-wordcount: '406'
 ht-degree: 0%
-
 ---
-
 # 適用於社群元件的Clientlibs {#clientlibs-for-communities-components}
 
 ## 簡介 {#introduction}
@@ -49,7 +56,7 @@ ht-degree: 0%
 
 開發人員的基本功能資訊可識別所需的clientlibs。
 
-此外，從AEM執行個體瀏覽至[社群元件指南](/help/communities/components-guide.md)可存取元件所需的clientlib類別清單。
+此外，從AEM執行個體瀏覽至[社群元件指南](/help/communities/components-guide.md)，可存取元件所需的clientlib類別清單。
 
 例如，在[檢閱頁面](https://localhost:4502/content/community-components/en/reviews.html)頂端列出的必要clientlibs包括
 
@@ -69,21 +76,21 @@ ht-degree: 0%
 * 瀏覽至[https://&lt;server>：&lt;port>/crx/de](https://localhost:4502/crx/de)。
 * 找到您要新增元件的頁面的`clientlibslist`節點：
 
-   * `/content/sites/sample/en/page/jcr:content/clientlibslist`
+  * `/content/sites/sample/en/page/jcr:content/clientlibslist`
 
 * 已選取`clientlibslist`節點：
 
-   * 找出字串[]屬性`scg:requiredClientLibs`。
-   * 選取其`Value`，以便存取字串陣列對話方塊。
+  * 找出字串[]屬性`scg:requiredClientLibs`。
+  * 選取其`Value`，以便存取字串陣列對話方塊。
 
-      * 如有需要，向下捲動。
-      * 選取+以輸入新的使用者端資源庫。
+    * 如有需要，向下捲動。
+    * 選取+以輸入新的使用者端資源庫。
 
-         * 重複以上步驟以新增更多使用者端程式庫。
+      * 重複以上步驟以新增更多使用者端程式庫。
 
-         * 選取&#x200B;**確定**。
+      * 選取&#x200B;**確定**。
 
-   * 選取&#x200B;**全部儲存**。
+  * 選取&#x200B;**全部儲存**。
 
 >[!NOTE]
 >

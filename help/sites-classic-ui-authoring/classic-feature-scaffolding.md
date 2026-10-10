@@ -10,13 +10,22 @@ exl-id: 58e61302-cfb4-4a3d-98d4-3c92baa2ad42
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1418'
 ht-degree: 0%
-
 ---
-
 # 支架{#scaffolding}
 
 有時您可能需要建立大型頁面集，這些頁面具有共用結構但內容不同。 透過標準Adobe Experience Manager (AEM)介面，您需要建立每個頁面、將適當的元件拖曳到頁面上，並個別填入每個元件。
@@ -32,8 +41,8 @@ ht-degree: 0%
 支架儲存在網站管理員的&#x200B;**工具**&#x200B;主控台中。
 
 * 開啟&#x200B;**工具**&#x200B;主控台，然後按一下&#x200B;**預設頁面支架**。
-* 在此底下，按一下&#x200B;**Geometrixx**。
-* 在&#x200B;**Geometrixx**&#x200B;下，您找到名為&#x200B;**新聞**&#x200B;的&#x200B;*支架頁面*。 按兩下以開啟此頁面。
+* 按一下下方的&#x200B;**Geometrixx**。
+* 在&#x200B;**Geometrixx**&#x200B;下方，您會找到名為&#x200B;**新聞**&#x200B;的&#x200B;*支架頁面*。 按兩下以開啟此頁面。
 
 ![howscaffolds_work](assets/howscaffolds_work.png)
 
@@ -91,7 +100,7 @@ ht-degree: 0%
 
 `./jcr:content/par/text/text`
 
-這是使用支架建立頁面時，此欄位內容將寫入的屬性名稱。 屬性是以節點的相對路徑來表示，代表要建立的頁面。 它指定節點文字下方的屬性文字，節點文字本身是頁面節點下方jcr：content節點的子節點。
+這是使用支架建立頁面時，此欄位內容將寫入的屬性名稱。 屬性是以節點的相對路徑來表示，代表要建立的頁面。 它會在節點文字下方指定屬性文字，該文字在節點par下方，節點本身就是頁面節點下方jcr:content節點的子系。
 
 這會定義將輸入至此欄位之文字的內容儲存位置。 不過，我們還需要為此內容指定兩個特性：
 

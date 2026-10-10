@@ -9,18 +9,29 @@ exl-id: 57303608-c3e1-4201-8054-1a1798613e2c
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,Developer Tools
 role: Developer
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+  - id: f2d27a5f-0d67-4d85-8a24-86a8d8a3574b
+    internal-label: Developer tools
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '478'
 ht-degree: 0%
-
 ---
-
 # 對話方塊編輯器{#dialog-editor}
 
 對話方塊編輯器提供圖形介面，可輕鬆建立和編輯對話方塊和支架。
 
-若要檢視其運作方式，請前往「CRXDE Lite」，開啟`/libs/foundation/components/chart`的瀏覽器樹狀結構，然後按兩下節點`dialog`：
+若要檢視其運作方式，請前往CRXDE Lite，開啟`/libs/foundation/components/chart`的瀏覽器樹狀結構，然後按兩下節點`dialog`：
 
 ![chlimage_1-247](assets/chlimage_1-247.png)
 
@@ -51,7 +62,7 @@ ht-degree: 0%
 
 若要建立對話方塊，請選取所需的元件，按一下&#x200B;**建立……**，然後按&#x200B;**建立對話方塊……**。
 
-輸入必要的詳細資料，然後按一下[儲存全部]&#x200B;**&#x200B;** — 現在您可以連按兩下對話方塊，以使用編輯器開啟對話方塊。
+輸入必要的詳細資料，然後按一下[儲存全部]**** — 現在您可以連按兩下對話方塊，以使用編輯器開啟對話方塊。
 
 ### 使用支架的對話方塊編輯器 {#using-the-dialog-editor-for-scaffolds}
 
