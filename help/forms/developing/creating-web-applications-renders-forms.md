@@ -125,13 +125,13 @@ Web應用程式使用的XML資料檔案已從Data資料夾移至`C:\Adobe` （�
 
 1. 在[專案總管]視窗中，用滑鼠右鍵按一下`FragmentsWebApplication`專案，然後選取&#x200B;**新增** > **其他**。
 1. 展開&#x200B;**Web**&#x200B;資料夾，選取&#x200B;**Servlet**，然後按一下&#x200B;**下一步**。
-1. 在[建立Servlet]對話方塊中，輸入`RenderFormFragment`作為Servlet的名稱，然後按一下[完成]。****
+1. 在[建立Servlet]對話方塊中，輸入`RenderFormFragment`作為Servlet的名稱，然後按一下[完成]。**&#x200B;**
 
 **若要將HTML頁面新增至專案：**
 
 1. 在[專案總管]視窗中，用滑鼠右鍵按一下`FragmentsWebApplication`專案，然後選取&#x200B;**新增** > **其他**。
 1. 展開&#x200B;**Web**&#x200B;資料夾，選取&#x200B;**HTML**，然後按一下&#x200B;**下一步**。
-1. 在[新增HTML]對話方塊中，輸入`index.html`檔案名稱，然後按一下[完成]。****
+1. 在[新增HTML]對話方塊中，輸入`index.html`檔案名稱，然後按一下[完成]。**&#x200B;**
 
 >[!NOTE]
 >

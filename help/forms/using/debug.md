@@ -133,7 +133,7 @@ ht-degree: 1%
 
 1. 確保您有權存取AEM伺服器，且已連線至伺服器。
 1. 檢查引數submitUrl是否正確。
-1. 使用偵錯選項作為&#x200B;**1-a5-b5-c5**，啟用HTML5表單](/help/forms/using/enable-logs.md)的[記錄檔中提及的使用者端記錄檔。 然後轉譯表單並按一下提交。 開啟瀏覽器偵錯主控台並檢查是否有錯誤。
+1. 使用偵錯選項作為&#x200B;**1-a5-b5-c5**，啟用HTML5表單[&#128279;](/help/forms/using/enable-logs.md)的記錄檔中提及的使用者端記錄檔。 然後轉譯表單並按一下提交。 開啟瀏覽器偵錯主控台並檢查是否有錯誤。
 1. 找到在[HTML5表單](/help/forms/using/enable-logs.md)的記錄檔中提到的伺服器記錄檔。 檢查在提交期間伺服器記錄中是否有任何錯誤。
 
 ## 問題：未顯示本地化的錯誤訊息 {#problem-localized-error-messages-do-not-display}
