@@ -175,7 +175,7 @@ Experience Manager中有以下Dynamic Media Classic (Scene7)元件：
 
 1. 將元件從Sidekick中的&#x200B;**[!UICONTROL Dynamic Media Classic (Scene7)]**&#x200B;群組拖曳到頁面上的所需位置。
 
-1. 選取***[!UICONTROL 編輯]**，以便開啟元件。
+1. 選取&#x200B;***[!UICONTROL 編輯]**，以便開啟元件。
 
 1. 視需要編輯元件，並選取&#x200B;**[!UICONTROL 確定]**&#x200B;以儲存變更。
 
@@ -214,13 +214,13 @@ Experience Manager中有以下Dynamic Media Classic (Scene7)元件：
 
 按下+按鈕時，HTML5 Zoom元件會顯示較大的影像。
 
-資產底部有縮放工具。 選取&#x200B;**[!UICONTROL +]**&#x200B;以放大。 選取&#x200B;**[!UICONTROL -]**&#x200B;以縮小。 選取&#x200B;**[!UICONTROL x]**&#x200B;或重設縮放箭頭，將影像回覆為匯入的原始大小。 選取對角線箭頭，讓您可以全熒幕操作。 選取「**[!UICONTROL 編輯]**」以設定元件。 使用此元件，您可以設定所有Dynamic Media Classic (Scene7)元件](#settings-common-to-all-scene-components)的[通用設定。
+資產底部有縮放工具。 選取&#x200B;**[!UICONTROL +]**&#x200B;以放大。 選取&#x200B;**[!UICONTROL -]**&#x200B;以縮小。 選取&#x200B;**[!UICONTROL x]**&#x200B;或重設縮放箭頭，將影像回覆為匯入的原始大小。 選取對角線箭頭，讓您可以全熒幕操作。 選取「**[!UICONTROL 編輯]**」以設定元件。 使用此元件，您可以設定所有Dynamic Media Classic (Scene7)元件[&#128279;](#settings-common-to-all-scene-components)的通用設定。
 
 ![HTML5 Zoom元件內鬱金香花的影像。](do-not-localize/chlimage_1-3.png)
 
 ### 彈出 {#flyout}
 
-在HTML5彈出式元件中，資產會顯示為分割畫面；資產會以指定大小左側；而縮放部分則會顯示在右側。 選取「**[!UICONTROL 編輯]**」以設定元件。 使用此元件，您可以設定所有Dynamic Media Classic (Scene7)元件](/help/sites-administering/scene7.md#settingscommontoallscene7components)的[通用設定。
+在HTML5彈出式元件中，資產會顯示為分割畫面；資產會以指定大小左側；而縮放部分則會顯示在右側。 選取「**[!UICONTROL 編輯]**」以設定元件。 使用此元件，您可以設定所有Dynamic Media Classic (Scene7)元件[&#128279;](/help/sites-administering/scene7.md#settingscommontoallscene7components)的通用設定。
 
 >[!NOTE]
 >
