@@ -67,7 +67,7 @@ ht-degree: 1%
 
 * **[!UICONTROL 頁面]**
 
-  (若不是`All tags)`則為必要}頁面的UGC路徑。 如果留白，預設為目前頁面。
+  (若不是`All tags)`則為必要&rbrace;頁面的UGC路徑。 如果留白，預設為目前頁面。
 
 * **[!UICONTROL 標籤上沒有連結]**
 

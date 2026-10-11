@@ -155,7 +155,7 @@ Experience Manager中有以下Dynamic Media Classic元件：
 
 按下&#x200B;**[!UICONTROL +]**&#x200B;按鈕時，HTML5縮放元件會顯示較大的影像。
 
-資產底部有縮放工具。 若要放大，請選取&#x200B;**[!UICONTROL +]**；若要縮小，請選取&#x200B;**[!UICONTROL -]**。 點選&#x200B;**[!UICONTROL x]**&#x200B;或重設縮放箭頭，可讓影像回覆為匯入的原始大小。 選取對角線箭頭，使其成為全熒幕。 選取「**[!UICONTROL 編輯]**」以設定元件。 使用此元件，您可以設定所有[!UICONTROL Dynamic Media Classic]元件](#settings-common-to-all-scene-components)的[通用設定。
+資產底部有縮放工具。 若要放大，請選取&#x200B;**[!UICONTROL +]**；若要縮小，請選取&#x200B;**[!UICONTROL -]**。 點選&#x200B;**[!UICONTROL x]**&#x200B;或重設縮放箭頭，可讓影像回覆為匯入的原始大小。 選取對角線箭頭，使其成為全熒幕。 選取「**[!UICONTROL 編輯]**」以設定元件。 使用此元件，您可以設定所有[!UICONTROL Dynamic Media Classic]元件[&#128279;](#settings-common-to-all-scene-components)的通用設定。
 
 ![chlimage_1-227](/help/assets/assets/do-not-localize/chlimage_1-227.png)
 

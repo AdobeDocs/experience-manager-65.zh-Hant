@@ -32,7 +32,7 @@ ht-degree: 0%
 ---
 # 啟用AEM以搜尋受Document Security保護的PDF檔案{#enable-aem-to-search-document-security-protected-pdf-documents}
 
-AEM搜尋可搜尋和找到AEM資產，並對各種常用的檔案格式（例如純文字檔、Microsoft Office檔案和PDF檔案）執行文字搜尋。 您也可以擴充原生搜尋，以便對受PDF Document Security](../../forms/using/admin-help/document-security.md)保護的[AEM檔案執行全文搜尋。 若要讓AEM能夠在這類檔案上執行全文搜尋，請執行下列步驟：
+AEM搜尋可搜尋和找到AEM資產，並對各種常用的檔案格式（例如純文字檔、Microsoft Office檔案和PDF檔案）執行文字搜尋。 您也可以擴充原生搜尋，以便對受PDF Document Security[&#128279;](../../forms/using/admin-help/document-security.md)保護的AEM檔案執行全文搜尋。 若要讓AEM能夠在這類檔案上執行全文搜尋，請執行下列步驟：
 
 1. 建立安全連線
 1. 為受原則保護的PDF範例檔案建立索引
@@ -56,7 +56,7 @@ AEM搜尋可搜尋和找到AEM資產，並對各種常用的檔案格式（例�
   1. 開啟AEM Web Console。 URL是https://&#39;[伺服器]：[連線埠]&#39;/system/console/configMgr。
   1. 找到並開啟&#x200B;**還原序列化防火牆設定**。
 
-  1. 將sun.util.calendar套件新增至[允許清單的類別]或[套件首碼]欄位，然後按一下[儲存]。****
+  1. 將sun.util.calendar套件新增至[允許清單的類別]或[套件首碼]欄位，然後按一下[儲存]。**&#x200B;**
 
 ### 在AEM Forms JEE和OSGi棧疊之間建立安全連線 {#establish-a-secure-connection-between-aem-forms-jee-and-osgi-stacks}
 
