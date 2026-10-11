@@ -8,22 +8,35 @@ exl-id: 40bc5af6-9023-437e-95b0-f85d3df7d8aa
 solution: Experience Manager, Experience Manager Forms
 feature: Form Data Model
 role: Admin, User, Developer
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 4876a742-a341-5402-aba7-e749c45e777c
+    internal-label: Form Data Model
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1533'
-ht-degree: 1%
-
+source-wordcount: '1629'
+ht-degree: 2%
 ---
-
 # 教學課程：建立表單資料模型 {#tutorial-create-form-data-model}
 
 ![04-create-form-data-model-main](assets/04-create-form-data-model-main.png)
 
 本教學課程是[建立第一個最適化表單](../../forms/using/create-your-first-adaptive-form.md)系列中的步驟。 Adobe建議您依照時間順序來瞭解、執行和示範完整的教學課程使用案例。
 
-## 關於教學課程 {#about-the-tutorial}
+## 關於本教學課程 {#about-the-tutorial}
 
-AEM [!DNL Forms]資料整合模組可讓您從不同的後端資料來源(例如AEM使用者設定檔、RESTful Web服務、SOAP型Web服務、OData服務和關聯式資料庫)建立表單資料模型。 您可以在表單資料模型中設定資料模型物件和服務，並將其與調適型表單建立關聯。 最適化表單欄位會繫結至資料模型物件屬性。 這些服務可讓您預先填寫最適化表單，並將提交的表單資料寫入回資料模型物件。
+AEM [!DNL Forms]資料整合模組可讓您從不同的後端資料來源（例如AEM使用者設定檔、RESTful Web服務、SOAP型Web服務、OData服務和關聯式資料庫）建立表單資料模型。 您可以在表單資料模型中設定資料模型物件和服務，並將其與調適型表單建立關聯。 最適化表單欄位會繫結至資料模型物件屬性。 這些服務可讓您預先填寫最適化表單，並將提交的表單資料寫入回資料模型物件。
 
 如需表單資料整合與表單資料模型的詳細資訊，請參閱[AEM Forms資料整合](../../forms/using/data-integration.md)。
 
@@ -54,39 +67,39 @@ AEM [!DNL Forms]資料整合模組可讓您從不同的後端資料來源(例如
 
 執行下列操作來設定您的[!DNL MySQL]資料庫：
 
-1. 將資料庫的 [!DNL MySQL] JDBC 驅動程式作為 OSGi 捆綁包安裝：
+1. 以OSGi套件組合安裝[!DNL MySQL]資料庫的JDBC驅動程式：
 
-   1. [!DNL MySQL]從 下載 `http://www.java2s.com/ref/jar/download-orgosgiservicejdbc100jar-file.html`JDBC 驅動程式 OSGi 捆綁包。<!-- This URL is an insecure link but using https is not possible -->
-   1. 以管理員身分登入AEM [!DNL Forms]作者執行個體，並移至AEM網頁主控台組合。 預設URL為[https://localhost:4502/system/console/bundles](https://localhost:4502/system/console/bundles)。
+   1. 從`http://www.java2s.com/ref/jar/download-orgosgiservicejdbc100jar-file.html`下載[!DNL MySQL] JDBC驅動程式OSGi套件。<!-- This URL is an insecure link but using https is not possible -->
+   1. 以管理員身分登入AEM [!DNL Forms]作者執行個體，並前往AEM Web主控台組合。 預設URL為[https://localhost:4502/system/console/bundles](https://localhost:4502/system/console/bundles)。
 
    1. 選取&#x200B;**[!UICONTROL 安裝/更新]**。 出現[!UICONTROL 上傳/安裝組合]對話方塊。
 
-   1. 選取&#x200B;**[!UICONTROL 選擇檔案]**&#x200B;以瀏覽並選取[!DNL MySQL] JDBC驅動程式OSGi套件。 選取&#x200B;**[!UICONTROL 開始套件]**&#x200B;和&#x200B;**[!UICONTROL 重新整理套件]**，然後選取&#x200B;**[!UICONTROL 安裝或更新]**。 [!DNL Oracle Corporation's]確保的 [!DNL MySQL] JDBC 驅動程式處於活動狀態。驅動程式已安裝。
+   1. 選取&#x200B;**[!UICONTROL 選擇檔案]**&#x200B;以瀏覽並選取[!DNL MySQL] JDBC驅動程式OSGi套件。 選取&#x200B;**[!UICONTROL 開始套件]**&#x200B;和&#x200B;**[!UICONTROL 重新整理套件]**，然後選取&#x200B;**[!UICONTROL 安裝或更新]**。 確定[!DNL MySQL]的[!DNL Oracle Corporation's] JDBC驅動程式為作用中。 已安裝驅動程式。
 
-1. 將資料庫配置為 [!DNL MySQL] 資料來源：
+1. 將[!DNL MySQL]資料庫設定為資料來源：
 
-   1. 前往位於 https://localhost:4502/system/console/configMgr AEM [&#128279;](https://localhost:4502/system/console/configMgr)Web 控制台。
-   1. 找到 **Apache Sling 連線的池數據源** 設定。 選擇以在編輯模式下打開配置。
+   1. 前往[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)的AEM Web主控台。
+   1. 找到&#x200B;**Apache Sling Connection Pooled DataSource**&#x200B;設定。 選取以在編輯模式中開啟設定。
    1. 在設定對話方塊中，指定下列詳細資訊：
 
       * **資料來源名稱：**&#x200B;您可以指定任何名稱。 例如，指定&#x200B;**WeRetailMySQL**。
       * **DataSource服務屬性名稱**：指定包含DataSource名稱的服務屬性名稱。 它是在將資料來源執行個體註冊為OSGi服務時指定。 例如，**datasource.name**。
       * **JDBC驅動程式類別**：指定JDBC驅動程式的Java™類別名稱。 針對[!DNL MySQL]資料庫，請指定&#x200B;**com.mysql.jdbc.Driver**。
-      * **JDBC 連接 URI：**&#x200B;指定資料庫的連接URL。 對於 [!DNL MySQL] 在 連接埠 3306 和 綱要 `weretail`上運行的資料庫，URL為： `jdbc:mysql://'server':3306/weretail?autoReconnect=true&useUnicode=true&characterEncoding=utf-8`
+      * **JDBC連線URI**：指定資料庫的連線URL。 對於在連線埠3306與結構描述`weretail`上執行的[!DNL MySQL]資料庫，URL是： `jdbc:mysql://'server':3306/weretail?autoReconnect=true&useUnicode=true&characterEncoding=utf-8`
 
       >[!NOTE]
       >
-      > [!DNL MySQL]當資料庫位於防火牆後面時，資料庫主機名不是公共 DNS。資料庫的 IP 地址必須添加到 *AEM 主機计算机的 /etc/hosts* 文件中。
+      > 當[!DNL MySQL]資料庫位於防火牆後面時，資料庫主機名稱就不是公用DNS。 資料庫的IP位址必須新增到AEM主機電腦的&#x200B;*/etc/hosts*&#x200B;檔案中。
 
-      * **使用者名稱：**&#x200B;資料庫的使用者名稱。 需要啟用 JDBC 驅動程式才能與資料庫建立連接。
+      * **使用者名稱：**&#x200B;資料庫的使用者名稱。 必須啟用JDBC驅動程式才能與資料庫建立連線。
       * **密碼：**&#x200B;資料庫的密碼。 必須啟用JDBC驅動程式才能與資料庫建立連線。
 
       >[!NOTE]
       >
-      >AEM Forms不支援[!DNL MySQL]的NT驗證。 前往位於 https://localhost:4502/system/console/configMgr[&#128279;](https://localhost:4502/system/console/configMgr) AEM Web 控制台並搜尋「Apache Sling 連線共用數據源」。對於“JDBC 連接 URI”屬性，將“集成安全”的值設置為 False，並使用創建的使用者名和密碼與資料庫連接 [!DNL MySQL] 。
+      >AEM Forms不支援[!DNL MySQL]的NT驗證。 前往[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)的AEM Web主控台並搜尋「Apache Sling Connection Pooled Datasource」。 針對「JDBC連線URI」屬性，將「integratedSecurity」的值設為False，並使用建立的使用者名稱和密碼來連線[!DNL MySQL]資料庫。
 
-      * **借用測試：** 啟用借 **[!UICONTROL 用]** 測試選項。
-      * **返回時測試：** 啟用「 **[!UICONTROL 返回]** 時測試」 選項。
+      * **借入測試：**&#x200B;啟用&#x200B;**[!UICONTROL 借入測試]**&#x200B;選項。
+      * **回訪時測試：**&#x200B;啟用&#x200B;**[!UICONTROL 回訪時測試]**&#x200B;選項。
       * **驗證查詢：**&#x200B;指定SQL SELECT查詢來驗證集區的連線。 查詢至少必須傳回一列。 例如，**從customerdetails**&#x200B;選取&#42;。
       * **交易隔離**：將值設定為&#x200B;**READ_COMMITTED**。
 
@@ -131,17 +144,17 @@ AEM [!DNL Forms]提供直覺式使用者介面，可讓您從已設定的資料�
 
    * **資料模型物件**：
 
-      * id
-      * 名稱
-      * shippingAddress
-      * 城市
-      * 州別
-      * 郵遞區號
+     * id
+     * 名稱
+     * shippingAddress
+     * 城市
+     * 州別
+     * 郵遞區號
 
    * **服務：**
 
-      * get
-      * 更新
+     * get
+     * 更新
 
    選取&#x200B;**新增選取的**&#x200B;以將選取的資料模型物件和服務新增至表單資料模型。
 
@@ -162,11 +175,11 @@ AEM [!DNL Forms]提供直覺式使用者介面，可讓您從已設定的資料�
 
       ![寫入預設值](assets/write-default.png)
 
-      按如下方式添加和配置 **id** 參數。
+      新增並設定&#x200B;**id**&#x200B;引數，如下所示。
 
       ![id-arg](assets/id-arg.png)
 
-   1. 選擇 **[!UICONTROL 完成]** 以保存數據模型物件屬性。 然後，選擇 **[!UICONTROL 儲存]** 以保存表單數據模型。
+   1. 選取&#x200B;**[!UICONTROL 完成]**&#x200B;以儲存資料模型物件屬性。 然後，選取&#x200B;**[!UICONTROL 儲存]**&#x200B;以儲存表單資料模型。
 
       **[!UICONTROL get]**&#x200B;和&#x200B;**[!UICONTROL update]**&#x200B;服務已新增為資料模型物件的預設服務。
 
@@ -174,10 +187,10 @@ AEM [!DNL Forms]提供直覺式使用者介面，可讓您從已設定的資料�
 
 1. 移至&#x200B;**[!UICONTROL 服務]**&#x200B;索引標籤並設定&#x200B;**[!UICONTROL get]**&#x200B;和&#x200B;**[!UICONTROL 更新]**&#x200B;服務。
 
-   1. 選取&#x200B;**[!UICONTROL get]**&#x200B;服務並選取&#x200B;**[!UICONTROL 編輯屬性]**。 將打開屬性對話框。
-   1. 在「編輯屬性」對話框中指定以下內容：
+   1. 選取&#x200B;**[!UICONTROL get]**&#x200B;服務並選取&#x200B;**[!UICONTROL 編輯屬性]**。 「屬性」對話方塊開啟。
+   1. 在「編輯屬性」對話方塊中指定下列專案：
 
-      * **標題**：指定服務的標題。 例如：檢索送貨位址。
+      * **標題**：指定服務的標題。 例如：擷取送貨地址。
       * **描述**：指定包含服務詳細功能的描述。 例如：
 
         此服務會從[!DNL MySQL]資料庫擷取送貨地址和其他客戶詳細資料
@@ -189,7 +202,7 @@ AEM [!DNL Forms]提供直覺式使用者介面，可讓您從已設定的資料�
       * **傳回陣列**：停用&#x200B;**傳回陣列**&#x200B;選項。
       * **引數**：選取名為&#x200B;**ID**&#x200B;的引數。
 
-      選取&#x200B;**[!UICONTROL 完成]**。 已設定從MySQL資料庫擷取客戶詳細資訊的服務。
+      選取「**[!UICONTROL 完成]**」。 已設定從MySQL資料庫擷取客戶詳細資訊的服務。
 
       ![shiiping-address-retrieval](assets/shiiping-address-retrieval.png)
 
@@ -210,7 +223,7 @@ AEM [!DNL Forms]提供直覺式使用者介面，可讓您從已設定的資料�
 
       * **引數**：選取引數名稱&#x200B;**ID**&#x200B;和&#x200B;**customerdetails**。
 
-      選取&#x200B;**[!UICONTROL 完成]**。 已設定&#x200B;**[!UICONTROL 更新]**&#x200B;服務，以更新[!DNL MySQL]資料庫中的客戶詳細資料。
+      選取「**[!UICONTROL 完成]**」。 已設定&#x200B;**[!UICONTROL 更新]**&#x200B;服務，以更新[!DNL MySQL]資料庫中的客戶詳細資料。
 
       ![shiiping-address-update](assets/shiiping-address-update.png)
 
@@ -243,4 +256,4 @@ AEM [!DNL Forms]提供直覺式使用者介面，可讓您從已設定的資料�
 
 >[!NOTE]
 >
-> 您可以使用最適化表單中的表單資料模型來建立及使用SharePoint清單設定，以將資料或產生的記錄檔案儲存在SharePoint清單中。 如需詳細步驟，請參閱[將最適化表單連線至Microsoft® SharePoint清單](/help/forms/using/configuring-submit-actions.md#create-a-sharepoint-list-configuration)。
+> 您可以使用最適化表單中的表單資料模型來建立及使用SharePoint清單設定，以將資料或產生的記錄檔案儲存在SharePoint清單中。 如需詳細步驟，請參閱[將最適化表單連線至® SharePoint清單](/help/forms/using/configuring-submit-actions.md#create-a-sharepoint-list-configuration)。

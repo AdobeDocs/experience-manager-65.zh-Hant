@@ -9,13 +9,27 @@ exl-id: e67f848a-a8cd-4585-a734-e6b1de8a8d74
 solution: Experience Manager, Experience Manager 6.5
 feature: Compliance
 role: Developer,Leader
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e14eb250-3c22-4a07-9061-a78112b2b826
+    internal-label: Experience Manager 6.5
+feature_v2:
+  - id: b1210526-416b-4ef6-bcc0-1692e99f30e9
+    internal-label: Administration and security
+subfeature_v2:
+  - id: c42c36cf-eeed-484a-8b39-a33a68192a07
+    internal-label: Compliance
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '983'
+source-wordcount: '988'
 ht-degree: 72%
-
 ---
-
 # 企業 DevOps{#enterprise-devops}
 
 DevOps 涵蓋下列工作所需的程序、方法和溝通方式：
@@ -46,7 +60,7 @@ Adobe Experience Manager (AEM)部署通常由多個環境組成，並用於不�
 
 ### 開發 {#development}
 
-開發人員負責開發和自訂所提出的專案 (無論是網站、行動應用程式或 DAM 實作等)，並具備所有必要的功能。上述功能為：
+開發人員負責開發和自訂所提出的專案 (無論是網站、行動應用程式或 DAM 實作等)，並具備所有必要的功能。 上述功能為：
 
 * 開發和自訂必要的要素；例如範本、元件、工作流程、應用程式
 * 實現設計
@@ -54,8 +68,8 @@ Adobe Experience Manager (AEM)部署通常由多個環境組成，並用於不�
 
 [開發](/help/sites-developing/best-practices.md)環境的組態可能取決於各種因素，但包含：
 
-* 具備版本控制、可提供整合程式碼庫的整合開發系統。這可用來合併來自每個開發人員使用之個別開發環境的程式碼。
-* 屬於每個開發人員的個人環境；通常位於他們的本機電腦上。程式碼會以適當的間隔與版本控制系統同步
+* 具備版本控制、可提供整合程式碼庫的整合開發系統。 這可用來合併來自每個開發人員使用之個別開發環境的程式碼。
+* 屬於每個開發人員的個人環境；通常位於他們的本機電腦上。 程式碼會以適當的間隔與版本控制系統同步
 
 根據您的系統規模，開發環境可同時擁有編寫執行個體和發佈執行個體。
 
@@ -84,14 +98,14 @@ Adobe Experience Manager (AEM)部署通常由多個環境組成，並用於不�
 
 #### 作者 {#author}
 
-製作執行個體通常位於內部防火牆後。您和您的同事將在此環境中執行製作任務，例如：
+製作執行個體通常位於內部防火牆後。 您和您的同事將在此環境中執行製作任務，例如：
 
 * 管理整個系統
 * 輸入內容
 * 設定內容的配置和設計
 * 為發佈環境啟用內容
 
-已啟用的內容會封裝並放置在編寫環境的複製佇列中。接著，複製程序會將內容傳輸至發佈環境。
+已啟用的內容會封裝並放置在編寫環境的複製佇列中。 接著，複製程序會將內容傳輸至發佈環境。
 
 若要將發佈環境中產生的資料反向復寫回製作環境，製作環境中的復寫接聽程式會輪詢發佈環境，並從發佈環境的反向復寫寄件匣中擷取此類內容。
 
@@ -139,6 +153,6 @@ AEM專案通常會觸發程式碼部署：
 內容可以傳輸：
 
 * 在不同環境間：透過匯出和匯入套件。
-* 在不同執行個體之間 — 透過直接複製([AEM複製](/help/sites-deploying/replication.md))內容（使用HTTP或HTTPS連線）。
+* 在不同執行個體之間 — 透過直接複製（[AEM復寫](/help/sites-deploying/replication.md)）內容（使用HTTP或HTTPS連線）。
 
 ![chlimage_1-1](assets/chlimage_1-1.png)

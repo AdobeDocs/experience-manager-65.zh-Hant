@@ -10,13 +10,22 @@ feature: Configuring
 exl-id: 3eebdd38-da5b-4c38-868a-22c3c7a97b66
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 523b1ccd-901e-5e3b-9fa7-f3dfd82463d5
+    internal-label: Configuring
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '507'
-ht-degree: 2%
-
+source-wordcount: '542'
+ht-degree: 4%
 ---
-
 # 資源對應{#resource-mapping}
 
 資源對應可用來定義Adobe Experience Manager (AEM)的重新導向、虛名URL和虛擬主機。
@@ -104,8 +113,8 @@ ResourceResolver.map方法用來將資源路徑對應至URL的專案清單。
 
 1. 建立節點：
 
-   * **型別** `sling:Mapping`
-此節點型別適用於此類對應，但並不強制使用。
+   * **類型** `sling:Mapping`
+     此節點型別適用於此類對應，但並不強制使用。
 
    * **名稱** `localhost_any`
 
@@ -114,15 +123,15 @@ ResourceResolver.map方法用來將資源路徑對應至URL的專案清單。
 
    * **名稱** `sling:match`
 
-      * **型別** `String`
+     * **型別** `String`
 
-      * **值** `localhost.4503/`
+     * **值** `localhost.4503/`
 
    * **名稱** `sling:internalRedirect`
 
-      * **型別** `String[]`
+     * **型別** `String[]`
 
-      * **值** `/content/`
+     * **值** `/content/`
 
 1. 按一下&#x200B;**「儲存全部」**。
 

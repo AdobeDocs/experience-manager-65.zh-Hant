@@ -9,13 +9,22 @@ exl-id: 3603e929-2aa1-4c25-ad9a-b10ff52a59f4
 solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
-source-git-commit: eae057caed533ef16bb541b4ad41b8edd7aaa1c7
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 243139ec-8e41-5296-a287-31343ab1bc0f
+    internal-label: Integration
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1298'
+source-wordcount: '1329'
 ht-degree: 0%
-
 ---
-
 # 選擇使用Adobe Analytics和Adobe Target{#opting-into-adobe-analytics-and-adobe-target}
 
 AEM有一個選擇加入程式，可協助您整合Adobe Analytics和Adobe Target。 這是現成可用的功能，可作為指派給管理員使用者群組的預先載入任務。
@@ -102,7 +111,7 @@ AEM有一個選擇加入程式，可協助您整合Adobe Analytics和Adobe Targe
 
 安裝AEM在伺服器啟動時讀取的屬性檔案，以設定帳戶屬性以便與Analytics和Target整合。 當您使用屬性檔案時，選擇加入精靈會自動使用檔案中的屬性，並據此建立雲端設定。
 
-屬性檔案是名為marketingcloud.properties的文字檔，儲存在AEM處理序正在使用的工作目錄中（通常與JAR檔案相同的目錄）。 檔案包含下列屬性：
+屬性檔案是名為marketingcloud.properties的文字檔，儲存在AEM處理序使用的工作目錄中（通常與JAR檔案相同的目錄）。 檔案包含下列屬性：
 
 * analytics.server：您使用的Analytics資料中心的URL。
 * analytics.company：與您的Analytics使用者帳戶相關聯的公司。
@@ -152,7 +161,7 @@ target.password=
 
 當您設定與Analytics和Target的整合時，AEM會自動建立所需的雲端設定和架構。 例如，Analytics雲端設定稱為「已布建的Analytics帳戶」。
 
-您不需要變更雲端設定。 不過，您可以視需要設定架構。 (請參閱[將元件資料與Adobe Analytics屬性對應](/help/sites-administering/adobeanalytics-mapping.md)以及[新增目標架構](/help/sites-administering/target.md)。)
+您不需要變更雲端設定。 不過，您可以視需要設定架構。 （請參閱[將元件資料與Adobe Analytics屬性對應](/help/sites-administering/adobeanalytics-mapping.md)以及[新增目標架構](/help/sites-administering/target.md)。）
 
 >[!NOTE]
 >
@@ -180,9 +189,9 @@ target.password=
 
 * 如果您想要使用填入所有必要認證的&#x200B;**marketingcloud.properties**&#x200B;檔案，則必須傳送下列引數：
 
-   * `automaticProvisioning`= `true`
-   * `servicename`= `analytics|target`
-   * `path`=指向AEM頁面的路徑，以附加已建立的雲端服務設定
+  * `automaticProvisioning`= `true`
+  * `servicename`= `analytics|target`
+  * `path`=指向AEM頁面的路徑，以附加已建立的雲端服務設定
 
   例如，同時建立Analytics和Target設定，並將它們附加至we.retail頁面的curl請求將是：
 
@@ -191,17 +200,17 @@ target.password=
   ```
 
 * 如果您不想要使用&#x200B;**marketingcloud.properties**&#x200B;檔案，則必須傳送認證和引數。 例如：
-   * automaticProvisioning= `true`
-   * servicename= `analytics|target`
-   * path=path to an AEM page to attach the created cloud services configurations；可以定義多個路徑
-   * analytics.server= `https://servername`
-   * analytics.company= `Name of company`
-   * analytics.username= `me`
-   * analytics.secret= `secret`
-   * analytics.reportsuite= `we-retail`
-   * target.clientcode= `mycompany`
-   * target.email= `me@adobe.com`
-   * target.password= `password`
+  * automaticProvisioning= `true`
+  * servicename= `analytics|target`
+  * path=path to an AEM page to attach the created cloud services configurations；可以定義多個路徑
+  * analytics.server= `https://servername`
+  * analytics.company= `Name of company`
+  * analytics.username= `me`
+  * analytics.secret= `secret`
+  * analytics.reportsuite= `we-retail`
+  * target.clientcode= `mycompany`
+  * target.email= `me@adobe.com`
+  * target.password= `password`
 
   在此情況下，同時建立Analytics和Target設定，並將它們附加至We-Retail頁面的curl要求將是：
 

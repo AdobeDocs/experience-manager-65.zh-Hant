@@ -8,22 +8,38 @@ feature: Interactive Communication
 exl-id: c8a6037c-46bd-4058-8314-61cb925ba5a8
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: aa28c6c8-3ede-445b-a351-eeb0c9f9aec4
+    internal-label: Interactive Communication
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '2684'
-ht-degree: 0%
-
+source-wordcount: '2796'
+ht-degree: 1%
 ---
-
 # 教學課程：在AEM Forms中建立表單資料模型{#tutorial-create-form-data-model}
 
 ![04-create-form-data-model-main](assets/04-create-form-data-model-main.png)
 
 此教學課程是[建立您的第一個互動式通訊](/help/forms/using/create-your-first-interactive-communication.md)系列中的步驟。 建議您依照序列時間順序來瞭解、執行和示範完整的教學課程使用案例。
 
-## 關於教學課程 {#about-the-tutorial}
+## 關於本教學課程 {#about-the-tutorial}
 
-AEM Forms資料整合模組可讓您從不同的後端資料來源(例如AEM使用者設定檔、RESTful Web服務、SOAP型Web服務、OData服務和關聯式資料庫)建立表單資料模型。 您可以在表單資料模型中設定資料模型物件和服務，並將其與調適型表單建立關聯。 最適化表單欄位會繫結至資料模型物件屬性。 這些服務可讓您預先填寫最適化表單，並將提交的表單資料寫入回資料模型物件。
+AEM Forms資料整合模組可讓您從不同的後端資料來源（例如AEM使用者設定檔、RESTful網站服務、SOAP型網站服務、OData服務和關聯式資料庫）建立表單資料模型。 您可以在表單資料模型中設定資料模型物件和服務，並將其與調適型表單建立關聯。 最適化表單欄位會繫結至資料模型物件屬性。 這些服務可讓您預先填寫最適化表單，並將提交的表單資料寫入回資料模型物件。
 
 如需表單資料整合與表單資料模型的詳細資訊，請參閱[AEM Forms資料整合](https://helpx.adobe.com/tw/experience-manager/6-3/forms/using/data-integration.html)。
 
@@ -122,11 +138,11 @@ CREATE TABLE `calls` (
    1. 以管理員身分登入AEM Forms製作執行個體，並前往AEM網頁主控台套件組合。 預設URL為[https://localhost:4502/system/console/bundles](https://localhost:4502/system/console/bundles)。
    1. 選取&#x200B;**安裝/更新**。 出現&#x200B;**上傳/安裝組合**&#x200B;對話方塊。
 
-   1. 選取&#x200B;**選擇檔案**&#x200B;以瀏覽並選取MySQL JDBC驅動程式OSGi套件。 選取&#x200B;**開始套件**&#x200B;和&#x200B;**重新整理套件**，然後選取&#x200B;**安裝**&#x200B;或&#x200B;**更新**。 請確定Oracle Corporation的MySQL JDBC驅動程式處於作用中狀態。 已安裝驅動程式。
+   1. 選取&#x200B;**選擇檔案**&#x200B;以瀏覽並選取MySQL JDBC驅動程式OSGi套件。 選取&#x200B;**開始套件**&#x200B;和&#x200B;**重新整理套件**，然後選取&#x200B;**安裝**&#x200B;或&#x200B;**更新**。 請確定Oracle Corporation的MySQL適用的JDBC驅動程式作用中。 已安裝驅動程式。
 
 1. 將MySQL資料庫設定為資料來源：
 
-   1. 前往AEM網頁主控台，網址為[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)。
+   1. 前往[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)的AEM Web主控台。
    1. 找到&#x200B;**Apache Sling Connection Pooled DataSource**&#x200B;設定。 選取以在編輯模式中開啟設定。
    1. 在設定對話方塊中，指定下列詳細資訊：
 
@@ -191,14 +207,14 @@ AEM Forms提供直覺式使用者介面，可讓您從已設定的資料來源[�
 
    * **資料模型物件**：
 
-      * 帳單
-      * 呼叫
-      * 客戶
+     * 帳單
+     * 呼叫
+     * 客戶
 
    * **服務：**
 
-      * get
-      * 更新
+     * get
+     * 更新
 
    選取&#x200B;**新增選取的**&#x200B;以將選取的資料模型物件和服務新增至表單資料模型。
 
@@ -229,7 +245,7 @@ AEM Forms提供直覺式使用者介面，可讓您從已設定的資料來源[�
    ![建立子屬性](assets/create_child_property_new.png)
 
 1. 選取&#x200B;**編輯規則**&#x200B;以開啟規則編輯器。
-1. 選擇 **建立**。**設定值**&#x200B;規則視窗隨即開啟。
+1. 選擇 **建立**。 **設定值**&#x200B;規則視窗隨即開啟。
 1. 從「選取選項」下拉式清單中，選取&#x200B;**數學運算式**。
 
    ![使用費用規則編輯器](assets/usage_charges_rule_editor_new.png)
@@ -240,12 +256,12 @@ AEM Forms提供直覺式使用者介面，可讓您從已設定的資料來源[�
 
    ![使用費用規則](assets/usage_charges_rule_all_new.png)
 
-1. 選取&#x200B;**完成**。 規則會在規則編輯器中建立。
+1. 選取「**完成**」。 規則會在規則編輯器中建立。
 1. 選取&#x200B;**關閉**&#x200B;以關閉[規則編輯器]視窗。
 
 ### 在資料模型物件之間新增關聯 {#add-associations-between-data-model-objects}
 
-定義資料模型物件後，您就可以建立它們之間的關聯。 關聯可以是一對一或一對多。 例如，可以有多個與員工相關聯的相依項。 它稱為一對多關聯，在連線相關資料模型物件的線上以1：n表示。 但是，如果關聯針對指定的員工ID傳回唯一員工名稱，則稱為一對一關聯。
+定義資料模型物件後，您就可以建立它們之間的關聯。 關聯可以是一對一或一對多。 例如，可以有多個與員工相關聯的相依項。 它稱為一對多關聯，由1:n在連線關聯資料模型物件的線上描述。 但是，如果關聯針對指定的員工ID傳回唯一員工名稱，則稱為一對一關聯。
 
 當您將資料來源中的關聯資料模型物件新增至表單資料模型時，它們的關聯會保留並顯示為以箭頭線連線。
 
@@ -253,8 +269,8 @@ AEM Forms提供直覺式使用者介面，可讓您從已設定的資料來源[�
 
 | 關聯 | 資料模型物件 |
 |---|---|
-| 1：n | 客戶：通話（每個月帳單中可將多個通話與客戶相關聯） |
-| 1:1 | customer：bills （一個帳單與特定月份的客戶相關聯） |
+| 1:n | customer:calls （每月帳單中可將多個通話與客戶相關聯） |
+| 1:1 | customer:bills （有一張帳單與特定月份的客戶相關聯） |
 
 執行以下步驟來建立資料模型物件之間的關聯：
 
@@ -275,7 +291,7 @@ AEM Forms提供直覺式使用者介面，可讓您從已設定的資料來源[�
 1. 在&#x200B;**新增引數**&#x200B;對話方塊中：
 
    * 從&#x200B;**名稱**&#x200B;下拉式清單中選取&#x200B;**行動裝置**。 行動號碼屬性是客戶中提供的常見屬性，可呼叫資料模型物件。 因此，它可用來建立customer與呼叫資料模型物件之間的關聯。
-對於客戶資料模型物件中可用的每個行動電話號碼，呼叫表格中有多個可用的呼叫記錄。
+     對於客戶資料模型物件中可用的每個行動電話號碼，呼叫表格中有多個可用的呼叫記錄。
 
    * 指定引數的選用標題和說明。
    * 從&#x200B;**繫結至**&#x200B;下拉式清單中選取&#x200B;**客戶**。
@@ -290,7 +306,7 @@ AEM Forms提供直覺式使用者介面，可讓您從已設定的資料來源[�
 
    ![新增引數關聯](assets/add_argument_association_new.png)
 
-1. 選取&#x200B;**完成**，在客戶和呼叫資料模型物件之間建立1：n關聯。
+1. 選取&#x200B;**完成**，在客戶和呼叫資料模型物件之間建立1:n關聯。
 
    在客戶與呼叫資料模型物件之間建立關聯後，在客戶與帳單資料模型物件之間建立1:1關聯。
 
@@ -303,7 +319,7 @@ AEM Forms提供直覺式使用者介面，可讓您從已設定的資料來源[�
    * 從&#x200B;**模型物件**&#x200B;下拉式清單中選取&#x200B;**清單**。
 
    * 從&#x200B;**服務**&#x200B;下拉式清單中選取&#x200B;**get**。 **billplan**&#x200B;屬性是清單資料表的主索引鍵，已在&#x200B;**引數**&#x200B;區段中可用。
-帳單和客戶資料模型物件分別使用帳單計畫(bills)和客戶計畫(customerplan) (customer)屬性連結。 在這些屬性之間建立繫結，以擷取MySQL資料庫中任何可用客戶的計畫詳細資訊。
+     帳單和客戶資料模型物件分別使用帳單計畫(bills)和客戶計畫(customerplan) (customer)屬性連結。 在這些屬性之間建立繫結，以擷取MySQL資料庫中任何可用客戶的計畫詳細資訊。
 
    * 從&#x200B;**繫結至**&#x200B;下拉式清單中選取&#x200B;**客戶**。
 

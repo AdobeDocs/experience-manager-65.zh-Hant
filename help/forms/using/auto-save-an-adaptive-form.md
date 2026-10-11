@@ -7,16 +7,32 @@ feature: Adaptive Forms,Foundation Components
 exl-id: ff9bf466-228d-40e6-9389-15c1f2ed1d2e
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 7da902b6-fe94-5180-8e7c-f6d1e38d01d5
+    internal-label: Foundation Components
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '736'
-ht-degree: 7%
-
+source-wordcount: '770'
+ht-degree: 8%
 ---
-
 # 自動儲存最適化表單 {#auto-save-an-adaptive-form}
 
-<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hant)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。本文會介紹使用基礎元件編寫最適化表單的舊方法。</span>
+<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hant)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。 這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。 本文會介紹使用基礎元件編寫最適化表單的舊方法。</span>
 
 您可以設定最適化表單，以根據事件或預先定義的時間間隔自動開始儲存內容。 依預設，最適化表單的內容會在使用者動作時儲存，例如按下儲存按鈕時。 自動儲存選項非常實用：
 
@@ -58,7 +74,7 @@ ht-degree: 7%
    >
    >若要讓自動儲存選項適用於匿名使用者，請務必將Forms通用設定服務設定為允許所有使用者預覽、驗證及簽署表單。
    >
-   >若要設定服務，請移至`https://server:port/system/console/configMgr`的AEM Web主控台設定，並編輯&#x200B;**[!UICONTROL Forms Common Configuration Service]**&#x200B;以選擇&#x200B;**[!UICONTROL 允許]**&#x200B;欄位中的&#x200B;**[!UICONTROL 所有使用者]**&#x200B;選項，並儲存設定。
+   >若要設定服務，請移至`https://server:port/system/console/configMgr`的AEM Web主控台設定，並編輯&#x200B;**[!UICONTROL Forms Common Configuration Service]**，以選擇&#x200B;**[!UICONTROL 允許]**&#x200B;欄位中的&#x200B;**[!UICONTROL 所有使用者]**&#x200B;選項，並儲存設定。
 
 ## 實施自訂策略以啟用最適化表單的自動儲存 {#implement-a-custom-strategy-to-enable-autosave-for-adaptive-forms}
 

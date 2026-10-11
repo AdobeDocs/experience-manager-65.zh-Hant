@@ -9,16 +9,32 @@ exl-id: b8cb7233-3d9e-41d4-85c5-8e8c2481f89c
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: Admin, User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1231'
+source-wordcount: '1217'
 ht-degree: 9%
-
 ---
-
 # 可重複使用元件的說明 {#description-of-reusable-components}
 
-AEM Forms工作區是由[可重複使用的](/help/forms/using/integrating-html-ws-components-web.md)元件組成，這些元件在CRX中以特定[資料夾結構](/help/forms/using/folder-structure.md)組織™ 每個元件在資料夾結構中所指定的位置都有模型、檢視和範本檔案、JavaScript™相依於其他元件檔案、元件監聽的事件和JavaScript物件(這些在AEM Forms工作區中觸發這些事件)。 此處提供包含檔案名稱和相依性的可重複使用元件的完整清單。
+AEM Forms工作區是由[可重複使用的](/help/forms/using/integrating-html-ws-components-web.md)元件組成，這些元件在CRX中以特定[資料夾結構](/help/forms/using/folder-structure.md)組織™ 每個元件在資料夾結構中所指定的位置都有模型、檢視和範本檔案、™相依於其他元件檔案、元件監聽的事件和JavaScript物件（這些在AEM Forms工作區中觸發這些事件）。 此處提供包含檔案名稱和相依性的可重複使用元件的完整清單。
 
 ## 任務清單 {#tasklist}
 
@@ -150,7 +166,7 @@ AEM Forms工作區是由[可重複使用的](/help/forms/using/integrating-html-
  </tbody>
 </table>
 
-## 篩選條件 {#filter}
+## 篩選器 {#filter}
 
 <table>
  <tbody>
@@ -741,11 +757,11 @@ AEM Forms工作區是由[可重複使用的](/help/forms/using/integrating-html-
  <tbody>
   <tr>
    <td><p>模型</p> </td>
-   <td><p>outofoffice.js</p> </td>
+   <td><p>outoffice.js</p> </td>
   </tr>
   <tr>
    <td><p>檢視</p> </td>
-   <td><p>outofoffice.js</p> </td>
+   <td><p>outoffice.js</p> </td>
   </tr>
   <tr>
    <td><p>範本</p> </td>
