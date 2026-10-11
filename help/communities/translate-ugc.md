@@ -9,13 +9,20 @@ role: Admin
 exl-id: ac54f06e-1545-44bb-9f8f-970f161ebb72
 solution: Experience Manager
 feature: Communities
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
-source-wordcount: '1111'
+source-wordcount: '1125'
 ht-degree: 0%
-
 ---
-
 # 翻譯使用者產生的內容 {#translating-user-generated-content}
 
 Adobe Experience Manager (AEM) Communities的翻譯功能將[翻譯頁面內容](../../help/sites-administering/translation.md)的概念延伸至使用[社交元件架構(SCF)元件](scf.md)張貼至社群網站的使用者產生內容(UGC)。
@@ -77,7 +84,7 @@ AEM Communities包含[預設翻譯服務](../../help/sites-administering/tc-msco
 * 選取&#x200B;**[!UICONTROL 工具]**
 * 選取&#x200B;**[!UICONTROL 作業]**
 * 選取&#x200B;**[!UICONTROL 雲端]**
-* 選取&#x200B;**[!UICONTROL Cloud Service]**
+* 選取&#x200B;**[!UICONTROL 雲端服務]**
 * 向下捲動至&#x200B;**[!UICONTROL 翻譯整合]**
 
   ![翻譯整合](assets/translation-integration.png)
@@ -104,7 +111,7 @@ AEM Communities包含[預設翻譯服務](../../help/sites-administering/tc-msco
 
   （選擇性）輸入組態的名稱。 預設值是根據標題的節點名稱。
 
-* 選取&#x200B;**[!UICONTROL 建立]**
+* 選取「**[!UICONTROL 建立]**」
 
 #### 翻譯設定對話方塊 {#translation-config-dialog}
 
@@ -115,21 +122,21 @@ AEM Communities包含[預設翻譯服務](../../help/sites-administering/tc-msco
 * **[!UICONTROL 網站]**&#x200B;索引標籤：可以保留為預設值。
 
 * **[!UICONTROL 社群]**&#x200B;標籤：
-   * **[!UICONTROL 翻譯提供者]**
-從下拉式清單中選取翻譯提供者。 預設值為`microsoft`，此為試用服務。
+  * **[!UICONTROL 翻譯提供者]**
+    從下拉式清單中選取翻譯提供者。 預設值為`microsoft`，此為試用服務。
 
-   * **[!UICONTROL 內容類別]**
-選取說明正在翻譯之內容的類別。 預設為`General.`
+  * **[!UICONTROL 內容類別]**
+    選取說明正在翻譯之內容的類別。 預設為`General.`
 
-   * **[!UICONTROL 選擇地區……]**
-（選擇性）透過選取儲存UGC的語言環境，所有語言副本中的貼文都會顯示在一個全域對話中。 依照慣例，為網站選擇[基本語言](sites-console.md#translation)的地區設定。 選擇`No Common Store`會停用全域翻譯。 預設會停用全域翻譯。
+  * **[!UICONTROL 選擇地區……]**
+    （選擇性）透過選取儲存UGC的語言環境，所有語言副本中的貼文都會顯示在一個全域對話中。 依照慣例，為網站選擇[基本語言](sites-console.md#translation)的地區設定。 選擇`No Common Store`會停用全域翻譯。 預設會停用全域翻譯。
 
 * **[!UICONTROL Assets]**&#x200B;索引標籤：可保留為預設值。
 * 選取&#x200B;**[!UICONTROL 確定]**
 
 #### 啟用 {#activation}
 
-必須將新的翻譯整合雲端服務啟動至Publish環境。 與網站建立關聯時，如果尚未啟動，則啟動工作流程會在與它關聯的頁面發佈時提示發佈此雲端服務設定。
+必須將新的翻譯整合雲端服務啟動至發佈環境。 與網站建立關聯時，如果尚未啟動，則啟動工作流程會在與它關聯的頁面發佈時提示發佈此雲端服務設定。
 
 ## 管理翻譯設定 {#managing-translation-settings}
 

@@ -9,13 +9,29 @@ role: Admin,User
 exl-id: 9ecdc50a-31e3-46ae-948a-d1f6e6085734
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Foundation Components
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 7da902b6-fe94-5180-8e7c-f6d1e38d01d5
+    internal-label: Foundation Components
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '671'
+source-wordcount: '672'
 ht-degree: 0%
-
 ---
-
 # 在AEM Forms中取得XDP和PDF檔案{#getting-xdp-and-pdf-documents-in-aem-forms}
 
 ## 概觀 {#overview}
@@ -24,7 +40,7 @@ ht-degree: 0%
 
 * 表單範本（XFA表單）
 * PDF forms
-* 檔案(平面PDF檔案)
+* 檔案（平面PDF檔案）
 
 您可以個別上傳支援的資產型別，或以ZIP封存檔的形式上傳。 您可以上傳型別`Resource`的資產，但只能與ZIP封存中的XFA表單一起上傳。
 
@@ -38,9 +54,9 @@ ht-degree: 0%
 1. 導覽至您要上傳表單的資料夾或包含表單的資料夾。
 1. 在動作工具列中選取&#x200B;**建立>檔案上傳**。
 
-   在[建立]![&#128279;](assets/step.png)下來自本機儲存體的檔案選項
+   在[建立]](assets/step.png)下![來自本機儲存體的檔案選項
 
-1. 上傳表單或封裝對話方塊可讓您瀏覽並選擇您要上傳的檔案。 檔案瀏覽器只會顯示支援的檔案格式(ZIP、XDP和PDF)。
+1. 上傳表單或封裝對話方塊可讓您瀏覽並選擇您要上傳的檔案。 檔案瀏覽器只會顯示支援的檔案格式（ZIP、XDP和PDF）。
 
    >[!NOTE]
    >
@@ -68,7 +84,7 @@ AEM Forms伺服器可讓您執行JavaScript程式碼。 惡意的JavaScript程�
 
 1. 以管理員身分登入AEM Web Console。 URL是https://&#39;[伺服器]：[連線埠]&#39;/system/console/configMgr
 1. 開啟Mobile Forms設定以進行編輯。
-1. 取消選取[保護模式]選項，然後按一下[儲存]。**&#x200B;** 受保護模式已停用。
+1. 取消選取[保護模式]選項，然後按一下[儲存]。**** 受保護模式已停用。
 
 ## 更新參考的XFA表單 {#updating-referenced-xfa-forms}
 

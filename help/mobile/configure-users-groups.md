@@ -9,13 +9,17 @@ exl-id: 9f814204-8cd4-4ba9-9e25-3ff1b25c1955
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '593'
+source-wordcount: '645'
 ht-degree: 1%
-
 ---
-
 # 設定使用者和使用者群組 {#configure-your-users-and-user-groups}
 
 {{ue-over-mobile}}
@@ -31,17 +35,17 @@ ht-degree: 1%
 
 ### AEM Mobile應用程式內容作者（應用程式作者群組） {#aem-mobile-application-content-authors-app-author-group}
 
-應用程式作者群組的成員負責編寫AEM行動應用程式內容，包括頁面、文字、影像和影片。
+應用程式作者群組的成員負責編寫AEM行動應用程式內容，包括頁面、文字、影像和視訊。
 
 #### 群組設定 — 應用程式作者 {#group-configuration-app-authors}
 
 1. 建立名為「app-authors」的使用者群組：
 
-   瀏覽至使用者Admin Console： [http://localhost:4502/libs/granite/security/content/groupadmin.html](http://localhost:4502/libs/granite/security/content/groupadmin.html)
+   導覽至使用者Admin Console： [http://localhost:4502/libs/granite/security/content/groupadmin.html](http://localhost:4502/libs/granite/security/content/groupadmin.html)
 
    從使用者群組主控台中，選取「+」按鈕以建立群組。
 
-   將此群組的ID設為「app-authors」，表示這是特定型別的作者使用者群組，專用於在AEM內編寫行動應用程式。
+   將此群組的ID設為「app-authors」，表示這是特定型別的作者使用者群組，專用於在AEM中編寫行動應用程式。
 
 1. 新增成員至群組：作者
 
@@ -49,7 +53,7 @@ ht-degree: 1%
 
    將應用程式作者新增至「作者」群組
 
-1. 現在您已建立應用程式作者使用者群組，您可以透過[使用者Admin Console](http://localhost:4502/libs/granite/security/content/useradmin.md)將個別團隊成員新增至此新群組。
+1. 現在您已建立應用程式作者使用者群組，您可以透過[使用者Admin Console](http://localhost:4502/libs/granite/security/content/useradmin.md)，將個別團隊成員新增至此新群組。
 
    ![chlimage_1-19](assets/chlimage_1-19.png)
 
@@ -67,7 +71,7 @@ ht-degree: 1%
 
 app-admins群組的成員可以使用與應用程式作者&#x200B;**和**&#x200B;相同的許可權來創作應用程式內容，此外還負責：
 
-* 在AEM中設定PhoneGap Build及AdobeMobile Services雲端服務
+* 在AEM中設定PhoneGap Build和Adobe Mobile Services雲端服務
 * 分段、發佈和清除應用程式內容同步OTA更新
 
 >[!NOTE]
@@ -118,7 +122,7 @@ app-admins群組的成員可以使用與應用程式作者&#x200B;**和**&#x200B
 
 圖磚目前沒有需要許可權的動作，但應用程式的詳細資訊頁面有下列動作：
 
-* *編輯app-author和app-admin的* （UI觸發程式 — jcr：write - on /content/phonegap/{suffix}）
+* *編輯App-Author和App-Admin的* （UI觸發程式 — jcr:write — 位於/content/phonegap/{suffix}）
 * *下載app-author和app-admin的* （UI觸發器 — 位於/content/phonegap/{suffix}）
 
 下圖顯示應用程式的下載和編輯選項：

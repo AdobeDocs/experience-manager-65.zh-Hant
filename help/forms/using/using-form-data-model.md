@@ -8,18 +8,31 @@ feature: Form Data Model
 exl-id: 9a73a643-7ad4-49aa-a971-08d52679158d
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 4876a742-a341-5402-aba7-e749c45e777c
+    internal-label: Form Data Model
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
-source-wordcount: '1268'
-ht-degree: 1%
-
+source-wordcount: '1314'
+ht-degree: 2%
 ---
-
 # 使用表單資料模型{#use-form-data-model}
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/using-form-data-model.html?lang=zh-Hant) |
+| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/using-form-data-model.html) |
 | AEM 6.5 | 本文章 |
 
 
@@ -95,7 +108,7 @@ AEM Forms資料整合可讓您使用不同的後端資料來源建立表單資�
 
 若要預覽包含範例表單資料模型資料的互動式通訊：
 
-1. 在AEM作者執行個體上，瀏覽至&#x200B;**[!UICONTROL Forms > Forms &amp; Documents]**。
+1. 在AEM作者執行個體上，導覽至&#x200B;**[!UICONTROL Forms > Forms與檔案]**。
 1. 選取互動式通訊，並在工具列中選取&#x200B;**[!UICONTROL 預覽]**&#x200B;以選取&#x200B;**[!UICONTROL Web Channel]**、**[!UICONTROL Print Channel]**&#x200B;或&#x200B;**[!UICONTROL Both Channel]**&#x200B;以預覽互動式通訊。
 1. 在預覽&#x200B;[*管道*]&#x200B;對話方塊中，確定已選取&#x200B;**[!UICONTROL 表單資料模型]**&#x200B;的測試資料，並選取&#x200B;**[!UICONTROL 預覽]**。
 

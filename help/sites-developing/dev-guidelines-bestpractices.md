@@ -9,13 +9,22 @@ exl-id: 8eef7e4d-a6f2-4b87-a995-0761447283c6
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1083'
+source-wordcount: '1091'
 ht-degree: 1%
-
 ---
-
 # AEM 開發 - 指導方針與最佳實務{#aem-development-guidelines-and-best-practices}
 
 ## 使用範本和元件的准則 {#guidelines-for-using-templates-and-components}
@@ -36,7 +45,7 @@ Adobe Experience Manager (AEM)元件和範本包含強大的工具組。 開發�
 
 這說明了此方法如何讓網站貢獻的使用者和管理員能夠快速回應業務需求，而不需要開發團隊的參與。 替代方法，例如建立範本，通常是一項成本高昂的工作，需要變更管理流程和開發團隊的參與。 這會導致整個程式更長且成本高昂。
 
-因此，AEM系統的開發人員應該使用：
+因此，AEM系統的開發人員應使用：
 
 * 範本和段落系統設計的存取控制，以統一和品牌保護
 * 段落系統，包括其彈性設定選項。
@@ -63,21 +72,21 @@ Adobe Experience Manager (AEM)元件和範本包含強大的工具組。 開發�
 
   這涉及覆蓋元件定義：
 
-   * 複製現有元件以在`/apps/<website-name>/components/<MyComponent>`中建立元件資料夾：
+  * 複製現有元件以在`/apps/<website-name>/components/<MyComponent>`中建立元件資料夾：
 
-      * 例如，若要自訂文字元件複製：
+    * 例如，若要自訂文字元件複製：
 
-         * 從 `/libs/foundation/components/text`
-         * 至`/apps/myProject/components/text`
+      * 從 `/libs/foundation/components/text`
+      * 至`/apps/myProject/components/text`
 
 * [自訂錯誤處理常式顯示的頁面](/help/sites-developing/customizing-errorhandler-pages.md#how-to-customize-pages-shown-by-the-error-handler)
 
   此案例涉及覆蓋servlet：
 
-   * 在存放庫中，複製一或多個預設指令碼：
+  * 在存放庫中，複製一或多個預設指令碼：
 
-      * 從 `/libs/sling/servlet/errorhandler/`
-      * 至`/apps/sling/servlet/errorhandler/`
+    * 從 `/libs/sling/servlet/errorhandler/`
+    * 至`/apps/sling/servlet/errorhandler/`
 
 >[!CAUTION]
 >
@@ -126,7 +135,7 @@ Adobe Experience Manager (AEM)元件和範本包含強大的工具組。 開發�
 slingRequest.getResourceResolver().adaptTo(Session.class);
 ```
 
-### Protect避免跨網站指令碼(XSS) {#protect-against-cross-site-scripting-xss}
+### 避免跨網站指令碼(XSS) {#protect-against-cross-site-scripting-xss}
 
 跨網站指令碼(XSS)可讓攻擊者將程式碼插入其他使用者檢視的網頁。 惡意的Web使用者可能會利用這個安全性弱點來略過存取控制。
 
@@ -136,7 +145,7 @@ AEM會套用輸出時篩選所有使用者提供內容的原則。 在開發和�
 
 >[!CAUTION]
 >
->隨AEM提供的範常式式碼本身可能無法抵禦這類攻擊，通常需要透過網頁應用程式防火牆進行請求篩選。
+>AEM提供的範常式式碼本身可能無法抵禦這類攻擊，通常需仰賴網頁應用程式防火牆的請求篩選功能。
 
 XSS API速查表包含您必須知道的資訊，才能使用XSS API並讓AEM應用程式更安全。 您可以在這裡下載：
 
@@ -149,7 +158,7 @@ XSSAPI速查表。
 對於任何網際網路應用程式，在傳輸機密資訊時，請務必確認
 
 * 流量會透過SSL受到保護
-* 若適用的話，會使用HTTPPOST
+* 若適用的話，會使用HTTP POST
 
 這適用於系統機密資訊（如設定或管理存取權）和使用者機密資訊（如個人詳細資訊）
 
@@ -163,6 +172,6 @@ XSSAPI速查表。
 
 ### 在Java™程式中開啟檔案 {#open-files-in-the-java-process}
 
-由於AEM可以存取許多檔案，因此建議為AEM明確設定Java™處理序[&#128279;](/help/sites-deploying/configuring.md#open-files-in-the-java-process)的開啟檔案數。
+由於AEM可以存取許多檔案，因此建議您針對AEM明確設定Java™處理序](/help/sites-deploying/configuring.md#open-files-in-the-java-process)的[開啟檔案數。
 
 為了將這個問題降至最低，開發應確保在（有意義的）可能時，正確關閉任何開啟的檔案。

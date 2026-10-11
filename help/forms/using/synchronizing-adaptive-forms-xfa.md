@@ -1,5 +1,5 @@
 ---
-title: 同步最適化Forms與XFA表單範本
+title: 將最適化表單與 XFA Form 範本同步
 description: 瞭解如何將表單與XFA/XDP檔案同步。 它會重複使用與XFA/XDP檔案中對應欄位所做的變更同步的表單欄位。
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
@@ -8,16 +8,32 @@ feature: Adaptive Forms,Foundation Components
 exl-id: fed67c23-a9b7-403e-9199-dfd527d5f209
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 7da902b6-fe94-5180-8e7c-f6d1e38d01d5
+    internal-label: Foundation Components
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1226'
-ht-degree: 4%
-
+source-wordcount: '1241'
+ht-degree: 6%
 ---
+# 將最適化表單與 XFA Form 範本同步{#synchronizing-adaptive-forms-with-xfa-form-templates}
 
-# 同步最適化Forms與XFA表單範本{#synchronizing-adaptive-forms-with-xfa-form-templates}
-
-<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hant)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。本文會介紹使用基礎元件編寫最適化表單的舊方法。</span>
+<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。 這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。 本文會介紹使用基礎元件編寫最適化表單的舊方法。</span>
 
 ## 簡介 {#introduction}
 
@@ -37,7 +53,7 @@ AEM Forms可協助您保持最適化表單的欄位與稍後對XDP檔案中對�
 
 * [建立最適化表單](../../forms/using/creating-adaptive-form.md)
 
-* XFA (XML Forms架構)
+* XFA （XML Forms架構）
 
 若要使用文章範例中提供的資產，請下載範例套件，如下一節[範例套件](../../forms/using/synchronizing-adaptive-forms-xfa.md#p-sample-package-p)中所述。
 
@@ -130,7 +146,7 @@ AEM Forms可協助您保持最適化表單的欄位與稍後對XDP檔案中對�
 
 已刪除的欄位也會標示圖示，以指出欄位中的錯誤。
 
-欄位![&#128279;](assets/error-field.png)中的錯誤圖示
+欄位](assets/error-field.png)中的![錯誤圖示
 
 >[!NOTE]
 >

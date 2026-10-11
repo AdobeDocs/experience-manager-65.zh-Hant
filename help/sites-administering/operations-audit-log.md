@@ -9,13 +9,22 @@ exl-id: 1e05faf5-619a-4ea3-acbf-2fd37c71e6d2
 feature: Operations
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 8a70d214-ab7b-58c1-b001-2ed2e5d6303d
+    internal-label: Operations
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '605'
 ht-degree: 1%
-
 ---
-
 # AEM 6中的稽核記錄維護{#audit-log-maintenance-in-aem}
 
 符合稽核記錄資格的AEM事件會產生大量封存資料。 由於複製、資產上傳和其他系統活動，這些資料會隨著時間快速成長。
@@ -32,7 +41,7 @@ ht-degree: 1%
 1. [DAM稽核記錄清除](/help/sites-administering/operations-audit-log.md#configure-dam-audit-log-purging)
 1. [復寫稽核記錄檔期間](/help/sites-administering/operations-audit-log.md#configure-replication-audit-log-purging)
 
-每一個都可透過在AEM Web主控台中建立規則來設定。 設定之後，您可以移至&#x200B;**工具 — 作業 — 維護 — 每週維護期間**&#x200B;並執行&#x200B;**稽核記錄檔維護工作**&#x200B;來觸發這些工作。
+每種都可透過在AEM Web Console中建立規則來設定。 設定之後，您可以移至&#x200B;**工具 — 作業 — 維護 — 每週維護期間**&#x200B;並執行&#x200B;**稽核記錄檔維護工作**&#x200B;來觸發這些工作。
 
 ## 設定頁面稽核記錄清除 {#configure-page-audit-log-purging}
 
@@ -56,7 +65,7 @@ ht-degree: 1%
    >內容路徑僅適用於存放庫中`/var/audit/com.day.cq.wcm.core.page`節點的子系。
 
 1. 儲存規則。
-1. 您建立的規則必須顯示在「操作控制面板」中，才能執行。 若要這麼做，請從AEM歡迎畫面移至&#x200B;**工具 — 作業 — 維護**。
+1. 您建立的規則必須顯示在「操作控制面板」中，才能執行。 若要這麼做，請從AEM歡迎畫面前往&#x200B;**工具 — 作業 — 維護**。
 
 1. 按下&#x200B;**每週維護期間**&#x200B;卡片。
 
@@ -66,7 +75,7 @@ ht-degree: 1%
 
 1. 您可以檢查下一次執行的日期、進行設定，或按播放按鈕手動執行。
 
-在AEM 6.3中，如果排定的維護視窗在「稽核日誌永久刪除」作業完成之前關閉，作業會自動停止。 當下一個維護視窗開啟時，它會繼續。
+在AEM 6.3中，如果排定的維護視窗在稽核記錄整個清除工作完成之前關閉，工作會自動停止。 當下一個維護視窗開啟時，它會繼續。
 
 **使用AEM 6.5**，您可以按一下&#x200B;**停止**&#x200B;圖示來手動停止執行中的稽核記錄清除工作。 在下次執行時，工作將安全地繼續。
 
@@ -98,4 +107,4 @@ ht-degree: 1%
    * **最小年齡：**&#x200B;需要保留稽核記錄的時間（以天為單位）
    * **稽核記錄復寫事件型別：**&#x200B;應清除的復寫稽核事件型別
 
-1. 按一下[儲存]儲存您的設定。**&#x200B;**
+1. 按一下[儲存]儲存您的設定。****
