@@ -1,5 +1,5 @@
 ---
-title: 偵錯HTML5表單
+title: HTML5 表單偵錯
 description: 本檔案列出疑難排解各種已知問題的步驟。
 contentOwner: robhagat
 content-type: reference
@@ -10,16 +10,31 @@ feature: HTML5 Forms,Mobile Forms
 exl-id: 7330c03f-7102-43c0-aac6-825cce8a113d
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 97aafc4b-2598-52d6-9012-295a95969e38
+    internal-label: HTML5 Forms
+  - id: 59f95943-e802-56ac-990d-21ab923984c1
+    internal-label: Mobile Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '811'
-ht-degree: 0%
-
+source-wordcount: '844'
+ht-degree: 1%
 ---
+# HTML5 表單偵錯 {#debugging-html-forms}
 
-# 偵錯HTML5表單 {#debugging-html-forms}
-
-本檔案包含數個疑難排解案例。 對於每種情況，都提供了疑難排解問題的一些步驟。 請按照以下步驟操作，如果問題仍然存在，請設定記錄器以取得並檢閱記錄檔中的錯誤/警告。 如需有關HTML5表單記錄的詳細資訊，請參閱[產生HTML5表單的記錄](/help/forms/using/enable-logs.md)。
+本檔案包含數個疑難排解案例。 對於每種情況，都提供了疑難排解問題的一些步驟。 請按照以下步驟操作，如果問題仍然存在，請設定記錄器以取得並檢閱記錄檔中的錯誤/警告。 如需HTML5表單記錄的詳細資訊，請參閱[產生HTML5表單的記錄](/help/forms/using/enable-logs.md)。
 
 ## 問題：轉譯表單時，我看到org.apache.sling.api.SlingException例外狀況頁面 {#problem-when-rendering-the-form-i-see-org-apache-sling-api-slingexception-exception-page}
 
@@ -45,7 +60,7 @@ ht-degree: 0%
   </tr>
   <tr>
    <td>dataRef</td>
-   <td>與範本合併之資料檔案的絕對路徑。<br />注意：路徑定義了資料檔案的絕對路徑。</td>
+   <td>與範本合併的資料檔案的絕對路徑。<br /> 注意：路徑會定義資料檔案的絕對路徑。</td>
   </tr>
   <tr>
    <td>資料</td>
@@ -57,7 +72,7 @@ ht-degree: 0%
 ## 問題：無法轉譯表單（顯示錯誤訊息） {#problem-unable-to-render-form}
 
 1. 請確定指定的引數正確無誤。 如需引數的詳細資訊，請參閱[轉譯引數](#problem-when-rendering-the-form-i-see-org-apache-sling-api-slingexception-exception-page)。
-1. 登入CRX Package Manager(位於https://&lt;server>：&lt;port>/crx/packmgr/index.jsp)，然後檢查是否已正確安裝下列套件：
+1. 登入CRX Package Manager（位於https://&lt;server>：&lt;port>/crx/packmgr/index.jsp），然後檢查是否已正確安裝下列套件：
 
    * adobe-lc-forms-content-pkg-&lt;version>.zip
    * adobe-lc-forms-runtime-pkg-&lt;version>.zip
@@ -70,11 +85,11 @@ ht-degree: 0%
 
    (com.adobe.livecyclescala-lang.bundle)
 
-   * AdobeXFA Forms轉譯器
+   * Adobe XFA Forms轉譯器
 
    (com.adobe.livecycle.adobe-lc-forms-core)
 
-   * AdobeXFA Forms LC Connector
+   * Adobe XFA Forms LC Connector
 
    (com.adobe.livecycle.adobe-lc-forms-lc-connector)
 
@@ -105,9 +120,9 @@ ht-degree: 0%
 
 ### 問題：發生非預期的錯誤 {#problem-unexpected-error-encountered}
 
-1. 在表單URL中，新增查詢引數debugClientLibs並將其值設為true (例如： https://&lt;server>：&lt;port>/content/xfaforms/profiles/test.html？contentRoot=&lt;some path>&amp;template=&lt;name of xdp file>&amp;log=1-a9-b9-c9&amp;debugClientLibs=true)
+1. 在表單URL中，新增查詢引數debugClientLibs並將其值設為true （例如： https://&lt;server>：&lt;port>/content/xfaforms/profiles/test.html?contentRoot=&lt;some path>&amp;template=&lt;name of xdp file>&amp;log=1-a9-b9-c9&amp;debugClientLibs=true）
 1. 在案頭瀏覽器（如Chrome）中，前往「開發人員工具」 > 「主控台」 。
-1. 開啟記錄檔以識別錯誤型別。 如需有關記錄的詳細資訊，請參閱HTML5表單[&#128279;](/help/forms/using/enable-logs.md)的記錄。
+1. 開啟記錄檔以識別錯誤型別。 如需有關記錄的詳細資訊，請參閱HTML5表單的[記錄](/help/forms/using/enable-logs.md)。
 1. 前往「開發人員工具>主控台」。 使用棧疊追蹤來找出導致錯誤的程式碼。 對錯誤進行偵錯以解決問題。
 
    >[!NOTE]
@@ -116,10 +131,10 @@ ht-degree: 0%
 
 ## 問題：無法提交表單 {#problem-unable-to-submit-the-form}
 
-1. 確定您有權存取AEM伺服器，且已連線至伺服器。
+1. 確保您有權存取AEM伺服器，且已連線至伺服器。
 1. 檢查引數submitUrl是否正確。
 1. 使用偵錯選項作為&#x200B;**1-a5-b5-c5**，啟用HTML5表單[&#128279;](/help/forms/using/enable-logs.md)的記錄檔中提及的使用者端記錄檔。 然後轉譯表單並按一下提交。 開啟瀏覽器偵錯主控台並檢查是否有錯誤。
-1. 尋找[HTML5表單](/help/forms/using/enable-logs.md)的記錄檔中提及的伺服器記錄檔。 檢查在提交期間伺服器記錄中是否有任何錯誤。
+1. 找到在[HTML5表單](/help/forms/using/enable-logs.md)的記錄檔中提到的伺服器記錄檔。 檢查在提交期間伺服器記錄中是否有任何錯誤。
 
 ## 問題：未顯示本地化的錯誤訊息 {#problem-localized-error-messages-do-not-display}
 
@@ -128,7 +143,7 @@ ht-degree: 0%
 1. 在左側的資料夾階層中，導覽至/libs/fd/xfaforms/clientlibs/I18N，並確認下列檔案和資料夾存在：
 
    * Namespace.js
-   * LogMessages.js
+   * logmessages.js
    * 語言資料夾
 
 1. 如果以上任何檔案或資料夾不存在，請再次安裝&#x200B;**adobe-lc-forms-runtime-pkg-&lt;version>.zip**&#x200B;套件。
@@ -154,7 +169,7 @@ ht-degree: 0%
    可能的原因是URL中的一個或多個引數不正確。
 
    檢查下列引數：
-步驟文字
+   步驟文字
 
 <table>
  <tbody>
@@ -172,7 +187,7 @@ ht-degree: 0%
   </tr>
   <tr>
    <td>dataRef</td>
-   <td>與範本合併之資料檔案的絕對路徑。<br />注意：路徑定義了資料檔案的絕對路徑。</td>
+   <td>與範本合併的資料檔案的絕對路徑。<br /> 注意：路徑會定義資料檔案的絕對路徑。</td>
   </tr>
   <tr>
    <td>資料</td>

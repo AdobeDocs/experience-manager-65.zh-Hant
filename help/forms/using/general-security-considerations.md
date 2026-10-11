@@ -9,13 +9,29 @@ role: Admin,User
 exl-id: 3f150dd5-f486-4f16-9de9-035cde53b034
 solution: Experience Manager, Experience Manager Forms
 feature: Document Security,Adaptive Forms
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 50158d81-1c06-57f7-8bd7-e8ff76a93f85
+    internal-label: Document Security
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1030'
+source-wordcount: '1135'
 ht-degree: 1%
-
 ---
-
 # JEE版AEM Forms的一般安全性考量事項{#general-security-considerations-for-aem-forms-on-jee}
 
 本文提供的簡介資訊可協助您做好強化AEM Forms環境的準備。 其中包括JEE版AEM Forms、作業系統、應用程式伺服器和資料庫安全性的相關先決條件資訊。 在繼續鎖定您的環境之前，請先檢閱此資訊。
@@ -46,11 +62,11 @@ ht-degree: 1%
  </thead>
  <tbody>
   <tr>
-   <td><p>IBM® AIX® 7.2</p> </td>
-   <td><p><a href="https://www.ibm.com/support/knowledgecenter/ssw_aix_72/com.ibm.aix.security/security-kickoff.htm" target="_blank">IBM® AIX®安全性優點</a></p> </td>
+   <td><p>® AIX® 7.2</p> </td>
+   <td><p><a href="https://www.ibm.com/support/knowledgecenter/ssw_aix_72/com.ibm.aix.security/security-kickoff.htm" target="_blank">® AIX®安全性優點</a></p> </td>
   </tr>
   <tr>
-   <td><p>Microsoft® Windows Server® 2016 </p> </td>
+   <td><p>® Windows Server® 2016 </p> </td>
    <td><p><a href="https://cloudblogs.microsoft.com/windowsserver/2017/08/22/now-available-windows-server-2016-security-guide/">Windows Server 2016安全性指南</a></p> </td>
   </tr>
   <tr>
@@ -62,7 +78,7 @@ ht-degree: 1%
    <td><p><a href="https://docs.oracle.com/cd/E53394_01/html/E54807/index.html" target="_blank">安全性與強化准則</a></p> </td>
   </tr>
   <tr>
-   <td>oracleLinux® 7更新3</td>
+   <td>Oracle Linux® 7更新3</td>
    <td>版本7</a><br />的<a href="https://docs.oracle.com/en/operating-systems/oracle-linux/7/security/" target="_blank">安全性指南 </td>
   </tr>
   <tr>
@@ -95,11 +111,11 @@ ht-degree: 1%
  </thead>
  <tbody>
   <tr>
-   <td><p>oracleWebLogic®</p> </td>
+   <td><p>Oracle WebLogic®</p> </td>
    <td><p>在<a href="https://docs.oracle.com/">https://docs.oracle.com/</a>搜尋瞭解WebLogic安全性。</p> </td>
   </tr>
   <tr>
-   <td><p>IBM® WebSphere®</p> </td>
+   <td><p>® WebSphere®</p> </td>
    <td><p><a href="https://www.ibm.com/developerworks/websphere/zones/was/security/" target="_blank">保護應用程式及其環境</a></p> </td>
   </tr>
   <tr>
@@ -129,11 +145,11 @@ ht-degree: 1%
  </thead>
  <tbody>
   <tr>
-   <td><p>IBM® DB2® 11.1</p> </td>
+   <td><p>® DB2® 11.1</p> </td>
    <td><p><a href="https://www-01.ibm.com/software/data/db2/library/">DB2®產品系列庫</a></p> </td>
   </tr>
   <tr>
-   <td><p>Microsoft® SQL Server 2016</p> </td>
+   <td><p>® SQL Server 2016</p> </td>
    <td>在Web上搜尋「SQL Server 2016：安全性」</td>
   </tr>
   <tr>
@@ -141,8 +157,8 @@ ht-degree: 1%
    <td><p><a href="https://dev.mysql.com/doc/refman/5.0/en/security.html">MySQL 5.0一般安全性問題</a></p> <p><a href="https://dev.mysql.com/doc/refman/5.1/en/security.html">MySQL 5.1一般安全性問題</a></p> </td>
   </tr>
   <tr>
-   <td><p>oracle® 12c</p> </td>
-   <td><p>請參閱<a href="https://docs.oracle.com/database/121/TDPSG/GUID-6E2F4E53-5D87-4FCD-9C9C-6792217D7014.htm#TDPSG94426" target="_blank">Oracle12g檔案</a>中的「安全性」一章</p> </td>
+   <td><p>® 12c</p> </td>
+   <td><p>請參閱<a href="https://docs.oracle.com/database/121/TDPSG/GUID-6E2F4E53-5D87-4FCD-9C9C-6792217D7014.htm#TDPSG94426" target="_blank">Oracle 12g檔案</a>中的「安全性」一章</p> </td>
   </tr>
  </tbody>
 </table>
@@ -186,7 +202,7 @@ ht-degree: 1%
    <td><p>3306</p> </td>
   </tr>
   <tr>
-   <td>&gt;<p>oracle</p> </td>
+   <td>&gt;<p>Oracle</p> </td>
    <td><p>1521</p> </td>
   </tr>
   <tr>
@@ -223,7 +239,7 @@ JBoss® Application Server使用8080作為預設HTTP連線埠。 JBoss®也有�
 
 >[!NOTE]
 >
-> 建議您使用&#39;Ctrl + C&#39;命令重新啟動SDK。 使用替代方法重新啟動AEM SDK （例如停止Java程式）可能會導致AEM開發環境不一致。
+> 建議您使用&#39;Ctrl + C&#39;命令重新啟動SDK。 使用替代方法重新啟動AEM SDK （例如停止Java程式），可能會導致AEM開發環境不一致。
 
 ## JEE安全性考量事項上的AEM Forms {#aem-forms-on-jee-security-considerations}
 
@@ -247,7 +263,7 @@ lc_[資料庫].xml檔案不應包含純文字格式的密碼。 請洽詢您的�
 >
 >JEE JBoss®上的AEM Forms全金安裝程式會加密資料庫密碼。
 
-IBM® WebSphere® Application Server和OracleWebLogic Server預設可能會加密資料來源密碼。 不過，您應透過應用程式伺服器檔案確認，以確保確實發生這種情況。
+® WebSphere® Application Server和Oracle WebLogic Server預設可能會加密資料來源密碼。 不過，您應透過應用程式伺服器檔案確認，以確保確實發生這種情況。
 
 ### 保護儲存在信任存放區中的私密金鑰 {#protecting-the-private-key-stored-in-trust-store}
 

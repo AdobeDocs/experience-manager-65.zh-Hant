@@ -9,13 +9,20 @@ exl-id: 7ac0056c-a742-49f4-8312-2cf90ab9f23a
 solution: Experience Manager
 feature: Communities
 role: Developer
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '593'
+source-wordcount: '600'
 ht-degree: 4%
-
 ---
-
 # 開發沙箱應用程式  {#develop-sandbox-application}
 
 在此區段中，範本已設定在[初始應用程式](initial-app.md)區段中，而初始頁面已建立在[初始內容](initial-content.md)區段中，現在您可以開發應用程式。 若要這麼做，請使用基礎指令碼，其中包括啟用使用Communities元件編寫的功能。 在本節的結尾，您會看到功能完整的網站。
@@ -65,7 +72,7 @@ ht-degree: 4%
    %>
    ```
 
-1. 注意開啟/關閉指令碼標籤，將「 // TODO ...」取代為&lt;html>的head和body部分的`includes`個指令碼。
+1. 注意開啟/關閉指令碼標籤，將「 // TODO ...」取代 &lt;html>的head和body部分有`includes`個指令碼。
 
    若超級型別為`foundation/components/page`，未定義在此相同資料夾中的任何指令碼都會解析為`/apps/foundation/components/page`資料夾中的指令碼（如果存在），或解析為`/libs/foundation/components/page`資料夾中的指令碼。
 
@@ -175,11 +182,11 @@ ht-degree: 4%
 * 選取&#x200B;**[!UICONTROL 開啟屬性]**
 * 在進階標籤上
 
-   * 針對重新導向專案，瀏覽至&#x200B;**[!UICONTROL 網站]** > **[!UICONTROL SCF沙箱網站]** > **[!UICONTROL SCF沙箱]**
-   * 按一下&#x200B;**[!UICONTROL 確定]**
+  * 針對重新導向專案，瀏覽至&#x200B;**[!UICONTROL 網站]** > **[!UICONTROL SCF沙箱網站]** > **[!UICONTROL SCF沙箱]**
+  * 按一下&#x200B;**[!UICONTROL 確定]**
 
 * 按一下&#x200B;**[!UICONTROL 確定]**
 
 發佈網站後，在發佈執行個體上瀏覽至根頁面時，會重新導向至英文頁面。
 
-播放Communities SCF元件之前的最後一步是新增使用者端程式庫資料夾(clientlibs) .... [新增Clientlibs](add-clientlibs.md)
+播放Communities SCF元件之前的最後一步是將使用者端資料庫資料夾(clientlibs)新增....[新增Clientlibs](add-clientlibs.md)

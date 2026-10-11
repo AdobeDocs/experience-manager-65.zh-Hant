@@ -9,16 +9,30 @@ exl-id: f17726c0-3591-4d25-a8b5-3a7024249a56
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '852'
+source-wordcount: '855'
 ht-degree: 0%
-
 ---
-
 # 匯入和管理應用程式{#import-and-manage-applications}
 
-在AEM Forms中，*應用程式*&#x200B;是用於儲存實作AEM Forms解決方案所需資產的容器。 資產的範例包括表單設計、表單片段、影像、程式、DDX檔案、表單指南、HTML頁面和SWF檔案。 在專案的開發階段中，Workbench使用者可以直接從Workbench的「應用程式」檢視中部署應用程式。 部署後，這些應用程式會顯示在管理主控台的「應用程式管理」頁面的「應用程式」標籤上。
+在AEM Forms中，*應用程式*&#x200B;是用於儲存實施AEM Forms解決方案所需資產的容器。 資產的範例包括表單設計、表單片段、影像、程式、DDX檔案、表單指南、HTML頁面和SWF檔案。 在專案的開發階段中，Workbench使用者可以直接從Workbench的「應用程式」檢視中部署應用程式。 部署後，這些應用程式會顯示在管理主控台的「應用程式管理」頁面的「應用程式」標籤上。
 
 當應用程式完成並準備好要部署到生產伺服器時，Workbench使用者會將應用程式封裝到&#x200B;*AEM表單應用程式檔案* (.lca)。 然後，管理員會使用「應用程式管理」頁面上的「應用程式」頁簽，使用管理主控台來匯入及建置應用程式檔案。
 
@@ -26,7 +40,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->有一個已知問題，未來版本的LCA檔案不一定回溯相容。 雖然您可以從未來版本的AEM Forms （例如預覽版本）檢視和匯入LCA檔案，但不支援這樣做，並可能會導致異常行為。
+>有一個已知問題，未來版本的LCA檔案不一定回溯相容。 雖然您可以從未來版本的AEM表單（例如預覽版本）檢視和匯入LCA檔案，但不支援這樣做，並可能會導致異常行為。
 
 使用「應用程式」標籤來匯入和管理在Workbench中建立的應用程式。 應用程式管理員也可以匯出應用程式的執行階段組態。 匯出執行階段設定後，您就不需要先在生產環境中手動重新設定設定，然後再啟動已部署的應用程式。 執行階段組態檔包含：
 
@@ -116,4 +130,4 @@ ht-degree: 0%
 1. 從命令提示字元瀏覽至&#x200B;*[aem-forms root]*/sdk/misc/Foundation/ArchiveManagement。
 1. 請檢閱ReadMe.txt檔案以取得更詳細的指示。
 1. 手動修改scriptedDeploy.bat和sample-files/sample.xml檔案，如readme.txt檔案中所述。
-1. 執行scriptedDeploy.bat檔案。 此動作會使用覆寫設定來部署AEM表單封存檔案。
+1. 執行scriptedDeploy.bat檔案。 此動作會部署包含覆寫設定的AEM表單封存檔案。

@@ -9,18 +9,36 @@ exl-id: 603edbd2-c012-4d25-99bf-c4f3dc147308
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 feature: Adaptive Forms,Document Services,Reader Extensions
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 621ad6f8-3769-57bb-838c-1d26cfb18d50
+    internal-label: Reader Extensions
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+  - id: f19cff18-c8cc-4a4b-adad-85dd2fa3dbe2
+    internal-label: Document Services
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '110'
 ht-degree: 0%
-
 ---
-
 # 檢閱PDF檔案的使用許可權 {#review-the-usage-rights-of-a-pdf-file}
 
-將PDF檔案上傳至Acrobat Reader DC擴充功能Web應用程式時，您可以檢視此資訊，以檢視其是否為Reader擴充功能、任何套用的使用許可權及其到期日。
+將PDF檔案上傳至Acrobat Reader DC Extensions Web應用程式時，您可以檢視此資訊，以瞭解其是否為Reader延伸、任何套用的使用許可權及其到期日。
 
-1. 在`http://[localhost]:[port]/ReaderExtensions`登入Acrobat Reader DC Extensions Web應用程式（其中&#x200B;*[連線埠]*&#x200B;為您的應用程式伺服器的連線埠號碼）。
+1. 在`http://[localhost]:[port]/ReaderExtensions`登入Acrobat Reader DC Extensions Web應用程式（其中&#x200B;*[連線埠]*&#x200B;是您應用程式伺服器的連線埠號碼）。
 1. 按一下「瀏覽」上傳PDF檔案，然後按一下「資訊」。 該資訊會顯示在檔案名稱下方。
 
    如需有關修改檔案使用許可權的詳細資訊，請參閱Acrobat Reader DC擴充功能說明。

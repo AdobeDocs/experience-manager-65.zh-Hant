@@ -8,36 +8,49 @@ feature: Form Data Model
 exl-id: 90cc9452-e107-4e57-80a3-f44f0bde132e
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 4876a742-a341-5402-aba7-e749c45e777c
+    internal-label: Form Data Model
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1207'
-ht-degree: 1%
-
+source-wordcount: '1271'
+ht-degree: 2%
 ---
-
 # Microsoft Dynamics OData設定{#microsoft-dynamics-odata-configuration}
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/ms-dynamics-odata-configuration.html?lang=zh-Hant) |
+| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/ms-dynamics-odata-configuration.html) |
 | AEM 6.5 | 本文章 |
 
 ![資料整合](assets/data-integeration.png)
 
-Microsoft Dynamics是一款客戶關係管理(CRM)和企業資源規劃(ERP)軟體，提供企業解決方案，用於建立和管理客戶帳戶、聯絡人、銷售機會、機會和案例。 [AEM Forms資料整合](../../forms/using/data-integration.md)提供OData雲端服務設定，將Forms與線上和內部部署Microsoft Dynamics伺服器整合。 它可讓您根據Microsoft Dynamics服務中定義的實體、屬性和服務來建立表單資料模型。 表單資料模型可用來建立與Microsoft Dynamics伺服器互動的最適化表單，以啟用業務工作流程。 例如：
+Microsoft Dynamics是一款客戶關係管理(CRM)與企業資源規劃(ERP)軟體，提供企業解決方案，用於建立及管理客戶帳戶、聯絡人、銷售機會、機會與案例。 [AEM Forms資料整合](../../forms/using/data-integration.md)提供OData雲端服務設定，將Forms與線上和內部部署Microsoft Dynamics伺服器整合。 它可讓您根據Microsoft Dynamics服務中定義的實體、屬性和服務來建立表單資料模型。 表單資料模型可用來建立最適化表單，與Microsoft Dynamics伺服器互動以啟用業務工作流程。 例如：
 
 * 查詢Microsoft Dynamics伺服器以取得資料並預先填入最適化表單
 * 提交最適化表單時將資料寫入Microsoft Dynamics
 * 透過表單資料模型中定義的自訂實體在Microsoft Dynamics中寫入資料，反之亦然
 
-AEM Forms附加元件套件也包含參考OData設定，可用來快速將Microsoft Dynamics與AEM Forms整合。
+AEM Forms附加元件套件也包含參考OData設定，您可將其用於快速整合Microsoft Dynamics與AEM Forms。
 
 安裝套件後，您的AEM Forms執行個體上有以下實體和服務可用：
 
-* MS Dynamics ODataCloud Service（OData服務）
-* 具有預先設定之Microsoft Dynamics實體和服務的表單資料模型。
+* MS Dynamics OData Cloud Service （OData服務）
+* 具有預先設定的Microsoft Dynamics實體和服務的表單資料模型。
 
-表單資料模型中預先設定的Microsoft Dynamics實體和服務僅在AEM執行個體的執行模式設定為`samplecontent` （預設）時，才能在您的AEM Forms執行個體上使用。 MS Dynamics ODataCloud Service（OData服務）也可用於其他執行模式。 如需設定AEM執行個體的執行模式的詳細資訊，請參閱[執行模式](/help/sites-deploying/configure-runmodes.md)。
+表單資料模型中預先設定的Microsoft Dynamics實體和服務，只有在將AEM Forms執行個體的執行模式設定為`samplecontent` （預設）時，才可在您的AEM執行個體上使用。 MS Dynamics OData Cloud Service （OData服務）也可用於其他執行模式。 如需設定AEM執行個體的執行模式的詳細資訊，請參閱[執行模式](/help/sites-deploying/configure-runmodes.md)。
 
 ## 先決條件 {#prerequisites}
 
@@ -46,14 +59,14 @@ AEM Forms附加元件套件也包含參考OData設定，可用來快速將Micros
 * 已安裝[AEM Forms附加元件套件](../../forms/using/installing-configuring-aem-forms-osgi.md)
 * 已線上上設定Microsoft Dynamics 365，或已安裝下列其中一個Microsoft Dynamics版本的執行個體：
 
-   * Microsoft Dynamics 365內部部署
-   * Microsoft Dynamics 2016內部部署
+  * Microsoft Dynamics 365內部部署
+  * Microsoft Dynamics 2016內部部署
 
-* [已在Microsoft Azure Active Directory中註冊Microsoft Dynamics線上服務的應用程式](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/walkthrough-register-dynamics-365-app-azure-active-directory)。 記下註冊服務的使用者端ID （也稱為應用程式ID）和使用者端密碼的值。 在[為您的Microsoft Dynamics服務設定雲端服務時](../../forms/using/ms-dynamics-odata-configuration.md#configure-cloud-service-for-your-microsoft-dynamics-service)會使用這些值。
+* [已向Microsoft Azure Active Directory註冊Microsoft Dynamics線上服務的應用程式](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/walkthrough-register-dynamics-365-app-azure-active-directory)。 記下註冊服務的使用者端ID （也稱為應用程式ID）和使用者端密碼的值。 在[為您的Microsoft Dynamics服務設定雲端服務](../../forms/using/ms-dynamics-odata-configuration.md#configure-cloud-service-for-your-microsoft-dynamics-service)時，會使用這些值。
 
 ## 設定已註冊Microsoft Dynamics應用程式的回覆URL {#set-reply-url-for-registered-microsoft-dynamics-application}
 
-執行下列動作，為已註冊的Microsoft Dynamics應用程式設定回覆URL：
+請務必遵守下列步驟，為註冊的Microsoft Dynamics應用程式設定回覆URL：
 
 >[!NOTE]
 >
@@ -67,7 +80,7 @@ AEM Forms附加元件套件也包含參考OData設定，可用來快速將Micros
 
 1. 儲存設定。
 
-## 設定Microsoft Dynamics以使用IFD {#configure-microsoft-dynamics-for-ifd}
+## 設定Microsoft Dynamics以存取IFD {#configure-microsoft-dynamics-for-ifd}
 
 Microsoft Dynamics使用宣告式驗證，為外部使用者提供對Microsoft Dynamics CRM伺服器上資料的存取權。 若要啟用此功能，請執行以下動作來設定Microsoft Dynamics的網際網路對向部署(IFD)並設定宣告設定。
 
@@ -75,7 +88,7 @@ Microsoft Dynamics使用宣告式驗證，為外部使用者提供對Microsoft D
 >
 >只有在將AEM Forms與內部部署Microsoft Dynamics伺服器整合時，才使用此程式。
 
-1. 依照[設定Microsoft Dynamics的IFD](https://technet.microsoft.com/en-us/library/dn609803.aspx)中的說明設定Microsoft Dynamics內部部署執行個體以進行IFD。
+1. 依照[設定Microsoft Dynamics的IFD](https://technet.microsoft.com/en-us/library/dn609803.aspx)中所述，設定IFD的Microsoft Dynamics內部部署執行個體。
 1. 使用Windows PowerShell執行以下命令，在啟用IFD的Microsoft Dynamics上設定宣告設定：
 
    ```shell
@@ -103,7 +116,6 @@ Microsoft Dynamics使用宣告式驗證，為外部使用者提供對Microsoft D
 
    * `Client-ID`是您可以使用任何GUID產生器產生的使用者端ID。
    * `redirect-uri`是AEM Forms上Microsoft Dynamics OData雲端服務的URL。 與AEM Forms套件一起安裝的預設雲端服務會部署在以下URL：
-
      `https://'[server]:[port]'/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html`
 
 1. 執行以下命令來授予AD FS電腦上的存取權：
@@ -114,39 +126,39 @@ Microsoft Dynamics使用宣告式驗證，為外部使用者提供對Microsoft D
 
    * `resource`是Microsoft Dynamics組織URL。
 
-1. Microsoft Dynamics使用HTTPS通訊協定。 若要從Forms伺服器叫用AD FS端點，請在執行Microsoft的電腦上，使用`keytool`命令將AEM Forms Dynamics網站憑證安裝到Java憑證存放區。
+1. Microsoft Dynamics使用HTTPS通訊協定。 若要從Forms伺服器叫用AD FS端點，請在執行Microsoft Dynamics的電腦上，使用`keytool`命令將AEM Forms網站憑證安裝到Java憑證存放區。
 
 ## 為您的Microsoft Dynamics服務設定雲端服務 {#configure-cloud-service-for-your-microsoft-dynamics-service}
 
-**MS Dynamics ODataCloud Service（OData服務）**&#x200B;設定包含預設的OData設定。 若要將其設定為連線至您的Microsoft Dynamics服務，請執行下列動作。
+**MS Dynamics OData Cloud Service （OData服務）**&#x200B;設定隨附預設的OData設定。 若要將其設定為連線至您的Microsoft Dynamics服務，請執行以下操作。
 
-1. 導覽至&#x200B;**[!UICONTROL 工具>Cloud Service>資料來源]**，然後選取`global`設定資料夾。
-1. 選取&#x200B;**MS Dynamics ODataCloud Service（OData服務）**&#x200B;設定並選取&#x200B;**[!UICONTROL 屬性]**。 雲端服務設定屬性對話方塊隨即開啟。
+1. 導覽至&#x200B;**[!UICONTROL 工具>雲端服務>資料來源]**，然後選取`global`設定資料夾。
+1. 選取&#x200B;**MS Dynamics OData Cloud Service （OData服務）**&#x200B;設定並選取&#x200B;**[!UICONTROL 屬性]**。 雲端服務設定屬性對話方塊隨即開啟。
 
    在&#x200B;**驗證設定**&#x200B;索引標籤中：
 
    1. 輸入&#x200B;**服務根**&#x200B;欄位的值。 移至Dynamics執行個體並導覽至&#x200B;**開發人員資源**，以檢視[服務根目錄]欄位的值。 例如， https://&lt;tenant-name>/api/data/v9.1/
 
-   1. 將&#x200B;**使用者端識別碼** （也稱為&#x200B;**應用程式識別碼**）、**使用者端密碼**、**OAuth URL**、**重新整理權杖URL**、**存取權杖URL**&#x200B;及&#x200B;**資源**&#x200B;欄位中的預設值，取代為您的Microsoft Dynamics服務組態中的值。 必須在&#x200B;**資源**&#x200B;欄位中指定動態執行個體URL，才能使用表單資料模型設定Microsoft Dynamics。 使用服務根URL衍生動態執行個體URL。 例如，[https://org.crm.dynamics.com](https://org.crm.dynamics.com/)。
+   1. 將&#x200B;**使用者端ID** （也稱為&#x200B;**應用程式ID**）、**使用者端密碼**、**OAuth URL**、**重新整理權杖URL**、**存取權杖URL**&#x200B;和&#x200B;**資源**&#x200B;欄位中的預設值，取代為您的Microsoft Dynamics服務設定中的值。 必須在&#x200B;**資源**&#x200B;欄位中指定Dynamics執行個體URL，才能使用表單資料模型設定Microsoft Dynamics。 使用服務根URL衍生動態執行個體URL。 例如，[https://org.crm.dynamics.com](https://org.crm.dynamics.com/)。
 
-   1. 在&#x200B;**授權範圍**&#x200B;欄位中指定&#x200B;**openid**，以便在Microsoft Dynamics上進行授權程式。
+   1. 在&#x200B;**授權範圍**&#x200B;欄位中指定&#x200B;**openid**，以在Microsoft Dynamics上進行授權程式。
 
    ![驗證設定](assets/dynamics_authentication_settings_new.png)
 
 1. 按一下&#x200B;**[!UICONTROL 連線至OAuth]**。 系統會將您重新導向至Microsoft Dynamics登入頁面。
-1. 使用您的Microsoft Dynamics憑證登入，並接受以允許雲端服務設定連線到Microsoft Dynamics服務。 在雲端服務和服務之間建立連線是一項單次性的工作。
+1. 使用您的Microsoft Dynamics憑證登入，並接受以允許雲端服務設定連線至Microsoft Dynamics服務。 在雲端服務和服務之間建立連線是一項單次性的工作。
 
    系統會將您重新導向至雲端服務設定頁面，其中顯示OData設定已成功儲存的訊息。
 
-MS Dynamics ODataCloud Service（OData服務）雲端服務已設定，並已與您的Dynamics服務連線。
+MS Dynamics OData Cloud Service （OData服務）雲端服務已設定，並已與您的Dynamics服務連線。
 
 ## 建立表單資料模型 {#create-form-data-model}
 
-安裝AEM Forms套件時，會在AEM執行個體上部署表單資料模型&#x200B;**Microsoft Dynamics FDM**。 依預設，表單資料模型會使用MS Dynamics ODataCloud Service（OData服務）中設定的Microsoft Dynamics服務作為其資料來源。
+安裝AEM Forms套件時，會在AEM執行個體上部署表單資料模型&#x200B;**Microsoft Dynamics FDM**。 依預設，表單資料模型會使用MS Dynamics OData Cloud Service （OData服務）中設定的Microsoft Dynamics服務作為其資料來源。
 
-首次開啟表單資料模型時，它會連線至已設定的Microsoft Dynamics服務，並從Microsoft Dynamics例項中擷取實體。 Microsoft Dynamics中的「聯絡人」和「銷售機會」實體已新增至表單資料模型。
+首次開啟表單資料模型時，它會連線至已設定的Microsoft Dynamics服務，並從Microsoft Dynamics執行個體擷取實體。 Microsoft Dynamics中的「聯絡人」和「銷售機會」實體已新增至表單資料模型。
 
-若要檢閱表單資料模型，請前往&#x200B;**[!UICONTROL Forms >資料整合]**。 選取&#x200B;**Microsoft Dynamics FDM**，然後按一下&#x200B;**編輯**&#x200B;以編輯模式開啟表單資料模型。 或者，您也可以直接從下列URL開啟表單資料模型：
+若要檢閱表單資料模型，請前往&#x200B;**[!UICONTROL Forms >資料整合]**。 選取&#x200B;**Microsoft Dynamics FDM**&#x200B;並按一下&#x200B;**編輯**，以編輯模式開啟表單資料模型。 或者，您也可以直接從下列URL開啟表單資料模型：
 
 `https://'[server]:[port]'/aem/fdm/editor.html/content/dam/formsanddocuments-fdm/ms-dynamics-fdm`
 
@@ -154,7 +166,7 @@ MS Dynamics ODataCloud Service（OData服務）雲端服務已設定，並已與
 
 接著，您可以根據表單資料模型建立最適化表單，並在各種最適化表單使用案例中使用，例如：
 
-* 從Microsoft Dynamics實體和服務查詢資訊，預先填寫最適化表單
+* 透過查詢Microsoft Dynamics實體和服務的資訊預先填寫最適化表單
 * 使用最適化表單規則叫用表單資料模型中定義的Microsoft Dynamics伺服器作業
 * 將提交的表單資料寫入Microsoft Dynamics實體
 

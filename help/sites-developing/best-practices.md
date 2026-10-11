@@ -9,13 +9,22 @@ exl-id: 0a478e80-c1b2-46c1-a6be-794d78b85d69
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '445'
-ht-degree: 3%
-
+source-wordcount: '497'
+ht-degree: 5%
 ---
-
 # 最佳做法{#best-practices}
 
 ## 開發人員最佳作法 — 快速入門 {#best-practices-for-developers-getting-started}
@@ -31,7 +40,7 @@ Adobe工程和顧問團隊已經為AEM開發人員發展出一組完整的最佳
 * [程式碼陷阱](/help/sites-developing/code-pitfalls.md)
 * [JCR互動](/help/sites-developing/jcr-integration.md)
 * [OSGi組合](/help/sites-developing/osgi-bundles.md)
-* [Java API最佳實務](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/understand-java-api-best-practices.html?lang=zh-Hant)
+* [Java API最佳作法](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/understand-java-api-best-practices.html?lang=zh-Hant)
 
 ### 其他最佳實務資訊 {#additional-best-practices-information}
 
@@ -73,7 +82,7 @@ Adobe工程和顧問團隊已經為AEM開發人員發展出一組完整的最佳
   <tr>
    <td>工作流程</td>
    <td><a href="/help/sites-developing/workflows-best-practices.md">開發和延伸工作流程</a></td>
-   <td><p>工作流程可讓您自動化Adobe Experience Manager (AEM)活動，並可呈現AEM環境中發生的大量處理，因此強烈建議您仔細規劃工作流程實施。</p> </td>
+   <td><p>工作流程可讓您自動化Adobe Experience Manager (AEM)活動，並可呈現在AEM環境中發生的許多處理作業，因此強烈建議您仔細規劃工作流程實作。</p> </td>
   </tr>
  </tbody>
 </table>
@@ -91,11 +100,11 @@ Adobe工程和顧問團隊已經為AEM開發人員發展出一組完整的最佳
 
 ## 工具/HTL {#tooling-htl}
 
-HTML範本語言(HTL)是隨AEM 6.0推出的新HTML範本系統。它取代了JSP和ESP，成為AEM慣用的範本系統。
+HTML範本語言(HTL)是隨AEM 6.0推出的全新HTML範本系統。 它取代了JSP和ESP，成為AEM慣用的範本系統。
 
 |  |  |  |
 |---|---|---|
-| HTL 總覽 | [HTL總覽和語法](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=zh-Hant) | 本檔案說明HTL是什麼、如何移至HTL、範例專案、語法、運算式和陳述式 |
+| HTL 概觀 | [HTL總覽和語法](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=zh-Hant) | 本檔案說明HTL是什麼、如何移至HTL、範例專案、語法、運算式和陳述式 |
 | 在Java中使用API | [HTL Java Use-API](https://helpx.adobe.com/tw/experience-manager/htl/using/use-api.html) | HTL Java Use-API讓HTL檔案能夠存取自訂Java類別中的helper方法。 |
 
 >[!NOTE]
