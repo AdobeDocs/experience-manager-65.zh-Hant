@@ -10,13 +10,20 @@ role: Admin
 exl-id: d3bb6664-6c01-4bcf-840c-072fc491fc99
 solution: Experience Manager
 feature: Communities
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1056'
+source-wordcount: '1104'
 ht-degree: 1%
-
 ---
-
 # 進階評分和徽章{#advanced-scoring-and-badges}
 
 ## 概觀 {#overview}
@@ -31,9 +38,9 @@ ht-degree: 1%
 
 設定進階評分與基本評分幾乎相同：
 
-* 基本和進階評分與徽章規則是以相同方式套用至內容[&#128279;](/help/communities/implementing-scoring.md#apply-rules-to-content)。
+* 基本和進階評分與徽章規則是以相同方式套用至內容](/help/communities/implementing-scoring.md#apply-rules-to-content)。[
 
-   * 基本和進階評分和徽章規則可套用至相同內容。
+  * 基本和進階評分和徽章規則可套用至相同內容。
 
 * [啟用元件](/help/communities/implementing-scoring.md#enable-badges-for-component)的徽章是通用的。
 
@@ -42,14 +49,14 @@ ht-degree: 1%
 * 可設定的進階評分引擎
 * 進階評分規則：
 
-   * `scoringType`已設定為`advanced`
-   * 需要`stopwords`
+  * `scoringType`已設定為`advanced`
+  * 需要`stopwords`
 
 * 進階徽章規則：
 
-   * `badgingType`已設定為`advanced`
-   * `badgingLevels`設定為&#x200B;**要獎勵的專家層級數目**
-   * 需要`badgingPaths`個徽章陣列，而不是臨界值陣列對應點到徽章。
+  * `badgingType`已設定為`advanced`
+  * `badgingLevels`設定為&#x200B;**要獎勵的專家層級數目**
+  * 需要`badgingPaths`個徽章陣列，而不是臨界值陣列對應點到徽章。
 
 >[!NOTE]
 >
@@ -66,7 +73,7 @@ ht-degree: 1%
   對於主題，請指定計算分數時，應給予最高優先順序的動詞。 可以輸入一或多個主題，但限製為每個主題&#x200B;**一個**&#x200B;動詞。 檢視[主題和動詞](/help/communities/implementing-scoring.md#topics-and-verbs)。
 輸入為`topic,verb`，逗號逸出。 例如：
   `/social/forum/hbs/social/forum\,ADD`
-QnA和論壇元件的預設值設為ADD動詞。
+  QnA和論壇元件的預設值設為ADD動詞。
 
 * **評分範圍**
 
@@ -148,7 +155,7 @@ QnA和論壇元件的預設值設為ADD動詞。
   <tr>
    <td>scoringRules</td>
    <td>String[]</td>
-   <td><em>（選擇性）</em>多值字串，可將徽章規則限製為由列出的一或多個評分規則所識別的評分事件。<br />範例專案： <br /> <code>/libs/settings/community/scoring/rules/adv-comments-scoring</code><br />預設為無限制。</td>
+   <td><em>（選擇性）</em>多值字串，可將徽章規則限製為由一或多個列出的評分規則所識別的評分事件。<br /> 範例專案： <br /> <code>/libs/settings/community/scoring/rules/adv-comments-scoring</code><br />預設為無限制。</td>
   </tr>
  </tbody>
 </table>
@@ -215,6 +222,6 @@ QnA和論壇元件的預設值設為ADD動詞。
 
 **附註：**
 
-* `rules`節點的型別為cq：Page。
+* `rules`節點的型別為cq:Page。
 * `rules`應該位於儲存庫位置，且每個人都有讀取許可權。
 * 無論位置為何，規則名稱必須是唯一的。

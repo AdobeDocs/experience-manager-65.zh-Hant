@@ -9,13 +9,26 @@ feature: Correspondence Management
 exl-id: f044ed75-bb72-4be1-aef6-2fb3b2a2697b
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 3f00fc92-85ee-583e-abd1-3bc3d96de3a0
+    internal-label: Correspondence Management
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '692'
+source-wordcount: '689'
 ht-degree: 1%
-
 ---
-
 # 管理代理程式簽名影像{#manage-agent-signature-images}
 
 ## 概觀 {#overview}
@@ -31,10 +44,10 @@ agentFolder DDE的值是從Correspondence Management組態屬性的CMUserRoot組
 
 ## 正在新增代理程式簽章影像 {#adding-agent-signature-image}
 
-1. 確定代理程式簽章影像與使用者的AEM使用者名稱同名。 （影像檔案名稱不需要副檔名。）
+1. 確認代理程式簽章影像的名稱與使用者的AEM使用者名稱相同。 （影像檔案名稱不需要副檔名。）
 1. 在CRX中，在內容資料夾中建立名為`cmUserRoot`的資料夾。
 
-   1. 移至`https://'[server]:[port]'/crx/de`。 如有必要，請以管理員身分登入。
+   1. 前往 `https://'[server]:[port]'/crx/de`。 如有必要，請以管理員身分登入。
 
    1. 用滑鼠右鍵按一下&#x200B;**內容**&#x200B;資料夾，然後選取&#x200B;**建立** > **建立資料夾**。
 
@@ -48,29 +61,29 @@ agentFolder DDE的值是從Correspondence Management組態屬性的CMUserRoot組
 
 1. 在內容總管中，導覽至cmUserRoot資料夾，並在其中新增代理程式簽章影像。
 
-   1. 移至`https://'[server]:[port]'/crx/explorer/index.jsp`。 如有需要，請以管理員身分登入。
+   1. 前往 `https://'[server]:[port]'/crx/explorer/index.jsp`。 如有需要，請以管理員身分登入。
    1. 按一下&#x200B;**內容總管**。 內容總管會在新視窗中開啟。
    1. 在內容總管中，瀏覽至cmUserRoot資料夾並加以選取。 用滑鼠右鍵按一下&#x200B;**cmUserRoot**&#x200B;資料夾，然後選取&#x200B;**新增節點**。
 
-      在cmUserRoot![&#128279;](assets/2_cmuserroot_newnode.png)中新增節點
+      在cmUserRoot](assets/2_cmuserroot_newnode.png)中新增![節點
 
       在新節點的資料列中建立下列專案，然後按一下綠色核取記號。
 
       **名稱：** JohnDoe （或您的代理程式簽章檔名稱）
 
-      **型別：** nt：file
+      **型別：** nt:file
 
       在「`cmUserRoot`」資料夾下，會建立名為「`JohnDoe`」的新資料夾（或您在上一步中提供的名稱）。
 
    1. 按一下您已建立的新資料夾（此處`JohnDoe`）。 「內容總管」會以灰色顯示資料夾的內容。
 
-   1. 連按兩下&#x200B;**jcr：content**&#x200B;屬性，將其型別設定為&#x200B;**nt：resource**，然後按一下綠色核取記號以儲存專案。
+   1. 連按兩下&#x200B;**jcr:content**&#x200B;屬性，將其型別設定為&#x200B;**nt:resource**，然後按一下綠色核取記號以儲存專案。
 
-      如果屬性不存在，請先建立名為jcr：content的屬性。
+      如果屬性不存在，請先建立名稱為jcr:content的屬性。
 
-      ![jcr：content屬性](assets/3_jcrcontentntresource.png)
+      ![jcr:content屬性](assets/3_jcrcontentntresource.png)
 
-      jcr：content的子屬性中包括jcr：data，其為暗灰色。 按兩下jcr：data。 屬性會變成可編輯的，而「選擇檔案」按鈕會出現在專案中。 按一下&#x200B;**選擇檔案**，然後選取您要做為標誌的影像檔。 影像檔案不需要副檔名。
+      jcr:content的子屬性中有jcr:data，其為暗灰色。 連按兩下jcr:data。 屬性會變成可編輯的，而「選擇檔案」按鈕會出現在專案中。 按一下&#x200B;**選擇檔案**，然後選取您要做為標誌的影像檔。 影像檔案不需要副檔名。
 
       ![JCR資料](assets/5_jcrdata.png)
 

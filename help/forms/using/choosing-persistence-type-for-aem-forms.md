@@ -9,13 +9,27 @@ role: Admin
 exl-id: 621fe107-f4ac-42b1-8c7b-8abbcaac7380
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Foundation Components
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 7da902b6-fe94-5180-8e7c-f6d1e38d01d5
+    internal-label: Foundation Components
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '372'
+source-wordcount: '373'
 ht-degree: 1%
-
 ---
-
 # 為AEM Forms安裝選擇持續性型別 {#choosing-a-persistence-type-for-an-aem-forms-installation}
 
 明智地選擇持續性型別。 這可幫助您建置有效率且可擴充的AEM Forms環境。
@@ -24,7 +38,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->LiveCycleES4 SP1使用TarPM持續性來儲存內容。
+>LiveCycle ES4 SP1使用TarPM持續性來儲存內容。
 
 下表列出所有支援的持續性型別，以及各種引數，協助您為環境選擇持續性型別：
 
@@ -57,7 +71,7 @@ ht-degree: 1%
  </tbody>
 </table>
 
-TarMK是專為效能而設計，而MongoMK和RDBMK則是為擴充性而設計。 Adobe強烈建議將TarMK作為所有AEM Forms部署情境的預設持續性技術，適用於Author和Publish執行個體，但[選擇Mongo或關聯式資料庫Microkernel而非TarMK](#p-choosing-mongo-or-a-relational-database-microkernel-over-tarmk-p)一節中概述的使用案例除外。
+TarMK是專為效能而設計，而MongoMK和RDBMK則是為擴充性而設計。 Adobe強烈建議將TarMK作為所有AEM Forms部署情境的預設持續性技術，無論是製作執行個體還是發佈執行個體，但[選擇Mongo或關聯式資料庫Microkernel而非TarMK](#p-choosing-mongo-or-a-relational-database-microkernel-over-tarmk-p)一節中概述的使用案例除外。
 
 如需支援的微核心清單，請參閱OSGi技術需求上的[AEM Forms](/help/sites-deploying/technical-requirements.md)或JEE支援的平台組合上的[AEM Forms](/help/forms/using/aem-forms-jee-supported-platforms.md)文章。
 

@@ -10,13 +10,22 @@ exl-id: 4eb0de5e-0306-4166-9cee-1297a5cd14ce
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1351'
-ht-degree: 0%
-
+source-wordcount: '1341'
+ht-degree: 1%
 ---
-
 # 使用頁面版本{#working-with-page-versions}
 
 版本設定功能會在特定時間點建立頁面的「快照」。 使用版本設定，您可以執行下列動作：
@@ -67,7 +76,7 @@ ht-degree: 0%
 
    ![screen_shot_2012-02-08at45743pm](assets/screen_shot_2012-02-08at45743pm.png)
 
-1. 選取您要還原的版本，然後按一下[還原]。**&#x200B;** AEM會還原您選取的版本（或樹狀結構）。
+1. 選取您要還原的版本，然後按一下[還原]。**** AEM會還原您選取的版本（或樹狀結構）。
 
 ### 從主控台還原樹狀結構 {#restoring-a-tree-from-the-console}
 
@@ -86,7 +95,7 @@ ht-degree: 0%
 若要將頁面的目前版本與先前版本進行比較：
 
 1. 在瀏覽器中，開啟您要與先前版本比較的頁面。
-1. 在Sidekick中，選取&#x200B;**版本設定**&#x200B;標籤，然後選取&#x200B;**還原版本** n子標籤。
+1. 在Sidekick中，選取&#x200B;**版本設定**&#x200B;索引標籤，然後選取&#x200B;**還原版本** n子索引標籤。
 
    ![screen_shot_2012-02-14at42949pm-1](assets/screen_shot_2012-02-14at42949pm-1.png)
 
@@ -99,15 +108,15 @@ ht-degree: 0%
 
    ![chlimage_1-75](assets/chlimage_1-75.png)
 
-1. 在Sidekick中，選取&#x200B;**還原版本**&#x200B;子標籤，然後按一下&#x200B;**&lt;&lt;上一步**&#x200B;按鈕以顯示目前版本。
+1. 在Sidekick中，選取&#x200B;**還原版本**&#x200B;子索引標籤，然後按一下「**」&lt;&lt;上一步**」按鈕以顯示目前版本。
 
-## Timewarp {#timewarp}
+## 時間扭曲 {#timewarp}
 
 時間扭曲是一項功能，用來模擬過去特定時間某個頁面的&#x200B;***已發佈***&#x200B;狀態。
 
 目的是讓您在選取的時間點追蹤已發佈的網站。 這會使用頁面啟用來判斷發佈環境的狀態。
 
-若要這麼做：
+執行方法：
 
 * 系統會尋找在選取的時間使用中的頁面版本。
 * 這表示顯示的版本是在&#x200B;*在Timewarp中選取的時間點之前建立/啟動*。
@@ -161,7 +170,7 @@ Timewarp可在Sidekick中使用。
 
    1. 開啟&#x200B;**版本設定**&#x200B;標籤，然後按一下&#x200B;**時間扭曲** （靠近sidekick底部）。
 
-   1. 使用Timewarp行事曆[&#128279;](#using-the-timewarp-calendar)，使用之後顯示的sidekick對話方塊。
+   1. 使用Timewarp行事曆](#using-the-timewarp-calendar)，使用[之後顯示的sidekick對話方塊。
 
 1. 按一下&#x200B;**顯示時間表** — 檔案的時間表會出現；例如：
 
@@ -170,8 +179,8 @@ Timewarp可在Sidekick中使用。
 1. 選取並移動（按住並拖曳）時間軸，以在檔案的時間軸中移動。
 
    * 所有行都表示已發佈的版本。
-頁面啟動時，就會開始新的一行。 每次編輯檔案時，都會顯示新顏色。
-在以下範例中，紅線表示頁面是在初始綠色版本的時間範圍內進行編輯。 黃線表示頁面在紅色版本期間編輯過，依此類推。
+     頁面啟動時，就會開始新的一行。 每次編輯檔案時，都會顯示新顏色。
+     在以下範例中，紅線表示頁面是在初始綠色版本的時間範圍內進行編輯。 黃線表示頁面在紅色版本期間編輯過，依此類推。
 
    ![chlimage_1-79](assets/chlimage_1-79.png)
 

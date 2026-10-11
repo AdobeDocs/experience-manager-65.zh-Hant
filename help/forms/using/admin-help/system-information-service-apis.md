@@ -9,13 +9,27 @@ exl-id: 4da96c8f-8bd0-4cad-9087-18e324f084e7
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
-source-wordcount: '325'
+source-wordcount: '336'
 ht-degree: 0%
-
 ---
-
 # 系統資訊服務API {#system-information-service-apis}
 
 系統資訊服務提供一組REST API來擷取資訊。 下表提供有關API的詳細資訊：
@@ -30,7 +44,7 @@ ht-degree: 0%
  </thead>
  <tbody>
   <tr>
-   <td><p>SystemInfo.properties</p></td>
+   <td><p>SystemInfo.屬性</p></td>
    <td><p>https://'[server]：[port]'/rest/services/SystemInfo.properties'</p></td>
    <td><p>此API是<a href="https://docs.oracle.com/javase/6/docs/api/java/lang/System.html#getProperties()">system.getProperties</a> Java API的包裝函式。 它會擷取目前工作環境的設定。 </p></td>
   </tr>
@@ -50,7 +64,7 @@ ht-degree: 0%
    <td><p>擷取config.xml檔案的所有內容。 </p></td>
   </tr>
   <tr>
-   <td><p>SystemInfo.services</p></td>
+   <td><p>系統資訊。服務</p></td>
    <td><p>https://'[server]：[port]'/rest/services/ SystemInfo.services</p></td>
    <td><p>擷取AEM表單服務的狀態和設定引數。</p></td>
   </tr>

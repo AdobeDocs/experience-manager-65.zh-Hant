@@ -9,13 +9,20 @@ exl-id: 56af5362-78de-4308-8958-63a45e8573cc
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
-source-wordcount: '569'
+source-wordcount: '579'
 ht-degree: 1%
-
 ---
-
 # 使用社交標籤雲 {#using-social-tag-cloud}
 
 ## 簡介 {#introduction}
@@ -50,17 +57,17 @@ ht-degree: 1%
 
 ![social-tag-cloud](assets/social-tag-cloud.png)
 
-* **[!UICONTROL 要顯示的社交標籤]**
+* 要顯示的&#x200B;**[!UICONTROL 社交標籤]**
 識別要顯示的UGC標籤。 下拉式選項包括：
 
-   * `From page and child pages`
-   * `All tags`
+  * `From page and child pages`
+  * `All tags`
 
   預設值為`From page and child pages`，其中「page」是指下方的&#x200B;**頁面**&#x200B;設定。
 
-* **[!UICONTROL Page]**
+* **[!UICONTROL 頁面]**
 
-  (若不是`All tags)`則為必要&rbrace;頁面的UGC路徑。 如果留白，預設為目前頁面。
+  (若不是`All tags)`則為必要}頁面的UGC路徑。 如果留白，預設為目前頁面。
 
 * **[!UICONTROL 標籤上沒有連結]**
 
@@ -84,8 +91,8 @@ ht-degree: 1%
 
   例如：
 
-   * 已核取： `Geometrixx Media: Gadgets / Cars`
-   * 未核取： `Cars`
+  * 已核取： `Geometrixx Media: Gadgets / Cars`
+  * 未核取： `Cars`
 
   簡單標籤沒有差異。
 
@@ -103,8 +110,8 @@ ht-degree: 1%
 
   `Geometrixx Media (the namespace)`、`Gadgets`和`Cars`
 
-   * 已核取：如果套用，則只會顯示`Cars`。
-   * 取消核取： `Geometrixx Media`、`Gadgets`和`Cars`如果套用，則會顯示。
+  * 已核取：如果套用，則只會顯示`Cars`。
+  * 取消核取： `Geometrixx Media`、`Gadgets`和`Cars`如果套用，則會顯示。
 
   簡單標籤是葉標籤。
 

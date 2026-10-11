@@ -9,13 +9,27 @@ exl-id: d72a3977-1423-49e0-899b-234bb76be378
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1592'
+source-wordcount: '1614'
 ht-degree: 0%
-
 ---
-
 # 設定驗證提供者 {#configuring-authentication-providers}
 
 >[!NOTE]
@@ -102,7 +116,7 @@ ht-degree: 0%
 如果您要設定企業或混合網域的驗證，並選取SAML驗證，則可使用下列設定。 如需其他SAML設定的相關資訊，請參閱[設定SAML服務提供者設定](/help/forms/using/admin-help/configure-saml-service-provider-settings.md#configure-saml-service-provider-settings)。
 
 **請選取SAML身分提供者中繼資料
-要匯入的檔案：**&#x200B;按一下[瀏覽]選取從IDP產生的SAML識別提供者中繼資料檔案，然後按一下[匯入]。 會顯示來自IDP的詳細資訊。
+要匯入的檔案：**&#x200B;按一下[瀏覽]以選取從IDP產生的SAML識別提供者中繼資料檔案，然後按一下[匯入]。 會顯示來自IDP的詳細資訊。
 
 **標題：** EntityID所代表之URL的別名。 企業及本機使用者的登入頁面上也會顯示標題。
 
@@ -112,7 +126,7 @@ ht-degree: 0%
 
 如果使用成品繫結，則需要下列自訂屬性。
 
-* 新增下列自訂屬性，以指定代表AEM Forms服務提供者的使用者名稱，該使用者名稱用於驗證IDP成品解析服務。
+* 新增下列自訂屬性，以指定代表AEM表單服務提供者的使用者名稱，該使用者名稱用於驗證IDP成品解析服務的身份。
   `saml.idp.resolve.username=<username>`
 
 * 新增下列自訂屬性，為`saml.idp.resolve.username`中指定的使用者指定密碼。
@@ -129,7 +143,7 @@ ht-degree: 0%
 
 即時啟動設定會在使用者透過驗證提供者成功驗證後，自動在「使用者管理」資料庫中建立使用者。 相關的角色和群組也會動態指派給新使用者。 您可以啟用企業網域和混合網域的即時布建。
 
-此程式說明傳統驗證在AEM Forms中的運作方式：
+此程式說明傳統驗證在AEM表單中的運作方式：
 
 1. 當使用者嘗試登入AEM表單時，「使用者管理」會依序將其憑證傳遞給所有可用的驗證提供者。 （登入憑證包括使用者名稱/密碼組合、Kerberos票證、PKCS7簽名等。）
 1. 驗證提供者會驗證認證。
@@ -150,7 +164,7 @@ ht-degree: 0%
 
 ### 為網域啟用即時布建 {#enable-just-in-time-provisioning-for-a-domain}
 
-1. 編寫實作IdentityCreator和AssignmentProvider介面的服務容器。 (請參閱[使用AEM表單進行程式設計](https://www.adobe.com/go/learn_aemforms_programming_63)。)
+1. 編寫實作IdentityCreator和AssignmentProvider介面的服務容器。 （請參閱[使用AEM表單進行程式設計](https://www.adobe.com/go/learn_aemforms_programming_63)。）
 1. 將服務容器部署至Forms伺服器。
 1. 在管理控制檯中，按一下「設定>使用者管理>網域管理」。
 

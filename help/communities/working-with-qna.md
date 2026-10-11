@@ -10,13 +10,20 @@ exl-id: 17081710-35e0-4f5b-9485-1f85c065fd70
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
-source-wordcount: '1389'
+source-wordcount: '1403'
 ht-degree: 0%
-
 ---
-
 # 問答論壇功能{#q-a-forum-feature}
 
 ## 簡介 {#introduction}
@@ -210,7 +217,7 @@ QnA （問題與回答）論壇功能為社群成員提供詢問與回答問題�
 
 * **建議限制**
 
-  輸入要顯示為論壇成員張貼建議之標籤數目。 **-**&#x200B;1的值表示沒有限制。 預設值為0。
+  輸入要顯示為論壇成員張貼建議之標籤數目。 **-**1的值表示沒有限制。 預設值為0。
 
 #### 排序設定索引標籤 {#sort-settings-tab}
 
@@ -248,7 +255,7 @@ QnA （問題與回答）論壇功能為社群成員提供詢問與回答問題�
 
 網站訪客登入時，根據設定，他們可以：
 
-* Post新問題。
+* 張貼新問題。
 * 編輯或刪除他們所編寫的問題。
 * 標示其他成員的問題或答案。
 * 找出他們所編寫問題的答案。

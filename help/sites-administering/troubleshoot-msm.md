@@ -5,13 +5,25 @@ feature: Multi Site Manager
 role: Admin
 exl-id: 23f3391b-5ce3-48e1-ab27-a37737778089
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 3aa55b88f589749fb49d5ff46340b0912d490157
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: a642c50e-80eb-4fc1-a5d2-f3762d1f841d
+    internal-label: Administration
+subfeature_v2:
+  - id: e86b80f2-7cb0-4646-8fcd-51d3bf272fce
+    internal-label: Multi Site Manager
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
-source-wordcount: '762'
+source-wordcount: '767'
 ht-degree: 0%
-
 ---
-
 # 疑難排解MSM問題和常見問題 {#troubleshooting-msm}
 
 ## 疑難排解首要步驟 {#first-steps}
@@ -28,14 +40,12 @@ MSM會在資源URL上向選取器註冊數個可請求的servlet。 這些可供
 1. `http://<host>:<port>/content/path/to/bluprint/page.blueprint.json?&maxSize=500&advancedStatus=true&returnRelationships=true&msm%3Atrigger=ROLLOUT`
    * 在Blueprint頁面上使用這個專案來擷取連結到它的所有即時副本清單，連同其他即時副本狀態資訊。
    * 例如：
-
      `http://localhost:4502/content/wknd/language-masters/en.blueprint.json?&maxSize=500&advancedStatus=true&returnRelationships=true&msm%3Atrigger=ROLLOUT`
 
 
 1. `http://<host>:<port>/content/path/to/livecopy/page.msm.json`
    * 在即時副本頁面上使用它可擷取有關其與Blueprint頁面連線的進階資訊。 如果頁面不是即時副本，則不會傳回任何專案。
    * 例如：
-
      `http://localhost:4502/content/wknd/ca/en.msm.json`
 
 這些servlet會透過`com.day.cq.wcm.msm`記錄器產生DEBUG記錄訊息，這些訊息也可能會有所幫助。
@@ -45,17 +55,17 @@ MSM會在資源URL上向選取器註冊數個可請求的servlet。 這些可供
 先前的servlet會根據MSM特定節點和mixin傳回計算資訊。 資訊會以下列方式儲存在存放庫中。
 
 * `cq:LiveSync` mixin型別
-   * 這是在`jcr:content`節點上設定，並定義根即時副本頁面。
-   * 這些頁面具有型別為`cq:LiveCopy`的`cq:LiveSyncConfig`子節點，其中包含透過下列屬性在即時副本上的基本和必要資訊：
-      * `cq:master`指向即時副本的Blueprint頁面。
-      * `cq:rolloutConfigs`表示套用至即時副本的有效轉出設定。
-      * 如果此根即時副本頁面的子頁面包含在即時副本中，`cq:isDeep`為true。
+  * 這是在`jcr:content`節點上設定，並定義根即時副本頁面。
+  * 這些頁面具有型別為`cq:LiveCopy`的`cq:LiveSyncConfig`子節點，其中包含透過下列屬性在即時副本上的基本和必要資訊：
+    * `cq:master`指向即時副本的Blueprint頁面。
+    * `cq:rolloutConfigs`表示套用至即時副本的有效轉出設定。
+    * 如果此根即時副本頁面的子頁面包含在即時副本中，`cq:isDeep`為true。
 * `cq:LiveRelationship` mixin型別
-   * 任何即時副本頁面的`jcr:content`節點都有此類mixin型別。
-   * 如果沒有，頁面在某個時間點已被分離或透過即時副本動作（建立或轉出）之外的編寫介面手動建立。
+  * 任何即時副本頁面的`jcr:content`節點都有此類mixin型別。
+  * 如果沒有，頁面在某個時間點已被分離或透過即時副本動作（建立或轉出）之外的編寫介面手動建立。
 * `cq:LiveSyncCancelled` mixin型別
-   * 已新增至已暫停之即時副本頁面的`jcr:content`個節點。
-   * 如果暫停對子頁面也有效，則相同節點上的`cq:isCancelledForChildren`屬性會設為true。
+  * 已新增至已暫停之即時副本頁面的`jcr:content`個節點。
+  * 如果暫停對子頁面也有效，則相同節點上的`cq:isCancelledForChildren`屬性會設為true。
 
 這些屬性中存在的資訊應反映在UI中，但是在進行疑難排解時，當MSM動作發生時直接在存放庫中觀察MSM行為可能會有所幫助。
 
@@ -63,7 +73,7 @@ MSM會在資源URL上向選取器註冊數個可請求的servlet。 這些可供
 
 * `select * from cq:LiveSync`會傳回所有即時副本根頁面。
 
-## 常見問題集 {#faq}
+## 常見問題 {#faq}
 
 以下是與MSM和即時副本相關的一些常見問題。
 

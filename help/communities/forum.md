@@ -10,18 +10,25 @@ exl-id: 2b1a4917-9db6-436a-a5fd-c102fe41fb9d
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1233'
-ht-degree: 1%
-
+source-wordcount: '1249'
+ht-degree: 0%
 ---
-
 # 論壇功能{#forum-feature}
 
 ## 簡介 {#introduction}
 
-論壇功能為Publish環境中的登入網站訪客（社群成員）提供一個區域，以：
+論壇功能為發佈環境中的登入網站訪客（社群成員）提供一個區域，以：
 
 * 建立主題
 * 檢視和回覆主題
@@ -76,7 +83,7 @@ ht-degree: 1%
 
 * 每頁&#x200B;**個主題**
 
-  定義每個頁面顯示的主題/帖子數。預設為 10。
+  定義每個頁面顯示的主題/帖子數。 預設值為10。
 
 * **已稽核**
 
@@ -122,7 +129,7 @@ ht-degree: 1%
 
   只有在勾選`Allow File Uploads`時才相關。 以「點」分隔符號的副檔名清單（以逗號分隔）。 例如，.jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何檔案型別，則無法上傳未指定的檔案型別。 預設為「無」，因此允許所有檔案型別。
 
-* **附加影像檔案大小上限**
+* **最大附加影像檔案大小**
 只有在勾選「允許檔案上傳」時才相關。 已上傳影像檔案的最大位元組數。 預設值為2097152 (2 Mb)。
 
 * **允許執行緒式回覆**
@@ -219,7 +226,7 @@ ht-degree: 1%
 
 * **建議限制**
 
-  輸入要顯示為論壇成員張貼建議之標籤數目。 預設值為&#x200B;**-**&#x200B;1 （無限制）。
+  輸入要顯示為論壇成員張貼建議之標籤數目。 預設值為**-**1 （無限制）。
 
 #### 翻譯索引標籤 {#translation-tab}
 
