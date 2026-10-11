@@ -110,7 +110,7 @@ ht-degree: 1%
 >
 >`jstack <pid> >> /path/to/logfile.log`
 
-如需詳細資訊，請參閱[如何從JVM進行對話串傾印](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17452.html)檔案
+如需詳細資訊，請參閱[如何從JVM進行對話串傾印](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17452.html?lang=zh-Hant)檔案
 
 ### 檢查未關閉的JCR工作階段 {#checking-for-unclosed-jcr-sessions}
 
@@ -120,7 +120,7 @@ ht-degree: 1%
 * 您可以看到許多CacheManager： resizeAll專案在記錄檔中；下列數字（大小=&lt;x>) shows the number of caches, each session opens several caches.）
 * 系統有時會用盡記憶體（在數小時、數天或數週後，視嚴重程度而定）。
 
-若要開始分析未關閉的工作階段，請參閱知識庫文章[未關閉的資源解析器](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-23761)。
+若要開始分析未關閉的工作階段，請參閱知識庫文章[未關閉的資源解析器](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-kcs/kbarticles/ka-23761)。
 
 ### 使用Adobe Experience Manager Web Console {#using-the-adobe-experience-manager-web-console}
 
