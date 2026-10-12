@@ -1,6 +1,6 @@
 ---
-title: 國際化UI字串
-description: Java&amp；trade；和JavaScript API可讓您將字串國際化
+title: 國際化使用者介面字串
+description: Java&trade和JavaScript API可讓您將字串國際化
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
@@ -9,14 +9,23 @@ exl-id: bc5b1cb7-a011-42fe-8759-3c7ee3068aad
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1091'
 ht-degree: 0%
-
 ---
-
-# 國際化UI字串 {#internationalizing-ui-strings}
+# 國際化使用者介面字串 {#internationalizing-ui-strings}
 
 Java™和JavaScript API可讓您國際化下列資源型別的字串：
 
@@ -165,11 +174,11 @@ UI字串通常以JCR節點屬性為基礎。 例如，頁面的`jcr:title`屬性
 
 #### 指定JCR節點的轉譯提示 {#specifying-translation-hints-for-jcr-nodes}
 
-類似於Java™ API[&#128279;](#using-translation-hints)中的翻譯提示，您可以提供翻譯提示來區分字典中的重複字串。 提供翻譯提示，作為包含國際化屬性的節點的屬性。 提示屬性的名稱是由具有`_commentI18n`尾碼的國際化屬性名稱所組成：
+類似於Java™ API](#using-translation-hints)中的[翻譯提示，您可以提供翻譯提示來區分字典中的重複字串。 提供翻譯提示，作為包含國際化屬性的節點的屬性。 提示屬性的名稱是由具有`_commentI18n`尾碼的國際化屬性名稱所組成：
 
 `${prop}_commentI18n`
 
-例如，`cq:page`節點包含正在當地語系化的jcr：title屬性。 提示會提供為名為jcr：title_commentI18n的屬性的值。
+例如，`cq:page`節點包含正在當地語系化的jcr:title屬性。 提示是以名為jcr:title_commentI18n之屬性的值提供。
 
 ### 測試國際化涵蓋範圍 {#testing-internationalization-coverage}
 

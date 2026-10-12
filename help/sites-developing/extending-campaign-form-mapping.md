@@ -9,13 +9,22 @@ exl-id: bce6c586-9962-4217-82cb-c837e479abc0
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '538'
 ht-degree: 3%
-
 ---
-
 # 建立自訂表單對應{#creating-custom-form-mappings}
 
 當您在Adobe Campaign中建立自訂表格時，可能會想要在AEM中建立對應至該自訂表格的表單。
@@ -39,7 +48,7 @@ ht-degree: 3%
 1. 擴充&#x200B;**seed**&#x200B;資料表。
 1. 建立自訂對應。
 1. 根據自訂對應建立傳遞。
-1. 在AEM中建立表單，此表單將使用建立的傳遞。
+1. 在AEM中建立表單，此表單將使用建立的傳送。
 1. 提交表單以進行測試。
 
 ### 在Adobe Campaign中建立自訂表格 {#creating-the-custom-table-in-adobe-campaign}
@@ -106,7 +115,7 @@ ht-degree: 3%
 
 設定欄位後，您需要手動變更對應。
 
-在CRXDE-LITE中，移至&#x200B;**jcr：content** （頁面的）節點，並將&#x200B;**acMapping**&#x200B;值變更為&#x200B;**目標對應**&#x200B;的內部名稱。
+在CRXDE-LITE中，移至&#x200B;**jcr:content** （頁面的）節點，並將&#x200B;**acMapping**&#x200B;值變更為&#x200B;**目標對應**&#x200B;的內部名稱。
 
 ![chlimage_1-198](assets/chlimage_1-198.png)
 
@@ -122,7 +131,7 @@ ht-degree: 3%
 
 ## 疑難排解 {#troubleshooting}
 
-**「元素&#39;@eventdate&#39;的值&#39;02/02/2015&#39;的型別無效(型別為&#39;Event ([adb：event])&#39;的檔案)」**
+**「元素&#39;@eventdate&#39;的值&#39;02/02/2015&#39;的型別無效(型別為&#39;Event ([adb:event])&#39;的檔案)」**
 
 提交表單時，此錯誤記錄在AEM的&#x200B;**error.log**&#x200B;中。
 
