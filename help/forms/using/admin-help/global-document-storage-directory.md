@@ -9,20 +9,34 @@ exl-id: 7a64a643-808b-4644-8fd3-0dafe83e8dd9
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '684'
+source-wordcount: '690'
 ht-degree: 1%
-
 ---
-
 # 全域檔案儲存目錄{#global-document-storage-directory}
 
-*全域檔案儲存(GDS)*&#x200B;目錄是用來儲存處理程式中使用的長期檔案的目錄。 這些檔案包括PDF、原則和表單範本。 長效檔案是許多AEM Forms部署整體狀態的重要部分。 如果部分或所有長期檔案遺失或損毀，Forms伺服器可能會變得不穩定。 非同步作業叫用的輸入檔案也儲存在GDS目錄中，而且必須可用於處理請求。 您必須考量裝載GDS目錄的檔案系統的可靠性。 根據您的品質和服務等級需求，使用獨立磁碟備援陣列(RAID)或其他技術。
+*全域檔案儲存(GDS)*&#x200B;目錄是用來儲存處理程式中使用的長期檔案的目錄。 這些檔案包含PDF、原則和表單範本。 長效檔案是許多AEM表單部署整體狀態的重要部分。 如果部分或所有長期檔案遺失或損毀，Forms伺服器可能會變得不穩定。 非同步作業叫用的輸入檔案也儲存在GDS目錄中，而且必須可用於處理請求。 您必須考量裝載GDS目錄的檔案系統的可靠性。 根據您的品質和服務等級需求，使用獨立磁碟備援陣列(RAID)或其他技術。
 
 長效檔案可能包含敏感的使用者資訊。 使用AEM Forms API或使用者介面存取此資訊時，可能需要特殊認證。 透過作業系統妥善保護GDS目錄非常重要。 只有用於執行應用程式伺服器的管理員帳戶才應該具有對GDS目錄的讀取/寫入存取權。
 
-除了為GDS選取安全、高可用性的目錄之外，您也可以選擇啟用資料庫中的檔案儲存。 請注意，即使使用AEM Forms資料庫進行檔案儲存，AEM Forms仍需要GDS目錄。 （請參閱當資料庫用於檔案儲存[&#128279;](/help/forms/using/admin-help/files-back-recover.md#backup-options-when-database-is-used-for-document-storage)時的備份選項。）
+除了為GDS選取安全、高可用性的目錄之外，您也可以選擇啟用資料庫中的檔案儲存。 請注意，即使使用AEM Forms資料庫進行檔案儲存，AEM Forms仍需要GDS目錄。 （請參閱當資料庫用於檔案儲存](/help/forms/using/admin-help/files-back-recover.md#backup-options-when-database-is-used-for-document-storage)時的[備份選項。）
 
 AEM forms應用程式資料位於GDS目錄和AEM forms資料庫中。 下表說明資料及其位置。
 
@@ -70,7 +84,7 @@ AEM forms應用程式資料位於GDS目錄和AEM forms資料庫中。 下表說�
 
 ## 設定GDS目錄 {#configuring-the-gds-directory}
 
-GDS目錄的位置可以在AEM Forms安裝過程中手動設定。 如果在安裝期間位置設定保持空白，則該位置會預設為應用程式伺服器安裝下的目錄，如下所示：
+GDS目錄的位置可以在AEM表單安裝過程中手動設定。 如果在安裝期間位置設定保持空白，則該位置會預設為應用程式伺服器安裝下的目錄，如下所示：
 
 * (JBoss) `[appserver root]/server/[type]/svcnative/DocumentStorage`
 * (WebLogic) `[appserverdomain]/'server'/adobe/DocumentServer/DocumentStorage`

@@ -10,13 +10,29 @@ role: Developer
 exl-id: 5a746c6c-bf6e-4b25-ba7c-a35edb1f55f3
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Services,APIs & Integrations
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 516393bc-fa69-5e74-a04e-f7ec9ffe2c5e
+    internal-label: APIs & Integrations
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+  - id: f19cff18-c8cc-4a4b-adad-85dd2fa3dbe2
+    internal-label: Document Services
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1424'
+source-wordcount: '1442'
 ht-degree: 0%
-
 ---
-
 # 最佳化Forms服務的效能 {#optimizing-the-performance-of-theforms-service}
 
 **本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
@@ -51,13 +67,13 @@ ht-degree: 0%
 
 您可以設定下列效能執行階段選項，以改善Forms服務的效能：
 
-* **表單快取**：您可以快取在伺服器快取中呈現為PDF的表單。 每個表單在首次產生後都會進行快取。 在後續轉譯時，如果快取表單比表單設計的時間戳記新，則會從快取中擷取表單。 透過快取表單，您可以改善Forms服務的效能，因為它不需要從存放庫擷取表單設計。
+* **表單快取**：您可以在伺服器快取中快取轉譯為PDF的表單。 每個表單在首次產生後都會進行快取。 在後續轉譯時，如果快取表單比表單設計的時間戳記新，則會從快取中擷取表單。 透過快取表單，您可以改善Forms服務的效能，因為它不需要從存放庫擷取表單設計。
 * 表單參考線（已棄用）的轉譯時間可能比其他轉換型別長。 建議您快取表單參考線（已棄用）以提高效能。
 * **獨立選項**：如果您不需要Forms服務來執行伺服器端計算，您可以將「獨立」選項設為`true`，這會產生沒有狀態資訊的表單轉譯。 如果您想要將互動式表單轉譯給一般使用者，然後這些使用者在表單中輸入資訊，並將表單提交回Forms服務，則需要狀態資訊。 Forms服務接著會執行計算操作，並將表單轉譯回使用者，結果會顯示在表單中。 如果將沒有狀態資訊的表單提交回Forms服務，則只有XML資料可用，並且不會執行伺服器端計算。
-* **線性化PDF**：已組織線性化PDF檔案，以便在網路環境中啟用有效的增量存取。 PDF檔案在所有方面都是有效的PDF，並與所有現有的檢視器和其他PDF應用程式相容。 也就是說，線性PDF可在下載時檢視。
-* 此選項無法改善在使用者端上轉譯PDF表單時的效能。
-* **GuideRSL選項**：啟用使用執行階段共用程式庫產生表單指南（已棄用）。 這表示第一個要求會下載較小的SWF檔案，加上儲存在瀏覽器快取中的較大共用程式庫。 如需詳細資訊，請參閱Flex檔案中的RSL 。
-* 您也可以在使用者端上呈現表單，以改善Forms服務的效能。 (請參閱[在使用者端轉譯Forms](/help/forms/developing/rendering-forms-client.md)。)
+* **線性化PDF**：已組織線性化PDF檔案，以在網路環境中啟用有效的增量存取。 PDF檔案在所有方面都是有效的PDF，且與所有現有檢視器和其他PDF應用程式相容。 也就是說，線性PDF可在下載時進行檢視。
+* 此選項無法改善使用者端上轉譯PDF表單時的效能。
+* **GuideRSL選項**：啟用使用執行階段共用程式庫產生表單指南（已棄用）。 這表示第一個要求會下載較小的SWF檔案，以及儲存在瀏覽器快取中的較大共用程式庫。 如需詳細資訊，請參閱Flex檔案中的RSL 。
+* 您也可以在使用者端上呈現表單，以改善Forms服務的效能。 （請參閱[在使用者端轉譯Forms](/help/forms/developing/rendering-forms-client.md)。）
 
 **轉譯表單**
 
@@ -122,7 +138,7 @@ Forms服務轉譯表單後，會傳回您必須寫入使用者端網頁瀏覽器
 
 **另請參閱**
 
-[快速入門(SOAP模式)：使用Java API最佳化效能](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-optimizing-performance-using-the-java-api)
+[快速入門（SOAP模式）：使用Java API最佳化效能](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-optimizing-performance-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -157,7 +173,7 @@ Forms服務轉譯表單後，會傳回您必須寫入使用者端網頁瀏覽器
    * 儲存執行階段選項的`PDFFormRenderSpecc`物件。
    * 包含Forms服務所需URI值的`URLSpec`物件。
    * 儲存檔案附件的`java.util.HashMap`物件。 這是選用引數，如果您不想將檔案附加至表單，可以指定`null`。
-   * 方法填入的空白`com.adobe.idp.services.holders.BLOBHolder`物件。 這可用來儲存轉譯的PDF表單。
+   * 方法填入的空白`com.adobe.idp.services.holders.BLOBHolder`物件。 這是用來儲存轉譯的PDF表單。
    * 方法填入的空白`javax.xml.rpc.holders.LongHolder`物件。 （此引數會儲存表單中的頁數）。
    * 方法填入的空白`javax.xml.rpc.holders.StringHolder`物件。 （此引數將會儲存地區設定值）。
    * 包含此作業結果的空白`com.adobe.idp.services.holders.FormsResultHolder`物件。

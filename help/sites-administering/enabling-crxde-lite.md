@@ -1,6 +1,6 @@
 ---
 title: 在AEM中啟用CRXDE Lite
-description: 瞭解如何啟用Adobe Experience Manager中的CRXDE Lite。
+description: 瞭解如何在Adobe Experience Manager中啟用CRXDE Lite。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
@@ -9,20 +9,29 @@ exl-id: bf51def2-1dd4-4bd3-b989-685058f0ead8
 solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
-source-git-commit: a3587d248569982a8f9b137602ba95dd40c47012
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 5ef752af-d616-5b23-8312-06964e46b208
+    internal-label: Administering
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '261'
 ht-degree: 0%
-
 ---
-
 # 在AEM中啟用CRXDE Lite{#enabling-crxde-lite-in-aem}
 
-為了確保AEM安裝儘可能安全，安全性檢查清單建議在生產環境中停用[WebDAV](/help/sites-administering/security-checklist.md#disable-webdav)。
+為了確保AEM安裝儘可能安全，安全性檢查清單建議在生產環境中停用WebDAV[。](/help/sites-administering/security-checklist.md#disable-webdav)
 
-不過，CRXDE Lite依賴於`org.apache.sling.jcr.davex`套件組合才能正常運作，因此停用WebDAV也會有效地停用CRXDE Lite。
+不過，CRXDE Lite依賴`org.apache.sling.jcr.davex`套件組合才能正常運作，因此停用WebDAV也會有效地停用CRXDE Lite。
 
-發生此情況時，瀏覽到`https://serveraddress:4502/crx/de/index.jsp`將顯示空白的根節點，並且對CRXDE Lite資源的所有HTTP請求都將失敗：
+發生此情況時，瀏覽至`https://serveraddress:4502/crx/de/index.jsp`將顯示空白的根節點，而且所有對CRXDE Lite資源的HTTP請求都將失敗：
 
 ```xml
 404 Resource at '/crx/server/crx.default/jcr:root/.1.json' not found: No resource found
@@ -34,7 +43,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->由於這些方法的操作方式稍有不同，您應該使用&#x200B;**&#x200B;**&#x200B;**&#x200B; OSGI &#x200B;***或*** cURL。
+>由於這些方法的操作方式稍有不同，您應該使用&#x200B;****** OSGI ***或*** cURL。
 >
 >這兩個方法&#x200B;***不是***&#x200B;可互換。
 
@@ -56,11 +65,11 @@ ht-degree: 0%
    * **根路徑：** `/crx/server`
    * 勾選「**使用絕對URI**」下的方塊。
 
-1. 完成使用CRXDE Lite時，請確定您再次停用WebDAV。
+1. 完成使用CRXDE Lite時，請務必再次停用WebDAV。
 
 ## 使用cURL啟用CRXDE Lite {#enabling-crxde-lite-curl}
 
-您也可以執行下列兩個命令（兩者），透過cURL啟用CRXDE Lite：
+您也可以透過cURL啟用CRXDE Lite，方法是執行這兩個命令（兩者）：
 
 * 啟用`create-absolute-uri` ：
 

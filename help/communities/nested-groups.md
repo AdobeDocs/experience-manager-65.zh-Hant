@@ -10,13 +10,20 @@ exl-id: 55803b7a-9064-4392-9cc2-9f113fa8dc29
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '599'
+source-wordcount: '611'
 ht-degree: 1%
-
 ---
-
 # 製作巢狀群組{#authoring-nested-groups}
 
 ## 建立作者群組 {#creating-groups-on-author}
@@ -27,14 +34,14 @@ ht-degree: 1%
 * 選取&#x200B;**[!UICONTROL 參與資料夾]**&#x200B;以開啟。
 * 選取&#x200B;**[!UICONTROL 入門教學課程]**&#x200B;英文網站的卡片。
 
-   * 選取卡片影像。
-   * 請&#x200B;*不*&#x200B;選取圖示。
+  * 選取卡片影像。
+  * 請&#x200B;*不*&#x200B;選取圖示。
 
 結果是到達[群組主控台](/help/communities/groups.md)：
 
 ![建立群組](assets/create-group.png)
 
-群組功能會顯示為資料夾，在其中建立群組的例項。 若要開啟，請選取「群組」資料夾。 在Publish上建立的群組是可見的。
+群組功能會顯示為資料夾，在其中建立群組的例項。 若要開啟，請選取「群組」資料夾。 在「發佈」上建立的群組是可見的。
 
 ![create-new-group](assets/create-new-group.png)
 
@@ -48,13 +55,13 @@ ht-degree: 1%
 
 * **社群群組範本**：
 
-   * **[!UICONTROL 社群群組標題]**：藝術
-   * **[!UICONTROL 社群群組說明]**：各個Arts群組的父群組
-   * **[!UICONTROL 社群群組根]**： *保留為預設值*
-   * **[!UICONTROL 其他可用的社群群組語言]**：使用下拉式功能表選取可用的社群群組語言。 功能表會顯示建立上層社群網站的所有語言。 使用者可以選取這些語言之一，以在此單一步驟中建立多個地區設定的群組。 相同的群組會在個別社群網站的「群組」主控台中，以多種指定語言建立。
-   * **[!UICONTROL 社群群組名稱]**： arts
-   * **[!UICONTROL 範本]**：下拉式選單以選取`Reference Group`
-   * 選取&#x200B;**[!UICONTROL 下一步]**
+  * **[!UICONTROL 社群群組標題]**：藝術
+  * **[!UICONTROL 社群群組說明]**：各個Arts群組的父群組
+  * **[!UICONTROL 社群群組根]**： *保留為預設值*
+  * **[!UICONTROL 其他可用的社群群組語言]**：使用下拉式功能表選取可用的社群群組語言。 功能表會顯示建立上層社群網站的所有語言。 使用者可以選取這些語言之一，以在此單一步驟中建立多個地區設定的群組。 相同的群組會在個別社群網站的「群組」主控台中，以多種指定語言建立。
+  * **[!UICONTROL 社群群組名稱]**： arts
+  * **[!UICONTROL 範本]**：下拉式選單以選取`Reference Group`
+  * 選取&#x200B;**[!UICONTROL 下一步]**
 
 ![巢狀社群群組](assets/parent-to-nestedgroup.png)
 
@@ -62,23 +69,23 @@ ht-degree: 1%
 
 * **[!UICONTROL Design]**
 
-   * 變更設計或允許預設父網站的設計。
-   * 選取&#x200B;**[!UICONTROL 「下一步」]**。
+  * 變更設計或允許預設父網站的設計。
+  * 選取&#x200B;**[!UICONTROL 「下一步」]**。
 
 * **[!UICONTROL 設定]**
 
-   * **[!UICONTROL 稽核]**
+  * **[!UICONTROL 稽核]**
 
-      * 留空（繼承自父網站）。
+    * 留空（繼承自父網站）。
 
-   * **[!UICONTROL 成員資格]**
+  * **[!UICONTROL 成員資格]**
 
-      * 使用預設`Optional Membership.`
+    * 使用預設`Optional Membership.`
 
-      * **[!UICONTROL 縮圖]**
-         * `optional.*`
+    * **[!UICONTROL 縮圖]**
+      * `optional.*`
 
-      * **[!UICONTROL 選取[下一步]]**。
+    * **[!UICONTROL 選取[下一步]]**。
 
 * 選取「**[!UICONTROL 建立]**」。
 
@@ -88,7 +95,7 @@ ht-degree: 1%
 
 ![巢狀化群組](assets/create-community-group.png)
 
-#### Publish群組 {#publish-group}
+#### 發佈群組 {#publish-group}
 
 建立巢狀於`arts`群組中的群組之前，請將滑鼠游標停留在`arts`卡片上，並選取要發佈的圖示。
 
@@ -139,29 +146,29 @@ ht-degree: 1%
 
 發佈主要社群網站後：
 
-* Publish會個別顯示每個群組：
+* 分別發佈每個群組：
 
-   * 正在等候確認群組已發佈。
+  * 正在等候確認群組已發佈。
 
-* 在發佈巢狀內嵌的任何群組之前，先對父群組Publish：
+* 發佈巢狀內嵌的任何群組之前，請先發佈父群組：
 
-   * 所有群組必須以由上而下方式發佈。
+  * 所有群組必須以由上而下方式發佈。
 
 ![群組已發佈](assets/group-published.png)
 
-## Publish上的體驗 {#experience-on-publish}
+## 發佈時的體驗 {#experience-on-publish}
 
 登入時可以體驗不同的群組，例如，將[示範使用者](/help/communities/tutorials.md#demo-users)用於：
 
 * 藝術/歷程記錄群組成員： `emily.andrews@mailinator.com/password`
-   * 受限制的（秘密）群組（藝術/歷史）是可見的：
-   * 能夠檢視選用的（公用）群組。
-   * 能夠加入受限制的（開放的）群組。
+  * 受限制的（秘密）群組（藝術/歷史）是可見的：
+  * 能夠檢視選用的（公用）群組。
+  * 能夠加入受限制的（開放的）群組。
 
 * 群組管理員： `aaron.mcdonald@mailinator.com/password`
 
-   * 能夠檢視選用的（公用）群組。
-   * 能夠加入受限制的（開放的）群組。
-   * 無法檢視受限制的（機密）群組。
+  * 能夠檢視選用的（公用）群組。
+  * 能夠加入受限制的（開放的）群組。
+  * 無法檢視受限制的（機密）群組。
 
 存取作者上的Communities [成員與群組主控台](/help/communities/members.md)，以將其他使用者新增至與社群群組相對應的各種成員群組。
