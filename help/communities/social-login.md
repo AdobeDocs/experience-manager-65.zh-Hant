@@ -146,7 +146,7 @@ AEM Communities提供者擴充[Adobe Granite OAuth應用程式和提供者](#ado
 此提供者需要編輯以：
 
 * 允許使用者更新
-* 在範圍](#adobe-granite-oauth-application-and-provider)內新增其他欄位[
+* 在範圍[&#128279;](#adobe-granite-oauth-application-and-provider)內新增其他欄位
 
   * 預設不會包含預設允許的所有欄位。
 
