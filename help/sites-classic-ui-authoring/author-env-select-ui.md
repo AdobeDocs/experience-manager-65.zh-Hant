@@ -9,16 +9,25 @@ exl-id: 57d45b06-e76e-420c-8cd0-389bd9f811af
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '195'
+source-wordcount: '199'
 ht-degree: 0%
-
 ---
-
 # 選取您的UI{#selecting-your-ui}
 
-由於觸控式UI會取代傳統UI，AEM例項的使用者或管理員必須做出有效決定，才能繼續使用傳統UI。 由於傳統UI已不再進行維護，因此製作使用者無法僅從傳統UI切換為觸控式UI中的同等專案。
+由於觸控式UI會取代傳統UI，AEM執行個體的使用者或管理員必須做出有效決定，才能繼續使用傳統UI。 由於傳統UI已不再進行維護，因此製作使用者無法僅從傳統UI切換為觸控式UI中的同等專案。
 
 為了方便編寫使用者，觸控式UI可讓您在必要時切換至傳統UI。 如需詳細資訊，請參閱標準編寫檔案中的[選取您的UI](/help/sites-authoring/select-ui.md)。
 

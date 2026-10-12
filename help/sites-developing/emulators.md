@@ -10,13 +10,22 @@ exl-id: 009b7e2c-ac37-4acc-a656-0a34d3853dfd
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '609'
+source-wordcount: '618'
 ht-degree: 0%
-
 ---
-
 # 模擬器{#emulators}
 
 {{ue-over-mobile}}
@@ -46,7 +55,7 @@ AEM模擬器架構：
 
 ### 模擬器如何轉換內容 {#how-the-emulator-transforms-the-content}
 
-模擬器的運作方式是將HTML內文內容包裝到模擬器DIV中。 例如，下列html程式碼：
+模擬器的運作方式是將HTML內文內容包裝進模擬器DIV。 例如，下列html程式碼：
 
 ```xml
 <body>
@@ -119,14 +128,14 @@ AEM模擬器架構：
 
 * 行動基本模擬器的初始指令碼透過JavaScript定義：
 
-   * 為頁面定義的所有模擬器的設定(emulatorConfigs)
-   * 模擬器管理員透過以下方式整合頁面中的模擬器功能：
+  * 為頁面定義的所有模擬器的設定(emulatorConfigs)
+  * 模擬器管理員透過以下方式整合頁面中的模擬器功能：
 
-     `emulatorMgr.launch(config)`；
+    `emulatorMgr.launch(config)`;
 
-     模擬器管理員的定義如下：
+    模擬器管理員的定義如下：
 
-     `/libs/wcm/emulator/widgets/source/EmulatorManager.js`
+    `/libs/wcm/emulator/widgets/source/EmulatorManager.js`
 
 #### 建立自訂行動模擬器 {#creating-a-custom-mobile-emulator}
 
@@ -140,7 +149,7 @@ AEM模擬器架構：
 
    例如，您可以參照節點`/libs/wcm/mobile/components/emulators/iPhone/css`
 
-1. 如有需要，請定義JS使用者端程式庫，以定義特定外掛程式：名稱= js，節點型別= cq：ClientLibrary
+1. 如有需要，請定義JS使用者端程式庫，以定義特定外掛程式：名稱= js，節點型別= cq:ClientLibrary
 
    例如，您可以參照節點`/libs/wcm/mobile/components/emulators/base/js`
 

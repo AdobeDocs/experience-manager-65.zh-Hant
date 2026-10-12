@@ -10,18 +10,32 @@ role: User, Admin
 mini-toc-levels: 3
 exl-id: 815f577d-4774-4830-8baf-0294bd085b83
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: bd0d2470-932c-4269-8eca-6d939b72d9ef
+    internal-label: Dynamic Media
+subfeature_v2:
+  - id: c12bda38-aa1a-4647-b62e-42cd4537dac6
+    internal-label: Dynamic Media Classic
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '2851'
+source-wordcount: '2909'
 ht-degree: 2%
-
 ---
-
 # 將Dynamic Media Classic功能新增至頁面 {#adding-scene-features-to-your-page}
 
 [Adobe Dynamic Media Classic](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/home.html?lang=zh-Hant)是託管式解決方案，可管理、增強、發佈多媒體資產，並將其傳送至Web、行動裝置、電子郵件及連線至網際網路的顯示器和列印。
 
-您可以在多種檢視器中檢視Dynamic Media Classic中發佈的Experience Manager資產：
+您可以在多種檢視器中檢視在Dynamic Media Classic中發佈的Experience Manager資產：
 
 * 縮放
 * 彈出
@@ -29,13 +43,13 @@ ht-degree: 2%
 * 影像範本
 * 影像
 
-您可以直接從Experience Manager將數位資產發佈到Dynamic Media Classic，也可以從Dynamic Media Classic將數位資產發佈到Experience Manager。
+您可以直接從Experience Manager發佈數位資產到Dynamic Media Classic，也可以從Dynamic Media Classic發佈數位資產到Experience Manager。
 
-本檔案說明如何從Experience Manager發佈數位資產到Dynamic Media Classic，反之亦然。 檢視器也會詳細說明。 如需設定Dynamic Media ClassicExperience Manager的詳細資訊，請參閱[將Dynamic Media Classic與Experience Manager整合](/help/sites-administering/scene7.md)。
+本檔案說明如何從Experience Manager發佈數位資產到Dynamic Media Classic，反之亦然。 檢視器也會詳細說明。 如需有關為Dynamic Media Classic設定Experience Manager的資訊，請參閱[將Dynamic Media Classic與Experience Manager整合](/help/sites-administering/scene7.md)。
 
 另請參閱[新增影像地圖](image-maps.md)。
 
-如需有關搭配Experience Manager使用視訊元件的詳細資訊，請參閱[視訊](video.md)。
+如需搭配Experience Manager使用視訊元件的詳細資訊，請參閱[視訊](video.md)。
 
 >[!NOTE]
 >
@@ -51,12 +65,12 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->Experience Manager以非同步方式發佈至Dynamic Media Classic。 選取&#x200B;**[!UICONTROL Publish]**&#x200B;後，您的資產需要幾秒鐘才能發佈至Dynamic Media Classic。
+>Experience Manager以非同步方式發佈至Dynamic Media Classic。 選取&#x200B;**[!UICONTROL 發佈]**&#x200B;後，您的資產需要幾秒鐘才能發佈至Dynamic Media Classic。
 >
 
 ## Dynamic Media Classic元件 {#scene-components}
 
-Experience Manager中有下列Dynamic Media Classic元件：
+Experience Manager中有以下Dynamic Media Classic元件：
 
 * 縮放
 * 彈出（縮放）
@@ -74,7 +88,7 @@ Experience Manager中有下列Dynamic Media Classic元件：
 >
 >如果您正在建立及開發自訂檢視器並使用「內容尋找器」，則必須明確新增`allowfullscreen`引數。
 
-### Flash檢視器生命週期結束通知 {#flash-viewers-end-of-life-notice}
+### Flash檢視器生命週期結束注意事項 {#flash-viewers-end-of-life-notice}
 
 自2017年1月31日起，Adobe Dynamic Media Classic不再支援Flash檢視器平台。
 
@@ -111,7 +125,7 @@ Experience Manager中有下列Dynamic Media Classic元件：
 
 **若要在回應式網站中新增互動式檢視體驗：**
 
-1. 登入Experience Manager，並確認您已設定[Adobe Dynamic Media ClassicCloud Service](/help/sites-administering/scene7.md#configuring-scene-integration)，且Dynamic Media Classic元件可供使用。
+1. 登入Experience Manager，並確認您已設定[Adobe Dynamic Media Classic雲端服務](/help/sites-administering/scene7.md#configuring-scene-integration)，而且Dynamic Media Classic元件可供使用。
 
    >[!NOTE]
    >
@@ -139,7 +153,7 @@ Experience Manager中有下列Dynamic Media Classic元件：
 
 ### 縮放 {#zoom}
 
-當您按下&#x200B;**[!UICONTROL +]**&#x200B;按鈕時，HTML5縮放元件會顯示較大的影像。
+按下&#x200B;**[!UICONTROL +]**&#x200B;按鈕時，HTML5縮放元件會顯示較大的影像。
 
 資產底部有縮放工具。 若要放大，請選取&#x200B;**[!UICONTROL +]**；若要縮小，請選取&#x200B;**[!UICONTROL -]**。 點選&#x200B;**[!UICONTROL x]**&#x200B;或重設縮放箭頭，可讓影像回覆為匯入的原始大小。 選取對角線箭頭，使其成為全熒幕。 選取「**[!UICONTROL 編輯]**」以設定元件。 使用此元件，您可以設定所有[!UICONTROL Dynamic Media Classic]元件[&#128279;](#settings-common-to-all-scene-components)的通用設定。
 
@@ -147,7 +161,7 @@ Experience Manager中有下列Dynamic Media Classic元件：
 
 ### 彈出 {#flyout}
 
-在HTML5 **[!UICONTROL 彈出式專案]**&#x200B;元件中，資產會顯示為分割熒幕；將資產保留為指定大小；顯示縮放部分時則顯示為右側。 選取「**[!UICONTROL 編輯]**」以設定元件。 使用此元件，您可以設定所有Dynamic Media Classic元件的[共同設定](#settings-common-to-all-scene-components)。
+在HTML5 **[!UICONTROL 彈出式視窗]**&#x200B;元件中，資產會顯示為拆分畫面；將資產保留指定的大小；顯示縮放部分時則顯示為右側。 選取「**[!UICONTROL 編輯]**」以設定元件。 使用此元件，您可以設定所有Dynamic Media Classic元件的[共同設定](#settings-common-to-all-scene-components)。
 
 >[!NOTE]
 >
@@ -185,7 +199,7 @@ Dynamic Media Classic **[!UICONTROL 影像]**&#x200B;元件可讓您將Dynamic M
 
 ### 影像範本 {#image-template}
 
-[Dynamic Media Classic影像範本](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/quick-start-template-basics.html?lang=zh-Hant)是匯入至Dynamic Media Classic的層級Photoshop內容，其內容和屬性已引數化為變動。 **[!UICONTROL 影像範本]**&#x200B;元件可讓您以Experience Manager匯入影像並動態變更文字。 此外，您可以將&#x200B;**[!UICONTROL 影像範本]**&#x200B;元件設定為使用使用者端內容的值，讓每位使用者都能透過個人化的方式體驗影像。
+[Dynamic Media Classic影像範本](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/quick-start-template-basics.html?lang=zh-Hant)是匯入至Dynamic Media Classic的層級Photoshop內容，其內容和屬性已引數化為變動。 **[!UICONTROL 影像範本]**&#x200B;元件可讓您在Experience Manager中匯入影像並動態變更文字。 此外，您可以將&#x200B;**[!UICONTROL 影像範本]**&#x200B;元件設定為使用使用者端內容的值，讓每位使用者都能透過個人化的方式體驗影像。
 
 若要設定元件，請選取&#x200B;**[!UICONTROL 編輯]**。 您可以設定所有Dynamic Media Classic元件的[通用設定](#settings-common-to-all-scene-components)以及本節中說明的其他設定。
 
@@ -238,7 +252,7 @@ Dynamic Media Classic **[!UICONTROL 影像]**&#x200B;元件可讓您將Dynamic M
 
 ### 視訊元件 {#video-component}
 
-Dynamic Media Classic **[!UICONTROL 視訊]**&#x200B;元件(可從sidekick的Dynamic Media Classic區段取得)會使用裝置和頻寬偵測，將正確的視訊提供給每個熒幕。 此元件是HTML5視訊播放器；它是可用於跨頻道的單一檢視器。
+Dynamic Media Classic **[!UICONTROL 視訊]**&#x200B;元件（可從sidekick的Dynamic Media Classic區段取得）會使用裝置和頻寬偵測，將正確的視訊提供給每個熒幕。 此元件是HTML5視訊播放器；它是可用於跨頻道的單一檢視器。
 
 它可用於自我調整視訊集、單一MP4視訊或單一F4V視訊。
 
@@ -248,7 +262,7 @@ Dynamic Media Classic **[!UICONTROL 視訊]**&#x200B;元件(可從sidekick的Dyn
 
 ### 視訊元件的已知限制 {#known-limitations-for-the-video-component}
 
-AdobeDAM和WCM會顯示是否上傳主要來源影片。 它們不會顯示這些Proxy資產：
+Adobe DAM和WCM會顯示是否已上傳主要來源影片。 它們不會顯示這些Proxy資產：
 
 * Dynamic Media Classic編碼的轉譯
 * Dynamic Media Classic最適化視訊集
@@ -257,15 +271,15 @@ AdobeDAM和WCM會顯示是否上傳主要來源影片。 它們不會顯示這�
 
 ## Dynamic Media Classic內容瀏覽器 {#scene-content-browser}
 
-Dynamic Media Classic內容瀏覽器可讓您直接在Experience Manager檢視Dynamic Media Classic的內容。 若要存取內容瀏覽器，請在&#x200B;**[!UICONTROL 內容尋找器]**&#x200B;中，選取觸控最佳化使用者介面中的&#x200B;**[!UICONTROL Dynamic Media Classic]**，或傳統使用者介面中的&#x200B;**[!UICONTROL S7]**&#x200B;圖示。 兩個使用者介面之間的功能相同。
+Dynamic Media Classic內容瀏覽器可讓您直接在Experience Manager中從Dynamic Media Classic檢視內容。 若要存取內容瀏覽器，請在&#x200B;**[!UICONTROL 內容尋找器]**&#x200B;中，選取觸控最佳化使用者介面中的&#x200B;**[!UICONTROL Dynamic Media Classic]**，或傳統使用者介面中的&#x200B;**[!UICONTROL S7]**&#x200B;圖示。 兩個使用者介面之間的功能相同。
 
-如果您有多個組態，依預設Experience Manager會顯示[預設組態](/help/sites-administering/scene7.md#configuring-a-default-configuration)。 您可以在下拉式選單中直接在Dynamic Media Classic內容瀏覽器中選取不同的設定。
+如果您有多個設定，Experience Manager預設會顯示[預設設定](/help/sites-administering/scene7.md#configuring-a-default-configuration)。 您可以在下拉式選單中直接在Dynamic Media Classic內容瀏覽器中選取不同的設定。
 
 >[!NOTE]
 >
 >* 隨選資料夾中的Assets未出現在Dynamic Media Classic內容瀏覽器中。
 >* 啟用[安全預覽](/help/sites-administering/scene7.md#configuring-the-state-published-unpublished-of-assets-pushed-to-scene)時，Dynamic Media Classic上已發佈和未發佈的資產都會出現在Dynamic Media Classic內容瀏覽器中。
->* 如果您在內容瀏覽器中看不到&#x200B;**[!UICONTROL Dynamic Media Classic]**&#x200B;或&#x200B;**[!UICONTROL S7]**&#x200B;圖示為選項，您必須[設定Dynamic Media Classic以使用Experience Manager](/help/sites-administering/scene7.md)。
+>* 如果您在內容瀏覽器中看不到&#x200B;**[!UICONTROL Dynamic Media Classic]**&#x200B;或&#x200B;**[!UICONTROL S7]**&#x200B;圖示為選項，您必須[設定Dynamic Media Classic以搭配Experience Manager](/help/sites-administering/scene7.md)使用。
 >* 對於視訊，Dynamic Media Classic內容瀏覽器支援：
 >
 >   * 最適化視訊集：包含跨多個熒幕無縫播放所需的所有視訊轉譯的容器
@@ -278,7 +292,7 @@ Dynamic Media Classic內容瀏覽器可讓您直接在Experience Manager檢視Dy
 
 * 不支援來自Dynamic Media Classic的FXG和Flash資產。
 
-從第三個下拉式功能表中選取&#x200B;**[!UICONTROL Dynamic Media Classic]**，以瀏覽Dynamic Media Classic資產。 如果您尚未設定Dynamic Media Classic/Experience Manager整合，Dynamic Media Classic就不會出現在清單中。
+從第三個下拉式功能表中選取&#x200B;**[!UICONTROL Dynamic Media Classic]**，以瀏覽Dynamic Media Classic資產。 如果您尚未設定Dynamic Media Classic/Dynamic Media Classic整合，Experience Manager就不會出現在清單中。
 
 >[!NOTE]
 >
@@ -311,7 +325,7 @@ Dynamic Media Classic內容瀏覽器可讓您直接在Experience Manager檢視Dy
 
 如果您輸入關鍵字並選取資料夾，Experience Manager會搜尋該資料夾及任何子資料夾。 但是，如果您在搜尋時未輸入任何關鍵字，則選取資料夾只會顯示該資料夾中的資產，不包含任何子資料夾。
 
-根據預設，Experience Manager會搜尋選取的資料夾和所有子資料夾。
+依預設，Experience Manager會搜尋選取的資料夾和所有子資料夾。
 
 ![chlimage_1-243](assets/chlimage_1-243.png)
 
@@ -319,11 +333,11 @@ Dynamic Media Classic內容瀏覽器可讓您直接在Experience Manager檢視Dy
 
 ![chlimage_1-244](assets/chlimage_1-244.png)
 
-**[!UICONTROL 組態]** — 如果您在[!UICONTROL Cloud Service]中定義了多個Dynamic Media Classic組態，您可以在這裡選取它。 因此，資料夾會根據您選擇的設定而變更。
+**[!UICONTROL 設定]** — 如果您在[!UICONTROL 雲端服務]中定義了多個Dynamic Media Classic設定，您可以在這裡選取它。 因此，資料夾會根據您選擇的設定而變更。
 
 ![chlimage_1-245](assets/chlimage_1-245.png)
 
-**[!UICONTROL 資產型別]** — 在Dynamic Media Classic瀏覽器中，您可以篩選結果以納入下列任一專案：影像、範本、視訊和最適化視訊集。 如果您未選取任何資產型別，依預設，會Experience Manager搜尋所有資產型別。
+**[!UICONTROL 資產型別]** — 在Dynamic Media Classic瀏覽器中，您可以篩選結果以納入下列任一專案：影像、範本、視訊和最適化視訊集。 如果您未選取任何資產型別，Experience Manager預設會搜尋所有資產型別。
 
 ![chlimage_1-246](assets/chlimage_1-246.png)
 
@@ -331,10 +345,10 @@ Dynamic Media Classic內容瀏覽器可讓您直接在Experience Manager檢視Dy
 >
 >* 在傳統UI中，您也可以搜尋&#x200B;**Flash**&#x200B;和&#x200B;**FXG**。 不支援在觸控最佳化UI中篩選這些型別。
 >
->* 搜尋視訊時，您會搜尋單一轉譯。 結果會傳回原始轉譯（僅限&amp;amp；ast；.mp4）和編碼的轉譯。
->* 搜尋最適化視訊集時，您將會搜尋資料夾和所有子資料夾，但前提是您已新增關鍵字至搜尋。 如果您尚未新增關鍵字，Experience Manager不會搜尋子資料夾。
+>* 搜尋視訊時，您會搜尋單一轉譯。 結果會傳回原始轉譯（僅限&amp;ast；.mp4）和編碼的轉譯。
+>* 搜尋最適化視訊集時，您將會搜尋資料夾和所有子資料夾，但前提是您已新增關鍵字至搜尋。 如果您尚未新增關鍵字，Experience Manager不會搜尋子檔案夾。
 >
 
-**[!UICONTROL Publish狀態]** — 您可以根據發佈狀態來篩選資產： **[!UICONTROL 已取消發佈]**&#x200B;或&#x200B;**[!UICONTROL 已發佈]**。 如果您未選取任何&#x200B;**[!UICONTROL Publish狀態]**，根據預設，Experience Manager會搜尋所有發佈狀態。
+**[!UICONTROL 發佈狀態]** — 您可以根據發佈狀態來篩選資產： **[!UICONTROL 已取消發佈]**&#x200B;或&#x200B;**[!UICONTROL 已發佈]**。 如果您未選取任何&#x200B;**[!UICONTROL 發佈狀態]**，Experience Manager預設會搜尋所有發佈狀態。
 
 ![chlimage_1-247](assets/chlimage_1-247.png)

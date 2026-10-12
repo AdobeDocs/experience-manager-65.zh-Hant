@@ -8,13 +8,24 @@ feature: Document Security
 exl-id: 320d8fa4-e200-4993-b018-a9718cddc5c1
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 50158d81-1c06-57f7-8bd7-e8ff76a93f85
+    internal-label: Document Security
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '695'
-ht-degree: 3%
-
+source-wordcount: '706'
+ht-degree: 6%
 ---
-
 # 註冊為使用者 {#registering-as-a-user}
 
 您可以使用從Document Security使用者那裡收到的受原則保護的檔案，即使您是該使用者組織的外部人員。 若要使用受原則保護的檔案，您必須向Document Security註冊。 如果您之前未受邀註冊，document security會在下列事件發生時啟動註冊程式：
@@ -24,7 +35,7 @@ ht-degree: 3%
 
   在您註冊並啟用帳戶後，您可以使用您有權透過原則使用的受原則保護檔案。 如果Document Security管理員為受邀使用者啟用這些功能，則您可能有權執行這些任務：
 
-* 使用Document Security原則的Protect檔案。
+* 使用Document Security原則來保護檔案。
 * 建立您自己的使用者原則，可套用至您的檔案。
 * 邀請其他外部使用者將受原則保護的檔案新增至原則，以使用這些受原則保護的檔案。
 
@@ -39,7 +50,7 @@ ht-degree: 3%
 如果您是受邀使用者，並且收到來自Document Security的電子郵件註冊訊息，則可以使用訊息中的URL進行註冊，以開啟線上註冊頁面。 註冊後，您將收到關於啟用帳戶的第二次通知。
 
 1. 開啟Document Security註冊電子郵件。 該訊息包含的URL是Document Security中「外部使用者註冊」頁面的連結。
-1. 按一下URL或將其複製並貼到瀏覽器中。 將會顯示「外部使用者註冊」頁面。
+1. 請按一下 URL，或將其複製貼到您的瀏覽器。 將會顯示「外部使用者註冊」頁面。
 1. 在適當的方塊中輸入您的姓名、電話號碼、地址、組織和密碼，然後在「確認密碼」方塊中重新輸入您的密碼。 您的密碼可以是八個字元的任意組合。
 1. 按一下「儲存」。 系統會顯示感謝訊息，通知您檢視電子郵件中的啟用電子郵件訊息。 現在啟用您的帳戶以完成註冊程式。
 
@@ -50,7 +61,7 @@ ht-degree: 3%
 在管理員停用或刪除您的帳戶之前，該帳戶會一直保持活動狀態。
 
 1. 開啟Document Security註冊確認電子郵件。
-1. 按一下訊息中顯示的URL。 此時會顯示Document Security啟用頁面。
+1. 按一下訊息中顯示的 URL。 此時會顯示Document Security啟用頁面。
 1. 按一下這裡以移至登入頁面。
 1. 在「使用者名稱」方框中，輸入您在Document Security下已註冊的電子郵件地址。 此電子郵件地址是您預設的Document Security使用者名稱。
 1. 在「密碼」方塊中，輸入您註冊時建立的密碼，然後按一下「登入」。

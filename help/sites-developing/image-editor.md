@@ -1,6 +1,6 @@
 ---
 title: 影像編輯器
-description: 影像編輯器是AEM的一項核心功能，元件可使用它來協助內容作者操控影像。
+description: 影像編輯器是AEM的核心元件，元件可使用它來協助內容作者操控影像。
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
@@ -9,16 +9,25 @@ exl-id: af6cf1e0-8901-4621-9f72-e791cb8d68ae
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '292'
-ht-degree: 2%
-
+source-wordcount: '322'
+ht-degree: 17%
 ---
-
 # 影像編輯器{#image-editor}
 
-影像編輯器是AEM的一項核心功能，元件可使用它來協助內容作者操控影像。
+影像編輯器是AEM的核心元件，元件可使用它來協助內容作者操控影像。
 
 >[!CAUTION]
 >
@@ -49,7 +58,7 @@ ht-degree: 2%
 
 影像編輯器支援可縮放向量圖形(SVG)。
 
-* 支援從DAM拖放SVG資產以及從本機檔案系統上傳SVG檔案。
+* 支援從 DAM 拖放 SVG 資產以及上傳從本機檔案系統上傳的 SVG 檔案。
 
 ## 依MIME型別啟用外掛程式 {#enabling-plugins-by-mime-type}
 
@@ -59,7 +68,7 @@ ht-degree: 2%
 
 ### 範例 {#example}
 
-舉例來說，我們假設只有GIF、JPEG、PNG、WEBP和TIFF影像才允許裁切功能。
+例如，假設僅允許裁切功能用於GIF、JPEG、PNG、WEBP和TIFF影像。
 
 然後，必須在影像元件的`cq:editConfig`節點上的外掛程式的設定節點上，將`supportedMimeTypes`屬性設定為允許的MIME型別字串。
 

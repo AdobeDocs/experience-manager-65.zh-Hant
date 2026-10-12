@@ -10,18 +10,27 @@ feature: Administering
 exl-id: 1e34c5ca-9e08-4b2a-901c-ab28aeb4a807
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 5ef752af-d616-5b23-8312-06964e46b208
+    internal-label: Administering
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '592'
+source-wordcount: '626'
 ht-degree: 0%
-
 ---
-
 # AEM 6.4中的RDBMS支援{#rdbms-support-in-aem}
 
 ## 概觀 {#overview}
 
-AEM對關聯式資料庫持續性的支援是使用Document Microkernel來實作。 檔案Microkernel是用來實作MongoDB持續性的基礎。
+AEM對關聯式資料庫持續性的支援是使用Document Microkernel實作。 檔案Microkernel是用來實作MongoDB持續性的基礎。
 
 它包含以Mongo Java API為基礎的Java API。 也提供BlobStore API的實作。 根據預設，Blob會儲存在資料庫中。
 
@@ -33,7 +42,7 @@ AEM對關聯式資料庫持續性的支援是使用Document Microkernel來實作
 
 ## 支援的資料庫 {#supported-databases}
 
-如需有關AEM中關聯式資料庫支援層級的詳細資訊，請參閱[技術需求頁面](/help/sites-deploying/technical-requirements.md)。
+如需AEM中關聯式資料庫支援層級的詳細資訊，請參閱[技術需求頁面](/help/sites-deploying/technical-requirements.md)。
 
 ## 設定步驟 {#configuration-steps}
 
@@ -43,7 +52,7 @@ AEM對關聯式資料庫持續性的支援是使用Document Microkernel來實作
 
 如需建立JDBC驅動程式的OSGi套件組合的相關步驟，請參閱Apache Sling網站上的此[檔案](https://sling.apache.org/documentation/bundles/datasource-providers.html#convert-driver-jars-to-bundle)。
 
-組合準備就緒後，請按照以下步驟使用RDB持續性設定AEM：
+套件組合準備就緒後，請依照下列步驟使用RDB持續性設定AEM：
 
 1. 請確定資料庫協助程式已啟動，而且您有可與AEM搭配使用的作用中資料庫。
 1. 將AEM 6.3 jar複製到安裝目錄。
@@ -84,11 +93,11 @@ AEM對關聯式資料庫持續性的支援是使用Document Microkernel來實作
 
 * `driverClassName:` JDBC驅動程式類別名稱。 根據您要使用的資料庫，以及隨後連線至資料庫所需的驅動程式，這會有所不同。 以下是AEM支援之所有資料庫的類別名稱：
 
-   * PostgreSQL的`org.postgresql.Driver`；
-   * DB2的`com.ibm.db2.jcc.DB2Driver`；
-   * `oracle.jdbc.OracleDriver`用於Oracle；
-   * MySQL和MariaDB的`com.mysql.jdbc.Driver` （實驗性）；
-   * c `om.microsoft.sqlserver.jdbc.SQLServerDriver` for Microsoft SQL Server （實驗性）。
+  * PostgreSQL的`org.postgresql.Driver`；
+  * DB2的`com.ibm.db2.jcc.DB2Driver`；
+  * Oracle的`oracle.jdbc.OracleDriver`；
+  * MySQL和MariaDB的`com.mysql.jdbc.Driver` （實驗性）；
+  * c `om.microsoft.sqlserver.jdbc.SQLServerDriver` for Microsoft SQL Server （實驗性）。
 
 * `username:`執行資料庫的使用者名稱。
 
@@ -96,16 +105,16 @@ AEM對關聯式資料庫持續性的支援是使用Document Microkernel來實作
 
 ### url字串格式 {#url-string-formats}
 
-根據需要使用的資料庫型別，在資料來源設定中使用不同的URL字串格式。 以下是AEM目前支援之資料庫的格式清單：
+根據需要使用的資料庫型別，在資料來源設定中使用不同的URL字串格式。 以下是AEM目前支援的資料庫格式清單：
 
 * PostgreSQL的`jdbc:postgresql:databasename`；
 * DB2的`jdbc:db2://localhost:port/databasename`；
-* `jdbc:oracle:thin:localhost:port:SID`用於Oracle；
+* Oracle的`jdbc:oracle:thin:localhost:port:SID`；
 * MySQL和MariaDB的`jdbc:mysql://localhost:3306/databasename` （實驗性）；
 * Microsoft SQL Server的`jdbc:sqlserver://localhost:1453;databaseName=name` （實驗性）。
 
 ## 已知限制 {#known-limitations}
 
-雖然RDBMS持續性支援同時使用單一資料庫的多個AEM執行個體，但並不支援同時安裝。
+雖然RDBMS持續性可支援同時使用具有單一資料庫的多個AEM執行個體，但無法同時安裝。
 
 為了解決這個問題，請務必先以單一成員執行安裝，並在第一個成員完成安裝後新增其他成員。

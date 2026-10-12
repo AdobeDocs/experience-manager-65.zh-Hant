@@ -1,17 +1,36 @@
 ---
 title: 安裝最新6.5.15.0 Service Pack後，CRX/套件組合和開始頁面服務發生無法使用的錯誤
 description: 安裝最新6.5.15.0 Service Pack後，CRX/套件組合和開始頁面服務發生無法使用的錯誤
+SEO Description: Trouble shooting steps to resolve the errors after installing latest 6.5.15.0 service pack
 exl-id: dfe015a3-3a24-41c5-aede-8e086851d62b
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 feature: Adaptive Forms,AEM Forms on JEE,AEM Forms on OSGi
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 94663796-0ee7-58b9-84f4-b425ebb69e83
+    internal-label: AEM Forms on JEE
+  - id: 8c4fb903-572c-5473-ad45-8ebb0d5d8134
+    internal-label: AEM Forms on OSGi
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '276'
-ht-degree: 2%
-
+source-wordcount: '368'
+ht-degree: 1%
 ---
-
 # 安裝AEM (6.5.15.0) Service Pack後發生服務無法使用錯誤 {#steps-to-resolve-error-after-installing-service-pack}
 
 ## 問題 {#issue}
@@ -19,7 +38,7 @@ ht-degree: 2%
 安裝[AEM 6.5.15.0 Service Pack](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip)後，錯誤發生如下：
 * 錯誤[FelixDispatchQueue] org.apache.sling.scripting.console FrameworkEvent錯誤(org.osgi.framework.BundleException：無法解析org.apache.sling.scripting.console
 
-安裝AEM 6.5.15.0 Service Pack後，CRX/套件組合和起始頁面顯示「服務無法使用」錯誤。
+安裝AEM 6.5.15.0 Service Pack後，CRX/套件組合和起始頁面顯示服務無法使用錯誤。
 
 ## 套用至 {#applies-to}
 

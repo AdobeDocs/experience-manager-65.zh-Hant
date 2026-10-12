@@ -10,13 +10,22 @@ exl-id: d2d351e7-87a5-4895-b4ec-391fb0b66798
 solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
-source-git-commit: f96b178ae84b4b930b59e36d4994970682c53dbd
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 5ef752af-d616-5b23-8312-06964e46b208
+    internal-label: Administering
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
-source-wordcount: '527'
-ht-degree: 2%
-
+source-wordcount: '553'
+ht-degree: 1%
 ---
-
 # 疑難排解Adobe Experience Manager {#troubleshooting-aem}
 
 以下章節涵蓋您在使用AEM (Adobe Experience Manager)時可能會遇到的一些問題，以及有關如何疑難排解這些問題的建議。
@@ -108,7 +117,7 @@ ht-degree: 2%
 為AEM WCM開發功能時，可能會開啟JCR工作階段（相當於開啟資料庫連線）。 如果開啟的工作階段從未關閉，您的系統可能會遇到以下症狀：
 
 * 系統速度會變慢。
-* 您可以看到大部份CacheManager： resizeAll專案在記錄檔中；下列數字(size=&lt;x>)顯示快取數目，每個工作階段會開啟數個快取。
+* 您可以看到許多CacheManager： resizeAll專案在記錄檔中；下列數字（大小=&lt;x>) shows the number of caches, each session opens several caches.）
 * 系統有時會用盡記憶體（在數小時、數天或數週後，視嚴重程度而定）。
 
 若要開始分析未關閉的工作階段，請參閱知識庫文章[未關閉的資源解析器](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-kcs/kbarticles/ka-23761)。

@@ -1,6 +1,6 @@
 ---
 title: 協助管理員啟動並執行的最佳實務
-description: 尋找由Adobe工程和諮詢團隊編譯的最佳實務，以協助管理員啟動並執行。
+description: 尋找由Adobe工程和諮詢團隊編譯的最佳實務，協助管理員著手執行。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
@@ -9,16 +9,25 @@ exl-id: 576d87c8-cc96-45a0-b3cf-defb440babbb
 solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 243139ec-8e41-5296-a287-31343ab1bc0f
+    internal-label: Integration
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '530'
+source-wordcount: '533'
 ht-degree: 6%
-
 ---
-
 # 最佳做法{#best-practices}
 
-最佳實務說明如何以最有效率且最有效的方式開發、管理或使用AEM。 這份不斷增加的主題清單包括AEM中的各種領域。
+最佳實務說明如何以最有效率且最有效的方式開發、管理或使用AEM。 這份不斷增加的主題清單包括AEM中的多個領域。
 
 下列區域有與最佳實務相關的檔案：
 
@@ -35,7 +44,7 @@ ht-degree: 6%
 
 ## Assets {#assets}
 
-Assets的最佳實務，包括Dynamic Media功能和Dynamic Media Classic整合，請參閱下列主題：
+下列主題說明Assets相關的最佳實務，包括Dynamic Media功能和Dynamic Media Classic整合：
 
 <table>
  <tbody>
@@ -51,7 +60,7 @@ Assets的最佳實務，包括Dynamic Media功能和Dynamic Media Classic整合�
   </tr>
   <tr>
    <td>整合Scene7和AEM</td>
-   <td><a href="/help/sites-administering/scene7.md#best-practices-for-integrating-scene-with-aem">將Scene7與AEM整合的最佳實務</a></td>
+   <td><a href="/help/sites-administering/scene7.md#best-practices-for-integrating-scene-with-aem">整合Scene7與AEM的最佳做法</a></td>
    <td><p>說明何時開啟Polling Importer、如何測試整合，以及何時使用內容瀏覽器與直接上傳至Assets。</p> </td>
   </tr>
   <tr>
@@ -60,8 +69,8 @@ Assets的最佳實務，包括Dynamic Media功能和Dynamic Media Classic整合�
    <td>在<a href="/help/assets/managing-image-presets.md">管理影像預設集</a>的檔案中，這些主題會說明什麼是影像預設集，以及選取影像預設集選項的最佳作法。</td>
   </tr>
   <tr>
-   <td>Dynamic Media與Scene7直接整合的比較</td>
-   <td><a href="/help/sites-administering/scene7.md#aem-scene-integration-versus-dynamic-media">Scene7/AEM整合與Dynamic Media</a></td>
+   <td>Dynamic Media與Scene7直接整合</td>
+   <td><a href="/help/sites-administering/scene7.md#aem-scene-integration-versus-dynamic-media">Scene7/AEM整合與Dynamic Media比較</a></td>
    <td>說明何時最好使用Dynamic Media解決方案、何時將S7與AEM整合，或何時同時使用兩者。</td>
   </tr>
  </tbody>
@@ -81,7 +90,7 @@ Assets的最佳實務，包括Dynamic Media功能和Dynamic Media Classic整合�
   <tr>
    <td>為您的執行個體定義預設UI。</td>
    <td><p><a href="/help/sites-authoring/select-ui.md#configuring-the-default-ui-for-your-instance">為您的執行個體設定預設使用者介面</a></p> </td>
-   <td>AEM有兩種UI：觸控最佳化和傳統。 本節詳細說明如何定義執行個體的預設UI。</td>
+   <td>AEM有兩種UI：觸控最佳化和Classic。 本節詳細說明如何定義執行個體的預設UI。</td>
   </tr>
   <tr>
    <td>多網站管理</td>
@@ -101,7 +110,7 @@ Assets的最佳實務，包括Dynamic Media功能和Dynamic Media Classic整合�
   <tr>
    <td>工作流程</td>
    <td><a href="/help/sites-developing/workflows-best-practices.md#configuration">工作流程最佳實務 — 設定</a></td>
-   <td>工作流程可讓您自動化Adobe Experience Manager (AEM)活動，並可呈現AEM環境中發生的大量處理，因此強烈建議您仔細計畫和設定工作流程實作。</td>
+   <td>工作流程可讓您自動化Adobe Experience Manager (AEM)活動，且可代表AEM環境中發生的大量處理，因此強烈建議您仔細規劃和設定工作流程實作。</td>
   </tr>
  </tbody>
 </table>
