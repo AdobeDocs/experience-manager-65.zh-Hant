@@ -9,13 +9,25 @@ exl-id: e24d815c-83e2-4639-8273-b4c0a6bb008a
 solution: Experience Manager, Experience Manager Sites
 feature: Security
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: b1210526-416b-4ef6-bcc0-1692e99f30e9
+    internal-label: Administration and security
+subfeature_v2:
+  - id: c35bc059-fd80-4a01-91a6-e48da3c76758
+    internal-label: Security practices
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '793'
+source-wordcount: '794'
 ht-degree: 1%
-
 ---
-
 # 封裝Token支援{#encapsulated-token-support}
 
 ## 簡介 {#introduction}
@@ -58,7 +70,7 @@ ht-degree: 1%
 >
 >* 粘性工作階段已啟用，或
 >
->* 同步開始時，使用者已在AEM中建立。 這表示在同步處理期間，處理常式&#x200B;**建立**&#x200B;個使用者的情況下，將不支援封裝的權杖。
+>* 同步啟動時，使用者已在AEM中建立。 這表示在同步處理期間，處理常式&#x200B;**建立**&#x200B;個使用者的情況下，將不支援封裝的權杖。
 
 設定封裝Token時，您需要考慮一些事項：
 
@@ -69,7 +81,7 @@ ht-degree: 1%
 
 若要跨執行個體復寫金鑰，您需要：
 
-1. 存取AEM例項，通常是包含要複製之關鍵素材的製作例項；
+1. 存取AEM例項，通常是包含要複製之關鍵資料的製作例項；
 1. 在本機檔案系統中找到`com.adobe.granite.crypto.file`套件。 例如，在此路徑下：
 
    * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle25`
@@ -95,5 +107,5 @@ ht-degree: 1%
 複製HMAC金鑰後，您可以透過Web主控台啟用封裝權杖：
 
 1. 將瀏覽器指向`https://serveraddress:port/system/console/configMgr`
-1. 尋找名為&#x200B;**AdobeGranite權杖驗證處理常式**&#x200B;的專案，然後按一下它。
+1. 尋找名為&#x200B;**Adobe Granite Token Authentication Handler**&#x200B;的專案，然後按一下它。
 1. 在下列視窗中，勾選&#x200B;**啟用封裝權杖支援**&#x200B;方塊，然後按&#x200B;**儲存**。
