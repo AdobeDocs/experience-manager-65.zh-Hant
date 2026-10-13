@@ -9,13 +9,26 @@ feature: Correspondence Management
 exl-id: bf6d3edb-6bf7-4d3e-b042-d75cb8e39e3f
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 3f00fc92-85ee-583e-abd1-3bc3d96de3a0
+    internal-label: Correspondence Management
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1381'
 ht-degree: 5%
-
 ---
-
 # 將自訂動作新增至資產清單檢視{#add-custom-action-to-the-asset-listing-view}
 
 ## 概觀 {#overview}
@@ -78,7 +91,7 @@ ht-degree: 5%
 
    1. 用滑鼠右鍵按一下&#x200B;**專案**&#x200B;資料夾，然後選取&#x200B;**建立** > **建立節點**。
 
-   1. 確定[建立節點]對話方塊具有下列值，然後按一下[確定] **&#x200B;**：
+   1. 確定[建立節點]對話方塊具有下列值，然後按一下[確定] ****：
 
       **名稱：** downloadFlatPDF （或您要指定給此屬性的名稱）
 
@@ -108,7 +121,7 @@ ht-degree: 5%
         <tr>
         <td>圖示</td>
         <td>字串</td>
-        <td>icon-download<br /> <br /> Correspondence Management顯示在命令/功能表左側的圖示。 如需其他可用的圖示和設定，請參閱<a href="https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hant" target="_blank">CoralUI圖示檔案</a>。<br /> </td>
+        <td>icon-download<br /> <br /> Correspondence Management顯示在命令/功能表左側的圖示。 如需其他可用的圖示和設定，請參閱<a href="https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html" target="_blank">CoralUI圖示檔案</a>。<br /> </td>
         </tr>
         <tr>
         <td>jcr:primaryType</td>
@@ -250,7 +263,7 @@ ht-degree: 5%
 
    1. 用滑鼠右鍵按一下專案資料夾，然後選取&#x200B;**建立>建立節點**。
 
-   1. 確定[建立節點]對話方塊具有下列值，然後按一下[確定] **&#x200B;**：
+   1. 確定[建立節點]對話方塊具有下列值，然後按一下[確定] ****：
 
       **名稱：** letterpdfdownloader (或您要指定給此屬性的名稱 — 必須是唯一的。 如果您在此處使用不同的名稱，請在formaction.js檔案的ACTION_URL變數中指定相同的名稱。)
 
@@ -275,9 +288,9 @@ ht-degree: 5%
       將檔案命名為POST.jsp。 （檔案名稱僅需為POST.jsp。）
 
    1. 連按兩下&#x200B;**POST.jsp**&#x200B;檔案，以在CRX中開啟。
-   1. 將下列程式碼新增至POST.jsp檔案，然後按一下[儲存全部] **&#x200B;**：
+   1. 將下列程式碼新增至POST.jsp檔案，然後按一下[儲存全部] ****：
 
-      此程式碼專用於字母轉譯服務。 若是其他資產，請將該資產的Java™程式庫新增至此程式碼。 如需AEM Forms API的詳細資訊，請參閱[AEM Forms API](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hant)。
+      此程式碼專用於字母轉譯服務。 若是其他資產，請將該資產的Java™程式庫新增至此程式碼。 如需AEM Forms API的詳細資訊，請參閱[AEM Forms API](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html)。
 
       如需AEM資料庫的詳細資訊，請參閱AEM [元件](/help/sites-developing/components.md)。
 

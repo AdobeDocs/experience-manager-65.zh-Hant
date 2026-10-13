@@ -1,21 +1,29 @@
 ---
 title: 什麼是Document Security？
-
 description: 瞭解如何建立、儲存和套用預先定義的機密性設定，以及如何使用Document Security安全地散發您的資訊。
-
-
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-
 docset: aem65
-
 feature: Document Security
 exl-id: 0cdc9ee3-0172-43be-9b62-ed768534c074
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 50158d81-1c06-57f7-8bd7-e8ff76a93f85
+    internal-label: Document Security
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '3302'
 ht-degree: 0%
@@ -27,7 +35,7 @@ Document Security可確保只有授權的使用者才能使用您的檔案。 �
 * Adobe PDF檔案
 * ®Word、Excel和PowerPoint檔案
 
-如需有關原則如何保護受支援檔案型別的詳細資訊，請參閱[更多Document Security資訊](https://experienceleague.adobe.com/docs/experience-manager-65/forms/use-document-security/document-security-offerings.html?lang=zh-Hant)。
+如需有關原則如何保護受支援檔案型別的詳細資訊，請參閱[更多Document Security資訊](https://experienceleague.adobe.com/docs/experience-manager-65/forms/use-document-security/document-security-offerings.html?lang=en)。
 
 使用Document Security，您可以輕鬆建立、儲存及套用預先定義的機密性設定至您的檔案。 為了防止資訊擴散到您觸及的範圍之外，您還可以監視和控制在您分發檔案後收件者如何使用您的檔案。
 
@@ -254,7 +262,7 @@ Document Security管理員可以在「使用者管理」中使用以下許可權
 
   使用原則集可以更輕鬆地將相關原則指派和管理給組織或部門中的特定使用者。 例如，財務與人力資源部門的個別原則集可協助您輕鬆管理相關原則，並將其套用至指定給相應部門的檔案。
 
-* **使用外部授權器以動態方式套用許可權：**&#x200B;您可以使用[外部授權器](https://help.adobe.com/zh_TW/livecycle/11.0/ProgramLC/WS624e3cba99b79e12e69a9941333732bac8-6f26.2.html)根據外部條件評估及動態套用許可權。 根據外部條件以動態方式評估許可權時，您可以：
+* **使用外部授權器以動態方式套用許可權：**&#x200B;您可以使用[外部授權器](https://help.adobe.com/en_US/livecycle/11.0/ProgramLC/WS624e3cba99b79e12e69a9941333732bac8-6f26.2.html)根據外部條件評估及動態套用許可權。 根據外部條件以動態方式評估許可權時，您可以：
 
   * 為您組織中的檔案提供集中式存取控制。
 
@@ -262,7 +270,7 @@ Document Security管理員可以在「使用者管理」中使用以下許可權
 
   * 使用內容管理系統所使用的存取控制機制，以及標準原則評估程式。 例如，當服務決定使用者是否可以列印受原則保護的檔案時，它可以使用標準原則評估程式。 此外，它也可以使用您的內容管理系統所使用的存取控制機制。
 
-  雖然您可以使用外部授權處理常式完全取代Document Security原則評估程式，但建議您使用外部授權處理常式來評估原則程式。 因此，檔案存取可受內容管理系統使用的相同控制機制控制。 例如，當Document Security服務確定使用者是否可以列印受原則保護的檔案時，它會使用標準原則評估程式。 它也會使用您的內容管理系統所使用的存取控制機制。 如需詳細資訊，請參閱[建立外部授權處理常式](https://help.adobe.com/zh_TW/livecycle/11.0/ProgramLC/WS624e3cba99b79e12e69a9941333732bac8-6f26.2.html)。
+  雖然您可以使用外部授權處理常式完全取代Document Security原則評估程式，但建議您使用外部授權處理常式來評估原則程式。 因此，檔案存取可受內容管理系統使用的相同控制機制控制。 例如，當Document Security服務確定使用者是否可以列印受原則保護的檔案時，它會使用標準原則評估程式。 它也會使用您的內容管理系統所使用的存取控制機制。 如需詳細資訊，請參閱[建立外部授權處理常式](https://help.adobe.com/en_US/livecycle/11.0/ProgramLC/WS624e3cba99b79e12e69a9941333732bac8-6f26.2.html)。
 
 * **將原則集保留為有限的數目：**&#x200B;有幾個因素會導致原則與原則集持續成長。 常見因素包括：
 

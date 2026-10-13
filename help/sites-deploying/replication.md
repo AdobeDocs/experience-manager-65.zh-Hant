@@ -10,13 +10,22 @@ feature: Configuring
 exl-id: 09943de5-8d62-4354-a37f-0521a66b4c49
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: e4c42f989baf1a91e94944c612ee6b8de1dc331a
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 523b1ccd-901e-5e3b-9fa7-f3dfd82463d5
+    internal-label: Configuring
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '3334'
+source-wordcount: '3471'
 ht-degree: 3%
-
 ---
-
 # 複製{#replication}
 
 復寫代理程式是Adobe Experience Manager (AEM)的核心，因為此機制可用於：
@@ -80,7 +89,7 @@ AEM標準安裝中包含的We-Retail網站可用於說明復寫。
 >* 製作代理程式：反向復寫代理程式(publish_reverse)
 >* 發佈代理程式：反向復寫（寄件匣）
 >
->若要檢查代理程式或佇列的狀態，請使用&#x200B;**工具**&#x200B;主控台。
+>若要檢查代理程式或佇列的狀態，請使用&#x200B;**工具**主控台。
 >請參閱[監視您的復寫代理程式](#monitoring-your-replication-agents)。
 
 #### 復寫（作者至發佈） {#replication-author-to-publish}
@@ -108,15 +117,15 @@ AEM標準安裝中包含的We-Retail網站可用於說明復寫。
 用於從Author復寫至Publish。
 
 * Dispatcher 排清
-此項用於管理Dispatcher快取。 如需詳細資訊，請參閱[使編寫環境中的Dispatcher快取失效](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html?lang=zh-Hant#invalidating-dispatcher-cache-from-the-authoring-environment)和[使發佈執行個體中的Dispatcher快取失效](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html?lang=zh-Hant#invalidating-dispatcher-cache-from-a-publishing-instance)。
+此項用於管理Dispatcher快取。 如需詳細資訊，請參閱[使編寫環境中的Dispatcher快取失效](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html#invalidating-dispatcher-cache-from-the-authoring-environment)和[使發佈執行個體中的Dispatcher快取失效](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html#invalidating-dispatcher-cache-from-a-publishing-instance)。
 
 * [反向復寫](#reverse-replication-publish-to-author)
 用於從發佈復寫至作者。 反向復寫不適用於Communities功能，例如論壇、部落格和評論。 由於未啟用寄件匣，因此此功能實際上已停用。 使用反向復寫需要自訂設定。
 
 * 靜態代理程式
 這是「將節點的靜態表示儲存到檔案系統中的代理程式」。
-例如，使用預設設定時，內容頁面和DAM資產會以HTML或適當資產格式的形式儲存在`/tmp`下。檢視設定的`Settings`和`Rules`標籤。
-已要求此專案，以便當直接從應用程式伺服器要求頁面時，可以看到內容。這是專門的代理程式，（可能）在大多數執行個體中並非必要。
+例如，使用預設設定時，內容頁面和DAM資產會以HTML或適當資產格式的形式儲存在`/tmp`下。 檢視設定的`Settings`和`Rules`標籤。
+已要求此專案，以便當直接從應用程式伺服器要求頁面時，可以看到內容。 這是專門的代理程式，（可能）在大多數執行個體中並非必要。
 
 ## 復寫代理程式 — 設定引數 {#replication-agents-configuration-parameters}
 
@@ -138,16 +147,16 @@ AEM標準安裝中包含的We-Retail網站可用於說明復寫。
 
   代理程式為&#x200B;**已啟用**&#x200B;時，佇列會顯示為：
 
-   * 處理專案時&#x200B;**使用中**。
-   * 佇列為空時&#x200B;**閒置**。
-   * 專案在佇列中時&#x200B;**已封鎖**，但無法處理；例如，接收佇列已停用。
+  * 處理專案時&#x200B;**使用中**。
+  * 佇列為空時&#x200B;**閒置**。
+  * 專案在佇列中時&#x200B;**已封鎖**，但無法處理；例如，接收佇列已停用。
 
 * **序列化型別**
 
   序列化的型別：
 
-   * **預設**：設定是否自動選取代理程式。
-   * **Dispatcher Flush**：如果要使用代理程式來排清Dispatcher快取，請選取此選項。
+  * **預設**：設定是否自動選取代理程式。
+  * **Dispatcher Flush**：如果要使用代理程式來排清Dispatcher快取，請選取此選項。
 
 * **重試延遲**
 
@@ -159,8 +168,8 @@ AEM標準安裝中包含的We-Retail網站可用於說明復寫。
 
   根據環境，代理程式會使用此使用者帳戶來：
 
-   * 從製作環境收集內容並封裝
-   * 在發佈環境中建立和寫入內容
+  * 從製作環境收集內容並封裝
+  * 在發佈環境中建立和寫入內容
 
   將此欄位保留空白以使用系統使用者帳戶（在sling中定義為管理員使用者的帳戶；預設為`admin`）。
 
@@ -180,9 +189,9 @@ AEM標準安裝中包含的We-Retail網站可用於說明復寫。
 
   指定用於記錄訊息的詳細資訊等級。
 
-   * `Error`：僅記錄錯誤
-   * `Info`：記錄錯誤、警告和其他資訊訊息
-   * `Debug`：訊息中使用高層級的詳細資料，主要用於偵錯
+  * `Error`：僅記錄錯誤
+  * `Info`：記錄錯誤、警告和其他資訊訊息
+  * `Debug`：訊息中使用高層級的詳細資料，主要用於偵錯
 
   預設： `Info`
 
@@ -202,8 +211,8 @@ AEM標準安裝中包含的We-Retail網站可用於說明復寫。
 
   例如：
 
-   * 預設代理程式可以復寫至`https://localhost:4503/bin/receive`
-   * Dispatcher Flush代理程式可能會復寫至`https://localhost:8000/dispatcher/invalidate.cache`
+  * 預設代理程式可以復寫至`https://localhost:4503/bin/receive`
+  * Dispatcher Flush代理程式可能會復寫至`https://localhost:8000/dispatcher/invalidate.cache`
 
   此處指定的通訊協定（HTTP或HTTPS）會決定傳輸方法。
 
@@ -281,21 +290,21 @@ AEM標準安裝中包含的We-Retail網站可用於說明復寫。
 
   若為Dispatcher Flush代理程式，三個標準專案不需要變更：
 
-   * `CQ-Action:{action}`
-   * `CQ-Handle:{path}`
-   * `CQ-Path:{path}`
+  * `CQ-Action:{action}`
+  * `CQ-Handle:{path}`
+  * `CQ-Path:{path}`
 
   在適當情況下，這些字元可用於指出排清控制代碼或路徑時要使用的動作。 子引數是動態的：
 
-   * `{action}`表示復寫動作
+  * `{action}`表示復寫動作
 
-   * `{path}`表示路徑
+  * `{path}`表示路徑
 
   這些變數會由與請求相關的路徑/動作取代，因此不需要「硬式編碼」：
 
   >[!NOTE]
   >
-  >如果您已在非建議預設內容的內容中安裝AEM，則您必須在HTTP標頭中註冊該內容。例如：
+  >如果您已在非建議預設內容的內容中安裝AEM，則您必須在HTTP標頭中註冊該內容。 例如：
   >`CQ-Handle:/<*yourContext*>{path}`
 
 * **關閉連線**
@@ -334,7 +343,7 @@ AEM標準安裝中包含的We-Retail網站可用於說明復寫。
 
   當為頁面定義的時間或折扣發生時，就會觸發自動復寫（以視需要啟用或停用頁面）。 這主要用於Dispatcher Flush代理程式。
 
-* 接收時&#x200B;**&#x200B;**
+* 接收時&#x200B;****
 
   如果勾選，代理會在接收到復寫事件時進行復寫。
 
@@ -356,7 +365,7 @@ AEM標準安裝中包含的We-Retail網站可用於說明復寫。
 
 >[!NOTE]
 >
->當Dispatcher處理製作或發佈執行個體的HTTP請求時，來自復寫代理程式的HTTP請求必須包含PATH標頭。 除了下列程式外，您必須將PATH標頭新增到Dispatcher的使用者端標頭清單。 請參閱[/clientheaders (Client Headers)](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant#specifying-the-http-headers-to-pass-through-clientheaders)。
+>當Dispatcher處理製作或發佈執行個體的HTTP請求時，來自復寫代理程式的HTTP請求必須包含PATH標頭。 除了下列程式外，您必須將PATH標頭新增到Dispatcher的使用者端標頭清單。 請參閱[/clientheaders (Client Headers)](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#specifying-the-http-headers-to-pass-through-clientheaders)。
 >
 
 1. 存取AEM中的&#x200B;**工具**&#x200B;索引標籤。
@@ -367,7 +376,7 @@ AEM標準安裝中包含的We-Retail網站可用於說明復寫。
 
    ![chlimage_1-22](assets/chlimage_1-22.png)
 
-1. 提供的值應足以進行預設安裝。 若您進行變更，請按一下[確定] **&#x200B;**&#x200B;以儲存變更（如需個別引數的詳細資訊，請參閱[復寫代理程式 — 設定引數](#replication-agents-configuration-parameters)）。
+1. 提供的值應足以進行預設安裝。 若您進行變更，請按一下[確定] ****&#x200B;以儲存變更（如需個別引數的詳細資訊，請參閱[復寫代理程式 — 設定引數](#replication-agents-configuration-parameters)）。
 
 >[!NOTE]
 >
@@ -418,25 +427,25 @@ AEM標準安裝中包含的We-Retail網站可用於說明復寫。
 1. 在左側面板中選取&#x200B;**復寫**，然後選取&#x200B;**作者代理程式**。
 1. 選取&#x200B;**新增……**。
 1. 設定&#x200B;**標題**&#x200B;和&#x200B;**名稱**，然後選取&#x200B;**復寫代理程式**。
-1. 按一下[建立&#x200B;**&#x200B;**]以建立代理程式。
+1. 按一下[建立&#x200B;****]以建立代理程式。
 1. 連按兩下新代理程式專案，組態面板就會開啟。
 1. 按一下&#x200B;**編輯** - **代理程式設定**&#x200B;對話方塊開啟 — **序列化型別**&#x200B;已定義為預設，必須保持此狀態。
 
    * 在&#x200B;**設定**&#x200B;索引標籤中：
 
-      * 啟動&#x200B;**已啟用**。
-      * 輸入&#x200B;**描述**。
-      * 將&#x200B;**重試延遲**&#x200B;設定為`60000`。
+     * 啟動&#x200B;**已啟用**。
+     * 輸入&#x200B;**描述**。
+     * 將&#x200B;**重試延遲**&#x200B;設定為`60000`。
 
-      * 將&#x200B;**序列化型別**&#x200B;保留為`Default`。
+     * 將&#x200B;**序列化型別**&#x200B;保留為`Default`。
 
    * 在&#x200B;**傳輸**&#x200B;索引標籤中：
 
-      * 輸入新發佈執行個體的必要URI；例如，
-        `https://localhost:4504/bin/receive`。
+     * 輸入新發佈執行個體的必要URI；例如，
+       `https://localhost:4504/bin/receive`。
 
-      * 輸入用於復寫的站台特定使用者帳戶。
-      * 您可以視需要設定其他引數。
+     * 輸入用於復寫的站台特定使用者帳戶。
+     * 您可以視需要設定其他引數。
 
 1. 按一下&#x200B;**「確定」**。
 
@@ -467,19 +476,19 @@ AEM標準安裝中包含的We-Retail網站可用於說明復寫。
 
    * 在&#x200B;**設定**&#x200B;索引標籤中：
 
-      * 啟動&#x200B;**已啟用**。
-      * 輸入&#x200B;**描述**。
-      * 將&#x200B;**序列化型別**&#x200B;保留為`Dispatcher Flush`，或是在建立代理程式時將其設為相同型別。
+     * 啟動&#x200B;**已啟用**。
+     * 輸入&#x200B;**描述**。
+     * 將&#x200B;**序列化型別**&#x200B;保留為`Dispatcher Flush`，或是在建立代理程式時將其設為相同型別。
 
-      * （選擇性）選取&#x200B;**別名更新**&#x200B;以啟用Dispatcher的別名或虛名路徑失效請求。
+     * （選擇性）選取&#x200B;**別名更新**&#x200B;以啟用Dispatcher的別名或虛名路徑失效請求。
 
    * 在&#x200B;**傳輸**&#x200B;索引標籤中：
 
-      * 輸入新發佈執行個體的必要URI；例如，
-        `https://localhost:80/dispatcher/invalidate.cache`。
+     * 輸入新發佈執行個體的必要URI；例如，
+       `https://localhost:80/dispatcher/invalidate.cache`。
 
-      * 輸入用於復寫的站台特定使用者帳戶。
-      * 您可以視需要設定其他引數。
+     * 輸入用於復寫的站台特定使用者帳戶。
+     * 您可以視需要設定其他引數。
 
    對於Dispatcher Flush代理程式，只有當您使用以路徑為根據的虛擬主機專案來區分陣列時，才會使用URI屬性，而您會使用此欄位來鎖定要失效的陣列。 例如，陣列 #1 的虛擬主機為 `www.mysite.com/path1/*`，而陣列 #2 的虛擬主機為 `www.mysite.com/path2/*`。 您可以使用 URL `/path1/invalidate.cache` 鎖定第一個陣列，並使用 `/path2/invalidate.cache` 鎖定第二個陣列。
 
@@ -542,7 +551,7 @@ AEM標準安裝中包含的We-Retail網站可用於說明復寫。
 
    * **檢視記錄檔**&#x200B;以存取復寫代理程式的任何動作記錄檔。
    * **測試目標執行個體的連線**。
-   * 如有需要，對任何佇列專案強制重試&#x200B;**&#x200B;**。
+   * 如有需要，對任何佇列專案強制重試&#x200B;****。
 
    >[!CAUTION]
    >
@@ -572,7 +581,7 @@ Publisher會解壓縮所有專案、儲存專案，並向作者回報。
 1. 從左側導覽邊欄中，移至&#x200B;**[!UICONTROL 復寫 — 作者上的代理程式]**，然後按兩下&#x200B;**[!UICONTROL 預設代理程式]**。
    * 您也可以直接前往`http://serveraddress:serverport/etc/replication/agents.author/publish.html`，存取預設的發佈復寫代理程式
 1. 按復寫佇列上方的&#x200B;**[!UICONTROL 編輯]**&#x200B;按鈕。
-1. 在下列視窗中，移至&#x200B;**[!UICONTROL 批次]**&#x200B;標籤：
+1. 在下列視窗中，移至&#x200B;**[!UICONTROL 批次]**標籤：
    ![批次復寫](assets/batchreplication.png)
 1. 設定代理。
 

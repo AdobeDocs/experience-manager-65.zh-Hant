@@ -9,13 +9,26 @@ exl-id: a0719745-8d67-44bc-92ba-9ab07f31f8d2
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Developer
-source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
-source-wordcount: '586'
+source-wordcount: '588'
 ht-degree: 3%
-
 ---
-
 
 # 使用任務 {#working-with-tasks}
 
@@ -88,4 +101,4 @@ ht-degree: 3%
 
 ![收件匣](assets/project-inbox.png)
 
-若要完成工作，請選取工作，然後按一下工具列中的[完成]。 **&#x200B;**&#x200B;新增資訊至工作，然後按一下[完成]。**&#x200B;** 如需詳細資訊，請參閱[您的收件匣](/help/sites-authoring/inbox.md)。
+若要完成工作，請選取工作，然後按一下工具列中的[完成]。 ****&#x200B;新增資訊至工作，然後按一下[完成]。**** 如需詳細資訊，請參閱[您的收件匣](/help/sites-authoring/inbox.md)。

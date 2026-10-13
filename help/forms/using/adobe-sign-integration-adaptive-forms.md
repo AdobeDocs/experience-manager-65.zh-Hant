@@ -9,20 +9,40 @@ feature: Adaptive Forms,Foundation Components,Acrobat Sign
 exl-id: 52146038-1582-41b8-aee0-215d04bb91d7
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 7da902b6-fe94-5180-8e7c-f6d1e38d01d5
+    internal-label: Foundation Components
+  - id: a16aea24-4e85-528d-9377-cd80bb039c1d
+    internal-label: Acrobat Sign
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '2217'
+source-wordcount: '2218'
 ht-degree: 19%
-
 ---
-
 # 將[!DNL Adobe Sign]與AEM [!DNL Forms]整合{#integrate-adobe-sign-with-aem-forms}
 
-<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hant)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。 這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。 本文會介紹使用基礎元件編寫最適化表單的舊方法。</span>
+<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。 這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。 本文會介紹使用基礎元件編寫最適化表單的舊方法。</span>
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/services/adobe-sign-integration-adaptive-forms.html?lang=zh-Hant#adobe-acrobat-sign-for-government) |
+| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/services/adobe-sign-integration-adaptive-forms.html?lang=en#adobe-acrobat-sign-for-government) |
 | AEM 6.5 | 本文章 |
 
 [!DNL Adobe Sign]啟用最適化表單的電子簽章工作流程。 電子簽名有助於改善處理法律、銷售、薪資、人力資源管理及許多領域文件的工作流程。
@@ -91,7 +111,7 @@ ht-degree: 19%
 
    其中：
 
-   **na1** 是指預設的資料庫分片。 您可以修改資料庫分片的值。 確保[!DNL &#x200B; Adobe Acrobat Sign] Cloud Configurations 指向[正確的分片](https://helpx.adobe.com/tw/sign/using/identify-account-shard.html)。
+   **na1** 是指預設的資料庫分片。 您可以修改資料庫分片的值。 確保[!DNL  Adobe Acrobat Sign] Cloud Configurations 指向[正確的分片](https://helpx.adobe.com/sign/using/identify-account-shard.html)。
 
    >[!NOTE]
    >
@@ -135,7 +155,7 @@ ht-degree: 19%
    >Ensure that your author and publish instance configurations point to the same shard. If you create multiple Adobe Sign configurations for an organization, ensure all the configurations utilize the same shard.
    -->
 
-1. 返回&#x200B;**[!UICONTROL 建立Adobe Sign組態]**&#x200B;頁面。 在&#x200B;**[!UICONTROL 設定]**&#x200B;索引標籤中，指定&#x200B;**使用者端識別碼** （也稱為應用程式識別碼）和&#x200B;**使用者端密碼**。 使用為AEM Forms建立的Adobe Sign應用程式[&#128279;](https://opensource.adobe.com/acrobat-sign/developer_guide/helloworld.html#get-the-app-id-and-secret)的使用者端ID和使用者端密碼。
+1. 返回&#x200B;**[!UICONTROL 建立Adobe Sign組態]**&#x200B;頁面。 在&#x200B;**[!UICONTROL 設定]**&#x200B;索引標籤中，指定&#x200B;**使用者端識別碼** （也稱為應用程式識別碼）和&#x200B;**使用者端密碼**。 使用為AEM Forms建立的Adobe Sign應用程式](https://opensource.adobe.com/acrobat-sign/developer_guide/helloworld.html#get-the-app-id-and-secret)的[使用者端ID和使用者端密碼。
 
 1. 選取&#x200B;**[!UICONTROL 同時啟用附件的Adobe Sign]**&#x200B;選項，以將最適化表單附加的檔案附加至要簽名的對應[!DNL Adobe Sign]檔案。
 
@@ -148,7 +168,7 @@ ht-degree: 19%
 1. 開啟&#x200B;**[!UICONTROL Forms Common Configuration Service].**
 1. 在&#x200B;**[!UICONTROL 允許]**&#x200B;欄位中，**選取**&#x200B;所有使用者 — 所有使用者（匿名或登入）都可以預覽附件、驗證及簽署表單，然後按一下&#x200B;**[!UICONTROL 儲存]。** 作者執行個體設定為使用[!DNL Adobe Sign]。
 1. 發佈設定。
-1. 使用[復寫](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/replication.html?lang=zh-Hant)在對應發佈執行個體上建立相同的組態。
+1. 使用[復寫](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/replication.html)在對應發佈執行個體上建立相同的組態。
 
 現在，[!DNL Adobe Sign]已與AEM [!DNL Forms]整合，並準備好用於調適型表單。 若要[在最適化表單中使用Adobe Sign服務](../../forms/using/working-with-adobe-sign.md#configure-adobe-sign-for-an-adaptive-form)，請在最適化表單屬性中指定上述建立的設定容器。
 
@@ -241,7 +261,7 @@ ht-degree: 19%
 
    其中：
 
-   **na1** 是指預設的資料庫分片。 您可以修改資料庫分片的值。 確保[!DNL &#x200B; Adobe Acrobat Sign] Cloud Configurations 指向[正確的分片](https://helpx.adobe.com/tw/sign/using/identify-account-shard.html)。
+   **na1** 是指預設的資料庫分片。 您可以修改資料庫分片的值。 確保[!DNL  Adobe Acrobat Sign] Cloud Configurations 指向[正確的分片](https://helpx.adobe.com/sign/using/identify-account-shard.html)。
 
    >[!NOTE]
    >
@@ -263,7 +283,7 @@ ht-degree: 19%
 1. 在&#x200B;**[!UICONTROL 允許]**&#x200B;欄位中，**選取**&#x200B;所有使用者 — 所有使用者（匿名或登入）都可以預覽附件、驗證及簽署表單，然後按一下&#x200B;**[!UICONTROL 儲存]。** 作者執行個體設定為使用[!DNL Adobe Sign]。
 
 1. 發佈設定。
-1. 使用[復寫](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/replication.html?lang=zh-Hant)在對應發佈執行個體上建立相同的組態。
+1. 使用[復寫](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/replication.html)在對應發佈執行個體上建立相同的組態。
 
 現在，您可以[在最適化表單中新增Adobe Acrobat Sign欄位](working-with-adobe-sign.md)或[AEM工作流程](/help/forms/using/aem-forms-workflow-step-reference.md#sign-document-step-sign-document-step)。 請確定您將用於Cloud Service設定的設定容器新增至為[!DNL Adobe Acrobat Sign]啟用的所有最適化Forms。 您可從最適化表單的屬性指定設定容器。
 
@@ -277,7 +297,7 @@ ht-degree: 19%
    您也可以在瀏覽器視窗中開啟下列URL：
    `https://[localhost]:'port'/system/console/configMgr`
 
-1. 找到並開啟&#x200B;**[!UICONTROL Adobe Sign組態服務]**&#x200B;選項。 在&#x200B;**[!UICONTROL 狀態更新排程器運算式]**&#x200B;欄位中指定[cron運算式](https://en.wikipedia.org/wiki/Cron#CRON_expression)，然後按一下&#x200B;**[!UICONTROL 儲存]**。 例如，若要在每日凌晨:00執行組態服務，請在&#x200B;**[!UICONTROL 狀態更新排程器運算式]**&#x200B;欄位中指定`0 0 0 1/1 * ? *`。
+1. 找到並開啟&#x200B;**[!UICONTROL Adobe Sign組態服務]**&#x200B;選項。 在&#x200B;**[!UICONTROL 狀態更新排程器運算式]**&#x200B;欄位中指定[cron運算式](https://en.wikipedia.org/wiki/Cron#CRON_expression)，然後按一下&#x200B;**[!UICONTROL 儲存]**。 例如，若要在每日午夜12點執行組態服務，請在&#x200B;**[!UICONTROL 狀態更新排程器運算式]**&#x200B;欄位中指定`0 0 0 1/1 * ? *`。
 
 [!DNL Adobe Sign]同步狀態的預設間隔現在已變更。
 

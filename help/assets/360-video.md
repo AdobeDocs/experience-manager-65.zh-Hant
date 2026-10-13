@@ -14,18 +14,30 @@ autotag-review: '2026-05-18T18:33:16.243Z'
 TQID: 'https://experienceleague.adobe.com/t3-PFZjnQPbbgNMFEjG7SDwG1Pt1TkvD9wNNYYgaEyE'
 product_v2:
   - id: e14eb250-3c22-4a07-9061-a78112b2b826
+    internal-label: Experience Manager 6.5
   - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: d4b6216b-4a89-4ff0-8ac0-5a699ba23100
+    internal-label: Images and videos
+subfeature_v2:
+  - id: b1c2c8dc-d13a-43c3-9c5b-efc536a708ca
+    internal-label: 360 VR Video
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
 level_v2:
   - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
-source-git-commit: 9c96b6744c7af2f061b4dfbf403560047485f9b5
+    internal-label: Intermediate
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: 1093
+source-wordcount: '1187'
 ht-degree: 0%
-
 ---
-
 # 360/VR影片 {#vr-video}
 
 360度影片會同時記錄每個方向的檢視。 它們使用全方位相機或一系列相機來拍攝。 在平面顯示器上播放期間，使用者可以控制視角；行動裝置上的播放通常使用其內建的陀螺儀控制項。
@@ -42,14 +54,14 @@ Dynamic Media - Scene7模式包含傳送360個視訊資產的原生支援。 依
 
 選取[Space Station 360](https://s7d1.scene7.com/s7viewers/html5/Video360Viewer.html?asset=Viewers/space_station_360-AVS)開啟瀏覽器視窗並觀看360度視訊。 在視訊播放期間，將滑鼠指標拖曳到新位置以變更視角。
 
-![360視訊範例，國際空間站漂浮在外太空中，其背後是地球和太陽。](assets/6_5_360videoiss_simplified.png)
+![360 — 視訊範例，國際空間站漂浮在外層空間，其後面是地球和太陽。](assets/6_5_360videoiss_simplified.png)
 來自空間站360*的*&#x200B;視訊影格
 
 ## 360/VR視訊與Adobe Premiere Pro {#vr-video-and-adobe-premiere-pro}
 
 您可以使用Adobe Premier Pro來檢視和編輯360/VR素材。 例如，您可以在場景中正確放置標誌和文字，並套用專為等矩形媒體設計的效果和轉場。
 
-請參閱[編輯360/VR視訊](https://helpx.adobe.com/tw/premiere-pro/how-to/edit-360-vr-video.html)。
+請參閱[編輯360/VR視訊](https://helpx.adobe.com/premiere-pro/how-to/edit-360-vr-video.html)。
 
 ## 上傳資產以與360視訊檢視器搭配使用 {#uploading-assets-for-use-with-the-video-viewer}
 
@@ -69,14 +81,14 @@ Dynamic Media - Scene7模式包含傳送360個視訊資產的原生支援。 依
 
    * 理想情況下，您原本的360度影片內容最好具備下列其中一種解析度：
 
-      * 1080p - 1920 x 1080，稱為Full HD或FHD解析度，或
-      * 2160p - 3840 x 2160，稱為4k、UHD或超高解析度。 這種大型顯示器解析度最常出現在高檔電視機和電腦熒幕上。 2160p解析度通常稱為「4k」，因為寬度接近4000畫素。 換句話說，它提供1080p的四倍畫素。
+     * 1080p - 1920 x 1080，稱為Full HD或FHD解析度，或
+     * 2160p - 3840 x 2160，稱為4k、UHD或超高解析度。 這種大型顯示器解析度最常出現在高檔電視機和電腦熒幕上。 2160p解析度通常稱為「4k」，因為寬度接近4000畫素。 換句話說，它提供1080p的四倍畫素。
 
    * [建立具有更高品質轉譯的自訂最適化視訊設定檔](/help/assets/video-profiles.md#creating-a-video-encoding-profile-for-adaptive-streaming)。 例如，建立包含下列三個設定的最適化視訊設定檔：
 
-      * 寬度=自動；高度=720；位元速率=2500 kbps
-      * 寬度=自動；高度=1080；位元速率=5000 kbps
-      * width=auto； height=1440； bitrate=6600 kbps
+     * 寬度=自動；高度=720；位元速率=2500 kbps
+     * 寬度=自動；高度=1080；位元速率=5000 kbps
+     * width=auto； height=1440； bitrate=6600 kbps
 
    * 處理專門供360個視訊資產使用的資料夾中的360個視訊內容。
 
@@ -92,8 +104,8 @@ Dynamic Media - Scene7模式包含傳送360個視訊資產的原生支援。 依
 
 * `/conf/global/settings/cloudconfigs/dmscene7/jcr:content`
 
-   * **屬性型別** — 雙倍
-   * **值** — 浮點外觀比例，預設2.0。
+  * **屬性型別** — 雙倍
+  * **值** — 浮點外觀比例，預設2.0。
 
 設定此屬性後，現有視訊和新上傳的視訊都會立即生效。
 
@@ -110,7 +122,7 @@ Dynamic Media - Scene7模式包含傳送360個視訊資產的原生支援。 依
 當您對360視訊感到滿意時，可以將其發佈。
 
 請參閱[將視訊或影像檢視器嵌入網頁](/help/assets/embed-code.md)。
-檢視[將URL連結至您的網頁應用程式](/help/assets/linking-urls-to-yourwebapplication.md)。如果您的互動式內容有具有相對URL的連結，尤其是指向Experience Manager Sites頁面的連結，則無法採用URL型連結方法。
+檢視[將URL連結至您的網頁應用程式](/help/assets/linking-urls-to-yourwebapplication.md)。 如果您的互動式內容有具有相對URL的連結，尤其是指向Experience Manager Sites頁面的連結，則無法採用URL型連結方法。
 請參閱[將Dynamic Media Assets新增至頁面](/help/assets/adding-dynamic-media-assets-to-pages.md)。
 
 **預覽360個視訊：**
@@ -146,6 +158,6 @@ Dynamic Media - Scene7模式包含傳送360個視訊資產的原生支援。 依
 發佈360影片以便使用。 發佈360影片會啟用URL和內嵌程式碼。 此外，該公司也會將360影片發佈至Dynamic Media雲端，此雲端整合了CDN，提供具備擴充能力及高效能的傳送服務。
 
 如需如何發佈360視訊的詳細資訊，請參閱[發佈Dynamic Media資產](/help/assets/publishing-dynamicmedia-assets.md)。
-另請參閱[將視訊或影像檢視器內嵌在網頁上](/help/assets/embed-code.md)。
-另請參閱[將URL連結至您的網頁應用程式](/help/assets/linking-urls-to-yourwebapplication.md)。如果您的互動式內容有具有相對URL的連結，尤其是指向Experience Manager Sites頁面的連結，則無法採用URL型連結方法。
+另請參閱[將視訊或影像檢視器嵌入網頁](/help/assets/embed-code.md)。
+另請參閱[將URL連結至您的網頁應用程式](/help/assets/linking-urls-to-yourwebapplication.md)。 如果您的互動式內容有具有相對URL的連結，尤其是指向Experience Manager Sites頁面的連結，則無法採用URL型連結方法。
 另請參閱[將Dynamic Media資產新增至頁面](/help/assets/adding-dynamic-media-assets-to-pages.md)。

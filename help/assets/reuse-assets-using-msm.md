@@ -1,6 +1,6 @@
 ---
 title: 使用 MSM 重複使用資產
-description: Use assets across multiple pages/folders that are derived from and linked to parent assets. The assets stay in sync with a primary copy and with a few clicks, receive the updates from parent assets.
+description: 跨衍生自父資產並連結至該資產的多個頁面/資料夾使用資產。 資產會與主要副本保持同步，只要按幾下，即可從父資產接收更新。
 contentOwner: AG
 mini-toc-levels: 1
 role: User, Admin, Developer
@@ -8,39 +8,52 @@ feature: Asset Management,Multi Site Manager
 exl-id: 4d0367c4-88aa-4aef-b23d-828609b0df09
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: bca6156727dca11b2e09be549f3def6130827193
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 7d2b2ec8-499c-5434-9ffd-9218cd71f683
+    internal-label: Asset Management
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '3312'
 ht-degree: 9%
-
 ---
-
-# Reuse assets using MSM for [!DNL Assets] {#reuse-assets-using-msm-for-assets}
+# 針對[!DNL Assets]使用MSM重複使用資產 {#reuse-assets-using-msm-for-assets}
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/reuse-assets-using-msm.html?lang=zh-Hant) |
+| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/reuse-assets-using-msm.html?lang=en) |
 | AEM 6.5 | 本文章 |
 
-Multi Site Manager (MSM) functionality in [!DNL Adobe Experience Manager] enables users to reuse content that is authored once and reused across multiple web-locations. The same is available for digital assets as MSM for [!DNL Assets] functionality. Using MSM for [!DNL Assets], you can:
+[!DNL Adobe Experience Manager]中的多網站管理員(MSM)功能可讓使用者重複使用一次撰寫並在多個網站位置重複使用的內容。 相同專案適用於MSM的[!DNL Assets]功能數位資產。 使用[!DNL Assets]的MSM時，您可以：
 
-* Create assets once and then make copies of these assets to reuse in other areas of the site.
-* Keep multiple copies in synchronization and update the original primary copy once to push the changes to the child copies.
-* Make local changes by temporarily or permanently suspending the linking between parent and child assets.
+* 建立資產一次，然後製作這些資產的復本以在網站的其他區域重複使用。
+* 將多個副本保持同步，並更新一次原始主副本，以將變更推送到子副本。
+* 暫時或永久中止父項與子項資產之間的連結，以進行本機變更。
 
 ## 先決條件 {#prereq}
 
-To use MSM for [!DNL Assets], install at least [!DNL Experience Manager] 6.5 Service Pack 1. For more information, see [the release notes of latest service pack](/help/release-notes/release-notes.md).
+若要使用[!DNL Assets]的MSM，請安裝至少[!DNL Experience Manager] 6.5 Service Pack 1。 如需詳細資訊，請參閱[最新Service Pack的發行說明](/help/release-notes/release-notes.md)。
 
-## Understand the benefits and the concepts {#concepts}
+## 瞭解優點和概念 {#concepts}
 
-### How it works and the benefits {#how-it-works-and-the-benefits}
+### 運作方式與優點 {#how-it-works-and-the-benefits}
 
-To understand the usage scenarios for reusing same content (text and assets) across multiple web-locations, see [possible MSM scenarios](/help/sites-administering/msm.md). [!DNL Experience Manager] maintains a link between the original asset and its linked copies, called as live copies (LCs). The maintained linking allows centralized changes to be pushed to many live copies. This allows for faster updates while doing away with the limitations of managing duplicate copies. The propagation of changes is error-free and centralized. The functionality allows room for updates that are limited to selected live copies. Users can detach the linking, that is break inheritance, and make local edits that are not overwritten when next time the primary copy is updated and changes are rolled out. The detaching can be done for a few select metadata fields or for an entire asset. It allows for flexibility to locally update assets that are originally inherited from a primary copy.
+若要瞭解在多個網站位置重複使用相同內容（文字和資產）的使用案例，請參閱[可能的MSM案例](/help/sites-administering/msm.md)。 [!DNL Experience Manager]會維護原始資產與其連結的復本之間的連結，稱為即時復本(LC)。 維持的連結可將集中變更推送至多個即時副本。 這樣可以在消除管理重複副本的限制的同時實現更快的更新。 變更的傳播不會發生錯誤，而且是集中化的。 功能提供空間，讓更新僅限於選取的即時副本。 使用者可以分離連結（亦即中斷繼承），並進行本機編輯，這些編輯在下次更新主要副本並轉出變更時不會遭到覆寫。 分離功能適用於幾個選取的中繼資料欄位或整個資產。 它可讓您在本機靈活地更新原來從主要副本繼承的資產。
 
-MSM maintains a live relationship between the source asset and its live copies so that:
+MSM會維護來源資產與其即時副本之間的即時關係，以便：
 
-* Changes to the source assets are applied (rolled out) to live copies as well, that is the live copies are synchronized with the source.
+* 來源資產的變更也會套用（轉出）至即時副本，即即時副本會與來源同步。
 * 您可以暫停即時關係或移除一些有限欄位的繼承，以更新即時副本。 對來源的修改不再套用至即時副本。
 
 ### [!DNL Assets]辭彙的MSM字彙表 {#glossary}
@@ -120,46 +133,46 @@ MSM maintains a live relationship between the source asset and its live copies s
 
 若要檢查即時副本資產或資料夾的資訊和狀態，請按照以下步驟操作。
 
-1. 選取即時複製資產或資料夾。 按一下工具列中的&#x200B;**[!UICONTROL 屬性]**。 Alternatively, use the keyboard shortcut `p`.
-1. Click **[!UICONTROL Live Copy]**. You can check the path of the source, suspension status, synchronization status, last rollout date, and the user who did the last rollout.
+1. 選取即時複製資產或資料夾。 按一下工具列中的&#x200B;**[!UICONTROL 屬性]**。 或者，使用鍵盤快速鍵`p`。
+1. 按一下&#x200B;**[!UICONTROL 即時副本]**。 您可以檢查來源的路徑、暫停狀態、同步化狀態、上次轉出日期以及上次轉出的使用者。
 
-   ![Live copy information and statuses are displayed in a console in Properties](assets/lcfolder_info_properties.png)
+   ![即時副本資訊和狀態會顯示在「屬性」的主控台中](assets/lcfolder_info_properties.png)
 
-   *Figure: Live copy information and statuses.*
+   *圖：即時副本資訊和狀態。*
 
-1. You can enable or disable if child assets borrow the live copy configuration.
+1. 如果子資產借用即時副本設定，您可以啟用或停用。
 
-1. You can choose the option for the live copy to either inherit the rollout configuration from the parent or change the configuration.
+1. 您可以選擇即時副本的選項，以從父項繼承轉出設定或變更設定。
 
-### Information and statuses of all live copies of a folder {#status-lc-folder}
+### 資料夾所有即時副本的資訊和狀態 {#status-lc-folder}
 
-[!DNL Experience Manager] provides a console to check the statues of all the live copies of a source folder. This console displays the status of all child assets.
+[!DNL Experience Manager]提供主控台以檢查來源資料夾的所有即時副本的狀態。 此主控台顯示所有子資產的狀態。
 
-1. Select a source folder. 按一下工具列中的&#x200B;**[!UICONTROL 屬性]**。 Alternatively, use the keyboard shortcut `p`.
+1. 選取來源資料夾。 按一下工具列中的&#x200B;**[!UICONTROL 屬性]**。 或者，使用鍵盤快速鍵`p`。
 1. 按一下「 **[!UICONTROL 即時複製來源」]**。 若要開啟主控台，請按一下「即 **[!UICONTROL 時複製概觀」]**。 此控制面板提供所有子資產的頂層狀態。
 
-   ![View statuses of live copies in Live Copy Console of source](assets/livecopy-statuses.png)
+   ![在來源的即時副本主控台中檢視即時副本的狀態](assets/livecopy-statuses.png)
 
-   *Figure: View statuses of live copies in [!UICONTROL Live Copy Console] of source.*
+   *圖：在來源的[!UICONTROL 即時副本主控台]中檢視即時副本的狀態。*
 
 1. 若要檢視即時副本檔案夾中每個資產的詳細資訊，請選取資產，然後從工具列按一 **[!UICONTROL 下「關係狀態]** 」。
 
-   ![Detailed information and status of a live copy child asset in a folder](assets/livecopy_relationship_status.png)
+   ![資料夾中即時副本子資產的詳細資訊和狀態](assets/livecopy_relationship_status.png)
 
-   Detailed information and status of a live copy child asset in a folder
+   資料夾中即時副本子資產的詳細資訊和狀態
 
 >[!TIP]
 >
->You can quickly see the statuses of live copies of other folders without having to browse too much. Change the folder from the upper middle part of the **[!UICONTROL Live Copy Overview]** interface.
+>您可以快速檢視其他資料夾即時副本的狀態，不必瀏覽太多內容。 從&#x200B;**[!UICONTROL 即時副本總覽]**&#x200B;介面的中上部變更資料夾。
 
-### Quick actions from References rail for source {#refrailsource}
+### 來源的「參考」邊欄中的快速動作 {#refrailsource}
 
-For a source asset or folder, you can see the following information and take the following actions directly from the References rail:
+對於來源資產或資料夾，您可以檢視以下資訊，並直接從「參考」邊欄執行下列動作：
 
-* See the paths of live copies.
-* Open or reveal a specific live copy in [!DNL Experience Manager] user interface.
-* Synchronize the updates to a specific live copy.
-* Suspend relationship or change rollout configuration for a specific live copy.
+* 檢視即時副本的路徑。
+* 在[!DNL Experience Manager]使用者介面中開啟或顯示特定即時副本。
+* 同步特定即時副本的更新。
+* 暫停特定即時副本的關係或變更轉出設定。
 * 存取即時副本概述主控台。
 
 選取來源資產或資料夾，開啟左側邊欄，然後按一下&#x200B;**[!UICONTROL 參考]**。 或者，選取資產或資料夾，然後使用鍵盤快速鍵`Alt + 4`。
@@ -221,15 +234,15 @@ For a source asset or folder, you can see the following information and take the
 
 | [!DNL Experience Manager]介面的位置 | 使用的時機與原因 | 使用方法 |
 |---|---|---|
-| [!UICONTROL 個參考]邊欄 | 當您已選取來源時，請快速同步處理。 | 檢視來源[&#128279;](#refrailsource)之參考邊欄中的快速動作 |
+| [!UICONTROL 個參考]邊欄 | 當您已選取來源時，請快速同步處理。 | 檢視來源](#refrailsource)之參考邊欄中的[快速動作 |
 | [!UICONTROL 屬性]頁面中的工具列 | 當您已經開啟即時副本屬性時，啟動同步。 | 請參閱[同步處理即時副本](#sync-lc) |
 | [!UICONTROL 即時副本總覽]主控台 | 選取來源資料夾或[!UICONTROL 即時副本總覽]主控台已開啟時，快速同步處理多個資產（不一定是全部）。 系統會一次起始一個資產的同步動作，但可一次同步多個資產的更快速方式。 | 檢視即時副本資料夾中許多資產的[動作](#bulk-actions) |
 
 ### 同步即時副本 {#sync-lc}
 
-若要啟動同步動作，請開啟即 **[!UICONTROL 時副本的「屬性]** 」頁面，按一下「即時 **&#x200B;**&#x200B;副本」，然後從工具列按一下所要的動作。
+若要啟動同步動作，請開啟即 **[!UICONTROL 時副本的「屬性]** 」頁面，按一下「即時 **** 副本」，然後從工具列按一下所要的動作。
 
-要查看與同步操作相關的狀態和資訊，請參 [閱即時副本的資訊和狀態](#statuslcasset) [以及資料夾所有即時副本的狀態](#status-lc-folder)。
+要查看與同步操作相關的狀態和資訊，請參 [閱即時副本的資訊和狀態](#statuslcasset)[以及資料夾所有即時副本的狀態](#status-lc-folder)。
 
 ![同步處理動作提取對來源](assets/livecopy_sync.png)所做的變更
 
@@ -243,7 +256,7 @@ For a source asset or folder, you can see the following information and take the
 
 您可以暫時暫停關係，以防止即時副本接收對來源資產或資料夾所做的修改。 也可以恢復關係，讓即時副本開始從來源接收修改。
 
-若要暫停或繼續，請開啟即 **[!UICONTROL 時副本的「屬性]** 」頁面，按一下「即時副本 **&#x200B;**&#x200B;」，然後從工具列按一下所要的動作。
+若要暫停或繼續，請開啟即 **[!UICONTROL 時副本的「屬性]** 」頁面，按一下「即時副本 **** 」，然後從工具列按一下所要的動作。
 
 或者，您也可以從即時副本概觀主控台，快速暫停或繼續即時副本資料夾中多 **[!UICONTROL 個資產的關係]** 。 請參 [閱對即時副本資料夾中的許多資產採取動作](#bulk-actions)。
 
@@ -273,7 +286,7 @@ For a source asset or folder, you can see the following information and take the
 
    >[!CAUTION]
    >
-   >當您按一下對話方塊中的&#x200B;**[!UICONTROL 分離]**&#x200B;時，關係會立即移除。 按一下[屬性]頁面上的[取消] **&#x200B;**&#x200B;無法復原它。
+   >當您按一下對話方塊中的&#x200B;**[!UICONTROL 分離]**&#x200B;時，關係會立即移除。 按一下[屬性]頁面上的[取消] ****&#x200B;無法復原它。
 
 或者，您也可以從&#x200B;**[!UICONTROL 即時副本概述]**&#x200B;主控台快速分離即時副本資料夾中的多個資產。 請參 [閱對即時副本資料夾中的許多資產採取動作](#bulk-actions)。
 

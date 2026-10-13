@@ -1,19 +1,26 @@
 ---
 title: 手動設定與Adobe Target的整合
-
 description: 瞭解如何手動設定與Adobe Target的整合。
-
-
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
-
 exl-id: 0f710685-dc4f-4333-9847-d002b2637d08
 solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
-source-git-commit: d2623c78e8c779b20303865d4bb40effd1e5fe59
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 243139ec-8e41-5296-a287-31343ab1bc0f
+    internal-label: Integration
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
 source-wordcount: '2209'
 ht-degree: 1%
@@ -29,7 +36,7 @@ ht-degree: 1%
 您也可以透過設定A4T Analytics Cloud設定，將Adobe Target設定為使用Adobe Target作為目標定位內容的報表來源。
 
 若要尋找雲端設定和架構，請透過&#x200B;**工具** > **部署** > **雲端**&#x200B;導覽至&#x200B;**雲端服務**。 ([http://localhost:4502/libs/cq/core/content/tools/cloudservices.html](http://localhost:4502/libs/cq/core/content/tools/cloudservices.html))
-在Adobe Target下方，按一下&#x200B;**顯示設定**。
+在Adobe Target下方，按一下**顯示設定**。
 
 ### 布建的目標組態特性 {#provisioned-target-configuration-properties}
 
@@ -58,7 +65,7 @@ ht-degree: 1%
 >* 單頁應用程式的更佳實作選項
 >* AT.js包含target.js所包含的元件，因此不再需要呼叫target。
 
-<!-- OLD URL WHICH IS 404 https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/mbox-download.html?lang=zh-Hant -->
+<!-- OLD URL WHICH IS 404 https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/mbox-download.html -->
 
 ### 布建的目標框架特性 {#provisioned-target-framework-properties}
 
@@ -121,7 +128,7 @@ ht-degree: 1%
 >
 >您可以在&#x200B;**使用者端資料庫**&#x200B;下拉式功能表中選取AT.js或mbox.js。
 
-<!-- OLD URL from above was 404 https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/mbox-download.html?lang=zh-Hant -->
+<!-- OLD URL from above was 404 https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/mbox-download.html -->
 
 ### 建立Target雲端設定 {#creating-a-target-cloud-configuration}
 
@@ -196,7 +203,7 @@ ht-degree: 1%
 您可以為單一Target設定建立多個架構。 當您必須為網站的不同區段傳送一組不同的引數至Target時，多個架構會很有用。 為您傳送的每組引數建立框架。 將網站的每個區段與適當的架構建立關聯。 一個網頁一次只能使用一個框架。
 
 1. 在您的Target設定頁面上，按一下「可用架構」旁的&#x200B;**+** （加號）。
-1. 在[建立架構]對話方塊中，指定&#x200B;**標題**，選取&#x200B;**Adobe Target架構**，然後按一下[建立]&#x200B;**&#x200B;**。
+1. 在[建立架構]對話方塊中，指定&#x200B;**標題**，選取&#x200B;**Adobe Target架構**，然後按一下[建立]****。
 
    ![建立框架對話方塊](assets/chlimage_1-161.png)
 
@@ -226,7 +233,7 @@ ht-degree: 1%
 
 ### 將活動與Target雲端設定建立關聯  {#associating-activities-with-the-target-cloud-configuration}
 
-將您的[AEM活動](/help/sites-authoring/activitylib.md)與您的Target雲端設定建立關聯，以便您可以映象[Adobe Target](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html?lang=zh-Hant)中的活動。
+將您的[AEM活動](/help/sites-authoring/activitylib.md)與您的Target雲端設定建立關聯，以便您可以映象[Adobe Target](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html)中的活動。
 
 >[!NOTE]
 >

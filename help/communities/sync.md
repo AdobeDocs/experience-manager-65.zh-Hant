@@ -10,13 +10,20 @@ role: Admin
 exl-id: ecd30f5d-ad31-4482-96d3-c92f1cf91336
 solution: Experience Manager
 feature: Communities
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '2417'
-ht-degree: 1%
-
+source-wordcount: '2489'
+ht-degree: 2%
 ---
-
 # Communities使用者同步 {#communities-user-synchronization}
 
 ## 簡介 {#introduction}
@@ -102,7 +109,7 @@ ht-degree: 1%
 
 若要在AEM Communities上啟用使用者同步，需進行下列設定。 確保這些設定正確無誤，以防止Sling內容發佈失敗。
 
-### Apache Sling散發代理程式 — 同步代理程式工廠 {#apache-sling-distribution-agent-sync-agents-factory}
+### Apache Sling 分配代理 - 同步代理工廠 {#apache-sling-distribution-agent-sync-agents-factory}
 
 此設定會擷取內容以跨發佈者同步。 設定位於作者執行個體上。 作者必須追蹤所有存在的發行者以及同步所有資訊的位置。
 
@@ -130,7 +137,7 @@ ht-degree: 1%
 
    ![sync-agent-fact](assets/sync-agent-fact.png)
 
-### Adobe Granite發佈 — 加密的密碼傳輸機密提供者 {#adobe-granite-distribution-encrypted-password-transport-secret-provider}
+### Adobe Granite 分配 - 加密密碼傳輸祕密提供者 {#adobe-granite-distribution-encrypted-password-transport-secret-provider}
 
 它可讓作者識別授權的使用者，因為具有將使用者資料從作者同步到發佈的許可權。
 
@@ -180,7 +187,7 @@ ht-degree: 1%
 ### Adobe Granite Distribution — 觀察者工廠差異 {#adobe-granite-distribution-diff-observer-factory}
 
 此設定會同步發佈者之間的群組成員資格。
-如果變更一個發行者中群組的成員資格時沒有更新其他發行者的成員資格，請確定&#x200B;**ref:members**&#x200B;已新增到&#x200B;**looks屬性名稱**。
+如果變更一個發行者中群組的成員資格時沒有更新其他發行者的成員資格，請確定**ref:members**&#x200B;已新增到&#x200B;**looks屬性名稱**。
 
 若要確保成員同步化：
 
@@ -307,7 +314,7 @@ AEM作者執行個體會使用Sling ID來識別資料來自何處，以及需要
 ### Vault Package Builder工廠 {#vault-package-builder-factory}
 
 若要正確同步更新，必須修改用於使用者同步的Vault封裝產生器。
-在`/home/users`中建立`*/rep:cache`節點。它是快取，用來尋找如果我們查詢節點的主要名稱，則可以直接使用此快取。
+在`/home/users`中建立`*/rep:cache`節點。 它是快取，用來尋找如果我們查詢節點的主要名稱，則可以直接使用此快取。
 
 如果`rep :cache`個節點跨發行者同步，則可以停止使用者同步處理。
 
@@ -392,5 +399,5 @@ AEM作者執行個體會使用Sling ID來識別資料來自何處，以及需要
 1. 檢查使用者建立時建立的[記錄順序](/help/communities/sync.md#troubleshoot-sling-distribution-in-aem-communities)。
 1. 檢查是否已在&#x200B;**/var/sling/distribution/packages/socialpubsync-vlt/data**&#x200B;上建立&#x200B;**vlt**&#x200B;套件。
 1. 現在，請在AEM Author例項上啟用使用者同步。
-1. 在發佈者上，變更&#x200B;**Apache Sling散發代理程式 — 同步代理程式處理站**&#x200B;中的匯出工具或匯入工具端點。
+1. 在發佈者上，變更&#x200B;**Apache Sling散發代理程式 — 同步代理程式處理站**中的匯出工具或匯入工具端點。
 我們可以下載並擷取套件資料，以檢查推送至其他發佈者的所有屬性，以及遺失哪些資料。

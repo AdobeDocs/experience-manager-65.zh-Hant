@@ -10,7 +10,20 @@ exl-id: 1b607a52-f065-4e35-8215-d54df7c8403d
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization
 role: User
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+  - id: eb3ad9f8-54a2-45f3-abb1-d3976415a718
+    internal-label: Personalization
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '2219'
 ht-degree: 0%
@@ -180,7 +193,7 @@ ht-degree: 0%
 
    ![screen_shot_2012-02-21at115045am](assets/screen_shot_2012-02-21at115045am.png)
 
-1. 視需要輸入地址資訊。 按一下[儲存]儲存潛在客戶。 **&#x200B;**&#x200B;如果您需要新增其他銷售機會，請按一下[儲存並新增]。**&#x200B;**
+1. 視需要輸入地址資訊。 按一下[儲存]儲存潛在客戶。 ****&#x200B;如果您需要新增其他銷售機會，請按一下[儲存並新增]。****
 
    新潛在客戶會出現在「潛在客戶」窗格中。 當您按一下專案時，所有輸入的資訊都會顯示在右窗格中。 建立銷售機會後，您可以將其新增至清單。
 
@@ -194,7 +207,7 @@ ht-degree: 0%
 
 1. 在AEM中，導覽至MCM並按一下&#x200B;**銷售機會**。
 
-1. 選取您要啟動或停用的潛在客戶，然後按一下[啟動] **&#x200B;**&#x200B;或[停用] **&#x200B;**。
+1. 選取您要啟動或停用的潛在客戶，然後按一下[啟動] ****&#x200B;或[停用] ****。
 
    ![screen_shot_2012-02-21at120620pm](assets/screen_shot_2012-02-21at120620pm.png)
 
@@ -256,7 +269,7 @@ ht-degree: 0%
 
    ![screen_shot_2012-02-21at124019pm](assets/screen_shot_2012-02-21at124019pm.png)
 
-1. 選取您要新增銷售機會的清單，然後按一下[確定]。**&#x200B;** 潛在客戶會新增至適當的清單中。
+1. 選取您要新增銷售機會的清單，然後按一下[確定]。**** 潛在客戶會新增至適當的清單中。
 
 ### 檢視潛在客戶資訊 {#viewing-lead-information}
 
@@ -280,7 +293,7 @@ ht-degree: 0%
 
    ![screen_shot_2012-02-21at124609pm](assets/screen_shot_2012-02-21at124609pm.png)
 
-1. 視需要進行編輯，然後按一下[儲存] **&#x200B;**&#x200B;儲存變更。
+1. 視需要進行編輯，然後按一下[儲存] ****&#x200B;儲存變更。
 
    >[!NOTE]
    >
@@ -315,7 +328,7 @@ ht-degree: 0%
 
    ![screen_shot_2012-02-21at125147pm](assets/screen_shot_2012-02-21at125147pm.png)
 
-1. 輸入名稱（必要），如有需要，按一下[儲存]。**&#x200B;** 清單會顯示在&#x200B;**清單**&#x200B;窗格中。
+1. 輸入名稱（必要），如有需要，按一下[儲存]。**** 清單會顯示在&#x200B;**清單**&#x200B;窗格中。
 
    ![screen_shot_2012-02-21at125320pm](assets/screen_shot_2012-02-21at125320pm.png)
 

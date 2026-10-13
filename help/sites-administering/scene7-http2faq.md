@@ -9,13 +9,22 @@ exl-id: 2428914c-5fb0-439e-a1ef-8ee30b890f58
 solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 243139ec-8e41-5296-a287-31343ab1bc0f
+    internal-label: Integration
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '840'
 ht-degree: 2%
-
 ---
-
 # HTTP2 傳送內容常見問題集{#http-delivery-of-content-faq}
 
 Adobe很高興宣佈推出HTTP/2內容傳送。 使用HTTP/2時，會注意到整體效能提升。
@@ -49,7 +58,7 @@ Adobe自己的測試產生以下結果：
 * 使用Adobe隨附的CDN （內容傳遞網路），作為Dynamic Media授權的一部分。
 * 使用專用網域（即`images.company.com`或`mycompany.scene7.com`），而非一般的Dynamic Media網域（即`s7d1.scene7.com`、`s7d2.scene7.com`或`s7d13.scene7.com`）。
 
-  若要尋找您的網域，請開啟[Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html?lang=zh-Hant#getting-started)，然後登入您的公司帳戶或帳戶。 然後瀏覽至&#x200B;**[!UICONTROL 設定]** > **[!UICONTROL 應用程式設定]** > **[!UICONTROL 一般設定]**。 尋找標示為&#x200B;**已發佈的伺服器名稱**&#x200B;的欄位。 如果您目前使用一般的動態媒體網域，您可以在此轉變中要求移至您自己的自訂網域。
+  若要尋找您的網域，請開啟[Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然後登入您的公司帳戶或帳戶。 然後瀏覽至&#x200B;**[!UICONTROL 設定]** > **[!UICONTROL 應用程式設定]** > **[!UICONTROL 一般設定]**。 尋找標示為&#x200B;**已發佈的伺服器名稱**&#x200B;的欄位。 如果您目前使用一般的動態媒體網域，您可以在此轉變中要求移至您自己的自訂網域。
 
 ## 為我的Dynamic Media帳戶啟用HTTP/2的程式為何？ {#what-is-the-process-for-enabling-http-for-my-scene-account}
 
@@ -59,13 +68,13 @@ Adobe自己的測試產生以下結果：
    * 主要連絡人姓名、電子郵件和電話號碼。
    * 所有要轉換成HTTP2的網域。 即`images.company.com`或`mycompany.scene7.com`。
 
-     若要尋找您的網域，請開啟[Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html?lang=zh-Hant#getting-started)，然後登入您的公司帳戶或帳戶。 然後瀏覽至&#x200B;**[!UICONTROL 設定]** > **[!UICONTROL 應用程式設定]** > **[!UICONTROL 一般設定]**。 尋找標示為&#x200B;**[!UICONTROL 已發佈的伺服器名稱]**&#x200B;的欄位。
+     若要尋找您的網域，請開啟[Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然後登入您的公司帳戶或帳戶。 然後瀏覽至&#x200B;**[!UICONTROL 設定]** > **[!UICONTROL 應用程式設定]** > **[!UICONTROL 一般設定]**。 尋找標示為&#x200B;**[!UICONTROL 已發佈的伺服器名稱]**&#x200B;的欄位。
 
    * 確認您使用安全HTTPS處理多媒體請求。
    * 確認您是透過Adobe使用CDN，而不是透過直接關係管理。
    * 確認您使用專用網域。 即`images.company.com`或`mycompany.scene7.com`，不是一般Dynamic Media網域，例如`s7d1.scene7.com`、`s7d2.scene7.com`、`s7d13.scene7.com`。
 
-     若要尋找您的網域，請開啟[Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html?lang=zh-Hant#getting-started)，然後登入您的公司帳戶或帳戶。 然後瀏覽至&#x200B;**[!UICONTROL 設定]** > **[!UICONTROL 應用程式設定]** > **[!UICONTROL 一般設定]**。 尋找標示為&#x200B;**[!UICONTROL 已發佈的伺服器名稱]**&#x200B;的欄位。 如果您目前使用一般的動態媒體網域，您可以在此轉變中要求移至您自己的自訂網域。
+     若要尋找您的網域，請開啟[Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然後登入您的公司帳戶或帳戶。 然後瀏覽至&#x200B;**[!UICONTROL 設定]** > **[!UICONTROL 應用程式設定]** > **[!UICONTROL 一般設定]**。 尋找標示為&#x200B;**[!UICONTROL 已發佈的伺服器名稱]**&#x200B;的欄位。 如果您目前使用一般的動態媒體網域，您可以在此轉變中要求移至您自己的自訂網域。
 
 1. Adobe客戶支援會根據提交請求的順序，將您新增至HTTP/2客戶輪候表。
 1. 當Adobe準備好處理您的請求時， 「支援」會聯絡您以協調轉變並設定目標日期。

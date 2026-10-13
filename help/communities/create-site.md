@@ -10,13 +10,20 @@ exl-id: d4c1895f-421c-4146-b94a-8d11065ef9e3
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1624'
+source-wordcount: '1631'
 ht-degree: 1%
-
 ---
-
 # 編寫社群網站{#author-a-new-community-site}
 
 ## 建立社群網站 {#create-a-community-site}
@@ -48,10 +55,10 @@ Communities Sites主控台會提供精靈，引導使用者完成建立社群網
 
 * **社群網站名稱**：參與
 
-   * 請仔細檢查名稱，因為網站建立後不易變更
-   * 初始URL會顯示在社群網站名稱下方
-   * 若要取得有效的URL，請附加基本語言代碼+ &quot;。html&quot;
-   * *例如*，https://localhost:4502/content/sites/ `engage/en.html`
+  * 請仔細檢查名稱，因為網站建立後不易變更
+  * 初始URL會顯示在社群網站名稱下方
+  * 若要取得有效的URL，請附加基本語言代碼+ &quot;。html&quot;
+  * *例如*，https://localhost:4502/content/sites/ `engage/en.html`
 
 * **範本**：下拉式以選擇`Reference Site`
 
@@ -119,7 +126,7 @@ Communities Sites主控台會提供精靈，引導使用者完成建立社群網
 
 >[!NOTE]
 >
->[通道服務](https://helpx.adobe.com/tw/experience-manager/6-3/help/communities/deploy-communities.html#tunnel-service-on-author)允許選取僅存在於發佈環境中的成員和群組。
+>[通道服務](https://helpx.adobe.com/experience-manager/6-3/help/communities/deploy-communities.html#tunnel-service-on-author)允許選取僅存在於發佈環境中的成員和群組。
 
 新網站中的![個使用者角色](assets/site-admin-1.png)
 
@@ -184,7 +191,7 @@ Communities Sites主控台會提供精靈，引導使用者完成建立社群網
 
 * **發佈網站**
 
-  選取世界圖示會發佈社群網站（例如，如果您的發佈伺服器在本機電腦上執行，則預設會發佈至localhost:4503）。
+  選取世界圖示會發佈社群網站（例如，如果您的發佈伺服器在本機電腦上執行，則預設會發佈至localhost：4503）。
 
 * **匯出網站**
 
@@ -203,11 +210,11 @@ Communities Sites主控台會提供精靈，引導使用者完成建立社群網
 >在作者執行個體上，從主功能表：
 >
 >1. 導覽至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 作業]** > **[!UICONTROL 復寫]**&#x200B;功能表。
->1. 選取作者&#x200B;**上的**&#x200B;代理程式。
+>1. 選取作者&#x200B;]**上的**[!UICONTROL &#x200B;代理程式。
 >1. 選取&#x200B;**[!UICONTROL 預設代理程式（發佈）]**。
 >1. 在&#x200B;**[!UICONTROL 設定]**&#x200B;旁邊，選取&#x200B;**[!UICONTROL 編輯]**。
 >1. 在[代理程式設定]的快顯對話方塊中，選取&#x200B;**[!UICONTROL 傳輸]**&#x200B;索引標籤。
->1. 在URI中，將連線埠號碼4503變更為所需的連線埠號碼。 例如，若要使用連線埠6103： https://localhost:6103/bin/receive？sling:authRequestLogin=1
+>1. 在URI中，將連線埠號碼4503變更為所需的連線埠號碼。 例如，使用連線埠6103： https://localhost:6103/bin/receive?sling:authRequestLogin=1
 >1. 選取&#x200B;**[!UICONTROL 確定]**。
 >1. （選擇性）選取&#x200B;**[!UICONTROL 清除]**&#x200B;或&#x200B;**[!UICONTROL 強制重試]**&#x200B;以重設復寫佇列。
 
@@ -269,25 +276,25 @@ Communities Sites主控台會提供精靈，引導使用者完成建立社群網
 
    * 選取&#x200B;**建立節點：**
 
-      * **名稱** localhost.4503
-（請*不*&#x200B;使用&#39;：&#39;）
+     * **名稱** localhost.4503
+       （請*不*&#x200B;使用&#39;：&#39;）
 
-      * **型別** [sling:Mapping](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)
+     * **型別** [sling:Mapping](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)
 
 1. 選取新建立的`localhost.4503`節點：
 
    * 新增屬性：
 
    * **名稱** sling:match
-      * **型別**&#x200B;字串
-      * **值** localhost.4503/$
-（結尾必須是「$」字元）
+     * **型別**&#x200B;字串
+     * **值** localhost.4503/$
+       （結尾必須是「$」字元）
 
    * 新增屬性：
 
-      * **名稱** sling:internalRedirect
-      * **型別**&#x200B;字串
-      * **值** /content/sites/engage/en.html
+     * **名稱** sling:internalRedirect
+     * **型別**&#x200B;字串
+     * **值** /content/sites/engage/en.html
 
 1. 選取&#x200B;**全部儲存。**
 1. （選用）刪除瀏覽記錄。

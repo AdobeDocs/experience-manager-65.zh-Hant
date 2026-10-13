@@ -9,13 +9,17 @@ exl-id: 4b3acc7c-f1f7-4837-ae3a-9435d6ce1349
 solution: Experience Manager
 feature: Mobile
 role: User
-source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '261'
+source-wordcount: '273'
 ht-degree: 0%
-
 ---
-
 # 上傳共用資源 {#uploading-shared-resources}
 
 {{ue-over-mobile}}
@@ -24,7 +28,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->若要深入瞭解AEM Mobile應用程式的設計考量事項，請參閱線上說明中的[AEM Mobile應用程式的設計考量事項](https://helpx.adobe.com/tw/digital-publishing-solution/help/design-app.html)。
+>若要深入瞭解AEM Mobile應用程式的設計考量事項，請參閱線上說明中的[AEM Mobile應用程式的設計考量事項](https://helpx.adobe.com/digital-publishing-solution/help/design-app.html)。
 
 >[!CAUTION]
 >
@@ -51,7 +55,7 @@ ht-degree: 0%
 
 瞭解如何建立和發佈內容後，請參閱
 
-* [為AEM Mobile On-demand Services開發AEM內容](/help/mobile/aem-mobile-on-demand.md)
+* [針對AEM Mobile On-demand Services開發AEM內容](/help/mobile/aem-mobile-on-demand.md)
 * [管理內容以使用AEM Mobile On-demand Services](/help/mobile/aem-mobile.md)
 
 或者，您仍需瞭解撰寫主題，請參閱

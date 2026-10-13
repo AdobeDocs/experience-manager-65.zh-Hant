@@ -6,20 +6,36 @@ role: User, Admin
 feature: Asset Insights,Asset Reports
 exl-id: 80e8f84e-3235-4212-9dcd-6acdb9067893
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: a4e1c1f5-18fc-592e-bfc7-453ce6ae0030
+    internal-label: Asset Insights
+  - id: ac365bec-0634-4744-9473-c42f47320593
+    internal-label: Asset management and governance
+subfeature_v2:
+  - id: c29e3a96-cd2b-4e21-b382-a8279aa04553
+    internal-label: Asset reports
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
 source-wordcount: '668'
 ht-degree: 3%
-
 ---
-
 # 透過DTM啟用Assets深入分析 {#enable-asset-insights-through-dtm}
 
 Adobe Dynamic Tag Management是可啟用您的數位行銷工具的工具。 Adobe Analytics客戶可免費使用此功能。 您可以自訂追蹤代碼，讓協力廠商CMS解決方案能夠使用Assets Insights，或使用DTM插入Assets Insights標籤。 僅支援並為影像提供深入分析。
 
 >[!CAUTION]
 >
->Adobe DTM已淘汰，改為[!DNL Adobe Experience Platform]，並將很快結束[生命週期](https://medium.com/launch-by-adobe/dtm-plans-for-a-sunset-3c6aab003a6f)。 Adobe建議您[使用 [!DNL Adobe Experience Platform] 進行資產分析](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/advanced/asset-insights-launch-tutorial.html?lang=zh-Hant)。
+>Adobe DTM已淘汰，改為[!DNL Adobe Experience Platform]，並將很快結束[生命週期](https://medium.com/launch-by-adobe/dtm-plans-for-a-sunset-3c6aab003a6f)。 Adobe建議您[使用 [!DNL Adobe Experience Platform] 進行資產分析](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/advanced/asset-insights-launch-tutorial.html)。
 
 執行這些步驟，透過DTM啟用Assets Insights。
 
@@ -33,7 +49,7 @@ Adobe Dynamic Tag Management是可啟用您的數位行銷工具的工具。 Ado
 
    * 選取&#x200B;**[!UICONTROL Web屬性]**&#x200B;標籤，然後按一下&#x200B;**[!UICONTROL 新增屬性]**。
 
-   * 視需要更新欄位，然後按一下&#x200B;**[!UICONTROL 建立屬性]**。 請參閱[文件](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hant)。
+   * 視需要更新欄位，然後按一下&#x200B;**[!UICONTROL 建立屬性]**。 請參閱[文件](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)。
 
    ![建立編輯Web屬性](assets/Create-edit-web-property.png)
 

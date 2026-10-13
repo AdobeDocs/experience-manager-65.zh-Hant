@@ -8,13 +8,27 @@ role: Admin,User
 exl-id: 791524a4-a8bb-4632-a68d-e96864e139a9
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '878'
 ht-degree: 0%
-
 ---
-
 # Forms入口網站 |處理使用者資料 {#forms-portal-handling-user-data}
 
 [!DNL AEM Forms]入口網站提供您可用來在[!DNL AEM Sites]頁面上列出最適化表單、HTML5表單和其他Forms資產的元件。 此外，您可以將其設定為顯示草稿，並向登入使用者提交最適化表單和HTML5表單。 如需Forms入口網站的詳細資訊，請參閱[在入口網站上發佈表單簡介](/help/forms/using/introduction-publishing-forms.md)。

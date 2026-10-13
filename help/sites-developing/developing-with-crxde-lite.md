@@ -10,7 +10,20 @@ exl-id: 9e88ca55-ac3d-4857-b6b2-aeb732562664
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,Developer Tools
 role: Developer
-source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+  - id: f2d27a5f-0d67-4d85-8a24-86a8d8a3574b
+    internal-label: Developer tools
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '2116'
 ht-degree: 1%
@@ -148,7 +161,7 @@ CRXDE Lite提供下列功能：
 
 1. 輸入資料夾&#x200B;**名稱**&#x200B;並按一下&#x200B;**確定**。
 
-1. 按一下[儲存全部]&#x200B;**&#x200B;**&#x200B;儲存伺服器上的變更。
+1. 按一下[儲存全部]****&#x200B;儲存伺服器上的變更。
 
 ## 建立範本 {#creating-a-template}
 
@@ -165,7 +178,7 @@ CRXDE Lite提供下列功能：
 
 1. 此步驟是選用的：設定&#x200B;**允許的子項**。 按一下&#x200B;**「確定」**。
 
-1. 按一下[儲存全部]&#x200B;**&#x200B;**&#x200B;儲存伺服器上的變更。
+1. 按一下[儲存全部]****&#x200B;儲存伺服器上的變更。
 
 它會建立：
 
@@ -192,7 +205,7 @@ CRXDE Lite提供下列功能：
 
 1. 此步驟是選擇性的：設定元件屬性&#x200B;**允許的子項**。 按一下&#x200B;**「確定」**。
 
-1. 按一下[儲存全部]&#x200B;**&#x200B;**&#x200B;儲存伺服器上的變更。
+1. 按一下[儲存全部]****&#x200B;儲存伺服器上的變更。
 
 它會建立：
 
@@ -226,7 +239,7 @@ CRXDE Lite提供下列功能：
 1. 在瀏覽器中開啟CRXDE Lite 。
 1. 在導覽窗格中，用滑鼠右鍵按一下您要建立節點的節點，選取&#x200B;**建立……**，然後選取&#x200B;**建立節點……**。
 1. 輸入&#x200B;**名稱**&#x200B;和&#x200B;**型別**。 按一下&#x200B;**「確定」**。
-1. 按一下[儲存全部]&#x200B;**&#x200B;**&#x200B;儲存伺服器上的變更。
+1. 按一下[儲存全部]****&#x200B;儲存伺服器上的變更。
 
 您現在可以透過修改屬性或建立節點來調整節點以符合您的需求。
 
@@ -244,7 +257,7 @@ CRXDE Lite提供下列功能：
 1. 在「導覽」窗格中，選取您要新增屬性的節點。
 1. 在底部窗格的&#x200B;**屬性**&#x200B;索引標籤中，輸入&#x200B;**名稱**、**型別**&#x200B;和&#x200B;**值**。 按一下&#x200B;**「新增」**。
 
-1. 按一下[儲存全部]&#x200B;**&#x200B;**&#x200B;儲存伺服器上的變更。
+1. 按一下[儲存全部]****&#x200B;儲存伺服器上的變更。
 
 ## 建立指令碼 {#creating-a-script}
 
@@ -257,7 +270,7 @@ CRXDE Lite提供下列功能：
 
 1. 新檔案會在「編輯」窗格中開啟為標籤。
 1. 編輯檔案。
-1. 按一下[全部儲存]&#x200B;**儲存變更。**
+1. 按一下[全部儲存]**儲存變更。**
 
 ## 匯出和匯入節點型別 {#exporting-and-importing-node-types}
 

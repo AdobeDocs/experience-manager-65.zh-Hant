@@ -10,13 +10,29 @@ feature: Context Hub,Developing,Personalization
 exl-id: 38b9a795-1c83-406c-ab13-b4456da938dd
 solution: Experience Manager, Experience Manager Sites
 role: Developer
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+  - id: eb3ad9f8-54a2-45f3-abb1-d3976415a718
+    internal-label: Personalization
+  - id: a642c50e-80eb-4fc1-a5d2-f3762d1f841d
+    internal-label: Administration
+subfeature_v2:
+  - id: db974db1-cf49-4452-872e-5a56c5f1d391
+    internal-label: Context Hub
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '2996'
+source-wordcount: '3030'
 ht-degree: 0%
-
 ---
-
 # 詳細的使用者端內容{#client-context-in-detail}
 
 >[!NOTE]
@@ -190,15 +206,15 @@ AEM提供您可以擴充的genericstore和genericstoreproperties內容存放區�
 
 * 屬性值組：擴充`GenericStoreProperties`元件。 此元件會自動轉譯屬性值組的存放區。 提供了幾個互動點：
 
-   * `prolog.jsp`和`epilog.jsp`：元件互動，可讓您在元件轉譯之前或之後新增伺服器端邏輯。
+  * `prolog.jsp`和`epilog.jsp`：元件互動，可讓您在元件轉譯之前或之後新增伺服器端邏輯。
 
 * 複雜資料：擴充`GenericStore`元件。 您的工作階段存放區需要每當必須轉譯元件時都呼叫的「轉譯器」方法。 使用兩個引數呼叫轉譯器函式：
 
-   * `@param {String} store`
-要呈現的存放區
+  * `@param {String} store`
+    要呈現的存放區
 
-   * `@param {String} divId`
-必須轉譯存放區的div識別碼。
+  * `@param {String} divId`
+    必須轉譯存放區的div識別碼。
 
 >[!NOTE]
 >
@@ -490,7 +506,7 @@ window.CQMobileSlider["geometrixx-outdoors"] = {
 
 建立CQ應用程式並新增地理位置元件。
 
-1. 在網頁瀏覽器中開啟CRXDE Lite ([https://localhost:4502/crx/de](https://localhost:4502/crx/de))。
+1. 在網頁瀏覽器([https://localhost:4502/crx/de](https://localhost:4502/crx/de))中開啟CRXDE Lite。
 1. 以滑鼠右鍵按一下`/apps`資料夾，然後按一下「建立>建立資料夾」。 指定`myapp`的名稱，然後按一下[確定]。
 1. 同樣地，在`myapp`底下，建立名為`contextstores`的資料夾。 &quot;
 1. 以滑鼠右鍵按一下`/apps/myapp/contextstores`資料夾，然後按一下「建立>建立元件」。 指定下列屬性值，然後按下一步：
@@ -618,13 +634,13 @@ window.CQMobileSlider["geometrixx-outdoors"] = {
 
 * 子資料夾：
   `/content`
-包含自訂使用者端內容的內容。
+  包含自訂使用者端內容的內容。
 
 * 資料夾：
   `/contextstores`
-可讓您為內容存放區定義不同的設定。
+  可讓您為內容存放區定義不同的設定。
 
 若要使用自訂的使用者端內容，請編輯屬性
 `path`
-使用者端內容元件的設計樣式中（如頁面範本中所包含）。例如，作為的標準位置：
+使用者端內容元件的設計樣式中（如頁面範本中所包含）。 例如，作為的標準位置：
 `/libs/cq/personalization/components/clientcontext/design_dialog/items/path`

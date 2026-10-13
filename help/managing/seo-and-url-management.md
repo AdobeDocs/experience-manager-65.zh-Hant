@@ -8,13 +8,27 @@ exl-id: b138f6d1-0870-4071-b96e-4a759ad9a76e
 solution: Experience Manager, Experience Manager 6.5
 feature: Compliance
 role: Developer,Leader
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e14eb250-3c22-4a07-9061-a78112b2b826
+    internal-label: Experience Manager 6.5
+feature_v2:
+  - id: b1210526-416b-4ef6-bcc0-1692e99f30e9
+    internal-label: Administration and security
+subfeature_v2:
+  - id: c42c36cf-eeed-484a-8b39-a33a68192a07
+    internal-label: Compliance
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '3800'
 ht-degree: 67%
-
 ---
-
 # SEO和URL管理最佳作法{#seo-and-url-management-best-practices}
 
 SEO （搜尋引擎最佳化）已成為許多行銷人員的重點考量。 因此，許多AEM專案中的SEO考量都必須解決。
@@ -396,7 +410,7 @@ AEM Sites 包含 `SitemapGenerator` 的預設實作，它周遊頁面樹以產�
 若要限制 Sitemap 的內容，可以在需要時實作以下服務介面：
 
 * 可以實作 [SitemapPageFilter](https://javadoc.io/doc/com.adobe.cq.wcm/com.adobe.aem.wcm.seo/latest/com/adobe/aem/wcm/seo/sitemap/SitemapPageFilter.html) 以隱藏 AEM Sites 特定 Sitemap 產生器所產生之 XML Sitemap 的頁面。
-* 可以實作 [SitemapProductFilter](https://javadoc.io/doc/com.adobe.commerce.cif/core-cif-components-core/latest/com/adobe/cq/commerce/core/components/services/sitemap/SitemapProductFilter.html) 或 [SitemapCategoryFilter](https://javadoc.io/doc/com.adobe.commerce.cif/core-cif-components-core/latest/com/adobe/cq/commerce/core/components/services/sitemap/SitemapCategoryFilter.html) 以篩選出 [商務整合框架](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/home.html?lang=zh-Hant) 特定 Sitemap 產生器所產生之 XML Sitemap 的產品或類別。
+* 可以實作 [SitemapProductFilter](https://javadoc.io/doc/com.adobe.commerce.cif/core-cif-components-core/latest/com/adobe/cq/commerce/core/components/services/sitemap/SitemapProductFilter.html) 或 [SitemapCategoryFilter](https://javadoc.io/doc/com.adobe.commerce.cif/core-cif-components-core/latest/com/adobe/cq/commerce/core/components/services/sitemap/SitemapCategoryFilter.html) 以篩選出 [商務整合框架](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/home.html) 特定 Sitemap 產生器所產生之 XML Sitemap 的產品或類別。
 
 如果預設實作不適用於特定使用案例，或擴充點不夠靈活，請實作自訂`SitemapGenerator`以完全控制產生的Sitemap內容。 以下範例使用AEM Sites的預設實作邏輯。 它使用 [ResourceTreeSitemapGenerator](https://javadoc.io/doc/org.apache.sling/org.apache.sling.sitemap/latest/org/apache/sling/sitemap/spi/generator/ResourceTreeSitemapGenerator.html) 作為周遊頁面樹的起點：
 

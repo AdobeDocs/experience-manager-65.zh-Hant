@@ -10,13 +10,20 @@ role: Admin
 exl-id: 426e3adf-3723-4d17-a988-6eb050939e68
 solution: Experience Manager
 feature: Communities
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '2963'
-ht-degree: 1%
-
+source-wordcount: '3201'
+ht-degree: 0%
 ---
-
 # 社群網站主控台 {#communities-sites-console}
 
 社群網站主控台提供下列存取權：
@@ -103,12 +110,12 @@ ht-degree: 1%
 
   顯示在URL中的網站根頁面名稱。
 
-   * 請仔細檢查名稱，因為網站建立後不易變更。
-   * 基底URL ( `https://server:port/site root/site name)`顯示在`Community Site Name`下方。
+  * 請仔細檢查名稱，因為網站建立後不易變更。
+  * 基底URL ( `https://server:port/site root/site name)`顯示在`Community Site Name`下方。
 
-   * 若要取得有效的URL，請附加基本語言代碼+ &quot;。html&quot;
+  * 若要取得有效的URL，請附加基本語言代碼+ &quot;。html&quot;
 
-     *例如*，`https://localhost:4502/content/sites/mysight/en.html`
+    *例如*，`https://localhost:4502/content/sites/mysight/en.html`
 
 * **社群網站範本**&#x200B;功能表
 
@@ -144,8 +151,8 @@ ht-degree: 1%
 * 影像會釘選至瀏覽器視窗的左邊緣。
 * 不會調整影像大小，因此當影像寬度為……
 
-   * 小於瀏覽器的寬度，影像會水準重複。
-   * 大於瀏覽器的寬度，影像看起來會遭到裁切。
+  * 小於瀏覽器的寬度，影像會水準重複。
+  * 大於瀏覽器的寬度，影像看起來會遭到裁切。
 
 * 選取&#x200B;**「下一步」**。
 
@@ -179,32 +186,32 @@ ht-degree: 1%
 * **允許使用者註冊**
 
   若勾選，網站訪客可透過自助註冊成為社群成員。
-如果取消勾選，社群網站是*受限制的*，且網站訪客必須指派給社群網站的成員群組、提出要求或透過電子郵件傳送邀請。如果未勾選，則不應允許匿名存取。
-取消核取*私人*&#x200B;社群網站。預設為已核取。
+  如果取消勾選，社群網站是*受限制的*，且網站訪客必須指派給社群網站的成員群組、提出要求或透過電子郵件傳送邀請。 如果未勾選，則不應允許匿名存取。
+  取消核取*私人*&#x200B;社群網站。 預設為已核取。
 
 * **允許匿名存取**
 
   如果勾選，社群網站是&#x200B;*開啟*，任何網站訪客都可以存取該網站。
-如果未勾選，則只有已登入的成員才能存取該網站。
-取消核取*私人*&#x200B;社群網站。預設為已核取。
+  如果未勾選，則只有已登入的成員才能存取該網站。
+  取消核取*私人*&#x200B;社群網站。 預設為已核取。
 
 * **允許傳訊**
 
   如果勾選，成員可以相互傳送訊息，並傳送給社群網站內的群組。
-如果未勾選，則不會為社群設定訊息。
-預設為未勾選。
+  如果未勾選，則不會為社群設定訊息。
+  預設為未勾選。
 
 * **允許社交登入： Facebook**
 
-  如果勾選，可允許網站訪客使用其Facebook帳戶憑證登入。選取的[Facebook雲端設定](/help/communities/social-login.md#create-a-facebook-connect-cloud-service)應設定為在建立社群網站後，將使用者新增至社群網站的成員群組。
-如果未勾選，則不會顯示Facebook登入。
-取消勾選*私人*&#x200B;社群網站。預設為未勾選。
+  如果勾選，可允許網站訪客使用其Facebook帳戶憑證登入。 選取的[Facebook雲端設定](/help/communities/social-login.md#create-a-facebook-connect-cloud-service)應設定為在建立社群網站後，將使用者新增至社群網站的成員群組。
+  如果未勾選，則不會顯示Facebook登入。
+  保留*私人*&#x200B;社群網站未勾選。 預設為未勾選。
 
 * **允許社交登入： Twitter**
 
-  如果勾選，可允許網站訪客使用其Twitter帳戶認證登入。選取的[Twitter雲端設定](/help/communities/social-login.md#create-a-twitter-connect-cloud-service)應設定為在建立社群網站後，將使用者新增至社群網站的成員群組。
-如果未勾選，則不會顯示任何Twitter登入。
-取消勾選*私人*&#x200B;社群網站。預設為未勾選。
+  如果勾選，可允許網站訪客使用其Twitter帳戶認證登入。 選取的[Twitter雲端設定](/help/communities/social-login.md#create-a-twitter-connect-cloud-service)應設定為在建立社群網站後，將使用者新增至社群網站的成員群組。
+  如果未勾選，則不會顯示任何Twitter登入。
+  保留*私人*&#x200B;社群網站未勾選。 預設為未勾選。
 
 >[!NOTE]
 >
@@ -226,7 +233,7 @@ ht-degree: 1%
 
 ![社群角色](assets/site-admin-2.png)
 
-已指派這些設定給社群成員[&#128279;](/help/communities/users.md)的角色。
+已指派這些設定給社群成員](/help/communities/users.md)的[角色。
 
 使用預先輸入搜尋可輕鬆尋找社群成員。
 
@@ -267,7 +274,7 @@ ht-degree: 1%
 * **啟用Analytics**
 
   僅當[已針對Communities功能](/help/communities/analytics.md)設定Adobe Analytics時可用。
-預設為未勾選。勾選後，會出現另一個選取功能表：
+  預設為未勾選。 勾選後，會出現另一個選取功能表：
 
 ![網站分析 — 啟用](assets/site-analytics-enable.png)
 
@@ -304,39 +311,39 @@ ht-degree: 1%
 
 * **選取您社群網站的翻譯選項**
 
-   * **翻譯整個頁面**
+  * **翻譯整個頁面**
 
-     如果選取，頁面上的所有UGC都會轉譯為頁面的基本語言。
+    如果選取，頁面上的所有UGC都會轉譯為頁面的基本語言。
 
-     預設為&#x200B;*未選取*。
+    預設為&#x200B;*未選取*。
 
-   * **僅翻譯選取專案**
+  * **僅翻譯選取專案**
 
-     如果選取，每個貼文旁都會顯示翻譯選項，可將個別貼文翻譯成頁面的基本語言。
-預設為*已選取*。
+    如果選取，每個貼文旁都會顯示翻譯選項，可將個別貼文翻譯成頁面的基本語言。
+    預設為*已選取*。
 
 * **選取持續性選項**
 
-   * **翻譯使用者要求上的貢獻並於之後繼續保留**
-如果選取，內容在提出請求之前不會翻譯。 翻譯後，翻譯會儲存在存放庫中。
+  * **翻譯使用者要求上的貢獻並於之後繼續保留**
+    如果選取，內容在提出請求之前不會翻譯。 翻譯後，翻譯會儲存在存放庫中。
 
-     預設為&#x200B;*未選取*。
+    預設為&#x200B;*未選取*。
 
-   * **不要保留翻譯**
+  * **不要保留翻譯**
 
-     如果選取，翻譯將不會儲存在存放庫中。
+    如果選取，翻譯將不會儲存在存放庫中。
 
-     如果未選取，則會持續翻譯。
+    如果未選取，則會持續翻譯。
 
-     預設為&#x200B;*未選取*。
+    預設為&#x200B;*未選取*。
 
 * **智慧型轉譯器**
 
   選取下列其中一項：
 
-   * `Always show contributions in the original language` (預設)
-   * `Always show contributions in user preferred language`
-   * `Show contributions in user preferred language for only logged-in users`
+  * `Always show contributions in the original language` (預設)
+  * `Always show contributions in user preferred language`
+  * `Show contributions in user preferred language for only logged-in users`
 
 ### 步驟4 ：建立社群網站 {#step-create-communities-site}
 
@@ -409,17 +416,17 @@ ht-degree: 1%
 * 將其他[社群功能](/help/communities/functions.md)拖放至網站結構。
 * 在網站結構中的社群功能例項上：
 
-   * **`gear icon`**
+  * **`gear icon`**
 
-     編輯設定，包括顯示標題和URL名稱，以及[有特殊許可權的成員群組](/help/communities/users.md#privilegedmembersgroups)。
+    編輯設定，包括顯示標題和URL名稱，以及[有特殊許可權的成員群組](/help/communities/users.md#privilegedmembersgroups)。
 
-   * **`trashcan icon`**
+  * **`trashcan icon`**
 
-     從網站結構中移除（刪除）函式。
+    從網站結構中移除（刪除）函式。
 
-   * **`grid icon`**
+  * **`grid icon`**
 
-     修改網站最上層導覽列中顯示的函式順序。
+    修改網站最上層導覽列中顯示的函式順序。
 
 >[!NOTE]
 >
@@ -448,7 +455,7 @@ DESIGN面板允許套用新的主題：
 * [社群網站主題](#community-site-theme)
 * [社群網站品牌](#community-site-branding)
 
-   * 捲動至面板底部，以便變更品牌影像。
+  * 捲動至面板底部，以便變更品牌影像。
 
 ### 修改設定 {#modify-settings}
 
@@ -510,8 +517,8 @@ UGC未包含在網站套件中。
 
 >[!NOTE]
 >
->如果[允許社交登入： Facebook](#user-management)已啟用，則使用者群組`community-<site-name>-<uid>-members`後
->已建立，套用的[Facebook雲端服務](/help/communities/social-login.md#createafacebookcloudservice)應設定為新增使用者到此群組。
+>如果[允許社交登入： Facebook](#user-management)已啟用，則使用者群組之後 `community-<site-name>-<uid>-members`
+>已建立，套用的[Facebook雲端服務](/help/communities/social-login.md#createafacebookcloudservice)應設定為新增使用者至此群組。
 
 ## 設定驗證錯誤 {#configure-for-authentication-error}
 
@@ -523,7 +530,7 @@ UGC未包含在網站套件中。
 * 以系統管理員許可權登入。
 * 存取[網頁主控台](/help/sites-deploying/configuring-osgi.md)。
 
-   * 例如，[https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)。
+  * 例如，[https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)。
 
 * 找到`Adobe Granite Login Selector Authentication Handler`。
 * 選取`pencil`圖示，以開啟設定進行編輯。
@@ -544,7 +551,7 @@ UGC未包含在網站套件中。
 
 * 瀏覽至社群網站首頁。
 
-   * 例如，[https://localhost:4503/content/sites/engage/en.html](https://localhost:4503/content/sites/engage/en.html)
+  * 例如，[https://localhost:4503/content/sites/engage/en.html](https://localhost:4503/content/sites/engage/en.html)
 
 * 選取「登出」。
 * 選取「登入」。

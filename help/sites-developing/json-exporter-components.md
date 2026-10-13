@@ -9,13 +9,22 @@ exl-id: 6d127e14-767e-46ad-aaeb-0ce9dd14d553
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '471'
-ht-degree: 5%
-
+source-wordcount: '570'
+ht-degree: 12%
 ---
-
 # 為元件啟用 JSON 匯出{#enabling-json-export-for-a-component}
 
 元件可調整為根據模組化架構產生其內容的JSON匯出。
@@ -35,7 +44,7 @@ JSON匯出是以[Sling模型](https://sling.apache.org/documentation/bundles/mod
 
 >[!NOTE]
 >
->如需使用Sling模型的範例，請參閱[在AEM中開發Sling模型匯出工具](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html?lang=zh-Hant)。
+>如需使用Sling模型的範例，請參閱[在AEM中開發Sling模型匯出工具](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html)。
 
 Sling模型實作類別必須使用以下專案註釋：
 
@@ -77,7 +86,7 @@ https://<server>:<port>/content/page.model.selector1.selector2.json
 
 ## 範例 {#example}
 
-核心元件自核心元件[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)發行版本1.1.0起便已支援JSON匯出，並可作為參考使用。
+核心元件自核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)發行版本[1.1.0起便已支援JSON匯出，並可作為參考使用。
 
 如需範例，請參閱影像核心元件的Sling模型實作及其附註介面。
 
@@ -85,16 +94,16 @@ GITHUB上的程式碼
 
 您可以在GitHub上找到此頁面的程式碼
 
-* 在GitHub上[開啟aem-core-wcm-components專案](https://github.com/Adobe-Marketing-Cloud/aem-core-wcm-components)
+* [在GitHub上開啟aem-core-wcm-components專案](https://github.com/Adobe-Marketing-Cloud/aem-core-wcm-components)
 * 將專案下載為[ZIP檔](https://github.com/Adobe-Marketing-Cloud/aem-core-wcm-components/archive/master.zip)
 
 ## 相關檔案 {#related-documentation}
 
 如需詳細資訊，請參閱下列內容：
 
-* Assets使用手冊[&#128279;](https://helpx.adobe.com/tw/experience-manager/6-4/assets/user-guide.html?topic=/experience-manager/6-4/assets/morehelp/content-fragments.ug.js)中的內容片段主題
+* Assets使用手冊](https://helpx.adobe.com/experience-manager/6-4/assets/user-guide.html?topic=/experience-manager/6-4/assets/morehelp/content-fragments.ug.js)中的[內容片段主題
 
 * [內容片段模型](/help/assets/content-fragments/content-fragments-models.md)
 * [使用內容片段製作](/help/sites-authoring/content-fragments.md)
 * [內容服務的 JSON 匯出工具](/help/sites-developing/json-exporter.md)
-* [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)和[內容片段元件](https://helpx.adobe.com/tw/experience-manager/core-components/using/content-fragment-component.html)
+* [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)和[內容片段元件](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html)

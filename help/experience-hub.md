@@ -11,29 +11,46 @@ autotag-review: '2026-05-18T18:36:48.003Z'
 TQID: 'https://experienceleague.adobe.com/l50k7J-xXPu5kXKIg-rArib9aIMnMoXXlSoJ-YppJwQ'
 product_v2:
   - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e14eb250-3c22-4a07-9061-a78112b2b826
+    internal-label: Experience Manager 6.5
+feature_v2:
+  - id: ac5ecfc1-cc78-4ecc-a90a-0362685062ce
+    internal-label: AI Tools
+  - id: b1210526-416b-4ef6-bcc0-1692e99f30e9
+    internal-label: Administration and security
+subfeature_v2:
+  - id: bf7fca06-df97-4229-884f-76afcfade5ad
+    internal-label: AI Assistant
+  - id: f551224f-631f-46f8-b8fc-67744f995ba0
+    internal-label: Onboarding
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 level_v2:
   - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+    internal-label: Beginner
   - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
 topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 9c96b6744c7af2f061b4dfbf403560047485f9b5
+    internal-label: Insights
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: 945
+source-wordcount: '945'
 ht-degree: 85%
-
 ---
-
 # 關於 Experience Hub {#aem-experience-hub}
 
 Experience Hub 推出一個集中化的起點，用於在 Adobe Experience Manager 中管理內容、資產和網站。 Experience Hub 旨在提供個人化體驗，可讓您根據自己的角色和目標順暢地導覽 AEM 生態系統。 它以指南的方式提供關鍵的深入解析和建議的動作，協助您有效率地達成目標。 Experience Hub 具備以人物誌為導向的清晰版面，確保快速存取基本工具，有助於在所有 AEM 功能中提供簡化且有效的體驗。
 
 觀看重新設計的 AEM Experience Hub 工作區之快速導覽 (2 分鐘 39 秒)。
 
->[!VIDEO](https://video.tv.adobe.com/v/3475203/?captions=chi_hant&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3475190/?learn=on&enablevpops)
 
 <!--
 Available as a private beta, Experience Hub offers an optimized experience focused on improving workflows, prioritizing goals, and delivering results. Opting in lets you influence Experience Hub's development by providing feedback that helps shape its future and enhances its value for the entire AEM community.
@@ -83,7 +100,7 @@ Adobe Experience Manager 頁面已重新整理為增強型導覽和互動式小�
 
 **製作環境**&#x200B;區段會顯示您可存取的所有AEM環境，其中包含解決方案和頁面可用的特定捷徑，也可讓您在清單頂端釘選您要顯示的特定環境。
 
-下圖中的&#x200B;**「最新」**&#x200B;區段列出您最近在 AEM 中造訪的頁面。 根據您的租用戶授權，小工具可能包含「方案」、「管道執行」、「資產」、「頁面編輯器」和「表單編輯器」等項目。
+下圖中的&#x200B;**「最新」**&#x200B;區段列出您最近在 AEM 中造訪的頁面。 根據您的租用戶授權，小工具可能包含「程式」、「管道執行」、「資產」、「頁面編輯器」和「表單編輯器」等項目。
 
 頁面左上角附近的&#x200B;**快速鍵**&#x200B;提供可設定的快速鍵清單，協助您開始日常任務。 此清單可自訂，每個動作都會以選取的 AEM 環境為目標。
 
@@ -117,7 +134,7 @@ Experience Hub 使用統一的左側導覽來組織核心 AEM 功能、可自訂
 
 +++**使用者如何個人化其 Experience Hub 工作區？**
 
-使用者可以新增、移除、調整和重新排列小工具，以及自訂快速動作以根據其需求和偏好設定量身打造工作區。
+使用者可以新增、移除、調整大小和重新排列小工具，以及自訂快速動作以根據其需求和偏好設定量身打造工作區。
 
 +++
 
@@ -153,7 +170,7 @@ AEM 中的 AI 助理適用於已滿足先決條件，並在組織內提供其他
 
 +++**如果生產 AEM Cloud Service 或 Managed Services 環境不存在，會發生什麼事？**
 
-如果生產環境不存在，Experience Hub 中的選取選項會轉暗並且無法使用。
+如果沒有任何生產環境，Experience Hub 中的選取選項會轉暗並且無法使用。
 
 +++
 

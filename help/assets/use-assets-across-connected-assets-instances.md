@@ -1,6 +1,6 @@
 ---
-title: 使用「連線的Assets」在 [!DNL Sites]中共用DAM資產
-description: 在另一個 [!DNL Adobe Experience Manager Sites] 部署中建立網頁時，使用遠端 [!DNL Adobe Experience Manager Assets] 部署中可用的資產。
+title: 在[!DNL Sites]中使用連線的Assets共用DAM資產
+description: 在其他[!DNL Adobe Experience Manager Sites]部署中建立網頁時，使用遠端[!DNL Adobe Experience Manager Assets]部署中可用的資產。
 contentOwner: AK
 mini-toc-levels: 2
 role: User, Admin, Leader
@@ -8,18 +8,36 @@ feature: Connected Assets,User and Groups
 exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: bca6156727dca11b2e09be549f3def6130827193
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 3aa2a621-ec4f-5c9b-bbb0-bd5a3b1279a6
+    internal-label: User and Groups
+  - id: ac365bec-0634-4744-9473-c42f47320593
+    internal-label: Asset management and governance
+subfeature_v2:
+  - id: f498a57f-d890-4726-b1d0-8f291d1e6206
+    internal-label: Connected assets
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
-source-wordcount: '3999'
-ht-degree: 15%
-
+source-wordcount: '4025'
+ht-degree: 14%
 ---
-
 # 在[!DNL Experience Manager Sites]中使用連線的Assets共用DAM資產 {#use-connected-assets-to-share-dam-assets-in-aem-sites}
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/use-assets-across-connected-assets-instances.html?lang=zh-Hant) |
+| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/use-assets-across-connected-assets-instances.html?lang=en) |
 | AEM 6.5 | 本文章 |
 
 
@@ -42,12 +60,12 @@ ht-degree: 15%
 使用或設定此功能之前，請先確定下列事項：
 
 * 使用者是每個部署中適當使用者群組的一部分。
-* 對於[!DNL Adobe Experience Manager]部署型別，符合其中一個支援的條件。[!DNL Experience Manager] 6.5 [!DNL Assets]搭配[!DNL Experience Manager] as a Cloud Service使用。 如需此功能如何在[!DNL Experience Manager]中當作[!DNL Cloud Service]運作的詳細資訊，請參閱[Experience Manager as a Cloud Service中的Assets連線](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/use-assets-across-connected-assets-instances.html?lang=zh-Hant)。
+* 對於[!DNL Adobe Experience Manager]部署型別，符合其中一個支援的條件。[!DNL Experience Manager] 6.5 [!DNL Assets]搭配[!DNL Experience Manager] as a Cloud Service使用。 如需此功能如何在[!DNL Experience Manager]中當作[!DNL Cloud Service]運作的詳細資訊，請參閱[Experience Manager as a Cloud Service中的Assets連線](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/use-assets-across-connected-assets-instances.html)。
 
   | | [!DNL Sites] as a [!DNL Cloud Service] | AMS上的[!DNL Experience Manager] 6.5 [!DNL Sites] | [!DNL Experience Manager] 6.5 [!DNL Sites]內部部署 |
   |---|---|---|---|
   | **[!DNL Experience Manager Assets]as a[!DNL Cloud Service]** | 支援 | 支援 | 支援 |
-  | AMS **上的**&#x200B;[!DNL Experience Manager] 6.5 [!DNL Assets] | 支援 | 支援 | 支援 |
+  | AMS **上的**[!DNL Experience Manager] 6.5 [!DNL Assets] | 支援 | 支援 | 支援 |
   | **[!DNL Experience Manager]6.5 [!DNL Assets]內部部署** | 不支援 | 不支援 | 不支援 |
 
 ### 支援的檔案格式 {#mimetypes}
@@ -59,7 +77,7 @@ ht-degree: 15%
 
 ### 相關使用者和群組 {#users-and-groups-involved}
 
-以下說明設定及使用功能以及其相對應的使用者群組時，相關的各種角色。 本機範圍適用於作者建立網頁的使用案例。 遠端範圍適用於託管所需資產的 DAM 部署。 [!DNL Sites]作者擷取這些遠端資產。
+以下說明與設定及使用此功能相關的各種角色及其對應的使用者群組。 本機範圍適用於作者建立網頁的使用案例。 遠端範圍適用於託管所需資產的 DAM 部署。 [!DNL Sites]作者擷取這些遠端資產。
 
 | 角色 | 範圍 | 使用者群組 | 逐步說明中的使用者名稱 | 說明 |
 |---|---|---|---|---|
@@ -134,7 +152,7 @@ Experience Manager可讓您將遠端DAM部署作為來源連線至多個Experien
    >
    >作者擷取資產時，會擷取遠端部署上可用的所有轉譯。 若要針對所擷取的資產建立更多轉譯項目，請略過此設定步驟。 會觸發[!UICONTROL DAM更新資產]工作流程，並建立更多轉譯。 這些轉譯專案僅適用於本機[!DNL Sites]部署，不適用於遠端DAM部署。
 
-1. 將[!DNL Sites]部署新增為[!DNL Assets]部署上CORS設定中的允許來源。 如需詳細資訊，請參閱[瞭解CORS](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html?lang=zh-Hant)。
+1. 將[!DNL Sites]部署新增為[!DNL Assets]部署上CORS設定中的允許來源。 如需詳細資訊，請參閱[瞭解CORS](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html)。
 
 1. 設定[相同網站Cookie支援](/help/sites-administering/same-site-cookie-support.md)。
 
@@ -162,7 +180,7 @@ Experience Manager可讓您將遠端DAM部署作為來源連線至多個Experien
 
 若要在[!DNL Assets]和[!DNL Sites]部署上設定[!DNL Dynamic Media]：
 
-1. 在遠端[!DNL Assets]作者部署上啟用並設定[!DNL Dynamic Media]為全域設定。若要設定動態媒體，請參閱[設定動態媒體](/help/assets/config-dynamic.md#configuring-dynamic-media-cloud-services)。
+1. 在遠端[!DNL Assets]作者部署上啟用並設定[!DNL Dynamic Media]為全域設定。 若要設定動態媒體，請參閱[設定動態媒體](/help/assets/config-dynamic.md#configuring-dynamic-media-cloud-services)。
 在遠端[!DNL Assets]部署中，在[!UICONTROL Dynamic Media同步處理模式]中，選取&#x200B;**[!UICONTROL 預設啟用]**。
 
 1. 依照[設定網站與資產部署之間的連線](#configure-a-connection-between-sites-and-assets-deployments)中的說明建立連線的Assets設定。 此外，請選取&#x200B;**[!UICONTROL 為Dynamic Media連線的Assets擷取原始轉譯]**&#x200B;選項。
@@ -173,11 +191,11 @@ Experience Manager可讓您將遠端DAM部署作為來源連線至多個Experien
    * 在本機[!DNL Sites]上，在[!UICONTROL Dynamic Media同步處理模式]中，選取&#x200B;**[!UICONTROL 預設為停用]**。 [!DNL Sites]部署必須具有[!DNL Dynamic Media]帳戶的唯讀存取權。
    * 在本機[!DNL Sites]上的&#x200B;**[!UICONTROL 發佈Assets]**&#x200B;選項中，選取&#x200B;**[!UICONTROL 選擇性發佈]**。 不要選取&#x200B;**[!UICONTROL 同步處理所有內容]**。
 
-1. 啟用影像核心元件[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html?lang=zh-Hant#dynamic-media)中的[!DNL Dynamic Media] 支援。 當作者在本機[!DNL Sites]部署的網頁中使用[!DNL Dynamic Media]個影像時，此功能可讓預設的[影像元件](https://www.aemcomponents.dev/content/core-components-examples/library/core-content/image.html)顯示[!DNL Dynamic Media]個影像。
+1. 啟用影像核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html#dynamic-media)中的[[!DNL Dynamic Media] 支援。 當作者在本機[!DNL Sites]部署的網頁中使用[!DNL Dynamic Media]個影像時，此功能可讓預設的[影像元件](https://www.aemcomponents.dev/content/core-components-examples/library/core-content/image.html)顯示[!DNL Dynamic Media]個影像。
 
 ## 使用遠端資產 {#use-remote-assets}
 
-網站作者使用「內容尋找器」連線至DAM部署。 作者可以瀏覽、搜尋和拖曳元件中的遠端資產。 若要向遠端DAM驗證，請備妥管理員提供的認證（如有）。
+網站作者使用「內容尋找器」連線至DAM部署。 作者可以瀏覽、搜尋遠端資產，並將其拖曳到元件中。 若要向遠端DAM驗證，請備妥管理員提供的認證（如有）。
 
 作者可以在單一網頁中使用本機DAM和遠端DAM部署上可用的資產。 使用「內容尋找器」，以便在搜尋本機 DAM 和搜尋遠端 DAM 之間切換。
 
@@ -219,7 +237,7 @@ Experience Manager可讓您將遠端DAM部署作為來源連線至多個Experien
 >
 >擷取的遠端資產一旦用於網頁中，只要任何人有權存取本機資料夾，都可以搜尋和使用。 擷取的資產會儲存在本機資料夾中（上述逐步說明中的`connectedassets`）。 這些資產也可供搜尋，並可透過[!UICONTROL 「內容尋找器」]顯示於本機存放庫。
 
-擷取的資產可設為其他任何本機資產以供使用，只是相關聯的中繼資料無法編輯。
+擷取的資產可像任何其他本機資產一樣使用，只是相關的後設資料無法編輯。
 
 ### 檢查跨網頁資產的使用情況 {#asset-usage-references}
 
@@ -316,7 +334,7 @@ Experience Manager可讓您將遠端DAM部署作為來源連線至多個Experien
 
 * 若要取得資產使用方式的深入分析，請在[!DNL Sites]執行個體上設定[Assets Insight](/help/assets/asset-insights.md)功能。
 
-* 您無法將遠端資產拖曳至[影像元件設定對話方塊](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/image.html?lang=zh-Hant#configure-dialog)。 不過，您可以直接將遠端資產拖曳至Sites頁面上的影像元件，而不需按一下&#x200B;**[!UICONTROL 設定]**。
+* 您無法將遠端資產拖曳至[影像元件設定對話方塊](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/image.html?lang=en#configure-dialog)。 不過，您可以直接將遠端資產拖曳至Sites頁面上的影像元件，而不需按一下&#x200B;**[!UICONTROL 設定]**。
 
 ### 許可權與資產管理 {#permissions-and-managing-assets}
 

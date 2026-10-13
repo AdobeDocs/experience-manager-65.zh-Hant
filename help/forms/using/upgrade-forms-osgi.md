@@ -9,18 +9,38 @@ role: Admin,User
 exl-id: 1e39455e-f588-42a2-91f5-daefcfed82a0
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,AEM Forms on OSGi, AEM Forms Upgrade
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 8c4fb903-572c-5473-ad45-8ebb0d5d8134
+    internal-label: AEM Forms on OSGi
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+  - id: d49d6117-dd89-469c-a774-cc96b7eee433
+    internal-label: Administration
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+  - id: b9cdd520-e7a7-4af9-a95f-296f28882b69
+    internal-label: AEM Forms upgrade
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
 source-wordcount: '1040'
 ht-degree: 2%
-
 ---
-
 # 在OSGi上升級至AEM 6.5 Forms {#upgrade-to-aem-forms-osgi}
 
 您可以從AEM 6.3 Forms或AEM 6.4 Forms直接升級至AEM 6.5 Forms。
 
-不提供從&#x200B;**AEM 6.0 Forms、AEM 6.1 Forms**&#x200B;和&#x200B;**AEM 6.2 Forms**&#x200B;到AEM 6.5 Forms的直接升級路徑。 執行中繼[升級至AEM 6.2 Forms](https://helpx.adobe.com/tw/experience-manager/6-2/forms/using/upgrade.html)、[升級至AEM 6.3 Forms](https://helpx.adobe.com/tw/experience-manager/6-3/forms/using/upgrade.html)，或[升級至AEM 6.4 Forms](/help/forms/using/upgrade.md)，然後從AEM 6.3 Forms或AEM 6.4 Forms升級至AEM 6.5 Forms。
+不提供從&#x200B;**AEM 6.0 Forms、AEM 6.1 Forms**&#x200B;和&#x200B;**AEM 6.2 Forms**&#x200B;到AEM 6.5 Forms的直接升級路徑。 執行中繼[升級至AEM 6.2 Forms](https://helpx.adobe.com/experience-manager/6-2/forms/using/upgrade.html)、[升級至AEM 6.3 Forms](https://helpx.adobe.com/experience-manager/6-3/forms/using/upgrade.html)，或[升級至AEM 6.4 Forms](/help/forms/using/upgrade.md)，然後從AEM 6.3 Forms或AEM 6.4 Forms升級至AEM 6.5 Forms。
 
 若要從AEM 6.3 Forms或AEM 6.4 Forms升級至AEM 6.5 Forms，請執行下列動作：
 
@@ -49,10 +69,10 @@ ht-degree: 2%
       1. 從&#x200B;**[!UICONTROL 解決方案]**&#x200B;下拉式清單中選取&#x200B;**[!UICONTROL Forms]**。
       1. 選取封裝的版本和型別。 您也可以使用&#x200B;**[!UICONTROL 搜尋下載]**&#x200B;選項來篩選結果。
    1. 選取適用於您作業系統的封裝名稱，選取&#x200B;**[!UICONTROL 接受EULA條款]**，然後選取&#x200B;**[!UICONTROL 下載]**。
-   1. 開啟[封裝管理員](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=zh-Hant)，然後按一下&#x200B;**[!UICONTROL 上傳封裝]**&#x200B;以上傳封裝。
+   1. 開啟[封裝管理員](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)，然後按一下&#x200B;**[!UICONTROL 上傳封裝]**&#x200B;以上傳封裝。
    1. 選取封裝並按一下&#x200B;**[!UICONTROL 安裝]**。
 
-      您也可以使用[AEM Forms發行版本](https://helpx.adobe.com/tw/aem-forms/kb/aem-forms-releases.html)文章中所列的直接連結來下載套件。
+      您也可以使用[AEM Forms發行版本](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)文章中所列的直接連結來下載套件。
 
       >[!NOTE]
       >
@@ -70,7 +90,7 @@ ht-degree: 2%
 
      移轉公用程式可讓舊版的最適化表單和通訊管理資產相容於AEM 6.5表單。 您可以從AEM Software Distribution下載公用程式。 如需設定及使用移轉公用程式的逐步資訊，請參閱[移轉公用程式](../../forms/using/migration-utility.md)。
 
-     如果您使用[範例將草稿與提交元件](https://helpx.adobe.com/tw/experience-manager/6-3/forms/using/integrate-draft-submission-database.html)與資料庫整合，並從舊版升級，請在執行升級後執行下列SQL查詢：
+     如果您使用[範例將草稿與提交元件](https://helpx.adobe.com/experience-manager/6-3/forms/using/integrate-draft-submission-database.html)與資料庫整合，並從舊版升級，請在執行升級後執行下列SQL查詢：
 
      ```sql
      UPDATE metadata m, additionalmetadatatable am
@@ -92,8 +112,8 @@ ht-degree: 2%
 
      在AEM 6.5 Forms中，jQuery的版本已更新至3.2.1，而jQuery UI版本已更新至1.12.1。 AEM表單在&#x200B;**noConflict**&#x200B;模式下使用JQuery。 因此，如果您使用任何其他jQuery版本，則執行升級時不會顯示任何問題。 不過，當您升級至AEM 6.5 Forms時：
 
-      * 確保您的自訂元件（如果有的話）與支援的jQuery版本相容。
-      * 從自訂元件移除不支援的API。 如需已移除的API清單，請參閱[升級指南](https://jquery.com/upgrade-guide/3.0/)。 例如，會移除對load()、.unload()和.error() API的支援。 使用.on()方法取代上述的API。 例如，將$(&quot;img&quot;)。load(fn)變更為$(&quot;img&quot;)。on(&quot;load&quot;， fn)。
+     * 確保您的自訂元件（如果有的話）與支援的jQuery版本相容。
+     * 從自訂元件移除不支援的API。 如需已移除的API清單，請參閱[升級指南](https://jquery.com/upgrade-guide/3.0/)。 例如，會移除對load()、.unload()和.error() API的支援。 使用.on()方法取代上述的API。 例如，將$(&quot;img&quot;)。load(fn)變更為$(&quot;img&quot;)。on(&quot;load&quot;， fn)。
 
    * **（如果從AEM 6.2 Forms或舊版升級）重新設定分析和報表**
 
@@ -105,9 +125,9 @@ ht-degree: 2%
    * **驗證復寫及反向復寫：**&#x200B;發佈、填寫及送出一些已移轉的表單。 同時驗證提交的資料。
    * **驗證對管理員和開發人員使用者介面的存取權：**&#x200B;從管理員帳戶登入AEM執行個體，並確認您擁有下列URL的存取權：
 
-      * `https://'[server]:[port]'/crx/packmgr`
-      * `https://'[server]:[port]'/crx/de`
-      * `https://'[server]:[port]'/aem/forms.html/content/dam/formsanddocuments`
+     * `https://'[server]:[port]'/crx/packmgr`
+     * `https://'[server]:[port]'/crx/de`
+     * `https://'[server]:[port]'/aem/forms.html/content/dam/formsanddocuments`
 
    >[!NOTE]
    >

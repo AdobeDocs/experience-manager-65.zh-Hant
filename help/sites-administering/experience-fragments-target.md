@@ -10,7 +10,18 @@ exl-id: f2921349-de8f-4bc1-afa2-aeace99cfc5c
 solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
-source-git-commit: dcb55b3b185fe5dccf52377a12556e33d818e410
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 243139ec-8e41-5296-a287-31343ab1bc0f
+    internal-label: Integration
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1487'
 ht-degree: 1%
@@ -25,7 +36,7 @@ ht-degree: 1%
 * JSON：支援Headless內容傳送
 * HTML 和 JSON
 
-AEM體驗片段可以匯出至Adobe Target中的預設工作區，或匯出至Adobe Target的使用者定義工作區。 這是使用Adobe Developer Console完成的，對此，AEM必須使用IMS[&#128279;](/help/sites-administering/setting-up-ims-integrations-for-aem.md)與Adobe Target 整合。
+AEM體驗片段可以匯出至Adobe Target中的預設工作區，或匯出至Adobe Target的使用者定義工作區。 這是使用Adobe Developer Console完成的，對此，AEM必須使用IMS](/help/sites-administering/setting-up-ims-integrations-for-aem.md)與Adobe Target [整合。
 
 >[!NOTE]
 >
@@ -46,14 +57,14 @@ AEM體驗片段可以匯出至Adobe Target中的預設工作區，或匯出至Ad
 >如需進一步資訊，另請參閱：
 >
 >* [Adobe Target開發](https://developers.adobetarget.com/)
->* [核心元件 — 體驗片段](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/experience-fragment.html?lang=zh-Hant)
+>* [核心元件 — 體驗片段](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/experience-fragment.html)
 >
 
 ## 先決條件 {#prerequisites}
 
 需要執行各種動作：
 
-1. 您必須使用IMS[&#128279;](/help/sites-administering/setting-up-ims-integrations-for-aem.md) 整合AEM與Adobe Target。
+1. 您必須使用IMS](/help/sites-administering/setting-up-ims-integrations-for-aem.md) [整合AEM與Adobe Target。
 
    >[!NOTE]
    >
@@ -98,7 +109,7 @@ AEM體驗片段可以匯出至Adobe Target中的預設工作區，或匯出至Ad
    >
    >請參閱核心元件：
    >
-   >[核心元件 — 體驗片段](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/experience-fragment.html?lang=zh-Hant)
+   >[核心元件 — 體驗片段](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/experience-fragment.html)
 
    在&#x200B;**Adobe Target**&#x200B;下選取：
 
@@ -142,7 +153,7 @@ AEM體驗片段可以匯出至Adobe Target中的預設工作區，或匯出至Ad
 
    >[!NOTE]
    >
-   >如果體驗片段已匯出，請選取「在Adobe Target中更新」**&#x200B;**。
+   >如果體驗片段已匯出，請選取「在Adobe Target中更新」****。
 
 1. 視需要按一下&#x200B;**匯出而不發佈**&#x200B;或&#x200B;**發佈**。
 
@@ -168,7 +179,7 @@ AEM體驗片段可以匯出至Adobe Target中的預設工作區，或匯出至Ad
 
 ## 在Adobe Target中使用您的體驗片段 {#using-your-experience-fragments-in-adobe-target}
 
-執行先前的工作後，體驗片段會顯示在Adobe Target的「選件」頁面中。 檢視[特定Target檔案](https://experienceleague.adobe.com/docs/target/using/experiences/offers/aem-experience-fragments.html?lang=zh-Hant)以瞭解您可以達成的目標。
+執行先前的工作後，體驗片段會顯示在Adobe Target的「選件」頁面中。 檢視[特定Target檔案](https://experienceleague.adobe.com/docs/target/using/experiences/offers/aem-experience-fragments.html)以瞭解您可以達成的目標。
 
 >[!NOTE]
 >

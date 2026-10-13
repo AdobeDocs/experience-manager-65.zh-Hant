@@ -1,6 +1,6 @@
 ---
 title: 作者在AEM中建立內容時的首要步驟
-description: 探索在 AEM 6.5 中建立內容和進行編寫的重要概念。您還會找到有關使用標記、範本和其他頁面功能的資訊。
+description: 探索在 AEM 6.5 中建立內容和進行製作的關鍵概念。 您也會找到使用標記、範本及其他頁面功能等相關資訊。
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
@@ -10,13 +10,26 @@ exl-id: b2103774-1876-4bf8-a29a-2ba0d51e7914
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Developer
-source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '413'
-ht-degree: 7%
-
+source-wordcount: '415'
+ht-degree: 6%
 ---
-
 
 # 作者的首要步驟{#first-steps-for-authors}
 
@@ -61,7 +74,7 @@ ht-degree: 7%
 
 ### 發佈頁面 {#publishing-a-page}
 
-當您完成編輯頁面後，您將會想要發佈（或啟動）您的頁面[，以便您的網站中的訪客可以使用該頁面。](/help/sites-authoring/publishing-pages.md#main-pars-title-10)
+當您完成編輯頁面後，您將會想要發佈（或啟動）您的頁面](/help/sites-authoring/publishing-pages.md#main-pars-title-10)，以便您的網站中的訪客可以使用該頁面。[
 
 ## 其他動作 {#further-actions}
 

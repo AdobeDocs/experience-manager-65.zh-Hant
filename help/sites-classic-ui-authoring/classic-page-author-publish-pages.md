@@ -10,13 +10,22 @@ exl-id: 3f6aa06e-b5fd-4ab0-9ecc-14250cb3f55e
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1028'
+source-wordcount: '1032'
 ht-degree: 0%
-
 ---
-
 # 發佈頁面{#publishing-pages}
 
 在作者環境中建立並檢閱您的內容後，使其可在您的公開網站（您的發佈環境）上使用。
@@ -29,7 +38,7 @@ ht-degree: 0%
 >
 >可能會混淆與發佈相關的某些術語：
 >
->* **Publish /取消發佈**
+>* **發佈/取消發佈**
 >  這些是讓您的內容在發佈環境中公開使用（或不公開使用）的動作主要詞語。
 >
 >* **啟用/停用**
@@ -56,7 +65,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->您也可以使用[工具]主控台上的[啟動樹狀結構] [&#128279;](#howtoactivateacompletesectiontreeofyourwebsite)，啟動多個頁面的子樹狀結構。
+>您也可以使用[工具]主控台上的[啟動樹狀結構] [ ](#howtoactivateacompletesectiontreeofyourwebsite)，啟動多個頁面的子樹狀結構。
 
 ### 從網站主控台啟用頁面 {#activating-a-page-from-the-websites-console}
 
@@ -89,7 +98,7 @@ ht-degree: 0%
 
 開啟頁面並修改其內容後，您可以：
 
-1. 選取Sidekick中的&#x200B;**頁面**&#x200B;索引標籤。
+1. 在Sidekick中選取&#x200B;**頁面**&#x200B;索引標籤。
 1. 按一下&#x200B;**啟動頁面**。
 視窗右上方會顯示訊息，確認頁面已啟動。
 
@@ -115,7 +124,7 @@ ht-degree: 0%
 若要排程您的啟動作業以供稍後使用，請執行下列動作：
 
 1. 在[網站]主控台中，移至&#x200B;**啟用**&#x200B;功能表，然後選取&#x200B;**稍後啟用**。
-1. 在開啟的對話方塊中，提供啟動日期和時間，然後按一下[確定]。**&#x200B;** 這會建立指定時間啟動的頁面版本。
+1. 在開啟的對話方塊中，提供啟動日期和時間，然後按一下[確定]。**** 這會建立指定時間啟動的頁面版本。
 
    ![screen_shot_2012-02-08at14751pm](assets/screen_shot_2012-02-08at14751pm.png)
 
@@ -129,7 +138,7 @@ ht-degree: 0%
 
 1. 在網站主控台中，移至&#x200B;**停用**&#x200B;功能表，然後選取&#x200B;**稍後停用**。
 
-1. 在開啟的對話方塊中，提供停用日期與時間，然後按一下[確定]。**&#x200B;**
+1. 在開啟的對話方塊中，提供停用日期與時間，然後按一下[確定]。****
 
    ![screen_shot_2012-02-08at15129pm](assets/screen_shot_2012-02-08at15129pm.png)
 

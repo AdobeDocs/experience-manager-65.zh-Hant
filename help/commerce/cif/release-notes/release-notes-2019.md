@@ -5,13 +5,21 @@ exl-id: 7e61a75d-6b35-46ee-b88a-444c10b2708f
 solution: Experience Manager,Commerce
 feature: Commerce Integration Framework
 role: Admin, Developer
-source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1070'
 ht-degree: 10%
-
 ---
-
 # Commerce integration framework GitHub版本總覽
 
 ## 發行日期： 2019年11月
@@ -52,7 +60,7 @@ ht-degree: 10%
 
 * 產品詳細資料頁面和產品清單頁面的完全可編寫範本。 作者現在可以建立範本，並將產品清單和產品詳細資料元件拖放至這些範本上。 除了新增其他元件外，作者現在也可以變更這些範本的版面，為他們提供無限制的自由，以建立結合行銷和商務內容的令人驚豔體驗。
 
-* 已增強所有作者友善的CIF核心元件，以支援[AEM的樣式系統](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html?lang=zh-Hant)。 已為產品清單元件提供範例樣式。
+* 已增強所有作者友善的CIF核心元件，以支援[AEM的樣式系統](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html)。 已為產品清單元件提供範例樣式。
 
 * 用於帳戶管理的React型使用者端元件。 此版本支援下列功能：登入、忘記密碼和建立帳戶。
 

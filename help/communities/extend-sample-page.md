@@ -10,13 +10,20 @@ exl-id: d4295a77-b931-4bc8-b3b4-eec42fdcfc56
 solution: Experience Manager
 feature: Communities
 role: Developer
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '375'
+source-wordcount: '400'
 ht-degree: 0%
-
 ---
-
 # 新增註解至範例頁面  {#add-comment-to-sample-page}
 
 現在，自訂註解系統的元件已放置於應用程式目錄(/apps)中，可以使用擴充元件。 在受影響的網站中，註解系統執行個體必須將其resourceType設定為自訂註解系統，並包含所有必要的使用者端資料庫。
@@ -55,11 +62,11 @@ ht-degree: 0%
 
 ![verify-comment-crxde](assets/verify-comment-crxde.png)
 
-#### Publish範例頁面 {#publish-sample-page}
+#### 發佈範例頁面 {#publish-sample-page}
 
 將自訂元件新增至頁面之後，也必須（重新）[發佈頁面](/help/communities/sites-console.md#publishing-the-site)。
 
-#### Publish：範例頁面上的替代註解 {#publish-alt-comment-on-sample-page}
+#### 發佈：範例頁面上的替代註解 {#publish-alt-comment-on-sample-page}
 
 在發佈自訂應用計畫和範例頁面後，可以輸入註解。 使用[示範使用者](/help/communities/tutorials.md#demo-users)或管理員登入時，可以張貼註解。
 

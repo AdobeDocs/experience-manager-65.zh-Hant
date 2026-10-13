@@ -6,13 +6,25 @@ feature: Multi Site Manager
 exl-id: 3fedc1ba-64f5-4fbe-9ee5-9b96b75dda58
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: eae057caed533ef16bb541b4ad41b8edd7aaa1c7
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: a642c50e-80eb-4fc1-a5d2-f3762d1f841d
+    internal-label: Administration
+subfeature_v2:
+  - id: e86b80f2-7cb0-4646-8fcd-51d3bf272fce
+    internal-label: Multi Site Manager
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1624'
 ht-degree: 2%
-
 ---
-
 # MSM 最佳做法{#msm-best-practices}
 
 ## 一般 {#general}
@@ -39,7 +51,7 @@ MSM是可設定的架構，用於自動化內容部署。 實作通常涉及網�
 >您也可以使用[Reference元件](/help/sites-authoring/default-components-foundation.md#reference)重複使用單一頁面或段落。 但請記住：
 >
 >* MSM的彈性更高，可讓您更精確地控制要同步的內容以及同步時間。
->* 現在建議使用[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)來取代基礎元件。
+>* 現在建議使用[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)來取代基礎元件。
 >
 
 ## 即時副本來源和Blueprint設定 {#live-copy-sources-and-blueprint-configurations}
@@ -126,7 +138,7 @@ MSM可以透過兩種方式協助建立多語言網站：
 
 * **在Blueprint中建立**&#x200B;新頁面將導致在使用標準轉出設定轉出後，在即時副本中建立對應的頁面。
 
-* 在Blueprint中刪除&#x200B;**1&rbrace;頁面將導致在使用標準轉出設定轉出後，對應的頁面從即時副本中刪除。**
+* 在Blueprint中刪除&#x200B;**1}頁面將導致在使用標準轉出設定轉出後，對應的頁面從即時副本中刪除。**
 
 * 在Blueprint中移動&#x200B;**頁面將**&#x200B;不會&#x200B;**導致在標準轉出設定的轉出後，對應的頁面會在即時副本中移動：**
 
@@ -195,6 +207,6 @@ MSM轉出設定是高度可自訂的。 自動化轉出可能會產生深遠的�
 本頁與下列頁面涵蓋相關問題：
 
 * [建立和同步 Live Copies](/help/sites-administering/msm-livecopy.md)
-* [Live Copy 概觀主控台](/help/sites-administering/msm-livecopy-overview.md)
-* [設定 Live Copy 同步](/help/sites-administering/msm-sync.md)
+* [即時副本概觀主控台](/help/sites-administering/msm-livecopy-overview.md)
+* [設定即時副本同步](/help/sites-administering/msm-sync.md)
 * [MSM 推出衝突](/help/sites-administering/msm-rollout-conflicts.md)

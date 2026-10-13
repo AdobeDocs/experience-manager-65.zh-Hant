@@ -10,13 +10,24 @@ feature: Interactive Videos
 role: User, Admin
 exl-id: d118879d-c17b-43f3-9cc8-0405531b4d9f
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: f2287199-aefe-59f7-9b29-14176a1a51d4
+    internal-label: Interactive Videos
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '6186'
+source-wordcount: '6229'
 ht-degree: 3%
-
 ---
-
 # 互動式影片{#interactive-videos}
 
 您可以輕鬆建立互動式視訊（也稱為可購物視訊），以直接從視訊推動轉換。 客戶與影片互動於影片播放器旁的面板中進行，相關服務、資訊或產品縮圖會根據影片中的功能捲動至檢視畫面中。 客戶可以選取縮圖並直接連結至服務，或將專案新增至購物車以立即購買，或連結至網頁以取得詳細資訊。
@@ -33,7 +44,7 @@ ht-degree: 3%
 
 * 如果要暫停視訊並開啟產品的快速檢視，請選取縮圖。 例如，在視訊中選取KitchenAid縮圖影像以體驗混合器的360度旋轉檢視，或放大以檢視混合器詳細資訊。
 
-<!-- There was a link here that showed the video frame of an interactive video and when the reader selected the frame the video would play https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/AXIS/index.html?lang=zh-Hant. This now needs to call a new interactive video-->
+<!-- There was a link here that showed the video frame of an interactive video and when the reader selected the frame the video would play https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/AXIS/index.html. This now needs to call a new interactive video-->
 
 ![互動式可購物視訊的影格](assets/chlimage_1-126.png) *互動式可購物視訊的視訊影格擷取。*
 
@@ -63,20 +74,20 @@ NOT FOUND; FIND REPLACEMENT
 
 在部分快速入門工作中尋找&#x200B;**範例**&#x200B;標題。 它包含以這個開始示範網頁為基礎的簡短教學課程，*尚未*&#x200B;新增互動功能：
 
-[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-0.html?lang=zh-Hant](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-0.html?lang=zh-Hant)
+[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-0.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-0.html)
 
 範例 **可協助您說明** ，如何將互動式視訊整合在您自己的網站上。
 
 當您完成最後一個範例區段中的教學課程時，最後示範網頁與完全整合的互動式影片看起來會像這樣：
 
-[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-3.html?lang=zh-Hant](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-3.html?lang=zh-Hant)
+[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-3.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-3.html)
 
 互動視訊步驟：
 
 1. **（選擇性）識別Quickview變數** — 從識別現有Quickview實作所使用的動態變數開始。 當您建立互動式視訊時，可使用變數將產品縮圖對應至其對應的產品快速檢視。 請參閱[（選擇性）識別快速檢視變數](#optional-identifying-quickview-variables)。
    *只有在下列全部為true時才需要此步驟*：
    * 您想要透過觸發至快速檢視來將互動性新增至視訊。
-   * 您實作Experience Manager時，*不會*&#x200B;使用電子商務整合架構，將產品資料從任何電子商務解決方案（例如IBM®WebSphere®Commerce、Elastic Path、Hybris或Intershop）提取至Experience Manager。 檢視Experience Manager Assets[&#128279;](/help/commerce/cif-classic/administering/concepts.md)中的電子商務概念。
+   * 您實作Experience Manager時，*不會*&#x200B;使用電子商務整合架構，將產品資料從任何電子商務解決方案（例如IBM®WebSphere®Commerce、Elastic Path、Hybris或Intershop）提取至Experience Manager。 檢視Experience Manager Assets](/help/commerce/cif-classic/administering/concepts.md)中的[電子商務概念。
 
 1. **（選擇性）建立互動式視訊檢視器預設集** — 自訂組成播放器的各種元件的外觀和行為，例如視訊筆畫壓感和互動式縮圖。
 如果您打算使用現成的互動視訊檢視器預設集`Shoppable_Video_Light`或`Shoppable_Video_Dark`，則不需要建立自己的互動視訊檢視器預設集。
@@ -89,34 +100,34 @@ NOT FOUND; FIND REPLACEMENT
    >
    >Dynamic Media尚不支援MXF視訊格式用於互動式視訊。
 
-1. **將互動性新增至您的視訊** — 新增一或多個時間區段至視訊。 然後，在這些時間區段中建立影像縮圖的關聯。 Assign each image thumbnail to an action such as a hyperlink, a Quickview, or an Experience Fragment.
-(The URL-based method of linking is not possible if your interactive content has links with relative URLs, particularly links to Experience Manager Sites pages.)
-Finish by publishing the interactive video assets. Publishing creates the embed code or URL that you eventually copy and apply to your website landing page. See [Add interactivity to your video](#adding-interactivity-to-your-video).
-See [Publish Assets](/help/assets/publishing-dynamicmedia-assets.md).
+1. **將互動性新增至您的視訊** — 新增一或多個時間區段至視訊。 然後，在這些時間區段中建立影像縮圖的關聯。 將每個影像縮圖指派給動作，例如超連結、快速檢視或體驗片段。
+（如果您的互動式內容有具有相對URL的連結，尤其是指向Experience Manager Sites頁面的連結，則無法採用URL型連結方法。）
+完成發佈互動式視訊資產。 發佈作業會建立內嵌程式碼或URL，您最終會複製並套用至您的網站登陸頁面。 請參閱[將互動性新增至視訊](#adding-interactivity-to-your-video)。
+請參閱[發佈Assets](/help/assets/publishing-dynamicmedia-assets.md)。
 
-1. **Add an interactive video to your website or to your website in Experience Manager** - If you use Experience Manager Sites or eCommerce, or both, you can add the interactive video to a web page. Drag the Interactive Media component onto the page in Experience Manager. See [Add Dynamic Media Assets to Pages](/help/assets/adding-dynamic-media-assets-to-pages.md).
-Use the embed code or URL to integrate your interactive video with your website experiences. See [Integrate an interactive video with your website](#integrating-an-interactive-video-with-your-website).
-If you are using a third-party WCM (Web Content Manager), you must integrate the new interactive video with the existing Quickview implementation that is used on your website. See [Integrate an interactive video with an existing Quickview](#integrating-an-interactive-video-with-an-existing-quickview).
-   [Add Dynamic Media Assets to Pages](/help/assets/adding-dynamic-media-assets-to-pages.md)
+1. **在Experience Manager中，將互動式視訊新增至您的網站或網站** — 如果您使用Experience Manager Sites或eCommerce或兩者，則可以將互動式視訊新增至網頁。 將互動媒體元件拖曳至Experience Manager中的頁面。 請參閱[將Dynamic Media Assets新增至頁面](/help/assets/adding-dynamic-media-assets-to-pages.md)。
+使用內嵌程式碼或URL，將您的互動式視訊與網站體驗整合。 請參閱[將互動式視訊與您的網站整合](#integrating-an-interactive-video-with-your-website)。
+如果您使用協力廠商WCM （Web內容管理員），您必須將新的互動式視訊與網站上使用的現有Quickview實作整合。 請參閱[將互動式視訊與現有的快速檢視](#integrating-an-interactive-video-with-an-existing-quickview)整合。
+   [將Dynamic Media Assets新增至頁面](/help/assets/adding-dynamic-media-assets-to-pages.md)
 
-## (Optional) Identify Quickview variables {#optional-identifying-quickview-variables}
+## （選用）識別快速檢視變數 {#optional-identifying-quickview-variables}
 
 >[!NOTE]
 >
->This task is only required if the following are true:
+>只有在下列情況為真時才需要此工作：
 >
 >* 您想要透過觸發至快速檢視來將互動性新增至視訊。
->* 您實作Experience Manager時，*不會*&#x200B;使用電子商務整合架構，將產品資料從任何電子商務解決方案（例如IBM®WebSphere®Commerce、Elastic Path、Hybris或Intershop）提取至Experience Manager。 檢視Experience Manager Assets[&#128279;](/help/commerce/cif-classic/administering/concepts.md)中的電子商務概念。
+>* 您實作Experience Manager時，*不會*&#x200B;使用電子商務整合架構，將產品資料從任何電子商務解決方案（例如IBM®WebSphere®Commerce、Elastic Path、Hybris或Intershop）提取至Experience Manager。 檢視Experience Manager Assets](/help/commerce/cif-classic/administering/concepts.md)中的[電子商務概念。
 >
->If your implementation of Experience Manager uses eCommerce, you can skip this task and proceed to the next task.
+>如果您的Experience Manager實作使用電子商務，您可以略過此任務並繼續下一個任務。
 
-Start by identifying dynamic variables used by your existing Quickview implementation so that you can map product thumbnails to their corresponding product Quickview during the interactive video creation process.
+首先，識別您現有Quickview實作所使用的動態變數，以便您可以在互動式視訊建立程式中將產品縮圖對應至其對應的產品Quickview。
 
-When you add time segments to a video, you assign a SKU (Stock Keeping Unit) and any additional variables to each thumbnail you add to a segment. Such variables are used later to display the right Quickview product.
+當您新增時間區段至視訊時，會指派SKU （庫存單位）和任何其他變數至您新增至區段的每個縮圖。 這類變數稍後會用於顯示正確的Quickview產品。
 
-It is important to properly identify what variables are required to uniquely trigger a product Quickview.
+請務必正確識別哪些變數需要以唯一方式觸發產品Quickview。
 
-Sometimes it is enough to consult with IT specialists responsible for your existing Quickview implementation. 他們可能會知道系統中用於識別快速檢視的最低資料集。 但是，也可以只分析前端計畫碼的現有行為。
+有時候，諮詢負責現有Quickview實作的IT專家就足夠了。 他們可能會知道系統中用於識別快速檢視的最低資料集。 但是，也可以只分析前端計畫碼的現有行為。
 
 大部分的「快速檢視」實作都使用下列範例：
 
@@ -153,10 +164,10 @@ Sometimes it is enough to consult with IT specialists responsible for your exist
     <td><p>在查詢字串中找到單一SKU。</p> </td>
     <td><p>錄製的快速檢視URL包含以下專案：</p>
     <ul>
-      <li><p><code>https://server/json?productId=866558&source=100</code></p> </li>
-      <li><p><code>https://server/json?productId=1196184&source=100</code></p> </li>
-      <li><p><code>https://server/json?productId=1081492&source=100</code></p> </li>
-      <li><p><code>https://server/json?productId=1898294&source=100</code></p> </li>
+      <li><p><code>https://server/json?productId=866558&amp;source=100</code></p> </li>
+      <li><p><code>https://server/json?productId=1196184&amp;source=100</code></p> </li>
+      <li><p><code>https://server/json?productId=1081492&amp;source=100</code></p> </li>
+      <li><p><code>https://server/json?productId=1898294&amp;source=100</code></p> </li>
     </ul> <p>URL中唯一的變數部分是<code>productId=</code>查詢字串引數的值，而且它顯然是SKU值。 因此，您的縮圖只需要填入<strong><code>866558</code></strong>、<strong><code>1196184</code></strong>、<strong><code>1081492</code></strong>、<strong><code>1898294</code></strong>等值的SKU欄位。</p> </td>
   </tr>
   <tr>
@@ -172,9 +183,9 @@ Sometimes it is enough to consult with IT specialists responsible for your exist
     <td><p>查詢字串中的SKU和類別ID。</p> </td>
     <td><p>錄製的快速檢視URL包含以下專案：</p>
     <ul>
-      <li><p><code>https://server/quickView/product/?category=1100004&prodId=305466</code></p> </li>
-      <li><p><code>https://server/quickView/product/?category=1100004&prodId=310181</code></p> </li>
-      <li><p><code>https://server/quickView/product/?category=1740148&prodId=308706</code></p> </li>
+      <li><p><code>https://server/quickView/product/?category=1100004&amp;prodId=305466</code></p> </li>
+      <li><p><code>https://server/quickView/product/?category=1100004&amp;prodId=310181</code></p> </li>
+      <li><p><code>https://server/quickView/product/?category=1740148&amp;prodId=308706</code></p> </li>
     </ul> <p>在這種情況下，URL中有兩個不同的部分。 SKU儲存在<code>prodId</code>引數中，而類別識別碼儲存在<code>category=</code>引數中。</p> <p>因此，縮圖定義成對。 即SKU值和稱為<code>categoryId</code>的額外變數。 產生的配對如下：</p>
     <ul>
       <li>SKU是<code>305466</code>，<code>categoryId</code>是 <code>1100004</code></li>
@@ -189,7 +200,7 @@ Sometimes it is enough to consult with IT specialists responsible for your exist
 
 將上述方法套用至範例網站時，您的網頁會有數個產品縮圖，每個縮圖都有「檢視更多」按鈕：
 
-[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-0.html?lang=zh-Hant](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-0.html?lang=zh-Hant)
+[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-0.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-0.html)
 
 啟用頁面上可用的所有產品快速檢視後，您會取得向後端提出之快速檢視要求的清單如下：
 
@@ -258,7 +269,7 @@ Sometimes it is enough to consult with IT specialists responsible for your exist
 1. 將視訊和相關聯的縮圖資產上傳到您想要的資料夾。
 
    請參閱[上傳資產](/help/assets/manage-assets.md)。
-請參閱[使用FTP工作排程](/help/assets/manage-assets.md)上傳資產。
+   請參閱[使用FTP工作排程](/help/assets/manage-assets.md)上傳資產。
 
    現在將互動性新增至您的視訊。
 
@@ -272,42 +283,42 @@ Sometimes it is enough to consult with IT specialists responsible for your exist
 
 >[!NOTE]
 >
->The social media sharing tools in Interactive Video are not supported when you embed the viewer in an Experience Fragment. To work around this issue, you can use or create viewer presets that do not have social media sharing tools. Such viewer presets let you successfully embed it in Experience Fragments.
+>將檢視器內嵌在體驗片段中時，不支援互動視訊中的社群媒體分享工具。 若要解決此問題，您可以使用或建立沒有社群媒體分享工具的檢視器預設集。 這類檢視器預設集可讓您成功將其嵌入體驗片段中。
 
 >[!NOTE]
 >
->The URL-based method of linking is not possible if your interactive content has links with relative URLs, particularly links to Experience Manager Sites pages.
+>如果您的互動式內容有具有相對URL的連結，尤其是指向Experience Manager Sites頁面的連結，則無法採用URL型連結方法。
 
-Undo and Redo options, near the upper-right corner of the page, are supported during your current creation/editing session.
+在您目前的建立/編輯作業階段期間，支援頁面右上角附近的「復原」和「重做」選項。
 
-After you save your interactive video, the video is immediately opened into Preview. From there, you can select an Interactive Video viewer preset and play the video to see an approximate representation of how it appears to customers.
+儲存互動式視訊後，視訊會立即開啟預覽。 從那裡，您可以選取互動式視訊檢視器預設集並播放視訊，以檢視向客戶呈現的大致呈現方式。
 
-**To add interactivity to your video:**
+**若要在視訊中新增互動功能：**
 
-1. In the Assets view, navigate to the video that you uploaded and want to make interactive.
+1. 在Assets檢視中，導覽至您上傳且想要互動的影片。
 1. 執行下列任一項作業：
 
-   * Hover on the image, then select **[!UICONTROL Select]** (checkmark icon). 在工具列上，選取&#x200B;**[!UICONTROL 編輯]**。
+   * 將滑鼠指標暫留在影像上，然後選取&#x200B;**[!UICONTROL 選取]** （核取記號圖示）。 在工具列上，選取&#x200B;**[!UICONTROL 編輯]**。
 
-   * Hover on the image, then select **[!UICONTROL More actions]** (three dots icon) **[!UICONTROL > Edit]**.
+   * 將滑鼠停留在影像上，然後選取&#x200B;**[!UICONTROL 更多動作]** （三點圖示） **[!UICONTROL >編輯]**。
 
-   * Select the image so you can open it in the Detail View page. 在工具列上，選取&#x200B;**[!UICONTROL 編輯]**。
+   * 選取影像，以便在「詳細資料檢視」頁面中開啟影像。 在工具列上，選取&#x200B;**[!UICONTROL 編輯]**。
 
-1. On the Create Interactive Video page, do any one of the following:
+1. 在「建立互動式視訊」頁面上，執行下列任一項作業：
 
-   * To begin playing the video, select the **[!UICONTROL Play]** button. When a particular product, service, or detail that you want to highlight comes into view, select **[!UICONTROL Add Segment]** on the toolbar. Repeat until you have reached the end of the video.
+   * 若要開始播放視訊，請選取&#x200B;**[!UICONTROL 播放]**&#x200B;按鈕。 當您要反白顯示的特定產品、服務或詳細資訊進入檢視畫面時，請選取工具列上的&#x200B;**[!UICONTROL 新增區段]**。 重複此步驟，直到您到達視訊結尾為止。
 
-     For each time segment that you add, assign one or more thumbnail images to it, and then link those thumbnails to Quickview product pages for customers to purchase or to web pages for more information.
+     針對您新增的每個時間區段，指派一或多個縮圖影像至該區段，然後將這些縮圖連結至Quickview產品頁面以供客戶購買或連結至網頁，以取得詳細資訊。
 
-   * To begin playing the video, select the **[!UICONTROL Play]** button. When a particular product, service, or detail that you want to highlight comes into view, select **[!UICONTROL Pause]**. Select **[!UICONTROL Add Segment]**.
+   * 若要開始播放視訊，請選取&#x200B;**[!UICONTROL 播放]**&#x200B;按鈕。 檢視您要反白顯示的特定產品、服務或詳細資料時，請選取&#x200B;**[!UICONTROL 暫停]**。 選取&#x200B;**[!UICONTROL 新增區段]**。
 
-     Continue playing and pausing the video at points along the timeline where you want to add a segment until you reach the end of the video.
+     在您要新增區段的時間軸上的各個點繼續播放和暫停視訊，直到視訊結束。
 
-1. (Optional) Drag the bar on the **[!UICONTROL Timeline Scale Slider]** left to zoom in or right to zoom out, so that you can control how much detail that is seen of the segments you have added.
+1. （可選）向左拖曳&#x200B;**[!UICONTROL 時間軸縮放滑桿]**&#x200B;上的橫條，以放大或向右縮小，讓您能夠控制您所新增區段的詳細程度。
 
    ![chlimage_1-22](assets/chlimage_1-128.png)
 
-   Depending on the length of your video, the Segment Duration defaults to the following values:
+   視視訊長度而定，「區段持續時間」會預設為下列值：
 
    <table>
       <tbody>
@@ -368,9 +379,9 @@ After you save your interactive video, the video is immediately opened into Prev
 
      使用下列導覽捷徑來快速檢查並微調視訊區段：
 
-      * 若要直接尋找該區段開頭的視訊，請選取開頭的藍色橢圓形。
-      * 若要直接搜尋視訊到該區段的結尾，請選取結尾的藍色橢圓形。
-      * 若要將視訊播放傳回該區段的開頭，請選取整個區段。
+     * 若要直接尋找該區段開頭的視訊，請選取開頭的藍色橢圓形。
+     * 若要直接搜尋視訊到該區段的結尾，請選取結尾的藍色橢圓形。
+     * 若要將視訊播放傳回該區段的開頭，請選取整個區段。
 
    ![chlimage_1-26](assets/chlimage_1-132.png)
 
@@ -499,7 +510,7 @@ After you save your interactive video, the video is immediately opened into Prev
 
    >[!NOTE]
    >
-   >當您儲存互動式視訊時，會自動 `.vtt` 儲存相關的檔案。 `.vtt`檔案已儲存至&#x200B;**[!UICONTROL Assets]**&#x200B;根目錄的`_VTT`資料夾。 您的互動式視訊必須有檔案和資料夾才能在網站上正確播放。 因此，請勿移動、編輯或刪除資料夾 `_VTT` 或其內容。
+   >當您儲存互動式視訊時，會自動 `.vtt` 儲存相關的檔案。 `.vtt`檔案已儲存至&#x200B;**[!UICONTROL Assets]**&#x200B;根目錄的`_VTT`資料夾。 檔案和資料夾是讓您的互動式影片能在網站上正確播放的必要項目。 因此，請勿移動、編輯或刪除資料夾 `_VTT` 或其內容。
 
 1. 發佈互動式視訊。 發佈作業會建立內嵌程式碼或URL，您最後會將其複製並貼到您的網站體驗中。
 
@@ -537,15 +548,15 @@ After you save your interactive video, the video is immediately opened into Prev
 >
 >此時，如果您只新增超連結網頁的互動功能，也就完成了。
 >
->不過，如果您新增任何互動來觸發快速檢視，互動視訊旁的縮圖僅供顯示，尚未與您現有的快速檢視整合。 In such cases, you must integrate the interactive video with the existing Quickview on your website.
+>不過，如果您新增任何互動來觸發快速檢視，互動視訊旁的縮圖僅供顯示，尚未與您現有的快速檢視整合。 在這種情況下，您必須將互動式視訊與網站上的現有快速檢視整合。
 
 **範例**
 
-Using the demo website as an example:
+以示範網站為例：
 
-[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-0.html?lang=zh-Hant](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-0.html?lang=zh-Hant)
+[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-0.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-0.html)
 
-Notice that the embed code is standard:
+請注意，內嵌程式碼為標準版：
 
 ```xml
 <style type="text/css">
@@ -572,29 +583,29 @@ Notice that the embed code is standard:
 </script>
 ```
 
-Integration is as simple as removing the video embed code and replacing it with the interactive video embed code from Experience Manager. You can see the results at the following URL. While it shows an Interactive Video present on the page, it is not yet integrated with the existing Quickview:
+整合就像移除視訊內嵌程式碼，並從Experience Manager將其取代為互動式視訊內嵌程式碼一樣簡單。 您可以在以下URL看到結果。 雖然它會顯示頁面上顯示的互動式視訊，但尚未與現有的快速檢視整合：
 
-[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-1.html?lang=zh-Hant](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-1.html?lang=zh-Hant)
+[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-1.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-1.html)
 
-## Integrate an interactive video with an existing Quickview {#integrating-an-interactive-video-with-an-existing-quickview}
+## 將互動式視訊與現有的Quickview整合 {#integrating-an-interactive-video-with-an-existing-quickview}
 
 >[!NOTE]
 >
->This task only applies if you are a standalone Experience Manager Assets customer.
+>此工作僅適用於獨立Experience Manager Assets客戶。
 
-The last step in this process is to integrate your interactive video with an existing Quickview implementation that is used on your web site. There is no solution to the integration that works for all cases. Every Quickview implementation is unique. As such, a specific approach is needed that involves the assistance of a front-end IT person.
+此程式的最後一步是將互動式視訊與網站上使用的現有Quickview實作整合。 整合沒有適用於所有情況的解決方案。 每個快速檢視實施都是獨一無二的。 因此，需要涉及前端IT人員協助的特定方法。
 
-The existing Quickview implementation normally represents a chain of inter-related actions that happen on the web page in the following order:
+現有的快速檢視實施通常代表一連串在網頁上發生的相互關聯動作，其順序如下：
 
-1. A user triggers an element in the user interface of your website.
-1. The front-end code obtains a Quickview URL based on the user interface element that was triggered in step 1.
-1. The front-end code sends an AJAX request using the URL obtained in step 2.
-1. The backend logic returns the corresponding Quickview data or content back to the front-end code.
-1. The front-end code loads the Quickview data or content.
-1. Optionally, the front-end code converts the loaded Quickview data into an HTML representation.
-1. The front-end code displays a modal dialog box or panel and renders the HTML content on the screen for the end user.
+1. 使用者會在您網站的使用者介面中觸發元素。
+1. 前端程式碼會根據步驟1所觸發的使用者介面元素來取得快速檢視URL。
+1. 前端程式碼會使用步驟2中取得的URL傳送AJAX要求。
+1. 後端邏輯會將對應的快速檢視資料或內容傳回前端程式碼。
+1. 前端程式碼會載入快速檢視資料或內容。
+1. 前端程式碼可選擇性將載入的Quickview資料轉換為HTML表示法。
+1. 前端程式碼會顯示模型對話方塊或面板，並在畫面上為一般使用者呈現HTML內容。
 
-These calls do not represent independent public API calls which can be called by the web page logic from an arbitrary step. 相反地，這是一種鏈結呼叫，下個步驟的每一個都會隱藏在上一個步驟的最後一個階段（回撥）。
+這些呼叫不代表網頁邏輯可從任意步驟呼叫的獨立公用API呼叫。 相反地，這是一種鏈結呼叫，下個步驟的每一個都會隱藏在上一個步驟的最後一個階段（回撥）。
 
 在互動視訊取代步驟1和部分步驟2的同時，當使用者在互動視訊內的縮圖上選取時，這類使用者互動由檢視器處理。 檢視器會將事件傳回至包含先前新增至Experience Manager之所有縮圖資料的網頁。
 
@@ -663,27 +674,27 @@ Experience Manager傳回的內嵌程式碼已備有立即可用的事件處理�
   <tbody>
   <tr>
     <td><p>在查詢字串中找到單一SKU</p> </td>
-    <td><code class="code">s7interactivevideoviewer.setHandlers(&lbrace;
-      "quickViewActivate": function(inData) &lbrace;
+    <td><code class="code">s7interactivevideoviewer.setHandlers({
+      "quickViewActivate": function(inData) {
       var quickViewUrl = "https://server/json?productId=" + inData.sku + "&amp;source=100";
-      &rbrace;,
-      &rbrace;);</code></td>
+      },
+      });</code></td>
   </tr>
   <tr>
     <td>在URL路徑中找到單一SKU</td>
-    <td><code class="code">s7interactivevideoviewer.setHandlers(&lbrace;
-      "quickViewActivate": function(inData) &lbrace;
+    <td><code class="code">s7interactivevideoviewer.setHandlers({
+      "quickViewActivate": function(inData) {
       var quickViewUrl = "https://server/product/" + inData.sku;
-      &rbrace;,
-      &rbrace;);</code></td>
+      },
+      });</code></td>
   </tr>
   <tr>
     <td><p>查詢字串中的SKU和類別ID</p> </td>
-    <td><code class="code">s7interactivevideoviewer.setHandlers(&lbrace;
-      "quickViewActivate": function(inData) &lbrace;
+    <td><code class="code">s7interactivevideoviewer.setHandlers({
+      "quickViewActivate": function(inData) {
       var quickViewUrl = "https://server/quickView/product/?category=" + inData.categoryId + "&amp;prodId=" + inData.sku;
-      &rbrace;,
-      &rbrace;);</code></td>
+      },
+      });</code></td>
   </tr>
   </tbody>
 </table>
@@ -774,7 +785,7 @@ inner_container.appendChild(document.getElementById("quickview-modal"));
 
 具備完全整合互動式視訊的最終示範網站看起來如下所示：
 
-[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-3.html?lang=zh-Hant](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-3.html?lang=zh-Hant)
+[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-3.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-3.html)
 
 ## 使用 Quickview 建立自訂快顯視窗 {#using-quickviews-to-create-custom-pop-ups}
 

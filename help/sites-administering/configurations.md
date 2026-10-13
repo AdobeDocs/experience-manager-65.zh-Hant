@@ -5,13 +5,22 @@ exl-id: 1be5849b-748c-48e8-afa8-35a9026c27b3
 solution: Experience Manager, Experience Manager Sites
 feature: Configuring
 role: Admin
-source-git-commit: eae057caed533ef16bb541b4ad41b8edd7aaa1c7
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 523b1ccd-901e-5e3b-9fa7-f3dfd82463d5
+    internal-label: Configuring
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1505'
 ht-degree: 5%
-
 ---
-
 # 設定和設定瀏覽器 {#configuration-browser}
 
 AEM設定可管理AEM中的設定，並作為工作區。
@@ -79,8 +88,8 @@ AEM管理員和作者可以將設定視為工作區。 藉由實作這些功能�
 
    * **標題** 應該是描述性的。
    * **名稱**&#x200B;會成為存放庫中的節點名稱。
-      * 它會根據標題自動產生，並根據[AEM命名慣例進行調整。](/help/sites-developing/naming-conventions.md)
-      * 如有需要，可加以調整。
+     * 它會根據標題自動產生，並根據[AEM命名慣例進行調整。](/help/sites-developing/naming-conventions.md)
+     * 如有需要，可加以調整。
 1. 檢查您要允許的設定型別。
    * [雲端設定](/help/sites-administering/configurations.md)
    * [上下文中心區段](/help/sites-administering/segmentation.md)
@@ -104,13 +113,13 @@ AEM管理員和作者可以將設定視為工作區。 藉由實作這些功能�
    >
    >建立設定後，就無法取消選取功能。
 
-1. 使用&#x200B;**有效許可權**&#x200B;按鈕來檢視角色矩陣，以及這些角色目前授與組態哪些許可權。
+1. 使用&#x200B;**有效許可權**按鈕來檢視角色矩陣，以及這些角色目前授與組態哪些許可權。
    ![有效許可權視窗](assets/configuration-effective-permissions.png)
 1. 若要指派新許可權，請在&#x200B;**新增許可權**&#x200B;區段的&#x200B;**選取使用者或群組**&#x200B;欄位中輸入使用者或群組名稱。
    * **選取使用者或群組**&#x200B;欄位會根據現有的使用者和角色提供自動完成功能。
 1. 從自動完成結果中選取適當的使用者或角色。
    * 您可以選取多個使用者或角色。
-1. 檢查選取的使用者或角色應該擁有的存取選項，然後按一下[新增]。**&#x200B;**
+1. 檢查選取的使用者或角色應該擁有的存取選項，然後按一下[新增]。****
    ![新增存取許可權至設定](assets/configuration-edit.png)
 1. 重複這些步驟，您就可以選取使用者或角色，並視需要指派其他存取許可權。
 1. 完成時選取&#x200B;**儲存並關閉**。

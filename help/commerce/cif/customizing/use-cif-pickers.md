@@ -10,13 +10,21 @@ feature: Commerce Integration Framework
 exl-id: 1e7c3748-92b5-45f1-8dd9-f1816e3e34aa
 solution: Experience Manager,Commerce
 role: Admin, Developer
-source-git-commit: a45b09c52d780a954e606d4cae73a3a02a8a6aa4
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
 source-wordcount: '632'
 ht-degree: 0%
-
 ---
-
 # AEM內容與Commerce編寫選擇器 {#cif-pickers}
 
 AEM內容與Commerce製作提供一套製作工具，可協助AEM作者和行銷人員有效使用商務產品資料和目錄。 產品選擇器和類別選擇器屬於CIF附加元件的一部分，並由CIF核心元件使用。 專案可以在任何元件對話方塊中使用這些選擇器來選取產品或類別。
@@ -53,7 +61,7 @@ AEM內容與Commerce製作提供一套製作工具，可協助AEM作者和行銷
 >
 >從CIF核心元件2.0.0版開始，已移除對`id`的支援，並取代為`uid`。 Adobe建議使用`sku`或`slug`作為產品識別碼。 Adobe僅繼續為使用CIF核心元件1.x版的專案支援`id`。
 
-在[CIF核心元件](https://github.com/adobe/aem-core-cif-components/blob/master/ui.apps/src/main/content/jcr_root/apps/core/cif/components/commerce/productteaser/v1/productteaser/_cq_dialog/.content.xml)專案中可以找到`cifproductfield`的完整工作範例。 另請參閱AEM核心元件檔案的[自訂對話方塊](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/customizing.html?lang=zh-Hant#customizing-dialogs)。
+在[CIF核心元件](https://github.com/adobe/aem-core-cif-components/blob/master/ui.apps/src/main/content/jcr_root/apps/core/cif/components/commerce/productteaser/v1/productteaser/_cq_dialog/.content.xml)專案中可以找到`cifproductfield`的完整工作範例。 另請參閱AEM核心元件檔案的[自訂對話方塊](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/customizing.html#customizing-dialogs)。
 
 ## 類別選取器 {#category-picker}
 
@@ -78,7 +86,7 @@ AEM內容與Commerce製作提供一套製作工具，可協助AEM作者和行銷
 
 >[!CAUTION]
 >
->與`cifproductfield`元件相同，`cifcategoryfield`元件也需要`cif.shell.picker` clientlib。 若要將clientlib新增至對話方塊，您可以使用`extraClientlibs`屬性。 請參閱AEM核心元件檔案的[自訂對話方塊](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/customizing.html?lang=zh-Hant#customizing-dialogs)。
+>與`cifproductfield`元件相同，`cifcategoryfield`元件也需要`cif.shell.picker` clientlib。 若要將clientlib新增至對話方塊，您可以使用`extraClientlibs`屬性。 請參閱AEM核心元件檔案的[自訂對話方塊](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/customizing.html#customizing-dialogs)。
 >[!CAUTION]
 >
 >從CIF核心元件2.0.0版開始，已移除對`id`的支援，並取代為`uid`。 Adobe建議使用`uid`或`urlPath`作為類別識別碼。 Adobe僅繼續為使用CIF核心元件1.x版的專案支援`id`和`idAndUrlPath`。

@@ -9,18 +9,34 @@ feature: Adaptive Forms
 exl-id: 935b734c-6fb1-45e8-8515-e98c8b85286c
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '3155'
+source-wordcount: '3202'
 ht-degree: 53%
-
 ---
-
 # 製作調適型表單簡介 {#introduction-to-authoring-adaptive-forms}
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/create-an-adaptive-form-on-forms-cs/introduction-forms-authoring.html?lang=zh-Hant) |
+| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/create-an-adaptive-form-on-forms-cs/introduction-forms-authoring.html) |
 | AEM 6.5 | 本文章 |
 
 
@@ -85,12 +101,12 @@ Click to enlarge
 * **內容瀏覽器**
 在內容瀏覽器中，您可以看到
 
-   * **表單物件**
-顯示表單的物件階層。 作者可以點選表單物件樹中的元素來瀏覽至該元素。 作者可以從此物件樹來搜尋物件並重新排列物件。
+  * **表單物件**
+    顯示表單的物件階層。 作者可以點選表單物件樹中的元素來瀏覽至該元素。 作者可以從此物件樹來搜尋物件並重新排列物件。
 
-   * **資料模型物件**
-讓您檢視表單模型階層。
-它可讓您將表單模型元素拖放到最適化表單上。新增的元素會自動轉換為表單元件，同時保留其原始屬性。當表單使用XML結構描述、JSON結構描述或XDP範本時，您可以看到資料模型物件。
+  * **資料模型物件**
+    讓您檢視表單模型階層。
+    它可讓您將表單模型元素拖放到最適化表單上。 新增的元素會自動轉換為表單元件，同時保留其原始屬性。 當表單使用 XML 結構描述、JSON 結構描述或 XDP 範本時，您可以看到資料模型物件。
 
 * **屬性瀏覽器**
 
@@ -134,7 +150,7 @@ Click to enlarge
   </tr>
   <tr>
    <td>資料輸入欄位</td>
-   <td>在表單中使用日期輸入欄位元件，讓客戶分別在三個方框中填入日、月和年。 您可以自訂元件的外觀和風格，並變更日期格式。 例如，您可以讓客戶以 MM/DD/YYYY 或 DD/MM/YYYY 格式輸入日期。</td>
+   <td>在表單中使用日期輸入欄位元件，讓客戶分別在三個方框中填入日、月和年。 您可以自訂元件的外觀，並變更日期格式。 例如，您可以讓客戶以 MM/DD/YYYY 或 DD/MM/YYYY 格式輸入日期。</td>
   </tr>
   <tr>
    <td>日期挑選器</td>
@@ -142,7 +158,7 @@ Click to enlarge
   </tr>
   <tr>
    <td>文件片段</td>
-   <td>可讓您新增相似項的可重複使用元件。</td>
+   <td>可讓您新增通信的可重複使用元件。</td>
   </tr>
   <tr>
    <td>文件片段群組</td>
@@ -154,11 +170,11 @@ Click to enlarge
   </tr>
   <tr>
    <td>電子郵件</td>
-   <td><p>新增欄位以擷取電子郵件地址。 電子郵件元件預設會使用以下規則運算式驗證電子郵件地址。</p> <p><code>^[a-zA-Z0-9.!#$%&amp;'*+/=?^_&grave;{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$</code></p> </td>
+   <td><p>新增欄位以擷取電子郵件地址。 電子郵件元件預設會使用以下規則運算式驗證電子郵件地址。</p> <p><code>^[a-zA-Z0-9.!#$%&amp;'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$</code></p> </td>
   </tr>
   <tr>
    <td>檔案附件</td>
-   <td><p>新增按鈕，此按鈕可讓使用者瀏覽支援文件並將其附加到表單。 您可以將多個檔案附加至「檔案」附件元件。 您也可以在元件的屬性瀏覽器中，為附件指定&#x200B;**[!UICONTROL 檔案大小上限]**&#x200B;和&#x200B;**[!UICONTROL 支援的檔案型別]**。 </p> <p><strong> 注意： </strong><ul> <li> 元件不支援附加檔案名稱(.)開頭為字元，且包含\ / ： * ？ 「 &lt; &gt; | ； % $，或包含保留給Windows作業系統（如nul、prn、con、lpt或com）的特殊檔案名稱。 </li> <li> 若要將多個檔案附加至Apple Safari瀏覽器中開啟的檔案附件元件，請逐一選取並附加檔案。 您無法一次選取並附加多個檔案。</li> <li>「檔案附件」元件支援為Adobe Sign啟用的調適型表單中預先定義的檔案格式集。 如需詳細資訊，請參閱<a href="https://helpx.adobe.com/tw/document-cloud/help/supported-file-formats-fill-sign.html#main-pars_text">支援的檔案格式</a>。 </li></ul></p> </td>
+   <td><p>新增按鈕，此按鈕可讓使用者瀏覽支援文件並將其附加到表單。 您可以將多個檔案附加至「檔案」附件元件。 您也可以在元件的屬性瀏覽器中，為附件指定**[！UICONTROL檔案大小上限]**和**[！UICONTROL支援的檔案型別]**。 </p> <p><strong> 注意： </strong><ul> <li> 元件不支援附加檔案名稱(.)開頭為字元，且包含\ / ： * ？ 「 &lt; &gt; | ； % $，或包含保留給Windows作業系統（如nul、prn、con、lpt或com）的特殊檔案名稱。 </li> <li> 若要將多個檔案附加至Apple Safari瀏覽器中開啟的檔案附件元件，請逐一選取並附加檔案。 您無法一次選取並附加多個檔案。</li> <li>「檔案附件」元件支援為Adobe Sign啟用的調適型表單中預先定義的檔案格式集。 如需詳細資訊，請參閱<a href="https://helpx.adobe.com/tw/document-cloud/help/supported-file-formats-fill-sign.html#main-pars_text">支援的檔案格式</a>。 </li></ul></p> </td>
   </tr>
   <tr>
    <td>檔案附件清單</td>
@@ -218,11 +234,11 @@ Click to enlarge
   </tr>
   <tr>
    <td>草寫簽名</td>
-   <td>新增用於擷取草寫簽名的欄位。</td>
+   <td>新增用於擷取塗寫簽名的欄位。</td>
   </tr>
   <tr>
    <td>分隔符號</td>
-   <td>啟用表單的面板視覺隔離。</td>
+   <td>可在表單中以視覺方式區隔面板。</td>
   </tr>
   <tr>
    <td>簽章步驟</td>
@@ -238,7 +254,7 @@ Click to enlarge
   </tr>
   <tr>
    <td>摘要步驟</td>
-   <td>提交表單並顯示作者指定表單提交後要顯示的摘要文字。 </td>
+   <td>提交表單並顯示作者指定在表單提交後顯示的摘要文字。 </td>
   </tr>
   <tr>
    <td>切換</td>
@@ -272,7 +288,7 @@ Click to enlarge
   </tr>
   <tr>
    <td>驗證步驟</td>
-   <td><p>新增預留位置用於顯示使用者驗證的已填表單。</p> <p><strong>注意</strong>：包含Verify元件的最適化表單不支援匿名使用者。 此外，不建議在自適應表單片段中使用驗證元件。</p> </td>
+   <td><p>新增預留位置，以顯示供使用者驗證的已填表單。</p> <p><strong>注意</strong>：包含Verify元件的最適化表單不支援匿名使用者。 此外，不建議在自適應表單片段中使用驗證元件。</p> </td>
   </tr>
  </tbody>
 </table>
@@ -286,11 +302,11 @@ Click to enlarge
 
 * 只要可在表單上看到標題，您就可以修改內嵌在表單編輯器中的最適化表單元件的Title屬性，而無需開啟Properties瀏覽器。 若要這麼做：
 
-   1. 選取以選取具有&#x200B;**[!UICONTROL Title]**&#x200B;屬性且其&#x200B;**[!UICONTROL 隱藏標題]**&#x200B;屬性已停用的元件。
+  1. 選取以選取具有&#x200B;**[!UICONTROL Title]**&#x200B;屬性且其&#x200B;**[!UICONTROL 隱藏標題]**&#x200B;屬性已停用的元件。
 
-   1. 選取![aem_6_3_edit](assets/aem_6_3_edit.png)讓標題可編輯。
+  1. 選取![aem_6_3_edit](assets/aem_6_3_edit.png)讓標題可編輯。
 
-   1. 修改標題並選取Return鍵，或選取元件之外的任意位置以儲存變更。 選取Esc鍵以捨棄變更。
+  1. 修改標題並選取Return鍵，或選取元件之外的任意位置以儲存變更。 選取Esc鍵以捨棄變更。
 
 * 有些最適化表單元件（如電子郵件和電話）包含現成可用的驗證模式。 不過，您可以更新元件屬性中「模式」摺疊式功能表下的&#x200B;**[!UICONTROL 驗證模式]**&#x200B;欄位，以指定自訂驗證。 請參閱上表中的元件說明，以取得預設驗證的詳細資訊。
 
@@ -303,9 +319,9 @@ Click to enlarge
 * 在元件屬性中以`{value}={text}`格式指定選項按鈕和核取方塊專案的值。
 * 依預設，檔案附件元件只允許使用者附加一個檔案。 不過，您可以設定元件屬性以支援多個附件。 此外，如果使用者使用相同的檔案名稱附加多個檔案，則附件可能會導致一些問題。 因此，建議您在提交表單時，為每個已提交的附件建立唯一識別碼的關聯。 若要這麼做：
 
-   1. 在您的AEM Forms伺服器上，瀏覽至&#x200B;**[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL 工具]** > **[!UICONTROL 作業]** > **[!UICONTROL 網頁主控台]**。
-   1. 尋找並選取&#x200B;**[!UICONTROL 最適化Forms組態服務]**。
-   1. 在「最適化Forms組態服務」對話方塊中，啟用&#x200B;**[!UICONTROL 將檔案名稱設為唯一]**。 預設為停用。
+  1. 在您的AEM Forms伺服器上，瀏覽至&#x200B;**[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL 工具]** > **[!UICONTROL 作業]** > **[!UICONTROL 網頁主控台]**。
+  1. 尋找並選取&#x200B;**[!UICONTROL 最適化Forms組態服務]**。
+  1. 在「最適化Forms組態服務」對話方塊中，啟用&#x200B;**[!UICONTROL 將檔案名稱設為唯一]**。 預設為停用。
 
 * 若要讓使用者能夠使用Safari瀏覽器附加PDF，請確定&#x200B;**application/pdf**&#x200B;已新增至「檔案」附件元件的「支援的檔案型別」屬性。 以舊版AEM Forms建立的最適化表單在「支援的檔案型別」屬性中可能包含&#x200B;**.pdf**，而非&#x200B;**application/pdf**。
 
@@ -327,15 +343,15 @@ Click to enlarge
 
 * **編輯**：讓您選取其他模式，例如：**[!UICONTROL 編輯]**、**[!UICONTROL 樣式]**、**[!UICONTROL 開發人員]**&#x200B;和&#x200B;**[!UICONTROL 設計]**。
 
-   * **編輯**：可讓您編輯表單及其元件的屬性。 例如，新增元件、放置影像以及指定必填欄位。
-   * **樣式**：可讓您設定表單元件的外觀樣式。 例如，在樣式模式下，您可以選取面板並指定其背景顏色。
+  * **編輯**：可讓您編輯表單及其元件的屬性。 例如，新增元件、放置影像以及指定必填欄位。
+  * **樣式**：可讓您設定表單元件的外觀樣式。 例如，在樣式模式下，您可以選取面板並指定其背景顏色。
 
-   * **開發人員**：讓開發人員能夠：
+  * **開發人員**：讓開發人員能夠：
 
-      * 了解表單的組成。
-      * 找出狀況及其發生的時間和位置，這反過來有助於解決問題。
+    * 了解表單的組成。
+    * 找出狀況及其發生的時間和位置，這反過來有助於解決問題。
 
-   * **設計**。 可讓您啟用或停用自訂元件或側邊欄未列出的立即可用元件。
+  * **設計**。 可讓您啟用或停用自訂元件或側邊欄未列出的立即可用元件。
 
 * **預覽**：可讓您預覽表單發佈時的外觀。
 
@@ -368,7 +384,7 @@ I. **父系**：可讓您選取元件的父系。 例如，文字欄位在子區
 * 子區段
 * 區段
 * guideRootPanel
-* 最適化表單容器
+* 自適應表單容器
 
 J. **其他**：提供更多選項搭配所選元件使用。
 
@@ -388,10 +404,10 @@ J. **其他**：提供更多選項搭配所選元件使用。
 
 * **guideContainer**：最適化表單的根目錄，在最適化表單UI中標示為&#x200B;**[!UICONTROL 最適化表單的開頭]**。 在此元件中，您可以指定：
 
-   * *最適化表單的行動佈局*：定義行動裝置上的表單外觀。
-   * *感謝頁面*：定義使用者提交表單後被重新導向的頁面。
-   * *提交動作*：定義使用者提交表單後伺務器如何處理表單。
-   * *設定樣式*：指定用於自訂表單外觀的 CSS 檔案路徑。
+  * *最適化表單的行動佈局*：定義行動裝置上的表單外觀。
+  * *感謝頁面*：定義使用者提交表單後被重新導向的頁面。
+  * *提交動作*：定義使用者提交表單後伺務器如何處理表單。
+  * *設定樣式*：指定用於自訂表單外觀的 CSS 檔案路徑。
 
 * **rootPanel：**&#x200B;最適化表單的根面板。 它可以在項目節點下包含子面板。 每個面板 (包含根面板) 都可以有相關聯的版面。 面板的版面決定了表單的佈局方式。 例如，在摺疊式版面中，其項目是以摺疊式步驟加以佈局。
 

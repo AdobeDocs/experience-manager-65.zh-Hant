@@ -5,13 +5,39 @@ exl-id: f1df97a1-164f-4ed4-bb63-34caf35ae27c
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments,GraphQL,Persisted Queries,Developing
 role: Admin,Developer
-source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: bfd4bc52-c397-5127-8f86-8953ba9fc0a3
+    internal-label: Headless
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+  - id: a642c50e-80eb-4fc1-a5d2-f3762d1f841d
+    internal-label: Administration
+  - id: d429a63e-ade4-4117-b04e-9b996d1c94ef
+    internal-label: Integrations
+  - id: c124fa01-25c5-42ec-adf6-21d1c114058b
+    internal-label: Developer tools
+subfeature_v2:
+  - id: e9db7c79-8f65-4281-a439-c9049296d903
+    internal-label: Content Fragments
+  - id: a02b73a7-bdfc-4225-bdfd-69f7891ab55e
+    internal-label: GraphQL
+  - id: d781bc8f-52af-43f6-84d0-b73e59a130d5
+    internal-label: Persisted queries
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '295'
+source-wordcount: '296'
 ht-degree: 61%
-
 ---
-
 # 建立設定Headless快速入門手冊 {#creating-configuration}
 
 在AEM 6.5中開始使用Headless的第一步，是您必須建立設定。
@@ -20,7 +46,7 @@ ht-degree: 61%
 
 設定瀏覽器提供一般 API、內容結構、解析機制用於 AEM 中的設定。
 
-在 AEM Headless 內容管理的環境中，將設定視為 AEM 中的工作區，您可以在其中建立內容模型，該內容模型定義未來內容和內容片段的結構。您可以有多個設定來將這些模型分開。
+在 AEM Headless 內容管理的環境中，將設定視為 AEM 中的工作區，您可以在其中建立內容模型，該內容模型定義未來內容和內容片段的結構。 您可以有多個設定來將這些模型分開。
 
 >[!NOTE]
 >
@@ -28,11 +54,11 @@ ht-degree: 61%
 
 ## 如何建立設定 {#how-to-create-a-configuration}
 
-系統管理員一次只需建立一個設定，或者在需要新工作區來組織內容模型時建立，這個情況很少發生。出於本快速入門指南的目的，我們只需要建立一個設定。
+系統管理員一次只需建立一個設定，或者在需要新工作區來組織內容模型時建立，這個情況很少發生。 出於本快速入門指南的目的，我們只需要建立一個設定。
 
 1. 登入AEM，從主功能表選取&#x200B;**工具>一般>設定瀏覽器**。
 1. 提供設定的&#x200B;**標題**。
-   * 名稱將根據標題自動產生，並根據[AEM命名慣例進行調整。](/help/sites-developing/naming-conventions.md)。它會成為存放庫中的節點名稱。
+   * 名稱將根據標題自動產生，並根據[AEM命名慣例進行調整。](/help/sites-developing/naming-conventions.md)它會成為存放庫中的節點名稱。
 1. 檢查以下選項：
    * **內容片段模型**
    * **GraphQL持續查詢**
@@ -41,7 +67,7 @@ ht-degree: 61%
 
 1. 按一下「**建立**」
 
-如果需要，您可以建立多個設定。設定也可以是巢狀。
+如果需要，您可以建立多個設定。 設定也可以是巢狀。
 
 >[!NOTE]
 >

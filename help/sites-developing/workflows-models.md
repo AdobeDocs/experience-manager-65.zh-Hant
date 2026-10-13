@@ -10,18 +10,27 @@ exl-id: 6790202f-0542-4779-b3ce-d394cdba77b4
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
 source-wordcount: '2503'
 ht-degree: 2%
-
 ---
-
 # 建立工作流模型{#creating-workflow-models}
 
 >[!CAUTION]
 >
->如需使用傳統UI，請參閱[AEM 6.3檔案](https://helpx.adobe.com/tw/experience-manager/6-3/help/sites-developing/workflows-models.html)以取得參考。
+>如需使用傳統UI，請參閱[AEM 6.3檔案](https://helpx.adobe.com/experience-manager/6-3/help/sites-developing/workflows-models.html)以取得參考。
 
 您可以建立[工作流程模型](/help/sites-developing/workflows.md#model)，以定義使用者啟動工作流程時所執行的一系列步驟。 您也可以定義模型屬性，例如工作流程是暫時的或使用多個資源。
 
@@ -33,7 +42,7 @@ ht-degree: 2%
 
 * 步驟&#x200B;**流程開始**&#x200B;和&#x200B;**流程結束**。
 這些代表工作流程的開始和結束。 這些步驟為必要步驟，無法編輯/移除。
-* 名為&#x200B;**步驟1**&#x200B;的範例&#x200B;**參與者**&#x200B;步驟。
+* 名為&#x200B;**步驟1**&#x200B;的範例&#x200B;**參與者**步驟。
 此步驟設定為指派工作專案給工作流程發起人。 編輯或刪除此步驟，並視需要新增步驟。
 
 使用編輯器建立工作流程：
@@ -87,7 +96,7 @@ ht-degree: 2%
 * 最初，模型及其屬性會以唯讀模式顯示為：
   * 預設工作流程在`/libs`中
   * 舊版工作流程位於 `/etc`
-    選取&#x200B;**編輯**&#x200B;將：
+    選取**編輯**&#x200B;將：
 * 將工作流程復本帶入`/conf`
 * 讓步驟瀏覽器可供使用
 * 讓您進行變更
@@ -199,7 +208,7 @@ ht-degree: 2%
 
 1. 新增`Workflow : DAM`至&#x200B;**[!UICONTROL 標籤]**&#x200B;欄位。 使用核取方塊（勾號）確認選取。
 
-1. 確認使用&#x200B;**[!UICONTROL 儲存並關閉]**&#x200B;新增標籤。
+1. 確認使用&#x200B;**[!UICONTROL 儲存並關閉]**新增標籤。
    ![編輯模型](assets/workflow_model_edit_activation1.png)的頁面屬性
 
 1. 使用&#x200B;**[!UICONTROL 同步]**&#x200B;完成程式。 觸控式UI現在提供工作流程。

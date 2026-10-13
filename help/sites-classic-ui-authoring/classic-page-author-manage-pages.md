@@ -9,7 +9,18 @@ exl-id: bd2636d1-6f13-4c6c-b8cd-3bed9e83a101
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 25bf0d64b6839afec0112ea8c9fde0510e56ccf4
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1916'
 ht-degree: 1%
@@ -148,7 +159,7 @@ AEM隨附數種現成可用的範本。 提供的範本取決於個別網站，�
 * 影片
 * 更多專案
 
-建立並開啟頁面後，您就可以使用[sidekick](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#sidekick)提供的元件[&#128279;](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#insertinganewparagraph)來新增內容。
+建立並開啟頁面後，您就可以使用[sidekick](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#sidekick)提供的元件](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#insertinganewparagraph)來[新增內容。
 
 ## 管理頁面 {#managing-pages}
 

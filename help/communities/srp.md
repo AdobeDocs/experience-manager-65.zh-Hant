@@ -9,13 +9,20 @@ exl-id: 5f313274-1a2a-4e83-9289-60a4729b99b4
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1135'
+source-wordcount: '1154'
 ht-degree: 0%
-
 ---
-
 # 儲存資源提供者概觀 {#storage-resource-provider-overview}
 
 ## 簡介 {#introduction}
@@ -40,12 +47,12 @@ ht-degree: 0%
 
 ## 關於存放庫 {#about-the-repository}
 
-若要瞭解SRP，瞭解AEM社群網站中AEM存放庫(Oak)的角色會很有幫助。
+若要瞭解SRP，瞭解AEM存放庫(Oak)在AEM社群網站中的角色會很有幫助。
 
 **Java™內容存放庫(JCR)**
 此標準定義了內容存放庫的資料模型和應用程式設計介面([JCR API](https://jackrabbit.apache.org/jcr/jcr-api.html))。 它結合了傳統檔案系統與關聯式資料庫的特性，並新增了內容應用程式經常需要的幾項額外功能。
 
-JCR的一個實作是AEM存放庫Oak。
+JCR的一種實施是AEM存放庫Oak。
 
 **Apache Jackrabbit Oak**
 [Oak](../../help/sites-deploying/platform.md)是JCR 2.0的實作，這是專為以內容為中心的應用程式而設計的資料儲存系統。 這是一種階層式資料庫，專為非結構化和半結構化資料而設計。 存放庫不僅儲存面向使用者的內容，也儲存應用程式使用的所有程式碼、範本和內部資料。 用於存取內容的UI是[CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md)。
@@ -56,7 +63,7 @@ JCR和Oak通常用於表示AEM存放庫。
 
 若為UGC，內容由公開發佈環境中的註冊網站訪客（社群成員）輸入。 這是隨機發生的。
 
-為了管理和報告，從私人製作環境存取UGC會很有用。 使用SRP時，由於不需要從Publish反向復寫至作者，因此從「作者」存取UGC會更加一致且效能更高。
+為了管理和報告，從私人製作環境存取UGC會很有用。 使用SRP時，由於不需要從發佈反向復寫至作者，因此從「作者」存取UGC會更加一致且效能更高。
 
 ## 關於SRP {#about-srp}
 
@@ -70,9 +77,9 @@ UGC儲存至共用儲存空間時，在大部分部署中，成員內容的單�
 
 ### ASRP {#asrp}
 
-如果有ASRP，UGC就不會儲存在JCR中，而是儲存在由Adobe託管和管理的雲端服務中。 ASRP中儲存的UGC不可使用CRXDE Lite檢視或使用JCR API存取。
+如果有ASRP，UGC就不會儲存在JCR中，而是儲存在Adobe託管及管理的雲端服務中。 ASRP中儲存的UGC不可透過CRXDE Lite檢視或使用JCR API存取。
 
-請參閱[ASRP -Adobe儲存資源提供者](asrp.md)。
+請參閱[ASRP - Adobe儲存資源提供者](asrp.md)。
 
 開發人員無法直接存取UGC。
 
@@ -80,11 +87,11 @@ ASRP使用Adobe雲端進行查詢。
 
 ### MSRP {#msrp}
 
-如果有，MSRP、UGC就不會儲存在JCR中，而是儲存在MongoDB中。 儲存在MSRP中的UGC不可以CRXDE Lite檢視或使用JCR API存取。
+如果有，MSRP、UGC就不會儲存在JCR中，而是儲存在MongoDB中。 可能無法使用CRXDE Lite檢視或使用JCR API存取儲存在MSRP中的UGC。
 
 請參閱[MSRP - MongoDB儲存資源提供者](msrp.md)。
 
-雖然MSRP可與ASRP相提並論，因為所有AEM伺服器執行個體都存取相同的UGC，所以您可以使用通用工具直接存取儲存在MongoDB中的UGC。
+雖然MSRP可與ASRP相比，因為所有AEM伺服器執行個體都存取相同的UGC，所以您可以使用通用工具直接存取儲存在MongoDB中的UGC。
 
 MSRP使用Solr進行查詢。
 
@@ -96,7 +103,7 @@ JSRP為存取單一AEM執行個體上所有UGC的預設提供者。 它可讓您
 
 如果UGC儲存在JCR時存在JSRP，並且可在CRXDE Lite和JCR API中存取，Adobe建議您永遠不要使用JCR API來存取。 如果您這麼做，未來的變更可能會影響自訂程式碼。
 
-此外，不會共用作者和Publish環境的存放庫。 雖然發佈執行個體的叢集會產生共用發佈存放庫，但在Publish中輸入的UGC在Author上不可見，因此無法管理Author的UGC。 UGC只會保留在輸入其所在例項的AEM存放庫(JCR)中。
+此外，不會共用製作和發佈環境的存放庫。 雖然發佈執行個體的叢集會產生共用的發佈存放庫，但在發佈時輸入的UGC在Author上不可見，因此無法管理Author的UGC。 UGC只會保留在輸入其所在例項的AEM存放庫(JCR)中。
 
 JSRP會使用Oak索引進行查詢。
 

@@ -5,13 +5,25 @@ feature: Content Fragments,GraphQL API
 exl-id: 91c5f61c-9c15-4d72-9b9b-0c23f31e7cdc
 solution: Experience Manager, Experience Manager Sites
 role: Developer
-source-git-commit: 3a38a2f1e753e33d9d3d4d4e7ebc24f16f795966
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: a642c50e-80eb-4fc1-a5d2-f3762d1f841d
+    internal-label: Administration
+subfeature_v2:
+  - id: e9db7c79-8f65-4281-a439-c9049296d903
+    internal-label: Content Fragments
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1577'
-ht-degree: 80%
-
+source-wordcount: '1576'
+ht-degree: 82%
 ---
-
 # 了解搭配使用 GraphQL 與 AEM - 範例內容和查詢 {#learn-graphql-with-aem-sample-content-queries}
 
 瞭解如何使用GraphQL搭配AEM，透過探索範例內容和查詢來無頭提供內容。
@@ -225,7 +237,7 @@ ht-degree: 80%
 
 ### 範例查詢 - 所有城市的名稱 {#sample-names-all-cities}
 
-此範例查詢是直接查詢，可傳回`name`結構描述中所有專案的`city`。
+此範例查詢是直接查詢，可傳回`city`結構描述中所有專案的`name`。
 
 **範例查詢**
 
@@ -539,7 +551,7 @@ query {
 
 ### 範例查詢 - 所有名稱為「Jobs」或「Smith」的所有人員 {#sample-all-persons-jobs-smith}
 
-此範例查詢會篩選名稱為`persons`或`Jobs`之任何專案的所有`Smith`。
+此範例查詢會篩選名稱為`Jobs`或`Smith`之任何專案的所有`persons`。
 
 **範例查詢**
 
@@ -593,7 +605,7 @@ query {
 
 ### 範例查詢 - 所有名稱不為「Jobs」的人員 {#sample-all-persons-not-jobs}
 
-此範例查詢會篩選名稱為`persons`或`Jobs`之任何專案的所有`Smith`。
+此範例查詢會篩選名稱為`Jobs`或`Smith`之任何專案的所有`persons`。
 
 **範例查詢**
 
@@ -705,7 +717,7 @@ query {
 
 ### 範例查詢 — 德國或瑞士人口為400000到999999的所有城市 {#sample-all-cities-d-ch-population}
 
-這裡篩選了欄位組合。`AND` (隱含) 用於選擇 `population` 範圍，而 `OR` (明確) 用於選擇所需城市。
+這裡篩選了欄位組合。 `AND` (隱含) 用於選擇 `population` 範圍，而 `OR` (明確) 用於選擇所需城市。
 
 **範例查詢**
 
@@ -1147,7 +1159,7 @@ query {
 
 ## 使用 WKND 專案的範例查詢 {#sample-queries-using-wknd-project}
 
-這些是根據 WKND 專案的範例查詢。其具有以下：
+這些是根據 WKND 專案的範例查詢。 其具有以下：
 
 * 內容片段模型可在以下位置取用：
   `http://<hostname>:<port>/libs/dam/cfm/models/console/content/models.html/conf/wknd`
@@ -1161,7 +1173,7 @@ query {
 
 ### 具有指定的屬性之特定模型的所有內容片段的範例查詢 {#sample-wknd-all-model-properties}
 
-此範例查詢會質詢：
+此範例查詢會查詢：
 
 * 類型為 `article` 的所有內容片段
 * 具有`path`和`author`屬性。
@@ -1181,7 +1193,7 @@ query {
 
 ### 中繼資料的範例查詢 {#sample-wknd-metadata}
 
-此查詢會質詢：
+此查詢會查詢：
 
 * 類型為 `adventure` 的所有內容片段
 * 中繼資料
@@ -1242,14 +1254,14 @@ query {
 
 ### 特定模型之單一內容片段的範例查詢 {#sample-wknd-single-content-fragment-of-given-model}
 
-此範例查詢會質詢：
+此範例查詢會查詢：
 
 * 在特定路徑中類型為 `article` 的單一內容片段
-   * 在該路徑內，所有格式的內容：
-      * HTML
-      * Markdown
-      * 純文字
-      * JSON
+  * 在該路徑內，所有格式的內容：
+    * HTML
+    * Markdown
+    * 純文字
+    * JSON
 
 **範例查詢**
 
@@ -1272,10 +1284,10 @@ query {
 
 ### 來自模型的內容片段模型的範例查詢 {#sample-wknd-content-fragment-model-from-model}
 
-此範例查詢會質詢：
+此範例查詢會查詢：
 
 * 單一內容片段
-   * 基礎內容片段模型的詳細資訊
+  * 基礎內容片段模型的詳細資訊
 
 **範例查詢**
 
@@ -1296,10 +1308,10 @@ query {
 
 ### 巢狀內容片段的範例查詢 - 單一模型類型{#sample-wknd-nested-fragment-single-model}
 
-此查詢會質詢：
+此查詢會查詢：
 
 * 在特定路徑中類型為 `article` 的單一內容片段
-   * 在該路徑內，參照（巢狀）片段的路徑和作者
+  * 在該路徑內，參照（巢狀）片段的路徑和作者
 
 >[!NOTE]
 >
@@ -1326,14 +1338,14 @@ query {
 
 #### 單一參考的模型類型
 
-此查詢會質詢：
+此查詢會查詢：
 
 * 多個類型為 `bookmark` 的內容片段
-   * 具有片段參考，其會參考特定模型類型 `Article` 的其他片段。
+  * 具有片段參考，其會參考特定模型類型 `Article` 的其他片段。
 
 >[!NOTE]
 >
->`fragments` 欄位的資料類型為 `fragment-reference`，且已選取 `Article` 模型。查詢將 `fragments` 以 `[Article]` 陣列形式傳遞。
+>`fragments` 欄位的資料類型為 `fragment-reference`，且已選取 `Article` 模型。 查詢將 `fragments` 以 `[Article]` 陣列形式傳遞。
 
 ```graphql
 {
@@ -1350,14 +1362,14 @@ query {
 
 #### 多個參考的模型類型
 
-此查詢會質詢：
+此查詢會查詢：
 
 * 多個類型為 `bookmark` 的內容片段
-   * 具有片段參考，其會參考特定模型類型 `Article` 和 `Adventure` 的其他片段。
+  * 具有片段參考，其會參考特定模型類型 `Article` 和 `Adventure` 的其他片段。
 
 >[!NOTE]
 >
->`fragments` 欄位的資料類型為 `fragment-reference`，且已選取 `Article`、`Adventure` 模型。查詢將 `fragments` 以 `[AllFragmentModels]` 陣列形式傳遞，其使用聯合類型取消參考。
+>`fragments` 欄位的資料類型為 `fragment-reference`，且已選取 `Article`、`Adventure` 模型。 查詢將 `fragments` 以 `[AllFragmentModels]` 陣列形式傳遞，其使用聯合類型取消參考。
 
 ```graphql
 {
@@ -1388,7 +1400,7 @@ query {
 此查詢會質詢：
 
 * 多個類型為 `bookmark` 的內容片段
-   * 具有對其他片段的內容參考
+  * 具有對其他片段的內容參考
 
 #### 具有預先擷取之參考的多個內容片段的範例查詢 {#sample-wknd-multiple-fragments-prefetched-references}
 
@@ -1467,10 +1479,10 @@ query {
 
 ### 具有 RTE 內聯參考的單一內容片段的範例查詢 {#sample-wknd-single-fragment-rte-inline-reference}
 
-此查詢會質詢：
+此查詢會查詢：
 
 * 在特定路徑中類型為 `bookmark` 的單一內容片段
-   * 其中有 RTE 內聯參考
+  * 其中有 RTE 內聯參考
 
 >[!NOTE]
 >
@@ -1511,12 +1523,12 @@ query {
 }
 ```
 
-### 特定模型的單一內容片段變化的範例查詢 {#sample-wknd-single-fragment-given-model}
+### 特定模型的單一內容片段變體範例查詢 {#sample-wknd-single-fragment-given-model}
 
-此查詢會質詢：
+此查詢會查詢：
 
 * 在特定路徑中類型為 `article` 的單一內容片段
-   * 在該路徑中，與變數相關的資料： `variation1`
+  * 在該路徑中，與變數相關的資料： `variation1`
 
 **範例查詢**
 
@@ -1537,9 +1549,9 @@ query {
 }
 ```
 
-### 特定模型之多個內容片段的名稱變化的範例查詢 {#sample-wknd-variation-multiple-fragment-given-model}
+### 特定模型之多個內容片段的具名變體範例查詢 {#sample-wknd-variation-multiple-fragment-given-model}
 
-此查詢會質詢：
+此查詢會查詢：
 
 * 類型為 `article` 的內容片段，具有特定變化：`variation1`
 
@@ -1562,9 +1574,9 @@ query {
 }
 ```
 
-### 對指定模式的多個內容片段及其變化的範例查詢 {#sample-wknd-multiple-fragment-variations-given-model}
+### 特定模型的多個內容片段及其變體範例查詢 {#sample-wknd-multiple-fragment-variations-given-model}
 
-此查詢會質詢：
+此查詢會查詢：
 
 * 類型為 `article` 的內容片段和所有變化
 
@@ -1589,9 +1601,9 @@ query {
 }
 ```
 
-### 對附加了特定標記的指定模式的內容片段變化的範例查詢{#sample-wknd-fragment-variations-given-model-specific-tag}
+### 附加特定標記之指定模型內容片段變體的範例查詢{#sample-wknd-fragment-variations-given-model-specific-tag}
 
-此查詢會質詢：
+此查詢會查詢：
 
 * 類型為 `article` 的內容片段以及具有 `WKND : Activity / Hiking` 標記的一或多種變化
 
@@ -1620,7 +1632,7 @@ query {
 
 ### 特定地區設定的多個內容片段的範例查詢 {#sample-wknd-multiple-fragments-given-locale}
 
-此查詢會質詢：
+此查詢會查詢：
 
 * 在 `fr` 地區設定中類型為 `article` 的內容片段
 
@@ -1657,7 +1669,7 @@ query {
 
 * [公司](#model-company)
 -> [人員](#model-person)
- -> [獎項](#model-award)
+    -> [獎勵](#model-award)
 
 * [城市](#model-city)
 
@@ -1669,7 +1681,7 @@ query {
 |--- |--- |--- |
 | 公司名稱 | 單行文字 | |
 | CEO | 片段參考 (單一) | [人員](#model-person) |
-| 員工 | 片段參考 (多個欄位) | [人員](#model-person) |
+| 員工 | 片段參照 (多個欄位) | [人員](#model-person) |
 
 #### 人員 {#model-person}
 
@@ -1710,7 +1722,7 @@ query {
 | 公司名稱 | CEO | 員工 |
 |--- |--- |--- |
 | Apple | Steve Jobs | Duke Marsh<br>Max Caulfield |
-|  小馬公司 | Adam Smith | Lara Croft<br>Cutter Slade |
+|  Little Pony Inc. | Adam Smith | Lara Croft<br>Cutter Slade |
 | NextStep Inc. | Steve Jobs | Joe Smith<br>Abe Lincoln |
 
 #### 人員 {#fragment-person}
@@ -1719,11 +1731,11 @@ query {
 |--- |--- |--- |
 | Lincoln |  Abe | |
 | Smith | Adam |   |
-| Slade |  刀具 |  Gameblitz<br>Gamestar |
+| Slade |  Cutter |  Gameblitz<br>Gamestar |
 | Marsh |  Duke |   |
 |  Smith |  Joe |   |
 | Croft |  Lara | Gamestar |
-| Caulfield |  最大 |  Gameblitz |
+| Caulfield |  最大值 |  Gameblitz |
 |  工作 |  Steve |   |
 
 #### 獎項 {#fragment-award}

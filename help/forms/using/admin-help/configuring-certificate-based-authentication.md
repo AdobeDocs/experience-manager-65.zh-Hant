@@ -9,20 +9,36 @@ exl-id: 9cbea8c8-4d42-446b-b98d-c090709624d7
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Security
 role: User, Developer
-source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 50158d81-1c06-57f7-8bd7-e8ff76a93f85
+    internal-label: Document Security
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '730'
+source-wordcount: '739'
 ht-degree: 0%
-
 ---
-
 # 設定憑證式驗證 {#configuring-certificate-based-authentication}
 
 >[!NOTE]
 > 
 > 確保使用者具有存取管理員控制檯的管理員許可權。
 
-「使用者管理」通常使用使用者名稱和密碼來執行驗證。 「使用者管理」也支援憑證式驗證，您可以透過Acrobat用來驗證使用者，或以程式設計方式驗證使用者。 如需以程式設計方式驗證使用者的詳細資訊，請參閱[使用AEM表單進行程式設計](https://www.adobe.com/go/learn_aemforms_programming_63)。
+「使用者管理」通常使用使用者名稱和密碼來執行驗證。 「使用者管理」也支援憑證式驗證，您可以透過Acrobat用來驗證使用者，或以程式設計方式驗證使用者。 如需以程式設計方式驗證使用者的詳細資訊，請參閱[使用AEM表單程式設計](https://www.adobe.com/go/learn_aemforms_programming_63)。
 
 若要使用憑證式驗證，請將您信任的憑證授權單位(CA)憑證匯入信任存放區，然後建立憑證對應。
 
@@ -39,7 +55,7 @@ ht-degree: 0%
 * 憑證有效。
 * 您指定的簽發者可以驗證憑證。
 * 憑證包含對應所需的屬性。
-* 您指定的對應只會將憑證對應到AEM Forms資料庫中的一個使用者。 系統會檢查目前和過時（已刪除）的使用者，以確定他們是否符合對應條件。 因此，如果有一個以上的使用者（包括過時的使用者）考量到屬性值，憑證測試就會失敗。
+* 您指定的對應只會將憑證對應到AEM表單資料庫中的一個使用者。 系統會檢查目前和過時（已刪除）的使用者，以確定他們是否符合對應條件。 因此，如果有一個以上的使用者（包括過時的使用者）考量到屬性值，憑證測試就會失敗。
 
 >[!NOTE]
 >
@@ -51,7 +67,7 @@ ht-degree: 0%
 1. 按一下「新增憑證對應」，然後在「發行者」清單中，選取在「信任存放區管理」中設定的憑證別名。
 1. 將憑證的其中一個屬性對應到使用者的屬性。 例如，您可以將憑證的一般名稱對應到使用者的登入ID。
 
-   如果憑證中屬性的內容與「使用者管理」資料庫中使用者屬性的內容不同，您可以使用Java規則運算式(regex)來比對這兩個屬性。 例如，如果憑證的一般名稱是&#x200B;*Alex Pink （驗證）*&#x200B;和&#x200B;*Alex Pink （簽署）*&#x200B;之類的名稱，而「使用者管理」資料庫中的一般名稱是&#x200B;*Alex Pink*，則您會使用規則運算式來擷取憑證屬性的必要部分（在此範例中為&#x200B;*Alex Pink*）。您指定的規則運算式必須符合Java規則運算式規格。
+   如果憑證中屬性的內容與「使用者管理」資料庫中使用者屬性的內容不同，您可以使用Java規則運算式(regex)來比對這兩個屬性。 例如，如果憑證的一般名稱是&#x200B;*Alex Pink （驗證）*&#x200B;和&#x200B;*Alex Pink （簽署）*&#x200B;之類的名稱，而「使用者管理」資料庫中的一般名稱是&#x200B;*Alex Pink*，則您會使用Regex來擷取憑證屬性的必要部分（在此範例中為&#x200B;*Alex Pink*）。 您指定的規則運算式必須符合Java規則運算式規格。
 
    您可以在「自訂順序」方塊中指定群組的順序，以轉換運算式。 自訂順序與`java.util.regex.Matcher.replaceAll()`方法搭配使用。 看到的行為會對應至該方法的行為，且必須相應地指定輸入字串（自訂順序）。
 
@@ -59,8 +75,8 @@ ht-degree: 0%
 
    您可以在規則運算式中使用下列字元：
 
-   * 。（任何字元）
-   * &amp;amp；ast； （0次或更多次）
+   * . （任何字元）
+   * &amp;ast； （0次或更多次）
    * () （以方括弧指定群組）
    * \ （用來將規則運算式字元逸出為一般字元）
    * $n （用於表示第n個群組）
@@ -69,21 +85,21 @@ ht-degree: 0%
 
    * 從「Alex Pink （驗證）」中擷取「Alex Pink」
 
-     **規則運算式：** (.&amp;amp；ast；) \（驗證\）
+     **規則運算式：** (.&amp;ast；) \（驗證\）
 
    * 從「Alex (Authentication) Pink」中擷取「Alex Pink」
 
-     **規則運算式：** (.&amp;amp；ast；)\（驗證\） (.&amp;amp；ast；)
+     **規則運算式：** (.&amp;ast；)\（驗證\） (.&amp;ast；)
 
    * 將「Pink Alex」從「Alex (Authentication) Pink」中擷取
 
-     **規則運算式：** (.&amp;amp；ast；)\（驗證\） (.&amp;amp；ast；)
+     **規則運算式：** (.&amp;ast；)\（驗證\） (.&amp;ast；)
 
      自訂順序： $2 $1 （傳回第二個群組，串連至第一個群組，以空白字元擷取）
 
-   * 若要從「smtp：apink@sampleorg.com」擷取「apink@sampleorg.com」
+   * 若要從&quot;smtp:apink@sampleorg.com&quot;擷取&quot;apink@sampleorg.com&quot;
 
-     **規則運算式：** smtp：(.&amp;amp；ast；)
+     **規則運算式：** smtp：(.&amp;ast；)
 
    如需使用規則運算式的詳細資訊，請參閱[有關規則運算式的Java教學課程](https://java.sun.com/docs/books/tutorial/essential/regex/)。
 

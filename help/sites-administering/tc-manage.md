@@ -5,13 +5,25 @@ exl-id: 968bba02-98fe-4eaf-9937-ce5cfdf5b413
 solution: Experience Manager, Experience Manager Sites
 feature: Language Copy
 role: Admin
-source-git-commit: f6e1e28d6fbfc240a46c2c69f02c9c5fda1d0d0d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: d9d38edd-df1b-480c-8f5e-72b62576f390
+    internal-label: Site and page features
+subfeature_v2:
+  - id: e15a4109-ae5d-497d-b301-31149e35aed4
+    internal-label: Language Copy Wizard
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
 source-wordcount: '3546'
 ht-degree: 3%
-
 ---
-
 # 管理翻譯專案{#managing-translation-projects}
 
 在準備要翻譯的內容後，您需要透過建立遺漏的語言副本來完成語言結構，並建立翻譯專案。
@@ -43,8 +55,8 @@ AEM會偵測是否正在為內容的初始翻譯建立翻譯專案，或更新�
 * **語言副本不包含頁面：** AEM將此情況視為初始翻譯。 頁面會立即複製到語言副本，並包含在專案中。 將翻譯頁面匯入AEM時，AEM會直接將其複製到語言副本。
 * **語言副本已包含頁面：** AEM將此情況視為更新後的翻譯。 系統隨即會建立啟動項，並將頁面副本新增至啟動項，並包含在專案中。 啟動可讓您在將更新的翻譯送交語言副本之前，先檢閱這些翻譯：
 
-   * 將翻譯頁面匯入AEM時，會覆寫啟動項中的頁面。
-   * 只有在提升啟動項時，翻譯的頁面才會覆寫語言副本。
+  * 將翻譯頁面匯入AEM時，會覆寫啟動項中的頁面。
+  * 只有在提升啟動項時，翻譯的頁面才會覆寫語言副本。
 
 例如，/content/geometrixx/fr語言根是為/content/geometrixx/en主語言的法文翻譯所建立。 法文副本中沒有任何其他頁面。
 
@@ -377,7 +389,7 @@ AEM會偵測是否正在為內容的初始翻譯建立翻譯專案，或更新�
 1. 在&#x200B;**網站**&#x200B;主控台中，導覽至您要比較的語言副本。
 1. 開啟&#x200B;**[參考](/help/sites-authoring/basic-handling.md#references)**&#x200B;面板。
 1. 在&#x200B;**復本**&#x200B;標題下，選取&#x200B;**語言復本。**
-1. 選取您的特定語言副本，然後您可以按一下&#x200B;**與主版比較**&#x200B;或**與上一個比較**（如果適用）。
+1. 選取您的特定語言副本，然後您可以按一下**與主版比較**或**與上一個比較**（如果適用）。
 
    ![chlimage_1-37](assets/chlimage_1-37.jpeg)
 

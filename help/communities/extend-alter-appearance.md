@@ -10,13 +10,20 @@ exl-id: 27e1bff3-385e-4ced-87af-54044b7e8812
 solution: Experience Manager
 feature: Communities
 role: Developer
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '260'
+source-wordcount: '285'
 ht-degree: 0%
-
 ---
-
 # 變更外觀(HBS) {#alter-the-appearance-hbs}
 
 現在，應用程式目錄(/apps)中的自訂註解系統元件已準備就緒，且resourceSuperType參考預設註解系統，且已註冊自訂模型/檢視，您可以編輯實作。
@@ -33,23 +40,23 @@ ht-degree: 0%
 
 * 開啟[/apps/custom/components/comments/comment/**comment.hbs**](https://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comment/comment.hbs)
 
-   * 註解標籤，其中包含註解貼文的人物化身（~第21行）：
+  * 註解標籤，其中包含註解貼文的人物化身（~第21行）：
 
-     ```
-       <!--
-        <<img class="scf-comment-avatar {{#if topLevel}}withTopLevel{{/if}}" src="{{author.avatarUrl}}"></img>
-        -->
-     ```
+    ```
+      <!--
+       <<img class="scf-comment-avatar {{#if topLevel}}withTopLevel{{/if}}" src="{{author.avatarUrl}}"></img>
+       -->
+    ```
 
 * 開啟[/apps/custom/components/comments/**comments.hbs**](https://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comments.hbs)
 
-   * 將包含下一個註解專案（~第44行）頭像的標籤註釋掉：
+  * 將包含下一個註解專案（~第44行）頭像的標籤註釋掉：
 
-     ```
-       <!--
-        <img class="scf-composer-avatar" src="{{loggedInUser.avatarUrl}}"></img>
-        -->
-     ```
+    ```
+      <!--
+       <img class="scf-composer-avatar" src="{{loggedInUser.avatarUrl}}"></img>
+       -->
+    ```
 
 * 選取&#x200B;**全部儲存**
 
@@ -61,11 +68,11 @@ ht-degree: 0%
 
 * 從主功能表
 
-   * 選取&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 作業]** > **[!UICONTROL 復寫]**。
-   * 選取&#x200B;**[!UICONTROL 啟動樹狀結構]**。
-   * 將`Start Path`設為`/apps/custom`。
-   * 取消選取&#x200B;**[!UICONTROL 僅修改]**。
-   * 選取&#x200B;**[!UICONTROL 啟動]**&#x200B;按鈕。
+  * 選取&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 作業]** > **[!UICONTROL 復寫]**。
+  * 選取&#x200B;**[!UICONTROL 啟動樹狀結構]**。
+  * 將`Start Path`設為`/apps/custom`。
+  * 取消選取&#x200B;**[!UICONTROL 僅修改]**。
+  * 選取&#x200B;**[!UICONTROL 啟動]**&#x200B;按鈕。
 
 ### 在發佈的範例頁面上檢視修改的註解 {#view-modified-comment-on-published-sample-page}
 

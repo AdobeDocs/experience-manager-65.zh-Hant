@@ -9,13 +9,27 @@ exl-id: bc21659f-88d6-4dff-8baf-12746e1b3ed9
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '792'
 ht-degree: 1%
-
 ---
-
 # 備份和復原EMC Documentum存放庫 {#backing-up-and-recovering-the-emc-documentum-repository}
 
 本節說明備份和復原為您的AEM Forms環境設定的EMC Documentum存放庫所需的工作。
@@ -197,15 +211,15 @@ ht-degree: 1%
 
    * 完整資料庫備份(nsrnmddbf.bat)：
 
-     `NetWorker_database_module_root` `-s`*&lt;NetWorker_Server_Name>* `-U`&#x200B;`[username]` `-P`*[密碼&#x200B;]*`-l full`*&lt;資料庫名稱>*
+     `NetWorker_database_module_root` `-s`*&lt;NetWorker_Server_Name>* `-U``[username]` `-P`*[密碼&#x200B;]*`-l full`*&lt;資料庫名稱>*
 
    * 增量資料庫備份(nsrnmddbi.bat)：
 
-     `[NetWorker_database_module_root]` `-s`*&lt;NetWorker伺服器名稱>* `-U`&#x200B;`[username]` `-P`&#x200B;`[password]` `-l 1 -R`*&lt;資料庫名稱>*
+     `[NetWorker_database_module_root]` `-s`*&lt;NetWorker伺服器名稱>* `-U``[username]` `-P``[password]` `-l 1 -R`*&lt;資料庫名稱>*
 
    * 資料庫記錄備份(nsrnmddbl.bat)：
 
-     `[NetWorker_database_module_root]` `-s`&#x200B;`<NetWorker_Server_Name>` `-U`&#x200B;`[username]` `-P`&#x200B;`[password]` `-l incr -R`*&lt;資料庫名稱>*
+     `[NetWorker_database_module_root]` `-s``<NetWorker_Server_Name>` `-U``[username]` `-P``[password]` `-l incr -R`*&lt;資料庫名稱>*
 
      其中：
 

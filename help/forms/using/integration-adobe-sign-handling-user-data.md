@@ -7,14 +7,29 @@ feature: Acrobat Sign
 role: Admin, User, Developer
 exl-id: b43ed9b7-b1ef-4878-ae3b-643b558eed7b
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: a16aea24-4e85-528d-9377-cd80bb039c1d
+    internal-label: Acrobat Sign
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '323'
 ht-degree: 0%
 ---
 # 與Adobe Sign整合 |處理使用者資料 {#integration-with-adobe-sign-handling-user-data}
 
-[!DNL AEM Forms]與[!DNL &#x200B; Adobe Sign]整合，以啟用最適化表單中的電子簽章工作流程，以處理法律、銷售、薪資、人力資源管理工作流程的表單或協定。 它允許單一和多使用者簽署、連續和同時簽署工作流程、以匿名或登入使用者身分簽署表單，以及多種驗證使用者的方式。
+[!DNL AEM Forms]與[!DNL  Adobe Sign]整合，以啟用最適化表單中的電子簽章工作流程，以處理法律、銷售、薪資、人力資源管理工作流程的表單或協定。 它允許單一和多使用者簽署、連續和同時簽署工作流程、以匿名或登入使用者身分簽署表單，以及多種驗證使用者的方式。
 
 當簽署者或多位簽署者簽署並提交最適化表單時，會產生包含簽署者相關資訊的[!DNL Adobe Sign]合約。
 
@@ -28,6 +43,6 @@ ht-degree: 0%
 
 使用者資料會在合約中收集，但不會儲存在任何服務表格中。 [!DNL Adobe Sign]可讓系統管理員自行選擇管理他們在服務中控制的資料。 [!DNL Adobe Sign]服務的隱私權管理員可以根據要求者的電子郵件地址列出或移除協定。
 
-[!DNL Adobe Sign]提供允許由參與者搜尋協定，並在必要時刪除協定的Web應用程式。 如需詳細資訊，請參閱[Adobe Sign — 功能：刪除使用者資訊](https://helpx.adobe.com/tw/sign/help/adobesign_gdpr_user_deletion.html)。
+[!DNL Adobe Sign]提供允許由參與者搜尋協定，並在必要時刪除協定的Web應用程式。 如需詳細資訊，請參閱[Adobe Sign — 功能：刪除使用者資訊](https://helpx.adobe.com/sign/help/adobesign_gdpr_user_deletion.html)。
 
 針對設定為使用Forms Portal提交動作的最適化表單而設定的協定資料也會儲存在Forms Portal資料存放區。 若要從Forms入口網站資料存放區存取和刪除資料，請參閱[Forms入口網站 |正在處理使用者資料](/help/forms/using/forms-portal-handling-user-data.md)。

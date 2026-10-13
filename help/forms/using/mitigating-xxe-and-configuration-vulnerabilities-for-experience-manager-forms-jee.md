@@ -8,14 +8,20 @@ geptopics: SG_AEMFORMS/categories/jee
 role: Admin
 exl-id: 9fade12f-a038-4fd6-8767-1c30966574c5
 solution: Experience Manager, Experience Manager Forms
-release-date: 2025-08-05T00:00:00Z
-source-git-commit: 3f64cfa688ef1f0090b7ce0d821324593cbea693
+release-date: 2025-08-05T00:00:00.000Z
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '675'
-ht-degree: 5%
-
+source-wordcount: '699'
+ht-degree: 6%
 ---
-
 # 緩解JEE上AEM Forms的RCE (CVE-2025-49533)、Struts開發模式設定(CVE-2025-54253)、XXE (CVE-2025-54254)和漏洞 {#mitigating-xxe-configuration-rce-vulnerabilities-aem-forms}
 
 ## 快速參考
@@ -25,7 +31,7 @@ ht-degree: 5%
 | **關鍵** | JEE Service Pack 23 (6.5.23.0)上的AEM 6.5 Forms | [安裝最新的Hotfix](#option-1-for-users-on-version-65230-install-latest-hotfix) |
 | **關鍵** | JEE Service Pack 18至22 (6.5.18.0 - 6.5.22.0)上的AEM 6.5 Forms | [手動安裝修正](#option-2-for-users-on-65180---65220-manual-hotfix-installation) |
 | **關鍵** | JEE Service Pack 17 (6.5.17.0)或更舊版本上的AEM 6.5 Forms | 升級至支援的Service Pack版本，然後為您的新版本套用建議的緩解步驟 |
-| **不受影響** | OSGi、Workbench、Cloud Service上的AEM Forms | 不需要採取任何動作 |
+| **不受影響** | OSGi、Workbench、Cloud Service上的AEM Forms | 無需採取任何動作 |
 
 **已處理的漏洞：**
 
@@ -67,7 +73,7 @@ ht-degree: 5%
 
 1. [下載6.5.23.0](/help/release-notes/aem-forms-hotfix.md)的Hotfix。
 1. 遵循標準[Hotfix/修補程式安裝指示](/help/release-notes/jee-patch-installer-65.md)
-1. 如果您在IBM WebSphere或Oracle WebLogic上使用Document Security (前身為Rights Management)，請在啟動AEM Forms伺服器前設定下列Java系統屬性（JVM引數）：
+1. 如果您在IBM WebSphere或Oracle WebLogic上使用Document Security （前身為Rights Management），請在啟動AEM Forms伺服器前設定下列Java系統屬性（JVM引數）：
 
    ```
    -Dcom.adobe.forms.jee.services.allowDoctypeDeclaration=true
@@ -77,11 +83,11 @@ ht-degree: 5%
 
 ### 選項2： （適用於6.5.18.0 - 6.5.22.0的使用者）手動Hotfix安裝
 
-+++透過6.5.18.0手動安裝6.5.22.0的Hotfix
++++透過6.5.22.0手動安裝6.5.18.0的Hotfix
 
 **步驟1：下載並解壓縮Hotfix套件**
 
-- 從Adobe軟體發佈入口網站下載[&#x200B; - 6.5.22.6.5.18.0的](/help/release-notes/aem-forms-hotfix.md)Hotfix
+- 下載6.5.18.0 - 6.5.22.](/help/release-notes/aem-forms-hotfix.md)的[Hotfix 從Adobe軟體發佈入口網站
 - 在本機擷取
 
 **步驟2：瀏覽至正確的版本資料夾**
@@ -227,7 +233,7 @@ ht-degree: 5%
 
 
 
-**步驟5：使用`adobe-rightsmanagement-<appserver>-dsc.jar`更新**&#x200B;檔案
+**步驟5：使用**&#x200B;更新`adobe-rightsmanagement-<appserver>-dsc.jar`檔案
 
 ```
 adobe-xxe-configuration-hotfix/SP[version]/<appserver>/adobe-rightsmanagement-<appserver>-dsc.jar
@@ -237,7 +243,7 @@ adobe-xxe-configuration-hotfix/SP[version]/<appserver>/adobe-rightsmanagement-<a
 
 **步驟6： WebSphere和WebLogic上Document Security的其他設定**：
 
-如果您使用Document Security (前身為Rights Management)，請在啟動AEM Forms伺服器前設定下列Java系統屬性（JVM引數）：
+如果您使用Document Security （前身為Rights Management），請在啟動AEM Forms伺服器前設定下列Java系統屬性（JVM引數）：
 
 ```
 -Dcom.adobe.forms.jee.services.allowDoctypeDeclaration=true
@@ -258,6 +264,6 @@ adobe-xxe-configuration-hotfix/SP[version]/<appserver>/adobe-rightsmanagement-<a
 ## 參照
 
 - [CWE-611： XML外部實體參考的限制不正確](https://cwe.mitre.org/data/definitions/611.html)
-- [CWE-16：組態](https://cwe.mitre.org/data/definitions/16.html)
+- [CWE-16：設定](https://cwe.mitre.org/data/definitions/16.html)
 - [OWASP XXE預防速查表](https://owasp.org/www-community/vulnerabilities/XML_External_Entity_XXE_Processing)
-- [Adobe Experience Manager Forms安全性最佳實務](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html?lang=zh-Hant)
+- [Adobe Experience Manager Forms安全性最佳實務](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html)

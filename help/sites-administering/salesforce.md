@@ -10,13 +10,22 @@ exl-id: 0f3aaa0a-ccfb-4162-97a6-ee5485595d28
 solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 243139ec-8e41-5296-a287-31343ab1bc0f
+    internal-label: Integration
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1596'
 ht-degree: 3%
-
 ---
-
 
 # 與Salesforce整合 {#integrating-with-salesforce}
 
@@ -138,7 +147,7 @@ AEM與Salesforce之間的雙向及可擴充整合可啟用：
 
    ![chlimage_1-78](assets/chlimage_1-78.png)
 
-1. 按一下[儲存]儲存變更。**&#x200B;**
+1. 按一下[儲存]儲存變更。****
 
    ![chlimage_1-79](assets/chlimage_1-79.png)
 
@@ -151,7 +160,7 @@ AEM與Salesforce之間的雙向及可擴充整合可啟用：
 
    ![chlimage_1-80](assets/chlimage_1-80.png)
 
-1. 視需要變更對應。 預設對應遵循模式&#x200B;**aemUserAttribute=sfLeadAttribute**。 按一下[儲存]儲存變更。**&#x200B;**
+1. 視需要變更對應。 預設對應遵循模式&#x200B;**aemUserAttribute=sfLeadAttribute**。 按一下[儲存]儲存變更。****
 
 ## 設定Salesforce使用者端內容存放區 {#configuring-salesforce-client-context-store}
 
@@ -183,7 +192,7 @@ Salesforce使用者端內容存放區會顯示目前登入使用者的其他資�
    >
    >此元件僅供示範之用。 在真實情境中，會有另一個程式可將使用者與潛在客戶連結或比對。
 
-1. 在頁面上拖曳元件後，請開啟元件以對其進行設定。 選取組態、連絡人型別以及Salesforce潛在客戶或連絡人，然後按一下[確定]。**&#x200B;**
+1. 在頁面上拖曳元件後，請開啟元件以對其進行設定。 選取組態、連絡人型別以及Salesforce潛在客戶或連絡人，然後按一下[確定]。****
 
    ![chlimage_1-82](assets/chlimage_1-82.png)
 

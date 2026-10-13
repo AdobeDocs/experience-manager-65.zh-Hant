@@ -1,6 +1,6 @@
 ---
 title: 效能與擴充性
-description: 本白皮書探討了AEM內建擴充性的方式，以及效能指標和災難回覆功能。
+description: 本白皮書探討可擴充性內建於AEM的方式，以及效能指標和災難回覆功能。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
@@ -9,13 +9,22 @@ exl-id: d68a3219-5d2c-4150-9b9c-b9fb1e815bad
 solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 5ef752af-d616-5b23-8312-06964e46b208
+    internal-label: Administering
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '72'
 ht-degree: 2%
-
 ---
-
 # 效能與擴充性{#performance-scalability}
 
 ## 白皮書：AEM擴充性、效能和災難回覆 {#white-paper-aem-scalability-performance-and-disaster-recovery}

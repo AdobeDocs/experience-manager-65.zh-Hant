@@ -8,24 +8,40 @@ feature: Interactive Communication
 exl-id: cd7dbdac-dc76-4a1f-b850-0a9f47ae08de
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: aa28c6c8-3ede-445b-a351-eeb0c9f9aec4
+    internal-label: Interactive Communication
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
-source-wordcount: '696'
+source-wordcount: '697'
 ht-degree: 0%
-
 ---
-
 # 列印管道和網頁管道{#print-channel-and-web-channel}
 
-互動式通訊可透過兩種通道提供：列印與網路。 列印管道用於建立PDF和紙張通訊，例如作為保險費付款提醒的列印信函，而網路管道用於提供線上體驗，例如網站上的信用卡對帳單。
+互動式通訊可透過兩種通道提供：列印與網路。 列印管道用於建立PDF和書面通訊，例如作為保險費付款提醒的列印信函，而網路管道用於提供線上體驗，例如網站上的信用卡對帳單。
 
 互動式通訊作者可重複使用檔案片段和影像等資產，以建立互動式通訊的列印和網頁版本。
 
-[建立互動式通訊](../../forms/using/create-interactive-communication.md)的先決條件之一，是要在伺服器上提供列印和/或Web通道的範本。 範本作者在AEM中建立網路管道範本時，列印管道範本XDP會在Forms DesignerAdobe中建立並上傳至伺服器。
+[建立互動式通訊](../../forms/using/create-interactive-communication.md)的先決條件之一，是要在伺服器上提供列印和/或Web通道的範本。 範本作者在AEM中建立Web Channel範本時，列印管道範本XDP是在Adobe Forms Designer中建立並上傳至伺服器。
 
 ## 列印管道 {#printchannel}
 
-互動式通訊的列印管道使用XFA表單範本XDP。 XDP的設計目的AdobeForms Designer。 如需建立列印管道範本的詳細資訊，請參閱[版面設計](../../forms/using/layout-design-details.md)。 若要在互動式通訊中使用列印管道範本，您必須將範本上傳至AEM Forms伺服器。
+互動式通訊的列印管道使用XFA表單範本XDP。 XDP是在Adobe Forms Designer中設計。 如需建立列印管道範本的詳細資訊，請參閱[版面設計](../../forms/using/layout-design-details.md)。 若要在互動式通訊中使用列印管道範本，您必須將範本上傳至AEM Forms伺服器。
 
 ### 上傳互動式通訊列印頻道範本 {#upload-interactive-communication-print-channel-template}
 

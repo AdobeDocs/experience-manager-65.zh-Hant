@@ -7,13 +7,27 @@ role: User
 feature: Workflow,Renditions
 exl-id: cfd6c981-1a35-4327-82d7-cf373d842cc3
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: f6a6f91a-8819-530a-8e7b-c50884a25aef
+    internal-label: Workflow
+  - id: ac365bec-0634-4744-9473-c42f47320593
+    internal-label: Asset management and governance
+subfeature_v2:
+  - id: e42ab83e-8918-43a7-98a3-62bebbd5bb3a
+    internal-label: Renditions
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '2152'
 ht-degree: 3%
-
 ---
-
 # 使用媒體處理常式和工作流程處理資產 {#processing-assets-using-media-handlers-and-workflows}
 
 [!DNL Adobe Experience Manager Assets]隨附一組預設工作流程和媒體處理常式，以處理資產。 工作流程會定義要在資產上執行的工作，然後將特定工作委派給媒體處理常式，例如產生縮圖或擷取中繼資料。
@@ -501,7 +515,7 @@ package my.own.stuff; /** * @scr.component inherit="true" * @scr.service */ publ
 
 #### 設定CommandLineProcess程式步驟 {#configuring-the-commandlineprocess-process-step}
 
-本節介紹如何設定 [!UICONTROL CommandLineProcess的Process]&#x200B;[!UICONTROL 參數]。
+本節介紹如何設定 [!UICONTROL CommandLineProcess的Process][!UICONTROL 參數]。
 
 請使用逗號分隔[!UICONTROL 程式引數]的值，並且不要以空格開頭。
 

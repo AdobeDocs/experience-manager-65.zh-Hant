@@ -9,13 +9,20 @@ role: Admin
 exl-id: 15b3a594-efde-4702-9233-232ba1c7e5b0
 solution: Experience Manager
 feature: Communities
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '628'
+source-wordcount: '633'
 ht-degree: 0%
-
 ---
-
 # DSRP — 關聯式資料庫儲存資源提供者 {#dsrp-relational-database-storage-resource-provider}
 
 ## 關於DSRP {#about-dsrp}
@@ -60,48 +67,48 @@ Solr安裝可透過使用不同的集合在節點存放區(Oak)與共用存放�
 * 使用管理員許可權登入
 * 從&#x200B;**主功能表**
 
-   * 選取&#x200B;**[!UICONTROL 工具]** （從左窗格）
-   * 選取&#x200B;**[!UICONTROL 社群]**
-   * 選取&#x200B;**[!UICONTROL 儲存設定]**
+  * 選取&#x200B;**[!UICONTROL 工具]** （從左窗格）
+  * 選取&#x200B;**[!UICONTROL 社群]**
+  * 選取&#x200B;**[!UICONTROL 儲存設定]**
 
-      * 例如，產生的位置為： [http://localhost:4502/communities/admin/defaultsrp](http://localhost:4502/communities/admin/defaultsrp)
+    * 例如，產生的位置為： [http://localhost:4502/communities/admin/defaultsrp](http://localhost:4502/communities/admin/defaultsrp)
 
-     >[!NOTE]
-     >
-     >預設儲存設定現在儲存在conf路徑(`/conf/global/settings/community/srpc/defaultconfiguration`)中，而非`etc`路徑(`/etc/socialconfig/srpc/defaultconfiguration`)。 建議您依照[移轉步驟](#zerodt-migration-steps)操作，讓defaultsrp如預期般運作。
+    >[!NOTE]
+    >
+    >預設儲存設定現在儲存在conf路徑(`/conf/global/settings/community/srpc/defaultconfiguration`)中，而非`etc`路徑(`/etc/socialconfig/srpc/defaultconfiguration`)。 建議您依照[移轉步驟](#zerodt-migration-steps)操作，讓defaultsrp如預期般運作。
 
   ![dsrp-config](assets/dsrp-config.png)
 
 * 選取&#x200B;**[!UICONTROL 資料庫儲存資源提供者(DSRP)]**
 * **資料庫組態**
 
-   * **[!UICONTROL JDBC資料來源名稱]**
+  * **[!UICONTROL JDBC資料來源名稱]**
 
-     指定給MySQL連線的名稱必須與[JDBC OSGi組態](dsrp-mysql.md#configurejdbcconnections)中輸入的名稱相同
+    指定給MySQL連線的名稱必須與[JDBC OSGi組態](dsrp-mysql.md#configurejdbcconnections)中輸入的名稱相同
 
-     *預設*： communities
+    *預設*： communities
 
-   * **[!UICONTROL 資料庫名稱]**
+  * **[!UICONTROL 資料庫名稱]**
 
-     在[init_schema.sql](dsrp-mysql.md#obtain-the-sql-script)指令碼中指定給結構描述的名稱
+    在[init_schema.sql](dsrp-mysql.md#obtain-the-sql-script)指令碼中指定給結構描述的名稱
 
-     *預設*： communities
+    *預設*： communities
 
 * **SolrConfiguration**
 
-   * **[Zookeeper](https://solr.apache.org/guide/6_6/using-zookeeper-to-manage-configuration-files.html)主機**
+  * **[Zookeeper](https://solr.apache.org/guide/6_6/using-zookeeper-to-manage-configuration-files.html)主機**
 
-     如果使用內部ZooKeeper執行Solr，則將此值保留空白。 否則，當使用外部ZooKeeper在[SolrCloud模式](solr.md#solrcloud-mode)中執行時，請將此值設定為ZooKeeper的URI，例如&#x200B;*my.server.com:80*
+    如果使用內部ZooKeeper執行Solr，則將此值保留空白。 否則，當使用外部ZooKeeper在[SolrCloud模式](solr.md#solrcloud-mode)中執行時，請將此值設定為ZooKeeper的URI，例如&#x200B;*my.server.com:80*
 
-     *預設*： *&lt;blank>*
+    *預設*： *&lt;blank>*
 
-   * **[!UICONTROL Solr URL]**
+  * **[!UICONTROL Solr URL]**
 
-     *預設*： https://127.0.0.1:8983/solr/
+    *預設*： https://127.0.0.1：8983/solr/
 
-   * **[!UICONTROL Solr集合]**
+  * **[!UICONTROL Solr集合]**
 
-     *預設*： collection1
+    *預設*： collection1
 
 * 選取&#x200B;**[!UICONTROL 提交]**。
 
@@ -123,14 +130,14 @@ DSRP必須識別為所有製作和發佈執行個體上的通用存放區。
 
 * 作者：
 
-   * 從主功能表瀏覽至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 作業]** > **[!UICONTROL 復寫]**
-   * 連按兩下&#x200B;**[!UICONTROL 啟動樹狀結構]**
-   * **開始路徑**：
+  * 從主功能表瀏覽至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 作業]** > **[!UICONTROL 復寫]**
+  * 連按兩下&#x200B;**[!UICONTROL 啟動樹狀結構]**
+  * **開始路徑**：
 
-      * 瀏覽至`/etc/socialconfig/srpc/`
+    * 瀏覽至`/etc/socialconfig/srpc/`
 
-   * 確定未選取`Only Modified`。
-   * 選取&#x200B;**[!UICONTROL 啟動]**。
+  * 確定未選取`Only Modified`。
+  * 選取&#x200B;**[!UICONTROL 啟動]**。
 
 ## 管理使用者資料 {#managing-user-data}
 

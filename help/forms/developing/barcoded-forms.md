@@ -9,13 +9,29 @@ role: Developer
 exl-id: dd32808e-b773-48a2-90e1-7a277d349493
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,APIs & Integrations,Barcoded Forms
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 516393bc-fa69-5e74-a04e-f7ec9ffe2c5e
+    internal-label: APIs & Integrations
+  - id: c61c0849-e97f-542f-a358-7b62d542cc8b
+    internal-label: Barcoded Forms
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1911'
+source-wordcount: '1934'
 ht-degree: 0%
-
 ---
-
 # 使用條碼式表單 {#working-with-barcoded-forms}
 
 **本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
@@ -30,7 +46,7 @@ ht-degree: 0%
 
 ## 解碼條碼式表單資料 {#decoding-barcoded-form-data}
 
-您可以使用條碼式表單服務API，將PDF表單或包含條碼之影像中的資料解碼。 解碼表單資料表示擷取條碼中的資料。 在可從PDF表單（或影像）解碼資料之前，使用者必須先將資料填入表單。
+您可以使用條碼式表單服務API，從PDF表單或包含條碼之影像解碼資料。 解碼表單資料表示擷取條碼中的資料。 在可從PDF表單（或影像）解碼資料之前，使用者必須先將資料填入表單。
 
 >[!NOTE]
 >
@@ -38,12 +54,12 @@ ht-degree: 0%
 
 ### 步驟摘要 {#summary-of-steps}
 
-若要解碼PDF表單中的資料，請執行下列步驟：
+若要從PDF表單解碼資料，請執行以下步驟：
 
 1. 包含專案檔案。
 1. 建立條碼式formsClient API物件。
 1. 取得包含條碼資料的PDF表單。
-1. 解碼PDF表單中的資料。
+1. 從PDF表單解碼資料。
 1. 將資料轉換為XML資料來源。
 1. 處理解碼的資料。
 
@@ -56,9 +72,9 @@ ht-degree: 0%
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-barcodedforms-client.jar
-* adobe-utilities.jar (如果AEM Forms部署在JBoss上，則為必要)
-* jbossall-client.jar (如果AEM Forms部署在JBoss上，則為必要)
-* xercesImpl.jar (位於&lt;安裝目錄>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs\thirdparty)
+* adobe-utilities.jar （如果AEM Forms部署在JBoss上，則為必要）
+* jbossall-client.jar （如果AEM Forms部署在JBoss上，則為必要）
+* xercesImpl.jar （位於&lt;安裝目錄>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs\thirdparty）
 
 如果將AEM Forms部署在受支援的J2EE應用程式伺服器（不是JBOSS）上，則您必須將adobe-utilities.jar和jbossall-client.jar取代為特定於已部署AEM Forms之J2EE應用程式伺服器的JAR檔案。 如需有關所有AEM Forms JAR檔案位置的資訊，請參閱[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
@@ -68,11 +84,11 @@ ht-degree: 0%
 
 **取得包含條碼資料的PDF表單**
 
-取得內含已填入使用者資料之條碼的PDF表單。
+取得內含已填入使用者資料條碼的PDF表單。
 
 **從PDF表單解碼資料**
 
-取得包含條碼的PDF表單（或影像）後，您就可以將資料解碼。 條碼Forms服務支援下列型別的條碼：
+取得包含條碼的PDF表單（或影像）後，即可將資料解碼。 條碼Forms服務支援下列型別的條碼：
 
 * PDF417條碼。
 * 資料矩陣條碼。
@@ -121,7 +137,7 @@ ht-degree: 0%
 
 1. 取得包含條碼資料的PDF表單
 
-   * 使用它的建構函式，並傳遞指定PDF檔案位置的字串值，來建立代表包含條碼式資料的PDF表單的`java.io.FileInputStream`物件。
+   * 使用它的建構函式，並傳遞指定PDF檔案位置的字串值，建立代表PDF表單的`java.io.FileInputStream`物件，該表單包含條碼式資料。
    * 使用它的建構函式並傳遞`java.io.FileInputStream`物件來建立`com.adobe.idp.Document`物件。
 
 1. 解碼PDF表單中的資料
@@ -164,7 +180,7 @@ ht-degree: 0%
 
 **另請參閱**
 
-[快速入門(SOAP模式)：使用Java API將條碼式表單資料解碼](/help/forms/developing/barcoded-forms-service-java-api.md#quick-start-soap-mode-decoding-barcoded-form-data-using-the-java-api)
+[快速入門（SOAP模式）：使用Java API將條碼式表單資料解碼](/help/forms/developing/barcoded-forms-service-java-api.md#quick-start-soap-mode-decoding-barcoded-form-data-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -225,7 +241,7 @@ ht-degree: 0%
 
 1. 處理解碼的資料
 
-   * 建立`System.IO.FileStream`物件，方法為叫用其建構函式，並傳遞代表受保護PDF檔案檔案位置的字串值。
+   * 建立`System.IO.FileStream`物件，方法為叫用其建構函式，並傳遞代表受保護PDF檔案之檔案位置的字串值。
    * 建立位元組陣列，儲存`encryptPDFUsingPassword`方法傳回的`BLOB`物件的資料內容。 取得`BLOB`物件的`binaryData`資料成員的值，以填入位元組陣列。
    * 透過叫用它的建構函式並傳遞`System.IO.FileStream`物件來建立`System.IO.BinaryWriter`物件。
    * 呼叫`System.IO.BinaryWriter`物件的`Write`方法並傳遞位元組陣列，將位元組陣列的內容寫入PDF檔案。

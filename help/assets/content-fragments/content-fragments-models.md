@@ -5,13 +5,25 @@ feature: Content Fragments
 role: User
 exl-id: 6fd1fdb2-d1d3-4f97-b119-ecfddcccec9e
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 73ec9a0420206ef2cc60a12d316073a443c1d20d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: a45b1e7f-e65f-4cd3-be86-5cec5d9449ef
+    internal-label: Content management
+subfeature_v2:
+  - id: b7f5d1e0-aa2f-4a55-83f4-c2b35a8bd3a7
+    internal-label: Content fragments
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '2326'
+source-wordcount: '2350'
 ht-degree: 6%
-
 ---
-
 # 內容片段模型 {#content-fragment-models}
 
 AEM中的內容片段模型定義了您[內容片段，](/help/assets/content-fragments/content-fragments.md)作為您Headless內容基礎的內容結構。
@@ -21,7 +33,7 @@ AEM中的內容片段模型定義了您[內容片段，](/help/assets/content-fr
 1. [為您的執行個體啟用內容片段模型功能](/help/assets/content-fragments/content-fragments-configuration-browser.md)。
 1. [建立](#creating-a-content-fragment-model)，並[設定您的內容片段模型](#defining-your-content-fragment-model)。
 1. [啟用您的內容片段模型](#enabling-disabling-a-content-fragment-model)，以便在建立內容片段時使用。
-1. [藉由設定](#allowing-content-fragment-models-assets-folder)原則&#x200B;**，在必要的Assets資料夾**&#x200B;上允許您的內容片段模型。
+1. [藉由設定&#x200B;**原則**，在必要的Assets資料夾](#allowing-content-fragment-models-assets-folder)上允許您的內容片段模型。
 
 >[!NOTE]
 >
@@ -37,7 +49,7 @@ AEM中的內容片段模型定義了您[內容片段，](/help/assets/content-fr
    >
    >如果尚未啟用[使用內容片段模型](/help/assets/content-fragments/content-fragments-configuration-browser.md)，則&#x200B;**建立**&#x200B;選項無法使用。
 
-1. 指定「模 **型標題」**。您也可以新增&#x200B;**標籤**、**描述**，並在必要時選取&#x200B;**啟用模型**&#x200B;以[啟用模型](#enabling-disabling-a-content-fragment-model)。
+1. 指定「模 **型標題」**。 您也可以新增&#x200B;**標籤**、**描述**，並在必要時選取&#x200B;**啟用模型**&#x200B;以[啟用模型](#enabling-disabling-a-content-fragment-model)。
 
    ![標題和說明](assets/cfm-models-02.png)
 
@@ -76,14 +88,14 @@ AEM中的內容片段模型定義了您[內容片段，](/help/assets/content-fr
 
    * 將欄位新增至模型後，右側面板會顯示可針對該特定資料型別定義的&#x200B;**屬性**。 您可以在此處定義該欄位的必要條件。
 
-      * 許多屬性不言自明，如需詳細資訊，請參閱[屬性](#properties)。
-      * 輸入&#x200B;**欄位標籤**&#x200B;會自動完成&#x200B;**屬性名稱** （如果空白），之後可以手動更新。
+     * 許多屬性不言自明，如需詳細資訊，請參閱[屬性](#properties)。
+     * 輸入&#x200B;**欄位標籤**&#x200B;會自動完成&#x200B;**屬性名稱** （如果空白），之後可以手動更新。
 
-        >[!CAUTION]
-        >
-        >手動更新資料型別的屬性&#x200B;**屬性名稱**&#x200B;時，名稱必須僅包含A-Z、a-z、0-9以及底線「_」作為特殊字元。
-        >
-        >如果在舊版AEM中建立的模型包含非法字元，請移除或更新這些字元。
+       >[!CAUTION]
+       >
+       >手動更新資料型別的屬性&#x200B;**屬性名稱**&#x200B;時，名稱必須僅包含A-Z、a-z、0-9以及底線「_」作為特殊字元。
+       >
+       >如果在舊版AEM中建立的模型包含非法字元，請移除或更新這些字元。
 
      例如：
 
@@ -106,40 +118,40 @@ AEM中的內容片段模型定義了您[內容片段，](/help/assets/content-fr
 定義模型時可選用多種資料型別：
 
 * **單行文字**
-   * 新增一行或多行文字的欄位；可以定義最大長度
+  * 新增一行或多行文字的欄位；可以定義最大長度
 * **多行文字**
-   * 可能是RTF、純文字或Markdown的文字區域
+  * 可能是RTF、純文字或Markdown的文字區域
 * **數字**
-   * 新增一或多個數值欄位
+  * 新增一或多個數值欄位
 * **布林值**
-   * 新增布林值核取方塊
+  * 新增布林值核取方塊
 * **日期和時間**
-   * 新增日期和/或時間
+  * 新增日期和/或時間
 * **分項清單**
-   * 新增一組核取方塊、選項按鈕或下拉式欄位
+  * 新增一組核取方塊、選項按鈕或下拉式欄位
 * **標籤**
-   * 允許片段作者存取及選取標籤區域
+  * 允許片段作者存取及選取標籤區域
 * **內容參考**
-   * 參考任何型別的其他內容；可用於[建立巢狀內容](#using-references-to-form-nested-content)
-   * 如果參照了影像，您可以選擇顯示縮圖
+  * 參考任何型別的其他內容；可用於[建立巢狀內容](#using-references-to-form-nested-content)
+  * 如果參照了影像，您可以選擇顯示縮圖
 * **片段參考**
-   * 參考其他內容片段；可用於[建立巢狀內容](#using-references-to-form-nested-content)
-   * 可以設定此資料類型以允許片段作者：
-      * 直接編輯參考的片段。
-      * 根據適當的模型建立內容片段
+  * 參考其他內容片段；可用於[建立巢狀內容](#using-references-to-form-nested-content)
+  * 可以設定此資料類型以允許片段作者：
+    * 直接編輯參考的片段。
+    * 根據適當的模型建立內容片段
 * **JSON物件**
-   * 允許內容片段作者在片段的對應元素中輸入JSON語法。
-      * 允許AEM儲存您從其他服務複製並貼上的直接JSON。
-      * JSON會傳遞，並在GraphQL中輸出為JSON。
-      * 在內容片段編輯器中包括JSON語法醒目提示、自動完成和錯誤醒目提示。
+  * 允許內容片段作者在片段的對應元素中輸入JSON語法。
+    * 允許AEM儲存您從其他服務複製並貼上的直接JSON。
+    * JSON會傳遞，並在GraphQL中輸出為JSON。
+    * 在內容片段編輯器中包括JSON語法醒目提示、自動完成和錯誤醒目提示。
 * **索引標籤預留位置**
-   * 允許引進索引標籤，以在編輯內容片段內容時使用。
-這會在模型編輯器中顯示為分隔線，用於分隔內容資料型別清單的各個區段。 每個例項代表新索引標籤的開始。
-在片段編輯器中，每個例項都會顯示為一個索引標籤。
+  * 允許引進索引標籤，以在編輯內容片段內容時使用。
+    這會在模型編輯器中顯示為分隔線，用於分隔內容資料型別清單的各個區段。 每個例項代表新索引標籤的開始。
+    在片段編輯器中，每個例項都會顯示為一個索引標籤。
 
-     >[!NOTE]
-     >
-     >此資料型別僅用於格式設定，AEM GraphQL結構描述會忽略此資料型別。
+    >[!NOTE]
+    >
+    >此資料型別僅用於格式設定，AEM GraphQL結構描述會忽略此資料型別。
 
 ## 屬性 {#properties}
 
@@ -158,16 +170,16 @@ AEM中的內容片段模型定義了您[內容片段，](/help/assets/content-fr
 在片段中實現/轉譯欄位的各種選項。 這通常可讓您定義作者會看到欄位的單一例項，還是允許建立多個例項。
 
 * **欄位標籤**
-輸入&#x200B;**欄位標籤**&#x200B;會自動產生&#x200B;**屬性名稱**，然後可視需要手動更新。
+輸入**欄位標籤**&#x200B;會自動產生&#x200B;**屬性名稱**，然後可視需要手動更新。
 
 * **驗證**
-基本驗證可由機制使用，例如&#x200B;**Required**&#x200B;屬性。 有些資料型別有額外的驗證欄位。 如需詳細資訊，請參閱[驗證](#validation)。
+基本驗證可由機制使用，例如**Required**&#x200B;屬性。 有些資料型別有額外的驗證欄位。 如需詳細資訊，請參閱[驗證](#validation)。
 
-* 對於「多行」 **資料類型** ，可將「預設類型 **&#x200B;**&#x200B;」定義為：
+* 對於「多行」 **資料類型** ，可將「預設類型 **** 」定義為：
 
-   * **RTF 文字**
-   * **Markdown**
-   * **純文字**
+  * **RTF 文字**
+  * **Markdown**
+  * **純文字**
 
   如果未指定，此欄位會使用預設值&#x200B;**RTF**。
 
@@ -178,7 +190,7 @@ AEM中的內容片段模型定義了您[內容片段，](/help/assets/content-fr
 
   這是為了確保內容作者無法重複已新增至相同模型其他片段中的內容。
 
-  例如，內容片段模型中名為&#x200B;**的**&#x200B;單行文字`Country`欄位在兩個相依的內容片段中不能有值`Japan`。 嘗試第二個執行個體時會發出警告。
+  例如，內容片段模型中名為`Country`的&#x200B;**單行文字**&#x200B;欄位在兩個相依的內容片段中不能有值`Japan`。 嘗試第二個執行個體時會發出警告。
 
   >[!NOTE]
   >
@@ -205,32 +217,32 @@ AEM中的內容片段模型定義了您[內容片段，](/help/assets/content-fr
 各種資料型別現在包含定義在結果片段中輸入內容時適用的驗證需求的可能性：
 
 * **單行文字**
-   * 與預先定義的規則運算式比較。
+  * 與預先定義的規則運算式比較。
 * **數字**
-   * 檢查特定值。
+  * 檢查特定值。
 * **內容參考**
-   * 測試特定型別的內容。
-   * 只能參考指定檔案大小或更小的資產。
-   * 只能參考預先定義的寬度和/或高度範圍（以畫素為單位）內的影像。
+  * 測試特定型別的內容。
+  * 只能參考指定檔案大小或更小的資產。
+  * 只能參考預先定義的寬度和/或高度範圍（以畫素為單位）內的影像。
 * **片段參考**
-   * 測試特定內容片段模型。
+  * 測試特定內容片段模型。
 
 ## 使用參照來形成巢狀內容 {#using-references-to-form-nested-content}
 
 內容片段可使用下列任一種資料型別來形成巢狀內容：
 
 * **[內容參考](#content-reference)**
-   * 提供其他內容的簡單參照；任何型別。
-   * 它可以設定為一個參考或多個參考（在產生的片段中）。
+  * 提供其他內容的簡單參照；任何型別。
+  * 它可以設定為一個參考或多個參考（在產生的片段中）。
 
 * **[片段參考](#fragment-reference-nested-fragments)** （巢狀片段）
-   * 根據指定的特定模型，參考其他片段。
-   * 可讓您包含/擷取結構化資料。
+  * 根據指定的特定模型，參考其他片段。
+  * 可讓您包含/擷取結構化資料。
 
-     >[!NOTE]
-     >
-     >此方法對於搭配GraphQL[使用內容片段的](/help/assets/content-fragments/content-fragments-graphql.md)Headless內容傳遞特別感興趣。
-   * 它可以設定為一個參考或多個參考（在產生的片段中）。
+    >[!NOTE]
+    >
+    >此方法對於搭配GraphQL](/help/assets/content-fragments/content-fragments-graphql.md)使用內容片段的[Headless內容傳遞特別感興趣。
+  * 它可以設定為一個參考或多個參考（在產生的片段中）。
 
 >[!NOTE]
 >
@@ -252,8 +264,8 @@ AEM中的內容片段模型定義了您[內容片段，](/help/assets/content-fr
 * 可參考的內容型別
 * 檔案大小限制
 * 如果參照影像：
-   * 顯示縮圖
-   * 影像高度和寬度的限制
+  * 顯示縮圖
+  * 影像高度和寬度的限制
 
 ![內容參考](assets/cfm-content-reference.png)
 
@@ -264,7 +276,7 @@ AEM中的內容片段模型定義了您[內容片段，](/help/assets/content-fr
 例如：
 
 * 定義員工詳細資訊的模型；這些包括：
-   * 定義僱主（公司）的模型參考
+  * 定義僱主（公司）的模型參考
 
 ```xml
 type EmployeeModel {
@@ -288,9 +300,9 @@ type CompanyModel {
 
 * **呈現為**：
 
-   * **multifield** — 片段作者可以建立多個個別參考
+  * **multifield** — 片段作者可以建立多個個別參考
 
-   * **fragmentreference** — 允許片段作者選取片段的單一參考
+  * **fragmentreference** — 允許片段作者選取片段的單一參考
 
 * **模型型別**
 可選取多個模型。 製作內容片段時，必須已使用這些模型建立任何參照的片段。
@@ -302,7 +314,7 @@ type CompanyModel {
 
   如此可讓片段作者根據適當的模型建立片段。
 
-   * **fragmentreferencecomposite** — 允許片段作者藉由選取多個片段來建置複合
+  * **fragmentreferencecomposite** — 允許片段作者藉由選取多個片段來建置複合
 
   ![片段參考](assets/cfm-fragment-reference.png)
 
@@ -342,8 +354,8 @@ type CompanyModel {
 
 * 此模型無法再用來建立&#x200B;*新的*&#x200B;內容片段。
 * 但是：
-   * GraphQL結構描述會持續產生，且仍可查詢（以避免影響JSON API）。
-   * 您仍可以從GraphQL端點查詢及傳回任何以模型為基礎的內容片段。
+  * GraphQL結構描述會持續產生，且仍可查詢（以避免影響JSON API）。
+  * 您仍可以從GraphQL端點查詢及傳回任何以模型為基礎的內容片段。
 * 該模型無法再參考，但現有參考將保持不變，並且仍可以從GraphQL端點查詢和返回。
 
 若要停用標示為&#x200B;**已啟用**&#x200B;的模型，您可從下列任一選項使用&#x200B;**停用**&#x200B;選項：
@@ -440,7 +452,7 @@ type CompanyModel {
 您可以編輯內容片段模型的&#x200B;**屬性**：
 
 * **基本**
-   * **模型標題**
-   * **標籤**
-   * **說明**
-   * **上傳影像**
+  * **模型標題**
+  * **標籤**
+  * **說明**
+  * **上傳影像**

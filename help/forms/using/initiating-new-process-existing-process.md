@@ -9,13 +9,27 @@ exl-id: 6fa97c06-9238-4444-b67f-983ef3b6fdc8
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '236'
+source-wordcount: '239'
 ht-degree: 0%
-
 ---
-
 # 使用AEM Forms工作區中的現有程式資料啟動新程式{#initiating-a-new-process-with-existing-process-data-in-aem-forms-workspace}
 
 您可以使用現有流&#39;b5&#39;7b資料的資料來啟動新流&#39;b5&#39;7b。 當我們必須經常使用相同的表單，而內容幾乎沒有像付費休假表單那樣變更時，就需要從現有的流程資料中啟動新的流程。 此功能可節省使用者的時間和精力，尤其是當流程需要填寫較長表格時。
@@ -30,6 +44,6 @@ ht-degree: 0%
 
    ![選取工作](assets/start3_new.png) ![選取工作](assets/start1_new.png)
 
-1. 在[工作]動作工具列中按一下[開始]。**&#x200B;**。 新程式執行個體的最適化表單會以預先填入的資料顯示。
+1. 在[工作]動作工具列中按一下[開始]。****。 新程式執行個體的最適化表單會以預先填入的資料顯示。
 
 1. 視需要更新資料，然後按一下&#x200B;**[!UICONTROL 完成]**&#x200B;或表單上的適當按鈕。

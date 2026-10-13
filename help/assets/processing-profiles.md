@@ -10,13 +10,31 @@ role: User, Admin
 feature: Workflow,Asset Management,Renditions
 exl-id: 3d9367ed-5a02-43aa-abd9-24fae457d4c5
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: f6a6f91a-8819-530a-8e7b-c50884a25aef
+    internal-label: Workflow
+  - id: 7d2b2ec8-499c-5434-9ffd-9218cd71f683
+    internal-label: Asset Management
+  - id: ac365bec-0634-4744-9473-c42f47320593
+    internal-label: Asset management and governance
+subfeature_v2:
+  - id: e42ab83e-8918-43a7-98a3-62bebbd5bb3a
+    internal-label: Renditions
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1298'
+source-wordcount: '1398'
 ht-degree: 2%
-
 ---
-
 # 用於處理中繼資料、影像和影片的設定檔{#profiles-for-processing-metadata-images-and-videos}
 
 設定檔是將哪些選項套用至上傳至資料夾之資產的配方。 例如，您可以指定要套用至上傳之視訊資產的中繼資料設定檔和視訊編碼設定檔。 或者，套用至影像資產的影像設定檔，以正確裁切。
@@ -31,7 +49,7 @@ ht-degree: 2%
 
 建立中繼資料、影像或視訊設定檔後，請將其指派至一或多個資料夾，以作為新上傳資產的目的地。
 
-在Experience Manager Assets中使用設定檔的重要概念是，設定檔會指派給資料夾。設定檔中的設定為中繼資料設定檔的形式，以及視訊設定檔或影像設定檔。這些設定會處理資料夾的內容及其任何子資料夾。因此，您如何命名檔案和資料夾、如何排列子資料夾，以及如何處理這些資料夾中的檔案對於設定檔處理這些資產的方式有重大影響。
+在Experience Manager Assets中使用設定檔的重要概念是，設定檔會指派給資料夾。 設定檔中的設定為中繼資料設定檔的形式，以及視訊設定檔或影像設定檔。 這些設定會處理資料夾的內容及其任何子資料夾。 因此，您如何命名檔案和資料夾、如何排列子資料夾，以及如何處理這些資料夾中的檔案對於設定檔處理這些資產的方式有重大影響。
 透過使用一致且適當的檔案和資料夾命名策略，以及良好的中繼資料做法，您可以充分利用數位資產集合，並確保由正確的設定檔處理正確的檔案。
 
 >[!NOTE]

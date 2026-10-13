@@ -5,13 +5,27 @@ exl-id: 1ff9ac47-9a3a-4a4e-8af8-bc73048e0409
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Experience Fragments
 role: User
-source-git-commit: 382368d7a91ba2229ce1cdfe19f3b9871b93498e
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+  - id: d9d38edd-df1b-480c-8f5e-72b62576f390
+    internal-label: Site and page features
+subfeature_v2:
+  - id: f61d1313-5cf1-4533-b29c-ac9f75c4b270
+    internal-label: Experience Fragments
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1541'
 ht-degree: 6%
-
 ---
-
 # 體驗片段{#experience-fragments}
 
 在Adobe Experience Manager (AEM)中，體驗片段是一組一或多個元件，包括可在頁面中參考的內容和版面。 它們可以包含任何元件。
@@ -105,7 +119,7 @@ WKND專案會根據`Contributors`建構一些體驗片段。 使用的結構也�
 
 >[!NOTE]
 >
->也可以為您的執行個體[&#128279;](#configure-allowed-templates-instance)設定允許的範本，但此方法&#x200B;**不**&#x200B;建議使用，因為升級時會覆寫這些值。
+>也可以為您的執行個體](#configure-allowed-templates-instance)設定[允許的範本，但此方法&#x200B;**不**&#x200B;建議使用，因為升級時會覆寫這些值。
 
 ### 設定資料夾的允許範本 {#configure-allowed-templates-folder}
 
@@ -175,7 +189,7 @@ WKND專案會根據`Contributors`建構一些體驗片段。 使用的結構也�
 
    ![xf-03](assets/xf-03.png)
 
-1. 輸入 **體驗**&#x200B;**片段的屬性**。
+1. 輸入 **體驗****片段的屬性**。
 
    **標題**&#x200B;為必填。 如果&#x200B;**Name**&#x200B;留空，則會從&#x200B;**Title**&#x200B;衍生它。
 

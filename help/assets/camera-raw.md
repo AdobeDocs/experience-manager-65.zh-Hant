@@ -1,18 +1,27 @@
 ---
 title: '[!DNL Adobe Camera Raw]支援處理數位資產'
-description: 瞭解如何啟用 [!DNL Adobe Experience Manager Assets]中的 [!DNL Adobe Camera Raw] 支援
+description: 瞭解如何在[!DNL Adobe Experience Manager Assets]中啟用[!DNL Adobe Camera Raw]支援
 contentOwner: AG
 role: Admin
 feature: Developer Tools
 exl-id: 7159a908-4c36-42b4-bbb4-d7fb1be4ee1b
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: f2d27a5f-0d67-4d85-8a24-86a8d8a3574b
+    internal-label: Developer tools
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '340'
+source-wordcount: '396'
 ht-degree: 3%
-
 ---
-
 # 使用[!DNL Adobe Camera Raw]處理影像 {#camera-raw-support}
 
 您可以啟用[!DNL Adobe Camera Raw]支援，以處理原始檔案格式（例如CR2、NEF和RAF），並以JPEG格式轉譯影像。 使用Software Distribution提供的[Camera Raw套件](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg)的[!DNL Adobe Experience Manager Assets]支援此功能。
@@ -43,20 +52,20 @@ ht-degree: 3%
    * **[!UICONTROL Mime型別]**： `image/dng`和`image/x-raw-(.*)`
    * **[!UICONTROL 命令]**：
 
-      * `DAM_Raw_Converter ${directory}/${filename} ${directory} cq5dam.web.1280.1280.jpeg 1280 1280`
-      * `DAM_Raw_Converter ${directory}/${filename} ${directory} cq5dam.thumbnail.319.319.jpeg 319 319`
-      * `DAM_Raw_Converter ${directory}/${filename} ${directory} cq5dam.thumbnail.140.100.jpeg 140 100`
-      * `DAM_Raw_Converter ${directory}/${filename} ${directory} cq5dam.thumbnail.48.48.jpeg 48 48`
+     * `DAM_Raw_Converter ${directory}/${filename} ${directory} cq5dam.web.1280.1280.jpeg 1280 1280`
+     * `DAM_Raw_Converter ${directory}/${filename} ${directory} cq5dam.thumbnail.319.319.jpeg 319 319`
+     * `DAM_Raw_Converter ${directory}/${filename} ${directory} cq5dam.thumbnail.140.100.jpeg 140 100`
+     * `DAM_Raw_Converter ${directory}/${filename} ${directory} cq5dam.thumbnail.48.48.jpeg 48 48`
 
    ![chlimage_1-130](assets/chlimage_1-336.png)
 
-1. 按一下「**[!UICONTROL 儲存]**」。
+1. 按一下&#x200B;**[!UICONTROL 儲存]**。
 
 >[!NOTE]
 >
->確定上述設定與&#x200B;**[!UICONTROL 具有Camera Raw和DNG處理步驟]**&#x200B;的範例DAM更新資產設定相同。
+>確保上述設定與&#x200B;**[!UICONTROL 使用Camera Raw和DNG處理步驟]**&#x200B;的範例DAM更新資產設定相同。
 
-您現在可以將Camera Raw檔案匯入Assets。 安裝Camera Raw封裝並設定必要的工作流程後，**[!UICONTROL 影像調整]**&#x200B;選項會出現在側邊窗格清單中。
+您現在可以將Camera Raw檔案匯入Assets。 安裝Camera Raw套件並設定必要的工作流程後，**[!UICONTROL 影像調整]**&#x200B;選項會出現在側邊窗格清單中。
 
 ![chlimage_1-131](assets/chlimage_1-337.png)
 

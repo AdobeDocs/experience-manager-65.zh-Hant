@@ -8,7 +8,23 @@ exl-id: 123087a2-9d09-4579-9185-2ccd7d25bf8d
 solution: Experience Manager, Experience Manager Forms
 feature: Interactive Communication
 role: User, Developer
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: aa28c6c8-3ede-445b-a351-eeb0c9f9aec4
+    internal-label: Interactive Communication
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1173'
 ht-degree: 0%
@@ -28,7 +44,7 @@ AEM Forms提供自訂工作流程，可叫用下列Assembler服務API：
 
 1. 將&#x200B;**[!UICONTROL 叫用DDX]**&#x200B;工作流程步驟拖曳至Sidekick中Forms Workflow標籤下。
 1. 連按兩下新增的工作流程步驟以編輯元件。
-1. 在[編輯元件]對話方塊中，設定輸入檔案、環境選項和輸出檔案，然後按一下[確定]。**&#x200B;**
+1. 在[編輯元件]對話方塊中，設定輸入檔案、環境選項和輸出檔案，然後按一下[確定]。****
 
 #### 輸入檔案 {#input-documents}
 
@@ -69,7 +85,7 @@ AEM Forms提供自訂工作流程，可叫用下列Assembler服務API：
 1. 將&#x200B;**[!UICONTROL ConvertToPDFA]**&#x200B;工作流程步驟拖曳至Sidekick中Forms Workflow標籤下。
 
 1. 連按兩下新增的工作流程步驟以編輯元件。
-1. 在[編輯元件]對話方塊中，設定輸入檔案、轉換選項和輸出檔案，然後按一下[確定]。**&#x200B;**
+1. 在[編輯元件]對話方塊中，設定輸入檔案、轉換選項和輸出檔案，然後按一下[確定]。****
 
 #### 輸入檔案 {#input-documents-1}
 
@@ -107,7 +123,7 @@ AEM Forms提供自訂工作流程，可叫用下列Assembler服務API：
 
 1. 拖曳Sidekick中「PDF」標籤下的「呈現Forms Workflow表單」工作流程步驟。
 1. 連按兩下新增的工作流程步驟以編輯元件。
-1. 在[編輯元件]對話方塊中，設定輸入檔案、輸出檔案和其他引數，然後按一下[確定]。**&#x200B;**
+1. 在[編輯元件]對話方塊中，設定輸入檔案、輸出檔案和其他引數，然後按一下[確定]。****
 
 #### 輸入檔案 {#input-documents-2}
 
@@ -136,7 +152,7 @@ AEM Forms提供自訂工作流程，可叫用下列Assembler服務API：
 
 1. 拖曳Sidekick中「PDF」標籤下的「產生非互動式Forms Workflow輸出」工作流程。
 1. 連按兩下新增的工作流程步驟以編輯元件。
-1. 在[編輯元件]對話方塊中，設定輸入檔案、輸出檔案和其他引數，然後按一下[確定]。**&#x200B;**
+1. 在[編輯元件]對話方塊中，設定輸入檔案、輸出檔案和其他引數，然後按一下[確定]。****
 
 #### 輸入檔案 {#input-documents-3}
 

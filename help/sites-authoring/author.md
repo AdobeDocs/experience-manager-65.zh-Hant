@@ -5,13 +5,26 @@ exl-id: dcda537a-1bb2-4ce3-9904-40d158b47556
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Developer
-source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '499'
+source-wordcount: '560'
 ht-degree: 2%
-
 ---
-
 # 製作{#authoring}
 
 ## 製作（和發佈）的概念 {#concept-of-authoring-and-publishing}
@@ -73,15 +86,15 @@ AEM提供您兩個環境：
 >不幸的是，使用的術語有時會出現重疊。 這可能發生在以下情況中：
 >
 >* **發佈/取消發佈**
->  這些是讓您的內容在發佈環境中公開使用（或不公開使用）之動作的主要辭彙。
+>  這些是讓您的內容在發佈環境中公開使用（或不公開使用）的動作主要詞語。
 >
 >* **啟用/停用**
 >  這些辭彙與發佈/取消發佈同義。
 >
 >* **復寫/復寫**
->  這些是技術術語，用於表示資料（例如頁面內容、檔案、程式碼、使用者註解）從一個環境移動到另一個環境；亦即發佈或反向複製使用者註解時。
+>  這些是技術術語，用於表示資料（例如頁面內容、檔案、程式碼、使用者註解）從一個環境移動到另一個環境；即在發佈或反向複製使用者註解時。
 >
 
 #### Dispatcher {#dispatcher}
 
-為了最佳化網站訪客的效能，**[Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant)**&#x200B;實作負載平衡和快取。
+為了最佳化網站訪客的效能，**[Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)**&#x200B;實作負載平衡和快取。

@@ -10,7 +10,18 @@ exl-id: 33dc1ee7-1e34-43d8-9265-c66535f5e002
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
 source-wordcount: '702'
 ht-degree: 6%
@@ -119,7 +130,7 @@ ht-degree: 6%
 
   * 觸控式UI提供相容性層，可在「觸控式UI包裝函式」中開啟傳統UI對話方塊，但此功能有限，長期而言不建議使用。
 
-* [在觸控式UI中自訂對話方塊欄位](https://helpx.adobe.com/tw/experience-manager/kt/eseminars/gems/aem-customizing-dialog-fields-in-touch-ui.html)
+* [在觸控式UI中自訂對話方塊欄位](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-customizing-dialog-fields-in-touch-ui.html)
 * [建立新的Granite UI欄位元件](/help/sites-developing/granite-ui-component.md)
 * [自訂頁面製作](/help/sites-developing/customizing-page-authoring-touch.md) （使用觸控式UI）
 
@@ -134,8 +145,8 @@ ht-degree: 6%
 雖然移轉至Touch UI並無直接關係，但建議您同時考量下列相關問題，因為這也是建議做法：
 
 * [範本](/help/sites-developing/templates.md) - [可編輯的範本](/help/sites-developing/page-templates-editable.md)
-* [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)
-* [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=zh-Hant)
+* [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
+* [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)
 
 >[!NOTE]
 >
@@ -147,9 +158,9 @@ ht-degree: 6%
 
 * [Developing使用手冊](/help/sites-developing/getting-started.md)
 * [Granite UI檔案](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)
-* [AEM 6.5 Sites教學課程與影片](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/overview.html?lang=zh-Hant)
+* [AEM 6.5 Sites教學課程與影片](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/overview.html)
 * [開發 AEM Sites 快速入門 - WKND 教學課程](/help/sites-developing/getting-started.md)
-* [AEM Gems](https://experienceleague.adobe.com/docs/events/experience-manager-gems-recordings/overview.html?lang=zh-Hant)
+* [AEM Gems](https://experienceleague.adobe.com/docs/events/experience-manager-gems-recordings/overview.html)
 * [AEM 現代化工具](https://opensource.adobe.com/aem-modernize-tools/)
 
 >[!CAUTION]

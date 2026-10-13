@@ -9,16 +9,22 @@ docset: aem65
 exl-id: 10ea7d2e-6e44-4d5c-a2b2-63c73b18f172
 feature: Integration
 role: Admin
-source-git-commit: c4133584e9c2328b3a55042902c67770d78afcf7
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e14eb250-3c22-4a07-9061-a78112b2b826
+    internal-label: Experience Manager 6.5
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1482'
-ht-degree: 1%
-
+source-wordcount: '1625'
+ht-degree: 2%
 ---
-
 # SharePoint聯結器{#sharepoint-connector}
 
-本文包含有關Microsoft SharePoint 2010和Microsoft SharePoint 2013,4.0版的JCR ConnectorAdobe的詳細資訊。
+本文包含適用於Microsoft SharePoint 2010和Microsoft SharePoint 2013,4.0版的Adobe JCR Connector詳細資訊。
 
 SharePoint聯結器支援下列基本功能：
 
@@ -66,20 +72,20 @@ SharePoint聯結器支援下列基本功能：
 
 SharePoint聯結器可從[軟體發佈](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-17673)下載。
 
-### 支援平台 {#supported-platforms}
+### 受支援平台 {#supported-platforms}
 
 聯結器支援下列專案：
 
 * AEM版本：
 
-   * AEM 6.4、6.3
+  * AEM 6.4、6.3
 
 * Microsoft SharePoint版本：
 
-   * Microsoft Office SharePoint Server (MOSS) 2010
-   * Microsoft Office SharePoint Server (MOSS) 2013
+  * Microsoft Office SharePoint Server (MOSS) 2010
+  * Microsoft Office SharePoint Server (MOSS) 2013
 
-* 如果您需要聯結器的自訂部署支援（OEM、特殊需求、自訂驗證方法），請連絡您所在地區的Adobe辦事處。
+* 如果您需要聯結器的自訂部署支援（OEM、特殊需求、自訂驗證方法），請聯絡您所在地區的Adobe辦事處。
 
 >[!NOTE]
 >
@@ -87,7 +93,7 @@ SharePoint聯結器可從[軟體發佈](https://experience.adobe.com/#/downloads
 
 ### 標準安裝 {#standard-installation}
 
-Software Distribution用於發佈產品功能、範例和Hot Fix。 如需詳細資訊，請參閱[軟體發佈檔案](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html?lang=zh-Hant#software-distribution)。
+Software Distribution用於發佈產品功能、範例和Hot Fix。 如需詳細資訊，請參閱[軟體發佈檔案](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html#software-distribution)。
 
 
 #### 與AEM整合 {#integrating-with-aem}
@@ -117,7 +123,7 @@ Software Distribution用於發佈產品功能、範例和Hot Fix。 如需詳細
 1. 搜尋Microsoft Sharepoint **套件組合的**&#x200B;天JCR聯結器。
 1. 編輯設定值。
 1. 將SharePoint伺服器URL設定為&#x200B;**工作區**&#x200B;的值。
-1. 按一下「**儲存**」。
+1. 按一下&#x200B;**儲存**。
 
 ![chlimage_1-62](assets/chlimage_1-62.png)
 
@@ -130,7 +136,7 @@ Software Distribution用於發佈產品功能、範例和Hot Fix。 如需詳細
 `<name>`是JCR工作區的名稱和
 `<url>`是該工作區之SharePoint伺服器的URL。
 
-在AEM中，除了上述設定步驟外，另外執行一個步驟。 允許列出&#39;**com.day.cq.dam.cq-dam-jcr-connectors**&#39;組合。
+在AEM中，除了上述設定步驟外，請執行另一個步驟。 允許列出&#39;**com.day.cq.dam.cq-dam-jcr-connectors**&#39;組合。
 
 若要允許AEM中的清單組合，請執行以下步驟：
 
@@ -194,7 +200,7 @@ Sharepoint包括「傳統」和「宣告式」驗證方法，兩者都支援下�
 * 索賠 — 基本
 * 宣告型Forms
 
-適用於Microsoft SharePoint 2010和Microsoft SharePoint 2013的AEM JCR Connector 4.0版支援宣告型驗證(由Microsoft建議)，其作業模式如下：
+適用於Microsoft SharePoint 2010和Microsoft SharePoint 2013的AEM JCR Connector 4.0版。 支援宣告型驗證（由Microsoft建議），其操作模式如下：
 
 * **基本/NTLM驗證**：聯結器會先嘗試使用基本驗證進行連線。 如果無法使用，它會切換至NTLM式驗證。
 * **以Forms為基礎的驗證**： Sharepoint會根據使用者在登入表單（通常是網頁）中輸入的認證，來驗證使用者。 系統會為已驗證請求發出權杖，其中包含為後續請求重新建立身分的金鑰。
@@ -207,7 +213,7 @@ Sharepoint包括「傳統」和「宣告式」驗證方法，兩者都支援下�
 1. 搜尋「Microsoft Sharepoint的Day JCR Connector」
 1. 按一下「編輯設定值」
 1. 將&#39;Sharepoint Connection Factory&#39;的值設為&#39;com.day.crx.spi.sharepoint.security.FormsBasedAuthenticationConnectionFactory&#39;
-1. 按一下「**儲存**」。
+1. 按一下&#x200B;**儲存**。
 
 **設定基本驗證(Windows)**
 
@@ -217,11 +223,11 @@ Sharepoint包括「傳統」和「宣告式」驗證方法，兩者都支援下�
 1. 搜尋Microsoft Sharepoint **的**&#x200B;天JCR聯結器。
 1. 按一下「`Edit the configuration values`」。
 1. 將Sharepoint Connection Factory的值設定為`com.day.crx.spi.sharepoint.security.WindowsAuthenticationConnectionFactory`。
-1. 按一下「**儲存**」。
+1. 按一下&#x200B;**儲存**。
 
 只有已在AEM和SharePoint上驗證的使用者才能透過聯結器存取SharePoint內容。
 
-您也可以使用驗證的聯結器擴充功能來建立自訂驗證模組，例如，將AEM使用者的存取權對應至特定SharePoint使用者。 建立與SharePoint使用者（使用者名稱和密碼必須相符）相對應的AEM使用者，以便檢視對應至聯結器執行個體的SharePoint內容。
+您也可以使用驗證的聯結器擴充功能來建立自訂驗證模組，例如，將AEM使用者的存取權對應至特定SharePoint使用者。 建立與AEM使用者（使用者名稱和密碼必須相符）相對應的SharePoint使用者，以便檢視對應至聯結器執行個體的SharePoint內容。
 
 若要在AEM中建立使用者：
 
@@ -230,7 +236,7 @@ Sharepoint包括「傳統」和「宣告式」驗證方法，兩者都支援下�
 1. 按一下「安全性」。
 1. 按一下「使用者」。
 1. 按一下&#x200B;**建立使用者**。
-1. 提供使用者ID (可存取SharePoint的使用者名稱)。
+1. 提供使用者ID （可存取SharePoint的使用者名稱）。
 1. 提供對應的密碼。
 1. 按一下綠色勾號符號以建立使用者。
 

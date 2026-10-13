@@ -9,13 +9,29 @@ feature: Document Services
 exl-id: 84c8125d-0f16-432a-9567-63b868667537
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: 2eac9acd8b92582424557222b673211b29a15185
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: f19cff18-c8cc-4a4b-adad-85dd2fa3dbe2
+    internal-label: Document Services
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '2167'
 ht-degree: 6%
-
 ---
-
 # 使用組合器服務{#using-assembler-service}
 
 Assembler服務可讓您組合、重新排列和增加PDF和XDP檔案，並取得有關PDF檔案的資訊。 提交至組合器服務的每個工作都包含檔案描述XML (DDX)檔案、來原始檔及外部資源（字串與圖形）。 如需有關組合器服務的詳細資訊，請參閱[組合器服務概述](../../forms/using/overview-aem-document-services.md#p-assembler-service-p)。
@@ -321,9 +337,9 @@ source="myFragmentSource"/>
 
 * 文字資訊。
 
-   * 檔案每一頁上的文字
-   * 檔案每一頁上的每個字的位置
-   * 檔案每一頁各段落中的句子
+  * 檔案每一頁上的文字
+  * 檔案每一頁上的每個字的位置
+  * 檔案每一頁各段落中的句子
 
 * 書籤，包括頁碼、標題、目的地和外觀。 您可以匯出此\
   PDF檔案中的資料，並將其匯入PDF檔案中。

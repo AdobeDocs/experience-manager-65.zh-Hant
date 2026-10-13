@@ -9,13 +9,27 @@ exl-id: 5cb906b6-6a3c-498c-94f5-27a9071ea934
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '444'
+source-wordcount: '459'
 ht-degree: 3%
-
 ---
-
 # 建立登入畫面{#creating-a-new-login-screen}
 
 您可以修改所有使用AEM Forms登入畫面的AEM Forms模組的登入畫面。 例如，修改會同時影響Forms Manager和AEM Forms工作區的登入畫面。
@@ -25,7 +39,7 @@ ht-degree: 3%
 1. 以系統管理員許可權在`/lc/crx/de`登入。
 1. 執行下列動作：
 
-   1. 在`/libs/livecycle/core/content`復寫`/apps/livecycle/core/content`的階層結構。
+   1. 在`/apps/livecycle/core/content`復寫`/libs/livecycle/core/content`的階層結構。
 
       維護相同的（節點/資料夾）屬性和存取控制。
 
@@ -39,7 +53,7 @@ ht-degree: 3%
 
 1. 執行下列動作：
 
-   1. 在`/libs/livecycle/core/components/login`復寫`/apps/livecycle/core/components/login`的階層結構。 維護相同的（節點/資料夾）屬性和存取控制。
+   1. 在`/apps/livecycle/core/components/login`復寫`/libs/livecycle/core/components/login`的階層結構。 維護相同的（節點/資料夾）屬性和存取控制。
 
    1. 將元件資料夾：從`/libs/livecycle/core`複製到`/apps/livecycle/core`。
 
@@ -245,7 +259,7 @@ ht-degree: 3%
    * 從 `/libs/livecycle/core/content`
    * 至`/apps/livecycle/core/content`
 
-1. 從節點`login.js`刪除檔案`jquery-1.8.0.min.js`和`/apps/livecycle/core/content/login.`
+1. 從節點`/apps/livecycle/core/content/login.`刪除檔案`login.js`和`jquery-1.8.0.min.js`
 1. 修改CSS檔案中的樣式。
 1. 若要新增樣式：
 
@@ -293,7 +307,7 @@ ht-degree: 3%
 1. 在`/apps/livecycle/core/content/login`中新增影像。 若要新增影像：
 
    1. 安裝WebDAV使用者端。
-   1. 使用webDAV使用者端導覽至`/apps/livecycle/core/content/login`資料夾。 如需詳細資訊，請參閱[WebDAV存取](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/webdav-access.html?lang=zh-Hant)。
+   1. 使用webDAV使用者端導覽至`/apps/livecycle/core/content/login`資料夾。 如需詳細資訊，請參閱[WebDAV存取](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/webdav-access.html?lang=en)。
 
    1. 新增影像。
 

@@ -9,13 +9,27 @@ exl-id: e1519477-b5a8-4947-8597-26b945a3b819
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 1b76b30d8db59e6ad98af1d29f17443442d5378e
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1801'
 ht-degree: 0%
-
 ---
-
 # 一般AEM Forms設定 {#general-aem-forms-settings}
 
 Administration Console中的「核心組態」頁面提供有助於改善系統效能的設定。 在設定或更新這些設定後，請重新啟動應用程式伺服器。
@@ -34,7 +48,7 @@ Administration Console中的「核心組態」頁面提供有助於改善系統�
 
 
 1. 在管理控制檯中，選取&#x200B;**[!UICONTROL 設定>核心系統設定>設定]**。
-1. 在[核心組態]頁面上，視需要變更選項並選取[確定]。**&#x200B;** 如需選項的詳細資訊，請參閱[核心組態選項](configure-general-aem-forms-settings.md#core-configurations-options)。
+1. 在[核心組態]頁面上，視需要變更選項並選取[確定]。**** 如需選項的詳細資訊，請參閱[核心組態選項](configure-general-aem-forms-settings.md#core-configurations-options)。
 
 
 ## 核心設定選項 {#core-configurations-options}

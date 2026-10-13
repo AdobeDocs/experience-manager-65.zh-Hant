@@ -5,13 +5,37 @@ exl-id: 764f78a7-1d3d-4406-85b1-b80dffae2350
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments,Language Copy
 role: Admin, Developer, User, Leader
-source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: bfd4bc52-c397-5127-8f86-8953ba9fc0a3
+    internal-label: Headless
+  - id: a642c50e-80eb-4fc1-a5d2-f3762d1f841d
+    internal-label: Administration
+  - id: d9d38edd-df1b-480c-8f5e-72b62576f390
+    internal-label: Site and page features
+subfeature_v2:
+  - id: e9db7c79-8f65-4281-a439-c9049296d903
+    internal-label: Content Fragments
+  - id: e15a4109-ae5d-497d-b301-31149e35aed4
+    internal-label: Language Copy Wizard
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1472'
-ht-degree: 89%
-
+source-wordcount: '1491'
+ht-degree: 90%
 ---
-
 # AEM Headless 翻譯快速入門 {#getting-started}
 
 了解如何組織 Headless 內容以及 AEM 翻譯工具的運作原理。
@@ -27,7 +51,7 @@ ht-degree: 89%
 
 ## 目標 {#objective}
 
-本文件可協助您了解如何開始在 AEM 中翻譯 Headless 內容。閱讀本文件後，您應該：
+本文件可協助您了解如何開始在 AEM 中翻譯 Headless 內容。 閱讀本文件後，您應該：
 
 * 了解內容結構對翻譯的重要性。
 * 了解 AEM 如何儲存 Headless 內容。
@@ -47,7 +71,7 @@ ht-degree: 89%
 
 >[!TIP]
 >
->如果您不熟悉使用 AEM 等大型 CMS，請考慮查閱[基本處理](/help/sites-authoring/basic-handling.md)文件再繼續進行。基本處理檔案不是歷程的一部分，因此請在完成後返回此頁面。
+>如果您不熟悉使用 AEM 等大型 CMS，請考慮查閱[基本處理](/help/sites-authoring/basic-handling.md)文件再繼續進行。 基本處理檔案不是歷程的一部分，因此請在完成後返回此頁面。
 
 ### 工具 {#tools}
 
@@ -57,37 +81,37 @@ ht-degree: 89%
 
 ## 結構是關鍵 {#content-structure}
 
-AEM 的內容，無論是 Headless 網頁還是傳統網頁，都是由其結構驅動的。AEM 對內容結構的要求很少，但在規劃專案時請仔細考慮您的內容階層，可使翻譯工作變得更簡單。
+AEM 的內容，無論是 Headless 網頁還是傳統網頁，都是由其結構驅動的。 AEM 對內容結構的要求很少，但在規劃專案時請仔細考慮您的內容階層，可使翻譯工作變得更簡單。
 
 >[!TIP]
 >
->在 Headless 專案一開始就為翻譯進行規劃。儘早與專案經理和內容架構師密切合作。
+>在 Headless 專案一開始就為翻譯進行規劃。 儘早與專案經理和內容架構師密切合作。
 >
->可能需要一位具獨立人物誌的國際化專案經理，其職責是定義哪些內容應該翻譯，哪些內容不應該翻譯，以及哪些已翻譯內容可以由區域或本地內容製作者修改。
+>可能需要一位獨立的國際化專案經理，其職責是定義哪些內容應該翻譯、哪些內容不應該翻譯，以及哪些已翻譯內容可以由區域或本地內容製作者修改。
 
 ## AEM 如何儲存 Headless 內容 {#headless-content-in-aem}
 
-對於翻譯專家來說，深入了解 AEM 如何管理無周邊內容並不重要。但是，熟悉基本概念和術語將有助於您以後使用 AEM 的翻譯工具。最重要的是，您需要瞭解自己的內容，以及它是如何建構以有效地翻譯它。
+對於翻譯專家來說，深入了解 AEM 如何管理無周邊內容並不重要。 但是，熟悉基本概念和術語將有助於您以後使用 AEM 的翻譯工具。 最重要的是，您需要瞭解自己的內容，以及它是如何建構以有效地翻譯它。
 
 ### 內容模型 {#content-models}
 
-為了跨管道、地區和語言一致地傳遞 Headless 內容，內容必須高度結構化。AEM 使用內容模型來強制使用此結構。將內容模型視為一種用於建立 Headless 內容的範本或模式。因為每個專案都有自己的需求，所以每個專案都定義了自己的內容片段模型。AEM 對此類模型沒有固定要求或結構。
+為了跨管道、地區和語言一致地傳遞 Headless 內容，內容必須高度結構化。 AEM 使用內容模型來強制使用此結構。 將內容模型視為一種用於建立 Headless 內容的範本或模式。 因為每個專案都有自己的需求，所以每個專案都定義了自己的內容片段模型。 AEM 對此類模型沒有固定要求或結構。
 
-內容架構師在專案早期工作以定義此結構。作為翻譯專家，您應該與內容架構師密切合作以理解和組織內容。
+內容架構師在專案早期工作以定義此結構。 作為翻譯專家，您應該與內容架構師密切合作以理解和組織內容。
 
 >[!NOTE]
 >
->內容架構師負責定義內容模型。翻譯專家應只需熟悉以下步驟中概述的結構。
+>內容架構師負責定義內容模型。 翻譯專家應只需熟悉以下步驟中概述的結構。
 
-因為內容模型定義了內容結構，所以您需要知道模型的哪些欄位必須翻譯。通常，您與內容架構師一起定義它。若要瀏覽內容模型的欄位，請按照以下步驟操作。
+因為內容模型定義了內容結構，所以您需要知道模型的哪些欄位必須翻譯。 通常，您與內容架構師一起定義它。 若要瀏覽內容模型的欄位，請按照以下步驟操作。
 
 1. 導覽至&#x200B;**工具** > **Assets** > **內容片段模型**。
-1. 內容片段模型通常儲存在資料夾結構中。按一下專案的資料夾。
-1. 接著列出模型。按一下模型以檢視詳細資訊。
+1. 內容片段模型通常儲存在資料夾結構中。 按一下專案的資料夾。
+1. 接著列出模型。 按一下模型以檢視詳細資訊。
    ![內容片段模型](assets/content-fragment-models.png)
 1. **內容片段模型編輯器**&#x200B;開啟。
-   1. 左欄包含模型的欄位。我們對此欄感興趣。
-   1. 左欄包含可新增至模型的欄位。此欄我們可以忽略。
+   1. 左欄包含模型的欄位。 我們對此欄感興趣。
+   1. 左欄包含可新增至模型的欄位。 此欄我們可以忽略。
       ![內容片段模型編輯器](assets/content-fragment-model-editor.png)
 1. 按一下模型的其中一個欄位。 AEM 會標記該欄位，該欄位的詳細資料會顯示在右欄中。
    ![內容片段模型編輯器詳細資料](assets/content-fragment-model-editor-detail.png)
@@ -100,15 +124,15 @@ AEM 的內容，無論是 Headless 網頁還是傳統網頁，都是由其結構
 
 ### 內容片段 {#content-fragments}
 
-內容作者使用內容模型來建立實際的 Headless 內容。內容作者選擇哪個模型做為內容的基礎，然後建立內容片段。內容片段是模型的執行個體，代表要以 Headless 方式傳遞的實際內容。
+內容作者使用內容模型來建立實際的 Headless 內容。 內容作者選擇哪個模型做為內容的基礎，然後建立內容片段。 內容片段是模型的執行個體，代表要以 Headless 方式傳遞的實際內容。
 
-如果內容模型是內容的模式，那麼內容片段就是基於這些模式的實際內容。內容片段代表必須翻譯的內容。
+如果內容模型是內容的模式，那麼內容片段就是基於這些模式的實際內容。 內容片段代表必須翻譯的內容。
 
-內容片段在 AEM 中以資產形式加以管理，視為數位資產管理 (DAM) 的一部分。這很重要，因為它們都位於路徑 `/content/dam` 下。
+內容片段在 AEM 中以資產形式加以管理，視為數位資產管理 (DAM) 的一部分。 這很重要，因為它們都位於路徑 `/content/dam` 下。
 
 ## 建議的內容結構 {#recommended-structure}
 
-如前所述，與您的內容架構師一起確定適合您自己專案的內容結構。然而，以下是一個經過證明、簡單、直覺的結構，它非常有效。
+如前所述，與您的內容架構師一起確定適合您自己專案的內容結構。 然而，以下是一個經過證明、簡單、直覺的結構，它非常有效。
 
 在 `/content/dam` 下定義專案的基本資料夾。
 
@@ -116,7 +140,7 @@ AEM 的內容，無論是 Headless 網頁還是傳統網頁，都是由其結構
 /content/dam/<your-project>
 ```
 
-製作內容所用的語言稱為語言根。我們的範例是使用英語，它應該位在此路徑下。
+製作內容所用的語言稱為語言根。 在我們的範例中，該語言是英語，且應位於此路徑下。
 
 ```text
 /content/dam/<your-project>/en
@@ -128,7 +152,7 @@ AEM 的內容，無論是 Headless 網頁還是傳統網頁，都是由其結構
 /content/dam/<your-project>/en/<your-project-content>
 ```
 
-建立語言根時應同時建立同層級資料夾用於翻譯工作，資料夾名稱代表該語言的 ISO-2 語言碼。例如，德語將具有以下路徑。
+翻譯內容應建立為與語言根同層級的資料夾，其資料夾名稱代表該語言的 ISO-2 語言碼。 例如，德語將具有以下路徑。
 
 ```text
 /content/dam/<your-project>/de
@@ -136,7 +160,7 @@ AEM 的內容，無論是 Headless 網頁還是傳統網頁，都是由其結構
 
 >[!NOTE]
 >
->內容架構師通常負責建立這些語言資料夾。如果未建立，AEM 之後將無法建立翻譯工作。
+>內容架構師通常負責建立這些語言資料夾。 如果未建立，AEM 之後將無法建立翻譯工作。
 
 最終結構可能如下所示。
 
@@ -167,7 +191,7 @@ AEM 的內容，無論是 Headless 網頁還是傳統網頁，都是由其結構
 
 ## AEM 翻譯工具 {#translation-tools}
 
-現在您了解了什麼是內容片段以及內容結構的重要性，我們可以看看如何翻譯這些內容。AEM 的翻譯工具非常強大，其大致概念很容易理解。
+現在您了解了什麼是內容片段以及內容結構的重要性，我們可以看看如何翻譯這些內容。 AEM 的翻譯工具非常強大，其大致概念很容易理解。
 
 * **翻譯連接器** - 連接器是 AEM 與您使用的翻譯服務之間的連結。
 * **翻譯規則** - 規則定義特定路徑下哪些內容應該翻譯。
@@ -194,5 +218,5 @@ AEM 的內容，無論是 Headless 網頁還是傳統網頁，都是由其結構
 * [設定翻譯整合框架](/help/sites-administering/tc-tic.md) - 了解如何設定翻譯整合框架以與第三方翻譯服務整合。
 * [管理翻譯專案](/help/sites-administering/tc-manage.md) - 了解如何在 AEM 中建立和管理機器和人工翻譯專案。
 * [AEM as a Headless CMS 簡介](/help/sites-developing/headless/introduction.md)
-* [AEM 開發人員入口網站](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=zh-Hant)
-* [AEM 中的 Headless 教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=zh-Hant)
+* [AEM 開發人員入口網站](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
+* [AEM 中的無周邊教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)

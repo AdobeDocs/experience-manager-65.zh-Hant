@@ -14,26 +14,39 @@ autotag-review: '2026-05-18T18:45:43.326Z'
 TQID: 'https://experienceleague.adobe.com/MXCLWQOBsCl3DPKVPn-WjnPeu-NGnQtUn6EYueH7OfE'
 product_v2:
   - id: e14eb250-3c22-4a07-9061-a78112b2b826
+    internal-label: Experience Manager 6.5
   - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
 feature_v2:
   - id: a01bfd36-4ab8-4bf8-9dc0-5b45b890552e
+    internal-label: APIs
+  - id: d4b6216b-4a89-4ff0-8ac0-5a699ba23100
+    internal-label: Images and videos
+subfeature_v2:
+  - id: afe09f80-87de-4606-96de-7aecd50f1a65
+    internal-label: Image profiles
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
 level_v2:
   - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
   - id: d378ca77-2da1-4f39-ad92-1917fe974a38
-source-git-commit: 9c96b6744c7af2f061b4dfbf403560047485f9b5
+    internal-label: Experienced
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: 2537
+source-wordcount: '2537'
 ht-degree: 0%
-
 ---
-
 # 設定Dynamic Media一般設定
 
 設定&#x200B;**[!UICONTROL Dynamic Media一般設定]**&#x200B;僅適用於下列情況：
 
-* 您正在以Scene7模式執行Dynamic Media。 請參閱[在Scene7模式中啟用Dynamic Media &#x200B;](/help/assets/config-dms7.md#enabling-dynamic-media-in-scene-mode)。
+* 您正在以Scene7模式執行Dynamic Media。 請參閱[在Scene7模式中啟用Dynamic Media ](/help/assets/config-dms7.md#enabling-dynamic-media-in-scene-mode)。
 * 您在Adobe Experience Manager 6.5.11或更新版本中有&#x200B;*現有* **[!UICONTROL Dynamic Media設定]** （在&#x200B;**[!UICONTROL 雲端服務]**）。 請參閱[在雲端服務中建立Dynamic Media設定](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services)。
 * 您是有管理員許可權的Experience Manager系統管理員。
 
@@ -64,7 +77,7 @@ Dynamic Media一般設定適用於有經驗的網站開發人員和程式設計�
    * [Illustrator](#illustrator-tab)索引標籤
 
    ![Dynamic Media一般設定頁面](/help/assets/assets-dm/dm-general-settings.png)
-   *Dynamic Media一般設定頁面，已選取&#x200B;**[!UICONTROL 影像編輯]**&#x200B;標籤。*<br><br>
+   *Dynamic Media一般設定頁面，已選取&#x200B;**[!UICONTROL 影像編輯]**標籤。*<br><br>
 
 1. 完成後，在頁面的右上角附近，選取&#x200B;**[!UICONTROL 儲存]**。
 
@@ -98,7 +111,7 @@ Dynamic Media一般設定適用於有經驗的網站開發人員和程式設計�
 
   控制任何現有手動裁切定義的保留。
 
-  另請參閱Dynamic Media檢視器參考指南中的[UploadPostJob](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-upload-post-job.html?lang=zh-Hant)和[ReprocessAssetsJob](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-reprocess-assets-job.html?lang=zh-Hant)中的`preserveCrop`。
+  另請參閱Dynamic Media檢視器參考指南中的[UploadPostJob](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-upload-post-job.html)和[ReprocessAssetsJob](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-reprocess-assets-job.html)中的`preserveCrop`。
 
 ## 預設上傳選項 {#default-upload-options}
 

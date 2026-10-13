@@ -8,13 +8,29 @@ exl-id: 470fcfda-dfde-437c-b539-d5af1e13a7d6
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Foundation Components
 role: User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 7da902b6-fe94-5180-8e7c-f6d1e38d01d5
+    internal-label: Foundation Components
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '7786'
 ht-degree: 0%
-
 ---
-
 # OSGi上的Forms中心工作流程 — 步驟參考 {#forms-centric-workflow-on-osgi-step-reference}
 
 | 版本 | 文章連結 |
@@ -75,7 +91,7 @@ Forms Workflow步驟會在AEM工作流程中執行AEM Forms專屬的操作。 �
     * **選擇輸入JSON：**&#x200B;使用相對於承載或儲存在Document、JSON或表單資料模型資料型別變數中的路徑來選取輸入JSON檔案。 如果您從「型別」下拉式清單中選取「互動式通訊代理程式UI」或「互動式通訊Web Channel檔案」，即可使用此選項。
     * **選擇自訂預填服務：**&#x200B;選取預填服務以擷取資料，並預填互動式通訊Web Channel檔案或代理程式UI。
     * **使用以上選取之互動式通訊的預填服務：**&#x200B;使用此選項以使用互動式通訊下拉式清單中定義的互動式通訊的預填服務。
-    * **要求屬性對應：**&#x200B;使用[要求屬性對應]區段來定義要求屬性[&#128279;](../../forms/using/work-with-form-data-model.md#bindargument)的名稱和值。 根據請求中指定的屬性名稱和值從資料來源擷取詳細資料。 您可以使用常值或String資料型別的變數來定義請求屬性值。\
+    * **要求屬性對應：**&#x200B;使用[要求屬性對應]區段來定義要求屬性](../../forms/using/work-with-form-data-model.md#bindargument)的[名稱和值。 根據請求中指定的屬性名稱和值從資料來源擷取詳細資料。 您可以使用常值或String資料型別的變數來定義請求屬性值。\
       您必須從「型別」下拉式清單中選取「互動式通訊代理程式UI」或「互動式通訊Web Channel檔案」，才能使用預填服務和要求屬性對應選項。
 
 * **提交的資訊：**&#x200B;下列欄位可作為工作的輸出位置：
@@ -89,7 +105,7 @@ Forms Workflow步驟會在AEM工作流程中執行AEM Forms專屬的操作。 �
   * **儲存配置範本，使用：**&#x200B;使用相對於承載的路徑儲存配置範本，或將其儲存在Document資料型別的變數中。 [配置範本](../../forms/using/layout-design-details.md)參考您使用Forms Designer建立的XDP檔案。 只有從「型別」下拉式清單中選取「互動式通訊代理程式UI」，才能使用此選項。
 
 * **受指派人>指派選項：**&#x200B;指定將工作指派給使用者的方法。 您可以使用「參與者選擇器」指令碼動態地將任務指派給使用者或群組，或將任務指派給特定的AEM使用者或群組。
-* **參與者選擇器：**&#x200B;在[指派選項]欄位中選取&#x200B;**動態至使用者或群組**&#x200B;選項時，即可使用此選項。 您可以使用ECMAScript或服務來動態選取使用者或群組。 如需詳細資訊，請參閱[動態指派工作流程給使用者](https://helpx.adobe.com/experience-manager/kb/HowToAssignAWorkflowDynamicallyToParticipants.html)和[建立自訂Adobe Experience Manager動態參與者步驟。](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hant&CID=RedirectAEMCommunityKautuk)
+* **參與者選擇器：**&#x200B;在[指派選項]欄位中選取&#x200B;**動態至使用者或群組**&#x200B;選項時，即可使用此選項。 您可以使用ECMAScript或服務來動態選取使用者或群組。 如需詳細資訊，請參閱[動態指派工作流程給使用者](https://helpx.adobe.com/experience-manager/kb/HowToAssignAWorkflowDynamicallyToParticipants.html)和[建立自訂Adobe Experience Manager動態參與者步驟。](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=en&CID=RedirectAEMCommunityKautuk)
 
 * **參與者：**&#x200B;在&#x200B;**參與者選擇器**&#x200B;欄位中選取&#x200B;**[!UICONTROL com.adobe.granite.workflow.core.process.RandomParticipantChooser]**&#x200B;選項時，即可使用此欄位。 欄位可讓您為RandomParticipantChooser選項選取使用者或群組。
 

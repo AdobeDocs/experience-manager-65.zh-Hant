@@ -7,13 +7,31 @@ role: Admin, User, Developer
 exl-id: d530dbb9-f95e-4329-9665-37faf8f7931b
 solution: Experience Manager, Experience Manager Forms
 feature: Workbench,Adaptive Forms
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 36ac8e9c-5c7a-56d8-af5e-39399fd7b101
+    internal-label: Workbench
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '2298'
 ht-degree: 1%
-
 ---
-
 # 安裝Workbench {#install-workbench}
 
 本檔案提供安裝和設定AEM Forms Workbench的說明。 此安裝程式也會安裝Forms Designer。
@@ -37,11 +55,11 @@ ht-degree: 1%
   </tr>
   <tr>
    <td><p>有關AEM Forms及其如何與其他Adobe產品整合的一般資訊</p> </td>
-   <td><p><a href="https://experienceleague.adobe.com/docs/experience-manager-65/forms/getting-started/introduction-aem-forms.html?lang=zh-Hant">AEM Forms概觀</a><br /> <br /> </p> </td>
+   <td><p><a href="https://experienceleague.adobe.com/docs/experience-manager-65/forms/getting-started/introduction-aem-forms.html?lang=en">AEM Forms概觀</a><br /> <br /> </p> </td>
   </tr>
   <tr>
    <td><p>AEM Forms的所有可用檔案</p> </td>
-   <td><p><a href="https://experienceleague.adobe.com/docs/experience-manager-65/forms/getting-started/introduction-aem-forms.html?lang=zh-Hant">AEM Forms檔案</a><br /> <br /> </p> </td>
+   <td><p><a href="https://experienceleague.adobe.com/docs/experience-manager-65/forms/getting-started/introduction-aem-forms.html?lang=en">AEM Forms檔案</a><br /> <br /> </p> </td>
   </tr>
   <tr>
    <td><p>此產品版本的修補程式更新、技術說明和其他資訊</p> </td>
@@ -100,7 +118,7 @@ Workbench是整合式開發環境(IDE)，開發人員和表單作者可使用它
 
 ### 受支援平台 {#supported-platforms}
 
-請在[AEM Forms支援平台](https://www.adobe.com/go/learn_aemforms_supportedplatforms_65_tw)，檢視Workbench的完整支援平台清單。
+請在[AEM Forms支援平台](https://www.adobe.com/go/learn_aemforms_supportedplatforms_65)，檢視Workbench的完整支援平台清單。
 
 ## Designer安裝注意事項 {#designer-installation-considerations}
 
@@ -191,7 +209,7 @@ JEE程式上的AEM Forms可使用升級精靈升級到AEM Forms應用程式。 �
 
 ### 設定逾時設定 {#configuring-timeout-settings}
 
-根據預設，Workbench會在兩小時後逾時，無論活動或非活動狀態為何。 若要編輯逾時設定，請參閱<a href="https://experienceleague.adobe.com/docs/experience-manager-65/forms/administrator-help/configure-user-management/configure-advanced-system-attributes.html?lang=zh-Hant">管理主控台說明</a>中的「設定使用者管理>設定進階系統屬性」。
+根據預設，Workbench會在兩小時後逾時，無論活動或非活動狀態為何。 若要編輯逾時設定，請參閱<a href="https://experienceleague.adobe.com/docs/experience-manager-65/forms/administrator-help/configure-user-management/configure-advanced-system-attributes.html">管理主控台說明</a>中的「設定使用者管理>設定進階系統屬性」。
 
 ### 設定Workbench透過HTTPS連線 {#configuring-workbench-to-connect-over-HTTPS}
 

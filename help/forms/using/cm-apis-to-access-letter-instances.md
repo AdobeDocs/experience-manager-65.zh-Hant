@@ -8,13 +8,26 @@ feature: Correspondence Management
 exl-id: 9d43d9d4-5487-416c-b641-e807227ac056
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 3f00fc92-85ee-583e-abd1-3bc3d96de3a0
+    internal-label: Correspondence Management
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '604'
 ht-degree: 0%
-
 ---
-
 # 存取信件例項的API {#apis-to-access-letter-instances}
 
 ## 概觀 {#overview}
@@ -40,7 +53,7 @@ Correspondence Management會公開API，以透過LetterInstanceService服務擷�
 
 ### 使用getAllLetterInstances {#using-nbsp-getallletterinstances}
 
-以下API會根據查詢物件（已提交和草稿）來尋找信件例項。 如果查詢物件為Null，則會傳回所有信件例項。 此API傳回[LetterInstanceVO](https://helpx.adobe.com/tw/aem-forms/6-2/javadocs/com/adobe/icc/dbforms/obj/LetterInstanceVO.html)物件的清單，這些物件可用於擷取信件執行個體的其他資訊。
+以下API會根據查詢物件（已提交和草稿）來尋找信件例項。 如果查詢物件為Null，則會傳回所有信件例項。 此API傳回[LetterInstanceVO](https://helpx.adobe.com/aem-forms/6-2/javadocs/com/adobe/icc/dbforms/obj/LetterInstanceVO.html)物件的清單，這些物件可用於擷取信件執行個體的其他資訊。
 
 **語法**： `List getAllLetterInstances(Query query) throws ICCException;`
 

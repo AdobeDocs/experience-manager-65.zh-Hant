@@ -10,13 +10,20 @@ role: Admin
 exl-id: ee94f093-fd14-49f2-9990-fbe853d924b1
 solution: Experience Manager
 feature: Communities
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '864'
 ht-degree: 0%
-
 ---
-
 # 設定傳訊 {#configure-messaging}
 
 ## 概觀 {#overview}
@@ -131,7 +138,7 @@ AEM Communities的傳訊功能讓登入的網站訪客（成員）能夠傳送�
 >
 >每次開啟`Messaging Operations Service`設定進行編輯時，如果移除了`allowedAttachmentTypes.name`，則會讀取空白專案以使屬性可設定。 單一空白專案會有效停用檔案附件。
 >
->若要允許所有副檔名（已加入封鎖清單的副檔名除外），請使用&#39;**-**&#39;圖示來移除單一空白專案，再按一下[儲存]。**&#x200B;**
+>若要允許所有副檔名（已加入封鎖清單的副檔名除外），請使用&#39;**-**&#39;圖示來移除單一空白專案，再按一下[儲存]。****
 
 ## 群組訊息 {#group-messaging}
 

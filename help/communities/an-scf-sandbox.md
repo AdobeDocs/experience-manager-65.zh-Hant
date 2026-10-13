@@ -9,20 +9,27 @@ exl-id: 89858814-6625-4a56-8359-cc1eca402816
 solution: Experience Manager
 feature: Communities
 role: Developer
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '494'
+source-wordcount: '512'
 ht-degree: 0%
-
 ---
-
 # 建立SCF沙箱  {#create-an-scf-sandbox}
 
-自AEM 6.1社群起，快速建立沙箱的最簡單方式就是建立社群網站。 請參閱[AEM Communities快速入門](getting-started.md)。
+至於AEM 6.1社群，快速建立沙箱的最簡單方式是建立社群網站。 請參閱[AEM Communities快速入門](getting-started.md)。
 
 另一個對開發人員有用的工具是[社群元件指南](components-guide.md)，可讓您探索和快速建立Communities元件和功能的原型。
 
-建立網站的練習對於瞭解AEM網站的結構會很有幫助，其中可能包含Communities功能，同時提供簡單頁面，讓您探索如何使用[社交元件架構(SCF)](scf.md)。
+建立網站的練習對於瞭解AEM網站的結構會很有幫助，其中可能包含Communities功能，同時也提供簡單頁面，讓您探索如何使用[社交元件架構(SCF)](scf.md)。
 
 本教學課程主要針對不熟悉AEM且有意使用SCF元件的開發人員。 它會逐步建立SCF沙箱網站，類似於[如何建立完整功能的網際網路網站](../../help/sites-developing/website.md)的教學課程，其重點在於網站上的結構，例如導覽、標誌、搜尋、工具列以及列出子頁面。
 
@@ -47,12 +54,12 @@ ht-degree: 0%
 
 本教學課程假設您已安裝一個AEM作者和一個AEM發佈執行個體，其中具有[最新發行版本](deploy-communities.md#latest-releases)的Communities。
 
-以下是初次接觸AEM平台之開發人員的一些實用連結：
+以下是初次接觸AEM平台的開發人員的一些實用連結：
 
 * [快速入門](../../help/sites-deploying/deploy.md#getting-started)：用於部署AEM執行個體。
 
-   * [基本知識](../../help/sites-developing/the-basics.md)：適用於網站與功能的開發人員。
-   * [作者的首要步驟](../../help/sites-authoring/first-steps.md)：製作頁面內容。
+  * [基本知識](../../help/sites-developing/the-basics.md)：適用於網站與功能的開發人員。
+  * [作者的首要步驟](../../help/sites-authoring/first-steps.md)：製作頁面內容。
 
 ## 使用CRXDE Lite開發環境 {#using-crxde-lite-development-environment}
 
@@ -60,7 +67,7 @@ AEM開發人員在[CRXDE Lite](../../help/sites-developing/developing-with-crxde
 
 以管理許可權登入後，有多種方式可存取CRXDE Lite：
 
-1. 從全域導覽中，選取導覽&#x200B;**[!UICONTROL 工具>CRXDE Lite]**。
+1. 從全域導覽中，選取導覽&#x200B;**[!UICONTROL 工具> CRXDE Lite]**。
 
    ![crxde-lite](assets/tools-crxde.png)
 
@@ -78,7 +85,7 @@ AEM開發人員在[CRXDE Lite](../../help/sites-developing/developing-with-crxde
 * `password: admin`
 
 
-登入逾時，您必須使用CRXDE Lite工具列右端的下拉式功能表，定期重新登入。
+登入逾時，您必須使用CRXDE Lite工具列右端的下拉式清單，定期重新登入。
 
 如果未登入，您將無法導覽JCR存放庫或執行任何編輯/儲存操作。
 

@@ -9,14 +9,30 @@ feature: Viewers
 role: User, Admin
 exl-id: 203ea349-ef4c-421c-b4b6-76ee9d46ec34
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: bd0d2470-932c-4269-8eca-6d939b72d9ef
+    internal-label: Dynamic Media
+subfeature_v2:
+  - id: d17d085a-e808-49dd-b9a6-85a996b999bd
+    internal-label: Viewers
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '418'
-ht-degree: 19%
+source-wordcount: '385'
+ht-degree: 20%
 ---
 # 將Dynamic Media視訊、影像檢視器或維度檢視器內嵌在網頁上 {#embedding-the-video-or-image-viewer-on-a-web-page}
 
-當您想 **&#x200B;**&#x200B;要播放視訊或檢視嵌入在網頁上的資產時，請使用「嵌入代碼」功能。 您可將嵌入代碼複製到剪貼簿，以便貼到網頁中。 「嵌入代碼」對話方塊中不允許編 **[!UICONTROL 輯代碼]** 。
+當您想 **** 要播放視訊或檢視嵌入在網頁上的資產時，請使用「嵌入代碼」功能。 您可將嵌入代碼複製到剪貼簿，以便貼到網頁中。 「嵌入代碼」對話方塊中不允許編 **[!UICONTROL 輯代碼]** 。
 
 只有在您&#x200B;*不是*&#x200B;使用Adobe Experience Manager做為WCM時才內嵌URL。 如果您使用Experience Manager做為WCM，[請直接在頁面上新增資產](adding-dynamic-media-assets-to-pages.md)。
 

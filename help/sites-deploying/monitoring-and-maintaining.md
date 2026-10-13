@@ -10,13 +10,22 @@ feature: Configuring
 exl-id: d3375935-090d-4052-8234-68ef4ddbab6a
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: f96b178ae84b4b930b59e36d4994970682c53dbd
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 523b1ccd-901e-5e3b-9fa7-f3dfd82463d5
+    internal-label: Configuring
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '5992'
+source-wordcount: '6001'
 ht-degree: 1%
-
 ---
-
 # 監控及維護您的Adobe Experience Manager執行個體{#monitoring-and-maintaining-your-aem-instance}
 
 部署AEM執行個體後，您必須監控並維護其操作、效能和完整性。
@@ -126,7 +135,7 @@ CRX檔案的[備份與還原](/help/sites-administering/backup-and-restore.md)�
    ![版本清除設定](assets/version-purge-configuration.png)
 
    * **清除路徑**
-設定要清除之內容的開始路徑；例如，`/content/wknd`。
+     設定要清除之內容的開始路徑；例如，`/content/wknd`。
 
      >[!CAUTION]
      >
@@ -136,17 +145,17 @@ CRX檔案的[備份與還原](/help/sites-administering/backup-and-restore.md)�
 
    * **遞回清除版本**
 
-      * 如果您只想永久刪除路徑所定義的節點，請取消選取。
-      * 選取是否要永久刪除由路徑及其子系所定義的節點。
+     * 如果您只想永久刪除路徑所定義的節點，請取消選取。
+     * 選取是否要永久刪除由路徑及其子系所定義的節點。
 
    * **版本數目上限**
-設定要保留的版本數目上限（針對每個節點）。 留空將不使用此設定。
+     設定要保留的版本數目上限（針對每個節點）。 留空將不使用此設定。
 
    * **版本數目下限**
-設定要保留的版本數目下限（針對每個節點）。 留空將不使用此設定。
+     設定要保留的版本數目下限（針對每個節點）。 留空將不使用此設定。
 
    * **最大版本保留時間**
-設定您想要保留的最大版本保留時間（以天為單位，針對每個節點）。 留空將不使用此設定。
+     設定您想要保留的最大版本保留時間（以天為單位，針對每個節點）。 留空將不使用此設定。
 
    然後&#x200B;**儲存**。
 
@@ -219,41 +228,41 @@ AEM WCM會記錄詳細的記錄。 拆開包裝並開始快速入門後，您可
 
 * `<cq-installation-dir>/crx-quickstart/logs`
 
-   * `access.log`
-對AEM WCM和存放庫的所有存取請求都會在此處註冊。
+  * `access.log`
+    對AEM WCM和存放庫的所有存取請求都會在此處註冊。
 
-   * `audit.log`
-仲裁動作在此註冊。
+  * `audit.log`
+    仲裁動作在此註冊。
 
-   * `error.log`
-錯誤訊息（嚴重性各異）會在此處註冊。
+  * `error.log`
+    錯誤訊息（嚴重性各異）會在此處註冊。
 
-   * [`ImageServer-<PortId>-yyyy>-<mm>-<dd>.log`](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/config-admin/server-logging/c-image-server-log.html?lang=zh-Hant)
-此記錄檔只有在啟用[!DNL Dynamic Media]時才使用。 它提供用於分析內部ImageServer處理作業行為的統計資料和分析資訊。
+  * [`ImageServer-<PortId>-yyyy>-<mm>-<dd>.log`](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/config-admin/server-logging/c-image-server-log.html)
+    此記錄檔只有在啟用[!DNL Dynamic Media]時才使用。 它提供用於分析內部ImageServer處理作業行為的統計資料和分析資訊。
 
-   * `request.log`
-每個存取要求都會在這裡與回應一起註冊。
+  * `request.log`
+    每個存取要求都會在這裡與回應一起註冊。
 
-   * [`s7access-<yyyy>-<mm>-<dd>.log`](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/config-admin/server-logging/c-access-log.html?lang=zh-Hant)
-此記錄檔只有在啟用[!DNL Dynamic Media]時才使用。 s7access記錄檔會記錄透過`/is/image`和`/is/content`向[!DNL Dynamic Media]提出的每個要求。
+  * [`s7access-<yyyy>-<mm>-<dd>.log`](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/config-admin/server-logging/c-access-log.html)
+    此記錄檔只有在啟用[!DNL Dynamic Media]時才使用。 s7access記錄檔會記錄透過`/is/image`和`/is/content`向[!DNL Dynamic Media]提出的每個要求。
 
-   * `stderr.log`
-會保留啟動期間產生的錯誤訊息，同樣是不同嚴重性層級的錯誤訊息。 依預設，記錄層級設定為`Warning` ( `WARN`)
+  * `stderr.log`
+    會保留啟動期間產生的錯誤訊息，同樣是不同嚴重性層級的錯誤訊息。 依預設，記錄層級設定為`Warning` ( `WARN`)
 
-   * `stdout.log`
-保留指示啟動期間事件的記錄訊息。
+  * `stdout.log`
+    保留指示啟動期間事件的記錄訊息。
 
-   * `upgrade.log`
-提供從`com.day.compat.codeupgrade`和`com.adobe.cq.upgradesexecutor`封裝執行的所有升級作業記錄。
+  * `upgrade.log`
+    提供從`com.day.compat.codeupgrade`和`com.adobe.cq.upgradesexecutor`封裝執行的所有升級作業記錄。
 
 * `<cq-installation-dir>/crx-quickstart/repository/segmentstore`
 
-   * `journal.log`
-修訂日誌資訊。
+  * `journal.log`
+    修訂日誌資訊。
 
 >[!NOTE]
 >
->從&#x200B;**system/console/status-Bundlelist**&#x200B;頁面產生的&#x200B;**Download Full**&#x200B;package中不包含ImageServer和s7access記錄檔。 基於支援目的，如果您有[!DNL Dynamic Media]個問題，請在聯絡客戶支援時附加ImageServer和s7access記錄。
+>從**system/console/status-Bundlelist**頁面產生的**Download Full**package中不包含ImageServer和s7access記錄檔。 基於支援目的，如果您有[!DNL Dynamic Media]個問題，請在聯絡客戶支援時附加ImageServer和s7access記錄。
 
 ### 啟動DEBUG記錄層級 {#activating-the-debug-log-level}
 
@@ -316,9 +325,9 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
 
      值：指定記錄器要記錄訊息的OSGi服務；例如，下列全部：
 
-      * `org.apache.sling`
-      * `org.apache.felix`
-      * `com.day`
+     * `org.apache.sling`
+     * `org.apache.felix`
+     * `com.day`
 
    * 名稱：`org.apache.sling.commons.log.level`
 
@@ -328,13 +337,13 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
 
    * 視需要設定其他引數：
 
-      * 名稱：`org.apache.sling.commons.log.pattern`
+     * 名稱：`org.apache.sling.commons.log.pattern`
 
-        類型：`String`
+       類型：`String`
 
-        值：視需要指定記錄訊息的模式；例如，
+       值：視需要指定記錄訊息的模式；例如，
 
-        `{0,date,dd.MM.yyyy HH:mm:ss.SSS} *{4}* [{2}] {3} {5}`
+       `{0,date,dd.MM.yyyy HH:mm:ss.SSS} *{4}* [{2}] {3} {5}`
 
    >[!NOTE]
    >
@@ -411,17 +420,17 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
 
    * 視需要設定其他引數：
 
-      * 名稱：`org.apache.sling.commons.log.file.number`
+     * 名稱：`org.apache.sling.commons.log.file.number`
 
-        類型：`Long`
+       類型：`Long`
 
-        值：指定您要保留的記錄檔數目；例如`5`
+       值：指定您要保留的記錄檔數目；例如`5`
 
-      * 名稱：`org.apache.sling.commons.log.file.size`
+     * 名稱：`org.apache.sling.commons.log.file.size`
 
-        類型：`String`
+       類型：`String`
 
-        值：視需要指定，以大小/日期控制檔案旋轉；例如`'.'yyyy-MM-dd`
+       值：視需要指定，以大小/日期控制檔案旋轉；例如`'.'yyyy-MM-dd`
 
    >[!NOTE]
    >
@@ -518,7 +527,7 @@ OSGi事件也會產生稽核記錄，您可以從AEM Web Console的&#x200B;**組
    * **重新整理**&#x200B;或&#x200B;**清除**&#x200B;以更新佇列專案的顯示。 這麼做有助於檢視進入和離開佇列的專案。
    * **檢視記錄檔**&#x200B;以存取復寫代理程式的任何動作記錄檔。
    * **測試目標執行個體的連線**。
-   * 如有需要，對任何佇列專案強制重試&#x200B;**&#x200B;**。
+   * 如有需要，對任何佇列專案強制重試&#x200B;****。
 
    >[!CAUTION]
    >
@@ -540,7 +549,7 @@ OSGi事件也會產生稽核記錄，您可以從AEM Web Console的&#x200B;**組
 
 >[!NOTE]
 >
->也可以檢查可改善效能[&#128279;](/help/sites-deploying/configuring-performance.md#configuring-for-performance)的特定組態。
+>也可以檢查可改善效能](/help/sites-deploying/configuring-performance.md#configuring-for-performance)的特定[組態。
 
 以下列出常見的效能問題，以及如何發現和處理這些問題的建議。
 
@@ -568,19 +577,19 @@ OSGi事件也會產生稽核記錄，您可以從AEM Web Console的&#x200B;**組
 
 * 在您遇到效能問題之前：
 
-   * 收集儘可能多的資訊，以建立正常情況下系統的良好運作知識
+  * 收集儘可能多的資訊，以建立正常情況下系統的良好運作知識
 
 * 當您遇到效能問題時：
 
-   * 嘗試在您知道有良好一般效能和/或伺服器本身（如果可能）的其他使用者端上，使用一個（或最好是更多）標準網頁瀏覽器來複製它
-   * 檢查在適當的時段內是否有任何變更（與系統相關），以及這些變更是否可能影響效能
-   * 提出問題，例如：
+  * 嘗試在您知道有良好一般效能和/或伺服器本身（如果可能）的其他使用者端上，使用一個（或最好是更多）標準網頁瀏覽器來複製它
+  * 檢查在適當的時段內是否有任何變更（與系統相關），以及這些變更是否可能影響效能
+  * 提出問題，例如：
 
-      * 問題是否只會在特定時間發生？
-      * 問題是否只發生在特定頁面？
-      * 其他請求是否會受到影響？
+    * 問題是否只會在特定時間發生？
+    * 問題是否只發生在特定頁面？
+    * 其他請求是否會受到影響？
 
-   * 收集儘可能多的資訊，以便與您在正常情況下的系統知識進行比較：
+  * 收集儘可能多的資訊，以便與您在正常情況下的系統知識進行比較：
 
 ### 監控及分析效能的工具 {#tools-for-monitoring-and-analyzing-performance}
 
@@ -719,15 +728,15 @@ Adobe建議將「慢」頁面與`request.log`隔離，然後個別調整這些�
 * 表示要求（向右箭頭）或回應（向左箭頭）的箭頭。
 * 對於請求，該行包含：
 
-   * 方法（通常是GET、HEAD或POST）
-   * 請求的頁面
-   * 通訊協定
+  * 方法（通常是GET、HEAD或POST）
+  * 請求的頁面
+  * 通訊協定
 
 * 對於回應，該行包含：
 
-   * 狀態代碼(200表示「成功」，404表示「找不到頁面」
-   * MIME型別
-   * 回應時間
+  * 狀態代碼(200表示「成功」，404表示「找不到頁面」
+  * MIME型別
+  * 回應時間
 
 您可以使用小型指令碼從記錄檔中擷取所需的資訊，並組合您想要的統計資料。 根據這些統計資料，您可以看到哪些頁面或頁面型別速度緩慢，以及整體效能是否令人滿意。
 
@@ -1098,9 +1107,9 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 >
 >另請參閱下列文章以取得詳細資訊：
 >
->* [執行緒傾印](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17452.html?lang=zh-Hant)
->* [分析記憶體問題](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html?lang=zh-Hant)
->* [使用內建分析工具](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17499.html?lang=zh-Hant)進行分析
+>* [執行緒傾印](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17452.html)
+>* [分析記憶體問題](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html)
+>* [使用內建分析工具](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17499.html)進行分析
 >
 
 ### 記憶體不足 {#out-of-memory}
@@ -1116,7 +1125,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 * 用於[啟動AEM](/help/sites-deploying/deploy.md#getting-started)的JVM設定
 * 知識庫：
 
-* [分析記憶體問題](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html?lang=zh-Hant)
+* [分析記憶體問題](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html)
 
 ### 磁碟I/O {#disk-i-o}
 
@@ -1124,17 +1133,17 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 
 * 無論您是否已停用除錯資訊的收集，都可以在各種位置進行設定，包括：
 
-   * [Apache Sling JSP指令碼處理常式](/help/sites-deploying/osgi-configuration-settings.md#apacheslingjspscripthandler)
-   * [Apache Sling JavaScript處理常式](/help/sites-deploying/osgi-configuration-settings.md#apacheslingjavascripthandler)
-   * [Apache Sling記錄設定](/help/sites-deploying/osgi-configuration-settings.md#apacheslingloggingconfiguration)
-   * [CQ HTML資料庫管理員](/help/sites-deploying/osgi-configuration-settings.md#daycqhtmllibrarymanager)
-   * [CQ WCM偵錯篩選器](/help/sites-deploying/osgi-configuration-settings.md#daycqwcmdebugfilter)
-   * [記錄器](/help/sites-deploying/monitoring-and-maintaining.md#activating-the-debug-log-level)
+  * [Apache Sling JSP指令碼處理常式](/help/sites-deploying/osgi-configuration-settings.md#apacheslingjspscripthandler)
+  * [Apache Sling JavaScript處理常式](/help/sites-deploying/osgi-configuration-settings.md#apacheslingjavascripthandler)
+  * [Apache Sling記錄設定](/help/sites-deploying/osgi-configuration-settings.md#apacheslingloggingconfiguration)
+  * [CQ HTML資料庫管理員](/help/sites-deploying/osgi-configuration-settings.md#daycqhtmllibrarymanager)
+  * [CQ WCM偵錯篩選器](/help/sites-deploying/osgi-configuration-settings.md#daycqwcmdebugfilter)
+  * [記錄器](/help/sites-deploying/monitoring-and-maintaining.md#activating-the-debug-log-level)
 
 * 您是否設定[版本清除](/help/sites-deploying/version-purging.md)，以及設定方式
 * 知識庫：
 
-   * [開啟的檔案過多]&#x200B;(https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17470.html?lang=zh-Hant
+  * [開啟的檔案過多]&#x200B;(https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17470.html
 
 ### 定期效能降低 {#regular-performance-degradation}
 
@@ -1143,7 +1152,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 * [記憶體不足](#outofmemory)
 * 知識庫：
 
-   * [未關閉的資源解析程式](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-kcs/kbarticles/ka-23761)
+  * [未關閉的資源解析程式](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-23761)
 
 ### JVM調整 {#jvm-tuning}
 

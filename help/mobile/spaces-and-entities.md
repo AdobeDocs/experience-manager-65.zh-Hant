@@ -8,18 +8,22 @@ exl-id: 44591900-b01b-4a33-9910-839564477e7d
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1185'
+source-wordcount: '1188'
 ht-degree: 4%
-
 ---
-
 # 空間與實體{#spaces-and-entities}
 
 {{ue-over-mobile}}
 
-空間是儲存透過Content Services REST API公開之實體的便利位置。 這個方法特別實用，因為應用程式（或任何管道）可以與許多實體相關聯。 強制實體位於空間內會強制將應用程式需求分組的最佳實務。 或者，您也可以將AEM中的應用程式與少量的空間建立關聯。
+空間是儲存透過Content Services REST API公開之實體的便利位置。 這個方法特別實用，因為應用程式（或任何管道）可以與許多實體相關聯。 強制實體位於空間內會強制將應用程式需求分組的最佳實務。 您可以選擇將AEM中的應用程式與少數空間建立關聯。
 
 >[!NOTE]
 >
@@ -47,7 +51,7 @@ ht-degree: 4%
 
 1. 選擇&#x200B;**建立**&#x200B;以建立空間。 輸入分享空間的&#x200B;**Title**、**Name**&#x200B;和&#x200B;**Description**。
 
-   按一下&#x200B;**建立**。
+   按一下「**建立**」。
 
    ![chlimage_1-84](assets/chlimage_1-84.png)
 
@@ -55,7 +59,7 @@ ht-degree: 4%
 
 建立空間後，按一下左側以管理清單中的空間。
 
-您可以檢視空間的屬性、刪除空間，或將空間及其內容發佈到AEM發佈執行個體。
+您可以檢視空間的屬性、刪除空間，或發佈空間及其內容至AEM發佈執行個體。
 
 ![chlimage_1-85](assets/chlimage_1-85.png)
 
@@ -68,7 +72,7 @@ ht-degree: 4%
 **發佈分享空間**&#x200B;發佈分享空間時，也會發佈該分享空間中的所有資料夾和實體。
 
 1. 按一下空間控制檯清單中的空間圖示以選取空間
-1. 選擇&#x200B;**Publish樹狀結構**
+1. 選擇&#x200B;**發佈樹狀結構**
 
 >[!NOTE]
 >
@@ -118,9 +122,9 @@ ht-degree: 4%
    >
    >語言副本節點只能作為空間的直接子項存在。
 
-1. 選擇&#x200B;**Content Package Language&amp;amp；ast；**，然後在&#x200B;**建立語言副本**&#x200B;對話方塊中輸入&#x200B;**Title&amp;amp；ast；**。
+1. 選擇&#x200B;**內容封裝語言&amp;ast；**，然後在&#x200B;**建立語言副本**&#x200B;對話方塊中輸入&#x200B;**標題&amp;ast；**。
 
-   按一下&#x200B;**建立**。
+   按一下「**建立**」。
 
    ![chlimage_1-90](assets/chlimage_1-90.png)
 
@@ -171,7 +175,7 @@ ht-degree: 4%
    >
    >請參閱[建立模型](/help/mobile/administer-mobile-apps.md)，以建立您的自訂實體。
 
-1. 輸入實體的&#x200B;**標題**、**名稱**、**描述**&#x200B;和&#x200B;**標籤**。 按一下&#x200B;**建立**。
+1. 輸入實體的&#x200B;**標題**、**名稱**、**描述**&#x200B;和&#x200B;**標籤**。 按一下「**建立**」。
 
    ![chlimage_1-94](assets/chlimage_1-94.png)
 
@@ -209,7 +213,7 @@ ht-degree: 4%
 
    >[!NOTE]
    >
-   >新增實體後，必須儲存該實體才能讓預覽連結運作。 若要檢視預覽，請按一下[儲存]。**&#x200B;** 按一下&#x200B;**預覽**&#x200B;會顯示新增資產的json，如下圖所示：
+   >新增實體後，必須儲存該實體才能讓預覽連結運作。 若要檢視預覽，請按一下[儲存]。**** 按一下&#x200B;**預覽**&#x200B;會顯示新增資產的json，如下圖所示：
 
    ![chlimage_1-101](assets/chlimage_1-101.png)
 
@@ -235,12 +239,12 @@ ht-degree: 4%
 
 ### 發佈實體 {#publishing-an-entity}
 
-您可以選擇使用&#x200B;**Publish樹狀結構**&#x200B;或&#x200B;**快速Publish**&#x200B;來發佈您的實體。
+您可以選擇使用&#x200B;**發佈樹狀結構**&#x200B;或&#x200B;**快速發佈**&#x200B;來發佈您的實體。
 
-1. 從空間控制檯清單中選取一個實體，然後按一下&#x200B;**Publish樹狀結構**&#x200B;以發佈該實體及其子系。
+1. 從空間控制檯清單中選取一個實體，然後按一下**發佈樹狀結構**以發佈該實體及其子系。
 
    ![chlimage_1-105](assets/chlimage_1-105.png)
 
    **或**，
 
-   按一下&#x200B;**快速Publish**&#x200B;以發佈該特定實體。
+   按一下&#x200B;**快速發佈**&#x200B;以發佈該特定實體。

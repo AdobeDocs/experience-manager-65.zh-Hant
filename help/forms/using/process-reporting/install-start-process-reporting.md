@@ -9,13 +9,27 @@ exl-id: 1272e854-fa64-4bfd-b073-8fbcf210e9b5
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1710'
-ht-degree: 0%
-
+source-wordcount: '1774'
+ht-degree: 2%
 ---
-
 # 開始使用程式報告{#getting-started-with-process-reporting}
 
 流程報表可讓AEM Forms使用者查詢目前在AEM Forms實作中定義的AEM Forms流程相關資訊。 不過，程式報告不會直接從AEM Forms存放庫存取資料。 資料會先以排程方式發佈到Process Reporting存放庫（*由ProcessDataPublisher和ProcessDataStorage服務*）。 接著，會從發佈至存放庫的「程式報告」資料產生「程式報告」中的報告和查詢。 程式報告會安裝為Forms Workflow模組的一部分。
@@ -53,10 +67,10 @@ Process Reporting服務會依排程從AEM Forms資料庫發佈資料至Process R
 >如果您在叢集上執行AEM Forms實作，請在叢集的每個節點上執行下列步驟。
 
 1. 停止AEM Forms伺服器執行個體。
-1. &#x200B;URL
+1. &#x200B;
 
    * （適用於Windows）在編輯器中開啟`[JBoss root]/bin/run.conf.bat`檔案。
-   * (適用於Linux®、AIX®和Solaris™) `[JBoss root]/bin/run.conf.sh`檔案在編輯器中。
+   * （適用於Linux®、AIX®和Solaris™） `[JBoss root]/bin/run.conf.sh`檔案在編輯器中。
 
 1. 新增JVM引數`-Dreporting.publisher.cron = <expression>.`
 
@@ -71,7 +85,7 @@ Process Reporting服務會依排程從AEM Forms資料庫發佈資料至Process R
 1. 停止AEM Forms伺服器執行個體。
 1. 登入WebSphere®管理主控台。 在導覽樹狀結構中，按一下&#x200B;**伺服器** > **應用程式伺服器**，然後在右窗格中按一下伺服器名稱。
 
-1. 在[伺服器基礎結構]下，按一下&lbrack;™0&rbrace;Java&rbrace;和[處理程式管理]&#x200B;**> [處理程式定義]**&#x200B;**。**
+1. 在[伺服器基礎結構]下，按一下[™0}Java}和[處理程式管理]**> [處理程式定義]****。**
 
 1. 在[其他內容]下，按一下[**Java™ Virtual Machine**]。
 
@@ -81,11 +95,11 @@ Process Reporting服務會依排程從AEM Forms資料庫發佈資料至Process R
 
    * `-Dreporting.publisher.cron = 0_0_0/5_*_*_?`
 
-1. 按一下[套用]&#x200B;**&#x200B;**，按一下[確定]，然後按一下[直接儲存至主組態]&#x200B;**。**
+1. 按一下[套用]****，按一下[確定]，然後按一下[直接儲存至主組態]**。**
 1. 重新啟動AEM Forms伺服器執行個體。
 1. 停止AEM Forms伺服器執行個體。
 1. 登入WebLogic管理主控台。 WebLogic管理主控台的預設位址是`https://[hostname]:[port]/console`。
-1. 在[變更中心]下，按一下[鎖定與編輯]。**&#x200B;**
+1. 在[變更中心]下，按一下[鎖定與編輯]。****
 1. 在[網域結構]下，按一下[環境&#x200B;**] > [伺服器**] **，然後在右窗格中按一下[受管理的伺服器名稱]。**
 1. 在下一個畫面中，按一下&#x200B;**組態**&#x200B;標籤> **伺服器啟動**&#x200B;標籤。
 1. 在[引數]方塊中，新增JVM引數`-Dreporting.publisher.cron = <expression>`。
@@ -94,14 +108,14 @@ Process Reporting服務會依排程從AEM Forms資料庫發佈資料至Process R
 
    `-Dreporting.publisher.cron = 0_0_0/5_*_*_?`
 
-1. 按一下[儲存]&#x200B;**&#x200B;**，然後按一下[啟動變更]&#x200B;**&#x200B;**。
+1. 按一下[儲存]****，然後按一下[啟動變更]****。
 1. 重新啟動AEM Forms伺服器執行個體。
 
 ![processdatapublisherservice](assets/processdatapublisherservice.png)
 
 >[!NOTE]
 >
-> 建議您使用&#39;Ctrl + C&#39;命令重新啟動SDK。 使用替代方法重新啟動AEM SDK （例如停止Java程式）可能會導致AEM開發環境不一致。
+> 建議您使用&#39;Ctrl + C&#39;命令重新啟動SDK。 使用替代方法重新啟動AEM SDK （例如停止Java程式），可能會導致AEM開發環境不一致。
 
 ### ProcessDataStorage服務 {#processdatastorage-service}
 
@@ -130,7 +144,7 @@ ProcessDataStorageProvider服務會從ProcessDataPublisher服務接收處理作�
 
    `Default`: `/yyyy/mm/dd/hh/mi/ss`
 
-1. 按一下「**儲存**」。
+1. 按一下&#x200B;**儲存**。
 
 ### ReportConfiguration服務 {#reportconfiguration-service}
 
@@ -177,7 +191,7 @@ ProcessDataPublisher服務會從AEM Forms資料庫匯入處理作業資料，並
 
 ![processdatapublisherservice-1](assets/processdatapublisherservice-1.png)
 
-**Publish資料**
+**發佈資料**
 
 啟用此選項以開始發佈程式資料。 依預設，會停用選項。
 
@@ -207,7 +221,7 @@ ProcessDataPublisher服務會從AEM Forms資料庫匯入處理作業資料，並
 
 `Unit`: `Seconds`
 
-**來自**&#x200B;的Publish資料
+**從**&#x200B;發佈資料
 
 AEM Forms環境包含設定環境時的資料。
 

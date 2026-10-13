@@ -9,16 +9,23 @@ exl-id: d66fc1ff-a669-4a2c-b45a-093060facd97
 solution: Experience Manager
 feature: Communities
 role: Developer
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: '451'
 ht-degree: 0%
-
 ---
-
 # 建立範例頁面 {#create-a-sample-page}
 
-自AEM 6.1 Communities起，建立範例頁面的最簡單方式就是建立簡單的社群網站，由頁面函陣列成。
+截至AEM 6.1 Communities，建立範例頁面的最簡單方式是建立簡單的社群網站，其中包含Page函式。
 
 這包含parsys元件，因此您可以[啟用元件以進行編寫](basics.md#accessing-communities-components)。
 
@@ -41,19 +48,19 @@ ht-degree: 0%
 * 選取`Create button`
 * 基本資訊
 
-   * `Name`：單頁範本
-   * `Description`：包含單一頁面函式的範本。
-   * 選取`Enabled`
+  * `Name`：單頁範本
+  * `Description`：包含單一頁面函式的範本。
+  * 選取`Enabled`
 
 ![site-template-editor](assets/site-template-editor.png)
 
 * 結構
 
-   * 將`Page`函式拖曳至範本產生器
-   * 如需組態功能詳細資訊，請輸入
+  * 將`Page`函式拖曳至範本產生器
+  * 如需組態功能詳細資訊，請輸入
 
-      * `Title`：單頁
-      * `URL`：頁面
+    * `Title`：單頁
+    * `URL`：頁面
 
 ![site-template-editor-structure](assets/site-template-editor1.png)
 
@@ -72,22 +79,22 @@ ht-degree: 0%
 
 * 步驟 `1 - Site Template`
 
-   * `Title`：簡單社群網站
-   * `Description`：社群網站，包含實驗用的單一頁面。
-   * `Community Site Root: (leave blank)`
-   * `Community Site Base Language: English`
-   * `Name`：範例
+  * `Title`：簡單社群網站
+  * `Description`：社群網站，包含實驗用的單一頁面。
+  * `Community Site Root: (leave blank)`
+  * `Community Site Base Language: English`
+  * `Name`：範例
 
-      * url = http://localhost:4502/content/sites/sample
+    * url = http://localhost:4502/content/sites/sample
 
-      * `Template`：選擇`Single Page Template`
+    * `Template`：選擇`Single Page Template`
 
-     ![create-community-site-template](assets/create-community-site-template.png)
+    ![create-community-site-template](assets/create-community-site-template.png)
 
 * 選取`Next`
 * 步驟 `2 - Design`
 
-   * 選取任何設計
+  * 選取任何設計
 
 * 選取`Next`
 * 選取`Next`
@@ -98,7 +105,7 @@ ht-degree: 0%
 
   ![create-community-site](assets/create-community-site.png)
 
-## Publish網站 {#publish-the-site}
+## 發佈網站 {#publish-the-site}
 
 ![publish-site](assets/publish-site.png)
 
@@ -116,6 +123,6 @@ URL是[http://localhost:4502/editor.html/content/sites/sample/en.html](http://lo
 
 在簡單的首頁上，您可以透過社群功能和範本檢視預先佈線的內容，並嘗試新增和設定社群元件。
 
-## 在Publish上檢視網站 {#view-site-on-publish}
+## 在發佈時檢視網站 {#view-site-on-publish}
 
 發佈頁面之後，請開啟[發佈執行個體](http://localhost:4503/content/sites/sample/en.html)上的頁面，以匿名網站訪客、登入成員或管理員身分來實驗這些功能。 除非管理員登入，否則在製作環境中可見的管理連結不會出現在發佈環境中。

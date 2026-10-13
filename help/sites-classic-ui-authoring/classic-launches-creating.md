@@ -10,13 +10,22 @@ exl-id: 8ab21067-c19a-4faa-8bf0-cd9f21f6df70
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '368'
+source-wordcount: '374'
 ht-degree: 16%
-
 ---
-
 # 建立啟動{#creating-launches}
 
 建立啟動項，以更新現有網頁的新版本，以供日後啟用。 建立啟動項時，您可以指定標題和來源頁面：
@@ -25,7 +34,7 @@ ht-degree: 16%
 * 預設情況下，啟動會包含來源頁面的子頁面。 您可以視需要使用來源頁面。
 * 根據預設，[即時副本](/help/sites-administering/msm.md)會在來源頁面變更時自動更新啟動頁面。 您可以指定建立靜態副本，以防止自動變更。
 
-(可選) 您可以指定 **啟動日期**  (和時間)，以定義啟動頁面要升級和啟動的時間。不過，「 **啟動日期** 」只會搭配「生產就緒 **」旗標運作(請** 參閱編輯啟動設定 [&#128279;](/help/sites-classic-ui-authoring/classic-launches-editing.md#editing-a-launch-configuration));要讓動作實際自動發生，必須同時設定。
+(可選) 您可以指定 **啟動日期**  (和時間)，以定義啟動頁面要升級和啟動的時間。 不過，「 **啟動日期** 」只會搭配「生產就緒 **」旗標運作(請** 參閱編輯啟動設定 [](/help/sites-classic-ui-authoring/classic-launches-editing.md#editing-a-launch-configuration));要讓動作實際自動發生，必須同時設定。
 
 ## 建立啟動項 {#creating-a-launch}
 
@@ -43,7 +52,7 @@ ht-degree: 16%
 
    ![chlimage_1-99](assets/chlimage_1-99a.png)
 
-1. 按一下&#x200B;**建立**。
+1. 按一下「**建立**」。
 
 ## 刪除啟動項 {#deleting-a-launch}
 

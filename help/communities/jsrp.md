@@ -1,6 +1,6 @@
 ---
 title: JSRP - JCR儲存資源提供者
-description: JSRP最適合用於一個Publish執行個體和一個作者執行個體的示範或開發環境
+description: JSRP最適合用於一個發佈執行個體和一個作者執行個體的示範或開發環境
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
@@ -9,20 +9,27 @@ role: Admin
 exl-id: 873e013c-a2da-4b37-b0e3-56bdf240004a
 solution: Experience Manager
 feature: Communities
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '412'
+source-wordcount: '444'
 ht-degree: 0%
-
 ---
-
 # JSRP - JCR儲存資源提供者 {#jsrp-jcr-storage-resource-provider}
 
 ## 關於JSRP {#about-jsrp}
 
 當AEM Communities使用JSRP作為其儲存選項（預設）時，社群內容儲存在JCR中，並且使用者產生的內容(UGC)只能從張貼該內容的作者或發佈執行個體存取。
 
-由於部署的簡單性，JSRP最適合用於一個Publish執行個體和一個作者執行個體的示範或開發環境。
+由於部署的簡單性，JSRP最適合用於一個Publish執行個體和一個Author執行個體的示範或開發環境。
 
 另請參閱[SRP選項的特性](working-with-srp.md#characteristics-of-srp-options)和[建議的拓撲](topologies.md)。
 
@@ -51,7 +58,7 @@ ht-degree: 0%
 * 從全域導覽： **[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL 復寫]**
 * 選取&#x200B;**[!UICONTROL 啟動樹狀結構]** > **[!UICONTROL 開始路徑]**：
 
-   * 瀏覽至`/conf/global/settings/community/srpc/`
+  * 瀏覽至`/conf/global/settings/community/srpc/`
 
 * 選取&#x200B;**[!UICONTROL 啟動]**
 
@@ -68,21 +75,21 @@ ht-degree: 0%
 
 請確定已透過檢查儲存選項的設定，將JSRP設定為預設提供者。 依預設，儲存資源提供者為JSRP。
 
-在所有Author和Publish AEM執行個體上，重新造訪「儲存設定」主控台，或檢查AEM存放庫：
+在所有「作者」和「發佈」AEM執行個體上，重新造訪「儲存設定」主控台，或檢查AEM存放庫：
 
 * 在JCR中，若為[/conf/global/settings/community](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community)
 
-   * 它不包含[srpc](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community/srpc)節點，這表示儲存提供者是JSRP。
-   * 如果srpc節點存在且包含節點[defaultconfiguration](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community/srpc/defaultconfiguration)，則defaultconfiguration的屬性應該將JSRP定義為預設提供者。
+  * 它不包含[srpc](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community/srpc)節點，這表示儲存提供者是JSRP。
+  * 如果srpc節點存在且包含節點[defaultconfiguration](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community/srpc/defaultconfiguration)，則defaultconfiguration的屬性應該將JSRP定義為預設提供者。
 
 ### UGC在作者執行個體上不可見 {#ugc-not-visible-on-author-instance}
 
-這不是錯誤。 JSRP的特點是只可在Publish環境中看到發佈環境中輸入的社群內容。
+這不是錯誤。 JSRP的特點是只會在發佈環境中顯示發佈環境中輸入的社群內容。
 
-### UGC在Publish執行個體上不可見 {#ugc-not-visible-on-publish-instance}
+### UGC在發佈執行個體上不可見 {#ugc-not-visible-on-publish-instance}
 
-如果單一Publish執行個體或已部署發佈叢集，請依照[UGC在JCR](#ugc-not-visible-in-jcr)中不可見的指示操作。
+如果部署了單一發佈執行個體或發佈叢集，則遵循[UGC在JCR](#ugc-not-visible-in-jcr)中不可見的指示。
 
-如果部署了發佈陣列，JSRP的特徵是社群內容只會顯示在其張貼到的Publish執行個體上。
+如果部署了發佈陣列，JSRP的特徵是社群內容只會顯示在它發佈到的發佈執行個體上。
 
-若要讓任何Publish執行個體都能看見UGC，則需要發佈叢集。
+若要讓任何發佈執行個體都能看到UGC，則需要發佈叢集。

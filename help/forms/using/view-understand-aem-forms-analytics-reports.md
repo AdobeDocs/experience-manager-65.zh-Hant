@@ -9,13 +9,29 @@ exl-id: c5a4e6f6-f331-41e9-a0a9-51a30df6e2cd
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 feature: Adaptive Forms
-source-git-commit: 9f59606bb58b9e90f07bd22e89f3213afb54a697
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
 source-wordcount: '1082'
 ht-degree: 2%
-
 ---
-
 # 檢視和瞭解AEM Forms分析報表 {#view-and-understand-aem-forms-analytics-reports}
 
 Adobe Experience Manager Forms與Adobe Analytics整合，可讓您擷取及追蹤已發佈表單和檔案的績效量度。 分析這些指標背後的目標是根據有關使表單或文件更有用所需的變更資料做出明智的決策。
@@ -92,7 +108,7 @@ AEM Forms會顯示表單及表單中每個面板的analytics報表，如下所�
 * **草稿**：表單已儲存為草稿的次數
 * **提交專案**：已提交表單的次數
 * **中止**：使用者開始填寫表單後離開而未完成表單的次數
-* **不重複訪客**：表單由不重複訪客轉譯的次數。 如需不重複訪客的詳細資訊，請參閱[不重複訪客、造訪和客戶行為](https://helpx.adobe.com/tw/analytics/kb/unique-visitors-visitor-behavior.html)。
+* **不重複訪客**：表單由不重複訪客轉譯的次數。 如需不重複訪客的詳細資訊，請參閱[不重複訪客、造訪和客戶行為](https://helpx.adobe.com/analytics/kb/unique-visitors-visitor-behavior.html)。
 
 ![已展開的表單層級摘要分析報告](assets/analytics-report.png)
 
@@ -126,7 +142,7 @@ AEM Forms會顯示表單及表單中每個面板的analytics報表，如下所�
 
 若要進一步篩選分析資料，您可以按一下任何表格中的專案。 例如，如果您按一下「瀏覽器散佈」表格中的Google Chrome ，報表會再次呈現並包含與Google Chrome瀏覽器相關的資料，如下所示：
 
-![套用至Analytics報告的篩選器 — Google Chrome &#x200B;](assets/filter-1.png)
+![套用至Analytics報告的篩選器 — Google Chrome ](assets/filter-1.png)
 
 如果您在套用篩選器後檢視面板報表，面板報表資料也會根據套用的篩選器顯示。
 

@@ -9,13 +9,25 @@ exl-id: 9ef9ae75-cd8c-4adb-9bcb-e951d200d492
 solution: Experience Manager, Experience Manager Sites
 feature: Content Fragments
 role: Developer
-source-git-commit: 2e141ab04be33fea09ed7f6608dc9dcfaf2e50f1
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: a642c50e-80eb-4fc1-a5d2-f3762d1f841d
+    internal-label: Administration
+subfeature_v2:
+  - id: e9db7c79-8f65-4281-a439-c9049296d903
+    internal-label: Content Fragments
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '463'
-ht-degree: 6%
-
+source-wordcount: '475'
+ht-degree: 5%
 ---
-
 # 轉譯專用內容片段設定元件{#content-fragments-configuring-components-for-rendering}
 
 有數個[進階服務](/help/sites-developing/content-fragments-config-components-rendering.md#definition-of-advanced-services-that-need-configuration)與轉譯內容片段相關。 若要使用這些服務，這類元件的資源型別必須在內容片段框架中讓使用者知道這些元件。
@@ -132,7 +144,7 @@ OSGi設定是：
 
 ## 範例 {#example}
 
-如需範例，請參閱以下內容(在現成可用的AEM例項上)：
+如需範例，請參閱以下內容（在現成可用的AEM例項上）：
 
 ```
 /apps/core/wcm/config/com.adobe.cq.dam.cfm.impl.component.ComponentConfigImpl-core-comp-v1.config

@@ -5,13 +5,39 @@ exl-id: af29cb77-0210-4fc4-8d86-2a833d19b49f
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments,GraphQL,Persisted Queries,Developing
 role: Admin, Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: bfd4bc52-c397-5127-8f86-8953ba9fc0a3
+    internal-label: Headless
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+  - id: a642c50e-80eb-4fc1-a5d2-f3762d1f841d
+    internal-label: Administration
+  - id: d429a63e-ade4-4117-b04e-9b996d1c94ef
+    internal-label: Integrations
+  - id: c124fa01-25c5-42ec-adf6-21d1c114058b
+    internal-label: Developer tools
+subfeature_v2:
+  - id: e9db7c79-8f65-4281-a439-c9049296d903
+    internal-label: Content Fragments
+  - id: a02b73a7-bdfc-4225-bdfd-69f7891ab55e
+    internal-label: GraphQL
+  - id: d781bc8f-52af-43f6-84d0-b73e59a130d5
+    internal-label: Persisted queries
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
 source-wordcount: '1108'
 ht-degree: 84%
-
 ---
-
 # 如何透過 AEM Assets API 更新您的內容 {#update-your-content}
 
 在 [AEM Headless 開發人員歷程](overview.md)的這一部分中，了解如何使用 REST API 存取和更新內容片段的內容。
@@ -30,9 +56,9 @@ ht-degree: 84%
 
 * **客群**：進階
 * **目標**：了解如何使用 REST API 存取和更新內容片段的內容：
-   * 介紹 AEM Assets HTTP API。
-   * 介紹和討論 API 支援內容片段。
-   * 說明 API 的詳細資訊。
+  * 介紹 AEM Assets HTTP API。
+  * 介紹和討論 API 支援內容片段。
+  * 說明 API 的詳細資訊。
 
 <!--
   * Look at sample code to see how things work in practice.
@@ -215,9 +241,9 @@ Associated content is currently not exposed.
 Assets REST API 使用 `/api/assets` 端點並需要資產的路徑來存取它 (開頭無 `/content/dam`)。
 
 * 這表示要存取以下位置的資產：
-   * `/content/dam/path/to/asset`
+  * `/content/dam/path/to/asset`
 * 您需要要求：
-   * `/api/assets/path/to/asset`
+  * `/api/assets/path/to/asset`
 
 例如，若要存取 `/content/dam/wknd/en/adventures/cycling-tuscany`，要求 `/api/assets/wknd/en/adventures/cycling-tuscany.json`
 
@@ -247,9 +273,9 @@ API 參考文件中定義了受支援要求的確切格式。
 * 強烈建議建立操作與作者執行個體綁定 (目前沒有辦法複製片段以使用此 API 發佈)。
 * 都可以從兩者傳遞，因為 AEM 僅以 JSON 格式提供要求的內容。
 
-   * 來自 AEM 作者執行個體的儲存和傳遞操作應該足以滿足防火牆後的媒體庫應用程式的需求。
+  * 來自 AEM 作者執行個體的儲存和傳遞操作應該足以滿足防火牆後的媒體庫應用程式的需求。
 
-   * 如果是即時 Web 傳遞，則建議使用 AEM 發佈執行個體。
+  * 如果是即時 Web 傳遞，則建議使用 AEM 發佈執行個體。
 
 >[!CAUTION]
 >
@@ -326,12 +352,12 @@ API 參考文件中定義了受支援要求的確切格式。
 
 * [Assets HTTP API](/help/assets/mac-api-assets.md)
 * [內容片段 REST API](/help/assets/assets-api-content-fragments.md)
-   * [API 參考](/help/assets/assets-api-content-fragments.md#api-reference)
+  * [API 參考](/help/assets/assets-api-content-fragments.md#api-reference)
 * [Adobe Experience Manager Assets API — 內容片段](https://www.adobe.io/experience-manager/reference-materials/6-5/assets-api-content-fragments/index.html)
 * [使用內容片段](/help/assets/content-fragments/content-fragments.md)
-* [AEM 核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)
+* [AEM 核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
 * [CORS/AEM說明](https://helpx.adobe.com/tw/experience-manager/kt/platform-repository/using/cors-security-article-understand.html)
 * [影片 — 使用AEM為CORS開發](https://helpx.adobe.com/tw/experience-manager/kt/platform-repository/using/cors-security-technical-video-develop.html)
 * [AEM as a Headless CMS 簡介](/help/sites-developing/headless/introduction.md)
-* [AEM 開發人員入口網站](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=zh-Hant)
-* [AEM 中的無周邊教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=zh-Hant)
+* [AEM 開發人員入口網站](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
+* [AEM 中的無周邊教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)

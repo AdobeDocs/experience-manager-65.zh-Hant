@@ -1,19 +1,26 @@
 ---
 title: 在We.Retail中嘗試可編輯的範本
-
 description: 瞭解如何使用We.Retail在Adobe Experience Manager中試用可編輯的範本。
-
-
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
-
 exl-id: efebe66d-3d30-4033-9c4c-ae347e134f2f
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
 source-wordcount: '495'
 ht-degree: 3%
@@ -76,4 +83,4 @@ We.Retail中的所有頁面都是以可編輯的範本為基礎，讓非開發�
 
 如需進一步資訊，請參閱撰寫檔案[建立頁面範本](/help/sites-authoring/templates.md)或開發人員檔案頁面[範本 — 可編輯](/help/sites-developing/page-templates-editable.md)，以取得可編輯範本的完整技術細節。
 
-您可能也想要調查[核心元件](/help/sites-developing/we-retail-core-components.md)。 請參閱撰寫檔案[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)，以取得核心元件功能的概述，以及開發人員檔案[開發核心元件](https://helpx.adobe.com/tw/experience-manager/core-components/using/developing.html)，以取得技術概述。
+您可能也想要調查[核心元件](/help/sites-developing/we-retail-core-components.md)。 請參閱撰寫檔案[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)，以取得核心元件功能的概述，以及開發人員檔案[開發核心元件](https://helpx.adobe.com/experience-manager/core-components/using/developing.html)，以取得技術概述。

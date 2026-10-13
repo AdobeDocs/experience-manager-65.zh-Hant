@@ -1,18 +1,34 @@
 ---
-title: 使用PDF模擬轉譯器來產生轉譯
+title: 使用PDF模擬轉譯器產生轉譯
 description: 使用Adobe PDF模擬轉譯器資料庫產生高品質的縮圖和轉譯。
 contentOwner: AG
 role: Developer, Admin
 feature: Developer Tools,Renditions
 exl-id: 6f365d6b-3972-4885-8766-5889e24289f1
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: f2d27a5f-0d67-4d85-8a24-86a8d8a3574b
+    internal-label: Developer tools
+  - id: ac365bec-0634-4744-9473-c42f47320593
+    internal-label: Asset management and governance
+subfeature_v2:
+  - id: e42ab83e-8918-43a7-98a3-62bebbd5bb3a
+    internal-label: Renditions
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '694'
+source-wordcount: '731'
 ht-degree: 0%
-
 ---
-
 # 使用PDF模擬轉譯器 {#using-pdf-rasterizer}
 
 當您上傳大型且需要大量內容的PDF或AI檔案至[!DNL Adobe Experience Manager Assets]時，預設程式庫可能無法產生準確的輸出。 與預設程式庫的輸出相比，Adobe的PDF模擬轉譯器程式庫可產生更可靠且精確的輸出。 Adobe建議在下列情況下使用PDF模擬轉譯器資料庫：
@@ -20,12 +36,12 @@ ht-degree: 0%
 Adobe建議針對下列專案使用PDF模擬轉譯器資料庫：
 
 * 大量且需要大量內容的AI檔案或PDF檔案。
-* 預設不會產生AI檔案和含縮圖的PDF檔案。
+* AI檔案和PDF檔案包含預設不會產生的縮圖。
 * 具有Pantone比對系統(PMS)顏色的AI檔案。
 
-使用PDF模擬轉譯器產生的縮圖和預覽，其品質優於現成可用的輸出，因此可提供跨裝置的一致檢視體驗。 Adobe PDF模擬轉譯器資料庫不支援任何色域轉換。 無論來源檔案的色域為何，一律會輸出為RGB。
+使用PDF模擬轉譯器產生的縮圖和預覽，其品質優於現成可用的輸出，因此可跨裝置提供一致的檢視體驗。 Adobe PDF模擬轉譯器資料庫不支援任何色域轉換。 無論來源檔案的色域為何，一律會輸出至RGB。
 
-1. 從[Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/product/assets/aem-assets-pdf-rasterizer-pkg-4.6.zip)在您的[!DNL Adobe Experience Manager]PDF上安裝模擬轉譯器套件。
+1. 從[Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/product/assets/aem-assets-pdf-rasterizer-pkg-4.6.zip)在您的[!DNL Adobe Experience Manager]部署上安裝PDF模擬轉譯器套件。
 
    >[!NOTE]
    >
@@ -47,7 +63,7 @@ Adobe建議針對下列專案使用PDF模擬轉譯器資料庫：
 
    ![process_arguments](assets/process_arguments.png)
 
-1. 將&#x200B;**[!UICONTROL PDF模擬轉譯器處理常式]**&#x200B;步驟從側面板拖曳到&#x200B;**[!UICONTROL 處理縮圖]**&#x200B;步驟下方。
+1. 將&#x200B;**[!UICONTROL PDF模擬轉譯器處理常式]**&#x200B;步驟從側面板拖曳至&#x200B;**[!UICONTROL 處理縮圖]**&#x200B;步驟下方。
 1. 為&#x200B;**[!UICONTROL PDF模擬轉譯器處理常式]**&#x200B;步驟設定下列引數：
 
    * MIME型別： `application/pdf`或`application/postscript`
@@ -67,7 +83,7 @@ Adobe建議針對下列專案使用PDF模擬轉譯器資料庫：
    * `-h`：說明
 
 1. 若要刪除中繼轉譯，請選取&#x200B;**[!UICONTROL 刪除產生的轉譯]**。
-1. 若要讓PDF模擬轉譯器產生Web轉譯，請選取&#x200B;**[!UICONTROL 產生Web轉譯]**。
+1. 若要讓PDF模擬轉譯器產生網頁轉譯，請選取&#x200B;**[!UICONTROL 產生網頁轉譯]**。
 
    ![generate_web_renditions1](assets/generate_web_renditions1.png)
 
@@ -97,7 +113,7 @@ Adobe建議針對下列專案使用PDF模擬轉譯器資料庫：
    * `-h`：說明
 
 1. 若要刪除中繼轉譯，請選取&#x200B;**[!UICONTROL 刪除產生的轉譯]**。
-1. 若要讓PDF模擬轉譯器產生Web轉譯，請選取&#x200B;**[!UICONTROL 產生Web轉譯]**。
+1. 若要讓PDF模擬轉譯器產生網頁轉譯，請選取&#x200B;**[!UICONTROL 產生網頁轉譯]**。
 
    ![generate_web_renditions](assets/generate_web_renditions.png)
 

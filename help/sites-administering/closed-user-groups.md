@@ -10,7 +10,21 @@ exl-id: 39e35a07-140f-4853-8f0d-8275bce27a65
 feature: Security
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: b1210526-416b-4ef6-bcc0-1692e99f30e9
+    internal-label: Administration and security
+subfeature_v2:
+  - id: c35bc059-fd80-4a01-91a6-e48da3c76758
+    internal-label: Security practices
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '6781'
 ht-degree: 0%
@@ -815,7 +829,7 @@ CUG授權模型可讓您個別開啟存取控制管理和許可權評估：
 * 如果模組有一或多個可建立CUG的支援路徑，則會啟用存取控制管理
 * 只有同時核取選項&#x200B;**CUG Evaluation Enabled**&#x200B;時，才會啟用許可權評估。
 
-在新的AEM預設設定CUG原則評估中，它僅在「發佈」執行模式中啟用。 如需詳細資訊，請參閱AEM 6.3[&#128279;](#default-configuration-since-aem)之後的預設設定。 這可透過比較給定路徑的有效原則與內容中儲存的原則來驗證。 只有啟用CUG的許可權評估時，才會顯示有效原則。
+在新的AEM預設設定CUG原則評估中，它僅在「發佈」執行模式中啟用。 如需詳細資訊，請參閱AEM 6.3](#default-configuration-since-aem)之後的[預設設定。 這可透過比較給定路徑的有效原則與內容中儲存的原則來驗證。 只有啟用CUG的許可權評估時，才會顯示有效原則。
 
 如上所述，CUG存取控制原則現在一律會儲存在內容中，但是只有在Apache Jackrabbit Oak **CUG組態的系統主控台中開啟**&#x200B;啟用CUG評估&#x200B;**時，才會強制執行這些原則所產生的有效許可權評估。** 預設情況下，僅在「發佈」執行模式中啟用它。
 

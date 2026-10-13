@@ -5,13 +5,25 @@ feature: Content Fragments
 role: User
 exl-id: 6212457e-a171-4c33-8d19-54c26516e981
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: a77b577341050316ce60ae809a4912bbbbce974c
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: a45b1e7f-e65f-4cd3-be86-5cec5d9449ef
+    internal-label: Content management
+subfeature_v2:
+  - id: b7f5d1e0-aa2f-4a55-83f4-c2b35a8bd3a7
+    internal-label: Content fragments
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '517'
+source-wordcount: '519'
 ht-degree: 9%
-
 ---
-
 # 內容片段 - 刪除考量事項 {#content-fragments-delete-considerations}
 
 在AEM中定義內容片段刪除原則之前，請檢閱這些重要考量。 內容片段是傳送Headless內容的強大工具，必須仔細考慮刪除這些片段的影響。
@@ -25,7 +37,7 @@ ht-degree: 9%
 1. **內容片段為單一實體。**
 
    * **使用案例**：需要編輯/更新內容片段的使用者 — **並刪除整個片段**。
-   * **許可權**： [Delete](/help/sites-administering/security.md#actions)許可權可以透過使用者和/或群組管理[&#128279;](/help/sites-administering/security.md#managing-permissions)進行指派。
+   * **許可權**： [Delete](/help/sites-administering/security.md#actions)許可權可以透過使用者和/或群組管理](/help/sites-administering/security.md#managing-permissions)進行[指派。
 
 2. **構成內容片段的多個子實體；例如，變化、子節點。**
 
@@ -44,13 +56,13 @@ ht-degree: 9%
 
 ## 僅編輯器功能所需的許可權 {#permissions-required-for-editor-functionality-only}
 
-對於需要編輯/更新內容片段而不允許他們刪除整個片段的使用者 **&#x200B;**，必須指派特定權限，因為內容片段編輯器的基本操作要求可以刪除暫時的子元素。
+對於需要編輯/更新內容片段而不允許他們刪除整個片段的使用者 ****，必須指派特定權限，因為內容片段編輯器的基本操作要求可以刪除暫時的子元素。
 
 例如，操控變數時、編輯中繼資料時，或管理關聯內容時。
 
 >[!NOTE]
 >
->編輯/更新內容片段所需的刪除許可權包含在透過使用者和/或群組管理[&#128279;](/help/sites-administering/security.md#managing-permissions)指派的「刪除」許可權中。
+>編輯/更新內容片段所需的刪除許可權包含在透過使用者和/或群組管理](/help/sites-administering/security.md#managing-permissions)指派的「刪除」許可權[中。
 
 編輯/更新片段所需的許可權需要套用至包含內容片段的節點或適當的父節點（`/content/dam`下的任何層級）。 指派給此類父節點時，許可權將套用至該分支內的所有節點。
 
@@ -72,17 +84,17 @@ ht-degree: 9%
 
 * 對於內容片段節點或資料夾：
 
-   * `jcr:addChildNodes`、`jcr:modifyProperties`
+  * `jcr:addChildNodes`、`jcr:modifyProperties`
 
 * 針對所有內容片段的`jcr:content`節點：
 
-   * `jcr:addChildNodes`、`jcr:modifyProperties`和`jcr:removeChildNodes`
+  * `jcr:addChildNodes`、`jcr:modifyProperties`和`jcr:removeChildNodes`
 
 * 針對所有內容片段的`jcr:content`以下的所有節點：
 
-   * `jcr:addChildNodes`、`jcr:modifyProperties`和`jcr:removeChildNodes`、`jcr:removeNode`
+  * `jcr:addChildNodes`、`jcr:modifyProperties`和`jcr:removeChildNodes`、`jcr:removeNode`
 
-這些`remove`許可權必須由CRXDE Lite[&#128279;](/help/sites-administering/user-group-ac-admin.md#access-right-management)中的存取控制清單管理。
+這些`remove`許可權必須由CRXDE Lite](/help/sites-administering/user-group-ac-admin.md#access-right-management)中的存取控制清單[管理。
 
 `add`和`modify`許可權也可以在CRXDE Lite中管理，或使用使用者管理主控台進行管理。
 

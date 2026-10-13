@@ -10,13 +10,20 @@ role: Admin
 exl-id: 2395c895-c611-43ac-abb6-c2bc4b4a41f4
 solution: Experience Manager
 feature: Communities
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '2253'
 ht-degree: 2%
-
 ---
-
 # 社群功能{#community-functions}
 
 社群體驗中預期的功能型別眾所周知。 社群功能可作為社群功能使用。 基本上，這些頁面是預先接線的一或多個頁面，用於實作社群功能，該功能不僅需要以製作模式將元件新增至頁面。 這些是建置區塊，用來定義[社群網站範本](/help/communities/sites.md)的結構，社群網站是從這些範本[建立的](/help/communities/sites-console.md)。

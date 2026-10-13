@@ -1,28 +1,47 @@
 ---
 title: 如何建立最適化表單
-description: 瞭解如何使用 [!DNL Experience Manager Forms]建立最適化表單。 調適型表單是回應式HTML5表單，可簡化資訊收集和處理。 深入瞭解如何根據表單資料模型、XFA表單範本及XML或JSON結構描述建立最適化表單。
+description: 瞭解如何使用[!DNL Experience Manager Forms]建立最適化表單。 調適型表單是回應式HTML5表單，可簡化資訊收集和處理。 深入瞭解如何根據表單資料模型、XFA表單範本及XML或JSON結構描述建立最適化表單。
 role: User, Developer
 level: Beginner
 feature: Adaptive Forms,Foundation Components
 solution: Experience Manager, Experience Manager Forms
 exl-id: 2c25a8b7-73f7-40fb-a303-9446a708c8eb
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 7da902b6-fe94-5180-8e7c-f6d1e38d01d5
+    internal-label: Foundation Components
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+    internal-label: Beginner
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '2048'
 ht-degree: 11%
-
 ---
-
 # 建立最適化表單 {#creating-an-adaptive-form}
 
-<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hant)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。 這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。 本文會介紹使用基礎元件編寫最適化表單的舊方法。</span>
+<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。 這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。 本文會介紹使用基礎元件編寫最適化表單的舊方法。</span>
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/create-an-adaptive-form-on-forms-cs/creating-adaptive-form.html?lang=zh-Hant) |
+| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/create-an-adaptive-form-on-forms-cs/creating-adaptive-form.html) |
 | AEM 6.5 | 本文章 |
 
-## 建立最適化表單 {#strong-create-an-adaptive-form-strong}
+## 建立自適應表單 {#strong-create-an-adaptive-form-strong}
 
 請依照下列步驟建立最適化表單。
 
@@ -56,9 +75,9 @@ ht-degree: 11%
 
 1. 選擇 **[!UICONTROL 建立]**。 系統隨即建立最適化表單，並顯示對話方塊以開啟表單進行編輯。
 
-   完成指定所有屬性之後，請按一下[建立]。**&#x200B;** 系統隨即建立最適化表單，並顯示對話方塊以開啟表單進行編輯。
+   完成指定所有屬性之後，請按一下[建立]。**** 系統隨即建立最適化表單，並顯示對話方塊以開啟表單進行編輯。
 
-   完成指定所有屬性之後，請按一下[建立]。**&#x200B;** 系統隨即建立最適化表單，並顯示對話方塊以開啟表單進行編輯。
+   完成指定所有屬性之後，請按一下[建立]。**** 系統隨即建立最適化表單，並顯示對話方塊以開啟表單進行編輯。
 
 1. 選取&#x200B;**[!UICONTROL 開啟]**&#x200B;以在新索引標籤中開啟新建立的表單。 表單會開啟以進行編輯，並顯示範本中可用的內容。 也會顯示側邊欄，以便您根據需求自訂新建立的表單。
 
@@ -203,7 +222,7 @@ XML和JSON結構描述代表組織中後端系統產生或使用資料的結構�
 
 1. （僅限事件式自動儲存）執行下列步驟，設定事件式自動儲存的選項。
 
-   1. 在此事件&#x200B;**之後的**&#x200B;自動儲存方塊中，指定[GuideBridge](https://helpx.adobe.com/tw/aem-forms/6/javascript-api/GuideBridge.html)事件。 每次運算式評估為TRUE時，都會儲存表單。
+   1. 在此事件&#x200B;]**之後的**[!UICONTROL &#x200B;自動儲存方塊中，指定[GuideBridge](https://helpx.adobe.com/aem-forms/6/javascript-api/GuideBridge.html)事件。 每次運算式評估為TRUE時，都會儲存表單。
 
 1. （選擇性）若要自動儲存匿名使用者的內容，請選取&#x200B;**[!UICONTROL 啟用匿名使用者的自動儲存]**&#x200B;選項，然後按一下&#x200B;**[!UICONTROL 確定]**。
 

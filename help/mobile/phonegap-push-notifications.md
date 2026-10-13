@@ -9,7 +9,13 @@ exl-id: 375f2f40-1b98-4e21-adee-cbea274e6a2a
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '3252'
 ht-degree: 1%
@@ -115,7 +121,7 @@ AEM已設定為使用下列三項服務之一來推送通知：
 1. **建立存取金鑰與識別碼**
 
    1. 按一下畫面右上角的登入名稱，然後從功能表選擇[安全性認證]。
-   1. 按一下[存取金鑰]，然後在下面的空白處按一下[建立新的存取金鑰]&#x200B;**&#x200B;**。
+   1. 按一下[存取金鑰]，然後在下面的空白處按一下[建立新的存取金鑰]****。
    1. 按一下&#x200B;**顯示存取金鑰**，然後複製並儲存顯示的存取金鑰ID和機密存取金鑰。 如果選擇下載金鑰的選項，您會得到包含這些相同值的csv檔案。
    1. 您可以在此頁面管理其他安全性相關憑證，以及某些其他憑證。
 

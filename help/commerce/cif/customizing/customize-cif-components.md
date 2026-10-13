@@ -5,7 +5,17 @@ exl-id: 8933942e-be49-49d3-bf0a-7225257e2803
 feature: Commerce Integration Framework
 solution: Experience Manager,Commerce
 role: Admin, Developer
-source-git-commit: 15fb75221470fe30d4a0c603e1bb0d0a45575eb5
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '2667'
 ht-degree: 4%
@@ -125,7 +135,7 @@ AEM中顯示的產品和產品資料儲存在Adobe Commerce中。 接下來，�
 
    >[!TIP]
    >
-   >在Adobe Commerce使用手冊[&#128279;](https://docs.magento.com/user-guide/system/cache-management.html)中找到有關快取管理的更多詳細資料。
+   >在Adobe Commerce使用手冊](https://docs.magento.com/user-guide/system/cache-management.html)中找到有關[快取管理的更多詳細資料。
 
 ## 使用GraphQL IDE驗證屬性 {#use-graphql-ide}
 
@@ -178,11 +188,11 @@ AEM中顯示的產品和產品資料儲存在Adobe Commerce中。 接下來，�
 
 ## 更新產品Teaser的Sling模型 {#updating-sling-model-product-teaser}
 
-接下來，您可以實作Sling模型來擴充產品Teaser的商業邏輯。 [Sling模型](https://sling.apache.org/documentation/bundles/models.html)是註釋導向的「POJO」（純舊的Java™物件），可實作元件所需的任何商業邏輯。 Sling模型會搭配HTL指令碼使用作為元件的一部分。 遵循Sling模型[&#128279;](https://github.com/adobe/aem-core-wcm-components/wiki/Delegation-Pattern-for-Sling-Models)的委派模式，以便您可以擴充現有產品Teaser模型的部分。
+接下來，您可以實作Sling模型來擴充產品Teaser的商業邏輯。 [Sling模型](https://sling.apache.org/documentation/bundles/models.html)是註釋導向的「POJO」（純舊的Java™物件），可實作元件所需的任何商業邏輯。 Sling模型會搭配HTL指令碼使用作為元件的一部分。 遵循Sling模型](https://github.com/adobe/aem-core-wcm-components/wiki/Delegation-Pattern-for-Sling-Models)的[委派模式，以便您可以擴充現有產品Teaser模型的部分。
 
 Sling模型已實作為Java™，且可在產生專案的&#x200B;**核心**&#x200B;模組中找到。
 
-使用[您選擇的IDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html?lang=zh-Hant#set-up-the-development-ide)匯入Venia專案。 使用的熒幕擷取畫面來自[Visual Studio Code IDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html?lang=zh-Hant&#microsoft-visual-studio-code)。
+使用[您選擇的IDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html#set-up-the-development-ide)匯入Venia專案。 使用的熒幕擷取畫面來自[Visual Studio Code IDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html?#microsoft-visual-studio-code)。
 
 1. 在您的IDE中，在&#x200B;**核心**&#x200B;模組下方導覽至： `core/src/main/java/com/venia/core/models/commerce/MyProductTeaser.java`。
 
@@ -209,7 +219,7 @@ Sling模型已實作為Java™，且可在產生專案的&#x200B;**核心**&#x20
 
 1. 接下來，在`core/src/main/java/com/venia/core/models/commerce/MyProductTeaserImpl.java`檢查`MyProductTeaserImpl.java`。
 
-   Sling模型[&#128279;](https://github.com/adobe/aem-core-wcm-components/wiki/Delegation-Pattern-for-Sling-Models)的委派模式允許`MyProductTeaserImpl`透過`sling:resourceSuperType`屬性參考`ProductTeaser`模型：
+   Sling模型](https://github.com/adobe/aem-core-wcm-components/wiki/Delegation-Pattern-for-Sling-Models)的[委派模式允許`MyProductTeaserImpl`透過`sling:resourceSuperType`屬性參考`ProductTeaser`模型：
 
    ```java
    @Self
@@ -322,9 +332,9 @@ Sling模型已實作為Java™，且可在產生專案的&#x200B;**核心**&#x20
 
 ## 自訂產品Teaser的標籤 {#customize-markup-product-teaser}
 
-AEM元件的常見擴充功能是修改元件產生的標籤。 覆寫元件用來呈現其標籤的[HTL指令碼](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=zh-Hant)即可完成此操作。 HTML範本語言(HTL)是一種輕量型的範本語言，AEM元件會使用它來根據編寫的內容動態呈現標籤，並允許元件重複使用。 例如，產品Teaser可以重複使用以顯示不同的產品。
+AEM元件的常見擴充功能是修改元件產生的標籤。 覆寫元件用來呈現其標籤的[HTL指令碼](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)即可完成此操作。 HTML範本語言(HTL)是一種輕量型的範本語言，AEM元件會使用它來根據編寫的內容動態呈現標籤，並允許元件重複使用。 例如，產品Teaser可以重複使用以顯示不同的產品。
 
-在此案例中，您想要在Teaser上方呈現橫幅，以根據自訂屬性指出產品是「環保的」。 自訂元件標籤[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/customizing.html?lang=zh-Hant#customizing-the-markup)的設計模式，是所有AEM元件的標準設定，不只是AEM CIF核心元件的標準設定。
+在此案例中，您想要在Teaser上方呈現橫幅，以根據自訂屬性指出產品是「環保的」。 自訂元件標籤](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/customizing.html#customizing-the-markup)的[設計模式，是所有AEM元件的標準設定，不只是AEM CIF核心元件的標準設定。
 
 >[!NOTE]
 >
@@ -344,7 +354,7 @@ AEM元件的常見擴充功能是修改元件產生的標籤。 覆寫元件用�
        componentGroup="Venia - Commerce"/>
    ```
 
-   此專案中產品Teaser元件的元件定義位於上面。 請注意屬性`sling:resourceSuperType="core/cif/components/commerce/productteaser/v1/productteaser"`。 這是建立[Proxy元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/using.html?lang=zh-Hant#create-proxy-components)的範例。 您可以使用`sling:resourceSuperType`繼承所有功能，而不必從AEM CIF核心元件複製和貼上所有產品Teaser HTL指令碼。
+   此專案中產品Teaser元件的元件定義位於上面。 請注意屬性`sling:resourceSuperType="core/cif/components/commerce/productteaser/v1/productteaser"`。 這是建立[Proxy元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/using.html#create-proxy-components)的範例。 您可以使用`sling:resourceSuperType`繼承所有功能，而不必從AEM CIF核心元件複製和貼上所有產品Teaser HTL指令碼。
 
 1. 開啟檔案 `productteaser.html`。 這是來自[CIF產品預告](https://github.com/adobe/aem-core-cif-components/blob/master/ui.apps/src/main/content/jcr_root/apps/core/cif/components/commerce/productteaser/v1/productteaser/productteaser.html)的`productteaser.html`檔案復本
 
@@ -384,7 +394,7 @@ AEM元件的常見擴充功能是修改元件產生的標籤。 覆寫元件用�
 
    在HTL中呼叫Sling模型方法時，會捨棄方法的`get`和`is`部分，且第一個字母會變成小寫。 因此，`isShowBadge()`會變成`.showBadge`，`isEcoFriendly`會變成`.ecoFriendly`。 根據從`.isEcoFriendly()`傳回的布林值，決定是否顯示`<span>Eco Friendly</span>`。
 
-   如需`data-sly-test`和其他HTL區塊陳述式的詳細資訊，請參閱[HTL規格](https://experienceleague.adobe.com/docs/experience-manager-htl/content/specification.html?lang=zh-Hant)。
+   如需`data-sly-test`和其他HTL區塊陳述式的詳細資訊，請參閱[HTL規格](https://experienceleague.adobe.com/docs/experience-manager-htl/content/specification.html)。
 
 1. 從命令列終端機，使用Maven技能儲存變更並將更新部署到AEM：
 
@@ -488,9 +498,9 @@ AEM元件的常見擴充功能是修改元件產生的標籤。 覆寫元件用�
 
 ## 其他資源 {#additional-resources}
 
-- [AEM原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hant)
+- [AEM原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)
 - [AEM CIF核心元件](https://github.com/adobe/aem-core-cif-components)
 - [自訂AEM CIF核心元件](https://github.com/adobe/aem-core-cif-components)
-- [自訂核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/customizing.html?lang=zh-Hant)
-- [AEM Sites快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hant)
+- [自訂核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/customizing.html)
+- [AEM Sites快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
 - [CIF產品和類別選擇器的使用方式](use-cif-pickers.md)

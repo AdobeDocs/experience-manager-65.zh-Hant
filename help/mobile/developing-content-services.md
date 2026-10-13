@@ -1,5 +1,5 @@
 ---
-title: Content Services
+title: 內容服務
 description: 瞭解如何使用AEM Mobile Content Services來請求由AEM管理的內容。
 contentOwner: User
 content-type: reference
@@ -8,14 +8,18 @@ exl-id: 955ffb1c-4fa9-43bb-8e5b-2df7f2d17951
 solution: Experience Manager
 feature: Mobile
 role: Developer
-source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '292'
+source-wordcount: '295'
 ht-degree: 2%
-
 ---
-
-# Content Services{#content-services}
+# 內容服務{#content-services}
 
 {{ue-over-mobile}}
 
@@ -25,13 +29,13 @@ ht-degree: 2%
 >
 >此版本可能會隨著6.3 Service Pack 1發行而有所變更。
 
-AEM Mobile Content Services是輕量級的功能，可請求由AEM管理的內容。 這可讓所有應用程式開發人員不需要深入瞭解AEM的內容存放庫(JCR)和Web架構(Sling)，就能以高效能的方式擷取內容。 這可讓請求的應用程式與內容存放庫分離。
+AEM Mobile Content Services是輕量級的功能，可請求由AEM管理的內容。 這可讓所有應用程式開發人員不需要深入瞭解AEM的內容存放庫(JCR)和網頁架構(Sling)，就能以高效能的方式擷取內容。 這可讓請求的應用程式與內容存放庫分離。
 
-Content Services引進了數種新的AEM建構，讓開發人員可存取AEM管理的內容，而不需瞭解該內容的存放庫結構。
+Content Services匯入了數種新的AEM建構，讓開發人員可直接存取AEM管理的內容，而不需瞭解該內容的存放庫結構。
 
 這些建構對於在AEM管理的內容和使用內容的行動應用程式之間提供抽象層，以保持靈活性並啟用未來擴充是必要的。 這可讓AEM Content Services在原生應用程式的內容需求與AEM內容存放庫之間，以抽象層的形式運作。
 
-Content Services可將內容以資產、封裝HTML(HTML/CSS/JS)或獨立於管道的內容形式提供。
+Content Services可將內容以資產、封裝的HTML (HTML/CSS/JS)或不受通道影響的內容來傳送。
 
 >[!CAUTION]
 >

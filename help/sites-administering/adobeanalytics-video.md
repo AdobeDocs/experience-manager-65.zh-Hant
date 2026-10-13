@@ -10,7 +10,18 @@ exl-id: 5d51f898-b6d1-40ac-bdbf-127cda1dc777
 solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
-source-git-commit: 15fb75221470fe30d4a0c603e1bb0d0a45575eb5
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 243139ec-8e41-5296-a287-31343ab1bc0f
+    internal-label: Integration
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1817'
 ht-degree: 0%
@@ -137,7 +148,7 @@ XX尾碼是定義里程碑的軌跡位移。 例如，指定4、8、16、20和28
 
 1. 若要將CQ變數對應至Adobe Analytics屬性，請將Adobe Analytics屬性從ContentFinder拖曳至元件上CQ變數旁邊。
 
-   如需最佳化對應的詳細資訊，請參閱[在Adobe Analytics中測量視訊](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html?lang=zh-Hant)指南。
+   如需最佳化對應的詳細資訊，請參閱[在Adobe Analytics中測量視訊](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html)指南。
 
 1. [將架構](/help/sites-administering/adobeanalytics.md)新增至頁面。
 1. 若要在&#x200B;**預覽模式**&#x200B;中測試設定，請播放視訊以讓Adobe Analytics呼叫觸發。
@@ -272,7 +283,7 @@ eventdata.events.milestoneXX
 
 1. 若要將CQ變數對應至Adobe Analytics屬性，請將Adobe Analytics屬性從ContentFinder拖曳至元件上CQ變數旁邊。
 
-   如需最佳化對應的詳細資訊，請參閱[在Adobe Analytics中測量視訊](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html?lang=zh-Hant)指南。
+   如需最佳化對應的詳細資訊，請參閱[在Adobe Analytics中測量視訊](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html)指南。
 
 1. [將架構](/help/sites-administering/adobeanalytics.md)新增至頁面。
 1. 若要在&#x200B;**預覽模式**&#x200B;中測試設定，請播放視訊以讓Adobe Analytics呼叫觸發。
@@ -320,7 +331,7 @@ eventdata.events.milestoneXX
 
    ![里程碑1](assets/lmilestones1.png)
 
-   *呼叫中傳送的&#x200B;**pev3**&#x200B;變數包含下列資訊：*
+   *呼叫中傳送的&#x200B;**pev3**變數包含下列資訊：*
 
    * *名稱* — 視訊檔的名稱(*film.avi*)
 
@@ -336,7 +347,7 @@ eventdata.events.milestoneXX
 
 ## 舊版秒數 {#legacy-seconds}
 
-使用&#x200B;**舊版秒**&#x200B;方法時，Adobe Analytics呼叫會每隔N秒觸發一次，其中N會在「追蹤位移」欄位中指定。
+使用**舊版秒**方法時，Adobe Analytics呼叫會每隔N秒觸發一次，其中N會在「追蹤位移」欄位中指定。
 
 1. 將追蹤位移設為任何秒數，
 
@@ -381,4 +392,4 @@ eventdata.events.milestoneXX
 
 此教學課程中使用的&#x200B;**參考：**
 
-[0] [https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html?lang=zh-Hant](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html?lang=zh-Hant)
+[0] [https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html)

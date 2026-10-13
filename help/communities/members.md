@@ -9,13 +9,20 @@ role: Admin
 exl-id: b64e24d2-8407-484c-8216-8d328ef5fa4f
 solution: Experience Manager
 feature: Communities
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '903'
+source-wordcount: '969'
 ht-degree: 1%
-
 ---
-
 
 # 成員與群組管理主控台 {#members-groups-management-consoles}
 
@@ -87,7 +94,7 @@ AEM Communities功能通常要求網站訪客先註冊並登入，才能參與�
 
 （*必要*）可授權識別碼是成員的登入識別碼。
 根據預設，ID會設定為所需電子郵件地址的值。
-*ID一旦建立就不可修改*。
+*建立之後，ID就不可修改*。
 
 * **[!UICONTROL 電子郵件地址]**
 
@@ -118,19 +125,19 @@ AEM Communities功能通常要求網站訪客先註冊並登入，才能參與�
 在「帳戶設定」底下，社群管理員可以：
 
 * **[!UICONTROL 狀態]**
-   * 已禁止
-成員無法登入，導致他們無法檢視頁面或參與需要登入的活動。 他們仍可匿名造訪開放的社群網站。
+  * 已禁止
+    成員無法登入，導致他們無法檢視頁面或參與需要登入的活動。 他們仍可匿名造訪開放的社群網站。
 
-   * 未禁止
-成員具有社群網站的完整存取權。
+  * 未禁止
+    成員具有社群網站的完整存取權。
 
   預設值為`Not Banned`。
 
 * **[!UICONTROL 貢獻限制]**
 
   如果勾選，則成員發佈內容的能力有限。
-預設值視貢獻限制的設定而定。
-請參閱[成員貢獻限制](limits.md)。
+  預設值視貢獻限制的設定而定。
+  請參閱[成員貢獻限制](limits.md)。
 
 * **[!UICONTROL 變更密碼]**
 
@@ -157,10 +164,10 @@ AEM Communities功能通常要求網站訪客先註冊並登入，才能參與�
 ![編輯成員資格設定視窗](assets/create-member2.png)
 
 * **[!UICONTROL 新增徽章]**
-   * 開始輸入以從[可用的徽章](badges.md)中選取。 選取徽章後，請選擇每個網站或所有網站，徽章應隨成員頭像一起顯示。
-   * 可選擇多個徽章和網站。
+  * 開始輸入以從[可用的徽章](badges.md)中選取。 選取徽章後，請選擇每個網站或所有網站，徽章應隨成員頭像一起顯示。
+  * 可選擇多個徽章和網站。
 * **[!UICONTROL 移除徽章]**
-   * 選取徽章旁的垃圾桶圖示以將其移除。
+  * 選取徽章旁的垃圾桶圖示以將其移除。
 
 ## 群組主控台 {#groups-console}
 
@@ -209,4 +216,4 @@ AEM Communities功能通常要求網站訪客先註冊並登入，才能參與�
 
 如果未以`admin`登入，則登入使用者必須是`administrators`使用者群組的成員。
 
-另請參閱作者[&#128279;](deploy-communities.md#replication-agents-on-author)上的復寫代理。
+另請參閱作者](deploy-communities.md#replication-agents-on-author)上的[復寫代理。

@@ -1,6 +1,6 @@
 ---
 title: 管理訂閱
-description: 可要求使用者利用AEM網頁上使用的表單元件，訂閱電子郵件服務提供者的郵寄清單。 若要使用登錄檔單準備AEM頁面以訂閱您的電子郵件服務郵寄清單，您必須將對應的服務設定套用至潛在訂閱者將造訪的AEM頁面。
+description: 若需在AEM網頁上使用的表單元件的協助，可要求使用者訂閱電子郵件服務提供者的郵寄清單。 若要使用登錄檔單準備AEM頁面以訂閱您的電子郵件服務郵寄清單，您必須將對應的服務設定套用至潛在訂閱者將造訪的AEM頁面。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
@@ -9,13 +9,24 @@ exl-id: add05d22-3a11-49e9-a554-2315962552d5
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization
 role: User
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+  - id: eb3ad9f8-54a2-45f3-abb1-d3976415a718
+    internal-label: Personalization
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '917'
+source-wordcount: '947'
 ht-degree: 1%
-
 ---
-
 # 管理訂閱{#managing-subscriptions}
 
 >[!NOTE]
@@ -27,12 +38,12 @@ ht-degree: 1%
 
 ## 將電子郵件服務設定套用至頁面 {#applying-email-service-configuration-to-a-page}
 
-設定AEM頁面：
+若要設定AEM頁面：
 
 1. 導覽至&#x200B;**網站**&#x200B;標籤。
 1. 選取需要為服務設定的頁面。 以滑鼠右鍵按一下頁面，然後選取&#x200B;**屬性**。
 
-1. 選取&#x200B;**Cloud Service**&#x200B;然後&#x200B;**新增服務**。 從可用組態清單中選取組態。
+1. 選取&#x200B;**雲端服務**&#x200B;然後&#x200B;**新增服務**。 從可用組態清單中選取組態。
 
    ![chlimage_1-164](assets/chlimage_1-164.png)
 
@@ -57,14 +68,14 @@ ht-degree: 1%
    >
    >視電子郵件服務提供者而定，您的對話方塊可能會有所不同。
 
-1. 在&#x200B;**表單**&#x200B;索引標籤中，選取使用者提交表單後要前往的感謝頁面（如果保留空白，表單會在提交時重新顯示）。 按一下&#x200B;**確定**。 表單中出現&#x200B;**電子郵件ID**&#x200B;元件，可讓您建立表單，使用者可在其中提交電子郵件地址以訂閱或取消訂閱郵寄清單。
+1. 在&#x200B;**表單**&#x200B;索引標籤中，選取使用者提交表單後要前往的感謝頁面（如果保留空白，表單會在提交時重新顯示）。 按一下&#x200B;**「確定」**。 表單中出現&#x200B;**電子郵件ID**&#x200B;元件，可讓您建立表單，使用者可在其中提交電子郵件地址以訂閱或取消訂閱郵寄清單。
 1. 從sidekick中的&#x200B;**Form**&#x200B;區段新增&#x200B;**Submit**&#x200B;按鈕元件。
 
-   表單已準備就緒。 Publish上述步驟中設定的頁面，以及發佈執行個體的&#x200B;**感謝您**&#x200B;頁面。 任何造訪頁面的潛在訂閱者都可以填寫表單並訂閱設定中提供的清單。
+   表單已準備就緒。 將上述步驟中設定的頁面以及&#x200B;**感謝您**&#x200B;頁面發佈到發佈執行個體。 任何造訪頁面的潛在訂閱者都可以填寫表單並訂閱設定中提供的清單。
 
    >[!NOTE]
    >
-   >若要讓表單訂閱正確運作，需要在發佈執行個體[&#128279;](#exporting-keys-from-author-and-importing-on-publish)上匯出和匯入作者的加密金鑰。
+   >若要讓表單訂閱正確運作，需要在發佈執行個體](#exporting-keys-from-author-and-importing-on-publish)上匯出和匯入作者的[加密金鑰。
 
 ## 從作者匯出索引鍵並在發佈時匯入 {#exporting-keys-from-author-and-importing-on-publish}
 
@@ -74,7 +85,7 @@ ht-degree: 1%
 1. 建立套件。 將篩選器設為`/etc/key`。
 1. 建置並下載套件。
 1. 導覽至發佈執行個體上的封裝管理員，然後上傳此封裝。
-1. 導覽至Publish osgi主控台，然後重新啟動名為&#x200B;**AdobeGranite加密支援**&#x200B;的套件組合。
+1. 瀏覽至Publish osgi主控台，並重新啟動名為&#x200B;**Adobe Granite Crypto Support**&#x200B;的套件。
 
 ## 從清單中取消訂閱使用者 {#unsubscribing-users-from-lists}
 
@@ -110,10 +121,10 @@ ht-degree: 1%
 1. 將金鑰從作者匯出至發佈。
 1. 從sidekick中的&#x200B;**Form**&#x200B;區段新增&#x200B;**Submit**&#x200B;按鈕元件。
 
-   登錄檔單已準備就緒。 Publish上述步驟中設定的頁面，以及發佈執行個體的&#x200B;**感謝您**&#x200B;頁面。 任何造訪頁面的潛在訂閱者都可以填寫表單，而在提交表單時，訪客將會收到填寫表單之電子郵件ID的自動回覆電子郵件。
+   登錄檔單已準備就緒。 將上述步驟中設定的頁面以及&#x200B;**感謝您**&#x200B;頁面發佈到發佈執行個體。 任何造訪頁面的潛在訂閱者都可以填寫表單，而在提交表單時，訪客將會收到填寫表單之電子郵件ID的自動回覆電子郵件。
 
    >[!NOTE]
    >
-   >若要讓登錄檔單訂閱正確運作，需要在發佈執行個體[&#128279;](#exporting-keys-from-author-and-importing-on-publish)上匯出和匯入作者的加密金鑰。
+   >若要讓登錄檔單訂閱正確運作，需要在發佈執行個體](#exporting-keys-from-author-and-importing-on-publish)上匯出和匯入作者的[加密金鑰。
 
    ![chlimage_1-12](assets/chlimage_1-12.jpeg)

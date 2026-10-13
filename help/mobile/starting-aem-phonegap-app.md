@@ -9,13 +9,17 @@ exl-id: 7d56b9f0-5aa5-4b68-a85e-7e80415cbc76
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '376'
+source-wordcount: '424'
 ht-degree: 1%
-
 ---
-
 # 啟動AEM PhoneGap {#starting-aem-phonegap}
 
 {{ue-over-mobile}}
@@ -39,7 +43,7 @@ starterkit可協助您逐步瞭解AEM Mobile開發的基本知識，進而快速
 
 ## 範本和元件 {#templates-and-components}
 
-AEM *範本*&#x200B;和&#x200B;*元件*&#x200B;可讓企業營運擁有者建立自訂體驗。 *範本*和&#x200B;*元件*&#x200B;都是現成可用的或可由開發人員透過擴充現有元件或建立綠色欄位（進階）自訂開發。 *範本*&#x200B;和&#x200B;*元件*&#x200B;可讓AEM作者拖放以建立吸引人且相關的體驗。
+AEM *範本*&#x200B;和&#x200B;*元件*&#x200B;可讓企業營運擁有者建立自訂體驗。 *範本*&#x200B;和*元件*都是現成可用的或可由開發人員透過擴充現有元件或建立綠色欄位（進階）自訂開發。 *範本*&#x200B;和&#x200B;*元件*&#x200B;可讓AEM作者拖放以建立吸引人且相關的體驗。
 
 1. [建立元件](/help/sites-developing/components.md)
 1. [建立範本](/help/sites-developing/templates.md)
@@ -55,6 +59,6 @@ AEM *範本*&#x200B;和&#x200B;*元件*&#x200B;可讓企業營運擁有者建立
 1. [開始我的AEM Mobile應用程式體驗](/help/mobile/starting-aem-phonegap-app.md)
 1. [管理我的應用程式內容](/help/mobile/phonegap-manage-app-content.md)
 1. [建置我的應用程式](/help/mobile/building-app-mobile-phonegap.md)
-1. [透過AdobeMobile Analytics追蹤我的應用程式效能](/help/mobile/phonegap-intro-to-app-analytics.md)
+1. [透過Adobe Mobile Analytics追蹤我的應用程式效能](/help/mobile/phonegap-intro-to-app-analytics.md)
 1. [使用Adobe Target提供個人化應用程式體驗](/help/mobile/phonegap-aem-mobile-content-personalization.md)
 1. [傳送重要訊息給我的使用者](/help/mobile/phonegap-push-notifications.md)

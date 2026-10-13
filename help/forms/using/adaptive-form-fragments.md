@@ -9,7 +9,25 @@ docset: aem65
 exl-id: 2f276e9d-b3c1-48f7-a94a-bdf7eb15a031
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: 15fb75221470fe30d4a0c603e1bb0d0a45575eb5
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 7da902b6-fe94-5180-8e7c-f6d1e38d01d5
+    internal-label: Foundation Components
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '2452'
 ht-degree: 8%
@@ -18,10 +36,10 @@ ht-degree: 8%
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/adaptive-form-fragments-core-components.html?lang=zh-Hant) |
+| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/adaptive-form-fragments-core-components.html) |
 | AEM 6.5 | 本文章 |
 
-<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hant)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。 這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。 本文會介紹使用基礎元件編寫最適化表單的舊方法。</span>
+<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。 這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。 本文會介紹使用基礎元件編寫最適化表單的舊方法。</span>
 
 雖然每個表單都是為特定目的而設計，但大多數表單中都有一些常見的區段，例如提供個人詳細資訊，例如姓名和地址、家庭詳細資訊和收入詳細資訊。 每次建立新表單時，表單開發人員都必須建立這些通用區段。
 
@@ -71,7 +89,7 @@ ht-degree: 8%
 
    ![從指定的XML結構描述模型選取複雜型別](assets/complex-type.png)
 
-1. 按一下[建立]&#x200B;**&#x200B;**，然後按一下[開啟]&#x200B;**&#x200B;**，以編輯模式開啟具有預設範本的片段。
+1. 按一下[建立]****，然後按一下[開啟]****，以編輯模式開啟具有預設範本的片段。
 
 在編輯模式中，您可以將任何最適化表單元件從AEM sidekick拖放至片段上。 如需最適化表單元件的相關資訊，請參閱[製作最適化表單簡介](../../forms/using/introduction-forms-authoring.md)。
 
@@ -103,8 +121,8 @@ ht-degree: 8%
 
    * **表單模型**：根據最適化表單的表單模型，此欄位會顯示&#x200B;**XML結構描述**、**表單範本**&#x200B;或&#x200B;**無**。 這是不可編輯的欄位。
 
-   * **片段模型根**：僅出現在XSD型最適化表單中。 它會指定片段模型的根。 您可以從下拉式清單中選擇&#x200B;**/**&#x200B;或XSD複雜型別。 只有在選取複雜型別作為片段模型根時，才能在另一個最適化表單中重複使用片段。
-     如果您選擇&#x200B;**/**&#x200B;作為片段模型根目錄，則最適化表單資料模型標籤中會顯示根目錄的完整XSD樹狀結構。 對於複雜型別片段模型根，在調適型表單資料模型標籤中只會顯示所選複雜型別的子系。 如果您建立片段並選擇複雜型別做為&#x200B;**片段模型根**，則您可以在使用該複雜型別的地方使用它，無論是在相同表單中還是在多個表單中。
+   * **片段模型根**：僅出現在XSD型最適化表單中。 它會指定片段模型的根。 您可以從下拉式清單中選擇&#x200B;**/**或XSD複雜型別。 只有在選取複雜型別作為片段模型根時，才能在另一個最適化表單中重複使用片段。
+     如果您選擇**/**&#x200B;作為片段模型根目錄，則最適化表單資料模型標籤中會顯示根目錄的完整XSD樹狀結構。 對於複雜型別片段模型根，在調適型表單資料模型標籤中只會顯示所選複雜型別的子系。 如果您建立片段並選擇複雜型別做為&#x200B;**片段模型根**，則您可以在使用該複雜型別的地方使用它，無論是在相同表單中還是在多個表單中。
 
    * **XSD Ref**：僅出現在XSD型最適化表單中。 它顯示XML綱要的位置。
 

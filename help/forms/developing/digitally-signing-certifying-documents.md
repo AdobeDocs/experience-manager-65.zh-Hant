@@ -9,13 +9,29 @@ role: Developer
 exl-id: c200f345-40ab-46fd-b6ed-f3af0a23796b
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Services,APIs & Integrations
-source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 516393bc-fa69-5e74-a04e-f7ec9ffe2c5e
+    internal-label: APIs & Integrations
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+  - id: f19cff18-c8cc-4a4b-adad-85dd2fa3dbe2
+    internal-label: Document Services
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '17137'
 ht-degree: 0%
-
 ---
-
 # 數位簽署和認證檔案 {#digitally-signing-and-certifying-documents}
 
 **本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
@@ -131,11 +147,11 @@ ht-degree: 0%
    * 如果需要，請建立`FieldMDPOptions`物件，指定將數位簽章套用至簽章欄位時所鎖定的欄位。
    * 呼叫`SignatureServiceClient`物件的`addSignatureField`方法並傳遞下列值，以將簽章欄位新增至PDF檔案：
 
-      * `com.adobe.idp`。 `Document`物件，代表新增簽名欄位的PDF檔案。
-      * 字串值，指定簽名欄位的名稱。
-      * 代表新增簽名欄位之頁碼的`java.lang.Integer`值。
-      * 指定簽章欄位位置的`PositionRectangle`物件。
-      * `FieldMDPOptions`物件，指定PDF檔案中在數位簽章套用至簽章欄位後鎖定的欄位。 此引數值是選用的，您可以傳遞`null`。
+     * `com.adobe.idp`。 `Document`物件，代表新增簽名欄位的PDF檔案。
+     * 字串值，指定簽名欄位的名稱。
+     * 代表新增簽名欄位之頁碼的`java.lang.Integer`值。
+     * 指定簽章欄位位置的`PositionRectangle`物件。
+     * `FieldMDPOptions`物件，指定PDF檔案中在數位簽章套用至簽章欄位後鎖定的欄位。 此引數值是選用的，您可以傳遞`null`。
 
    * 指定各種執行階段值的`PDFSeedValueOptions`物件。 此引數值是選用的，您可以傳遞`null`。
 
@@ -174,10 +190,10 @@ ht-degree: 0%
    * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作來啟用基本的HTTP驗證：
 
-      * 將AEM表單使用者名稱指派給欄位`SignatureServiceClient.ClientCredentials.UserName.UserName`。
-      * 將對應的密碼值指派給欄位`SignatureServiceClient.ClientCredentials.UserName.Password`。
-      * 將常數值`HttpClientCredentialType.Basic`指派給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
-      * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`指派給欄位`BasicHttpBindingSecurity.Security.Mode`。
+     * 將AEM表單使用者名稱指派給欄位`SignatureServiceClient.ClientCredentials.UserName.UserName`。
+     * 將對應的密碼值指派給欄位`SignatureServiceClient.ClientCredentials.UserName.Password`。
+     * 將常數值`HttpClientCredentialType.Basic`指派給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+     * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`指派給欄位`BasicHttpBindingSecurity.Security.Mode`。
 
 1. 取得新增簽名欄位的PDF檔案
 
@@ -321,10 +337,10 @@ ht-degree: 0%
    * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作來啟用基本的HTTP驗證：
 
-      * 將AEM表單使用者名稱指派給欄位`SignatureServiceClient.ClientCredentials.UserName.UserName`。
-      * 將對應的密碼值指派給欄位`SignatureServiceClient.ClientCredentials.UserName.Password`。
-      * 將常數值`HttpClientCredentialType.Basic`指派給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
-      * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`指派給欄位`BasicHttpBindingSecurity.Security.Mode`。
+     * 將AEM表單使用者名稱指派給欄位`SignatureServiceClient.ClientCredentials.UserName.UserName`。
+     * 將對應的密碼值指派給欄位`SignatureServiceClient.ClientCredentials.UserName.Password`。
+     * 將常數值`HttpClientCredentialType.Basic`指派給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+     * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`指派給欄位`BasicHttpBindingSecurity.Security.Mode`。
 
 1. 取得包含簽名欄位的PDF檔案
 
@@ -406,11 +422,11 @@ ht-degree: 0%
 * **篩選器**：指定用於簽章欄位的篩選器。 例如，您可以使用Adobe.PPKLite篩選器。 （請參閱[PDF參考](https://www.adobe.com/devnet/acrobat/pdfs/pdf_reference_1-7.pdf)。）
 * **標幟選項**：指定與此簽章欄位關聯的標幟值。 值1表示簽署者必須僅使用專案的指定值。 值為0表示允許使用其他值。 以下是Bit位置：
 
-   * **1（篩選器）：**&#x200B;用來簽署簽章欄位的簽章處理常式
-   * **2 (SubFilter)：**&#x200B;表示簽署時可使用的編碼之名稱陣列
-   * **3 (V)**：簽章處理常式簽署簽章欄位所需的最低版本號碼
-   * **4 （原因）：**&#x200B;指定簽署檔案可能原因的字串陣列
-   * **5 (PDFLegalWarnings)：**&#x200B;指定可能合法證明的字串陣列
+  * **1（篩選器）：**&#x200B;用來簽署簽章欄位的簽章處理常式
+  * **2 (SubFilter)：**&#x200B;表示簽署時可使用的編碼之名稱陣列
+  * **3 (V)**：簽章處理常式簽署簽章欄位所需的最低版本號碼
+  * **4 （原因）：**&#x200B;指定簽署檔案可能原因的字串陣列
+  * **5 (PDFLegalWarnings)：**&#x200B;指定可能合法證明的字串陣列
 
 * **法律證明**：當檔案通過認證時，會自動掃描特定型別的內容，使檔案的可見內容模糊或誤導。 例如，註解可能會模糊文字，而這些文字對於瞭解認證內容非常重要。 掃描程式會產生警告，指出此型別的內容是否存在。 此外，也為可能產生警告的內容提供額外說明。
 * **許可權**：指定可在PDF檔案上使用，而不會讓簽章失效的許可權。
@@ -503,10 +519,10 @@ ht-degree: 0%
    * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作來啟用基本的HTTP驗證：
 
-      * 將AEM表單使用者名稱指派給欄位`SignatureServiceClient.ClientCredentials.UserName.UserName`。
-      * 將對應的密碼值指派給欄位`SignatureServiceClient.ClientCredentials.UserName.Password`。
-      * 將常數值`HttpClientCredentialType.Basic`指派給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
-      * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`指派給欄位`BasicHttpBindingSecurity.Security.Mode`。
+     * 將AEM表單使用者名稱指派給欄位`SignatureServiceClient.ClientCredentials.UserName.UserName`。
+     * 將對應的密碼值指派給欄位`SignatureServiceClient.ClientCredentials.UserName.Password`。
+     * 將常數值`HttpClientCredentialType.Basic`指派給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+     * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`指派給欄位`BasicHttpBindingSecurity.Security.Mode`。
 
 1. 取得包含要修改之簽名欄位的PDF檔案
 
@@ -770,10 +786,10 @@ PDF檔案是以公開金鑰技術簽署。 簽署者有兩個金鑰：公開金�
    * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作來啟用基本的HTTP驗證：
 
-      * 將AEM表單使用者名稱指派給欄位`SignatureServiceClient.ClientCredentials.UserName.UserName`。
-      * 將對應的密碼值指派給欄位`SignatureServiceClient.ClientCredentials.UserName.Password`。
-      * 將常數值`HttpClientCredentialType.Basic`指派給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
-      * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`指派給欄位`BasicHttpBindingSecurity.Security.Mode`。
+     * 將AEM表單使用者名稱指派給欄位`SignatureServiceClient.ClientCredentials.UserName.UserName`。
+     * 將對應的密碼值指派給欄位`SignatureServiceClient.ClientCredentials.UserName.Password`。
+     * 將常數值`HttpClientCredentialType.Basic`指派給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+     * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`指派給欄位`BasicHttpBindingSecurity.Security.Mode`。
 
 1. 取得PDF檔案以簽署
 
@@ -927,11 +943,11 @@ PDF檔案是以公開金鑰技術簽署。 簽署者有兩個金鑰：公開金�
    * 建立用來設定執行階段選項的`PDFFormRenderSpec`物件。 叫用`PDFFormRenderSpec`物件的`setGenerateServerAppearance`方法並傳遞`true`。
    * 叫用`FormsServiceClient`物件的`renderPDFForm2`方法，並傳遞下列值：
 
-      * 包含要轉譯之PDF表單的`com.adobe.idp.Document`物件。
-      * 包含要與表單合併之資料的`com.adobe.idp.Document`物件。
-      * 儲存執行階段選項的`PDFFormRenderSpec`物件。
-      * 包含Forms服務所需URI值的`URLSpec`物件。 您可以為此引數值指定`null`。
-      * 儲存檔案附件的`java.util.HashMap`物件。 這是選用引數，如果您不想將檔案附加至表單，可以指定`null`。
+     * 包含要轉譯之PDF表單的`com.adobe.idp.Document`物件。
+     * 包含要與表單合併之資料的`com.adobe.idp.Document`物件。
+     * 儲存執行階段選項的`PDFFormRenderSpec`物件。
+     * 包含Forms服務所需URI值的`URLSpec`物件。 您可以為此引數值指定`null`。
+     * 儲存檔案附件的`java.util.HashMap`物件。 這是選用引數，如果您不想將檔案附加至表單，可以指定`null`。
 
      `renderPDFForm2`方法傳回包含表單資料流的`FormsResult`物件
 
@@ -994,9 +1010,9 @@ PDF檔案是以公開金鑰技術簽署。 簽署者有兩個金鑰：公開金�
    * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作來啟用基本的HTTP驗證：
 
-      * 將AEM表單使用者名稱指派給欄位`SignatureServiceClient.ClientCredentials.UserName.UserName`。
-      * 將對應的密碼值指派給欄位`SignatureServiceClient.ClientCredentials.UserName.Password`。
-      * 將常數值`HttpClientCredentialType.Basic`指派給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+     * 將AEM表單使用者名稱指派給欄位`SignatureServiceClient.ClientCredentials.UserName.UserName`。
+     * 將對應的密碼值指派給欄位`SignatureServiceClient.ClientCredentials.UserName.Password`。
+     * 將常數值`HttpClientCredentialType.Basic`指派給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
 
    * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`指派給欄位`BasicHttpBindingSecurity.Security.Mode`。
 
@@ -1019,14 +1035,14 @@ PDF檔案是以公開金鑰技術簽署。 簽署者有兩個金鑰：公開金�
    * 建立用來設定執行階段選項的`PDFFormRenderSpec`物件。 將值`true`指派給`PDFFormRenderSpec`物件的`generateServerAppearance`欄位。
    * 叫用`FormsServiceClient`物件的`renderPDFForm2`方法，並傳遞下列值：
 
-      * 包含要轉譯之PDF表單的`BLOB`物件。
-      * 包含要與表單合併之資料的`BLOB`物件。
-      * 儲存執行階段選項的`PDFFormRenderSpec`物件。
-      * 包含Forms服務所需URI值的`URLSpec`物件。 您可以為此引數值指定`null`。
-      * 儲存檔案附件的`java.util.HashMap`物件。 這是選用引數，如果您不想將檔案附加至表單，可以指定`null`。
-      * 用來儲存表單頁數的長輸出引數。
-      * 用於地區設定值的字串輸出引數。
-      * `FormResult`值是用來儲存互動式表單的輸出引數。
+     * 包含要轉譯之PDF表單的`BLOB`物件。
+     * 包含要與表單合併之資料的`BLOB`物件。
+     * 儲存執行階段選項的`PDFFormRenderSpec`物件。
+     * 包含Forms服務所需URI值的`URLSpec`物件。 您可以為此引數值指定`null`。
+     * 儲存檔案附件的`java.util.HashMap`物件。 這是選用引數，如果您不想將檔案附加至表單，可以指定`null`。
+     * 用來儲存表單頁數的長輸出引數。
+     * 用於地區設定值的字串輸出引數。
+     * `FormResult`值是用來儲存互動式表單的輸出引數。
 
    * 叫用`FormsResult`物件的`outputContent`欄位以擷取PDF表單。 此欄位儲存代表互動式表單的`BLOB`物件。
 
@@ -1234,10 +1250,10 @@ PDF檔案是以公開金鑰技術簽署。 簽署者有兩個金鑰：公開金�
    * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作來啟用基本的HTTP驗證：
 
-      * 將AEM表單使用者名稱指派給欄位`SignatureServiceClient.ClientCredentials.UserName.UserName`。
-      * 將對應的密碼值指派給欄位`SignatureServiceClient.ClientCredentials.UserName.Password`。
-      * 將常數值`HttpClientCredentialType.Basic`指派給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
-      * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`指派給欄位`BasicHttpBindingSecurity.Security.Mode`。
+     * 將AEM表單使用者名稱指派給欄位`SignatureServiceClient.ClientCredentials.UserName.UserName`。
+     * 將對應的密碼值指派給欄位`SignatureServiceClient.ClientCredentials.UserName.Password`。
+     * 將常數值`HttpClientCredentialType.Basic`指派給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+     * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`指派給欄位`BasicHttpBindingSecurity.Security.Mode`。
 
 1. 取得PDF檔案以認證
 
@@ -1471,10 +1487,10 @@ PDF檔案是以公開金鑰技術簽署。 簽署者有兩個金鑰：公開金�
    * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作來啟用基本的HTTP驗證：
 
-      * 將AEM表單使用者名稱指派給欄位`SignatureServiceClient.ClientCredentials.UserName.UserName`。
-      * 將對應的密碼值指派給欄位`SignatureServiceClient.ClientCredentials.UserName.Password`。
-      * 將常數值`HttpClientCredentialType.Basic`指派給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
-      * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`指派給欄位`BasicHttpBindingSecurity.Security.Mode`。
+     * 將AEM表單使用者名稱指派給欄位`SignatureServiceClient.ClientCredentials.UserName.UserName`。
+     * 將對應的密碼值指派給欄位`SignatureServiceClient.ClientCredentials.UserName.Password`。
+     * 將常數值`HttpClientCredentialType.Basic`指派給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+     * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`指派給欄位`BasicHttpBindingSecurity.Security.Mode`。
 
 1. 取得包含要驗證之簽名的PDF檔案
 
@@ -1686,10 +1702,10 @@ AEM Forms提供了驗證PDF檔案中所有數位簽名的方法。 假設PDF檔�
    * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作來啟用基本的HTTP驗證：
 
-      * 將AEM表單使用者名稱指派給欄位`SignatureServiceClient.ClientCredentials.UserName.UserName`。
-      * 將對應的密碼值指派給欄位`SignatureServiceClient.ClientCredentials.UserName.Password`。
-      * 將常數值`HttpClientCredentialType.Basic`指派給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
-      * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`指派給欄位`BasicHttpBindingSecurity.Security.Mode`。
+     * 將AEM表單使用者名稱指派給欄位`SignatureServiceClient.ClientCredentials.UserName.UserName`。
+     * 將對應的密碼值指派給欄位`SignatureServiceClient.ClientCredentials.UserName.Password`。
+     * 將常數值`HttpClientCredentialType.Basic`指派給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+     * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`指派給欄位`BasicHttpBindingSecurity.Security.Mode`。
 
 1. 取得包含要驗證之簽名的PDF檔案
 
@@ -1850,10 +1866,10 @@ AEM Forms提供了驗證PDF檔案中所有數位簽名的方法。 假設PDF檔�
    * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作來啟用基本的HTTP驗證：
 
-      * 將AEM表單使用者名稱指派給欄位`SignatureServiceClient.ClientCredentials.UserName.UserName`。
-      * 將對應的密碼值指派給欄位`SignatureServiceClient.ClientCredentials.UserName.Password`。
-      * 將常數值`HttpClientCredentialType.Basic`指派給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
-      * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`指派給欄位`BasicHttpBindingSecurity.Security.Mode`。
+     * 將AEM表單使用者名稱指派給欄位`SignatureServiceClient.ClientCredentials.UserName.UserName`。
+     * 將對應的密碼值指派給欄位`SignatureServiceClient.ClientCredentials.UserName.Password`。
+     * 將常數值`HttpClientCredentialType.Basic`指派給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+     * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`指派給欄位`BasicHttpBindingSecurity.Security.Mode`。
 
 1. 取得包含要移除之簽名的PDF檔案
 

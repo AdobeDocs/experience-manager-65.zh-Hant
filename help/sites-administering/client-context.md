@@ -10,13 +10,24 @@ exl-id: 69c66c82-fbd6-406e-aefd-b85480a62109
 solution: Experience Manager, Experience Manager Sites
 feature: Administering,Personalization
 role: Admin
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 5ef752af-d616-5b23-8312-06964e46b208
+    internal-label: Administering
+  - id: eb3ad9f8-54a2-45f3-abb1-d3976415a718
+    internal-label: Personalization
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1961'
+source-wordcount: '2007'
 ht-degree: 0%
-
 ---
-
 
 # ClientContext{#client-context}
 
@@ -63,7 +74,7 @@ Client Context可以顯示下列屬性（[視使用[編輯]](#adding-a-property-
 * **滑鼠X**&#x200B;位置
 * **滑鼠Y**&#x200B;位置
 
-**活動資料流**&#x200B;這可提供使用者在各種平台(例如AEM論壇、部落格、評分等)上的社交活動相關資訊。
+**活動資料流**&#x200B;這可提供使用者在各種平台（例如AEM論壇、部落格、評分等）上的社交活動相關資訊。
 
 **促銷活動**&#x200B;可讓作者模擬促銷活動的特定體驗。 此元件會覆寫一般的促銷活動解析度和體驗選取範圍，以啟用各種置換測試。
 
@@ -81,7 +92,7 @@ Generic Store必須設定有JS轉譯器，以便以自訂方式顯示資料。
 
 「一般存放區屬性」元件包括預設轉譯器，其會列出已設定的屬性（連同縮圖）。
 
-**地理位置**&#x200B;顯示使用者端的經緯度。 它會使用HTML5地理位置API來查詢瀏覽器中的目前位置。 這會向訪客顯示快顯視窗，瀏覽器會詢問訪客是否同意共用其位置。
+**地理位置**&#x200B;顯示使用者端的經緯度。 它會使用HTML5地理位置API在瀏覽器中查詢目前位置。 這會向訪客顯示快顯視窗，瀏覽器會詢問訪客是否同意共用其位置。
 
 在Context Cloud中顯示時，元件會使用Google API將地圖顯示為縮圖。 元件受Google API [使用量限制](https://developers.google.com/maps/documentation/staticmaps/intro#Limits)的約束。
 
@@ -211,13 +222,13 @@ JSONP存放區就像任何其他存放區一樣，但是它會載入來自其他
 
 ### 新增屬性元件 {#adding-a-property-component}
 
-開啟&#x200B;**ClientContext設計頁面**&#x200B;之後，您也可以&#x200B;**使用可用的元件，新增**&#x200B;全新的屬性（元件會列在sidekick上，或是在按兩下&#x200B;**將元件或資產拖曳到這裡**&#x200B;方塊後開啟的&#x200B;**插入新元件**&#x200B;對話方塊中）：
+開啟&#x200B;**ClientContext設計頁面**&#x200B;後，您也可以&#x200B;**使用可用的元件，新增**&#x200B;全新的屬性（元件會列在sidekick上，或是在按兩下&#x200B;**將元件或資產拖曳到這裡**&#x200B;方塊後開啟的&#x200B;**插入新元件**&#x200B;對話方塊中）：
 
 ![正在新增屬性至使用者端內容視窗](assets/clientcontext_alisonparker_new.png)
 
 ### 移除屬性元件 {#removing-a-property-component}
 
-開啟&#x200B;**ClientContext設計頁面**&#x200B;之後，您也可以&#x200B;**移除**&#x200B;屬性（若不再需要）。 這包括提供的現成屬性；如果屬性已移除，**Reset**&#x200B;將會恢復這些屬性。
+開啟&#x200B;**ClientContext設計頁面**&#x200B;後，您也可以&#x200B;**移除**&#x200B;屬性（若不再需要）。 這包括提供的現成屬性；如果屬性已移除，**Reset**&#x200B;將會恢復這些屬性。
 
 ## 透過JSONP在Client Context中儲存資料 {#storing-data-in-client-context-via-jsonp}
 
@@ -229,7 +240,7 @@ JSONP存放區就像任何其他存放區一樣，但是它會載入來自其他
 
 將JSONP Store元件新增至Client Context，並使用它來擷取和儲存Web使用者端的地理位置資訊。
 
-1. 在AEM編寫執行個體上，開啟Geometrixx Outdoors網站的英文首頁。 ([https://localhost:4502/content/geometrixx-outdoors/en.html](https://localhost:4502/content/geometrixx-outdoors/en.html))。
+1. 在AEM作者執行個體上，開啟Geometrixx Outdoors網站的英文首頁。 ([https://localhost:4502/content/geometrixx-outdoors/en.html](https://localhost:4502/content/geometrixx-outdoors/en.html))。
 1. 若要開啟「使用者端內容」，請按Ctrl-Alt-c (windows)或control-option-c (Mac)。
 1. 按一下「Client Context」頂端的編輯圖示，開啟「Client Context Designer」。
 
@@ -246,7 +257,7 @@ JSONP存放區就像任何其他存放區一樣，但是它會載入來自其他
 
    元件會呼叫JSONP服務並列出傳回資料包含的所有屬性。 清單中的屬性是可在Client Context中使用的屬性。
 
-   ![&#x200B; JSONP服務的屬性](assets/chlimage_1-40.png)
+   ![ JSONP服務的屬性](assets/chlimage_1-40.png)
 
 1. 按一下「確定」。
 1. 返回Geometrixx Outdoors首頁並重新整理頁面。 Client Context現在包含來自JSONP存放區元件的資訊。

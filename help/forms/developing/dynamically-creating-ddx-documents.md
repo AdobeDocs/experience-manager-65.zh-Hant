@@ -10,13 +10,29 @@ role: Developer
 exl-id: b3c19c82-e26f-4dc8-b846-6aec705cee08
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Services,APIs & Integrations
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 516393bc-fa69-5e74-a04e-f7ec9ffe2c5e
+    internal-label: APIs & Integrations
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+  - id: f19cff18-c8cc-4a4b-adad-85dd2fa3dbe2
+    internal-label: Document Services
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '2111'
+source-wordcount: '2183'
 ht-degree: 0%
-
 ---
-
 # 動態建立DDX檔案 {#dynamically-creating-ddx-documents}
 
 **本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
@@ -128,7 +144,7 @@ ht-degree: 0%
    * 呼叫`DocumentBuilderFactory`類別的`newInstance`方法，以建立Java `DocumentBuilderFactory`物件。
    * 呼叫`DocumentBuilderFactory`物件的`newDocumentBuilder`方法，以建立Java `DocumentBuilder`物件。
    * 呼叫`DocumentBuilder`物件的`newDocument`方法以例項化`org.w3c.dom.Document`物件。
-   * 呼叫`org.w3c.dom.Document`物件的`createElement`方法，以建立DDX檔案的根專案。此方法會建立代表根專案的`Element`物件。將代表元素名稱的字串值傳遞至`createElement`方法。將傳回值轉換為`Element`。接著，呼叫子專案的`setAttribute`方法，以設定其值。最後，呼叫標頭元素的`appendChild`方法，將元素附加至標頭元素，並傳遞子元素物件作為引數。下列幾行程式碼會顯示此應用程式邏輯：
+   * 呼叫`org.w3c.dom.Document`物件的`createElement`方法，以建立DDX檔案的根專案。 此方法會建立代表根專案的`Element`物件。 將代表元素名稱的字串值傳遞至`createElement`方法。 將傳回值轉換為`Element`。 接著，呼叫子專案的`setAttribute`方法，以設定其值。 最後，呼叫標頭專案的`appendChild`方法，將專案附加至標頭專案，並將子專案物件作為引數傳遞。 下列幾行程式碼會顯示此應用程式邏輯：
      ` Element root = (Element)document.createElement("DDX");  root.setAttribute("xmlns","https://ns.adobe.com/DDX/1.0/");  document.appendChild(root);`
 
    * 呼叫`Document`物件的`createElement`方法，以建立`PDFsFromBookmarks`專案。 將代表元素名稱的字串值傳遞至`createElement`方法。 將傳回值轉換為`Element`。 呼叫其`setAttribute`方法，以設定`PDFsFromBookmarks`專案的值。 呼叫DDX專案的`appendChild`方法，將`PDFsFromBookmarks`專案附加至`DDX`專案。 將`PDFsFromBookmarks`專案物件傳遞為引數。 下列幾行程式碼會顯示此應用程式邏輯：
@@ -158,8 +174,8 @@ ht-degree: 0%
    * 建立`com.adobe.idp.Document`物件。 傳遞包含PDF檔案的`java.io.FileInputStream`物件以進行拆解。
    * 透過叫用物件的`put`方法並傳遞下列引數，將專案新增至`java.util.Map`物件：
 
-      * 代表索引鍵名稱的字串值。 此值必須符合DDX檔案中指定的PDF來源元素的值。 （在動態建立的DDX檔案中，值為`AssemblerResultPDF.pdf`。）
-      * 包含要分解之PDF檔案的`com.adobe.idp.Document`物件。
+     * 代表索引鍵名稱的字串值。 此值必須符合DDX檔案中指定的PDF來源元素的值。 （在動態建立的DDX檔案中，值為`AssemblerResultPDF.pdf`。）
+     * 包含要分解之PDF檔案的`com.adobe.idp.Document`物件。
 
 1. 設定執行階段選項。
 
@@ -212,10 +228,10 @@ ht-degree: 0%
    * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作來啟用基本的HTTP驗證：
 
-      * 將AEM表單使用者名稱指派給欄位`AssemblerServiceClient.ClientCredentials.UserName.UserName`。
-      * 將對應的密碼值指派給欄位`AssemblerServiceClient.ClientCredentials.UserName.Password`。
-      * 將常數值`HttpClientCredentialType.Basic`指派給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
-      * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`指派給欄位`BasicHttpBindingSecurity.Security.Mode`。
+     * 將AEM表單使用者名稱指派給欄位`AssemblerServiceClient.ClientCredentials.UserName.UserName`。
+     * 將對應的密碼值指派給欄位`AssemblerServiceClient.ClientCredentials.UserName.Password`。
+     * 將常數值`HttpClientCredentialType.Basic`指派給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+     * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`指派給欄位`BasicHttpBindingSecurity.Security.Mode`。
 
 1. 建立DDX檔案。
 

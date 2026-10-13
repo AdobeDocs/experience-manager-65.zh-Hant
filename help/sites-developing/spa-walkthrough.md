@@ -1,6 +1,6 @@
 ---
 title: SPA 簡介和逐步解說
-description: 本文章介紹 SPA 的概念，並逐步解說如何使用基本 SPA 應用程式進行編寫，說明它與基礎 AEM SPA 編輯器的關係。
+description: 本文章介紹 SPA 的概念，並逐步解說如何使用基本 SPA 應用程式進行編寫，說明它與底層 AEM SPA 編輯器的關係。
 topic-tags: spa
 content-type: reference
 exl-id: 95990112-2afc-420a-a7c7-9613f40d4c4a
@@ -8,19 +8,33 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
 index: false
-source-git-commit: 147b0efb32609c05949c9fe374fa4fca6a9dbfb1
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+  - id: c124fa01-25c5-42ec-adf6-21d1c114058b
+    internal-label: Developer tools
+subfeature_v2:
+  - id: a9f7d31e-bbe1-4475-966a-5f213546fcd9
+    internal-label: SPA Editor
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1983'
 ht-degree: 66%
-
 ---
-
 
 # SPA 簡介和逐步解說 {#spa-introduction-and-walkthrough}
 
 單頁應用程式 (SPA) 可為網站使用者提供引人入勝的體驗。 開發人員希望能使用 SPA 框架建立網站，而作者則想在 AEM 中為使用這類框架建立網站，順暢地編輯內容。
 
-SPA 編輯器提供了一個全面的解決方案來支援在 AEM 中使用 SPA。 本文章逐步解說如何使用基本 SPA 應用程式進行編寫，並說明它與基礎 AEM SPA 編輯器的關係。
+SPA 編輯器提供了一個全面的解決方案來支援在 AEM 中使用 SPA。 本文章逐步解說如何使用基本 SPA 應用程式進行編寫，並說明它與底層 AEM SPA 編輯器的關係。
 
 {{ue-over-spa}}
 
@@ -30,19 +44,19 @@ SPA 編輯器提供了一個全面的解決方案來支援在 AEM 中使用 SPA�
 
 本文章介紹 SPA 的基本概念，然後透過使用簡單 SPA 應用程式來示範基本的內容編輯，逐步引導讀者了解 SPA 編輯器。 然後深入探討頁面的結構以及 SPA 應用程式如何與 AEM SPA 編輯器相關及互動。
 
-此簡介和逐步解說的目的是向 AEM 開發人員示範 SPA 為何相關、其一般運作方式、AEM SPA 編輯器如何處理 SPA，以及它與標準 AEM 應用程式有何不同。
+此簡介和逐步解說的目的是向 AEM 開發人員示範 SPA 為何重要、其一般運作方式、AEM SPA 編輯器如何處理 SPA，以及它與標準 AEM 應用程式有何不同。
 
 ## 要求 {#requirements}
 
 逐步解說是以標準 AEM 功能和範例 WKND SPA 專案應用程式為基礎。 若要依此逐步解說操作，您必須具備以下項目。
 
 * [AEM 6.5.4版或更新版本](/help/release-notes/release-notes.md)
-   * 您必須擁有系統的管理員權限。
+  * 您必須擁有系統的管理員權限。
 * [GitHub提供的範例WKND SPA專案應用程式](https://github.com/adobe/aem-guides-wknd-spa)
-   * 下載[最新版本的React應用程式。](https://github.com/adobe/aem-guides-wknd-spa/releases) 它的名稱類似於`wknd-spa-react.all.classic-X.Y.Z-SNAPSHOT.zip`。
-   * 下載應用程式的[最新範例影像](https://github.com/adobe/aem-guides-wknd-spa/releases)。 它的名稱類似於`wknd-spa-sample-images-X.Y.Z.zip`。
-   * [使用封裝管理員](/help/sites-administering/package-manager.md)安裝封裝，就像在AEM中安裝任何其他封裝一樣。
-   * 出於本逐步解說的目的，應用程式不需要使用 Maven 安裝。
+  * 下載[最新版本的React應用程式。](https://github.com/adobe/aem-guides-wknd-spa/releases) 它的名稱類似於`wknd-spa-react.all.classic-X.Y.Z-SNAPSHOT.zip`。
+  * 下載應用程式的[最新範例影像](https://github.com/adobe/aem-guides-wknd-spa/releases)。 它的名稱類似於`wknd-spa-sample-images-X.Y.Z.zip`。
+  * [使用封裝管理員](/help/sites-administering/package-manager.md)安裝封裝，就像在AEM中安裝任何其他封裝一樣。
+  * 出於本逐步解說的目的，應用程式不需要使用 Maven 安裝。
 
 >[!CAUTION]
 >
@@ -95,7 +109,7 @@ SPA的主要想法是減少伺服器呼叫和相依性，以將伺服器呼叫�
 >
 >如需SPA在AEM中如何運作的技術詳細資訊，請參閱文章[在AEM中開始使用SPA](/help/sites-developing/spa-getting-started-react.md)。
 >
->如需SPA編輯器的設計、架構和技術工作流程的詳細資訊，請參閱文章[&#x200B; SPA編輯器概觀](/help/sites-developing/spa-overview.md)。
+>如需SPA編輯器的設計、架構和技術工作流程的詳細資訊，請參閱文章[ SPA編輯器概觀](/help/sites-developing/spa-overview.md)。
 
 ## SPA 的內容編輯體驗 {#content-editing-experience-with-spa}
 
@@ -153,11 +167,11 @@ SPA的主要想法是減少伺服器呼叫和相依性，以將伺服器呼叫�
 
    ![步驟2](assets/spa-walkthrough-step-1-2.png)
 
-1. 開啟瀏覽器內建的開發人員工具，並在您瀏覽子頁面時監控網路活動。
+1. 開啟瀏覽器內建的開發人員工具，並在您瀏覽子頁面時監視網路活動。
 
    ![步驟3](assets/spa-walkthrough-step-1-3.png)
 
-   當您在應用程式中從一個頁面移動到另一個頁面時，流量非常小。 該頁面不會重新載入，只會要求新影像。
+   當您在應用程式中從一個頁面移動到另一個頁面時，流量非常小。 頁面不會重新載入，只會載入新的影像。
 
    SPA 完全在用戶端管理內容和路由。
 

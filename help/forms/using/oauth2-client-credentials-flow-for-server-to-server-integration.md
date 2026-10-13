@@ -5,18 +5,31 @@ exl-id: 4c356aa6-ebd4-40b9-89e3-bc4519e4a7c5
 solution: Experience Manager, Experience Manager Forms
 feature: Form Data Model
 role: Admin, User, Developer
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 4876a742-a341-5402-aba7-e749c45e777c
+    internal-label: Form Data Model
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '461'
+source-wordcount: '467'
 ht-degree: 69%
-
 ---
-
 # 使用OAuth 2.0使用者端憑證流程整合Salesforce  {#configure-salesforce-with-ouath-2.0-client-credential}
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/oauth2-client-credentials-flow-for-server-to-server-integration.html?lang=zh-Hant) |
+| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/oauth2-client-credentials-flow-for-server-to-server-integration.html) |
 | AEM 6.5 | 本文章 |
 
 您可以使用 OAuth 2.0 用戶端認證將 AEM Forms 與 Salesforce 應用程式進行整合。 OAuth 2.0 用戶端認證是一種標準且安全的直接通訊方式，無需使用者參與。
@@ -28,7 +41,7 @@ AEM Forms會交換在Salesforce連線應用程式中定義的使用者端憑證�
 比起授權代碼流程驗證，使用 OAuth 2.0 用戶端認證進行驗證有多種好處：
 
 * OAuth 2.0 用戶端認證驗證允許每個使用者有五個以上的連線。
-* AEM 資料來源設定可繼續進行 AEM 使用者的停用、存取變更、密碼更新。
+* AEM 資料來源設定在 AEM 使用者遭停用、存取權變更或密碼更新時，仍可繼續運作。
 
 ## 先決條件 {#prerequisites}
 
@@ -36,7 +49,7 @@ AEM Forms會交換在Salesforce連線應用程式中定義的使用者端憑證�
 
 * 為貴組織建立一個[使用 OAuth 2.0 用戶端認證流程的 Salesforce 連線應用程式](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5)以及一個僅限 API 的使用者，並獲取應用程式的客戶金鑰和客戶密碼。
 
-* 確保您的 Swagger 檔案已適當設定，和貴組織的 API 相符。 或者，您可以選擇從頭開始[建立 Swagger 檔案](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/integrate-with-salesforce/describe-rest-api.html?lang=zh-Hant)，專為在您的 AEM 環境中使用而量身打造。
+* 確保您的 Swagger 檔案已適當設定，和貴組織的 API 相符。 或者，您可以選擇從頭開始[建立 Swagger 檔案](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/integrate-with-salesforce/describe-rest-api.html)，專為在您的 AEM 環境中使用而量身打造。
 
 >[!NOTE]
 >
@@ -60,7 +73,7 @@ AEM Forms會交換在Salesforce連線應用程式中定義的使用者端憑證�
 1. 選取&#x200B;**[!UICONTROL 授權型別]**&#x200B;做為&#x200B;**[!UICONTROL 使用者端認證]**。
 1. 指定&#x200B;**[!UICONTROL 用戶端 ID]**&#x200B;以及從 Salesforce 連線的應用程式獲取的&#x200B;**[!UICONTROL 用戶端密碼]**。
 1. 指定&#x200B;**[!UICONTROL 存取權杖 URL]** 格式
-   `https://[MyDomainName].my.salesforce.com/services/oauth2/token`.
+   `https://[MyDomainName].my.salesforce.com/services/oauth2/token`。
 
    >[!NOTE]
    >
@@ -69,4 +82,4 @@ AEM Forms會交換在Salesforce連線應用程式中定義的使用者端憑證�
 1. 按一下「**[!UICONTROL 測試連線]**」。
 1. 如果連線成功，按一下「**[!UICONTROL 建立]**」按鈕。
 
-現在您可以[建立表單資料模型](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html?lang=zh-Hant)，將已設定的資料來源與您的Adaptive Forms整合。
+現在您可以[建立表單資料模型](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html?lang=en)，將已設定的資料來源與您的Adaptive Forms整合。

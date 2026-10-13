@@ -9,20 +9,34 @@ exl-id: 5279f6c3-5954-472c-9ea0-18e8a7ec860e
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '483'
+source-wordcount: '487'
 ht-degree: 0%
-
 ---
-
 # 從「工作管理員」資料庫中清除記錄 {#purge-records-from-the-job-manager-database}
 
 >[!NOTE]
 > 
 > 確保使用者具有存取管理員控制檯的管理員許可權。
 
-叫用長期處理程式時所產生的處理程式資料可能會變得太大，導致AEM表單效能降低及不必要的磁碟空間浪費。 當不再需要記錄時，清除處理資料是很好的做法。
+叫用長期程式時產生的程式資料可能會變得太大，導致AEM表單效能降低，並佔用不必要的磁碟空間。 當不再需要記錄時，清除處理資料是很好的做法。
 
 您可以使用管理主控台執行一次性永久刪除過時記錄，或排定定期的自動永久刪除。 在[清除程式資料](/help/forms/using/admin-help/purging-process-data.md#purging-process-data)中討論了其他清除過時記錄的方法。
 
@@ -67,6 +81,6 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >如果您指定的開始日期和時間是過去的時間，AEM Forms會根據您指定的日期計算邏輯的下一個開始日期。 例如，如果您將工作清除排程為從4月7日開始每週執行，現在是4月9日，則第一次清除會在4月14日執行。
+   >如果您指定的開始日期和時間是過去的時間，AEM Forms會根據您指定的日期計算邏輯性的下一個開始日期。 例如，如果您將工作清除排程為從4月7日開始每週執行，現在是4月9日，則第一次清除會在4月14日執行。
 
 1. 按一下「啟動排程器」。 先前排程的排程器設定會取代為新設定。

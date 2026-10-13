@@ -1,6 +1,6 @@
 ---
 title: 將工作流程套用至頁面
-description: 工作流程可從「網站」主控台啟動，或編輯頁面時，也可從「Sidekick」啟動。
+description: 工作流程可從「網站」主控台啟動，或編輯頁面時，也可從Sidekick啟動。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
@@ -9,13 +9,22 @@ exl-id: d8b604c5-a6da-47c4-9422-b519e224c7ca
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '249'
-ht-degree: 11%
-
+source-wordcount: '255'
+ht-degree: 10%
 ---
-
 # 將工作流程套用至頁面{#applying-workflows-to-pages}
 
 套用工作流程時，請指定下列資訊：
@@ -25,16 +34,16 @@ ht-degree: 11%
   您可以套用您有權存取的任何工作流程 (由AEM管理員指派)。
 * 選擇性：
 
-   * 提供啟動工作流程原因相關資訊的註解。
-   * 有助於識別使用者收件匣中工作流程例項的標題。
+  * 提供啟動工作流程原因相關資訊的註解。
+  * 有助於識別使用者收件匣中工作流程例項的標題。
 
 >[!NOTE]
 >
->AEM管理員可以使用[其他幾種方法](/help/sites-administering/workflows-starting.md)來開始工作流程。
+>AEM管理員可使用[數個其他方法](/help/sites-administering/workflows-starting.md)來開始工作流程。
 
 ## 套用工作流程 {#applying-workflows}
 
-工作流程可從「網站」主控台啟動，或編輯頁面時，也可從「Sidekick」啟動。
+工作流程可從「網站」主控台啟動，或編輯頁面時，也可從Sidekick啟動。
 
 **網站**&#x200B;主控台中的&#x200B;**狀態**&#x200B;資料行指出工作流程是否已套用至頁面：
 

@@ -7,18 +7,32 @@ hide: true
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
-source-git-commit: 63b9494700aaafaa503216d037e2ad6efc8c5eac
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: ed762d86-a04b-452b-a08f-86359bb8ff27
+    internal-label: Configuration and operations
+subfeature_v2:
+  - id: c21ccc2b-e0c8-4853-bf41-f12259ed93f8
+    internal-label: Release information
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '593'
 ht-degree: 19%
-
 ---
-
 # AEM Forms JEE修補程式安裝程式 {#aem-forms-jee-patch-installer}
 
 >[!NOTE]
 >
->[請連絡支援人員](https://experienceleague.adobe.com/zh-hant?support-solution=General&support-tab=home#support)以取得詳細資訊或修補程式。
+>[請連絡支援人員](https://experienceleague.adobe.com/?support-solution=General&support-tab=home#support)以取得詳細資訊或修補程式。
 
 ## 關於修補程式安裝程式 {#about-the-patch-installer}
 
@@ -36,15 +50,15 @@ AEM 6.5 Forms JEE修補程式安裝程式包含此修補程式發行前，AEM 6.
 1. 在根據您使用的作業系統命名的目錄中：
 
    * **視窗**
-導覽至安裝媒體上的適當目錄，或硬碟上您複製安裝程式的資料夾，然後按兩下aemforms65_cfp_install.exe檔案。
+     導覽至安裝媒體上的適當目錄，或硬碟上您複製安裝程式的資料夾，然後按兩下aemforms65_cfp_install.exe檔案。
 
-      * （Windows 32位元） `Windows\Disk1\InstData\VM`
-      * （Windows 64位元） `Windows_64Bit`\ `Disk1\InstData\VM`
+     * （Windows 32位元） `Windows\Disk1\InstData\VM`
+     * （Windows 64位元） `Windows_64Bit`\ `Disk1\InstData\VM`
 
    * **Linux®**
-導覽至適當的目錄，然後在命令提示字元中輸入`./aem65_cfp_install.bin`。
+     導覽至適當的目錄，然後在命令提示字元中輸入`./aem65_cfp_install.bin`。
 
-      * (Linux®) `Linux/Disk1/InstData/NoVM`
+     * (Linux®) `Linux/Disk1/InstData/NoVM`
 
    這會啟動安裝精靈，引導您完成安裝。
 
@@ -70,8 +84,8 @@ AEM 6.5 Forms JEE修補程式安裝程式包含此修補程式發行前，AEM 6.
 
 1. 視您的應用程式伺服器而定，選擇下列其中一份檔案，然後依照&#x200B;*設定和部署AEM表單*&#x200B;區段中的指示操作。
 
-   * [安裝和部署AEM forms for JBoss®](https://www.adobe.com/go/learn_aemforms_installJBoss_65_tw)
-   * [安裝和部署AEM forms for WebSphere®](https://www.adobe.com/go/learn_aemforms_installWebSphere_65_tw)
+   * [安裝和部署AEM forms for JBoss®](https://www.adobe.com/go/learn_aemforms_installJBoss_65)
+   * [安裝和部署AEM forms for WebSphere®](https://www.adobe.com/go/learn_aemforms_installWebSphere_65)
 
 1. （僅限JBoss®）安裝修補程式並設定伺服器後，刪除JBoss®應用程式伺服器的tmp和工作目錄。
 
@@ -96,4 +110,4 @@ AEM 6.5 Forms JEE修補程式安裝程式包含此修補程式發行前，AEM 6.
 * 文件安全性
 * Foundation JEE
 
-[聯絡支援人員](https://experienceleague.adobe.com/zh-hant?support-solution=General&support-tab=home#support)
+[聯絡支援人員](https://experienceleague.adobe.com/?support-solution=General&support-tab=home#support)

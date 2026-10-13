@@ -9,13 +9,22 @@ exl-id: 918fcbbc-a78a-4fab-a933-f183ce6a907f
 solution: Experience Manager, Experience Manager Sites
 feature: Configuring
 role: Admin
-source-git-commit: efaff4557aba3557a355ed385a5358cf1108c159
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 523b1ccd-901e-5e3b-9fa7-f3dfd82463d5
+    internal-label: Configuring
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '2182'
 ht-degree: 9%
-
 ---
-
 
 # 設定電子郵件通知{#configuring-email-notification}
 
@@ -205,7 +214,7 @@ subject=<text_1>
 >
 >其中`<text_x>`可以是靜態文字和動態字串變數的混合。 `<text_x>`專案的每一行都必須以反斜線( `\`)結尾，但最後一個執行個體除外，因為反斜線的缺位代表`<text_x>`字串變數的結尾。
 >
->您可以在Properties.load() [&#128279;](https://docs.oracle.com/javase/8/docs/api/java/util/Properties.html#load-java.io.InputStream-)方法的javadocs中找到範本格式的詳細資訊。
+>您可以在Properties.load()](https://docs.oracle.com/javase/8/docs/api/java/util/Properties.html#load-java.io.InputStream-)方法的[javadocs中找到範本格式的詳細資訊。
 
 方法`${payload.path.open}`會顯示工作專案裝載的路徑。 例如，若為Sites中的頁面，則`payload.path.open`會類似於`/bin/wcmcommand?cmd=open&path=…`.；這沒有伺服器名稱，因此範本會在它前面加上`${host.prefix}`。
 
@@ -404,11 +413,11 @@ AEM為其整合的郵件程式服務提供OAuth2支援，以允許組織遵守�
    * 填入授權URL、權杖URL和重新整理權杖URL，方法為依照此程式結尾[的說明](#microsoft-outlook)建構它們
    * 使用者端ID和使用者端密碼：使用上述擷取的值來設定這些欄位。
    * 將以下範圍新增到設定中：
-      * openid
-      * offline_access
-      * `https://outlook.office365.com/Mail.Send`
-      * `https://outlook.office365.com/Mail.Read`
-      * `https://outlook.office365.com/SMTP.Send`
+     * openid
+     * offline_access
+     * `https://outlook.office365.com/Mail.Send`
+     * `https://outlook.office365.com/Mail.Read`
+     * `https://outlook.office365.com/SMTP.Send`
    * AuthCode重新導向Url： `http://localhost:4503/services/mailer/oauth2/token`
    * 重新整理記號URL：這應該與上述記號URL的值相同
 1. 按一下&#x200B;**儲存**。

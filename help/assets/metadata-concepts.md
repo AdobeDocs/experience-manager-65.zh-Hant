@@ -6,16 +6,30 @@ role: User, Admin
 feature: Metadata
 exl-id: 312fff5f-39c1-48c1-aa99-40feb72c2f59
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: ac365bec-0634-4744-9473-c42f47320593
+    internal-label: Asset management and governance
+subfeature_v2:
+  - id: ed6971a3-2c12-4fd2-81f4-ff329c416250
+    internal-label: Metadata
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '2751'
+source-wordcount: '2757'
 ht-degree: 8%
-
 ---
-
 # 瞭解中繼資料概念 {#why-we-need-metadata}
 
-中繼資料是指資料的相關資料。 就此而言，資料是指您的數位資產，例如影像。 中繼資料是進行高效率資產管理的關鍵所在。
+中繼資料是指資料的相關資料。 就此而言，資料是指您的數位資產，例如影像。 後設資料是進行高效率資產管理的關鍵所在。
 
 中繼資料是資產所有可用資料的集合，但不一定包含在該影像中。 中繼資料的一些範例包括：
 
@@ -37,7 +51,7 @@ ht-degree: 8%
 
 更多中繼資料可協助您進一步將資產分類，且隨著數位資訊量成長，將有所幫助。 您可以僅根據檔案名稱管理數百個檔案。 然而，此方法並不能調整規模。 隨著相關人數和管理的資產數量增加，此方法尚嫌不足。
 
-隨著中繼資料增加，數位資產的價值也會成長，這是因為資產會變得
+隨著後設資料增加，數位資產的價值也會成長，這是因為資產會變得
 
 * 更易於存取 - 系統和使用者可以更輕鬆找到資產。
 * 更易於管理 - 您可以更容易找到具有同一組屬性的資產，並將變更套用到這些資產。
@@ -71,7 +85,7 @@ ht-degree: 8%
 
 ### XMP {#xmp}
 
-[!DNL Extensible Metadata Platform] (XMP)是[!DNL Experience Manager Assets]用於所有中繼資料管理的開放標準。 此標準提供通用中繼資料編碼，可嵌入至所有檔案格式。 Adobe和其他公司支援XMP標準，因為它提供豐富的內容模型。 XMP標準版和[!DNL Experience Manager Assets]版的使用者擁有強大的平台可建置。 如需詳細資訊，請參閱[XMP](https://www.adobe.com/tw/products/xmp.html)。
+[!DNL Extensible Metadata Platform] (XMP)是[!DNL Experience Manager Assets]用於所有中繼資料管理的開放標準。 此標準提供通用中繼資料編碼，可嵌入至所有檔案格式。 Adobe和其他公司支援XMP標準，因為它提供豐富的內容模型。 XMP標準版和[!DNL Experience Manager Assets]版的使用者擁有強大的平台可建置。 如需詳細資訊，請參閱[XMP](https://www.adobe.com/products/xmp.html)。
 
 ### ID3 {#id}
 
@@ -123,7 +137,7 @@ Exif定義的中繼資料欄位通常屬於技術性質，在描述性中繼資�
 * CQ — 由[!DNL Experience Manager Assets]使用。
 * DAM - [!DNL Experience Manager Assets]使用。
 * DEX - [!DNL Optima SC Description explorer]是Windows作業系統中繼資料和檔案管理的工具集合。
-* CRS - [Adobe Photoshop Camera Raw](https://helpx.adobe.com/tw/camera-raw/using/introduction-camera-raw.html)。
+* CRS - [Adobe Photoshop Camera Raw](https://helpx.adobe.com/camera-raw/using/introduction-camera-raw.html)。
 * LR - [!DNL Adobe Lightroom]。
 * MediaPro - [iView MediaPro](https://en.wikipedia.org/wiki/Phase_One_Media_Pro)。
 * MicrosoftPhoto和MP - Microsoft像片。
@@ -207,7 +221,7 @@ Dublin核心中繼資料提供一組標準化的慣例，用於說明資產，�
 
 XMP （可延伸中繼資料平台）是[!DNL Adobe Experience Manager Assets]用於所有中繼資料管理的中繼資料標準。 XMP為各種應用程式的中繼資料的建立、處理和交換提供標準格式。
 
-除了提供可內嵌至所有檔案格式的通用中繼資料編碼之外，XMP還提供豐富的[內容模型](#xmp-core-concepts)，並受到Adobe[&#128279;](#advantages-of-xmp)和其他公司的支援，因此XMP與[!DNL Assets]結合的使用者擁有可建置的強大平台。
+除了提供可內嵌至所有檔案格式的通用中繼資料編碼之外，XMP還提供豐富的[內容模型](#xmp-core-concepts)，並受到Adobe](#advantages-of-xmp)和其他公司的[支援，因此XMP與[!DNL Assets]結合的使用者擁有可建置的強大平台。
 
 [XMP規格](https://www.adobe.com/devnet/xmp.html)可從Adobe取得。
 
@@ -226,9 +240,9 @@ XMP中的中繼資料包含一組屬性。 這些屬性一律與
 
 ### XMP生態系統 {#xmp-ecosystem}
 
-XMP定義了 [中繼資料](https://en.wikipedia.org/wiki/Metadata) 模型，可與任何已定義的中繼資料項目集搭配使用。 XMP也定義了基本屬性的特定結構 [&#128279;](https://en.wikipedia.org/wiki/XML_schema) ，這些基本屬性可用於記錄資源在經過多個處理步驟 (從被拍攝、掃描或創作為文字) 、通過照片編輯步驟(如 [&#128279;](https://en.wikipedia.org/wiki/Image_scanner) [&#128279;](https://en.wikipedia.org/wiki/Cropping_%28image%29) or color adjustment)到組合成最終影像時的歷史記錄。 XMP可讓每個軟體程式或裝置沿途將其資訊新增至數位資源，然後再保留在最終數位檔案中。
+XMP定義了 [中繼資料](https://en.wikipedia.org/wiki/Metadata) 模型，可與任何已定義的中繼資料項目集搭配使用。 XMP也定義了基本屬性的特定結構 [](https://en.wikipedia.org/wiki/XML_schema) ，這些基本屬性可用於記錄資源在經過多個處理步驟 (從被拍攝、掃描或創作為文字) 、通過照片編輯步驟(如 [](https://en.wikipedia.org/wiki/Image_scanner)[](https://en.wikipedia.org/wiki/Cropping_%28image%29) or color adjustment)到組合成最終影像時的歷史記錄。 XMP可讓每個軟體程式或裝置沿途將其資訊新增至數位資源，然後再保留在最終數位檔案中。
 
-XMP最常是使用 [W3C](https://en.wikipedia.org/wiki/World_Wide_Web_Consortium) [Resource Description Framework](https://en.wikipedia.org/wiki/Resource_Description_Framework) (RDF)的子集進行序列化和儲存，該子集又以 [XML表示](https://en.wikipedia.org/wiki/XML)。
+XMP最常是使用 [W3C](https://en.wikipedia.org/wiki/World_Wide_Web_Consortium)[Resource Description Framework](https://en.wikipedia.org/wiki/Resource_Description_Framework) (RDF)的子集進行序列化和儲存，該子集又以 [XML表示](https://en.wikipedia.org/wiki/XML)。
 
 ### XMP的優點 {#advantages-of-xmp}
 

@@ -5,13 +5,25 @@ feature: Content Fragments
 role: User
 exl-id: a9990b0c-56c7-4e61-bae9-98e19a7f364e
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: a45b1e7f-e65f-4cd3-be86-5cec5d9449ef
+    internal-label: Content management
+subfeature_v2:
+  - id: b7f5d1e0-aa2f-4a55-83f4-c2b35a8bd3a7
+    internal-label: Content fragments
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '272'
+source-wordcount: '273'
 ht-degree: 20%
-
 ---
-
 # 內容片段 — 設定瀏覽器{#content-fragments-configuration-browser}
 
 瞭解如何在設定瀏覽器中啟用某些內容片段功能，以使用Adobe Experience Manager (AEM)強大的Headless傳送功能。
@@ -41,7 +53,7 @@ ht-degree: 20%
 
 >[!NOTE]
 >
->如需詳細資訊，請參閱[設定瀏覽器： &#x200B;](/help/sites-administering/configurations.md#using-configuration-browser)。
+>如需詳細資訊，請參閱[設定瀏覽器： ](/help/sites-administering/configurations.md#using-configuration-browser)。
 
 1. 導覽至「 **工具**」、「 **一般**」，然後開啟「 **設定瀏覽器**」。
 
@@ -62,6 +74,6 @@ ht-degree: 20%
 
 當設定&#x200B;**global**&#x200B;啟用內容片段功能時，則套用至任何Assets資料夾。
 
-若要搭配可比的Assets資料夾使用其他設定（即不包括全域），您必須定義連線。 若要這麼做，請在適當資 **料夾的「資料夾屬性** 」的「雲端服務 **」標籤** 中選取適當的「設定 **&#x200B;**&#x200B;」。
+若要搭配可比的Assets資料夾使用其他設定（即不包括全域），您必須定義連線。 若要這麼做，請在適當資 **料夾的「資料夾屬性** 」的「雲端服務 **」標籤** 中選取適當的「設定 **** 」。
 
 ![套用組態](assets/cfm-conf-02.png)

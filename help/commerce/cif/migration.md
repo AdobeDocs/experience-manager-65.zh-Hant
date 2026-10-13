@@ -1,24 +1,32 @@
 ---
-title: 移轉至AEM Commerce integration framework (CIF)附加元件
-description: 如何從舊版移轉至AEM Commerce integration framework (CIF)附加元件。
+title: 移轉至AEM Commerce Integration Framework (CIF)附加元件
+description: 如何從舊版移轉至AEM Commerce Integration Framework (CIF)附加元件。
 exl-id: c6c0c2fc-6cfa-4c64-b3d8-7e428b2a4b2e
 solution: Experience Manager,Commerce
 feature: Commerce Integration Framework
 role: Admin, Developer
-source-git-commit: b4056a4c1483dc8dcedc3c0f8f6b42f8dead0847
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '262'
-ht-degree: 4%
-
+source-wordcount: '322'
+ht-degree: 5%
 ---
-
 # Experience Manager附加元件的移轉指南 {#cif-migration}
 
 本指南協助識別您需要為Experience Manager附加元件移轉進行更新的區域。
 
 ## CIF附加元件
 
-可透過[軟體發佈入口網站](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?fulltext=commerce*&amp;2_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3Aversion&amp;2_group.propertyvalues.operation=equals&amp;2_group.propertyvalues.0_values=target-version%3Aaem%2F6-5&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=16)取得AEM 6.5的CIF附加元件。 它是相容的，提供和適用於Experience Manager as a Cloud Service的CIF附加元件相同的功能。
+可透過[軟體發佈入口網站](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?fulltext=commerce*&2_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3Aversion&2_group.propertyvalues.operation=equals&2_group.propertyvalues.0_values=target-version%3Aaem%2F6-5&orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&orderby.sort=desc&layout=list&p.offset=0&p.limit=16)取得AEM 6.5的CIF附加元件。 它是相容的，提供和適用於Experience Manager as a Cloud Service的CIF附加元件相同的功能。
 
 請參閱[開始使用AEM內容和Commerce](getting-started.md)。
 
@@ -30,7 +38,7 @@ CIF附加元件不支援匯入產品目錄資料。 使用CIF附加元件主體�
 
 >[!TIP]
 >
->如果沒有可用的即時API，則應使用具有API的外部產品快取進行整合。 範例[Magento開放原始碼](https://business.adobe.com/tw/products/magento/open-source.html)。
+>如果沒有可用的即時API，則應使用具有API的外部產品快取進行整合。 範例[Magento open-source](https://business.adobe.com/products/magento/open-source.html)。
 
 ## AEM轉譯的產品目錄體驗
 

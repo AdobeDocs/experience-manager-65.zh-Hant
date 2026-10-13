@@ -1,18 +1,29 @@
 ---
 title: 處理支援的檔案格式的最佳實務
-description: 使用 [!DNL Experience Manager Assets]處理各種支援的檔案型別的最佳實務。
+description: 使用[!DNL Experience Manager Assets]處理各種支援的檔案型別的最佳實務。
 contentOwner: AG
 role: Admin
 feature: Asset Management,Developer Tools
 exl-id: da080f12-4cf7-4c26-901b-cd40d9c00bcb
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 7d2b2ec8-499c-5434-9ffd-9218cd71f683
+    internal-label: Asset Management
+  - id: f2d27a5f-0d67-4d85-8a24-86a8d8a3574b
+    internal-label: Developer tools
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '481'
 ht-degree: 0%
-
 ---
-
 # Assets檔案格式最佳實務 {#assets-file-format-best-practices}
 
 [!DNL Adobe Experience Manager Assets]支援許多專屬和協力廠商檔案格式資料庫，以符合使用者的不同檔案支援需求。 支援的Adobe資料庫包括[!DNL Adobe Camera Raw]、Gibson、Adobe PDF模擬轉譯器和[!DNL Adobe InDesign Server]。 此外，[!DNL Experience Manager Assets]支援協力廠商程式庫，包括[!DNL ImageMagick]、[!DNL TwelveMonkeys]等。

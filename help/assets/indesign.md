@@ -6,7 +6,21 @@ role: Admin
 feature: Publishing
 exl-id: 5ba020a3-c36c-402b-a11b-d6b0426b03bf
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 15fb75221470fe30d4a0c603e1bb0d0a45575eb5
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: f59890ff-de81-47d5-9ef8-7ab2dd10c6c3
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: f901afa4-5613-4581-add5-219fa5f03fb5
+    internal-label: Publishing
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1584'
 ht-degree: 2%
@@ -23,7 +37,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->[!DNL Adobe InDesign]以兩種不同的方案提供。 [Adobe InDesign](https://www.adobe.com/tw/products/indesign.html)案頭應用程式，用來設計列印和數位分送的版面配置。 [Adobe InDesign Server](https://www.adobe.com/tw/products/indesignserver.html)可讓您根據使用[!DNL InDesign]建立的內容，以程式設計方式建立自動化檔案。 它是以提供ExtendScript引擎介面的服務方式運作。 指令碼是以[!DNL ExtendScript]撰寫，類似[!DNL JavaScript]。
+>[!DNL Adobe InDesign]以兩種不同的方案提供。 [Adobe InDesign](https://www.adobe.com/products/indesign.html)案頭應用程式，用來設計列印和數位分送的版面配置。 [Adobe InDesign Server](https://www.adobe.com/products/indesignserver.html)可讓您根據使用[!DNL InDesign]建立的內容，以程式設計方式建立自動化檔案。 它是以提供ExtendScript引擎介面的服務方式運作。 指令碼是以[!DNL ExtendScript]撰寫，類似[!DNL JavaScript]。
 
 ## 擷取的運作方式 {#how-the-extraction-works}
 
@@ -67,7 +81,7 @@ ht-degree: 2%
 1. [安裝InDesign Server](#installing-the-indesign-server)。
 1. 必要時，[設定Experience Manager Assets工作流程](#configuring-the-aem-assets-workflow)。
 只有在預設值不適合您的執行個體時，才需要執行此操作。
-1. 設定InDesign Server[&#128279;](#configuring-the-proxy-worker-for-indesign-server)的Proxy背景工作。
+1. 設定InDesign Server](#configuring-the-proxy-worker-for-indesign-server)的[Proxy背景工作。
 
 ### 安裝[!DNL InDesign Server] {#installing-the-indesign-server}
 
@@ -198,7 +212,7 @@ For information about [!DNL Adobe InDesign] scripts, see [InDesign developer doc
 
 1. 儲存這些變更。
 1. 若要啟用Adobe CS6和更新版本的多工作階段支援，請核取`com.day.cq.dam.ids.impl.IDSJobProcessor.name`設定下的`enable.multisession.name`核取方塊。
-1. 將SOAP端點新增至IDS Worker設定[&#128279;](#configuring-the-proxy-worker-for-indesign-server)，以建立`x` IDS Worker的集區。
+1. 將SOAP端點新增至IDS Worker設定](#configuring-the-proxy-worker-for-indesign-server)，以建立`x` IDS Worker的[集區。
 
    如果有多部電腦執行[!DNL InDesign Server]，請為每部電腦新增SOAP端點（每部電腦的處理器數目–1）。
 
@@ -239,4 +253,4 @@ TBD: Make updates to configurations for allow and block list after product updat
 
 >[!MORELIKETHIS]
 >
->* [關於Adobe InDesign Server](https://www.adobe.com/tw/products/indesignserver/faq.html)
+>* [關於Adobe InDesign Server](https://www.adobe.com/products/indesignserver/faq.html)

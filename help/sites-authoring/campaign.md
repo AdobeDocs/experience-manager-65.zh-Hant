@@ -9,13 +9,30 @@ exl-id: d7e4d424-0ca7-449f-95fb-c4fe19dd195d
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization,Integration
 role: User,Admin,Developer
-source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+  - id: eb3ad9f8-54a2-45f3-abb1-d3976415a718
+    internal-label: Personalization
+  - id: 243139ec-8e41-5296-a287-31343ab1bc0f
+    internal-label: Integration
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '2769'
+source-wordcount: '2794'
 ht-degree: 2%
-
 ---
-
 # 合作使用Adobe Campaign Classic與Adobe Campaign Standard{#working-with-adobe-campaign-classic-and-adobe-campaign-standard}
 
 您可以在AEM中建立電子郵件內容，並在Adobe Campaign電子郵件中處理。 若要這麼做，您必須：
@@ -42,7 +59,7 @@ ht-degree: 2%
 有兩種可能的情況：
 
 * 內容可以與Adobe Campaign的傳送同步。 這可讓您在傳送中使用AEM內容。
-* (僅適用於Adobe Campaign Classic)內容可直接傳送至Adobe Campaign，其會自動產生新的電子郵件傳送。 此模式具有限制。
+* （僅適用於Adobe Campaign Classic）內容可直接傳送至Adobe Campaign，其會自動產生新的電子郵件傳送。 此模式具有限制。
 
 本檔案將說明詳細說明。
 
@@ -63,7 +80,7 @@ ht-degree: 2%
    ![chlimage_1-15](assets/chlimage_1-15a.png)
 
 1. 選取&#x200B;**建立**，然後選取&#x200B;**建立頁面**。
-1. 選取您連線至Adobe Campaign的特定可用範本之一，然後按一下[下一步] **&#x200B;**。 預設提供三個範本：
+1. 選取您連線至Adobe Campaign的特定可用範本之一，然後按一下[下一步] ****。 預設提供三個範本：
 
    * **Adobe Campaign Classic電子郵件**：可讓您在將內容傳送至Adobe Campaign Classic傳送之前，先新增內容至預先定義的範本（兩欄）。
    * **Adobe Campaign Standard電子郵件**：可讓您在將內容傳送至Adobe Campaign Standard傳送之前，先新增內容至預先定義的範本（兩欄）。
@@ -93,7 +110,7 @@ ht-degree: 2%
 1. 從下拉式清單中選取與您的Adobe Campaign執行個體相符的設定，然後按一下&#x200B;**儲存**&#x200B;進行確認。
 1. 您可以按一下&#x200B;**Adobe Campaign**&#x200B;索引標籤，以檢視電子郵件已套用的範本。 如果要選取其他範本，您可以在編輯時從電子郵件中存取該範本。
 
-   如果您想要套用預設郵件範本以外的特定電子郵件傳遞範本(來自Adobe Campaign)，請在「**屬性**」中選取「**Adobe Campaign**」標籤。 在相關的Adobe Campaign執行個體中輸入電子郵件傳遞範本的內部名稱。
+   如果您想要套用預設郵件範本以外的特定電子郵件傳遞範本（來自Adobe Campaign），請在「**屬性**」中選取「**Adobe Campaign**」標籤。 在相關的Adobe Campaign執行個體中輸入電子郵件傳遞範本的內部名稱。
 
    您選取的範本決定了Adobe Campaign提供的個人化欄位。
 
@@ -173,11 +190,11 @@ ht-degree: 2%
    >Adobe Campaign Standard的&#x200B;**：**
    >
    >* 可用的內容欄位對應至Adobe Campaign中的&#x200B;**設定檔**&#x200B;目標維度。
-   >* 請參閱將AEM頁面連結至Adobe Campaign電子郵件[。](#linking-an-aem-page-to-an-adobe-campaign-email-adobe-campaign-standard)
+   >* 請參閱將AEM頁面連結至Adobe Campaign電子郵件](#linking-an-aem-page-to-an-adobe-campaign-email-adobe-campaign-standard)。[
    >
    >Adobe Campaign Classic的&#x200B;**：**
    >
-   >* 可用的內容欄位會從Adobe Campaign **nms:seedMember**&#x200B;結構描述中動態復原。 目標擴充功能資料會從包含與內容同步之傳遞的工作流程中動態復原。 (請參閱[將AEM中建立的內容與Adobe Campaign的傳遞同步](#synchronizing-content-created-in-aem-with-a-delivery-from-adobe-campaign-classic)區段)。
+   >* 可用的內容欄位會從Adobe Campaign **nms:seedMember**&#x200B;結構描述中動態復原。 目標擴充功能資料會從包含與內容同步之傳遞的工作流程中動態復原。 （請參閱[將AEM中建立的內容與Adobe Campaign的傳遞同步](#synchronizing-content-created-in-aem-with-a-delivery-from-adobe-campaign-classic)區段）。
    >
    >* 若要新增或隱藏個人化元素，請參閱[管理個人化欄位和區塊](/help/sites-administering/campaignonpremise.md#managing-personalization-fields-and-blocks)。
    >* **重要**：所有種子表格欄位也必須在收件者表格（或對應的聯絡人表格）中。
@@ -260,7 +277,7 @@ Adobe Campaign Standard可讓您復原和連結在AEM中建立的內容，包含
 
 若要將AEM中建立的頁面連結至Adobe Campaign的電子郵件：
 
-1. 根據AEM專屬的電子郵件範本建立電子郵件。 如需詳細資訊，請參閱[在Adobe Campaign Standard中建立電子郵件](https://helpx.adobe.com/tw/campaign/standard/channels/using/creating-an-email.html)。
+1. 根據AEM專屬的電子郵件範本建立電子郵件。 如需詳細資訊，請參閱[在Adobe Campaign Standard中建立電子郵件](https://helpx.adobe.com/campaign/standard/channels/using/creating-an-email.html)。
 
    ![chlimage_1-36](assets/chlimage_1-36a.png)
 
@@ -323,7 +340,7 @@ Adobe Campaign可讓您復原在AEM中建立的內容，並與以下內容同步
 >
 >[!NOTE]
 >
->AEM 6.1已棄用工作流程步驟&#x200B;**發佈至Adobe Campaign**。此步驟是AEM 6.0與Adobe Campaign整合的一部分，已不再是必要步驟。
+>AEM 6.1已棄用工作流程步驟&#x200B;**發佈至Adobe Campaign**。 此步驟是AEM 6.0與Adobe Campaign整合的一部分，已不再是必要步驟。
 
 若要將AEM中建立的內容與來自Adobe Campaign的傳送同步：
 

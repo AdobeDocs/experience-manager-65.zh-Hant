@@ -10,13 +10,22 @@ exl-id: 21776f42-cd81-459d-b4b9-1d92e0aec164
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '281'
+source-wordcount: '293'
 ht-degree: 3%
-
 ---
-
 # 編輯啟動{#editing-launches}
 
 ## 編輯啟動頁面 {#editing-launch-pages}
@@ -28,7 +37,7 @@ ht-degree: 3%
 
    ![chlimage_1-13](assets/chlimage_1-13.jpeg)
 
-1. 選取您要處理的啟動，然後按一下[切換]。**&#x200B;**
+1. 選取您要處理的啟動，然後按一下[切換]。****
 1. 開始編輯。
 
    >[!NOTE]
@@ -45,19 +54,19 @@ ht-degree: 3%
 
    * 在&#x200B;**一般**&#x200B;標籤中，您可以編輯：
 
-      * **標題**
-      * **上線日期**：這等於啟動日期
-      * **生產就緒**
+     * **標題**
+     * **上線日期**：這等於啟動日期
+     * **生產就緒**
 
      如需這些欄位的用途和互動相關資訊，請參閱[啟動 — 事件順序](/help/sites-authoring/launches.md#launches-the-order-of-events)。
 
    * 在&#x200B;**影像**&#x200B;索引標籤中，您可以上傳影像檔案。
 
-1. 按一下「**儲存**」。
+1. 按一下&#x200B;**儲存**。
 
 ## 探索頁面的啟動狀態 {#discovering-the-launch-status-of-a-page}
 
-當您編輯頁面的啟動項時，啟動項的相關資訊會顯示在Sidekick的&#x200B;**版本設定**&#x200B;索引標籤底部：
+當您編輯頁面的啟動項時，啟動項的相關資訊會顯示在Sidekick的&#x200B;**版本設定**&#x200B;標籤底部：
 
 * 啟動項的名稱。
 * 上次變更後的時間。

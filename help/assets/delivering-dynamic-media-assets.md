@@ -14,19 +14,34 @@ autotag-review: '2026-05-18T18:45:05.823Z'
 TQID: 'https://experienceleague.adobe.com/a5ifneRAYCIMHKCGJHGQu9aoQt3EWZu1hiGYItlPZOE'
 product_v2:
   - id: e14eb250-3c22-4a07-9061-a78112b2b826
+    internal-label: Experience Manager 6.5
   - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 7d2b2ec8-499c-5434-9ffd-9218cd71f683
+    internal-label: Asset Management
+  - id: ac365bec-0634-4744-9473-c42f47320593
+    internal-label: Asset management and governance
+subfeature_v2:
+  - id: e42ab83e-8918-43a7-98a3-62bebbd5bb3a
+    internal-label: Renditions
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
 level_v2:
   - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+    internal-label: Beginner
   - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
-source-git-commit: 9c96b6744c7af2f061b4dfbf403560047485f9b5
+    internal-label: Intermediate
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: 324
+source-wordcount: '324'
 ht-degree: 9%
-
 ---
-
 # 傳遞 Dynamic Media 資產{#delivering-dynamic-media-assets}
 
 如何傳送Dynamic Media資產（包括影片和影像）取決於網站的實作方式。
@@ -36,9 +51,9 @@ ht-degree: 9%
 * 如果您的網站託管於Adobe Experience Manager，則您想要直接將Dynamic Media資產新增至您的頁面。
 * 如果您的網站不在Experience Manager上，您可以選擇以下任一選項：
 
-   * 將您的影片或影像內嵌在網站上。
-   * 將URL連結至您的網頁應用程式。 當您想要以快顯視窗或強制回應視窗的形式傳送視訊播放器時，請使用連結。
-   * 如果您的網站有回應，您可以[傳送最佳化的影像](/help/assets/responsive-site.md)。
+  * 將您的影片或影像內嵌在網站上。
+  * 將URL連結至您的網頁應用程式。 當您想要以快顯視窗或強制回應視窗的形式傳送視訊播放器時，請使用連結。
+  * 如果您的網站有回應，您可以[傳送最佳化的影像](/help/assets/responsive-site.md)。
 
 >[!NOTE]
 >

@@ -5,13 +5,26 @@ exl-id: 85463610-8461-4c1f-bfe7-72229a31ea40
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Developer
-source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '420'
-ht-degree: 0%
-
+source-wordcount: '442'
+ht-degree: 2%
 ---
-
 # 元件{#components}
 
 Adobe Experience Manager (AEM)隨附多種現成可用的元件，可為網站作者提供全方位功能。 在[編輯頁面](/help/sites-authoring/editing-content.md)時，這些元件可供使用，而且會依主要功能區域（稱為元件群組）分組，以協助篩選。
@@ -26,7 +39,7 @@ Adobe Experience Manager (AEM)隨附多種現成可用的元件，可為網站�
 
 ## 一般使用 {#general-usage}
 
-當&#x200B;**編輯頁面**&#x200B;時，元件可在頁面編輯器側面板的[元件](/help/sites-authoring/editing-content.md)索引標籤上使用。
+當[編輯頁面](/help/sites-authoring/editing-content.md)時，元件可在頁面編輯器側面板的&#x200B;**元件**&#x200B;索引標籤上使用。
 
 您可以選取元件並將其拖曳至頁面上的所需位置。 您接著可以使用下列專案加以編輯：
 
@@ -52,7 +65,7 @@ Adobe Experience Manager (AEM)隨附多種現成可用的元件，可為網站�
 
 下列頁面提供元件其他重要資訊的連結：
 
-* [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant) — 核心元件提供彈性且功能豐富的編寫功能，可提供建立頁面所需的基本內容型別。
+* [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) — 核心元件提供彈性且功能豐富的編寫功能，可提供建立頁面所需的基本內容型別。
 
 * [社群](/help/communities/author-communities.md) — 元件為網站提供互動功能，例如論壇和評論。 建立[社群網站](/help/communities/overview.md)時，其中許多元件都會包含在內。
 

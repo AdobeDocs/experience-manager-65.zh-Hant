@@ -14,29 +14,42 @@ autotag-review: '2026-05-18T18:46:26.981Z'
 TQID: 'https://experienceleague.adobe.com/DfSAGGSoBR-9TOXKA89X3U4VReVbP-Ej70vUK1Zfczk'
 product_v2:
   - id: e14eb250-3c22-4a07-9061-a78112b2b826
+    internal-label: Experience Manager 6.5
   - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
 feature_v2:
   - id: a01bfd36-4ab8-4bf8-9dc0-5b45b890552e
+    internal-label: APIs
+  - id: d4b6216b-4a89-4ff0-8ac0-5a699ba23100
+    internal-label: Images and videos
+subfeature_v2:
+  - id: afe09f80-87de-4606-96de-7aecd50f1a65
+    internal-label: Image profiles
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
 level_v2:
   - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
   - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 9c96b6744c7af2f061b4dfbf403560047485f9b5
+    internal-label: Security
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: 3751
+source-wordcount: '3751'
 ht-degree: 0%
-
 ---
-
 # 設定影像伺服器的Dynamic Media發佈設定
 
 只有符合下列條件時，才可使用設定Dynamic Media發佈設定選項：
 
-* 您正在以Scene7模式執行Dynamic Media。 請參閱[在Scene7模式中啟用Dynamic Media &#x200B;](/help/assets/config-dms7.md#enabling-dynamic-media-in-scene-mode)。
+* 您正在以Scene7模式執行Dynamic Media。 請參閱[在Scene7模式中啟用Dynamic Media ](/help/assets/config-dms7.md#enabling-dynamic-media-in-scene-mode)。
 * 您在Adobe Experience Manager 6.5.11或更新版本中有&#x200B;*現有* **[!UICONTROL Dynamic Media設定]** （在&#x200B;**[!UICONTROL 雲端服務]**）。 請參閱[在雲端服務中建立Dynamic Media設定](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services)。
 * 您是有管理員許可權的Experience Manager系統管理員。
 
@@ -70,9 +83,9 @@ ht-degree: 0%
    * [色彩管理屬性](#color-management-attributes-tab)標籤
 
    ![Dynamic Media發佈設定頁面](/help/assets/assets-dm/dm-publish-setup.png)
-   *Dynamic Media發佈設定頁面，已選取&#x200B;**[!UICONTROL 要求屬性]**&#x200B;索引標籤。*<br><br>
+   *Dynamic Media發佈設定頁面，已選取&#x200B;**[!UICONTROL 要求屬性]**索引標籤。*<br><br>
 
-1. 完成後，在頁面的右上角附近，按一下[儲存]。**&#x200B;**
+1. 完成後，在頁面的右上角附近，按一下[儲存]。****
 
 ## 安全性索引標籤 {#security-tab}
 
@@ -90,7 +103,7 @@ ht-degree: 0%
 
 **[!UICONTROL 規則集定義檔案路徑]** — 指定包含影像目錄之規則集定義的檔案。
 
-另請參閱「動態媒體檢視器參考指南」中的[RuleSetFile](https://experienceleague.adobe.com/zh-hant/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-rulesetfile)引數。
+另請參閱「動態媒體檢視器參考指南」中的[RuleSetFile](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-rulesetfile)引數。
 
 >[!NOTE]
 >
@@ -102,21 +115,21 @@ ht-degree: 0%
 
 | 設定 | 說明 |
 | --- | --- |
-| **[!UICONTROL 回覆影像大小限制]** | 必要。<br>僅對於新的Dynamic Media帳戶，**[!UICONTROL 影像伺服]**&#x200B;和&#x200B;**[!UICONTROL 測試影像伺服]**&#x200B;的預設大小限制都會自動設定為「寬度： `3000`」和「高度： `3000`」。<br>指定傳回給使用者端的回覆影像寬度與高度最大值。 如果要求造成回覆影像的寬度或/及高度大於此設定，則伺服器會傳回錯誤。<br>另請參閱「動態媒體檢視器參考指南」中的[MaxPix](https://experienceleague.adobe.com/zh-hant/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-maxpix)引數。 |
-| **[!UICONTROL 要求模糊化模式]** | 若要將base64編碼套用至有效的要求，請啟用。<br>另請參閱「動態媒體檢視器參考指南」中的[RequestObfuscation](https://experienceleague.adobe.com/zh-hant/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-requestobfuscation)引數。 |
-| **[!UICONTROL 要求鎖定模式]** | 如果您想要在要求中包含簡單的雜湊鎖定，請啟用此選項。<br>另請參閱「動態媒體檢視器參考指南」中的[RequestLock](https://experienceleague.adobe.com/zh-hant/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-requestlock)引數。 |
+| **[!UICONTROL 回覆影像大小限制]** | 必要。<br>僅對於新的Dynamic Media帳戶，**[!UICONTROL 影像伺服]**&#x200B;和&#x200B;**[!UICONTROL 測試影像伺服]**&#x200B;的預設大小限制都會自動設定為「寬度： `3000`」和「高度： `3000`」。<br>指定傳回給使用者端的回覆影像寬度與高度最大值。 如果要求造成回覆影像的寬度或/及高度大於此設定，則伺服器會傳回錯誤。<br>另請參閱「動態媒體檢視器參考指南」中的[MaxPix](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-maxpix)引數。 |
+| **[!UICONTROL 要求模糊化模式]** | 若要將base64編碼套用至有效的要求，請啟用。<br>另請參閱「動態媒體檢視器參考指南」中的[RequestObfuscation](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-requestobfuscation)引數。 |
+| **[!UICONTROL 要求鎖定模式]** | 如果您想要在要求中包含簡單的雜湊鎖定，請啟用此選項。<br>另請參閱「動態媒體檢視器參考指南」中的[RequestLock](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-requestlock)引數。 |
 | **[!UICONTROL 預設要求屬性]** | |
-| **[!UICONTROL 預設影像檔案字尾]** | 必填。<br>如果路徑不包含檔案字尾，則為附加至目錄Path和MaskPath欄位值的預設資料檔案副檔名。<br>另請參閱「動態媒體檢視器參考指南」中的[DefaultExt](https://experienceleague.adobe.com/zh-hant/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultext)引數。 |
-| **[!UICONTROL 預設字型名稱]** | 指定如果文字圖層要求未提供任何字型，使用何種字型。 如果已指定，它必須是此影像目錄的字型地圖或預設目錄的字型地圖中的有效字型名稱值。<br>另請參閱「動態媒體檢視器參考指南」中的[DefaultFont](https://experienceleague.adobe.com/zh-hant/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultfont)引數。 |
-| **[!UICONTROL 預設影像]** | 在找不到所要求的影像時，會傳回預設影像以回應要求。<br>另請參閱Dynamic Media檢視器參考指南中的[DefaultImage](https://experienceleague.adobe.com/zh-hant/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-is-cat-defaultimage)引數。<br>**注意**：如果您的Dynamic Media Classic帳戶在&#x200B;**[!UICONTROL 設定]** > **[!UICONTROL 應用程式]** > **[!UICONTROL 發佈設定]**&#x200B;下選取&#x200B;**[!UICONTROL 預設影像]**，則Experience Manager會擷取檔案。**[!UICONTROL 預設要求屬性]**&#x200B;群組中。 當您第一次開啟&#x200B;**[!UICONTROL Dynamic Media發佈設定]**&#x200B;頁面時，就會儲存檔案並在此欄位中使用。 |
-| **[!UICONTROL 預設影像模式]** | 啟用滑桿方塊（右側的滑桿）時，**[!UICONTROL 預設影像]**&#x200B;會以預設影像取代來源影像中每個遺失的圖層，並照常傳回複合影像。 停用滑桿方塊（左側的滑桿）時，預設影像會取代整個複合影像，即使遺失的影像隻是數個圖層中的一個圖層亦然。<br>另請參閱「動態媒體檢視器參考指南」中的[DefaultImageMode](https://experienceleague.adobe.com/zh-hant/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultimagemode)引數。 |
-| **[!UICONTROL 預設檢視大小]** | 必要。<br>僅對於新的Dynamic Media帳戶，預設檢視大小會自動設定為&#x200B;**[!UICONTROL 影像伺服]**&#x200B;和&#x200B;**[!UICONTROL 測試影像伺服]**&#x200B;的寬度： `1280`和高度： `1280`。<br>如果要求未明確使用`wid=`、`hei=`或`scl=`指定檢視大小，伺服器會將回覆影像限製為不得大於此寬度與高度。<br>另請參閱Dynamic Media檢視器參考指南中的[DefaultPix](https://experienceleague.adobe.com/zh-hant/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultpix)引數。 |
-| **[!UICONTROL 預設縮圖大小]** | 必要。<br>已使用縮圖要求(`req=tmb`)的預設檢視大小&#x200B;**，而非屬性**。 如果縮圖要求(`req=tmb`)未使用`wid=`、`hei=`或`scl=`明確指定大小，伺服器會將回覆影像限製為不得大於此寬度與高度。<br>另請參閱Dynamic Media檢視器參考指南中的[DefaultThumbPix](https://experienceleague.adobe.com/zh-hant/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultthumbpix)引數。 |
-| **[!UICONTROL 預設背景顏色]** | 指定用於填滿不包含實際影像資料之回覆影像的任何區域的RGB值。<br>另請參閱「動態媒體檢視器參考指南」中的[BkgColor](https://experienceleague.adobe.com/zh-hant/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-bkgcolor)引數。 |
+| **[!UICONTROL 預設影像檔案字尾]** | 必填。<br>如果路徑不包含檔案字尾，則為附加至目錄Path和MaskPath欄位值的預設資料檔案副檔名。<br>另請參閱「動態媒體檢視器參考指南」中的[DefaultExt](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultext)引數。 |
+| **[!UICONTROL 預設字型名稱]** | 指定如果文字圖層要求未提供任何字型，使用何種字型。 如果已指定，它必須是此影像目錄的字型地圖或預設目錄的字型地圖中的有效字型名稱值。<br>另請參閱「動態媒體檢視器參考指南」中的[DefaultFont](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultfont)引數。 |
+| **[!UICONTROL 預設影像]** | 在找不到所要求的影像時，會傳回預設影像以回應要求。<br>另請參閱Dynamic Media檢視器參考指南中的[DefaultImage](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-is-cat-defaultimage)引數。<br>**注意**：如果您的Dynamic Media Classic帳戶在&#x200B;**[!UICONTROL 設定]** > **[!UICONTROL 應用程式]** > **[!UICONTROL 發佈設定]**&#x200B;下選取&#x200B;**[!UICONTROL 預設影像]**，則Experience Manager會擷取檔案。**[!UICONTROL 預設要求屬性]**&#x200B;群組中。 當您第一次開啟&#x200B;**[!UICONTROL Dynamic Media發佈設定]**&#x200B;頁面時，就會儲存檔案並在此欄位中使用。 |
+| **[!UICONTROL 預設影像模式]** | 啟用滑桿方塊（右側的滑桿）時，**[!UICONTROL 預設影像]**&#x200B;會以預設影像取代來源影像中每個遺失的圖層，並照常傳回複合影像。 停用滑桿方塊（左側的滑桿）時，預設影像會取代整個複合影像，即使遺失的影像隻是數個圖層中的一個圖層亦然。<br>另請參閱「動態媒體檢視器參考指南」中的[DefaultImageMode](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultimagemode)引數。 |
+| **[!UICONTROL 預設檢視大小]** | 必要。<br>僅對於新的Dynamic Media帳戶，預設檢視大小會自動設定為&#x200B;**[!UICONTROL 影像伺服]**&#x200B;和&#x200B;**[!UICONTROL 測試影像伺服]**&#x200B;的寬度： `1280`和高度： `1280`。<br>如果要求未明確使用`wid=`、`hei=`或`scl=`指定檢視大小，伺服器會將回覆影像限製為不得大於此寬度與高度。<br>另請參閱Dynamic Media檢視器參考指南中的[DefaultPix](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultpix)引數。 |
+| **[!UICONTROL 預設縮圖大小]** | 必要。<br>已使用縮圖要求(`req=tmb`)的預設檢視大小&#x200B;]**，而非屬性**[!UICONTROL 。 如果縮圖要求(`req=tmb`)未使用`wid=`、`hei=`或`scl=`明確指定大小，伺服器會將回覆影像限製為不得大於此寬度與高度。<br>另請參閱Dynamic Media檢視器參考指南中的[DefaultThumbPix](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultthumbpix)引數。 |
+| **[!UICONTROL 預設背景顏色]** | 指定用於填滿不包含實際影像資料之回覆影像的任何區域的RGB值。<br>另請參閱「動態媒體檢視器參考指南」中的[BkgColor](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-bkgcolor)引數。 |
 | **[!UICONTROL JPEG編碼屬性]** |  |
-| **[!UICONTROL 品質]** | <br>指定JPEG回覆影像的預設屬性。<br>僅針對新的Dynamic Media帳戶，**[!UICONTROL 影像伺服]**&#x200B;和&#x200B;**[!UICONTROL 測試影像伺服]**&#x200B;的&#x200B;**[!UICONTROL 品質]**&#x200B;預設值會自動設定為`80`。<br>此欄位的定義範圍介於1到100之間。<br>另請參閱Dynamic Media檢視器參考指南中的[JpegQuality](https://experienceleague.adobe.com/zh-hant/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-jpegquality)引數。 |
+| **[!UICONTROL 品質]** | <br>指定JPEG回覆影像的預設屬性。<br>僅針對新的Dynamic Media帳戶，**[!UICONTROL 影像伺服]**&#x200B;和&#x200B;**[!UICONTROL 測試影像伺服]**&#x200B;的&#x200B;**[!UICONTROL 品質]**&#x200B;預設值會自動設定為`80`。<br>此欄位的定義範圍介於1到100之間。<br>另請參閱Dynamic Media檢視器參考指南中的[JpegQuality](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-jpegquality)引數。 |
 | **[!UICONTROL 色度縮減取樣]** | 啟用或停用JPEG編碼器採用的色度縮減取樣。 |
-| **[!UICONTROL 預設重新取樣模式]** | 指定用來縮放影像資料的預設重新取樣與內插屬性。 當要求中未指定`resMode`時使用。<br>僅針對新的Dynamic Media帳戶，**[!UICONTROL 影像伺服]**&#x200B;和&#x200B;**[!UICONTROL 測試影像伺服]**&#x200B;的預設重新取樣模式都會自動設定為`Sharp2`。<br>另請參閱Dynamic Media檢視器參考指南中的[ResMode](https://experienceleague.adobe.com/zh-hant/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-is-cat-resmode)引數。 |
+| **[!UICONTROL 預設重新取樣模式]** | 指定用來縮放影像資料的預設重新取樣與內插屬性。 當要求中未指定`resMode`時使用。<br>僅針對新的Dynamic Media帳戶，**[!UICONTROL 影像伺服]**&#x200B;和&#x200B;**[!UICONTROL 測試影像伺服]**&#x200B;的預設重新取樣模式都會自動設定為`Sharp2`。<br>另請參閱Dynamic Media檢視器參考指南中的[ResMode](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-is-cat-resmode)引數。 |
 
 ## 通用縮圖屬性索引標籤 {#common-thumbnail-attributes-tab}
 
@@ -124,12 +137,12 @@ ht-degree: 0%
 
 | 設定 | 說明 |
 | --- | --- |
-| **[!UICONTROL 縮圖的預設背景顏色]** | 指定用來對不包含實際影像資料的輸出縮圖影像區域進行填色的RGB值。 僅用於縮圖要求(`req=tmb`)以及當&#x200B;**[!UICONTROL 預設縮圖型別]**&#x200B;設定設為&#x200B;**[!UICONTROL 符合]**&#x200B;或&#x200B;**[!UICONTROL 紋理]**&#x200B;時。<br>另請參閱Dynamic Media檢視器參考指南中的[ThumbBkgColor](https://experienceleague.adobe.com/zh-hant/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-thumbbkgcolor)引數。 |
-| **[!UICONTROL 水準對齊]** | 指定回覆影像矩形（由`wid=`和`hei=`值指定）中縮圖影像的水準對齊方式。<br>僅用於縮圖要求(`req=tmb`)，且當&#x200B;**[!UICONTROL 預設縮圖型別]**&#x200B;設定設為&#x200B;**[!UICONTROL 符合]**&#x200B;時。<br>有三個水準對齊可供選擇： **[!UICONTROL 置中對齊]**、**[!UICONTROL 左對齊]**&#x200B;和&#x200B;**[!UICONTROL 右對齊]**。<br>另請參閱「動態媒體檢視器參考指南」中的[ThumbHorizAlign](https://experienceleague.adobe.com/zh-hant/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-thumbhorizalign)引數。 |
-| **[!UICONTROL 垂直對齊]** | 指定回覆影像矩形（由`wid=`和`hei=`值指定）中縮圖影像的垂直對齊方式。 僅用於縮圖要求(`req=tmb`)以及當&#x200B;**[!UICONTROL 預設縮圖型別]**&#x200B;設定設為&#x200B;**[!UICONTROL 符合]**&#x200B;時。<br>有三個垂直對齊可供選擇： **[!UICONTROL 頂端對齊]**、**[!UICONTROL 置中對齊]**&#x200B;以及&#x200B;**[!UICONTROL 底部對齊]**。<br>另請參閱「動態媒體檢視器參考指南」中的[ThumbVertAlign](https://experienceleague.adobe.com/zh-hant/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-thumbvertalign)引數。 |
-| **[!UICONTROL 預設快取存留時間]** | 若特定目錄記錄未包含有效的目錄Expiration值，則會以小時為單位提供預設的到期時間間隔。 設為`-1`以標籤為永不過期。 <br>另請參閱Dynamic Media檢視器參考指南中的[有效期](https://experienceleague.adobe.com/zh-hant/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-expiration)引數。 |
-| **[!UICONTROL 預設縮圖型別]** | 若特定目錄記錄未包含有效的目錄ThumbType值，則會提供縮圖型別的預設值。 僅用於縮圖要求(`req=tmb`)。<br>有三種縮圖型別可供選擇： **[!UICONTROL 裁切]**、**[!UICONTROL 符合]**&#x200B;和&#x200B;**[!UICONTROL 紋理]**。<br>另請參閱Dynamic Media檢視器參考指南中的[ThumbType](https://experienceleague.adobe.com/zh-hant/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-thumbtype)引數。 |
-| **[!UICONTROL 預設縮圖解析度]** | 如果特定目錄記錄未包含有效的目錄ThumbRes值，則會提供縮圖物件解析度的預設值。 僅用於縮圖要求(`req=tmb`)以及當&#x200B;**[!UICONTROL 預設縮圖型別]**&#x200B;設定設為&#x200B;**[!UICONTROL 紋理]**&#x200B;時。<br>另請參閱Dynamic Media檢視器參考指南中的[ThumbRes](https://experienceleague.adobe.com/zh-hant/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-thumbres)引數。 |
+| **[!UICONTROL 縮圖的預設背景顏色]** | 指定用來對不包含實際影像資料的輸出縮圖影像區域進行填色的RGB值。 僅用於縮圖要求(`req=tmb`)以及當&#x200B;**[!UICONTROL 預設縮圖型別]**&#x200B;設定設為&#x200B;**[!UICONTROL 符合]**&#x200B;或&#x200B;**[!UICONTROL 紋理]**&#x200B;時。<br>另請參閱Dynamic Media檢視器參考指南中的[ThumbBkgColor](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-thumbbkgcolor)引數。 |
+| **[!UICONTROL 水準對齊]** | 指定回覆影像矩形（由`wid=`和`hei=`值指定）中縮圖影像的水準對齊方式。<br>僅用於縮圖要求(`req=tmb`)，且當&#x200B;**[!UICONTROL 預設縮圖型別]**&#x200B;設定設為&#x200B;**[!UICONTROL 符合]**&#x200B;時。<br>有三個水準對齊可供選擇： **[!UICONTROL 置中對齊]**、**[!UICONTROL 左對齊]**&#x200B;和&#x200B;**[!UICONTROL 右對齊]**。<br>另請參閱「動態媒體檢視器參考指南」中的[ThumbHorizAlign](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-thumbhorizalign)引數。 |
+| **[!UICONTROL 垂直對齊]** | 指定回覆影像矩形（由`wid=`和`hei=`值指定）中縮圖影像的垂直對齊方式。 僅用於縮圖要求(`req=tmb`)以及當&#x200B;**[!UICONTROL 預設縮圖型別]**&#x200B;設定設為&#x200B;**[!UICONTROL 符合]**&#x200B;時。<br>有三個垂直對齊可供選擇： **[!UICONTROL 頂端對齊]**、**[!UICONTROL 置中對齊]**&#x200B;以及&#x200B;**[!UICONTROL 底部對齊]**。<br>另請參閱「動態媒體檢視器參考指南」中的[ThumbVertAlign](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-thumbvertalign)引數。 |
+| **[!UICONTROL 預設快取存留時間]** | 若特定目錄記錄未包含有效的目錄Expiration值，則會以小時為單位提供預設的到期時間間隔。 設為`-1`以標籤為永不過期。 <br>另請參閱Dynamic Media檢視器參考指南中的[有效期](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-expiration)引數。 |
+| **[!UICONTROL 預設縮圖型別]** | 若特定目錄記錄未包含有效的目錄ThumbType值，則會提供縮圖型別的預設值。 僅用於縮圖要求(`req=tmb`)。<br>有三種縮圖型別可供選擇： **[!UICONTROL 裁切]**、**[!UICONTROL 符合]**&#x200B;和&#x200B;**[!UICONTROL 紋理]**。<br>另請參閱Dynamic Media檢視器參考指南中的[ThumbType](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-thumbtype)引數。 |
+| **[!UICONTROL 預設縮圖解析度]** | 如果特定目錄記錄未包含有效的目錄ThumbRes值，則會提供縮圖物件解析度的預設值。 僅用於縮圖要求(`req=tmb`)以及當&#x200B;**[!UICONTROL 預設縮圖型別]**&#x200B;設定設為&#x200B;**[!UICONTROL 紋理]**&#x200B;時。<br>另請參閱Dynamic Media檢視器參考指南中的[ThumbRes](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-thumbres)引數。 |
 
 ## 色彩管理屬性標籤 {#color-management-attributes-tab}
 
@@ -144,7 +157,7 @@ ht-degree: 0%
 
 不同的演算意圖會使用不同的規則來決定如何調整來源顏色。
 
-另請參閱「動態媒體檢視器參考指南」中的[IccRenderIntent](https://experienceleague.adobe.com/zh-hant/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccrenderintent)引數。
+另請參閱「動態媒體檢視器參考指南」中的[IccRenderIntent](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccrenderintent)引數。
 
 >[!NOTE]
 >
@@ -152,9 +165,9 @@ ht-degree: 0%
 
 | 設定 | 特性 |
 | --- | --- |
-| **[!UICONTROL CMYK預設色域]** | 指定要用作CMYK資料使用中之設定檔的ICC色彩設定檔名稱。 如果選擇&#x200B;**[!UICONTROL 未指定]**，則在涉及CMYK來源影像時，將停用此影像目錄的色彩管理。 所有CMYK工作空間都依裝置而定，表示它們是以實際的油墨和紙張組合為基礎。 Adobe供應的CMYK工作區是根據標準商業列印條件。<br> 另請參閱「動態媒體檢視器參考指南」中的[IccProfileCMYK](https://experienceleague.adobe.com/zh-hant/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilecmyk)引數。 |
-| **[!UICONTROL 灰階預設色彩空間]** | 指定用作灰階資料使用中描述檔的ICC色彩描述檔名稱。 如果選擇&#x200B;**[!UICONTROL 未指定]**，則在涉及灰階來源影像時，將停用此影像目錄的色彩管理。<br>另請參閱「動態媒體檢視器參考指南」中的[IccProfileGray](https://experienceleague.adobe.com/zh-hant/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilegray)引數。 |
-| **[!UICONTROL RGB預設色域]** | 指定用作RGB資料使用中之設定檔的ICC色彩設定檔名稱。 如果選擇&#x200B;**[!UICONTROL 未指定]**，則在涉及RGB來源影像時停用此影像目錄的色彩管理。 一般來說，最好選擇&#x200B;**[!UICONTROL Adobe RGB]**&#x200B;或&#x200B;**[!UICONTROL sRGB]**，而不是特定裝置的設定檔（例如監視器設定檔）。 當您準備網頁或行動裝置的影像時，建議使用&#x200B;**[!UICONTROL sRGB]**，因為它定義了用來在網頁上檢視影像的標準監視器的色域。 當您處理消費者等級的數位相機影像時，**[!UICONTROL sRGB]**&#x200B;也是很好的選擇，因為這些相機大多使用sRGB做為預設色域。<br>另請參閱「動態媒體檢視器參考指南」中的[IccProfileRBG](https://experienceleague.adobe.com/zh-hant/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilergb)引數。 |
+| **[!UICONTROL CMYK預設色域]** | 指定要用作CMYK資料使用中之設定檔的ICC色彩設定檔名稱。 如果選擇&#x200B;**[!UICONTROL 未指定]**，則在涉及CMYK來源影像時，將停用此影像目錄的色彩管理。 所有CMYK工作空間都依裝置而定，表示它們是以實際的油墨和紙張組合為基礎。 Adobe供應的CMYK工作區是根據標準商業列印條件。<br> 另請參閱「動態媒體檢視器參考指南」中的[IccProfileCMYK](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilecmyk)引數。 |
+| **[!UICONTROL 灰階預設色彩空間]** | 指定用作灰階資料使用中描述檔的ICC色彩描述檔名稱。 如果選擇&#x200B;**[!UICONTROL 未指定]**，則在涉及灰階來源影像時，將停用此影像目錄的色彩管理。<br>另請參閱「動態媒體檢視器參考指南」中的[IccProfileGray](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilegray)引數。 |
+| **[!UICONTROL RGB預設色域]** | 指定用作RGB資料使用中之設定檔的ICC色彩設定檔名稱。 如果選擇&#x200B;**[!UICONTROL 未指定]**，則在涉及RGB來源影像時停用此影像目錄的色彩管理。 一般來說，最好選擇&#x200B;**[!UICONTROL Adobe RGB]**&#x200B;或&#x200B;**[!UICONTROL sRGB]**，而不是特定裝置的設定檔（例如監視器設定檔）。 當您準備網頁或行動裝置的影像時，建議使用&#x200B;**[!UICONTROL sRGB]**，因為它定義了用來在網頁上檢視影像的標準監視器的色域。 當您處理消費者等級的數位相機影像時，**[!UICONTROL sRGB]**&#x200B;也是很好的選擇，因為這些相機大多使用sRGB做為預設色域。<br>另請參閱「動態媒體檢視器參考指南」中的[IccProfileRBG](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilergb)引數。 |
 | **[!UICONTROL 色彩轉換演算色彩比對方式]** | **[!UICONTROL 可感知]** — 旨在保留色彩間的視覺關係，即使色彩值本身可能會變更，也能讓人眼感覺自然。 此意圖適用於具有大量超出色域顏色的攝影影像。 此設定是日本印刷業的標準色彩演算比對方式。 |
 |  | **[!UICONTROL 相對色度]** — 比較來源色域和目的地色域的極端亮部並相應地移動所有顏色。 超出色域的顏色會移至目標色域中最接近的可複製顏色。 「相對比色」保留影像中比「感應式」更多的原始顏色。 此設定是北美及歐洲列印的標準色彩演算比對方式。 |
 |  | **[!UICONTROL 飽和度]** — 嘗試在影像中產生生動的色彩，但犧牲色彩精確度。 此演算色彩比對方式適用於圖形或圖表等商業圖形，其中明亮飽和色彩比色彩之間的確切關係更重要。 |

@@ -5,13 +5,26 @@ exl-id: 61144bbe-6710-4cae-a63e-e708936ff360
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Developer
-source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1701'
+source-wordcount: '1705'
 ht-degree: 7%
-
 ---
-
 # 發佈頁面 {#publishing-pages}
 
 在您於作者環境中建立並檢閱內容後，[讓內容可在您的公用網站](/help/sites-authoring/author.md#concept-of-authoring-and-publishing) （您的發佈環境）上使用。
@@ -61,9 +74,9 @@ ht-degree: 7%
    * 如果沒有要發佈的引用，則會直接發佈頁面。
    * 如果頁面含有需要發佈的參考，這些參考將會列在&#x200B;**發佈**&#x200B;精靈中，您可以在其中執行下列任一作業：
 
-      * 指定您要與頁面一起發佈的資產或標籤，然後使用&#x200B;**發佈**&#x200B;以完成程式。
+     * 指定您要與頁面一起發佈的資產或標籤，然後使用&#x200B;**發佈**&#x200B;以完成程式。
 
-      * 使用&#x200B;**取消**&#x200B;中止動作。
+     * 使用&#x200B;**取消**&#x200B;中止動作。
 
    ![chlimage_1](assets/chlimage_1.png)
 
@@ -100,7 +113,7 @@ ht-degree: 7%
 
    ![pp-02](assets/pp-02.png)
 
-1. 在[快速發佈]對話方塊中，按一下[發佈]&#x200B;**&#x200B;**&#x200B;以確認發佈，或按一下[取消]&#x200B;**&#x200B;**&#x200B;以取消發佈。 請記住，任何未發佈的參考也會自動發佈。
+1. 在[快速發佈]對話方塊中，按一下[發佈]****&#x200B;以確認發佈，或按一下[取消]****&#x200B;以取消發佈。 請記住，任何未發佈的參考也會自動發佈。
 
    ![chlimage_1-1](assets/chlimage_1-1.png)
 
@@ -120,7 +133,7 @@ ht-degree: 7%
 
    ![pp-02-1](assets/pp-02-1.png)
 
-1. 「管 **理出版物** 」嚮導將啟動。第一個步驟&#x200B;**選項**&#x200B;可讓您：
+1. 「管 **理出版物** 」嚮導將啟動。 第一個步驟&#x200B;**選項**&#x200B;可讓您：
 
    * 選擇發佈或取消發佈選取的頁面。
    * 選擇現在或稍後採取該動作。
@@ -131,7 +144,7 @@ ht-degree: 7%
 
    ![chlimage_1-2](assets/chlimage_1-2.png)
 
-   按一下[下一步]&#x200B;**&#x200B;**&#x200B;繼續。
+   按一下[下一步]****&#x200B;繼續。
 
 1. 在「管理出版物」精靈的下一個步驟&#x200B;**範圍**&#x200B;中，您可以定義發佈/取消發佈的範圍，例如，包含子頁面和/或包含參考。
 
@@ -141,7 +154,7 @@ ht-degree: 7%
 
    按一下[新增內容]按鈕會啟動[路徑瀏覽器](/help/sites-authoring/author-environment-tools.md#path-browser)以允許選擇內容。
 
-   選取必要的頁面，然後按一下[選取]將內容加入精靈，或按一下[**取消**]取消選取並返回精靈。**&#x200B;**
+   選取必要的頁面，然後按一下[選取]將內容加入精靈，或按一下[**取消**]取消選取並返回精靈。****
 
    回到精靈，您可以選取清單中的專案以設定其進一步的選項，例如：
 
@@ -205,7 +218,7 @@ ht-degree: 7%
 
 取消發佈頁面會將其從發佈環境中移除，因此不再開放給您的讀者使用。
 
-以類似發佈[的](/help/sites-authoring/publishing-pages.md#publishing-pages)方式，可以取消發佈一或多個頁面：
+以類似發佈](/help/sites-authoring/publishing-pages.md#publishing-pages)的[方式，可以取消發佈一或多個頁面：
 
 * [從頁面編輯器](/help/sites-authoring/publishing-pages.md#unpublishing-from-the-editor)
 * [從網站主控台](/help/sites-authoring/publishing-pages.md#unpublishing-from-the-console)
@@ -223,7 +236,7 @@ ht-degree: 7%
 如同您[使用[管理出版物]選項發佈](/help/sites-authoring/publishing-pages.md#manage-publication)一樣，您也可以使用它來取消發佈。
 
 1. 在網站主控台中選取一個或多個頁面，然後按一下&#x200B;**管理出版物**&#x200B;按鈕。
-1. 「管 **理出版物** 」嚮導將啟動。在第一個步驟中， **選項**，選擇「取消發佈」(Unpublish **)，而非「發佈」(Publish)的預設** 選項 **&#x200B;**。
+1. 「管 **理出版物** 」嚮導將啟動。 在第一個步驟中， **選項**，選擇「取消發佈」(Unpublish **)，而非「發佈」(Publish)的預設** 選項 ****。
 
    ![chlimage_1-5](assets/chlimage_1-5.png)
 
@@ -240,7 +253,7 @@ ht-degree: 7%
 您可以使用網站主控台上的[管理出版物](/help/sites-authoring/publishing-pages.md#manage-publication)選項來執行此動作。
 
 1. 在網站主控台中，選取您要發佈或取消發佈的樹狀目錄根頁面，然後選取&#x200B;**管理出版物**。
-1. 「管 **理出版物** 」嚮導將啟動。選擇發佈或取消發佈，以及應該發生的時間，並選取&#x200B;**下一步**&#x200B;以繼續。
+1. 「管 **理出版物** 」嚮導將啟動。 選擇發佈或取消發佈，以及應該發生的時間，並選取&#x200B;**下一步**&#x200B;以繼續。
 1. 在&#x200B;**領域**&#x200B;步驟中，選取根頁面並選取&#x200B;**包含子項**。
 
    ![chlimage_1-6](assets/chlimage_1-6.png)
@@ -266,11 +279,11 @@ ht-degree: 7%
 
 您可以決定頁面的發佈狀態：
 
-* 在網站主控台[的](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)資源概觀資訊中
+* 在網站主控台](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)的[資源概觀資訊中
 
   ![screen-shot_2019-03-05at112019](assets/screen-shot_2019-03-05at112019.png)
 
-  發佈狀態會顯示在 [網站主控台](/help/sites-authoring/basic-handling.md#card-view) [的卡片](/help/sites-authoring/basic-handling.md#column-view)、欄和 [清單檢視中](/help/sites-authoring/basic-handling.md#list-view) 。
+  發佈狀態會顯示在 [網站主控台](/help/sites-authoring/basic-handling.md#card-view)[的卡片](/help/sites-authoring/basic-handling.md#column-view)、欄和 [清單檢視中](/help/sites-authoring/basic-handling.md#list-view) 。
 
 * 在[時間表](/help/sites-authoring/basic-handling.md#timeline)中
 

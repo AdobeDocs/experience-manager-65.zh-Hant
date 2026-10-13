@@ -5,13 +5,39 @@ exl-id: 47d0570b-224e-4109-b94e-ccc369d7ac5f
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments,GraphQL,Persisted Queries,Developing
 role: Admin,Developer
-source-git-commit: f2c92b990a5c09cbcf532e0800e264620d98af77
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: bfd4bc52-c397-5127-8f86-8953ba9fc0a3
+    internal-label: Headless
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+  - id: a642c50e-80eb-4fc1-a5d2-f3762d1f841d
+    internal-label: Administration
+  - id: d429a63e-ade4-4117-b04e-9b996d1c94ef
+    internal-label: Integrations
+  - id: c124fa01-25c5-42ec-adf6-21d1c114058b
+    internal-label: Developer tools
+subfeature_v2:
+  - id: e9db7c79-8f65-4281-a439-c9049296d903
+    internal-label: Content Fragments
+  - id: a02b73a7-bdfc-4225-bdfd-69f7891ab55e
+    internal-label: GraphQL
+  - id: d781bc8f-52af-43f6-84d0-b73e59a130d5
+    internal-label: Persisted queries
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1915'
+source-wordcount: '1995'
 ht-degree: 87%
-
 ---
-
 # 最佳化 GraphQL 查詢 {#optimizing-graphql-queries}
 
 >[!NOTE]
@@ -32,7 +58,7 @@ ht-degree: 87%
 
 強烈建議使用持續性 GraphQL 查詢。
 
-持續性 GraphQL 查詢利用內容傳遞網路 (CDN) 來幫助降低查詢執行效能。 用戶端應用程式透過 GET 要求要求持續性查詢，以達到邊緣支援的快速執行。
+持續性 GraphQL 查詢利用內容傳遞網路 (CDN) 來幫助提升查詢執行效能。 用戶端應用程式透過 GET 請求請求持續性查詢，以達到邊緣支援的快速執行。
 
 **進一步參考**
 
@@ -66,7 +92,7 @@ ht-degree: 87%
 
 **推薦**
 
-[AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant) 是 AEM 服務中的第一層快取，位於 CDN 快取之前。
+[AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) 是 AEM 服務中的第一層快取，位於 CDN 快取之前。
 
 **進一步參考**
 
@@ -84,7 +110,7 @@ ht-degree: 87%
 
 請參閱：
 
-* [在AEM中使用CDN](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant#using-dispatcher-with-a-cdn)
+* [在AEM中使用CDN](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html#using-dispatcher-with-a-cdn)
 
 #### 設定 HTTP 快取控制標頭 {#set-http-cache-control-headers}
 
@@ -114,7 +140,7 @@ or the [AEM GraphiQL IDE](/help/sites-developing/headless/graphql-api/graphiql-i
 請參閱：
 
 * [快取持續性查詢](/help/sites-developing/headless/graphql-api/persisted-queries.md#caching-persisted-queries)
-* [如何保留 GraphQL 查詢](/help/sites-developing/headless/graphql-api/persisted-queries.md#how-to-persist-query)
+* [如何將 GraphQL 查詢設為持續性查詢](/help/sites-developing/headless/graphql-api/persisted-queries.md#how-to-persist-query)
 <!--
 * [Managing cache for your persisted queries](/help/sites-developing/headless/graphql-api/graphiql-ide.md#managing-cache)
 -->
@@ -133,20 +159,20 @@ Contact Adobe to enable this capability for your AEM Cloud Service program and e
 
 ### GraphQL 查詢最佳化 {#graphql-query-optimization}
 
-在具備大量共有相同模式內容片段的 AEM 執行個體上，GraphQL 列表查詢費用可能會變得很昂貴 (以資源來說)。
+在具有大量共用相同模型之內容片段的 AEM 執行個體上，GraphQL 清單查詢可能會變得非常耗用資源。
 
-這是因為在 GraphQL 查詢中使用共用一個模式的&#x200B;*所有*&#x200B;片段必須載入記憶體中。 這會消耗時間和記憶體。 篩選 (可能會減少 (最終) 結果集中的項目數量) 只能在&#x200B;**&#x200B;**&#x200B;將整個結果集載入記憶體後應用。
+這是因為在 GraphQL 查詢中使用共用一個模式的&#x200B;*所有*&#x200B;片段必須載入記憶體中。 這會消耗時間和記憶體。 篩選 (可能會減少 (最終) 結果集中的項目數量) 只能在&#x200B;****&#x200B;將整個結果集載入記憶體後應用。
 
 這可能會給人留下這樣的印象，即使是很小的結果集 (也可能) 會導致效能不佳。 然而，實際上緩慢是由初始結果集的大小引起的，因為它必須在套用篩選之前在內部進行處理。
 
-為了減少效能和記憶體問題，這個初始結果集必須盡可能維持最小。
+為了減少效能和記憶體問題，這個初始結果集必須盡可能保持在最小範圍。
 
 AEM 提供兩種方式進行 GraphQL 查詢最佳化：
 
 * [混合篩選](#use-aem-graphql-hybrid-filtering)
 * [分頁](#use-aem-graphql-pagination) (或進行分頁)
 
-   * [排序](#use-graphql-sorting)與最佳化沒有直接關係，而是與分頁有關
+  * [排序](#use-graphql-sorting)與最佳化沒有直接關係，而是與分頁有關
 
 每種方法都有自己的使用案例和局限性。 本節提供有關混合篩選和分頁的資訊，以及一些用於最佳化 GraphQL 查詢的[最佳實務](#best-practices)。
 
@@ -156,13 +182,13 @@ AEM 提供兩種方式進行 GraphQL 查詢最佳化：
 
 混合篩選結合了 JCR 篩選和 AEM 篩選。
 
-在將結果集載入記憶體以進行 AEM 篩選之前，這類篩選會套用 JCR 篩選器 (以查詢限制的形式)。 這是為了減少載入記憶體內的結果集，因為 JCR 篩選器會在此之前刪除多餘的結果。
+在將結果集載入記憶體以進行 AEM 篩選之前，這類篩選會套用 JCR 篩選器 (以查詢限制的形式)。 這是為了減少載入記憶體中的結果集，因為 JCR 篩選會在此之前移除多餘的結果。
 
 >[!NOTE]
 >
 >出於技術原因 (例如靈活性、片段嵌套)，AEM 無法將整個篩選作業委派給 JCR。
 
-這種技術保留了 GraphQL 篩選器提供的靈活性，同時將盡可能多將篩選作業委派給 JCR。
+這種技術保留了 GraphQL 篩選器提供的靈活性，同時將盡可能多的篩選作業委派給 JCR。
 
 >[!NOTE]
 >
@@ -185,11 +211,11 @@ AEM中的GraphQL支援兩種分頁型別：
 
 * [限制/位移型分頁](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#list-offset-limit)
 這用於清單查詢；這些查詢以`List`結尾；例如，`articleList`。
-若要使用它，您必須提供第一個要傳回專案的位置(`offset`)以及要傳回的專案數（`limit`或頁面大小）。
+若要使用，您必須提供第一個要返回項目的位置 (`offset`) 和要返回的項目數 (`limit`，或頁面大小)。
 
 * [以游標為基礎的分頁](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#paginated-first-after) （由`first`和`after`表示）
 這會為每個專案提供唯一的ID；也稱為游標。
-在查詢中，您可以指定上一頁最後一個專案的游標，加上頁面大小（要傳回的專案數目上限）。
+在查詢中，您要指定上一頁最後一項的游標，加上頁面大小 (要返回的最大項目數)。
 
   由於游標式分頁不適合列表式查詢的資料結構，AEM 引入了 `Paginated` 查詢類型；例如，`articlePaginated`。 使用的資料結構和參數需依 [GraphQL 游標連接規格](https://relay.dev/graphql/connections.htm)訂定。
 
@@ -217,7 +243,7 @@ AEM中的GraphQL支援兩種分頁型別：
 
 >[!NOTE]
 >
->對頂層欄位進行排序也會對效能產生 (儘管很小) 影響。
+>對頂層欄位進行排序也會對效能產生影響，儘管這種影響很小。
 
 **進一步參考**
 
@@ -272,7 +298,7 @@ AEM中的GraphQL支援兩種分頁型別：
 
 您還可以使用分頁來減少初始結果集；特別是如果您的請求不使用任何篩選和排序。
 
-如果您對嵌套片段進行篩選或排序，分頁查詢可能仍然很慢，因為 AEM 可能仍需要將大量片段載入記憶體中。 因此，如果結合篩選和分頁，請考慮遵守篩選規則 (如上所述)。
+如果您對巢狀內容片段進行篩選或排序，分頁查詢可能仍然很慢，因為 AEM 可能仍需要將大量片段載入記憶體中。 因此，如果結合篩選和分頁，請考慮遵守篩選規則 (如上所述)。
 
 對於分頁，排序同樣重要，因為分頁結果一定會排序 (無論是顯式還是隱式)。
 
@@ -338,6 +364,6 @@ AEM GraphQL 可以以多種格式傳回在&#x200B;**[多行文字](/help/assets/
 
 ### 測試您的查詢 {#test-your-queries}
 
-處理 GraphQL 查詢類似於處理搜尋查詢，並且比簡單的 GET-all-content API 要求複雜得多。
+處理 GraphQL 查詢類似於處理搜尋查詢，而且比簡單的 GET-all-content API 請求複雜得多。
 
 在受控的非生產環境中仔細規劃、測試和最佳化查詢是在生產環境中成功使用的關鍵。

@@ -9,13 +9,24 @@ feature: Forms Portal
 exl-id: f889d996-77f7-4a4f-a637-da43fe1343c5
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: fa155e29-cba2-5e77-9efd-4824be5ce4c8
+    internal-label: Forms Portal
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1188'
+source-wordcount: '1257'
 ht-degree: 0%
-
 ---
-
 # 自訂Forms Portal元件的範本{#customizing-templates-for-forms-portal-components}
 
 ## 先決條件 {#prerequisites}
@@ -41,8 +52,8 @@ Forms入口網站可讓您在表單清單中使用自訂中繼資料。 為資�
    * 搜尋和清單元件： &quot;/libs/fd/fp/formTemplate&quot;
    * 草稿和提交元件：
 
-      * 草稿區段： /libs/fd/fp/draftsTemplate
-      * 提交區段：/libs/fd/fp/submissionsTemplate
+     * 草稿區段： /libs/fd/fp/draftsTemplate
+     * 提交區段：/libs/fd/fp/submissionsTemplate
 
    * 連結元件： /libs/fd/fp/linkTemplate
 
@@ -88,11 +99,11 @@ Forms Portal提供預留位置語法，以顯示自訂/現成可用的中繼資�
 
 若要包含可重複的專案，請將屬性&#x200B;**data-repeatable**&#x200B;的值設定為&#x200B;**true**。
 
-*在所討論的範例中，自訂範本的頂端有兩個Div元素。 第一個具有「__FP_boxes-container」CSS類別，可作為所清單單的容器元素。 第二個是「__FP_boxes」CSS類別，是基本實體的範本，在此例中為「表單」。 Div元素中存在的&#x200B;**data-repeatable**&#x200B;屬性具有值&#x200B;**true**.*
+*在所討論的範例中，自訂範本的頂端有兩個Div元素。 第一個具有「__FP_boxes-container」CSS類別，可作為所清單單的容器元素。 第二個是「__FP_boxes」CSS類別，是基本實體的範本，在此例中為「表單」。 Div元素中存在的&#x200B;**data-repeatable**屬性具有值&#x200B;**true**.*
 
 每個預留位置都有一個專屬的現成可用中繼資料集。 若要在表單的特定位置顯示自訂中繼資料，請在該位置新增&#x200B;**${metadata_prop}屬性**。
 
-*在此範例中，中繼資料屬性用於多個執行個體。 例如，它以規定的方式用於&#x200B;**description**、**name**、**formUrl**、**htmlStyle**、**pdfUrl**、**pdfStyle**&#x200B;和&#x200B;**path**。*
+*在此範例中，中繼資料屬性用於多個執行個體。 例如，它以規定的方式用於&#x200B;**description**、**name**、**formUrl**、**htmlStyle**、**pdfUrl**、**pdfStyle**和&#x200B;**path**。*
 
 ## 現成可用的中繼資料 {#out-of-the-box-metadata}
 
@@ -120,8 +131,8 @@ Forms Portal提供預留位置語法，以顯示自訂/現成可用的中繼資�
 1. **本地化支援**：若要本地化任何靜態文字，請使用屬性`${localize-YOUR_TEXT}`，並讓本地化值可供使用（如果尚未存在的話）。
    *在所討論的範例中，屬性`${localize-Apply}`和`${localize-Download}`是用來當地語系化套用和下載文字。*
 
-1. **排序支援**：按一下HTML元素來排序搜尋結果。若要在表格配置中實施排序，請在特定表格標頭上新增「data-sortKey」屬性。此外，將其值新增為您要排序的中繼資料。
-例如，對於格線檢視中的「Title」標頭，「data-sortKey」標頭的值為「title」。按一下標題，以便排序特定欄中的值。
+1. **排序支援**：按一下HTML元素來排序搜尋結果。 若要在表格配置中實施排序，請在特定表格標頭上新增「data-sortKey」屬性。 此外，將其值新增為您要排序的中繼資料。
+例如，對於格線檢視中的「Title」標頭，「data-sortKey」標頭的值為「title」。 按一下標題，以便排序特定欄中的值。
 
 1. **使用組態屬性**： Search &amp; Lister元件有數個組態可供您在使用者介面上使用。 例如，若要顯示透過編輯對話方塊儲存的HTML工具提示文字，請使用`${config-htmlLinkText}`屬性。 **同樣地，對於PDF工具提示文字，請使用** `${config-pdfLinkText}`屬性。
 

@@ -1,6 +1,6 @@
 ---
 title: 變更外觀
-description: 瞭解如何編輯負責為Adobe Experience Manager Communities中的每個評論建立整體HTML的comment.hbs指令碼。
+description: 瞭解如何編輯負責為Adobe Experience Manager社群中的每個評論建立整體HTML的comment.hbs指令碼。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
@@ -10,13 +10,20 @@ exl-id: cb8f6967-216c-46d3-a7ba-068b0f5e3b94
 solution: Experience Manager
 feature: Communities
 role: Developer
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '233'
+source-wordcount: '242'
 ht-degree: 0%
-
 ---
-
 # 變更外觀 {#alter-the-appearance}
 
 ## 修改指令碼 {#modify-the-script}

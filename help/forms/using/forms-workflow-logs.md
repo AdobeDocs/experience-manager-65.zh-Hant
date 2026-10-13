@@ -9,16 +9,30 @@ exl-id: 601c8d95-0d1a-4945-a522-e85d3e9fc4ae
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 9f59606bb58b9e90f07bd22e89f3213afb54a697
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '292'
+source-wordcount: '293'
 ht-degree: 5%
-
 ---
-
 # 登入AEM Forms工作流程{#logging-in-aem-forms-workflows}
 
-Forms Workflow步驟提供詳細的記錄檔，以便您輕鬆偵錯工作流程相關問題。 啟用AEM Forms工作流程的偵錯記錄以檢視記錄。
+Forms Workflow步驟提供詳細的記錄檔，可方便您偵錯工作流程相關問題。 啟用AEM Forms工作流程的偵錯記錄以檢視記錄。
 
 依預設，所有記錄資訊都可在&#x200B;**error.log**&#x200B;檔案的&#x200B;*/crx-repository/logs/*&#x200B;目錄中取得。
 
@@ -79,9 +93,9 @@ Forms Workflow步驟提供詳細的記錄檔，以便您輕鬆偵錯工作流程
 
 請執行以下動作，以啟用AEM Forms工作流程的偵錯記錄：
 
-1. 請前往AEM Web主控台組態管理員：
+1. 前往AEM Web主控台設定管理員，網址：
 
-   https://&#39;[伺服器]：[連線埠]&#39;/system/console/configMgr
+   https://'[伺服器]：[連線埠]'/system/console/configMgr
 
 1. 選取&#x200B;**[!UICONTROL Sling]** > **[!UICONTROL 記錄檔支援]**。
 1. 選取&#x200B;**[!UICONTROL 新增記錄器。]**

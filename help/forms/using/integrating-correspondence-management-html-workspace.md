@@ -8,13 +8,33 @@ exl-id: 39a3f7db-549f-47f3-8d4f-42d583a4532d
 solution: Experience Manager, Experience Manager Forms
 feature: HTML5 Forms,Adaptive Forms,Mobile Forms
 role: Admin, User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 97aafc4b-2598-52d6-9012-295a95969e38
+    internal-label: HTML5 Forms
+  - id: 59f95943-e802-56ac-990d-21ab923984c1
+    internal-label: Mobile Forms
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '642'
 ht-degree: 0%
-
 ---
-
 # 在AEM Forms工作區中整合第三方應用程式{#integrating-third-party-applications-in-aem-forms-workspace}
 
 AEM Forms工作區支援管理表單與檔案的任務指派與完成活動。 這些表單和檔案可能是XDP Forms、Flex®表單或已以XDP、PDF、HTML或Flex格式轉譯的指南（已過時）。
@@ -103,7 +123,7 @@ AEM Forms工作區支援管理表單與檔案的任務指派與完成活動。 �
    [取得檔案](assets/dscsample.zip)
    下載DSC：以上附加的DSCSample.zip檔案中提供範例DSC。 下載並解壓縮DSCSample.zip檔案。 在使用DSC服務之前，您必須先設定它。 請參閱[設定DSC服務](../../forms/using/add-action-button-in-create-correspondence-ui.md#p-configure-the-dsc-service-p)。
 
-   在[定義活動]對話方塊中，選取適當的活動，例如getLetterInstanceInfo，然後按一下[確定]。**&#x200B;**
+   在[定義活動]對話方塊中，選取適當的活動，例如getLetterInstanceInfo，然後按一下[確定]。****
 
 1. 部署應用程式。 如果系統提示入庫並儲存資產。
 1. 在https://&#39;[伺服器]：[連線埠]&#39;/lc/content/ws登入AEM表單工作區。

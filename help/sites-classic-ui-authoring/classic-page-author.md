@@ -9,13 +9,22 @@ exl-id: a3606d72-1bd8-4886-9285-6457dae66486
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '299'
+source-wordcount: '304'
 ht-degree: 0%
-
 ---
-
 # 製作頁面{#authoring-pages}
 
 以下提供使用AEM撰寫的概觀：
@@ -43,7 +52,7 @@ ht-degree: 0%
 出現在可編輯頁面上的浮動「檢視窗」。 從這裡，可將新元件拖曳至頁面上，並執行頁面專用動作。
 
 * **[內容尋找器](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#thecontentfinderclassicui)**
-在每個可編寫頁面的左側，內容尋找器可讓您快速存取一系列資產，包括數位資產(例如其他影像、Flash元素和檔案)、其他頁面和段落。 這些專案可拖曳至頁面；例如，放置資產或建立其他頁面的連結。
+在每個可編寫頁面的左側，內容尋找器可讓您快速存取一系列資產，包括數位資產（例如其他影像、Flash元素和檔案）、其他頁面和段落。 這些專案可拖曳至頁面；例如，放置資產或建立其他頁面的連結。
 
 * **內容功能表**
 以滑鼠右鍵按一下大部分的熒幕元素（例如頁面上的段落），可顯示含有適當動作選項的內容功能表。

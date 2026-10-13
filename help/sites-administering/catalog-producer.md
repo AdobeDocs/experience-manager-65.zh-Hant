@@ -9,13 +9,22 @@ exl-id: 76a46c62-d47d-4970-8a3a-d56015639548
 solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 243139ec-8e41-5296-a287-31343ab1bc0f
+    internal-label: Integration
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '843'
+source-wordcount: '859'
 ht-degree: 1%
-
 ---
-
 # 目錄製作者{#catalog-producer}
 
 瞭解如何在AEM Assets中使用目錄製作程式，使用您的數位資產產生產品目錄。
@@ -28,9 +37,9 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->您可以先從InDesign檔案產生InDesign範本，然後再將範本匯入AEM Assets。 如需詳細資訊，請參閱[使用檔案與範本](https://helpx.adobe.com/tw/indesign/using/files-templates.html)。
+>您可以先從InDesign檔案產生InDesign範本，然後再將範本匯入AEM Assets。 如需詳細資訊，請參閱[使用檔案與範本](https://helpx.adobe.com/indesign/using/files-templates.html)。
 >
->您可以將InDesign範本中的元素對應至XML標籤。 當您在「目錄製作程式」中將產品屬性與範本屬性對應時，對應的標籤會顯示為屬性。 若要瞭解InDesign檔案中的XML標籤，請參閱[標籤XML的內容](https://helpx.adobe.com/tw/indesign/using/tagging-content-xml.html)。
+>您可以將InDesign範本中的元素對應至XML標籤。 當您在「目錄製作程式」中將產品屬性與範本屬性對應時，對應的標籤會顯示為屬性。 若要瞭解InDesign檔案中的XML標籤，請參閱[標籤XML的內容](https://helpx.adobe.com/indesign/using/tagging-content-xml.html)。
 
 >[!NOTE]
 >
@@ -53,7 +62,7 @@ ht-degree: 1%
    >
    >若要開啟目錄，您也可以在上一步所述的確認對話方塊中按一下&#x200B;**開啟**。
 
-1. 若要新增頁面至目錄，請按一下工具列中的[建立]，然後選擇[新增頁面]。**&#x200B;**&#x200B;**&#x200B;**&#x200B;選項。
+1. 若要新增頁面至目錄，請按一下工具列中的[建立]，然後選擇[新增頁面]。********&#x200B;選項。
 1. 從精靈中，為您的頁面選取InDesign範本。 然後，按一下&#x200B;**下一步**。
 1. 指定頁面的名稱和選擇性說明。 指定標籤（如果有）。
 1. 按一下工具列中的&#x200B;**建立**。 然後，從對話方塊按一下&#x200B;**開啟**。 產品的屬性會顯示在左窗格中。 InDesign範本的預先定義屬性會出現在右窗格中。
@@ -74,8 +83,8 @@ ht-degree: 1%
    ![select_product](assets/select_product.png)
 
 1. 從工具列中按一下&#x200B;**建立**。 按一下&#x200B;**完成**&#x200B;以關閉對話方塊。 類似頁面會包含在您的目錄中。
-1. 若要將任何現有的InDesign檔案新增至您的目錄，請從工具列按一下「建立」**&#x200B;**，然後選擇「新增至現有頁面」**選項**。
-1. 選取InDesign檔案，然後按一下工具列中的「新增&#x200B;**&#x200B;**」。 然後，按一下&#x200B;**確定**&#x200B;以關閉對話方塊。
+1. 若要將任何現有的InDesign檔案新增至您的目錄，請從工具列按一下「建立」****，然後選擇「新增至現有頁面」**選項**。
+1. 選取InDesign檔案，然後按一下工具列中的「新增&#x200B;****」。 然後，按一下&#x200B;**確定**&#x200B;以關閉對話方塊。
 
    如果您在目錄頁面中參考的產品中繼資料已變更，這些變更不會自動反映在目錄頁面中。 在參考目錄頁面的產品影像上，會出現標示為&#x200B;**過時**&#x200B;的橫幅，表示參考的產品中繼資料不是最新的。
 
@@ -92,9 +101,10 @@ ht-degree: 1%
 1. 若要重新排列目錄中的頁面，請按一下工具列中的&#x200B;**建立**&#x200B;圖示，然後從功能表選擇&#x200B;**合併**。 在精靈中，頂端的轉盤可讓您拖曳頁面以重新排序頁面。 您也可以移除頁面。
 
 1. 按一下「**下一步**」。 若要新增現有的InDesign檔案做為封面頁，請按一下&#x200B;**選擇封面頁**&#x200B;方塊旁的&#x200B;**瀏覽**，並指定封面頁範本的路徑。
-1. 按一下[儲存]&#x200B;**&#x200B;**，然後按一下[完成]**關閉確認對話方塊。
-選取&#x200B;**&#x200B;完成&#x200B;**&#x200B;選項時，會開啟一個對話方塊以選取您是否需要.pdf轉譯。**   ![匯出至pdf](assets/CatalogPDF.png)
-   如果選取Acrobat(PDF)選項，則除了indesign轉譯之外，還會在&#x200B;**/jcr:content/轉譯**&#x200B;中建立pdf轉譯。 您可以選取下載對話方塊中的「轉譯」核取方塊來下載所有轉譯。
+1. 按一下[儲存]****，然後按一下[完成]**關閉確認對話方塊。**
+選取**完成**選項時，會開啟對話方塊以選取您是否需要.pdf轉譯。
+   ![匯出至pdf](assets/CatalogPDF.png)
+   如果選取Acrobat(PDF)選項，則除了indesign轉譯之外，還會在**/jcr:content/轉譯**&#x200B;中建立pdf轉譯。 您可以選取下載對話方塊中的「轉譯」核取方塊來下載所有轉譯。
 
 1. 若要為您建立的目錄產生預覽，請在&#x200B;**目錄**&#x200B;主控台中選取該目錄，然後按一下工具列中的&#x200B;**預覽**&#x200B;圖示。
 

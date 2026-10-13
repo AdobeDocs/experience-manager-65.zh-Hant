@@ -8,18 +8,29 @@ mini-toc-levels: 4
 exl-id: 158607e6-b4e9-4a3f-b023-4023d60c97d2
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 7d2b2ec8-499c-5434-9ffd-9218cd71f683
+    internal-label: Asset Management
+  - id: 74ec00bc-0862-520e-86dc-e377aeccc141
+    internal-label: Search
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '10112'
+source-wordcount: '10238'
 ht-degree: 3%
-
 ---
-
 # 管理您的數位資產 {#manage-digital-assets}
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/manage-digital-assets.html?lang=zh-Hant) |
+| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/manage-digital-assets.html?lang=en) |
 | AEM 6.5 | 本文章 |
 
 在[!DNL Adobe Experience Manager Assets]中，您除了儲存及控管資產之外，還能執行其他作業。 [!DNL Experience Manager]提供企業級資產管理功能。 您可以編輯和共用資產、執行進階搜尋，以及建立數十種支援的檔案格式的多重轉譯。 您也可以管理版本和數位版權、自動化資產處理、管理和控管中繼資料、使用註解進行合作等等。
@@ -58,7 +69,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 
 >[!NOTE]
 >
->在Dynamic Media - Scene7模式中，預設的資產上傳檔案大小為2 GB以下。 若要設定大於2 GB的資產上傳至15 GB，請參閱[&#x200B; （選用）設定Dynamic Media - Scene7模式以上傳大於2 GB的資產](/help/assets/config-dms7.md#optional-config-dms7-assets-larger-than-2gb)。
+>在Dynamic Media - Scene7模式中，預設的資產上傳檔案大小為2 GB以下。 若要設定大於2 GB的資產上傳至15 GB，請參閱[ （選用）設定Dynamic Media - Scene7模式以上傳大於2 GB的資產](/help/assets/config-dms7.md#optional-config-dms7-assets-larger-than-2gb)。
 
 >[!IMPORTANT]
 >
@@ -75,7 +86,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 1. 在[!DNL Assets]使用者介面中，導覽至您要新增數位資產的位置。
 1. 若要上傳資產，請執行下列任一項作業：
 
-   * 在工具列上，按一下[建立]。**&#x200B;** 然後在功能表上按一下&#x200B;**[!UICONTROL 檔案]**。 如有需要，您可以在顯示的對話方塊中重新命名檔案。
+   * 在工具列上，按一下[建立]。**** 然後在功能表上按一下&#x200B;**[!UICONTROL 檔案]**。 如有需要，您可以在顯示的對話方塊中重新命名檔案。
    * 在支援HTML5的瀏覽器中，直接在[!DNL Assets]使用者介面上拖曳資產。 不會顯示重新命名檔案的對話方塊。
 
    ![建立選項以上傳資產](assets/create-options.png)
@@ -92,7 +103,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 
 若要修改大小限制，請在`/apps/dam/gui/content/assets/jcr:content/actions/secondary/create/items/fileupload`可用的CRX存放庫中設定`fileupload`節點的`chunkUploadMinFileSize`屬性。
 
-當您按一下&#x200B;**[!UICONTROL 暫停]**&#x200B;時，它會切換到&#x200B;**[!UICONTROL 播放]**&#x200B;選項。 若要繼續上傳，請按一下[播放]。**&#x200B;**
+當您按一下&#x200B;**[!UICONTROL 暫停]**&#x200B;時，它會切換到&#x200B;**[!UICONTROL 播放]**&#x200B;選項。 若要繼續上傳，請按一下[播放]。****
 
 若要取消進行中的上傳，請按一下進度列旁的關閉(`X`)。 當您取消上傳作業時，[!DNL Assets]會刪除已部分上傳的資產部分。
 
@@ -104,7 +115,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 
 >[!CAUTION]
 >
->當預設值為500 MB且區塊大小為50 MB時，就會觸發區塊上傳。 如果您編輯[Apache Jackrabbit Oak TokenConfiguration](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-16464.html?lang=zh-Hant)，並將`timeout configuration`設定為少於資產上傳所花費的時間，則會在資產上傳進行期間遇到工作階段逾時狀況。 因此，請變更`chunkUploadMinFileSize`和`chunksize`，讓每個區塊要求都會重新整理工作階段。
+>當預設值為500 MB且區塊大小為50 MB時，就會觸發區塊上傳。 如果您編輯[Apache Jackrabbit Oak TokenConfiguration](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-16464.html)，並將`timeout configuration`設定為少於資產上傳所花費的時間，則會在資產上傳進行期間遇到工作階段逾時狀況。 因此，請變更`chunkUploadMinFileSize`和`chunksize`，讓每個區塊要求都會重新整理工作階段。
 >
 >在提供認證到期逾時、延遲、頻寬和預期的並行上傳等條件的情況下，可讓您確保選擇下列專案的最高值：
 >
@@ -132,7 +143,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 
 ![偵測到重複的資產對話方塊](assets/duplicate-asset-detected.png)
 
-若要在[!DNL Assets]中保留重複的資產，請按一下[保留]。**&#x200B;** 若要刪除您上傳的重複資產，請按一下[刪除]。**&#x200B;**
+若要在[!DNL Assets]中保留重複的資產，請按一下[保留]。**** 若要刪除您上傳的重複資產，請按一下[刪除]。****
 
 [!DNL Experience Manager Assets]會防止您上傳檔案名稱中包含禁止使用的字元的資產。 如果您嘗試上傳檔案名稱包含不允許的字元或多個字元的資產，[!DNL Assets]會顯示警告訊息並停止上傳，直到您移除這些字元或使用允許名稱上傳為止。
 
@@ -167,11 +178,11 @@ Dynamic Media可透過FTP伺服器批次上傳資產。 如果您想要上傳大
 
 >[!NOTE]
 >
->在Dynamic Media - Scene7模式中，預設的資產上傳檔案大小為2 GB以下。 若要設定大於2 GB的資產上傳至15 GB，請參閱[&#x200B; （選用）設定Dynamic Media - Scene7模式以上傳大於2 GB的資產](/help/assets/config-dms7.md#optional-config-dms7-assets-larger-than-2gb)。
+>在Dynamic Media - Scene7模式中，預設的資產上傳檔案大小為2 GB以下。 若要設定大於2 GB的資產上傳至15 GB，請參閱[ （選用）設定Dynamic Media - Scene7模式以上傳大於2 GB的資產](/help/assets/config-dms7.md#optional-config-dms7-assets-larger-than-2gb)。
 
 >[!NOTE]
 >
->若要在Dynamic Media - Scene7模式下透過FTP上傳資產，請在[!DNL Experience Manager]作者執行個體上安裝Feature Pack 18912。 請連絡[Adobe客戶支援](https://experienceleague.adobe.com/zh-hant?support-solution=General#support)以存取FP-18912並完成FTP帳戶的設定。 如需詳細資訊，請參閱[安裝Feature Pack 18912以進行大量資產移轉](/help/assets/bulk-ingest-migrate.md)。
+>若要在Dynamic Media - Scene7模式下透過FTP上傳資產，請在[!DNL Experience Manager]作者執行個體上安裝Feature Pack 18912。 請連絡[Adobe客戶支援](https://experienceleague.adobe.com/?support-solution=General#support)以存取FP-18912並完成FTP帳戶的設定。 如需詳細資訊，請參閱[安裝Feature Pack 18912以進行大量資產移轉](/help/assets/bulk-ingest-migrate.md)。
 >
 >如果您使用FTP上傳資產，則會忽略[!DNL Experience Manager]中指定的上傳設定。 而是改用在Dynamic Media Classic中定義的檔案處理規則。
 
@@ -179,7 +190,7 @@ Dynamic Media可透過FTP伺服器批次上傳資產。 如果您想要上傳大
 
 1. 使用您選擇的FTP使用者端，使用您從布建電子郵件收到的FTP使用者名稱和密碼登入FTP伺服器。 在FTP使用者端中，將檔案或資料夾上傳至FTP伺服器。
 
-1. 開啟[Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html?lang=zh-Hant#system-requirements-dmc-app)，然後登入您的帳戶。
+1. 開啟[Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html#system-requirements-dmc-app)，然後登入您的帳戶。
 
    布建時Adobe已提供您的憑證和登入。 如果您沒有這項資訊，請聯絡Adobe客戶支援。
 
@@ -194,11 +205,11 @@ Dynamic Media可透過FTP伺服器批次上傳資產。 如果您想要上傳大
    >
    >當您透過FTP上傳資產時，您在Dynamic Media Classic (S7)中設定的上傳工作選項會先於在[!DNL Experience Manager]中設定的資產處理引數。
 
-1. 在[上載工作選項]對話方塊的右下角，按一下[儲存]。**&#x200B;**
+1. 在[上載工作選項]對話方塊的右下角，按一下[儲存]。****
 1. 在上傳頁面的右下角，按一下&#x200B;**[!UICONTROL 送出上傳]**。
 
-   若要檢視上傳進度，請按一下全域導覽列上的&#x200B;**[!UICONTROL 工作]**。「工作」頁面會顯示上載的進度。您可以繼續在[!DNL Experience Manager]中工作，並隨時返回Dynamic Media Classic的「工作」頁面以檢閱進行中的工作。
-若要取消進行中的上載工作，請按一下[持續時間]時間旁的[取消]。**&#x200B;**
+   若要檢視上傳進度，請按一下全域導覽列上的&#x200B;**[!UICONTROL 工作]**。 「工作」頁面會顯示上載的進度。 您可以繼續在[!DNL Experience Manager]中工作，並隨時返回Dynamic Media Classic的[工作]頁面以檢閱進行中的工作。
+   若要取消進行中的上載工作，請按一下[持續時間]時間旁的[取消]。****
 
 #### 上載工作選項 {#upload-job-options}
 
@@ -408,7 +419,7 @@ PDF在擷取時最多可考慮5000頁以供新上傳使用。 2022年12月31日�
 
    *圖：使用日期選擇器來排程資產啟動。*
 
-1. 若要更新中繼資料屬性中的復寫代理程式觸發程式，請核取&#x200B;**[!UICONTROL 已達開啟/關閉時間]**&#x200B;選項。
+1. 若要更新中繼資料屬性中的復寫代理程式觸發程式，請核取&#x200B;**[!UICONTROL 已達開啟/關閉時間]**選項。
    ![代理程式設定](assets-dm/Agent-settings.png)
 
 1. 若要在特定期間之後停用資產，請從&#x200B;**[!UICONTROL 關閉時間]**&#x200B;欄位旁的日期選擇器中選擇停用日期/時間。 停用日期應晚於資產的啟用日期。 在[!UICONTROL 關閉時間]之後，無法透過[!DNL Assets]網頁介面或HTTP API使用資產及其轉譯。
@@ -470,8 +481,8 @@ PDF在擷取時最多可考慮5000頁以供新上傳使用。 2022年12月31日�
 
 ## 移動和重新命名資產 {#moving-or-renaming-assets}
 
-將資產（或資料夾）移動到另一個位置時，資產（或資料夾）不會複製，這一點與複製資產時不同。資產（或資料夾）會放置在目標位置，並從來源位置中移除。將資產移至新位置時，您也可以重新命名資產。
-如果您要將已發佈的資產移至其他位置，則可選擇重新發佈資產。根據預設，已發佈資產上的移動作業會自動取消發佈資產。如果作者在移動資產時選取[!UICONTROL 重新發佈]選項，則會重新發佈已移動的資產。
+將資產（或資料夾）移動到另一個位置時，資產（或資料夾）不會複製，這一點與複製資產時不同。 資產（或資料夾）會放置在目標位置，並從來源位置中移除。 將資產移至新位置時，您也可以重新命名資產。
+如果您要將已發佈的資產移至其他位置，則可選擇重新發佈資產。 根據預設，已發佈資產上的移動作業會自動取消發佈資產。 如果作者在移動資產時選取[!UICONTROL 重新發佈]選項，則會重新發佈已移動的資產。
 
 ![您可以在移動已發佈的資產時重新發佈該資產](assets/republish-on-move.png)
 
@@ -479,12 +490,12 @@ PDF在擷取時最多可考慮5000頁以供新上傳使用。 2022年12月31日�
 
 1. 導覽至您要移動之資產的位置。
 
-1. 選取資產，然後按一下工具列中的&#x200B;**[!UICONTROL 移動]**&#x200B;選項。
+1. 選取資產，然後按一下工具列中的&#x200B;**[!UICONTROL 移動]**選項。
    ![在Assets工具列中移動選項](assets/do-not-localize/move.png)
 
 1. 在[!UICONTROL 移動Assets]精靈中，執行下列其中一項作業：
 
-   * 指定資產移動後的名稱。 然後按一下[下一步]&#x200B;**&#x200B;**&#x200B;繼續。
+   * 指定資產移動後的名稱。 然後按一下[下一步]****&#x200B;繼續。
 
    * 按一下&#x200B;**[!UICONTROL 取消]**&#x200B;以停止程式。
 
@@ -495,7 +506,7 @@ PDF在擷取時最多可考慮5000頁以供新上傳使用。 2022年12月31日�
 
 1. 在&#x200B;**[!UICONTROL 選取目的地]**&#x200B;對話方塊上，執行下列任一項作業：
 
-   * 導覽至資產的新位置，然後按一下[下一步] **以繼續。**
+   * 導覽至資產的新位置，然後按一下[下一步] ]**以繼續。**[!UICONTROL 
 
    * 按一下&#x200B;**[!UICONTROL 上一步]**&#x200B;以返回&#x200B;**[!UICONTROL 重新命名]**&#x200B;畫面。
 
@@ -503,7 +514,7 @@ PDF在擷取時最多可考慮5000頁以供新上傳使用。 2022年12月31日�
 
    在&#x200B;**[!UICONTROL 調整參考]**&#x200B;畫面中執行下列任一項作業：
 
-   * 指定要根據新詳細資料調整的參考，然後按一下[移動] **&#x200B;**&#x200B;以繼續。
+   * 指定要根據新詳細資料調整的參考，然後按一下[移動] ****&#x200B;以繼續。
 
    * 從&#x200B;**[!UICONTROL 調整]**&#x200B;欄，選取/取消選取資產的參考。
    * 按一下&#x200B;**[!UICONTROL 上一步]**&#x200B;以返回&#x200B;**[!UICONTROL 選取目的地]**&#x200B;畫面。
@@ -546,7 +557,7 @@ PDF在擷取時最多可考慮5000頁以供新上傳使用。 2022年12月31日�
 
    >[!NOTE]
    >
-   >如果您從「轉譯」面板選取轉譯 **&#x200B;**&#x200B;，工具列會變更上下文，並僅顯示與轉譯相關的動作。 不會顯示[!UICONTROL 上傳轉譯]等選項。 若要在工具列中檢視這些選項，請導覽至資產的詳細資訊頁面。
+   >如果您從「轉譯」面板選取轉譯 **** ，工具列會變更上下文，並僅顯示與轉譯相關的動作。 不會顯示[!UICONTROL 上傳轉譯]等選項。 若要在工具列中檢視這些選項，請導覽至資產的詳細資訊頁面。
 
    您可以設定要在影像或視訊資產的詳細資訊頁面中顯示的轉譯尺寸。 根據您指定的維度，[!DNL Assets]會顯示具有精確或最接近維度的轉譯。
 
@@ -554,7 +565,7 @@ PDF在擷取時最多可考慮5000頁以供新上傳使用。 2022年12月31日�
 
    同樣地，您可以透過覆蓋`libs/dam/gui/content/assets/annotate/jcr:content/body/content/content/items/content/renditionpicker`來自訂註解頁面影像。
 
-   在CRXDE中覆蓋renditionpicker節點以自訂註解頁面影像![&#128279;](assets/renditionpicker-node.png)
+   在CRXDE中覆蓋renditionpicker節點以自訂註解頁面影像](assets/renditionpicker-node.png)![
 
    若要設定視訊資產的轉譯維度，請導覽至CRX存放庫中`/libs/dam/gui/content/assets/assetpage/jcr:content/body/content/content/items/assetdetail/items/col1/items/assetview/videopicker`位置的`videopicker`節點、覆蓋節點，然後編輯適當的屬性。
 
@@ -684,7 +695,7 @@ CUG是限制資產存取權的額外方式。 您也可以設定資料夾的登�
 
    * 選取資產，然後按一下工具列中的&#x200B;**[!UICONTROL 編輯]**。
    * 按一下卡片檢視中資產上顯示的&#x200B;**[!UICONTROL 編輯]**&#x200B;選項。
-   * 按一下工具列![工具列](assets/do-not-localize/edit_icon.png)的[編輯]選項中的[編輯]&#x200B;**&#x200B;**。
+   * 按一下工具列![工具列](assets/do-not-localize/edit_icon.png)的[編輯]選項中的[編輯]****。
 
 1. 若要裁切影像，請按一下&#x200B;**[!UICONTROL 裁切]** ![選項來裁切影像](assets/do-not-localize/crop.png)。
 
@@ -725,7 +736,7 @@ CUG是限制資產存取權的額外方式。 您也可以設定資料夾的登�
 
 >[!NOTE]
 >
->時間軸包含數個內容片段[&#128279;](/help/assets/content-fragments/content-fragments-managing.md#timeline-for-content-fragments)專屬的選項。
+>時間軸包含數個內容片段](/help/assets/content-fragments/content-fragments-managing.md#timeline-for-content-fragments)專屬的[選項。
 
 ## 為資產加上註釋 {#annotating}
 
@@ -735,7 +746,7 @@ CUG是限制資產存取權的額外方式。 您也可以設定資料夾的登�
 
 >[!NOTE]
 >
->對於內容片段，會在片段編輯器[&#128279;](/help/assets/content-fragments/content-fragments-variations.md#annotating-a-content-fragment)中建立註解。
+>對於內容片段，會在片段編輯器](/help/assets/content-fragments/content-fragments-variations.md#annotating-a-content-fragment)中建立[註解。
 
 1. 導覽至您要新增註解的資產位置。
 1. 從下列選項之一按一下&#x200B;**[!UICONTROL 註釋]**&#x200B;選項：
@@ -766,7 +777,7 @@ CUG是限制資產存取權的額外方式。 您也可以設定資料夾的登�
    >
    >註解也可以新增到視訊資產。 在影片的註解時，播放器會暫停，讓您在影格上註解。 如需詳細資訊，請參閱[管理視訊資產](/help/assets/managing-video-assets.md)。 視訊註解尚不支援MXF視訊格式。
 
-1. 若要選擇不同的顏色以便區分使用者，請按一下[設定檔]選項，然後按一下[我的偏好設定] **&#x200B;**。
+1. 若要選擇不同的顏色以便區分使用者，請按一下[設定檔]選項，然後按一下[我的偏好設定] ****。
 
    ![選取使用者設定檔選項，然後選取[我的偏好設定]以開啟[使用者偏好設定]](assets/User-profile-preferences.png)
 
@@ -811,7 +822,7 @@ CUG是限制資產存取權的額外方式。 您也可以設定資料夾的登�
 >
 >將附註的資產列印為PDF時，您可以選取多個附註。
 
-若要列印註解與檢閱狀態，請按一下[列印] **&#x200B;**，然後依照精靈中的指示進行。 **[!UICONTROL 列印]**&#x200B;選項只有在資產至少有一個指派給它的註釋或檢閱狀態時，才會出現在工具列中。
+若要列印註解與檢閱狀態，請按一下[列印] ****，然後依照精靈中的指示進行。 **[!UICONTROL 列印]**&#x200B;選項只有在資產至少有一個指派給它的註釋或檢閱狀態時，才會出現在工具列中。
 
 1. 從[!DNL Assets]介面，開啟資產的預覽頁面。
 1. 執行下列任一項作業：
@@ -829,13 +840,13 @@ CUG是限制資產存取權的額外方式。 您也可以設定資料夾的登�
 
 1. 在「列印」對話方塊中，選擇您要在PDF上顯示註解/稽核狀態的位置。 例如，如果您希望註解/狀態列印在包含已列印影像的頁面的右上方，請使用&#x200B;**左上方**&#x200B;設定。 預設會選取此選項。
 
-   您可以根據要在打印的PDF中顯示注釋/狀態的位置選擇其他設定。 如果您希望註解/狀態顯示在與印刷資產不同的頁面中，請選擇「下 **[!UICONTROL 一頁」]**。
+   您可以根據要在列印的 PDF 中顯示註解/狀態的位置選擇其他設定。 如果您希望註解/狀態顯示在與印刷資產不同的頁面中，請選擇「下 **[!UICONTROL 一頁」]**。
 
-1. 按一下&#x200B;**[!UICONTROL 列印]**。 根據您在步驟2中選擇的選項，產生的PDF會在指定位置顯示註解/狀態。 例如，如果您選擇使用左上角設定打印注釋和審閱狀態 **&#x200B;**&#x200B;，則生成的輸出類似於此處所示的PDF檔案。
+1. 按一下&#x200B;**[!UICONTROL 列印]**。 根據您在步驟2中選擇的選項，產生的PDF會在指定位置顯示註解/狀態。 例如，如果您選擇使用左上角設定打印注釋和審閱狀態 **** ，則生成的輸出類似於此處所示的PDF檔案。
 
-   已產生PDF![&#128279;](assets/annotation-status-pdf.png)上的註解與檢閱狀態
+   已產生PDF](assets/annotation-status-pdf.png)上的![註解與檢閱狀態
 
-1. 使用右上方的選項，下載PDF的![下載選項](assets/do-not-localize/download.png)或在PDF![&#128279;](assets/do-not-localize/print.png)PDF上列印列印選項。
+1. 使用右上方的選項，下載PDF的![下載選項](assets/do-not-localize/download.png)或在PDF](assets/do-not-localize/print.png)PDF上列印![列印選項。
 
    >[!NOTE]
    >
@@ -884,7 +895,7 @@ CUG是限制資產存取權的額外方式。 您也可以設定資料夾的登�
 * 上傳具有相同檔案名稱、但位於相同位置的資產。 可以是新資產，或是相同資產的修改版本。
 * 編輯[!DNL Experience Manager]中的影像並儲存變更。
 * 編輯資產的中繼資料。
-* 使用[!DNL Experience Manager]案頭應用程式來簽出現有的資產、編輯它，然後[上傳您的變更](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=zh-Hant#edit-assets-upload-updated-assets)。
+* 使用[!DNL Experience Manager]案頭應用程式來簽出現有的資產、編輯它，然後[上傳您的變更](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#edit-assets-upload-updated-assets)。
 
 您也可以透過工作流程啟用自動版本設定。 當您建立資產的版本時，中繼資料和轉譯會與版本一起儲存。 轉譯會取代相同的影像，例如上傳之JPEG檔案的PNG轉譯。
 
@@ -959,4 +970,4 @@ curl -v -u admin:admin --location --request POST 'http://localhost:4502/conf/glo
 --data-urlencode '../../jcr:primaryType=sling:Folder'
 ```
 
-若要瞭解更多資訊，請參閱如何[使用案頭應用程式瀏覽DAM資產](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=zh-Hant#browse-search-preview-assets)及[如何使用Adobe Asset Link](https://helpx.adobe.com/tw/enterprise/using/manage-assets-using-adobe-asset-link.html)。
+若要瞭解更多資訊，請參閱如何[使用案頭應用程式瀏覽DAM資產](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#browse-search-preview-assets)及[如何使用Adobe Asset Link](https://helpx.adobe.com/enterprise/using/manage-assets-using-adobe-asset-link.html)。

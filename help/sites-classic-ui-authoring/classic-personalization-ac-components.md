@@ -10,13 +10,24 @@ exl-id: eeff89c1-41b3-403d-b4bf-c79b09b24d4a
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization
 role: User
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+  - id: eb3ad9f8-54a2-45f3-abb1-d3976415a718
+    internal-label: Personalization
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '2564'
 ht-degree: 6%
-
 ---
-
 # Adobe Campaign元件{#adobe-campaign-components}
 
 與Adobe Campaign整合時，您擁有可在使用電子報和表單時使用的元件。 本檔案將說明這兩者。
@@ -36,10 +47,10 @@ ht-degree: 6%
 * 標題 (行銷活動)
 * 影像 (行銷活動)
 * 連結 (行銷活動)
-* Scene7 影像範本 (行銷活動)
-* 目標參考 (行銷活動)
-* 文字與影像 (行銷活動)
-* 文字與個人化 (行銷活動)
+* Scene7 影像範本 (Campaign)
+* 目標參考 (Campaign)
+* 文字與影像 (Campaign)
+* 文字與個人化 (Campaign)
 
 下一節將說明這些元件。
 
@@ -135,7 +146,7 @@ ht-degree: 6%
 新增如何使用連結的其他資訊。
 
 * **連結型別**
-在下拉式清單中，選取&#x200B;**自訂URL**&#x200B;和&#x200B;**最適化檔案**&#x200B;之間。 此欄位為必要項。 如果您選取「自訂URL」，可提供連結URL。 如果您選取「最適化檔案」，則可以提供檔案路徑。
+在下拉式清單中，選取**自訂URL**&#x200B;和&#x200B;**最適化檔案**&#x200B;之間。 此欄位為必要項。 如果您選取「自訂URL」，可提供連結URL。 如果您選取「最適化檔案」，則可以提供檔案路徑。
 
 * **其他URL引數**
 新增任何其他URL引數。 按一下「新增專案」以新增多個專案。
@@ -228,12 +239,12 @@ ht-degree: 6%
 
 * 核取方塊 (行銷活動)
 * 日期欄位（行銷活動）和日期欄位/HTML5 （行銷活動）
-* 加密的主索引鍵 (行銷活動)
-* 錯誤顯示 (行銷活動)
-* 隱藏調和索引鍵 (行銷活動)
-* 數值欄位 (行銷活動)
-* 選項欄位 (行銷活動)
-* 訂閱檢查清單 (行銷活動)
+* 加密的主索引鍵 (Campaign)
+* 錯誤顯示 (Campaign)
+* 隱藏調和索引鍵 (Campaign)
+* 數值欄位 (Campaign)
+* 選項欄位 (Campaign)
+* 訂閱檢查清單 (Campaign)
 * 測試欄位 (行銷活動)
 
 本節詳細說明每個元件。
@@ -255,7 +266,7 @@ ht-degree: 6%
    <td><p>不再聯絡（透過任何管道）</p> </td>
   </tr>
   <tr>
-   <td><p>日期欄位 (行銷活動)</p> <p>日期欄位/HTML 5 (行銷活動)</p> </td>
+   <td><p>日期欄位 (Campaign)</p> <p>日期欄位/HTML 5 (Campaign)</p> </td>
    <td><p>日期</p> </td>
    <td><p>出生日期</p> </td>
   </tr>
@@ -384,7 +395,7 @@ Adobe Campaign元件具有所有元件中通用的設定（加密的主要金鑰
 
 除了大部分Adobe Campaign元件通用的[設定](#settings-common-to-most-components)之外，您還可以設定下列專案：
 
-* **限制 — 限制**&#x200B;下拉式清單
+* **限制 — 限制**下拉式清單
 您可以選取 — **無**&#x200B;或&#x200B;**數值 —**&#x200B;來新增數值或無限制的限制。 如果您選取數字，使用者在欄位中輸入的答案必須是數字。
 
 * **限制訊息** — 此外，您可以新增限制訊息，讓使用者知道如何正確格式化回答。

@@ -8,16 +8,32 @@ feature: Adaptive Forms,Foundation Components
 exl-id: 691608a6-be82-4d81-b876-427de997e5be
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 7da902b6-fe94-5180-8e7c-f6d1e38d01d5
+    internal-label: Foundation Components
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '2378'
 ht-degree: 6%
-
 ---
-
 # 調適型表單的樣式建構{#styling-constructs-for-adaptive-forms}
 
-<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hant)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。 這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。 本文會介紹使用基礎元件編寫最適化表單的舊方法。</span>
+<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。 這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。 本文會介紹使用基礎元件編寫最適化表單的舊方法。</span>
 
 ## 先決條件 {#prerequisites}
 
@@ -25,7 +41,7 @@ CSS和LESS架構的相關知識。
 
 ## 可自訂的專案 {#what-can-be-customized}
 
-本文列出可公開使用的調適型表單css類別。 您可以使用這些類別來設定最適化表單中各種元件的樣式。 製作元件的樣式（例如顯示警告的對話方塊和狀態列）超出本文範圍。 只有在無法使用[主題編輯器](https://helpx.adobe.com/tw/experience-manager/6-3/forms/using/themes.html)來設定元件樣式時，才使用這些樣式建構來建立樣式（使用CSS或更少）。
+本文列出可公開使用的調適型表單css類別。 您可以使用這些類別來設定最適化表單中各種元件的樣式。 製作元件的樣式（例如顯示警告的對話方塊和狀態列）超出本文範圍。 只有在無法使用[主題編輯器](https://helpx.adobe.com/experience-manager/6-3/forms/using/themes.html)來設定元件樣式時，才使用這些樣式建構來建立樣式（使用CSS或更少）。
 
 ## 在調適型表單中自訂樣式 {#customizing-styles-in-adaptive-forms}
 

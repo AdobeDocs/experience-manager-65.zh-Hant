@@ -9,13 +9,20 @@ exl-id: 6bda0f09-7ae5-4540-b035-9dd249ac3186
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '695'
 ht-degree: 1%
-
 ---
-
 # 初始設定 {#initial-setup}
 
 ## 啟動作者和發佈執行個體 {#start-author-and-publish-instances}
@@ -53,7 +60,7 @@ ht-degree: 1%
 
 ## 設定 Analytics {#configure-analytics}
 
-當針對社群網站[&#128279;](analytics.md)設定Adobe Analytics時，會提供社群活動的相關資訊，以強化社群成員的體驗，並向網站管理員提供意見回饋。
+當針對社群網站](analytics.md)設定[Adobe Analytics時，會提供社群活動的相關資訊，以強化社群成員的體驗，並向網站管理員提供意見回饋。
 
 可選擇與Adobe Analytics整合。
 

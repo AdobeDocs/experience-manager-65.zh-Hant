@@ -9,13 +9,30 @@ exl-id: fc6fccba-41c5-4c13-aac0-b4ef67767abe
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization,Integration
 role: User,Admin,Developer
-source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+  - id: eb3ad9f8-54a2-45f3-abb1-d3976415a718
+    internal-label: Personalization
+  - id: 243139ec-8e41-5296-a287-31343ab1bc0f
+    internal-label: Integration
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
-source-wordcount: '421'
+source-wordcount: '429'
 ht-degree: 0%
-
 ---
-
 # 鎖定您的Adobe Campaign{#targeting-your-adobe-campaign}
 
 若要鎖定您的Adobe Campaign電子報，您必須先設定分段，而這僅適用於傳統UI （適用於使用者端內容）。 之後，您可以建立Adobe Campaign的鎖定目標體驗。 本節將說明這兩種方式。
@@ -34,7 +51,7 @@ ht-degree: 0%
 
 若要建立區段：
 
-1. 在[&lt;host>：&lt;port>/miscadmin#/etc/segmentation](http://localhost:4502/miscadmin#/etc/segmentation)開啟&#x200B;**分段主控台**。
+1. 在&#x200B;**&lt;host>：&lt;port>/miscadmin#/etc/segmentation**&#x200B;開啟[分段主控台](http://localhost:4502/miscadmin#/etc/segmentation)。
 1. 建立頁面並輸入標題 — 例如&#x200B;**AC區段** — 並選取&#x200B;**區段(Adobe Campaign)**&#x200B;範本。
 1. 在左側的樹狀檢視中選取建立的頁面。
 1. 建立區段，例如，將目標定位為男性使用者，方法是在您建立的名為「男性」的區段下建立頁面，並選取&#x200B;**區段(Adobe Campaign)**&#x200B;範本。
@@ -63,6 +80,6 @@ ht-degree: 0%
 1. 開啟您建立的&#x200B;**促銷活動**&#x200B;頁面。
 1. 按一下「**建立頁面**」並輸入頁面的標題（例如，「男性」）來建立您區段的體驗，然後選取「**體驗**」範本。
 1. 開啟已建立的體驗頁面。
-1. 按一下[編輯]&#x200B;**&#x200B;**，然後在[區段]下方按一下[新增專案]&#x200B;**&#x200B;**。
+1. 按一下[編輯]****，然後在[區段]下方按一下[新增專案]****。
 1. 輸入男性區段的路徑，例如&#x200B;**/etc/segmentation/ac-segments/male**，然後按一下&#x200B;**確定**。 應該會出現下列訊息： *體驗目標為：男性*
 1. 重複上述步驟以建立所有區段的體驗，例如女性目標。

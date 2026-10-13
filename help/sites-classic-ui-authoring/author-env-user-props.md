@@ -10,7 +10,18 @@ exl-id: 9abdaa6d-79ee-448e-a23f-d216433591f8
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '229'
 ht-degree: 15%
@@ -22,7 +33,7 @@ Adobe Experience Manager (AEM)可讓您設定帳戶及製作環境的特定方�
 使用[帳戶設定](#account-settings)和[使用者偏好設定](#user-preferences)，可以定義下列選項和偏好設定：
 
 * **編輯工具列**
-選取您是否想要擁有全域編輯工具列。 這個工具列顯示在瀏覽器視窗的頂端，提供您&#x200B;**複製**、**剪下**、**貼上**、**刪除**&#x200B;用於該頁面段落元件的按鈕：
+選取您是否想要擁有全域編輯工具列。 這個工具列顯示在瀏覽器視窗的頂端，提供您**複製**、**剪下**、**貼上**、**刪除**&#x200B;用於該頁面段落元件的按鈕：
 
   * 需要時顯示 (預設)
   * 永遠顯示

@@ -10,13 +10,26 @@ exl-id: 18910143-f2f2-4cfe-88b9-651df90d9cb9
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Developer
-source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '192'
-ht-degree: 26%
-
+source-wordcount: '193'
+ht-degree: 25%
 ---
-
 # 匯出為 CSV{#export-to-csv}
 
 **建立CSV報表**&#x200B;可讓您將頁面的相關資訊匯出至本機系統上的CSV檔案。
@@ -32,23 +45,23 @@ ht-degree: 26%
 **建立CSV匯出**&#x200B;精靈可讓您選取：
 
 * 要匯出的屬性
-   * 後設資料
-      * 名稱
-      * 修改日期
-      * 已發佈
-      * 範本
-      * 工作流程
-   * 翻譯
-      * 已翻譯
-   * 分析
-      * 頁面檢視量
-      * 獨特訪客
-      * 頁面逗留時間
+  * 後設資料
+    * 名稱
+    * 已修改
+    * 已發佈
+    * 範本
+    * 工作流程
+  * 翻譯
+    * 已翻譯
+  * 分析
+    * 頁面檢視量
+    * 獨特訪客
+    * 頁面逗留時間
 * 深度
-   * 父路徑
-   * 僅導向子項
-   * 其他層級的子項
-   * 層級
+  * 父路徑
+  * 僅導向子項
+  * 其他層級的子項
+  * 層級
 
 產生的`export.csv`檔案可以用Excel或任何其他相容的應用程式開啟。
 
@@ -61,7 +74,7 @@ ht-degree: 26%
 若要建立CSV匯出：
 
 1. 開啟&#x200B;**網站**&#x200B;主控台，視需要導覽至所需位置。
-1. 從工具列中，依序選 **取「建立**&#x200B;**CSV報表** 」以開啟精靈：
+1. 從工具列中，依序選 **取「建立****CSV報表** 」以開啟精靈：
 
    ![etc-03](assets/etc-03.png)
 

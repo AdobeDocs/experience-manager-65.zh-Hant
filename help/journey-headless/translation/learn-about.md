@@ -5,31 +5,55 @@ exl-id: cb2e2d89-e2d2-462f-8fff-b201847d0641
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments,Language Copy
 role: Admin, Developer, User, Leader
-source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: bfd4bc52-c397-5127-8f86-8953ba9fc0a3
+    internal-label: Headless
+  - id: a642c50e-80eb-4fc1-a5d2-f3762d1f841d
+    internal-label: Administration
+  - id: d9d38edd-df1b-480c-8f5e-72b62576f390
+    internal-label: Site and page features
+subfeature_v2:
+  - id: e9db7c79-8f65-4281-a439-c9049296d903
+    internal-label: Content Fragments
+  - id: e15a4109-ae5d-497d-b301-31149e35aed4
+    internal-label: Language Copy Wizard
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '747'
+source-wordcount: '775'
 ht-degree: 98%
-
 ---
-
 # 了解 Headless 內容以及如何在 AEM 中翻譯 {#learn-about}
 
 了解 Headless 概念、它們如何對應到 AEM 以及 AEM 翻譯理論。
 
 ## 目標 {#objective}
 
-本文件可協助您了解 Headless 內容傳遞、AEM 如何支援 Headless 以及如何翻譯這類內容。閱讀本文件後，您應該：
+本文件可協助您了解 Headless 內容傳遞、AEM 如何支援 Headless 以及如何翻譯這類內容。 閱讀本文件後，您應該：
 
 * 了解 Headless 內容傳遞的基本概念。
 * 熟悉 AEM 如何支援 Headless 和翻譯。
 
 ## 全堆疊內容傳遞 {#full-stack}
 
-自從易於使用的大型內容管理系統 (CMS) 興起以來，組織就將其作為管理訊息、品牌和通訊的中心位置。使用 CMS 做為管理體驗的中心點可以提升效率，因為就不需要在各個不同系統重複任務。
+自從易於使用的大型內容管理系統 (CMS) 興起以來，組織就將其作為管理訊息、品牌和通訊的中心位置。 使用 CMS 做為管理體驗的中心點可以提升效率，因為就不需要在各個不同系統重複任務。
 
 ![傳統的全堆疊 CMS](/help/journey-headless/developer/assets/full-stack.png)
 
-在全棧疊CMS中，操控內容的所有功能都在CMS中。 系統的功能構成了 CMS 堆疊的不同元件。全堆疊解決方案有很多優點。
+在全棧疊CMS中，操控內容的所有功能都在CMS中。 系統的功能構成了 CMS 堆疊的不同元件。 全堆疊解決方案有很多優點。
 
 * 只需維護一個系統。
 * 內容集中管理。
@@ -46,19 +70,19 @@ ht-degree: 98%
 
 任何系統的頭部通常是該系統的輸出呈現器，通常採 GUI 或其他圖形輸出的形式。
 
-當我們談論 Headless CMS 時，CMS 管理內容並繼續將其傳遞給取用者。然而，透過僅將&#x200B;**內容**&#x200B;以標準方式傳遞，Headless CMS 會省略最後輸出呈現作業，將內容的&#x200B;**展示**&#x200B;作業留給取用內容的服務執行。
+當我們談論 Headless CMS 時，CMS 管理內容並繼續將其傳遞給取用者。 然而，透過僅將&#x200B;**內容**&#x200B;以標準方式傳遞，Headless CMS 會省略最後輸出呈現作業，將內容的&#x200B;**展示**&#x200B;作業留給取用內容的服務執行。
 
-![&#x200B; Headless CMS](/help/journey-headless/developer/assets/headless-cms.png)
+![ Headless CMS](/help/journey-headless/developer/assets/headless-cms.png)
 
-取用內容的服務，無論是 AR 體驗、網路商店、行動體驗、漸進式網頁應用程式 (PWA) 等，都從 Headless CMS 取用內容並提供自己的呈現操作。它們負責為您的內容提供自己的頭。
+取用內容的服務，無論是 AR 體驗、網路商店、行動體驗、漸進式網頁應用程式 (PWA) 等，都從 Headless CMS 取用內容並提供自己的呈現操作。 它們負責為您的內容提供自己的頭。
 
-省略頭可消除複雜性來簡化 CMS。這樣做也會將呈現內容的責任轉移到實際需要內容並且通常更適合執行呈現的服務。
+省略頭可消除複雜性來簡化 CMS。 這樣做也會將呈現內容的責任轉移到實際需要內容並且通常更適合執行呈現的服務。
 
 ## 在 AEM 翻譯 Headless 內容 {#translating-in-aem}
 
 除了提供強大的工具來以全堆疊方式建立、管理和傳遞傳統網頁外，AEM 還可讓您製作獨立內容選集並以 Headless 方式提供該內容。
 
-AEM 的強大功能使其能夠以 Headless 方式、全堆疊方式或同時以兩種模式傳遞內容。對於翻譯專家來說，同一套翻譯工具可以套用於兩種類型的內容，為您提供統一的內容翻譯方法。
+AEM 的強大功能使其能夠以 Headless 方式、全堆疊方式或同時以兩種模式傳遞內容。 對於翻譯專家來說，同一套翻譯工具可以套用於兩種類型的內容，為您提供統一的內容翻譯方法。
 
 在接下來的歷程中，您將了解有關 AEM 如何翻譯內容的詳細資訊，其大致概念很簡單：
 
@@ -69,7 +93,7 @@ AEM 的強大功能使其能夠以 Headless 方式、全堆疊方式或同時以
 
 ## 下一步 {#what-is-next}
 
-感謝您開始進行 AEM Headless 翻譯歷程！您現已閱讀本文件，應該：
+感謝您開始進行 AEM Headless 翻譯歷程！ 您現已閱讀本文件，應該：
 
 * 了解 Headless 內容傳遞的基本概念。
 * 熟悉 AEM 如何支援 Headless 和翻譯。
@@ -82,5 +106,5 @@ AEM 的強大功能使其能夠以 Headless 方式、全堆疊方式或同時以
 
 * [MSM 和翻譯](/help/sites-administering/msm-and-translation.md) - 詳細說明 AEM 多網站管理員以及它如何與其翻譯工具一起工作
 * [AEM as a Headless CMS 簡介](/help/sites-developing/headless/introduction.md)
-* [AEM 開發人員入口網站](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=zh-Hant)
-* [AEM 中的 Headless 教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=zh-Hant)
+* [AEM 開發人員入口網站](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
+* [AEM 中的無周邊教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)

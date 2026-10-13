@@ -10,13 +10,26 @@ exl-id: 3b3c118b-ca35-484b-a62e-7bec98953123
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Developer
-source-git-commit: 33bf1d9f64c32691f6a9c0568c1c5cb2150f331a
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '2262'
 ht-degree: 4%
-
 ---
-
 # 製作 — 環境與工具{#authoring-the-environment-and-tools}
 
 AEM的製作環境提供各種機制來組織和編輯您的內容。 提供的工具可從各種主控台和頁面編輯器存取。
@@ -50,13 +63,13 @@ AEM的製作環境提供各種機制來組織和編輯您的內容。 提供的�
 * [**頁面資訊**](/help/sites-authoring/editing-page-properties.md#page-properties)&#x200B;選取器；這會顯示簡介投影片（在您第一次存取編輯器時顯示）。
 * 特定元件的[組態](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste)對話方塊(使用問號(？) 圖示)；這會顯示相關內容的「說明」。
 
-可從主控台[&#128279;](/help/sites-authoring/basic-handling.md#accessing-help)取得其他說明相關資源。
+可從主控台](/help/sites-authoring/basic-handling.md#accessing-help)取得其他[說明相關資源。
 
 ## 元件瀏覽器 {#components-browser}
 
 元件瀏覽器會顯示目前頁面上可用的所有元件。 這些檔案可以拖曳至適當位置，然後編輯以新增您的內容。
 
-元件瀏覽器是側面板中的標籤(連同資產 [瀏覽器](/help/sites-authoring/author-environment-tools.md#assets-browser) [和內容樹](/help/sites-authoring/author-environment-tools.md#content-tree))。 若要開啟（或關閉）側面板，請使用工具列左上角的圖示：
+元件瀏覽器是側面板中的標籤(連同資產 [瀏覽器](/help/sites-authoring/author-environment-tools.md#assets-browser)[和內容樹](/help/sites-authoring/author-environment-tools.md#content-tree))。 若要開啟（或關閉）側面板，請使用工具列左上角的圖示：
 
 ![ateat-03](assets/ateat-03.png)
 
@@ -86,17 +99,17 @@ AEM的製作環境提供各種機制來組織和編輯您的內容。 提供的�
 
   元件由表示
 
-   * 元件名稱
-   * 元件群組（灰色）
-   * 圖示或縮寫
+  * 元件名稱
+  * 元件群組（灰色）
+  * 圖示或縮寫
 
-      * 標準元件的圖示為單色。
-      * 縮寫一律為元件名稱的前兩個字元。
+    * 標準元件的圖示為單色。
+    * 縮寫一律為元件名稱的前兩個字元。
 
   您可以從&#x200B;**元件**&#x200B;瀏覽器的頂端工具列執行下列動作：
 
-   * 依名稱篩選元件。
-   * 使用下拉式選取範圍，將顯示限製為特定群組。
+  * 依名稱篩選元件。
+  * 使用下拉式選取範圍，將顯示限製為特定群組。
 
   如需元件的詳細說明，您可以在&#x200B;**元件**&#x200B;瀏覽器（如果有的話）中按一下元件旁的資訊圖示。 例如，對於「版面 **容器」**:
 
@@ -124,11 +137,11 @@ AEM的製作環境提供各種機制來組織和編輯您的內容。 提供的�
 
 * 適當型別的現有元件。
 
-   * 例如，您可以將影像型別的資產拖曳至影像元件上。
+  * 例如，您可以將影像型別的資產拖曳至影像元件上。
 
 * 段落系統中用來建立適當型別元件的[預留位置](/help/sites-authoring/editing-content.md#component-placeholder)。
 
-   * 例如，您可以將影像型別的資產拖曳至段落系統，以建立「影像」元件。
+  * 例如，您可以將影像型別的資產拖曳至段落系統，以建立「影像」元件。
 
 >[!NOTE]
 >
@@ -141,7 +154,7 @@ AEM的製作環境提供各種機制來組織和編輯您的內容。 提供的�
 * 影像、手稿、檔案、影片、頁面、段落和產品等資產型別
 * 資產特性，例如，方向（縱向、橫向、正方形）和樣式（顏色、單色、灰階）
 
-   * 僅適用於特定資產型別
+  * 僅適用於特定資產型別
 
 實際外觀和處理方式取決於您使用的裝置型別：
 
@@ -239,7 +252,7 @@ AEM的製作環境提供各種機制來組織和編輯您的內容。 提供的�
 
 * **傳入連結**&#x200B;提供參考頁面的頁面清單，以及當您選取特定連結時，直接存取這些頁面中的&#x200B;**編輯**。
 
-   * 這只能顯示靜態連結，而不能顯示動態產生的連結；例如，來自清單元件的連結。
+  * 這只能顯示靜態連結，而不能顯示動態產生的連結；例如，來自清單元件的連結。
 
 * 使用&#x200B;**Reference**&#x200B;元件的借入和借出內容例項，您可以從這裡導覽至參考/參考頁面
 
@@ -286,7 +299,7 @@ AEM的製作環境提供各種機制來組織和編輯您的內容。 提供的�
 例如，適當時，**頁面資訊**&#x200B;也有選項：
 
 * 如果頁面是啟動項，請[提升啟動項](/help/sites-authoring/launches-promoting.md)
-* 如果此選項由系統管理員啟用[&#128279;](/help/sites-administering/enable-classic-ui-editor.md)，則[在傳統UI中開啟](/help/sites-authoring/select-ui.md#switching-to-classic-ui-when-editing-a-page)
+* 如果此選項由系統管理員啟用[，則[在傳統UI中開啟](/help/sites-authoring/select-ui.md#switching-to-classic-ui-when-editing-a-page)](/help/sites-administering/enable-classic-ui-editor.md)
 
 此外，**頁面資訊**&#x200B;可讓您在適當時存取分析和建議。
 
@@ -348,7 +361,7 @@ AEM的製作環境提供各種機制來組織和編輯您的內容。 提供的�
 ![screen_shot_2018-03-22at154521](assets/screen_shot_2018-03-22at154521.png)
 
 * 選取資源後，對話方塊右上角的&#x200B;**選取**&#x200B;按鈕就會變成使用中狀態。 按一下以確認選取專案，或按一下&#x200B;**取消**&#x200B;以中止。
-* 如果上下文允許選擇多個資源，則選擇資源也會激活「選擇 **&#x200B;**&#x200B;」按鈕，但也會向窗口的右上角添加選定資源的計數。 按一下數字旁的&#x200B;**X**&#x200B;以取消選取全部。
+* 如果上下文允許選擇多個資源，則選擇資源也會激活「選擇 **** 」按鈕，但也會向窗口的右上角添加選定資源的計數。 按一下數字旁的&#x200B;**X**&#x200B;以取消選取全部。
 * 當您瀏覽樹狀結構時，您的位置會反映在對話方塊頂端的階層連結中。 這些階層連結也可用來在資源階層內快速跳轉。
 * 您可以隨時使用對話方塊頂端的搜尋欄位。 按一下搜尋欄位中的&#x200B;**X**&#x200B;以清除搜尋。
 * 若要縮小搜尋範圍，您可以顯示篩選選項，並根據特定路徑篩選結果。

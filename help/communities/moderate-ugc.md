@@ -10,13 +10,20 @@ role: Admin
 exl-id: 22276580-e6bc-41c5-9ac3-e8f291f676b7
 solution: Experience Manager
 feature: Communities
-source-git-commit: 9c0089e1305ffba72d88842a07bf36b6f923834c
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1538'
-ht-degree: 2%
-
+source-wordcount: '1547'
+ht-degree: 3%
 ---
-
 # 仲裁社群內容 {#moderating-community-content}
 
 ## 概觀 {#overview}
@@ -198,10 +205,10 @@ UGC的稽核對於識別正面貢獻和限制負面貢獻很有用（例如垃�
 UGC預先稽核時，帖子要等到稽核動作核准後才會出現在已發佈的網站上。 建立[社群網站](/help/communities/sites-console.md)期間，勾選[內容已預先稽核](sites-console.md#moderation)方塊可啟用整個網站的預先稽核。 將元件放置在頁面上時，可使用編輯對話方塊中的設定，將支援稽核的元件設定為可預先稽核：
 
 * [評論](comments.md)和[評論](reviews.md)
-在&#x200B;**[!UICONTROL 使用者稽核]** > **[!UICONTROL 預先稽核]**&#x200B;中。
+在**[!UICONTROL 使用者稽核]** > **[!UICONTROL 預先稽核]**&#x200B;中。
 
 * [論壇](/help/communities/forum.md)、[構思](/help/communities/ideation-feature.md)、[QnA](/help/communities/working-with-qna.md)和[行事曆](/help/communities/calendar.md)
-在&#x200B;**[!UICONTROL 設定]** > **[!UICONTROL 已稽核]**&#x200B;中。
+在**[!UICONTROL 設定]** > **[!UICONTROL 已稽核]**&#x200B;中。
 
 ### 垃圾郵件偵測 {#spam-detection}
 

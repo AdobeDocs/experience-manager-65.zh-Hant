@@ -9,18 +9,29 @@ exl-id: 829d8256-b415-4a44-a353-455ac16950f3
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,Developer Tools
 role: Developer
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+  - id: f2d27a5f-0d67-4d85-8a24-86a8d8a3574b
+    internal-label: Developer tools
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '913'
-ht-degree: 2%
-
+source-wordcount: '987'
+ht-degree: 4%
 ---
-
 # AEM Brackets擴充功能{#aem-brackets-extension}
 
 ## 概觀 {#overview}
 
-AEM Brackets Extension提供流暢的工作流程來編輯AEM元件和使用者端程式庫，並運用[Brackets](https://brackets.io/)程式碼編輯器的強大功能，提供從程式碼編輯器存取Photoshop檔案和圖層的許可權。 擴充功能提供的簡易同步功能（不需要Maven或檔案儲存庫）可提升開發人員效率，也可協助具備有限AEM知識的前端開發人員參與專案。 此擴充功能也提供對[HTML範本語言(HTL)](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=zh-Hant)的一些支援，可降低JSP的複雜性，讓元件開發更容易、更安全。
+AEM Brackets Extension提供流暢的工作流程來編輯AEM元件和使用者端程式庫，並運用[Brackets](https://brackets.io/)程式碼編輯器的強大功能，提供從程式碼編輯器存取Photoshop檔案和圖層的許可權。 擴充功能提供的簡易同步功能（不需要Maven或檔案儲存庫）可提升開發人員效率，也可協助具備AEM有限知識的前端開發人員參與專案。 此擴充功能也提供對[HTML範本語言(HTL)](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)的一些支援，可降低JSP的複雜性，讓元件開發更容易、更安全。
 
 ![chlimage_1-53](assets/chlimage_1-53a.png)
 
@@ -33,10 +44,10 @@ AEM Brackets擴充功能的主要功能包括：
 * 專案的完整內容套件同步。
 * 運算式和`data-sly-*`區塊陳述式的HTL程式碼完成。
 
-此外，Brackets還為AEM前端開發人員提供了許多有用的功能：
+此外，Brackets還為AEM前端開發人員提供許多有用的功能：
 
-* Photoshop檔案支援從PSD檔案中擷取資訊，例如圖層、測量、顏色、字型、文字等。
-* 來自PSD的程式碼提示，可輕鬆在程式碼中重複使用此擷取的資訊。
+* Photoshop檔案支援從PSD檔案擷取資訊，例如圖層、測量、顏色、字型、文字等。
+* PSD的程式碼提示，可輕鬆在程式碼中重複使用此擷取的資訊。
 * CSS前置處理器支援，例如LESS和SCSS。
 * 以及數百種其他擴充功能，可滿足更具體的需求。
 
@@ -58,7 +69,7 @@ AEM Brackets擴充功能支援Brackets 1.0或更新版本。
    ![chlimage_1-54](assets/chlimage_1-54a.png)
 
 1. 按一下&#x200B;**安裝**。
-1. 關閉對話方塊，並在安裝完成後Extension Manager。
+1. 安裝完成後，關閉對話方塊和Extension Manager。
 
 ## 快速入門 {#getting-started}
 
@@ -76,13 +87,13 @@ AEM Brackets擴充功能支援Brackets 1.0或更新版本。
 
 >[!NOTE]
 >
->如果您沒有自己的專案包含內容封裝，可以嘗試[HTL TodoMVC範例](https://github.com/Adobe-Marketing-Cloud/aem-sightly-sample-todomvc)。 在GitHub上，按一下&#x200B;**下載ZIP**，將檔案解壓縮到本機，然後依照上述指示，在Brackets中開啟`jcr_root`資料夾。 然後依照下列步驟設定&#x200B;**專案設定**，最後執行&#x200B;**匯出內容封裝**，將整個封裝上傳到您的AEM開發執行個體，如完整內容封裝同步化一節中進一步說明的那樣。
+>如果您沒有自己的專案包含內容封裝，可以嘗試[HTL TodoMVC範例](https://github.com/Adobe-Marketing-Cloud/aem-sightly-sample-todomvc)。 在GitHub上，按一下&#x200B;**下載ZIP**，將檔案解壓縮到本機，然後依照上述指示，在Brackets中開啟`jcr_root`資料夾。 然後依照下列步驟設定&#x200B;**專案設定**，最後依照完整內容套件同步化一節中的進一步指示，執行&#x200B;**匯出內容套件**，將整個套件上傳到您的AEM開發執行個體。
 >
 >執行這些步驟後，您應該能夠存取您AEM開發執行個體上的`/content/todo.html` URL，並且您可以開始在Brackets中修改程式碼，並瞭解在網頁瀏覽器中重新整理後，變更如何立即同步至AEM伺服器。
 
 ### 專案設定 {#project-settings}
 
-若要將您的內容同步到AEM開發執行個體或從中同步內容，您需要定義您的專案設定。 您可以前往&#x200B;**AEM**&#x200B;功能表並選擇&#x200B;**專案設定……**&#x200B;來完成這項作業
+若要將您的內容同步至AEM開發執行個體，以及從中同步內容，您必須定義專案設定。 您可以前往&#x200B;**AEM**&#x200B;功能表並選擇&#x200B;**專案設定……**&#x200B;完成此作業
 
 ![chlimage_1-55](assets/chlimage_1-55a.png)
 
@@ -95,11 +106,11 @@ AEM Brackets擴充功能支援Brackets 1.0或更新版本。
 
 ## 同步內容 {#synchronizing-content}
 
-AEM Brackets Extension為`filter.xml`中定義的篩選規則所允許的檔案和資料夾提供下列型別的內容同步：
+AEM Brackets擴充功能針對`filter.xml`中定義的篩選規則所允許的檔案和資料夾，提供下列型別的內容同步：
 
 ### 自動同步已變更的檔案 {#automated-synchronization-of-changed-files}
 
-這只會同步從Brackets到AEM例項的變更，反之則不會。
+這只會同步從Brackets到AEM例項的變更，反之亦然。
 
 ### 手動雙向同步 {#manual-bidirectional-synchronization}
 
@@ -156,7 +167,7 @@ AEM Brackets擴充功能是開放原始碼專案，由[Adobe Marketing Cloud](ht
 * 程式碼存放庫： [https://github.com/Adobe-Marketing-Cloud/aem-sightly-brackets-extension](https://github.com/Adobe-Marketing-Cloud/aem-sightly-brackets-extension)
 * Apache授權，版本2.0： [https://www.apache.org/licenses/LICENSE-2.0.html](https://www.apache.org/licenses/LICENSE-2.0.html)
 
-Brackets程式碼編輯器也是開放原始碼專案，由[Adobe Systems Incorporated](https://github.com/adobe)組織託管在GitHub上：
+Brackets程式碼編輯器也是開放原始碼專案，由[Adobe Systems Incorporated](https://github.com/adobe)組織在GitHub上託管：
 
 * 程式碼存放庫： [https://github.com/adobe/brackets](https://github.com/adobe/brackets)
 

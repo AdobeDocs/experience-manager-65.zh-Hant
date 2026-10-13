@@ -10,13 +10,25 @@ exl-id: 9efba91d-45e8-42e1-9db6-490d21bf7412
 solution: Experience Manager, Experience Manager Sites
 feature: Security
 role: Admin
-source-git-commit: 6f3c4f4aa4183552492c6ce5039816896bd67495
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: b1210526-416b-4ef6-bcc0-1692e99f30e9
+    internal-label: Administration and security
+subfeature_v2:
+  - id: c35bc059-fd80-4a01-91a6-e48da3c76758
+    internal-label: Security practices
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '748'
+source-wordcount: '780'
 ht-degree: 0%
-
 ---
-
 # 建立已關閉的使用者群組{#creating-a-closed-user-group}
 
 封閉式使用者群組(CUG)可用來限制對已發佈網際網路網站中特定頁面的存取。 這類頁面需要指派的成員登入並提供安全性認證。
@@ -81,7 +93,7 @@ ht-degree: 0%
    1. 啟動&#x200B;**啟用**&#x200B;核取方塊。
 
    1. 新增路徑至您的&#x200B;**登入頁面**。
-這是選用專案，如果保留為空白，系統會使用標準登入頁面。
+      這是選用專案，如果保留為空白，系統會使用標準登入頁面。
 
    ![CUG已新增](assets/cug-authentication-requirement.png)
 
@@ -117,13 +129,13 @@ ht-degree: 0%
 
 如果您使用Dispatcher，則需要使用下列屬性定義Dispatcher陣列：
 
-* [virtualhosts](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant#identifying-virtual-hosts-virtualhosts)：符合CUG套用之頁面的路徑。
+* [virtualhosts](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#identifying-virtual-hosts-virtualhosts)：符合CUG套用之頁面的路徑。
 * \sessionmanagement：請參閱下文。
-* [快取](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant#configuring-the-dispatcher-cache-cache)：專屬於CUG套用之檔案的快取目錄。
+* [快取](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#configuring-the-dispatcher-cache-cache)：專屬於CUG套用之檔案的快取目錄。
 
 ### 為CUG設定Dispatcher工作階段管理 {#configuring-dispatcher-session-management-for-cugs}
 
-在dispatcher.any檔案[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant#enabling-secure-sessions-sessionmanagement)中設定CUG的工作階段管理。 要求CUG頁面的存取權時所使用的驗證處理常式，會決定您設定工作階段管理的方式。
+在dispatcher.any檔案](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#enabling-secure-sessions-sessionmanagement)中設定CUG的[工作階段管理。 要求CUG頁面的存取權時所使用的驗證處理常式，會決定您設定工作階段管理的方式。
 
 ```xml
 /sessionmanagement
@@ -134,9 +146,10 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->當Dispatcher陣列啟用工作階段管理時，不會快取陣列處理的所有頁面。若要快取CUG以外的頁面，請在dispatcher.any>中建立第二個處理非CUG頁面的陣列。
+>當Dispatcher陣列啟用工作階段管理時，不會快取陣列處理的所有頁面。 若要快取CUG以外的頁面，請在dispatcher.any中建立第二個陣列
+>處理非CUG頁面的即時通訊協定。
 
-1. 定義`/directory`以設定[/sessionmanagement](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant#enabling-secure-sessions-sessionmanagement)；例如：
+1. 定義`/directory`以設定[/sessionmanagement](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#enabling-secure-sessions-sessionmanagement)；例如：
 
    ```xml
    /sessionmanagement
@@ -146,4 +159,4 @@ ht-degree: 0%
      }
    ```
 
-1. 將[/allowAuthorized](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant#caching-when-authentication-is-used)設為`0`。
+1. 將[/allowAuthorized](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#caching-when-authentication-is-used)設為`0`。

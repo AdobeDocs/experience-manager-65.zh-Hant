@@ -10,13 +10,25 @@ exl-id: 70a39462-8584-4c76-a097-05ee436247b7
 solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
-source-git-commit: 8f638eb384bdca59fb6f4f8990643e64f34622ce
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: a642c50e-80eb-4fc1-a5d2-f3762d1f841d
+    internal-label: Administration
+subfeature_v2:
+  - id: c191041a-8b54-4bde-9e43-bc8d8f8cea74
+    internal-label: Deploying
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '6582'
+source-wordcount: '6584'
 ht-degree: 0%
-
 ---
-
 # Adobe Experience Manager與MongoDB{#aem-with-mongodb}
 
 本文旨在進一步瞭解成功使用MongoDB部署AEM (Adobe Experience Manager)所需的任務和考量事項。
@@ -78,8 +90,8 @@ RAM不足會導致效能大幅降低。 工作集和資料庫的大小與應用�
 
 為了協助負載測試過程，可以假設工作集與資料庫總大小的比率如下：
 
-* 1:10用於SSD儲存
-* 1:3用於硬碟儲存
+* SSD儲存為1:10
+* 硬碟儲存空間為1:3
 
 這些比率表示SSD部署需要200 GB的RAM才能使用2 TB的資料庫。
 
@@ -244,8 +256,8 @@ MongoDB可在數種作業系統上執行，包括各種Linux®風格、Windows�
 * 關閉透明的hugpage和磁碟重組。 如需詳細資訊，請參閱[透明大型頁面設定](https://docs.mongodb.com/manual/tutorial/transparent-huge-pages/)。
 * [調整儲存資料庫檔案之裝置上的預讀設定](https://docs.mongodb.com/manual/administration/production-notes/#readahead)，以符合您的使用案例。
 
-   * 對於MMAPv1儲存引擎，如果您的工作集大於可用的RAM，而且檔案存取模式是隨機的，請考慮將讀取提前數降低到32或16。 評估不同的設定，以便找出最佳值，最大化常駐記憶體並降低頁面錯誤數目。
-   * 對於WiredTiger儲存引擎，無論儲存媒體型別為何（旋轉、SSD等），都請將讀取前設定為0。 一般而言，除非測試顯示可測量、可重複及可靠的好處，以獲得更高的預先讀取值，否則請使用建議的預先讀取設定。 [MongoDB Professional Support](https://docs.mongodb.com/manual/administration/production-notes/#readahead)可提供非零預讀組態的建議與指引。
+  * 對於MMAPv1儲存引擎，如果您的工作集大於可用的RAM，而且檔案存取模式是隨機的，請考慮將讀取提前數降低到32或16。 評估不同的設定，以便找出最佳值，最大化常駐記憶體並降低頁面錯誤數目。
+  * 對於WiredTiger儲存引擎，無論儲存媒體型別為何（旋轉、SSD等），都請將讀取前設定為0。 一般而言，除非測試顯示可測量、可重複及可靠的好處，以獲得更高的預先讀取值，否則請使用建議的預先讀取設定。 [MongoDB Professional Support](https://docs.mongodb.com/manual/administration/production-notes/#readahead)可提供非零預讀組態的建議與指引。
 
 * 如果您在虛擬環境中執行RHEL 7 / CentOS 7，請停用調整工具。
 * 當RHEL 7/CentOS 7在虛擬環境中執行時，調整工具會自動叫用從效能輸送量衍生的效能設定檔，這會自動將預先讀取設定設為4 MB。 此設定可能會對效能造成負面影響。
@@ -258,9 +270,9 @@ MongoDB可在數種作業系統上執行，包括各種Linux®風格、Windows�
 * [dbPath](https://docs.mongodb.com/manual/reference/configuration-options/#storage.dbPath)掛接點使用noatime。
 * 針對您的部署，設定足夠的檔案控制代碼(fs.file-max)、核心pid限制(kernel.pid_max)以及每個處理序的最大執行緒數(kernel.threads-max)。 對於大型系統，下列值可提供良好的起點：
 
-   * fs.file-max值98000，
-   * 64000的kernel.pid_max值，
-   * andkernel.threads-64000的最大值
+  * fs.file-max值98000，
+  * 64000的kernel.pid_max值，
+  * andkernel.threads-64000的最大值
 
 * 確定系統已設定交換空間。 如需適當大小的詳細資訊，請參閱作業系統的檔案。
 * 請確定系統預設的TCP keepalive已正確設定。 300的值通常可為復本集和共用叢集提供更好的效能。 請參閱： [TCP保持連線時間是否會影響MongoDB部署？](https://docs.mongodb.com/manual/faq/diagnostics/#faq-keepalive) ，以取得詳細資訊。
@@ -657,7 +669,7 @@ CSP可讓您微調原則。 不過，在複雜的應用程式中，開發CSP標�
 
 >[!NOTE]
 >
->如需此運作方式的詳細資訊，請參閱內容安全性原則[&#128279;](https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html)上的OWASP頁面。
+>如需此運作方式的詳細資訊，請參閱內容安全性原則](https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html)上的[OWASP頁面。
 
 ### 大小調整 {#sizing}
 

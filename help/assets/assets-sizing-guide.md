@@ -1,18 +1,29 @@
 ---
 title: '[!DNL Assets]大小調整指南'
-description: 判斷有效率量度的最佳實務，以評估部署 [!DNL Adobe Experience Manager Assets]所需的基礎結構和資源。
+description: 判斷有效量度的最佳實務，以評估部署[!DNL Adobe Experience Manager Assets]所需的基礎結構和資源。
 contentOwner: AG
 role: Developer, Admin
 feature: Asset Management
 exl-id: fd58ead9-5e18-4f55-8d20-1cf4402fad97
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 7d2b2ec8-499c-5434-9ffd-9218cd71f683
+    internal-label: Asset Management
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1645'
 ht-degree: 0%
-
 ---
-
 # [!DNL Assets]大小調整指南 {#assets-sizing-guide}
 
 調整[!DNL Adobe Experience Manager Assets]實作的環境大小時，請務必確保有足夠的可用資源，例如磁碟、CPU、記憶體、IO和網路輸送量。 調整其中許多資源的大小需要瞭解載入系統的資產數量。 如果沒有更好的量度，您可以除以現有程式庫的大小，以找出建立資產的速率。

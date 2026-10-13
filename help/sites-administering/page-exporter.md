@@ -5,7 +5,18 @@ exl-id: 15d08758-cf75-43c0-9818-98a579d64183
 solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
-source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 5ef752af-d616-5b23-8312-06964e46b208
+    internal-label: Administering
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1072'
 ht-degree: 1%
@@ -35,8 +46,8 @@ Adobe Experience Manager (AEM)可讓您將頁面匯出為包含影像、`.js`和
 
 1. 選取&#x200B;**進階**&#x200B;標籤。
 
-1. 展開&#x200B;**匯出**&#x200B;欄位以選取匯出範本。
-為您的網站選取所需的範本，然後確認&#x200B;**確定**。
+1. 展開&#x200B;**匯出**欄位以選取匯出範本。
+為您的網站選取所需的範本，然後確認**確定**。
 
 1. 選取&#x200B;**儲存並關閉**&#x200B;以關閉頁面屬性對話方塊。
 

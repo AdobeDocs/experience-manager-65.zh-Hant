@@ -9,13 +9,24 @@ exl-id: b0786b52-879e-4a24-9cc9-bd9dcb2473cc
 solution: Experience Manager, Experience Manager Forms
 feature: Document Security
 role: User, Developer
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 50158d81-1c06-57f7-8bd7-e8ff76a93f85
+    internal-label: Document Security
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1220'
+source-wordcount: '1237'
 ht-degree: 0%
-
 ---
-
 # 為WebSphere Application Server設定SSL {#configuring-ssl-for-websphere-application-server}
 
 本節包含使用IBM WebSphere Application Server設定SSL的下列步驟。
@@ -29,21 +40,21 @@ ht-degree: 0%
 
 ### 為WebSphere建立Linux或UNIX使用者 {#create-a-linux-or-unix-user-for-websphere}
 
-1. 以根用戶用戶身分登入。
-1. 通過在命令提示符下輸入以下命令來建立用戶：
+1. 以root使用者身分登入。
+1. 在命令提示字元中輸入下列命令來建立使用者：
 
-   * （Linux 和 Sun Solaris） `useradd`
-   * （IBM AIX） `mkuser`
+   * （Linux和Sun Solaris） `useradd`
+   * (IBM AIX) `mkuser`
 
-1. 通過在命令提示符下輸入 `passwd` 來設置新用戶的密碼。
-1. （Linux 和 Solaris）通過在命令提示符下輸入 `pwconv` （不帶參數）來建立影子密碼檔。
+1. 在命令提示字元中輸入`passwd`來設定新使用者的密碼。
+1. （Linux和Solaris）在命令提示字元中輸入`pwconv` （沒有引數）來建立陰影密碼檔案。
 
    >[!NOTE]
    >
-   >（Linux 和 Solaris）要使 WebSphere Application Server Local OS 安全註冊表正常工作，必須存在影子密碼文件。 影子密碼文件通常名為 **/etc/shadow** ，並基於 /etc/passwd 文件。 如果影子密碼檔不存在，則在啟用全域安全性並將用戶註冊表配置為本地操作系統後會發生錯誤。
+   >（Linux和Solaris）若要讓WebSphere Application Server本機作業系統安全性登入運作，陰影密碼檔案必須存在。 陰影密碼檔案通常命名為&#x200B;**/etc/shadow**，而且是以/etc/passwd檔案為基礎。 如果陰影密碼檔案不存在，則在啟用全域安全性並將使用者登入設定為本機作業系統之後會發生錯誤。
 
-1. 在文本編輯者中從 /etc 目錄中打開群組文件。
-1. 將您在步驟 2 `root` 中創建的用戶添加到群組。
+1. 在文字編輯器中從/etc目錄開啟群組檔案。
+1. 將您在步驟2中建立的使用者新增至`root`群組。
 1. 儲存並關閉檔案。
 1. （啟用SSL的UNIX）以root使用者身分啟動和停止WebSphere。
 
@@ -57,11 +68,11 @@ ht-degree: 0%
 1. 按一下&#x200B;**使用者**，用滑鼠右鍵按一下您建立的使用者並選取&#x200B;**內容**。
 1. 按一下&#x200B;**的**&#x200B;成員標籤，然後按一下&#x200B;**新增**。
 1. 在[輸入要選取的物件名稱]方塊中，輸入`Administrators`，按一下[檢查名稱]以確保群組名稱正確。
-1. 按一下[確定]&#x200B;**&#x200B;**，然後再按一下[確定]&#x200B;**&#x200B;**。
+1. 按一下[確定]****，然後再按一下[確定]****。
 1. 選取&#x200B;**開始>控制檯>系統管理工具>本機安全性原則>本機原則**。
 1. 按一下「使用者許可權指派」，然後以滑鼠右鍵按一下「作為作業系統的一部分」，並選取「屬性」。
 1. 按一下&#x200B;**新增使用者或群組**。
-1. 在[輸入要選取的物件名稱]方塊中，輸入您在步驟4中建立的使用者名稱，按一下[檢查名稱]，確定名稱正確，然後按一下[確定]。**&#x200B;**。**&#x200B;**
+1. 在[輸入要選取的物件名稱]方塊中，輸入您在步驟4中建立的使用者名稱，按一下[檢查名稱]，確定名稱正確，然後按一下[確定]。****。****
 1. 按一下&#x200B;**確定**，關閉作為作業系統內容對話方塊一部分的動作。
 
 ### 設定WebSphere以使用新建立的使用者作為管理員 {#configure-websphere-to-use-the-newly-created-user-as-administrator}
@@ -71,7 +82,7 @@ ht-degree: 0%
 1. 在管理安全性下，選取&#x200B;**管理使用者角色**。
 1. 按一下「新增」並執行下列動作：
 
-   1. 在搜尋方塊中輸入&#x200B;**&amp;amp；ast；**，然後按一下搜尋。
+   1. 在搜尋方塊中輸入&#x200B;**&amp;ast；**，然後按一下搜尋。
    1. 按一下角色底下的&#x200B;**管理員**。
    1. 將新建的使用者新增至對應至角色，並將其對應至管理員。
 
@@ -105,19 +116,19 @@ ht-degree: 0%
 1. 按一下&#x200B;**個人憑證**。
 1. 如果您已新增使用ikeyman建立的金鑰存放區，則會顯示您的憑證。 否則，您需要透過執行以下步驟來新增新的自我簽署憑證：
 
-   1. 選擇 **建立 >自簽名證書**」。
-   1. 在證書表單上指定適當的值。 確保將別名和公用名保留為計算機的完全限定功能變數名稱。
+   1. 選取&#x200B;**建立>自我簽署憑證**。
+   1. 在憑證表單上指定適當的值。 請確定您將別名與一般名稱保留為電腦的完整網域名稱。
    1. 按一下「**套用**」。
 
-1. 重複步驟 2 到 10 以創建信任庫。
+1. 重複步驟2到10以建立信任存放區。
 
-## 將自訂金鑰庫和信任庫套用到伺服器 {#apply-custom-keystore-and-truststore-to-the-server}
+## 套用自訂金鑰存放區和信任存放區至伺服器 {#apply-custom-keystore-and-truststore-to-the-server}
 
-1. 在 WebSphere 管理控制台中，選擇 **安全性> SSL 證書和密鑰管理**。
-1. 按兩下管理 **端點安全配置**。 將打開本地拓撲圖。
-1. 在“入站”下，選擇節點的直接子級。
-1. 在「相關項」下，選擇「 **SSL 配置**」。
-1. 選擇 **NodeDeafultSSLSetting**。
+1. 在WebSphere管理主控台中，選取&#x200B;**安全性> SSL憑證和金鑰管理**。
+1. 按一下&#x200B;**管理端點安全性設定**。 本機拓撲對應隨即開啟。
+1. 在傳入下，選取節點的直接子項。
+1. 在相關專案下，選取&#x200B;**SSL設定**。
+1. 選取&#x200B;**NodeDefaultSSLSetting**。
 1. 從信任存放區名稱和金鑰存放區名稱下拉式清單中，選取您建立的自訂信任存放區和金鑰存放區。
 1. 按一下「**套用**」。
 1. 儲存主組態。
@@ -125,7 +136,7 @@ ht-degree: 0%
 
    您的設定檔現在會在自訂SSL設定和您的憑證上執行。
 
-## 啟用對AEM原生表單的支援 {#enabling-support-for-aem-forms-natives}
+## 啟用AEM原生表單支援 {#enabling-support-for-aem-forms-natives}
 
 1. 在WebSphere管理主控台中，選取&#x200B;**安全性>全域安全性**。
 1. 在[驗證]區段中，展開&#x200B;**RMI/IIOP安全性**&#x200B;並按一下&#x200B;**CSIv2輸入通訊**。
@@ -149,7 +160,7 @@ ht-degree: 0%
 1. 按一下「擷取簽署者資訊」，然後確認已擷取資訊。
 1. 按一下套用，然後按一下儲存。
 
-從已新增憑證的網站進行HTML至PDF的轉換，現在可以在產生PDF服務中運作。
+從已新增憑證的網站進行HTML到PDF的轉換現在可在產生PDF服務中運作。
 
 >[!NOTE]
 >

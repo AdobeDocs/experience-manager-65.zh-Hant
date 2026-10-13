@@ -11,13 +11,30 @@ solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization,Integration
 role: User,Admin,Developer
 index: false
-source-git-commit: 147b0efb32609c05949c9fe374fa4fca6a9dbfb1
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+  - id: eb3ad9f8-54a2-45f3-abb1-d3976415a718
+    internal-label: Personalization
+  - id: 243139ec-8e41-5296-a287-31343ab1bc0f
+    internal-label: Integration
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '2879'
 ht-degree: 6%
-
 ---
-
 
 # Adobe Campaign元件{#adobe-campaign-components}
 
@@ -38,10 +55,10 @@ ht-degree: 6%
 * 標題 (行銷活動)
 * 影像 (行銷活動)
 * 連結 (行銷活動)
-* Scene7 影像範本 (行銷活動)
-* 目標參考 (行銷活動)
-* 文字與影像 (行銷活動)
-* 文字與個人化 (行銷活動)
+* Scene7 影像範本 (Campaign)
+* 目標參考 (Campaign)
+* 文字與影像 (Campaign)
+* 文字與個人化 (Campaign)
 
 下一節將說明這些元件。
 
@@ -94,7 +111,7 @@ ht-degree: 6%
 >
 >就地編輯器在編輯時會使用影像的原始大小和外觀比例。 您也可以指定高度和寬度屬性。 儲存編輯變更時，會套用屬性中定義的任何大小和外觀比例限制。
 >
->視您的執行個體而定，頁面[&#128279;](/help/sites-developing/designer.md)的設計可能也會施加最小和最大限制；這些限制是在專案實作期間開發的。
+>視您的執行個體而定，頁面](/help/sites-developing/designer.md)的[設計可能也會施加最小和最大限制；這些限制是在專案實作期間開發的。
 
 全熒幕編輯模式中有數個其他選項可供使用；例如，地圖和縮放：
 
@@ -155,7 +172,7 @@ ht-degree: 6%
 新增如何使用連結的其他資訊。
 
 * **連結型別**
-在下拉式清單中，選取&#x200B;**自訂URL**&#x200B;和&#x200B;**最適化檔案**&#x200B;之間。 此欄位為必要項。 如果您選取「自訂URL」，可提供連結URL。 如果您選取「最適化檔案」，則可以提供檔案路徑。
+在下拉式清單中，選取**自訂URL**&#x200B;和&#x200B;**最適化檔案**&#x200B;之間。 此欄位為必要項。 如果您選取「自訂URL」，可提供連結URL。 如果您選取「最適化檔案」，則可以提供檔案路徑。
 
 * **其他URL引數**
 新增任何其他URL引數。 按一下「新增專案」以新增多個專案。
@@ -183,7 +200,7 @@ Dynamic Media Classic (Scene7)影像範本為圖層式影像檔案，其中的�
 
 ![chlimage_1-50](assets/chlimage_1-50.png)
 
-### 目標參考 (行銷活動) {#targeted-reference-campaign}
+### 目標參考 (Campaign) {#targeted-reference-campaign}
 
 目標參照（行銷活動）元件可讓您建立目標段落的參照。
 
@@ -191,7 +208,7 @@ Dynamic Media Classic (Scene7)影像範本為圖層式影像檔案，其中的�
 
 按一下資料夾圖示以導覽至您要參考的段落。 完成後，按一下核取記號。
 
-### 文字與影像 (行銷活動) {#text-image-campaign}
+### 文字與影像 (Campaign) {#text-image-campaign}
 
 文字與影像（行銷活動）元件新增文字區塊和影像。
 
@@ -220,20 +237,20 @@ Dynamic Media Classic (Scene7)影像範本為圖層式影像檔案，其中的�
 * **影像屬性** （**進階影像屬性**）
 可讓您指定下列專案：
 
-   * **標題**
-區塊標題，由mouseover顯示。
+  * **標題**
+    區塊標題，由mouseover顯示。
 
-   * **替代文字**
-如果影像無法顯示，則會顯示替代文字。
+  * **替代文字**
+    如果影像無法顯示，則會顯示替代文字。
 
-   * **連結至**
-建立資產或網站內其他頁面的連結。
+  * **連結至**
+    建立資產或網站內其他頁面的連結。
 
-   * **描述**
-影像的說明。
+  * **描述**
+    影像的說明。
 
-   * **大小**
-設定影像的高度和寬度。
+  * **大小**
+    設定影像的高度和寬度。
 
 >[!NOTE]
 >
@@ -246,7 +263,7 @@ Dynamic Media Classic (Scene7)影像範本為圖層式影像檔案，其中的�
 
 ![chlimage_1-52](assets/chlimage_1-52.png)
 
-### 文字與個人化 (行銷活動) {#text-personalization-campaign}
+### 文字與個人化 (Campaign) {#text-personalization-campaign}
 
 文字與Personalization （行銷活動）元件可讓您使用WYSIWYG編輯器及[RTF編輯器](/help/sites-authoring/rich-text-editor.md)所提供的功能，輸入文字區塊。 此外，此元件可讓您使用Adobe Campaign中可用的內容欄位和個人化區塊；另請參閱[插入Personalization](/help/sites-authoring/campaign.md#inserting-personalization)。
 
@@ -279,13 +296,13 @@ Dynamic Media Classic (Scene7)影像範本為圖層式影像檔案，其中的�
 
 * 核取方塊 (行銷活動)
 * 日期欄位（行銷活動）和日期欄位/HTML5 （行銷活動）
-* 加密的主索引鍵 (行銷活動)
-* 錯誤顯示 (行銷活動)
-* 隱藏調和索引鍵 (行銷活動)
-* 數值欄位 (行銷活動)
-* 選項欄位 (行銷活動)
-* 訂閱檢查清單 (行銷活動)
-* 測試欄位 (行銷活動)
+* 加密的主索引鍵 (Campaign)
+* 錯誤顯示 (Campaign)
+* 隱藏調和索引鍵 (Campaign)
+* 數值欄位 (Campaign)
+* 選項欄位 (Campaign)
+* 訂閱檢查清單 (Campaign)
+* 文字欄位 (Campaign)
 
 元件顯示如下：
 
@@ -310,7 +327,7 @@ Dynamic Media Classic (Scene7)影像範本為圖層式影像檔案，其中的�
    <td><p>不再聯絡（透過任何管道）</p> </td>
   </tr>
   <tr>
-   <td><p>日期欄位 (行銷活動)</p> <p>日期欄位/HTML 5 (行銷活動)</p> </td>
+   <td><p>日期欄位 (Campaign)</p> <p>日期欄位/HTML 5 (Campaign)</p> </td>
    <td><p>日期</p> </td>
    <td><p>出生日期</p> </td>
   </tr>
@@ -396,7 +413,7 @@ Adobe Campaign元件具有所有元件中通用的設定（加密的主要金鑰
 
 除了大部分Adobe Campaign元件通用的[設定](#settings-common-to-most-components)之外，您還可以設定下列專案：
 
-* **限制 — 限制**&#x200B;下拉式清單
+* **限制 — 限制**下拉式清單
 您可以選取 — **無**&#x200B;或&#x200B;**日期 —**&#x200B;來新增日期限制或無限制。 如果您選取日期，使用者在欄位中輸入的答案必須為日期格式。
 
 * **限制訊息**&#x200B;此外，您可以新增限制訊息，讓使用者知道如何正確格式化他們的回答。
@@ -406,7 +423,7 @@ Adobe Campaign元件具有所有元件中通用的設定（加密的主要金鑰
 
 ![chlimage_1-61](assets/chlimage_1-61.png)
 
-### 加密的主索引鍵 (行銷活動) {#encrypted-primary-key-campaign}
+### 加密的主索引鍵 (Campaign) {#encrypted-primary-key-campaign}
 
 此元件定義將包含Adobe Campaign設定檔識別碼的URL引數名稱（分別為&#x200B;**主要資源識別碼**&#x200B;或Adobe Campaign Standard中的&#x200B;**加密主金鑰**&#x200B;和6.1）。
 
@@ -421,7 +438,7 @@ Adobe Campaign元件具有所有元件中通用的設定（加密的主要金鑰
 
 ![chlimage_1-62](assets/chlimage_1-62.png)
 
-### 錯誤顯示 (行銷活動) {#error-display-campaign}
+### 錯誤顯示 (Campaign) {#error-display-campaign}
 
 此元件可讓您顯示後端錯誤。 需要將表單的錯誤處理設定為「前進」，元件才能正常運作。
 
@@ -429,7 +446,7 @@ Adobe Campaign元件具有所有元件中通用的設定（加密的主要金鑰
 
 ![chlimage_1-63](assets/chlimage_1-63.png)
 
-### 隱藏調和索引鍵 (行銷活動) {#hidden-reconciliation-key-campaign}
+### 隱藏調和索引鍵 (Campaign) {#hidden-reconciliation-key-campaign}
 
 「隱藏調解金鑰（行銷活動）」元件可讓您新增隱藏欄位，作為調解金鑰的一部分，以至表單。
 
@@ -442,13 +459,13 @@ Adobe Campaign元件具有所有元件中通用的設定（加密的主要金鑰
 
 ![chlimage_1-64](assets/chlimage_1-64.png)
 
-### 數值欄位 (行銷活動) {#numeric-field-campaign}
+### 數值欄位 (Campaign) {#numeric-field-campaign}
 
 使用數值欄位可允許收件者輸入數字，例如年齡。
 
 除了大部分Adobe Campaign元件通用的[設定](#settings-common-to-most-components)之外，您還可以設定下列專案：
 
-* **限制 — 限制**&#x200B;下拉式清單
+* **限制 — 限制**下拉式清單
 您可以選取 — **無**&#x200B;或&#x200B;**數值 —**&#x200B;來新增數值或無限制的限制。 如果您選取數字，使用者在欄位中輸入的答案必須是數字。
 
 * **限制訊息**&#x200B;此外，您可以新增限制訊息，讓使用者知道如何正確格式化他們的回答。
@@ -458,7 +475,7 @@ Adobe Campaign元件具有所有元件中通用的設定（加密的主要金鑰
 
 ![chlimage_1-65](assets/chlimage_1-65.png)
 
-### 選項欄位 (行銷活動) {#option-field-campaign}
+### 選項欄位 (Campaign) {#option-field-campaign}
 
 此下拉式清單可讓您選取選項；例如，收件者的性別或狀態。
 
@@ -470,7 +487,7 @@ Adobe Campaign元件具有所有元件中通用的設定（加密的主要金鑰
 
 ![chlimage_1-67](assets/chlimage_1-67.png)
 
-### 訂閱檢查清單 (行銷活動) {#subscriptions-checklist-campaign}
+### 訂閱檢查清單 (Campaign) {#subscriptions-checklist-campaign}
 
 使用&#x200B;**訂閱檢查清單（行銷活動）**&#x200B;元件來修改與Adobe Campaign設定檔相關聯的訂閱。
 
@@ -486,13 +503,13 @@ Adobe Campaign元件具有所有元件中通用的設定（加密的主要金鑰
 
 ![chlimage_1-68](assets/chlimage_1-68.png)
 
-### 測試欄位 (行銷活動) {#text-field-campaign}
+### 文字欄位 (Campaign) {#text-field-campaign}
 
 文字欄位（行銷活動）元件可讓您輸入字串型別資料，例如名字、姓氏、地址、電子郵件地址等。
 
 除了大部分Adobe Campaign元件通用的[設定](#settings-common-to-most-components)之外，您還可以設定下列專案：
 
-* **限制 — 限制**&#x200B;下拉式清單
+* **限制 — 限制**下拉式清單
 您可以選取 — **無、** **電子郵件**&#x200B;或&#x200B;**名稱** （無變音） — 新增電子郵件地址、名稱或無限制的限制。 如果您選取電子郵件，使用者在欄位中輸入的答案必須是電子郵件地址。 如果您選取名稱，則它必須是名稱（不允許變音）。
 
 * **限制訊息**&#x200B;此外，您可以新增限制訊息，讓使用者知道如何正確格式化他們的回答。

@@ -9,13 +9,24 @@ exl-id: 00473769-c447-4966-a71e-117c669e0151
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,Developer Tools
 role: Developer
-source-git-commit: 5bd621b14e3bcd21431c1df5629fe4669b14052c
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+  - id: f2d27a5f-0d67-4d85-8a24-86a8d8a3574b
+    internal-label: Developer tools
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1216'
+source-wordcount: '1296'
 ht-degree: 2%
-
 ---
-
 
 # Eclipse 適用的 AEM 開發人員工具 {#aem-developer-tools-for-eclipse}
 
@@ -23,7 +34,7 @@ ht-degree: 2%
 
 ## 概觀 {#overview}
 
-_適用於Eclipse的Experience Manager Developer Tools_&#x200B;是以Apache授權2所發行適用於Apache Sling[的](https://sling.apache.org/documentation/development/ide-tooling.html)Eclipse外掛程式為基礎的Eclipse外掛程式。
+_適用於Eclipse的Experience Manager Developer Tools_&#x200B;是以Apache授權2所發行適用於Apache Sling](https://sling.apache.org/documentation/development/ide-tooling.html)的[Eclipse外掛程式為基礎的Eclipse外掛程式。
 
 它提供數項功能，讓AEM開發更容易：
 
@@ -38,8 +49,8 @@ _適用於Eclipse的Experience Manager Developer Tools_&#x200B;是以Apache授�
 使用AEM開發人員工具之前，您需要：
 
 * 下載並安裝適用於Enterprise Java和Web開發人員的[Eclipse IDE。](https://www.eclipse.org/downloads/packages/)
-   * 適用於Eclipse的AEM Developer Tools 1.4.0版相容於Eclipse 2022-12 (4.26)或更新版本，且需要Java 17或更新版本才能執行。
-* 依照`eclipse.ini`Eclipse常見問答集[的說明，編輯您的](https://wiki.eclipse.org/FAQ_How_do_I_increase_the_heap_size_available_to_Eclipse%3F)設定檔，設定Eclipse安裝以確保您至少有1 GB的棧積記憶體。
+  * 適用於Eclipse的AEM Developer Tools 1.4.0版相容於Eclipse 2022-12 (4.26)或更新版本，且需要Java 17或更新版本才能執行。
+* 依照[Eclipse常見問答集](https://wiki.eclipse.org/FAQ_How_do_I_increase_the_heap_size_available_to_Eclipse%3F)的說明，編輯您的`eclipse.ini`設定檔，設定Eclipse安裝以確保您至少有1 GB的棧積記憶體。
 
 >[!NOTE]
 >
@@ -61,7 +72,7 @@ _適用於Eclipse的Experience Manager Developer Tools_&#x200B;是以Apache授�
 1. 按一下&#x200B;**新增……**。
 1. 在&#x200B;**名稱**&#x200B;欄位中，輸入`AEM Developer Tools`。
 1. 在&#x200B;**位置**&#x200B;欄位中，複製安裝URL。
-1. 按一下&#x200B;**新增**。
+1. 按一下&#x200B;**「新增」**。
 1. 檢查&#x200B;**AEM**&#x200B;和&#x200B;**Sling**&#x200B;外掛程式。
 1. 按一下「**下一步**」。
 1. 在&#x200B;**安裝詳細資料**&#x200B;視窗中，檢閱要安裝的專案，然後再次按一下&#x200B;**下一步**。
@@ -126,7 +137,7 @@ _適用於Eclipse的Experience Manager Developer Tools_&#x200B;是以Apache授�
 
    >[!TIP]
    >
-   >如需有關在本機AEM SDK上執行專案的偵錯的詳細資訊，請參閱檔案[遠端偵錯AEM SDK。](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-sdk/remote-debugging)
+   >如需有關在本機AEM SDK上執行專案的偵錯的詳細資訊，請參閱檔案[遠端偵錯AEM SDK。](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-sdk/remote-debugging)
 
 1. 按一下&#x200B;**完成**。
 
@@ -142,8 +153,8 @@ _適用於Eclipse的Experience Manager Developer Tools_&#x200B;是以Apache授�
 
 1. 請依照指示建立[範例多模組專案，](#sample-multi-module-project)，這會建立基本專案結構，並包含健全的關注點分離：
 
-   * `PROJECT.ui.apps`和`/apps`內容的`/etc`
-   * 已編寫之`PROJECT.ui.content`的`/content`
+   * `/apps`和`/etc`內容的`PROJECT.ui.apps`
+   * 已編寫之`/content`的`PROJECT.ui.content`
    * Java套件組合的`PROJECT.core`
    * 整合測試的`PROJECT.it.launcher`和`PROJECT.it.tests`
 
@@ -163,7 +174,7 @@ _適用於Eclipse的Experience Manager Developer Tools_&#x200B;是以Apache授�
    1. 將內容封裝的內容資料夾放在相同位置。
    1. 在Eclipse中，以滑鼠右鍵按一下`PROJECT.ui.content`專案，然後選擇&#x200B;**重新整理**。
 
-1. 透過在單獨的文字/程式碼編輯器中開啟內容套件的`filter.xml`檔案，更新這兩個專案的`META-INF/vault/filter.xml`檔案，以對應至您的內容套件內容。
+1. 透過在單獨的文字/程式碼編輯器中開啟內容套件的`META-INF/vault/filter.xml`檔案，更新這兩個專案的`filter.xml`檔案，以對應至您的內容套件內容。
 
    * 以下範例說明您的`filter.xml`檔案外觀：
 
@@ -237,12 +248,12 @@ Eclipse會下載必要的相依性。 這可能需要一段時間。
 
 Eclipse網站的官方Apache Sling IDE工具提供有用的其他資訊：
 
-* 適用於Eclipse [**的** Apache Sling IDE工具使用手冊](https://sling.apache.org/documentation/development/ide-tooling.html)會引導您瞭解AEM開發工具支援的整體概念、伺服器整合和部署功能。
+* 適用於Eclipse **的[** Apache Sling IDE工具使用手冊](https://sling.apache.org/documentation/development/ide-tooling.html)會引導您瞭解AEM開發工具支援的整體概念、伺服器整合和部署功能。
 * [疑難排解Apache Sling IDE工具](https://sling.apache.org/documentation/development/ide-tooling.html#troubleshooting)
 * [已知問題清單](https://sling.apache.org/documentation/development/ide-tooling.html#known-issues)
 
 下列正式[Eclipse](https://www.eclipse.org/)檔案可協助您設定環境：
 
-* [開始使用Eclipse](https://eclipseide.org/getting-started/)
+* [Eclipse快速入門](https://eclipseide.org/getting-started/)
 * [Eclipse Luna說明系統](https://help.eclipse.org/latest/index.jsp)
 * [Maven整合(m2eclipse)](https://www.eclipse.org/m2e/)

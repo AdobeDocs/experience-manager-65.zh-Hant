@@ -8,16 +8,25 @@ feature: Upgrading
 exl-id: b4531792-06dd-4545-9dbb-57224be20dc7
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 835ee49e-9248-5578-a60a-15c097807178
+    internal-label: Upgrading
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1494'
+source-wordcount: '1511'
 ht-degree: 1%
-
 ---
-
 # AEM 6.5中的網站存放庫重組 {#sites-repository-restructuring-in-aem}
 
-如AEM 6.5[&#128279;](/help/sites-deploying/repository-restructuring.md)頁面的上層存放庫重新調整中所述，升級至AEM 6.5的客戶應使用此頁面評估與影響AEM Sites解決方案的存放庫變更相關的工作量。 在AEM 6.5升級程式期間，有些變更需要大量工作量，而其他變更則可能延遲到未來升級為止。
+如AEM 6.5](/help/sites-deploying/repository-restructuring.md)頁面的上層[存放庫重新調整中所述，升級至AEM 6.5的客戶應使用此頁面評估與影響AEM Sites解決方案的存放庫變更相關的工作量。 在AEM 6.5升級程式期間，有些變更需要大量工作量，而其他變更則可能延遲到未來升級為止。
 
 **升級為6.5**
 
@@ -104,7 +113,7 @@ ht-degree: 1%
     </ol> </td>
   </tr>
   <tr>
-   <td><strong>附註</strong></td>
+   <td><strong>備註</strong></td>
    <td><p>不支援編輯這些使用者端資料庫。</p> <p>若要取得使用者端資料庫類別，請透過CRXDELite造訪每個<code>cq:ClientLIbraryFolder</code>節點，並檢查類別屬性。</p>
     <ul>
      <li><code>/libs/cq/analytics/clientlibs/sitecatalyst/appmeasurement</code></li>
@@ -276,7 +285,7 @@ ht-degree: 1%
     </ol> </td>
   </tr>
   <tr>
-   <td><strong>附註</strong></td>
+   <td><strong>備註</strong></td>
    <td><p>任何新的或修改過的頁面事件通知電子郵件範本都必須移轉至<code>/apps</code>下的新位置：</p>
     <ol>
      <li>將任何新的或修改過的頁面事件通知電子郵件範本從先前位置複製到新位置(<code>/apps</code>)。</li>
@@ -439,7 +448,7 @@ Search&Promote is end of life as of September 1, 2022 ### Adobe Search and Promo
     </ul> </td>
   </tr>
   <tr>
-   <td><strong>附註</strong></td>
+   <td><strong>備註</strong></td>
    <td><p>不支援編輯這些使用者端資料庫。</p> <p>若要取得使用者端資料庫類別，請透過CRXDELite造訪每個cq：ClientLIbraryFolder節點，並檢查類別屬性：</p>
     <ul>
      <li><code>/libs/cq/testandtarget/clientlibs/testandtarget/testandtarget</code></li>
@@ -480,7 +489,7 @@ Search&Promote is end of life as of September 1, 2022 ### Adobe Search and Promo
     </ul> </td>
   </tr>
   <tr>
-   <td><strong>附註</strong></td>
+   <td><strong>備註</strong></td>
    <td><p>不支援編輯這些使用者端資料庫。</p> <p>若要取得使用者端資料庫類別，請透過CRXDELite造訪每個<code>cq:ClientLIbraryFolder</code>節點，並檢查類別屬性：</p>
     <ul>
      <li><code>/libs/wcm/foundation/clientlibs/accessibility</code></li>

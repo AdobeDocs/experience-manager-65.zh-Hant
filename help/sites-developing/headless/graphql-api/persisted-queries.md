@@ -5,13 +5,25 @@ exl-id: d7a1955d-b754-4700-b863-e9f66396cbe1
 solution: Experience Manager, Experience Manager Sites
 feature: Content Fragments,GraphQL API
 role: Developer
-source-git-commit: 9278eb7dab4a764403fa0769f6e80dd7e8fb0cb9
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: a642c50e-80eb-4fc1-a5d2-f3762d1f841d
+    internal-label: Administration
+subfeature_v2:
+  - id: e9db7c79-8f65-4281-a439-c9049296d903
+    internal-label: Content Fragments
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1390'
-ht-degree: 85%
-
+source-wordcount: '1444'
+ht-degree: 84%
 ---
-
 # 持續性 GraphQL 查詢 {#persisted-queries-caching}
 
 持續查詢是建立並儲存在GraphQL (Adobe Experience Manager)伺服器上的AEM查詢。 用戶端應用程式可以透過 GET 要求來要求它們。 GET要求的回應可在Dispatcher和內容傳遞網路(CDN)層進行快取，最終改善要求使用者端應用程式的效能。 這與標準的 GraphQL 查詢不同，後者使用 POST 要求執行，其回應無法輕鬆快取。
@@ -32,7 +44,7 @@ AEM 有提供 [GraphiQL IDE](/help/sites-developing/headless/graphql-api/graphiq
 查詢有權存取所有內容片段模型。
 * 特定Sites設定和端點
 為特定Sites設定建立持續查詢需要相對應的Sites設定特定端點（以提供對相關內容片段模型的存取權）。
-例如，若要建立特定於WKND Sites設定的持續查詢，必須預先建立相對應的WKND特定Sites設定和WKND特定端點。
+例如，若要專門為 WKND Sites 設定建立持續性查詢，必須提前建立相應的 WKND 專屬 Sites 設定和 WKND 專屬端點。
 
 >[!NOTE]
 >
@@ -265,7 +277,7 @@ query getAdventuresByActivity($activity: String!) {
 
 ## 快取持續性查詢 {#caching-persisted-queries}
 
-建議使用持續性查詢，因為可以在 [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant) 和內容傳遞網路 (CDN) 層進行快取，最終提升發出要求的用戶端應用程式效能。
+建議使用持續性查詢，因為可以在 [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) 和內容傳遞網路 (CDN) 層進行快取，最終提升發出要求的用戶端應用程式效能。
 
 依預設，AEM 將根據存留時間 (TTL) 定義使快取失效。 這些 TTL 可以依照以下參數定義。 這些參數可以透過各種方式存取，根據所使用的機制，名稱會有所不同：
 
@@ -353,7 +365,7 @@ curl -u admin:admin -X POST \
 
 ### 使用 OSGi 設定管理快取 {#cache-osgi-configration}
 
-若要全域管理快取，您可以為&#x200B;**持續性查詢服務設定**&#x200B;[進行 OSGi 設定](/help/sites-deploying/configuring-osgi.md)。 否則，此OSGi設定會針對發佈執行個體[&#128279;](#publish-instances)使用預設值。
+若要全域管理快取，您可以為&#x200B;**持續性查詢服務設定**[進行 OSGi 設定](/help/sites-deploying/configuring-osgi.md)。 否則，此OSGi設定會針對發佈執行個體](#publish-instances)使用[預設值。
 
 >[!NOTE]
 >

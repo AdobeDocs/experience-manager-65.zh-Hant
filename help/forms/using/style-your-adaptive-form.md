@@ -6,7 +6,25 @@ feature: Adaptive Forms
 exl-id: 7742c3ca-1755-44c5-b70f-61309f09d1b8
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: 15fb75221470fe30d4a0c603e1bb0d0a45575eb5
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '2193'
 ht-degree: 10%
@@ -21,7 +39,7 @@ ht-degree: 10%
 
 ## 關於本教學課程  {#about-the-tutorial}
 
-您可以使用主題來為最適化表單提供獨特的外觀和樣式。 您可以套用最適化表單編輯器隨附的現成主題，或是建立您自己的自訂主題。 AEM [!DNL Forms]提供[主題編輯器](https://helpx.adobe.com/tw/experience-manager/6-3/forms/using/themes.html)以建立自訂主題。 單一主題可為在行動裝置、平板電腦或桌上型電腦上開啟的相同最適化表單提供不同外觀。 使用主題編輯器不需要有CSS或LESS的任何先前知識，但這是必要的。
+您可以使用主題來為最適化表單提供獨特的外觀和樣式。 您可以套用最適化表單編輯器隨附的現成主題，或是建立您自己的自訂主題。 AEM [!DNL Forms]提供[主題編輯器](https://helpx.adobe.com/experience-manager/6-3/forms/using/themes.html)以建立自訂主題。 單一主題可為在行動裝置、平板電腦或桌上型電腦上開啟的相同最適化表單提供不同外觀。 使用主題編輯器不需要有CSS或LESS的任何先前知識，但這是必要的。
 
 在本教學課程結束時，您應該能夠進行下列工作：
 
@@ -76,7 +94,7 @@ ht-degree: 10%
       [http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html](http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html)
 
    1. 選取[!UICONTROL 標題]元件中的標誌影像，並選取![cmppr](assets/cmppr.png) **[!UICONTROL 屬性]**。 在[!UICONTROL image]屬性中，選取X以移除現有的標誌影像。
-   1. 選取&#x200B;**[!UICONTROL 上傳]**、選取logo.png，然後選取![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)以儲存變更。 在您開始[&#128279;](/help/forms/using/style-your-adaptive-form.md#before-you-start)之前，已在區段中下載影像。
+   1. 選取&#x200B;**[!UICONTROL 上傳]**、選取logo.png，然後選取![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)以儲存變更。 在您開始](/help/forms/using/style-your-adaptive-form.md#before-you-start)之前，已在[區段中下載影像。
    1. 選取標題文字`We.Retail`，然後選取![aem_6_3_edit](assets/aem_6_3_edit.png) **[!UICONTROL edit]**。 將標頭文字變更為`we retail`。 僅套用粗體格式至`we retail`中的`we`。
 
       ![we-retail-logo-text](assets/we-retail-logo-text.png)
@@ -141,7 +159,7 @@ ht-degree: 10%
 
    | 屬性 | 值 |
    |---|---|
-   | 影像 | 上傳header-style.png。 在您開始[&#128279;](/help/forms/using/style-your-adaptive-form.md#before-you-start)之前，已在區段中下載影像。 |
+   | 影像 | 上傳header-style.png。 在您開始](/help/forms/using/style-your-adaptive-form.md#before-you-start)之前，已在[區段中下載影像。 |
    | 位置 | 右下 |
    | 並排顯示 | 不重複 |
 

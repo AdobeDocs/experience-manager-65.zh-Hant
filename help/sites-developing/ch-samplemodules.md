@@ -9,13 +9,24 @@ exl-id: df28180f-7af4-437d-8e91-bfd305f73113
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,Personalization
 role: Developer
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+  - id: eb3ad9f8-54a2-45f3-abb1-d3976415a718
+    internal-label: Personalization
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1171'
+source-wordcount: '1190'
 ht-degree: 1%
-
 ---
-
 # ContextHub UI模組型別範例 {#sample-contexthub-ui-module-types}
 
 ContextHub提供數個範例UI模組，供您在解決方案中使用。 下列資訊已提供：
@@ -55,16 +66,16 @@ contexthub.base UI模組型別是其他所有UI模組型別的基底型別。 �
 * **storeMapping：**&#x200B;金鑰/存放區對應。 使用把手範本中的索引鍵來存取相關聯的ContextHub存放區資料。
 * **清單：**&#x200B;按一下UI模組時，在彈出視窗中顯示為清單的專案陣列。 如果您包含此專案，請勿包含poverTemplate。 值是一個物件陣列，內含下列索引鍵：
 
-   * title：為此專案顯示的文字
-   * 影像： （選用）應在左側顯示的影像URL
-   * 圖示： （選用）應在左側顯示的CUI圖示類別；如果已指定影像，則會忽略此類別
-   * selected： （選用）布林值，指定此專案是否應顯示為selected (true=selected)。 依預設，會使用粗體字型顯示選取的專案。 使用`listType`屬性來設定其他外觀（請參閱下文）。
+  * title：為此專案顯示的文字
+  * 影像： （選用）應在左側顯示的影像URL
+  * 圖示： （選用）應在左側顯示的CUI圖示類別；如果已指定影像，則會忽略此類別
+  * selected： （選用）布林值，指定此專案是否應顯示為selected (true=selected)。 依預設，會使用粗體字型顯示選取的專案。 使用`listType`屬性來設定其他外觀（請參閱下文）。
 
 * **listType：**&#x200B;用於彈出視窗清單專案的樣式。 使用下列其中一個值：
 
-   * 核取記號
-   * 核取方塊
-   * 無線電
+  * 核取記號
+  * 核取方塊
+  * 無線電
 
 * **popoverTemplate：**&#x200B;指定當按一下UI模組時，在彈出視窗中呈現內容的Handlebars範本。 如果您包含此專案，請勿包含`list`專案。
 

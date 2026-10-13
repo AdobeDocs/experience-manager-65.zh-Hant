@@ -9,18 +9,34 @@ feature: Adaptive Forms,Foundation Components
 role: Admin,User
 exl-id: 2ed4d99e-0e90-4b21-ac17-aa6707a3ba7d
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 7da902b6-fe94-5180-8e7c-f6d1e38d01d5
+    internal-label: Foundation Components
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '839'
+source-wordcount: '869'
 ht-degree: 2%
-
 ---
-
 # 支援最適化表單本地化的全新地區設定{#supporting-new-locales-for-adaptive-forms-localization}
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/supporting-new-language-localization.html?lang=zh-Hant) |
+| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/supporting-new-language-localization.html) |
 | AEM 6.5 | 本文章 |
 
 ## 關於地區字典 {#about-locale-dictionaries}
@@ -39,18 +55,18 @@ ht-degree: 2%
 
 * 依指定順序檢視下列引數：
 
-   * 要求引數`afAcceptLang`
-若要覆寫使用者的瀏覽器地區設定，您可以傳遞`afAcceptLang`要求引數以強制地區設定。例如，以下URL被強制以日文地區設定呈現表單：
-     `https://'[server]:[port]'/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ja`
+  * 要求引數 `afAcceptLang`
+若要覆寫使用者的瀏覽器地區設定，您可以傳遞`afAcceptLang`要求引數以強制地區設定。 例如，以下URL被強制以日文地區設定呈現表單：
+    `https://'[server]:[port]'/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ja`
 
-   * 使用`Accept-Language`標頭在請求中指定之使用者的瀏覽器地區設定。
+  * 使用`Accept-Language`標頭在請求中指定之使用者的瀏覽器地區設定。
 
-   * AEM中指定的使用者的語言設定。
+  * AEM中指定的使用者的語言設定。
 
-   * 瀏覽器地區設定預設為啟用。 若要變更瀏覽器地區設定，
-      * 開啟組態管理員。 URL是`http://[server]:[port]/system/console/configMgr`
-      * 找到並開啟&#x200B;**[!UICONTROL 最適化表單和互動式通訊Web Channel]**&#x200B;設定。
-      * 變更&#x200B;**[!UICONTROL 使用瀏覽器地區設定]**&#x200B;選項和&#x200B;**[!UICONTROL 儲存]**&#x200B;組態的狀態。
+  * 瀏覽器地區設定預設為啟用。 若要變更瀏覽器地區設定，
+    * 開啟組態管理員。 URL是`http://[server]:[port]/system/console/configMgr`
+    * 找到並開啟&#x200B;**[!UICONTROL 最適化表單和互動式通訊Web Channel]**&#x200B;設定。
+    * 變更&#x200B;**[!UICONTROL 使用瀏覽器地區設定]**&#x200B;選項和&#x200B;**[!UICONTROL 儲存]**&#x200B;組態的狀態。
 
 地區設定一經識別，最適化表單就會挑選表單專屬的字典。 如果找不到所要求地區設定的表單特定字典，則會使用最適化表單所編寫語言的字典。
 

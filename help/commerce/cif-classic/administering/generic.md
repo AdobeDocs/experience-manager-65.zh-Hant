@@ -9,7 +9,17 @@ exl-id: c29f6213-1df6-45af-91c8-14b255276d82
 solution: Experience Manager,Commerce
 feature: Commerce Integration Framework
 role: Admin, Developer
-source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '2961'
 ht-degree: 2%
@@ -166,7 +176,7 @@ Adobe Experience Manager (AEM)一般解決方案提供管理存放庫內所儲�
 >
 >`/etc/commerce/products/...`
 >
->這表示預設會被[Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant)封鎖，因此請視需要設定。
+>這表示預設會被[Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html)封鎖，因此請視需要設定。
 
 #### 編輯產品資訊 — 觸控最佳化UI {#editing-product-information-touch-optimized-ui}
 
@@ -227,7 +237,7 @@ Adobe Experience Manager (AEM)一般解決方案提供管理存放庫內所儲�
 1. 例如，您可以編輯出現在產品搜尋頁面上的大小。 按一下`sizegroup`節點。
 1. 按一下`items`節點，然後按一下`propertypredicate`節點。
 1. 您可以編輯`propertyValues`。 例如，您可以新增XS、XXL或移除大小。
-1. 按一下「儲存全部」**&#x200B;**，並導覽至產品搜尋頁面。 您的變更將會顯示。
+1. 按一下「儲存全部」****，並導覽至產品搜尋頁面。 您的變更將會顯示。
 
 ### 多個Assets {#multiple-assets}
 
@@ -371,7 +381,7 @@ Adobe Experience Manager (AEM)一般解決方案提供管理存放庫內所儲�
 
 >[!NOTE]
 >
->另請閱讀AEM[&#128279;](https://blogs.adobe.com/experiencedelivers/experience-management/event_handling_incq/)中的事件處理。
+>另請閱讀AEM](https://blogs.adobe.com/experiencedelivers/experience-management/event_handling_incq/)中的[事件處理。
 
 ### 具有「加入購物車」連結的影像 {#image-with-add-to-cart-links}
 
@@ -498,14 +508,14 @@ Adobe Experience Manager (AEM)一般解決方案提供管理存放庫內所儲�
 
    例如，開啟&#x200B;**標籤/關鍵字**&#x200B;欄位以選取「活動」，然後從Geometrixx-Outdoors區段選取「游泳」。
 
-1. 按一下「確定」**&#x200B;**&#x200B;以儲存您的屬性；範例產品會顯示在Blueprint頁面的「**產品選取條件**」下。
+1. 按一下「確定」****&#x200B;以儲存您的屬性；範例產品會顯示在Blueprint頁面的「**產品選取條件**」下。
 1. 按一下&#x200B;**轉出變更……**，選取&#x200B;**轉出頁面與所有子頁面**，然後按一下&#x200B;**下一步**，再按一下&#x200B;**轉出**。 轉出成功完成後，**狀態**&#x200B;指標會顯示為綠色。
 1. 您現在可以按一下&#x200B;**關閉**&#x200B;並檢查新目錄區段；例如，在和底下：
 
    `http://localhost:4502/cf#/content/geometrixx-outdoors/en/swimwear.html`
 
 1. 再次從Blueprint頁面按一下&#x200B;**編輯Blueprint**，然後在&#x200B;**屬性**&#x200B;對話方塊中開啟&#x200B;**產生的頁面**&#x200B;標籤。 在「橫幅」清單欄位中，選取您要顯示的影像，例如`summer.jpg`
-1. 按一下「確定」**&#x200B;**&#x200B;以儲存您的屬性；橫幅資訊會顯示在Blueprint頁面的&#x200B;**產品選取條件**&#x200B;下。
+1. 按一下「確定」****&#x200B;以儲存您的屬性；橫幅資訊會顯示在Blueprint頁面的&#x200B;**產品選取條件**&#x200B;下。
 1. 轉出這些新變更。
 
 ### 轉出目錄 {#rolling-out-a-catalog}
@@ -550,7 +560,7 @@ Adobe Experience Manager (AEM)一般解決方案提供管理存放庫內所儲�
 
    ![匯入Blueprint圖示](/help/sites-administering/do-not-localize/chlimage_1-13.png)
 
-1. 在精靈中，視需要選取Source，然後按一下[下一步]。**&#x200B;**
+1. 在精靈中，視需要選取Source，然後按一下[下一步]。****
 
    ![Blueprint精靈](/help/sites-administering/assets/chlimage_1-102.png)
 
@@ -609,7 +619,7 @@ Adobe Experience Manager (AEM)一般解決方案提供管理存放庫內所儲�
 1. 按一下「新增&#x200B;**」，選取**&#x200B;憑單&#x200B;**範本，然後指定新憑單的**&#x200B;標題&#x200B;**（及必要時指定**&#x200B;名稱&#x200B;**）。**
 1. 按一下「**建立**」。 新的憑單頁面會顯示在右側窗格中。
 
-1. 按兩下以開啟您的新憑單頁面，然後按一下[編輯] **&#x200B;**&#x200B;並視需要設定資訊。
+1. 按兩下以開啟您的新憑單頁面，然後按一下[編輯] ****&#x200B;並視需要設定資訊。
 1. 按一下&#x200B;**確定**&#x200B;以儲存。
 
 1. 您現在可以啟用憑單，讓購物者可以在發佈執行個體的購物車中使用它。
@@ -663,7 +673,7 @@ Adobe Experience Manager (AEM)一般解決方案提供管理存放庫內所儲�
 
    ![加號形狀建立圖示](/help/sites-administering/do-not-localize/chlimage_1-14.png)
 
-1. 精靈隨即開啟。 使用&#x200B;**Basic**、**Content**、**Payment**&#x200B;及&#x200B;**Fulfillment**&#x200B;索引標籤，輸入有關新訂單[&#128279;](/help/commerce/cif-classic/administering/concepts.md#order-information)的資訊。
+1. 精靈隨即開啟。 使用&#x200B;**Basic**、**Content**、**Payment**&#x200B;及&#x200B;**Fulfillment**&#x200B;索引標籤，輸入有關新訂單](/help/commerce/cif-classic/administering/concepts.md#order-information)的[資訊。
 
 1. 選取&#x200B;**建立**&#x200B;以儲存資訊。
 

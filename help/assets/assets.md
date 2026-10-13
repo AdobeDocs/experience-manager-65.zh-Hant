@@ -1,18 +1,31 @@
 ---
-title: ' [!DNL Adobe Experience Manager Assets] 簡介'
-description: 在 Experience Manager 中建立、管理、處理和分配數位資產。 這些指南會介紹最佳做法、協助工具功能以及如何使用 AEM 6.5 資產。
+title: '[!DNL Adobe Experience Manager Assets] 簡介'
+description: 在 Experience Manager 中建立、管理、處理和分配數位資產。 這些指南會介紹最佳做法、協助工具功能以及如何使用 AEM 6.5 Assets。
 hide: true
 feature: Asset Management
 role: Leader, Developer, User
 exl-id: 68239634-a2e8-414e-a866-cd8082641ee8
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: bca6156727dca11b2e09be549f3def6130827193
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 7d2b2ec8-499c-5434-9ffd-9218cd71f683
+    internal-label: Asset Management
+role_v2:
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '924'
 ht-degree: 5%
-
 ---
-
 
 # 關於[!DNL Adobe Experience Manager Assets]作為DAM解決方案 {#administering-assets}
 
@@ -38,7 +51,7 @@ AEM [!DNL Assets]是數位資產管理(DAM)工具，屬於[!DNL Experience Manag
 
 ### [!DNL Experience Manager Assets]已與[!DNL Experience Manager Sites]整合 {#aem-assets-fully-integrated-in-cq-wcm}
 
-[!DNL Assets]與[!DNL Sites]完全整合，並可在所有使用案例中順暢運作。 例如，在製作網頁時，[!DNL Sites]作者可以透過「內容尋找器」尋找及使用數位資產。 [!DNL Assets]的使用者介面與[!DNL Sites]的使用者介面相同。 如需完整詳細資訊，請參閱Sites[&#128279;](/help/sites-authoring/page-authoring.md)的概觀。
+[!DNL Assets]與[!DNL Sites]完全整合，並可在所有使用案例中順暢運作。 例如，在製作網頁時，[!DNL Sites]作者可以透過「內容尋找器」尋找及使用數位資產。 [!DNL Assets]的使用者介面與[!DNL Sites]的使用者介面相同。 如需完整詳細資訊，請參閱Sites](/help/sites-authoring/page-authoring.md)的[概觀。
 
 基本使用者介面與[!DNL Sites]的介面相同。 如需完整詳細資訊，請參閱[網站概觀](/help/sites-authoring/page-authoring.md)。
 
@@ -67,15 +80,15 @@ AEM [!DNL Assets]是數位資產管理(DAM)工具，屬於[!DNL Experience Manag
 
 * **中繼資料** [!DNL Assets]包含中繼資料；例如，作者、到期日和DRM資訊(Digital Rights Management)。 中繼資料受存取控制。 [!DNL Assets]支援以下各種立即可用的常見中繼資料結構：
 
-   * Dublin Core：包括作者、說明、日期、主旨等。
-   * IPTC：包括事件、模型、位置等。
-   * WCM：包含頁面屬性、[!UICONTROL 開啟時間]和[!UICONTROL 關閉時間]等。
+  * Dublin Core：包括作者、說明、日期、主旨等。
+  * IPTC：包括事件、模型、位置等。
+  * WCM：包含頁面屬性、[!UICONTROL 開啟時間]和[!UICONTROL 關閉時間]等。
 
 * **標籤**： [!DNL Assets]可以被標籤和分類。 請參閱[組織資產](/help/assets/organize-assets.md)。
 
 * **轉譯**：轉譯是資產的二進位表示法。 [!DNL Assets]一律具有主要表示法 — 已上傳檔案的主要表示法。 它們可以建立任意數量的其他表示法，例如，透過自訂工作流程步驟或資產上傳時建立的表示法。 轉譯可能具有不同的大小、不同的解析度、新增的浮水印或某些其他已變更的特徵。
 
-* **版本**：版本設定功能會在特定時間點建立數位資產的快照。 您可以將資產還原到先前的版本。 檢視 [!DNL Assets][&#128279;](manage-assets.md#asset-versioning)中的版本設定。
+* **版本**：版本設定功能會在特定時間點建立數位資產的快照。 您可以將資產還原到先前的版本。 檢視 [!DNL Assets]](manage-assets.md#asset-versioning)中的[版本設定。
 
 * **子資產**：子資產是構成資產的資產，例如，[!DNL Adobe Photoshop]檔案中的圖層或PDF檔案中的頁面。 在[!DNL Assets]中，您可以像管理資產一樣管理子資產。
 

@@ -9,25 +9,39 @@ role: Admin, Developer
 feature: Adaptive Forms,Core Components
 exl-id: 6585ea71-6242-47d3-bc59-6f603cf507b6
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 0487a5669fbaab35974eb85eb099b82e0847a4f9
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '962'
-ht-degree: 11%
-
+source-wordcount: '1079'
+ht-degree: 16%
 ---
-
 # 在AEM 6.5 Forms上啟用最適化Forms核心元件 {#enable-adaptive-forms-core-components}
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/setup-configure-migrate/enable-adaptive-forms-core-components.html?lang=zh-Hant) |
+| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/setup-configure-migrate/enable-adaptive-forms-core-components.html) |
 | AEM 6.5 | 本文 |
 
 <!--**Applies to:** ✅ Adaptive Form Core Components ❎ [Adaptive Form Foundation Components](/help/forms/using/create-adaptive-form.md).-->
 
-啟用最適化Forms核心元件可讓您從AEM 6.5 Forms環境開始建立、發佈及傳遞[以核心元件為基礎的最適化Forms](create-an-adaptive-form-core-components.md)和[無頭式最適化Forms](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/overview.html?lang=zh-Hant)。
+啟用最適化Forms核心元件可讓您從AEM 6.5 Forms環境開始建立、發佈及傳遞[以核心元件為基礎的最適化Forms](create-an-adaptive-form-core-components.md)和[無頭式最適化Forms](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/overview.html)。
 
-若要在您的AEM 6.5 Forms環境中啟用最適化Forms核心元件，請在您的所有製作和發佈執行個體上設定並部署[AEM Archetype 41或更新版本](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hant)型專案（啟用表單選項）。
+若要在您的AEM 6.5 Forms環境中啟用最適化Forms核心元件，請在您的所有製作和發佈執行個體上設定並部署[AEM Archetype 41或更新版本](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)型專案（啟用表單選項）。
 
 本文提供在您的AEM 6.5 Forms環境中設定和部署AEM Archetype 41或更新版本專案，以啟用最適化Forms核心元件的詳細指示。 您可以參閱下列清單，以取得啟用Forms核心元件的&#x200B;**AEM 6.5**&#x200B;相容版本：
 
@@ -35,7 +49,7 @@ ht-degree: 11%
 
 在AEM 6.5 Forms環境中啟用最適化Forms核心元件之前：
 
-* [升級至AEM 6.5 Forms Service Pack 16 (6.5.16.0)或更新版本](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/aem-forms-current-service-pack-installation-instructions.html?lang=zh-Hant)。
+* [升級至AEM 6.5 Forms Service Pack 16 (6.5.16.0)或更新版本](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/aem-forms-current-service-pack-installation-instructions.html)。
 
 * 安裝最新版的[Apache Maven](https://maven.apache.org/download.cgi)。
 
@@ -104,11 +118,11 @@ ht-degree: 11%
 1. 更新專案以包含最新版Forms核心元件：
 
    1. 開啟[AEM原型專案資料夾]/pom.xml以進行編輯。
-   1. 將`core.forms.components.version`和`core.forms.components.af.version`的版本設定為[最新的Forms核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/version.html?lang=zh-Hant#aem-as-form-version-history)版本，並確認兩者版本與表格中提及的&#x200B;**Forms核心元件**&#x200B;相同，並設定`core.wcm.components.version`的版本，如[WCM核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/versions.html?lang=zh-Hant)所指定。
+   1. 將`core.forms.components.version`和`core.forms.components.af.version`的版本設定為[最新的Forms核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/version.html#aem-as-form-version-history)版本，並確認兩者版本與表格中提及的&#x200B;**Forms核心元件**&#x200B;相同，並設定`core.wcm.components.version`的版本，如[WCM核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/versions.html)所指定。
 
       >[!WARNING]
       >
-      >* 使用版本45建立Archetype專案時，`[AEM Archetype Project Folder]/pom.xml`一開始會將forms核心元件版本設定為1.1.28。在建立或部署Archetype專案之前，請將Forms核心元件版本更新為1.1.26。您可以在[AEM 6.5 Forms版本記錄](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/version.html?lang=zh-Hant#aem-as-form-version-history)中找到最新版本。
+      >* 使用版本45建立Archetype專案時，`[AEM Archetype Project Folder]/pom.xml`一開始會將forms核心元件版本設定為1.1.28。 在建立或部署Archetype專案之前，請將Forms核心元件版本更新為1.1.26。 您可以在[AEM 6.5 Forms版本記錄](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/version.html#aem-as-form-version-history)中找到最新版本。
 
       >[!NOTE]
       >
@@ -147,12 +161,12 @@ ht-degree: 11%
 
 ### 核心元件有哪些？
 
-[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant) 是一組適用於 AEM 的標準化網站內容管理 (WCM) 元件，可加快開發時間並降低網站的維護成本。
+[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 是一組適用於 AEM 的標準化網站內容管理 (WCM) 元件，可加快開發時間並降低網站的維護成本。
 
 ### 啟用核心元件時新增了哪些功能？
 
 
-當為您的環境啟用調適型表單核心元件時，一個以核心元件為主的調適型表單空白範本和 Canvas 3.0 主題會新增至您的環境中。為您的環境啟用調適型表單核心元件後，您可以：
+當為您的環境啟用調適型表單核心元件時，一個以核心元件為主的調適型表單空白範本和 Canvas 3.0 主題會新增至您的環境中。 為您的環境啟用調適型表單核心元件後，您可以：
 
 * 建立以最適化Forms為基礎的核心元件。
 * 建立以核心元件為基礎的最適化表單範本。

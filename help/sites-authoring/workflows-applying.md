@@ -10,13 +10,28 @@ exl-id: e00da2b3-046a-4d93-aed0-07dd8c66899f
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Workflow
 role: User,Admin,Developer
-source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+  - id: f6a6f91a-8819-530a-8e7b-c50884a25aef
+    internal-label: Workflow
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
-source-wordcount: '647'
-ht-degree: 6%
-
+source-wordcount: '649'
+ht-degree: 7%
 ---
-
 # 將工作流程套用至頁面{#applying-workflows-to-pages}
 
 編寫時，您可以叫用工作流程以在頁面上執行動作；也可以套用多個工作流程。
@@ -95,18 +110,18 @@ ht-degree: 6%
    * **工作流程模型**
    * **工作流程標題**
 
-      * 您可以指定此例項的標題，協助您在稍後階段識別它。
+     * 您可以指定此例項的標題，協助您在稍後階段識別它。
 
    根據工作流程模型，也可以使用下列選項。 這些功能可在工作流程完成後，保留建立為裝載的封裝。
 
    * **保留工作流程封裝**
    * **封裝標題**
 
-      * 您可以指定封裝的標題，以協助識別。
+     * 您可以指定封裝的標題，以協助識別。
 
    >[!NOTE]
    >
-   >當工作流程已設定為&#x200B;**多重資源支援**&#x200B;且已選取多個資源時，[保留工作流程封裝](/help/sites-developing/workflows-models.md#configuring-a-workflow-for-multi-resource-support)選項可供使用。
+   >當工作流程已設定為[多重資源支援](/help/sites-developing/workflows-models.md#configuring-a-workflow-for-multi-resource-support)且已選取多個資源時，**保留工作流程封裝**&#x200B;選項可供使用。
 
    完成後，請使用&#x200B;**下一步**&#x200B;繼續。
 
@@ -118,16 +133,16 @@ ht-degree: 6%
 
    * 檢視其他動作的現有資源：
 
-      * **包含子項**&#x200B;以指定該資源的子項將包含在工作流程中。
-對話方塊隨即開啟，讓您根據下列條件調整選取範圍：
+     * **包含子項**以指定該資源的子項將包含在工作流程中。
+       對話方塊隨即開啟，讓您根據下列條件調整選取範圍：
 
-         * 僅包含直接子項。
-         * 僅包含已修改的頁面。
-         * 僅包含已發佈的頁面。
+       * 僅包含直接子項。
+       * 僅包含已修改的頁面。
+       * 僅包含已發佈的頁面。
 
-        任何指定的子項都會新增至將套用工作流程的資源清單中。
+       任何指定的子項都會新增至將套用工作流程的資源清單中。
 
-      * **移除選取專案**&#x200B;以從工作流程移除該資源。
+     * **移除選取專案**&#x200B;以從工作流程移除該資源。
 
    ![wf-53](assets/wf-53.png)
 

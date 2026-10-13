@@ -9,13 +9,29 @@ exl-id: b6ded6ac-4fb1-49f9-b272-16774c3e89a3
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Foundation Components
 role: User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 7da902b6-fe94-5180-8e7c-f6d1e38d01d5
+    internal-label: Foundation Components
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '761'
 ht-degree: 0%
-
 ---
-
 # We.Finance汽車保險續約參考網站逐步說明{#we-finance-auto-insurance-renewal-reference-site-walkthrough}
 
 ## We.Finance參考網站案例  {#we-finance-reference-site-scenario}
@@ -65,7 +81,7 @@ Sarah按一下&#x200B;**立即續約**，並導向至其汽車保險信函的網
 
 #### 親眼看看 {#see-it-yourself-1}
 
-您必須已收到附有PDF的電子郵件。 PDF是汽車保險信函的列印版本。 按一下[立即續約] **&#x200B;**&#x200B;以存取原則的Web版本。 檢查您的個人資訊和原則詳細資料，然後按一下[立即續約]&#x200B;**&#x200B;**，即可進入另一個互動式通訊。
+您必須已收到附有PDF的電子郵件。 PDF是汽車保險信函的列印版本。 按一下[立即續約] ****&#x200B;以存取原則的Web版本。 檢查您的個人資訊和原則詳細資料，然後按一下[立即續約]****，即可進入另一個互動式通訊。
 
 電子郵件中的「**立即續約**」按鈕會將Sarah導向網頁上的原則。 您可以造訪下列URL：
 
@@ -83,7 +99,7 @@ We.Finance會將Sarah帶往「付款」頁面。 Sarah會用記錄重新檢查�
 
 #### 親眼看看 {#see-it-yourself-2}
 
-按一下[立即續約] **&#x200B;**&#x200B;以存取付款頁面。 填寫您的信用卡資訊，然後按一下&#x200B;**付款**。
+按一下[立即續約] ****&#x200B;以存取付款頁面。 填寫您的信用卡資訊，然後按一下&#x200B;**付款**。
 
 您可以在撰寫執行個體中前往付款頁面
 

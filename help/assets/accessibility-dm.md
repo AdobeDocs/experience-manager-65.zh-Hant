@@ -12,27 +12,40 @@ autotag-review: '2026-05-18T18:39:42.457Z'
 TQID: 'https://experienceleague.adobe.com/f9-0rO4QHX7kbx7xwptmuOW1W7WzduM3tOlL2YgHXxI'
 product_v2:
   - id: e14eb250-3c22-4a07-9061-a78112b2b826
+    internal-label: Experience Manager 6.5
   - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: ed762d86-a04b-452b-a08f-86359bb8ff27
+    internal-label: Configuration and operations
+subfeature_v2:
+  - id: e0d8c871-755b-4042-bb9e-9b9a2648e9fe
+    internal-label: Accessibility
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
 level_v2:
   - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
 topic_v2:
   - id: cc72dcf1-72e1-48cc-b434-e7c27d62d67c
-source-git-commit: 9c96b6744c7af2f061b4dfbf403560047485f9b5
+    internal-label: Accessibility
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: 647
+source-wordcount: '666'
 ht-degree: 0%
-
 ---
-
 # [!DNL Dynamic Media]中的協助工具 {#working-with-three-d-assets-dm}
 
 [!DNL Dynamic Media]在編寫使用者介面中支援鍵盤控制和輔助技術，例如JAWS和NVDA熒幕閱讀器。
 
 ## [!DNL Dynamic Media]中的鍵盤協助工具支援
 
-因為[!DNL Dynamic Media]是[!DNL Adobe Experience Manager Assets]的外掛程式，所以大部分的鍵盤控制項行為與[!DNL Experience Manager Assets]中的相同。 例如，[!DNL Dynamic Media]中的`Cancel`按鈕具有與[!DNL Experience Manager Assets]中相同的焦點反白顯示，並會回應[!DNL Experience Manager Assets]中的`Spacebar`索引鍵。 請參閱Assets[&#128279;](/help/assets/accessibility.md#keyboard-shortcuts)中的鍵盤快速鍵。
+因為[!DNL Dynamic Media]是[!DNL Adobe Experience Manager Assets]的外掛程式，所以大部分的鍵盤控制項行為與[!DNL Experience Manager Assets]中的相同。 例如，[!DNL Dynamic Media]中的`Cancel`按鈕具有與[!DNL Experience Manager Assets]中相同的焦點反白顯示，並會回應[!DNL Experience Manager Assets]中的`Spacebar`索引鍵。 請參閱Assets](/help/assets/accessibility.md#keyboard-shortcuts)中的[鍵盤快速鍵。
 
 [!DNL Dynamic Media]中個別使用者介面元素所支援的按鍵動作清晰且易於探索。 [!DNL Dynamic Media]中的鍵盤控制項與下列內容有關：
 
@@ -44,10 +57,10 @@ ht-degree: 0%
 * 在熱點編輯器中，您可以使用某些自訂按鍵（例如方向鍵）與複雜的使用者介面元素互動，以重新定位熱點。
 * 在互動式視訊編輯器中，您可以使用`Spacebar`來選取影像並將其新增至區段。 此外，您可以使用`Backspace`索引鍵從&#x200B;**[!UICONTROL 內容]**&#x200B;索引標籤中刪除選取的專案。 此外，視需要按`Tab`功能可在頁面上的互動式元素之間導覽。
 * 在影像裁切/智慧型裁切編輯器中，您可以執行下列動作：
-   * 使用方向鍵來裁切框架大小、重新定位影像，或兩者皆使用。
-   * 第一個`Tab`停止點會反白整個影像框架。 然後您可以使用鍵盤上的方向鍵來重新定位框架。
-   * 接下來的4個`Tab`句號是框架的四個轉角。 將焦點放在框架轉角上時，轉角會反白顯示。 同樣地，您可以使用鍵盤上的方向鍵來移動焦點轉角。
-請參閱[編輯單一影像的智慧裁切或智慧色票](/help/assets/image-profiles.md#editing-the-smart-crop-or-smart-swatch-of-a-single-image)
+  * 使用方向鍵來裁切框架大小、重新定位影像，或兩者皆使用。
+  * 第一個`Tab`停止點會反白整個影像框架。 然後您可以使用鍵盤上的方向鍵來重新定位框架。
+  * 接下來的4個`Tab`句號是框架的四個轉角。 將焦點放在框架轉角上時，轉角會反白顯示。 同樣地，您可以使用鍵盤上的方向鍵來移動焦點轉角。
+    請參閱[編輯單一影像的智慧裁切或智慧色票](/help/assets/image-profiles.md#editing-the-smart-crop-or-smart-swatch-of-a-single-image)
 
 <!-- Keyboarding is the same because Dynamic Media is using the same UI library (Coral 3 (AEM 6.5) or Coral Spectrum (in Skyline)) as entire AEM Assets.  -->
 
@@ -65,12 +78,12 @@ ht-degree: 0%
 
 所有現成的[!DNL Dynamic Media]檢視器元件都支援客戶的鍵盤協助工具。
 
-請參閱Dynamic Media檢視器參考指南中的[鍵盤協助工具與導覽](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/c-keyboard-accessibility.html?lang=zh-Hant)。
+請參閱Dynamic Media檢視器參考指南中的[鍵盤協助工具與導覽](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/c-keyboard-accessibility.html)。
 
 ## [!DNL Dynamic Media]個檢視者的輔助技術支援 {#assistive-technology-support-for-dm-viewers}
 
 所有[!DNL Dynamic Media]檢視器元件都支援ARIA （可存取的豐富網際網路應用程式）角色和屬性，以改進與熒幕閱讀器等輔助技術的整合。
-請參閱Dynamic Media檢視器參考指南中任何自訂檢視器主題的&#x200B;**輔助技術支援**&#x200B;說明主題。 例如，請參閱視訊檢視器的[輔助技術支援](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/r-html5-video-viewer-20-assistive.html?lang=zh-Hant)，或互動式影像檢視器的[輔助技術支援](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/c-html5-aem-interactive-image-assistive.html?lang=zh-Hant#viewers-for-aem-assets-only)。
+請參閱Dynamic Media檢視器參考指南中任何自訂檢視器主題的**輔助技術支援**&#x200B;說明主題。 例如，請參閱視訊檢視器的[輔助技術支援](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/r-html5-video-viewer-20-assistive.html)，或互動式影像檢視器的[輔助技術支援](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/c-html5-aem-interactive-image-assistive.html#viewers-for-aem-assets-only)。
 
 ## Dynamic Media中的隱藏式字幕支援 {#closed-caption-support}
 
@@ -81,4 +94,4 @@ Dynamic Media支援以隱藏式字幕傳送視訊與最適化視訊集。 註解
 >[!MORELIKETHIS]
 >
 >* [Adobe解決方案的協助工具](https://www.adobe.com/accessibility.html)
->*  [!DNL Experience Manager Assets][&#128279;](/help/assets/accessibility.md)中的協助工具
+>*  [!DNL Experience Manager Assets]](/help/assets/accessibility.md)中的[協助工具

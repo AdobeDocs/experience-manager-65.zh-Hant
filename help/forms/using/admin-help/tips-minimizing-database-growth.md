@@ -1,6 +1,6 @@
 ---
 title: 將資料庫成長減至最低的秘訣
-description: 長期處理程式會將處理程式資料儲存在AEM表單資料庫中。 使用一些簡單的程式設計和產品組態策略，可以將AEM表單資料庫的成長減至最少。
+description: 長期處理程式會將處理程式資料儲存在AEM表單資料庫中。 使用一些簡單的程式設計和產品設定策略，可以將AEM表單資料庫的成長減至最少。
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/maintaining_the_aem_forms_database
@@ -9,16 +9,30 @@ exl-id: f64efb06-815a-4608-ba1c-39e22f344ebb
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
-source-wordcount: '408'
+source-wordcount: '419'
 ht-degree: 0%
-
 ---
-
 # 將資料庫成長減至最低的秘訣 {#tips-for-minimizing-database-growth}
 
-長期處理程式會將處理程式資料儲存在AEM表單資料庫中。 使用一些簡單的程式設計和產品組態策略，可以將AEM表單資料庫的成長減至最少。
+長期處理程式會將處理程式資料儲存在AEM表單資料庫中。 使用一些簡單的程式設計和產品設定策略，可以將AEM表單資料庫的成長減至最少。
 
 ## 流程設計提示 {#process-design-tips}
 
@@ -32,6 +46,6 @@ ht-degree: 0%
 
 ## 產品管理秘訣 {#product-administration-tips}
 
-有效使用全球檔案儲存(GDS)。 Forms伺服器上的GDS目錄可用來儲存（其中包括）傳遞至處理程式中AEM表單一部分的服務的檔案。 為了改善效能，較小的檔案會儲存在記憶體中，並保留在資料庫中。
+有效使用全球檔案儲存(GDS)。 Forms伺服器上的GDS目錄可用來儲存（除其他專案外）傳遞至處理程式中AEM表單一部分的服務的檔案。 為了改善效能，較小的檔案會儲存在記憶體中，並保留在資料庫中。
 
-管理主控台會公開「預設檔案最大內嵌大小」屬性，以設定儲存在記憶體中並保留在資料庫中的檔案大小上限。 (請參閱[設定一般AEM表單設定](/help/forms/using/admin-help/configure-general-aem-forms-settings.md#configure-general-aem-forms-settings)。) 如果您將此屬性設定為較低的值，則大部分檔案都會儲存在GDS目錄，而非資料庫中。 優點在於，當檔案儲存在GDS目錄中時，您可以更輕鬆地刪除檔案。
+管理主控台會公開「預設檔案最大內嵌大小」屬性，以設定儲存在記憶體中並保留在資料庫中的檔案大小上限。 （請參閱[設定一般AEM表單設定](/help/forms/using/admin-help/configure-general-aem-forms-settings.md#configure-general-aem-forms-settings)。） 如果您將此屬性設定為較低的值，則大部分檔案都會儲存在GDS目錄，而非資料庫中。 優點在於，當檔案儲存在GDS目錄中時，您可以更輕鬆地刪除檔案。

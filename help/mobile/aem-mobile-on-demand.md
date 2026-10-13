@@ -1,16 +1,20 @@
 ---
 title: AEM Mobile On-Demand
 description: 請依照本頁面的說明使用AEM (Adobe Experience Manager)開發On-Demand Services應用程式的起點。 此頁面涵蓋與應用程式開發人員相關的主題。
-
 contentOwner: JYOTIKA SYAL
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
-
 exl-id: a2134afd-4c0e-4a93-ac58-013b98fd9a09
 solution: Experience Manager
 feature: Mobile
 role: User
-source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '306'
 ht-degree: 0%

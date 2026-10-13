@@ -9,13 +9,26 @@ exl-id: f3f013a7-a399-4178-a901-d4a8c65ddbd3
 solution: Experience Manager, Experience Manager Forms
 feature: Forms Portal
 role: Admin, User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: fa155e29-cba2-5e77-9efd-4824be5ce4c8
+    internal-label: Forms Portal
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '747'
 ht-degree: 4%
-
 ---
-
 # 草稿和提交元件{#drafts-and-submissions-component}
 
 草稿和提交元件會列出處於草稿狀態的所有表單以及已提交的表單。 元件有用於草稿和已提交表單的單獨區段（標籤）。 使用者只能檢視其草稿和已提交的表單。
@@ -100,7 +113,7 @@ Forms入口網站可讓您將資料儲存在本機AEM存放庫、遠端AEM存放
 
 Forms入口網站提供立即可用的服務(API)，將資料儲存在本機與遠端AEM Forms發佈執行個體的crx存放庫上。 您可以用自訂實作來取代預設功能，如[為草稿和提交設定儲存服務](/help/forms/using/configuring-draft-submission-storage.md)文章中所述。 如需自訂實作中所需方法在安全位置儲存內容的詳細資訊，請參閱[自訂草稿和提交資料服務](/help/forms/using/custom-draft-submission-data-services.md)以及[草稿和提交元件的自訂儲存](/help/forms/using/adding-custom-storage-provider-forms.md)。
 
-AEM Forms檔案提供將草稿與提交元件與資料庫[&#128279;](integrate-draft-submission-database.md)整合的範例。 您可以使用範例實作來開發自己的自訂實作。
+AEM Forms檔案提供將草稿與提交元件與資料庫](integrate-draft-submission-database.md)整合的[範例。 您可以使用範例實作來開發自己的自訂實作。
 
 ## 相關文章
 

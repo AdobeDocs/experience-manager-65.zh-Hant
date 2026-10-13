@@ -5,13 +5,25 @@ feature: Content Fragments
 role: User
 exl-id: 50982ede-7ccf-45b2-b0dd-a49d23e0f971
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 11a8181e860c724c817dd549b351df079c8227e2
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: a45b1e7f-e65f-4cd3-be86-5cec5d9449ef
+    internal-label: Content management
+subfeature_v2:
+  - id: b7f5d1e0-aa2f-4a55-83f4-c2b35a8bd3a7
+    internal-label: Content fragments
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '2309'
+source-wordcount: '2442'
 ht-degree: 6%
-
 ---
-
 # 變化 - 編寫片段內容{#variations-authoring-fragment-content}
 
 [變數](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment)是AEM內容片段的一項重要功能，因為它們可讓您建立和編輯主要內容的復本，以用於特定頻道和/或案例，讓Headless內容傳送更靈活。
@@ -19,7 +31,7 @@ ht-degree: 6%
 您可以從&#x200B;**變數**&#x200B;標籤執行下列動作：
 
 * [為您的片段輸入內容](#authoring-your-content)，
-* [建立和管理](#managing-variations)主要&#x200B;**內容的變數**，
+* [建立和管理&#x200B;**主要**&#x200B;內容的變數](#managing-variations)，
 
 根據正在編輯的資料型別執行一系列其他動作；例如：
 
@@ -51,28 +63,28 @@ ht-degree: 6%
 
 * 直接在&#x200B;**變數**&#x200B;索引標籤中對您的內容進行編輯；每種資料型別提供不同的編輯選項，例如：
 
-   * 對於&#x200B;**多行文字**&#x200B;欄位，您也可以開啟[全熒幕編輯器](#full-screen-editor)以：
+  * 對於&#x200B;**多行文字**&#x200B;欄位，您也可以開啟[全熒幕編輯器](#full-screen-editor)以：
 
-      * 選取[格式](#formats)
-      * 檢視更多編輯選項（[RTF](#rich-text)格式）
-      * 存取[個動作](#actions)的範圍
+    * 選取[格式](#formats)
+    * 檢視更多編輯選項（[RTF](#rich-text)格式）
+    * 存取[個動作](#actions)的範圍
 
-   * 對於&#x200B;**片段參考**&#x200B;欄位，[編輯內容片段](#fragment-references-edit-content-fragment)選項可用，視模型定義而定。
+  * 對於&#x200B;**片段參考**&#x200B;欄位，[編輯內容片段](#fragment-references-edit-content-fragment)選項可用，視模型定義而定。
 
 * 將&#x200B;**標籤**&#x200B;指派給目前的變數；標籤可以新增、更新及移除
 
-   * [標籤](/help/sites-authoring/tags.md)在組織您的片段時功能強大，因為這些標籤可用於內容分類和分類法。 標籤可用於尋找內容（依標籤）並套用大量作業。
+  * [標籤](/help/sites-authoring/tags.md)在組織您的片段時功能強大，因為這些標籤可用於內容分類和分類法。 標籤可用於尋找內容（依標籤）並套用大量作業。
 
-      * 搜尋標籤會傳回片段，並反白標籤變數。
-      * 變數標籤也可用來將特定內容傳遞網路(CDN)設定檔（用於CDN快取）的變數分組，而不是使用變數名稱。
+    * 搜尋標籤會傳回片段，並反白標籤變數。
+    * 變數標籤也可用來將特定內容傳遞網路(CDN)設定檔（用於CDN快取）的變數分組，而不是使用變數名稱。
 
-     例如，您可以將相關片段標籤為「聖誕節啟動」，以僅允許作為子集瀏覽這些片段，或複製這些片段以供日後在新資料夾中再次啟動時使用。
+    例如，您可以將相關片段標籤為「聖誕節啟動」，以僅允許作為子集瀏覽這些片段，或複製這些片段以供日後在新資料夾中再次啟動時使用。
 
   >[!NOTE]
   >
-  >**標籤**&#x200B;也可以新增為&#x200B;**中繼資料**&#x200B;的一部分（至[主要](/help/assets/content-fragments/content-fragments-metadata.md)變數）
+  >**標籤**&#x200B;也可以新增為[中繼資料](/help/assets/content-fragments/content-fragments-metadata.md)的一部分（至&#x200B;**主要**&#x200B;變數）
 
-* [建立和管理](#managing-variations)主版&#x200B;**內容的變數**。
+* [建立和管理&#x200B;**主版**&#x200B;內容的變數](#managing-variations)。
 
 ### 全熒幕編輯器 {#full-screen-editor}
 
@@ -130,10 +142,10 @@ RTF編輯可讓您設定格式：
 * 段落樣式：段落，標題1/2/3
 * [插入資產](#inserting-assets-into-your-fragment)
 * 開啟全熒幕編輯器，下列格式選項可供使用：
-   * 搜尋
-   * 尋找/取代
-   * 拼字檢查
-   * [註解](/help/assets/content-fragments/content-fragments-variations.md#annotating-a-content-fragment)
+  * 搜尋
+  * 尋找/取代
+  * 拼字檢查
+  * [註解](/help/assets/content-fragments/content-fragments-variations.md#annotating-a-content-fragment)
 * [插入內容片段](#inserting-content-fragment-into-your-fragment)；當您的&#x200B;**多行文字**&#x200B;欄位設定為&#x200B;**允許片段參考**&#x200B;時可用。
 
 也可以從全熒幕編輯器存取[動作](#actions)。
@@ -168,7 +180,7 @@ RTF編輯可讓您設定格式：
 
 >[!CAUTION]
 >
->如果您在 **Rich Text** 和 **&#x200B;**&#x200B;Markdown之間切換，可能會在區塊引號和程式碼區塊中遇到意外的效果，因為這兩種格式在處理方式上可能會有差異。
+>如果您在 **Rich Text** 和 **** Markdown之間切換，可能會在區塊引號和程式碼區塊中遇到意外的效果，因為這兩種格式在處理方式上可能會有差異。
 
 ### 片段參考 {#fragment-references}
 
@@ -325,7 +337,7 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
 若要簡化編寫內容片段的程式，您可以直接新增[Assets](/help/assets/manage-assets.md) （影像）至片段。
 
-將它們新增到片段的段落序列中，且不加任何格式；在頁面[上使用/參照](/help/sites-authoring/content-fragments.md)片段時，可以完成格式設定。
+將它們新增到片段的段落序列中，且不加任何格式；在頁面](/help/sites-authoring/content-fragments.md)上使用/參照[片段時，可以完成格式設定。
 
 >[!CAUTION]
 >
@@ -438,7 +450,7 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 1. 選取所需的變數。
 1. 從&#x200B;**動作**&#x200B;下拉式清單中選取&#x200B;**重新命名**。
 
-1. 在產生的對 **話方塊中** ，輸入新的「 **&#x200B;**&#x200B;標題」和/或「說明」。
+1. 在產生的對 **話方塊中** ，輸入新的「 **** 標題」和/或「說明」。
 
 1. 確認&#x200B;**重新命名**&#x200B;動作。
 
@@ -468,7 +480,7 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
 >[!CAUTION]
 >
->同步僅可用於將更改從 *主&#x200B;**版複製**&#x200B;到變化*。
+>同步僅可用於將更改從 *主&#x200B;**版複製**到變化*。
 >
 >只同步變數的目前元素。
 >

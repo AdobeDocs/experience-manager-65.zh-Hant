@@ -9,13 +9,20 @@ exl-id: cbf9ce36-53a2-4f4b-a96f-3b05743f6217
 solution: Experience Manager
 feature: Communities
 role: Developer
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '626'
+source-wordcount: '637'
 ht-degree: 1%
-
 ---
-
 # 初始沙箱應用程式 {#initial-sandbox-application}
 
 在本節中，您將建立下列專案：
@@ -29,12 +36,12 @@ ht-degree: 1%
 
 在本練習中，所有頁面都以一個簡單範本為基礎。
 
-1. 在CRXDE Lite的總管窗格中：
+1. 在CRXDE Lite瀏覽器窗格中：
 
    * 選取`/apps/an-scf-sandbox/templates`
    * **[!UICONTROL 建立]** > **[!UICONTROL 建立範本]**
 
-1. 在[建立範本]對話方塊中，輸入下列值，然後按一下[下一步] **&#x200B;**：
+1. 在[建立範本]對話方塊中，輸入下列值，然後按一下[下一步] ****：
 
    * 標籤： `playpage`
    * 標題： `An SCF Sandbox Play Template`
@@ -78,7 +85,7 @@ ht-degree: 1%
 
 1. 按一下「確定」並完成範本的建立後，請注意新`playpage`範本的「屬性」標籤值角落中顯示的紅色三角形。 這些紅色三角形表示尚未儲存的編輯。
 
-   按一下「儲存全部」**&#x200B;**，將新範本儲存至存放庫。
+   按一下「儲存全部」****，將新範本儲存至存放庫。
 
    ![verify-content-template](assets/verify-content-template.png)
 

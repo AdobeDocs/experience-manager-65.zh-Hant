@@ -10,7 +10,21 @@ exl-id: 89f55598-e749-42b8-8f2a-496f45face66
 feature: Security
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: b1210526-416b-4ef6-bcc0-1692e99f30e9
+    internal-label: Administration and security
+subfeature_v2:
+  - id: c35bc059-fd80-4a01-91a6-e48da3c76758
+    internal-label: Security practices
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '2553'
 ht-degree: 3%
@@ -74,7 +88,7 @@ ht-degree: 3%
 
 1. 確認已安裝最新程式碼：
 
-* [AEM平台更新](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=zh-Hant)
+* [AEM平台更新](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html)
 * [AEM Communities更新](/help/communities/deploy-communities.md#latestfeaturepack)
 
 ### &#x200B;1. Apache Sling 分配代理 - 同步代理工廠 {#apache-sling-distribution-agent-sync-agents-factory}
@@ -104,7 +118,7 @@ ht-degree: 3%
 
 在步驟3中使用授權使用者來設定Author上的Sling發佈。
 
-* 每個發佈執行個體上的&#x200B;**&#x200B;**
+* 每個發佈執行個體上的&#x200B;****
 
   * 以系統管理員許可權登入
   * 存取[安全性主控台](/help/sites-administering/security.md)
@@ -437,7 +451,7 @@ ht-degree: 3%
 
 * 作者
 
-  * *取消勾選*1&rbrace;Apache Sling散發代理程式 — 同步代理程式處理站[&#128279;](#apache-sling-distribution-agent-sync-agents-factory)的`Enabled`核取方塊
+  * *取消勾選*1}Apache Sling散發代理程式 — 同步代理程式處理站](#apache-sling-distribution-agent-sync-agents-factory)的`Enabled`核取方塊[
 
 工作完成時，若要重新啟用使用者同步：
 

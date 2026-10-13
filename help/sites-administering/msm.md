@@ -9,7 +9,21 @@ exl-id: 1e839845-fb5c-4200-8ec5-6ff744a96943
 solution: Experience Manager, Experience Manager Sites
 feature: Multi Site Manager
 role: Admin
-source-git-commit: eae057caed533ef16bb541b4ad41b8edd7aaa1c7
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: a642c50e-80eb-4fc1-a5d2-f3762d1f841d
+    internal-label: Administration
+subfeature_v2:
+  - id: e86b80f2-7cb0-4646-8fcd-51d3bf272fce
+    internal-label: Multi Site Manager
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '2681'
 ht-degree: 20%
@@ -317,7 +331,7 @@ MSM即時副本是特定網站內容的副本，其維持與原始來源的即�
 
 #### 巢狀 Live Copy {#nested-live-copies}
 
-當您（或程式）在現有即時副本[&#128279;](#live-copy-with-non-live-copy-pages)中建立頁面時，此新頁面也可以設定為不同Blueprint的即時副本。 這稱為巢狀即時副本，其中第二個（內部）即時副本的行為會受到第一個（外部）即時副本的影響，影響方式如下：
+當您（或程式）在現有即時副本](#live-copy-with-non-live-copy-pages)中建立[頁面時，此新頁面也可以設定為不同Blueprint的即時副本。 這稱為巢狀即時副本，其中第二個（內部）即時副本的行為會受到第一個（外部）即時副本的影響，影響方式如下：
 
 * 為頂層即時副本觸發的深層轉出可以繼續進入巢狀即時副本（例如，如果觸發器相符）。
 * 來源之間的任何連結會在即時副本中重寫。
@@ -395,7 +409,7 @@ MSM即時副本是特定網站內容的副本，其維持與原始來源的即�
 
 ### 推出衝突 {#rollout-conflicts}
 
-轉出可能會變得複雜，尤其是當作者同時編輯來源和即時副本中的內容時，因此瞭解AEM如何處理轉出[&#128279;](/help/sites-administering/msm-rollout-conflicts.md)期間可能發生的任何衝突會很有用。
+轉出可能會變得複雜，尤其是當作者同時編輯來源和即時副本中的內容時，因此瞭解AEM如何處理轉出](/help/sites-administering/msm-rollout-conflicts.md)期間可能發生的任何[衝突會很有用。
 
 ### 暫停和取消繼承與同步 {#suspending-and-cancelling-inheritance-and-synchronization}
 

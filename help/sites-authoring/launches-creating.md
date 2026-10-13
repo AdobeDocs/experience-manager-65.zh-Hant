@@ -10,13 +10,31 @@ exl-id: bc7897da-15f6-4de4-a9fd-9dd84e6c7eed
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Launches
 role: User,Admin,Developer
-source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+  - id: a642c50e-80eb-4fc1-a5d2-f3762d1f841d
+    internal-label: Administration
+subfeature_v2:
+  - id: e2cac356-c071-4141-ad6f-827893261a16
+    internal-label: Launches
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1096'
+source-wordcount: '1098'
 ht-degree: 13%
-
 ---
-
 # 建立啟動{#creating-launches}
 
 建立啟動項，以更新現有網頁的新版本，以供日後啟用。 建立啟動項時，您可以指定標題和來源頁面：
@@ -25,7 +43,7 @@ ht-degree: 13%
 * 預設情況下，啟動會包含來源頁面的子頁面。 您可以視需要使用來源頁面。
 * 根據預設，[即時副本](/help/sites-administering/msm.md)會在來源頁面變更時自動更新啟動頁面。 您可以指定建立靜態副本，以防止自動變更。
 
-(可選) 您可以指定 **啟動日期**  (和時間)，以定義啟動頁面要升級和啟動的時間。不過，「 **啟動日期** 」只會搭配「生產就緒 **」旗標運作(請** 參閱編輯啟動設定 [&#128279;](/help/sites-authoring/launches-editing.md#editing-a-launch-configuration));要讓動作實際自動發生，必須同時設定。
+(可選) 您可以指定 **啟動日期**  (和時間)，以定義啟動頁面要升級和啟動的時間。 不過，「 **啟動日期** 」只會搭配「生產就緒 **」旗標運作(請** 參閱編輯啟動設定 [](/help/sites-authoring/launches-editing.md#editing-a-launch-configuration));要讓動作實際自動發生，必須同時設定。
 
 ## 建立啟動項 {#creating-a-launch}
 
@@ -41,16 +59,16 @@ ht-degree: 13%
 
    * **啟動**：
 
-      1. 從工具列選取&#x200B;**建立啟動項**&#x200B;以開啟精靈。
+     1. 從工具列選取&#x200B;**建立啟動項**&#x200B;以開啟精靈。
 
    * **網站**：
 
-      1. 從工具列選取「**建立**」以開啟選取方塊。
-      1. 從這裡選取&#x200B;**建立啟動項**&#x200B;以開啟精靈。
+     1. 從工具列選取「**建立**」以開啟選取方塊。
+     1. 從這裡選取&#x200B;**建立啟動項**&#x200B;以開啟精靈。
 
    >[!NOTE]
    >
-   >在Sites **&#x200B;**&#x200B;Console中，您也可以使用選 [擇模式](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources) ，在選擇「建立」之前選擇 **頁面**。
+   >在Sites **** Console中，您也可以使用選 [擇模式](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources) ，在選擇「建立」之前選擇 **頁面**。
    >
    >這會使用選取的頁面作為初始來源頁面。
 
@@ -75,7 +93,7 @@ ht-degree: 13%
 
    * **包含子頁面**：
 
-      * 指定您是否要建立具有或不具有子頁面的啟動。  預設會包含此子頁面。
+     * 指定您是否要建立具有或不具有子頁面的啟動。  預設會包含此子頁面。
 
    繼續&#x200B;**下一步**。
 
@@ -84,7 +102,7 @@ ht-degree: 13%
 1. 在精靈的&#x200B;**屬性**&#x200B;步驟中，您可以指定：
 
    * **啟動項標題**：啟動項的名稱。 這個名稱應該對作者有意義。
-   * 具有現有內容的&#x200B;**&#x200B;**：使用原始內容來建立啟動。
+   * 具有現有內容的&#x200B;****：使用原始內容來建立啟動。
    * **使用新範本取代頁面**：如需詳細資訊，請參閱[使用新範本建立啟動項](#create-launch-with-new-template)。
    * **繼承來源頁面即時資料**：選取此選項可在來源頁面變更時自動更新啟動頁面的內容。 此選項會將啟動項設為[即時副本](/help/sites-administering/msm.md)以達成此目的。
 
@@ -99,7 +117,7 @@ ht-degree: 13%
    如果您傳回主控台（完成&#x200B;**完成**），則可從以下任一位置檢視（和存取）您的啟動項：
 
    * [**啟動**&#x200B;主控台](/help/sites-authoring/launches.md#the-launches-console)
-   * [**網站**&#x200B;主控台&#x200B;**中的**&#x200B;參考](/help/sites-authoring/launches.md#launches-in-references-sites-console)
+   * **網站**&#x200B;主控台](/help/sites-authoring/launches.md#launches-in-references-sites-console)中的&#x200B;[**參考**
 
 ### 使用新範本建立啟動項 {#create-launch-with-new-template}
 
@@ -137,7 +155,7 @@ ht-degree: 13%
 從&#x200B;**啟動**&#x200B;主控台建立巢狀啟動與建立任何其他形式的啟動基本相同，唯一例外是您必須導覽至啟動分支`/content/launches`：
 
 1. 在&#x200B;**啟動**&#x200B;主控台中，選取&#x200B;**建立**。
-1. 選取「 **新增頁面**」，然後在篩選條件中指定以導覽至啟 `/content/launches` 動分支。選擇所需的啟動並使用「選擇 **」確認**:
+1. 選取「 **新增頁面**」，然後在篩選條件中指定以導覽至啟 `/content/launches` 動分支。 選擇所需的啟動並使用「選擇 **」確認**:
 
    ![選取啟動項](assets/chlimage_1-230.png)
 
@@ -149,14 +167,14 @@ ht-degree: 13%
 
 若要從&#x200B;**Sites**&#x200B;主控台建立巢狀啟動，以現有啟動為基礎：
 
-1. 從[參考] （網站主控台）[存取](/help/sites-authoring/launches.md#launches-in-references-sites-console)啟動項，以顯示可用的動作。
-1. 選 **擇「建立啟動** 」以開啟嚮導(由於已選擇源，因此它將跳過 **&#x200B;**&#x200B;選擇源步驟)。
+1. 從[參考] （網站主控台）](/help/sites-authoring/launches.md#launches-in-references-sites-console)存取[啟動項，以顯示可用的動作。
+1. 選 **擇「建立啟動** 」以開啟嚮導(由於已選擇源，因此它將跳過 **** 選擇源步驟)。
 
 1. 輸入&#x200B;**啟動項標題**&#x200B;和任何其他必要的詳細資料（與一般啟動項一樣）。
 
 1. 使用&#x200B;**建立**&#x200B;完成程式並建立新的啟動項。 確認對話方塊會詢問您是否要立即開啟啟動項。
 
-   如果您選 **取「完成**」，則會返回至Sites **&#x200B;**&#x200B;**&#x200B;** Console的「參考」邊欄，如果您選取適當的頁面，則會顯示您的新啟動。
+   如果您選 **取「完成**」，則會返回至Sites ******** Console的「參考」邊欄，如果您選取適當的頁面，則會顯示您的新啟動。
 
 ### 複製啟動項 {#cloning-a-launch}
 
@@ -164,8 +182,8 @@ ht-degree: 13%
 
 * 點選/按一下縮圖，以選取啟動。
 * 工具列隨即顯示 — 選取「原地複製」。
-   * 複製將會建立並顯示在主控台中。
-   * **啟動項標題**&#x200B;會指出其為翻制。 您可以編輯[啟動設定](/help/sites-authoring/launches-editing.md#editing-a-launch-configuration) （**屬性**）來更新標題。
+  * 複製將會建立並顯示在主控台中。
+  * **啟動項標題**&#x200B;會指出其為翻制。 您可以編輯[啟動設定](/help/sites-authoring/launches-editing.md#editing-a-launch-configuration) （**屬性**）來更新標題。
 
 ## 刪除啟動項 {#deleting-a-launch}
 

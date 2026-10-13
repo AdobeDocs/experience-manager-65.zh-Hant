@@ -9,13 +9,24 @@ exl-id: 8bd6c88b-f36a-422f-ae6c-0d59f365079a
 solution: Experience Manager, Experience Manager Sites
 feature: Administering,Personalization
 role: Admin
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 5ef752af-d616-5b23-8312-06964e46b208
+    internal-label: Administering
+  - id: eb3ad9f8-54a2-45f3-abb1-d3976415a718
+    internal-label: Personalization
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1763'
 ht-degree: 4%
-
 ---
-
 # 使用 ContextHub 設定分段{#configuring-segmentation-with-contexthub}
 
 >[!NOTE]
@@ -51,7 +62,7 @@ AEM可讓您輕鬆個人化使用者體驗。 它也可讓您驗證區段定義�
 
 使用元件瀏覽器，您可以新增&#x200B;**AND**&#x200B;和&#x200B;**OR**&#x200B;容器來定義區段邏輯，然後新增其他元件來比較屬性和值，或參考指令碼和其他區段來定義選取條件（請參閱[建立新區段](#creating-a-new-segment)），以定義選取區段的確切案例。
 
-當整個陳述式評估為true時，表示區段已解析。 如果有多個適用區段，則也會使用&#x200B;**提升**&#x200B;係數。 如需[&#128279;](/help/sites-administering/campaign-segmentation.md#boost-factor)提升因子的詳細資訊，請參閱[建立新區段](#creating-a-new-segment)。
+當整個陳述式評估為true時，表示區段已解析。 如果有多個適用區段，則也會使用&#x200B;**提升**&#x200B;係數。 如需[提升因子的詳細資訊，請參閱[建立新區段](#creating-a-new-segment)。](/help/sites-administering/campaign-segmentation.md#boost-factor)
 
 >[!CAUTION]
 >
@@ -243,8 +254,8 @@ this.dependOn(ContextHub.SegmentEngine.Property('profile/age'));
 1. 為您的資料夾提供 **標題**&#x200B;和&#x200B;**名稱**。
    * **標題** 應該是描述性的。
    * **名稱**&#x200B;將成為存放庫中的節點名稱。
-      * 它會根據標題自動產生，並根據[AEM 命名慣例](/help/sites-developing/naming-conventions.md)進行調整
-      * 如有需要，可加以調整。
+     * 它會根據標題自動產生，並根據[AEM 命名慣例](/help/sites-developing/naming-conventions.md)進行調整
+     * 如有需要，可加以調整。
 
    ![建立資料夾](assets/contexthub-create-folder.png)
 
@@ -263,7 +274,7 @@ this.dependOn(ContextHub.SegmentEngine.Property('profile/age'));
 
    ![選取資料夾](assets/contexthub-select-folder.png)
 
-1. 按一下工具列中的「重新命名&#x200B;**&#x200B;**」以重新命名資料夾。
+1. 按一下工具列中的「重新命名&#x200B;****」以重新命名資料夾。
 
 1. 提供新的&#x200B;**資料夾標題**&#x200B;並按一下&#x200B;**儲存**。
 
@@ -322,7 +333,7 @@ this.dependOn(ContextHub.SegmentEngine.Property('profile/age'));
 
 這類測試也可以在內容頁面上執行，並與目標內容和相關的&#x200B;**活動**&#x200B;和&#x200B;**體驗**&#x200B;相結合。
 
-如果您已使用上述主要年齡群組區段範例設定活動和體驗，即可使用活動輕鬆測試區段。 如需有關設定活動的詳細資訊，請參閱有關編寫目標內容[&#128279;](/help/sites-authoring/content-targeting-touch.md)的檔案。
+如果您已使用上述主要年齡群組區段範例設定活動和體驗，即可使用活動輕鬆測試區段。 如需有關設定活動的詳細資訊，請參閱有關編寫目標內容](/help/sites-authoring/content-targeting-touch.md)的[檔案。
 
 1. 在您設定目標內容的頁面的編輯模式中，您可以看到已透過內容上的箭頭圖示目標內容。
 

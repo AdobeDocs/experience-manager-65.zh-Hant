@@ -9,13 +9,21 @@ exl-id: b3de1a4a-f334-44bd-addc-463433204c99
 solution: Experience Manager,Commerce
 feature: Commerce Integration Framework
 role: Admin, Developer
-source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '2335'
+source-wordcount: '2337'
 ht-degree: 0%
-
 ---
-
 # 使用SAP Commerce Cloud進行開發 {#developing-with-sap-commerce-cloud}
 
 >[!NOTE]
@@ -48,23 +56,23 @@ ht-degree: 0%
 
 * 電子商務引擎是支援`CommerceService`介面的OSGi服務
 
-   * 引擎可由`commerceProvider`服務屬性區分
+  * 引擎可由`commerceProvider`服務屬性區分
 
 * AEM支援`CommerceService`和`Product`的`Resource.adaptTo()`
 
-   * `adaptTo`實作會在資源的階層中尋找`cq:commerceProvider`屬性：
+  * `adaptTo`實作會在資源的階層中尋找`cq:commerceProvider`屬性：
 
-      * 如果找到，則會使用值來篩選商務服務查閱。
+    * 如果找到，則會使用值來篩選商務服務查閱。
 
-      * 如果找不到，則會使用排名最高的商務服務。
+    * 如果找不到，則會使用排名最高的商務服務。
 
-   * 已使用`cq:Commerce` mixin，以便將`cq:commerceProvider`新增到強型別資源。
+  * 已使用`cq:Commerce` mixin，以便將`cq:commerceProvider`新增到強型別資源。
 
 * `cq:commerceProvider`屬性也用來參考適當的商務工廠定義。
 
-   * 例如，值為`hybris`的`cq:commerceProvider`屬性與Hybris **(com.adobe.cq.commerce.hybris.impl.HybrisServiceFactory)的** Day CQ Commerce Factory的OSGi設定相關，其中引數`commerceProvider`也具有值`hybris`。
+  * 例如，值為`hybris`的`cq:commerceProvider`屬性與Hybris **(com.adobe.cq.commerce.hybris.impl.HybrisServiceFactory)的** Day CQ Commerce Factory的OSGi設定相關，其中引數`commerceProvider`也具有值`hybris`。
 
-   * 您可以在此設定其他屬性，例如&#x200B;**目錄版本** （在適當且可用時）。
+  * 您可以在此設定其他屬性，例如&#x200B;**目錄版本** （在適當且可用時）。
 
 請參閱下列範例：
 
@@ -116,9 +124,9 @@ ht-degree: 0%
 
 * 在OSGi設定管理員中：
 
-   * 停用預設回應剖析器服務的Hybris 5支援。
+  * 停用預設回應剖析器服務的Hybris 5支援。
 
-   * 請確定Hybris基本驗證處理常式服務的服務排名低於Hybris OAuth處理常式服務。
+  * 請確定Hybris基本驗證處理常式服務的服務排名低於Hybris OAuth處理常式服務。
 
 ### 工作階段處理 {#session-handling}
 
@@ -138,11 +146,11 @@ hybris會使用使用者工作階段來儲存資訊，例如客戶的購物車�
 
 * 此工作階段「擁有」**購物車**
 
-   * 執行新增/移除/等
+  * 執行新增/移除/等
 
-   * 在購物車上執行各種計算；
+  * 在購物車上執行各種計算；
 
-     `commerceSession.getProductPrice(Product product)`
+    `commerceSession.getProductPrice(Product product)`
 
 * 擁有&#x200B;**訂單**&#x200B;資料的&#x200B;*儲存位置*
 
@@ -167,9 +175,9 @@ hybris會使用使用者工作階段來儲存資訊，例如客戶的購物車�
 * 匯入工具(b)是用來在AEM中設定目錄的頁面樹狀結構。
 * Hybris中的目錄變更會透過摘要顯示給AEM，然後傳播給AEM (b)
 
-   * 有關目錄版本的新增/刪除/變更產品。
+  * 有關目錄版本的新增/刪除/變更產品。
 
-   * 產品已核准。
+  * 產品已核准。
 
 * hybris擴充功能提供輪詢匯入工具（「hybris」配置），可設定為以指定間隔（例如每24小時以秒指定間隔）將變更匯入AEM：
 
@@ -188,15 +196,15 @@ hybris會使用使用者工作階段來儲存資訊，例如客戶的購物車�
 
 * 在目錄版本之間同步產品時，需啟用或停用對應的AEM頁面(a、c)
 
-   * 若要將產品新增至&#x200B;**Online**&#x200B;目錄版本，必須啟用產品頁面。
+  * 若要將產品新增至&#x200B;**Online**&#x200B;目錄版本，必須啟用產品頁面。
 
-   * 移除產品需要停用。
+  * 移除產品需要停用。
 
 * 在AEM (c)中啟用頁面需要核取(b)，且只有在
 
-   * 產品在產品頁面的&#x200B;**線上**&#x200B;目錄版本中。
+  * 產品在產品頁面的&#x200B;**線上**&#x200B;目錄版本中。
 
-   * 參考的產品可用於其他頁面（例如行銷活動頁面）的&#x200B;**線上**&#x200B;目錄版本。
+  * 參考的產品可用於其他頁面（例如行銷活動頁面）的&#x200B;**線上**&#x200B;目錄版本。
 
 * 啟用的產品頁面必須存取產品資料的&#x200B;**線上**&#x200B;版本(d)。
 
@@ -210,7 +218,7 @@ hybris會使用使用者工作階段來儲存資訊，例如客戶的購物車�
 
 不過，並非所有屬性都是變數軸。 變化也可能會影響其他屬性；例如，價格可能取決於大小。 購物者無法選取這些屬性，因此不會視為變數軸。
 
-每個產品和/或變體都由資源表示，因此將1:1對應到存放庫節點。 必然結果是，特定產品和/或變體可由其路徑唯一識別。
+每個產品和/或變體由資源表示，因此將1:1對應到存放庫節點。 必然結果是，特定產品和/或變體可由其路徑唯一識別。
 
 產品/變體資源並非總是包含實際產品資料。 它可能是其他系統上所保留資料的表示法（例如hybris）。 例如，產品說明和定價不會儲存在AEM中，而是從電子商務引擎即時擷取。
 
@@ -233,7 +241,7 @@ hybris會使用使用者工作階段來儲存資訊，例如客戶的購物車�
 
 一般而言，產品資料位於`/etc`之下，而產品參考位於`/content`之下。
 
-產品變數和產品資料節點之間必須有1:1對應。
+產品變數和產品資料節點之間必須是1:1對應。
 
 產品參考也必須針對呈現的每個變數有一個節點，但不需要呈現所有變數。 例如，如果產品有S、M、L等變數，則產品資料可能是：
 
@@ -333,31 +341,31 @@ public class AxisFilter implements VariantFilter {
 
 * **一般儲存機制**
 
-   * 產品節點為`nt:unstructured`。
+  * 產品節點為`nt:unstructured`。
 
-   * 產品節點可以是：
+  * 產品節點可以是：
 
-      * 具有儲存在其他位置的產品資料的參考：
+    * 具有儲存在其他位置的產品資料的參考：
 
-         * 產品參考包含`productData`屬性，指向產品資料（通常在`/etc/commerce/products`下）。
+      * 產品參考包含`productData`屬性，指向產品資料（通常在`/etc/commerce/products`下）。
 
-         * 產品資料為階層式；產品屬性繼承自產品資料節點的祖先。
+      * 產品資料為階層式；產品屬性繼承自產品資料節點的祖先。
 
-         * 產品參考也可以包含本機屬性，這些屬性會覆寫產品資料中指定的屬性。
+      * 產品參考也可以包含本機屬性，這些屬性會覆寫產品資料中指定的屬性。
 
-      * 產品本身：
+    * 產品本身：
 
-         * 沒有`productData`屬性。
+      * 沒有`productData`屬性。
 
-         * 在本機持有所有屬性（且不包含productData屬性）的產品節點，會直接從自己的祖先繼承產品屬性。
+      * 在本機持有所有屬性（且不包含productData屬性）的產品節點，會直接從自己的祖先繼承產品屬性。
 
 * **AEM-generic產品結構**
 
-   * 每個變體都必須有自己的葉節點。
+  * 每個變體都必須有自己的葉節點。
 
-   * 產品介面同時代表產品與變體，但相關的存放庫節點會針對具體專案而有所不同。
+  * 產品介面同時代表產品與變體，但相關的存放庫節點會針對具體專案而有所不同。
 
-   * product節點會說明產品屬性和變體軸。
+  * product節點會說明產品屬性和變體軸。
 
 #### 範例 {#example-1}
 
@@ -408,35 +416,35 @@ public class AxisFilter implements VariantFilter {
 
 * 購物車屬於`CommerceSession:`
 
-   * `CommerceSession`執行新增或移除等動作。
-   * `CommerceSession`也會在購物車上執行各種計算。 &quot;
+  * `CommerceSession`執行新增或移除等動作。
+  * `CommerceSession`也會在購物車上執行各種計算。 &quot;
 
 * 雖然不直接與購物車相關，但`CommerceSession`也必須提供目錄定價資訊（因為它擁有定價）
 
-   * 訂價可能有數個修正因子：
+  * 訂價可能有數個修正因子：
 
-      * 數量折扣。
-      * 不同的貨幣。
-      * 應付VAT且免付VAT。
+    * 數量折扣。
+    * 不同的貨幣。
+    * 應付VAT且免付VAT。
 
-   * 修飾詞使用以下介面為開放式：
+  * 修飾詞使用以下介面為開放式：
 
-      * `int CommerceSession.getQuantityBreakpoints(Product product)`
-      * `String CommerceSession.getProductPrice(Product product)`
+    * `int CommerceSession.getQuantityBreakpoints(Product product)`
+    * `String CommerceSession.getProductPrice(Product product)`
 
 **儲存空間**
 
 * 儲存空間
 
-   * 在hybris案例中，hybris伺服器擁有購物車。
-   * 在AEM一般案例中，購物車會儲存在[ClientContext](/help/sites-administering/client-context.md)中。
+  * 在hybris案例中，hybris伺服器擁有購物車。
+  * 在AEM一般案例中，購物車會儲存在[ClientContext](/help/sites-administering/client-context.md)中。
 
 **個人化**
 
 * 一律透過[ClientContext](/help/sites-administering/client-context.md)推動個人化。
 * 在所有情況下都會建立購物車的ClientContext `/version/`：
 
-   * 應該使用`CommerceSession.addCartEntry()`方法來新增產品。
+  * 應該使用`CommerceSession.addCartEntry()`方法來新增產品。
 
 * 以下說明ClientContext購物車中的購物車資訊範例：
 
@@ -491,8 +499,8 @@ public class AxisFilter implements VariantFilter {
 * 價格可能會以訂單的專案和詳細資訊為依據，例如重量和/或交貨地址。
 * `CommerceSession`具有所有相依性的存取權，因此可將其視為類似產品定價的方式：
 
-   * `CommerceSession`擁有送貨定價。
-   * 可使用`updateOrder(Map<String, Object> delta)`擷取/更新傳遞詳細資料
+  * `CommerceSession`擁有送貨定價。
+  * 可使用`updateOrder(Map<String, Object> delta)`擷取/更新傳遞詳細資料
 
 >[!NOTE]
 >
@@ -567,23 +575,23 @@ AEM前端可放置在現有Hybris實作的前面。 您也可以將hybris引擎�
 
 * AEM > hybris
 
-   * 登入Hybris時，如果AEM使用者不存在：
+  * 登入Hybris時，如果AEM使用者不存在：
 
-      * 使用密碼編譯隨機密碼建立hybris使用者
-      * 將hybris使用者名稱儲存在AEM使用者的使用者目錄中
+    * 使用密碼編譯隨機密碼建立hybris使用者
+    * 將hybris使用者名稱儲存在AEM使用者的使用者目錄中
 
-   * 檢視： `com.adobe.cq.commerce.hybris.impl.HybrisSessionImpl#login()`
+  * 檢視： `com.adobe.cq.commerce.hybris.impl.HybrisSessionImpl#login()`
 
 * hybris > AEM
 
-   * 登入AEM時，如果系統辨識出使用者：
+  * 登入AEM時，如果系統辨識出使用者：
 
-      * 嘗試使用提供的使用者名稱/密碼登入hybris
-      * 如果成功，請在AEM中以相同的密碼建立使用者（AEM特定的salt會導致AEM特定的雜湊）
+    * 嘗試使用提供的使用者名稱/密碼登入hybris
+    * 如果成功，請在AEM中以相同的密碼建立使用者（AEM特定的salt會導致AEM特定的雜湊）
 
-   * 上述演演算法是在Sling `AuthenticationInfoPostProcessor`中實作
+  * 上述演演算法是在Sling `AuthenticationInfoPostProcessor`中實作
 
-      * 檢視： `com.adobe.cq.commerce.hybris.impl.user.LazyUserImporter.java`
+    * 檢視： `com.adobe.cq.commerce.hybris.impl.user.LazyUserImporter.java`
 
 ### 自訂匯入程式 {#customizing-the-import-process}
 

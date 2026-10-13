@@ -10,13 +10,20 @@ exl-id: 4650ac36-5506-4efc-be35-fac9e5a58f3d
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1719'
 ht-degree: 0%
-
 ---
-
 # 部落格功能 {#blog-feature}
 
 ## 簡介 {#introduction}
@@ -250,11 +257,11 @@ AEM Communities的部落格功能已從製作活動轉換為在發佈環境中�
 
   用來顯示部落格專案封存的格式。 此格式會遵循Java™慣例使用預留位置。
 
-   * yyyy ：全年，如「2015」
-   * yy ：短年，如「15」
-   * MMMMM ：整月，例如六月
-   * MMM ：短月，如Jun
-   * MM ：月份數字，如06
+  * yyyy ：全年，如「2015」
+  * yy ：短年，如「15」
+  * MMMMM ：整月，例如六月
+  * MMM ：短月，如Jun
+  * MM ：月份數字，如06
 
   預設值為&quot;yyyy MMMMM&quot;，會顯示&quot;2015 June&quot;
 
@@ -262,15 +269,15 @@ AEM Communities的部落格功能已從製作活動轉換為在發佈環境中�
 
   要顯示在側欄中的標題和部落格專案型別。 選項包括
 
-   * 作者
-   * 類別
-   * 封存
+  * 作者
+  * 類別
+  * 封存
 
 * **部落格元件路徑**
 
   *（選擇性）*&#x200B;列出部落格的部落格資源位置。 如果保留為空白，它會使用出現在相同頁面上的resourceType `social/journal/components/hbs/journal`元件。
 
-   * 例如 `/content/sites/engage/en/blog/jcr:content/content/primary/blog`
+  * 例如 `/content/sites/engage/en/blog/jcr:content/content/primary/blog`
 
 * **建議限制**
 

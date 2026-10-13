@@ -9,7 +9,18 @@ content-type: reference
 docset: aem65
 exl-id: e8929d7c-9920-4c02-95a9-6f7f7a365203
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: c705667e60ccfbc4612ef3212dbe549e6bea66a9
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 5ef752af-d616-5b23-8312-06964e46b208
+    internal-label: Administering
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '3576'
 ht-degree: 2%
@@ -117,7 +128,7 @@ ht-degree: 2%
 
 您可以編輯各種封裝設定來定義資訊，例如封裝說明、相依性和提供者詳細資訊。
 
-**封裝設定**&#x200B;對話方塊可在[建立](#creating-a-new-package)或[編輯](#viewing-and-editing-package-information)封裝時，透過&#x200B;**編輯**&#x200B;按鈕使用。 完成任何變更後，按一下[儲存]。**&#x200B;**
+**封裝設定**&#x200B;對話方塊可在[建立](#creating-a-new-package)或[編輯](#viewing-and-editing-package-information)封裝時，透過&#x200B;**編輯**&#x200B;按鈕使用。 完成任何變更後，按一下[儲存]。****
 
 ![編輯封裝對話方塊，一般設定](assets/general-settings.png)
 
@@ -310,7 +321,7 @@ Official Service Pack
 
    ![封裝內容](assets/package-contents.png)
 
-1. 若要執行安裝練習，請按一下[其他] **&#x200B;**&#x200B;> [測試安裝] **，並在活動記錄檔中報告封裝管理程式所取得的結果，如同已執行安裝一樣。**
+1. 若要執行安裝練習，請按一下[其他] **** > [測試安裝] **，並在活動記錄檔中報告封裝管理程式所取得的結果，如同已執行安裝一樣。**
 
    ![測試安裝](assets/test-install.png)
 
@@ -343,7 +354,7 @@ Package Share是一項集中式公用服務，可分發內容套件。 封裝共
    * **封裝** — 使用&#x200B;**瀏覽……**&#x200B;按鈕，從您的本機檔案系統選取所需的封裝。
    * **強制上傳** — 如果已有同名的套件，此選項會強制上傳並覆寫現有的套件。
 
-1. 按一下[確定]&#x200B;**&#x200B;**&#x200B;即可上傳選取的封裝，並相應地更新封裝清單。
+1. 按一下[確定]****&#x200B;即可上傳選取的封裝，並相應地更新封裝清單。
 
 封裝內容現在存在於AEM上，但若要讓內容可供使用，請確定[安裝封裝](#installing-packages)。
 
@@ -582,7 +593,7 @@ AEM套件可用來在AEM環境中建立和共用內容。
 
 [Software Distribution](https://downloads.experiencecloud.adobe.com)是一項集中式服務，旨在簡化AEM套件的搜尋和下載。
 
-如需詳細資訊，請參閱[軟體發佈檔案。](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html?lang=zh-Hant)
+如需詳細資訊，請參閱[軟體發佈檔案。](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html)
 
 >[!NOTE]
 >

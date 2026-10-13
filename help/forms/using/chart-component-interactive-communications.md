@@ -9,13 +9,27 @@ feature: Interactive Communication
 exl-id: 0f877a15-a17f-427f-8d89-62ada4d20918
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: aa28c6c8-3ede-445b-a351-eeb0c9f9aec4
+    internal-label: Interactive Communication
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '2678'
 ht-degree: 1%
-
 ---
-
 # 在互動式通訊中使用圖表{#using-charts-in-interactive-communications}
 
 圖表或圖表是資料的視覺化表示法。 它會將大量資訊壓縮為容易理解的視覺格式，讓互動式通訊的收件者更能將複雜資料視覺化、解讀及分析。
@@ -45,7 +59,7 @@ ht-degree: 1%
    Web Channel中折線圖的基本屬性
 
 1. 根據通道型別設定[圖表屬性](../../forms/using/chart-component-interactive-communications.md#configure-chart-properties)。
-1. （僅列印通道）在&#x200B;**[!UICONTROL 代理程式設定]**&#x200B;中，指定代理程式是否必須使用此圖表。 如果未選取代理程式使用此圖表&#x200B;**選項，代理程式可以在Agent UI的**&#x200B;[!UICONTROL &#x200B;內容&#x200B;]&#x200B;**標籤中選取圖表的眼睛圖示，以顯示或隱藏圖表。**
+1. （僅列印通道）在&#x200B;**[!UICONTROL 代理程式設定]**&#x200B;中，指定代理程式是否必須使用此圖表。 如果未選取代理程式使用此圖表&#x200B;]**選項，代理程式可以在Agent UI的**[!UICONTROL &#x200B;內容&#x200B;]**標籤中選取圖表的眼睛圖示，以顯示或隱藏圖表。**[!UICONTROL 
 
    ![chart_agentproperties](assets/chart_agentproperties.png)
 

@@ -9,20 +9,29 @@ exl-id: 21041b55-240c-487d-9d79-c54c877f4e1e
 solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 5ef752af-d616-5b23-8312-06964e46b208
+    internal-label: Administering
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '352'
+source-wordcount: '358'
 ht-degree: 0%
-
 ---
-
 # 命令列啟動和停止{#command-line-start-and-stop}
 
 ## 從命令列啟動Adobe Experience Manager {#starting-adobe-experience-manager-from-the-command-line}
 
 `start`指令碼可在&#x200B;*&lt;cq-installation>/bin*&#x200B;目錄下使用。 同時提供UNIX®和Windows版本。 指令碼會啟動安裝在&#x200B;*&lt;cq-installation>*&#x200B;目錄中的執行個體。
 
-這兩個版本支援可用於啟動和調整Adobe Experience Manager (AEM)執行個體的環境變數清單。
+這兩個版本支援可用來啟動和調整Adobe Experience Manager (AEM)執行個體的環境變數清單。
 
 <table>
  <tbody>
@@ -67,7 +76,7 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
->某些執行模式（包括製作和發佈）必須在首次啟動AEM之前設定，且之後不能變更。 在設定用於生產環境的AEM執行個體之前，請參閱[執行模式檔案](/help/sites-deploying/configure-runmodes.md)以取得詳細資料。
+>某些執行模式（包括製作和發佈）必須在首次啟動AEM之前設定，且之後不能變更。 在設定用於生產環境的AEM執行個體之前，請參閱[執行模式檔案](/help/sites-deploying/configure-runmodes.md)以取得詳細資訊。
 
 ### Windows平台start.bat指令碼範例 {#windows-platform-start-bat-script-example}
 
@@ -83,18 +92,18 @@ CQ_PORT=1234 ./start
 
 >[!NOTE]
 >
->啟動指令碼會啟動安裝在&#x200B;*&lt;cq-installation>/app*&#x200B;資料夾下的AEM Quickstart。
+>啟動指令碼會啟動安裝在&#x200B;*&lt;cq-installation>/app*&#x200B;資料夾下的AEM快速入門。
 
 ## 停止Adobe Experience Manager {#stopping-adobe-experience-manager}
 
-若要停止AEM，請執行下列任一項動作：
+若要停止AEM，請執行下列任一項作業：
 
 * 根據您使用的平台：
 
-   * 如果您從指令碼或命令列啟動AEM，請按&#x200B;**Ctrl+C**&#x200B;關閉伺服器。
-   * 如果您已在UNIX®上使用啟動指令碼，則必須使用停止指令碼來停止AEM。
+  * 如果您是從指令碼或命令列啟動AEM，請按&#x200B;**Ctrl+C**&#x200B;關閉伺服器。
+  * 如果您在UNIX®上使用過啟動指令碼，則必須使用停止指令碼來停止AEM。
 
-* 如果您是透過連按兩下jar檔案來啟動AEM，請按一下啟動視窗上的&#x200B;**開啟**&#x200B;按鈕（按鈕會變成&#x200B;**關閉**）來關閉伺服器。
+* 如果您是透過按兩下jar檔案來啟動AEM，請按一下啟動視窗上的&#x200B;**開啟**&#x200B;按鈕（按鈕會變成&#x200B;**關閉**）以關閉伺服器。
 
   ![chlimage_1-63](assets/chlimage_1-63.png)
 

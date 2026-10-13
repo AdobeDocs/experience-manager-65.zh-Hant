@@ -9,16 +9,30 @@ exl-id: 27a2e81c-47b0-4de8-95bd-7cb34b9450da
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
-source-wordcount: '541'
+source-wordcount: '546'
 ht-degree: 0%
-
 ---
-
 # 檢視系統資訊 {#view-system-information}
 
-「系統」標籤會顯示資源監檢視表和執行AEM表單之伺服器的相關資訊。 若要存取此資訊，請在管理主控台中，按一下頁面右上角的「健康情況監視」 。 如果您在叢集環境中執行AEM表單，顯示的資訊會針對從「伺服器」清單中選取的節點。
+「系統」標籤會顯示資源監檢視表和執行AEM表單之伺服器的相關資訊。 若要存取此資訊，請在管理主控台中，按一下頁面右上角的「健康情況監視」 。 如果您在叢集環境中執行AEM表單，顯示的資訊會針對從伺服器清單中選取的節點。
 
 若要將目前系統資訊儲存為屬性檔案，請按一下「儲存」。
 

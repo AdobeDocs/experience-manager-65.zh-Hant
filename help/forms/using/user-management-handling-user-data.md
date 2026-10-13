@@ -7,13 +7,27 @@ role: Admin,User
 exl-id: eeeab5d1-073a-4e13-a781-391dfe70bb37
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
 source-wordcount: '913'
 ht-degree: 0%
-
 ---
-
 # Forms使用者管理 |處理使用者資料 {#forms-user-management-handling-user-data}
 
 使用者管理是AEM Forms JEE元件，可建立、管理和授權AEM Forms使用者存取AEM Forms。 使用者管理使用網域作為取得使用者資訊的目錄。 支援的網域型別如下：
@@ -183,4 +197,4 @@ Select * from EdcPrincipalEntity where id='<principal_id>';
 1. 使用AEM系統管理員認證移至`https://'[server]:[port]'/lc/useradmin`。
 1. 搜尋使用者並連按兩下使用者名稱以開啟使用者屬性。 複製`Path`屬性。
 1. 前往`https://'[server]:[port]'/lc/crx/de/index.jsp`的AEM CRXDE Lite並導覽或搜尋使用者路徑。
-1. 刪除路徑，然後按一下[儲存全部] **&#x200B;**，從AEM存放庫中永久刪除使用者。
+1. 刪除路徑，然後按一下[儲存全部] ****，從AEM存放庫中永久刪除使用者。

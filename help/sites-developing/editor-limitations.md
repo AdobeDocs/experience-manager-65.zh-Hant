@@ -9,13 +9,22 @@ exl-id: fd64f5dc-dfff-466b-8cdd-3c24ea1a15c8
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '312'
 ht-degree: 10%
-
 ---
-
 # 編輯器限制{#editor-limitations}
 
 觸控式UI中的編輯器會使用覆蓋來與受限於iframe中的內容互動。 這個互動會對編輯器的使用以及開發人員造成一些限制。 本頁面會概述這些限制，並儘可能提供解決方案或因應措施。

@@ -1,5 +1,5 @@
 ---
-title: 將規則編輯器存取權授予給所選的使用者群組
+title: 將規則編輯器存取權授予所選的使用者群組
 description: 將受限制的存取權授與規則編輯器，以選取使用者群組。
 content-type: reference
 topic-tags: adaptive_forms, develop
@@ -9,16 +9,32 @@ feature: Adaptive Forms,Foundation Components
 exl-id: a1a2b277-3133-404b-a7fc-337cedddb12c
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 7da902b6-fe94-5180-8e7c-f6d1e38d01d5
+    internal-label: Foundation Components
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '373'
-ht-degree: 15%
-
+source-wordcount: '386'
+ht-degree: 17%
 ---
+# 將規則編輯器存取權授予所選的使用者群組{#grant-rule-editor-access-to-select-user-groups}
 
-# 將規則編輯器存取權授予給所選的使用者群組{#grant-rule-editor-access-to-select-user-groups}
-
-<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hant)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。本文介紹使用基礎元件製作最適化Forms的舊方法。</span>
+<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。 這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。 本文介紹使用基礎元件製作最適化Forms的舊方法。</span>
 
 ## 概觀 {#overview}
 
@@ -33,7 +49,7 @@ AEM Forms可讓您根據使用者的角色或職能，限制使用者的規則�
 
    ![1-2](assets/1-2.png)
 
-1. 在Web主控台視窗中，找到並按一下&#x200B;**[!UICONTROL 最適化表單和互動式通訊Web通道設定]**。 **[!UICONTROL 最適化表單和互動式通訊Web Channel設定]**&#x200B;對話方塊就會顯示。 不要變更任何值，然後按一下[儲存]。**&#x200B;**
+1. 在Web主控台視窗中，找到並按一下&#x200B;**[!UICONTROL 最適化表單和互動式通訊Web通道設定]**。 **[!UICONTROL 最適化表單和互動式通訊Web Channel設定]**&#x200B;對話方塊就會顯示。 不要變更任何值，然後按一下[儲存]。****
 
    它會在CRX存放庫中建立檔案/apps/system/config/com.adobe.aemds.guide.service.impl.AdaptiveFormConfigurationServiceImpl.config 。
 

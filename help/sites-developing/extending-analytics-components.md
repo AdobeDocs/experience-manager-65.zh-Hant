@@ -9,13 +9,22 @@ exl-id: e6c1258c-81d5-48e4-bdf1-90d7cc13a22d
 solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Developer
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 243139ec-8e41-5296-a287-31343ab1bc0f
+    internal-label: Integration
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1277'
+source-wordcount: '1279'
 ht-degree: 0%
-
 ---
-
 # 將Adobe Analytics追蹤新增至元件{#adding-adobe-analytics-tracking-to-components}
 
 ## 在頁面元件中包含Adobe Analytics模組 {#including-the-adobe-analytics-module-in-a-page-component}
@@ -441,6 +450,6 @@ Adobe Analytics整合模組使用AEM元件產生的`product`值來建構`s.produ
 
 #### 限制追蹤呼叫的大小 {#limiting-the-size-of-tracking-calls}
 
-一般而言，網頁瀏覽器會限制GET請求的大小。 由於CQ產品和SKU值是存放庫路徑，因此包含多個值的產品陣列可能會超過請求大小限制。 因此，您的元件應該限制每個`CQ_Analytics.record function`之`product`陣列中的專案數。 如果必須追蹤的專案數量可能超過限制，請建立多個函式。
+一般而言，網頁瀏覽器會限制GET要求的大小。 由於CQ產品和SKU值是存放庫路徑，因此包含多個值的產品陣列可能會超過請求大小限制。 因此，您的元件應該限制每個`CQ_Analytics.record function`之`product`陣列中的專案數。 如果必須追蹤的專案數量可能超過限制，請建立多個函式。
 
 例如，電子商務`submitorder`元件將呼叫中`product`專案的數量限製為4。 當購物車包含四個以上的產品時，它會產生多個`CQ_Analytics.record`功能。

@@ -9,13 +9,24 @@ exl-id: 3a550a33-b54b-4217-b9a6-b5a7971276ee
 solution: Experience Manager, Experience Manager Sites
 feature: Administering,Personalization
 role: Admin
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 5ef752af-d616-5b23-8312-06964e46b208
+    internal-label: Administering
+  - id: eb3ad9f8-54a2-45f3-abb1-d3976415a718
+    internal-label: Personalization
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1710'
 ht-degree: 2%
-
 ---
-
 # 個人化 {#personalization}
 
 ## 什麼是Personalization？ {#what-is-personalization}
@@ -172,7 +183,7 @@ AEM提供各種元件供個人化使用。 有些專案可讓使用者登入並�
 
 部落格、論壇和行事曆等社群功能會建立社群內容，通常稱為使用者產生的內容(UGC)。 在包含多個AEM執行個體（[發佈陣列](/help/communities/topologies.md)）的發佈環境中輸入UGC時，一個主要問題是如何同步所有執行個體中的UGC。
 
-透過[AEM Communities 6.1](/help/communities/overview.md)擴充功能，使用UGC[&#128279;](/help/communities/working-with-srp.md)的公用存放區即可解決此問題。 關於個人化，Communities包含[社交登入](/help/communities/social-login.md) — 提供網站訪客使用Facebook和Twitter登入的選項。
+透過[AEM Communities 6.1](/help/communities/overview.md)擴充功能，使用UGC](/help/communities/working-with-srp.md)的[公用存放區即可解決此問題。 關於個人化，Communities包含[社交登入](/help/communities/social-login.md) — 提供網站訪客使用Facebook和Twitter登入的選項。
 
 如果沒有Communities擴充功能，可探索多種方法來解決UGC一致性問題，包括：
 

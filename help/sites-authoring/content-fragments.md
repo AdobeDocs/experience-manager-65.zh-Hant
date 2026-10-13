@@ -10,13 +10,31 @@ exl-id: d5dad844-80ca-4ace-a082-38d892d9ffe2
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Content Fragments
 role: User,Admin,Developer
-source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+  - id: a642c50e-80eb-4fc1-a5d2-f3762d1f841d
+    internal-label: Administration
+subfeature_v2:
+  - id: e9db7c79-8f65-4281-a439-c9049296d903
+    internal-label: Content Fragments
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1158'
 ht-degree: 6%
-
 ---
-
 # 使用內容片段編寫頁面{#page-authoring-with-content-fragments}
 
 Adobe Experience Manager(AEM)內容片段會建 [立並管理為不受頁面影響的資產](/help/assets/content-fragments/content-fragments.md)。
@@ -42,27 +60,27 @@ Adobe Experience Manager(AEM)內容片段會建 [立並管理為不受頁面影�
 
 * **行銷和行銷活動策略**
 
-   * 透過集中管理的內容片段稽核內容。
+  * 透過集中管理的內容片段稽核內容。
 
 * **Creative Pro**
 
-   * 透過與內容片段相關聯的集合追蹤創意資產。
+  * 透過與內容片段相關聯的集合追蹤創意資產。
 
 * **複製寫入者**
 
-   * 在AEM內容片段編輯器中寫入。
-   * 可以建立內容變數。
-   * 可以關聯相關內容與內容片段。
-   * 可以使用版本設定/工作流程。
-   * 可共用內容片段。
-   * 可集中管理翻譯。
+  * 在AEM內容片段編輯器中寫入。
+  * 可以建立內容變數。
+  * 可以關聯相關內容與內容片段。
+  * 可以使用版本設定/工作流程。
+  * 可共用內容片段。
+  * 可集中管理翻譯。
 
 * **製作者和歷程管理員**
 
-   * 從預先定義的片段和AEM中編寫的變數中選取。
-   * 當復本作者和創意人員以集中管理的片段和資產進行更新時，可依賴片段和相關內容始終保持最新。
-   * 可以依賴因關聯性而管理的相關媒體內容。
-   * 可以立即建立隨選內容變數，同時仍然確保這些變數在片段中受到集中管理。
+  * 從預先定義的片段和AEM中編寫的變數中選取。
+  * 當復本作者和創意人員以集中管理的片段和資產進行更新時，可依賴片段和相關內容始終保持最新。
+  * 可以依賴因關聯性而管理的相關媒體內容。
+  * 可以立即建立隨選內容變數，同時仍然確保這些變數在片段中受到集中管理。
 
 ## 新增內容片段至您的頁面 {#adding-a-content-fragment-to-your-page}
 
@@ -107,14 +125,14 @@ Adobe Experience Manager(AEM)內容片段會建 [立並管理為不受頁面影�
 
 * **顯示模式**：
 
-   * **單一文字元素**
+  * **單一文字元素**
 
-   * **多個元素**
+  * **多個元素**
 
 * **元素**
 
-   * 預設&#x200B;**Main**&#x200B;一律可用。
-   * 如果片段是以適當的範本建立的，則此選項可供選擇。
+  * 預設&#x200B;**Main**&#x200B;一律可用。
+  * 如果片段是以適當的範本建立的，則此選項可供選擇。
 
   >[!NOTE]
   >
@@ -122,15 +140,15 @@ Adobe Experience Manager(AEM)內容片段會建 [立並管理為不受頁面影�
 
 * **變異**
 
-   * 預設&#x200B;**主版**&#x200B;始終可用。
-   * 如果變數是為片段而建立，則可供選取。
+  * 預設&#x200B;**主版**&#x200B;始終可用。
+  * 如果變數是為片段而建立，則可供選取。
 
 * **段落**：指定要包含的段落範圍：
 
-   * **全部**
-   * **範圍**：例如，`1`，`3-5`，`9-*`
+  * **全部**
+  * **範圍**：例如，`1`，`3-5`，`9-*`
 
-      * **將標題處理為它們自己的段落**
+    * **將標題處理為它們自己的段落**
 
 * **將標題處理為它們自己的段落**
 
@@ -180,7 +198,7 @@ Adobe Experience Manager(AEM)內容片段會建 [立並管理為不受頁面影�
 
 ### 使用關聯內容 {#using-associated-content}
 
-如果您有[&#128279;](/help/assets/content-fragments/content-fragments-assoc-content.md)與[內容片段](/help/assets/content-fragments/content-fragments.md)相關聯的內容，則可在側面板（將片段放在內容頁面後）取得這些資產。 關聯內容實際上是中間內容的特 [殊內容來源](#adding-in-between-content)。
+如果您有[與[內容片段](/help/assets/content-fragments/content-fragments.md)相關聯的內容](/help/assets/content-fragments/content-fragments-assoc-content.md)，則可在側面板（將片段放在內容頁面後）取得這些資產。 關聯內容實際上是中間內容的特 [殊內容來源](#adding-in-between-content)。
 
 >[!NOTE]
 >

@@ -6,22 +6,31 @@ feature: Upgrading
 exl-id: aef6ef00-993c-4252-b0ad-ddc4917beaf7
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 835ee49e-9248-5578-a60a-15c097807178
+    internal-label: Upgrading
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1214'
+source-wordcount: '1265'
 ht-degree: 0%
-
 ---
-
 # 執行就地升級{#performing-an-in-place-upgrade}
 
 >[!NOTE]
 >
->本頁面概述AEM 6.5的升級程式。如果安裝已部署到應用程式伺服器，請參閱[應用程式伺服器安裝的升級步驟](/help/sites-deploying/app-server-upgrade.md)。
+>本頁面概述AEM 6.5的升級程式。 如果安裝已部署到應用程式伺服器，請參閱[應用程式伺服器安裝的升級步驟](/help/sites-deploying/app-server-upgrade.md)。
 
 ## 升級前步驟 {#pre-upgrade-steps}
 
-在執行升級之前，必須完成數個步驟。 如需詳細資訊，請參閱[升級程式碼和自訂](/help/sites-deploying/upgrading-code-and-customizations.md)和[升級前維護工作](/help/sites-deploying/pre-upgrade-maintenance-tasks.md)。 此外，請確認您的系統符合新版AEM的需求。 瞭解模式偵測器如何協助您估計升級作業的複雜性，並參閱[規劃升級](/help/sites-deploying/upgrade-planning.md)的升級範圍和需求一節，以取得詳細資訊。
+在執行升級之前，必須完成數個步驟。 如需詳細資訊，請參閱[升級程式碼和自訂](/help/sites-deploying/upgrading-code-and-customizations.md)和[升級前維護工作](/help/sites-deploying/pre-upgrade-maintenance-tasks.md)。 此外，請確定您的系統符合新版AEM的需求。 瞭解模式偵測器如何協助您估計升級作業的複雜性，並參閱[規劃升級](/help/sites-deploying/upgrade-planning.md)的升級範圍和需求一節，以取得詳細資訊。
 
 <!--Finally, the downtime during the upgrade can be significally reduced by indexing the repository **before** performing the upgrade. For more information, see [Using Offline Reindexing To Reduce Downtime During an Upgrade](/help/sites-deploying/upgrade-offline-reindexing.md)-->
 
@@ -29,7 +38,7 @@ ht-degree: 0%
 
 * **最低必要的Java版本：**&#x200B;移轉工具只適用於Java 7及更高版本。 請注意，AEM 6.3及更高版本僅支援Oracle的JRE 8和IBM的JRE 7及8。
 
-* **已升級的執行個體：**&#x200B;如果您要從5.6 **之前的**&#x200B;版本升級，請依照升級檔案6.0版本中所述的程式，確定您已執行就地升級到AEM 6.0。
+* **升級的執行個體：**&#x200B;如果您要從5.6 **之前的**&#x200B;版本升級，請務必依照升級檔案6.0版本中說明的程式，執行就地升級至AEM 6.0。
 
 ## 準備AEM Quickstart jar檔案 {#prep-quickstart-file}
 
@@ -45,7 +54,7 @@ ht-degree: 0%
 
 ## 內容存放庫移轉 {#content-repository-migration}
 
-如果您從AEM 6.3升級，則不需要進行此移轉。對於6.3之前的版本，Adobe提供了一個工具，可用來將存放庫移轉至AEM 6.3中存在的新版Oak Segment Tar。這是快速入門套件的一部分，且是任何將使用TarMK的升級的必要專案。 升級使用MongoMK的環境不需要移轉存放庫。 如需新的區段Tar格式優點詳細資訊，請參閱[移轉至Oak區段Tar常見問題集](/help/sites-deploying/revision-cleanup.md#online-revision-cleanup-frequently-asked-questions)。
+如果您從AEM 6.3升級，則不需要進行此移轉。 對於6.3之前的版本，Adobe提供可用來將存放庫移轉至AEM 6.3中存在的新版Oak Segment Tar的工具。 這是快速入門套件的一部分，且是任何將使用TarMK的升級的必要專案。 升級使用MongoMK的環境不需要移轉存放庫。 如需新的區段Tar格式優點詳細資訊，請參閱[移轉至Oak區段Tar常見問題集](/help/sites-deploying/revision-cleanup.md#online-revision-cleanup-frequently-asked-questions)。
 
 實際移轉是使用標準AEM quickstart jar檔案執行，並使用新的`-x crx2oak`選項執行，該選項會執行crx2oak工具以簡化升級並使其更健全。
 
@@ -107,9 +116,9 @@ java -Xmx4096m -jar aem-quickstart.jar -v -x crx2oak -xargs -- --load-profile <<
 
 **位置：**
 
-* `mongo-host`是MongoDB伺服器IP （例如127.0.0.1）
+* `mongo-host`是MongoDB伺服器IP （例如，127.0.0.1）
 
-* `mongo-port`是MongoDB伺服器連線埠(例如： 27017)
+* `mongo-port`是MongoDB伺服器連線埠（例如： 27017）
 
 * `mongo-database-name`代表資料庫的名稱（例如：aem-author）
 
@@ -129,7 +138,7 @@ java -Xmx4096m -jar aem-quickstart.jar -v -x crx2oak -xargs -- --load-profile <<
 
 ## 疑難排解移轉問題 {#troubleshooting-migration-issues}
 
-如果您從6.3升級，請略過本節。雖然提供的crx2oak設定檔應符合大部分客戶的需求，但有時仍需要其他引數。 如果您在移轉期間發生錯誤，可能是環境的某些方面需要提供額外的設定選項。 若是如此，您可能會遇到下列錯誤：
+如果您從6.3升級，請略過本節。 雖然提供的crx2oak設定檔應符合大部分客戶的需求，但有時仍需要其他引數。 如果您在移轉期間發生錯誤，可能是環境的某些方面需要提供額外的設定選項。 若是如此，您可能會遇到下列錯誤：
 
 **未複製查核點，因為未指定外部資料存放區。 這將導致在第一次啟動時完整的存放庫重新索引。 使用 — skip-checkpoints強制移轉，或參閱https://jackrabbit.apache.org/oak/docs/migration.html#Checkpoints_migration以取得更多資訊。**
 
@@ -167,11 +176,11 @@ S3資料存放區的&#x200B;**：**
 
 >[!IMPORTANT]
 >
->如果您執行OracleJava 11 （或通常是8以上的Java版本），啟動AEM時必須在命令列新增其他引數。 如需詳細資訊，請參閱[Java 11考量事項](/help/sites-deploying/custom-standalone-install.md#java-considerations)。
+>如果您執行Oracle Java 11 （或通常是8個以上的Java版本），啟動AEM時必須在命令列中新增其他引數。 如需詳細資訊，請參閱[Java 11考量事項](/help/sites-deploying/custom-standalone-install.md#java-considerations)。
 
-請注意，從啟動指令碼啟動AEM將不會啟動升級。 大多數客戶使用啟動指令碼啟動AEM，並已自訂此啟動指令碼，以包含環境設定（例如記憶體設定、安全性憑證等）的開關。 因此，Adobe建議依照此程式來決定正確的升級命令：
+請注意，從啟動指令碼啟動AEM將不會開始升級。 大部分客戶都是使用啟動指令碼啟動AEM，並已自訂此啟動指令碼，以納入環境設定（例如記憶體設定、安全性憑證等）的開關。 因此，Adobe建議依照此程式來決定正確的升級命令：
 
-1. 在執行中的AEM執行個體上，從命令列執行下列動作：
+1. 在執行中的AEM執行個體上，從命令列執行以下命令：
 
    ```shell
    ps -ef | grep java
@@ -195,6 +204,6 @@ S3資料存放區的&#x200B;**：**
 
 就地升級程式完成後，應部署更新的程式碼基底。 您可以在[升級程式碼和自訂頁面](/help/sites-deploying/upgrading-code-and-customizations.md)中找到更新程式碼基底以在AEM目標版本中運作的步驟。
 
-## 執行Post升級檢查及疑難排解 {#perform-post-upgrade-check-troubleshooting}
+## 執行升級後檢查和疑難排解 {#perform-post-upgrade-check-troubleshooting}
 
-請參閱[Post升級檢查與疑難排解](/help/sites-deploying/post-upgrade-checks-and-troubleshooting.md)。
+請參閱[升級後檢查及疑難排解](/help/sites-deploying/post-upgrade-checks-and-troubleshooting.md)。

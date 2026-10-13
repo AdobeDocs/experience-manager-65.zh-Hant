@@ -10,13 +10,28 @@ exl-id: 97e02986-049f-4747-a67a-6aa0677b281e
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization
 role: User,Admin,Developer
-source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+  - id: eb3ad9f8-54a2-45f3-abb1-d3976415a718
+    internal-label: Personalization
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '903'
-ht-degree: 9%
-
+source-wordcount: '969'
+ht-degree: 8%
 ---
-
 # 管理客群{#managing-audiences}
 
 「對象」主控台可讓您建立、組織和管理Adobe Target帳戶的對象，或管理ContextHub或Client Context的區段：
@@ -28,7 +43,7 @@ ht-degree: 9%
 
 在「對象」主控台中，對象會依品牌組織。
 
-在「鎖定目標」模式中，對象可用於[製作目標內容](/help/sites-authoring/content-targeting-touch.md)，您也可以在此建立對象(但您必須在對象主控台中建立Adobe Target對象)。 您在「鎖定目標」模式中建立的對象會顯示在「對象」主控台中。
+在「鎖定目標」模式中，對象可用於[製作目標內容](/help/sites-authoring/content-targeting-touch.md)，您也可以在此建立對象（但您必須在對象主控台中建立Adobe Target對象）。 您在「鎖定目標」模式中建立的對象會顯示在「對象」主控台中。
 
 對象會以標籤顯示，說明會定義何種對象：
 
@@ -65,7 +80,7 @@ ht-degree: 9%
 
 >[!NOTE]
 >
->如果您在&#x200B;**0&rbrace;建立**&#x200B;1&rbrace;功能表中看不到{建立目標對象}，則您沒有建立對象的必要許可權。 **&#x200B;**&#x200B;您需要在&#x200B;**/etc/segmentation**&#x200B;下的寫入許可權，才能建立對象。 群組內容作者預設具有寫入權限。
+>如果您在&#x200B;**0}建立** 1}功能表中看不到{建立目標對象}，則您沒有建立對象的必要許可權。 ****您需要在&#x200B;**/etc/segmentation**&#x200B;下的寫入許可權，才能建立對象。 群組內容作者預設具有寫入權限。
 
 若要建立Adobe Target閱聽眾：
 
@@ -79,10 +94,10 @@ ht-degree: 9%
 
 1. 在&#x200B;**Adobe Target組態**&#x200B;對話方塊中，選取目標組態並按一下&#x200B;**確定**。
 1. 在「規則#1」區域中，按一下屬性型別，並在可用的欄位中輸入任何屬性資訊。 完成後，選取屬性右邊的核取記號以儲存。 如需所有屬性的詳細資訊，請參閱[屬性及其選項](#attributes-and-their-options)。
-1. 按一 **下「新增規則** 」以新增其他規則。視需要輸入任意數量的規則。規則會與布林運算子AND結合，這表示客群必須符合每個規則的所有要求才能符合活動的資格。
+1. 按一 **下「新增規則** 」以新增其他規則。 視需要輸入任意數量的規則。 規則會與布林運算子AND結合，這表示客群必須符合每個規則的所有要求才能符合活動的資格。
 1. 按一下「**下一步**」。
 1. 輸入對象名稱，然後按一下&#x200B;**儲存**。
-1. 按一下「**儲存**」。您的對象會列在「對象」清單中。
+1. 按一下「**儲存**」。 您的對象會列在「對象」清單中。
 
 ### 屬性及其選項 {#attributes-and-their-options}
 
@@ -90,13 +105,13 @@ ht-degree: 9%
 
 | **屬性** | **說明** | **詳細資訊** |
 |---|---|---|
-| **行動裝置** | 根據行動裝置、裝置型別、裝置廠商、畫面尺寸（依畫素）等引數來鎖定行動裝置。 | 請參閱Adobe Target上的[行動檔案](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html?lang=zh-Hant)。 |
-| **自訂** | 自訂引數為mbox引數。 如果您將任何mbox引數傳遞至mbox，或使用targetPageParams函式，這些引數就會顯示在這裡，以供對象使用。 | 請參閱Adobe Target上的[自訂引數檔案](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html?lang=zh-Hant)。 |
+| **行動裝置** | 根據行動裝置、裝置型別、裝置廠商、畫面尺寸（依畫素）等引數來鎖定行動裝置。 | 請參閱Adobe Target上的[行動檔案](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html)。 |
+| **自訂** | 自訂引數為mbox引數。 如果您將任何mbox引數傳遞至mbox，或使用targetPageParams函式，這些引數就會顯示在這裡，以供對象使用。 | 請參閱Adobe Target上的[自訂引數檔案](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html)。 |
 | **OS** | 您可以鎖定使用特定作業系統的訪客。 | 定位使用Linux®、Macintosh或Windows的使用者。 |
-| **網站頁面** | 定位位在某個特定頁面上的訪客或具有特定mbox引數的訪客。 | 請參閱Adobe Target上的[網頁檔案](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html?lang=zh-Hant)。 |
-| **瀏覽器** | 您可以鎖定造訪您的頁面時使用特定瀏覽器或特定瀏覽器選項的使用者。 | 請參閱Adobe Target上的[瀏覽器選項檔案](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html?lang=zh-Hant)。 |
-| **訪客設定檔** | 符合特定設定檔引數的目標訪客。 | 請參閱Adobe Target上的[訪客資料檔案](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/visitor-profile.html?lang=zh-Hant)。 |
-| **流量來源** | 根據參照至您網站的搜尋引擎或著陸頁面鎖定訪客。 | 請參閱Adobe Target上的[流量來原始檔](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html?lang=zh-Hant)。 |
+| **網站頁面** | 定位位在某個特定頁面上的訪客或具有特定mbox引數的訪客。 | 請參閱Adobe Target上的[網頁檔案](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html)。 |
+| **瀏覽器** | 您可以鎖定造訪您的頁面時使用特定瀏覽器或特定瀏覽器選項的使用者。 | 請參閱Adobe Target上的[瀏覽器選項檔案](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html)。 |
+| **訪客設定檔** | 符合特定設定檔引數的目標訪客。 | 請參閱Adobe Target上的[訪客資料檔案](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/visitor-profile.html)。 |
+| **流量來源** | 根據參照至您網站的搜尋引擎或著陸頁面鎖定訪客。 | 請參閱Adobe Target上的[流量來原始檔](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html)。 |
 
 ## 在對象主控台中修改對象 {#modifying-an-audience-in-the-audiences-console}
 

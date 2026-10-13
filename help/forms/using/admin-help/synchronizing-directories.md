@@ -9,13 +9,27 @@ exl-id: cb642289-4137-4ba7-8bde-0e458c8c94fe
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 0835dca60d8011ce8660f1e7fdefb2b14ccd6129
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1015'
+source-wordcount: '1025'
 ht-degree: 0%
-
 ---
-
 
 # 同步目錄 {#synchronizing-directories}
 
@@ -25,7 +39,7 @@ ht-degree: 0%
 
 您也可以設定每日同步處理排程，以自動將「使用者管理」資料庫與來源目錄伺服器的變更或更新同步。 不過，此程式會使用網路和伺服器資源。 選擇低使用量時段，並避免排程不必要的同步作業，以免繫結系統與網路資源。 若要將不必要的同步化最小化，請改用立即同步化選項。
 
-您也可以指定在同步網域時，是否將使用者和群組資訊推送到AdobeLiveCycleContent Services 9 （已過時）。
+您也可以指定在同步網域時，是否將使用者和群組資訊推送到Adobe LiveCycle Content Services 9 （已過時）。
 
 >[!NOTE]
 >
@@ -37,7 +51,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe® LiveCycle® Content Services ES （已淘汰）是隨LiveCycle安裝的內容管理系統。 它可讓使用者設計、管理、監控及最佳化以人為中心的流程。 內容服務（已棄用）支援將於2014年12月31日終止。 請參閱[Adobe產品生命週期檔案](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html)。
+>® LiveCycle® Content Services ES （已淘汰）是隨LiveCycle安裝的內容管理系統。 它可讓使用者設計、管理、監控及最佳化以人為中心的流程。 內容服務（已棄用）支援將於2014年12月31日終止。 請參閱[Adobe產品生命週期檔案](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html)。
 
 ## 啟用差異目錄同步處理 {#enable-delta-directory-synchronization}
 
@@ -73,7 +87,7 @@ ht-degree: 0%
 1. 在管理控制檯中，按一下「設定」>「使用者管理」>「組態」>「設定進階系統屬性」。
 1. 在Synch Finisher Cron運算式下，輸入cron運算式，代表「使用者管理」重試同步失敗的時間間隔。 cron運算式的使用是根據Quartz開放原始碼工作排程系統1.4.0版。
 
-   預設值為0 0/13 &amp;amp；ast； ？ &amp;amp；ast； ，這表示每13分鐘進行一次檢查。
+   預設值為0 0/13 &amp;ast； ？ &amp;ast； ，這表示每13分鐘進行一次檢查。
 
 ## 手動同步目錄 {#manually-synchronize-directories}
 

@@ -7,13 +7,29 @@ feature: Interactive Communication
 exl-id: ea0c8971-56f4-4094-87e4-1b222b73951f
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: aa28c6c8-3ede-445b-a351-eeb0c9f9aec4
+    internal-label: Interactive Communication
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '658'
-ht-degree: 2%
-
+ht-degree: 3%
 ---
-
 # 教學課程：規劃互動式通訊 {#tutorial-plan-the-interactive-communication}
 
 規劃互動式通訊的結構
@@ -123,7 +139,7 @@ ht-degree: 2%
      <li>總費用（使用費用計算欄位）</li>
      <li>應付帳款總計（使用費用計算欄位）</li>
     </ul> <p>表格 — 用料表</p> </td>
-   <td>無欄位</td>
+   <td>沒有欄位</td>
    <td>--</td>
   </tr>
   <tr>
@@ -137,7 +153,7 @@ ht-degree: 2%
      <li>費用</li>
     </ul> </td>
    <td><p>所有值</p> <p>表格 — 呼叫</p> </td>
-   <td>無欄位</td>
+   <td>沒有欄位</td>
    <td>--</td>
   </tr>
   <tr>

@@ -1,24 +1,35 @@
 ---
 title: 搜尋Facet以篩選搜尋結果
-description: 如何在 [!DNL Adobe Experience Manager]中建立、修改及使用搜尋Facet。
+description: 如何在[!DNL Adobe Experience Manager]中建立、修改及使用搜尋Facet。
 contentOwner: AG
 role: Admin, Developer
 feature: Search
 exl-id: acaf46e6-ff70-4825-8922-ce8f82905a92
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: bca6156727dca11b2e09be549f3def6130827193
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 74ec00bc-0862-520e-86dc-e377aeccc141
+    internal-label: Search
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '2437'
 ht-degree: 15%
-
 ---
-
 # 搜尋 Facet {#search-facets}
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/search-facets.html?lang=zh-Hant) |
+| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/search-facets.html?lang=en) |
 | AEM 6.5 | 本文章 |
 
 [!DNL Adobe Experience Manager Assets]的企業範圍部署具有儲存許多資產的容量。 有時候，如果您只使用[!DNL Experience Manager]的一般搜尋功能，尋找正確的資產可能會很困難且耗時。
@@ -85,13 +96,13 @@ ht-degree: 15%
 
 當您選取選項時，會根據選項節點及其子節點（如果有的話）的`value`屬性來執行搜尋。 系統會周遊選項節點下的整個樹狀結構，並使用OR運算來結合每個子節點的`value`屬性，以形成搜尋查詢。
 
-例如，如果您為檔案類型選取「影像」，則會使用OR運算結合屬性來建立資 `value` 產的搜尋查詢。 例如，通過組合影像/jpeg *、* image/gif *、* png影像、影像 */jpeg影像、以及使用OR操作對Tiff屬性進行搜索的Joff影像&#x200B;**&#x200B;***`jcr:content/metadata/dc:format` /Tiff影像的匹配結果來構建影像搜索查詢。
+例如，如果您為檔案類型選取「影像」，則會使用OR運算結合屬性來建立資 `value` 產的搜尋查詢。 例如，通過組合影像/jpeg *、* image/gif *、* png影像、影像 */jpeg影像、以及使用OR操作對Tiff屬性進行搜索的Joff影像*****`jcr:content/metadata/dc:format` /Tiff影像的匹配結果來構建影像搜索查詢。
 
 ![檔案型別的Value屬性（如CRXDE中所見）用於搜尋查詢以運作](assets/filetype-value-property.png)
 
 檔案型別的Value屬性（如CRXDE中所見）可用來讓搜尋查詢運作
 
-您不必在CRXDE存放庫中手動建立選項的節點結構，而是可以透過指定對應的索引鍵值配對，在JSON檔案中定義選項。 在「屬性名稱」欄位中指定JSON檔 **[!UICONTROL 案的路徑]** 。 例如，您可以定義鍵值配對、 `image/bmp`、 `image/gif`&#x200B;`image/jpeg`、和 `image/png` 並指定其值，如下列範例JSON檔案中所示。 在&#x200B;**[!UICONTROL 屬性名稱]**&#x200B;欄位中，您可以指定此檔案的CRXDE路徑。
+您不必在CRXDE存放庫中手動建立選項的節點結構，而是可以透過指定對應的索引鍵值配對，在JSON檔案中定義選項。 在「屬性名稱」欄位中指定JSON檔 **[!UICONTROL 案的路徑]** 。 例如，您可以定義鍵值配對、 `image/bmp`、 `image/gif``image/jpeg`、和 `image/png` 並指定其值，如下列範例JSON檔案中所示。 在&#x200B;**[!UICONTROL 屬性名稱]**&#x200B;欄位中，您可以指定此檔案的CRXDE路徑。
 
 ```json
 {
@@ -113,7 +124,7 @@ ht-degree: 15%
 
 1. 按一下[!DNL Experience Manager]標誌，然後前往&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 一般]** > **[!UICONTROL 搜尋Forms]**。
 1. 從&#x200B;**[!UICONTROL 搜尋Forms]**&#x200B;頁面，選取&#x200B;**[!UICONTROL Assets管理搜尋邊欄]**，然後按一下&#x200B;**[!UICONTROL 編輯]**。
-1. 在「編 **[!UICONTROL 輯搜索表單]** 」頁中，將「選 **[!UICONTROL 項謂詞」從]** 「選擇謂詞 **&#x200B;**&#x200B;」頁籤拖到主窗格。
+1. 在「編 **[!UICONTROL 輯搜索表單]** 」頁中，將「選 **[!UICONTROL 項謂詞」從]** 「選擇謂詞 **** 」頁籤拖到主窗格。
 1. 在「設 **[!UICONTROL 定]** 」標籤中，輸入屬性的標籤和名稱。 例如，若要根據資產的格式來搜尋資產，請為標籤指定好記的名稱，例如&#x200B;**[!UICONTROL 檔案型別]**。 指定在屬性欄位中執行搜尋時所依據的屬性，例如`jcr:content/metadata/dc:format.`
 1. 執行下列任一項作業：
 
@@ -137,7 +148,7 @@ ht-degree: 15%
 1. 在「搜尋Forms」頁面上，選取&#x200B;**[!UICONTROL Assets管理搜尋邊欄]**，然後按一下&#x200B;**[!UICONTROL 編輯]** ![編輯圖示](assets/do-not-localize/aemassets_edit.png)。
 1. 在「編輯搜索表單」頁中，將「 **[!UICONTROL Multi Value Property Predicate]** 」從「 **[!UICONTROL Select Predicate]** 」頁籤拖動到主窗格。
 1. 在&#x200B;**[!UICONTROL 設定]**&#x200B;索引標籤中，輸入述詞的標籤及預留位置文字。 指定在屬性欄位中執行搜尋時所依據的屬性名稱，例如`jcr:content/metadata/dc:value`。 您也可以使用選取對話方塊來選取節點。
-1. 請確定已 **[!UICONTROL 選取「分隔字元]** 」支援。 在「輸入 **[!UICONTROL 分隔字元]** 」欄位中，指定分隔字元以分隔個別值。 依預設，逗號會指定為分隔字元。 您可以指定不同的分隔字元。
+1. 請確定已 **[!UICONTROL 選取「分隔字元]** 」支援。 在「輸入 **[!UICONTROL 分隔字元]** 」欄位中，指定分隔字元以分隔個別值。 依預設，逗號會作為分隔字元。 您可以指定不同的分隔字元。
 1. 在&#x200B;**描述**&#x200B;欄位中輸入選擇性描述，然後按一下&#x200B;**[!UICONTROL 完成]**。
 1. 導覽至[!DNL Assets]使用者介面中的「篩選器」面板。 The **[!UICONTROL Multi Value Property]** predicate is added to the panel.
 1. 在「多值」欄位中指定多個值（以分隔符號分隔），然後執行搜尋。 述詞會針對您指定的值擷取完全相符的文字。

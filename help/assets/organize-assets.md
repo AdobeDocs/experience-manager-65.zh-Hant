@@ -7,18 +7,29 @@ feature: Asset Management,Search
 exl-id: d6f815b5-e4fc-4f8c-a6c1-9e50035ab9f2
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 7d2b2ec8-499c-5434-9ffd-9218cd71f683
+    internal-label: Asset Management
+  - id: 74ec00bc-0862-520e-86dc-e377aeccc141
+    internal-label: Search
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '813'
 ht-degree: 2%
-
 ---
-
 # 組織您的數位資產 {#organize-digital-assets}
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
-| Adobe Experience Manager (AEM) as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/organize-assets.html?lang=zh-Hant) |
+| Adobe Experience Manager (AEM) as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/organize-assets.html?lang=en) |
 | AEM 6.5 | 本文章 |
 
 ® Office和PDF檔案的所有數位資產、中繼資料和內容都會經過擷取，並可供搜尋。 搜尋可讓您對資產進行複雜的篩選，並完全遵循適當的許可權。 有關中繼資料的詳情，請參閱數位資產管理的中繼資料。
@@ -32,15 +43,15 @@ ht-degree: 2%
 * 通常您的數位資產存放庫永遠在成長。 因此，在內容建立週期早期將中繼資料使用、資料夾結構和檔案命名正規化非常重要。
 * 僅使用資料夾為您的數位資產強制實施一致的儲存結構。 此一致性可協助您改善流程並管理資產。 例如，置於下列資料夾型別中的資產可協助您使用適當的[設定檔來處理資產](processing-profiles.md)：
 
-   * **開發資料夾**：包含您目前正在處理的數位資產。
-   * **使用者端資料夾**：包含以使用者端或專案名稱為基礎的數位資產。
-   * **主要資料夾**：包含原始的來源數位資產。
-   * **轉譯資料夾**：包含原始來源數位資產的轉譯與復本。
-   * **檔案大小資料夾**：包含以小型、中型或大型檔案大小為基礎的數位資產。
-   * **中繼資料夾**：包含已準備好在您的網站上即時發佈的數位資產。
-   * **MIME型別資料夾**：包含影像、檔案和多媒體MIME型別專屬的數位資產。
-   * **封存資料夾**：包含淘汰的數位資產。
-   * **以日期為基礎的資料夾**：包含以建立日期或上次修改日期為基礎的數位資產。
+  * **開發資料夾**：包含您目前正在處理的數位資產。
+  * **使用者端資料夾**：包含以使用者端或專案名稱為基礎的數位資產。
+  * **主要資料夾**：包含原始的來源數位資產。
+  * **轉譯資料夾**：包含原始來源數位資產的轉譯與復本。
+  * **檔案大小資料夾**：包含以小型、中型或大型檔案大小為基礎的數位資產。
+  * **中繼資料夾**：包含已準備好在您的網站上即時發佈的數位資產。
+  * **MIME型別資料夾**：包含影像、檔案和多媒體MIME型別專屬的數位資產。
+  * **封存資料夾**：包含淘汰的數位資產。
+  * **以日期為基礎的資料夾**：包含以建立日期或上次修改日期為基礎的數位資產。
 
 * 建立不太可能變更的資料夾目錄，讓任何自訂或自動化功能繼續運作。 例如，指派的處理設定檔可繼續運作。
 * 如果資產已發佈，然後您使用[!DNL Experience Manager]將資產移動到另一個資料夾，並從其新位置重新發佈，則仍然可以使用原始已發佈的資產位置，以及新重新發佈的資產。 然而，原始發佈的資產為&#x200B;*遺失*&#x200B;至[!DNL Experience Manager]，無法取消發佈。 因此，最佳實務是先取消發佈資產，然後將其移至其他資料夾。

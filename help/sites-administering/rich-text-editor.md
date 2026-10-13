@@ -6,7 +6,18 @@ exl-id: 2e7ec22f-0856-44c4-bb15-1086dae0b85a
 solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
-source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 5ef752af-d616-5b23-8312-06964e46b208
+    internal-label: Administering
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '3073'
 ht-degree: 1%
@@ -181,9 +192,9 @@ RTE功能可透過一系列外掛程式使用，每個外掛程式都具備功�
 
 >[!NOTE]
 >
->[核心元件文字元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html?lang=zh-Hant#the-text-component-and-the-rich-text-editor)可讓範本編輯器在GUI中設定許多RTE外掛程式作為內容原則，而不需要技術設定。 內容原則可搭配使用RTE UI設定，如本檔案所述。
+>[核心元件文字元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html#the-text-component-and-the-rich-text-editor)可讓範本編輯器在GUI中設定許多RTE外掛程式作為內容原則，而不需要技術設定。 內容原則可搭配使用RTE UI設定，如本檔案所述。
 >
->如需詳細資訊，請參閱本檔案的[RTE UI設定和內容原則](/help/sites-administering/rich-text-editor.md)一節，以及[建立頁面範本](/help/sites-authoring/templates.md)和[核心元件開發人員檔案](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/developing.html?lang=zh-Hant)。
+>如需詳細資訊，請參閱本檔案的[RTE UI設定和內容原則](/help/sites-administering/rich-text-editor.md)一節，以及[建立頁面範本](/help/sites-authoring/templates.md)和[核心元件開發人員檔案](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/developing.html)。
 
 >[!NOTE]
 >
@@ -259,7 +270,7 @@ RTE中可用的選項會從使用者介面設定向下流向內容原則。
 * 如果RTE的使用者介面設定已移除或未啟用專案，則內容原則無法進行設定。
 * 作者只能存取使用者介面設定和內容原則所提供的功能。
 
-例如，您可以看到[文字核心元件檔案](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/text.html?lang=zh-Hant#the-text-component-and-the-rich-text-editor)。
+例如，您可以看到[文字核心元件檔案](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/text.html#the-text-component-and-the-rich-text-editor)。
 
 ## 自訂工具列圖示和命令之間的對應 {#iconstoolbar}
 

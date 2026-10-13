@@ -10,13 +10,20 @@ exl-id: 569f2052-b4fe-4f7f-aec9-657217cba091
 solution: Experience Manager
 feature: Communities
 role: Developer
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '735'
 ht-degree: 0%
-
 ---
-
 # 新增Clientlibs {#add-clientlibs}
 
 ## 新增ClientLibraryFolder (clientlibs) {#add-a-clientlibraryfolder-clientlibs}
@@ -74,7 +81,7 @@ css.txt和js.txt的第一行會識別要尋找下列檔案清單的基本位置�
 
 ### 內嵌SCF Clientlibs {#embed-scf-clientlibs}
 
-在`clientlibs`節點的&#x200B;**屬性**&#x200B;標籤中，輸入多值字串屬性&#x200B;**內嵌**。 這會為SCF元件[&#128279;](/help/communities/client-customize.md#clientlibs-for-scf)嵌入必要的使用者端資料庫(clientlibs)。 在本教學課程中，已新增Communities元件所需的許多clientlibs。
+在`clientlibs`節點的&#x200B;**屬性**&#x200B;標籤中，輸入多值字串屬性&#x200B;**內嵌**。 這會為SCF元件](/help/communities/client-customize.md#clientlibs-for-scf)嵌入必要的[使用者端資料庫(clientlibs)。 在本教學課程中，已新增Communities元件所需的許多clientlibs。
 
 這可能是或不可能是用於生產網站的理想方法，因為考量便利性與每個頁面下載的clientlibs的大小/速度而定。
 
@@ -90,7 +97,7 @@ css.txt和js.txt的第一行會識別要尋找下列檔案清單的基本位置�
 * 值： **`cq.social.scf`**
 
   * 它將會彈出一個對話方塊，
-    在每個專案後按一下&#x200B;**`+`**&#x200B;以新增下列clientlib類別：
+    在每個專案後按一下**`+`**&#x200B;以新增下列clientlib類別：
 
     * **`cq.ckeditor`**
     * **`cq.social.author.hbs.comments`**

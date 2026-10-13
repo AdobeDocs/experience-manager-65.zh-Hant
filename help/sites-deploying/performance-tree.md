@@ -9,13 +9,22 @@ exl-id: f2f968b8-b21c-487d-bc0d-ed60903bc4bf
 solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 5ef752af-d616-5b23-8312-06964e46b208
+    internal-label: Administering
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1340'
 ht-degree: 10%
-
 ---
-
 # 效能樹狀結構{#performance-tree}
 
 ## 範圍 {#scope}
@@ -77,7 +86,7 @@ ht-degree: 10%
   <tr>
    <td><strong>步驟 4</strong></td>
    <td>是否來自Dispatcher的請求？</td>
-   <td><p>若要檢視是否正確快取要求，請檢視<a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant#debugging">Dispatcher偵錯檔案</a>。<br /> </p> </td>
+   <td><p>若要檢視是否正確快取要求，請檢視<a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#debugging">Dispatcher偵錯檔案</a>。<br /> </p> </td>
   </tr>
   <tr>
    <td><strong>步驟 5</strong></td>
@@ -107,7 +116,7 @@ ht-degree: 10%
   <tr>
    <td><strong>步驟10和29</strong></td>
    <td>調查網路層</td>
-   <td><p>調查網路層的飽和度和延遲問題。</p> <p>對於製作階層，建議延遲不要超過100毫秒。</p> <p>如需效能最佳化秘訣的詳細資訊，請參閱<a href="https://helpx.adobe.com/tw/customer-care-office-hours/aem/6x-performance-tuning-best-practices.html">此頁面</a>。</p> </td>
+   <td><p>調查網路層的飽和度和延遲問題。</p> <p>對於製作階層，建議延遲不要超過100毫秒。</p> <p>如需效能最佳化秘訣的詳細資訊，請參閱<a href="https://helpx.adobe.com/customer-care-office-hours/aem/6x-performance-tuning-best-practices.html">此頁面</a>。</p> </td>
   </tr>
   <tr>
    <td><strong>步驟 11</strong></td>
@@ -152,7 +161,7 @@ ht-degree: 10%
   <tr>
    <td><strong>步驟 19</strong></td>
    <td>100% CPU</td>
-   <td><a href="/help/sites-deploying/monitoring-and-maintaining.md#monitoring-performance">https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hant</a></td>
+   <td><a href="/help/sites-deploying/monitoring-and-maintaining.md#monitoring-performance">https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html</a></td>
   </tr>
   <tr>
    <td><strong>步驟 20</strong></td>
@@ -161,7 +170,7 @@ ht-degree: 10%
     <ol>
      <li><a href="/help/sites-deploying/monitoring-and-maintaining.md#out-of-memory">記憶體不足</a></li>
      <li><a href="/help/sites-deploying/troubleshooting.md">我的應用程式擲回記憶體不足錯誤</a></li>
-     <li><a href="https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html?lang=zh-Hant">分析記憶體問題。</a><br /> </li>
+     <li><a href="https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html">分析記憶體問題。</a><br /> </li>
     </ol> </td>
   </tr>
   <tr>
@@ -184,7 +193,7 @@ ht-degree: 10%
    <td>儲存區域調整</td>
    <td>
     <ul>
-     <li><a href="https://helpx.adobe.com/tw/customer-care-office-hours/aem/6x-performance-tuning-best-practices.html">效能調整秘訣</a></li>
+     <li><a href="https://helpx.adobe.com/customer-care-office-hours/aem/6x-performance-tuning-best-practices.html">效能調整秘訣</a></li>
      <li><a href="/help/sites-deploying/configuring-performance.md#configuring-for-performance">設定效能</a></li>
      <li><a href="https://www.slideshare.net/jukka/repository-performance-tuning">儲存區域效能調整</a></li>
     </ul> </td>
@@ -212,7 +221,7 @@ ht-degree: 10%
     <ol>
      <li><a href="/help/sites-deploying/configuring-performance.md#cq-dam-asset-synchronization-service">Assets同步服務</a></li>
      <li><a href="/help/sites-deploying/configuring-performance.md#multiple-dam-instances">多個DAM例項</a></li>
-     <li>效能調整提示文章<a href="https://helpx.adobe.com/tw/customer-care-office-hours/aem/6x-performance-tuning-best-practices.html">這裡</a>.<br /> </li>
+     <li>效能調整提示文章<a href="https://helpx.adobe.com/customer-care-office-hours/aem/6x-performance-tuning-best-practices.html">這裡</a>.<br /> </li>
     </ol> </td>
   </tr>
   <tr>
@@ -228,20 +237,20 @@ ht-degree: 10%
   <tr>
    <td><strong>步驟 31</strong></td>
    <td>在Dispatcher之前使用CDN</td>
-   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant#using-dispatcher-with-a-cdn">搭配CDN使用Dispatcher</a><br /> </td>
+   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html#using-dispatcher-with-a-cdn">搭配CDN使用Dispatcher</a><br /> </td>
   </tr>
   <tr>
    <td><strong>步驟 32</strong></td>
    <td>若要解除安裝AEM伺服器，請使用Dispatcher層級的工作階段管理</td>
-   <td><p><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant#enabling-secure-sessions-sessionmanagement">啟用安全工作階段</a></p> </td>
+   <td><p><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#enabling-secure-sessions-sessionmanagement">啟用安全工作階段</a></p> </td>
   </tr>
   <tr>
    <td><strong>步驟 33</strong></td>
    <td>讓請求可快取</td>
    <td>
     <ol>
-     <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant">一般Dispatcher設定</a></li>
-     <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant#configuring-the-dispatcher-cache-cache">設定Dispatcher快取</a></li>
+     <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html">一般Dispatcher設定</a></li>
+     <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#configuring-the-dispatcher-cache-cache">設定Dispatcher快取</a></li>
     </ol> <p>如何改善快取比率；使請求可快取（Dispatcher最佳實務）</p> <p>此外，請考慮下列設定以最佳化您的快取設定<br /> </p>
     <ol>
      <li>為非GET的HTTP請求設定無快取規則</li>
@@ -253,26 +262,26 @@ ht-degree: 10%
   <tr>
    <td><strong>步驟 34</strong></td>
    <td>升級Dispatcher版本</td>
-   <td><p>您可以在這裡下載最新的Dispatcher版本：</p> <p><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/release-notes.html?lang=zh-Hant">關注連結</a></p> </td>
+   <td><p>您可以在這裡下載最新的Dispatcher版本：</p> <p><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/release-notes.html">關注連結</a></p> </td>
   </tr>
   <tr>
    <td><strong>步驟 35</strong></td>
    <td>設定 Dispatcher</td>
-   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant">設定Dispatcher</a><br /> </td>
+   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html">設定Dispatcher</a><br /> </td>
   </tr>
   <tr>
    <td><strong>步驟 36</strong></td>
    <td>檢查快取失效</td>
    <td><br />
     <ul>
-     <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html?lang=zh-Hant#invalidating-dispatcher-cache-from-the-authoring-environment">製作層的快取失效；</a></li>
-     <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html?lang=zh-Hant#invalidating-dispatcher-cache-from-a-publishing-instance">發佈層的快取失效。</a></li>
+     <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html#invalidating-dispatcher-cache-from-the-authoring-environment">製作層的快取失效；</a></li>
+     <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html#invalidating-dispatcher-cache-from-a-publishing-instance">發佈層的快取失效。</a></li>
     </ul> </td>
   </tr>
   <tr>
    <td><strong>步驟37和38</strong></td>
    <td>延遲載入</td>
-   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2016/aem-web-performance.html?lang=zh-Hant">檢視AEM Web效能的Gem工作階段。</a><br /> </td>
+   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2016/aem-web-performance.html">檢視AEM Web效能的Gem工作階段。</a><br /> </td>
   </tr>
   <tr>
    <td><strong>步驟 39</strong></td>
@@ -292,7 +301,7 @@ ht-degree: 10%
   <tr>
    <td><strong>步驟 49</strong></td>
    <td>縮小裝載大小</td>
-   <td><a href="/help/sites-deploying/osgi-configuration-settings.md">啟用Gzip</a>和<a href="https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2016/aem-web-performance.html?lang=zh-Hant">縮小影像大小</a>。<br /> </td>
+   <td><a href="/help/sites-deploying/osgi-configuration-settings.md">啟用Gzip</a>和<a href="https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2016/aem-web-performance.html">縮小影像大小</a>。<br /> </td>
   </tr>
   <tr>
    <td><strong>步驟42和43</strong></td>
@@ -324,7 +333,7 @@ ht-degree: 10%
   <tr>
    <td><strong>步驟50和51</strong></td>
    <td>JS程式碼封鎖</td>
-   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2016/aem-web-performance.html?lang=zh-Hant">https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2016/aem-web-performance.html?lang=zh-Hant</a></td>
+   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2016/aem-web-performance.html">https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2016/aem-web-performance.html</a></td>
   </tr>
  </tbody>
 </table>

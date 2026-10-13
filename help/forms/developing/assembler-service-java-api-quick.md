@@ -9,13 +9,27 @@ role: Developer
 exl-id: 306cd40b-1831-45aa-9f58-3ab1983a68c5
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,APIs & Integrations
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 516393bc-fa69-5e74-a04e-f7ec9ffe2c5e
+    internal-label: APIs & Integrations
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1011'
+source-wordcount: '1016'
 ht-degree: 0%
-
 ---
-
 # 組合器服務Java™ API快速入門(SOAP) {#assembler-service-java-api-quickstart-soap}
 
 Java API快速入門(SOAP)適用於組合器服務
@@ -1190,8 +1204,8 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設為SO
 * `createDDX`：建立代表傳送至組合器服務的DDX檔案的`org.w3c.dom.Document`物件。 這個使用者定義的方法傳回`org.w3c.dom.Document`物件。
 * `convertDDX`：將`org.w3c.dom.Document`物件轉換為`com.adobe.idp.Document`物件。 此方法接受`org.w3c.dom.Document`物件作為輸入引數，並傳回`com.adobe.idp.Document`物件。
 
-  這兩個方法都會在此快速入門中叫用。（請參閱[動態建立DDX檔案](/help/forms/developing/assembling-pdf-documents.md#dynamically-creating-ddx-documents)。）
-&quot;
+  這兩個方法都會在此快速入門中叫用。 （請參閱[動態建立DDX檔案](/help/forms/developing/assembling-pdf-documents.md#dynamically-creating-ddx-documents)。）
+  &quot;
 
 ```java
 /*

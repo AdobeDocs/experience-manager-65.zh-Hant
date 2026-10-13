@@ -7,13 +7,31 @@ exl-id: 1fee474e-7da5-4ab2-881a-34b8e055aa29
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Foundation Components
 role: Admin, User, Developer
-source-git-commit: 0d491be4fb2605220b1558c8c877151ab4405978
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 7da902b6-fe94-5180-8e7c-f6d1e38d01d5
+    internal-label: Foundation Components
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '4813'
+source-wordcount: '4819'
 ht-degree: 2%
-
 ---
-
 # 設定We.Gov和We.Finance參考網站 {#set-up-and-configure-we-gov-reference-site}
 
 ## 示範套件詳細資料 {#demo-package-details}
@@ -47,21 +65,21 @@ ht-degree: 2%
 
 * **we-gov-forms.pkg.all-&lt;version>.zip** - *完成示範套件*
 
-   * **we-gov-forms.ui.apps-&lt;version>.zip** *— 包含所有元件、使用者端資料庫、範例使用者、工作流程模型等。*
+  * **we-gov-forms.ui.apps-&lt;version>.zip** *— 包含所有元件、使用者端資料庫、範例使用者、工作流程模型等。*
 
-      * **we-gov-forms.core-&lt;version>.jar** - *包含所有OSGI服務、自訂工作流程步驟實作等。*
+    * **we-gov-forms.core-&lt;version>.jar** - *包含所有OSGI服務、自訂工作流程步驟實作等。*
 
-      * **we-gov-forms.derby&lt;version>.jar** - *包含所有OSGI服務、資料庫結構描述等。*
+    * **we-gov-forms.derby&lt;version>.jar** - *包含所有OSGI服務、資料庫結構描述等。*
 
-      * **core.wcm.components.all-2.0.4.zip** - *範例WCM元件的集合*
+    * **core.wcm.components.all-2.0.4.zip** - *範例WCM元件的集合*
 
-      * **grid-aem.ui.apps-1.0-SNAPSHOT.zip** - *網站頁面欄控制項的AEM Sites網格配置套件*
+    * **grid-aem.ui.apps-1.0-SNAPSHOT.zip** - *網站頁面欄控制項的AEM Sites網格配置套件*
 
-   * **we-gov-forms.ui.content-&lt;version>.zip** - *包含所有內容、頁面、影像、表單、互動式通訊資產等。*
+  * **we-gov-forms.ui.content-&lt;version>.zip** - *包含所有內容、頁面、影像、表單、互動式通訊資產等。*
 
-   * **we-gov-forms.ui.ananalytics-&lt;version>.zip** - *包含所有要儲存在存放庫中的We.Gov Forms Analytics資料。*
+  * **we-gov-forms.ui.ananalytics-&lt;version>.zip** - *包含所有要儲存在存放庫中的We.Gov Forms Analytics資料。*
 
-   * **we-gov-forms.config.public-&lt;version>.zip** - *包含所有預設設定節點，包括預留位置雲端設定，以協助避免表單資料模型和服務繫結問題。*
+  * **we-gov-forms.config.public-&lt;version>.zip** - *包含所有預設設定節點，包括預留位置雲端設定，以協助避免表單資料模型和服務繫結問題。*
 
 此套件中包含的資產包括：
 
@@ -88,7 +106,7 @@ ht-degree: 2%
    1. 從&#x200B;**[!UICONTROL 解決方案]**&#x200B;下拉式清單中選取&#x200B;**[!UICONTROL Forms]**。
    2. 選取封裝的版本和型別。 您也可以使用&#x200B;**[!UICONTROL 搜尋下載]**&#x200B;選項來篩選結果。
 1. 選取&#x200B;**we-gov-forms.pkg.all-&lt;version>.zip**&#x200B;封裝名稱，選取&#x200B;**[!UICONTROL 接受EULA條款]**，然後選取&#x200B;**[!UICONTROL 下載]**。
-1. 開啟[封裝管理員](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=zh-Hant)，然後按一下&#x200B;**[!UICONTROL 上傳封裝]**&#x200B;以上傳封裝。
+1. 開啟[封裝管理員](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)，然後按一下&#x200B;**[!UICONTROL 上傳封裝]**&#x200B;以上傳封裝。
 1. 選取封裝並按一下&#x200B;**[!UICONTROL 安裝]**。
 
    ![我們管理表單封裝](assets/wegov_forms_package.jpg)
@@ -226,13 +244,13 @@ ht-degree: 2%
 **參考：**
 
 1. [® Dynamics OData設定](/help/forms/using/ms-dynamics-odata-configuration.md)
-1. [設定® Dynamics for AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/using-ms-dynamics-with-aem-forms.html?lang=zh-Hant)
+1. [設定® Dynamics for AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/using-ms-dynamics-with-aem-forms.html)
 
 #### MS® Dynamics OData雲端服務 {#ms-dynamics-odata-cloud-service}
 
 1. 瀏覽到:
 
-   https://&lt;aemserver>：&lt;port>/libs/fd/fdm/gui/components/admin/fdmcloudservice/fdm.html/conf/we-gov
+   https://<aemserver>：<port>/libs/fd/fdm/gui/components/admin/fdmcloudservice/fdm.html/conf/we-gov
 
    1. 確定您使用與MS® Dynamics應用程式註冊中設定的相同重新導向URL存取伺服器。
 
@@ -386,7 +404,7 @@ ht-degree: 2%
    ![快速存取](assets/aftia-quick-access.jpg)
 1. 導覽至「管理員」標籤，並選取「使用者管理（舊版）」專案
    ![報告](assets/aftia-reports.jpg)
-1. 選取&#x200B;**使用者**&#x200B;索引標籤。
+1. 選取&#x200B;**使用者**索引標籤。
    ![使用者管理](assets/aftia-user-management.jpg)
 1. 從使用者清單中選取所需的使用者。
 1. 捲動至頁面底部，使用者驗證資訊將顯示在頁面底部。
@@ -480,7 +498,7 @@ ht-degree: 2%
 
 閱讀進一步指示前，請先檢閱下列內容：
 
-* [設定自動錶單轉換服務](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/configure-service.html?lang=zh-Hant)
+* [設定自動錶單轉換服務](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/configure-service.html)
 
 #### 建立IMS設定第1部分 {#creating-ims-config}
 
@@ -579,7 +597,7 @@ IMS設定完成後，您可以繼續檢閱AEM中的雲端設定。 如果設定�
 
 1. 對於此設定，我們將兩個核取方塊值留空。
 
-   * 若要進一步瞭解這些選項，請參閱[設定雲端服務](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/configure-service.html?lang=zh-Hant#configure-the-cloud-service)。
+   * 若要進一步瞭解這些選項，請參閱[設定雲端服務](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/configure-service.html#configure-the-cloud-service)。
 
 #### 設定雲端設定(We.Finance AFC Production) {#configure-cloud-configuration-wefinance}
 
@@ -609,7 +627,7 @@ IMS設定完成後，我們就可以繼續在AEM中建立雲端設定。
 
 1. 對於此設定，我們將兩個核取方塊值留空。
 
-   * 若要進一步瞭解這些選項，請參閱[設定雲端服務](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/configure-service.html?lang=zh-Hant#configure-the-cloud-service)。
+   * 若要進一步瞭解這些選項，請參閱[設定雲端服務](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/configure-service.html#configure-the-cloud-service)。
 
 #### 測試表單轉換（We.Gov註冊應用程式） {#test-forms-conversion}
 
@@ -649,7 +667,7 @@ IMS設定完成後，我們就可以繼續在AEM中建立雲端設定。
 
 #### 已知問題和注意事項 {#known-issues-notes}
 
-自動錶單轉換服務包含特定[最佳實務、已知的複雜模式](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/styles-and-pattern-considerations-and-best-practices.html?lang=zh-Hant)和[已知問題](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/known-issues.html?lang=zh-Hant)。 開始使用AEM Forms自動化表單轉換服務前，請先檢閱這些內容。
+自動錶單轉換服務包含特定[最佳實務、已知的複雜模式](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/styles-and-pattern-considerations-and-best-practices.html)和[已知問題](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/known-issues.html)。 開始使用AEM Forms自動化表單轉換服務前，請先檢閱這些內容。
 
 1. 如果您想要在轉換後將表單繫結到FDM，請在啟用資料繫結的情況下產生具有產生自適應表單的表單。
 

@@ -9,13 +9,29 @@ role: Admin,User
 exl-id: 153986f0-b6ff-4278-8bb6-70c320a4e539
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Foundation Components
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 7da902b6-fe94-5180-8e7c-f6d1e38d01d5
+    internal-label: Foundation Components
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '928'
 ht-degree: 2%
-
 ---
-
 # 設定最適化表單快取 {#configure-adaptive-forms-cache}
 
 快取是一種可縮短資料存取時間、減少延遲以及改善輸入/輸出(I/O)速度的機制。 調適型表單快取只會儲存調適型表單的HTML內容和JSON結構，不會儲存任何預先填入的資料。 它有助於減少在使用者端上轉譯最適化表單所需的時間。 專為適用性表單而設計。
@@ -32,7 +48,7 @@ ht-degree: 2%
 
    最適化表單HTML快取的![設定對話方塊](assets/cache-configuration-edit.png)
 
-1. 按一下[儲存]儲存組態。**&#x200B;**
+1. 按一下[儲存]儲存組態。****
 
 您的環境已設定為使用快取最適化表單和相關資產。
 
@@ -51,19 +67,19 @@ ht-degree: 2%
 * 開發自訂元件時，在用於開發的伺服器上，停用最適化表單快取。
 * 不會快取沒有副檔名的URL。 例如，快取模式為`/content/forms/[folder-structure]/[form-name].html`的URL，而快取會忽略模式為`/content/dam/formsanddocument/[folder-name]/<form-name>/jcr:content`的URL。 因此，請使用具有擴充功能的URL，以獲得快取的優點。
 * 本地化適用性表單的考量事項：
-   * 使用URL格式`http://host:port/content/forms/af/<afName>.<locale>.html`來要求最適化表單的本地化版本，而非`http://host:port/content/forms/af/afName.html?afAcceptLang=<locale>`
-   * [針對格式為`http://host:port/content/forms/af/<adaptivefName>.html`的URL停用使用瀏覽器地區設定](supporting-new-language-localization.md#how-localization-of-adaptive-form-works)。
-   * 當您使用URL格式`http://host:port/content/forms/af/<adaptivefName>.html`，且組態管理員中的&#x200B;**[!UICONTROL 使用瀏覽器地區設定]**&#x200B;已停用時，會提供非當地語系化版本的調適型表單。 非當地語系化語言是開發最適化表單時使用的語言。 系統不會考量為瀏覽器設定的地區設定（瀏覽器地區設定），而是提供最適化表單的非當地語系化版本。
-   * 當您使用URL格式`http://host:port/content/forms/af/<adaptivefName>.html`，並且啟用Configuration Manager中的&#x200B;**[!UICONTROL 使用瀏覽器地區設定]**&#x200B;時，會提供當地語系化的最適化表單版本（如果有的話）。 當地語系化最適化表單的語言取決於瀏覽器設定的地區設定（瀏覽器地區設定）。 這會導致只快取[最適化表單]的第一個執行個體。 若要防止執行個體發生問題，請參閱[疑難排解](#only-first-insatnce-of-adptive-forms-is-cached)。
+  * 使用URL格式`http://host:port/content/forms/af/<afName>.<locale>.html`來要求最適化表單的本地化版本，而非`http://host:port/content/forms/af/afName.html?afAcceptLang=<locale>`
+  * [針對格式為`http://host:port/content/forms/af/<adaptivefName>.html`的URL停用使用瀏覽器地區設定](supporting-new-language-localization.md#how-localization-of-adaptive-form-works)。
+  * 當您使用URL格式`http://host:port/content/forms/af/<adaptivefName>.html`，且組態管理員中的&#x200B;**[!UICONTROL 使用瀏覽器地區設定]**&#x200B;已停用時，會提供非當地語系化版本的調適型表單。 非當地語系化語言是開發最適化表單時使用的語言。 系統不會考量為瀏覽器設定的地區設定（瀏覽器地區設定），而是提供最適化表單的非當地語系化版本。
+  * 當您使用URL格式`http://host:port/content/forms/af/<adaptivefName>.html`，並且啟用Configuration Manager中的&#x200B;**[!UICONTROL 使用瀏覽器地區設定]**&#x200B;時，會提供當地語系化的最適化表單版本（如果有的話）。 當地語系化最適化表單的語言取決於瀏覽器設定的地區設定（瀏覽器地區設定）。 這會導致只快取[最適化表單]的第一個執行個體。 若要防止執行個體發生問題，請參閱[疑難排解](#only-first-insatnce-of-adptive-forms-is-cached)。
 
 ### 在Dispatcher啟用快取
 
 若要在Dispatcher上啟用並設定快取調適型表單，請執行以下步驟：
 
-1. 為環境的每個發佈執行個體開啟下列URL，並[為環境的發佈執行個體啟用排清代理程式](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html?lang=zh-Hant#invalidating-dispatcher-cache-from-a-publishing-instance)：
+1. 為環境的每個發佈執行個體開啟下列URL，並[為環境的發佈執行個體啟用排清代理程式](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html#invalidating-dispatcher-cache-from-a-publishing-instance)：
    `http://[server]:[port]]/etc/replication/agents.publish/flush.html`
 
-1. [將以下專案新增到您的dispatcher.any檔案](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant#automatically-invalidating-cached-files)：
+1. [將以下專案新增到您的dispatcher.any檔案](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#automatically-invalidating-cached-files)：
 
    ```JSON
       /invalidate
@@ -92,7 +108,7 @@ ht-degree: 2%
    * 最適化表單會保留在快取中，直到表單的更新版本未發佈為止。
 
    * 當最適化表單中參考的資源的較新版本發佈時，受影響的最適化表單會自動失效。 參考資源的自動失效有一些例外。 如需例外狀況的因應措施，請參閱[疑難排解](#troubleshooting)區段。
-1. [新增以下規則dispatcher.any或自訂規則檔案](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant#specifying-the-documents-to-cache)。 它會排除不支援快取的URL。 例如，互動式通訊。
+1. [新增以下規則dispatcher.any或自訂規則檔案](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#specifying-the-documents-to-cache)。 它會排除不支援快取的URL。 例如，互動式通訊。
 
    ```JSON
       /0000 {
@@ -116,7 +132,7 @@ ht-degree: 2%
       }
    ```
 
-1. [將下列引數新增至忽略URL引數清單](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant#ignoring-url-parameters)：
+1. [將下列引數新增至忽略URL引數清單](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#ignoring-url-parameters)：
 
    ```JSON
       /ignoreUrlParams {
@@ -126,7 +142,7 @@ ht-degree: 2%
       }
    ```
 
-您的AEM環境已設定為快取最適化表單。 它會快取所有型別的調適型表單。 如果您需要在傳遞快取頁面之前檢查頁面的使用者存取許可權，請參閱[快取安全內容](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/permissions-cache.html?lang=zh-Hant)。
+您的AEM環境已設定為快取最適化表單。 它會快取所有型別的調適型表單。 如果您需要在傳遞快取頁面之前檢查頁面的使用者存取許可權，請參閱[快取安全內容](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/permissions-cache.html)。
 
 ## 疑難排解 {#troubleshooting}
 

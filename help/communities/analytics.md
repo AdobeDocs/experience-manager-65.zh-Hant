@@ -10,13 +10,20 @@ role: Admin
 exl-id: 7d54928b-6512-4da9-a209-eb4488bf2b64
 solution: Experience Manager
 feature: Communities
-source-git-commit: 86ce8d1ead6f2b760eb0d037042ddfc2af418913
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '2818'
+source-wordcount: '2821'
 ht-degree: 1%
-
 ---
-
 # 社群功能的Analytics設定 {#analytics-configuration-for-communities-features}
 
 ## 概觀 {#overview}
@@ -87,17 +94,17 @@ Adobe Analytics可針對AEM Communities進行設定，以便在成員與支援�
 
 ## 適用於視訊報表的Adobe Analytics報表套裝 {#adobe-analytics-report-suite-for-video-reporting}
 
-使用Adobe Experience Cloud的[報表套裝管理員](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/new-report-suite.html?lang=zh-Hant)，可以設定Analytics報表套裝，以便啟用社群網站，提供社群功能的報告。
+使用Adobe Experience Cloud的[報表套裝管理員](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/new-report-suite.html)，可以設定Analytics報表套裝，以便啟用社群網站，提供社群功能的報告。
 
-使用[公司名稱和使用者名稱](/help/communities/analytics.md#prerequisites)登入[Adobe Experience Cloud](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/home.html?lang=zh-Hant)，即可設定新的或現有的報表套裝：
+使用[公司名稱和使用者名稱](/help/communities/analytics.md#prerequisites)登入[Adobe Experience Cloud](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/home.html)，即可設定新的或現有的報表套裝：
 
-* [11個轉換變數](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/conversion-var-admin.html?lang=zh-Hant) (eVar)
+* [11個轉換變數](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/conversion-var-admin.html) (eVar)
 
   * **`evar1`**&#x200B;到&#x200B;**`evar11`**&#x200B;已啟用
 
   * 可以重新利用（重新命名）現有的eVar，或建立要用於Communities功能的專案
 
-* [7個成功事件](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/success-events/success-event.html?lang=zh-Hant) （個事件）
+* [7個成功事件](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/success-events/success-event.html) （個事件）
 
   * **`event1`**&#x200B;到&#x200B;**`event7`**&#x200B;已啟用
 
@@ -107,7 +114,7 @@ Adobe Analytics可針對AEM Communities進行設定，以便在成員與支援�
 
   * 可以重新利用（重新命名）現有事件，或建立用於Communities功能的事件
 
-* [視訊管理](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html?lang=zh-Hant)
+* [視訊管理](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html)
 
   * 視訊報表主控台
 
@@ -146,7 +153,7 @@ Adobe Analytics可針對AEM Communities進行設定，以便在成員與支援�
 若要在[為視訊報表設定Analytics報表套裝](#adobe-analytics-report-suite-for-video-reporting)後啟用視訊心率報表：
 
 * 建立[Analytics Cloud服務](#aem-analytics-cloud-service-configuration)
-* 為社群網站[&#128279;](#enable-analytics-for-a-community-site)啟用分析
+* 為社群網站](#enable-analytics-for-a-community-site)啟用[分析
 * 將`Marketing Cloud Org Id`與社群網站建立關聯
 
 [修改](/help/communities/sites-console.md#modifying-site-properties)社群網站屬性，可在[社群網站建立](/help/communities/sites-console.md)或更新版本時輸入`Marketing Cloud Org Id`。
@@ -659,10 +666,10 @@ Adobe Analytics憑證已加密。 為了便於作者與發佈者之間複製或�
 
 ## 在Analytics中管理使用者資料 {#manage-user-data-in-analytics}
 
-Adobe Analytics提供的API可讓您存取、匯出和刪除使用者資料。 如需詳細資訊，請參閱[提交存取及刪除要求](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/data-governance/an-gdpr-workflow.html?lang=zh-Hant)。
+Adobe Analytics提供的API可讓您存取、匯出和刪除使用者資料。 如需詳細資訊，請參閱[提交存取及刪除要求](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/data-governance/an-gdpr-workflow.html)。
 
 ## 資源 {#resources}
 
-* Adobe Experience Cloud： [Analytics說明和參考](https://experienceleague.adobe.com/docs/analytics.html?lang=zh-Hant)
+* Adobe Experience Cloud： [Analytics說明和參考](https://experienceleague.adobe.com/docs/analytics.html)
 * AEM： [與Adobe Analytics整合](/help/sites-administering/adobeanalytics.md)
 * AEM： [Analytics與外部提供者](/help/sites-administering/external-providers.md)

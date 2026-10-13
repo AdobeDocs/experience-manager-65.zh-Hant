@@ -9,16 +9,25 @@ feature: Upgrading
 exl-id: 797bbdf9-917a-4537-a5f9-bf2682db968b
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 835ee49e-9248-5578-a60a-15c097807178
+    internal-label: Upgrading
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
-source-wordcount: '1797'
+source-wordcount: '1796'
 ht-degree: 2%
-
 ---
-
 # 升級自訂搜尋Forms{#upgrading-custom-search-forms}
 
-在AEM 6.2中，存放庫內儲存自訂搜尋Forms的位置已變更。 升級後，這些檔案會從6.1中的位置移至：
+在AEM 6.2中，自訂搜尋Forms在存放庫中的儲存位置已變更。 升級後，這些檔案會從6.1中的位置移至：
 
 * /apps/cq/gui/content/facets
 
@@ -40,7 +49,7 @@ ht-degree: 2%
 
 1. 前往`https://server:port/crx/de/index.jsp`開啟CRXDE Lite
 1. 瀏覽到需要調整的節點位置，如下列[自訂搜尋Forms](/help/sites-deploying/upgrading-custom-search-forms.md#list-of-custom-search-forms)清單中所指定。
-1. 按一下節點。 在右邊的屬性窗格中，按一下並修改&#x200B;**sling：resourceType**&#x200B;屬性。
+1. 按一下節點。 在右邊的屬性窗格中，按一下並修改&#x200B;**sling:resourceType**&#x200B;屬性。
 1. 最後，按下&#x200B;**全部儲存**&#x200B;按鈕以儲存變更。
 
 ## 自訂搜尋Forms清單 {#list-of-custom-search-forms}
@@ -159,13 +168,13 @@ ht-degree: 2%
 * 移除`pagestatuspredicate`節點
 * 複製節點
 
-   * `/libs/settings/cq/search/facets/sites/jcr:content/items/publishstatuspredicate`
-   * 至`/conf/global/settings/cq/search/facets/sites/jcr:content/items`
+  * `/libs/settings/cq/search/facets/sites/jcr:content/items/publishstatuspredicate`
+  * 至`/conf/global/settings/cq/search/facets/sites/jcr:content/items`
 
 * 複製節點
 
-   * `/libs/settings/cq/search/facets/sites/jcr:content/items/livecopystatuspredicate`
-   * 至`/conf/global/settings/cq/search/facets/sites/jcr:content/items`
+  * `/libs/settings/cq/search/facets/sites/jcr:content/items/livecopystatuspredicate`
+  * 至`/conf/global/settings/cq/search/facets/sites/jcr:content/items`
 
 * 請確定您將`analyticspredicate`節點的`listOrder`屬性設定為&quot;**8**&quot;。 這是避免衝突所需。
 
@@ -413,7 +422,7 @@ ht-degree: 2%
 
 動作：調整resourceType屬性（新增「/coral」，如上方所示的6.2位置）。
 
-### Publish述詞 {#publish-predicate}
+### 發佈述詞 {#publish-predicate}
 
 | 6.1中預設搜尋表單中的節點 | 發佈 |
 |---|---|

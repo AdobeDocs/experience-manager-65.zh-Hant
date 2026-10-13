@@ -10,33 +10,45 @@ exl-id: 3df0662a-0768-4b56-8b94-c517657b4bd9
 solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
-source-git-commit: 36cb540cda7faeca5949028c9c14ab2ecf860402
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: a642c50e-80eb-4fc1-a5d2-f3762d1f841d
+    internal-label: Administration
+subfeature_v2:
+  - id: c191041a-8b54-4bde-9e43-bc8d8f8cea74
+    internal-label: Deploying
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1779'
-ht-degree: 3%
-
+source-wordcount: '1853'
+ht-degree: 5%
 ---
-
 # 部署和維護{#deploying-and-maintaining}
 
 您可以在此頁面找到：
 
 * [基本概念](#basic-concepts)
 
-   * [什麼是AEM？](#what-is-aem)
-   * [典型部署](#typical-deployment-scenarios)
+  * [什麼是AEM？](#what-is-aem)
+  * [典型部署](#typical-deployment-scenarios)
 
-      * [內部部署](#on-premise)
-      * [使用Cloud Manager的Managed Services](#managed-services-using-cloud-manager)
+    * [內部部署](#on-premise)
+    * [使用Cloud Manager的Managed Services](#managed-services-using-cloud-manager)
 
 * [快速入門](#getting-started)
 
-   * [先決條件](#prerequisites)
-   * [取得軟體](#getting-the-software)
-   * [預設本機安裝](#default-local-install)
-   * [製作和發佈安裝](#author-and-publish-installs)
-   * [解壓縮的安裝目錄](#unpacked-install-directory)
-   * [啟動和停止](#starting-and-stopping)
+  * [先決條件](#prerequisites)
+  * [取得軟體](#getting-the-software)
+  * [預設本機安裝](#default-local-install)
+  * [製作和發佈安裝](#author-and-publish-installs)
+  * [解壓縮的安裝目錄](#unpacked-install-directory)
+  * [啟動和停止](#starting-and-stopping)
 
 熟悉這些基本知識後，您就可以在下列子頁面中找到更進階和詳細的資訊：
 
@@ -57,7 +69,7 @@ ht-degree: 3%
 * [AEM平台簡介](/help/sites-deploying/platform.md)
 * [效能准則](/help/sites-deploying/performance-guidelines.md)
 * [AEM Mobile快速入門](/help/mobile/getting-started-aem-mobile.md)
-* [什麼是AEM Screens？](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html?lang=zh-Hant)
+* [什麼是AEM Screens？](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html)
 
 ## 基本概念 {#basic-concepts}
 
@@ -98,7 +110,7 @@ AEM伺服器是&#x200B;**Java型**，並在支援該平台的大多數作業系�
 
 這些例項在安裝軟體方面是相同的。 它們僅能透過設定來區分。 此外，大部分安裝都使用Dispatcher：
 
-* **Dispatcher**：靜態網頁伺服器(Apache httpd、Microsoft®IIS等)已透過AEM Dispatcher模組增強。 它快取發佈執行個體產生的網頁以提升效能。
+* **Dispatcher**：靜態網頁伺服器（Apache httpd、Microsoft®IIS等）已透過AEM Dispatcher模組增強。 它快取發佈執行個體產生的網頁以提升效能。
 
 此設定有許多進階選項和詳細說明，但製作者、發佈和Dispatcher的基本模式是大多數部署的核心。 讓我們從簡單的設定開始。 接著會討論進階部署選項。
 
@@ -130,7 +142,7 @@ AEM Managed Services是數位體驗管理的完整解決方案。 它提供雲�
 
 **Cloud Manager**： Cloud Manager是Adobe Experience Manager Managed Services產品的一部分，也是一個自助服務入口網站，可進一步讓組織在雲端中自行管理Adobe Experience Manager。 其中包括最先進的持續整合和持續傳遞(CI/CD)管道，可讓IT團隊與實作合作夥伴加速自訂或更新的傳遞，而不會影響效能或安全性。 Cloud Manager僅適用於Adobe Managed Service客戶。
 
-若要進一步瞭解Cloud Manger及其資源，請參閱&#x200B;[**Cloud Manager使用手冊**](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html?lang=zh-Hant)。
+若要進一步瞭解Cloud Manger及其資源，請參閱&#x200B;[**Cloud Manager使用手冊**](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html)。
 
 ## 快速入門 {#getting-started}
 
@@ -140,7 +152,7 @@ AEM Managed Services是數位體驗管理的完整解決方案。 它提供雲�
 
 為了熟悉和開發AEM，通常會使用安裝在執行Apple OS X或Microsoft® Windows或Linux®案頭版本的本機電腦上的執行個體。
 
-在使用者端上，AEM可在桌上型電腦及平板電腦作業系統上與所有現代瀏覽器(**Microsoft® Edge**、**Internet Explorer** 11、**Chrome &#x200B;** 51+**&#x200B;**、**Firefox &#x200B;** 47+、**Safari** 8+)搭配使用。 如需詳細資訊，請參閱[支援的使用者端平台](/help/sites-deploying/technical-requirements.md#supported-client-platforms)。
+在使用者端上，AEM可在桌上型電腦及平板電腦作業系統上與所有現代瀏覽器(**Microsoft® Edge**、**Internet Explorer** 11、**Chrome** 51+****、**Firefox **47+、**Safari** 8+)搭配使用。 如需詳細資訊，請參閱[支援的使用者端平台](/help/sites-deploying/technical-requirements.md#supported-client-platforms)。
 
 ### 取得軟體 {#getting-the-software}
 
@@ -196,11 +208,11 @@ AEM需要幾分鐘來解壓縮jar檔案、自行安裝並啟動。 上述程式�
 
 **`https://localhost:4502`**
 
-作者執行個體中的結果將會自動設定為連線到&#x200B;**上的**&#x200B;發佈執行個體&#x200B;**`localhost:4503`**。
+作者執行個體中的結果將會自動設定為連線到&#x200B;**`localhost:4503`**&#x200B;上的&#x200B;**發佈執行個體**。
 
 ### 製作和發佈安裝 {#author-and-publish-installs}
 
-預設安裝（在&#x200B;**上的**&#x200B;作者&#x200B;**`localhost:4502`**&#x200B;執行個體）只需在第一次啟動`jar`檔案之前重新命名檔案即可變更。 命名模式為：
+預設安裝（在&#x200B;**`localhost:4502`**&#x200B;上的&#x200B;**作者**&#x200B;執行個體）只需在第一次啟動`jar`檔案之前重新命名檔案即可變更。 命名模式為：
 
 **`cq-<instance-type>-p<port-number>.jar`**
 
@@ -312,4 +324,4 @@ AEM會啟動，並自動將您的網頁瀏覽器重新導向至適當的頁面�
 * [AEM平台簡介](/help/sites-deploying/platform.md)
 * [效能准則](/help/sites-deploying/performance-guidelines.md)
 * [AEM Mobile快速入門](/help/mobile/getting-started-aem-mobile.md)
-* [什麼是AEM Screens？](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html?lang=zh-Hant)
+* [什麼是AEM Screens？](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html)

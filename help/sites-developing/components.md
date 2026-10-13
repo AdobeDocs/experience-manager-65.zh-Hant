@@ -9,13 +9,22 @@ exl-id: 9e30c969-2692-4380-943a-b022ee900ce8
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '620'
 ht-degree: 47%
-
 ---
-
 # 元件概觀{#components-overview}
 
 此頁面概觀了 Adobe Experience Manager (AEM) 元件，例如那些[用於頁面編寫](/help/sites-authoring/default-components-foundation.md) 的元件。
@@ -31,7 +40,7 @@ ht-degree: 47%
 * 具有標準化的使用者介面。
 * 具有可以設定的編輯行為。
 * 使用根據Granite UI元件的子元素建置的對話方塊
-* 使用[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=zh-Hant) （建議）或JSP開發。
+* 使用[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) （建議）或JSP開發。
 * 可以開發以建立擴充預設功能的自訂元件。
 
 因為元件是模組化的，所以您可以：
@@ -63,7 +72,7 @@ AEM隨附各種[現成可用的元件](/help/sites-authoring/default-components.
 
 有兩組Adobe提供的AEM元件可供使用：
 
-* [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)
+* [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
 * [基礎元件](/help/sites-authoring/default-components-foundation.md)
 
 **核心元件**&#x200B;已與AEM 6.3搭配使用，並提供有彈性且功能豐富的撰寫功能。 [We.Retail參考網站](/help/sites-developing/we-retail.md)說明如何使用核心元件，並代表目前元件開發的最佳實務。
@@ -72,7 +81,7 @@ AEM隨附各種[現成可用的元件](/help/sites-authoring/default-components.
 
 >[!NOTE]
 >
->[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)代表目前元件設計與開發的最佳實務，可作為參考實作。
+>[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)代表目前元件設計與開發的最佳實務，可作為參考實作。
 >
 >[AEM現代化工具](modernization-tools.md)可協助移轉至核心元件。
 
@@ -105,11 +114,11 @@ AEM隨附各種[現成可用的元件](/help/sites-authoring/default-components.
 * [內容片段的元件](/help/sites-developing/components-content-fragments.md)
 * [取得JSON格式的頁面資訊](/help/sites-developing/pageinfo.md)
 * [國際化元件](/help/sites-developing/i18n.md)
-* [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)
+* [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
 * [使用隱藏條件](/help/sites-developing/hide-conditions.md)
 * 傳統 UI
 
-   * [AEM元件（傳統UI）](/help/sites-developing/developing-components-classic.md)
-   * [使用和擴充Widget （傳統UI）](/help/sites-developing/widgets.md)
-   * [使用xtype （傳統UI）](/help/sites-developing/xtypes.md)
-   * [開發Forms (Classic UI)](/help/sites-developing/developing-forms.md)
+  * [AEM元件（傳統UI）](/help/sites-developing/developing-components-classic.md)
+  * [使用和擴充Widget （傳統UI）](/help/sites-developing/widgets.md)
+  * [使用xtype （傳統UI）](/help/sites-developing/xtypes.md)
+  * [開發Forms (Classic UI)](/help/sites-developing/developing-forms.md)

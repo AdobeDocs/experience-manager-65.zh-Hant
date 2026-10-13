@@ -9,13 +9,27 @@ exl-id: cf5283a5-dbfb-460d-a8bd-11cd15ab8640
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '192'
 ht-degree: 0%
-
 ---
-
 # 設定AEM表單以預先擷取網域資訊 {#configure-aem-forms-to-prefetchdomain-information}
 
 >[!NOTE]
@@ -25,7 +39,7 @@ ht-degree: 0%
 如果使用者屬於許多群組（例如500個或更多）或群組巢狀結構較深（例如30個層級），回應時間可能會變慢。 如果您遇到此問題，可以設定AEM表單以從特定網域預先擷取資訊。
 
 1. 在管理控制檯中，按一下&#x200B;**[!UICONTROL 設定>使用者管理>設定>匯入及匯出設定檔]**。
-1. 若要將目前的組態設定匯出至檔案，請按一下[匯出] **&#x200B;**，並將組態檔案儲存在其他位置。
+1. 若要將目前的組態設定匯出至檔案，請按一下[匯出] ****，並將組態檔案儲存在其他位置。
 1. 新增下列節點（以粗體標籤）：
 
    ```xml
@@ -45,5 +59,5 @@ ht-degree: 0%
 
    在此範例中，有多個網域設定為預先擷取。 網域名稱以「/」分隔。 以上範例顯示&#x200B;*Domain_Name1*、*Domain_Name2*&#x200B;和&#x200B;*Domain_Name3*。
 
-1. 若要匯入更新的檔案，請在[使用者管理]中按一下[組態] > [匯入及匯出組態檔] **。**
+1. 若要匯入更新的檔案，請在[使用者管理]中按一下[組態] > [匯入及匯出組態檔] ]**。**[!UICONTROL 
 1. 按一下&#x200B;**[!UICONTROL 瀏覽]**&#x200B;尋找檔案，按一下[匯入]，然後按一下&#x200B;**[!UICONTROL 確定]**。

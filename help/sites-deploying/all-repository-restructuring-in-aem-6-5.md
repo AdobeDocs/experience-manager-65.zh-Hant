@@ -9,14 +9,25 @@ exl-id: 2d852d9d-9be3-487a-966a-4902bd7df7f9
 solution: Experience Manager, Experience Manager Sites
 feature: Upgrading
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 835ee49e-9248-5578-a60a-15c097807178
+    internal-label: Upgrading
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '2770'
 ht-degree: 3%
 ---
 # AEM 6.5中的常見存放庫重組 {#common-repository-restructuring-in-aem}
 
-如AEM 6.5[&#128279;](/help/sites-deploying/repository-restructuring.md)頁面的上層存放庫重新調整中所述，升級至AEM 6.5的客戶應使用此頁面評估與可能影響所有解決方案的存放庫變更相關的工作量。 在AEM 6.5升級程式期間，有些變更需要大量工作量，而其他變更則可能延遲到未來升級為止。
+如AEM 6.5](/help/sites-deploying/repository-restructuring.md)頁面的上層[存放庫重新調整中所述，升級至AEM 6.5的客戶應使用此頁面評估與可能影響所有解決方案的存放庫變更相關的工作量。 在AEM 6.5升級程式期間，有些變更需要大量工作量，而其他變更則可能延遲到未來升級為止。
 
 **升級為6.5**
 

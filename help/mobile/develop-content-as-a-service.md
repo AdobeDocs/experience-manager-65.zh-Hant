@@ -8,13 +8,17 @@ exl-id: 85e73679-684e-402f-8186-8b56d8bd9372
 solution: Experience Manager
 feature: Mobile
 role: User
-source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '977'
 ht-degree: 1%
-
 ---
-
 # 內容傳遞{#content-delivery}
 
 {{ue-over-mobile}}
@@ -132,9 +136,9 @@ AEM Content Services會透過API將HTML內容提供給行動應用程式。 想�
 
    * 內容同步處理常式可以直接更新zip套件，或呼叫現有的內容轉譯器
 
-      * 平台處理常式
-      * AEM處理常式
-      * 自訂處理常式
+     * 平台處理常式
+     * AEM處理常式
+     * 自訂處理常式
 
 1. 透過內容轉譯器直接取得內容
 

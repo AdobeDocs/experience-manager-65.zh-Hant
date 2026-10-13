@@ -10,13 +10,31 @@ exl-id: b25d3f8e-5687-49ab-95e1-19ec75c87f6e
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Launches
 role: User,Admin,Developer
-source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+  - id: a642c50e-80eb-4fc1-a5d2-f3762d1f841d
+    internal-label: Administration
+subfeature_v2:
+  - id: e2cac356-c071-4141-ad6f-827893261a16
+    internal-label: Launches
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '896'
-ht-degree: 73%
-
+source-wordcount: '908'
+ht-degree: 72%
 ---
-
 # 啟動{#launches}
 
 啟動可讓您有效率地開發未來版本的內容。
@@ -25,19 +43,19 @@ ht-degree: 73%
 
 您建立&#x200B;*Launch*，然後在編輯和更新您的&#x200B;*Launch*&#x200B;頁面後，將其&#x200B;*提升*&#x200B;回&#x200B;*Source*。 然後您可以啟用這些&#x200B;*Source*&#x200B;頁面（頂層）。 提升功能會將啟動內容複製回來源頁面，可以手動或自動完成 (視建立和編輯啟動時設定的欄位)。
 
-例如，您的線上商店的季節性產品頁面每季更新一次，以便特色產品符合目前季節。為準備下一季的更新，您可以建立一個相應網頁的啟動。在整個季度中，以下變更會累積在啟動副本中：
+例如，您的線上商店的季節性產品頁面每季更新一次，以便特色產品符合目前季節。 為準備下一季的更新，您可以建立一個相應網頁的啟動。 在整個季度中，以下變更會累積在啟動副本中：
 
-* 因正常維護工作而產生的來源頁面變更。這些變更會自動複製到啟動頁面中。
+* 因正常維護工作而產生的來源頁面變更。 這些變更會自動複製到啟動頁面中。
 * 直接在啟動頁面上執行的編輯，為下一季做準備。
 
-下一季到來時，您提升啟動頁面，以便您可以發佈來源頁面 (包含更新的內容)。您可以提升所有頁面，也可僅提升您修改過的頁面。
+下一季到來時，您提升啟動頁面，以便您可以發佈來源頁面 (包含更新的內容)。 您可以提升所有頁面，也可僅提升您修改過的頁面。
 
 啟動也可以：
 
-* 為多個根分支建立。雖然您可以為整個網站建立啟動 (並在其中進行變更)，但這可能是不切實際的，因為需要複製整個網站。當涉及數百甚至數千頁時，複製動作和之後提升工作所需的比較作業，會影響系統要求和效能。
+* 為多個根分支建立。 雖然您可以為整個網站建立啟動 (並在其中進行變更)，但這可能是不切實際的，因為需要複製整個網站。 當涉及數百甚至數千頁時，複製動作和之後提升工作所需的比較作業，會影響系統要求和效能。
 * 巢狀 (啟動中有啟動) 可讓您在現有啟動中建立啟動，如此作者可以利用已完成的變更，而不用對每個啟動重複進行相同的變更。
 
-本節說明如何從Sites主控台或[Launches主控台](/help/sites-authoring/launches-creating.md#deleting-a-launch)內建立、編輯和提升（以及在必要時[刪除](#the-launches-console)）啟動頁面：
+本節說明如何從Sites主控台或[Launches主控台](#the-launches-console)內建立、編輯和提升（以及在必要時[刪除](/help/sites-authoring/launches-creating.md#deleting-a-launch)）啟動頁面：
 
 * [建立啟動](/help/sites-authoring/launches-creating.md)
 * [編輯啟動](/help/sites-authoring/launches-editing.md)
@@ -51,45 +69,45 @@ ht-degree: 73%
 
 * 建立來源頁面的副本：
 
-   * 副本是您的啟動。
-   * 頂層來源頁面稱為&#x200B;**生產**。
+  * 副本是您的啟動。
+  * 頂層來源頁面稱為&#x200B;**生產**。
 
-      * 來源頁面可以取自多個 (獨立的) 分支。
+    * 來源頁面可以取自多個 (獨立的) 分支。
 
   ![啟動動作概觀](assets/chlimage_1-111.png)
 
 * 編輯啟動設定：
 
-   * 在啟動中新增或移除頁面和/或分支。
-   * 編輯啟動屬性；例如&#x200B;**標題**、**啟動日期**、**生產就緒**&#x200B;標幟。
+  * 在啟動中新增或移除頁面和/或分支。
+  * 編輯啟動屬性；例如&#x200B;**標題**、**啟動日期**、**生產就緒**&#x200B;標幟。
 
 * 您可以手動或自動提升和發佈內容：
 
-   * 手動：
+  * 手動：
 
-      * 當準備好發佈時，將啟動內容推回 **Target** (來源頁面)。
-      * 從來源頁面 (推回後) 發佈內容。
-      * 提升所有頁面，或僅提升修改後的頁面。
+    * 當準備好發佈時，將啟動內容推回 **Target** (來源頁面)。
+    * 從來源頁面 (推回後) 發佈內容。
+    * 提升所有頁面，或僅提升修改後的頁面。
 
-   * 自動 - 這涉及以下項目：
+  * 自動 - 這涉及以下項目：
 
-      * **啟動** (**上線**) **日期**&#x200B;欄位：這可在建立或編輯啟動時設定。
+    * **啟動** (**上線**) **日期**&#x200B;欄位：這可在建立或編輯啟動時設定。
 
-      * **生產就緒**&#x200B;標幟：這只能在編輯 Launch 時設定。
-      * 如果&#x200B;**生產就緒**&#x200B;標幟已設定，Launch 將於 **Launch** (**上線**) **日期**&#x200B;自動提升至生產頁面。提升後，生產頁面會自動發佈。\
-        如果未設定日期，則該標幟將無效。
+    * **生產就緒**&#x200B;標幟：這只能在編輯 Launch 時設定。
+    * 如果&#x200B;**生產就緒**&#x200B;標幟已設定，Launch 將於 **Launch** (**上線**) **日期**&#x200B;自動提升至生產頁面。 提升後，生產頁面會自動發佈。\
+      如果未設定日期，則該標幟將無效。
 
 * 並行更新來源頁面和啟動頁面：
 
-   * 對來源頁面的變更會自動實作在啟動副本 (如果設定為繼承，即為 Live Copy)。
-   * 可以在不中斷這些自動更新或來源頁面的情況下，對啟動副本進行變更。
+  * 對來源頁面的變更會自動實作在啟動副本 (如果設定為繼承，即為 Live Copy)。
+  * 可以在不中斷這些自動更新或來源頁面的情況下，對啟動副本進行變更。
 
   ![更新總覽](assets/chlimage_1-112.png)
 
 * [建立巢狀啟動](/help/sites-authoring/launches-creating.md#creating-a-nested-launch) - 啟動中的啟動：
 
-   * 來源是現有的啟動。
-   * 您可以[將巢狀啟動](/help/sites-authoring/launches-promoting.md#promoting-a-nested-launch)提升到任何目標，這可以是父啟動或頂層來源頁面 (生產)。
+  * 來源是現有的啟動。
+  * 您可以[將巢狀啟動](/help/sites-authoring/launches-promoting.md#promoting-a-nested-launch)提升到任何目標，這可以是父啟動或頂層來源頁面 (生產)。
 
   ![巢狀啟動項概觀](assets/chlimage_1-113.png)
 
@@ -111,7 +129,7 @@ ht-degree: 73%
 
 ## 啟動主控台 {#the-launches-console}
 
-啟動主控台可提供對您的啟動的概觀，並讓您對清單上的執行動作。主控台可透過以下方式存取：
+啟動主控台可提供對您的啟動的概觀，並讓您對清單上的執行動作。 主控台可透過以下方式存取：
 
 * **工具**&#x200B;主控台：**工具**、**Sites**、**啟動**。
 

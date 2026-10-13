@@ -8,13 +8,29 @@ exl-id: c3e5f8fc-d2b9-4f76-9a3d-4bc5733f5a5c
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Foundation Components
 role: User, Developer
-source-git-commit: 4d0fdb4b3128272d50252b52e5eda1b78cd7cae9
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 7da902b6-fe94-5180-8e7c-f6d1e38d01d5
+    internal-label: Foundation Components
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '3622'
+source-wordcount: '3734'
 ht-degree: 1%
-
 ---
-
 # OSGi上以Forms為中心的工作流程{#forms-centric-workflow-on-osgi}
 
 ![hero-image](do-not-localize/header.png)
@@ -44,7 +60,7 @@ OSGi上的Forms中心工作流程延伸[AEM收件匣](/help/sites-authoring/inbo
 * 工作流程是真實世界業務流程的表示法。 讓您的真實商業程式與商業程式參與者清單隨時待命。 此外，在開始建立工作流程之前，請準備好附屬資料（調適型表單、PDF檔案等）。
 * 一個工作流程可以有多個階段。 這些階段會顯示在AEM收件匣中，並有助於報告工作流程的進度。 將您的業務流程劃分為邏輯階段。
 * 您可以設定AEM工作流程的指派工作步驟，以傳送電子郵件通知給使用者或受指派人。 因此，[啟用電子郵件通知](#configure-email-service)。
-* 工作流程也可以使用Adobe sign進行數位簽名。 如果您打算在工作流程中使用Adobe Sign，請在工作流程中使用AEM Forms[&#128279;](../../forms/using/adobe-sign-integration-adaptive-forms.md)之前先設定它的Adobe Sign。
+* 工作流程也可以使用Adobe sign進行數位簽名。 如果您打算在工作流程中使用Adobe Sign，請在工作流程中使用AEM Forms](../../forms/using/adobe-sign-integration-adaptive-forms.md)之前[先設定它的Adobe Sign。
 
 ## 建立工作流程模型 {#create-a-workflow-model}
 
@@ -276,10 +292,10 @@ AEM Forms應用程式會與AEM Forms伺服器同步，可讓您變更帳戶中�
 
 ## 將工作流程變數的敏感資料引數化，並儲存在外部資料存放區中 {#externalize-wf-variables}
 
-從最適化表單提交至[!DNL Experience Manager]工作流程的任何資料都可以擁有您企業一般使用者的PII （個人識別資訊）或SPD （敏感個人資料）。 不過，不需要將您的資料儲存在[!DNL Adobe Experience Manager] [JCR存放庫](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-jcr.html?lang=zh-Hant)中。 您可以將資訊引數化為[工作流程變數](/help/forms/using/variable-in-aem-workflows.md)，將一般使用者資料的儲存區外部化至您的受管理資料儲存區（例如Azure blob儲存區）。
+從最適化表單提交至[!DNL Experience Manager]工作流程的任何資料都可以擁有您企業一般使用者的PII （個人識別資訊）或SPD （敏感個人資料）。 不過，不需要將您的資料儲存在[!DNL Adobe Experience Manager] [JCR存放庫](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-jcr.html)中。 您可以將資訊引數化為[工作流程變數](/help/forms/using/variable-in-aem-workflows.md)，將一般使用者資料的儲存區外部化至您的受管理資料儲存區（例如Azure blob儲存區）。
 
-在[!DNL Adobe Experience Manager] Forms工作流程中，資料會透過工作流程變數的一系列工作流程步驟進行處理和傳遞。這些變數是儲存在工作流程執行個體中繼資料節點中的已命名屬性或機碼值組；例如，`/var/workflow/instances/<serverid>/<datebucket>/<uniquenameof model>_<id>/data/metaData`。這些工作流程變數可以外部化至JCR以外的個別存放庫，然後由[!DNL Adobe Experience Manager]工作流程處理。[!DNL Adobe Experience Manager]提供API `[!UICONTROL UserMetaDataPersistenceProvider]`，以將工作流程變數儲存在受管理的外部儲存體中。若要進一步瞭解如何在[!DNL Adobe Experience Manager]中使用客戶擁有資料存放區的工作流程變數，請參閱[管理外部資料存放區的工作流程變數](/help/sites-administering/workflows-administering.md#using-workflow-variables-customer-datastore)。
-[!DNL Adobe]提供下列[範例](https://github.com/adobe/workflow-variable-externalizer)，可藉由使用API [UserMetaDataPersistenceProvider](https://github.com/adobe/workflow-variable-externalizer/blob/master/README.md)，將工作流程中繼資料對應中的變數儲存至Azure blob儲存體。在類似的行中，您可以使用範例作為指南，使用[UserMetaDataPersistenceProvider] API將[!DNL Adobe Experience Manager]外部的任何其他資料儲存中的工作流程變數外部化並管理這些變數。
+在[!DNL Adobe Experience Manager] Forms工作流程中，資料會透過工作流程變數的一系列工作流程步驟進行處理和傳遞。 這些變數是儲存在工作流程執行個體中繼資料節點中的已命名屬性或機碼值組；例如`/var/workflow/instances/<serverid>/<datebucket>/<uniquenameof model>_<id>/data/metaData`。 這些工作流程變數可以外部化至JCR以外的個別存放庫，然後由[!DNL Adobe Experience Manager]工作流程處理。 [!DNL Adobe Experience Manager]提供API `[!UICONTROL UserMetaDataPersistenceProvider]`，以將工作流程變數儲存在受管理的外部儲存體中。 若要進一步瞭解如何在[!DNL Adobe Experience Manager]中使用客戶擁有資料存放區的工作流程變數，請參閱[管理外部資料存放區的工作流程變數](/help/sites-administering/workflows-administering.md#using-workflow-variables-customer-datastore)。
+[!DNL Adobe]提供下列[範例](https://github.com/adobe/workflow-variable-externalizer)，可藉由使用API [UserMetaDataPersistenceProvider](https://github.com/adobe/workflow-variable-externalizer/blob/master/README.md)，將工作流程中繼資料對應中的變數儲存至Azure blob儲存體。 在類似的行中，您可以使用範例作為指南，使用[UserMetaDataPersistenceProvider] API將[!DNL Adobe Experience Manager]外部的任何其他資料儲存中的工作流程變數外部化並管理這些變數。
 
 >[!NOTE]
 >

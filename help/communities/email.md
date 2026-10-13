@@ -10,13 +10,20 @@ role: Admin
 exl-id: bf97d388-f8ca-4e37-88e2-0c536834311e
 solution: Experience Manager
 feature: Communities
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '846'
+source-wordcount: '849'
 ht-degree: 0%
-
 ---
-
 # 設定電子郵件 {#configuring-email}
 
 AEM Communities將電子郵件用於：
@@ -36,7 +43,7 @@ AEM Communities將電子郵件用於：
 
 * 以系統管理員許可權登入主要發行者並存取[Web主控台](../../help/sites-deploying/configuring-osgi.md)：
 
-   * 例如，[http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
+  * 例如，[http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
 
 * 找到`Day CQ Mail Service`。
 * 選取編輯圖示。
@@ -91,7 +98,7 @@ AEM Communities將電子郵件用於：
 
 * 以系統管理員許可權登入主要發行者並存取[網頁主控台](../../help/sites-deploying/configuring-osgi.md)
 
-   * 例如，[http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
+  * 例如，[http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
 
 * 找到`AEM Communities Email Reply Configuration`。
 
@@ -187,7 +194,7 @@ AEM Communities將電子郵件用於：
 * **[!UICONTROL 匯入到路徑]**&amp;ast；
 
   *（必要）*&#x200B;設定為 `/content/usergenerated/mailFolder/postEmails`
-瀏覽至`postEmails`資料夾並選取&#x200B;**確定**。
+  瀏覽至`postEmails`資料夾並選取&#x200B;**確定**。
 
 * **[!UICONTROL 以秒為單位的更新間隔]**
 
@@ -212,8 +219,8 @@ AEM Communities將電子郵件用於：
 * 以系統管理員許可權登入主要發行者，並瀏覽至[https://&lt;server>：&lt;port>/crx/de/index.jsp#/etc/importers/polling](http://localhost:4503/crx/de/index.jsp#/etc/importers/polling)。
 * 選取新建立的組態並修改下列屬性：
 
-   * **feedType**：將`pop3s`取代為&#x200B;**`emailreply`**
-   * **來源**：將來源的通訊協定`pop3s://`取代為&#x200B;**`emailreply://`**
+  * **feedType**：將`pop3s`取代為&#x200B;**`emailreply`**
+  * **來源**：將來源的通訊協定`pop3s://`取代為&#x200B;**`emailreply://`**
 
 ![輪詢通訊協定](assets/polling-protocol.png)
 

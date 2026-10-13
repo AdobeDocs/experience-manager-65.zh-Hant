@@ -9,13 +9,22 @@ exl-id: fcac75e1-15c1-4a37-8d43-93c95267b903
 solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
-source-git-commit: 8f638eb384bdca59fb6f4f8990643e64f34622ce
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 5ef752af-d616-5b23-8312-06964e46b208
+    internal-label: Administering
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1827'
 ht-degree: 1%
-
 ---
-
 # 效能測試的最佳實務{#best-practices-for-performance-testing}
 
 ## 簡介 {#introduction}
@@ -73,7 +82,7 @@ AEM中的許多效能測量（例如查詢回應時間）都可能受到系統�
 
 觸控式UI中的&#x200B;**開發人員模式**
 
-AEM 6的觸控式UI的其中一項新功能是開發人員模式。 就像作者可以在編輯和預覽模式之間切換一樣，開發人員可以在作者UI中切換到開發人員模式。 這麼做可讓您檢視頁面上每個元件的轉譯時間，以及檢視任何錯誤的棧疊追蹤。 如需開發人員模式的詳細資訊，請參閱此[CQ Gems簡報](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2014/aem-developer-mode.html?lang=zh-Hant)。
+AEM 6的觸控式UI的其中一項新功能是開發人員模式。 就像作者可以在編輯和預覽模式之間切換一樣，開發人員可以在作者UI中切換到開發人員模式。 這麼做可讓您檢視頁面上每個元件的轉譯時間，以及檢視任何錯誤的棧疊追蹤。 如需開發人員模式的詳細資訊，請參閱此[CQ Gems簡報](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2014/aem-developer-mode.html)。
 
 **使用rlog.jar讀取要求記錄檔**
 
@@ -118,7 +127,7 @@ Google的PageSpeed工具提供網站分析，以符合頁面效能最佳實務�
 1. 將其放在/crx--quickstart/install資料夾下。
 
 >[!NOTE]
->請參閱[AEM 6.x |效能調整秘訣](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=zh-Hant)
+>請參閱[AEM 6.x |效能調整秘訣](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html)
 
 預設值為10,000，但大多數部署都必須將其提高至20,000或50,000。
 
@@ -146,7 +155,7 @@ Google的PageSpeed工具提供網站分析，以符合頁面效能最佳實務�
 * 檢視錯誤記錄檔中是否有錯誤或警告。 如需詳細資訊，請參閱[記錄](/help/sites-deploying/configure-logging.md)。
 * 監視系統硬體資源，例如記憶體和CPU使用率、磁碟I/O或網路I/O。這些資源通常是造成效能瓶頸的原因。
 * 最佳化頁面的架構以及處理方式，以儘量減少URL引數的使用，進而允許儘可能多的快取。
-* 請依照[效能最佳化](/help/sites-deploying/configuring-performance.md)和[效能調整提示](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=zh-Hant)檔案操作。
+* 請依照[效能最佳化](/help/sites-deploying/configuring-performance.md)和[效能調整提示](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html)檔案操作。
 
 * 如果編輯作者執行個體上的特定頁面或元件時發生問題，請使用TouchUI開發人員模式來檢查有問題的頁面。 這樣做會提供頁面上每個內容區域的劃分，及其載入時間。
 * 將網站上的所有JS和CSS縮制。 檢視此[部落格](https://blogs.adobe.com/foxes/enable-js-and-css-minification/)。

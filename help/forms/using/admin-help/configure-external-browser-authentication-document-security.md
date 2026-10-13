@@ -9,13 +9,24 @@ feature: Document Security
 exl-id: a452674c-aea0-45d6-88cd-438af539d355
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: 89a07256cd5bb850aac19565ad86273322fa1f31
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 50158d81-1c06-57f7-8bd7-e8ff76a93f85
+    internal-label: Document Security
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1029'
 ht-degree: 1%
-
 ---
-
 # 為檔案安全性設定來自外部瀏覽器的延伸驗證 {#configure-external-browser-authentication-document-security}
 
 >[!NOTE]
@@ -44,25 +55,25 @@ JEE Service Pack 6.5.25.0和更新版本上的AEM Forms提供外部瀏覽器驗�
 
 如果您使用JEE Service Pack 6.5.24.0或更舊版本的AEM Forms，請執行下列任一項作業：
 
-* 升級至JEE Service Pack 6.5.25.0[&#128279;](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.25.0.zip)上的AEM Forms。
+* 升級至JEE Service Pack 6.5.25.0](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.25.0.zip)上的[AEM Forms。
 * 使用以下連結，為您的應用程式伺服器和平台安裝AEM Forms JEE Hotfix 6.5.24.0修補程式。
 
 從[AEM Forms Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)下載並安裝您平台的Adobe JEE Hotfix 6.5.24.0修補程式：
 
 **JBoss**
 
-* Windows：適用於JBoss JEE伺服器[&#128279;](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-24-0-hotfix-02/jboss/adobe-aem-forms-jee-hotfix2-6.5.24.0-win-jboss.zip)的Windows上AEM Service Pack 6.5.24.0的Hotfix
-* Linux：適用於JBoss JEE伺服器[&#128279;](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-24-0-hotfix-02/jboss/adobe-aem-forms-jee-hotfix2-6.5.24.0-linux-jboss.tar.gz)的Linux上AEM Service Pack 6.5.24.0的Hotfix
+* Windows：適用於JBoss JEE伺服器](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-24-0-hotfix-02/jboss/adobe-aem-forms-jee-hotfix2-6.5.24.0-win-jboss.zip)的Windows上AEM Service Pack 6.5.24.0的[Hotfix
+* Linux：適用於JBoss JEE伺服器](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-24-0-hotfix-02/jboss/adobe-aem-forms-jee-hotfix2-6.5.24.0-linux-jboss.tar.gz)的Linux上AEM Service Pack 6.5.24.0的[Hotfix
 
 **WebSphere**
 
-* Windows：適用於WebSphere JEE伺服器[&#128279;](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-24-0-hotfix-02/websphere/adobe-aem-forms-jee-hotfix2-6.5.24.0-win-websphere.zip)的Windows上AEM Service Pack 6.5.24.0的Hotfix
-* Linux：適用於WebSphere JEE伺服器[&#128279;](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-24-0-hotfix-02/websphere/adobe-aem-forms-jee-hotfix2-6.5.24.0-linux-websphere.tar.gz)的Linux上AEM Service Pack 6.5.24.0的Hotfix
+* Windows：適用於WebSphere JEE伺服器](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-24-0-hotfix-02/websphere/adobe-aem-forms-jee-hotfix2-6.5.24.0-win-websphere.zip)的Windows上AEM Service Pack 6.5.24.0的[Hotfix
+* Linux：適用於WebSphere JEE伺服器](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-24-0-hotfix-02/websphere/adobe-aem-forms-jee-hotfix2-6.5.24.0-linux-websphere.tar.gz)的Linux上AEM Service Pack 6.5.24.0的[Hotfix
 
 **WebLogic**
 
-* Windows：適用於WebLogic JEE伺服器[&#128279;](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-24-0-hotfix-02/weblogic/adobe-aem-forms-jee-hotfix2-6.5.24.0-win-weblogic.zip)的Windows上AEM Service Pack 6.5.24.0的Hotfix
-* Linux：適用於WebLogic JEE伺服器[&#128279;](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-24-0-hotfix-02/weblogic/adobe-aem-forms-jee-hotfix2-6.5.24.0-linux-weblogic.tar.gz)的Linux上AEM Service Pack 6.5.24.0的Hotfix
+* Windows：適用於WebLogic JEE伺服器](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-24-0-hotfix-02/weblogic/adobe-aem-forms-jee-hotfix2-6.5.24.0-win-weblogic.zip)的Windows上AEM Service Pack 6.5.24.0的[Hotfix
+* Linux：適用於WebLogic JEE伺服器](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-24-0-hotfix-02/weblogic/adobe-aem-forms-jee-hotfix2-6.5.24.0-linux-weblogic.tar.gz)的Linux上AEM Service Pack 6.5.24.0的[Hotfix
 
 如需安裝指示，請參閱[安裝JEE修補程式](/help/release-notes/jee-patch-installer-65.md)。
 

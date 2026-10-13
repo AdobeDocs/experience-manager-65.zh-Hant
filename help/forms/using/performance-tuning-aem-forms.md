@@ -9,13 +9,27 @@ role: Admin,User
 exl-id: 22926757-9cdb-4f8a-9bd9-16ddbc3f954a
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '912'
+source-wordcount: '921'
 ht-degree: 0%
-
 ---
-
 # AEM Forms伺服器的效能調整{#performance-tuning-of-aem-forms-server}
 
 本文會討論您可以實作的策略與最佳實務，以減少瓶頸並最佳化AEM Forms部署的效能。
@@ -102,7 +116,7 @@ Apache可以使用HTTP通訊協定與CRX通訊。 這些設定是使用HTTP進�
 
 1. 啟用壓縮。 在`APACHE_HOME/conf/httpd.conf`組態檔中新增下列組態。
 
-   適用於HTML5表單的&#x200B;**&#x200B;**
+   適用於HTML5表單的&#x200B;****
 
    ```xml
    <Location /content/xfaforms>
@@ -146,26 +160,26 @@ Apache可以使用HTTP通訊協定與CRX通訊。 這些設定是使用HTTP進�
 
 * AEM安裝目錄。 如果無法排除完整的目錄，請排除下列專案：
 
-   * [AEM安裝目錄]\crx-repository\temp
-   * [AEM安裝目錄]\crx-repository\repository
-   * [AEM安裝目錄]\crx-repository\launchpad
+  * [AEM安裝目錄]\crx-repository\temp
+  * [AEM安裝目錄]\crx-repository\repository
+  * [AEM安裝目錄]\crx-repository\launchpad
 
 * 應用程式伺服器暫存目錄。 預設位置為：
 
-   * (JBoss®) [AEM安裝目錄]\jboss\standalone\tmp
-   * (WebLogic) \Oracle\Middleware\user_projects\domains\LCDomain\servers\LCServer1\tmp
-   * (WebSphere®) \程式Files\IBM\WebSphere\AppServer\profiles\AppSrv01\temp
+  * (JBoss®) [AEM安裝目錄]\jboss\standalone\tmp
+  * (WebLogic) \Oracle\Middleware\user_projects\domains\LCDomain\servers\LCServer1\tmp
+  * (WebSphere®) \程式Files\IBM\WebSphere\AppServer\profiles\AppSrv01\temp
 
 * **（僅限JEE上的AEM Forms）**&#x200B;全域檔案儲存(GDS)目錄。 預設位置為：
 
-   * (JBoss®) [appserver root]/server/&#39;server&#39;/svcnative/DocumentStorage
-   * (WebLogic) [appserverdomain]/&#39;server&#39;/adobe/LiveCycleServer/DocumentStorage
-   * (WebSphere®) [appserver root]/installedApps/adobe/&#39;server&#39;/DocumentStorage
+  * (JBoss®) [appserver root]/server/&#39;server&#39;/svcnative/DocumentStorage
+  * (WebLogic) [appserverdomain]/&#39;server&#39;/adobe/LiveCycleServer/DocumentStorage
+  * (WebSphere®) [appserver root]/installedApps/adobe/&#39;server&#39;/DocumentStorage
 
 * **（僅限JEE上的AEM Forms）** AEM Forms伺服器記錄檔和暫存目錄。 預設位置為：
 
-   * 伺服器記錄檔 — [AEM Forms安裝目錄]\Adobe\AEM forms\[app-server]\server\all\logs
-   * 暫存目錄 — [AEM Forms安裝目錄]\temp
+  * 伺服器記錄檔 — [AEM Forms安裝目錄]\Adobe\AEM forms\[app-server]\server\all\logs
+  * 暫存目錄 — [AEM Forms安裝目錄]\temp
 
 >[!NOTE]
 >

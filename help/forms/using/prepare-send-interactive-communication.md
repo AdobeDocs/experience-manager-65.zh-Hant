@@ -7,13 +7,27 @@ feature: Interactive Communication
 exl-id: 4fb82e9b-f870-47db-ac92-2d7510acace8
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: aa28c6c8-3ede-445b-a351-eeb0c9f9aec4
+    internal-label: Interactive Communication
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '2029'
 ht-degree: 0%
-
 ---
-
 # 使用Agent UI準備和傳送互動式通訊 {#prepare-and-send-interactive-communication-using-the-agent-ui}
 
 代理程式UI可讓代理程式準備互動式通訊，並將其傳送到發佈程式。 代理程式會視需要進行必要的修改，並將互動式通訊提交至發佈程式，例如電子郵件或列印。
@@ -71,8 +85,8 @@ ht-degree: 0%
 
    * [格式化選項](#formattingtext)
 
-      * [從其他應用程式複製貼上格式化文字](#pasteformattedtext)
-      * [反白部分文字](#highlightemphasize)
+     * [從其他應用程式複製貼上格式化文字](#pasteformattedtext)
+     * [反白部分文字](#highlightemphasize)
 
    * [特殊字元](#specialcharacters)
    * [鍵盤快速鍵](/help/forms/using/keyboard-shortcuts.md)
@@ -134,7 +148,7 @@ ht-degree: 0%
 
 ### 在文字中插入特殊字元 {#specialcharacters}
 
-Agent UI已內建對210個特殊字元的支援。 管理員可以透過自訂[&#128279;](/help/forms/using/custom-special-characters.md) 新增更多/自訂特殊字元的支援。
+Agent UI已內建對210個特殊字元的支援。 管理員可以透過自訂](/help/forms/using/custom-special-characters.md) [新增更多/自訂特殊字元的支援。
 
 #### 附件傳遞 {#attachmentdelivery}
 
@@ -146,7 +160,7 @@ Agent UI已內建對210個特殊字元的支援。 管理員可以透過自訂[&
 
 ### 檔案片段 {#document-fragments}
 
-![&#x200B; &#x200B;](do-not-localize/contentoptionsdocfragments.png)
+![ ](do-not-localize/contentoptionsdocfragments.png)
 
 * **向上/向下箭號**：在互動式通訊中向上或向下移動檔案片段的箭號。
 * **刪除**：如果允許，請從互動式通訊中刪除檔案片段。
@@ -180,7 +194,7 @@ Adobe建議依序執行這些指示，以成功將互動式通訊儲存為草稿
 
 預設不會啟用「另存為草稿」功能。 執行以下步驟來啟用此功能：
 
-1. 實作[ccrDocumentInstance](https://helpx.adobe.com/tw/experience-manager/6-5/forms/javadocs/com/adobe/fd/ccm/ccr/ccrDocumentInstance/api/services/CCRDocumentInstanceService.html)服務提供者介面(SPI)。
+1. 實作[ccrDocumentInstance](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/ccm/ccr/ccrDocumentInstance/api/services/CCRDocumentInstanceService.html)服務提供者介面(SPI)。
 
    SPI可讓您將互動式通訊的草稿版本儲存到資料庫，並將草稿ID儲存為唯一識別碼。 這些指示假設您擁有有關如何使用Maven專案建置OSGi套件的先前知識。
 

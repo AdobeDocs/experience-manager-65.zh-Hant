@@ -9,13 +9,31 @@ role: User, Admin,Developer
 exl-id: b0ac587b-8592-4d37-9ce0-98a0859c367f
 feature: Configuration,Rulesets
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: da0dfbce-df02-4f8b-b32d-a4e3b1d05085
+    internal-label: Configuration
+  - id: bd0d2470-932c-4269-8eca-6d939b72d9ef
+    internal-label: Dynamic Media
+subfeature_v2:
+  - id: 9e13e2c2-3788-53ff-a622-b0cb8a3a3622
+    internal-label: Rulesets
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
-source-wordcount: '747'
+source-wordcount: '748'
 ht-degree: 0%
-
 ---
-
 # 使用規則集轉換URL {#using-rulesets-to-transform-urls}
 
 您可以在Dynamic Media中部署規則集以轉換URL。 規則集是以指令碼語言（例如JavaScript）撰寫的指令集，可評估XML資料並在該資料符合特定條件時採取特定動作。 每個規則至少包含一個條件和至少一個動作。 規則會根據條件評估XML資料，如果符合條件，則會採取適當的動作。 規則集的範例包括：
@@ -41,14 +59,14 @@ ht-degree: 0%
 >使用規則集時請務必小心，因為規則集可能會導致Dynamic Media內容無法在您的網站上顯示。
 
 有些範例規則集可幫助您建立自己的規則集。
-請參閱[規則集參考](https://experienceleague.adobe.com/zh-hant/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/rule-set-reference/c-rule-set-reference)。
+請參閱[規則集參考](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/rule-set-reference/c-rule-set-reference)。
 
 與建立所有規則集時一樣，使用XML驗證器程式（例如xmlvalid）來上傳XML檔案之前，請確定該檔案有效。
 
 此外，請務必先在中繼環境中測試規則集，以免影響您的即時生產環境。
 生產環境和測試環境通常需要不同的登入。
 
-如需登入資訊，請參閱[Adobe Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/zh-hant/docs/dynamic-media-classic/using/getting-started/signing-out#sign-in-dmc-app)。
+如需登入資訊，請參閱[Adobe Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/en/docs/dynamic-media-classic/using/getting-started/signing-out#sign-in-dmc-app)。
 
 <!--
 OBSOLETE INFORMATION * **NA staging environment** login page: [https://s7sps1-staging.scene7.com/IpsWeb/](https://s7sps1-staging.scene7.com/IpsWeb/)
@@ -58,7 +76,7 @@ OBSOLETE INFORMATION * **NA staging environment** login page: [https://s7sps1-st
 
 **若要部署XML規則集：**
 
-1. 登入您的[Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/zh-hant/docs/dynamic-media-classic/using/getting-started/signing-out#sign-in-dmc-app)。
+1. 登入您的[Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/en/docs/dynamic-media-classic/using/getting-started/signing-out#sign-in-dmc-app)。
 
    布建時Adobe已提供您的憑證和登入詳細資訊。 如果您沒有這項資訊，請聯絡Adobe客戶支援。
 
@@ -76,9 +94,9 @@ OBSOLETE INFORMATION * **NA staging environment** login page: [https://s7sps1-st
 1. 在靠近頁面頂端的導覽列上，選取&#x200B;**[!UICONTROL 設定]** > **[!UICONTROL 應用程式設定]** > **[!UICONTROL 發佈設定]** > **[!UICONTROL 影像伺服器]**。
 1. 在&#x200B;**[!UICONTROL 影像伺服器發佈]**&#x200B;頁面的&#x200B;**[!UICONTROL 目錄管理]**&#x200B;群組下，找到&#x200B;**[!UICONTROL 規則集定義檔案路徑]**，然後選取&#x200B;**[!UICONTROL 選取]**。
 1. 在&#x200B;**[!UICONTROL 選取規則集定義檔案(XML)]**&#x200B;頁面上，瀏覽至您的規則集檔案，然後在頁面的右下角選取&#x200B;**[!UICONTROL 選取]**。
-1. In the lower-right corner of the Setup page, select **[!UICONTROL Close]**.
-1. Run an Image Server Publish job.
+1. 在[設定]頁面的右下角，選取&#x200B;**[!UICONTROL 關閉]**。
+1. 執行影像伺服器發佈工作。
 
-   The rule set conditions are applied on the requests to the live Dynamic Media Image Servers.
+   規則集條件會套用到即時Dynamic Media影像伺服器的要求。
 
-   If you change the rule set file, the changes are immediately applied when you reupload and republish the updated rule set file.
+   如果您變更規則集檔案，當您重新上傳並重新發佈更新的規則集檔案時，變更會立即套用。

@@ -9,13 +9,26 @@ exl-id: 187f3cde-a0db-4c02-9e8b-08272987a67d
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Developer
-source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '537'
 ht-degree: 4%
-
 ---
-
 # 內容洞察{#content-insight}
 
 內容Insight提供使用網頁分析和SEO建議的頁面效能相關資訊。 使用內容Insight來決定如何修改頁面，或瞭解先前的變更如何變更效能。 對於您編寫的每個頁面，都可以開啟「內容Insight」以分析頁面。
@@ -30,9 +43,9 @@ ht-degree: 4%
 
 * SiteCatalyst：下列量度的報表可供使用：
 
-   * 頁面檢視量
-   * 頁面平均逗留時間
-   * 來源
+  * 頁面檢視量
+  * 頁面平均逗留時間
+  * 來源
 
 * Target：頁面包含選件的促銷活動報表。
 * BrightEdge：報告可改善搜尋引擎頁面可見度的頁面功能，並建議應實作的功能。
@@ -62,8 +75,8 @@ ht-degree: 4%
 * 在報告期間，某個頁面的檢視總數。
 * 報告期間檢視次數的圖表：
 
-   * 檢視總數。
-   * 不重複訪客。
+  * 檢視總數。
+  * 不重複訪客。
 
 ![chlimage_1-312](assets/chlimage_1-312.png)
 

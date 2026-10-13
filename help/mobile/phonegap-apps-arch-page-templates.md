@@ -9,13 +9,17 @@ exl-id: 7f00d426-4d28-41ee-8c54-636349e48669
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '2649'
 ht-degree: 0%
-
 ---
-
 # 行動應用程式的頁面範本 {#page-templates-for-mobile-apps}
 
 {{ue-over-mobile}}
@@ -192,7 +196,7 @@ PhoneGap應用程式中任何指定資產的URI不僅會因平台而異，在應
 
 身為PhoneGap開發人員，您關注的內容位於www目錄下方。 若要存取應用程式資產，請使用相對路徑。
 
-為了解決複雜的問題，PhoneGap應用程式會使用單頁應用程式(SPA)模式，讓基本URI （雜湊除外）永不變更。 因此，您參考的每個資產、範本或指令碼&#x200B;**都必須是相對於您最上層頁面的物件。 &#x200B;** 最上層頁面會利用`<name>.angular-app-module.js`和`<name>.angular-app-controllers.js`將Angular路由及控制器初始化。 此頁面應該是*不會*延伸sling:redirect的最接近存放庫根的頁面。
+為了解決複雜的問題，PhoneGap應用程式會使用單頁應用程式(SPA)模式，讓基本URI （雜湊除外）永不變更。 因此，您參考的每個資產、範本或指令碼**都必須是相對於您最上層頁面的物件。 **最上層頁面會利用`<name>.angular-app-module.js`和`<name>.angular-app-controllers.js`將Angular路由及控制器初始化。 此頁面應該是*不會*延伸sling:redirect的最接近存放庫根的頁面。
 
 有數種協助程式方法可用於處理相對路徑：
 

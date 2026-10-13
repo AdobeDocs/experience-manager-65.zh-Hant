@@ -9,13 +9,27 @@ exl-id: b97175fd-cc3d-457a-af11-1f8c83192eb7
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 4d0fdb4b3128272d50252b52e5eda1b78cd7cae9
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '340'
 ht-degree: 0%
-
 ---
-
 # 將表單另存為範本 {#save-forms-as-templates}
 
 >[!NOTE]
@@ -30,7 +44,7 @@ ht-degree: 0%
 1. 選取&#x200B;**另存為範本** ![save_as_template](assets/save_as_template.png)圖示。 會出現一個對話方塊，指定範本的名稱。
 1. 指定範本的名稱，並選取&#x200B;**儲存**。 範本會顯示在範本資料夾中。
 
-   如果存在相同名稱的範本，則會出現一個對話方塊，確認覆寫現有範本。 若要以新範本取代現有的範本，請選取[繼續]&#x200B;**&#x200B;**，若要以其他名稱儲存範本，請選取[取消]&#x200B;**&#x200B;**。
+   如果存在相同名稱的範本，則會出現一個對話方塊，確認覆寫現有範本。 若要以新範本取代現有的範本，請選取[繼續]****，若要以其他名稱儲存範本，請選取[取消]****。
 
 現在，您可以開啟已儲存的範本。 每次開啟範本時，都會建立新表單或任務，且表單會顯示儲存的資料和選項。 使用範本，您可以編輯預填的資料、新增附件、另存為草稿、提交任務或使用它建立另一個範本。 範本是行動裝置專屬且未與Adobe Experience Manager Forms伺服器同步。
 

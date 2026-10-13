@@ -8,13 +8,17 @@ exl-id: 5f050baa-fe10-4acc-ad32-de20793edc13
 solution: Experience Manager
 feature: Mobile
 role: User
-source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1160'
 ht-degree: 1%
-
 ---
-
 # 建立和新增範本和元件 {#creating-and-adding-templates-and-components}
 
 {{ue-over-mobile}}
@@ -75,10 +79,10 @@ Unlimited文章是範例範本，代表典型的AEM Mobile隨選文章版面。
 1. 在&#x200B;**管理文章**&#x200B;中，選取&#x200B;**+**&#x200B;以建立文章。 您可以選擇&#x200B;**無限制文章**&#x200B;或&#x200B;**RTF文章**。 下圖顯示的選項可讓您從這兩個文章範本的任何一個中進行選擇。
 
 1. 按一下&#x200B;**下一步**&#x200B;以定義文章中繼資料，例如文章名稱/標題、說明、作者、摘要、部門、縮圖影像、文章存取權等。
-1. 按一下[下一步]&#x200B;**&#x200B;**&#x200B;填入廣告內容。
+1. 按一下[下一步]****&#x200B;填入廣告內容。
 1. 按一下&#x200B;**下一步**&#x200B;以輸入文章影像或社群媒體影像
-1. 按一下[下一步]&#x200B;**&#x200B;**，選擇此新文章的集合連結。
-1. 按一下[下一步]&#x200B;**&#x200B;**&#x200B;輸入社交分享的詳細資料。
+1. 按一下[下一步]****，選擇此新文章的集合連結。
+1. 按一下[下一步]****&#x200B;輸入社交分享的詳細資料。
 1. 按一下&#x200B;**建立**，完成使用範例建立文章的程式。 您可以按一下&#x200B;**完成**&#x200B;或&#x200B;**編輯文章**&#x200B;來編輯此文章的內容。
 
 ![chlimage_1-71](assets/chlimage_1-71.png)
@@ -87,7 +91,7 @@ Unlimited文章是範例範本，代表典型的AEM Mobile隨選文章版面。
 
 建立後，作者可以新增文字和影像等元件來編輯文章內容。 文章是AEM頁面範本的擴充功能。
 
-選取要編輯的文章，然後按一下[編輯] **&#x200B;**&#x200B;將元件新增至文章。
+選取要編輯的文章，然後按一下[編輯] ****&#x200B;將元件新增至文章。
 
 ![chlimage_1-72](assets/chlimage_1-72.png) ![chlimage_1-73](assets/chlimage_1-73.png)
 

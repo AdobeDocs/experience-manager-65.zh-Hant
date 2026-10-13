@@ -10,13 +10,26 @@ exl-id: ef1a3997-feb4-4cb0-9396-c8335b69bb10
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Developer
-source-git-commit: 174d9e7466002e209422fefdc32a363a98dc99f9
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '3122'
 ht-degree: 4%
-
 ---
-
 # 基本處理{#basic-handling}
 
 >[!NOTE]
@@ -122,7 +135,7 @@ AEM的使用者介面已啟用觸控功能。 觸控式介面可讓您使用觸�
   </tr>
   <tr>
    <td>Screens</td>
-   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/authoring/setting-up-projects/creating-a-screens-project.html?lang=zh-Hant">Screens</a>可讓您管理任何地點、任何大小的面向客戶的所有熒幕。</td>
+   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/authoring/setting-up-projects/creating-a-screens-project.html">Screens</a>可讓您管理任何地點、任何大小的面向客戶的所有熒幕。</td>
   </tr>
   <tr>
    <td>Sites</td>
@@ -155,7 +168,7 @@ AEM的使用者介面已啟用觸控功能。 觸控式介面可讓您使用觸�
 
   您也可以使用[捷徑鍵](/help/sites-authoring/keyboard-shortcuts.md) `/` （正斜線）從任何主控台叫用搜尋。
 
-* [解決方案](https://business.adobe.com/tw/)
+* [解決方案](https://business.adobe.com/)
 
   ![解決方案](do-not-localize/screen_shot_2018-03-23at103552.png)
 
@@ -451,14 +464,14 @@ AEM的使用者介面已啟用觸控功能。 觸控式介面可讓您使用觸�
 
   ![卡片檢視 — 快速動作](assets/bh-13-1.png)
 
-* 您可以點選/按一下卡片來向下瀏覽樹狀結構（注意避免快速動作），或使用標頭[&#128279;](/help/sites-authoring/basic-handling.md#the-header)中的階層連結來再次向上瀏覽。
+* 您可以點選/按一下卡片來向下瀏覽樹狀結構（注意避免快速動作），或使用標頭](/help/sites-authoring/basic-handling.md#the-header)中的[階層連結來再次向上瀏覽。
 
 ### 清單檢視 {#list-view}
 
 ![清單檢視](assets/bh-19.png)
 
 * 清單檢視會列出目前層級中每個資源的資訊。
-* 您可以點選/按一下資源名稱，然後使用標頭[&#128279;](/help/sites-authoring/basic-handling.md#the-header)中的階層連結進行備份，在樹狀結構中向下導覽。
+* 您可以點選/按一下資源名稱，然後使用標頭](/help/sites-authoring/basic-handling.md#the-header)中的[階層連結進行備份，在樹狀結構中向下導覽。
 
 * 若要輕鬆選取清單中的所有專案，請使用清單左上方的核取方塊。
 

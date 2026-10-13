@@ -9,13 +9,24 @@ feature: Document Security
 exl-id: fe132f13-5f9a-4c86-a385-0a0026c812e2
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: 579c90bb4d8ee8a3b7e633ecc9fb0b797b297ca2
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 50158d81-1c06-57f7-8bd7-e8ff76a93f85
+    internal-label: Document Security
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '10377'
+source-wordcount: '10381'
 ht-degree: 0%
-
 ---
-
 # 設定Document Security伺服器 {#configure-the-document-security-server}
 
 >[!NOTE]
@@ -474,10 +485,10 @@ Document Security可追蹤在受保護檔案上可能執行的各種自訂事件
 * 您無法使用受密碼保護的PDF檔案作為浮水印元素。
 * Acrobat和Adobe Reader 10舊版不支援下列浮水印功能：
 
-   * PDF浮水印
-   * 浮水印中的多個元素（文字/PDF）
-   * 進階選項，例如頁面範圍或顯示選項
-   * 文字格式選項，例如指定的字型、字型名稱和顏色。 不過，舊版Acrobat和Reader將會以預設字型和顏色顯示文字內容。
+  * PDF浮水印
+  * 浮水印中的多個元素（文字/PDF）
+  * 進階選項，例如頁面範圍或顯示選項
+  * 文字格式選項，例如指定的字型、字型名稱和顏色。 不過，舊版Acrobat和Reader將會以預設字型和顏色顯示文字內容。
 
 * Acrobat 9.0和更早版本： Acrobat 9.0和更早版本不支援動態浮水印中的原則名稱。 如果Acrobat 9.0開啟含有動態浮水印的受原則保護檔案，其中包含原則名稱和其他動態資料，則浮水印不會顯示在原則名稱旁。 如果動態浮水印僅包含原則名稱，Acrobat會顯示錯誤訊息
 
@@ -526,7 +537,7 @@ Document Security可追蹤在受保護檔案上可能執行的各種自訂事件
 
    選取您要讓浮水印顯示的位置。 依預設，浮水印會同時出現在軟復本（線上）和硬復本（列印）上。
 
-1. 按一下[浮水印元素]下的[新增&#x200B;**&#x200B;**]，視需要新增更多浮水印元素。
+1. 按一下[浮水印元素]下的[新增&#x200B;****]，視需要新增更多浮水印元素。
 1. 按一下「確定」。
 
 ### 編輯動態浮水印範本 {#edit-a-dynamic-watermark-template}

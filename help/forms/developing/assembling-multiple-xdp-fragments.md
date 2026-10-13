@@ -11,13 +11,27 @@ role: Developer
 exl-id: 54d98c69-2b2e-46cb-9f6a-7e9bdbe5c378
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Services
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+  - id: f19cff18-c8cc-4a4b-adad-85dd2fa3dbe2
+    internal-label: Document Services
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1886'
 ht-degree: 0%
-
 ---
-
 # 組合多個XDP片段{#assembling-multiple-xdp-fragments}
 
 您可以將多個XDP片段組合成一個XDP檔案。 例如，考慮每個XDP檔案包含一個或多個用於建立健康情況表單的子表單的XDP片段。 下圖顯示大綱檢視（代表&#x200B;*組裝多個XDP片段*&#x200B;快速入門中使用的tuc018_template_flowed.xdp檔案）：
@@ -176,8 +190,8 @@ DDX檔案包含指定結果名稱的XDP `result`標籤。 在此情況下，值�
    * 建立`com.adobe.idp.Document`物件並傳遞包含輸入XDP檔案的`java.io.FileInputStream`物件（對每個XDP檔案重複此工作）。
    * 透過叫用物件的`put`方法並傳遞下列引數，將專案新增至`java.util.Map`物件：
 
-      * 代表索引鍵名稱的字串值。 此值必須符合DDX檔案中指定的`source`元素值（對每個XDP檔案重複此工作）。
-      * 包含對應至`source`專案之XDP檔案的`com.adobe.idp.Document`物件（對每個XDP檔案重複此工作）。
+     * 代表索引鍵名稱的字串值。 此值必須符合DDX檔案中指定的`source`元素值（對每個XDP檔案重複此工作）。
+     * 包含對應至`source`專案之XDP檔案的`com.adobe.idp.Document`物件（對每個XDP檔案重複此工作）。
 
 1. 設定執行階段選項。
 
@@ -233,10 +247,10 @@ DDX檔案包含指定結果名稱的XDP `result`標籤。 在此情況下，值�
    * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作來啟用基本的HTTP驗證：
 
-      * 將AEM表單使用者名稱指派給`AssemblerServiceClient.ClientCredentials.UserName.UserName`欄位。
-      * 將對應的密碼值指派給`AssemblerServiceClient.ClientCredentials.UserName.Password`欄位。
-      * 將`HttpClientCredentialType.Basic`常數值指派給`BasicHttpBindingSecurity.Transport.ClientCredentialType`欄位。
-      * 將`BasicHttpSecurityMode.TransportCredentialOnly`常數值指派給`BasicHttpBindingSecurity.Security.Mode`欄位。
+     * 將AEM表單使用者名稱指派給`AssemblerServiceClient.ClientCredentials.UserName.UserName`欄位。
+     * 將對應的密碼值指派給`AssemblerServiceClient.ClientCredentials.UserName.Password`欄位。
+     * 將`HttpClientCredentialType.Basic`常數值指派給`BasicHttpBindingSecurity.Transport.ClientCredentialType`欄位。
+     * 將`BasicHttpSecurityMode.TransportCredentialOnly`常數值指派給`BasicHttpBindingSecurity.Security.Mode`欄位。
 
 1. 參考現有的DDX檔案。
 

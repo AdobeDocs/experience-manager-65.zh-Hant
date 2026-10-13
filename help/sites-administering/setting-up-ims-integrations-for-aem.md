@@ -4,19 +4,31 @@ description: 瞭解如何設定AEM的IMS整合
 feature: Security
 role: Admin
 exl-id: 3c6dbb7e-847f-407b-ac9c-4676dba671a5
-source-git-commit: f96b178ae84b4b930b59e36d4994970682c53dbd
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e14eb250-3c22-4a07-9061-a78112b2b826
+    internal-label: Experience Manager 6.5
+feature_v2:
+  - id: b1210526-416b-4ef6-bcc0-1692e99f30e9
+    internal-label: Administration and security
+subfeature_v2:
+  - id: c35bc059-fd80-4a01-91a6-e48da3c76758
+    internal-label: Security practices
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '432'
-ht-degree: 62%
-
+source-wordcount: '504'
+ht-degree: 55%
 ---
-
 # 為AEM設定IMS整合 {#setting-up-ims-integrations-for-aem}
 
 
 >[!NOTE]
 >
->Adobe客戶使用[Adobe Developer Console](https://developer.adobe.com/console)產生可存取各種API的認證。 客戶可以選擇各種認證類型，包括 OAuth 伺服器到伺服器和單頁應用程式。認證型別服務帳戶(JWT)現在已遭取代，改用Service Pack 20的OAuth伺服器對伺服器認證。 此變更可重新移植到較舊的Service Pack，從Service Pack 11到Service Pack 20，並使用您可以[下載](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/ims-jwt-compatibility-package-6.5-1.0.zip)的Hotfix。
+>Adobe客戶使用[Adobe Developer Console](https://developer.adobe.com/console)產生可存取各種API的認證。 客戶可以選擇各種認證類型，包括 OAuth 伺服器到伺服器和單頁應用程式。 認證型別服務帳戶(JWT)現在已遭取代，改用Service Pack 20的OAuth伺服器對伺服器認證。 此變更可重新移植到較舊的Service Pack，從Service Pack 11到Service Pack 20，並使用您可以[下載](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/ims-jwt-compatibility-package-6.5-1.0.zip)的Hotfix。
 
 Adobe Experience Manager (AEM)可與許多其他Adobe解決方案整合。 例如 Adobe Target、Adobe Analytics 等。
 
@@ -24,13 +36,13 @@ Adobe Experience Manager (AEM)可與許多其他Adobe解決方案整合。 例�
 
 * 建立之後：
 
-   * [Developer Console 中的認證](#credentials-in-the-developer-console)
+  * [Developer Console 中的認證](#credentials-in-the-developer-console)
 
 * 就可以：
 
-   * 建立 (新的) [OAuth 設定](#creating-oauth-configuration)
+  * 建立 (新的) [OAuth 設定](#creating-oauth-configuration)
 
-   * [將現有 JWT 設定移轉到 OAuth 設定](#migrating-existing-JWT-configuration-to-oauth)
+  * [將現有 JWT 設定移轉到 OAuth 設定](#migrating-existing-JWT-configuration-to-oauth)
 
 >[!CAUTION]
 >
@@ -46,15 +58,15 @@ Adobe Experience Manager (AEM)可與許多其他Adobe解決方案整合。 例�
 
 * 概觀：
 
-   * [伺服器對伺服器驗證](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/)
+  * [伺服器對伺服器驗證](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/)
 
 * 建立新的 OAuth 認證：
 
-   * [OAuth 伺服器對伺服器認證實作指南](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation)
+  * [OAuth伺服器對伺服器認證實作指南](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation)
 
 * 將現有 JWT 認證移轉到 OAuth 認證：
 
-   * [從服務帳戶 (JWT) 認證移轉至 OAuth 伺服器對伺服器認證](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration)
+  * [從服務帳戶(JWT)認證移轉至OAuth伺服器對伺服器認證](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration)
 
 例如：
 
@@ -68,7 +80,7 @@ Adobe Experience Manager (AEM)可與許多其他Adobe解決方案整合。 例�
 
 1. 選取「**建立**」。
 
-1. 根據 [Developer Console](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation) 中的詳細資訊完成設定。例如：
+1. 根據 [Developer Console](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation) 中的詳細資訊完成設定。 例如：
 
    ![建立 OAuth 設定](assets/ims-create-oauth-configuration.png)
 
@@ -84,7 +96,7 @@ Adobe Experience Manager (AEM)可與許多其他Adobe解決方案整合。 例�
 
 1. 在 AEM 中，導覽至「**工具**」、「**安全性**」、「**Adobe IMS 整合**」。
 
-1. 選取需要移轉的 JWT 設定。JWT 設定以「**JWT 認證 (已淘汰)**」警告標示。
+1. 選取需要移轉的 JWT 設定。 JWT 設定以「**JWT 認證 (已淘汰)**」警告標示。
 
 1. 選取「**屬性**」：
 

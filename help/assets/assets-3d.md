@@ -13,20 +13,32 @@ autotag-review: '2026-05-18T18:43:11.851Z'
 TQID: 'https://experienceleague.adobe.com/Qejzp9vTp-wLn92GsZdPdKEdA-84PnmYIROxdVrB4MU'
 product_v2:
   - id: e14eb250-3c22-4a07-9061-a78112b2b826
+    internal-label: Experience Manager 6.5
   - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: fa7b95c2-9969-5924-a7c7-8cde1e7a2e26
+    internal-label: 3D Assets
+  - id: 7d2b2ec8-499c-5434-9ffd-9218cd71f683
+    internal-label: Asset Management
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
 level_v2:
   - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-source-git-commit: 9c96b6744c7af2f061b4dfbf403560047485f9b5
+    internal-label: Metadata
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: 2419
+source-wordcount: '2419'
 ht-degree: 2%
-
 ---
-
 # 在Dynamic Media中使用3D資產 {#working-with-three-d-assets-dm}
 
 Dynamic Media可讓您上傳、管理、檢視及傳送3D資產，盡享沈浸式體驗。
@@ -47,12 +59,12 @@ Dynamic Media支援下列3D格式。
 
 另請參閱[支援的3D格式](/help/assets/assets-formats.md)。
 
-| 3D副檔名 | 檔案格式 | MIME型別 | 備註 |
+| 3D副檔名 | 檔案格式 | MIME 類型 | 備註 |
 |---|---|---|---|
 | GLB | 二進位GL傳輸 | model/gltf-binary | 將材質和紋理納入為單一資產。 |
-| 物件 | WaveFront 3D物件檔案 | application/x-tgif |  |
+| OBJ | WaveFront 3D物件檔案 | application/x-tgif |  |
 | STL | 立體成型 | application/vnd.ms-pki.stl |  |
-| USDZ | Universal Scene說明Zip封存 | model/vnd.usdz+zip | *僅支援擷取；無法使用檢視或互動。* USDZ是專屬的3D格式，可供Safari和iOS裝置原生檢視。 |
+| USDZ | Universal Scene Description Zip封存 | model/vnd.usdz+zip | *僅支援擷取；無法使用檢視或互動。* USDZ是專屬的3D格式，可供Safari和iOS裝置原生檢視。 |
 
 >[!NOTE]
 >
@@ -68,7 +80,7 @@ Dynamic Media支援下列3D格式。
 
 在Dynamic Media中使用3D資產之前，請確定Experience Manager管理員已在Dynamic Media - Scene7模式下啟用並設定Dynamic Media雲端服務。
 
-請參閱[&#128279;](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services)設定Dynamic Media - Scene7模式和[疑難排解Dynamic Media - Scene7模式](/help/assets/troubleshoot-dms7.md)中的Dynamic Media雲端服務。
+請參閱[設定Dynamic Media - Scene7模式和[疑難排解Dynamic Media - Scene7模式](/help/assets/troubleshoot-dms7.md)中的Dynamic Media雲端服務](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services)。
 
 1. **上傳3D資產**
 
@@ -79,19 +91,19 @@ Dynamic Media支援下列3D格式。
 
    * 組織和搜尋3D資產
 
-      * [組織數位資產](/help/assets/organize-assets.md#organize-digital-assets)。
-      * [搜尋3D資產](/help/assets/search-assets.md)。
-      * [使用自訂述詞來篩選搜尋結果](/help/assets/search-assets.md#custompredicates)。
+     * [組織數位資產](/help/assets/organize-assets.md#organize-digital-assets)。
+     * [搜尋3D資產](/help/assets/search-assets.md)。
+     * [使用自訂述詞來篩選搜尋結果](/help/assets/search-assets.md#custompredicates)。
 
    * 檢視三維資產
 
-      * [檢視及與3D資產互動](#viewing-three-d-assets)。
-      * [管理維度檢視器預設集](/help/assets/managing-viewer-presets.md)。
+     * [檢視及與3D資產互動](#viewing-three-d-assets)。
+     * [管理維度檢視器預設集](/help/assets/managing-viewer-presets.md)。
 
    * 使用3D資產中繼資料
 
-      * [管理數位資產的中繼資料](/help/assets/metadata.md)。
-      * [中繼資料結構](/help/assets/metadata-schemas.md)。
+     * [管理數位資產的中繼資料](/help/assets/metadata.md)。
+     * [中繼資料結構](/help/assets/metadata-schemas.md)。
 
 1. **發佈3D資產**
 
@@ -163,7 +175,7 @@ Dynamic Media支援下列3D格式。
    * 從瀏覽器中的頁面URL刪除`/editor.html`。
 
    顯示3D媒體元件內的![3D資產](/help/assets/assets-dm/3d-asset-in-3d-media.png)
-以&#x200B;**[!UICONTROL 預覽]**&#x200B;模式顯示的完全互動式3D資產。
+   以**[!UICONTROL 預覽]**&#x200B;模式顯示的完全互動式3D資產。
 
 1. 在&#x200B;**[!UICONTROL 預覽]**&#x200B;模式中時，請執行下列任一項動作：
 
@@ -182,7 +194,7 @@ Dynamic Media包含Dynamic Media 3D Media元件，您可以在Adobe Experience M
 
 * [將3D媒體元件新增至頁面範本](#adding-three-d-media-component-to-page-template)
 * [將3D媒體元件新增至網頁](#adding-the-three-d-media-component-to-a-web-page)
-   * [可選 — 設定3D媒體元件](#configuring-the-three-d-component)
+  * [可選 — 設定3D媒體元件](#configuring-the-three-d-component)
 * [將3D資產指派給3D媒體元件](#assigning-a-three-d-asset-to-the-component)
 
 ## 將3D媒體元件新增至頁面範本 {#adding-three-d-media-component-to-page-template}
@@ -264,7 +276,7 @@ Dynamic Media接受Dynamic Media支援的各種3D檔案格式為&#x200B;*靜態�
 
 另請參閱[取得靜態資產的URL](/help/assets/linking-urls-to-yourwebapplication.md#obtaining-a-url-for-a-static-asset)。
 
-在&#x200B;**[!UICONTROL 卡片檢視]**&#x200B;中，資產名稱正下方及其日期和時間左側會顯示一個小型全球圖示，以指出資產已發佈。 在「清 **[!UICONTROL 單檢視]**」中，「已發佈」 **&#x200B;**&#x200B;欄會指出已發佈或未發佈的資產。
+在&#x200B;**[!UICONTROL 卡片檢視]**&#x200B;中，資產名稱正下方及其日期和時間左側會顯示一個小型全球圖示，以指出資產已發佈。 在「清 **[!UICONTROL 單檢視]**」中，「已發佈」 **** 欄會指出已發佈或未發佈的資產。
 
 如果您使用Experience Manager做為WCM，請使用此發佈方法直接在網頁上新增Dynamic Media 3D資產。
 
@@ -274,7 +286,7 @@ Dynamic Media接受Dynamic Media支援的各種3D檔案格式為&#x200B;*靜態�
 
 **若要發佈靜態Dynamic Media 3D資產：**
 
-1. 開啟3D資產（GLB、OBJ或STL檔案格式），以便您可以在資產詳細資訊頁面中檢視它。
+1. 開啟3D資產（GLB、OBJ或STL檔案格式），以便您在資產詳細資訊頁面中檢視它。
 1. 在工具列上，選取&#x200B;**[!UICONTROL 快速發佈]**。
 
    ![3d-asset-quick-publish](/help/assets/assets-dm/3d-asset-quick-publish.png)

@@ -10,13 +10,17 @@ exl-id: 2cadd9c5-4335-48d0-8d1c-941fca717409
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '2955'
 ht-degree: 0%
-
 ---
-
 # 具有內容同步功能的行動裝置{#mobile-with-content-sync}
 
 {{ue-over-mobile}}
@@ -157,7 +161,7 @@ Day CQ Content Sync Manager服務可控制Content Sync的存取權。 設定此�
 * **deep** — 決定是否也應該包含子頁面的選用布林屬性。 預設值為&#x200B;*true。*
 
 * **includeImages** — 決定是否應包含影像的選用布林屬性。 預設值為&#x200B;*true*。
-依預設，只有資源型別為foundation/components/image的影像元件才會被視為包含。 您可以在Web主控台中設定&#x200B;**Day CQ WCM Pages更新處理常式**，以新增更多資源型別。
+依預設，只有資源型別為foundation/components/image的影像元件才會被視為包含。 您可以在Web主控台中設定**Day CQ WCM Pages更新處理常式**，以新增更多資源型別。
 
 **rewrite** — 重寫節點會定義如何在匯出的頁面中重寫連結。 重寫的連結可以指向zip檔案中包含的檔案或伺服器上的資源。
 

@@ -10,7 +10,18 @@ exl-id: 7ff92872-697c-4e66-b654-15314a8cb429
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '4964'
 ht-degree: 1%
@@ -64,13 +75,13 @@ ht-degree: 1%
 
 Adobe建議將負責標籤和轉譯的程式碼，與控制用來選取元件內容之邏輯的程式碼分開。
 
-[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=zh-Hant)支援此理念，這是一種範本化語言，刻意加以限制，以確保使用真正的程式語言來定義基礎商業邏輯。 此（選用）邏輯會使用特定命令從HTL叫用。 此機制會醒目顯示呼叫特定檢視的程式碼，並在必要時允許同一元件的不同檢視使用特定邏輯。
+[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)支援此理念，這是一種範本化語言，刻意加以限制，以確保使用真正的程式語言來定義基礎商業邏輯。 此（選用）邏輯會使用特定命令從HTL叫用。 此機制會醒目顯示呼叫特定檢視的程式碼，並在必要時允許同一元件的不同檢視使用特定邏輯。
 
 ### HTL與JSP {#htl-vs-jsp}
 
 HTL是AEM 6.0引進的HTML範本語言。
 
-關於在開發您自己的元件時是使用[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=zh-Hant)或JSP (Java™ Server Pages)的討論應該簡單明瞭，因為HTL現在是建議的AEM指令碼語言。
+關於在開發您自己的元件時是使用[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)或JSP (Java™ Server Pages)的討論應該簡單明瞭，因為HTL現在是建議的AEM指令碼語言。
 
 HTL和JSP都可用來開發傳統和觸控式UI的元件。 雖然我們可能會傾向於假設HTL僅適用於觸控式UI和適用於傳統UI的JSP，但這只是誤解，而且更受時機的影響。 觸控式UI和HTL大約在同一期間併入AEM。 由於HTL現在是建議的語言，因此它被用於新元件，而新元件傾向於用於觸控式UI。
 
@@ -597,7 +608,7 @@ AEM中的元件受到三個不同階層的限制：
 
   `//element(cq:editConfig, cq:EditConfig)[@cq:actions]`
 
-* 若要尋找`cq:editConfig`的子節點，例如，您可以搜尋`cq:dropTargets`，其型別為`cq:DropTargetConfig`；您可以在 **&#x200B; CRXDE Lite**&#x200B;中使用查詢工具，並使用下列XPath查詢字串進行搜尋：
+* 若要尋找`cq:editConfig`的子節點，例如，您可以搜尋`cq:dropTargets`，其型別為`cq:DropTargetConfig`；您可以在** CRXDE Lite**中使用查詢工具，並使用下列XPath查詢字串進行搜尋：
 
   `//element(cq:dropTargets, cq:DropTargetConfig)`
 

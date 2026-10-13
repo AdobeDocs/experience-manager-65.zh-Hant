@@ -8,13 +8,17 @@ exl-id: f0c543ae-33ed-40bb-9eb7-0dc3bdea69e0
 solution: Experience Manager
 feature: Mobile
 role: Developer
-source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '547'
-ht-degree: 5%
-
+source-wordcount: '571'
+ht-degree: 4%
 ---
-
 # 呈現和傳遞{#rendering-and-delivery}
 
 {{ue-over-mobile}}
@@ -156,7 +160,7 @@ Content Services Default Renderer可填補現成Sling預設和自訂開發之間
    <td>String[] </td>
    <td>-</td>
    <td>sling:resourceType</td>
-   <td>對於下列sling資源型別，請勿傳回預設的CaaS json匯出。<br />將資源轉譯為；<br /> &lt;RESOURCE&gt;以傳回客戶json匯出。&lt;SELECTOR_TO_INC&gt;.json </td>
+   <td>對於下列sling資源型別，請勿傳回預設的CaaS json匯出。<br /> 將資源轉譯為；<br /> &lt;RESOURCE&gt;，以傳回客戶json匯出。&lt;SELECTOR_TO_INC&gt;.json </td>
   </tr>
  </tbody>
 </table>
@@ -172,7 +176,7 @@ Content Services包含兩個匯出設定：
 
 如果在要求的URI中指定了設定，則會套用Content Services預設匯出設定。
 
-&lt;RESOURCE>.caas[。&lt;DEPTH-INT>].json
+&lt;RESOURCE>.caas[.&lt;DEPTH-INT>].json
 
 <table>
  <tbody>
@@ -219,7 +223,7 @@ Content Services包含兩個匯出設定：
 
 此組態會延伸預設值，以包含子節點下的群組子項。
 
-&lt;SITE_PAGE>.caas.page[。&lt;DEPTH-INT>].json
+&lt;SITE_PAGE>.caas.page[.&lt;DEPTH-INT>].json
 
 ### 其他資源 {#additional-resources}
 

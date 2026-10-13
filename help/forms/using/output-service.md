@@ -1,6 +1,6 @@
 ---
 title: 輸出服務
-description: 說明Output Service，它是AEM Document Services的一部分
+description: 說明輸出服務，此服務隸屬於AEM檔案服務
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
@@ -9,13 +9,31 @@ feature: Document Services,Output Service
 exl-id: 82b0293a-711f-4769-9b11-b4cff4fec021
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 9cc5e18e-2002-58a1-befa-285122cf6653
+    internal-label: Output Service
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: f19cff18-c8cc-4a4b-adad-85dd2fa3dbe2
+    internal-label: Document Services
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '511'
+source-wordcount: '519'
 ht-degree: 5%
-
 ---
-
 # 輸出服務{#output-service}
 
 ## 概觀 {#overview}
@@ -39,7 +57,7 @@ Output 服務可讓您建立以下用途的應用程式：
 
 通常使用AEM Forms Designer來建立範本。 Output服務的`generatePDFOutput`和`generatePrintedOutput` API可讓您直接將這些範本轉換為各種格式，包括PDF、PostScript、ZPL和PCL。
 
-`generatePDFOutput`作業產生PDF，而`generatePrintedOutput`作業產生PostScript、ZPL及PCL格式。 這兩個操作的第一個引數接受範本檔案的名稱（例如，`ExpenseClaim.xdp`）或包含範本的Document物件。 當您指定範本檔案的名稱時，請將內容根目錄指定為包含範本的資料夾的路徑。 您可以使用`PDFOutputOptions`或`PrintedOutputOptions`引數來指定內容根目錄。 請參閱Javadoc以取得您可以使用這些引數指定之其他選項的詳細資訊。
+`generatePDFOutput`作業產生PDF，而`generatePrintedOutput`作業產生PostScript、ZPL和PCL格式。 這兩個操作的第一個引數接受範本檔案的名稱（例如，`ExpenseClaim.xdp`）或包含範本的Document物件。 當您指定範本檔案的名稱時，請將內容根目錄指定為包含範本的資料夾的路徑。 您可以使用`PDFOutputOptions`或`PrintedOutputOptions`引數來指定內容根目錄。 請參閱Javadoc以取得您可以使用這些引數指定之其他選項的詳細資訊。
 
 第二個引數會接受在產生輸出檔案時與範本合併的XML檔案。
 

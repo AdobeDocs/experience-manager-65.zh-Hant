@@ -11,13 +11,31 @@ exl-id: f59f12a2-ecd6-49cf-90ad-621719fe51bf
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Launches
 role: User,Admin,Developer
-source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+  - id: a642c50e-80eb-4fc1-a5d2-f3762d1f841d
+    internal-label: Administration
+subfeature_v2:
+  - id: e2cac356-c071-4141-ad6f-827893261a16
+    internal-label: Launches
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '774'
 ht-degree: 1%
-
 ---
-
 # 提升啟動{#promoting-launches}
 
 您必須提升啟動頁面，才能在發佈前將內容移回來源（生產環境）。 提升啟動頁面時，來源頁面的對應頁面會取代為提升頁面的內容。 提升啟動頁面時，可使用下列選項：
@@ -55,29 +73,29 @@ ht-degree: 1%
 
    * **網站**&#x200B;主控台：
 
-      1. 開啟[參考邊欄](/help/sites-authoring/author-environment-tools.md#showingpagereferences)，然後使用[選取模式](/help/sites-authoring/basic-handling.md)來選取必要的來源頁面（或者選取並開啟參考邊欄，順序並不重要）。 所有參照都會顯示。
+     1. 開啟[參考邊欄](/help/sites-authoring/author-environment-tools.md#showingpagereferences)，然後使用[選取模式](/help/sites-authoring/basic-handling.md)來選取必要的來源頁面（或者選取並開啟參考邊欄，順序並不重要）。 所有參照都會顯示。
 
-      1. 選取&#x200B;**啟動** (例如「啟動(1)」)以顯示特定啟動清單。
-      1. 選取特定啟動項以顯示可用的動作。
-      1. 選取&#x200B;**提升啟動**&#x200B;以開啟精靈。
+     1. 選取&#x200B;**啟動** (例如「啟動(1)」)以顯示特定啟動清單。
+     1. 選取特定啟動項以顯示可用的動作。
+     1. 選取&#x200B;**提升啟動**&#x200B;以開啟精靈。
 
    * **啟動**&#x200B;主控台：
 
-      1. 選取您的啟動項（按一下縮圖）。
-      1. 選取&#x200B;**升級**。
+     1. 選取您的啟動項（按一下縮圖）。
+     1. 選取&#x200B;**升級**。
 
 1. 在第一個步驟中，您可以指定：
 
    * **Target**
 
-      * **促銷活動後刪除啟動項**
+     * **促銷活動後刪除啟動項**
 
    * **領域**
 
-      * **提升完整啟動項**
-      * **提升已修改的頁面**
-      * **升級目前頁面**
-      * **提升目前頁面和子頁面**
+     * **提升完整啟動項**
+     * **提升已修改的頁面**
+     * **升級目前頁面**
+     * **提升目前頁面和子頁面**
 
    例如，當選取僅提升已修改的頁面時：
 
@@ -117,19 +135,19 @@ ht-degree: 1%
 
    * **Target**
 
-      * **促銷目標**
-您可以升級至任何來源。
+     * **促銷活動目標**
+       您可以升級至任何來源。
 
-      * **促銷活動後刪除啟動項**
-提升後，選取的啟動項以及巢狀內嵌的所有啟動項都會被刪除。
+     * **促銷活動後刪除啟動**
+       提升後，選取的啟動項以及巢狀內嵌的所有啟動項都會被刪除。
 
-   * **領域**
-您可以在此處選擇是提升整個啟動，還是僅提升已實際編輯的頁面。 如果是後者，您就可以選取包含/排除子頁面。 預設設定為僅提升目前頁面的頁面變更：
+   * **範圍**
+     您可以在此處選擇是提升整個啟動，還是僅提升已實際編輯的頁面。 如果是後者，您就可以選取包含/排除子頁面。 預設設定為僅提升目前頁面的頁面變更：
 
-      * **提升完整啟動項**
-      * **提升已修改的頁面**
-      * **升級目前頁面**
-      * **提升目前頁面和子頁面**
+     * **提升完整啟動項**
+     * **提升已修改的頁面**
+     * **升級目前頁面**
+     * **提升目前頁面和子頁面**
 
    ![提升啟動項的設定](assets/chlimage_1-105.png)
 

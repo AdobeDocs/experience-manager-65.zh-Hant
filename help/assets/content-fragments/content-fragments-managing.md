@@ -5,13 +5,25 @@ feature: Content Fragments
 role: User
 exl-id: 25c91a85-06ff-4666-a809-46778a689e25
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 11a8181e860c724c817dd549b351df079c8227e2
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: a45b1e7f-e65f-4cd3-be86-5cec5d9449ef
+    internal-label: Content management
+subfeature_v2:
+  - id: b7f5d1e0-aa2f-4a55-83f4-c2b35a8bd3a7
+    internal-label: Content fragments
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1741'
 ht-degree: 8%
-
 ---
-
 # 管理內容片段 {#managing-content-fragments}
 
 瞭解如何使用Assets主控台來管理您的AEM內容片段，這是Headless內容的基礎。
@@ -33,7 +45,7 @@ ht-degree: 8%
 >可以使用內容片段：
 >
 >* 編寫頁面時；請參閱[使用內容片段編寫頁面](/help/sites-authoring/content-fragments.md)。
->* 使用內容片段搭配GraphQL[&#128279;](/help/assets/content-fragments/content-fragments-graphql.md)的Headless內容傳遞。
+>* 使用內容片段搭配GraphQL](/help/assets/content-fragments/content-fragments-graphql.md)的[Headless內容傳遞。
 
 >[!NOTE]
 >
@@ -59,7 +71,7 @@ ht-degree: 8%
 
    * [模型](/help/assets/content-fragments/content-fragments-models.md) — 用來建立需要結構化內容的片段；例如&#x200B;**冒險片**&#x200B;模型
 
-      * 所有可用的模型都會顯示。
+     * 所有可用的模型都會顯示。
 
    選取之後，使用&#x200B;**下一步**&#x200B;繼續。
 
@@ -69,23 +81,23 @@ ht-degree: 8%
 
    * **基本**
 
-      * **標題**
+     * **標題**
 
-        片段標題。
+       片段標題。
 
-        強制。
+       強制。
 
-      * **說明**
+     * **說明**
 
-      * **標籤**
+     * **標籤**
 
    * **進階**
 
-      * **名稱**
+     * **名稱**
 
-        名稱；用於組成URL。
+       名稱；用於組成URL。
 
-        必要；將自動從標題衍生，但可以更新。
+       必要；將自動從標題衍生，但可以更新。
 
 1. 選擇 **Create**  (建立) 以完成操作，然後選擇 **Open** the fragment for editing (開啟片段以進行編輯) 或返回控制 **台完成**。
 
@@ -105,17 +117,17 @@ ht-degree: 8%
 
 * **下載**
 
-   * 將片段儲存為ZIP檔案；您可以定義是否包含元素、變數、中繼資料。
+  * 將片段儲存為ZIP檔案；您可以定義是否包含元素、變數、中繼資料。
 
 * **建立**
 * **簽出**
 * **屬性**
 
-   * 可讓您檢視和/或編輯片段的中繼資料。
+  * 可讓您檢視和/或編輯片段的中繼資料。
 
 * **編輯**
 
-   * 可讓您[開啟片段以編輯內容](/help/assets/content-fragments/content-fragments-variations.md)及其元素、變化、關聯的內容和中繼資料。
+  * 可讓您[開啟片段以編輯內容](/help/assets/content-fragments/content-fragments-variations.md)及其元素、變化、關聯的內容和中繼資料。
 
 * **管理標籤**
 * **至集合**
@@ -127,7 +139,7 @@ ht-degree: 8%
 
 >[!NOTE]
 >
->其中許多是Assets[&#128279;](/help/assets/manage-assets.md)和/或[AEM案頭應用程式](https://helpx.adobe.com/tw/experience-manager/desktop-app/aem-desktop-app.html)的標準動作。
+>其中許多是Assets](/help/assets/manage-assets.md)和/或[AEM案頭應用程式](https://helpx.adobe.com/tw/experience-manager/desktop-app/aem-desktop-app.html)的[標準動作。
 
 ## 開啟片段編輯器 {#opening-the-fragment-editor}
 
@@ -191,17 +203,17 @@ ht-degree: 8%
 
 * 在片段名稱下方，您可以看到用來建立目前片段的[內容片段模式](/help/assets/content-fragments/content-fragments-models.md)的名稱：
 
-   * 該名稱也是開啟模型編輯器的連結。
+  * 該名稱也是開啟模型編輯器的連結。
 
 * 檢視片段的狀態；例如，建立、修改或發佈時間的相關資訊。
 
 * **儲存**&#x200B;提供&#x200B;**儲存並關閉**&#x200B;選項的存取權。
 
 * 三個點(**...**) 下拉式清單提供其他動作的存取權：
-   * **更新頁面參考**
-      * 這會更新任何頁面引用。
-   * **[快速發佈](#publishing-and-referencing-a-fragment)**
-   * **[管理發佈](#publishing-and-referencing-a-fragment)**
+  * **更新頁面參考**
+    * 這會更新任何頁面引用。
+  * **[快速發佈](#publishing-and-referencing-a-fragment)**
+  * **[管理發佈](#publishing-and-referencing-a-fragment)**
 
 <!--
 * See the status of the fragment; for example, information about when it was created, modified or published. The status is also color-coded:
@@ -227,8 +239,8 @@ This updates any page references and ensures that the Dispatcher is flushed as r
 
 * **儲存**&#x200B;和&#x200B;**儲存並關閉**
 
-   * **儲存**&#x200B;將會儲存最新的變更並保留在編輯器中。
-   * **儲存並關閉**&#x200B;將會儲存最新的變更並退出編輯器。
+  * **儲存**&#x200B;將會儲存最新的變更並保留在編輯器中。
+  * **儲存並關閉**&#x200B;將會儲存最新的變更並退出編輯器。
 
   >[!CAUTION]
   >
@@ -290,17 +302,17 @@ This updates any page references and ensures that the Dispatcher is flushed as r
 * 檢視有關版本、註釋和註解的資訊
 * 版本動作
 
-   * **[還原為此版本](#reverting-to-a-version)** （選取現有片段，然後選取特定版本）
+  * **[還原為此版本](#reverting-to-a-version)** （選取現有片段，然後選取特定版本）
 
-   * **[與目前](#comparing-fragment-versions)**&#x200B;比較（選取現有片段，然後選取特定版本）
+  * **[與目前](#comparing-fragment-versions)**&#x200B;比較（選取現有片段，然後選取特定版本）
 
-   * 新增&#x200B;**標籤**&#x200B;和/或&#x200B;**註解** （選取現有片段，然後選取特定版本）
+  * 新增&#x200B;**標籤**&#x200B;和/或&#x200B;**註解** （選取現有片段，然後選取特定版本）
 
-   * **另存為版本** （選取現有的片段，然後選取時間軸底部的向上箭頭）
+  * **另存為版本** （選取現有的片段，然後選取時間軸底部的向上箭頭）
 
 * 註解動作
 
-   * **刪除**
+  * **刪除**
 
 >[!NOTE]
 >
@@ -334,9 +346,9 @@ This updates any page references and ensures that the Dispatcher is flushed as r
 
 * 任何差異都會反白顯示
 
-   * 刪除的文字 — 紅色
-   * 插入的文字 — 綠色
-   * 取代的文字 — 藍色
+  * 刪除的文字 — 紅色
+  * 插入的文字 — 綠色
+  * 取代的文字 — 藍色
 
 * 全熒幕圖示可讓您自行開啟任一版本，然後切換回平行檢視
 * 您可以&#x200B;**將**&#x200B;還原為特定版本
@@ -368,7 +380,7 @@ This updates any page references and ensures that the Dispatcher is flushed as r
 
 必須發佈內容片段才能在發佈環境中使用。 它們可以發佈：
 
-* 建立之後；使用Assets主控台[&#128279;](#actions-for-a-content-fragment-assets-console)中可用的動作。
+* 建立之後；使用Assets主控台](#actions-for-a-content-fragment-assets-console)中可用的[動作。
 * 從[內容片段編輯器](#toolbar-actions-in-the-content-fragment-editor)。
 * 當您[發佈使用片段](/help/sites-authoring/content-fragments.md#publishing)的頁面時；片段將列在頁面參考中。
 

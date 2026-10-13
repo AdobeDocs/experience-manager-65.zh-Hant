@@ -9,7 +9,18 @@ exl-id: f6f32290-422e-4037-89d8-d9f414332e8e
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
 source-wordcount: '3377'
 ht-degree: 0%
@@ -285,7 +296,7 @@ Sling也可讓JCR節點以外的專案成為資源，但這是進階功能。
 
 這會使用Sling API套件、org.apache.sling.&amp;ast；和標籤程式庫。
 
-### 使用sling:include參考現有元素 {#referencing-existing-elements-using-sling-include}
+### 使用sling:include {#referencing-existing-elements-using-sling-include}參考現有元素
 
 最後考量是需要參考指令碼中的現有元素。
 
@@ -445,7 +456,7 @@ pageManager是頁面管理員物件，myResource是資源物件。 如需頁面�
 
 ## Dispatcher {#the-dispatcher}
 
-Dispatcher是Adobe的快取和/或負載平衡工具。 您可以在[Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant)下找到進一步資訊。
+Dispatcher是Adobe的快取和/或負載平衡工具。 您可以在[Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)下找到進一步資訊。
 
 ## FileVault （來源修訂系統） {#filevault-source-revision-system}
 

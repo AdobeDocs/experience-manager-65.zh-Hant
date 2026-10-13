@@ -9,13 +9,22 @@ exl-id: 7c856e87-9f90-435d-aceb-994f10ea6f50
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '931'
+source-wordcount: '953'
 ht-degree: 1%
-
 ---
-
 # 取得JSON格式的頁面資訊{#obtaining-page-information-in-json-format}
 
 若要取得頁面資訊，請傳送要求至PageInfo servlet以取得JSON格式的頁面中繼資料。
@@ -34,7 +43,7 @@ http://localhost:4502/libs/wcm/core/content/pageinfo.json?path=/content/we-retai
 >* 原生行動應用程式
 >* AEM外部的其他管道和接觸點
 >
->請參閱檔案[&#x200B; Content Services的JSON匯出工具](/help/sites-developing/json-exporter.md)。
+>請參閱檔案[ Content Services的JSON匯出工具](/help/sites-developing/json-exporter.md)。
 
 ## 頁面資訊提供者 {#page-information-providers}
 
@@ -498,7 +507,7 @@ http://localhost:4502/libs/wcm/core/content/pageinfo.json?path=/content/we-retai
 
 例如，若要使用CRXDE Lite設定服務：
 
-1. 開啟CRXDE Lite([http://localhost:4502/crx/de](http://localhost:4502/crx/de))。
+1. 開啟CRXDE Lite ([http://localhost:4502/crx/de](http://localhost:4502/crx/de))。
 1. 在應用程式的設定資料夾中，建立節點：
 
    * 名稱：`com.day.cq.wcm.workflow.impl.WorkflowPackageInfoProvider`
@@ -538,7 +547,7 @@ http://localhost:4502/libs/wcm/core/content/pageinfo.json?path=/content/we-retai
 
 建立自訂頁面資訊提供者服務，新增您的應用程式可輕鬆取得的頁面中繼資料。
 
-1. 實作`com.day.cq.wcm.api.PageInfoProvider`介面。
+1. 實作 `com.day.cq.wcm.api.PageInfoProvider` 介面。
 1. 將類別捆綁並部署為OSGi服務。
 1. 在應用程式中建立頁面元件。 使用`foundation/components/page`做為`sling:resourceSuperType`屬性的值。
 
@@ -601,7 +610,7 @@ public class PageUrlInfoProvider implements PageInfoProvider {
 }
 ```
 
-以下範例以CRXDE Lite顯示設定為使用PageUrlInfoProvider服務的頁面元件：
+以下範例在CRXDE Lite中，顯示設定為使用PageUrlInfoProvider服務的頁面元件：
 
 ![chlimage_1-3](assets/chlimage_1-3a.png)
 

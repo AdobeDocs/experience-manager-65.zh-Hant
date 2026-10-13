@@ -10,13 +10,22 @@ exl-id: f43e9491-aa8f-40af-9800-123695142559
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1834'
+source-wordcount: '1953'
 ht-degree: 1%
-
 ---
-
 # 開發Forms (Classic UI){#developing-forms-classic-ui}
 
 表單的基本結構為：
@@ -39,7 +48,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->本檔案著重於在傳統UI中使用[Foundation元件](/help/sites-authoring/default-components-foundation.md)來開發表單。 Adobe建議在觸控式UI中使用新的[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)和[隱藏條件](/help/sites-developing/hide-conditions.md)進行表單開發。
+>本檔案著重於在傳統UI中使用[Foundation元件](/help/sites-authoring/default-components-foundation.md)來開發表單。 Adobe建議在觸控式UI中使用新的[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)和[隱藏條件](/help/sites-developing/hide-conditions.md)進行表單開發。
 
 ## 預先載入表單值 {#preloading-form-values}
 
@@ -72,7 +81,7 @@ ht-degree: 1%
 
 1. 新增多值字串( `String[]`)型別的新屬性（例如`myList`），以包含下拉式清單專案的清單。 也可以使用指令碼匯入內容，例如使用JSP指令碼或shell指令碼中的cURL。
 
-1. 在&#x200B;**專案載入路徑**&#x200B;欄位中使用完整路徑：
+1. 在&#x200B;**專案載入路徑**欄位中使用完整路徑：
 例如，`/etc/designs/geometrixx/formlistvalues/myList`
 
 請注意，如果`String[]`中的值格式如下：
@@ -128,12 +137,12 @@ ht-degree: 1%
 1. 在資料夾中建立：
 
    1. 後置指令碼。
-      指令碼的名稱為`post.POST.<extension>`，例如`post.POST.jsp`
+      指令碼名稱為`post.POST.<extension>`，例如， `post.POST.jsp`
       在提交表單以處理表單時，會叫用後置指令碼，其中包含處理來自表單`POST`之資料的程式碼。
 
    1. 新增在提交表單時叫用的轉寄指令碼。
-      指令碼的名稱為`forward.<extension`>，例如`forward.jsp`
-      此指令碼可定義路徑。接著會將目前的請求轉送至指定的路徑。
+      指令碼的名稱為`forward.<extension`>，例如， `forward.jsp`
+      此指令碼可定義路徑。 接著會將目前的請求轉送至指定的路徑。
 
    必要的呼叫是`FormsHelper#setForwardPath` （2個變體）。 典型案例是執行一些驗證或邏輯來尋找目標路徑，然後前進到該路徑，讓預設的Sling POST servlet實際以JCR儲存。
 
@@ -167,15 +176,15 @@ ht-degree: 1%
 1. 再次在資料夾中選擇性地新增：
 
    1. 用於新增欄位的指令碼。
-      指令碼的名稱為`addfields.<extension>`，例如`addfields.jsp`
-      在表單開始的HTML寫入後，會立即叫用`addfields`指令碼。這可讓動作在表單內新增自訂輸入欄位或其他類似的HTML。
+      指令碼名稱為`addfields.<extension>`，例如， `addfields.jsp`
+      在表單開始的HTML寫入後，會立即叫用`addfields`指令碼。 這可讓動作在表單內新增自訂輸入欄位或其他類似的HTML。
 
    1. 初始化指令碼。
-      指令碼的名稱為`init.<extension>`，例如`init.jsp`
-      此指令碼會在表單轉譯時叫用。這可用來初始化動作細節。
+      指令碼名稱為`init.<extension>`，例如， `init.jsp`
+      此指令碼會在表單轉譯時叫用。 這可用來初始化動作細節。
 
    1. 清除指令碼。
-      指令碼的名稱為`cleanup.<extension>`，例如`cleanup.jsp`
+      指令碼名稱為`cleanup.<extension>`，例如， `cleanup.jsp`
       此指令碼可用於執行清理。
 
 1. 在parsys中使用&#x200B;**Forms**&#x200B;元件。 **動作型別**&#x200B;下拉式清單現在會包含您的新動作。
@@ -315,7 +324,7 @@ ht-degree: 1%
 
 ### 開發指令碼以與Forms搭配使用 {#developing-scripts-for-use-with-forms}
 
-如需可在編寫指令碼時使用的API元素的詳細資訊，請參閱與表單[&#128279;](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/foundation/forms/package-summary.html)相關的javadocs。
+如需可在編寫指令碼時使用的API元素的詳細資訊，請參閱與表單](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/foundation/forms/package-summary.html)相關的[javadocs。
 
 您可以將此用於動作，例如在提交表單前呼叫服務，以及在服務失敗時取消服務：
 

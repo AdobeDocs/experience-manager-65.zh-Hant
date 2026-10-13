@@ -10,13 +10,27 @@ role: Developer
 exl-id: 28abf044-6c8e-4578-ae2e-54cdbd694c5f
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,APIs & Integrations
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 516393bc-fa69-5e74-a04e-f7ec9ffe2c5e
+    internal-label: APIs & Integrations
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1870'
 ht-degree: 0%
-
 ---
-
 # 計算表單資料 {#calculating-form-data}
 
 **本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
@@ -149,10 +163,10 @@ Forms服務可以計算使用者在表單中輸入的值並顯示結果。 若�
    * 若要擷取包含計算指令碼的表單資料，請使用其建構函式建立`com.adobe.idp.Document`物件，並從建構函式中叫用`javax.servlet.http.HttpServletResponse`物件的`getInputStream`方法。
    * 叫用`FormsServiceClient`物件的`processFormSubmission`方法，並傳遞下列值：
 
-      * 包含表單資料的`com.adobe.idp.Document`物件。
-      * 字串值，指定包含所有相關HTTP標頭的環境變數。 為`CONTENT_TYPE`環境變數指定一或多個值，以指定要處理的內容型別。 例如，若要處理XML和PDF資料，請為此引數指定下列字串值： `CONTENT_TYPE=application/xml&CONTENT_TYPE=application/pdf`
-      * 字串值，指定`HTTP_USER_AGENT`標頭值；例如`Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`。
-      * 儲存執行階段選項的`RenderOptionsSpec`物件。
+     * 包含表單資料的`com.adobe.idp.Document`物件。
+     * 字串值，指定包含所有相關HTTP標頭的環境變數。 為`CONTENT_TYPE`環境變數指定一或多個值，以指定要處理的內容型別。 例如，若要處理XML和PDF資料，請為此引數指定下列字串值： `CONTENT_TYPE=application/xml&CONTENT_TYPE=application/pdf`
+     * 字串值，指定`HTTP_USER_AGENT`標頭值；例如`Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`。
+     * 儲存執行階段選項的`RenderOptionsSpec`物件。
 
      `processFormSubmission`方法傳回包含表單提交結果的`FormsResult`物件。
 
@@ -196,17 +210,17 @@ Forms服務可以計算使用者在表單中輸入的值並顯示結果。 若�
    * 使用物件的建構函式建立`RenderOptionsSpec`物件。 透過叫用`RenderOptionsSpec`物件的`setLocale`方法並傳遞指定地區設定值的字串值來設定地區設定值。
    * 叫用`FormsServiceClient`物件的`processFormSubmission`方法，並傳遞下列值：
 
-      * 包含表單資料的`BLOB`物件。
-      * 字串值，指定包含所有相關HTTP標頭的環境變數。 例如，您可以指定下列字串值： `HTTP_REFERER=referrer&HTTP_CONNECTION=keep-alive&CONTENT_TYPE=application/xml`
-      * 字串值，指定`HTTP_USER_AGENT`標頭值；例如`Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`。
-      * 儲存執行階段選項的`RenderOptionsSpec`物件。 如需詳細資訊，請參閱。
-      * 方法填入的空白`BLOBHolder`物件。
-      * 方法填入的空白`javax.xml.rpc.holders.StringHolder`物件。
-      * 方法填入的空白`BLOBHolder`物件。
-      * 方法填入的空白`BLOBHolder`物件。
-      * 方法填入的空白`javax.xml.rpc.holders.ShortHolder`物件。
-      * 方法填入的空白`MyArrayOf_xsd_anyTypeHolder`物件。 此引數用於儲存與表單一起提交的檔案附件。
-      * 空的`FormsResultHolder`物件由方法以提交的表單填入。
+     * 包含表單資料的`BLOB`物件。
+     * 字串值，指定包含所有相關HTTP標頭的環境變數。 例如，您可以指定下列字串值： `HTTP_REFERER=referrer&HTTP_CONNECTION=keep-alive&CONTENT_TYPE=application/xml`
+     * 字串值，指定`HTTP_USER_AGENT`標頭值；例如`Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`。
+     * 儲存執行階段選項的`RenderOptionsSpec`物件。 如需詳細資訊，請參閱。
+     * 方法填入的空白`BLOBHolder`物件。
+     * 方法填入的空白`javax.xml.rpc.holders.StringHolder`物件。
+     * 方法填入的空白`BLOBHolder`物件。
+     * 方法填入的空白`BLOBHolder`物件。
+     * 方法填入的空白`javax.xml.rpc.holders.ShortHolder`物件。
+     * 方法填入的空白`MyArrayOf_xsd_anyTypeHolder`物件。 此引數用於儲存與表單一起提交的檔案附件。
+     * 空的`FormsResultHolder`物件由方法以提交的表單填入。
 
      `processFormSubmission`方法會將表單提交的結果填入`FormsResultHolder`引數。 `processFormSubmission`方法傳回包含表單提交結果的`FormsResult`物件。
 

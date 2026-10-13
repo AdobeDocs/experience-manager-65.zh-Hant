@@ -10,18 +10,34 @@ feature: Mixed Media Sets,Asset Management
 role: User, Admin
 exl-id: 70a72fb9-a289-4eda-abcc-300edf9f1961
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 7d2b2ec8-499c-5434-9ffd-9218cd71f683
+    internal-label: Asset Management
+  - id: bd0d2470-932c-4269-8eca-6d939b72d9ef
+    internal-label: Dynamic Media
+subfeature_v2:
+  - id: e42cd24a-0815-4b0e-bfd6-9997547c3fc1
+    internal-label: Mixed Media Sets
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1506'
 ht-degree: 15%
-
 ---
-
 # 混合媒體集{#mixed-media-sets}
 
 混合媒體集可讓您在單一簡報中提供影像、影像集、迴轉集及視訊的混合。
 
-混合媒體集由橫幅指定，並加上單字 **[!UICONTROL MixedMediaSet]**。 此外，如果「混合媒體集」已發佈，則會顯示「鉛筆」圖示所指示的發佈日期(以 **[!UICONTROL World]** 圖示指示)與上次修改日期(以 **&#x200B;**&#x200B;Pencil圖示表示)。
+混合媒體集由橫幅指定，並加上單字 **[!UICONTROL MixedMediaSet]**。 此外，如果「混合媒體集」已發佈，則會顯示「鉛筆」圖示所指示的發佈日期(以 **[!UICONTROL World]** 圖示指示)與上次修改日期(以 **** Pencil圖示表示)。
 
 ![chlimage_1-137](assets/chlimage_1-348.png)
 
@@ -35,7 +51,7 @@ ht-degree: 15%
 
 1. [上傳您的資產](#uploading-assets)。
 
-   首先，上傳混合媒體集的影像和視訊。 如有必要，請建立 [影像集](/help/assets/image-sets.md) [和回轉集](/help/assets/spin-sets.md)。 因為使用者可以在混合媒體集檢視器中放大影像，所以請謹慎選擇影像。 請確定影像在最大尺寸中至少為2000像素。
+   首先，上傳混合媒體集的影像和視訊。 如有必要，請建立 [影像集](/help/assets/image-sets.md)[和回轉集](/help/assets/spin-sets.md)。 因為使用者可以在混合媒體集檢視器中放大影像，所以請謹慎選擇影像。 請確定影像在最大尺寸中至少為2000像素。
 
    如需混合媒體集支援的格式清單，請參閱[Dynamic Media — 支援的光柵影像格式](/help/assets/assets-formats.md#supported-raster-image-formats-dynamic-media)。
 
@@ -105,7 +121,7 @@ ht-degree: 15%
 
 1. 選取「資產選擇器」，即可選取要納入混合媒體集的資產。 選取它們，然後選取&#x200B;**[!UICONTROL 選取]**。
 
-   使用「資產選擇器」，您可以輸入關鍵字並點選「回報」來搜尋 **[!UICONTROL 資產]**。 您也可以套用篩選條件來調整搜尋結果。 您可以依路徑、系列、檔案類型和標籤來篩選。 選取篩選，然後從工具列選取&#x200B;**[!UICONTROL 篩選]**&#x200B;圖示。 通過選擇「視圖」圖 **[!UICONTROL 標]** ，然後選擇「清單視圖」、「列 **[!UICONTROL 視圖」]**&#x200B;或「卡片視圖 **[!UICONTROL 」來更]**&#x200B;**&#x200B;**&#x200B;改視圖。
+   使用「資產選擇器」，您可以輸入關鍵字並點選「回報」來搜尋 **[!UICONTROL 資產]**。 您也可以套用篩選條件來調整搜尋結果。 您可以依路徑、系列、檔案類型和標籤來篩選。 選取篩選，然後從工具列選取&#x200B;**[!UICONTROL 篩選]**&#x200B;圖示。 通過選擇「視圖」圖 **[!UICONTROL 標]** ，然後選擇「清單視圖」、「列 **[!UICONTROL 視圖」]**&#x200B;或「卡片視圖 **[!UICONTROL 」來更]******&#x200B;改視圖。
 
    請參閱[使用選取器](/help/assets/working-with-selectors.md)。
 
@@ -147,7 +163,7 @@ ht-degree: 15%
 1. 在混合媒體集編輯器中，執行下列任一項作業：
 
    * 若要重新排序資產 — 在左側面板中，選取&#x200B;**[!UICONTROL Assets]** （圖片圖示），將資產拖曳至新位置。
-   * 若要新增資產 — 在工具列上，選取[新增資產]。**&#x200B;** 導覽至資產。 針對您要新增的每個資產，將滑鼠指標暫留在資產的影像（而非資產名稱）上，然後選取核取標籤圖示。 在右上角，選取&#x200B;**[!UICONTROL 選取]**。
+   * 若要新增資產 — 在工具列上，選取[新增資產]。**** 導覽至資產。 針對您要新增的每個資產，將滑鼠指標暫留在資產的影像（而非資產名稱）上，然後選取核取標籤圖示。 在右上角，選取&#x200B;**[!UICONTROL 選取]**。
 
    * 若要刪除資產 — 在左側面板中，選取&#x200B;**[!UICONTROL Assets]** （圖片圖示），然後選取資產。 在工具列上，選取&#x200B;**[!UICONTROL 刪除資產]**。
 

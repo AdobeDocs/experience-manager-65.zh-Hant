@@ -9,7 +9,21 @@ exl-id: 5808b8f9-9b37-4970-b5c1-4d33404d3a8b
 feature: Security
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: b1210526-416b-4ef6-bcc0-1692e99f30e9
+    internal-label: Administration and security
+subfeature_v2:
+  - id: c35bc059-fd80-4a01-91a6-e48da3c76758
+    internal-label: Security practices
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
 source-wordcount: '3109'
 ht-degree: 0%
@@ -58,7 +72,7 @@ CRX可讓您設定使用者和群組帳戶的存取權。 然後會將相同的�
 
 >[!NOTE]
 >
->CRX實作由JSR-283[&#128279;](https://experienceleague.adobe.com/en/tools/aem-api-documentation/spec/jcr/2.0/16_Access_Control_Management.html)定義的存取控制。
+>CRX實作由JSR-283](https://experienceleague.adobe.com/en/tools/aem-api-documentation/spec/jcr/2.0/16_Access_Control_Management.html)定義的[存取控制。
 >
 >CRX存放庫的標準安裝設定為使用資源型存取控制清單。 這是JSR-283存取控制的一個可能實作，也是Jackrabbit提供的實作之一。
 
@@ -477,7 +491,7 @@ CRX中的存取權評估如下：
 
   您可以輸入&#x200B;**主體**&#x200B;名稱，或按一下欄位右側的圖示以開啟&#x200B;**選取主體**&#x200B;對話方塊。
 
-  這可讓您&#x200B;**搜尋**&#x200B;使用者&#x200B;**或**&#x200B;群組&#x200B;**的**。 從結果清單中選取所需的主體，然後按一下[確定] **&#x200B;**，將該值帶回上一個對話方塊。
+  這可讓您&#x200B;**搜尋**&#x200B;使用者&#x200B;**或**&#x200B;群組&#x200B;**的**。 從結果清單中選取所需的主體，然後按一下[確定] ****，將該值帶回上一個對話方塊。
 
 ![crx_accesscontrol_selectprincipal](assets/crx_accesscontrol_selectprincipal.png)
 

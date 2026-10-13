@@ -9,12 +9,31 @@ role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,AEM Forms on JEE,Platform Matrix
-source-git-commit: b860fd19c0aeaa94fb0e04052dac70b0bc58b11b
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e14eb250-3c22-4a07-9061-a78112b2b826
+    internal-label: Experience Manager 6.5
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 94663796-0ee7-58b9-84f4-b425ebb69e83
+    internal-label: AEM Forms on JEE
+  - id: 669dda42-2656-578e-8b9a-9960823e4401
+    internal-label: Platform Matrix
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 25b6abfc018272754a6e70478d6484859f0771e2
 workflow-type: tm+mt
 source-wordcount: '4259'
 ht-degree: 3%
 ---
-
 
 # AEM Forms on JEE的支援平台 {#supported-platforms-for-aem-forms-on-jee}
 
@@ -24,9 +43,9 @@ ht-degree: 3%
 
 <div class="preview">
 
-Adobe已在JEE上發行包含AEM 6.5.23.0 Forms Service Pack 23 (6.5.23.0)的[完整安裝程式](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=zh-Hant)以及修補程式安裝程式。 完整版安裝程式支援新平台，而修補程式安裝程式僅包含錯誤修正。
+Adobe已在JEE上發行包含AEM 6.5.23.0 Forms Service Pack 23 (6.5.23.0)的[完整安裝程式](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)以及修補程式安裝程式。 完整版安裝程式支援新平台，而修補程式安裝程式僅包含錯誤修正。
 
-如果您正在執行全新安裝或計畫在JEE環境中使用AEM 6.5.23.0 Forms的最新軟體，Adobe建議使用2025年6月6日發行的JEE上的[AEM 6.5.23.0 Forms完整安裝程式](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=zh-Hant)，而非2023年8月31日發行的AEM 6.5.18 Forms安裝程式或2019年4月8日發行的AEM 6.5.12 Forms安裝程式。
+如果您正在執行全新安裝或計畫在JEE環境中使用AEM 6.5.23.0 Forms的最新軟體，Adobe建議使用2025年6月6日發行的JEE上的[AEM 6.5.23.0 Forms完整安裝程式](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)，而非2023年8月31日發行的AEM 6.5.18 Forms安裝程式或2019年4月8日發行的AEM 6.5.12 Forms安裝程式。
 
 
 </div>
@@ -518,7 +537,7 @@ AEM Forms應用程式現在支援Apache Cordova。 以下是支援的平台特�
    <th><p><strong>支援的格式可轉換成PDF</strong></p> </th>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/tw/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat Pro DC</a> （連續追蹤，最新版本）</td>
+   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat Pro DC</a> （連續追蹤，最新版本）</td>
    <td>XPS、影像格式(BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC)、HTML和HTM</td>
   </tr>
 
@@ -604,8 +623,8 @@ Removed lines: >- PDF Generator fails to convert files using Microsoft&reg; Visi
 
 如需其他需求，請參閱：
 
-- [JEE部署中單一伺服器AEM Forms的系統需求](https://www.adobe.com/go/learn_aemforms_sysreq_single_65_tw)
-- [JEE部署上叢集AEM Forms的系統需求](https://www.adobe.com/go/learn_aemforms_sysreq_cluster_65_tw)
+- [JEE部署中單一伺服器AEM Forms的系統需求](https://www.adobe.com/go/learn_aemforms_sysreq_single_65)
+- [JEE部署上叢集AEM Forms的系統需求](https://www.adobe.com/go/learn_aemforms_sysreq_cluster_65)
 
 
 ### Adobe Acrobat與Adobe Reader {#adobe-acrobat-and-adobe-reader}
@@ -619,7 +638,7 @@ Removed lines: >- PDF Generator fails to convert files using Microsoft&reg; Visi
  </tr>
  <tr>
   <td>Adobe Acrobat Pro DC （連續追蹤，最新版本）</td>
-  <td>最新版本，如<a href="https://helpx.adobe.com/tw/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat和Reader發行說明</a><br />中所述 </td>
+  <td>最新版本，如<a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat和Reader發行說明</a><br />中所述 </td>
  </tr>
  </tbody>
 </table>
@@ -778,7 +797,7 @@ AEM Forms應用程式適用於下列平台：
 ### ® Office適用的Adobe Document Security Extension {#adobe-rights-management-extension-for-microsoft-office}
 
 
-按一下[這裡](https://www.adobe.com/tw/products/livecycle/rightsmanagement/extension/downloads.html)檢視® Office適用的Adobe Document Security Extension的系統需求。
+按一下[這裡](https://www.adobe.com/products/livecycle/rightsmanagement/extension/downloads.html)檢視® Office適用的Adobe Document Security Extension的系統需求。
 
 
 ### 使用者端支援的例外 {#exceptions-to-client-support}
@@ -790,7 +809,7 @@ AEM Forms應用程式適用於下列平台：
 ## 協力廠商修補支援政策 {#third-party-patch-support-policy}
 
 
-JEE版AEM Forms的協力廠商軟體需求記錄在各自產品檔案的「系統需求」一節。 從[https://adobe.com/go/learn_aemforms_documentation_65_tw](https://adobe.com/go/learn_aemforms_documentation_65_tw)存取所有檔案。
+JEE版AEM Forms的協力廠商軟體需求記錄在各自產品檔案的「系統需求」一節。 從[https://adobe.com/go/learn_aemforms_documentation_65](https://adobe.com/go/learn_aemforms_documentation_65)存取所有檔案。
 
 
 JEE上的AEM Forms第三方參考平台會說明在JEE上AEM Forms開發和發行期間第三方基礎架構的特定修補程式層級，以及該JEE上AEM Forms版本支援之基礎架構的最低修補程式/Service Pack層級。
@@ -821,7 +840,7 @@ The following platforms are marked as deprecated with AEM Forms 6.5.18.0 release
 The following platforms are marked as deprecated with AEM Forms 6.5.13.0 release on June 2, 2022:
 - Microsoft&reg; SharePoint 2016
 The following platforms are marked as deprecated with AEM Forms 6.5.10.0 release on September 7, 2021:
-- Adobe Acrobat 2017 - [Core support for Adobe Acrobat 2017 ends on June 6, 2022](https://helpx.adobe.com/tw/support/programs/eol-matrix.html).
+- Adobe Acrobat 2017 - [Core support for Adobe Acrobat 2017 ends on June 6, 2022](https://helpx.adobe.com/support/programs/eol-matrix.html).
 - Red Hat&reg; Enterprise Linux&reg; 7 (Kernel 3.x) (64-bit)
 - Microsoft&reg; Windows Server 2016 (64-bit)
 - Microsoft&reg; Office 2016
@@ -892,7 +911,7 @@ The following platforms are marked as deprecated with AEM Forms 6.5.10.0 release
  - **Added support**: [!DNL Adobe Experience Manager Forms] on JEE has added support for the following platform:
     - Oracle Java&trade; SE 11 (64 bit) SDK for application server JBoss&reg; EAP 7.4.
  - **Deprecated support**: [!DNL Adobe Experience Manager Forms] on JEE has deprecated the following platforms:
-   - Adobe Acrobat 2017 - [Core support for Adobe Acrobat 2017 ends on June 6, 2022](https://helpx.adobe.com/tw/support/programs/eol-matrix.html).
+   - Adobe Acrobat 2017 - [Core support for Adobe Acrobat 2017 ends on June 6, 2022](https://helpx.adobe.com/support/programs/eol-matrix.html).
    - Red Hat&reg; Enterprise Linux&reg; 7 (Kernel 3.x) (64-bit)
    - Microsoft&reg; Windows Server 2016 (64-bit)
    - Microsoft&reg; Office 2016

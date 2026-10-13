@@ -6,13 +6,21 @@ exl-id: e99899a4-df86-4108-991a-8b30d303a279
 solution: Experience Manager,Commerce
 feature: Commerce Integration Framework
 role: Admin, Developer
-source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
 source-wordcount: '552'
 ht-degree: 2%
-
 ---
-
 # AEM與使用Commerce integration framework的第三方Commerce整合 {#aem-third-party}
 
 CIF的常見案例是整合非Adobe Commerce解決方案。 具有不同API和結構描述的協力廠商解決方案會透過整合層進行連線。
@@ -31,7 +39,7 @@ Experience Manager會隨選擷取資料，因此需要產品目錄的即時API�
 
 >[!TIP]
 >
->如果沒有可用的即時API，則應使用具有API的外部產品快取進行整合。 範例[Magento開放原始碼](https://business.adobe.com/tw/products/magento/open-source.html)。
+>如果沒有可用的即時API，則應使用具有API的外部產品快取進行整合。 範例[Magento open-source](https://business.adobe.com/products/magento/open-source.html)。
 
 不需要實作完整的GraphQL結構描述，只需要結構描述的物件即可啟用所需的使用案例。
 

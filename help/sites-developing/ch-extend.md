@@ -9,13 +9,24 @@ exl-id: 41898fa7-a369-4c63-8ccb-69eb3fa146a1
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,Personalization
 role: Developer
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+  - id: eb3ad9f8-54a2-45f3-abb1-d3976415a718
+    internal-label: Personalization
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '637'
+source-wordcount: '635'
 ht-degree: 0%
-
 ---
-
 # 延伸 ContextHub{#extending-contexthub}
 
 當提供的ContextHub存放區和模組不符合您的解決方案需求時，請定義這些新型別。
@@ -36,10 +47,10 @@ contexthub.store.[storeType]
 
 若要建立候選商店，請使用[`ContextHub.Utils.inheritance.inherit`](/help/sites-developing/contexthub-api.md#inherit-child-parent)函式來擴充其中一個基本商店：
 
-* [&#39;ContextHub.Store.PersistedStore&#39;](/help/sites-developing/contexthub-api.md#contexthub-store-persistedstore)
-* [&#39;ContextHub.Store.SessionStore&#39;](/help/sites-developing/contexthub-api.md#contexthub-store-sessionstore)
-* [&#39;ContextHub.Store.JSONPStore&#39;](/help/sites-developing/contexthub-api.md#contexthub-store-jsonpstore)
-* [&#39;ContextHub.Store.PersistedJSONPStore&#39;](/help/sites-developing/contexthub-api.md#contexthub-store-persistedjsonpstore)
+* [`ContextHub.Store.PersistedStore`](/help/sites-developing/contexthub-api.md#contexthub-store-persistedstore)
+* [`ContextHub.Store.SessionStore`](/help/sites-developing/contexthub-api.md#contexthub-store-sessionstore)
+* [`ContextHub.Store.JSONPStore`](/help/sites-developing/contexthub-api.md#contexthub-store-jsonpstore)
+* [`ContextHub.Store.PersistedJSONPStore`](/help/sites-developing/contexthub-api.md#contexthub-store-persistedjsonpstore)
 
 每個基底存放區都會擴充[`ContextHub.Store.Core`](/help/sites-developing/contexthub-api.md#contexthub-store-core)存放區。
 
@@ -69,7 +80,7 @@ ContextHub.Utils.storeCandidates.registerStoreCandidate(myStoreCandidate,
 
 ## 建立ContextHub UI模組型別 {#creating-contexthub-ui-module-types}
 
-當與ContextHub[&#128279;](/help/sites-developing/ch-samplemodules.md)一起安裝的模組不符合您的需求時，請建立自訂UI模組型別。 若要建立UI模組型別，請擴充`ContextHub.UI.BaseModuleRenderer`類別，然後向`ContextHub.UI`註冊，以建立UI模組轉譯器。
+當與ContextHub](/help/sites-developing/ch-samplemodules.md)一起安裝的[模組不符合您的需求時，請建立自訂UI模組型別。 若要建立UI模組型別，請擴充`ContextHub.UI.BaseModuleRenderer`類別，然後向`ContextHub.UI`註冊，以建立UI模組轉譯器。
 
 若要建立UI模組轉譯器，請建立包含轉譯UI模組的邏輯的`Class`物件。 您的類別至少必須執行下列動作：
 

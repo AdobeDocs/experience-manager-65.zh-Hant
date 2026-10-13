@@ -9,13 +9,24 @@ feature: PDF Generator
 exl-id: 1bcb8429-c06e-4bd3-b422-4c512084dd09
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: b26425d0-6fde-5e02-bfd6-e560e2fa86c9
+    internal-label: PDF Generator
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '7478'
 ht-degree: 0%
-
 ---
-
 # 配置Adobe PDF設定{#configuring-adobe-pdf-settings}
 
 Adobe PDF設定頁面會顯示您可以為來源指定的轉換設定，以便使用。 您可以使用任何預先定義的PDF設定，或建立您自己的設定。 PDF設定可精確決定檔案的轉換方式，以及其產生的PDF結構和功能。 Adobe PDF設定先前稱為Distiller®引數或工作選項。
@@ -447,7 +458,7 @@ PDF Generator可以檢查PostScript檔案中的檔案內容，以確保這些內
 
 符合PDF/X標準的檔案主要用於標準化格式，以交換高解析度列印生產的PDF檔案。 除非您正在建立用於列印生產的PDF檔案，否則您可以忽略PDF/X合規性標準。
 
-符合PDF/A的檔案主要用於封存。 由於目標是長期儲存，因此檔案必須只包含在整個檔案預期生命週期中開啟和檢視所需的內容。 例如，符合PDF/A規範的檔案只能包含文字、點陣影像和向量物件；不能包含加密和指令碼。 此外，所有字型都必須嵌入，這樣檔案才能在建立時開啟和檢視。 換句話說，與PDF/A相容的檔案比適用於高階生產的PDF/X檔案更薄&#x200B;*1&rbrace;。*
+符合PDF/A的檔案主要用於封存。 由於目標是長期儲存，因此檔案必須只包含在整個檔案預期生命週期中開啟和檢視所需的內容。 例如，符合PDF/A規範的檔案只能包含文字、點陣影像和向量物件；不能包含加密和指令碼。 此外，所有字型都必須嵌入，這樣檔案才能在建立時開啟和檢視。 換句話說，與PDF/A相容的檔案比適用於高階生產的PDF/X檔案更薄&#x200B;*1}。*
 
 >[!NOTE]
 >

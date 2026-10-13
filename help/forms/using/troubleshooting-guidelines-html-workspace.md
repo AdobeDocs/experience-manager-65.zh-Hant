@@ -9,13 +9,29 @@ exl-id: a054b60a-5e89-4c98-87bc-35669988d160
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: Admin, User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
-source-wordcount: '738'
+source-wordcount: '788'
 ht-degree: 0%
-
 ---
-
 # AEM Forms工作區的疑難排解准則 {#troubleshooting-guidelines-for-aem-forms-workspace}
 
 本文會討論如何透過啟用記錄功能和使用瀏覽器中的除錯程式，來除錯AEM Forms工作區。 本檔案也會說明您在使用AEM Forms工作區時可能會遇到的一些常見問題及其因應措施。
@@ -37,7 +53,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
-> 建議您使用&#39;Ctrl + C&#39;命令重新啟動SDK。 使用替代方法重新啟動AEM SDK （例如停止Java程式）可能會導致AEM開發環境不一致。
+> 建議您使用&#39;Ctrl + C&#39;命令重新啟動SDK。 使用替代方法重新啟動AEM SDK （例如停止Java程式），可能會導致AEM開發環境不一致。
 
 ## AEM Forms工作區記錄 {#aem-forms-workspace-nbsp-logging}
 
@@ -150,7 +166,7 @@ ht-degree: 0%
 * 錯誤
 * 警告
 * 資訊
-* 偵錯
+* 除錯
 * TRACE
 * 關閉
 
@@ -166,25 +182,25 @@ ht-degree: 0%
 
 ## 常見問題 {#faqs}
 
-1. Google Chrome未轉譯或提交PDF表單。
+1. PDF表單未在Google Chrome中轉譯或提交。
 
-   1. 安裝Adobe®Reader®外掛程式。
+   1. 安裝® Reader®外掛程式。
    1. 在Chrome中開啟chrome://plugins ，檢視可用的外掛程式。
-   1. 停用ChromePDF檢視器外掛程式，並啟用Adobe Reader外掛程式。
+   1. 停用Chrome PDF Viewer外掛程式，並啟用Adobe Reader外掛程式。
 
-1. Google Chrome中未呈現SWF表單或指南。
+1. SWF表單或指南未在Google Chrome中呈現。
 
    1. 在Chrome中開啟chrome://plugins ，檢視可用的外掛程式。
-   1. 如需AdobeFlash®播放器外掛程式的詳細資訊，請參閱。
-   1. 停用AdobeFlash Player外掛程式下的PepperFlash。
+   1. 請參閱Adobe Flash® Player外掛程式的詳細資料。
+   1. 停用Adobe Flash Player外掛程式下的PepperFlash。
 
 1. 我已自訂AEM Forms工作區，但看不到變更。
 
    清除瀏覽器的快取，然後存取AEM Forms工作區。
 
-1. 使用者在案頭開啟表單時，需要採取哪些動作才能以HTML呈現表單？
+1. 使用者在案頭開啟表單時，需要採取哪些動作才能在HTML中轉譯表單？
 
-   使用Workbench時，在指派工作步驟中，選取預設設定檔的「HTML」選項按鈕。
+   使用Workbench時，在指派工作步驟中選取預設設定檔的HTML圓鈕。
 
 1. 按一下時附件未顯示。
 
@@ -194,6 +210,6 @@ ht-degree: 0%
 
    從其他表單應用程式登出，然後登入工作區。
 
-1. HTML表單，在其設計中使用流程屬性，在AEM Forms工作區中呈現時，在表單內顯示提交按鈕。
+1. HTML表單在設計中使用流程屬性，在AEM Forms工作區中轉譯時，會在表單內顯示提交按鈕。
 
    設計表單時，當您使用流程屬性時，它會在表單內新增提交按鈕。 在AEM Forms工作區中呈現為PDF時，一般使用者看不到提交按鈕。 不過，在AEM Forms工作區中以HTML表單形式呈現時，一般使用者可看到「提交」按鈕。 按一下表單內的此提交按鈕不會起始任何動作。 按一下AEM Forms工作區底部的「提交」按鈕（在表單外）即可完成工作。

@@ -9,13 +9,25 @@ exl-id: 2ebca4fb-20f7-499c-96a0-4018eaeddc1a
 solution: Experience Manager, Experience Manager Sites
 feature: Security
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: b1210526-416b-4ef6-bcc0-1692e99f30e9
+    internal-label: Administration and security
+subfeature_v2:
+  - id: c35bc059-fd80-4a01-91a6-e48da3c76758
+    internal-label: Security practices
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1609'
-ht-degree: 0%
-
+source-wordcount: '1657'
+ht-degree: 3%
 ---
-
 # 使用AEM 6設定LDAP {#configuring-ldap-with-aem}
 
 LDAP （**L** ightweight **D**&#x200B;目錄&#x200B;**A**&#x200B;存取&#x200B;**P** rotocol）用於存取集中式目錄服務。 它有助於減少管理使用者帳戶所需的工作量，因為使用者帳戶可由多個應用程式存取。 Active Directory就是這類LDAP伺服器。 LDAP通常用於實現單一登入，可讓使用者在登入一次後存取多個應用程式。
@@ -41,9 +53,9 @@ LDAP （**L** ightweight **D**&#x200B;目錄&#x200B;**A**&#x200B;存取&#x200B;*
 
 >[!NOTE]
 >
->觀看[Oak的外部登入模組 — 使用LDAP及Beyond](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-oak-external-login-module-authenticating-with-ldap-and-beyond.html?lang=zh-Hant)進行驗證，以深入探索外部登入模組。
+>觀看[Oak的外部登入模組 — 使用LDAP及Beyond](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-oak-external-login-module-authenticating-with-ldap-and-beyond.html)進行驗證，以深入探索外部登入模組。
 >
->若要閱讀使用Apache DS設定Experience Manager的範例，請參閱[設定Adobe Experience Manager 6.5使用Apache目錄服務。](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/configuring-adobe-experience-manager-6-to-use-apache-directory/m-p/183805?profile.language=zh-Hant)
+>若要閱讀使用Apache DS設定Experience Manager的範例，請參閱[設定Adobe Experience Manager 6.5使用Apache目錄服務。](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/configuring-adobe-experience-manager-6-to-use-apache-directory/m-p/183805)
 
 ## 設定LDAP識別提供者 {#configuring-the-ldap-identity-provider}
 
@@ -162,7 +174,7 @@ LDAP （**L** ightweight **D**&#x200B;目錄&#x200B;**A**&#x200B;存取&#x200B;*
   </tr>
   <tr>
    <td><strong>使用者到期時間</strong></td>
-   <td>同步的使用者過期之前的持續時間。</td>
+   <td>同步使用者過期前的持續時間。</td>
   </tr>
   <tr>
    <td><strong>使用者自動會籍</strong></td>
@@ -182,7 +194,7 @@ LDAP （**L** ightweight **D**&#x200B;目錄&#x200B;**A**&#x200B;存取&#x200B;*
   </tr>
   <tr>
    <td><strong>使用者成員資格巢狀深度</strong></td>
-   <td>同步成員關係時，傳回群組巢狀的最大深度。 如果值為0，則會有效地停用群組成員資格查閱。 值1隻會新增使用者的直接群組。 只有在同步使用者成員資格祖先時，同步個別群組時，這個值才無效。</td>
+   <td>傳回會籍關係同步時群組內嵌的深度上限。 值為 0 可有效停用群組會籍查詢。 值為 1 僅新增使用者的直接群組。 僅在同步使用者會籍系譜時，此值同步單一群組無效。</td>
   </tr>
   <tr>
    <td><strong>群組到期時間</strong></td>
@@ -209,7 +221,7 @@ LDAP （**L** ightweight **D**&#x200B;目錄&#x200B;**A**&#x200B;存取&#x200B;*
 
 >[!NOTE]
 >
->Apache Jackrabbit Oak外部登入模組會實作Java™驗證與授權服務(JAAS)規格。 如需詳細資訊，請參閱[官方OracleJava™安全性參考指南](https://docs.oracle.com/javase/8/docs/technotes/guides/security/jaas/JAASRefGuide.html)。
+>Apache Jackrabbit Oak外部登入模組會實作Java™驗證與授權服務(JAAS)規格。 如需詳細資訊，請參閱[官方Oracle Java™安全性參考指南](https://docs.oracle.com/javase/8/docs/technotes/guides/security/jaas/JAASRefGuide.html)。
 
 其工作是定義要使用的身分提供者和同步處理常式，有效地連結兩個模組。
 
@@ -224,7 +236,7 @@ LDAP （**L** ightweight **D**&#x200B;目錄&#x200B;**A**&#x200B;存取&#x200B;*
 
 >[!NOTE]
 >
->如果您打算讓AEM執行個體擁有多個LDAP組態，則必須為每個組態建立個別的識別提供者與同步處理程式。
+>如果您打算讓AEM執行個體擁有多個LDAP設定，則必須為每個設定建立個別的身分提供者和同步處理程式。
 
 ## 透過SSL設定LDAP {#configure-ldap-over-ssl}
 
@@ -240,11 +252,11 @@ AEM 6可以設定為透過SSL使用LDAP進行驗證，其程式如下：
 
 ### 建立SSL憑證 {#creating-ssl-certificates}
 
-在設定AEM透過SSL以LDAP進行驗證時，可以使用自我簽署憑證。 以下是產生憑證以與AEM搭配使用的工作程式範例。
+設定AEM透過SSL以LDAP驗證時，可使用自我簽署憑證。 以下是產生憑證以與AEM搭配使用的工作程式範例。
 
 1. 請確定您已安裝SSL程式庫且正常運作。 此程式使用OpenSSL作為範例。
 
-1. 建立自訂的OpenSSL設定(cnf)檔案。 此設定可以透過複製預設&#x200B;**openssl.cnf**&#x200B;設定檔案並自訂它來完成。 在UNIX®系統上，它位於`/usr/lib/ssl/openssl.cnf`
+1. 建立自訂的OpenSSL設定(cnf)檔案。 此設定可以透過複製預設**openssl.cnf**設定檔案並自訂它來完成。 在UNIX®系統上，它位於`/usr/lib/ssl/openssl.cnf`
 
 1. 在終端機中執行以下命令，繼續建立CA根金鑰：
 
@@ -280,19 +292,19 @@ LDAP Identity Provider和外部登入模組皆可啟用除錯記錄，以疑難�
 
 * 記錄層級： Debug
 * 記錄檔logs/ldap.log
-* 訊息模式： {0，date，`dd.MM.yyyy` `HH:mm:ss.SSS`} &amp;amp；ast；{4}&amp;amp；ast； {2} {3} {5}
+* 訊息模式： {0，date，`dd.MM.yyyy` `HH:mm:ss.SSS`} &amp;ast；{4}&amp;ast； {2} {3} {5}
 * 記錄器：org.apache.jackrabbit.oak.security.authentication.ldap
 
 * 記錄層級： Debug
 * 記錄檔：logs/external.log
-* 訊息模式： {0，date，`dd.MM.yyyy` `HH:mm:ss.SSS`} &amp;amp；ast；{4}&amp;amp；ast； {2} {3} {5}
+* 訊息模式： {0，date，`dd.MM.yyyy` `HH:mm:ss.SSS`} &amp;ast；{4}&amp;ast； {2} {3} {5}
 * 記錄器： org.apache.jackrabbit.oak.spi.security.authentication.external
 
 ## 關於群組隸屬關係的一句話 {#a-word-on-group-affiliation}
 
-透過LDAP同步的使用者可以屬於AEM中的不同群組。 這些群組可以是外部LDAP群組，這些群組會作為同步處理的一部分新增到AEM。 但是，它們也可以是單獨新增的群組，而且不屬於原始LDAP群組關係綱要。
+透過LDAP同步的使用者可以屬於AEM中的不同群組。 這些群組可以是外部LDAP群組，在同步程式期間新增至AEM。 但是，它們也可以是單獨新增的群組，而且不屬於原始LDAP群組關係綱要。
 
-通常，這些群組是由本機AEM管理員或任何其他身分提供者所新增。
+這些群組通常由本機AEM管理員或任何其他身分提供者新增。
 
 如果從LDAP伺服器上的群組中移除使用者，則同步處理時變更會反映在AEM端。 但是，使用者未由LDAP新增的所有其他群組關聯仍會保留。
 

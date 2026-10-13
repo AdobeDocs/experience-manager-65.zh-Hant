@@ -10,13 +10,29 @@ exl-id: 46c1ca14-78f6-4b33-9fdf-1b90a9875f66
 solution: Experience Manager, Experience Manager 6.5
 feature: Compliance
 role: Developer, Leader, User
-source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e14eb250-3c22-4a07-9061-a78112b2b826
+    internal-label: Experience Manager 6.5
+feature_v2:
+  - id: b1210526-416b-4ef6-bcc0-1692e99f30e9
+    internal-label: Administration and security
+subfeature_v2:
+  - id: c42c36cf-eeed-484a-8b39-a33a68192a07
+    internal-label: Compliance
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '931'
 ht-degree: 39%
-
 ---
-
 # Adobe Experience Manager的資料保護與資料隱私權法規整備 {#aem-readiness-for-data-protection-and-data-privacy-regulations}
 
 >[!WARNING]
@@ -65,19 +81,19 @@ Adobe Experience Manager執行個體以及在其上執行的應用程式是由Ad
 
 * 執行個體，以及在其上執行的應用程式由客戶所擁有和營運。
 
-   * 客戶管理法規角色，包括商業實體和服務提供者、資料控制者和資料處理者等。
+  * 客戶管理法規角色，包括商業實體和服務提供者、資料控制者和資料處理者等。
 
-   * Adobe Experience Platform Privacy Service 不是 AEM 工作流程的一部分，如下圖所示。
+  * Adobe Experience Platform Privacy Service 不是 AEM 工作流程的一部分，如下圖所示。
 
 * AEM 包含相關文件和程序，供客戶隱私權管理員和/或 AEM 管理員執行隱私權法規請求；無論是以手動方式或透過 API (可用時)。
 
 * 沒有新增新的服務或 UI。
 
-   * 反而是記錄各個程序和 API，以供處理隱私權監管請求的客戶 UI/入口網站使用。
+  * 反而是記錄各個程序和 API，以供處理隱私權監管請求的客戶 UI/入口網站使用。
 
 * AEM 不包括任何現成工具來支援隱私權請求工作流程。
 
-   * Adobe向客戶隱私權管理員和AEM管理員提供檔案和程式，讓他們手動執行與隱私權法規相關的請求。
+  * Adobe向客戶隱私權管理員和AEM管理員提供檔案和程式，讓他們手動執行與隱私權法規相關的請求。
 
 Adobe正提供各項程式，用於處理與Adobe Experience Manager的存取、刪除和選擇退出相關的隱私權請求。 有時候，可以從客戶開發的入口網站或指令碼中呼叫可用的API，以幫助實現自動化。
 
@@ -117,7 +133,7 @@ Adobe正提供各項程式，用於處理與Adobe Experience Manager的存取、
 
 * [Adobe Target - 隱私權概觀](https://developer.adobe.com/target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation/?lang=en)
 
-* [Adobe Analytics資料隱私權工作流程](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/data-governance/an-gdpr-workflow.html?lang=zh-Hant)
+* [Adobe Analytics資料隱私權工作流程](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/data-governance/an-gdpr-workflow.html)
 
 ## AEM Communities {#aem-communities}
 

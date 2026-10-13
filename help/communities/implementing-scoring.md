@@ -11,13 +11,20 @@ role: Admin
 exl-id: 4aa857f7-d111-4548-8f03-f6d6c27acf51
 solution: Experience Manager
 feature: Communities
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '2911'
+source-wordcount: '2919'
 ht-degree: 2%
-
 ---
-
 # 社群評分和預算 {#communities-scoring-and-badges}
 
 ## 概觀 {#overview}
@@ -62,7 +69,7 @@ Communities [徽章主控台](/help/communities/badges.md)可讓您新增自訂�
 
 此版本包含三個角色型徽章：
 
-* **版主**
+* **仲裁者**
   `/libs/settings/community/badging/images/moderator/jcr:content/moderator.png`
 
 * **群組管理員**
@@ -164,8 +171,8 @@ Communities [徽章主控台](/help/communities/badges.md)可讓您新增自訂�
 * page2元件上的動作會同時叫用rule1和rule2。
 * 如果兩個規則包含相同`topic/verb`的適用子規則：
 
-   * 只有規則2的子規則會影響分數。
-   * 不會新增兩個子規則的分數。
+  * 只有規則2的子規則會影響分數。
+  * 不會新增兩個子規則的分數。
 
 有多個評分規則時，系統會分別維護每個規則的分數。
 
@@ -181,7 +188,8 @@ Communities [徽章主控台](/help/communities/badges.md)可讓您新增自訂�
 >
 >*不*&#x200B;的用途範例：
 >
->/libs/settings/community/scoring/rules/site1/forums-scoring>/libs/settings/community/scoring/rules/site2/forums-scoring
+>/libs/settings/community/scoring/rules/site1/forums-scoring
+>/libs/settings/community/scoring/rules/site2/forums-scoring
 
 ### 評分子規則 {#scoring-sub-rules}
 
@@ -274,18 +282,18 @@ Communities [徽章主控台](/help/communities/badges.md)可讓您新增自訂�
 1. /libs/settings/community/scoring/rules/comments-scoring
 
    * subRules[] =
-/libs/settings/community/scoring/rules/sub-rules/member-comment-create
-/libs/settings/community/scoring/rules/sub-rules/member-receive-vote
-/libs/settings/community/scoring/rules/sub-rules/member-give-vote
-/libs/settings/community/scoring/rules/sub-rules/member-is-modered
+     /libs/settings/community/scoring/rules/sub-rules/member-comment-create
+     /libs/settings/community/scoring/rules/sub-rules/member-receive-vote
+     /libs/settings/community/scoring/rules/sub-rules/member-give-vote
+     /libs/settings/community/scoring/rules/sub-rules/member-is-modered
 
 1. /libs/settings/community/scoring/rules/forums-scoring
 
    * subRules[] =
-/libs/settings/community/scoring/rules/sub-rules/member-forum-create
-/libs/settings/community/scoring/rules/sub-rules/member-receive-vote
-/libs/settings/community/scoring/rules/sub-rules/member-give-vote
-/libs/settings/community/scoring/rules/sub-rules/member-is-modered
+     /libs/settings/community/scoring/rules/sub-rules/member-forum-create
+     /libs/settings/community/scoring/rules/sub-rules/member-receive-vote
+     /libs/settings/community/scoring/rules/sub-rules/member-give-vote
+     /libs/settings/community/scoring/rules/sub-rules/member-is-modered
 
 **附註：**
 
@@ -296,7 +304,7 @@ Communities [徽章主控台](/help/communities/badges.md)可讓您新增自訂�
 * `sub-rules`可以在各種評分規則之間共用。
 * `rules`應該位於儲存庫位置，且每個人都有讀取許可權。
 
-   * 無論位置為何，規則名稱必須是唯一的。
+  * 無論位置為何，規則名稱必須是唯一的。
 
 ### 啟用自訂評分規則 {#activating-custom-scoring-rules}
 
@@ -315,15 +323,15 @@ Communities [徽章主控台](/help/communities/badges.md)可讓您新增自訂�
 
 * `1|/libs/settings/community/badging/images/bronze-badge/jcr:content/bronze.png`
 
-   * 榮獲銅級徽章者可獲得1分。
+  * 榮獲銅級徽章者可獲得1分。
 
 * `60|/libs/settings/community/badging/images/silver-badge/jcr:content/silver.png`
 
-   * 當累積60分時，會授予銀級徽章。
+  * 當累積60分時，會授予銀級徽章。
 
 * `80|/libs/settings/community/badging/images/gold-badge/jcr:content/gold.png`
 
-   * 當累積80分時，會授予金級徽章。
+  * 當累積80分時，會授予金級徽章。
 
 徽章規則會與評分規則配對，這會決定如何累積分數。 請參閱標題為[將規則套用至內容](#apply-rules-to-content)的章節。
 
@@ -378,7 +386,7 @@ Communities [徽章主控台](/help/communities/badges.md)可讓您新增自訂�
 * `rules`節點的型別為cq:Page。
 * `rules`應該位於儲存庫位置，且每個人都有讀取許可權。
 
-   * 無論位置為何，規則名稱必須是唯一的。
+  * 無論位置為何，規則名稱必須是唯一的。
 
 ### 啟用自訂徽章規則 {#activating-custom-badging-rules}
 
@@ -581,29 +589,29 @@ SocialEvent `topic`= com/adobe/cq/social/moderation
 * 在作者上存取CRXDE Lite。
 * 瀏覽至基本頁面：
 
-   * /content/sites/engage/en/jcr:content
+  * /content/sites/engage/en/jcr:content
 
 * 新增badgingRules屬性：
 
-   * **名稱**：`badgingRules`
-   * **類型**：`String`
-   * 選取&#x200B;**多個**
-   * 選取&#x200B;**新增**
-   * 輸入`/libs/settings/community/badging/rules/forums-badging`
-   * 選取&#x200B;**+**
-   * 輸入`/libs/settings/community/badging/rules/comments-badging`
-   * 選取&#x200B;**確定**
+  * **名稱**：`badgingRules`
+  * **類型**：`String`
+  * 選取&#x200B;**多個**
+  * 選取&#x200B;**新增**
+  * 輸入`/libs/settings/community/badging/rules/forums-badging`
+  * 選取&#x200B;**+**
+  * 輸入`/libs/settings/community/badging/rules/comments-badging`
+  * 選取&#x200B;**確定**
 
 * 新增scoringRules屬性：
 
-   * **名稱**：`scoringRules`
-   * **類型**：`String`
-   * 選取&#x200B;**多個**
-   * 選取&#x200B;**新增**
-   * 輸入`/libs/settings/community/scoring/rules/forums-scoring`
-   * 選取&#x200B;**+**
-   * 輸入`/libs/settings/community/scoring/rules/comments-scoring`
-   * 選取&#x200B;**確定**
+  * **名稱**：`scoringRules`
+  * **類型**：`String`
+  * 選取&#x200B;**多個**
+  * 選取&#x200B;**新增**
+  * 輸入`/libs/settings/community/scoring/rules/forums-scoring`
+  * 選取&#x200B;**+**
+  * 輸入`/libs/settings/community/scoring/rules/comments-scoring`
+  * 選取&#x200B;**確定**
 
 * 選取&#x200B;**全部儲存**。
 
@@ -614,13 +622,13 @@ SocialEvent `topic`= com/adobe/cq/social/moderation
 * 再次使用CRXDE Lite。
 * 瀏覽至論壇元件
 
-   * `/content/sites/engage/en/forum/jcr:content/content/primary/forum`
+  * `/content/sites/engage/en/forum/jcr:content/content/primary/forum`
 
 * 如有必要，請新增allowBadges布林值屬性，並確保其為true。
 
-   * **名稱**：`allowBadges`
-   * **類型**：`Boolean`
-   * **值**：`true`
+  * **名稱**：`allowBadges`
+  * **類型**：`Boolean`
+  * **值**：`true`
 
 ![test-forum-component](assets/test-forum-component.png)
 
@@ -633,7 +641,7 @@ SocialEvent `topic`= com/adobe/cq/social/moderation
 * 發表新論壇主題。
 * 頁面必須重新整理才能顯示徽章。
 
-   * 登出並以其他社群成員身分登入（例如：aaron.mcdonald@mailinator.com/password）。
+  * 登出並以其他社群成員身分登入（例如：aaron.mcdonald@mailinator.com/password）。
 
 * 選取論壇。
 

@@ -9,13 +9,22 @@ exl-id: 11b0023e-34bd-4dfe-8173-5466db9fbe34
 solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 243139ec-8e41-5296-a287-31343ab1bc0f
+    internal-label: Integration
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
 source-wordcount: '1102'
 ht-degree: 2%
-
 ---
-
 # 疑難排解整合問題{#troubleshooting-integration-issues}
 
 ## 一般疑難排解提示 {#general-troubleshooting-tips}
@@ -96,7 +105,7 @@ sed -n "s/.*(aem-analytics-integration-.*).*target=\(.*\)\/jcr:content.*/\1/p" e
 
 若要修正此問題，請嘗試下列步驟：
 
-* 請確定加密的屬性可以解密（請注意，加密可能在每個AEM執行個體上使用不同的自動產生金鑰）。 如需其他詳細資料，請一併閱讀[組態屬性的Encryption Support &#x200B;](/help/sites-administering/encryption-support-for-configuration-properties.md)。
+* 請確定加密的屬性可以解密（請注意，加密可能在每個AEM執行個體上使用不同的自動產生金鑰）。 如需其他詳細資料，請一併閱讀[組態屬性的Encryption Support ](/help/sites-administering/encryption-support-for-configuration-properties.md)。
 * 重新發佈`/etc/cloudservices/dynamictagmanagement`中找到的組態
 * 檢查`/etc/cloudservices`上的ACL。 ACL應為：
 
@@ -166,7 +175,7 @@ var s=s_gi(s_account)
 您可以嘗試下列解決方案：
 
 * 確定在[頁面標題](/help/sites-developing/target.md#enabling-targeting-with-adobe-target-on-your-pages)中同步執行載入類似DTM的程式庫（接著載入Target程式庫）的客戶程式碼。
-* 如果網站設定為使用DTM來傳遞Target資料庫，請確定已在[Target組態](https://helpx.adobe.com/tw/experience-manager/6-3/sites/administering/using/target-configuring.html)中核取由DTM **傳遞的** Clientlib選項。
+* 如果網站設定為使用DTM來傳遞Target資料庫，請確定已在[Target組態](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/target-configuring.html)中核取由DTM **傳遞的** Clientlib選項。
 
 ### 使用AT.js 1.3+時，一律會顯示預設選件，而非正確選件 {#a-default-offer-is-always-displayed-instead-of-correct-offer-when-using-at-js}
 
@@ -211,7 +220,7 @@ http://localhost:4502/etc/cloudservices/testandtarget/<YOUR-CONFIG>/jcr:content.
 }
 ```
 
-如果回應包含行`a4tEnabled:false`，請連絡[Adobe客戶服務](https://helpx.adobe.com/tw/contact.html)，以正確布建您的帳戶。
+如果回應包含行`a4tEnabled:false`，請連絡[Adobe客戶服務](https://helpx.adobe.com/contact.html)，以正確布建您的帳戶。
 
 ### 實用的Target API {#helpful-target-apis}
 

@@ -9,13 +9,22 @@ exl-id: b5f2be67-c93c-4dbc-acc0-3edd8f1a282f
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
-source-wordcount: '538'
-ht-degree: 4%
-
+source-wordcount: '561'
+ht-degree: 6%
 ---
-
 # 在We.Retail中試用核心元件{#trying-out-core-components-in-we-retail}
 
 核心元件是現代、彈性的元件，具有輕鬆擴充的功能，並可輕鬆整合至您的專案。 核心元件是圍繞幾項主要設計原則建置的，例如HTL、現成可用的能力、可設定性、版本設定和擴充性。 We.Retail是以核心元件為基礎所建置。
@@ -35,7 +44,7 @@ ht-degree: 4%
 
    ![chlimage_1-162](assets/chlimage_1-162.png)
 
-1. 所有核心元件都命名為&#x200B;**v1**，表示這是此核心元件的第一個版本。 未來將發行常規版本，此版本與AEM版本相容，且可輕鬆升級，讓您可以利用最新功能。
+1. 所有核心元件都命名為&#x200B;**v1**，表示這是此核心元件的第一個版本。 未來將發行常規版本，此版本與AEM版本相容，可輕鬆升級，讓您可以利用最新功能。
 1. 按一下&#x200B;**文字(v1)**。
 
    檢視元件的&#x200B;**資源型別**&#x200B;是`/apps/core/wcm/components/text/v1/text`。 核心元件位於`/apps/core/wcm/components`下方，且已針對每個元件建立版本。
@@ -57,7 +66,7 @@ ht-degree: 4%
 
 1. 在「感謝您」頁面上，選取文字元件，然後在元件的編輯選單中按一下「取消繼承」圖示。
 
-   [We.Retail有全域化的網站結構](/help/sites-developing/we-retail-globalized-site-structure.md)，內容透過稱為inheritance[&#128279;](/help/sites-administering/msm.md)的機制從語言主版推送到即時副本。 因此，必須取消繼承，才能讓使用者手動編輯文字。
+   [We.Retail有全域化的網站結構](/help/sites-developing/we-retail-globalized-site-structure.md)，內容透過稱為inheritance](/help/sites-administering/msm.md)的機制從語言主版推送到[即時副本。 因此，必須取消繼承，才能讓使用者手動編輯文字。
 
    ![chlimage_1-167](assets/chlimage_1-167.png)
 
@@ -65,7 +74,7 @@ ht-degree: 4%
 
    ![chlimage_1-168](assets/chlimage_1-168.png)
 
-1. 一旦取消繼承並選取文字元件後，就可使用更多選項。 按一下&#x200B;**編輯**。
+1. 一旦取消繼承並選取文字元件後，就可使用更多選項。 按一下「**編輯**」。
 
    ![chlimage_1-169](assets/chlimage_1-169.png)
 
@@ -86,6 +95,6 @@ ht-degree: 4%
 
 ## 更多資訊 {#further-information}
 
-如需核心元件的詳細資訊，請參閱撰寫檔案[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)，以取得核心元件功能的概觀，並參閱開發人員檔案[開發核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html?lang=zh-Hant)，以取得技術概觀。
+如需核心元件的詳細資訊，請參閱撰寫檔案[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)，以取得核心元件功能的概觀，並參閱開發人員檔案[開發核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html)，以取得技術概觀。
 
 此外，您可能希望進一步調查[可編輯的範本](/help/sites-developing/we-retail-editable-templates.md)。 如需可編輯範本的完整詳細資訊，請參閱撰寫檔案[建立頁面範本](/help/sites-authoring/templates.md)或開發人員檔案頁面[範本 — 可編輯](/help/sites-developing/page-templates-editable.md)。

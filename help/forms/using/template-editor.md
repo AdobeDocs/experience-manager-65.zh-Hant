@@ -9,20 +9,38 @@ feature: Adaptive Forms,Foundation Components
 exl-id: d7287ee7-fb4e-4d47-b37e-0a9260344070
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 7da902b6-fe94-5180-8e7c-f6d1e38d01d5
+    internal-label: Foundation Components
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
-source-wordcount: '1956'
+source-wordcount: '2087'
 ht-degree: 4%
-
 ---
-
 # 最適化表單範本{#adaptive-form-templates}
 
-<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hant)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。 這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。 本文會介紹使用基礎元件編寫最適化表單的舊方法。</span>
+<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。 這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。 本文會介紹使用基礎元件編寫最適化表單的舊方法。</span>
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/create-an-adaptive-form-on-forms-cs/template-editor.html?lang=zh-Hant) |
+| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/create-an-adaptive-form-on-forms-cs/template-editor.html) |
 | AEM 6.5 | 本文章 |
 
 
@@ -48,7 +66,7 @@ ht-degree: 4%
 1. 在範本主控台中，選取您已建立的資料夾中的&#x200B;**建立**。
 1. 在「挑選範本型別」區段中，選取&#x200B;**最適化表單範本**，然後選取&#x200B;**下一步**。
 
-1. 在[範本詳細資料]區段中，提供範本標題並選取[建立]。**&#x200B;**
+1. 在[範本詳細資料]區段中，提供範本標題並選取[建立]。****
 您可以提供說明和縮圖，以便在表單製作時選取建立的範本時看得到。
 
 1. 選取&#x200B;**完成**&#x200B;以返回主控台，或選取&#x200B;**開啟**&#x200B;以在編輯器中開啟範本。
@@ -60,13 +78,13 @@ ht-degree: 4%
 * **頁面工具列**
 包含下列選項：
 
-   * **切換側面板**：可讓您顯示或隱藏側欄。
-   * **頁面資訊**：可讓您指定發佈/取消發佈時間、縮圖、使用者端資料庫、頁面原則及頁面設計使用者端資料庫等資訊。
-   * **模擬器**：可讓您模擬及自訂不同裝置的外觀。
-   * **圖層選擇器：**&#x200B;可讓您變更圖層。
-您可以選擇&#x200B;**結構**&#x200B;圖層或&#x200B;**初始內容**&#x200B;圖層。結構圖層可讓您新增及自訂頁首與頁尾。初始內容層可讓您自訂表單內容。
+  * **切換側面板**：可讓您顯示或隱藏側欄。
+  * **頁面資訊**：可讓您指定發佈/取消發佈時間、縮圖、使用者端資料庫、頁面原則及頁面設計使用者端資料庫等資訊。
+  * **模擬器**：可讓您模擬及自訂不同裝置的外觀。
+  * **圖層選擇器：**可讓您變更圖層。
+    您可以選擇**結構**&#x200B;圖層或&#x200B;**初始內容**&#x200B;圖層。 結構圖層可讓您新增及自訂頁首與頁尾。 初始內容層可讓您自訂表單內容。
 
-   * **預覽：**&#x200B;讓您預覽範本在發佈時的外觀。 您可以使用「圖層選取器」和「預覽」來切換編輯和預覽模式。
+  * **預覽：**&#x200B;讓您預覽範本在發佈時的外觀。 您可以使用「圖層選取器」和「預覽」來切換編輯和預覽模式。
 
 * **側欄：**&#x200B;提供內容、屬性、Assets和元件瀏覽器。
 * **元件工具列：**&#x200B;選取元件時，您會看到可自訂元件的工具列。
@@ -115,7 +133,7 @@ ht-degree: 4%
 
 選取「初始內容」選項時，範本的「最適化表單」容器會開啟，就像要編輯的最適化表單一樣。 如同製作最適化表單，您可以指定初始設定，例如選取主題和提交動作。
 
-表單作者可將其用作建立表單的基礎。內容流程結構是在範本的「初始內容」層中所指定。若要切換到編輯表單範本的初始內容，在頁面工具列的[預覽]之前，選取![畫佈下拉式清單](assets/canvas-drop-down.png) **>初始內容**。
+表單作者可將其用作建立表單的基礎。 內容流程結構是在範本的「初始內容」層中所指定。 若要切換到編輯表單範本的初始內容，在頁面工具列的[預覽]之前，選取![畫佈下拉式清單](assets/canvas-drop-down.png) **>初始內容**。
 ![範本編輯器中的初始內容層](assets/initial-content-layer.png)
 
 範本編輯器中的初始內容層，顯示為指定屬性而選取的最適化表單容器。

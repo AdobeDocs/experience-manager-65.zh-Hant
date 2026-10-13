@@ -10,13 +10,31 @@ exl-id: 76a8f93f-eb8a-4e68-8626-efa6dc67668f
 solution: Experience Manager, Experience Manager Forms
 feature: HTML5 Forms,Adaptive Forms,Mobile Forms
 role: User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 97aafc4b-2598-52d6-9012-295a95969e38
+    internal-label: HTML5 Forms
+  - id: 59f95943-e802-56ac-990d-21ab923984c1
+    internal-label: Mobile Forms
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '347'
 ht-degree: 3%
-
 ---
-
 # 在AEM Forms工作區中使用表單集{#working-with-formsets-in-aem-forms-workspace}
 
 表單集是分組並向一般使用者呈現為單一表單集的HTML5表單集合。 使用者開始填寫表單集時，會順暢地從一個表單轉換為另一個表單。 然後，您只需按一下即可提交該組表單。 如需表單集及其設定方式的詳細資訊，請參閱AEM Forms中的[表單集](../../forms/using/formset-in-aem-forms.md)。

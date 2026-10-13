@@ -8,16 +8,34 @@ feature: Adaptive Forms,Foundation Components
 exl-id: f2abae0a-f7fd-4a39-bd8c-03492ce06fe9
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 7da902b6-fe94-5180-8e7c-f6d1e38d01d5
+    internal-label: Foundation Components
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1139'
-ht-degree: 4%
-
+source-wordcount: '1181'
+ht-degree: 5%
 ---
-
 # 建立具有可重複區段的表單 {#creating-forms-with-repeatable-sections}
 
-<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hant)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。本文會介紹使用基礎元件編寫最適化表單的舊方法。</span>
+<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。 這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。 本文會介紹使用基礎元件編寫最適化表單的舊方法。</span>
 
 可重複區段是可動態新增或移除至表單的面板。
 
@@ -40,7 +58,7 @@ ht-degree: 4%
 1. 面板的父項（即將重複）應包含新增和刪除按鈕，以管理可重複面板的例項。 執行以下步驟，將按鈕插入父項，並在按鈕上啟用指令碼：
 
    1. 從側邊欄中，將按鈕元件拖放至面板的父面板。 選取元件並選取![edit-rules](assets/edit-rules.png)。 按鈕的規則會在規則編輯器中開啟。
-   1. 在[規則編輯器]視窗中，按一下[建立]。**&#x200B;**。
+   1. 在[規則編輯器]視窗中，按一下[建立]。****。
 
       選取[表單物件與函式]列中的&#x200B;**視覺化編輯器**。
 
@@ -55,7 +73,7 @@ ht-degree: 4%
       * 若要建立新增面板按鈕，請指定`this.panel.instanceManager.addInstance()`
       * 若要建立刪除面板按鈕，請指定`this.panel.instanceManager.removeInstance(this.panel.instanceIndex)`
 
-      按一下&#x200B;**「完成」**。
+      按一下&#x200B;**完成**。
 
       >[!NOTE]
       >
@@ -116,7 +134,7 @@ ht-degree: 4%
 1. 若要指定最小重複次數，請選取「最小計數」，並在相關方塊中輸入數字。 如果此選項設為0，且資料合併時沒有為子表單中的物件提供資料，則轉譯表單時不會放置子表單。
 1. 若要指定子表單重複次數的最大值，請選取「最大值」，並在相關方塊中輸入數字。 如果您未在「最大值」方塊中指定值，則子表單重複次數將無限制。
 1. 若要指定一組子表單重複次數，而不考慮資料數量，請選取「初始計數」，並在相關方塊中輸入數字。 如果選取此選項，但無可用資料或資料專案少於指定的初始計數值，則表格上仍會放置子表格的空白執行個體。
-1. 在父子表單中新增兩個按鈕 — 一個用於新增例項，另一個用於刪除可重複子表單的例項。 如需詳細步驟，請參閱[建置動作](https://help.adobe.com/zh_TW/AEMForms/6.1/DesignerHelp/WS107c29ade9134a2c74572b5612a87ca2b56-8000.2.html#WS107c29ade9134a2c-1f74d86012a87d4fe55-8000.2)。
+1. 在父子表單中新增兩個按鈕 — 一個用於新增例項，另一個用於刪除可重複子表單的例項。 如需詳細步驟，請參閱[建置動作](https://help.adobe.com/en_US/AEMForms/6.1/DesignerHelp/WS107c29ade9134a2c74572b5612a87ca2b56-8000.2.html#WS107c29ade9134a2c-1f74d86012a87d4fe55-8000.2)。
 1. 現在將表單範本連結至最適化表單。 如需詳細步驟，請參閱[根據範本建立最適化表單](/help/forms/using/creating-adaptive-form.md#create-an-adaptive-form-based-on-a-template)。
 1. 使用在步驟9中建立的按鈕來新增和移除子表單。
 

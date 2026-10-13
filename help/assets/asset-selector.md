@@ -7,18 +7,34 @@ role: User
 hide: true
 exl-id: c84ce84a-1e52-48fd-a16c-38c7769df9af
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: bca6156727dca11b2e09be549f3def6130827193
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 7d2b2ec8-499c-5434-9ffd-9218cd71f683
+    internal-label: Asset Management
+  - id: 74ec00bc-0862-520e-86dc-e377aeccc141
+    internal-label: Search
+  - id: ac365bec-0634-4744-9473-c42f47320593
+    internal-label: Asset management and governance
+subfeature_v2:
+  - id: ed6971a3-2c12-4fd2-81f4-ff329c416250
+    internal-label: Metadata
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '534'
 ht-degree: 2%
-
 ---
-
 # 資產選擇器 {#asset-selector}
 
 >[!NOTE]
 >
->[資產選擇器](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/asset-selector.html?lang=zh-Hant)在舊版[!DNL Experience Manager]中稱為[資產選擇器](https://helpx.adobe.com/tw/experience-manager/6-2/assets/using/asset-picker.html)。
+>[資產選擇器](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/asset-selector.html?lang=en)在舊版[!DNL Experience Manager]中稱為[資產選擇器](https://helpx.adobe.com/experience-manager/6-2/assets/using/asset-picker.html)。
 
 資產選擇器可讓您在[!DNL Adobe Experience Manager] Assets中瀏覽、搜尋及篩選資產。 您也可以擷取使用資產選擇器所選取資產的中繼資料。 若要自訂資產選擇器介面，您可以使用支援的請求引數來啟動它。 這些引數會為特定案例設定資產選擇器的內容。
 
@@ -63,4 +79,4 @@ ht-degree: 2%
 
 >[!MORELIKETHIS]
 >
->* [AEM as a Cloud Service中的Micro-Frontend資產選擇器](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/asset-selector.html?lang=zh-Hant)
+>* [AEM as a Cloud Service中的Micro-Frontend資產選擇器](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/asset-selector.html?lang=en)

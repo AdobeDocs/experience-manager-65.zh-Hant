@@ -5,22 +5,35 @@ exl-id: cb7a9da2-7112-4ef0-b1cf-211a7df93625
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Developer
-source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
-source-wordcount: '1567'
+source-wordcount: '1568'
 ht-degree: 2%
-
 ---
-
 # 使用頁面版本{#working-with-page-versions}
 
 版本設定功能會在特定時間點建立頁面的「快照」。 使用版本設定，您可以執行下列動作：
 
 * 建立頁面的版本。
 * 將頁面還原成先前的版本；例如：
-   * 還原您對頁面所做的變更。
+  * 還原您對頁面所做的變更。
 * 將頁面的目前版本與先前版本進行比較：
-   * 以醒目提示文字和影像中的差異。
+  * 以醒目提示文字和影像中的差異。
 
 >[!NOTE]
 >
@@ -71,19 +84,19 @@ ht-degree: 2%
 
 建立頁面的版本後，有多種恢復先前版本的方法：
 
-* **從**&#x200B;時間表[邊欄還原為此版本](/help/sites-authoring/basic-handling.md#timeline)選項
+* **從[時間表](/help/sites-authoring/basic-handling.md#timeline)邊欄還原為此版本**&#x200B;選項
 
   復原所選頁面的先前版本。
 
-* 從頂端&#x200B;**動作工具列**&#x200B;的[還原](/help/sites-authoring/basic-handling.md#actions-toolbar)選項
+* 從頂端[動作工具列](/help/sites-authoring/basic-handling.md#actions-toolbar)的&#x200B;**還原**&#x200B;選項
 
-   * **還原版本**
+  * **還原版本**
 
-     在目前選取的資料夾中復原指定頁面的版本；這也可以包括復原先前已刪除的頁面。
+    在目前選取的資料夾中復原指定頁面的版本；這也可以包括復原先前已刪除的頁面。
 
-   * **還原樹狀結構**
+  * **還原樹狀結構**
 
-     將整個樹狀結構恢復到指定的日期和時間的版本；這可以包括先前已刪除的頁面。
+    將整個樹狀結構恢復到指定的日期和時間的版本；這可以包括先前已刪除的頁面。
 
 >[!NOTE]
 >
@@ -103,7 +116,7 @@ ht-degree: 2%
 
 1. 瀏覽以顯示您要回覆至先前版本的頁面。
 1. 在[選取模式](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)中選取頁面。
-1. 開啟「時 **間軸** 」欄，然後選 **取「全部顯示** 」 **或「版本**」。會列出所選頁面的頁面版本。
+1. 開啟「時 **間軸** 」欄，然後選 **取「全部顯示** 」 **或「版本**」。 會列出所選頁面的頁面版本。
 1. 選取您想要還原到的版本。 可能的選項如下所示：
 
    ![還原為此版本](assets/screen-shot_2019-03-05at112505.png)
@@ -116,7 +129,7 @@ ht-degree: 2%
 
 1. 導覽至[選取](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)必要的資料夾。
 
-1. 從頂端&#x200B;**動作工具列**&#x200B;選取&#x200B;**還原**，然後選取[還原版本](/help/sites-authoring/basic-handling.md#actions-toolbar)。
+1. 從頂端[動作工具列](/help/sites-authoring/basic-handling.md#actions-toolbar)選取&#x200B;**還原**，然後選取&#x200B;**還原版本**。
 
    >[!NOTE]
    >
@@ -151,7 +164,7 @@ ht-degree: 2%
 
 1. 導覽至[選取](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)必要的資料夾。
 
-1. 選取&#x200B;**還原**，然後從頂端&#x200B;**動作工具列**&#x200B;選取[還原樹狀結構](/help/sites-authoring/basic-handling.md#actions-toolbar)。 隨即顯示樹狀結構的最新版本：
+1. 選取&#x200B;**還原**，然後從頂端[動作工具列](/help/sites-authoring/basic-handling.md#actions-toolbar)選取&#x200B;**還原樹狀結構**。 隨即顯示樹狀結構的最新版本：
 
    ![還原樹狀結構](/help/sites-authoring/assets/versions-restore-tree-02.png)
 
@@ -163,7 +176,7 @@ ht-degree: 2%
 
    * 如果處於非使用中（未選取），則會移除任何非版本化頁面，因為這些頁面在版本化樹狀結構中不存在。
 
-1. 針對要還原為&#x200B;**目前**&#x200B;版本的樹狀結構選取版本&#x200B;*還原*。
+1. 針對要還原為&#x200B;*目前*&#x200B;版本的樹狀結構選取版本&#x200B;**還原**。
 
 ## 預覽版本 {#previewing-a-version}
 
@@ -203,12 +216,12 @@ ht-degree: 2%
 
 >[!TIP]
 >
->執行AEM [或更新版本時，](/help/sites-authoring/launches.md)Timewarp也可以與Launches搭配使用以預覽未來6.5.10.0。
+>執行AEM 6.5.10.0或更新版本時，[Timewarp也可以與Launches搭配使用以預覽未來](/help/sites-authoring/launches.md)。
 
 內容建立是一個持續進行的合作過程。 Timewarp的用途是讓作者追蹤已發佈網站在一段時間內的變化，協助他們瞭解內容的變更情況。 此功能使用頁面版本來判斷發佈環境的狀態：
 
 * 系統會尋找在選取的時間使用中的頁面版本。
-   * 此頁面版本是在&#x200B;*時間扭曲中選取的時間點*&#x200B;之前建立/啟動。
+  * 此頁面版本是在&#x200B;*時間扭曲中選取的時間點*&#x200B;之前建立/啟動。
 * 當導覽至已刪除的頁面時，也會呈現頁面 — 只要該頁面的舊版本仍然可在存放庫中使用。
 * 如果找不到發佈的版本，則Timewarp會回覆成作者環境中頁面的目前狀態（以防止發生錯誤/404頁面，此錯誤會導致無法瀏覽）。
 

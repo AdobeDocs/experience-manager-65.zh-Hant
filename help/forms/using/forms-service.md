@@ -8,20 +8,40 @@ feature: Document Services,Forms Service,PDF Generator
 exl-id: 6580fe6f-3cdb-45ec-8ba3-51dc60d1965e
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: b59c0486-3350-52ed-8816-e0a8e11486b8
+    internal-label: Forms Service
+  - id: b26425d0-6fde-5e02-bfd6-e560e2fa86c9
+    internal-label: PDF Generator
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: f19cff18-c8cc-4a4b-adad-85dd2fa3dbe2
+    internal-label: Document Services
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '685'
+source-wordcount: '687'
 ht-degree: 0%
-
 ---
-
 # Forms 服務 {#forms-service}
 
 ## 概觀 {#overview}
 
 Forms服務可讓您建立互動式資料擷取使用者端應用程式，以驗證、處理、轉換及傳遞通常在Designer中建立的表單。 Forms服務會將您開發的任何表單設計呈現為PDF檔案。
 
-Forms服務也可讓組織部署電子錶單作為AdobePDF，以擴充其智慧型資料擷取流程。 您也可以使用本服務，將資料分別匯入及匯出現有PDF forms。
+Forms服務也可讓組織將電子錶單部署為Adobe PDF，以擴充其智慧型資料擷取流程。 您也可以使用本服務，將資料分別匯入及匯出現有的PDF forms。
 
 使用Forms服務來執行下列動作：
 
@@ -31,11 +51,11 @@ Forms服務也可讓組織部署電子錶單作為AdobePDF，以擴充其智慧�
 
 ## 建立PDF forms  {#creating-pdf-forms-nbsp}
 
-使用表單服務建立資料擷取的PDF forms。 通常，您會先從AEM Forms Designer範本開始。 使用Forms服務的`renderPDFForm` （連結至Javadoc）操作將此範本轉換為PDF表單。
+使用表單服務建立用於資料擷取的PDF forms。 通常，您會先從AEM Forms Designer範本開始。 使用Forms服務的`renderPDFForm` （連結至Javadoc）操作將此範本轉換為PDF表單。
 
 `renderPDFForm`作業的第一個引數是範本檔案的名稱（例如，`ExpenseClaim.xdp`）。 您可以將範本檔案儲存在本機檔案系統、CRX存放庫或HTTP或FTP位置。 您可以在`renderPDFForm`作業的`PDFFormRenderOptions`引數中設定內容根目錄，以指定範本檔案的位置。 請參閱Javadoc以取得您可以為`PDFFormRenderOptions`引數指定的其他選項的詳細資料。
 
-`renderPDFForm`作業也可以接受XML資料。 建立PDF表單時，會將XML資料與範本合併，使產生的PDF表單包含指定的資料。 `renderPDFForm`作業的第二個引數可以接受包含XML資料的Document (Javadoc)物件。
+`renderPDFForm`作業也可以接受XML資料。 建立PDF表單時，會將XML資料與範本合併，使產生的PDF表單包含指定資料。 `renderPDFForm`作業的第二個引數可以接受包含XML資料的Document (Javadoc)物件。
 
 ## 從PDF forms擷取資料  {#extracting-data-from-pdf-forms-nbsp}
 
@@ -43,7 +63,7 @@ Forms服務也可讓組織部署電子錶單作為AdobePDF，以擴充其智慧�
 
 ## 將資料匯入PDF forms {#importing-data-into-pdf-forms}
 
-Forms服務也可讓您將使用AEM Forms Designer或`renderPDFForm`作業建立的PDF表單與XML資料合併。 Forms服務的`importData` (Javadoc)作業接受PDF表單和XML資料，並傳回包含資料XML的PDF表單。
+Forms服務也可讓您將使用PDF Designer或`renderPDFForm`作業建立的AEM Forms表單與XML資料合併。 Forms服務的`importData` (Javadoc)作業接受PDF表單和XML資料，並傳回包含資料XML的PDF表單。
 
 ## 根據片段轉譯表單 {#rendering-forms-based-on-fragments}
 

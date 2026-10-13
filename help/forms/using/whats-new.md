@@ -8,13 +8,29 @@ exl-id: 47b9de1f-b16a-424c-b8b4-e9d7b3dcca86
 solution: Experience Manager, Experience Manager Forms
 feature: Release Information
 role: Admin, User, Developer
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: ed762d86-a04b-452b-a08f-86359bb8ff27
+    internal-label: Configuration and operations
+subfeature_v2:
+  - id: c21ccc2b-e0c8-4853-bf41-f12259ed93f8
+    internal-label: Release information
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
 source-wordcount: '738'
 ht-degree: 42%
-
 ---
-
 # 新功能摘要 |AEM 6.5 Forms{#new-features-summary-aem-forms}
 
 | 產品 | Adobe Experience Manager 6.5 |
@@ -25,7 +41,7 @@ ht-degree: 42%
 
 ## Adobe Experience Manager 6.5 Forms Service Pack 19 (6.5.19.0)包含的內容
 
-Experience Manager 6.5.19.0包含自2019年4月6.5版首次發行以來所推出的新功能、客戶要求的重要增強功能、錯誤修正，以及效能、穩定性和安全性改善專案。 [在Experience Manager 6.5上安裝此Service Pack](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/aem-forms-current-service-pack-installation-instructions.html?lang=zh-Hant)。
+Experience Manager 6.5.19.0包含自2019年4月6.5版首次發行以來所推出的新功能、客戶要求的重要增強功能、錯誤修正，以及效能、穩定性和安全性改善專案。 [在Experience Manager 6.5上安裝此Service Pack](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/aem-forms-current-service-pack-installation-instructions.html)。
 
 ### 新功能
 
@@ -33,13 +49,13 @@ Experience Manager 6.5.19.0包含自2019年4月6.5版首次發行以來所推出
 
 已新增垂直標籤、條款與條件及核取方塊，以增強表單的擴充性。
 
-* **[核取方塊元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/checkbox.html?lang=zh-Hant)**：以核心元件為主的最適化表單現在可以包含核取方塊元件。 可讓使用者二選一，選取或取消選取特定選項。 它通常為一個小方塊，可以按一下或點選以在兩種狀態之間切換：選取和取消選取。 核取方塊是一種常見的表單元素，用來表示選擇是/否或真/假。
+* **[核取方塊元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/checkbox.html)**：以核心元件為主的最適化表單現在可以包含核取方塊元件。 可讓使用者二選一，選取或取消選取特定選項。 它通常為一個小方塊，可以按一下或點選以在兩種狀態之間切換：選取和取消選取。 核取方塊是一種常見的表單元素，用來表示選擇是/否或真/假。
 
-* **[條款與條件元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/terms-and-conditions.html?lang=zh-Hant)**：以核心元件為主的最適化表單現在可以包含條款與條件元件。 它允許表單作者在表單中引入特定區段，向使用者顯示與使用服務、產品或平台相關的條款、條件或法律協議。 此元件的設計用意是在告知使用者他們透過提交表單同意的規則、法規和義務。
+* **[條款與條件元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/terms-and-conditions.html)**：以核心元件為主的最適化表單現在可以包含條款與條件元件。 它允許表單作者在表單中引入特定區段，向使用者顯示與使用服務、產品或平台相關的條款、條件或法律協議。 此元件的設計用意是在告知使用者他們透過提交表單同意的規則、法規和義務。
 
   ![垂直標籤、條款與條件及核取方塊元件](/help/forms/using/assets/forms-components.png)
 
-* **[垂直標籤元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/vertical-tabs.html?lang=zh-Hant)**：以核心元件為主的最適化表單現在可以將表單內容組織成垂直的標籤清單，提供結構化、可導覽的版面。 在表單中使用垂直標籤可以簡化導覽和改進表單內容組織，進而提升使用者整體體驗，特別是在表單包含多個部分或複雜資訊時。
+* **[垂直標籤元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/vertical-tabs.html)**：以核心元件為主的最適化表單現在可以將表單內容組織成垂直的標籤清單，提供結構化、可導覽的版面。 在表單中使用垂直標籤可以簡化導覽和改進表單內容組織，進而提升使用者整體體驗，特別是在表單包含多個部分或複雜資訊時。
 
 #### 64位元版AEM Forms Designer
 
@@ -66,7 +82,7 @@ XMLFM的64位元版帶來更優異的效能、擴充能力，以及更精細的�
 
 ## 安裝服務套件
 
-此Service Pack為JEE上的AEM Forms和OSGi上的AEM Forms提供新功能和錯誤修正。 與先前的Service Pack相比，安裝指示有所變更。如需安裝指示，請參閱[AEM Forms Service Pack安裝指示](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/aem-forms-current-service-pack-installation-instructions.html?lang=zh-Hant)。
+此Service Pack為JEE上的AEM Forms和OSGi上的AEM Forms提供新功能和錯誤修正。 與先前的Service Pack相比，安裝指示有所變更。如需安裝指示，請參閱[AEM Forms Service Pack安裝指示](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/aem-forms-current-service-pack-installation-instructions.html?lang=en)。
 
 
 
@@ -132,7 +148,7 @@ There are several improvements in the Web channel layout auto-generated using th
 
 ### Use Adobe Sign's cloud-based digital signatures in Adaptive Forms {#use-adobe-sign-s-cloud-based-digital-signatures-in-adaptive-forms}
 
-[Cloud-based digital signatures](https://helpx.adobe.com/tw/sign/kb/digital-certificate-providers.html) or remote signatures are a new generation of digital signatures that work across desktop, mobile, and the web — and meet the highest levels of compliance and assurance for signer authentication. You can now [sign an Adaptive Form](../../forms/using/working-with-adobe-sign.md) with Cloud-based digital signatures.
+[Cloud-based digital signatures](https://helpx.adobe.com/sign/kb/digital-certificate-providers.html) or remote signatures are a new generation of digital signatures that work across desktop, mobile, and the web — and meet the highest levels of compliance and assurance for signer authentication. You can now [sign an Adaptive Form](../../forms/using/working-with-adobe-sign.md) with Cloud-based digital signatures.
 
 #### Embed an Adaptive Form or Interactive Communication in AEM Sites Single Page Applications {#embed-an-adaptive-form-or-interactive-communcation-in-aem-sites-single-page-applications}
 

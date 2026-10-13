@@ -9,13 +9,26 @@ feature: Correspondence Management
 exl-id: bc5d6c5b-c833-4849-aace-e07f8a522b32
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 3f00fc92-85ee-583e-abd1-3bc3d96de3a0
+    internal-label: Correspondence Management
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1670'
 ht-degree: 0%
-
 ---
-
 # 互動式通訊和字母中的內嵌條件和重複{#inline-condition-and-repeat-in-interactive-communications-and-letters}
 
 ## 內嵌條件 {#inline-conditions}
@@ -200,7 +213,7 @@ AEM Forms可讓您在文字模組中使用內嵌條件，根據與表單資料�
    * 根據相關資料字典建立的範例XML資料檔案，同時預覽包含範例資料的字母。
    * 附加到相關資料字典的XML資料檔案。
 
-   如需詳細資訊，請參閱[資料字典](https://helpx.adobe.com/tw/aem-forms/6-2/data-dictionary.html)。
+   如需詳細資訊，請參閱[資料字典](https://helpx.adobe.com/aem-forms/6-2/data-dictionary.html)。
 
    ![6_repeatoutputpreview](assets/6_repeatoutputpreview.png)
 

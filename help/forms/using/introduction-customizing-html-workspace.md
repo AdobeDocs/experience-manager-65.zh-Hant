@@ -10,13 +10,33 @@ exl-id: b183d42f-343c-4acb-bc73-f80ad72e54df
 solution: Experience Manager, Experience Manager Forms
 feature: HTML5 Forms,Adaptive Forms,Mobile Forms
 role: Admin, User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 97aafc4b-2598-52d6-9012-295a95969e38
+    internal-label: HTML5 Forms
+  - id: 59f95943-e802-56ac-990d-21ab923984c1
+    internal-label: Mobile Forms
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1790'
 ht-degree: 0%
-
 ---
-
 # 自訂AEM表單工作區簡介{#introduction-to-customizing-aem-form-workspace}
 
 AEM表單工作區提供修改其介面之呈現語意和功能的功能。 以下說明用於變更樣式、版面、格式、品牌和核心功能的自訂型別。
@@ -189,47 +209,47 @@ HTML範本自訂的最上層步驟為：
 
 * client-pkg：
 
-   * src — 包含建立CRX節點所需的成品。
-   * pom.xml — 為各種設定檔建置部署套件的指令碼WS-Deploy套裝
+  * src — 包含建立CRX節點所需的成品。
+  * pom.xml — 為各種設定檔建置部署套件的指令碼WS-Deploy套裝
 
 * client-html：
 
-   * assembly — 包含指令碼用來建立AEM Forms工作區SDK的zip.xml。
-   * src/main/webapp -
+  * assembly — 包含指令碼用來建立AEM Forms工作區SDK的zip.xml。
+  * src/main/webapp -
 
-      * css — 包含AEM Forms工作區的樣式表。
-      * 影像 — 包含AEM Forms工作區中使用的影像。
-      * js：
+    * css — 包含AEM Forms工作區的樣式表。
+    * 影像 — 包含AEM Forms工作區中使用的影像。
+    * js：
 
-         * libs — 包含AEM Forms工作區中使用的所有協力廠商程式庫。
-         * 授權 — 包含HTML和JS檔案的授權，以及這些授權各自來源檔案前置碼的程式碼。
-         * minifier — 用於組合、縮制和升級customizedJavaScript程式碼。
-         * resourcejs_optimizer — 用於JavaScript來源的組合、縮制和升級。
-         * resource_generator — 用於產生register.js和modelcontrollerpath.js。
-         * 執行階段：
+      * libs — 包含AEM Forms工作區中使用的所有協力廠商程式庫。
+      * 授權 — 包含HTML和JS檔案的授權，以及這些授權各自來源檔案前置碼的程式碼。
+      * minifier — 用於組合、縮制和升級customizedJavaScript程式碼。
+      * resourcejs_optimizer — 用於JavaScript來源的組合、縮制和升級。
+      * resource_generator — 用於產生register.js和modelcontrollerpath.js。
+      * 執行階段：
 
-            * 初始設定式 — 包含用於初始化AEM Forms工作區中使用的骨幹檢視和模型的initializer.js。
-            * 模型 — 包含AEM Forms工作區中所有元件的主幹模型。
-            * 路由 — 包含JavaScript檔案和HTML檔案，可在AEM Forms工作區中載入啟動程式、待辦事項、追蹤和偏好設定。
-            * 服務 — 包含用於AEM Forms工作區的service.js。 所有伺服器呼叫都是透過service.js進行。
-            * 範本 — 包含所有範本，即AEM Forms工作區中所有檢視的HTML檔案。
-            * util — 包含在AEM Forms工作區中使用的所有公用程式檔案(javascript)。
-            * 檢視 — 包含AEM Forms工作區中所有元件的主幹檢視。
+        * 初始設定式 — 包含用於初始化AEM Forms工作區中使用的骨幹檢視和模型的initializer.js。
+        * 模型 — 包含AEM Forms工作區中所有元件的主幹模型。
+        * 路由 — 包含JavaScript檔案和HTML檔案，可在AEM Forms工作區中載入啟動程式、待辦事項、追蹤和偏好設定。
+        * 服務 — 包含用於AEM Forms工作區的service.js。 所有伺服器呼叫都是透過service.js進行。
+        * 範本 — 包含所有範本，即AEM Forms工作區中所有檢視的HTML檔案。
+        * util — 包含在AEM Forms工作區中使用的所有公用程式檔案(javascript)。
+        * 檢視 — 包含AEM Forms工作區中所有元件的主幹檢視。
 
-         * main.js
-         * router.js
+      * main.js
+      * router.js
 
-      * libs/ws： pdf.html和pluginPing.pdf用於載入AEM Forms工作區中的PDF forms，而WSNextAdapter.swf用於載入AEM Forms工作區中的SWF表單和Guides。
-      * 地區設定：
+    * libs/ws： pdf.html和pluginPing.pdf用於載入AEM Forms工作區中的PDF forms，而WSNextAdapter.swf用於載入AEM Forms工作區中的SWF表單和Guides。
+    * 地區設定：
 
-         * de-DE — 包含德文的translation.json。
-         * en-US — 包含英文的translation.json。
-         * fr-FR — 包含法文的translation.json。
-         * ja-JP — 包含日文的translation.json。
-         * html.jsp — 包含可找出目前瀏覽器地區設定的程式碼。
+      * de-DE — 包含德文的translation.json。
+      * en-US — 包含英文的translation.json。
+      * fr-FR — 包含法文的translation.json。
+      * ja-JP — 包含日文的translation.json。
+      * html.jsp — 包含可找出目前瀏覽器地區設定的程式碼。
 
-      * html.jsp
-      * GET.jsp
+    * html.jsp
+    * GET.jsp
 
 ### CRX套件 {#crx-package}
 
@@ -256,30 +276,30 @@ CRX套件可部署在CRX™存放庫上。 它在`[LC root]\crx-repository\insta
 * 影像 — 包含所有影像。
 * js：
 
-   * 程式庫：
+  * 程式庫：
 
-      * require — 包含require.js。
-      * jqueryui — 包含jquery.ui.datepicker.ja.js
+    * require — 包含require.js。
+    * jqueryui — 包含jquery.ui.datepicker.ja.js
 
-   * 執行階段：
+  * 執行階段：
 
-      * 範本 — 包含所有範本，即AEM Forms工作區中所有元件的HTML檔案。
+    * 範本 — 包含所有範本，即AEM Forms工作區中所有元件的HTML檔案。
 
-   * main.js （合併、縮小和放大）。
-   * registry.js
+  * main.js （合併、縮小和放大）。
+  * registry.js
 
 * 程式庫：
 
-   * ws — 包含pluginPing.pdf、pdf.html和WSNextAdapter.swf。
+  * ws — 包含pluginPing.pdf、pdf.html和WSNextAdapter.swf。
 
 * 地區設定 — 包含.content.xml。
 * 地區設定：
 
-   * de-DE — 包含德文的translation.json。
-   * en-US — 包含英文的translation.json。
-   * fr-FR — 包含法文的translation.json。
-   * ja-JP — 包含日文的translation.json。
-   * html.jsp — 包含可找出目前瀏覽器地區設定的程式碼。
+  * de-DE — 包含德文的translation.json。
+  * en-US — 包含英文的translation.json。
+  * fr-FR — 包含法文的translation.json。
+  * ja-JP — 包含日文的translation.json。
+  * html.jsp — 包含可找出目前瀏覽器地區設定的程式碼。
 
 * 索引 — 包含.content.xml
 * 設定檔 — 包含offline.jsp。
@@ -301,30 +321,30 @@ CRX套件可部署在CRX™存放庫上。 它在`[LC root]\crx-repository\insta
 * 影像 — 包含所有影像。
 * js：
 
-   * 程式庫：
+  * 程式庫：
 
-      * require — 包含require.js。
-      * jqueryui — 包含jquery.ui.datepicker.ja.js
+    * require — 包含require.js。
+    * jqueryui — 包含jquery.ui.datepicker.ja.js
 
-   * 執行階段：
+  * 執行階段：
 
-      * 範本 — 包含所有範本，即AEM Forms工作區中所有元件的HTML檔案。
+    * 範本 — 包含所有範本，即AEM Forms工作區中所有元件的HTML檔案。
 
-   * main.js （結合）。
-   * registry.js
+  * main.js （結合）。
+  * registry.js
 
 * 程式庫：
 
-   * ws — 包含pluginPing.pdf、pdf.html和WSNextAdapter.swf。
+  * ws — 包含pluginPing.pdf、pdf.html和WSNextAdapter.swf。
 
 * 地區設定 — 包含.content.xml。
 * 地區設定：
 
-   * de-DE — 包含德文的translation.json。
-   * en-US — 包含英文的translation.json。
-   * fr-FR — 包含法文的translation.json。
-   * ja-JP — 包含日文的translation.json。
-   * html.jsp — 包含可找出目前瀏覽器地區設定的程式碼。
+  * de-DE — 包含德文的translation.json。
+  * en-US — 包含英文的translation.json。
+  * fr-FR — 包含法文的translation.json。
+  * ja-JP — 包含日文的translation.json。
+  * html.jsp — 包含可找出目前瀏覽器地區設定的程式碼。
 
 * 索引 — 包含.content.xml
 * 設定檔 — 包含offline.jsp。
@@ -345,35 +365,35 @@ mvn clean -P在client-pkg上安裝開發
 * 影像 — 包含所有影像。
 * js：
 
-   * libs — 包含AEM Forms工作區中使用的所有程式庫。
-   * require - Contains require.js
-   * 江渡 — 包含jquery.ui.datepicker.ja.js
-   * 執行階段：
+  * libs — 包含AEM Forms工作區中使用的所有程式庫。
+  * require - Contains require.js
+  * 江渡 — 包含jquery.ui.datepicker.ja.js
+  * 執行階段：
 
-      * 初始設定式 — 包含初始設定式.js和modelcontrollerpath.js。
-      * 模型 — 包含AEM Forms工作區中所有元件的模型。
-      * 路由 — 包含JavaScript檔案和HTML檔案，可在AEM Forms工作區中載入啟動程式、待辦事項、追蹤和偏好設定。
-      * 服務 — 包含用於AEM Forms工作區的service.js。
-      * 範本 — 包含所有範本，即AEM Forms工作區中所有元件的HTML檔案。
-      * util — 包含在AEM Forms工作區中使用的所有公用程式檔案(JavaScript)。
-      * 檢視 — 包含AEM Forms工作區中所有元件的檢視。
+    * 初始設定式 — 包含初始設定式.js和modelcontrollerpath.js。
+    * 模型 — 包含AEM Forms工作區中所有元件的模型。
+    * 路由 — 包含JavaScript檔案和HTML檔案，可在AEM Forms工作區中載入啟動程式、待辦事項、追蹤和偏好設定。
+    * 服務 — 包含用於AEM Forms工作區的service.js。
+    * 範本 — 包含所有範本，即AEM Forms工作區中所有元件的HTML檔案。
+    * util — 包含在AEM Forms工作區中使用的所有公用程式檔案(JavaScript)。
+    * 檢視 — 包含AEM Forms工作區中所有元件的檢視。
 
-   * main.js
-   * registry.js
-   * router.js
+  * main.js
+  * registry.js
+  * router.js
 
 * 程式庫：
 
-   * ws — 包含pluginPing.pdf、pdf.html和WSNextAdapter.swf。
+  * ws — 包含pluginPing.pdf、pdf.html和WSNextAdapter.swf。
 
 * 地區設定 — 包含.content.xml。
 * 地區設定：
 
-   * de-DE — 包含德文的translation.json。
-   * en-US — 包含英文的translation.json。
-   * fr-FR — 包含法文的translation.json。
-   * ja-JP — 包含日文的translation.json。
-   * html.jsp — 包含可找出目前瀏覽器地區設定的程式碼。
+  * de-DE — 包含德文的translation.json。
+  * en-US — 包含英文的translation.json。
+  * fr-FR — 包含法文的translation.json。
+  * ja-JP — 包含日文的translation.json。
+  * html.jsp — 包含可找出目前瀏覽器地區設定的程式碼。
 
 * 索引 — 包含.content.xml
 * 設定檔 — 包含offline.jsp。

@@ -9,7 +9,18 @@ exl-id: e57a6971-6a6f-427b-a8cd-a2f2e8cdf9e2
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '627'
 ht-degree: 1%
@@ -61,7 +72,7 @@ Adobe Experience Manager (AEM) （以及之前的CQ）一直使用覆蓋原則�
 
 重疊是許多變更的建議方法，例如[設定您的主控台](/help/sites-developing/customizing-consoles-touch.md#create-a-custom-console)或[在側面板中的資產瀏覽器中建立您的選取類別](/help/sites-developing/customizing-page-authoring-touch.md#add-new-selection-category-to-asset-browser) （用於編寫頁面）。 其需求為：
 
-* ***不要*&#x200B;在`/libs`分支中進行變更&#x200B;**&#x200B;您所做的任何變更都可能會遺失，因為每當您：
+* ***不要*&#x200B;在`/libs`分支中進行變更&#x200B;**您所做的任何變更都可能會遺失，因為每當您：
 
   * 在您的執行個體上升級
   * 套用hotfix

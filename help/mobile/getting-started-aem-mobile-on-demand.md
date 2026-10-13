@@ -9,13 +9,17 @@ exl-id: 4be199d8-963d-4807-b9bb-e23fa577c5f2
 solution: Experience Manager
 feature: Mobile
 role: User
-source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '787'
 ht-degree: 1%
-
 ---
-
 # AEM Mobile On-Demand{#aem-mobile-on-demand}
 
 {{ue-over-mobile}}
@@ -90,7 +94,7 @@ AEM Mobile只是構成AEM完整平台的支柱之一。
 
 ## AEM 作者 {#aem-author}
 
-***AEM作者* （或&#x200B;*行銷人員*）**&#x200B;會使用自訂開發或現成可用的範本和元件來新增及編輯頁面、拖放元件，以及從DAM新增所有型別的媒體，包括影像、影片和文字片段（內容片段）。 *AEM作者*會使用AEM的內建內容編輯器，在應用程式中建立豐富的相關體驗，包括與Adobe Experience Cloud其他部分的整合。
+***AEM作者* （或&#x200B;*行銷人員*）**會使用自訂開發或現成可用的範本和元件來新增及編輯頁面、拖放元件，以及從DAM新增所有型別的媒體，包括影像、影片和文字片段（內容片段）。 *AEM作者*會使用AEM的內建內容編輯器，在應用程式中建立豐富的相關體驗，包括與Adobe Experience Cloud其他部分的整合。
 
 使用AEM Mobile On-demand Services建立應用程式時，AEM作者必須瞭解下列主題：
 

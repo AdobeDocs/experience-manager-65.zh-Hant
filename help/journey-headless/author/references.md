@@ -1,17 +1,37 @@
 ---
 title: 了解如何在內容片段中使用參考
-description: 了解如何在內容片段中使用內容、其他片段和其他資產 (媒體) 的參考。介紹巢狀片段對 Headless CMS 製作的必要性和機制。
+description: 了解如何在內容片段中使用內容、其他片段和其他資產 (媒體) 的參考。 介紹巢狀片段對 Headless CMS 製作的必要性和機制。
 exl-id: d54a0a40-a8af-456a-9bf5-219d84540c97
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments
 role: Admin, Developer, User, Leader
-source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: bfd4bc52-c397-5127-8f86-8953ba9fc0a3
+    internal-label: Headless
+  - id: a642c50e-80eb-4fc1-a5d2-f3762d1f841d
+    internal-label: Administration
+subfeature_v2:
+  - id: e9db7c79-8f65-4281-a439-c9049296d903
+    internal-label: Content Fragments
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '722'
-ht-degree: 95%
-
+source-wordcount: '724'
+ht-degree: 92%
 ---
-
 # 了解如何在內容片段中使用參考 {#author-headless-references}
 
 ## 目前進度 {#story-so-far}
@@ -25,16 +45,16 @@ ht-degree: 95%
 ## 目標 {#objective}
 
 * **客群**：進階
-* **目標**：介紹如何如何使用 Headless CMS 製作的參考。有哪些類型參考可用，它們的作用為何：
+* **目標**：介紹如何如何使用 Headless CMS 製作的參考。 有哪些類型參考可用，它們的作用為何：
 
-   * 內容參考
-   * 資產/媒體參考
-   * 片段參考
-   * 文字區塊內的臨時參考
+  * 內容參考
+  * 資產/媒體參考
+  * 片段參考
+  * 文字區塊內的臨時參考
 
 ## 什麼是參考 {#what-are-references}
 
-參考只是一種連接資源 (無論是其他內容、資產 (如影像) 還是其他片段) 的機制。雖然非常相似，但還是有一些不同。
+參考只是一種連接資源 (無論是其他內容、資產 (如影像) 還是其他片段) 的機制。 雖然非常相似，但還是有一些不同。
 
 一些參考有專用資料類型 (例如，內容參考和片段參考)，而其他參考只是新增至文字區塊內的參考 (資產參考和臨時參考)。
 
@@ -46,7 +66,7 @@ ht-degree: 95%
 
 ## 資產/媒體參考 {#assets-media-references}
 
-可以使用&#x200B;**插入資產**&#x200B;選項，讓資產 (例如影像或媒體) 可在文字區塊內被參考。這會開啟讓您選取資產的瀏覽器。
+可以使用&#x200B;**插入資產**&#x200B;選項，讓資產 (例如影像或媒體) 可在文字區塊內被參考。 這會開啟讓您選取資產的瀏覽器。
 
 ![內容片段 - 插入資產](/help/journey-headless/author/assets/headless-journey-author-references-02.png)
 
@@ -61,16 +81,16 @@ ht-degree: 95%
 * 人員
 * 獎項
 
-看起來很簡單，但一家公司既有執行長也有員工...這些都是人，每一個都被定義為人員。
+看似簡單明瞭，但公司同時有CEO和員工....這些都是Person，各自定義為Person。
 
 人員可以獲得一個獎項 (或兩個)。
 
 * 我的公司 - 公司
-   * CEO - 人員
-   * 員工 - 人員
-      * 人員獎項 - 獎項
+  * CEO - 人員
+  * 員工 - 人員
+    * 人員獎項 - 獎項
 
-這只是供初學者了解。根據複雜程度，獎項可以是特定於公司的，或者公司可以在特定城市設有主要辦公室。
+這只是供初學者了解。 根據複雜程度，獎項可以是特定於公司的，或者公司可以在特定城市設有主要辦公室。
 
 可以使用片段參考來表示這些相互關係，因為您 (作者) 和無周邊應用程式都可理解。
 
@@ -78,7 +98,7 @@ ht-degree: 95%
 
 ### 如何編寫巢狀片段 {#author-nested-fragment}
 
-製作片段參考非常簡單 (儘管此欄位的標籤通常不會設為&#x200B;**片段參考**)。您可以直接輸入參考，或者 (更有可能) 選取資料夾圖示以開啟瀏覽器，讓您可瀏覽和選取所需片段。
+製作片段參考非常簡單 (儘管此欄位的標籤通常不會設為&#x200B;**片段參考**)。 您可以直接輸入參考，或者 (更有可能) 選取資料夾圖示以開啟瀏覽器，讓您可瀏覽和選取所需片段。
 
 ![內容片段 - 參考](/help/journey-headless/author/assets/headless-journey-author-references-03.png)
 
@@ -89,7 +109,7 @@ ht-degree: 95%
 
 ### 如何導覽巢狀片段 {#navigate-nested-fragment}
 
-使用內容片段編輯器的&#x200B;**樹狀結構**&#x200B;索引標籤，您可以瀏覽片段參考的片段，然後瀏覽該片段包含的任何參考。選取一個參考會開啟該片段供您編輯。
+使用內容片段編輯器的&#x200B;**樹狀結構**&#x200B;索引標籤，您可以瀏覽片段參考的片段，然後瀏覽該片段包含的任何參考。 選取一個參考會開啟該片段供您編輯。
 
 >[!NOTE]
 >
@@ -105,28 +125,28 @@ ht-degree: 95%
 
 ## 下一步 {#whats-next}
 
-現在您已經了解了內容片段中的參考和結構，下一步是[了解中繼資料和標記](metadata-tagging.md)。將介紹和討論如何定義內容片段的中繼資料和標記。
+現在您已經了解了內容片段中的參考和結構，下一步是[了解中繼資料和標記](metadata-tagging.md)。 將介紹和討論如何定義內容片段的中繼資料和標記。
 
 ## 其他資源 {#additional-resources}
 
 * [使用內容片段](/help/assets/content-fragments/content-fragments.md)
 
-   * [管理內容片段](/help/assets/content-fragments/content-fragments-managing.md)
+  * [管理內容片段](/help/assets/content-fragments/content-fragments-managing.md)
 
-      * [套用設定到資產資料夾](/help/assets/content-fragments/content-fragments-configuration-browser.md#apply-the-configuration-to-your-assets-folder)
+    * [套用設定到資產資料夾](/help/assets/content-fragments/content-fragments-configuration-browser.md#apply-the-configuration-to-your-assets-folder)
 
-      * [建立內容片段](/help/assets/content-fragments/content-fragments-managing.md#creating-a-content-fragment)
+    * [建立內容片段](/help/assets/content-fragments/content-fragments-managing.md#creating-a-content-fragment)
 
-   * [變化 - 編寫內容片段](/help/assets/content-fragments/content-fragments-variations.md)
+  * [變化 - 編寫內容片段](/help/assets/content-fragments/content-fragments-variations.md)
 
-   * [內容片段模型](/help/assets/content-fragments/content-fragments-models.md)
+  * [內容片段模型](/help/assets/content-fragments/content-fragments-models.md)
 
-      * [內容片段模型 - 資料類型](/help/assets/content-fragments/content-fragments-models.md#data-types)
+    * [內容片段模型 - 資料類型](/help/assets/content-fragments/content-fragments-models.md#data-types)
 
-      * [內容片段模型 - 屬性](/help/assets/content-fragments/content-fragments-models.md#properties)
+    * [內容片段模型 - 屬性](/help/assets/content-fragments/content-fragments-models.md#properties)
 
 * 快速入門指南
-   * [建立Assets資料夾Headless快速入門手冊](/help/sites-developing/headless/getting-started/create-assets-folder.md)
+  * [建立Assets資料夾Headless快速入門手冊](/help/sites-developing/headless/getting-started/create-assets-folder.md)
 
 * [AEM Headless 內容架構師歷程](/help/journey-headless/architect/overview.md)
 

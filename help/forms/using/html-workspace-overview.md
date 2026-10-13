@@ -9,26 +9,44 @@ exl-id: 0bedcbd9-2cf8-47da-9440-c773982e550c
 solution: Experience Manager, Experience Manager Forms
 feature: HTML5 Forms,Adaptive Forms,Mobile Forms
 role: User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 97aafc4b-2598-52d6-9012-295a95969e38
+    internal-label: HTML5 Forms
+  - id: 59f95943-e802-56ac-990d-21ab923984c1
+    internal-label: Mobile Forms
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1019'
+source-wordcount: '1056'
 ht-degree: 0%
-
 ---
-
 # 使用AEM Forms工作區{#working-with-aem-forms-workspace}
 
 ## 簡介 {#introduction}
 
-AEM Forms工作區是AEM Forms的一部分。 除了PDF forms之外，Workspace還有助於轉譯HTMLForms。 現在您可以從行動介面和網頁應用程式參與業務流程。
+AEM Forms工作區是AEM Forms的一部分。 除了PDF forms，Workspace還協助轉譯HTML Forms。 現在您可以從行動介面和網頁應用程式參與業務流程。
 
-此外，AEM Forms工作區也可供使用標準HTML和JavaScript™開發方法高度自訂。 這是一種元件式軟體，可輕鬆與您的其他Web應用程式整合。
+此外，AEM Forms工作區也可以使用標準HTML和JavaScript™開發方法高度自訂。 這是一種元件式軟體，可輕鬆與您的其他Web應用程式整合。
 
-如需詳細資訊，請參閱[&#x200B; AEM Forms工作區簡介](/help/forms/using/introduction-html-workspace.md)。
+如需詳細資訊，請參閱[ AEM Forms工作區簡介](/help/forms/using/introduction-html-workspace.md)。
 
 ## 熟悉 {#getting-familiar}
 
-若要熟悉建立表單應用程式以自動化業務流程的端對端流程，請按照以下逐步說明進行操作。 逐步說明後，您可以使用Workbench、Designer和AEM Forms工作區來建立、管理和測試應用程式。 如需實作詳細資料，請參閱[建立您的第一個AEM Forms應用程式](https://help.adobe.com/zh_TW/livecycle/11.0/CreateFirstApp/index.html)。
+若要熟悉建立表單應用程式以自動化業務流程的端對端流程，請按照以下逐步說明進行操作。 逐步說明後，您可以使用Workbench、Designer和AEM Forms工作區來建立、管理和測試應用程式。 如需實作詳細資料，請參閱[建立您的第一個AEM Forms應用程式](https://help.adobe.com/en_US/livecycle/11.0/CreateFirstApp/index.html)。
 
 ## 功能概觀 {#functional-overview}
 
@@ -105,13 +123,13 @@ AEM Forms客戶不支援Flex Workspace。 所有使用Flex Workspace的客戶都
  </tbody>
 </table>
 
-Flex WorkspaceAEM Forms工作區中未提供的部分功能包括：訊息和通知、歡迎頁面、核准容器，以及管理欄標題的選項。 如需完整清單，請參閱[AEM Forms工作區中不提供的Flex Workspace功能](/help/forms/using/features-flex-workspace-available-html.md)。
+Flex Workspace工作區中未提供的部分功能包括：訊息和通知、歡迎頁面、核准容器，以及管理欄標題的選項。 如需完整清單，請參閱[AEM Forms工作區中不提供的Flex Workspace功能](/help/forms/using/features-flex-workspace-available-html.md)。
 
 ## 使用AEM Forms工作區進行開發 {#developing-with-aem-forms-workspace}
 
 ### 架構 {#architecture}
 
-AEM Forms工作區是託管於CRX™上的HTML和JavaScript™網頁應用程式。 在瀏覽器中開啟Workspace URL時，會存取CRX™資源，並將應用程式呈現為瀏覽器中的HTML頁面。 JavaScript程式庫和自訂JavaScript程式碼可管理應用程式的內部和外部行為，例如使用者介面、使用者互動以及與AEM Forms伺服器的通訊。 如需詳細資訊，請參閱AEM Forms工作區[架構](/help/forms/using/html-workspace-architecture.md)。
+AEM Forms工作區是以HTML和JavaScript™為基礎的網頁應用程式，託管於CRX™。 在瀏覽器中開啟Workspace URL時，系統會存取CRX™資源，並將應用程式呈現為瀏覽器中的HTML頁面。 JavaScript程式庫和自訂JavaScript程式碼可管理應用程式的內部和外部行為，例如使用者介面、使用者互動以及與AEM Forms伺服器的通訊。 如需詳細資訊，請參閱AEM Forms工作區[架構](/help/forms/using/html-workspace-architecture.md)。
 
 ### AEM Forms工作區自訂 {#aem-forms-workspace-customization}
 
@@ -119,21 +137,21 @@ AEM Forms工作區支援各種自訂，以更新使用者介面的版面、外�
 
 * 使用者介面的外觀
 * 使用語意自訂的功能
-* 在其他Web應用程式中重複使用HTML元件
+* 在其他網頁應用程式中重複使用HTML元件
 
 [自訂](introduction-customizing-html-workspace.md#types-of-customizations)文章說明此類自訂的型別。
 
 ### 設定開發人員環境 {#set-up-the-developer-environment}
 
-AEM Forms工作區交付專案包括部署在CRX上的CRX套件、包含完整原始程式碼的SDK封存、協力廠商JavaScript程式庫，以及AEM Forms工作區的建置指令碼。 使用這些專案來設定開發人員環境，以執行上述自訂。 如需詳細資訊，請參閱[建立AEM Forms工作區程式碼](introduction-customizing-html-workspace.md#building-html-workspace-code)。
+AEM Forms工作區交付專案包括部署在CRX上的CRX套件、包含完整原始程式碼的SDK封存、第三方JavaScript程式庫，以及AEM Forms工作區的建置指令碼。 使用這些專案來設定開發人員環境，以執行上述自訂。 如需詳細資訊，請參閱[建立AEM Forms工作區程式碼](introduction-customizing-html-workspace.md#building-html-workspace-code)。
 
 您可以自訂介面和核心功能的主要部分，例如，字型、色彩配置、標誌、登入畫面、錯誤對話方塊、與協力廠商應用程式的整合，以及協力廠商應用程式中元件的重複使用。 您也可以增強「工作摘要」頁面上顯示的內容、顯示工作路由動作的影像，甚至修改建立AEM Forms工作區應用程式的低階骨幹模型與檢視。
 
 ### XDP Forms的HTML轉譯 {#html-rendering-of-xdp-forms}
 
-根據預設，針對新程式，XDP表單會在案頭上以PDF格式呈現，並在平板電腦上以HTML格式呈現。 您可以一律以HTML格式呈現XDP表單。 如需詳細資訊，請參閱[新的轉譯與提交服務](/help/forms/using/new-render-submit-service.md)。
+根據預設，針對新程式，XDP表單會在桌上型電腦上以PDF格式呈現，並在平板電腦上以HTML格式呈現。 您可以一律以HTML格式呈現XDP表單。 如需詳細資訊，請參閱[新的轉譯與提交服務](/help/forms/using/new-render-submit-service.md)。
 
-[行動Forms](https://helpx.adobe.com/livecycle/help/mobile-forms/introduction.html)功能可搭配[設定檔](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html)使用，可啟用XDP表單的HTML轉譯。 依預設，「轉譯新HTML表單」會使用您可變更的`default.html`設定檔。 您也可以在呈現HTML格式的XDP表單之前，新增發生的自訂變更。
+[行動Forms](https://helpx.adobe.com/livecycle/help/mobile-forms/introduction.html)功能可搭配[設定檔](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html)使用，以啟用HTML的XDP表單轉譯。 依預設，「轉譯新HTML表單」會使用您可變更的`default.html`設定檔。 您也可以新增在HTML格式轉譯XDP表單之前發生的自訂變更。
 
 ## AEM Forms工作區應用程式 {#aem-forms-workspace-app}
 

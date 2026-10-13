@@ -7,23 +7,37 @@ role: User
 exl-id: 5eff4a0f-30b1-4753-ad0b-002656eed972
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: bca6156727dca11b2e09be549f3def6130827193
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 74ec00bc-0862-520e-86dc-e377aeccc141
+    internal-label: Search
+  - id: bd0d2470-932c-4269-8eca-6d939b72d9ef
+    internal-label: Dynamic Media
+subfeature_v2:
+  - id: f0e3b2ca-813f-4b7a-81df-52339e17ddcf
+    internal-label: Smart Tags
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1611'
-ht-degree: 2%
-
+source-wordcount: '1612'
+ht-degree: 7%
 ---
-
 # 瞭解、套用及組織智慧標籤 {#enhanced-smart-tags}
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/smart-tags.html?lang=zh-Hant) |
+| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/smart-tags.html?lang=en) |
 | AEM 6.5 | 本文章 |
 
-處理數位資產的組織越來越多地在資產中繼資料中使用分類控制的辭彙。 基本上，它包括員工、合作夥伴和客戶通常用來參照和搜尋特定類別數位資產的關鍵字清單。 使用分類控制的辭彙來標籤資產，可確保輕鬆識別和擷取資產。
+需要處理數位資產的組織，有越來越多在資產後設資料內採用以分類法控制的詞彙。 簡言之，其包含一組關鍵字清單，而員工、合作夥伴和客戶常用這些關鍵字來指稱及搜尋特定類別的數位資產。 使用以分類法控制的詞彙來標記資產，確保可輕鬆識別和檢索資產。
 
-相較於自然語言辭彙，根據商業分類法標籤數位資產有助於讓其與公司的業務保持一致，並確保最相關的資產出現在搜尋中。
+相較於自然語言詞彙，根據商業分類法對數位資產進行標記，有助於將其與公司的業務保持一致，並確保搜尋結果中會顯示契合度最高的資產。
 
 例如，汽車生產商可以使用模型名稱來標籤汽車影像，這樣在搜尋各種模型的影像以設計促銷活動時，就只會顯示相關影像。
 
@@ -183,8 +197,8 @@ ht-degree: 2%
 1. 在搜尋方塊中，以標籤作為關鍵字來搜尋資產。
 1. 若要識別您找不到與搜尋相關的影像，請檢閱搜尋結果。
 1. 選取影像，然後按一下工具列中的&#x200B;**[!UICONTROL 管理標籤]**。
-1. 從&#x200B;**[!UICONTROL 管理標籤]**&#x200B;頁面，檢閱標籤。 如果您不想要根據特定標籤搜尋影像，請選取標籤，然後按一下工具列中的[刪除]。 **&#x200B;**&#x200B;或者，按一下標籤旁邊出現的`x`符號。
-1. 或者，若要指派較高排名給標籤，請選取該標籤，然後按一下工具列中的[提升]。**&#x200B;** 您促銷的標籤已移至&#x200B;**[!UICONTROL 標籤]**&#x200B;區段。
+1. 從&#x200B;**[!UICONTROL 管理標籤]**&#x200B;頁面，檢閱標籤。 如果您不想要根據特定標籤搜尋影像，請選取標籤，然後按一下工具列中的[刪除]。 ****&#x200B;或者，按一下標籤旁邊出現的`x`符號。
+1. 或者，若要指派較高排名給標籤，請選取該標籤，然後按一下工具列中的[提升]。**** 您促銷的標籤已移至&#x200B;**[!UICONTROL 標籤]**&#x200B;區段。
 1. 按一下&#x200B;**[!UICONTROL 儲存]**，然後按一下&#x200B;**[!UICONTROL 確定]**
 1. 導覽至影像的&#x200B;**[!UICONTROL 屬性]**&#x200B;頁面。 請注意，您提升的標籤會獲得更多關聯性，並會更早出現在搜尋結果中。
 
@@ -200,4 +214,4 @@ ht-degree: 2%
 >* [智慧標籤概觀及訓練方式](enhanced-smart-tags.md)
 >* [設定智慧標籤](config-smart-tagging.md)
 >* [疑難排解OAuth憑證的智慧標籤](config-oauth.md)
->* [有關智慧標籤的教學影片](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/image-smart-tags.html?lang=zh-Hant)
+>* [有關智慧標籤的教學影片](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/image-smart-tags.html)

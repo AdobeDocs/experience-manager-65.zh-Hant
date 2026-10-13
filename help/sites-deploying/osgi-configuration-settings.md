@@ -10,13 +10,22 @@ feature: Configuring
 exl-id: 19eedcf2-140a-452d-aa8f-6fd7f219e5f8
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 523b1ccd-901e-5e3b-9fa7-f3dfd82463d5
+    internal-label: Configuring
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '3293'
+source-wordcount: '3453'
 ht-degree: 0%
-
 ---
-
 # OSGi組態設定{#osgi-configuration-settings}
 
 [OSGi](https://www.osgi.org/)是AEM技術棧疊中的基本元素。 它可用來控制AEM的複合套件組合及其設定。
@@ -84,7 +93,7 @@ OSGi「*」提供標準化的原語，允許使用小型、可重複使用且協
 * **最小集區大小**&#x200B;和&#x200B;**最大集區大小**，用來儲存事件執行緒的集區大小。
 
 * **佇列大小**，如果集區已耗盡，則執行緒佇列的大小上限。
-建議值為`-1`，因為它將佇列設定為無限制。如果設定了限制，超過限制時可能會發生損失。
+建議值為`-1`，因為它將佇列設定為無限制。 如果設定了限制，超過限制時可能會發生損失。
 
 * 變更這些設定可以在具有大量事件的情境中協助效能。 例如使用大量的AEM DAM或工作流程。
 * 您情境的特定值應使用測試來建立。
@@ -108,7 +117,7 @@ OSGi「*」提供標準化的原語，允許使用小型、可重複使用且協
 
 * 對於生產執行個體：
 
-   * 停用&#x200B;**產生偵錯資訊**
+  * 停用&#x200B;**產生偵錯資訊**
 
 **Apache Sling JCR安裝程式**&#x200B;這些引數可能不需要設定，但在開發或偵錯時可能很有用。 例如，安裝資料夾對於入庫或出庫或建立封裝非常有用。
 
@@ -234,8 +243,8 @@ OSGi「*」提供標準化的原語，允許使用小型、可重複使用且協
 
 您可以設定各種引數，包括：
 
-* **執行路徑** — 列出搜尋可執行指令碼的路徑。透過設定特定路徑，您可以限制可以執行的指令碼。如果未設定路徑，則會使用預設值( `/` = root)，允許執行所有指令碼。
-如果設定的路徑值以斜線結尾，則會搜尋整個子樹。如果沒有這類結尾斜線，指令碼只有在完全相符時才執行。
+* **執行路徑** — 列出搜尋可執行指令碼的路徑。 透過設定特定路徑，您可以限制可以執行的指令碼。 如果未設定路徑，則會使用預設值( `/` = root)，允許執行所有指令碼。
+如果設定的路徑值以斜線結尾，則會搜尋整個子樹。 如果沒有這類結尾斜線，指令碼只有在完全相符時才執行。
 
 * **指令碼使用者** — 此選擇性屬性可指定讀取指令碼所使用的存放庫使用者帳戶。 如果未指定帳戶，則預設會使用`admin`使用者。
 
@@ -259,21 +268,21 @@ OSGi「*」提供標準化的原語，允許使用小型、可重複使用且協
 
 * 對於生產執行個體：
 
-   * 啟用&#x200B;**最小化** （移除CRLF和空白字元）。
-   * 啟用&#x200B;**Gzip** （允許透過一個要求來壓縮及存取檔案）。
-   * 停用&#x200B;**偵錯**
-   * 停用&#x200B;**計時**
+  * 啟用&#x200B;**最小化** （移除CRLF和空白字元）。
+  * 啟用&#x200B;**Gzip** （允許透過一個要求來壓縮及存取檔案）。
+  * 停用&#x200B;**偵錯**
+  * 停用&#x200B;**計時**
 
 * 若為JS開發（尤其是在firebugging/debugging時）：
 
-   * 停用&#x200B;**最小化**
-   * 啟用&#x200B;**Debug**&#x200B;以分隔檔案以進行偵錯，並與fire bug搭配使用。
-   * 如果想要計時，請啟用&#x200B;**計時**。
-   * 啟用&#x200B;**偵錯**&#x200B;主控台以檢視JS主控台記錄訊息。
+  * 停用&#x200B;**最小化**
+  * 啟用&#x200B;**Debug**&#x200B;以分隔檔案以進行偵錯，並與fire bug搭配使用。
+  * 如果想要計時，請啟用&#x200B;**計時**。
+  * 啟用&#x200B;**偵錯**&#x200B;主控台以檢視JS主控台記錄訊息。
 
 >[!CAUTION]
 >
->變更&#x200B;**Minify**&#x200B;或&#x200B;**Gzip**&#x200B;的設定時，請刪除clientlibs快取的內容。 如需詳細資訊，請參閱[知識庫文章](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-16543.html?lang=zh-Hant)。
+>變更&#x200B;**Minify**&#x200B;或&#x200B;**Gzip**&#x200B;的設定時，請刪除clientlibs快取的內容。 如需詳細資訊，請參閱[知識庫文章](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-16543.html)。
 
 >[!NOTE]
 >
@@ -338,7 +347,7 @@ AEM中有兩個可用的UI：
 此驗證處理常式的作用中路徑。 如果此引數留空，則會停用驗證處理常式。 例如，路徑/會導致驗證處理常式用於整個存放庫。
 
 * **服務排名**
-OSGi框架服務排名值用於表示呼叫此服務所用的順序。此值是`int`值，其中較高的值代表較高的優先順序。
+OSGi框架服務排名值用於表示呼叫此服務所用的順序。 此值是`int`值，其中較高的值代表較高的優先順序。
 預設值為`0`。
 
 * **標頭名稱**
@@ -356,8 +365,8 @@ OSGi框架服務排名值用於表示呼叫此服務所用的順序。此值是`
 * **格式**
 表示提供使用者ID的格式。 建議內容：
 
-   * 如果使用者ID是以HTTP基本驗證格式編碼，`Basic`
-   * 如果以純文字提供使用者ID，或任何套用的規則運算式值應該依原樣或任何規則運算式使用，則值為`AsIs`
+  * 如果使用者ID是以HTTP基本驗證格式編碼，`Basic`
+  * 如果以純文字提供使用者ID，或任何套用的規則運算式值應該依原樣或任何規則運算式使用，則值為`AsIs`
 
 **Day CQ WCM Debug Filter**&#x200B;這在開發時非常有用，因為它允許存取頁面時使用尾碼，例如？debug=layout。 例如，https://localhost:4502/cf#/content/geometrixx/en/support.html?debug=layout提供開發人員可能感興趣的版面配置資訊。
 

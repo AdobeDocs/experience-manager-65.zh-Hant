@@ -9,22 +9,35 @@ feature: Correspondence Management
 exl-id: 7d90fade-1ca4-41d8-bbf9-45490465784a
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 3f00fc92-85ee-583e-abd1-3bc3d96de3a0
+    internal-label: Correspondence Management
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '336'
+source-wordcount: '343'
 ht-degree: 1%
-
 ---
-
 # 信件PDF預覽中的自訂浮水印{#custom-watermark-in-letter-pdf-preview}
 
 ## 概觀 {#overview}
 
 在「建立通訊」UI中，代理使用者會以最終形狀預覽通訊，並在最終形狀中將其傳送到後處理，例如電子郵件或列印。
 
-為防止未經授權使用此資料，組織可以對預覽PDF加上浮水印。 預設浮水印為「PREVIEW」，會在PDF上顯示。
+為避免未經授權使用此資料，組織可以對預覽PDF加上浮水印。 預設浮水印為「預覽」，會在整個PDF中顯示。
 
-若要在預覽PDF中啟用浮水印，請在&#x200B;**[!UICONTROL 通訊管理設定]** (位於https://&#39;[伺服器]：[連線埠]&#39;/system/console/configMgr)中選取&#x200B;**[!UICONTROL 預覽期間套用浮水印]**。
+若要在預覽PDF中啟用浮水印，請在&#x200B;**[!UICONTROL 通訊管理設定]** （位於https://&#39;[伺服器]：[連線埠]&#39;/system/console/configMgr）中選取&#x200B;**[!UICONTROL 預覽期間套用浮水印]**。
 
 ![預設浮水印](assets/default-watermark.png)
 
@@ -59,7 +72,7 @@ ht-degree: 1%
       >    
       >
 
-   1. 按一下[確定]&#x200B;**&#x200B;**，然後按一下[儲存全部]&#x200B;**&#x200B;**。 **[!UICONTROL previewwatermark]**&#x200B;資料夾是在指定的路徑中建立的。
+   1. 按一下[確定]****，然後按一下[儲存全部]****。 **[!UICONTROL previewwatermark]**&#x200B;資料夾是在指定的路徑中建立的。
 
 1. 將ddx檔案從「/libs/fd/cm/configFiles/previewwatermark」資料夾複製並貼到「/apps/fd/cm/configFiles/previewwatermark」資料夾，然後按一下&#x200B;**[!UICONTROL 全部儲存]**。
 1. 在/apps/fd/cm/configFiles/previewwatermark/底下的ddx檔案中進行所需的變更。
@@ -79,7 +92,7 @@ ht-degree: 1%
    </DDX>
    ```
 
-   如需自訂浮水印外觀、文字和對齊方式的資訊，請參閱[組合器服務和DDX參考](https://help.adobe.com/zh_TW/livecycle/11.0/ddxRef.pdf)檔案中的新增和移除浮水印和背景。
+   如需自訂浮水印外觀、文字和對齊方式的資訊，請參閱[組合器服務和DDX參考](https://help.adobe.com/en_US/livecycle/11.0/ddxRef.pdf)檔案中的新增和移除浮水印和背景。
 
    >[!NOTE]
    >

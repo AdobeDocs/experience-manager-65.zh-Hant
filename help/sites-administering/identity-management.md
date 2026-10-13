@@ -10,13 +10,22 @@ exl-id: acb5b235-523e-4c01-9bd2-0cc2049f88e2
 solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
-source-git-commit: 315171dca4501718a34fd33f937334f7e7958963
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 5ef752af-d616-5b23-8312-06964e46b208
+    internal-label: Administering
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1254'
 ht-degree: 1%
-
 ---
-
 
 # Identity Management{#identity-management}
 
@@ -29,7 +38,7 @@ ht-degree: 1%
 
 * [Personalization](/help/sites-administering/personalization.md)允許訪客設定存取您網站的特定方式。
 
-登入（及登出）功能由具有&#x200B;**設定檔**&#x200B;[&#128279;](#profiles-and-user-accounts)&#x200B;的帳戶提供，該帳戶包含有關已註冊訪客（使用者）的其他資訊。 註冊和授權的實際流程可能有所不同：
+登入（及登出）功能由具有&#x200B;**設定檔**](#profiles-and-user-accounts)&#x200B;的[帳戶提供，該帳戶包含有關已註冊訪客（使用者）的其他資訊。 註冊和授權的實際流程可能有所不同：
 
 * 從網站自助註冊
 

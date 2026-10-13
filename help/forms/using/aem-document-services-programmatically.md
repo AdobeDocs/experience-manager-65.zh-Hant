@@ -8,28 +8,46 @@ feature: Document Services,APIs & Integrations
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 exl-id: f2e4f509-cca2-44a3-9231-e1954b0fefe3
-source-git-commit: f2c92b990a5c09cbcf532e0800e264620d98af77
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 516393bc-fa69-5e74-a04e-f7ec9ffe2c5e
+    internal-label: APIs & Integrations
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: f19cff18-c8cc-4a4b-adad-85dd2fa3dbe2
+    internal-label: Document Services
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '6595'
 ht-degree: 1%
-
 ---
-
 # 以程式設計方式使用AEM檔案服務  {#using-aem-document-services-programmatically}
 
 本檔案的範例和範例可協助您瞭解及使用OSGi環境上AEM Forms上的AEM Document Services 。 如需JEE環境上AEM Forms的範例和範例，請參閱
 
-* [簽名服務Java API快速入門](https://experienceleague.adobe.com/docs/experience-manager-65/forms/developer-reference/programming-aem-forms-jee/java-api-quick-start-code-examples/signature-service-java-api-quick.html?lang=zh-Hant&#programming-aem-forms-jee)
+* [簽名服務Java API快速入門](https://experienceleague.adobe.com/docs/experience-manager-65/forms/developer-reference/programming-aem-forms-jee/java-api-quick-start-code-examples/signature-service-java-api-quick.html?#programming-aem-forms-jee)
 
-* [加密服務Java API快速入門](https://experienceleague.adobe.com/docs/experience-manager-65/forms/developer-reference/programming-aem-forms-jee/java-api-quick-start-code-examples/encryption-service-java-api-quick.html?lang=zh-Hant&#developer-reference)
+* [加密服務Java API快速入門](https://experienceleague.adobe.com/docs/experience-manager-65/forms/developer-reference/programming-aem-forms-jee/java-api-quick-start-code-examples/encryption-service-java-api-quick.html?#developer-reference)
 
-* [Acrobat Reader擴充功能服務Java API快速入門](https://experienceleague.adobe.com/docs/experience-manager-65/forms/developer-reference/programming-aem-forms-jee/java-api-quick-start-code-examples/acrobat-reader-dc-extensions-service.html?lang=zh-Hant&#developer-reference)
+* [Acrobat Reader擴充功能服務Java API快速入門](https://experienceleague.adobe.com/docs/experience-manager-65/forms/developer-reference/programming-aem-forms-jee/java-api-quick-start-code-examples/acrobat-reader-dc-extensions-service.html?#developer-reference)
 
 ## 必備條件 {#prerequisite}
 
 * 在使用DocAssurance服務API之前，[設定DocAssurance服務](/help/forms/using/install-configure-document-services.md)。
 
-* 使用您的AEM Forms maven專案下載及設定[AEM使用者端SDK](https://helpx.adobe.com/tw/aem-forms/kb/aem-forms-releases.html)。 使用AEM檔案服務建置Maven專案所需的使用者端類別可在[AEM Forms使用者端SDK](https://helpx.adobe.com/tw/aem-forms/kb/aem-forms-releases.html)中使用
+* 使用您的AEM Forms maven專案下載及設定[AEM使用者端SDK](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)。 使用AEM檔案服務建置Maven專案所需的使用者端類別可在[AEM Forms使用者端SDK](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)中使用
 
 * 瞭解[如何使用Maven](/help/sites-developing/ht-projects-maven.md)建置您的AEM專案
 
@@ -71,7 +89,7 @@ DocAssurance服務包括下列服務：
 
 >[!NOTE]
 >
->所有這些服務都使用Document物件作為輸入引數，可在URL [https://helpx.adobe.com/tw/experience-manager/6-3/forms/javadocs/index.html](https://helpx.adobe.com/tw/experience-manager/6-3/forms/javadocs/index.html)找到Javadoc
+>所有這些服務都使用Document物件作為輸入引數，可在URL [https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/index.html](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/index.html)找到Javadoc
 
 ### 新增不可見的簽章欄位 {#adding-an-invisible-signature-field}
 
@@ -4466,7 +4484,7 @@ PDF Generator服務提供可將原生檔案格式轉換為PDF的API。 它也會
 GeneratePDFService提供的API可將各種檔案格式(如.doc、.docx、.ppt、.pptx、.xls、.xlsx、.odp、.odt、.ods、.swf （已棄用）、.jpg、.bmp、.tif、.png、.html和許多其他檔案格式)轉換為PDF。 它也提供將PDF匯出為各種檔案格式和最佳化PDF的API。 此服務支援下列API：
 
 * **createPDF**：將支援的檔案型別轉換為PDF檔案。 它支援Microsoft Word、Microsoft PowerPoint、Microsoft Excel和Microsoft Project等檔案格式。 除了這些應用程式外，任何產生應用程式型別的協力廠商通用PDF也可以插入API中。
-* **exportPDF**：將PDF檔案轉換為支援的檔案型別。 方法接受PDF作為輸入，並以指定的檔案型別格式匯出PDF的內容。 您可以將PDF檔案匯出為Encapsulated PostScript( eps)、HTML 3.2( htm， html)、HTML 4.01 (含CSS 1.0( htm， html)、JPEG( jpg， jpeg， jpe)、JPEG2000( jpf， jpx， jp2， j2k， j2c， jpc)、Microsoft Word Document( doc， docx) Microsoft Excel活頁簿( xlsx)、Microsoft PowerPoint簡報( pptx)、PNG( png)、PostScript( ps)、Rtf格式( rtf)文本（可訪問）(txt)、文本（純）(txt) TIFF( tif， tiff)、XML 1.0( xml)、PDF/A-1a(sRGB)、PDF/A-1b、PDF/A-2a(sRGB)、PDF/A-2b(sRGB)、PDF/A-3a(sRGB)、PDF/A-3b(sRGB)格式。 您也可以為PDF輸出指定[自訂預檢設定檔](https://helpx.adobe.com/tw/acrobat/using/preflight-profiles-acrobat-pro.html)。
+* **exportPDF**：將PDF檔案轉換為支援的檔案型別。 方法接受PDF作為輸入，並以指定的檔案型別格式匯出PDF的內容。 您可以將PDF檔案匯出為Encapsulated PostScript( eps)、HTML 3.2( htm， html)、HTML 4.01 (含CSS 1.0( htm， html)、JPEG( jpg， jpeg， jpe)、JPEG2000( jpf， jpx， jp2， j2k， j2c， jpc)、Microsoft Word Document( doc， docx) Microsoft Excel活頁簿( xlsx)、Microsoft PowerPoint簡報( pptx)、PNG( png)、PostScript( ps)、Rtf格式( rtf)文本（可訪問）(txt)、文本（純）(txt) TIFF( tif， tiff)、XML 1.0( xml)、PDF/A-1a(sRGB)、PDF/A-1b、PDF/A-2a(sRGB)、PDF/A-2b(sRGB)、PDF/A-3a(sRGB)、PDF/A-3b(sRGB)格式。 您也可以為PDF輸出指定[自訂預檢設定檔](https://helpx.adobe.com/acrobat/using/preflight-profiles-acrobat-pro.html)。
 
 * **optimizePDF**：最佳化PDF檔案，並將PDF檔案從一種型別轉換為另一種型別。 方法接受PDF檔案作為輸入。
 * **htmlToPdf2**：將HTML頁面轉換為PDF檔案。 它接受HTML頁面的URL作為輸入。

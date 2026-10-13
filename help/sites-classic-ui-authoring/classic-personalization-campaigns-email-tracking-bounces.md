@@ -9,18 +9,29 @@ exl-id: 6cda0a68-0df9-44e7-ae4f-9951411af6dd
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization
 role: User
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+  - id: eb3ad9f8-54a2-45f3-abb1-d3976415a718
+    internal-label: Personalization
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '678'
+source-wordcount: '714'
 ht-degree: 0%
-
 ---
-
 # 追蹤退信電子郵件{#tracking-bounced-emails}
 
 >[!NOTE]
 >
->Adobe不打算進一步增強對AEM SMTP服務傳送的已開啟/已退回電子郵件的追蹤。
+>Adobe不打算進一步增強追蹤由AEM SMTP服務傳送的已開啟/已退回電子郵件。
 >
 >建議您[使用Adobe Campaign及其AEM整合](/help/sites-administering/campaign.md)。
 
@@ -64,7 +75,7 @@ ht-degree: 0%
 
    可讓您設定要搜尋的標幟。
 
-   `imap.flag.SEEN`：將新/未檢視的訊息設為false，將已讀取的訊息設為true
+   新/未檢視訊息為`imap.flag.SEEN`:Set false，已讀取訊息為true
 
    如需完整的旗標清單，請參閱[https://javaee.github.io/javamail/docs/api/index.html?javax/mail/Flags.Flag.html](https://javaee.github.io/javamail/docs/api/index.html?javax/mail/Flags.Flag.html)。
 

@@ -10,13 +10,27 @@ role: Developer
 exl-id: d2bd7c3e-4f75-4234-a7aa-ee8524430493
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Services
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+  - id: f19cff18-c8cc-4a4b-adad-85dd2fa3dbe2
+    internal-label: Document Services
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1842'
 ht-degree: 0%
-
 ---
-
 # 組合PDF產品組合 {#assembling-pdf-portfolios}
 
 **本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
@@ -156,8 +170,8 @@ PDF Portfolio會在集合物件中傳回。 逐一檢視集合物件，並將PDF
    * 建立`com.adobe.idp.Document`物件並傳遞包含NAV檔案的`java.io.FileInputStream`物件（針對建立投資組合所需的每個檔案重複此工作）。
    * 透過叫用物件的`put`方法並傳遞下列引數，將專案新增至`java.util.Map`物件：
 
-      * 代表索引鍵名稱的字串值。 此值必須符合DDX檔案中指定的來源元素值。 （針對建立投資組合所需的每個檔案重複此工作）。
-      * 包含PDF檔案的`com.adobe.idp.Document`物件。 （針對建立投資組合所需的每個檔案重複此工作）。
+     * 代表索引鍵名稱的字串值。 此值必須符合DDX檔案中指定的來源元素值。 （針對建立投資組合所需的每個檔案重複此工作）。
+     * 包含PDF檔案的`com.adobe.idp.Document`物件。 （針對建立投資組合所需的每個檔案重複此工作）。
 
 1. 設定執行階段選項。
 
@@ -210,10 +224,10 @@ PDF Portfolio會在集合物件中傳回。 逐一檢視集合物件，並將PDF
    * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作來啟用基本的HTTP驗證：
 
-      * 將AEM表單使用者名稱指派給欄位`AssemblerServiceClient.ClientCredentials.UserName.UserName`。
-      * 將對應的密碼值指派給欄位`AssemblerServiceClient.ClientCredentials.UserName.Password`。
-      * 將常數值`HttpClientCredentialType.Basic`指派給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
-      * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`指派給欄位`BasicHttpBindingSecurity.Security.Mode`。
+     * 將AEM表單使用者名稱指派給欄位`AssemblerServiceClient.ClientCredentials.UserName.UserName`。
+     * 將對應的密碼值指派給欄位`AssemblerServiceClient.ClientCredentials.UserName.Password`。
+     * 將常數值`HttpClientCredentialType.Basic`指派給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+     * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`指派給欄位`BasicHttpBindingSecurity.Security.Mode`。
 
 1. 參考現有的DDX檔案。
 

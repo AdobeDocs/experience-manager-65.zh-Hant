@@ -9,13 +9,20 @@ exl-id: 2e02db9f-294d-4d4a-92da-3ab1d38416ab
 solution: Experience Manager
 feature: Communities
 role: Developer
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '591'
+source-wordcount: '656'
 ht-degree: 0%
-
 ---
-
 # 建立元件  {#create-the-components}
 
 延伸元件的範例使用由兩個元件組成的註解系統。
@@ -43,21 +50,21 @@ ht-degree: 0%
 
    * 選取`/apps`節點
 
-      * **建立名為**&#x200B;[!UICONTROL &#x200B;自訂&#x200B;]&#x200B;**的資料夾**
+     * **建立名為**[!UICONTROL &#x200B;自訂&#x200B;]**的資料夾**
 
    * 選取`/apps/custom`節點
 
-      * **建立名為**&#x200B;[!UICONTROL &#x200B;元件&#x200B;]&#x200B;**的資料夾**
+     * **建立名為**[!UICONTROL &#x200B;元件&#x200B;]**的資料夾**
 
 1. 選取`/apps/custom/components`節點
 
    * **[!UICONTROL 建立>元件……]**
 
-      * **標籤**： *註解*
-      * **標題**： *替代註解*
-      * **描述**： *替代註解樣式*
-      * **超級型別**： *social/commons/components/hbs/comments*
-      * **群組**： *自訂*
+     * **標籤**： *註解*
+     * **標題**： *替代註解*
+     * **描述**： *替代註解樣式*
+     * **超級型別**： *social/commons/components/hbs/comments*
+     * **群組**： *自訂*
 
    * 選取&#x200B;**[!UICONTROL 下一步]**
    * 選取&#x200B;**[!UICONTROL 下一步]**
@@ -83,11 +90,11 @@ ht-degree: 0%
 
    * 選取&#x200B;**[!UICONTROL 建立]** > **[!UICONTROL 元件……]**
 
-      * **標籤**： *註解*
-      * **標題**： *替代註解*
-      * **描述**： *替代註解樣式*
-      * **超級型別**： *social/commons/components/hbs/comments/comment*
-      * **群組**： `*.hidden*`
+     * **標籤**： *註解*
+     * **標題**： *替代註解*
+     * **描述**： *替代註解樣式*
+     * **超級型別**： *social/commons/components/hbs/comments/comment*
+     * **群組**： `*.hidden*`
 
    * 選取&#x200B;**[!UICONTROL 下一步]**
    * 選取&#x200B;**[!UICONTROL 下一步]**
@@ -110,32 +117,32 @@ ht-degree: 0%
 
 * 複製`comments.hbs`
 
-   * 來自[/libs/social/commons/components/hbs/comments](http://localhost:4502/crx/de/index.jsp#/libs/social/commons/components/hbs/comments)
-   * 至[/apps/custom/components/comments](http://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments)
+  * 來自[/libs/social/commons/components/hbs/comments](http://localhost:4502/crx/de/index.jsp#/libs/social/commons/components/hbs/comments)
+  * 至[/apps/custom/components/comments](http://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments)
 
 * 編輯`comments.hbs`至：
 
-   * 變更`data-scf-component`屬性的值（~第20行）：
+  * 變更`data-scf-component`屬性的值（~第20行）：
 
-      * 來自`social/commons/components/hbs/comments`
-      * 至`/apps/custom/components/comments`
+    * 來自`social/commons/components/hbs/comments`
+    * 至`/apps/custom/components/comments`
 
-   * 修改以包含自訂註解元件（第75行）：
+  * 修改以包含自訂註解元件（第75行）：
 
-      * 取代`{{include this resourceType='social/commons/components/hbs/comments/comment'}}`
-      * 與`{{include this resourceType='/apps/custom/components/comments/comment'}}`
+    * 取代`{{include this resourceType='social/commons/components/hbs/comments/comment'}}`
+    * 與`{{include this resourceType='/apps/custom/components/comments/comment'}}`
 
 * 複製`comment.hbs`
 
-   * 從[/libs/social/commons/components/hbs/comments/comment](http://localhost:4502/crx/de/index.jsp#/libs/social/commons/components/hbs/comments/comment)
-   * 至[/apps/custom/components/comments/comment](http://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comment)
+  * 從[/libs/social/commons/components/hbs/comments/comment](http://localhost:4502/crx/de/index.jsp#/libs/social/commons/components/hbs/comments/comment)
+  * 至[/apps/custom/components/comments/comment](http://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comment)
 
 * 編輯`comment.hbs`至：
 
-   * 變更data-scf-component屬性的值（~第19行）
+  * 變更data-scf-component屬性的值（~第19行）
 
-      * 來自`social/commons/components/hbs/comments/comment`
-      * 至`/apps/custom/components/comments/comment`
+    * 來自`social/commons/components/hbs/comments/comment`
+    * 至`/apps/custom/components/comments/comment`
 
 * 選取`/apps/custom`節點
 * 選取&#x200B;**[!UICONTROL 全部儲存]**
@@ -149,19 +156,19 @@ ht-degree: 0%
 * 選取`/apps/custom/components/comments`節點
 * 選取&#x200B;**[!UICONTROL 建立節點]**
 
-   * **名稱**：`clientlibs`
-   * **類型**：`cq:ClientLibraryFolder`
-   * 新增至&#x200B;**[!UICONTROL 屬性]**&#x200B;標籤：
+  * **名稱**：`clientlibs`
+  * **類型**：`cq:ClientLibraryFolder`
+  * 新增至&#x200B;**[!UICONTROL 屬性]**&#x200B;標籤：
 
-      * **名稱** `categories` **型別** `String` **值** `cq.social.author.hbs.comments` `Multi`
-      * **名稱** `dependencies` **型別** `String` **值** `cq.social.scf` `Multi`
+    * **名稱** `categories` **型別** `String` **值** `cq.social.author.hbs.comments` `Multi`
+    * **名稱** `dependencies` **型別** `String` **值** `cq.social.scf` `Multi`
 
 * 選取&#x200B;**[!UICONTROL 全部儲存]**
 * 選取`/apps/custom/components/comments/clientlib`節點後，建立三個檔案：
 
-   * **名稱**：`css.txt`
-   * **名稱**：`js.txt`
-   * **名稱**： customcommentsystem.js
+  * **名稱**：`css.txt`
+  * **名稱**：`js.txt`
+  * **名稱**： customcommentsystem.js
 
 * 輸入&#39;customcommentsystem.js&#39;作為`js.txt`的內容
 * 選取&#x200B;**[!UICONTROL 全部儲存]**
@@ -194,7 +201,7 @@ ht-degree: 0%
 
 * 選取&#x200B;**[!UICONTROL 全部儲存]**
 
-## 應用程式Publish {#publish-the-app}
+## 發佈應用程式 {#publish-the-app}
 
 若要在發佈環境中體驗擴充元件，必須複製自訂元件。
 
@@ -202,8 +209,8 @@ ht-degree: 0%
 
 * 從全域導覽，
 
-   * 選取&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL 復寫]**
-   * 選取&#x200B;**[!UICONTROL 啟動樹狀結構]**
-   * 將`Start Path`設為`/apps/custom`
-   * 取消核取&#x200B;**[!UICONTROL Only Modified]**
-   * 選取&#x200B;**[!UICONTROL 啟動]**&#x200B;按鈕
+  * 選取&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL 復寫]**
+  * 選取&#x200B;**[!UICONTROL 啟動樹狀結構]**
+  * 將`Start Path`設為`/apps/custom`
+  * 取消核取&#x200B;**[!UICONTROL Only Modified]**
+  * 選取&#x200B;**[!UICONTROL 啟動]**&#x200B;按鈕

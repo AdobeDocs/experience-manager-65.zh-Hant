@@ -5,18 +5,31 @@ exl-id: d79107b9-dfa4-4e80-870e-0b7ea72f0bc7
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Developer
-source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '280'
+source-wordcount: '283'
 ht-degree: 17%
-
 ---
-
 # 元件主控台{#components-console}
 
 「元件」主控台可讓您瀏覽針對執行個體定義的所有元件，並檢視每個元件的關鍵資訊。
 
-您可以從&#x200B;**工具>** **一般>** **元件**&#x200B;存取它。 在主控台中，卡片和清單檢視可供使用。由於沒有元件的樹結構，因此列視圖不可用。
+您可以從&#x200B;**工具>** **一般>** **元件**&#x200B;存取它。 在主控台中，卡片和清單檢視可供使用。 由於沒有元件的樹結構，因此列視圖不可用。
 
 ![screen-shot_2019-03-05at113145](assets/screen-shot_2019-03-05at113145.png)
 
@@ -26,7 +39,7 @@ ht-degree: 17%
 
 ## 搜尋 {#searching}
 
-使用「 **僅內容**&#x200B;**&#x200B;** 」圖示 (左上角)，您可以開啟「搜尋」面板以搜尋和/或篩選元件：
+使用「 **僅內容****** 」圖示 (左上角)，您可以開啟「搜尋」面板以搜尋和/或篩選元件：
 
 ![screen-shot_2019-03-05at113251](assets/screen-shot_2019-03-05at113251.png)
 
@@ -40,14 +53,14 @@ ht-degree: 17%
 
   在「屬性」標籤上，您可以：
 
-   * 檢視元件的一般屬性。
-   * 檢視元件的[圖示或縮寫定義](/help/sites-developing/components-basics.md#component-icon-in-touch-ui)的方式。
+  * 檢視元件的一般屬性。
+  * 檢視元件的[圖示或縮寫定義](/help/sites-developing/components-basics.md#component-icon-in-touch-ui)的方式。
 
-      * 按一下圖示的來源會前往該元件。
+    * 按一下圖示的來源會前往該元件。
 
-   * 檢視元件的&#x200B;**資源型別**&#x200B;和&#x200B;**資源超級型別** （如果已定義）。
+  * 檢視元件的&#x200B;**資源型別**&#x200B;和&#x200B;**資源超級型別** （如果已定義）。
 
-      * 按一下「資源超級型別」即可前往該元件。
+    * 按一下「資源超級型別」即可前往該元件。
 
   >[!NOTE]
   >
@@ -67,6 +80,6 @@ ht-degree: 17%
 
 * **文件**
 
-  如果開發人員已提供元件[的](/help/sites-developing/developing-components.md#documenting-your-component)檔案，它將出現在&#x200B;**檔案**&#x200B;索引標籤上。 如果沒有可用的檔案，將不會顯示&#x200B;**檔案**&#x200B;標籤。
+  如果開發人員已提供元件](/help/sites-developing/developing-components.md#documenting-your-component)的[檔案，它將出現在&#x200B;**檔案**&#x200B;索引標籤上。 如果沒有可用的檔案，將不會顯示&#x200B;**檔案**&#x200B;標籤。
 
   ![文件](assets/chlimage_1-171.png)

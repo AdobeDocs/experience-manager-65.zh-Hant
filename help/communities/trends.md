@@ -10,13 +10,20 @@ exl-id: 2a4297e4-2d88-4fa6-8fea-3fea06753605
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
-source-wordcount: '343'
+source-wordcount: '346'
 ht-degree: 0%
-
 ---
-
 # 活動趨勢 {#activity-trends}
 
 ## 簡介 {#introduction}
@@ -61,29 +68,29 @@ ht-degree: 0%
 
   選取自：
 
-   * `Members`
-   * `Content`
+  * `Members`
+  * `Content`
 
   預設值為`Members`。
 
 * **顯示標題**
 
   要在資料上方顯示的描述性標題，例如`Trending Content`。
-預設為無標題。
+  預設為無標題。
 
 * **顯示計數**
 
   要列出的專案數。
-預設值為10。
+  預設值為10。
 
 * **活動型別**
 
   選取下列其中一項：
 
-   * `Views`（頁面瀏覽次數）
-   * `Posts`（正在建立UGC）
-   * `Follows`
-   * `Likes`
+  * `Views`（頁面瀏覽次數）
+  * `Posts`（正在建立UGC）
+  * `Follows`
+  * `Likes`
 
   預設值為「檢視」。
 
@@ -91,24 +98,24 @@ ht-degree: 0%
 
   選取下列其中一項：
 
-   * `Last 24 hours`
-   * `Last 7 days`
-   * `Last 30 days`
-   * `Last 90 days`
-   * `This year (since Jan 1)`
-   * `Total`
+  * `Last 24 hours`
+  * `Last 7 days`
+  * `Last 30 days`
+  * `Last 90 days`
+  * `This year (since Jan 1)`
+  * `Total`
 
   預設值為`Total`。
 
 * **內容路徑**
 
   這可讓您將活動範圍設定為網站的子集，例如特定部落格。
-預設為整個社群網站。
+  預設為整個社群網站。
 
 * **成員計數彙總**
 
   取消選取（關閉）時，只會計算最上層的貼文。 例如，如果內容是根頁面（預設值），則`Posts`的`Activity Type`絕不會顯示任何活動，因為沒有能力將內容發佈到根頁面。 如果勾選，則會包含所有下級頁面上的計數。
-預設為已核取。
+  預設為已核取。
 
 ### 包含四個元件的範例頁面 {#example-page-with-components}
 

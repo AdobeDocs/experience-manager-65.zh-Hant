@@ -1,24 +1,33 @@
 ---
 title: 管理影片資產
-description: 在 [!DNL Adobe Experience Manager]中上傳、預覽、註釋及發佈視訊資產。
+description: 在[!DNL Adobe Experience Manager]中上傳、預覽、註釋及發佈視訊資產。
 contentOwner: AG
 role: User
 feature: Asset Management
 exl-id: 21d3e0bd-5955-470a-8ca2-4d995c17eb4c
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: bca6156727dca11b2e09be549f3def6130827193
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 7d2b2ec8-499c-5434-9ffd-9218cd71f683
+    internal-label: Asset Management
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '5414'
+source-wordcount: '5614'
 ht-degree: 8%
-
 ---
-
 # 管理影片資產 {#manage-video-assets}
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/manage-video-assets.html?lang=zh-Hant) |
+| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/manage-video-assets.html?lang=en) |
 | AEM 6.5 | 本文章 |
 
 視訊格式是組織數位資產的重要一環。 [!DNL Adobe Experience Manager]提供成熟的產品和功能，可在建立視訊資產後管理其整個生命週期。
@@ -30,7 +39,7 @@ ht-degree: 8%
 [!DNL Adobe Experience Manager Assets]會產生副檔名為MP4之視訊資產的預覽。 如果資產的格式不是MP4，請安裝FFmpeg套件以產生預覽。 FFmpeg會建立OGG和MP4型別的視訊轉譯。 您可以在[!DNL Assets]使用者介面中預覽轉譯。
 
 1. 在數位資產資料夾或子資料夾中，導覽至您要新增數位資產的位置。
-1. 若要上傳資產，請按一下工具列中的[建立]，然後選擇[檔案]。**&#x200B;** **&#x200B;**&#x200B;或者，在使用者介面上拖曳檔案。 如需詳細資訊，請參閱[上傳資產](manage-assets.md#uploading-assets)。
+1. 若要上傳資產，請按一下工具列中的[建立]，然後選擇[檔案]。**** ****&#x200B;或者，在使用者介面上拖曳檔案。 如需詳細資訊，請參閱[上傳資產](manage-assets.md#uploading-assets)。
 1. 若要在卡片檢視中預覽視訊，請按一下視訊資產上的&#x200B;**[!UICONTROL 播放]** ![播放選項](assets/do-not-localize/play.png)選項。 您只能在卡片檢視中暫停或播放視訊。 清單檢視中不提供[!UICONTROL 播放]和[!UICONTROL 暫停]選項。
 
 1. 若要在資產詳細資訊頁面中預覽視訊，請按一下卡片上的&#x200B;**[!UICONTROL 編輯]**。 視訊會在瀏覽器的原生視訊播放器中播放。 您可以播放、暫停、控制音量，以及將視訊縮放至全熒幕。
@@ -44,7 +53,7 @@ ht-degree: 8%
 除了[!DNL Assets]設定外，請變更下列設定以上傳大型資產：
 
 * 增加權杖到期時間。 在`https://[aem_server]:[port]/system/console/configMgr`的Web主控台中檢視[!UICONTROL Adobe Granite CSRF Servlet]。 如需詳細資訊，請參閱[CSRF保護](/help/sites-developing/csrf-protection.md)。
-* 在Dispatcher設定中增加`receiveTimeout`。 如需詳細資訊，請參閱[Experience Manager Dispatcher設定](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant#renders-options)。
+* 在Dispatcher設定中增加`receiveTimeout`。 如需詳細資訊，請參閱[Experience Manager Dispatcher設定](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#renders-options)。
 
 >[!NOTE]
 >
@@ -69,7 +78,7 @@ ht-degree: 8%
 1. 在[!DNL Experience Manager]中，按一下&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 工作流程]** > **[!UICONTROL 模型]**。
 1. 在工作流程模型頁面上，選取&#x200B;**[!UICONTROL Dynamic Media編碼視訊]**，然後按一下&#x200B;**[!UICONTROL 編輯]**。
 1. 在工作流程頁面上，連按兩下&#x200B;**[!UICONTROL Dynamic Media視訊服務處理序]**&#x200B;元件。
-1. 在「步 [!UICONTROL 驟屬性] 」對話框的「常用」頁籤下，展開「 **[!UICONTROL 高級設定」]**&#x200B;**&#x200B;**。
+1. 在「步 [!UICONTROL 驟屬性] 」對話框的「常用」頁籤下，展開「 **[!UICONTROL 高級設定」]******。
 1. 在&#x200B;**[!UICONTROL 逾時]**&#x200B;欄位中，指定值`18000`，然後按一下&#x200B;**[!UICONTROL 確定]**&#x200B;以返回&#x200B;**[!UICONTROL Dynamic Media編碼視訊]**&#x200B;工作流程頁面。
 1. 在頁面頂端附近，[!UICONTROL Dynamic Media編碼視訊]頁面標題下方，按一下&#x200B;**[!UICONTROL 儲存]**。
 
@@ -120,7 +129,7 @@ Google會定期變更其使用者介面。 因此，將視訊發佈至YouTube的
    如果您已有Google帳戶，請跳至下一步。
 
 1. 移至[https://cloud.google.com/](https://cloud.google.com/)。
-1. 在Google cloud頁面的右上角，按一下「主控台」 **&#x200B;**。
+1. 在Google cloud頁面的右上角，按一下「主控台」 ****。
 
    如有必要，請使用您的Google帳戶認證&#x200B;**[!UICONTROL 登入]**&#x200B;以檢視&#x200B;**[!UICONTROL 主控台]**&#x200B;選項。
 
@@ -142,7 +151,7 @@ Google會定期變更其使用者介面。 因此，將視訊發佈至YouTube的
 
    ![6_5_googleaccount-apis-enable2](assets/6_5_googleaccount-apis-enable2.png)
 
-1. 在[API與服務]頁面頂端附近，選取[啟用API與服務]&#x200B;**&#x200B;**。
+1. 在[API與服務]頁面頂端附近，選取[啟用API與服務]****。
 1. 在「API程式庫」頁面的左側，**[!UICONTROL 類別]**&#x200B;下方選取&#x200B;**[!UICONTROL YouTube]**。 在頁面右側，選取&#x200B;**[!UICONTROL YouTube Data API]**。
 1. 在YouTube Data API v3頁面上，選取&#x200B;**[!UICONTROL 啟用]**。
 
@@ -163,7 +172,7 @@ Google會定期變更其使用者介面。 因此，將視訊發佈至YouTube的
    ![6_5_googleaccount-apis-createcredentials2](assets/6_5_googleaccount-apis-createcredentials2.png)
 
 1. 選取&#x200B;**[!UICONTROL 我需要什麼認證？]**
-1. 在「 **[!UICONTROL 新增認證至您的專案]** 」頁面的「建立OAuth 2.0用戶端ID **&#x200B;**&#x200B;」標題下，視需要在「名稱」欄位中輸入唯一名稱。 或者，您可以使用Google指定的預設名稱。
+1. 在「 **[!UICONTROL 新增認證至您的專案]** 」頁面的「建立OAuth 2.0用戶端ID **** 」標題下，視需要在「名稱」欄位中輸入唯一名稱。 或者，您可以使用Google指定的預設名稱。
 1. 在&#x200B;**[!UICONTROL 授權的JavaScript來源]**&#x200B;標題下，在文字欄位中輸入以下路徑，在路徑中取代您自己的網域和連線埠號碼，然後按&#x200B;**[!UICONTROL Enter]**&#x200B;將路徑新增至清單：
 
    `https://<servername.domain>:<port_number>`
@@ -183,7 +192,7 @@ Google會定期變更其使用者介面。 因此，將視訊發佈至YouTube的
    **注意**：上述路徑範例僅供示範之用。
 
 1. 按一下&#x200B;**[!UICONTROL 建立OAuth使用者端識別碼]**。
-1. 在「 **[!UICONTROL 新增認證至您的專案]**&#x200B;**&#x200B;** 」頁面的「設定OAuth 2.0同意書」畫面標題下方，選取您目前使用的Gmail電子郵件地址。
+1. 在「 **[!UICONTROL 新增認證至您的專案]****** 」頁面的「設定OAuth 2.0同意書」畫面標題下方，選取您目前使用的Gmail電子郵件地址。
 
    ![6_5_googleaccount-apis-createcredentials-consentscreen](assets/6_5_googleaccount-apis-createcredentials-consentscreen.png)
 
@@ -192,7 +201,7 @@ Google會定期變更其使用者介面。 因此，將視訊發佈至YouTube的
    Experience Manager管理員向YouTube驗證時，會顯示同意畫面；Experience Manager會聯絡YouTube以取得許可權。
 
 1. 按一下「**[!UICONTROL 繼續]**」。
-1. 在[新增認證至您的專案]頁面的[下載認證] **標題下，選取[下載]**&#x200B;**，步驟4。**
+1. 在[新增認證至您的專案]頁面的[下載認證] ]**標題下，選取[下載]****，步驟4。**[!UICONTROL 
 
    ![6_5_googleaccount-apis-createcredentials-downloadcredentials](assets/6_5_googleaccount-apis-createcredentials-downloadcredentials.png)
 
@@ -238,7 +247,7 @@ Google會定期變更其使用者介面。 因此，將視訊發佈至YouTube的
 
 1. 在Experience Manager的左上角，按一下Experience Manager標誌，然後在左側邊欄中，按一下&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL 復寫]** > **[!UICONTROL 作者代理程式]**。
 1. 在作者代理程式頁面上，按一下&#x200B;**[!UICONTROL YouTube發佈]**。
-1. 在工具列的[設定]右側，按一下[編輯]。**&#x200B;**
+1. 在工具列的[設定]右側，按一下[編輯]。****
 1. 選取&#x200B;**[!UICONTROL 已啟用]**&#x200B;核取方塊，以便您開啟復寫代理程式。
 1. 按一下&#x200B;**[!UICONTROL 「確定」]**。
 
@@ -261,7 +270,7 @@ Google會定期變更其使用者介面。 因此，將視訊發佈至YouTube的
 1. 在「建立YouTube設定」頁面的「Google cloud 平台設定」下方的「應用程式名稱」欄位 **[!UICONTROL 中]** ，輸入Google專案ID。
 
    您已在先前設定Google Cloud設定時指定專案ID。
-讓「建立YouTube設定」頁面保持開啟；稍後，您將會返回該頁面。
+   讓「建立YouTube設定」頁面保持開啟；稍後，您將會返回該頁面。
 
    ![6_5_youtubepublish-createyoutubeconfiguration](assets/6_5_youtubepublish-createyoutubeconfiguration.png)
 
@@ -309,7 +318,7 @@ Google會定期變更其使用者介面。 因此，將視訊發佈至YouTube的
 1. 在「YouTube帳戶設定」對話方塊的「應用程式名 **[!UICONTROL 稱」欄位中]** ，輸入Google專案ID。
 
    您已在最初[設定Google雲端設定](/help/assets/video.md#configuring-google-cloud-settings)時指定專案ID。
-保留YouTube帳戶設定對話方塊開啟；您稍後將返回該對話方塊。
+   保留YouTube帳戶設定對話方塊開啟；您稍後將返回該對話方塊。
 
 1. 使用純文字編輯器，開啟您先前在「設定Google雲端設定」工作中下載並儲存的JSON檔案。
 1. 選取並複製整個JSON文字。
@@ -319,7 +328,7 @@ Google會定期變更其使用者介面。 因此，將視訊發佈至YouTube的
    現在請在Experience Manager中設定YouTube管道。
 
 1. 在&#x200B;**[!UICONTROL 可用頻道]**&#x200B;的右側，選取&#x200B;**+** （加號圖示）。
-1. 在「YouTube頻道設定」對話方塊的「標題」欄位中，輸入您在「先前新增一或多個頻道至YouTube」工作中建立的頻道名稱 **&#x200B;**&#x200B;。
+1. 在「YouTube頻道設定」對話方塊的「標題」欄位中，輸入您在「先前新增一或多個頻道至YouTube」工作中建立的頻道名稱 **** 。
 
    如有需要，您可以選擇新增說明。
 
@@ -348,7 +357,7 @@ Google會定期變更其使用者介面。 因此，將視訊發佈至YouTube的
 
 您可以選擇在Experience Manager中建立中繼資料處理設定檔，在上傳視訊時自動設定YouTube屬性。
 
-若要建立中繼資料處理設定檔，您必須先從「欄位標籤 **[!UICONTROL 」、「對應至屬性]**&#x200B;**&#x200B;**&#x200B;**&#x200B;** 」和「選擇」欄位複製值，這些全都可在視訊的中繼資料結構中找到。 然後，您可以新增這些值，以建立您的YouTube視訊中繼資料處理設定檔。
+若要建立中繼資料處理設定檔，您必須先從「欄位標籤 **[!UICONTROL 」、「對應至屬性]********** 」和「選擇」欄位複製值，這些全都可在視訊的中繼資料結構中找到。 然後，您可以新增這些值，以建立您的YouTube視訊中繼資料處理設定檔。
 
 若要針對您上傳的視訊自動設定預設YouTube屬性：
 
@@ -359,26 +368,26 @@ Google會定期變更其使用者介面。 因此，將視訊發佈至YouTube的
 1. 在「YouTube發佈」標題下，按一下「 **[!UICONTROL YouTube類別」]**。
 1. 在頁面右側的&#x200B;**[!UICONTROL 設定]**&#x200B;標籤下方，執行下列動作：
 
-   * 在&#x200B;**[!UICONTROL 對應至屬性]**&#x200B;文字欄位中，選取並複製值。
-將複製的值貼到開啟的文字編輯器中。當您稍後建立中繼資料處理設定檔時，會需要此值。讓文字編輯器保持開啟狀態。
+   * 在&#x200B;**[!UICONTROL 對應至屬性]**文字欄位中，選取並複製值。
+     將複製的值貼到開啟的文字編輯器中。 當您稍後建立中繼資料處理設定檔時，會需要此值。 讓文字編輯器保持開啟狀態。
 
-   * 在&#x200B;**[!UICONTROL 選擇]**&#x200B;下，選取並複製您要使用的預設值（例如「人員與部落格」或「科學與技術」）。
-將複製的值貼到開啟的文字編輯器中。當您稍後建立中繼資料處理設定檔時，會需要此值。讓文字編輯器保持開啟狀態。
+   * 在&#x200B;**[!UICONTROL 選擇]**下，選取並複製您要使用的預設值（例如「人員與部落格」或「科學與技術」）。
+     將複製的值貼到開啟的文字編輯器中。 當您稍後建立中繼資料處理設定檔時，會需要此值。 讓文字編輯器保持開啟狀態。
 
 1. 在「YouTube發佈」標題下，選取&#x200B;**[!UICONTROL YouTube隱私權]**。
 1. 在頁面右側的&#x200B;**[!UICONTROL 設定]**&#x200B;標籤下方，執行下列動作：
 
-   * 在&#x200B;**[!UICONTROL 對應至屬性]**&#x200B;文字欄位中，選取並複製值。
-將複製的值貼到開啟的文字編輯器中。當您稍後建立中繼資料處理設定檔時，會需要此值。讓文字編輯器保持開啟狀態。
+   * 在&#x200B;**[!UICONTROL 對應至屬性]**文字欄位中，選取並複製值。
+     將複製的值貼到開啟的文字編輯器中。 當您稍後建立中繼資料處理設定檔時，會需要此值。 讓文字編輯器保持開啟狀態。
 
-   * 在&#x200B;**[!UICONTROL 選擇]**&#x200B;下，選取並複製您要使用的預設值。請注意，「選擇」會組成兩個選項組。配對中的底部欄位是您要複製的預設值，例如public、unlisted或private。
-將複製的值貼到開啟的文字編輯器中。當您稍後建立中繼資料處理設定檔時，會需要此值。讓文字編輯器保持開啟狀態。
+   * 在&#x200B;**[!UICONTROL 選擇]**下，選取並複製您要使用的預設值。 請注意，「選擇」會組成兩個選項組。 配對中的底部欄位是您要複製的預設值，例如public、unlisted或private。
+     將複製的值貼到開啟的文字編輯器中。 當您稍後建立中繼資料處理設定檔時，會需要此值。 讓文字編輯器保持開啟狀態。
 
 1. 在「中繼資料結構描述編輯器」頁面的右上角附近，按一下&#x200B;**[!UICONTROL 取消]**。
 1. 在Experience Manager的左上角，選取Experience Manager標誌，然後在左側導軌中，按一下&#x200B;**[!UICONTROL 工具]** （槌子圖示） > **[!UICONTROL Assets]** > **[!UICONTROL 中繼資料設定檔]**。
 
 1. 在「中繼資料描述檔」頁面的右上角，按一下「**[!UICONTROL 建立]**」。
-1. 在「新增中繼資料設定檔」對話方塊的「設定檔標題 **[!UICONTROL 」文字欄位中，輸入名稱，]** 然後按一下「 `YouTube Video` 建立 **&#x200B;**」。
+1. 在「新增中繼資料設定檔」對話方塊的「設定檔標題 **[!UICONTROL 」文字欄位中，輸入名稱，]** 然後按一下「 `YouTube Video` 建立 ****」。
 1. 在中繼資料設定檔編輯器頁面上，按一下&#x200B;**[!UICONTROL 進階]**&#x200B;標籤。
 1. 執行下列操作，將複製的YouTube發佈值新增至設定檔：
 
@@ -436,10 +445,10 @@ Google會定期變更其使用者介面。 因此，將視訊發佈至YouTube的
    請記住，標籤必須與YouTube管道相關聯。
 
 1. 在頁面的右上角，按一下&#x200B;**[!UICONTROL 選取]**。
-1. 在視訊屬性頁面的右上角，按一下[儲存並關閉]。**&#x200B;**
+1. 在視訊屬性頁面的右上角，按一下[儲存並關閉]。****
 1. 在工具列上，按一下&#x200B;**[!UICONTROL 快速發佈]**。
 
-   另請參閱[搭配Experience Manager Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/publication-management-feature-video-use.html?lang=zh-Hant)使用出版物管理。
+   另請參閱[搭配Experience Manager Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/publication-management-feature-video-use.html)使用出版物管理。
 
    您可以選擇驗證在YouTube頻道上發佈的影片。
 
@@ -530,7 +539,7 @@ Google會定期變更其使用者介面。 因此，將視訊發佈至YouTube的
    >
    >您可以調整這些組態中的&#x200B;**[!UICONTROL 重試]**、**[!UICONTROL 重試延遲]**&#x200B;和&#x200B;**[!UICONTROL 逾時]**&#x200B;屬性。
 
-1. 如需進行中的工作流程，請參閱「工具 **[!UICONTROL >工作流程]** >例項」中的「工作流程例 **[!UICONTROL 項」]**&#x200B;**&#x200B;**。
+1. 如需進行中的工作流程，請參閱「工具 **[!UICONTROL >工作流程]** >例項」中的「工作流程例 **[!UICONTROL 項」]******。
 
    >[!NOTE]
    >
@@ -544,7 +553,7 @@ Google會定期變更其使用者介面。 因此，將視訊發佈至YouTube的
 
    您也可以從「工作流程例證」區域暫停、終止或重新命名工作流程。 如需詳細資訊，請參閱[管理工作流程](/help/sites-administering/workflows-administering.md)。
 
-1. 有關失敗的作業，請參閱「工具」>「工作流 **[!UICONTROL 程」]** > 「失敗 **[!UICONTROL 」中的「工]** 作流失敗 **&#x200B;**」。 「工作 **[!UICONTROL 流失敗]** 」(Workflow Failure)列出所有失敗的工作流活動。
+1. 有關失敗的作業，請參閱「工具」>「工作流 **[!UICONTROL 程」]** > 「失敗 **[!UICONTROL 」中的「工]** 作流失敗 ****」。 「工作 **[!UICONTROL 流失敗]** 」(Workflow Failure)列出所有失敗的工作流活動。
 
    >[!NOTE]
    >
@@ -562,7 +571,7 @@ Google會定期變更其使用者介面。 因此，將視訊發佈至YouTube的
    >
    >您可以調整這些組態中的&#x200B;**[!UICONTROL 重試]**、**[!UICONTROL 重試延遲]**&#x200B;和&#x200B;**[!UICONTROL 逾時]**&#x200B;屬性。
 
-1. 如需完成的工作流程，請參閱「工具 **[!UICONTROL >工作流程]** >封存 **[!UICONTROL 」中的「工作流程封存]**&#x200B;**&#x200B;**」。 「工作 **[!UICONTROL 流程存檔]** 」會列出所有已完成的工作流活動。
+1. 如需完成的工作流程，請參閱「工具 **[!UICONTROL >工作流程]** >封存 **[!UICONTROL 」中的「工作流程封存]******」。 「工作 **[!UICONTROL 流程存檔]** 」會列出所有已完成的工作流活動。
 
    >[!NOTE]
    >
@@ -585,7 +594,7 @@ Google會定期變更其使用者介面。 因此，將視訊發佈至YouTube的
 * 針對YouTube發佈工作，請執行以下作業：
 
 1. 在Experience Manager中，選取&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 工作流程]** > **[!UICONTROL 模型]**。
-1. 在[工作流程模型]頁面上，選取[發佈至YouTube] **，然後在工具列上選取[編輯]**&#x200B;**。**
+1. 在[工作流程模型]頁面上，選取[發佈至YouTube] ]**，然後在工具列上選取[編輯]****。**[!UICONTROL 
 1. 在「發佈至YouTube」工作流程頁面的右上角附近，選取&#x200B;**[!UICONTROL 編輯]**。
 1. 將滑鼠指標暫留在YouTube上傳元件上，然後選取一次，以顯示內嵌工具列。
 
@@ -617,7 +626,7 @@ Google會定期變更其使用者介面。 因此，將視訊發佈至YouTube的
 ## 為視訊資產加上註釋 {#annotate-video-assets}
 
 1. 從[!DNL Assets]主控台，選取資產卡上的&#x200B;**[!UICONTROL 編輯]**&#x200B;以顯示資產詳細資訊頁面。
-1. 若要播放視訊，請按一下[預覽]。**&#x200B;**
+1. 若要播放視訊，請按一下[預覽]。****
 1. 若要為視訊加上註解，請按一下&#x200B;**[!UICONTROL 加上註解]**。 註解會新增至視訊中的特定時間（影格）。 在註解時，您可以在畫布上繪圖，並在繪圖中包含註解。 註解會自動儲存。 若要結束註解精靈，請按一下&#x200B;**[!UICONTROL 關閉]**。
 
    ![在視訊影格上繪製和註釋](assets/annotate-video.png)

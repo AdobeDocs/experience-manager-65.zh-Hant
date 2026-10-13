@@ -9,13 +9,20 @@ exl-id: 3d72cbdf-5eb4-477d-aa61-035a846f7dcb
 solution: Experience Manager
 feature: Communities
 role: Developer
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '289'
+source-wordcount: '301'
 ht-degree: 1%
-
 ---
-
 # 建立節點 {#create-nodes}
 
 透過從`/libs`複製到`/apps`中所需的最少檔案數並在`/apps`中修改它們，以自訂版本覆蓋註解系統。
@@ -36,34 +43,34 @@ ht-degree: 1%
 1. 建立`/apps/social` （如果尚未存在）
    * 選取`/apps`節點
    * **[!UICONTROL 建立>資料夾]**
-      * 輸入名稱： `social`
+     * 輸入名稱： `social`
 1. 選取`social`節點
    * **[!UICONTROL 建立]** > **[!UICONTROL 資料夾]**
-      * 輸入名稱： `commons`
+     * 輸入名稱： `commons`
 1. 選取`commons`節點
    * **[!UICONTROL 建立>資料夾]**
-      * 輸入名稱： `components`
+     * 輸入名稱： `components`
 1. 選取`components`節點
    * **[!UICONTROL 建立>資料夾]**。
-      * 輸入名稱： `hbs`
+     * 輸入名稱： `hbs`
 1. 選取`hbs`節點
    * **[!UICONTROL 建立]** > **[!UICONTROL 建立元件]**
-      * 輸入標籤： `comments`
-      * 輸入標題： `Comments`
-      * 輸入描述： `List of comments without showing avatars`
-      * 超級型別： `social/commons/components/comments`
-      * 輸入群組： `Communities`
-      * 按[下一步]&#x200B;**&#x200B;**&#x200B;直到&#x200B;**[!UICONTROL [確定]]**
+     * 輸入標籤： `comments`
+     * 輸入標題： `Comments`
+     * 輸入描述： `List of comments without showing avatars`
+     * 超級型別： `social/commons/components/comments`
+     * 輸入群組： `Communities`
+     * 按[下一步]****&#x200B;直到&#x200B;**[!UICONTROL [確定]]**
 1. 選取`comments`節點
 
    * **[!UICONTROL 建立]** > **[!UICONTROL 建立元件]**
 
-      * 輸入標籤： `comment`
-      * 輸入標題： `Comment`
-      * 輸入描述： `A comment instance without avatars`
-      * 超級型別： `social/commons/components/comments/comment`
-      * 輸入群組： `.hidden`
-      * 按[下一步]&#x200B;**&#x200B;**&#x200B;直到&#x200B;**[!UICONTROL [確定]]**
+     * 輸入標籤： `comment`
+     * 輸入標題： `Comment`
+     * 輸入描述： `A comment instance without avatars`
+     * 超級型別： `social/commons/components/comments/comment`
+     * 輸入群組： `.hidden`
+     * 按[下一步]****&#x200B;直到&#x200B;**[!UICONTROL [確定]]**
    * 選取&#x200B;**[!UICONTROL 全部儲存]**
 1. 刪除預設`comments.jsp`
    * 選取節點`/apps/social/commons/components/hbs/comments/comments.jsp`

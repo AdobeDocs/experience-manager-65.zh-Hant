@@ -10,13 +10,22 @@ exl-id: f9a88156-91a2-4c85-9bc9-8f23700c2cbd
 feature: Operations
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: db7830895c8a2d1b7228dc4780296d43f15776df
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 8a70d214-ab7b-58c1-b001-2ed2e5d6303d
+    internal-label: Operations
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '6016'
+source-wordcount: '6022'
 ht-degree: 2%
-
 ---
-
 # 操作控制面板 {#operations-dashboard}
 
 ## 簡介 {#introduction}
@@ -107,13 +116,13 @@ AEM 6中有兩種健康狀態檢查型別：
 
    * **名稱：** `sling:resourceType`
 
-      * **型別：** `String`
-      * **值：** `granite/operations/components/mbean`
+     * **型別：** `String`
+     * **值：** `granite/operations/components/mbean`
 
    * **名稱：** `resource`
 
-      * **型別：** `String`
-      * **值：** `/system/sling/monitoring/mbeans/org/apache/sling/healthcheck/HealthCheck/exampleHealthCheck`
+     * **型別：** `String`
+     * **值：** `/system/sling/monitoring/mbeans/org/apache/sling/healthcheck/HealthCheck/exampleHealthCheck`
 
    >[!NOTE]
    >
@@ -164,19 +173,19 @@ AEM 6中有兩種健康狀態檢查型別：
 
    * **名稱：** `Composite Health Check`
 
-      * **型別：** `nt:unstructured`
+     * **型別：** `nt:unstructured`
 
    具有以下屬性：
 
    * **名稱：** `sling:resourceType`
 
-      * **型別：** `String`
-      * **值：** `granite/operations/components/mbean`
+     * **型別：** `String`
+     * **值：** `granite/operations/components/mbean`
 
    * **名稱：** `resource`
 
-      * **型別：** `String`
-      * **值：** `/system/sling/monitoring/mbeans/org/apache/sling/healthcheck/HealthCheck/diskusage`
+     * **型別：** `String`
+     * **值：** `/system/sling/monitoring/mbeans/org/apache/sling/healthcheck/HealthCheck/diskusage`
 
    >[!NOTE]
    >
@@ -452,7 +461,7 @@ DATE+TIME [MaintanceLogger] Name=<MT_NAME>, Status=<MT_STATUS>, Time=<MT_TIME>, 
 
 Index Manager的目的是方便索引管理，例如維護索引或檢視其狀態。
 
-您可以從[歡迎畫面]前往&#x200B;**工具 — 作業 — 診斷**，然後按一下&#x200B;**索引管理員**&#x200B;按鈕來存取它。
+您可以從[歡迎畫面]前往&#x200B;**工具 — 作業 — 診斷**，然後按一下**索引管理員**按鈕來存取它。
 
 也可以直接在此URL存取： `https://serveraddress:port/libs/granite/operations/content/diagnosistools/indexManager.html`
 
@@ -495,7 +504,7 @@ UI可用來篩選表格中的索引，方法是在畫面左上角的搜尋方塊
 1. **專案清除**&#x200B;維護任務，位於&#x200B;**每週維護期間**&#x200B;功能表下；使用&#x200B;**新增**&#x200B;選項。
 1. **清除臨機任務**&#x200B;維護任務，位於&#x200B;**每週維護期間**&#x200B;功能表下；使用&#x200B;**新增**&#x200B;選項。
 
-每日維護期間的預設時間為上午2:00到上午5:00。設定為在每週維護期間執行的工作，會在星期六上午1:00至上午2:00之間執行。
+每日維護期間的預設時間為凌晨2:00至下午5:00。設定在每週維護期間執行的工作，會在星期六上午1:00到凌晨2:00之間執行。
 
 您也可以按兩個維護卡片上的齒輪圖示來設定計時：
 
@@ -555,7 +564,7 @@ UI可用來篩選表格中的索引，方法是在畫面左上角的搜尋方塊
 **使用AEM 6.4**&#x200B;時，您可以依照以下步驟停止「版本清除」維護工作：
 
 * 自動 — 如果排程的維護視窗在任務完成之前關閉，任務會自動停止。 當下一個維護視窗開啟時，它會繼續。
-* 手動 — 若要手動停止工作，請在[版本清除]維護卡上，按一下[停止] **&#x200B;**&#x200B;圖示。 在下次執行時，工作將會安全地繼續。
+* 手動 — 若要手動停止工作，請在[版本清除]維護卡上，按一下[停止] ****&#x200B;圖示。 在下次執行時，工作將會安全地繼續。
 
 >[!NOTE]
 >

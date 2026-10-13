@@ -9,13 +9,27 @@ exl-id: 62621fe9-f69f-4bc0-aecc-d7bcc3064516
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '494'
+source-wordcount: '496'
 ht-degree: 0%
-
 ---
-
 # 管理Workspace中顯示的類別 {#managing-the-categories-displayed-in-workspace}
 
 >[!NOTE]
@@ -32,7 +46,7 @@ ht-degree: 0%
 
 在Workspace中，類別中的程式通常會在開始程式頁面上顯示為卡片。 一般而言，在使用者需要捲動才能檢視剩餘卡片之前，類別的6張卡片可以顯示在畫面上。 因為捲動會使得尋找程式變得更加困難，請考慮將每個類別限製為六個程式，或者根據您的解析度限制畫面上可顯示的程式數目，而不需要任何捲動。
 
-如果您使用MySQL做為AEM表單資料庫，Administration Console無法區分僅使用擴充字元的不同類別名稱。 例如，如果您建立名為abcde的類別和名為abcde的類別，系統會將兩者視為相同。
+如果您使用MySQL做為AEM表單資料庫，Administration Console無法區分僅使用擴充字元時不同的兩個類別名稱。 例如，如果您建立名為abcde的類別和名為abcde的類別，系統會將兩者視為相同。
 
 ## 新增類別 {#add-a-category}
 

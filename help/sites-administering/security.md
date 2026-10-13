@@ -10,13 +10,25 @@ exl-id: 53d8c654-8017-4528-a44e-e362d8b59f82
 feature: Security
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 2cc34ce568fc533d41f53d8007825264ca9baad3
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: b1210526-416b-4ef6-bcc0-1692e99f30e9
+    internal-label: Administration and security
+subfeature_v2:
+  - id: c35bc059-fd80-4a01-91a6-e48da3c76758
+    internal-label: Security practices
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '5471'
 ht-degree: 1%
-
 ---
-
 # 使用者管理與安全性{#user-administration-and-security}
 
 本章說明如何設定和維護使用者授權，同時也說明在AEM中驗證和授權如何運作的理論。
@@ -269,7 +281,7 @@ AEM WCM使用存取控制清單(ACL)來組織套用至不同頁面的許可權�
   </tr>
   <tr>
    <td>下方</td>
-   <td>列出可以在樹狀結構中的其他位置產生效果的非有效專案（由具有限制專案範圍之對應ACE的特殊屬性所指示）。 或者，它是一個條目，其效果被在給定路徑或祖先節點定義的另一個條目撤銷。</td>
+   <td>列出可能會在樹狀結構中的其他位置產生效果的非有效專案（如特殊屬性所指示，而對應的ACE會限制專案的範圍）。 或者，它是一個條目，其效果被在給定路徑或祖先節點定義的另一個條目撤銷。</td>
   </tr>
  </tbody>
 </table>
@@ -351,7 +363,7 @@ AEM WCM使用存取控制清單(ACL)來組織套用至不同頁面的許可權�
 >
 >為了模擬非管理員使用者才能運作，模擬者（在上述案例中為user-B）必須在`/home/users`路徑中具有「讀取」許可權。
 >
->檢視AEM[&#128279;](/help/sites-administering/security.md#permissions-in-aem)中的許可權。
+>檢視AEM](/help/sites-administering/security.md#permissions-in-aem)中的[許可權。
 
 >[!CAUTION]
 >
@@ -418,7 +430,7 @@ AEM WCM使用存取控制清單(ACL)來組織套用至不同頁面的許可權�
 | 成員 | 僅適用於群組。 列出特定群組的成員。 檢視[成員](#members-adding-users-or-groups-to-a-group)。 |
 | 權限 | 您可以將許可權分配給使用者或群組，這可讓您控制下列專案：<ul><li>與特定頁面/節點相關的許可權。 請參閱[設定許可權](#setting-permissions)。 </li><li>與建立和刪除頁面及階層修改相關的許可權，可讓您[配置許可權](#settingprivileges)，例如階層修改，可讓您建立和刪除頁面。</li><li>根據路徑與[復寫許可權](#setting-replication-privileges)相關的許可權（通常從作者到發佈）。</li></ul> |
 | Impersonator | 允許其他使用者模擬帳戶。 當您需要使用者代表另一個使用者進行操作時非常有用。 請參閱[模擬使用者](#impersonating-another-user)。 |
-| 偏好設定 | 設定群組或使用者[&#128279;](#setting-user-and-group-preferences)的偏好設定。 例如，語言偏好設定。 |
+| 偏好設定 | 設定群組或使用者](#setting-user-and-group-preferences)的[偏好設定。 例如，語言偏好設定。 |
 
 ### 篩選使用者和群組 {#filtering-users-and-groups}
 
@@ -524,7 +536,7 @@ AEM提供三種將使用者或群組新增至現有群組的方法：
 
    ![cqsecurityaddusertogroup](assets/cqsecurityaddusertogroup.png)
 
-1. 按一下[儲存]儲存變更。**&#x200B;**
+1. 按一下[儲存]儲存變更。****
 
 ### 成員 — 新增使用者或群組至群組 {#members-adding-users-or-groups-to-a-group}
 
@@ -536,7 +548,7 @@ AEM提供三種將使用者或群組新增至現有群組的方法：
 
    ![cqsecurityadduserasmember](assets/cqsecurityadduserasmember.png)
 
-1. 按一下[儲存]儲存變更。**&#x200B;**
+1. 按一下[儲存]儲存變更。****
 
 ### 新增許可權時新增使用者或群組 {#adding-users-or-groups-while-adding-permissions}
 
@@ -571,7 +583,7 @@ AEM提供三種不同的方式，讓您從群組移除使用者或群組：
 
    ![cqsecurityremoveuserfromgrp](assets/cqsecurityremoveuserfromgrp.png)
 
-1. 按一下[儲存]儲存變更。**&#x200B;**
+1. 按一下[儲存]儲存變更。****
 
 ### 成員 — 從群組移除使用者或群組 {#members-removing-users-or-groups-from-groups}
 
@@ -583,7 +595,7 @@ AEM提供三種不同的方式，讓您從群組移除使用者或群組：
 
    ![cqsecurityremovemember](assets/cqsecurityremovemember.png)
 
-1. 按一下[儲存]儲存變更。**&#x200B;**
+1. 按一下[儲存]儲存變更。****
 
 ### 新增許可權時移除使用者或群組 {#removing-users-or-groups-while-adding-permissions}
 
@@ -650,7 +662,7 @@ AEM提供三種不同的方式，讓您從群組移除使用者或群組：
 
    ![cquserreplicatepermissions](assets/cquserreplicatepermissions.png)
 
-1. 按一下[儲存]儲存變更。**&#x200B;**
+1. 按一下[儲存]儲存變更。****
 
 ### 搜尋節點 {#searching-for-nodes}
 
@@ -710,7 +722,7 @@ AEM提供三種不同的方式，讓您從群組移除使用者或群組：
 
    ![cqsecuritypreferences](assets/cqsecuritypreferences.png)
 
-1. 視需要變更群組或使用者偏好設定，完成時按一下[儲存]。**&#x200B;**
+1. 視需要變更群組或使用者偏好設定，完成時按一下[儲存]。****
 
 ### 設定使用者或管理員擁有管理其他使用者的許可權 {#setting-users-or-administrators-to-have-the-privilege-to-manage-other-users}
 

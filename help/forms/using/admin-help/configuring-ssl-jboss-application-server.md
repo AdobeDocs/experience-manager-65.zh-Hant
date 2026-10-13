@@ -9,13 +9,24 @@ exl-id: 8eb4f691-a66b-498e-8114-307221f63718
 solution: Experience Manager, Experience Manager Forms
 feature: Document Security
 role: User, Developer
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 50158d81-1c06-57f7-8bd7-e8ff76a93f85
+    internal-label: Document Security
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '904'
+source-wordcount: '908'
 ht-degree: 0%
-
 ---
-
 # 為JBoss應用程式伺服器設定SSL {#configuring-ssl-for-jboss-application-server}
 
 若要在JBoss Application Server上設定SSL，您需要用於驗證的SSL認證。 您可以使用Java keytool來建立認證，或是從憑證授權單位(CA)要求及匯入認證。 接著，您必須在JBoss上啟用SSL。
@@ -89,7 +100,7 @@ ht-degree: 0%
 
    * 伺服器叢集 — `[appserver root]`/domain/configuration/domain_&lt;dbname>.xml
 
-1. &#x200B;
+1. 
    * **若為單一伺服器，請在lc_&lt;dbaname/tunkey>.xml檔案的&lt;security-realms>區段後面新增下列內容：**
 
    ```xml
@@ -139,29 +150,29 @@ ht-degree: 0%
 
    * 若為整套安裝：
 
-      * 在Windows「控制檯」中，按一下「管理工具」，然後按一下「服務」。
-      * 選取適用於Adobe Experience Manager表單的JBoss。
-      * 選取「動作>停止」。
-      * 等候服務的狀態顯示為已停止。
-      * 選取「動作>開始」。
+     * 在Windows「控制檯」中，按一下「管理工具」，然後按一下「服務」。
+     * 選取適用於Adobe Experience Manager表單的JBoss。
+     * 選取「動作>停止」。
+     * 等候服務的狀態顯示為已停止。
+     * 選取「動作>開始」。
 
-   * 對於Adobe預先設定或手動設定的JBoss安裝：
+   * 若為Adobe預先設定或手動設定的JBoss安裝：
 
-      * 從命令提示字元瀏覽至&#x200B;*`[appserver root]`*/bin。
-      * 輸入下列命令來停止伺服器：
+     * 從命令提示字元瀏覽至&#x200B;*`[appserver root]`*/bin。
+     * 輸入下列命令來停止伺服器：
 
-         * (Windows) `shutdown.bat -S`
-         * (Linux) `./shutdown.sh -S`
+       * (Windows) `shutdown.bat -S`
+       * (Linux) `./shutdown.sh -S`
 
-      * 等候JBoss處理作業完全關閉（當JBoss處理作業將控制項傳回開始使用的終端機時）。
-      * 輸入下列命令啟動伺服器：
+     * 等候JBoss處理作業完全關閉（當JBoss處理作業將控制項傳回開始使用的終端機時）。
+     * 輸入下列命令啟動伺服器：
 
-         * (Windows) `run.bat -c <profile>`
-         * (Linux) `./run.sh -c <profile>`
+       * (Windows) `run.bat -c <profile>`
+       * (Linux) `./run.sh -c <profile>`
 
 1. 若要使用SSL存取管理主控台，請在網頁瀏覽器中輸入`https://[host name]:'port'/adminui`：
 
-   JBoss的預設SSL連線埠為8443。 從此處，存取時指定此連線埠AEM表單。
+   JBoss的預設SSL連線埠為8443。 從此處，在存取AEM表單時指定此連線埠。
 
 ## 向CA要求認證 {#request-a-credential-from-a-ca}
 

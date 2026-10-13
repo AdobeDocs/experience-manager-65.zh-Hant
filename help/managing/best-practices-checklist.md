@@ -9,13 +9,29 @@ exl-id: 16851d65-df55-471a-8848-c73c28db8ac0
 solution: Experience Manager, Experience Manager 6.5
 feature: Compliance
 role: Admin,Developer,Leader
-source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e14eb250-3c22-4a07-9061-a78112b2b826
+    internal-label: Experience Manager 6.5
+feature_v2:
+  - id: b1210526-416b-4ef6-bcc0-1692e99f30e9
+    internal-label: Administration and security
+subfeature_v2:
+  - id: c42c36cf-eeed-484a-8b39-a33a68192a07
+    internal-label: Compliance
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '317'
+source-wordcount: '320'
 ht-degree: 0%
-
 ---
-
 # 檢查清單{#the-checklist}
 
 專案檢查清單旨在作為專案傳送的一組最佳實務。 它們會引導您完成專案生命週期的所有階段，並提供您目前狀態的高層級監控。
@@ -33,13 +49,13 @@ AEM專案最佳實務檢查清單v2
 試算表提供您下列工作表：
 
 * **指示**
-   * 提供如何使用試算表的指示，以及使用的機制說明。
+  * 提供如何使用試算表的指示，以及使用的機制說明。
 * **[專案心率](/help/managing/best-practices.md#project-heartbeat-dashboard)**
 * 按角色&#x200B;**[狀態](/help/managing/best-practices.md#status-by-role)**
 * 根據[角色](/help/managing/best-practices.md#persona)、[階段和里程碑](/help/managing/best-practices.md#phases-and-milestones)的一系列核對清單
 * **字彙表**
-   * 「字彙表」會列出「專案檢查清單」中所有交付專案的檔案的詳細資訊。
-   * [字彙表](/help/managing/best-practices-glossary.md)也包含在檔案中。
+  * 「字彙表」會列出「專案檢查清單」中所有交付專案的檔案的詳細資訊。
+  * [字彙表](/help/managing/best-practices-glossary.md)也包含在檔案中。
 * **[角色定義](/help/managing/best-practices.md#persona)**
 
 ## 使用檢查清單 {#using-the-checklists}

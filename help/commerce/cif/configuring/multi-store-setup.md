@@ -9,13 +9,21 @@ feature: Commerce Integration Framework
 exl-id: 1d4e9b7b-848b-4007-b884-dd48682d62e8
 solution: Experience Manager,Commerce
 role: Admin, Developer
-source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '472'
+source-wordcount: '416'
 ht-degree: 2%
-
 ---
-
 # Commerce多商店設定 {#multi-store}
 
 AEM CIF核心元件可用於多個AEM網站結構，而基礎GraphQL使用者端實作可連線至不同的Adobe Commerce商店/商店檢視。 如此一來，專案便可實作複雜的多商店/多網站設定。
@@ -32,13 +40,13 @@ AEM CIF核心元件可用於多個AEM網站結構，而基礎GraphQL使用者端
 
 ## 設定 {#configuration}
 
-1. 根據[Adobe Commerce網站、商店和檢視](https://experienceleague.adobe.com/docs/commerce-admin/start/setup/websites-stores-views.html?lang=zh-Hant)中所述的模式，設定多個商店和商店檢視
+1. 根據[Adobe Commerce網站、商店和檢視](https://experienceleague.adobe.com/docs/commerce-admin/start/setup/websites-stores-views.html)中所述的模式，設定多個商店和商店檢視
 
 2. 請確定AEM與Adobe Commerce之間的連線正常運作。
 
 3. 依照下列步驟建立CIF Cloud Service設定的子設定：
 
-   * 在AEM中，移至[工具] > [一般] > [設定瀏覽器] [&#128279;](/help/sites-administering/configurations.md#using-configuration-browser)
+   * 在AEM中，移至[工具] > [一般] > [設定瀏覽器] ](/help/sites-administering/configurations.md#using-configuration-browser)[
    * 選取您建立的基本組態
    * 使用上述第2點所述的步驟建立設定
 
@@ -58,7 +66,7 @@ AEM CIF核心元件可用於多個AEM網站結構，而基礎GraphQL使用者端
 
 ## 其他資源
 
-* [Adobe Commerce網站、商店和檢視](https://experienceleague.adobe.com/docs/commerce-admin/start/setup/websites-stores-views.html?lang=zh-Hant)
+* [Adobe Commerce網站、商店和檢視](https://experienceleague.adobe.com/docs/commerce-admin/start/setup/websites-stores-views.html)
 * [AEM CIF核心元件 — 多商店/網站設定](https://github.com/adobe/aem-core-cif-components#multi-store--site-configuration)
-* [使用多站點管理員](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/translation/multi-site-manager-feature-video-use.html?lang=zh-Hant)
+* [使用多站點管理員](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/translation/multi-site-manager-feature-video-use.html)
 * [重複使用內容：多網站管理員和 Live Copy](/help/sites-administering/msm.md)

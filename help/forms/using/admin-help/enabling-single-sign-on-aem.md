@@ -9,13 +9,29 @@ exl-id: 89561ed0-d094-4ef7-9bc1-bde11f3c5bc3
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Security
 role: User, Developer
-source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 50158d81-1c06-57f7-8bd7-e8ff76a93f85
+    internal-label: Document Security
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1719'
+source-wordcount: '1740'
 ht-degree: 0%
-
 ---
-
 # 在AEM表單中啟用單一登入{#enabling-single-sign-on-in-aem-forms}
 
 >[!NOTE]
@@ -84,13 +100,13 @@ AEM表單提供兩種啟用單一登入(SSO)的方式 — HTTP標題和SPNEGO。
    * 將LDAP新增為驗證提供者。
    * 將Kerberos新增為驗證提供者。 在Kerberos的「新增驗證」或「編輯驗證」頁面上提供下列資訊：
 
-      * **驗證提供者：** Kerberos
-      * **DNS IP：**&#x200B;執行AEM表單之伺服器的DNS IP位址。 您可以在命令列上執行`ipconfig/all`以判斷此IP位址。
-      * **KDC主機：**&#x200B;用於驗證之Active Directory伺服器的完整主機名稱或IP位址
-      * **服務使用者：**&#x200B;傳遞給KtPass工具的服務主要名稱(SPN)。 在先前使用的範例中，服務使用者為`HTTP/lcserver.um.lc.com`。
-      * **服務領域：** Active Directory的網域名稱。 在先前使用的範例中，網域名稱為`UM.LC.COM.`
-      * **服務密碼：**&#x200B;服務使用者的密碼。 在先前使用的範例中，服務密碼為`password`。
-      * **啟用SPNEGO：**&#x200B;啟用單一登入(SSO)使用SPNEGO。 選取此選項。
+     * **驗證提供者：** Kerberos
+     * **DNS IP：**&#x200B;執行AEM表單之伺服器的DNS IP位址。 您可以在命令列上執行`ipconfig/all`以判斷此IP位址。
+     * **KDC主機：**&#x200B;用於驗證之Active Directory伺服器的完整主機名稱或IP位址
+     * **服務使用者：**&#x200B;傳遞給KtPass工具的服務主要名稱(SPN)。 在先前使用的範例中，服務使用者為`HTTP/lcserver.um.lc.com`。
+     * **服務領域：** Active Directory的網域名稱。 在先前使用的範例中，網域名稱為`UM.LC.COM.`
+     * **服務密碼：**&#x200B;服務使用者的密碼。 在先前使用的範例中，服務密碼為`password`。
+     * **啟用SPNEGO：**&#x200B;啟用單一登入(SSO)使用SPNEGO。 選取此選項。
 
 1. 設定SPNEGO使用者端瀏覽器設定。 （請參閱[設定SPNEGO使用者端瀏覽器設定](enabling-single-sign-on-aem.md#configuring-spnego-client-browser-settings)。）
 
@@ -186,7 +202,7 @@ ktpass -princ HTTP/lcserver.um.lc.com@UM.LC.COM -mapuser spnegodemo
 
 1. 在JEE環境中登入您的AEM Forms 。
 1. 在管理控制檯中，按一下「設定」>「使用者管理」>「網域管理」。
-1. 選取您的網域設定，例如LDAP，然後按一下它。您可以在「目錄」中找到所有已建立的使用者和群組。如有需要，您可以建立新的使用者或群組。
+1. 選取您的網域設定，例如LDAP，然後按一下它。 您可以在「目錄」中找到所有已建立的使用者和群組。 如有需要，您可以建立新的使用者或群組。
    ![網域管理頁面](/help/forms/using/assets/domain-mgmt-page.png)
 1. 按一下「驗證」，在新頁面上選取「驗證提供者」，例如LDAP。
 1. 導覽至「網域管理」頁面，選取LDAP，然後按一下「立即同步&#x200B;**」**，將目錄與您設定的驗證配置同步處理，以存取AEM。

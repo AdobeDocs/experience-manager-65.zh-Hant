@@ -6,13 +6,29 @@ role: Admin
 feature: Renditions,Developer Tools,Asset Processing
 exl-id: b67465f9-177c-49c4-b4eb-a1d6e09ac9a2
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 9014a7dd3c9279a4da3944c1b095fd60352fdbeb
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: f2d27a5f-0d67-4d85-8a24-86a8d8a3574b
+    internal-label: Developer tools
+  - id: ee4c2482-9595-5bc0-b9be-c0c6f02eba50
+    internal-label: Asset Processing
+  - id: ac365bec-0634-4744-9473-c42f47320593
+    internal-label: Asset management and governance
+subfeature_v2:
+  - id: e42ab83e-8918-43a7-98a3-62bebbd5bb3a
+    internal-label: Renditions
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1015'
 ht-degree: 0%
-
 ---
-
 # 影像轉碼程式庫 {#imaging-transcoding-library}
 
 Adobe的Imaging Transcoding Library是專屬的影像處理解決方案，可執行核心影像處理功能，包括：
@@ -76,7 +92,7 @@ Adobe的Imaging Transcoding Library是專屬的影像處理解決方案，可執
 
 若要配置物件庫，請使用下列步驟建立CONF檔案以指示物件庫。 您需要管理員或根許可權。
 
-1. 從Software Distribution[&#128279;](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-imaging-transcoding-library-pkg)下載影像轉碼程式庫套件，並使用套件管理員進行安裝。 套件與[!DNL Experience Manager] 6.5相容。
+1. 從Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-imaging-transcoding-library-pkg)下載[影像轉碼程式庫套件，並使用套件管理員進行安裝。 套件與[!DNL Experience Manager] 6.5相容。
 
 1. 若要知道`com.day.cq.dam.cq-dam-switchengine`的套件組合ID，請登入網頁主控台，然後按一下&#x200B;**[!UICONTROL OSGi]** > **[!UICONTROL 套件組合]**。 或者，若要開啟套件組合主控台，請存取`https://[aem_server:[port]/system/console/bundles/` URL。 找到`com.day.cq.dam.cq-dam-switchengine`套件組合及其識別碼。
 
@@ -111,8 +127,8 @@ Adobe的Imaging Transcoding Library是專屬的影像處理解決方案，可執
 
 1. 從&#x200B;**[!UICONTROL 工作流程模型]**&#x200B;頁面，在編輯模式下開啟&#x200B;**[!UICONTROL DAM更新資產]**&#x200B;工作流程模型。
 
-1. 開啟&#x200B;**[!UICONTROL 處理縮圖]**&#x200B;工作流程處理步驟。 在&#x200B;**[!UICONTROL 縮圖]**&#x200B;索引標籤中，在&#x200B;**[!UICONTROL 略過MIME型別]**&#x200B;清單中，新增您要略過預設縮圖產生程式的MIME型別。
-例如，如果您想使用影像轉碼資料庫為TIFF影像建立縮圖，請在&#x200B;**[!UICONTROL 略過MIME型別]**&#x200B;欄位中指定`image/tiff`。
+1. 開啟&#x200B;**[!UICONTROL 處理縮圖]**&#x200B;工作流程處理步驟。 在&#x200B;**[!UICONTROL 縮圖]**&#x200B;索引標籤中，在&#x200B;**[!UICONTROL 略過MIME型別]**清單中，新增您要略過預設縮圖產生程式的MIME型別。
+例如，如果您想使用影像轉碼資料庫為TIFF影像建立縮圖，請在**[!UICONTROL 略過MIME型別]**&#x200B;欄位中指定`image/tiff`。
 
 1. 在&#x200B;**[!UICONTROL 啟用Web的影像]**&#x200B;索引標籤中，新增您要在&#x200B;**[!UICONTROL 略過清單]**&#x200B;中略過預設Web轉譯產生程式的MIME型別。 例如，如果您在上述步驟中略過MIME型別`image/tiff`，請新增`image/tiff`至略過清單。
 

@@ -5,13 +5,22 @@ exl-id: 4af1bcfe-9f2e-44a4-8666-881f2dccc3bc
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '806'
 ht-degree: 82%
-
 ---
-
 # 非同步操作 {#asynchronous-operations}
 
 為減少對效能造成負面影響，Adobe Experience Manager 會以非同步方式處理某些長時間執行且耗用大量資源的操作。 非同步處理包括將多項作業排入佇列，並根據系統資源的可用情形依序執行。
@@ -58,7 +67,7 @@ AEM 以非同步方式處理操作時，您會透過[收件匣](/help/sites-auth
 
    ![停止圖示](assets/async-stop-icon.png)
 
-1. 若要檢視額外詳細資訊（例如，說明和記錄），請選取操作，然後按一下工具列中的[開啟]。**&#x200B;**
+1. 若要檢視額外詳細資訊（例如，說明和記錄），請選取操作，然後按一下工具列中的[開啟]。****
 
    ![開啟圖示](assets/async-open-icon.png)
 

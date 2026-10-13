@@ -9,13 +9,27 @@ role: Developer
 exl-id: b94dcca2-136b-4b7d-b5ce-544804575876
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,APIs & Integrations
-source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 516393bc-fa69-5e74-a04e-f7ec9ffe2c5e
+    internal-label: APIs & Integrations
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '10799'
+source-wordcount: '10888'
 ht-degree: 1%
-
 ---
-
 # 以程式管理端點 {#programmatically-managing-endpoints}
 
 **本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
@@ -28,12 +42,12 @@ ht-degree: 1%
 * SOAP
 * Watched資料夾
 * 電子郵件
-* (AEM表單已棄用)遠端
+* （AEM表單已棄用）遠端
 * 任務管理員
 
 >[!NOTE]
 >
->SOAP、EJB和(JEE上的AEM Forms已棄用)遠端端點會自動為每個啟用的服務建立。 SOAP和EJB端點可讓SOAP和EJB執行所有服務作業。
+>SOAP、EJB和（JEE上的AEM Forms已棄用）遠端端點會自動為每個啟用的服務建立。 SOAP和EJB端點可讓SOAP和EJB執行所有服務作業。
 
 遠端端點可讓Flex使用者端叫用新增端點的AEM Forms服務上的操作。 會建立與端點同名的Flex目的地，且Flex使用者端可建立指向此目的地的RemoteObjects，以叫用相關服務的作業。
 
@@ -44,7 +58,7 @@ ht-degree: 1%
 您可以使用Endpoint Registry服務完成這些工作：
 
 * 新增EJB端點。 （請參閱[新增EJB端點](programmatically-endpoints.md#adding-ejb-endpoints)。）
-* 新增SOAP端點。 (請參閱[新增SOAP端點](programmatically-endpoints.md#adding-soap-endpoints)。)
+* 新增SOAP端點。 （請參閱[新增SOAP端點](programmatically-endpoints.md#adding-soap-endpoints)。）
 * 新增Watched資料夾端點（請參閱[新增Watched資料夾端點](programmatically-endpoints.md#adding-watched-folder-endpoints)）。
 * 新增電子郵件端點。 （請參閱[新增電子郵件端點](programmatically-endpoints.md#adding-email-endpoints)。）
 * 新增遠端端點。 （請參閱[新增遠端端點](programmatically-endpoints.md#adding-remoting-endpoints)。）
@@ -81,8 +95,8 @@ ht-degree: 1%
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
-* adobe-utilities.jar (如果將AEM Forms部署在JBoss Application Server上，則為必要)
-* jbossall-client.jar (如果AEM Forms部署在JBoss Application Server上，則為必要)
+* adobe-utilities.jar （如果將AEM Forms部署在JBoss Application Server上，則為必要）
+* jbossall-client.jar （如果AEM Forms部署在JBoss Application Server上，則為必要）
 
 如需關於這些JAR檔案位置的資訊，請參閱[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
@@ -127,7 +141,7 @@ ht-degree: 1%
 1. 建立EndpointRegistry使用者端物件。
 
    * 建立包含連線屬性的`ServiceClientFactory`物件。
-   * 使用它的建構函式並傳遞`EndpointRegistryClient`物件來建立`ServiceClientFactory`物件。
+   * 使用它的建構函式並傳遞`ServiceClientFactory`物件來建立`EndpointRegistryClient`物件。
 
 1. 設定EJB端點屬性。
 
@@ -144,7 +158,7 @@ ht-degree: 1%
 
 1. 啟用端點。
 
-   啟用端點，方法是叫用`EndpointRegistryClient`物件的enable方法並傳遞`Endpoint`方法傳回的`createEndpoint`物件。
+   啟用端點，方法是叫用`EndpointRegistryClient`物件的enable方法並傳遞`createEndpoint`方法傳回的`Endpoint`物件。
 
 **另請參閱**
 
@@ -186,8 +200,8 @@ ht-degree: 1%
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
-* adobe-utilities.jar (如果將AEM Forms部署在JBoss Application Server上，則為必要)
-* jbossall-client.jar (如果AEM Forms部署在JBoss Application Server上，則為必要)
+* adobe-utilities.jar （如果將AEM Forms部署在JBoss Application Server上，則為必要）
+* jbossall-client.jar （如果AEM Forms部署在JBoss Application Server上，則為必要）
 
 需要這些JAR檔案才能建立SOAP端點。 不過，如果您使用SOAP端點來叫用服務，則需要額外的JAR檔案。 如需AEM Forms JAR檔案的相關資訊，請參閱[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
@@ -232,7 +246,7 @@ ht-degree: 1%
 1. 建立EndpointRegistry使用者端物件。
 
    * 建立包含連線屬性的`ServiceClientFactory`物件。
-   * 使用它的建構函式並傳遞`EndpointRegistryClient`物件來建立`ServiceClientFactory`物件。
+   * 使用它的建構函式並傳遞`ServiceClientFactory`物件來建立`EndpointRegistryClient`物件。
 
 1. 設定SOAP端點屬性。
 
@@ -249,7 +263,7 @@ ht-degree: 1%
 
 1. 啟用端點。
 
-   透過叫用`EndpointRegistryClient`物件的enable方法啟用端點，並傳遞`Endpoint`方法傳回的`createEndpoint`物件。
+   透過叫用`EndpointRegistryClient`物件的enable方法啟用端點，並傳遞`createEndpoint`方法傳回的`Endpoint`物件。
 
 **另請參閱**
 
@@ -263,13 +277,13 @@ ht-degree: 1%
 
 ## 新增Watched資料夾端點 {#adding-watched-folder-endpoints}
 
-您可以使用AEM Forms Java API，以程式設計方式將Watched資料夾端點新增至服務。 透過新增Watched資料夾端點，您可以讓使用者將檔案(例如PDF檔案)放在資料夾中。 將檔案放在資料夾中時，會叫用已設定的服務並操作檔案。 服務執行指定的作業後，會將修改的檔案儲存在指定的輸出資料夾中。 觀察資料夾已設定為以固定速率間隔或以cron排程掃描，例如每個星期一、星期三和星期五中午。
+您可以使用AEM Forms Java API，以程式設計方式將Watched資料夾端點新增至服務。 透過新增Watched資料夾端點，您可以讓使用者將檔案（例如PDF檔案）放在資料夾中。 將檔案放在資料夾中時，會叫用已設定的服務並操作檔案。 服務執行指定的作業後，會將修改的檔案儲存在指定的輸出資料夾中。 觀察資料夾已設定為以固定速率間隔或以cron排程掃描，例如每個星期一、星期三和星期五中午。
 
-為了以程式設計方式將Watched資料夾端點新增至服務，請考慮下列名為&#x200B;*EncryptDocument*&#x200B;的短期程式。 (請參閱[瞭解AEM Forms程式](/help/forms/developing/aem-forms-processes.md#understanding-aem-forms-processes)。)
+為了以程式設計方式將Watched資料夾端點新增至服務，請考慮下列名為&#x200B;*EncryptDocument*&#x200B;的短期程式。 （請參閱[瞭解AEM Forms程式](/help/forms/developing/aem-forms-processes.md#understanding-aem-forms-processes)。）
 
 ![aw_aw_encryptdocumentprocess](assets/aw_aw_encryptdocumentprocess.png)
 
-此程式接受不安全的PDF檔案作為輸入值，然後將不安全的PDF檔案傳遞至加密服務的`EncryptPDFUsingPassword`作業。 PDF檔案已使用密碼加密，而密碼加密的PDF檔案是此程式的輸出值。 輸入值的名稱(不安全的PDF檔案)為`InDoc`，資料型別為`com.adobe.idp.Document`。 輸出值(以密碼加密的PDF檔案)的名稱為`SecuredDoc`，資料型別為`com.adobe.idp.Document`。
+此程式接受不安全的PDF檔案作為輸入值，然後將不安全的PDF檔案傳遞至加密服務的`EncryptPDFUsingPassword`作業。 PDF檔案已使用密碼加密，而密碼加密的PDF檔案是此程式的輸出值。 輸入值的名稱（不安全的PDF檔案）為`InDoc`，資料型別為`com.adobe.idp.Document`。 輸出值（以密碼加密的PDF檔案）的名稱為`SecuredDoc`，資料型別為`com.adobe.idp.Document`。
 
 >[!NOTE]
 >
@@ -296,8 +310,8 @@ ht-degree: 1%
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
-* adobe-utilities.jar (如果將AEM Forms部署在JBoss Application Server上，則為必要)
-* jbossall-client.jar (如果AEM Forms部署在JBoss Application Server上，則為必要)
+* adobe-utilities.jar （如果將AEM Forms部署在JBoss Application Server上，則為必要）
+* jbossall-client.jar （如果AEM Forms部署在JBoss Application Server上，則為必要）
 
 如需關於這些JAR檔案位置的資訊，請參閱[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
@@ -331,10 +345,10 @@ ht-degree: 1%
 * **userName**：從Watched資料夾叫用目標服務時使用的使用者名稱。 此值為必填。 預設值為SuperAdmin。
 * **domainName**：使用者的網域。 此值為必填。 預設值為DefaultDom。
 * **batchSize**：每次掃描要擷取的檔案或資料夾數目。 使用此值可防止系統過載；一次掃描太多檔案可能會導致當機。 預設值為 2。
-* **waitTime**：建立資料夾或檔案後，掃描資料夾或檔案前的等待時間（以毫秒為單位）。 例如，如果等待時間為36,000,000毫秒（一小時），且檔案是在一分鐘前建立的，則系統會在59分鐘或更長時間後擷取此檔案。 此屬性對於確保檔案或資料夾完全複製到輸入資料夾非常有用。 例如，如果您有大型檔案要處理，且檔案下載需要10分鐘，請將等待時間設為10&amp;amp；ast；60&amp;amp；ast；1000毫秒。 此設定可防止watched資料夾在等待十分鐘後掃描檔案。 預設值為 0。
+* **waitTime**：建立資料夾或檔案後，掃描資料夾或檔案前的等待時間（以毫秒為單位）。 例如，如果等待時間為36,000,000毫秒（一小時），且檔案是在一分鐘前建立的，則系統會在59分鐘或更長時間後擷取此檔案。 此屬性對於確保檔案或資料夾完全複製到輸入資料夾非常有用。 例如，如果您有大型檔案要處理，且檔案下載需要10分鐘，請將等待時間設定為10&amp;ast；60 &amp;ast；1000毫秒。 此設定可防止watched資料夾在等待十分鐘後掃描檔案。 預設值為 0。
 * **excludeFilePattern**： watched資料夾用來判斷要掃描和擷取哪些檔案和資料夾的模式。 任何具有此模式的檔案或資料夾都不會掃描以進行處理。 當輸入是包含多個檔案的資料夾時，此設定非常有用。 資料夾的內容可以複製到一個資料夾中，該資料夾的名稱將由watched資料夾擷取。 此步驟可防止watched資料夾在資料夾完全複製到輸入資料夾之前擷取資料夾進行處理。 例如，如果excludeFilePattern值為`data*`，則不會擷取符合`data*`的所有檔案和資料夾。 這包括名為`data1`、`data2`等等的檔案和資料夾。 此外，模式可附加萬用字元模式，以指定檔案模式。 Watched資料夾會修改規則運算式，以支援`*.*`和`*.pdf`等萬用字元模式。 規則運算式不支援這些萬用字元模式。
-* **includeFilePattern**： watched資料夾用來判斷要掃描和擷取哪些資料夾和檔案的模式。 例如，如果此值為`*`，則會擷取符合`input*`的所有檔案和資料夾。 這包括名為`input1`、`input2`等等的檔案和資料夾。 預設值為`*`。 此值表示所有檔案和資料夾。 此外，模式可附加萬用字元模式，以指定檔案模式。 Watched資料夾會修改規則運算式，以支援`*.*`和`*.pdf`等萬用字元模式。 規則運算式不支援這些萬用字元模式。 此值為必填。
-* **resultFolderName**：儲儲存存結果的資料夾。 此位置可以是絕對或相對目錄路徑。 如果結果未出現在此資料夾中，請檢查失敗資料夾。 唯讀檔案不會處理，且會儲存在失敗資料夾中。 預設值為`result/%Y/%M/%D/`。 這是watched資料夾內的結果資料夾。
+* **includeFilePattern**： watched資料夾用來判斷要掃描和擷取哪些資料夾和檔案的模式。 例如，如果此值為`*`，則會擷取符合`input*`的所有檔案和資料夾。 這包括名為`input1`、`input2`等等的檔案和資料夾。 預設值為 `*`。 此值表示所有檔案和資料夾。 此外，模式可附加萬用字元模式，以指定檔案模式。 Watched資料夾會修改規則運算式，以支援`*.*`和`*.pdf`等萬用字元模式。 規則運算式不支援這些萬用字元模式。 此值為必填。
+* **resultFolderName**：儲儲存存結果的資料夾。 此位置可以是絕對或相對目錄路徑。 如果結果未出現在此資料夾中，請檢查失敗資料夾。 唯讀檔案不會處理，且會儲存在失敗資料夾中。 預設值為 `result/%Y/%M/%D/`。 這是watched資料夾內的結果資料夾。
 * **preserveFolderName**：在成功掃描和擷取之後，儲存檔案的位置。 此位置可以是絕對、相對或Null目錄路徑。 預設值為 `preserve/%Y/%M/%D/`。
 * **failureFolderName**：儲存失敗檔案的資料夾。 此位置永遠是相對於watched資料夾。 唯讀檔案不會處理，且會儲存在失敗資料夾中。 預設值為 `failure/%Y/%M/%D/`。
 * **preserveOnFailure**：如果服務執行作業失敗，則保留輸入檔案。 預設值為true。
@@ -400,7 +414,7 @@ ht-degree: 1%
 1. 建立EndpointRegistry使用者端物件。
 
    * 建立包含連線屬性的`ServiceClientFactory`物件。
-   * 使用它的建構函式並傳遞`EndpointRegistryClient`物件來建立`ServiceClientFactory`物件。
+   * 使用它的建構函式並傳遞`ServiceClientFactory`物件來建立`EndpointRegistryClient`物件。
 
 1. 設定Watched資料夾端點屬性。
 
@@ -429,7 +443,7 @@ ht-degree: 1%
    * 字串值，指定輸入引數的名稱。 例如，EncryptDocument服務的輸入引數名稱是`InDoc`。
    * 字串值，指定輸入引數的資料型別。 例如，`InDoc`輸入引數的資料型別是`com.adobe.idp.Document`。
    * 字串值，指定對應型別。 例如，您可以指定`variable`。
-   * 字串值，指定對應型別值。 例如，您可以指定&amp;amp；ast；.pdf作為檔案模式。
+   * 字串值，指定對應型別值。 例如，您可以指定&amp;ast；.pdf作為檔案模式。
 
    >[!NOTE]
    >
@@ -449,7 +463,7 @@ ht-degree: 1%
 
 1. 啟用端點。
 
-   啟用端點，方法是叫用`EndpointRegistryClient`物件的`enable`方法，並傳遞`Endpoint`方法傳回的`createEndpoint`物件。
+   啟用端點，方法是叫用`EndpointRegistryClient`物件的`enable`方法，並傳遞`createEndpoint`方法傳回的`Endpoint`物件。
 
 **另請參閱**
 
@@ -502,7 +516,7 @@ ht-degree: 1%
 
 ![ae_ae_encryptdocumentprocess](assets/ae_ae_encryptdocumentprocess.png)
 
-此程式接受不安全的PDF檔案作為輸入值，然後將不安全的PDF檔案傳遞至加密服務的`EncryptPDFUsingPassword`作業。 此程式會使用密碼加密PDF檔案，並傳回密碼加密的PDF檔案作為輸出值。 輸入值的名稱(不安全的PDF檔案)為`InDoc`，資料型別為`com.adobe.idp.Document`。 輸出值(以密碼加密的PDF檔案)的名稱為`SecuredDoc`，資料型別為`com.adobe.idp.Document`。
+此程式接受不安全的PDF檔案作為輸入值，然後將不安全的PDF檔案傳遞至加密服務的`EncryptPDFUsingPassword`作業。 此程式會使用密碼加密PDF檔案，並傳回密碼加密的PDF檔案作為輸出值。 輸入值的名稱（不安全的PDF檔案）為`InDoc`，資料型別為`com.adobe.idp.Document`。 輸出值（以密碼加密的PDF檔案）的名稱為`SecuredDoc`，資料型別為`com.adobe.idp.Document`。
 
 >[!NOTE]
 >
@@ -529,8 +543,8 @@ ht-degree: 1%
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
-* adobe-utilities.jar (如果將AEM Forms部署在JBoss Application Server上，則為必要)
-* jbossall-client.jar (如果AEM Forms部署在JBoss Application Server上，則為必要)
+* adobe-utilities.jar （如果將AEM Forms部署在JBoss Application Server上，則為必要）
+* jbossall-client.jar （如果AEM Forms部署在JBoss Application Server上，則為必要）
 
 如需關於這些JAR檔案位置的資訊，請參閱[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
@@ -566,7 +580,7 @@ ht-degree: 1%
 * **userName**：從電子郵件叫用目標服務時使用的使用者名稱。 預設值為 `SuperAdmin`。
 * **domainName**：必要的設定值。 預設值為 `DefaultDom`。
 * **domainPattern**：指定提供者接受的傳入電子郵件的網域模式。 例如，如果使用`adobe.com`，則只會處理來自adobe.com的電子郵件，而會忽略來自其他網域的電子郵件。
-* **filePattern**：指定提供者接受的傳入檔案附件模式。 這包括具有特定副檔名(&amp;amp；ast；.dat、&amp;amp；ast；.xml)的檔案、具有特定名稱（資料）的檔案，以及具有名稱與副檔名複合運算式的檔案(&amp;amp；ast；)。``[dD][aA]``&#39;連線埠&#39;)。 預設值為 `*`。
+* **filePattern**：指定提供者接受的傳入檔案附件模式。 這包括具有特定副檔名的檔案(&amp;ast；.dat、&amp;ast；.xml)、具有特定名稱（資料）的檔案，以及具有複合運算式的檔案名稱和副檔名(&amp;ast；.``[dD][aA]``&#39;port&#39;)。 預設值為 `*`。
 * **recipientSuccessfulJob**：傳送訊息以指示成功工作的電子郵件地址。 依預設，成功的工作訊息一律會傳送給寄件者。 如果您輸入`sender`，電子郵件結果會傳送給寄件者。 最多可支援100個收件者。 使用電子郵件地址指定其他收件者，每個收件者之間以逗號分隔。 若要關閉此選項，請將此值留空。 某些情況下，您可能想要觸發程式，而不想收到結果的電子郵件通知。 預設值為 `sender`。
 * **recipientFailedJob**：傳送訊息以指出工作失敗的電子郵件地址。 依預設，失敗的工作訊息一律會傳送給寄件者。 如果您輸入`sender`，電子郵件結果會傳送給寄件者。 最多可支援100個收件者。 使用電子郵件地址指定其他收件者，每個收件者之間以逗號分隔。 若要關閉此選項，請將此值留空。 預設值為 `sender`。
 * **收件匣主機**：要掃描的電子郵件提供者的收件匣主機名稱或IP位址。
@@ -591,7 +605,7 @@ ht-degree: 1%
 
 若要定義電子郵件端點所需的輸入引數值，請指定下列值：
 
-**輸入引數名稱**：輸入引數的名稱。 在Workbench中為處理指定輸入值的名稱。 如果輸入值屬於服務操作(不是在Workbench中建立之程式的Forms服務)，則輸入名稱會在component.xml檔案中指定。 例如，此區段中引進之處理序的輸入引數名稱是`InDoc`。
+**輸入引數名稱**：輸入引數的名稱。 在Workbench中為處理指定輸入值的名稱。 如果輸入值屬於服務操作（不是在Workbench中建立之程式的Forms服務），則輸入名稱會在component.xml檔案中指定。 例如，此區段中引進之處理序的輸入引數名稱是`InDoc`。
 
 **對應型別**：用來設定呼叫服務作業所需的輸入值。 兩種對應型別如下：
 
@@ -645,7 +659,7 @@ ht-degree: 1%
 1. 建立EndpointRegistry使用者端物件。
 
    * 建立包含連線屬性的`ServiceClientFactory`物件。
-   * 使用它的建構函式並傳遞`EndpointRegistryClient`物件來建立`ServiceClientFactory`物件。
+   * 使用它的建構函式並傳遞`ServiceClientFactory`物件來建立`EndpointRegistryClient`物件。
 
 1. 設定電子郵件端點屬性。
 
@@ -674,7 +688,7 @@ ht-degree: 1%
    * 字串值，指定輸入引數的名稱。 例如，EncryptDocument服務的輸入引數名稱是`InDoc`。
    * 字串值，指定輸入引數的資料型別。 例如，`InDoc`輸入引數的資料型別是`com.adobe.idp.Document`。
    * 字串值，指定對應型別。 例如，您可以指定`variable`。
-   * 字串值，指定對應型別值。 例如，您可以指定&amp;amp；ast；.pdf作為檔案模式。
+   * 字串值，指定對應型別值。 例如，您可以指定&amp;ast；.pdf作為檔案模式。
 
    >[!NOTE]
    >
@@ -694,7 +708,7 @@ ht-degree: 1%
 
 1. 啟用端點。
 
-   啟用端點，方法是叫用`EndpointRegistryClient`物件的`enable`方法，並傳遞`Endpoint`方法傳回的`createEndpoint`物件。
+   啟用端點，方法是叫用`EndpointRegistryClient`物件的`enable`方法，並傳遞`createEndpoint`方法傳回的`Endpoint`物件。
 
 **另請參閱**
 
@@ -752,13 +766,13 @@ ht-degree: 1%
 >
 >JEE版的AEM表單已棄用LiveCycle Remoting API。
 
-您可以使用AEM Forms Java API，以程式設計方式將遠端端點新增至服務。 透過新增遠端端點，您可以啟用Flex應用程式以使用遠端來叫用服務。 (請參閱[使用叫用AEM Forms (AEM Forms已棄用) AEM Forms Remoting](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting)。)
+您可以使用AEM Forms Java API，以程式設計方式將遠端端點新增至服務。 透過新增遠端端點，您可以啟用Flex應用程式以使用遠端來叫用服務。 (請參閱[使用叫用AEM Forms （AEM Forms已棄用） AEM Forms Remoting](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting)。)
 
 為了以程式設計方式將Remoting端點新增至服務，請考慮下列名為&#x200B;*EncryptDocument*&#x200B;的短期程式。
 
 ![ar_ar_encryptdocumentprocess](assets/ar_ar_encryptdocumentprocess.png)
 
-此程式接受不安全的PDF檔案作為輸入值，然後將不安全的PDF檔案傳遞至加密服務的`EncryptPDFUsingPassword`作業。 PDF檔案已使用密碼加密，而密碼加密的PDF檔案是此程式的輸出值。 輸入值的名稱(不安全的PDF檔案)為`InDoc`，資料型別為`com.adobe.idp.Document`。 輸出值(以密碼加密的PDF檔案)的名稱為`SecuredDoc`，資料型別為`com.adobe.idp.Document`。
+此程式接受不安全的PDF檔案作為輸入值，然後將不安全的PDF檔案傳遞至加密服務的`EncryptPDFUsingPassword`作業。 PDF檔案已使用密碼加密，而密碼加密的PDF檔案是此程式的輸出值。 輸入值的名稱（不安全的PDF檔案）為`InDoc`，資料型別為`com.adobe.idp.Document`。 輸出值（以密碼加密的PDF檔案）的名稱為`SecuredDoc`，資料型別為`com.adobe.idp.Document`。
 
 為了示範如何將Remoting端點新增至服務，本節將Remoting端點新增至名為EncryptDocument的服務。
 
@@ -784,8 +798,8 @@ ht-degree: 1%
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
-* adobe-utilities.jar (如果將AEM Forms部署在JBoss Application Server上，則為必要)
-* jbossall-client.jar (如果AEM Forms部署在JBoss Application Server上，則為必要)
+* adobe-utilities.jar （如果將AEM Forms部署在JBoss Application Server上，則為必要）
+* jbossall-client.jar （如果AEM Forms部署在JBoss Application Server上，則為必要）
 
 如需關於這些JAR檔案位置的資訊，請參閱[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
@@ -801,7 +815,7 @@ ht-degree: 1%
 * **描述**：指定端點的描述。
 * **名稱**：指定端點的名稱。
 * **服務識別碼值**：指定端點所屬的服務。 例如，若要將Remoting端點新增至本節中介紹的處理序（在Workbench中啟動某個處理序時，該處理序就會變成服務），請指定`EncryptDocument`。
-* **作業名稱**：指定使用端點叫用的作業名稱。 建立遠端端點時，請指定萬用字元(&amp;amp；ast；)。
+* **作業名稱**：指定使用端點叫用的作業名稱。 建立遠端端點時，請指定萬用字元(&amp;ast；)。
 
 **建立遠端端點**
 
@@ -830,7 +844,7 @@ ht-degree: 1%
 1. 建立EndpointRegistry使用者端物件。
 
    * 建立包含連線屬性的`ServiceClientFactory`物件。
-   * 使用它的建構函式並傳遞`EndpointRegistryClient`物件來建立`ServiceClientFactory`物件。
+   * 使用它的建構函式並傳遞`ServiceClientFactory`物件來建立`EndpointRegistryClient`物件。
 
 1. 設定遠端端點屬性。
 
@@ -839,7 +853,7 @@ ht-degree: 1%
    * 透過叫用`CreateEndpointInfo`物件的`setDescription`方法並傳遞描述端點的字串值來指定端點的描述。
    * 透過叫用`CreateEndpointInfo`物件的`setName`方法並傳遞指定名稱的字串值來指定端點的名稱。
    * 透過叫用`CreateEndpointInfo`物件的`setServiceId`方法並傳遞指定服務名稱的字串值，來指定端點所屬的服務。
-   * 指定由`CreateEndpointInfo`物件的`setOperationName`方法呼叫的作業，並傳遞指定作業名稱的字串值。 對於遠端端點，請指定萬用字元(&amp;amp；ast；)。
+   * 指定由`CreateEndpointInfo`物件的`setOperationName`方法呼叫的作業，並傳遞指定作業名稱的字串值。 對於遠端端點，請指定萬用字元(&amp;ast；)。
 
 1. 建立遠端端點。
 
@@ -847,7 +861,7 @@ ht-degree: 1%
 
 1. 啟用端點。
 
-   啟用端點，方法是叫用`EndpointRegistryClient`物件的`enable`方法，並傳遞`Endpoint`方法傳回的`createEndpoint`物件。
+   啟用端點，方法是叫用`EndpointRegistryClient`物件的`enable`方法，並傳遞`createEndpoint`方法傳回的`Endpoint`物件。
 
 **另請參閱**
 
@@ -886,8 +900,8 @@ ht-degree: 1%
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
-* adobe-utilities.jar (如果將AEM Forms部署在JBoss Application Server上，則為必要)
-* jbossall-client.jar (如果AEM Forms部署在JBoss Application Server上，則為必要)
+* adobe-utilities.jar （如果將AEM Forms部署在JBoss Application Server上，則為必要）
+* jbossall-client.jar （如果AEM Forms部署在JBoss Application Server上，則為必要）
 
 如需關於這些JAR檔案位置的資訊，請參閱[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
@@ -941,14 +955,14 @@ ht-degree: 1%
 1. 建立EndpointRegistry使用者端物件。
 
    * 建立包含連線屬性的`ServiceClientFactory`物件。
-   * 使用它的建構函式並傳遞`EndpointRegistryClient`物件來建立`ServiceClientFactory`物件。
+   * 使用它的建構函式並傳遞`ServiceClientFactory`物件來建立`EndpointRegistryClient`物件。
 
 1. 為端點建立類別。
 
    * 使用物件的建構函式並傳遞下列值來建立`CreateEndpointCategoryInfo`物件：
 
-      * 字串值，指定類別的識別碼值
-      * 字串值，指定類別的說明
+     * 字串值，指定類別的識別碼值
+     * 字串值，指定類別的說明
 
    * 叫用`EndpointRegistryClient`物件的`createEndpointCategory`方法並傳遞`CreateEndpointCategoryInfo`物件以建立類別。 此方法會傳回代表新類別的`EndpointCategory`物件。
 
@@ -968,7 +982,7 @@ ht-degree: 1%
 
 1. 啟用端點。
 
-   啟用端點，方法是叫用`EndpointRegistryClient`物件的`enable`方法，並傳遞`Endpoint`方法傳回的`createEndpoint`物件。
+   啟用端點，方法是叫用`EndpointRegistryClient`物件的`enable`方法，並傳遞`createEndpoint`方法傳回的`Endpoint`物件。
 
 **另請參閱**
 
@@ -1007,8 +1021,8 @@ ht-degree: 1%
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
-* adobe-utilities.jar (如果將AEM Forms部署在JBoss Application Server上，則為必要)
-* jbossall-client.jar (如果AEM Forms部署在JBoss Application Server上，則為必要)
+* adobe-utilities.jar （如果將AEM Forms部署在JBoss Application Server上，則為必要）
+* jbossall-client.jar （如果AEM Forms部署在JBoss Application Server上，則為必要）
 
 如需關於這些JAR檔案位置的資訊，請參閱[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
@@ -1053,7 +1067,7 @@ ht-degree: 1%
 1. 建立EndpointRegistry使用者端物件。
 
    * 建立包含連線屬性的`ServiceClientFactory`物件。
-   * 使用它的建構函式並傳遞`EndpointRegistryClient`物件來建立`ServiceClientFactory`物件。
+   * 使用它的建構函式並傳遞`ServiceClientFactory`物件來建立`EndpointRegistryClient`物件。
 
 1. 擷取要修改的端點。
 
@@ -1067,8 +1081,8 @@ ht-degree: 1%
    * 透過叫用它的建構函式來建立`ModifyEndpointInfo`物件。
    * 對於每個要設定的組態值，呼叫`ModifyEndpointInfo`物件的`setConfigParameterAsText`方法。 例如，若要設定URL組態值，請叫用`ModifyEndpointInfo`物件的`setConfigParameterAsText`方法，並傳遞下列值：
 
-      * 字串值，指定組態值的名稱。 例如，若要設定`url`組態值，請指定`url`。
-      * 字串值，指定設定值的值。 若要定義`url`設定值的值，請指定watched資料夾位置。
+     * 字串值，指定組態值的名稱。 例如，若要設定`url`組態值，請指定`url`。
+     * 字串值，指定設定值的值。 若要定義`url`設定值的值，請指定watched資料夾位置。
 
    * 叫用`EndpointRegistryClient`物件的`modifyEndpoint`方法並傳遞`ModifyEndpointInfo`物件。
 
@@ -1109,8 +1123,8 @@ ht-degree: 1%
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
-* adobe-utilities.jar (如果將AEM Forms部署在JBoss Application Server上，則為必要)
-* jbossall-client.jar (如果AEM Forms部署在JBoss Application Server上，則為必要)
+* adobe-utilities.jar （如果將AEM Forms部署在JBoss Application Server上，則為必要）
+* jbossall-client.jar （如果AEM Forms部署在JBoss Application Server上，則為必要）
 
 如需關於這些JAR檔案位置的資訊，請參閱[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
@@ -1147,7 +1161,7 @@ ht-degree: 1%
 1. 建立EndpointRegistry使用者端物件。
 
    * 建立包含連線屬性的`ServiceClientFactory`物件。
-   * 使用它的建構函式並傳遞`EndpointRegistryClient`物件來建立`ServiceClientFactory`物件。
+   * 使用它的建構函式並傳遞`ServiceClientFactory`物件來建立`EndpointRegistryClient`物件。
 
 1. 擷取端點以移除。
 
@@ -1182,7 +1196,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->此主題使用`ConnectorRegistryClient` API來擷取端點聯結器的相關資訊。 (請參閱[AEM Forms API參考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)。)
+>此主題使用`ConnectorRegistryClient` API來擷取端點聯結器的相關資訊。 （請參閱[AEM Forms API參考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)。）
 
 ### 步驟摘要 {#summary_of_steps-8}
 
@@ -1201,8 +1215,8 @@ ht-degree: 1%
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
-* adobe-utilities.jar (如果將AEM Forms部署在JBoss Application Server上，則為必要)
-* jbossall-client.jar (如果AEM Forms部署在JBoss Application Server上，則為必要)
+* adobe-utilities.jar （如果將AEM Forms部署在JBoss Application Server上，則為必要）
+* jbossall-client.jar （如果AEM Forms部署在JBoss Application Server上，則為必要）
 
 如果將AEM Forms部署在支援的J2EE應用程式伺服器（不是JBoss）上，請將adobe-utilities.jar和jbossall-client.jar取代為特定於已部署AEM Forms之J2EE應用程式伺服器的JAR檔案。 如需有關所有AEM Forms JAR檔案位置的資訊，請參閱[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
@@ -1244,7 +1258,7 @@ ht-degree: 1%
 1. 建立ConnectorRegistry使用者端物件。
 
    * 建立包含連線屬性的`ServiceClientFactory`物件。
-   * 使用它的建構函式並傳遞`ConnectorRegistryClient`物件來建立`ServiceClientFactory`物件。
+   * 使用它的建構函式並傳遞`ServiceClientFactory`物件來建立`ConnectorRegistryClient`物件。
 
 1. 指定聯結器型別。
 

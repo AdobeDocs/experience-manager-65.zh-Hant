@@ -6,13 +6,24 @@ role: User, Admin
 feature: Developer Tools
 exl-id: de1c63c1-a0e5-470b-8d83-b594513a5dbd
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: f2d27a5f-0d67-4d85-8a24-86a8d8a3574b
+    internal-label: Developer tools
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '653'
-ht-degree: 12%
-
+source-wordcount: '694'
+ht-degree: 11%
 ---
-
 # 擴充Asset Editor {#extending-asset-editor}
 
 Asset Editor是點按透過Asset Share找到的資產時開啟的頁面，可讓使用者編輯資產的方面，如中繼資料、縮圖、標題和標籤。
@@ -197,11 +208,11 @@ Asset Editor會使用「表單選擇器」，只要將表單選擇器和表單�
    </div>
    ```
 
-1. 若要讓元件可用，您必須能夠加以編輯。若要讓元件可編輯，請在CRXDE Lite中新增主要型別`cq:EditConfig`的節點`cq:editConfig`。 若要移除段落，請新增單一值為`DELETE`的多值屬性`cq:actions`。
+1. 若要讓元件可用，您必須能夠加以編輯。 若要讓元件可編輯，請在CRXDE Lite中新增主要型別`cq:EditConfig`的節點`cq:editConfig`。 若要移除段落，請新增單一值為`DELETE`的多值屬性`cq:actions`。
 
 1. 導覽至瀏覽器，並在範例頁面（例如，`asseteditor.html`）上切換至設計模式並為段落系統啟用新元件。
 
-1. 在「 **編輯** 」模式中，新元件(例如，「範例中繼資料 **」)現在可在sidekick中使用(可在「資產編輯器」**&#x200B;群組中找到 **&#x200B;**&#x200B;)。插入元件。若要儲存中繼資料，必須將其新增至中繼資料表格。
+1. 在「 **編輯** 」模式中，新元件(例如，「範例中繼資料 **」)現在可在sidekick中使用(可在「資產編輯器」**&#x200B;群組中找到 **** )。 插入元件。 若要儲存中繼資料，必須將其新增至中繼資料表格。
 
 ## 修改中繼資料選項 {#modifying-metadata-options}
 

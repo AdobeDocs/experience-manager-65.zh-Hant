@@ -10,13 +10,24 @@ exl-id: 408ac30c-60ab-4d6c-855c-d544af8d5cf9
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,Personalization
 role: Developer
-source-git-commit: f965c449da06a1b7e60428e0734c621f004d318c
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+  - id: eb3ad9f8-54a2-45f3-abb1-d3976415a718
+    internal-label: Personalization
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '2898'
 ht-degree: 2%
-
 ---
-
 # 使用用戶端資料庫{#using-client-side-libraries}
 
 現代網站非常依賴由複雜的JavaScript和CSS程式碼驅動的使用者端處理。 組織和最佳化此程式碼的伺服可能是一個複雜的問題。
@@ -66,7 +77,7 @@ ht-degree: 2%
 
 ### 使用HTL {#using-htl}
 
-在HTL中，使用者端程式庫是透過AEM提供的Helper範本載入，該範本可透過[`data-sly-use`](https://helpx.adobe.com/tw/experience-manager/htl/using/block-statements.html#use)存取。 此檔案中有三個範本可用，這些範本可透過[`data-sly-call`](https://helpx.adobe.com/tw/experience-manager/htl/using/block-statements.html#template-call)呼叫：
+在HTL中，使用者端程式庫是透過AEM提供的Helper範本載入，該範本可透過[`data-sly-use`](https://helpx.adobe.com/experience-manager/htl/using/block-statements.html#use)存取。 此檔案中有三個範本可用，這些範本可透過[`data-sly-call`](https://helpx.adobe.com/experience-manager/htl/using/block-statements.html#template-call)呼叫：
 
 * **css** — 僅載入參照的使用者端程式庫的CSS檔案。
 * **js** — 僅載入參照的使用者端程式庫的JavaScript檔案。
@@ -74,7 +85,7 @@ ht-degree: 2%
 
 每個 helper 範本都需要 `categories` 選項來參照所需的用戶端程式庫。 這個選項可以是字串值陣列，或是包含逗號分隔值清單的字串。
 
-如需詳細資訊和使用範例，請參閱檔案[開始使用HTML範本語言](https://helpx.adobe.com/tw/experience-manager/htl/using/getting-started.html#loading-client-libraries)。
+如需詳細資訊和使用範例，請參閱檔案[開始使用HTML範本語言](https://helpx.adobe.com/experience-manager/htl/using/getting-started.html#loading-client-libraries)。
 
 ### 使用JSP {#using-jsp}
 
@@ -165,7 +176,7 @@ Web使用者端必須擁有存取`cq:ClientLibraryFolder`節點的許可權。 �
 
 1. 在網頁瀏覽器([https://localhost:4502/crx/de](https://localhost:4502/crx/de))中開啟CRXDE Lite。
 1. 選取您要尋找使用者端程式庫資料夾的資料夾，然後按一下[建立] > [建立節點] **。**
-1. 輸入程式庫檔案的名稱，然後在[型別]清單中選取`cq:ClientLibraryFolder`。 按一下[確定]&#x200B;**&#x200B;**，然後按一下[儲存全部]&#x200B;**&#x200B;**。
+1. 輸入程式庫檔案的名稱，然後在[型別]清單中選取`cq:ClientLibraryFolder`。 按一下[確定]****，然後按一下[儲存全部]****。
 1. 若要指定程式庫所屬的類別，請選取`cq:ClientLibraryFolder`節點、新增下列屬性，然後按一下[儲存全部] **：**
 
    * 名稱：類別

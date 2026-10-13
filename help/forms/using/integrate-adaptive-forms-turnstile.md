@@ -4,18 +4,26 @@ description: 透過Turnstile服務輕鬆增強表單安全性。 裡面有詳細
 feature: Adaptive Forms, Foundation Components
 role: User, Developer
 exl-id: bed93ce3-89db-477a-8316-7598275e4bca
-source-git-commit: 8025412849a1f324537019247a5e37b7931df7e7
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e14eb250-3c22-4a07-9061-a78112b2b826
+    internal-label: Experience Manager 6.5
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '860'
+source-wordcount: '862'
 ht-degree: 9%
-
 ---
-
 # 使用Turnstile連線您的AEM Forms環境 {#connect-your-forms-environment-with-turnstile-service}
 
 <span class="preview">此功能是以功能切換ID `FT_FORMS-12407`為基礎。 若要啟用功能，請依照[啟用功能切換](/help/forms/using/enable-feature-toggle.md)文章中提供的步驟操作。</span>
 
-CAPTCHA （完全自動化公用圖靈測試來區分電腦和人之間的差異）是一種常用於線上交易的程式，以區分人和自動化程式或機器人。 它會提出質詢並評估使用者的回應，以判斷與網站互動的是真人還是機器人。 它可防止使用者在測試失敗時繼續操作，並透過防止機器人發佈垃圾郵件或惡意目的來確保線上交易的安全。
+CAPTCHA （完全自動化公用圖靈測試來區分電腦和人之間的差異）是一種常用於線上交易的程式，以區分人和自動化程式或機器人。 它會提出挑戰並評估使用者的回應，以判斷與網站互動的是真人還是機器人。 它可防止使用者在測試失敗時繼續操作，並透過防止機器人發佈垃圾郵件或惡意目的來確保線上交易的安全。
 
 AEM Forms 6.5支援下列驗證碼解決方案：
 
@@ -30,7 +38,7 @@ AEM Forms 6.5支援下列驗證碼解決方案：
 
 Cloudflare的Turnstile驗證碼是一種安全性措施，旨在保護表單和網站免受自動化機器人、惡意攻擊、垃圾郵件和不需要的自動化流量的傷害。 在允許提交表單前，它會在表單提交上顯示核取方塊，以驗證使用者是否為人類。
 
->[!VIDEO](https://video.tv.adobe.com/v/3440951?captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/3440940/)
 
 ### 整合AEM Forms環境與Turnstile驗證碼的必要條件 {#prerequisite}
 
@@ -56,11 +64,11 @@ Cloudflare的Turnstile驗證碼是一種安全性措施，旨在保護表單和�
 1. 設定您的雲端服務：
    1. 在您的AEM作者執行個體上，前往![工具–1](assets/tools-1.png) > **[!UICONTROL 雲端服務]**&#x200B;並按一下&#x200B;**[!UICONTROL Turnstile]**。
       在雲端服務中![Turnstile](assets/turnstile-in-ui.png)
-   1. 選取已建立或已更新的設定容器，如上一節所述。按一下&#x200B;**[!UICONTROL 建立]**。
+   1. 選取已建立或已更新的設定容器，如上一節所述。 按一下「**[!UICONTROL 建立]**」。
       ![組態旋轉門](assets/config-hcaptcha.png)
    1. 將&#x200B;**[!UICONTROL Widget Type]**&#x200B;指定為Managed、非互動式或隱藏式。
    1. 提供其他詳細資料，例如&#x200B;**[!UICONTROL 標題]**、**[!UICONTROL 名稱]**。
-   1. 針對在先決條件[&#128279;](#prerequisite)中取得的Turnstile服務，指定&#x200B;**[!UICONTROL 網站金鑰]**&#x200B;和&#x200B;**[!UICONTROL 秘密金鑰]**。
+   1. 針對在先決條件](#prerequisite)中取得的Turnstile服務[，指定&#x200B;**[!UICONTROL 網站金鑰]**&#x200B;和&#x200B;**[!UICONTROL 秘密金鑰]**。
    1. 按一下「**[!UICONTROL 建立]**」。
 
       ![設定Cloud Service以連線您的AEM Forms環境與Turnstile](assets/config-turntstile.png)

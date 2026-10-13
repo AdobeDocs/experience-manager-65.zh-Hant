@@ -9,7 +9,20 @@ exl-id: e56986b2-397e-4802-992b-05a9ea7b2e36
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization
 role: User
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+  - id: eb3ad9f8-54a2-45f3-abb1-d3976415a718
+    internal-label: Personalization
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '816'
 ht-degree: 0%
@@ -59,7 +72,7 @@ ht-degree: 0%
 1. 開啟您建立的&#x200B;**促銷活動**&#x200B;頁面。
 1. 按一下「**建立頁面**」並輸入頁面的標題（例如，「男性」）來建立您區段的體驗，然後選取「**體驗**」範本。
 1. 開啟已建立的體驗頁面。
-1. 按一下[編輯]&#x200B;**&#x200B;**，然後在[區段]下方按一下[新增專案]&#x200B;**&#x200B;**。
+1. 按一下[編輯]****，然後在[區段]下方按一下[新增專案]****。
 1. 輸入男性區段的路徑，例如`/etc/segmentation/ac-segments/male`，然後按一下&#x200B;**確定**。 應該會出現下列訊息： *體驗目標為：男性*
 1. 重複上述步驟以建立所有區段的體驗，例如女性目標。
 
@@ -93,7 +106,7 @@ ht-degree: 0%
 
 1. 導覽至另一個區段（男性），然後按一下&#x200B;**新增選件**，然後按一下加號圖示+。 然後編輯選件。
 1. 導覽至另一個區段（女性），然後按一下「**新增選件**」和加號圖示+。 然後編輯此選件。
-1. 按一下[下一步]&#x200B;**&#x200B;**&#x200B;檢視對應，然後按一下[下一步]&#x200B;**&#x200B;**&#x200B;檢視不適用於Adobe Campaign的設定，然後按一下[儲存]&#x200B;**&#x200B;**。
+1. 按一下[下一步]****&#x200B;檢視對應，然後按一下[下一步]****&#x200B;檢視不適用於Adobe Campaign的設定，然後按一下[儲存]****。
 
    當內容用於Adobe Campaign內的傳遞時，AEM會自動產生適用於Adobe Campaign的正確目標定位代碼
 

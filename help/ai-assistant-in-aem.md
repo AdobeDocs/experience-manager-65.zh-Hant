@@ -15,9 +15,16 @@ product_v2:
 feature_v2:
   - id: ac5ecfc1-cc78-4ecc-a90a-0362685062ce
     internal-label: AI Tools
+subfeature_v2:
+  - id: bf7fca06-df97-4229-884f-76afcfade5ad
+    internal-label: AI Assistant
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 level_v2:
   - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
     internal-label: Intermediate
@@ -34,7 +41,7 @@ topic_v2:
     internal-label: Insights
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
     internal-label: Privacy
-source-git-commit: a6f7741fe575a194732abee7dfc9c531d1c58cc2
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1327'
 ht-degree: 78%
@@ -62,7 +69,7 @@ AI 助理會直接嵌入 AEM，並且可透過 AEM Experience Hub、Cloud Manage
 
 以下 3 分鐘 25 秒的影片逐步示範操作 AEM 中的 AI 助理。
 
->[!VIDEO](https://video.tv.adobe.com/v/3475369/?captions=chi_hant&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3475357/?learn=on&enablevpops)
 
 ## 在 AEM 中存取 AI 助理{#get-access}
 
@@ -77,7 +84,7 @@ AI 助理會直接嵌入 AEM，並且可透過 AEM Experience Hub、Cloud Manage
 
 **在 AEM 中存取 AI 助理：**
 
-1. 客戶必須有其他協議就緒才能存取 Adobe Experience Manager 中大部分的 AI 驅動功能和代理式功能。 如需詳細資訊，請聯絡您的 Adobe 代表。 如需Generative AI啟用的運作方式，請參閱[CX Enterprise應用程式中的Generative AI](https://experienceleague.adobe.com/zh-hant/docs/cx-enterprise-ai/experience-cloud-ai/overview/generative-ai)。
+1. 客戶必須有其他協議就緒才能存取 Adobe Experience Manager 中大部分的 AI 驅動功能和代理式功能。 如需詳細資訊，請聯絡您的 Adobe 代表。 如需Generative AI啟用的運作方式，請參閱[CX Enterprise應用程式中的Generative AI](https://experienceleague.adobe.com/en/docs/cx-enterprise-ai/experience-cloud-ai/overview/generative-ai)。
 
 1. 您的組織達成此合約後，所有使用者預設都可使用AI Assistant取得產品知識。 不需要額外的個別使用者或個別群組許可權。
 

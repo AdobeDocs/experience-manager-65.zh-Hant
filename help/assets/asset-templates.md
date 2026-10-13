@@ -1,18 +1,29 @@
 ---
 title: 資產範本
-description: 瞭解 [!DNL Adobe Experience Manager Assets] 中的資產範本，以及如何使用資產範本建立行銷宣傳品。
+description: 瞭解[!DNL Adobe Experience Manager Assets]中的資產範本，以及如何使用資產範本建立行銷宣傳品。
 contentOwner: AG
 role: User
 feature: Asset Management,Developer Tools
 exl-id: 12c92aad-3a1d-486e-a830-31de2fc6d07b
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 0b90fdd13efc5408ef94ee1966f04a80810b515e
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 7d2b2ec8-499c-5434-9ffd-9218cd71f683
+    internal-label: Asset Management
+  - id: f2d27a5f-0d67-4d85-8a24-86a8d8a3574b
+    internal-label: Developer tools
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1571'
+source-wordcount: '1572'
 ht-degree: 1%
-
 ---
-
 # 資產範本 {#asset-templates}
 
 資產範本是一種特殊型別的資產，可協助您將視覺豐富的內容快速重新用於數位和印刷媒體。 資產範本包含固定傳訊區段和可編輯區段兩個部分。 固定傳訊區段可包含專有內容，例如已停用編輯的品牌標誌和版權資訊。 可編輯區段可在可編輯以自訂訊息的欄位中包含視覺和文字內容。
@@ -124,11 +135,11 @@ ht-degree: 1%
    >
    >若要啟用[!DNL Experience Manager]以解析影像，請執行下列動作：
    >
-   >* 建立[!DNL InDesign]範本時內嵌影像（請參閱[關於連結和內嵌圖形](https://helpx.adobe.com/tw/indesign/using/graphics-links.html)）。
+   >* 建立[!DNL InDesign]範本時內嵌影像（請參閱[關於連結和內嵌圖形](https://helpx.adobe.com/indesign/using/graphics-links.html)）。
    >* 將[!DNL Experience Manager]掛接至您的本機檔案系統，然後將遺失的圖示與[!DNL Experience Manager]中的現有資產對應。
    >
 
-1. 若要產生手冊的PDF轉譯，請在對話方塊中選取Acrobat選項，然後按一下[繼續]。**&#x200B;**
+1. 若要產生手冊的PDF轉譯，請在對話方塊中選取Acrobat選項，然後按一下[繼續]。****
 1. 附屬品片段會建立於您開始使用的資料夾中。 若要檢視轉譯，請開啟宣傳品，然後從GlobalNav清單中選擇&#x200B;**[!UICONTROL 轉譯]**。
 
    ![chlimage_1-118](assets/chlimage_1-323.png)
@@ -164,7 +175,7 @@ ht-degree: 1%
 
    ![chlimage_1-126](assets/chlimage_1-331.png)
 
-1. 在[!UICONTROL 設定範本]畫面中，指定附屬專案的名稱。 選擇性地指定您認為適當的任何標籤。 如果要以PDF格式匯出輸出，請選取&#x200B;**[!UICONTROL Acrobat (.PDF)]**。 依預設，宣傳品會以JPG和[!DNL InDesign]格式匯出。 若要變更多頁附屬資料的顯示縮圖，請按一下[變更縮圖]。**&#x200B;**
+1. 在[!UICONTROL 設定範本]畫面中，指定附屬專案的名稱。 選擇性地指定您認為適當的任何標籤。 如果要以PDF格式匯出輸出，請選取&#x200B;**[!UICONTROL Acrobat (.PDF)]**。 依預設，宣傳品會以JPG和[!DNL InDesign]格式匯出。 若要變更多頁附屬資料的顯示縮圖，請按一下[變更縮圖]。****
 
    ![chlimage_1-127](assets/chlimage_1-332.png)
 

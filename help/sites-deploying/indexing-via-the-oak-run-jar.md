@@ -8,18 +8,27 @@ exl-id: dcec8c1b-13cc-486c-b1a4-62e6eb3184ad
 solution: Experience Manager, Experience Manager Sites
 feature: Configuring
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 523b1ccd-901e-5e3b-9fa7-f3dfd82463d5
+    internal-label: Configuring
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '923'
+source-wordcount: '985'
 ht-degree: 0%
-
 ---
-
 # 透過Oak-run Jar編制索引 {#indexing-via-the-oak-run-jar}
 
 Oak-run支援命令列上的所有索引使用案例，不必從JMX層級操作。 Oak-run方法的優點包括：
 
-1. 這是適用於AEM 6.4的新的索引工具集
+1. 這是適用於AEM 6.4的全新索引工具集
 1. 這能縮短重新編列索引的時間，而有利於影響大型存放庫的重新編列索引時間
 1. 這減少了在AEM中重新索引時的資源消耗，導致其他AEM活動獲得更好的系統效能
 1. Oak-run提供頻外支援：如果生產條件不允許您在生產執行個體上執行重新索引，則可以使用複製的環境來重新索引，以避免對效能產生嚴重影響。
@@ -62,7 +71,7 @@ Oak-run支援命令列上的所有索引使用案例，不必從JMX層級操作�
 
 ### SegmentNodeStore和DocumentNodeStore的文字預先擷取 {#textpre-extraction}
 
-[文字預先擷取](/help/sites-deploying/best-practices-for-queries-and-indexing.md#how-to-perform-text-pre-extraction) (AEM 6.3已有的功能)可用來減少重新索引的時間。 文字預先擷取可用於所有重新索引方法。
+[文字預先擷取](/help/sites-deploying/best-practices-for-queries-and-indexing.md#how-to-perform-text-pre-extraction) （AEM 6.3已有的功能）可用來減少重新索引的時間。 文字預先擷取可用於所有重新索引方法。
 
 根據`oak-run.jar`索引方法，下圖中「執行重新索引」步驟的每一側都有各種步驟。
 
@@ -92,11 +101,11 @@ SegmentNodeStore和DocumentNodeStore的![文字預先擷取](assets/4.png)
 
 * **冷待命考量事項(TarMK)**
 
-   * 冷待命沒有特殊考量；冷待命執行個體會照常同步變更。
+  * 冷待命沒有特殊考量；冷待命執行個體會照常同步變更。
 
-* **AEM Publish陣列(AE Publish陣列應一律為TarMK)**
+* **AEM發佈陣列（AE發佈陣列應一律為TarMK）**
 
-   * 對於發佈陣列，必須為全部完成或在單一發佈上執行步驟。 接著，複製其他人的設定(複製AEM執行個體時採用所有常用的預先處理方式；sling.id — 應該在這裡連結到某個專案)。
+  * 對於發佈陣列，必須為全部完成或在單一發佈上執行步驟。 接著，複製其他人的設定（複製AEM執行個體時，會採用所有常用的預先處理方式；sling.id — 應該在這裡連結到某個專案）。
 
 ### TarMK的線上重新索引 {#onlinere-indexingfortarmk}
 
@@ -106,7 +115,7 @@ SegmentNodeStore和DocumentNodeStore的![文字預先擷取](assets/4.png)
 
 這是oak-run.jar引進新索引功能之前使用的方法。 方法是在Oak索引上設定`reindex=true`屬性。
 
-如果客戶可接受索引的時間和效能影響，則可使用此方法。 中小型的AEM安裝通常就是這種情況。
+如果客戶可接受索引的時間和效能影響，則可使用此方法。 中小型AEM安裝通常就是這種情況。
 
 ![TarMK的線上重新索引](assets/6.png)
 
@@ -130,7 +139,7 @@ SegmentNodeStore和DocumentNodeStore的![文字預先擷取](assets/4.png)
 >
 >如需此情境的詳細資訊，請參閱[線上重新索引 — SegmentNodeStore - AEM執行個體已關閉](/help/sites-deploying/oak-run-indexing-usecases.md#onlinereindexsegmentnodestoreaeminstanceisdown)。
 
-TarMK的離線重新索引是TarMK最簡單的`oak-run.jar`型重新索引方法，因為它需要單一`oak-run.jar`註解。 但是，它需要關閉AEM執行個體。
+TarMK的離線重新索引是TarMK最簡單的`oak-run.jar`型重新索引方法，因為它需要單一`oak-run.jar`註解。 不過，必須關閉AEM執行個體。
 
 >[!NOTE]
 >
@@ -148,7 +157,7 @@ TarMK的離線重新索引是TarMK最簡單的`oak-run.jar`型重新索引方法
 
 >[!NOTE]
 >
->紅色表示可能關閉AEM的作業。
+>紅色表示可能關閉AEM的操作。
 
 ![使用oak-run.jar的頻外重新索引TarMK](assets/9.png)
 
@@ -170,12 +179,12 @@ TarMK的離線重新索引是TarMK最簡單的`oak-run.jar`型重新索引方法
 
 ### 使用oak-run.jar在TarMK上建立和更新索引定義 {#creatingandupdatingindexdefinitionsontarmkusingoak-run-jar}
 
-如果使用非`oak-run.jar`方法重新索引的時間或效能影響太高，可在以TarMK為基礎的AEM安裝中，使用下列`oak-run.jar`為基礎的方法匯入及重新索引Lucene索引定義。
+如果使用非`oak-run.jar`方法重新索引的時間或效能影響太大，則下列`oak-run.jar`型方法可用於在基於TarMK的AEM安裝中匯入及重新索引Lucene索引定義。
 
 ![使用oak-run.jar在TarMK上建立和更新索引定義](assets/10.png)
 
 ### 使用oak-run.jar在MonogMK上建立和更新索引定義 {#creatingandupdatingindexdefinitionsonmonogmkusingoak-run-jar}
 
-如果使用非`oak-run.jar`方法重新索引的時間或效能影響太高，則下列`oak-run.jar`型方法可用來匯入和重新索引MongoMK型AEM安裝中的Lucene索引定義。
+如果使用非`oak-run.jar`方法重新索引的時間或效能影響太大，則下列`oak-run.jar`型方法可用於在基於MongoMK的AEM安裝中匯入及重新索引Lucene索引定義。
 
 ![使用oak-run.jar在MonogMK上建立和更新索引定義](assets/11.png)

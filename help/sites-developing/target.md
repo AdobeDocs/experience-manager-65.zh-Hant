@@ -10,13 +10,22 @@ exl-id: 92b62532-4f79-410d-903e-d2bca6d0fd1c
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
-source-wordcount: '1223'
+source-wordcount: '1296'
 ht-degree: 0%
-
 ---
-
 # 針對目標內容開發{#developing-for-targeted-content}
 
 本節說明有關開發元件以與內容鎖定目標搭配使用的主題。
@@ -198,19 +207,19 @@ JSP會將必要的Analytics JavaScript物件及參照新增至使用者端JavaSc
 
 用來建立mbox的預設mbox.js檔案位於/etc/clientlibs/foundation/testandtarget/mbox/source/mbox.js。 若要使用客戶mbox.js檔案，請新增檔案至Target雲端設定。 若要新增檔案，mbox.js檔案必須在檔案系統上可用。
 
-例如，如果您想要使用[Marketing Cloud識別碼服務](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=zh-Hant)，您必須下載mbox.js，使其包含以您的租使用者為基礎之`imsOrgID`變數的正確值。 若要與Marketing CloudID服務整合，此變數為必要專案。 如需詳細資訊，請參閱[Adobe Analytics作為Adobe Target](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=zh-Hant)和[的報表Source，再執行](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/before-implement.html?lang=zh-Hant)。
+例如，如果您想要使用[Marketing Cloud ID服務](https://experienceleague.adobe.com/docs/id-service/using/home.html)，您必須下載mbox.js，使其包含以您的租使用者為基礎之`imsOrgID`變數的正確值。 若要與Marketing Cloud ID服務整合，此變數為必要專案。 如需詳細資訊，請參閱[Adobe Analytics作為Adobe Target](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html)和[的報表Source，再執行](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/before-implement.html)。
 
 >[!NOTE]
 >
 >如果在Target設定中定義了自訂mbox，則每個人都必須擁有發佈伺服器上&#x200B;**/etc/cloudservices**&#x200B;的讀取存取權。 若沒有此存取權，在發佈網站上載入mbox.js檔案會導致404錯誤。
 
-1. 移至CQ **工具**&#x200B;頁面並選取&#x200B;**Cloud Service**。 ([https://localhost:4502/libs/cq/core/content/tools/cloudservices.html](https://localhost:4502/libs/cq/core/content/tools/cloudservices.html))
+1. 移至CQ **工具**&#x200B;頁面並選取&#x200B;**雲端服務**。 ([https://localhost:4502/libs/cq/core/content/tools/cloudservices.html](https://localhost:4502/libs/cq/core/content/tools/cloudservices.html))
 1. 在樹狀結構中選取「Adobe Target」，然後在設定清單中按兩下Target設定。
 1. 在設定頁面上，按一下編輯。
 1. 針對「自訂mbox.js」屬性，按一下「瀏覽」並選取檔案。
 1. 若要套用變更，請輸入Adobe Target帳戶的密碼，按一下「重新連線至Target」，然後在連線成功時按一下「確定」。 然後，按一下「編輯元件」對話方塊上的「確定」。
 
-您的Target設定包含自訂mbox.js檔案，在網頁的head區段[&#128279;](/help/sites-developing/target.md#p-the-head-section-p)中必要的程式碼會將檔案新增至使用者端資料庫架構，而非testandtarget.js資料庫的參考。
+您的Target設定包含自訂mbox.js檔案，在網頁的head區段](/help/sites-developing/target.md#p-the-head-section-p)中[必要的程式碼會將檔案新增至使用者端資料庫架構，而非testandtarget.js資料庫的參考。
 
 ## 停用元件的目標命令 {#disabling-the-target-command-for-components}
 
@@ -218,13 +227,13 @@ JSP會將必要的Analytics JavaScript物件及參照新增至使用者端JavaSc
 
 ![chlimage_1-21](assets/chlimage_1-21.png)
 
-若要從內容選單中移除Target命令，請將下列屬性新增至元件的cq：editConfig節點：
+若要從內容功能表中移除Target命令，請將下列屬性新增至元件的cq:editConfig節點：
 
-* 名稱：cq：disableTargeting
+* 名稱： cq:disableTargeting
 * 型別：布林值
 * 值： True
 
-例如，若要停用Geometrixx示範網站頁面標題元件的鎖定目標，請將屬性新增至/apps/geometrixx/components/title/cq：editConfig節點。
+例如，若要停用Geometrixx示範網站頁面標題元件的鎖定目標，請將屬性新增至/apps/geometrixx/components/title/cq:editConfig節點。
 
 ![chlimage_1-22](assets/chlimage_1-22.png)
 
@@ -234,13 +243,13 @@ JSP會將必要的Analytics JavaScript物件及參照新增至使用者端JavaSc
 >
 >如果您沒有使用DTM，請傳送訂單確認給Adobe Target。
 
-為了追蹤您網站的效能，請從您的訂單確認頁面將購買資訊傳送到Adobe Target。 (請參閱[建立orderConfirmPage Mbox](https://developer.adobe.com/target/implement/client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager/?lang=en)和[訂單確認Mbox — 新增自訂引數。](https://experienceleaguecommunities.adobe.com/t5/adobe-target-questions/order-confirmation-mbox-add-custom-parameters/m-p/275779?profile.language=zh-Hant))當您的MBox名稱為`orderConfirmPage`時，Adobe Target會將mbox資料辨識為訂購確認資料，並使用下列特定引數名稱：
+為了追蹤您網站的效能，請從您的訂單確認頁面將購買資訊傳送到Adobe Target。 （請參閱[建立orderConfirmPage Mbox](https://developer.adobe.com/target/implement/client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager/?lang=en)和[訂單確認Mbox — 新增自訂引數。](https://experienceleaguecommunities.adobe.com/t5/adobe-target-questions/order-confirmation-mbox-add-custom-parameters/m-p/275779)） 當您的MBox名稱為`orderConfirmPage`時，Adobe Target會將mbox資料辨識為訂購確認資料，並使用下列特定引數名稱：
 
 * productPurchasedId：識別已購買產品的ID清單。
 * orderId：訂單的ID。
 * orderTotal：購買的總金額。
 
-在轉譯HTML頁面上建立mbox的程式碼類似於以下範例：
+在轉譯的HTML頁面上建立mbox的程式碼類似於以下範例：
 
 ```xml
 <script type="text/javascript">

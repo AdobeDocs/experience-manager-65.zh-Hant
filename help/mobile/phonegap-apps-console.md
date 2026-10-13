@@ -9,13 +9,17 @@ exl-id: 49e0b3f6-7ac7-4417-9c31-cc3d3c2305f3
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '2617'
+source-wordcount: '2668'
 ht-degree: 1%
-
 ---
-
 # 使用應用程式控制檯建立和編輯應用程式{#creating-and-editing-apps-using-the-apps-console}
 
 {{ue-over-mobile}}
@@ -77,7 +81,7 @@ AEM Mobile提供Phonegap應用程式藍圖，供您建立行動應用程式。 �
 其他（和選用）標籤可用於建立雲端服務，以及將Adobe Mobile Services SDK外掛程式整合至您的應用程式。
 
 * 組建：按一下這裡的管理設定並設定您的build.phonegap.com組建服務。 然後從下拉式清單，選取新建立的PhoneGap Build雲端服務。
-* Analytics：按一下管理設定並設定您的[Adobe Mobile Services SDK](https://experienceleague.adobe.com/docs/mobile-services/using/home.html?lang=zh-Hant)雲端服務。 然後從下拉式清單，選取新建立的行動服務以整合至行動應用程式。
+* Analytics：按一下管理設定並設定您的[Adobe Mobile Services SDK](https://experienceleague.adobe.com/docs/mobile-services/using/home.html)雲端服務。 然後從下拉式清單，選取新建立的行動服務以整合至行動應用程式。
 
 >[!NOTE]
 >
@@ -170,7 +174,7 @@ Content Sync也會追蹤更新何時發生。 有了這些資訊，Content Sync�
 
 這是Apps 6.1 Feature Pack 2提供的功能，可讓您輕鬆使用現有應用程式範本，在AEM中建立新的應用程式。
 
-什麼是應用程式範本？將其視為代表應用程式基準或基礎的頁面範本和元件的集合。
+什麼是應用程式範本？ 將其視為代表應用程式基準或基礎的頁面範本和元件的集合。
 根據其他應用程式的範本建立應用程式時，您會得到其起點代表在其中建立該應用程式之應用程式的應用程式。
 
 您必須擁有現有的行動應用程式範本（或已安裝具備應用程式範本的應用程式），才能使用此功能。
@@ -221,10 +225,10 @@ Geometrixx Outdoors應用程式是範例PhoneGap應用程式，示範預設Phone
 * 返回父頁面的返回按鈕。 首頁沒有顯示上一頁按鈕。
 * 提供指令和連結功能表的可消耗邊欄：
 
-   * 開啟「位置」頁面。
-   * 開啟購物車。
-   * 登入。
-   * 更新應用程式。
+  * 開啟「位置」頁面。
+  * 開啟購物車。
+  * 登入。
+  * 更新應用程式。
 
 * 段落系統，用於新增元件和建立內容。
 

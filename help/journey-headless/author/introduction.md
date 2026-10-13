@@ -5,13 +5,33 @@ exl-id: 39d2218a-4f11-459d-8514-cfd312246be5
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments
 role: Admin, Developer, User, Leader
-source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: bfd4bc52-c397-5127-8f86-8953ba9fc0a3
+    internal-label: Headless
+  - id: a642c50e-80eb-4fc1-a5d2-f3762d1f841d
+    internal-label: Administration
+subfeature_v2:
+  - id: e9db7c79-8f65-4281-a439-c9049296d903
+    internal-label: Content Fragments
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '649'
+source-wordcount: '674'
 ht-degree: 87%
-
 ---
-
 # 使用 AEM 進行 Headless 編寫 - 簡介 {#author-headless-introduction}
 
 在[AEM Headless內容製作歷程](overview.md)的這一部分，您可以瞭解必要的（基本）概念和術語，以瞭解Adobe Experience Manager (AEM)的Headless內容傳送的製作內容。
@@ -25,7 +45,7 @@ ht-degree: 87%
 
 什麼是內容管理系統？
 
-內容管理系統 (CMS) 顧名思義，是一種用於管理內容的電腦系統。這有點籠統，所以更準確地說，它 (通常) 用於管理您希望在您網站上提供的內容。
+內容管理系統 (CMS) 顧名思義，是一種用於管理內容的電腦系統。 這有點籠統，所以更準確地說，它 (通常) 用於管理您希望在您網站上提供的內容。
 
 ## Headless CMS {#headless-cms}
 
@@ -35,7 +55,7 @@ Headless 是一個術語，用於描述能夠有效地將內容與內容在 Web 
 
 現在，Headless表示您的內容集可以在CMS中管理，然後由一或多個（獨立）應用程式存取。
 
-這表示您的內容能以多種格式傳遞到任何裝置。這使整個流程更加靈活，也表示您無需擔心版面和格式。
+這表示您的內容能以多種格式傳遞到任何裝置。 這使整個流程更加靈活，也表示您無需擔心版面和格式。
 
 >[!NOTE]
 >
@@ -50,19 +70,19 @@ Headless 是一個術語，用於描述能夠有效地將內容與內容在 Web 
 這表示它可以做為：
 
 * Headless CMS
-   * 若為 Headless ，可將內容製作為&#x200B;**內容片段**。
-這些是內容的獨立項目，可直接由各種應用程式存取，因為它們具有預先定義結構，以&#x200B;**內容片段模型**&#x200B;為基礎。
-這表示您的內容能以多種格式及內含多種功能呈現在多種裝置上。
-(作為一個雙重打擊，如果你想要的話，可以在建構 AEM 網頁時使用這些片段。)
+  * 若為 Headless ，可將內容製作為&#x200B;**內容片段**。
+    這些是內容的獨立項目，可直接由各種應用程式存取，因為它們具有預先定義結構，以**內容片段模型**為基礎。
+    這表示您的內容能以多種格式及內含多種功能呈現在多種裝置上。
+    (作為一個雙重打擊，如果你想要的話，可以在建構 AEM 網頁時使用這些片段。)
 
 * 「傳統」CMS
-   * 內容是為網頁編寫的，使用一系列元件來定義內容將如何在您的網站上呈現。即使在這裡，AEM 也非常靈活，因為您的專案團隊可以開發自訂元件。
+  * 內容是為網頁編寫的，使用一系列元件來定義內容將如何在您的網站上呈現。 即使在這裡，AEM 也非常靈活，因為您的專案團隊可以開發自訂元件。
 
 ## 內容模型 {#content-modeling}
 
 所以內容模型 (也稱為資料模型) 是另一個技術性術語，您身為作者為什麼對它感興趣？
 
-為了讓 Headless 應用程式可以存取您的內容並進行一些操作，您的內容確實需要有預先定義的結構。您的內容可以採用自由格式，但會使應用程式&#x200B;*十分*&#x200B;不便。
+為了讓 Headless 應用程式可以存取您的內容並進行一些操作，您的內容確實需要有預先定義的結構。 您的內容可以採用自由格式，但會使應用程式&#x200B;*十分*&#x200B;不便。
 
 基本上，定義要遵循之內容結構的流程包含設計模型，這稱為資料模型。
 
@@ -74,12 +94,12 @@ Headless 是一個術語，用於描述能夠有效地將內容與內容在 Web 
 
 ## 下一步 {#whats-next}
 
-現在您已經了解了概念和術語，下一步是[學習製作內容片段的基礎知識](basics.md)。這將介紹 AEM 的基本處理以及如何製作內容片段。
+現在您已經了解了概念和術語，下一步是[學習製作內容片段的基礎知識](basics.md)。 這將介紹 AEM 的基本處理以及如何製作內容片段。
 
 ## 其他資源 {#additional-resources}
 
 * AEM Headless 開發人員歷程
-   * [了解 CMS Headless 開發](/help/journey-headless/developer/learn-about.md)
+  * [了解 CMS Headless 開發](/help/journey-headless/developer/learn-about.md)
 
 * [AEM Headless 內容架構師歷程](/help/journey-headless/architect/overview.md)
 
@@ -87,6 +107,6 @@ Headless 是一個術語，用於描述能夠有效地將內容與內容在 Web 
 
 * [AEM as a Headless CMS 簡介](/help/sites-developing/headless/introduction.md)
 
-* [AEM 開發人員入口網站](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=zh-Hant)
+* [AEM開發人員入口網站](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
 
-* [AEM 中的 Headless 教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=zh-Hant)
+* [AEM 中的無周邊教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)

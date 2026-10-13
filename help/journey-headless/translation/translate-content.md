@@ -5,13 +5,37 @@ exl-id: a2c2bb9f-97b9-42fd-9bd1-e75c113fb514
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments,Language Copy
 role: Admin, Developer, User, Leader
-source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: bfd4bc52-c397-5127-8f86-8953ba9fc0a3
+    internal-label: Headless
+  - id: a642c50e-80eb-4fc1-a5d2-f3762d1f841d
+    internal-label: Administration
+  - id: d9d38edd-df1b-480c-8f5e-72b62576f390
+    internal-label: Site and page features
+subfeature_v2:
+  - id: e9db7c79-8f65-4281-a439-c9049296d903
+    internal-label: Content Fragments
+  - id: e15a4109-ae5d-497d-b301-31149e35aed4
+    internal-label: Language Copy Wizard
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
 source-wordcount: '2121'
 ht-degree: 70%
-
 ---
-
 # 翻譯內容 {#translate-content}
 
 使用翻譯整合和規則來翻譯您的 Headless 內容。
@@ -71,13 +95,13 @@ ht-degree: 70%
 
 >[!NOTE]
 >
->假設已建立翻譯語言的必要語言結構，作為內容結構的[定義的一部分。](getting-started.md#content-structure) 這應該與內容架構師協力完成。
+>假設已建立翻譯語言的必要語言結構，作為內容結構的[定義的一部分。](getting-started.md#content-structure) 這應該與內容架構者協力完成。
 >
 >如果未先建立語言資料夾，您將無法按照前述步驟建立語言副本。
 
 ### 透過選擇您的內容手動建立翻譯專案 {#manually-creating}
 
-對於翻譯專案經理，通常需要手動選擇特定內容以包含在翻譯專案中。 若要建立這樣的手動翻譯專案，您必須先建立空白專案，然後選取要加入的內容。
+對翻譯專案經理而言，通常需要手動選取特定內容並將其納入翻譯專案。 若要建立這樣的手動翻譯專案，您必須先建立空白專案，然後選取要加入的內容。
 
 1. 導覽至「**導覽**」>「**專案**」。
 1. 按一下「**建立** > **資料夾**」，為您的專案建立資料夾。
@@ -87,7 +111,7 @@ ht-degree: 70%
    ![建立專案資料夾](assets/create-project-folder.png)
 
 1. 按一下資料夾以開啟資料夾。
-1. 在您的新專案資料夾中，按一下[建立&#x200B;**] > [專案**]。**&#x200B;**
+1. 在您的新專案資料夾中，按一下[建立&#x200B;**] > [專案**]。****
 1. 專案是以範本為基礎。 按一下&#x200B;**翻譯專案**&#x200B;範本以選取它，然後按一下&#x200B;**下一步**。
 
    ![選取翻譯專案範本](assets/select-translation-project-template.png)
@@ -133,7 +157,7 @@ ht-degree: 70%
 若要查看此專案包含之 Headless 內容的詳細資料：
 
 1. 按一下&#x200B;**翻譯工作**&#x200B;卡片底部的省略符號按鈕。
-1. **翻譯工作**&#x200B;視窗列出工作的所有項目。
+1. **翻譯工作**視窗列出工作的所有項目。
    ![翻譯工作詳細資料](assets/translation-job-detail.png)
 1. 按一下某一行可檢視該行的詳細資訊，請記住，一行可能表示要翻譯的多個內容專案。
 1. 按一下條列專案的選取核取方塊，即可檢視其他選項，例如，從工作中刪除專案，或在內容片段或Assets主控台中檢視專案的選項。
@@ -232,7 +256,7 @@ AEM 的翻譯框架從翻譯連接器接收翻譯，然後根據語言根並使�
 
 如果您的翻譯服務提供人工翻譯，則審核流程會提供更多選項。 例如，翻譯返回專案時狀態為&#x200B;**草稿**，並且必須人工審核並核准或拒絕。
 
-人工翻譯不在此歷程的討論範圍內。 如需此主題的更多資訊，請參閱本文件結尾處的[其他資源](#additional-resources)區段。 然而，除了額外的核准選項之外，人工翻譯的工作流程與本歷程描述的機器翻譯相同。
+人工翻譯不在此本地化歷程的討論範圍內。 如需此主題的更多資訊，請參閱本文件結尾處的[其他資源](#additional-resources)區段。 然而，除了額外的核准選項之外，人工翻譯的工作流程與本歷程描述的機器翻譯相同。
 
 ## 下一步 {#what-is-next}
 

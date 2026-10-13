@@ -9,13 +9,17 @@ exl-id: 9d350935-129a-40d3-89f4-2e6f69676e5e
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '685'
+source-wordcount: '692'
 ht-degree: 2%
-
 ---
-
 # 建立及管理應用程式內容{#creating-and-managing-app-content}
 
 {{ue-over-mobile}}
@@ -58,9 +62,9 @@ ht-degree: 2%
 
 ![chlimage_1-162](assets/chlimage_1-162.png)
 
-一旦&#x200B;*AEM作者*&#x200B;透過「管理內容」動態磚新增或修改內容，*AEM管理員*&#x200B;就能夠透過「內容套件」更新將這些變更推送給客戶。
+一旦&#x200B;*AEM作者*&#x200B;透過「管理內容」動態磚新增或修改內容，*AEM管理員*&#x200B;就能透過「內容套件」更新，將這些變更推送給客戶。
 
-「內容封裝」動作可讓&#x200B;*AEM Author*&#x200B;建立及編輯頁面內容，而開發團隊會變更「主機應用程式」的設計與實作，包括導覽、樣式、伺服器端邏輯、範本及元件，然後將這些變更從OTA推送到客戶，而不需要重新提交至各種商店進行發佈。
+「內容封裝」動作可讓&#x200B;*AEM作者*&#x200B;建立及編輯頁面內容，而開發團隊會變更「主機應用程式」的設計與實作，包括導覽、樣式、伺服器端邏輯、範本及元件，然後將這些變更從OTA推送給客戶，而不需要重新提交至各種商店進行發佈。
 
 **若要發佈新內容或更新內容**
 
@@ -84,7 +88,7 @@ ht-degree: 2%
 
 ![chlimage_1-165](assets/chlimage_1-165.png)
 
-準備好透過Content Sync OTA傳遞新內容給您的應用程式使用者時，請選取&#x200B;**Publish**，如下所示。
+準備好透過Content Sync OTA傳遞新內容給您的應用程式使用者時，請選取&#x200B;**發佈**，如下所示。
 
 ![chlimage_1-166](assets/chlimage_1-166.png)
 

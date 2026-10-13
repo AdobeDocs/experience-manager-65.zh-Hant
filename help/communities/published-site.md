@@ -10,13 +10,20 @@ exl-id: ebc4e1e7-34f0-4f4e-9f00-178dfda23ce4
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1210'
+source-wordcount: '1212'
 ht-degree: 0%
-
 ---
-
 # 體驗已發佈的網站 {#experience-the-published-site}
 
 ## 在發佈時瀏覽至新網站 {#browse-to-new-site-on-publish}
@@ -87,8 +94,8 @@ ht-degree: 0%
 * **設定檔**&#x200B;選項可讓您檢視及編輯您的設定檔。
 * [訊息](/help/communities/configure-messaging.md)選項會將您導向直接訊息區段，您可以在其中進行下列工作：
 
-   1. 檢視您已收到（收件匣）、已傳送（已傳送專案）及已刪除（垃圾桶）的直接訊息。
-   1. 撰寫新的直接訊息，以便傳送給個人和群組。
+  1. 檢視您已收到（收件匣）、已傳送（已傳送專案）及已刪除（垃圾桶）的直接訊息。
+  1. 撰寫新的直接訊息，以便傳送給個人和群組。
 
 * [通知](/help/communities/notifications.md)選項會將您導向通知區段，您可以在其中檢視您感興趣的事件並編輯通知設定。
 * 如果您有仲裁許可權，[管理](/help/communities/published-site.md#moderationlink)會將您導向到AEM Communities仲裁頁面。
@@ -154,13 +161,13 @@ ht-degree: 0%
 
 * 一個名為`Baseball`
 
-   * 保留設定為`Open Group` （必要的成員資格）。
-   * 在[範本]索引標籤上，選取`Conversational Group`。
+  * 保留設定為`Open Group` （必要的成員資格）。
+  * 在[範本]索引標籤上，選取`Conversational Group`。
 
 * 一個名為`Gymnastics`
 
-   * 將其設定變更為`Member Only Group` （限制成員資格）。
-   * 在[範本]索引標籤上，選取`Conversational Group`。
+  * 將其設定變更為`Member Only Group` （限制成員資格）。
+  * 在[範本]索引標籤上，選取`Conversational Group`。
 
 **通知**：
 

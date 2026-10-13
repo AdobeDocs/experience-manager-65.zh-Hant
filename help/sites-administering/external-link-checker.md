@@ -5,13 +5,22 @@ exl-id: 8ec4c399-b192-46fd-be77-3f49b83ce711
 solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 5ef752af-d616-5b23-8312-06964e46b208
+    internal-label: Administering
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '969'
-ht-degree: 0%
-
+source-wordcount: '992'
+ht-degree: 2%
 ---
-
 # 連結檢查程式 {#the-link-checker}
 
 內容作者不必擔心要驗證自己包含在內容頁面中的每個連結。
@@ -35,7 +44,7 @@ ht-degree: 0%
 內部連結是指向AEM存放庫中其他內容的連結。 可以使用RTE中的路徑選擇器或使用自訂元件來新增內部連結。 例如：
 
 * 您的頁面`/content/wknd/us/en/adventures/ski-touring.html`
-* 在[文字元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html?lang=zh-Hant)中包含`/content/wknd/us/en/adventures/extreme-ironing.html`的連結。
+* 在[文字元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html)中包含`/content/wknd/us/en/adventures/extreme-ironing.html`的連結。
 
 內容作者新增內部連結至頁面時，就會驗證內部連結。 如果連結失效：
 
@@ -49,7 +58,7 @@ ht-degree: 0%
 外部連結是指AEM存放庫外部內容的連結。 外部連結可使用RTE或使用自訂元件來新增。 例如：
 
 * 您的頁面`/content/wknd/us/en/adventures/ski-touring.html`
-* 在[文字元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html?lang=zh-Hant)中包含`https://bunwarmerthermalunderwear.com`的連結。
+* 在[文字元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html)中包含`https://bunwarmerthermalunderwear.com`的連結。
 
 系統會驗證外部連結的語法，並檢查其可用性。 此檢查會在可設定的內部非同步地完成。 如果連結檢查器發現外部連結無效：
 
@@ -72,15 +81,15 @@ ht-degree: 0%
 會顯示下列資訊：
 
 * **狀態** — 連結的驗證狀態，可能是下列其中一項：
-   * **有效** — 連結檢查器可存取外部連結
-   * **擱置中** — 外部連結已新增至網站內容，但尚未由連結檢查器驗證
-   * **無效** — 連結檢查器無法存取外部連結
+  * **有效** — 連結檢查器可存取外部連結
+  * **擱置中** — 外部連結已新增至網站內容，但尚未由連結檢查器驗證
+  * **無效** — 連結檢查器無法存取外部連結
 * **URL** — 外部連結
 * **反向連結** — 包含外部連結的內容頁面
-   * 若已設定，則僅填入[。](#configuring)
+  * 若已設定，則僅填入[。](#configuring)
 * **上次檢查時間** — 連結檢查器上次驗證外部連結的時間
-   * 可設定檢查連結的頻率[。](#configuring)
-* **上次狀態** — 連結檢查上次檢查外部連結時傳回的最後HTML狀態碼
+  * 可設定檢查連結的頻率[。](#configuring)
+* **上次狀態** — 連結檢查上次檢查外部連結時傳回的最後一個HTML狀態代碼
 * **上次可用** — 連結檢查器上次使用連結後的時間
 * **上次存取** — 自上次在編寫介面中存取含有外部連結的頁面以來的時間
 
@@ -102,7 +111,7 @@ ht-degree: 0%
 
 ## 設定連結檢查器 {#configuring}
 
-「連結檢查器」可在AEM中自動使用且立即可用。 不過，有數個OSGi設定可以修改以變更其行為：
+「連結檢查器」可在AEM中自動使用並立即可用。 不過，有數個OSGi設定可以修改以變更其行為：
 
 * **天CQ連結檢查器資訊儲存服務** — 此服務會定義存放庫中連結檢查器快取的大小。
 * **Day CQ Link Checker Service** — 此服務會執行外部連結語法的非同步檢查。 您可以定義檢查期間，以及檢查器會略過哪些型別的連結，還有其他選項。

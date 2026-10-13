@@ -7,13 +7,31 @@ role: Admin, User, Developer
 exl-id: 37fcfad9-2f84-4f0c-aed8-e4a5a3303a06
 solution: Experience Manager, Experience Manager Forms
 feature: Interactive Communication,Correspondence Management
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 3f00fc92-85ee-583e-abd1-3bc3d96de3a0
+    internal-label: Correspondence Management
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: aa28c6c8-3ede-445b-a351-eeb0c9f9aec4
+    internal-label: Interactive Communication
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1478'
 ht-degree: 3%
-
 ---
-
 # 安裝及設定互動式通訊{#install-and-configure-interactive-communications}
 
 ## 簡介 {#introduction}
@@ -43,15 +61,15 @@ AEM Forms互動式通訊會在AEM Forms的製作例項上執行管理、製作�
 * AEM執行個體的安裝路徑未包含空格。
 * AEM執行個體已啟動且執行中。 在AEM術語中，「例項」是在伺服器上以製作或發佈模式執行的AEM副本。 您至少需要一個AEM執行個體（製作或處理）才能執行AEM Forms互動式通訊和通訊管理功能：
 
-   * **作者**：用來建立、上傳和編輯內容以及管理網站的AEM執行個體。 一旦內容準備好上線，就會將其復寫到發佈執行個體。
-   * **處理：**&#x200B;處理執行個體是[強化的AEM作者](/help/forms/using/hardening-securing-aem-forms-environment.md)執行個體。 您可以設定Author例項，並在執行安裝後加以強化。
+  * **作者**：用來建立、上傳和編輯內容以及管理網站的AEM執行個體。 一旦內容準備好上線，就會將其復寫到發佈執行個體。
+  * **處理：**&#x200B;處理執行個體是[強化的AEM作者](/help/forms/using/hardening-securing-aem-forms-environment.md)執行個體。 您可以設定Author例項，並在執行安裝後加以強化。
 
-   * **發佈**：透過網際網路或內部網路，向公眾提供已發佈內容的AEM執行個體。
+  * **發佈**：透過網際網路或內部網路，向公眾提供已發佈內容的AEM執行個體。
 
 * 符合記憶體需求。 AEM Forms附加元件套件需要：
 
-   * ® Windows安裝專用的15 GB暫存空間。
-   * UNIX安裝需要6 GB的暫存空間。
+  * ® Windows安裝專用的15 GB暫存空間。
+  * UNIX安裝需要6 GB的暫存空間。
 
 * UNIX系統的額外需求：如果您使用的是UNIX作業系統，請從個別作業系統的安裝媒體安裝下列套件。
 
@@ -94,10 +112,10 @@ AEM Forms附加元件套件是部署至AEM的應用程式。 此套件包含AEM 
    1. 從&#x200B;**[!UICONTROL 解決方案]**&#x200B;下拉式清單中選取&#x200B;**[!UICONTROL Forms]**。
    2. 選取封裝的版本和型別。 您也可以使用&#x200B;**[!UICONTROL 搜尋下載]**&#x200B;選項來篩選結果。
 1. 選取適用於您作業系統的封裝名稱，選取&#x200B;**[!UICONTROL 接受EULA條款]**，然後選取&#x200B;**[!UICONTROL 下載]**。
-1. 開啟[封裝管理員](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=zh-Hant)，然後按一下&#x200B;**[!UICONTROL 上傳封裝]**&#x200B;以上傳封裝。
+1. 開啟[封裝管理員](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)，然後按一下&#x200B;**[!UICONTROL 上傳封裝]**&#x200B;以上傳封裝。
 1. 選取封裝並按一下&#x200B;**[!UICONTROL 安裝]**。
 
-   您也可以透過[AEM Forms發行版本](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=zh-Hant)文章中列出的直接連結來下載套件。
+   您也可以透過[AEM Forms發行版本](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en)文章中列出的直接連結來下載套件。
 
 1. 安裝套件後，系統會提示您重新啟動AEM執行個體。 **不要立即重新啟動伺服器。** 在停止AEM Forms伺服器之前，請等候ServiceEvent REGISTERED和ServiceEvent UNREGISTERED訊息停止出現在[AEM-Installation-Directory]/crx-quickstart/logs/error.log檔案中，而且記錄檔穩定。
 
@@ -144,7 +162,7 @@ AEM Forms有一些必要和選用的設定。 強制設定包括設定BouncyCast
 
 #### 安裝相容性套件 {#install-compatibility-package}
 
-互動式通訊是在AEM 6.5 Forms中建立客戶通訊的預設和建議方法。 如果您已從舊版升級或移轉，並計畫繼續使用字母（通訊管理），請安裝[AEMFD相容性套件](https://experienceleague.adobe.com/docs/experience-manager-65/forms/upgrade-aem-forms/aem-forms-osgi-upgrade/compatibility-package.html?lang=zh-Hant)。
+互動式通訊是在AEM 6.5 Forms中建立客戶通訊的預設和建議方法。 如果您已從舊版升級或移轉，並計畫繼續使用字母（通訊管理），請安裝[AEMFD相容性套件](https://experienceleague.adobe.com/docs/experience-manager-65/forms/upgrade-aem-forms/aem-forms-osgi-upgrade/compatibility-package.html?lang=en)。
 
 AEMFD相容性套件可讓您在AEM 6.5 Forms上使用AEM 6.4 Forms、AEM 6.3 Forms和AEM 6.2 Forms中的下列資產：
 
@@ -167,7 +185,7 @@ Dispatcher是Adobe Experience Manager的快取與負載平衡工具，用於企�
 
 1. 設定反向連結篩選服務：
 
-   以管理員身分登入Apache Felix設定管理員。 組態管理員的預設URL為https://&#39;server&#39;：[連線埠號碼]/system/console/configMgr。 在&#x200B;**設定**&#x200B;功能表中，選取&#x200B;**Apache Sling反向連結篩選器**&#x200B;選項。 在「允許主機」欄位中，輸入Dispatcher的主機名稱，以允許其作為反向連結，然後按一下「儲存」**&#x200B;**。 專案的格式為https://&#39;[伺服器]：[連線埠]&#39;。
+   以管理員身分登入Apache Felix設定管理員。 組態管理員的預設URL為https://&#39;server&#39;：[連線埠號碼]/system/console/configMgr。 在&#x200B;**設定**&#x200B;功能表中，選取&#x200B;**Apache Sling反向連結篩選器**&#x200B;選項。 在「允許主機」欄位中，輸入Dispatcher的主機名稱，以允許其作為反向連結，然後按一下「儲存」****。 專案的格式為https://&#39;[伺服器]：[連線埠]&#39;。
 
 #### 整合 Adobe Target {#integrate-adobe-target}
 

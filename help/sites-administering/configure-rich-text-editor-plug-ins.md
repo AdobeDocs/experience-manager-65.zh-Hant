@@ -6,13 +6,22 @@ exl-id: 6bfd6caa-a68a-40ba-9826-4ba02cd1dbfb
 solution: Experience Manager, Experience Manager Sites
 feature: Configuring
 role: Admin
-source-git-commit: f64a1014dfd1155bcf815e75a27102244ef6c6de
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 523b1ccd-901e-5e3b-9fa7-f3dfd82463d5
+    internal-label: Configuring
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '4473'
 ht-degree: 2%
-
 ---
-
 
 # 設定RTF編輯器外掛程式 {#configure-the-rich-text-editor-plug-ins}
 
@@ -39,16 +48,16 @@ RTE功能可透過一系列外掛程式使用，每個外掛程式都具備功�
 
    * 根據您的元件，父節點為：
 
-      * `config: .../text/cq:editConfig/cq:inplaceEditing/config`
-      * 替代設定節點： `.../text/cq:editConfig/cq:inplaceEditing/inplaceEditingTextConfig`
-      * `text: .../text/dialog/items/tab1/items/text`
+     * `config: .../text/cq:editConfig/cq:inplaceEditing/config`
+     * 替代設定節點： `.../text/cq:editConfig/cq:inplaceEditing/inplaceEditingTextConfig`
+     * `text: .../text/dialog/items/tab1/items/text`
 
    * 型別為： **jcr:primaryType** `cq:Widget`
    * 兩者都有以下屬性：
 
-      * **名稱** `name`
-      * **型別** `String`
-      * **值** `./text`
+     * **名稱** `name`
+     * **型別** `String`
+     * **值** `./text`
 
 1. 根據您設定的介面，建立節點`<rtePlugins-node>` （如果它不存在）：
 
@@ -72,7 +81,7 @@ RTE功能可透過一系列外掛程式使用，每個外掛程式都具備功�
 
 `findreplace`外掛程式不需要任何設定。 開箱即用。
 
-使用取代功能時，要取代的取代字串應與尋找字串同時輸入。 不過，您仍然可以按一下「尋找」來搜尋字串，然後再取代它。 如果在按一下「尋找」之後輸入取代字串，則搜尋會重設回文字的開頭。
+使用取代功能時，應同時輸入取代字串和尋找字串。 不過，您仍然可以按一下「尋找」來搜尋字串，然後再取代它。 如果在按一下「尋找」之後輸入取代字串，則搜尋會重設回文字的開頭。
 
 按一下「尋找」時，「尋找和取代」對話框會變成透明，按一下「取代」時，對話框會變成不透明。 這可讓作者檢閱作者所取代的文字。 如果使用者按一下「全部取代」，對話方塊會關閉並顯示所做的取代數目。
 
@@ -304,7 +313,7 @@ RTE功能可透過一系列外掛程式使用，每個外掛程式都具備功�
 
 1. 將屬性文字新增至相同的節點。 值是作者在選取樣式時看到的樣式名稱。
    * 名稱: `text`
-*型別： `String`
+     *型別： `String`
    * 值： `Japanese word-wrap`
 
 1. 建立樣式表並指定其路徑。 請參閱[指定樣式表](#locationofstylesheet)的位置。 將下列內容加入樣式表中。 視需要變更背景顏色。
@@ -451,7 +460,7 @@ RTE功能可透過一系列外掛程式使用，每個外掛程式都具備功�
 
 ### 定義字元範圍 {#definerangechar}
 
-1. 使用定義單一字元[&#128279;](#definesinglechar)的步驟1到3。
+1. 使用定義單一字元](#definesinglechar)的[步驟1到3。
 1. 在`chars`底下，新增節點以儲存字元範圍的定義：
 
    * **名稱**&#x200B;您可以指定名稱，但應反映字元範圍；例如，鉛筆。
@@ -460,11 +469,11 @@ RTE功能可透過一系列外掛程式使用，每個外掛程式都具備功�
 1. 在此節點下（根據特殊字元範圍命名）新增以下兩個屬性：
 
    * **名稱** `rangeStart`
-     **型別** `Long`
+     **類型** `Long`
      **值**&#x200B;範圍中第一個字元的[Unicode](https://unicode.org/)表示法（十進位）
 
    * **名稱** `rangeEnd`
-     **型別** `Long`
+     **類型** `Long`
      **值**&#x200B;範圍中最後一個字元的[Unicode](https://unicode.org/)表示法（十進位）
 
 1. 儲存變更。
@@ -506,18 +515,18 @@ RTE功能可透過一系列外掛程式使用，每個外掛程式都具備功�
    >   * `table`以允許編輯表格屬性；包括樣式。
    >   * `cellprops`以允許編輯儲存格屬性，包括樣式。
 
-1. 定義CSS樣式表的位置，讓您參照這些樣式表。 請參閱[指定樣式表](#locationofstylesheet)的位置，因為這與定義文字[&#128279;](#textstyles)的樣式相同。 如果您定義了其他樣式，則可定義位置。
+1. 定義CSS樣式表的位置，讓您參照這些樣式表。 請參閱[指定樣式表](#locationofstylesheet)的位置，因為這與定義文字](#textstyles)的[樣式相同。 如果您定義了其他樣式，則可定義位置。
 1. 在`table`節點下，建立下列新節點（視需要）：
 
    * 若要定義整個表格的樣式（可在&#x200B;**表格屬性**&#x200B;下使用）：
 
-      * **名稱** `tableStyles`
-      * **型別** `cq:WidgetCollection`
+     * **名稱** `tableStyles`
+     * **型別** `cq:WidgetCollection`
 
    * 若要定義個別儲存格的樣式（可在&#x200B;**儲存格屬性**&#x200B;下使用）：
 
-      * **名稱** `cellStyles`
-      * **型別** `cq:WidgetCollection`
+     * **名稱** `cellStyles`
+     * **型別** `cq:WidgetCollection`
 
 1. 建立節點（視情況在`tableStyles`或`cellStyles`節點下），讓您可以代表個別樣式：
 
@@ -528,15 +537,15 @@ RTE功能可透過一系列外掛程式使用，每個外掛程式都具備功�
 
    * 定義要參考的CSS樣式
 
-      * **名稱** `cssName`
-      * **型別** `String`
-      * **值** CSS類別的名稱（不含前置的`.`，例如`cssClass`而非`.cssClass`）
+     * **名稱** `cssName`
+     * **型別** `String`
+     * **值** CSS類別的名稱（不含前置的`.`，例如`cssClass`而非`.cssClass`）
 
    * 定義要顯示在下拉式選取器中的描述性文字
 
-      * **名稱** `text`
-      * **型別** `String`
-      * **值**&#x200B;要顯示在選取專案清單中的文字
+     * **名稱** `text`
+     * **型別** `String`
+     * **值**&#x200B;要顯示在選取專案清單中的文字
 
 1. 儲存所有變更。
 
@@ -689,58 +698,58 @@ RTE可讓作者還原或重做幾項最後的編輯。 依預設，50項編輯�
 
    * 內部連結的CSS樣式：
 
-      * **名稱** `cssInternal`
-      * **型別** `String`
-      * **值** CSS類別的名稱（沒有前置的&#39;.&#39;；例如，`cssClass`而非`.cssClass`）
+     * **名稱** `cssInternal`
+     * **型別** `String`
+     * **值** CSS類別的名稱（沒有前置的&#39;.&#39;；例如，`cssClass`而非`.cssClass`）
 
    * 外部連結的CSS樣式
 
-      * **名稱** `cssExternal`
-      * **型別** `String`
-      * **值** CSS類別的名稱（沒有前置的&#39;.&#39;；例如，`cssClass`而非`.cssClass`）
+     * **名稱** `cssExternal`
+     * **型別** `String`
+     * **值** CSS類別的名稱（沒有前置的&#39;.&#39;；例如，`cssClass`而非`.cssClass`）
 
    * 有效&#x200B;**通訊協定**&#x200B;的陣列。 支援的通訊協定為`http://`、`https://`、`file://`和`mailto:`。
 
-      * **名稱** `protocols`
-      * **型別** `String[]`
-      * **值**&#x200B;一或多個通訊協定
+     * **名稱** `protocols`
+     * **型別** `String[]`
+     * **值**&#x200B;一或多個通訊協定
 
    * **defaultProtocol** （型別&#x200B;**字串**&#x200B;的屬性）：使用者未明確指定通訊協定時要使用的通訊協定。
 
-      * **名稱** `defaultProtocol`
-      * **型別** `String`
-      * **值**&#x200B;一或多個預設通訊協定
+     * **名稱** `defaultProtocol`
+     * **型別** `String`
+     * **值**&#x200B;一或多個預設通訊協定
 
    * 如何處理連結目標屬性的定義。 建立節點：
 
-      * **名稱** `targetConfig`
-      * **型別** `nt:unstructured`
+     * **名稱** `targetConfig`
+     * **型別** `nt:unstructured`
 
      在節點`targetConfig`上，定義必要的屬性：
 
-      * 指定目標模式：
+     * 指定目標模式：
 
-         * **名稱** `mode`
-         * **型別** `String`
-         * **值**
+       * **名稱** `mode`
+       * **型別** `String`
+       * **值**
 
-            * `auto`：表示已選擇自動目標
+         * `auto`：表示已選擇自動目標
 
-              （由外部連結的`targetExternal`屬性或內部連結的`targetInternal`指定）。
+           （由外部連結的`targetExternal`屬性或內部連結的`targetInternal`指定）。
 
-            * `manual`：不適用於此內容
-            * `blank`：不適用於此內容
+         * `manual`：不適用於此內容
+         * `blank`：不適用於此內容
 
-      * 內部連結的目標：
+     * 內部連結的目標：
 
-         * **名稱** `targetInternal`
-         * **型別** `String`
-         * **值**&#x200B;內部連結的目標（僅當模式為`auto`時使用）
+       * **名稱** `targetInternal`
+       * **型別** `String`
+       * **值**&#x200B;內部連結的目標（僅當模式為`auto`時使用）
 
-      * 外部連結的目標：
+     * 外部連結的目標：
 
-         * **名稱** `targetExternal`
-         * **型別** `String`
-         * **值**&#x200B;外部連結的目標（僅當模式為`auto`時使用）。
+       * **名稱** `targetExternal`
+       * **型別** `String`
+       * **值**&#x200B;外部連結的目標（僅當模式為`auto`時使用）。
 
 1. 儲存所有變更。

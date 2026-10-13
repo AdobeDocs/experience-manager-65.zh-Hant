@@ -1,18 +1,32 @@
 ---
 title: '[!DNL Assets] Proxy開發'
-description: Proxy是使用Proxy Worker處理工作的 [!DNL Experience Manager] 執行個體。 瞭解如何設定 [!DNL Experience Manager] Proxy、支援的作業、Proxy元件，以及如何開發自訂Proxy Worker。
+description: Proxy是使用Proxy背景工作處理工作的[!DNL Experience Manager]執行個體。 瞭解如何設定[!DNL Experience Manager] Proxy、支援的作業、Proxy元件，以及如何開發自訂Proxy Worker。
 contentOwner: AG
 role: Admin, Developer
 exl-id: 42fff236-b4e1-4f42-922c-97da32a933cf
 solution: Experience Manager, Experience Manager Assets
 feature: Proxy Workers
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: e17747bc-9b7b-44e6-a443-f54229a02620
+    internal-label: Integrations
+subfeature_v2:
+  - id: cf4d26de-6586-4a7a-8ccb-6e8a29ee21ea
+    internal-label: Proxy workers
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '856'
+source-wordcount: '858'
 ht-degree: 0%
-
 ---
-
 # [!DNL Assets] Proxy開發 {#assets-proxy-development}
 
 [!DNL Adobe Experience Manager Assets]使用Proxy來分配特定工作的處理。
@@ -42,7 +56,7 @@ curl -u admin:admin -F":operation=job" -F"someproperty=xxxxxxxxxxxx"
 
   **需求**：必須設定引數`jobid`。
 
-  **Result**: Returns a JSON representation of the result Node as created by the job processor.
+  **結果**：傳回作業處理器建立之結果Node的JSON表示法。
 
 ```shell
 curl -u admin:admin -F":operation=result" -F"jobid=xxxxxxxxxxxx"
@@ -51,9 +65,9 @@ curl -u admin:admin -F":operation=result" -F"jobid=xxxxxxxxxxxx"
 
 * `resource`
 
-  **Requirements**: the parameter jobid must be set.
+  **需求**：必須設定引數jobid。
 
-  **Result**: Returns a resource associated with the given job.
+  **結果**：傳回與指定工作關聯的資源。
 
 ```shell
 curl -u admin:admin -F":operation=resource" -F"jobid=xxxxxxxxxxxx"
@@ -62,9 +76,9 @@ curl -u admin:admin -F":operation=resource" -F"jobid=xxxxxxxxxxxx"
 
 * `remove`
 
-  **Requirements**: the parameter jobid must be set.
+  **需求**：必須設定引數jobid。
 
-  **Results**: Removes a job if found.
+  **結果**：移除工作（如果找到）。
 
 ```shell
 curl -u admin:admin -F":operation=remove" -F"jobid=xxxxxxxxxxxx"
@@ -73,17 +87,17 @@ curl -u admin:admin -F":operation=remove" -F"jobid=xxxxxxxxxxxx"
 
 ### Proxy Worker {#proxy-worker}
 
-A proxy worker is a processor responsible for handling a job and creating a result. Workers reside on the proxy instance and must implement [sling JobProcessor](https://sling.apache.org/site/eventing-and-jobs.html) to be recognized as a proxy worker.
+Proxy Worker是負責處理工作和建立結果的處理器。 Worker位於Proxy執行個體上，必須實作[sling JobProcessor](https://sling.apache.org/site/eventing-and-jobs.html)才能辨識為Proxy Worker。
 
 >[!NOTE]
 >
->The worker must implement [sling JobProcessor](https://sling.apache.org/site/eventing-and-jobs.html) to be recognized as a proxy worker.
+>背景工作必須實作[sling JobProcessor](https://sling.apache.org/site/eventing-and-jobs.html)，才能辨識為Proxy背景工作。
 
-### Client API {#client-api}
+### 使用者端API {#client-api}
 
-[`JobService`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html) is available as an OSGi service that provides methods to create jobs, remove jobs and to get results from those jobs. The default implementation of this service (`JobServiceImpl`) uses the HTTP client to communicate with the remote proxy servlet.
+[`JobService`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html)可用作OSGi服務，提供建立工作、移除工作以及從這些工作取得結果的方法。 此服務的預設實作(`JobServiceImpl`)使用HTTP使用者端與遠端Proxy servlet通訊。
 
-The following is an example of API usage:
+以下是API使用方式的範例：
 
 ```java
 @Reference
@@ -105,7 +119,7 @@ The following is an example of API usage:
  proxyJobService.removeJob(jobId);
 ```
 
-### Cloud Service configurations {#cloud-service-configurations}
+### Cloud Service設定 {#cloud-service-configurations}
 
 <!--
 TBD: Cannot find com.day.cq.dam.api.proxy at https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html which were generated in May 2020. Hiding this broken link for now.
@@ -114,13 +128,13 @@ TBD: Cannot find com.day.cq.dam.api.proxy at https://helpx.adobe.com/experience-
 >Reference documentation for the proxy API is available under [`com.day.cq.dam.api.proxy`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/dam/api/proxy/package-summary.html).
 -->
 
-Both proxy and proxy worker configurations are available via cloud services configurations as accessible from the [!DNL Assets] **Tools** console or under `/etc/cloudservices/proxy`. Each proxy worker is expected to add a node under `/etc/cloudservices/proxy` for worker specific configuration details (for example, `/etc/cloudservices/proxy/workername`).
+Proxy和Proxy Worker組態均可透過雲端服務組態使用，可從[!DNL Assets] **工具**&#x200B;主控台或`/etc/cloudservices/proxy`下存取。 每個Proxy背景工作應該在`/etc/cloudservices/proxy`下新增節點，以取得背景工作的特定組態詳細資料（例如，`/etc/cloudservices/proxy/workername`）。
 
 >[!NOTE]
 >
->See [InDesign Server Proxy Worker configuration](indesign.md#configuring-the-proxy-worker-for-indesign-server) and [Cloud Services configuration](../sites-developing/extending-cloud-config.md) for more information.
+>如需詳細資訊，請參閱[InDesign Server Proxy Worker設定](indesign.md#configuring-the-proxy-worker-for-indesign-server)和[雲端服務設定](../sites-developing/extending-cloud-config.md)。
 
-The following is an example of API usage:
+以下是API使用方式的範例：
 
 ```java
 @Reference(policy = ReferencePolicy.STATIC)
@@ -135,23 +149,23 @@ The following is an example of API usage:
  final String value = cloudConfig.get("someProperty", "defaultValue");
 ```
 
-### Developing a Customized Proxy Worker {#developing-a-customized-proxy-worker}
+### 開發自訂的Proxy Worker {#developing-a-customized-proxy-worker}
 
-The [IDS proxy worker](indesign.md) is an example of a [!DNL Assets] proxy worker that is already provided out-of-the-box to outsource the processing of InDesign assets.
+[IDS Proxy Worker](indesign.md)是現成提供的[!DNL Assets] Proxy Worker範例，可將處理InDesign資產的工作委外。
 
-You can also develop and configure your own [!DNL Assets] proxy worker to create a specialized worker to dispatch and outsource your [!DNL Assets] processing tasks.
+您也可以開發並設定您自己的[!DNL Assets] Proxy Worker，以建立專門的Worker來分派及委外您的[!DNL Assets]處理工作。
 
-Setting up your own custom proxy worker requires you to:
+設定您自己的自訂Proxy Worker需要您：
 
-* Set up and implement (using Sling eventing):
+* 設定和實作（使用Sling事件）：
 
-   * a custom job topic
-   * a custom job event handler
+  * 自訂工作主題
+  * 自訂工作事件處理常式
 
 * 然後使用JobService API來：
 
-   * 將您的自訂工作分派給Proxy
-   * 管理您的工作
+  * 將您的自訂工作分派給Proxy
+  * 管理您的工作
 
 * 如果您想要使用工作流程的Proxy，您必須使用WorkflowExternalProcess API和JobService API實作自訂外部步驟。
 

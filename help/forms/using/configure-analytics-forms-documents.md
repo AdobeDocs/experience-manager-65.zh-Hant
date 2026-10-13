@@ -9,13 +9,29 @@ exl-id: 72f0f8e3-e70b-4f78-aa0e-b31768b536f7
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 feature: Adaptive Forms
-source-git-commit: f6f6552b10cbc84d9e39e46905c2fa68201d4d96
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1611'
 ht-degree: 2%
-
 ---
-
 # 使用Cloud Service Framework進行分析 {#analyticsusingcloudframework}
 
 >[!CAUTION]
@@ -79,7 +95,7 @@ Analytics資料儲存在客戶特定的存放庫，稱為報表套裝。 若要�
 
    一般帳戶設定
 
-1. 在[一般帳戶設定]畫面中，啟用&#x200B;**地理位置報告**，然後按一下[儲存]。**&#x200B;**
+1. 在[一般帳戶設定]畫面中，啟用&#x200B;**地理位置報告**，然後按一下[儲存]。****
 1. 瀏覽至&#x200B;**編輯設定** > **流量** > **流量變數**。
 1. 在報表套裝中，設定並啟用以下流量變數。
 
@@ -118,9 +134,9 @@ Cloud Service設定是Adobe Analytics帳戶的相關資訊。 此設定可讓Ado
 
 1. 以管理員身分登入您的AEM作者執行個體。
 1. 按一下左上角的&#x200B;**Adobe Experience Manager** > **工具** ![槌子圖示](/help/forms/using/assets/tools.png) > **雲端服務** > **舊版雲端服務**。
-1. 找到&#x200B;**Adobe Analytics**&#x200B;圖示。 按一下[顯示組態]&#x200B;**&#x200B;**，然後繼續按一下[顯示組態]&#x200B;**[+]**&#x200B;以新增組態。
+1. 找到&#x200B;**Adobe Analytics**&#x200B;圖示。 按一下[顯示組態]****，然後繼續按一下[顯示組態]**[+]**&#x200B;以新增組態。
 
-   如果您是第一次使用，請按一下[立即設定] **&#x200B;**。
+   如果您是第一次使用，請按一下[立即設定] ****。
 
 1. 將標題新增到新設定（填寫名稱欄位是選擇性的）。 例如，我的分析設定。 按一下「**建立**」。
 
@@ -166,7 +182,7 @@ Adobe Analytics框架是一組Adobe Analytics變數與AEM變數之間的對應�
 
    AEM Forms Analytics設定服務
 
-1. 為下列欄位指定適當的值，然後按一下[儲存]。**&#x200B;**
+1. 為下列欄位指定適當的值，然後按一下[儲存]。****
 
    * **SiteCatalyst架構**：選取您在「設定追蹤的架構」區段中定義的架構/組態。
    * **欄位時間追蹤基準線**：指定必須追蹤欄位瀏覽的持續時間（以秒為單位）。 預設值為 0。 當值大於0 （零）時，會將兩個個別的追蹤事件傳送至Adobe Analytics伺服器。 第一個事件會指示Analytics伺服器停止追蹤退出欄位。 第二個事件會在指定的期間過後傳送。 第二個事件會指示Analytics伺服器開始追蹤造訪的欄位。 使用兩個不同的事件有助於準確測量在欄位上逗留的時間。 當值為0 （零）時，單一追蹤事件會傳送至Adobe Analytics伺服器。
