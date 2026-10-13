@@ -1,6 +1,6 @@
 ---
-title: 設計無障礙HTML5表單
-description: HTML5表單使用ARIAHTML5協助工具標準。 這些表單支援標籤式導覽，並經過認證與常用熒幕閱讀器相容。
+title: 設計無障礙的 HTML5 表單
+description: HTML5表單使用ARIA HTML5協助工具標準。 這些表單支援標籤式導覽，並經過認證與常用熒幕閱讀器相容。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
@@ -9,18 +9,33 @@ feature: HTML5 Forms,Mobile Forms
 exl-id: fca2f9b2-11a2-4db0-a370-c4046f32be63
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 97aafc4b-2598-52d6-9012-295a95969e38
+    internal-label: HTML5 Forms
+  - id: 59f95943-e802-56ac-990d-21ab923984c1
+    internal-label: Mobile Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '343'
-ht-degree: 0%
-
+source-wordcount: '342'
+ht-degree: 2%
 ---
+# 設計無障礙的 HTML5 表單 {#designing-accessible-html-forms}
 
-# 設計無障礙HTML5表單 {#designing-accessible-html-forms}
+HTML5表單使用ARIA HTML5協助工具標準來產生無障礙的HTML表單。 這些表單支援標籤式導覽（Mozilla FireFox除外），且經認證與一般熒幕閱讀器相容。 若要產生具備良好協助工具功能的HTML5表單，請根據一些基本設計准則來設計XFA表單範本。 設計准則包括設定正確的標籤順序，並為每個表單控制項提供「說文字」內容。 AEM Forms Designer支援這些表單控制項屬性的設定，以產生可存取的PDF和HTML5表單。
 
-HTML5表單使用ARIAHTML5協助工具標準來產生無障礙的HTML表單。 這些表單支援標籤式導覽（Mozilla FireFox除外），且經認證與一般熒幕閱讀器相容。 若要產生具備良好協助工具功能的HTML5表單，請根據一些基本設計准則來設計XFA表單範本。 設計准則包括設定正確的標籤順序，並為每個表單控制項提供「說文字」內容。 AEM Forms Designer支援這些表單控制項屬性的設定，以產生無障礙的PDF和HTML5表單。
-
-*注意：索引標籤導覽未涵蓋受保護欄位，例如顯示值總和的計算欄位。 若要讓熒幕助讀程式讀取受保護欄位的值，請在受保護欄位的頂端或旁邊，放置空白的唯讀欄位。 將受保護欄位的值指派給新的唯讀欄位。 熒幕助讀程式或索引標籤導覽可以挑選此唯讀欄位，並將其朗讀為受保護欄位的值。*
+*附註:Tabbed導覽未涵蓋受保護欄位，例如顯示值總和的計算欄位。 若要讓熒幕助讀程式讀取受保護欄位的值，請在受保護欄位的頂端或旁邊，放置空白的唯讀欄位。 將受保護欄位的值指派給新的唯讀欄位。 熒幕助讀程式或索引標籤導覽可以挑選此唯讀欄位，並將其朗讀為受保護欄位的值。*
 
 AEM Forms Designer包含數個可傳遞給熒幕助讀程式的說話文字選項。 對於表單中的每個物件，使用者可以為熒幕助讀程式文字指定下列其中一個設定：
 
@@ -31,4 +46,4 @@ AEM Forms Designer包含數個可傳遞給熒幕助讀程式的說話文字選�
 
 ![協助工具](assets/accessibility.png)
 
-當「表單」控制項上有工具提示、「熒幕Reader文字」和「標題」等多個選項可用時，「熒幕」Reader只會使用其中一個屬性。 預設順序為「自訂熒幕Reader文字」、「工具提示」、「標題」和「名稱」。 您可以使用協助工具浮動視窗中的熒幕Reader **優先順序**&#x200B;選項來覆寫預設順序。
+當表單控制項上有工具提示、熒幕Reader文字和標題等多個選項可用時，熒幕Reader只會使用其中一個屬性。 預設順序為「自訂熒幕Reader文字」、「工具提示」、「標題」和「名稱」。 您可以使用協助工具浮動視窗中的熒幕Reader **優先順序**&#x200B;選項來覆寫預設順序。

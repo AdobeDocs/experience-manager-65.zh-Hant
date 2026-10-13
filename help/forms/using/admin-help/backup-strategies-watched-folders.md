@@ -9,13 +9,27 @@ exl-id: 0d36160a-29fa-4cc4-a0ff-fc681d3e040e
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1080'
+source-wordcount: '1082'
 ht-degree: 0%
-
 ---
-
 # 觀察資料夾的備份策略 {#backup-strategies-for-watched-folders}
 
 本內容說明不同的備份與復原案例如何影響watched資料夾、這些案例的限制與結果，以及如何將資料遺失降至最低。
@@ -159,11 +173,11 @@ ht-degree: 0%
 * 如果可用的watched資料夾備份時間早於處理工作所需的時間，您應該允許系統建立watched資料夾，並自動將檔案放入輸入資料夾中。
 * 如果最新的可用備份不夠新，則備份時間會少於處理檔案所花的時間，而且會還原watched資料夾，因此會在下列不同階段之一中操作檔案：
 
-   * 輸入資料夾中的&#x200B;**階段1：**
-   * **階段2：**&#x200B;已複製到階段資料夾，但尚未叫用處理序
-   * **階段3：**&#x200B;已複製到階段資料夾，而且已叫用處理序
-   * **階段4：**&#x200B;操作進行中
-   * **階段5：**&#x200B;傳回結果
+  * 輸入資料夾中的&#x200B;**階段1：**
+  * **階段2：**&#x200B;已複製到階段資料夾，但尚未叫用處理序
+  * **階段3：**&#x200B;已複製到階段資料夾，而且已叫用處理序
+  * **階段4：**&#x200B;操作進行中
+  * **階段5：**&#x200B;傳回結果
 
   如果檔案位於「階段1」中，則會加以操作。 如果檔案在「舞台2」或「舞台3」中，請將它們放置在輸入資料夾中，以便再次進行操作。
 

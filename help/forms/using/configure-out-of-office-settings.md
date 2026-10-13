@@ -5,18 +5,34 @@ exl-id: e4c9d74c-e08d-4675-91f2-4f9fc2f1bcea
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: Admin, User, Developer
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '826'
-ht-degree: 2%
-
+source-wordcount: '856'
+ht-degree: 1%
 ---
-
 # 設定「外出」設定 {#configure-out-of-office-settings}
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/create-form-centric-workflows/configure-out-of-office-settings.html?lang=zh-Hant) |
+| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/create-form-centric-workflows/configure-out-of-office-settings.html) |
 | AEM 6.5 | 本文章 |
 
 如果您計畫不在辦公室，則可以指定指定指定給您該期間之料號的變更。
@@ -58,14 +74,14 @@ ht-degree: 2%
    >
    >受指派人的順序很重要。 當專案被指派給已啟用休假設定的使用者時，專案會根據指定的受指派人清單以新增受指派人的順序進行評估。 當專案符合條件時，即會指派給受指派人，且不會勾選下一個受指派人。
 
-1. 選取&#x200B;**[!UICONTROL 儲存]**。此設定會在指定的開始日期和時間生效。 如果您在離開辦公室時登入，則在變更您的設定之前，不會將您視為在辦公室中。
+1. 選取&#x200B;**[!UICONTROL 儲存]**。 此設定會在指定的開始日期和時間生效。 如果您在離開辦公室時登入，則在變更您的設定之前，不會將您視為在辦公室中。
 
 現在，系統會自動將休假期間指派給您的專案指派給指定的受指派人。
 ![外出](assets/out-of-office.png)
 
 >[!NOTE]
 >
->(僅適用於以Forms為中心的工作流程專案)啟用工作流程中&#x200B;**指派任務**&#x200B;步驟的「休假中」設定&#x200B;**選項，讓**&#x200B;允許受指派人進行委派。 只有已啟用前述選項的專案才會委派給其他使用者。
+>（僅適用於以Forms為中心的工作流程專案）啟用工作流程中&#x200B;**指派任務**&#x200B;步驟的「休假中」設定&#x200B;**選項，讓**&#x200B;允許受指派人進行委派。 只有已啟用前述選項的專案才會委派給其他使用者。
 
 ## 限制 {#limitations}
 

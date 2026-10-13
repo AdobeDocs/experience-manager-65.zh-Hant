@@ -10,13 +10,22 @@ exl-id: aef0350f-4d3d-47f4-9c7e-5675efef65d9
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 8f638eb384bdca59fb6f4f8990643e64f34622ce
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '683'
-ht-degree: 3%
-
+source-wordcount: '707'
+ht-degree: 2%
 ---
-
 # 開發人員模式{#developer-mode}
 
 在Adobe Experience Manager (AEM)中編輯頁面時，有數種[模式](/help/sites-authoring/author-environment-tools.md#modestouchoptimizedui)可供使用，包括開發人員模式。 這會開啟一個側面板，內含數個標籤，為開發人員提供目前頁面的相關資訊。 這三個索引標籤為：
@@ -82,8 +91,8 @@ ht-degree: 3%
 * 顯示呈現元件的伺服器端運算時間。
 * 可讓您展開樹狀結構並選取樹狀結構中的特定元件。 選取範圍提供元件詳細資料的存取權，例如：
 
-   * 存放庫路徑
-   * 指令碼連結(在CRXDE Lite中存取)
+  * 存放庫路徑
+  * 指令碼連結（在CRXDE Lite中存取）
 
 * 選取的元件（在內容流程中，以藍色邊框表示）將在內容樹狀結構中反白顯示（反之亦然）。
 
@@ -99,19 +108,19 @@ ht-degree: 3%
 
 * **檢視詳細資料**：顯示下列專案的清單連結：
 
-   * 用於呈現元件的所有元件指令碼。
-   * 此特定元件的存放庫內容路徑。
+  * 用於呈現元件的所有元件指令碼。
+  * 此特定元件的存放庫內容路徑。
 
   ![chlimage_1-14](assets/chlimage_1-14.png)
 
 * **編輯指令碼**：連結：
 
-   * 在CRXDE Lite中開啟元件指令碼。
+  * 在CRXDE Lite中開啟元件指令碼。
 
 * 展開元件專案（箭頭標頭）也可顯示：
 
-   * 所選元件內的階層。
-   * 所選元件的單獨呈現時間、巢狀內嵌的任何個別元件，以及合併總數。
+  * 所選元件內的階層。
+  * 所選元件的單獨呈現時間、巢狀內嵌的任何個別元件，以及合併總數。
 
   ![chlimage_1-15](assets/chlimage_1-15.png)
 
