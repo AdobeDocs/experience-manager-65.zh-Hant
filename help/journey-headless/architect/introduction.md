@@ -101,5 +101,5 @@ Adobe Experience Manager (AEM)可以選擇使用AEM GraphQL API存取您的內�
   * [了解 CMS Headless 開發](/help/journey-headless/developer/learn-about.md)
   * [了解如何建立內容模型](/help/journey-headless/developer/model-your-content.md)
 * [AEM as a Headless CMS 簡介](/help/sites-developing/headless/introduction.md)
-* [AEM開發人員入口網站](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
-* [AEM 中的無周邊教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)
+* [AEM開發人員入口網站](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=zh-Hant)
+* [AEM 中的無周邊教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=zh-Hant)

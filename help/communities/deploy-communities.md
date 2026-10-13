@@ -308,7 +308,7 @@ AEM Communities提供兩項功能，要求所有AEM伺服器執行個體使用�
 
 >[!CAUTION]
 >
->如果已經設定了另一個以加密金鑰為基礎的安全性功能，則複製加密金鑰可能會損壞設定。 如需協助，[請連絡客戶服務](https://experienceleague.adobe.com/?support-solution=General&support-tab=home#support)。
+>如果已經設定了另一個以加密金鑰為基礎的安全性功能，則複製加密金鑰可能會損壞設定。 如需協助，[請連絡客戶服務](https://experienceleague.adobe.com/zh-hant?support-solution=General&support-tab=home#support)。
 
 #### 存放庫復寫 {#repository-replication}
 
@@ -373,7 +373,7 @@ AEM Communities提供兩項功能，要求所有AEM伺服器執行個體使用�
 如果使用Dispatcher，請參閱：
 
 * AEM [Dispatcher](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates)檔案
-* [安裝Dispatcher](https://experienceleague.adobe.com/en/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install)
+* [安裝Dispatcher](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install)
 * [為社群設定Dispatcher](/help/communities/dispatcher.md)
 * [已知問題](/help/communities/troubleshooting.md#dispatcher-refetch-fails)
 

@@ -456,7 +456,7 @@ pageManager是頁面管理員物件，myResource是資源物件。 如需頁面�
 
 ## Dispatcher {#the-dispatcher}
 
-Dispatcher是Adobe的快取和/或負載平衡工具。 您可以在[Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)下找到進一步資訊。
+Dispatcher是Adobe的快取和/或負載平衡工具。 您可以在[Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant)下找到進一步資訊。
 
 ## FileVault （來源修訂系統） {#filevault-source-revision-system}
 

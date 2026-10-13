@@ -108,7 +108,7 @@ AEM Forms會顯示表單及表單中每個面板的analytics報表，如下所�
 * **草稿**：表單已儲存為草稿的次數
 * **提交專案**：已提交表單的次數
 * **中止**：使用者開始填寫表單後離開而未完成表單的次數
-* **不重複訪客**：表單由不重複訪客轉譯的次數。 如需不重複訪客的詳細資訊，請參閱[不重複訪客、造訪和客戶行為](https://helpx.adobe.com/analytics/kb/unique-visitors-visitor-behavior.html)。
+* **不重複訪客**：表單由不重複訪客轉譯的次數。 如需不重複訪客的詳細資訊，請參閱[不重複訪客、造訪和客戶行為](https://helpx.adobe.com/tw/analytics/kb/unique-visitors-visitor-behavior.html)。
 
 ![已展開的表單層級摘要分析報告](assets/analytics-report.png)
 

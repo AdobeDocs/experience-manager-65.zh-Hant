@@ -57,16 +57,16 @@ Document Security功能僅適用於JEE上的AEM Forms 。 您需要JEE上的單�
 
 1. 從[AEM授權網站(LWS)](https://licensing.adobe.com/)下載JEE安裝程式上的Adobe 6.5 Forms。 您需要有效的維護與支援合約才能下載安裝程式。
 1. 閱讀[JEE支援平台上的AEM Forms檔案](/help/forms/using/aem-forms-jee-supported-platforms.md)，並確定軟體、硬體、作業系統、應用程式伺服器、資料庫、JDK和其他基礎架構已準備好在JEE上安裝AEM Forms。
-1. （僅限非Turnkey安裝）閱讀[準備安裝AEM Forms單一伺服器](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_64)或[準備安裝AEM Forms伺服器叢集](https://www.adobe.com/go/learn_aemforms_prepareInstallcluster_64)，並準備讓您的環境在JEE上安裝並設定AEM Forms。
+1. （僅限非Turnkey安裝）閱讀[準備安裝AEM Forms單一伺服器](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_64_tw)或[準備安裝AEM Forms伺服器叢集](https://www.adobe.com/go/learn_aemforms_prepareInstallcluster_64_tw)，並準備讓您的環境在JEE上安裝並設定AEM Forms。
 1. 根據您的環境和應用程式伺服器，選擇下列其中一份檔案，然後依照指示完成安裝
 
-   * [使用JBoss整套索引鍵在JEE上安裝和部署AEM Forms](https://www.adobe.com/go/learn_aemforms_installTurnkey_64)
-   * [在JEE for JBoss上安裝和部署AEM Forms](https://www.adobe.com/go/learn_aemforms_installJBoss_64)
-   * [在JEE for WebLogic上安裝和部署AEM Forms](https://www.adobe.com/go/learn_aemforms_installWebLogic_64)
-   * [在JEE for WebSphere上安裝和部署AEM Forms](https://www.adobe.com/go/learn_aemforms_installWebSphere_64)
-   * [在JBoss叢集上的JEE上設定AEM Forms](https://www.adobe.com/go/learn_aemforms_clusterJBoss_64)
-   * [在WebLogic叢集上的JEE上設定AEM Forms](https://www.adobe.com/go/learn_aemforms_clusterWebLogic_64)
-   * [在WebSphere叢集上的JEE上設定AEM Forms](https://www.adobe.com/go/learn_aemforms_clusterWebSphere_64)
+   * [使用JBoss整套索引鍵在JEE上安裝和部署AEM Forms](https://www.adobe.com/go/learn_aemforms_installTurnkey_64_tw)
+   * [在JEE for JBoss上安裝和部署AEM Forms](https://www.adobe.com/go/learn_aemforms_installJBoss_64_tw)
+   * [在JEE for WebLogic上安裝和部署AEM Forms](https://www.adobe.com/go/learn_aemforms_installWebLogic_64_tw)
+   * [在JEE for WebSphere上安裝和部署AEM Forms](https://www.adobe.com/go/learn_aemforms_installWebSphere_64_tw)
+   * [在JBoss叢集上的JEE上設定AEM Forms](https://www.adobe.com/go/learn_aemforms_clusterJBoss_64_tw)
+   * [在WebLogic叢集上的JEE上設定AEM Forms](https://www.adobe.com/go/learn_aemforms_clusterWebLogic_64_tw)
+   * [在WebSphere叢集上的JEE上設定AEM Forms](https://www.adobe.com/go/learn_aemforms_clusterWebSphere_64_tw)
 
    >[!NOTE]
    >

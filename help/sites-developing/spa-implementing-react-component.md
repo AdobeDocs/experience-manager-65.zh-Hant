@@ -52,7 +52,7 @@ SPA製作功能提供全方位的解決方案，可支援AEM中的SPA。 本文�
 >[!CAUTION]
 >本檔案僅將[We.Retail Journal應用程式](https://github.com/adobe/aem-sample-we-retail-journal)用於示範用途。 請勿用於任何專案工作。
 >
->任何 AEM 專案都應使用 [AEM 專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)，它支援使用 React 或 Angular 的 SPA 專案並使用 SPA SDK。
+>任何 AEM 專案都應使用 [AEM 專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hant)，它支援使用 React 或 Angular 的 SPA 專案並使用 SPA SDK。
 
 ## 天氣元件 {#the-weather-component}
 

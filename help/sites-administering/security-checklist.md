@@ -59,7 +59,7 @@ ht-degree: 3%
 
 ### 安裝安全性Hotfix {#install-security-hotfixes}
 
-請確定您已安裝Adobe[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html)提供的最新安全性Hotfix。
+請確定您已安裝Adobe[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=zh-Hant)提供的最新安全性Hotfix。
 
 ### 變更AEM和OSGi Console管理員帳戶的預設密碼 {#change-default-passwords-for-the-aem-and-osgi-console-admin-accounts}
 
@@ -124,11 +124,11 @@ Adobe建議定義自訂錯誤處理常式頁面，尤其是針對404和500 HTTP�
 
 >[!NOTE]
 >
->如需詳細資訊，請參閱[如何建立自訂指令碼或錯誤處理常式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/custom-error-page.html)。
+>如需詳細資訊，請參閱[如何建立自訂指令碼或錯誤處理常式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/custom-error-page.html?lang=zh-Hant)。
 
 ### 完成Dispatcher安全性檢查清單 {#complete-dispatcher-security-checklist}
 
-AEM Dispatcher是您基礎建設的重要一環。 Adobe建議您完成[Dispatcher安全性檢查清單](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html)。
+AEM Dispatcher是您基礎建設的重要一環。 Adobe建議您完成[Dispatcher安全性檢查清單](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html?lang=zh-Hant)。
 
 >[!CAUTION]
 >

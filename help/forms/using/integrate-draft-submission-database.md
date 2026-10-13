@@ -39,7 +39,7 @@ AEM Forms入口網站草稿和提交元件可讓使用者將其表單儲存為�
 >[!NOTE]
 >
 >* 本檔案中說明的範例和設定是根據MySQL 5.6.24，您必須適當地取代它們來取代資料庫系統。
->* 確保您已安裝最新版的AEM Forms附加元件套件。 如需可用封裝的清單，請參閱[AEM Forms發行版本](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)文章。
+>* 確保您已安裝最新版的AEM Forms附加元件套件。 如需可用封裝的清單，請參閱[AEM Forms發行版本](https://helpx.adobe.com/tw/aem-forms/kb/aem-forms-releases.html)文章。
 >* 範例套件僅適用於Adaptive Forms提交動作。
 
 ## 設定範例 {#set-up-and-configure-the-sample}

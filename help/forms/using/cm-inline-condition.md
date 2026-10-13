@@ -213,7 +213,7 @@ AEM Forms可讓您在文字模組中使用內嵌條件，根據與表單資料�
    * 根據相關資料字典建立的範例XML資料檔案，同時預覽包含範例資料的字母。
    * 附加到相關資料字典的XML資料檔案。
 
-   如需詳細資訊，請參閱[資料字典](https://helpx.adobe.com/aem-forms/6-2/data-dictionary.html)。
+   如需詳細資訊，請參閱[資料字典](https://helpx.adobe.com/tw/aem-forms/6-2/data-dictionary.html)。
 
    ![6_repeatoutputpreview](assets/6_repeatoutputpreview.png)
 

@@ -107,6 +107,6 @@ Headless 是一個術語，用於描述能夠有效地將內容與內容在 Web 
 
 * [AEM as a Headless CMS 簡介](/help/sites-developing/headless/introduction.md)
 
-* [AEM開發人員入口網站](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
+* [AEM開發人員入口網站](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=zh-Hant)
 
-* [AEM 中的無周邊教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)
+* [AEM 中的無周邊教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=zh-Hant)

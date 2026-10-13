@@ -39,7 +39,7 @@ Dynamic Media Classic視訊整合將最佳化視訊的範圍延伸至所有熒�
 
 * **[!UICONTROL Scene7視訊]**&#x200B;元件會自動執行裝置和頻寬偵測，以在桌上型電腦、平板電腦和行動裝置上播放正確格式和正確品質的視訊。
 * Assets — 您可以包含最適化視訊集，而不只是單一視訊資產。 最適化視訊集包含流暢在多個熒幕播放視訊所需的所有視訊轉譯。 「最適化視訊集」會將使用不同位元速率和格式（例如400 kbps、800 kbps和1000 kbps）編碼的相同視訊版本分組。 您可使用最適化視訊集和S7視訊元件，在多個熒幕（包括桌上型電腦、iOS、Android™、BlackBerry®和Windows行動裝置）上執行最適化視訊串流。
-<!-- See [Scene7 documentation about adaptive video sets for more information](https://help.adobe.com/en_US/scene7/using/WS53492AE1-6029-45d8-BF80-F4B5CF33EB08.html). -->
+<!-- See [Scene7 documentation about adaptive video sets for more information](https://help.adobe.com/zh_TW/scene7/using/WS53492AE1-6029-45d8-BF80-F4B5CF33EB08.html). -->
 
 ## 關於FFMPEG和Dynamic Media Classic {#about-ffmpeg-and-scene}
 
@@ -80,7 +80,7 @@ Scene7視訊元件支援下列格式：
 
 如果您不需要資產的工作流程或版本設定，請將資產上傳至Scene7。 以下是建議的工作流程：
 
-1. 在Dynamic Media Classic中，[設定已排程的FTP上傳和編碼至Scene7 （系統自動化）](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html#upload-files-using-via-ftp)。
+1. 在Dynamic Media Classic中，[設定已排程的FTP上傳和編碼至Scene7 （系統自動化）](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html?lang=zh-Hant#upload-files-using-via-ftp)。
 1. 在Experience Manager中，存取「內容尋找器」之&#x200B;**[!UICONTROL Scene7]**&#x200B;索引標籤內WCM中的視訊資產。
 1. 具有&#x200B;**[!UICONTROL Scene7視訊]**&#x200B;元件的作者。
 
@@ -99,7 +99,7 @@ Scene7視訊元件支援下列格式：
 
    >[!NOTE]
    >
-   >如需視訊預設集含義的詳細資訊，請參閱[Dynamic Media Classic檔案](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html#video-presets-for-encoding-video-files)。
+   >如需視訊預設集含義的詳細資訊，請參閱[Dynamic Media Classic檔案](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html?lang=zh-Hant#video-presets-for-encoding-video-files)。
    >
    >Adobe建議您在設定通用預設集時同時選取兩個最適化視訊集，或選取&#x200B;**[!UICONTROL 最適化視訊編碼]**&#x200B;選項。
 

@@ -107,7 +107,7 @@ Headless 實作放棄了全堆疊解決方案中的傳統頁面和元件管理�
 不過，無論您的學習風格如何，Adobe都希望您隨著開始使用AEM Headless專案而獲得成功。 因此，請考慮這兩個選項。
 
 * 如果您希望繼續&#x200B;**了解 Headless 概念和 AEM Headless 技術**，您應該接著檢閱此文件[如何為您的內容建立 AEM 內容模型](model-your-content.md)來繼續您的 AEM Headless 歷程，此文件可讓您了解如何在 AEM 為內容結構建立模型。
-* 如果您偏好&#x200B;**做中學**，您可以移至 [AEM Headless 入門實作教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html)，在這裡您將直接進入 AEM Headless 開發，方式是實作一個簡單專案以公開 AEM Headless 內容。
+* 如果您偏好&#x200B;**做中學**，您可以移至 [AEM Headless 入門實作教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html?lang=zh-Hant)，在這裡您將直接進入 AEM Headless 開發，方式是實作一個簡單專案以公開 AEM Headless 內容。
 
 ## 其他資源 {#additional-resources}
 
@@ -115,7 +115,7 @@ Headless 實作放棄了全堆疊解決方案中的傳統頁面和元件管理�
 
 因此，歷程的設計宗旨是獨立自主。 但是，其中數個可以相互關聯。 查看這些額外的歷程，進一步了解 AEM 的強大功能如何共同運作。
 
-* [AEM Headless 教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html) - 如果您偏好做中學並為傾向技術，請加入我們的由 API 和框架組織的實作教學課程，其在探究如何建立和使用 AEM Headless 應用程式。
+* [AEM Headless 教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=zh-Hant) - 如果您偏好做中學並為傾向技術，請加入我們的由 API 和框架組織的實作教學課程，其在探究如何建立和使用 AEM Headless 應用程式。
 * [AEM Headless 翻譯歷程](/help/journey-headless/translation/overview.md) - 此文件歷程讓您對 Headless 技術、AEM 如何提供 Headless 內容以及如何翻譯它，有廣泛的了解。
 * [Headless 製作歷程](/help/journey-headless/author/overview.md) - 從這裡開始，此歷程會逐步引導您了解 AEM 強大且靈活的 Headless 特性、其功能，以及如何在您的第一個 Headless 專案中建立內容模型。
 * [Headless架構者歷程](/help/journey-headless/architect/overview.md) — 從這裡開始，瞭解Adobe Experience Manager強大且有彈性的無頭式功能，以及如何為您的專案建立內容的模型。

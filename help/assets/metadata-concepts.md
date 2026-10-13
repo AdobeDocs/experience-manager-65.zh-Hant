@@ -85,7 +85,7 @@ ht-degree: 8%
 
 ### XMP {#xmp}
 
-[!DNL Extensible Metadata Platform] (XMP)是[!DNL Experience Manager Assets]用於所有中繼資料管理的開放標準。 此標準提供通用中繼資料編碼，可嵌入至所有檔案格式。 Adobe和其他公司支援XMP標準，因為它提供豐富的內容模型。 XMP標準版和[!DNL Experience Manager Assets]版的使用者擁有強大的平台可建置。 如需詳細資訊，請參閱[XMP](https://www.adobe.com/products/xmp.html)。
+[!DNL Extensible Metadata Platform] (XMP)是[!DNL Experience Manager Assets]用於所有中繼資料管理的開放標準。 此標準提供通用中繼資料編碼，可嵌入至所有檔案格式。 Adobe和其他公司支援XMP標準，因為它提供豐富的內容模型。 XMP標準版和[!DNL Experience Manager Assets]版的使用者擁有強大的平台可建置。 如需詳細資訊，請參閱[XMP](https://www.adobe.com/tw/products/xmp.html)。
 
 ### ID3 {#id}
 
@@ -137,7 +137,7 @@ Exif定義的中繼資料欄位通常屬於技術性質，在描述性中繼資�
 * CQ — 由[!DNL Experience Manager Assets]使用。
 * DAM - [!DNL Experience Manager Assets]使用。
 * DEX - [!DNL Optima SC Description explorer]是Windows作業系統中繼資料和檔案管理的工具集合。
-* CRS - [Adobe Photoshop Camera Raw](https://helpx.adobe.com/camera-raw/using/introduction-camera-raw.html)。
+* CRS - [Adobe Photoshop Camera Raw](https://helpx.adobe.com/tw/camera-raw/using/introduction-camera-raw.html)。
 * LR - [!DNL Adobe Lightroom]。
 * MediaPro - [iView MediaPro](https://en.wikipedia.org/wiki/Phase_One_Media_Pro)。
 * MicrosoftPhoto和MP - Microsoft像片。

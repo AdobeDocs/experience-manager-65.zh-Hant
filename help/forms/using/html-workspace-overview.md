@@ -46,7 +46,7 @@ AEM Forms工作區是AEM Forms的一部分。 除了PDF forms，Workspace還協�
 
 ## 熟悉 {#getting-familiar}
 
-若要熟悉建立表單應用程式以自動化業務流程的端對端流程，請按照以下逐步說明進行操作。 逐步說明後，您可以使用Workbench、Designer和AEM Forms工作區來建立、管理和測試應用程式。 如需實作詳細資料，請參閱[建立您的第一個AEM Forms應用程式](https://help.adobe.com/en_US/livecycle/11.0/CreateFirstApp/index.html)。
+若要熟悉建立表單應用程式以自動化業務流程的端對端流程，請按照以下逐步說明進行操作。 逐步說明後，您可以使用Workbench、Designer和AEM Forms工作區來建立、管理和測試應用程式。 如需實作詳細資料，請參閱[建立您的第一個AEM Forms應用程式](https://help.adobe.com/zh_TW/livecycle/11.0/CreateFirstApp/index.html)。
 
 ## 功能概觀 {#functional-overview}
 

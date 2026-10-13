@@ -31,7 +31,7 @@ ht-degree: 6%
 >
 >AEM 6.5已棄用大部分的基礎元件。 如需進一步資訊，請參閱[發行說明](/help/release-notes/deprecated-removed-features.md)。
 >
->Adobe建議在AEM專案中使用更現代且更可擴充的[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。 這些元件是[We.Retail範例內容](/help/sites-developing/we-retail.md)的一部分，也可以[單獨安裝，由您的管理員用於開發](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/using.html)。
+>Adobe建議在AEM專案中使用更現代且更可擴充的[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)。 這些元件是[We.Retail範例內容](/help/sites-developing/we-retail.md)的一部分，也可以[單獨安裝，由您的管理員用於開發](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/using.html?lang=zh-Hant)。
 >
 >您可以使用[AEM Modernize Tools Suite](https://opensource.adobe.com/aem-modernize-tools/)來重構基礎元件型網站，以使用核心元件。
 
@@ -80,7 +80,7 @@ ht-degree: 6%
 
 >[!CAUTION]
 >
->已棄用此基礎元件。 Adobe建議改用[影像核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/image.html)。
+>已棄用此基礎元件。 Adobe建議改用[影像核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/image.html?lang=zh-Hant)。
 
 最適化影像基礎元件會產生大小適合網頁開啟視窗的影像。 若要使用元件，您可以從檔案系統或DAM提供影像資源。 開啟網頁時，網頁瀏覽器會下載已調整大小的影像復本，以適合目前的視窗。
 
@@ -163,7 +163,7 @@ ht-degree: 6%
 
 >[!CAUTION]
 >
->已棄用此基礎元件。 Adobe建議改用[轉盤核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/carousel.html)。
+>已棄用此基礎元件。 Adobe建議改用[轉盤核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/carousel.html?lang=zh-Hant)。
 
 轉盤元件可讓您顯示與個別頁面相關聯的影像：
 
@@ -229,13 +229,13 @@ ht-degree: 6%
 
 >[!NOTE]
 >
->您可以為Adobe Experience Manager建立自訂轉盤元件，該元件會在AEM DAM中顯示數位資產。 請參閱[建立Adobe Experience Manager的自訂轉盤元件](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)。
+>您可以為Adobe Experience Manager建立自訂轉盤元件，該元件會在AEM DAM中顯示數位資產。 請參閱[建立Adobe Experience Manager的自訂轉盤元件](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hant)。
 
 ### 圖表 {#chart}
 
 >[!CAUTION]
 >
->已棄用此基礎元件。 Adobe建議改用[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。
+>已棄用此基礎元件。 Adobe建議改用[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)。
 
 圖表元件可讓您新增長條圖、折線圖或圓餅圖。 AEM會根據您提供的資料建立圖表。 您可以直接在「資料」標籤中輸入，或複製並貼上試算表來提供資料。
 
@@ -264,13 +264,13 @@ ht-degree: 6%
 
 >[!NOTE]
 >
->您可以建立自訂AEM圖表控制項，在AEM JCR中顯示資料。 如需詳細資訊，請參閱[在圖表中顯示Adobe Experience Manager資料](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)。
+>您可以建立自訂AEM圖表控制項，在AEM JCR中顯示資料。 如需詳細資訊，請參閱[在圖表中顯示Adobe Experience Manager資料](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hant)。
 
 ### 內容片段 {#content-fragment}
 
 >[!CAUTION]
 >
->已棄用此基礎元件。 Adobe建議改用[內容片段核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html)。
+>已棄用此基礎元件。 Adobe建議改用[內容片段核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html?lang=zh-Hant)。
 
 [內容片段](/help/sites-authoring/content-fragments.md)已建立並管理為不受頁面影響的資產。 接著，您就可以在編寫內容頁面時，使用這些片段及其變化版本。
 
@@ -278,7 +278,7 @@ ht-degree: 6%
 
 >[!CAUTION]
 >
->已棄用此基礎元件。 Adobe建議改用[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。
+>已棄用此基礎元件。 Adobe建議改用[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)。
 
 此元件可讓您上傳儲存設計封裝的zip檔案。
 
@@ -286,7 +286,7 @@ ht-degree: 6%
 
 >[!CAUTION]
 >
->已棄用此基礎元件。 Adobe建議改用[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。
+>已棄用此基礎元件。 Adobe建議改用[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)。
 
 下載元件會在選取的網頁上建立連結，以下載特定檔案。 您可以從「內容尋找器」拖曳資產或上傳檔案。
 
@@ -306,7 +306,7 @@ ht-degree: 6%
 
 >[!CAUTION]
 >
->已棄用此基礎元件。 Adobe建議改用[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。
+>已棄用此基礎元件。 Adobe建議改用[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)。
 
 外部應用程式整合元件(**External**)可讓您使用iframe將外部應用程式內嵌至AEM頁面。
 
@@ -337,7 +337,7 @@ ht-degree: 6%
 
 >[!CAUTION]
 >
->已棄用此基礎元件。 Adobe建議改用[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。
+>已棄用此基礎元件。 Adobe建議改用[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)。
 
 >[!CAUTION]
 >
@@ -385,7 +385,7 @@ Flash元件可讓您載入Flash影片。 您可以從內容尋找器將Flash資�
 
 >[!CAUTION]
 >
->已棄用此基礎元件。 Adobe建議改用[影像核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/image.html)。
+>已棄用此基礎元件。 Adobe建議改用[影像核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/image.html?lang=zh-Hant)。
 
 影像元件會根據指定的引數顯示影像和隨附文字。
 
@@ -471,13 +471,13 @@ Flash元件可讓您載入Flash影片。 您可以從內容尋找器將Flash資�
 
 >[!NOTE]
 >
->此元件已使用[HTML範本語言(HTL)](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)實作。
+>此元件已使用[HTML範本語言(HTL)](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=zh-Hant)實作。
 
 ### 清單 {#list}
 
 >[!CAUTION]
 >
->已棄用此基礎元件。 Adobe建議改用[清單核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/list.html)。
+>已棄用此基礎元件。 Adobe建議改用[清單核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/list.html?lang=zh-Hant)。
 
 「清單」元件可讓您設定顯示清單的搜尋條件：
 
@@ -551,7 +551,7 @@ Flash元件可讓您載入Flash影片。 您可以從內容尋找器將Flash資�
 
 >[!CAUTION]
 >
->已棄用此基礎元件。 Adobe建議改用[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。
+>已棄用此基礎元件。 Adobe建議改用[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)。
 
 >[!CAUTION]
 >
@@ -617,7 +617,7 @@ Flash元件可讓您載入Flash影片。 您可以從內容尋找器將Flash資�
 
 >[!CAUTION]
 >
->已棄用此基礎元件。 Adobe建議改用[內容片段核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html)。
+>已棄用此基礎元件。 Adobe建議改用[內容片段核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html?lang=zh-Hant)。
 
 **Reference**&#x200B;元件可讓您參考AEM網站其他頁面（在目前執行個體內）的文字。 參考段落的內容接著會出現在目前的頁面。 內容會在來源段落變更時更新（可能需要重新整理頁面）。
 
@@ -651,7 +651,7 @@ Flash元件可讓您載入Flash影片。 您可以從內容尋找器將Flash資�
 
 >[!CAUTION]
 >
->已棄用此基礎元件。 Adobe建議改用[快速搜尋核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/quick-search.html)。
+>已棄用此基礎元件。 Adobe建議改用[快速搜尋核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/quick-search.html?lang=zh-Hant)。
 
 搜尋元件會將搜尋功能新增至您的頁面。
 
@@ -720,7 +720,7 @@ Flash元件可讓您載入Flash影片。 您可以從內容尋找器將Flash資�
 
 >[!CAUTION]
 >
->已棄用此基礎元件。 Adobe建議改用[導覽](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/navigation.html)、[語言導覽](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/language-navigation.html)及[階層連結核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/breadcrumb.html)。
+>已棄用此基礎元件。 Adobe建議改用[導覽](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/navigation.html?lang=zh-Hant)、[語言導覽](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/language-navigation.html?lang=zh-Hant)及[階層連結核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/breadcrumb.html?lang=zh-Hant)。
 
 自動網站地圖清單（使用預設設定）會列出目前網站中的所有頁面（作為作用中連結）。 例如，擷取會顯示：
 
@@ -738,7 +738,7 @@ Flash元件可讓您載入Flash影片。 您可以從內容尋找器將Flash資�
 
 >[!CAUTION]
 >
->已棄用此基礎元件。 Adobe建議改用[轉盤核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/carousel.html)。
+>已棄用此基礎元件。 Adobe建議改用[轉盤核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/carousel.html?lang=zh-Hant)。
 
 >[!CAUTION]
 >
@@ -772,7 +772,7 @@ Flash元件可讓您載入Flash影片。 您可以從內容尋找器將Flash資�
 
 >[!CAUTION]
 >
->已棄用此基礎元件。 Adobe建議改用[文字核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/text.html)。
+>已棄用此基礎元件。 Adobe建議改用[文字核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/text.html?lang=zh-Hant)。
 
 >[!NOTE]
 >
@@ -821,7 +821,7 @@ Flash元件可讓您載入Flash影片。 您可以從內容尋找器將Flash資�
 
 >[!CAUTION]
 >
->已棄用此基礎元件。 Adobe建議改用[文字核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/text.html)。
+>已棄用此基礎元件。 Adobe建議改用[文字核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/text.html?lang=zh-Hant)。
 
 >[!NOTE]
 >
@@ -850,7 +850,7 @@ Flash元件可讓您載入Flash影片。 您可以從內容尋找器將Flash資�
 
 >[!CAUTION]
 >
->已棄用此基礎元件。 Adobe建議改用[影像](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/image.html)和[文字核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/text.html)。
+>已棄用此基礎元件。 Adobe建議改用[影像](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/image.html?lang=zh-Hant)和[文字核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/text.html?lang=zh-Hant)。
 
 文字與影像元件會新增文字區塊和影像。 您也可以分別新增及編輯文字和影像。 如需詳細資訊，請參閱[Text](#text)和[Image](#image)元件。
 
@@ -898,7 +898,7 @@ Flash元件可讓您載入Flash影片。 您可以從內容尋找器將Flash資�
 
 >[!CAUTION]
 >
->已棄用此基礎元件。 Adobe建議改用[標題核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/list.html)。
+>已棄用此基礎元件。 Adobe建議改用[標題核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/list.html?lang=zh-Hant)。
 
 標題元件可以：
 
@@ -927,7 +927,7 @@ Flash元件可讓您載入Flash影片。 您可以從內容尋找器將Flash資�
 
 >[!CAUTION]
 >
->已棄用此基礎元件。 Adobe建議改用[核心元件內嵌元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/embed.html)。
+>已棄用此基礎元件。 Adobe建議改用[核心元件內嵌元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/embed.html?lang=zh-Hant)。
 
 >[!CAUTION]
 >
@@ -987,7 +987,7 @@ Flash元件可讓您載入Flash影片。 您可以從內容尋找器將Flash資�
 
 >[!CAUTION]
 >
->已棄用基礎元件。 Adobe建議改用[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。
+>已棄用基礎元件。 Adobe建議改用[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)。
 
 表單元件可用來建立表單，以供訪客提交輸入。 Forms和表單元件可用來收集包含使用者意見回饋（例如客戶滿意度問卷）和使用者資訊（例如使用者註冊）的資訊。
 
@@ -1107,7 +1107,7 @@ Forms是由數個不同元件所建置：
 
 >[!CAUTION]
 >
->已棄用此基礎元件。 Adobe建議改用[表單容器核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-container.html)。
+>已棄用此基礎元件。 Adobe建議改用[表單容器核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-container.html?lang=zh-Hant)。
 
 表單元件使用&#x200B;**表單開頭**&#x200B;和&#x200B;**表單結尾**&#x200B;元素來定義表單的開頭和結尾。 開始和結束一律成對，以確保表單已正確定義。
 
@@ -1117,7 +1117,7 @@ Forms是由數個不同元件所建置：
 
 >[!NOTE]
 >
->基礎元件表單元件僅支援使用其他基礎元件表單元件（按鈕、文字、隱藏等等）。 不支援在基礎元件表單中使用[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)表單元件（反之）。
+>基礎元件表單元件僅支援使用其他基礎元件表單元件（按鈕、文字、隱藏等等）。 不支援在基礎元件表單中使用[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)表單元件（反之）。
 
 #### 表單開始 {#start-of-form}
 
@@ -1335,7 +1335,7 @@ Forms是由數個不同元件所建置：
 
 >[!CAUTION]
 >
->已棄用此基礎元件。 Adobe建議改用[表單文字核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-text.html)。
+>已棄用此基礎元件。 Adobe建議改用[表單文字核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-text.html?lang=zh-Hant)。
 
 讓使用者輸入帳戶名稱：
 
@@ -1345,7 +1345,7 @@ Forms是由數個不同元件所建置：
 
 >[!CAUTION]
 >
->已棄用此基礎元件。 Adobe建議改用[表單文字核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-text.html)。
+>已棄用此基礎元件。 Adobe建議改用[表單文字核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-text.html?lang=zh-Hant)。
 
 可讓您新增具有以下格式的國際位址列位：
 
@@ -1357,7 +1357,7 @@ Forms是由數個不同元件所建置：
 
 >[!CAUTION]
 >
->已棄用此基礎元件。 Adobe建議改用[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。
+>已棄用此基礎元件。 Adobe建議改用[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)。
 
 >[!CAUTION]
 >
@@ -1373,7 +1373,7 @@ Forms是由數個不同元件所建置：
 
 >[!CAUTION]
 >
->已棄用此基礎元件。 Adobe建議改用[表單選項核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-options.html)。
+>已棄用此基礎元件。 Adobe建議改用[表單選項核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-options.html?lang=zh-Hant)。
 
 核取方塊可讓您建立多個核取方塊之一的清單，其中多個核取方塊可同時選取。
 
@@ -1391,7 +1391,7 @@ Forms是由數個不同元件所建置：
 
 >[!CAUTION]
 >
->已棄用此基礎元件。 Adobe建議改用[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。
+>已棄用此基礎元件。 Adobe建議改用[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)。
 
 可讓您提供輸入信用卡詳細資料所需的欄位。 您可以將其設定為指定接受的卡片型別和所需的資訊（例如安全碼）。
 
@@ -1401,7 +1401,7 @@ Forms是由數個不同元件所建置：
 
 >[!CAUTION]
 >
->已棄用此基礎元件。 Adobe建議改用[表單選項核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-options.html)。
+>已棄用此基礎元件。 Adobe建議改用[表單選項核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-options.html?lang=zh-Hant)。
 
 下拉式清單可設定為您提供一系列的值供您選取：
 
@@ -1419,7 +1419,7 @@ Forms是由數個不同元件所建置：
 
 >[!CAUTION]
 >
->已棄用此基礎元件。 Adobe建議改用[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。
+>已棄用此基礎元件。 Adobe建議改用[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)。
 
 檔案上傳元件為使用者提供了一種選擇和上傳檔案的機制。
 
@@ -1427,13 +1427,13 @@ Forms是由數個不同元件所建置：
 
 >[!NOTE]
 >
->您可以建立自訂上傳元件以將檔案上傳到Sling Servlet。 如需詳細資訊，請參閱[將檔案上傳至Adobe Experience Manager](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/aem-cloud-service-create-asset-servlet-for-uploading-small-files/td-p/404276)。
+>您可以建立自訂上傳元件以將檔案上傳到Sling Servlet。 如需詳細資訊，請參閱[將檔案上傳至Adobe Experience Manager](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/aem-cloud-service-create-asset-servlet-for-uploading-small-files/td-p/404276?profile.language=zh-Hant)。
 
 ### 隱藏欄位 {#hidden-field}
 
 >[!CAUTION]
 >
->已棄用此基礎元件。 Adobe建議改用[表單隱藏核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-hidden.html)。
+>已棄用此基礎元件。 Adobe建議改用[表單隱藏核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-hidden.html?lang=zh-Hant)。
 
 可讓您建立隱藏欄位。 這些隱藏欄位可用於各種用途。 例如，在提交表單後必須執行動作，或在後處理中需要隱藏資料時。
 
@@ -1449,7 +1449,7 @@ Forms是由數個不同元件所建置：
 
 >[!CAUTION]
 >
->已棄用此基礎元件。 Adobe建議改用[表單按鈕核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-button.html)。
+>已棄用此基礎元件。 Adobe建議改用[表單按鈕核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-button.html?lang=zh-Hant)。
 
 影像按鈕可讓您建立具有自己影像和文字的按鈕：
 
@@ -1459,7 +1459,7 @@ Forms是由數個不同元件所建置：
 
 >[!CAUTION]
 >
->已棄用此基礎元件。 Adobe建議改用[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。
+>已棄用此基礎元件。 Adobe建議改用[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)。
 
 影像上傳元件為使用者提供選取和上傳影像檔案的機制。
 
@@ -1469,7 +1469,7 @@ Forms是由數個不同元件所建置：
 
 >[!CAUTION]
 >
->已棄用此基礎元件。 Adobe建議改用[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。
+>已棄用此基礎元件。 Adobe建議改用[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)。
 
 連結欄位可讓使用者指定URL：
 
@@ -1481,7 +1481,7 @@ Forms是由數個不同元件所建置：
 
 >[!CAUTION]
 >
->已棄用此基礎元件。 Adobe建議改用[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。
+>已棄用此基礎元件。 Adobe建議改用[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)。
 
 允許使用者輸入密碼：
 
@@ -1491,7 +1491,7 @@ Forms是由數個不同元件所建置：
 
 >[!CAUTION]
 >
->已棄用此基礎元件。 Adobe建議改用[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。
+>已棄用此基礎元件。 Adobe建議改用[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)。
 
 此元件為使用者提供以下兩個欄位：
 
@@ -1506,7 +1506,7 @@ Forms是由數個不同元件所建置：
 
 >[!CAUTION]
 >
->已棄用此基礎元件。 Adobe建議改用[表單選項核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-options.html)。
+>已棄用此基礎元件。 Adobe建議改用[表單選項核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-options.html?lang=zh-Hant)。
 
 選項群組會提供您一或多個選項核取方塊的清單，其中只有一個選項核取方塊可以在任何特定時間選取。
 
@@ -1524,7 +1524,7 @@ Forms是由數個不同元件所建置：
 
 >[!CAUTION]
 >
->已棄用此基礎元件。 Adobe建議改用[表單按鈕核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-button.html)。
+>已棄用此基礎元件。 Adobe建議改用[表單按鈕核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-button.html?lang=zh-Hant)。
 
 此元件可讓您建立具有預設文字的提交按鈕：
 
@@ -1538,7 +1538,7 @@ Forms是由數個不同元件所建置：
 
 >[!CAUTION]
 >
->已棄用此基礎元件。 Adobe建議改用[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。
+>已棄用此基礎元件。 Adobe建議改用[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)。
 
 此欄位可讓您選取標籤：
 
@@ -1565,7 +1565,7 @@ Forms是由數個不同元件所建置：
 
 >[!CAUTION]
 >
->已棄用此基礎元件。 Adobe建議改用[表單文字核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-text.html)。
+>已棄用此基礎元件。 Adobe建議改用[表單文字核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-text.html?lang=zh-Hant)。
 
 標準文字欄位可設定為您所需的大小，並在訊息中擁有您自己的銷售機會：
 
@@ -1575,7 +1575,7 @@ Forms是由數個不同元件所建置：
 
 >[!CAUTION]
 >
->已棄用此基礎元件。 Adobe建議改用[表單按鈕核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-button.html)。
+>已棄用此基礎元件。 Adobe建議改用[表單按鈕核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-button.html?lang=zh-Hant)。
 
 可讓您建立用於工作流程的提交按鈕。
 

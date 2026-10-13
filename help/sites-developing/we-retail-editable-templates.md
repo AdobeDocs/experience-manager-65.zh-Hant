@@ -83,4 +83,4 @@ We.Retail中的所有頁面都是以可編輯的範本為基礎，讓非開發�
 
 如需進一步資訊，請參閱撰寫檔案[建立頁面範本](/help/sites-authoring/templates.md)或開發人員檔案頁面[範本 — 可編輯](/help/sites-developing/page-templates-editable.md)，以取得可編輯範本的完整技術細節。
 
-您可能也想要調查[核心元件](/help/sites-developing/we-retail-core-components.md)。 請參閱撰寫檔案[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)，以取得核心元件功能的概述，以及開發人員檔案[開發核心元件](https://helpx.adobe.com/experience-manager/core-components/using/developing.html)，以取得技術概述。
+您可能也想要調查[核心元件](/help/sites-developing/we-retail-core-components.md)。 請參閱撰寫檔案[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)，以取得核心元件功能的概述，以及開發人員檔案[開發核心元件](https://helpx.adobe.com/tw/experience-manager/core-components/using/developing.html)，以取得技術概述。

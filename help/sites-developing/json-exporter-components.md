@@ -44,7 +44,7 @@ JSON匯出是以[Sling模型](https://sling.apache.org/documentation/bundles/mod
 
 >[!NOTE]
 >
->如需使用Sling模型的範例，請參閱[在AEM中開發Sling模型匯出工具](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html)。
+>如需使用Sling模型的範例，請參閱[在AEM中開發Sling模型匯出工具](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html?lang=zh-Hant)。
 
 Sling模型實作類別必須使用以下專案註釋：
 
@@ -86,7 +86,7 @@ https://<server>:<port>/content/page.model.selector1.selector2.json
 
 ## 範例 {#example}
 
-核心元件自核心元件[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)發行版本1.1.0起便已支援JSON匯出，並可作為參考使用。
+核心元件自核心元件[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)發行版本1.1.0起便已支援JSON匯出，並可作為參考使用。
 
 如需範例，請參閱影像核心元件的Sling模型實作及其附註介面。
 
@@ -101,9 +101,9 @@ GITHUB上的程式碼
 
 如需詳細資訊，請參閱下列內容：
 
-* Assets使用手冊[&#128279;](https://helpx.adobe.com/experience-manager/6-4/assets/user-guide.html?topic=/experience-manager/6-4/assets/morehelp/content-fragments.ug.js)中的內容片段主題
+* Assets使用手冊[&#128279;](https://helpx.adobe.com/tw/experience-manager/6-4/assets/user-guide.html?topic=/experience-manager/6-4/assets/morehelp/content-fragments.ug.js)中的內容片段主題
 
 * [內容片段模型](/help/assets/content-fragments/content-fragments-models.md)
 * [使用內容片段製作](/help/sites-authoring/content-fragments.md)
 * [內容服務的 JSON 匯出工具](/help/sites-developing/json-exporter.md)
-* [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)和[內容片段元件](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html)
+* [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)和[內容片段元件](https://helpx.adobe.com/tw/experience-manager/core-components/using/content-fragment-component.html)

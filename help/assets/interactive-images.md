@@ -389,9 +389,9 @@ ht-degree: 1%
 
 若要針對回應式環境將「裁切」套用至可購物互動影像，您可以將互動影像設定屬性`ZoomView.iscommand`包含至路徑。 已呼叫元件`ZoomView`，且`iscommand`是您套用的「裁切」影像伺服命令。
 
-請參閱[ZoomView.iscommand](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/command-reference-configuration-attributes-interactive-images/r-html5-aem-interactive-image-config-attrib-zoomview-iscommand)組態屬性。
+請參閱[ZoomView.iscommand](https://experienceleague.adobe.com/zh-hant/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/command-reference-configuration-attributes-interactive-images/r-html5-aem-interactive-image-config-attrib-zoomview-iscommand)組態屬性。
 
-請參閱[裁切](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-crop)影像伺服命令。
+請參閱[裁切](https://experienceleague.adobe.com/zh-hant/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-crop)影像伺服命令。
 
 您現在已準備好將互動式影像與網站上現有的快速檢視整合。
 

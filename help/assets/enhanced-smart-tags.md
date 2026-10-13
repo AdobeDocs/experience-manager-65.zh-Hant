@@ -32,7 +32,7 @@ ht-degree: 7%
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/smart-tags.html?lang=en) |
+| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/smart-tags.html?lang=zh-Hant) |
 | AEM 6.5 | 本文章 |
 
 需要處理數位資產的組織，有越來越多在資產後設資料內採用以分類法控制的詞彙。 簡言之，其包含一組關鍵字清單，而員工、合作夥伴和客戶常用這些關鍵字來指稱及搜尋特定類別的數位資產。 使用以分類法控制的詞彙來標記資產，確保可輕鬆識別和檢索資產。
@@ -214,4 +214,4 @@ ht-degree: 7%
 >* [智慧標籤概觀及訓練方式](enhanced-smart-tags.md)
 >* [設定智慧標籤](config-smart-tagging.md)
 >* [疑難排解OAuth憑證的智慧標籤](config-oauth.md)
->* [有關智慧標籤的教學影片](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/image-smart-tags.html)
+>* [有關智慧標籤的教學影片](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/image-smart-tags.html?lang=zh-Hant)

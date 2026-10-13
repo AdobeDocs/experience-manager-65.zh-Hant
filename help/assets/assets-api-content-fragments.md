@@ -56,7 +56,7 @@ ht-degree: 23%
 
 例如，單頁應用程式(SPA)，以框架為基礎或自訂，需要透過HTTP API提供的內容，通常為JSON格式。
 
-雖然[AEM核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)提供非常完整、彈性且可自訂的API，可為此提供所需的讀取作業，並可自訂其JSON輸出，但這些元件確實需要AEM WCM （網頁內容管理）專門知識才能實作，因為它們必須託管在基於專用AEM範本的頁面中。 並非所有SPA開發組織都能直接存取這些知識。
+雖然[AEM核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)提供非常完整、彈性且可自訂的API，可為此提供所需的讀取作業，並可自訂其JSON輸出，但這些元件確實需要AEM WCM （網頁內容管理）專門知識才能實作，因為它們必須託管在基於專用AEM範本的頁面中。 並非所有SPA開發組織都能直接存取這些知識。
 
 此時可使用Assets REST API。 它可讓開發人員直接存取資產（例如影像和內容片段），而不需要先將資產內嵌在頁面中，並以序列化JSON格式傳送其內容。
 
@@ -169,8 +169,8 @@ HTTP 方法決定要執行的操作：
 >
 >如需進一步詳細資訊，請參閱：
 >
->* [CORS/AEM 說明](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html)
->* [影片 - 使用 AEM 開發 CORS](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/develop-for-cross-origin-resource-sharing.html)
+>* [CORS/AEM 說明](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html?lang=zh-Hant)
+>* [影片 - 使用 AEM 開發 CORS](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/develop-for-cross-origin-resource-sharing.html?lang=zh-Hant)
 >
 
 在有特定驗證需求的環境中，建議使用OAuth。
@@ -411,4 +411,4 @@ Assets可以有多個轉譯。 這些通常會顯示為子實體，其中一個�
 如需進一步詳細資訊，請參閱：
 
 * [Assets HTTP API檔案](/help/assets/mac-api-assets.md)
-* [AEM Gem工作階段： OAuth](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-oauth-server-functionality-in-aem.html)
+* [AEM Gem工作階段： OAuth](https://helpx.adobe.com/tw/experience-manager/kt/eseminars/gems/aem-oauth-server-functionality-in-aem.html)

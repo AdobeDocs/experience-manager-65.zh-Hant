@@ -54,7 +54,7 @@ Microsoft SharePoint的聯結器可啟用AEM表單與Microsoft SharePoint之間�
 
 ## Microsoft SharePoint設定服務 {#microsoft-sharepoint-configuration-service}
 
-Microsoft SharePoint設定服務`(MSSharePointConfigService)`可讓您為具有模擬許可權的AEM表單使用者指定認證。 如需模擬許可權的相關資訊，請參閱[設定Microsoft SharePoint的聯結器](https://help.adobe.com/en_US/AEMForms/6.1/SharePointConfig/index.html)。 請依照下列步驟指定`MSSharePointConfigService`的設定：
+Microsoft SharePoint設定服務`(MSSharePointConfigService)`可讓您為具有模擬許可權的AEM表單使用者指定認證。 如需模擬許可權的相關資訊，請參閱[設定Microsoft SharePoint的聯結器](https://help.adobe.com/zh_TW/AEMForms/6.1/SharePointConfig/index.html)。 請依照下列步驟指定`MSSharePointConfigService`的設定：
 
 1. 在Administration Console中，按一下「服務>應用程式和服務>服務管理」。
 1. 瀏覽服務清單並按一下`MSSharePointConfigService`。

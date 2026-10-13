@@ -313,7 +313,7 @@ AEM部署有三個重要的建置組塊。 內容作者、編輯者和核准者�
 
 >[!CAUTION]
 >
->關聯式資料庫微核心受到限制支援。 使用此型別的Micro Kernel之前，請連絡[Adobe客戶服務](https://experienceleague.adobe.com/?support-solution=General&support-tab=home#support)。
+>關聯式資料庫微核心受到限制支援。 使用此型別的Micro Kernel之前，請連絡[Adobe客戶服務](https://experienceleague.adobe.com/zh-hant?support-solution=General&support-tab=home#support)。
 
 ![chlimage_1-3](assets/chlimage_1-3a.png)
 
@@ -325,7 +325,7 @@ AEM部署有三個重要的建置組塊。 內容作者、編輯者和核准者�
 
 >[!NOTE]
 >
->Adobe建議您選擇使用Adobe Managed Services在Azure或Amazon Web Services (AWS)上部署AEM的選項。 客戶受益於擁有在這些雲端運算環境中部署和操作AEM的經驗和技能的團隊。 請參閱[有關Adobe Managed Services的其他檔案](https://business.adobe.com/products/experience-manager/managed-services.html?aemClk=t)。
+>Adobe建議您選擇使用Adobe Managed Services在Azure或Amazon Web Services (AWS)上部署AEM的選項。 客戶受益於擁有在這些雲端運算環境中部署和操作AEM的經驗和技能的團隊。 請參閱[有關Adobe Managed Services的其他檔案](https://business.adobe.com/tw/products/experience-manager/managed-services.html?aemClk=t)。
 >
 >如需如何在Adobe Managed Services之外的Azure或AWS上部署AEM的建議，Adobe建議直接與雲端服務供應商合作。 或者，請洽詢Adobe的合作夥伴，由其支援在您選擇的雲端環境中部署AEM。 選取的雲端服務供應商或合作夥伴負責其支援的架構調整規格、設計和實作，以符合您的特定效能、負載、擴充性和安全性需求。
 >

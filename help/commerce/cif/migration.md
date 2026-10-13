@@ -38,7 +38,7 @@ CIF附加元件不支援匯入產品目錄資料。 使用CIF附加元件主體�
 
 >[!TIP]
 >
->如果沒有可用的即時API，則應使用具有API的外部產品快取進行整合。 範例[Magento open-source](https://business.adobe.com/products/magento/open-source.html)。
+>如果沒有可用的即時API，則應使用具有API的外部產品快取進行整合。 範例[Magento open-source](https://business.adobe.com/tw/products/magento/open-source.html)。
 
 ## AEM轉譯的產品目錄體驗
 

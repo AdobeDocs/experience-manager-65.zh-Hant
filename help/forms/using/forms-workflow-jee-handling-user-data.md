@@ -38,7 +38,7 @@ AEM Forms JEE工作流程提供設計、建立和管理業務流程的工具。 
 * 使用watched資料夾
 * 使用電子郵件
 
-如需建立AEM Forms JEE工作流程程式的詳細資訊，請參閱[Workbench說明](https://www.adobe.com/go/learn_aemforms_workbench_65)。
+如需建立AEM Forms JEE工作流程程式的詳細資訊，請參閱[Workbench說明](https://www.adobe.com/go/learn_aemforms_workbench_65_tw)。
 
 ## 使用者資料和資料存放區 {#user-data-and-data-stores}
 

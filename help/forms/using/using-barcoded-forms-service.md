@@ -157,9 +157,9 @@ Watched資料夾端點通常用於啟動使用條碼Forms服務的應用程式�
 
 條碼式Forms服務提供下列兩個API：
 
-* **[解碼](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/bcf/api/BarcodedFormsService.html#decode)**：解碼輸入PDF檔案或tiff影像中可用的所有條碼。 它會傳回另一個XML檔案，其中包含從輸入檔案或影像中可用的所有條碼擷取的資料。
+* **[解碼](https://helpx.adobe.com/tw/experience-manager/6-3/forms/javadocs/com/adobe/fd/bcf/api/BarcodedFormsService.html#decode)**：解碼輸入PDF檔案或tiff影像中可用的所有條碼。 它會傳回另一個XML檔案，其中包含從輸入檔案或影像中可用的所有條碼擷取的資料。
 
-* **[extractToXML](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/bcf/api/BarcodedFormsService.html#decode)**：將使用解碼API解碼的資料轉換為XML資料。 此XML資料可與XFA表單合併。 它會傳回XML檔案清單，每個條碼各一個。
+* **[extractToXML](https://helpx.adobe.com/tw/experience-manager/6-3/forms/javadocs/com/adobe/fd/bcf/api/BarcodedFormsService.html#decode)**：將使用解碼API解碼的資料轉換為XML資料。 此XML資料可與XFA表單合併。 它會傳回XML檔案清單，每個條碼各一個。
 
 ### 搭配JSP或Servlet使用BCF服務 {#using-bcf-service-with-a-jsp-or-servlets}
 

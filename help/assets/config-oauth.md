@@ -41,7 +41,7 @@ ht-degree: 8%
 
 >[!NOTE]
 >
->如有需要，您可以在[支援程式](https://experienceleague.adobe.com/?lang=en&support-tab=home#support)之後提交支援票證。
+>如有需要，您可以在[支援程式](https://experienceleague.adobe.com/zh-hant?lang=en&support-tab=home#support)之後提交支援票證。
 
 ## 現有AMS使用者的OAuth設定 {#oauth-config-new-ams-users}
 
@@ -58,7 +58,7 @@ OAuth設定需要下列先決條件：
 
 ### 現有AMS和On Prem使用者的OAuth設定 {#steps-config-oauth-onprem}
 
-下列步驟可由系統管理員在&#x200B;**CRXDE**&#x200B;中執行。 AMS客戶可以聯絡Adobe代表，或在[支援程式](https://experienceleague.adobe.com/?lang=en&support-tab=home#support)後提交支援票證。
+下列步驟可由系統管理員在&#x200B;**CRXDE**&#x200B;中執行。 AMS客戶可以聯絡Adobe代表，或在[支援程式](https://experienceleague.adobe.com/zh-hant?lang=en&support-tab=home#support)後提交支援票證。
 
 1. 在`com.adobe.granite.auth.oauth.accesstoken.provider.<randomnumbers>.config`中新增或更新以下屬性：
 
@@ -102,7 +102,7 @@ OAuth設定需要下列先決條件：
 
 >[!NOTE]
 >
->如果發生`unsupported_grant_type`錯誤，請嘗試安裝Granite Hotfix。 請參閱[從服務帳戶(JWT)移轉至OAuth伺服器對伺服器認證](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-24660)。
+>如果發生`unsupported_grant_type`錯誤，請嘗試安裝Granite Hotfix。 請參閱[從服務帳戶(JWT)移轉至OAuth伺服器對伺服器認證](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-kcs/kbarticles/ka-24660)。
 
 ## 整合Adobe Developer Console {#integrate-adobe-io}
 
@@ -151,7 +151,7 @@ OAuth設定需要下列先決條件：
 
    >[!NOTE]
    >
-   >提供為[!UICONTROL 服務URL]的URL無法透過瀏覽器存取，且會產生404錯誤。 設定在[!UICONTROL 服務URL]引數的相同值下運作正常。 如需整體服務狀態與維護排程，請參閱[https://status.adobe.com](https://status.adobe.com)。
+   >提供為[!UICONTROL 服務URL]的URL無法透過瀏覽器存取，且會產生404錯誤。 設定在[!UICONTROL 服務URL]引數的相同值下運作正常。 如需整體服務狀態與維護排程，請參閱[https://status.adobe.com/zh-tw](https://status.adobe.com/zh-tw)。
 
 1. 按一下&#x200B;**[!UICONTROL 下載OAuth整合的公開憑證]**，然後下載公開憑證檔案`AEM-SmartTags.crt`。 此外，您不再需要在Adobe Developer主控台上傳此憑證。
 
@@ -211,4 +211,4 @@ OAuth設定需要下列先決條件：
 >
 >* [智慧標籤概觀及訓練方式](enhanced-smart-tags.md)
 >* [設定智慧標籤](config-smart-tagging.md)
->* [有關智慧標籤的教學影片](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/image-smart-tags.html)
+>* [有關智慧標籤的教學影片](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/image-smart-tags.html?lang=zh-Hant)

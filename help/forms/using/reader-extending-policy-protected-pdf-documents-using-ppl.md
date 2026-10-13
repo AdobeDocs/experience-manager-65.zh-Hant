@@ -83,7 +83,7 @@ Reader擴充功能服務完全支援以PDF standard 1.6和更新版本為基礎�
   </tr>
   <tr>
    <td><p>usageRights</p> </td>
-   <td><p>指定型別<a href="https://help.adobe.com/en_US/livecycle/11.0/ProgramLC/javadoc/com/adobe/livecycle/readerextensions/client/UsageRights.html" target="_blank">UsageRights</a>的物件。 usageRights物件代表可套用至受原則保護的PDF檔案的個別權利。</p> </td>
+   <td><p>指定型別<a href="https://help.adobe.com/zh_TW/livecycle/11.0/ProgramLC/javadoc/com/adobe/livecycle/readerextensions/client/UsageRights.html" target="_blank">UsageRights</a>的物件。 usageRights物件代表可套用至受原則保護的PDF檔案的個別權利。</p> </td>
   </tr>
  </tbody>
 </table>

@@ -111,7 +111,7 @@ Dynamic Media一般設定適用於有經驗的網站開發人員和程式設計�
 
   控制任何現有手動裁切定義的保留。
 
-  另請參閱Dynamic Media檢視器參考指南中的[UploadPostJob](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-upload-post-job.html)和[ReprocessAssetsJob](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-reprocess-assets-job.html)中的`preserveCrop`。
+  另請參閱Dynamic Media檢視器參考指南中的[UploadPostJob](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-upload-post-job.html?lang=zh-Hant)和[ReprocessAssetsJob](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-reprocess-assets-job.html?lang=zh-Hant)中的`preserveCrop`。
 
 ## 預設上傳選項 {#default-upload-options}
 
