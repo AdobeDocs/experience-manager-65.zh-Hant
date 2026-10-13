@@ -51,13 +51,13 @@ ht-degree: 1%
 
 **如果有就地升級**
 
-如果您執行就地升級，則升級的執行個體已有資產和檔案。 不過，您必須先安裝[AEMFD相容性套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=zh-Hant) （包含通訊管理相容性套件），才能使用資產和檔案
+如果您執行就地升級，則升級的執行個體已有資產和檔案。 不過，您必須先安裝[AEMFD相容性套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en) （包含通訊管理相容性套件），才能使用資產和檔案
 
 接著，您必須執行[移轉公用程式](#runningmigrationutility)，更新資產和檔案。
 
 **如果有異地安裝**
 
-如果安裝不恰當（全新），您必須先安裝[AEMFD相容性套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=zh-Hant) （包含通訊管理相容性套件），才能使用資產和檔案。
+如果安裝不恰當（全新），您必須先安裝[AEMFD相容性套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en) （包含通訊管理相容性套件），才能使用資產和檔案。
 
 然後，您必須在新的設定上匯入您的資產套件（zip或cmp），然後執行[移轉公用程式](#runningmigrationutility)來更新資產和檔案。 Adobe建議，您必須先執行移轉公用程式，才能在新設定上建立資產。
 
@@ -117,7 +117,7 @@ ht-degree: 1%
 
    >[!NOTE]
    >
-   >在資產移轉期間，您可能會發現警告訊息，例如「發現衝突……」。 這類訊息表示無法移轉適用性表單中部分元件的規則。 例如，如果元件有一個同時具有規則和指令碼的事件，如果規則發生在任何指令碼之後，則不會移轉元件的任何規則。 您可在最適化表單製作中開啟規則編輯器[&#128279;](#migrate-rules)，以移轉這類規則。
+   >在資產移轉期間，您可能會發現警告訊息，例如「發現衝突……」。 這類訊息表示無法移轉適用性表單中部分元件的規則。 例如，如果元件有一個同時具有規則和指令碼的事件，如果規則發生在任何指令碼之後，則不會移轉元件的任何規則。 您可在最適化表單製作中開啟規則編輯器](#migrate-rules)，以[移轉這類規則。
 
    * 若要移轉最適化表單自訂元件，請選取&#x200B;**最適化Forms自訂元件移轉**，然後在[自訂元件移轉]頁面中，選取&#x200B;**開始移轉**。 下列專案已移轉：
 

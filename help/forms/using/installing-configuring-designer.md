@@ -111,15 +111,15 @@ msiexec /i "<absolute path>\Designer.msi" /quiet SERIALNUMBER=****-****-****-***
 如果您使用AEM Forms Designer的獨立安裝程式，請執行以下步驟：
 
 1. 在安裝&#x200B;**AEM Forms Designer6.5.16.0**&#x200B;之前，使用者必須先解除安裝任何舊版。
-1. 從AEM Forms表單發行頁面下載並安裝[AEM Designer 6.5.15.0](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=zh-Hant)。
-1. 成功安裝&#x200B;**AEM Forms Designer6.5.15.0**&#x200B;後，按兩下下載的安裝程式檔案，即可下載並安裝[AEM Forms Designer 6.5.16.0](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=zh-Hant)。
+1. 從AEM Forms表單發行頁面下載並安裝[AEM Designer 6.5.15.0](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)。
+1. 成功安裝&#x200B;**AEM Forms Designer6.5.15.0**&#x200B;後，按兩下下載的安裝程式檔案，即可下載並安裝[AEM Forms Designer 6.5.16.0](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)。
 
 +++
 
 +++**使用者擁有6.5.15.0 AEM Forms Designer版本**&#x200B;時
 
 如果您使用AEM Forms Designer的獨立安裝程式，請執行以下步驟：
-1. 從[軟體發佈入口網站](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=zh-Hant)下載最新版的AEM Forms Designer。
+1. 從[軟體發佈入口網站](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)下載最新版的AEM Forms Designer。
 1. 連按兩下下載的安裝程式檔案，安裝最新版的AEM Forms Designer。
 
 +++
