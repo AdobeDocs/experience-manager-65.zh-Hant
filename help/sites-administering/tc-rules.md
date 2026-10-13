@@ -174,7 +174,7 @@ translation_rules.xml檔案包含具有數個子項`node`專案的`nodelist`專�
 
 ![chlimage_1-57](assets/chlimage_1-57.jpeg)
 
-接著您必須選取內容，然後按一下[編輯]。**** 如此將可開啟翻譯規則編輯器。
+接著您必須選取內容，然後按一下[編輯]。**&#x200B;** 如此將可開啟翻譯規則編輯器。
 
 ![chlimage_1-58](assets/chlimage_1-58.jpeg)
 

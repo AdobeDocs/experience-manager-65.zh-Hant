@@ -48,7 +48,7 @@ AEM的製作環境提供各種機制來組織和編輯您的內容。 提供的�
 
 您可以從AEM中直接存取各種&#x200B;**說明**&#x200B;資源：
 
-除了從主控台工具列](/help/sites-classic-ui-authoring/author-env-basic-handling.md#accessing-help)存取[說明外，您也可以從sidekick存取說明(使用？ 圖示)：
+除了從主控台工具列[&#128279;](/help/sites-classic-ui-authoring/author-env-basic-handling.md#accessing-help)存取說明外，您也可以從sidekick存取說明(使用？ 圖示)：
 
 ![Sidekick已摺疊](do-not-localize/sidekick-collapsed-2.png)
 
@@ -186,7 +186,7 @@ AEM會顯示直接參照所選頁面以及任何間接參照的所有頁面。 �
 
 * [藍圖](/help/sites-administering/msm-best-practices.md)
 
-在網站主控台](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console)中可以看到其他[頁面間關係。
+在網站主控台[&#128279;](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console)中可以看到其他頁面間關係。
 
 ## 稽核記錄 {#audit-log}
 

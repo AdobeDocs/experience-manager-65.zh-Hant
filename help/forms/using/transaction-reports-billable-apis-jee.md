@@ -43,7 +43,7 @@ JEE上的AEM Forms提供數個API來提交、處理和轉譯檔案。 有些API�
 
 -->
 
-以下是JEE計費API清單。 在OSGi](/help/forms/using/transaction-reports-billable-apis.md)上尋找AEM Forms的[可記帳API清單。
+以下是JEE計費API清單。 在OSGi[&#128279;](/help/forms/using/transaction-reports-billable-apis.md)上尋找AEM Forms的可記帳API清單。
 
 ## 可記帳檔案服務API {#billable-document-services-apis}
 

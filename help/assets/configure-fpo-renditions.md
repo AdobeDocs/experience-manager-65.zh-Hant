@@ -70,7 +70,7 @@ Experience Manager允許使用許多方法來處理影像，以用來產生FPO�
    >
    >檔案型別JPEG、GIF、PNG、TIFF、PSD和BMP支援產生轉譯。
 
-1. 若要啟用變更，請按一下[同步]。****
+1. 若要啟用變更，請按一下[同步]。**&#x200B;**
 
 >[!NOTE]
 >
@@ -102,7 +102,7 @@ Experience Manager允許使用許多方法來處理影像，以用來產生FPO�
 
    `convert -quality 10% -units PixelsPerInch ${filename} -resample 72 -flatten cq5dam.fpo.jpeg`
 
-1. 若要啟用變更，請按一下[同步]。****
+1. 若要啟用變更，請按一下[同步]。**&#x200B;**
 
 如需ImageMagick命令列功能的詳細資訊，請參閱`https://imagemagick.org`網站。
 
@@ -124,7 +124,7 @@ Experience Manager允許使用許多方法來處理影像，以用來產生FPO�
 
 1. 選取&#x200B;**[!UICONTROL 處理縮圖]**&#x200B;並按一下&#x200B;**[!UICONTROL 設定]**。 依照[設定，使用Experience Manager工作流程](#generate-renditions-of-new-assets-using-aem-workflow)產生新資產的轉譯。
 
-1. 若要啟用變更，請按一下[同步]。****
+1. 若要啟用變更，請按一下[同步]。**&#x200B;**
 
 
 ## 使用ImageMagick產生現有資產的轉譯 {#generate-renditions-of-existing-assets-using-imagemagick}

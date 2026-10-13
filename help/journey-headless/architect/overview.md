@@ -69,7 +69,7 @@ Headless 實作放棄了全堆疊解決方案中的傳統頁面和元件管理�
 | # | 文章 | 描述 |
 |---|---|---|
 | 0 | AEM Headless 內容架構師歷程 | 本文件 |
-| 1 | [ AEM Headless 模型 - 簡介](introduction.md) | 了解 Headless 技術及其對模型的意義。 |
+| 1 | [&#x200B; AEM Headless 模型 - 簡介](introduction.md) | 了解 Headless 技術及其對模型的意義。 |
 | 2 | [了解模型基本知識](basics.md) | 了解使用 AEM 模型的基本知識。 |
 | 3 | [如何建立模型結構](model-structure.md) | 了解如何為 Headless 建立多層結構的模型 |
 

@@ -164,7 +164,7 @@ AEM中的所有雲端服務設定都已整合到AEM存放庫的`/conf`資料夾�
 
 1. 以管理員身分登入[!DNL Experience Manager Forms]作者執行個體並移至[!DNL Experience Manager]網頁主控台組合。 預設URL為[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)。
 
-1. 選取REST資料來源&#x200B;]**的**[!UICONTROL &#x200B;表單資料模型Http使用者端設定。
+1. 選取REST資料來源&#x200B;**的**&#x200B;表單資料模型Http使用者端設定。
 
 1. 在[!UICONTROL 表單資料模型REST資料來源]的Http使用者端設定對話方塊中：
 
@@ -194,7 +194,7 @@ AEM中的所有雲端服務設定都已整合到AEM存放庫的`/conf`資料夾�
    * 選取驗證型別 — None、OAuth2.0（[授權代碼](https://oauth.net/2/grant-types/authorization-code/)、[使用者端認證](https://oauth.net/2/grant-types/client-credentials/)）、Basic Authentication、Custom Authentication、X509 Token或Mutual Authentication — 以存取SOAP服務，並相應地提供驗證的詳細資料。
 
      如果您選取&#x200B;**[!UICONTROL X509 Token]**&#x200B;作為驗證型別，請設定X509憑證。 如需詳細資訊，請參閱[設定憑證](install-configure-document-services.md#set-up-certificates-for-reader-extension-and-encryption-service)。
-     在**[!UICONTROL 金鑰別名]**&#x200B;欄位中指定X509憑證的KeyStore別名。 在&#x200B;**[!UICONTROL 存留時間]**&#x200B;欄位中，指定驗證要求保持有效的時間（以秒為單位）。 或者，選取以簽署訊息本文或時間戳記標題，或兩者皆簽署。
+     在&#x200B;**[!UICONTROL 金鑰別名]**&#x200B;欄位中指定X509憑證的KeyStore別名。 在&#x200B;**[!UICONTROL 存留時間]**&#x200B;欄位中，指定驗證要求保持有效的時間（以秒為單位）。 或者，選取以簽署訊息本文或時間戳記標題，或兩者皆簽署。
 
      如果您選取&#x200B;**[!UICONTROL 相互驗證]**&#x200B;做為驗證型別，請參閱[RESTful與SOAP Web服務的憑證式相互驗證](#mutual-authentication)。
 

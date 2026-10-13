@@ -49,7 +49,7 @@ ht-degree: 10%
 >* ACS Commons快速動作管理員
 >* 綜合工作流程
 >
->本軟體為開放原始碼， [Apache v2授權涵蓋此軟體](https://adobe-consulting-services.github.io/pages/license.html)。 若要提出問題或報告問題，請造訪ACS AEM工具和 [ACS AEM公域的GitHub](https://github.com/Adobe-Consulting-Services/acs-aem-commons/issues)[問題](https://github.com/Adobe-Consulting-Services/acs-aem-tools/issues)。
+>本軟體為開放原始碼， [Apache v2授權涵蓋此軟體](https://adobe-consulting-services.github.io/pages/license.html)。 若要提出問題或報告問題，請造訪ACS AEM工具和 [ACS AEM公域的GitHub](https://github.com/Adobe-Consulting-Services/acs-aem-commons/issues) [問題](https://github.com/Adobe-Consulting-Services/acs-aem-tools/issues)。
 
 ## 移轉至[!DNL Experience Manager] {#migrating-to-aem}
 
@@ -102,7 +102,7 @@ Adobe的Managed Services團隊使用名為Glutton的工具將資料載入客戶�
 根據您的需求設定工作流程後，您有兩個選項可執行它：
 
 1. 最簡單的方法是[ACS Commons&#39;大量工作流程管理員](https://adobe-consulting-services.github.io/acs-aem-commons/features/bulk-workflow-manager.html)。 此工具可讓您執行查詢，並透過工作流程處理查詢的結果。 也有設定批次大小的選項。
-1. 您可搭配「合成工 [作流程」使用ACS Commons Fast Action Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/fast-action-manager.html)[](https://adobe-consulting-services.github.io/acs-aem-commons/features/synthetic-workflow.html)。 雖然此方法的參與度更高，但可讓您移除[!DNL Experience Manager]工作流程引擎的額外負荷，同時最佳化伺服器資源的使用。 此外，Fast Action Manager還通過動態監控伺服器資源並調節系統上的負載，進一步提高了效能。 ACS Commons功能頁上提供了示例指令碼。
+1. 您可搭配「合成工 [作流程」使用ACS Commons Fast Action Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/fast-action-manager.html) [&#128279;](https://adobe-consulting-services.github.io/acs-aem-commons/features/synthetic-workflow.html)。 雖然此方法的參與度更高，但可讓您移除[!DNL Experience Manager]工作流程引擎的額外負荷，同時最佳化伺服器資源的使用。 此外，Fast Action Manager還通過動態監控伺服器資源並調節系統上的負載，進一步提高了效能。 ACS Commons功能頁上提供了示例指令碼。
 
 ### 啟用資產 {#activating-assets}
 
@@ -110,7 +110,7 @@ Adobe的Managed Services團隊使用名為Glutton的工具將資料載入客戶�
 
 若要解決此問題，您可以使用[快速動作管理員](https://adobe-consulting-services.github.io/acs-aem-commons/features/fast-action-manager.html)來管理資產復寫。 這可在不使用Sling佇列的情況下運作，可降低額外負荷，同時限制工作負荷以防止伺服器超載。 使用FAM管理復寫的範例會顯示在該功能的檔案頁面上。
 
-將資產傳送至發佈農場的其他選項包括使 [用vlt-rcp](https://jackrabbit.apache.org/filevault/rcp.html)[或oak-run](https://github.com/apache/jackrabbit-oak/tree/trunk/oak-run)，這些工具是Jackrabbit的一部份。 另一個選項是針對您的[!DNL Experience Manager]基礎架構使用開放來源工具，稱為[Grabbit](https://github.com/TWCable/grabbit)，該工具聲稱其效能比vlt快。
+將資產傳送至發佈農場的其他選項包括使 [用vlt-rcp](https://jackrabbit.apache.org/filevault/rcp.html) [或oak-run](https://github.com/apache/jackrabbit-oak/tree/trunk/oak-run)，這些工具是Jackrabbit的一部份。 另一個選項是針對您的[!DNL Experience Manager]基礎架構使用開放來源工具，稱為[Grabbit](https://github.com/TWCable/grabbit)，該工具聲稱其效能比vlt快。
 
 對於這些方法中的任一方法，請注意製作例項上的資產未顯示為已啟動。 若要以正確的啟用狀態處理標幟這些資產的問題，您也需要執行指令碼以將資產標示為已啟用。
 

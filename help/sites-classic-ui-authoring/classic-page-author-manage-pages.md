@@ -159,7 +159,7 @@ AEM隨附數種現成可用的範本。 提供的範本取決於個別網站，�
 * 影片
 * 更多專案
 
-建立並開啟頁面後，您就可以使用[sidekick](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#sidekick)提供的元件](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#insertinganewparagraph)來[新增內容。
+建立並開啟頁面後，您就可以使用[sidekick](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#sidekick)提供的元件[&#128279;](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#insertinganewparagraph)來新增內容。
 
 ## 管理頁面 {#managing-pages}
 

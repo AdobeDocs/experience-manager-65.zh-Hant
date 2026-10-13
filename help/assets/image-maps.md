@@ -39,7 +39,7 @@ ht-degree: 2%
    * 在&#x200B;**[!UICONTROL 卡片]**&#x200B;或&#x200B;**[!UICONTROL 清單]**&#x200B;檢視中，選取資產並按一下工具列上的&#x200B;**[!UICONTROL 編輯]**。
    * 從資產頁面按一下&#x200B;**[!UICONTROL 編輯]**。
 
-1. 若要插入影像地圖，請從工具列按一下[啟動地圖] ]**![ ](assets/do-not-localize/image-map-icon.png)。**[!UICONTROL 
+1. 若要插入影像地圖，請從工具列按一下[啟動地圖] **![&#x200B; &#x200B;](assets/do-not-localize/image-map-icon.png)。**
 1. 選取影像地圖的形狀。 選取形狀的熱點會放置在影像上。
 
    ![chlimage_1-422](assets/chlimage_1-422.png)
@@ -56,4 +56,4 @@ ht-degree: 2%
 
    ![chlimage_1-426](assets/chlimage_1-426.png)
 
-   如果[動態媒體]選項已啟用，請瀏覽至[資產編輯器]，然後按一下[對映]**[!UICONTROL 以檢視所有套用的影像對映。]**
+   如果[動態媒體]選項已啟用，請瀏覽至[資產編輯器]，然後按一下[對映]&#x200B;**[!UICONTROL 以檢視所有套用的影像對映。]**

@@ -42,7 +42,7 @@ AI是Adobe Experience Manager不可或缺的一部分，用於支援使用者尋
 
 ## AI 助理 {#ai-assistant}
 
-](/help/ai-assistant-in-aem.md)Adobe Experience Manager 中的 AI 助理[提供對話式介面，旨在簡化尋找與 AEM 相關查詢的答案。
+[&#128279;](/help/ai-assistant-in-aem.md)Adobe Experience Manager 中的 AI 助理提供對話式介面，旨在簡化尋找與 AEM 相關查詢的答案。
 
 ## 更多資訊 {#further-information}
 

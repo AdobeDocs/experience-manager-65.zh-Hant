@@ -63,7 +63,7 @@ ContextHub包含區段引擎，可管理區段並決定針對目前內容解析�
 每個ContextHub UI模組都是預先定義模組型別的例項：
 
 * ContextHub提供數個[範例模組型別](/help/sites-developing/ch-samplemodules.md)。
-* 使用AEM主控台來[新增UI模組](ch-configuring.md#adding-a-ui-module)，並將它們以UI模式](ch-configuring.md#adding-a-ui-mode)分組[。
+* 使用AEM主控台來[新增UI模組](ch-configuring.md#adding-a-ui-module)，並將它們以UI模式[&#128279;](ch-configuring.md#adding-a-ui-mode)分組。
 
 * 開發人員可以[建立自訂模組型別](/help/sites-developing/ch-extend.md#creating-contexthub-ui-module-types)。
 

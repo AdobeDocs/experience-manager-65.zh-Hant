@@ -105,7 +105,7 @@ AEM Content Services的設計目的，是要概括AEM內/外部內容的說明�
 
 如需詳細資訊，請參閱：
 
-* Assets使用手冊](/help/assets/content-fragments/content-fragments.md)中的[內容片段主題
+* Assets使用手冊[&#128279;](/help/assets/content-fragments/content-fragments.md)中的內容片段主題
 
 * [內容片段模型](/help/assets/content-fragments/content-fragments-models.md)
 * [使用內容片段製作](/help/sites-authoring/content-fragments.md)

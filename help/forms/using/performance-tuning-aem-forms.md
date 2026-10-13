@@ -116,7 +116,7 @@ Apache可以使用HTTP通訊協定與CRX通訊。 這些設定是使用HTTP進�
 
 1. 啟用壓縮。 在`APACHE_HOME/conf/httpd.conf`組態檔中新增下列組態。
 
-   適用於HTML5表單的&#x200B;****
+   適用於HTML5表單的&#x200B;**&#x200B;**
 
    ```xml
    <Location /content/xfaforms>

@@ -46,7 +46,7 @@ ht-degree: 0%
 
 設定&#x200B;**[!UICONTROL Dynamic Media一般設定]**&#x200B;僅適用於下列情況：
 
-* 您正在以Scene7模式執行Dynamic Media。 請參閱[在Scene7模式中啟用Dynamic Media ](/help/assets/config-dms7.md#enabling-dynamic-media-in-scene-mode)。
+* 您正在以Scene7模式執行Dynamic Media。 請參閱[在Scene7模式中啟用Dynamic Media &#x200B;](/help/assets/config-dms7.md#enabling-dynamic-media-in-scene-mode)。
 * 您在Adobe Experience Manager 6.5.11或更新版本中有&#x200B;*現有* **[!UICONTROL Dynamic Media設定]** （在&#x200B;**[!UICONTROL 雲端服務]**）。 請參閱[在雲端服務中建立Dynamic Media設定](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services)。
 * 您是有管理員許可權的Experience Manager系統管理員。
 
@@ -77,7 +77,7 @@ Dynamic Media一般設定適用於有經驗的網站開發人員和程式設計�
    * [Illustrator](#illustrator-tab)索引標籤
 
    ![Dynamic Media一般設定頁面](/help/assets/assets-dm/dm-general-settings.png)
-   *Dynamic Media一般設定頁面，已選取&#x200B;**[!UICONTROL 影像編輯]**標籤。*<br><br>
+   *Dynamic Media一般設定頁面，已選取&#x200B;**[!UICONTROL 影像編輯]**&#x200B;標籤。*<br><br>
 
 1. 完成後，在頁面的右上角附近，選取&#x200B;**[!UICONTROL 儲存]**。
 

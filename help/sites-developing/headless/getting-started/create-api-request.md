@@ -47,7 +47,7 @@ ht-degree: 44%
 [現在您已經建立一些內容片段，](create-content-fragment.md)您可以使用 AEM 的 API Headless 傳遞內容片段。
 
 * [GraphQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md) 可讓您建立存取和傳遞內容片段的要求。
-  * 若要使用這個功能，必須在AEM](/help/sites-developing/headless/graphql-api/graphql-endpoint.md#enabling-graphql-endpoint)中定義並啟用[端點，而且如有需要，必須安裝[GraphiQL介面](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#installing-graphiql-interface)。
+  * 若要使用這個功能，必須在AEM[&#128279;](/help/sites-developing/headless/graphql-api/graphql-endpoint.md#enabling-graphql-endpoint)中定義並啟用端點，而且如有需要，必須安裝[GraphiQL介面](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#installing-graphiql-interface)。
 * [Assets REST API](/help/assets/assets-api-content-fragments.md) 可讓您建立及修改內容片段 (和其他資產)。
 
 本指南的其餘部分著重在 GraphQL 存取和內容片段傳遞。
@@ -92,7 +92,7 @@ ht-degree: 44%
 1. 按一下：
    * 頁面右上方的&#x200B;**檔案**&#x200B;會顯示內文中檔案，協助您建立適合您自己模型的查詢。
    * 在頂端工具列中的&#x200B;**History**&#x200B;顯示先前的查詢。
-   * **另存新檔**&#x200B;和&#x200B;**儲存**&#x200B;以儲存您的查詢，之後您可以從&#x200B;**持續查詢**&#x200B;面板和&#x200B;**發佈**中列出並擷取查詢。
+   * **另存新檔**&#x200B;和&#x200B;**儲存**&#x200B;以儲存您的查詢，之後您可以從&#x200B;**持續查詢**&#x200B;面板和&#x200B;**發佈**&#x200B;中列出並擷取查詢。
      ![GraphiQL 文件](assets/graphiql-documentation.png)
 
 GraphQL 支援結構化查詢，這些查詢不僅可以針對特定資料集或個別資料物件，還可以傳遞物件的特定元素、巢狀結果、支援查詢變數等等。

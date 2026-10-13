@@ -145,7 +145,7 @@ AEM內容片段可用於說明和管理結構化內容。 結構化內容在可�
   * 內容片段（及其變數）可以從&#x200B;**Assets**&#x200B;主控台建立及維護。
   * 在內容片段編輯器中撰寫和編輯。
 
-* 搭配內容片段元件](/help/sites-authoring/content-fragments.md) （參考元件）用於[頁面編輯器：
+* 搭配內容片段元件[&#128279;](/help/sites-authoring/content-fragments.md) （參考元件）用於頁面編輯器：
 
   * **內容片段**&#x200B;元件可供頁面作者使用。 它可讓他們以HTML或JSON格式參考及傳送所需的內容片段。
 
@@ -205,7 +205,7 @@ Assets可以透過數個方式與內容片段一起使用；各有其優點：
 
   * 以個別實體分隔的文字區塊（通常為多行）。
 
-  * 在富 [文本](/help/assets/content-fragments/content-fragments-variations.md#rich-text)[](/help/assets/content-fragments/content-fragments-variations.md#markdown) 和標籤下拉模式中，段落可以格式化為標題，在這種情況下，它和以下段落作為一個單位一起組成。
+  * 在富 [文本](/help/assets/content-fragments/content-fragments-variations.md#rich-text) [&#128279;](/help/assets/content-fragments/content-fragments-variations.md#markdown) 和標籤下拉模式中，段落可以格式化為標題，在這種情況下，它和以下段落作為一個單位一起組成。
 
   * 在頁面製作期間啟用內容控制。
 
@@ -213,9 +213,9 @@ Assets可以透過數個方式與內容片段一起使用；各有其優點：
 
   * Assets （影像）會插入實際片段中，並作為片段的內部內容。
   * 嵌入在片段的段落系統中。
-  * 可以在頁面](/help/sites-authoring/content-fragments.md)上使用/參照[片段時進行格式化。
+  * 可以在頁面[&#128279;](/help/sites-authoring/content-fragments.md)上使用/參照片段時進行格式化。
   * 只能使用片段編輯器在片段中新增、刪除或移動。 無法在頁面編輯器中執行這些動作。
-  * 只能在片段編輯器](/help/assets/content-fragments/content-fragments-variations.md#inserting-assets-into-your-fragment)中使用[RTF格式新增、刪除或移動片段。
+  * 只能在片段編輯器[&#128279;](/help/assets/content-fragments/content-fragments-variations.md#inserting-assets-into-your-fragment)中使用RTF格式新增、刪除或移動片段。
   * 只能新增到多行文字元素（任何片段型別）。
   * 附於前文（段落）。
 
@@ -231,7 +231,7 @@ Assets可以透過數個方式與內容片段一起使用；各有其優點：
 
   * 這是片段外部的內容，但與編輯相關。 通常是影像、影片或其他片段。
   * 將集合中的個別資產新增至頁面時，即可在頁面編輯器中與片段搭配使用。 這表示它們是選用專案，視特定通道的需求而定。
-  * 資產透過集合](/help/assets/content-fragments/content-fragments-assoc-content.md)與片段關聯[；關聯的集合可讓作者決定在編寫頁面時要使用的資產。
+  * 資產透過集合[&#128279;](/help/assets/content-fragments/content-fragments-assoc-content.md)與片段關聯；關聯的集合可讓作者決定在編寫頁面時要使用的資產。
 
     * 收藏集可以作為預設內容與片段相關聯，也可以由作者在片段製作期間相關聯。
     * [Assets (DAM)集合](/help/assets/manage-collections.md)是片段關聯內容的基礎。
@@ -277,8 +277,8 @@ Assets可以透過數個方式與內容片段一起使用；各有其優點：
 中間內容：
 
 * 可在使用內容片段時用於頁面編輯器。
-* 是在頁面上使用或參考片段](/help/sites-authoring/content-fragments.md#adding-in-between-content)後，在片段流程中新增的[額外內容。
-* 可在使用內容片段](/help/sites-authoring/content-fragments.md)時用於[頁面編輯器。
+* 是在頁面上使用或參考片段[&#128279;](/help/sites-authoring/content-fragments.md#adding-in-between-content)後，在片段流程中新增的額外內容。
+* 可在使用內容片段[&#128279;](/help/sites-authoring/content-fragments.md)時用於頁面編輯器。
 * 中間內容可以新增到任何片段中，其中只有一個元素可見。
 * 關聯內容以及適當瀏覽器的資產和/或元件皆可使用。
 
@@ -292,7 +292,7 @@ Assets可以透過數個方式與內容片段一起使用；各有其優點：
 
 * **內容模型**
 
-  * 是否使用組態瀏覽器](/help/assets/content-fragments/content-fragments-configuration-browser.md)啟用[。
+  * 是否使用組態瀏覽器[&#128279;](/help/assets/content-fragments/content-fragments-configuration-browser.md)啟用。
   * [是使用工具](/help/assets/content-fragments/content-fragments-models.md)建立的。
   * 需要[建立片段](/help/assets/content-fragments/content-fragments-managing.md#creating-content-fragments)。
   * 定義片段的結構（標題、內容元素、標籤定義）。

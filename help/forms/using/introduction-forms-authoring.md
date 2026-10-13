@@ -170,11 +170,11 @@ Click to enlarge
   </tr>
   <tr>
    <td>電子郵件</td>
-   <td><p>新增欄位以擷取電子郵件地址。 電子郵件元件預設會使用以下規則運算式驗證電子郵件地址。</p> <p><code>^[a-zA-Z0-9.!#$%&amp;'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$</code></p> </td>
+   <td><p>新增欄位以擷取電子郵件地址。 電子郵件元件預設會使用以下規則運算式驗證電子郵件地址。</p> <p><code>^[a-zA-Z0-9.!#$%&amp;'*+/=?^_&grave;{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$</code></p> </td>
   </tr>
   <tr>
    <td>檔案附件</td>
-   <td><p>新增按鈕，此按鈕可讓使用者瀏覽支援文件並將其附加到表單。 您可以將多個檔案附加至「檔案」附件元件。 您也可以在元件的屬性瀏覽器中，為附件指定**[！UICONTROL檔案大小上限]**和**[！UICONTROL支援的檔案型別]**。 </p> <p><strong> 注意： </strong><ul> <li> 元件不支援附加檔案名稱(.)開頭為字元，且包含\ / ： * ？ 「 &lt; &gt; | ； % $，或包含保留給Windows作業系統（如nul、prn、con、lpt或com）的特殊檔案名稱。 </li> <li> 若要將多個檔案附加至Apple Safari瀏覽器中開啟的檔案附件元件，請逐一選取並附加檔案。 您無法一次選取並附加多個檔案。</li> <li>「檔案附件」元件支援為Adobe Sign啟用的調適型表單中預先定義的檔案格式集。 如需詳細資訊，請參閱<a href="https://helpx.adobe.com/tw/document-cloud/help/supported-file-formats-fill-sign.html#main-pars_text">支援的檔案格式</a>。 </li></ul></p> </td>
+   <td><p>新增按鈕，此按鈕可讓使用者瀏覽支援文件並將其附加到表單。 您可以將多個檔案附加至「檔案」附件元件。 您也可以在元件的屬性瀏覽器中，為附件指定&#x200B;**[!UICONTROL 檔案大小上限]**&#x200B;和&#x200B;**[!UICONTROL 支援的檔案型別]**。 </p> <p><strong> 注意： </strong><ul> <li> 元件不支援附加檔案名稱(.)開頭為字元，且包含\ / ： * ？ 「 &lt; &gt; | ； % $，或包含保留給Windows作業系統（如nul、prn、con、lpt或com）的特殊檔案名稱。 </li> <li> 若要將多個檔案附加至Apple Safari瀏覽器中開啟的檔案附件元件，請逐一選取並附加檔案。 您無法一次選取並附加多個檔案。</li> <li>「檔案附件」元件支援為Adobe Sign啟用的調適型表單中預先定義的檔案格式集。 如需詳細資訊，請參閱<a href="https://helpx.adobe.com/tw/document-cloud/help/supported-file-formats-fill-sign.html#main-pars_text">支援的檔案格式</a>。 </li></ul></p> </td>
   </tr>
   <tr>
    <td>檔案附件清單</td>
@@ -268,7 +268,7 @@ Click to enlarge
    <td>電話</td>
    <td><p>新增用於擷取電話號碼的欄位。 電話元件可讓作者設定以下其中一個電話號碼類型。 每個類型都與用於驗證的預設規則運算式相關聯。</p>
     <ul>
-     <li>國際類型由 <code>^[+][0-9]{0,14}$</code> 驗證。</li>
+     <li>國際類型由 <code>^[+]&#x200B;[0-9]{0,14}$</code> 驗證。</li>
      <li>USPhoneNumber 類型由 <code>{'+1 ('999') '999-9999}</code> 驗證。</li>
      <li>UKPhoneNumber 類型由 <code>text{'+'99 999 999 9999}</code> 驗證。</li>
      <li>自訂類型不提供預設驗證模式。 它採用上次所選電話號碼類型的值。 您也可以指定自己的自訂驗證模式。</li>

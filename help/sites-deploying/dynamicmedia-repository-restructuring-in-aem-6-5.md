@@ -26,7 +26,7 @@ ht-degree: 3%
 ---
 # Adobe Experience Manager 6.5中的Dynamic Media存放庫重組 {#dynamic-media-repository-restructuring-in-aem}
 
-如Adobe Experience Manager 6.5](/help/sites-deploying/repository-restructuring.md)頁面的上層[存放庫重新調整中所述，升級至Experience Manager 6.5的客戶應使用此頁面評估與影響Dynamic Media的存放庫變更相關的工作量。 在Experience Manager 6.5升級程式期間，有些變更需要大量工作量，而其他變更則可能延遲到未來升級為止。
+如Adobe Experience Manager 6.5[&#128279;](/help/sites-deploying/repository-restructuring.md)頁面的上層存放庫重新調整中所述，升級至Experience Manager 6.5的客戶應使用此頁面評估與影響Dynamic Media的存放庫變更相關的工作量。 在Experience Manager 6.5升級程式期間，有些變更需要大量工作量，而其他變更則可能延遲到未來升級為止。
 
 **未來升級之前**
 

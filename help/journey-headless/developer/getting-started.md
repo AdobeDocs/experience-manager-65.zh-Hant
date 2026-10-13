@@ -304,7 +304,7 @@ GraphQL 可作為 AEM 和 Headless 內容取用者之間的「黏著劑」。 Gr
 
 雖然建議您查看文件[踏上首次使用 AEM Headless 之路](path-to-first-experience.md)，來繼續 Headless 開發歷程，但以下是一些額外的內容和選用資源，對此文件提到的一些概念有更深入的探討，但它們不是繼續 Headless 開發歷程的必要條件。
 
-* [AEM Headful 和 Headless 技術 ](/help/sites-developing/headful-headless.md) - 對 AEM 中可用的 Headless 整合層級的完整討論
+* [AEM Headful 和 Headless 技術 &#x200B;](/help/sites-developing/headful-headless.md) - 對 AEM 中可用的 Headless 整合層級的完整討論
 
 * [AEM as a Headless CMS 簡介](/help/sites-developing/headless/introduction.md)
 

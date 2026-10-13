@@ -141,7 +141,7 @@ ht-degree: 12%
 >
 > 若要讓整合持續運作，在權杖過期之前或時，重新驗證並重新發佈® Power Automate Dataverse和Microsoft® Power Automate Flow Service雲端設定，請使用[發佈Microsoft® Power Automate Dataverse和Microsoft® Power Automate Flow Service雲端設定](#publish-microsoft-power-automate-dataverse-cloud-configuration)中記錄的步驟。
 >
-> 如需權杖存留期原則的詳細資訊，請參閱可設定權杖存留期](https://learn.microsoft.com/en-us/entra/identity-platform/configurable-token-lifetimes#token-lifetime-policies-for-refresh-tokens-and-session-tokens)的[Microsoft Entra檔案。 如果未更新Token，則提交至Power Automate的表單可能會失敗。
+> 如需權杖存留期原則的詳細資訊，請參閱可設定權杖存留期[&#128279;](https://learn.microsoft.com/en-us/entra/identity-platform/configurable-token-lifetimes#token-lifetime-policies-for-refresh-tokens-and-session-tokens)的Microsoft Entra檔案。 如果未更新Token，則提交至Power Automate的表單可能會失敗。
 
 ## 使用叫用® Power Automate流程提交動作將資料傳送至Power Automate流程 {#use-the-invoke-microsoft-power-automate-flow-submit-action}
 

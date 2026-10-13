@@ -293,7 +293,7 @@ LDAP通訊協定提供使用要求控制項，以分頁方式查詢大型資料�
 
    >[!NOTE]
    >
-   >根據慣例，vlvIndex專案名稱也設為`lcuser`，但您可以為其指定不同的名稱。 在vlvindex工具中使用相同的名稱。 （請參閱[建立VLV ](configuring-directories.md#create-the-directory-server-index-for-vlv)*的目錄伺服器索引。）*
+   >根據慣例，vlvIndex專案名稱也設為`lcuser`，但您可以為其指定不同的名稱。 在vlvindex工具中使用相同的名稱。 （請參閱[建立VLV &#x200B;](configuring-directories.md#create-the-directory-server-index-for-vlv)*的目錄伺服器索引。）*
 
 1. 使用Sun ONE Server隨附的`ldapmodify`工具，分別使用群組的基本DN、搜尋篩選和排序欄位，為群組建立類似的專案：
 

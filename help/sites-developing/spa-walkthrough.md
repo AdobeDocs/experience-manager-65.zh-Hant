@@ -109,7 +109,7 @@ SPA的主要想法是減少伺服器呼叫和相依性，以將伺服器呼叫�
 >
 >如需SPA在AEM中如何運作的技術詳細資訊，請參閱文章[在AEM中開始使用SPA](/help/sites-developing/spa-getting-started-react.md)。
 >
->如需SPA編輯器的設計、架構和技術工作流程的詳細資訊，請參閱文章[ SPA編輯器概觀](/help/sites-developing/spa-overview.md)。
+>如需SPA編輯器的設計、架構和技術工作流程的詳細資訊，請參閱文章[&#x200B; SPA編輯器概觀](/help/sites-developing/spa-overview.md)。
 
 ## SPA 的內容編輯體驗 {#content-editing-experience-with-spa}
 

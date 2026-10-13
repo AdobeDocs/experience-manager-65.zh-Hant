@@ -49,7 +49,7 @@ ht-degree: 0%
 
 只有符合下列條件時，才可使用設定Dynamic Media發佈設定選項：
 
-* 您正在以Scene7模式執行Dynamic Media。 請參閱[在Scene7模式中啟用Dynamic Media ](/help/assets/config-dms7.md#enabling-dynamic-media-in-scene-mode)。
+* 您正在以Scene7模式執行Dynamic Media。 請參閱[在Scene7模式中啟用Dynamic Media &#x200B;](/help/assets/config-dms7.md#enabling-dynamic-media-in-scene-mode)。
 * 您在Adobe Experience Manager 6.5.11或更新版本中有&#x200B;*現有* **[!UICONTROL Dynamic Media設定]** （在&#x200B;**[!UICONTROL 雲端服務]**）。 請參閱[在雲端服務中建立Dynamic Media設定](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services)。
 * 您是有管理員許可權的Experience Manager系統管理員。
 
@@ -83,9 +83,9 @@ ht-degree: 0%
    * [色彩管理屬性](#color-management-attributes-tab)標籤
 
    ![Dynamic Media發佈設定頁面](/help/assets/assets-dm/dm-publish-setup.png)
-   *Dynamic Media發佈設定頁面，已選取&#x200B;**[!UICONTROL 要求屬性]**索引標籤。*<br><br>
+   *Dynamic Media發佈設定頁面，已選取&#x200B;**[!UICONTROL 要求屬性]**&#x200B;索引標籤。*<br><br>
 
-1. 完成後，在頁面的右上角附近，按一下[儲存]。****
+1. 完成後，在頁面的右上角附近，按一下[儲存]。**&#x200B;**
 
 ## 安全性索引標籤 {#security-tab}
 
@@ -124,7 +124,7 @@ ht-degree: 0%
 | **[!UICONTROL 預設影像]** | 在找不到所要求的影像時，會傳回預設影像以回應要求。<br>另請參閱Dynamic Media檢視器參考指南中的[DefaultImage](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-is-cat-defaultimage)引數。<br>**注意**：如果您的Dynamic Media Classic帳戶在&#x200B;**[!UICONTROL 設定]** > **[!UICONTROL 應用程式]** > **[!UICONTROL 發佈設定]**&#x200B;下選取&#x200B;**[!UICONTROL 預設影像]**，則Experience Manager會擷取檔案。**[!UICONTROL 預設要求屬性]**&#x200B;群組中。 當您第一次開啟&#x200B;**[!UICONTROL Dynamic Media發佈設定]**&#x200B;頁面時，就會儲存檔案並在此欄位中使用。 |
 | **[!UICONTROL 預設影像模式]** | 啟用滑桿方塊（右側的滑桿）時，**[!UICONTROL 預設影像]**&#x200B;會以預設影像取代來源影像中每個遺失的圖層，並照常傳回複合影像。 停用滑桿方塊（左側的滑桿）時，預設影像會取代整個複合影像，即使遺失的影像隻是數個圖層中的一個圖層亦然。<br>另請參閱「動態媒體檢視器參考指南」中的[DefaultImageMode](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultimagemode)引數。 |
 | **[!UICONTROL 預設檢視大小]** | 必要。<br>僅對於新的Dynamic Media帳戶，預設檢視大小會自動設定為&#x200B;**[!UICONTROL 影像伺服]**&#x200B;和&#x200B;**[!UICONTROL 測試影像伺服]**&#x200B;的寬度： `1280`和高度： `1280`。<br>如果要求未明確使用`wid=`、`hei=`或`scl=`指定檢視大小，伺服器會將回覆影像限製為不得大於此寬度與高度。<br>另請參閱Dynamic Media檢視器參考指南中的[DefaultPix](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultpix)引數。 |
-| **[!UICONTROL 預設縮圖大小]** | 必要。<br>已使用縮圖要求(`req=tmb`)的預設檢視大小&#x200B;]**，而非屬性**[!UICONTROL 。 如果縮圖要求(`req=tmb`)未使用`wid=`、`hei=`或`scl=`明確指定大小，伺服器會將回覆影像限製為不得大於此寬度與高度。<br>另請參閱Dynamic Media檢視器參考指南中的[DefaultThumbPix](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultthumbpix)引數。 |
+| **[!UICONTROL 預設縮圖大小]** | 必要。<br>已使用縮圖要求(`req=tmb`)的預設檢視大小&#x200B;**，而非屬性**。 如果縮圖要求(`req=tmb`)未使用`wid=`、`hei=`或`scl=`明確指定大小，伺服器會將回覆影像限製為不得大於此寬度與高度。<br>另請參閱Dynamic Media檢視器參考指南中的[DefaultThumbPix](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultthumbpix)引數。 |
 | **[!UICONTROL 預設背景顏色]** | 指定用於填滿不包含實際影像資料之回覆影像的任何區域的RGB值。<br>另請參閱「動態媒體檢視器參考指南」中的[BkgColor](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-bkgcolor)引數。 |
 | **[!UICONTROL JPEG編碼屬性]** |  |
 | **[!UICONTROL 品質]** | <br>指定JPEG回覆影像的預設屬性。<br>僅針對新的Dynamic Media帳戶，**[!UICONTROL 影像伺服]**&#x200B;和&#x200B;**[!UICONTROL 測試影像伺服]**&#x200B;的&#x200B;**[!UICONTROL 品質]**&#x200B;預設值會自動設定為`80`。<br>此欄位的定義範圍介於1到100之間。<br>另請參閱Dynamic Media檢視器參考指南中的[JpegQuality](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-jpegquality)引數。 |

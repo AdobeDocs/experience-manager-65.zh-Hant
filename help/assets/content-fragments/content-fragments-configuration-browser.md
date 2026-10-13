@@ -53,7 +53,7 @@ ht-degree: 20%
 
 >[!NOTE]
 >
->如需詳細資訊，請參閱[設定瀏覽器： ](/help/sites-administering/configurations.md#using-configuration-browser)。
+>如需詳細資訊，請參閱[設定瀏覽器： &#x200B;](/help/sites-administering/configurations.md#using-configuration-browser)。
 
 1. 導覽至「 **工具**」、「 **一般**」，然後開啟「 **設定瀏覽器**」。
 
@@ -74,6 +74,6 @@ ht-degree: 20%
 
 當設定&#x200B;**global**&#x200B;啟用內容片段功能時，則套用至任何Assets資料夾。
 
-若要搭配可比的Assets資料夾使用其他設定（即不包括全域），您必須定義連線。 若要這麼做，請在適當資 **料夾的「資料夾屬性** 」的「雲端服務 **」標籤** 中選取適當的「設定 **** 」。
+若要搭配可比的Assets資料夾使用其他設定（即不包括全域），您必須定義連線。 若要這麼做，請在適當資 **料夾的「資料夾屬性** 」的「雲端服務 **」標籤** 中選取適當的「設定 **&#x200B;**&#x200B;」。
 
 ![套用組態](assets/cfm-conf-02.png)

@@ -47,7 +47,7 @@ XMP回寫功能可讓您將中繼資料變更傳播至資產的所有或特定�
 
 ![metadata_stored](assets/metadata_stored.png)
 
-但是，[!DNL Experience Manager Assets]不會自動將任何中繼資料變更傳播到資產的轉譯。 請參閱如何啟用XMP回寫](#enable-xmp-writeback)。[
+但是，[!DNL Experience Manager Assets]不會自動將任何中繼資料變更傳播到資產的轉譯。 請參閱如何啟用XMP回寫[&#128279;](#enable-xmp-writeback)。
 
 ## 啟用XMP回寫 {#enable-xmp-writeback}
 

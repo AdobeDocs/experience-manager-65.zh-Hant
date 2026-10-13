@@ -83,7 +83,7 @@ We.Retail中有數個範例內容片段；透過&#x200B;**Assets**、**檔案**�
 
 ## 在We.Retail中使用內容片段的位置 {#where-content-fragments-are-used-in-we-retail}
 
-為了說明使用內容片段](/help/sites-authoring/content-fragments.md)進行[頁面製作，下面提供了幾個範例頁面，例如：
+為了說明使用內容片段[&#128279;](/help/sites-authoring/content-fragments.md)進行頁面製作，下面提供了幾個範例頁面，例如：
 
 * [http://localhost:4502/sites.html/content/we-retail/language-masters/en/experience](http://localhost:4502/sites.html/content/we-retail/language-masters/en/experience)
 

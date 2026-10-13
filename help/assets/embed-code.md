@@ -32,7 +32,7 @@ ht-degree: 20%
 ---
 # 將Dynamic Media視訊、影像檢視器或維度檢視器內嵌在網頁上 {#embedding-the-video-or-image-viewer-on-a-web-page}
 
-當您想 **** 要播放視訊或檢視嵌入在網頁上的資產時，請使用「嵌入代碼」功能。 您可將嵌入代碼複製到剪貼簿，以便貼到網頁中。 「嵌入代碼」對話方塊中不允許編 **[!UICONTROL 輯代碼]** 。
+當您想 **&#x200B;**&#x200B;要播放視訊或檢視嵌入在網頁上的資產時，請使用「嵌入代碼」功能。 您可將嵌入代碼複製到剪貼簿，以便貼到網頁中。 「嵌入代碼」對話方塊中不允許編 **[!UICONTROL 輯代碼]** 。
 
 只有在您&#x200B;*不是*&#x200B;使用Adobe Experience Manager做為WCM時才內嵌URL。 如果您使用Experience Manager做為WCM，[請直接在頁面上新增資產](adding-dynamic-media-assets-to-pages.md)。
 

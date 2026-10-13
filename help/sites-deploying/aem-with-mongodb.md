@@ -669,7 +669,7 @@ CSP可讓您微調原則。 不過，在複雜的應用程式中，開發CSP標�
 
 >[!NOTE]
 >
->如需此運作方式的詳細資訊，請參閱內容安全性原則](https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html)上的[OWASP頁面。
+>如需此運作方式的詳細資訊，請參閱內容安全性原則[&#128279;](https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html)上的OWASP頁面。
 
 ### 大小調整 {#sizing}
 
