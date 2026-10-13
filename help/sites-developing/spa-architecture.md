@@ -11,13 +11,27 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
 index: false
-source-git-commit: 147b0efb32609c05949c9fe374fa4fca6a9dbfb1
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+  - id: c124fa01-25c5-42ec-adf6-21d1c114058b
+    internal-label: Developer tools
+subfeature_v2:
+  - id: a9f7d31e-bbe1-4475-966a-5f213546fcd9
+    internal-label: SPA Editor
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '2074'
 ht-degree: 6%
-
 ---
-
 
 # 針對 AEM 開發 SPA{#developing-spas-for-aem}
 
@@ -192,8 +206,8 @@ SPA應該僅依賴內容的動態轉譯。 這是AEM擷取並轉譯內容結構�
 
   這是出庫SPA應用程式來源和元件來源的所在位置。
 
-   * NPM clientlib產生器會從SPA專案建立使用者端程式庫。
-   * 該程式庫由Maven取得，並由Maven Build外掛程式與元件部署到AEM Author。
+  * NPM clientlib產生器會從SPA專案建立使用者端程式庫。
+  * 該程式庫由Maven取得，並由Maven Build外掛程式與元件部署到AEM Author。
 
 * **AEM作者**
 
@@ -201,11 +215,11 @@ SPA應該僅依賴內容的動態轉譯。 這是AEM擷取並轉譯內容結構�
 
   在製作環境中使用SPA編輯器編輯SPA時：
 
-   1. SPA會要求外部HTML。
-   1. CSS已載入。
-   1. 已載入SPA應用程式的JavaScript。
-   1. 執行SPA應用程式時會要求JSON，允許應用程式建置包含`cq-data`屬性的頁面DOM。
-   1. 此`cq-data`屬性可讓編輯器載入其他頁面資訊，以便知道元件有哪些可用的編輯設定。
+  1. SPA會要求外部HTML。
+  1. CSS已載入。
+  1. 已載入SPA應用程式的JavaScript。
+  1. 執行SPA應用程式時會要求JSON，允許應用程式建置包含`cq-data`屬性的頁面DOM。
+  1. 此`cq-data`屬性可讓編輯器載入其他頁面資訊，以便知道元件有哪些可用的編輯設定。
 
 * **AEM發佈**
 
@@ -215,8 +229,8 @@ SPA應該僅依賴內容的動態轉譯。 這是AEM擷取並轉譯內容結構�
 
   Dispatcher可作為AEM的快取階層，以供網站的訪客使用。
 
-   * 要求的處理方式類似於AEM作者上的要求，不過不會要求頁面資訊，因為只有編輯器才需要這樣做。
-   * 快取JavaScript、CSS、JSON和HTML，最佳化頁面以快速傳送。
+  * 要求的處理方式類似於AEM作者上的要求，不過不會要求頁面資訊，因為只有編輯器才需要這樣做。
+  * 快取JavaScript、CSS、JSON和HTML，最佳化頁面以快速傳送。
 
 >[!NOTE]
 >

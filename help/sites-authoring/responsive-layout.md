@@ -9,13 +9,26 @@ exl-id: 760b8419-5cf8-49c5-8d4f-6691f5256c53
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Developer
-source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1853'
+source-wordcount: '1873'
 ht-degree: 5%
-
 ---
-
 
 # 回應式版面{#responsive-layout}
 
@@ -36,7 +49,7 @@ Adobe Experience Manager可讓您使用&#x200B;**配置容器**&#x200B;元件，
 * 提供水準貼齊格點，以及可並排將元件置入格點，並定義它們何時應摺疊/重排。
 * 使用預先定義的中斷點（例如，手機、平板電腦等），讓您為相關裝置/方向定義內容的必要行為。
 
-   * 例如，您可以自訂元件大小，或是否在特定裝置上可看見元件。
+  * 例如，您可以自訂元件大小，或是否在特定裝置上可看見元件。
 
 * 可巢狀化以允許欄控制項。
 
@@ -52,7 +65,7 @@ AEM使用多種機制組合，為您的頁面實現回應式佈局：
 
   此元件可在[元件瀏覽器](/help/sites-authoring/author-environment-tools.md#components-browser)中使用，並提供格線段落系統，讓您在回應式格線內新增及放置元件。 它也可以設定為您的頁面上的預設段落系統。
 
-* [**佈局模式**](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode)
+* [**配置模式**](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode)
 
   將配置容器放置到頁面上後，您就可以使用&#x200B;**配置**&#x200B;模式在回應式格線內放置內容。
 
@@ -86,10 +99,10 @@ AEM可讓您根據裝置的寬度定義版面：
 * 模擬器可讓您在多種裝置上模擬這些版面。 除了裝置型別之外，由&#x200B;**旋轉裝置**&#x200B;選項選取的方向，可能會隨著寬度變更而影響選取的中斷點。
 * 中斷點是區分配置定義的點。
 
-   * 它們實際上會定義任何使用特定版面配置之裝置的最大寬度（以畫素為單位）。
-   * 中斷點通常適用於一系列選取的裝置，視其顯示器的寬度而定。
-   * 中斷點的範圍會向左延伸，直到下一個中斷點為止。
-   * 您無法明確地選取中斷點，選取裝置和方向將會自動選取適當的中斷點。
+  * 它們實際上會定義任何使用特定版面配置之裝置的最大寬度（以畫素為單位）。
+  * 中斷點通常適用於一系列選取的裝置，視其顯示器的寬度而定。
+  * 中斷點的範圍會向左延伸，直到下一個中斷點為止。
+  * 您無法明確地選取中斷點，選取裝置和方向將會自動選取適當的中斷點。
 
 沒有特定寬度的裝置&#x200B;**案頭**&#x200B;與預設中斷點（亦即高於上次設定的中斷點）有關。
 
@@ -141,7 +154,7 @@ AEM可讓您根據裝置的寬度定義版面：
 
    ![screen_shot_2018-03-23at084932](assets/screen_shot_2018-03-23at084932.png)
 
-   * 藍色虛線代表所選裝置(此處為&#x200B;*iPhone 6*)的&#x200B;**折**。
+   * 藍色虛線代表所選裝置（此處為&#x200B;**iPhone 6**）的&#x200B;*折*。
 
    ![screen_shot_2018-03-23at084947](assets/screen_shot_2018-03-23at084947.png)
 
@@ -159,9 +172,9 @@ AEM可讓您根據裝置的寬度定義版面：
 
 >[!NOTE]
 >
->如果尚未可用，則必須為段落系統/頁面&#x200B;**明確**&#x200B;啟動[配置容器](/help/sites-administering/configuring-responsive-layout.md) （例如，使用&#x200B;[**設計**&#x200B;模式](/help/sites-authoring/default-components-designmode.md)）。
+>如果尚未可用，則必須為段落系統/頁面[&#128279;](/help/sites-administering/configuring-responsive-layout.md)明確啟動&#x200B;**配置容器** （例如，使用&#x200B;[**設計**&#x200B;模式](/help/sites-authoring/default-components-designmode.md)）。
 
-1. 「配 **置容器** 」是元件瀏覽器中的標準 [元件](/help/sites-authoring/author-environment-tools.md#components-browser)。從這裡，您可以將其拖曳至頁面上的必要位置，之後您將看到「拖曳元件至此處 **&#x200B;**&#x200B;」預留位置。
+1. 「配 **置容器** 」是元件瀏覽器中的標準 [元件](/help/sites-authoring/author-environment-tools.md#components-browser)。 從這裡，您可以將其拖曳至頁面上的必要位置，之後您將看到「拖曳元件至此處 **&#x200B;**&#x200B;」預留位置。
 1. 然後，您可以將元件新增至版面容器。 這些元件將儲存實際內容：
 
    ![screen_shot_2018-03-23at085500](assets/screen_shot_2018-03-23at085500.png)
@@ -208,13 +221,13 @@ AEM可讓您根據裝置的寬度定義版面：
 
 * 使用工具列 [中的模式選單](/help/sites-authoring/author-environment-tools.md#page-modes) ，然後選擇「 **版面模式」**
 
-   * 選取「 **版面** 」模式，就像切換至「編輯 **」模式或「** 定位 **&#x200B;**&#x200B;」模式。
-   * **配置模式** (Layout **mode)會維持持續性，而且您必須先透過模式選取器** 選取其他模式，才能離開「配置」模式。
+  * 選取「 **版面** 」模式，就像切換至「編輯 **」模式或「** 定位 **&#x200B;**&#x200B;」模式。
+  * **配置模式** (Layout **mode)會維持持續性，而且您必須先透過模式選取器** 選取其他模式，才能離開「配置」模式。
 
 * 當[編輯個別元件時。](/help/sites-authoring/editing-content.md#edit-component-layout)
 
-   * 使用元件快速動作功能表中的&#x200B;**配置**&#x200B;選項，即可切換至&#x200B;**配置**&#x200B;模式。
-   * 編輯元件時，**配置**&#x200B;模式持續存在，一旦焦點變更為其他元件，就會回復到&#x200B;**編輯**&#x200B;模式。
+  * 使用元件快速動作功能表中的&#x200B;**配置**&#x200B;選項，即可切換至&#x200B;**配置**&#x200B;模式。
+  * 編輯元件時，**配置**&#x200B;模式持續存在，一旦焦點變更為其他元件，就會回復到&#x200B;**編輯**&#x200B;模式。
 
 在版面模式中，您可以在格線上執行各種動作：
 
@@ -228,17 +241,17 @@ AEM可讓您根據裝置的寬度定義版面：
 
 * 按一下內容元件，工具列可讓您：
 
-   * **父系**
+  * **父系**
 
-     可讓您選取整個版面容器元件，以便對整體執行動作。
+    可讓您選取整個版面容器元件，以便對整體執行動作。
 
-   * **浮動至新行**
+  * **浮動至新行**
 
-     元件將會移至新的一行，視格線內的可用空間而定。
+    元件將會移至新的一行，視格線內的可用空間而定。
 
-   * **隱藏元件**
+  * **隱藏元件**
 
-     元件將變得不可見（可以從版面容器的工具列還原）。
+    元件將變得不可見（可以從版面容器的工具列還原）。
 
   ![screen_shot_2018-03-23at090246](assets/screen_shot_2018-03-23at090246.png)
 
@@ -246,34 +259,34 @@ AEM可讓您根據裝置的寬度定義版面：
 
   根據配置元件及其所屬元件的狀態，工具列將具有不同的選項。 例如：
 
-   * **父系** — 選取父系元件。
+  * **父系** — 選取父系元件。
 
-     ![父系](do-not-localize/screen_shot_2018-03-23at090823.png)
+    ![父系](do-not-localize/screen_shot_2018-03-23at090823.png)
 
-   * **顯示隱藏的元件** — 顯示所有或個別元件。 數字表示目前有多少個隱藏的元件。計數器顯示隱藏的元件數目。
+  * **顯示隱藏的元件** — 顯示所有或個別元件。 數字表示目前有多少個隱藏的元件。計數器顯示隱藏的元件數目。
 
-     ![顯示隱藏的元件](do-not-localize/screen_shot_2018-03-23at091007.png)
+    ![顯示隱藏的元件](do-not-localize/screen_shot_2018-03-23at091007.png)
 
-   * **還原中斷點配置** — 還原為預設配置。 這表示不會強制使用自訂版面。
+  * **還原中斷點配置** — 還原為預設配置。 這表示不會強制使用自訂版面。
 
-     ![反向中斷點配置](do-not-localize/screen_shot_2018-03-23at091013.png)
+    ![反向中斷點配置](do-not-localize/screen_shot_2018-03-23at091013.png)
 
-   * **浮動到新行** — 如果間距允許，將元件向上移動一個位置。
+  * **浮動到新行** — 如果間距允許，將元件向上移動一個位置。
 
-     ![screen_shot_2018-03-23at090829](assets/screen_shot_2018-03-23at090829.png)
+    ![screen_shot_2018-03-23at090829](assets/screen_shot_2018-03-23at090829.png)
 
-   * **隱藏元件** — 隱藏目前的元件。
+  * **隱藏元件** — 隱藏目前的元件。
 
-     ![隱藏元件](do-not-localize/screen_shot_2018-03-23at090834.png)
+    ![隱藏元件](do-not-localize/screen_shot_2018-03-23at090834.png)
 
-     >[!NOTE]
-     >
-     >在上述範例中，浮動和隱藏動作可供使用，因為此配置容器是巢狀內嵌於上層配置容器中。
+    >[!NOTE]
+    >
+    >在上述範例中，浮動和隱藏動作可供使用，因為此配置容器是巢狀內嵌於上層配置容器中。
 
-   * **取消隱藏元件**
-選取父元件以顯示包含&#x200B;**顯示隱藏元件**&#x200B;選項的動作工具列。 在此範例中，隱藏了兩個元件。
+  * **取消隱藏元件**
+    選取父元件以顯示包含&#x200B;**顯示隱藏元件**&#x200B;選項的動作工具列。 在此範例中，隱藏了兩個元件。
 
-     ![screen_shot_2018-03-23at091200](assets/screen_shot_2018-03-23at091200.png)
+    ![screen_shot_2018-03-23at091200](assets/screen_shot_2018-03-23at091200.png)
 
   選取「顯 **示隱藏的元件** 」(Show hidden components)選項，會以藍色顯示目前隱藏在原始位置的元件。
 

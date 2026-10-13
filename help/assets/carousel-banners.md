@@ -10,13 +10,27 @@ feature: Carousel Banners
 role: User, Admin
 exl-id: 53d34d3a-ecb6-4fa0-9665-60d21f48021e
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: bd0d2470-932c-4269-8eca-6d939b72d9ef
+    internal-label: Dynamic Media
+subfeature_v2:
+  - id: e82a35fa-5829-4d45-8047-ede0efd4c4ad
+    internal-label: Carousel banners
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '4665'
+source-wordcount: '4791'
 ht-degree: 3%
-
 ---
-
 # 輪播橫幅{#carousel-banners}
 
 輪播橫幅可讓行銷人員輕鬆建立互動式輪播促銷內容，並將內容傳送至任何畫面，藉此促進轉換。
@@ -88,7 +102,7 @@ ht-degree: 3%
 
    * [新增轉盤橫幅至您的網站頁面](#adding-a-carousel-banner-to-your-website-page)您可以新增轉盤橫幅URL或已複製到網站頁面上的內嵌程式碼。
 
-      * [將輪播橫幅與現有的快速檢視](#integrating-the-carousel-banner-with-an-existing-quickview)整合。 如果您使用協力廠商Web內容管理系統，則必須將新的轉盤橫幅與網站上現有的Quickview實作整合。
+     * [將輪播橫幅與現有的快速檢視](#integrating-the-carousel-banner-with-an-existing-quickview)整合。 如果您使用協力廠商Web內容管理系統，則必須將新的轉盤橫幅與網站上現有的Quickview實作整合。
 
    * [在Experience Manager中新增轉盤橫幅至您的網站](/help/assets/adding-dynamic-media-assets-to-pages.md)如果您是Experience Manager Sites客戶，可以使用互動媒體元件，直接將轉盤集新增至Experience Manager中的頁面。
 
@@ -286,23 +300,23 @@ ht-degree: 3%
 
    * 選取&#x200B;**[!UICONTROL 快速檢視]**。
 
-      * 如果您是Experience Manager Sites和電子商務客戶，請選取「產品選擇器」圖示（放大鏡）以開啟「選取產品」頁面。 選取您要使用的產品，然後選取頁面右上角的核取記號，即可返迴轉盤橫幅編輯器。
-      * 如果您不是Experience Manager Sites或電子商務客戶
+     * 如果您是Experience Manager Sites和電子商務客戶，請選取「產品選擇器」圖示（放大鏡）以開啟「選取產品」頁面。 選取您要使用的產品，然後選取頁面右上角的核取記號，即可返迴轉盤橫幅編輯器。
+     * 如果您不是Experience Manager Sites或電子商務客戶
 
-         * 若要定義這些變數，請參閱[識別熱點變數](#identifying-hotspot-and-image-map-variables)。
-         * 然後，手動輸入SKU值。 在「SKU值」文字欄位中，輸入產品的SKU （庫存單位），這是您提供的每個不同產品或服務的唯一識別碼。 輸入的SKU值會自動填入Quickview範本的變數部分，讓系統知道將點選的熱點與特定SKU的Quickview建立關聯。
-         * （選擇性）如果快速檢視中有其他變數您必須用來進一步識別產品，請選取&#x200B;**[!UICONTROL 新增一般變數]**。 在文字欄位中，指定額外的變數。 例如， category=Mens是新增的變數。
+       * 若要定義這些變數，請參閱[識別熱點變數](#identifying-hotspot-and-image-map-variables)。
+       * 然後，手動輸入SKU值。 在「SKU值」文字欄位中，輸入產品的SKU （庫存單位），這是您提供的每個不同產品或服務的唯一識別碼。 輸入的SKU值會自動填入Quickview範本的變數部分，讓系統知道將點選的熱點與特定SKU的Quickview建立關聯。
+       * （選擇性）如果快速檢視中有其他變數您必須用來進一步識別產品，請選取&#x200B;**[!UICONTROL 新增一般變數]**。 在文字欄位中，指定額外的變數。 例如， category=Mens是新增的變數。
 
-         * 如需詳細資訊，請參閱[使用選取器](/help/assets/working-with-selectors.md)。
+       * 如需詳細資訊，請參閱[使用選取器](/help/assets/working-with-selectors.md)。
 
    * 選取&#x200B;**[!UICONTROL 超連結]**。
 
-      * 如果您是Experience Manager Sites客戶，請選取「網站選擇器」圖示（資料夾）以導覽至URL。
-        >[!NOTE]
-        >
-        >如果您的互動式內容有具有相對URL的連結，尤其是指向Experience Manager Sites頁面的連結，則無法採用URL型連結方法。
+     * 如果您是Experience Manager Sites客戶，請選取「網站選擇器」圖示（資料夾）以導覽至URL。
+       >[!NOTE]
+       >
+       >如果您的互動式內容有具有相對URL的連結，尤其是指向Experience Manager Sites頁面的連結，則無法採用URL型連結方法。
 
-      * 如果您是獨立客戶，請在HREF文字欄位中指定連結網頁的完整URL路徑。
+     * 如果您是獨立客戶，請在HREF文字欄位中指定連結網頁的完整URL路徑。
 
    請務必指定要在新的瀏覽器分頁（建議的預設值）或相同的分頁中開啟連結。
 
@@ -310,16 +324,16 @@ ht-degree: 3%
 
    * 選取&#x200B;**[!UICONTROL 體驗片段]**。
 
-      * 如果您是Experience Manager Sites客戶，請選取「搜尋」圖示（放大鏡）以開啟「體驗片段」頁面。選取您要使用的體驗片段，然後選取頁面右上角的&#x200B;**[!UICONTROL 選取]**，即可返回熱點管理頁面。
-請參閱[體驗片段](/help/sites-authoring/experience-fragments.md)。
+     * 如果您是Experience Manager Sites客戶，請選取「搜尋」圖示（放大鏡）以開啟「體驗片段」頁面。 選取您要使用的體驗片段，然後選取頁面右上角的&#x200B;**[!UICONTROL 選取]**，即可返回熱點管理頁面。
+       請參閱[體驗片段](/help/sites-authoring/experience-fragments.md)。
 
-      * 指定體驗片段在橫幅上顯示的寬度和高度。
+     * 指定體驗片段在橫幅上顯示的寬度和高度。
 
-        >[!NOTE]
-        >
-        >將檢視器嵌入體驗片段時，不支援轉盤橫幅中的社群媒體分享工具。
-        >
-        >若要解決此問題，請建立沒有社群媒體分享工具的檢視器預設集。 這類檢視器預設集可讓您成功將其嵌入體驗片段中。
+       >[!NOTE]
+       >
+       >將檢視器嵌入體驗片段時，不支援轉盤橫幅中的社群媒體分享工具。
+       >
+       >若要解決此問題，請建立沒有社群媒體分享工具的檢視器預設集。 這類檢視器預設集可讓您成功將其嵌入體驗片段中。
 
    ![experience_fragment-carouselbanner](assets/experience_fragment-carouselbanner.png)
 
@@ -379,7 +393,7 @@ ht-degree: 3%
 
 當您對輪播橫幅感到滿意時，可以將其發佈。
 請參閱[將視訊或影像檢視器內嵌在網頁上](/help/assets/embed-code.md)。
-請參閱[將URL連結至您的網頁應用程式](/help/assets/linking-urls-to-yourwebapplication.md)。如果您的互動式內容有具有相對URL的連結，尤其是指向Experience Manager Sites頁面的連結，則無法採用URL型連結方法。
+請參閱[將URL連結至您的網頁應用程式](/help/assets/linking-urls-to-yourwebapplication.md)。 如果您的互動式內容有具有相對URL的連結，尤其是指向Experience Manager Sites頁面的連結，則無法採用URL型連結方法。
 請參閱[將Dynamic Media Assets新增至頁面](/help/assets/adding-dynamic-media-assets-to-pages.md)。
 
 您可以從轉盤編輯器（偏好方法）或&#x200B;**[!UICONTROL 檢視器]**&#x200B;清單預覽轉盤橫幅。

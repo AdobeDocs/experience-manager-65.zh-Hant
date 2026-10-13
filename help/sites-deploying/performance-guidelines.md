@@ -9,13 +9,22 @@ feature: Configuring
 exl-id: 5a305a5b-0c3d-413b-88c1-1f5abf7e1579
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 6f3c4f4aa4183552492c6ce5039816896bd67495
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 523b1ccd-901e-5e3b-9fa7-f3dfd82463d5
+    internal-label: Configuring
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '3000'
 ht-degree: 6%
-
 ---
-
 # 效能准則{#performance-guidelines}
 
 本頁提供如何最佳化AEM部署效能的一般准則。 如果您是AEM的新手，請先檢閱下列頁面，再開始閱讀效能指南：
@@ -354,12 +363,12 @@ AEM部署有三個重要的建置組塊。 內容作者、編輯者和核准者�
 * 儘量不要使用查詢
 * 請勿使用Sling Bindings來取得Java™程式碼中的OSGi服務，而是使用：
 
-   * DS元件中的@Reference
-   * 在Sling模型中@Inject立
-   * Sightly Use類別中的sling.getService()
-   * JSP中的sling.getService()
-   * ServiceTracker
-   * 直接存取OSGi服務登入
+  * DS元件中的@Reference
+  * 在Sling模型中@Inject立
+  * Sightly Use類別中的sling.getService()
+  * JSP中的sling.getService()
+  * ServiceTracker
+  * 直接存取OSGi服務登入
 
 如需有關在AEM上開發的詳細資訊，請閱讀[開發 — 基本知識](/help/sites-developing/the-basics.md)。 如需其他最佳做法，請參閱[開發最佳做法](/help/sites-developing/best-practices.md)。
 
@@ -834,24 +843,24 @@ Adobe建議讓TarMK成為客戶在所有部署案例中使用的預設持續性�
 
 * **TarMK與File Datastore** — 建議大部分客戶的架構：
 
-   * 最小拓撲：一個製作執行個體、兩個發佈執行個體、兩個Dispatcher
-   * 如果檔案資料存放區已共用，會開啟無二進位檔復寫
+  * 最小拓撲：一個製作執行個體、兩個發佈執行個體、兩個Dispatcher
+  * 如果檔案資料存放區已共用，會開啟無二進位檔復寫
 
 * **具有檔案資料存放區的MongoMK** — 建議的Author層級水準擴充性架構：
 
-   * 最小拓撲：三個作者執行個體、三個MongoDB執行個體、兩個發佈執行個體、兩個Dispatcher
-   * 如果檔案資料存放區已共用，會開啟無二進位檔復寫
+  * 最小拓撲：三個作者執行個體、三個MongoDB執行個體、兩個發佈執行個體、兩個Dispatcher
+  * 如果檔案資料存放區已共用，會開啟無二進位檔復寫
 
 * **Nodestore** — 儲存在本機磁碟上，而非網路附加儲存裝置(NAS)
 * 使用&#x200B;**Amazon S3**&#x200B;時：
 
-   * Amazon S3資料存放區會在製作和發佈層級之間共用
-   * 必須開啟無二進位檔復寫
-   * 資料存放區記憶體回收需要先在所有Author和Publish節點上執行，然後在作者上執行第二次
+  * Amazon S3資料存放區會在製作和發佈層級之間共用
+  * 必須開啟無二進位檔復寫
+  * 資料存放區記憶體回收需要先在所有Author和Publish節點上執行，然後在作者上執行第二次
 
 * **除了現成可用的索引之外，應該建立自訂索引** — 根據最常見的搜尋
 
-   * Lucene索引應用於自訂索引
+  * Lucene索引應用於自訂索引
 
 * **自訂工作流程可大幅改善效能** — 移除「更新資產」工作流程中的視訊步驟、停用未使用的接聽程式等。
 

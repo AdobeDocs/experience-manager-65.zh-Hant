@@ -1,5 +1,5 @@
 ---
-title: Forms JEE工作流程 | 處理使用者資料
+title: Forms JEE工作流程 |處理使用者資料
 description: 瞭解如何使用AEM Forms JEE工作流程來設計、建立和管理業務流程。
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -7,14 +7,28 @@ role: Admin,User
 exl-id: 847fa303-8d1e-4a17-b90d-5f9da5ca2d77
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1379'
+source-wordcount: '1407'
 ht-degree: 0%
-
 ---
-
-# Forms JEE工作流程 | 處理使用者資料 {#forms-jee-workflows-handling-user-data}
+# Forms JEE工作流程 |處理使用者資料 {#forms-jee-workflows-handling-user-data}
 
 AEM Forms JEE工作流程提供設計、建立和管理業務流程的工具。 工作流程處理包含一系列以指定順序執行的步驟。 每個步驟都會執行特定動作，例如將任務指派給使用者或傳送電子郵件訊息。 程式可與資產、使用者帳戶和服務互動，並可使用下列任何方法觸發：
 
@@ -127,7 +141,7 @@ AEM Forms JEE工作流程提供設計、建立和管理業務流程的工具。 
 
 1. 使用具有正確連線設定的`ServiceClientFactory`執行個體，建立公用`ProcessManager`使用者端(`com.adobe.idp.workflow.client.ProcessManager`)的執行個體。
 
-   如需詳細資訊，請參閱[類別ProcessManager](https://helpx.adobe.com/tw/experience-manager/6-3/forms/ProgramLC/javadoc/com/adobe/idp/workflow/client/ProcessManager.html)的Java™ API參考。
+   如需詳細資訊，請參閱[類別ProcessManager](https://helpx.adobe.com/experience-manager/6-3/forms/ProgramLC/javadoc/com/adobe/idp/workflow/client/ProcessManager.html)的Java™ API參考。
 
 1. 檢查工作流程例項的狀態。 如果狀態不是2 (COMPLETE)或4 (TERMINATED)，請先呼叫下列方法來終止執行個體：
 

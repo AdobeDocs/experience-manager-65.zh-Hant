@@ -9,16 +9,30 @@ exl-id: 05f8b430-141e-4921-98b1-a0d8f636e478
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '296'
+source-wordcount: '299'
 ht-degree: 0%
-
 ---
-
 # 健康狀態監視概觀 {#overview-of-health-monitor}
 
-健康狀態監視器提供有關AEM表單系統的重要資訊，例如伺服器資訊、記憶體使用量和處理器使用量。 也可以使用Work Manager統計資料，例如佇列中的工作專案或工作數目及其狀態。 您可以使用「健康狀態監視器」執行下列工作：
+健康狀態監視提供有關AEM表單系統的重要資訊，例如伺服器資訊、記憶體使用量和處理器使用量。 也可以使用Work Manager統計資料，例如佇列中的工作專案或工作數目及其狀態。 您可以使用「健康狀態監視器」執行下列工作：
 
 * 驗證您的系統是否正確執行
 * 檢視資訊以協助診斷發生的系統問題

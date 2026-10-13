@@ -1,19 +1,28 @@
 ---
 title: 管理影片資產
-description: 在 [!DNL Adobe Experience Manager]中上傳、預覽、註釋及發佈視訊資產。
+description: 在[!DNL Adobe Experience Manager]中上傳、預覽、註釋及發佈視訊資產。
 contentOwner: AG
 role: User
 feature: Asset Management
 exl-id: 21d3e0bd-5955-470a-8ca2-4d995c17eb4c
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: bca6156727dca11b2e09be549f3def6130827193
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 7d2b2ec8-499c-5434-9ffd-9218cd71f683
+    internal-label: Asset Management
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '5414'
+source-wordcount: '5614'
 ht-degree: 8%
-
 ---
-
 # 管理影片資產 {#manage-video-assets}
 
 | 版本 | 文章連結 |
@@ -261,7 +270,7 @@ Google會定期變更其使用者介面。 因此，將視訊發佈至YouTube的
 1. 在「建立YouTube設定」頁面的「Google cloud 平台設定」下方的「應用程式名稱」欄位 **[!UICONTROL 中]** ，輸入Google專案ID。
 
    您已在先前設定Google Cloud設定時指定專案ID。
-讓「建立YouTube設定」頁面保持開啟；稍後，您將會返回該頁面。
+   讓「建立YouTube設定」頁面保持開啟；稍後，您將會返回該頁面。
 
    ![6_5_youtubepublish-createyoutubeconfiguration](assets/6_5_youtubepublish-createyoutubeconfiguration.png)
 
@@ -309,7 +318,7 @@ Google會定期變更其使用者介面。 因此，將視訊發佈至YouTube的
 1. 在「YouTube帳戶設定」對話方塊的「應用程式名 **[!UICONTROL 稱」欄位中]** ，輸入Google專案ID。
 
    您已在最初[設定Google雲端設定](/help/assets/video.md#configuring-google-cloud-settings)時指定專案ID。
-保留YouTube帳戶設定對話方塊開啟；您稍後將返回該對話方塊。
+   保留YouTube帳戶設定對話方塊開啟；您稍後將返回該對話方塊。
 
 1. 使用純文字編輯器，開啟您先前在「設定Google雲端設定」工作中下載並儲存的JSON檔案。
 1. 選取並複製整個JSON文字。
@@ -360,19 +369,19 @@ Google會定期變更其使用者介面。 因此，將視訊發佈至YouTube的
 1. 在頁面右側的&#x200B;**[!UICONTROL 設定]**&#x200B;標籤下方，執行下列動作：
 
    * 在&#x200B;**[!UICONTROL 對應至屬性]**&#x200B;文字欄位中，選取並複製值。
-將複製的值貼到開啟的文字編輯器中。當您稍後建立中繼資料處理設定檔時，會需要此值。讓文字編輯器保持開啟狀態。
+     將複製的值貼到開啟的文字編輯器中。 當您稍後建立中繼資料處理設定檔時，會需要此值。 讓文字編輯器保持開啟狀態。
 
    * 在&#x200B;**[!UICONTROL 選擇]**&#x200B;下，選取並複製您要使用的預設值（例如「人員與部落格」或「科學與技術」）。
-將複製的值貼到開啟的文字編輯器中。當您稍後建立中繼資料處理設定檔時，會需要此值。讓文字編輯器保持開啟狀態。
+     將複製的值貼到開啟的文字編輯器中。 當您稍後建立中繼資料處理設定檔時，會需要此值。 讓文字編輯器保持開啟狀態。
 
 1. 在「YouTube發佈」標題下，選取&#x200B;**[!UICONTROL YouTube隱私權]**。
 1. 在頁面右側的&#x200B;**[!UICONTROL 設定]**&#x200B;標籤下方，執行下列動作：
 
    * 在&#x200B;**[!UICONTROL 對應至屬性]**&#x200B;文字欄位中，選取並複製值。
-將複製的值貼到開啟的文字編輯器中。當您稍後建立中繼資料處理設定檔時，會需要此值。讓文字編輯器保持開啟狀態。
+     將複製的值貼到開啟的文字編輯器中。 當您稍後建立中繼資料處理設定檔時，會需要此值。 讓文字編輯器保持開啟狀態。
 
-   * 在&#x200B;**[!UICONTROL 選擇]**&#x200B;下，選取並複製您要使用的預設值。請注意，「選擇」會組成兩個選項組。配對中的底部欄位是您要複製的預設值，例如public、unlisted或private。
-將複製的值貼到開啟的文字編輯器中。當您稍後建立中繼資料處理設定檔時，會需要此值。讓文字編輯器保持開啟狀態。
+   * 在&#x200B;**[!UICONTROL 選擇]**&#x200B;下，選取並複製您要使用的預設值。 請注意，「選擇」會組成兩個選項組。 配對中的底部欄位是您要複製的預設值，例如public、unlisted或private。
+     將複製的值貼到開啟的文字編輯器中。 當您稍後建立中繼資料處理設定檔時，會需要此值。 讓文字編輯器保持開啟狀態。
 
 1. 在「中繼資料結構描述編輯器」頁面的右上角附近，按一下&#x200B;**[!UICONTROL 取消]**。
 1. 在Experience Manager的左上角，選取Experience Manager標誌，然後在左側導軌中，按一下&#x200B;**[!UICONTROL 工具]** （槌子圖示） > **[!UICONTROL Assets]** > **[!UICONTROL 中繼資料設定檔]**。

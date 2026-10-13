@@ -4,13 +4,19 @@ description: 瞭解通用編輯器的彈性，以及如何協助您使用AEM 6.5
 feature: Developing
 role: Developer
 exl-id: 7bdf1fcc-02b9-40bc-8605-e6508a84d249
-source-git-commit: 28e44586c6a8596037a44fa10d21b3fdcdea1606
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e14eb250-3c22-4a07-9061-a78112b2b826
+    internal-label: Experience Manager 6.5
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1361'
 ht-degree: 26%
-
 ---
-
 
 # 通用編輯器 {#universal-editor}
 
@@ -40,15 +46,15 @@ Universal Editor是一項與AEM搭配使用的服務，可讓您無頭製作內�
 以下工具支援通用編輯器：
 
 * AEM 6.5
-   * 同時支援內部部署和AMS*託管。
+  * 同時支援內部部署和AMS*託管。
 * [AEM 6.5 LTS](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65-lts/content/implementing/developing/headless/universal-editor/introduction)
-   * 同時支援內部部署和AMS*託管。
+  * 同時支援內部部署和AMS*託管。
 * [AEM as a Cloud Service](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/introduction)
 
 本檔案著重於通用編輯器的AEM 6.5支援。 若要搭配AEM 6.5使用通用編輯器，您將需要：
 
 * AEM 6.5 （含Service Pack 23或更新版本）
-   * [Feature Pack.](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/cq-6.5.21-universal-editor-1.0.0.zip)也支援Service Pack 21和22。
+  * [Feature Pack.](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/cq-6.5.21-universal-editor-1.0.0.zip)也支援Service Pack 21和22。
 * Dispatcher已正確設定
 
 >[!NOTE]
@@ -129,11 +135,11 @@ Universal Editor會運用多個套件，針對這些套件需要額外設定。
 範例對應：
 
 * 在 AEM Author 上開啟 `/content/foo` 之下的所有頁面：
-   * `/content/foo:${author}${path}.html?login-token=${token}`
-   * 這樣會開啟 `https://localhost:4502/content/foo/x.html?login-token=<token>`
+  * `/content/foo:${author}${path}.html?login-token=${token}`
+  * 這樣會開啟 `https://localhost:4502/content/foo/x.html?login-token=<token>`
 * 在遠端NextJS伺服器上開啟`/content/bar`下的所有頁面，提供所有變數作為資訊
-   * `/content/bar:nextjs.server${path}?env=${env}&author=https://${author}&publish=https://${publish}&login-token=${token}`
-   * 這樣會開啟 `https://nextjs.server/content/bar/x?env=prod&author=https://localhost:4502&publish=https://localhost:4503&login-token=<token>`
+  * `/content/bar:nextjs.server${path}?env=${env}&author=https://${author}&publish=https://${publish}&login-token=${token}`
+  * 這樣會開啟 `https://nextjs.server/content/bar/x?env=prod&author=https://localhost:4502&publish=https://localhost:4503&login-token=<token>`
 
 ### 設定通用編輯器服務 {#set-up-ue}
 

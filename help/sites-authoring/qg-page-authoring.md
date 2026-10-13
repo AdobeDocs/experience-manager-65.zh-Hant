@@ -10,13 +10,26 @@ exl-id: a7e16555-9bbe-4da2-817c-4495a0193f3f
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Developer
-source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1558'
 ht-degree: 4%
-
 ---
-
 # 製作頁面的快速指南{#quick-guide-to-authoring-pages}
 
 這些程式旨在作為在AEM中編寫頁面內容之關鍵動作的快速指南（高層級）。
@@ -39,20 +52,20 @@ ht-degree: 4%
 
 * **建立**
 
-   * 此按鈕在許多主控台中都有提供 — 顯示的選項會區分大小寫，因此可視情況而有所不同。
+  * 此按鈕在許多主控台中都有提供 — 顯示的選項會區分大小寫，因此可視情況而有所不同。
 
 * 在資料夾中重新排序頁面
 
-   * 這可以在[清單檢視](/help/sites-authoring/basic-handling.md#list-view)中完成。 變更會套用並顯示在其他檢視中。
+  * 這可以在[清單檢視](/help/sites-authoring/basic-handling.md#list-view)中完成。 變更會套用並顯示在其他檢視中。
 
 #### 頁面製作 {#page-authoring}
 
 * 導覽連結
 
-   * 當您處於&#x200B;**編輯**&#x200B;模式時，***連結無法用於導覽***。 若要使用連結導覽，您需要[使用以下其中一種方式預覽頁面](/help/sites-authoring/editing-content.md#previewing-pages)：
+  * 當您處於&#x200B;**編輯**&#x200B;模式時，***連結無法用於導覽***。 若要使用連結導覽，您需要[使用以下其中一種方式預覽頁面](/help/sites-authoring/editing-content.md#previewing-pages)：
 
-      * [預覽模式](/help/sites-authoring/editing-content.md#preview-mode)
-      * [以已發佈狀態檢視](/help/sites-authoring/editing-content.md#view-as-published)
+    * [預覽模式](/help/sites-authoring/editing-content.md#preview-mode)
+    * [以已發佈狀態檢視](/help/sites-authoring/editing-content.md#view-as-published)
 
 * 無法從頁面編輯器啟動/建立版本；現在可以從網站主控台完成（針對選取的資源透過&#x200B;**建立**&#x200B;或[時間表](/help/sites-authoring/basic-handling.md#timeline)）。
 
@@ -111,8 +124,8 @@ ht-degree: 4%
 
    * 透過[選取所需資源](/help/sites-authoring/basic-handling.md#viewingandselectingyourresources)進入選擇模式，其包含：
 
-      * 行動裝置：選取並保留
-      * 案頭： [快速動作](/help/sites-authoring/basic-handling.md#quick-actions) — 勾選圖示：
+     * 行動裝置：選取並保留
+     * 案頭： [快速動作](/help/sites-authoring/basic-handling.md#quick-actions) — 勾選圖示：
 
    ![screen_shot_2018-03-21at160503](assets/screen_shot_2018-03-21at160503.png)
 
@@ -147,9 +160,9 @@ ht-degree: 4%
 
    * [新增元件至您的頁面](/help/sites-authoring/editing-content.md#inserting-a-component)，方法如下：
 
-      * 開啟側面板
-      * 選取[元件]索引標籤（[元件瀏覽器](/help/sites-authoring/author-environment-tools.md#components-browser)）
-      * 將必要的元件拖曳到頁面上。
+     * 開啟側面板
+     * 選取[元件]索引標籤（[元件瀏覽器](/help/sites-authoring/author-environment-tools.md#components-browser)）
+     * 將必要的元件拖曳到頁面上。
 
      側面板的開啟（和關閉）方式：
 
@@ -157,24 +170,24 @@ ht-degree: 4%
 
    * [編輯頁面上現有元件](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste)的內容：
 
-      * 按一下以開啟元件工具列。 使用&#x200B;**編輯** （鉛筆）圖示開啟對話方塊。
-      * 使用select-and-hold或按兩下滑鼠鍵開啟元件的就地編輯器。 會顯示可用的動作（對於某些元件而言，為有限的選取範圍）。
-      * 若要檢視所有可用動作，請使用以下方法進入全熒幕模式：
+     * 按一下以開啟元件工具列。 使用&#x200B;**編輯** （鉛筆）圖示開啟對話方塊。
+     * 使用select-and-hold或按兩下滑鼠鍵開啟元件的就地編輯器。 會顯示可用的動作（對於某些元件而言，為有限的選取範圍）。
+     * 若要檢視所有可用動作，請使用以下方法進入全熒幕模式：
 
      ![全熒幕模式](do-not-localize/screen_shot_2018-03-21at160706.png)
 
    * [設定現有元件的屬性](/help/sites-authoring/editing-content.md#component-edit-dialog)
 
-      * 按一下以開啟元件工具列。 使用&#x200B;**設定** （扳手）圖示開啟對話方塊。
+     * 按一下以開啟元件工具列。 使用&#x200B;**設定** （扳手）圖示開啟對話方塊。
 
    * [移動元件](/help/sites-authoring/editing-content.md#moving-a-component)：
 
-      * 將所需元件拖曳至其新位置。
-      * 按一下以開啟元件工具列。 必要時使用&#x200B;**剪下**&#x200B;再使用&#x200B;**貼上**&#x200B;圖示。
+     * 將所需元件拖曳至其新位置。
+     * 按一下以開啟元件工具列。 必要時使用&#x200B;**剪下**&#x200B;再使用&#x200B;**貼上**&#x200B;圖示。
 
    * [複製（並貼上）](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste)元件：
 
-      * 按一下以開啟元件工具列。 視需要使用&#x200B;**複製**&#x200B;然後&#x200B;**貼上**&#x200B;圖示。
+     * 按一下以開啟元件工具列。 視需要使用&#x200B;**複製**&#x200B;然後&#x200B;**貼上**&#x200B;圖示。
 
    >[!NOTE]
    >
@@ -182,17 +195,17 @@ ht-degree: 4%
 
    * [刪除](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste)元件：
 
-      * 按一下以開啟元件工具列，然後使用&#x200B;**刪除**&#x200B;圖示。
+     * 按一下以開啟元件工具列，然後使用&#x200B;**刪除**&#x200B;圖示。
 
    * [新增註解](/help/sites-authoring/annotations.md#annotations)至頁面：
 
-      * 選取&#x200B;**註釋**&#x200B;模式（語音泡泡圖示）。 使用&#x200B;**新增註釋** （加號）圖示新增註釋。 使用右上方的X退出附註模式。
+     * 選取&#x200B;**註釋**&#x200B;模式（語音泡泡圖示）。 使用&#x200B;**新增註釋** （加號）圖示新增註釋。 使用右上方的X退出附註模式。
 
      ![註釋](do-not-localize/screen_shot_2018-03-21at160813.png)
 
    * [預覽頁面](/help/sites-authoring/editing-content.md#preview-mode) （檢視該頁面在發佈環境中的顯示方式）
 
-      * 從工具列選取&#x200B;**預覽**。
+     * 從工具列選取&#x200B;**預覽**。
 
    * 使用&#x200B;**編輯**&#x200B;下拉式選取器返回編輯模式（或選取其他模式）。
 
@@ -206,20 +219,20 @@ ht-degree: 4%
 
 * 從&#x200B;**網站**&#x200B;主控台：
 
-   1. [瀏覽至您要發佈的頁面](#finding-your-page)。
-   1. 選取&#x200B;**屬性**&#x200B;圖示，其來源為：
+  1. [瀏覽至您要發佈的頁面](#finding-your-page)。
+  1. 選取&#x200B;**屬性**&#x200B;圖示，其來源為：
 
-      * 適當資源的[快速動作（僅限卡片檢視/案頭）](#quick-actions-card-view-desktop-only)。
-      * 選取[頁面時的工具列](#selectiingyourpageforfurtheraction)。
+     * 適當資源的[快速動作（僅限卡片檢視/案頭）](#quick-actions-card-view-desktop-only)。
+     * 選取[頁面時的工具列](#selectiingyourpageforfurtheraction)。
 
   ![screen_shot_2018-03-21at160850](assets/screen_shot_2018-03-21at160850.png)
 
-   1. 畫面隨即顯示頁面屬性。 您可以視需要進行更新，然後使用「儲存」來儲存這些專案
+  1. 畫面隨即顯示頁面屬性。 您可以視需要進行更新，然後使用「儲存」來儲存這些專案
 
 * 當[編輯您的頁面](#editing-your-page-content)時：
 
-   1. 開啟&#x200B;**頁面資訊**&#x200B;功能表。
-   1. 選取&#x200B;**開啟屬性**&#x200B;以開啟用於編輯屬性的對話方塊。
+  1. 開啟&#x200B;**頁面資訊**&#x200B;功能表。
+  1. 選取&#x200B;**開啟屬性**&#x200B;以開啟用於編輯屬性的對話方塊。
 
   ![screen_shot_2018-03-21at160920](assets/screen_shot_2018-03-21at160920.png)
 
@@ -229,18 +242,18 @@ ht-degree: 4%
 
 * 從&#x200B;**網站**&#x200B;主控台：
 
-   1. [瀏覽至您要發佈的頁面](#finding-your-page)。
-   1. 選取&#x200B;**快速發佈**&#x200B;圖示，其來源為：
+  1. [瀏覽至您要發佈的頁面](#finding-your-page)。
+  1. 選取&#x200B;**快速發佈**&#x200B;圖示，其來源為：
 
-      * 適當資源的[快速動作（僅限卡片檢視/案頭）](#quick-actions-card-view-desktop-only)。
-      * 選取[頁面時的工具列](#selectiingyourpageforfurtheraction) （也可存取[稍後發佈](/help/sites-authoring/publishing-pages.md#main-pars-title-12)）。
+     * 適當資源的[快速動作（僅限卡片檢視/案頭）](#quick-actions-card-view-desktop-only)。
+     * 選取[頁面時的工具列](#selectiingyourpageforfurtheraction) （也可存取[稍後發佈](/help/sites-authoring/publishing-pages.md#main-pars-title-12)）。
 
   ![screen_shot_2018-03-21at160957](assets/screen_shot_2018-03-21at160957.png)
 
 * 當[編輯您的頁面](#editing-your-page-content)時：
 
-   1. 開啟&#x200B;**頁面資訊**&#x200B;功能表。
-   1. 選取&#x200B;**發佈頁面**。
+  1. 開啟&#x200B;**頁面資訊**&#x200B;功能表。
+  1. 選取&#x200B;**發佈頁面**。
 
   ![screen_shot_2018-03-21at161026](assets/screen_shot_2018-03-21at161026.png)
 
@@ -266,15 +279,15 @@ ht-degree: 4%
 
    * 複製:
 
-      * 導覽至新位置並貼上。
+     * 導覽至新位置並貼上。
 
    * 移動:
 
-      * 精靈會開啟，以收集移動頁面所需的資訊。 請依照熒幕上的指示操作。
+     * 精靈會開啟，以收集移動頁面所需的資訊。 請依照熒幕上的指示操作。
 
    * 刪除:
 
-      * 系統會要求您確認動作。
+     * 系統會要求您確認動作。
 
    >[!NOTE]
    >
@@ -334,8 +347,8 @@ ht-degree: 4%
 
    * **還原為此版本**
 
-      * 版本已還原。
+     * 版本已還原。
 
    * **顯示差異**
 
-      * 頁面開啟時會反白顯示兩個版本之間的差異。
+     * 頁面開啟時會反白顯示兩個版本之間的差異。

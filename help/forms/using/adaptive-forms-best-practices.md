@@ -7,13 +7,31 @@ feature: Adaptive Forms,Foundation Components,Core Components
 exl-id: 5c75ce70-983e-4431-a13f-2c4c219e8dde
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 7da902b6-fe94-5180-8e7c-f6d1e38d01d5
+    internal-label: Foundation Components
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '6030'
+source-wordcount: '6063'
 ht-degree: 1%
-
 ---
-
 # 使用最適化表單的最佳作法 {#best-practices-for-working-with-adaptive-forms}
 
 <span class="preview"> Adobe建議針對[建立新的Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md)或[將Adaptive Forms新增至AEM Sites頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)，使用現代且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hant)。 這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。 本文會介紹使用基礎元件編寫最適化表單的舊方法。</span>
@@ -39,8 +57,8 @@ Adobe Experience Manager (AEM)表單可協助您將複雜的交易轉換為簡�
 
 * 使用Apache Maven `aem-project-archetype`建立和管理AEM專案的結構。 它會為您的AEM專案建立建議的結構和範本。 此外，它還提供建置自動化和變更控制系統，以協助管理專案。
 
-   * 使用maven `archetype:generate`命令產生初始結構。
-   * 使用maven `eclipse:eclipse`命令產生eclipse專案檔案，並將專案匯入eclipse。
+  * 使用maven `archetype:generate`命令產生初始結構。
+  * 使用maven `eclipse:eclipse`命令產生eclipse專案檔案，並將專案匯入eclipse。
 
 如需詳細資訊，請參閱[如何使用Apache Maven建置AEM專案](/help/sites-developing/ht-projects-maven.md)。
 
@@ -66,10 +84,10 @@ Adobe Experience Manager (AEM)表單可協助您將複雜的交易轉換為簡�
 * 建議您使用表單管理員使用者介面而非使用CRX封裝管理員使用者介面上傳表單套件，因為透過CRX封裝管理員上傳套件有時可能會導致異常。
 * AEM Forms可讓您根據下清單單模型建立最適化表單。 表單模型可作為表單與AEM系統之間資料交換的介面，並為最適化表單內外資料流提供XML型結構。 此外，表單模型會以結構描述和XFA限制的形式對調適型表單施加規則和限制。
 
-   * **無**：使用此選項建立的最適化表單不使用任何表單模型。 從此類表單產生的資料 XML 具有包含欄位和對應值的單層結構。
-   * **XML或JSON結構描述**： XML和JSON結構描述代表貴組織中後端系統產生或使用資料的結構。 您可以將結構描述關聯至最適化表單，並使用其元素將動態內容新增至最適化表單。 結構描述的元素可在內容瀏覽器的「資料模型物件」標籤中使用，以編寫調適型表單。 您可以拖放結構元素來建置表單。
-   * **XFA表單範本**：如果您有投資以XFA為基礎的HTML5表單，這會是理想的表單模型。 它可讓您直接將XFA式表單轉換為最適化表單。 任何現有的XFA規則都會保留在關聯的調適型表單中。 產生的調適型表單支援XFA建構，例如驗證、事件、屬性和模式。
-   * **表單資料模型**：如果您想要整合您的後端系統（例如資料庫、Web服務和AEM使用者設定檔），以預先填寫最適化表單並將提交的表單資料寫入後端系統，這會是您偏好的表單模型。 表單資料模型編輯器可讓您在可用來建立調適型表單的表單資料模型中定義及設定實體和服務。 如需詳細資訊，請參閱[AEM Forms資料整合](/help/forms/using/data-integration.md)。
+  * **無**：使用此選項建立的最適化表單不使用任何表單模型。 從此類表單產生的資料 XML 具有包含欄位和對應值的單層結構。
+  * **XML或JSON結構描述**： XML和JSON結構描述代表貴組織中後端系統產生或使用資料的結構。 您可以將結構描述關聯至最適化表單，並使用其元素將動態內容新增至最適化表單。 結構描述的元素可在內容瀏覽器的「資料模型物件」標籤中使用，以編寫調適型表單。 您可以拖放結構元素來建置表單。
+  * **XFA表單範本**：如果您有投資以XFA為基礎的HTML5表單，這會是理想的表單模型。 它可讓您直接將XFA式表單轉換為最適化表單。 任何現有的XFA規則都會保留在關聯的調適型表單中。 產生的調適型表單支援XFA建構，例如驗證、事件、屬性和模式。
+  * **表單資料模型**：如果您想要整合您的後端系統（例如資料庫、Web服務和AEM使用者設定檔），以預先填寫最適化表單並將提交的表單資料寫入後端系統，這會是您偏好的表單模型。 表單資料模型編輯器可讓您在可用來建立調適型表單的表單資料模型中定義及設定實體和服務。 如需詳細資訊，請參閱[AEM Forms資料整合](/help/forms/using/data-integration.md)。
 
 請務必謹慎選擇資料模型，不僅要符合您的需求，還要擴大您對XFA和XSD資產（如果有的話）的現有投資。 使用XSD模型建立表單範本，因為產生的XML包含結構描述所定義的每個XPATH的資料。 使用XSD模型作為表單資料模型的預設選擇也有幫助，因為它將表單設計從處理和使用資料的後端系統分離開來，並且由於表單欄位的一對一對應而改善了表單的效能。 此外，欄位的BindRef可以設為其資料值的XML格式XPATH。
 
@@ -81,8 +99,8 @@ Adobe Experience Manager (AEM)表單可協助您將複雜的交易轉換為簡�
 
 * AEM Forms提供可用於建立最適化表單的現成最適化表單範本。 您也可以建立自己的範本。 AEM提供靜態和可編輯的範本。
 
-   * 靜態範本由開發人員定義和設定。
-   * 可編輯的範本是由作者使用範本編輯器建立的。 範本編輯器可讓您定義範本中的基本結構和初始內容。 結構圖層中的任何修改都會反映在使用該範本的所有表單中。 初始內容可能包括預先設定的主題、預填服務、提交動作等。 不過，您可以使用表單編輯器修改表單的這些設定。 如需詳細資訊，請參閱[最適化表單範本](/help/forms/using/template-editor.md)。
+  * 靜態範本由開發人員定義和設定。
+  * 可編輯的範本是由作者使用範本編輯器建立的。 範本編輯器可讓您定義範本中的基本結構和初始內容。 結構圖層中的任何修改都會反映在使用該範本的所有表單中。 初始內容可能包括預先設定的主題、預填服務、提交動作等。 不過，您可以使用表單編輯器修改表單的這些設定。 如需詳細資訊，請參閱[最適化表單範本](/help/forms/using/template-editor.md)。
 
 * 若要設定特定欄位或面板執行個體的樣式，請使用[內嵌樣式](/help/forms/using/inline-style-adaptive-forms.md)。 或者，您可以在CSS檔案中定義類別，並在元件的CSS Class屬性中指定類別名稱。
 * 在元件中加入使用者端資料庫，以便一致地套用樣式至使用該元件的調適型表單或片段。 如需詳細資訊，請參閱[建立最適化表單頁面元件](/help/forms/using/custom-adaptive-forms-templates.md)。
@@ -91,9 +109,9 @@ Adobe Experience Manager (AEM)表單可協助您將複雜的交易轉換為簡�
 * 調適型表單提供面板配置，例如回應式、索引標籤、摺疊式功能表和精靈，以控制表單元件在面板中的配置方式。 您可以建立自訂面板版面配置，並讓表單作者可以使用它們。 如需詳細資訊，請參閱[建立最適化表單的自訂配置元件](/help/forms/using/custom-layout-components-forms.md)。
 * 您也可以自訂特定的最適化表單元件，例如欄位和面板版面配置。
 
-   * 使用AEM的[覆蓋](/help/sites-developing/overlays.md)功能來修改元件的復本。 不建議修改預設元件。
-   * 若要自訂/libs中現成可用的最適化表單元件的版面，除了[預設版面](/help/forms/using/layout-capabilities-adaptive-forms.md)之外，還要[建立自訂版面元件](/help/forms/using/custom-layout-components-forms.md)。
-   * 透過建立自訂Widget或外觀來引入自訂互動。 不建議修改預設元件。 如需詳細資訊，請參閱[外觀架構](/help/forms/using/introduction-widgets.md)。
+  * 使用AEM的[覆蓋](/help/sites-developing/overlays.md)功能來修改元件的復本。 不建議修改預設元件。
+  * 若要自訂/libs中現成可用的最適化表單元件的版面，除了[預設版面](/help/forms/using/layout-capabilities-adaptive-forms.md)之外，還要[建立自訂版面元件](/help/forms/using/custom-layout-components-forms.md)。
+  * 透過建立自訂Widget或外觀來引入自訂互動。 不建議修改預設元件。 如需詳細資訊，請參閱[外觀架構](/help/forms/using/introduction-widgets.md)。
 
 * 如需處理PII資料的建議，請參閱[處理個人識別資訊](/help/forms/using/adaptive-forms-best-practices.md#p-handling-personally-identifiable-information-p)。
 
@@ -139,18 +157,18 @@ AEM Forms提供[規則編輯器](/help/forms/using/rule-editor.md)，可讓您�
 * 處理複雜或常用的規則時，請考慮將商業邏輯寫入個別的使用者端程式庫中，以便您指定並在適用性表單中重複使用。 使用者端程式庫應為獨立程式庫，且不應有任何外部相依性，jQuery和Underscore.js除外。 您也可以使用使用者端程式庫來強制執行[伺服器端重新驗證](/help/forms/using/configuring-submit-actions.md#server-side-revalidation-in-adaptive-form)提交的表單資料。
 * 調適型表單提供了一組API，您可以使用這些API與調適型表單通訊及執行動作。 部分重要API如下。 如需詳細資訊，請參閱最適化Forms的[JavaScript資料庫API參考](https://adobe.com/go/learn_aemforms_documentation_63)。
 
-   * `guideBridge.reset()`：重設表單。
-   * `guideBridge.submit()`：提交表單。
-   * `guideBridge.setFocus(somExp, focusOption, runCompletionExp)`：將焦點設定為欄位。
-   * `guideBridge.validate(errorList, somExpression, focus)`：驗證表單。
-   * `guideBridge.getDataXML(options)`：以XML格式取得表單資料。
-   * `guideBridge.resolveNode(somExpression)`：取得表單物件。
-   * `guideBridge.setProperty(somList, propertyName, valueList)`：設定表單物件的屬性。
-   * 此外，您可以使用以下欄位屬性：
+  * `guideBridge.reset()`：重設表單。
+  * `guideBridge.submit()`：提交表單。
+  * `guideBridge.setFocus(somExp, focusOption, runCompletionExp)`：將焦點設定為欄位。
+  * `guideBridge.validate(errorList, somExpression, focus)`：驗證表單。
+  * `guideBridge.getDataXML(options)`：以XML格式取得表單資料。
+  * `guideBridge.resolveNode(somExpression)`：取得表單物件。
+  * `guideBridge.setProperty(somList, propertyName, valueList)`：設定表單物件的屬性。
+  * 此外，您可以使用以下欄位屬性：
 
-      * `field.value`以變更欄位的值。
-      * `field.enabled`以啟用/停用欄位。
-      * `field.visible`以變更欄位的可見度。
+    * `field.value`以變更欄位的值。
+    * `field.enabled`以啟用/停用欄位。
+    * `field.visible`以變更欄位的可見度。
 
 * 最適化表單作者可能需要撰寫JavaScript程式碼，才能在表單中建置商業邏輯。 雖然JavaScript功能強大且有效，但可能會影響安全性預期。 因此，您必須確保表單作者是受信任的角色，而且在表單投入生產之前，有程式可檢閱和核准JavaScript程式碼。 管理員可以根據使用者群組的角色或功能，限制使用者群組對規則編輯器存取權的存取權。 請參閱[將規則編輯器存取權授與選取的使用者群組](/help/forms/using/rule-editor-access-user-groups.md)。
 * 您可以在規則中使用運算式，讓調適型表單成為動態表單。 所有運算式都是有效的JavaScript運算式，並使用適用性表單指令碼模型API。 這些運算式會傳回某些型別的值。 如需運算式和相關最佳實務的詳細資訊，請參閱[最適化表單運算式](/help/forms/using/adaptive-form-expressions.md)。
@@ -210,17 +228,17 @@ AEM Forms提供[規則編輯器](/help/forms/using/rule-editor.md)，可讓您�
 * 僅包含最適化表單中從使用者擷取資訊的欄位和面板。 請考慮將靜態內容維持在最小值，或使用URL在個別視窗中開啟。
 * 雖然每個表單都是為特定目的而設計，但在大多數表單中都有一些常見的區段。 例如，個人詳細資料、地址、僱用詳細資料等。 為通用表單元素和區段建立[最適化表單片段](/help/forms/using/adaptive-form-fragments.md)，並在各個表單中使用它們。 您也可以將現有表單中的面板儲存為片段。 片段中的任何變更會反映在所有關聯的調適型表單中。 它促進了合作創作，因為多位作者可以同時處理構成表單的不同片段。
 
-   * 請考慮在表單製作期間為不可重複使用的區段建立表單片段。 隨著表單的大小和複雜度增加，將其細分為片段可大幅簡化編寫流程，並讓表單更易於維護。 此方法可讓您專注在較小且更容易管理的表單上，而非一次處理整個表單。
-   * 與調適型表單類似，建議使用片段容器對話方塊，在使用者端資料庫中定義所有片段特定的樣式和自訂指令碼。 此外，請嘗試建立不依賴外部物件的自給自足片段。
-   * 避免使用跨片段指令碼。 如果片段外有任何您必須參照的物件，請嘗試將該物件設為父表單的一部分。 如果物件仍必須位於另一個片段中，請在指令碼中依其名稱參照。
+  * 請考慮在表單製作期間為不可重複使用的區段建立表單片段。 隨著表單的大小和複雜度增加，將其細分為片段可大幅簡化編寫流程，並讓表單更易於維護。 此方法可讓您專注在較小且更容易管理的表單上，而非一次處理整個表單。
+  * 與調適型表單類似，建議使用片段容器對話方塊，在使用者端資料庫中定義所有片段特定的樣式和自訂指令碼。 此外，請嘗試建立不依賴外部物件的自給自足片段。
+  * 避免使用跨片段指令碼。 如果片段外有任何您必須參照的物件，請嘗試將該物件設為父表單的一部分。 如果物件仍必須位於另一個片段中，請在指令碼中依其名稱參照。
 
 * 使用自動儲存並恢復以定期儲存最適化表單，並讓使用者稍後重新造訪以完成表單。
 * 設定片段以緩慢載入。 在執行階段，只有在需要標籤為延遲載入的片段時，才會轉譯。 它大幅縮短大型表單的載入時間。 具有可重複面板的片段也支援此功能。 如需詳細資訊，請參閱[設定延遲載入](/help/forms/using/lazy-loading-adaptive-forms.md)。
 
-   * 請勿在回應式格線配置或第一個面板中，設定片段上的延遲載入。
-   * 延遲載入的片段不支援檔案附件和條款與條件元件。
-   * 如果延遲載入面板中的某個值用於表單的其他部分，請將該值標示為「全域使用值」，以便在解除安裝包含面板時使用該值。
-   * 請考慮為應根據條件顯示或隱藏的片段寫入可見性規則。
+  * 請勿在回應式格線配置或第一個面板中，設定片段上的延遲載入。
+  * 延遲載入的片段不支援檔案附件和條款與條件元件。
+  * 如果延遲載入面板中的某個值用於表單的其他部分，請將該值標示為「全域使用值」，以便在解除安裝包含面板時使用該值。
+  * 請考慮為應根據條件顯示或隱藏的片段寫入可見性規則。
 * 將&#x200B;**Apache Sling主要Servlet**&#x200B;中每個請求&#x200B;**的**&#x200B;呼叫數的值設定為相當大的數字。 這可讓Forms伺服器允許其他呼叫。 組態顯示預設值1500。 值1500呼叫適用於其他Experience Manager元件，例如Sites和Assets。 調適型表單的預設值集為20000。 如果您在記錄中遇到`too many calls`錯誤或表單無法轉譯，請嘗試將值增加到較大的數字來解決問題。 如果呼叫數超過20000，表示表單很複雜，可能需要一些時間才能在瀏覽器中呈現表單。 這僅發生在首次載入表單時，之後會快取表單，而且快取表單後，對效能沒有重大影響。
 
 ### DOM大小考量事項和瀏覽器效能
@@ -232,10 +250,10 @@ AEM Forms提供[規則編輯器](/help/forms/using/rule-editor.md)，可讓您�
 * **瀏覽器轉譯差異**：轉譯效能在不同的瀏覽器和裝置上可能會有很大的差異。 有些瀏覽器轉譯引擎處理動態DOM更新的方式不同，在樣式重新計算、重新排列和重新繪製方面有不同的方式。 這在動態載入的大型內容中特別明顯。 在某些瀏覽器中，每一次重大的DOM操作都可能觸發頁面的完整版面重新計算及重繪，而加劇大型或複雜表單的效能問題。
 
 * **效能因素**：有幾個因素會影響延遲載入效能：
-   * 片段的大小和複雜性
-   * 套用至元素的CSS樣式
-   * 動態更新觸發的重新整理次數
-   * 裝置和瀏覽器功能
+  * 片段的大小和複雜性
+  * 套用至元素的CSS樣式
+  * 動態更新觸發的重新整理次數
+  * 裝置和瀏覽器功能
 
 * **真實世界影響**：在觀察到的案例中，DOM大小約400 KB的表單在某些瀏覽器上經歷了最多15秒的重大演算延遲。 這些延遲不僅是因為片段大小，也因為在動態內容插入期間觸發了CSS處理和頁面重新整理。
 
@@ -287,9 +305,9 @@ AEM Forms提供[規則編輯器](/help/forms/using/rule-editor.md)，可讓您�
 
 * 根據最適化表單所依據的表單資料模型，您可以為DoR設定範本，如下所示：
 
-   * **XFA表單範本**：使用關聯的XDP檔案做為DoR範本。
-   * **XSD結構描述**：使用與適用性表單使用相同XML結構描述的相關聯XFA範本。
-   * **無**：使用自動產生的DoR。
+  * **XFA表單範本**：使用關聯的XDP檔案做為DoR範本。
+  * **XSD結構描述**：使用與適用性表單使用相同XML結構描述的相關聯XFA範本。
+  * **無**：使用自動產生的DoR。
 
 * 從最適化表單編輯器的「記錄檔案」索引標籤設定頁首、頁尾、影像、顏色、字型等。
 * 使用`DoRService`以程式設計方式產生記錄檔案。
@@ -365,7 +383,7 @@ AEM提供翻譯工作流程，您可用來將最適化表單當地語系化。 �
 * 建立錯誤處理常式[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/customizing-errorhandler-pages.html?lang=zh-Hant)顯示的自訂錯誤頁面。
 * 安全的AEM Forms伺服器。
 
-   * 使用`nosamplecontent`執行模式，確保生產伺服器上未部署範例內容和範例使用者。 請參閱[在生產就緒模式下執行AEM](/help/sites-administering/production-ready.md)。
+  * 使用`nosamplecontent`執行模式，確保生產伺服器上未部署範例內容和範例使用者。 請參閱[在生產就緒模式下執行AEM](/help/sites-administering/production-ready.md)。
 
 * 將棧積大小維持在最小8 GB。 如需其他設定，請參閱[AEM Forms伺服器的效能調整](/help/forms/using/performance-tuning-aem-forms.md)。
 * 使用服務使用者工作階段而非管理工作階段來執行服務層級工作。 如需詳細資訊，請參閱[服務驗證](https://sling.apache.org/documentation/the-sling-engine/service-authentication.html)。
@@ -439,17 +457,17 @@ AEM Forms規則編輯器提供建立和管理規則的視覺介面，減少大�
 **自訂函式**&#x200B;比&#x200B;**程式碼編輯器**&#x200B;更具有顯著的優勢，因為它在內容與程式碼之間提供了清晰的區隔，可加強協同合作並簡化工作流程。 建議您使用自訂函式，以獲得下列優點：
 
 * **順暢地使用版本控制項，例如Git：**
-   * 從內容中隔離程式碼可大幅減少內容管理期間的Git衝突，並提升妥善組織的存放庫。
-   * 自訂函式對於有多位貢獻者同時運作的專案而言非常有用。
+  * 從內容中隔離程式碼可大幅減少內容管理期間的Git衝突，並提升妥善組織的存放庫。
+  * 自訂函式對於有多位貢獻者同時運作的專案而言非常有用。
 
 * **技術優點：**
-   * 自訂函式提供模組化和封裝。
-   * 模組可以獨立開發、測試和維護。
-   * 增強程式碼的可重複使用性和可維護性。
+  * 自訂函式提供模組化和封裝。
+  * 模組可以獨立開發、測試和維護。
+  * 增強程式碼的可重複使用性和可維護性。
 
 * **有效的開發程式：**
-   * 模組化可讓開發人員專注於特定功能。
-   * 降低整個程式碼基底的複雜性，以提升開發流程的效率，進而減輕開發人員的負擔。
+  * 模組化可讓開發人員專注於特定功能。
+  * 降低整個程式碼基底的複雜性，以提升開發流程的效率，進而減輕開發人員的負擔。
 
 
 

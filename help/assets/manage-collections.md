@@ -8,13 +8,27 @@ feature: Collections,Asset Management
 exl-id: 2117b2de-8024-4aa8-9ce0-68a156928356
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: bca6156727dca11b2e09be549f3def6130827193
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 7d2b2ec8-499c-5434-9ffd-9218cd71f683
+    internal-label: Asset Management
+  - id: ac365bec-0634-4744-9473-c42f47320593
+    internal-label: Asset management and governance
+subfeature_v2:
+  - id: c73531c3-4c05-471e-beff-cefb35857910
+    internal-label: Collections
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '2170'
-ht-degree: 15%
-
+source-wordcount: '2201'
+ht-degree: 14%
 ---
-
 # 管理集合 {#managing-collections}
 
 | 版本 | 文章連結 |
@@ -49,14 +63,14 @@ ht-degree: 15%
 1. 導覽至&#x200B;**[!UICONTROL 集合]**&#x200B;主控台。
 1. 從工具列中按一下&#x200B;**[!UICONTROL 建立]**。
 1. 在&#x200B;**[!UICONTROL 建立集合]**&#x200B;頁面中，輸入集合的標題和選擇性說明。
-1. 新增成員至系列並指派適當的權限。 或者，選取「 **[!UICONTROL 公用系列]** 」，讓所有使用者都能存取系列。
+1. 新增成員至集合並指派適當的權限。 或者，選取「 **[!UICONTROL 公用系列]** 」，讓所有使用者都能存取系列。
 
    >[!NOTE]
    >
    >若要讓成員與其他使用者共用集合，請在路徑`home/users`提供`dam-users`群組讀取許可權。 將許可權授與位於`/content/dam/collections`位置的使用者，讓使用者可以在彈出式清單中檢視集合。 或者，讓使用者成為`dam-users`群組的一部分。
 
 1. （選用）為集合新增縮圖影像。
-1. 按一下[建立]&#x200B;**&#x200B;**，然後按一下[確定]&#x200B;**關閉對話方塊。**&#x200B;具有指定標題和屬性的系列會在「系列」主控台中開啟。
+1. 按一下[建立]&#x200B;**&#x200B;**，然後按一下[確定]&#x200B;**關閉對話方塊。**&#x200B;具有指定標題和屬性的集合會在「集合」主控台中開啟。
 
    >[!NOTE]
    >
@@ -117,7 +131,7 @@ ht-degree: 15%
 您可以將資產新增至包含參照資產或資料夾清單的集合。 智慧型集合會使用搜尋查詢來填入資產。 因此，資產和資料夾的靜態參考不適用於它們。
 
 1. 在[!DNL A]資產使用者介面中，選取資產並按一下工具列中的&#x200B;**[!UICONTROL 至集合]** ![新增至集合](assets/do-not-localize/add-to-collection.png)。
-或者，您可以將資產拖曳至介面上的&#x200B;**[!UICONTROL 拖放集合]**&#x200B;區域。當區域的標籤變更為&#x200B;**[!UICONTROL 拖放以新增]**&#x200B;時新增資產。
+或者，您可以將資產拖曳至介面上的&#x200B;**[!UICONTROL 拖放集合]**&#x200B;區域。 當區域的標籤變更為&#x200B;**[!UICONTROL 拖放以新增]**&#x200B;時，新增資產。
 
 1. 在&#x200B;**[!UICONTROL 新增至集合]**&#x200B;頁面中，選取您要新增資產的集合。
 

@@ -15,25 +15,35 @@ autotag-review: '2026-05-18T18:37:44.170Z'
 TQID: 'https://experienceleague.adobe.com/ePAqMpipETShCgP-zIuOJjvkopRXp77eHxrGlgBC1SQ'
 product_v2:
   - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
   - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
 feature_v2:
   - id: bd0d2470-932c-4269-8eca-6d939b72d9ef
+    internal-label: Dynamic Media
+subfeature_v2:
+  - id: d8ea7e82-d45e-442f-bb04-b3788a7abcb0
+    internal-label: Video profiles
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
 level_v2:
   - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
   - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
   - id: bbbea26f-9621-49eb-9ab8-e06fb3bbce8c
-source-git-commit: 9c96b6744c7af2f061b4dfbf403560047485f9b5
+    internal-label: Artificial intelligence
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
-source-wordcount: 3779
+source-wordcount: '3789'
 ht-degree: 8%
-
 ---
-
 # 視訊設定檔 {#video-profiles}
 
 Dynamic Media已隨附預先定義的自我調整視訊編碼設定檔。 此現成可用設定檔中的設定已最佳化，讓您的客戶獲得最佳檢視體驗。 當您使用最適化視訊編碼設定檔編碼您的主要來源視訊時，在播放視訊期間，視訊播放器會根據客戶的網際網路連線速度自動調整視訊資料流的品質。 此功能稱為最適化位元速率串流。
@@ -71,7 +81,7 @@ Dynamic Media已隨附預先定義的自我調整視訊編碼設定檔。 此現
 <table>
  <tbody>
   <tr>
-   <td><strong>視訊格式轉碼器</strong></td>
+   <td><strong>影片格式轉碼器</strong></td>
    <td><strong>視訊大小 — 寬度(px)</strong></td>
    <td><strong>視訊大小 — 高度(px)</strong></td>
    <td><strong>保持外觀比例？</strong></td>
@@ -237,13 +247,13 @@ Dynamic Media已隨附預先定義的自我調整視訊編碼設定檔（MP4 H.2
 1. 請執行下列動作：
    * 在&#x200B;**[!UICONTROL 寬度]**&#x200B;欄位中，輸入&#x200B;**[!UICONTROL 自動]**。
    * 在&#x200B;**[!UICONTROL 高度]**&#x200B;欄位中，輸入畫素值。
-若要協助您視覺化視訊的大小，請選取「高度」的資訊圖示以開啟&#x200B;**[!UICONTROL 大小電腦]**&#x200B;頁面。 使用&#x200B;**[!UICONTROL 大小電腦]**&#x200B;頁面進一步設定您想要的視訊尺寸（藍方塊）。 完成後，在對話方塊的右上角，選取&#x200B;**[!UICONTROL X]**。
+     若要協助您視覺化視訊的大小，請選取「高度」的資訊圖示以開啟&#x200B;**[!UICONTROL 大小電腦]**&#x200B;頁面。 使用&#x200B;**[!UICONTROL 大小電腦]**&#x200B;頁面進一步設定您想要的視訊尺寸（藍方塊）。 完成後，在對話方塊的右上角，選取&#x200B;**[!UICONTROL X]**。
 1. （可選）執行下列任一項作業：
 
    * 選取&#x200B;**[!UICONTROL 進階]**&#x200B;標籤，並確認已選取&#x200B;**[!UICONTROL 使用預設值]**&#x200B;核取方塊（建議使用）。
 
    * 清除&#x200B;**[!UICONTROL 使用預設值]**&#x200B;核取方塊，並指定您想要的視訊設定和音訊設定。
-選取每個選項旁的資訊圖示，以取得其他說明或根據選取的視訊格式codec建議的設定。
+     選取每個選項旁的資訊圖示，以取得其他說明或根據選取的視訊格式codec建議的設定。
 
 1. 在頁面的右上角，選取「**[!UICONTROL 儲存]**」以儲存預設集。
 1. 執行下列任一項作業：
@@ -362,7 +372,7 @@ Dynamic Media已隨附預先定義的自我調整視訊編碼設定檔（MP4 H.2
 1. 在「視訊設定檔」頁面上，檢查一個視訊設定檔名稱。
 1. 在工具列上，選取&#x200B;**[!UICONTROL 複製]**。
 1. 在「視訊編碼設定檔」頁面上，輸入設定檔的新名稱。
-1. 最佳實務是，請確定已選取「 **[!UICONTROL 最適化串流編碼]** 」核取方塊。 選取資訊圖示以取得最適化位元速率串流的說明。 (如果您要複製漸進式視訊輪廓，請勿選取核取方塊。)
+1. 最佳實務是，請確定已選取「 **[!UICONTROL 最適化串流編碼]** 」核取方塊。 選取資訊圖示以取得最適化位元速率串流的說明。 (如果您要複製漸進式視訊設定檔，請勿選取核取方塊。)
 
    在Dynamic Media — 混合模式中，如果WebM視訊預設集是視訊設定檔的一部分，則無法針對最適化串流進行&#x200B;**[!UICONTROL 編碼，因為所有預設集都必須是MP4。]**
 1. 在「視訊編碼預設集」標題下，新增、編輯或刪除組成設定檔的視訊編碼預設集。
@@ -414,7 +424,7 @@ Dynamic Media已隨附預先定義的自我調整視訊編碼設定檔（MP4 H.2
 1. 選取「**[!UICONTROL 視訊設定檔]**」標籤，然後從下拉式選單中選取設定檔，然後選取「**[!UICONTROL 儲存並關閉]**」。 已為其分配輪廓的資料夾將通過資料夾名稱正下方的輪廓名稱顯示來指示。
 
    ![chlimage_1-518](assets/chlimage_1-518.png)
-您可以[監視視訊設定檔處理工作](#monitoring-the-progress-of-an-encoding-job)的進度。
+   您可以[監視視訊設定檔處理工作](#monitoring-the-progress-of-an-encoding-job)的進度。
 
 ### 全域套用視訊設定檔 {#applying-a-video-profile-globally}
 
@@ -453,4 +463,4 @@ Dynamic Media已隨附預先定義的自我調整視訊編碼設定檔（MP4 H.2
 
 1. 選取Experience Manager標誌並導覽至&#x200B;**[!UICONTROL Assets]**，然後導覽至您要移除其視訊設定檔的資料夾。
 1. 在資料夾中，選取核取記號，然後選取&#x200B;**[!UICONTROL 屬性]**。
-1. 選取「**[!UICONTROL 視訊設定檔]**」標籤，然後從下拉式功能表中選取「**[!UICONTROL 無]**」，然後選取「**[!UICONTROL 儲存並關閉]**」。 已為其分配輪廓的資料夾將通過資料夾名稱正下方的輪廓名稱顯示來指示。
+1. 選取「**[!UICONTROL 視訊設定檔]**」標籤，然後從下拉式功能表中選取「**[!UICONTROL 無]**」，然後選取「**[!UICONTROL 儲存並關閉]**」。 已指派設定檔的資料夾會在資料夾名稱正下方顯示設定檔名稱，以此表示。

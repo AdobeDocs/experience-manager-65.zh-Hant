@@ -10,20 +10,31 @@ exl-id: 27b8302c-250b-4ce6-b3cf-c938738f2d92
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization
 role: User
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+  - id: eb3ad9f8-54a2-45f3-abb1-d3976415a718
+    internal-label: Personalization
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1202'
+source-wordcount: '1203'
 ht-degree: 3%
-
 ---
-
 # Teaser和策略{#teasers-and-strategies}
 
 行銷活動經常使用Teaser做為吸引特定訪客群體進入專注於訪客興趣之內容的機制。 已為特定行銷活動定義一或多個Teaser。
 
 >[!NOTE]
 >
->AEM 6.2已棄用Teaser元件。請改用[目標元件](/help/sites-authoring/content-targeting-touch.md)。
+>AEM 6.2已棄用Teaser元件。 請改用[目標元件](/help/sites-authoring/content-targeting-touch.md)。
 
 * **品牌頁面**&#x200B;儲存在網站的「行銷活動」區段中。 品牌包含個別行銷活動。
 * **促銷活動頁面**&#x200B;儲存在網站的「促銷活動」區段中。 每個行銷活動都有個別頁面，這些頁面會保留Teaser定義。 容器或概觀頁面也包含有關個別Teaser頁面的某些資訊和統計資料。
@@ -31,7 +42,7 @@ ht-degree: 3%
 AEM中的Teaser由幾個部分組成：
 
 * **Teaser頁面**&#x200B;儲存在適當的行銷活動頁面下，並保留每個特定行銷活動可用的Teaser段落定義。 顯示Teaser段落時會使用這些定義，包括內容變數、用來選取變數和提升因子的區段。
-* **Teaser元件**&#x200B;現成可用，可讓您在內容頁面中建立特定Teaser段落的執行個體。 您可以從sidekick拖曳Teaser元件，然後指定Teaser定義以建立您自己的Teaser段落。 **注意：** AEM 6.2已棄用Teaser元件。請改用[Target元件](/help/sites-authoring/content-targeting-touch.md)。
+* **Teaser元件**&#x200B;現成可用，可讓您在內容頁面中建立特定Teaser段落的執行個體。 您可以從sidekick拖曳Teaser元件，然後指定Teaser定義以建立您自己的Teaser段落。 **注意：** AEM 6.2已棄用Teaser元件。 請改用[目標元件](/help/sites-authoring/content-targeting-touch.md)。
 * **Teaser段落**&#x200B;是內容頁面中Teaser的實際執行個體。 這些功能可吸引部分訪客進入關注其興趣的內容。
 * 包含以特定訪客區段為焦點之促銷活動內容的頁面。 通常，Teaser段落會將訪客導向到這類頁面。
 
@@ -65,7 +76,7 @@ AEM中的Teaser由幾個部分組成：
 <table>
  <tbody>
   <tr>
-   <td>行銷活動</td>
+   <td>Campaign</td>
    <td>Teaser</td>
    <td>已指派的區段</td>
    <td>指派的標籤 </td>
@@ -111,7 +122,7 @@ AEM中的Teaser由幾個部分組成：
 
 那麼如果我們將此套用至訪客，其中：
 
-* **S1**、**S2和&#x200B;**&#x200B;S6**&#x200B;已成功解析
+* **S1**、**S2和** S6**已成功解析
 
 * 標籤&#x200B;**行銷**&#x200B;有三個點選
 * 標籤&#x200B;**business**&#x200B;有六個點選
@@ -127,7 +138,7 @@ AEM中的Teaser由幾個部分組成：
 <table>
  <tbody>
   <tr>
-   <td>行銷活動</td>
+   <td>Campaign</td>
    <td>Teaser</td>
    <td>已指派的區段</td>
    <td>標記 </td>
@@ -235,20 +246,20 @@ Teaser頁面/段落可用來將特定訪客區段引導至聚焦於其興趣的�
 
 >[!NOTE]
 >
->AEM 6.2已棄用Teaser元件。請改用[目標元件](/help/sites-authoring/content-targeting-touch.md)。
+>AEM 6.2已棄用Teaser元件。 請改用[目標元件](/help/sites-authoring/content-targeting-touch.md)。
 
 1. 導覽至您要放置Teaser段落的內容頁面，此段落將導向您的行銷活動頁面。
-1. 在所需位置新增&#x200B;**Teaser**&#x200B;元件(可在sidekick的&#x200B;**Personalization**&#x200B;區段中取得)。 初次建立時，會顯示尚未設定行銷活動路徑：
+1. 在所需位置新增&#x200B;**Teaser**&#x200B;元件（可在sidekick的&#x200B;**Personalization**&#x200B;區段中取得）。 初次建立時，會顯示尚未設定行銷活動路徑：
 
    ![chlimage_1](assets/chlimage_1.png)
 
 1. 編輯Teaser元件以新增：
 
    * **行銷活動路徑**
-包含個別Teaser頁面的促銷活動頁面路徑；區段會確切決定要顯示哪個Teaser。
+     包含個別Teaser頁面的促銷活動頁面路徑；區段會確切決定要顯示哪個Teaser。
 
    * **[策略](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#strategies)**
-成功解析多個區段時用於選取的方法。
+     成功解析多個區段時用於選取的方法。
 
    ![chlimage_1-1](assets/chlimage_1-1.png)
 

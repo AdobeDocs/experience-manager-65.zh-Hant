@@ -9,13 +9,27 @@ role: Admin, Developer
 feature: Adaptive Forms,Core Components
 exl-id: 6585ea71-6242-47d3-bc59-6f603cf507b6
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 0487a5669fbaab35974eb85eb099b82e0847a4f9
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '962'
-ht-degree: 11%
-
+source-wordcount: '1079'
+ht-degree: 16%
 ---
-
 # 在AEM 6.5 Forms上啟用最適化Forms核心元件 {#enable-adaptive-forms-core-components}
 
 | 版本 | 文章連結 |
@@ -108,7 +122,7 @@ ht-degree: 11%
 
       >[!WARNING]
       >
-      >* 使用版本45建立Archetype專案時，`[AEM Archetype Project Folder]/pom.xml`一開始會將forms核心元件版本設定為1.1.28。在建立或部署Archetype專案之前，請將Forms核心元件版本更新為1.1.26。您可以在[AEM 6.5 Forms版本記錄](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/version.html?lang=zh-Hant#aem-as-form-version-history)中找到最新版本。
+      >* 使用版本45建立Archetype專案時，`[AEM Archetype Project Folder]/pom.xml`一開始會將forms核心元件版本設定為1.1.28。 在建立或部署Archetype專案之前，請將Forms核心元件版本更新為1.1.26。 您可以在[AEM 6.5 Forms版本記錄](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/version.html?lang=zh-Hant#aem-as-form-version-history)中找到最新版本。
 
       >[!NOTE]
       >
@@ -152,7 +166,7 @@ ht-degree: 11%
 ### 啟用核心元件時新增了哪些功能？
 
 
-當為您的環境啟用調適型表單核心元件時，一個以核心元件為主的調適型表單空白範本和 Canvas 3.0 主題會新增至您的環境中。為您的環境啟用調適型表單核心元件後，您可以：
+當為您的環境啟用調適型表單核心元件時，一個以核心元件為主的調適型表單空白範本和 Canvas 3.0 主題會新增至您的環境中。 為您的環境啟用調適型表單核心元件後，您可以：
 
 * 建立以最適化Forms為基礎的核心元件。
 * 建立以核心元件為基礎的最適化表單範本。

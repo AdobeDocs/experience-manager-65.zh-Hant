@@ -11,13 +11,27 @@ exl-id: d4507059-a54d-4dc9-a263-e55dfa27eeb1
 feature: Troubleshooting
 mini-toc-levels: 3
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: cda65036-5305-4f01-89da-9b3506ae8c50
+    internal-label: Administration
+subfeature_v2:
+  - id: aaba5717-080e-40d6-a128-c9c8a9255476
+    internal-label: Troubleshooting
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
-source-wordcount: '1410'
+source-wordcount: '1411'
 ht-degree: 0%
-
 ---
-
 # 疑難排解Dynamic Media - Scene7模式{#troubleshooting-dynamic-media-scene-mode}
 
 以下檔案說明執行&#x200B;**dynamicmedia_scene7**&#x200B;執行模式的Dynamic Media疑難排解。
@@ -54,7 +68,7 @@ ht-degree: 0%
 
 ### 同步記錄 {#synchronization-logging}
 
-同步處理錯誤和問題記錄在`error.log` （Experience Manager伺服器目錄`/crx-quickstart/logs/`）。 有充足的記錄可判斷大部分問題的根本原因，但您可以透過Sling主控台([https://localhost:4502/system/console/slinglog](https://localhost:4502/system/console/slinglog))增加`com.adobe.cq.dam.ips`套件上DEBUG的記錄以收集詳細資訊。
+同步處理錯誤和問題記錄在`error.log` （Experience Manager伺服器目錄`/crx-quickstart/logs/`）。 有足夠的記錄可判斷大部分問題的根本原因，但您可以透過Sling主控台([https://localhost:4502/system/console/slinglog](https://localhost:4502/system/console/slinglog))增加`com.adobe.cq.dam.ips`封裝上DEBUG的記錄以收集更多資訊。
 
 ### 移動、複製、刪除 {#move-copy-delete}
 
@@ -243,7 +257,7 @@ ht-degree: 0%
    * `"is/content"`
    * `dam:scene7Folder`
    * `<asset-name>`
-範例： `https://<server>/is/content/myfolder/_CSS/_OOTB/CarouselDotsLeftButton_dark_sprite.png`
+     範例： `https://<server>/is/content/myfolder/_CSS/_OOTB/CarouselDotsLeftButton_dark_sprite.png`
 
 **解決方案**
 
@@ -255,7 +269,8 @@ ht-degree: 0%
 1. 在清單中搜尋檢視器套件；它以`cq-dam-scene7-viewers-content`開頭。
 1. 選取&#x200B;**重新安裝**。
 1. 在雲端服務底下，導覽至Dynamic Media設定頁面，然後開啟Dynamic Media - S7設定的設定對話方塊。
-1. 不做任何變更，選取&#x200B;**儲存**。這個儲存動作會再次觸發邏輯，以建立並同步範例資產、檢視器預設集CSS和圖稿。
+1. 不做任何變更，選取&#x200B;**儲存**。
+這個儲存動作會再次觸發邏輯，以建立並同步範例資產、檢視器預設集CSS和圖稿。
 
 ### 問題：檢視器預設集製作中未載入影像預覽 {#image-preview-not-loading}
 

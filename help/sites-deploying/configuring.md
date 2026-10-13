@@ -9,13 +9,22 @@ feature: Configuring
 exl-id: 3777a1ba-cc4e-41b9-9098-236f8141925f
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 523b1ccd-901e-5e3b-9fa7-f3dfd82463d5
+    internal-label: Configuring
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '2116'
 ht-degree: 0%
-
 ---
-
 # 基本設定概念{#basic-configuration-concepts}
 
 Adobe Experience Manager (AEM)已安裝所有引數的預設設定，允許其「立即可用」。 不過，您可以根據自己的特定需求設定AEM。
@@ -303,11 +312,11 @@ CQ傳送電子郵件通知給使用者，符合以下條件：
 
 * 在發佈執行個體上：
 
-   * [Day CQ WCM頁面統計資料](/help/sites-deploying/osgi-configuration-settings.md)
+  * [Day CQ WCM頁面統計資料](/help/sites-deploying/osgi-configuration-settings.md)
 
 * 在作者執行個體上：
 
-   * [Adobe頁面印象追蹤器](/help/sites-deploying/osgi-configuration-settings.md)
+  * [Adobe頁面印象追蹤器](/help/sites-deploying/osgi-configuration-settings.md)
 
 >[!CAUTION]
 >

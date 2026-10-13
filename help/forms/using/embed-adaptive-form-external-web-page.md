@@ -8,13 +8,29 @@ feature: Adaptive Forms,Foundation Components
 exl-id: 2a237f74-fdfc-4e28-841c-f69afb7b99cf
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: fb26d0c08644f8b84e406adeb7fb14496e8e9fd0
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 7da902b6-fe94-5180-8e7c-f6d1e38d01d5
+    internal-label: Foundation Components
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1388'
 ht-degree: 43%
-
 ---
-
 # 在外部網頁中嵌入適用性表單{#embed-adaptive-form-in-external-web-page}
 
 | 版本 | 文章連結 |
@@ -209,7 +225,7 @@ ProxyPassReverse /content https://<AEM_Instance>/content
 
 1. 在 AEM 發佈執行個體上，前往 AEM Web 主控台的 Configuration Manager：`https://'[server]:[port]'/system/console/configMgr`。
 1. 找到並開啟&#x200B;**Adobe Granite跨原始資源共用原則**&#x200B;設定(`com.adobe.granite.cors.impl.CORSPolicyImpl`)。
-1. 將內嵌網頁的原點新增至允許的原點。 例如，`https://www.example.com`。
+1. 將內嵌網頁的原點新增至允許的原點。 例如 `https://www.example.com`。
 1. 確保允許的路徑包含內嵌調適型表單使用的AEM Forms端點，例如`/content/forms/af/`下的提交、預填和記錄檔案URL。
 
 >[!TAB Apache Sling反向連結篩選器]

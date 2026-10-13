@@ -1,6 +1,6 @@
 ---
 title: 為JEE上的AEM Forms進行安全管理設定
-description: 瞭解如何管理使用者帳戶和服務(雖然在私人開發環境中是必需的，但在JEE上的AEM Forms生產環境中不是必需的)。
+description: 瞭解如何管理使用者帳戶和服務（雖然在私人開發環境中是必需的，但在JEE上的AEM Forms生產環境中不是必需的）。
 content-type: reference
 topic-tags: Security
 products: SG_EXPERIENCEMANAGER/6.4
@@ -8,16 +8,32 @@ role: Admin,User
 exl-id: 40bc01b4-a59e-4420-81d6-2887857bddce
 solution: Experience Manager, Experience Manager Forms
 feature: Document Security,Adaptive Forms
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 50158d81-1c06-57f7-8bd7-e8ff76a93f85
+    internal-label: Document Security
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '847'
+source-wordcount: '852'
 ht-degree: 0%
-
 ---
-
 # 為JEE上的AEM Forms進行安全管理設定 {#configuring-secure-administration-settings-for-aem-forms-on-jee}
 
-瞭解如何管理使用者帳戶和服務(雖然在私人開發環境中是必需的，但在JEE上的AEM Forms生產環境中不是必需的)。
+瞭解如何管理使用者帳戶和服務（雖然在私人開發環境中是必需的，但在JEE上的AEM Forms生產環境中不是必需的）。
 
 一般來說，開發人員不會使用生產環境來建置和測試他們的應用程式。 因此，您必須管理使用者帳戶和服務，雖然這些帳戶和服務在私人開發環境中是必要的，但在生產環境中卻不是必要的。
 
@@ -25,11 +41,11 @@ ht-degree: 0%
 
 ## 停用非必要的服務遠端存取 {#disabling-non-essential-remote-access-to-services}
 
-安裝及設定JEE上的AEM Forms後，許多服務都可透過SOAP和Enterprise JavaBeans™ (EJB)進行遠端呼叫。在此案例中，remote一詞指的是任何擁有網路存取應用程式伺服器SOAP、EJB或Action Message Format (AMF)連線埠的呼叫者。
+安裝及設定JEE上的AEM Forms後，可以透過SOAP和Enterprise JavaBeans™ (EJB)使用許多服務進行遠端呼叫。在此案例中，遠端一詞是指任何可透過網路存取應用程式伺服器之SOAP、EJB或Action Message Format (AMF)連線埠的呼叫者。
 
 雖然JEE服務上的AEM Forms需要向授權呼叫者傳遞有效的認證，但您應僅允許從遠端存取您需要存取的服務。 若要達到有限的協助功能，您應該儘可能減少可遠端存取的服務組合，以讓系統正常運作，然後啟用遠端呼叫功能，以呼叫您所需的其他服務。
 
-JEE服務上的AEM Forms一律需要至少SOAP存取權。 這些服務通常是Workbench使用的必要服務，但也包括Workspace網頁應用程式呼叫的服務。
+JEE服務上的AEM Forms一律至少需要SOAP存取權。 這些服務通常是Workbench使用的必要服務，但也包括Workspace網頁應用程式呼叫的服務。
 
 使用Administration Console中的「應用程式和服務」網頁完成此程式：
 
@@ -62,7 +78,7 @@ JEE服務上的AEM Forms一律需要至少SOAP存取權。 這些服務通常是
    * WorkspaceSingleSignOn
    * 應用程式管理員
 
-1. 按一下「下一步&#x200B;**」**，對不在上方清單中的SOAP端點重複上一步驟。 在移除端點之前，請確定SOAP列在「提供者」欄中。
+1. 按一下「下一步&#x200B;**」**，對不在上方清單中的SOAP端點重複上一步驟。 在移除端點之前，請確定SOAP已列在「提供者」欄中。
 
 ## 停用對服務的非必要匿名存取 {#disabling-non-essential-anonymous-access-to-services}
 

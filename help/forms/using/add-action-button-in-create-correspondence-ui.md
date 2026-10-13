@@ -9,13 +9,26 @@ feature: Correspondence Management
 exl-id: a582ba41-83cb-46f2-9de9-3752f6a7820a
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 3f00fc92-85ee-583e-abd1-3bc3d96de3a0
+    internal-label: Correspondence Management
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1888'
+source-wordcount: '1901'
 ht-degree: 2%
-
 ---
-
 # 在建立通訊UI中新增自訂動作按鈕 {#add-custom-action-button-in-create-correspondence-ui}
 
 ## 概觀 {#overview}
@@ -328,7 +341,7 @@ ACMExtensionsMessages.properties檔案包含「建立通訊」使用者介面中
 * DSC元件jar (DSCSample.jar)
 * 傳送信件以供稽核程式LCA (SendLetterForReview.lca)
 
-下載並解壓縮components.zip檔案以取得DSCSample.jar和SendLetterForReview.lca檔案。請依照下列程式使用這些檔案。
+下載並解壓縮components.zip檔案以取得DSCSample.jar和SendLetterForReview.lca檔案。 請依照下列程式使用這些檔案。
 [取得檔案](assets/components.zip)
 
 #### 設定LiveCycle Server執行LCA程式 {#configure-the-livecycle-server-to-run-the-lca-process}

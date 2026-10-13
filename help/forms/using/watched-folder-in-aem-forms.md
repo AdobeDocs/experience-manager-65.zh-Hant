@@ -9,13 +9,29 @@ exl-id: fbf5c7c3-cb01-4fda-8e5d-11d56792d4bf
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: Admin, User, Developer
-source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
-source-wordcount: '7066'
+source-wordcount: '7272'
 ht-degree: 0%
-
 ---
-
 # AEM Forms中的Watched資料夾{#watched-folder-in-aem-forms}
 
 管理員可以設定網路資料夾，稱為Watched資料夾，這樣當使用者將檔案（例如PDF檔案）放入Watched資料夾時，就會啟動預先設定的工作流程、服務或指令碼操作，以處理新增的檔案。 服務執行指定的操作後，會將結果檔案儲存在指定的輸出資料夾中。 如需工作流程、服務及指令碼的詳細資訊，請參閱[各種處理檔案的方法](#variousmethodsforprocessingfiles)。
@@ -66,19 +82,19 @@ ht-degree: 0%
 * **inputProcessorType （字串）**：要啟動的處理序型別。 您可以指定工作流程、指令碼或服務。 這是強制屬性。
 * **inputProcessorId （字串）**： inputProcessorId屬性的行為是以為inputProcessorType屬性指定的值為基礎。 這是強制屬性。 下列清單詳細說明了inputProcessorType屬性的所有可能值以及inputProcessorType屬性的對應必要條件：
 
-   * 針對工作流程，指定要執行的工作流程模型。 例如，/etc/workflow/models/&lt;workflow_name>/jcr:content/model
-   * 對於指令碼，指定要執行的指令碼的JCR路徑。 例如， /etc/fd/watchfolder/test/testScript.ecma
-   * 針對服務，指定用於找到OSGi服務的篩選器。 此服務已註冊為com.adobe.aemfd.watchfolder.service.api.ContentProcessor Interface的實作。
+  * 針對工作流程，指定要執行的工作流程模型。 例如，/etc/workflow/models/&lt;workflow_name>/jcr:content/model
+  * 對於指令碼，指定要執行的指令碼的JCR路徑。 例如， /etc/fd/watchfolder/test/testScript.ecma
+  * 針對服務，指定用於找到OSGi服務的篩選器。 此服務已註冊為com.adobe.aemfd.watchfolder.service.api.ContentProcessor Interface的實作。
 
 * **runModes （字串）**：允許執行工作流程之執行模式的逗號分隔清單。 以下是幾個範例：
 
-   * 作者
+  * 作者
 
-   * 發佈
+  * 發佈
 
-   * 作者，發佈
+  * 作者，發佈
 
-   * 發佈，作者
+  * 發佈，作者
 
 >[!NOTE]
 >
@@ -95,30 +111,30 @@ ht-degree: 0%
 * **deleteExpiredStageFileOnlyWhenThrottled （布林值，預設為true）：**&#x200B;是否只有在監視資料夾已節流時才啟動到期機制。 該機制與節流監視資料夾的相關性更高，因為啟用節流時，少量以未處理狀態延遲的檔案（由於間歇性工作/工作流程錯誤引發）可能會阻塞整個批次的處理作業。 如果此屬性保持為true （預設值），則不會為未節流的監看資料夾啟用到期機制。 如果屬性保持為false，則只要stageFileExpirationDuration屬性是正數，機制就會一律啟動。
 
 * **pollInterval （長）**：掃描Watched資料夾以進行輸入的間隔（秒）。 除非啟用「節流」設定，否則輪詢「間隔」應比處理平均作業的時間長；否則，系統可能會超載。 預設值為 5。 如需詳細資訊，請參閱「批次大小」的說明。 輪詢間隔的值必須大於或等於1。
-* **excludeFilePattern （字串）**：以分號(；)分隔的模式清單，Watched資料夾會使用這些模式來決定要掃描和擷取的檔案和資料夾。不會掃描任何具有此模式的檔案或資料夾以進行處理。當輸入是具有多個檔案的資料夾時，此設定非常有用。資料夾的內容可以複製到一個資料夾中，其名稱由Watched資料夾擷取。這可防止Watched資料夾在資料夾完全複製到輸入資料夾之前擷取資料夾進行處理。預設值為null。
+* **excludeFilePattern （字串）**：以分號(；)分隔的模式清單，Watched資料夾會使用這些模式來決定要掃描和擷取的檔案和資料夾。 不會掃描任何具有此模式的檔案或資料夾以進行處理。 當輸入是具有多個檔案的資料夾時，此設定非常有用。 資料夾的內容可以複製到一個資料夾中，其名稱由Watched資料夾擷取。 這可防止Watched資料夾在資料夾完全複製到輸入資料夾之前擷取資料夾進行處理。 預設值為null。
 您可以使用[檔案模式](../../forms/using/watched-folder-in-aem-forms.md#p-file-and-folder-patterns-p)來排除：
 
-   * 具有特定副檔名的檔案；例如，&#42;.dat、&#42;.xml、.pdf、&#42;.&#42;
-   * 具有特定名稱的檔案；例如， data&#42;會排除名為data1、data2等的檔案和資料夾。
-   * 在名稱和副檔名中有複合運算式的檔案，如下列範例所示：
+  * 具有特定副檔名的檔案；例如，&#42;.dat、&#42;.xml、.pdf、&#42;.&#42;
+  * 具有特定名稱的檔案；例如， data&#42;會排除名為data1、data2等的檔案和資料夾。
+  * 在名稱和副檔名中有複合運算式的檔案，如下列範例所示：
 
-      * 資料`[0-9][0-9][0-9]`.`[dD][aA]`&#39;連線埠&#39;
-      * &#42;.`[dD][aA]`&#39;連線埠&#39;
-      * &#42;.`[Xx][Mm][Ll]`
+    * 資料`[0-9][0-9][0-9]`.`[dD][aA]`&#39;連線埠&#39;
+    * &#42;.`[dD][aA]`&#39;連線埠&#39;
+    * &#42;.`[Xx][Mm][Ll]`
 
 如需檔案模式的詳細資訊，請參閱[關於檔案模式](../../forms/using/watched-folder-in-aem-forms.md#p-file-and-folder-patterns-p)。
 
 * **includeFilePattern （字串）**：以分號(；)分隔的模式清單，Watched資料夾會使用這些模式來決定要掃描和擷取的資料夾和檔案。 例如，如果IncludeFilePattern是輸入&#42;，則會擷取符合輸入&#42;的所有檔案和資料夾。 這包括名為input1、input2等的檔案和資料夾。 預設值為&#42;，表示所有檔案和資料夾。 您可以使用檔案模式來包含：
 
-   * 具有特定副檔名的檔案；例如，&#42;.dat、&#42;.xml、.pdf、&#42;.&#42;
-   * 具有特定名稱的檔案；例如，資料。&#42; 會包含名為data1、data2等等的檔案和資料夾。
+  * 具有特定副檔名的檔案；例如，&#42;.dat、&#42;.xml、.pdf、&#42;.&#42;
+  * 具有特定名稱的檔案；例如，資料。&#42; 會包含名為data1、data2等等的檔案和資料夾。
 
 * 在名稱和副檔名中有複合運算式的檔案，如下列範例所示：
 
-   * 資料`[0-9][0-9][0-9]`.`[dD][aA]`&#39;連線埠&#39;
+  * 資料`[0-9][0-9][0-9]`.`[dD][aA]`&#39;連線埠&#39;
 
-      * &#42;.`[dD][aA]`&#39;連線埠&#39;
-      * &#42;.`[Xx][Mm][Ll]`
+    * &#42;.`[dD][aA]`&#39;連線埠&#39;
+    * &#42;.`[Xx][Mm][Ll]`
 
 如需檔案模式的詳細資訊，請參閱[關於檔案模式](../../forms/using/watched-folder-in-aem-forms.md#p-file-and-folder-patterns-p)
 
@@ -126,20 +142,20 @@ ht-degree: 0%
 * **purgeDuration (Long)**：結果資料夾中的檔案和資料夾早於此值時會被清除。 此值以天為單位測量。 此設定對於確保結果資料夾不會填滿非常有用。 值為–1天表示絕不刪除結果資料夾。 預設值為 -1。
 * **resultFolderName （字串）**：儲儲存存結果的資料夾。 如果結果未出現在此資料夾中，請檢查失敗資料夾。 唯讀檔案不會處理並儲存在失敗資料夾中。 此值可以是具有以下檔案模式的絕對或相對路徑：
 
-   * %F =檔案名稱前置詞
-   * %E =副檔名
-   * %Y =年（完整）
-   * %y =年（最後兩位數）
-   * %M =月
-   * %D =日期
-   * %d =一年中的第幾天
-   * %H =小時（24小時時鐘）
-   * %h =小時（12小時時鐘）
-   * %m =分鐘
-   * %s =秒
-   * %l =毫秒
-   * %R =隨機數字（介於0-9之間）
-   * %P =處理程式或工作識別碼
+  * %F =檔案名稱前置詞
+  * %E =副檔名
+  * %Y =年（完整）
+  * %y =年（最後兩位數）
+  * %M =月
+  * %D =日期
+  * %d =一年中的第幾天
+  * %H =小時（24小時時鐘）
+  * %h =小時（12小時時鐘）
+  * %m =分鐘
+  * %s =秒
+  * %l =毫秒
+  * %R =隨機數字（介於0-9之間）
+  * %P =處理程式或工作識別碼
 
   例如，如果是2009年7月17日晚上8點，而您指定C：/Test/WF0/failure/%Y/%M/%D/%H/，則結果資料夾是C：/Test/WF0/failure/2009/07/17/20
 
@@ -173,9 +189,9 @@ ht-degree: 0%
 * **已啟用（布林值）**：停用並啟用Watched資料夾的掃描。 設定為True，開始掃描Watched資料夾。 預設值為true。
 * **payloadMapperFilter：**&#x200B;當資料夾設定為watched資料夾時，會在watched資料夾中建立資料夾結構。 此結構有資料夾以提供輸入、接收輸出（結果）、儲存失敗資料、保留長期程式的資料，以及儲存不同階段的資料。 Watched資料夾的資料夾結構可做為Forms中心工作流程的裝載。 承載對應程式可讓您定義使用Watched資料夾輸入、輸出及處理的承載結構。 例如，如果您使用預設對應程式，它會對應具有[承載]\input和[承載]\output資料夾的Watched資料夾內容。 提供兩種現成的裝載對應程式實作。 如果您沒有[自訂實作](../../forms/using/watched-folder-in-aem-forms.md#creating-a-custom-payload-mapper-filter)，請使用其中一個現成的實作：
 
-   * **預設對應程式：**&#x200B;使用預設裝載對應程式，將watched資料夾的輸入和輸出內容保留在裝載中的個別輸入和輸出資料夾中。 此外，在工作流程的裝載路徑中，使用[裝載]/輸入/和[裝載]/輸出路徑來擷取及儲存內容。
+  * **預設對應程式：**&#x200B;使用預設裝載對應程式，將watched資料夾的輸入和輸出內容保留在裝載中的個別輸入和輸出資料夾中。 此外，在工作流程的裝載路徑中，使用[裝載]/輸入/和[裝載]/輸出路徑來擷取及儲存內容。
 
-   * **簡單檔案型裝載對應程式：**&#x200B;使用簡單檔案型裝載對應程式，將輸入和輸出內容直接保留在裝載資料夾中。 它不會建立任何額外的階層，像是預設的對應程式。
+  * **簡單檔案型裝載對應程式：**&#x200B;使用簡單檔案型裝載對應程式，將輸入和輸出內容直接保留在裝載資料夾中。 它不會建立任何額外的階層，像是預設的對應程式。
 
 ### 自訂設定引數 {#custom-configuration-parameters}
 
@@ -355,7 +371,7 @@ setResult API在工作流程中使用的考量事項：
 >
 >在任何其他情況下呼叫具有null內容的setResult API將會導致錯誤。
 
-下列範例已實作為工作流程步驟。在此範例中，ECMAscript會使用變數stepCount來追蹤在目前工作流程例項中呼叫步驟的次數。
+下列範例已實作為工作流程步驟。 在此範例中，ECMAscript會使用變數stepCount來追蹤在目前工作流程例項中呼叫步驟的次數。
 輸出資料夾的名稱是目前步驟編號、原始檔案名稱和outPrefix引數中指定的首碼的組合。
 
 ECMAScript會取得工作流程內容服務的參考，並建立WorkflowContextProcessor介面的實作。 WorkflowContextProcessor實作會接受輸入檔案、將檔案複製到暫存位置，並傳回代表所複製檔案的檔案。 根據布林值變數purgePrevious的值，目前步驟會刪除與目前工作流程例項中啟動步驟時相同的步驟上次產生的輸出。 最後，會叫用wfSvc.execute方法執行WorkflowContextProcessor實作。 輸出檔案的內容會儲存在Watched Folder設定節點中所提及實體路徑的結果資料夾中。
@@ -528,8 +544,8 @@ Watched Folder會以每個pollInterval掃描輸入資料夾，擷取在「批次
 
 * 如果Watched Folder已成功地為stage資料夾中的每個檔案建立呼叫要求，而伺服器當機，則根據呼叫型別有兩種行為：
 
-   * **同步**：如果Watched資料夾設定為同步叫用服務，stage資料夾中的所有檔案在stage資料夾中仍維持未處理狀態。
-   * **非同步**：在此情況下，Watched資料夾依賴工作管理員服務。 如果「工作管理員服務」回撥Watched資料夾，系統會根據呼叫結果，將stage資料夾中的檔案移至preserve或failure資料夾。 如果「工作管理員」服務沒有回撥Watched資料夾，則暫存資料夾中的檔案將維持未處理狀態。 當Watched資料夾未執行時，作業管理員回撥時，就會發生這種情況。
+  * **同步**：如果Watched資料夾設定為同步叫用服務，stage資料夾中的所有檔案在stage資料夾中仍維持未處理狀態。
+  * **非同步**：在此情況下，Watched資料夾依賴工作管理員服務。 如果「工作管理員服務」回撥Watched資料夾，系統會根據呼叫結果，將stage資料夾中的檔案移至preserve或failure資料夾。 如果「工作管理員」服務沒有回撥Watched資料夾，則暫存資料夾中的檔案將維持未處理狀態。 當Watched資料夾未執行時，作業管理員回撥時，就會發生這種情況。
 
 #### 復原階段資料夾中未處理的來源檔案 {#recover-unprocessed-source-files-in-the-stage-folder}
 
@@ -568,9 +584,9 @@ Watched資料夾可以連結在一起，因此一個Watched資料夾的結果檔
 * 具有特定名稱的檔案；例如，資料。&#42;
 * 在名稱和副檔名中有複合運算式的檔案，如下列範例所示：
 
-   * 資料`[0-9][0-9][0-9]`.`[dD][aA]`&#39;連線埠&#39;
-   * &#42;.`[dD][aA]`&#39;連線埠&#39;
-   * &#42;.`[Xx][Mm][Ll]`
+  * 資料`[0-9][0-9][0-9]`.`[dD][aA]`&#39;連線埠&#39;
+  * &#42;.`[dD][aA]`&#39;連線埠&#39;
+  * &#42;.`[Xx][Mm][Ll]`
 
 * 管理員可以定義儲存結果的輸出資料夾的檔案模式。 對於輸出資料夾（結果、保留和失敗），管理員可以指定下列任一檔案模式：
 * %Y =年（完整）
@@ -669,8 +685,8 @@ ECMAScript會使用PDF Generator的createPDF API將Microsoft Word (.docx)檔案�
 
 1. 將下列屬性新增至節點：
 
-   * folderPath （字串）：在定義的時間間隔掃描的資料夾路徑。資料夾必須位於共用位置，且所有伺服器都必須具備伺服器的完整存取許可權。
-inputProcessorType （字串）：要啟動的程式型別。在本教學課程中，指定工作流程。
+   * folderPath （字串）：在定義的時間間隔掃描的資料夾路徑。 資料夾必須位於共用位置，且所有伺服器都必須具備伺服器的完整存取許可權。
+     inputProcessorType （字串）：要啟動的程式型別。 在本教學課程中，指定工作流程。
 
    * inputProcessorId （字串）： inputProcessorId屬性的行為是根據inputProcessorType屬性的指定值而定。 在此範例中，inputProcessorType屬性的值為workflow。 因此，針對inputProcessorId屬性指定PDFG工作流程的以下路徑： /etc/workflow/models/pdfg/jcr:content/model
 

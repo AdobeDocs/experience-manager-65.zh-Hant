@@ -10,13 +10,27 @@ feature: Interactive Images
 role: User, Admin
 exl-id: 8a609024-e9e6-4805-8306-48d095110eb6
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: d4b6216b-4a89-4ff0-8ac0-5a699ba23100
+    internal-label: Images and videos
+subfeature_v2:
+  - id: de661f96-7584-43db-a310-e01b57fdf199
+    internal-label: Interactive images
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '4463'
+source-wordcount: '4472'
 ht-degree: 1%
-
 ---
-
 # 互動式影像{#interactive-images}
 
 您可以將「可購物」熱點拖放至影像上，輕鬆讓靜態影像豐富吸引客戶的體驗。 可購物熱點結合有關產品或服務的其他資訊與直接的銷售點「加入購物車」或「購買」功能。 客戶可以選取這些熱點，並直接連結到產品或服務、將其新增到購物車，或連結到網頁。 這類直接體驗會增加客戶參與度和您網站上的轉換率。
@@ -27,7 +41,7 @@ ht-degree: 1%
 
 請前往下列位置，檢視互動影像在上述網頁上的實際運作中：
 
-[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion-QVzoom/index2-shoppable.html?lang=zh-Hant](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion-QVzoom/index2-shoppable.html?lang=zh-Hant)
+[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion-QVzoom/index2-shoppable.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion-QVzoom/index2-shoppable.html)
 
 ## 觀看互動式影像橫幅的建立方式 {#watch-how-interactive-image-banners-are-created}
 
@@ -39,17 +53,21 @@ ht-degree: 1%
 
 在部分快速入門工作中尋找&#x200B;**範例**&#x200B;標題。 其內含的簡短教學課程，是根據下列尚未新增互動影像的網頁範例：
 
-[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html?lang=zh-Hant](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html?lang=zh-Hant)
+[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html)
 
 本教學課程可協助您說明，如何將互動式影像整合在您自己的網站上。
 
 互動影像步驟：
 
-1. **（選用）識別熱點變數** — 如果您使用Experience Manager Assets和Dynamic Media獨立，請先識別您現有Quickview實作中使用的動態變數。 之後，您就可以在建立互動式影像時輸入熱點資料。 請參閱[（選擇性）識別熱點變數](#optional-identifying-hotspot-variables)。不過，如果您使用Adobe Experience Manager Sites或Adobe Experience Manager電子商務，或同時使用兩者，則不需要執行此步驟。檢視Experience Manager Assets[&#128279;](/help/commerce/cif-classic/administering/concepts.md)中的電子商務概念。
+1. **（選用）識別熱點變數** — 如果您使用Experience Manager Assets和Dynamic Media獨立，請先識別您現有Quickview實作中使用的動態變數。 之後，您就可以在建立互動式影像時輸入熱點資料。 請參閱[（選擇性）識別熱點變數](#optional-identifying-hotspot-variables)。
+不過，如果您使用Adobe Experience Manager Sites或Adobe Experience Manager電子商務，或同時使用兩者，則不需要執行此步驟。
+檢視Experience Manager Assets[&#128279;](/help/commerce/cif-classic/administering/concepts.md)中的電子商務概念。
 
-1. **（選擇性）建立互動式影像檢視器預設集** — 自訂用來代表熱點的圖形影像。 如果您打算改用名為`Shoppable_Banner`的現成互動影像檢視器預設集，則不需要建立自己的互動影像檢視器預設集。請參閱[（選擇性）建立互動式影像檢視器預設集](/help/assets/managing-viewer-presets.md#creating-a-new-viewer-preset)。
+1. **（選擇性）建立互動式影像檢視器預設集** — 自訂用來代表熱點的圖形影像。 如果您打算改用名為`Shoppable_Banner`的現成互動影像檢視器預設集，則不需要建立自己的互動影像檢視器預設集。
+請參閱[（選擇性）建立互動式影像檢視器預設集](/help/assets/managing-viewer-presets.md#creating-a-new-viewer-preset)。
 
-1. **上傳影像橫幅** — 上傳您想要互動的影像橫幅。請參閱[上傳影像橫幅](#uploading-an-image-banner)。
+1. **上傳影像橫幅** — 上傳您想要互動的影像橫幅。
+請參閱[上傳影像橫幅](#uploading-an-image-banner)。
 
 1. **新增熱點至影像橫幅** — 新增一或多個熱點至影像橫幅，並將每個熱點與超連結、快速檢視或體驗片段等動作建立關聯。 新增熱點後，您將發佈互動式影像來完成此工作。
 
@@ -95,9 +113,11 @@ ht-degree: 1%
 
 通常您不需要使用任何專門的偵錯工具。 現代的網頁瀏覽器配備能夠執行適當工作的網頁檢查器。 以下是一些包含網頁檢查器的網頁瀏覽器範例：
 
-* 若要在Google Chrome中檢視所有傳出的HTTP要求，請按F12開啟「開發人員工具」面板，然後選取「網路」索引標籤。在Mac上，按Command+Option+I開啟「開發人員工具」面板，然後選取「網路」標籤。
+* 若要在Google Chrome中檢視所有傳出的HTTP要求，請按F12開啟「開發人員工具」面板，然後選取「網路」索引標籤。
+在Mac上，按Command+Option+I開啟「開發人員工具」面板，然後選取「網路」標籤。
 
-* 在Firefox中，您可以按F12並使用其「網路」標籤來啟動Firebug外掛程式，或使用內建的「檢查器」工具及其「網路」標籤。在Mac上，按Command+Option+I開啟「開發人員工具」面板，然後選取「檢測器」索引標籤。
+* 在Firefox中，您可以按F12並使用其「網路」標籤來啟動Firebug外掛程式，或使用內建的「檢查器」工具及其「網路」標籤。
+在Mac上，按Command+Option+I開啟「開發人員工具」面板，然後選取「檢測器」索引標籤。
 
 在瀏覽器中開啟網路監視時，會觸發頁面上的快速檢視。
 
@@ -153,7 +173,7 @@ ht-degree: 1%
 
 您可以將上述三個範例中所使用的相同方法套用至示範網頁：
 
-[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html?lang=zh-Hant](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html?lang=zh-Hant)
+[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html)
 
 示範網頁具有多個產品縮圖，每個縮圖都有一個標示為「檢視更多」的「快速檢視」按鈕。 在您的Web瀏覽器偵錯工具仍然啟動的情況下，選取每個按鈕並記下錄製的「快速檢視」URL。 啟用頁面上可用的所有四個產品快速檢視後，您會取得向後端發出的快速檢視請求清單：
 
@@ -273,17 +293,17 @@ ht-degree: 1%
 
    * 選取&#x200B;**[!UICONTROL 快速檢視]**。
 
-      * 如果您是Experience Manager Sites或電子商務客戶，請選取「產品選擇器」圖示（放大鏡）以開啟「選取產品」頁面。 選取您要使用的產品，然後選取頁面右上角的&#x200B;**[!UICONTROL 選取]**，即可返回「熱點」管理頁面。
-      * 如果您&#x200B;*不是* Experience Manager Sites或電子商務客戶
+     * 如果您是Experience Manager Sites或電子商務客戶，請選取「產品選擇器」圖示（放大鏡）以開啟「選取產品」頁面。 選取您要使用的產品，然後選取頁面右上角的&#x200B;**[!UICONTROL 選取]**，即可返回「熱點」管理頁面。
+     * 如果您&#x200B;*不是* Experience Manager Sites或電子商務客戶
 
-         * 請參閱[識別熱點變數](#optional-identifying-hotspot-variables)；您必須定義這些變數。
-         * 然後，手動輸入SKU值。 在「SKU值」文字欄位中，輸入產品的SKU （庫存單位），這是您提供的每個不同產品或服務的唯一識別碼。 輸入的SKU值會自動填入Quickview範本的變數部分，讓系統知道要將選取的熱點與特定SKU的Quickview建立關聯。
-         * （選擇性）如果快速檢視中有其他變數您必須用來進一步識別產品，請選取&#x200B;**[!UICONTROL 新增一般變數]**。 在文字欄位中，指定額外的變數。 例如，`category=Males`是新增的變數。
+       * 請參閱[識別熱點變數](#optional-identifying-hotspot-variables)；您必須定義這些變數。
+       * 然後，手動輸入SKU值。 在「SKU值」文字欄位中，輸入產品的SKU （庫存單位），這是您提供的每個不同產品或服務的唯一識別碼。 輸入的SKU值會自動填入Quickview範本的變數部分，讓系統知道要將選取的熱點與特定SKU的Quickview建立關聯。
+       * （選擇性）如果快速檢視中有其他變數您必須用來進一步識別產品，請選取&#x200B;**[!UICONTROL 新增一般變數]**。 在文字欄位中，指定額外的變數。 例如，`category=Males`是新增的變數。
 
    * 選取&#x200B;**[!UICONTROL 超連結]**。
 
-      * 如果您是Experience Manager Sites客戶，請選取「網站選擇器」圖示（資料夾）以導覽至URL。 如果您的互動式內容有具有相對URL的連結，尤其是指向Experience Manager Sites頁面的連結，則無法採用URL型連結方法。
-      * 如果您是獨立客戶，請在HREF文字欄位中指定連結網頁的完整URL路徑。
+     * 如果您是Experience Manager Sites客戶，請選取「網站選擇器」圖示（資料夾）以導覽至URL。 如果您的互動式內容有具有相對URL的連結，尤其是指向Experience Manager Sites頁面的連結，則無法採用URL型連結方法。
+     * 如果您是獨立客戶，請在HREF文字欄位中指定連結網頁的完整URL路徑。
 
    請務必指定要在新的瀏覽器分頁（建議的預設值）或相同的分頁中開啟連結。
 
@@ -291,13 +311,14 @@ ht-degree: 1%
 
    * 選取&#x200B;**[!UICONTROL 體驗片段]**。
 
-      * 如果您是Experience Manager Sites客戶，請選取「搜尋」圖示（放大鏡）以開啟「體驗片段」頁面。 選取您要使用的體驗片段，然後選取頁面右上角的&#x200B;**[!UICONTROL 選取]**，即可返回「熱點」管理頁面。請參閱[體驗片段](/help/sites-authoring/experience-fragments.md)。
+     * 如果您是Experience Manager Sites客戶，請選取「搜尋」圖示（放大鏡）以開啟「體驗片段」頁面。 選取您要使用的體驗片段，然後選取頁面右上角的&#x200B;**[!UICONTROL 選取]**，即可返回「熱點」管理頁面。
+       請參閱[體驗片段](/help/sites-authoring/experience-fragments.md)。
 
-      * 指定您希望體驗片段在橫幅上顯示的寬度和高度。
+     * 指定您希望體驗片段在橫幅上顯示的寬度和高度。
 
-        >[!NOTE]
-        >
-        >將檢視器內嵌在體驗片段中時，不支援互動影像中的社群媒體分享工具。 若要解決此問題，您可以使用或建立沒有社群媒體分享工具的檢視器預設集。 這類檢視器預設集可讓您成功將其嵌入體驗片段中。
+       >[!NOTE]
+       >
+       >將檢視器內嵌在體驗片段中時，不支援互動影像中的社群媒體分享工具。 若要解決此問題，您可以使用或建立沒有社群媒體分享工具的檢視器預設集。 這類檢視器預設集可讓您成功將其嵌入體驗片段中。
 
 1. 選取&#x200B;**[!UICONTROL 儲存]**&#x200B;以儲存您的工作並返回[瀏覽]頁面。
 1. 發佈互動式影像。 發佈功能可透過雲端傳遞橫幅，也可在您需要與協力廠商網站整合時產生內嵌程式碼。
@@ -316,7 +337,10 @@ ht-degree: 1%
 
 您可以使用「預覽」來檢視互動式影像呈現給客戶的方式，以及測試影像的熱點以確保其如預期般運作。
 
-當您對互動式影像感到滿意時，即可發佈。請參閱[將視訊或影像檢視器嵌入網頁](/help/assets/embed-code.md)。檢視[將URL連結至您的網頁應用程式](/help/assets/linking-urls-to-yourwebapplication.md)。 如果您的互動式內容有具有相對URL的連結，尤其是指向Experience Manager Sites頁面的連結，則無法採用URL型連結方法。請參閱[將Dynamic Media Assets新增至頁面](/help/assets/adding-dynamic-media-assets-to-pages.md)。
+當您對互動式影像感到滿意時，即可發佈。
+請參閱[將視訊或影像檢視器嵌入網頁](/help/assets/embed-code.md)。
+檢視[將URL連結至您的網頁應用程式](/help/assets/linking-urls-to-yourwebapplication.md)。 如果您的互動式內容有具有相對URL的連結，尤其是指向Experience Manager Sites頁面的連結，則無法採用URL型連結方法。
+請參閱[將Dynamic Media Assets新增至頁面](/help/assets/adding-dynamic-media-assets-to-pages.md)。
 
 **若要預覽互動式影像：**
 
@@ -337,15 +361,17 @@ ht-degree: 1%
 
 如果您是獨立Experience Manager Assets客戶，可以手動將互動式影像新增至您的網站，如本節所述。
 
-1. 複製已發佈的互動影像的內嵌程式碼。請參閱[將視訊或影像檢視器嵌入網頁](/help/assets/embed-code.md)。
+1. 複製已發佈的互動影像的內嵌程式碼。
+請參閱[將視訊或影像檢視器嵌入網頁](/help/assets/embed-code.md)。
 
-1. 將複製的內嵌程式碼新增至網頁內所需的位置。複製的內嵌程式碼是針對回應式環境所設定，因此會自動符合指派的區域。
+1. 將複製的內嵌程式碼新增至網頁內所需的位置。
+複製的內嵌程式碼是針對回應式環境所設定，因此會自動符合指派的區域。
 
 **範例**
 
 以示範網站為例：
 
-[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html?lang=zh-Hant](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html?lang=zh-Hant)
+[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html)
 
 請注意，三個男性的圖片是靜態`IMG`標籤：
 
@@ -355,7 +381,7 @@ ht-degree: 1%
 
 整合很簡單，只要移除`IMG`標籤，並以Experience Manager Assets中複製的內嵌程式碼加以取代。 您可在下列URL中看到結果，該URL在含有三個圓形熱點的頁面上顯示可購物互動影像：
 
-[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-1.html?lang=zh-Hant](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-1.html?lang=zh-Hant)
+[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-1.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-1.html)
 
 >[!NOTE]
 >
@@ -504,7 +530,7 @@ loadQuickView(quickViewUrl);
 
 具有完全整合互動影像的最終示範網站看起來如下所示：
 
-[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-3.html?lang=zh-Hant](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-3.html?lang=zh-Hant)
+[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-3.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-3.html)
 
 ## 使用快速檢視建立自訂快顯視窗 {#using-quickviews-to-create-custom-pop-ups}
 

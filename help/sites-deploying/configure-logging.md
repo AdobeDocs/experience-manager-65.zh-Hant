@@ -9,13 +9,22 @@ feature: Configuring
 exl-id: b32001a1-0078-43f6-89d6-781d6d2e9c94
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: f96b178ae84b4b930b59e36d4994970682c53dbd
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 523b1ccd-901e-5e3b-9fa7-f3dfd82463d5
+    internal-label: Configuring
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '636'
+source-wordcount: '640'
 ht-degree: 0%
-
 ---
-
 # 記錄{#logging}
 
 AEM可讓您設定：
@@ -85,19 +94,19 @@ AEM會使用以下專案將記錄訊息寫入檔案：
 
 * 記錄器：
 
-   * Apache Sling可自訂請求資料記錄器
+  * Apache Sling可自訂請求資料記錄器
 
-     (org.apache.sling.engine.impl.log.RequestLoggerService)
+    (org.apache.sling.engine.impl.log.RequestLoggerService)
 
-   * 將有關要求內容的訊息寫入`request.log`。
+  * 將有關要求內容的訊息寫入`request.log`。
 
 * 連結至：
 
-   * Apache Sling請求記錄器
+  * Apache Sling請求記錄器
 
-     (org.apache.sling.engine.impl.log.RequestLogger)
+    (org.apache.sling.engine.impl.log.RequestLogger)
 
-   * 將郵件寫入`request.log`或`access.log`。
+  * 將郵件寫入`request.log`或`access.log`。
 
 如有需要，可以自訂這些專案，不過標準組態適用於大部分的安裝。
 
@@ -105,24 +114,24 @@ AEM會使用以下專案將記錄訊息寫入檔案：
 
 * 記錄器：
 
-   * Apache Sling記錄記錄器設定
+  * Apache Sling記錄記錄器設定
 
-     (org.apache.sling.commons.log.LogManager.factory.config)
+    (org.apache.sling.commons.log.LogManager.factory.config)
 
-   * 將`Information`則訊息寫入`logs/error.log`。
+  * 將`Information`則訊息寫入`logs/error.log`。
 
 * 寫入器的連結：
 
-   * Apache Sling記錄寫入器設定
+  * Apache Sling記錄寫入器設定
 
-     (org.apache.sling.commons.log.LogManager.factory.writer)
+    (org.apache.sling.commons.log.LogManager.factory.writer)
 
 * 記錄器：
 
-   * Apache Sling記錄記錄器設定
-(org.apache.sling.commons.log.LogManager.factory.config.649d51b7-6425-45c9-81e6-2697a03d6be7)
+  * Apache Sling記錄記錄器設定
+    (org.apache.sling.commons.log.LogManager.factory.config.649d51b7-6425-45c9-81e6-2697a03d6be7)
 
-   * 將服務`org.apache.pdfbox`的`Warning`個訊息寫入`../logs/error.log`。
+  * 將服務`org.apache.pdfbox`的`Warning`個訊息寫入`../logs/error.log`。
 
 * 未連結至特定寫入器，因此會建立並使用具有預設組態（每日記錄輪換）的隱含寫入器。
 

@@ -5,13 +5,29 @@ exl-id: 026f5686-39ea-4798-9d1f-031f15941060
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Security
 role: User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 50158d81-1c06-57f7-8bd7-e8ff76a93f85
+    internal-label: Document Security
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1189'
+source-wordcount: '1234'
 ht-degree: 0%
-
 ---
-
 # 在動態PDF forms中產生及使用雜湊 {#generate-work-with-hashes-dynamic-pdf-forms}
 
 ## 必備條件知識 {#prerequisite-knowledge}
@@ -22,13 +38,13 @@ ht-degree: 0%
 
 開始
 
-如果您想要在PDF表單中隱藏密碼，並且不想在原始程式碼中或PDF檔案中的其他任何位置以純文字格式提供密碼，瞭解如何產生和使用MD4、MD5、SHA-1和SHA-256雜湊是關鍵。
+如果您想要在PDF表單中隱藏密碼，並且不想在原始程式碼中或PDF檔案中的任何其他位置使用純文字，瞭解如何產生和使用MD4、MD5、SHA-1和SHA-256雜湊是關鍵所在。
 
 其想法是產生唯一的雜湊並將此雜湊儲存在PDF檔案中，以模糊化密碼。 此唯一的雜湊可由不同的雜湊函式產生，在本文中，您將瞭解如何在PDF表單內產生雜湊以及如何使用雜湊。
 
 雜湊函式會以任何長度的長字串（或訊息）作為輸入，並產生固定長度的字串作為輸出，有時稱為訊息摘要或數位指紋。
 
-JEE Designer上的AEM Forms可讓您在JavaScript之類的指令碼物件中實作不同的雜湊函式，並在動態PDF檔案中執行。 本文範例檔案包含的範例PDF會使用下列雜湊函式的開放原始碼實作：
+JEE Designer上的AEM Forms可讓您在JavaScript的指令碼物件中實作不同的雜湊函式，並在動態PDF檔案中執行。 本文範例檔案隨附的範例PDF會使用下列雜湊函式的開放原始碼實作：
 
 * MD4和MD5 — 由Ronald Rivest設計
 
@@ -70,7 +86,7 @@ JEE Designer上的AEM Forms可讓您在JavaScript之類的指令碼物件中實�
 * SHA-1： 160位元
 * SHA-256： 256位元
 
-## 正在嘗試範例PDF forms {#try-sample-pdf-forms}
+## 嘗試範例PDF forms {#try-sample-pdf-forms}
 
 本文範例檔案包含兩個PDF forms。 第一個範例可讓您輸入字串，然後產生字串的MD4、MD5、SHA-1和SHA-256雜湊值。 第二個範例是簡單的表單，如果輸入正確的密碼，它會解除鎖定文字欄位。
 
@@ -78,7 +94,7 @@ JEE Designer上的AEM Forms可讓您在JavaScript之類的指令碼物件中實�
 
 請依照下列步驟嘗試第一個範例：
 
-1. 下載並解壓縮範例檔案後，在JEE Designer上使用AEM Forms開啟hashing_forms_sample1.pdf。 或者，您可以使用Adobe Reader或Adobe Acrobat Professional開啟和檢視範例，但無法看到原始程式碼。
+1. 下載並解壓縮範例檔案後，在JEE Designer上使用AEM Forms開啟hashing_forms_sample1.pdf。 或者，您可以使用Adobe Reader或Adobe Acrobat Professional來開啟和檢視範例，但無法看到原始程式碼。
 1. 在標示為[!UICONTROL 純文字]的文字欄位中，輸入您要雜湊的密碼或任何其他訊息。
 1. 按一下四個按鈕之一，產生MD4、MD5、SHA-1或SHA-256雜湊。 根據您按下的按鈕，系統會呼叫產生十六進位輸出的四個雜湊函式之一，並對字串或訊息進行雜湊處理。
 
@@ -92,7 +108,7 @@ JEE Designer上的AEM Forms可讓您在JavaScript之類的指令碼物件中實�
 
 請依照下列步驟，嘗試第二個範例：
 
-1. 在JEE Designer中使用AEM Forms開啟`hashing_forms_sample2.pdf`。 或者，您可以使用Adobe Reader或Adobe Acrobat Professional開啟和檢視範例，但無法看到原始程式碼。
+1. 在JEE Designer中使用AEM Forms開啟`hashing_forms_sample2.pdf`。 或者，您可以使用Adobe Reader或Adobe Acrobat Professional來開啟和檢視範例，但無法看到原始程式碼。
 1. 選擇兩個標示為[!UICONTROL Password MAN]或[!UICONTROL Password WOMAN]的密碼欄位之一，並輸入密碼：
    1. 此人的密碼是`bob`
    1. 該女人的密碼是`alice`
@@ -112,15 +128,15 @@ if (soHASHING_SHA256.hex_sha256(this.rawValue) == passwd_man_hashed.rawValue){
 
 ## 從這裡前往何處 {#next-steps}
 
-在哪裡需要這樣的內容？ 假設有一個PDF表單，其中包含只有授權人員才應填寫的欄位。 透過使用密碼保護這些欄位（在檔案中任何位置都無法以Sample_2.pdf中的明文顯示），您可以確保只有知道密碼的使用者才能存取這些欄位。
+在哪裡需要這樣的內容？ 假設有一個PDF表單，其中包含只有授權人員才能填寫的欄位。 透過使用密碼保護這些欄位（在檔案中任何位置都無法以Sample_2.pdf中的明文顯示），您可以確保只有知道密碼的使用者才能存取這些欄位。
 
-我鼓勵您繼續探索這兩個範例PDF檔案。  您可以使用Sample_1.pdf產生新的雜湊值，並使用產生的值來變更Sample_2.pdf中使用的密碼或雜湊函式。  「歸因」區段中列出的資源也提供雜湊和本文中所使用之特定JavaScript實作的相關額外資訊。
+我鼓勵您繼續探索這兩個PDF檔案範例。  您可以使用Sample_1.pdf產生新的雜湊值，並使用產生的值來變更Sample_2.pdf中使用的密碼或雜湊函式。  「歸因」區段中列出的資源也提供雜湊和本文中所使用之特定JavaScript實作的相關額外資訊。
 
 ## 歸因 {#attributions}
 
-* [Ronald Rivest](https://en.wikipedia.org/wiki/Ron_Rivest)
+* [羅納德·里韋斯特](https://en.wikipedia.org/wiki/Ron_Rivest)
 * [NIST](https://csrc.nist.gov/projects/cryptographic-standards-and-guidelines)
-* [雜湊衝突](https://en.wikipedia.org/wiki/Hash_collision)
-* [彩虹資料表](https://en.wikipedia.org/wiki/Rainbow_table)
+* [雜湊碰撞](https://en.wikipedia.org/wiki/Hash_collision)
+* [彩虹表](https://en.wikipedia.org/wiki/Rainbow_table)
 * [JavaScript MD5專案首頁](https://pajhome.org.uk/crypt/md5/)
-* [jsSHA2專案首頁](https://anmar.eu.org/projects/jssha2/)
+* [jssha2專案首頁](https://anmar.eu.org/projects/jssha2/)

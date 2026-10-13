@@ -1,6 +1,6 @@
 ---
 title: 在叢集環境中進行備份與還原的策略
-description: 如果您的AEM表單實作將其他自訂資料儲存在不同的資料庫中，您必須實作策略來備份此資料，確保資料與AEM表單資料保持同步。
+description: 如果您的AEM表單實作將其他自訂資料儲存在其他資料庫中，您必須實作策略來備份此資料，以確保其與AEM表單資料保持同步。
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
@@ -9,20 +9,34 @@ exl-id: 98c96349-f253-475f-b646-352269814a38
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1396'
+source-wordcount: '1428'
 ht-degree: 0%
-
 ---
-
 # 在叢集環境中進行備份與還原的策略 {#strategy-for-backup-and-restore-in-a-clustered-environment}
 
 >[!NOTE]
 >
->如果您的AEM表單實作將其他自訂資料儲存在不同的資料庫中，您必須實作策略來備份此資料，確保資料與AEM表單資料保持同步。 此外，應用程式的設計必須足夠健全，能夠處理其他資料庫不同步的情況。 強烈建議您在交易內容中執行任何資料庫作業，以協助維持一致狀態。
+>如果您的AEM表單實作將其他自訂資料儲存在其他資料庫中，您必須實作策略來備份此資料，以確保其與AEM表單資料保持同步。 此外，應用程式的設計必須足夠健全，能夠處理其他資料庫不同步的情況。 強烈建議您在交易內容中執行任何資料庫作業，以協助維持一致狀態。
 
-您必須備份AEM表單系統的下列部分，才能從任何錯誤中復原：
+您需要備份AEM表單系統的下列部分，才能從任何錯誤中復原：
 
 * AEM表單使用的資料庫
 * 有長期資料和其他永續性檔案的GDS
@@ -34,7 +48,7 @@ ht-degree: 0%
 
 ## 備份叢集環境 {#back-up-a-clustered-environment}
 
-本主題討論備份任何AEM表單叢集環境的下列策略：
+本主題說明備份任何AEM表單叢集環境的下列策略：
 
 * 離線備份與停機時間
 * 離線備份，不需停機（備份已關閉的次要節點）
@@ -45,7 +59,7 @@ ht-degree: 0%
 
 1. 關閉整個叢集及相關服務。 （請參閱[啟動和停止服務](/help/forms/using/admin-help/starting-stopping-services.md#starting-and-stopping-services)）
 1. 在任何節點上，備份資料庫、GDS和聯結器。 （請參閱[要備份和復原的檔案](/help/forms/using/admin-help/files-back-recover.md#files-to-back-up-and-recover)）
-1. 若要離線備份AEM存放庫，請執行下列步驟：
+1. 若要離線備份AEM存放庫，請執行以下步驟：
 
    1. 針對每個叢集節點，備份包含叢集節點ID的檔案。
    1. 備份任何次要叢集節點的所有檔案，包括子目錄。
@@ -62,9 +76,9 @@ ht-degree: 0%
 
    復原後，請離開滾動備份模式。
 
-1. 關閉叢集中與AEM有關的任何次要節點。 （請參閱[啟動和停止服務](/help/forms/using/admin-help/starting-stopping-services.md#starting-and-stopping-services)）
+1. 關閉任何與AEM相關的叢集次要節點。 （請參閱[啟動和停止服務](/help/forms/using/admin-help/starting-stopping-services.md#starting-and-stopping-services)）
 1. 在任何節點上，備份資料庫、GDS和聯結器。 （請參閱[要備份和復原的檔案](/help/forms/using/admin-help/files-back-recover.md#files-to-back-up-and-recover)）
-1. 若要離線備份AEM存放庫，請執行下列步驟：
+1. 若要離線備份AEM存放庫，請執行以下步驟：
 
    1. 針對每個叢集節點，備份包含叢集節點ID的檔案。
    1. 備份任何次要叢集節點的所有檔案，包括子目錄。
@@ -81,9 +95,9 @@ ht-degree: 0%
 
    復原後，請離開滾動備份模式。
 
-1. 關閉叢集中與AEM有關的任何次要節點。 （請參閱[啟動和停止服務](/help/forms/using/admin-help/starting-stopping-services.md#starting-and-stopping-services)）
+1. 關閉任何與AEM相關的叢集次要節點。 （請參閱[啟動和停止服務](/help/forms/using/admin-help/starting-stopping-services.md#starting-and-stopping-services)）
 1. 在任何節點上，備份資料庫、GDS和聯結器。 （請參閱[要備份和復原的檔案](/help/forms/using/admin-help/files-back-recover.md#files-to-back-up-and-recover)）
-1. 若要線上備份AEM存放庫，請執行下列步驟：
+1. 若要線上備份AEM存放庫，請執行以下步驟：
 
    1. 針對每個叢集節點，備份包含cluster_node.id的檔案。
    1. 分別備份每個叢集節點的repository/system.id 。
@@ -100,7 +114,7 @@ ht-degree: 0%
 * WebLogic：在網域目錄中
 * WebSphere®：在設定檔目錄中
 
-備份AEM次要節點之災難復原案例的檔案，並在應用程式伺服器上的指定位置取代該檔案（若已還原）。
+備份檔案以用於AEM次要節點的災難復原情況，並在應用程式伺服器上的指定位置取代該檔案（如果還原）。
 
 ## 在叢集環境中進行復原 {#recovery-in-a-clustered-environment}
 
@@ -119,7 +133,7 @@ ht-degree: 0%
    >如果損壞的節點是AEM主要節點，請關閉整個叢集節點。
 
 1. 從系統映像重新建立實體系統。
-1. 套用修補程式或更新至影像建立後套用的AEM表單。 備份程式期間會記錄此資訊。 AEM表單必須復原到與系統備份時相同的修補程式層級。
+1. 套用修補程式或更新至AEM表單，這些修補程式或更新在製作影像後即已套用。 備份程式期間會記錄此資訊。 AEM表單必須復原到與系統備份時相同的修補程式層級。
 1. （*選擇性*）如果所有其他節點都正常運作，AEM存放庫也有可能已損毀。 在此情況下，您會在AEM存放庫的error.log檔案中看到一個存放庫取消同步訊息。
 
    若要還原存放庫，請執行下列步驟。
@@ -133,7 +147,7 @@ ht-degree: 0%
    1. 刪除節點上的檔案clusterNode/revision.log 。
    1. 刪除節點上的.lock （如果存在）。
    1. 刪除節點上的repository/system.id （如果存在）。
-   1. 刪除節點上的檔案&amp;amp；&amp;amp；&amp;ast；/listener.properties （如果存在）。
+   1. 刪除節點上的檔案&amp;ast；&amp;ast；/listener.properties （如果存在）。
    1. 還原個別叢集節點的repository/cluster_node.id。
 
 >[!NOTE]
@@ -163,7 +177,7 @@ ht-degree: 0%
    1. 刪除所有叢集節點上的檔案clusterNode/revision.log 。
    1. 刪除所有叢集節點上的.lock （如果存在）。
    1. 刪除repository/system.id所有叢集節點（如果存在）。
-   1. 刪除所有叢集節點上的檔案&amp;amp；&amp;amp；&amp;ast；/listener.properties （如果存在）。
+   1. 刪除所有叢集節點上的檔案&amp;ast；&amp;ast；/listener.properties （如果存在）。
    1. 還原個別叢集節點的repository/cluster_node.id。
 
 >[!NOTE]
@@ -181,10 +195,10 @@ ht-degree: 0%
 ### 復原單一發行者節點 {#recover-a-single-publisher-node}
 
 1. 關閉必須復原的節點，在節點再次啟動之前不要進行任何發佈活動。
-1. 使用[還原備份](https://helpx.adobe.com/experience-manager/kb/CRXBackupAndRestoreProcedure.html)來還原Publish節點。
+1. 使用[還原備份](https://helpx.adobe.com/experience-manager/kb/CRXBackupAndRestoreProcedure.html)來還原發佈節點。
 
 ### 復原叢集 {#recover-a-cluster}
 
 1. 關閉叢集。
-1. 使用[還原備份](https://helpx.adobe.com/experience-manager/kb/CRXBackupAndRestoreProcedure.html)來還原Publish節點。
+1. 使用[還原備份](https://helpx.adobe.com/experience-manager/kb/CRXBackupAndRestoreProcedure.html)來還原發佈節點。
 1. 啟動主要節點，接著啟動製作叢集的次要節點。

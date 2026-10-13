@@ -1,6 +1,6 @@
 ---
 title: SPA 編輯器概觀
-description: 本文全面概觀了 SPA 編輯器及其運作原理，包括 SPA 編輯器在 AEM 中互動的詳細工作流程。
+description: 本文全面介紹 SPA 編輯器及其運作方式，包括 SPA 編輯器在 AEM 中互動的詳細工作流程。
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: spa
@@ -11,19 +11,33 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
 index: false
-source-git-commit: 147b0efb32609c05949c9fe374fa4fca6a9dbfb1
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+  - id: c124fa01-25c5-42ec-adf6-21d1c114058b
+    internal-label: Developer tools
+subfeature_v2:
+  - id: a9f7d31e-bbe1-4475-966a-5f213546fcd9
+    internal-label: SPA Editor
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1648'
-ht-degree: 85%
-
+source-wordcount: '1653'
+ht-degree: 84%
 ---
-
 
 # SPA 編輯器概觀{#spa-editor-overview}
 
 單頁應用程式 (SPA) 可為網站使用者提供引人入勝的體驗。 開發人員希望能使用 SPA 框架建立網站，而作者則想在 AEM 中為使用這類框架建立網站，順暢地編輯內容。
 
-SPA 編輯器提供了一個全面的解決方案來支援在 AEM 中使用 SPA。 此頁面概觀了在 AEM 中 SPA 支援結構、SPA 編輯器的運作原理以及 SPA 框架和 AEM 如何保持同步。
+SPA 編輯器提供了一個全面的解決方案來支援在 AEM 中使用 SPA。 此頁面概述 AEM 中 SPA 支援的結構、SPA 編輯器的運作方式，以及 SPA 框架和 AEM 如何保持同步。
 
 {{ue-over-spa}}
 
@@ -33,7 +47,7 @@ SPA 編輯器提供了一個全面的解決方案來支援在 AEM 中使用 SPA�
 
 若要能在 AEM 中編輯 SPA，SPA 的 JSON 輸出與 AEM 存放庫中的內容模型之間必須要有對應，才能儲存內容的變更。
 
-AEM 中的 SPA 支援帶入一個薄 JS 層，在頁面編輯器中載入內容時會與 SPA JS 程式碼互動，如此可以傳送事件，可以啟動編輯控制項的位置以允許進行情境式編輯。 此功能是內容服務 API 端點概念為建置基礎，因為來自 SPA 的內容需要透過內容服務載入。
+AEM 中的 SPA 支援帶入一個薄 JS 層，在頁面編輯器中載入內容時會與 SPA JS 程式碼互動，如此可以傳送事件，可以啟動編輯控制項的位置以允許進行情境式編輯。 此功能是以內容服務 API 端點概念為基礎，因為來自 SPA 的內容需要透過內容服務載入。
 
 如需有關 AEM 中 SPA 的更多詳細資訊，請參閱以下文件：
 
@@ -73,7 +87,7 @@ SPA 的頁面元件不會透過 JSP 或 HTL 檔案提供其子元件的 HTML 元
 
 * 頁面編輯器和 SPA 之間的通訊是使用 JSON 而不是 HTML 進行的。
 * 頁面編輯器透過 iframe 和傳訊 API 向 SPA 提供最新版本的頁面模型。
-* 頁面模型管理器會通知編輯器它已準備好進行編輯，並將頁面模型作為 JSON 結構傳遞。
+* 頁面模型管理器會通知編輯器已準備好可供編輯，並將頁面模型作為 JSON 結構傳遞。
 * 編輯器不會更改或甚至存取正在編寫之頁面的 DOM 結構，而是提供最新的頁面模型。
 
 ![screen_shot_2018-08-20at144324](assets/screen_shot_2018-08-20at144324.png)
@@ -89,8 +103,8 @@ SPA 的頁面元件不會透過 JSP 或 HTL 檔案提供其子元件的 HTML 元
 1. SPA 要求 JSON 內容並在用戶端呈現元件。
 1. SPA 編輯器偵測到呈現的元件並產生覆蓋。
 1. 作者按一下覆蓋，顯示元件的編輯工具列。
-1. SPA 編輯器透過向伺服器發出 POST 要求來保留編輯。
-1. SPA 編輯器要求 SPA 編輯器的已更新 JSON，該更新透過 DOM 事件傳送到 SPA。
+1. SPA 編輯器透過向伺服器發出 POST 要求來儲存編輯。
+1. SPA 編輯器要求更新的 JSON，並透過 DOM 事件將其傳送至 SPA。
 1. SPA 重新呈現相關元件，更新其 DOM。
 
 >[!NOTE]
@@ -112,7 +126,7 @@ SPA 的頁面元件不會透過 JSP 或 HTL 檔案提供其子元件的 HTML 元
 1. Sling 模型匯出工具要求存放庫提供組成頁面的資源。
 1. 存放庫會傳回資源。
 1. Sling 模型匯出工具傳回頁面模型。
-1. SPA 根據頁面模型執行個體化其元件。
+1. SPA 會根據頁面模型將其元件實例化。
 1. **6a** 內容會通知編輯器它已準備好進行編寫。
 
    **6b** 頁面編輯器要求元件編寫設定。
@@ -127,7 +141,7 @@ SPA 的頁面元件不會透過 JSP 或 HTL 檔案提供其子元件的 HTML 元
 1. 存放庫將組成頁面的資源提供給 Sling 模型匯出工具。
 1. 更新後的頁面模型傳回給編輯器。
 1. 頁面編輯器會更新 SPA 頁面模型參考。
-1. SPA 根據新的頁面模型參考執行個體化其元件。
+1. SPA 會根據新的頁面模型參考更新其元件。
 1. 頁面編輯器的元件設定已更新。
 
    **17a** SPA 會通知頁面編輯器內容已準備就緒。
@@ -147,7 +161,7 @@ SPA 的頁面元件不會透過 JSP 或 HTL 檔案提供其子元件的 HTML 元
 
    **2b** 當收到通知時，元件協調器更新頁面的內容結構。
 1. 元件協調器查詢 AEM 資源類型和 SPA 元件之間的對應。
-1. 元件協調器根據頁面模型和元件對應動態執行個體化 SPA 元件。
+1. 元件協調器根據頁面模型和元件對應動態建立 SPA 元件。
 1. 頁面編輯器會更新頁面模型。
 1. **6a** 頁面模型將更新的編寫資料提供給頁面編輯器。
 

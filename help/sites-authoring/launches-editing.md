@@ -11,20 +11,38 @@ exl-id: 2d441820-b394-47c8-b4ca-a8aede590937
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Launches
 role: User,Admin,Developer
-source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+  - id: a642c50e-80eb-4fc1-a5d2-f3762d1f841d
+    internal-label: Administration
+subfeature_v2:
+  - id: e2cac356-c071-4141-ad6f-827893261a16
+    internal-label: Launches
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '529'
 ht-degree: 18%
-
 ---
-
 # 編輯啟動{#editing-launches}
 
 ## 編輯啟動頁面 {#editing-launch-pages}
 
 建立頁面（或一組頁面）的啟動後，您可以在頁面的啟動副本中編輯內容。
 
-1. 從[參考] （網站主控台）[存取](/help/sites-authoring/launches.md#launches-in-references-sites-console)啟動項，以顯示可用的動作。
+1. 從[參考] （網站主控台）[&#128279;](/help/sites-authoring/launches.md#launches-in-references-sites-console)存取啟動項，以顯示可用的動作。
 1. 選取&#x200B;**移至頁面**&#x200B;以開啟要編輯的頁面。
 
 >[!NOTE]
@@ -71,11 +89,11 @@ livecopy可用來將來源 *分支的內容*** 同步到啟動分支 (以便讓�
 
    * [啟動主控台](/help/sites-authoring/launches.md#the-launches-console)：
 
-      * 選取&#x200B;**編輯**。
+     * 選取&#x200B;**編輯**。
 
    * [參考（網站主控台）](/help/sites-authoring/launches.md#launches-in-references-sites-console)以顯示可用的動作：
 
-      * 選取&#x200B;**編輯啟動項**。
+     * 選取&#x200B;**編輯啟動項**。
 
    此時會顯示來源頁面。
 
@@ -93,11 +111,11 @@ livecopy可用來將來源 *分支的內容*** 同步到啟動分支 (以便讓�
 
    * [啟動主控台](/help/sites-authoring/launches.md#the-launches-console)：
 
-      * 選取&#x200B;**屬性**。
+     * 選取&#x200B;**屬性**。
 
    * [參考（網站主控台）](/help/sites-authoring/launches.md#launches-in-references-sites-console)以顯示可用的動作：
 
-      * 選取&#x200B;**編輯屬性**。
+     * 選取&#x200B;**編輯屬性**。
 
    詳細資訊隨即顯示。
 
@@ -107,6 +125,6 @@ livecopy可用來將來源 *分支的內容*** 同步到啟動分支 (以便讓�
 
 ## 探索頁面的啟動狀態 {#discovering-the-launch-status-of-a-page}
 
-當您從「參考」(References)標籤選取特定啟動時，會顯示狀態(請參閱「參考」(Sites Console) [中的](/help/sites-authoring/launches.md#launches-in-references-sites-console)啟動)。
+當您從「參考」(References)標籤選取特定啟動時，會顯示狀態(請參閱「參考」(Sites Console) [&#128279;](/help/sites-authoring/launches.md#launches-in-references-sites-console)中的啟動)。
 
 ![screen-shot_2019-03-05at121901](assets/screen-shot_2019-03-05at121901.png)

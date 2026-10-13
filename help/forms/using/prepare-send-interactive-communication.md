@@ -7,13 +7,27 @@ feature: Interactive Communication
 exl-id: 4fb82e9b-f870-47db-ac92-2d7510acace8
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: aa28c6c8-3ede-445b-a351-eeb0c9f9aec4
+    internal-label: Interactive Communication
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '2029'
 ht-degree: 0%
-
 ---
-
 # 使用Agent UI準備和傳送互動式通訊 {#prepare-and-send-interactive-communication-using-the-agent-ui}
 
 代理程式UI可讓代理程式準備互動式通訊，並將其傳送到發佈程式。 代理程式會視需要進行必要的修改，並將互動式通訊提交至發佈程式，例如電子郵件或列印。
@@ -71,8 +85,8 @@ ht-degree: 0%
 
    * [格式化選項](#formattingtext)
 
-      * [從其他應用程式複製貼上格式化文字](#pasteformattedtext)
-      * [反白部分文字](#highlightemphasize)
+     * [從其他應用程式複製貼上格式化文字](#pasteformattedtext)
+     * [反白部分文字](#highlightemphasize)
 
    * [特殊字元](#specialcharacters)
    * [鍵盤快速鍵](/help/forms/using/keyboard-shortcuts.md)

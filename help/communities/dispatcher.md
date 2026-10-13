@@ -9,13 +9,20 @@ exl-id: fb4e3973-2193-4bb5-8120-bf2f3ec80112
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '666'
-ht-degree: 12%
-
+source-wordcount: '687'
+ht-degree: 11%
 ---
-
 # 為社群設定Dispatcher {#configuring-dispatcher-for-communities}
 
 ## AEM Communities {#aem-communities}
@@ -45,8 +52,8 @@ AEM Communities適用的Dispatcher快取可讓Dispatcher提供社群網站頁面
 * Dispatcher 4.1.2版或更新版本（如需最新版本，請參閱[安裝Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html?lang=zh-Hant)）
 * [ACS AEM Commons套件](https://adobe-consulting-services.github.io/acs-aem-commons/)
 
-   * 版本3.3.2或更新版本
-   * `ACS AEM Commons - Dispatcher Cache Control Header - Max Age` OSGi設定
+  * 版本3.3.2或更新版本
+  * `ACS AEM Commons - Dispatcher Cache Control Header - Max Age` OSGi設定
 
 ### 設定 {#configuration}
 
@@ -54,7 +61,7 @@ OSGi設定&#x200B;**ACS AEM Commons - Dispatcher快取控制標頭 — Max Age**
 
 * 從[網頁主控台](../../help/sites-deploying/configuring-osgi.md)。
 
-   * 例如，[http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
+  * 例如，[http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
 
 * 尋找`ACS AEM Commons - Dispatcher Cache Control Header - Max Age`
 * 選取「+」圖示，即可建立連線設定。
@@ -64,7 +71,7 @@ OSGi設定&#x200B;**ACS AEM Commons - Dispatcher快取控制標頭 — Max Age**
 * **篩選模式**
   *（必要）*&#x200B;一或多個社群頁面的路徑。 例如，`/content/sites/engage/(.*)`。
 
-* **Cache-Control最大期限**
+* **Cache-Control最大使用時間**
   *（必要）*&#x200B;要新增至「快取控制項」標頭的最長時間（以秒為單位）。 值必須大於零(0)。
 
 ## Dispatcher篩選器 {#dispatcher-filters}

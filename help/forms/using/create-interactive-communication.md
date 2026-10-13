@@ -8,13 +8,27 @@ feature: Interactive Communication
 exl-id: 1f89c3bf-e67e-4d13-9285-3367be1ac8f8
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: aa28c6c8-3ede-445b-a351-eeb0c9f9aec4
+    internal-label: Interactive Communication
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '6132'
+source-wordcount: '6227'
 ht-degree: 1%
-
 ---
-
 # 建立互動式通訊{#create-an-interactive-communication}
 
 ## 概觀 {#overview}
@@ -62,11 +76,11 @@ ht-degree: 1%
    * **[!UICONTROL 互動式通訊Web範本]**：瀏覽並選取Web範本。
    * **[!UICONTROL 佈景主題]**&#x200B;和&#x200B;**[!UICONTROL 選取佈景主題]**：瀏覽並選取佈景主題，以設定互動式通訊的網路通道樣式。 如需詳細資訊，請參閱AEM Forms中的[主題](/help/forms/using/themes.md)。
 
-   * **[!UICONTROL 為Web Channel使用Print As Master]**：選取此選項以建立與列印管道同步的Web channel。使用print channel作為web channel的主版，可確保從print channel衍生web channel的內容和資料繫結，當您選取「同步」時，在web channel中進行的變更會反映在web channel中。不過，作者可視需要中斷Web Channel中特定元件的繼承。如需詳細資訊，請參閱[將Web channel與Print channel同步](../../forms/using/create-interactive-communication.md#synchronize)。
-若您選取&#x200B;**[!UICONTROL 使用Web Channel的「列印為主版」]**&#x200B;選項，您可以選取下列任一模式來產生Web channel：
+   * **[!UICONTROL 為Web Channel使用Print As Master]**：選取此選項以建立與列印管道同步的Web channel。 使用print channel作為web channel的主版，可確保從print channel衍生web channel的內容和資料繫結，當您選取「同步」時，在web channel中進行的變更會反映在web channel中。 不過，作者可視需要中斷Web Channel中特定元件的繼承。 如需詳細資訊，請參閱[將Web channel與Print channel同步](../../forms/using/create-interactive-communication.md#synchronize)。
+     如果您選取&#x200B;**[!UICONTROL Web Channel的「列印為主版」]**&#x200B;選項，您可以選取下列任何模式來產生Web channel：
 
-      * **[!UICONTROL 自動配置]**：選取此模式，即可從Print channel自動產生Web channel的預留位置、內容和資料繫結。
-      * **[!UICONTROL 手動整理]**：選取此模式，即可使用&#x200B;**[!UICONTROL 資料來源]**&#x200B;索引標籤中可用的主要內容，手動選取並新增Print channel元素至Web channel。 如需詳細資訊，請參閱[選取[列印管道]元素以建立Web管道內容](#selectprintchannelelements)。
+     * **[!UICONTROL 自動配置]**：選取此模式，即可從Print channel自動產生Web channel的預留位置、內容和資料繫結。
+     * **[!UICONTROL 手動整理]**：選取此模式，即可使用&#x200B;**[!UICONTROL 資料來源]**&#x200B;索引標籤中可用的主要內容，手動選取並新增Print channel元素至Web channel。 如需詳細資訊，請參閱[選取[列印管道]元素以建立Web管道內容](#selectprintchannelelements)。
 
    如需有關列印管道和網頁管道的詳細資訊，請參閱[列印管道和網頁管道](/help/forms/using/web-channel-print-channel.md)。
 
@@ -170,10 +184,10 @@ ht-degree: 1%
    * [新增和設定圖表](/help/forms/using/chart-component-interactive-communications.md)
    * [使用列印管道同步Web Channel](../../forms/using/create-interactive-communication.md#synchronize)
 
-      * 自動同步
-      * 取消繼承
-      * 重新啟用繼承
-      * 同步
+     * 自動同步
+     * 取消繼承
+     * 重新啟用繼承
+     * 同步
 
    * [附件與程式庫存取權](../../forms/using/create-interactive-communication.md#attachmentslibrary)
    * [XDP/佈局欄位屬性](../../forms/using/create-interactive-communication.md#xdplayoutfieldproperties)
@@ -242,8 +256,8 @@ ht-degree: 1%
    * **[!UICONTROL 允許的附件數目上限]**：指定互動式通訊允許的附件數目上限。
    * **[!UICONTROL 要附加的檔案]**：選取&#x200B;**[!UICONTROL 新增]**&#x200B;並瀏覽以選取要附加的檔案，並指定下列專案：
 
-      * **[!UICONTROL 依預設將此檔案附加至檔案]**：如果只有附件不是強制性的，您可以變更此選項。
-      * **[!UICONTROL 必要：]**&#x200B;代理程式將無法移除代理程式UI中的附件。
+     * **[!UICONTROL 依預設將此檔案附加至檔案]**：如果只有附件不是強制性的，您可以變更此選項。
+     * **[!UICONTROL 必要：]**&#x200B;代理程式將無法移除代理程式UI中的附件。
 
    ![附加檔案](assets/attachfiles.png)
 
@@ -263,9 +277,9 @@ ht-degree: 1%
    * **[!UICONTROL 標題]**：輸入代理程式在Agent UI和Document Container樹狀結構中可以看到的標題。
    * **[!UICONTROL 繫結型別]**：請為欄位選取下列其中一個繫結型別。
 
-      * 無：代理程式會填入屬性的值。
-      * 文字片段：如果選取，您可以瀏覽並選取文字檔案片段，其內容會呈現在欄位中。 或者，也可以將文字檔案片段拖放至欄位名稱，以設定兩者之間的繫結。 文字檔案片段不得包含任何變數。
-      * 資料模型物件：選取表單資料模型屬性，其值已填入欄位中。 或者，選取&#x200B;**資料來源**&#x200B;索引標籤，並將屬性拖放至欄位。
+     * 無：代理程式會填入屬性的值。
+     * 文字片段：如果選取，您可以瀏覽並選取文字檔案片段，其內容會呈現在欄位中。 或者，也可以將文字檔案片段拖放至欄位名稱，以設定兩者之間的繫結。 文字檔案片段不得包含任何變數。
+     * 資料模型物件：選取表單資料模型屬性，其值已填入欄位中。 或者，選取&#x200B;**資料來源**&#x200B;索引標籤，並將屬性拖放至欄位。
 
    * **[!UICONTROL 預設值]**：當指定的資料模型物件或文字片段沒有提供值時，預設值可確保欄位不是空的。 如果資料繫結型別為「無」，預設值會預先填入欄位中。
    * **[!UICONTROL 顯示模式]**：您也可以定義欄位的顯示格式。 從&#x200B;**型別**&#x200B;下拉式清單中選取任何預先定義的選項，以將顯示格式套用至欄位。 選取&#x200B;**自訂**&#x200B;以定義清單中不可用的顯示模式。 如需詳細資訊，請參閱[資料顯示模式](../../forms/using/create-interactive-communication.md#datadisplaypatterns)
@@ -346,8 +360,8 @@ ht-degree: 1%
       * **[!UICONTROL 標題]**：輸入將顯示在互動式通訊編輯器中的標題。
       * **[!UICONTROL 繫結型別]**：請為欄位選取下列其中一個繫結型別。
 
-         * **[!UICONTROL 無]**
-         * **[!UICONTROL 資料模型物件]**：表單資料模型屬性的值已填入欄位中。 或者，選取&#x200B;**資料來源**&#x200B;索引標籤，並將屬性拖放至欄位。
+        * **[!UICONTROL 無]**
+        * **[!UICONTROL 資料模型物件]**：表單資料模型屬性的值已填入欄位中。 或者，選取&#x200B;**資料來源**&#x200B;索引標籤，並將屬性拖放至欄位。
 
       * **[!UICONTROL 資料模型物件]**：表單資料模型屬性，其值已填入欄位中。
       * **[!UICONTROL 預設值]**：當指定的資料模型物件沒有提供值時，預設值可確保欄位不是空的。 預設值會預先填入欄位中。

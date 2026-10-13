@@ -9,13 +9,20 @@ role: Admin
 exl-id: 36f2e3d2-46c7-48a8-a1e9-213f581bd9f3
 solution: Experience Manager
 feature: Communities
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '324'
+source-wordcount: '326'
 ht-degree: 0%
-
 ---
-
 # 社群主控台 {#communities-consoles}
 
 AEM Communities的主控台可在全域導覽面板的製作環境中取得，且可讓您存取管理工作，例如：
@@ -28,13 +35,13 @@ AEM Communities的主控台可在全域導覽面板的製作環境中取得，�
 * 建立[自訂徽章](badges.md)
 * 正在設定UGC[&#128279;](srp-config.md)的預設儲存體
 
-當[UGC存放區](working-with-srp.md)設定為由Author和Publish環境共用的公用存放區時，可在Author和Publish環境中使用的[仲裁主控台](moderation.md)會在UGC的單一執行個體上運作。
+當[UGC存放區](working-with-srp.md)設定為製作和發佈環境共用的公用存放區時，可在製作和發佈環境中使用的[仲裁主控台](moderation.md)會在UGC的單一執行個體上運作。
 
 在作者環境中，以管理員許可權登入後，`Communities`主控台可從導覽和工具主控台取得。
 
 >[!NOTE]
 >
->在Publish環境中，當登入成員具有適當許可權時，[社群網站](sites-console.md)會顯示`Administration`功能表專案。
+>在發佈環境中，登入成員具有適當許可權時，[社群網站](sites-console.md)會顯示`Administration`功能表專案。
 
 ## 全域導覽面板 {#global-navigation-panel}
 
@@ -55,11 +62,11 @@ AEM Communities的主控台可在全域導覽面板的製作環境中取得，�
 
 * [審核](moderation.md)
 
-  「協調」主控台適用於在製作環境中大量協調UGC。 在Publish環境中，指派一或多個社群網站之[社群版主](users.md#publishenvironmentusersandgroups)角色的社群成員，可存取類似的大量版主主控台。
+  「協調」主控台適用於在製作環境中大量協調UGC。 在「發佈」環境中，對於一個或多個社群網站，指派角色為[社群版主](users.md#publishenvironmentusersandgroups)的社群成員，可以存取類似的批次仲裁主控台。
 
 * [成員、群組](members.md)
 
-  「成員」和「群組」主控台用於從作者環境管理Publish環境中存在的社群成員和成員群組。
+  「成員」和「群組」主控台用於從作者環境管理存在於發佈環境中的社群成員和成員群組。
 
 * [報告](reports.md)
 

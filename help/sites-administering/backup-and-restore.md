@@ -9,13 +9,22 @@ exl-id: dd26dade-b769-483e-bc11-dcfa5ed1f87e
 solution: Experience Manager, Experience Manager Sites
 feature: Operations
 role: Admin
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 8a70d214-ab7b-58c1-b001-2ed2e5d6303d
+    internal-label: Operations
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '2225'
+source-wordcount: '2326'
 ht-degree: 0%
-
 ---
-
 # 備份和還原{#backup-and-restore}
 
 在AEM中有兩種方式可備份和還原存放庫內容：
@@ -106,8 +115,8 @@ ht-degree: 0%
 
 **Delay**&#x200B;表示時間延遲（以毫秒為單位），因此存放庫效能不受影響。 依預設，存放庫備份會以全速執行。 您可以減慢建立線上備份的速度，以免減慢其他工作的速度。
 
-如果延遲時間非常長，請確認線上備份所需時間不超過24小時。如果是，請捨棄此備份，因為它可能不包含所有二進位檔。
-1毫秒的延遲通常會導致10%的CPU使用率，而10毫秒的延遲通常會導致3%的CPU使用率。延遲總秒數估計如下：存放庫大小（以MB為單位），乘以延遲（以毫秒為單位），再除以2 （如果使用zip選項），或再除以4 （備份到目錄時）。這表示備份至200 MB存放庫的目錄，且延遲達1毫秒，會將備份時間增加約50秒。
+如果延遲時間非常長，請確認線上備份所需時間不超過24小時。 如果是，請捨棄此備份，因為它可能不包含所有二進位檔。
+1毫秒的延遲通常會導致10%的CPU使用率，而10毫秒的延遲通常會導致3%的CPU使用率。 延遲總秒數估計如下：存放庫大小（以MB為單位），乘以延遲（以毫秒為單位），再除以2 （如果使用zip選項），或再除以4 （備份到目錄時）。 這表示備份至200 MB存放庫的目錄，且延遲達1毫秒，會將備份時間增加約50秒。
 
 >[!NOTE]
 >

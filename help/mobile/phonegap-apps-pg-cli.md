@@ -9,13 +9,17 @@ exl-id: fbeceb70-b199-478b-907b-253ed212ff99
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '637'
+source-wordcount: '649'
 ht-degree: 2%
-
 ---
-
 # 使用PhoneGap CLI開發應用程式{#developing-apps-with-phonegap-cli}
 
 {{ue-over-mobile}}
@@ -33,16 +37,16 @@ iOS：若要開發iPhone和iPad，您需要使用Apple的Xcode IDE。
 * 免費下載[這裡](https://idmsa.apple.com/IDMSWebAuth/signin?appIdKey=891bd3417a7776362562d2197f89480a8547b108fd934911bcbea0110d07f757&path=%2Fdownload%2F&rv=1)。
 * PhoneGap iOS平台指南(`https://docs.phonegap.com/en/4.0.0/guide_platforms_ios_index.md.html#iOS%20Platform%20Guide`)
 
-Android™：若要開發iPhone和iPad，您需要使用Google的Android™ Stuido IDE。
+™：若要開發iPhone和iPad，您需要使用Google的Android™ Stuido IDE。
 
 * 免費下載[這裡](https://developer.android.com/studio)。
-* PhoneGap Android™平台指南(`https://docs.phonegap.com/en/4.0.0/guide_platforms_android_index.md.html#Android%20Platform%20Guide`)
+* PhoneGap ™平台指南(`https://docs.phonegap.com/en/4.0.0/guide_platforms_android_index.md.html#Android%20Platform%20Guide`)
 
 ## 下載Source {#download-the-source}
 
 當您成功啟動您的開發環境時，請從AEM App Build動態磚下載來源：
 
-* 按一下PhoneGap Build圖磚下拉式>形箭號。
+* 按一下PhoneGap Build動態磚下拉式方塊(V)。
 
 ![chlimage_1-45](assets/chlimage_1-45.png)
 
@@ -55,7 +59,7 @@ Android™：若要開發iPhone和iPad，您需要使用Google的Android™ Stui
 >
 >開發來源包含應用程式的最新狀態，且包含未分階段的變更。 使用測試來源，建置要提交至應用程式商店廠商的候選版本。
 >
->如果您從未暫存應用程式，選取暫存會觸發暫存工作流程(提示：在AppStore和Google PlayStore提供的PhoneGap Enterprise Viewer應用程式中，顯示為暫存應用程式)。
+>如果您從未暫存應用程式，選取暫存會觸發暫存工作流程（提示：在AppStore和Google PlayStore提供的PhoneGap Enterprise Viewer應用程式中，顯示為暫存應用程式）。
 
 * 按一下「下載」並將ZIP儲存到您的電腦。
 * 將下載的zip檔案解壓縮至您的工作區。
@@ -88,8 +92,8 @@ phonegap run ios
 >1. 瀏覽至這個新資料夾（光碟測試）
 >1. 執行`phonegap create helloWorld`
 >1. 導覽至helloWorld (cd helloWorld)
->1. 執行`phonegap run android` (或將Android™取代為上述iOS)。
->1. 執行您新建立的PhoneGap應用程式時，模擬器會開啟，並顯示「裝置就緒」(如果JavaScript Bridge to native正常運作)。
+>1. 執行`phonegap run android` （或將™取代為上述iOS）。
+>1. 執行您新建立的PhoneGap應用程式時，模擬器會開啟，並顯示「裝置就緒」（如果JavaScript Bridge to native正常運作）。
 >
 >此疑難排解會驗證您的PhoneGap CLI開發環境是否正確執行。
 
@@ -103,8 +107,8 @@ phonegap run ios
 
 * 開啟Safari的偏好設定
 
-   * 按一下功能表列中的Safari
-   * 按一下偏好設定
+  * 按一下功能表列中的Safari
+  * 按一下偏好設定
 
 * 按一下偏好設定視窗中的進階
 

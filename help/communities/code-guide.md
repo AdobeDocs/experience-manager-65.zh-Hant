@@ -9,13 +9,20 @@ exl-id: a23aab83-1dfa-4d91-9b6b-6246a2103896
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '180'
 ht-degree: 1%
-
 ---
-
 # 編碼准則 {#coding-guidelines}
 
 ## 准則、秘訣與技巧 {#guidelines-tips-and-tricks}
@@ -26,7 +33,7 @@ ht-degree: 1%
 
 以下是AEM Communities開發人員的各種程式碼准則和最佳作法：
 
-### 程式碼 {#code}
+### 代碼 {#code}
 
 * [使用SRP存取UGC](accessing-ugc-with-srp.md) — 如何避免撰寫只有當UGC儲存在JCR (JSRP)時才有效的應用程式。
 * [SocialUtils重構](socialutils.md) — 取代SocialUtils的SRP公用程式方法。

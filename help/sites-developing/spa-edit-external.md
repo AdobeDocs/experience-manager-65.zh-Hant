@@ -6,13 +6,27 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
 index: false
-source-git-commit: 147b0efb32609c05949c9fe374fa4fca6a9dbfb1
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+  - id: c124fa01-25c5-42ec-adf6-21d1c114058b
+    internal-label: Developer tools
+subfeature_v2:
+  - id: a9f7d31e-bbe1-4475-966a-5f213546fcd9
+    internal-label: SPA Editor
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '2476'
 ht-degree: 1%
-
 ---
-
 
 # 在Adobe Experience Manager中編輯外部SPA {#editing-external-spa-within-aem}
 
@@ -30,8 +44,8 @@ ht-degree: 1%
 
 * 確定AEM的執行個體在本機執行。
 * 使用[AEM專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hant&#available-properties)建立基礎AEM SPA專案。
-   * 這將構成AEM專案的基礎，專案將更新以包含外部SPA。
-   * 本檔案中的範例使用[WKND SPA專案](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/spa-editor/spa-editor-framework-feature-video-use.html?lang=zh-Hant#spa-editor)的起點。
+  * 這將構成AEM專案的基礎，專案將更新以包含外部SPA。
+  * 本檔案中的範例使用[WKND SPA專案](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/spa-editor/spa-editor-framework-feature-video-use.html?lang=zh-Hant#spa-editor)的起點。
 * 準備好您想要整合的可使用外部React SPA。
 
 ## 將SPA上傳至AEM專案 {#upload-spa-to-aem-project}
@@ -166,7 +180,7 @@ npm install --save @adobe/aem-spa-component-mapping @adobe/aem-spa-page-model-ma
 
    * `pagePath`：包含節點的頁面，例如`/content/wknd-spa-react/us/en/home`
    * `itemPath`：頁面中節點的路徑，範例： `root/responsivegrid/text`
-      * 由頁面上包含專案的名稱組成。
+     * 由頁面上包含專案的名稱組成。
 
    ![節點的路徑](assets/external-spa-path.png)
 
@@ -260,9 +274,9 @@ mvn clean install -PautoInstallSinglePackage
 * 在`pagePath`中的路徑所提供的頁面節點必須存在於AEM專案中。
 * 必須在`itemPath`中提供要建立的節點名稱。
 * 可在任何層級建立元件。
-   * 如果在上一個範例中提供`itemPath='text_20'`，則會直接在頁面`/content/wknd-spa-react/us/en/home/jcr:content/text_20`下建立新節點
+  * 如果在上一個範例中提供`itemPath='text_20'`，則會直接在頁面`/content/wknd-spa-react/us/en/home/jcr:content/text_20`下建立新節點
 * 透過`itemPath`提供時，建立新節點的節點路徑必須有效。
-   * 在此範例中，`root/responsivegrid`必須存在，才能在那裡建立新節點`text_20`。
+  * 在此範例中，`root/responsivegrid`必須存在，才能在那裡建立新節點`text_20`。
 * 僅支援建立分葉元件。 未來版本將支援虛擬容器和頁面。
 
 ### 虛擬容器 {#virtual-containers}
@@ -297,8 +311,8 @@ JCR![&#128279;](assets/container-jcr-structure.png)中的容器位置
 
 * 決定可新增哪些元件的原則將會從父容器繼承。
 * 要建立的容器的直接父系必須已存在於AEM中。
-   * 如果AEM容器中已存在容器`root/responsivegrid`，則可提供路徑`root/responsivegrid/newContainer`以建立新容器。
-   * 但是`root/responsivegrid/newContainer/secondNewContainer`是不可能的。
+  * 如果AEM容器中已存在容器`root/responsivegrid`，則可提供路徑`root/responsivegrid/newContainer`以建立新容器。
+  * 但是`root/responsivegrid/newContainer/secondNewContainer`是不可能的。
 * 一次只能虛擬建立一個新層級的元件。
 
 ## 其他自訂 {#additional-customizations}
@@ -355,9 +369,9 @@ JCR![&#128279;](assets/container-jcr-structure.png)中的容器位置
    ![路由協助程式](assets/external-spa-router-helper.png)
 
    * `@adobe/cq-spa-page-model-manager`提供的`toAEMPath`協助程式可用於此專案。 它會轉換為路由提供的路徑，以便在AEM例項上開啟應用程式時包含AEM的特定部分。 它接受三個引數：
-      * 路由所需的路徑
-      * 編輯SPA的AEM執行個體的來源URL
-      * AEM上的專案根目錄，如第一步所決定
+     * 路由所需的路徑
+     * 編輯SPA的AEM執行個體的來源URL
+     * AEM上的專案根目錄，如第一步所決定
 
    * 這些值可設為環境變數，以獲得更多彈性。
 

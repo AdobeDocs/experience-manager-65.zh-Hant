@@ -6,13 +6,22 @@ feature: Workfront Integrations and Apps
 exl-id: 2660de7c-0281-4884-98d9-e78f20cf571c
 hide: true
 solution: Experience Manager, Workfront
-source-git-commit: bca6156727dca11b2e09be549f3def6130827193
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c4a86a5d-6562-4fc6-aa00-bfa25833aed9
+    internal-label: Workfront
+feature_v2:
+  - id: a1f87682-0525-5459-aa06-3560bb4c3b2a
+    internal-label: Workfront Integrations and Apps
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
 source-wordcount: '1747'
-ht-degree: 1%
-
+ht-degree: 2%
 ---
-
 # 設定 [!DNL Workfront for Experience Manager enhanced connector] {#assets-integration-overview}
 
 | 版本 | 文章連結 |
@@ -44,59 +53,59 @@ ht-degree: 1%
 
 * 編輯您在步驟5建立的[!UICONTROL Workfront工具]雲端服務設定，並選取[!UICONTROL 事件訂閱]索引標籤。
 * 選取您在第6節中建立的[!UICONTROL Workfront自訂整合]。
-* Click [!UICONTROL Enable Workfront Event Subscriptions].
+* 按一下[!UICONTROL 啟用Workfront活動訂閱]。
 
-  ![Event subscription](/help/assets/assets/event-subs.png)
+  ![活動訂閱](/help/assets/assets/event-subs.png)
 
-## Configure linked folders {#linked-folders}
+## 設定連結的資料夾 {#linked-folders}
 
-To subscribe to the events, follow these steps:
+若要訂閱事件，請遵循下列步驟：
 
-1. Navigate to the **[!UICONTROL Event Subscriptions]** tab in the cloud services.
-1. Select the custom integration created in [!DNL Workfront].
-1. Click **[!UICONTROL Enable Workfront Event Subscriptions]**.
+1. 導覽至雲端服務中的&#x200B;**[!UICONTROL 事件訂閱]**&#x200B;索引標籤。
+1. 選取在[!DNL Workfront]中建立的自訂整合。
+1. 按一下&#x200B;**[!UICONTROL 啟用Workfront活動訂閱]**。
 
-### Linked folder structure configuration {#linked-folder-structure}
+### 連結的資料夾結構設定 {#linked-folder-structure}
 
-1. Go to the Project Linked Folders tab in the cloud services.
-1. Linked folder parent path: Select a folder in the DAM where you wish to create the linked folders. If left empty, it will default to /content/dam. Make sure that the Workfront Tools metadata schema and Workfront Linked Folder folder metadata schema have been applied to the selected folder.
-1. Linked folder structure: Enter comma-separated values. Each value should be `DE:<some-project-custom-form-field>`, Portfolio, Program, Year, Name, or some &quot;Literal String Value&quot; (this last one with quotation marks). It is currently set to Portfolio,Program,Year,DE:Project Type,Name.
-1. Configure permissions: Add `jcr:all permissions` permissions to `/conf/workfront-tools/settings/cloudconfigs` for `wf-workfront-users` group.
-1. Build linked folder title in Workfront using the folder structure names checkbox should be checked if the title of the folder in Workfront should include all folders in the structure. Otherwise, it is the title of the last folder.
-1. Sub-folders multifield lets you specify a list of folders that should be created as a child folder of the linked folder.
-1. Project status: Select the status of the project to create the linked folder.
-1. Create a linked folder in projects with portfolio: List of Portfolios to which the project must belong to create the linked folder. Leave this list empty to create the linked folder for all project portfolio.
-1. Create a linked folder in projects with custom form field: Custom form field and its corresponding value that the project has to have to create the linked folder. This configuration is ignored if left empty. Select `CUSTOM FORMS: Create DAM Linked Folder` for the field and input `Yes` for the value.
-1. Click on Enable automatic creation of linked folders. If you go back to the Event Subscriptions tab, you&#39;ll see there is now one create event.
+1. 前往雲端服務中的專案連結資料夾索引標籤。
+1. 連結資料夾父路徑：在DAM中選取您想要建立連結資料夾的資料夾。 如果留空，其將預設為/content/dam。 請確定Workfront工具中繼資料結構和Workfront連結資料夾中繼資料結構已套用至選取的資料夾。
+1. 連結的資料夾結構：輸入逗號分隔值。 每個值都應該是`DE:<some-project-custom-form-field>`、Portfolio、Program、Year、Name或某個「常值字串值」（最後這個值帶有引號）。 它目前設定為Portfolio，Program，Year，DE:Project Type，Name。
+1. 設定許可權：為`wf-workfront-users`群組新增`jcr:all permissions`許可權至`/conf/workfront-tools/settings/cloudconfigs`。
+1. 如果Workfront中的資料夾標題應包含結構中的所有資料夾，則應核取使用資料夾結構名稱在Workfront中建立連結資料夾標題。 否則，這是最後一個資料夾的標題。
+1. 子資料夾多欄位可讓您指定應建立為連結資料夾的子資料夾的資料夾清單。
+1. 專案狀態：選取專案狀態以建立連結的資料夾。
+1. 在具有投資組合的專案中建立連結資料夾：專案必須屬於其中以建立連結資料夾的投資組合清單。 將此清單保留為空白可為所有專案組合建立連結資料夾。
+1. 使用自訂表單欄位在專案中建立連結資料夾：自訂表單欄位及其對應的值，專案必須建立連結資料夾。 如果留為空白，則會忽略此設定。 選取`CUSTOM FORMS: Create DAM Linked Folder`作為欄位，並輸入`Yes`作為值。
+1. 按一下啟用自動建立連結資料夾。 如果您返回「事件訂閱」標籤，現在會看到有一個建立事件。
 
-![linked folder configuration](/help/assets/assets/wf-linked-folder-config.png)
+![連結的資料夾組態](/help/assets/assets/wf-linked-folder-config.png)
 
-## Metadata schema mapping {#metadata-schema-mapping}
+## 中繼資料結構描述對應 {#metadata-schema-mapping}
 
-### Configure folder metadata mapping {#folder-metadata-mapping}
+### 設定資料夾中繼資料對應 {#folder-metadata-mapping}
 
-Metadata mapping between Workfront Projects and AEM Folders is defined within AEM Folder Metadata Schemas. Folder Metadata Schemas should be created and configured as usual in AEM. Workfront Tools adds an autocomplete dropdown to the Settings configuration tab of each folder metadata schema form field. This autocomplete drop- down menu will let you specify to which Workfront field each AEM folder property should be mapped to.
+Workfront專案與AEM資料夾之間的中繼資料對應是在AEM資料夾中繼資料結構中定義。 應照常在AEM中建立和設定資料夾中繼資料結構。 Workfront工具會將自動完成下拉式清單新增至每個資料夾中繼資料結構表單欄位的「設定」設定索引標籤。 此自動完成下拉式功能表可讓您指定每個AEM資料夾屬性應該對應至的Workfront欄位。
 
-To configure the mappings, follow these steps:
+若要設定對應，請遵循下列步驟：
 
-1. Add `jcr:read` permissions to `/conf/global/settings/dam/adminui-extension/foldermetadataschema` for `wf-workfront-users` group.
-1. Navigate to **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Folder Metadata Schemas]**.
-1. Select the folder metadata schema form you wish to edit and click Edit.
-1. Select the folder metadata schema form field you wish to edit and select Settings tab on the right panel.
-1. In [!UICONTROL Mapped from Workfront Field] field, select the name of the Workfront field that you wish to map to the selected AEM folder property. Available options are:
+1. 為`wf-workfront-users`群組新增`jcr:read`許可權至`/conf/global/settings/dam/adminui-extension/foldermetadataschema`。
+1. 導覽至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Assets]** > **[!UICONTROL 資料夾中繼資料結構]**。
+1. 選取您要編輯的資料夾中繼資料結構表單，然後按一下編輯。
+1. 選取您要編輯的資料夾中繼資料結構表單欄位，然後在右側面板上選取設定索引標籤。
+1. 在[!UICONTROL 從Workfront欄位對應]欄位中，選取您要對應到所選Workfront資料夾屬性的AEM欄位名稱。 可用的選項包括：
 
-   * Project custom form fields
-   * Project Overview fields (ID, Name, Description, Reference Number, Planned Completion Date, Project Owner, Project Sponsor, Portfolio or Program)
+   * 專案自訂表單欄位
+   * 專案概述欄位（ID、名稱、說明、參考編號、規劃完成日期、專案所有者、專案贊助者、Portfolio或方案）
 
-![metadata mapping config](/help/assets/assets/wf-metadata-mapping-config2.png)
+![中繼資料對應設定](/help/assets/assets/wf-metadata-mapping-config2.png)
 
 ### 設定資產中繼資料對應 {#asset-metadata-mapping}
 
-Metadata mapping between Adobe Workfront Documents and Assets is defined within AEM Metadata Schemas. Metadata Schemas should be created and configured as usual in AEM. Workfront Tools adds configuration options to the Settings configuration tab of each metadata schema form field. These options will let you specify to which Workfront field each AEM property should be mapped to.
+Adobe Workfront檔案與Assets之間的中繼資料對應是在AEM中繼資料結構中定義。 中繼資料結構描述應照常在AEM中建立和設定。 Workfront工具會將設定選項新增至每個中繼資料結構表單欄位的「設定」設定索引標籤。 這些選項可讓您指定每個AEM屬性應該對應至的Workfront欄位。
 
-To configure the mappings, follow these steps:
+若要設定對應，請遵循下列步驟：
 
-1. Navigate to **Tools** > **Assets** > **Metadata Schemas**.
+1. 導覽至&#x200B;**工具** > **Assets** > **中繼資料結構描述**。
 1. 選取您要編輯的中繼資料結構描述表單，然後按一下&#x200B;**編輯**&#x200B;或從頭開始建立中繼資料結構描述。
 1. 選取您要編輯的中繼資料結構表單欄位，然後選取右側面板上的&#x200B;**設定**&#x200B;索引標籤。
 1. 在「[!DNL Workfront]自訂表單欄位」中，選取您要對應至所選AEM屬性的[!DNL Workfront]欄位名稱。 可用的選項包括：
@@ -123,23 +132,23 @@ To configure the mappings, follow these steps:
 
 * `workfront-field`可以是
 
-   * 前置詞`DE:`所識別的自訂表單欄位。
-   * 由其名稱識別的可編輯欄位。 在[[!DNL Workfront] API總管](https://experience.workfront.com/s/api-explorer)中找到欄位名稱。
+  * 前置詞`DE:`所識別的自訂表單欄位。
+  * 由其名稱識別的可編輯欄位。 在[[!DNL Workfront] API總管](https://experience.workfront.com/s/api-explorer)中找到欄位名稱。
 
 * `aem-mapped-property` 可能是：
 
-   * 常值。 這些應該以引號括住。
-   * AEM屬性。 此參考應相對於工作流程裝載。
-   * 具名值。 這些應該以方括弧括住。
-   * 上述3個專案的串連。 使用`{+}`指定它。
-   * 以`{replace(<value>,"old-char","new-char")}`包圍值來變更上述3個專案。
+  * 常值。 這些應該以引號括住。
+  * AEM屬性。 此參考應相對於工作流程裝載。
+  * 具名值。 這些應該以方括弧括住。
+  * 上述3個專案的串連。 使用`{+}`指定它。
+  * 以`{replace(<value>,"old-char","new-char")}`包圍值來變更上述3個專案。
 
 * 部分範例包括：
 
-   * `status="INP"`
-   * `DE:Asset Type=jcr:content/metadata/assetType`
-   * `DE:Path={path}`
-   * `URL="https://my-aem-author/assets.html"{+}{path}`
+  * `status="INP"`
+  * `DE:Asset Type=jcr:content/metadata/assetType`
+  * `DE:Path={path}`
+  * `URL="https://my-aem-author/assets.html"{+}{path}`
 
 ![對應屬性的組態](/help/assets/assets/wf-map-property-config.png)
 
@@ -197,12 +206,12 @@ To configure the mappings, follow these steps:
 
 1. 選取&#x200B;**[!UICONTROL 從Workfront]**&#x200B;傳送時自動發佈資產。 此選項可在資產從Workfront傳送至AEM時自動發佈資產。 此功能可透過指定Workfront自訂表單欄位及其應設定的值有條件地啟用。 每當檔案傳送至AEM時，如果符合條件，則會自動發佈資產。
 
-1. 選取&#x200B;**[!UICONTROL 在專案完成時將所有專案資產發佈到Brand Portal]**。 This option enables automatic publishing of assets to [!DNL Brand Portal] when the status of the Workfront project they belong to is changed to `Complete`.
+1. 選取&#x200B;**[!UICONTROL 在專案完成時將所有專案資產發佈到Brand Portal]**。 此選項可讓您在資產所屬的Workfront專案狀態變更為`Complete`時，將資產自動發佈至[!DNL Brand Portal]。
 
-![configure auto-publish](/help/assets/assets/wf-auto-publish-config.png)
+![設定自動發佈](/help/assets/assets/wf-auto-publish-config.png)
 
-## Workfront document custom form updates {#subscribe-workfront-doc-custom-form-updates}
+## Workfront檔案自訂表單更新 {#subscribe-workfront-doc-custom-form-updates}
 
-To subscribe to the changes in [!DNL Workfront] document custom forms, select the relevant option in the **[!UICONTROL Advanced]** tab. When you subscribe to these updates, it updates your mapped [!DNL Experience Manager] metadata fields when the corresponding field in [!DNL Workfront] document custom form is changed.
+若要訂閱[!DNL Workfront]檔案自訂表單中的變更，請在&#x200B;**[!UICONTROL 進階]**&#x200B;索引標籤中選取相關選項。 當您訂閱這些更新時，它會在[!DNL Workfront]檔案自訂表單中的對應欄位變更時更新您對應的[!DNL Experience Manager]中繼資料欄位。
 
-![Workfront document custom form updates configuration in [!DNL Experience Manager]](/help/assets/assets/wf-custom-form-update.png)
+![在[!DNL Experience Manager]](/help/assets/assets/wf-custom-form-update.png)中的Workfront檔案自訂表單更新設定

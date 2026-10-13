@@ -8,13 +8,26 @@ exl-id: 1772368a-f5c9-440c-a92a-0f1d34cc4bf8
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Developer
-source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1296'
-ht-degree: 1%
-
+source-wordcount: '1314'
+ht-degree: 2%
 ---
-
 # 樣式系統{#style-system}
 
 樣式系統可讓範本作者在元件的內容原則中定義樣式類別，讓內容作者在編輯頁面上的元件時能夠選取這些類別。 這些樣式可作為元件的替代視覺變體，讓元件更靈活。
@@ -62,7 +75,7 @@ ht-degree: 1%
 
 ## 使用 {#use}
 
-為了示範此功能，我們將使用核心元件的[標題元件](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hant)的[WKND](https://www.adobe.com/go/aem_cmp_title_v2_tw)實作作為範例。
+為了示範此功能，我們將使用核心元件的[標題元件](https://www.adobe.com/go/aem_cmp_title_v2_tw)的[WKND](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hant)實作作為範例。
 
 下列章節[As a Content Author](#as-a-content-author)及[As a Template Author](#as-a-template-author)說明如何使用WKND的樣式系統測試樣式系統的功能。
 
@@ -110,7 +123,7 @@ ht-degree: 1%
 
 >[!CAUTION]
 >
->設定為元件原則的樣式屬性的CSS類別(以及任何必要的JavaScript)必須部署為[使用者端資料庫](/help/sites-developing/clientlibs.md)才能運作。
+>設定為元件原則的樣式屬性的CSS類別（以及任何必要的JavaScript）必須部署為[使用者端資料庫](/help/sites-developing/clientlibs.md)才能運作。
 
 ## 設定 {#setup}
 

@@ -1,18 +1,34 @@
 ---
-title: 如何連線並傳送最適化表單資料至Microsoft&amp； reg； Power Automate？
-description: 連線最適化表單資料並將其傳送到Microsoft&amp； reg； Power Automate的逐步指南。
+title: 如何連線最適化表單資料並將其傳送到Microsoft&reg； Power Automate？
+description: 連線最適化表單資料並將其傳送到Microsoft&reg； Power Automate的逐步指南。
 keywords: 最適化Forms Microsoft Power Automate，將最適化Forms資料提交至Microsoft Power Automate
 feature: Adaptive Forms,Foundation Components
 exl-id: 3fd26ddb-d247-462f-a0f6-8af6166516c1
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: 73a5a49cdbdae320c2f33a0516c74e1c7c72c644
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 7da902b6-fe94-5180-8e7c-f6d1e38d01d5
+    internal-label: Foundation Components
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1283'
-ht-degree: 13%
-
+source-wordcount: '1375'
+ht-degree: 12%
 ---
-
 # 連線最適化表單資料並將其提交到® Power Automate {#connect-adaptive-form-with-power-automate}
 
 | 版本 | 文章連結 |
@@ -20,7 +36,7 @@ ht-degree: 13%
 | AEM 6.5 | 本文章 |
 | AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/forms/integrate/set-submit-action/forms-microsoft-power-automate-integration) |
 
-您可以設定最適化表單，在提交時執行 Microsoft® Power Automate Cloud Flow。設定的最適化表單會將擷取的資料、附件和記錄文件傳送到 Power Automate Cloud Flow 進行處理。那有助於建置自訂資料擷取體驗，同時利用 Microsoft® Power Automate 的強大功能，根據擷取的資料建置商業邏輯，並將客戶工作流程自動化。以下是整合最適化表單與 Microsoft® Power Automate 後，可以執行的部分操作範例：
+您可以設定最適化表單，在提交時執行 Microsoft® Power Automate Cloud Flow。 設定的最適化表單會將擷取的資料、附件和記錄文件傳送到 Power Automate Cloud Flow 進行處理。 這有助於建置自訂資料擷取體驗，同時利用 Microsoft® Power Automate 的強大功能，根據擷取的資料建置業務邏輯，並將客戶工作流程自動化。 以下是整合最適化表單與 Microsoft® Power Automate 後，可以執行的部分操作範例：
 
 * 在 Power Automate 業務流程中使用最適化表單資料
 * 使用 Power Automate 將擷取的資料傳送到 500 多個資料來源或任何公開可用的 API
@@ -34,7 +50,7 @@ ht-degree: 13%
 以下為連線最適化表單與® Power Automate的必要條件：
 
 * ® Power Automate Premium授權
-* ® [具有](https://docs.microsoft.com/en-us/power-automate/create-flow-solution)觸發程式的Power Automate流程`When an HTTP request is received`以接受最適化表單提交資料
+* ® [具有`When an HTTP request is received`觸發程式的Power Automate流程](https://docs.microsoft.com/en-us/power-automate/create-flow-solution)以接受最適化表單提交資料
 * 具有[Forms作者](/help/forms/using/forms-groups-privileges-tasks.md)和[Forms管理員](/help/forms/using/forms-groups-privileges-tasks.md)許可權的Experience Manager使用者
 * 用來連線至Microsoft的帳戶®Power Automate是已設定為可從調適型表單接收資料的Power Automate流程的所有者
 
@@ -43,10 +59,10 @@ ht-degree: 13%
 
 執行以下動作，將您的AEM Forms編寫執行個體與Microsoft® Power Automate連線：
 
-1. [建立Microsoft](#ms-power-automate-application)
-1. [建立Microsoft](#microsoft-power-automate-dataverse-cloud-configuration)
-1. [建立Microsoft](#create-microsoft-power-automate-flow-cloud-configuration)
-1. [發佈Microsoft](#publish-microsoft-power-automate-dataverse-cloud-configuration)
+1. [建立® Azure Active Directory應用程式](#ms-power-automate-application)
+1. [建立® Power Automate Dataverse雲端設定](#microsoft-power-automate-dataverse-cloud-configuration)
+1. [建立® Power Automate流程服務雲端設定](#create-microsoft-power-automate-flow-cloud-configuration)
+1. [發佈® Power Automate Dataverse和Microsoft® Power Automate流程服務雲端設定](#publish-microsoft-power-automate-dataverse-cloud-configuration)
 
 ### 建立® Azure Active Directory應用程式 {#ms-power-automate-application}
 
@@ -86,7 +102,7 @@ ht-degree: 13%
 
 1. 在AEM Forms作者執行個體上，瀏覽至&#x200B;**[!UICONTROL 工具]** ![hammer](assets/hammer.png) > **[!UICONTROL 一般]** > **[!UICONTROL 設定瀏覽器]**。
 1. 在&#x200B;**[!UICONTROL 設定瀏覽器]**&#x200B;頁面上，選取&#x200B;**[!UICONTROL 建立]**。
-1. 在&#x200B;**[!UICONTROL 建立設定]**&#x200B;對話方塊中，指定設定的&#x200B;**[!UICONTROL 標題]**、啟用&#x200B;**[!UICONTROL 雲端設定]**，並選取&#x200B;**[!UICONTROL 建立]**。 這樣便會建立儲存 Cloud Services 的設定容器。請確保資料夾名稱未含任何空格。
+1. 在&#x200B;**[!UICONTROL 建立設定]**&#x200B;對話方塊中，指定設定的&#x200B;**[!UICONTROL 標題]**、啟用&#x200B;**[!UICONTROL 雲端設定]**，並選取&#x200B;**[!UICONTROL 建立]**。 這樣便會建立儲存 Cloud Services 的設定容器。 請確保資料夾名稱未含任何空格。
 1. 瀏覽至&#x200B;**[!UICONTROL Tools]** ![hammer](assets/hammer.png) > **[!UICONTROL 雲端服務]** > **[!UICONTROL ®® Power Automate Dataverse]**，並開啟您在上一步中建立的設定容器。
 
    >[!NOTE]
@@ -125,7 +141,7 @@ ht-degree: 13%
 >
 > 若要讓整合持續運作，在權杖過期之前或時，重新驗證並重新發佈® Power Automate Dataverse和Microsoft® Power Automate Flow Service雲端設定，請使用[發佈Microsoft® Power Automate Dataverse和Microsoft® Power Automate Flow Service雲端設定](#publish-microsoft-power-automate-dataverse-cloud-configuration)中記錄的步驟。
 >
-> 如需權杖存留期原則的詳細資訊，請參閱可設定權杖存留期[的](https://learn.microsoft.com/en-us/entra/identity-platform/configurable-token-lifetimes#token-lifetime-policies-for-refresh-tokens-and-session-tokens)Microsoft Entra檔案。 如果未更新Token，則提交至Power Automate的表單可能會失敗。
+> 如需權杖存留期原則的詳細資訊，請參閱可設定權杖存留期[&#128279;](https://learn.microsoft.com/en-us/entra/identity-platform/configurable-token-lifetimes#token-lifetime-policies-for-refresh-tokens-and-session-tokens)的Microsoft Entra檔案。 如果未更新Token，則提交至Power Automate的表單可能會失敗。
 
 ## 使用叫用® Power Automate流程提交動作將資料傳送至Power Automate流程 {#use-the-invoke-microsoft-power-automate-flow-submit-action}
 
@@ -206,4 +222,4 @@ ht-degree: 13%
 
 * [建立自適應表單](create-an-adaptive-form-core-components.md)
 * [設定提交動作](configuring-submit-actions.md)
-* [適用於Microsoft的Adobe Experience Manager Connector®Power Automate](https://learn.microsoft.com/en-us/connectors/adobeexperiencemanag/)
+* [® Power Automate的Adobe Experience Manager Connector](https://learn.microsoft.com/en-us/connectors/adobeexperiencemanag/)

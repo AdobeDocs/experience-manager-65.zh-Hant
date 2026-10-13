@@ -9,13 +9,17 @@ exl-id: e10e1904-7016-4eb0-9408-36297285f378
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '979'
 ht-degree: 0%
-
 ---
-
 # 測試行動應用程式{#testing-mobile-apps}
 
 {{ue-over-mobile}}
@@ -49,12 +53,12 @@ ht-degree: 0%
 * 針對大型裝置集區進行測試（最好是真正的裝置，但如果沒有真正的裝置則為模擬器/模擬器），
 * 提供資訊性意見反應：
 
-   * 當機報告，
-   * 分析/追蹤，
-   * 可用性，
-   * 需要注意的領域，
-   * 效能，
-   * 資料/耗電量等等。
+  * 當機報告，
+  * 分析/追蹤，
+  * 可用性，
+  * 需要注意的領域，
+  * 效能，
+  * 資料/耗電量等等。
 
 ## 工具 {#tools}
 

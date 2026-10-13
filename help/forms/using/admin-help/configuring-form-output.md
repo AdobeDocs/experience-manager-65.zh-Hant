@@ -9,23 +9,37 @@ exl-id: d739806c-ce72-40fd-b304-3262a0988d96
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '256'
+source-wordcount: '257'
 ht-degree: 1%
-
 ---
-
 # 設定表單輸出{#configuring-form-output}
 
-## 指定傳回網頁瀏覽器的HTML輸出型別 {#specify-the-type-of-html-output-returned-to-the-web-browser}
+## 指定傳回至網頁瀏覽器的HTML輸出型別 {#specify-the-type-of-html-output-returned-to-the-web-browser}
 
 1. 在Administration Console中，按一下「服務」 > 「表單」。
 1. 在「表單輸出」下的「輸出型別」清單中，選取下列選項之一：
 
-   **完整HTML：**&#x200B;若要在完整HTML標籤內轉譯表單(完整的HTML頁面)。 此值為預設值。
+   **完整HTML：**&#x200B;若要在完整HTML標籤（完整的HTML頁面）中轉譯表單。 此值為預設值。
 
-   **表單內文：**&#x200B;若要在`<BODY>`標籤內轉譯表單(不是完整的HTML頁面)。
+   **表單內文：**&#x200B;若要在`<BODY>`標籤內轉譯表單（不是完整的HTML頁面）。
 
 1. 按一下「儲存」。
 
@@ -35,7 +49,7 @@ ht-degree: 1%
 
    **使用者端：**&#x200B;在Adobe Acrobat或Adobe Reader中轉譯PDF forms。 使用者端轉譯可改善AEM表單的效能，且僅適用於PDF表單轉換。
 
-   **伺服器：**&#x200B;在應用程式伺服器上轉譯PDF forms。
+   **伺服器：**&#x200B;若要在應用程式伺服器上呈現PDF forms。
 
    **自動：**&#x200B;若要在XDP檔案的`dynamicRender`組態值所指定的位置轉譯PDF表單。 此值為預設值。
 
@@ -53,7 +67,7 @@ ht-degree: 1%
 1. 移至&#x200B;**服務** > **表單**。
 1. 將「輸出」型別指定為「表單主體」。
 1. 儲存設定。
-1. 在HTML程式碼的head區段中宣告JavaScript變數__CUSTOM_SCRIPTS_VERSION)，並將其值設為1。
+1. 在JavaScript程式碼的head區段中宣告HTML變數__CUSTOM_SCRIPTS_VERSION)，並將其值設為1。
 
    >[!NOTE]
    >

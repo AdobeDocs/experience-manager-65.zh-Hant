@@ -1,18 +1,31 @@
 ---
-title: ' [!DNL Adobe Experience Manager Assets]的可存取功能與介面'
-description: 瞭解 [!DNL Adobe Experience Manager] 6.5 [!DNL Assets] 中的協助工具功能如何協助殘障使用者。
+title: '[!DNL Adobe Experience Manager Assets]的可存取功能與介面'
+description: 瞭解[!DNL Adobe Experience Manager] 6.5 [!DNL Assets]中的協助工具功能如何協助殘障使用者。
 contentOwner: AG
 feature: Asset Management
 role: User, Developer, Leader
 exl-id: 15555941-99a2-4586-8d7b-b22f3ec17805
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 7d2b2ec8-499c-5434-9ffd-9218cd71f683
+    internal-label: Asset Management
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1932'
+source-wordcount: '1934'
 ht-degree: 1%
-
 ---
-
 <!--
 Possible topics to cover in this article are below.
 
@@ -44,7 +57,7 @@ Possible topics to cover in this article are below.
 
 若要閱讀包含詳細相容性層級的報表，請參閱[協助工具相容性報表](https://www.adobe.com/accessibility/compliance.html) (ACR)頁面。
 
-若要瞭解[!DNL Dynamic Media]的存取方式，請參閱 [!DNL Dynamic Media][&#128279;](/help/assets/accessibility-dm.md)中的存取功能。
+若要瞭解[!DNL Dynamic Media]的存取方式，請參閱 [!DNL Dynamic Media]&#x200B;[&#128279;](/help/assets/accessibility-dm.md)中的存取功能。
 
 ## 輔助技術 {#at-support}
 
@@ -206,9 +219,9 @@ TBD: Anything about accessibility in DA, BP? AAL team confirmed that there's no 
 
 * 在連結共用對話方塊中，以瀏覽模式導覽時，熒幕助讀程式會：
 
-   * 載入對話方塊時，不要提供表格資訊的旁白。
-   * 導覽至列出的所有建議。
-   * 提供旁白來敘述新增電子郵件地址和搜尋欄位顯示的建議。
+  * 載入對話方塊時，不要提供表格資訊的旁白。
+  * 導覽至列出的所有建議。
+  * 提供旁白來敘述新增電子郵件地址和搜尋欄位顯示的建議。
 
 ## 無障礙檔案 {#accessible-docs}
 

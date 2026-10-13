@@ -9,20 +9,24 @@ exl-id: db1c33c9-8539-436d-b4d0-3d5e6fd688ed
 solution: Experience Manager
 feature: Mobile
 role: Developer
-source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '311'
+source-wordcount: '320'
 ht-degree: 3%
-
 ---
-
 # 使用內容屬性匯出內容{#using-content-properties-to-export-content}
 
 {{ue-over-mobile}}
 
-在AEM中，應用程式會顯示為&#x200B;*cq：Pages*。
+在AEM中，應用程式會顯示為&#x200B;*cq:Pages*。
 
-除了以下所示的其他表示整合支援屬性的屬性外，它們還共用在任何&#x200B;*cq：Page*&#x200B;中找到的相同一般屬性。
+除了以下所示的其他共同屬性外，它們還共用在任何&#x200B;*cq:Page*&#x200B;中找到的相同共同屬性，這些共同屬性代表支援屬性的整合。
 
 ## 應用程式屬性 {#app-properties}
 
@@ -38,7 +42,7 @@ ht-degree: 3%
   <tr>
    <td>dps-cloudConfig</td>
    <td>字串：路徑</td>
-   <td><p>已設定Mobile On-DemandCloud Service的路徑。 用於AEM Mobile以進行Mobile On-Demand動作（API叫用）</p> <p>作者選擇將應用程式與之建立關聯的「隨選行動」Cloud Service時，可透過「管理連線」圖磚設定此關聯。</p> </td>
+   <td><p>已設定Mobile On-Demand Cloud Service的路徑。 用於AEM Mobile以進行Mobile On-Demand動作（API叫用）</p> <p>作者選擇Mobile On-Demand Cloud Service將應用程式與建立關聯時，可透過「管理連線」圖磚設定此關聯。</p> </td>
   </tr>
   <tr>
    <td>dps-exportTemplate</td>
@@ -48,7 +52,7 @@ ht-degree: 3%
   <tr>
    <td>dps-projectId</td>
    <td>字串</td>
-   <td><p>此應用程式連結/繫結至Mobile On-Demand專案的ID/URI。</p> <p>作者從相關Mobile On-DemandCloud Service的可用專案清單選擇專案時，可透過「管理連線」圖磚設定此關聯。</p> </td>
+   <td><p>此應用程式連結/繫結至Mobile On-Demand專案的ID/URI。</p> <p>作者從相關Mobile On-Demand Cloud Service的可用專案清單選擇專案時，可透過「管理連線」圖磚設定此關聯。</p> </td>
   </tr>
   <tr>
    <td>dps-projectTitle</td>
@@ -63,7 +67,7 @@ ht-degree: 3%
   <tr>
    <td>dps-sharedHTMLResources-lastUploaded</td>
    <td>日期</td>
-   <td>共用資源上次從AEM上傳至AEM Mobile的日期。</td>
+   <td>從AEM上次將共用資源上傳至AEM Mobile的日期。</td>
   </tr>
   <tr>
    <td>dps-sharedHTMLResources-lastUploadedBy</td>

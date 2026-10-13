@@ -9,13 +9,33 @@ exl-id: 5e345ffd-4e9c-467f-8ebb-c798eeb61dea
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization,Multi Site Manager
 role: User,Admin,Developer
-source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+  - id: eb3ad9f8-54a2-45f3-abb1-d3976415a718
+    internal-label: Personalization
+  - id: a642c50e-80eb-4fc1-a5d2-f3762d1f841d
+    internal-label: Administration
+subfeature_v2:
+  - id: e86b80f2-7cb0-4646-8fcd-51d3bf272fce
+    internal-label: Multi Site Manager
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '2838'
+source-wordcount: '2853'
 ht-degree: 5%
-
 ---
-
 # 在多個網站中使用目標內容{#working-with-targeted-content-in-multisites}
 
 如果您需要管理目標內容，例如網站之間的活動、體驗和選件，您可以利用AEM針對目標內容的內建多網站支援。
@@ -67,18 +87,18 @@ ht-degree: 5%
 
 * 完全&#x200B;*不同*&#x200B;的目標內容集 — 在一個目標內容中編輯目標內容不會影響另一個目標內容。 連結至不同區域的網站會讀取和寫入其自己的設定區域。 例如：
 
-   * 網站A連結至區域X
-   * 區域Y的網站B連結
+  * 網站A連結至區域X
+  * 區域Y的網站B連結
 
 * *共用*&#x200B;目標內容集 — 在一個網站中編輯會直接影響兩個網站；您可以讓兩個網站參照相同區域，來進行此設定。 連結至相同區域的網站會共用此區域中的目標內容。 例如：
 
-   * 網站A連結至區域X
-   * 區域X的網站B連結
+  * 網站A連結至區域X
+  * 區域X的網站B連結
 
 * 透過MSM從另一個網站繼承的不同目標內容集&#x200B;*繼承的* — 內容可以從主版單向轉出到即時副本。 例如：
 
-   * 網站A連結至區域X
-   * 網站B連結至區域Y （即區域X的即時副本）
+  * 網站A連結至區域X
+  * 網站B連結至區域Y （即區域X的即時副本）
 
 您也可能有&#x200B;**多個**&#x200B;品牌用於同一個網站，這可能比此範例更複雜。
 
@@ -115,7 +135,7 @@ ht-degree: 5%
 
 ![chlimage_1-274](assets/chlimage_1-274.png)
 
-行銷人員想要將這些變更轉出至歐洲區域，並透過點選或按一下「[轉出頁面](/help/sites-administering/msm-livecopy.md)」來轉出&#x200B;**即時副本**。 重新整理標籤後，Great Britain網站會有新影像，因為Europe區域繼承自主區域（轉出後）。
+行銷人員想要將這些變更轉出至歐洲區域，並透過點選或按一下「**轉出頁面**」來轉出[即時副本](/help/sites-administering/msm-livecopy.md)。 重新整理標籤後，Great Britain網站會有新影像，因為Europe區域繼承自主區域（轉出後）。
 
 ![chlimage_1-275](assets/chlimage_1-275.png)
 
@@ -188,7 +208,7 @@ ht-degree: 5%
 
    ![chlimage_1-280](assets/chlimage_1-280.png)
 
-1. 在「名 **稱** 」欄位中，輸入即時副本的名稱。依預設，會包含子頁面；選中「排除子頁 **面」核取方塊** ，以排除它們。
+1. 在「名 **稱** 」欄位中，輸入即時副本的名稱。 依預設，會包含子頁面；選中「排除子頁 **面」核取方塊** ，以排除它們。
 
    ![chlimage_1-281](assets/chlimage_1-281.png)
 
@@ -270,7 +290,7 @@ ht-degree: 5%
 
 1. 導覽至您要從主版分離即時副本的頁面，然後在模式下拉式選單中按一下&#x200B;**鎖定目標**。
 1. 如果您的頁面連結至即時副本區域，您會看到繼承狀態。 按一下&#x200B;**開始鎖定目標**。
-1. 從工 **具列的下拉式選單中選取「分離即時副本** 」。AEM會確認您要分離即時副本。
+1. 從工 **具列的下拉式選單中選取「分離即時副本** 」。 AEM會確認您要分離即時副本。
 1. 按一下「分離&#x200B;**&#x200B;**」，將即時副本與活動分離。 分離後，有關繼承的下拉式功能表不再顯示。 活動現在是本機活動。
 
    ![chlimage_1-287](assets/chlimage_1-287.png)

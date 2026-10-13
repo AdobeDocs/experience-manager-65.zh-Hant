@@ -5,13 +5,39 @@ exl-id: 4664b3a4-4873-4f42-b59d-aadbfaa6072f
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments,GraphQL,Persisted Queries,Developing
 role: Admin,Developer
-source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: bfd4bc52-c397-5127-8f86-8953ba9fc0a3
+    internal-label: Headless
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+  - id: a642c50e-80eb-4fc1-a5d2-f3762d1f841d
+    internal-label: Administration
+  - id: d429a63e-ade4-4117-b04e-9b996d1c94ef
+    internal-label: Integrations
+  - id: c124fa01-25c5-42ec-adf6-21d1c114058b
+    internal-label: Developer tools
+subfeature_v2:
+  - id: e9db7c79-8f65-4281-a439-c9049296d903
+    internal-label: Content Fragments
+  - id: a02b73a7-bdfc-4225-bdfd-69f7891ab55e
+    internal-label: GraphQL
+  - id: d781bc8f-52af-43f6-84d0-b73e59a130d5
+    internal-label: Persisted queries
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '548'
-ht-degree: 42%
-
+source-wordcount: '552'
+ht-degree: 44%
 ---
-
 # 存取及傳遞內容片段Headless快速入門手冊 {#accessing-delivering-content-fragments}
 
 瞭解如何使用AEM Assets REST API來管理內容片段，以及如何使用GraphQL API無周邊方式傳送內容片段內容。
@@ -20,8 +46,8 @@ ht-degree: 42%
 
 [現在您已經建立一些內容片段，](create-content-fragment.md)您可以使用 AEM 的 API Headless 傳遞內容片段。
 
-* [GraphQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md)可讓您建立存取及傳遞內容片段的請求。
-   * 若要使用這個功能，必須在AEM[中定義並啟用](/help/sites-developing/headless/graphql-api/graphql-endpoint.md#enabling-graphql-endpoint)端點，而且如有需要，必須安裝[GraphiQL介面](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#installing-graphiql-interface)。
+* [GraphQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md) 可讓您建立存取和傳遞內容片段的要求。
+  * 若要使用這個功能，必須在AEM[&#128279;](/help/sites-developing/headless/graphql-api/graphql-endpoint.md#enabling-graphql-endpoint)中定義並啟用端點，而且如有需要，必須安裝[GraphiQL介面](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#installing-graphiql-interface)。
 * [Assets REST API](/help/assets/assets-api-content-fragments.md) 可讓您建立及修改內容片段 (和其他資產)。
 
 本指南的其餘部分著重在 GraphQL 存取和內容片段傳遞。
@@ -75,7 +101,7 @@ GraphQL可避免反複的API請求和過度傳送。 相反地，它允許作為
 
 ## 後續步驟 {#next-steps}
 
-就是這樣！您現在對 AEM Headless 內容管理有基本的了解。還有更多資源可供您深入研究以全面了解可用的功能。
+就是這樣！ 您現在對 AEM Headless 內容管理有基本的了解。 還有更多資源可供您深入研究以全面了解可用的功能。
 
 * **[設定瀏覽器](create-configuration.md)** — 如需有關AEM設定瀏覽器的詳細資訊
 * **[內容片段](/help/assets/content-fragments/content-fragments.md)** - 詳細說明如何建立和管理內容片段

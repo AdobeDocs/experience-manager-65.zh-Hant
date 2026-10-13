@@ -10,13 +10,22 @@ exl-id: 4059af12-49a7-489c-a2b8-d0481be57cc5
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '203'
+source-wordcount: '244'
 ht-degree: 5%
-
 ---
-
 # 開發AEM元件 — 程式碼範例{#developing-aem-components-code-samples}
 
 本節提供一些範例，說明如何為AEM建立自己的元件。
@@ -26,7 +35,7 @@ ht-degree: 5%
 * [AEM元件 — 基本需知](/help/sites-developing/components-basics.md)
 * [開發AEM元件](/help/sites-developing/developing-components.md)
 
-如需傳統UI的相關資訊，請參閱傳統UI的[AEM元件](/help/sites-developing/developing-components-classic.md)。
+如需傳統UI的詳細資訊，請參閱傳統UI的[AEM元件](/help/sites-developing/developing-components-classic.md)。
 
 >[!NOTE]
 >
@@ -42,7 +51,7 @@ GITHUB上的程式碼
 
 您可以在GitHub上找到此頁面的程式碼
 
-* 在GitHub上[開啟aem-authoring-dialog-fields-customization專案](https://github.com/Adobe-Marketing-Cloud/aem-authoring-dialog-fields-customization)
+* [在GitHub上開啟aem-authoring-dialog-fields-customization專案](https://github.com/Adobe-Marketing-Cloud/aem-authoring-dialog-fields-customization)
 * 將專案下載為[ZIP檔](https://codeload.github.com/Adobe-Marketing-Cloud/aem-authoring-dialog-fields-customization/zip/refs/heads/master)
 
 >[!NOTE]

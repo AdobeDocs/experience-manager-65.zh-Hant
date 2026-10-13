@@ -10,13 +10,20 @@ exl-id: d121dc05-7d15-44ba-8d2d-b59d6c6480c8
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '967'
 ht-degree: 0%
-
 ---
-
 # 傳訊功能 {#messaging-feature}
 
 除了在論壇和評論中公開可見的互動以外，AEM Communities的傳訊功能也可讓社群成員更私密地互相互動。
@@ -63,7 +70,8 @@ ht-degree: 0%
 1. 在`Preview`模式中，選取&#x200B;**訊息**&#x200B;連結以開啟主要訊息頁面。 然後選取&#x200B;**收件匣**、**已傳送專案**&#x200B;或&#x200B;**垃圾桶**&#x200B;來設定該郵件清單的元件。
 
 1. 在`Edit`模式中，選取頁面上的元件。
-1. 若要存取設定對話方塊，請選取`link`圖示以取消繼承。取消繼承後，可以選取設定圖示以開啟設定對話方塊。
+1. 若要存取設定對話方塊，請選取`link`圖示以取消繼承。
+取消繼承後，可以選取設定圖示以開啟設定對話方塊。
 
 1. 組態完成後，必須選取`broken link`圖示來還原繼承。
 
@@ -136,7 +144,8 @@ ht-degree: 0%
 * 在`Preview`模式中，選取&#x200B;**訊息**&#x200B;連結以開啟主要訊息頁面。 然後選取[新增訊息]按鈕，讓您開啟`Compose Message`頁面。
 
 * 在`Edit`模式中，在包含訊息內文的頁面上選取主要元件。
-* 若要存取設定對話方塊，請選取`link`圖示以取消繼承。取消繼承後，可以選取設定圖示以開啟設定對話方塊。
+* 若要存取設定對話方塊，請選取`link`圖示以取消繼承。
+取消繼承後，可以選取設定圖示以開啟設定對話方塊。
 
 * 組態完成後，必須選取`broken link`圖示來還原繼承。
 

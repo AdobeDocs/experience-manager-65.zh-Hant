@@ -8,13 +8,27 @@ exl-id: b5e27b54-d141-48dd-a4ed-dd0a691319a5
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '431'
+source-wordcount: '432'
 ht-degree: 0%
-
 ---
-
 # 在摘要URL中取得任務變數 {#getting-task-variables-in-summary-url}
 
 摘要頁面會顯示工作相關資訊。 本文說明如何在摘要頁面中重複使用工作相關資訊。
@@ -66,9 +80,9 @@ ht-degree: 0%
 
    1. 在&#x200B;**建立PTO摘要**&#x200B;程式中，使用&#x200B;**set value**&#x200B;元件來設定&#x200B;**nodeProperty**(**nodeProps**)對應中的輸入詳細資料。
 
-      此對應中的索引鍵應與上一步驟中HTML轉譯器中定義的索引鍵相同。
+      此對應中的金鑰應與上一步驟中HTML轉譯器中定義的金鑰相同。
 
-      此外，在對應中新增值為&#x200B;**Employees/PtoApplication**&#x200B;的&#x200B;**sling：resourceType**&#x200B;機碼。
+      此外，在地圖中新增值為&#x200B;**Employees/PtoApplication**&#x200B;的&#x200B;**sling:resourceType**&#x200B;金鑰。
 
    1. 在&#x200B;**建立PTO摘要**&#x200B;處理程式中，使用&#x200B;**ContentRepositoryConnector**&#x200B;服務的子處理程式&#x200B;**storeContent**。 此子程式會建立CRX節點。
 
@@ -76,7 +90,7 @@ ht-degree: 0%
 
       * **資料夾路徑**：建立新CRX節點的路徑。 將路徑設定為&#x200B;**/content**。
       * **節點名稱**：將輸入變數nodeName指派給此欄位。 這是唯一的節點名稱字串。
-      * **節點型別**：定義型別為&#x200B;**nt：unstructured**。 此程式的輸出為nodePath。 nodePath是新建立節點的CRX路徑。 ndoePath將會是&#x200B;**建立PTO**&#x200B;摘要程式的最終輸出。
+      * **節點型別**：定義型別為&#x200B;**nt:unstructured**。 此程式的輸出為nodePath。 nodePath是新建立節點的CRX路徑。 ndoePath將會是&#x200B;**建立PTO**&#x200B;摘要程式的最終輸出。
 
    1. 將提交的表單資料（**employeeName**、**employeeID**、**ptoReason**&#x200B;及&#x200B;**totalDays**）作為輸入傳入新程式&#x200B;**建立PTO摘要**。 將輸出做為&#x200B;**ptoSummaryNodePath**。
 

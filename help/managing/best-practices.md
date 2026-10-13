@@ -10,13 +10,29 @@ exl-id: 94b91996-d2b2-4d4a-b770-334cfa2dc0b7
 solution: Experience Manager, Experience Manager 6.5
 feature: Compliance
 role: Admin,Developer,Leader
-source-git-commit: f6e1e28d6fbfc240a46c2c69f02c9c5fda1d0d0d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e14eb250-3c22-4a07-9061-a78112b2b826
+    internal-label: Experience Manager 6.5
+feature_v2:
+  - id: b1210526-416b-4ef6-bcc0-1692e99f30e9
+    internal-label: Administration and security
+subfeature_v2:
+  - id: c42c36cf-eeed-484a-8b39-a33a68192a07
+    internal-label: Compliance
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '3275'
+source-wordcount: '3277'
 ht-degree: 1%
-
 ---
-
 # 管理專案 — 最佳實務檢查清單{#managing-projects-best-practices-checklist}
 
 管理專案以實施Adobe Experience Manager (AEM)需要規劃和瞭解，以便於在執行專案之前和期間瞭解您必須所做的問題和（相關）決策。
@@ -25,16 +41,16 @@ ht-degree: 1%
 
 * [互動式檢查清單](/help/managing/best-practices-checklist.md)，可讓您追蹤並監控您運用這些最佳實務的進度。
 
-   * 根據階段、里程碑和角色定義輸入和交付專案。
-   * 提供自動概覽（品質、健全和完整性）來指示進度和專案健全狀態。
+  * 根據階段、里程碑和角色定義輸入和交付專案。
+  * 提供自動概覽（品質、健全和完整性）來指示進度和專案健全狀態。
 
 * 根據詳細說明下列專案的[檢查清單](/help/managing/best-practices-checklist.md)提供檔案：
 
-   * [專案心率](#projectheartbeat)分析。
-   * [依角色的狀態](#status-by-role)總覽。
-   * [階段和里程碑](#phases-and-milestones)。
-   * [關鍵角色](#persona)及其在每個（相關）階段的參與。
-   * [必要檔案和交付專案](#required-documents-and-deliverables)的[字彙表](/help/managing/best-practices-glossary.md)。
+  * [專案心率](#projectheartbeat)分析。
+  * [依角色的狀態](#status-by-role)總覽。
+  * [階段和里程碑](#phases-and-milestones)。
+  * [關鍵角色](#persona)及其在每個（相關）階段的參與。
+  * [必要檔案和交付專案](#required-documents-and-deliverables)的[字彙表](/help/managing/best-practices-glossary.md)。
 
 * [進一步參考](/help/managing/best-practices-further-reference.md)資料以提供特定區域的更多詳細資料。
 
@@ -44,15 +60,15 @@ ht-degree: 1%
 
 * **階段品質**
 
-   * 表示專案中[必要檔案和交付專案](#required-documents-and-deliverables)的品質。
+  * 表示專案中[必要檔案和交付專案](#required-documents-and-deliverables)的品質。
 
 * **階段健康狀況**
 
-   * 您專案的高層級狀態指標；突顯可能有風險的區域很有用。
+  * 您專案的高層級狀態指標；突顯可能有風險的區域很有用。
 
 * **階段完整性**
 
-   * 在專案期間的任何時間點，這表示專案每個階段的已完成程度。
+  * 在專案期間的任何時間點，這表示專案每個階段的已完成程度。
 
 ## 按角色顯示狀態 {#status-by-role}
 
@@ -74,11 +90,11 @@ ht-degree: 1%
 
 * **商業基本原則**
 
-   * 進行專案的基本原因與理由。
+  * 進行專案的基本原因與理由。
 
 * **範圍和排程**
 
-   * 應提供基本範圍和粗略排程，以定義所需的內容以及時間範圍；如果有助於釐清情況，您也可以定義範圍以外的內容。
+  * 應提供基本範圍和粗略排程，以定義所需的內容以及時間範圍；如果有助於釐清情況，您也可以定義範圍以外的內容。
 
 您準備、規劃及執行專案與實施解決方案的方式，會受到您作業所依據的限制所影響。 例如，固定預算、固定時間表、內容數量、所需品質。
 
@@ -94,29 +110,29 @@ ht-degree: 1%
 
   在此階段中，您必須驗證並確認專案的目標，例如：
 
-   * 您想要實現什麼/提供什麼？
-   * 哪些人有好處？
-   * 範圍為何？
+  * 您想要實現什麼/提供什麼？
+  * 哪些人有好處？
+  * 範圍為何？
 
-      * 如果這有助於釐清狀況，您也可以定義範圍以外的內容。
+    * 如果這有助於釐清狀況，您也可以定義範圍以外的內容。
 
-   * 您如何定義成功？
-   * 如何衡量成功？
-   * 有哪些需求、業務與技術？
-   * 是否有要取代的舊系統，若是的話，是否有要移轉的資料？
-   * 誰與此有關？
-   * 如何測量進度？
-   * 在專案生命週期中，您多久檢視一次進度？
+  * 您如何定義成功？
+  * 如何衡量成功？
+  * 有哪些需求、業務與技術？
+  * 是否有要取代的舊系統，若是的話，是否有要移轉的資料？
+  * 誰與此有關？
+  * 如何測量進度？
+  * 在專案生命週期中，您多久檢視一次進度？
 
 * **預算**
 
   在開始任何專案之前，您需要對實作成本做出可靠且實際的估計：
 
-   * 使用驗證里程碑的資訊作為預估的基礎。
-   * 在預估中請務實地考量。
-   * 考慮並遵守使用者端必須遵守的任何使用者端准則、程式或限制。
-   * 如果稍後需要複查或調整預算，請考慮應急及複查程式。
-   * 請記住，成本有多種形式，例如購買、使用資源和費用等。
+  * 使用驗證里程碑的資訊作為預估的基礎。
+  * 在預估中請務實地考量。
+  * 考慮並遵守使用者端必須遵守的任何使用者端准則、程式或限制。
+  * 如果稍後需要複查或調整預算，請考慮應急及複查程式。
+  * 請記住，成本有多種形式，例如購買、使用資源和費用等。
 
 ### 規劃 {#planning}
 
@@ -140,21 +156,21 @@ ht-degree: 1%
 
   溝通永遠是任何專案成功的關鍵。 清楚有效率地溝通，確保每個人都能：
 
-   * 致力於相同的基本目標
-   * 來自相同資訊庫
-   * 使用相同的管道
+  * 致力於相同的基本目標
+  * 來自相同資訊庫
+  * 使用相同的管道
 
 * **啟動**
 
   「啟動」會議用於提高人們對專案正在啟動的意識。 這是您進行下列操作的絕佳機會：
 
-   * 邀請所有感興趣的當事方（或至少是群組代表）。
-   * 呈現專案的關鍵事實。
-   * 回答問題。
-   * 確保每個人都擁有相同的知識庫。
-   * 獲得所有參與者的承諾 — 必須贏取承諾。
+  * 邀請所有感興趣的當事方（或至少是群組代表）。
+  * 呈現專案的關鍵事實。
+  * 回答問題。
+  * 確保每個人都擁有相同的知識庫。
+  * 獲得所有參與者的承諾 — 必須贏取承諾。
 
-      * 若在專案開始時讓主要參與者（包括潛在作者）參與，您就更有可能獲得他們對專案的承諾。
+    * 若在專案開始時讓主要參與者（包括潛在作者）參與，您就更有可能獲得他們對專案的承諾。
 
 ### 開發準備 {#development-preparation}
 
@@ -170,27 +186,27 @@ ht-degree: 1%
 
   內容架構會定義並描述內容的未來架構，包括：
 
-   * 內容樹狀結構；包括資產
-   * 基本結構；包括行銷活動等。
-   * 多網站和多語言結構（MSM、翻譯等）
-   * 支援內容（包括標籤和標籤概念）
-   * 快取和內容重複使用策略
+  * 內容樹狀結構；包括資產
+  * 基本結構；包括行銷活動等。
+  * 多網站和多語言結構（MSM、翻譯等）
+  * 支援內容（包括標籤和標籤概念）
+  * 快取和內容重複使用策略
 
 * **系統架構**
 
   系統架構定義系統的概念檢視；包括（其他資訊）：
 
-   * 所有必要環境的[系統結構](/help/sites-deploying/recommended-deploys.md#deployment-scenarios)
-   * 子系統
-   * 協力廠商系統
-   * 介面；硬體、軟體和人力互動
-   * 每個環境的伺服器；請參閱[技術需求](/help/sites-deploying/technical-requirements.md)和[硬體大小調整准則](/help/managing/hardware-sizing-guidelines.md)
+  * 所有必要環境的[系統結構](/help/sites-deploying/recommended-deploys.md#deployment-scenarios)
+  * 子系統
+  * 協力廠商系統
+  * 介面；硬體、軟體和人力互動
+  * 每個環境的伺服器；請參閱[技術需求](/help/sites-deploying/technical-requirements.md)和[硬體大小調整准則](/help/managing/hardware-sizing-guidelines.md)
 
-   * 每個環境的程式；例如，部署和維護需求
-   * 維護活動（Datastore GC、TarPM最佳化等）
-   * [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant)快取
-   * [叢集](/help/sites-deploying/recommended-deploys.md#deployment-scenarios)發佈/Authorshare
-   * 使用者端的效能（JS精簡、concat、css指令集、http請求總數及其他）
+  * 每個環境的程式；例如，部署和維護需求
+  * 維護活動（Datastore GC、TarPM最佳化等）
+  * [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant)快取
+  * [叢集](/help/sites-deploying/recommended-deploys.md#deployment-scenarios)發佈/Authorshare
+  * 使用者端的效能（JS精簡、concat、css指令集、http請求總數及其他）
 
 * **應用程式架構**
 
@@ -198,24 +214,24 @@ ht-degree: 1%
 
   重點在於：
 
-   * 他們如何彼此互動以及與使用者互動。
-   * 由應用程式使用和產生的資料，而非其內部結構。
+  * 他們如何彼此互動以及與使用者互動。
+  * 由應用程式使用和產生的資料，而非其內部結構。
 
   定義應涵蓋：
 
-   * 專案的基本程式碼結構
-   * 程式碼成品（套件組合、套件等）
-   * 範本/元件及其關係的劃分
-   * 所需自訂的高層級細節（特定覆蓋圖將於稍後顯示）
-   * 設計解決方案所需的工作流程（例如內容建立、核准、發佈、轉換、匯入和匯出）
-   * 任何複雜模組（例如MSM、Commerce、協力廠商整合）的特別考量
+  * 專案的基本程式碼結構
+  * 程式碼成品（套件組合、套件等）
+  * 範本/元件及其關係的劃分
+  * 所需自訂的高層級細節（特定覆蓋圖將於稍後顯示）
+  * 設計解決方案所需的工作流程（例如內容建立、核准、發佈、轉換、匯入和匯出）
+  * 任何複雜模組（例如MSM、Commerce、協力廠商整合）的特別考量
 
 * **系統整合**
 
   系統整合需要您規劃（然後實作）：
 
-   * 如何將所有子系統與[解決方案整合](/help/sites-administering/integration.md)整合在一起，以便作為一個連貫的系統來運作
-   * 任何協力廠商系統如何整合；以及任何特殊考量，例如離線/線上、使用者端/瀏覽器端，或在協力廠商系統故障時進行遞減處理
+  * 如何將所有子系統與[解決方案整合](/help/sites-administering/integration.md)整合在一起，以便作為一個連貫的系統來運作
+  * 任何協力廠商系統如何整合；以及任何特殊考量，例如離線/線上、使用者端/瀏覽器端，或在協力廠商系統故障時進行遞減處理
 
 * **測試概念**
 
@@ -223,11 +239,11 @@ ht-degree: 1%
 
   這應該包括（其中包括）：
 
-   * 要執行之所有測試的詳細資訊
-   * 準備這些測試所需的任何內容
-   * 要使用的任何測試工具的資訊
-   * 高層級指示將參與測試的對象；尤其是QA團隊以外的群組
-   * 測試自動化的詳細資訊；例如，使用Selenium或AEM開發人員模式
+  * 要執行之所有測試的詳細資訊
+  * 準備這些測試所需的任何內容
+  * 要使用的任何測試工具的資訊
+  * 高層級指示將參與測試的對象；尤其是QA團隊以外的群組
+  * 測試自動化的詳細資訊；例如，使用Selenium或AEM開發人員模式
 
 * **體驗設計**
 
@@ -253,11 +269,11 @@ ht-degree: 1%
 
   例如：
 
-   * 角色清單（亦即群組），具有每個角色的`read`/ `write`存取定義
+  * 角色清單（亦即群組），具有每個角色的`read`/ `write`存取定義
 
-   * 影響發佈環境的許可權使用定義；例如，`replicate`
-   * 對於具有最低許可權的使用者，應定義工作流程
-   * `editor`群組中的使用者不應有`admin`許可權，也不應屬於`administrators`群組
+  * 影響發佈環境的許可權使用定義；例如，`replicate`
+  * 對於具有最低許可權的使用者，應定義工作流程
+  * `editor`群組中的使用者不應有`admin`許可權，也不應屬於`administrators`群組
 
   如需詳細資訊，請參閱[使用者管理與安全性](/help/sites-administering/security.md)。
 
@@ -265,8 +281,8 @@ ht-degree: 1%
 
   監控與維護是確保解決方案上線後順暢運作的關鍵環節。 為此，您需要定義：
 
-   * 需要監控的專案
-   * 維護任務；包括一般和特殊情況
+  * 需要監控的專案
+  * 維護任務；包括一般和特殊情況
 
   另請參閱[監視與維護](/help/sites-deploying/monitoring-and-maintaining.md)以取得詳細資訊。
 
@@ -288,57 +304,57 @@ ht-degree: 1%
 
   規劃並記錄您的開發環境，包括：
 
-   * 架構
-   * [開發工具](/help/sites-developing/dev-tools.md)
+  * 架構
+  * [開發工具](/help/sites-developing/dev-tools.md)
 
-      * 典型的環境包括：
+    * 典型的環境包括：
 
-         * 問題追蹤系統；例如Jira
-         * IDE；例如Eclipse
-         * 組建管理工具，例如Maven
-         * 持續整合的工具；例如Jenkins
-         * 版本控制工具，例如GIT/SVN
-         * 組建成品存放庫管理員，例如Archiva/Nexus
+      * 問題追蹤系統；例如Jira
+      * IDE；例如Eclipse
+      * 組建管理工具，例如Maven
+      * 持續整合的工具；例如Jenkins
+      * 版本控制工具，例如GIT/SVN
+      * 組建成品存放庫管理員，例如Archiva/Nexus
 
-   * 協力廠商軟體整合/相依性
-   * [解決方案整合/相依性](/help/sites-administering/integration.md)
-   * 部署步調
+  * 協力廠商軟體整合/相依性
+  * [解決方案整合/相依性](/help/sites-administering/integration.md)
+  * 部署步調
 
 * **測試系統**
 
   規劃並記錄您的測試環境，包括：
 
-   * 架構
-   * 依賴開發組建；包括夜間組建
-   * 測試協力廠商軟體整合/相依性的可能性或限制
-   * 測試工具
-   * 自動化測試策略
+  * 架構
+  * 依賴開發組建；包括夜間組建
+  * 測試協力廠商軟體整合/相依性的可能性或限制
+  * 測試工具
+  * 自動化測試策略
 
 * **生產系統**
 
   規劃並記錄您的生產環境，包括：
 
-   * 架構
-   * 部署步調
-   * 協力廠商軟體整合/相依性
-   * 安全性設定
-   * 基準效能已透過在生產設定上執行[嚴苛日測試](/help/sites-developing/tough-day.md)驗證
-   * 效能測試的需求；請參閱[品質Assurance的最佳實務](/help/sites-deploying/configuring-performance.md#best-practices-for-quality-assurance)
+  * 架構
+  * 部署步調
+  * 協力廠商軟體整合/相依性
+  * 安全性設定
+  * 基準效能已透過在生產設定上執行[嚴苛日測試](/help/sites-developing/tough-day.md)驗證
+  * 效能測試的需求；請參閱[品質Assurance的最佳實務](/help/sites-deploying/configuring-performance.md#best-practices-for-quality-assurance)
 
 * **整合**
 
   規劃、記錄及測試系統與[解決方案整合](/help/sites-administering/integration.md)的所有層面，包括：
 
-   * 自動化測試策略
-   * 自動化處理以[將應用程式從開發移至測試，然後移至生產環境](/help/managing/enterprise-devops.md#code-movement)
-   * 自動化程式以[將內容從生產環境移至測試和開發環境](/help/managing/enterprise-devops.md#content-movement)
+  * 自動化測試策略
+  * 自動化處理以[將應用程式從開發移至測試，然後移至生產環境](/help/managing/enterprise-devops.md#code-movement)
+  * 自動化程式以[將內容從生產環境移至測試和開發環境](/help/managing/enterprise-devops.md#content-movement)
 
 * **移轉**
 
   規劃、記錄及測試內容移轉的各個層面；包括：
 
-   * 內容架構
-   * 移轉策略
+  * 內容架構
+  * 移轉策略
 
 * **通訊**
 
@@ -348,9 +364,9 @@ ht-degree: 1%
 
   完整記錄解決方案；包括：
 
-   * 操作手冊
-   * 可能影響升級的任何自訂
-   * 發行說明
+  * 操作手冊
+  * 可能影響升級的任何自訂
+  * 發行說明
 
 ### 效能與測試 {#performance-and-testing}
 
@@ -368,8 +384,8 @@ ht-degree: 1%
 
   [使用者接受度測試](/help/sites-developing/acceptance-signoff.md) (UAT)對於確保：
 
-   * 此解決方案符合使用者/客戶的需求
-   * 客戶/使用者接受解決方案（功能、設計和效能）
+  * 此解決方案符合使用者/客戶的需求
+  * 客戶/使用者接受解決方案（功能、設計和效能）
 
   客戶交接應該有正式的核對清單；理想情況下，此清單會自動執行，每晚針對快照執行。 應將結果傳送給專案經理和開發團隊
 
@@ -379,10 +395,10 @@ ht-degree: 1%
 
   如需效能測試的詳細資訊，請參閱：
 
-   * [效能測試](/help/sites-deploying/configuring-performance.md)
-   * [如何規劃及執行測試](/help/sites-developing/planning.md)
+  * [效能測試](/help/sites-deploying/configuring-performance.md)
+  * [如何規劃及執行測試](/help/sites-developing/planning.md)
 
-   * [基本效能准則](/help/sites-deploying/configuring-performance.md#basic-performance-guidelines)
+  * [基本效能准則](/help/sites-deploying/configuring-performance.md#basic-performance-guidelines)
 
   >[!NOTE]
   >
@@ -408,17 +424,17 @@ ht-degree: 1%
 
   確保您的解決方案管理員具備：
 
-   * 已訓練
-   * 已收到適當的訓練資料
-   * 已收到適當的檔案
+  * 已訓練
+  * 已收到適當的訓練資料
+  * 已收到適當的檔案
 
 * **已訓練的使用者**
 
   請確認您的作者擁有：
 
-   * 已訓練
-   * 已收到適當的訓練資料
-   * 已收到適當的檔案；例如，使用手冊
+  * 已訓練
+  * 已收到適當的訓練資料
+  * 已收到適當的檔案；例如，使用手冊
 
 * **滲透測試**
 
@@ -473,8 +489,8 @@ ht-degree: 1%
 * 負責提供/展示專案的業務案例。
 * 決定和定義專案範圍的關鍵；包括：
 
-   * 成功的定義和條件
-   * 主要KPI
+  * 成功的定義和條件
+  * 主要KPI
 
 * 根據使用者端藍圖提供主要里程碑。
 
@@ -500,14 +516,14 @@ ht-degree: 1%
 
 * 主要負責收集和分析高階需求，然後將這些需求轉換成規格：
 
-   * 供專案經理在規劃開發時使用
-   * 供開發團隊在設計和開發期間使用。
+  * 供專案經理在規劃開發時使用
+  * 供開發團隊在設計和開發期間使用。
 
 * 與客戶緊密合作以分析需求。 這些條件可比對至：
 
-   * 成功的定義。
-   * 成功的標準。
-   * KPI （以業務和效能為基礎）。
+  * 成功的定義。
+  * 成功的標準。
+  * KPI （以業務和效能為基礎）。
 
 ### 開發負責人 {#development-lead}
 
@@ -517,8 +533,8 @@ ht-degree: 1%
 * 負責選取符合使用者端需求的開發方法。
 * 擬定開發策略：
 
-   * 確保符合業務和效能KPI
-   * 將成功標準和定義納入考量
+  * 確保符合業務和效能KPI
+  * 將成功標準和定義納入考量
 
 * 與架構師緊密合作（尤其是在草擬AEM的開發策略時）以定義範本與元件之間的關係、第三方應用程式的整合策略及任何專業功能等方面。
 
@@ -537,8 +553,8 @@ ht-degree: 1%
 * 負責監督專案基礎結構。
 * 負責：
 
-   * 內部開發和測試環境的設定
-   * 將這些系統與使用者端系統配對
+  * 內部開發和測試環境的設定
+  * 將這些系統與使用者端系統配對
 
 * 提供硬體建議、監控各種實作，以及在上線前和之後提供操作支援。
 
@@ -553,27 +569,27 @@ ht-degree: 1%
 
 * 利害關係人
 
-   * 對專案成功有利害關係（股權）的人員（通常來自企業）。 他們經常會貢獻預算。
+  * 對專案成功有利害關係（股權）的人員（通常來自企業）。 他們經常會貢獻預算。
 
 * 法律
 
-   * 洽談合約時需要法律建議。
+  * 洽談合約時需要法律建議。
 
 * 訓練人員
 
-   * 根據專案的規模與性質，可利用專業教員為相關團隊制定與展示訓練課程。
+  * 根據專案的規模與性質，可利用專業教員為相關團隊制定與展示訓練課程。
 
 * 技術作者
 
-   * 根據專案的規模和性質，可以使用專業技術作者為特定群組編寫准則和手冊。 例如，供系統管理員使用的維護手冊或供作者使用的使用指南。
+  * 根據專案的規模和性質，可以使用專業技術作者為特定群組編寫准則和手冊。 例如，供系統管理員使用的維護手冊或供作者使用的使用指南。
 
 * 系統管理員
 
-   * 負責系統的持續運作。
+  * 負責系統的持續運作。
 
 * 作者與一般使用者
 
-   * 使用系統建立及維護您網站內容的人員。
+  * 使用系統建立及維護您網站內容的人員。
 
 ## 必要檔案與交付專案 {#required-documents-and-deliverables}
 
@@ -606,11 +622,11 @@ ht-degree: 1%
 如需部署、管理、開發或編寫的最佳實務，請參閱下列內容：
 
 * 與管理AEM專案相關的其他最佳實務和准則：
-   * [硬體大小調整准則](/help/managing/hardware-sizing-guidelines.md)
-   * [企業 DevOps](/help/managing/enterprise-devops.md)
-   * [SEO和URL管理最佳作法](/help/managing/seo-and-url-management.md)
-   * [AEM與網頁協助工具准則](/help/managing/web-accessibility.md)
-   * [一般資料保護規範](/help/managing/data-protection-and-privacy.md)
+  * [硬體大小調整准則](/help/managing/hardware-sizing-guidelines.md)
+  * [企業 DevOps](/help/managing/enterprise-devops.md)
+  * [SEO和URL管理最佳作法](/help/managing/seo-and-url-management.md)
+  * [AEM與網頁協助工具准則](/help/managing/web-accessibility.md)
+  * [一般資料保護規範](/help/managing/data-protection-and-privacy.md)
 * [部署和維護最佳實務](/help/sites-deploying/best-practices.md)
 * [管理最佳實務](/help/sites-administering/administer-best-practices.md)
 * [開發最佳實務](/help/sites-developing/best-practices.md)
@@ -621,16 +637,16 @@ ht-degree: 1%
 * AEM檔案
 此外，AEM檔案的下列章節也特別令人感興趣（不過，此清單並非詳盡無遺）：
 
-   * [安全性](/help/sites-developing/security.md)
-   * [建議的部署](/help/sites-deploying/recommended-deploys.md)
-   * [企業 DevOps](/help/managing/enterprise-devops.md)
-   * [硬體大小](/help/managing/hardware-sizing-guidelines.md)
-   * AEM的概念：
+  * [安全性](/help/sites-developing/security.md)
+  * [建議的部署](/help/sites-deploying/recommended-deploys.md)
+  * [企業 DevOps](/help/managing/enterprise-devops.md)
+  * [硬體大小](/help/managing/hardware-sizing-guidelines.md)
+  * AEM的概念：
 
-      * [開發 — 基本知識](/help/sites-developing/the-basics.md)
-      * [MSM概念](/help/sites-administering/msm.md)
-      * [HTML範本語言(HTL)](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=zh-Hant)
+    * [開發 — 基本知識](/help/sites-developing/the-basics.md)
+    * [MSM概念](/help/sites-administering/msm.md)
+    * [HTML範本語言(HTL)](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=zh-Hant)
 
 * 相關檔案
 
-   * Adobe Experience Cloud - [規劃Adobe Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/services/core-services.html?lang=zh-Hant)
+  * Adobe Experience Cloud - [規劃Adobe Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/services/core-services.html?lang=zh-Hant)

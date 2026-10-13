@@ -8,13 +8,27 @@ feature: Interactive Communication
 exl-id: 0c0dc6a2-b889-4516-8e08-1e9d31be2cce
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: aa28c6c8-3ede-445b-a351-eeb0c9f9aec4
+    internal-label: Interactive Communication
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1403'
+source-wordcount: '1508'
 ht-degree: 1%
-
 ---
-
 # 互動式通訊的條件{#conditions-in-interactive-communications}
 
 建立和編輯用於互動式通訊的條件片段 — 條件是用於建立互動式通訊的四種檔案片段型別之一。 其他三個是文字、清單和佈局片段。
@@ -75,10 +89,10 @@ ht-degree: 1%
 
    ![createconditionscreenassetsaddedannotated](assets/createconditionscreenassetsaddedannotated.png)
 
-   **[A]拒絕變更。**&#x200B;選取此圖示可拒絕您對條件中的資產和規則所做的變更。
-   **[B]接受變更。**&#x200B;選取此圖示以接受您在條件中的資產和規則中所做的變更。
-   **[C]重複資產。**&#x200B;選取此圖示以在條件中建立資產副本以及套用的規則（如果有的話）。接著，您可以繼續編輯重複資產的規則和資產。複製資產有助於建立類似規則，以根據特定內容顯示替代資產。
-   **[D]顯示預覽。**&#x200B;選取此圖示，即可在[建立\編輯條件]頁面中顯示資產的預覽。
+   **[A]拒絕變更。** 選取此圖示可拒絕您對資產和條件中的規則可能進行的變更。
+   **[B]接受變更。** 選取此圖示以接受您在條件中的資產和規則中所做的變更。
+   **[C]重複資產。** 選取此圖示可建立資產副本以及在條件中套用的規則（如有）。 接著，您可以繼續編輯重複資產的規則和資產。 複製資產有助於建立類似規則，以根據特定內容顯示替代資產。
+   **[D]節目預覽。** 選取此圖示，即可在「建立\編輯條件」頁面中顯示資產的預覽。
    **&#39;server&#39;重新排序。** 選取並按住此圖示，以拖放資產在條件中重新排序。
 
    您可以選取下列選項，指定條件在執行階段的行為：

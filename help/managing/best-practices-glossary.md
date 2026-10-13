@@ -10,13 +10,29 @@ exl-id: 9672f7a4-82b7-4175-874d-181846115442
 solution: Experience Manager, Experience Manager 6.5
 feature: Compliance
 role: Admin,Developer,Leader
-source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e14eb250-3c22-4a07-9061-a78112b2b826
+    internal-label: Experience Manager 6.5
+feature_v2:
+  - id: b1210526-416b-4ef6-bcc0-1692e99f30e9
+    internal-label: Administration and security
+subfeature_v2:
+  - id: c42c36cf-eeed-484a-8b39-a33a68192a07
+    internal-label: Compliance
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '6926'
+source-wordcount: '7022'
 ht-degree: 0%
-
 ---
-
 # 字彙表{#glossary}
 
 此字彙表列出[專案檢查清單](/help/managing/best-practices-checklist.md)中所有交付專案檔案的詳細資料（按字母順序）。
@@ -358,10 +374,10 @@ Adobe支援入口網站可讓實作合作夥伴和客戶在支援入口網站中
 * AEM可充分客製化以符合業務需求。 任何可能影響升級的自訂都必須完整記錄。 例如，AEM使用者介面(UI)的任何重大變更。
 * 目前解決方案所需的任何更新都必須完整記錄；這些可能包括：
 
-   * cumulative fix pack (CFP)
-   * 服務套件(SP)
-   * Hotfix
-   * 升級
+  * cumulative fix pack (CFP)
+  * 服務套件(SP)
+  * Hotfix
+  * 升級
 
 ### 每日使用者驗收測試報告 {#daily-user-acceptance-test-report}
 
@@ -692,7 +708,7 @@ AEM和高階解決方案設計的可行性研究結果。 這些指標應與KPI�
 * 詳細程度
 * 為每個活動記錄的資訊
 
-### 維護任務(AEM專屬)已測試並啟用 {#maintenance-tasks-aem-specific-tested-and-enabled}
+### 維護任務（AEM專屬）已測試並啟用 {#maintenance-tasks-aem-specific-tested-and-enabled}
 
 測試及啟用AEM維護任務，例如：
 

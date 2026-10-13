@@ -10,13 +10,26 @@ exl-id: 3b3c118b-ca35-484b-a62e-7bec98953123
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Developer
-source-git-commit: 33bf1d9f64c32691f6a9c0568c1c5cb2150f331a
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '2262'
 ht-degree: 4%
-
 ---
-
 # 製作 — 環境與工具{#authoring-the-environment-and-tools}
 
 AEM的製作環境提供各種機制來組織和編輯您的內容。 提供的工具可從各種主控台和頁面編輯器存取。
@@ -86,17 +99,17 @@ AEM的製作環境提供各種機制來組織和編輯您的內容。 提供的�
 
   元件由表示
 
-   * 元件名稱
-   * 元件群組（灰色）
-   * 圖示或縮寫
+  * 元件名稱
+  * 元件群組（灰色）
+  * 圖示或縮寫
 
-      * 標準元件的圖示為單色。
-      * 縮寫一律為元件名稱的前兩個字元。
+    * 標準元件的圖示為單色。
+    * 縮寫一律為元件名稱的前兩個字元。
 
   您可以從&#x200B;**元件**&#x200B;瀏覽器的頂端工具列執行下列動作：
 
-   * 依名稱篩選元件。
-   * 使用下拉式選取範圍，將顯示限製為特定群組。
+  * 依名稱篩選元件。
+  * 使用下拉式選取範圍，將顯示限製為特定群組。
 
   如需元件的詳細說明，您可以在&#x200B;**元件**&#x200B;瀏覽器（如果有的話）中按一下元件旁的資訊圖示。 例如，對於「版面 **容器」**:
 
@@ -124,11 +137,11 @@ AEM的製作環境提供各種機制來組織和編輯您的內容。 提供的�
 
 * 適當型別的現有元件。
 
-   * 例如，您可以將影像型別的資產拖曳至影像元件上。
+  * 例如，您可以將影像型別的資產拖曳至影像元件上。
 
 * 段落系統中用來建立適當型別元件的[預留位置](/help/sites-authoring/editing-content.md#component-placeholder)。
 
-   * 例如，您可以將影像型別的資產拖曳至段落系統，以建立「影像」元件。
+  * 例如，您可以將影像型別的資產拖曳至段落系統，以建立「影像」元件。
 
 >[!NOTE]
 >
@@ -141,7 +154,7 @@ AEM的製作環境提供各種機制來組織和編輯您的內容。 提供的�
 * 影像、手稿、檔案、影片、頁面、段落和產品等資產型別
 * 資產特性，例如，方向（縱向、橫向、正方形）和樣式（顏色、單色、灰階）
 
-   * 僅適用於特定資產型別
+  * 僅適用於特定資產型別
 
 實際外觀和處理方式取決於您使用的裝置型別：
 
@@ -239,7 +252,7 @@ AEM的製作環境提供各種機制來組織和編輯您的內容。 提供的�
 
 * **傳入連結**&#x200B;提供參考頁面的頁面清單，以及當您選取特定連結時，直接存取這些頁面中的&#x200B;**編輯**。
 
-   * 這只能顯示靜態連結，而不能顯示動態產生的連結；例如，來自清單元件的連結。
+  * 這只能顯示靜態連結，而不能顯示動態產生的連結；例如，來自清單元件的連結。
 
 * 使用&#x200B;**Reference**&#x200B;元件的借入和借出內容例項，您可以從這裡導覽至參考/參考頁面
 

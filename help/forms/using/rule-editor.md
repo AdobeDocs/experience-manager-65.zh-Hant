@@ -9,13 +9,29 @@ docset: aem65
 exl-id: c611a1f8-9d94-47f3-bed3-59eef722bf98
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 7da902b6-fe94-5180-8e7c-f6d1e38d01d5
+    internal-label: Foundation Components
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '6846'
+source-wordcount: '6838'
 ht-degree: 2%
-
 ---
-
 # 調適型表單規則編輯器{#adaptive-forms-rule-editor}
 
 <span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hant)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。 這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。 本文會介紹使用基礎元件編寫最適化表單的舊方法。</span>
@@ -601,10 +617,10 @@ AEM Forms會追蹤您上次用來撰寫規則的規則編輯器模式。 當您�
 顯示函式使用的引數。 一個函式可以有多個引數標籤，每個引數會依發生順序各一個標籤。
   `{type}`代表引數型別。 允許的引數型別為：
 
-   1. 字串
-   1. 數字
-   1. 布林值
-   1. 範圍
+  1. 字串
+  1. 數字
+  1. 布林值
+  1. 範圍
 
   範圍是用來反向連結最適化表單的欄位。 表單使用延遲載入時，您可以使用`scope`存取其欄位。 您可以在載入欄位時存取欄位，或者如果欄位標示為全域。
 
@@ -616,9 +632,9 @@ AEM Forms會追蹤您上次用來撰寫規則的規則編輯器模式。 當您�
 新增函式的相關資訊，例如其目標。
   {type}代表函式的傳回型別。 允許的傳回型別為：
 
-   1. 字串
-   1. 數字
-   1. 布林值
+  1. 字串
+  1. 數字
+  1. 布林值
 
   所有其他回訪型別則會歸類到上述任一型別下。 不支援任何專案。 請確定您選取以上任一型別。 傳回型別不區分大小寫。
 
@@ -774,7 +790,7 @@ var c = {
 
    如需有關管理現有規則的資訊，請參閱[管理規則](#manage-rules)。
 
-1. 選取規則標題旁的核取方塊。 管理規則的其他選項隨即顯示。 選取&#x200B;**複製**。
+1. 選取規則標題旁的核取方塊。 管理規則的其他選項隨即顯示。 選取「**複製**」。
 
    ![copyrule2](assets/copyrule2.png)
 

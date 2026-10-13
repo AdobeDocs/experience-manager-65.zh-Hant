@@ -7,13 +7,27 @@ feature: Release Information
 role: User,Admin,Developer
 exl-id: 01fe5b53-2244-445f-a4d0-bd58ea38b611
 solution: Experience Manager
-source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: ed762d86-a04b-452b-a08f-86359bb8ff27
+    internal-label: Configuration and operations
+subfeature_v2:
+  - id: c21ccc2b-e0c8-4853-bf41-f12259ed93f8
+    internal-label: Release information
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '3356'
+source-wordcount: '3374'
 ht-degree: 14%
-
 ---
-
 # 累積的重要功能和增強功能
 
 舊版八個Service Pack所累積的Adobe Experience Manager 6.5主要功能和增強功能清單。
@@ -31,17 +45,17 @@ ht-degree: 14%
 
   最新版本引進了支援平台對照表的更新，確保與更新技術相容。
 
-   * ® Content Manager Client 8.7
+  * ® Content Manager Client 8.7
 
-   * MongoDB Enterprise 7.0
+  * MongoDB Enterprise 7.0
 
-   * MySQL 8.4
+  * MySQL 8.4
 
-   * ® SQL Server 2022
+  * ® SQL Server 2022
 
-   * ® SQL Server JDBC驅動程式12.8
+  * ® SQL Server JDBC驅動程式12.8
 
-   * Red Hat® Enterprise Linux® 9 （核心4.x，64位元）
+  * Red Hat® Enterprise Linux® 9 （核心4.x，64位元）
 
 * [強化的檔案附件元件](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/file-attachment)：作為安全性測量，此元件現在會防止提交副檔名經過修改、嘗試略過允許的檔案型別檢查的檔案。 提交期間會封鎖這類檔案，以確保僅接受有效的檔案型別。
 
@@ -74,12 +88,12 @@ IPTC索引標籤現在支援[!UICONTROL 替代文字]和[!UICONTROL 延伸說明
 Beta版功能為您提供獨一無二的機會，讓您以獨家方式存取尖端的創新技術，並幫助打造其開發藍圖。 有興趣為您的環境啟用Beta版功能嗎？ 從您的正式地址傳送電子郵件至aem-forms-ea@adobe.com ，其中包含您感興趣的功能清單。
 
 * [驗證碼](/help/forms/using/integrate-adaptive-forms-hcaptcha.md)和[Cloudflare Turnstile驗證碼服務](/help/forms/using/integrate-adaptive-forms-turnstile.md)： AEM Forms支援下列Captcha服務：
-   * 驗證碼會使用核取方塊Widget來挑戰使用者，以保護表單免受機器人、垃圾訊息和自動化濫用。 這樣可確保只有人類使用者才能進行，進而增強線上交易的安全性。
-   * Cloudflare Turnstile提供安全性措施，旨在保護表單免受自動化機器人、惡意攻擊、垃圾郵件以及不需要的自動化流量的侵害。 在允許提交表單前，它會在表單提交上顯示核取方塊，以驗證使用者是否為人類。
+  * 驗證碼會使用核取方塊Widget來挑戰使用者，以保護表單免受機器人、垃圾訊息和自動化濫用。 這樣可確保只有人類使用者才能進行，進而增強線上交易的安全性。
+  * Cloudflare Turnstile提供安全性措施，旨在保護表單免受自動化機器人、惡意攻擊、垃圾郵件以及不需要的自動化流量的侵害。 在允許提交表單前，它會在表單提交上顯示核取方塊，以驗證使用者是否為人類。
 
 * 最適化表單版本設定：
-   * [建立多個版本的最適化表單](/help/forms/using/add-versioning-reviews-comments.md) — 現在，使用者可以輕鬆管理現有表單的變化。 此程式可簡化版本控制，並有助於表單最佳化的比較，而這一切都可在單一、簡化的工作流程中完成。
-   * [比較最適化Forms](/help/forms/using/compare-forms-core-components.md)：使用者現在可以輕鬆比較兩種表單以找出差異。 這可方便團隊成員有效地比較修訂版本並討論變更，進而讓成員可順利協作。
+  * [建立多個版本的最適化表單](/help/forms/using/add-versioning-reviews-comments.md) — 現在，使用者可以輕鬆管理現有表單的變化。 此程式可簡化版本控制，並有助於表單最佳化的比較，而這一切都可在單一、簡化的工作流程中完成。
+  * [比較最適化Forms](/help/forms/using/compare-forms-core-components.md)：使用者現在可以輕鬆比較兩種表單以找出差異。 這可方便團隊成員有效地比較修訂版本並討論變更，進而讓成員可順利協作。
 
 ## AEM 6.5， Service Pack 21—2024年6月6日
 
@@ -98,16 +112,16 @@ IPTC索引標籤現在支援[!UICONTROL 替代文字]和[!UICONTROL 延伸說明
 
 * **支援Oauth認證**：新的、更易於使用伺服器對伺服器驗證的認證，取代現有的服務帳戶(JWT)認證。 (NPR-41994)
 * AEM Forms中的[規則編輯器增強功能](/help/forms/using/rule-editor-core-components.md)：
-   * 支援以`When-then-else`功能實作巢狀條件。
-   * 驗證或重設面板和表單，包括欄位。
-   * 支援現代JavaScript功能，例如「自訂函式」中的let和arrow函式（ES10支援）。
+  * 支援以`When-then-else`功能實作巢狀條件。
+  * 驗證或重設面板和表單，包括欄位。
+  * 支援現代JavaScript功能，例如「自訂函式」中的let和arrow函式（ES10支援）。
 * [適用於PDF協助工具的AutoTag API](/help/forms/using/aem-document-services-programmatically.md#doc-utility-services-doc-utility-services)： OSGi上的AEM Forms現在支援新的AutoTag API，透過新增標籤：段落和清單來增強PDF的協助工具標準。 它可讓具有輔助技術的使用者更容易存取PDF。
 * **16位元PNG支援**： PDF Generator的ImageToPdf服務現在支援16位元色彩深度的PNG轉換。
 * **將成品套用至XDP中的個別文字區塊**： Forms Designer現在可讓使用者在XDP檔案中的個別文字區塊上設定設定。 此功能可讓您控制在產生的PDF中被視為成品的元素。 這些元素（例如頁首和頁尾）可供輔助技術存取。 主要功能包括將文字區塊標示為成品，並將這些設定內嵌於XDP中繼資料。 Forms Output服務會在產生PDF期間套用這些設定，以確保正確使用PDF/UA標籤。
 * **AEM Forms Designer已通過`GB18030:2022`標準認證**：透過`GB18030:2022`認證，Forms Designer現在支援中文Unicode字元集，可讓您在所有可編輯的欄位和對話方塊中輸入中文字元。
 * [在JEE伺服器](/help/forms/using/admin-help/configure-service-settings.md#generate-pdf-service-settings-generate-pdf-service-settings)中使用PDF Generator服務支援WebToPDF路由，現在支援將HTML檔案轉換為JEE上的PDF檔案的WebToPDF路由。 此支援是現有Webkit和WebCapture （僅限Windows）路由的補充。 雖然WebToPDF路由可在OSGi上取得並延伸至JEE。 現在，在JEE和OSGi平台上，PDF Generator服務支援跨不同作業系統的下列路由：
-   * **Windows**： Webkit、WebCapture、WebToPDF
-   * **Linux®**： Webkit， WebToPDF
+  * **Windows**： Webkit、WebCapture、WebToPDF
+  * **Linux®**： Webkit， WebToPDF
 
 
 ## AEM 6.5， Service Pack 20—2024年2月22日
@@ -121,9 +135,9 @@ IPTC索引標籤現在支援[!UICONTROL 替代文字]和[!UICONTROL 延伸說明
 
 * **JEE版AEM Forms的交易報告功能**：已針對JEE版AEM Forms引入交易報告功能。 它可全面記錄檔案交易，例如轉換、轉譯和提交。 此增強功能可提高效率，並有助於更好地儲存記錄。 此功能預設為停用。 您可以從管理員UI啟用它。
 * **具有ECDSA支援的增強式安全性**： AEM Forms現在針對JEE和OSGi棧疊的橢圓曲線數位簽名演演算法(ECDSA)提供強大的支援。 使用者現在可以透過增強的安全性來簽署、認證及驗證PDF檔案。 支援的EC曲線演演算法包括：
-   * 使用SHA256摘要演演算法的ECDSA橢圓曲線P256
-   * 使用SHA384摘要演演算法的ECDSA橢圓曲線P384
-   * 使用SHA512摘要演演算法的ECDSA橢圓曲線P512
+  * 使用SHA256摘要演演算法的ECDSA橢圓曲線P256
+  * 使用SHA384摘要演演算法的ECDSA橢圓曲線P384
+  * 使用SHA512摘要演演算法的ECDSA橢圓曲線P512
 * **與Forms Designer的Windows 11緊密相容**： AEM Forms Designer現在支援Windows 11，確保順利安裝和操作。 使用者可以放心地升級至Windows 11，不必重新安裝Forms Designer，也不用擔心相容性問題，確保工作流程不會中斷。
 * **AEM Forms Designer中的自訂「Caption」角色強化協助工具**： AEM Forms Designer現在包含名為「Caption」的自訂協助工具角色，可讓使用者使用個人化的字幕元素來建立XDP。 此功能可讓使用者將自訂註解整合到其檔案設計中，藉此增強協助工具，進而改善包容性和使用者體驗。
 
@@ -135,13 +149,13 @@ IPTC索引標籤現在支援[!UICONTROL 替代文字]和[!UICONTROL 延伸說明
 ### [!DNL Forms]
 
 * **新最適化表單核心元件**：已新增垂直標籤、條款與條件以及核取方塊，以提升表單的擴充性。
-   * **[核取方塊元件](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/checkbox)**：以核心元件為主的最適化表單現在可以包含核取方塊元件。 可讓使用者二選一，選取或取消選取特定選項。 它通常為一個小方塊，可以按一下或點選以在兩種狀態之間切換：選取和取消選取。 核取方塊是一種常見的表單元素，用來表示選擇是/否或真/假。
+  * **[核取方塊元件](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/checkbox)**：以核心元件為主的最適化表單現在可以包含核取方塊元件。 可讓使用者二選一，選取或取消選取特定選項。 它通常為一個小方塊，可以按一下或點選以在兩種狀態之間切換：選取和取消選取。 核取方塊是一種常見的表單元素，用來表示選擇是/否或真/假。
 
-   * **[條款與條件元件](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/terms-and-conditions)**：核心元件型最適化Forms現在包含條款與條件元件。 表單作者新增此區段，向使用者顯示服務、產品或平台的條款、條件或法律合約。 此元件的設計用意是在告知使用者他們透過提交表單同意的規則、法規和義務。
+  * **[條款與條件元件](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/terms-and-conditions)**：核心元件型最適化Forms現在包含條款與條件元件。 表單作者新增此區段，向使用者顯示服務、產品或平台的條款、條件或法律合約。 此元件的設計用意是在告知使用者他們透過提交表單同意的規則、法規和義務。
 
-     ![垂直標籤、條款與條件及核取方塊元件](/help/forms/using/assets/forms-components.png)
+    ![垂直標籤、條款與條件及核取方塊元件](/help/forms/using/assets/forms-components.png)
 
-   * **[垂直標籤元件](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/vertical-tabs)**：以核心元件為主的最適化表單現在可以將表單內容組織成垂直的標籤清單，提供結構化、可導覽的版面。 表單中的垂直標籤可簡化導覽和組織內容，進而增強使用者體驗。 當表單包含多個區段或複雜資訊時，這些變數特別實用。
+  * **[垂直標籤元件](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/vertical-tabs)**：以核心元件為主的最適化表單現在可以將表單內容組織成垂直的標籤清單，提供結構化、可導覽的版面。 表單中的垂直標籤可簡化導覽和組織內容，進而增強使用者體驗。 當表單包含多個區段或複雜資訊時，這些變數特別實用。
 
 * **[64位元版本的AEM Forms Designer](/help/forms/using/installing-configuring-designer.md)**： 64位元版本的AEM Forms Designer提供增強的效能、擴充能力及記憶體管理，讓您能夠建立表單。 透過 64 位元架構，您可以輕鬆處理更大、更複雜的專案，確保設計工作流程流暢和最佳效率。 透過這最先進的版本，提升您的表單設計能力並擁抱 AEM Forms Designer 的未來。
 
@@ -166,46 +180,46 @@ IPTC索引標籤現在支援[!UICONTROL 替代文字]和[!UICONTROL 延伸說明
 
 * **[增強型Adobe Sign工作流程步驟](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65/content/forms/workflows/aem-forms-workflow-step-reference#sign-document-step)** - AEM工作流程中的Adobe Sign工作流程步驟提供下列增強功能。
 
-   * **Adobe Sign的政府機關身分證件驗證強化安全性** - Adobe Acrobat Sign的政府機關身分證件驗證提供額外的驗證層。 它可讓使用者使用政府頒發的ID （駕照、國民身分證、護照）來驗證身分。 此增強功能利用受信任的身分識別文件為簽名過程額外增加一層可信度，使其成為需要增強安全性、合規性和使用者驗證等情境的理想選擇。
+  * **Adobe Sign的政府機關身分證件驗證強化安全性** - Adobe Acrobat Sign的政府機關身分證件驗證提供額外的驗證層。 它可讓使用者使用政府頒發的ID （駕照、國民身分證、護照）來驗證身分。 此增強功能利用受信任的身分識別文件為簽名過程額外增加一層可信度，使其成為需要增強安全性、合規性和使用者驗證等情境的理想選擇。
 
-   * **使用Adobe Sign檔案的稽核軌跡來增強透明度** — 使用稽核軌跡功能來深入瞭解Adobe Sign檔案的生命週期。 使用「稽核軌跡」，您現在可以維護與檔案相關的所有動作與互動的完整記錄。 這些動作和互動包括檢視、編輯或簽署檔案的人員，以及每個事件的時間戳記。 此加強功能對於維持合規性、解決爭議和確保數位協議的完整性至關重要。
+  * **使用Adobe Sign檔案的稽核軌跡來增強透明度** — 使用稽核軌跡功能來深入瞭解Adobe Sign檔案的生命週期。 使用「稽核軌跡」，您現在可以維護與檔案相關的所有動作與互動的完整記錄。 這些動作和互動包括檢視、編輯或簽署檔案的人員，以及每個事件的時間戳記。 此加強功能對於維持合規性、解決爭議和確保數位協議的完整性至關重要。
 
 
-   * **將合約收件者的角色擴充至簽署者** - Adobe Acrobat Sign可讓您將合約收件者的角色擴充至簽署者之外，以便更符合其工作流程需求。 啟用後，協定中的每個收件者皆可個別設定其角色，預設為簽署者。
+  * **將合約收件者的角色擴充至簽署者** - Adobe Acrobat Sign可讓您將合約收件者的角色擴充至簽署者之外，以便更符合其工作流程需求。 啟用後，協定中的每個收件者皆可個別設定其角色，預設為簽署者。
 
 
 * **[JEE上的AEM Forms完整安裝程式](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65/content/forms/install-aem-forms/jee-installation/aem-forms-jee-supported-platforms)** — 此Service Pack為JEE上的AEM Forms提供完整安裝程式，可支援多種新軟體組合，包括：
-   * ® Windows Server 2022
-   * ® Active Directory 2022
-   * Windows Server 2022上的Oracle WebLogic 14C
-   * Red Hat® JBoss® 7.4.10
-   * MongoDB 6.0 <!-- it was previously MongoDB 4.4 -->
-   * MySQL JDBC聯結器8
+  * ® Windows Server 2022
+  * ® Active Directory 2022
+  * Windows Server 2022上的Oracle WebLogic 14C
+  * Red Hat® JBoss® 7.4.10
+  * MongoDB 6.0 <!-- it was previously MongoDB 4.4 -->
+  * MySQL JDBC聯結器8
 
 如果您在JEE環境中安裝或計畫使用適用於AEM 6.5 Forms的最新軟體，Adobe建議在JEE完整安裝程式上使用AEM 6.5.18.0 Forms 。 若要探索新增和淘汰的軟體的完整清單，請參閱JEE上的AEM Forms或OSGi上的AEM Forms檔案。
 
 ## AEM 6.5， Service Pack 17—2023年5月25日
 
 * **搜尋體驗增強功能** - 您現在可以對搜尋結果中顯示的資產快速執行以下作業：
-   * 建立工作流程
-   * 建立版本
-   * 建立資產關聯或取消關聯
+  * 建立工作流程
+  * 建立版本
+  * 建立資產關聯或取消關聯
 
   若要執行這些作業，您並不需要瀏覽至資產位置及檢視其屬性。
 
-* **Dynamic Media _快照_**&#x200B;可讓您使用測試影像或Dynamic Media URL，預覽影像修飾元和智慧型影像最佳化，例如WebP或AVIF輸出、頻寬感知壓縮和裝置畫素比例縮放。然後您可以立即比較每個設定對品質和檔案大小的影響。
-請參閱[Dynamic Media快照](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-snapshot)。
+* **Dynamic Media _快照_**&#x200B;可讓您使用測試影像或Dynamic Media URL，預覽影像修飾元和智慧型影像最佳化，例如WebP或AVIF輸出、頻寬感知壓縮和裝置畫素比例縮放。 然後您可以立即比較每個設定對品質和檔案大小的影響。
+請參閱 [Dynamic Media 快照](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-snapshot)。
 * **使用Dynamic Media的DASH串流** — 針對Dynamic Media視訊傳送中的自我調整串流（已啟用CMAF）啟動新通訊協定（DASH — 透過HTTP的動態自我調整串流）。 現在可供所有區域使用。
 * **整合Experience Manager Sites和內容片段與Assets新一代Dynamic Media** — 使用者現在可以在Experience Manager Sites 6.5中使用其雲端託管的資產。 他們可以在內部部署或Managed Services執行個體上編寫及傳遞這些資產。
 
 ### [!DNL Forms]
 
 * **[AEM頁面編輯器中的最適化Forms](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)** — 您現在可以使用AEM頁面編輯器快速建立多個表單並新增到您的網站頁面。 此功能讓內容作者可使用最適化表單元件 (包括動態行為、驗證、資料整合、產生記錄文件和業務流程自動化) 的強大功能，在 Sites 頁面內建立順暢的資料擷取體驗。 您可以：
-   * 建立最適化表單，方法是將表單元件拖放至AEM Sites編輯器或體驗片段中的最適化Forms容器元件。
-   * 在AEM Sites編輯器中使用最適化Forms精靈，以便您可以獨立於任何Sites頁面來建立表單，讓您自由地在多個頁面中重複使用這類表單。
-   * 將多個表單新增到 Sites 頁面，簡化使用者體驗並提供更大的彈性。
+  * 建立最適化表單，方法是將表單元件拖放至AEM Sites編輯器或體驗片段中的最適化Forms容器元件。
+  * 在AEM Sites編輯器中使用最適化Forms精靈，以便您可以獨立於任何Sites頁面來建立表單，讓您自由地在多個頁面中重複使用這類表單。
+  * 將多個表單新增到 Sites 頁面，簡化使用者體驗並提供更大的彈性。
 * **[Experience Manager Forms中的reCAPTCHA Enterprise支援](/help/forms/using/captcha-adaptive-forms.md)** — 新增Experience Manager Forms中的reCAPTCHA Enterprise支援。 除了現有的Google reCAPTCHA v2支援之外，此功能還提供更強大的保護，以防止詐騙活動和垃圾郵件。
-* **[新增對具有Experience Manager Forms的政府用Adobe Acrobat Sign的支援](/help/forms/using/adobe-sign-integration-adaptive-forms.md)** - AEM Forms現在與適用於政府的Adobe Acrobat Sign整合（符合FedRAMP規範）。 這種整合能夠讓政府相關帳戶 (政府部門和機構) 在提交最適化表單時，享有等級更高的電子簽名合規性和安全性。 與適用於政府的Adobe Acrobat Sign整合，可讓Adobe的合作夥伴和政府客戶在Adaptive Forms中使用電子簽章，從事最關鍵和敏感的業務線。 這額外一層的安全性可確保所有電子簽名完全符合 FedRAMP 中等合規性，讓 Adobe 的政府客戶安心使用。
+* **[新增對具有Experience Manager Forms的政府用Adobe Acrobat Sign的支援](/help/forms/using/adobe-sign-integration-adaptive-forms.md)** - AEM Forms現在與適用於政府的Adobe Acrobat Sign整合（符合FedRAMP規範）。 這種整合能夠讓政府相關帳戶 (政府部門和機構) 在提交自適應表單時，享有等級更高的電子簽名合規性和安全性。 與適用於政府的Adobe Acrobat Sign整合，可讓Adobe的合作夥伴和政府客戶在Adaptive Forms中使用電子簽章，從事最關鍵和敏感的業務線。 這額外一層的安全性可確保所有電子簽名完全符合 FedRAMP 中等合規性，讓 Adobe 的政府客戶安心使用。
 * **啟用Salesforce與Experience Manager Forms的整合以進行資料交換** — 使用OAuth 2.0使用者端憑證流程設定Experience Manager Forms與Salesforce應用程式之間的整合。 此功能可啟用應用程式的安全且直接的驗證和授權，並允許無縫通訊，而不需要使用者介入。
 * **最佳化及增強工作流程引擎的功能**：將工作流程執行個體數目減到最少，以提高工作流程引擎的效能。 除了`COMPLETED`和`RUNNING`狀態值之外，工作流程也支援三個新的狀態值： `ABORTED`、`SUSPENDED`和`FAILED`。
 

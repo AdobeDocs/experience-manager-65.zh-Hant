@@ -10,13 +10,25 @@ exl-id: 4ce19c95-32cb-4bb8-9d6f-a5bc08a3688d
 solution: Experience Manager, Experience Manager Sites
 feature: Security
 role: Admin
-source-git-commit: 8adc566113beedc408698dccc3a4c072349af5dc
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: b1210526-416b-4ef6-bcc0-1692e99f30e9
+    internal-label: Administration and security
+subfeature_v2:
+  - id: c35bc059-fd80-4a01-91a6-e48da3c76758
+    internal-label: Security practices
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
 source-wordcount: '777'
 ht-degree: 84%
-
 ---
-
 
 # 權限管理的主體視圖{#principal-view-for-permissions-management}
 
@@ -52,7 +64,7 @@ CRXDE 也能管理進階權限與限制。 其已合併於同一個視圖中。 
 
 ![檢視 ACL 清單](assets/trei-1.png)
 
-### 加入新的主體存取控制項目 {#adding-new-access-control-entry-for-a-principal}
+### 為主體新增存取控制項目 {#adding-new-access-control-entry-for-a-principal}
 
 可以透過新增存取控制項目來新增權限。 只要按一下「新增 ACE」按鈕即可。
 
@@ -132,7 +144,7 @@ CRXDE 也能管理進階權限與限制。 其已合併於同一個視圖中。 
  <tbody>
   <tr>
    <th>傳統使用者介面權限組合</th>
-   <th>權限使用者介面權限</th>
+   <th>權限使用者介面中的權限</th>
   </tr>
   <tr>
    <td>讀取</td>

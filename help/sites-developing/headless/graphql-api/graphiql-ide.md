@@ -5,13 +5,25 @@ exl-id: d4b01485-658b-4245-b2e6-04be8abc8ecf
 solution: Experience Manager, Experience Manager Sites
 feature: Content Fragments,GraphQL API
 role: Developer
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: a642c50e-80eb-4fc1-a5d2-f3762d1f841d
+    internal-label: Administration
+subfeature_v2:
+  - id: e9db7c79-8f65-4281-a439-c9049296d903
+    internal-label: Content Fragments
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '792'
 ht-degree: 91%
-
 ---
-
 # 使用 GraphiQL IDE {#graphiql-ide}
 
 標準[GraphiQL](https://graphql.org/learn/serving-over-http/#graphiql) IDE的實作可與Adobe Experience Manager (AEM)的GraphQL API搭配使用。
@@ -20,7 +32,7 @@ ht-degree: 91%
 >
 >GraphiQL 包含在 AEM 的所有環境中 (但只有在您配定端點時才可存取/可見)。
 >
->在先前版本，需要套件來安裝 GraphiQL IDE。 如果您已安裝，現在可以將其移除。
+>在先前版本中，需要一個套件來安裝 GraphiQL IDE。 如果您已安裝此套件，現在可以將其移除。
 
 >[!NOTE]
 >您必須在[設定瀏覽器](/help/assets/content-fragments/content-fragments-configuration-browser.md)中[設定您的端點](/help/sites-developing/headless/graphql-api/graphql-endpoint.md)，才能使用 GraphiQL IDE。
@@ -44,7 +56,7 @@ ht-degree: 91%
 
 ![GraphiQL 介面](assets/cfm-graphiql-interface.png "GraphiQL 介面")
 
-您可以在您的系統上使用 GraphiQL，以便您的用戶端應用程式可以使用 GET 要求來要求查詢，和用於發佈查詢。 如果是用於生產，您可以[將查詢移至您的生產環境](/help/sites-developing/headless/graphql-api/persisted-queries.md#transfer-persisted-query-production)。 最初是生產編寫以使用查詢驗證新編寫的內容，最後是生產發佈以供上線取用。
+您可以在您的系統上使用 GraphiQL，以便您的用戶端應用程式可以使用 GET 要求來要求查詢，和用於發佈查詢。 如果是用於生產，您可以[將查詢移至您的生產環境](/help/sites-developing/headless/graphql-api/persisted-queries.md#transfer-persisted-query-production)。 最初移至生產作者環境，以使用查詢驗證新編寫的內容，最後再移至生產發佈環境以供上線取用。
 
 ## 選取您的端點 {#selecting-endpoint}
 
@@ -52,7 +64,7 @@ ht-degree: 91%
 
 這可以從右上角的下拉清單中取得。
 
-## 建立並保留新查詢 {#creating-new-query}
+## 建立並持續留存的新查詢 {#creating-new-query}
 
 您可以在編輯器中輸入新查詢 - 它位於左側中間面板，GraphiQL 標誌正下方。
 

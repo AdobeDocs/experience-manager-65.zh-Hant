@@ -10,13 +10,22 @@ exl-id: ab4fc41f-e0e9-4577-aab2-f0b4298f9a59
 solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 5ef752af-d616-5b23-8312-06964e46b208
+    internal-label: Administering
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
-source-wordcount: '250'
+source-wordcount: '253'
 ht-degree: 3%
-
 ---
-
 # 使用記錄檔{#working-with-logs}
 
 本節包含可協助您進行疑難排解的記錄詳細資訊。
@@ -25,7 +34,7 @@ ht-degree: 3%
 >
 >如需有關記錄的進一步資訊，請參閱：
 >
->* 在AEM[&#128279;](/help/sites-administering/operations-audit-log.md)中維護稽核記錄
+>* 在AEM中進行[稽核記錄維護](/help/sites-administering/operations-audit-log.md)
 >* [使用稽核記錄和記錄檔](/help/sites-deploying/monitoring-and-maintaining.md#working-with-audit-records-and-log-files)
 
 CRX會記錄詳細的記錄。 拆開包裝並啟動「快速入門」後，您可在下列位置找到記錄：

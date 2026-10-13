@@ -8,13 +8,27 @@ role: Admin,User
 exl-id: 5b7b9816-38c1-4780-b1fc-8184971f3772
 solution: Experience Manager, Experience Manager Forms
 feature: Interactive Communication
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: aa28c6c8-3ede-445b-a351-eeb0c9f9aec4
+    internal-label: Interactive Communication
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '311'
 ht-degree: 0%
-
 ---
-
 # 下載XFA或PDF表單範本 {#download-an-xfa-or-a-pdf-form-template}
 
 如名稱所示，下載作業可讓您將表單從存放庫匯出至本機系統。 結合上傳作業，這項作業可協助您將表單從一個存放庫移轉至另一個存放庫。
@@ -23,7 +37,7 @@ ht-degree: 0%
 
 * 表單範本(XFA Forms)
 * PDF forms
-* 檔案(平面PDF檔案)
+* 檔案（一般PDF檔案）
 
 AEM Forms支援個別下載這些表單型別，或是在包含一或多個受支援表單的資料夾中下載。
 

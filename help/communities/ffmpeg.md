@@ -9,13 +9,20 @@ role: Admin
 exl-id: dbe28334-3b38-4362-b4f8-e0630e634503
 solution: Experience Manager
 feature: Communities
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '251'
+source-wordcount: '274'
 ht-degree: 1%
-
 ---
-
 # 適用於社群的FFmpeg {#ffmpeg-for-communities}
 
 ## 概觀 {#overview}
@@ -24,7 +31,7 @@ FFmpeg是一種轉換及串流音訊與視訊的解決方案，安裝後可用�
 
 ## 安裝FFmpeg {#installing-ffmpeg}
 
-FFmpeg應安裝在主控AEM *作者*&#x200B;執行個體的伺服器上。
+FFmpeg應安裝在裝載AEM *作者*&#x200B;執行個體的伺服器上。
 
 1. 移至[https://www.ffmpeg.org](https://www.ffmpeg.org/)。
 1. 針對您的特定環境（Macintosh、Windows或Linux）下載最新版的FFmpeg。
@@ -43,7 +50,7 @@ FFmpeg應安裝在主控AEM *作者*&#x200B;執行個體的伺服器上。
 
 依預設，安裝FFmpeg時，會根據[!UICONTROL DAM更新資產]工作流程定義設定多個轉譯（轉碼）。
 
-由於轉碼耗用CPU，因此建議修改目標轉譯清單。 在大多數情況下，不需要轉碼。
+由於轉碼需要密集CPU，因此建議修改目標轉譯清單。 在大多數情況下，不需要轉碼。
 
 若要修改[!UICONTROL DAM更新資產]工作流程，並在此範例中關閉轉碼：
 
@@ -57,7 +64,7 @@ FFmpeg應安裝在主控AEM *作者*&#x200B;執行個體的伺服器上。
 * 連按兩下&#x200B;**[!UICONTROL FFmpeg轉碼]**&#x200B;步驟以存取「步驟屬性」對話方塊。
 * 在&#x200B;**[!UICONTROL 處理序]**&#x200B;標籤下：
 
-   * **[!UICONTROL 引數]**：清除所有專案以停用轉碼預設值： `profile:format_ogg,profile:format_aac,profile:format_flv,profile:format_aac_ie`
+  * **[!UICONTROL 引數]**：清除所有專案以停用轉碼預設值： `profile:format_ogg,profile:format_aac,profile:format_flv,profile:format_aac_ie`
 
   ![configure-ffmpeg](assets/configure-ffmpeg.png)
 

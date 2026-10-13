@@ -11,13 +11,24 @@ feature: Asset Management
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 0c3d9e95f2b1942392cd269891360dd8552e2715
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 7d2b2ec8-499c-5434-9ffd-9218cd71f683
+    internal-label: Asset Management
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
-source-wordcount: '10724'
+source-wordcount: '10732'
 ht-degree: 2%
-
 ---
-
 # Dynamic Media 中的視訊 {#video}
 
 本節說明如何在Dynamic Media中使用視訊。
@@ -43,23 +54,23 @@ ht-degree: 2%
 
    * 建立您自己的視訊編碼設定檔。 或者，您只需使用Dynamic Media隨附的預先定義&#x200B;_最適化視訊編碼_&#x200B;設定檔即可。
 
-      * [建立視訊編碼設定檔](/help/assets/video-profiles.md#creating-a-video-encoding-profile-for-adaptive-streaming)。
-      * 最大輸出視訊編碼解析度為8,192 × 4,320或4,320 × 8,192.md。
-      * 深入瞭解[視訊編碼的最佳實務](#best-practices-for-encoding-videos)。
+     * [建立視訊編碼設定檔](/help/assets/video-profiles.md#creating-a-video-encoding-profile-for-adaptive-streaming)。
+     * 最大輸出視訊編碼解析度為8,192 × 4,320或4,320 × 8,192.md。
+     * 深入瞭解[視訊編碼的最佳實務](#best-practices-for-encoding-videos)。
 
    * 將視訊處理設定檔與您要上傳主要來源視訊的一或多個資料夾建立關聯。
 
-      * [將視訊設定檔套用至資料夾](/help/assets/video-profiles.md#applying-a-video-profile-to-folders)。
-      * 深入瞭解[使用處理設定檔來組織數位資產的最佳實務](/help/assets/organize-assets.md)。
-      * 深入瞭解[組織數位資產](/help/assets/organize-assets.md)。
+     * [將視訊設定檔套用至資料夾](/help/assets/video-profiles.md#applying-a-video-profile-to-folders)。
+     * 深入瞭解[使用處理設定檔來組織數位資產的最佳實務](/help/assets/organize-assets.md)。
+     * 深入瞭解[組織數位資產](/help/assets/organize-assets.md)。
 
    * 將您的主要來源視訊上傳至資料夾。 將視訊新增至資料夾時，會根據您指派至資料夾的視訊處理設定檔進行編碼。
 
-      * Dynamic Media主要支援長度上限為30分鐘、最小解析度大於25×25的短視訊。
-      * 支援的最大輸入視訊解析度是16,384 × 16,384。
-      * 您可以上傳每個大小最多15 GB的視訊檔案。
-      * [上傳您的視訊](/help/assets/managing-video-assets.md#upload-and-preview-video-assets)。
-      * 深入瞭解[支援的輸入檔案格式](/help/assets/assets-formats.md#supported-multimedia-formats)。
+     * Dynamic Media主要支援長度上限為30分鐘、最小解析度大於25×25的短視訊。
+     * 支援的最大輸入視訊解析度是16,384 × 16,384。
+     * 您可以上傳每個大小最多15 GB的視訊檔案。
+     * [上傳您的視訊](/help/assets/managing-video-assets.md#upload-and-preview-video-assets)。
+     * 深入瞭解[支援的輸入檔案格式](/help/assets/assets-formats.md#supported-multimedia-formats)。
 
    * 監視資產或工作流程檢視中[視訊編碼的進度](#monitoring-video-encoding-and-youtube-publishing-progress)。
 
@@ -67,55 +78,55 @@ ht-degree: 2%
 
    * 組織、瀏覽和搜尋視訊資產
 
-      * [組織數位資產](/help/assets/organize-assets.md)
-深入瞭解[使用處理設定檔來組織數位資產的最佳實務](organize-assets.md)
+     * [組織數位資產](/help/assets/organize-assets.md)
+       深入瞭解[使用處理設定檔來組織數位資產的最佳實務](organize-assets.md)
 
-      * [搜尋視訊資產](search-assets.md#custompredicates)或[搜尋資產](/help/assets/search-assets.md)
+     * [搜尋視訊資產](search-assets.md#custompredicates)或[搜尋資產](/help/assets/search-assets.md)
 
    * 預覽和發佈視訊資產
 
-      * 檢視視訊的來源視訊和編碼轉譯及其相關縮圖：
-        [預覽視訊](managing-video-assets.md#upload-and-preview-video-assets)或[預覽資產](previewing-assets.md)
-        [檢視視訊轉譯](video-renditions.md)
-        [管理視訊轉譯](manage-assets.md#managing-renditions)
+     * 檢視視訊的來源視訊和編碼轉譯及其相關縮圖：
+       [預覽視訊](managing-video-assets.md#upload-and-preview-video-assets)或[預覽資產](previewing-assets.md)
+       [檢視視訊轉譯](video-renditions.md)
+       [管理視訊轉譯](manage-assets.md#managing-renditions)
 
-      * [管理檢視器預設集](managing-viewer-presets.md)
-      * [發佈資產](publishing-dynamicmedia-assets.md)
+     * [管理檢視器預設集](managing-viewer-presets.md)
+     * [發佈資產](publishing-dynamicmedia-assets.md)
 
    * 使用視訊中繼資料
 
-      * 檢視已編碼視訊轉譯的屬性，例如影格速率、音訊和視訊位元速率以及轉碼器：
-        [檢視視訊轉譯屬性](video-renditions.md)
+     * 檢視已編碼視訊轉譯的屬性，例如影格速率、音訊和視訊位元速率以及轉碼器：
+       [檢視視訊轉譯屬性](video-renditions.md)
 
-      * 編輯視訊的屬性，例如標題、說明和標籤、自訂中繼資料欄位：
-        [編輯視訊內容](manage-assets.md#editing-properties)
+     * 編輯視訊的屬性，例如標題、說明和標籤、自訂中繼資料欄位：
+       [編輯視訊內容](manage-assets.md#editing-properties)
 
-      * [管理數位資產的中繼資料](metadata.md)
-      * [中繼資料結構描述](metadata-schemas.md)
+     * [管理數位資產的中繼資料](metadata.md)
+     * [中繼資料結構描述](metadata-schemas.md)
 
    * 檢閱、核准和註釋視訊，並維持完整的版本控制
 
-      * [為影片加上註釋](managing-video-assets.md#annotate-video-assets)或[為資產加上註釋](manage-assets.md#annotating)
+     * [為影片加上註釋](managing-video-assets.md#annotate-video-assets)或[為資產加上註釋](manage-assets.md#annotating)
 
-      * [建立版本](manage-assets.md#asset-versioning)
-      * [將工作流程套用至資產](assets-workflow.md)或參閱[在資產上開始工作流程](manage-assets.md#starting-a-workflow-on-an-asset)
+     * [建立版本](manage-assets.md#asset-versioning)
+     * [將工作流程套用至資產](assets-workflow.md)或參閱[在資產上開始工作流程](manage-assets.md#starting-a-workflow-on-an-asset)
 
-      * [檢閱資料夾資產](bulk-approval.md)
-      * [專案](../sites-authoring/projects.md)
+     * [檢閱資料夾資產](bulk-approval.md)
+     * [專案](../sites-authoring/projects.md)
 
 1. **執行下列其中一項作業，以發佈您的Dynamic Media影片**：
 
    * 如果您使用Adobe Experience Manager做為網站內容管理系統，可以直接新增影片至您的網頁。
 
-      * [新增視訊至您的網頁](adding-dynamic-media-assets-to-pages.md)。
+     * [新增視訊至您的網頁](adding-dynamic-media-assets-to-pages.md)。
 
    * 如果您使用協力廠商網站內容管理系統，您可以將影片連結或內嵌至網頁。
 
-      * 使用URL整合視訊：
-        [將URL連結至您的網頁應用程式](linking-urls-to-yourwebapplication.md)。
+     * 使用URL整合視訊：
+       [將URL連結至您的網頁應用程式](linking-urls-to-yourwebapplication.md)。
 
-      * 使用網頁上的內嵌程式碼整合影片：
-        [將視訊檢視器內嵌在網頁上](embed-code.md)。
+     * 使用網頁上的內嵌程式碼整合影片：
+       [將視訊檢視器內嵌在網頁上](embed-code.md)。
 
    * [產生視訊報告](#viewing-video-reports)。
 
@@ -143,8 +154,8 @@ Dynamic Media中的視訊是端對端解決方案，可讓您輕鬆發佈高品�
 
 * 上傳各種支援格式的視訊，並編碼至MP4 H.264以便在多個熒幕上播放。 您可以使用預先定義的自我調整視訊預設集、單一視訊編碼預設集，或自訂自己的編碼來控制視訊的品質和大小。
 
-   * 產生最適化視訊集時，其中會包含MP4視訊。
-   * **注意**：主要/來源視訊未新增至最適化視訊集。
+  * 產生最適化視訊集時，其中會包含MP4視訊。
+  * **注意**：主要/來源視訊未新增至最適化視訊集。
 
 * 所有HTML5視訊檢視器中的視訊字幕。
 * 使用完整中繼資料支援來組織、瀏覽和搜尋視訊，以有效管理視訊資產。
@@ -158,8 +169,8 @@ Dynamic Media支援MP4 H.264視訊的行動視訊播放。<!-- LINK IS 404 WITH 
 
 * 使用Dynamic Media視訊檢視器預設集播放視訊，包括下列專案：
 
-   * 單一視訊檢視器。
-   * 結合視訊和影像內容的混合媒體檢視器。
+  * 單一視訊檢視器。
+  * 結合視訊和影像內容的混合媒體檢視器。
 
 * 設定視訊播放器以符合您的品牌需求。
 * 使用簡單的URL或內嵌程式碼將視訊整合至您的網站、行動網站或行動應用程式。
@@ -463,10 +474,10 @@ Dynamic Media建議使用MP4 H.264視訊編碼預設集。 由於MP4檔案使用
 1. 在「視訊報表」頁面上，執行下列任一項作業：
 
    * 在右上角附近，選取&#x200B;**重新整理視訊報告**&#x200B;圖示。
-只有在報表的結束日期為當天時，才使用重新整理。 這麼做可確保您看到自上次執行報表以來發生的視訊追蹤。
+     只有在報表的結束日期為當天時，才使用重新整理。 這麼做可確保您看到自上次執行報表以來發生的視訊追蹤。
 
    * 在右上角附近，選取&#x200B;**日期選擇器**&#x200B;圖示。
-指定您要視訊資料的開始和結束日期範圍，然後選取&#x200B;**[!UICONTROL 執行報表]**。
+     指定您要視訊資料的開始和結束日期範圍，然後選取&#x200B;**[!UICONTROL 執行報表]**。
 
    「排名在前的量度」群組方塊可識別您網站上所有&#x200B;*已發佈*&#x200B;視訊的各種彙總測量。
 
@@ -540,7 +551,7 @@ Dynamic Media建議使用MP4 H.264視訊編碼預設集。 由於MP4檔案使用
 
 ## 關於Dynamic Media中視訊的多重註解和音訊追蹤支援{#about-msma}
 
-透過Dynamic Media的多重字幕與音訊曲目功能，您可以輕鬆將多重字幕與音訊曲目新增至主要視訊。 擁有此功能代表全球觀眾都可以存取您的影片。 您可以著手自訂一部已發佈的主要影片，以多種語言提供給全球觀眾，並遵守不同地理區域的無障礙指南。 作者還可以從使用者介面中的單個標籤管理字幕和音訊。
+透過Dynamic Media的多重字幕與音訊曲目功能，您可以輕鬆將多重字幕與音訊曲目新增至主要視訊。 擁有此功能代表全球觀眾都可以存取您的影片。 您可以著手自訂一部已發佈的主要影片，以多種語言提供給全球觀眾，並遵守不同地理區域的無障礙指南。 作者還可以從使用者介面中的單個標籤管理字幕和音軌。
 
 ![Dynamic Media中的註解與音訊曲目標籤，以及顯示已上傳的`.vtt`註解檔案與已上傳視訊的.MP3音訊曲目檔案的表格。](assets-dm/msma-subtitle-audiotracks-tab2.png)
 
@@ -970,15 +981,15 @@ Experience Manager中的所有視訊都必須有關聯的縮圖，若要刪除�
 
    * 若要使用視訊中的影格做為新的縮圖：
 
-      * 在工具列上，選取&#x200B;**[!UICONTROL 從視訊選取影格]**。
-      * 選取「播放」按鈕，然後在您要擷取的影格上選取「暫停」按鈕，作為視訊的新縮圖。
+     * 在工具列上，選取&#x200B;**[!UICONTROL 從視訊選取影格]**。
+     * 選取「播放」按鈕，然後在您要擷取的影格上選取「暫停」按鈕，作為視訊的新縮圖。
 
    * 若要將影像資產作為新縮圖：
 
-      * 在工具列上，選取&#x200B;**[!UICONTROL 從Assets中選取縮圖]**。
-      * 選取&#x200B;**[!UICONTROL 選取縮圖]**。
-      * 導覽至您想要使用的先前上傳和發佈影像資產。 資產會自動調整大小，以作為視訊的縮圖影像。
-      * 選取影像資產，然後選取&#x200B;**[!UICONTROL 選取]**。
+     * 在工具列上，選取&#x200B;**[!UICONTROL 從Assets中選取縮圖]**。
+     * 選取&#x200B;**[!UICONTROL 選取縮圖]**。
+     * 導覽至您想要使用的先前上傳和發佈影像資產。 資產會自動調整大小，以作為視訊的縮圖影像。
+     * 選取影像資產，然後選取&#x200B;**[!UICONTROL 選取]**。
 
 1. 在[變更縮圖]頁面上，選取[**[!UICONTROL 儲存變更]**]。
 1. 在影片的「屬性」頁面右上角，選取「**[!UICONTROL 儲存並關閉]**」。
@@ -1113,11 +1124,11 @@ String getVideoManifestURI(Resource resource, ManifestType manifestType, boolean
 
 * `IllegalArgumentException`會針對下列任一專案進行記錄：
 
-   * 傳遞的`resource`引數為Null。
-   * 傳遞的`resource`引數不是視訊。
-   * 傳遞的`manifestType`引數為Null。
-   * `onlyIfPublished`引數傳遞為true，但視訊未發佈。
-   * 未使用Dynamic Media中的最適化視訊集擷取視訊。
+  * 傳遞的`resource`引數為Null。
+  * 傳遞的`resource`引數不是視訊。
+  * 傳遞的`manifestType`引數為Null。
+  * `onlyIfPublished`引數傳遞為true，但視訊未發佈。
+  * 未使用Dynamic Media中的最適化視訊集擷取視訊。
 
 * 在連線至Dynamic Media時發生問題時，`IOException`會獲得記錄。
 * 當傳遞的`manifestType`引數為`ManifestType.DASH`且未使用DASH格式處理視訊時，會記錄`UnsupportedOperationException`。

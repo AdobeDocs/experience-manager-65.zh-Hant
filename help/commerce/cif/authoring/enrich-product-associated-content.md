@@ -6,20 +6,28 @@ feature: Commerce Integration Framework
 exl-id: 1a069fbc-c036-419a-b585-6aa43e15de16
 solution: Experience Manager,Commerce
 role: Admin, Developer
-source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '350'
-ht-degree: 1%
-
+source-wordcount: '352'
+ht-degree: 2%
 ---
-
 # 利用關聯AEM內容豐富產品資料
 
 瞭解行銷人員如何利用Adobe Experience Manager的關聯內容豐富產品資料。 AEM中的內容（如資產）體驗片段和內容片段可能與商業產品有關聯。 這些內容型別在關聯後，即可動態地插入至產品頁面或類別頁面中的預留位置。 這開啟了行銷人員以影像和視訊等其他內容鎖定特定產品頁面的廣泛可能性。
 
 ## 數位資產
 
->[!VIDEO](https://video.tv.adobe.com/v/3447320/?quality=12&learn=on&captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/3447320/?captions=chi_hant&quality=12&learn=on)
 
 數位資產可與一個或多個產品SKU相關聯。 一旦關聯，即可根據SKU透過關鍵字搜尋來探索數位資產。 在編輯包含相關產品的頁面時，資產也會自動顯示為關聯內容，讓您更輕鬆地建立下一個數位體驗
 
@@ -31,7 +39,7 @@ ht-degree: 1%
 
 ## 內容片段
 
->[!VIDEO](https://video.tv.adobe.com/v/3452168/?quality=12&learn=on&captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/3452168/?captions=chi_hant&quality=12&learn=on)
 
 內容片段是Adobe Experience Manager的一項功能，可讓行銷人員建立&#x200B;**結構化**&#x200B;可重複使用的內容。 內容片段可與產品SKU或目錄ID建立關聯。 一旦建立關聯，行銷人員就可以根據頁面上顯示的產品輕鬆探索相關片段。 您也可以使用預留位置及關聯，以動態方式將內容片段納入產品目錄頁面。
 

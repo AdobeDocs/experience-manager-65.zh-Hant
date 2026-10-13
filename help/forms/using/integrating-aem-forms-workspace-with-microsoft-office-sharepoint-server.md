@@ -9,13 +9,27 @@ exl-id: d080932f-d5fb-482d-9329-62da5df10362
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '551'
+source-wordcount: '554'
 ht-degree: 0%
-
 ---
-
 # 整合AEM表單工作區與Microsoft Office SharePoint Server{#integrating-aem-forms-workspace-with-microsoft-office-sharepoint-server}
 
 **— 需求**
@@ -26,11 +40,11 @@ ht-degree: 0%
 **使用者層級**
 開始
 
-您可以使用AEM Forms Workspace作為Microsoft Office SharePoint伺服器(例如Microsoft Office SharePoint Server 2007)中的網頁元件。 使用者可使用網頁瀏覽器連線至您的AEM Forms伺服器，以提供統一的體驗來存取SharePoint Workspace。 閱讀本文，您將瞭解在AEM Forms Office SharePoint Server中將Microsoft Workspace顯示為Web元件的基本步驟。 您可以執行本文中所述的步驟，以提供統一的體驗，讓連線至您SharePoint伺服器的使用者可以從相同連線埠存取AEM Forms Workspace。
+您可以使用AEM Forms Workspace作為Microsoft Office SharePoint伺服器（例如Microsoft Office SharePoint Server 2007）中的網頁元件。 使用者可使用網頁瀏覽器連線至您的AEM Forms伺服器，以提供統一的體驗來存取SharePoint Workspace。 閱讀本文，您將瞭解在AEM Forms Office SharePoint Server中將Microsoft Workspace顯示為Web元件的基本步驟。 您可以執行本文中所述的步驟，以提供統一的體驗，讓連線至您SharePoint伺服器的使用者可以從相同連線埠存取AEM Forms Workspace。
 
 >[!NOTE]
 >
->本文列出的步驟是特定的Microsoft SharePoint Server 2007。 您也可以將HTML Workspace與其他支援的Microsoft SharePoint版本一起設定。
+>本文列出的步驟是特定的Microsoft SharePoint Server 2007。 您也可以將HTML Workspace設定為其他支援的Microsoft SharePoint版本。
 
 ## 將AEM Forms Workspace與Microsoft Office SharePoint Server 2007整合 {#integrate-aem-forms-workspace-with-microsoft-office-sharepoint-server}
 

@@ -9,13 +9,26 @@ exl-id: f4ca5c11-e3ff-4da5-bc4a-fd7e0aefffb5
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Developer
-source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '220'
-ht-degree: 2%
-
+ht-degree: 3%
 ---
-
 # 編輯頁面時的鍵盤快速鍵{#keyboard-shortcuts-when-editing-pages}
 
 AEM提供各種鍵盤快速鍵。 有些適用於編輯頁面，有些則適用於[使用主控台](/help/sites-authoring/keyboard-shortcuts.md)。
@@ -26,7 +39,7 @@ AEM提供各種鍵盤快速鍵。 有些適用於編輯頁面，有些則適用�
 
 ## 編輯鍵盤快速鍵 {#editing-keyboard-shortcuts}
 
-| 位置 | 捷徑 | 說明 |
+| 位置 | 快速鍵 | 說明 |
 |---|---|---|
 | 任何編輯視窗模式 | `Ctrl-Shift-m` | 在&#x200B;**預覽**&#x200B;和目前選取的[模式](/help/sites-authoring/author-environment-tools.md#page-modes)</a>之間切換（例如，**編輯**、**配置**&#x200B;等） |
 | **編輯**&#x200B;模式 | `Ctrl-z` | [復原上次變更](/help/sites-authoring/editing-content.md#undoing-and-redoing-page-edits) |
@@ -42,7 +55,7 @@ AEM提供各種鍵盤快速鍵。 有些適用於編輯頁面，有些則適用�
 
 >[!NOTE]
 >
->&amp;amp；ast；一旦使用者開始以預覽模式與頁面互動，`Ctrl-Shift-m`捷徑就不再可用。 使用者必須按一下頂端編輯器列或返回「編輯」模式，才能再次使用捷徑。
+>&amp;ast；一旦使用者開始以預覽模式與頁面互動，`Ctrl-Shift-m`捷徑將無法再使用。 使用者必須按一下頂端編輯器列或返回「編輯」模式，才能再次使用捷徑。
 
 使用[主控台](/help/sites-authoring/keyboard-shortcuts.md)時，案頭使用者也可以使用各種鍵盤快速鍵。
 

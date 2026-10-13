@@ -9,13 +9,25 @@ feature: Security
 exl-id: 7d2e4620-c3a5-4f5a-9eb6-42a706479d41
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: b1210526-416b-4ef6-bcc0-1692e99f30e9
+    internal-label: Administration and security
+subfeature_v2:
+  - id: c35bc059-fd80-4a01-91a6-e48da3c76758
+    internal-label: Security practices
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '738'
+source-wordcount: '752'
 ht-degree: 1%
-
 ---
-
 # 單一登入 {#single-sign-on}
 
 單一登入(SSO)可讓使用者在提供一次驗證認證（例如使用者名稱和密碼）之後存取多個系統。 另一個系統（稱為信任的驗證者）會執行驗證並向Experience Manager提供使用者認證。 Experience Manager會檢查並強制使用者的存取許可權（即決定允許使用者存取哪些資源）。
@@ -85,7 +97,8 @@ SSO驗證處理常式服務( `com.adobe.granite.auth.sso.impl.SsoAuthenticationH
 >* `disp_iis.ini`
 >* IIS
 >
->在`disp_iis.ini`中，設定：>（如需完整詳細資訊，請參閱[使用® Internet Information Server安裝Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html?lang=zh-Hant#microsoft-internet-information-server)）
+>在`disp_iis.ini`集合中：
+>（如需完整詳細資訊，請參閱[使用® Internet Information Server安裝Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html?lang=zh-Hant#microsoft-internet-information-server)）
 >
 >* `servervariables=1` （將IIS伺服器變數作為要求標頭轉送給遠端執行個體）
 >* `replaceauthorization=1` (將任何名為「Authorization」的標頭（「Basic」以外的標頭取代為「Basic」的對等標頭）
@@ -148,7 +161,7 @@ Transfer-Encoding: chunked
 如果您請求：
 `http://localhost:4502/libs/cq/core/content/welcome.html?TestParameter=admin`
 
-或者，您可以使用以下curl命令將`TestHeader`標頭傳送至`admin:`
+或者，您可以使用以下curl命令將`TestHeader`標頭傳送到 `admin:`
 `curl -D - -H "TestHeader: admin" http://localhost:4502/libs/cq/core/content/welcome.html`
 
 >[!NOTE]

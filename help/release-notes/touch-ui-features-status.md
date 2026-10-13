@@ -1,17 +1,31 @@
 ---
 title: 觸控式 UI 功能狀態
-description: ' [!DNL Adobe Experience Manager] 觸控式UI的發行說明。'
+description: '[!DNL Adobe Experience Manager]觸控式UI的發行說明。'
 exl-id: 7b71e8db-e8c6-4470-bc22-db3d4600b7fc
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
-source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: ed762d86-a04b-452b-a08f-86359bb8ff27
+    internal-label: Configuration and operations
+subfeature_v2:
+  - id: c21ccc2b-e0c8-4853-bf41-f12259ed93f8
+    internal-label: Release information
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
-source-wordcount: '1087'
-ht-degree: 15%
-
+source-wordcount: '1137'
+ht-degree: 14%
 ---
-
 # 觸控式 UI 功能狀態 {#touch-ui-feature-status}
 
 Adobe Experience Manager (AEM) 6.4之後的[傳統UI已棄用](../release-notes/deprecated-removed-features.md)。 Adobe不再對傳統UI進行任何增強功能，而是鼓勵使用者使用觸控式UI提供的強大新功能。
@@ -76,7 +90,7 @@ Adobe Experience Manager (AEM) 6.4之後的[傳統UI已棄用](../release-notes/
 | 檢視語言副本 | 完成 |  |
 | 尋找並取代 | 遺失 | 使用傳統UI。 |
 | 通知收件匣（JCR事件） | 遺失 | 使用傳統UI。 已取代為未來的其他實作。 |
-| 參照 | 完成 | 顯示新增至AEM 6.5的傳入頁面連結。基於效能考量，只會顯示頁面的直接連結。 |
+| 參照 | 完成 | 顯示新增至AEM 6.5的傳入頁面連結。 基於效能考量，只會顯示頁面的直接連結。 |
 
 ## 功能狀態：頁面編輯器 {#feature-status-page-editor}
 
@@ -112,7 +126,7 @@ Adobe Experience Manager (AEM) 6.4之後的[傳統UI已棄用](../release-notes/
 | 稽核記錄 | 已移除 | 使用網站管理員和[開啟活動邊欄](/help/sites-authoring/author-environment-tools.md#events-timeline)。 |
 | 建立版本 | 已移除 | 使用網站管理員來[建立新版本](/help/sites-authoring/working-with-page-versions.md#creating-a-new-version)。 |
 | 還原版本 | 已移除 | 使用網站管理員來[還原版本](/help/sites-authoring/working-with-page-versions.md#reverting-to-a-page-version)。 |
-| 切換啟動 | 已移除 | 使用[網站管理員]在啟動[之間](/help/sites-authoring/launches-promoting.md)切換。 |
+| 切換啟動 | 已移除 | 使用[網站管理員]在啟動[&#128279;](/help/sites-authoring/launches-promoting.md)之間切換。 |
 | 翻譯頁面 | 已移除 | 使用網站管理員[新增頁面至翻譯專案](/help/sites-administering/tc-manage.md)。 |
 | 時間扭曲（選擇日期/時間並瀏覽當時的網站） | 完成 |  |
 | 設定許可權 | 完成 |  |
@@ -137,7 +151,7 @@ Adobe Experience Manager (AEM) 6.4之後的[傳統UI已棄用](../release-notes/
 | RTE外掛程式：連結和錨點 | 完成 |  |
 | RTE外掛程式：字元對應 | 完成 |  |
 | RTE外掛程式：複製/貼上 | 完成 |  |
-| RTE外掛程式：從Microsoft® Word貼上 | 完成 |  |
+| RTE外掛程式：從® Word貼上 | 完成 |  |
 | RTE外掛程式：尋找和取代 | 完成 |  |
 | RTE外掛程式：文字格式（粗體、...） | 完成 |  |
 | RTE外掛程式：下標與上標 | 完成 |  |
@@ -145,7 +159,7 @@ Adobe Experience Manager (AEM) 6.4之後的[傳統UI已棄用](../release-notes/
 | RTE外掛程式：清單（專案符號/編號） | 完成 |  |
 | RTE外掛程式：段落格式 | 完成 |  |
 | RTE外掛程式：文字樣式 | 完成 |  |
-| RTE外掛程式：Source編輯器(編輯HTML) | 完成 | 僅於對話方塊和全熒幕中使用。 |
+| RTE外掛程式：Source編輯器（編輯HTML） | 完成 | 僅於對話方塊和全熒幕中使用。 |
 | RTE外掛程式：拼字檢查 | 完成 |  |
 | RTE外掛程式：表格（內嵌表格編輯器） | 完成 |  |
 | RTE外掛程式：還原/重做 | 完成 |  |

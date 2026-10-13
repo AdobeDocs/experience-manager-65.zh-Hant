@@ -10,13 +10,22 @@ exl-id: c7c0c705-ec16-40f5-ad08-193f82d01263
 solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
-source-git-commit: eae057caed533ef16bb541b4ad41b8edd7aaa1c7
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 243139ec-8e41-5296-a287-31343ab1bc0f
+    internal-label: Integration
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1458'
+source-wordcount: '1461'
 ht-degree: 0%
-
 ---
-
 # 使用Adobe Analytics屬性對應元件資料{#mapping-component-data-with-adobe-analytics-properties}
 
 將元件新增至框架，以收集要傳送至Adobe Analytics的資料。 設計用來收集分析資料的元件，會將資料儲存在適當的&#x200B;**CQ變數**&#x200B;中。 當您將這類元件新增到框架時，該框架會顯示CQ變數清單，以便您可以將每個變數新增到適當的&#x200B;**Analytics變數**。
@@ -180,25 +189,26 @@ AEM使用慣例來命名產品相關變數和事件，這些變數和事件會�
 
    * **流量**：
 
-      * 流量變數( `prop1`)對應到CQ變數( `eventdata.downloadLink`)
+     * 流量變數( `prop1`)對應到CQ變數( `eventdata.downloadLink`)
 
-      * 當元件旁邊有掛鎖時，這表示它繼承自父框架，因此無法編輯
+     * 當元件旁邊有掛鎖時，這表示它繼承自父框架，因此無法編輯
 
    * **轉換**：
 
-      * 轉換變數( `eVar1`)對應到CQ變數( `pagedata.title`)
+     * 轉換變數( `eVar1`)對應到CQ變數( `pagedata.title`)
 
-      * 在CQ變數欄位上連按兩下，並手動輸入程式碼，轉換變數(`eVar3`)對應到內嵌新增的JavaScript運算式
+     * 在CQ變數欄位上連按兩下，並手動輸入程式碼，轉換變數(`eVar3`)對應到內嵌新增的JavaScript運算式
 
    * **事件**：
 
-      * 事件變數( `event1`)對應至CQ事件( `eventdata.events.pageView`)
+     * 事件變數( `event1`)對應至CQ事件( `eventdata.events.pageView`)
 
 >[!NOTE]
 >
 >您也可以連按兩下欄位並在其中新增文字，以內嵌填入任何表格的CQ變數欄。 這些欄位接受JavaScript作為輸入。
 >
->例如，您可以在`prop3`旁邊新增：> `'`* `Adobe:'+pagedata.title+':'+pagedata.sitesection`\
+>例如，您可以在`prop3`旁邊新增：
+>     `'`* `Adobe:'+pagedata.title+':'+pagedata.sitesection`\
 >若要傳送與其&#x200B;*sitesection*&#x200B;串連之頁面的&#x200B;*title*，請使用&#x200B;*：* （冒號），並將前置詞設為&#x200B;*Adobe*&#x200B;作為`prop3`
 >
 

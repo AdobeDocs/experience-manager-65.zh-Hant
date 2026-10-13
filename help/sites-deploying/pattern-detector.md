@@ -10,18 +10,27 @@ feature: Upgrading
 exl-id: c42373e9-712e-4c11-adbb-4e3626e0b217
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 835ee49e-9248-5578-a60a-15c097807178
+    internal-label: Upgrading
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '500'
+source-wordcount: '532'
 ht-degree: 1%
-
 ---
-
 # 使用模式偵測器評估升級複雜性
 
 ## 概觀 {#overview}
 
-此功能可讓您透過偵測使用中的模式來檢查現有AEM執行個體的可升級性，這些模式包括：
+此功能可讓您透過偵測使用中的模式來檢查現有AEM執行個體的可升級性，該模式包括：
 
 1. 違反特定規則，並在將受升級影響或覆寫的區域中執行
 1. 使用AEM 6.x功能或AEM 6.5上無法回溯相容且升級後可能會中斷的API。
@@ -30,7 +39,7 @@ ht-degree: 1%
 
 ## 設定方法 {#how-to-set-up}
 
-模式偵測器會以[一個封裝](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/compatpack/pd-all-aem65)的形式單獨發行，用於從6.1到6.5的任何來源AEM版本，目標為AEM 6.5升級。 可使用[封裝管理員](/help/sites-administering/package-manager.md)進行安裝。
+模式偵測器會以[一個套件](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/compatpack/pd-all-aem65)的形式單獨發行，用於從6.1到6.5的任何來源AEM版本，目標為AEM 6.5升級。 可使用[封裝管理員](/help/sites-administering/package-manager.md)進行安裝。
 
 ## 使用方式 {#how-to-use}
 
@@ -47,7 +56,7 @@ ht-degree: 1%
 
 * 透過Felix詳細目錄主控台&#x200B;**：**
 
-1. 瀏覽至&#x200B;*https://serveraddress:serverport/system/console/configMgr*&#x200B;以移至AEM Web Console
+1. 瀏覽至&#x200B;*https://serveraddress:serverport/system/console/configMgr*，前往AEM Web Console
 1. 選取&#x200B;**狀態 — 模式偵測器**，如下圖所示：
 
    ![熒幕擷圖–2018-2-5pattern-detector](assets/screenshot-2018-2-5pattern-detector.png)
@@ -218,7 +227,7 @@ curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-det
 * Sling資源型別和超級型別（具有搜尋路徑內容覆蓋圖）使用量
 * Oak索引的定義（相容性）
 * VLT封裝（使用過量）
-* rep：User節點相容性（在OAuth設定的內容中）
+* rep:User節點相容性（在OAuth設定的內容中）
 
 >[!NOTE]
 >

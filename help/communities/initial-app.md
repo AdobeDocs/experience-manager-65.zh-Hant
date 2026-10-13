@@ -9,13 +9,20 @@ exl-id: cbf9ce36-53a2-4f4b-a96f-3b05743f6217
 solution: Experience Manager
 feature: Communities
 role: Developer
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '626'
+source-wordcount: '637'
 ht-degree: 1%
-
 ---
-
 # 初始沙箱應用程式 {#initial-sandbox-application}
 
 在本節中，您將建立下列專案：
@@ -29,7 +36,7 @@ ht-degree: 1%
 
 在本練習中，所有頁面都以一個簡單範本為基礎。
 
-1. 在CRXDE Lite的總管窗格中：
+1. 在CRXDE Lite瀏覽器窗格中：
 
    * 選取`/apps/an-scf-sandbox/templates`
    * **[!UICONTROL 建立]** > **[!UICONTROL 建立範本]**

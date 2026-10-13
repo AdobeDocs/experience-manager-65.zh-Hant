@@ -9,13 +9,17 @@ exl-id: 576b4567-c7b6-4196-84e7-47e980637540
 solution: Experience Manager
 feature: Mobile
 role: User
-source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '270'
+source-wordcount: '293'
 ht-degree: 0%
-
 ---
-
 # 建立共用資源匯出設定{#creating-shared-resources-export-configuration}
 
 {{ue-over-mobile}}
@@ -32,7 +36,7 @@ Adobe Experience Manager (AEM) Mobile使用者會使用Content Sync將即時內�
 
 下列資源說明如何從AEM匯出共用資源以上傳至AEM Mobile。
 
-共用HTML資源可讓文章共用原本會針對所有文章複製的HTML資源，並可包含圖示、字型、JavaScript和css。
+共用的HTML資源可讓文章共用原本會在所有文章中重複的HTML資源，且可包含圖示、字型、JavaScript和css。
 
 在&#x200B;**&lt;dps-exportTemplate>/dps-HTMLResources>**&#x200B;找到的內容同步設定應該設定為匯出內容與裝置上的內容靜態轉譯所需的所有文章。
 

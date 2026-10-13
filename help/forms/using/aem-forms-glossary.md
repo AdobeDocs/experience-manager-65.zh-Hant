@@ -5,13 +5,23 @@ feature: Adaptive Forms
 role: Admin, User, Developer
 hide: true
 exl-id: 1b327871-c861-48c8-aac6-cff864398bee
-source-git-commit: a2a6296acd79fa53bd7ef1622898babf56aaadd7
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e14eb250-3c22-4a07-9061-a78112b2b826
+    internal-label: Experience Manager 6.5
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '2960'
 ht-degree: 6%
-
 ---
-
 # AEM Forms字彙表
 
 ## 自適應表單
@@ -87,9 +97,9 @@ AEM Forms as a Cloud Service提供管理表單和通訊工作流程的進階工�
 | **數位簽章** | 整合Adobe Sign，為表單及檔案提供安全的電子簽章。 | [數位簽章檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/using-communications/aem-forms-cloud-service-communications-introduction.html#digital-signatures) |
 
 
-## AEM Forms Workbench
+## AEM Forms 工作台
 
-[AEM Forms Workbench](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65/content/forms/install-aem-forms/jee-installation/install-workbench)
+[AEM Forms 工作台](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65/content/forms/install-aem-forms/jee-installation/install-workbench)
 
 適用於建立、編輯和部署工作流程，以及管理以表單為中心的業務流程的案頭應用程式。 它提供與後端服務與系統的整合。
 

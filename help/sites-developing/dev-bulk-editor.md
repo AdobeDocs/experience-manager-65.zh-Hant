@@ -9,13 +9,22 @@ exl-id: 8753aaab-959f-459b-bdb6-057cbe05d480
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1830'
+source-wordcount: '1840'
 ht-degree: 1%
-
 ---
-
 # 開發大量編輯器{#developing-the-bulk-editor}
 
 本節說明如何開發大量編輯器工具，以及如何擴充以大量編輯器為基礎的產品清單元件。
@@ -433,7 +442,7 @@ ht-degree: 1%
   </tr>
   <tr>
    <td>colsMetadata</td>
-   <td>欄中繼資料設定。可能的屬性是（套用至欄的所有儲存格）： <br />
+   <td>欄中繼資料設定。 可能的屬性包括（套用至欄的所有儲存格）： <br />
     <ul>
      <li>cellStyle： html樣式 </li>
      <li>cellCls： css類別 </li>

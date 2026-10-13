@@ -5,13 +5,26 @@ exl-id: 74576e51-4b4e-464e-a0b8-0fae748a505d
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Developer
-source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '2505'
+source-wordcount: '2506'
 ht-degree: 2%
-
 ---
-
 # 建立及組織頁面 {#creating-and-organizing-pages}
 
 本節說明如何使用Adobe Experience Manager (AEM)建立和管理頁面，以便您接著可以在這些頁面上[建立內容](/help/sites-authoring/editing-content.md)。
@@ -85,13 +98,13 @@ ht-degree: 2%
 
 * **[標題](#title)**：
 
-   * 主控台會向使用者顯示這項資訊，並在編輯時顯示在頁面內容的頂端。
-   * 此字段是必填字段。
+  * 主控台會向使用者顯示這項資訊，並在編輯時顯示在頁面內容的頂端。
+  * 此字段是必填字段。
 
 * **[名稱](#name)**：
 
-   * 這會用來產生URI。
-   * 此欄位的使用者輸入為選用。 如果未指定，則會從標題衍生名稱。 如需詳細資訊，請參閱下列章節[頁面名稱限制和最佳實務](/help/sites-authoring/managing-pages.md#page-name-restrictions-and-best-practices)。
+  * 這會用來產生URI。
+  * 此欄位的使用者輸入為選用。 如果未指定，則會從標題衍生名稱。 如需詳細資訊，請參閱下列章節[頁面名稱限制和最佳實務](/help/sites-authoring/managing-pages.md#page-name-restrictions-and-best-practices)。
 
 #### 頁面名稱限制和最佳實務 {#page-name-restrictions-and-best-practices}
 
@@ -211,14 +224,14 @@ AEM隨附數種現成可用的範本。 可用的範本視個別網站而定。 
 
    * **標題**：
 
-      * 這會向使用者顯示，且是強制性的。
+     * 這會向使用者顯示，且是強制性的。
 
    * **名稱**：
 
-      * 這會用來產生URI。 如果未指定，則會從標題衍生名稱。
-      * 如果您在建立頁面時提供頁面&#x200B;**Name**，AEM [會依據AEM和JCR所強加的慣例](/help/sites-developing/naming-conventions.md)驗證名稱。
+     * 這會用來產生URI。 如果未指定，則會從標題衍生名稱。
+     * 如果您在建立頁面時提供頁面&#x200B;**Name**，AEM [會依據AEM和JCR所強加的慣例](/help/sites-developing/naming-conventions.md)驗證名稱。
 
-      * 您&#x200B;**無法在**&#x200B;名稱&#x200B;**欄位中提交無效的字元**。 當AEM偵測到無效字元時，該欄位將會反白顯示，並顯示說明訊息以指出需要移除/取代的字元。
+     * 您&#x200B;**無法在**&#x200B;名稱&#x200B;**欄位中提交無效的字元**。 當AEM偵測到無效字元時，該欄位將會反白顯示，並顯示說明訊息以指出需要移除/取代的字元。
 
    >[!NOTE]
    >
@@ -343,8 +356,8 @@ AEM提供可更新任何內部連結的功能，這些連結會參照正在重�
 
    * 使用[欄檢視](/help/sites-authoring/basic-handling.md#column-view)瀏覽至頁面的新位置：
 
-      * 按一下目的地的縮圖，以選取目的地。
-      * 按一下[下一步]&#x200B;**&#x200B;**&#x200B;繼續。
+     * 按一下目的地的縮圖，以選取目的地。
+     * 按一下[下一步]&#x200B;**&#x200B;**&#x200B;繼續。
 
    * 使用&#x200B;**上一步**&#x200B;返回頁面名稱規格。
 
@@ -384,8 +397,8 @@ AEM提供可更新任何內部連結的功能，這些連結會參照正在重�
 頁面移動動作一律會以非同步方式處理，讓使用者能不受阻礙地繼續在UI中編寫。
 
 * 使用者必須定義何時應執行非同步操作
-   * **現在**&#x200B;立即開始執行非同步工作。
-   * **稍後**&#x200B;可讓使用者定義非同步工作何時開始。
+  * **現在**&#x200B;立即開始執行非同步工作。
+  * **稍後**&#x200B;可讓使用者定義非同步工作何時開始。
 
   ![非同步頁面移動](assets/asynchronous-page-move.png)
 
@@ -415,8 +428,8 @@ AEM提供可更新任何內部連結的功能，這些連結會參照正在重�
    * **取消**&#x200B;以中止動作
    * **刪除**&#x200B;以確認動作：
 
-      * 如果頁面沒有引用，則會刪除該頁面。
-      * 如果頁面有參考，訊息方塊會通知您&#x200B;**一個或多個頁面被參考。** 您可以選取&#x200B;**強制刪除**&#x200B;或&#x200B;**取消**。
+     * 如果頁面沒有引用，則會刪除該頁面。
+     * 如果頁面有參考，訊息方塊會通知您&#x200B;**一個或多個頁面被參考。** 您可以選取&#x200B;**強制刪除**&#x200B;或&#x200B;**取消**。
 
 >[!NOTE]
 >

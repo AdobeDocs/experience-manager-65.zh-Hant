@@ -1,6 +1,6 @@
 ---
 title: 正在設定[外出]設定
-description: 「不在辦公室」功能可讓您指定使用者何時不在辦公室，且無法完成AEM表單所指派的工作。
+description: 休假功能可讓您指定使用者何時將不在辦公室，且無法完成AEM表單所指派的任務。
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_forms_workflow
@@ -9,13 +9,27 @@ exl-id: 1c8ad09b-d44a-4d90-86d5-d4c66cf5c57c
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '671'
 ht-degree: 0%
-
 ---
-
 # 正在設定[外出]設定 {#configuring-out-of-office-settings}
 
 「不在辦公室」功能可讓使用者或管理員指定使用者何時不在辦公室，且無法完成AEM表單所指派的工作。 當使用者設定為「不在辦公室」時，其任務會指派給一個或多個指定使用者。 使用者可以在Workspace中變更其「休假中」設定，或管理員可以代表使用者在Forms Workflow中變更設定。
@@ -65,11 +79,11 @@ ht-degree: 0%
 * 指派將接收大部分使用者任務的預設使用者，但指定將來自特定流程的任務重新指派給其他使用者，或繼續指派給不在辦公室的使用者。
 * 不要指派預設使用者，而是將特定程式中的特定工作指派給特定使用者。
 
-   1. 如[檢視使用者外出資訊](configuring-out-office-settings.md#view-a-user-s-out-of-office-information)中所述，尋找使用者。
-   1. 按一下您要變更的使用者名稱。
-   1. 在「外出工作的預設使用者」清單中，從清單中選取使用者。 如果您不想指定預設使用者來接收重新指派的專案，請選取「不要指派」。
+  1. 如[檢視使用者外出資訊](configuring-out-office-settings.md#view-a-user-s-out-of-office-information)中所述，尋找使用者。
+  1. 按一下您要變更的使用者名稱。
+  1. 在「外出工作的預設使用者」清單中，從清單中選取使用者。 如果您不想指定預設使用者來接收重新指派的專案，請選取「不要指派」。
 
-      如果清單中未出現適當的使用者名稱，請按一下「尋找使用者」，然後使用「尋找使用者」對話方塊來搜尋使用者。 從清單中選取適當的使用者，然後按一下「選取使用者」。 您也可以按一下「尋找使用者」對話方塊中的「檢視使用者排程」，以檢視所選使用者的休假排程。
+     如果清單中未出現適當的使用者名稱，請按一下「尋找使用者」，然後使用「尋找使用者」對話方塊來搜尋使用者。 從清單中選取適當的使用者，然後按一下「選取使用者」。 您也可以按一下「尋找使用者」對話方塊中的「檢視使用者排程」，以檢視所選使用者的休假排程。
 
-   1. 如果有任何不應傳送給預設使用者的程式，請按一下「新增例外」，然後選取該程式，再從清單中選取其他使用者。 您也可以選取「不要指派」 ，讓工作保持指派給不在辦公室的使用者。
-   1. 按一下「儲存」。
+  1. 如果有任何不應傳送給預設使用者的程式，請按一下「新增例外」，然後選取該程式，再從清單中選取其他使用者。 您也可以選取「不要指派」 ，讓工作保持指派給不在辦公室的使用者。
+  1. 按一下「儲存」。

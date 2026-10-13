@@ -8,20 +8,33 @@ feature: Transaction Reports
 exl-id: 3c7cbe1f-ac81-4df9-96b2-662cbc5f2075
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: bcb3e79d-a57e-59a4-ad50-e03803c9f153
+    internal-label: Transaction Reports
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
-source-wordcount: '881'
+source-wordcount: '890'
 ht-degree: 0%
-
 ---
-
 # 在OSGi上檢視和瞭解AEM Forms的交易報表{#viewing-and-understanding-transaction-reports}
 
 交易報表可讓您擷取及追蹤已提交表單、已處理檔案及已轉譯檔案的數量。 追蹤這些交易的目的是，針對產品使用狀況做出明智的決策，並重新平衡軟硬體投資。 如需詳細資訊，請參閱[AEM Forms交易報表概觀](../../forms/using/transaction-reports-overview.md)。
 
 ## 設定交易報表  {#setting-up-transaction-reports}
 
-交易報告功能屬於AEM Forms附加套件的一部分。 如需有關在所有作者和發佈執行個體上安裝附加元件套件的資訊，請參閱[安裝和設定AEM表單](/help/forms/using/installing-configuring-aem-forms-osgi.md)。 安裝AEM Forms附加元件套件後，請執行以下操作：
+交易報表功能屬於AEM Forms附加套件的一部分。 如需有關在所有作者和發佈執行個體上安裝附加元件套件的資訊，請參閱[安裝和設定AEM表單](/help/forms/using/installing-configuring-aem-forms-osgi.md)。 安裝AEM Forms附加元件套件後，請執行以下操作：
 
 * 在所有發佈執行個體上啟用反向復寫
 * 啟用交易報告
@@ -45,7 +58,7 @@ ht-degree: 0%
 
 1. 以管理員身分登入AEM執行個體。 移至&#x200B;**工具** > **作業** > **網頁主控台**。
 1. 尋找並開啟&#x200B;**Forms Transaction Reporting**&#x200B;服務。
-1. 選取「記錄異動」核取方塊。 按一下「**儲存**」。
+1. 選取「記錄異動」核取方塊。 按一下&#x200B;**儲存**。
 
    在所有製作和發佈執行個體上重複步驟1至3。
 
@@ -59,13 +72,13 @@ ht-degree: 0%
 
 1. 以管理員身分登入作者執行個體。 移至&#x200B;**工具** > **作業** > **網頁主控台**。
 1. 找到並開啟&#x200B;**Forms交易存放庫儲存提供者**&#x200B;服務。
-1. 在&#x200B;**交易排清期間**&#x200B;欄位中指定秒數。 按一下「**儲存**」。
+1. 在&#x200B;**交易排清期間**&#x200B;欄位中指定秒數。 按一下&#x200B;**儲存**。
 
 反向復寫會將交易資料複製到製作執行個體的預設寄件匣。 您可以將交易資料放入自訂寄件匣。 執行以下步驟來指定自訂寄件匣：
 
 1. 以管理員身分登入作者執行個體。 移至&#x200B;**工具** > **作業** > **網頁主控台**。
 1. 找到並開啟&#x200B;**Forms交易存放庫儲存提供者**&#x200B;服務。
-1. 在&#x200B;**寄件匣**&#x200B;欄位中指定自訂寄件匣的名稱。 按一下「**儲存**」。具有指定名稱的寄件匣會在所有製作執行個體上建立。
+1. 在&#x200B;**寄件匣**&#x200B;欄位中指定自訂寄件匣的名稱。 按一下「**儲存**」。 具有指定名稱的寄件匣會在所有製作執行個體上建立。
 
 ## 檢視交易報告 {#viewing-the-transaction-report}
 
@@ -80,8 +93,8 @@ AEM Forms會顯示自設定日期以來的交易報表，如下列摘要報表�
 
 ![sample-transaction-report-author](assets/sample-transaction-report-author.png)
 
-* 使用&#x200B;**將日期重設為今天**&#x200B;選項來重設交易記錄。 若您將日期重設為今天，所有先前的交易記錄都會遺失。 當您在製作執行個體上重設日期時，此變更不會影響Publish執行個體上的交易報告，反之亦然。
-* 使用&#x200B;**只顯示Publish執行個體的交易**&#x200B;來檢視只發生在已設定的發佈執行個體或發佈伺服器陣列上的所有交易。
+* 使用&#x200B;**將日期重設為今天**&#x200B;選項來重設交易記錄。 若您將日期重設為今天，所有先前的交易記錄都會遺失。 當您在作者執行個體上重設日期時，此變更不會影響發佈執行個體上的交易報告，反之亦然。
+* 使用&#x200B;**只顯示發佈執行個體**&#x200B;的交易，檢視只發生在已設定的發佈執行個體或發佈伺服器陣列上的所有交易。
 * 使用類別： **已處理的檔案**、**已轉譯的檔案**&#x200B;及&#x200B;**Forms已提交的檔案**&#x200B;來檢視對應的交易。 如需這些類別中記帳的交易型別，請參閱[可記帳交易報表API](../../forms/using/transaction-reports-billable-apis.md)。
 
 ## 檢視交易報告記錄 {#view-transaction-reporting-logs}

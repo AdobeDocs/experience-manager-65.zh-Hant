@@ -10,13 +10,24 @@ exl-id: eabd8335-6140-4c15-8cff-21608719aa5f
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,Operations
 role: Admin
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+  - id: 8a70d214-ab7b-58c1-b001-2ed2e5d6303d
+    internal-label: Operations
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '4969'
+source-wordcount: '4975'
 ht-degree: 0%
-
 ---
-
 # 使用JMX主控台監控伺服器資源{#monitoring-server-resources-using-the-jmx-console}
 
 JMX主控台可讓您監視和管理CRX伺服器上的服務。 接下來的章節會概述透過JMX架構公開的屬性和作業。
@@ -53,37 +64,37 @@ JMX主控台可讓您監視和管理CRX伺服器上的服務。 接下來的章�
 * 引數：無
 * 傳回值：包含下列資料行的表格資料：
 
-   * 工作
-   * 佇列名稱
-   * 作用中的工作
-   * 平均處理時間
-   * 平均等待時間
-   * 取消的工作
-   * 失敗的工作
-   * 完成的工作
-   * 已處理工作
-   * 已排入佇列的工作
+  * 工作
+  * 佇列名稱
+  * 作用中的工作
+  * 平均處理時間
+  * 平均等待時間
+  * 取消的工作
+  * 失敗的工作
+  * 完成的工作
+  * 已處理工作
+  * 已排入佇列的工作
 
 **returnWorkflowJobTopicInfo**&#x200B;列出工作流程工作的處理資訊，依主題組織。
 
 * 引數：無
 * 傳回值：包含下列資料行的表格資料：
 
-   * 主題名稱
-   * 平均處理時間
-   * 平均等待時間
-   * 取消的工作
-   * 失敗的工作
-   * 完成的工作
-   * 已處理工作
+  * 主題名稱
+  * 平均處理時間
+  * 平均等待時間
+  * 取消的工作
+  * 失敗的工作
+  * 完成的工作
+  * 已處理工作
 
 **returnFailedWorkflowCount**&#x200B;顯示失敗的工作流程執行個體數目。 您可以指定工作流程模型，以查詢或擷取所有工作流程模型的資訊。
 
 * 引數：
 
-   * model：要查詢的模型的ID。 若要檢視所有工作流程模型的失敗工作流程例項計數，請勿指定任何值。 ID是模型節點的路徑，例如：
+  * model：要查詢的模型的ID。 若要檢視所有工作流程模型的失敗工作流程例項計數，請勿指定任何值。 ID是模型節點的路徑，例如：
 
-     `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
+    `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
 
 * 傳回值：失敗的工作流程例項數目。
 
@@ -96,65 +107,65 @@ JMX主控台可讓您監視和管理CRX伺服器上的服務。 接下來的章�
 
 * 引數：
 
-   * 重新啟動執行個體： （選擇性）指定值`true`可在執行個體終止後重新啟動執行個體。 預設值`false`不會重新啟動已終止的工作流程執行個體。
-   * 試執行： （選擇性）指定值`true`以檢視作業的結果，而不實際執行作業。 預設值`false`會導致執行作業。
-   * 模型： （選用）套用作業的模型識別碼。 指定沒有模型可將操作套用至所有工作流程模型的失敗執行個體。 ID是模型節點的路徑，例如：
+  * 重新啟動執行個體： （選擇性）指定值`true`可在執行個體終止後重新啟動執行個體。 預設值`false`不會重新啟動已終止的工作流程執行個體。
+  * 試執行： （選擇性）指定值`true`以檢視作業的結果，而不實際執行作業。 預設值`false`會導致執行作業。
+  * 模型： （選用）套用作業的模型識別碼。 指定沒有模型可將操作套用至所有工作流程模型的失敗執行個體。 ID是模型節點的路徑，例如：
 
-     `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
+    `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
 
 * 傳回值：有關已終止執行處理的表格資料，包含下列資料欄：
 
-   * 發起人
-   * InstanceId
-   * 模型ID
-   * 承載
-   * StartComment
-   * 工作流程標題
+  * 發起人
+  * InstanceId
+  * 模型ID
+  * 承載
+  * StartComment
+  * 工作流程標題
 
 **retryFailedWorkItems**&#x200B;嘗試執行工作專案步驟失敗。 您可以針對特定工作流程模型重試所有失敗的工作專案，或僅重試失敗的工作專案。 您可以選擇性地測試作業以檢視結果，而不實際執行作業。
 
 * 引數：
 
-   * 試執行： （選擇性）指定值`true`以檢視作業的結果，而不實際執行作業。 預設值`false`會導致執行作業。
-   * 模型： （選用）套用作業的模型識別碼。 指定沒有模型可將操作套用至所有工作流程模型的失敗工作專案。 ID是模型節點的路徑，例如：
+  * 試執行： （選擇性）指定值`true`以檢視作業的結果，而不實際執行作業。 預設值`false`會導致執行作業。
+  * 模型： （選用）套用作業的模型識別碼。 指定沒有模型可將操作套用至所有工作流程模型的失敗工作專案。 ID是模型節點的路徑，例如：
 
-     `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
+    `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
 
 * 傳回值：關於重試的失敗工作專案的表格式資料，包括下列欄：
 
-   * 發起人
-   * InstanceId
-   * 模型ID
-   * 承載
-   * StartComment
-   * 工作流程標題
+  * 發起人
+  * InstanceId
+  * 模型ID
+  * 承載
+  * StartComment
+  * 工作流程標題
 
 **PurgeActive**&#x200B;移除特定頁面的作用中工作流程執行個體。 您可以清除所有模型的作用中例證，或僅清除特定模型的例證。 您可以選擇性地測試作業以檢視結果，而無需實際執行作業。
 
 * 引數：
 
-   * 模型： （選用）套用作業的模型識別碼。 指定沒有模型可將操作套用到所有工作流程模型的工作流程例項。 ID是模型節點的路徑，例如：
+  * 模型： （選用）套用作業的模型識別碼。 指定沒有模型可將操作套用到所有工作流程模型的工作流程例項。 ID是模型節點的路徑，例如：
 
-     `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
-   * 自工作流程開始以來的天數：要永久刪除的工作流程執行處理的存留期（以天為單位）。
-   * 試執行： （選擇性）指定值`true`以檢視作業的結果，而不實際執行作業。 預設值`false`會導致執行作業。
+    `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
+  * 自工作流程開始以來的天數：要永久刪除的工作流程執行處理的存留期（以天為單位）。
+  * 試執行： （選擇性）指定值`true`以檢視作業的結果，而不實際執行作業。 預設值`false`會導致執行作業。
 
 * 傳回值：關於已清除之作用中工作流程執行處理的表格資料，包括下列欄：
 
-   * 發起人
-   * InstanceId
-   * 模型ID
-   * 承載
-   * StartComment
-   * 工作流程標題
+  * 發起人
+  * InstanceId
+  * 模型ID
+  * 承載
+  * StartComment
+  * 工作流程標題
 
 **countStaleWorkflows**&#x200B;傳回過時的工作流程執行個體數目。 您可以擷取所有工作流程模型或特定模型的過時例項數。
 
 * 引數：
 
-   * 模型： （選用）套用作業的模型識別碼。 指定沒有模型可將操作套用到所有工作流程模型的工作流程例項。 ID是模型節點的路徑，例如：
+  * 模型： （選用）套用作業的模型識別碼。 指定沒有模型可將操作套用到所有工作流程模型的工作流程例項。 ID是模型節點的路徑，例如：
 
-     `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
+    `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
 
 * 傳回值：過時的工作流程例項數目。
 
@@ -162,10 +173,10 @@ JMX主控台可讓您監視和管理CRX伺服器上的服務。 接下來的章�
 
 * 引數：
 
-   * 模型： （選用）套用作業的模型識別碼。 不指定任何模型以將此作業套用至所有工作流程模型的過時執行個體。 ID是模型節點的路徑，例如：
+  * 模型： （選用）套用作業的模型識別碼。 不指定任何模型以將此作業套用至所有工作流程模型的過時執行個體。 ID是模型節點的路徑，例如：
 
-     `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
-   * 試執行： （選擇性）指定值`true`以檢視作業的結果，而不實際執行作業。 預設值`false`會導致執行作業。
+    `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
+  * 試執行： （選擇性）指定值`true`以檢視作業的結果，而不實際執行作業。 預設值`false`會導致執行作業。
 
 * 傳回的值：重新啟動的工作流程執行個體清單。
 
@@ -178,9 +189,9 @@ JMX主控台可讓您監視和管理CRX伺服器上的服務。 接下來的章�
 
 * 引數：
 
-   * 模型： （選用）傳回執行中例項數目的模型識別碼。 指定無模型可傳回所有工作流程模型的執行中例項數目。 ID是模型節點的路徑，例如：
+  * 模型： （選用）傳回執行中例項數目的模型識別碼。 指定無模型可傳回所有工作流程模型的執行中例項數目。 ID是模型節點的路徑，例如：
 
-     `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
+    `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
 
 * 傳回值：執行中的工作流程例項數目。
 
@@ -188,9 +199,9 @@ JMX主控台可讓您監視和管理CRX伺服器上的服務。 接下來的章�
 
 * 引數：
 
-   * 模型： （選用）傳回已完成例項數目的模型識別碼。 指定無模型可傳回所有工作流程模型的已完成例項數。 ID是模型節點的路徑，例如：
+  * 模型： （選用）傳回已完成例項數目的模型識別碼。 指定無模型可傳回所有工作流程模型的已完成例項數。 ID是模型節點的路徑，例如：
 
-     `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
+    `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
 
 * 傳回值：已完成的工作流程例項數目。
 
@@ -198,20 +209,20 @@ JMX主控台可讓您監視和管理CRX伺服器上的服務。 接下來的章�
 
 * 引數：
 
-   * 模型： （選用）套用作業的模型識別碼。 指定沒有模型可將操作套用到所有工作流程模型的工作流程例項。 ID是模型節點的路徑，例如：
+  * 模型： （選用）套用作業的模型識別碼。 指定沒有模型可將操作套用到所有工作流程模型的工作流程例項。 ID是模型節點的路徑，例如：
 
-     `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
-   * 自工作流程完成以來的天數：工作流程執行個體處於已完成狀態的天數。
-   * 試執行： （選擇性）指定值`true`以檢視作業的結果，而不實際執行作業。 預設值`false`會導致執行作業。
+    `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
+  * 自工作流程完成以來的天數：工作流程執行個體處於已完成狀態的天數。
+  * 試執行： （選擇性）指定值`true`以檢視作業的結果，而不實際執行作業。 預設值`false`會導致執行作業。
 
 * 傳回值：已清除之已完成工作流程執行處理的表格資料，包括下列欄：
 
-   * 發起人
-   * InstanceId
-   * 模型ID
-   * 承載
-   * StartComment
-   * 工作流程標題
+  * 發起人
+  * InstanceId
+  * 模型ID
+  * 承載
+  * StartComment
+  * 工作流程標題
 
 ## 存放庫 {#repository}
 
@@ -252,7 +263,7 @@ CRX存放庫的相關資訊
   </tr>
   <tr>
    <td>identifier.stability</td>
-   <td>指示無法參照的節點識別碼的穩定性。可能的值如下：
+   <td>指示無法參照的節點識別碼的穩定性。 可能的值如下：
     <ul>
      <li>identifier.stability.indefinition.duration：識別碼不會變更。</li>
      <li>identifier.stability.method.duration：識別碼可以在方法呼叫之間變更。</li>
@@ -532,7 +543,7 @@ CRX存放庫的相關資訊
 
 * 引數：
 
-   * name：代表新工作區名稱的字串值。
+  * name：代表新工作區名稱的字串值。
 
 * 傳回值：無
 
@@ -540,7 +551,7 @@ CRX存放庫的相關資訊
 
 * 引數：
 
-   * 刪除：Boolean值，指示是否刪除未使用的存放庫專案。 true值會刪除未使用的節點和屬性。 若值為false，則會掃描所有節點，但不會刪除任何節點。
+  * 刪除：Boolean值，指示是否刪除未使用的存放庫專案。 true值會刪除未使用的節點和屬性。 若值為false，則會掃描所有節點，但不會刪除任何節點。
 
 * 傳回值：無
 
@@ -553,13 +564,13 @@ CRX存放庫的相關資訊
 
 * 引數：
 
-   * `target`： （選用）代表要封存存放庫資料的ZIP檔案或目錄名稱的`String`值。 若要使用ZIP檔案，請包含ZIP副檔名。 若要使用目錄，請勿包含副檔名。
+  * `target`： （選用）代表要封存存放庫資料的ZIP檔案或目錄名稱的`String`值。 若要使用ZIP檔案，請包含ZIP副檔名。 若要使用目錄，請勿包含副檔名。
 
-     若要執行增量備份，請指定先前用於備份的目錄。
+    若要執行增量備份，請指定先前用於備份的目錄。
 
-     您可以指定絕對或相對路徑。 相對路徑相對於crx-quickstart目錄的父項。
+    您可以指定絕對或相對路徑。 相對路徑相對於crx-quickstart目錄的父項。
 
-     若未指定任何值，則使用`backup-currentdate.zip`的預設值，其中`currentdate`的格式為`yyyyMMdd-HHmm`。
+    若未指定任何值，則使用`backup-currentdate.zip`的預設值，其中`currentdate`的格式為`yyyyMMdd-HHmm`。
 
 * 傳回值：無
 
@@ -592,7 +603,7 @@ CRX存放庫的相關資訊
 
 * 引數：
 
-   * `background`：布林值，指出是否要在背景執行作業，以便Web主控台在執行期間可以使用。 值為true會在背景中執行作業。
+  * `background`：布林值，指出是否要在背景執行作業，以便Web主控台在執行期間可以使用。 值為true會在背景中執行作業。
 
 * 傳回值：無
 
@@ -605,9 +616,9 @@ CRX存放庫的相關資訊
 
 * 引數：
 
-   * `master`：字串值，代表執行主要存放庫節點之電腦的IP位址或電腦名稱。
-   * `username`：用來驗證叢集的名稱。
-   * `password`：用於驗證的密碼。
+  * `master`：字串值，代表執行主要存放庫節點之電腦的IP位址或電腦名稱。
+  * `username`：用來驗證叢集的名稱。
+  * `password`：用於驗證的密碼。
 
 * 傳回值：無
 
@@ -623,28 +634,28 @@ CRX存放庫的相關資訊
 * 類型：`TimeSeries`
 * 名稱： `org.apache.jackrabbit.api.stats.RepositoryStatistics.Type` Enum類別的下列值之一：
 
-   * BUNDLE_CACHE_ACCESS_COUNTER
-   * BUNDLE_CACHE_MISS_AVERAGE
-   * BUNDLE_CACHE_MISS_COUNTER
-   * BUNDLE_CACHE_MISS_DURATION
-   * BUNDLE_CACHE_SIZE_COUNTER
-   * BUNDLE_COUNTER
-   * BUNDLE_READ_COUNTER
-   * BUNDLE_WRITE_AVERAGE
-   * BUNDLE_WRITE_COUNTER
-   * BUNDLE_WRITE_DURATION
-   * BUNDLE_WS_SIZE_COUNTER
-   * QUERY_AVERAGE
-   * QUERY_COUNT
-   * QUERY_DURATION
-   * SESSION_COUNT
-   * SESSION_LOGIN_COUNTER
-   * SESSION_READ_AVERAGE
-   * SESSION_READ_COUNTER
-   * SESSION_READ_DURATION
-   * SESSION_WRITE_AVERAGE
-   * SESSION_WRITE_COUNTER
-   * SESSION_WRITE_DURATION
+  * BUNDLE_CACHE_ACCESS_COUNTER
+  * BUNDLE_CACHE_MISS_AVERAGE
+  * BUNDLE_CACHE_MISS_COUNTER
+  * BUNDLE_CACHE_MISS_DURATION
+  * BUNDLE_CACHE_SIZE_COUNTER
+  * BUNDLE_COUNTER
+  * BUNDLE_READ_COUNTER
+  * BUNDLE_WRITE_AVERAGE
+  * BUNDLE_WRITE_COUNTER
+  * BUNDLE_WRITE_DURATION
+  * BUNDLE_WS_SIZE_COUNTER
+  * QUERY_AVERAGE
+  * QUERY_COUNT
+  * QUERY_DURATION
+  * SESSION_COUNT
+  * SESSION_LOGIN_COUNTER
+  * SESSION_READ_AVERAGE
+  * SESSION_READ_COUNTER
+  * SESSION_READ_DURATION
+  * SESSION_WRITE_AVERAGE
+  * SESSION_WRITE_COUNTER
+  * SESSION_WRITE_DURATION
 
 ### 屬性 {#attributes-1}
 
@@ -816,7 +827,7 @@ CRX存放庫的相關資訊
 設定伺服器啟動程式的完成值。 QuickStart視窗上的進度列代表完成值。
 
 * 引數：
-   * p1：浮點值，以分數表示啟動程式完成的程度。 該值應介於0到1之間。 例如，0.3表示30%完成。
+  * p1：浮點值，以分數表示啟動程式完成的程度。 該值應介於0到1之間。 例如，0.3表示30%完成。
 * 傳回值：無。
 
 ## 協力廠商服務 {#third-party-services}

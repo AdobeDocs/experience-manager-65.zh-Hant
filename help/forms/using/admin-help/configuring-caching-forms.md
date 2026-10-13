@@ -9,13 +9,27 @@ exl-id: 6b57d00e-5ba0-41ee-8497-49ecfec5b9ed
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1623'
+source-wordcount: '1631'
 ht-degree: 0%
-
 ---
-
 # 設定Forms的快取{#configuring-caching-for-forms}
 
 >[!NOTE]
@@ -44,7 +58,7 @@ Forms支援兩種快取模式：
 * 無條件
 * 使用快取檢查點
 
-如果您在快取模式之間切換，請重新啟動Forms服務以使變更生效。 若要重新啟動此服務，請使用Workbench，或參閱[啟動或停止與AEM表單模組](/help/forms/using/admin-help/starting-stopping-services.md#start-or-stop-the-services-associated-with-aem-forms-modules)關聯的服務以取得指示。
+如果您在快取模式之間切換，請重新啟動Forms服務以使變更生效。 若要重新啟動此服務，請使用Workbench，或參閱[啟動或停止與AEM表單模組](/help/forms/using/admin-help/starting-stopping-services.md#start-or-stop-the-services-associated-with-aem-forms-modules)相關的服務以取得指示。
 
 當您在模式之間切換時，會自動重設快取檢查點時間。
 
@@ -94,7 +108,7 @@ Forms支援兩種快取模式：
 
 ### 指定全域快取設定 {#specifying-global-cache-settings}
 
-**全域快取設定**&#x200B;區域中的設定會影響所有型別的快取。 如果您變更其中一項設定，請重新啟動Forms服務，變更才會生效。 若要重新啟動此服務，請使用Workbench，或參閱[啟動或停止與AEM表單模組](/help/forms/using/admin-help/starting-stopping-services.md#start-or-stop-the-services-associated-with-aem-forms-modules)關聯的服務以取得指示。
+**全域快取設定**&#x200B;區域中的設定會影響所有型別的快取。 如果您變更其中一項設定，請重新啟動Forms服務，變更才會生效。 若要重新啟動此服務，請使用Workbench，或參閱[啟動或停止與AEM表單模組](/help/forms/using/admin-help/starting-stopping-services.md#start-or-stop-the-services-associated-with-aem-forms-modules)相關的服務以取得指示。
 
 **最大快取檔案大小(KB)：**&#x200B;可儲存在任何記憶體內部快取中的表單設計或其他資源的大小上限（以KB為單位）。 此為全域設定，適用於所有記憶體中的快取。 如果資源大於此值，則不會在記憶體中快取。 預設值為1024 KB。 此設定不會影響磁碟快取。
 
@@ -104,11 +118,11 @@ Forms支援兩種快取模式：
 
 Forms服務收到轉譯請求時，會從存放庫擷取表單設計並加以快取。 此快取可改善效能，因為對於後續的轉譯要求，Forms服務會從快取中擷取表單設計，而非從存放庫擷取。
 
-Forms服務一律會在磁碟上快取表單設計。 如果表單設計儲存在伺服器上，則這些檔案會被視為磁碟快取。 Forms服務也會根據&#x200B;**在記憶體範本快取**&#x200B;區域中的設定，在記憶體中快取表單設計。 如果您變更其中任何設定，請重新啟動Forms服務，變更才會生效。 若要重新啟動此服務，請使用Workbench，或參閱[啟動或停止與AEM表單模組](/help/forms/using/admin-help/starting-stopping-services.md#start-or-stop-the-services-associated-with-aem-forms-modules)關聯的服務以取得指示。
+Forms服務一律會在磁碟上快取表單設計。 如果表單設計儲存在伺服器上，則這些檔案會被視為磁碟快取。 Forms服務也會根據&#x200B;**在記憶體範本快取**&#x200B;區域中的設定，在記憶體中快取表單設計。 如果您變更其中任何設定，請重新啟動Forms服務，變更才會生效。 若要重新啟動此服務，請使用Workbench，或參閱[啟動或停止與AEM表單模組](/help/forms/using/admin-help/starting-stopping-services.md#start-or-stop-the-services-associated-with-aem-forms-modules)相關的服務以取得指示。
 
-**範本組態快取大小：**&#x200B;要保留在記憶體中的範本組態物件數目上限。 預設值為 100。建議您將此值設定為大於或等於「範本快取大小」值。 此設定不會影響磁碟快取。
+**範本組態快取大小：**&#x200B;要保留在記憶體中的範本組態物件數目上限。 預設值為 100。 建議您將此值設定為大於或等於「範本快取大小」值。 此設定不會影響磁碟快取。
 
-**範本快取大小：**&#x200B;要保留在記憶體中的範本內容物件數目上限。 預設值為 100。此設定不會影響磁碟快取。
+**範本快取大小：**&#x200B;要保留在記憶體中的範本內容物件數目上限。 預設值為 100。 此設定不會影響磁碟快取。
 
 **已啟用：**&#x200B;預設會選取此核取方塊，表示記憶體中快取了表單範本。 未選取此選項時，表單範本只會快取在磁碟上。
 
@@ -116,9 +130,9 @@ Forms服務一律會在磁碟上快取表單設計。 如果表單設計儲存�
 
 Forms服務會快取轉譯的表單，因此不需要在後續請求中解析及轉譯相同的表單。 呈現的表單會快取在磁碟和記憶體中。
 
-這些設定位於記憶體表單轉譯快取&#x200B;**區域中的**&#x200B;中。 如果您變更其中一項設定，請重新啟動Forms服務，變更才會生效。 若要重新啟動此服務，請使用Workbench，或參閱[啟動或停止與AEM表單模組](/help/forms/using/admin-help/starting-stopping-services.md#start-or-stop-the-services-associated-with-aem-forms-modules)關聯的服務以取得指示。
+這些設定位於記憶體表單轉譯快取&#x200B;**區域中的**&#x200B;中。 如果您變更其中一項設定，請重新啟動Forms服務，變更才會生效。 若要重新啟動此服務，請使用Workbench，或參閱[啟動或停止與AEM表單模組](/help/forms/using/admin-help/starting-stopping-services.md#start-or-stop-the-services-associated-with-aem-forms-modules)相關的服務以取得指示。
 
-**快取大小：**&#x200B;指定記憶體內部快取中可容納的轉譯表單數目上限。 預設值為 100。此設定不會影響磁碟快取。
+**快取大小：**&#x200B;指定記憶體內部快取中可容納的轉譯表單數目上限。 預設值為 100。 此設定不會影響磁碟快取。
 
 **已啟用：**&#x200B;預設會選取此選項，表示演算後的表單會快取到記憶體中。 未選取此選項時，轉譯的表單僅會快取在磁碟上。
 

@@ -8,13 +8,22 @@ feature: Configuring
 exl-id: c1c90d6a-ee5a-487d-9a8a-741b407c8c06
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: f2c92b990a5c09cbcf532e0800e264620d98af77
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 523b1ccd-901e-5e3b-9fa7-f3dfd82463d5
+    internal-label: Configuring
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '3615'
+source-wordcount: '3617'
 ht-degree: 1%
-
 ---
-
 # 在AEM 6中設定節點存放區和資料存放區{#configuring-node-stores-and-data-stores-in-aem}
 
 ## 簡介 {#introduction}
@@ -119,7 +128,7 @@ customBlobStore=B"false"
 >
 >若要啟用自訂資料存放區，您必須確定在個別節點存放區組態檔（[區段節點存放區](/help/sites-deploying/data-store-config.md#segment-node-store)或[檔案節點存放區](/help/sites-deploying/data-store-config.md#document-node-store)）中，`customBlobStore`已設為`true`。
 
-### 檔案資料存放區 {#file-data-store}
+### 檔案資料存放庫 {#file-data-store}
 
 這是Jackrabbit 2中的[FileDataStore](https://jackrabbit.apache.org/api/trunk/org/apache/jackrabbit/core/data/FileDataStore.html)實作。 它提供一種將二進位資料儲存為檔案系統上一般檔案的方法。 它使用`org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore` PID。
 
@@ -327,13 +336,13 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 若要使用S3設定無二進位式複製，必須執行下列步驟：
 
 1. 安裝作者和發佈執行個體，並確定它們已正確啟動。
-1. 透過開啟&#x200B;*https://localhost:4502/etc/replication/agents.author/publish.html*&#x200B;的頁面，前往復寫代理程式設定。
+1. 開啟&#x200B;*https://localhost:4502/etc/replication/agents.author/publish.html*&#x200B;的頁面，前往復寫代理程式設定。
 1. 按&#x200B;**設定**&#x200B;區段中的&#x200B;**編輯**&#x200B;按鈕。
 1. 將&#x200B;**序列化**&#x200B;型別選項變更為&#x200B;**少二進位**。
 
 1. 在傳輸URI中新增引數&quot; `binaryless`= `true`&quot;。 在變更後，URI應該看起來類似以下內容：
 
-   *https://localhost:4503/bin/receive？sling:authRequestLogin=1&amp;binaryless=true*
+   *https://localhost:4503/bin/receive?sling:authRequestLogin=1&amp;binaryless=true*
 
 1. 重新啟動所有製作和發佈執行個體，讓變更生效。
 
@@ -407,7 +416,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
    * 針對`FileDataStore`，檔案會在資料存放區資料夾的根路徑下建立。
    * 針對`S3DataStore`，檔案是在`META`資料夾下已設定的S3儲存貯體中建立的。
 
-## Azure 資料存放區 {#azure-data-store}
+## Azure 資料存放庫 {#azure-data-store}
 
 AEM可設定為將資料儲存在Microsoft®的Azure儲存服務。 它使用`org.apache.jackrabbit.oak.plugins.blob.datastore.AzureDataStore.config` PID進行設定。
 

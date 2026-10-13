@@ -1,6 +1,6 @@
 ---
 title: 為EMC Documentum設定聯結器
-description: 瞭解如何設定EMC Documentum聯結器，以啟用AEM Forms與EMC Documentum之間的通訊。
+description: 瞭解如何設定EMC Documentum聯結器，以啟用AEM表單與EMC Documentum之間的通訊。
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/connecting_to_a_content_management_system
@@ -9,13 +9,27 @@ exl-id: a31a496f-87b9-43c0-a98c-5f6ca5d11690
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 feature: Adaptive Forms
-source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1032'
-ht-degree: 0%
-
+source-wordcount: '1043'
+ht-degree: 1%
 ---
-
 # 為EMC Documentum設定聯結器 {#configuring-connector-for-emc-documentum}
 
 >[!NOTE]
@@ -28,7 +42,7 @@ Connector for EMC Documentum可讓AEM Forms與EMC Documentum通訊。 如需其�
 
 >[!NOTE]
 >
->在舊版中，資產可以儲存在ECM存放庫中。 在目前版本中，資產儲存在AEM表單原生存放庫中，且存放庫提供者服務已過時。 資產從ECM存放庫移轉至AEM表單存放庫會在您執行升級為AEM表單時完成。 如需詳細資訊，請參閱您應用程式伺服器的AEM表單升級指南。
+>在舊版中，資產可以儲存在ECM存放庫中。 在目前版本中，資產儲存在AEM表單原生存放庫中，且存放庫提供者服務已過時。 資產從ECM存放庫移轉至AEM表單存放庫會在您執行升級為AEM表單時完成。 如需詳細資訊，請參閱應用程式伺服器的AEM表單升級指南。
 
 ## 設定伺服器連線 {#configuring-the-server-connection}
 
@@ -72,7 +86,7 @@ Connector for EMC Documentum可讓AEM Forms與EMC Documentum通訊。 如需其�
 
 >[!NOTE]
 >
->若要選取列出的儲存區域服務提供者以外的儲存區域服務提供者，請在「應用程式與服務>服務管理」中設定RepositoryService。<!-- Fix broken link (See Managing Services) -->。
+>若要選取列出的儲存區域服務提供者以外的儲存區域服務提供者，請在「應用程式與服務>服務管理」中設定RepositoryService。 <!-- Fix broken link (See Managing Services) -->.
 
 1. 在管理控制檯中，按一下「服務」>「EMC Documentum聯結器」>「組態設定」。
 1. 在「存放庫服務提供者資訊」區域中，選取替代的存放庫服務提供者。

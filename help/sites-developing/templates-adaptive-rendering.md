@@ -9,16 +9,25 @@ exl-id: 58cac3b1-b7cd-44b2-b89b-f5ee8811c198
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
-source-wordcount: '492'
+source-wordcount: '497'
 ht-degree: 2%
-
 ---
-
 # 最適化範本演算{#adaptive-template-rendering}
 
-最適化範本演算提供管理變異頁面的方法。 此功能原本很適合用於為行動裝置提供各種HTML輸出（例如功能手機與智慧型手機），但在需要將體驗提供給需要不同標籤或HTML輸出的各種裝置時，此功能會很有用。
+最適化範本演算提供管理變異頁面的方法。 此功能原先很適合用於為行動裝置提供各種HTML輸出（例如功能手機與智慧型手機），當體驗必須提供給需要不同標籤或HTML輸出的各種裝置時，此功能會很有用。
 
 ## 概觀 {#overview}
 
@@ -63,7 +72,7 @@ ht-degree: 2%
 
    ![chlimage_1-159](assets/chlimage_1-159.png)
 
-1. 使用CRXDE Lite，將裝置群組新增至網站結構上的多值字串屬性`cq:deviceGroups`，允許裝置群組在您的網站上使用。
+1. 使用CRXDE Lite，將裝置群組新增至網站結構上的多值字串屬性`cq:deviceGroups`，讓裝置群組可在您的網站上使用。
 
    `/content/<your-site>/jcr:content`
 

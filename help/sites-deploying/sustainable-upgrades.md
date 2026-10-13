@@ -10,13 +10,22 @@ feature: Upgrading
 exl-id: b777fdca-e7a5-427a-9e86-688dd7cac636
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 835ee49e-9248-5578-a60a-15c097807178
+    internal-label: Upgrading
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '860'
+source-wordcount: '856'
 ht-degree: 0%
-
 ---
-
 # 永續升級{#sustainable-upgrades}
 
 ## Customization Framework {#customization-framework}
@@ -29,7 +38,7 @@ ht-degree: 0%
 
 #### API表面 {#api-surface}
 
-在舊版Adobe Experience Manager (AEM)中，許多API是透過Uber Jar公開。 其中部分API並非打算供客戶使用，而是公開支援跨套件組合的AEM功能。 日後，Java™ API會標示為「公用」或「私用」，以向客戶指出哪些API可在升級環境中安全使用。 其他細節包括：
+在舊版Adobe Experience Manager (AEM)中，許多API是透過Uber Jar公開。 其中部分API並非打算供客戶使用，而是公開支援各套裝的AEM功能。 日後，Java™ API會標示為「公用」或「私用」，以向客戶指出哪些API可在升級環境中安全使用。 其他細節包括：
 
 * 標示為`Public`的Java™ API可供自訂實作套件組合使用和參考。
 
@@ -45,17 +54,17 @@ ht-degree: 0%
 
 #### 內容分類 {#content-classifications}
 
-AEM一直使用覆蓋和Sling Resource Merger的原則來允許客戶擴充和自訂AEM功能。 支援AEM主控台和UI的預先定義功能儲存在&#x200B;**/libs**&#x200B;中。 客戶永遠無法修改&#x200B;**/libs**&#x200B;下的任何專案，但可以在&#x200B;**/apps**&#x200B;下新增其他內容，以覆蓋及擴充&#x200B;**/libs**&#x200B;中定義的功能（如需詳細資訊，請參閱使用覆蓋開發）。 升級AEM時，這仍會造成許多問題，因為&#x200B;**/libs**&#x200B;中的內容可能會變更，導致覆蓋功能以非預期的方式中斷。 客戶也可以透過`sling:resourceSuperType`的繼承擴充AEM元件，或直接透過sling：resourceType參考&#x200B;**/libs**&#x200B;中的元件。 在參考和覆寫使用案例時可能會發生類似的升級問題。
+AEM一直使用覆蓋和Sling Resource Merger的原則來允許客戶擴充和自訂AEM功能。 支援AEM主控台和UI的預先定義功能儲存在&#x200B;**/libs**&#x200B;中。 客戶永遠無法修改&#x200B;**/libs**&#x200B;下的任何專案，但可以在&#x200B;**/apps**&#x200B;下新增其他內容，以覆蓋及擴充&#x200B;**/libs**&#x200B;中定義的功能（如需詳細資訊，請參閱使用覆蓋開發）。 升級AEM時，這仍會造成許多問題，因為&#x200B;**/libs**&#x200B;中的內容可能會變更，導致覆蓋功能以非預期的方式中斷。 客戶也可以透過`sling:resourceSuperType`的繼承擴充AEM元件，或直接透過sling:resourceType參考&#x200B;**/libs**&#x200B;中的元件。 在參考和覆寫使用案例時可能會發生類似的升級問題。
 
 為了讓客戶更安全輕鬆地瞭解&#x200B;**/libs**&#x200B;的哪些區域可安全使用和覆蓋，**/libs**&#x200B;中的內容已使用下列mixin進行分類：
 
-* **公用(granite：PublicArea)** — 將節點定義為公用，以便可以重疊、繼承(`sling:resourceSuperType`)或直接使用(`sling:resourceType`)。 標示為Public的/libs底下的節點可以安全升級，並加入相容性套件。 一般而言，客戶應僅使用標示為「公用」的節點。
+* **公用(granite:PublicArea)** — 將節點定義為公用，以便可以重疊、繼承(`sling:resourceSuperType`)或直接使用(`sling:resourceType`)。 標示為Public的/libs底下的節點可以安全升級，並加入相容性套件。 一般而言，客戶應僅使用標示為「公用」的節點。
 
-* **抽象(granite：AbstractArea)** — 將節點定義為抽象。 節點可以覆蓋或繼承( `sling:resourceSupertype`)，但不能直接使用( `sling:resourceType`)。
+* **抽象(granite:AbstractArea)** — 將節點定義為抽象。 節點可以覆蓋或繼承( `sling:resourceSupertype`)，但不能直接使用( `sling:resourceType`)。
 
-* **最終(granite：FinalArea)** — 將節點定義為最終。 最好是分類為最終節點的節點不應覆蓋或繼承。 可透過`sling:resourceType`直接使用最終節點。 依預設，最終節點下的子節點會視為內部。
+* **最終(granite:FinalArea)** — 將節點定義為最終節點。 最好是分類為最終節點的節點不應覆蓋或繼承。 可透過`sling:resourceType`直接使用最終節點。 依預設，最終節點下的子節點會視為內部。
 
-* ***內部(granite：InternalArea)*** *- *將節點定義為內部。 最好是分類為內部的節點不應重疊、繼承或直接使用。 這些節點僅適用於AEM的內部功能
+* ***內部(granite:InternalArea)*** *- *將節點定義為內部。 最好是分類為內部的節點不應重疊、繼承或直接使用。 這些節點僅適用於AEM的內部功能
 
 * **沒有附註** — 節點會根據樹狀結構階層繼承分類。 /根預設為「公用」。 **父項分類為Internal或Final的節點也會被視為內部。**
 
@@ -65,7 +74,7 @@ AEM一直使用覆蓋和Sling Resource Merger的原則來允許客戶擴充和�
 
 #### CRXDE Lite內容型別指標 {#crxde-lite-content-type-indicators}
 
-在CRXDE Lite中套用的Mixin會顯示標示為`INTERNAL`的內容節點和樹狀結構為灰色（灰色）。 對於`FINAL`，只有圖示是灰色。 這些節點的子項也會呈現暗灰色。 在這兩種情況下，覆蓋節點功能都會停用。
+套用至CRXDE Lite的Mixin會顯示標示為`INTERNAL`的內容節點和樹狀結構為灰色（灰色）。 對於`FINAL`，只有圖示是灰色。 這些節點的子項也會呈現暗灰色。 在這兩種情況下，覆蓋節點功能都會停用。
 
 **公用**
 
@@ -83,11 +92,11 @@ AEM一直使用覆蓋和Sling Resource Merger的原則來允許客戶擴充和�
 
 >[!NOTE]
 >
->自AEM 6.5起，Adobe建議使用模式偵測器來偵測內容存取違規。 模式偵測器報告更詳細，可偵測更多問題，並降低誤報的可能性。
+>截至AEM 6.5，Adobe建議使用模式偵測器來偵測內容存取違規。 模式偵測器報告更詳細，可偵測更多問題，並降低誤報的可能性。
 >
 >如需詳細資訊，請參閱[使用模式偵測器評估升級複雜性](/help/sites-deploying/pattern-detector.md)。
 
-AEM 6.5隨附健康情況檢查，如果以與內容分類不一致的方式使用覆蓋或參考的內容，則會提醒客戶。
+AEM 6.5隨附健康情況檢查，如果以與內容分類不一致的方式使用覆蓋或參考內容，會提醒客戶。
 
 **&#x200B; Sling/Granite Content Access Check**&#x200B;是新的健康狀態檢查，可監視存放庫，以檢視客戶程式碼是否不適當地存取AEM中受保護的節點。
 
@@ -95,7 +104,7 @@ AEM 6.5隨附健康情況檢查，如果以與內容分類不一致的方式使�
 
 若要存取這項新的健康情況檢查，請執行下列動作：
 
-1. 從AEM首頁畫面，瀏覽至&#x200B;**工具>作業>健康狀態報告**
+1. 在AEM首頁畫面中，導覽至&#x200B;**工具>作業>健康狀態報告**
 1. 按一下&#x200B;**Sling/Granite內容存取檢查**。
 
    ![screen_shot_2017-12-14at55648pm](assets/screen_shot_2017-12-14at55648pm.png)

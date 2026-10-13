@@ -5,26 +5,40 @@ exl-id: cd3da71f-892c-4fde-905f-71a64fb5d4e4
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 9b4dd5a4a137e529be8142fff1ddbfca889e64ae
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1032'
-ht-degree: 5%
-
+source-wordcount: '1045'
+ht-degree: 6%
 ---
-
 # 將AEM Forms與Microsoft® Office 365郵件伺服器通訊協定整合 {#oauth2-support-for-the-microsoft-mail-server-protocols}
 
 為了讓組織遵守安全電子郵件要求，AEM Forms提供OAuth 2.0支援，以便與Microsoft® Office 365郵件伺服器通訊協定整合。 您可以使用Azure Active Directory (Azure AD) OAuth 2.0驗證服務來連線各種通訊協定，例如IMAP、POP或SMTP，並存取Office 365使用者的電子郵件資料。 以下是設定® Office 365郵件伺服器通訊協定以透過OAuth 2.0服務進行驗證的逐步指示：
 
 1. 登入[https://portal.azure.com/](https://portal.azure.com/)並在搜尋列中搜尋&#x200B;**Azure Active Directory**，然後按一下結果。
-或者，您可以直接瀏覽到[https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview)
+或者，您可以直接瀏覽到 [https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview)
 1. 按一下&#x200B;**新增** > **應用程式註冊** > **新註冊**。
 
    ![應用程式註冊](/help/forms/using/assets/outh_outlook_microsoft_azure.png)
 
 1. 根據您的要求填寫資訊，然後按一下「**註冊**」。
    ![支援的帳戶](/help/forms/using/assets/azure_suuportedaccountype.png)
-在上述案例中，已選取任何組織目錄（任何Azure AD目錄 — 多租使用者）和個人Microsoft®帳戶（例如Skype、Xbox）中的&#x200B;**帳戶**&#x200B;選項。
+   在上述案例中，已選取任何組織目錄（任何Azure AD目錄 — 多租使用者）和個人Microsoft®帳戶（例如Skype、Xbox）中的&#x200B;**帳戶**&#x200B;選項。
 
    >[!NOTE]
    >

@@ -9,13 +9,20 @@ role: Admin
 exl-id: 67de7e26-3f93-4034-9e3a-5c127f7447bc
 solution: Experience Manager
 feature: Communities
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '213'
 ht-degree: 3%
-
 ---
-
 # 儲存體設定 {#storage-configuration}
 
 儲存體設定是識別為社群內容（也稱為使用者產生的內容，UGC）選擇的儲存體的方法。
@@ -40,17 +47,17 @@ ht-degree: 3%
 * 選取一個選項
 * 正確設定
 
-   * 檢視[選取MSRP](msrp.md#select-msrp)的詳細資料
-   * 檢視[選取DSRP](dsrp.md#select-dsrp)的詳細資料
-   * 檢視[選取ASRP](asrp.md#select-asrp)的詳細資料
+  * 檢視[選取MSRP](msrp.md#select-msrp)的詳細資料
+  * 檢視[選取DSRP](dsrp.md#select-dsrp)的詳細資料
+  * 檢視[選取ASRP](asrp.md#select-asrp)的詳細資料
 
 * 選取&#x200B;**[!UICONTROL 提交]**。
 
 ### 關於JCR儲存 {#about-jcr-storage}
 
-如果未選取任何專案，預設值為AEM存放庫JCR。
+如果未選取任何專案，預設為AEM存放庫JCR。
 
-JCR是&#x200B;*不是*&#x200B;作者和Publish環境共用的公用存放區。 社群內容只會從建立該社群的Author或Publish環境中顯示。
+JCR是&#x200B;*不是*&#x200B;作者和發佈環境共用的公用存放區。 社群內容只會從建立該社群內容的作者或發佈環境中顯示。
 
 如需其他資訊，請造訪[JCR存放區](jsrp.md)。
 

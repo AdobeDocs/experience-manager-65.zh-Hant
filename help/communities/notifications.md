@@ -10,13 +10,20 @@ role: Admin
 exl-id: cadb62c9-210d-4204-8abc-d0cf70960392
 solution: Experience Manager
 feature: Communities
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '610'
 ht-degree: 0%
-
 ---
-
 # 社群通知 {#communities-notifications}
 
 ## 概觀 {#overview}
@@ -34,13 +41,13 @@ AEM Communities提供通知區段，顯示已登入社群成員感興趣的事�
 
 * 通知區段的連結一律會顯示在社群網站的標題中：
 
-   * 活動需要將[活動資料流函式](/help/communities/functions.md#activity-stream-function)包含在社群網站的結構中。
-   * 訂閱需要[設定電子郵件](/help/communities/email.md)。
+  * 活動需要將[活動資料流函式](/help/communities/functions.md#activity-stream-function)包含在社群網站的結構中。
+  * 訂閱需要[設定電子郵件](/help/communities/email.md)。
 
 * 通知的實作透過可擴充和可插拔的管道進行：
 
-   * 活動只能在Web上使用。
-   * 訂閱只能透過電子郵件取得。
+  * 活動只能在Web上使用。
+  * 訂閱只能透過電子郵件取得。
 
 截至Communities [FP1](/help/communities/deploy-communities.md#latestfeaturepack)，可用的通知通道為：
 
@@ -80,11 +87,11 @@ AEM Communities提供通知區段，顯示已登入社群成員感興趣的事�
 * 檢視其他成員的設定檔時。
 * 在主要功能頁面（例如論壇、QnA和部落格）上：
 
-   * 遵循該一般功能的所有活動。
+  * 遵循該一般功能的所有活動。
 
 * 針對特定專案，例如論壇主題、QnA問題或部落格：
 
-   * 追蹤該特定專案的所有活動。
+  * 追蹤該特定專案的所有活動。
 
 ## 管理通知設定 {#managing-notification-settings}
 

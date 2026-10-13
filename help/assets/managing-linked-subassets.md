@@ -1,18 +1,29 @@
 ---
 title: 管理具有引用和多頁面的複合資產
-description: 瞭解如何從 [!DNL Adobe InDesign]、 [!DNL Adobe Illustrator]和 [!DNL Adobe Photoshop]內建立數位資產的參考。 使用「頁面檢視器」功能可檢視多頁檔案（例如PDF、INDD、PPT、PPTX和AI檔案）的個別子資產頁面。
+description: 瞭解如何從[!DNL Adobe InDesign]、[!DNL Adobe Illustrator]和[!DNL Adobe Photoshop]內建立數位資產的參考。 使用「頁面檢視器」功能可檢視多頁檔案（例如PDF、INDD、PPT、PPTX和AI檔案）的個別子資產頁面。
 contentOwner: AG
 role: User, Admin
 feature: Asset Management
 exl-id: 1ea9d8fe-602c-452b-9a24-4125b705aedf
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 7d2b2ec8-499c-5434-9ffd-9218cd71f683
+    internal-label: Asset Management
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1473'
 ht-degree: 0%
-
 ---
-
 # 管理複合和多頁資產 {#managing-compound-assets}
 
 [!DNL Adobe Experience Manager Assets]可識別上傳的檔案是否包含已存在於存放庫中的資產參照。 此功能僅適用於支援的檔案格式。 如果上傳的資產包含對[!DNL Experience Manager]個資產的任何參考，系統會在上傳和參考的資產之間建立雙向連結。

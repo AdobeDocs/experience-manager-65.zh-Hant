@@ -9,13 +9,29 @@ role: Developer
 exl-id: ff42579e-6aaf-433d-8b5d-9e9dd0957250
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Services,APIs & Integrations
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 516393bc-fa69-5e74-a04e-f7ec9ffe2c5e
+    internal-label: APIs & Integrations
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+  - id: f19cff18-c8cc-4a4b-adad-85dd2fa3dbe2
+    internal-label: Document Services
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '15601'
 ht-degree: 0%
-
 ---
-
 # 使用原則保護檔案 {#protecting-documents-with-policies}
 
 **本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
@@ -248,7 +264,7 @@ Document Security服務也會保護其他檔案型別，例如Microsoft Word檔�
    * 呼叫`DocumentSecurityClient`物件的`getPolicyManager`方法，以建立`PolicyManager`物件。
    * 透過叫用`PolicyManager`物件的`registerPolicy`方法並傳遞下列值來登入原則：
 
-      * 代表要註冊之原則的`Policy`物件。
+     * 代表要註冊之原則的`Policy`物件。
 
    * 字串值，代表原則所屬的原則集。
 
@@ -284,9 +300,9 @@ Document Security服務也會保護其他檔案型別，例如Microsoft Word檔�
    * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作來啟用基本的HTTP驗證：
 
-      * 將AEM表單使用者名稱指派給欄位`RightsManagementServiceClient.ClientCredentials.UserName.UserName`。
-      * 將對應的密碼值指派給欄位`RightsManagementServiceClient.ClientCredentials.UserName.Password`。
-      * 將常數值`HttpClientCredentialType.Basic`指派給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+     * 將AEM表單使用者名稱指派給欄位`RightsManagementServiceClient.ClientCredentials.UserName.UserName`。
+     * 將對應的密碼值指派給欄位`RightsManagementServiceClient.ClientCredentials.UserName.Password`。
+     * 將常數值`HttpClientCredentialType.Basic`指派給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
 
    * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`指派給欄位`BasicHttpBindingSecurity.Security.Mode`。
 
@@ -389,8 +405,8 @@ Document Security服務也會保護其他檔案型別，例如Microsoft Word檔�
    * 呼叫`RightsManagementClient`物件的`getPolicyManager`方法，以建立`PolicyManager`物件。
    * 建立`Policy`物件，代表要更新的原則，方法是叫用`PolicyManager`物件的`getPolicy`方法，並傳遞下列值
 
-      * 字串值，代表原則所屬的原則集名稱。 您可以指定導致使用`MyPolicies`原則集的`null`。
-      * 代表原則名稱的字串值。
+     * 字串值，代表原則所屬的原則集名稱。 您可以指定導致使用`MyPolicies`原則集的`null`。
+     * 代表原則名稱的字串值。
 
 1. 設定原則的屬性。
 
@@ -424,9 +440,9 @@ Document Security服務也會保護其他檔案型別，例如Microsoft Word檔�
    * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作來啟用基本的HTTP驗證：
 
-      * 將AEM表單使用者名稱指派給欄位`RightsManagementServiceClient.ClientCredentials.UserName.UserName`。
-      * 將對應的密碼值指派給欄位`RightsManagementServiceClient.ClientCredentials.UserName.Password`。
-      * 將常數值`HttpClientCredentialType.Basic`指派給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+     * 將AEM表單使用者名稱指派給欄位`RightsManagementServiceClient.ClientCredentials.UserName.UserName`。
+     * 將對應的密碼值指派給欄位`RightsManagementServiceClient.ClientCredentials.UserName.Password`。
+     * 將常數值`HttpClientCredentialType.Basic`指派給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
 
    * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`指派給欄位`BasicHttpBindingSecurity.Security.Mode`。
 
@@ -498,8 +514,8 @@ Document Security服務也會保護其他檔案型別，例如Microsoft Word檔�
    * 呼叫`RightsManagementClient`物件的`getPolicyManager`方法，以建立`PolicyManager`物件。
    * 叫用`PolicyManager`物件的`deletePolicy`方法並傳遞下列值以刪除原則：
 
-      * 字串值，指定原則所屬的原則集名稱。 您可以指定導致使用`MyPolicies`原則集的`null`。
-      * 字串值，指定要刪除的原則名稱。
+     * 字串值，指定原則所屬的原則集名稱。 您可以指定導致使用`MyPolicies`原則集的`null`。
+     * 字串值，指定要刪除的原則名稱。
 
 **程式碼範例**
 
@@ -527,9 +543,9 @@ Document Security服務也會保護其他檔案型別，例如Microsoft Word檔�
    * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作來啟用基本的HTTP驗證：
 
-      * 將AEM表單使用者名稱指派給欄位`RightsManagementServiceClient.ClientCredentials.UserName.UserName`。
-      * 將對應的密碼值指派給欄位`RightsManagementServiceClient.ClientCredentials.UserName.Password`。
-      * 將常數值`HttpClientCredentialType.Basic`指派給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+     * 將AEM表單使用者名稱指派給欄位`RightsManagementServiceClient.ClientCredentials.UserName.UserName`。
+     * 將對應的密碼值指派給欄位`RightsManagementServiceClient.ClientCredentials.UserName.Password`。
+     * 將常數值`HttpClientCredentialType.Basic`指派給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
 
    * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`指派給欄位`BasicHttpBindingSecurity.Security.Mode`。
 
@@ -620,13 +636,13 @@ Document Security服務將原則套用至PDF檔案後，您可以將受原則保
    * 呼叫`RightsManagementClient`物件的`getDocumentManager`方法，以建立`DocumentManager`物件。
    * 呼叫`DocumentManager`物件的`protectDocument`方法並傳遞下列值，以將原則套用至PDF檔案：
 
-      * 包含套用原則之PDF檔案的`com.adobe.idp.Document`物件。
-      * 字串值，指定檔案的名稱。
-      * 字串值，指定原則所屬的原則集名稱。 您可以指定導致使用`MyPolicies`原則集的`null`值。
-      * 字串值，指定原則名稱。
-      * 字串值，代表作為檔案發行者的使用者的使用者管理員網域名稱。 此引數值為選用值，可為Null （若此引數為Null，則下一個引數值必須為Null）。
-      * 字串值，代表作為檔案發行者的使用者管理員使用者的正式名稱名稱。 此引數值是選用的，可以是`null` （如果此引數為Null，則先前的引數值必須是`null`）。
-      * `com.adobe.livecycle.rightsmanagement.Locale`代表用於選取MS Office範本的區域設定。 此引數值為選用值，不適用於PDF檔案。 若要保護PDF檔案的安全，請指定`null`。
+     * 包含套用原則之PDF檔案的`com.adobe.idp.Document`物件。
+     * 字串值，指定檔案的名稱。
+     * 字串值，指定原則所屬的原則集名稱。 您可以指定導致使用`MyPolicies`原則集的`null`值。
+     * 字串值，指定原則名稱。
+     * 字串值，代表作為檔案發行者的使用者的使用者管理員網域名稱。 此引數值為選用值，可為Null （若此引數為Null，則下一個引數值必須為Null）。
+     * 字串值，代表作為檔案發行者的使用者管理員使用者的正式名稱名稱。 此引數值是選用的，可以是`null` （如果此引數為Null，則先前的引數值必須是`null`）。
+     * `com.adobe.livecycle.rightsmanagement.Locale`代表用於選取MS Office範本的區域設定。 此引數值為選用值，不適用於PDF檔案。 若要保護PDF檔案的安全，請指定`null`。
 
      `protectDocument`方法傳回包含受原則保護的PDF檔案的`RMSecureDocumentResult`物件。
 
@@ -669,9 +685,9 @@ Document Security服務將原則套用至PDF檔案後，您可以將受原則保
    * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作來啟用基本的HTTP驗證：
 
-      * 將AEM表單使用者名稱指派給欄位`RightsManagementServiceClient.ClientCredentials.UserName.UserName`。
-      * 將對應的密碼值指派給欄位`RightsManagementServiceClient.ClientCredentials.UserName.Password`。
-      * 將常數值`HttpClientCredentialType.Basic`指派給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+     * 將AEM表單使用者名稱指派給欄位`RightsManagementServiceClient.ClientCredentials.UserName.UserName`。
+     * 將對應的密碼值指派給欄位`RightsManagementServiceClient.ClientCredentials.UserName.Password`。
+     * 將常數值`HttpClientCredentialType.Basic`指派給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
 
    * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`指派給欄位`BasicHttpBindingSecurity.Security.Mode`。
 
@@ -814,9 +830,9 @@ Document Security服務從PDF檔案中移除原則後，您可以將不安全的
    * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作來啟用基本的HTTP驗證：
 
-      * 將AEM表單使用者名稱指派給欄位`DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`。
-      * 將對應的密碼值指派給欄位`DocumentSecurityServiceClient.ClientCredentials.UserName.Password`。
-      * 將常數值`HttpClientCredentialType.Basic`指派給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+     * 將AEM表單使用者名稱指派給欄位`DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`。
+     * 將對應的密碼值指派給欄位`DocumentSecurityServiceClient.ClientCredentials.UserName.Password`。
+     * 將常數值`HttpClientCredentialType.Basic`指派給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
 
    * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`指派給欄位`BasicHttpBindingSecurity.Security.Mode`。
 
@@ -927,9 +943,9 @@ Document Security服務從PDF檔案中移除原則後，您可以將不安全的
    * 呼叫`DocumentSecurityClient`物件的`getLicenseManager`方法，以建立`LicenseManager`物件。
    * 叫用`LicenseManager`物件的`revokeLicense`方法並傳遞下列值，以撤銷受原則保護的檔案：
 
-      * 字串值，指定受原則保護檔案的授權識別碼值（指定`DocumentManager`物件的`getLicenseId`方法的傳回值）。
-      * `License`介面的靜態資料成員，指定撤銷檔案的原因。 例如，您可以指定`License.DOCUMENT_REVISED`。
-      * 指定修訂檔案所在位置的`java.net.URL`值。 如果您不想將使用者重新導向至其他URL，則可以傳遞`null`。
+     * 字串值，指定受原則保護檔案的授權識別碼值（指定`DocumentManager`物件的`getLicenseId`方法的傳回值）。
+     * `License`介面的靜態資料成員，指定撤銷檔案的原因。 例如，您可以指定`License.DOCUMENT_REVISED`。
+     * 指定修訂檔案所在位置的`java.net.URL`值。 如果您不想將使用者重新導向至其他URL，則可以傳遞`null`。
 
 **程式碼範例**
 
@@ -957,9 +973,9 @@ Document Security服務從PDF檔案中移除原則後，您可以將不安全的
    * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作來啟用基本的HTTP驗證：
 
-      * 將AEM表單使用者名稱指派給欄位`DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`。
-      * 將對應的密碼值指派給欄位`DocumentSecurityServiceClient.ClientCredentials.UserName.Password`。
-      * 將常數值`HttpClientCredentialType.Basic`指派給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+     * 將AEM表單使用者名稱指派給欄位`DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`。
+     * 將對應的密碼值指派給欄位`DocumentSecurityServiceClient.ClientCredentials.UserName.Password`。
+     * 將常數值`HttpClientCredentialType.Basic`指派給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
 
    * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`指派給欄位`BasicHttpBindingSecurity.Security.Mode`。
 
@@ -976,9 +992,9 @@ Document Security服務從PDF檔案中移除原則後，您可以將不安全的
    * 透過叫用`DocumentSecurityServiceClient`物件的`getLicenseID`方法並傳遞代表受原則保護檔案的`BLOB`物件來擷取受原則保護檔案的授權識別碼值。 此方法會傳回代表授權識別碼的字串值。
    * 叫用`DocumentSecurityServiceClient`物件的`revokeLicense`方法並傳遞下列值，以撤銷受原則保護的檔案：
 
-      * 字串值，指定受原則保護檔案的授權識別碼值（指定`DocumentSecurityServiceService`物件的`getLicenseId`方法的傳回值）。
-      * `Reason`列舉的靜態資料成員，指定撤銷檔案的原因。 例如，您可以指定`Reason.DOCUMENT_REVISED`。
-      * `string`值，指定修訂檔案所在的URL位置。 如果您不想將使用者重新導向至其他URL，則可以傳遞`null`。
+     * 字串值，指定受原則保護檔案的授權識別碼值（指定`DocumentSecurityServiceService`物件的`getLicenseId`方法的傳回值）。
+     * `Reason`列舉的靜態資料成員，指定撤銷檔案的原因。 例如，您可以指定`Reason.DOCUMENT_REVISED`。
+     * `string`值，指定修訂檔案所在的URL位置。 如果您不想將使用者重新導向至其他URL，則可以傳遞`null`。
 
 **程式碼範例**
 
@@ -1089,9 +1105,9 @@ Document Security服務從PDF檔案中移除原則後，您可以將不安全的
    * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作來啟用基本的HTTP驗證：
 
-      * 將AEM表單使用者名稱指派給欄位`DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`。
-      * 將對應的密碼值指派給欄位`DocumentSecurityServiceClient.ClientCredentials.UserName.Password`。
-      * 將常數值`HttpClientCredentialType.Basic`指派給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+     * 將AEM表單使用者名稱指派給欄位`DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`。
+     * 將對應的密碼值指派給欄位`DocumentSecurityServiceClient.ClientCredentials.UserName.Password`。
+     * 將常數值`HttpClientCredentialType.Basic`指派給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
 
    * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`指派給欄位`BasicHttpBindingSecurity.Security.Mode`。
 
@@ -1223,9 +1239,9 @@ Document Security服務從PDF檔案中移除原則後，您可以將不安全的
    * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作來啟用基本的HTTP驗證：
 
-      * 將AEM表單使用者名稱指派給欄位`RightsManagementServiceClient.ClientCredentials.UserName.UserName`。
-      * 將對應的密碼值指派給欄位`RightsManagementServiceClient.ClientCredentials.UserName.Password`。
-      * 將常數值`HttpClientCredentialType.Basic`指派給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+     * 將AEM表單使用者名稱指派給欄位`RightsManagementServiceClient.ClientCredentials.UserName.UserName`。
+     * 將對應的密碼值指派給欄位`RightsManagementServiceClient.ClientCredentials.UserName.Password`。
+     * 將常數值`HttpClientCredentialType.Basic`指派給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
 
    * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`指派給欄位`BasicHttpBindingSecurity.Security.Mode`。
 
@@ -1443,9 +1459,9 @@ Document Security服務從PDF檔案中移除原則後，您可以將不安全的
    * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作來啟用基本的HTTP驗證：
 
-      * 將AEM表單使用者名稱指派給欄位`RightsManagementServiceClient.ClientCredentials.UserName.UserName`。
-      * 將對應的密碼值指派給欄位`RightsManagementServiceClient.ClientCredentials.UserName.Password`。
-      * 將常數值`HttpClientCredentialType.Basic`指派給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+     * 將AEM表單使用者名稱指派給欄位`RightsManagementServiceClient.ClientCredentials.UserName.UserName`。
+     * 將對應的密碼值指派給欄位`RightsManagementServiceClient.ClientCredentials.UserName.Password`。
+     * 將常數值`HttpClientCredentialType.Basic`指派給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
 
    * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`指派給欄位`BasicHttpBindingSecurity.Security.Mode`。
 
@@ -1590,9 +1606,9 @@ Document Security服務從PDF檔案中移除原則後，您可以將不安全的
    * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作來啟用基本的HTTP驗證：
 
-      * 將AEM表單使用者名稱指派給欄位`DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`。
-      * 將對應的密碼值指派給欄位`DocumentSecurityServiceClient.ClientCredentials.UserName.Password`。
-      * 將常數值`HttpClientCredentialType.Basic`指派給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+     * 將AEM表單使用者名稱指派給欄位`DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`。
+     * 將對應的密碼值指派給欄位`DocumentSecurityServiceClient.ClientCredentials.UserName.Password`。
+     * 將常數值`HttpClientCredentialType.Basic`指派給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
 
    * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`指派給欄位`BasicHttpBindingSecurity.Security.Mode`。
 
@@ -1718,9 +1734,9 @@ Rights Management服務會在特定動作發生時加以追蹤，例如將原則
    * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作來啟用基本的HTTP驗證：
 
-      * 將AEM表單使用者名稱指派給欄位`DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`。
-      * 將對應的密碼值指派給欄位`DocumentSecurityServiceClient.ClientCredentials.UserName.Password`。
-      * 將常數值`HttpClientCredentialType.Basic`指派給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+     * 將AEM表單使用者名稱指派給欄位`DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`。
+     * 將對應的密碼值指派給欄位`DocumentSecurityServiceClient.ClientCredentials.UserName.Password`。
+     * 將常數值`HttpClientCredentialType.Basic`指派給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
 
    * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`指派給欄位`BasicHttpBindingSecurity.Security.Mode`。
 
@@ -2020,13 +2036,13 @@ Document Security服務將原則套用至Word檔案後，您就可以將受原�
    * 呼叫`DocumentSecurityClient`物件的`getDocumentManager`方法，以建立`DocumentManager`物件。
    * 叫用`DocumentManager`物件的`protectDocument`方法並傳遞下列值，將原則套用至Word檔案：
 
-      * 包含套用原則之Word檔案的`com.adobe.idp.Document`物件。
-      * 字串值，指定檔案的名稱。
-      * 字串值，指定原則所屬的原則集名稱。 您可以指定導致使用`MyPolicies`原則集的`null`值。
-      * 字串值，指定原則名稱。
-      * 字串值，代表作為檔案發行者的使用者的使用者管理員網域名稱。 此引數值為選用值，可為Null （若此引數為Null，則下一個引數值必須為Null）。
-      * 字串值，代表作為檔案發行者的使用者管理員使用者的正式名稱名稱。 此引數值是選用的，可以是`null` （如果此引數是`null`，則前一個引數值必須是`null`）。
-      * `com.adobe.livecycle.rightsmanagement.Locale`代表用於選取MS Office範本的區域設定。 此引數值是選用的，您可以指定`null`。
+     * 包含套用原則之Word檔案的`com.adobe.idp.Document`物件。
+     * 字串值，指定檔案的名稱。
+     * 字串值，指定原則所屬的原則集名稱。 您可以指定導致使用`MyPolicies`原則集的`null`值。
+     * 字串值，指定原則名稱。
+     * 字串值，代表作為檔案發行者的使用者的使用者管理員網域名稱。 此引數值為選用值，可為Null （若此引數為Null，則下一個引數值必須為Null）。
+     * 字串值，代表作為檔案發行者的使用者管理員使用者的正式名稱名稱。 此引數值是選用的，可以是`null` （如果此引數是`null`，則前一個引數值必須是`null`）。
+     * `com.adobe.livecycle.rightsmanagement.Locale`代表用於選取MS Office範本的區域設定。 此引數值是選用的，您可以指定`null`。
 
      `protectDocument`方法傳回包含受原則保護的Word檔案的`RMSecureDocumentResult`物件。
 
@@ -2062,9 +2078,9 @@ Document Security服務將原則套用至Word檔案後，您就可以將受原�
    * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作來啟用基本的HTTP驗證：
 
-      * 將AEM表單使用者名稱指派給欄位`DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`。
-      * 將對應的密碼值指派給欄位`DocumentSecurityServiceClient.ClientCredentials.UserName.Password`。
-      * 將常數值`HttpClientCredentialType.Basic`指派給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+     * 將AEM表單使用者名稱指派給欄位`DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`。
+     * 將對應的密碼值指派給欄位`DocumentSecurityServiceClient.ClientCredentials.UserName.Password`。
+     * 將常數值`HttpClientCredentialType.Basic`指派給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
 
    * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`指派給欄位`BasicHttpBindingSecurity.Security.Mode`。
 
@@ -2206,9 +2222,9 @@ Document Security服務將原則套用至Word檔案後，您就可以將受原�
    * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作來啟用基本的HTTP驗證：
 
-      * 將AEM表單使用者名稱指派給欄位`RightsManagementServiceClient.ClientCredentials.UserName.UserName`。
-      * 將對應的密碼值指派給欄位`RightsManagementServiceClient.ClientCredentials.UserName.Password`。
-      * 將常數值`HttpClientCredentialType.Basic`指派給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+     * 將AEM表單使用者名稱指派給欄位`RightsManagementServiceClient.ClientCredentials.UserName.UserName`。
+     * 將對應的密碼值指派給欄位`RightsManagementServiceClient.ClientCredentials.UserName.Password`。
+     * 將常數值`HttpClientCredentialType.Basic`指派給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
 
    * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`指派給欄位`BasicHttpBindingSecurity.Security.Mode`。
 

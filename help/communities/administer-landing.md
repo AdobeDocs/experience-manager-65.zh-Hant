@@ -9,13 +9,20 @@ role: Admin
 exl-id: e3ffc73e-2bc5-492d-b64b-750cc7d8ab9b
 solution: Experience Manager
 feature: Communities
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '449'
+source-wordcount: '453'
 ht-degree: 4%
-
 ---
-
 # 社群網站 {#communities-sites}
 
 本節適用於管理AEM Communities並假設熟悉AEM Communities功能的人。
@@ -33,22 +40,22 @@ ht-degree: 4%
 
 * 社群[主控台](consoles.md)
 
-   * [Sites](sites-console.md)
+  * [Sites](sites-console.md)
 
-      * [群組（子社群）](groups.md)
+    * [群組（子社群）](groups.md)
 
-   * [審核](moderation.md)
-   * [成員和群組管理](members.md)
-   * [報告](reports.md)
+  * [審核](moderation.md)
+  * [成員和群組管理](members.md)
+  * [報告](reports.md)
 
 * 社群&#x200B;[*工具*](tools.md)：
 
-   * [網站範本](sites.md)
-   * [群組範本](tools-groups.md)
-   * [社群功能](functions.md)
-   * [儲存體設定](srp-config.md)
-   * [元件指南](components-guide.md)
-   * [徽章](badges.md)
+  * [網站範本](sites.md)
+  * [群組範本](tools-groups.md)
+  * [社群功能](functions.md)
+  * [儲存體設定](srp-config.md)
+  * [元件指南](components-guide.md)
+  * [徽章](badges.md)
 
 
 ### 使用者產生的內容 {#user-generated-content}

@@ -1,6 +1,6 @@
 ---
 title: 在設計模式中設定元件
-description: 當現成安裝AEM執行個體時，Sidekick中會立即提供一組元件供您選擇。 除了這些以外，您也可以使用其他各種元件。 您可以使用設計模式來啟用/停用這類元件。
+description: 現成安裝AEM執行個體時，Sidekick中會立即提供一組元件供您選擇。 除了這些以外，您也可以使用其他各種元件。 您可以使用設計模式來啟用/停用這類元件。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
@@ -10,16 +10,25 @@ exl-id: cb2d2d0d-feb4-4b89-8325-80f735816904
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '514'
 ht-degree: 0%
-
 ---
-
 # 在設計模式中設定元件{#configuring-components-in-design-mode}
 
-當現成安裝AEM執行個體時，Sidekick中會立即提供一組元件供您選擇。
+現成安裝AEM執行個體時，Sidekick中會立即提供一組元件供您選擇。
 
 除了這些以外，您也可以使用其他各種元件。 您可以使用設計模式[啟用/停用這類元件](#enabledisablecomponentsusingdesignmode)。 啟用並位於您的頁面後，您就可以使用設計模式，透過編輯屬性引數來[設定元件設計的各個層面](#configuringcomponentsusingdesignmode)。
 
@@ -44,7 +53,7 @@ ht-degree: 0%
 
 在設計模式中，Sidekick會最小化，您可以設定可編寫的元件：
 
-1. 若要進入設計模式，請開啟要編輯的頁面，並使用Sidekick圖示：
+1. 若要進入設計模式，請開啟頁面進行編輯，並使用Sidekick圖示：
 
    ![設計模式](do-not-localize/chlimage_1.png)
 
@@ -52,13 +61,13 @@ ht-degree: 0%
 
    ![screen_shot_2012-02-08at102726am](assets/screen_shot_2012-02-08at102726am.png)
 
-1. 將會開啟一個對話方塊，列出Sidekick中顯示的元件群組及其包含的個別元件。
+1. 隨即開啟對話方塊，列出Sidekick中顯示的元件群組及其包含的個別元件。
 
    視需要選取，以新增或移除sidekick中可用的元件。
 
    ![screen_shot_2012-02-08at103407am](assets/screen_shot_2012-02-08at103407am.png)
 
-1. 在設計模式中，Sidekick會最小化。 按一下箭頭可以將Sidekick最大化，並返回編輯模式：
+1. Sidekick在設計模式中會最小化。 按一下箭頭可以將Sidekick最大化，並返回編輯模式：
 
    ![Sidekick已最小化](do-not-localize/sidekick-collapsed.png)
 
@@ -66,7 +75,7 @@ ht-degree: 0%
 
 在「設計」模式中，您也可以為個別元件設定屬性。 每個元件都有自己的引數，下列範例顯示&#x200B;**Image**&#x200B;元件：
 
-1. 若要進入設計模式，請開啟要編輯的頁面，並使用Sidekick圖示：
+1. 若要進入設計模式，請開啟頁面進行編輯，並使用Sidekick圖示：
 
    ![設計模式 — Sidekick](do-not-localize/chlimage_1-1.png)
 
@@ -78,6 +87,6 @@ ht-degree: 0%
 
 1. 按一下&#x200B;**確定**&#x200B;以儲存變更。
 
-1. 在設計模式中，Sidekick會最小化。 按一下箭頭可以將Sidekick最大化，並返回編輯模式：
+1. Sidekick在設計模式中會最小化。 按一下箭頭可以將Sidekick最大化，並返回編輯模式：
 
    ![Sidekick已最小化](do-not-localize/sidekick-collapsed-1.png)

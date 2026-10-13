@@ -10,13 +10,29 @@ feature: Image Sets,Asset Management
 role: User, Admin
 exl-id: 2a536745-fa13-4158-8761-2ac5b6e1893e
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 7d2b2ec8-499c-5434-9ffd-9218cd71f683
+    internal-label: Asset Management
+  - id: d4b6216b-4a89-4ff0-8ac0-5a699ba23100
+    internal-label: Images and videos
+subfeature_v2:
+  - id: e2dc1259-9034-40fc-a518-b92a34fe6642
+    internal-label: Image sets
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '2274'
+source-wordcount: '2299'
 ht-degree: 7%
-
 ---
-
 # 影像集 {#image-sets}
 
 影像集為使用者提供整合式檢視體驗，使用者可透過選取縮圖影像來檢視專案的不同檢視。 影像集可讓您呈現專案的替代檢視，而檢視器可提供縮放工具，以便更密切地檢查影像。
@@ -132,7 +148,7 @@ ht-degree: 7%
 >[!NOTE]
 >
 >您也可以透過[批次集預設集](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)自動建立影像集。
->**重要：**&#x200B;批次集是由IPS (Image Production System)建立為資產擷取的一部分，僅適用於Dynamic Media - Scene7模式。
+>**重要：**&#x200B;批次集由IPS (Image Production System)建立，作為資產擷取的一部分，並且僅適用於Dynamic Media - Scene7模式。
 
 將資產新增至集時，資產會自動以字母數字順序新增。 在新增資產後，您可以手動重新排序或排序資產。
 

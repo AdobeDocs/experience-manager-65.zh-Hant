@@ -9,13 +9,20 @@ role: Admin
 exl-id: a9fc9c06-b9e6-4a5e-ab5e-0930ecd4b51b
 solution: Experience Manager
 feature: Communities
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1534'
 ht-degree: 2%
-
 ---
-
 # SRP的Solr設定 {#solr-configuration-for-srp}
 
 ## 適用於AEM平台的Solr {#solr-for-aem-platform}
@@ -36,13 +43,13 @@ ht-degree: 2%
 * 不需要服務
 * 選擇執行模式：
 
-   * 獨立模式
-   * [SolrCloud模式](#solrcloud-mode) （建議用於生產環境）
+  * 獨立模式
+  * [SolrCloud模式](#solrcloud-mode) （建議用於生產環境）
 
 * 多語言搜尋(MLS)選擇
 
-   * [安裝標準MLS](#installing-standard-mls)
-   * [安裝進階MLS](#installing-advanced-mls)
+  * [安裝標準MLS](#installing-standard-mls)
+  * [安裝進階MLS](#installing-advanced-mls)
 
 ## SolrCloud模式 {#solrcloud-mode}
 
@@ -288,35 +295,35 @@ sh ./scripts/cloud-scripts/zkcli.sh \
 * 以獨立模式安裝Solr。
 * 如果執行Solr5，請建立集合1 （類似Solr4）：
 
-   * `./bin/solr start`
-   * `./bin/solr create_core -c collection1 -d sample_techproducts_configs`
+  * `./bin/solr start`
+  * `./bin/solr create_core -c collection1 -d sample_techproducts_configs`
 
 * 執行安裝指令碼：安裝[-v 4|5] [-d solrhome] [-c集合路徑]
 其中：
 
-   * -d solrhome
+  * -d solrhome
 
-     Solr安裝目錄
+    Solr安裝目錄
 
-   * -c集合路徑
+  * -c集合路徑
 
-     solr中的集合路徑
+    solr中的集合路徑
 
-   * — 說明
+  * — 說明
 
-     列印命令列選項
+    列印命令列選項
 
-   * -v [4|5]
+  * -v [4|5]
 
-     設定solr的版本
+    設定solr的版本
 
 * Solr 4.10.4的範例：
 
-   * Install.bat -v 4 -d c：/solr-4.10.4 -c：/solr-4.10.4/example/solr/collection1
+  * Install.bat -v 4 -d c：/solr-4.10.4 -c：/solr-4.10.4/example/solr/collection1
 
 * Solr 5.4.0的範例：
 
-   * Install.sh -v 5 -d /tmp/solr-5.4.0 -c /tmp/solr-5.4.0/server/solr/collection1
+  * Install.sh -v 5 -d /tmp/solr-5.4.0 -c /tmp/solr-5.4.0/server/solr/collection1
 
 **附註**：
 

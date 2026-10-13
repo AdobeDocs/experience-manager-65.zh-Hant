@@ -10,13 +10,28 @@ exl-id: f510ca08-977d-45d5-86af-c4b7634b01ba
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization
 role: User,Admin,Developer
-source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+  - id: eb3ad9f8-54a2-45f3-abb1-d3976415a718
+    internal-label: Personalization
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1936'
+source-wordcount: '1941'
 ht-degree: 11%
-
 ---
-
 # 管理活動{#managing-activities}
 
 「活動」主控台可讓您建立、組織和管理您品牌的行銷[活動](/help/sites-authoring/personalization.md#activities)：
@@ -70,7 +85,7 @@ ht-degree: 11%
 1. 在「活動」主控台中，按一下&#x200B;**「建立**」**「建立品牌**」。
 1. 選取品牌範本，然後按一下&#x200B;**下一步**。
 1. 輸入您希望品牌在「活動」和「選件」主控台中顯示的標題。 或者，輸入或選取一或多個要與品牌關聯的標籤。
-1. 按一下「**建立**」。您的品牌會顯示在「活動」主控台中。
+1. 按一下「**建立**」。 您的品牌會顯示在「活動」主控台中。
 
 ## 使用「活動」主控台新增/編輯活動 {#adding-editing-an-activity-using-the-activities-console}
 
@@ -79,14 +94,14 @@ ht-degree: 11%
 * **&#x200B;**&#x200B;名稱：活動的名稱。
 * **&#x200B;**&#x200B;定位引擎：AEM [&#128279;](/help/sites-authoring/personalization.md#aem) 或 [Adobe Target](/help/sites-authoring/personalization.md#adobe-target) ，做為目標內容的引擎。
 
-* **&#x200B;**&#x200B;選擇目標配置： (僅限Adobe Target) 此活動應用來連線至Adobe Target的雲端設定。只有在為「定位引擎」選取Adobe Target時，才會顯示此選項。
+* **&#x200B;**&#x200B;選擇目標配置： (僅限Adobe Target) 此活動應用來連線至Adobe Target的雲端設定。 只有在為「定位引擎」選取Adobe Target時，才會顯示此選項。
 * **活動型別： &#x200B;** 活動型別 — A/B測試或體驗鎖定目標
 * **&#x200B;**&#x200B;目標：(可選) 活動的說明。
 * **&#x200B;**&#x200B;體驗：客群名稱與您所定位之行銷區段之間的對應。
 * **&#x200B;**&#x200B;流量百分比：如果選取A/B測試，您可以變更每個體驗的流量 (百分比)。
 * **&#x200B;**&#x200B;持續時間：套用活動的時段。
-* **&#x200B;**&#x200B;優先順序：活動的相對優先順序。當活動提供相同使用者區段的內容時，優先順序較高的活動優先。
-* **&#x200B;**&#x200B;目標量度：如果選取Adobe target作為定位引擎，您可以將成功度量新增至活動。需要一個成功度量。
+* **&#x200B;**&#x200B;優先順序：活動的相對優先順序。 當活動提供相同使用者區段的內容時，優先順序較高的活動優先。
+* **&#x200B;**&#x200B;目標量度：如果選取Adobe target作為定位引擎，您可以將成功度量新增至活動。 需要一個成功度量。
 
 >[!NOTE]
 >
@@ -105,7 +120,7 @@ ht-degree: 11%
    * （選用）活動的目標或說明。
    * 選取活動型別。
 
-1. 新增一或多個體驗至活動。按一下&#x200B;**新增體驗**。
+1. 新增一或多個體驗至活動。 按一下&#x200B;**新增體驗**。
 1. 如果您使用AEM目標定位或Adobe Target體驗目標定位：
 
    1. 按一下&#x200B;**選取對象**&#x200B;並選取您的體驗鎖定目標的區段。

@@ -9,13 +9,29 @@ docset: aem65
 exl-id: 29cbc330-7b3d-457e-ba4a-7ce6091f3836
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 7da902b6-fe94-5180-8e7c-f6d1e38d01d5
+    internal-label: Foundation Components
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '2289'
+source-wordcount: '2290'
 ht-degree: 3%
-
 ---
-
 # 預填自適應表單欄位{#prefill-adaptive-form-fields}
 
 <span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hant)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。 這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。 本文會介紹使用基礎元件編寫最適化表單的舊方法。</span>
@@ -241,7 +257,7 @@ Prefill-Submit-Data-ContentPackage.zip
 >預填服務設定適用於最適化表單、HTML5表單及HTML5表單集。
 
 1. 使用URL開啟&#x200B;**[!UICONTROL Adobe Experience Manager Web主控台組態]**：\
-   https://&lt;server>：&lt;port>/system/console/configMgr
+   https://<server>：<port>/system/console/configMgr
 1. 搜尋並開啟&#x200B;**[!UICONTROL 預設預填服務組態]**。
 
    ![預填設定](assets/prefill_config_new.png)
@@ -386,14 +402,14 @@ https://localhost:4502/content/forms/af/abc.html?wcmmode=disabled&dataRef=servic
 您可以設定AEM Forms伺服器，在使用者端而非伺服器上執行資料合併動作。 它大幅減少預填和轉譯調適型表單所需的時間。 預設會停用該功能。 您可以從Configuration Manager或命令列啟用它。
 
 * 若要從組態管理員啟用或停用：
-   1. 開啟AEM Configuration Manager。
-   1. 找到並開啟最適化表單和互動式通訊Web Channel設定
-   1. 啟用Configuration.af.clientside.datamerge.enabled.name選項
+  1. 開啟AEM Configuration Manager。
+  1. 找到並開啟最適化表單和互動式通訊Web Channel設定
+  1. 啟用Configuration.af.clientside.datamerge.enabled.name選項
 * 若要從命令列啟用或停用：
-   * 若要啟用，請執行下列cURL命令：
-     `curl -u admin:admin -X POST -d apply=true \ -d propertylist=af.clientside.datamerge.enabled \ -d af.clientside.datamerge.enabled=true \ http://${crx.host}:${crx.port}/system/console/configMgr/Adaptive%20Form%20and%20Interactive%20Communication%20Web%20Channel%20Configuration`
+  * 若要啟用，請執行下列cURL命令：
+    `curl -u admin:admin -X POST -d apply=true \ -d propertylist=af.clientside.datamerge.enabled \ -d af.clientside.datamerge.enabled=true \ http://${crx.host}:${crx.port}/system/console/configMgr/Adaptive%20Form%20and%20Interactive%20Communication%20Web%20Channel%20Configuration`
 
-   * 若要停用，請執行下列cURL命令：
-     `curl -u admin:admin -X POST -d apply=true \ -d propertylist=af.clientside.datamerge.enabled \ -d af.clientside.datamerge.enabled=false \ http://${crx.host}:${crx.port}/system/console/configMgr/Adaptive%20Form%20and%20Interactive%20Communication%20Web%20Channel%20Configuration`
+  * 若要停用，請執行下列cURL命令：
+    `curl -u admin:admin -X POST -d apply=true \ -d propertylist=af.clientside.datamerge.enabled \ -d af.clientside.datamerge.enabled=false \ http://${crx.host}:${crx.port}/system/console/configMgr/Adaptive%20Form%20and%20Interactive%20Communication%20Web%20Channel%20Configuration`
 
   若要充分利用使用者端上的預先填入資料選項，請更新預填服務以傳回[FileAttachmentMap](https://helpx.adobe.com/tw/experience-manager/6-5/forms/javadocs/com/adobe/forms/common/service/PrefillData.html)和[CustomContext](https://helpx.adobe.com/tw/experience-manager/6-5/forms/javadocs/com/adobe/forms/common/service/PrefillData.html)

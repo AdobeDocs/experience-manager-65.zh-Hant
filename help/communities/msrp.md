@@ -9,13 +9,20 @@ role: Admin
 exl-id: 799d5ae1-caac-4c92-8835-696ad25de553
 solution: Experience Manager
 feature: Communities
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1195'
+source-wordcount: '1220'
 ht-degree: 0%
-
 ---
-
 # MSRP - MongoDB儲存資源提供者 {#msrp-mongodb-storage-resource-provider}
 
 ## 關於MSRP {#about-msrp}
@@ -28,22 +35,22 @@ ht-degree: 0%
 
 * [MongoDB](https://www.mongodb.org/)：
 
-   * 2.6版或更新版本
-   * 不需要設定mongos或分片
-   * 強烈建議使用[復本集](#mongoreplicaset)
-   * 可在與AEM相同的主機上執行或遠端執行
+  * 2.6版或更新版本
+  * 不需要設定mongos或分片
+  * 強烈建議使用[復本集](#mongoreplicaset)
+  * 可在與AEM相同的主機上執行或遠端執行
 
 * [Apache Solr](https://lucene.apache.org/solr/)：
 
-   * Solr 7.0版
-   * Solr需要Java 1.7或更高版本
-   * 不需要服務
-   * 選擇執行模式：
-      * 獨立模式
-      * [SolrCloud模式](solr.md#solrcloud-mode) （建議用於生產環境）
-   * 多語言搜尋(MLS)選項：
-      * [安裝標準MLS](solr.md#installing-standard-mls)
-      * [安裝進階MLS](solr.md#installing-advanced-mls)
+  * Solr 7.0版
+  * Solr需要Java 1.7或更高版本
+  * 不需要服務
+  * 選擇執行模式：
+    * 獨立模式
+    * [SolrCloud模式](solr.md#solrcloud-mode) （建議用於生產環境）
+  * 多語言搜尋(MLS)選項：
+    * [安裝標準MLS](solr.md#installing-standard-mls)
+    * [安裝進階MLS](solr.md#installing-advanced-mls)
 
 ## MongoDB設定 {#mongodb-configuration}
 
@@ -60,41 +67,41 @@ ht-degree: 0%
 * 選取&#x200B;**[!UICONTROL MongoDB儲存資源提供者(MSRP)]**
 * **[!UICONTROL mongoDB組態]**
 
-   * **[!UICONTROL mongoDB URI]**
+  * **[!UICONTROL mongoDB URI]**
 
-     *預設*： mongodb://localhost/?maxPoolSize=10&amp;waitQueueMultiple=5&amp;readPreference=secondaryPreferred
+    *預設*： mongodb://localhost/?maxPoolSize=10&amp;waitQueueMultiple=5&amp;readPreference=secondaryPreferred
 
-   * **[!UICONTROL mongoDB資料庫]**
+  * **[!UICONTROL mongoDB資料庫]**
 
-     *預設*： communities
+    *預設*： communities
 
-   * **[!UICONTROL mongoDB UGC集合]**
+  * **[!UICONTROL mongoDB UGC集合]**
 
-     *預設*：內容
+    *預設*：內容
 
-   * **[!UICONTROL mongoDB附件集合]**
+  * **[!UICONTROL mongoDB附件集合]**
 
-     *預設*：附件
+    *預設*：附件
 
 * **[!UICONTROL SolrConfiguration]**
 
-   * **[Zookeeper](https://cwiki.apache.org/confluence/display/solr/Using+ZooKeeper+to+Manage+Configuration+Files)主機**
+  * **[Zookeeper](https://cwiki.apache.org/confluence/display/solr/Using+ZooKeeper+to+Manage+Configuration+Files)主機**
 
-     使用外部ZooKeeper在[SolrCloud模式](solr.md#solrcloud-mode)中執行時，請將此值設定為ZooKeeper的`HOST:PORT`，例如&#x200B;*my.server.com:2181*
+    使用外部ZooKeeper在[SolrCloud模式](solr.md#solrcloud-mode)中執行時，請將此值設定為ZooKeeper的`HOST:PORT`，例如&#x200B;*my.server.com:2181*
 
-     對於ZooKeeper Ensemble，請輸入逗號分隔的`HOST:PORT`值，例如&#x200B;*host1:2181，host2:2181*
+    對於ZooKeeper Ensemble，請輸入逗號分隔的`HOST:PORT`值，例如&#x200B;*host1:2181，host2:2181*
 
-     如果使用內部ZooKeeper以獨立模式執行Solr，則保留空白。
-     *預設*： *&lt;blank>*
+    如果使用內部ZooKeeper以獨立模式執行Solr，則保留空白。
+    *預設*： *&lt;blank>*
 
-      * **[!UICONTROL Solr URL]**
+    * **[!UICONTROL Solr URL]**
 在獨立模式下用來與Solr通訊的URL。
 若以SolrCloud模式執行，則保留空白。
-        *預設*： https://127.0.0.1:8983/solr/
+      *預設*： https://127.0.0.1：8983/solr/
 
-      * **[!UICONTROL Solr集合]**
+    * **[!UICONTROL Solr集合]**
 Solr集合名稱。
-        *預設*： collection1
+      *預設*： collection1
 
 * 選取&#x200B;**[!UICONTROL 提交]**
 
@@ -150,7 +157,7 @@ MSRP必須識別為所有製作和發佈執行個體上的通用存放區。
 * 從主功能表瀏覽至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 作業]** > **[!UICONTROL 復寫]**。
 * 選取&#x200B;**[!UICONTROL 啟動樹狀結構]**
 * **[!UICONTROL 開始路徑]**：
-   * 瀏覽至`/etc/socialconfig/srpc/`
+  * 瀏覽至`/etc/socialconfig/srpc/`
 * 選取&#x200B;**[!UICONTROL 啟動]**
 
 ## 管理使用者資料 {#managing-user-data}
@@ -226,8 +233,8 @@ curl -s -u admin:admin -d 'batchSize=10000&path=/content/usergenerated/asi/mongo
 
 * 在JCR中，若為[/etc/socialconfig](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/)
 
-   * 不包含[srpc](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc)節點，這表示儲存提供者是JSRP。
-   * 如果srpc節點存在且包含節點[defaultconfiguration](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc/defaultconfiguration)，則defaultconfiguration的屬性應該將MSRP定義為預設提供者。
+  * 不包含[srpc](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc)節點，這表示儲存提供者是JSRP。
+  * 如果srpc節點存在且包含節點[defaultconfiguration](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc/defaultconfiguration)，則defaultconfiguration的屬性應該將MSRP定義為預設提供者。
 
 ### 升級後UGC消失 {#ugc-disappears-after-upgrade}
 

@@ -10,20 +10,32 @@ exl-id: 574e2fc2-6ebf-49b6-9b65-928237a8a34d
 solution: Experience Manager, Experience Manager Sites
 feature: Security
 role: Admin
-source-git-commit: 9b766fe6e253782be3bc47849b4857216274ae20
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: b1210526-416b-4ef6-bcc0-1692e99f30e9
+    internal-label: Administration and security
+subfeature_v2:
+  - id: c35bc059-fd80-4a01-91a6-e48da3c76758
+    internal-label: Security practices
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '828'
+source-wordcount: '871'
 ht-degree: 0%
-
 ---
-
 # 預設為SSL/TLS{#ssl-tls-by-default}
 
-為了持續改善AEM的安全性，Adobe已推出一項預設稱為SSL的功能。 其目的是鼓勵使用HTTPS來連線至AEM執行個體。
+為了持續改善AEM的安全性，Adobe已推出一項預設稱為SSL的功能。 目的是鼓勵使用HTTPS來連線至AEM執行個體。
 
 ## 預設啟用SSL/TLS {#enabling-ssl-tls-by-default}
 
-您可以按一下AEM首頁畫面中的相關「收件匣」訊息，開始依預設設定SSL/TLS。 若要存取「收件匣」，請按一下畫面右上角的鈴鐺圖示。 然後，按一下&#x200B;**全部檢視**。 這會顯示清單檢視中排序的所有警報清單。
+您可以從AEM首頁畫面按一下相關的收件匣訊息，開始依預設設定SSL/TLS。 若要存取「收件匣」，請按一下畫面右上角的鈴鐺圖示。 然後，按一下&#x200B;**全部檢視**。 這會顯示清單檢視中排序的所有警報清單。
 
 在清單中，選取並開啟&#x200B;**設定HTTPS**&#x200B;警示：
 
@@ -55,7 +67,7 @@ ht-degree: 0%
 
 根據預設，有三種方法可自動化SSL/TLS。
 
-### 透過HTTPPOST {#via-http-post}
+### 透過HTTP POST {#via-http-post}
 
 第一個方法涉及張貼至設定精靈正在使用的SSLSetup伺服器：
 
@@ -63,7 +75,7 @@ ht-degree: 0%
 POST /libs/granite/security/post/sslSetup.html
 ```
 
-您可以在POST中使用以下裝載來自動進行設定：
+您可以在POST中使用以下裝載來自動化設定：
 
 ```xml
 ------WebKitFormBoundaryyBO4ArmGlcfdGDbs
@@ -92,7 +104,7 @@ Content-Disposition: form-data; name="httpsPort"
 8443
 ```
 
-此servlet和任何slingPOSTservlet一樣，將以「200確定」或錯誤HTTP狀態碼回應。 您可以在回應的HTML內文中找到有關狀態的詳細資料。
+此servlet如同任何sling POST servlet，將以「200確定」或錯誤HTTP狀態碼回應。 您可以在回應的HTML內文中找到有關狀態的詳細資料。
 
 以下是成功回應和錯誤的範例。
 
@@ -195,7 +207,7 @@ it for any subsequent updating of the private key or certificate.</dd>
 
 >[!NOTE]
 >
->請參閱[搭配AEM](https://helpx.adobe.com/tw/experience-manager/6-4/sites/administering/using/curl.html)使用cURL，以取得AEM中有用cURL命令的集中清單。
+>請參閱[搭配AEM使用cURL](https://helpx.adobe.com/tw/experience-manager/6-4/sites/administering/using/curl.html)，以取得AEM中有用cURL命令的集中清單。
 
 您也可以使用cURL工具自動化SSL/TLS設定。 您可以將設定引數張貼至此URL來執行此操作：
 
@@ -242,7 +254,7 @@ curl -u user:password -F "keystorePassword=password" -F "keystorePasswordConfirm
 ### 啟用TLS 1.3連線 {#enabling-tls-connection}
 
 1. 前往Web主控台
-1. 接著，導覽至&#x200B;**OSGi** - **組態** - **AdobeGranite SSL Connector Factory**
+1. 接著，導覽至&#x200B;**OSGi** - **組態** - **Adobe Granite SSL Connector Factory**
 1. 移至&#x200B;**包含的密碼套件**&#x200B;欄位，並新增下列專案。 您可以在下列專案新增每個專案後，按下欄位左側的&quot;**+**&quot;按鈕以確認每個新增：
 
    * `TLS_AES_256_GCM_SHA384`

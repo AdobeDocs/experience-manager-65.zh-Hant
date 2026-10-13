@@ -5,13 +5,29 @@ exl-id: a53fef09-6495-4bb7-8df1-ba3c113d88f6
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments
 role: Admin, Developer
-source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: bfd4bc52-c397-5127-8f86-8953ba9fc0a3
+    internal-label: Headless
+  - id: a642c50e-80eb-4fc1-a5d2-f3762d1f841d
+    internal-label: Administration
+subfeature_v2:
+  - id: e9db7c79-8f65-4281-a439-c9049296d903
+    internal-label: Content Fragments
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '896'
-ht-degree: 94%
-
+source-wordcount: '904'
+ht-degree: 89%
 ---
-
 # 了解 AEM Headless 內容模型基本知識 {#content-modeling-headless-basics}
 
 ## 目前進度 {#story-so-far}
@@ -33,7 +49,7 @@ ht-degree: 94%
 
 為確保您的應用程式能夠始終一致、有效率地從 AEM 要求和接收所需內容，這些內容必須結構化。
 
-這表示您的應用程式預先知道回應採用的格式，因此知道如何處理回應。這比接收自由格式的內容要容易得多，自由格式的內容必須剖析以確定它包含什麼以及如何使用它。
+這表示您的應用程式預先知道回應採用的格式，因此知道如何處理回應。 這比接收自由格式的內容要容易得多，自由格式的內容必須剖析以確定它包含什麼以及如何使用它。
 
 ### 運作方式簡介 {#how}
 
@@ -48,7 +64,7 @@ AEM 使用內容片段來提供將內容 Headless 傳遞到應用程式所需的
 >
 >內容片段模型也做為 AEM GraphQL 結構描述的基礎，用於擷取您的內容 - 在開發人員歷旅中有更多相關資訊。
 
-對內容的要求是使用 AEM GraphQL API 發出的，這是標準 GraphQL API 的自訂實作。AEM GraphQL API 允許應用程式對您的內容片段執行 (複雜) 查詢，每個查詢都根據特定的模型類型。
+對內容的要求是使用 AEM GraphQL API 發出的，這是標準 GraphQL API 的自訂實作。 AEM GraphQL API 允許應用程式對您的內容片段執行 (複雜) 查詢，每個查詢都根據特定的模型類型。
 
 然後，您的應用程式可以使用傳回的內容。
 
@@ -70,7 +86,7 @@ AEM 使用內容片段來提供將內容 Headless 傳遞到應用程式所需的
 1. **資料型別**&#x200B;可讓您定義個別屬性。
 例如，將包含教師姓名的欄位定義為&#x200B;**文字** 並將他們的服務年限定義為&#x200B;**數字**。
 1. 資料型別&#x200B;**內容參考**&#x200B;和&#x200B;**片段參考**&#x200B;可讓您建立與AEM中其他內容的關聯。
-1. **片段參考**&#x200B;資料類型可讓您將內容片段巢狀化 (根據模型類型)，以實現多層結構。這對建立內容模型很重要。
+1. **片段參考**&#x200B;資料類型可讓您將內容片段巢狀化 (根據模型類型)，以實現多層結構。 這對建立內容模型很重要。
 
 例如：
 
@@ -100,15 +116,15 @@ AEM 提供以下資料類型用於建立內容模型：
 兩種資料類型允許您參考特定片段之外的內容：
 
 * **內容參考**
-這提供對任何類型之其他內容的簡單參考。
-例如，您可以參考在指定之位置的影像。
+這可提供任何型別其他內容的簡單參考。
+例如，您可以參考在指定位置的影像。
 
 * **片段參考**
-這提供對其他內容片段的參考。
+這會提供其他內容片段的參考資料。
 此類型的參考用於建立巢狀內容，引入建立內容模型時所需的關係。
 可以設定此資料類型以允許片段作者：
-   * 直接編輯參考的片段。
-   * 根據適當的模型建立內容片段
+  * 直接編輯參考的片段。
+  * 根據適當的模型建立內容片段
 
 >[!NOTE]
 >
@@ -118,7 +134,7 @@ AEM 提供以下資料類型用於建立內容模型：
 
 對於建立內容模型，**片段參考**&#x200B;資料類型可讓您建立多層結構和關係。
 
-使用此參考，您可以&#x200B;*連接*&#x200B;各種內容片段模型來表示相互關係。這可讓 Headless 應用程式依照連接操作，並視需要存取內容。
+使用此參考，您可以&#x200B;*連接*&#x200B;各種內容片段模型來表示相互關係。 這可讓 Headless 應用程式依照連接操作，並視需要存取內容。
 
 >[!NOTE]
 >
@@ -133,28 +149,28 @@ AEM 提供以下資料類型用於建立內容模型：
 * 人員
 * 獎項
 
-看起來很簡單，但一家公司既有執行長也有員工...這些都是人，每一個都被定義為人員。
+看似簡單明瞭，但公司同時有CEO和員工....這些都是Person，各自定義為Person。
 
 人員可以獲得一個獎項 (或兩個)。
 
 * 我的公司 - 公司
-   * CEO - 人員
-   * 員工 - 人員
-      * 人員獎項 - 獎項
+  * CEO - 人員
+  * 員工 - 人員
+    * 人員獎項 - 獎項
 
-這只是供初學者了解。根據複雜程度，獎項可以是特定於公司的，或者公司可以在特定城市設有主要辦公室。
+這只是供初學者了解。 根據複雜程度，獎項可以是特定於公司的，或者公司可以在特定城市設有主要辦公室。
 
 可以使用片段參考來表示這些相互關係，因為您 (架構師)、您的內容作者和 Headless 應用程式都可理解。
 
 ## 下一步 {#whats-next}
 
-現在您已經了解了基本知識，下一步是[了解如何在 AEM 建立內容片段模型](model-structure.md)。這將介紹和討論各種可用的參考，以及如何使用片段參考建立結構階層，這是建立 Headless 模型的關鍵部分。
+現在您已經了解了基本知識，下一步是[了解如何在 AEM 建立內容片段模型](model-structure.md)。 這將介紹和討論各種可用的參考，以及如何使用片段參考建立結構階層，這是建立 Headless 模型的關鍵部分。
 
 ## 其他資源 {#additional-resources}
 
 * [內容片段模型](/help/assets/content-fragments/content-fragments-models.md)
 
-   * [內容片段模型 - 資料類型](/help/assets/content-fragments/content-fragments-models.md#data-types)
+  * [內容片段模型 - 資料類型](/help/assets/content-fragments/content-fragments-models.md#data-types)
 
 * [製作概念](/help/sites-authoring/author.md)
 

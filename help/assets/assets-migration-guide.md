@@ -1,18 +1,36 @@
 ---
 title: 大量移轉資產
-description: 說明如何將資產帶入 [!DNL Adobe Experience Manager]、套用中繼資料、產生轉譯，以及將它們啟動至發佈執行個體。
+description: 說明如何將資產帶入[!DNL Adobe Experience Manager]、套用中繼資料、產生轉譯，以及將它們啟動至發佈執行個體。
 contentOwner: AG
 role: Developer, Admin
 feature: Migration,Renditions,Asset Management
 exl-id: 184f1645-894a-43c1-85f5-8e0d2d77aa73
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 5be0fc8f-1cff-5c3e-bb92-2903a56a3de6
+    internal-label: Migration
+  - id: 7d2b2ec8-499c-5434-9ffd-9218cd71f683
+    internal-label: Asset Management
+  - id: ac365bec-0634-4744-9473-c42f47320593
+    internal-label: Asset management and governance
+subfeature_v2:
+  - id: e42ab83e-8918-43a7-98a3-62bebbd5bb3a
+    internal-label: Renditions
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1739'
-ht-degree: 6%
-
+source-wordcount: '1858'
+ht-degree: 10%
 ---
-
 # 如何大量移轉資產 {#assets-migration-guide}
 
 將資產移轉至[!DNL Adobe Experience Manager]時，需要考量數個步驟。 從資產和中繼資料擷取其目前的首頁超出本檔案的範圍，因為不同實作之間差異極大，但本檔案說明如何將這些資產匯入[!DNL Experience Manager]、套用其中繼資料、產生轉譯，以及將其啟動以發佈執行個體。
@@ -31,7 +49,7 @@ ht-degree: 6%
 >* ACS Commons快速動作管理員
 >* 綜合工作流程
 >
->本軟體為開放原始碼， [Apache v2授權涵蓋此軟體](https://adobe-consulting-services.github.io/pages/license.html)。若要提出問題或報告問題，請造訪ACS AEM工具和 [ACS AEM公域的GitHub](https://github.com/Adobe-Consulting-Services/acs-aem-commons/issues) [問題](https://github.com/Adobe-Consulting-Services/acs-aem-tools/issues)。
+>本軟體為開放原始碼， [Apache v2授權涵蓋此軟體](https://adobe-consulting-services.github.io/pages/license.html)。 若要提出問題或報告問題，請造訪ACS AEM工具和 [ACS AEM公域的GitHub](https://github.com/Adobe-Consulting-Services/acs-aem-commons/issues) [問題](https://github.com/Adobe-Consulting-Services/acs-aem-tools/issues)。
 
 ## 移轉至[!DNL Experience Manager] {#migrating-to-aem}
 
@@ -84,7 +102,7 @@ Adobe的Managed Services團隊使用名為Glutton的工具將資料載入客戶�
 根據您的需求設定工作流程後，您有兩個選項可執行它：
 
 1. 最簡單的方法是[ACS Commons&#39;大量工作流程管理員](https://adobe-consulting-services.github.io/acs-aem-commons/features/bulk-workflow-manager.html)。 此工具可讓您執行查詢，並透過工作流程處理查詢的結果。 也有設定批次大小的選項。
-1. 您可搭配「合成工 [作流程」使用ACS Commons Fast Action Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/fast-action-manager.html) [&#128279;](https://adobe-consulting-services.github.io/acs-aem-commons/features/synthetic-workflow.html)。雖然此方法的參與度更高，但可讓您移除[!DNL Experience Manager]工作流程引擎的額外負荷，同時最佳化伺服器資源的使用。 此外，Fast Action Manager還通過動態監控伺服器資源並調節系統上的負載，進一步提高了效能。ACS Commons功能頁上提供了示例指令碼。
+1. 您可搭配「合成工 [作流程」使用ACS Commons Fast Action Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/fast-action-manager.html) [&#128279;](https://adobe-consulting-services.github.io/acs-aem-commons/features/synthetic-workflow.html)。 雖然此方法的參與度更高，但可讓您移除[!DNL Experience Manager]工作流程引擎的額外負荷，同時最佳化伺服器資源的使用。 此外，Fast Action Manager還通過動態監控伺服器資源並調節系統上的負載，進一步提高了效能。 ACS Commons功能頁上提供了示例指令碼。
 
 ### 啟用資產 {#activating-assets}
 
@@ -92,7 +110,7 @@ Adobe的Managed Services團隊使用名為Glutton的工具將資料載入客戶�
 
 若要解決此問題，您可以使用[快速動作管理員](https://adobe-consulting-services.github.io/acs-aem-commons/features/fast-action-manager.html)來管理資產復寫。 這可在不使用Sling佇列的情況下運作，可降低額外負荷，同時限制工作負荷以防止伺服器超載。 使用FAM管理復寫的範例會顯示在該功能的檔案頁面上。
 
-將資產傳送至發佈農場的其他選項包括使 [用vlt-rcp](https://jackrabbit.apache.org/filevault/rcp.html) [或oak-run](https://github.com/apache/jackrabbit-oak/tree/trunk/oak-run)，這些工具是Jackrabbit的一部份。另一個選項是針對您的[!DNL Experience Manager]基礎架構使用開放來源工具，稱為[Grabbit](https://github.com/TWCable/grabbit)，該工具聲稱其效能比vlt快。
+將資產傳送至發佈農場的其他選項包括使 [用vlt-rcp](https://jackrabbit.apache.org/filevault/rcp.html) [或oak-run](https://github.com/apache/jackrabbit-oak/tree/trunk/oak-run)，這些工具是Jackrabbit的一部份。 另一個選項是針對您的[!DNL Experience Manager]基礎架構使用開放來源工具，稱為[Grabbit](https://github.com/TWCable/grabbit)，該工具聲稱其效能比vlt快。
 
 對於這些方法中的任一方法，請注意製作例項上的資產未顯示為已啟動。 若要以正確的啟用狀態處理標幟這些資產的問題，您也需要執行指令碼以將資產標示為已啟用。
 

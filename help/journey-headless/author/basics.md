@@ -5,13 +5,33 @@ exl-id: 125c4d0b-1572-4dba-823d-cdef2778f275
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments
 role: Admin, Developer, User, Leader
-source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: bfd4bc52-c397-5127-8f86-8953ba9fc0a3
+    internal-label: Headless
+  - id: a642c50e-80eb-4fc1-a5d2-f3762d1f841d
+    internal-label: Administration
+subfeature_v2:
+  - id: e9db7c79-8f65-4281-a439-c9049296d903
+    internal-label: Content Fragments
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1653'
-ht-degree: 70%
-
+source-wordcount: '1701'
+ht-degree: 72%
 ---
-
 # AEM Headless 製作基本知識 {#author-headless-basics}
 
 ## 目前進度 {#story-so-far}
@@ -24,8 +44,8 @@ ht-degree: 70%
 
 * **客群**：初學者
 * **目標**：介紹 Headless CMS 製作的基本知識：
-   * 使用 AEMaaCS 製作簡介
-   * 內容片段簡介
+  * 使用 AEMaaCS 製作簡介
+  * 內容片段簡介
 
 ## 基本處理 {#basic-handling}
 
@@ -193,8 +213,8 @@ AEM 安裝通常至少包含兩個環境：
 
 * **內容片段模型**
 
-  您將在編輯器頂部看到內容片段模型的名稱 — 直接在片段名稱下方。這也是將您帶到模型編輯器的連結。
-內容片段模型實際上對您的內容片段至關重要，因為它們會定義您使用的結構。但是，建立和編輯這些角色（通常）是另一個角色（內容架構師）的責任。
+  您將在編輯器頂端看到內容片段模型的名稱 - 就在片段名稱下方。 這也是一個將您帶到模型編輯器的連結。
+  內容片段模型實際上對您的內容片段至關重要，因為它們定義了您使用的結構。 然而，建立和編輯模型 (通常) 是另一個人物誌的責任，即內容架構師。
 
   >[!NOTE]
   >
@@ -234,38 +254,38 @@ AEM 安裝通常至少包含兩個環境：
 
 * [基本處理](/help/sites-authoring/basic-handling.md) - 此頁面主要根據&#x200B;**Sites** 主控台，但許多/大部分功能也和製作 **Assets** 主控台下的&#x200B;**內容片段**&#x200B;相關。
 
-   * [導覽面板](/help/sites-authoring/basic-handling.md#navigation-panel)
+  * [導覽面板](/help/sites-authoring/basic-handling.md#navigation-panel)
 
-   * [標頭](/help/sites-authoring/basic-handling.md#the-header)
+  * [標頭](/help/sites-authoring/basic-handling.md#the-header)
 
-   * [動作工具列](/help/sites-authoring/basic-handling.md#actions-toolbar)
+  * [動作工具列](/help/sites-authoring/basic-handling.md#actions-toolbar)
 
-   * [快速動作](/help/sites-authoring/basic-handling.md#quick-actions)
+  * [快速動作](/help/sites-authoring/basic-handling.md#quick-actions)
 
-   * [檢視和選擇資源](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)
+  * [檢視和選擇資源](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)
 
-   * [邊欄選擇器](/help/sites-authoring/basic-handling.md#rail-selector)
+  * [邊欄選擇器](/help/sites-authoring/basic-handling.md#rail-selector)
 
 * [使用內容片段](/help/assets/content-fragments/content-fragments.md)
 
-   * [管理內容片段](/help/assets/content-fragments/content-fragments-managing.md)
+  * [管理內容片段](/help/assets/content-fragments/content-fragments-managing.md)
 
-      * [套用設定到資產資料夾](/help/assets/content-fragments/content-fragments-configuration-browser.md#apply-the-configuration-to-your-assets-folder)
+    * [套用設定到資產資料夾](/help/assets/content-fragments/content-fragments-configuration-browser.md#apply-the-configuration-to-your-assets-folder)
 
-      * [建立內容片段](/help/assets/content-fragments/content-fragments-managing.md#creating-a-content-fragment)
+    * [建立內容片段](/help/assets/content-fragments/content-fragments-managing.md#creating-a-content-fragment)
 
-   * [變化 - 編寫內容片段](/help/assets/content-fragments/content-fragments-variations.md)
+  * [變化 - 編寫內容片段](/help/assets/content-fragments/content-fragments-variations.md)
 
-   * [內容片段模型](/help/assets/content-fragments/content-fragments-models.md)
+  * [內容片段模型](/help/assets/content-fragments/content-fragments-models.md)
 
-      * [內容片段模型 - 資料類型](/help/assets/content-fragments/content-fragments-models.md#data-types)
+    * [內容片段模型 - 資料類型](/help/assets/content-fragments/content-fragments-models.md#data-types)
 
-      * [內容片段模型 - 屬性](/help/assets/content-fragments/content-fragments-models.md#properties)
+    * [內容片段模型 - 屬性](/help/assets/content-fragments/content-fragments-models.md#properties)
 
-      * [內容片段模型 - 允許內容片段模型在資產資料夾上](/help/assets/content-fragments/content-fragments-models.md#allowing-content-fragment-models-assets-folder)
+    * [內容片段模型 - 允許內容片段模型在資產資料夾上](/help/assets/content-fragments/content-fragments-models.md#allowing-content-fragment-models-assets-folder)
 
 * 快速入門指南
-   * [建立Assets資料夾Headless快速入門手冊](/help/sites-developing/headless/getting-started/create-assets-folder.md)
+  * [建立Assets資料夾Headless快速入門手冊](/help/sites-developing/headless/getting-started/create-assets-folder.md)
 
 * [AEM Headless 內容架構師歷程](/help/journey-headless/architect/overview.md)
 

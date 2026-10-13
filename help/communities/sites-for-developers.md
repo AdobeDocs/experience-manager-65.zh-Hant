@@ -9,13 +9,20 @@ exl-id: 1dc568cd-315c-4944-9a3e-e5d7794e5dc0
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '488'
+source-wordcount: '520'
 ht-degree: 1%
-
 ---
-
 # 社群網站要點 {#community-site-essentials}
 
 ## 自訂網站範本 {#custom-site-template}
@@ -106,9 +113,9 @@ UGC和自訂程式碼未包含在社群網站套件中。
 
   例如，如果`rep:principalName = community-enable-nrh9h-members`
 
-   * **網站名稱** = *啟用*
-   * **網站識別碼** = *nrh9h*
-   * **唯一網站識別碼** = *enable-nrh9h*
+  * **網站名稱** = *啟用*
+  * **網站識別碼** = *nrh9h*
+  * **唯一網站識別碼** = *enable-nrh9h*
 
 ### 使用者產生的內容 {#user-generated-content}
 

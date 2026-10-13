@@ -11,20 +11,29 @@ feature: Upgrading
 exl-id: 5242600c-2281-46f9-a347-d985b4e319b3
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 835ee49e-9248-5578-a60a-15c097807178
+    internal-label: Upgrading
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
-source-wordcount: '832'
+source-wordcount: '854'
 ht-degree: 0%
-
 ---
-
 # 升級程式 {#upgrade-procedure}
 
 >[!NOTE]
 >
->由於大部分的Adobe Experience Manager (AEM)升級都會就地執行，因此升級作業需要製作層級的停機時間。 遵循這些最佳實務，您就能將Publish層級停機時間降到最低或完全消除。
+>由於大部分的Adobe Experience Manager (AEM)升級都會就地執行，因此升級作業需要製作層級的停機時間。 遵循這些最佳實務，您就能將發佈層級停機時間減少或消除。
 
-升級AEM環境時，您必須考慮升級作者環境或發佈環境之間的方法差異，以將作者和一般使用者的停機時間減至最少。 此頁面概述升級AEM 6.x版本目前所執行AEM拓撲的高階程式。由於程式在製作和發佈層級，以及Mongo和TarMK型部署之間有所不同，因此每個層級和微核心都會列在單獨的區段中。 執行部署時，Adobe建議先升級作者環境、判斷是否成功，然後繼續發佈環境。
+升級AEM環境時，您必須考慮升級作者環境或發佈環境之間方法上的差異，以將作者和一般使用者的停機時間減至最少。 此頁面概述升級AEM 6.x版本目前所執行AEM拓朴的高階程式。 由於程式在製作和發佈層級，以及Mongo和TarMK型部署之間有所不同，因此每個層級和微核心都會列在單獨的區段中。 執行部署時，Adobe建議先升級作者環境、判斷是否成功，然後繼續發佈環境。
 
 <!--
 >[!IMPORTANT]
@@ -85,7 +94,7 @@ ht-degree: 0%
 
 ### 正在啟動拓撲 {#starting-topology-1}
 
-此段落的假設拓撲包含至少兩個AEM Author執行個體的MongoMK製作叢集，且支援至少兩個MongoMK資料庫。 所有作者執行個體都會共用資料存放區。 這些步驟應同時適用於S3和檔案資料存放區。 從Author伺服器到TarMK Publish伺服器陣列會進行復寫。
+此段落的假設拓撲包含至少兩個AEM Author執行個體的MongoMK製作叢集，且支援至少兩個MongoMK資料庫。 所有作者執行個體都會共用資料存放區。 這些步驟應同時適用於S3和檔案資料存放區。 從Author伺服器到TarMK發佈伺服器陣列會進行復寫。
 
 ![mongo-topology](assets/mongo-topology.jpg)
 
@@ -95,7 +104,7 @@ ht-degree: 0%
 
 1. 停止內容製作。
 1. 複製資料存放區以進行備份。
-1. 停止所有，但一個AEM Author例項（您的主要作者）除外。
+1. 停止所有AEM Author例項，但需停止一個Author主要例項，
 1. 從復本集（您的主要Mongo執行個體）移除所有MongoDB節點，但一個MongoDB節點除外。
 1. 更新主要作者上的`DocumentNodeStoreService.cfg`檔案，以反映您的單一成員復本集。
 1. 請重新啟動主要作者，以確保其正確重新啟動。
@@ -143,11 +152,11 @@ ht-degree: 0%
 
 1. 清理升級的作者執行個體、Mongo節點和資料存放區。
 
-## TarMK Publish農場 {#tarmk-publish-farm}
+## TarMK發佈陣列 {#tarmk-publish-farm}
 
-### TarMK Publish農場 {#tarmk-publish-farm-1}
+### TarMK發佈陣列 {#tarmk-publish-farm-1}
 
-此區段的假設拓撲包含兩個TarMK發佈執行個體，由Dispatcher前導，而該前導又是負載平衡器。 從Author伺服器到TarMK Publish陣列會進行復寫。
+此區段的假設拓撲包含兩個TarMK發佈執行個體，由Dispatcher前導，而該前導又是負載平衡器。 從Author伺服器到TarMK Publish伺服器陣列會進行復寫。
 
 ![tarmk-pub-farmv5](assets/tarmk-pub-farmv5.png)
 
@@ -155,43 +164,43 @@ ht-degree: 0%
 
 ![upgrade-publish2](assets/upgrade-publish2.png)
 
-1. 在負載平衡器處停止到Publish 2執行個體的流量。
+1. 在負載平衡器處停止流向發佈2執行個體的流量。
 1. 在Publish 2上執行[升級前維護](/help/sites-deploying/pre-upgrade-maintenance-tasks.md)。
-1. 在Publish 2上執行[就地升級](/help/sites-deploying/in-place-upgrade.md)。
+1. 在發佈2上執行[就地升級](/help/sites-deploying/in-place-upgrade.md)。
 1. 視需要更新Dispatcher或Web模組&#x200B;**。
 1. 排清Dispatcher快取。
-1. QA會透過Dispatcher在防火牆後面驗證Publish 2。
-1. 關閉Publish 2。
+1. QA會透過防火牆後面的Dispatcher驗證Publish 2。
+1. 關閉發佈2。
 1. 複製Publish 2執行個體。
-1. 啟動Publish 2.
+1. 開始發佈2.
 
 ### 如果成功 {#if-successful-2}
 
 ![upgrade-publish1](assets/upgrade-publish1.png)
 
-1. 啟用Publish 2的流量。
-1. 停止與Publish 1的流量。
+1. 啟用流量以發佈2。
+1. 停止流向發佈1的流量。
 1. 停止Publish 1執行個體。
-1. 將Publish 1執行個體取代為Publish 2的復本。
+1. 以Publish 2的副本取代Publish 1執行個體。
 1. 視需要更新Dispatcher或Web模組&#x200B;**。
-1. 清除Publish 1的Dispatcher快取。
-1. 啟動Publish 1.
-1. QA會透過Dispatcher在防火牆後面驗證Publish 1。
+1. 排清Publish 1的Dispatcher快取。
+1. 開始發佈1。
+1. QA會透過防火牆後面的Dispatcher驗證Publish 1。
 
 ### 如果失敗（回覆） {#if-unsuccessful-rollback-1}
 
 ![pub_rollback](assets/pub_rollback.jpg)
 
 1. 建立Publish 1的復本。
-1. 將Publish 2執行個體取代為Publish 1的復本。
-1. 清除Publish 2的Dispatcher快取。
-1. 啟動Publish 2.
-1. QA會透過Dispatcher在防火牆後面驗證Publish 2。
-1. 啟用Publish 2的流量。
+1. 以Publish 1的副本取代Publish 2執行個體。
+1. 排清Publish 2的Dispatcher快取。
+1. 開始發佈2.
+1. QA會透過防火牆後面的Dispatcher驗證Publish 2。
+1. 啟用流量以發佈2。
 
 ## 最終升級步驟 {#final-upgrade-steps}
 
-1. 啟用Publish 1的流量。
+1. 啟用流量以發佈1。
 1. QA會從公用URL執行最終驗證。
 1. 從製作環境啟用復寫代理程式。
 1. 繼續內容製作。

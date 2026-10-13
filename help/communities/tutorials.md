@@ -9,13 +9,20 @@ exl-id: 061d3b1b-7ceb-4e57-8183-2062a76173f1
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
-source-wordcount: '244'
+source-wordcount: '296'
 ht-degree: 1%
-
 ---
-
 # 教學課程 {#tutorials}
 
 這些範例可協助您學習及使用Adobe Experience Manager (AEM) 6.1 Communities [社交元件架構(SCF)](scf.md)。
@@ -60,7 +67,7 @@ ht-degree: 1%
 
 ## 示範使用者 {#demo-users}
 
-Geometrixx範例套件包含示範使用者。 身為訪客（未登入）或成員（已登入）的體驗通常會有差異。 而且，只要仍安裝Geometrixx範例套件，您就可以使用這些使用者來模擬使用[社群元件指南](components-guide.md)探索時的登入狀態。
+Geometrixx範例套件包含示範使用者。 身為訪客（未登入）或成員（已登入）的體驗通常會有差異。 此外，只要Geometrixx範例套件仍保持安裝，您便可以在使用[社群元件指南](components-guide.md)探索時，使用這些使用者來模擬登入狀態。
 
 如需示範使用者的完整清單，請使用邊欄導覽至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 作業]** > **[!UICONTROL 安全性>使用者]**。 或使用傳統UI [安全性主控台](http://localhost:4502/useradmin)來管理使用者和群組。
 

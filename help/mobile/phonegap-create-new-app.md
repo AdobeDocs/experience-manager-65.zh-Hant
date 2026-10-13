@@ -9,13 +9,17 @@ exl-id: be093025-b19f-4499-a7b5-aae5ab74f966
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '574'
+source-wordcount: '625'
 ht-degree: 2%
-
 ---
-
 # 使用建立精靈建立AEM Mobile應用程式{#creating-a-new-aem-mobile-app-using-create-wizard}
 
 {{ue-over-mobile}}
@@ -40,7 +44,7 @@ AEM Mobile應用程式以定義頁面結構和屬性的Blueprint為基礎。 您
 
 應用程式範本可讓您輕鬆使用開發人員建立的現有設計，以便在AEM中建立新的應用程式。
 
-什麼是應用程式範本？將其視為代表應用程式基準或基礎的頁面範本和元件的集合。
+什麼是應用程式範本？ 將其視為代表應用程式基準或基礎的頁面範本和元件的集合。
 根據其他應用程式的範本建立應用程式時，您會得到其起點代表在其中建立該應用程式之應用程式的應用程式。
 
 您必須擁有現有的行動應用程式範本（或已安裝具備應用程式範本的應用程式），才能使用此功能。

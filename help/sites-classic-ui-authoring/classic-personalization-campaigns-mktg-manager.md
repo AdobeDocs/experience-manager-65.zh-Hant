@@ -10,13 +10,24 @@ exl-id: 0e13112b-d9df-4ba6-bd73-431c87890b79
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization
 role: User
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+  - id: eb3ad9f8-54a2-45f3-abb1-d3976415a718
+    internal-label: Personalization
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '866'
+source-wordcount: '1204'
 ht-degree: 0%
-
 ---
-
 # 使用行銷活動管理員{#working-with-the-marketing-campaign-manager}
 
 在AEM中，行銷活動管理員(MCM)是協助您管理多頻道行銷活動的主控台。 使用此行銷自動化軟體，您可以管理所有品牌、行銷活動和體驗，以及相關區段、清單、銷售機會和報表。
@@ -36,26 +47,26 @@ ht-degree: 0%
 * **[儀表板](#dashboard)**
 這分為四個窗格：
 
-   * [清單](#lists)
-此窗格會顯示您已建立的清單，以及該清單中的潛在客戶數目。您可以從此窗格直接建立清單，或匯入銷售機會以建立清單。
-選取特定清單後，您將會前往[清單](#lists)區段，顯示清單的詳細資料。
+  * [個清單](#lists)
+    此窗格會顯示您已建立的清單，以及該清單中的潛在客戶數目。 您可以從此窗格直接建立清單，或匯入銷售機會以建立清單。
+    選取特定清單後，您將會前往[清單](#lists)區段，顯示清單的詳細資料。
 
-   * [區段](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#anoverviewofsegmentation)
-此窗格會顯示您已定義的區段。區段可讓您為共用特定特徵的訪客集合設定特徵。
-選取特定區段會開啟區段定義頁面。
+  * [區段](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#anoverviewofsegmentation)
+    此窗格會顯示您已定義的區段。 區段可讓您為共用特定特徵的訪客集合設定特徵。
+    選取特定區段會開啟區段定義頁面。
 
-   * [報告](/help/sites-administering/reporting.md)
-AEM提供不同的報表，協助您分析及監控執行個體的狀態。此MCM窗格會列出報告。
-選取報告會開啟報告頁面。
+  * [報告](/help/sites-administering/reporting.md)
+    AEM提供不同的報表，協助您分析及監控執行個體的狀態。 此MCM窗格會列出報告。
+    選取報告會開啟報告頁面。
 
-   * [個行銷活動](#campaigns)
-此窗格會列出您的行銷活動體驗，例如[電子報](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#newsletters)和[Teasers](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#teasers)。
+  * [個行銷活動](#campaigns)
+    此窗格會列出您的行銷活動體驗，例如[電子報](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#newsletters)和[Teasers](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#teasers)。
 
 * **[個銷售機會](#leads)**
-您可以在此處管理您的銷售機會。您可以建立或匯入銷售機會、編輯個別銷售機會的特定詳細資訊，或在不再需要時刪除。您也可以將潛在客戶放入不同的群組中，稱為「清單」。**注意：** Adobe不打算進一步增強此功能。
+您可以在此處管理您的銷售機會。 您可以建立或匯入銷售機會、編輯個別銷售機會的特定詳細資訊，或在不再需要時刪除。 您也可以將潛在客戶放入不同的群組中，稱為「清單」。 **注意：** Adobe不打算進一步增強此功能。
 建議使用[Adobe Campaign以及與AEM](/help/sites-administering/campaign.md)的整合。
 
-* **[清單](#lists)**
+* **[個清單](#lists)**
 您可以在此處管理您的（潛在客戶）清單。**注意：** Adobe不打算進一步增強此功能。
 建議使用[Adobe Campaign以及與AEM](/help/sites-administering/campaign.md)的整合。
 
@@ -114,7 +125,7 @@ AEM提供不同的報表，協助您分析及監控執行個體的狀態。此MC
 
 * **在左窗格**：
 這裡有所有品牌和行銷活動的清單。
-按一下品牌可展開清單，以在左側窗格中顯示所有相關行銷活動；此清單也會顯示每個行銷活動中存在的體驗數量。它也會在右窗格中開啟品牌概觀。
+按一下品牌可展開清單，以在左側窗格中顯示所有相關行銷活動；此清單也會顯示每個行銷活動中存在的體驗數量。 它也會在右窗格中開啟品牌概觀。
 
 * **在右窗格**：
 系統會為每個品牌顯示圖示（不會顯示歷史行銷活動）。
@@ -133,8 +144,8 @@ AEM提供不同的報表，協助您分析及監控執行個體的狀態。此MC
 
 * 選取行銷活動（在右窗格中）以：
 
-   * 編輯&#x200B;**屬性……**
-   * **刪除**&#x200B;行銷活動。
+  * 編輯&#x200B;**屬性……**
+  * **刪除**&#x200B;行銷活動。
 
 * 開啟行銷活動概覽（在右窗格中按兩下行銷活動，或在左窗格中按一下）。
 
@@ -176,7 +187,7 @@ AEM提供不同的報表，協助您分析及監控執行個體的狀態。此MC
    * **編輯**&#x200B;特定Teaser頁面或電子報的詳細資料（也可以使用連按兩下）。
    * 為特定的Teaser頁面或電子報定義&#x200B;**屬性……**。
    * **模擬**&#x200B;體驗（Teaser頁面或電子報）的外觀與風格。
-當模擬頁面開啟時，您可以接著開啟Sidekick以切換至該頁面的編輯模式。
+     當模擬頁面開啟時，您可以接著開啟Sidekick以切換至該頁面的編輯模式。
 
    * **分析……**&#x200B;為頁面產生的曝光數。
 

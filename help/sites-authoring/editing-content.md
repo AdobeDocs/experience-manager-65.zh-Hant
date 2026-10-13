@@ -10,13 +10,26 @@ exl-id: d5cf4478-51e4-4ca8-b3f8-6d7caed7d515
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Developer
-source-git-commit: ed9b9f3835af2dc40ed4c5d3f9e3209dfc6bed90
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '3030'
 ht-degree: 4%
-
 ---
-
 # 編輯頁面內容{#editing-page-content}
 
 建立頁面後（新頁面或作為啟動項或即時副本的一部分），您可以編輯內容以進行所需的更新。
@@ -269,9 +282,9 @@ ht-degree: 4%
 
   這會將元件從剪貼簿貼到頁面。 原始物件是否保留取決於您是使用複製還是剪下。
 
-   * 您可以貼至相同頁面或不同頁面。
-   * 貼上的專案會貼在您選取貼上動作的專案上方。
-   * 僅當剪貼簿上有內容時，才會顯示「貼上」動作。
+  * 您可以貼至相同頁面或不同頁面。
+  * 貼上的專案會貼在您選取貼上動作的專案上方。
+  * 僅當剪貼簿上有內容時，才會顯示「貼上」動作。
 
   ![貼上](assets/screen_shot_2018-03-22at113553.png)
 
@@ -514,15 +527,15 @@ AEM可讓您鎖定頁面，不讓其他人修改內容。 當您對某個特定�
 
 * **網站**&#x200B;主控台
 
-   1. 選取具有[選取模式](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)的頁面。
-   1. 選取鎖定圖示。
+  1. 選取具有[選取模式](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)的頁面。
+  1. 選取鎖定圖示。
 
   ![鎖定圖示](assets/screen_shot_2018-03-22at134928.png)
 
 * **頁面編輯器**
 
-   1. 若要開啟功能表，請選取&#x200B;**頁面資訊**&#x200B;圖示。
-   1. 選取&#x200B;**鎖定頁面**&#x200B;選項。
+  1. 若要開啟功能表，請選取&#x200B;**頁面資訊**&#x200B;圖示。
+  1. 選取&#x200B;**鎖定頁面**&#x200B;選項。
 
 鎖定後，主控台檢視資訊會更新，而編輯鎖定符號時會顯示於工具列中。
 

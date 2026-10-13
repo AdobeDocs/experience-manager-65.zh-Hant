@@ -5,13 +5,26 @@ exl-id: 01cab3c3-4c0d-44d9-b47c-034de9a08cb1
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Developer
-source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '738'
+source-wordcount: '754'
 ht-degree: 1%
-
 ---
-
 # 選取您的UI{#selecting-your-ui}
 
 Adobe Experience Manager (AEM)觸控式UI現在是標準UI，管理和編輯網站幾乎已達功能對等性。 不過，使用者有時可能想要切換至[傳統UI](/help/sites-classic-ui-authoring/classicui.md)。 有幾個選項可以執行此操作。
@@ -22,10 +35,10 @@ Adobe Experience Manager (AEM)觸控式UI現在是標準UI，管理和編輯網�
 
 有許多位置可供您定義要使用的UI：
 
-* [設定執行個體的預設UI](#configuring-the-default-ui-for-your-instance)
+* [設定您執行個體的預設UI](#configuring-the-default-ui-for-your-instance)
 這會設定在使用者登入時顯示的預設UI。 使用者可以覆寫此專案，並為其帳戶或目前的工作階段選取不同的UI。
 
-* [正在設定您帳戶的傳統UI編寫](/help/sites-authoring/select-ui.md#setting-classic-ui-authoring-for-your-account)
+* [正在為您的帳戶設定傳統UI編寫](/help/sites-authoring/select-ui.md#setting-classic-ui-authoring-for-your-account)
 這會將UI設定為編輯頁面時的預設值，但使用者可以覆寫此設定，並為其帳戶或目前工作階段選取不同的UI。
 
 * [切換到目前工作階段的傳統UI](#switching-to-classic-ui-for-the-current-session)
@@ -43,7 +56,7 @@ Adobe Experience Manager (AEM)觸控式UI現在是標準UI，管理和編輯網�
 >
 >從舊版升級的執行個體會保留傳統UI以供編寫頁面。
 >
->升級後，頁面編寫不會自動切換至觸控式UI，但您可以使用[WCM編寫UI模式服務](/help/sites-deploying/configuring-osgi.md) （ **服務）的** OSGi設定`AuthoringUIMode`來設定此設定。 檢視編輯器[的](#ui-overrides-for-the-editor)UI覆寫。
+>升級後，頁面編寫不會自動切換至觸控式UI，但您可以使用&#x200B;**WCM編寫UI模式服務** （ `AuthoringUIMode`服務）的[OSGi設定](/help/sites-deploying/configuring-osgi.md)來設定此設定。 檢視編輯器[&#128279;](#ui-overrides-for-the-editor)的UI覆寫。
 
 ## 為您的執行個體設定預設UI {#configuring-the-default-ui-for-your-instance}
 
@@ -107,21 +120,21 @@ Adobe Experience Manager (AEM)觸控式UI現在是標準UI，管理和編輯網�
 
 * 編寫頁面時：
 
-   * 在URL中使用`cf#`存取頁面時，會強制使用傳統編輯器。 例如：
-     `https://localhost:4502/cf#/content/geometrixx/en/products/triangle.html`
+  * 在URL中使用`cf#`存取頁面時，會強制使用傳統編輯器。 例如：
+    `https://localhost:4502/cf#/content/geometrixx/en/products/triangle.html`
 
-   * 在URL中使用`/editor.html`或使用觸控裝置時，會強制使用觸控式編輯器。 例如：
-     `https://localhost:4502/editor.html/content/geometrixx/en/products/triangle.html`
+  * 在URL中使用`/editor.html`或使用觸控裝置時，會強制使用觸控式編輯器。 例如：
+    `https://localhost:4502/editor.html/content/geometrixx/en/products/triangle.html`
 
 * 任何強制都是暫時性的，只對瀏覽器工作階段有效
 
-   * Cookie集的設定取決於是否使用觸控式( `editor.html`)或傳統式( `cf#`)。
+  * Cookie集的設定取決於是否使用觸控式( `editor.html`)或傳統式( `cf#`)。
 
 * 透過`siteadmin`開啟頁面時，會檢查下列專案是否存在：
 
-   * Cookie
-   * 使用者偏好設定
-   * 如果兩者都不存在，則預設為[WCM編寫UI模式服務](/help/sites-deploying/configuring-osgi.md) （ **服務）的** OSGi設定`AuthoringUIMode`中設定的定義。
+  * Cookie
+  * 使用者偏好設定
+  * 如果兩者都不存在，則預設為&#x200B;**WCM編寫UI模式服務** （ `AuthoringUIMode`服務）的[OSGi設定](/help/sites-deploying/configuring-osgi.md)中設定的定義。
 
 >[!NOTE]
 >

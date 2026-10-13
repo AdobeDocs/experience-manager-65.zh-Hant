@@ -10,13 +10,29 @@ role: Developer
 exl-id: 419335b2-2aae-4e83-98ff-18e61b7efa9c
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Services,APIs & Integrations
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 516393bc-fa69-5e74-a04e-f7ec9ffe2c5e
+    internal-label: APIs & Integrations
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+  - id: f19cff18-c8cc-4a4b-adad-85dd2fa3dbe2
+    internal-label: Document Services
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '2915'
+source-wordcount: '2927'
 ht-degree: 0%
-
 ---
-
 # 處理已提交的Forms {#handling-submitted-forms}
 
 **本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
@@ -216,10 +232,10 @@ Forms服務會傳回下列值，指出是否已完成資料處理：
 
    * 叫用`FormsServiceClient`物件的`processFormSubmission`方法，並傳遞下列值：
 
-      * 包含表單資料的`com.adobe.idp.Document`物件。
-      * 字串值，指定包含所有相關HTTP標頭的環境變數。 指定要處理的內容型別。 若要處理XML資料，請為此引數指定下列字串值： `CONTENT_TYPE=text/xml`。 若要處理PDF資料，請為此引數指定下列字串值： `CONTENT_TYPE=application/pdf`。
-      * 字串值，指定`HTTP_USER_AGENT`標頭值，例如。 `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`. 此引數值為選用。
-      * 儲存執行階段選項的`RenderOptionsSpec`物件。
+     * 包含表單資料的`com.adobe.idp.Document`物件。
+     * 字串值，指定包含所有相關HTTP標頭的環境變數。 指定要處理的內容型別。 若要處理XML資料，請為此引數指定下列字串值： `CONTENT_TYPE=text/xml`。 若要處理PDF資料，請為此引數指定下列字串值： `CONTENT_TYPE=application/pdf`。
+     * 字串值，指定`HTTP_USER_AGENT`標頭值，例如。 `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`. 此引數值為選用。
+     * 儲存執行階段選項的`RenderOptionsSpec`物件。
 
      `processFormSubmission`方法傳回包含表單提交結果的`FormsResult`物件。
 
@@ -238,18 +254,18 @@ Forms服務會傳回下列值，指出是否已完成資料處理：
 
    * 如果資料內容型別為`application/vnd.adobe.xdp+xml`或`text/xml`，請建立應用程式邏輯以擷取XML資料值。
 
-      * 呼叫`FormsResult`物件的`getOutputContent`方法，以建立`com.adobe.idp.Document`物件。
-      * 呼叫`java.io.DataInputStream`建構函式並傳遞`com.adobe.idp.Document`物件以建立`java.io.InputStream`物件。
-      * 呼叫靜態`org.w3c.dom.DocumentBuilderFactory`物件的`newInstance`方法，以建立`org.w3c.dom.DocumentBuilderFactory`物件。
-      * 呼叫`org.w3c.dom.DocumentBuilderFactory`物件的`newDocumentBuilder`方法，以建立`org.w3c.dom.DocumentBuilder`物件。
-      * 呼叫`org.w3c.dom.DocumentBuilder`物件的`parse`方法並傳遞`java.io.InputStream`物件，以建立`org.w3c.dom.Document`物件。
-      * 擷取XML檔案中每個節點的值。 完成此工作的一種方式是建立接受兩個引數的自訂方法： `org.w3c.dom.Document`物件以及您要擷取其值的節點名稱。 此方法會傳回代表節點值的字串值。 在此程式之後的程式碼範例中，此自訂方法稱為`getNodeText`。 會顯示此方法的內文。
+     * 呼叫`FormsResult`物件的`getOutputContent`方法，以建立`com.adobe.idp.Document`物件。
+     * 呼叫`java.io.DataInputStream`建構函式並傳遞`com.adobe.idp.Document`物件以建立`java.io.InputStream`物件。
+     * 呼叫靜態`org.w3c.dom.DocumentBuilderFactory`物件的`newInstance`方法，以建立`org.w3c.dom.DocumentBuilderFactory`物件。
+     * 呼叫`org.w3c.dom.DocumentBuilderFactory`物件的`newDocumentBuilder`方法，以建立`org.w3c.dom.DocumentBuilder`物件。
+     * 呼叫`org.w3c.dom.DocumentBuilder`物件的`parse`方法並傳遞`java.io.InputStream`物件，以建立`org.w3c.dom.Document`物件。
+     * 擷取XML檔案中每個節點的值。 完成此工作的一種方式是建立接受兩個引數的自訂方法： `org.w3c.dom.Document`物件以及您要擷取其值的節點名稱。 此方法會傳回代表節點值的字串值。 在此程式之後的程式碼範例中，此自訂方法稱為`getNodeText`。 會顯示此方法的內文。
 
    * 如果資料內容型別為`application/pdf`，請建立應用程式邏輯，以將提交的PDF資料儲存為PDF檔案。
 
-      * 呼叫`FormsResult`物件的`getOutputContent`方法，以建立`com.adobe.idp.Document`物件。
-      * 使用物件的公用建構函式來建立`java.io.File`物件。 請務必指定PDF作為副檔名。
-      * 叫用`com.adobe.idp.Document`物件的`copyToFile`方法並傳遞`java.io.File`物件以填入PDF檔案。
+     * 呼叫`FormsResult`物件的`getOutputContent`方法，以建立`com.adobe.idp.Document`物件。
+     * 使用物件的公用建構函式來建立`java.io.File`物件。 請務必指定PDF作為副檔名。
+     * 叫用`com.adobe.idp.Document`物件的`copyToFile`方法並傳遞`java.io.File`物件以填入PDF檔案。
 
 **另請參閱**
 
@@ -287,17 +303,17 @@ Forms服務會傳回下列值，指出是否已完成資料處理：
    * 使用物件的建構函式建立`RenderOptionsSpec`物件。 透過叫用`RenderOptionsSpec`物件的`setLocale`方法並傳遞指定地區設定值的字串值來設定地區設定值。
    * 叫用`FormsService`物件的`processFormSubmission`方法，並傳遞下列值：
 
-      * 包含表單資料的`BLOB`物件。
-      * 字串值，指定包含所有相關HTTP標頭的環境變數。 指定要處理的內容型別。 若要處理XML資料，請為此引數指定下列字串值： `CONTENT_TYPE=text/xml`。 若要處理PDF資料，請為此引數指定下列字串值： `CONTENT_TYPE=application/pdf`。
-      * 字串值，指定`HTTP_USER_AGENT`標頭值；例如`Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`。
-      * 儲存執行階段選項的`RenderOptionsSpec`物件。
-      * 方法填入的空白`BLOBHolder`物件。
-      * 方法填入的空白`javax.xml.rpc.holders.StringHolder`物件。
-      * 方法填入的空白`BLOBHolder`物件。
-      * 方法填入的空白`BLOBHolder`物件。
-      * 方法填入的空白`javax.xml.rpc.holders.ShortHolder`物件。
-      * 方法填入的空白`MyArrayOf_xsd_anyTypeHolder`物件。 此引數用於儲存與表單一起提交的檔案附件。
-      * 空的`FormsResultHolder`物件由方法以提交的表單填入。
+     * 包含表單資料的`BLOB`物件。
+     * 字串值，指定包含所有相關HTTP標頭的環境變數。 指定要處理的內容型別。 若要處理XML資料，請為此引數指定下列字串值： `CONTENT_TYPE=text/xml`。 若要處理PDF資料，請為此引數指定下列字串值： `CONTENT_TYPE=application/pdf`。
+     * 字串值，指定`HTTP_USER_AGENT`標頭值；例如`Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`。
+     * 儲存執行階段選項的`RenderOptionsSpec`物件。
+     * 方法填入的空白`BLOBHolder`物件。
+     * 方法填入的空白`javax.xml.rpc.holders.StringHolder`物件。
+     * 方法填入的空白`BLOBHolder`物件。
+     * 方法填入的空白`BLOBHolder`物件。
+     * 方法填入的空白`javax.xml.rpc.holders.ShortHolder`物件。
+     * 方法填入的空白`MyArrayOf_xsd_anyTypeHolder`物件。 此引數用於儲存與表單一起提交的檔案附件。
+     * 空的`FormsResultHolder`物件由方法以提交的表單填入。
 
      `processFormSubmission`方法會將表單提交的結果填入`FormsResultHolder`引數。
 
@@ -311,21 +327,21 @@ Forms服務會傳回下列值，指出是否已完成資料處理：
 
    * 如果資料內容型別為`application/vnd.adobe.xdp+xml`或`text/xml`，請建立應用程式邏輯以擷取XML資料值。
 
-      * 呼叫`FormsResult`物件的`getOutputContent`方法，以建立`BLOB`物件。
-      * 透過叫用`BLOB`物件的`getBinaryData`方法建立位元組陣列。
-      * 呼叫`java.io.ByteArrayInputStream`建構函式並傳遞位元組陣列，以建立`java.io.InputStream`物件。
-      * 呼叫靜態`org.w3c.dom.DocumentBuilderFactory`物件的`newInstance`方法，以建立`org.w3c.dom.DocumentBuilderFactory`物件。
-      * 呼叫`org.w3c.dom.DocumentBuilderFactory`物件的`newDocumentBuilder`方法，以建立`org.w3c.dom.DocumentBuilder`物件。
-      * 呼叫`org.w3c.dom.DocumentBuilder`物件的`parse`方法並傳遞`java.io.InputStream`物件，以建立`org.w3c.dom.Document`物件。
-      * 擷取XML檔案中每個節點的值。 完成此工作的一種方式是建立接受兩個引數的自訂方法： `org.w3c.dom.Document`物件以及您要擷取其值的節點名稱。 此方法會傳回代表節點值的字串值。 在此程式之後的程式碼範例中，此自訂方法稱為`getNodeText`。 會顯示此方法的內文。
+     * 呼叫`FormsResult`物件的`getOutputContent`方法，以建立`BLOB`物件。
+     * 透過叫用`BLOB`物件的`getBinaryData`方法建立位元組陣列。
+     * 呼叫`java.io.ByteArrayInputStream`建構函式並傳遞位元組陣列，以建立`java.io.InputStream`物件。
+     * 呼叫靜態`org.w3c.dom.DocumentBuilderFactory`物件的`newInstance`方法，以建立`org.w3c.dom.DocumentBuilderFactory`物件。
+     * 呼叫`org.w3c.dom.DocumentBuilderFactory`物件的`newDocumentBuilder`方法，以建立`org.w3c.dom.DocumentBuilder`物件。
+     * 呼叫`org.w3c.dom.DocumentBuilder`物件的`parse`方法並傳遞`java.io.InputStream`物件，以建立`org.w3c.dom.Document`物件。
+     * 擷取XML檔案中每個節點的值。 完成此工作的一種方式是建立接受兩個引數的自訂方法： `org.w3c.dom.Document`物件以及您要擷取其值的節點名稱。 此方法會傳回代表節點值的字串值。 在此程式之後的程式碼範例中，此自訂方法稱為`getNodeText`。 會顯示此方法的內文。
 
    * 如果資料內容型別為`application/pdf`，請建立應用程式邏輯，以將提交的PDF資料儲存為PDF檔案。
 
-      * 呼叫`FormsResult`物件的`getOutputContent`方法，以建立`BLOB`物件。
-      * 透過叫用`BLOB`物件的`getBinaryData`方法建立位元組陣列。
-      * 使用物件的公用建構函式來建立`java.io.File`物件。 請務必指定PDF作為副檔名。
-      * 使用它的建構函式並傳遞`java.io.File`物件來建立`java.io.FileOutputStream`物件。
-      * 叫用`java.io.FileOutputStream`物件的`write`方法並傳遞位元組陣列以填入PDF檔案。
+     * 呼叫`FormsResult`物件的`getOutputContent`方法，以建立`BLOB`物件。
+     * 透過叫用`BLOB`物件的`getBinaryData`方法建立位元組陣列。
+     * 使用物件的公用建構函式來建立`java.io.File`物件。 請務必指定PDF作為副檔名。
+     * 使用它的建構函式並傳遞`java.io.File`物件來建立`java.io.FileOutputStream`物件。
+     * 叫用`java.io.FileOutputStream`物件的`write`方法並傳遞位元組陣列以填入PDF檔案。
 
 **另請參閱**
 

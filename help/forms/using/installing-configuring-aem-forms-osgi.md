@@ -8,13 +8,31 @@ role: Admin, User, Developer
 exl-id: 19b5765e-50bc-4fed-8af5-f6bb464516c8
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,AEM Forms on OSGi
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 8c4fb903-572c-5473-ad45-8ebb0d5d8134
+    internal-label: AEM Forms on OSGi
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1972'
 ht-degree: 7%
-
 ---
-
 # 安裝及設定資料擷取功能{#install-and-configure-data-capture-capabilities}
 
 ## 簡介 {#introduction}
@@ -44,18 +62,18 @@ AEM Forms附加元件套件是部署至AEM的應用程式。 您只需要至少�
 * AEM執行個體的安裝路徑未包含空格。
 * AEM執行個體已啟動且執行中。 對於Windows使用者，請在提升許可權的模式下安裝AEM執行個體。 在AEM術語中，「例項」是在伺服器上以製作或發佈模式執行的AEM副本。 您至少需要兩個[AEM執行個體（一個作者和一個發佈）](/help/sites-deploying/deploy.md)才能執行AEM Forms資料擷取功能：
 
-   * **作者**：用來建立、上傳和編輯內容以及管理網站的AEM執行個體。 一旦內容準備好上線，就會將其復寫到發佈執行個體。
-   * **發佈**：透過網際網路或內部網路，向公眾提供已發佈內容的AEM執行個體。
+  * **作者**：用來建立、上傳和編輯內容以及管理網站的AEM執行個體。 一旦內容準備好上線，就會將其復寫到發佈執行個體。
+  * **發佈**：透過網際網路或內部網路，向公眾提供已發佈內容的AEM執行個體。
 
 * 符合記憶體需求。 AEM Forms附加元件套件需要：
 
-   * Microsoft Windows安裝專用的15 GB暫存空間。
-   * UNIX安裝需要6 GB的暫存空間。
+  * Microsoft Windows安裝專用的15 GB暫存空間。
+  * UNIX安裝需要6 GB的暫存空間。
 
 * 已設定作者和發佈執行個體的復寫和反向復寫。 如需詳細資訊，請參閱[復寫](/help/sites-deploying/replication.md)。
 * 對於基於UNIX的系統：
 
-   * 從安裝媒體安裝下列32位元套件：
+  * 從安裝媒體安裝下列32位元套件：
 
 <table>
  <tbody>
@@ -100,7 +118,7 @@ AEM Forms附加元件套件是部署至AEM的應用程式。 您只需要至少�
 
 * 從安裝媒體安裝下列64位元套件：
 
-   * 利比庫
+  * 利比庫
 
 * 安裝[Microsoft Visual Studio 2019 32位元可轉散發套件](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170)。
 

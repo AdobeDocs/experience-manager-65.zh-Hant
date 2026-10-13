@@ -1,19 +1,30 @@
 ---
-title: 效能調整 [!DNL Assets]
-description: 有關 [!DNL Experience Manager] 組態、硬體、軟體及網路元件變更的建議與指引，以移除瓶頸並最佳化 [!DNL Experience Manager Assets]的效能。
+title: 效能調整[!DNL Assets]
+description: 有關[!DNL Experience Manager]組態、硬體、軟體和網路元件變更的建議與指引，以移除瓶頸並最佳化[!DNL Experience Manager Assets]的效能。
 contentOwner: AG
 mini-toc-levels: 1
 role: Developer, Admin
 feature: Asset Management
 exl-id: 1d9388de-f601-42bf-885b-6a7c3236b97e
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: f2c92b990a5c09cbcf532e0800e264620d98af77
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 7d2b2ec8-499c-5434-9ffd-9218cd71f683
+    internal-label: Asset Management
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '2794'
+source-wordcount: '2795'
 ht-degree: 0%
-
 ---
-
 <!-- TBD: Get reviewed by engineering. -->
 
 # [!DNL Adobe Experience Manager Assets]效能調整指南 {#assets-performance-tuning-guide}

@@ -10,13 +10,22 @@ exl-id: 52ea2ca2-eb1c-4bed-b52d-feef37c6afd6
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '569'
+source-wordcount: '586'
 ht-degree: 1%
-
 ---
-
 # 您的收件匣{#your-inbox}
 
 您可以從AEM的各種區域接收通知，例如有關工作專案的通知或代表您必須在頁面內容上執行之動作的任務。
@@ -81,7 +90,7 @@ ht-degree: 1%
    * 已啟動：頁面已啟動時。
    * 已停用：頁面已停用時。
    * 已刪除（整合）：當頁面已經刪除復寫時，亦即復寫在頁面上執行的刪除動作時。
-刪除或移動頁面時，會自動復寫刪除動作：執行刪除動作的來源執行處理以及復寫代理程式定義的目的地執行處理上，將會刪除頁面。
+     刪除或移動頁面時，會自動復寫刪除動作：執行刪除動作的來源執行處理以及復寫代理程式定義的目的地執行處理上，將會刪除頁面。
 
    * 已修改：頁面已修改時。
    * 已建立：頁面已建立時。
@@ -93,8 +102,8 @@ ht-degree: 1%
    * 按一下&#x200B;**新增**&#x200B;以新增資料列至資料表。
    * 按一下&#x200B;**路徑**&#x200B;資料表儲存格並輸入路徑，例如`/content/docs`。
 
-   * 若要收到屬於子樹狀結構之所有頁面的通知，請將&#x200B;**設定為精確？**&#x200B;至&#x200B;**否**。
-若要僅收到路徑所定義之頁面上動作的通知，請設定&#x200B;**精確？**&#x200B;至&#x200B;**是**。
+   * 若要收到屬於子樹狀結構之所有頁面的通知，請設定&#x200B;**Exact？** 至&#x200B;**否**。
+     若要僅收到路徑所定義之頁面上動作的通知，請設定&#x200B;**完全符合？** 至&#x200B;**是**。
 
    * 若要允許規則，請將&#x200B;**規則**&#x200B;設定為&#x200B;**允許**。 若設為&#x200B;**Deny**，則系統會拒絕該規則，但不會將其移除，之後可允許該規則。
 

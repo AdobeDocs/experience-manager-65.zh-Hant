@@ -7,13 +7,29 @@ exl-id: 18cfc4be-676d-4f08-afc1-4f11bb48dab6
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: Admin, User, Developer
-source-git-commit: 9f59606bb58b9e90f07bd22e89f3213afb54a697
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
-source-wordcount: '871'
+source-wordcount: '899'
 ht-degree: 0%
-
 ---
-
 # 在電子郵件通知中使用中繼資料 {#use-metadata-in-an-email-notification}
 
 您可以使用「指派工作」步驟來建立工作並指派給使用者或群組。 當任務指派給使用者或群組時，會傳送電子郵件通知給已定義的使用者或已定義群組的每個成員。 典型的[電子郵件通知](../../forms/using/use-custom-email-template-assign-task-step.md)包含指派工作的連結，以及與工作相關的資訊。
@@ -184,8 +200,8 @@ AEM Forms應用程式可立即提供數個中繼資料變數（機碼值組）�
 
    如果您未指定標題，「自訂中繼資料」欄位會顯示ECMAScript檔案的完整路徑。 執行以下步驟，為指令碼指定有意義的標題：
 
-   1. 展開指令碼節點，用滑鼠右鍵按一下&#x200B;**[!UICONTROL jcr：content]**&#x200B;節點，然後按一下&#x200B;**[!UICONTROL Mixins]**。
-   1. 在[編輯Mixin]對話方塊中輸入mix：title，然後按一下&#x200B;**+**。
+   1. 展開指令碼節點，用滑鼠右鍵按一下&#x200B;**[!UICONTROL jcr:content]**&#x200B;節點，然後按一下&#x200B;**[!UICONTROL Mixins]**。
+   1. 在[編輯Mixin]對話方塊中輸入mix:title，然後按一下&#x200B;**+**。
    1. 新增具有以下值的屬性。
 
       | 名稱 | jcr:title |
@@ -197,7 +213,7 @@ AEM Forms應用程式可立即提供數個中繼資料變數（機碼值組）�
 
 您可以使用WorkitemUserMetadataService Java介面為電子郵件範本新增自訂中繼資料。 您可以建立使用WorkitemUserMetadataService Java介面的OSGi套件組合，並將其部署至AEM Forms伺服器。 它使中繼資料可用於指派任務步驟中的選擇。
 
-若要建立具有Java介面的OSGi套件組合，請將[AEM Forms使用者端SDK](https://helpx.adobe.com/tw/aem-forms/kb/aem-forms-releases.html) jar和[granite jar](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.workflow.api/1.0.2/)檔案新增為外部相依性至OSGi套件組合專案。 您可以使用任何Java IDE來建立OSGi套件。 下列程式提供使用Eclipse建立OSGi套件的步驟：
+若要使用Java介面建立OSGi套件組合，請新增[AEM Forms使用者端SDK](https://helpx.adobe.com/tw/aem-forms/kb/aem-forms-releases.html) jar和[granite jar](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.workflow.api/1.0.2/)檔案做為外部相依性至OSGi套件組合專案。 您可以使用任何Java IDE來建立OSGi套件。 下列程式提供使用Eclipse建立OSGi套件的步驟：
 
 1. 開啟Eclipse IDE。 導覽至「檔案>新增專案」。
 

@@ -5,13 +5,37 @@ exl-id: a1a4b1ca-d353-46e2-a992-f38be6be338e
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments,Language Copy
 role: Admin, Developer, User, Leader
-source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: bfd4bc52-c397-5127-8f86-8953ba9fc0a3
+    internal-label: Headless
+  - id: a642c50e-80eb-4fc1-a5d2-f3762d1f841d
+    internal-label: Administration
+  - id: d9d38edd-df1b-480c-8f5e-72b62576f390
+    internal-label: Site and page features
+subfeature_v2:
+  - id: e9db7c79-8f65-4281-a439-c9049296d903
+    internal-label: Content Fragments
+  - id: e15a4109-ae5d-497d-b301-31149e35aed4
+    internal-label: Language Copy Wizard
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1143'
-ht-degree: 92%
-
+source-wordcount: '1155'
+ht-degree: 88%
 ---
-
 # 設定翻譯整合 {#configure-integration}
 
 了解如何將 AEM 連接到翻譯服務。
@@ -35,7 +59,7 @@ ht-degree: 92%
 
 ## 翻譯整合框架 {#tif}
 
-AEM 的翻譯整合框架 (TIF) 整合第三方翻譯服務以協調 AEM 內容的翻譯工作。它涉及三個基本步驟。
+AEM 的翻譯整合框架 (TIF) 整合第三方翻譯服務以協調 AEM 內容的翻譯工作。 它涉及三個基本步驟。
 
 1. 連接到您的翻譯服務提供者。
 1. 建立翻譯整合框架設定。
@@ -45,13 +69,13 @@ AEM 的翻譯整合框架 (TIF) 整合第三方翻譯服務以協調 AEM 內容�
 
 ## 連接到翻譯服務提供者 {#connect-translation-provider}
 
-第一步是選擇想要使用的翻譯服務。有多種人工和機器翻譯服務可供 AEM 使用。大部分提供者都提供要安裝的翻譯套件。請參閱[其他資源](#additional-resources)區段，了解一系列可選用的翻譯服務。
+第一步是選擇想要使用的翻譯服務。 有多種人工和機器翻譯服務可供 AEM 使用。 大部分提供者都提供要安裝的翻譯套件。 請參閱[其他資源](#additional-resources)區段，了解一系列可選用的翻譯服務。
 
 >[!NOTE]
 >
 >翻譯專家通常負責選擇要使用的翻譯服務，但管理員通常負責安裝所需的翻譯連接器套件。
 
-基於此歷程的目的，我們使用 AEM 有提供試用版授權的 Microsoft Translator，立即可用。如需更多此提供者的資訊，請參閱[其他資源](#additional-resources)區段。
+在此歷程中，我們使用 AEM 開箱即用且隨附試用授權的 Microsoft Translator。 如需更多此提供者的資訊，請參閱[其他資源](#additional-resources)區段。
 
 如果您選擇其他提供者，您的管理員必須按照該翻譯服務提供的說明安裝連接器套件。
 
@@ -59,13 +83,13 @@ AEM 的翻譯整合框架 (TIF) 整合第三方翻譯服務以協調 AEM 內容�
 >
 >在 AEM 中使用立即可用的 Microsoft Translator 不需要額外的設定，也無需額外的連接器設定即可按原狀工作。
 >
->如果您選擇使用 Microsoft Translator 連接器進行測試，則無需執行接下來兩章節中的步驟：[建立翻譯整合設定](#create-config)和[將設定與您的內容相關聯。](#associate)但是，建議您閱讀這兩個章節，以便熟悉相關步驟，在您需要設定偏好的連接器時就能派上用場。
+>如果您選擇使用Microsoft Translator聯結器進行測試，則不需要執行下列兩個區段的步驟： [建立翻譯整合設定](#create-config)和[將設定與您的內容建立關聯。](#associate) 但是，建議您閱讀這兩個章節，以便熟悉相關步驟，在您需要設定偏好的連接器時就能派上用場。
 >
 >Microsoft Translator Connector 的試用版授權不適用於生產用途，如果您決定取得授權，系統管理員必須按照本文件結尾的「[其他資源](#additional-resources)」區段中詳述的步驟來設定該授權。
 
 ## 建立翻譯整合設定 {#create-config}
 
-安裝偏好的翻譯服務連接器套件後，您必須為該服務建立翻譯整合框架設定。設定包括以下資訊：
+安裝偏好的翻譯服務連接器套件後，您必須為該服務建立翻譯整合框架設定。 設定包括以下資訊：
 
 * 要使用哪個翻譯服務提供者
 * 是否進行人工翻譯或機器翻譯
@@ -74,27 +98,27 @@ AEM 的翻譯整合框架 (TIF) 整合第三方翻譯服務以協調 AEM 內容�
 若要建立翻譯設定：
 
 1. 在全域導覽功能表中，按一下&#x200B;**工具** > **雲端服務** > **翻譯雲端服務**。
-1. 在內容結構中導覽到想要建立設定的位置。這通常根據特定專案，也可以是全域的。
+1. 在內容結構中導覽到想要建立設定的位置。 這通常根據特定專案，也可以是全域的。
    * 例如，在此情況下，以全域方式建立設定以套用到所有內容，或僅適用於 WKND 專案。
 
    ![翻譯設定位置](assets/translation-configuration-location.png)
 
 1. 在欄位中提供下列資訊，然後按一下[建立]。**&#x200B;**
-   1. 在下拉選單中選取&#x200B;**設定類型**。從清單中選取&#x200B;**翻譯整合**。
-   1. 輸入設定的&#x200B;**標題**。**標題**&#x200B;會識別&#x200B;**雲端服務**&#x200B;主控台和頁面屬性下拉清單中的設定。
+   1. 在下拉選單中選取&#x200B;**設定類型**。 從清單中選取&#x200B;**翻譯整合**。
+   1. 輸入設定的&#x200B;**標題**。 **標題**&#x200B;會識別&#x200B;**雲端服務**&#x200B;主控台和頁面屬性下拉清單中的設定。
    1. 或者，輸入&#x200B;**名稱**&#x200B;以用於儲存設定的存放庫節點。
 
    ![建立翻譯設定](assets/create-translation-configuration.png)
 
 1. 按一下[建立]&#x200B;**&#x200B;**，就會顯示[編輯組態]&#x200B;**&#x200B;**&#x200B;視窗，您可以在其中設定組態屬性。
 
-1. 請記住，內容片段以資產形式儲存在 AEM 中。按一下「**Assets**」標籤。
+1. 請記住，內容片段以資產形式儲存在 AEM 中。 按一下「**Assets**」標籤。
 
 ![翻譯設定屬性](assets/translation-configuration.png)
 
 1. 提供以下資訊。
 
-   1. **翻譯方法** - 選取&#x200B;**機器翻譯**&#x200B;或&#x200B;**人工翻譯**，視您的翻譯提供者而定。基於此歷程的目的，我們假設使用機器翻譯。
+   1. **翻譯方法** - 選取&#x200B;**機器翻譯**&#x200B;或&#x200B;**人工翻譯**，視您的翻譯提供者而定。 基於此歷程的目的，我們假設使用機器翻譯。
    1. **翻譯提供者** - 從清單中選取您為翻譯服務安裝的連接器。
    1. **內容類別** - 選取最合適的類別以更好地鎖定翻譯 (僅適用於機器翻譯)。
    1. **翻譯內容片段資產** - 勾選此選項以翻譯與內容片段相關聯的資產。
@@ -109,9 +133,9 @@ AEM 的翻譯整合框架 (TIF) 整合第三方翻譯服務以協調 AEM 內容�
 
 ## 將設定與您的內容相關聯。 {#associate}
 
-AEM 是一種靈活而強大的工具，透過多個連接器和多個設定，支援多個、同時執行的翻譯服務。設定這類設定不在本歷程的討論範圍內。然而，這種靈活性表示您必須將此設定與您的內容相關聯，藉此指定應使用哪些連接器和設定來翻譯您的內容。
+AEM 是一種靈活而強大的工具，透過多個連接器和多個設定，支援多個、同時執行的翻譯服務。 設定這類設定不在本歷程的討論範圍內。 然而，這種靈活性表示您必須將此設定與您的內容相關聯，藉此指定應使用哪些連接器和設定來翻譯您的內容。
 
-為此，請導覽至內容的語言根。基於我們範例的目的，這是
+為此，請導覽至內容的語言根。 基於我們範例的目的，這是
 
 ```text
 /content/dam/<your-project>/en
@@ -120,7 +144,7 @@ AEM 是一種靈活而強大的工具，透過多個連接器和多個設定，�
 1. 前往全域導覽，然後前往「**導覽**」>「**資產**」>「**檔案**」。
 1. 在資產主控台中，選取要設定的語言根，然後按一下&#x200B;**屬性**。
 1. 按一下&#x200B;**雲端服務**&#x200B;標籤。
-1. 在&#x200B;**新增設定**&#x200B;下拉選單的&#x200B;**雲端服務設定**&#x200B;下，選取您的連接器。如果您已依照[先前描述](#connect-translation-provider)安裝其套件，連接器就會出現在下拉選單中。
+1. 在&#x200B;**新增設定**&#x200B;下拉選單的&#x200B;**雲端服務設定**&#x200B;下，選取您的連接器。 如果您已依照[先前描述](#connect-translation-provider)安裝其套件，連接器就會出現在下拉選單中。
 1. 在&#x200B;**新增設定**&#x200B;下拉選單的&#x200B;**雲端服務設定**&#x200B;下，也選取您的設定。
 1. 按一下「**儲存並關閉**」。
 

@@ -10,21 +10,30 @@ exl-id: dcb66b6d-d731-493e-8936-12d529f6cbde
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '3187'
+source-wordcount: '3283'
 ht-degree: 1%
-
 ---
-
 # 頁面範本 — 可編輯 {#page-templates-editable}
 
 可編輯的範本已引入以：
 
 * 允許專業作者[建立和編輯範本](/help/sites-authoring/templates.md)。
 
-   * 這類特殊作者稱為&#x200B;**範本作者**
-   * 範本作者必須是`template-authors`群組的成員。
+  * 這類特殊作者稱為&#x200B;**範本作者**
+  * 範本作者必須是`template-authors`群組的成員。
 
 * 提供可保留動態連線至任何建立頁面的範本。 這麼做可確保對範本所做的任何變更都反映在頁面本身中。
 * 讓頁面元件變得更通用，以便無需自訂即可使用核心頁面元件。
@@ -39,7 +48,7 @@ ht-degree: 1%
 
 * 提供建立可編輯範本的概觀
 
-   * 如需詳細資訊，請參閱[建立頁面範本](/help/sites-authoring/templates.md)
+  * 如需詳細資訊，請參閱[建立頁面範本](/help/sites-authoring/templates.md)
 
 * 說明建立可編輯範本所需的管理員/開發人員工作
 * 說明可編輯範本的技術基礎
@@ -51,11 +60,11 @@ ht-degree: 1%
 >下列教學課程可能也適合在新專案中設定可編輯的頁面範本：
 >[開始使用AEM Sites第2部分 — 建立基礎頁面和範本](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/pages-templates.html?lang=zh-Hant)
 
-## 建立新範本 {#creating-a-new-template}
+## 建立新的範本 {#creating-a-new-template}
 
 建立可編輯的範本主要是由範本作者使用[範本主控台和範本編輯器](/help/sites-authoring/templates.md)完成。 本節提供此程式的概述，並接著說明在技術層級進行的工作。
 
-有關如何在AEM專案中使用可編輯範本的資訊，請參閱[使用Lazybones建立AEM專案](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/create-aem-project-structure-using-lazybones/m-p/186478?profile.language=zh-Hant)。
+如需如何在AEM專案中使用可編輯範本的詳細資訊，請參閱[使用Lazybones建立AEM專案](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/create-aem-project-structure-using-lazybones/m-p/186478)。
 
 建立可編輯的範本時，您可以：
 
@@ -73,7 +82,7 @@ ht-degree: 1%
    * 結構可讓您定義範本的元件和內容。
    * 範本結構中定義的元件無法在產生的頁面上移動，也無法從任何產生的頁面中刪除。
 
-      * 如果您是在`We.Retail`範例內容之外的自訂資料夾中建立範本，您可以選擇基礎元件或使用[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html?lang=zh-Hant)。
+     * 如果您是在`We.Retail`範例內容之外的自訂資料夾中建立範本，您可以選擇基礎元件或使用[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html?lang=zh-Hant)。
 
    * 如果您希望頁面作者能夠新增和移除元件，請新增段落系統至範本。
    * 您可以解除鎖定元件，然後再將其鎖定，讓您可以定義初始內容。
@@ -86,7 +95,7 @@ ht-degree: 1%
 
    * 內容原則會定義元件的設計屬性。
 
-      * 例如，可用的元件或最小/最大尺寸。
+     * 例如，可用的元件或最小/最大尺寸。
 
    * 這些原則適用於範本（以及使用範本建立的頁面）。
 
@@ -222,13 +231,13 @@ ht-degree: 1%
 
    現有資料夾會列在左側，包括&#x200B;**全域**&#x200B;資料夾。
 
-1. 按一下&#x200B;**建立**。
+1. 按一下「**建立**」。
 1. 在&#x200B;**建立組態**&#x200B;對話方塊中，必須設定下列欄位：
 
    * **標題**：提供設定資料夾的標題
    * **可編輯的範本**：選取以允許在此資料夾中編輯範本
 
-1. 按一下「**建立**」。
+1. 按一下「**建立**」
 
 >[!NOTE]
 >
@@ -368,24 +377,24 @@ ht-degree: 1%
  </tbody>
 </table>
 
-## 範本型別 {#template-type}
+## 範本類型 {#template-type}
 
 建立範本時，請指定範本型別：
 
 * 範本型別可有效提供範本的範本。 建立範本時，會使用所選範本型別的結構和初始內容來建立範本。
 
-   * 範本型別會複製以建立範本。
-   * 複製一旦發生，範本和範本型別之間的唯一連線是靜態參考，以供參考。
+  * 範本型別會複製以建立範本。
+  * 複製一旦發生，範本和範本型別之間的唯一連線是靜態參考，以供參考。
 
 * 範本型別可讓您定義：
 
-   * 頁面元件的資源型別。
-   * 根節點的原則，定義範本編輯器中允許的元件。
-   * Adobe建議您為回應式格線定義中斷點，並在範本型別上的設定行動模擬器。 此步驟是選擇性的，因為組態也可以在個別範本上定義（請參閱[範本型別和行動裝置群組](/help/sites-developing/page-templates-editable.md#p-template-type-and-mobile-device-groups-br-p)）。
+  * 頁面元件的資源型別。
+  * 根節點的原則，定義範本編輯器中允許的元件。
+  * Adobe建議您為回應式格線定義中斷點，並在範本型別上的設定行動模擬器。 此步驟是選擇性的，因為組態也可以在個別範本上定義（請參閱[範本型別和行動裝置群組](/help/sites-developing/page-templates-editable.md#p-template-type-and-mobile-device-groups-br-p)）。
 
-* AEM提供少量現成可用的範本型別，例如「HTML5頁面」和「最適化表單頁面」。
+* AEM提供少量現成可用的範本型別，例如HTML5頁面和調適型表單頁面。
 
-   * 提供其他範例作為[`We.Retail`](/help/sites-developing/we-retail.md)範例內容的一部分。
+  * 提供其他範例作為[`We.Retail`](/help/sites-developing/we-retail.md)範例內容的一部分。
 
 * 範本型別通常由開發人員定義。
 
@@ -492,13 +501,13 @@ GITHUB上的程式碼
 
 * `<template-name>`
 
-   * ` [initial](#initial-content)`
-   * `jcr:content`
-   * ` [structure](#structure)`
-   * ` [policies](#policies)`
-   * `thumbnail.png`
+  * ` [initial](#initial-content)`
+  * `jcr:content`
+  * ` [structure](#structure)`
+  * ` [policies](#policies)`
+  * `thumbnail.png`
 
-### jcr：content {#jcr-content}
+### jcr:content {#jcr-content}
 
 此節點會保留範本的屬性：
 
@@ -506,9 +515,9 @@ GITHUB上的程式碼
 
 * **名稱**：`status`
 
-   * **類型**：`String`
+  * **類型**：`String`
 
-   * **值**： `draft`、`enabled`或`disabled`
+  * **值**： `draft`、`enabled`或`disabled`
 
 ### 結構 {#structure}
 
@@ -518,10 +527,10 @@ GITHUB上的程式碼
 * 對結構所做的變更會反映在使用範本建立的任何頁面中。
 * `root` (`structure/jcr:content/root`)節點會定義結果頁面中可用的元件清單。
 
-   * 範本結構中定義的元件無法在任何結果頁面上移動或從中刪除。
-   * 解鎖元件後，`editable`屬性會設為`true`。
+  * 範本結構中定義的元件無法在任何結果頁面上移動或從中刪除。
+  * 解鎖元件後，`editable`屬性會設為`true`。
 
-   * 解鎖已包含內容的元件後，此內容會移至`initial`分支。
+  * 解鎖已包含內容的元件後，此內容會移至`initial`分支。
 
 * `cq:responsive`節點保留回應式配置的定義。
 
@@ -545,7 +554,7 @@ GITHUB上的程式碼
 
 * `root`節點上的屬性`cq:policy`
   `/conf/<your-folder>/settings/wcm/templates/<your-template>/policies/jcr:content/root`
-提供頁面段落系統內容原則的相對參照。
+  提供頁面段落系統內容原則的相對參照。
 
 * 屬性`cq:policy`位於`root`下的元件明確節點上，提供個別元件原則的連結。
 
@@ -580,23 +589,21 @@ GITHUB上的程式碼
 
    * 正在設定`jcr:content`節點上的狀態屬性。
 
-      * 例如，在：
+     * 例如，在：
+       `/conf/<your-folder>/settings/wcm/templates/<your-template>/jcr:content`
 
-        `/conf/<your-folder>/settings/wcm/templates/<your-template>/jcr:content`
+     * 定義屬性：
 
-      * 定義屬性：
-
-         * 名稱：狀態
-         * 型別：字串
-         * 值： `enabled`
+       * 名稱：狀態
+       * 型別：字串
+       * 值： `enabled`
 
 1. **允許的範本**
 
    * [在適當的頁面或子分支的根頁面的&#x200B;**頁面屬性**](/help/sites-authoring/templates.md#allowing-a-template-author)&#x200B;上定義允許的範本路徑。
    * 設定屬性：
-
      `cq:allowedTemplates`
-在必要分支的`jcr:content`節點上。
+     在必要分支的`jcr:content`節點上。
 
    例如，使用值：
 
@@ -610,41 +617,41 @@ GITHUB上的程式碼
 
 * 具有範本和範本型別中資訊的參考。 您可以使用具有下列屬性的`jcr:content`節點來實現此功能：
 
-   * `cq:template`
-提供實際範本的動態參考；可讓範本的變更反映在實際頁面上。
+  * `cq:template`
+    提供實際範本的動態參考；可讓範本的變更反映在實際頁面上。
 
-   * `cq:templateType`
-提供範本型別的參考。
+  * `cq:templateType`
+    提供範本型別的參考。
 
 ![chlimage_1-71](assets/chlimage_1-71.png)
 
 上圖顯示範本、內容和元件如何相互關聯：
 
-* 控制器 — `/content/<my-site>/<my-page>`
+* 控制器 —  `/content/<my-site>/<my-page>`
 參照範本的結果頁面。 內容會控制整個流程。 根據定義，它會存取適當的範本和元件。
 
-* 設定 — `/conf/<my-folder>/settings/wcm/templates/<my-template>`
+* 設定 —  `/conf/<my-folder>/settings/wcm/templates/<my-template>`
 [範本和相關內容原則](#template-definitions)定義頁面設定。
 
 * 模型 — OSGi套件組合
 [OSGI組合](/help/sites-deploying/osgi-configuration-settings.md)實作該功能。
 
-* 檢視 — `/apps/<my-site>/components`
+* 檢視 —  `/apps/<my-site>/components`
 在製作和發佈環境中，內容都是由[元件](/help/sites-developing/components.md)轉譯。
 
 轉譯頁面時：
 
 * **範本**：
 
-   * 已參考其`jcr:content`節點的`cq:template`屬性，以存取對應於該頁面的範本。
+  * 已參考其`jcr:content`節點的`cq:template`屬性，以存取對應於該頁面的範本。
 
 * **元件**：
 
-   * 頁面元件會將範本的`structure/jcr:content`樹狀結構與頁面的`jcr:content`樹狀結構合併。
+  * 頁面元件會將範本的`structure/jcr:content`樹狀結構與頁面的`jcr:content`樹狀結構合併。
 
-   * 頁面元件僅可讓作者編輯已標示為可編輯的範本結構的節點（以及任何子系）。
-   * 在頁面上呈現元件時，會從`jcr:content`節點取得該元件的相對路徑；接著會搜尋範本的`policies/jcr:content`節點下的相同路徑。
+  * 頁面元件僅可讓作者編輯已標示為可編輯的範本結構的節點（以及任何子系）。
+  * 在頁面上呈現元件時，會從`jcr:content`節點取得該元件的相對路徑；接著會搜尋範本的`policies/jcr:content`節點下的相同路徑。
 
-      * 此節點的`cq:policy`屬性指向實際內容原則（亦即，它儲存該元件的設計組態）。
+    * 此節點的`cq:policy`屬性指向實際內容原則（亦即，它儲存該元件的設計組態）。
 
-      * 此功能可讓您擁有重複使用相同內容原則設定的多個範本。
+    * 此功能可讓您擁有重複使用相同內容原則設定的多個範本。

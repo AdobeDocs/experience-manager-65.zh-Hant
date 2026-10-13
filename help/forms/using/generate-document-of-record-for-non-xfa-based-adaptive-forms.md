@@ -9,13 +9,29 @@ feature: Adaptive Forms,Foundation Components
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 exl-id: 7240897f-6b3a-427a-abc6-66310c2998f3
-source-git-commit: f2c92b990a5c09cbcf532e0800e264620d98af77
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 7da902b6-fe94-5180-8e7c-f6d1e38d01d5
+    internal-label: Foundation Components
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '4312'
+source-wordcount: '4370'
 ht-degree: 4%
-
 ---
-
 # 產生最適化表單或最適化表單片段的記錄檔案 {#generate-document-of-record-for-adaptive-forms}
 
 <span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hant)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。 這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。 本文會介紹使用基礎元件編寫最適化表單的舊方法。</span>
@@ -51,8 +67,8 @@ ht-degree: 4%
 * [XML結構描述](../../forms/using/creating-adaptive-form.md#create-an-adaptive-form-based-on-xml-or-json-schema)
 讓您為最適化表單選取XML結構描述定義。 當您為最適化表單選取XML結構描述時，您可以：
 
-   * 為記錄檔案建立XFA範本的關聯。 確保關聯的XFA範本使用與您的調適型表單相同的XML結構描述
-   * 自動生成記錄檔案
+  * 為記錄檔案建立XFA範本的關聯。 確保關聯的XFA範本使用與您的調適型表單相同的XML結構描述
+  * 自動生成記錄檔案
 
 * 無
 讓您建立不含表單模型的最適化表單。 系統會自動為您的最適化表單產生記錄檔案。
@@ -393,23 +409,23 @@ ht-degree: 4%
 * **從記錄檔案排除標題：**&#x200B;設定屬性會從記錄檔案排除面板/表格的標題。 僅適用於面板和表格。
 * **從記錄檔案排除描述：**&#x200B;設定屬性會從記錄檔案排除面板/表格的描述。 僅適用於面板和表格。
 * **[!UICONTROL 分頁]** > **[!UICONTROL 置入]**：決定您要置入面板的位置。
-   * **[!UICONTROL 置入]** > **[!UICONTROL 先前專案]**：將面板置於父面板中的前一個物件之後。
-   * **[!UICONTROL 放置]** > **[!UICONTROL 在內容區域中]** >內容區域的名稱：將面板放置在指定的內容區域中。
-   * **[!UICONTROL 放置]** > **[!UICONTROL 置於下一個內容區域頂端]**：將面板置於下一個內容區域頂端。
-   * **[!UICONTROL 放置]** > **[!UICONTROL 內容區域頂端]** >內容區域名稱：將面板放置在指定內容區域的頂端。
-   * **[!UICONTROL 放置]** > **[!UICONTROL 在頁面]** >主版頁面的名稱：將面板放置在指定的頁面上。 如果未自動插入分頁，[!DNL AEM Forms]會新增分頁。
-   * **[!UICONTROL 置入]** > **[!UICONTROL 下一頁頂端]**：將面板置於下一頁頂端。 如果未自動插入分頁，[!DNL AEM Forms]會新增分頁。
-   * **[!UICONTROL 置入]** > **[!UICONTROL 頁面頂端]** >主版頁面的名稱：呈現指定的頁面時，將面板置於頁面頂端。 如果未自動插入分頁，[!DNL AEM Forms]會新增分頁。
+  * **[!UICONTROL 置入]** > **[!UICONTROL 先前專案]**：將面板置於父面板中的前一個物件之後。
+  * **[!UICONTROL 放置]** > **[!UICONTROL 在內容區域中]** >內容區域的名稱：將面板放置在指定的內容區域中。
+  * **[!UICONTROL 放置]** > **[!UICONTROL 置於下一個內容區域頂端]**：將面板置於下一個內容區域頂端。
+  * **[!UICONTROL 放置]** > **[!UICONTROL 內容區域頂端]** >內容區域名稱：將面板放置在指定內容區域的頂端。
+  * **[!UICONTROL 放置]** > **[!UICONTROL 在頁面]** >主版頁面的名稱：將面板放置在指定的頁面上。 如果未自動插入分頁，[!DNL AEM Forms]會新增分頁。
+  * **[!UICONTROL 置入]** > **[!UICONTROL 下一頁頂端]**：將面板置於下一頁頂端。 如果未自動插入分頁，[!DNL AEM Forms]會新增分頁。
+  * **[!UICONTROL 置入]** > **[!UICONTROL 頁面頂端]** >主版頁面的名稱：呈現指定的頁面時，將面板置於頁面頂端。 如果未自動插入分頁，[!DNL AEM Forms]會新增分頁。
 * **[!UICONTROL 分頁]** > **[!UICONTROL After]**：決定置入面板後要填滿的區域。**[!UICONTROL After]**&#x200B;區段中提供下列欄位：
-   * **[!UICONTROL After]** > **[!UICONTROL 繼續填滿上層]**：繼續合併上層面板中剩餘要填滿之所有物件的資料。
-   * **[!UICONTROL After]** > **[!UICONTROL 移至下一個內容區域]**：在放置面板後，開始填入下一個內容區域。
-   * **[!UICONTROL After]** > **[!UICONTROL 移至內容區域]** >內容區域名稱：在放置面板後，開始填入指定的內容區域。
-   * **[!UICONTROL After]** > **[!UICONTROL 移至下一頁]**：在放置面板後開始填入下一頁。
-   * **[!UICONTROL After]** > **[!UICONTROL 移至頁面]** >頁面名稱：開始填入指定的頁面。
+  * **[!UICONTROL After]** > **[!UICONTROL 繼續填滿上層]**：繼續合併上層面板中剩餘要填滿之所有物件的資料。
+  * **[!UICONTROL After]** > **[!UICONTROL 移至下一個內容區域]**：在放置面板後，開始填入下一個內容區域。
+  * **[!UICONTROL After]** > **[!UICONTROL 移至內容區域]** >內容區域名稱：在放置面板後，開始填入指定的內容區域。
+  * **[!UICONTROL After]** > **[!UICONTROL 移至下一頁]**：在放置面板後開始填入下一頁。
+  * **[!UICONTROL After]** > **[!UICONTROL 移至頁面]** >頁面名稱：開始填入指定的頁面。
 * **[!UICONTROL 分頁]** > **[!UICONTROL 溢位]**：設定跨頁面的面板或資料表的溢位。 **[!UICONTROL 溢位]**&#x200B;區段中有下列欄位：
-   * **[!UICONTROL 溢位]** > **[!UICONTROL 無]**：開始填入下一頁。 如果未自動插入分頁，[!DNL AEM Forms]會新增分頁。
-   * **[!UICONTROL 溢位]** > **[!UICONTROL 移至內容區域]** >內容區域名稱：開始填入指定的內容區域。
-   * **[!UICONTROL 溢位]** > **[!UICONTROL 移至頁面]** >頁面名稱：開始填入指定的頁面。
+  * **[!UICONTROL 溢位]** > **[!UICONTROL 無]**：開始填入下一頁。 如果未自動插入分頁，[!DNL AEM Forms]會新增分頁。
+  * **[!UICONTROL 溢位]** > **[!UICONTROL 移至內容區域]** >內容區域名稱：開始填入指定的內容區域。
+  * **[!UICONTROL 溢位]** > **[!UICONTROL 移至頁面]** >頁面名稱：開始填入指定的頁面。
 
   >[!NOTE]
   >
@@ -420,21 +436,21 @@ ht-degree: 4%
 **表單層級設定**
 
 * **[!UICONTROL 基本]**
-   * **範本：**&#x200B;您可以選取[預設]或[自訂]範本。
-     ![替代文字](image.png)
-   * **強調色：**&#x200B;您可以預先定義[!UICONTROL 記錄檔案]的範本顏色。
-   * **字型系列：**&#x200B;為[!UICONTROL 記錄檔案]文字選取字型型別。
-   * **包含未繫結欄位於DoR：**&#x200B;設定屬性包含來自[!UICONTROL 記錄檔案]中結構描述型最適化表單的未繫結欄位。 預設為true。
-   * **若隱藏則從DoR排除欄位：**&#x200B;設定屬性以在表單提交時從[!UICONTROL 記錄檔案]排除隱藏欄位。 當您在伺服器[&#128279;](/help/forms/using/configuring-submit-actions.md#server-side-revalidation-in-adaptive-form-server-side-revalidation-in-adaptive-form)上啟用重新驗證時，伺服器會先重新計算隱藏的欄位，然後再從[!UICONTROL 記錄檔案]中排除這些欄位
+  * **範本：**&#x200B;您可以選取[預設]或[自訂]範本。
+    ![替代文字](image.png)
+  * **強調色：**&#x200B;您可以預先定義[!UICONTROL 記錄檔案]的範本顏色。
+  * **字型系列：**&#x200B;為[!UICONTROL 記錄檔案]文字選取字型型別。
+  * **包含未繫結欄位於DoR：**&#x200B;設定屬性包含來自[!UICONTROL 記錄檔案]中結構描述型最適化表單的未繫結欄位。 預設為true。
+  * **若隱藏則從DoR排除欄位：**&#x200B;設定屬性以在表單提交時從[!UICONTROL 記錄檔案]排除隱藏欄位。 當您在伺服器[&#128279;](/help/forms/using/configuring-submit-actions.md#server-side-revalidation-in-adaptive-form-server-side-revalidation-in-adaptive-form)上啟用重新驗證時，伺服器會先重新計算隱藏的欄位，然後再從[!UICONTROL 記錄檔案]中排除這些欄位
 * **[!UICONTROL 表單欄位屬性]**
-   * 如果勾選選項&#x200B;**對於核取方塊與選項按鈕元件，只顯示選取的值**，它將只產生具有選取值的DoR輸出。
-   * 您可以為多個選取的值選取「分隔符號」，也可以選擇任何其他分隔符號型別。
-   * 選項對齊方式
-      * 垂直
-      * 水平
-      * 與自適應表單相同
-     >[!NOTE]
-     > 「垂直」與「水準」對齊方式僅適用於「選項按鈕」與「核取方塊」
+  * 如果勾選選項&#x200B;**對於核取方塊與選項按鈕元件，只顯示選取的值**，它將只產生具有選取值的DoR輸出。
+  * 您可以為多個選取的值選取「分隔符號」，也可以選擇任何其他分隔符號型別。
+  * 選項對齊方式
+    * 垂直
+    * 水平
+    * 與自適應表單相同
+    >[!NOTE]
+    > 「垂直」與「水準」對齊方式僅適用於「選項按鈕」與「核取方塊」
 * **[!UICONTROL 主版頁面屬性]**&#x200B;按一下以取得有關[主版頁面屬性](#master-page-properties-master-page-properties)的詳細資訊
 
 ## 在記錄檔案中套用分頁符號 {#apply-page-breaks-in-dor}

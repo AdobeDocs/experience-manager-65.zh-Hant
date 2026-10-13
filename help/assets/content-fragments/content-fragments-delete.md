@@ -5,13 +5,25 @@ feature: Content Fragments
 role: User
 exl-id: 6212457e-a171-4c33-8d19-54c26516e981
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: a77b577341050316ce60ae809a4912bbbbce974c
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: a45b1e7f-e65f-4cd3-be86-5cec5d9449ef
+    internal-label: Content management
+subfeature_v2:
+  - id: b7f5d1e0-aa2f-4a55-83f4-c2b35a8bd3a7
+    internal-label: Content fragments
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '517'
+source-wordcount: '519'
 ht-degree: 9%
-
 ---
-
 # 內容片段 - 刪除考量事項 {#content-fragments-delete-considerations}
 
 在AEM中定義內容片段刪除原則之前，請檢閱這些重要考量。 內容片段是傳送Headless內容的強大工具，必須仔細考慮刪除這些片段的影響。
@@ -72,15 +84,15 @@ ht-degree: 9%
 
 * 對於內容片段節點或資料夾：
 
-   * `jcr:addChildNodes`、`jcr:modifyProperties`
+  * `jcr:addChildNodes`、`jcr:modifyProperties`
 
 * 針對所有內容片段的`jcr:content`節點：
 
-   * `jcr:addChildNodes`、`jcr:modifyProperties`和`jcr:removeChildNodes`
+  * `jcr:addChildNodes`、`jcr:modifyProperties`和`jcr:removeChildNodes`
 
 * 針對所有內容片段的`jcr:content`以下的所有節點：
 
-   * `jcr:addChildNodes`、`jcr:modifyProperties`和`jcr:removeChildNodes`、`jcr:removeNode`
+  * `jcr:addChildNodes`、`jcr:modifyProperties`和`jcr:removeChildNodes`、`jcr:removeNode`
 
 這些`remove`許可權必須由CRXDE Lite[&#128279;](/help/sites-administering/user-group-ac-admin.md#access-right-management)中的存取控制清單管理。
 

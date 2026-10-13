@@ -9,13 +9,22 @@ exl-id: ccd8577b-3bbf-40ba-9696-474545f07b84
 feature: Administering
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 5ef752af-d616-5b23-8312-06964e46b208
+    internal-label: Administering
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1802'
 ht-degree: 1%
-
 ---
-
 
 # Adobe Experience Manager (AEM)中的服務使用者 {#service-users-in-aem}
 
@@ -41,31 +50,31 @@ ht-degree: 1%
 
 * **變更存取控制**
 
-   * 確定真正需要存取許可權的使用者或群組確實擁有存取權；
+  * 確定真正需要存取許可權的使用者或群組確實擁有存取權；
 
 * **調整內容結構**
 
-   * 將其移至其他位置，例如，存取控制與可用的請求工作階段相符的位置；
-   * 變更內容粒度；
+  * 將其移至其他位置，例如，存取控制與可用的請求工作階段相符的位置；
+  * 變更內容粒度；
 
 * **將您的程式碼重構為適當的服務**
 
-   * 將商業邏輯從JSP程式碼移至服務。 這允許不同的內容模式。
+  * 將商業邏輯從JSP程式碼移至服務。 這允許不同的內容模式。
 
 此外，請確定您開發的任何新功能都遵守以下原則：
 
 * **安全性需求應該驅動內容結構**
 
-   * 管理存取控制應該感覺很自然
-   * 存取控制必須由存放庫執行，而非應用程式
+  * 管理存取控制應該感覺很自然
+  * 存取控制必須由存放庫執行，而非應用程式
 
 * **使用節點型別**
 
-   * 限制可設定的屬性集
+  * 限制可設定的屬性集
 
 * **尊重隱私權設定**
 
-   * 如果有私人設定檔，其中一個範例就是不要公開在私人`/profile`節點上找到的設定檔圖片、電子郵件或全名。
+  * 如果有私人設定檔，其中一個範例就是不要公開在私人`/profile`節點上找到的設定檔圖片、電子郵件或全名。
 
 ## 嚴格存取控制 {#strict-access-control}
 
@@ -78,7 +87,7 @@ ht-degree: 1%
 * 為節點型別套用ACL
 * 限制權限
 
-   * 例如，當只需要寫入內容時，不要授予`jcr:write`許可權；請改用`jcr:modifyProperties`
+  * 例如，當只需要寫入內容時，不要授予`jcr:write`許可權；請改用`jcr:modifyProperties`
 
 ## 服務使用者與對應 {#service-users-and-mappings}
 

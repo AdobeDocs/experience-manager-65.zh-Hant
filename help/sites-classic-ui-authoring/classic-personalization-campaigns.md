@@ -9,13 +9,24 @@ exl-id: d1741525-a475-4a76-bd16-55318023495e
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization
 role: User
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+  - id: eb3ad9f8-54a2-45f3-abb1-d3976415a718
+    internal-label: Personalization
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '625'
 ht-degree: 0%
-
 ---
-
 
 # Campaign Management{#campaign-management}
 
@@ -44,23 +55,23 @@ ht-degree: 0%
 * **體驗**
 焦點內容會形成各種體驗，在&#x200B;**接觸點**&#x200B;呈現給訪客。 有數種體驗可供使用：
 
-   * **預告**
-     [Teaser頁面/段落](#teasers)用於引導特定訪客&#x200B;**區段**&#x200B;前往關注其興趣的內容。
+  * **個Teasers**
+    [Teaser頁面/段落](#teasers)用於引導特定訪客&#x200B;**區段**&#x200B;前往關注其興趣的內容。
 
-     Teaser頁面可以：
+    Teaser頁面可以：
 
-      * 提供訪客可從中進行選擇的一系列選項
-      * 僅顯示一個以特定訪客區段為基礎的Teaser段落。 例如，顯示的Teaser段落可能會視訪客的年齡而定。
+    * 提供訪客可從中進行選擇的一系列選項
+    * 僅顯示一個以特定訪客區段為基礎的Teaser段落。 例如，顯示的Teaser段落可能會視訪客的年齡而定。
 
-     通常，Teaser頁面是持續特定時段的暫時動作，直到它被下一個Teaser頁面取代。
+    通常，Teaser頁面是持續特定時段的暫時動作，直到它被下一個Teaser頁面取代。
 
-   * **電子報**
+  * **電子報**
 
-     [電子郵件通訊](#emailmarketing)用於與使用者互動，並鼓勵他們造訪您的網站。 這些通常採用電子報的形式，傳送給您的&#x200B;**銷售機會** （這些銷售機會已分組為&#x200B;**清單**）。 **注意：** Adobe不打算進一步增強此功能。 建議您[使用Adobe Campaign並整合至AEM](/help/sites-administering/campaign.md)。
+    [電子郵件通訊](#emailmarketing)用於與使用者互動，並鼓勵他們造訪您的網站。 這些通常採用電子報的形式，傳送給您的&#x200B;**銷售機會** （這些銷售機會已分組為&#x200B;**清單**）。 **注意：** Adobe不打算進一步增強此功能。 建議您[使用Adobe Campaign並整合至AEM](/help/sites-administering/campaign.md)。
 
-   * **Adobe Target**
+  * **Adobe Target**
 
-     如此可與Adobe Target （先前的Test&amp;Target）整合，讓行銷人員擁有轉換網站最佳化工具，以及必要的功能，以便持續提供與其客戶更相關的線上內容和選件，進而提供更理想的轉換。 Adobe Target提供直覺式介面，讓您從單一應用程式設計和執行測試、建立受眾區段及鎖定目標內容。
+    如此可與Adobe Target （先前的Test&amp;Target）整合，讓行銷人員擁有轉換網站最佳化工具，以及必要的功能，以便持續提供與其客戶更相關的線上內容和選件，進而提供更理想的轉換。 Adobe Target提供直覺式介面，讓您從單一應用程式設計和執行測試、建立受眾區段及鎖定目標內容。
 
 * **接觸點**
 

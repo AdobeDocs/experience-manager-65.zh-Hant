@@ -9,16 +9,25 @@ exl-id: b41aa7e5-1a5f-4e5e-be79-637d9f71ad72
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '410'
+source-wordcount: '412'
 ht-degree: 0%
-
 ---
-
 # 作者的首要步驟{#first-steps-for-authors}
 
-本節提供當[開始使用Adobe Experience Manager (AEM)編寫內容](/help/sites-authoring/author.md#concept-of-authoring-and-publishing)時將使用的主要工作概覽。
+本節提供當[開始使用Adobe Experience Manager (AEM)編寫內容](/help/sites-authoring/author.md#concept-of-authoring-and-publishing)時，您將使用的主要工作概覽。
 
 內容涵蓋：
 

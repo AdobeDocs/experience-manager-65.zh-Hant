@@ -9,36 +9,50 @@ role: Admin, Developer
 feature: Adaptive Forms,Core Components
 exl-id: 9f9b35a3-0479-4179-9fad-994a482c96b6
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1939'
-ht-degree: 4%
-
+source-wordcount: '2092'
+ht-degree: 8%
 ---
-
 # 建立或自訂最適化表單主題 {#introduction-to-theme}
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/using-themes-in-core-components.html?lang=zh-Hant) |
+| AEM as a Cloud Service | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/using-themes-in-core-components.html?lang=zh-Hant) |
 | AEM 6.5 | 本文 |
 
 
 <!--**Applies to:** ✅ Adaptive Form Core Components ❎ [Adaptive Form Foundation Components](/help/forms/using/create-adaptive-form.md).-->
 
-在AEM Forms 6.5中，主題是AEM使用者端資料庫，可用來定義最適化表單的樣式（外觀）。 主題包含元件和面板的樣式詳細資訊。 樣式包括背景顏色、狀態顏色、透明度、對齊方式和大小等屬性。套用主題時，指定的樣式會反映在對應的元件上。主題是獨立管理，不需參照最適化表單，且可在多個最適化Forms中重複使用。
+在AEM Forms 6.5中，主題是AEM使用者端資料庫，可用來定義最適化表單的樣式（外觀）。 主題包含元件和面板的樣式詳細資訊。 樣式包括背景顏色、狀態顏色、透明度、對齊方式和大小等屬性。 套用主題時，指定的樣式會反映在對應的元件上。 主題是獨立管理，不需參照最適化表單，且可在多個最適化Forms中重複使用。
 
 ## 可用主題 {#available-theme}
 
 AEM 6.5環境提供下列基於核心元件的最適化Forms的主題：
 
-* [畫布布主題](https://github.com/adobe/aem-forms-theme-canvas)
-* [WKND佈景主題](https://github.com/adobe/aem-forms-theme-wknd)
+* [畫布主題](https://github.com/adobe/aem-forms-theme-canvas)
+* [WKND主題](https://github.com/adobe/aem-forms-theme-wknd)
 * [畫架佈景主題](https://github.com/adobe/aem-forms-theme-easel)
-* [FSI佈景主題](https://github.com/adobe/aem-forms-theme-fsi)
-* [醫療保健佈景主題](https://github.com/adobe/aem-forms-theme-healthcare)
-* [公用佈景主題](https://github.com/adobe/aem-forms-theme-public)
-* [製造佈景主題](https://github.com/adobe/aem-forms-theme-manufacturing)
+* [FSI主題](https://github.com/adobe/aem-forms-theme-fsi)
+* [醫療保健主題](https://github.com/adobe/aem-forms-theme-healthcare)
+* [公用主題](https://github.com/adobe/aem-forms-theme-public)
+* [製造主題](https://github.com/adobe/aem-forms-theme-manufacturing)
 
 ## 瞭解主題的結構 {#understanding-structure-of-theme}
 
@@ -58,11 +72,11 @@ AEM 6.5環境提供下列基於核心元件的最適化Forms的主題：
 
 AEM Forms 6.5提供下列核心元件型最適化Forms的主題。
 
-* [畫布布主題](https://github.com/adobe/aem-forms-theme-canvas)
-* [WKND佈景主題](https://github.com/adobe/aem-forms-theme-wknd)
+* [畫布主題](https://github.com/adobe/aem-forms-theme-canvas)
+* [WKND主題](https://github.com/adobe/aem-forms-theme-wknd)
 * [畫架佈景主題](https://github.com/adobe/aem-forms-theme-easel)
-* [公用佈景主題](https://github.com/adobe/aem-forms-theme-public)
-* [製造佈景主題](https://github.com/adobe/aem-forms-theme-manufacturing)
+* [公用主題](https://github.com/adobe/aem-forms-theme-public)
+* [製造主題](https://github.com/adobe/aem-forms-theme-manufacturing)
 
 您可以[自訂這些主題的任何一個來建立主題](#customize-a-theme-core-components)。
 
@@ -72,18 +86,18 @@ AEM Forms 6.5提供下列核心元件型最適化Forms的主題。
 
 >[!NOTE]
 >
-> * 使用封裝管理員在所有Author和Publish執行個體上部署主題。
+> * 使用封裝管理員可在所有製作和發佈執行個體上部署主題。
 > * 佈景主題使用者端程式庫會透過封裝管理員匯入或匯出，就像任何其他封裝一樣。
 
 ### 自訂主題的先決條件 {#prerequisites}
 
 * [為您的環境啟用最適化Forms核心元件](/help/forms/using/enable-adaptive-forms-core-components.md)。
 
-* 安裝最新版的[Apache Maven。](https://maven.apache.org/download.cgi) Apache Maven是常用於Java™專案的組建自動化工具。 安裝最新版本可確保您擁有佈景主題自訂的必要相依性。
+* 安裝[Apache Maven.](https://maven.apache.org/download.cgi)的最新版本 Apache Maven是常用於Java™專案的組建自動化工具。 安裝最新版本可確保您擁有佈景主題自訂的必要相依性。
 
 * 瞭解如何在Adobe Experience Manager[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html?lang=zh-Hant)中建立使用者端資料庫。 AEM提供使用者端程式庫，可讓您將使用者端程式碼儲存在存放庫中、將其組織成類別，並定義每個類別程式碼何時及如何提供給使用者端。
 
-* 安裝純文字編輯器。 例如，Microsoft® Visual Studio Code。 使用純文字編輯器(例如Microsoft® Visual Studio Code)可提供方便使用的環境，用於編輯和修改佈景主題檔案。
+* 安裝純文字編輯器。 例如，® Visual Studio Code。 使用純文字編輯器（例如® Visual Studio Code）可提供方便使用的環境，用於編輯和修改佈景主題檔案。
 
 * 確保AEM Forms環境正常運作。
 
@@ -91,9 +105,9 @@ AEM Forms 6.5提供下列核心元件型最適化Forms的主題。
 
 * 請確定您使用在您的環境中啟用Adaptive Forms核心元件[&#128279;](/help/forms/using/enable-adaptive-forms-core-components.md)所使用的Archetype專案，來自訂您的主題。
 
-* 發佈最適化表單時，使用者端程式庫不會在Publish執行個體上自動發佈。 請確定您手動將在最適化表單中參考的使用者端程式庫發佈到您的Publish環境。
+* 發佈最適化表單時，使用者端程式庫不會自動發佈在發佈執行個體上。 請確定您手動將在最適化表單中參考的使用者端程式庫發佈到您的發佈環境。
 
-* Adobe建議不要變更使用者端程式庫的類別名稱。
+* Adobe建議您不要變更使用者端程式庫的類別名稱。
 
 ### 自訂主題 {#customize-a-theme-core-components}
 
@@ -111,12 +125,12 @@ AEM Forms 6.5提供下列核心元件型最適化Forms的主題。
 
 檔案中提供的範例是以&#x200B;**畫布**&#x200B;主題為基礎，但您可以複製任何主題，並使用相同的指示自訂主題。 這些指示適用於任何主題，可讓您根據特定需求修改主題。
 
-#### 1.複製主題的Git存放庫 {#clone-git-repo-of-theme}
+#### &#x200B;1. 複製主題的Git存放庫 {#clone-git-repo-of-theme}
 
 若要複製以核心元件為基礎的最適化Forms主題，請選擇下列其中一種主題：
 
-* [畫布布主題](https://github.com/adobe/aem-forms-theme-canvas)
-* [WKND佈景主題](https://github.com/adobe/aem-forms-theme-wknd)
+* [畫布主題](https://github.com/adobe/aem-forms-theme-canvas)
+* [WKND主題](https://github.com/adobe/aem-forms-theme-wknd)
 * [畫架佈景主題](https://github.com/adobe/aem-forms-theme-easel)
 
 執行下列指示以複製主題：
@@ -141,9 +155,9 @@ AEM Forms 6.5提供下列核心元件型最適化Forms的主題。
 
 成功執行命令後，您的電腦在`aem-forms-theme-canvas`資料夾中有可用的主題本機復本。
 
-#### 2.自訂主題 {#customize-the-theme}
+#### &#x200B;2. 自訂主題 {#customize-the-theme}
 
-您可以彈性地自訂個別元件，或使用佈景主題的全域變數進行佈景主題層級的變更。 修改全域變數會對所有個別元件產生階層式效果。 例如，您可以利用全域變數來變更最適化表單中所有元件的邊框顏色，或對「號召性用語」(CTA)按鈕套用生動的填色顏色。 您可以：
+您可以彈性地自訂個別元件，或使用佈景主題的全域變數進行佈景主題層級的變更。 修改全域變數會對所有個別元件產生階層式效果。 例如，您可以使用全域變數來變更最適化表單中所有元件的邊框顏色，或對Call to action (CTA)按鈕套用鮮明的填色顏色。 您可以：
 
 * [設定主題層級樣式](#theme-customization-global-level)
 
@@ -190,12 +204,12 @@ AEM Forms 6.5提供下列核心元件型最適化Forms的主題。
 >
 > 在主題和元件層級同時定義樣式時，在元件層級定義的樣式會優先執行。
 
-#### 3.準備好部署主題 {#generate-the-clientlib}
+#### &#x200B;3. 準備部署主題 {#generate-the-clientlib}
 
 若要將主題部署至AEM執行個體，必須將其轉換為使用者端資料庫。 請依照下列步驟，將主題轉換為使用者端資源庫：
 
 1. 開啟命令提示字元或終端機視窗。
-1. 導覽至`<your-theme-sources>`資料夾。 例如 `C:\aem-forms-theme-canvas`
+1. 導覽至 `<your-theme-sources>` 檔案夾。 例如 `C:\aem-forms-theme-canvas`
 1. 執行以下命令：
 
    ```
@@ -215,7 +229,7 @@ AEM Forms 6.5提供下列核心元件型最適化Forms的主題。
 
    ![使用者端資料庫位置](/help/forms/using/assets/adaptiveform.theme.easel.png)
 
-#### 4.在本機環境中部署主題 {#deploy-the-theme-on-a-local-environment}
+#### &#x200B;4. 在本機環境中部署主題 {#deploy-the-theme-on-a-local-environment}
 
 若要將主題部署至本機開發或測試環境，請遵循下列步驟：
 
@@ -266,9 +280,9 @@ An Adaptive Form with the selected theme is created.
 The selected theme is applied to the Adaptive Form. 
 -->
 
-#### 5.在您的生產環境中部署主題 {#deploy-theme}
+#### &#x200B;5. 在您的生產環境中部署主題 {#deploy-theme}
 
-一旦您在本機開發環境中成功測試主題後，您就可以繼續將主題部署到您的生產環境，包括作者和Publish執行個體。 請依照下列步驟，將主題部署在生產環境中：
+一旦您在本機開發環境中成功測試主題後，您就可以繼續將主題部署到您的生產環境，包括製作和發佈執行個體。 請依照下列步驟，將主題部署在生產環境中：
 
 1. 登入您的AEM環境。
 1. 開啟封裝管理員。 預設URL為`https://localhost:4502/crx/packmgr/index.jsp`。
@@ -284,15 +298,15 @@ The selected theme is applied to the Adaptive Form.
 >[!NOTE]
 >
 >
-> 如果您在透過封裝管理員存取發佈執行個體的登入對話方塊時遇到困難，請嘗試透過下列URL登入： `http://[Publish Server URL]:[PORT]/system/console`。 這可讓您登入Publish執行個體，讓您繼續安裝程式。
+> 如果您在透過封裝管理員存取發佈執行個體的登入對話方塊時遇到困難，請嘗試透過下列URL登入： `http://[Publish Server URL]:[PORT]/system/console`。 這可讓您登入發佈執行個體，讓您繼續安裝程式。
 
 ## 將主題套用至最適化表單 {#using-theme-in-adaptive-form}
 
 將主題套用至最適化表單的步驟如下：
 
 1. 登入您的本機AEM作者執行個體。
-1. 在 Experience Manager 登入頁面上輸入您的認證。選取&#x200B;**Adobe Experience Manager** > **Forms** > **Forms與檔案**。
-1. 按一下&#x200B;**建立** > **最適化Forms**。
+1. 在 Experience Manager 登入頁面上輸入您的認證。 選取「**Adobe Experience Manager** > **表單** > **表單與文件**」。
+1. 按一下「**建立**」>「**自適應表單**」。
 1. 選取最適化Forms核心元件範本，然後按一下「下一步&#x200B;**」**。 **新增屬性**&#x200B;出現
 1. 指定最適化表單的&#x200B;**名稱**。
 
@@ -302,7 +316,7 @@ The selected theme is applied to the Adaptive Form.
    > * 依預設，已選取`adaptiveform.theme.canvas3`主題。
    > * 您可以從&#x200B;**主題使用者端資料庫**&#x200B;下拉式功能表中選擇不同的主題。
 
-1. 按一下&#x200B;**建立**。
+1. 按一下「**建立**」。
 
 最適化表單主題用於最適化表單範本的一部分，以便在建立最適化表單時定義樣式。
 
@@ -316,7 +330,7 @@ The selected theme is applied to the Adaptive Form.
 1. 刪除主題資料夾並儲存變更。
 
 
-## 常問的問題 {#faq}
+## 常見問題 {#faq}
 
 **問：**&#x200B;在全域和元件層級的主題資料夾中進行自訂時，哪一個自訂優先？
 
@@ -339,7 +353,7 @@ The selected theme is applied to the Adaptive Form.
 
 ## 另請參閱
 
-* [建立以核心元件為基礎的最適化表單](create-an-adaptive-form-core-components.md)
+* [建立以核心元件為主的自適應表單](create-an-adaptive-form-core-components.md)
 * [使用規則編輯器將動態行為新增至表單](rule-editor.md)
 * [建立或自訂核心元件型最適化Forms的主題](create-or-customize-themes-for-adaptive-forms-core-components.md)
 * [建立核心元件型最適化Forms的範本](template-editor.md)

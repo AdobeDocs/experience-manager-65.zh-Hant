@@ -9,13 +9,24 @@ exl-id: efbba312-9fc8-4670-b8f1-d2a86162d075
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,Developer Tools
 role: Developer
-source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+  - id: f2d27a5f-0d67-4d85-8a24-86a8d8a3574b
+    internal-label: Developer tools
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '2687'
+source-wordcount: '2724'
 ht-degree: 1%
-
 ---
-
 # 如何使用VLT工具 {#how-to-use-the-vlt-tool}
 
 Jackrabbit FileVault工具(VLT)是由[Apache Foundation](https://www.apache.org/)所開發的工具，可將Jackrabbit/AEM執行個體的內容對應至您的檔案系統。 VLT工具具有類似原始檔控制系統使用者端(例如Subversion (SVN)使用者端)的功能，可提供一般簽入、簽出和管理作業，以及彈性表示專案內容的組態選項。
@@ -24,7 +35,7 @@ Jackrabbit FileVault工具(VLT)是由[Apache Foundation](https://www.apache.org/
 
 ## 概念和架構 {#concepts-and-architecture}
 
-請參閱官方[Apache Jackrabbit Filevault檔案](https://jackrabbit.apache.org/filevault/overview.html)中的[Filevault概述](https://jackrabbit.apache.org/filevault/vaultfs.html)和[Vault FS](https://jackrabbit.apache.org/filevault/index.html)頁面，瞭解Filevault工具的概念和結構的完整概述。
+請參閱官方[Apache Jackrabbit Filevault檔案](https://jackrabbit.apache.org/filevault/index.html)中的[Filevault概述](https://jackrabbit.apache.org/filevault/overview.html)和[Vault FS](https://jackrabbit.apache.org/filevault/vaultfs.html)頁面，瞭解Filevault工具的概念和結構的完整概述。
 
 ## VLT快速入門 {#getting-started-with-vlt}
 
@@ -224,7 +235,7 @@ Options:
 vlt co http://localhost:4502/crx/-/jcr:root/apps/geometrixx geo
 ```
 
-執行此動作會建立具有`geo`和`META-INF`目錄的新匯出根`jcr_root`，並將所有低於`/apps/geometrixx`的檔案放在`geo/jcr_root`中。
+執行此動作會建立具有`META-INF`和`jcr_root`目錄的新匯出根`geo`，並將所有低於`/apps/geometrixx`的檔案放在`geo/jcr_root`中。
 
 ### 執行篩選的簽出 {#performing-a-filtered-checkout}
 
@@ -774,8 +785,8 @@ VLT使用的狀態代碼為：
 * 已忽略&#39;I&#39;
 * &#39;M&#39;已修改
 * 已取代&#39;R&#39;
-* &#39;？&#39; 專案不受版本控制
-* &#39;！&#39; 專案遺失（由非svn命令移除）或不完整
+* &#39;？&#39;專案不在版本控制之下
+* &#39;！&#39;專案遺失（由非svn命令移除）或不完整
 * &#39;~&#39;版本化專案被其他型別的專案所阻擋
 
 ## 設定FileVault同步 {#setting-up-filevault-sync}
@@ -800,7 +811,7 @@ $ vlt --credentials admin:admin sync --uri http://localhost:4502/crx install
 
 ### 顯示服務狀態 {#displaying-the-service-status}
 
-`status`命令可用來顯示有關執行中同步處理服務的資訊。&quot;
+`status`命令可用來顯示有關執行中同步處理服務的資訊。 &quot;
 
 ```shell
 $ vlt sync status --uri http://localhost:4502/crx
@@ -826,7 +837,7 @@ Added new sync directory: /tmp/workspace/vltsync/jcr_root
 
 >[!NOTE]
 >
->在您設定`register`組態之前，`sync-once`命令不會觸發同步處理。
+>在您設定`sync-once`組態之前，`register`命令不會觸發同步處理。
 
 ### 移除同步資料夾 {#removing-a-sync-folder}
 

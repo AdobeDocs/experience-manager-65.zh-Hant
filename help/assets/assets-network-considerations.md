@@ -1,18 +1,29 @@
 ---
 title: 網路考量事項和需求
-description: 討論設計 [!DNL Adobe Experience Manager Assets] 部署時的網路考量事項。
+description: 討論設計[!DNL Adobe Experience Manager Assets]部署時的網路考量事項。
 contentOwner: AG
 role: Developer, Admin
 feature: Developer Tools
 exl-id: 1313842c-18b1-4727-ba63-b454d0f5a2cc
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: f2d27a5f-0d67-4d85-8a24-86a8d8a3574b
+    internal-label: Developer tools
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1010'
+source-wordcount: '1018'
 ht-degree: 0%
-
 ---
-
 # [!DNL Assets]個網路考量事項 {#assets-network-considerations}
 
 瞭解您的網路與瞭解[!DNL Adobe Experience Manager Assets]一樣重要。 網路可能會影響上傳、下載和使用者體驗。 繪製網路拓撲圖有助於找出網路中的瓶頸點和次最佳化區域，您必須修正這些區域才能改善網路效能和使用者體驗。

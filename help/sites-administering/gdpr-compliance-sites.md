@@ -9,13 +9,31 @@ exl-id: 8c1ea483-7319-4e5c-be4c-d43a2b67d316
 solution: Experience Manager, Experience Manager Sites
 feature: Compliance
 role: Admin, Developer, Leader, User
-source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: b1210526-416b-4ef6-bcc0-1692e99f30e9
+    internal-label: Administration and security
+subfeature_v2:
+  - id: c42c36cf-eeed-484a-8b39-a33a68192a07
+    internal-label: Compliance
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '837'
-ht-degree: 54%
-
+source-wordcount: '902'
+ht-degree: 53%
 ---
-
 # AEM Sites - GDPR整備{#aem-sites-gdpr-readiness}
 
 >[!IMPORTANT]
@@ -26,7 +44,7 @@ ht-degree: 54%
 
 AEM Sites已準備好協助客戶履行GDPR法規遵循義務。 本頁將指導客戶完成在AEM Sites中處理GDPR請求的程式。 它描述了儲存私人資料的位置，以及如何以手動方式或使用程式碼移除它們。
 
-如需進一步資訊，請參閱Adobe隱私權中心[的](https://www.adobe.com/privacy/general-data-protection-regulation.html)GDPR頁面。
+如需進一步資訊，請參閱Adobe隱私權中心[&#128279;](https://www.adobe.com/privacy/general-data-protection-regulation.html)的GDPR頁面。
 
 >[!NOTE]
 >
@@ -40,7 +58,7 @@ AEM Sites已準備好協助客戶履行GDPR法規遵循義務。 本頁將指導
 
 [Platform GDPR檔案](/help/managing/data-protection-and-privacy.md)涵蓋了用來驗證網站訪客的使用者帳戶以及發佈伺服器上的UGC內容。
 
-預設情況下，AEM Sites 元件不會將訪客輸入的表單資料存放在發佈伺服器上。建議將資料轉發給第三方系統或 Adobe Campaign 進行進一步處理。
+預設情況下，AEM Sites 元件不會將訪客輸入的表單資料存放在發佈伺服器上。 建議將資料轉發給第三方系統或 Adobe Campaign 進行進一步處理。
 
 ## 選擇退出/選擇加入 {#opt-in-opt-out}
 
@@ -74,14 +92,14 @@ AEM提供具有[ContextHub](/help/sites-developing/contexthub.md)的選用資料
 
 網站擁有者需要根據以下準則實作選擇退出元件。
 
-這些準則會將選擇加入實作為預設值。因此，網站訪客必須先明確同意，才會將任何個人資料儲存在瀏覽器（使用者端）的持續性中。
+這些準則會將選擇加入實作為預設值。 因此，網站訪客必須先明確同意，才會將任何個人資料儲存在瀏覽器（使用者端）的持續性中。
 
 * 每次包含 ContextHub 元件時都應包含選擇退出元件。
 * 與網站的GDPR相關的條款與條件必須顯示給網站訪客，允許他們：
 
-   * 接受
-   * 拒絕
-   * 變更他們之前的選擇
+  * 接受
+  * 拒絕
+  * 變更他們之前的選擇
 
 * 如果網站訪客接受網站的條款與條件，則應移除 ContextHub 選擇退出 cookie：
 
@@ -108,49 +126,49 @@ AEM提供具有[ContextHub](/help/sites-developing/contexthub.md)的選用資料
 
 * 使用瀏覽器的主控台；例如：
 
-   * Chrome：
+  * Chrome：
 
-      * 開啟「開發人員工具」>「應用程式」>「儲存」：
+    * 開啟「開發人員工具」>「應用程式」>「儲存」：
 
-         * 「本機儲存」> (網站) > ContextHubPersistence
-         * 「工作階段儲存」> (網站) > ContextHubPersistence
-         * 「Cookie」> (網站) > SessionPersistence
+      * 「本機儲存」> (網站) > ContextHubPersistence
+      * 「工作階段儲存」> (網站) > ContextHubPersistence
+      * 「Cookie」> (網站) > SessionPersistence
 
-   * Firefox：
+  * Firefox：
 
-      * 開啟「開發人員工具」>「儲存」：
+    * 開啟「開發人員工具」>「儲存」：
 
-         * 「本機儲存」> (網站) > ContextHubPersistence
-         * 「工作階段儲存」> (網站) > ContextHubPersistence
-         * 「Cookie」> (網站) > SessionPersistence
+      * 「本機儲存」> (網站) > ContextHubPersistence
+      * 「工作階段儲存」> (網站) > ContextHubPersistence
+      * 「Cookie」> (網站) > SessionPersistence
 
-   * Safari：
+  * Safari：
 
-      * 開啟「偏好設定」>「進階」> 在選單列中顯示「開發」選單
-      * 開啟「開發」>「顯示 JavaScript 主控台」
+    * 開啟「偏好設定」>「進階」> 在選單列中顯示「開發」選單
+    * 開啟「開發」>「顯示 JavaScript 主控台」
 
-         * 「主控台」>「儲存」>「本機儲存」> (網站) > ContextHubPersistence
-         * 「主控台」>「儲存」>「工作階段儲存」> (網站) > ContextHubPersistence
-         * 「主控台」>「儲存」>「Cookie」> (網站) > ContextHubPersistence
+      * 「主控台」>「儲存」>「本機儲存」> (網站) > ContextHubPersistence
+      * 「主控台」>「儲存」>「工作階段儲存」> (網站) > ContextHubPersistence
+      * 「主控台」>「儲存」>「Cookie」> (網站) > ContextHubPersistence
 
-   * Internet Explorer：
+  * Internet Explorer：
 
-      * 開啟「開發人員工具」>「主控台」
+    * 開啟「開發人員工具」>「主控台」
 
-         * localStorage.getItem(&#39;ContextHubPersistence&#39;)
-         * sessionStorage.getItem(&#39;ContextHubPersistence&#39;)
-         * document.cookie
+      * localStorage.getItem(&#39;ContextHubPersistence&#39;)
+      * sessionStorage.getItem(&#39;ContextHubPersistence&#39;)
+      * document.cookie
 
 * 在瀏覽器的主控台中使用 ContextHub API：
 
-   * ContextHub 提供以下資料持續層：
+  * ContextHub 提供以下資料持續層：
 
-      * ContextHub.Utils.Persistence.Modes.LOCAL （預設）
-      * ContextHub.Utils.Persistence.Modes.SESSION
-      * ContextHub.Utils.Persistence.Modes.COOKIE
-      * ContextHub.Utils.Persistence.Modes.WINDOW
+    * ContextHub.Utils.Persistence.Modes.LOCAL （預設）
+    * ContextHub.Utils.Persistence.Modes.SESSION
+    * ContextHub.Utils.Persistence.Modes.COOKIE
+    * ContextHub.Utils.Persistence.Modes.WINDOW
 
-     ContextHub 存放區會定義要使用哪個持續層，因此要檢視持續性的目前狀態，應檢查所有層。
+    ContextHub 存放區會定義要使用哪個持續層，因此要檢視持續性的目前狀態，應檢查所有層。
 
 例如，檢視儲存在 localStorage 中的資料：
 
@@ -158,28 +176,28 @@ AEM提供具有[ContextHub](/help/sites-developing/contexthub.md)的選用資料
 
 * 使用瀏覽器的主控台：
 
-   * Chrome - 開啟「開發人員工具」>「應用程式」>「儲存」：
+  * Chrome - 開啟「開發人員工具」>「應用程式」>「儲存」：
 
-      * 「本機儲存」> (網站) > ContextHubPersistence
-      * 「工作階段儲存」> (網站) > ContextHubPersistence
-      * 「Cookie」> (網站) > SessionPersistence
+    * 「本機儲存」> (網站) > ContextHubPersistence
+    * 「工作階段儲存」> (網站) > ContextHubPersistence
+    * 「Cookie」> (網站) > SessionPersistence
 
-   * Firefox - 開啟「開發人員工具」>「儲存」：
+  * Firefox - 開啟「開發人員工具」>「儲存」：
 
-      * 「本機儲存」> (網站) > ContextHubPersistence
-      * 「工作階段儲存」> (網站) > ContextHubPersistence
-      * 「Cookie」> (網站) > SessionPersistence
+    * 「本機儲存」> (網站) > ContextHubPersistence
+    * 「工作階段儲存」> (網站) > ContextHubPersistence
+    * 「Cookie」> (網站) > SessionPersistence
 
 * 在瀏覽器的主控台中使用 ContextHub API：
 
-   * ContextHub 提供以下資料持續層：
+  * ContextHub 提供以下資料持續層：
 
-      * ContextHub.Utils.Persistence.Modes.LOCAL （預設）
-      * ContextHub.Utils.Persistence.Modes.SESSION
-      * ContextHub.Utils.Persistence.Modes.COOKIE
-      * ContextHub.Utils.Persistence.Modes.WINDOW
+    * ContextHub.Utils.Persistence.Modes.LOCAL （預設）
+    * ContextHub.Utils.Persistence.Modes.SESSION
+    * ContextHub.Utils.Persistence.Modes.COOKIE
+    * ContextHub.Utils.Persistence.Modes.WINDOW
 
-     ContextHub 存放區會定義要使用哪個持續層，因此要檢視持續性的目前狀態，應檢查所有層。
+    ContextHub 存放區會定義要使用哪個持續層，因此要檢視持續性的目前狀態，應檢查所有層。
 
 例如，檢視儲存在 localStorage 中的資料：
 
@@ -218,7 +236,7 @@ console.log(storage.getTree());
 
 * 要清除所有 ContextHub 持續層，必須為所有層呼叫適當的程式碼：
 
-   * ContextHub.Utils.Persistence.Modes.LOCAL （預設）
-   * ContextHub.Utils.Persistence.Modes.SESSION
-   * ContextHub.Utils.Persistence.Modes.COOKIE
-   * ContextHub.Utils.Persistence.Modes.WINDOW
+  * ContextHub.Utils.Persistence.Modes.LOCAL （預設）
+  * ContextHub.Utils.Persistence.Modes.SESSION
+  * ContextHub.Utils.Persistence.Modes.COOKIE
+  * ContextHub.Utils.Persistence.Modes.WINDOW

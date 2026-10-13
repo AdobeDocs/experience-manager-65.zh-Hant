@@ -9,13 +9,22 @@ exl-id: 9e205912-50a6-414a-b8d4-a0865269d0e0
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
 source-wordcount: '3628'
 ht-degree: 1%
-
 ---
-
 # 延伸工作流程功能{#extending-workflow-functionality}
 
 本主題說明如何為工作流程開發自訂步驟元件，以及如何以程式設計方式與工作流程互動。
@@ -63,8 +72,8 @@ ht-degree: 1%
 
   具有下列索引標籤的對話方塊：
 
-   * **一般**：用於編輯標題和說明。
-   * **進階**：用於編輯電子郵件通知內容。
+  * **一般**：用於編輯標題和說明。
+  * **進階**：用於編輯電子郵件通知內容。
 
   ![wf-44](assets/wf-44.png) ![wf-45](assets/wf-45.png)
 
@@ -104,9 +113,9 @@ ht-degree: 1%
 * 類型：`String`
 * 值：解析為基本元件的下列路徑之一：
 
-   * `cq/workflow/components/model/process`
-   * `cq/workflow/components/model/participant`
-   * `cq/workflow/components/model/dynamic_participant`
+  * `cq/workflow/components/model/process`
+  * `cq/workflow/components/model/participant`
+  * `cq/workflow/components/model/dynamic_participant`
 
 ### 指定步驟例項的預設標題和說明 {#specifying-the-default-title-and-description-for-step-instances}
 
@@ -240,16 +249,16 @@ ht-degree: 1%
 
 * 名稱：`PROCESS_AUTO_ADVANCE`
 
-   * 類型：`Boolean`
-   * 值：
+  * 類型：`Boolean`
+  * 值：
 
-      * 設定為`true`時，工作流程將執行該步驟並繼續 — 這是預設值，也建議使用
-      * 當`false`時，工作流程將執行並停止；這需要額外的處理，因此建議`true`
+    * 設定為`true`時，工作流程將執行該步驟並繼續 — 這是預設值，也建議使用
+    * 當`false`時，工作流程將執行並停止；這需要額外的處理，因此建議`true`
 
 * 名稱：`DO_NOTIFY`
 
-   * 類型：`Boolean`
-   * 值：指出是否應該針對使用者參與步驟傳送電子郵件通知（並假設郵件伺服器已正確設定）
+  * 類型：`Boolean`
+  * 值：指出是否應該針對使用者參與步驟傳送電子郵件通知（並假設郵件伺服器已正確設定）
 
 ## 保留和存取資料 {#persisting-and-accessing-data}
 
@@ -838,12 +847,12 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
 
      必須為下列其中一項：
 
-      * Collaboration 工作流程
-      * DAM 工作流程
-      * 表單工作流程
-      * 專案
-      * WCM 工作流程
-      * 工作流程
+     * Collaboration 工作流程
+     * DAM 工作流程
+     * 表單工作流程
+     * 專案
+     * WCM 工作流程
+     * 工作流程
 
    ![wf-35](assets/wf-35.png)
 

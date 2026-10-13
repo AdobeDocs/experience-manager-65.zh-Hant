@@ -7,13 +7,26 @@ feature: Correspondence Management
 exl-id: 2f996a50-7c7d-41b6-84b2-523b6609254b
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 3f00fc92-85ee-583e-abd1-3bc3d96de3a0
+    internal-label: Correspondence Management
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '4013'
 ht-degree: 2%
-
 ---
-
 # 建立字母 {#create-letter}
 
 ## 通訊管理工作流程 {#correspondence-management-workflow}
@@ -152,10 +165,10 @@ ht-degree: 2%
 * 通訊範本多久變更一次？ 是每年、每季更新，還是只會在特定法規變更時更新？ 預期的變更型別為何？ 這是不是為了修正印刷錯誤、版面變更、新增更多欄位、新增更多段落等所做的變更？
 * 規劃您的通訊需求時，組合新的通訊範本清單。 對於每個通訊範本，您需要：
 
-   * 文字子句、影像和表格
-   * 來自後端系統的資料值
-   * 通訊佈局和片段佈局
-   * 內容在信函中出現的順序，以及包含和排除內容的規則
+  * 文字子句、影像和表格
+  * 來自後端系統的資料值
+  * 通訊佈局和片段佈局
+  * 內容在信函中出現的順序，以及包含和排除內容的規則
 
 * 企業使用者（如索賠理算員或案例工作者）修改信件內容或部分的條件。
 * 案例是說明使用Letters Solution的使用者體驗、需求和好處的敘述。

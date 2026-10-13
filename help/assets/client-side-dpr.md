@@ -5,13 +5,27 @@ role: Admin,User
 exl-id: e38f522a-242a-4ea9-a866-d8d129950831
 solution: Experience Manager, Experience Manager Assets
 feature: Smart Imaging
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: bd0d2470-932c-4269-8eca-6d939b72d9ef
+    internal-label: Dynamic Media
+subfeature_v2:
+  - id: b39a6d56-d787-413f-8024-351803c28d44
+    internal-label: Smart Imaging
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '294'
+source-wordcount: '328'
 ht-degree: 0%
-
 ---
-
 # 關於使用使用者端裝置畫素比(DPR)的智慧型影像 {#client-side-dpr}
 
 目前的智慧型影像處理解決方案是使用使用者代理字串來判斷所使用的裝置型別（桌上型電腦、平板電腦、行動裝置等）。
@@ -56,8 +70,8 @@ ht-degree: 0%
 
    您可以將兩個DPR指令碼合併為一個，以避免多個網路請求。
 
-   Adobe建議您在HTML頁面的&#x200B;_之前，載入這些指令碼。
-Adobe也建議您在不同的HTML標籤下使用Bootstrap應用程式，而不是使用內文元素。這是因為`dprImageInjection.js`會在HTML頁面的Body區段頂端以動態方式插入影像標籤。_
+   Adobe建議您在HTML頁面的&#x200B;_之前，載入這些指令碼。_
+   Adobe也建議您在不同的HTML標籤下使用Bootstrap應用程式，而不是使用內文元素。 這是因為`dprImageInjection.js`會在HTML頁面的Body區段頂端動態地插入影像標籤。
 
 ## JavaScript檔案下載 {#client-side-dpr-script}
 

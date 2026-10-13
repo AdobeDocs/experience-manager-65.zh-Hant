@@ -6,16 +6,30 @@ role: User, Admin
 feature: Metadata
 exl-id: 312fff5f-39c1-48c1-aa99-40feb72c2f59
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: ac365bec-0634-4744-9473-c42f47320593
+    internal-label: Asset management and governance
+subfeature_v2:
+  - id: ed6971a3-2c12-4fd2-81f4-ff329c416250
+    internal-label: Metadata
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '2751'
+source-wordcount: '2757'
 ht-degree: 8%
-
 ---
-
 # 瞭解中繼資料概念 {#why-we-need-metadata}
 
-中繼資料是指資料的相關資料。 就此而言，資料是指您的數位資產，例如影像。 中繼資料是進行高效率資產管理的關鍵所在。
+中繼資料是指資料的相關資料。 就此而言，資料是指您的數位資產，例如影像。 後設資料是進行高效率資產管理的關鍵所在。
 
 中繼資料是資產所有可用資料的集合，但不一定包含在該影像中。 中繼資料的一些範例包括：
 
@@ -37,7 +51,7 @@ ht-degree: 8%
 
 更多中繼資料可協助您進一步將資產分類，且隨著數位資訊量成長，將有所幫助。 您可以僅根據檔案名稱管理數百個檔案。 然而，此方法並不能調整規模。 隨著相關人數和管理的資產數量增加，此方法尚嫌不足。
 
-隨著中繼資料增加，數位資產的價值也會成長，這是因為資產會變得
+隨著後設資料增加，數位資產的價值也會成長，這是因為資產會變得
 
 * 更易於存取 - 系統和使用者可以更輕鬆找到資產。
 * 更易於管理 - 您可以更容易找到具有同一組屬性的資產，並將變更套用到這些資產。

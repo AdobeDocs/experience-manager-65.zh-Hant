@@ -9,13 +9,29 @@ feature: Interactive Communication
 exl-id: 3d15a723-df6c-4b4a-992e-a6636f4cf3dc
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: aa28c6c8-3ede-445b-a351-eeb0c9f9aec4
+    internal-label: Interactive Communication
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1316'
 ht-degree: 10%
-
 ---
-
 # 互動式通訊編寫UI簡介{#introduction-to-interactive-communication-authoring-ui}
 
 編寫[互動式通訊](/help/forms/using/interactive-communications-overview.md)的使用者介面是直覺式的，並提供下列內容來編寫互動式通訊的列印和Web管道：
@@ -58,7 +74,7 @@ Channel瀏覽器可協助您在互動式通訊的列印與網頁通道之間切�
 * **屬性瀏覽器**
 
   可讓您編輯元件的屬性。 屬性會根據元件而變更。 例如，若要檢視檔案容器的屬性：
-選取元件，然後選取![欄位層級](assets/field-level.png) > **檔案容器**，然後選取![cmppr](assets/cmppr.png)。
+  選取元件，然後選取![欄位層級](assets/field-level.png) > **檔案容器**，然後選取![cmppr](assets/cmppr.png)。
 
 * **Assets瀏覽器**
 區隔不同型別的內容，例如版面片段、影像、檔案、頁面、影片。 作者可以將資產拖放至互動式通訊中。
@@ -91,10 +107,10 @@ Channel瀏覽器可協助您在互動式通訊的列印與網頁通道之間切�
 * 以元件的元素名稱來識別元件。 選取![cmppr](assets/cmppr.png)時，您可以變更屬性瀏覽器中的「元素名稱」欄位值來變更元件名稱。 「元素名稱」欄位僅接受字母、數字、連字型大小(-)和底線(_)。 不允許使用其他特殊字元，元素名稱應以字母開頭。
 * 只要互動式通訊的標題可見，您就可以修改編輯器中內嵌的互動式通訊元件的Title屬性，而不需開啟Properties瀏覽器。 若要這麼做：
 
-   1. 選取此選項可選取具有Title屬性且已停用Hide title屬性的元件。
-   1. 選取![aem_6_3_edit](assets/aem_6_3_edit.png)讓標題可編輯。
+  1. 選取此選項可選取具有Title屬性且已停用Hide title屬性的元件。
+  1. 選取![aem_6_3_edit](assets/aem_6_3_edit.png)讓標題可編輯。
 
-   1. 修改標題並選取Return鍵，或選取元件之外的任意位置以儲存變更。 選取Esc鍵以捨棄變更。
+  1. 修改標題並選取Return鍵，或選取元件之外的任意位置以儲存變更。 選取Esc鍵以捨棄變更。
 
 ## 元件工具列 {#component-toolbar}
 
@@ -139,13 +155,13 @@ M： **新增面板工具列** （僅適用於面板）:Lets您新增了面板�
 * 模擬器![尺規](assets/ruler.png)：可讓您針對不同的顯示大小（例如平板電腦和手機），模擬互動式通訊的外觀。
 * 編輯：可讓您選取其他模式，例如：編輯、樣式、開發人員和設計。
 
-   * 編輯：可讓您編輯互動式通訊及其元件的屬性。 例如，新增元件、放置影像以及指定必填欄位。
-   * 樣式：可讓您為互動式通訊的元件外觀設定樣式。 例如，在樣式模式下，您可以選取面板並指定其背景顏色。
-   * 開發人員：讓開發人員：
+  * 編輯：可讓您編輯互動式通訊及其元件的屬性。 例如，新增元件、放置影像以及指定必填欄位。
+  * 樣式：可讓您為互動式通訊的元件外觀設定樣式。 例如，在樣式模式下，您可以選取面板並指定其背景顏色。
+  * 開發人員：讓開發人員：
 
-      * 探索互動式通訊由哪些部分組成。
-      * 找出狀況及其發生的時間和位置，這反過來有助於解決問題。
+    * 探索互動式通訊由哪些部分組成。
+    * 找出狀況及其發生的時間和位置，這反過來有助於解決問題。
 
-   * Target：可讓您啟用或停用自訂元件，或是側邊欄中未列出的現成可用元件。
+  * Target：可讓您啟用或停用自訂元件，或是側邊欄中未列出的現成可用元件。
 
 * 預覽：可讓您預覽互動式通訊在發佈時的外觀。

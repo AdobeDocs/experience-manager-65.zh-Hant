@@ -8,13 +8,22 @@ feature: Upgrading
 exl-id: 28ddd23c-5907-4356-af56-ebc7589a2b5d
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 835ee49e-9248-5578-a60a-15c097807178
+    internal-label: Upgrading
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1083'
 ht-degree: 1%
-
 ---
-
 # AEM 6.5中的Assets存放庫重組 {#assets-repository-restructuring-in-aem}
 
 如AEM 6.5[&#128279;](/help/sites-deploying/repository-restructuring.md)頁面的上層存放庫重新調整中所述，升級至Adobe Experience Manager (AEM) 6.5的客戶應使用此頁面評估與影響AEM Assets解決方案的存放庫變更相關的工作量。 在AEM 6.5升級程式期間，有些變更需要大量工作量，而其他變更則可能延遲到未來升級為止。
@@ -77,11 +86,11 @@ ht-degree: 1%
    <td><strong>重組指南</strong></td>
    <td><p>如果客戶修改了電子郵件範本，則請執行下列動作以符合新的存放庫結構：</p>
     <ol>
-     <li><code>/libs/settings/dam/notification</code>電子郵件範本應從<strong><code>/etc/notification/email/default</code></strong>複製到<strong><code>/apps/settings/notification/email/default</code></strong>
+     <li><code>/libs/settings/dam/notification</code>電子郵件範本應從<strong><code>/etc/notification/email/default</code></strong>複製到 <strong><code>/apps/settings/notification/email/default</code></strong>
       <ol>
        <li>因為目的地位於<strong> <code>/apps</code></strong>，所以此變更應保留在SCM中。</li>
       </ol> </li>
-     <li>行動資料夾內的電子郵件範本後，移除資料夾： <strong><code>/etc/dam/notification/email/default</code></strong>。<br />
+     <li>在行動資料夾內的電子郵件範本後，移除資料夾： <strong><code>/etc/dam/notification/email/default</code></strong>。<br />
       <ol>
        <li>如果未更新<strong> <code>/etc/notification/email/default</code></strong>下的電子郵件範本，則資料夾可以移除，因為原始電子郵件範本存在於<strong><code>/libs/settings/notification/email/default</code></strong>下，屬於AEM 4安裝的一部分。</li>
       </ol> </li>
@@ -140,11 +149,11 @@ ht-degree: 1%
    <td><strong>重組指南</strong></td>
    <td><p>如果電子郵件範本（<strong>downloadasset</strong>或<strong>transientworkflowcompleted</strong>）已修改，請遵循下列程式以對齊新結構：</p>
     <ol>
-     <li>更新的電子郵件範本應從<strong><code>/etc/dam/workflow/notification/email/downloadasset</code></strong>複製到<strong><code>/apps/settings/dam/workflow/notification/email/downloadasset</code></strong>
+     <li>更新的電子郵件範本應從<strong><code>/etc/dam/workflow/notification/email/downloadasset</code></strong>複製到 <strong><code>/apps/settings/dam/workflow/notification/email/downloadasset</code></strong>
       <ol>
        <li>因為目的地位於<strong> <code>/apps</code></strong>，所以此變更應保留在SCM中。</li>
       </ol> </li>
-     <li>移除資料夾： <code>/etc/dam/workflow/notification/email/downloadasset </code>在移動其中的電子郵件範本之後。<br />
+     <li>移除資料夾：其中的電子郵件範本移動後<code>/etc/dam/workflow/notification/email/downloadasset </code>。<br />
       <ol>
        <li>如果未更新<strong> <code>/etc</code></strong>下的電子郵件範本，則資料夾可以移除，因為原始電子郵件範本存在於<strong><code>/libs/settings/dam/workflownotification/email/downloadasset</code></strong>下，屬於AEM 6.4安裝的一部分。</li>
       </ol> </li>
@@ -181,11 +190,11 @@ ht-degree: 1%
    <td><strong>重組指南</strong></td>
    <td><p>如果客戶修改了電子郵件範本，則必須符合新的存放庫結構：</p>
     <ol>
-     <li>更新的電子郵件範本應從<strong><code>/etc/dam/adhocassetshare</code></strong>複製到<strong><code>/apps/settings/dam/adhocassetshare</code></strong>
+     <li>更新的電子郵件範本應從<strong><code>/etc/dam/adhocassetshare</code></strong>複製到 <strong><code>/apps/settings/dam/adhocassetshare</code></strong>
       <ol>
        <li>因為目的地位於<strong><code>/apps</code></strong>，所以此變更應保留在SCM中。</li>
       </ol> </li>
-     <li>行動資料夾內的電子郵件範本後，移除資料夾： <strong><code>/etc/dam/adhocassetshare</code></strong>。<br />
+     <li>在行動資料夾內的電子郵件範本後，移除資料夾： <strong><code>/etc/dam/adhocassetshare</code></strong>。<br />
       <ol>
        <li>如果未更新<strong> <code>/etc</code></strong>下的電子郵件範本，則資料夾可以移除，因為原始電子郵件範本存在於<strong><code>/libs/settings/dam/adhocassetshare</code></strong>下，屬於AEM 6.4安裝的一部分。</li>
       </ol> </li>
@@ -214,7 +223,7 @@ ht-degree: 1%
    <td><strong>重組指南</strong></td>
    <td><p>若要與新的存放庫結構對齊：</p>
     <ol>
-     <li>將所有自訂或修改的指令碼從<strong><code>/etc/dam/indesign/scripts</code></strong>複製到<strong><code>/apps/settings/dam/indesign/scripts</code></strong><br />
+     <li>從<strong><code>/etc/dam/indesign/scripts</code></strong>將所有自訂或修改的指令碼複製到 <strong><code>/apps/settings/dam/indesign/scripts</code></strong><br />
       <ol>
        <li>在AEM 6.5中，僅可透過<strong><code>/libs/settings</code></strong>複製AEM提供的未修改指令碼的新指令碼或修改的指令碼</li>
       </ol> </li>

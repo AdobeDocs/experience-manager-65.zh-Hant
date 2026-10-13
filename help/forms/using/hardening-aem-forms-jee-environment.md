@@ -8,13 +8,29 @@ role: Admin,User
 exl-id: 6fb260f9-d0f8-431e-8d4e-535b451e4124
 solution: Experience Manager, Experience Manager Forms
 feature: Document Security,Adaptive Forms
-source-git-commit: b6714ae8f3464ef600c252c7ae5dcc75cbe6610b
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 50158d81-1c06-57f7-8bd7-e8ff76a93f85
+    internal-label: Document Security
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '7949'
 ht-degree: 1%
-
 ---
-
 # 在JEE環境中強化AEM Forms {#hardening-your-aem-forms-on-jee-environment}
 
 瞭解各種安全性強化設定，以增強在公司內部網路中執行的JEE上的AEM Forms安全性。
@@ -190,12 +206,12 @@ JEE上的AEM Forms預設會使用LocalSystem帳戶安裝服務。 內建的Local
    * **全域檔案儲存(GDS)目錄**： GDS目錄的位置是在AEM Forms安裝過程中手動設定的。 如果在安裝期間位置設定保持空白，則該位置會預設為位於`[JBoss root]/server/[type]/svcnative/DocumentStorage`的應用程式伺服器安裝下的目錄
    * **CRX-Repository目錄**：預設位置為`[AEM-Forms-installation-location]\crx-repository`
    * **AEM Forms暫存目錄**：
-      * (Windows)在環境變數中設定的TMP或TEMP路徑
-      * （AIX、Linux或Solaris）登入使用者的主目錄
-在基於UNIX的系統上，非根使用者可以使用以下目錄作為暫存目錄：
-      * (Linux) /var/tmp或/usr/tmp
-      * (AIX) /tmp或/usr/tmp
-      * (Solaris) /var/tmp或/usr/tmp
+     * (Windows)在環境變數中設定的TMP或TEMP路徑
+     * （AIX、Linux或Solaris）登入使用者的主目錄
+       在基於UNIX的系統上，非根使用者可以使用以下目錄作為暫存目錄：
+     * (Linux) /var/tmp或/usr/tmp
+     * (AIX) /tmp或/usr/tmp
+     * (Solaris) /var/tmp或/usr/tmp
 1. 為新的使用者帳戶提供下列目錄的寫入許可權：
    * [JBoss目錄]\standalone\deployment
    * [JBoss-directory]\standalone\
@@ -262,7 +278,7 @@ Configuration Manager會使用部署在應用程式伺服器上的servlet，執�
 1. 啟動AEM Forms伺服器。
 1. 在瀏覽器中輸入下列URL以測試變更，確保變更不再運作。
 
-   https://&lt;localhost>：&lt;port>/adobe-bootstrapper/bootstrap
+   https://<localhost>：<port>/adobe-bootstrapper/bootstrap
 
 **鎖定信任存放區的遠端存取**
 
@@ -489,7 +505,7 @@ JEE根URL上的&#x200B;**AEM Forms用於反向Proxy伺服器**
 <table> 
  <thead> 
   <tr> 
-   <th><p>根URL</p> </th> 
+   <th><p>根 URL</p> </th> 
    <th><p>用途及/或相關的網頁應用程式</p> </th> 
    <th><p>Web式介面</p> </th> 
    <th><p>一般使用者存取權</p> </th> 
@@ -1030,12 +1046,12 @@ JEE上的AEM Forms整套金鑰安裝依預設會使用「本機系統」帳戶�
    * **全域檔案儲存(GDS)目錄**： GDS目錄的位置是在AEM Forms安裝過程中手動設定的。 如果在安裝期間位置設定保持空白，則該位置會預設為位於`[JBoss root]/server/[type]/svcnative/DocumentStorage`的應用程式伺服器安裝下的目錄
    * **CRX-Repository目錄**：預設位置為`[AEM-Forms-installation-location]\crx-repository`
    * **AEM Forms暫存目錄**：
-      * (Windows)在環境變數中設定的TMP或TEMP路徑
-      * （AIX、Linux或Solaris）登入使用者的主目錄
-在基於UNIX的系統上，非根使用者可以使用以下目錄作為暫存目錄：
-      * (Linux) /var/tmp或/usr/tmp
-      * (AIX) /tmp或/usr/tmp
-      * (Solaris) /var/tmp或/usr/tmp
+     * (Windows)在環境變數中設定的TMP或TEMP路徑
+     * （AIX、Linux或Solaris）登入使用者的主目錄
+       在基於UNIX的系統上，非根使用者可以使用以下目錄作為暫存目錄：
+     * (Linux) /var/tmp或/usr/tmp
+     * (AIX) /tmp或/usr/tmp
+     * (Solaris) /var/tmp或/usr/tmp
 1. 為新的使用者帳戶提供下列目錄的寫入許可權：
    * [JBoss目錄]\standalone\deployment
    * [JBoss-directory]\standalone\

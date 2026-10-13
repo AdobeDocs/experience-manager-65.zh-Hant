@@ -1,18 +1,32 @@
 ---
 title: 建立翻譯專案
-description: 瞭解如何在 [!DNL Adobe Experience Manager]中建立翻譯專案。
+description: 瞭解如何在[!DNL Adobe Experience Manager]中建立翻譯專案。
 contentOwner: AG
 role: Developer, Admin
 feature: Translation
 exl-id: 8990feca-cfda-4974-915e-27aa9d8f2ee1
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: ac365bec-0634-4744-9473-c42f47320593
+    internal-label: Asset management and governance
+subfeature_v2:
+  - id: ee8e0f18-03e5-48ca-a013-04a577cd9a60
+    internal-label: Translation
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
-source-wordcount: '1889'
+source-wordcount: '1897'
 ht-degree: 15%
-
 ---
-
 # 建立翻譯專案 {#creating-translation-projects}
 
 若要建立語言副本，請觸發[!DNL Experience Manager]使用者介面中「參考」邊欄下可用的下列語言副本工作流程之一。
@@ -36,7 +50,7 @@ ht-degree: 15%
 
 ### 僅建立結構 {#create-structure-only}
 
-使用「 **[!UICONTROL 僅建立結構]** 」選項，在目標語言根目錄中建立目標資料夾層次結構，以匹配源語言根目錄中源資料夾的層次結構。在這種情況下，來源資產會複製到目標資料夾。但是，不會生成任何翻譯項目。
+使用「 **[!UICONTROL 僅建立結構]** 」選項，在目標語言根目錄中建立目標資料夾層次結構，以匹配源語言根目錄中源資料夾的層次結構。 在這種情況下，來源資產會複製到目標資料夾。 但是，不會生成任何翻譯項目。
 
 1. 在[!DNL Assets]介面中，選取您要在目標語言根目錄中建立結構的來源資料夾。
 
@@ -48,7 +62,7 @@ ht-degree: 15%
 
 1. 從「專 **[!UICONTROL 案]** 」清單中，選 **[!UICONTROL 擇「僅建立結構」]**。
 
-1. 按一下「**[!UICONTROL 建立]**」。目標語言的新結構列在&#x200B;**[!UICONTROL 語言副本]**&#x200B;下。
+1. 按一下「**[!UICONTROL 建立]**」。 目標語言的新結構列在&#x200B;**[!UICONTROL 語言副本]**&#x200B;下。
 
    ![語言副本](assets/lang-copy2.png)
 
@@ -73,7 +87,7 @@ ht-degree: 15%
 
 1. 在「專 **[!UICONTROL 案標題]** 」欄位中，輸入專案標題。
 
-1. 按一下「**[!UICONTROL 建立]**」。來源資料夾中的[!DNL Assets]會複製到您在步驟4中所選地區設定的目標資料夾。
+1. 按一下「**[!UICONTROL 建立]**」。 來源資料夾中的[!DNL Assets]會複製到您在步驟4中所選地區設定的目標資料夾。
 
    ![語言副本](assets/lang-copy2.png)
 
@@ -114,7 +128,7 @@ ht-degree: 15%
 如果使用此選項，則翻譯工作流程會針對您在執行先前的翻譯工作流程後新增至來源資料夾的資產執行。 只有新新增的資產會複製到包含先前翻譯的資產的目標資料夾。 在此情況下不會建立新的翻譯專案。
 
 1. 在[!DNL Assets] UI中，導覽至包含未翻譯資產的來源資料夾。
-1. 選取您要轉換的資產，並開啟「參考」 **[!UICONTROL 窗格]**。「語 **[!UICONTROL 言副本]** 」部分顯示當前可用的翻譯副本數。
+1. 選取您要轉換的資產，並開啟「參考」 **[!UICONTROL 窗格]**。 「語 **[!UICONTROL 言副本]** 」部分顯示當前可用的翻譯副本數。
 1. 按一下&#x200B;**[!UICONTROL 復本]**&#x200B;下的&#x200B;**[!UICONTROL 語言復本]**。 將顯示可用翻譯副本的清單。
 1. 按一下底部的&#x200B;**[!UICONTROL 建立並翻譯]**。
 
@@ -128,7 +142,7 @@ ht-degree: 15%
 
 1. 從&#x200B;**[!UICONTROL 現有翻譯專案]**&#x200B;清單中，選取要新增要翻譯的資產的專案。
 
-1. 按一下「**[!UICONTROL 建立]**」。要翻譯的資產會新增至目標資料夾。更新的資料夾會列在「語言復 **[!UICONTROL 本」區段下]** 。
+1. 按一下「**[!UICONTROL 建立]**」。 要翻譯的資產會新增至目標資料夾。 更新的資料夾會列在「語言復 **[!UICONTROL 本」區段下]** 。
 
    ![chlimage_1-79](assets/chlimage_1-79.png)
 
@@ -137,7 +151,7 @@ ht-degree: 15%
 
    ![chlimage_1-80](assets/chlimage_1-80.png)
 
-1. 按一下&#x200B;**翻譯工作**&#x200B;圖磚底部的省略符號，以檢視翻譯工作流程中的資產。 翻譯工作清單也會顯示資產中繼資料和標記項目。這些項目表示資產中繼資料和標記也已翻譯。
+1. 按一下&#x200B;**翻譯工作**&#x200B;圖磚底部的省略符號，以檢視翻譯工作流程中的資產。 翻譯工作清單也會顯示資產中繼資料和標記項目。 這些項目表示資產中繼資料和標記也已翻譯。
 
    >[!NOTE]
    >
@@ -220,7 +234,7 @@ ht-degree: 15%
 
    ![chlimage_1-94](assets/chlimage_1-94.png)
 
-1. 在「語言副本」之前選 **[!UICONTROL 取核取方塊]**，以選取所有語言副本。取消選擇與要翻譯的語言環境相對應的語言副本 (副本) 以外的其他副本。
+1. 在「語言副本」之前選 **[!UICONTROL 取核取方塊]**，以選取所有語言副本。 取消選擇與要翻譯的語言環境相對應的語言副本 (副本) 以外的其他副本。
 
    ![選取語言副本](assets/lang-copy1.png)
 
@@ -237,7 +251,7 @@ ht-degree: 15%
 
 當您執行翻譯工作流程，以使用原始資產的已編輯版本更新語言副本時，現有的語言副本會保留，直到您核准翻譯資產為止。 [!DNL Adobe Experience Manager Assets]會將新翻譯的資產儲存在暫存位置，並在您明確核准資產後更新現有的語言副本。 如果您拒絕資產，則語言副本會維持不變。
 
-1. 按一下您已為其建立語言副本的&#x200B;**[!UICONTROL 語言副本]**&#x200B;下的來源根資料夾，然後按一下「在Assets中顯示」**[!UICONTROL 以開啟]**&#x200B;中的資料夾。[!DNL Experience Manager Assets]
+1. 按一下您已為其建立語言副本的&#x200B;**[!UICONTROL 語言副本]**&#x200B;下的來源根資料夾，然後按一下「在Assets中顯示」**以開啟[!DNL Experience Manager Assets]中的資料夾。**
 
    ![chlimage_1-99](assets/chlimage_1-99.png)
 
@@ -261,5 +275,5 @@ ht-degree: 15%
 
 ## 提示和限制 {#tips-limitations}
 
-* 如果您啟動複雜資產(例如PDF和[!DNL Adobe InDesign]檔案)的翻譯工作流程，其子資產或轉譯（如果有的話）將不會提交以進行翻譯。
+* 如果您啟動複雜資產（例如PDF和[!DNL Adobe InDesign]檔案）的翻譯工作流程，其子資產或轉譯（如果有的話）將不會提交以進行翻譯。
 * 如果您使用機器翻譯，則不會翻譯資產二進位檔案。

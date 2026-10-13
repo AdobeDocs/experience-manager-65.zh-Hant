@@ -9,13 +9,25 @@ feature: Multi Site Manager
 exl-id: e145e79a-c363-4a33-b9f9-99502ed20563
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: eae057caed533ef16bb541b4ad41b8edd7aaa1c7
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: a642c50e-80eb-4fc1-a5d2-f3762d1f841d
+    internal-label: Administration
+subfeature_v2:
+  - id: e86b80f2-7cb0-4646-8fcd-51d3bf272fce
+    internal-label: Multi Site Manager
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '905'
+source-wordcount: '913'
 ht-degree: 1%
-
 ---
-
 # MSM 推出衝突{#msm-rollout-conflicts}
 
 如果在Blueprint分支和相依即時副本分支中同時建立具有相同頁面名稱的新頁面，則可能會發生衝突。
@@ -32,7 +44,7 @@ ht-degree: 1%
 * 哪些頁面會重新命名（以及重新命名方式），
 * 這會如何影響任何已發佈的內容。
 
-  Adobe Experience Manager (AEM) （現成可用）的預設行為是發佈內容不受影響。 因此，如果在即時副本分支中手動建立的頁面已發佈，該內容在衝突處理和轉出後仍會發佈。
+  Adobe Experience Manager (AEM) （現成可用的功能）預設行為是發佈內容不受影響。 因此，如果在即時副本分支中手動建立的頁面已發佈，該內容在衝突處理和轉出後仍會發佈。
 
 除了標準功能外，您也可以新增自訂的衝突處理常式，以實作不同的規則。 這些功能也可以允許將動作發佈為個別程式。
 
@@ -48,7 +60,7 @@ ht-degree: 1%
 
   在即時副本分支中手動建立的頁面；具有一個子頁面`lc-level-1`。
 
-   * 與子頁面一起在發佈時以`/b`啟動。
+  * 與子頁面一起在發佈時以`/b`啟動。
 
 轉出前&#x200B;**&#x200B;**
 
@@ -80,11 +92,11 @@ ht-degree: 1%
 
 * **處理與手動建立的頁面衝突**：
 
-  (`rolloutmgr.conflicthandling.enabled`)
+  ( `rolloutmgr.conflicthandling.enabled`)
 
   如果轉出管理員應處理在即時副本中建立的頁面與Blueprint中已存在的名稱之間的衝突，則設為true。
 
-已停用衝突管理時，AEM有[預先定義的行為](#behavior-when-conflict-handling-deactivated)。
+當衝突管理已停用時，AEM有[預先定義的行為](#behavior-when-conflict-handling-deactivated)。
 
 ## 衝突處理常式 {#conflict-handlers}
 
@@ -94,7 +106,7 @@ AEM提供：
 
 * [預設衝突處理常式](#default-conflict-handler)：
 
-   * `ResourceNameRolloutConflictHandler`
+  * `ResourceNameRolloutConflictHandler`
 
 * 實施[自訂處理常式](#customized-handlers)的可能性。
 * 此服務排名機制可讓您設定每個個別處理常式的優先順序。 使用排名最高的服務。
@@ -114,13 +126,13 @@ AEM提供：
 
   已移動（在即時副本中）至`/b_msm_moved`。 這會作為備份，並確保不會遺失任何內容。
 
-   * 未移動`lc-level-1`。
+  * 未移動`lc-level-1`。
 
 * Blueprint： `/b`
 
   轉出到即時副本頁面`/b`。
 
-   * `bp-level-1`已轉出至即時副本。
+  * `bp-level-1`已轉出至即時副本。
 
 轉出後&#x200B;**&#x200B;**
 
@@ -160,11 +172,11 @@ AEM提供：
 * 根據您的需求開發/設定；例如，您可以開發處理常式，好讓即時副本頁面獲得優先權。
 * 設計成使用[OSGi設定](/help/sites-deploying/configuring-osgi.md)進行設定；特別是：
 
-   * **服務排名**：
+  * **服務排名**：
 
-     定義與其他衝突處理常式( `service.ranking`)相關的順序。
+    定義與其他衝突處理常式( `service.ranking`)相關的順序。
 
-     預設值為 0。
+    預設值為 0。
 
 ### 衝突處理停用時的行為 {#behavior-when-conflict-handling-deactivated}
 

@@ -1,18 +1,29 @@
 ---
-title: 監視 [!DNL Assets] 部署的最佳實務
-description: 部署 [!DNL Adobe Experience Manager] 部署後，監視其環境和效能的最佳實務。
+title: 監視[!DNL Assets]部署的最佳實務
+description: 部署[!DNL Adobe Experience Manager]部署後，監視其環境和效能的最佳實務。
 contentOwner: AG
 role: Admin, Developer
 feature: Asset Management
 exl-id: a9e1bd6b-c768-4faa-99a3-7110693998dc
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 7d2b2ec8-499c-5434-9ffd-9218cd71f683
+    internal-label: Asset Management
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1638'
-ht-degree: 0%
-
+source-wordcount: '1704'
+ht-degree: 1%
 ---
-
 # 監視[!DNL Adobe Experience Manager Assets]部署的最佳實務 {#assets-monitoring-best-practices}
 
 從[!DNL Experience Manager Assets]的觀點來看，監視應包括觀察和報告以下流程和技術：
@@ -111,7 +122,7 @@ Threads
 
 **監視器[!DNL Experience Manager]**
 
-[!DNL Experience Manager]也會透過JMX公開一組統計資料和作業。 這些功能有助於評估系統健康狀況，並在潛在問題影響使用者之前識別它們。 如需詳細資訊，請參閱[&#x200B; JMX MBean上的](/help/sites-administering/jmx-console.md)檔案[!DNL Experience Manager]。
+[!DNL Experience Manager]也會透過JMX公開一組統計資料和作業。 這些功能有助於評估系統健康狀況，並在潛在問題影響使用者之前識別它們。 如需詳細資訊，請參閱[!DNL Experience Manager] JMX MBean上的[檔案](/help/sites-administering/jmx-console.md)。
 
 以下是您可以監視[!DNL Experience Manager]的一些基準線引數：
 
@@ -143,51 +154,51 @@ Threads
 以下是可協助監控的現成健康情況檢查：
 
 * 系統檢查
-   * MBean： `org.apache.sling.healthcheck:name=systemchecks,type=HealthCheck`
-   * URL： `/system/console/jmx/org.apache.sling.healthcheck:name=systemchecks,type=HealthCheck`
-   * 執行個體：一個作者，所有發佈伺服器
-   * 警報臨界值：當狀態不是「正常」時
-   * 警報定義：其中一個度量的狀態為WARN或CRITICAL。 檢查記錄屬性，以取得問題原因的詳細資訊。
+  * MBean： `org.apache.sling.healthcheck:name=systemchecks,type=HealthCheck`
+  * URL： `/system/console/jmx/org.apache.sling.healthcheck:name=systemchecks,type=HealthCheck`
+  * 執行個體：一個作者，所有發佈伺服器
+  * 警報臨界值：當狀態不是「正常」時
+  * 警報定義：其中一個度量的狀態為WARN或CRITICAL。 檢查記錄屬性，以取得問題原因的詳細資訊。
 
-* 復寫佇列
+* 複寫佇列
 
-   * MBean： `org.apache.sling.healthcheck:name=replicationQueue,type=HealthCheck`
-   * URL： `/system/console/jmx/org.apache.sling.healthcheck:name=replicationQueue,type=HealthCheck`
-   * 執行個體：一個作者，所有發佈伺服器
-   * 警報臨界值：當狀態不是「正常」時
-   * 警報定義：其中一個度量的狀態為WARN或CRITICAL。 檢查記錄屬性，以取得造成問題之佇列的詳細資訊。
+  * MBean： `org.apache.sling.healthcheck:name=replicationQueue,type=HealthCheck`
+  * URL： `/system/console/jmx/org.apache.sling.healthcheck:name=replicationQueue,type=HealthCheck`
+  * 執行個體：一個作者，所有發佈伺服器
+  * 警報臨界值：當狀態不是「正常」時
+  * 警報定義：其中一個度量的狀態為WARN或CRITICAL。 檢查記錄屬性，以取得造成問題之佇列的詳細資訊。
 
 * 回應效能
 
-   * MBean： `org.apache.sling.healthcheck:name=requestsStatus,type=HealthCheck`
-   * URL： `/system/console/jmx/org.apache.sling.healthcheck:name=requestsStatus,type=HealthCheck`
-   * 執行個體：所有伺服器
-   * 警示持續時間：當狀態不是「正常」時
-   * 警報定義：其中一個度量的狀態為WARN或CRITICAL。 檢查記錄屬性，以取得造成問題之佇列的詳細資訊。
+  * MBean： `org.apache.sling.healthcheck:name=requestsStatus,type=HealthCheck`
+  * URL： `/system/console/jmx/org.apache.sling.healthcheck:name=requestsStatus,type=HealthCheck`
+  * 執行個體：所有伺服器
+  * 警示持續時間：當狀態不是「正常」時
+  * 警報定義：其中一個度量的狀態為WARN或CRITICAL。 檢查記錄屬性，以取得造成問題之佇列的詳細資訊。
 
 * 查詢效能
 
-   * MBean： `org.apache.sling.healthcheck:name=queriesStatus,type=HealthCheck`
-   * URL： `/system/console/jmx/org.apache.sling.healthcheck:name= queriesStatus,type=HealthCheck`
-   * 執行個體：一個作者，所有發佈伺服器
-   * 警報臨界值：當狀態不是「正常」時
-   * 警報定義：一或多個查詢在系統中執行緩慢。 檢查記錄屬性，以取得關於導致問題的查詢的詳細資訊。
+  * MBean： `org.apache.sling.healthcheck:name=queriesStatus,type=HealthCheck`
+  * URL： `/system/console/jmx/org.apache.sling.healthcheck:name= queriesStatus,type=HealthCheck`
+  * 執行個體：一個作者，所有發佈伺服器
+  * 警報臨界值：當狀態不是「正常」時
+  * 警報定義：一或多個查詢在系統中執行緩慢。 檢查記錄屬性，以取得關於導致問題的查詢的詳細資訊。
 
 * 作用中組合
 
-   * MBean： `org.apache.sling.healthcheck:name=inactiveBundles,type=HealthCheck`
-   * URL： `/system/console/jmx/org.apache.sling.healthcheck:name=inactiveBundles,type=HealthCheck`
-   * 執行個體：所有伺服器
-   * 警報臨界值：當狀態不是「正常」時
-   * 警報定義：系統上存在非使用中或未解析的OSGi組合。 檢查記錄屬性，以取得導致問題的套件組合的相關資訊。
+  * MBean： `org.apache.sling.healthcheck:name=inactiveBundles,type=HealthCheck`
+  * URL： `/system/console/jmx/org.apache.sling.healthcheck:name=inactiveBundles,type=HealthCheck`
+  * 執行個體：所有伺服器
+  * 警報臨界值：當狀態不是「正常」時
+  * 警報定義：系統上存在非使用中或未解析的OSGi組合。 檢查記錄屬性，以取得導致問題的套件組合的相關資訊。
 
 * 日誌錯誤
 
-   * MBean： `org.apache.sling.healthcheck:name=logErrorHealthCheck,type=HealthCheck`
-   * URL： `/system/console/jmx/org.apache.sling.healthcheck:name=logErrorHealthCheck,type=HealthCheck`
-   * 執行個體：所有伺服器
-   * 警報臨界值：當狀態不是「正常」時
-   * 警報定義：記錄檔中有錯誤。 檢查記錄屬性，以取得問題原因的詳細資訊。
+  * MBean： `org.apache.sling.healthcheck:name=logErrorHealthCheck,type=HealthCheck`
+  * URL： `/system/console/jmx/org.apache.sling.healthcheck:name=logErrorHealthCheck,type=HealthCheck`
+  * 執行個體：所有伺服器
+  * 警報臨界值：當狀態不是「正常」時
+  * 警報定義：記錄檔中有錯誤。 檢查記錄屬性，以取得問題原因的詳細資訊。
 
 ## 常見問題與解決方法  {#common-issues-and-resolutions}
 

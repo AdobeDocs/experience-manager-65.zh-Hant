@@ -9,18 +9,29 @@ exl-id: a4717cb8-b70c-4150-b816-35e9b871e792
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization
 role: User
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+  - id: eb3ad9f8-54a2-45f3-abb1-d3976415a718
+    internal-label: Personalization
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1185'
+source-wordcount: '1194'
 ht-degree: 2%
-
 ---
-
 # 使用Adobe Campaign 6.1和Adobe Campaign Standard{#working-with-adobe-campaign-and-adobe-campaign-standard}
 
 您可以在AEM中建立電子郵件內容，並在Adobe Campaign電子郵件中處理。 若要這麼做，您必須：
 
-1. 從Adobe Campaign專用的範本在AEM中建立Newsletter。
+1. 從Adobe Campaign專屬的範本，在AEM中建立Newsletter。
 1. 請先選取[Adobe Campaign服務](#selectingtheadobecampaigncloudservice)，再編輯內容以存取所有功能。
 1. 編輯內容。
 1. 驗證內容。
@@ -40,7 +51,7 @@ ht-degree: 2%
 有兩種可能的情況：
 
 * 內容可以與Adobe Campaign的傳送同步。 這可讓您在傳送中使用AEM內容。
-* (僅限Adobe Campaign內部部署)內容可直接傳送至Adobe Campaign，這會自動產生新的電子郵件傳送。 此模式具有限制。
+* （僅限Adobe Campaign內部部署）內容可直接傳送至Adobe Campaign，這會自動產生新的電子郵件傳送。 此模式具有限制。
 
 本檔案將說明詳細說明。
 
@@ -73,7 +84,7 @@ ht-degree: 2%
 
 若要與Adobe Campaign整合，您需要將Adobe Campaign雲端服務新增至頁面。 如此一來，您便可存取個人化及其他Adobe Campaign資訊。
 
-此外，您可能還需要選取Adobe Campaign範本，並變更主旨，為不會以HTML檢視電子郵件的使用者新增純文字內容。
+此外，您可能還需要選取Adobe Campaign範本，並變更主旨，為不會在HTML中檢視電子郵件的使用者新增純文字內容。
 
 1. 選取Sidekick中的&#x200B;**Page**&#x200B;索引標籤，然後選取&#x200B;**Page屬性。**
 1. 在快顯視窗的&#x200B;**雲端服務**&#x200B;索引標籤中，選取&#x200B;**新增服務**&#x200B;以新增Adobe Campaign服務，然後按一下&#x200B;**確定**。
@@ -86,9 +97,9 @@ ht-degree: 2%
    >
    >在新增雲端服務後，請務必按一下&#x200B;**確定**&#x200B;或&#x200B;**套用**。 這可讓&#x200B;**Adobe Campaign**&#x200B;索引標籤正常運作。
 
-1. 如果您想要套用預設&#x200B;**郵件**&#x200B;範本以外的特定電子郵件傳遞範本(來自Adobe Campaign)，請再次選取&#x200B;**頁面屬性**。 在&#x200B;**Adobe Campaign**&#x200B;索引標籤中，在相關的Adobe Campaign執行個體中輸入電子郵件傳遞範本的內部名稱。
+1. 如果您想要套用預設&#x200B;**郵件**&#x200B;範本以外的特定電子郵件傳遞範本（來自Adobe Campaign），請再次選取&#x200B;**頁面屬性**。 在&#x200B;**Adobe Campaign**&#x200B;索引標籤中，在相關的Adobe Campaign執行個體中輸入電子郵件傳遞範本的內部名稱。
 
-   在Adobe Campaign Standard中，範本是&#x200B;**含AEM內容的傳遞**。 在Adobe Campaign 6.1中，範本是&#x200B;**包含AEM內容的電子郵件傳遞**。
+   在Adobe Campaign Standard中，範本是&#x200B;**包含AEM內容的傳遞**。 在Adobe Campaign 6.1中，範本是&#x200B;**包含AEM內容的電子郵件傳遞**。
 
    當您選取範本時，AEM會自動啟用&#x200B;**Adobe Campaign Newsletter**&#x200B;元件。
 
@@ -185,4 +196,4 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->如需詳細資訊，請參閱標準撰寫檔案之[使用Adobe Campaign Standard 6.1和Adobe Campaign &#x200B;](/help/sites-authoring/campaign.md)下的[連結AEM與Adobe Campaign和Adobe Campaign Standard 6.1](/help/sites-authoring/campaign.md#linking-aem-with-adobe-campaign-standard-and-adobe-campaign-classic)。
+>如需詳細資訊，請參閱標準撰寫檔案中的[使用AEM 6.1和Adobe Campaign Standard](/help/sites-authoring/campaign.md)底下的[將Adobe Campaign與Adobe Campaign Standard和Adobe Campaign 6.1](/help/sites-authoring/campaign.md#linking-aem-with-adobe-campaign-standard-and-adobe-campaign-classic)連結。

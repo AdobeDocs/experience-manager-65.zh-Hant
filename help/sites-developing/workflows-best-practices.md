@@ -5,13 +5,22 @@ exl-id: 14775476-6fe5-4583-8ab5-b55fef892174
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: b3af1a140abc1c202fa58704440c5660f1d43123
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
 source-wordcount: '1962'
 ht-degree: 1%
-
 ---
-
 # 工作流程最佳實務{#workflow-best-practices}
 
 工作流程可讓您自動化Adobe Experience Manager (AEM)活動。
@@ -243,8 +252,8 @@ public void execute(WorkItem item, WorkflowSession workflowSession, MetaDataMap 
 * 在工作流程處理序內，若正使用`WorkflowSession`修改存放庫，則不要明確儲存工作階段 — 工作流程會在完成時儲存工作階段。
 * 不應從工作流程步驟中呼叫`Session.Save`：
 
-   * 建議調整工作流程JCR工作階段；則不需要使用`save`，因為工作流程引擎會在工作流程執行完成後自動儲存工作階段。
-   * 不建議流程步驟建立自己的JCR工作階段。
+  * 建議調整工作流程JCR工作階段；則不需要使用`save`，因為工作流程引擎會在工作流程執行完成後自動儲存工作階段。
+  * 不建議流程步驟建立自己的JCR工作階段。
 
 * 透過消除不必要的節省，您可以減少額外負荷，進而讓工作流程更有效率。
 
@@ -307,7 +316,7 @@ public void execute(WorkItem item, WorkflowSession workflowSession, MetaDataMap 
 * 在升級執行個體之前，請確定已備份任何自訂工作流程模型。
 * 確認您的自訂工作流程未儲存在[位置](#locations)下：
 
-   * `/libs/settings/workflow/models/projects`
+  * `/libs/settings/workflow/models/projects`
 
 >[!NOTE]
 >

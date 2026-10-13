@@ -10,13 +10,22 @@ exl-id: 61152b2d-4c0b-4cfd-9669-cf03d32cb7c7
 solution: Experience Manager, Experience Manager Sites
 feature: Operations
 role: Admin
-source-git-commit: 17c4084d9ee93e5fe6652d63438eaf34cbc83c12
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 8a70d214-ab7b-58c1-b001-2ed2e5d6303d
+    internal-label: Operations
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1502'
 ht-degree: 0%
-
 ---
-
 
 # 設定配置容器和配置模式{#configuring-layout-container-and-layout-mode}
 
@@ -38,17 +47,17 @@ AEM使用多種機制組合，為您的頁面實現回應式佈局：
 
   此元件提供格線段落系統，讓您在回應式格線內新增及放置元件。 它可作為您頁面的預設Parsys使用，和/或在元件瀏覽器中可供作者使用。
 
-   * 預設&#x200B;**配置容器**&#x200B;元件定義於：
+  * 預設&#x200B;**配置容器**&#x200B;元件定義於：
 
-     `/libs/wcm/foundation/components/responsivegrid`
+    `/libs/wcm/foundation/components/responsivegrid`
 
-   * 您可以定義配置容器：
+  * 您可以定義配置容器：
 
-      * 作為使用者可新增至頁面的元件。
-      * 做為頁面的預設parsys。
-      * 兩者。
+    * 作為使用者可新增至頁面的元件。
+    * 做為頁面的預設parsys。
+    * 兩者。
 
-        您可以將版面容器設為頁面的標準版面容器，同時允許使用者在此容器中新增更多版面容器；例如，實現欄控制。
+      您可以將版面容器設為頁面的標準版面容器，同時允許使用者在此容器中新增更多版面容器；例如，實現欄控制。
 
 * **[配置模式](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode)**
 將配置容器放置到頁面上後，您就可以使用&#x200B;**配置**&#x200B;模式在回應式格線內放置內容。
@@ -102,13 +111,13 @@ AEM使用多種機制組合，為您的頁面實現回應式佈局：
 * 用於回應式設計。
 * 可定義：
 
-   * 在頁面範本上，設定會從中複製到使用該範本建立的任何頁面。
-   * 在頁面節點上，任何子頁面會從中繼承設定。
+  * 在頁面範本上，設定會從中複製到使用該範本建立的任何頁面。
+  * 在頁面節點上，任何子頁面會從中繼承設定。
 
 * 定義標題和寬度：
 
-   * 標題說明一般裝置群組，必要時會提供方向；例如，手機、平板電腦、桌上型電腦橫向。
-   * 寬度會定義該一般裝置群組的最大寬度（畫素）。 例如，如果中斷點電話的寬度為768，那麼就會是電話裝置所使用的配置寬度上限。
+  * 標題說明一般裝置群組，必要時會提供方向；例如，手機、平板電腦、桌上型電腦橫向。
+  * 寬度會定義該一般裝置群組的最大寬度（畫素）。 例如，如果中斷點電話的寬度為768，那麼就會是電話裝置所使用的配置寬度上限。
 
 * 使用模擬器時，會在頁面編輯器頂端顯示為標籤。
 * 繼承自父節點階層，並可隨意覆寫。
@@ -253,11 +262,11 @@ AEM使用LESS來產生必要CSS的部分，這些需要包含在您的專案中�
 
 * 之前：
 
-   * `width=100px`
+  * `width=100px`
 
 * 之後：
 
-   * `max-width=100px`
+  * `max-width=100px`
 
 #### 調整大小和調整影像法規遵循 {#resizing-and-adaptive-image-compliance}
 
@@ -317,11 +326,11 @@ AEM使用LESS來產生必要CSS的部分，這些需要包含在您的專案中�
 
    * 可用的欄數：
 
-      * `columns="{String}8"`
+     * `columns="{String}8"`
 
    * 可新增至目前元件的元件：
 
-      * `components="[/libs/wcm/foundation/components/responsivegrid, ...`
+     * `components="[/libs/wcm/foundation/components/responsivegrid, ...`
 
 ## 巢狀回應式格點 {#nested-responsive-grids}
 

@@ -10,13 +10,26 @@ exl-id: 6079431d-7d08-4973-8bb4-a8d10626a795
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Developer
-source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
 source-wordcount: '522'
 ht-degree: 5%
-
 ---
-
 # 設定帳戶環境{#configuring-your-account-environment}
 
 AEM提供您設定帳戶及製作環境某些方面的功能。
@@ -31,15 +44,15 @@ AEM提供您設定帳戶及製作環境某些方面的功能。
 
 * 模擬為
 
-   * 透過[模擬為](/help/sites-administering/security.md#impersonating-another-user)功能，使用者可以代表其他使用者工作。
+  * 透過[模擬為](/help/sites-administering/security.md#impersonating-another-user)功能，使用者可以代表其他使用者工作。
 
 * 設定檔
 
-   * 提供您的[使用者設定](/help/sites-administering/security.md)的便利連結)
+  * 提供您的[使用者設定](/help/sites-administering/security.md)的便利連結)
 
 * [我的喜好設定](/help/sites-authoring/user-properties.md#my-preferences)
 
-   * 指定使用者專屬的各種偏好設定設定
+  * 指定使用者專屬的各種偏好設定設定
 
 ![screen_shot_2018-03-20at103808](assets/screen_shot_2018-03-20at103808.png)
 
@@ -61,13 +74,13 @@ AEM提供您設定帳戶及製作環境某些方面的功能。
 
   這會定義開啟視窗的行為。 選取：
 
-   * **多個Windows** （預設）
+  * **多個Windows** （預設）
 
-      * 頁面會在新視窗中開啟。
+    * 頁面會在新視窗中開啟。
 
-   * **單一視窗**
+  * **單一視窗**
 
-      * 頁面會在目前視窗中開啟。
+    * 頁面會在目前視窗中開啟。
 
 * **顯示Assets的案頭動作**
 
@@ -77,8 +90,8 @@ AEM提供您設定帳戶及製作環境某些方面的功能。
 
   這會定義製作註解時使用的預設顏色。
 
-   * 按一下顏色區塊，即可開啟色票選取器並選取顏色。
-   * 或者，在欄位中輸入所需顏色的十六進位代碼。
+  * 按一下顏色區塊，即可開啟色票選取器並選取顏色。
+  * 或者，在欄位中輸入所需顏色的十六進位代碼。
 
 * **相對日期顯示**
 
@@ -86,23 +99,23 @@ AEM提供您設定帳戶及製作環境某些方面的功能。
 
   此選項定義系統中日期的顯示方式。 下列選項可供使用：
 
-   * **一律顯示確切日期**：一律顯示確切日期（從不顯示相對日期）。
-   * **1天**：對於一天內的日期會顯示相對日期，否則會顯示確切日期。
+  * **一律顯示確切日期**：一律顯示確切日期（從不顯示相對日期）。
+  * **1天**：對於一天內的日期會顯示相對日期，否則會顯示確切日期。
 
-   * **7天（預設）**：對於七天內的日期會顯示相對日期，否則會顯示確切日期。
+  * **7天（預設）**：對於七天內的日期會顯示相對日期，否則會顯示確切日期。
 
-   * **1個月**：會顯示一個月內日期的相對日期，否則會顯示確切日期。
+  * **1個月**：會顯示一個月內日期的相對日期，否則會顯示確切日期。
 
-   * **1年**：對於一年內的日期顯示相對日期，其他情況則顯示確切日期。
+  * **1年**：對於一年內的日期顯示相對日期，其他情況則顯示確切日期。
 
-   * **一律顯示相對日期**：絕對不會顯示確切日期，只會顯示相對日期。
+  * **一律顯示相對日期**：絕對不會顯示確切日期，只會顯示相對日期。
 
 * **啟用捷徑**
 
   AEM支援數個鍵盤快速鍵，讓撰寫更有效率。
 
-   * [用於編輯頁面的鍵盤快速鍵](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)
-   * [主控台的鍵盤快速鍵](/help/sites-authoring/keyboard-shortcuts.md)
+  * [用於編輯頁面的鍵盤快速鍵](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)
+  * [主控台的鍵盤快速鍵](/help/sites-authoring/keyboard-shortcuts.md)
 
   此選項可啟用鍵盤快速鍵。 預設會啟用這些功能，但也可以停用，例如，如果使用者有特定的協助工具要求。
 

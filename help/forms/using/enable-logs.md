@@ -1,5 +1,5 @@
 ---
-title: 啟用HTML5表單的記錄
+title: 啟用 HTML5 表單的記錄
 description: 記錄器公用程式可啟用表單的記錄，並幫助您偵錯表單相關問題。
 contentOwner: robhagat
 content-type: reference
@@ -10,14 +10,29 @@ feature: HTML5 Forms,Mobile Forms
 exl-id: 2f574c98-550c-4b84-be1e-46a2700e7277
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 97aafc4b-2598-52d6-9012-295a95969e38
+    internal-label: HTML5 Forms
+  - id: 59f95943-e802-56ac-990d-21ab923984c1
+    internal-label: Mobile Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '629'
-ht-degree: 4%
-
+source-wordcount: '644'
+ht-degree: 6%
 ---
-
-# 啟用HTML5表單的記錄{#enable-logging-for-html-forms}
+# 啟用 HTML5 表單的記錄{#enable-logging-for-html-forms}
 
 您可以設定記錄器公用程式，以開始建立HTML5表單的記錄。 記錄器公用程式有各種等級，您可以根據自己的需求設定等級。 HTML5 forms包含伺服器和使用者端元件。 您可以為這兩個元件設定記錄檔。
 
@@ -25,7 +40,7 @@ ht-degree: 4%
 
 執行以下步驟來設定伺服器端記錄檔：
 
-1. 移至`https://'[server]:[port]'/system/console/configMgr`。 找到並開啟&#x200B;*Apace Sling記錄記錄器組態*&#x200B;選項。 對話方塊隨即顯示：
+1. 前往 `https://'[server]:[port]'/system/console/configMgr`。 找到並開啟&#x200B;*Apace Sling記錄記錄器組態*&#x200B;選項。 對話方塊隨即顯示：
 
    ![&#x200B; Apace Sling記錄記錄器組態選項對話方塊](assets/logconfig.png)
 
@@ -39,11 +54,11 @@ ht-degree: 4%
    >
    >若要在HTML5表單記錄目錄中產生記錄，請在檔案名稱前新增……/logs/ 。
 
-1. 將&#x200B;**記錄器**&#x200B;變更為&#x200B;**HTMLFormsPerfLogger**。 按一下「**儲存**」。
+1. 將&#x200B;**記錄器**&#x200B;變更為&#x200B;**HTMLFormsPerfLogger**。 按一下&#x200B;**儲存**。
 
 ## 設定使用者端記錄 {#configuring-client-logging}
 
-您可以使用下列方法在HTML5表單中啟用使用者端記錄：
+您可以使用以下方法在HTML5表單中啟用使用者端記錄：
 
 * 使用名為`log`的請求引數
 * 使用CQ設定管理員
@@ -62,7 +77,7 @@ ht-degree: 4%
  <tbody>
   <tr>
    <th><strong>記錄檔目的地</strong></th>
-   <th><strong>說明</strong></th>
+   <th><strong>描述</strong></th>
   </tr>
   <tr>
    <td>1</td>
@@ -85,7 +100,7 @@ ht-degree: 4%
  <tbody>
   <tr>
    <th>記錄層級</th>
-   <th>說明</th>
+   <th>描述</th>
   </tr>
   <tr>
    <td>0</td>
@@ -161,7 +176,7 @@ ht-degree: 4%
   </tr>
   <tr>
    <td>2-a4-b5-c6<br type="_moz" /> </td>
-   <td>目的地：伺服器<br /> xfa層級： INFO<br /> xfaView層級： DEBUG<br /> xfaPerf層級：TRACE</td>
+   <td>目的地：伺服器<br /> xfa層級： INFO<br /> xfaView層級： DEBUG<br /> xfaPerf層級： TRACE</td>
   </tr>
  </tbody>
 </table>
@@ -170,7 +185,7 @@ ht-degree: 4%
 >
 >每個日誌類別a (xfa)、b (xfaView)和c (xfaPerf)的預設日誌層級為2 （錯誤）。 因此，對於記錄設定：2-b6，不同類別的記錄層級為：
 >a (xfa)：2 （預設層次錯誤）
->b (xfaView)： 6 (使用者指定的TRACE)
+>b (xfaView)： 6 （使用者指定的TRACE）
 >a (xfaPerf)：2 （預設層級ERROR）
 
 ### 使用Configuration Manager啟用記錄 {#enabling-logging-using-configuration-manager}

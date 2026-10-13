@@ -11,16 +11,30 @@ role: Admin,User
 exl-id: 0f9aab7d-8e41-449a-804b-7e1bfa90befd
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1736'
+source-wordcount: '1789'
 ht-degree: 1%
-
 ---
-
 # 移轉 AEM Forms 資產和文件{#migrate-aem-forms-assets-and-documents}
 
-移轉公用程式會將[最適化Forms資產](../../forms/using/introduction-forms-authoring.md)、[雲端設定](/help/sites-developing/extending-cloud-config.md)和[通訊管理資產](/help/forms/using/cm-overview.md)從舊版所使用的格式轉換為Adobe Experience Manager (AEM) 6.5 Forms中使用的格式。 當您執行移轉公用程式時，將會移轉下列專案：
+移轉公用程式會將[最適化Forms資產](../../forms/using/introduction-forms-authoring.md)、[雲端設定](/help/sites-developing/extending-cloud-config.md)和[通訊管理資產](/help/forms/using/cm-overview.md)從舊版所使用的格式，轉換為Adobe Experience Manager (AEM) 6.5 Forms中使用的格式。 當您執行移轉公用程式時，將會移轉下列專案：
 
 * 調適型表單的自訂元件
 * 最適化表單與通訊管理範本
@@ -53,13 +67,13 @@ ht-degree: 1%
 
 對於通訊管理資產：
 
-* 針對從先前平台匯入的資產，會新增屬性： **fd：version=1.0**。
+* 對於從先前平台匯入的資產，會新增屬性： **fd:version=1.0**。
 * 自AEM 6.1 Forms起，無法立即使用註解。 先前新增的註解可在資產中使用，但不會自動顯示在介面中。 在AEM Forms使用者介面中自訂extendedProperties屬性，使註解可見。
-* 在某些舊版(例如LiveCycle ES4)中，文字是使用Flex RichTextEditor進行編輯，但由於AEM 6.1 Forms，因此會使用HTML編輯器。 由於這種演算和字型的外觀，字型大小和字型邊界可能與作者使用者介面中的先前版本不同。 但是，字母在轉譯時看起來是相同的。
+* 在某些舊版（例如LiveCycle ES4）中，文字是使用Flex RichTextEditor進行編輯，但由於AEM 6.1 Forms，因此使用HTML編輯器。 由於這種演算和字型的外觀，字型大小和字型邊界可能與作者使用者介面中的先前版本不同。 但是，字母在轉譯時看起來是相同的。
 * 文字模組中的清單已改善，現在呈現方式也不同。 可能有視覺差異。 Adobe建議您轉譯並檢視您在文字模組中使用清單的字母。
 * 由於影像內容模組已轉換為DAM資產，並在移轉期間將版面和片段新增到表單，這些模組的「更新者」屬性將變更為「管理員」。
 * 資產的版本記錄未移轉，且在移轉後無法使用。 將會維護移轉後的後續版本記錄。
-* Publish就緒狀態自AEM 6.1 Forms之後已過時，因此所有處於Publish就緒狀態的資產都會變更為修改狀態。
+* 由於AEM 6.1 Forms已棄用「準備發佈」狀態，因此「準備發佈」狀態的所有資產都會變更為「已修改」狀態。
 * 由於使用者介面在AEM Forms 6.3中更新，執行自訂的步驟也不同。 如果您要從6.3版之前的版本移轉，請重做自訂。
 * 佈局片段從`/content/apps/cm/layouts/fragmentlayouts/1001`移至`/content/apps/cm/modules/fragmentlayouts`。 資產中的資料字典參考會顯示資料字典的路徑而非其名稱。
 * 文字模組中用於對齊的任何定位字元空格都必須重新調整。 如需詳細資訊，請參閱[通訊管理 — 使用定位點間距來排列文字](https://helpx.adobe.com/aem-forms/kb/cm-tab-spacing-limitations.html)。
@@ -70,7 +84,7 @@ ht-degree: 1%
 
 ### 執行移轉公用程式 {#runningmigrationutility}
 
-在變更資產或建立資產之前，請先執行移轉公用程式。 Adobe建議您在進行任何變更或建立資產後，不要執行公用程式。 請確定在移轉程式執行期間，通訊管理或Adaptive Forms Assets使用者介面未開啟。
+在變更資產或建立資產之前，請先執行移轉公用程式。 Adobe建議您不要在進行任何變更或建立資產後執行公用程式。 請確定在移轉程式執行期間，通訊管理或Adaptive Forms Assets使用者介面未開啟。
 
 當您第一次執行移轉公用程式時，會建立具有下列路徑和名稱的記錄檔： `\[aem-installation-directory]\cq-quickstart\logs\aem-forms-migration.log`。 此記錄會持續更新通訊管理和最適化Forms移轉資訊，例如資產移動。
 
@@ -95,11 +109,11 @@ ht-degree: 1%
 
    * 若要移轉&#x200B;**資產**，請選取「AEM Forms Assets移轉」，然後在下一個畫面中選取「**開始移轉**」。 下列專案已移轉：
 
-      * 調適型表單
-      * 檔案片段
-      * 主題
-      * 字母
-      * 資料字典
+     * 調適型表單
+     * 檔案片段
+     * 主題
+     * 字母
+     * 資料字典
 
    >[!NOTE]
    >
@@ -107,12 +121,12 @@ ht-degree: 1%
 
    * 若要移轉最適化表單自訂元件，請選取&#x200B;**最適化Forms自訂元件移轉**，然後在[自訂元件移轉]頁面中，選取&#x200B;**開始移轉**。 下列專案已移轉：
 
-      * 為最適化Forms撰寫的自訂元件
-      * 元件覆蓋（如果有的話）。
+     * 為最適化Forms撰寫的自訂元件
+     * 元件覆蓋（如果有的話）。
 
    * 若要移轉最適化表單範本，請選取&#x200B;**最適化Forms範本移轉**，然後在[自訂元件移轉]頁面中，選取&#x200B;**開始移轉**。 下列專案已移轉：
 
-      * 使用AEM範本編輯器在`/apps`或`/conf`下建立的最適化表單範本。
+     * 使用AEM範本編輯器在`/apps`或`/conf`下建立的最適化表單範本。
 
    * 移轉AEM Forms Cloud Configuration Services以使用新的內容感知雲端服務範例，包括已啟用觸控的UI （在`/conf`下）。 當您移轉AEM Forms雲端設定服務時，`/etc`中的雲端服務會移至`/conf`。 如果您沒有任何相依於舊版路徑(`/etc`)的雲端服務自訂專案，Adobe建議您在升級至6.5後執行移轉公用程式；請使用雲端設定Touch UI進行後續工作。 如果您有任何現有的雲端服務自訂專案，請在升級安裝時繼續使用傳統UI，直到自訂專案更新為符合移轉的路徑(`/conf`)為止，然後執行移轉公用程式。
 
@@ -120,23 +134,23 @@ ht-degree: 1%
 
    * 表單資料模型雲端服務
 
-      * Source路徑： `/etc/cloudservices/fdm`
-      * 目標路徑： `/conf/global/settings/cloudconfigs/fdm`
+     * Source路徑： `/etc/cloudservices/fdm`
+     * 目標路徑： `/conf/global/settings/cloudconfigs/fdm`
 
    * Recaptcha
 
-      * Source路徑： `/etc/cloudservices/recaptcha`
-      * 目標路徑： `/conf/global/settings/cloudconfigs/recaptcha`
+     * Source路徑： `/etc/cloudservices/recaptcha`
+     * 目標路徑： `/conf/global/settings/cloudconfigs/recaptcha`
 
    * Adobe Sign
 
-      * Source路徑： `/etc/cloudservices/echosign`
-      * 目標路徑： `/conf/global/settings/cloudconfigs/echosign`
+     * Source路徑： `/etc/cloudservices/echosign`
+     * 目標路徑： `/conf/global/settings/cloudconfigs/echosign`
 
    * Typekit雲端服務
 
-      * Source路徑： `/etc/cloudservices/typekit`
-      * 目標路徑： `/conf/global/settings/cloudconfigs/typekit`
+     * Source路徑： `/etc/cloudservices/typekit`
+     * 目標路徑： `/conf/global/settings/cloudconfigs/typekit`
 
    當移轉程式進行時，瀏覽器視窗會顯示下列內容：
 
@@ -156,15 +170,15 @@ ht-degree: 1%
 
 * 若要移轉自訂元件中的規則和指令碼（從6.3升級時則為不需要），請選取「最適化Forms自訂元件移轉」 ，然後在下一個畫面中選取「開始移轉」 。 下列專案已移轉：
 
-   * 使用規則編輯器（6.1 FP1和更新版本）建立的規則和指令碼
+  * 使用規則編輯器（6.1 FP1和更新版本）建立的規則和指令碼
 
-   * 使用6.1和更舊版本UI中的指令碼索引標籤建立的指令碼
+  * 使用6.1和更舊版本UI中的指令碼索引標籤建立的指令碼
 
 * 若要移轉範本（如果從6.3和6.4升級，則不需要），請選取「最適化Forms範本移轉」，然後在下一個畫面中選取「開始移轉」。 下列專案已移轉：
 
-   * 舊範本 — 在/apps下使用AEM 6.1 Forms或更舊版本建立的最適化表單範本。 這包括範本元件中定義的指令碼。
+  * 舊範本 — 在/apps下使用AEM 6.1 Forms或更舊版本建立的最適化表單範本。 這包括範本元件中定義的指令碼。
 
-   * 新範本 — 使用`/conf`下的範本編輯器建立的最適化表單範本。 這包括移轉使用規則編輯器建立的規則和指令碼。
+  * 新範本 — 使用`/conf`下的範本編輯器建立的最適化表單範本。 這包括移轉使用規則編輯器建立的規則和指令碼。
 
 ### 執行移轉公用程式後的內部管理工作 {#housekeepingtasks}
 
@@ -177,6 +191,6 @@ ht-degree: 1%
    1. 在最新的Designer中開啟XFA檔案並儲存。 XFA的版本會更新至最新版本。
    1. 在Forms使用者介面中上傳XFA。
 
-1. Publish移轉前已在舊版系統中發佈的所有資產。 移轉公用程式只會更新作者例項上的資產，若要更新Publish例項上的資產，您必須發佈資產。
+1. 發佈移轉前已在先前系統中發佈的所有資產。 移轉公用程式只會更新作者例項上的資產，若要更新發佈例項上的資產，您必須發佈資產。
 
 1. 在AEM Forms 6.4和6.5中，使用者群組的某些表單許可權已變更。 如果您希望您的任何使用者能夠上傳包含指令碼的XDP和Adaptive Forms，或使用程式碼編輯器，您必須將它們新增至forms-power-users群組。 同樣地，範本作者無法在規則編輯器中再使用程式碼編輯器。 若要讓使用者能夠使用程式碼編輯器，請將他們新增至af-template-script-writers群組。 如需將使用者新增至群組的說明，請參閱[管理使用者和使用者群組](/help/communities/users.md)。

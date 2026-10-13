@@ -6,13 +6,27 @@ role: Admin
 exl-id: 4a4bad4a-3e68-43cb-b55c-03b509a5d304
 solution: Experience Manager, Experience Manager Forms
 feature: Interactive Communication,Document Security
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 50158d81-1c06-57f7-8bd7-e8ff76a93f85
+    internal-label: Document Security
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: aa28c6c8-3ede-445b-a351-eeb0c9f9aec4
+    internal-label: Interactive Communication
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '569'
+source-wordcount: '599'
 ht-degree: 0%
-
 ---
-
 # 安裝和設定Document Security伺服器 {#installing-and-configuring-the-document-security-server}
 
 使用Document Security安全地散發您已以支援格式儲存的任何資訊。 只有授權的使用者才能存取受保護的檔案。
@@ -41,17 +55,17 @@ Document Security功能僅適用於JEE上的AEM Forms 。 您需要JEE上的單�
 
 執行以下步驟，在JEE上安裝和設定AEM Forms：
 
-1. 從[Adobe授權網站(LWS)](https://licensing.adobe.com/)下載JEE上的AEM 6.5 Forms安裝程式。 您需要有效的維護與支援合約才能下載安裝程式。
+1. 從[AEM授權網站(LWS)](https://licensing.adobe.com/)下載JEE安裝程式上的Adobe 6.5 Forms。 您需要有效的維護與支援合約才能下載安裝程式。
 1. 閱讀[JEE支援平台上的AEM Forms檔案](/help/forms/using/aem-forms-jee-supported-platforms.md)，並確定軟體、硬體、作業系統、應用程式伺服器、資料庫、JDK和其他基礎架構已準備好在JEE上安裝AEM Forms。
 1. （僅限非Turnkey安裝）閱讀[準備安裝AEM Forms單一伺服器](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_64_tw)或[準備安裝AEM Forms伺服器叢集](https://www.adobe.com/go/learn_aemforms_prepareInstallcluster_64_tw)，並準備讓您的環境在JEE上安裝並設定AEM Forms。
 1. 根據您的環境和應用程式伺服器，選擇下列其中一份檔案，然後依照指示完成安裝
 
-   * [在JEE上使用JBoss Turnkey安裝和部署AEM Forms](https://www.adobe.com/go/learn_aemforms_installTurnkey_64_tw)
-   * [在JEE上安裝和部署AEM Forms for JBoss](https://www.adobe.com/go/learn_aemforms_installJBoss_64_tw)
+   * [使用JBoss整套索引鍵在JEE上安裝和部署AEM Forms](https://www.adobe.com/go/learn_aemforms_installTurnkey_64_tw)
+   * [在JEE for JBoss上安裝和部署AEM Forms](https://www.adobe.com/go/learn_aemforms_installJBoss_64_tw)
    * [在JEE for WebLogic上安裝和部署AEM Forms](https://www.adobe.com/go/learn_aemforms_installWebLogic_64_tw)
-   * [在JEE上安裝和部署AEM Forms for WebSphere](https://www.adobe.com/go/learn_aemforms_installWebSphere_64_tw)
-   * [在JBoss叢集的JEE上設定AEM Forms](https://www.adobe.com/go/learn_aemforms_clusterJBoss_64_tw)
-   * [在WebLogic叢集的JEE上設定AEM Forms](https://www.adobe.com/go/learn_aemforms_clusterWebLogic_64_tw)
+   * [在JEE for WebSphere上安裝和部署AEM Forms](https://www.adobe.com/go/learn_aemforms_installWebSphere_64_tw)
+   * [在JBoss叢集上的JEE上設定AEM Forms](https://www.adobe.com/go/learn_aemforms_clusterJBoss_64_tw)
+   * [在WebLogic叢集上的JEE上設定AEM Forms](https://www.adobe.com/go/learn_aemforms_clusterWebLogic_64_tw)
    * [在WebSphere叢集上的JEE上設定AEM Forms](https://www.adobe.com/go/learn_aemforms_clusterWebSphere_64_tw)
 
    >[!NOTE]

@@ -1,17 +1,31 @@
 ---
 title: 使用智慧內容服務設定資產標籤
-description: 瞭解如何使用智慧內容服務，在 [!DNL Adobe Experience Manager]中設定智慧標籤和增強智慧標籤。
+description: 瞭解如何使用智慧內容服務，在[!DNL Adobe Experience Manager]中設定智慧標籤和增強智慧標籤。
 role: Admin
 feature: Tagging,Smart Tags
 exl-id: 9f68804f-ba15-4f83-ab1b-c249424b1396
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 1c2c350e91fe9a0a67618ea4ec00d4a8b4e3f0ca
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 752f9248-f39f-5793-a7dd-5ddafcd403c7
+    internal-label: Tagging
+  - id: bd0d2470-932c-4269-8eca-6d939b72d9ef
+    internal-label: Dynamic Media
+subfeature_v2:
+  - id: f0e3b2ca-813f-4b7a-81df-52339e17ddcf
+    internal-label: Smart Tags
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '2294'
-ht-degree: 13%
-
+source-wordcount: '2325'
+ht-degree: 14%
 ---
-
 # 準備[!DNL Assets]以進行智慧標籤 {#configure-asset-tagging-using-the-smart-content-service}
 
 開始使用Smart Content Services標籤資產之前，請先將[!DNL Experience Manager Assets]與Adobe Developer Console整合，以使用[!DNL Adobe AI]的Smart Service。 設定之後，請使用一些影像和標籤來訓練服務。
@@ -106,7 +120,7 @@ To configure the Smart Content Service, follow these top-level steps:
 
 1. 在&#x200B;**[!UICONTROL 新增 API]** 頁面上選取&#x200B;**[!UICONTROL 「Experience Cloud」]**，然後選取&#x200B;**[!UICONTROL 「智慧內容」]**。 按一下&#x200B;**[!UICONTROL 下一步]**。
 
-1. 選取&#x200B;**[!UICONTROL OAuth伺服器對伺服器]**。按一下&#x200B;**[!UICONTROL 下一步]**。
+1. 選取&#x200B;**[!UICONTROL OAuth伺服器對伺服器]**。 按一下「**[!UICONTROL 下一步]**」。
 如需如何執行此設定的詳細資訊，請參閱Developer Console檔案（視您的需求而定）：
 
    * 如需概觀，請參閱developer.adobe.com上的&#x200B;*伺服器對伺服器驗證*。
@@ -457,7 +471,7 @@ The validation results are displayed in the same dialog.
 1. 在「資 **[!UICONTROL 產報表]** 」頁面中，選取您產生的報表。 若要檢視報表，請按一下工具列中的&#x200B;**[!UICONTROL 檢視]**。
 1. 檢閱報告的詳細資訊。
 
-   報表會顯示您所訓練之標籤的訓練狀態。 「培訓狀態」欄 **[!UICONTROL 中的綠色]** ，表示智慧型內容服務已接受標籤的培訓。 黃色表示服務未針對特定標籤進行完整訓練。 在這種情況下，請使用特定標籤新增更多影像，並執行培訓工作流程，以完全在標籤上訓練服務。
+   報表會顯示您所訓練之標籤的訓練狀態。 「培訓狀態」欄 **[!UICONTROL 中的綠色]** ，表示智慧型內容服務已接受標籤的培訓。 黃色表示服務未針對特定標記進行完整訓練。 在這種情況下，請新增更多帶有該標記的影像，並執行培訓工作流程，讓服務針對該標記完成培訓。
 
    如果您在此報告中未看到您的標籤，請再次執行這些標籤的培訓工作流程。
 
@@ -467,9 +481,9 @@ The validation results are displayed in the same dialog.
 
 * 增強型智慧標籤是以影像及其標籤的學習模型為基礎。 這些模型並非總能完美地識別標籤。 目前版本的智慧內容服務有下列限制：
 
-   * 無法辨認影像中的細微差異。 例如，超薄襯衫和一般適合的襯衫。
-   * 無法根據影像的微小模式/部分識別標籤。 例如，T恤上的標誌。
-   * 支援[!DNL Experience Manager]的區域設定支援標籤。
+  * 無法辨認影像中的細微差異。 例如，超薄襯衫和一般適合的襯衫。
+  * 無法根據影像的微小模式/部分識別標籤。 例如，T恤上的標誌。
+  * 支援[!DNL Experience Manager]的區域設定支援標籤。
 
 * 若要搜尋具有智慧標籤（一般或增強功能）的資產，請使用[!DNL Assets] Omnisearch （全文檢索搜尋）。 智慧標籤沒有單獨的搜尋述詞。
 

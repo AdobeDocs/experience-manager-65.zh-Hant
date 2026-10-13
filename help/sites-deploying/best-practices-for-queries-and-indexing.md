@@ -9,13 +9,22 @@ exl-id: 6dfaa14d-5dcf-4e89-993a-8d476a36d668
 solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 5ef752af-d616-5b23-8312-06964e46b208
+    internal-label: Administering
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '4700'
+source-wordcount: '4702'
 ht-degree: 0%
-
 ---
-
 # 查詢和建立索引的最佳實務{#best-practices-for-queries-and-indexing}
 
 除了在AEM 6中轉換至Oak外，查詢和索引的管理方式也發生了一些重大變化。 在Jackrabbit 2下，所有內容預設都已編制索引，且可供自由查詢。 在Oak中，必須在`oak:index`節點下手動建立索引。 可以在沒有索引的情況下執行查詢，但對於大型資料集，查詢將執行緩慢，甚至中止。
@@ -128,13 +137,13 @@ Lucene會註冊一個JMX Bean，以提供索引內容的詳細資訊，包括每
 
 * 監視查詢記錄以觸發大型節點周遊或大型棧積記憶體消耗： &quot;
 
-   * `*WARN* ... java.lang.UnsupportedOperationException: The query read or traversed more than 100000 nodes. To avoid affecting other tasks, processing was stopped.`
-   * 最佳化查詢以減少周遊的節點數
+  * `*WARN* ... java.lang.UnsupportedOperationException: The query read or traversed more than 100000 nodes. To avoid affecting other tasks, processing was stopped.`
+  * 最佳化查詢以減少周遊的節點數
 
 * 監視記錄以找出觸發大型棧積記憶體消耗的查詢：
 
-   * `*WARN* ... java.lang.UnsupportedOperationException: The query read more than 500000 nodes in memory. To avoid running out of memory, processing was stopped`
-   * 最佳化查詢以降低棧積記憶體耗用量
+  * `*WARN* ... java.lang.UnsupportedOperationException: The query read more than 500000 nodes in memory. To avoid running out of memory, processing was stopped`
+  * 最佳化查詢以降低棧積記憶體耗用量
 
 對於AEM 6.0 - 6.2版本，您可以透過AEM啟動指令碼中的JVM引數調整節點周遊的臨界值，以防止大型查詢使環境過載。
 
@@ -248,59 +257,59 @@ Solr索引可設定為針對開發環境在AEM伺服器上執行內嵌，或可�
 
 * 適用於/if：
 
-   * 所有Oak版本
-   * 只有[屬性索引](https://jackrabbit.apache.org/oak/docs/query/property-index.html)
+  * 所有Oak版本
+  * 只有[屬性索引](https://jackrabbit.apache.org/oak/docs/query/property-index.html)
 
 * 症狀：
 
-   * 結果中遺漏屬性索引的定義更新之前的節點
+  * 結果中遺漏屬性索引的定義更新之前的節點
 
 * 如何驗證：
 
-   * 判斷遺失的節點是否在部署更新的索引定義之前建立/修改。
-   * 對照索引的修改時間驗證任何遺失節點的`jcr:created`或`jcr:lastModified`屬性
+  * 判斷遺失的節點是否在部署更新的索引定義之前建立/修改。
+  * 對照索引的修改時間驗證任何遺失節點的`jcr:created`或`jcr:lastModified`屬性
 
 * 如何解決：
 
-   * [重新索引](/help/sites-deploying/best-practices-for-queries-and-indexing.md#how-to-re-index) lucene索引
-   * 或者，您可以觸控（執行良性寫入操作）遺失的節點
+  * [重新索引](/help/sites-deploying/best-practices-for-queries-and-indexing.md#how-to-re-index) lucene索引
+  * 或者，您可以觸控（執行良性寫入操作）遺失的節點
 
-      * 需要手動接觸或自訂程式碼
-      * 需要知道遺失節點集
-      * 需要變更節點上的任何屬性
+    * 需要手動接觸或自訂程式碼
+    * 需要知道遺失節點集
+    * 需要變更節點上的任何屬性
 
 #### Lucene索引定義變更 {#lucene-index-definition-change}
 
 * 適用於/if：
 
-   * 所有Oak版本
-   * 僅[lucene索引](https://jackrabbit.apache.org/oak/docs/query/lucene.html)
+  * 所有Oak版本
+  * 僅[lucene索引](https://jackrabbit.apache.org/oak/docs/query/lucene.html)
 
 * 症狀：
 
-   * Lucene索引不包含預期的結果
-   * 查詢結果未反映索引定義的預期行為
-   * 查詢計畫未根據索引定義報告預期輸出
+  * Lucene索引不包含預期的結果
+  * 查詢結果未反映索引定義的預期行為
+  * 查詢計畫未根據索引定義報告預期輸出
 
 * 如何驗證：
 
-   * 確認已使用Lucene索引統計資料JMX Mbean (LuceneIndex)方法`diffStoredIndexDefinition`變更索引定義。
+  * 確認已使用Lucene索引統計資料JMX Mbean (LuceneIndex)方法`diffStoredIndexDefinition`變更索引定義。
 
 * 如何解決：
 
-   * 1.6之前的Oak版本：
+  * 1.6之前的Oak版本：
 
-      * [重新索引](#how-to-re-index) lucene索引
+    * [重新索引](#how-to-re-index) lucene索引
 
-   * Oak 1.6+版
+  * Oak 1.6+版
 
-      * 如果現有內容不受變更影響，則只需要重新整理
+    * 如果現有內容不受變更影響，則只需要重新整理
 
-         * 透過設定[oak:queryIndexDefinition]@refresh=true來[重新整理](https://jackrabbit.apache.org/oak/docs/query/lucene.html#stored-index-definition) lucene索引
+      * 透過設定[oak:queryIndexDefinition]@refresh=true來[重新整理](https://jackrabbit.apache.org/oak/docs/query/lucene.html#stored-index-definition) lucene索引
 
-      * 否則，[重新索引](#how-to-re-index) lucene索引
+    * 否則，[重新索引](#how-to-re-index) lucene索引
 
-         * 注意：會使用上次良好重新索引（或初始索引）的索引狀態，直到觸發新的重新索引為止
+      * 注意：會使用上次良好重新索引（或初始索引）的索引狀態，直到觸發新的重新索引為止
 
 ### 錯誤和特殊情況 {#erring-and-exceptional-situations}
 
@@ -317,62 +326,62 @@ Solr索引可設定為針對開發環境在AEM伺服器上執行內嵌，或可�
 
 * 適用於/if：
 
-   * 所有Oak版本
-   * 僅[lucene索引](https://jackrabbit.apache.org/oak/docs/query/lucene.html)
+  * 所有Oak版本
+  * 僅[lucene索引](https://jackrabbit.apache.org/oak/docs/query/lucene.html)
 
 * 症狀：
 
-   * Lucene索引不包含預期的結果
+  * Lucene索引不包含預期的結果
 
 * 如何驗證：
 
-   * 錯誤記錄檔包含例外狀況，指出Lucene索引的二進位檔遺失
+  * 錯誤記錄檔包含例外狀況，指出Lucene索引的二進位檔遺失
 
 * 如何解決：
 
-   * 執行周遊存放庫檢查；例如：
+  * 執行周遊存放庫檢查；例如：
 
-     [http://localhost:4502/system/console/repositorycheck](http://localhost:4502/system/console/repositorycheck)
+    [http://localhost:4502/system/console/repositorycheck](http://localhost:4502/system/console/repositorycheck)
 
-     周遊存放庫可確定是否缺少其他二進位檔（lucene檔案除外）
+    周遊存放庫可確定是否缺少其他二進位檔（lucene檔案除外）
 
-   * 如果缺少lucene索引以外的二進位檔案，請從備份還原
-   * 否則，[重新索引](#how-to-re-index) *所有* lucene索引
-   * 注意：
+  * 如果缺少lucene索引以外的二進位檔案，請從備份還原
+  * 否則，[重新索引](#how-to-re-index) *所有* lucene索引
+  * 注意：
 
-     此狀況表示資料存放區設定錯誤，可能會導致ANY二進位（例如資產二進位檔）遺失。
+    此狀況表示資料存放區設定錯誤，可能會導致ANY二進位（例如資產二進位檔）遺失。
 
-     在此情況下，請還原到儲存區域的最後一個已知良好版本，以復原所有遺失的二進位檔案。
+    在此情況下，請還原到儲存區域的最後一個已知良好版本，以復原所有遺失的二進位檔案。
 
 #### Lucene索引二進位檔已損毀 {#lucene-index-binary-is-corrupt}
 
 * 適用於/if：
 
-   * 所有Oak版本
-   * 僅[lucene索引](https://jackrabbit.apache.org/oak/docs/query/lucene.html)
+  * 所有Oak版本
+  * 僅[lucene索引](https://jackrabbit.apache.org/oak/docs/query/lucene.html)
 
 * 症狀：
 
-   * Lucene索引不包含預期的結果
+  * Lucene索引不包含預期的結果
 
 * 如何驗證：
 
-   * `AsyncIndexUpdate` （每五秒）將會失敗，錯誤記錄檔中會出現例外狀況：
+  * `AsyncIndexUpdate` （每五秒）將會失敗，錯誤記錄檔中會出現例外狀況：
 
-     `...a Lucene index file is corrupt...`
+    `...a Lucene index file is corrupt...`
 
 * 如何解決：
 
-   * 移除lucene索引的本機副本
+  * 移除lucene索引的本機副本
 
-      1. 停止AEM
-      1. 刪除位於`crx-quickstart/repository/index`的lucene索引的本機復本
-      1. 重新啟動AEM
+    1. 停止AEM
+    1. 刪除位於`crx-quickstart/repository/index`的lucene索引的本機復本
+    1. 重新啟動AEM
 
-   * 如果這樣仍無法解決問題，且`AsyncIndexUpdate`例外狀況持續存在，則：
+  * 如果這樣仍無法解決問題，且`AsyncIndexUpdate`例外狀況持續存在，則：
 
-      1. [重新索引](#how-to-re-index)錯誤的索引
-      1. 同時提交[Adobe支援](https://helpx.adobe.com/tw/support.html)票證
+    1. [重新索引](#how-to-re-index)錯誤的索引
+    1. 同時提交[Adobe支援](https://helpx.adobe.com/tw/support.html)票證
 
 ### 如何重新索引 {#how-to-re-index}
 
@@ -385,7 +394,7 @@ Solr索引可設定為針對開發環境在AEM伺服器上執行內嵌，或可�
 * 使用[oak-run.jar](/help/sites-deploying/oak-run-indexing-usecases.md#usecase3reindexing)重新索引屬性索引
 * 在屬性索引上將async-reindex屬性設定為true
 
-   * `[oak:queryIndexDefinition]@reindex-async=true`
+  * `[oak:queryIndexDefinition]@reindex-async=true`
 
 * 透過&#x200B;**PropertyIndexAsyncReindex** MBean，使用Web主控台非同步地重新索引屬性索引；
 
@@ -398,7 +407,7 @@ Solr索引可設定為針對開發環境在AEM伺服器上執行內嵌，或可�
 * 使用[oak-run.jar重新索引](/help/sites-deploying/oak-run-indexing-usecases.md#usecase3reindexing) Lucene屬性索引。
 * 在lucene屬性索引上，將async-reindex屬性設定為true
 
-   * `[oak:queryIndexDefinition]@reindex-async=true`
+  * `[oak:queryIndexDefinition]@reindex-async=true`
 
 >[!NOTE]
 >
@@ -440,7 +449,7 @@ Solr索引可設定為針對開發環境在AEM伺服器上執行內嵌，或可�
 * [oak-run.jar](https://mvnrepository.com/artifact/org.apache.jackrabbit/oak-run/)版本1.7.4+
 * 儲存擷取文字的檔案系統資料夾/共用，可從索引AEM例項存取
 
-   * 文字預先解壓縮OSGi設定需要解壓縮文字檔案的檔案系統路徑，因此必須可直接從AEM執行個體（本機磁碟機或檔案共用掛載）存取
+  * 文字預先解壓縮OSGi設定需要解壓縮文字檔案的檔案系統路徑，因此必須可直接從AEM執行個體（本機磁碟機或檔案共用掛載）存取
 
 #### 如何執行文字預先擷取 {#how-to-perform-text-pre-extraction}
 

@@ -8,13 +8,24 @@ mini-toc-levels: 4
 exl-id: 158607e6-b4e9-4a3f-b023-4023d60c97d2
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 7d2b2ec8-499c-5434-9ffd-9218cd71f683
+    internal-label: Asset Management
+  - id: 74ec00bc-0862-520e-86dc-e377aeccc141
+    internal-label: Search
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '10112'
+source-wordcount: '10238'
 ht-degree: 3%
-
 ---
-
 # 管理您的數位資產 {#manage-digital-assets}
 
 | 版本 | 文章連結 |
@@ -197,8 +208,8 @@ Dynamic Media可透過FTP伺服器批次上傳資產。 如果您想要上傳大
 1. 在[上載工作選項]對話方塊的右下角，按一下[儲存]。**&#x200B;**
 1. 在上傳頁面的右下角，按一下&#x200B;**[!UICONTROL 送出上傳]**。
 
-   若要檢視上傳進度，請按一下全域導覽列上的&#x200B;**[!UICONTROL 工作]**。「工作」頁面會顯示上載的進度。您可以繼續在[!DNL Experience Manager]中工作，並隨時返回Dynamic Media Classic的「工作」頁面以檢閱進行中的工作。
-若要取消進行中的上載工作，請按一下[持續時間]時間旁的[取消]。**&#x200B;**
+   若要檢視上傳進度，請按一下全域導覽列上的&#x200B;**[!UICONTROL 工作]**。 「工作」頁面會顯示上載的進度。 您可以繼續在[!DNL Experience Manager]中工作，並隨時返回Dynamic Media Classic的[工作]頁面以檢閱進行中的工作。
+   若要取消進行中的上載工作，請按一下[持續時間]時間旁的[取消]。**&#x200B;**
 
 #### 上載工作選項 {#upload-job-options}
 
@@ -470,8 +481,8 @@ PDF在擷取時最多可考慮5000頁以供新上傳使用。 2022年12月31日�
 
 ## 移動和重新命名資產 {#moving-or-renaming-assets}
 
-將資產（或資料夾）移動到另一個位置時，資產（或資料夾）不會複製，這一點與複製資產時不同。資產（或資料夾）會放置在目標位置，並從來源位置中移除。將資產移至新位置時，您也可以重新命名資產。
-如果您要將已發佈的資產移至其他位置，則可選擇重新發佈資產。根據預設，已發佈資產上的移動作業會自動取消發佈資產。如果作者在移動資產時選取[!UICONTROL 重新發佈]選項，則會重新發佈已移動的資產。
+將資產（或資料夾）移動到另一個位置時，資產（或資料夾）不會複製，這一點與複製資產時不同。 資產（或資料夾）會放置在目標位置，並從來源位置中移除。 將資產移至新位置時，您也可以重新命名資產。
+如果您要將已發佈的資產移至其他位置，則可選擇重新發佈資產。 根據預設，已發佈資產上的移動作業會自動取消發佈資產。 如果作者在移動資產時選取[!UICONTROL 重新發佈]選項，則會重新發佈已移動的資產。
 
 ![您可以在移動已發佈的資產時重新發佈該資產](assets/republish-on-move.png)
 
@@ -829,7 +840,7 @@ CUG是限制資產存取權的額外方式。 您也可以設定資料夾的登�
 
 1. 在「列印」對話方塊中，選擇您要在PDF上顯示註解/稽核狀態的位置。 例如，如果您希望註解/狀態列印在包含已列印影像的頁面的右上方，請使用&#x200B;**左上方**&#x200B;設定。 預設會選取此選項。
 
-   您可以根據要在打印的PDF中顯示注釋/狀態的位置選擇其他設定。 如果您希望註解/狀態顯示在與印刷資產不同的頁面中，請選擇「下 **[!UICONTROL 一頁」]**。
+   您可以根據要在列印的 PDF 中顯示註解/狀態的位置選擇其他設定。 如果您希望註解/狀態顯示在與印刷資產不同的頁面中，請選擇「下 **[!UICONTROL 一頁」]**。
 
 1. 按一下&#x200B;**[!UICONTROL 列印]**。 根據您在步驟2中選擇的選項，產生的PDF會在指定位置顯示註解/狀態。 例如，如果您選擇使用左上角設定打印注釋和審閱狀態 **&#x200B;**&#x200B;，則生成的輸出類似於此處所示的PDF檔案。
 

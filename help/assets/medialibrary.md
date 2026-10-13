@@ -7,13 +7,24 @@ feature: Asset Management
 exl-id: e10d632d-1d90-4f28-8617-95ee41602997
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 7d2b2ec8-499c-5434-9ffd-9218cd71f683
+    internal-label: Asset Management
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '595'
 ht-degree: 2%
-
 ---
-
 
 # 使用Media Library進行基本資產管理 {#manage-assets-using-media-library}
 
@@ -72,12 +83,12 @@ Media Library針對下列使用案例提供基本DAM功能：
 * 使用[!DNL Content Fragments]。
 * 在Sites授權底下，針對[!DNL Content Fragments]和參照的媒體資產使用HTTP REST和GraphQL API。
 * Marketing Cloud整合。
-* Customize and extend asset management user interface.
-* Access the Query Builder (API) to extend the search functionality.
-* Create static tags.
-* Author projects and tasks.
-* Activity stream (timeline).
-* Comments and annotations.
+* 自訂及擴充資產管理使用者介面。
+* 存取查詢產生器(API)以擴充搜尋功能。
+* 建立靜態標籤。
+* 編寫專案和任務。
+* 活動資料流（時間軸）。
+* 註釋和註解。
 
 <!--
 TBD: Define exactly which basic Assets workflow are available for use with Media Library?
@@ -87,14 +98,14 @@ As per PM, we must avoid stating such a list, as we do not have a list that make
 
 >[!IMPORTANT]
 >
->Many advanced DAM use cases are fulfilled by [!DNL Experience Manager Assets]. Media Library license entitles you to fulfil only the listed use cases using Media Library. If a use case is not listed, do not use it with Media Library license. If you have any queries, contact Adobe Customer Support.
+>許多進階DAM使用案例已由[!DNL Experience Manager Assets]履行。 媒體庫授權可讓您僅使用媒體庫履行列出的使用案例。 如果未列出使用案例，請勿將其與Media Library授權一起使用。 如有任何疑問，請聯絡Adobe客戶支援。
 
-Note that you cannot use smart tags, [!DNL Asset] link, [!DNL Asset] selector, bulk tagging, modify asset workflows, or standard [!DNL Adobe Experience Manager] user interface to access Media Library without [!DNL Assets] license.
+請注意，在沒有[!DNL Assets]授權的情況下，您無法使用智慧標籤、[!DNL Asset]連結、[!DNL Asset]選取器、大量標籤、修改資產工作流程或標準[!DNL Adobe Experience Manager]使用者介面來存取媒體庫。
 
 <!-- TBD: Add a CTA - how to contact Adobe for queries. -->
 
 >[!MORELIKETHIS]
 >
->* [DAM features in [!DNL Experience Manager Assets]](https://experienceleague.adobe.com/docs/experience-manager-65/assets/home.html?lang=zh-Hant)
->* [[!DNL Experience Manager] 6.5 Managed Services product description](https://helpx.adobe.com/tw/legal/product-descriptions/adobe-experience-manager-managed-services.html)
->* [[!DNL Experience Manager] 6.5 on-premise product description](https://helpx.adobe.com/tw/legal/product-descriptions/adobe-experience-manager-on-premise.html)
+>* 在 [!DNL Experience Manager Assets]&#x200B;[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-65/assets/home.html?lang=zh-Hant)中的DAM功能
+>* [[!DNL Experience Manager] 6.5 Managed Services產品說明](https://helpx.adobe.com/tw/legal/product-descriptions/adobe-experience-manager-managed-services.html)
+>* [[!DNL Experience Manager] 6.5內部部署產品說明](https://helpx.adobe.com/tw/legal/product-descriptions/adobe-experience-manager-on-premise.html)

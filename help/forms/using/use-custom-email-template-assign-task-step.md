@@ -7,13 +7,29 @@ exl-id: d4035c91-ee8d-4f12-bdac-e3912be732d7
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: Admin, User, Developer
-source-git-commit: 9f59606bb58b9e90f07bd22e89f3213afb54a697
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
-source-wordcount: '509'
+source-wordcount: '518'
 ht-degree: 1%
-
 ---
-
 # 在指派任務步驟中使用自訂電子郵件範本{#use-custom-email-templates-in-an-assign-task-step}
 
 您可以使用「指派工作」步驟來建立工作並指派給使用者或群組。 當任務指派給使用者或群組時，會傳送電子郵件通知給已定義的使用者或已定義群組的每個成員。 典型的電子郵件通知包含指派任務的連結以及與任務相關的資訊。 下列影像顯示範例電子郵件通知：
@@ -42,7 +58,7 @@ AEM Forms提供立即可用的電子郵件通知範本。 範本提供指派任�
 
    電子郵件通知範本是[HTML電子郵件](https://en.wikipedia.org/wiki/HTML_email)。 您可以使用自訂程式碼取代現有的html程式碼，以變更範本的外觀。
 
-1. 儲存檔案。現在，自訂範本已可供使用。
+1. 儲存檔案。 現在，自訂範本已可供使用。
 
 ## 建立電子郵件範本 {#create-an-email-template}
 
@@ -56,9 +72,9 @@ AEM Forms提供立即可用的電子郵件通知範本。 範本提供指派任�
 
 1. 將自訂HTML程式碼新增至檔案。
 
-   電子郵件通知範本是[HTML電子郵件](https://en.wikipedia.org/wiki/HTML_email)。 您可以將自訂HTML程式碼新增到檔案中來建立範本。
+   電子郵件通知範本是[HTML電子郵件](https://en.wikipedia.org/wiki/HTML_email)。 您可以將自訂HTML程式碼新增至檔案以建立範本。
 
-1. 儲存檔案。範本已準備好用於指派工作步驟。
+1. 儲存檔案。 範本已準備好用於指派工作步驟。
 
 ## 在指派工作步驟中使用電子郵件範本 {#use-an-email-template-in-an-assign-task-step}
 
@@ -66,7 +82,7 @@ AEM Forms提供立即可用的電子郵件通知範本。 範本提供指派任�
 
 1. 開啟指派工作步驟。
 
-1. 導覽至「受指派人>HTML電子郵件範本」。
+1. 導覽至「受指派人> HTML電子郵件範本」。
 
 1. 選取新建立的HTML電子郵件範本。
 

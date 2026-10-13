@@ -9,13 +9,22 @@ exl-id: a71d20e6-0321-4afb-95fe-6de8b7b37245
 solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Developer
-source-git-commit: eae057caed533ef16bb541b4ad41b8edd7aaa1c7
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 243139ec-8e41-5296-a287-31343ab1bc0f
+    internal-label: Integration
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: '492'
 ht-degree: 0%
-
 ---
-
 # 擴充事件追蹤{#extending-event-tracking}
 
 AEM Analytics可讓您追蹤使用者在您網站上的互動。 作為開發人員，您可能需要：
@@ -36,7 +45,7 @@ AEM Analytics可讓您追蹤使用者在您網站上的互動。 作為開發人
 
 ### 追蹤頁面載入上的自訂事件 {#tracking-custom-events-on-page-load}
 
-您可以使用虛擬屬性`data-tracking`來完成（舊記錄屬性仍支援回溯相容性）。 您可以將它新增至任何HTML標籤。
+您可以使用虛擬屬性`data-tracking`來完成（舊記錄屬性仍支援回溯相容性）。 您可以將其新增至任何HTML標籤。
 
 `data-tracking`的語法為
 
@@ -73,7 +82,7 @@ AEM Analytics可讓您追蹤使用者在您網站上的互動。 作為開發人
 
 * `values`包含所有要追蹤的值
 * `collect`是選擇性的，將傳回包含事件和資料物件的陣列。
-* `options`是選用專案，並包含連結追蹤選項，例如HTML專案`obj`和` [defaultLinkType](https://microsite.omniture.com/t2/help/en_US/sc/implement/index.html#linkType)`。
+* `options`是選用專案，並包含HTML元素`obj`和` [defaultLinkType](https://microsite.omniture.com/t2/help/en_US/sc/implement/index.html#linkType)`之類的連結追蹤選項。
 
 * `componentPath`是必要的屬性，建議將其設為`<%=resource.getResourceType()%>`
 

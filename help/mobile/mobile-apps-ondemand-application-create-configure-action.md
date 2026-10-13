@@ -9,13 +9,17 @@ exl-id: dbe81ead-dfaa-4af0-9b66-a14917a1bcc7
 solution: Experience Manager
 feature: Mobile
 role: User
-source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '380'
+source-wordcount: '430'
 ht-degree: 0%
-
 ---
-
 # 應用程式建立和設定動作{#application-create-and-configuration-actions}
 
 {{ue-over-mobile}}
@@ -53,7 +57,7 @@ ht-degree: 0%
 
 應用程式範本可讓您輕鬆使用開發人員建立的現有設計，以便在AEM中建立新的應用程式。
 
-什麼是應用程式範本？將其視為代表應用程式基準或基礎的頁面範本和元件的集合。
+什麼是應用程式範本？ 將其視為代表應用程式基準或基礎的頁面範本和元件的集合。
 根據其他應用程式的範本建立應用程式時，您會得到一個具有起始點之應用程式，代表在其中建立該應用程式的應用程式。
 
 您必須擁有現有的行動應用程式範本（或已安裝具備應用程式範本的應用程式），才能使用此功能。

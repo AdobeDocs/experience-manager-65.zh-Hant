@@ -1,19 +1,30 @@
 ---
 title: 搜尋Facet以篩選搜尋結果
-description: 如何在 [!DNL Adobe Experience Manager]中建立、修改及使用搜尋Facet。
+description: 如何在[!DNL Adobe Experience Manager]中建立、修改及使用搜尋Facet。
 contentOwner: AG
 role: Admin, Developer
 feature: Search
 exl-id: acaf46e6-ff70-4825-8922-ce8f82905a92
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: bca6156727dca11b2e09be549f3def6130827193
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 74ec00bc-0862-520e-86dc-e377aeccc141
+    internal-label: Search
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '2437'
 ht-degree: 15%
-
 ---
-
 # 搜尋 Facet {#search-facets}
 
 | 版本 | 文章連結 |
@@ -137,7 +148,7 @@ ht-degree: 15%
 1. 在「搜尋Forms」頁面上，選取&#x200B;**[!UICONTROL Assets管理搜尋邊欄]**，然後按一下&#x200B;**[!UICONTROL 編輯]** ![編輯圖示](assets/do-not-localize/aemassets_edit.png)。
 1. 在「編輯搜索表單」頁中，將「 **[!UICONTROL Multi Value Property Predicate]** 」從「 **[!UICONTROL Select Predicate]** 」頁籤拖動到主窗格。
 1. 在&#x200B;**[!UICONTROL 設定]**&#x200B;索引標籤中，輸入述詞的標籤及預留位置文字。 指定在屬性欄位中執行搜尋時所依據的屬性名稱，例如`jcr:content/metadata/dc:value`。 您也可以使用選取對話方塊來選取節點。
-1. 請確定已 **[!UICONTROL 選取「分隔字元]** 」支援。 在「輸入 **[!UICONTROL 分隔字元]** 」欄位中，指定分隔字元以分隔個別值。 依預設，逗號會指定為分隔字元。 您可以指定不同的分隔字元。
+1. 請確定已 **[!UICONTROL 選取「分隔字元]** 」支援。 在「輸入 **[!UICONTROL 分隔字元]** 」欄位中，指定分隔字元以分隔個別值。 依預設，逗號會作為分隔字元。 您可以指定不同的分隔字元。
 1. 在&#x200B;**描述**&#x200B;欄位中輸入選擇性描述，然後按一下&#x200B;**[!UICONTROL 完成]**。
 1. 導覽至[!DNL Assets]使用者介面中的「篩選器」面板。 The **[!UICONTROL Multi Value Property]** predicate is added to the panel.
 1. 在「多值」欄位中指定多個值（以分隔符號分隔），然後執行搜尋。 述詞會針對您指定的值擷取完全相符的文字。

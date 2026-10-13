@@ -9,13 +9,27 @@ exl-id: beb2b83e-e8db-40bb-915f-cb6ba3140947
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 704a815e961dc2c690e034a1b1cbe60800c643ae
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
-source-wordcount: '2208'
+source-wordcount: '2291'
 ht-degree: 1%
-
 ---
-
 # AEM Forms工作流程中的變數{#variables-in-aem-forms-workflows}
 
 | 版本 | 文章連結 |
@@ -279,8 +293,8 @@ workflowSession.startWorkflow(model, wfData, metaData);
 
 ### 使用工作流程變數將敏感的使用者資料儲存在JCR以外 {#jcr-independent-persistance}
 
-使用Forms Workflow處理的資料可能包含敏感的使用者資料，例如個人識別資訊和敏感個人資訊。企業可以選擇將資料從JCR儲存空間儲存到由他們擁有並管理的外部資料存放區，由各種工作流程步驟處理（並使用工作流程變數傳遞）。若要進一步瞭解如何在外部儲存空間中儲存工作流程資料，請參閱[針對客戶擁有的資料存放區使用工作流程變數](/help/sites-administering/workflows-administering.md#using-workflow-variables-customer-datastore)。
-[!DNL Adobe Experience Manager]提供工作流程API [UserMetaDataPersistenceProvider](https://github.com/adobe/workflow-variable-externalizer)，以將工作流程變數儲存在外部Azure Blob儲存體中。如需有關使用API的詳細資訊，請參閱[使用工作流程變數將敏感資料引數化，並儲存在外部資料存放區](/help/forms/using/aem-forms-workflow.md#externalize-wf-variables)。
+使用Forms Workflow處理的資料可能包含敏感的使用者資料，例如個人識別資訊和敏感個人資訊。 企業可以選擇將資料從JCR儲存空間儲存到由他們擁有並管理的外部資料存放區，由各種工作流程步驟處理（並使用工作流程變數傳遞）。 若要進一步瞭解如何在外部儲存空間中儲存工作流程資料，請參閱[針對客戶擁有的資料存放區使用工作流程變數](/help/sites-administering/workflows-administering.md#using-workflow-variables-customer-datastore)。
+[!DNL Adobe Experience Manager]提供工作流程API [UserMetaDataPersistenceProvider](https://github.com/adobe/workflow-variable-externalizer)，以將工作流程變數儲存在外部Azure Blob儲存體中。 如需有關使用API的詳細資訊，請參閱[使用工作流程變數將敏感資料引數化，並儲存在外部資料存放區](/help/forms/using/aem-forms-workflow.md#externalize-wf-variables)。
 
 ## 編輯變數 {#edit-a-variable}
 

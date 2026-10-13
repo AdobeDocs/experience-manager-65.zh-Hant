@@ -7,13 +7,27 @@ feature: Link Sharing,Asset Management
 exl-id: 20370b00-862e-4d04-af2f-7d1c74a842dd
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: bca6156727dca11b2e09be549f3def6130827193
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 7d2b2ec8-499c-5434-9ffd-9218cd71f683
+    internal-label: Asset Management
+  - id: cda65036-5305-4f01-89da-9b3506ae8c50
+    internal-label: Administration
+subfeature_v2:
+  - id: b03f468b-ba84-4dc3-a306-cb2c69e43324
+    internal-label: Link sharing
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1043'
 ht-degree: 7%
-
 ---
-
 # 以連結形式共用資產 {#asset-link-sharing}
 
 | 版本 | 文章連結 |
@@ -114,8 +128,8 @@ ht-degree: 7%
 
 * 如果您想要將[!DNL Experience Manager]作者部署中的連結分享至外部實體，請確定您僅公開`GET`要求中用於連結分享的下列URL。 基於安全考量封鎖其他URL。
 
-   * `http://[aem_server]:[port]/linkshare.html`
-   * `http://[aem_server]:[port]/linksharepreview.html`
-   * `http://[aem_server]:[port]/linkexpired.html`
+  * `http://[aem_server]:[port]/linkshare.html`
+  * `http://[aem_server]:[port]/linksharepreview.html`
+  * `http://[aem_server]:[port]/linkexpired.html`
 
   在[!DNL Experience Manager]介面中，存取&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 作業]** > **[!UICONTROL 網頁主控台]**。 開啟&#x200B;**[!UICONTROL Day CQ Link Externalizer]**&#x200B;設定，並修改&#x200B;**[!UICONTROL 網域]**&#x200B;欄位中的下列屬性，其中含有針對`local`、`author`和`publish`提及的值。 針對`local`和`author`屬性，請分別提供本機和作者執行個體的URL。 如果您執行單一[!DNL Experience Manager]作者執行個體，請對`local`和`author`屬性使用相同的值。 對於發佈執行個體，請提供[!DNL Experience Manager]發佈執行個體的URL。

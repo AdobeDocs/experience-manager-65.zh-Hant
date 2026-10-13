@@ -11,13 +11,20 @@ role: Admin
 exl-id: ef371ff8-6b4f-4e5a-98fb-d7c274927c46
 solution: Experience Manager
 feature: Communities
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1691'
+source-wordcount: '1739'
 ht-degree: 1%
-
 ---
-
 # 社群群組主控台 {#community-groups-console}
 
 當社群網站的[範本結構](/help/communities/sites-console.md#step1)包含[群組功能](/help/communities/functions.md#groups-function)時，「群組」主控台會提供建立社群群組的存取權。
@@ -56,8 +63,8 @@ This is a 404 on helpx. Update or remove.
 * 選取現有的社群網站資料夾，以便開啟。
 * 在資料夾中選取社群網站的執行個體。
 
-   * 社群網站的結構必須包含群組功能。
-   * 這些熒幕擷取畫面來自[在發佈](/help/communities/published-site.md)上建立群組後的「快速入門」教學課程。
+  * 社群網站的結構必須包含群組功能。
+  * 這些熒幕擷取畫面來自[在發佈](/help/communities/published-site.md)上建立群組後的「快速入門」教學課程。
 
   ![建立群組](assets/create-group.png)
 
@@ -78,7 +85,7 @@ This is a 404 on helpx. Update or remove.
 * **社群群組標題**
 
   群組的顯示標題。
-標題會顯示在群組的已發佈網站上。
+  標題會顯示在群組的已發佈網站上。
 
 * **社群群組說明**
 
@@ -87,7 +94,7 @@ This is a 404 on helpx. Update or remove.
 * **社群群組根目錄**
 
   群組的根路徑。
-預設的根是父網站，但根可以移至網站內的任何位置。不建議進行變更。
+  預設的根是父網站，但根可以移至網站內的任何位置。 不建議進行變更。
 
 * **其他可用的社群群組語言**&#x200B;功能表
 
@@ -97,10 +104,10 @@ This is a 404 on helpx. Update or remove.
 
   顯示在URL中的群組根頁面名稱。 請避免在群組名稱中使用底線字元(_)和關鍵字（例如資源和設定）。
 
-   * 請仔細檢查名稱，因為建立群組後不易變更。
-   * 基底URL顯示在`Community Group Name`的下方。
-   * 對於有效的URL，附加「.html」
-     *例如*，`https://localhost:4502/content/sites/mysight/en/mygroup.html`。
+  * 請仔細檢查名稱，因為建立群組後不易變更。
+  * 基底URL顯示在`Community Group Name`的下方。
+  * 對於有效的URL，附加「.html」
+    *例如*，`https://localhost:4502/content/sites/mysight/en/mygroup.html`。
 
 * **社群群組範本**&#x200B;功能表
 
@@ -134,8 +141,8 @@ This is a 404 on helpx. Update or remove.
 * 影像已釘選至瀏覽器視窗的左邊緣
 * 不會調整影像大小，因此當影像寬度為：
 
-   * 影像小於瀏覽器的寬度，便會在水準方向重複。
-   * 大於瀏覽器寬度時，影像會顯示為已裁切。
+  * 影像小於瀏覽器的寬度，便會在水準方向重複。
+  * 大於瀏覽器寬度時，影像會顯示為已裁切。
 
 ### 步驟3：設定 {#step-settings}
 
@@ -239,14 +246,14 @@ This is a 404 on helpx. Update or remove.
 * 將其他[社群功能](/help/communities/functions.md)拖放至網站結構。
 * 在網站結構中的社群功能例項上：
 
-   * **`Gear icon`**
-編輯設定，包括顯示標題、URL和[有特殊許可權的成員群組](/help/communities/users.md#privilegedmembersgroups)。
+  * **`Gear icon`**
+    編輯設定，包括顯示標題、URL和[有特殊許可權的成員群組](/help/communities/users.md#privilegedmembersgroups)。
 
-   * **`Trashcan icon`**
-從網站結構中移除（刪除）函式。
+  * **`Trashcan icon`**
+    從網站結構中移除（刪除）函式。
 
-   * **`Grid icon`**
-修改網站最上層導覽列中顯示的函式順序。
+  * **`Grid icon`**
+    修改網站最上層導覽列中顯示的函式順序。
 
 >[!CAUTION]
 >
@@ -271,7 +278,7 @@ DESIGN面板允許修改主題：
 * [社群群組主題](#community-group-theme)
 * [社群群組品牌](#community-group-branding)
 
-   * 捲動至面板底部，以便變更品牌影像。
+  * 捲動至面板底部，以便變更品牌影像。
 
 ### 修改設定 {#modify-settings}
 

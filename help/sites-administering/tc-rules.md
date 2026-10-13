@@ -6,13 +6,25 @@ feature: Language Copy
 exl-id: 8ca7bbcc-413a-49a8-a836-7083a9cadda1
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: ffa4c2522bfe98d99693e3c17666b728377337f9
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: d9d38edd-df1b-480c-8f5e-72b62576f390
+    internal-label: Site and page features
+subfeature_v2:
+  - id: e15a4109-ae5d-497d-b301-31149e35aed4
+    internal-label: Language Copy Wizard
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
 source-wordcount: '1154'
 ht-degree: 2%
-
 ---
-
 # 識別要翻譯的內容{#identifying-content-to-translate}
 
 翻譯規則會針對翻譯專案中包含或排除的頁面、元件和資產，識別要翻譯的內容。 在翻譯頁面或資產時，AEM會擷取此內容，以便傳送給翻譯服務。
@@ -64,13 +76,13 @@ ht-degree: 2%
 * `path`屬性包含套用規則之分支的根節點的路徑。
 * 子項`property`元素為所有資源型別識別要翻譯的節點屬性：
 
-   * `name`屬性包含屬性名稱。
-   * 如果屬性未轉譯，則選用的`translate`屬性等於`false`。 預設值為`true`。 覆寫先前的規則時，此屬性相當實用。
+  * `name`屬性包含屬性名稱。
+  * 如果屬性未轉譯，則選用的`translate`屬性等於`false`。 預設值為`true`。 覆寫先前的規則時，此屬性相當實用。
 
 * 子項`node`元素會識別特定資源型別要翻譯的節點屬性：
 
-   * `resourceType`屬性包含解析為實作資源型別的元件的路徑。
-   * 子項`property`元素識別要翻譯的節點屬性。 以與節點規則的子`property`元素相同的方式使用此節點。
+  * `resourceType`屬性包含解析為實作資源型別的元件的路徑。
+  * 子項`property`元素識別要翻譯的節點屬性。 以與節點規則的子`property`元素相同的方式使用此節點。
 
 下列範例規則會為`/content`節點下的所有頁面轉譯所有`text`屬性的內容。 此規則適用於任何將內容儲存在`text`屬性中的元件，例如foundation Text元件和foundation Image元件。
 

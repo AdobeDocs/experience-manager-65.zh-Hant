@@ -9,13 +9,20 @@ exl-id: 1f60a0d4-a272-45e8-9742-4b706be8502e
 solution: Experience Manager
 feature: Communities
 role: Developer
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '555'
+source-wordcount: '567'
 ht-degree: 1%
-
 ---
-
 # 設定網站結構 {#setup-website-structure}
 
 若要設定您的網站，以下指示說明要在下列位置建立的資料夾：
@@ -89,7 +96,7 @@ ht-degree: 1%
 
 1. 若要在傳統UI中使用Designer工具，請瀏覽至[https://&lt;server>：&lt;port>/miscadmin](http://localhost:4502/miscadmin)。
 
-   注意：如果您使用CRXDE Lite來建立型別`cq:Page`的節點，存取控制和復寫將不會設定為頁面的預設設定。
+   注意：如果您使用CRXDE Lite建立`cq:Page`型別的節點，存取控制和復寫將不會設定為頁面的預設設定。
 
 1. 在總管窗格中，選取&#x200B;**[!UICONTROL 設計]**&#x200B;資料夾，然後按一下&#x200B;**[!UICONTROL 新增]** > **[!UICONTROL 新增頁面]**。
 
@@ -99,13 +106,13 @@ ht-degree: 1%
    * 名稱： **[!UICONTROL an-scf-sandbox]**
    * 選取&#x200B;**[!UICONTROL 設計頁面範本]**
 
-   按一下&#x200B;**[!UICONTROL 建立]**。
+   按一下「**[!UICONTROL 建立]**」。
 
    ![設計範本](assets/design-template.png)
 
 1. 如果「SCF沙箱」資料夾未出現，請重新整理瀏覽器窗格。
 
-1. 返回CRXDE Lite(http:// localhost：4502/crx/de)並展開/etc/designs以檢視名為「an-scf-sandbox」的節點。
+1. 返回CRXDE Lite (http:// localhost：4502/crx/de)並展開/etc/designs以檢視名為「an-scf-sandbox」的節點。
 
    在CRXDE右下方的窗格中，您可以檢視「屬性」標籤、「存取控制」標籤和「復寫」標籤，以檢視使用「設計頁面範本」定義的內容。
 

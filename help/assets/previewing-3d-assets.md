@@ -8,13 +8,22 @@ role: User
 exl-id: fdebbc2b-c04d-4cdd-b7c2-8e9a2a854e79
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: bca6156727dca11b2e09be549f3def6130827193
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: fa7b95c2-9969-5924-a7c7-8cde1e7a2e26
+    internal-label: 3D Assets
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '586'
+source-wordcount: '605'
 ht-degree: 9%
-
 ---
-
 # 在Adobe Experience Manager中預覽3D資產 {#previewing-3d-assets-aem}
 
 | 版本 | 文章連結 |
@@ -32,14 +41,14 @@ Experience Manager支援3D資產的製作程式功能，包括上傳、傳送和
 
 互動式3D預覽支援下列檔案格式：
 
-| 3D副檔名 | 檔案格式 | MIME型別 | 備註 |
+| 3D副檔名 | 檔案格式 | MIME 類型 | 備註 |
 |---|---|---|---|
 | GLB | 二進位GL傳輸 | model/gltf-binary | |
 | GLTF | 總帳傳輸格式 | model/gltf+json | 請參閱下方的&#x200B;**附註**。 |
-| 物件 | WaveFront 3D物件檔案 | application/x-tgif | |
+| OBJ | WaveFront 3D物件檔案 | application/x-tgif | |
 | STL | 立體成型 | application/vnd.ms-pki.stl | |
 | DN | Adobe Dimension | model/x-adobe-dn | 僅支援內嵌；無法預覽。 |
-| USDZ | Universal Scene說明Zip封存 | model/vnd.usdz+zip | 僅支援內嵌；無法預覽。 |
+| USDZ | Universal Scene Description Zip封存 | model/vnd.usdz+zip | 僅支援內嵌；無法預覽。 |
 
 >[!NOTE]
 >
@@ -68,7 +77,7 @@ Experience Manager支援3D資產的製作程式功能，包括上傳、傳送和
 
 1. 在頁面的右上角，從「檢視」下拉式清單中選取「**[!UICONTROL 卡片檢視]**」，然後導覽至您要預覽的3D資產。
 
-   ![選擇3D卡片](/help/assets/assets-dm/3d-card-select.png)
+   選取![張3D卡片](/help/assets/assets-dm/3d-card-select.png)
    _在「卡片檢視」中，選取您要預覽之3D資產的卡片。_
 
 1. 選取3D資產的卡片。

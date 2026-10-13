@@ -9,13 +9,20 @@ exl-id: 8279684f-23dd-4234-bf01-fd2ce74bcb4e
 solution: Experience Manager
 feature: Communities
 role: Developer
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '683'
+source-wordcount: '693'
 ht-degree: 0%
-
 ---
-
 # srp和UGC Essentials {#srp-and-ugc-essentials}
 
 ## 簡介 {#introduction}
@@ -36,7 +43,7 @@ SRP API不是抽象類別，而是介面。 自訂實施不應輕易進行，因
 
 使用SRP API的方法是透過提供的公用程式，例如SocialResourceUtilities套件中的公用程式。
 
-從AEM 6.0或更舊版本升級時，必須移轉所有SRP (有開放式Source工具可用)的UGC。 請參閱[升級至AEM Communities 6.3](upgrade.md)。
+從AEM 6.0或更舊版本升級時，必須移轉所有SRP （有開放式Source工具可用）的UGC。 請參閱[升級至AEM Communities 6.3](upgrade.md)。
 
 >[!NOTE]
 >

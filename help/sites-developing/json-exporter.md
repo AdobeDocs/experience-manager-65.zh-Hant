@@ -1,6 +1,6 @@
 ---
 title: 內容服務的 JSON 匯出工具
-description: AEM Content Services的設計目的，是要概括AEM內/外部內容的說明和傳遞，而不只是關注網頁。 它們使用可供任何使用者端使用的標準化方法，將內容傳送至非傳統AEM網頁的管道。
+description: AEM Content Services的設計目的，是要概括AEM內/外部內容的說明和傳遞，而不只是關注網頁。 這些頻道使用任何使用者端都能使用的標準化方法，將內容傳送至非傳統AEM網頁的管道。
 contentOwner: User
 content-type: reference
 topic-tags: components
@@ -9,18 +9,27 @@ exl-id: 647395c0-f392-427d-a998-e9ddf722b9f9
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '411'
-ht-degree: 9%
-
+source-wordcount: '453'
+ht-degree: 15%
 ---
-
 # 內容服務的 JSON 匯出工具{#json-exporter-for-content-services}
 
 AEM Content Services的設計目的，是要概括AEM內/外部內容的說明和傳遞，而不只是關注網頁。
 
-它們使用可供任何使用者端使用的標準化方法，將內容傳送至非傳統AEM網頁的管道。 這些管道可能包括：
+這些頻道使用任何使用者端都能使用的標準化方法，將內容傳送至非傳統AEM網頁的管道。 這些管道可能包括：
 
 * [單頁應用程式](spa-walkthrough.md)
 * 原生行動應用程式
@@ -34,7 +43,7 @@ AEM Content Services的設計目的，是要概括AEM內/外部內容的說明�
 
 ## 包含內容片段核心元件的JSON匯出工具 {#json-exporter-with-content-fragment-core-components}
 
-使用AEM JSON匯出工具，您可以傳送JSON資料模型格式之任何AEM頁面的內容。 然後，您自己的應用程式就可以使用此方法。
+您可以使用AEM JSON匯出工具，以JSON資料模型格式傳送任何AEM頁面的內容。 然後，您自己的應用程式就可以使用此方法。
 
 在AEM中，傳遞是使用選擇器`model`和`.json`副檔名達成。
 
@@ -82,15 +91,15 @@ AEM Content Services的設計目的，是要概括AEM內/外部內容的說明�
 
 * Assets HTTP API
 
-   * [Assets HTTP API](/help/assets/mac-api-assets.md)
+  * [Assets HTTP API](/help/assets/mac-api-assets.md)
 
 * Sling模型：
 
-   * [Sling模型 — 自130](https://sling.apache.org/documentation/bundles/models.html#associating-a-model-class-with-a-resource-type-since-130)起將模型類別與資源型別建立關聯
+  * [Sling模型 — 自130起將模型類別與資源型別建立關聯](https://sling.apache.org/documentation/bundles/models.html#associating-a-model-class-with-a-resource-type-since-130)
 
-* 具有JSON的AEM：
+* AEM與JSON：
 
-   * [取得JSON格式的頁面資訊](/help/sites-developing/pageinfo.md)
+  * [取得JSON格式的頁面資訊](/help/sites-developing/pageinfo.md)
 
 ## 相關檔案 {#related-documentation}
 

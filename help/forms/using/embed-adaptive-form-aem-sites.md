@@ -8,13 +8,31 @@ feature: Adaptive Forms,Foundation Components
 exl-id: 00ee7929-649f-4cbb-be79-ba13ac73a16d
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 7da902b6-fe94-5180-8e7c-f6d1e38d01d5
+    internal-label: Foundation Components
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1179'
 ht-degree: 6%
-
 ---
-
 # 在AEM網站頁面中內嵌最適化表單或互動式通訊 {#embed-an-adaptive-form-or-interactive-communication-in-aem-sites-page}
 
 <span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hant)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。 這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。 本文會介紹使用基礎元件編寫最適化表單的舊方法。</span>
@@ -65,9 +83,9 @@ AEM Forms提供可新增至網站頁面的元件。 AEM Forms容器元件可讓�
    * **資產路徑**：瀏覽並選取要內嵌的最適化表單或互動式通訊。 如果您從Assets瀏覽器中將其刪除，則會自動填入。
    * （僅限最適化表單） **提交後內容**：選取要在提交表單時觸發的動作。 您可以選擇顯示感謝訊息或感謝頁面。
 
-      * **感謝訊息**：使用RTF編輯器撰寫訊息以在表單提交時顯示。 只有當您選擇顯示感謝訊息時，才能使用此選項。
-      * **感謝頁面**：瀏覽並選取要顯示在表單提交上的頁面。 只有當您選擇顯示感謝頁面時，才能使用此選項。
-      * **提交時重新整理頁面**：啟用，以便您可以重新整理包含內嵌最適化表單的頁面，以顯示感謝頁面。 否則，感謝頁面會取代AEM Forms容器中的最適化表單，而不會重新整理頁面。 只有當您選擇顯示感謝頁面時，才能使用此選項。
+     * **感謝訊息**：使用RTF編輯器撰寫訊息以在表單提交時顯示。 只有當您選擇顯示感謝訊息時，才能使用此選項。
+     * **感謝頁面**：瀏覽並選取要顯示在表單提交上的頁面。 只有當您選擇顯示感謝頁面時，才能使用此選項。
+     * **提交時重新整理頁面**：啟用，以便您可以重新整理包含內嵌最適化表單的頁面，以顯示感謝頁面。 否則，感謝頁面會取代AEM Forms容器中的最適化表單，而不會重新整理頁面。 只有當您選擇顯示感謝頁面時，才能使用此選項。
 
    * **佈景主題**：選取定義最適化表單或互動式通訊元件樣式的主題。 樣式包含外觀屬性，例如字型樣式、背景顏色、尺寸和對齊。
    * **高度**：指定容器的高度。 保留空白以自動調整容器大小。

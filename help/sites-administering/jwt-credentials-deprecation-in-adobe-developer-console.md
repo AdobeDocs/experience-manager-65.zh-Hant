@@ -5,25 +5,37 @@ exl-id: f19a92de-ba6a-4f6d-9e12-60ad1bad2e74
 solution: Experience Manager, Experience Manager Sites
 feature: Security
 role: Admin
-source-git-commit: f96b178ae84b4b930b59e36d4994970682c53dbd
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: b1210526-416b-4ef6-bcc0-1692e99f30e9
+    internal-label: Administration and security
+subfeature_v2:
+  - id: c35bc059-fd80-4a01-91a6-e48da3c76758
+    internal-label: Security practices
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '362'
-ht-degree: 72%
-
+source-wordcount: '421'
+ht-degree: 70%
 ---
-
 # Adobe Developer Console 中的 JWT 憑證已被取代 {#jwt-credentials-deprecation-in-adobe-developer-console}
 
 >[!NOTE]
 > 如需詳細資訊，AEM as a Cloud Service應該參考[AEMaaCS版本](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/jwt-credentials-deprecation-in-adobe-developer-console.html?lang=zh-Hant)的可比文章。
 
-Adobe 客戶使用 [Adobe Developer Console](https://developer.adobe.com/console) 來產生可存取各種 API 的認證。客戶可以選擇各種認證類型，包括 OAuth 伺服器到伺服器和單頁應用程式。其中一種認證類型 (服務帳戶 (JWT) 認證) 已被已取代，取而代之的是 OAuth 伺服器到伺服器認證。2024 年 6 月 3 日或之後無法建立新的服務帳戶 (JWT) 認證，現有的 JWT 認證自 2025 年 1 月 27 日起將無法再使用。您可以[閱讀已取代項目的資訊](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration)。
+Adobe 客戶使用 [Adobe Developer Console](https://developer.adobe.com/console) 來產生可存取各種 API 的認證。 客戶可以選擇各種認證類型，包括 OAuth 伺服器到伺服器和單頁應用程式。 其中一種認證類型 (服務帳戶 (JWT) 認證) 已被已取代，取而代之的是 OAuth 伺服器到伺服器認證。 2024 年 6 月 3 日或之後無法建立新的服務帳戶 (JWT) 認證，現有的 JWT 認證自 2025 年 1 月 27 日起將無法再使用。 您可以[閱讀已取代項目的資訊](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration)。
 
 本文提供一些關於Adobe Experience Manager (AEM) 6.5客戶應如何處理棄用的其他內容。
 
 主要成果是AEM現在支援AEM的全新OAuth伺服器對伺服器認證。 您可能已收到一封電子郵件，其中包含移轉 JWT 認證的指示，現在可以完成此移轉。
 
-以下區段列出客戶必須 (或在某些情況下不得) 將其服務帳戶 (JWT) 認證取代為 OAuth 伺服器對伺服器認證的情境，目前 AEM 支援這些情境。[了解如何](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration#migration-overview)移轉認證。
+以下區段列出客戶必須 (或在某些情況下不得) 將其服務帳戶 (JWT) 認證取代為 OAuth 伺服器對伺服器認證的情境，目前 AEM 支援這些情境。 [了解如何](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration#migration-overview)移轉認證。
 
 ## 將 AEM 與其他 Adobe 解決方案整合 {#integrating-aem-with-other-adobe-solutions}
 
@@ -46,4 +58,4 @@ AEM客戶可使用AEM來設定與所有其他Adobe解決方案的整合。 例�
 
 **相關的AEM版本**： Adobe Managed Services （Service Pack 21及更新版本）。
 
-客戶可建立 Adobe Developer Console 專案，以便叫用 [Cloud Manager API](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/create-api-integration/)。在已棄用的 JWT 認證於 2025 年 1 月到期之前，應將 Adobe Developer 專案中的認證移轉到 OAuth 伺服器對伺服器認證類型。
+客戶可建立 Adobe Developer Console 專案，以便叫用 [Cloud Manager API](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/create-api-integration/)。 在已棄用的 JWT 認證於 2025 年 1 月到期之前，應將 Adobe Developer 專案中的認證移轉到 OAuth 伺服器對伺服器認證類型。

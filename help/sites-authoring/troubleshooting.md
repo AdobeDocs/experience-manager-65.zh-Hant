@@ -9,13 +9,26 @@ exl-id: 05586b17-35d4-496e-8f0e-293c755eb066
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Developer
-source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
 source-wordcount: '294'
 ht-degree: 0%
-
 ---
-
 # 疑難排解製作時的AEM{#troubleshooting-aem-when-authoring}
 
 下節涵蓋您在使用AEM時可能會遇到的一些問題，以及有關如何疑難排解這些問題的建議。
@@ -32,34 +45,34 @@ ht-degree: 0%
 
 * **問題**：
 
-   * 您已經變更頁面，並將頁面復寫至發佈網站，但發佈網站上仍顯示&#x200B;*舊*&#x200B;版本的頁面。
+  * 您已經變更頁面，並將頁面復寫至發佈網站，但發佈網站上仍顯示&#x200B;*舊*&#x200B;版本的頁面。
 
 * **原因**：
 
-   * 這可能有多種原因，通常是快取(本機瀏覽器或Dispatcher)，但有時復寫佇列可能會發生問題。
+  * 這可能有多種原因，通常是快取（本機瀏覽器或Dispatcher），但有時復寫佇列可能會發生問題。
 
 * **解決方案**：
 
-   * 這裡有多種可能性：
-   * 確認已正確復寫頁面。 檢查頁面狀態，並視需要檢查復寫佇列的狀態。
-   * 清除本機瀏覽器中的快取，然後再次存取您的頁面。
-   * 將`?`新增至頁面URL的結尾。 例如：
+  * 這裡有多種可能性：
+  * 確認已正確復寫頁面。 檢查頁面狀態，並視需要檢查復寫佇列的狀態。
+  * 清除本機瀏覽器中的快取，然後再次存取您的頁面。
+  * 將`?`新增至頁面URL的結尾。 例如：
 
-      * `http://localhost:4502/sites.html/content?`
-      * 這會直接向AEM要求頁面，並略過Dispatcher。 如果您收到更新的頁面，表示您應清除Dispatcher快取。
+    * `http://localhost:4502/sites.html/content?`
+    * 這會直接向AEM要求頁面，並略過Dispatcher。 如果您收到更新的頁面，表示您應清除Dispatcher快取。
 
-   * 如果復寫佇列發生問題，請聯絡您的系統管理員。
+  * 如果復寫佇列發生問題，請聯絡您的系統管理員。
 
 ## 元件動作在工具列上不可見 {#component-actions-not-visible-on-toolbar}
 
 * **問題**：
 
-   * 在作者環境中編輯內容頁面時，看不到所有適用的元件動作。
+  * 在作者環境中編輯內容頁面時，看不到所有適用的元件動作。
 
 * **原因**：
 
-   * 在極少數情況下，先前的動作可能會影響工具列。
+  * 在極少數情況下，先前的動作可能會影響工具列。
 
 * **解決方案**：
 
-   * 重新整理頁面。
+  * 重新整理頁面。

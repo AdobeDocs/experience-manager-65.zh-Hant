@@ -9,13 +9,29 @@ feature: Asset Management,Renditions
 role: User, Admin
 exl-id: e427d4ee-d5c8-421b-9739-f3cf2de36e41
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 7d2b2ec8-499c-5434-9ffd-9218cd71f683
+    internal-label: Asset Management
+  - id: ac365bec-0634-4744-9473-c42f47320593
+    internal-label: Asset management and governance
+subfeature_v2:
+  - id: e42ab83e-8918-43a7-98a3-62bebbd5bb3a
+    internal-label: Renditions
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '3434'
+source-wordcount: '3480'
 ht-degree: 2%
-
 ---
-
 # 智慧型影像處理 {#smart-imaging}
 
 智慧型影像可套用每位使用者獨特的檢視特性，以針對其體驗自動最佳化的正確影像，進而提供更優異的效能和參與度。
@@ -244,29 +260,29 @@ To understand pre-requisites for Smart Imaging, see [Am I eligible to use Smart 
 
    * **主要連絡人詳細資料：**
 
-      * 提供您的姓名、電子郵件和電話號碼。
+     * 提供您的姓名、電子郵件和電話號碼。
 
    * **要啟用的智慧型影像功能：**
 
-      * 列出您想要為您的帳戶提供的功能：
+     * 列出您想要為您的帳戶提供的功能：
 
-         * 瀏覽器格式轉換：WebP或AVIF
-         * 網路頻寬最佳化
-         * DPR： DPR需要使用者端進行調整，以決定正確的`dprValue`。 因此，Adobe建議藉由附加`dpr=on,dprValue`，透過URL啟用DPR。
+       * 瀏覽器格式轉換：WebP或AVIF
+       * 網路頻寬最佳化
+       * DPR： DPR需要使用者端進行調整，以決定正確的`dprValue`。 因此，Adobe建議藉由附加`dpr=on,dprValue`，透過URL啟用DPR。
 
    * 智慧型影像的&#x200B;**網域：**
 
-      * 列出所有相關網域，例如&#x200B;*`company.com`*&#x200B;或&#x200B;*`mycompany.scene7.com`*
-      * 智慧型影像支援一般和自訂網域。
-      * 若要識別您的網域，請開啟[Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/zh-hant/docs/dynamic-media-classic/using/getting-started/signing-out#getting-started)並登入您的公司帳戶。
+     * 列出所有相關網域，例如&#x200B;*`company.com`*&#x200B;或&#x200B;*`mycompany.scene7.com`*
+     * 智慧型影像支援一般和自訂網域。
+     * 若要識別您的網域，請開啟[Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/zh-hant/docs/dynamic-media-classic/using/getting-started/signing-out#getting-started)並登入您的公司帳戶。
 
-         1. 瀏覽至&#x200B;**[!UICONTROL 設定]** > **[!UICONTROL 應用程式設定]** > **[!UICONTROL 一般設定]**。
-         1. 尋找&#x200B;**[!UICONTROL 發佈的伺服器名稱]**&#x200B;欄位以確認您的網域。
-         1. 確認您使用的是Adobe的CDN，而非其他提供者所管理的CDN。
+       1. 瀏覽至&#x200B;**[!UICONTROL 設定]** > **[!UICONTROL 應用程式設定]** > **[!UICONTROL 一般設定]**。
+       1. 尋找&#x200B;**[!UICONTROL 發佈的伺服器名稱]**&#x200B;欄位以確認您的網域。
+       1. 確認您使用的是Adobe的CDN，而非其他提供者所管理的CDN。
 
    * **表示HTTP/2支援：**
 
-      * 指定您是否需要「智慧型影像」才能透過HTTP/2運作。
+     * 指定您是否需要「智慧型影像」才能透過HTTP/2運作。
 
 1. Adobe客戶支援預設會啟用所要求的智慧型影像處理功能，而不需要手動將引數附加至URL。
 1. Adobe建議將存留時間(TTL)設定為至少24小時，以便透過快取發揮最大效能。
@@ -338,9 +354,10 @@ To understand pre-requisites for Smart Imaging, see [Am I eligible to use Smart 
 >
 >**X-Adobe-Smart-Imaging = -1，正在傳遞WebP**
 >
->如果`X-Adobe-Smart-Imaging`的值為–1，而且WebP仍在傳遞，則智慧型影像處理為作用中。但是，由於快取已過時，因此未計算大小優勢。您可以在影像的URL中使用`cache=update` （僅限一次）來修正此問題。
+>如果`X-Adobe-Smart-Imaging`的值為–1，而且WebP仍在傳遞，則智慧型影像處理為作用中。 但是，由於快取已過時，因此未計算大小優勢。 您可以在影像的URL中使用`cache=update` （僅一次）來修正此問題。
 >使用修飾元的範例：
->`https://smartimaging.scene7.com/is/image/SmartImaging/sample1?cache=update`>若要讓整個快取失效，您必須建立支援案例。
+>`https://smartimaging.scene7.com/is/image/SmartImaging/sample1?cache=update`
+>若要讓整個快取失效，您必須建立支援案例。
 
 +++
 

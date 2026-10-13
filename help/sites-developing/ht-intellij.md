@@ -9,13 +9,24 @@ exl-id: 5a79c79b-df65-4cb2-b9d4-eda994c992ec
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,Developer Tools
 role: Developer
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+  - id: f2d27a5f-0d67-4d85-8a24-86a8d8a3574b
+    internal-label: Developer tools
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '640'
-ht-degree: 2%
-
+source-wordcount: '663'
+ht-degree: 1%
 ---
-
 # 如何使用IntelliJ IDEA開發AEM專案{#how-to-develop-aem-projects-using-intellij-idea}
 
 ## 概觀 {#overview}
@@ -43,7 +54,7 @@ ht-degree: 2%
 
 接下來，使用Maven設定您的專案，如[使用Apache Maven建置AEM專案的方法](/help/sites-developing/ht-projects-maven.md)中所述。
 
-若要在IntelliJ IDEA中開始使用AEM專案，[在5分鐘後開始使用](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html)中的基本設定已足夠。
+若要在IntelliJ IDEA中開始使用AEM專案，[在5分鐘內快速入門](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html)中的基本設定已足夠。
 
 ### 為IntelliJ IDEA準備JSP支援 {#prepare-jsp-support-for-intellij-idea}
 
@@ -52,7 +63,7 @@ IntelliJ IDEA也支援使用JSP，例如：
 * 自動完成標籤程式庫
 * `<cq:defineObjects />`與`<sling:defineObjects />`所定義的物件感知
 
-若要讓此功能發揮作用，請依照[使用Apache Maven建置AEM專案的方法](/help/sites-developing/ht-projects-maven.md)中[使用JSP的方法](/help/sites-developing/ht-projects-maven.md#how-to-work-with-jsps)的指示。
+若要讓此功能正常運作，請依照[使用Apache Maven建置AEM專案的方法](/help/sites-developing/ht-projects-maven.md)中[使用JSP的方法](/help/sites-developing/ht-projects-maven.md#how-to-work-with-jsps)的指示。
 
 ### 匯入Maven專案 {#import-the-maven-project}
 
@@ -70,7 +81,7 @@ IntelliJ IDEA也支援使用JSP，例如：
    ![chlimage_1-46](assets/chlimage_1-46a.png)
 
 1. 按一下&#x200B;**下一步**&#x200B;和&#x200B;**完成**，繼續下列對話方塊。
-1. 您現在已使用IntelliJ IDEA設定AEM開發
+1. 您現在已設定使用IntelliJ IDEA進行AEM開發
 
    ![chlimage_1-47](assets/chlimage_1-47a.png)
 
@@ -119,7 +130,7 @@ IntelliJ IDEA必須瞭解在哪裡可以找到JSP以進行偵錯。 由於IDEA�
 
 最後一個必要步驟是使用IntelliJ IDEA建議的JVM選項啟動AEM。
 
-直接啟動AEM jar檔案並新增這些選項，例如，使用下列命令列：
+直接啟動AEM jar檔案，然後新增這些選項，例如，使用下列命令列：
 
 `java -Xdebug -Xrunjdwp:transport=dt_socket,address=58242,suspend=n,server=y -Xmx1024m -jar cq-quickstart-6.5.0.jar`
 

@@ -9,24 +9,38 @@ exl-id: 1e5d8184-7164-4984-b43e-421015e8bf52
 solution: Experience Manager, Experience Manager Sites
 feature: Content Fragments,Developing
 role: Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+  - id: a642c50e-80eb-4fc1-a5d2-f3762d1f841d
+    internal-label: Administration
+subfeature_v2:
+  - id: e9db7c79-8f65-4281-a439-c9049296d903
+    internal-label: Content Fragments
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
-source-wordcount: '400'
-ht-degree: 2%
-
+source-wordcount: '516'
+ht-degree: 4%
 ---
-
 # 在We.Retail中試用內容片段{#trying-out-content-fragments-in-we-retail}
 
-內容片段可讓您建立頻道中性內容，以及各種（頻道特定的）變化。 **We.Retail** (可在Adobe Experience Manager的現成執行個體中使用)提供Lofoten中的&#x200B;**Arctic Surfing**&#x200B;片段作為基本範例。 這說明：
+內容片段可讓您建立頻道中性內容，以及各種（頻道特定的）變化。 **We.Retail** （可在Adobe Experience Manager的現成執行個體中使用）提供Lofoten中的&#x200B;**Arctic Surfing**&#x200B;片段作為基本範例。 這說明：
 
-* Adobe Experience Manager (AEM)內容片段是[建立並管理為不受頁面影響的資產](/help/assets/content-fragments/content-fragments.md)。 它們可讓您建立管道中性內容，連同（可能特定於管道）變數。
+* Adobe Experience Manager(AEM)內容片段會建 [立並管理為不受頁面影響的資產](/help/assets/content-fragments/content-fragments.md)。 它們可讓您建立管道中性內容，連同（可能特定於管道）變數。
 
-   * 檢視[在We.Retail中尋找內容片段資產的位置](#where-to-find-content-fragments-in-we-retail)
+  * 檢視[在We.Retail中尋找內容片段資產的位置](#where-to-find-content-fragments-in-we-retail)
 
 * 然後，您就可以[在編寫內容頁面時](/help/sites-authoring/content-fragments.md)使用這些片段及其變數。
 
-   * 檢視[在We.Retail中使用內容片段的位置](#where-content-fragments-are-used-in-we-retail)
+  * 檢視[在We.Retail中使用內容片段的位置](#where-content-fragments-are-used-in-we-retail)
 
 如需建立、管理、使用和開發內容片段的完整檔案：
 
@@ -49,7 +63,7 @@ We.Retail中有數個範例內容片段；透過&#x200B;**Assets**、**檔案**�
 
 * 透過&#x200B;**Assets**，**檔案**，**We.Retail**，**英文**，**體驗**，**在Lofoten的北極衝浪**：
 
-   * [http://localhost:4502/assets.html/content/dam/we-retail/en/experiences/arctic-surfing-in-lofoten](http://localhost:4502/assets.html/content/dam/we-retail/en/experiences/arctic-surfing-in-lofoten)
+  * [http://localhost:4502/assets.html/content/dam/we-retail/en/experiences/arctic-surfing-in-lofoten](http://localhost:4502/assets.html/content/dam/we-retail/en/experiences/arctic-surfing-in-lofoten)
 
 ![cf-44](assets/cf-44.png)
 
@@ -63,7 +77,7 @@ We.Retail中有數個範例內容片段；透過&#x200B;**Assets**、**檔案**�
 
 * **[變數](/help/assets/content-fragments/content-fragments-variations.md)**&#x200B;包含[Markdown](/help/assets/content-fragments/content-fragments-markdown.md)
 * **[相關聯的內容](/help/assets/content-fragments/content-fragments-assoc-content.md)**
-* **[中繼資料](/help/assets/content-fragments/content-fragments-metadata.md)**
+* **[後設資料](/help/assets/content-fragments/content-fragments-metadata.md)**
 
 ![cf-46](assets/cf-46.png)
 
@@ -77,7 +91,7 @@ We.Retail中有數個範例內容片段；透過&#x200B;**Assets**、**檔案**�
 
 * 透過&#x200B;**網站**、**We.Retail**、**語言主版**、**英文**、**體驗**&#x200B;進行瀏覽。 接著在Lofoten **開啟** Arctic Surfing進行編輯：
 
-   * [http://localhost:4502/editor.html/content/we-retail/language-masters/en/experience/arctic-surfing-in-lofoten.html](http://localhost:4502/editor.html/content/we-retail/language-masters/en/experience/arctic-surfing-in-lofoten.html)
+  * [http://localhost:4502/editor.html/content/we-retail/language-masters/en/experience/arctic-surfing-in-lofoten.html](http://localhost:4502/editor.html/content/we-retail/language-masters/en/experience/arctic-surfing-in-lofoten.html)
 
 ![cf-53](assets/cf-53.png)
 
@@ -87,16 +101,16 @@ We.Retail中有數個範例內容片段；透過&#x200B;**Assets**、**檔案**�
 
 * [使用內容片段](/help/assets/content-fragments/content-fragments.md)
 
-   * 瞭解如何建立、編輯及管理您的內容片段資產。
+  * 瞭解如何建立、編輯及管理您的內容片段資產。
 
 * [使用內容片段編寫頁面](/help/sites-authoring/content-fragments.md)
 
-   * 編寫頁面時使用您的內容片段。
+  * 編寫頁面時使用您的內容片段。
 
 * [開發AEM — 內容片段的元件](/help/sites-developing/components-content-fragments.md)
 
-   * 內容片段元件的概觀。
+  * 內容片段元件的概觀。
 
 * [開發和擴充內容片段](/help/sites-developing/customizing-content-fragments.md)
 
-   * 可協助您開發及擴充內容片段的資訊。
+  * 可協助您開發及擴充內容片段的資訊。

@@ -10,13 +10,20 @@ exl-id: 470a382a-2aa7-449e-bf48-b5a804c5b114
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '932'
-ht-degree: 0%
-
+source-wordcount: '1011'
+ht-degree: 6%
 ---
-
 # 評分和徽章要點 {#scoring-and-badges-essentials}
 
 AEM Communities評分和徽章功能可識別和獎勵社群成員。
@@ -106,15 +113,15 @@ AEM Communities評分和徽章功能可識別和獎勵社群成員。
 
 * 從Web控制檯
 
-   * 在&#x200B;**狀態**&#x200B;功能表下
-   * 選取&#x200B;**記錄檔**
-   * 搜尋您的記錄檔名稱，例如`scoring-debug`
+  * 在&#x200B;**狀態**&#x200B;功能表下
+  * 選取&#x200B;**記錄檔**
+  * 搜尋您的記錄檔名稱，例如`scoring-debug`
 
 * 在伺服器的本機磁碟上
 
-   * 記錄檔位於&lt;*server-install-dir*>/crx-quickstart/logs/&lt;*log-file-name*>.log
+  * 記錄檔位於&lt;*server-install-dir*>/crx-quickstart/logs/&lt;*log-file-name*>.log
 
-   * 例如 `.../crx-quickstart/logs/scoring-debug.log`
+  * 例如 `.../crx-quickstart/logs/scoring-debug.log`
 
 ![評分記錄](assets/scoring-log.png)
 
@@ -126,7 +133,7 @@ AEM Communities評分和徽章功能可識別和獎勵社群成員。
 
 **作者上的JSRP**：在作者環境中進行實驗會產生UGC，而且只能從作者環境中看到。
 
-發佈&#x200B;**上的** JSRP：同樣地，如果在發佈環境中進行測試，就必須在發佈執行個體上使用管理許可權來存取CRXDE Lite。 如果發佈執行個體是在[生產模式](/help/sites-administering/production-ready.md) （nosamplecontent執行模式）中執行，則需要[啟用CRXDE Lite](/help/sites-administering/enabling-crxde-lite.md)。
+發佈&#x200B;**上的** JSRP：同樣地，如果在發佈環境中進行測試，就必須在發佈執行個體上以管理許可權存取CRXDE Lite。 如果發佈執行個體是在[生產模式](/help/sites-administering/production-ready.md) （nosamplecontent執行模式）中執行，則需要[啟用CRXDE Lite](/help/sites-administering/enabling-crxde-lite.md)。
 
 JSRP上UGC的基礎位置是`/content/usergenerated/asi/jcr/`。
 
@@ -134,8 +141,8 @@ JSRP上UGC的基礎位置是`/content/usergenerated/asi/jcr/`。
 
 以下API可供使用：
 
-* [com.adobe.cq.social.scoring.api，在6.3中](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hant)
-* [com.adobe.cq.social.badging.api （在6.3中）](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hant)
+* [6.3中的com.adobe.cq.social.scoring.api](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hant)
+* [6.3中的com.adobe.cq.social.badging.api](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hant)
 
 已安裝Feature Pack的最新Javadoc可供Adobe存放庫中的開發人員使用。 請參閱[使用Maven for Communities ： Javadocs](/help/communities/maven.md#javadocs)。
 
@@ -238,7 +245,7 @@ JSRP上UGC的基礎位置是`/content/usergenerated/asi/jcr/`。
 
 `scoring`的子節點是評分規則名稱。 因此，最佳做法是伺服器上的評分規則名稱是全球唯一的。
 
-對於Geometrixx參與網站，使用者及其分數位於以評分規則名稱、社群網站的網站ID ( `engage-ba81p`)、唯一ID和使用者ID建構的路徑中：
+對於Geometrixx Engage網站，使用者及其分數位於以評分規則名稱、社群網站的網站ID ( `engage-ba81p`)、唯一ID和使用者ID建構的路徑中：
 
 * `.../scoring/forums-scoring/engage-ba81p/6d179715c0e93cb2b20886aa0434ca9b5a540401/riley`
 

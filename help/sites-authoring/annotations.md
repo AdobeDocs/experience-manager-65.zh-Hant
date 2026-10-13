@@ -9,13 +9,26 @@ exl-id: de1ae7e3-db3a-4b5e-8a4f-ae111227181f
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Developer
-source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '633'
+source-wordcount: '636'
 ht-degree: 0%
-
 ---
-
 # 編輯頁面時的註解{#annotations-when-editing-a-page}
 
 在實際發佈內容之前，將內容新增至網站頁面經常會經過討論。 為協助您執行此操作，許多與內容直接相關的元件（例如，與版面配置相反）可讓您新增附註。
@@ -103,13 +116,13 @@ ht-degree: 0%
 
    * 按一下文字標籤以開啟附註。 開啟後，即可檢視全文、進行變更或刪除註釋。
 
-      * 不能獨立於註釋刪除草圖。
+     * 不能獨立於註釋刪除草圖。
 
    * 重新定位文字標籤。
    * 按一下草繪線以選取該草繪，並將其拖曳至所需位置。
    * 移動或複製元件
 
-      * 任何相關的註釋及其草繪也會移動或複製，而且它們相對於段落的位置將保持相同。
+     * 任何相關的註釋及其草繪也會移動或複製，而且它們相對於段落的位置將保持相同。
 
 1. 若要退出「註釋」模式並返回先前使用的模式，請按一下頂端工具列右側的「註釋」圖示（x符號）。
 

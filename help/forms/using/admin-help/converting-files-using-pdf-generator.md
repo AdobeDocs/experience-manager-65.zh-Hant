@@ -9,13 +9,24 @@ feature: PDF Generator
 exl-id: 0e2c12b5-24c8-4aca-8826-cb661051ce4f
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: b26425d0-6fde-5e02-bfd6-e560e2fa86c9
+    internal-label: PDF Generator
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1222'
 ht-degree: 0%
-
 ---
-
 # 使用PDF Generator轉換檔案{#converting-files-using-pdf-generator}
 
 >[!NOTE]
@@ -51,7 +62,7 @@ PDF Generator在Acrobat 5.0或更新版本中建立的PDF檔案包含XML格式�
 
 檔案中繼資料包含（但不限於）也顯示在Acrobat中「檔案內容」對話方塊的「說明」標籤上的資訊。 在「說明」標籤上進行的變更會反映在檔案中繼資料中。 可使用協力廠商產品來擴充及修改檔案中繼資料。
 
-Adobe可延伸中繼資料平台(XMP)為Adobe應用程式提供通用XML架構，可標準化跨發佈工作流程的檔案中繼資料的建立、處理和交換。 您可以以XMP格式儲存和匯入檔案中繼資料XML原始程式碼，以便在不同檔案之間共用中繼資料。 如需XMP檔案的詳細資訊，請參閱[可延伸中繼資料平台(XMP)](https://www.adobe.com/tw/products/xmp/)和[Adobe XMP開發人員中心](https://www.adobe.com/devnet/xmp.html)。
+Adobe可延伸中繼資料平台(XMP)為Adobe應用程式提供通用XML架構，可標準化跨發佈工作流程的檔案中繼資料的建立、處理和交換。 您可以以XMP格式儲存和匯入檔案中繼資料XML原始程式碼，以便在不同檔案之間共用中繼資料。 如需XMP檔案的詳細資訊，請參閱[可延伸中繼資料平台(XMP)](https://www.adobe.com/products/xmp/)和[Adobe XMP開發人員中心](https://www.adobe.com/devnet/xmp.html)。
 
 您可以在Acrobat中建立XMP檔案。
 

@@ -8,13 +8,31 @@ exl-id: 72cd0594-8b5e-4d14-bc6f-bca26bae50f2
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,AEM Forms on OSGi
 role: Admin, User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 8c4fb903-572c-5473-ad45-8ebb0d5d8134
+    internal-label: AEM Forms on OSGi
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '840'
+source-wordcount: '847'
 ht-degree: 1%
-
 ---
-
 # 共用及要求存取使用者的收件匣專案 {#share-and-request-access}
 
 佇列是使用者的AEM收件匣中的專案清單。 這些專案可以是指派給使用者的專案或共用給使用者所屬群組的專案。 您可以存取收件匣以檢視收件匣專案並採取行動。 例如，與其他使用者共用一個專案。
@@ -41,7 +59,7 @@ AEM收件匣可讓您與其他使用者共用收件匣中的單一或所有專�
 
 >[!NOTE]
 >
->(僅適用於Forms中心工作流程專案)啟用工作流程中&#x200B;**指派工作**&#x200B;步驟的&#x200B;**[允許受指派人透過收件匣共用](aem-forms-workflow-step-reference.md)**&#x200B;選項來共用。 只有已啟用上述選項的專案才會顯示給其他使用者。
+>（僅適用於Forms中心工作流程專案）啟用工作流程中&#x200B;**指派工作**&#x200B;步驟的&#x200B;**[允許受指派人透過收件匣共用](aem-forms-workflow-step-reference.md)**&#x200B;選項來共用。 只有已啟用上述選項的專案才會顯示給其他使用者。
 
 ### 共用個別專案
 
@@ -55,7 +73,7 @@ AEM收件匣可讓您與其他使用者共用收件匣中的單一或所有專�
 
 >[!NOTE]
 >
->(僅適用於Forms中心工作流程專案)啟用工作流程中&#x200B;**指派工作**&#x200B;步驟的&#x200B;**[允許受指派人在收件匣](aem-forms-workflow-step-reference.md)**&#x200B;中明確共用。 只有已啟用上述選項的專案才會顯示給其他使用者。
+>（僅適用於Forms中心工作流程專案）啟用工作流程中&#x200B;**指派工作**&#x200B;步驟的&#x200B;**[允許受指派人在收件匣](aem-forms-workflow-step-reference.md)**&#x200B;中明確共用。 只有已啟用上述選項的專案才會顯示給其他使用者。
 
 ## 要求收件匣專案的存取權 {#request-access}
 
@@ -64,7 +82,7 @@ AEM收件匣可讓您與其他使用者共用收件匣中的單一或所有專�
 1. 登入您的AEM執行個體。 選取![檢視選擇器](assets/bell.svg)圖示並選取&#x200B;**[!UICONTROL 全部檢視]**。
 1. 選取&#x200B;**[!UICONTROL 建立]**&#x200B;按鈕旁的![檢視選擇器](assets/viewlist.svg)或![檢視選擇器](assets/calendar.svg)圖示，並選取&#x200B;**[!UICONTROL 設定]**。 設定對話方塊隨即顯示。
 1. 在&#x200B;**[!UICONTROL 要求存取使用者]**&#x200B;的收件匣專案文字方塊中輸入使用者的名稱，並選取&#x200B;**[!UICONTROL 要求]**。 系統會傳送請求給使用者，並根據使用者名稱顯示請求狀態。 重複此步驟以新增更多使用者。
-1. 選取&#x200B;**[!UICONTROL 儲存]**。此請求會以收件匣專案的形式傳送給使用者。 使用者可以選取專案並選取「核准」或「拒絕」，以授與或拒絕存取權。
+1. 選取&#x200B;**[!UICONTROL 儲存]**。 此請求會以收件匣專案的形式傳送給使用者。 使用者可以選取專案並選取「核准」或「拒絕」，以授與或拒絕存取權。
 
 
 ## 其他使用者共用的索賠專案 {#claim-items}

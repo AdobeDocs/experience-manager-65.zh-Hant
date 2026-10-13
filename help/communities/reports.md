@@ -10,13 +10,20 @@ role: Admin
 exl-id: 2aff2ffe-ba6f-4cc9-a126-40fc2a1161e2
 solution: Experience Manager
 feature: Communities
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '411'
+source-wordcount: '415'
 ht-degree: 6%
-
 ---
-
 # 報表主控台 {#reports-console}
 
 ## 概觀 {#overview}
@@ -43,17 +50,17 @@ ht-degree: 6%
 
 * 選擇來源：
 
-   * **[!UICONTROL 工作分派報表]**
+  * **[!UICONTROL 工作分派報表]**
 
-      * 為選取的社群網站、使用者或群組以及指派專案產生報告。
+    * 為選取的社群網站、使用者或群組以及指派專案產生報告。
 
-   * **[!UICONTROL 張貼報告]**
+  * **[!UICONTROL 張貼報告]**
 
-      * 針對選取的社群網站、內容型別和時段產生報表。
+    * 針對選取的社群網站、內容型別和時段產生報表。
 
-   * **[!UICONTROL 檢視報告]**
+  * **[!UICONTROL 檢視報告]**
 
-      * 針對選取的社群網站、內容型別和時段產生報表。
+    * 針對選取的社群網站、內容型別和時段產生報表。
 
 ![報告](assets/reports1.png)
 
@@ -77,10 +84,10 @@ ht-degree: 6%
 
   選取下列其中一項：
 
-   * 過去 7 天
-   * 過去 30 天
-   * 過去 90 天
-   * 去年
+  * 過去 7 天
+  * 過去 30 天
+  * 過去 90 天
+  * 過去 1 年
 
 選取&#x200B;**[!UICONTROL 產生]**&#x200B;以建立報告。
 
@@ -106,10 +113,10 @@ ht-degree: 6%
 
   選取下列其中一項：
 
-   * 過去 7 天
-   * 過去 30 天
-   * 過去 90 天
-   * 去年
+  * 過去 7 天
+  * 過去 30 天
+  * 過去 90 天
+  * 過去 1 年
 
 選取&#x200B;**[!UICONTROL 產生]**&#x200B;以建立報告。
 
@@ -121,8 +128,8 @@ ht-degree: 6%
 
 如果未列出任何社群網站，請確定已針對網站啟用Adobe Analytics。 如果選擇工作分派報表，請確定工作分派功能在社群網站的結構中。
 
-### 報告未顯示在AEM編寫執行個體中 {#reports-do-not-show-in-aem-author-instance}
+### 報表不會顯示在AEM作者例項中 {#reports-do-not-show-in-aem-author-instance}
 
-如果報表未顯示在AEM編寫執行個體中，請檢查是否有自訂，例如Publish執行個體上的URL對應。 如果只在社群網站的AEM Publish執行個體上完成URL對應，請確定已在&#x200B;**網站趨勢報表社交元件處理站**&#x200B;設定的AEM Author執行個體中設定相同專案。
+如果報表未顯示在AEM製作執行個體中，請檢查是否有自訂，例如發佈執行個體上的URL對應。 如果只在社群網站的AEM Publish執行個體上完成URL對應，請確定已在&#x200B;**網站趨勢報表社交元件處理站**&#x200B;設定的AEM Author執行個體中設定相同專案。
 
-在AEM作者![&#128279;](assets/sitetrend.png)上的URL對應
+AEM作者上的![URL對應](assets/sitetrend.png)

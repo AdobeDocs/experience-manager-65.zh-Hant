@@ -9,13 +9,22 @@ exl-id: 76a46c62-d47d-4970-8a3a-d56015639548
 solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 243139ec-8e41-5296-a287-31343ab1bc0f
+    internal-label: Integration
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '843'
+source-wordcount: '859'
 ht-degree: 1%
-
 ---
-
 # 目錄製作者{#catalog-producer}
 
 瞭解如何在AEM Assets中使用目錄製作程式，使用您的數位資產產生產品目錄。
@@ -92,8 +101,9 @@ ht-degree: 1%
 1. 若要重新排列目錄中的頁面，請按一下工具列中的&#x200B;**建立**&#x200B;圖示，然後從功能表選擇&#x200B;**合併**。 在精靈中，頂端的轉盤可讓您拖曳頁面以重新排序頁面。 您也可以移除頁面。
 
 1. 按一下「**下一步**」。 若要新增現有的InDesign檔案做為封面頁，請按一下&#x200B;**選擇封面頁**&#x200B;方塊旁的&#x200B;**瀏覽**，並指定封面頁範本的路徑。
-1. 按一下[儲存]&#x200B;**&#x200B;**，然後按一下[完成]**關閉確認對話方塊。
-選取&#x200B;**&#x200B;完成&#x200B;**&#x200B;選項時，會開啟一個對話方塊以選取您是否需要.pdf轉譯。**   ![匯出至pdf](assets/CatalogPDF.png)
+1. 按一下[儲存]&#x200B;**&#x200B;**，然後按一下[完成]&#x200B;**關閉確認對話方塊。**
+選取&#x200B;**完成**&#x200B;選項時，會開啟對話方塊以選取您是否需要.pdf轉譯。
+   ![匯出至pdf](assets/CatalogPDF.png)
    如果選取Acrobat(PDF)選項，則除了indesign轉譯之外，還會在&#x200B;**/jcr:content/轉譯**&#x200B;中建立pdf轉譯。 您可以選取下載對話方塊中的「轉譯」核取方塊來下載所有轉譯。
 
 1. 若要為您建立的目錄產生預覽，請在&#x200B;**目錄**&#x200B;主控台中選取該目錄，然後按一下工具列中的&#x200B;**預覽**&#x200B;圖示。

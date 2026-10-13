@@ -10,13 +10,20 @@ exl-id: 5b3d572d-e73d-4626-b664-c985949469c9
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1783'
+source-wordcount: '1790'
 ht-degree: 3%
-
 ---
-
 # 部署社群 {#deploying-communities}
 
 ## 先決條件 {#prerequisites}
@@ -27,9 +34,9 @@ ht-degree: 3%
 
 * 選購的授權：
 
-   * [適用於社群的Adobe Analytics功能](/help/communities/analytics.md)
-   * [MSRP適用的MongoDB](/help/communities/msrp.md)
-   * [適用於ASRP的Adobe Cloud](/help/communities/asrp.md)
+  * [適用於社群的Adobe Analytics功能](/help/communities/analytics.md)
+  * [MSRP適用的MongoDB](/help/communities/msrp.md)
+  * [適用於ASRP的Adobe Cloud](/help/communities/asrp.md)
 
 ## 安裝檢查清單 {#installation-checklist}
 
@@ -52,32 +59,32 @@ ht-degree: 3%
 * 設定[預設電子郵件服務](/help/communities/email.md)
 * 識別[共用UGC存放區](/help/communities/working-with-srp.md) (**SRP**)的選擇
 
-   * 如果MongoDB SRP [(MSRP)](/help/communities/msrp.md)
+  * 如果MongoDB SRP [(MSRP)](/help/communities/msrp.md)
 
-      * [安裝及設定MongoDB](/help/communities/msrp.md#mongodb-configuration)
-      * [設定Solr](/help/communities/solr.md)
-      * [選取MSRP](/help/communities/srp-config.md)
+    * [安裝及設定MongoDB](/help/communities/msrp.md#mongodb-configuration)
+    * [設定Solr](/help/communities/solr.md)
+    * [選取MSRP](/help/communities/srp-config.md)
 
-   * 如果關聯式資料庫SRP [(DSRP)](/help/communities/dsrp.md)
+  * 如果關聯式資料庫SRP [(DSRP)](/help/communities/dsrp.md)
 
-      * [安裝適用於MySQL的JDBC驅動程式](#jdbc-driver-for-mysql)
-      * [安裝及設定MySQL for DSRP](/help/communities/dsrp-mysql.md)
-      * [設定Solr](/help/communities/solr.md)
-      * [選取DSRP](/help/communities/srp-config.md)
+    * [安裝適用於MySQL的JDBC驅動程式](#jdbc-driver-for-mysql)
+    * [安裝及設定MySQL for DSRP](/help/communities/dsrp-mysql.md)
+    * [設定Solr](/help/communities/solr.md)
+    * [選取DSRP](/help/communities/srp-config.md)
 
-   * 如果Adobe SRP [(ASRP)](/help/communities/asrp.md)
+  * 如果Adobe SRP [(ASRP)](/help/communities/asrp.md)
 
-      * 與您的客戶代表合作進行布建
-      * [選取ASRP](/help/communities/srp-config.md)
+    * 與您的客戶代表合作進行布建
+    * [選取ASRP](/help/communities/srp-config.md)
 
-   * 若為JCR SRP [(JSRP)](/help/communities/jsrp.md)
+  * 若為JCR SRP [(JSRP)](/help/communities/jsrp.md)
 
-      * 不是共用的UGC （使用者產生的內容）存放區：
+    * 不是共用的UGC （使用者產生的內容）存放區：
 
-         * 從未復寫UGC
-         * UGC只會顯示在輸入它的AEM執行個體或叢集上
+      * 從未復寫UGC
+      * UGC只會顯示在輸入它的AEM執行個體或叢集上
 
-         * 預設為JSRP
+      * 預設為JSRP
 
 ## 最新版本 {#latest-releases}
 
@@ -110,13 +117,13 @@ AEM 6.5 Communities GA包含Communities套件。 若要進一步瞭解AEM 6.5 [�
 1. 從封存中擷取mysql-connector-java-&lt;version>-bin.jar （套件）
 1. 使用Web主控台安裝並啟動套件組合：
 
-   * 例如，https://localhost:4502/system/console/bundles
+   * 例如， https://localhost:4502/system/console/bundles
    * 選取&#x200B;**`Install/Update`**
    * 瀏覽……以選取從下載的ZIP封存解壓縮的套件組合
    * 檢查&#x200B;*Oracle Corporation的MySQLcom.mysql.jdbc*&#x200B;之JDBC驅動程式是否使用中，若未使用則啟動它（或檢查記錄檔）
 
 1. 如果在設定JDBC之後於現有部署上進行安裝，則從Web主控台重新儲存JDBC設定，以將JDBC重新繫結至新聯結器：
-   * 例如，https://localhost:4502/system/console/configMgr
+   * 例如， https://localhost:4502/system/console/configMgr
    * 尋找`Day Commons JDBC Connections Pool`組態
    * 選取以開啟
    * 選取`Save`
@@ -141,8 +148,8 @@ AEM 6.5 Communities GA包含Communities套件。 若要進一步瞭解AEM 6.5 [�
 
   若要取得Advanced MLS套件，請參閱說明檔案部署區段中的[AEM Advanced MLS](deploy-communities.md#aem-advanced-mls)。
 
-   * 1.2.40版，2016年4月6日
-   * 下載AEM-SOLR-MLS-phasetwo-1.2.40.zip
+  * 1.2.40版，2016年4月6日
+  * 下載AEM-SOLR-MLS-phasetwo-1.2.40.zip
 
 如需詳細資訊和安裝資訊，請造訪SRP的[Solr組態](/help/communities/solr.md)。
 
@@ -159,9 +166,9 @@ AEM 6.5 Communities GA包含Communities套件。 若要進一步瞭解AEM 6.5 [�
 * 選取&#x200B;**Assets**&#x200B;索引標籤
 * 選取&#x200B;**下載至磁碟**
 
-在本機AEM執行個體上，使用封裝管理員（例如[https://localhost:4502/crx/packmgr/](https://localhost:4502/crx/packmgr/)）來上傳至本機AEM的封裝存放庫。
+在本機AEM執行個體上，使用封裝管理員（例如，[https://localhost:4502/crx/packmgr/](https://localhost:4502/crx/packmgr/)）來上傳至本機AEM的封裝存放庫。
 
-或者，使用「封裝共用」從本機AEM執行個體存取封裝（例如，[https://localhost:4502/crx/packageshare/](https://localhost:4502/crx/packageshare/)），「`Download`」按鈕會下載到本機AEM執行個體的封裝存放庫。
+或者，使用封裝共用從本機AEM執行個體（例如，[https://localhost:4502/crx/packageshare/](https://localhost:4502/crx/packageshare/)）存取封裝，`Download`按鈕會下載到本機AEM執行個體的封裝存放庫。
 
 一旦進入本機AEM執行個體的封裝存放庫，請使用封裝管理員來安裝封裝。
 
@@ -200,7 +207,7 @@ AEM 6.5 Communities GA包含Communities套件。 若要進一步瞭解AEM 6.5 [�
 * 以系統管理員許可權登入
 * 存取[網頁主控台](/help/sites-deploying/configuring-osgi.md)
 
-   * 例如，[https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)
+  * 例如，[https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)
 
 * 找到`AEM Communities Publisher Configuration`
 * 選取編輯圖示
@@ -219,19 +226,19 @@ AEM 6.5 Communities GA包含Communities套件。 若要進一步瞭解AEM 6.5 [�
 
 * 存取作者上的復寫主控台
 
-   * 從全域導覽，瀏覽至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL 復寫]** > **[!UICONTROL 作者代理程式]**
+  * 從全域導覽，瀏覽至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL 復寫]** > **[!UICONTROL 作者代理程式]**
 
 * 請對這兩個代理程式遵循相同的程式：
 
-   * **預設代理程式（發佈）**
-   * **反向復寫代理程式（反向發佈）**
+  * **預設代理程式（發佈）**
+  * **反向復寫代理程式（反向發佈）**
 
-      1. 選取代理程式
-      1. 選取&#x200B;**編輯**
-      1. 選取&#x200B;**傳輸**&#x200B;標籤
-      1. 如果它不是連線埠`4503`，請編輯&#x200B;**URI**&#x200B;以指定正確的連線埠
+    1. 選取代理程式
+    1. 選取&#x200B;**編輯**
+    1. 選取&#x200B;**傳輸**&#x200B;標籤
+    1. 如果它不是連線埠`4503`，請編輯&#x200B;**URI**&#x200B;以指定正確的連線埠
 
-      1. 如果不是使用者`admin`，請編輯&#x200B;**使用者**&#x200B;和&#x200B;**密碼**&#x200B;以指定`administrators`使用者群組的成員
+    1. 如果不是使用者`admin`，請編輯&#x200B;**使用者**&#x200B;和&#x200B;**密碼**&#x200B;以指定`administrators`使用者群組的成員
 
 下列影像顯示透過將連線埠從4503變更為6103的結果：
 
@@ -252,12 +259,12 @@ AEM 6.5 Communities GA包含Communities套件。 若要進一步瞭解AEM 6.5 [�
 若要啟用通道服務：
 
 * 以作者執行個體的管理許可權登入。
-* 如果發行者不是localhost:4503或傳輸使用者不是`admin`，
+* 如果發行者不是localhost：4503或傳輸使用者不是`admin`，
 然後[設定復寫代理程式](#replication-agents-on-author)
 
 * 存取[網頁主控台](/help/sites-deploying/configuring-osgi.md)
 
-   * 例如，[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
+  * 例如，[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
 
 * 找到`AEM Communities Publish Tunnel Service`
 * 選取編輯圖示
@@ -276,28 +283,28 @@ AEM Communities提供兩項功能，要求所有AEM伺服器執行個體使用�
 
 * 存取AEM例項，通常是包含要複製之關鍵素材的製作例項
 
-   * 在本機檔案系統中找到`com.adobe.granite.crypto.file`套件，
-例如，
+  * 在本機檔案系統中找到`com.adobe.granite.crypto.file`套件，
+    例如，
 
-      * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21`
-      * `bundle.info`檔案識別該組合
+    * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21`
+    * `bundle.info`檔案識別該組合
 
-   * 導覽至資料夾，
-例如，
+  * 導覽至資料夾，
+    例如，
 
-      * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
+    * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
 
-      * 複製hmac和主要節點檔案
+    * 複製hmac和主要節點檔案
 
 * 針對每個目標AEM例項
 
-   * 導覽至資料夾，
-例如，
+  * 導覽至資料夾，
+    例如，
 
-      * `<publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
+    * `<publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
 
-   * 貼上先前複製的兩個檔案
-   * 如果目標AEM執行個體正在執行，則必須[重新整理Granite Crypto套件](#refresh-the-granite-crypto-bundle)
+  * 貼上先前複製的兩個檔案
+  * 如果目標AEM執行個體正在執行，則必須[重新整理Granite Crypto套件](#refresh-the-granite-crypto-bundle)
 
 >[!CAUTION]
 >
@@ -328,7 +335,7 @@ AEM Communities提供兩項功能，要求所有AEM伺服器執行個體使用�
 
 * 在每個發佈執行個體上，存取[網頁主控台](/help/sites-deploying/configuring-osgi.md)
 
-   * 例如，[https://&lt;伺服器>：&lt;連線埠>/system/console/bundles](https://localhost:4503/system/console/bundles)
+  * 例如，[https://&lt;伺服器>：&lt;連線埠>/system/console/bundles](https://localhost:4503/system/console/bundles)
 
 * 找到`Adobe Granite Crypto Support`套件(com.adobe.granite.crypto)
 * 選取&#x200B;**重新整理**

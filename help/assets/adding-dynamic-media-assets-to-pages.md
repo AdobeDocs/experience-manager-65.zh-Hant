@@ -14,23 +14,40 @@ autotag-review: '2026-05-18T18:40:39.792Z'
 TQID: 'https://experienceleague.adobe.com/rt98uGXgnhI4s10OP5uh5e4tKysOBlBY9vmAnsipI0Y'
 product_v2:
   - id: e14eb250-3c22-4a07-9061-a78112b2b826
+    internal-label: Experience Manager 6.5
   - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: da0dfbce-df02-4f8b-b32d-a4e3b1d05085
+    internal-label: Configuration
+  - id: f59890ff-de81-47d5-9ef8-7ab2dd10c6c3
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a9d2a4a6-0a32-4f6e-8eb1-128ec2b18a80
+    internal-label: Components
+  - id: f901afa4-5613-4581-add5-219fa5f03fb5
+    internal-label: Publishing
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
 level_v2:
   - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-source-git-commit: 9c96b6744c7af2f061b4dfbf403560047485f9b5
+    internal-label: Optimization
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: 3403
+source-wordcount: '3404'
 ht-degree: 6%
-
 ---
-
 # 將 Dynamic Media 資產新增至頁面{#adding-dynamic-media-assets-to-pages}
 
-若要將動態媒體功能新增至您在網站上使用的資產，您可以直接在頁面上新增&#x200B;**動態媒體**、**互動媒體**、**全景媒體**&#x200B;或&#x200B;**Video 360 Media**&#x200B;元件。 若要新增元件，請進入「版面」模式並啟用「動態媒體」元件。 然後，您可以將這些元件新增至頁面，並新增資產至元件。 動態媒體元件是智慧型的——他們知道您是新增影像還是視訊，而可用的設定選項也會隨之變更。
+若要將動態媒體功能新增至您在網站上使用的資產，您可以直接在頁面上新增&#x200B;**動態媒體**、**互動媒體**、**全景媒體**&#x200B;或&#x200B;**Video 360 Media**&#x200B;元件。 若要新增元件，請進入「版面」模式並啟用「動態媒體」元件。 然後，您可以將這些元件新增至頁面，並新增資產至元件。 動態媒體元件是智慧型的——它們知道您是新增影像還是影片，而可用的設定選項也會隨之變更。
 
 如果您使用Adobe Experience Manager做為WCM，可以直接將Dynamic Media資產新增至頁面。 如果您使用第三方來處理WCM，請連結 [或](/help/assets/linking-urls-to-yourwebapplication.md) [嵌入資](/help/assets/embed-code.md) 產。 如需響應式第三方互動網站，請參閱將最佳化 [的影像傳送至響應式網站](/help/assets/responsive-site.md)。
 
@@ -186,7 +203,7 @@ ht-degree: 6%
 
   **[!UICONTROL 針對更高解析度的裝置最佳化]**&#x200B;選項只有在下列為True時才會顯示：
 
-   * 在預設集型別下，已選取&#x200B;**[!UICONTROL 影像預設集]**，並從&#x200B;**[!UICONTROL 影像預設集]**&#x200B;下拉式清單中選取&#x200B;**[!UICONTROL RESS_IP]**。
+  * 在預設集型別下，已選取&#x200B;**[!UICONTROL 影像預設集]**，並從&#x200B;**[!UICONTROL 影像預設集]**&#x200B;下拉式清單中選取&#x200B;**[!UICONTROL RESS_IP]**。
 
   影像預設集的![裝置畫素比設定](/help/assets/assets-dm/dpr-ress-ip.png)
 
@@ -224,10 +241,10 @@ ht-degree: 6%
 
   例如，您可以使用檢視器修飾元執行下列動作：
 
-   * 將註解檔案與視訊建立關聯： [註解](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-caption.html?lang=zh-Hant)
-   * 將導覽檔案與視訊建立關聯： [導覽](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-navigation.html?lang=zh-Hant)
+  * 將註解檔案與視訊建立關聯： [註解](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-caption.html?lang=zh-Hant)
+  * 將導覽檔案與視訊建立關聯： [導覽](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-navigation.html?lang=zh-Hant)
 
-     您可以在元件中選取&#x200B;**[!UICONTROL 編輯]**，以編輯下列進階設定。
+    您可以在元件中選取&#x200B;**[!UICONTROL 編輯]**，以編輯下列進階設定。
 
 * **[!UICONTROL 標題]** — 變更視訊標題。
 
@@ -261,7 +278,7 @@ ht-degree: 6%
 
   **[!UICONTROL 針對更高解析度的裝置最佳化]**&#x200B;選項只有在下列為True時才會顯示：
 
-   * 在預設集型別下，已選取&#x200B;**[!UICONTROL 智慧型裁切]**&#x200B;選項。
+  * 在預設集型別下，已選取&#x200B;**[!UICONTROL 智慧型裁切]**&#x200B;選項。
 
   智慧型裁切的![裝置畫素比設定](/help/assets/assets-dm/dpr-smartcrop.png)
 
