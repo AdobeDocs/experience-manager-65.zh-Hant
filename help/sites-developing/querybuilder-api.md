@@ -1,6 +1,6 @@
 ---
 title: 查詢產生器 API
-description: Asset Share Query Builder的功能透過Java&amp；trade； API和REST API公開。
+description: Asset Share Query Builder的功能透過Java&trade； API和REST API公開。
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
@@ -13,11 +13,9 @@ feature: Developing,Search,Query Builder
 role: Developer
 source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
 workflow-type: tm+mt
-source-wordcount: '2033'
+source-wordcount: '2390'
 ht-degree: 0%
-
 ---
-
 # 查詢產生器 API{#query-builder-api}
 
 [資產共用查詢產生器](/help/assets/assets-finder-editor.md)的功能透過Java™ API和REST API公開。 本節將說明這些API。
@@ -40,7 +38,7 @@ REST API透過HTTP提供相同功能的存取權，且回應會以JSON傳送。
 
 >[!NOTE]
 >
->AEM Gem工作階段[使用AEM Querybuilder](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2017/aem-search-forms-using-querybuilder.html?lang=zh-Hant)輕鬆搜尋表單，以取得查詢產生器的詳細概觀。
+>AEM Gem工作階段[使用AEM查詢產生器輕鬆搜尋表單](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2017/aem-search-forms-using-querybuilder.html?lang=zh-Hant)，以取得查詢產生器的詳細概觀。
 
 ## 範例查詢 {#sample-queries}
 
@@ -141,8 +139,8 @@ orderby=path
 
 * 回應可能會產生下列結果：
 
-   * `total=43`， `more=false` — 表示點選總數為43。 UI可以在第一頁顯示最多十個結果，並為接下來的三個頁面提供分頁功能。 您也可以使用此實作來顯示描述性文字，例如&#x200B;**「找到43個結果」**。
-   * `total=100`， `more=true` — 表示點選總數大於100，而且不知道確切的計數。 UI最多可在第一頁中顯示十頁，並為接下來的10頁提供分頁。 您也可以使用此項來顯示&#x200B;**「找到100個以上的結果」**&#x200B;之類的文字。 當使用者進入下一頁時，呼叫查詢產生器將增加`guessTotal`的限制，也會增加`offset`和`limit`引數的限制。
+  * `total=43`， `more=false` — 表示點選總數為43。 UI可以在第一頁顯示最多十個結果，並為接下來的三個頁面提供分頁功能。 您也可以使用此實作來顯示描述性文字，例如&#x200B;**「找到43個結果」**。
+  * `total=100`， `more=true` — 表示點選總數大於100，而且不知道確切的計數。 UI最多可在第一頁中顯示十頁，並為接下來的10頁提供分頁。 您也可以使用此項來顯示&#x200B;**「找到100個以上的結果」**&#x200B;之類的文字。 當使用者進入下一頁時，呼叫查詢產生器將增加`guessTotal`的限制，也會增加`offset`和`limit`引數的限制。
 
 `guessTotal`應該用於UI需要使用無限捲動以避免Query Builder判斷確切點選計數的情況。
 
@@ -324,7 +322,7 @@ p.properties
 
 `http://localhost:4502/bin/querybuilder.json?p.hits=selective&property=jcr%3atitle&property.value=Triangle`
 
-[`http://localhost:4502/bin/querybuilder.json?`](http://localhost:4502/bin/querybuilder.json?p.hits=selective&amp;p.properties=sling%3aresourceType%20jcr%3aprimaryType&amp;property=jcr%3atitle&amp;property.value=Triangle) [p.hits=selective&amp;](http://localhost:4502/bin/querybuilder.json?p.hits=selective&amp;p.nodedepth=5&amp;p.properties=sling%3aresourceType%20jcr%3apath&amp;property=jcr%3atitle&amp;property.value=Triangle)p.properties=sling%3aresourceType%20jcr%3aprimaryType&amp;property=jcr%3atitle&amp;property.value=Triangle
+[`http://localhost:4502/bin/querybuilder.json?`](http://localhost:4502/bin/querybuilder.json?p.hits=selective&p.properties=sling%3aresourceType%20jcr%3aprimaryType&property=jcr%3atitle&property.value=Triangle) [p.hits=selective&amp;](http://localhost:4502/bin/querybuilder.json?p.hits=selective&p.nodedepth=5&p.properties=sling%3aresourceType%20jcr%3apath&property=jcr%3atitle&property.value=Triangle)p.properties=sling%3aresourceType%20jcr%3aprimaryType&amp;property=jcr%3atitle&amp;property.value=Triangle
 
 ```xml
 property=jcr:title
@@ -424,7 +422,7 @@ p.nodedepth=5
 
 >[!NOTE]
 >
->若要瞭解如何建立使用QueryBuilder API的OSGi套件組合，並在Adobe Experience Manager應用程式中使用該OSGi套件組合，請參閱[建立使用查詢產生器AP](https://helpx.adobe.com/experience-manager/using/using-query-builder-api.html)I的Adobe CQ OSGi套件組合。
+>若要瞭解如何建立使用QueryBuilder API並在Adobe Experience Manager應用程式中使用該OSGi套件組合的OSGi套件組合，請參閱[建立使用查詢產生器AP](https://helpx.adobe.com/experience-manager/using/using-query-builder-api.html)I的Adobe CQ OSGi套件組合。
 
 使用查詢產生器(JSON) Servlet透過HTTP執行的相同查詢：
 
@@ -468,7 +466,7 @@ Query loadedQuery = builder.loadQuery("/mypath/getfiles", session);
 
 （`path=/tmp`只是一個範例）。
 
-### Recommendations的一般偵錯 {#general-debugging-recommendations}
+### 一般偵錯建議 {#general-debugging-recommendations}
 
 ### 透過記錄取得可說明的XPath {#obtain-explain-able-xpath-via-logging}
 
@@ -476,18 +474,18 @@ Query loadedQuery = builder.loadQuery("/mypath/getfiles", session);
 
 * 啟用QueryBuilder的DEBUG記錄檔以取得基礎的、可解釋的XPath查詢
 
-   * 導覽至https://&lt;serveraddress>：&lt;serverport>/system/console/slinglog。 在&#x200B;**DEBUG**&#x200B;為`com.day.cq.search.impl.builder.QueryImpl`建立記錄器。
+  * 導覽至https://&lt;serveraddress>：&lt;serverport>/system/console/slinglog。 在&#x200B;**DEBUG**&#x200B;為`com.day.cq.search.impl.builder.QueryImpl`建立記錄器。
 
 * 為上述類別啟用DEBUG之後，記錄會顯示查詢產生器產生的XPath。
 * 從相關QueryBuilder查詢的記錄專案複製XPath查詢，例如：
 
-   * `com.day.cq.search.impl.builder.QueryImpl XPath query: /jcr:root/content//element(*, cq:Page)[(jcr:contains(jcr:content, "Geometrixx") or jcr:contains(jcr:content/@cq:tags, "Geometrixx"))]`
+  * `com.day.cq.search.impl.builder.QueryImpl XPath query: /jcr:root/content//element(*, cq:Page)[(jcr:contains(jcr:content, "Geometrixx") or jcr:contains(jcr:content/@cq:tags, "Geometrixx"))]`
 
 * 將XPath查詢貼入[Explain查詢](/help/sites-administering/operations-dashboard.md#explain-query)做為XPath以取得查詢計畫
 
 ### 透過Query Builder偵錯工具取得可說明的XPath {#obtain-explain-able-xpath-via-the-query-builder-debugger}
 
-* 使用AEM QueryBuilder Debugger產生可解釋的XPath查詢：
+* 使用AEM QueryBuilder Debugger產生可說明的XPath查詢：
 
 說明在開發週期期間針對目標索引集進行的&#x200B;**所有**&#x200B;查詢。
 
@@ -495,18 +493,18 @@ Query loadedQuery = builder.loadQuery("/mypath/getfiles", session);
 
 * 啟用QueryBuilder的DEBUG記錄檔以取得基礎的、可解釋的XPath查詢
 
-   * 導覽至https://&lt;serveraddress>：&lt;serverport>/system/console/slinglog。 在&#x200B;**DEBUG**&#x200B;為`com.day.cq.search.impl.builder.QueryImpl`建立記錄器。
+  * 導覽至https://&lt;serveraddress>：&lt;serverport>/system/console/slinglog。 在&#x200B;**DEBUG**&#x200B;為`com.day.cq.search.impl.builder.QueryImpl`建立記錄器。
 
 * 為上述類別啟用DEBUG之後，記錄會顯示查詢產生器產生的XPath。
 * 從相關QueryBuilder查詢的記錄專案複製XPath查詢，例如：
 
-   * `com.day.cq.search.impl.builder.QueryImpl XPath query: /jcr:root/content//element(*, cq:Page)[(jcr:contains(jcr:content, "Geometrixx") or jcr:contains(jcr:content/@cq:tags, "Geometrixx"))]`
+  * `com.day.cq.search.impl.builder.QueryImpl XPath query: /jcr:root/content//element(*, cq:Page)[(jcr:contains(jcr:content, "Geometrixx") or jcr:contains(jcr:content/@cq:tags, "Geometrixx"))]`
 
 * 將XPath查詢貼入[Explain查詢](/help/sites-administering/operations-dashboard.md#explain-query)做為XPath以取得查詢計畫
 
 **透過Query Builder偵錯工具取得可說明的XPath**
 
-* 使用AEM QueryBuilder Debugger產生可解釋的XPath查詢：
+* 使用AEM QueryBuilder Debugger產生可說明的XPath查詢：
 
 ![chlimage_1-66](assets/chlimage_1-66a.png)
 
