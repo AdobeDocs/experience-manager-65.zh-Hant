@@ -87,7 +87,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->這個TarMK範例中的「冷待命」部署要求主要執行個體和待命執行個體必須分別授權，因為容錯移轉伺服器會持續進行復寫。 如需有關授權的詳細資訊，請參閱[Adobe一般授權條款](https://www.adobe.com/legal/terms/enterprise-licensing.html)。
+>這個TarMK範例中的「冷待命」部署要求主要執行個體和待命執行個體必須分別授權，因為容錯移轉伺服器會持續進行復寫。 如需有關授權的詳細資訊，請參閱[Adobe一般授權條款](https://www.adobe.com/tw/legal/terms/enterprise-licensing.html)。
 
 ### TarMK陣列 {#tarmk-farm}
 

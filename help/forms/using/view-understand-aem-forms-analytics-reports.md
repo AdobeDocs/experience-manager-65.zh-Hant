@@ -40,7 +40,7 @@ Adobe Experience Manager Forms與Adobe Analytics整合，可讓您擷取及追�
 
 AEM Forms中的分析功能屬於AEM Forms附加元件套件的一部分。 如需有關安裝附加元件套件的資訊，請參閱[安裝和設定AEM Forms](../../forms/using/installing-configuring-aem-forms-osgi.md)。
 
-除了附加元件套件之外，您還需要Adobe Analytics帳戶。 如需解決方案的詳細資訊，請參閱[Adobe Analytics](https://www.adobe.com/solutions/digital-analytics.html)。
+除了附加元件套件之外，您還需要Adobe Analytics帳戶。 如需解決方案的詳細資訊，請參閱[Adobe Analytics](https://www.adobe.com/tw/solutions/digital-analytics.html)。
 
 取得AEM Forms附加元件套件和Adobe Analytics帳戶後，請將Adobe Analytics帳戶與AEM Forms整合，並如[設定分析和報表](../../forms/using/configure-analytics-forms-documents.md)中所述，啟用表單或檔案上的追蹤。
 

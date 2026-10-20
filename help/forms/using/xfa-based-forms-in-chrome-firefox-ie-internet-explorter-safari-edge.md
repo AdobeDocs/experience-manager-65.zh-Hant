@@ -32,7 +32,7 @@ ht-degree: 0%
 
 許多近期的瀏覽器版本都包含本身對於XFA型PDF forms的有限支援。 雖然這些瀏覽器可以開啟XFA型PDF forms，但提供的功能有限。 如果您無法在現代化瀏覽器中開啟或提交以XFA為基礎的PDF表單，請使用下列其中一種方法：
 
-* 使用[® Acrobat®](https://www.adobe.com/acrobat.html)或[Adobe® Adobe® Reader®](https://get.adobe.com/reader/)、版本8或更新版本來開啟及提交XFA型PDF forms。
+* 使用[® Acrobat®](https://www.adobe.com/tw/acrobat.html)或[Adobe® Adobe® Reader®](https://get.adobe.com/reader/)、版本8或更新版本來開啟及提交XFA型PDF forms。
 * Acrobat和Reader位於Microsoft® Windows®上，可讓您設定在「受保護的檢視」模式中開啟PDF，如此可防止XFA型PDF forms開啟。 請確定Acrobat或Reader中的受保護檢視模式已停用。 如需詳細資訊，請參閱[受保護的檢視（僅限Windows）](https://helpx.adobe.com/in/reader/using/protected-mode-windows.html)。
 * （針對Forms開發人員） Adobe Experience Manager Forms也提供以下支援：
 

@@ -66,7 +66,7 @@ AEM Forms Document Security提供多種工具來套用安全性原則。 您可�
 
 * **Adobe Acrobat：**&#x200B;您可以使用Adobe Acrobat將安全性原則套用至使用熱門案頭應用程式（例如Microsoft®Office、網頁瀏覽器或任何支援以PDF格式列印的應用程式）建立的PDF檔案。
 
-  您可以從[Adobe Acrobat網站](https://www.adobe.com/acrobat/free-trial-download.html)購買並下載Adobe。 Adobe Acrobat文章[設定PDF的安全性原則](https://helpx.adobe.com/tw/acrobat/using/setting-security-policies-pdfs.html)提供在Adobe Acrobat中建立和套用原則的詳細資訊。
+  您可以從[Adobe Acrobat網站](https://www.adobe.com/tw/acrobat/free-trial-download.html)購買並下載Adobe。 Adobe Acrobat文章[設定PDF的安全性原則](https://helpx.adobe.com/tw/acrobat/using/setting-security-policies-pdfs.html)提供在Adobe Acrobat中建立和套用原則的詳細資訊。
 
 * **® Office適用的Document Security Extension**：您可以使用Microsoft® Office適用的Document Security Extension，從Microsoft® Office程式將預先定義的原則套用至Microsoft® Office檔案。 此擴充功能可確保只有授權人員才能使用受原則保護的®Word、Excel和PowerPoint檔案。 只有已安裝外掛程式的授權使用者才能使用受原則保護的檔案。
 

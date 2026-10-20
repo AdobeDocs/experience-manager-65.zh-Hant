@@ -648,7 +648,7 @@ Removed lines: >- PDF Generator fails to convert files using Microsoft&reg; Visi
 >
 >AEM Forms不支援Adobe Acrobat 2020 （傳統路線）。 請改用Adobe Acrobat Pro DC （連續追蹤，最新版本）。
 >
->Acrobat DC產品系列為Acrobat和Reader引入兩種路徑，它們是不同的產品：「Classic」和「Continuous」。 如需兩個曲目的詳細資訊和比較，請參閱[https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/whatsnewdc.html](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/whatsnewdc.html)。
+>Acrobat DC產品系列為Acrobat和Reader引入兩種路徑，它們是不同的產品：「Classic」和「Continuous」。 如需兩個曲目的詳細資訊和比較，請參閱[https://www.adobe.com/tw/devnet-docs/acrobatetk/tools/AdminGuide/whatsnewdc.html](https://www.adobe.com/tw/devnet-docs/acrobatetk/tools/AdminGuide/whatsnewdc.html)。
 
 ## AEM Forms on JEE的支援使用者端 {#supported-clients-for-aem-forms-on-jee}
 

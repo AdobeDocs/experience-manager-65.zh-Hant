@@ -32,7 +32,7 @@ ht-degree: 3%
 
 AEM Communities會公開現成可用的API，以管理使用者設定檔及大量管理使用者產生的內容(UGC)。 啟用後，**UserUgcManagement**&#x200B;服務可讓有特殊許可權的使用者（社群管理員和版主）停用使用者設定檔，以及大量刪除或大量匯出特定使用者的UGC。 這些API還能讓客戶資料的控管者和處理者遵守歐盟的一般資料保護規範(GDPR)和其他受GDPR啟發的隱私權法令。
 
-如需進一步資訊，請參閱Adobe隱私權中心的[GDPR頁面。](https://www.adobe.com/privacy/general-data-protection-regulation.html)
+如需進一步資訊，請參閱Adobe隱私權中心的[GDPR頁面。](https://www.adobe.com/tw/privacy/general-data-protection-regulation.html)
 
 >[!NOTE]
 >
