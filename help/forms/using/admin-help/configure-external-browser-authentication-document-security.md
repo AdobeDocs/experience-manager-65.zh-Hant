@@ -47,7 +47,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
-> 外部瀏覽器驗證需要使用者端上的Adobe Acrobat或Adobe Acrobat Reader支援版本。 如需版本詳細資訊和更新，請參閱[Acrobat發行說明（2026年3月連續追蹤）](https://www.adobe.com/devnet-docs/acrobatetk/tools/ReleaseNotesDC/continuous/dccontinuousmarch2026.html#dccontinuousmarchtwentytwentysix)。
+> 外部瀏覽器驗證需要使用者端上的Adobe Acrobat或Adobe Acrobat Reader支援版本。 如需版本詳細資訊和更新，請參閱[Acrobat發行說明（2026年3月連續追蹤）](https://www.adobe.com/tw/devnet-docs/acrobatetk/tools/ReleaseNotesDC/continuous/dccontinuousmarch2026.html#dccontinuousmarchtwentytwentysix)。
 
 ### AEM Forms JEE Hotfix2 6.5.24.0的軟體發佈連結 {#software-distribution-links}
 

@@ -32,7 +32,7 @@ ht-degree: 0%
 
 如果您無法使用Adobe LiveCycle Rights Management開啟以XFA為基礎的PDF表單或受原則保護的檔案，請檢查以下原因：
 
-* 以XFA為基礎的PDF forms和受原則保護的檔案需要Adobe® Acrobat®或Adobe® Reader®、版本8和更新版本。 請參閱[Adobe下載](https://www.adobe.com/downloads.html)以瞭解如何下載最新的Reader或Acrobat。
+* 以XFA為基礎的PDF forms和受原則保護的檔案需要Adobe® Acrobat®或Adobe® Reader®、版本8和更新版本。 請參閱[Adobe下載](https://www.adobe.com/tw/downloads.html)以瞭解如何下載最新的Reader或Acrobat。
 * Mozilla Firefox和Google Chrome等瀏覽器提供內建的PDF檢視器，不支援XFA型PDF forms。 若要在這些瀏覽器中檢視XFA型PDF forms，您必須設定為使用Acrobat或Reader開啟PDF。 如需詳細資訊，請參閱以XFA為基礎的Mozilla Firefox與Google ChromePDF forms 。
 * Acrobat和Reader位於Microsoft® Windows®上，可讓您設定以受保護的檢視模式開啟PDF，如此可防止開啟XFA型PDF forms和受原則保護的檔案。 請確定Acrobat或Reader中的受保護檢視模式已停用。 如需詳細資訊，請參閱[受保護的檢視（僅限Windows）](https://helpx.adobe.com/tw/acrobat/kb/end-of-support-acrobat-x-reader-x.html)。
 * 如果您嘗試在行動裝置上存取以XFA為基礎的PDF forms或受原則保護的檔案，請考慮下列事項：

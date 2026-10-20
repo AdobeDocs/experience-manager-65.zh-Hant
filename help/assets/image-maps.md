@@ -44,7 +44,7 @@ ht-degree: 2%
 
    ![chlimage_1-422](assets/chlimage_1-422.png)
 
-1. 按一下連結區，然後輸入URL和Alt文字。 從&#x200B;**[!UICONTROL Target]**&#x200B;清單中，指定您要顯示影像地圖的位置，例如，相同的標籤、新的標籤或iFrame。 例如，輸入`https://www.adobe.com`做為URL，輸入`Adobe website`做為Alt文字，並從&#x200B;**[!UICONTROL 目標]**&#x200B;清單中指定&#x200B;**[!UICONTROL 新索引標籤]**，以便在新的索引標籤中開啟影像地圖。
+1. 按一下連結區，然後輸入URL和Alt文字。 從&#x200B;**[!UICONTROL Target]**&#x200B;清單中，指定您要顯示影像地圖的位置，例如，相同的標籤、新的標籤或iFrame。 例如，輸入`https://www.adobe.com/tw`做為URL，輸入`Adobe website`做為Alt文字，並從&#x200B;**[!UICONTROL 目標]**&#x200B;清單中指定&#x200B;**[!UICONTROL 新索引標籤]**，以便在新的索引標籤中開啟影像地圖。
 
    ![chlimage_1-423](assets/chlimage_1-423.png)
 

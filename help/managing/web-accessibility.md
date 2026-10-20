@@ -78,4 +78,4 @@ Adobe Experience Manager (AEM)包含多項功能，可提升適用性表單對�
 
 ## Adobe 的無障礙措施 {#accessibility-at-adobe}
 
-如需其他資訊，請造訪[Adobe協助工具資源中心](https://www.adobe.com/accessibility/)。
+如需其他資訊，請造訪[Adobe協助工具資源中心](https://www.adobe.com/tw/accessibility/)。

@@ -93,5 +93,5 @@ Dynamic Media支援以隱藏式字幕傳送視訊與最適化視訊集。 註解
 
 >[!MORELIKETHIS]
 >
->* [Adobe解決方案的協助工具](https://www.adobe.com/accessibility.html)
+>* [Adobe解決方案的協助工具](https://www.adobe.com/tw/accessibility.html)
 >*  [!DNL Experience Manager Assets]&#x200B;[&#128279;](/help/assets/accessibility.md)中的協助工具
