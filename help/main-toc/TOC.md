@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: 使用Adobe Experience Manager 6.5檔案瞭解其運作方式，以及軟體可為您做哪些事。
 breadcrumb-title: 使用手冊
 user-guide-title: AEM 6.5
-source-git-commit: 1af0281a94789888e87ba959f82ff491f4d7ee60
+source-git-commit: 9240de61985dc32f17593f416e5d054cadb8a392
 workflow-type: tm+mt
-source-wordcount: '8302'
+source-wordcount: '8310'
 ht-degree: 23%
 ---
 
@@ -566,6 +566,7 @@ ht-degree: 23%
       + [緩解AEM Forms JEE中的序列化問題](/help/forms/using/mitigating-serialization-issues-forms-jee.md)
     + 設定 AEM Forms {#configure-aem-forms}
       + [AEM Forms 伺服器的效能調整](/help/forms/using/performance-tuning-aem-forms.md)
+      + [建立最適化表單參考的自訂索引](/help/forms/using/create-custom-index-for-adaptive-forms-references.md)
       + [設定最適化表單快取](/help/forms/using/configure-adaptive-forms-cache.md)
       + [正在設定AEM DS設定](/help/forms/using/configuring-the-processing-server-url.md)
       + [設定同步排程器](/help/forms/using/configure-synchronization-scheduler.md)
