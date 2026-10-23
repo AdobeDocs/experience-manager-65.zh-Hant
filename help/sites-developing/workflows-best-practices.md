@@ -96,7 +96,7 @@ AEM可允許同時執行多個工作流程執行緒。 根據預設，執行緒�
 
 >[!NOTE]
 >
->另請參閱AEM 6.5[&#128279;](/help/sites-deploying/repository-restructuring.md)中的存放庫重組。
+>另請參閱AEM 6.5](/help/sites-deploying/repository-restructuring.md)中的[存放庫重組。
 
 #### 位置 — 工作流程模型 {#locations-workflow-models}
 
@@ -301,7 +301,7 @@ public void execute(WorkItem item, WorkflowSession workflowSession, MetaDataMap 
 
 您可以定義[工作流程階段](/help/sites-developing/workflows.md#workflow-stages)，然後將任務/步驟指派給特定工作流程階段。
 
-當您從&#x200B;**收件匣**&#x200B;[&#128279;](/help/sites-authoring/workflows-participating.md#opening-a-workflow-item-to-view-details-and-take-actions)&#x200B;按一下工作專案的&#x200B;**工作流程資訊**&#x200B;索引標籤時，此資訊可用來顯示工作流程的進度。 可以編輯現有的工作流程模型以新增階段。
+當您從&#x200B;**收件匣**](/help/sites-authoring/workflows-participating.md#opening-a-workflow-item-to-view-details-and-take-actions)&#x200B;按一下工作專案的&#x200B;[**工作流程資訊**&#x200B;索引標籤時，此資訊可用來顯示工作流程的進度。 可以編輯現有的工作流程模型以新增階段。
 
 ### 啟動頁面處理步驟 {#activate-page-process-step}
 
@@ -320,7 +320,7 @@ public void execute(WorkItem item, WorkflowSession workflowSession, MetaDataMap 
 
 >[!NOTE]
 >
->另請參閱AEM 6.5[&#128279;](/help/sites-deploying/repository-restructuring.md)中的存放庫重組。
+>另請參閱AEM 6.5](/help/sites-deploying/repository-restructuring.md)中的[存放庫重組。
 
 ## 系統工具 {#system-tools}
 
