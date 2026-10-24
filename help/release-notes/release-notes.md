@@ -22,9 +22,9 @@ role_v2:
     internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
+source-git-commit: 9eee0eef3e19a4787b7104f470d35b4c98fd53db
 workflow-type: tm+mt
-source-wordcount: '7612'
+source-wordcount: '7677'
 ht-degree: 4%
 ---
 # [!DNL Adobe Experience Manager] 6.5最新Service Pack發行說明 {#aem-service-pack-release-notes}
@@ -66,7 +66,7 @@ Experience Manager 6.5.25.0包含新功能、客戶要求的重要增強功能�
 
 * [XFA型PDF的階層式書籤](https://helpx.adobe.com/tw/content/dam/help/en/experience-manager/6-5/forms/pdf/using-designer.pdf)：輸出服務和AEM Forms Designer現在會在靜態互動和平坦的XFA型PDF中產生結構化的書籤階層。 書籤會依照在文字方塊的「協助工具」屬性中設定的標題層級(H1-H6)顯示，因此H1-H6專案會巢狀內嵌在正確的父項下，而非平行顯示。
 
-* [&#x200B; JEE交易記錄中的表單層級詳細資料](/help/forms/using/transaction-report-overview-jee.md#form-level-details-transaction-log-jee)： JEE上的AEM Forms記錄每個交易的`transaction_log.log`中的表單層級詳細資料，以及服務和操作資訊。 管理員可在分析提交、轉譯和轉換時，將交易報告資料與特定表單建立關聯。 (FORMS-21574)
+* [ JEE交易記錄中的表單層級詳細資料](/help/forms/using/transaction-report-overview-jee.md#form-level-details-transaction-log-jee)： JEE上的AEM Forms記錄每個交易的`transaction_log.log`中的表單層級詳細資料，以及服務和操作資訊。 管理員可在分析提交、轉譯和轉換時，將交易報告資料與特定表單建立關聯。 (FORMS-21574)
 
 * [已更新支援的平台矩陣](/help/forms/using/aem-forms-jee-supported-platforms.md)： JEE Service Pack上的AEM Forms 6.5.25.0新增支援與下列較新技術的相容性：
   * JBoss® Enterprise Application Platform (EAP) 7.4.23
@@ -453,7 +453,7 @@ AEM 6.5升級後，JSP檔案編輯現在可在CRXDE Lite中如預期般運作。
 您可以使用兩種不同的方法來安裝[!DNL Experience Manager] 6.5.25.0.<!-- UPDATE FOR EACH NEW RELEASE -->
 
 * 伺服器上線時，請將封裝放入`../crx-quickstart/install`資料夾。 套件會自動安裝。
-* 使用封裝管理員[&#128279;](/help/sites-administering/package-manager.md#package-share)的HTTP API。 使用`cmd=install&recursive=true`安裝巢狀套件。
+* 使用封裝管理員](/help/sites-administering/package-manager.md#package-share)的[HTTP API。 使用`cmd=install&recursive=true`安裝巢狀套件。
 
 >[!NOTE]
 >
@@ -533,7 +533,7 @@ Adobe打算在產品生命週期結束前保留這些較舊的端點。 Adobe �
 
 <!-- THESE KNOWN ISSUES CARRY OVER EACH RELEASE. THE "PRODUCT UPDATES TEAM" IS SUPPOSED TO VERIFY EACH ISSUE AND LET YOU KNOW IF ANYTHING NEEDS TO BE ADDED, DELETED, OR CHANGED IN THIS LIST. -->
 
-* 與Oak相關的&#x200B;**&#x200B;**
+* 與Oak相關的&#x200B;****
 從Service Pack 13及更高版本開始，下列錯誤記錄檔開始出現，這會影響持續性快取：
 
   ```shell
@@ -612,11 +612,13 @@ Adobe打算在產品生命週期結束前保留這些較舊的端點。 Adobe �
 
 ### AEM Sites的已知問題 {#known-issues-aem-sites-6525}
 
-內容片段 — 預覽失敗，因為大型片段樹受到DoS保護。 請參閱有關預設GraphQL查詢執行器組態選項[&#128279;](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-kcs/kbarticles/ka-23945)的KB文章(SITES-17934)
+內容片段 — 預覽失敗，因為大型片段樹受到DoS保護。 請參閱有關預設GraphQL查詢執行器組態選項](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-kcs/kbarticles/ka-23945)的[KB文章(SITES-17934)
 
 ### AEM Forms的已知問題 {#known-issues-aem-forms-6525}
 
 * **FORMS-23722**&#x200B;當包含使用`bindref`的&#x200B;**檔案附件**&#x200B;欄位的表單提交給具有&#x200B;**指派任務**&#x200B;步驟的AEM工作流程時，附件未顯示。 因此，當從「收件匣」開啟任務時，它們不會出現。 檔案會正確儲存至存放庫，但指派工作步驟UI無法顯示附件。
+
+* **FORMS-28517**&#x200B;當數位簽署的PDF附加至AEM Forms JEE Workspace中的工作時，上傳維持卡在上傳狀態或發生「檔案無效」錯誤而失敗。 因此，無法將較大的已簽署PDF附件新增至工作。 此問題已在較新版本中修正。 如需目前/現有版本的Hotfix，請聯絡Adobe支援。
 
 #### 可用Hotfix的已知問題 {#aem-forms-issues-with-hotfixes}
 
@@ -651,11 +653,11 @@ Adobe打算在產品生命週期結束前保留這些較舊的端點。 Adobe �
 這些網站僅供客戶使用。 若您是客戶並且需要存取權，請聯絡您的 Adobe 客戶經理。
 
 * [在 licensing.adobe.com 下載產品](https://licensing.adobe.com/)
-* [聯絡 Adobe 客戶支援](https://experienceleague.adobe.com/zh-hant/docs/support-resources/adobe-support-tools-guide/adobe-customer-support-experience#)。
+* [聯絡 Adobe 客戶支援](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-customer-support-experience#)。
 
 >[!MORELIKETHIS]
 >
->* [[!DNL Experience Manager] 產品頁面](https://business.adobe.com/tw/products/experience-manager/adobe-experience-manager.html)
+>* [[!DNL Experience Manager] 產品頁面](https://business.adobe.com/products/experience-manager/adobe-experience-manager.html)
 >* [[!DNL Experience Manager] 6.5檔案](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65)
 >* [訂閱Adobe優先產品更新](https://www.adobe.com/tw/subscription/priority-product-update.html)
 
