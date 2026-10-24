@@ -22,9 +22,9 @@ role_v2:
     internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
+source-git-commit: 9eee0eef3e19a4787b7104f470d35b4c98fd53db
 workflow-type: tm+mt
-source-wordcount: '7612'
+source-wordcount: '7677'
 ht-degree: 4%
 ---
 # [!DNL Adobe Experience Manager] 6.5最新Service Pack發行說明 {#aem-service-pack-release-notes}
@@ -617,6 +617,8 @@ Adobe打算在產品生命週期結束前保留這些較舊的端點。 Adobe �
 ### AEM Forms的已知問題 {#known-issues-aem-forms-6525}
 
 * **FORMS-23722**&#x200B;當包含使用`bindref`的&#x200B;**檔案附件**&#x200B;欄位的表單提交給具有&#x200B;**指派任務**&#x200B;步驟的AEM工作流程時，附件未顯示。 因此，當從「收件匣」開啟任務時，它們不會出現。 檔案會正確儲存至存放庫，但指派工作步驟UI無法顯示附件。
+
+* **FORMS-28517**&#x200B;當數位簽署的PDF附加至AEM Forms JEE Workspace中的工作時，上傳維持卡在上傳狀態或發生「檔案無效」錯誤而失敗。 因此，無法將較大的已簽署PDF附件新增至工作。 此問題已在較新版本中修正。 如需目前/現有版本的Hotfix，請聯絡Adobe支援。
 
 #### 可用Hotfix的已知問題 {#aem-forms-issues-with-hotfixes}
 
