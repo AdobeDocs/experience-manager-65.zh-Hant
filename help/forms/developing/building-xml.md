@@ -7,11 +7,9 @@ feature: Adaptive Forms
 role: User, Developer
 source-git-commit: 361f0a5f2d1484cf594edfda73250c5690ed7cab
 workflow-type: tm+mt
-source-wordcount: '1043'
+source-wordcount: '1060'
 ht-degree: 0%
-
 ---
-
 # 使用AEM Forms on JEE Workbench中的執行指令碼服務來建置XML資料 {#using-execute-script-service-forms-jee-workbench}
 
 JEE流程管理工作流程中的AEM Forms涉及許多XML，例如：XML資訊可在流程中建置並傳送至JEE Workspace上的AEM Forms中的Flex應用程式，用於系統設定，或傳遞資訊至表單或從表單傳送。 在許多情況下，JEE上的AEM Forms開發人員需要管理XML，而且在許多情況下，這要求透過JEE上的AEM Forms管理XML。
