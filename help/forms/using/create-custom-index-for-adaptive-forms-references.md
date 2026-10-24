@@ -16,7 +16,7 @@ ht-degree: 1%
 
 在AEM Forms 6.5.24.0和更新版本中，參考查詢使用`aemformsAFReferences`索引標籤。 這些發行版本包含查詢變更，但您必須使用該標籤建立自訂索引。 本文說明如何定義及部署索引。
 
-若為AEM Forms 6.5 LTS，請參閱[在AEM Forms 6.5 LTS中為最適化表單參考建立自訂索引](https://experienceleague.adobe.com/en/docs/experience-manager-65-lts/content/forms/install-aem-forms/configure-aem-forms/create-custom-index-for-adaptive-forms-references)。
+若為AEM Forms 6.5 LTS，請參閱[在AEM Forms 6.5 LTS中為最適化表單參考建立自訂索引](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65-lts/content/forms/install-aem-forms/configure-aem-forms/create-custom-index-for-adaptive-forms-references)。
 
 ## 先決條件 {#prerequisites}
 
