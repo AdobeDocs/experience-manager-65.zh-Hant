@@ -18,10 +18,10 @@ subfeature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
-source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
+source-git-commit: 1919f4aff8dd2cb07b1e298511001e2f51ed520b
 workflow-type: tm+mt
 source-wordcount: '504'
-ht-degree: 55%
+ht-degree: 52%
 ---
 # 為AEM設定IMS整合 {#setting-up-ims-integrations-for-aem}
 
@@ -46,7 +46,7 @@ Adobe Experience Manager (AEM)可與許多其他Adobe解決方案整合。 例�
 
 >[!CAUTION]
 >
->先前是使用 [JWT 認證進行設定，現在 Adobe Developer Console 將淘汰這些認證](/help/sites-administering/jwt-credentials-deprecation-in-adobe-developer-console.md)。
+>之前，設定是使用JWT認證，現在在Adobe Developer Console中將棄用。
 >
 >此類設定無法再建立或更新，但可以移轉至 OAuth 設定。
 
