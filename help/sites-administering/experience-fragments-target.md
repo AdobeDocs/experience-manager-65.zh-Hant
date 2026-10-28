@@ -21,7 +21,7 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
-source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
+source-git-commit: 1919f4aff8dd2cb07b1e298511001e2f51ed520b
 workflow-type: tm+mt
 source-wordcount: '1487'
 ht-degree: 1%
@@ -42,7 +42,7 @@ AEM體驗片段可以匯出至Adobe Target中的預設工作區，或匯出至Ad
 >
 >[IMS整合現在已設定為S2S OAuth](/help/sites-administering/setting-up-ims-integrations-for-aem.md)。
 >
->先前是使用[JWT認證進行設定，而現在Adobe Developer Console](/help/sites-administering/jwt-credentials-deprecation-in-adobe-developer-console.md)已棄用。
+>先前的設定是使用JWT憑證進行，而現在Adobe Developer Console棄用這些憑證。
 
 >[!NOTE]
 >
@@ -70,7 +70,7 @@ AEM體驗片段可以匯出至Adobe Target中的預設工作區，或匯出至Ad
    >
    >[IMS整合現在已設定為S2S OAut](/help/sites-administering/setting-up-ims-integrations-for-aem.md)。
    >
-   >先前是使用[JWT認證進行設定，而現在Adobe Developer Console](/help/sites-administering/jwt-credentials-deprecation-in-adobe-developer-console.md)已棄用。
+   >先前的設定是使用JWT憑證進行，而現在Adobe Developer Console棄用這些憑證。
 
 1. 體驗片段會從AEM製作執行個體匯出，因此您必須在製作執行個體上[設定AEM連結外部化器](/help/sites-administering/target-requirements.md#configuring-the-aem-link-externalizer)，以確保體驗片段中的任何參考都會外部化，以供Web傳遞使用。
 

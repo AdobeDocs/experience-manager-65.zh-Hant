@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: 使用Adobe Experience Manager 6.5檔案瞭解其運作方式，以及軟體可為您做哪些事。
 breadcrumb-title: 使用手冊
 user-guide-title: AEM 6.5
-source-git-commit: 9240de61985dc32f17593f416e5d054cadb8a392
+source-git-commit: 1919f4aff8dd2cb07b1e298511001e2f51ed520b
 workflow-type: tm+mt
-source-wordcount: '8310'
+source-wordcount: '8303'
 ht-degree: 23%
 ---
 
@@ -76,7 +76,6 @@ ht-degree: 23%
   + [內容處置篩選](/help/sites-administering/content-disposition-filter.md)
   + [AEM 6.5中的自訂使用者群組對應](/help/sites-administering/cug-mapping.md)
   + [相同網站Cookie支援](/help/sites-administering/same-site-cookie-support.md)
-  + [Adobe Developer Console 中的 JWT 認證已棄用](/help/sites-administering/jwt-credentials-deprecation-in-adobe-developer-console.md)
   + [為AEM設定IMS整合](/help/sites-administering/setting-up-ims-integrations-for-aem.md)
 + Experience Hub {#experience-hub}
   + [關於 Experience Hub](/help/experience-hub.md)
