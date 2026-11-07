@@ -64,7 +64,7 @@ ht-degree: 1%
 
 建立可編輯的範本主要是由範本作者使用[範本主控台和範本編輯器](/help/sites-authoring/templates.md)完成。 本節提供此程式的概述，並接著說明在技術層級進行的工作。
 
-如需如何在AEM專案中使用可編輯範本的詳細資訊，請參閱[使用Lazybones建立AEM專案](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/create-aem-project-structure-using-lazybones/m-p/186478)。
+如需如何在AEM專案中使用可編輯範本的詳細資訊，請參閱[使用Lazybones建立AEM專案](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/create-aem-project-structure-using-lazybones/m-p/186478?profile.language=zh-Hant)。
 
 建立可編輯的範本時，您可以：
 
