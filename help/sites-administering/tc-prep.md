@@ -20,9 +20,9 @@ subfeature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
-source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
+source-git-commit: 6fb39326f3a012bb7e774f65200feae143d2d30d
 workflow-type: tm+mt
-source-wordcount: '681'
+source-wordcount: '780'
 ht-degree: 2%
 ---
 # 準備翻譯內容{#preparing-content-for-translation}
@@ -64,6 +64,14 @@ Geometrixx示範網站範例包含數個語言分支，並會使用以下結構�
 * `<language-code>`支援的語言代碼是由ISO-639-1定義的雙字母代碼，例如`en`。
 
 * `<language-code>_<country-code>`或`<language-code>-<country-code>`支援的國家代碼是ISO 3166定義的小寫或大寫兩字母代碼，例如，`en_US`、`en_us`、`en_GB`、`en-gb`。
+
+>[!NOTE]
+>
+>對於在Java 17或Java 21上執行的AEM安裝，預設Java地區設定對應使用`he`作為希伯來文，`yi`作為意第緒文，而`id`作為印尼文，而不是舊版代碼`iw`、`ji`和`in`。 找不到使用舊版代碼的現有i18n字典。
+>
+>使用語言根與i18n字典的目前程式碼：將`iw`取代為`he`、將`ji`取代為`yi`、將`in`取代為`id`。
+>
+>如果您需要保留舊版程式碼作為相容性因應措施，請使用JVM引數`-Djava.locale.useOldISOCodes=true`，在啟動AEM時將Java系統屬性`java.locale.useOldISOCodes`設定為`true`。 屬性在Java執行階段啟動時是唯讀的；在AEM執行期間變更它沒有效果。
 
 根據您為全域網站選擇的結構，您可以使用任一格式。  例如，Geometrixx網站法文副本的根頁面以`fr`作為Name屬性。 Name屬性會用作存放庫中頁面節點的名稱，從而決定頁面的路徑。 (http://localhost:4502/content/geometrixx/fr.html)
 
