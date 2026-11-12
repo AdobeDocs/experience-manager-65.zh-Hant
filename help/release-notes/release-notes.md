@@ -23,9 +23,9 @@ role_v2:
     internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: d777049ff8873ab60b286ec268fd544dc61fb038
+source-git-commit: 56b13809475a59f188750b86503e316e69171fe1
 workflow-type: tm+mt
-source-wordcount: '7172'
+source-wordcount: '7273'
 ht-degree: 3%
 ---
 # [!DNL Adobe Experience Manager] 6.5最新Service Pack發行說明 {#aem-service-pack-release-notes}
@@ -428,7 +428,7 @@ List元件的樣式選項現在會以使用者的語言顯示。 先前，在作
 
 >[!NOTE]
 >
->Service Pack安裝期間，Package Manager UI上的對話方塊有時會退出。 Adobe建議您先等候錯誤記錄檔停止變更，再存取部署。 在確認安裝成功之前，請等待與更新程式套件組合解除安裝相關的特定記錄。 此問題發生在[!DNL Safari]瀏覽器中，但有時也發生在任何瀏覽器中。
+>安裝Service Pack期間，Package Manager UI上的對話方塊有時會關閉。 Adobe建議您先等候錯誤記錄檔停止變更，再存取部署。 在確認安裝成功之前，請等待與更新程式套件組合解除安裝相關的特定記錄。 此問題發生在[!DNL Safari]瀏覽器中，但有時也發生在任何瀏覽器中。
 
 **自動安裝**
 
@@ -594,13 +594,9 @@ Adobe打算在產品生命週期結束前保留這些較舊的端點。 Adobe �
 
 ### AEM Sites的已知問題 {#known-issues-aem-sites-6526}
 
-<!--
-* Known issue with a hotfix available for AEM Foundation {#known-issue-foundation-hotfix-6526}
+* **適用於AEM Foundation的Hotfix已知問題**
 
-  After you upgrade from an earlier service pack to Experience Manager 6.5.26.0, the OSGi version ordering for CRXDE Lite can prevent Experience Manager from selecting the intended bundle. An earlier service pack contains a higher CRXDE Lite version than the artifact that Service Pack 26 includes (`com.adobe.granite.crxde-lite-1.1.44-CQ651-B00024`).
-  
-  To resolve this issue, download and install the hotfix [cq-6.5.26-hotfix-GRANITE-76725.zip](https://artifactory.corp.adobe.com/ui/native/maven-aem-release-local/com/adobe/cq/hotfix/cq-6.5.26-hotfix-GRANITE-76725/1.0/cq-6.5.26-hotfix-GRANITE-76725.zip). The hotfix updates CRXDE Lite to `com.adobe.granite.crxde-lite-1.1.44-CQ651-B0026`, and it contains a version change only, with no code or functional changes. (GRANITE-76725)
--->
+  從舊版Service Pack升級至Experience Manager 6.5.26.0後，CRXDE Lite套件組合版本排序會導致Experience Manager無法選取預期的套件。 若要修正版本順序，請安裝Service Pack 26，然後從Software Distribution下載並安裝Hotfix [`CRXDE Lite hotfix GRANITE-76725`](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq660%2Fhotfixes%2Fgranite-76725%2Fcq-6.5.26-hotfix-GRANITE-76725-1.0.zip)。 此Hotfix為僅限版本的更新。 其中不包含程式碼或功能變更。 (GRANITE-76725)
 
 * 內容片段 — 預覽失敗，因為大型片段樹受到DoS保護。 請參閱有關預設GraphQL查詢執行器組態選項[&#128279;](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-kcs/kbarticles/ka-23945)的KB文章(SITES-17934)
 
