@@ -365,7 +365,7 @@ Service Pack 26的關鍵重點包括：
 
 #### Platform{#foundation-platform-6526}
 
-* AEM登入頁面頁尾的「說明」連結現在會開啟一個工作頁面。 之前，該連結指向的marketing.adobe.com URL已不存在。 頁尾設定現在使用[Adobe Experience Manager檔案](https://experienceleague.adobe.com/en/docs/experience-manager) URL。 (NPR-44388)
+* AEM登入頁面頁尾的「說明」連結現在會開啟一個工作頁面。 之前，該連結指向的marketing.adobe.com URL已不存在。 頁尾設定現在使用[Adobe Experience Manager檔案](https://experienceleague.adobe.com/zh-hant/docs/experience-manager) URL。 (NPR-44388)
 * 增強功能：AEM傳送電子郵件時，客戶要求使用Microsoft Graph API做為SMTP的替代方案。 票證解析為重複，因為另一個票證已實作Graph API流程。 使用OAuth 2.0的SMTP仍適用於需要離開SMTP基本驗證的客戶。 (GRANITE-57478)
 
 * 在&#x200B;**工具** > **一般** > **組態**&#x200B;瀏覽器中，[有效許可權]對話方塊中的字串現在會正確對齊。 先前，在您選取資料夾、按一下「屬性」並按一下「有效許可權」後，系統會顯示一個反白的字串。 更新版面配置規則以恢復對齊方式。 (CQ-4359166)
@@ -637,11 +637,11 @@ Adobe打算在產品生命週期結束前保留這些較舊的端點。 Adobe �
 這些網站僅供客戶使用。 若您是客戶並且需要存取權，請聯絡您的 Adobe 客戶經理。
 
 * [在 licensing.adobe.com 下載產品](https://licensing.adobe.com/)
-* [聯絡 Adobe 客戶支援](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-customer-support-experience#)。
+* [聯絡 Adobe 客戶支援](https://experienceleague.adobe.com/zh-hant/docs/support-resources/adobe-support-tools-guide/adobe-customer-support-experience#)。
 
 >[!MORELIKETHIS]
 >
->* [[!DNL Experience Manager] 產品頁面](https://business.adobe.com/products/experience-manager/adobe-experience-manager.html)
+>* [[!DNL Experience Manager] 產品頁面](https://business.adobe.com/tw/products/experience-manager/adobe-experience-manager.html)
 >* [[!DNL Experience Manager] 6.5檔案](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65)
 >* [訂閱Adobe優先產品更新](https://www.adobe.com/tw/subscription/priority-product-update.html)
 
