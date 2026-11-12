@@ -19,9 +19,9 @@ subfeature_v2:
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User
-source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
+source-git-commit: efd3c8e390cdbb5b5cc526906f7a2d756a978c21
 workflow-type: tm+mt
-source-wordcount: '2373'
+source-wordcount: '2361'
 ht-degree: 4%
 ---
 # 使用內容片段 {#working-with-content-fragments}
@@ -269,7 +269,7 @@ Assets可以透過數個方式與內容片段一起使用；各有其優點：
   * 可以在片段製作期間定義。
   * 儲存在片段中，有助於避免內容副本的散佈。
   * 如果主要內容已更新，則變數可以與主要進行[同步處理](/help/assets/content-fragments/content-fragments-variations.md#synchronizing-with-master)。
-  * 可以是[摘要](/help/assets/content-fragments/content-fragments-variations.md#summarizing-text)，以快速將文字截斷成預先定義的長度。
+
   * 可在片段編輯器的[變數](/help/assets/content-fragments/content-fragments-variations.md)標籤下取得。
 
 ### 使用內容片段編寫頁面時的中間內容 {#in-between-content-when-page-authoring-with-content-fragments}
