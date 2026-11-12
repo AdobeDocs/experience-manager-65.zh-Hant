@@ -19,10 +19,10 @@ subfeature_v2:
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User
-source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
+source-git-commit: efd3c8e390cdbb5b5cc526906f7a2d756a978c21
 workflow-type: tm+mt
-source-wordcount: '2442'
-ht-degree: 6%
+source-wordcount: '2078'
+ht-degree: 7%
 ---
 # 變化 - 編寫片段內容{#variations-authoring-fragment-content}
 
@@ -42,8 +42,6 @@ ht-degree: 6%
 * [上傳內容](#uploading-content)
 
 * [檢視索引鍵統計資料](#viewing-key-statistics) （關於多行文字）
-
-* [摘要文字](#summarizing-text)
 
 * [將變數與主要內容同步](#synchronizing-with-master)
 
@@ -113,8 +111,6 @@ ht-degree: 6%
 
 * [與主版同步](#synchronizing-with-master) （編輯變數時）
 
-* [摘要文字](#summarizing-text)
-
 ### 格式 {#formats}
 
 編輯多行文字的選項取決於所選的格式：
@@ -180,7 +176,7 @@ RTF編輯可讓您設定格式：
 
 >[!CAUTION]
 >
->如果您在 **Rich Text** 和 **&#x200B;**&#x200B;Markdown之間切換，可能會在區塊引號和程式碼區塊中遇到意外的效果，因為這兩種格式在處理方式上可能會有差異。
+>如果您在 **Rich Text** 和 **** Markdown之間切換，可能會在區塊引號和程式碼區塊中遇到意外的效果，因為這兩種格式在處理方式上可能會有差異。
 
 ### 片段參考 {#fragment-references}
 
@@ -228,60 +224,6 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 ### 上傳內容 {#uploading-content}
 
 為了簡化編寫內容片段的流程，您可以上傳在外部編輯器中準備的文字，並將其直接新增到片段中。
-
-### 摘要文字 {#summarizing-text}
-
-摘要文字旨在協助使用者將其文字長度縮短至預先定義的字數，同時保留關鍵點和整體意義。
-
->[!NOTE]
->
->在更技術性的層面上，系統會根據特定演演算法，保留其評為提供&#x200B;*最佳資訊密度和唯一性比例*&#x200B;的句子。
-
->[!CAUTION]
->
->內容片段必須具備有效的語言資料夾（ISO代碼）做為祖先；這是用來決定要使用的語言模式。
->
->例如，`en/`如以下路徑：
->
->  `/content/dam/my-brand/en/path-down/my-content-fragment`
-
->[!CAUTION]
->
->英文是現成可用的。
->
->封裝共用提供其他語言作為語言模型封裝：
->
->* [法文(fr)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-fr)
->* [德文(de)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-de)
->* [義大利文(it)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-it)
->* [西班牙文(es)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-es)
->
-
-1. 選取&#x200B;**主版**&#x200B;或必要的變數。
-1. 開啟全熒幕編輯器。
-
-1. 從工具列選取&#x200B;**摘要文字**。
-
-   ![摘要](assets/cfm-variations-05.png)
-
-1. 指定目標字數並選取&#x200B;**開始**：
-1. 原始文字會與建議的摘要並排顯示：
-
-   * 任何要刪除的句子都會以紅色醒目提示，並加上刪除線。
-   * 如果您要將任何醒目提示的句子保留在摘要內容中，請按一下該句子。
-   * 如果您要消除未反白的句子，請按一下該句子。
-
-1. 選取&#x200B;**摘要**&#x200B;以確認變更。
-
-1. 原始文字會與建議的摘要並排顯示：
-
-   * 任何要刪除的句子都會以紅色醒目提示，並加上刪除線。
-   * 如果您要將任何醒目提示的句子保留在摘要內容中，請按一下該句子。
-   * 如果您要消除未反白的句子，請按一下該句子。
-   * 顯示摘要統計資料： **實際**&#x200B;和&#x200B;**目標**-
-   * 您可以&#x200B;**預覽**&#x200B;變更。
-
-   ![摘要比較](assets/cfm-variations-06.png)
 
 ### 為內容片段加上註釋 {#annotating-a-content-fragment}
 
@@ -337,7 +279,7 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
 若要簡化編寫內容片段的程式，您可以直接新增[Assets](/help/assets/manage-assets.md) （影像）至片段。
 
-將它們新增到片段的段落序列中，且不加任何格式；在頁面[&#128279;](/help/sites-authoring/content-fragments.md)上使用/參照片段時，可以完成格式設定。
+將它們新增到片段的段落序列中，且不加任何格式；在頁面](/help/sites-authoring/content-fragments.md)上使用/參照[片段時，可以完成格式設定。
 
 >[!CAUTION]
 >
@@ -450,7 +392,7 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 1. 選取所需的變數。
 1. 從&#x200B;**動作**&#x200B;下拉式清單中選取&#x200B;**重新命名**。
 
-1. 在產生的對 **話方塊中** ，輸入新的「 **&#x200B;**&#x200B;標題」和/或「說明」。
+1. 在產生的對 **話方塊中** ，輸入新的「 **** 標題」和/或「說明」。
 
 1. 確認&#x200B;**重新命名**&#x200B;動作。
 
@@ -480,7 +422,7 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
 >[!CAUTION]
 >
->同步僅可用於將更改從 *主&#x200B;**版複製**&#x200B;到變化*。
+>同步僅可用於將更改從 *主&#x200B;**版複製**到變化*。
 >
 >只同步變數的目前元素。
 >
