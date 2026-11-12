@@ -23,9 +23,9 @@ role_v2:
     internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: d777049ff8873ab60b286ec268fd544dc61fb038
+source-git-commit: 56b13809475a59f188750b86503e316e69171fe1
 workflow-type: tm+mt
-source-wordcount: '7172'
+source-wordcount: '7273'
 ht-degree: 3%
 ---
 # [!DNL Adobe Experience Manager] 6.5最新Service Pack發行說明 {#aem-service-pack-release-notes}
@@ -365,7 +365,7 @@ Service Pack 26的關鍵重點包括：
 
 #### Platform{#foundation-platform-6526}
 
-* AEM登入頁面頁尾的「說明」連結現在會開啟一個工作頁面。 之前，該連結指向的marketing.adobe.com URL已不存在。 頁尾設定現在使用[Adobe Experience Manager檔案](https://experienceleague.adobe.com/zh-hant/docs/experience-manager) URL。 (NPR-44388)
+* AEM登入頁面頁尾的「說明」連結現在會開啟一個工作頁面。 之前，該連結指向的marketing.adobe.com URL已不存在。 頁尾設定現在使用[Adobe Experience Manager檔案](https://experienceleague.adobe.com/en/docs/experience-manager) URL。 (NPR-44388)
 * 增強功能：AEM傳送電子郵件時，客戶要求使用Microsoft Graph API做為SMTP的替代方案。 票證解析為重複，因為另一個票證已實作Graph API流程。 使用OAuth 2.0的SMTP仍適用於需要離開SMTP基本驗證的客戶。 (GRANITE-57478)
 
 * 在&#x200B;**工具** > **一般** > **組態**&#x200B;瀏覽器中，[有效許可權]對話方塊中的字串現在會正確對齊。 先前，在您選取資料夾、按一下「屬性」並按一下「有效許可權」後，系統會顯示一個反白的字串。 更新版面配置規則以恢復對齊方式。 (CQ-4359166)
@@ -428,14 +428,14 @@ List元件的樣式選項現在會以使用者的語言顯示。 先前，在作
 
 >[!NOTE]
 >
->Service Pack安裝期間，Package Manager UI上的對話方塊有時會退出。 Adobe建議您先等候錯誤記錄檔停止變更，再存取部署。 在確認安裝成功之前，請等待與更新程式套件組合解除安裝相關的特定記錄。 此問題發生在[!DNL Safari]瀏覽器中，但有時也發生在任何瀏覽器中。
+>安裝Service Pack期間，Package Manager UI上的對話方塊有時會關閉。 Adobe建議您先等候錯誤記錄檔停止變更，再存取部署。 在確認安裝成功之前，請等待與更新程式套件組合解除安裝相關的特定記錄。 此問題發生在[!DNL Safari]瀏覽器中，但有時也發生在任何瀏覽器中。
 
 **自動安裝**
 
 您可以使用兩種不同的方法來安裝[!DNL Experience Manager] 6.5.26.0.<!-- UPDATE FOR EACH NEW RELEASE -->
 
 * 伺服器上線時，請將封裝放入`../crx-quickstart/install`資料夾。 套件會自動安裝。
-* 使用封裝管理員[&#128279;](/help/sites-administering/package-manager.md#package-share)的HTTP API。 使用`cmd=install&recursive=true`安裝巢狀套件。
+* 使用封裝管理員](/help/sites-administering/package-manager.md#package-share)的[HTTP API。 使用`cmd=install&recursive=true`安裝巢狀套件。
 
 >[!NOTE]
 >
@@ -515,7 +515,7 @@ Adobe打算在產品生命週期結束前保留這些較舊的端點。 Adobe �
 
 <!-- THESE KNOWN ISSUES CARRY OVER EACH RELEASE. THE "PRODUCT UPDATES TEAM" IS SUPPOSED TO VERIFY EACH ISSUE AND LET YOU KNOW IF ANYTHING NEEDS TO BE ADDED, DELETED, OR CHANGED IN THIS LIST. -->
 
-* 與Oak相關的&#x200B;**&#x200B;**
+* 與Oak相關的&#x200B;****
 從Service Pack 13及更高版本開始，下列錯誤記錄檔開始出現，這會影響持續性快取：
 
   ```shell
@@ -594,15 +594,11 @@ Adobe打算在產品生命週期結束前保留這些較舊的端點。 Adobe �
 
 ### AEM Sites的已知問題 {#known-issues-aem-sites-6526}
 
-<!--
-* Known issue with a hotfix available for AEM Foundation {#known-issue-foundation-hotfix-6526}
+* **適用於AEM Foundation的Hotfix已知問題**
 
-  After you upgrade from an earlier service pack to Experience Manager 6.5.26.0, the OSGi version ordering for CRXDE Lite can prevent Experience Manager from selecting the intended bundle. An earlier service pack contains a higher CRXDE Lite version than the artifact that Service Pack 26 includes (`com.adobe.granite.crxde-lite-1.1.44-CQ651-B00024`).
-  
-  To resolve this issue, download and install the hotfix [cq-6.5.26-hotfix-GRANITE-76725.zip](https://artifactory.corp.adobe.com/ui/native/maven-aem-release-local/com/adobe/cq/hotfix/cq-6.5.26-hotfix-GRANITE-76725/1.0/cq-6.5.26-hotfix-GRANITE-76725.zip). The hotfix updates CRXDE Lite to `com.adobe.granite.crxde-lite-1.1.44-CQ651-B0026`, and it contains a version change only, with no code or functional changes. (GRANITE-76725)
--->
+  從舊版Service Pack升級至Experience Manager 6.5.26.0後，CRXDE Lite套件組合版本排序會導致Experience Manager無法選取預期的套件。 若要修正版本順序，請安裝Service Pack 26，然後從Software Distribution下載並安裝Hotfix [`CRXDE Lite hotfix GRANITE-76725`](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq660%2Fhotfixes%2Fgranite-76725%2Fcq-6.5.26-hotfix-GRANITE-76725-1.0.zip)。 此Hotfix為僅限版本的更新。 其中不包含程式碼或功能變更。 (GRANITE-76725)
 
-* 內容片段 — 預覽失敗，因為大型片段樹受到DoS保護。 請參閱有關預設GraphQL查詢執行器組態選項[&#128279;](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-kcs/kbarticles/ka-23945)的KB文章(SITES-17934)
+* 內容片段 — 預覽失敗，因為大型片段樹受到DoS保護。 請參閱有關預設GraphQL查詢執行器組態選項](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-kcs/kbarticles/ka-23945)的[KB文章(SITES-17934)
 
 ### AEM Forms的已知問題 {#known-issues-aem-forms-6526}
 
@@ -637,11 +633,11 @@ Adobe打算在產品生命週期結束前保留這些較舊的端點。 Adobe �
 這些網站僅供客戶使用。 若您是客戶並且需要存取權，請聯絡您的 Adobe 客戶經理。
 
 * [在 licensing.adobe.com 下載產品](https://licensing.adobe.com/)
-* [聯絡 Adobe 客戶支援](https://experienceleague.adobe.com/zh-hant/docs/support-resources/adobe-support-tools-guide/adobe-customer-support-experience#)。
+* [聯絡 Adobe 客戶支援](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-customer-support-experience#)。
 
 >[!MORELIKETHIS]
 >
->* [[!DNL Experience Manager] 產品頁面](https://business.adobe.com/tw/products/experience-manager/adobe-experience-manager.html)
+>* [[!DNL Experience Manager] 產品頁面](https://business.adobe.com/products/experience-manager/adobe-experience-manager.html)
 >* [[!DNL Experience Manager] 6.5檔案](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65)
 >* [訂閱Adobe優先產品更新](https://www.adobe.com/tw/subscription/priority-product-update.html)
 
