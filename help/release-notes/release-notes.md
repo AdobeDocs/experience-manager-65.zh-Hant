@@ -435,7 +435,7 @@ List元件的樣式選項現在會以使用者的語言顯示。 先前，在作
 您可以使用兩種不同的方法來安裝[!DNL Experience Manager] 6.5.26.0.<!-- UPDATE FOR EACH NEW RELEASE -->
 
 * 伺服器上線時，請將封裝放入`../crx-quickstart/install`資料夾。 套件會自動安裝。
-* 使用封裝管理員](/help/sites-administering/package-manager.md#package-share)的[HTTP API。 使用`cmd=install&recursive=true`安裝巢狀套件。
+* 使用封裝管理員[&#128279;](/help/sites-administering/package-manager.md#package-share)的HTTP API。 使用`cmd=install&recursive=true`安裝巢狀套件。
 
 >[!NOTE]
 >
@@ -515,7 +515,7 @@ Adobe打算在產品生命週期結束前保留這些較舊的端點。 Adobe �
 
 <!-- THESE KNOWN ISSUES CARRY OVER EACH RELEASE. THE "PRODUCT UPDATES TEAM" IS SUPPOSED TO VERIFY EACH ISSUE AND LET YOU KNOW IF ANYTHING NEEDS TO BE ADDED, DELETED, OR CHANGED IN THIS LIST. -->
 
-* 與Oak相關的&#x200B;****
+* 與Oak相關的&#x200B;**&#x200B;**
 從Service Pack 13及更高版本開始，下列錯誤記錄檔開始出現，這會影響持續性快取：
 
   ```shell
@@ -602,7 +602,7 @@ Adobe打算在產品生命週期結束前保留這些較舊的端點。 Adobe �
   To resolve this issue, download and install the hotfix [cq-6.5.26-hotfix-GRANITE-76725.zip](https://artifactory.corp.adobe.com/ui/native/maven-aem-release-local/com/adobe/cq/hotfix/cq-6.5.26-hotfix-GRANITE-76725/1.0/cq-6.5.26-hotfix-GRANITE-76725.zip). The hotfix updates CRXDE Lite to `com.adobe.granite.crxde-lite-1.1.44-CQ651-B0026`, and it contains a version change only, with no code or functional changes. (GRANITE-76725)
 -->
 
-* 內容片段 — 預覽失敗，因為大型片段樹受到DoS保護。 請參閱有關預設GraphQL查詢執行器組態選項](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-kcs/kbarticles/ka-23945)的[KB文章(SITES-17934)
+* 內容片段 — 預覽失敗，因為大型片段樹受到DoS保護。 請參閱有關預設GraphQL查詢執行器組態選項[&#128279;](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-kcs/kbarticles/ka-23945)的KB文章(SITES-17934)
 
 ### AEM Forms的已知問題 {#known-issues-aem-forms-6526}
 
