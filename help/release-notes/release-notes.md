@@ -23,9 +23,9 @@ role_v2:
     internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 56b13809475a59f188750b86503e316e69171fe1
+source-git-commit: b910e5ac8537f465d7cab85670de8557c2529a32
 workflow-type: tm+mt
-source-wordcount: '7273'
+source-wordcount: '7369'
 ht-degree: 3%
 ---
 # [!DNL Adobe Experience Manager] 6.5最新Service Pack發行說明 {#aem-service-pack-release-notes}
@@ -48,7 +48,6 @@ DO NOT DELETE THIS HIDDEN NOTE!      DO NOT DELETE THIS HIDDEN NOTE!
 | 日期 | 2026年11月12日<!-- UPDATE FOR EACH NEW RELEASE --> |
 | 下載 URL | [軟體發佈](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.26.0.zip) <!-- UPDATE FOR EACH NEW RELEASE --> |
 
-
 <!-- REWRITE AI GENERATED SUMMARY OF NOTES BELOW FOR EACH NEW SERVICE PACK RELEASE -->
 
 Experience Manager 6.5.26.0包含新功能、客戶要求的重要增強功能和錯誤修正。 此外，還包括自2019年4月起以6.5為基礎推出的協助工具、本地化、效能、穩定性及安全性改善專案。
@@ -62,6 +61,13 @@ Service Pack 26的關鍵重點包括：
 * 可靠性。 修正了傳統UI中，發佈執行個體上的GraphQL鎖定爭用、MSM轉出、RTF編輯器工具列動作和頁面啟用問題。
 * Analytics。 Launch整合會在Analytics 1.4生命週期結束前（2026年8月31日）使用Adobe Analytics 2.0 API。
 
+>[!IMPORTANT]
+>
+>Adobe提供AEM 6.5 LTS的每季Service Pack，以及支援的Service Pack適用的累積安全性修正策略，以因應此區域更新的頻率。
+>
+> 對於使用傳統AEM 6.5的客戶，Service Pack 26可提供連續性，而支援和維護則會透過AEM 6.5 LTS工作流程繼續。 標準（2027年2月）和延伸（2028年2月）支援涵蓋Service Pack 26，其中僅接收安全性修正。
+>
+>Adobe提供的資源可協助您轉換至AEM 6.5 LTS或AEM as a Cloud Service，並使用最新的AI創新技術來提高生產力並最佳化新受眾。
 
 <!-- UPDATE FOR EACH NEW RELEASE -->
 
@@ -87,26 +93,26 @@ Service Pack 26的關鍵重點包括：
 
 * 頁面編輯器中的ContextHub iframe現在有描述性標題屬性。 先前，`contexthub-ui-iframe`元素沒有標題，因此熒幕助讀程式的使用者在焦點移至它時無法識別它。 標題現在會顯示在每個編輯器頁面和檢視上，包括畫布、側邊欄和版面預覽。 (SITES-24650)
 * Sites Console篩選邊欄中的篩選按鈕未在已儲存的搜尋和選取搜尋目錄欄位上方新增可見標籤。 稽核報告指出焦點離開按鈕、按下按鍵或按一下按鈕時，標籤隨即出現。 測試無法重現行為，因此不需要變更。 (SITES-24706)
-* Sites主控台應用程式導覽中的連結現在會更清楚區隔。 連結文字元合4.5:1的對比率，但細字型粗細和較小尺寸使連結難以看見。 較大的字型權重和較大的字型大小，可讓有視覺障礙的使用者更容易閱讀文字。 (SITES-24723)
+* 「網站」主控台應用程式導覽中的連結現在會更清晰可見。 連結文字元合4.5:1的對比率，但細字型粗細和較小尺寸使連結難以看見。 較大的字型粗細與大小讓視力不佳的使用者更容易閱讀文字。 (SITES-24723)
 * 熒幕助讀程式不再在「使用者偏好設定」強制回應視窗的工具提示內容前宣告「空白」。 先前資訊圖示使用`role="tooltip"`搭配`aria-labelledby`參考，因此NVDA會先讀取空白標籤。 圖示現在使用`role="button"`和`aria-label`的「資訊」，而變更會套用至共用此模式的Coral表單元件。 (SITES-24732)
-* 「刪除」強制回應視窗中的「刪除」按鈕現在符合WCAG 1.4.3的4.5:1對比度要求。 先前，作者選取專案並按一下「動作工具列」中的「刪除」後，紅色背景的白色文字會提供3.9:1的比率。 較深的按鈕顏色會讓有視覺障礙的作者看得懂標籤。 (SITES-24772)
+* 「刪除」強制回應視窗中的「刪除」按鈕現在符合WCAG 1.4.3的4.5:1對比度要求。 先前，作者選取專案並按一下「動作工具列」中的「刪除」後，紅色背景的白色文字會提供3.9:1的比率。 較深的按鈕顏色讓視力不佳的作者看得懂標籤。 (SITES-24772)
 * Sites主控台參照邊欄中的參照標題現在使用標題元素而非`div`。 以前，熒幕助讀程式無法將文字宣告為標題，因此使用者無法依標題導覽。 標題也會顯示在初始「參照」檢視的頂端。 (SITES-24967)
 * Sites控制檯篩選邊欄中摺疊式功能表按鈕的焦點指標現在符合WCAG 1.4.11的3:1對比度要求。 之前，藍色指示燈在背景中顯示了2.3:1的比率，這使得鍵盤使用者很難找到「標籤」摺疊式功能表按鈕。 更新後的色彩可為鍵盤使用者提供清晰的焦點提示。 (SITES-24986)
 * Sites主控台篩選器邊欄中選項按鈕的焦點指標現在符合WCAG 1.4.11的對比度要求3:1。 之前，淡藍色指示器在背景顯示的比例為1.7:1。 鍵盤使用者現在可以在「修改日期」設定追蹤器中追蹤其位置。 (SITES-24987)
 * 在「頁面編輯器」側邊欄中，路徑和標籤欄位旁的「選取」按鈕不再使用核取方塊圖示。 之前，圖示建議進行切換，但啟動按鈕會開啟包含「樹狀目錄」的強制回應視窗。 「選取」按鈕現在會正確傳達其功能，同樣適用於「影像」和「預告」模式。 (SITES-25210)
 * 熒幕助讀程式現在會略過頁面編輯器側邊欄中的資產縮圖影像。 之前，每個影像都附有複製可見資產名稱的替代文字，因此使用者會聽到相同的文字兩次。 空白`alt`屬性將影像標示為裝飾性，並將名稱保留在卡片標題中。 (SITES-25213)
 * 熒幕助讀程式會將側邊欄「元件」清單識別為清單。 稽核將專案報告為不相關的元素，但測試確認標籤使用清單元素和清單專案。 不需要變更程式碼。 (SITES-25214)
-* 「頁面編輯器」側邊欄中元件的資訊圖示會變大且更容易檢視。 先前，圖示使用的超小尺寸約為12畫素，視覺障礙的使用者很難看到這種尺寸。 圖示現在使用中等大小。(SITES-25217)
-* 註解強制回應中「色票」按鈕上的焦點指示器現在會從按鈕中脫離。 以前，指示器與色票顏色相符。 這讓鍵盤使用者很難看到哪個按鈕具有焦點。 位移可讓指標在背景中擁有足夠的對比度，並保持其清晰可見。 (SITES-25253)
+* 「頁面編輯器」側邊欄中元件的資訊圖示會變大且更容易檢視。 先前，圖示使用的超小尺寸約12畫素，視力缺佳的使用者很難看清。 圖示現在使用中等大小。(SITES-25217)
+* 註解強制回應中「色票」按鈕上的焦點指示器現在與按鈕有明顯區別。 以前，指示器與色票顏色相符。 這讓鍵盤使用者很難看到哪個按鈕具有焦點。 位移可讓指標在背景中擁有足夠的對比度，並保持其清晰可見。 (SITES-25253)
 * 時間扭曲強制回應視窗中的「日期」欄位不再包含`aria-haspopup="dialog"`。 之前，熒幕助讀程式會宣佈欄位會開啟對話方塊，即使它沒有開啟。 移除屬性可為熒幕助讀程式使用者提供準確的資訊。 (SITES-25263)
 * 「人口統計」工具列上的文字標籤（例如「建議」）現在已符合WCAG 1.4.3的4.5:1對比度要求。 以前，在預覽模式下，深灰色背景上的灰色文字會提供2.8:1的比率。 較暗或較淺的文字（視背景而定）可讓每個標籤都能看得懂。 (SITES-25307)
 * 「人口統計」工具列上「Commerce」、「角色」和「裝置」按鈕的焦點指標現在已符合WCAG 1.4.11的3:1對比度要求。 之前，指標在工具列背景顯示的比例為1.9:1。 鍵盤使用者現在可以追蹤其位置。 (SITES-25308)
-* 作者在「人口統計」工具列文字欄位中輸入的文字，現在已符合WCAG 1.4.3的對比要求4.5:1。 之前，灰色背景的白色文字在欄位中產生2.9:1的比率，例如在預覽模式中的設定檔下拉式清單`displayName`欄位。 更新後的顏色讓有視覺障礙的作者看得懂輸入的值。 (SITES-25318)
+* 作者在「人口統計」工具列文字欄位中輸入的文字，現在已符合WCAG 1.4.3的對比要求4.5:1。 之前，灰色背景的白色文字在欄位中產生2.9:1的比率，例如在預覽模式中的設定檔下拉式清單`displayName`欄位。 更新後的顏色讓視力缺佳的作者可讀取輸入的值。 (SITES-25318)
 * 現在當焦點達到Teaser、影像和轉盤對話方塊中的核取方塊時，熒幕閱讀器會閱讀說明工具提示。 以前，文字與核取方塊缺乏程式化關聯，因此使用者無法聽到指示。 `aria-describedby`屬性現在會將每個核取方塊連結至其說明。 (SITES-25364)
 * 熒幕助讀程式現在會朗讀RTF編輯器中作用中的段落格式按鈕。 先前，從清單中選取選項時，輔助技術無法指出目前的選擇。 使用中的按鈕現在會帶入`aria-current="true"`，而使用中的超連結目標選項會帶入`aria-selected="true"`。 (SITES-25367)
-* Sites主控台清單檢視的表格標題中的「排序」按鈕現在符合WCAG 1.4.11的3:1對比要求。 以前，淺灰色圖示相對於頁首背景顯示1.5:1的比率。 較暗的圖示顏色會讓有視覺障礙的作者看到這些按鈕。 (SITES-25372)
+* Sites主控台清單檢視的表格標題中的「排序」按鈕現在符合WCAG 1.4.11的3:1對比要求。 以前，淺灰色圖示相對於頁首背景顯示1.5:1的比率。 較深的圖示顏色會讓視力缺佳的作者看到這些按鈕。 (SITES-25372)
 * 當焦點移至「篩選」欄位時，頁面編輯器側邊欄中的「Assets」索引標籤不再重新載入。 先前，將定位鍵插入空白欄位會觸發重新載入，而熒幕助讀程式每次都會宣佈載入訊息。 現在只有在變更篩選值並按Enter鍵後，標籤才會重新載入。 (SITES-25377)
-* 在「註解」強制回應視窗中選取的色票圖示現在符合WCAG 1.4.11的3:1對比度要求。 先前，白色核取記號對黃色、橘色和綠色色票的比率低至1.58:1。 更新的圖示可為有視覺障礙的作者提供明確的指標。 (SITES-25523)
+* 在「註解」強制回應視窗中選取的色票圖示現在符合WCAG 1.4.11的3:1對比度要求。 先前，白色核取記號對黃色、橘色和綠色色票的比率低至1.58:1。 更新的圖示可為視力缺佳的作者提供明確的指標。 (SITES-25523)
 * 頁面編輯器側面板中的「元件」清單不再使用鍵盤焦點。 鍵盤使用者在內容視窗中使用控制項來選取和移動元件，因此側面板清單會重複該功能。 元件篩選器下的註記會通知鍵盤使用者在何處尋找控制項。 (SITES-40752)
 
 
@@ -347,7 +353,7 @@ Service Pack 26的關鍵重點包括：
 #### Granite{#foundation-granite-6526}
 
 * Assets Omnisearch篩選器中的「內容片段模式」預留位置現在已完整顯示。 先前，您前往Assets、按一下「篩選器」或「搜尋」圖示，然後展開「內容片段模式」欄位，系統就會截斷文字。 更新的樣式為預留位置提供了足夠的空間。 (GRANITE-54387)
-* 現在，將指標移到殼層標頭的連結上時，殼層標頭中的說明下拉式清單會保持開啟。 先前，當指標進入檔案、社群和支援連結清單時，下拉式清單就會關閉，導致無法透過滑鼠連線到連結。 焦點處理常式現在會將其檢查延遲至下一個動畫影格，因此游標暫留不再計為焦點離開功能表。 (GRANITE-70978)
+* 現在，將指標移到殼層標頭的連結上時，殼層標頭中的說明下拉式清單會保持開啟。 先前，當指標進入檔案、社群和支援連結清單時，下拉式清單就會關閉，導致無法透過滑鼠連線到連結。 焦點處理常式現在會將其檢查延遲至下一個動畫影格，所以暫留不再計為焦點退出功能表。 (GRANITE-70978)
 
 <!--
 #### Jetty{#foundation-jetty-6526}
@@ -365,7 +371,7 @@ Service Pack 26的關鍵重點包括：
 
 #### Platform{#foundation-platform-6526}
 
-* AEM登入頁面頁尾的「說明」連結現在會開啟一個工作頁面。 之前，該連結指向的marketing.adobe.com URL已不存在。 頁尾設定現在使用[Adobe Experience Manager檔案](https://experienceleague.adobe.com/zh-hant/docs/experience-manager) URL。 (NPR-44388)
+* AEM登入頁面頁尾的「說明」連結現在會開啟一個工作頁面。 之前，該連結指向的marketing.adobe.com URL已不存在。 頁尾設定現在使用[Adobe Experience Manager檔案](https://experienceleague.adobe.com/en/docs/experience-manager) URL。 (NPR-44388)
 * 增強功能：AEM傳送電子郵件時，客戶要求使用Microsoft Graph API做為SMTP的替代方案。 票證解析為重複，因為另一個票證已實作Graph API流程。 使用OAuth 2.0的SMTP仍適用於需要離開SMTP基本驗證的客戶。 (GRANITE-57478)
 
 * 在&#x200B;**工具** > **一般** > **組態**&#x200B;瀏覽器中，[有效許可權]對話方塊中的字串現在會正確對齊。 先前，在您選取資料夾、按一下「屬性」並按一下「有效許可權」後，系統會顯示一個反白的字串。 更新版面配置規則以恢復對齊方式。 (CQ-4359166)
@@ -404,11 +410,11 @@ List元件的樣式選項現在會以使用者的語言顯示。 先前，在作
 
 * [!DNL Experience Manager] 6.5.26.0需要[!DNL Experience Manager] 6.5。 如需詳細指示，請參閱[升級檔案](/help/sites-deploying/upgrade.md)。<!-- UPDATE FOR EACH NEW RELEASE -->
 * Service Pack下載專案可在Adobe [軟體發佈](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.26.0.zip)上取得。
-* 在具有MongoDB和多個執行個體的部署上，使用封裝管理員在其中一個作者執行個體上安裝[!DNL Experience Manager] 6.5.26.0。<!-- UPDATE FOR EACH NEW RELEASE -->
+* 在具有MongoDB和多個執行個體的部署上，使用封裝管理員在其中一個編寫執行個體上安裝[!DNL Experience Manager] 6.5.26.0。<!-- UPDATE FOR EACH NEW RELEASE -->
 
 >[!IMPORTANT]
 >
-> Adobe建議您不要移除或解除安裝[!DNL Experience Manager] 6.5.26.0套件。 若要視需要回覆，請先建立`crx-repository`的備份，然後再安裝套件。<!-- UPDATE FOR EACH NEW RELEASE -->
+> Adobe建議您不要刪除或解除安裝[!DNL Experience Manager] 6.5.26.0套件。 若要視需要回覆，請先建立`crx-repository`的備份，然後再安裝套件。<!-- UPDATE FOR EACH NEW RELEASE -->
 
 <!-- FORMS For instructions to install Service Pack for Experience Manager Forms, see [Experience Manager Forms Service Pack installation instructions](/help/release-notes/aem-forms-current-service-pack-installation-instructions.md). -->
 
@@ -428,14 +434,14 @@ List元件的樣式選項現在會以使用者的語言顯示。 先前，在作
 
 >[!NOTE]
 >
->安裝Service Pack期間，Package Manager UI上的對話方塊有時會關閉。 Adobe建議您先等候錯誤記錄檔停止變更，再存取部署。 在確認安裝成功之前，請等待與更新程式套件組合解除安裝相關的特定記錄。 此問題發生在[!DNL Safari]瀏覽器中，但有時也發生在任何瀏覽器中。
+>安裝Service Pack期間，Package Manager UI上的對話方塊有時會關閉。 Adobe建議您先等候錯誤記錄檔停止更新，再存取部署。 在確認安裝成功之前，請等待與更新程式套件組合解除安裝相關的特定記錄。 此問題發生在[!DNL Safari]瀏覽器中，但有時也發生在任何瀏覽器中。
 
 **自動安裝**
 
 您可以使用兩種不同的方法來安裝[!DNL Experience Manager] 6.5.26.0.<!-- UPDATE FOR EACH NEW RELEASE -->
 
 * 伺服器上線時，請將封裝放入`../crx-quickstart/install`資料夾。 套件會自動安裝。
-* 使用封裝管理員[&#128279;](/help/sites-administering/package-manager.md#package-share)的HTTP API。 使用`cmd=install&recursive=true`安裝巢狀套件。
+* 使用封裝管理員](/help/sites-administering/package-manager.md#package-share)的[HTTP API。 使用`cmd=install&recursive=true`安裝巢狀套件。
 
 >[!NOTE]
 >
@@ -488,7 +494,7 @@ List元件的樣式選項現在會以使用者的語言顯示。 先前，在作
 
 >[!NOTE]
 >
->UberJar和其他相關成品可在Maven中央存放庫上使用，而不是Adobe公共Maven存放庫(`repo.adobe.com`)。 主要UberJar檔案已重新命名為`uber-jar-<version>.jar`。 因此，`dependency`標籤沒有`classifier`，其值為`apis`。
+>UberJar和其他相關成品可在Maven中央存放庫上使用，而不是Adobe公共Maven存放庫(`repo.adobe.com`)。 主要UberJar檔案已重新命名為`uber-jar-<version>.jar`。 沒有`dependency`標籤的`classifier`，其值為`apis`。
 
 
 
@@ -515,7 +521,7 @@ Adobe打算在產品生命週期結束前保留這些較舊的端點。 Adobe �
 
 <!-- THESE KNOWN ISSUES CARRY OVER EACH RELEASE. THE "PRODUCT UPDATES TEAM" IS SUPPOSED TO VERIFY EACH ISSUE AND LET YOU KNOW IF ANYTHING NEEDS TO BE ADDED, DELETED, OR CHANGED IN THIS LIST. -->
 
-* 與Oak相關的&#x200B;**&#x200B;**
+* 與Oak相關的&#x200B;****
 從Service Pack 13及更高版本開始，下列錯誤記錄檔開始出現，這會影響持續性快取：
 
   ```shell
@@ -564,7 +570,7 @@ Adobe打算在產品生命週期結束前保留這些較舊的端點。 Adobe �
 
   在變更索引定義之後，需要重新索引(`reindex` = `true`)。
 
-  執行這些步驟後，GraphQL查詢的執行速度會有所改善。
+  執行這些步驟後，GraphQL查詢的執行速度會更快。
 
 * 嘗試移動、刪除或發佈內容片段、網站或頁面時，在擷取內容片段參考時出現問題。 背景查詢失敗；功能無法運作。
 若要確保作業正確，您必須將下列屬性新增至索引定義節點`/oak:index/damAssetLucene` （不需要重新索引）：
@@ -598,7 +604,7 @@ Adobe打算在產品生命週期結束前保留這些較舊的端點。 Adobe �
 
   從舊版Service Pack升級至Experience Manager 6.5.26.0後，CRXDE Lite套件組合版本排序會導致Experience Manager無法選取預期的套件。 若要修正版本順序，請安裝Service Pack 26，然後從Software Distribution下載並安裝Hotfix [`CRXDE Lite hotfix GRANITE-76725`](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq660%2Fhotfixes%2Fgranite-76725%2Fcq-6.5.26-hotfix-GRANITE-76725-1.0.zip)。 此Hotfix為僅限版本的更新。 其中不包含程式碼或功能變更。 (GRANITE-76725)
 
-* 內容片段 — 預覽失敗，因為大型片段樹受到DoS保護。 請參閱有關預設GraphQL查詢執行器組態選項[&#128279;](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-kcs/kbarticles/ka-23945)的KB文章(SITES-17934)
+* 內容片段 — 預覽失敗，因為大型片段樹受到DoS保護。 請參閱有關預設GraphQL查詢執行器組態選項](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-kcs/kbarticles/ka-23945)的[KB文章(SITES-17934)
 
 ### AEM Forms的已知問題 {#known-issues-aem-forms-6526}
 
@@ -633,11 +639,11 @@ Adobe打算在產品生命週期結束前保留這些較舊的端點。 Adobe �
 這些網站僅供客戶使用。 若您是客戶並且需要存取權，請聯絡您的 Adobe 客戶經理。
 
 * [在 licensing.adobe.com 下載產品](https://licensing.adobe.com/)
-* [聯絡 Adobe 客戶支援](https://experienceleague.adobe.com/zh-hant/docs/support-resources/adobe-support-tools-guide/adobe-customer-support-experience#)。
+* [聯絡 Adobe 客戶支援](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-customer-support-experience#)。
 
 >[!MORELIKETHIS]
 >
->* [[!DNL Experience Manager] 產品頁面](https://business.adobe.com/tw/products/experience-manager/adobe-experience-manager.html)
+>* [[!DNL Experience Manager] 產品頁面](https://business.adobe.com/products/experience-manager/adobe-experience-manager.html)
 >* [[!DNL Experience Manager] 6.5檔案](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65)
 >* [訂閱Adobe優先產品更新](https://www.adobe.com/tw/subscription/priority-product-update.html)
 
