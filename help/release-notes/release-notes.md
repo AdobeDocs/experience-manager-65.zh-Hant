@@ -23,9 +23,9 @@ role_v2:
     internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: b910e5ac8537f465d7cab85670de8557c2529a32
+source-git-commit: 383a6624329826101fc85861ee31d34ae7e59d71
 workflow-type: tm+mt
-source-wordcount: '7369'
+source-wordcount: '7975'
 ht-degree: 3%
 ---
 # [!DNL Adobe Experience Manager] 6.5最新Service Pack發行說明 {#aem-service-pack-release-notes}
@@ -312,13 +312,24 @@ Service Pack 26的關鍵重點包括：
 ### [!DNL Forms]{#forms-6526}
 
 * 新功能：支援RTF中清單的協助工具標籤。 過去，只有當範本遵循特定結構時，協助工具標籤樹狀結構中才會出現清單標籤。 請求已關閉，成為提供該功能之相關票證的重複專案。 (LC-3923202)
+* 增強： AEM Forms新增執行階段API，為每個要求選取舊版或預設的可延伸標籤語言(XML)資料匯出模式。 以前，只有`-Dcom.adobe.fd.forms.export.legacy` Java Virtual Machine (JVM)引數可控制模式，以及套用至伺服器上每個匯出的設定。 當請求未使用API時，JVM引數會繼續控制行為。 (FORMS-23114， FORMS-22983)
+* 以不可見憑證簽章認證的可攜式檔案格式(PDF)檔案在Adobe Acrobat中的開啟速度不再緩慢。 先前僅套用至可見憑證簽章的修正現在也涵蓋不可見憑證簽章。 (FORMS-25171)
+* 在Foundation元件式Adaptive Forms中，「檔案附件」元件現在會根據上傳時允許的檔案型別清單來檢查檔案。 以前，即使清單僅允許`application/pdf`、`image/jpeg`和`image/png`，像`.xsd`這樣的檔案也通過上傳步驟。 表單僅在送出時以一般不支援的檔案警示拒絕這些要求。 (FORMS-24295)
 
+#### FORMS JEE {#forms-jee-6526}
 
-<!--
-#### Forms JEE {#forms-jee-6526}
+* 增強： AEM Forms Document Security新增了Adobe Acrobat (PPKLite)的密碼金鑰（Web驗證或WebAuthn）支援。 (FORMS-21762)
+* 增強功能： IBM Content Manager聯結器現在支援IBM Content Manager 8.7，因為IBM已終止支援8.5和8.6版。 (FORMS-6827)
+* 在Windows上，將某些可攜式檔案格式(PDF)檔案轉換為影像（例如TIFF）時，ConvertPDF服務不再中止。 (FORMS-25796)
+* 安全性宣告標籤語言(SAML)驗證現在會使用上傳的身分提供者(IdP)中繼資料的憑證來驗證宣告簽章。 當IdP憑證變更且中繼資料未更新時，驗證會失敗。 (FORMS-24679)
+* 升級至AEM Forms Service Pack 6.5.24.0後，`server.log`和`error.log`不再填入`[XMLSecurity]`警告訊息，例如「Secure parser factory建立失敗，任何建立的XML剖析器都可能遭受XML型漏洞攻擊」。 訊息每秒出現幾次，即使在閒置的伺服器上也是如此，而且會快速消耗磁碟空間。 (FORMS-23717)
+* JEE端的元件現在封裝Apache POI 5.4.0。 之前，某些套件組合仍包含Apache POI 3.17和3.9，這些套件在升級至AEM Forms Service Pack 6.5.24.0後會標籤安全性掃描。 (FORMS-23678)
 
 #### Forms Designer {#forms-designer-6526}
--->
+
+* 增強功能： Forms Designer和輸出服務會在靜態互動和平面PDF檔案中，產生從標題層級1到標題層級6協助工具角色的巢狀可攜式檔案格式(PDF)書籤。 標題層級1會成為頂層書籤，不含作者先前在Adobe Acrobat中手動移除的空白或重複專案。 若要還原先前的書籤行為，請新增`<behaviorOverride>patch-LC-3922369:1</behaviorOverride>`至自訂XCI檔案。 (LC-3923490、LC-3922369)
+* 增強功能：在靜態互動或平面可攜式檔案格式(PDF)檔案中選取書籤，現在會將相符的標題捲動至頁面頂端。 (LC-3923489、LC-3923289)
+* 增強功能： Forms Designer可將書籤`extras`元素新增至使用「標題層級1」到「標題層級6」協助工具角色的文字物件。 之前，作者必須在XML Source中手動為每個標題新增`<extras name="bookmark">`，才能產生書籤。 (FORMS-24361)
 
 
 ### 基礎 {#foundation-6526}
@@ -371,7 +382,7 @@ Service Pack 26的關鍵重點包括：
 
 #### Platform{#foundation-platform-6526}
 
-* AEM登入頁面頁尾的「說明」連結現在會開啟一個工作頁面。 之前，該連結指向的marketing.adobe.com URL已不存在。 頁尾設定現在使用[Adobe Experience Manager檔案](https://experienceleague.adobe.com/zh-hant/docs/experience-manager) URL。 (NPR-44388)
+* AEM登入頁面頁尾的「說明」連結現在會開啟一個工作頁面。 之前，該連結指向的marketing.adobe.com URL已不存在。 頁尾設定現在使用[Adobe Experience Manager檔案](https://experienceleague.adobe.com/en/docs/experience-manager) URL。 (NPR-44388)
 * 增強功能：AEM傳送電子郵件時，客戶要求使用Microsoft Graph API做為SMTP的替代方案。 票證解析為重複，因為另一個票證已實作Graph API流程。 使用OAuth 2.0的SMTP仍適用於需要離開SMTP基本驗證的客戶。 (GRANITE-57478)
 
 * 在&#x200B;**工具** > **一般** > **組態**&#x200B;瀏覽器中，[有效許可權]對話方塊中的字串現在會正確對齊。 先前，在您選取資料夾、按一下「屬性」並按一下「有效許可權」後，系統會顯示一個反白的字串。 更新版面配置規則以恢復對齊方式。 (CQ-4359166)
@@ -441,7 +452,7 @@ List元件的樣式選項現在會以使用者的語言顯示。 先前，在作
 您可以使用兩種不同的方法來安裝[!DNL Experience Manager] 6.5.26.0.<!-- UPDATE FOR EACH NEW RELEASE -->
 
 * 伺服器上線時，請將封裝放入`../crx-quickstart/install`資料夾。 套件會自動安裝。
-* 使用封裝管理員[&#128279;](/help/sites-administering/package-manager.md#package-share)的HTTP API。 使用`cmd=install&recursive=true`安裝巢狀套件。
+* 使用封裝管理員](/help/sites-administering/package-manager.md#package-share)的[HTTP API。 使用`cmd=install&recursive=true`安裝巢狀套件。
 
 >[!NOTE]
 >
@@ -521,7 +532,7 @@ Adobe打算在產品生命週期結束前保留這些較舊的端點。 Adobe �
 
 <!-- THESE KNOWN ISSUES CARRY OVER EACH RELEASE. THE "PRODUCT UPDATES TEAM" IS SUPPOSED TO VERIFY EACH ISSUE AND LET YOU KNOW IF ANYTHING NEEDS TO BE ADDED, DELETED, OR CHANGED IN THIS LIST. -->
 
-* 與Oak相關的&#x200B;**&#x200B;**
+* 與Oak相關的&#x200B;****
 從Service Pack 13及更高版本開始，下列錯誤記錄檔開始出現，這會影響持續性快取：
 
   ```shell
@@ -604,13 +615,27 @@ Adobe打算在產品生命週期結束前保留這些較舊的端點。 Adobe �
 
   從舊版Service Pack升級至Experience Manager 6.5.26.0後，CRXDE Lite套件組合版本排序會導致Experience Manager無法選取預期的套件。 若要修正版本順序，請安裝Service Pack 26，然後從Software Distribution下載並安裝Hotfix [`CRXDE Lite hotfix GRANITE-76725`](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq660%2Fhotfixes%2Fgranite-76725%2Fcq-6.5.26-hotfix-GRANITE-76725-1.0.zip)。 此Hotfix為僅限版本的更新。 其中不包含程式碼或功能變更。 (GRANITE-76725)
 
-* 內容片段 — 預覽失敗，因為大型片段樹受到DoS保護。 請參閱有關預設GraphQL查詢執行器組態選項[&#128279;](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-kcs/kbarticles/ka-23945)的KB文章(SITES-17934)
+* 內容片段 — 預覽失敗，因為大型片段樹受到DoS保護。 請參閱有關預設GraphQL查詢執行器組態選項](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-kcs/kbarticles/ka-23945)的[KB文章(SITES-17934)
 
 ### AEM Forms的已知問題 {#known-issues-aem-forms-6526}
 
 * 當包含使用`bindref`的&#x200B;**檔案附件**&#x200B;欄位的表單提交給具有&#x200B;**指派任務**&#x200B;步驟的AEM工作流程時，附件未顯示。 因此，當從「收件匣」開啟任務時，它們不會出現。 檔案會正確儲存至存放庫，但指派工作步驟UI無法顯示附件。 (FORMS-23722)
 
 * 當數位簽署的PDF附加至AEM Forms JEE Workspace中的任務時，上傳維持卡在上傳狀態或發生「檔案無效」錯誤而失敗。 因此，無法將較大的已簽署PDF附件新增至工作。 此問題已在較新版本中修正。 如需Hotfix版本，請聯絡Adobe支援。 (FORMS-28517)
+
+* 如修補程式135所報告，在IBM WebSphere上，透過AEM Forms Workbench中的「叫用Web服務」活動載入Web服務描述語言(WSDL)檔案，AEM Forms JEE 6.5.26.0 (Service Pack 26)可能會失敗。 相同的操作在JBoss上運作。 (FORMS-29972)
+
+  **因應措施：**&#x200B;在裝載AEM Forms JEE的WebSphere應用程式伺服器上新增Java虛擬機器器(JVM)引數。 這是伺服器端設定，而非Workbench使用者端設定。
+
+  1. 開啟裝載AEM Forms JEE之WebSphere應用程式伺服器的JVM設定。
+  1. 將下列引數新增至伺服器JVM引數。 保留現有的引數。
+
+     ```shell
+     -Dcom.adobe.idp.dsc.webservice.loadSOAPClasses=true
+     ```
+
+  1. 儲存組態，然後重新啟動WebSphere應用程式伺服器，讓引數生效。
+  1. 從AEM Forms Workbench重新連線，然後再次在叫用Web服務活動中載入WSDL。
 
 #### 可用Hotfix的已知問題 {#aem-forms-issues-with-hotfixes}
 
@@ -639,11 +664,11 @@ Adobe打算在產品生命週期結束前保留這些較舊的端點。 Adobe �
 這些網站僅供客戶使用。 若您是客戶並且需要存取權，請聯絡您的 Adobe 客戶經理。
 
 * [在 licensing.adobe.com 下載產品](https://licensing.adobe.com/)
-* [聯絡 Adobe 客戶支援](https://experienceleague.adobe.com/zh-hant/docs/support-resources/adobe-support-tools-guide/adobe-customer-support-experience#)。
+* [聯絡 Adobe 客戶支援](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-customer-support-experience#)。
 
 >[!MORELIKETHIS]
 >
->* [[!DNL Experience Manager] 產品頁面](https://business.adobe.com/tw/products/experience-manager/adobe-experience-manager.html)
+>* [[!DNL Experience Manager] 產品頁面](https://business.adobe.com/products/experience-manager/adobe-experience-manager.html)
 >* [[!DNL Experience Manager] 6.5檔案](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65)
 >* [訂閱Adobe優先產品更新](https://www.adobe.com/tw/subscription/priority-product-update.html)
 
