@@ -21,10 +21,10 @@ role_v2:
     internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
+source-git-commit: ed215ea94e2db8589da7734dd4533fb0e55043d4
 workflow-type: tm+mt
-source-wordcount: '2149'
-ht-degree: 8%
+source-wordcount: '2293'
+ht-degree: 7%
 ---
 # AEM 6.5 Forms Service Pack安裝指示 {#aem-form-patch-installation-instructions}
 
@@ -153,6 +153,16 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
 >* 在JEE Service Pack上安裝AEM Forms後，您必須先從`crx-repository\install`資料夾中移除Forms附加元件套件，才能重新啟動Appserver。 從[軟體發佈入口網站](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=zh-Hant)下載最新的Forms附加元件套件。
 >* 建議您使用&#39;Ctrl + C&#39;命令重新啟動SDK。 使用替代方法重新啟動AEM SDK （例如停止Java程式），可能會導致AEM開發環境不一致。
 >* 針對[用於緩解JEE](/help/release-notes/aem-forms-hotfix.md)上AEM Forms之Spring Framework弱點的Hotfix。在叢集環境中部署時，必須確保定位器是使用JDK 17開始的。
+
+### 解決WebLogic拓撲驗證失敗的問題 {#weblogic-topology-validation}
+
+在JEE Service Pack 26 Patch 136上搭配使用AEM Forms的WebLogic上，Configuration Manager (LCM) `validateApplicationServerTopology`步驟在GUI和CLI模式中都會失敗。 如果您遇到此問題，請套用下列手動因應措施。 (FORMS-30037)
+
+1. 從軟體散發下載[`forms-security-commons-1.0.6.jar`](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/forms-security-commons-1.0.6.jar)。
+1. 將JAR放在AEM Forms安裝目錄下的`configurationManager/lib`目錄中。 例如，在Windows上，路徑為`C:\Adobe\Adobe_Experience_Manager_Forms\configurationManager\lib`；如果路徑不同，請使用實際的安裝目錄。
+1. 在組態管理員`bin`目錄中，編輯`ConfigurationManager.bat` (Windows)或`ConfigurationManager.sh` (Unix/Linux)。 將`forms-security-commons-1.0.6.jar`的完整路徑新增至現有的類別路徑，保留所有現有的類別路徑專案。
+1. 使用修改過的啟動器，以GUI或CLI模式重新啟動Configuration Manager。
+1. 重新執行`validateApplicationServerTopology`並確認拓撲驗證成功完成。
 
 +++
 
