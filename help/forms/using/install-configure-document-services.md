@@ -22,9 +22,9 @@ role_v2:
     internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
+source-git-commit: 1695a13865ac21e7827e36bccb67a2f877c42c1a
 workflow-type: tm+mt
-source-wordcount: '10825'
+source-wordcount: '11350'
 ht-degree: 1%
 ---
 # 安裝和設定檔案服務 {#installing-and-configuring-document-services}
@@ -296,6 +296,10 @@ Backup solution for existing Acrobat settings
 
 若要執行這些步驟，必須有&#x200B;*系統管理員*&#x200B;的Adobe Admin Console存取權。
 
+>[!NOTE]
+>
+>FRL套件通常在年度（1年）訂閱續約週期執行。 當授權到期需要續約時，請建立新的FRL套件，從AEM Forms伺服器移除過期的授權，然後部署和啟用新套件。 如需詳細步驟，請參閱[AEM Forms伺服器](#troubleshooting)上的Adobe Acrobat授權已過期或已停用。
+
 ###### 步驟1：登入Adobe Admin Console
 
 1. 開啟網頁瀏覽器，並導覽至[Adobe Admin Console](https://adminconsole.adobe.com/)
@@ -445,6 +449,10 @@ Backup solution for existing Acrobat settings
 ##### 準備FRL套件(Adobe Admin Console)
 
 若要執行這些步驟，必須有&#x200B;*系統管理員*&#x200B;的Adobe Admin Console存取權。
+
+>[!NOTE]
+>
+>FRL套件通常在年度（1年）訂閱續約週期執行。 當授權到期需要續約時，請建立新的FRL套件，從AEM Forms伺服器移除過期的授權，然後部署和啟用新套件。 如需詳細步驟，請參閱[AEM Forms伺服器](#troubleshooting)上的Adobe Acrobat授權已過期或已停用。
 
 ###### 步驟1：登入Adobe Admin Console
 
@@ -602,6 +610,10 @@ Backup solution for existing Acrobat settings
 
 若要執行這些步驟，必須有&#x200B;*系統管理員*&#x200B;的Adobe Admin Console存取權。
 
+>[!NOTE]
+>
+>FRL套件通常在年度（1年）訂閱續約週期執行。 當授權到期需要續約時，請建立新的FRL套件，從AEM Forms伺服器移除過期的授權，然後部署和啟用新套件。 如需詳細步驟，請參閱[AEM Forms伺服器](#troubleshooting)上的Adobe Acrobat授權已過期或已停用。
+
 ###### 步驟1：登入Adobe Admin Console
 
 1. 開啟網頁瀏覽器，並導覽至[Adobe Admin Console](https://adminconsole.adobe.com/)
@@ -758,6 +770,10 @@ Backup solution for existing Acrobat settings
 ##### 準備FRL套件(Adobe Admin Console)
 
 若要執行這些步驟，必須有&#x200B;*系統管理員*&#x200B;的Adobe Admin Console存取權。
+
+>[!NOTE]
+>
+>FRL套件通常在年度（1年）訂閱續約週期執行。 當授權到期需要續約時，請建立新的FRL套件，從AEM Forms伺服器移除過期的授權，然後部署和啟用新套件。 如需詳細步驟，請參閱[AEM Forms伺服器](#troubleshooting)上的Adobe Acrobat授權已過期或已停用。
 
 ###### 步驟1：登入Adobe Admin Console
 
@@ -1558,6 +1574,52 @@ DocAssurance服務可套用使用許可權至PDF檔案。 若要套用使用許�
 
 +++
 -->
+
++++ AEM Forms伺服器上的Adobe Acrobat授權已過期或停用
+
+當AEM Forms伺服器上Adobe Acrobat的功能限制授權(FRL)到期或停用時，PDF Generator無法使用Acrobat PDFMaker轉換Microsoft® Office檔案。 轉換回到OpenOffice，如果未設定OpenOffice，則會失敗並出現下列錯誤：
+
+*來自主要轉換器的錯誤訊息：
+ALC-PDG-010-012-PDFMaker在列印檔案時報告錯誤。*
+
+*來自遞補轉換器的錯誤訊息：
+ALC-PDG-011-030 — 無法將提交的OpenOffice檔案轉換成PDF。 此系統未安裝OpenOffice，或環境變數OpenOffice_PATH未設定為正確的路徑。*
+
+若要解決此問題，請檢查授權狀態並重新啟用授權：
+
+1. 以管理員身分登入AEM Forms伺服器，並以管理員身分開啟命令提示字元。
+1. 導覽至您解壓縮FRL封裝的目錄。 例如 `C:\AcrobatFRL`。
+1. 執行以下命令來檢查許可證狀態：
+
+   ```cmd
+   adobe-licensing-toolkit.exe -l
+   ```
+
+1. 如果授權已過期，請更換FRL套件。 FRL套件通常在年度（1年）訂閱續約週期執行。
+   1. 在[Adobe Admin Console](https://adminconsole.adobe.com/)中，建立並下載新的FRL套件。 如需詳細資訊，請參閱[安裝Adobe Acrobat Pro DC](#install-adobe-acrobat-pro-dc)中的步驟2到步驟7。
+   1. 執行以下命令以移除過期的授權：
+
+      ```cmd
+      adobe-licensing-toolkit.exe --precondition --uninstall --all
+      ```
+
+      >[!NOTE]
+      >
+      >若要從伺服器清除所有授權資料，請執行`adobe-licensing-toolkit.exe --deactivate --all`。
+
+   1. 將新的FRL套件解壓縮至伺服器上的目錄，並導覽至該目錄。
+
+1. 執行以下命令來啟動授權。 將`ngl-preconditioning-data.json`取代為FRL封裝中JSON檔案區分大小寫的確切名稱。
+
+   ```cmd
+   adobe-licensing-toolkit.exe -p -i -f ngl-preconditioning-data.json
+   ```
+
+1. 開啟Adobe Acrobat並安裝任何可用的更新。
+1. 重新啟動AEM Forms伺服器，以停止任何執行中的Acrobat PDFMaker程式。
+1. 將® Office檔案轉換成PDF，以確認PDF Generator使用Acrobat進行轉換。
+
++++
 
 +++ 無法在Windows Server上將Word或Excel檔案轉換為PDF
 
