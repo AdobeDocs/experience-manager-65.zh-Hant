@@ -22,9 +22,9 @@ role_v2:
     internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
+source-git-commit: 1695a13865ac21e7827e36bccb67a2f877c42c1a
 workflow-type: tm+mt
-source-wordcount: '10825'
+source-wordcount: '11350'
 ht-degree: 1%
 ---
 # 安裝和設定檔案服務 {#installing-and-configuring-document-services}
@@ -230,7 +230,7 @@ AEM Forms附加元件套件是部署至AEM的應用程式。 一般而言，您�
 >* Adobe Acrobat、Microsoft®Word、Excel和Powerpoint僅適用於Microsoft®Windows。 如果您使用UNIX作業系統，請安裝OpenOffice，將RTF文字檔和支援的® Office檔案轉換成PDF檔案。
 >* 關閉在安裝Adobe Acrobat和協力廠商軟體後，針對所有設定為使用PDF Generator服務的使用者顯示的所有對話方塊。
 >* 至少啟動一次所有已安裝的軟體。 關閉所有設定要使用PDF Generator服務之使用者的所有對話方塊。
->* [檢查Adobe Acrobat序號的到期日](https://helpx.adobe.com/tw/enterprise/kb/volume-license-expiration-check.html)並設定更新授權的日期，或[根據到期日](https://www.adobe.com/tw/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number)移轉您的序號。
+>* [檢查Adobe Acrobat序號的到期日](https://helpx.adobe.com/enterprise/kb/volume-license-expiration-check.html)並設定更新授權的日期，或[根據到期日](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number)移轉您的序號。
 
 ### 安裝Adobe Acrobat Pro DC {#install-adobe-acrobat-pro-dc}
 
@@ -295,6 +295,10 @@ Backup solution for existing Acrobat settings
 ##### 準備FRL套件(Adobe Admin Console)
 
 若要執行這些步驟，必須有&#x200B;*系統管理員*&#x200B;的Adobe Admin Console存取權。
+
+>[!NOTE]
+>
+>FRL套件通常在年度（1年）訂閱續約週期執行。 當授權到期需要續約時，請建立新的FRL套件，從AEM Forms伺服器移除過期的授權，然後部署和啟用新套件。 如需詳細步驟，請參閱[AEM Forms伺服器](#troubleshooting)上的Adobe Acrobat授權已過期或已停用。
 
 ###### 步驟1：登入Adobe Admin Console
 
@@ -445,6 +449,10 @@ Backup solution for existing Acrobat settings
 ##### 準備FRL套件(Adobe Admin Console)
 
 若要執行這些步驟，必須有&#x200B;*系統管理員*&#x200B;的Adobe Admin Console存取權。
+
+>[!NOTE]
+>
+>FRL套件通常在年度（1年）訂閱續約週期執行。 當授權到期需要續約時，請建立新的FRL套件，從AEM Forms伺服器移除過期的授權，然後部署和啟用新套件。 如需詳細步驟，請參閱[AEM Forms伺服器](#troubleshooting)上的Adobe Acrobat授權已過期或已停用。
 
 ###### 步驟1：登入Adobe Admin Console
 
@@ -602,6 +610,10 @@ Backup solution for existing Acrobat settings
 
 若要執行這些步驟，必須有&#x200B;*系統管理員*&#x200B;的Adobe Admin Console存取權。
 
+>[!NOTE]
+>
+>FRL套件通常在年度（1年）訂閱續約週期執行。 當授權到期需要續約時，請建立新的FRL套件，從AEM Forms伺服器移除過期的授權，然後部署和啟用新套件。 如需詳細步驟，請參閱[AEM Forms伺服器](#troubleshooting)上的Adobe Acrobat授權已過期或已停用。
+
 ###### 步驟1：登入Adobe Admin Console
 
 1. 開啟網頁瀏覽器，並導覽至[Adobe Admin Console](https://adminconsole.adobe.com/)
@@ -758,6 +770,10 @@ Backup solution for existing Acrobat settings
 ##### 準備FRL套件(Adobe Admin Console)
 
 若要執行這些步驟，必須有&#x200B;*系統管理員*&#x200B;的Adobe Admin Console存取權。
+
+>[!NOTE]
+>
+>FRL套件通常在年度（1年）訂閱續約週期執行。 當授權到期需要續約時，請建立新的FRL套件，從AEM Forms伺服器移除過期的授權，然後部署和啟用新套件。 如需詳細步驟，請參閱[AEM Forms伺服器](#troubleshooting)上的Adobe Acrobat授權已過期或已停用。
 
 ###### 步驟1：登入Adobe Admin Console
 
@@ -927,7 +943,7 @@ Backup solution for existing Acrobat settings
 >
 >伺服器端自動化情況（例如AEM Forms PDF Generator）需要停用保護模式。 此設定只能在專用伺服器環境中變更，不能在使用者案頭上變更。
 
-如需詳細資訊，請參閱受保護模式上的[Adobe檔案](https://helpx.adobe.com/tw/acrobat/kb/protected-mode-troubleshooting-reader.html)。
+如需詳細資訊，請參閱受保護模式上的[Adobe檔案](https://helpx.adobe.com/acrobat/kb/protected-mode-troubleshooting-reader.html)。
 
 
 
@@ -1018,7 +1034,7 @@ Backup solution for existing Acrobat settings
 
 1. 開啟® Office應用程式。 例如，® Word。 瀏覽至&#x200B;**[!UICONTROL 檔案]**> **[!UICONTROL 選項]**。 「選項」對話方塊隨即顯示。
 
-1. 按一下[信任中心]&#x200B;**&#x200B;**，然後按一下[信任中心設定]&#x200B;**&#x200B;**。
+1. 按一下[信任中心]****，然後按一下[信任中心設定]****。
 1. 在&#x200B;**[!UICONTROL 信任中心設定]**&#x200B;中，按一下&#x200B;**[!UICONTROL 檔案封鎖設定]**。
 1. 在&#x200B;**[!UICONTROL 檔案型別]**&#x200B;清單中，取消選取&#x200B;**[!UICONTROL 開啟]**，該檔案型別應該允許PDF Generator服務轉換成PDF檔案。
 
@@ -1026,7 +1042,7 @@ Backup solution for existing Acrobat settings
 
 用來啟動應用程式伺服器的使用者帳戶需要&#x200B;**取代處理序層級權杖**&#x200B;許可權。 本機系統帳戶預設具有&#x200B;**取代處理序層級權杖**&#x200B;許可權。 對於以Local Administrators群組的使用者執行的伺服器，必須明確授與許可權。 執行以下步驟來授與許可權：
 
-1. 開啟® Windows的群組原則編輯器。 若要開啟群組原則編輯器，請按一下[開始] **&#x200B;**，在[開始搜尋]方塊中輸入&#x200B;**gpedit.msc**，然後按一下[群組原則編輯器] **[!UICONTROL 。]**
+1. 開啟® Windows的群組原則編輯器。 若要開啟群組原則編輯器，請按一下[開始] ****，在[開始搜尋]方塊中輸入&#x200B;**gpedit.msc**，然後按一下[群組原則編輯器] **[!UICONTROL 。]**
 1. 瀏覽至&#x200B;**[!UICONTROL 本機電腦原則]** > **[!UICONTROL 電腦組態]** > **[!UICONTROL Windows設定]** > **[!UICONTROL 安全性設定]** > **[!UICONTROL 本機原則]** > **[!UICONTROL 使用者許可權指派]**，並編輯&#x200B;**[!UICONTROL 取代處理序層級權杖]**&#x200B;原則並包含Administrators群組。
 1. 將使用者新增至「取代程式層級權杖」專案。
 
@@ -1110,10 +1126,10 @@ AEM Forms附加元件套件是部署至AEM的應用程式。 此套件包含AEM 
    1. 從&#x200B;**[!UICONTROL 解決方案]**&#x200B;下拉式清單中選取&#x200B;**[!UICONTROL Forms]**。
    2. 選取封裝的版本和型別。 您也可以使用&#x200B;**[!UICONTROL 搜尋下載]**&#x200B;選項來篩選結果。
 1. 選取適用於您作業系統的封裝名稱，選取&#x200B;**[!UICONTROL 接受EULA條款]**，然後選取&#x200B;**[!UICONTROL 下載]**。
-1. 開啟[封裝管理員](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=zh-Hant)，然後按一下&#x200B;**[!UICONTROL 上傳封裝]**&#x200B;以上傳封裝。
+1. 開啟[封裝管理員](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)，然後按一下&#x200B;**[!UICONTROL 上傳封裝]**&#x200B;以上傳封裝。
 1. 選取封裝並按一下&#x200B;**[!UICONTROL 安裝]**。
 
-   您也可以透過[AEM Forms發行版本](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=zh-Hant)文章中列出的直接連結來下載套件。
+   您也可以透過[AEM Forms發行版本](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)文章中列出的直接連結來下載套件。
 
 1. 安裝套件後，系統會提示您重新啟動AEM執行個體。 **不要立即停止伺服器。** 在停止AEM Forms伺服器之前，請等候直到ServiceEvent REGISTERED和ServiceEvent UNREGISTERED訊息停止出現在`[AEM-Installation-Directory]/crx-quickstart/logs/error`.log檔案中，而且記錄檔穩定。
 
@@ -1220,7 +1236,7 @@ AEM Forms附加元件套件是部署至AEM的應用程式。 此套件包含AEM 
 
 在® Windows上，PDF Generator服務會使用Adobe Acrobat將支援的檔案格式轉換為PDF檔案。 執行以下步驟，為PDF Generator服務設定Adobe Acrobat：
 
-1. 開啟Acrobat並選取&#x200B;**[!UICONTROL 編輯]**> **[!UICONTROL 偏好設定]**> **[!UICONTROL 更新程式]**。 在[檢查更新]中，取消選取[自動安裝更新]&#x200B;**&#x200B;**，然後按一下[確定]&#x200B;**&#x200B;**。 關閉Acrobat。
+1. 開啟Acrobat並選取&#x200B;**[!UICONTROL 編輯]**> **[!UICONTROL 偏好設定]**> **[!UICONTROL 更新程式]**。 在[檢查更新]中，取消選取[自動安裝更新]****，然後按一下[確定]****。 關閉Acrobat。
 1. 連按兩下您系統上的PDF檔案。 當Acrobat首次啟動時，會顯示登入、歡迎畫面和EULA的對話方塊。 為所有設定要使用PDF Generator的使用者關閉這些對話方塊。
 1. 執行PDF Generator公用程式批次檔案，為PDF Generator服務設定Acrobat：
 
@@ -1273,7 +1289,7 @@ DocAssurance服務可套用使用許可權至PDF檔案。 若要套用使用許�
 執行以下步驟來設定憑證：
 
 1. 以管理員身分登入AEM作者執行個體。 移至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 安全性]** > **[!UICONTROL 使用者]**。
-1. 按一下使用者帳戶的&#x200B;**[!UICONTROL 名稱]**&#x200B;欄位。 **[!UICONTROL 編輯使用者設定]**&#x200B;頁面隨即開啟。 在AEM編寫執行個體上，憑證位於KeyStore中。 如果您先前尚未建立KeyStore，請按一下[建立KeyStore] **&#x200B;**，並設定KeyStore的新密碼。 如果伺服器已包含KeyStore，請略過此步驟。  如果您使用Adobe的Reader擴充功能憑證，Keystore檔案密碼一律與私密金鑰密碼相同。
+1. 按一下使用者帳戶的&#x200B;**[!UICONTROL 名稱]**&#x200B;欄位。 **[!UICONTROL 編輯使用者設定]**&#x200B;頁面隨即開啟。 在AEM編寫執行個體上，憑證位於KeyStore中。 如果您先前尚未建立KeyStore，請按一下[建立KeyStore] ****，並設定KeyStore的新密碼。 如果伺服器已包含KeyStore，請略過此步驟。  如果您使用Adobe的Reader擴充功能憑證，Keystore檔案密碼一律與私密金鑰密碼相同。
 1. 在&#x200B;**[!UICONTROL 編輯使用者設定]**&#x200B;頁面上，選取&#x200B;**[!UICONTROL KeyStore]**&#x200B;索引標籤。 展開&#x200B;**[!UICONTROL 從金鑰庫檔案新增私密金鑰]**&#x200B;選項並提供別名。 別名可用來執行Reader擴充功能作業。
 1. 若要上傳憑證檔案，請按一下&#x200B;**[!UICONTROL 選取金鑰存放區檔案]**，然後上傳&lt;filename>.pfx檔案。
 
@@ -1533,9 +1549,9 @@ DocAssurance服務可套用使用許可權至PDF檔案。 若要套用使用許�
 <!--
 (Legacy Acrobat guidance — retained for reference only) License of Adobe Acrobat installed on AEM Forms Server expires
 
-* If you have an existing license of Adobe Acrobat and it has expired, [Download the latest version of Adobe Application Manager](https://helpx.adobe.com/in/creative-suite/kb/aam-troubleshoot-download-install.html), and migrating your serial number. Before [migrating your serial number](https://www.adobe.com/tw/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number).
+* If you have an existing license of Adobe Acrobat and it has expired, [Download the latest version of Adobe Application Manager](https://helpx.adobe.com/in/creative-suite/kb/aam-troubleshoot-download-install.html), and migrating your serial number. Before [migrating your serial number](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number).
 
-   * Use the following commands to generate prov.xml and reserialize the existing install using the prov.xml file instead of commands provided in [migrating your serial number](https://www.adobe.com/tw/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number) number article.
+   * Use the following commands to generate prov.xml and reserialize the existing install using the prov.xml file instead of commands provided in [migrating your serial number](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number) number article.
 
       ```
 
@@ -1550,7 +1566,7 @@ DocAssurance服務可套用使用許可權至PDF檔案。 若要套用使用許�
          
       ```
 
-* For large-scale installations, use the [Acrobat Customization Wizard](https://www.adobe.com/tw/devnet-docs/acrobatetk/tools/Wizard/index.html) to remove previous versions of Reader and Acrobat. Customize the installer and deploy it to all the machines of your organization.
+* For large-scale installations, use the [Acrobat Customization Wizard](https://www.adobe.com/devnet-docs/acrobatetk/tools/Wizard/index.html) to remove previous versions of Reader and Acrobat. Customize the installer and deploy it to all the machines of your organization.
 
 (Legacy Acrobat guidance — retained for reference only) AEM Forms Server is in an offline or secure environment and internet is not available to activate Acrobat.
 
@@ -1558,6 +1574,52 @@ DocAssurance服務可套用使用許可權至PDF檔案。 若要套用使用許�
 
 +++
 -->
+
++++ AEM Forms伺服器上的Adobe Acrobat授權已過期或停用
+
+當AEM Forms伺服器上Adobe Acrobat的功能限制授權(FRL)到期或停用時，PDF Generator無法使用Acrobat PDFMaker轉換Microsoft® Office檔案。 轉換回到OpenOffice，如果未設定OpenOffice，則會失敗並出現下列錯誤：
+
+*來自主要轉換器的錯誤訊息：
+ALC-PDG-010-012-PDFMaker在列印檔案時報告錯誤。*
+
+*來自遞補轉換器的錯誤訊息：
+ALC-PDG-011-030 — 無法將提交的OpenOffice檔案轉換成PDF。 此系統未安裝OpenOffice，或環境變數OpenOffice_PATH未設定為正確的路徑。*
+
+若要解決此問題，請檢查授權狀態並重新啟用授權：
+
+1. 以管理員身分登入AEM Forms伺服器，並以管理員身分開啟命令提示字元。
+1. 導覽至您解壓縮FRL封裝的目錄。 例如 `C:\AcrobatFRL`。
+1. 執行以下命令來檢查許可證狀態：
+
+   ```cmd
+   adobe-licensing-toolkit.exe -l
+   ```
+
+1. 如果授權已過期，請更換FRL套件。 FRL套件通常在年度（1年）訂閱續約週期執行。
+   1. 在[Adobe Admin Console](https://adminconsole.adobe.com/)中，建立並下載新的FRL套件。 如需詳細資訊，請參閱[安裝Adobe Acrobat Pro DC](#install-adobe-acrobat-pro-dc)中的步驟2到步驟7。
+   1. 執行以下命令以移除過期的授權：
+
+      ```cmd
+      adobe-licensing-toolkit.exe --precondition --uninstall --all
+      ```
+
+      >[!NOTE]
+      >
+      >若要從伺服器清除所有授權資料，請執行`adobe-licensing-toolkit.exe --deactivate --all`。
+
+   1. 將新的FRL套件解壓縮至伺服器上的目錄，並導覽至該目錄。
+
+1. 執行以下命令來啟動授權。 將`ngl-preconditioning-data.json`取代為FRL封裝中JSON檔案區分大小寫的確切名稱。
+
+   ```cmd
+   adobe-licensing-toolkit.exe -p -i -f ngl-preconditioning-data.json
+   ```
+
+1. 開啟Adobe Acrobat並安裝任何可用的更新。
+1. 重新啟動AEM Forms伺服器，以停止任何執行中的Acrobat PDFMaker程式。
+1. 將® Office檔案轉換成PDF，以確認PDF Generator使用Acrobat進行轉換。
+
++++
 
 +++ 無法在Windows Server上將Word或Excel檔案轉換為PDF
 
