@@ -23,9 +23,9 @@ role_v2:
     internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 8e3fd4184adcd62256cb7faea6592b06796e7ddf
+source-git-commit: 0619d81cc1270ec91062fc1f4e4ca0a59a388cfc
 workflow-type: tm+mt
-source-wordcount: '8356'
+source-wordcount: '8294'
 ht-degree: 2%
 ---
 # [!DNL Adobe Experience Manager] 6.5最新Service Pack發行說明 {#aem-service-pack-release-notes}
@@ -89,7 +89,7 @@ Service Pack 26的關鍵重點包括：
 
 * 作者現在可以在文字元件內嵌選單中看到作用中的格式(「T」)按鈕。 在作者套用粗體或斜體格式後，按鈕圖示在深灰色背景中仍保持深色，並錯過WCAG 2.1 AA的最低對比率4.5:1。 更新的CSS會點亮圖示，回覆先前提供的Service Pack對比。 (SITES-51864)
 
-* 現在，當您從「影像」下拉式清單中選擇「段落」後，「頁面編輯器」中的「Assets」標籤會在「選取元件」下拉式清單中顯示翻譯字串。 之前，由於本地化資源缺乏「其他」字串，因此顯示為英文。 更新的字典提供所有地區設定的翻譯。 (SITES-24525)
+* 現在，當您從「影像」下拉式清單中選擇「段落」後，「頁面編輯器」中的「Assets」標籤會在「Select元件」下拉式清單中顯示翻譯字串。 之前，由於本地化資源缺乏「其他」字串，因此顯示為英文。 更新的字典提供所有地區設定的翻譯。 (SITES-24525)
 
 
 
@@ -253,7 +253,7 @@ Service Pack 26的關鍵重點包括：
 * 範本編輯器中核心元件的說明連結現在導向本地化檔案頁面。 先前，在元件設定對話方塊中選取「說明」，會開啟英文頁面，無論介面語言為何。 更新後的URL現在會將使用者路由至其地區設定的頁面。 (SITES-15058)
 * 內容片段對話方塊中的資訊工具提示現在會以使用者的語言顯示。 先前，「單一文字元素」和「多個元素」模式以及「內容片段」路徑的工具提示文字仍保留英文。 更新的字典提供所有地區設定的翻譯。 (SITES-17333)
 * 範本編輯器元件原則編輯器中的錯誤訊息現在會以使用者的語言顯示。 先前，當作者編輯元件原則或建立新元件原則時，訊息「資源{}無法修改」和「無法建立節點於」仍為英文。 更新的資源提供所有支援地區設定的翻譯。 (SITES-17475)
-* 現在，當您從「影像」下拉式清單中選擇「段落」後，「頁面編輯器」中的「Assets」標籤會在「選取元件」下拉式清單中顯示翻譯字串。 之前，由於本地化資源缺乏「其他」字串，因此顯示為英文。 更新的字典提供所有地區設定的翻譯。 (SITES-21481)
+* 現在，當您從「影像」下拉式清單中選擇「段落」後，「頁面編輯器」中的「Assets」標籤會在「Select元件」下拉式清單中顯示翻譯字串。 之前，由於本地化資源缺乏「其他」字串，因此顯示為英文。 更新的字典提供所有地區設定的翻譯。 (SITES-21481)
 * 頁面編輯器設定元件對話方塊中的資訊工具提示不再顯示額外的分行符號。 以前，PDF Viewer和進度列等元件的工具提示會笨拙地包裝在數個區域設定中。 工具提示現在可以正確換行，且斷字功能可如預期運作。 (SITES-38567)
 * 工具提示「要退出文字編輯器請按Esc鍵」現在會以使用者的語言顯示在「文字元件設定」對話方塊中。 之前，由於本地化資源缺乏字串，因此該字串會以英文顯示。 工具提示現在會在所有地區設定中翻譯。 (SITES-43186)
 * 範本編輯器中的STRUCTURE標籤現在會以使用者的語言顯示。 之前，由於本地化資源中缺少字串，所以在作者開啟最適化表單範本時，標籤仍維持為英文。 標籤現在會在所有地區設定中翻譯。 (SITES-43599)
@@ -625,8 +625,6 @@ Adobe打算在產品生命週期結束前保留這些較舊的端點。 Adobe �
 * 在JEE Service Pack 26 Patch 136上搭配使用AEM Forms的WebLogic上，Configuration Manager `validateApplicationServerTopology`步驟在GUI和CLI模式中都會失敗。 若要套用手動解決方法，請展開&#x200B;**4。 在[JEE Service Pack安裝指示](/help/release-notes/aem-forms-current-service-pack-installation-instructions.md#download-and-install-for-jee-service-pack)中的JEE Service Pack**&#x200B;上安裝AEM Forms，並遵循WebLogic拓撲驗證因應措施。 (FORMS-30037)
 
 * 當包含使用`bindref`的&#x200B;**檔案附件**&#x200B;欄位的表單提交給具有&#x200B;**指派任務**&#x200B;步驟的AEM工作流程時，附件未顯示。 因此，當從「收件匣」開啟任務時，它們不會出現。 檔案會正確儲存至存放庫，但指派工作步驟UI無法顯示附件。 (FORMS-23722)
-
-* 當數位簽署的PDF附加至AEM Forms JEE Workspace中的任務時，上傳維持卡在上傳狀態或發生「檔案無效」錯誤而失敗。 因此，無法將較大的已簽署PDF附件新增至工作。 此問題已在較新版本中修正。 如需Hotfix版本，請聯絡Adobe支援。 (FORMS-28517)
 
 * 透過Administration Console或Java程式碼(EJB/SOA)匯入LiveCycle Archive (LCA)，可能會導致後續PDF Generator (PDFG)和ConvertPDF作業失敗。 此問題會影響Windows和Linux上，具有內嵌AEM編寫執行個體的JDK和Oracle WebLogic 14c棧疊。 (FORMS-30031)
 
